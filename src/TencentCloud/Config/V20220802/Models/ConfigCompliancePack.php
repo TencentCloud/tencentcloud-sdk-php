@@ -20,97 +20,97 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户合规包信息
  *
- * @method string getStatus() 获取合规包状态
- * @method void setStatus(string $Status) 设置合规包状态
- * @method string getCompliancePackId() 获取合规包ID
- * @method void setCompliancePackId(string $CompliancePackId) 设置合规包ID
- * @method string getDescription() 获取描述
+ * @method string getStatus() 获取<p>合规包状态</p>
+ * @method void setStatus(string $Status) 设置<p>合规包状态</p>
+ * @method string getCompliancePackId() 获取<p>合规包ID</p>
+ * @method void setCompliancePackId(string $CompliancePackId) 设置<p>合规包ID</p>
+ * @method string getDescription() 获取<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setDescription(string $Description) 设置<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCompliancePackName() 获取合规包名称
- * @method void setCompliancePackName(string $CompliancePackName) 设置合规包名称
- * @method integer getRiskLevel() 获取风险等级
- * @method void setRiskLevel(integer $RiskLevel) 设置风险等级
- * @method string getComplianceResult() 获取评估结果
+ * @method string getCompliancePackName() 获取<p>合规包名称</p>
+ * @method void setCompliancePackName(string $CompliancePackName) 设置<p>合规包名称</p>
+ * @method integer getRiskLevel() 获取<p>风险等级</p>
+ * @method void setRiskLevel(integer $RiskLevel) 设置<p>风险等级</p>
+ * @method string getComplianceResult() 获取<p>评估结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComplianceResult(string $ComplianceResult) 设置评估结果
+ * @method void setComplianceResult(string $ComplianceResult) 设置<p>评估结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method array getNoCompliantNames() 获取不合规规则名
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method array getNoCompliantNames() 获取<p>不合规规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoCompliantNames(array $NoCompliantNames) 设置不合规规则名
+ * @method void setNoCompliantNames(array $NoCompliantNames) 设置<p>不合规规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRuleCount() 获取合规包规则数
+ * @method integer getRuleCount() 获取<p>合规包规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleCount(integer $RuleCount) 设置合规包规则数
+ * @method void setRuleCount(integer $RuleCount) 设置<p>合规包规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigCompliancePack extends AbstractModel
 {
     /**
-     * @var string 合规包状态
+     * @var string <p>合规包状态</p>
      */
     public $Status;
 
     /**
-     * @var string 合规包ID
+     * @var string <p>合规包ID</p>
      */
     public $CompliancePackId;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 合规包名称
+     * @var string <p>合规包名称</p>
      */
     public $CompliancePackName;
 
     /**
-     * @var integer 风险等级
+     * @var integer <p>风险等级</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 评估结果
+     * @var string <p>评估结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceResult;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var array 不合规规则名
+     * @var array <p>不合规规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoCompliantNames;
 
     /**
-     * @var integer 合规包规则数
+     * @var integer <p>合规包规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleCount;
 
     /**
-     * @param string $Status 合规包状态
-     * @param string $CompliancePackId 合规包ID
-     * @param string $Description 描述
+     * @param string $Status <p>合规包状态</p>
+     * @param string $CompliancePackId <p>合规包ID</p>
+     * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CompliancePackName 合规包名称
-     * @param integer $RiskLevel 风险等级
-     * @param string $ComplianceResult 评估结果
+     * @param string $CompliancePackName <p>合规包名称</p>
+     * @param integer $RiskLevel <p>风险等级</p>
+     * @param string $ComplianceResult <p>评估结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
-     * @param array $NoCompliantNames 不合规规则名
+     * @param string $CreateTime <p>创建时间</p>
+     * @param array $NoCompliantNames <p>不合规规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RuleCount 合规包规则数
+     * @param integer $RuleCount <p>合规包规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

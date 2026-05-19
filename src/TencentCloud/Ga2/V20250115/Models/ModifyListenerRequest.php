@@ -20,122 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyListener请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method string getListenerId() 获取监听器ID。
- * @method void setListenerId(string $ListenerId) 设置监听器ID。
- * @method string getName() 获取名称，最大长度不能超过60个字节。
- * @method void setName(string $Name) 设置名称，最大长度不能超过60个字节。
- * @method string getDescription() 获取描述信息，最大长度不能超过100个字节。
- * @method void setDescription(string $Description) 设置描述信息，最大长度不能超过100个字节。
- * @method integer getIdleTimeout() 获取连接空闲等待时间。
- * @method void setIdleTimeout(integer $IdleTimeout) 设置连接空闲等待时间。
- * @method string getClientAffinity() 获取是否开启会话保持。
- * @method void setClientAffinity(string $ClientAffinity) 设置是否开启会话保持。
- * @method integer getClientAffinityTime() 获取会话保持时间。
- * @method void setClientAffinityTime(integer $ClientAffinityTime) 设置会话保持时间。
- * @method integer getRequestTimeout() 获取请求超时时间。
- * @method void setRequestTimeout(integer $RequestTimeout) 设置请求超时时间。
- * @method boolean getXForwardedForRealIp() 获取是否打开七层获取源IP方式。
- * @method void setXForwardedForRealIp(boolean $XForwardedForRealIp) 设置是否打开七层获取源IP方式。
- * @method string getCertificationType() 获取解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。
- * @method void setCertificationType(string $CertificationType) 设置解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。
- * @method string getCipherPolicyId() 获取加密算法套件。
- * @method void setCipherPolicyId(string $CipherPolicyId) 设置加密算法套件。
- * @method array getServerCertificates() 获取服务器证书。
- * @method void setServerCertificates(array $ServerCertificates) 设置服务器证书。
- * @method array getClientCaCertificates() 获取客户端证书。
- * @method void setClientCaCertificates(array $ClientCaCertificates) 设置客户端证书。
- * @method string getGetRealIpType() 获取四层获取源IP方式。
- * @method void setGetRealIpType(string $GetRealIpType) 设置四层获取源IP方式。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method string getListenerId() 获取<p>监听器ID。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器ID。</p>
+ * @method string getName() 获取<p>名称，最大长度不能超过60个字节。</p>
+ * @method void setName(string $Name) 设置<p>名称，最大长度不能超过60个字节。</p>
+ * @method string getDescription() 获取<p>描述信息，最大长度不能超过100个字节。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息，最大长度不能超过100个字节。</p>
+ * @method integer getIdleTimeout() 获取<p>连接空闲等待时间。</p>
+ * @method void setIdleTimeout(integer $IdleTimeout) 设置<p>连接空闲等待时间。</p>
+ * @method string getClientAffinity() 获取<p>是否开启会话保持。</p>
+ * @method void setClientAffinity(string $ClientAffinity) 设置<p>是否开启会话保持。</p>
+ * @method integer getClientAffinityTime() 获取<p>会话保持时间。</p>
+ * @method void setClientAffinityTime(integer $ClientAffinityTime) 设置<p>会话保持时间。</p>
+ * @method integer getRequestTimeout() 获取<p>请求超时时间。</p>
+ * @method void setRequestTimeout(integer $RequestTimeout) 设置<p>请求超时时间。</p>
+ * @method boolean getXForwardedForRealIp() 获取<p>是否打开七层获取源IP方式。</p>
+ * @method void setXForwardedForRealIp(boolean $XForwardedForRealIp) 设置<p>是否打开七层获取源IP方式。</p>
+ * @method string getCertificationType() 获取<p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+ * @method void setCertificationType(string $CertificationType) 设置<p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+ * @method string getCipherPolicyId() 获取<p>加密算法套件。</p>
+ * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>加密算法套件。</p>
+ * @method array getServerCertificates() 获取<p>服务器证书。</p>
+ * @method void setServerCertificates(array $ServerCertificates) 设置<p>服务器证书。</p>
+ * @method array getClientCaCertificates() 获取<p>客户端证书。</p>
+ * @method void setClientCaCertificates(array $ClientCaCertificates) 设置<p>客户端证书。</p>
+ * @method string getGetRealIpType() 获取<p>四层获取源IP方式。</p>
+ * @method void setGetRealIpType(string $GetRealIpType) 设置<p>四层获取源IP方式。</p>
  */
 class ModifyListenerRequest extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var string 监听器ID。
+     * @var string <p>监听器ID。</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 名称，最大长度不能超过60个字节。
+     * @var string <p>名称，最大长度不能超过60个字节。</p>
      */
     public $Name;
 
     /**
-     * @var string 描述信息，最大长度不能超过100个字节。
+     * @var string <p>描述信息，最大长度不能超过100个字节。</p>
      */
     public $Description;
 
     /**
-     * @var integer 连接空闲等待时间。
+     * @var integer <p>连接空闲等待时间。</p>
      */
     public $IdleTimeout;
 
     /**
-     * @var string 是否开启会话保持。
+     * @var string <p>是否开启会话保持。</p>
      */
     public $ClientAffinity;
 
     /**
-     * @var integer 会话保持时间。
+     * @var integer <p>会话保持时间。</p>
      */
     public $ClientAffinityTime;
 
     /**
-     * @var integer 请求超时时间。
+     * @var integer <p>请求超时时间。</p>
      */
     public $RequestTimeout;
 
     /**
-     * @var boolean 是否打开七层获取源IP方式。
+     * @var boolean <p>是否打开七层获取源IP方式。</p>
      */
     public $XForwardedForRealIp;
 
     /**
-     * @var string 解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。
+     * @var string <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
      */
     public $CertificationType;
 
     /**
-     * @var string 加密算法套件。
+     * @var string <p>加密算法套件。</p>
      */
     public $CipherPolicyId;
 
     /**
-     * @var array 服务器证书。
+     * @var array <p>服务器证书。</p>
      */
     public $ServerCertificates;
 
     /**
-     * @var array 客户端证书。
+     * @var array <p>客户端证书。</p>
      */
     public $ClientCaCertificates;
 
     /**
-     * @var string 四层获取源IP方式。
+     * @var string <p>四层获取源IP方式。</p>
      */
     public $GetRealIpType;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param string $ListenerId 监听器ID。
-     * @param string $Name 名称，最大长度不能超过60个字节。
-     * @param string $Description 描述信息，最大长度不能超过100个字节。
-     * @param integer $IdleTimeout 连接空闲等待时间。
-     * @param string $ClientAffinity 是否开启会话保持。
-     * @param integer $ClientAffinityTime 会话保持时间。
-     * @param integer $RequestTimeout 请求超时时间。
-     * @param boolean $XForwardedForRealIp 是否打开七层获取源IP方式。
-     * @param string $CertificationType 解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。
-     * @param string $CipherPolicyId 加密算法套件。
-     * @param array $ServerCertificates 服务器证书。
-     * @param array $ClientCaCertificates 客户端证书。
-     * @param string $GetRealIpType 四层获取源IP方式。
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param string $ListenerId <p>监听器ID。</p>
+     * @param string $Name <p>名称，最大长度不能超过60个字节。</p>
+     * @param string $Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * @param integer $IdleTimeout <p>连接空闲等待时间。</p>
+     * @param string $ClientAffinity <p>是否开启会话保持。</p>
+     * @param integer $ClientAffinityTime <p>会话保持时间。</p>
+     * @param integer $RequestTimeout <p>请求超时时间。</p>
+     * @param boolean $XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
+     * @param string $CertificationType <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+     * @param string $CipherPolicyId <p>加密算法套件。</p>
+     * @param array $ServerCertificates <p>服务器证书。</p>
+     * @param array $ClientCaCertificates <p>客户端证书。</p>
+     * @param string $GetRealIpType <p>四层获取源IP方式。</p>
      */
     function __construct()
     {

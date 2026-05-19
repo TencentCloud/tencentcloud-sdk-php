@@ -20,194 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Skill 安全检测结果详情
  *
- * @method string getSkillName() 获取Skill 名称
- * @method void setSkillName(string $SkillName) 设置Skill 名称
- * @method string getSkillDescription() 获取Skill 描述，帮助理解 Skill 的主要用途
- * @method void setSkillDescription(string $SkillDescription) 设置Skill 描述，帮助理解 Skill 的主要用途
- * @method string getContentHash() 获取ZIP 文件的 SHA256 Hash
-参数格式：sha256:<64位hex>
- * @method void setContentHash(string $ContentHash) 设置ZIP 文件的 SHA256 Hash
-参数格式：sha256:<64位hex>
- * @method integer getUploadFileCount() 获取原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度
- * @method void setUploadFileCount(integer $UploadFileCount) 设置原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度
- * @method string getRiskLevel() 获取综合风险等级
-枚举值：
-malicious：恶意
-suspicious：可疑
-benign：可信
- * @method void setRiskLevel(string $RiskLevel) 设置综合风险等级
-枚举值：
-malicious：恶意
-suspicious：可疑
-benign：可信
- * @method string getPrimaryRuleID() 获取风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取
- * @method void setPrimaryRuleID(string $PrimaryRuleID) 设置风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取
- * @method string getMitigation() 获取综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案
- * @method void setMitigation(string $Mitigation) 设置综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案
- * @method string getRiskDescription() 获取风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案
- * @method void setRiskDescription(string $RiskDescription) 设置风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案
- * @method integer getSecurityScore() 获取安全评分
-取值范围：[0, 100]
-补充说明：100 为最安全
- * @method void setSecurityScore(integer $SecurityScore) 设置安全评分
-取值范围：[0, 100]
-补充说明：100 为最安全
- * @method integer getEngineVersion() 获取本次扫描使用的引擎版本号
- * @method void setEngineVersion(integer $EngineVersion) 设置本次扫描使用的引擎版本号
- * @method array getCapabilityTags() 获取Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变
- * @method void setCapabilityTags(array $CapabilityTags) 设置Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变
- * @method array getRuleCatalog() 获取融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称
- * @method void setRuleCatalog(array $RuleCatalog) 设置融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称
- * @method array getScanItems() 获取扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本
- * @method void setScanItems(array $ScanItems) 设置扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本
- * @method string getReportURL() 获取综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制
- * @method void setReportURL(string $ReportURL) 设置综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制
- * @method string getScannedAt() 获取扫描完成时间。仅 Status=SUCCESS 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
- * @method void setScannedAt(string $ScannedAt) 设置扫描完成时间。仅 Status=SUCCESS 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
- * @method string getCreatedAt() 获取任务创建时间。仅 Status=SCANNING 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
- * @method void setCreatedAt(string $CreatedAt) 设置任务创建时间。仅 Status=SCANNING 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
- * @method string getFailedAt() 获取失败时间。仅 Status=FAILED 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
- * @method void setFailedAt(string $FailedAt) 设置失败时间。仅 Status=FAILED 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
- * @method string getMessage() 获取失败原因描述。仅 Status=FAILED 时有值
- * @method void setMessage(string $Message) 设置失败原因描述。仅 Status=FAILED 时有值
+ * @method string getSkillName() 获取<p>Skill 名称</p>
+ * @method void setSkillName(string $SkillName) 设置<p>Skill 名称</p>
+ * @method string getSkillDescription() 获取<p>Skill 描述，帮助理解 Skill 的主要用途</p>
+ * @method void setSkillDescription(string $SkillDescription) 设置<p>Skill 描述，帮助理解 Skill 的主要用途</p>
+ * @method string getContentHash() 获取<p>ZIP 文件的 SHA256 Hash<br>参数格式：sha256:&lt;64位hex&gt;</p>
+ * @method void setContentHash(string $ContentHash) 设置<p>ZIP 文件的 SHA256 Hash<br>参数格式：sha256:&lt;64位hex&gt;</p>
+ * @method integer getUploadFileCount() 获取<p>原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度</p>
+ * @method void setUploadFileCount(integer $UploadFileCount) 设置<p>原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度</p>
+ * @method string getRiskLevel() 获取<p>综合风险等级<br>枚举值：<br>malicious：恶意<br>suspicious：可疑<br>benign：可信</p>
+ * @method void setRiskLevel(string $RiskLevel) 设置<p>综合风险等级<br>枚举值：<br>malicious：恶意<br>suspicious：可疑<br>benign：可信</p>
+ * @method string getPrimaryRuleID() 获取<p>风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取</p>
+ * @method void setPrimaryRuleID(string $PrimaryRuleID) 设置<p>风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取</p>
+ * @method string getMitigation() 获取<p>综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案</p>
+ * @method void setMitigation(string $Mitigation) 设置<p>综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案</p>
+ * @method string getRiskDescription() 获取<p>风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案</p>
+ * @method void setRiskDescription(string $RiskDescription) 设置<p>风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案</p>
+ * @method integer getSecurityScore() 获取<p>安全评分取值范围：[0, 100]补充说明：分数越高越安全</p>
+ * @method void setSecurityScore(integer $SecurityScore) 设置<p>安全评分取值范围：[0, 100]补充说明：分数越高越安全</p>
+ * @method integer getEngineVersion() 获取<p>本次扫描使用的引擎版本号</p>
+ * @method void setEngineVersion(integer $EngineVersion) 设置<p>本次扫描使用的引擎版本号</p>
+ * @method array getCapabilityTags() 获取<p>Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变</p>
+ * @method void setCapabilityTags(array $CapabilityTags) 设置<p>Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变</p>
+ * @method array getRuleCatalog() 获取<p>融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称</p>
+ * @method void setRuleCatalog(array $RuleCatalog) 设置<p>融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称</p>
+ * @method array getScanItems() 获取<p>扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本</p>
+ * @method void setScanItems(array $ScanItems) 设置<p>扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本</p>
+ * @method string getReportURL() 获取<p>综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制</p>
+ * @method void setReportURL(string $ReportURL) 设置<p>综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制</p>
+ * @method string getScannedAt() 获取<p>扫描完成时间。仅 Status=SUCCESS 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+ * @method void setScannedAt(string $ScannedAt) 设置<p>扫描完成时间。仅 Status=SUCCESS 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+ * @method string getCreatedAt() 获取<p>任务创建时间。仅 Status=SCANNING 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>任务创建时间。仅 Status=SCANNING 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+ * @method string getFailedAt() 获取<p>失败时间。仅 Status=FAILED 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+ * @method void setFailedAt(string $FailedAt) 设置<p>失败时间。仅 Status=FAILED 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+ * @method string getMessage() 获取<p>失败原因描述。仅 Status=FAILED 时有值</p>
+ * @method void setMessage(string $Message) 设置<p>失败原因描述。仅 Status=FAILED 时有值</p>
  */
 class SkillScanItem extends AbstractModel
 {
     /**
-     * @var string Skill 名称
+     * @var string <p>Skill 名称</p>
      */
     public $SkillName;
 
     /**
-     * @var string Skill 描述，帮助理解 Skill 的主要用途
+     * @var string <p>Skill 描述，帮助理解 Skill 的主要用途</p>
      */
     public $SkillDescription;
 
     /**
-     * @var string ZIP 文件的 SHA256 Hash
-参数格式：sha256:<64位hex>
+     * @var string <p>ZIP 文件的 SHA256 Hash<br>参数格式：sha256:&lt;64位hex&gt;</p>
      */
     public $ContentHash;
 
     /**
-     * @var integer 原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度
+     * @var integer <p>原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度</p>
      */
     public $UploadFileCount;
 
     /**
-     * @var string 综合风险等级
-枚举值：
-malicious：恶意
-suspicious：可疑
-benign：可信
+     * @var string <p>综合风险等级<br>枚举值：<br>malicious：恶意<br>suspicious：可疑<br>benign：可信</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取
+     * @var string <p>风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取</p>
      */
     public $PrimaryRuleID;
 
     /**
-     * @var string 综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案
+     * @var string <p>综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案</p>
      */
     public $Mitigation;
 
     /**
-     * @var string 风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案
+     * @var string <p>风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案</p>
      */
     public $RiskDescription;
 
     /**
-     * @var integer 安全评分
-取值范围：[0, 100]
-补充说明：100 为最安全
+     * @var integer <p>安全评分取值范围：[0, 100]补充说明：分数越高越安全</p>
      */
     public $SecurityScore;
 
     /**
-     * @var integer 本次扫描使用的引擎版本号
+     * @var integer <p>本次扫描使用的引擎版本号</p>
      */
     public $EngineVersion;
 
     /**
-     * @var array Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变
+     * @var array <p>Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变</p>
      */
     public $CapabilityTags;
 
     /**
-     * @var array 融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称
+     * @var array <p>融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称</p>
      */
     public $RuleCatalog;
 
     /**
-     * @var array 扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本
+     * @var array <p>扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本</p>
      */
     public $ScanItems;
 
     /**
-     * @var string 综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制
+     * @var string <p>综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制</p>
      */
     public $ReportURL;
 
     /**
-     * @var string 扫描完成时间。仅 Status=SUCCESS 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * @var string <p>扫描完成时间。仅 Status=SUCCESS 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public $ScannedAt;
 
     /**
-     * @var string 任务创建时间。仅 Status=SCANNING 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * @var string <p>任务创建时间。仅 Status=SCANNING 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string 失败时间。仅 Status=FAILED 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * @var string <p>失败时间。仅 Status=FAILED 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public $FailedAt;
 
     /**
-     * @var string 失败原因描述。仅 Status=FAILED 时有值
+     * @var string <p>失败原因描述。仅 Status=FAILED 时有值</p>
      */
     public $Message;
 
     /**
-     * @param string $SkillName Skill 名称
-     * @param string $SkillDescription Skill 描述，帮助理解 Skill 的主要用途
-     * @param string $ContentHash ZIP 文件的 SHA256 Hash
-参数格式：sha256:<64位hex>
-     * @param integer $UploadFileCount 原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度
-     * @param string $RiskLevel 综合风险等级
-枚举值：
-malicious：恶意
-suspicious：可疑
-benign：可信
-     * @param string $PrimaryRuleID 风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取
-     * @param string $Mitigation 综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案
-     * @param string $RiskDescription 风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案
-     * @param integer $SecurityScore 安全评分
-取值范围：[0, 100]
-补充说明：100 为最安全
-     * @param integer $EngineVersion 本次扫描使用的引擎版本号
-     * @param array $CapabilityTags Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变
-     * @param array $RuleCatalog 融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称
-     * @param array $ScanItems 扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本
-     * @param string $ReportURL 综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制
-     * @param string $ScannedAt 扫描完成时间。仅 Status=SUCCESS 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
-     * @param string $CreatedAt 任务创建时间。仅 Status=SCANNING 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
-     * @param string $FailedAt 失败时间。仅 Status=FAILED 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
-     * @param string $Message 失败原因描述。仅 Status=FAILED 时有值
+     * @param string $SkillName <p>Skill 名称</p>
+     * @param string $SkillDescription <p>Skill 描述，帮助理解 Skill 的主要用途</p>
+     * @param string $ContentHash <p>ZIP 文件的 SHA256 Hash<br>参数格式：sha256:&lt;64位hex&gt;</p>
+     * @param integer $UploadFileCount <p>原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度</p>
+     * @param string $RiskLevel <p>综合风险等级<br>枚举值：<br>malicious：恶意<br>suspicious：可疑<br>benign：可信</p>
+     * @param string $PrimaryRuleID <p>风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取</p>
+     * @param string $Mitigation <p>综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案</p>
+     * @param string $RiskDescription <p>风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案</p>
+     * @param integer $SecurityScore <p>安全评分取值范围：[0, 100]补充说明：分数越高越安全</p>
+     * @param integer $EngineVersion <p>本次扫描使用的引擎版本号</p>
+     * @param array $CapabilityTags <p>Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变</p>
+     * @param array $RuleCatalog <p>融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称</p>
+     * @param array $ScanItems <p>扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本</p>
+     * @param string $ReportURL <p>综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制</p>
+     * @param string $ScannedAt <p>扫描完成时间。仅 Status=SUCCESS 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+     * @param string $CreatedAt <p>任务创建时间。仅 Status=SCANNING 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+     * @param string $FailedAt <p>失败时间。仅 Status=FAILED 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+     * @param string $Message <p>失败原因描述。仅 Status=FAILED 时有值</p>
      */
     function __construct()
     {

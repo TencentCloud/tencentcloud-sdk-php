@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportPrometheusReadOnlyDynamicAPI返回参数结构体
  *
- * @method PrometheusDynamicAPIResponseHTTP getHTTP() 获取HTTP 响应数据
- * @method void setHTTP(PrometheusDynamicAPIResponseHTTP $HTTP) 设置HTTP 响应数据
+ * @method PrometheusDynamicAPIResponseHTTP getHTTP() 获取<p>HTTP 响应数据</p>
+ * @method void setHTTP(PrometheusDynamicAPIResponseHTTP $HTTP) 设置<p>HTTP 响应数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ExportPrometheusReadOnlyDynamicAPIResponse extends AbstractModel
 {
     /**
-     * @var PrometheusDynamicAPIResponseHTTP HTTP 响应数据
+     * @var PrometheusDynamicAPIResponseHTTP <p>HTTP 响应数据</p>
      */
     public $HTTP;
 
@@ -38,7 +38,7 @@ class ExportPrometheusReadOnlyDynamicAPIResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param PrometheusDynamicAPIResponseHTTP $HTTP HTTP 响应数据
+     * @param PrometheusDynamicAPIResponseHTTP $HTTP <p>HTTP 响应数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

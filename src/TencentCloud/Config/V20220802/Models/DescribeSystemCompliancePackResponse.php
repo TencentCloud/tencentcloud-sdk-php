@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSystemCompliancePack返回参数结构体
  *
- * @method string getCompliancePackId() 获取合规包ID
- * @method void setCompliancePackId(string $CompliancePackId) 设置合规包ID
- * @method string getCompliancePackName() 获取合规包名称
- * @method void setCompliancePackName(string $CompliancePackName) 设置合规包名称
- * @method string getDescription() 获取合规包描述
- * @method void setDescription(string $Description) 设置合规包描述
- * @method integer getRiskLevel() 获取风险等级
- * @method void setRiskLevel(integer $RiskLevel) 设置风险等级
- * @method array getConfigRules() 获取合规包规则列表
- * @method void setConfigRules(array $ConfigRules) 设置合规包规则列表
+ * @method string getCompliancePackId() 获取<p>合规包ID</p>
+ * @method void setCompliancePackId(string $CompliancePackId) 设置<p>合规包ID</p>
+ * @method string getCompliancePackName() 获取<p>合规包名称</p>
+ * @method void setCompliancePackName(string $CompliancePackName) 设置<p>合规包名称</p>
+ * @method string getDescription() 获取<p>合规包描述</p>
+ * @method void setDescription(string $Description) 设置<p>合规包描述</p>
+ * @method integer getRiskLevel() 获取<p>风险等级</p>
+ * @method void setRiskLevel(integer $RiskLevel) 设置<p>风险等级</p>
+ * @method array getConfigRules() 获取<p>合规包规则列表</p>
+ * @method void setConfigRules(array $ConfigRules) 设置<p>合规包规则列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSystemCompliancePackResponse extends AbstractModel
 {
     /**
-     * @var string 合规包ID
+     * @var string <p>合规包ID</p>
      */
     public $CompliancePackId;
 
     /**
-     * @var string 合规包名称
+     * @var string <p>合规包名称</p>
      */
     public $CompliancePackName;
 
     /**
-     * @var string 合规包描述
+     * @var string <p>合规包描述</p>
      */
     public $Description;
 
     /**
-     * @var integer 风险等级
+     * @var integer <p>风险等级</p>
      */
     public $RiskLevel;
 
     /**
-     * @var array 合规包规则列表
+     * @var array <p>合规包规则列表</p>
      */
     public $ConfigRules;
 
@@ -66,11 +66,11 @@ class DescribeSystemCompliancePackResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CompliancePackId 合规包ID
-     * @param string $CompliancePackName 合规包名称
-     * @param string $Description 合规包描述
-     * @param integer $RiskLevel 风险等级
-     * @param array $ConfigRules 合规包规则列表
+     * @param string $CompliancePackId <p>合规包ID</p>
+     * @param string $CompliancePackName <p>合规包名称</p>
+     * @param string $Description <p>合规包描述</p>
+     * @param integer $RiskLevel <p>风险等级</p>
+     * @param array $ConfigRules <p>合规包规则列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

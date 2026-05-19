@@ -20,242 +20,210 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RabbitMQ 托管版实例信息
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getInstanceVersion() 获取实例版本
- * @method void setInstanceVersion(string $InstanceVersion) 设置实例版本
- * @method integer getStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
- * @method void setStatus(integer $Status) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
- * @method integer getNodeCount() 获取节点数量
- * @method void setNodeCount(integer $NodeCount) 设置节点数量
- * @method string getConfigDisplay() 获取实例配置规格名称
- * @method void setConfigDisplay(string $ConfigDisplay) 设置实例配置规格名称
- * @method integer getMaxTps() 获取峰值TPS
- * @method void setMaxTps(integer $MaxTps) 设置峰值TPS
- * @method integer getMaxBandWidth() 获取峰值带宽，Mbps为单位
- * @method void setMaxBandWidth(integer $MaxBandWidth) 设置峰值带宽，Mbps为单位
- * @method integer getMaxStorage() 获取存储容量，GB为单位
- * @method void setMaxStorage(integer $MaxStorage) 设置存储容量，GB为单位
- * @method integer getExpireTime() 获取实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
- * @method void setExpireTime(integer $ExpireTime) 设置实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
- * @method integer getAutoRenewFlag() 获取自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method integer getPayMode() 获取1 表示预付费，0 表示后付费
- * @method void setPayMode(integer $PayMode) 设置1 表示预付费，0 表示后付费
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
- * @method string getSpecName() 获取集群的节点规格，对应的规格标识：
-2C8G：rabbit-vip-profession-2c8g
-4C16G：rabbit-vip-profession-4c16g
-8C32G：rabbit-vip-profession-8c32g
-16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-profession-16c64g
-2C4G：rabbit-vip-basic-5
-4C8G：rabbit-vip-basic-1
-8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为 4C8G：rabbit-vip-basic-1
- * @method void setSpecName(string $SpecName) 设置集群的节点规格，对应的规格标识：
-2C8G：rabbit-vip-profession-2c8g
-4C16G：rabbit-vip-profession-4c16g
-8C32G：rabbit-vip-profession-8c32g
-16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-profession-16c64g
-2C4G：rabbit-vip-basic-5
-4C8G：rabbit-vip-basic-1
-8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为 4C8G：rabbit-vip-basic-1
- * @method string getExceptionInformation() 获取集群异常信息
+ * @method string getInstanceId() 获取<p>实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method string getInstanceVersion() 获取<p>实例版本</p>
+ * @method void setInstanceVersion(string $InstanceVersion) 设置<p>实例版本</p>
+ * @method integer getStatus() 获取<p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
+ * @method void setStatus(integer $Status) 设置<p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
+ * @method integer getNodeCount() 获取<p>节点数量</p>
+ * @method void setNodeCount(integer $NodeCount) 设置<p>节点数量</p>
+ * @method string getConfigDisplay() 获取<p>实例配置规格名称</p>
+ * @method void setConfigDisplay(string $ConfigDisplay) 设置<p>实例配置规格名称</p>
+ * @method integer getMaxTps() 获取<p>峰值TPS</p>
+ * @method void setMaxTps(integer $MaxTps) 设置<p>峰值TPS</p>
+ * @method integer getMaxBandWidth() 获取<p>峰值带宽，Mbps为单位</p>
+ * @method void setMaxBandWidth(integer $MaxBandWidth) 设置<p>峰值带宽，Mbps为单位</p>
+ * @method integer getMaxStorage() 获取<p>存储容量，GB为单位</p>
+ * @method void setMaxStorage(integer $MaxStorage) 设置<p>存储容量，GB为单位</p>
+ * @method integer getExpireTime() 获取<p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p>
+ * @method integer getAutoRenewFlag() 获取<p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+ * @method integer getPayMode() 获取<p>1 表示预付费，0 表示后付费</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>1 表示预付费，0 表示后付费</p>
+ * @method string getRemark() 获取<p>备注信息</p>
+ * @method void setRemark(string $Remark) 设置<p>备注信息</p>
+ * @method string getSpecName() 获取<p>集群的节点规格，对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p>
+ * @method void setSpecName(string $SpecName) 设置<p>集群的节点规格，对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p>
+ * @method string getExceptionInformation() 获取<p>集群异常信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExceptionInformation(string $ExceptionInformation) 设置集群异常信息
+ * @method void setExceptionInformation(string $ExceptionInformation) 设置<p>集群异常信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getClusterStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-为了和计费区分开，额外开启一个状态位，用于显示。
- * @method void setClusterStatus(integer $ClusterStatus) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-为了和计费区分开，额外开启一个状态位，用于显示。
- * @method string getPublicAccessEndpoint() 获取公网接入点
+ * @method integer getClusterStatus() 获取<p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败<br>为了和计费区分开，额外开启一个状态位，用于显示。</p>
+ * @method void setClusterStatus(integer $ClusterStatus) 设置<p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败<br>为了和计费区分开，额外开启一个状态位，用于显示。</p>
+ * @method string getPublicAccessEndpoint() 获取<p>公网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) 设置公网接入点
+ * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) 设置<p>公网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getVpcs() 获取VPC 接入点列表
- * @method void setVpcs(array $Vpcs) 设置VPC 接入点列表
- * @method integer getCreateTime() 获取创建时间，毫秒为单位。unix 时间戳
- * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒为单位。unix 时间戳
- * @method integer getInstanceType() 获取实例类型，0 托管版、1 Serverless 版
- * @method void setInstanceType(integer $InstanceType) 设置实例类型，0 托管版、1 Serverless 版
- * @method integer getIsolatedTime() 获取隔离时间，毫秒为单位。unix 时间戳
- * @method void setIsolatedTime(integer $IsolatedTime) 设置隔离时间，毫秒为单位。unix 时间戳
- * @method boolean getEnableDeletionProtection() 获取是否已开启删除保护
- * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否已开启删除保护
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
+ * @method array getVpcs() 获取<p>VPC 接入点列表</p>
+ * @method void setVpcs(array $Vpcs) 设置<p>VPC 接入点列表</p>
+ * @method integer getCreateTime() 获取<p>创建时间，毫秒为单位。unix 时间戳</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间，毫秒为单位。unix 时间戳</p>
+ * @method integer getInstanceType() 获取<p>实例类型</p><p>枚举值：</p><ul><li>0： 托管版实例</li></ul>
+ * @method void setInstanceType(integer $InstanceType) 设置<p>实例类型</p><p>枚举值：</p><ul><li>0： 托管版实例</li></ul>
+ * @method integer getIsolatedTime() 获取<p>隔离时间，毫秒为单位。unix 时间戳</p>
+ * @method void setIsolatedTime(integer $IsolatedTime) 设置<p>隔离时间，毫秒为单位。unix 时间戳</p>
+ * @method boolean getEnableDeletionProtection() 获取<p>是否已开启删除保护</p>
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置<p>是否已开启删除保护</p>
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
+ * @method string getPublicStreamAccessEndpoint() 获取<p>公有数据流Stream接入点</p>
+ * @method void setPublicStreamAccessEndpoint(string $PublicStreamAccessEndpoint) 设置<p>公有数据流Stream接入点</p>
  */
 class RabbitMQVipInstance extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例版本
+     * @var string <p>实例版本</p>
      */
     public $InstanceVersion;
 
     /**
-     * @var integer 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+     * @var integer <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
      */
     public $Status;
 
     /**
-     * @var integer 节点数量
+     * @var integer <p>节点数量</p>
      */
     public $NodeCount;
 
     /**
-     * @var string 实例配置规格名称
+     * @var string <p>实例配置规格名称</p>
      */
     public $ConfigDisplay;
 
     /**
-     * @var integer 峰值TPS
+     * @var integer <p>峰值TPS</p>
      */
     public $MaxTps;
 
     /**
-     * @var integer 峰值带宽，Mbps为单位
+     * @var integer <p>峰值带宽，Mbps为单位</p>
      */
     public $MaxBandWidth;
 
     /**
-     * @var integer 存储容量，GB为单位
+     * @var integer <p>存储容量，GB为单位</p>
      */
     public $MaxStorage;
 
     /**
-     * @var integer 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
+     * @var integer <p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * @var integer <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 1 表示预付费，0 表示后付费
+     * @var integer <p>1 表示预付费，0 表示后付费</p>
      */
     public $PayMode;
 
     /**
-     * @var string 备注信息
+     * @var string <p>备注信息</p>
      */
     public $Remark;
 
     /**
-     * @var string 集群的节点规格，对应的规格标识：
-2C8G：rabbit-vip-profession-2c8g
-4C16G：rabbit-vip-profession-4c16g
-8C32G：rabbit-vip-profession-8c32g
-16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-profession-16c64g
-2C4G：rabbit-vip-basic-5
-4C8G：rabbit-vip-basic-1
-8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为 4C8G：rabbit-vip-basic-1
+     * @var string <p>集群的节点规格，对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p>
      */
     public $SpecName;
 
     /**
-     * @var string 集群异常信息
+     * @var string <p>集群异常信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExceptionInformation;
 
     /**
-     * @var integer 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-为了和计费区分开，额外开启一个状态位，用于显示。
+     * @var integer <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败<br>为了和计费区分开，额外开启一个状态位，用于显示。</p>
      */
     public $ClusterStatus;
 
     /**
-     * @var string 公网接入点
+     * @var string <p>公网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicAccessEndpoint;
 
     /**
-     * @var array VPC 接入点列表
+     * @var array <p>VPC 接入点列表</p>
      */
     public $Vpcs;
 
     /**
-     * @var integer 创建时间，毫秒为单位。unix 时间戳
+     * @var integer <p>创建时间，毫秒为单位。unix 时间戳</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 实例类型，0 托管版、1 Serverless 版
+     * @var integer <p>实例类型</p><p>枚举值：</p><ul><li>0： 托管版实例</li></ul>
      */
     public $InstanceType;
 
     /**
-     * @var integer 隔离时间，毫秒为单位。unix 时间戳
+     * @var integer <p>隔离时间，毫秒为单位。unix 时间戳</p>
      */
     public $IsolatedTime;
 
     /**
-     * @var boolean 是否已开启删除保护
+     * @var boolean <p>是否已开启删除保护</p>
      */
     public $EnableDeletionProtection;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @param string $InstanceId 实例 ID
-     * @param string $InstanceName 实例名称
-     * @param string $InstanceVersion 实例版本
-     * @param integer $Status 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-     * @param integer $NodeCount 节点数量
-     * @param string $ConfigDisplay 实例配置规格名称
-     * @param integer $MaxTps 峰值TPS
-     * @param integer $MaxBandWidth 峰值带宽，Mbps为单位
-     * @param integer $MaxStorage 存储容量，GB为单位
-     * @param integer $ExpireTime 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
-     * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param integer $PayMode 1 表示预付费，0 表示后付费
-     * @param string $Remark 备注信息
-     * @param string $SpecName 集群的节点规格，对应的规格标识：
-2C8G：rabbit-vip-profession-2c8g
-4C16G：rabbit-vip-profession-4c16g
-8C32G：rabbit-vip-profession-8c32g
-16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-profession-16c64g
-2C4G：rabbit-vip-basic-5
-4C8G：rabbit-vip-basic-1
-8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为 4C8G：rabbit-vip-basic-1
-     * @param string $ExceptionInformation 集群异常信息
+     * @var string <p>公有数据流Stream接入点</p>
+     */
+    public $PublicStreamAccessEndpoint;
+
+    /**
+     * @param string $InstanceId <p>实例 ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param string $InstanceVersion <p>实例版本</p>
+     * @param integer $Status <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
+     * @param integer $NodeCount <p>节点数量</p>
+     * @param string $ConfigDisplay <p>实例配置规格名称</p>
+     * @param integer $MaxTps <p>峰值TPS</p>
+     * @param integer $MaxBandWidth <p>峰值带宽，Mbps为单位</p>
+     * @param integer $MaxStorage <p>存储容量，GB为单位</p>
+     * @param integer $ExpireTime <p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p>
+     * @param integer $AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+     * @param integer $PayMode <p>1 表示预付费，0 表示后付费</p>
+     * @param string $Remark <p>备注信息</p>
+     * @param string $SpecName <p>集群的节点规格，对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p>
+     * @param string $ExceptionInformation <p>集群异常信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-为了和计费区分开，额外开启一个状态位，用于显示。
-     * @param string $PublicAccessEndpoint 公网接入点
+     * @param integer $ClusterStatus <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败<br>为了和计费区分开，额外开启一个状态位，用于显示。</p>
+     * @param string $PublicAccessEndpoint <p>公网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Vpcs VPC 接入点列表
-     * @param integer $CreateTime 创建时间，毫秒为单位。unix 时间戳
-     * @param integer $InstanceType 实例类型，0 托管版、1 Serverless 版
-     * @param integer $IsolatedTime 隔离时间，毫秒为单位。unix 时间戳
-     * @param boolean $EnableDeletionProtection 是否已开启删除保护
-     * @param array $Tags 标签列表
+     * @param array $Vpcs <p>VPC 接入点列表</p>
+     * @param integer $CreateTime <p>创建时间，毫秒为单位。unix 时间戳</p>
+     * @param integer $InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>0： 托管版实例</li></ul>
+     * @param integer $IsolatedTime <p>隔离时间，毫秒为单位。unix 时间戳</p>
+     * @param boolean $EnableDeletionProtection <p>是否已开启删除保护</p>
+     * @param array $Tags <p>标签列表</p>
+     * @param string $PublicStreamAccessEndpoint <p>公有数据流Stream接入点</p>
      */
     function __construct()
     {
@@ -370,6 +338,10 @@ class RabbitMQVipInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PublicStreamAccessEndpoint",$param) and $param["PublicStreamAccessEndpoint"] !== null) {
+            $this->PublicStreamAccessEndpoint = $param["PublicStreamAccessEndpoint"];
         }
     }
 }

@@ -20,34 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxies返回参数结构体
  *
- * @method integer getTotalCount() 获取数据库代理组数
- * @method void setTotalCount(integer $TotalCount) 设置数据库代理组数
- * @method array getProxyGroupInfos() 获取数据库代理组列表
- * @method void setProxyGroupInfos(array $ProxyGroupInfos) 设置数据库代理组列表
- * @method array getProxyNodeInfos() 获取数据库代理节点
+ * @method integer getTotalCount() 获取<p>数据库代理组数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>数据库代理组数</p>
+ * @method array getProxyGroupInfos() 获取<p>数据库代理组列表</p>
+ * @method void setProxyGroupInfos(array $ProxyGroupInfos) 设置<p>数据库代理组列表</p>
+ * @method array getProxyNodeInfos() 获取<p>数据库代理节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxyNodeInfos(array $ProxyNodeInfos) 设置数据库代理节点
+ * @method void setProxyNodeInfos(array $ProxyNodeInfos) 设置<p>数据库代理节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getColumnStoreProxyForward() 获取<p>sql自动转发</p>
+ * @method void setColumnStoreProxyForward(string $ColumnStoreProxyForward) 设置<p>sql自动转发</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeProxiesResponse extends AbstractModel
 {
     /**
-     * @var integer 数据库代理组数
+     * @var integer <p>数据库代理组数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 数据库代理组列表
+     * @var array <p>数据库代理组列表</p>
      */
     public $ProxyGroupInfos;
 
     /**
-     * @var array 数据库代理节点
+     * @var array <p>数据库代理节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyNodeInfos;
+
+    /**
+     * @var string <p>sql自动转发</p>
+     */
+    public $ColumnStoreProxyForward;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -55,10 +62,11 @@ class DescribeProxiesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 数据库代理组数
-     * @param array $ProxyGroupInfos 数据库代理组列表
-     * @param array $ProxyNodeInfos 数据库代理节点
+     * @param integer $TotalCount <p>数据库代理组数</p>
+     * @param array $ProxyGroupInfos <p>数据库代理组列表</p>
+     * @param array $ProxyNodeInfos <p>数据库代理节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ColumnStoreProxyForward <p>sql自动转发</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -94,6 +102,10 @@ class DescribeProxiesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ProxyNodeInfos, $obj);
             }
+        }
+
+        if (array_key_exists("ColumnStoreProxyForward",$param) and $param["ColumnStoreProxyForward"] !== null) {
+            $this->ColumnStoreProxyForward = $param["ColumnStoreProxyForward"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

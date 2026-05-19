@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBPrice返回参数结构体
  *
- * @method integer getPrice() 获取实例价格，单位：分。
- * @method void setPrice(integer $Price) 设置实例价格，单位：分。
- * @method integer getOriginalPrice() 获取实例原价，单位：分。
- * @method void setOriginalPrice(integer $OriginalPrice) 设置实例原价，单位：分。
- * @method string getCurrency() 获取货币单位。CNY-人民币，USD-美元。
- * @method void setCurrency(string $Currency) 设置货币单位。CNY-人民币，USD-美元。
+ * @method integer getPrice() 获取<p>实例价格，单位：分。</p>
+ * @method void setPrice(integer $Price) 设置<p>实例价格，单位：分。</p>
+ * @method integer getOriginalPrice() 获取<p>实例原价，单位：分。</p>
+ * @method void setOriginalPrice(integer $OriginalPrice) 设置<p>实例原价，单位：分。</p>
+ * @method string getCurrency() 获取<p>货币单位。CNY-人民币，USD-美元。</p>
+ * @method void setCurrency(string $Currency) 设置<p>货币单位。CNY-人民币，USD-美元。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBPriceResponse extends AbstractModel
 {
     /**
-     * @var integer 实例价格，单位：分。
+     * @var integer <p>实例价格，单位：分。</p>
      */
     public $Price;
 
     /**
-     * @var integer 实例原价，单位：分。
+     * @var integer <p>实例原价，单位：分。</p>
      */
     public $OriginalPrice;
 
     /**
-     * @var string 货币单位。CNY-人民币，USD-美元。
+     * @var string <p>货币单位。CNY-人民币，USD-美元。</p>
      */
     public $Currency;
 
@@ -52,9 +52,9 @@ class DescribeDBPriceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Price 实例价格，单位：分。
-     * @param integer $OriginalPrice 实例原价，单位：分。
-     * @param string $Currency 货币单位。CNY-人民币，USD-美元。
+     * @param integer $Price <p>实例价格，单位：分。</p>
+     * @param integer $OriginalPrice <p>实例原价，单位：分。</p>
+     * @param string $Currency <p>货币单位。CNY-人民币，USD-美元。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

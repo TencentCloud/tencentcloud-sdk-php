@@ -20,85 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 合规包规则信息
  *
- * @method string getRuleName() 获取规则名称
- * @method void setRuleName(string $RuleName) 设置规则名称
- * @method integer getRiskLevel() 获取风险等级
- * @method void setRiskLevel(integer $RiskLevel) 设置风险等级
- * @method array getInputParameter() 获取入参
- * @method void setInputParameter(array $InputParameter) 设置入参
- * @method string getIdentifier() 获取规则身份标识
- * @method void setIdentifier(string $Identifier) 设置规则身份标识
- * @method string getDescription() 获取描述
+ * @method string getRuleName() 获取<p>规则名称</p>
+ * @method void setRuleName(string $RuleName) 设置<p>规则名称</p>
+ * @method integer getRiskLevel() 获取<p>风险等级</p>
+ * @method void setRiskLevel(integer $RiskLevel) 设置<p>风险等级</p>
+ * @method array getInputParameter() 获取<p>入参</p>
+ * @method void setInputParameter(array $InputParameter) 设置<p>入参</p>
+ * @method string getIdentifier() 获取<p>规则身份标识</p>
+ * @method void setIdentifier(string $Identifier) 设置<p>规则身份标识</p>
+ * @method string getDescription() 获取<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setDescription(string $Description) 设置<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getManagedRuleIdentifier() 获取预设规则身份标识
+ * @method string getManagedRuleIdentifier() 获取<p>预设规则身份标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setManagedRuleIdentifier(string $ManagedRuleIdentifier) 设置预设规则身份标识
+ * @method void setManagedRuleIdentifier(string $ManagedRuleIdentifier) 设置<p>预设规则身份标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getConfigRuleId() 获取规则ID
- * @method void setConfigRuleId(string $ConfigRuleId) 设置规则ID
- * @method string getCompliancePackId() 获取合规包ID
+ * @method string getConfigRuleId() 获取<p>规则ID</p>
+ * @method void setConfigRuleId(string $ConfigRuleId) 设置<p>规则ID</p>
+ * @method string getCompliancePackId() 获取<p>合规包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompliancePackId(string $CompliancePackId) 设置合规包ID
+ * @method void setCompliancePackId(string $CompliancePackId) 设置<p>合规包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompliancePackRule extends AbstractModel
 {
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
      */
     public $RuleName;
 
     /**
-     * @var integer 风险等级
+     * @var integer <p>风险等级</p>
      */
     public $RiskLevel;
 
     /**
-     * @var array 入参
+     * @var array <p>入参</p>
      */
     public $InputParameter;
 
     /**
-     * @var string 规则身份标识
+     * @var string <p>规则身份标识</p>
      */
     public $Identifier;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 预设规则身份标识
+     * @var string <p>预设规则身份标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManagedRuleIdentifier;
 
     /**
-     * @var string 规则ID
+     * @var string <p>规则ID</p>
      */
     public $ConfigRuleId;
 
     /**
-     * @var string 合规包ID
+     * @var string <p>合规包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompliancePackId;
 
     /**
-     * @param string $RuleName 规则名称
-     * @param integer $RiskLevel 风险等级
-     * @param array $InputParameter 入参
-     * @param string $Identifier 规则身份标识
-     * @param string $Description 描述
+     * @param string $RuleName <p>规则名称</p>
+     * @param integer $RiskLevel <p>风险等级</p>
+     * @param array $InputParameter <p>入参</p>
+     * @param string $Identifier <p>规则身份标识</p>
+     * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ManagedRuleIdentifier 预设规则身份标识
+     * @param string $ManagedRuleIdentifier <p>预设规则身份标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ConfigRuleId 规则ID
-     * @param string $CompliancePackId 合规包ID
+     * @param string $ConfigRuleId <p>规则ID</p>
+     * @param string $CompliancePackId <p>合规包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

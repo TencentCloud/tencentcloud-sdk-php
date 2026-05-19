@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lkeap\V20240522\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAttributeLabels请求参数结构体
+ * skills检测能力标签
  *
- * @method string getKnowledgeBaseId() 获取知识库ID
- * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库ID
- * @method array getAttributeIds() 获取属性ID
- * @method void setAttributeIds(array $AttributeIds) 设置属性ID
+ * @method string getId() 获取<p>标签唯一ID</p>
+ * @method void setId(string $Id) 设置<p>标签唯一ID</p>
+ * @method string getName() 获取<p>标签名称（如 network_access、file_system 等）</p>
+ * @method void setName(string $Name) 设置<p>标签名称（如 network_access、file_system 等）</p>
  */
-class DeleteAttributeLabelsRequest extends AbstractModel
+class SkillScanCapabilityTag extends AbstractModel
 {
     /**
-     * @var string 知识库ID
+     * @var string <p>标签唯一ID</p>
      */
-    public $KnowledgeBaseId;
+    public $Id;
 
     /**
-     * @var array 属性ID
+     * @var string <p>标签名称（如 network_access、file_system 等）</p>
      */
-    public $AttributeIds;
+    public $Name;
 
     /**
-     * @param string $KnowledgeBaseId 知识库ID
-     * @param array $AttributeIds 属性ID
+     * @param string $Id <p>标签唯一ID</p>
+     * @param string $Name <p>标签名称（如 network_access、file_system 等）</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteAttributeLabelsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
-            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
-        if (array_key_exists("AttributeIds",$param) and $param["AttributeIds"] !== null) {
-            $this->AttributeIds = $param["AttributeIds"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

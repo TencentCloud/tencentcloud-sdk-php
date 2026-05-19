@@ -139,6 +139,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeRuleLimitResponse DescribeRuleLimit(Models\DescribeRuleLimitRequest $req) 获取各个模块具体的规格限制
  * @method Models\DescribeScanIpResponse DescribeScanIp(Models\DescribeScanIpRequest $req) 查询扫描ip
  * @method Models\DescribeSessionResponse DescribeSession(Models\DescribeSessionRequest $req) Waf 会话定义查询接口
+ * @method Models\DescribeSkillSecScanResultResponse DescribeSkillSecScanResult(Models\DescribeSkillSecScanResultRequest $req) 根据文件Hash查询Skill安全检测结果
  * @method Models\DescribeSpartaProtectionInfoResponse DescribeSpartaProtectionInfo(Models\DescribeSpartaProtectionInfoRequest $req) waf斯巴达-获取防护域名信息
  * @method Models\DescribeTlsVersionResponse DescribeTlsVersion(Models\DescribeTlsVersionRequest $req) 查询SaaS型WAF支持的TLS版本
  * @method Models\DescribeTopAttackDomainResponse DescribeTopAttackDomain(Models\DescribeTopAttackDomainRequest $req) 查询Top5的攻击域名
@@ -244,6 +245,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\SwitchElasticModeResponse SwitchElasticMode(Models\SwitchElasticModeRequest $req) 切换弹性的开关
  * @method Models\UpdateProtectionModesResponse UpdateProtectionModes(Models\UpdateProtectionModesRequest $req) 更新Tiga引擎下大类规则的防护模式
  * @method Models\UpdateRateLimitV2Response UpdateRateLimitV2(Models\UpdateRateLimitV2Request $req) 更新自研版限流规则
+ * @method Models\UploadSkillSecScanResponse UploadSkillSecScan(Models\UploadSkillSecScanRequest $req) 上传Skill ZIP文件，触发异步安全检测
  * @method Models\UpsertCCAutoStatusResponse UpsertCCAutoStatus(Models\UpsertCCAutoStatusRequest $req) 编辑SAAS型接入的紧急CC防护状态
  * @method Models\UpsertCCRuleResponse UpsertCCRule(Models\UpsertCCRuleRequest $req) Waf  CC V2 Upsert接口
  * @method Models\UpsertIpAccessControlResponse UpsertIpAccessControl(Models\UpsertIpAccessControlRequest $req) Waf IP黑白名单Upsert接口（建议使用CreateIpAccessControl、ModifyIpAccessControl来替换当前接口）

@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatabaseObjects请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，形如：tdsql3-42f40429.
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql3-42f40429.
- * @method string getDbName() 获取数据库名称，通过 DescribeDatabases 接口获取。
- * @method void setDbName(string $DbName) 设置数据库名称，通过 DescribeDatabases 接口获取。
+ * @method string getInstanceId() 获取<p>实例 ID，形如：tdsql3-42f40429.</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，形如：tdsql3-42f40429.</p>
+ * @method string getDbName() 获取<p>数据库名称，通过 DescribeDatabases 接口获取。</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名称，通过 DescribeDatabases 接口获取。</p>
+ * @method integer getOffset() 获取<p>分页索引</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页索引</p>
+ * @method integer getLimit() 获取<p>每页数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页数量</p>
+ * @method string getTableRegexp() 获取<p>数据表名称匹配表达式</p>
+ * @method void setTableRegexp(string $TableRegexp) 设置<p>数据表名称匹配表达式</p>
  */
 class DescribeDatabaseObjectsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，形如：tdsql3-42f40429.
+     * @var string <p>实例 ID，形如：tdsql3-42f40429.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 数据库名称，通过 DescribeDatabases 接口获取。
+     * @var string <p>数据库名称，通过 DescribeDatabases 接口获取。</p>
      */
     public $DbName;
 
     /**
-     * @param string $InstanceId 实例 ID，形如：tdsql3-42f40429.
-     * @param string $DbName 数据库名称，通过 DescribeDatabases 接口获取。
+     * @var integer <p>分页索引</p>
+     */
+    public $Offset;
+
+    /**
+     * @var integer <p>每页数量</p>
+     */
+    public $Limit;
+
+    /**
+     * @var string <p>数据表名称匹配表达式</p>
+     */
+    public $TableRegexp;
+
+    /**
+     * @param string $InstanceId <p>实例 ID，形如：tdsql3-42f40429.</p>
+     * @param string $DbName <p>数据库名称，通过 DescribeDatabases 接口获取。</p>
+     * @param integer $Offset <p>分页索引</p>
+     * @param integer $Limit <p>每页数量</p>
+     * @param string $TableRegexp <p>数据表名称匹配表达式</p>
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class DescribeDatabaseObjectsRequest extends AbstractModel
 
         if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
             $this->DbName = $param["DbName"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TableRegexp",$param) and $param["TableRegexp"] !== null) {
+            $this->TableRegexp = $param["TableRegexp"];
         }
     }
 }

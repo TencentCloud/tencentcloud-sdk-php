@@ -20,78 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxies请求参数结构体
  *
- * @method string getClusterId() 获取集群 ID（该参数必传，例如 cynosdbmysql-2u2mh111）。
- * @method void setClusterId(string $ClusterId) 设置集群 ID（该参数必传，例如 cynosdbmysql-2u2mh111）。
- * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100
- * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100
- * @method integer getOffset() 获取记录偏移量，默认值为0
- * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0
- * @method string getOrderBy() 获取排序字段，取值范围：
-<li> CREATETIME：创建时间</li>
-<li> PERIODENDTIME：过期时间</li>
- * @method void setOrderBy(string $OrderBy) 设置排序字段，取值范围：
-<li> CREATETIME：创建时间</li>
-<li> PERIODENDTIME：过期时间</li>
- * @method string getOrderByType() 获取排序类型，取值范围：
-<li> ASC：升序排序 </li>
-<li> DESC：降序排序 </li>
- * @method void setOrderByType(string $OrderByType) 设置排序类型，取值范围：
-<li> ASC：升序排序 </li>
-<li> DESC：降序排序 </li>
- * @method array getFilters() 获取搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
-说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
- * @method void setFilters(array $Filters) 设置搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
-说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
+ * @method string getClusterId() 获取<p>集群 ID（该参数必传，例如 cynosdbmysql-2u2mh111）。</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群 ID（该参数必传，例如 cynosdbmysql-2u2mh111）。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为 20，最大值为 100</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为 20，最大值为 100</p>
+ * @method integer getOffset() 获取<p>记录偏移量，默认值为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>记录偏移量，默认值为0</p>
+ * @method string getOrderBy() 获取<p>排序字段，取值范围：</p><li> CREATETIME：创建时间</li><li> PERIODENDTIME：过期时间</li>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序字段，取值范围：</p><li> CREATETIME：创建时间</li><li> PERIODENDTIME：过期时间</li>
+ * @method string getOrderByType() 获取<p>排序类型，取值范围：</p><li> ASC：升序排序 </li><li> DESC：降序排序 </li>
+ * @method void setOrderByType(string $OrderByType) 设置<p>排序类型，取值范围：</p><li> ASC：升序排序 </li><li> DESC：降序排序 </li>
+ * @method array getFilters() 获取<p>搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。<br>说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。</p>
+ * @method void setFilters(array $Filters) 设置<p>搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。<br>说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。</p>
  */
 class DescribeProxiesRequest extends AbstractModel
 {
     /**
-     * @var string 集群 ID（该参数必传，例如 cynosdbmysql-2u2mh111）。
+     * @var string <p>集群 ID（该参数必传，例如 cynosdbmysql-2u2mh111）。</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 返回数量，默认为 20，最大值为 100
+     * @var integer <p>返回数量，默认为 20，最大值为 100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 记录偏移量，默认值为0
+     * @var integer <p>记录偏移量，默认值为0</p>
      */
     public $Offset;
 
     /**
-     * @var string 排序字段，取值范围：
-<li> CREATETIME：创建时间</li>
-<li> PERIODENDTIME：过期时间</li>
+     * @var string <p>排序字段，取值范围：</p><li> CREATETIME：创建时间</li><li> PERIODENDTIME：过期时间</li>
      */
     public $OrderBy;
 
     /**
-     * @var string 排序类型，取值范围：
-<li> ASC：升序排序 </li>
-<li> DESC：降序排序 </li>
+     * @var string <p>排序类型，取值范围：</p><li> ASC：升序排序 </li><li> DESC：降序排序 </li>
      */
     public $OrderByType;
 
     /**
-     * @var array 搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
-说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
+     * @var array <p>搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。<br>说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。</p>
      */
     public $Filters;
 
     /**
-     * @param string $ClusterId 集群 ID（该参数必传，例如 cynosdbmysql-2u2mh111）。
-     * @param integer $Limit 返回数量，默认为 20，最大值为 100
-     * @param integer $Offset 记录偏移量，默认值为0
-     * @param string $OrderBy 排序字段，取值范围：
-<li> CREATETIME：创建时间</li>
-<li> PERIODENDTIME：过期时间</li>
-     * @param string $OrderByType 排序类型，取值范围：
-<li> ASC：升序排序 </li>
-<li> DESC：降序排序 </li>
-     * @param array $Filters 搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
-说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
+     * @param string $ClusterId <p>集群 ID（该参数必传，例如 cynosdbmysql-2u2mh111）。</p>
+     * @param integer $Limit <p>返回数量，默认为 20，最大值为 100</p>
+     * @param integer $Offset <p>记录偏移量，默认值为0</p>
+     * @param string $OrderBy <p>排序字段，取值范围：</p><li> CREATETIME：创建时间</li><li> PERIODENDTIME：过期时间</li>
+     * @param string $OrderByType <p>排序类型，取值范围：</p><li> ASC：升序排序 </li><li> DESC：降序排序 </li>
+     * @param array $Filters <p>搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。<br>说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。</p>
      */
     function __construct()
     {

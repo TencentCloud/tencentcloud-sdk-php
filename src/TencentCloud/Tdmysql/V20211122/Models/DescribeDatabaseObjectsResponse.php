@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatabaseObjects返回参数结构体
  *
- * @method string getInstanceId() 获取透传入参。
- * @method void setInstanceId(string $InstanceId) 设置透传入参。
- * @method string getDbName() 获取数据库名称。
- * @method void setDbName(string $DbName) 设置数据库名称。
- * @method array getTables() 获取表列表。
+ * @method string getInstanceId() 获取<p>透传入参。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>透传入参。</p>
+ * @method string getDbName() 获取<p>数据库名称。</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名称。</p>
+ * @method array getTables() 获取<p>表列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTables(array $Tables) 设置表列表。
+ * @method void setTables(array $Tables) 设置<p>表列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getViews() 获取视图列表。
+ * @method array getViews() 获取<p>视图列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setViews(array $Views) 设置视图列表。
+ * @method void setViews(array $Views) 设置<p>视图列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getProcs() 获取存储过程列表。
+ * @method array getProcs() 获取<p>存储过程列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProcs(array $Procs) 设置存储过程列表。
+ * @method void setProcs(array $Procs) 设置<p>存储过程列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFuncs() 获取函数列表。
+ * @method array getFuncs() 获取<p>函数列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFuncs(array $Funcs) 设置函数列表。
+ * @method void setFuncs(array $Funcs) 设置<p>函数列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -46,35 +46,35 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDatabaseObjectsResponse extends AbstractModel
 {
     /**
-     * @var string 透传入参。
+     * @var string <p>透传入参。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 数据库名称。
+     * @var string <p>数据库名称。</p>
      */
     public $DbName;
 
     /**
-     * @var array 表列表。
+     * @var array <p>表列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tables;
 
     /**
-     * @var array 视图列表。
+     * @var array <p>视图列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Views;
 
     /**
-     * @var array 存储过程列表。
+     * @var array <p>存储过程列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Procs;
 
     /**
-     * @var array 函数列表。
+     * @var array <p>函数列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Funcs;
@@ -85,15 +85,15 @@ class DescribeDatabaseObjectsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 透传入参。
-     * @param string $DbName 数据库名称。
-     * @param array $Tables 表列表。
+     * @param string $InstanceId <p>透传入参。</p>
+     * @param string $DbName <p>数据库名称。</p>
+     * @param array $Tables <p>表列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Views 视图列表。
+     * @param array $Views <p>视图列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Procs 存储过程列表。
+     * @param array $Procs <p>存储过程列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Funcs 函数列表。
+     * @param array $Funcs <p>函数列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -14,23 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lkeap\V20240522\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAttributeLabels返回参数结构体
+ * DescribeTrainingTaskPodUrl返回参数结构体
  *
+ * @method string getPodUrl() 获取Pod登录URL
+ * @method void setPodUrl(string $PodUrl) 设置Pod登录URL
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteAttributeLabelsResponse extends AbstractModel
+class DescribeTrainingTaskPodUrlResponse extends AbstractModel
 {
+    /**
+     * @var string Pod登录URL
+     */
+    public $PodUrl;
+
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $PodUrl Pod登录URL
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class DeleteAttributeLabelsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PodUrl",$param) and $param["PodUrl"] !== null) {
+            $this->PodUrl = $param["PodUrl"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

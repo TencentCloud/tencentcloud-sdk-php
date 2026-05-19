@@ -161,7 +161,21 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\EnableGrafanaInternetResponse EnableGrafanaInternet(Models\EnableGrafanaInternetRequest $req) 设置 Grafana 公网访问
  * @method Models\EnableGrafanaSSOResponse EnableGrafanaSSO(Models\EnableGrafanaSSORequest $req) 设置 Grafana 单点登录，使用腾讯云账号
  * @method Models\EnableSSOCamCheckResponse EnableSSOCamCheck(Models\EnableSSOCamCheckRequest $req) SSO单点登录时，设置是否cam鉴权
- * @method Models\ExportPrometheusReadOnlyDynamicAPIResponse ExportPrometheusReadOnlyDynamicAPI(Models\ExportPrometheusReadOnlyDynamicAPIRequest $req) Prometheus 内部动态 api 代理，仅内部使用
+ * @method Models\ExportPrometheusReadOnlyDynamicAPIResponse ExportPrometheusReadOnlyDynamicAPI(Models\ExportPrometheusReadOnlyDynamicAPIRequest $req) Prometheus 内部只读动态 api 代理，支持以云api形式访问prometheus原生api
+支持以下api:
+
+| path | method | 用途 |
+| - | - | - |
+| /api/v1/query | GET, POST | 点查询 |
+| /api/v1/query_range | GET, POST |  范围查询 |
+| /api/v1/series | GET, POST | series列表查询 |
+| /api/v1/labels | GET, POST | label名查询 |
+| /api/v1/label/{label_name}/values | GET | label值查询 |
+| /api/v1/rules | GET | 告警，预聚合规则查询 |
+| /api/v1/user_limits | GET | prometheus实例限制查询 |
+| /alertmanager/api/v2/alerts/groups | GET | 当前告警信息查询 | 
+| /alertmanager/api/v2/silences | GET | 告警静默查询 |
+| /alertmanager/api/v2/silence/{id} | GET | 告警静默详情查询 |
  * @method Models\GetMonitorDataResponse GetMonitorData(Models\GetMonitorDataRequest $req) 获取云产品的监控数据。此接口不适用于拉取容器服务监控数据，如需拉取容器服务监控数据，请使用[根据维度条件查询监控数据](https://cloud.tencent.com/document/product/248/51845)接口。
 传入产品的命名空间、对象维度描述和监控指标即可获得相应的监控数据。
 接口调用限制：单请求最多可支持批量拉取50个实例的监控数据，单请求的数据点数限制为7200个。

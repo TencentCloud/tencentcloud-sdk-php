@@ -20,174 +20,174 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 管理端规则详情
  *
- * @method string getIdentifier() 获取规则标识
+ * @method string getIdentifier() 获取<p>规则标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdentifier(string $Identifier) 设置规则标识
+ * @method void setIdentifier(string $Identifier) 设置<p>规则标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleName() 获取规则名
+ * @method string getRuleName() 获取<p>规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleName(string $RuleName) 设置规则名
+ * @method void setRuleName(string $RuleName) 设置<p>规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInputParameter() 获取规则参数
+ * @method array getInputParameter() 获取<p>规则参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputParameter(array $InputParameter) 设置规则参数
+ * @method void setInputParameter(array $InputParameter) 设置<p>规则参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSourceCondition() 获取规则触发条件
+ * @method array getSourceCondition() 获取<p>规则触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceCondition(array $SourceCondition) 设置规则触发条件
+ * @method void setSourceCondition(array $SourceCondition) 设置<p>规则触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResourceType() 获取支持的资源类型
+ * @method array getResourceType() 获取<p>支持的资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceType(array $ResourceType) 设置支持的资源类型
+ * @method void setResourceType(array $ResourceType) 设置<p>支持的资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLabel() 获取标签
+ * @method array getLabel() 获取<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(array $Label) 设置标签
+ * @method void setLabel(array $Label) 设置<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRiskLevel() 获取风险等级，1，2，3
+ * @method integer getRiskLevel() 获取<p>风险等级，1，2，3</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskLevel(integer $RiskLevel) 设置风险等级，1，2，3
+ * @method void setRiskLevel(integer $RiskLevel) 设置<p>风险等级，1，2，3</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServiceFunction() 获取对应的函数
+ * @method string getServiceFunction() 获取<p>对应的函数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceFunction(string $ServiceFunction) 设置对应的函数
+ * @method void setServiceFunction(string $ServiceFunction) 设置<p>对应的函数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTriggerType() 获取触发类型
+ * @method array getTriggerType() 获取<p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerType(array $TriggerType) 设置触发类型
+ * @method void setTriggerType(array $TriggerType) 设置<p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取描述
+ * @method string getDescription() 获取<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setDescription(string $Description) 设置<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReferenceCount() 获取使用次数
+ * @method integer getReferenceCount() 获取<p>使用次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReferenceCount(integer $ReferenceCount) 设置使用次数
+ * @method void setReferenceCount(integer $ReferenceCount) 设置<p>使用次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdentifierType() 获取规则类型
- * @method void setIdentifierType(string $IdentifierType) 设置规则类型
+ * @method string getIdentifierType() 获取<p>规则类型</p>
+ * @method void setIdentifierType(string $IdentifierType) 设置<p>规则类型</p>
  */
 class SystemConfigRule extends AbstractModel
 {
     /**
-     * @var string 规则标识
+     * @var string <p>规则标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Identifier;
 
     /**
-     * @var string 规则名
+     * @var string <p>规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
-     * @var array 规则参数
+     * @var array <p>规则参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputParameter;
 
     /**
-     * @var array 规则触发条件
+     * @var array <p>规则触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceCondition;
 
     /**
-     * @var array 支持的资源类型
+     * @var array <p>支持的资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
-     * @var integer 风险等级，1，2，3
+     * @var integer <p>风险等级，1，2，3</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
-     * @var string 对应的函数
+     * @var string <p>对应的函数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceFunction;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var array 触发类型
+     * @var array <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerType;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var integer 使用次数
+     * @var integer <p>使用次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReferenceCount;
 
     /**
-     * @var string 规则类型
+     * @var string <p>规则类型</p>
      */
     public $IdentifierType;
 
     /**
-     * @param string $Identifier 规则标识
+     * @param string $Identifier <p>规则标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleName 规则名
+     * @param string $RuleName <p>规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InputParameter 规则参数
+     * @param array $InputParameter <p>规则参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SourceCondition 规则触发条件
+     * @param array $SourceCondition <p>规则触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ResourceType 支持的资源类型
+     * @param array $ResourceType <p>支持的资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Label 标签
+     * @param array $Label <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RiskLevel 风险等级，1，2，3
+     * @param integer $RiskLevel <p>风险等级，1，2，3</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServiceFunction 对应的函数
+     * @param string $ServiceFunction <p>对应的函数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param string $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TriggerType 触发类型
+     * @param array $TriggerType <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 描述
+     * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReferenceCount 使用次数
+     * @param integer $ReferenceCount <p>使用次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdentifierType 规则类型
+     * @param string $IdentifierType <p>规则类型</p>
      */
     function __construct()
     {

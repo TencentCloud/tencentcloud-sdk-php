@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 终端节点配置
  *
- * @method string getEndpointType() 获取域名类型。可选值'Domain', 'PublicIp'。
- * @method void setEndpointType(string $EndpointType) 设置域名类型。可选值'Domain', 'PublicIp'。
- * @method string getEndpointService() 获取域名。
- * @method void setEndpointService(string $EndpointService) 设置域名。
- * @method integer getWeight() 获取权重。
- * @method void setWeight(integer $Weight) 设置权重。
- * @method string getHealthCheckStatus() 获取健康检查状态；HEALTH：健康；UNHEALTH：不健康。
- * @method void setHealthCheckStatus(string $HealthCheckStatus) 设置健康检查状态；HEALTH：健康；UNHEALTH：不健康。
+ * @method string getEndpointType() 获取<p>域名类型。可选值&#39;Domain&#39;, &#39;PublicIp&#39;。</p>
+ * @method void setEndpointType(string $EndpointType) 设置<p>域名类型。可选值&#39;Domain&#39;, &#39;PublicIp&#39;。</p>
+ * @method string getEndpointService() 获取<p>域名。</p>
+ * @method void setEndpointService(string $EndpointService) 设置<p>域名。</p>
+ * @method integer getWeight() 获取<p>权重。</p>
+ * @method void setWeight(integer $Weight) 设置<p>权重。</p>
+ * @method string getHealthCheckStatus() 获取<p>健康检查状态；HEALTH：健康；UNHEALTH：不健康。</p>
+ * @method void setHealthCheckStatus(string $HealthCheckStatus) 设置<p>健康检查状态；HEALTH：健康；UNHEALTH：不健康。</p>
  */
 class EndpointConfigurations extends AbstractModel
 {
     /**
-     * @var string 域名类型。可选值'Domain', 'PublicIp'。
+     * @var string <p>域名类型。可选值&#39;Domain&#39;, &#39;PublicIp&#39;。</p>
      */
     public $EndpointType;
 
     /**
-     * @var string 域名。
+     * @var string <p>域名。</p>
      */
     public $EndpointService;
 
     /**
-     * @var integer 权重。
+     * @var integer <p>权重。</p>
      */
     public $Weight;
 
     /**
-     * @var string 健康检查状态；HEALTH：健康；UNHEALTH：不健康。
+     * @var string <p>健康检查状态；HEALTH：健康；UNHEALTH：不健康。</p>
      */
     public $HealthCheckStatus;
 
     /**
-     * @param string $EndpointType 域名类型。可选值'Domain', 'PublicIp'。
-     * @param string $EndpointService 域名。
-     * @param integer $Weight 权重。
-     * @param string $HealthCheckStatus 健康检查状态；HEALTH：健康；UNHEALTH：不健康。
+     * @param string $EndpointType <p>域名类型。可选值&#39;Domain&#39;, &#39;PublicIp&#39;。</p>
+     * @param string $EndpointService <p>域名。</p>
+     * @param integer $Weight <p>权重。</p>
+     * @param string $HealthCheckStatus <p>健康检查状态；HEALTH：健康；UNHEALTH：不健康。</p>
      */
     function __construct()
     {

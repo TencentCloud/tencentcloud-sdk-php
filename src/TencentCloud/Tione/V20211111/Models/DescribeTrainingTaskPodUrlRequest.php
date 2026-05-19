@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lkeap\V20240522\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 分段配置
+ * DescribeTrainingTaskPodUrl请求参数结构体
  *
- * @method integer getMaxChunkSize() 获取最大分片长度
- * @method void setMaxChunkSize(integer $MaxChunkSize) 设置最大分片长度
+ * @method string getPodName() 获取任务实例名
+ * @method void setPodName(string $PodName) 设置任务实例名
  */
-class SegmentationConfig extends AbstractModel
+class DescribeTrainingTaskPodUrlRequest extends AbstractModel
 {
     /**
-     * @var integer 最大分片长度
+     * @var string 任务实例名
      */
-    public $MaxChunkSize;
+    public $PodName;
 
     /**
-     * @param integer $MaxChunkSize 最大分片长度
+     * @param string $PodName 任务实例名
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class SegmentationConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxChunkSize",$param) and $param["MaxChunkSize"] !== null) {
-            $this->MaxChunkSize = $param["MaxChunkSize"];
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
         }
     }
 }

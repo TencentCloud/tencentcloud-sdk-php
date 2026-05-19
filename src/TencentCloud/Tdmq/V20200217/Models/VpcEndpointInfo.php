@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcTlsEndpoint(string $VpcTlsEndpoint) 设置<p>TLS加密的数据流接入点</p>
  * @method string getVpcErrorMessage() 获取<p>VPC 接入点操作失败的错误信息</p>
  * @method void setVpcErrorMessage(string $VpcErrorMessage) 设置<p>VPC 接入点操作失败的错误信息</p>
+ * @method string getId() 获取<p>接入点ID</p>
+ * @method void setId(string $Id) 设置<p>接入点ID</p>
+ * @method string getVpcStreamEndpoint() 获取<p>vpc Stream接入点</p>
+ * @method void setVpcStreamEndpoint(string $VpcStreamEndpoint) 设置<p>vpc Stream接入点</p>
  */
 class VpcEndpointInfo extends AbstractModel
 {
@@ -66,12 +70,24 @@ class VpcEndpointInfo extends AbstractModel
     public $VpcErrorMessage;
 
     /**
+     * @var string <p>接入点ID</p>
+     */
+    public $Id;
+
+    /**
+     * @var string <p>vpc Stream接入点</p>
+     */
+    public $VpcStreamEndpoint;
+
+    /**
      * @param string $VpcId <p>vpc的id</p>
      * @param string $SubnetId <p>子网id</p>
      * @param string $VpcEndpoint <p>vpc接入点信息</p>
      * @param string $VpcDataStreamEndpointStatus <p>vpc接入点状态 OFF/ON/CREATING/DELETING</p>
      * @param string $VpcTlsEndpoint <p>TLS加密的数据流接入点</p>
      * @param string $VpcErrorMessage <p>VPC 接入点操作失败的错误信息</p>
+     * @param string $Id <p>接入点ID</p>
+     * @param string $VpcStreamEndpoint <p>vpc Stream接入点</p>
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class VpcEndpointInfo extends AbstractModel
 
         if (array_key_exists("VpcErrorMessage",$param) and $param["VpcErrorMessage"] !== null) {
             $this->VpcErrorMessage = $param["VpcErrorMessage"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("VpcStreamEndpoint",$param) and $param["VpcStreamEndpoint"] !== null) {
+            $this->VpcStreamEndpoint = $param["VpcStreamEndpoint"];
         }
     }
 }

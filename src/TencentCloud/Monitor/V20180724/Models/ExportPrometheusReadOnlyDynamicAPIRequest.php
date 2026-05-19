@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportPrometheusReadOnlyDynamicAPI请求参数结构体
  *
- * @method string getInstanceId() 获取Prometheus 实例 ID
- * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
- * @method string getMethod() 获取HTTP 方法名 GET/POST/PUT/DELETE 等
- * @method void setMethod(string $Method) 设置HTTP 方法名 GET/POST/PUT/DELETE 等
- * @method string getPath() 获取HTTP 路径（包括 query string）
- * @method void setPath(string $Path) 设置HTTP 路径（包括 query string）
- * @method string getRequestBody() 获取HTTP 请求体，任何数据
- * @method void setRequestBody(string $RequestBody) 设置HTTP 请求体，任何数据
- * @method array getHeaders() 获取HTTP 请求头
- * @method void setHeaders(array $Headers) 设置HTTP 请求头
- * @method boolean getSelfMonitor() 获取是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。
- * @method void setSelfMonitor(boolean $SelfMonitor) 设置是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。
+ * @method string getInstanceId() 获取<p>Prometheus 实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>Prometheus 实例 ID</p>
+ * @method string getMethod() 获取<p>HTTP 方法名 GET/POST/PUT/DELETE 等</p>
+ * @method void setMethod(string $Method) 设置<p>HTTP 方法名 GET/POST/PUT/DELETE 等</p>
+ * @method string getPath() 获取<p>HTTP 路径（包括 query string）</p>
+ * @method void setPath(string $Path) 设置<p>HTTP 路径（包括 query string）</p>
+ * @method string getRequestBody() 获取<p>HTTP 请求体，任何数据</p>
+ * @method void setRequestBody(string $RequestBody) 设置<p>HTTP 请求体，任何数据</p>
+ * @method array getHeaders() 获取<p>HTTP 请求头</p>
+ * @method void setHeaders(array $Headers) 设置<p>HTTP 请求头</p>
+ * @method boolean getSelfMonitor() 获取<p>是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。</p>
+ * @method void setSelfMonitor(boolean $SelfMonitor) 设置<p>是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。</p>
  */
 class ExportPrometheusReadOnlyDynamicAPIRequest extends AbstractModel
 {
     /**
-     * @var string Prometheus 实例 ID
+     * @var string <p>Prometheus 实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string HTTP 方法名 GET/POST/PUT/DELETE 等
+     * @var string <p>HTTP 方法名 GET/POST/PUT/DELETE 等</p>
      */
     public $Method;
 
     /**
-     * @var string HTTP 路径（包括 query string）
+     * @var string <p>HTTP 路径（包括 query string）</p>
      */
     public $Path;
 
     /**
-     * @var string HTTP 请求体，任何数据
+     * @var string <p>HTTP 请求体，任何数据</p>
      */
     public $RequestBody;
 
     /**
-     * @var array HTTP 请求头
+     * @var array <p>HTTP 请求头</p>
      */
     public $Headers;
 
     /**
-     * @var boolean 是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。
+     * @var boolean <p>是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。</p>
      */
     public $SelfMonitor;
 
     /**
-     * @param string $InstanceId Prometheus 实例 ID
-     * @param string $Method HTTP 方法名 GET/POST/PUT/DELETE 等
-     * @param string $Path HTTP 路径（包括 query string）
-     * @param string $RequestBody HTTP 请求体，任何数据
-     * @param array $Headers HTTP 请求头
-     * @param boolean $SelfMonitor 是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。
+     * @param string $InstanceId <p>Prometheus 实例 ID</p>
+     * @param string $Method <p>HTTP 方法名 GET/POST/PUT/DELETE 等</p>
+     * @param string $Path <p>HTTP 路径（包括 query string）</p>
+     * @param string $RequestBody <p>HTTP 请求体，任何数据</p>
+     * @param array $Headers <p>HTTP 请求头</p>
+     * @param boolean $SelfMonitor <p>是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。</p>
      */
     function __construct()
     {

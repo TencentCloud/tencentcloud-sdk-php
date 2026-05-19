@@ -20,170 +20,174 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RabbitMQ集群访问信息
  *
- * @method string getPublicAccessEndpoint() 获取集群公网接入地址
+ * @method string getPublicAccessEndpoint() 获取<p>集群公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) 设置集群公网接入地址
+ * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) 设置<p>集群公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWebConsoleEndpoint() 获取集群控制台访问地址
- * @method void setWebConsoleEndpoint(string $WebConsoleEndpoint) 设置集群控制台访问地址
- * @method string getWebConsoleUsername() 获取集群控制台登录用户名
- * @method void setWebConsoleUsername(string $WebConsoleUsername) 设置集群控制台登录用户名
- * @method string getWebConsolePassword() 获取集群控制台登录密码
- * @method void setWebConsolePassword(string $WebConsolePassword) 设置集群控制台登录密码
- * @method boolean getPublicAccessEndpointStatus() 获取已废弃
- * @method void setPublicAccessEndpointStatus(boolean $PublicAccessEndpointStatus) 设置已废弃
- * @method boolean getPublicControlConsoleSwitchStatus() 获取已废弃
- * @method void setPublicControlConsoleSwitchStatus(boolean $PublicControlConsoleSwitchStatus) 设置已废弃
- * @method boolean getVpcControlConsoleSwitchStatus() 获取已废弃
- * @method void setVpcControlConsoleSwitchStatus(boolean $VpcControlConsoleSwitchStatus) 设置已废弃
- * @method string getVpcWebConsoleEndpoint() 获取Vpc管控台访问地址，示例值，http://1.1.1.1:15672
- * @method void setVpcWebConsoleEndpoint(string $VpcWebConsoleEndpoint) 设置Vpc管控台访问地址，示例值，http://1.1.1.1:15672
- * @method string getPublicWebConsoleSwitchStatus() 获取公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
- * @method void setPublicWebConsoleSwitchStatus(string $PublicWebConsoleSwitchStatus) 设置公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
- * @method string getVpcWebConsoleSwitchStatus() 获取Vpc管控台开关状态，示例值，
-OFF/ON/CREATING/DELETING
- * @method void setVpcWebConsoleSwitchStatus(string $VpcWebConsoleSwitchStatus) 设置Vpc管控台开关状态，示例值，
-OFF/ON/CREATING/DELETING
- * @method string getPublicDataStreamStatus() 获取公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
- * @method void setPublicDataStreamStatus(string $PublicDataStreamStatus) 设置公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
- * @method PrometheusEndpointInfo getPrometheusEndpointInfo() 获取Prometheus信息
- * @method void setPrometheusEndpointInfo(PrometheusEndpointInfo $PrometheusEndpointInfo) 设置Prometheus信息
- * @method string getWebConsoleDomainEndpoint() 获取公网域名接入点
- * @method void setWebConsoleDomainEndpoint(string $WebConsoleDomainEndpoint) 设置公网域名接入点
- * @method VpcEndpointInfo getControlPlaneEndpointInfo() 获取控制面所使用的VPC信息
- * @method void setControlPlaneEndpointInfo(VpcEndpointInfo $ControlPlaneEndpointInfo) 设置控制面所使用的VPC信息
- * @method string getPublicTlsAccessEndpoint() 获取TLS加密的数据流公网接入点
- * @method void setPublicTlsAccessEndpoint(string $PublicTlsAccessEndpoint) 设置TLS加密的数据流公网接入点
- * @method boolean getPublicIpReused() 获取公网IP是否复用
- * @method void setPublicIpReused(boolean $PublicIpReused) 设置公网IP是否复用
- * @method string getPublicWebConsoleErrorMessage() 获取公网控制台接入点操作的错误信息
- * @method void setPublicWebConsoleErrorMessage(string $PublicWebConsoleErrorMessage) 设置公网控制台接入点操作的错误信息
- * @method string getVpcWebConsoleErrorMessage() 获取内网控制台接入点操作的错误信息
- * @method void setVpcWebConsoleErrorMessage(string $VpcWebConsoleErrorMessage) 设置内网控制台接入点操作的错误信息
- * @method string getPublicDataStreamErrorMessage() 获取公网接入点操作的错误信息
- * @method void setPublicDataStreamErrorMessage(string $PublicDataStreamErrorMessage) 设置公网接入点操作的错误信息
+ * @method string getWebConsoleEndpoint() 获取<p>集群 Web 控制台公网访问地址</p>
+ * @method void setWebConsoleEndpoint(string $WebConsoleEndpoint) 设置<p>集群 Web 控制台公网访问地址</p>
+ * @method string getWebConsoleUsername() 获取<p>集群 Web 控制台登录用户名</p>
+ * @method void setWebConsoleUsername(string $WebConsoleUsername) 设置<p>集群 Web 控制台登录用户名</p>
+ * @method string getWebConsolePassword() 获取<p>集群 Web 控制台登录密码</p>
+ * @method void setWebConsolePassword(string $WebConsolePassword) 设置<p>集群 Web 控制台登录密码</p>
+ * @method boolean getPublicAccessEndpointStatus() 获取<p>已废弃</p>
+ * @method void setPublicAccessEndpointStatus(boolean $PublicAccessEndpointStatus) 设置<p>已废弃</p>
+ * @method boolean getPublicControlConsoleSwitchStatus() 获取<p>已废弃</p>
+ * @method void setPublicControlConsoleSwitchStatus(boolean $PublicControlConsoleSwitchStatus) 设置<p>已废弃</p>
+ * @method boolean getVpcControlConsoleSwitchStatus() 获取<p>已废弃</p>
+ * @method void setVpcControlConsoleSwitchStatus(boolean $VpcControlConsoleSwitchStatus) 设置<p>已废弃</p>
+ * @method string getVpcWebConsoleEndpoint() 获取<p>Web 管控台 VPC 访问地址</p>
+ * @method void setVpcWebConsoleEndpoint(string $VpcWebConsoleEndpoint) 设置<p>Web 管控台 VPC 访问地址</p>
+ * @method string getPublicWebConsoleSwitchStatus() 获取<p>Web 控制台公网访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+ * @method void setPublicWebConsoleSwitchStatus(string $PublicWebConsoleSwitchStatus) 设置<p>Web 控制台公网访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+ * @method string getVpcWebConsoleSwitchStatus() 获取<p>Web 控制台 VPC 访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+ * @method void setVpcWebConsoleSwitchStatus(string $VpcWebConsoleSwitchStatus) 设置<p>Web 控制台 VPC 访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+ * @method string getPublicDataStreamStatus() 获取<p>公网接入点开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+ * @method void setPublicDataStreamStatus(string $PublicDataStreamStatus) 设置<p>公网接入点开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+ * @method PrometheusEndpointInfo getPrometheusEndpointInfo() 获取<p>Prometheus信息</p>
+ * @method void setPrometheusEndpointInfo(PrometheusEndpointInfo $PrometheusEndpointInfo) 设置<p>Prometheus信息</p>
+ * @method string getWebConsoleDomainEndpoint() 获取<p>公网域名接入点</p>
+ * @method void setWebConsoleDomainEndpoint(string $WebConsoleDomainEndpoint) 设置<p>公网域名接入点</p>
+ * @method VpcEndpointInfo getControlPlaneEndpointInfo() 获取<p>控制面所使用的VPC信息</p>
+ * @method void setControlPlaneEndpointInfo(VpcEndpointInfo $ControlPlaneEndpointInfo) 设置<p>控制面所使用的VPC信息</p>
+ * @method string getPublicTlsAccessEndpoint() 获取<p>TLS加密的数据流公网接入点</p>
+ * @method void setPublicTlsAccessEndpoint(string $PublicTlsAccessEndpoint) 设置<p>TLS加密的数据流公网接入点</p>
+ * @method boolean getPublicIpReused() 获取<p>公网IP是否复用</p>
+ * @method void setPublicIpReused(boolean $PublicIpReused) 设置<p>公网IP是否复用</p>
+ * @method string getPublicWebConsoleErrorMessage() 获取<p>Web 控制台公网访问操作的错误信息</p>
+ * @method void setPublicWebConsoleErrorMessage(string $PublicWebConsoleErrorMessage) 设置<p>Web 控制台公网访问操作的错误信息</p>
+ * @method string getVpcWebConsoleErrorMessage() 获取<p>Web 控制台 VPC 访问操作的错误信息</p>
+ * @method void setVpcWebConsoleErrorMessage(string $VpcWebConsoleErrorMessage) 设置<p>Web 控制台 VPC 访问操作的错误信息</p>
+ * @method string getPublicDataStreamErrorMessage() 获取<p>公网接入点操作的错误信息</p>
+ * @method void setPublicDataStreamErrorMessage(string $PublicDataStreamErrorMessage) 设置<p>公网接入点操作的错误信息</p>
+ * @method string getPublicStreamAccessEndpoint() 获取<p>公网Stream接入点</p>
+ * @method void setPublicStreamAccessEndpoint(string $PublicStreamAccessEndpoint) 设置<p>公网Stream接入点</p>
  */
 class RabbitMQClusterAccessInfo extends AbstractModel
 {
     /**
-     * @var string 集群公网接入地址
+     * @var string <p>集群公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicAccessEndpoint;
 
     /**
-     * @var string 集群控制台访问地址
+     * @var string <p>集群 Web 控制台公网访问地址</p>
      */
     public $WebConsoleEndpoint;
 
     /**
-     * @var string 集群控制台登录用户名
+     * @var string <p>集群 Web 控制台登录用户名</p>
      */
     public $WebConsoleUsername;
 
     /**
-     * @var string 集群控制台登录密码
+     * @var string <p>集群 Web 控制台登录密码</p>
      */
     public $WebConsolePassword;
 
     /**
-     * @var boolean 已废弃
+     * @var boolean <p>已废弃</p>
      */
     public $PublicAccessEndpointStatus;
 
     /**
-     * @var boolean 已废弃
+     * @var boolean <p>已废弃</p>
      */
     public $PublicControlConsoleSwitchStatus;
 
     /**
-     * @var boolean 已废弃
+     * @var boolean <p>已废弃</p>
      */
     public $VpcControlConsoleSwitchStatus;
 
     /**
-     * @var string Vpc管控台访问地址，示例值，http://1.1.1.1:15672
+     * @var string <p>Web 管控台 VPC 访问地址</p>
      */
     public $VpcWebConsoleEndpoint;
 
     /**
-     * @var string 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
+     * @var string <p>Web 控制台公网访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
      */
     public $PublicWebConsoleSwitchStatus;
 
     /**
-     * @var string Vpc管控台开关状态，示例值，
-OFF/ON/CREATING/DELETING
+     * @var string <p>Web 控制台 VPC 访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
      */
     public $VpcWebConsoleSwitchStatus;
 
     /**
-     * @var string 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
+     * @var string <p>公网接入点开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
      */
     public $PublicDataStreamStatus;
 
     /**
-     * @var PrometheusEndpointInfo Prometheus信息
+     * @var PrometheusEndpointInfo <p>Prometheus信息</p>
      */
     public $PrometheusEndpointInfo;
 
     /**
-     * @var string 公网域名接入点
+     * @var string <p>公网域名接入点</p>
      */
     public $WebConsoleDomainEndpoint;
 
     /**
-     * @var VpcEndpointInfo 控制面所使用的VPC信息
+     * @var VpcEndpointInfo <p>控制面所使用的VPC信息</p>
      */
     public $ControlPlaneEndpointInfo;
 
     /**
-     * @var string TLS加密的数据流公网接入点
+     * @var string <p>TLS加密的数据流公网接入点</p>
      */
     public $PublicTlsAccessEndpoint;
 
     /**
-     * @var boolean 公网IP是否复用
+     * @var boolean <p>公网IP是否复用</p>
      */
     public $PublicIpReused;
 
     /**
-     * @var string 公网控制台接入点操作的错误信息
+     * @var string <p>Web 控制台公网访问操作的错误信息</p>
      */
     public $PublicWebConsoleErrorMessage;
 
     /**
-     * @var string 内网控制台接入点操作的错误信息
+     * @var string <p>Web 控制台 VPC 访问操作的错误信息</p>
      */
     public $VpcWebConsoleErrorMessage;
 
     /**
-     * @var string 公网接入点操作的错误信息
+     * @var string <p>公网接入点操作的错误信息</p>
      */
     public $PublicDataStreamErrorMessage;
 
     /**
-     * @param string $PublicAccessEndpoint 集群公网接入地址
+     * @var string <p>公网Stream接入点</p>
+     */
+    public $PublicStreamAccessEndpoint;
+
+    /**
+     * @param string $PublicAccessEndpoint <p>集群公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WebConsoleEndpoint 集群控制台访问地址
-     * @param string $WebConsoleUsername 集群控制台登录用户名
-     * @param string $WebConsolePassword 集群控制台登录密码
-     * @param boolean $PublicAccessEndpointStatus 已废弃
-     * @param boolean $PublicControlConsoleSwitchStatus 已废弃
-     * @param boolean $VpcControlConsoleSwitchStatus 已废弃
-     * @param string $VpcWebConsoleEndpoint Vpc管控台访问地址，示例值，http://1.1.1.1:15672
-     * @param string $PublicWebConsoleSwitchStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-     * @param string $VpcWebConsoleSwitchStatus Vpc管控台开关状态，示例值，
-OFF/ON/CREATING/DELETING
-     * @param string $PublicDataStreamStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-     * @param PrometheusEndpointInfo $PrometheusEndpointInfo Prometheus信息
-     * @param string $WebConsoleDomainEndpoint 公网域名接入点
-     * @param VpcEndpointInfo $ControlPlaneEndpointInfo 控制面所使用的VPC信息
-     * @param string $PublicTlsAccessEndpoint TLS加密的数据流公网接入点
-     * @param boolean $PublicIpReused 公网IP是否复用
-     * @param string $PublicWebConsoleErrorMessage 公网控制台接入点操作的错误信息
-     * @param string $VpcWebConsoleErrorMessage 内网控制台接入点操作的错误信息
-     * @param string $PublicDataStreamErrorMessage 公网接入点操作的错误信息
+     * @param string $WebConsoleEndpoint <p>集群 Web 控制台公网访问地址</p>
+     * @param string $WebConsoleUsername <p>集群 Web 控制台登录用户名</p>
+     * @param string $WebConsolePassword <p>集群 Web 控制台登录密码</p>
+     * @param boolean $PublicAccessEndpointStatus <p>已废弃</p>
+     * @param boolean $PublicControlConsoleSwitchStatus <p>已废弃</p>
+     * @param boolean $VpcControlConsoleSwitchStatus <p>已废弃</p>
+     * @param string $VpcWebConsoleEndpoint <p>Web 管控台 VPC 访问地址</p>
+     * @param string $PublicWebConsoleSwitchStatus <p>Web 控制台公网访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+     * @param string $VpcWebConsoleSwitchStatus <p>Web 控制台 VPC 访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+     * @param string $PublicDataStreamStatus <p>公网接入点开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+     * @param PrometheusEndpointInfo $PrometheusEndpointInfo <p>Prometheus信息</p>
+     * @param string $WebConsoleDomainEndpoint <p>公网域名接入点</p>
+     * @param VpcEndpointInfo $ControlPlaneEndpointInfo <p>控制面所使用的VPC信息</p>
+     * @param string $PublicTlsAccessEndpoint <p>TLS加密的数据流公网接入点</p>
+     * @param boolean $PublicIpReused <p>公网IP是否复用</p>
+     * @param string $PublicWebConsoleErrorMessage <p>Web 控制台公网访问操作的错误信息</p>
+     * @param string $VpcWebConsoleErrorMessage <p>Web 控制台 VPC 访问操作的错误信息</p>
+     * @param string $PublicDataStreamErrorMessage <p>公网接入点操作的错误信息</p>
+     * @param string $PublicStreamAccessEndpoint <p>公网Stream接入点</p>
      */
     function __construct()
     {
@@ -274,6 +278,10 @@ OFF/ON/CREATING/DELETING
 
         if (array_key_exists("PublicDataStreamErrorMessage",$param) and $param["PublicDataStreamErrorMessage"] !== null) {
             $this->PublicDataStreamErrorMessage = $param["PublicDataStreamErrorMessage"];
+        }
+
+        if (array_key_exists("PublicStreamAccessEndpoint",$param) and $param["PublicStreamAccessEndpoint"] !== null) {
+            $this->PublicStreamAccessEndpoint = $param["PublicStreamAccessEndpoint"];
         }
     }
 }

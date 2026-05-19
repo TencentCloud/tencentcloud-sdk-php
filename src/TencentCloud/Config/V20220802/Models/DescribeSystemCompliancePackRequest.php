@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSystemCompliancePack请求参数结构体
  *
- * @method string getCompliancePackId() 获取合规包ID
- * @method void setCompliancePackId(string $CompliancePackId) 设置合规包ID
+ * @method string getCompliancePackId() 获取<p>合规包ID</p>
+ * @method void setCompliancePackId(string $CompliancePackId) 设置<p>合规包ID</p>
  */
 class DescribeSystemCompliancePackRequest extends AbstractModel
 {
     /**
-     * @var string 合规包ID
+     * @var string <p>合规包ID</p>
      */
     public $CompliancePackId;
 
     /**
-     * @param string $CompliancePackId 合规包ID
+     * @param string $CompliancePackId <p>合规包ID</p>
      */
     function __construct()
     {

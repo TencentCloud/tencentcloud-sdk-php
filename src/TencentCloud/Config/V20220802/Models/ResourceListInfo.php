@@ -18,7 +18,7 @@ namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 资源列列表信息
+ * 资源列表信息
  *
  * @method string getResourceType() 获取资源类型
  * @method void setResourceType(string $ResourceType) 设置资源类型

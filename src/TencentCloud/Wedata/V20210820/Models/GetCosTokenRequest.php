@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetCosToken请求参数结构体
  *
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
- * @method string getOriginDomain() 获取请求域名
- * @method void setOriginDomain(string $OriginDomain) 设置请求域名
- * @method boolean getCrossFlag() 获取是否需要跨域
- * @method void setCrossFlag(boolean $CrossFlag) 设置是否需要跨域
- * @method string getBucketName() 获取桶名
- * @method void setBucketName(string $BucketName) 设置桶名
- * @method string getRemotePath() 获取远程地址
- * @method void setRemotePath(string $RemotePath) 设置远程地址
- * @method string getRemoteRegion() 获取地域
- * @method void setRemoteRegion(string $RemoteRegion) 设置地域
+ * @method string getProjectId() 获取<p>项目id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
+ * @method string getOriginDomain() 获取<p>请求域名</p>
+ * @method void setOriginDomain(string $OriginDomain) 设置<p>请求域名</p>
+ * @method boolean getCrossFlag() 获取<p>是否需要跨域</p>
+ * @method void setCrossFlag(boolean $CrossFlag) 设置<p>是否需要跨域</p>
+ * @method string getBucketName() 获取<p>桶名</p>
+ * @method void setBucketName(string $BucketName) 设置<p>桶名</p>
+ * @method string getRemotePath() 获取<p>远程地址</p>
+ * @method void setRemotePath(string $RemotePath) 设置<p>远程地址</p>
+ * @method string getRemoteRegion() 获取<p>地域</p>
+ * @method void setRemoteRegion(string $RemoteRegion) 设置<p>地域</p>
  */
 class GetCosTokenRequest extends AbstractModel
 {
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 请求域名
+     * @var string <p>请求域名</p>
      */
     public $OriginDomain;
 
     /**
-     * @var boolean 是否需要跨域
+     * @var boolean <p>是否需要跨域</p>
      */
     public $CrossFlag;
 
     /**
-     * @var string 桶名
+     * @var string <p>桶名</p>
      */
     public $BucketName;
 
     /**
-     * @var string 远程地址
+     * @var string <p>远程地址</p>
      */
     public $RemotePath;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $RemoteRegion;
 
     /**
-     * @param string $ProjectId 项目id
-     * @param string $OriginDomain 请求域名
-     * @param boolean $CrossFlag 是否需要跨域
-     * @param string $BucketName 桶名
-     * @param string $RemotePath 远程地址
-     * @param string $RemoteRegion 地域
+     * @param string $ProjectId <p>项目id</p>
+     * @param string $OriginDomain <p>请求域名</p>
+     * @param boolean $CrossFlag <p>是否需要跨域</p>
+     * @param string $BucketName <p>桶名</p>
+     * @param string $RemotePath <p>远程地址</p>
+     * @param string $RemoteRegion <p>地域</p>
      */
     function __construct()
     {

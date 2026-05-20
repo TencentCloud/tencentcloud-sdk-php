@@ -72,10 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEffectiveDate(string $EffectiveDate) 设置<p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
  * @method boolean getIsSourceFrom() 获取<p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
  * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置<p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
- * @method integer getBillingMode() 获取<p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
- * @method void setBillingMode(integer $BillingMode) 设置<p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
- * @method integer getNewBillingMode() 获取<p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
- * @method void setNewBillingMode(integer $NewBillingMode) 设置<p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+ * @method integer getBillingMode() 获取<p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul>
+ * @method void setBillingMode(integer $BillingMode) 设置<p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul>
+ * @method integer getNewBillingMode() 获取<p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul>
+ * @method void setNewBillingMode(integer $NewBillingMode) 设置<p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul>
  */
 class TopicInfo extends AbstractModel
 {
@@ -210,12 +210,12 @@ class TopicInfo extends AbstractModel
     public $IsSourceFrom;
 
     /**
-     * @var integer <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     * @var integer <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul>
      */
     public $BillingMode;
 
     /**
-     * @var integer <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     * @var integer <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul>
      */
     public $NewBillingMode;
 
@@ -246,8 +246,8 @@ class TopicInfo extends AbstractModel
      * @param integer $MigrationStatus <p>异步迁移状态</p><ul><li>1：进行中</li><li>2：已完成</li><li>3：失败</li><li>4：已取消</li></ul>
      * @param string $EffectiveDate <p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      * @param boolean $IsSourceFrom <p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
-     * @param integer $BillingMode <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
-     * @param integer $NewBillingMode <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     * @param integer $BillingMode <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul>
+     * @param integer $NewBillingMode <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul>
      */
     function __construct()
     {

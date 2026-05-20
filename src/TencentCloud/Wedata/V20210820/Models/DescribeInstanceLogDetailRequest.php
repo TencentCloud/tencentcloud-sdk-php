@@ -20,95 +20,95 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceLogDetail请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getTaskId() 获取任务id
- * @method void setTaskId(string $TaskId) 设置任务id
- * @method string getCurRunDate() 获取数据时间
- * @method void setCurRunDate(string $CurRunDate) 设置数据时间
- * @method string getLogLevelType() 获取日志级别，Info/Debug/Warn/Error/All
- * @method void setLogLevelType(string $LogLevelType) 设置日志级别，Info/Debug/Warn/Error/All
- * @method string getExecutionFileType() 获取文件类型,Log/Code
- * @method void setExecutionFileType(string $ExecutionFileType) 设置文件类型,Log/Code
- * @method string getExecutionJobId() 获取统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
- * @method void setExecutionJobId(string $ExecutionJobId) 设置统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
- * @method string getBrokerIp() 获取服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
- * @method void setBrokerIp(string $BrokerIp) 设置服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
- * @method string getOriginFileName() 获取文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
- * @method void setOriginFileName(string $OriginFileName) 设置文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
- * @method integer getStartCount() 获取起始行
- * @method void setStartCount(integer $StartCount) 设置起始行
- * @method integer getLineCount() 获取每次查询行数
- * @method void setLineCount(integer $LineCount) 设置每次查询行数
- * @method string getExtInfo() 获取查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
- * @method void setExtInfo(string $ExtInfo) 设置查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method string getTaskId() 获取<p>任务id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
+ * @method string getCurRunDate() 获取<p>数据时间</p>
+ * @method void setCurRunDate(string $CurRunDate) 设置<p>数据时间</p>
+ * @method string getLogLevelType() 获取<p>日志级别，Info/Debug/Warn/Error/All</p>
+ * @method void setLogLevelType(string $LogLevelType) 设置<p>日志级别，Info/Debug/Warn/Error/All</p>
+ * @method string getExecutionFileType() 获取<p>文件类型,Log/Code</p>
+ * @method void setExecutionFileType(string $ExecutionFileType) 设置<p>文件类型,Log/Code</p>
+ * @method string getExecutionJobId() 获取<p>统一执行平台执行id, 注意: ExecutionJobId 跟 &quot;BrokerIp+OriginFileName&quot; 必须有一个不为空</p>
+ * @method void setExecutionJobId(string $ExecutionJobId) 设置<p>统一执行平台执行id, 注意: ExecutionJobId 跟 &quot;BrokerIp+OriginFileName&quot; 必须有一个不为空</p>
+ * @method string getBrokerIp() 获取<p>服务器Ip, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
+ * @method void setBrokerIp(string $BrokerIp) 设置<p>服务器Ip, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
+ * @method string getOriginFileName() 获取<p>文件Name, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
+ * @method void setOriginFileName(string $OriginFileName) 设置<p>文件Name, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
+ * @method integer getStartCount() 获取<p>起始行</p>
+ * @method void setStartCount(integer $StartCount) 设置<p>起始行</p>
+ * @method integer getLineCount() 获取<p>每次查询行数</p>
+ * @method void setLineCount(integer $LineCount) 设置<p>每次查询行数</p>
+ * @method string getExtInfo() 获取<p>查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null</p>
+ * @method void setExtInfo(string $ExtInfo) 设置<p>查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null</p>
  * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
  * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
- * @method array getInstanceLifeDetailDtoList() 获取生命周期为基础数据进行日志匹配
- * @method void setInstanceLifeDetailDtoList(array $InstanceLifeDetailDtoList) 设置生命周期为基础数据进行日志匹配
- * @method integer getCurrentLifeRound() 获取当前生命周期
- * @method void setCurrentLifeRound(integer $CurrentLifeRound) 设置当前生命周期
- * @method integer getMaxLifeRound() 获取生命周期总数
- * @method void setMaxLifeRound(integer $MaxLifeRound) 设置生命周期总数
- * @method integer getTries() 获取当前生命周期重试次数
- * @method void setTries(integer $Tries) 设置当前生命周期重试次数
- * @method boolean getDynamic() 获取动态加载日志
- * @method void setDynamic(boolean $Dynamic) 设置动态加载日志
+ * @method array getInstanceLifeDetailDtoList() 获取<p>生命周期为基础数据进行日志匹配</p>
+ * @method void setInstanceLifeDetailDtoList(array $InstanceLifeDetailDtoList) 设置<p>生命周期为基础数据进行日志匹配</p>
+ * @method integer getCurrentLifeRound() 获取<p>当前生命周期</p>
+ * @method void setCurrentLifeRound(integer $CurrentLifeRound) 设置<p>当前生命周期</p>
+ * @method integer getMaxLifeRound() 获取<p>生命周期总数</p>
+ * @method void setMaxLifeRound(integer $MaxLifeRound) 设置<p>生命周期总数</p>
+ * @method integer getTries() 获取<p>当前生命周期重试次数</p>
+ * @method void setTries(integer $Tries) 设置<p>当前生命周期重试次数</p>
+ * @method boolean getDynamic() 获取<p>动态加载日志</p>
+ * @method void setDynamic(boolean $Dynamic) 设置<p>动态加载日志</p>
  */
 class DescribeInstanceLogDetailRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
      */
     public $TaskId;
 
     /**
-     * @var string 数据时间
+     * @var string <p>数据时间</p>
      */
     public $CurRunDate;
 
     /**
-     * @var string 日志级别，Info/Debug/Warn/Error/All
+     * @var string <p>日志级别，Info/Debug/Warn/Error/All</p>
      */
     public $LogLevelType;
 
     /**
-     * @var string 文件类型,Log/Code
+     * @var string <p>文件类型,Log/Code</p>
      */
     public $ExecutionFileType;
 
     /**
-     * @var string 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
+     * @var string <p>统一执行平台执行id, 注意: ExecutionJobId 跟 &quot;BrokerIp+OriginFileName&quot; 必须有一个不为空</p>
      */
     public $ExecutionJobId;
 
     /**
-     * @var string 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+     * @var string <p>服务器Ip, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
      */
     public $BrokerIp;
 
     /**
-     * @var string 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+     * @var string <p>文件Name, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
      */
     public $OriginFileName;
 
     /**
-     * @var integer 起始行
+     * @var integer <p>起始行</p>
      */
     public $StartCount;
 
     /**
-     * @var integer 每次查询行数
+     * @var integer <p>每次查询行数</p>
      */
     public $LineCount;
 
     /**
-     * @var string 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+     * @var string <p>查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null</p>
      */
     public $ExtInfo;
 
@@ -118,48 +118,48 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
     public $RequestFromSource;
 
     /**
-     * @var array 生命周期为基础数据进行日志匹配
+     * @var array <p>生命周期为基础数据进行日志匹配</p>
      */
     public $InstanceLifeDetailDtoList;
 
     /**
-     * @var integer 当前生命周期
+     * @var integer <p>当前生命周期</p>
      */
     public $CurrentLifeRound;
 
     /**
-     * @var integer 生命周期总数
+     * @var integer <p>生命周期总数</p>
      */
     public $MaxLifeRound;
 
     /**
-     * @var integer 当前生命周期重试次数
+     * @var integer <p>当前生命周期重试次数</p>
      */
     public $Tries;
 
     /**
-     * @var boolean 动态加载日志
+     * @var boolean <p>动态加载日志</p>
      */
     public $Dynamic;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param string $TaskId 任务id
-     * @param string $CurRunDate 数据时间
-     * @param string $LogLevelType 日志级别，Info/Debug/Warn/Error/All
-     * @param string $ExecutionFileType 文件类型,Log/Code
-     * @param string $ExecutionJobId 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
-     * @param string $BrokerIp 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
-     * @param string $OriginFileName 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
-     * @param integer $StartCount 起始行
-     * @param integer $LineCount 每次查询行数
-     * @param string $ExtInfo 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+     * @param string $ProjectId <p>项目ID</p>
+     * @param string $TaskId <p>任务id</p>
+     * @param string $CurRunDate <p>数据时间</p>
+     * @param string $LogLevelType <p>日志级别，Info/Debug/Warn/Error/All</p>
+     * @param string $ExecutionFileType <p>文件类型,Log/Code</p>
+     * @param string $ExecutionJobId <p>统一执行平台执行id, 注意: ExecutionJobId 跟 &quot;BrokerIp+OriginFileName&quot; 必须有一个不为空</p>
+     * @param string $BrokerIp <p>服务器Ip, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
+     * @param string $OriginFileName <p>文件Name, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
+     * @param integer $StartCount <p>起始行</p>
+     * @param integer $LineCount <p>每次查询行数</p>
+     * @param string $ExtInfo <p>查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null</p>
      * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
-     * @param array $InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配
-     * @param integer $CurrentLifeRound 当前生命周期
-     * @param integer $MaxLifeRound 生命周期总数
-     * @param integer $Tries 当前生命周期重试次数
-     * @param boolean $Dynamic 动态加载日志
+     * @param array $InstanceLifeDetailDtoList <p>生命周期为基础数据进行日志匹配</p>
+     * @param integer $CurrentLifeRound <p>当前生命周期</p>
+     * @param integer $MaxLifeRound <p>生命周期总数</p>
+     * @param integer $Tries <p>当前生命周期重试次数</p>
+     * @param boolean $Dynamic <p>动态加载日志</p>
      */
     function __construct()
     {

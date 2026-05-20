@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDataSource请求参数结构体
  *
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
- * @method integer getId() 获取数据源id
- * @method void setId(integer $Id) 设置数据源id
+ * @method string getProjectId() 获取<p>项目id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
+ * @method integer getId() 获取<p>数据源id</p>
+ * @method void setId(integer $Id) 设置<p>数据源id</p>
  */
 class GetDataSourceRequest extends AbstractModel
 {
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 数据源id
+     * @var integer <p>数据源id</p>
      */
     public $Id;
 
     /**
-     * @param string $ProjectId 项目id
-     * @param integer $Id 数据源id
+     * @param string $ProjectId <p>项目id</p>
+     * @param integer $Id <p>数据源id</p>
      */
     function __construct()
     {

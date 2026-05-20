@@ -20,49 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceLogFile请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getCurRunDate() 获取实例数据时间
- * @method void setCurRunDate(string $CurRunDate) 设置实例数据时间
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method string getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
+ * @method string getCurRunDate() 获取<p>实例数据时间</p>
+ * @method void setCurRunDate(string $CurRunDate) 设置<p>实例数据时间</p>
  * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
  * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
- * @method string getBrokerIp() 获取执行机IP
- * @method void setBrokerIp(string $BrokerIp) 设置执行机IP
- * @method string getOriginFileName() 获取日志文件名
- * @method void setOriginFileName(string $OriginFileName) 设置日志文件名
- * @method string getExecutionJobId() 获取执行平台下发执行id
- * @method void setExecutionJobId(string $ExecutionJobId) 设置执行平台下发执行id
- * @method string getLogLevelType() 获取日志级别，Info/Debug/Warn/Error/All
- * @method void setLogLevelType(string $LogLevelType) 设置日志级别，Info/Debug/Warn/Error/All
- * @method string getExecutionFileType() 获取文件类型,Log/Code
- * @method void setExecutionFileType(string $ExecutionFileType) 设置文件类型,Log/Code
- * @method array getInstanceLifeDetailDtoList() 获取生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
- * @method void setInstanceLifeDetailDtoList(array $InstanceLifeDetailDtoList) 设置生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
- * @method integer getCurrentLifeRound() 获取当前生命周期数
- * @method void setCurrentLifeRound(integer $CurrentLifeRound) 设置当前生命周期数
- * @method integer getMaxLifeRound() 获取最大生命周期数
- * @method void setMaxLifeRound(integer $MaxLifeRound) 设置最大生命周期数
- * @method integer getTries() 获取当前生命周期重试次数
- * @method void setTries(integer $Tries) 设置当前生命周期重试次数
- * @method boolean getDynamic() 获取动态获取日志信息标识
- * @method void setDynamic(boolean $Dynamic) 设置动态获取日志信息标识
+ * @method string getBrokerIp() 获取<p>执行机IP</p>
+ * @method void setBrokerIp(string $BrokerIp) 设置<p>执行机IP</p>
+ * @method string getOriginFileName() 获取<p>日志文件名</p>
+ * @method void setOriginFileName(string $OriginFileName) 设置<p>日志文件名</p>
+ * @method string getExecutionJobId() 获取<p>执行平台下发执行id</p>
+ * @method void setExecutionJobId(string $ExecutionJobId) 设置<p>执行平台下发执行id</p>
+ * @method string getLogLevelType() 获取<p>日志级别，Info/Debug/Warn/Error/All</p>
+ * @method void setLogLevelType(string $LogLevelType) 设置<p>日志级别，Info/Debug/Warn/Error/All</p>
+ * @method string getExecutionFileType() 获取<p>文件类型,Log/Code</p>
+ * @method void setExecutionFileType(string $ExecutionFileType) 设置<p>文件类型,Log/Code</p>
+ * @method array getInstanceLifeDetailDtoList() 获取<p>生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用</p>
+ * @method void setInstanceLifeDetailDtoList(array $InstanceLifeDetailDtoList) 设置<p>生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用</p>
+ * @method integer getCurrentLifeRound() 获取<p>当前生命周期数</p>
+ * @method void setCurrentLifeRound(integer $CurrentLifeRound) 设置<p>当前生命周期数</p>
+ * @method integer getMaxLifeRound() 获取<p>最大生命周期数</p>
+ * @method void setMaxLifeRound(integer $MaxLifeRound) 设置<p>最大生命周期数</p>
+ * @method integer getTries() 获取<p>当前生命周期重试次数</p>
+ * @method void setTries(integer $Tries) 设置<p>当前生命周期重试次数</p>
+ * @method boolean getDynamic() 获取<p>动态获取日志信息标识</p>
+ * @method void setDynamic(boolean $Dynamic) 设置<p>动态获取日志信息标识</p>
  */
 class DescribeInstanceLogFileRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 任务ID
+     * @var string <p>任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @var string 实例数据时间
+     * @var string <p>实例数据时间</p>
      */
     public $CurRunDate;
 
@@ -72,70 +72,70 @@ class DescribeInstanceLogFileRequest extends AbstractModel
     public $RequestFromSource;
 
     /**
-     * @var string 执行机IP
+     * @var string <p>执行机IP</p>
      */
     public $BrokerIp;
 
     /**
-     * @var string 日志文件名
+     * @var string <p>日志文件名</p>
      */
     public $OriginFileName;
 
     /**
-     * @var string 执行平台下发执行id
+     * @var string <p>执行平台下发执行id</p>
      */
     public $ExecutionJobId;
 
     /**
-     * @var string 日志级别，Info/Debug/Warn/Error/All
+     * @var string <p>日志级别，Info/Debug/Warn/Error/All</p>
      */
     public $LogLevelType;
 
     /**
-     * @var string 文件类型,Log/Code
+     * @var string <p>文件类型,Log/Code</p>
      */
     public $ExecutionFileType;
 
     /**
-     * @var array 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+     * @var array <p>生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用</p>
      */
     public $InstanceLifeDetailDtoList;
 
     /**
-     * @var integer 当前生命周期数
+     * @var integer <p>当前生命周期数</p>
      */
     public $CurrentLifeRound;
 
     /**
-     * @var integer 最大生命周期数
+     * @var integer <p>最大生命周期数</p>
      */
     public $MaxLifeRound;
 
     /**
-     * @var integer 当前生命周期重试次数
+     * @var integer <p>当前生命周期重试次数</p>
      */
     public $Tries;
 
     /**
-     * @var boolean 动态获取日志信息标识
+     * @var boolean <p>动态获取日志信息标识</p>
      */
     public $Dynamic;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param string $TaskId 任务ID
-     * @param string $CurRunDate 实例数据时间
+     * @param string $ProjectId <p>项目ID</p>
+     * @param string $TaskId <p>任务ID</p>
+     * @param string $CurRunDate <p>实例数据时间</p>
      * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
-     * @param string $BrokerIp 执行机IP
-     * @param string $OriginFileName 日志文件名
-     * @param string $ExecutionJobId 执行平台下发执行id
-     * @param string $LogLevelType 日志级别，Info/Debug/Warn/Error/All
-     * @param string $ExecutionFileType 文件类型,Log/Code
-     * @param array $InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
-     * @param integer $CurrentLifeRound 当前生命周期数
-     * @param integer $MaxLifeRound 最大生命周期数
-     * @param integer $Tries 当前生命周期重试次数
-     * @param boolean $Dynamic 动态获取日志信息标识
+     * @param string $BrokerIp <p>执行机IP</p>
+     * @param string $OriginFileName <p>日志文件名</p>
+     * @param string $ExecutionJobId <p>执行平台下发执行id</p>
+     * @param string $LogLevelType <p>日志级别，Info/Debug/Warn/Error/All</p>
+     * @param string $ExecutionFileType <p>文件类型,Log/Code</p>
+     * @param array $InstanceLifeDetailDtoList <p>生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用</p>
+     * @param integer $CurrentLifeRound <p>当前生命周期数</p>
+     * @param integer $MaxLifeRound <p>最大生命周期数</p>
+     * @param integer $Tries <p>当前生命周期重试次数</p>
+     * @param boolean $Dynamic <p>动态获取日志信息标识</p>
      */
     function __construct()
     {

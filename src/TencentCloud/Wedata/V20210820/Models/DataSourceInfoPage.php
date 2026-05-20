@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalPageNumber(integer $TotalPageNumber) 设置总分页页码
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSnapshotId() 获取快照Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnapshotId(string $SnapshotId) 设置快照Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSourceInfoPage extends AbstractModel
 {
@@ -74,6 +78,12 @@ class DataSourceInfoPage extends AbstractModel
     public $TotalPageNumber;
 
     /**
+     * @var string 快照Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SnapshotId;
+
+    /**
      * @param integer $PageNumber 分页页码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PageSize 分页大小
@@ -83,6 +93,8 @@ class DataSourceInfoPage extends AbstractModel
      * @param integer $TotalCount 总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalPageNumber 总分页页码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SnapshotId 快照Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -121,6 +133,10 @@ class DataSourceInfoPage extends AbstractModel
 
         if (array_key_exists("TotalPageNumber",$param) and $param["TotalPageNumber"] !== null) {
             $this->TotalPageNumber = $param["TotalPageNumber"];
+        }
+
+        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
+            $this->SnapshotId = $param["SnapshotId"];
         }
     }
 }

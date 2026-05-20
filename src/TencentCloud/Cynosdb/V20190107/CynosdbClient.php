@@ -28,6 +28,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ActivateLibraDBInstanceResponse ActivateLibraDBInstance(Models\ActivateLibraDBInstanceRequest $req) 本接口（ActivateLibraDBInstance）用于解除已隔离的只读分析引擎实例。
  * @method Models\AddClusterSlaveZoneResponse AddClusterSlaveZone(Models\AddClusterSlaveZoneRequest $req) 本接口（AddClusterSlaveZone）用于对集群开启多可用区部署。
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) 本接口（AddInstances）用于集群添加实例。
+ * @method Models\AddLibraDBInstancesResponse AddLibraDBInstances(Models\AddLibraDBInstancesRequest $req) 本接口（AddLibraDBInstances）用于集群添加只读分析引擎
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口（AssociateSecurityGroups）用于安全组批量绑定云资源。
  * @method Models\BindClusterResourcePackagesResponse BindClusterResourcePackages(Models\BindClusterResourcePackagesRequest $req) 本接口（BindClusterResourcePackages）用于为集群绑定资源包。
  * @method Models\CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpires(Models\CalculateBackupSaveSecExpiresRequest $req) 计算修改备份保留时长后将会过期删除的备份文件列表

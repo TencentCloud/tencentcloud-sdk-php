@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SaveDoc返回参数结构体
  *
- * @method string getDocBizId() 获取文档ID
- * @method void setDocBizId(string $DocBizId) 设置文档ID
- * @method string getErrorMsg() 获取导入错误信息
- * @method void setErrorMsg(string $ErrorMsg) 设置导入错误信息
- * @method string getErrorLink() 获取错误链接
- * @method void setErrorLink(string $ErrorLink) 设置错误链接
- * @method string getErrorLinkText() 获取错误链接文本
- * @method void setErrorLinkText(string $ErrorLinkText) 设置错误链接文本
- * @method integer getDuplicateFileCheckType() 获取重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
- * @method void setDuplicateFileCheckType(integer $DuplicateFileCheckType) 设置重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+ * @method string getDocBizId() 获取<p>文档ID</p>
+ * @method void setDocBizId(string $DocBizId) 设置<p>文档ID</p>
+ * @method string getErrorMsg() 获取<p>导入错误信息</p>
+ * @method void setErrorMsg(string $ErrorMsg) 设置<p>导入错误信息</p>
+ * @method string getErrorLink() 获取<p>错误链接</p>
+ * @method void setErrorLink(string $ErrorLink) 设置<p>错误链接</p>
+ * @method string getErrorLinkText() 获取<p>错误链接文本</p>
+ * @method void setErrorLinkText(string $ErrorLinkText) 设置<p>错误链接文本</p>
+ * @method integer getDuplicateFileCheckType() 获取<p>重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段</p>
+ * @method void setDuplicateFileCheckType(integer $DuplicateFileCheckType) 设置<p>重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SaveDocResponse extends AbstractModel
 {
     /**
-     * @var string 文档ID
+     * @var string <p>文档ID</p>
      */
     public $DocBizId;
 
     /**
-     * @var string 导入错误信息
+     * @var string <p>导入错误信息</p>
      */
     public $ErrorMsg;
 
     /**
-     * @var string 错误链接
+     * @var string <p>错误链接</p>
      */
     public $ErrorLink;
 
     /**
-     * @var string 错误链接文本
+     * @var string <p>错误链接文本</p>
      */
     public $ErrorLinkText;
 
     /**
-     * @var integer 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+     * @var integer <p>重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段</p>
      */
     public $DuplicateFileCheckType;
 
@@ -66,11 +66,11 @@ class SaveDocResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DocBizId 文档ID
-     * @param string $ErrorMsg 导入错误信息
-     * @param string $ErrorLink 错误链接
-     * @param string $ErrorLinkText 错误链接文本
-     * @param integer $DuplicateFileCheckType 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+     * @param string $DocBizId <p>文档ID</p>
+     * @param string $ErrorMsg <p>导入错误信息</p>
+     * @param string $ErrorLink <p>错误链接</p>
+     * @param string $ErrorLinkText <p>错误链接文本</p>
+     * @param integer $DuplicateFileCheckType <p>重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

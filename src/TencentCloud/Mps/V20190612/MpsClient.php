@@ -131,6 +131,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocation(Models\DeleteStreamPackageSourceLocationRequest $req) 删除媒体包装SourceLocation。
  * @method Models\DeleteSubtitleEmbedTemplateResponse DeleteSubtitleEmbedTemplate(Models\DeleteSubtitleEmbedTemplateRequest $req) 删除用户自定义字幕压制模板。
  * @method Models\DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(Models\DeleteTranscodeTemplateRequest $req) 删除用户自定义转码模板。
+ * @method Models\DeleteVoiceResponse DeleteVoice(Models\DeleteVoiceRequest $req) 删除音色（通过音色克隆或设计创建的）。
  * @method Models\DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(Models\DeleteWatermarkTemplateRequest $req) 删除用户自定义水印模板。
  * @method Models\DeleteWordSamplesResponse DeleteWordSamples(Models\DeleteWordSamplesRequest $req) 该接口用于批量删除关键词样本。
  * @method Models\DeleteWorkflowResponse DeleteWorkflow(Models\DeleteWorkflowRequest $req) 删除工作流。对于已启用的工作流，需要禁用后才能删除。

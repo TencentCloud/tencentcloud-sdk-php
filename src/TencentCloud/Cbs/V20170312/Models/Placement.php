@@ -26,22 +26,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCageId(string $CageId) 设置围笼Id，可通过 [DescribeDiskStoragePool](https://cloud.tencent.com/document/api/362/62143) 获取。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCdcId() 获取实例所属的独享集群ID。可通过 [DescribeDiskStoragePool](https://cloud.tencent.com/document/api/362/62143) 获取。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcId(string $CdcId) 设置实例所属的独享集群ID。可通过 [DescribeDiskStoragePool](https://cloud.tencent.com/document/api/362/62143) 获取。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCdcName() 获取独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcName(string $CdcName) 设置独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDedicatedClusterId() 获取独享集群id。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置独享集群id。
  * @method integer getProjectId() 获取实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。
  * @method void setProjectId(integer $ProjectId) 设置实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。
  * @method string getProjectName() 获取实例所属项目名称，可通过[DescribeProject](/document/api/651/78725)获取。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置实例所属项目名称，可通过[DescribeProject](/document/api/651/78725)获取。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCdcName() 获取独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCdcName(string $CdcName) 设置独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCdcId() 获取实例所属的独享集群ID。可通过 [DescribeDiskStoragePool](https://cloud.tencent.com/document/api/362/62143) 获取。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCdcId(string $CdcId) 设置实例所属的独享集群ID。可通过 [DescribeDiskStoragePool](https://cloud.tencent.com/document/api/362/62143) 获取。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDedicatedClusterId() 获取独享集群id。
- * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置独享集群id。
  */
 class Placement extends AbstractModel
 {
@@ -57,6 +57,23 @@ class Placement extends AbstractModel
     public $CageId;
 
     /**
+     * @var string 实例所属的独享集群ID。可通过 [DescribeDiskStoragePool](https://cloud.tencent.com/document/api/362/62143) 获取。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcId;
+
+    /**
+     * @var string 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcName;
+
+    /**
+     * @var string 独享集群id。
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @var integer 实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。
      */
     public $ProjectId;
@@ -68,34 +85,17 @@ class Placement extends AbstractModel
     public $ProjectName;
 
     /**
-     * @var string 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CdcName;
-
-    /**
-     * @var string 实例所属的独享集群ID。可通过 [DescribeDiskStoragePool](https://cloud.tencent.com/document/api/362/62143) 获取。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CdcId;
-
-    /**
-     * @var string 独享集群id。
-     */
-    public $DedicatedClusterId;
-
-    /**
      * @param string $Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
      * @param string $CageId 围笼Id，可通过 [DescribeDiskStoragePool](https://cloud.tencent.com/document/api/362/62143) 获取。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProjectId 实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。
-     * @param string $ProjectName 实例所属项目名称，可通过[DescribeProject](/document/api/651/78725)获取。
+     * @param string $CdcId 实例所属的独享集群ID。可通过 [DescribeDiskStoragePool](https://cloud.tencent.com/document/api/362/62143) 获取。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcName 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CdcId 实例所属的独享集群ID。可通过 [DescribeDiskStoragePool](https://cloud.tencent.com/document/api/362/62143) 获取。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DedicatedClusterId 独享集群id。
+     * @param integer $ProjectId 实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。
+     * @param string $ProjectName 实例所属项目名称，可通过[DescribeProject](/document/api/651/78725)获取。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -118,24 +118,24 @@ class Placement extends AbstractModel
             $this->CageId = $param["CageId"];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
-        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
-            $this->ProjectName = $param["ProjectName"];
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
 
         if (array_key_exists("CdcName",$param) and $param["CdcName"] !== null) {
             $this->CdcName = $param["CdcName"];
         }
 
-        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
-            $this->CdcId = $param["CdcId"];
-        }
-
         if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
             $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
         }
     }
 }

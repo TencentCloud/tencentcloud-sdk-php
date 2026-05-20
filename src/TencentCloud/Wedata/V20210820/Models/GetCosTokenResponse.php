@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetCosToken返回参数结构体
  *
- * @method string getRegion() 获取cos地域
+ * @method string getRegion() 获取<p>cos地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置cos地域
+ * @method void setRegion(string $Region) 设置<p>cos地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CosTokenResponse getToken() 获取Token信息
+ * @method CosTokenResponse getToken() 获取<p>Token信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setToken(CosTokenResponse $Token) 设置Token信息
+ * @method void setToken(CosTokenResponse $Token) 设置<p>Token信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBucket() 获取桶名
+ * @method string getBucket() 获取<p>桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBucket(string $Bucket) 设置桶名
+ * @method void setBucket(string $Bucket) 设置<p>桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndPoint() 获取终止点（针对私有云环境）
+ * @method string getEndPoint() 获取<p>终止点（针对私有云环境）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndPoint(string $EndPoint) 设置终止点（针对私有云环境）
+ * @method void setEndPoint(string $EndPoint) 设置<p>终止点（针对私有云环境）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,25 +42,25 @@ use TencentCloud\Common\AbstractModel;
 class GetCosTokenResponse extends AbstractModel
 {
     /**
-     * @var string cos地域
+     * @var string <p>cos地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var CosTokenResponse Token信息
+     * @var CosTokenResponse <p>Token信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Token;
 
     /**
-     * @var string 桶名
+     * @var string <p>桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
 
     /**
-     * @var string 终止点（针对私有云环境）
+     * @var string <p>终止点（针对私有云环境）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndPoint;
@@ -71,13 +71,13 @@ class GetCosTokenResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Region cos地域
+     * @param string $Region <p>cos地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosTokenResponse $Token Token信息
+     * @param CosTokenResponse $Token <p>Token信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Bucket 桶名
+     * @param string $Bucket <p>桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndPoint 终止点（针对私有云环境）
+     * @param string $EndPoint <p>终止点（针对私有云环境）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

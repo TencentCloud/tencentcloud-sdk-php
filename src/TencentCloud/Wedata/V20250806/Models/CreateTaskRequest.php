@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTask请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method CreateTaskBaseAttribute getTaskBaseAttribute() 获取任务基本属性
- * @method void setTaskBaseAttribute(CreateTaskBaseAttribute $TaskBaseAttribute) 设置任务基本属性
- * @method CreateTaskConfiguration getTaskConfiguration() 获取任务配置
- * @method void setTaskConfiguration(CreateTaskConfiguration $TaskConfiguration) 设置任务配置
- * @method CreateTaskSchedulerConfiguration getTaskSchedulerConfiguration() 获取任务调度配置
- * @method void setTaskSchedulerConfiguration(CreateTaskSchedulerConfiguration $TaskSchedulerConfiguration) 设置任务调度配置
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method CreateTaskBaseAttribute getTaskBaseAttribute() 获取<p>任务基本属性</p>
+ * @method void setTaskBaseAttribute(CreateTaskBaseAttribute $TaskBaseAttribute) 设置<p>任务基本属性</p>
+ * @method CreateTaskConfiguration getTaskConfiguration() 获取<p>任务配置</p>
+ * @method void setTaskConfiguration(CreateTaskConfiguration $TaskConfiguration) 设置<p>任务配置</p>
+ * @method CreateTaskSchedulerConfiguration getTaskSchedulerConfiguration() 获取<p>任务调度配置</p>
+ * @method void setTaskSchedulerConfiguration(CreateTaskSchedulerConfiguration $TaskSchedulerConfiguration) 设置<p>任务调度配置</p>
  */
 class CreateTaskRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var CreateTaskBaseAttribute 任务基本属性
+     * @var CreateTaskBaseAttribute <p>任务基本属性</p>
      */
     public $TaskBaseAttribute;
 
     /**
-     * @var CreateTaskConfiguration 任务配置
+     * @var CreateTaskConfiguration <p>任务配置</p>
      */
     public $TaskConfiguration;
 
     /**
-     * @var CreateTaskSchedulerConfiguration 任务调度配置
+     * @var CreateTaskSchedulerConfiguration <p>任务调度配置</p>
      */
     public $TaskSchedulerConfiguration;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param CreateTaskBaseAttribute $TaskBaseAttribute 任务基本属性
-     * @param CreateTaskConfiguration $TaskConfiguration 任务配置
-     * @param CreateTaskSchedulerConfiguration $TaskSchedulerConfiguration 任务调度配置
+     * @param string $ProjectId <p>项目ID</p>
+     * @param CreateTaskBaseAttribute $TaskBaseAttribute <p>任务基本属性</p>
+     * @param CreateTaskConfiguration $TaskConfiguration <p>任务配置</p>
+     * @param CreateTaskSchedulerConfiguration $TaskSchedulerConfiguration <p>任务调度配置</p>
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRabbitMQUser返回参数结构体
  *
- * @method string getUser() 获取用户名，登录时使用
- * @method void setUser(string $User) 设置用户名，登录时使用
+ * @method string getUser() 获取<p>用户名，登录时使用</p>
+ * @method void setUser(string $User) 设置<p>用户名，登录时使用</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateRabbitMQUserResponse extends AbstractModel
 {
     /**
-     * @var string 用户名，登录时使用
+     * @var string <p>用户名，登录时使用</p>
      */
     public $User;
 
@@ -38,7 +38,7 @@ class CreateRabbitMQUserResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $User 用户名，登录时使用
+     * @param string $User <p>用户名，登录时使用</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpcAcRule返回参数结构体
  *
- * @method integer getTotal() 获取总条数
- * @method void setTotal(integer $Total) 设置总条数
- * @method array getData() 获取内网间访问控制列表数据
- * @method void setData(array $Data) 设置内网间访问控制列表数据
+ * @method integer getTotal() 获取<p>总条数</p>
+ * @method void setTotal(integer $Total) 设置<p>总条数</p>
+ * @method array getData() 获取<p>内网间访问控制列表数据</p>
+ * @method void setData(array $Data) 设置<p>内网间访问控制列表数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVpcAcRuleResponse extends AbstractModel
 {
     /**
-     * @var integer 总条数
+     * @var integer <p>总条数</p>
      */
     public $Total;
 
     /**
-     * @var array 内网间访问控制列表数据
+     * @var array <p>内网间访问控制列表数据</p>
      */
     public $Data;
 
@@ -45,8 +45,8 @@ class DescribeVpcAcRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总条数
-     * @param array $Data 内网间访问控制列表数据
+     * @param integer $Total <p>总条数</p>
+     * @param array $Data <p>内网间访问控制列表数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

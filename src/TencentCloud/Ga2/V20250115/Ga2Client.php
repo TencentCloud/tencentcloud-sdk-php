@@ -40,6 +40,7 @@ use TencentCloud\Ga2\V20250115\Models as Models;
  * @method Models\DescribeForwardingRuleResponse DescribeForwardingRule(Models\DescribeForwardingRuleRequest $req) 查看七层转发规则
  * @method Models\DescribeGlobalAcceleratorsResponse DescribeGlobalAccelerators(Models\DescribeGlobalAcceleratorsRequest $req) 修改全球加速实例
  * @method Models\DescribeListenersResponse DescribeListeners(Models\DescribeListenersRequest $req) 查询监听器
+ * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询异步任务结果
  * @method Models\ModifyAccelerateAreasResponse ModifyAccelerateAreas(Models\ModifyAccelerateAreasRequest $req) 修改加速地域
  * @method Models\ModifyEndpointGroupResponse ModifyEndpointGroup(Models\ModifyEndpointGroupRequest $req) 修改终端节点组。
  * @method Models\ModifyForwardingRuleResponse ModifyForwardingRule(Models\ModifyForwardingRuleRequest $req) 修改七层转发规则

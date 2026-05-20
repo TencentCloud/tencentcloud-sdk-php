@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceType(integer $VoiceType) 设置<p>音色 ID，价格请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</p>
  * @method integer getPrimaryLanguage() 获取<p>主语言类型：<li>1-中文（默认）</li><li>2-英文</li></p>
  * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置<p>主语言类型：<li>1-中文（默认）</li><li>2-英文</li></p>
- * @method integer getSampleRate() 获取<p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p>
- * @method void setSampleRate(integer $SampleRate) 设置<p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p>
+ * @method integer getSampleRate() 获取<p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p><p>枚举值：</p><ul><li>16000： 16kHz音频采样率</li></ul>
+ * @method void setSampleRate(integer $SampleRate) 设置<p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p><p>枚举值：</p><ul><li>16000： 16kHz音频采样率</li></ul>
  * @method string getCodec() 获取<p>返回音频格式，可取值：mp3（默认），wav，pcm</p>
  * @method void setCodec(string $Codec) 设置<p>返回音频格式，可取值：mp3（默认），wav，pcm</p>
  * @method string getCallbackUrl() 获取<p>回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。<a href="https://cloud.tencent.com/document/product/1073/55746">回调说明</a></p>
@@ -87,7 +87,7 @@ class CreateTtsTaskRequest extends AbstractModel
     public $PrimaryLanguage;
 
     /**
-     * @var integer <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p>
+     * @var integer <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p><p>枚举值：</p><ul><li>16000： 16kHz音频采样率</li></ul>
      */
     public $SampleRate;
 
@@ -129,7 +129,7 @@ class CreateTtsTaskRequest extends AbstractModel
      * @param integer $ModelType <p>模型类型，1-默认模型。</p>
      * @param integer $VoiceType <p>音色 ID，价格请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</p>
      * @param integer $PrimaryLanguage <p>主语言类型：<li>1-中文（默认）</li><li>2-英文</li></p>
-     * @param integer $SampleRate <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p>
+     * @param integer $SampleRate <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p><p>枚举值：</p><ul><li>16000： 16kHz音频采样率</li></ul>
      * @param string $Codec <p>返回音频格式，可取值：mp3（默认），wav，pcm</p>
      * @param string $CallbackUrl <p>回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。<a href="https://cloud.tencent.com/document/product/1073/55746">回调说明</a></p>
      * @param boolean $EnableSubtitle <p>是否开启时间戳功能，默认为false。</p>

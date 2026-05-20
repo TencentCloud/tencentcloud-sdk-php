@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置<p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p>
  * @method integer getMemory() 获取<p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
  * @method void setMemory(integer $Memory) 设置<p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
- * @method integer getInstanceCount() 获取<p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
- * @method void setInstanceCount(integer $InstanceCount) 设置<p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
+ * @method integer getInstanceCount() 获取<p>实例数量</p><p>取值范围：[1, 16]</p><p>默认值：2</p><ul><li>取值为2，表示一个 rw 实例 + 一个 ro 实例。</li><li>传递的 n 表示1个 rw 实例 + n-1个 ro 实例（规格相同）。</li><li>如需要更精确的集群组成搭配，请使用 InstanceInitInfos。</li><li>此参数设置的数值适用于预置资源集群，如需设置 Serverless 集群的实例规格及数量，请使用 InstanceInitInfos.N 中的 InstanceInitInfo 结构。</li></ul>
+ * @method void setInstanceCount(integer $InstanceCount) 设置<p>实例数量</p><p>取值范围：[1, 16]</p><p>默认值：2</p><ul><li>取值为2，表示一个 rw 实例 + 一个 ro 实例。</li><li>传递的 n 表示1个 rw 实例 + n-1个 ro 实例（规格相同）。</li><li>如需要更精确的集群组成搭配，请使用 InstanceInitInfos。</li><li>此参数设置的数值适用于预置资源集群，如需设置 Serverless 集群的实例规格及数量，请使用 InstanceInitInfos.N 中的 InstanceInitInfo 结构。</li></ul>
  * @method integer getStorage() 获取<p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
  * @method void setStorage(integer $Storage) 设置<p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
  * @method string getClusterName() 获取<p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
@@ -110,6 +110,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoArchive(string $AutoArchive) 设置<p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
  * @method integer getAutoArchiveDelayHours() 获取<p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
  * @method void setAutoArchiveDelayHours(integer $AutoArchiveDelayHours) 设置<p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
+ * @method string getClusterLevel() 获取<p>集群级别，可空。例如 P0, P1。（可忽略该字段）</p>
+ * @method void setClusterLevel(string $ClusterLevel) 设置<p>集群级别，可空。例如 P0, P1。（可忽略该字段）</p>
  * @method string getCynosVersion() 获取<p>内核小版本号</p>
  * @method void setCynosVersion(string $CynosVersion) 设置<p>内核小版本号</p>
  */
@@ -156,7 +158,7 @@ class CreateClustersRequest extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
+     * @var integer <p>实例数量</p><p>取值范围：[1, 16]</p><p>默认值：2</p><ul><li>取值为2，表示一个 rw 实例 + 一个 ro 实例。</li><li>传递的 n 表示1个 rw 实例 + n-1个 ro 实例（规格相同）。</li><li>如需要更精确的集群组成搭配，请使用 InstanceInitInfos。</li><li>此参数设置的数值适用于预置资源集群，如需设置 Serverless 集群的实例规格及数量，请使用 InstanceInitInfos.N 中的 InstanceInitInfo 结构。</li></ul>
      */
     public $InstanceCount;
 
@@ -341,6 +343,11 @@ class CreateClustersRequest extends AbstractModel
     public $AutoArchiveDelayHours;
 
     /**
+     * @var string <p>集群级别，可空。例如 P0, P1。（可忽略该字段）</p>
+     */
+    public $ClusterLevel;
+
+    /**
      * @var string <p>内核小版本号</p>
      */
     public $CynosVersion;
@@ -354,7 +361,7 @@ class CreateClustersRequest extends AbstractModel
      * @param integer $ProjectId <p>所属项目ID</p>
      * @param integer $Cpu <p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p>
      * @param integer $Memory <p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
-     * @param integer $InstanceCount <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
+     * @param integer $InstanceCount <p>实例数量</p><p>取值范围：[1, 16]</p><p>默认值：2</p><ul><li>取值为2，表示一个 rw 实例 + 一个 ro 实例。</li><li>传递的 n 表示1个 rw 实例 + n-1个 ro 实例（规格相同）。</li><li>如需要更精确的集群组成搭配，请使用 InstanceInitInfos。</li><li>此参数设置的数值适用于预置资源集群，如需设置 Serverless 集群的实例规格及数量，请使用 InstanceInitInfos.N 中的 InstanceInitInfo 结构。</li></ul>
      * @param integer $Storage <p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
      * @param string $ClusterName <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
      * @param string $AdminPassword <p>账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/中的任意三种)</p>
@@ -391,6 +398,7 @@ class CreateClustersRequest extends AbstractModel
      * @param ProxyConfig $ProxyConfig <p>数据库代理配置</p>
      * @param string $AutoArchive <p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
      * @param integer $AutoArchiveDelayHours <p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
+     * @param string $ClusterLevel <p>集群级别，可空。例如 P0, P1。（可忽略该字段）</p>
      * @param string $CynosVersion <p>内核小版本号</p>
      */
     function __construct()
@@ -600,6 +608,10 @@ class CreateClustersRequest extends AbstractModel
 
         if (array_key_exists("AutoArchiveDelayHours",$param) and $param["AutoArchiveDelayHours"] !== null) {
             $this->AutoArchiveDelayHours = $param["AutoArchiveDelayHours"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
         }
 
         if (array_key_exists("CynosVersion",$param) and $param["CynosVersion"] !== null) {

@@ -20,290 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListDataSources请求参数结构体
  *
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
- * @method integer getPageSize() 获取返回数量，默认10
- * @method void setPageSize(integer $PageSize) 设置返回数量，默认10
- * @method integer getPageNumber() 获取页码，默认1
- * @method void setPageNumber(integer $PageNumber) 设置页码，默认1
- * @method string getName() 获取数据源名称
- * @method void setName(string $Name) 设置数据源名称
- * @method string getDisplayName() 获取数据源展示名
- * @method void setDisplayName(string $DisplayName) 设置数据源展示名
- * @method array getType() 获取数据源类型:枚举值
-
-- MYSQL
-- TENCENT_MYSQL
-- POSTGRE
-- ORACLE
-- SQLSERVER
-- FTP
-- HIVE
-- HUDI
-- HDFS
-- ICEBERG
-- KAFKA
-- HBASE
-- SPARK
-- VIRTUAL
-- TBASE
-- DB2
-- DM
-- GAUSSDB
-- GBASE
-- IMPALA
-- ES
-- TENCENT_ES
-- GREENPLUM
-- PHOENIX
-- SAP_HANA
-- SFTP
-- OCEANBASE
-- CLICKHOUSE
-- KUDU
-- VERTICA
-- REDIS
-- COS
-- DLC
-- DORIS
-- CKAFKA
-- S3
-- TDSQL
-- TDSQL_MYSQL
-- MONGODB
-- TENCENT_MONGODB
-- REST_API
-- SuperSQL
-- PRESTO
-- TiDB
-- StarRocks
-- Trino
-- Kyuubi
-- TCHOUSE_X
-- TCHOUSE_P
-- TCHOUSE_C
-- TCHOUSE_D
-- INFLUXDB
-- BIG_QUERY
-- SSH
-- BLOB
- * @method void setType(array $Type) 设置数据源类型:枚举值
-
-- MYSQL
-- TENCENT_MYSQL
-- POSTGRE
-- ORACLE
-- SQLSERVER
-- FTP
-- HIVE
-- HUDI
-- HDFS
-- ICEBERG
-- KAFKA
-- HBASE
-- SPARK
-- VIRTUAL
-- TBASE
-- DB2
-- DM
-- GAUSSDB
-- GBASE
-- IMPALA
-- ES
-- TENCENT_ES
-- GREENPLUM
-- PHOENIX
-- SAP_HANA
-- SFTP
-- OCEANBASE
-- CLICKHOUSE
-- KUDU
-- VERTICA
-- REDIS
-- COS
-- DLC
-- DORIS
-- CKAFKA
-- S3
-- TDSQL
-- TDSQL_MYSQL
-- MONGODB
-- TENCENT_MONGODB
-- REST_API
-- SuperSQL
-- PRESTO
-- TiDB
-- StarRocks
-- Trino
-- Kyuubi
-- TCHOUSE_X
-- TCHOUSE_P
-- TCHOUSE_C
-- TCHOUSE_D
-- INFLUXDB
-- BIG_QUERY
-- SSH
-- BLOB
- * @method string getCreator() 获取创建人
- * @method void setCreator(string $Creator) 设置创建人
+ * @method string getProjectId() 获取<p>项目id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
+ * @method integer getPageSize() 获取<p>返回数量，默认10</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>返回数量，默认10</p>
+ * @method integer getPageNumber() 获取<p>页码，默认1</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码，默认1</p>
+ * @method string getName() 获取<p>数据源名称</p>
+ * @method void setName(string $Name) 设置<p>数据源名称</p>
+ * @method string getDisplayName() 获取<p>数据源展示名</p>
+ * @method void setDisplayName(string $DisplayName) 设置<p>数据源展示名</p>
+ * @method array getType() 获取<p>数据源类型:枚举值</p><ul><li>MYSQL</li><li>TENCENT_MYSQL</li><li>POSTGRE</li><li>ORACLE</li><li>SQLSERVER</li><li>FTP</li><li>HIVE</li><li>HUDI</li><li>HDFS</li><li>ICEBERG</li><li>KAFKA</li><li>HBASE</li><li>SPARK</li><li>VIRTUAL</li><li>TBASE</li><li>DB2</li><li>DM</li><li>GAUSSDB</li><li>GBASE</li><li>IMPALA</li><li>ES</li><li>TENCENT_ES</li><li>GREENPLUM</li><li>PHOENIX</li><li>SAP_HANA</li><li>SFTP</li><li>OCEANBASE</li><li>CLICKHOUSE</li><li>KUDU</li><li>VERTICA</li><li>REDIS</li><li>COS</li><li>DLC</li><li>DORIS</li><li>CKAFKA</li><li>S3</li><li>TDSQL</li><li>TDSQL_MYSQL</li><li>MONGODB</li><li>TENCENT_MONGODB</li><li>REST_API</li><li>SuperSQL</li><li>PRESTO</li><li>TiDB</li><li>StarRocks</li><li>Trino</li><li>Kyuubi</li><li>TCHOUSE_X</li><li>TCHOUSE_P</li><li>TCHOUSE_C</li><li>TCHOUSE_D</li><li>INFLUXDB</li><li>BIG_QUERY</li><li>SSH</li><li>BLOB</li></ul>
+ * @method void setType(array $Type) 设置<p>数据源类型:枚举值</p><ul><li>MYSQL</li><li>TENCENT_MYSQL</li><li>POSTGRE</li><li>ORACLE</li><li>SQLSERVER</li><li>FTP</li><li>HIVE</li><li>HUDI</li><li>HDFS</li><li>ICEBERG</li><li>KAFKA</li><li>HBASE</li><li>SPARK</li><li>VIRTUAL</li><li>TBASE</li><li>DB2</li><li>DM</li><li>GAUSSDB</li><li>GBASE</li><li>IMPALA</li><li>ES</li><li>TENCENT_ES</li><li>GREENPLUM</li><li>PHOENIX</li><li>SAP_HANA</li><li>SFTP</li><li>OCEANBASE</li><li>CLICKHOUSE</li><li>KUDU</li><li>VERTICA</li><li>REDIS</li><li>COS</li><li>DLC</li><li>DORIS</li><li>CKAFKA</li><li>S3</li><li>TDSQL</li><li>TDSQL_MYSQL</li><li>MONGODB</li><li>TENCENT_MONGODB</li><li>REST_API</li><li>SuperSQL</li><li>PRESTO</li><li>TiDB</li><li>StarRocks</li><li>Trino</li><li>Kyuubi</li><li>TCHOUSE_X</li><li>TCHOUSE_P</li><li>TCHOUSE_C</li><li>TCHOUSE_D</li><li>INFLUXDB</li><li>BIG_QUERY</li><li>SSH</li><li>BLOB</li></ul>
+ * @method string getCreator() 获取<p>创建人</p>
+ * @method void setCreator(string $Creator) 设置<p>创建人</p>
  */
 class ListDataSourcesRequest extends AbstractModel
 {
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 返回数量，默认10
+     * @var integer <p>返回数量，默认10</p>
      */
     public $PageSize;
 
     /**
-     * @var integer 页码，默认1
+     * @var integer <p>页码，默认1</p>
      */
     public $PageNumber;
 
     /**
-     * @var string 数据源名称
+     * @var string <p>数据源名称</p>
      */
     public $Name;
 
     /**
-     * @var string 数据源展示名
+     * @var string <p>数据源展示名</p>
      */
     public $DisplayName;
 
     /**
-     * @var array 数据源类型:枚举值
-
-- MYSQL
-- TENCENT_MYSQL
-- POSTGRE
-- ORACLE
-- SQLSERVER
-- FTP
-- HIVE
-- HUDI
-- HDFS
-- ICEBERG
-- KAFKA
-- HBASE
-- SPARK
-- VIRTUAL
-- TBASE
-- DB2
-- DM
-- GAUSSDB
-- GBASE
-- IMPALA
-- ES
-- TENCENT_ES
-- GREENPLUM
-- PHOENIX
-- SAP_HANA
-- SFTP
-- OCEANBASE
-- CLICKHOUSE
-- KUDU
-- VERTICA
-- REDIS
-- COS
-- DLC
-- DORIS
-- CKAFKA
-- S3
-- TDSQL
-- TDSQL_MYSQL
-- MONGODB
-- TENCENT_MONGODB
-- REST_API
-- SuperSQL
-- PRESTO
-- TiDB
-- StarRocks
-- Trino
-- Kyuubi
-- TCHOUSE_X
-- TCHOUSE_P
-- TCHOUSE_C
-- TCHOUSE_D
-- INFLUXDB
-- BIG_QUERY
-- SSH
-- BLOB
+     * @var array <p>数据源类型:枚举值</p><ul><li>MYSQL</li><li>TENCENT_MYSQL</li><li>POSTGRE</li><li>ORACLE</li><li>SQLSERVER</li><li>FTP</li><li>HIVE</li><li>HUDI</li><li>HDFS</li><li>ICEBERG</li><li>KAFKA</li><li>HBASE</li><li>SPARK</li><li>VIRTUAL</li><li>TBASE</li><li>DB2</li><li>DM</li><li>GAUSSDB</li><li>GBASE</li><li>IMPALA</li><li>ES</li><li>TENCENT_ES</li><li>GREENPLUM</li><li>PHOENIX</li><li>SAP_HANA</li><li>SFTP</li><li>OCEANBASE</li><li>CLICKHOUSE</li><li>KUDU</li><li>VERTICA</li><li>REDIS</li><li>COS</li><li>DLC</li><li>DORIS</li><li>CKAFKA</li><li>S3</li><li>TDSQL</li><li>TDSQL_MYSQL</li><li>MONGODB</li><li>TENCENT_MONGODB</li><li>REST_API</li><li>SuperSQL</li><li>PRESTO</li><li>TiDB</li><li>StarRocks</li><li>Trino</li><li>Kyuubi</li><li>TCHOUSE_X</li><li>TCHOUSE_P</li><li>TCHOUSE_C</li><li>TCHOUSE_D</li><li>INFLUXDB</li><li>BIG_QUERY</li><li>SSH</li><li>BLOB</li></ul>
      */
     public $Type;
 
     /**
-     * @var string 创建人
+     * @var string <p>创建人</p>
      */
     public $Creator;
 
     /**
-     * @param string $ProjectId 项目id
-     * @param integer $PageSize 返回数量，默认10
-     * @param integer $PageNumber 页码，默认1
-     * @param string $Name 数据源名称
-     * @param string $DisplayName 数据源展示名
-     * @param array $Type 数据源类型:枚举值
-
-- MYSQL
-- TENCENT_MYSQL
-- POSTGRE
-- ORACLE
-- SQLSERVER
-- FTP
-- HIVE
-- HUDI
-- HDFS
-- ICEBERG
-- KAFKA
-- HBASE
-- SPARK
-- VIRTUAL
-- TBASE
-- DB2
-- DM
-- GAUSSDB
-- GBASE
-- IMPALA
-- ES
-- TENCENT_ES
-- GREENPLUM
-- PHOENIX
-- SAP_HANA
-- SFTP
-- OCEANBASE
-- CLICKHOUSE
-- KUDU
-- VERTICA
-- REDIS
-- COS
-- DLC
-- DORIS
-- CKAFKA
-- S3
-- TDSQL
-- TDSQL_MYSQL
-- MONGODB
-- TENCENT_MONGODB
-- REST_API
-- SuperSQL
-- PRESTO
-- TiDB
-- StarRocks
-- Trino
-- Kyuubi
-- TCHOUSE_X
-- TCHOUSE_P
-- TCHOUSE_C
-- TCHOUSE_D
-- INFLUXDB
-- BIG_QUERY
-- SSH
-- BLOB
-     * @param string $Creator 创建人
+     * @param string $ProjectId <p>项目id</p>
+     * @param integer $PageSize <p>返回数量，默认10</p>
+     * @param integer $PageNumber <p>页码，默认1</p>
+     * @param string $Name <p>数据源名称</p>
+     * @param string $DisplayName <p>数据源展示名</p>
+     * @param array $Type <p>数据源类型:枚举值</p><ul><li>MYSQL</li><li>TENCENT_MYSQL</li><li>POSTGRE</li><li>ORACLE</li><li>SQLSERVER</li><li>FTP</li><li>HIVE</li><li>HUDI</li><li>HDFS</li><li>ICEBERG</li><li>KAFKA</li><li>HBASE</li><li>SPARK</li><li>VIRTUAL</li><li>TBASE</li><li>DB2</li><li>DM</li><li>GAUSSDB</li><li>GBASE</li><li>IMPALA</li><li>ES</li><li>TENCENT_ES</li><li>GREENPLUM</li><li>PHOENIX</li><li>SAP_HANA</li><li>SFTP</li><li>OCEANBASE</li><li>CLICKHOUSE</li><li>KUDU</li><li>VERTICA</li><li>REDIS</li><li>COS</li><li>DLC</li><li>DORIS</li><li>CKAFKA</li><li>S3</li><li>TDSQL</li><li>TDSQL_MYSQL</li><li>MONGODB</li><li>TENCENT_MONGODB</li><li>REST_API</li><li>SuperSQL</li><li>PRESTO</li><li>TiDB</li><li>StarRocks</li><li>Trino</li><li>Kyuubi</li><li>TCHOUSE_X</li><li>TCHOUSE_P</li><li>TCHOUSE_C</li><li>TCHOUSE_D</li><li>INFLUXDB</li><li>BIG_QUERY</li><li>SSH</li><li>BLOB</li></ul>
+     * @param string $Creator <p>创建人</p>
      */
     function __construct()
     {

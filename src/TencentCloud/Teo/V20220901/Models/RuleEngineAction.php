@@ -50,6 +50,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
+<li> SiteFailover：源站故障转移；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
 <li>HttpResponse：HTTP 应答；</li>
 <li>ErrorPage：自定义错误页面；</li>
@@ -90,6 +91,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
+<li> SiteFailover：源站故障转移；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
 <li>HttpResponse：HTTP 应答；</li>
 <li>ErrorPage：自定义错误页面；</li>
@@ -216,6 +218,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyOriginParameters(ModifyOriginParameters $ModifyOriginParameters) 设置修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SiteFailoverParameters getSiteFailoverParameters() 获取源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSiteFailoverParameters(SiteFailoverParameters $SiteFailoverParameters) 设置源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method HTTPUpstreamTimeoutParameters getHTTPUpstreamTimeoutParameters() 获取七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHTTPUpstreamTimeoutParameters(HTTPUpstreamTimeoutParameters $HTTPUpstreamTimeoutParameters) 设置七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
@@ -286,6 +292,7 @@ class RuleEngineAction extends AbstractModel
 <li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
+<li> SiteFailover：源站故障转移；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
 <li>HttpResponse：HTTP 应答；</li>
 <li>ErrorPage：自定义错误页面；</li>
@@ -474,6 +481,12 @@ class RuleEngineAction extends AbstractModel
     public $ModifyOriginParameters;
 
     /**
+     * @var SiteFailoverParameters 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SiteFailoverParameters;
+
+    /**
      * @var HTTPUpstreamTimeoutParameters 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -562,6 +575,7 @@ class RuleEngineAction extends AbstractModel
 <li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
+<li> SiteFailover：源站故障转移；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
 <li>HttpResponse：HTTP 应答；</li>
 <li>ErrorPage：自定义错误页面；</li>
@@ -629,6 +643,8 @@ class RuleEngineAction extends AbstractModel
      * @param TLSConfigParameters $TLSConfigParameters SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyOriginParameters $ModifyOriginParameters 修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SiteFailoverParameters $SiteFailoverParameters 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HTTPUpstreamTimeoutParameters $HTTPUpstreamTimeoutParameters 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -809,6 +825,11 @@ class RuleEngineAction extends AbstractModel
         if (array_key_exists("ModifyOriginParameters",$param) and $param["ModifyOriginParameters"] !== null) {
             $this->ModifyOriginParameters = new ModifyOriginParameters();
             $this->ModifyOriginParameters->deserialize($param["ModifyOriginParameters"]);
+        }
+
+        if (array_key_exists("SiteFailoverParameters",$param) and $param["SiteFailoverParameters"] !== null) {
+            $this->SiteFailoverParameters = new SiteFailoverParameters();
+            $this->SiteFailoverParameters->deserialize($param["SiteFailoverParameters"]);
         }
 
         if (array_key_exists("HTTPUpstreamTimeoutParameters",$param) and $param["HTTPUpstreamTimeoutParameters"] !== null) {

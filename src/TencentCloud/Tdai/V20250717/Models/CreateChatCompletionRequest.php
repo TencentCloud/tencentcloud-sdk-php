@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateChatCompletion请求参数结构体
  *
- * @method boolean getIsHidden() 获取是否隐藏
- * @method void setIsHidden(boolean $IsHidden) 设置是否隐藏
- * @method boolean getIsChatHidden() 获取是否隐藏会话
- * @method void setIsChatHidden(boolean $IsChatHidden) 设置是否隐藏会话
+ * @method string getInputContent() 获取<p>输入内容</p>
+ * @method void setInputContent(string $InputContent) 设置<p>输入内容</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getChatId() 获取<p>对话窗口ID，空值表示新的会话</p>
+ * @method void setChatId(string $ChatId) 设置<p>对话窗口ID，空值表示新的会话</p>
+ * @method boolean getIsHidden() 获取<p>是否隐藏</p>
+ * @method void setIsHidden(boolean $IsHidden) 设置<p>是否隐藏</p>
+ * @method boolean getIsChatHidden() 获取<p>是否隐藏会话</p>
+ * @method void setIsChatHidden(boolean $IsChatHidden) 设置<p>是否隐藏会话</p>
  */
 class CreateChatCompletionRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否隐藏
+     * @var string <p>输入内容</p>
+     */
+    public $InputContent;
+
+    /**
+     * @var string <p>实例ID</p>
+     */
+    public $InstanceId;
+
+    /**
+     * @var string <p>对话窗口ID，空值表示新的会话</p>
+     */
+    public $ChatId;
+
+    /**
+     * @var boolean <p>是否隐藏</p>
      */
     public $IsHidden;
 
     /**
-     * @var boolean 是否隐藏会话
+     * @var boolean <p>是否隐藏会话</p>
      */
     public $IsChatHidden;
 
     /**
-     * @param boolean $IsHidden 是否隐藏
-     * @param boolean $IsChatHidden 是否隐藏会话
+     * @param string $InputContent <p>输入内容</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $ChatId <p>对话窗口ID，空值表示新的会话</p>
+     * @param boolean $IsHidden <p>是否隐藏</p>
+     * @param boolean $IsChatHidden <p>是否隐藏会话</p>
      */
     function __construct()
     {
@@ -54,6 +78,18 @@ class CreateChatCompletionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InputContent",$param) and $param["InputContent"] !== null) {
+            $this->InputContent = $param["InputContent"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ChatId",$param) and $param["ChatId"] !== null) {
+            $this->ChatId = $param["ChatId"];
+        }
+
         if (array_key_exists("IsHidden",$param) and $param["IsHidden"] !== null) {
             $this->IsHidden = $param["IsHidden"];
         }

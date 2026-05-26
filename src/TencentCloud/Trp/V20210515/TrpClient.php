@@ -53,6 +53,13 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeCorpQuotasResponse DescribeCorpQuotas(Models\DescribeCorpQuotasRequest $req) 查询渠道商下属企业额度使用情况
  * @method Models\DescribeCustomRuleByIdResponse DescribeCustomRuleById(Models\DescribeCustomRuleByIdRequest $req) 查自定义码规则
  * @method Models\DescribeCustomRulesResponse DescribeCustomRules(Models\DescribeCustomRulesRequest $req) 查自定义码规则列表
+ * @method Models\DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse DescribeFlavorKingCycleBrandImportantCityScanAnalysis(Models\DescribeFlavorKingCycleBrandImportantCityScanAnalysisRequest $req) 统计用户次数
+ * @method Models\DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse DescribeFlavorKingCycleBrandImportantProvinceScanAnalysis(Models\DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisRequest $req) 统计用户次数
+ * @method Models\DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse DescribeFlavorKingCycleBrandImportantProvinceUserAnalysis(Models\DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisRequest $req) 统计用户次数
+ * @method Models\DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse DescribeFlavorKingCycleBrandProvinceCityScanAnalysis(Models\DescribeFlavorKingCycleBrandProvinceCityScanAnalysisRequest $req) 统计用户次数
+ * @method Models\DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse DescribeFlavorKingCycleBrandProvinceScanAnalysis(Models\DescribeFlavorKingCycleBrandProvinceScanAnalysisRequest $req) 统计用户次数
+ * @method Models\DescribeFlavorKingCycleBrandScanAnalysisResponse DescribeFlavorKingCycleBrandScanAnalysis(Models\DescribeFlavorKingCycleBrandScanAnalysisRequest $req) 统计扫码次数
+ * @method Models\DescribeFlavorKingCycleBrandScanMetricsResponse DescribeFlavorKingCycleBrandScanMetrics(Models\DescribeFlavorKingCycleBrandScanMetricsRequest $req) 统计用户次数
  * @method Models\DescribeJobFileUrlResponse DescribeJobFileUrl(Models\DescribeJobFileUrlRequest $req) 获取异步任务的输出地址
  * @method Models\DescribeMerchantByIdResponse DescribeMerchantById(Models\DescribeMerchantByIdRequest $req) 查询商户信息
  * @method Models\DescribeMerchantsResponse DescribeMerchants(Models\DescribeMerchantsRequest $req) 查询商户列表
@@ -69,6 +76,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeTraceCodesResponse DescribeTraceCodes(Models\DescribeTraceCodesRequest $req) 查询二维码列表
  * @method Models\DescribeTraceDataByIdResponse DescribeTraceDataById(Models\DescribeTraceDataByIdRequest $req) 查询溯源ID查溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
  * @method Models\DescribeTraceDataListResponse DescribeTraceDataList(Models\DescribeTraceDataListRequest $req) 查询溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
+ * @method Models\DownloadGEOResponse DownloadGEO(Models\DownloadGEORequest $req) 地理位置信息下载
  * @method Models\EffectFeedbackResponse EffectFeedback(Models\EffectFeedbackRequest $req) 接收客户反馈的各环节数据
  * @method Models\ModifyCodeBatchResponse ModifyCodeBatch(Models\ModifyCodeBatchRequest $req) 修改批次
  * @method Models\ModifyCustomRuleResponse ModifyCustomRule(Models\ModifyCustomRuleRequest $req) 修改自定义码规则

@@ -20,178 +20,185 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVsmAttributes返回参数结构体
  *
- * @method string getResourceId() 获取资源Id
- * @method void setResourceId(string $ResourceId) 设置资源Id
- * @method string getResourceName() 获取资源名称
- * @method void setResourceName(string $ResourceName) 设置资源名称
- * @method integer getStatus() 获取资源状态，1表示资源为正常，2表示资源处于隔离状态
- * @method void setStatus(integer $Status) 设置资源状态，1表示资源为正常，2表示资源处于隔离状态
- * @method string getVip() 获取资源IP
- * @method void setVip(string $Vip) 设置资源IP
- * @method string getVpcId() 获取资源所属Vpc
- * @method void setVpcId(string $VpcId) 设置资源所属Vpc
- * @method string getSubnetId() 获取资源所属子网
- * @method void setSubnetId(string $SubnetId) 设置资源所属子网
- * @method string getModel() 获取资源所属HSM的规格
- * @method void setModel(string $Model) 设置资源所属HSM的规格
- * @method integer getVsmType() 获取资源类型，17表示EVSM，33表示GVSM，49表示SVSM
- * @method void setVsmType(integer $VsmType) 设置资源类型，17表示EVSM，33表示GVSM，49表示SVSM
- * @method integer getRegionId() 获取地域Id，返回腾讯云地域代码，如广州为1，北京为8
- * @method void setRegionId(integer $RegionId) 设置地域Id，返回腾讯云地域代码，如广州为1，北京为8
- * @method integer getZoneId() 获取区域Id，返回腾讯云每个地域的可用区代码
- * @method void setZoneId(integer $ZoneId) 设置区域Id，返回腾讯云每个地域的可用区代码
- * @method integer getExpireTime() 获取资源过期时间，以时间戳形式展示。
- * @method void setExpireTime(integer $ExpireTime) 设置资源过期时间，以时间戳形式展示。
- * @method array getSgList() 获取安全组详情信息,如果未配置字段返回null
- * @method void setSgList(array $SgList) 设置安全组详情信息,如果未配置字段返回null
- * @method string getSubnetName() 获取子网名
- * @method void setSubnetName(string $SubnetName) 设置子网名
- * @method string getRegionName() 获取地域名
- * @method void setRegionName(string $RegionName) 设置地域名
- * @method string getZoneName() 获取区域名
- * @method void setZoneName(string $ZoneName) 设置区域名
- * @method boolean getExpired() 获取实例是否已经过期
- * @method void setExpired(boolean $Expired) 设置实例是否已经过期
- * @method integer getRemainSeconds() 获取为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
- * @method void setRemainSeconds(integer $RemainSeconds) 设置为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
- * @method string getVpcName() 获取私有虚拟网络名称
- * @method void setVpcName(string $VpcName) 设置私有虚拟网络名称
- * @method string getVpcCidrBlock() 获取VPC的IPv4 CIDR
- * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置VPC的IPv4 CIDR
- * @method string getSubnetCidrBlock() 获取子网的CIDR
- * @method void setSubnetCidrBlock(string $SubnetCidrBlock) 设置子网的CIDR
- * @method array getTags() 获取资源所关联的标签Tag
- * @method void setTags(array $Tags) 设置资源所关联的标签Tag
- * @method integer getRenewFlag() 获取资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method void setRenewFlag(integer $RenewFlag) 设置资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method string getManufacturer() 获取厂商
- * @method void setManufacturer(string $Manufacturer) 设置厂商
- * @method integer getPqcFlag() 获取0-关闭，1-开启
- * @method void setPqcFlag(integer $PqcFlag) 设置0-关闭，1-开启
+ * @method string getResourceId() 获取<p>资源Id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源Id</p>
+ * @method string getResourceName() 获取<p>资源名称</p>
+ * @method void setResourceName(string $ResourceName) 设置<p>资源名称</p>
+ * @method integer getStatus() 获取<p>资源状态，1表示资源为正常，2表示资源处于隔离状态</p>
+ * @method void setStatus(integer $Status) 设置<p>资源状态，1表示资源为正常，2表示资源处于隔离状态</p>
+ * @method string getVip() 获取<p>资源IP</p>
+ * @method void setVip(string $Vip) 设置<p>资源IP</p>
+ * @method string getVpcId() 获取<p>资源所属Vpc</p>
+ * @method void setVpcId(string $VpcId) 设置<p>资源所属Vpc</p>
+ * @method string getSubnetId() 获取<p>资源所属子网</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>资源所属子网</p>
+ * @method string getModel() 获取<p>资源所属HSM的规格</p>
+ * @method void setModel(string $Model) 设置<p>资源所属HSM的规格</p>
+ * @method integer getVsmType() 获取<p>资源类型，17表示EVSM，33表示GVSM，49表示SVSM</p>
+ * @method void setVsmType(integer $VsmType) 设置<p>资源类型，17表示EVSM，33表示GVSM，49表示SVSM</p>
+ * @method integer getRegionId() 获取<p>地域Id，返回腾讯云地域代码，如广州为1，北京为8</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域Id，返回腾讯云地域代码，如广州为1，北京为8</p>
+ * @method integer getZoneId() 获取<p>区域Id，返回腾讯云每个地域的可用区代码</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>区域Id，返回腾讯云每个地域的可用区代码</p>
+ * @method integer getExpireTime() 获取<p>资源过期时间，以时间戳形式展示。</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>资源过期时间，以时间戳形式展示。</p>
+ * @method array getSgList() 获取<p>安全组详情信息,如果未配置字段返回null</p>
+ * @method void setSgList(array $SgList) 设置<p>安全组详情信息,如果未配置字段返回null</p>
+ * @method string getSubnetName() 获取<p>子网名</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>子网名</p>
+ * @method string getRegionName() 获取<p>地域名</p>
+ * @method void setRegionName(string $RegionName) 设置<p>地域名</p>
+ * @method string getZoneName() 获取<p>区域名</p>
+ * @method void setZoneName(string $ZoneName) 设置<p>区域名</p>
+ * @method boolean getExpired() 获取<p>实例是否已经过期</p>
+ * @method void setExpired(boolean $Expired) 设置<p>实例是否已经过期</p>
+ * @method integer getRemainSeconds() 获取<p>为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒</p>
+ * @method void setRemainSeconds(integer $RemainSeconds) 设置<p>为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒</p>
+ * @method string getVpcName() 获取<p>私有虚拟网络名称</p>
+ * @method void setVpcName(string $VpcName) 设置<p>私有虚拟网络名称</p>
+ * @method string getVpcCidrBlock() 获取<p>VPC的IPv4 CIDR</p>
+ * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置<p>VPC的IPv4 CIDR</p>
+ * @method string getSubnetCidrBlock() 获取<p>子网的CIDR</p>
+ * @method void setSubnetCidrBlock(string $SubnetCidrBlock) 设置<p>子网的CIDR</p>
+ * @method array getTags() 获取<p>资源所关联的标签Tag</p>
+ * @method void setTags(array $Tags) 设置<p>资源所关联的标签Tag</p>
+ * @method integer getRenewFlag() 获取<p>资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+ * @method string getManufacturer() 获取<p>厂商</p>
+ * @method void setManufacturer(string $Manufacturer) 设置<p>厂商</p>
+ * @method integer getPqcFlag() 获取<p>0-关闭，1-开启</p>
+ * @method void setPqcFlag(integer $PqcFlag) 设置<p>0-关闭，1-开启</p>
+ * @method string getDeployEnv() 获取<p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+ * @method void setDeployEnv(string $DeployEnv) 设置<p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVsmAttributesResponse extends AbstractModel
 {
     /**
-     * @var string 资源Id
+     * @var string <p>资源Id</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 资源名称
+     * @var string <p>资源名称</p>
      */
     public $ResourceName;
 
     /**
-     * @var integer 资源状态，1表示资源为正常，2表示资源处于隔离状态
+     * @var integer <p>资源状态，1表示资源为正常，2表示资源处于隔离状态</p>
      */
     public $Status;
 
     /**
-     * @var string 资源IP
+     * @var string <p>资源IP</p>
      */
     public $Vip;
 
     /**
-     * @var string 资源所属Vpc
+     * @var string <p>资源所属Vpc</p>
      */
     public $VpcId;
 
     /**
-     * @var string 资源所属子网
+     * @var string <p>资源所属子网</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 资源所属HSM的规格
+     * @var string <p>资源所属HSM的规格</p>
      */
     public $Model;
 
     /**
-     * @var integer 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
+     * @var integer <p>资源类型，17表示EVSM，33表示GVSM，49表示SVSM</p>
      */
     public $VsmType;
 
     /**
-     * @var integer 地域Id，返回腾讯云地域代码，如广州为1，北京为8
+     * @var integer <p>地域Id，返回腾讯云地域代码，如广州为1，北京为8</p>
      */
     public $RegionId;
 
     /**
-     * @var integer 区域Id，返回腾讯云每个地域的可用区代码
+     * @var integer <p>区域Id，返回腾讯云每个地域的可用区代码</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer 资源过期时间，以时间戳形式展示。
+     * @var integer <p>资源过期时间，以时间戳形式展示。</p>
      */
     public $ExpireTime;
 
     /**
-     * @var array 安全组详情信息,如果未配置字段返回null
+     * @var array <p>安全组详情信息,如果未配置字段返回null</p>
      */
     public $SgList;
 
     /**
-     * @var string 子网名
+     * @var string <p>子网名</p>
      */
     public $SubnetName;
 
     /**
-     * @var string 地域名
+     * @var string <p>地域名</p>
      */
     public $RegionName;
 
     /**
-     * @var string 区域名
+     * @var string <p>区域名</p>
      */
     public $ZoneName;
 
     /**
-     * @var boolean 实例是否已经过期
+     * @var boolean <p>实例是否已经过期</p>
      */
     public $Expired;
 
     /**
-     * @var integer 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
+     * @var integer <p>为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒</p>
      */
     public $RemainSeconds;
 
     /**
-     * @var string 私有虚拟网络名称
+     * @var string <p>私有虚拟网络名称</p>
      */
     public $VpcName;
 
     /**
-     * @var string VPC的IPv4 CIDR
+     * @var string <p>VPC的IPv4 CIDR</p>
      */
     public $VpcCidrBlock;
 
     /**
-     * @var string 子网的CIDR
+     * @var string <p>子网的CIDR</p>
      */
     public $SubnetCidrBlock;
 
     /**
-     * @var array 资源所关联的标签Tag
+     * @var array <p>资源所关联的标签Tag</p>
      */
     public $Tags;
 
     /**
-     * @var integer 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * @var integer <p>资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string 厂商
+     * @var string <p>厂商</p>
      */
     public $Manufacturer;
 
     /**
-     * @var integer 0-关闭，1-开启
+     * @var integer <p>0-关闭，1-开启</p>
      */
     public $PqcFlag;
+
+    /**
+     * @var string <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+     */
+    public $DeployEnv;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -199,30 +206,31 @@ class DescribeVsmAttributesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResourceId 资源Id
-     * @param string $ResourceName 资源名称
-     * @param integer $Status 资源状态，1表示资源为正常，2表示资源处于隔离状态
-     * @param string $Vip 资源IP
-     * @param string $VpcId 资源所属Vpc
-     * @param string $SubnetId 资源所属子网
-     * @param string $Model 资源所属HSM的规格
-     * @param integer $VsmType 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
-     * @param integer $RegionId 地域Id，返回腾讯云地域代码，如广州为1，北京为8
-     * @param integer $ZoneId 区域Id，返回腾讯云每个地域的可用区代码
-     * @param integer $ExpireTime 资源过期时间，以时间戳形式展示。
-     * @param array $SgList 安全组详情信息,如果未配置字段返回null
-     * @param string $SubnetName 子网名
-     * @param string $RegionName 地域名
-     * @param string $ZoneName 区域名
-     * @param boolean $Expired 实例是否已经过期
-     * @param integer $RemainSeconds 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
-     * @param string $VpcName 私有虚拟网络名称
-     * @param string $VpcCidrBlock VPC的IPv4 CIDR
-     * @param string $SubnetCidrBlock 子网的CIDR
-     * @param array $Tags 资源所关联的标签Tag
-     * @param integer $RenewFlag 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param string $Manufacturer 厂商
-     * @param integer $PqcFlag 0-关闭，1-开启
+     * @param string $ResourceId <p>资源Id</p>
+     * @param string $ResourceName <p>资源名称</p>
+     * @param integer $Status <p>资源状态，1表示资源为正常，2表示资源处于隔离状态</p>
+     * @param string $Vip <p>资源IP</p>
+     * @param string $VpcId <p>资源所属Vpc</p>
+     * @param string $SubnetId <p>资源所属子网</p>
+     * @param string $Model <p>资源所属HSM的规格</p>
+     * @param integer $VsmType <p>资源类型，17表示EVSM，33表示GVSM，49表示SVSM</p>
+     * @param integer $RegionId <p>地域Id，返回腾讯云地域代码，如广州为1，北京为8</p>
+     * @param integer $ZoneId <p>区域Id，返回腾讯云每个地域的可用区代码</p>
+     * @param integer $ExpireTime <p>资源过期时间，以时间戳形式展示。</p>
+     * @param array $SgList <p>安全组详情信息,如果未配置字段返回null</p>
+     * @param string $SubnetName <p>子网名</p>
+     * @param string $RegionName <p>地域名</p>
+     * @param string $ZoneName <p>区域名</p>
+     * @param boolean $Expired <p>实例是否已经过期</p>
+     * @param integer $RemainSeconds <p>为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒</p>
+     * @param string $VpcName <p>私有虚拟网络名称</p>
+     * @param string $VpcCidrBlock <p>VPC的IPv4 CIDR</p>
+     * @param string $SubnetCidrBlock <p>子网的CIDR</p>
+     * @param array $Tags <p>资源所关联的标签Tag</p>
+     * @param integer $RenewFlag <p>资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+     * @param string $Manufacturer <p>厂商</p>
+     * @param integer $PqcFlag <p>0-关闭，1-开启</p>
+     * @param string $DeployEnv <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -342,6 +350,10 @@ class DescribeVsmAttributesResponse extends AbstractModel
 
         if (array_key_exists("PqcFlag",$param) and $param["PqcFlag"] !== null) {
             $this->PqcFlag = $param["PqcFlag"];
+        }
+
+        if (array_key_exists("DeployEnv",$param) and $param["DeployEnv"] !== null) {
+            $this->DeployEnv = $param["DeployEnv"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

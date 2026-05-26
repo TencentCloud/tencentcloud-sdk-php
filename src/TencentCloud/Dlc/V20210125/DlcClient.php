@@ -73,6 +73,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
 按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
  * @method Models\CreateTcIcebergTableResponse CreateTcIcebergTable(Models\CreateTcIcebergTableRequest $req) 创建TIceberg表
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
+ * @method Models\CreateUserRoleResponse CreateUserRole(Models\CreateUserRoleRequest $req) 创建用户角色
  * @method Models\CreateUserVpcConnectionResponse CreateUserVpcConnection(Models\CreateUserVpcConnectionRequest $req) 创建用户vpc连接到指定引擎网络
  * @method Models\CreateWorkGroupResponse CreateWorkGroup(Models\CreateWorkGroupRequest $req) 创建工作组
  * @method Models\DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProduct(Models\DeleteCHDFSBindingProductRequest $req) 此接口（DeleteCHDFSBindingProduct）用于删除元数据加速桶和产品绑定关系

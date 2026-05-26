@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文本全文识别片段。
  *
- * @method float getConfidence() 获取识别片段置信度。取值：0~100。
- * @method void setConfidence(float $Confidence) 设置识别片段置信度。取值：0~100。
- * @method array getAreaCoordSet() 获取识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
- * @method void setAreaCoordSet(array $AreaCoordSet) 设置识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
- * @method string getText() 获取识别文本。
- * @method void setText(string $Text) 设置识别文本。
+ * @method float getConfidence() 获取<p>识别片段置信度。取值：0~100。</p>
+ * @method void setConfidence(float $Confidence) 设置<p>识别片段置信度。取值：0~100。</p>
+ * @method array getAreaCoordSet() 获取<p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
+ * @method void setAreaCoordSet(array $AreaCoordSet) 设置<p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
+ * @method string getText() 获取<p>识别文本。</p>
+ * @method void setText(string $Text) 设置<p>识别文本。</p>
  */
 class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel
 {
     /**
-     * @var float 识别片段置信度。取值：0~100。
+     * @var float <p>识别片段置信度。取值：0~100。</p>
      */
     public $Confidence;
 
     /**
-     * @var array 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * @var array <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
      */
     public $AreaCoordSet;
 
     /**
-     * @var string 识别文本。
+     * @var string <p>识别文本。</p>
      */
     public $Text;
 
     /**
-     * @param float $Confidence 识别片段置信度。取值：0~100。
-     * @param array $AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
-     * @param string $Text 识别文本。
+     * @param float $Confidence <p>识别片段置信度。取值：0~100。</p>
+     * @param array $AreaCoordSet <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
+     * @param string $Text <p>识别文本。</p>
      */
     function __construct()
     {

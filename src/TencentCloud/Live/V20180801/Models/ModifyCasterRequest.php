@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordTaskId(string $RecordTaskId) 设置<p>录制接口返回的taskid<br>注：该接口只做字段保存，不涉及录制操作。</p>
  * @method integer getPgmAudioBitRate() 获取<p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
  * @method void setPgmAudioBitRate(integer $PgmAudioBitRate) 设置<p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
+ * @method string getPgmVcodec() 获取<p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+ * @method void setPgmVcodec(string $PgmVcodec) 设置<p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
  */
 class ModifyCasterRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class ModifyCasterRequest extends AbstractModel
     public $PgmAudioBitRate;
 
     /**
+     * @var string <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+     */
+    public $PgmVcodec;
+
+    /**
      * @param integer $CasterId <p>导播台ID</p>
      * @param string $CasterName <p>导播台名称</p>
      * @param string $Description <p>导播台的描述，最大允许长度256</p>
@@ -144,6 +151,7 @@ class ModifyCasterRequest extends AbstractModel
      * @param integer $FeeType <p>导播台的计费类型。<br>0 通用型<br>1 播单型。<br>注： 本参数暂无作用。</p>
      * @param string $RecordTaskId <p>录制接口返回的taskid<br>注：该接口只做字段保存，不涉及录制操作。</p>
      * @param integer $PgmAudioBitRate <p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
+     * @param string $PgmVcodec <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class ModifyCasterRequest extends AbstractModel
 
         if (array_key_exists("PgmAudioBitRate",$param) and $param["PgmAudioBitRate"] !== null) {
             $this->PgmAudioBitRate = $param["PgmAudioBitRate"];
+        }
+
+        if (array_key_exists("PgmVcodec",$param) and $param["PgmVcodec"] !== null) {
+            $this->PgmVcodec = $param["PgmVcodec"];
         }
     }
 }

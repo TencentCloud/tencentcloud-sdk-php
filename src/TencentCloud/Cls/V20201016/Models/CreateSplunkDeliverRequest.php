@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取<p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
  * @method void setTopicId(string $TopicId) 设置<p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
- * @method string getName() 获取<p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
- * @method void setName(string $Name) 设置<p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
+ * @method string getName() 获取<p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于256- 只能包含aA-zZ、下划线、-、0-9</p>
+ * @method void setName(string $Name) 设置<p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于256- 只能包含aA-zZ、下划线、-、0-9</p>
  * @method NetInfo getNetInfo() 获取<p>Splunk投递任务-目标配置-网络信息</p>
  * @method void setNetInfo(NetInfo $NetInfo) 设置<p>Splunk投递任务-目标配置-网络信息</p>
  * @method MetadataInfo getMetadataInfo() 获取<p>Splunk投递任务元信息</p>
@@ -53,7 +53,7 @@ class CreateSplunkDeliverRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
+     * @var string <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于256- 只能包含aA-zZ、下划线、-、0-9</p>
      */
     public $Name;
 
@@ -109,7 +109,7 @@ class CreateSplunkDeliverRequest extends AbstractModel
 
     /**
      * @param string $TopicId <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
-     * @param string $Name <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
+     * @param string $Name <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于256- 只能包含aA-zZ、下划线、-、0-9</p>
      * @param NetInfo $NetInfo <p>Splunk投递任务-目标配置-网络信息</p>
      * @param MetadataInfo $MetadataInfo <p>Splunk投递任务元信息</p>
      * @param integer $HasServiceLog <p>是否开启服务日志 1:关闭；2:开启 ;默认开启</p>

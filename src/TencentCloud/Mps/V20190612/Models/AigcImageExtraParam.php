@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用于AIGC创作图片时用到的扩展参数信息。
  *
- * @method string getAspectRatio() 获取<p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
- * @method void setAspectRatio(string $AspectRatio) 设置<p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
+ * @method string getAspectRatio() 获取<p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>Kling 2.1支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling 3.0支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling 3.0-Omni支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling O1支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Vidu q2支持：16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li><li>MJ v7的宽高比需要在 prompt 中进行指定。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
+ * @method void setAspectRatio(string $AspectRatio) 设置<p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>Kling 2.1支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling 3.0支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling 3.0-Omni支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling O1支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Vidu q2支持：16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li><li>MJ v7的宽高比需要在 prompt 中进行指定。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
  * @method string getResolution() 获取<p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
  * @method void setResolution(string $Resolution) 设置<p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
  * @method integer getLogoAdd() 获取<p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class AigcImageExtraParam extends AbstractModel
 {
     /**
-     * @var string <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
+     * @var string <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>Kling 2.1支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling 3.0支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling 3.0-Omni支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling O1支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Vidu q2支持：16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li><li>MJ v7的宽高比需要在 prompt 中进行指定。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
      */
     public $AspectRatio;
 
@@ -52,7 +52,7 @@ class AigcImageExtraParam extends AbstractModel
     public $OutputFormat;
 
     /**
-     * @param string $AspectRatio <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
+     * @param string $AspectRatio <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>Kling 2.1支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling 3.0支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling 3.0-Omni支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Kling O1支持：16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li><li>Vidu q2支持：16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li><li>MJ v7的宽高比需要在 prompt 中进行指定。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
      * @param string $Resolution <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
      * @param integer $LogoAdd <p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
      * @param string $OutputFormat <p>指定图片的输出格式，支持jpeg, png。</p>

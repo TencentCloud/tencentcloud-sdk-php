@@ -70,6 +70,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\GetAccountSummaryResponse GetAccountSummary(Models\GetAccountSummaryRequest $req) 查询账户摘要
  * @method Models\GetCustomMFATokenInfoResponse GetCustomMFATokenInfo(Models\GetCustomMFATokenInfoRequest $req) 获取自定义多因子Token关联信息
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) 查询用户组详情
+ * @method Models\GetPasswordRulesResponse GetPasswordRules(Models\GetPasswordRulesRequest $req) 获取CAM密码设置规则
  * @method Models\GetPolicyResponse GetPolicy(Models\GetPolicyRequest $req) 本接口（GetPolicy）可用于查询查看策略详情。
  * @method Models\GetPolicyVersionResponse GetPolicyVersion(Models\GetPolicyVersionRequest $req) 该接口（GetPolicyVersion）用于查询策略版本详情
  * @method Models\GetRoleResponse GetRole(Models\GetRoleRequest $req) 本接口（GetRole）用于获取指定角色的详细信息。
@@ -108,6 +109,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) 本接口（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文档。
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 更新用户组
  * @method Models\UpdateOIDCConfigResponse UpdateOIDCConfig(Models\UpdateOIDCConfigRequest $req) 修改角色OIDC配置
+ * @method Models\UpdatePasswordRulesResponse UpdatePasswordRules(Models\UpdatePasswordRulesRequest $req) 更新CAM密码设置规则
  * @method Models\UpdatePolicyResponse UpdatePolicy(Models\UpdatePolicyRequest $req) 本接口（UpdatePolicy ）可用于更新策略。
 如果已存在策略版本，本接口会直接更新策略的默认版本，不会创建新版本，如果不存在任何策略版本，则直接创建一个默认版本。
  * @method Models\UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(Models\UpdateRoleConsoleLoginRequest $req) 本接口（UpdateRoleConsoleLogin）用于修改角色是否可登录。

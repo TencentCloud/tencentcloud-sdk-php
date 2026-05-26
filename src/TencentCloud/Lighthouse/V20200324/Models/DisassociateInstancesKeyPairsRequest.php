@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyIds(array $KeyIds) 设置密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
  * @method array getInstanceIds() 获取实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
+ * @method string getDisassociateType() 获取解绑定类型。可选值：
+ONLINE - 在线解绑定，不需要关机。
+OFFLINE - 离线解绑定，需要关机。
+ * @method void setDisassociateType(string $DisassociateType) 设置解绑定类型。可选值：
+ONLINE - 在线解绑定，不需要关机。
+OFFLINE - 离线解绑定，需要关机。
+ * @method string getUsername() 获取解绑定的用户名。当 DisassociateType 为 OFFLINE 时，不支持该参数。
+ * @method void setUsername(string $Username) 设置解绑定的用户名。当 DisassociateType 为 OFFLINE 时，不支持该参数。
  */
 class DisassociateInstancesKeyPairsRequest extends AbstractModel
 {
@@ -38,8 +46,24 @@ class DisassociateInstancesKeyPairsRequest extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var string 解绑定类型。可选值：
+ONLINE - 在线解绑定，不需要关机。
+OFFLINE - 离线解绑定，需要关机。
+     */
+    public $DisassociateType;
+
+    /**
+     * @var string 解绑定的用户名。当 DisassociateType 为 OFFLINE 时，不支持该参数。
+     */
+    public $Username;
+
+    /**
      * @param array $KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
      * @param array $InstanceIds 实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
+     * @param string $DisassociateType 解绑定类型。可选值：
+ONLINE - 在线解绑定，不需要关机。
+OFFLINE - 离线解绑定，需要关机。
+     * @param string $Username 解绑定的用户名。当 DisassociateType 为 OFFLINE 时，不支持该参数。
      */
     function __construct()
     {
@@ -60,6 +84,14 @@ class DisassociateInstancesKeyPairsRequest extends AbstractModel
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("DisassociateType",$param) and $param["DisassociateType"] !== null) {
+            $this->DisassociateType = $param["DisassociateType"];
+        }
+
+        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
+            $this->Username = $param["Username"];
         }
     }
 }

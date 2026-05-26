@@ -128,6 +128,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribePrometheusAgentsResponse DescribePrometheusAgents(Models\DescribePrometheusAgentsRequest $req) 列出 Prometheus CVM Agent
  * @method Models\DescribePrometheusAlertGroupsResponse DescribePrometheusAlertGroups(Models\DescribePrometheusAlertGroupsRequest $req) 查询给定prometheus下的告警分组
  * @method Models\DescribePrometheusAlertPolicyResponse DescribePrometheusAlertPolicy(Models\DescribePrometheusAlertPolicyRequest $req) 获取2.0实例告警策略列表
+ * @method Models\DescribePrometheusAlertmanagerConfigResponse DescribePrometheusAlertmanagerConfig(Models\DescribePrometheusAlertmanagerConfigRequest $req) 获取 Prometheus Alertmanager 配置
  * @method Models\DescribePrometheusClusterAgentsResponse DescribePrometheusClusterAgents(Models\DescribePrometheusClusterAgentsRequest $req) 获取TMP实例关联集群列表
  * @method Models\DescribePrometheusConfigResponse DescribePrometheusConfig(Models\DescribePrometheusConfigRequest $req) 拉取Prometheus配置
  * @method Models\DescribePrometheusGlobalConfigResponse DescribePrometheusGlobalConfig(Models\DescribePrometheusGlobalConfigRequest $req) 获得实例级别抓取配置
@@ -206,7 +207,25 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\ModifyPrometheusRecordRuleYamlResponse ModifyPrometheusRecordRuleYaml(Models\ModifyPrometheusRecordRuleYamlRequest $req) 通过yaml的方式修改Prometheus预聚合规则
  * @method Models\ModifyPrometheusTempResponse ModifyPrometheusTemp(Models\ModifyPrometheusTempRequest $req) 修改模板内容
  * @method Models\ModifyRemoteURLsResponse ModifyRemoteURLs(Models\ModifyRemoteURLsRequest $req) 修改多写配置
+ * @method Models\ReplacePrometheusAlertmanagerConfigResponse ReplacePrometheusAlertmanagerConfig(Models\ReplacePrometheusAlertmanagerConfigRequest $req) 替换 Prometheus Alertmanager 配置
  * @method Models\ResumeGrafanaInstanceResponse ResumeGrafanaInstance(Models\ResumeGrafanaInstanceRequest $req) 本接口（ResumeGrafanaInstance）用于 Grafana 包年包月实例的停服续费，调用后按原版本续费一个月。仍在运行中的实例无法使用该接口进行续费。
+ * @method Models\RoutePrometheusDynamicAPIResponse RoutePrometheusDynamicAPI(Models\RoutePrometheusDynamicAPIRequest $req) Prometheus 内部动态 api 代理，支持以云api形式访问prometheus原生api
+支持以下api:
+ 
+>! 读接口建议使用ExportPrometheusReadOnlyDynamicAPI调用，支持更长的查询时延与响应大小。同时便于权限管理
+
+| path | method | 用途 |
+| - | - | - |
+| /api/v1/query | GET, POST | 点查询 |
+| /api/v1/query_range | GET, POST |  范围查询 |
+| /api/v1/series | GET, POST | series列表查询 |
+| /api/v1/labels | GET, POST | label名查询 |
+| /api/v1/label/{label_name}/values | GET | label值查询 |
+| /api/v1/rules | GET | 告警，预聚合规则查询 |
+| /api/v1/user_limits | GET | prometheus实例限制查询 |
+| /alertmanager/api/v2/alerts/groups | GET | 当前告警信息查询 | 
+| /alertmanager/api/v2/silences | GET, POST | 告警静默查询/创建/修改 |
+| /alertmanager/api/v2/silence/{id} | GET, DELETE | 告警静默详情查询/删除 |
  * @method Models\RunPrometheusInstanceResponse RunPrometheusInstance(Models\RunPrometheusInstanceRequest $req) 初始化TMP实例，开启集成中心时调用
  * @method Models\SetDefaultAlarmPolicyResponse SetDefaultAlarmPolicy(Models\SetDefaultAlarmPolicyRequest $req) 设置一个策略为该告警策略类型、该项目的默认告警策略。
 同一项目下相同的告警策略类型，就会被设置为非默认。

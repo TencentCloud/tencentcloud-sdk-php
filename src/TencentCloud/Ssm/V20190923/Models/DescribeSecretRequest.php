@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecret请求参数结构体
  *
- * @method string getSecretName() 获取指定需要获取凭据详细信息的凭据名称。
- * @method void setSecretName(string $SecretName) 设置指定需要获取凭据详细信息的凭据名称。
+ * @method string getSecretName() 获取<p>指定需要获取凭据详细信息的凭据名称。</p>
+ * @method void setSecretName(string $SecretName) 设置<p>指定需要获取凭据详细信息的凭据名称。</p>
  */
 class DescribeSecretRequest extends AbstractModel
 {
     /**
-     * @var string 指定需要获取凭据详细信息的凭据名称。
+     * @var string <p>指定需要获取凭据详细信息的凭据名称。</p>
      */
     public $SecretName;
 
     /**
-     * @param string $SecretName 指定需要获取凭据详细信息的凭据名称。
+     * @param string $SecretName <p>指定需要获取凭据详细信息的凭据名称。</p>
      */
     function __construct()
     {

@@ -24,16 +24,30 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
 
 /**
  * @method Models\CancelIsolateDBInstancesResponse CancelIsolateDBInstances(Models\CancelIsolateDBInstancesRequest $req) 本接口（CancelIsolateDBInstances）提供批量解除隔离实例功能
+ * @method Models\CreateCloneInstanceResponse CreateCloneInstance(Models\CreateCloneInstanceRequest $req) 本接口（CreateCloneInstance）提供创建克隆实例功能
+ * @method Models\CreateDBInstancesResponse CreateDBInstances(Models\CreateDBInstancesRequest $req) 本接口（CreateDBInstances）提供批量创建实例功能
  * @method Models\CreateDBSBackupResponse CreateDBSBackup(Models\CreateDBSBackupRequest $req) 创建实例手工备份  CreateDBSBackup
  * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) 删除实例手工备份 DeleteDBSBackupSets
+ * @method Models\DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(Models\DescribeDBInstanceDetailRequest $req) 本接口（DescribeDBInstanceDetail）提供查询实例详情功能
+ * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口（DescribeDBInstances）提供查询实例列表功能
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) 本接口（DescribeDBParameters）用于获取实例的当前参数设置。
  * @method Models\DescribeDBSArchiveLogsResponse DescribeDBSArchiveLogs(Models\DescribeDBSArchiveLogsRequest $req) 查询实例归档日志列表 DescribeDBSArchiveLogs
  * @method Models\DescribeDBSAvailableRecoveryTimeResponse DescribeDBSAvailableRecoveryTime(Models\DescribeDBSAvailableRecoveryTimeRequest $req) 获取可恢复时间 DescribeDBSAvailableRecoveryTime
+ * @method Models\DescribeDBSBackupPolicyResponse DescribeDBSBackupPolicy(Models\DescribeDBSBackupPolicyRequest $req) 查询实例备份策略 DescribeDBSBackupPolicy
+ * @method Models\DescribeDBSBackupSetsResponse DescribeDBSBackupSets(Models\DescribeDBSBackupSetsRequest $req) 查询实例备份集信息 DescribeDBSBackupSets
+ * @method Models\DescribeDBSBackupStatisticsResponse DescribeDBSBackupStatistics(Models\DescribeDBSBackupStatisticsRequest $req) 查询实例备份空间概览 DescribeDBSBackupStatistics
+ * @method Models\DescribeDBSBackupStatisticsDetailResponse DescribeDBSBackupStatisticsDetail(Models\DescribeDBSBackupStatisticsDetailRequest $req) 查询备份集统计详情 DescribeDBSBackupStatisticsDetail
  * @method Models\DescribeDBSCloneInstancesResponse DescribeDBSCloneInstances(Models\DescribeDBSCloneInstancesRequest $req) 查询实例克隆列表 DescribeDBSCloneInstances
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
  * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) 本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
+ * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
  * @method Models\DescribeFlowResponse DescribeFlow(Models\DescribeFlowRequest $req) 本接口（DescribeFlow）用于查询异步任务流程状态
+ * @method Models\DescribeSaleInfoResponse DescribeSaleInfo(Models\DescribeSaleInfoRequest $req) 本接口（DescribeSaleInfo）提供查询可用售卖地域功能
+ * @method Models\DescribeSpecsResponse DescribeSpecs(Models\DescribeSpecsRequest $req) 本接口（DescribeSpecs）提供查询售卖规格功能
+ * @method Models\DescribeUserPrivilegesResponse DescribeUserPrivileges(Models\DescribeUserPrivilegesRequest $req) 本接口（DescribeUserPrivileges）提供查询用户的权限功能
+ * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) 本接口（DescribeUsers）提供查询用户列表功能
  * @method Models\DestroyInstancesResponse DestroyInstances(Models\DestroyInstancesRequest $req) 本接口（DestroyInstances）提供批量销毁实例功能
+ * @method Models\ExpandInstanceResponse ExpandInstance(Models\ExpandInstanceRequest $req) 本接口（ExpandInstance）提供横向扩容实例功能
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) 本接口（IsolateDBInstance）提供批量隔离实例功能
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) 本接口（ModifyAutoRenewFlag）用于修改自动续费标志
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组
@@ -41,6 +55,9 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\ModifyDBSBackupPolicyResponse ModifyDBSBackupPolicy(Models\ModifyDBSBackupPolicyRequest $req) 修改实例备份策略 ModifyDBSBackupPolicy
  * @method Models\ModifyDBSBackupSetCommentResponse ModifyDBSBackupSetComment(Models\ModifyDBSBackupSetCommentRequest $req) 修改实例备份备注 ModifyDBSBackupSetComment
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 本接口（ModifyInstanceName）提供修改实例名称功能
+ * @method Models\ModifyUserPrivilegesResponse ModifyUserPrivileges(Models\ModifyUserPrivilegesRequest $req) 本接口(ModifyPrivileges)修改用户权限
+ * @method Models\RestartDBInstancesResponse RestartDBInstances(Models\RestartDBInstancesRequest $req) 本接口（RestartDBInstances）用于重启数据库实例
+ * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 本接口（UpgradeInstance）提供纵向扩容实例功能
  */
 
 class TdmysqlClient extends AbstractClient

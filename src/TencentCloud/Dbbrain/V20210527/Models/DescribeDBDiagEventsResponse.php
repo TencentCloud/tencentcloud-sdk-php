@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBDiagEvents返回参数结构体
  *
- * @method integer getTotalCount() 获取诊断事件的总数目。
- * @method void setTotalCount(integer $TotalCount) 设置诊断事件的总数目。
- * @method array getItems() 获取诊断事件的列表。
- * @method void setItems(array $Items) 设置诊断事件的列表。
+ * @method integer getTotalCount() 获取<p>诊断事件的总数目。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>诊断事件的总数目。</p>
+ * @method array getItems() 获取<p>诊断事件的列表。</p>
+ * @method void setItems(array $Items) 设置<p>诊断事件的列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBDiagEventsResponse extends AbstractModel
 {
     /**
-     * @var integer 诊断事件的总数目。
+     * @var integer <p>诊断事件的总数目。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 诊断事件的列表。
+     * @var array <p>诊断事件的列表。</p>
      */
     public $Items;
 
@@ -45,8 +45,8 @@ class DescribeDBDiagEventsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 诊断事件的总数目。
-     * @param array $Items 诊断事件的列表。
+     * @param integer $TotalCount <p>诊断事件的总数目。</p>
+     * @param array $Items <p>诊断事件的列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

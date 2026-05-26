@@ -20,194 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 导播台信息
  *
- * @method integer getCasterId() 获取导播台ID
- * @method void setCasterId(integer $CasterId) 设置导播台ID
- * @method string getCasterName() 获取导播台名称
- * @method void setCasterName(string $CasterName) 设置导播台名称
- * @method integer getStartLiveTime() 获取导播台上一次启动pgm的时间，值为unix时间戳。
- * @method void setStartLiveTime(integer $StartLiveTime) 设置导播台上一次启动pgm的时间，值为unix时间戳。
- * @method string getDescription() 获取导播台的描述
- * @method void setDescription(string $Description) 设置导播台的描述
- * @method integer getCreateTime() 获取导播台创建时间，值为unix时间戳。
- * @method void setCreateTime(integer $CreateTime) 设置导播台创建时间，值为unix时间戳。
- * @method integer getStatus() 获取导播台状态 
-0：停止状态，无预监，无主监
-1：无预监，有主监
-2：有预监，无主监
-3：有预监，有主监
- * @method void setStatus(integer $Status) 设置导播台状态 
-0：停止状态，无预监，无主监
-1：无预监，有主监
-2：有预监，无主监
-3：有预监，有主监
- * @method integer getExpireTime() 获取导播台的过期时间戳。值为-1或unix时间戳。 
-默认值为-1。 当值为-1时，表示该导播台永不过期。 
-当值为正常unix时间戳时，导播台将在该时间过期。 
-导播台过期后，预监与主监画面将自动停止，转推自动停止。 
-点播、直播url将停止转拉，推流url需自行停止推流。
- * @method void setExpireTime(integer $ExpireTime) 设置导播台的过期时间戳。值为-1或unix时间戳。 
-默认值为-1。 当值为-1时，表示该导播台永不过期。 
-当值为正常unix时间戳时，导播台将在该时间过期。 
-导播台过期后，预监与主监画面将自动停止，转推自动停止。 
-点播、直播url将停止转拉，推流url需自行停止推流。
- * @method integer getDelayTime() 获取导播台延时播放时间，单位为秒。 
- * @method void setDelayTime(integer $DelayTime) 设置导播台延时播放时间，单位为秒。 
- * @method integer getPgmWidth() 获取导播台主监输出的宽度，单位为像素。
- * @method void setPgmWidth(integer $PgmWidth) 设置导播台主监输出的宽度，单位为像素。
- * @method integer getPgmHeight() 获取导播台主监输出的高度，单位为像素。
- * @method void setPgmHeight(integer $PgmHeight) 设置导播台主监输出的高度，单位为像素。
- * @method integer getPgmFps() 获取导播台主监输出的帧率。
- * @method void setPgmFps(integer $PgmFps) 设置导播台主监输出的帧率。
- * @method integer getPgmBitRate() 获取导播台主监输出的码率，单位为kbps
- * @method void setPgmBitRate(integer $PgmBitRate) 设置导播台主监输出的码率，单位为kbps
- * @method integer getPgmAudioBitRate() 获取导播台主监输出的音频码率，单位为kbps。
- * @method void setPgmAudioBitRate(integer $PgmAudioBitRate) 设置导播台主监输出的音频码率，单位为kbps。
- * @method integer getFeeType() 获取导播台的计费类型。 
-0 通用型 1 播单型。
-注： 本参数暂无作用。
- * @method void setFeeType(integer $FeeType) 设置导播台的计费类型。 
-0 通用型 1 播单型。
-注： 本参数暂无作用。
- * @method integer getRecordTemplateId() 获取录制模板id。
- * @method void setRecordTemplateId(integer $RecordTemplateId) 设置录制模板id。
- * @method integer getRecordStatus() 获取录制状态。 
-0：未录制 
-1：录制中
- * @method void setRecordStatus(integer $RecordStatus) 设置录制状态。 
-0：未录制 
-1：录制中
- * @method string getRecordTaskId() 获取录制接口返回的taskid
- * @method void setRecordTaskId(string $RecordTaskId) 设置录制接口返回的taskid
+ * @method integer getCasterId() 获取<p>导播台ID</p>
+ * @method void setCasterId(integer $CasterId) 设置<p>导播台ID</p>
+ * @method string getCasterName() 获取<p>导播台名称</p>
+ * @method void setCasterName(string $CasterName) 设置<p>导播台名称</p>
+ * @method integer getStartLiveTime() 获取<p>导播台上一次启动pgm的时间，值为unix时间戳。</p>
+ * @method void setStartLiveTime(integer $StartLiveTime) 设置<p>导播台上一次启动pgm的时间，值为unix时间戳。</p>
+ * @method string getDescription() 获取<p>导播台的描述</p>
+ * @method void setDescription(string $Description) 设置<p>导播台的描述</p>
+ * @method integer getCreateTime() 获取<p>导播台创建时间，值为unix时间戳。</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>导播台创建时间，值为unix时间戳。</p>
+ * @method integer getStatus() 获取<p>导播台状态<br>0：停止状态，无预监，无主监<br>1：无预监，有主监<br>2：有预监，无主监<br>3：有预监，有主监</p>
+ * @method void setStatus(integer $Status) 设置<p>导播台状态<br>0：停止状态，无预监，无主监<br>1：无预监，有主监<br>2：有预监，无主监<br>3：有预监，有主监</p>
+ * @method integer getExpireTime() 获取<p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。 当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。 当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
+ * @method integer getDelayTime() 获取<p>导播台延时播放时间，单位为秒。</p>
+ * @method void setDelayTime(integer $DelayTime) 设置<p>导播台延时播放时间，单位为秒。</p>
+ * @method integer getPgmWidth() 获取<p>导播台主监输出的宽度，单位为像素。</p>
+ * @method void setPgmWidth(integer $PgmWidth) 设置<p>导播台主监输出的宽度，单位为像素。</p>
+ * @method integer getPgmHeight() 获取<p>导播台主监输出的高度，单位为像素。</p>
+ * @method void setPgmHeight(integer $PgmHeight) 设置<p>导播台主监输出的高度，单位为像素。</p>
+ * @method integer getPgmFps() 获取<p>导播台主监输出的帧率。</p>
+ * @method void setPgmFps(integer $PgmFps) 设置<p>导播台主监输出的帧率。</p>
+ * @method integer getPgmBitRate() 获取<p>导播台主监输出的码率，单位为kbps</p>
+ * @method void setPgmBitRate(integer $PgmBitRate) 设置<p>导播台主监输出的码率，单位为kbps</p>
+ * @method integer getPgmAudioBitRate() 获取<p>导播台主监输出的音频码率，单位为kbps。</p>
+ * @method void setPgmAudioBitRate(integer $PgmAudioBitRate) 设置<p>导播台主监输出的音频码率，单位为kbps。</p>
+ * @method integer getFeeType() 获取<p>导播台的计费类型。<br>0 通用型 1 播单型。<br>注： 本参数暂无作用。</p>
+ * @method void setFeeType(integer $FeeType) 设置<p>导播台的计费类型。<br>0 通用型 1 播单型。<br>注： 本参数暂无作用。</p>
+ * @method integer getRecordTemplateId() 获取<p>录制模板id。</p>
+ * @method void setRecordTemplateId(integer $RecordTemplateId) 设置<p>录制模板id。</p>
+ * @method integer getRecordStatus() 获取<p>录制状态。<br>0：未录制<br>1：录制中</p>
+ * @method void setRecordStatus(integer $RecordStatus) 设置<p>录制状态。<br>0：未录制<br>1：录制中</p>
+ * @method string getRecordTaskId() 获取<p>录制接口返回的taskid</p>
+ * @method void setRecordTaskId(string $RecordTaskId) 设置<p>录制接口返回的taskid</p>
+ * @method string getPgmVcodec() 获取<p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+ * @method void setPgmVcodec(string $PgmVcodec) 设置<p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
  */
 class CasterInfo extends AbstractModel
 {
     /**
-     * @var integer 导播台ID
+     * @var integer <p>导播台ID</p>
      */
     public $CasterId;
 
     /**
-     * @var string 导播台名称
+     * @var string <p>导播台名称</p>
      */
     public $CasterName;
 
     /**
-     * @var integer 导播台上一次启动pgm的时间，值为unix时间戳。
+     * @var integer <p>导播台上一次启动pgm的时间，值为unix时间戳。</p>
      */
     public $StartLiveTime;
 
     /**
-     * @var string 导播台的描述
+     * @var string <p>导播台的描述</p>
      */
     public $Description;
 
     /**
-     * @var integer 导播台创建时间，值为unix时间戳。
+     * @var integer <p>导播台创建时间，值为unix时间戳。</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 导播台状态 
-0：停止状态，无预监，无主监
-1：无预监，有主监
-2：有预监，无主监
-3：有预监，有主监
+     * @var integer <p>导播台状态<br>0：停止状态，无预监，无主监<br>1：无预监，有主监<br>2：有预监，无主监<br>3：有预监，有主监</p>
      */
     public $Status;
 
     /**
-     * @var integer 导播台的过期时间戳。值为-1或unix时间戳。 
-默认值为-1。 当值为-1时，表示该导播台永不过期。 
-当值为正常unix时间戳时，导播台将在该时间过期。 
-导播台过期后，预监与主监画面将自动停止，转推自动停止。 
-点播、直播url将停止转拉，推流url需自行停止推流。
+     * @var integer <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。 当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer 导播台延时播放时间，单位为秒。 
+     * @var integer <p>导播台延时播放时间，单位为秒。</p>
      */
     public $DelayTime;
 
     /**
-     * @var integer 导播台主监输出的宽度，单位为像素。
+     * @var integer <p>导播台主监输出的宽度，单位为像素。</p>
      */
     public $PgmWidth;
 
     /**
-     * @var integer 导播台主监输出的高度，单位为像素。
+     * @var integer <p>导播台主监输出的高度，单位为像素。</p>
      */
     public $PgmHeight;
 
     /**
-     * @var integer 导播台主监输出的帧率。
+     * @var integer <p>导播台主监输出的帧率。</p>
      */
     public $PgmFps;
 
     /**
-     * @var integer 导播台主监输出的码率，单位为kbps
+     * @var integer <p>导播台主监输出的码率，单位为kbps</p>
      */
     public $PgmBitRate;
 
     /**
-     * @var integer 导播台主监输出的音频码率，单位为kbps。
+     * @var integer <p>导播台主监输出的音频码率，单位为kbps。</p>
      */
     public $PgmAudioBitRate;
 
     /**
-     * @var integer 导播台的计费类型。 
-0 通用型 1 播单型。
-注： 本参数暂无作用。
+     * @var integer <p>导播台的计费类型。<br>0 通用型 1 播单型。<br>注： 本参数暂无作用。</p>
      */
     public $FeeType;
 
     /**
-     * @var integer 录制模板id。
+     * @var integer <p>录制模板id。</p>
      */
     public $RecordTemplateId;
 
     /**
-     * @var integer 录制状态。 
-0：未录制 
-1：录制中
+     * @var integer <p>录制状态。<br>0：未录制<br>1：录制中</p>
      */
     public $RecordStatus;
 
     /**
-     * @var string 录制接口返回的taskid
+     * @var string <p>录制接口返回的taskid</p>
      */
     public $RecordTaskId;
 
     /**
-     * @param integer $CasterId 导播台ID
-     * @param string $CasterName 导播台名称
-     * @param integer $StartLiveTime 导播台上一次启动pgm的时间，值为unix时间戳。
-     * @param string $Description 导播台的描述
-     * @param integer $CreateTime 导播台创建时间，值为unix时间戳。
-     * @param integer $Status 导播台状态 
-0：停止状态，无预监，无主监
-1：无预监，有主监
-2：有预监，无主监
-3：有预监，有主监
-     * @param integer $ExpireTime 导播台的过期时间戳。值为-1或unix时间戳。 
-默认值为-1。 当值为-1时，表示该导播台永不过期。 
-当值为正常unix时间戳时，导播台将在该时间过期。 
-导播台过期后，预监与主监画面将自动停止，转推自动停止。 
-点播、直播url将停止转拉，推流url需自行停止推流。
-     * @param integer $DelayTime 导播台延时播放时间，单位为秒。 
-     * @param integer $PgmWidth 导播台主监输出的宽度，单位为像素。
-     * @param integer $PgmHeight 导播台主监输出的高度，单位为像素。
-     * @param integer $PgmFps 导播台主监输出的帧率。
-     * @param integer $PgmBitRate 导播台主监输出的码率，单位为kbps
-     * @param integer $PgmAudioBitRate 导播台主监输出的音频码率，单位为kbps。
-     * @param integer $FeeType 导播台的计费类型。 
-0 通用型 1 播单型。
-注： 本参数暂无作用。
-     * @param integer $RecordTemplateId 录制模板id。
-     * @param integer $RecordStatus 录制状态。 
-0：未录制 
-1：录制中
-     * @param string $RecordTaskId 录制接口返回的taskid
+     * @var string <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+     */
+    public $PgmVcodec;
+
+    /**
+     * @param integer $CasterId <p>导播台ID</p>
+     * @param string $CasterName <p>导播台名称</p>
+     * @param integer $StartLiveTime <p>导播台上一次启动pgm的时间，值为unix时间戳。</p>
+     * @param string $Description <p>导播台的描述</p>
+     * @param integer $CreateTime <p>导播台创建时间，值为unix时间戳。</p>
+     * @param integer $Status <p>导播台状态<br>0：停止状态，无预监，无主监<br>1：无预监，有主监<br>2：有预监，无主监<br>3：有预监，有主监</p>
+     * @param integer $ExpireTime <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。 当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
+     * @param integer $DelayTime <p>导播台延时播放时间，单位为秒。</p>
+     * @param integer $PgmWidth <p>导播台主监输出的宽度，单位为像素。</p>
+     * @param integer $PgmHeight <p>导播台主监输出的高度，单位为像素。</p>
+     * @param integer $PgmFps <p>导播台主监输出的帧率。</p>
+     * @param integer $PgmBitRate <p>导播台主监输出的码率，单位为kbps</p>
+     * @param integer $PgmAudioBitRate <p>导播台主监输出的音频码率，单位为kbps。</p>
+     * @param integer $FeeType <p>导播台的计费类型。<br>0 通用型 1 播单型。<br>注： 本参数暂无作用。</p>
+     * @param integer $RecordTemplateId <p>录制模板id。</p>
+     * @param integer $RecordStatus <p>录制状态。<br>0：未录制<br>1：录制中</p>
+     * @param string $RecordTaskId <p>录制接口返回的taskid</p>
+     * @param string $PgmVcodec <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
      */
     function __construct()
     {
@@ -288,6 +248,10 @@ class CasterInfo extends AbstractModel
 
         if (array_key_exists("RecordTaskId",$param) and $param["RecordTaskId"] !== null) {
             $this->RecordTaskId = $param["RecordTaskId"];
+        }
+
+        if (array_key_exists("PgmVcodec",$param) and $param["PgmVcodec"] !== null) {
+            $this->PgmVcodec = $param["PgmVcodec"];
         }
     }
 }

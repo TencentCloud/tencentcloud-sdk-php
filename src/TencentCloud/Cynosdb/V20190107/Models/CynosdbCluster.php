@@ -20,422 +20,378 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群信息
  *
- * @method string getStatus() 获取集群状态， 可选值如下:
-creating: 创建中
-running:运行中
-isolating:隔离中
-isolated:已隔离
-activating:解隔离中
-offlining:下线中
-offlined:已下线
-deleting:删除中
-deleted:已删除
- * @method void setStatus(string $Status) 设置集群状态， 可选值如下:
-creating: 创建中
-running:运行中
-isolating:隔离中
-isolated:已隔离
-activating:解隔离中
-offlining:下线中
-offlined:已下线
-deleting:删除中
-deleted:已删除
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getDbVersion() 获取数据库版本
- * @method void setDbVersion(string $DbVersion) 设置数据库版本
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getInstanceNum() 获取实例数
- * @method void setInstanceNum(integer $InstanceNum) 设置实例数
- * @method string getUin() 获取用户uin
- * @method void setUin(string $Uin) 设置用户uin
- * @method string getDbType() 获取引擎类型
- * @method void setDbType(string $DbType) 设置引擎类型
- * @method integer getAppId() 获取用户appid
- * @method void setAppId(integer $AppId) 设置用户appid
- * @method string getStatusDesc() 获取集群状态描述
- * @method void setStatusDesc(string $StatusDesc) 设置集群状态描述
- * @method string getCreateTime() 获取集群创建时间
- * @method void setCreateTime(string $CreateTime) 设置集群创建时间
- * @method integer getPayMode() 获取付费模式。0-按量计费，1-包年包月
- * @method void setPayMode(integer $PayMode) 设置付费模式。0-按量计费，1-包年包月
- * @method string getPeriodEndTime() 获取截止时间
- * @method void setPeriodEndTime(string $PeriodEndTime) 设置截止时间
- * @method string getVip() 获取集群读写vip
- * @method void setVip(string $Vip) 设置集群读写vip
- * @method integer getVport() 获取集群读写vport
- * @method void setVport(integer $Vport) 设置集群读写vport
- * @method integer getProjectID() 获取项目id
- * @method void setProjectID(integer $ProjectID) 设置项目id
- * @method string getVpcId() 获取私有网络ID
- * @method void setVpcId(string $VpcId) 设置私有网络ID
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method string getCynosVersion() 获取cynos内核版本
- * @method void setCynosVersion(string $CynosVersion) 设置cynos内核版本
- * @method string getCynosVersionTag() 获取cynos版本标签
- * @method void setCynosVersionTag(string $CynosVersionTag) 设置cynos版本标签
- * @method integer getStorageLimit() 获取存储容量
- * @method void setStorageLimit(integer $StorageLimit) 设置存储容量
- * @method integer getRenewFlag() 获取续费标志
- * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
- * @method string getProcessingTask() 获取正在处理的任务
- * @method void setProcessingTask(string $ProcessingTask) 设置正在处理的任务
- * @method array getTasks() 获取集群的任务数组
- * @method void setTasks(array $Tasks) 设置集群的任务数组
- * @method array getResourceTags() 获取集群绑定的tag数组
- * @method void setResourceTags(array $ResourceTags) 设置集群绑定的tag数组
- * @method string getDbMode() 获取Db类型(NORMAL, SERVERLESS)
- * @method void setDbMode(string $DbMode) 设置Db类型(NORMAL, SERVERLESS)
- * @method string getServerlessStatus() 获取当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-pause
- * @method void setServerlessStatus(string $ServerlessStatus) 设置当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-pause
- * @method integer getStorage() 获取集群预付费存储值大小
- * @method void setStorage(integer $Storage) 设置集群预付费存储值大小
- * @method string getStorageId() 获取集群存储为预付费时的存储ID，用于预付费存储变配
- * @method void setStorageId(string $StorageId) 设置集群存储为预付费时的存储ID，用于预付费存储变配
- * @method integer getStoragePayMode() 获取集群存储付费模式。0-按量计费，1-包年包月
- * @method void setStoragePayMode(integer $StoragePayMode) 设置集群存储付费模式。0-按量计费，1-包年包月
- * @method integer getMinStorageSize() 获取集群计算规格对应的最小存储值
- * @method void setMinStorageSize(integer $MinStorageSize) 设置集群计算规格对应的最小存储值
- * @method integer getMaxStorageSize() 获取集群计算规格对应的最大存储值
- * @method void setMaxStorageSize(integer $MaxStorageSize) 设置集群计算规格对应的最大存储值
- * @method array getNetAddrs() 获取集群网络信息
- * @method void setNetAddrs(array $NetAddrs) 设置集群网络信息
- * @method string getPhysicalZone() 获取物理可用区
- * @method void setPhysicalZone(string $PhysicalZone) 设置物理可用区
- * @method string getMasterZone() 获取主可用区
- * @method void setMasterZone(string $MasterZone) 设置主可用区
- * @method string getHasSlaveZone() 获取是否有从可用区
- * @method void setHasSlaveZone(string $HasSlaveZone) 设置是否有从可用区
- * @method array getSlaveZones() 获取从可用区
- * @method void setSlaveZones(array $SlaveZones) 设置从可用区
- * @method string getBusinessType() 获取商业类型
- * @method void setBusinessType(string $BusinessType) 设置商业类型
- * @method string getIsFreeze() 获取是否冻结
- * @method void setIsFreeze(string $IsFreeze) 设置是否冻结
- * @method string getOrderSource() 获取订单来源
- * @method void setOrderSource(string $OrderSource) 设置订单来源
- * @method Ability getAbility() 获取能力
- * @method void setAbility(Ability $Ability) 设置能力
- * @method array getResourcePackages() 获取实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
- * @method void setResourcePackages(array $ResourcePackages) 设置实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
- * @method string getGdnId() 获取全球数据库唯一标识
- * @method void setGdnId(string $GdnId) 设置全球数据库唯一标识
- * @method string getGdnRole() 获取集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
- * @method void setGdnRole(string $GdnRole) 设置集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+ * @method string getStatus() 获取<p>集群状态， 可选值如下:<br>creating: 创建中<br>running:运行中<br>isolating:隔离中<br>isolated:已隔离<br>activating:解隔离中<br>offlining:下线中<br>offlined:已下线<br>deleting:删除中<br>deleted:已删除</p>
+ * @method void setStatus(string $Status) 设置<p>集群状态， 可选值如下:<br>creating: 创建中<br>running:运行中<br>isolating:隔离中<br>isolated:已隔离<br>activating:解隔离中<br>offlining:下线中<br>offlined:已下线<br>deleting:删除中<br>deleted:已删除</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getDbVersion() 获取<p>数据库版本</p>
+ * @method void setDbVersion(string $DbVersion) 设置<p>数据库版本</p>
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method integer getInstanceNum() 获取<p>实例数</p>
+ * @method void setInstanceNum(integer $InstanceNum) 设置<p>实例数</p>
+ * @method string getUin() 获取<p>用户uin</p>
+ * @method void setUin(string $Uin) 设置<p>用户uin</p>
+ * @method string getDbType() 获取<p>引擎类型</p>
+ * @method void setDbType(string $DbType) 设置<p>引擎类型</p>
+ * @method integer getAppId() 获取<p>用户appid</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户appid</p>
+ * @method string getStatusDesc() 获取<p>集群状态描述</p>
+ * @method void setStatusDesc(string $StatusDesc) 设置<p>集群状态描述</p>
+ * @method string getCreateTime() 获取<p>集群创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>集群创建时间</p>
+ * @method integer getPayMode() 获取<p>付费模式。0-按量计费，1-包年包月</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>付费模式。0-按量计费，1-包年包月</p>
+ * @method string getPeriodEndTime() 获取<p>截止时间</p>
+ * @method void setPeriodEndTime(string $PeriodEndTime) 设置<p>截止时间</p>
+ * @method string getVip() 获取<p>集群读写vip</p>
+ * @method void setVip(string $Vip) 设置<p>集群读写vip</p>
+ * @method integer getVport() 获取<p>集群读写vport</p>
+ * @method void setVport(integer $Vport) 设置<p>集群读写vport</p>
+ * @method integer getProjectID() 获取<p>项目id</p>
+ * @method void setProjectID(integer $ProjectID) 设置<p>项目id</p>
+ * @method string getVpcId() 获取<p>私有网络ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络ID</p>
+ * @method string getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
+ * @method string getCynosVersion() 获取<p>cynos内核版本</p>
+ * @method void setCynosVersion(string $CynosVersion) 设置<p>cynos内核版本</p>
+ * @method string getCynosVersionTag() 获取<p>cynos版本标签</p>
+ * @method void setCynosVersionTag(string $CynosVersionTag) 设置<p>cynos版本标签</p>
+ * @method integer getStorageLimit() 获取<p>存储容量</p>
+ * @method void setStorageLimit(integer $StorageLimit) 设置<p>存储容量</p>
+ * @method integer getRenewFlag() 获取<p>续费标志</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>续费标志</p>
+ * @method string getProcessingTask() 获取<p>正在处理的任务</p>
+ * @method void setProcessingTask(string $ProcessingTask) 设置<p>正在处理的任务</p>
+ * @method array getTasks() 获取<p>集群的任务数组</p>
+ * @method void setTasks(array $Tasks) 设置<p>集群的任务数组</p>
+ * @method array getResourceTags() 获取<p>集群绑定的tag数组</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>集群绑定的tag数组</p>
+ * @method string getDbMode() 获取<p>Db类型(NORMAL, SERVERLESS)</p>
+ * @method void setDbMode(string $DbMode) 设置<p>Db类型(NORMAL, SERVERLESS)</p>
+ * @method string getServerlessStatus() 获取<p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>pause</p>
+ * @method void setServerlessStatus(string $ServerlessStatus) 设置<p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>pause</p>
+ * @method integer getStorage() 获取<p>集群预付费存储值大小</p>
+ * @method void setStorage(integer $Storage) 设置<p>集群预付费存储值大小</p>
+ * @method string getStorageId() 获取<p>集群存储为预付费时的存储ID，用于预付费存储变配</p>
+ * @method void setStorageId(string $StorageId) 设置<p>集群存储为预付费时的存储ID，用于预付费存储变配</p>
+ * @method integer getStoragePayMode() 获取<p>集群存储付费模式。0-按量计费，1-包年包月</p>
+ * @method void setStoragePayMode(integer $StoragePayMode) 设置<p>集群存储付费模式。0-按量计费，1-包年包月</p>
+ * @method integer getMinStorageSize() 获取<p>集群计算规格对应的最小存储值</p>
+ * @method void setMinStorageSize(integer $MinStorageSize) 设置<p>集群计算规格对应的最小存储值</p>
+ * @method integer getMaxStorageSize() 获取<p>集群计算规格对应的最大存储值</p>
+ * @method void setMaxStorageSize(integer $MaxStorageSize) 设置<p>集群计算规格对应的最大存储值</p>
+ * @method array getNetAddrs() 获取<p>集群网络信息</p>
+ * @method void setNetAddrs(array $NetAddrs) 设置<p>集群网络信息</p>
+ * @method string getPhysicalZone() 获取<p>物理可用区</p>
+ * @method void setPhysicalZone(string $PhysicalZone) 设置<p>物理可用区</p>
+ * @method string getMasterZone() 获取<p>主可用区</p>
+ * @method void setMasterZone(string $MasterZone) 设置<p>主可用区</p>
+ * @method string getHasSlaveZone() 获取<p>是否有从可用区</p>
+ * @method void setHasSlaveZone(string $HasSlaveZone) 设置<p>是否有从可用区</p>
+ * @method array getSlaveZones() 获取<p>从可用区</p>
+ * @method void setSlaveZones(array $SlaveZones) 设置<p>从可用区</p>
+ * @method string getBusinessType() 获取<p>商业类型</p>
+ * @method void setBusinessType(string $BusinessType) 设置<p>商业类型</p>
+ * @method string getIsFreeze() 获取<p>是否冻结</p>
+ * @method void setIsFreeze(string $IsFreeze) 设置<p>是否冻结</p>
+ * @method string getOrderSource() 获取<p>订单来源</p>
+ * @method void setOrderSource(string $OrderSource) 设置<p>订单来源</p>
+ * @method Ability getAbility() 获取<p>能力</p>
+ * @method void setAbility(Ability $Ability) 设置<p>能力</p>
+ * @method array getResourcePackages() 获取<p>实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）</p>
+ * @method void setResourcePackages(array $ResourcePackages) 设置<p>实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）</p>
+ * @method string getGdnId() 获取<p>全球数据库唯一标识</p>
+ * @method void setGdnId(string $GdnId) 设置<p>全球数据库唯一标识</p>
+ * @method string getGdnRole() 获取<p>集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。</p>
+ * @method void setGdnRole(string $GdnRole) 设置<p>集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。</p>
  */
 class CynosdbCluster extends AbstractModel
 {
     /**
-     * @var string 集群状态， 可选值如下:
-creating: 创建中
-running:运行中
-isolating:隔离中
-isolated:已隔离
-activating:解隔离中
-offlining:下线中
-offlined:已下线
-deleting:删除中
-deleted:已删除
+     * @var string <p>集群状态， 可选值如下:<br>creating: 创建中<br>running:运行中<br>isolating:隔离中<br>isolated:已隔离<br>activating:解隔离中<br>offlining:下线中<br>offlined:已下线<br>deleting:删除中<br>deleted:已删除</p>
      */
     public $Status;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 数据库版本
+     * @var string <p>数据库版本</p>
      */
     public $DbVersion;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 实例数
+     * @var integer <p>实例数</p>
      */
     public $InstanceNum;
 
     /**
-     * @var string 用户uin
+     * @var string <p>用户uin</p>
      */
     public $Uin;
 
     /**
-     * @var string 引擎类型
+     * @var string <p>引擎类型</p>
      */
     public $DbType;
 
     /**
-     * @var integer 用户appid
+     * @var integer <p>用户appid</p>
      */
     public $AppId;
 
     /**
-     * @var string 集群状态描述
+     * @var string <p>集群状态描述</p>
      */
     public $StatusDesc;
 
     /**
-     * @var string 集群创建时间
+     * @var string <p>集群创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 付费模式。0-按量计费，1-包年包月
+     * @var integer <p>付费模式。0-按量计费，1-包年包月</p>
      */
     public $PayMode;
 
     /**
-     * @var string 截止时间
+     * @var string <p>截止时间</p>
      */
     public $PeriodEndTime;
 
     /**
-     * @var string 集群读写vip
+     * @var string <p>集群读写vip</p>
      */
     public $Vip;
 
     /**
-     * @var integer 集群读写vport
+     * @var integer <p>集群读写vport</p>
      */
     public $Vport;
 
     /**
-     * @var integer 项目id
+     * @var integer <p>项目id</p>
      */
     public $ProjectID;
 
     /**
-     * @var string 私有网络ID
+     * @var string <p>私有网络ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string cynos内核版本
+     * @var string <p>cynos内核版本</p>
      */
     public $CynosVersion;
 
     /**
-     * @var string cynos版本标签
+     * @var string <p>cynos版本标签</p>
      */
     public $CynosVersionTag;
 
     /**
-     * @var integer 存储容量
+     * @var integer <p>存储容量</p>
      */
     public $StorageLimit;
 
     /**
-     * @var integer 续费标志
+     * @var integer <p>续费标志</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string 正在处理的任务
+     * @var string <p>正在处理的任务</p>
      */
     public $ProcessingTask;
 
     /**
-     * @var array 集群的任务数组
+     * @var array <p>集群的任务数组</p>
      */
     public $Tasks;
 
     /**
-     * @var array 集群绑定的tag数组
+     * @var array <p>集群绑定的tag数组</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string Db类型(NORMAL, SERVERLESS)
+     * @var string <p>Db类型(NORMAL, SERVERLESS)</p>
      */
     public $DbMode;
 
     /**
-     * @var string 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-pause
+     * @var string <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>pause</p>
      */
     public $ServerlessStatus;
 
     /**
-     * @var integer 集群预付费存储值大小
+     * @var integer <p>集群预付费存储值大小</p>
      */
     public $Storage;
 
     /**
-     * @var string 集群存储为预付费时的存储ID，用于预付费存储变配
+     * @var string <p>集群存储为预付费时的存储ID，用于预付费存储变配</p>
      */
     public $StorageId;
 
     /**
-     * @var integer 集群存储付费模式。0-按量计费，1-包年包月
+     * @var integer <p>集群存储付费模式。0-按量计费，1-包年包月</p>
      */
     public $StoragePayMode;
 
     /**
-     * @var integer 集群计算规格对应的最小存储值
+     * @var integer <p>集群计算规格对应的最小存储值</p>
      */
     public $MinStorageSize;
 
     /**
-     * @var integer 集群计算规格对应的最大存储值
+     * @var integer <p>集群计算规格对应的最大存储值</p>
      */
     public $MaxStorageSize;
 
     /**
-     * @var array 集群网络信息
+     * @var array <p>集群网络信息</p>
      */
     public $NetAddrs;
 
     /**
-     * @var string 物理可用区
+     * @var string <p>物理可用区</p>
      */
     public $PhysicalZone;
 
     /**
-     * @var string 主可用区
+     * @var string <p>主可用区</p>
      */
     public $MasterZone;
 
     /**
-     * @var string 是否有从可用区
+     * @var string <p>是否有从可用区</p>
      */
     public $HasSlaveZone;
 
     /**
-     * @var array 从可用区
+     * @var array <p>从可用区</p>
      */
     public $SlaveZones;
 
     /**
-     * @var string 商业类型
+     * @var string <p>商业类型</p>
      */
     public $BusinessType;
 
     /**
-     * @var string 是否冻结
+     * @var string <p>是否冻结</p>
      */
     public $IsFreeze;
 
     /**
-     * @var string 订单来源
+     * @var string <p>订单来源</p>
      */
     public $OrderSource;
 
     /**
-     * @var Ability 能力
+     * @var Ability <p>能力</p>
      */
     public $Ability;
 
     /**
-     * @var array 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+     * @var array <p>实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）</p>
      */
     public $ResourcePackages;
 
     /**
-     * @var string 全球数据库唯一标识
+     * @var string <p>全球数据库唯一标识</p>
      */
     public $GdnId;
 
     /**
-     * @var string 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+     * @var string <p>集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。</p>
      */
     public $GdnRole;
 
     /**
-     * @param string $Status 集群状态， 可选值如下:
-creating: 创建中
-running:运行中
-isolating:隔离中
-isolated:已隔离
-activating:解隔离中
-offlining:下线中
-offlined:已下线
-deleting:删除中
-deleted:已删除
-     * @param string $UpdateTime 更新时间
-     * @param string $Zone 可用区
-     * @param string $ClusterName 集群名称
-     * @param string $Region 地域
-     * @param string $DbVersion 数据库版本
-     * @param string $ClusterId 集群ID
-     * @param integer $InstanceNum 实例数
-     * @param string $Uin 用户uin
-     * @param string $DbType 引擎类型
-     * @param integer $AppId 用户appid
-     * @param string $StatusDesc 集群状态描述
-     * @param string $CreateTime 集群创建时间
-     * @param integer $PayMode 付费模式。0-按量计费，1-包年包月
-     * @param string $PeriodEndTime 截止时间
-     * @param string $Vip 集群读写vip
-     * @param integer $Vport 集群读写vport
-     * @param integer $ProjectID 项目id
-     * @param string $VpcId 私有网络ID
-     * @param string $SubnetId 子网ID
-     * @param string $CynosVersion cynos内核版本
-     * @param string $CynosVersionTag cynos版本标签
-     * @param integer $StorageLimit 存储容量
-     * @param integer $RenewFlag 续费标志
-     * @param string $ProcessingTask 正在处理的任务
-     * @param array $Tasks 集群的任务数组
-     * @param array $ResourceTags 集群绑定的tag数组
-     * @param string $DbMode Db类型(NORMAL, SERVERLESS)
-     * @param string $ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-pause
-     * @param integer $Storage 集群预付费存储值大小
-     * @param string $StorageId 集群存储为预付费时的存储ID，用于预付费存储变配
-     * @param integer $StoragePayMode 集群存储付费模式。0-按量计费，1-包年包月
-     * @param integer $MinStorageSize 集群计算规格对应的最小存储值
-     * @param integer $MaxStorageSize 集群计算规格对应的最大存储值
-     * @param array $NetAddrs 集群网络信息
-     * @param string $PhysicalZone 物理可用区
-     * @param string $MasterZone 主可用区
-     * @param string $HasSlaveZone 是否有从可用区
-     * @param array $SlaveZones 从可用区
-     * @param string $BusinessType 商业类型
-     * @param string $IsFreeze 是否冻结
-     * @param string $OrderSource 订单来源
-     * @param Ability $Ability 能力
-     * @param array $ResourcePackages 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
-     * @param string $GdnId 全球数据库唯一标识
-     * @param string $GdnRole 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+     * @param string $Status <p>集群状态， 可选值如下:<br>creating: 创建中<br>running:运行中<br>isolating:隔离中<br>isolated:已隔离<br>activating:解隔离中<br>offlining:下线中<br>offlined:已下线<br>deleting:删除中<br>deleted:已删除</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param string $Zone <p>可用区</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $Region <p>地域</p>
+     * @param string $DbVersion <p>数据库版本</p>
+     * @param string $ClusterId <p>集群ID</p>
+     * @param integer $InstanceNum <p>实例数</p>
+     * @param string $Uin <p>用户uin</p>
+     * @param string $DbType <p>引擎类型</p>
+     * @param integer $AppId <p>用户appid</p>
+     * @param string $StatusDesc <p>集群状态描述</p>
+     * @param string $CreateTime <p>集群创建时间</p>
+     * @param integer $PayMode <p>付费模式。0-按量计费，1-包年包月</p>
+     * @param string $PeriodEndTime <p>截止时间</p>
+     * @param string $Vip <p>集群读写vip</p>
+     * @param integer $Vport <p>集群读写vport</p>
+     * @param integer $ProjectID <p>项目id</p>
+     * @param string $VpcId <p>私有网络ID</p>
+     * @param string $SubnetId <p>子网ID</p>
+     * @param string $CynosVersion <p>cynos内核版本</p>
+     * @param string $CynosVersionTag <p>cynos版本标签</p>
+     * @param integer $StorageLimit <p>存储容量</p>
+     * @param integer $RenewFlag <p>续费标志</p>
+     * @param string $ProcessingTask <p>正在处理的任务</p>
+     * @param array $Tasks <p>集群的任务数组</p>
+     * @param array $ResourceTags <p>集群绑定的tag数组</p>
+     * @param string $DbMode <p>Db类型(NORMAL, SERVERLESS)</p>
+     * @param string $ServerlessStatus <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>pause</p>
+     * @param integer $Storage <p>集群预付费存储值大小</p>
+     * @param string $StorageId <p>集群存储为预付费时的存储ID，用于预付费存储变配</p>
+     * @param integer $StoragePayMode <p>集群存储付费模式。0-按量计费，1-包年包月</p>
+     * @param integer $MinStorageSize <p>集群计算规格对应的最小存储值</p>
+     * @param integer $MaxStorageSize <p>集群计算规格对应的最大存储值</p>
+     * @param array $NetAddrs <p>集群网络信息</p>
+     * @param string $PhysicalZone <p>物理可用区</p>
+     * @param string $MasterZone <p>主可用区</p>
+     * @param string $HasSlaveZone <p>是否有从可用区</p>
+     * @param array $SlaveZones <p>从可用区</p>
+     * @param string $BusinessType <p>商业类型</p>
+     * @param string $IsFreeze <p>是否冻结</p>
+     * @param string $OrderSource <p>订单来源</p>
+     * @param Ability $Ability <p>能力</p>
+     * @param array $ResourcePackages <p>实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）</p>
+     * @param string $GdnId <p>全球数据库唯一标识</p>
+     * @param string $GdnRole <p>集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。</p>
      */
     function __construct()
     {

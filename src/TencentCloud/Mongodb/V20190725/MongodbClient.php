@@ -36,6 +36,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\CreateLogDownloadTaskResponse CreateLogDownloadTask(Models\CreateLogDownloadTaskRequest $req) 创建日志下载任务
  * @method Models\DeleteAccountUserResponse DeleteAccountUser(Models\DeleteAccountUserRequest $req) 本接口（DeleteAccountUser）用于删除实例的自定义账号。
  * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
+ * @method Models\DeleteDBBackupsResponse DeleteDBBackups(Models\DeleteDBBackupsRequest $req) 删除全量备份
  * @method Models\DeleteLogDownloadTaskResponse DeleteLogDownloadTask(Models\DeleteLogDownloadTaskRequest $req) 删除日志下载任务
  * @method Models\DescribeAccountUsersResponse DescribeAccountUsers(Models\DescribeAccountUsersRequest $req) 本接口（DescribeAccountUsers）用于获取当前实例的全部账号。
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) 本接口（DescribeAsyncRequestInfo）用于查询异步任务状态接口。
@@ -62,6 +63,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeInstanceSSLResponse DescribeInstanceSSL(Models\DescribeInstanceSSLRequest $req) 查看实例SSL开启状态
  * @method Models\DescribeLogDownloadTasksResponse DescribeLogDownloadTasks(Models\DescribeLogDownloadTasksRequest $req) 日志下载任务查询
  * @method Models\DescribeMongodbLogsResponse DescribeMongodbLogs(Models\DescribeMongodbLogsRequest $req) 该接口（DescribeMongodbLogs）用于查询运行日志。
+ * @method Models\DescribePasswordRotationResponse DescribePasswordRotation(Models\DescribePasswordRotationRequest $req) 获取密码轮转状态信息
  * @method Models\DescribeSRVConnectionDomainResponse DescribeSRVConnectionDomain(Models\DescribeSRVConnectionDomainRequest $req) 本接口（DescribeSRVConnectionDomain）用于查询MongoDB数据库当前的域名信息。
  * @method Models\DescribeSecurityGroupResponse DescribeSecurityGroup(Models\DescribeSecurityGroupRequest $req) 本接口（DescribeSecurityGroup）用于查询实例绑定的安全组。
  * @method Models\DescribeSlowLogPatternsResponse DescribeSlowLogPatterns(Models\DescribeSlowLogPatternsRequest $req) 本接口（DescribeSlowLogPatterns）用于获取数据库实例慢日志的统计信息。
@@ -71,6 +73,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DisableSRVConnectionUrlResponse DisableSRVConnectionUrl(Models\DisableSRVConnectionUrlRequest $req) 本接口（DisableSRVConnectionUrl）用于关闭MongoDB数据库的SRV访问地址。
  * @method Models\DropDBInstanceParamTplResponse DropDBInstanceParamTpl(Models\DropDBInstanceParamTplRequest $req) 本接口(DropDBInstanceParamTpl )用于删除云数据库MongoDB实例的参数模板
 **说明：DropDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+ * @method Models\EnablePasswordRotationResponse EnablePasswordRotation(Models\EnablePasswordRotationRequest $req) 开启密码轮转
  * @method Models\EnableSRVConnectionUrlResponse EnableSRVConnectionUrl(Models\EnableSRVConnectionUrlRequest $req) 本接口（EnableSRVConnectionUrl）用于开启MongoDB数据库的SRV访问地址。
  * @method Models\EnableTransparentDataEncryptionResponse EnableTransparentDataEncryption(Models\EnableTransparentDataEncryptionRequest $req) 本接口（EnableTransparentDataEncryption）用于开启云数据库 MongoDB 的透明加密能力。
  * @method Models\EnableWanServiceResponse EnableWanService(Models\EnableWanServiceRequest $req) 本接口(OpenWanService)用于开启当前实例的外网访问地址。
@@ -84,6 +87,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) 本接口（IsolateDBInstance）用于隔离 MongoDB 云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。已删除的按量计费实例无法恢复，请谨慎操作。
  * @method Models\KillOpsResponse KillOps(Models\KillOpsRequest $req) 本接口（KillOps）用于终止 MongoDB 云数据库实例上执行的特定操作。
  * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) 本接口(ModifyAuditService)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。
+ * @method Models\ModifyBackupExpireTimeResponse ModifyBackupExpireTime(Models\ModifyBackupExpireTimeRequest $req) 修改备份过期时间
  * @method Models\ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddress(Models\ModifyDBInstanceNetworkAddressRequest $req) 本接口（ModifyDBInstanceNetworkAddress）用于修改云数据库实例的网络信息，支持基础网络切换为私有网络、私有网络切换私有网络。
  * @method Models\ModifyDBInstanceParamTplResponse ModifyDBInstanceParamTpl(Models\ModifyDBInstanceParamTplRequest $req) 本接口(ModifyDBInstanceParamTpl )用于修改MongoDB云数据库实例的参数模板。
 **说明：ModifyDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**

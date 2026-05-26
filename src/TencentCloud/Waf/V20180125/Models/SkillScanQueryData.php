@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskLevel(string $RiskLevel) 设置<p>风险等级：malicious（恶意）、suspicious（可疑）、benign（可信）</p>
  * @method string getMitigation() 获取<p>综合处置建议字段，位于 data 顶层，用于给出本次检测结果的总体修复、缓解或人工处置建议</p>
  * @method void setMitigation(string $Mitigation) 设置<p>综合处置建议字段，位于 data 顶层，用于给出本次检测结果的总体修复、缓解或人工处置建议</p>
- * @method integer getSecurityScore() 获取<p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p>
- * @method void setSecurityScore(integer $SecurityScore) 设置<p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p>
+ * @method integer getSecurityScore() 获取<p>安全评分（0-100，分数越高越安全）</p><p>取值范围：[0, 100]</p>
+ * @method void setSecurityScore(integer $SecurityScore) 设置<p>安全评分（0-100，分数越高越安全）</p><p>取值范围：[0, 100]</p>
  * @method integer getEngineVersion() 获取<p>本次扫描使用的引擎版本号</p>
  * @method void setEngineVersion(integer $EngineVersion) 设置<p>本次扫描使用的引擎版本号</p>
  * @method array getCapabilityTags() 获取<p>Skill 的能力标签列表，对外固定返回格式为 [{id,name}]。该字段用于描述 Skill 具备的能力特征或适用场景，便于调用方做检索、展示或分类；不等同于风险标签，也不表示风险高低或命中规则结果。当 lang=en 时，仅 name 会切换为英文，id 保持不变</p>
@@ -86,7 +86,7 @@ class SkillScanQueryData extends AbstractModel
     public $Mitigation;
 
     /**
-     * @var integer <p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p>
+     * @var integer <p>安全评分（0-100，分数越高越安全）</p><p>取值范围：[0, 100]</p>
      */
     public $SecurityScore;
 
@@ -142,7 +142,7 @@ class SkillScanQueryData extends AbstractModel
      * @param string $ContentHash <p>ZIP 文件的 SHA256 哈希值，格式为 sha256:hex_digest</p>
      * @param string $RiskLevel <p>风险等级：malicious（恶意）、suspicious（可疑）、benign（可信）</p>
      * @param string $Mitigation <p>综合处置建议字段，位于 data 顶层，用于给出本次检测结果的总体修复、缓解或人工处置建议</p>
-     * @param integer $SecurityScore <p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p>
+     * @param integer $SecurityScore <p>安全评分（0-100，分数越高越安全）</p><p>取值范围：[0, 100]</p>
      * @param integer $EngineVersion <p>本次扫描使用的引擎版本号</p>
      * @param array $CapabilityTags <p>Skill 的能力标签列表，对外固定返回格式为 [{id,name}]。该字段用于描述 Skill 具备的能力特征或适用场景，便于调用方做检索、展示或分类；不等同于风险标签，也不表示风险高低或命中规则结果。当 lang=en 时，仅 name 会切换为英文，id 保持不变</p>
      * @param array $RuleCatalog <p>融合规则目录全集，key 为融合 rule_id（9xxxx），value 为风险类别名称；包含所有融合规则类别，调用方可据此展示分类标签，无需本地维护映射表。传 lang=en 时返回英文名称。该对象是名称映射表，不表达主标签优先级</p>

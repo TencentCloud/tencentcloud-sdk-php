@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSecret返回参数结构体
  *
- * @method string getSecretName() 获取新创建的凭据名称。
- * @method void setSecretName(string $SecretName) 设置新创建的凭据名称。
- * @method string getVersionId() 获取新创建的凭据版本。
- * @method void setVersionId(string $VersionId) 设置新创建的凭据版本。
- * @method integer getTagCode() 获取标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
- * @method void setTagCode(integer $TagCode) 设置标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
- * @method string getTagMsg() 获取标签操作的返回信息
- * @method void setTagMsg(string $TagMsg) 设置标签操作的返回信息
+ * @method string getSecretName() 获取<p>新创建的凭据名称。</p>
+ * @method void setSecretName(string $SecretName) 设置<p>新创建的凭据名称。</p>
+ * @method string getVersionId() 获取<p>新创建的凭据版本。</p>
+ * @method void setVersionId(string $VersionId) 设置<p>新创建的凭据版本。</p>
+ * @method integer getTagCode() 获取<p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
+ * @method void setTagCode(integer $TagCode) 设置<p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
+ * @method string getTagMsg() 获取<p>标签操作的返回信息</p>
+ * @method void setTagMsg(string $TagMsg) 设置<p>标签操作的返回信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateSecretResponse extends AbstractModel
 {
     /**
-     * @var string 新创建的凭据名称。
+     * @var string <p>新创建的凭据名称。</p>
      */
     public $SecretName;
 
     /**
-     * @var string 新创建的凭据版本。
+     * @var string <p>新创建的凭据版本。</p>
      */
     public $VersionId;
 
     /**
-     * @var integer 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     * @var integer <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
      */
     public $TagCode;
 
     /**
-     * @var string 标签操作的返回信息
+     * @var string <p>标签操作的返回信息</p>
      */
     public $TagMsg;
 
@@ -59,10 +59,10 @@ class CreateSecretResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SecretName 新创建的凭据名称。
-     * @param string $VersionId 新创建的凭据版本。
-     * @param integer $TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
-     * @param string $TagMsg 标签操作的返回信息
+     * @param string $SecretName <p>新创建的凭据名称。</p>
+     * @param string $VersionId <p>新创建的凭据版本。</p>
+     * @param integer $TagCode <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
+     * @param string $TagMsg <p>标签操作的返回信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

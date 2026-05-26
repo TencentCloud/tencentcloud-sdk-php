@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置<p>克隆源实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/15872">DescribeDBInstances</a> 接口获取。</p>
  * @method string getSpecifiedRollbackTime() 获取<p>如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。<br>说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。</p>
  * @method void setSpecifiedRollbackTime(string $SpecifiedRollbackTime) 设置<p>如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。<br>说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。</p>
- * @method integer getSpecifiedBackupId() 获取<p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
- * @method void setSpecifiedBackupId(integer $SpecifiedBackupId) 设置<p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
+ * @method integer getSpecifiedBackupId() 获取<p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
+ * @method void setSpecifiedBackupId(integer $SpecifiedBackupId) 设置<p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
  * @method string getUniqVpcId() 获取<p>私有网络 ID，请使用 <a href="/document/api/215/15778">查询私有网络列表</a>。</p>
  * @method void setUniqVpcId(string $UniqVpcId) 设置<p>私有网络 ID，请使用 <a href="/document/api/215/15778">查询私有网络列表</a>。</p>
  * @method string getUniqSubnetId() 获取<p>私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 <a href="/document/api/215/15784">查询子网列表</a>。</p>
@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupZone(string $BackupZone) 设置<p>备库 2 的可用区信息，默认为空，克隆强同步主实例时可指定该参数。</p>
  * @method string getDeviceType() 获取<p>克隆实例类型。支持值包括：&quot;UNIVERSAL&quot; - 通用型实例，&quot;EXCLUSIVE&quot; - 独享型实例，&quot;CLOUD_NATIVE_CLUSTER&quot; - 云盘版标准型，&quot;CLOUD_NATIVE_CLUSTER_EXCLUSIVE&quot; - 云盘版加强型。不指定则默认为通用型。</p>
  * @method void setDeviceType(string $DeviceType) 设置<p>克隆实例类型。支持值包括：&quot;UNIVERSAL&quot; - 通用型实例，&quot;EXCLUSIVE&quot; - 独享型实例，&quot;CLOUD_NATIVE_CLUSTER&quot; - 云盘版标准型，&quot;CLOUD_NATIVE_CLUSTER_EXCLUSIVE&quot; - 云盘版加强型。不指定则默认为通用型。</p>
- * @method integer getInstanceNodes() 获取<p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p>
- * @method void setInstanceNodes(integer $InstanceNodes) 设置<p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p>
+ * @method integer getInstanceNodes() 获取<p>新克隆实例节点数。</p><p>如果需要克隆出三节点实例，请将该值设置为3，或指定 BackupZone 参数；如果需要克隆出双节点实例，请将该值设置为2，默认克隆出双节点实例；如果需要克隆出四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
+ * @method void setInstanceNodes(integer $InstanceNodes) 设置<p>新克隆实例节点数。</p><p>如果需要克隆出三节点实例，请将该值设置为3，或指定 BackupZone 参数；如果需要克隆出双节点实例，请将该值设置为2，默认克隆出双节点实例；如果需要克隆出四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
  * @method string getDeployGroupId() 获取<p>置放群组 ID。</p>
  * @method void setDeployGroupId(string $DeployGroupId) 设置<p>置放群组 ID。</p>
  * @method boolean getDryRun() 获取<p>是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。</p>
@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterZone(string $MasterZone) 设置<p>新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。</p>
  * @method string getZone() 获取<p>新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。</p>
  * @method void setZone(string $Zone) 设置<p>新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。</p>
+ * @method string getFourthZone() 获取<p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+ * @method void setFourthZone(string $FourthZone) 设置<p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -90,7 +92,7 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $SpecifiedRollbackTime;
 
     /**
-     * @var integer <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
+     * @var integer <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
      */
     public $SpecifiedBackupId;
 
@@ -160,7 +162,7 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var integer <p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p>
+     * @var integer <p>新克隆实例节点数。</p><p>如果需要克隆出三节点实例，请将该值设置为3，或指定 BackupZone 参数；如果需要克隆出双节点实例，请将该值设置为2，默认克隆出双节点实例；如果需要克隆出四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
      */
     public $InstanceNodes;
 
@@ -221,9 +223,14 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $Zone;
 
     /**
+     * @var string <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     */
+    public $FourthZone;
+
+    /**
      * @param string $InstanceId <p>克隆源实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/15872">DescribeDBInstances</a> 接口获取。</p>
      * @param string $SpecifiedRollbackTime <p>如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。<br>说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。</p>
-     * @param integer $SpecifiedBackupId <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
+     * @param integer $SpecifiedBackupId <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
      * @param string $UniqVpcId <p>私有网络 ID，请使用 <a href="/document/api/215/15778">查询私有网络列表</a>。</p>
      * @param string $UniqSubnetId <p>私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 <a href="/document/api/215/15784">查询子网列表</a>。</p>
      * @param integer $Memory <p>实例内存大小，单位：MB，需要不低于克隆源实例，默认和源实例相同。</p>
@@ -237,7 +244,7 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param string $SlaveZone <p>新产生的克隆实例备库 1 的可用区信息，默认同源实例 Zone 的值。</p>
      * @param string $BackupZone <p>备库 2 的可用区信息，默认为空，克隆强同步主实例时可指定该参数。</p>
      * @param string $DeviceType <p>克隆实例类型。支持值包括：&quot;UNIVERSAL&quot; - 通用型实例，&quot;EXCLUSIVE&quot; - 独享型实例，&quot;CLOUD_NATIVE_CLUSTER&quot; - 云盘版标准型，&quot;CLOUD_NATIVE_CLUSTER_EXCLUSIVE&quot; - 云盘版加强型。不指定则默认为通用型。</p>
-     * @param integer $InstanceNodes <p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p>
+     * @param integer $InstanceNodes <p>新克隆实例节点数。</p><p>如果需要克隆出三节点实例，请将该值设置为3，或指定 BackupZone 参数；如果需要克隆出双节点实例，请将该值设置为2，默认克隆出双节点实例；如果需要克隆出四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
      * @param string $DeployGroupId <p>置放群组 ID。</p>
      * @param boolean $DryRun <p>是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。</p>
      * @param string $CageId <p>金融围拢 ID 。</p>
@@ -249,6 +256,7 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param integer $SpecifiedSubBackupId <p>异地数据备份id</p>
      * @param string $MasterZone <p>新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。</p>
      * @param string $Zone <p>新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。</p>
+     * @param string $FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
      */
     function __construct()
     {
@@ -379,6 +387,10 @@ class CreateCloneInstanceRequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("FourthZone",$param) and $param["FourthZone"] !== null) {
+            $this->FourthZone = $param["FourthZone"];
         }
     }
 }

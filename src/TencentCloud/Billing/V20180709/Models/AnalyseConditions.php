@@ -20,134 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 成本分析查询条件
  *
- * @method string getBusinessCodes() 获取产品名称代码
- * @method void setBusinessCodes(string $BusinessCodes) 设置产品名称代码
- * @method string getProductCodes() 获取子产品名称代码
- * @method void setProductCodes(string $ProductCodes) 设置子产品名称代码
- * @method string getComponentCode() 获取组件类型代码
- * @method void setComponentCode(string $ComponentCode) 设置组件类型代码
- * @method string getZoneIds() 获取可用区ID：资源所属可用区ID
- * @method void setZoneIds(string $ZoneIds) 设置可用区ID：资源所属可用区ID
- * @method string getRegionIds() 获取地域ID:资源所属地域ID
- * @method void setRegionIds(string $RegionIds) 设置地域ID:资源所属地域ID
- * @method string getProjectIds() 获取项目ID:资源所属项目ID
- * @method void setProjectIds(string $ProjectIds) 设置项目ID:资源所属项目ID
- * @method string getPayModes() 获取计费模式 prePay(表示包年包月)/postPay(表示按量计费)
- * @method void setPayModes(string $PayModes) 设置计费模式 prePay(表示包年包月)/postPay(表示按量计费)
- * @method string getActionTypes() 获取交易类型，查询交易类型（请使用交易类型code入参）
- * @method void setActionTypes(string $ActionTypes) 设置交易类型，查询交易类型（请使用交易类型code入参）
- * @method string getTags() 获取分账标签键
- * @method void setTags(string $Tags) 设置分账标签键
- * @method string getFeeType() 获取费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
-cashPayAmount:现金 
-incentivePayAmount:赠送金 
-voucherPayAmount:优惠券 
-tax:税金 
-costBeforeTax:税前价
- * @method void setFeeType(string $FeeType) 设置费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
-cashPayAmount:现金 
-incentivePayAmount:赠送金 
-voucherPayAmount:优惠券 
-tax:税金 
-costBeforeTax:税前价
- * @method string getPayerUins() 获取查询成本分析数据的用户UIN
- * @method void setPayerUins(string $PayerUins) 设置查询成本分析数据的用户UIN
- * @method string getOwnerUins() 获取使用资源的用户UIN
- * @method void setOwnerUins(string $OwnerUins) 设置使用资源的用户UIN
- * @method string getConsumptionTypes() 获取消耗类型，查询消耗类型（请使用消耗类型code入参）
- * @method void setConsumptionTypes(string $ConsumptionTypes) 设置消耗类型，查询消耗类型（请使用消耗类型code入参）
+ * @method string getBusinessCodes() 获取<p>产品名称代码</p>
+ * @method void setBusinessCodes(string $BusinessCodes) 设置<p>产品名称代码</p>
+ * @method string getProductCodes() 获取<p>子产品名称代码</p>
+ * @method void setProductCodes(string $ProductCodes) 设置<p>子产品名称代码</p>
+ * @method string getComponentCode() 获取<p>组件类型代码</p>
+ * @method void setComponentCode(string $ComponentCode) 设置<p>组件类型代码</p>
+ * @method string getZoneIds() 获取<p>可用区ID：资源所属可用区ID</p>
+ * @method void setZoneIds(string $ZoneIds) 设置<p>可用区ID：资源所属可用区ID</p>
+ * @method string getRegionIds() 获取<p>地域ID:资源所属地域ID</p>
+ * @method void setRegionIds(string $RegionIds) 设置<p>地域ID:资源所属地域ID</p>
+ * @method string getProjectIds() 获取<p>项目ID:资源所属项目ID</p>
+ * @method void setProjectIds(string $ProjectIds) 设置<p>项目ID:资源所属项目ID</p>
+ * @method string getPayModes() 获取<p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p>
+ * @method void setPayModes(string $PayModes) 设置<p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p>
+ * @method string getActionTypes() 获取<p>交易类型，查询交易类型（请使用交易类型code入参）</p>
+ * @method void setActionTypes(string $ActionTypes) 设置<p>交易类型，查询交易类型（请使用交易类型code入参）</p>
+ * @method string getTags() 获取<p>分账标签</p>
+ * @method void setTags(string $Tags) 设置<p>分账标签</p>
+ * @method string getFeeType() 获取<p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
+ * @method void setFeeType(string $FeeType) 设置<p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
+ * @method string getPayerUins() 获取<p>查询成本分析数据的用户UIN</p>
+ * @method void setPayerUins(string $PayerUins) 设置<p>查询成本分析数据的用户UIN</p>
+ * @method string getOwnerUins() 获取<p>使用资源的用户UIN</p>
+ * @method void setOwnerUins(string $OwnerUins) 设置<p>使用资源的用户UIN</p>
+ * @method string getConsumptionTypes() 获取<p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p>
+ * @method void setConsumptionTypes(string $ConsumptionTypes) 设置<p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p>
  */
 class AnalyseConditions extends AbstractModel
 {
     /**
-     * @var string 产品名称代码
+     * @var string <p>产品名称代码</p>
      */
     public $BusinessCodes;
 
     /**
-     * @var string 子产品名称代码
+     * @var string <p>子产品名称代码</p>
      */
     public $ProductCodes;
 
     /**
-     * @var string 组件类型代码
+     * @var string <p>组件类型代码</p>
      */
     public $ComponentCode;
 
     /**
-     * @var string 可用区ID：资源所属可用区ID
+     * @var string <p>可用区ID：资源所属可用区ID</p>
      */
     public $ZoneIds;
 
     /**
-     * @var string 地域ID:资源所属地域ID
+     * @var string <p>地域ID:资源所属地域ID</p>
      */
     public $RegionIds;
 
     /**
-     * @var string 项目ID:资源所属项目ID
+     * @var string <p>项目ID:资源所属项目ID</p>
      */
     public $ProjectIds;
 
     /**
-     * @var string 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
+     * @var string <p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p>
      */
     public $PayModes;
 
     /**
-     * @var string 交易类型，查询交易类型（请使用交易类型code入参）
+     * @var string <p>交易类型，查询交易类型（请使用交易类型code入参）</p>
      */
     public $ActionTypes;
 
     /**
-     * @var string 分账标签键
+     * @var string <p>分账标签</p>
      */
     public $Tags;
 
     /**
-     * @var string 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
-cashPayAmount:现金 
-incentivePayAmount:赠送金 
-voucherPayAmount:优惠券 
-tax:税金 
-costBeforeTax:税前价
+     * @var string <p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
      */
     public $FeeType;
 
     /**
-     * @var string 查询成本分析数据的用户UIN
+     * @var string <p>查询成本分析数据的用户UIN</p>
      */
     public $PayerUins;
 
     /**
-     * @var string 使用资源的用户UIN
+     * @var string <p>使用资源的用户UIN</p>
      */
     public $OwnerUins;
 
     /**
-     * @var string 消耗类型，查询消耗类型（请使用消耗类型code入参）
+     * @var string <p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p>
      */
     public $ConsumptionTypes;
 
     /**
-     * @param string $BusinessCodes 产品名称代码
-     * @param string $ProductCodes 子产品名称代码
-     * @param string $ComponentCode 组件类型代码
-     * @param string $ZoneIds 可用区ID：资源所属可用区ID
-     * @param string $RegionIds 地域ID:资源所属地域ID
-     * @param string $ProjectIds 项目ID:资源所属项目ID
-     * @param string $PayModes 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-     * @param string $ActionTypes 交易类型，查询交易类型（请使用交易类型code入参）
-     * @param string $Tags 分账标签键
-     * @param string $FeeType 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
-cashPayAmount:现金 
-incentivePayAmount:赠送金 
-voucherPayAmount:优惠券 
-tax:税金 
-costBeforeTax:税前价
-     * @param string $PayerUins 查询成本分析数据的用户UIN
-     * @param string $OwnerUins 使用资源的用户UIN
-     * @param string $ConsumptionTypes 消耗类型，查询消耗类型（请使用消耗类型code入参）
+     * @param string $BusinessCodes <p>产品名称代码</p>
+     * @param string $ProductCodes <p>子产品名称代码</p>
+     * @param string $ComponentCode <p>组件类型代码</p>
+     * @param string $ZoneIds <p>可用区ID：资源所属可用区ID</p>
+     * @param string $RegionIds <p>地域ID:资源所属地域ID</p>
+     * @param string $ProjectIds <p>项目ID:资源所属项目ID</p>
+     * @param string $PayModes <p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p>
+     * @param string $ActionTypes <p>交易类型，查询交易类型（请使用交易类型code入参）</p>
+     * @param string $Tags <p>分账标签</p>
+     * @param string $FeeType <p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
+     * @param string $PayerUins <p>查询成本分析数据的用户UIN</p>
+     * @param string $OwnerUins <p>使用资源的用户UIN</p>
+     * @param string $ConsumptionTypes <p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p>
      */
     function __construct()
     {

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountRemark(string $AccountRemark) 设置<p>账户备注</p>
  * @method string getAccountType() 获取<p>数据库账号类型，目前仅在创建sqlserver凭据场景会使用到，仅支持L3</p><p>枚举值：</p><ul><li>L3： 普通权限账号</li></ul>
  * @method void setAccountType(string $AccountType) 设置<p>数据库账号类型，目前仅在创建sqlserver凭据场景会使用到，仅支持L3</p><p>枚举值：</p><ul><li>L3： 普通权限账号</li></ul>
+ * @method integer getEncryptType() 获取<p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+ * @method void setEncryptType(integer $EncryptType) 设置<p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
  */
 class CreateProductSecretRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateProductSecretRequest extends AbstractModel
     public $AccountType;
 
     /**
+     * @var integer <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+     */
+    public $EncryptType;
+
+    /**
      * @param string $SecretName <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
      * @param string $UserNamePrefix <p>用户账号名前缀，由用户自行指定，长度限定在8个字符以内，<br>可选字符集包括：<br>数字字符：[0, 9]，<br>小写字符：[a, z]，<br>大写字符：[A, Z]，<br>特殊字符(全英文符号)：下划线(_)，<br>前缀必须以大写或小写字母开头。</p>
      * @param string $ProductName <p>凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。</p>
@@ -144,6 +151,7 @@ class CreateProductSecretRequest extends AbstractModel
      * @param string $KmsHsmClusterId <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
      * @param string $AccountRemark <p>账户备注</p>
      * @param string $AccountType <p>数据库账号类型，目前仅在创建sqlserver凭据场景会使用到，仅支持L3</p><p>枚举值：</p><ul><li>L3： 普通权限账号</li></ul>
+     * @param integer $EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -226,6 +234,10 @@ class CreateProductSecretRequest extends AbstractModel
 
         if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
             $this->AccountType = $param["AccountType"];
+        }
+
+        if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
+            $this->EncryptType = $param["EncryptType"];
         }
     }
 }

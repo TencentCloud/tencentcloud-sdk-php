@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 配置GooseFS参数
  *
- * @method string getId() 获取goosefs实例id
+ * @method string getId() 获取<p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置goosefs实例id
+ * @method void setId(string $Id) 设置<p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取GooseFS类型，包括GooseFS和GooseFSx
+ * @method string getType() 获取<p>GooseFS类型，包括GooseFS和GooseFSx</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置GooseFS类型，包括GooseFS和GooseFSx
+ * @method void setType(string $Type) 设置<p>GooseFS类型，包括GooseFS和GooseFSx</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPath() 获取GooseFSx实例需要挂载的路径
+ * @method string getPath() 获取<p>GooseFSx实例需要挂载的路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPath(string $Path) 设置GooseFSx实例需要挂载的路径
+ * @method void setPath(string $Path) 设置<p>GooseFSx实例需要挂载的路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNameSpace() 获取GooseFS命名空间
+ * @method string getNameSpace() 获取<p>GooseFS命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNameSpace(string $NameSpace) 设置GooseFS命名空间
+ * @method void setNameSpace(string $NameSpace) 设置<p>GooseFS命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMountOptions() 获取<p>客户端的挂载参数，逗号分隔的参数名</p>
+ * @method void setMountOptions(string $MountOptions) 设置<p>客户端的挂载参数，逗号分隔的参数名</p>
  */
 class GooseFS extends AbstractModel
 {
     /**
-     * @var string goosefs实例id
+     * @var string <p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string GooseFS类型，包括GooseFS和GooseFSx
+     * @var string <p>GooseFS类型，包括GooseFS和GooseFSx</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string GooseFSx实例需要挂载的路径
+     * @var string <p>GooseFSx实例需要挂载的路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
-     * @var string GooseFS命名空间
+     * @var string <p>GooseFS命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameSpace;
 
     /**
-     * @param string $Id goosefs实例id
+     * @var string <p>客户端的挂载参数，逗号分隔的参数名</p>
+     */
+    public $MountOptions;
+
+    /**
+     * @param string $Id <p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type GooseFS类型，包括GooseFS和GooseFSx
+     * @param string $Type <p>GooseFS类型，包括GooseFS和GooseFSx</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Path GooseFSx实例需要挂载的路径
+     * @param string $Path <p>GooseFSx实例需要挂载的路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NameSpace GooseFS命名空间
+     * @param string $NameSpace <p>GooseFS命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MountOptions <p>客户端的挂载参数，逗号分隔的参数名</p>
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class GooseFS extends AbstractModel
 
         if (array_key_exists("NameSpace",$param) and $param["NameSpace"] !== null) {
             $this->NameSpace = $param["NameSpace"];
+        }
+
+        if (array_key_exists("MountOptions",$param) and $param["MountOptions"] !== null) {
+            $this->MountOptions = $param["MountOptions"];
         }
     }
 }

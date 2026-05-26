@@ -20,38 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseWhiteConfig返回参数结构体
  *
- * @method VersionWhiteConfig getFlagShip() 获取旗舰版 配置信息
- * @method void setFlagShip(VersionWhiteConfig $FlagShip) 设置旗舰版 配置信息
- * @method VersionWhiteConfig getProfessional() 获取专业版 配置信息
- * @method void setProfessional(VersionWhiteConfig $Professional) 设置专业版 配置信息
- * @method VersionWhiteConfig getPrattWhitney() 获取轻量版 配置信息
- * @method void setPrattWhitney(VersionWhiteConfig $PrattWhitney) 设置轻量版 配置信息
- * @method VersionWhiteConfig getRASP() 获取重保授权包 配置信息
- * @method void setRASP(VersionWhiteConfig $RASP) 设置重保授权包 配置信息
+ * @method VersionWhiteConfig getFlagShip() 获取<p>旗舰版 配置信息</p>
+ * @method void setFlagShip(VersionWhiteConfig $FlagShip) 设置<p>旗舰版 配置信息</p>
+ * @method VersionWhiteConfig getProfessional() 获取<p>专业版 配置信息</p>
+ * @method void setProfessional(VersionWhiteConfig $Professional) 设置<p>专业版 配置信息</p>
+ * @method VersionWhiteConfig getPrattWhitney() 获取<p>轻量版 配置信息</p>
+ * @method void setPrattWhitney(VersionWhiteConfig $PrattWhitney) 设置<p>轻量版 配置信息</p>
+ * @method VersionWhiteConfig getRASP() 获取<p>重保授权包 配置信息</p>
+ * @method void setRASP(VersionWhiteConfig $RASP) 设置<p>重保授权包 配置信息</p>
+ * @method VersionWhiteConfig getLOG() 获取<p>日志分析配置信息</p>
+ * @method void setLOG(VersionWhiteConfig $LOG) 设置<p>日志分析配置信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLicenseWhiteConfigResponse extends AbstractModel
 {
     /**
-     * @var VersionWhiteConfig 旗舰版 配置信息
+     * @var VersionWhiteConfig <p>旗舰版 配置信息</p>
      */
     public $FlagShip;
 
     /**
-     * @var VersionWhiteConfig 专业版 配置信息
+     * @var VersionWhiteConfig <p>专业版 配置信息</p>
      */
     public $Professional;
 
     /**
-     * @var VersionWhiteConfig 轻量版 配置信息
+     * @var VersionWhiteConfig <p>轻量版 配置信息</p>
      */
     public $PrattWhitney;
 
     /**
-     * @var VersionWhiteConfig 重保授权包 配置信息
+     * @var VersionWhiteConfig <p>重保授权包 配置信息</p>
      */
     public $RASP;
+
+    /**
+     * @var VersionWhiteConfig <p>日志分析配置信息</p>
+     */
+    public $LOG;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +66,11 @@ class DescribeLicenseWhiteConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param VersionWhiteConfig $FlagShip 旗舰版 配置信息
-     * @param VersionWhiteConfig $Professional 专业版 配置信息
-     * @param VersionWhiteConfig $PrattWhitney 轻量版 配置信息
-     * @param VersionWhiteConfig $RASP 重保授权包 配置信息
+     * @param VersionWhiteConfig $FlagShip <p>旗舰版 配置信息</p>
+     * @param VersionWhiteConfig $Professional <p>专业版 配置信息</p>
+     * @param VersionWhiteConfig $PrattWhitney <p>轻量版 配置信息</p>
+     * @param VersionWhiteConfig $RASP <p>重保授权包 配置信息</p>
+     * @param VersionWhiteConfig $LOG <p>日志分析配置信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -96,6 +104,11 @@ class DescribeLicenseWhiteConfigResponse extends AbstractModel
         if (array_key_exists("RASP",$param) and $param["RASP"] !== null) {
             $this->RASP = new VersionWhiteConfig();
             $this->RASP->deserialize($param["RASP"]);
+        }
+
+        if (array_key_exists("LOG",$param) and $param["LOG"] !== null) {
+            $this->LOG = new VersionWhiteConfig();
+            $this->LOG->deserialize($param["LOG"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

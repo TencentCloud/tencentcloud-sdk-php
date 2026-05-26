@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 语音全文识别片段。
  *
- * @method float getConfidence() 获取识别片段置信度。取值：0~100。
- * @method void setConfidence(float $Confidence) 设置识别片段置信度。取值：0~100。
- * @method float getStartTimeOffset() 获取识别片段起始的偏移时间，单位：秒。
- * @method void setStartTimeOffset(float $StartTimeOffset) 设置识别片段起始的偏移时间，单位：秒。
- * @method float getEndTimeOffset() 获取识别片段终止的偏移时间，单位：秒。
- * @method void setEndTimeOffset(float $EndTimeOffset) 设置识别片段终止的偏移时间，单位：秒。
- * @method string getText() 获取识别文本。
- * @method void setText(string $Text) 设置识别文本。
- * @method array getWordlist() 获取字词时间戳信息。
- * @method void setWordlist(array $Wordlist) 设置字词时间戳信息。
+ * @method float getConfidence() 获取<p>识别片段置信度。取值：0~100。</p>
+ * @method void setConfidence(float $Confidence) 设置<p>识别片段置信度。取值：0~100。</p>
+ * @method float getStartTimeOffset() 获取<p>识别片段起始的偏移时间，单位：秒。</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) 设置<p>识别片段起始的偏移时间，单位：秒。</p>
+ * @method float getEndTimeOffset() 获取<p>识别片段终止的偏移时间，单位：秒。</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) 设置<p>识别片段终止的偏移时间，单位：秒。</p>
+ * @method string getText() 获取<p>识别文本。</p>
+ * @method void setText(string $Text) 设置<p>识别文本。</p>
+ * @method array getWordlist() 获取<p>字词时间戳信息。</p>
+ * @method void setWordlist(array $Wordlist) 设置<p>字词时间戳信息。</p>
  */
 class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float 识别片段置信度。取值：0~100。
+     * @var float <p>识别片段置信度。取值：0~100。</p>
      */
     public $Confidence;
 
     /**
-     * @var float 识别片段起始的偏移时间，单位：秒。
+     * @var float <p>识别片段起始的偏移时间，单位：秒。</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 识别片段终止的偏移时间，单位：秒。
+     * @var float <p>识别片段终止的偏移时间，单位：秒。</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @var string 识别文本。
+     * @var string <p>识别文本。</p>
      */
     public $Text;
 
     /**
-     * @var array 字词时间戳信息。
+     * @var array <p>字词时间戳信息。</p>
      */
     public $Wordlist;
 
     /**
-     * @param float $Confidence 识别片段置信度。取值：0~100。
-     * @param float $StartTimeOffset 识别片段起始的偏移时间，单位：秒。
-     * @param float $EndTimeOffset 识别片段终止的偏移时间，单位：秒。
-     * @param string $Text 识别文本。
-     * @param array $Wordlist 字词时间戳信息。
+     * @param float $Confidence <p>识别片段置信度。取值：0~100。</p>
+     * @param float $StartTimeOffset <p>识别片段起始的偏移时间，单位：秒。</p>
+     * @param float $EndTimeOffset <p>识别片段终止的偏移时间，单位：秒。</p>
+     * @param string $Text <p>识别文本。</p>
+     * @param array $Wordlist <p>字词时间戳信息。</p>
      */
     function __construct()
     {

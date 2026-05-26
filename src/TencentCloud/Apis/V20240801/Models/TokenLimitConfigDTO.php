@@ -20,33 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Token限流配置
  *
- * @method integer getLimitRequestBody() 获取单次请求上限，k
+ * @method string getType() 获取<p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLimitRequestBody(integer $LimitRequestBody) 设置单次请求上限，k
+ * @method void setType(string $Type) 设置<p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLimitWindows() 获取累次token总量消耗上限
+ * @method integer getLimitRequestBody() 获取<p>单次请求上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLimitWindows(array $LimitWindows) 设置累次token总量消耗上限
+ * @method void setLimitRequestBody(integer $LimitRequestBody) 设置<p>单次请求上限，k</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLimitWindows() 获取<p>累次token总量消耗上限</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLimitWindows(array $LimitWindows) 设置<p>累次token总量消耗上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TokenLimitConfigDTO extends AbstractModel
 {
     /**
-     * @var integer 单次请求上限，k
+     * @var string <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
+     * @var integer <p>单次请求上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LimitRequestBody;
 
     /**
-     * @var array 累次token总量消耗上限
+     * @var array <p>累次token总量消耗上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LimitWindows;
 
     /**
-     * @param integer $LimitRequestBody 单次请求上限，k
+     * @param string $Type <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LimitWindows 累次token总量消耗上限
+     * @param integer $LimitRequestBody <p>单次请求上限，k</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LimitWindows <p>累次token总量消耗上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,6 +74,10 @@ class TokenLimitConfigDTO extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
         if (array_key_exists("LimitRequestBody",$param) and $param["LimitRequestBody"] !== null) {
             $this->LimitRequestBody = $param["LimitRequestBody"];
         }

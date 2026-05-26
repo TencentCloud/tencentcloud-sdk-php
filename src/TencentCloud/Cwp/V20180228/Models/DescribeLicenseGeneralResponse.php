@@ -20,164 +20,185 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseGeneral返回参数结构体
  *
- * @method integer getLicenseCnt() 获取总授权数 (包含隔离,过期等不可用状态)
- * @method void setLicenseCnt(integer $LicenseCnt) 设置总授权数 (包含隔离,过期等不可用状态)
- * @method integer getAvailableLicenseCnt() 获取可用授权数
- * @method void setAvailableLicenseCnt(integer $AvailableLicenseCnt) 设置可用授权数
- * @method integer getAvailableProVersionLicenseCnt() 获取可用专业版授权数(包含后付费).
- * @method void setAvailableProVersionLicenseCnt(integer $AvailableProVersionLicenseCnt) 设置可用专业版授权数(包含后付费).
- * @method integer getAvailableFlagshipVersionLicenseCnt() 获取可用旗舰版授权数
- * @method void setAvailableFlagshipVersionLicenseCnt(integer $AvailableFlagshipVersionLicenseCnt) 设置可用旗舰版授权数
- * @method integer getNearExpiryLicenseCnt() 获取即将到期授权数 (15天内到期的)
- * @method void setNearExpiryLicenseCnt(integer $NearExpiryLicenseCnt) 设置即将到期授权数 (15天内到期的)
- * @method integer getExpireLicenseCnt() 获取已到期授权数(不包含已删除的记录)
- * @method void setExpireLicenseCnt(integer $ExpireLicenseCnt) 设置已到期授权数(不包含已删除的记录)
- * @method boolean getAutoOpenStatus() 获取自动升级开关状态,默认 false,  true 开启, false 关闭
- * @method void setAutoOpenStatus(boolean $AutoOpenStatus) 设置自动升级开关状态,默认 false,  true 开启, false 关闭
- * @method string getProtectType() 获取PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
- * @method void setProtectType(string $ProtectType) 设置PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
- * @method boolean getIsOpenStatusHistory() 获取历史是否开通过自动升级开关
- * @method void setIsOpenStatusHistory(boolean $IsOpenStatusHistory) 设置历史是否开通过自动升级开关
- * @method integer getUsedLicenseCnt() 获取已使用授权数
- * @method void setUsedLicenseCnt(integer $UsedLicenseCnt) 设置已使用授权数
- * @method integer getNotExpiredLicenseCnt() 获取未到期授权数
- * @method void setNotExpiredLicenseCnt(integer $NotExpiredLicenseCnt) 设置未到期授权数
- * @method integer getFlagshipVersionLicenseCnt() 获取旗舰版总授权数(有效订单)
- * @method void setFlagshipVersionLicenseCnt(integer $FlagshipVersionLicenseCnt) 设置旗舰版总授权数(有效订单)
- * @method integer getProVersionLicenseCnt() 获取专业版总授权数(有效订单)
- * @method void setProVersionLicenseCnt(integer $ProVersionLicenseCnt) 设置专业版总授权数(有效订单)
- * @method integer getCwpVersionLicenseCnt() 获取轻量版总授权数(有效订单的授权数)
- * @method void setCwpVersionLicenseCnt(integer $CwpVersionLicenseCnt) 设置轻量版总授权数(有效订单的授权数)
- * @method integer getAvailableLHLicenseCnt() 获取可用惠普版授权数
- * @method void setAvailableLHLicenseCnt(integer $AvailableLHLicenseCnt) 设置可用惠普版授权数
- * @method boolean getAutoRepurchaseSwitch() 获取自动加购开关, true 开启, false 关闭
- * @method void setAutoRepurchaseSwitch(boolean $AutoRepurchaseSwitch) 设置自动加购开关, true 开启, false 关闭
- * @method boolean getAutoRepurchaseRenewSwitch() 获取自动加购订单是否自动续费 ,true 开启, false 关闭
- * @method void setAutoRepurchaseRenewSwitch(boolean $AutoRepurchaseRenewSwitch) 设置自动加购订单是否自动续费 ,true 开启, false 关闭
- * @method integer getDestroyOrderNum() 获取已销毁订单数
- * @method void setDestroyOrderNum(integer $DestroyOrderNum) 设置已销毁订单数
- * @method boolean getRepurchaseRenewSwitch() 获取自动加购是否自动续费开关,true 开启,false 关闭
- * @method void setRepurchaseRenewSwitch(boolean $RepurchaseRenewSwitch) 设置自动加购是否自动续费开关,true 开启,false 关闭
- * @method boolean getAutoBindRaspSwitch() 获取是否自动新增机器绑定rasp防护,false 关闭 true 开启
- * @method void setAutoBindRaspSwitch(boolean $AutoBindRaspSwitch) 设置是否自动新增机器绑定rasp防护,false 关闭 true 开启
- * @method boolean getAutoOpenRaspSwitch() 获取是否自动新增机器开启rasp防护,false 关闭 true 开启
- * @method void setAutoOpenRaspSwitch(boolean $AutoOpenRaspSwitch) 设置是否自动新增机器开启rasp防护,false 关闭 true 开启
- * @method boolean getAutoDowngradeSwitch() 获取是否自动缩容开关开启
- * @method void setAutoDowngradeSwitch(boolean $AutoDowngradeSwitch) 设置是否自动缩容开关开启
+ * @method integer getLicenseCnt() 获取<p>总授权数 (包含隔离,过期等不可用状态)</p>
+ * @method void setLicenseCnt(integer $LicenseCnt) 设置<p>总授权数 (包含隔离,过期等不可用状态)</p>
+ * @method integer getAvailableLicenseCnt() 获取<p>可用授权数</p>
+ * @method void setAvailableLicenseCnt(integer $AvailableLicenseCnt) 设置<p>可用授权数</p>
+ * @method integer getAvailableProVersionLicenseCnt() 获取<p>可用专业版授权数(包含后付费).</p>
+ * @method void setAvailableProVersionLicenseCnt(integer $AvailableProVersionLicenseCnt) 设置<p>可用专业版授权数(包含后付费).</p>
+ * @method integer getAvailableFlagshipVersionLicenseCnt() 获取<p>可用旗舰版授权数</p>
+ * @method void setAvailableFlagshipVersionLicenseCnt(integer $AvailableFlagshipVersionLicenseCnt) 设置<p>可用旗舰版授权数</p>
+ * @method integer getNearExpiryLicenseCnt() 获取<p>即将到期授权数 (15天内到期的)</p>
+ * @method void setNearExpiryLicenseCnt(integer $NearExpiryLicenseCnt) 设置<p>即将到期授权数 (15天内到期的)</p>
+ * @method integer getExpireLicenseCnt() 获取<p>已到期授权数(不包含已删除的记录)</p>
+ * @method void setExpireLicenseCnt(integer $ExpireLicenseCnt) 设置<p>已到期授权数(不包含已删除的记录)</p>
+ * @method boolean getAutoOpenStatus() 获取<p>自动升级开关状态,默认 false,  true 开启, false 关闭</p>
+ * @method void setAutoOpenStatus(boolean $AutoOpenStatus) 设置<p>自动升级开关状态,默认 false,  true 开启, false 关闭</p>
+ * @method string getProtectType() 获取<p>PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费</p>
+ * @method void setProtectType(string $ProtectType) 设置<p>PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费</p>
+ * @method boolean getIsOpenStatusHistory() 获取<p>历史是否开通过自动升级开关</p>
+ * @method void setIsOpenStatusHistory(boolean $IsOpenStatusHistory) 设置<p>历史是否开通过自动升级开关</p>
+ * @method integer getUsedLicenseCnt() 获取<p>已使用授权数</p>
+ * @method void setUsedLicenseCnt(integer $UsedLicenseCnt) 设置<p>已使用授权数</p>
+ * @method integer getNotExpiredLicenseCnt() 获取<p>未到期授权数</p>
+ * @method void setNotExpiredLicenseCnt(integer $NotExpiredLicenseCnt) 设置<p>未到期授权数</p>
+ * @method integer getFlagshipVersionLicenseCnt() 获取<p>旗舰版总授权数(有效订单)</p>
+ * @method void setFlagshipVersionLicenseCnt(integer $FlagshipVersionLicenseCnt) 设置<p>旗舰版总授权数(有效订单)</p>
+ * @method integer getProVersionLicenseCnt() 获取<p>专业版总授权数(有效订单)</p>
+ * @method void setProVersionLicenseCnt(integer $ProVersionLicenseCnt) 设置<p>专业版总授权数(有效订单)</p>
+ * @method integer getCwpVersionLicenseCnt() 获取<p>轻量版总授权数(有效订单的授权数)</p>
+ * @method void setCwpVersionLicenseCnt(integer $CwpVersionLicenseCnt) 设置<p>轻量版总授权数(有效订单的授权数)</p>
+ * @method integer getAvailableLHLicenseCnt() 获取<p>可用惠普版授权数</p>
+ * @method void setAvailableLHLicenseCnt(integer $AvailableLHLicenseCnt) 设置<p>可用惠普版授权数</p>
+ * @method boolean getAutoRepurchaseSwitch() 获取<p>自动加购开关, true 开启, false 关闭</p>
+ * @method void setAutoRepurchaseSwitch(boolean $AutoRepurchaseSwitch) 设置<p>自动加购开关, true 开启, false 关闭</p>
+ * @method boolean getAutoRepurchaseRenewSwitch() 获取<p>自动加购订单是否自动续费 ,true 开启, false 关闭</p>
+ * @method void setAutoRepurchaseRenewSwitch(boolean $AutoRepurchaseRenewSwitch) 设置<p>自动加购订单是否自动续费 ,true 开启, false 关闭</p>
+ * @method integer getDestroyOrderNum() 获取<p>已销毁订单数</p>
+ * @method void setDestroyOrderNum(integer $DestroyOrderNum) 设置<p>已销毁订单数</p>
+ * @method boolean getRepurchaseRenewSwitch() 获取<p>自动加购是否自动续费开关,true 开启,false 关闭</p>
+ * @method void setRepurchaseRenewSwitch(boolean $RepurchaseRenewSwitch) 设置<p>自动加购是否自动续费开关,true 开启,false 关闭</p>
+ * @method boolean getAutoBindRaspSwitch() 获取<p>是否自动新增机器绑定rasp防护,false 关闭 true 开启</p>
+ * @method void setAutoBindRaspSwitch(boolean $AutoBindRaspSwitch) 设置<p>是否自动新增机器绑定rasp防护,false 关闭 true 开启</p>
+ * @method boolean getAutoOpenRaspSwitch() 获取<p>是否自动新增机器开启rasp防护,false 关闭 true 开启</p>
+ * @method void setAutoOpenRaspSwitch(boolean $AutoOpenRaspSwitch) 设置<p>是否自动新增机器开启rasp防护,false 关闭 true 开启</p>
+ * @method boolean getAutoDowngradeSwitch() 获取<p>是否自动缩容开关开启</p>
+ * @method void setAutoDowngradeSwitch(boolean $AutoDowngradeSwitch) 设置<p>是否自动缩容开关开启</p>
+ * @method integer getAvailableAISecurityLicenseCnt() 获取<p>可使用的AI防护版授权数</p>
+ * @method void setAvailableAISecurityLicenseCnt(integer $AvailableAISecurityLicenseCnt) 设置<p>可使用的AI防护版授权数</p>
+ * @method integer getAISecurityVersionLicenseCnt() 获取<p>AI 防护版总授权数</p>
+ * @method void setAISecurityVersionLicenseCnt(integer $AISecurityVersionLicenseCnt) 设置<p>AI 防护版总授权数</p>
+ * @method integer getApplicationAvailableLicenseCnt() 获取<p>应用防护授权数+旗舰版授权数相加后的可使用授权数</p>
+ * @method void setApplicationAvailableLicenseCnt(integer $ApplicationAvailableLicenseCnt) 设置<p>应用防护授权数+旗舰版授权数相加后的可使用授权数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLicenseGeneralResponse extends AbstractModel
 {
     /**
-     * @var integer 总授权数 (包含隔离,过期等不可用状态)
+     * @var integer <p>总授权数 (包含隔离,过期等不可用状态)</p>
      */
     public $LicenseCnt;
 
     /**
-     * @var integer 可用授权数
+     * @var integer <p>可用授权数</p>
      */
     public $AvailableLicenseCnt;
 
     /**
-     * @var integer 可用专业版授权数(包含后付费).
+     * @var integer <p>可用专业版授权数(包含后付费).</p>
      */
     public $AvailableProVersionLicenseCnt;
 
     /**
-     * @var integer 可用旗舰版授权数
+     * @var integer <p>可用旗舰版授权数</p>
      */
     public $AvailableFlagshipVersionLicenseCnt;
 
     /**
-     * @var integer 即将到期授权数 (15天内到期的)
+     * @var integer <p>即将到期授权数 (15天内到期的)</p>
      */
     public $NearExpiryLicenseCnt;
 
     /**
-     * @var integer 已到期授权数(不包含已删除的记录)
+     * @var integer <p>已到期授权数(不包含已删除的记录)</p>
      */
     public $ExpireLicenseCnt;
 
     /**
-     * @var boolean 自动升级开关状态,默认 false,  true 开启, false 关闭
+     * @var boolean <p>自动升级开关状态,默认 false,  true 开启, false 关闭</p>
      */
     public $AutoOpenStatus;
 
     /**
-     * @var string PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
+     * @var string <p>PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费</p>
      */
     public $ProtectType;
 
     /**
-     * @var boolean 历史是否开通过自动升级开关
+     * @var boolean <p>历史是否开通过自动升级开关</p>
      */
     public $IsOpenStatusHistory;
 
     /**
-     * @var integer 已使用授权数
+     * @var integer <p>已使用授权数</p>
      */
     public $UsedLicenseCnt;
 
     /**
-     * @var integer 未到期授权数
+     * @var integer <p>未到期授权数</p>
      */
     public $NotExpiredLicenseCnt;
 
     /**
-     * @var integer 旗舰版总授权数(有效订单)
+     * @var integer <p>旗舰版总授权数(有效订单)</p>
      */
     public $FlagshipVersionLicenseCnt;
 
     /**
-     * @var integer 专业版总授权数(有效订单)
+     * @var integer <p>专业版总授权数(有效订单)</p>
      */
     public $ProVersionLicenseCnt;
 
     /**
-     * @var integer 轻量版总授权数(有效订单的授权数)
+     * @var integer <p>轻量版总授权数(有效订单的授权数)</p>
      */
     public $CwpVersionLicenseCnt;
 
     /**
-     * @var integer 可用惠普版授权数
+     * @var integer <p>可用惠普版授权数</p>
      */
     public $AvailableLHLicenseCnt;
 
     /**
-     * @var boolean 自动加购开关, true 开启, false 关闭
+     * @var boolean <p>自动加购开关, true 开启, false 关闭</p>
      */
     public $AutoRepurchaseSwitch;
 
     /**
-     * @var boolean 自动加购订单是否自动续费 ,true 开启, false 关闭
+     * @var boolean <p>自动加购订单是否自动续费 ,true 开启, false 关闭</p>
      */
     public $AutoRepurchaseRenewSwitch;
 
     /**
-     * @var integer 已销毁订单数
+     * @var integer <p>已销毁订单数</p>
      */
     public $DestroyOrderNum;
 
     /**
-     * @var boolean 自动加购是否自动续费开关,true 开启,false 关闭
+     * @var boolean <p>自动加购是否自动续费开关,true 开启,false 关闭</p>
      */
     public $RepurchaseRenewSwitch;
 
     /**
-     * @var boolean 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+     * @var boolean <p>是否自动新增机器绑定rasp防护,false 关闭 true 开启</p>
      */
     public $AutoBindRaspSwitch;
 
     /**
-     * @var boolean 是否自动新增机器开启rasp防护,false 关闭 true 开启
+     * @var boolean <p>是否自动新增机器开启rasp防护,false 关闭 true 开启</p>
      */
     public $AutoOpenRaspSwitch;
 
     /**
-     * @var boolean 是否自动缩容开关开启
+     * @var boolean <p>是否自动缩容开关开启</p>
      */
     public $AutoDowngradeSwitch;
+
+    /**
+     * @var integer <p>可使用的AI防护版授权数</p>
+     */
+    public $AvailableAISecurityLicenseCnt;
+
+    /**
+     * @var integer <p>AI 防护版总授权数</p>
+     */
+    public $AISecurityVersionLicenseCnt;
+
+    /**
+     * @var integer <p>应用防护授权数+旗舰版授权数相加后的可使用授权数</p>
+     */
+    public $ApplicationAvailableLicenseCnt;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -185,28 +206,31 @@ class DescribeLicenseGeneralResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $LicenseCnt 总授权数 (包含隔离,过期等不可用状态)
-     * @param integer $AvailableLicenseCnt 可用授权数
-     * @param integer $AvailableProVersionLicenseCnt 可用专业版授权数(包含后付费).
-     * @param integer $AvailableFlagshipVersionLicenseCnt 可用旗舰版授权数
-     * @param integer $NearExpiryLicenseCnt 即将到期授权数 (15天内到期的)
-     * @param integer $ExpireLicenseCnt 已到期授权数(不包含已删除的记录)
-     * @param boolean $AutoOpenStatus 自动升级开关状态,默认 false,  true 开启, false 关闭
-     * @param string $ProtectType PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
-     * @param boolean $IsOpenStatusHistory 历史是否开通过自动升级开关
-     * @param integer $UsedLicenseCnt 已使用授权数
-     * @param integer $NotExpiredLicenseCnt 未到期授权数
-     * @param integer $FlagshipVersionLicenseCnt 旗舰版总授权数(有效订单)
-     * @param integer $ProVersionLicenseCnt 专业版总授权数(有效订单)
-     * @param integer $CwpVersionLicenseCnt 轻量版总授权数(有效订单的授权数)
-     * @param integer $AvailableLHLicenseCnt 可用惠普版授权数
-     * @param boolean $AutoRepurchaseSwitch 自动加购开关, true 开启, false 关闭
-     * @param boolean $AutoRepurchaseRenewSwitch 自动加购订单是否自动续费 ,true 开启, false 关闭
-     * @param integer $DestroyOrderNum 已销毁订单数
-     * @param boolean $RepurchaseRenewSwitch 自动加购是否自动续费开关,true 开启,false 关闭
-     * @param boolean $AutoBindRaspSwitch 是否自动新增机器绑定rasp防护,false 关闭 true 开启
-     * @param boolean $AutoOpenRaspSwitch 是否自动新增机器开启rasp防护,false 关闭 true 开启
-     * @param boolean $AutoDowngradeSwitch 是否自动缩容开关开启
+     * @param integer $LicenseCnt <p>总授权数 (包含隔离,过期等不可用状态)</p>
+     * @param integer $AvailableLicenseCnt <p>可用授权数</p>
+     * @param integer $AvailableProVersionLicenseCnt <p>可用专业版授权数(包含后付费).</p>
+     * @param integer $AvailableFlagshipVersionLicenseCnt <p>可用旗舰版授权数</p>
+     * @param integer $NearExpiryLicenseCnt <p>即将到期授权数 (15天内到期的)</p>
+     * @param integer $ExpireLicenseCnt <p>已到期授权数(不包含已删除的记录)</p>
+     * @param boolean $AutoOpenStatus <p>自动升级开关状态,默认 false,  true 开启, false 关闭</p>
+     * @param string $ProtectType <p>PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费</p>
+     * @param boolean $IsOpenStatusHistory <p>历史是否开通过自动升级开关</p>
+     * @param integer $UsedLicenseCnt <p>已使用授权数</p>
+     * @param integer $NotExpiredLicenseCnt <p>未到期授权数</p>
+     * @param integer $FlagshipVersionLicenseCnt <p>旗舰版总授权数(有效订单)</p>
+     * @param integer $ProVersionLicenseCnt <p>专业版总授权数(有效订单)</p>
+     * @param integer $CwpVersionLicenseCnt <p>轻量版总授权数(有效订单的授权数)</p>
+     * @param integer $AvailableLHLicenseCnt <p>可用惠普版授权数</p>
+     * @param boolean $AutoRepurchaseSwitch <p>自动加购开关, true 开启, false 关闭</p>
+     * @param boolean $AutoRepurchaseRenewSwitch <p>自动加购订单是否自动续费 ,true 开启, false 关闭</p>
+     * @param integer $DestroyOrderNum <p>已销毁订单数</p>
+     * @param boolean $RepurchaseRenewSwitch <p>自动加购是否自动续费开关,true 开启,false 关闭</p>
+     * @param boolean $AutoBindRaspSwitch <p>是否自动新增机器绑定rasp防护,false 关闭 true 开启</p>
+     * @param boolean $AutoOpenRaspSwitch <p>是否自动新增机器开启rasp防护,false 关闭 true 开启</p>
+     * @param boolean $AutoDowngradeSwitch <p>是否自动缩容开关开启</p>
+     * @param integer $AvailableAISecurityLicenseCnt <p>可使用的AI防护版授权数</p>
+     * @param integer $AISecurityVersionLicenseCnt <p>AI 防护版总授权数</p>
+     * @param integer $ApplicationAvailableLicenseCnt <p>应用防护授权数+旗舰版授权数相加后的可使用授权数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -308,6 +332,18 @@ class DescribeLicenseGeneralResponse extends AbstractModel
 
         if (array_key_exists("AutoDowngradeSwitch",$param) and $param["AutoDowngradeSwitch"] !== null) {
             $this->AutoDowngradeSwitch = $param["AutoDowngradeSwitch"];
+        }
+
+        if (array_key_exists("AvailableAISecurityLicenseCnt",$param) and $param["AvailableAISecurityLicenseCnt"] !== null) {
+            $this->AvailableAISecurityLicenseCnt = $param["AvailableAISecurityLicenseCnt"];
+        }
+
+        if (array_key_exists("AISecurityVersionLicenseCnt",$param) and $param["AISecurityVersionLicenseCnt"] !== null) {
+            $this->AISecurityVersionLicenseCnt = $param["AISecurityVersionLicenseCnt"];
+        }
+
+        if (array_key_exists("ApplicationAvailableLicenseCnt",$param) and $param["ApplicationAvailableLicenseCnt"] !== null) {
+            $this->ApplicationAvailableLicenseCnt = $param["ApplicationAvailableLicenseCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

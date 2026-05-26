@@ -136,7 +136,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterSchedulerPolicyResponse DescribeClusterSchedulerPolicy(Models\DescribeClusterSchedulerPolicyRequest $req) 查询集群调度策略
  * @method Models\DescribeClusterSecurityResponse DescribeClusterSecurity(Models\DescribeClusterSecurityRequest $req) 集群的密钥信息
  * @method Models\DescribeClusterStatusResponse DescribeClusterStatus(Models\DescribeClusterStatusRequest $req) 查看集群状态列表
- * @method Models\DescribeClusterVirtualNodeResponse DescribeClusterVirtualNode(Models\DescribeClusterVirtualNodeRequest $req) 查看超级节点列表
+ * @method Models\DescribeClusterVirtualNodeResponse DescribeClusterVirtualNode(Models\DescribeClusterVirtualNodeRequest $req) 查看超级节点列表，仅支持TKE标准集群
  * @method Models\DescribeClusterVirtualNodePoolsResponse DescribeClusterVirtualNodePools(Models\DescribeClusterVirtualNodePoolsRequest $req) 查看超级节点池列表
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 查询集群列表
  * @method Models\DescribeControlPlaneLogsResponse DescribeControlPlaneLogs(Models\DescribeControlPlaneLogsRequest $req) 查询插件日志采集配置

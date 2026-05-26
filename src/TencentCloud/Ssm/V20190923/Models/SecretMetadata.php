@@ -20,178 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 凭据的基础信息
  *
- * @method string getSecretName() 获取凭据名称
- * @method void setSecretName(string $SecretName) 设置凭据名称
- * @method string getDescription() 获取凭据的描述信息
- * @method void setDescription(string $Description) 设置凭据的描述信息
- * @method string getKmsKeyId() 获取用于加密凭据的KMS KeyId
- * @method void setKmsKeyId(string $KmsKeyId) 设置用于加密凭据的KMS KeyId
- * @method integer getCreateUin() 获取创建者UIN
- * @method void setCreateUin(integer $CreateUin) 设置创建者UIN
- * @method string getStatus() 获取凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
- * @method void setStatus(string $Status) 设置凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
- * @method integer getDeleteTime() 获取凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
- * @method void setDeleteTime(integer $DeleteTime) 设置凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
- * @method integer getCreateTime() 获取凭据创建时间，unix时间戳
- * @method void setCreateTime(integer $CreateTime) 设置凭据创建时间，unix时间戳
- * @method string getKmsKeyType() 获取用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
- * @method void setKmsKeyType(string $KmsKeyType) 设置用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
- * @method integer getRotationStatus() 获取1:--开启轮转；0--禁止轮转
- * @method void setRotationStatus(integer $RotationStatus) 设置1:--开启轮转；0--禁止轮转
- * @method integer getNextRotationTime() 获取下一次轮转开始时间，uinx 时间戳
- * @method void setNextRotationTime(integer $NextRotationTime) 设置下一次轮转开始时间，uinx 时间戳
- * @method integer getSecretType() 获取0 -- 用户自定义凭据；
-1 -- 云产品凭据；
-2 -- SSH密钥对凭据；
-3 -- 云API密钥对凭据；
-4 -- Redis类型凭据；
- * @method void setSecretType(integer $SecretType) 设置0 -- 用户自定义凭据；
-1 -- 云产品凭据；
-2 -- SSH密钥对凭据；
-3 -- 云API密钥对凭据；
-4 -- Redis类型凭据；
- * @method string getProductName() 获取云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
- * @method void setProductName(string $ProductName) 设置云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
- * @method string getResourceName() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
- * @method void setResourceName(string $ResourceName) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
- * @method integer getProjectID() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
- * @method void setProjectID(integer $ProjectID) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
- * @method array getAssociatedInstanceIDs() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
- * @method void setAssociatedInstanceIDs(array $AssociatedInstanceIDs) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
- * @method integer getTargetUin() 获取当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
- * @method void setTargetUin(integer $TargetUin) 设置当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
- * @method integer getRotationFrequency() 获取轮转的频率，以天作为单位，在轮转开启状态下生效。
- * @method void setRotationFrequency(integer $RotationFrequency) 设置轮转的频率，以天作为单位，在轮转开启状态下生效。
- * @method string getResourceID() 获取云产品凭据对应的云产品实例 ID 号。
- * @method void setResourceID(string $ResourceID) 设置云产品凭据对应的云产品实例 ID 号。
- * @method string getRotationBeginTime() 获取用户指定的轮转开始时间。
- * @method void setRotationBeginTime(string $RotationBeginTime) 设置用户指定的轮转开始时间。
+ * @method string getSecretName() 获取<p>凭据名称</p>
+ * @method void setSecretName(string $SecretName) 设置<p>凭据名称</p>
+ * @method string getDescription() 获取<p>凭据的描述信息</p>
+ * @method void setDescription(string $Description) 设置<p>凭据的描述信息</p>
+ * @method string getKmsKeyId() 获取<p>用于加密凭据的KMS KeyId</p>
+ * @method void setKmsKeyId(string $KmsKeyId) 设置<p>用于加密凭据的KMS KeyId</p>
+ * @method integer getCreateUin() 获取<p>创建者UIN</p>
+ * @method void setCreateUin(integer $CreateUin) 设置<p>创建者UIN</p>
+ * @method string getStatus() 获取<p>凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed</p>
+ * @method void setStatus(string $Status) 设置<p>凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed</p>
+ * @method integer getDeleteTime() 获取<p>凭据删除日期，对于status为PendingDelete 的有效，unix时间戳</p>
+ * @method void setDeleteTime(integer $DeleteTime) 设置<p>凭据删除日期，对于status为PendingDelete 的有效，unix时间戳</p>
+ * @method integer getCreateTime() 获取<p>凭据创建时间，unix时间戳</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>凭据创建时间，unix时间戳</p>
+ * @method string getKmsKeyType() 获取<p>用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥</p>
+ * @method void setKmsKeyType(string $KmsKeyType) 设置<p>用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥</p>
+ * @method integer getRotationStatus() 获取<p>1:--开启轮转；0--禁止轮转</p>
+ * @method void setRotationStatus(integer $RotationStatus) 设置<p>1:--开启轮转；0--禁止轮转</p>
+ * @method integer getNextRotationTime() 获取<p>下一次轮转开始时间，uinx 时间戳</p>
+ * @method void setNextRotationTime(integer $NextRotationTime) 设置<p>下一次轮转开始时间，uinx 时间戳</p>
+ * @method integer getSecretType() 获取<p>0 -- 用户自定义凭据；<br>1 -- 云产品凭据；<br>2 -- SSH密钥对凭据；<br>3 -- 云API密钥对凭据；<br>4 -- Redis类型凭据；</p>
+ * @method void setSecretType(integer $SecretType) 设置<p>0 -- 用户自定义凭据；<br>1 -- 云产品凭据；<br>2 -- SSH密钥对凭据；<br>3 -- 云API密钥对凭据；<br>4 -- Redis类型凭据；</p>
+ * @method string getProductName() 获取<p>云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效</p>
+ * @method void setProductName(string $ProductName) 设置<p>云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效</p>
+ * @method string getResourceName() 获取<p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。</p>
+ * @method void setResourceName(string $ResourceName) 设置<p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。</p>
+ * @method integer getProjectID() 获取<p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。</p>
+ * @method void setProjectID(integer $ProjectID) 设置<p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。</p>
+ * @method array getAssociatedInstanceIDs() 获取<p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。</p>
+ * @method void setAssociatedInstanceIDs(array $AssociatedInstanceIDs) 设置<p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。</p>
+ * @method integer getTargetUin() 获取<p>当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。</p>
+ * @method void setTargetUin(integer $TargetUin) 设置<p>当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。</p>
+ * @method integer getRotationFrequency() 获取<p>轮转的频率，以天作为单位，在轮转开启状态下生效。</p>
+ * @method void setRotationFrequency(integer $RotationFrequency) 设置<p>轮转的频率，以天作为单位，在轮转开启状态下生效。</p>
+ * @method string getResourceID() 获取<p>云产品凭据对应的云产品实例 ID 号。</p>
+ * @method void setResourceID(string $ResourceID) 设置<p>云产品凭据对应的云产品实例 ID 号。</p>
+ * @method string getRotationBeginTime() 获取<p>用户指定的轮转开始时间。</p>
+ * @method void setRotationBeginTime(string $RotationBeginTime) 设置<p>用户指定的轮转开始时间。</p>
+ * @method integer getEncryptType() 获取<p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+ * @method void setEncryptType(integer $EncryptType) 设置<p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+ * @method boolean getEncryptSwitching() 获取<p>凭据密钥加密切换中</p>
+ * @method void setEncryptSwitching(boolean $EncryptSwitching) 设置<p>凭据密钥加密切换中</p>
  */
 class SecretMetadata extends AbstractModel
 {
     /**
-     * @var string 凭据名称
+     * @var string <p>凭据名称</p>
      */
     public $SecretName;
 
     /**
-     * @var string 凭据的描述信息
+     * @var string <p>凭据的描述信息</p>
      */
     public $Description;
 
     /**
-     * @var string 用于加密凭据的KMS KeyId
+     * @var string <p>用于加密凭据的KMS KeyId</p>
      */
     public $KmsKeyId;
 
     /**
-     * @var integer 创建者UIN
+     * @var integer <p>创建者UIN</p>
      */
     public $CreateUin;
 
     /**
-     * @var string 凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
+     * @var string <p>凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed</p>
      */
     public $Status;
 
     /**
-     * @var integer 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
+     * @var integer <p>凭据删除日期，对于status为PendingDelete 的有效，unix时间戳</p>
      */
     public $DeleteTime;
 
     /**
-     * @var integer 凭据创建时间，unix时间戳
+     * @var integer <p>凭据创建时间，unix时间戳</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
+     * @var string <p>用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥</p>
      */
     public $KmsKeyType;
 
     /**
-     * @var integer 1:--开启轮转；0--禁止轮转
+     * @var integer <p>1:--开启轮转；0--禁止轮转</p>
      */
     public $RotationStatus;
 
     /**
-     * @var integer 下一次轮转开始时间，uinx 时间戳
+     * @var integer <p>下一次轮转开始时间，uinx 时间戳</p>
      */
     public $NextRotationTime;
 
     /**
-     * @var integer 0 -- 用户自定义凭据；
-1 -- 云产品凭据；
-2 -- SSH密钥对凭据；
-3 -- 云API密钥对凭据；
-4 -- Redis类型凭据；
+     * @var integer <p>0 -- 用户自定义凭据；<br>1 -- 云产品凭据；<br>2 -- SSH密钥对凭据；<br>3 -- 云API密钥对凭据；<br>4 -- Redis类型凭据；</p>
      */
     public $SecretType;
 
     /**
-     * @var string 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
+     * @var string <p>云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效</p>
      */
     public $ProductName;
 
     /**
-     * @var string 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+     * @var string <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。</p>
      */
     public $ResourceName;
 
     /**
-     * @var integer 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+     * @var integer <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。</p>
      */
     public $ProjectID;
 
     /**
-     * @var array 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+     * @var array <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。</p>
      */
     public $AssociatedInstanceIDs;
 
     /**
-     * @var integer 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+     * @var integer <p>当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。</p>
      */
     public $TargetUin;
 
     /**
-     * @var integer 轮转的频率，以天作为单位，在轮转开启状态下生效。
+     * @var integer <p>轮转的频率，以天作为单位，在轮转开启状态下生效。</p>
      */
     public $RotationFrequency;
 
     /**
-     * @var string 云产品凭据对应的云产品实例 ID 号。
+     * @var string <p>云产品凭据对应的云产品实例 ID 号。</p>
      */
     public $ResourceID;
 
     /**
-     * @var string 用户指定的轮转开始时间。
+     * @var string <p>用户指定的轮转开始时间。</p>
      */
     public $RotationBeginTime;
 
     /**
-     * @param string $SecretName 凭据名称
-     * @param string $Description 凭据的描述信息
-     * @param string $KmsKeyId 用于加密凭据的KMS KeyId
-     * @param integer $CreateUin 创建者UIN
-     * @param string $Status 凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
-     * @param integer $DeleteTime 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
-     * @param integer $CreateTime 凭据创建时间，unix时间戳
-     * @param string $KmsKeyType 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
-     * @param integer $RotationStatus 1:--开启轮转；0--禁止轮转
-     * @param integer $NextRotationTime 下一次轮转开始时间，uinx 时间戳
-     * @param integer $SecretType 0 -- 用户自定义凭据；
-1 -- 云产品凭据；
-2 -- SSH密钥对凭据；
-3 -- 云API密钥对凭据；
-4 -- Redis类型凭据；
-     * @param string $ProductName 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-     * @param string $ResourceName 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-     * @param integer $ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-     * @param array $AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-     * @param integer $TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-     * @param integer $RotationFrequency 轮转的频率，以天作为单位，在轮转开启状态下生效。
-     * @param string $ResourceID 云产品凭据对应的云产品实例 ID 号。
-     * @param string $RotationBeginTime 用户指定的轮转开始时间。
+     * @var integer <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+     */
+    public $EncryptType;
+
+    /**
+     * @var boolean <p>凭据密钥加密切换中</p>
+     */
+    public $EncryptSwitching;
+
+    /**
+     * @param string $SecretName <p>凭据名称</p>
+     * @param string $Description <p>凭据的描述信息</p>
+     * @param string $KmsKeyId <p>用于加密凭据的KMS KeyId</p>
+     * @param integer $CreateUin <p>创建者UIN</p>
+     * @param string $Status <p>凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed</p>
+     * @param integer $DeleteTime <p>凭据删除日期，对于status为PendingDelete 的有效，unix时间戳</p>
+     * @param integer $CreateTime <p>凭据创建时间，unix时间戳</p>
+     * @param string $KmsKeyType <p>用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥</p>
+     * @param integer $RotationStatus <p>1:--开启轮转；0--禁止轮转</p>
+     * @param integer $NextRotationTime <p>下一次轮转开始时间，uinx 时间戳</p>
+     * @param integer $SecretType <p>0 -- 用户自定义凭据；<br>1 -- 云产品凭据；<br>2 -- SSH密钥对凭据；<br>3 -- 云API密钥对凭据；<br>4 -- Redis类型凭据；</p>
+     * @param string $ProductName <p>云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效</p>
+     * @param string $ResourceName <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。</p>
+     * @param integer $ProjectID <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。</p>
+     * @param array $AssociatedInstanceIDs <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。</p>
+     * @param integer $TargetUin <p>当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。</p>
+     * @param integer $RotationFrequency <p>轮转的频率，以天作为单位，在轮转开启状态下生效。</p>
+     * @param string $ResourceID <p>云产品凭据对应的云产品实例 ID 号。</p>
+     * @param string $RotationBeginTime <p>用户指定的轮转开始时间。</p>
+     * @param integer $EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+     * @param boolean $EncryptSwitching <p>凭据密钥加密切换中</p>
      */
     function __construct()
     {
@@ -280,6 +280,14 @@ class SecretMetadata extends AbstractModel
 
         if (array_key_exists("RotationBeginTime",$param) and $param["RotationBeginTime"] !== null) {
             $this->RotationBeginTime = $param["RotationBeginTime"];
+        }
+
+        if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
+            $this->EncryptType = $param["EncryptType"];
+        }
+
+        if (array_key_exists("EncryptSwitching",$param) and $param["EncryptSwitching"] !== null) {
+            $this->EncryptSwitching = $param["EncryptSwitching"];
         }
     }
 }

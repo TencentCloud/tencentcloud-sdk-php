@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVsmAttributes请求参数结构体
  *
- * @method string getResourceId() 获取资源Id
- * @method void setResourceId(string $ResourceId) 设置资源Id
+ * @method string getResourceId() 获取<p>资源Id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源Id</p>
  */
 class DescribeVsmAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 资源Id
+     * @var string <p>资源Id</p>
      */
     public $ResourceId;
 
     /**
-     * @param string $ResourceId 资源Id
+     * @param string $ResourceId <p>资源Id</p>
      */
     function __construct()
     {

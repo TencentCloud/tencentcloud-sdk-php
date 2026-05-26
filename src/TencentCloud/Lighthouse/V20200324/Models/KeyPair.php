@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicKey(string $PublicKey) 设置密钥对的纯文本公钥。
  * @method array getAssociatedInstanceIds() 获取密钥对关联的实例 ID 列表。
  * @method void setAssociatedInstanceIds(array $AssociatedInstanceIds) 设置密钥对关联的实例 ID 列表。
+ * @method array getAssociatedInstanceSet() 获取密钥对关联的实例列表。
+ * @method void setAssociatedInstanceSet(array $AssociatedInstanceSet) 设置密钥对关联的实例列表。
  * @method string getCreatedTime() 获取创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ
@@ -62,6 +64,11 @@ class KeyPair extends AbstractModel
     public $AssociatedInstanceIds;
 
     /**
+     * @var array 密钥对关联的实例列表。
+     */
+    public $AssociatedInstanceSet;
+
+    /**
      * @var string 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -83,6 +90,7 @@ class KeyPair extends AbstractModel
      * @param string $KeyName 密钥对名称。
      * @param string $PublicKey 密钥对的纯文本公钥。
      * @param array $AssociatedInstanceIds 密钥对关联的实例 ID 列表。
+     * @param array $AssociatedInstanceSet 密钥对关联的实例列表。
      * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateKey 密钥对私钥。
@@ -116,6 +124,15 @@ class KeyPair extends AbstractModel
 
         if (array_key_exists("AssociatedInstanceIds",$param) and $param["AssociatedInstanceIds"] !== null) {
             $this->AssociatedInstanceIds = $param["AssociatedInstanceIds"];
+        }
+
+        if (array_key_exists("AssociatedInstanceSet",$param) and $param["AssociatedInstanceSet"] !== null) {
+            $this->AssociatedInstanceSet = [];
+            foreach ($param["AssociatedInstanceSet"] as $key => $value){
+                $obj = new AssociatedInstanceInfo();
+                $obj->deserialize($value);
+                array_push($this->AssociatedInstanceSet, $obj);
+            }
         }
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {

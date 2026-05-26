@@ -34,6 +34,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 删除设备信息
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除分组
  * @method Models\DeleteL3ConnResponse DeleteL3Conn(Models\DeleteL3ConnRequest $req) 删除互通规则
+ * @method Models\DescribeAccessRegionsResponse DescribeAccessRegions(Models\DescribeAccessRegionsRequest $req) 查询可接入地域列表。
  * @method Models\DownloadActiveDeviceCountResponse DownloadActiveDeviceCount(Models\DownloadActiveDeviceCountRequest $req) 下载活跃设备数量统计
  * @method Models\GetActiveDeviceCountResponse GetActiveDeviceCount(Models\GetActiveDeviceCountRequest $req) 活跃设备数量统计
  * @method Models\GetApplicationResponse GetApplication(Models\GetApplicationRequest $req) 应用查询
@@ -62,6 +63,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GetVendorHardwareResponse GetVendorHardware(Models\GetVendorHardwareRequest $req) 获取厂商硬件设备列表
  * @method Models\GroupAddDeviceResponse GroupAddDevice(Models\GroupAddDeviceRequest $req) 向已存在分组中添加设备
  * @method Models\GroupDeleteDeviceResponse GroupDeleteDevice(Models\GroupDeleteDeviceRequest $req) 删除分组中的设备
+ * @method Models\ModifyDeviceAccessRegionsResponse ModifyDeviceAccessRegions(Models\ModifyDeviceAccessRegionsRequest $req) 修改设备接入地域。
  * @method Models\ModifyPackageRenewFlagResponse ModifyPackageRenewFlag(Models\ModifyPackageRenewFlagRequest $req) 可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
  * @method Models\OrderFlowPackageResponse OrderFlowPackage(Models\OrderFlowPackageRequest $req) 购买预付费流量包
  * @method Models\OrderPerLicenseResponse OrderPerLicense(Models\OrderPerLicenseRequest $req) 购买一次性授权License

@@ -20,134 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListSecrets请求参数结构体
  *
- * @method integer getOffset() 获取查询列表的起始位置，以0开始，不设置默认为0。
- * @method void setOffset(integer $Offset) 设置查询列表的起始位置，以0开始，不设置默认为0。
- * @method integer getLimit() 获取单次查询返回的最大数量，0或不设置则使用默认值 20。
- * @method void setLimit(integer $Limit) 设置单次查询返回的最大数量，0或不设置则使用默认值 20。
- * @method integer getOrderType() 获取根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
- * @method void setOrderType(integer $OrderType) 设置根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
- * @method integer getState() 获取根据凭据状态进行过滤。
-默认为0表示查询全部。
-1 --  表示查询Enabled 凭据列表。
-2 --  表示查询Disabled 凭据列表。
-3 --  表示查询PendingDelete 凭据列表。
-4 --  表示PendingCreate。
-5 --  表示CreateFailed。
-其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
- * @method void setState(integer $State) 设置根据凭据状态进行过滤。
-默认为0表示查询全部。
-1 --  表示查询Enabled 凭据列表。
-2 --  表示查询Disabled 凭据列表。
-3 --  表示查询PendingDelete 凭据列表。
-4 --  表示PendingCreate。
-5 --  表示CreateFailed。
-其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
- * @method string getSearchSecretName() 获取根据凭据名称进行过滤，为空表示不过滤。
- * @method void setSearchSecretName(string $SearchSecretName) 设置根据凭据名称进行过滤，为空表示不过滤。
- * @method array getTagFilters() 获取标签过滤条件。
- * @method void setTagFilters(array $TagFilters) 设置标签过滤条件。
- * @method integer getSecretType() 获取0  -- 表示用户自定义凭据，默认为0。
-1  -- 表示用户云产品凭据。
-2 -- 表示SSH密钥对凭据。
-3 -- 表示云API密钥对凭据。
- * @method void setSecretType(integer $SecretType) 设置0  -- 表示用户自定义凭据，默认为0。
-1  -- 表示用户云产品凭据。
-2 -- 表示SSH密钥对凭据。
-3 -- 表示云API密钥对凭据。
- * @method string getProductName() 获取此参数仅在SecretType参数值为1时生效，
-当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据；
-如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
-如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
-支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
- * @method void setProductName(string $ProductName) 设置此参数仅在SecretType参数值为1时生效，
-当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据；
-如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
-如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
-支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
+ * @method integer getOffset() 获取<p>查询列表的起始位置，以0开始，不设置默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>查询列表的起始位置，以0开始，不设置默认为0。</p>
+ * @method integer getLimit() 获取<p>单次查询返回的最大数量，0或不设置则使用默认值 20。</p>
+ * @method void setLimit(integer $Limit) 设置<p>单次查询返回的最大数量，0或不设置则使用默认值 20。</p>
+ * @method integer getOrderType() 获取<p>根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。</p>
+ * @method void setOrderType(integer $OrderType) 设置<p>根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。</p>
+ * @method integer getState() 获取<p>根据凭据状态进行过滤。<br>默认为0表示查询全部。<br>1 --  表示查询Enabled 凭据列表。<br>2 --  表示查询Disabled 凭据列表。<br>3 --  表示查询PendingDelete 凭据列表。<br>4 --  表示PendingCreate。<br>5 --  表示CreateFailed。<br>其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效</p>
+ * @method void setState(integer $State) 设置<p>根据凭据状态进行过滤。<br>默认为0表示查询全部。<br>1 --  表示查询Enabled 凭据列表。<br>2 --  表示查询Disabled 凭据列表。<br>3 --  表示查询PendingDelete 凭据列表。<br>4 --  表示PendingCreate。<br>5 --  表示CreateFailed。<br>其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效</p>
+ * @method string getSearchSecretName() 获取<p>根据凭据名称进行过滤，为空表示不过滤。</p>
+ * @method void setSearchSecretName(string $SearchSecretName) 设置<p>根据凭据名称进行过滤，为空表示不过滤。</p>
+ * @method array getTagFilters() 获取<p>标签过滤条件。</p>
+ * @method void setTagFilters(array $TagFilters) 设置<p>标签过滤条件。</p>
+ * @method integer getSecretType() 获取<p>0  -- 表示用户自定义凭据，默认为0。<br>1  -- 表示用户云产品凭据。<br>2 -- 表示SSH密钥对凭据。<br>3 -- 表示云API密钥对凭据。</p>
+ * @method void setSecretType(integer $SecretType) 设置<p>0  -- 表示用户自定义凭据，默认为0。<br>1  -- 表示用户云产品凭据。<br>2 -- 表示SSH密钥对凭据。<br>3 -- 表示云API密钥对凭据。</p>
+ * @method string getProductName() 获取<p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p>
+ * @method void setProductName(string $ProductName) 设置<p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p>
+ * @method integer getEncryptType() 获取<p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+ * @method void setEncryptType(integer $EncryptType) 设置<p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
  */
 class ListSecretsRequest extends AbstractModel
 {
     /**
-     * @var integer 查询列表的起始位置，以0开始，不设置默认为0。
+     * @var integer <p>查询列表的起始位置，以0开始，不设置默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 单次查询返回的最大数量，0或不设置则使用默认值 20。
+     * @var integer <p>单次查询返回的最大数量，0或不设置则使用默认值 20。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
+     * @var integer <p>根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。</p>
      */
     public $OrderType;
 
     /**
-     * @var integer 根据凭据状态进行过滤。
-默认为0表示查询全部。
-1 --  表示查询Enabled 凭据列表。
-2 --  表示查询Disabled 凭据列表。
-3 --  表示查询PendingDelete 凭据列表。
-4 --  表示PendingCreate。
-5 --  表示CreateFailed。
-其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
+     * @var integer <p>根据凭据状态进行过滤。<br>默认为0表示查询全部。<br>1 --  表示查询Enabled 凭据列表。<br>2 --  表示查询Disabled 凭据列表。<br>3 --  表示查询PendingDelete 凭据列表。<br>4 --  表示PendingCreate。<br>5 --  表示CreateFailed。<br>其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效</p>
      */
     public $State;
 
     /**
-     * @var string 根据凭据名称进行过滤，为空表示不过滤。
+     * @var string <p>根据凭据名称进行过滤，为空表示不过滤。</p>
      */
     public $SearchSecretName;
 
     /**
-     * @var array 标签过滤条件。
+     * @var array <p>标签过滤条件。</p>
      */
     public $TagFilters;
 
     /**
-     * @var integer 0  -- 表示用户自定义凭据，默认为0。
-1  -- 表示用户云产品凭据。
-2 -- 表示SSH密钥对凭据。
-3 -- 表示云API密钥对凭据。
+     * @var integer <p>0  -- 表示用户自定义凭据，默认为0。<br>1  -- 表示用户云产品凭据。<br>2 -- 表示SSH密钥对凭据。<br>3 -- 表示云API密钥对凭据。</p>
      */
     public $SecretType;
 
     /**
-     * @var string 此参数仅在SecretType参数值为1时生效，
-当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据；
-如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
-如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
-支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
+     * @var string <p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p>
      */
     public $ProductName;
 
     /**
-     * @param integer $Offset 查询列表的起始位置，以0开始，不设置默认为0。
-     * @param integer $Limit 单次查询返回的最大数量，0或不设置则使用默认值 20。
-     * @param integer $OrderType 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
-     * @param integer $State 根据凭据状态进行过滤。
-默认为0表示查询全部。
-1 --  表示查询Enabled 凭据列表。
-2 --  表示查询Disabled 凭据列表。
-3 --  表示查询PendingDelete 凭据列表。
-4 --  表示PendingCreate。
-5 --  表示CreateFailed。
-其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
-     * @param string $SearchSecretName 根据凭据名称进行过滤，为空表示不过滤。
-     * @param array $TagFilters 标签过滤条件。
-     * @param integer $SecretType 0  -- 表示用户自定义凭据，默认为0。
-1  -- 表示用户云产品凭据。
-2 -- 表示SSH密钥对凭据。
-3 -- 表示云API密钥对凭据。
-     * @param string $ProductName 此参数仅在SecretType参数值为1时生效，
-当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据；
-如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
-如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
-支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
+     * @var integer <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+     */
+    public $EncryptType;
+
+    /**
+     * @param integer $Offset <p>查询列表的起始位置，以0开始，不设置默认为0。</p>
+     * @param integer $Limit <p>单次查询返回的最大数量，0或不设置则使用默认值 20。</p>
+     * @param integer $OrderType <p>根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。</p>
+     * @param integer $State <p>根据凭据状态进行过滤。<br>默认为0表示查询全部。<br>1 --  表示查询Enabled 凭据列表。<br>2 --  表示查询Disabled 凭据列表。<br>3 --  表示查询PendingDelete 凭据列表。<br>4 --  表示PendingCreate。<br>5 --  表示CreateFailed。<br>其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效</p>
+     * @param string $SearchSecretName <p>根据凭据名称进行过滤，为空表示不过滤。</p>
+     * @param array $TagFilters <p>标签过滤条件。</p>
+     * @param integer $SecretType <p>0  -- 表示用户自定义凭据，默认为0。<br>1  -- 表示用户云产品凭据。<br>2 -- 表示SSH密钥对凭据。<br>3 -- 表示云API密钥对凭据。</p>
+     * @param string $ProductName <p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p>
+     * @param integer $EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -197,6 +145,10 @@ class ListSecretsRequest extends AbstractModel
 
         if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
             $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
+            $this->EncryptType = $param["EncryptType"];
         }
     }
 }

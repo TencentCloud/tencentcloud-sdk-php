@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArchitectureType(string $ArchitectureType) 设置<p>架构类型</p>
  * @method string getRecycle() 获取<p>回收标志，默认为空</p>
  * @method void setRecycle(string $Recycle) 设置<p>回收标志，默认为空</p>
+ * @method array getMeta() 获取<p>环境meta信息列表</p>
+ * @method void setMeta(array $Meta) 设置<p>环境meta信息列表</p>
+ * @method array getPostgreSQL() 获取<p>pg信息</p>
+ * @method void setPostgreSQL(array $PostgreSQL) 设置<p>pg信息</p>
  */
 class EnvInfo extends AbstractModel
 {
@@ -199,6 +203,16 @@ class EnvInfo extends AbstractModel
     public $Recycle;
 
     /**
+     * @var array <p>环境meta信息列表</p>
+     */
+    public $Meta;
+
+    /**
+     * @var array <p>pg信息</p>
+     */
+    public $PostgreSQL;
+
+    /**
      * @param string $EnvId <p>账户下该环境唯一标识</p>
      * @param string $Source <p>环境来源。包含以下取值：</p><li>miniapp：微信小程序</li><li>qcloud ：腾讯云</li>
      * @param string $Alias <p>环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
@@ -224,6 +238,8 @@ class EnvInfo extends AbstractModel
      * @param string $PackageType <p>套餐类型:空\baas\tcbr</p>
      * @param string $ArchitectureType <p>架构类型</p>
      * @param string $Recycle <p>回收标志，默认为空</p>
+     * @param array $Meta <p>环境meta信息列表</p>
+     * @param array $PostgreSQL <p>pg信息</p>
      */
     function __construct()
     {
@@ -371,6 +387,24 @@ class EnvInfo extends AbstractModel
 
         if (array_key_exists("Recycle",$param) and $param["Recycle"] !== null) {
             $this->Recycle = $param["Recycle"];
+        }
+
+        if (array_key_exists("Meta",$param) and $param["Meta"] !== null) {
+            $this->Meta = [];
+            foreach ($param["Meta"] as $key => $value){
+                $obj = new KVPair();
+                $obj->deserialize($value);
+                array_push($this->Meta, $obj);
+            }
+        }
+
+        if (array_key_exists("PostgreSQL",$param) and $param["PostgreSQL"] !== null) {
+            $this->PostgreSQL = [];
+            foreach ($param["PostgreSQL"] as $key => $value){
+                $obj = new PostgreSQLInfo();
+                $obj->deserialize($value);
+                array_push($this->PostgreSQL, $obj);
+            }
         }
     }
 }

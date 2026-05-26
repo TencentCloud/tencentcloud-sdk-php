@@ -44,7 +44,9 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\GetFaceIdTokenResponse GetFaceIdToken(Models\GetFaceIdTokenRequest $req) 每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取验证结果信息，该token仅能核身一次。
  * @method Models\GetFaceidRiskInfoTokenResponse GetFaceidRiskInfoToken(Models\GetFaceidRiskInfoTokenRequest $req) 每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取风险结果信息，该Token仅能核身一次。
  * @method Models\GetLiveCodeResponse GetLiveCode(Models\GetLiveCodeRequest $req) 使用数字活体检测模式前，需调用本接口获取数字验证码。
+ * @method Models\GetNFCTokenResponse GetNFCToken(Models\GetNFCTokenRequest $req) NFC核验服务，获取NFC识别请求对应的Token信息。
  * @method Models\GetWeChatBillDetailsResponse GetWeChatBillDetails(Models\GetWeChatBillDetailsRequest $req) 查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
+ * @method Models\GetWxNFCResultResponse GetWxNFCResult(Models\GetWxNFCResultRequest $req) 获取到证件NFC数据，接口传入NFC SDK返回的Token（十分钟内有效），可返回对应NFC获取的证件信息。支持身份证类证件（二代身份证、港澳居住证、台湾居住证、外国人永居证）以及旅行类证件（港澳通行证、台湾通行证、台胞证、回乡证）的NFC识别及核验。
  * @method Models\IdCardOCRVerificationResponse IdCardOCRVerification(Models\IdCardOCRVerificationRequest $req) 本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
  * @method Models\IdCardVerificationResponse IdCardVerification(Models\IdCardVerificationRequest $req) 传入姓名和身份证号，校验两者的真实性和一致性。
  * @method Models\ImageRecognitionResponse ImageRecognition(Models\ImageRecognitionRequest $req) 传入照片和身份信息，判断该照片与权威库的证件照是否属于同一个人（该接口已停止接入，新客户请使用<a href="https://cloud.tencent.com/document/product/1007/102203">照片人脸核身（V2.0）</a>接口）。

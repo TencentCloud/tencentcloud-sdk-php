@@ -20,114 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务的事件通知配置。
  *
- * @method string getNotifyType() 获取通知类型，可选值：
-<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
-<li>TDMQ-CMQ：消息队列</li>
-<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
-<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
- * @method void setNotifyType(string $NotifyType) 设置通知类型，可选值：
-<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
-<li>TDMQ-CMQ：消息队列</li>
-<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
-<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
- * @method string getNotifyMode() 获取工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
- * @method void setNotifyMode(string $NotifyMode) 设置工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
- * @method string getNotifyUrl() 获取HTTP回调地址，NotifyType为URL时必填。
- * @method void setNotifyUrl(string $NotifyUrl) 设置HTTP回调地址，NotifyType为URL时必填。
- * @method string getCmqModel() 获取CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
- * @method void setCmqModel(string $CmqModel) 设置CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
- * @method string getCmqRegion() 获取CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
- * @method void setCmqRegion(string $CmqRegion) 设置CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
- * @method string getTopicName() 获取当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
- * @method void setTopicName(string $TopicName) 设置当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
- * @method string getQueueName() 获取当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
- * @method void setQueueName(string $QueueName) 设置当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
- * @method AwsSQS getAwsSQS() 获取AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
-
+ * @method string getNotifyType() 获取<p>通知类型，可选值：</p><li>CMQ：已下线，建议切换到TDMQ-CMQ</li><li>TDMQ-CMQ：消息队列</li><li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li><li>SCF：不推荐使用，需要在控制台额外配置SCF</li><li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li><font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
+ * @method void setNotifyType(string $NotifyType) 设置<p>通知类型，可选值：</p><li>CMQ：已下线，建议切换到TDMQ-CMQ</li><li>TDMQ-CMQ：消息队列</li><li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li><li>SCF：不推荐使用，需要在控制台额外配置SCF</li><li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li><font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
+ * @method string getNotifyMode() 获取<p>工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。</p>
+ * @method void setNotifyMode(string $NotifyMode) 设置<p>工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。</p>
+ * @method string getNotifyUrl() 获取<p>HTTP回调地址，NotifyType为URL时必填。</p>
+ * @method void setNotifyUrl(string $NotifyUrl) 设置<p>HTTP回调地址，NotifyType为URL时必填。</p>
+ * @method string getCmqModel() 获取<p>CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。</p>
+ * @method void setCmqModel(string $CmqModel) 设置<p>CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。</p>
+ * @method string getCmqRegion() 获取<p>CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。</p>
+ * @method void setCmqRegion(string $CmqRegion) 设置<p>CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。</p>
+ * @method string getTopicName() 获取<p>当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。</p>
+ * @method void setTopicName(string $TopicName) 设置<p>当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。</p>
+ * @method string getQueueName() 获取<p>当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。</p>
+ * @method void setQueueName(string $QueueName) 设置<p>当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。</p>
+ * @method AwsSQS getAwsSQS() 获取<p>AWS SQS 回调，NotifyType为 AWS-SQS 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAwsSQS(AwsSQS $AwsSQS) 设置AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
-
+ * @method void setAwsSQS(AwsSQS $AwsSQS) 设置<p>AWS SQS 回调，NotifyType为 AWS-SQS 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNotifyKey() 获取用于生成回调签名的key。
- * @method void setNotifyKey(string $NotifyKey) 设置用于生成回调签名的key。
+ * @method string getNotifyKey() 获取<p>用于生成回调签名的key。</p>
+ * @method void setNotifyKey(string $NotifyKey) 设置<p>用于生成回调签名的key。</p>
  */
 class TaskNotifyConfig extends AbstractModel
 {
     /**
-     * @var string 通知类型，可选值：
-<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
-<li>TDMQ-CMQ：消息队列</li>
-<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
-<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
+     * @var string <p>通知类型，可选值：</p><li>CMQ：已下线，建议切换到TDMQ-CMQ</li><li>TDMQ-CMQ：消息队列</li><li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li><li>SCF：不推荐使用，需要在控制台额外配置SCF</li><li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li><font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
      */
     public $NotifyType;
 
     /**
-     * @var string 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
+     * @var string <p>工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。</p>
      */
     public $NotifyMode;
 
     /**
-     * @var string HTTP回调地址，NotifyType为URL时必填。
+     * @var string <p>HTTP回调地址，NotifyType为URL时必填。</p>
      */
     public $NotifyUrl;
 
     /**
-     * @var string CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
+     * @var string <p>CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。</p>
      */
     public $CmqModel;
 
     /**
-     * @var string CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
+     * @var string <p>CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。</p>
      */
     public $CmqRegion;
 
     /**
-     * @var string 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
+     * @var string <p>当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。</p>
      */
     public $TopicName;
 
     /**
-     * @var string 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
+     * @var string <p>当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。</p>
      */
     public $QueueName;
 
     /**
-     * @var AwsSQS AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
-
+     * @var AwsSQS <p>AWS SQS 回调，NotifyType为 AWS-SQS 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AwsSQS;
 
     /**
-     * @var string 用于生成回调签名的key。
+     * @var string <p>用于生成回调签名的key。</p>
      */
     public $NotifyKey;
 
     /**
-     * @param string $NotifyType 通知类型，可选值：
-<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
-<li>TDMQ-CMQ：消息队列</li>
-<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
-<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
-     * @param string $NotifyMode 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
-     * @param string $NotifyUrl HTTP回调地址，NotifyType为URL时必填。
-     * @param string $CmqModel CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
-     * @param string $CmqRegion CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
-     * @param string $TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
-     * @param string $QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
-     * @param AwsSQS $AwsSQS AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
-
+     * @param string $NotifyType <p>通知类型，可选值：</p><li>CMQ：已下线，建议切换到TDMQ-CMQ</li><li>TDMQ-CMQ：消息队列</li><li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li><li>SCF：不推荐使用，需要在控制台额外配置SCF</li><li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li><font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
+     * @param string $NotifyMode <p>工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。</p>
+     * @param string $NotifyUrl <p>HTTP回调地址，NotifyType为URL时必填。</p>
+     * @param string $CmqModel <p>CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。</p>
+     * @param string $CmqRegion <p>CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。</p>
+     * @param string $TopicName <p>当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。</p>
+     * @param string $QueueName <p>当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。</p>
+     * @param AwsSQS $AwsSQS <p>AWS SQS 回调，NotifyType为 AWS-SQS 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NotifyKey 用于生成回调签名的key。
+     * @param string $NotifyKey <p>用于生成回调签名的key。</p>
      */
     function __construct()
     {

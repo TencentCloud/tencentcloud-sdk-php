@@ -27,7 +27,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getHealthScore() 获取健康得分。
  * @method void setHealthScore(integer $HealthScore) 设置健康得分。
  * @method string getHealthLevel() 获取健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。
+其中：
+HEALTH - 健康
+SUB_HEALTH - 亚健康
+RISK - 危险
+HIGH_RISK - 高危
  * @method void setHealthLevel(string $HealthLevel) 设置健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。
+其中：
+HEALTH - 健康
+SUB_HEALTH - 亚健康
+RISK - 危险
+HIGH_RISK - 高危
  */
 class HealthScoreInfo extends AbstractModel
 {
@@ -48,6 +58,11 @@ class HealthScoreInfo extends AbstractModel
 
     /**
      * @var string 健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。
+其中：
+HEALTH - 健康
+SUB_HEALTH - 亚健康
+RISK - 危险
+HIGH_RISK - 高危
      */
     public $HealthLevel;
 
@@ -56,6 +71,11 @@ class HealthScoreInfo extends AbstractModel
      * @param integer $EventsTotalCount 异常事件总数。
      * @param integer $HealthScore 健康得分。
      * @param string $HealthLevel 健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。
+其中：
+HEALTH - 健康
+SUB_HEALTH - 亚健康
+RISK - 危险
+HIGH_RISK - 高危
      */
     function __construct()
     {

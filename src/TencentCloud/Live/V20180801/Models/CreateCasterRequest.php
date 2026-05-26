@@ -20,178 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCaster请求参数结构体
  *
- * @method string getCasterName() 获取导播台名称
- * @method void setCasterName(string $CasterName) 设置导播台名称
- * @method string getDescription() 获取导播台的描述
-最大允许长度256
- * @method void setDescription(string $Description) 设置导播台的描述
-最大允许长度256
- * @method integer getExpireTime() 获取导播台的过期时间戳。值为-1或unix时间戳。
-默认值为-1。
-当值为-1时，表示该导播台永不过期。
-当值为正常unix时间戳时，导播台将在该时间过期。
-导播台过期后，预监与主监画面将自动停止，转推自动停止。
-点播、直播url将停止转拉，推流url需自行停止推流。
- * @method void setExpireTime(integer $ExpireTime) 设置导播台的过期时间戳。值为-1或unix时间戳。
-默认值为-1。
-当值为-1时，表示该导播台永不过期。
-当值为正常unix时间戳时，导播台将在该时间过期。
-导播台过期后，预监与主监画面将自动停止，转推自动停止。
-点播、直播url将停止转拉，推流url需自行停止推流。
- * @method integer getDelayTime() 获取导播台延时播放时间，单位为秒。
-默认为0，最大支持300秒
- * @method void setDelayTime(integer $DelayTime) 设置导播台延时播放时间，单位为秒。
-默认为0，最大支持300秒
- * @method string getTransitionType() 获取导播台转场类型。
-默认为空。
-允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。
- * @method void setTransitionType(string $TransitionType) 设置导播台转场类型。
-默认为空。
-允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。
- * @method integer getPgmWidth() 获取导播台主监输出的宽度，单位为像素。
-默认为1280，最大允许4096。
- * @method void setPgmWidth(integer $PgmWidth) 设置导播台主监输出的宽度，单位为像素。
-默认为1280，最大允许4096。
- * @method integer getPgmHeight() 获取导播台主监输出的高度，单位为像素。
-默认为720，最大允许2160。
- * @method void setPgmHeight(integer $PgmHeight) 设置导播台主监输出的高度，单位为像素。
-默认为720，最大允许2160。
- * @method integer getPgmFps() 获取导播台主监输出的帧率。
-默认为0，表示随源输出。
-最大支持60。
- * @method void setPgmFps(integer $PgmFps) 设置导播台主监输出的帧率。
-默认为0，表示随源输出。
-最大支持60。
- * @method integer getPgmBitRate() 获取导播台主监输出的码率，单位为kbps。
-默认为0，表示随源的码率输出。
-最大允许10000kbps。
- * @method void setPgmBitRate(integer $PgmBitRate) 设置导播台主监输出的码率，单位为kbps。
-默认为0，表示随源的码率输出。
-最大允许10000kbps。
- * @method integer getFeeType() 获取导播台的计费类型。
-0 通用型 
-1 播单型。
-注： 本参数暂无作用。
- * @method void setFeeType(integer $FeeType) 设置导播台的计费类型。
-0 通用型 
-1 播单型。
-注： 本参数暂无作用。
- * @method integer getPgmAudioBitRate() 获取导播台主监输出的音频码率，单位为kbps。
-可选项：[0, 128, 192, 256]
-默认值为0，表示随源的音频码率输出。
- * @method void setPgmAudioBitRate(integer $PgmAudioBitRate) 设置导播台主监输出的音频码率，单位为kbps。
-可选项：[0, 128, 192, 256]
-默认值为0，表示随源的音频码率输出。
+ * @method string getCasterName() 获取<p>导播台名称</p>
+ * @method void setCasterName(string $CasterName) 设置<p>导播台名称</p>
+ * @method string getDescription() 获取<p>导播台的描述<br>最大允许长度256</p>
+ * @method void setDescription(string $Description) 设置<p>导播台的描述<br>最大允许长度256</p>
+ * @method integer getExpireTime() 获取<p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。<br>当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。<br>当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
+ * @method integer getDelayTime() 获取<p>导播台延时播放时间，单位为秒。<br>默认为0，最大支持300秒</p>
+ * @method void setDelayTime(integer $DelayTime) 设置<p>导播台延时播放时间，单位为秒。<br>默认为0，最大支持300秒</p>
+ * @method string getTransitionType() 获取<p>导播台转场类型。<br>默认为空。<br>允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
+ * @method void setTransitionType(string $TransitionType) 设置<p>导播台转场类型。<br>默认为空。<br>允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
+ * @method integer getPgmWidth() 获取<p>导播台主监输出的宽度，单位为像素。<br>默认为1280，最大允许4096。</p>
+ * @method void setPgmWidth(integer $PgmWidth) 设置<p>导播台主监输出的宽度，单位为像素。<br>默认为1280，最大允许4096。</p>
+ * @method integer getPgmHeight() 获取<p>导播台主监输出的高度，单位为像素。<br>默认为720，最大允许2160。</p>
+ * @method void setPgmHeight(integer $PgmHeight) 设置<p>导播台主监输出的高度，单位为像素。<br>默认为720，最大允许2160。</p>
+ * @method integer getPgmFps() 获取<p>导播台主监输出的帧率。<br>默认为0，表示随源输出。<br>最大支持60。</p>
+ * @method void setPgmFps(integer $PgmFps) 设置<p>导播台主监输出的帧率。<br>默认为0，表示随源输出。<br>最大支持60。</p>
+ * @method integer getPgmBitRate() 获取<p>导播台主监输出的码率，单位为kbps。<br>默认为0，表示随源的码率输出。<br>最大允许10000kbps。</p>
+ * @method void setPgmBitRate(integer $PgmBitRate) 设置<p>导播台主监输出的码率，单位为kbps。<br>默认为0，表示随源的码率输出。<br>最大允许10000kbps。</p>
+ * @method integer getFeeType() 获取<p>导播台的计费类型。<br>0 通用型<br>1 播单型。<br>注： 本参数暂无作用。</p>
+ * @method void setFeeType(integer $FeeType) 设置<p>导播台的计费类型。<br>0 通用型<br>1 播单型。<br>注： 本参数暂无作用。</p>
+ * @method integer getPgmAudioBitRate() 获取<p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
+ * @method void setPgmAudioBitRate(integer $PgmAudioBitRate) 设置<p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
+ * @method string getPgmVcodec() 获取<p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+ * @method void setPgmVcodec(string $PgmVcodec) 设置<p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
  */
 class CreateCasterRequest extends AbstractModel
 {
     /**
-     * @var string 导播台名称
+     * @var string <p>导播台名称</p>
      */
     public $CasterName;
 
     /**
-     * @var string 导播台的描述
-最大允许长度256
+     * @var string <p>导播台的描述<br>最大允许长度256</p>
      */
     public $Description;
 
     /**
-     * @var integer 导播台的过期时间戳。值为-1或unix时间戳。
-默认值为-1。
-当值为-1时，表示该导播台永不过期。
-当值为正常unix时间戳时，导播台将在该时间过期。
-导播台过期后，预监与主监画面将自动停止，转推自动停止。
-点播、直播url将停止转拉，推流url需自行停止推流。
+     * @var integer <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。<br>当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer 导播台延时播放时间，单位为秒。
-默认为0，最大支持300秒
+     * @var integer <p>导播台延时播放时间，单位为秒。<br>默认为0，最大支持300秒</p>
      */
     public $DelayTime;
 
     /**
-     * @var string 导播台转场类型。
-默认为空。
-允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。
+     * @var string <p>导播台转场类型。<br>默认为空。<br>允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
      */
     public $TransitionType;
 
     /**
-     * @var integer 导播台主监输出的宽度，单位为像素。
-默认为1280，最大允许4096。
+     * @var integer <p>导播台主监输出的宽度，单位为像素。<br>默认为1280，最大允许4096。</p>
      */
     public $PgmWidth;
 
     /**
-     * @var integer 导播台主监输出的高度，单位为像素。
-默认为720，最大允许2160。
+     * @var integer <p>导播台主监输出的高度，单位为像素。<br>默认为720，最大允许2160。</p>
      */
     public $PgmHeight;
 
     /**
-     * @var integer 导播台主监输出的帧率。
-默认为0，表示随源输出。
-最大支持60。
+     * @var integer <p>导播台主监输出的帧率。<br>默认为0，表示随源输出。<br>最大支持60。</p>
      */
     public $PgmFps;
 
     /**
-     * @var integer 导播台主监输出的码率，单位为kbps。
-默认为0，表示随源的码率输出。
-最大允许10000kbps。
+     * @var integer <p>导播台主监输出的码率，单位为kbps。<br>默认为0，表示随源的码率输出。<br>最大允许10000kbps。</p>
      */
     public $PgmBitRate;
 
     /**
-     * @var integer 导播台的计费类型。
-0 通用型 
-1 播单型。
-注： 本参数暂无作用。
+     * @var integer <p>导播台的计费类型。<br>0 通用型<br>1 播单型。<br>注： 本参数暂无作用。</p>
      */
     public $FeeType;
 
     /**
-     * @var integer 导播台主监输出的音频码率，单位为kbps。
-可选项：[0, 128, 192, 256]
-默认值为0，表示随源的音频码率输出。
+     * @var integer <p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
      */
     public $PgmAudioBitRate;
 
     /**
-     * @param string $CasterName 导播台名称
-     * @param string $Description 导播台的描述
-最大允许长度256
-     * @param integer $ExpireTime 导播台的过期时间戳。值为-1或unix时间戳。
-默认值为-1。
-当值为-1时，表示该导播台永不过期。
-当值为正常unix时间戳时，导播台将在该时间过期。
-导播台过期后，预监与主监画面将自动停止，转推自动停止。
-点播、直播url将停止转拉，推流url需自行停止推流。
-     * @param integer $DelayTime 导播台延时播放时间，单位为秒。
-默认为0，最大支持300秒
-     * @param string $TransitionType 导播台转场类型。
-默认为空。
-允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。
-     * @param integer $PgmWidth 导播台主监输出的宽度，单位为像素。
-默认为1280，最大允许4096。
-     * @param integer $PgmHeight 导播台主监输出的高度，单位为像素。
-默认为720，最大允许2160。
-     * @param integer $PgmFps 导播台主监输出的帧率。
-默认为0，表示随源输出。
-最大支持60。
-     * @param integer $PgmBitRate 导播台主监输出的码率，单位为kbps。
-默认为0，表示随源的码率输出。
-最大允许10000kbps。
-     * @param integer $FeeType 导播台的计费类型。
-0 通用型 
-1 播单型。
-注： 本参数暂无作用。
-     * @param integer $PgmAudioBitRate 导播台主监输出的音频码率，单位为kbps。
-可选项：[0, 128, 192, 256]
-默认值为0，表示随源的音频码率输出。
+     * @var string <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+     */
+    public $PgmVcodec;
+
+    /**
+     * @param string $CasterName <p>导播台名称</p>
+     * @param string $Description <p>导播台的描述<br>最大允许长度256</p>
+     * @param integer $ExpireTime <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。<br>当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
+     * @param integer $DelayTime <p>导播台延时播放时间，单位为秒。<br>默认为0，最大支持300秒</p>
+     * @param string $TransitionType <p>导播台转场类型。<br>默认为空。<br>允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
+     * @param integer $PgmWidth <p>导播台主监输出的宽度，单位为像素。<br>默认为1280，最大允许4096。</p>
+     * @param integer $PgmHeight <p>导播台主监输出的高度，单位为像素。<br>默认为720，最大允许2160。</p>
+     * @param integer $PgmFps <p>导播台主监输出的帧率。<br>默认为0，表示随源输出。<br>最大支持60。</p>
+     * @param integer $PgmBitRate <p>导播台主监输出的码率，单位为kbps。<br>默认为0，表示随源的码率输出。<br>最大允许10000kbps。</p>
+     * @param integer $FeeType <p>导播台的计费类型。<br>0 通用型<br>1 播单型。<br>注： 本参数暂无作用。</p>
+     * @param integer $PgmAudioBitRate <p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
+     * @param string $PgmVcodec <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
      */
     function __construct()
     {
@@ -248,6 +176,10 @@ class CreateCasterRequest extends AbstractModel
 
         if (array_key_exists("PgmAudioBitRate",$param) and $param["PgmAudioBitRate"] !== null) {
             $this->PgmAudioBitRate = $param["PgmAudioBitRate"];
+        }
+
+        if (array_key_exists("PgmVcodec",$param) and $param["PgmVcodec"] !== null) {
+            $this->PgmVcodec = $param["PgmVcodec"];
         }
     }
 }

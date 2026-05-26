@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GosseFSx的配置
  *
- * @method string getId() 获取goosefsx实例id
- * @method void setId(string $Id) 设置goosefsx实例id
- * @method string getPath() 获取GooseFSx实例需要挂载的路径
- * @method void setPath(string $Path) 设置GooseFSx实例需要挂载的路径
+ * @method string getId() 获取<p>goosefsx实例id</p>
+ * @method void setId(string $Id) 设置<p>goosefsx实例id</p>
+ * @method string getPath() 获取<p>GooseFSx实例需要挂载的路径</p>
+ * @method void setPath(string $Path) 设置<p>GooseFSx实例需要挂载的路径</p>
  */
 class GooseFSx extends AbstractModel
 {
     /**
-     * @var string goosefsx实例id
+     * @var string <p>goosefsx实例id</p>
      */
     public $Id;
 
     /**
-     * @var string GooseFSx实例需要挂载的路径
+     * @var string <p>GooseFSx实例需要挂载的路径</p>
      */
     public $Path;
 
     /**
-     * @param string $Id goosefsx实例id
-     * @param string $Path GooseFSx实例需要挂载的路径
+     * @param string $Id <p>goosefsx实例id</p>
+     * @param string $Path <p>GooseFSx实例需要挂载的路径</p>
      */
     function __construct()
     {

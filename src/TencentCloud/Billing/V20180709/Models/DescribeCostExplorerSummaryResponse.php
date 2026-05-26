@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCostExplorerSummary返回参数结构体
  *
- * @method integer getTotal() 获取数据条数
- * @method void setTotal(integer $Total) 设置数据条数
- * @method AnalyseHeaderDetail getHeader() 获取表头信息
- * @method void setHeader(AnalyseHeaderDetail $Header) 设置表头信息
- * @method array getDetail() 获取数据明细
- * @method void setDetail(array $Detail) 设置数据明细
- * @method AnalyseDetail getTotalDetail() 获取数据总计
- * @method void setTotalDetail(AnalyseDetail $TotalDetail) 设置数据总计
- * @method AnalyseConditionDetail getConditionValue() 获取筛选框
- * @method void setConditionValue(AnalyseConditionDetail $ConditionValue) 设置筛选框
+ * @method integer getTotal() 获取<p>数据条数</p>
+ * @method void setTotal(integer $Total) 设置<p>数据条数</p>
+ * @method AnalyseHeaderDetail getHeader() 获取<p>表头信息</p>
+ * @method void setHeader(AnalyseHeaderDetail $Header) 设置<p>表头信息</p>
+ * @method array getDetail() 获取<p>数据明细</p>
+ * @method void setDetail(array $Detail) 设置<p>数据明细</p>
+ * @method AnalyseDetail getTotalDetail() 获取<p>数据总计</p>
+ * @method void setTotalDetail(AnalyseDetail $TotalDetail) 设置<p>数据总计</p>
+ * @method AnalyseConditionDetail getConditionValue() 获取<p>筛选框</p>
+ * @method void setConditionValue(AnalyseConditionDetail $ConditionValue) 设置<p>筛选框</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCostExplorerSummaryResponse extends AbstractModel
 {
     /**
-     * @var integer 数据条数
+     * @var integer <p>数据条数</p>
      */
     public $Total;
 
     /**
-     * @var AnalyseHeaderDetail 表头信息
+     * @var AnalyseHeaderDetail <p>表头信息</p>
      */
     public $Header;
 
     /**
-     * @var array 数据明细
+     * @var array <p>数据明细</p>
      */
     public $Detail;
 
     /**
-     * @var AnalyseDetail 数据总计
+     * @var AnalyseDetail <p>数据总计</p>
      */
     public $TotalDetail;
 
     /**
-     * @var AnalyseConditionDetail 筛选框
+     * @var AnalyseConditionDetail <p>筛选框</p>
      */
     public $ConditionValue;
 
@@ -66,11 +66,11 @@ class DescribeCostExplorerSummaryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 数据条数
-     * @param AnalyseHeaderDetail $Header 表头信息
-     * @param array $Detail 数据明细
-     * @param AnalyseDetail $TotalDetail 数据总计
-     * @param AnalyseConditionDetail $ConditionValue 筛选框
+     * @param integer $Total <p>数据条数</p>
+     * @param AnalyseHeaderDetail $Header <p>表头信息</p>
+     * @param array $Detail <p>数据明细</p>
+     * @param AnalyseDetail $TotalDetail <p>数据总计</p>
+     * @param AnalyseConditionDetail $ConditionValue <p>筛选框</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

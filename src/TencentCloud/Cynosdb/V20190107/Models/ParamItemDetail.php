@@ -20,114 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例参数信息
  *
- * @method string getCurrentValue() 获取当前值
- * @method void setCurrentValue(string $CurrentValue) 设置当前值
- * @method string getDefault() 获取默认值
- * @method void setDefault(string $Default) 设置默认值
- * @method array getEnumValue() 获取参数的可选枚举值。如果为非枚举值，则为空
- * @method void setEnumValue(array $EnumValue) 设置参数的可选枚举值。如果为非枚举值，则为空
- * @method integer getIsGlobal() 获取1：全局参数，0：非全局参数
- * @method void setIsGlobal(integer $IsGlobal) 设置1：全局参数，0：非全局参数
- * @method string getMax() 获取最大值
- * @method void setMax(string $Max) 设置最大值
- * @method string getMin() 获取最小值
- * @method void setMin(string $Min) 设置最小值
- * @method integer getNeedReboot() 获取修改参数后，是否需要重启数据库以使参数生效。0-不需要重启，1-需要重启。
- * @method void setNeedReboot(integer $NeedReboot) 设置修改参数后，是否需要重启数据库以使参数生效。0-不需要重启，1-需要重启。
- * @method string getParamName() 获取参数名称
- * @method void setParamName(string $ParamName) 设置参数名称
- * @method string getParamType() 获取参数类型：integer，enum，float，string，func
- * @method void setParamType(string $ParamType) 设置参数类型：integer，enum，float，string，func
- * @method string getDescription() 获取参数描述
- * @method void setDescription(string $Description) 设置参数描述
- * @method boolean getIsFunc() 获取类型是否为公式
- * @method void setIsFunc(boolean $IsFunc) 设置类型是否为公式
- * @method string getFunc() 获取参数配置公式
- * @method void setFunc(string $Func) 设置参数配置公式
- * @method string getFuncPattern() 获取支持公式的参数的默认公式样式
- * @method void setFuncPattern(string $FuncPattern) 设置支持公式的参数的默认公式样式
+ * @method string getCurrentValue() 获取<p>当前值</p>
+ * @method void setCurrentValue(string $CurrentValue) 设置<p>当前值</p>
+ * @method string getDefault() 获取<p>默认值</p>
+ * @method void setDefault(string $Default) 设置<p>默认值</p>
+ * @method array getEnumValue() 获取<p>参数的可选枚举值。如果为非枚举值，则为空</p>
+ * @method void setEnumValue(array $EnumValue) 设置<p>参数的可选枚举值。如果为非枚举值，则为空</p>
+ * @method integer getIsGlobal() 获取<p>1：全局参数，0：非全局参数</p>
+ * @method void setIsGlobal(integer $IsGlobal) 设置<p>1：全局参数，0：非全局参数</p>
+ * @method string getMax() 获取<p>最大值</p>
+ * @method void setMax(string $Max) 设置<p>最大值</p>
+ * @method string getMin() 获取<p>最小值</p>
+ * @method void setMin(string $Min) 设置<p>最小值</p>
+ * @method integer getNeedReboot() 获取<p>修改参数后，是否需要重启数据库以使参数生效。0-不需要重启，1-需要重启。</p>
+ * @method void setNeedReboot(integer $NeedReboot) 设置<p>修改参数后，是否需要重启数据库以使参数生效。0-不需要重启，1-需要重启。</p>
+ * @method string getParamName() 获取<p>参数名称</p>
+ * @method void setParamName(string $ParamName) 设置<p>参数名称</p>
+ * @method string getParamType() 获取<p>参数类型：integer，enum，float，string，func</p>
+ * @method void setParamType(string $ParamType) 设置<p>参数类型：integer，enum，float，string，func</p>
+ * @method ModifiableInfo getModifiableInfo() 获取<p>参数是否可修改</p>
+ * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) 设置<p>参数是否可修改</p>
+ * @method string getDescription() 获取<p>参数描述</p>
+ * @method void setDescription(string $Description) 设置<p>参数描述</p>
+ * @method boolean getIsFunc() 获取<p>类型是否为公式</p>
+ * @method void setIsFunc(boolean $IsFunc) 设置<p>类型是否为公式</p>
+ * @method string getFunc() 获取<p>参数配置公式</p>
+ * @method void setFunc(string $Func) 设置<p>参数配置公式</p>
+ * @method string getFuncPattern() 获取<p>支持公式的参数的默认公式样式</p>
+ * @method void setFuncPattern(string $FuncPattern) 设置<p>支持公式的参数的默认公式样式</p>
  */
 class ParamItemDetail extends AbstractModel
 {
     /**
-     * @var string 当前值
+     * @var string <p>当前值</p>
      */
     public $CurrentValue;
 
     /**
-     * @var string 默认值
+     * @var string <p>默认值</p>
      */
     public $Default;
 
     /**
-     * @var array 参数的可选枚举值。如果为非枚举值，则为空
+     * @var array <p>参数的可选枚举值。如果为非枚举值，则为空</p>
      */
     public $EnumValue;
 
     /**
-     * @var integer 1：全局参数，0：非全局参数
+     * @var integer <p>1：全局参数，0：非全局参数</p>
      */
     public $IsGlobal;
 
     /**
-     * @var string 最大值
+     * @var string <p>最大值</p>
      */
     public $Max;
 
     /**
-     * @var string 最小值
+     * @var string <p>最小值</p>
      */
     public $Min;
 
     /**
-     * @var integer 修改参数后，是否需要重启数据库以使参数生效。0-不需要重启，1-需要重启。
+     * @var integer <p>修改参数后，是否需要重启数据库以使参数生效。0-不需要重启，1-需要重启。</p>
      */
     public $NeedReboot;
 
     /**
-     * @var string 参数名称
+     * @var string <p>参数名称</p>
      */
     public $ParamName;
 
     /**
-     * @var string 参数类型：integer，enum，float，string，func
+     * @var string <p>参数类型：integer，enum，float，string，func</p>
      */
     public $ParamType;
 
     /**
-     * @var string 参数描述
+     * @var ModifiableInfo <p>参数是否可修改</p>
+     */
+    public $ModifiableInfo;
+
+    /**
+     * @var string <p>参数描述</p>
      */
     public $Description;
 
     /**
-     * @var boolean 类型是否为公式
+     * @var boolean <p>类型是否为公式</p>
      */
     public $IsFunc;
 
     /**
-     * @var string 参数配置公式
+     * @var string <p>参数配置公式</p>
      */
     public $Func;
 
     /**
-     * @var string 支持公式的参数的默认公式样式
+     * @var string <p>支持公式的参数的默认公式样式</p>
      */
     public $FuncPattern;
 
     /**
-     * @param string $CurrentValue 当前值
-     * @param string $Default 默认值
-     * @param array $EnumValue 参数的可选枚举值。如果为非枚举值，则为空
-     * @param integer $IsGlobal 1：全局参数，0：非全局参数
-     * @param string $Max 最大值
-     * @param string $Min 最小值
-     * @param integer $NeedReboot 修改参数后，是否需要重启数据库以使参数生效。0-不需要重启，1-需要重启。
-     * @param string $ParamName 参数名称
-     * @param string $ParamType 参数类型：integer，enum，float，string，func
-     * @param string $Description 参数描述
-     * @param boolean $IsFunc 类型是否为公式
-     * @param string $Func 参数配置公式
-     * @param string $FuncPattern 支持公式的参数的默认公式样式
+     * @param string $CurrentValue <p>当前值</p>
+     * @param string $Default <p>默认值</p>
+     * @param array $EnumValue <p>参数的可选枚举值。如果为非枚举值，则为空</p>
+     * @param integer $IsGlobal <p>1：全局参数，0：非全局参数</p>
+     * @param string $Max <p>最大值</p>
+     * @param string $Min <p>最小值</p>
+     * @param integer $NeedReboot <p>修改参数后，是否需要重启数据库以使参数生效。0-不需要重启，1-需要重启。</p>
+     * @param string $ParamName <p>参数名称</p>
+     * @param string $ParamType <p>参数类型：integer，enum，float，string，func</p>
+     * @param ModifiableInfo $ModifiableInfo <p>参数是否可修改</p>
+     * @param string $Description <p>参数描述</p>
+     * @param boolean $IsFunc <p>类型是否为公式</p>
+     * @param string $Func <p>参数配置公式</p>
+     * @param string $FuncPattern <p>支持公式的参数的默认公式样式</p>
      */
     function __construct()
     {
@@ -176,6 +184,11 @@ class ParamItemDetail extends AbstractModel
 
         if (array_key_exists("ParamType",$param) and $param["ParamType"] !== null) {
             $this->ParamType = $param["ParamType"];
+        }
+
+        if (array_key_exists("ModifiableInfo",$param) and $param["ModifiableInfo"] !== null) {
+            $this->ModifiableInfo = new ModifiableInfo();
+            $this->ModifiableInfo->deserialize($param["ModifiableInfo"]);
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

@@ -20,81 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 获取任务脚本内容返回体
  *
- * @method string getProjectId() 获取项目编号
+ * @method string getProjectId() 获取<p>项目编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目编号
+ * @method void setProjectId(string $ProjectId) 设置<p>项目编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取任务编号
+ * @method string getTaskId() 获取<p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务编号
+ * @method void setTaskId(string $TaskId) 设置<p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageSize() 获取页内尺寸
+ * @method integer getPageSize() 获取<p>页内尺寸</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageSize(integer $PageSize) 设置页内尺寸
+ * @method void setPageSize(integer $PageSize) 设置<p>页内尺寸</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageNum() 获取页码
+ * @method integer getPageNum() 获取<p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageNum(integer $PageNum) 设置页码
+ * @method void setPageNum(integer $PageNum) 设置<p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageTotal() 获取总页数
+ * @method integer getPageTotal() 获取<p>总页数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageTotal(integer $PageTotal) 设置总页数
+ * @method void setPageTotal(integer $PageTotal) 设置<p>总页数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBase64ScriptContent() 获取分页内容
+ * @method string getBase64ScriptContent() 获取<p>分页内容</p><p>分页拉取全部代码内容后，先拼接，再Base64解码获取完整脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBase64ScriptContent(string $Base64ScriptContent) 设置分页内容
+ * @method void setBase64ScriptContent(string $Base64ScriptContent) 设置<p>分页内容</p><p>分页拉取全部代码内容后，先拼接，再Base64解码获取完整脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GetPaginationTaskScriptResponseInfo extends AbstractModel
 {
     /**
-     * @var string 项目编号
+     * @var string <p>项目编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 任务编号
+     * @var string <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var integer 页内尺寸
+     * @var integer <p>页内尺寸</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageSize;
 
     /**
-     * @var integer 页码
+     * @var integer <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageNum;
 
     /**
-     * @var integer 总页数
+     * @var integer <p>总页数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageTotal;
 
     /**
-     * @var string 分页内容
+     * @var string <p>分页内容</p><p>分页拉取全部代码内容后，先拼接，再Base64解码获取完整脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Base64ScriptContent;
 
     /**
-     * @param string $ProjectId 项目编号
+     * @param string $ProjectId <p>项目编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 任务编号
+     * @param string $TaskId <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageSize 页内尺寸
+     * @param integer $PageSize <p>页内尺寸</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageNum 页码
+     * @param integer $PageNum <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageTotal 总页数
+     * @param integer $PageTotal <p>总页数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Base64ScriptContent 分页内容
+     * @param string $Base64ScriptContent <p>分页内容</p><p>分页拉取全部代码内容后，先拼接，再Base64解码获取完整脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

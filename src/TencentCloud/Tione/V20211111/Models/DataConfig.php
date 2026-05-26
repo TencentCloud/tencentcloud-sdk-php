@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicDataSource(PublicDataSourceFS $PublicDataSource) 设置<p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getReadOnly() 获取<p>是否是只读存储</p>
+ * @method void setReadOnly(boolean $ReadOnly) 设置<p>是否是只读存储</p>
  */
 class DataConfig extends AbstractModel
 {
@@ -148,6 +150,11 @@ class DataConfig extends AbstractModel
     public $PublicDataSource;
 
     /**
+     * @var boolean <p>是否是只读存储</p>
+     */
+    public $ReadOnly;
+
+    /**
      * @param string $MappingPath <p>映射路径</p>
      * @param string $DataSourceUsage <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -172,6 +179,7 @@ class DataConfig extends AbstractModel
      * @param HostPath $HostPathSource <p>主机路径信息</p>
      * @param PublicDataSourceFS $PublicDataSource <p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ReadOnly <p>是否是只读存储</p>
      */
     function __construct()
     {
@@ -246,6 +254,10 @@ class DataConfig extends AbstractModel
         if (array_key_exists("PublicDataSource",$param) and $param["PublicDataSource"] !== null) {
             $this->PublicDataSource = new PublicDataSourceFS();
             $this->PublicDataSource->deserialize($param["PublicDataSource"]);
+        }
+
+        if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
+            $this->ReadOnly = $param["ReadOnly"];
         }
     }
 }

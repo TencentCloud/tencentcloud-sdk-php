@@ -20,218 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源信息
  *
- * @method string getResourceId() 获取资源Id
- * @method void setResourceId(string $ResourceId) 设置资源Id
- * @method string getResourceName() 获取资源名称
- * @method void setResourceName(string $ResourceName) 设置资源名称
- * @method integer getStatus() 获取资源状态，1-正常，2-隔离，3-销毁
- * @method void setStatus(integer $Status) 设置资源状态，1-正常，2-隔离，3-销毁
- * @method string getVip() 获取资源IP
- * @method void setVip(string $Vip) 设置资源IP
- * @method string getVpcId() 获取资源所属Vpc
- * @method void setVpcId(string $VpcId) 设置资源所属Vpc
- * @method string getSubnetId() 获取资源所属子网
- * @method void setSubnetId(string $SubnetId) 设置资源所属子网
- * @method string getModel() 获取资源所属HSM规格
- * @method void setModel(string $Model) 设置资源所属HSM规格
- * @method integer getVsmType() 获取云加密机类型id
- * @method void setVsmType(integer $VsmType) 设置云加密机类型id
- * @method integer getRegionId() 获取地域Id
- * @method void setRegionId(integer $RegionId) 设置地域Id
- * @method integer getZoneId() 获取区域Id
- * @method void setZoneId(integer $ZoneId) 设置区域Id
- * @method integer getExpireTime() 获取过期时间（Epoch Unix Timestamp）
- * @method void setExpireTime(integer $ExpireTime) 设置过期时间（Epoch Unix Timestamp）
- * @method string getRegionName() 获取地域名
- * @method void setRegionName(string $RegionName) 设置地域名
- * @method string getZoneName() 获取区域名
- * @method void setZoneName(string $ZoneName) 设置区域名
- * @method array getSgList() 获取实例的安全组列表
- * @method void setSgList(array $SgList) 设置实例的安全组列表
- * @method string getSubnetName() 获取子网名称
- * @method void setSubnetName(string $SubnetName) 设置子网名称
- * @method boolean getExpired() 获取当前实例是否已经过期
- * @method void setExpired(boolean $Expired) 设置当前实例是否已经过期
- * @method integer getRemainSeconds() 获取为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
- * @method void setRemainSeconds(integer $RemainSeconds) 设置为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
- * @method string getVpcName() 获取Vpc名称
- * @method void setVpcName(string $VpcName) 设置Vpc名称
- * @method string getCreateUin() 获取创建者Uin账号
- * @method void setCreateUin(string $CreateUin) 设置创建者Uin账号
- * @method integer getRenewFlag() 获取自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
- * @method void setRenewFlag(integer $RenewFlag) 设置自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
- * @method string getManufacturer() 获取厂商
- * @method void setManufacturer(string $Manufacturer) 设置厂商
- * @method integer getAlarmStatus() 获取告警状态，0：停用，1：启用
- * @method void setAlarmStatus(integer $AlarmStatus) 设置告警状态，0：停用，1：启用
- * @method integer getPqcStatus() 获取0不支持
-1关闭
-2开启
- * @method void setPqcStatus(integer $PqcStatus) 设置0不支持
-1关闭
-2开启
- * @method integer getPqcFlag() 获取0关闭，1开启
- * @method void setPqcFlag(integer $PqcFlag) 设置0关闭，1开启
+ * @method string getResourceId() 获取<p>资源Id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源Id</p>
+ * @method string getResourceName() 获取<p>资源名称</p>
+ * @method void setResourceName(string $ResourceName) 设置<p>资源名称</p>
+ * @method integer getStatus() 获取<p>资源状态，1-正常，2-隔离，3-销毁</p>
+ * @method void setStatus(integer $Status) 设置<p>资源状态，1-正常，2-隔离，3-销毁</p>
+ * @method string getVip() 获取<p>资源IP</p>
+ * @method void setVip(string $Vip) 设置<p>资源IP</p>
+ * @method string getVpcId() 获取<p>资源所属Vpc</p>
+ * @method void setVpcId(string $VpcId) 设置<p>资源所属Vpc</p>
+ * @method string getSubnetId() 获取<p>资源所属子网</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>资源所属子网</p>
+ * @method string getModel() 获取<p>资源所属HSM规格</p>
+ * @method void setModel(string $Model) 设置<p>资源所属HSM规格</p>
+ * @method integer getVsmType() 获取<p>云加密机类型id</p>
+ * @method void setVsmType(integer $VsmType) 设置<p>云加密机类型id</p>
+ * @method integer getRegionId() 获取<p>地域Id</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域Id</p>
+ * @method integer getZoneId() 获取<p>区域Id</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>区域Id</p>
+ * @method integer getExpireTime() 获取<p>过期时间（Epoch Unix Timestamp）</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>过期时间（Epoch Unix Timestamp）</p>
+ * @method string getRegionName() 获取<p>地域名</p>
+ * @method void setRegionName(string $RegionName) 设置<p>地域名</p>
+ * @method string getZoneName() 获取<p>区域名</p>
+ * @method void setZoneName(string $ZoneName) 设置<p>区域名</p>
+ * @method array getSgList() 获取<p>实例的安全组列表</p>
+ * @method void setSgList(array $SgList) 设置<p>实例的安全组列表</p>
+ * @method string getSubnetName() 获取<p>子网名称</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>子网名称</p>
+ * @method boolean getExpired() 获取<p>当前实例是否已经过期</p>
+ * @method void setExpired(boolean $Expired) 设置<p>当前实例是否已经过期</p>
+ * @method integer getRemainSeconds() 获取<p>为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒</p>
+ * @method void setRemainSeconds(integer $RemainSeconds) 设置<p>为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒</p>
+ * @method string getVpcName() 获取<p>Vpc名称</p>
+ * @method void setVpcName(string $VpcName) 设置<p>Vpc名称</p>
+ * @method string getCreateUin() 获取<p>创建者Uin账号</p>
+ * @method void setCreateUin(string $CreateUin) 设置<p>创建者Uin账号</p>
+ * @method integer getRenewFlag() 获取<p>自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续</p>
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
+ * @method string getManufacturer() 获取<p>厂商</p>
+ * @method void setManufacturer(string $Manufacturer) 设置<p>厂商</p>
+ * @method integer getAlarmStatus() 获取<p>告警状态，0：停用，1：启用</p>
+ * @method void setAlarmStatus(integer $AlarmStatus) 设置<p>告警状态，0：停用，1：启用</p>
+ * @method integer getPqcStatus() 获取<p>0不支持<br>1关闭<br>2开启</p>
+ * @method void setPqcStatus(integer $PqcStatus) 设置<p>0不支持<br>1关闭<br>2开启</p>
+ * @method integer getPqcFlag() 获取<p>0关闭，1开启</p>
+ * @method void setPqcFlag(integer $PqcFlag) 设置<p>0关闭，1开启</p>
+ * @method string getDeployEnv() 获取<p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+ * @method void setDeployEnv(string $DeployEnv) 设置<p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
  */
 class ResourceInfo extends AbstractModel
 {
     /**
-     * @var string 资源Id
+     * @var string <p>资源Id</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 资源名称
+     * @var string <p>资源名称</p>
      */
     public $ResourceName;
 
     /**
-     * @var integer 资源状态，1-正常，2-隔离，3-销毁
+     * @var integer <p>资源状态，1-正常，2-隔离，3-销毁</p>
      */
     public $Status;
 
     /**
-     * @var string 资源IP
+     * @var string <p>资源IP</p>
      */
     public $Vip;
 
     /**
-     * @var string 资源所属Vpc
+     * @var string <p>资源所属Vpc</p>
      */
     public $VpcId;
 
     /**
-     * @var string 资源所属子网
+     * @var string <p>资源所属子网</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 资源所属HSM规格
+     * @var string <p>资源所属HSM规格</p>
      */
     public $Model;
 
     /**
-     * @var integer 云加密机类型id
+     * @var integer <p>云加密机类型id</p>
      */
     public $VsmType;
 
     /**
-     * @var integer 地域Id
+     * @var integer <p>地域Id</p>
      */
     public $RegionId;
 
     /**
-     * @var integer 区域Id
+     * @var integer <p>区域Id</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer 过期时间（Epoch Unix Timestamp）
+     * @var integer <p>过期时间（Epoch Unix Timestamp）</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 地域名
+     * @var string <p>地域名</p>
      */
     public $RegionName;
 
     /**
-     * @var string 区域名
+     * @var string <p>区域名</p>
      */
     public $ZoneName;
 
     /**
-     * @var array 实例的安全组列表
+     * @var array <p>实例的安全组列表</p>
      */
     public $SgList;
 
     /**
-     * @var string 子网名称
+     * @var string <p>子网名称</p>
      */
     public $SubnetName;
 
     /**
-     * @var boolean 当前实例是否已经过期
+     * @var boolean <p>当前实例是否已经过期</p>
      */
     public $Expired;
 
     /**
-     * @var integer 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
+     * @var integer <p>为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒</p>
      */
     public $RemainSeconds;
 
     /**
-     * @var string Vpc名称
+     * @var string <p>Vpc名称</p>
      */
     public $VpcName;
 
     /**
-     * @var string 创建者Uin账号
+     * @var string <p>创建者Uin账号</p>
      */
     public $CreateUin;
 
     /**
-     * @var integer 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+     * @var integer <p>自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续</p>
      */
     public $RenewFlag;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @var string 厂商
+     * @var string <p>厂商</p>
      */
     public $Manufacturer;
 
     /**
-     * @var integer 告警状态，0：停用，1：启用
+     * @var integer <p>告警状态，0：停用，1：启用</p>
      */
     public $AlarmStatus;
 
     /**
-     * @var integer 0不支持
-1关闭
-2开启
+     * @var integer <p>0不支持<br>1关闭<br>2开启</p>
      */
     public $PqcStatus;
 
     /**
-     * @var integer 0关闭，1开启
+     * @var integer <p>0关闭，1开启</p>
      */
     public $PqcFlag;
 
     /**
-     * @param string $ResourceId 资源Id
-     * @param string $ResourceName 资源名称
-     * @param integer $Status 资源状态，1-正常，2-隔离，3-销毁
-     * @param string $Vip 资源IP
-     * @param string $VpcId 资源所属Vpc
-     * @param string $SubnetId 资源所属子网
-     * @param string $Model 资源所属HSM规格
-     * @param integer $VsmType 云加密机类型id
-     * @param integer $RegionId 地域Id
-     * @param integer $ZoneId 区域Id
-     * @param integer $ExpireTime 过期时间（Epoch Unix Timestamp）
-     * @param string $RegionName 地域名
-     * @param string $ZoneName 区域名
-     * @param array $SgList 实例的安全组列表
-     * @param string $SubnetName 子网名称
-     * @param boolean $Expired 当前实例是否已经过期
-     * @param integer $RemainSeconds 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-     * @param string $VpcName Vpc名称
-     * @param string $CreateUin 创建者Uin账号
-     * @param integer $RenewFlag 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-     * @param array $Tags 标签列表
-     * @param string $Manufacturer 厂商
-     * @param integer $AlarmStatus 告警状态，0：停用，1：启用
-     * @param integer $PqcStatus 0不支持
-1关闭
-2开启
-     * @param integer $PqcFlag 0关闭，1开启
+     * @var string <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+     */
+    public $DeployEnv;
+
+    /**
+     * @param string $ResourceId <p>资源Id</p>
+     * @param string $ResourceName <p>资源名称</p>
+     * @param integer $Status <p>资源状态，1-正常，2-隔离，3-销毁</p>
+     * @param string $Vip <p>资源IP</p>
+     * @param string $VpcId <p>资源所属Vpc</p>
+     * @param string $SubnetId <p>资源所属子网</p>
+     * @param string $Model <p>资源所属HSM规格</p>
+     * @param integer $VsmType <p>云加密机类型id</p>
+     * @param integer $RegionId <p>地域Id</p>
+     * @param integer $ZoneId <p>区域Id</p>
+     * @param integer $ExpireTime <p>过期时间（Epoch Unix Timestamp）</p>
+     * @param string $RegionName <p>地域名</p>
+     * @param string $ZoneName <p>区域名</p>
+     * @param array $SgList <p>实例的安全组列表</p>
+     * @param string $SubnetName <p>子网名称</p>
+     * @param boolean $Expired <p>当前实例是否已经过期</p>
+     * @param integer $RemainSeconds <p>为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒</p>
+     * @param string $VpcName <p>Vpc名称</p>
+     * @param string $CreateUin <p>创建者Uin账号</p>
+     * @param integer $RenewFlag <p>自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续</p>
+     * @param array $Tags <p>标签列表</p>
+     * @param string $Manufacturer <p>厂商</p>
+     * @param integer $AlarmStatus <p>告警状态，0：停用，1：启用</p>
+     * @param integer $PqcStatus <p>0不支持<br>1关闭<br>2开启</p>
+     * @param integer $PqcFlag <p>0关闭，1开启</p>
+     * @param string $DeployEnv <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
      */
     function __construct()
     {
@@ -354,6 +354,10 @@ class ResourceInfo extends AbstractModel
 
         if (array_key_exists("PqcFlag",$param) and $param["PqcFlag"] !== null) {
             $this->PqcFlag = $param["PqcFlag"];
+        }
+
+        if (array_key_exists("DeployEnv",$param) and $param["DeployEnv"] !== null) {
+            $this->DeployEnv = $param["DeployEnv"];
         }
     }
 }

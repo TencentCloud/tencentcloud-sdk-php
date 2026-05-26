@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputRegion(string $InputRegion) 设置<p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
  * @method string getSceneType() 获取<p>场景类型。取值如下：</p><li>当 ModelName 为 Kling 时：    motion_control 表示动作控制；    avatar_i2v 表示数字人；    lip_sync 表示对口型；</li><li>当 ModelName 为 Vidu 时：    template_effect 表示特效模板；</li><li>其他 ModelName 暂不支持。</li>
  * @method void setSceneType(string $SceneType) 设置<p>场景类型。取值如下：</p><li>当 ModelName 为 Kling 时：    motion_control 表示动作控制；    avatar_i2v 表示数字人；    lip_sync 表示对口型；</li><li>当 ModelName 为 Vidu 时：    template_effect 表示特效模板；</li><li>其他 ModelName 暂不支持。</li>
+ * @method string getProcedure() 获取<p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流名称</a>，在需要对生成的新视频执行任务流时填写。</p>
+ * @method void setProcedure(string $Procedure) 设置<p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流名称</a>，在需要对生成的新视频执行任务流时填写。</p>
  * @method integer getSeed() 获取<p>模型随机种子。</p>
  * @method void setSeed(integer $Seed) 设置<p>模型随机种子。</p>
  * @method string getSessionId() 获取<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
@@ -125,6 +127,11 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     public $SceneType;
 
     /**
+     * @var string <p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流名称</a>，在需要对生成的新视频执行任务流时填写。</p>
+     */
+    public $Procedure;
+
+    /**
      * @var integer <p>模型随机种子。</p>
      */
     public $Seed;
@@ -163,6 +170,7 @@ class CreateAigcVideoTaskRequest extends AbstractModel
      * @param AigcVideoOutputConfig $OutputConfig <p>生视频任务的输出媒体文件配置。</p>
      * @param string $InputRegion <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
      * @param string $SceneType <p>场景类型。取值如下：</p><li>当 ModelName 为 Kling 时：    motion_control 表示动作控制；    avatar_i2v 表示数字人；    lip_sync 表示对口型；</li><li>当 ModelName 为 Vidu 时：    template_effect 表示特效模板；</li><li>其他 ModelName 暂不支持。</li>
+     * @param string $Procedure <p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流名称</a>，在需要对生成的新视频执行任务流时填写。</p>
      * @param integer $Seed <p>模型随机种子。</p>
      * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      * @param string $SessionContext <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
@@ -243,6 +251,10 @@ class CreateAigcVideoTaskRequest extends AbstractModel
 
         if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
             $this->SceneType = $param["SceneType"];
+        }
+
+        if (array_key_exists("Procedure",$param) and $param["Procedure"] !== null) {
+            $this->Procedure = $param["Procedure"];
         }
 
         if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {

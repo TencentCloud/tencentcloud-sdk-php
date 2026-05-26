@@ -19,6 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 编排空间试运行记录
+查询执行日志 可调用DownloadLogByLine接口
  *
  * @method string getStartTime() 获取<p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。

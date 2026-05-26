@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getEventId() 获取事件 ID 。
  * @method void setEventId(integer $EventId) 设置事件 ID 。
- * @method string getDiagType() 获取诊断类型。
- * @method void setDiagType(string $DiagType) 设置诊断类型。
- * @method string getStartTime() 获取开始时间。
- * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getDiagType() 获取诊断类型。包含以下值：内存利用率，CPU利用率，磁盘空间利用率，复制，复制IO线程中断。
+ * @method void setDiagType(string $DiagType) 设置诊断类型。包含以下值：内存利用率，CPU利用率，磁盘空间利用率，复制，复制IO线程中断。
+ * @method string getStartTime() 获取开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
+ * @method void setStartTime(string $StartTime) 设置开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
+ * @method string getEndTime() 获取结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
+ * @method void setEndTime(string $EndTime) 设置结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
  * @method string getOutline() 获取概要。
  * @method void setOutline(string $Outline) 设置概要。
  * @method integer getSeverity() 获取严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
@@ -47,17 +47,17 @@ class EventInfo extends AbstractModel
     public $EventId;
 
     /**
-     * @var string 诊断类型。
+     * @var string 诊断类型。包含以下值：内存利用率，CPU利用率，磁盘空间利用率，复制，复制IO线程中断。
      */
     public $DiagType;
 
     /**
-     * @var string 开始时间。
+     * @var string 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间。
+     * @var string 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      */
     public $EndTime;
 
@@ -88,9 +88,9 @@ class EventInfo extends AbstractModel
 
     /**
      * @param integer $EventId 事件 ID 。
-     * @param string $DiagType 诊断类型。
-     * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
+     * @param string $DiagType 诊断类型。包含以下值：内存利用率，CPU利用率，磁盘空间利用率，复制，复制IO线程中断。
+     * @param string $StartTime 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
+     * @param string $EndTime 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      * @param string $Outline 概要。
      * @param integer $Severity 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
      * @param integer $ScoreLost 扣分。

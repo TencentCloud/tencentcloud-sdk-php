@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHealthScore请求参数结构体
  *
- * @method string getInstanceId() 获取需要获取健康得分的实例ID。
- * @method void setInstanceId(string $InstanceId) 设置需要获取健康得分的实例ID。
- * @method string getTime() 获取获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
- * @method void setTime(string $Time) 设置获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
- * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+ * @method string getInstanceId() 获取<p>需要获取健康得分的实例ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。如果是dcdb(TDSQL MySQL)，请使用 <code>{ClusterId}&amp;{InstanceId}</code> 拼接结果代替入参</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>需要获取健康得分的实例ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。如果是dcdb(TDSQL MySQL)，请使用 <code>{ClusterId}&amp;{InstanceId}</code> 拼接结果代替入参</p>
+ * @method string getTime() 获取<p>获取健康得分的时间，时间格式如：2019-09-10 12:13:14。</p>
+ * @method void setTime(string $Time) 设置<p>获取健康得分的时间，时间格式如：2019-09-10 12:13:14。</p>
+ * @method string getProduct() 获取<p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+ * @method void setProduct(string $Product) 设置<p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
  */
 class DescribeHealthScoreRequest extends AbstractModel
 {
     /**
-     * @var string 需要获取健康得分的实例ID。
+     * @var string <p>需要获取健康得分的实例ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。如果是dcdb(TDSQL MySQL)，请使用 <code>{ClusterId}&amp;{InstanceId}</code> 拼接结果代替入参</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
+     * @var string <p>获取健康得分的时间，时间格式如：2019-09-10 12:13:14。</p>
      */
     public $Time;
 
     /**
-     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * @var string <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
      */
     public $Product;
 
     /**
-     * @param string $InstanceId 需要获取健康得分的实例ID。
-     * @param string $Time 获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
-     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * @param string $InstanceId <p>需要获取健康得分的实例ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。如果是dcdb(TDSQL MySQL)，请使用 <code>{ClusterId}&amp;{InstanceId}</code> 拼接结果代替入参</p>
+     * @param string $Time <p>获取健康得分的时间，时间格式如：2019-09-10 12:13:14。</p>
+     * @param string $Product <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
      */
     function __construct()
     {

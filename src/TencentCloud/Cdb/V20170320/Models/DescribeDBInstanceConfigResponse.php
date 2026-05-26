@@ -24,18 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtectMode(integer $ProtectMode) 设置<p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
  * @method integer getDeployMode() 获取<p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
  * @method void setDeployMode(integer $DeployMode) 设置<p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
- * @method string getZone() 获取<p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
- * @method void setZone(string $Zone) 设置<p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
- * @method SlaveConfig getSlaveConfig() 获取<p>备库的配置信息。</p>
+ * @method string getZone() 获取<p>实例主可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+ * @method void setZone(string $Zone) 设置<p>实例主可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+ * @method SlaveConfig getSlaveConfig() 获取<p>双节点、三节点、四节点实例第一备库的配置信息。</p><p>查询双节点时，此参数返回为双节点的备库信息；查询三节点、四节点时，此参数返回为实例的第一备库信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSlaveConfig(SlaveConfig $SlaveConfig) 设置<p>备库的配置信息。</p>
+ * @method void setSlaveConfig(SlaveConfig $SlaveConfig) 设置<p>双节点、三节点、四节点实例第一备库的配置信息。</p><p>查询双节点时，此参数返回为双节点的备库信息；查询三节点、四节点时，此参数返回为实例的第一备库信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BackupConfig getBackupConfig() 获取<p>强同步实例第二备库的配置信息。</p>
+ * @method BackupConfig getBackupConfig() 获取<p>三节点、四节点实例第二备库的配置信息。</p><p>查询三节点、四节点时，此参数返回为第二备库的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBackupConfig(BackupConfig $BackupConfig) 设置<p>强同步实例第二备库的配置信息。</p>
+ * @method void setBackupConfig(BackupConfig $BackupConfig) 设置<p>三节点、四节点实例第二备库的配置信息。</p><p>查询三节点、四节点时，此参数返回为第二备库的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSwitched() 获取<p>是否切换备库。</p>
  * @method void setSwitched(boolean $Switched) 设置<p>是否切换备库。</p>
+ * @method BackupConfig getFourthConfig() 获取<p>四节点实例第三备库的配置信息。</p><p>查询四节点时，此参数返回为第三备库的信息。</p>
+ * @method void setFourthConfig(BackupConfig $FourthConfig) 设置<p>四节点实例第三备库的配置信息。</p><p>查询四节点时，此参数返回为第三备库的信息。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -52,18 +54,18 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     public $DeployMode;
 
     /**
-     * @var string <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+     * @var string <p>实例主可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
      */
     public $Zone;
 
     /**
-     * @var SlaveConfig <p>备库的配置信息。</p>
+     * @var SlaveConfig <p>双节点、三节点、四节点实例第一备库的配置信息。</p><p>查询双节点时，此参数返回为双节点的备库信息；查询三节点、四节点时，此参数返回为实例的第一备库信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveConfig;
 
     /**
-     * @var BackupConfig <p>强同步实例第二备库的配置信息。</p>
+     * @var BackupConfig <p>三节点、四节点实例第二备库的配置信息。</p><p>查询三节点、四节点时，此参数返回为第二备库的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupConfig;
@@ -74,6 +76,11 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     public $Switched;
 
     /**
+     * @var BackupConfig <p>四节点实例第三备库的配置信息。</p><p>查询四节点时，此参数返回为第三备库的信息。</p>
+     */
+    public $FourthConfig;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -81,12 +88,13 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     /**
      * @param integer $ProtectMode <p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
      * @param integer $DeployMode <p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
-     * @param string $Zone <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
-     * @param SlaveConfig $SlaveConfig <p>备库的配置信息。</p>
+     * @param string $Zone <p>实例主可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+     * @param SlaveConfig $SlaveConfig <p>双节点、三节点、四节点实例第一备库的配置信息。</p><p>查询双节点时，此参数返回为双节点的备库信息；查询三节点、四节点时，此参数返回为实例的第一备库信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackupConfig $BackupConfig <p>强同步实例第二备库的配置信息。</p>
+     * @param BackupConfig $BackupConfig <p>三节点、四节点实例第二备库的配置信息。</p><p>查询三节点、四节点时，此参数返回为第二备库的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Switched <p>是否切换备库。</p>
+     * @param BackupConfig $FourthConfig <p>四节点实例第三备库的配置信息。</p><p>查询四节点时，此参数返回为第三备库的信息。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -126,6 +134,11 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
 
         if (array_key_exists("Switched",$param) and $param["Switched"] !== null) {
             $this->Switched = $param["Switched"];
+        }
+
+        if (array_key_exists("FourthConfig",$param) and $param["FourthConfig"] !== null) {
+            $this->FourthConfig = new BackupConfig();
+            $this->FourthConfig->deserialize($param["FourthConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

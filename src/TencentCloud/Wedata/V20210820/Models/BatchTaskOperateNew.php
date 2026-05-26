@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 批量操作出参
  *
- * @method integer getJobId() 获取操作Id
+ * @method integer getJobId() 获取<p>操作Id</p><p>可使用JobId字段通过ListBatchDetail接口 查询异步操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobId(integer $JobId) 设置操作Id
+ * @method void setJobId(integer $JobId) 设置<p>操作Id</p><p>可使用JobId字段通过ListBatchDetail接口 查询异步操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchTaskOperateNew extends AbstractModel
 {
     /**
-     * @var integer 操作Id
+     * @var integer <p>操作Id</p><p>可使用JobId字段通过ListBatchDetail接口 查询异步操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
 
     /**
-     * @param integer $JobId 操作Id
+     * @param integer $JobId <p>操作Id</p><p>可使用JobId字段通过ListBatchDetail接口 查询异步操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

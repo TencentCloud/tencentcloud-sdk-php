@@ -50,6 +50,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeClusterNodesResponse DescribeClusterNodes(Models\DescribeClusterNodesRequest $req) 查询集群节点信息
  * @method Models\DescribeCvmQuotaResponse DescribeCvmQuota(Models\DescribeCvmQuotaRequest $req) 获取账户的CVM配额
  * @method Models\DescribeDAGInfoResponse DescribeDAGInfo(Models\DescribeDAGInfoRequest $req) 查询DAG信息
+ * @method Models\DescribeDynamicInstanceDetailResponse DescribeDynamicInstanceDetail(Models\DescribeDynamicInstanceDetailRequest $req) 描述容器EMR-TKE集群DynamicInstance详情
  * @method Models\DescribeDynamicInstanceListResponse DescribeDynamicInstanceList(Models\DescribeDynamicInstanceListRequest $req) 描述容器EMR-TKE集群DynamicInstance列表
  * @method Models\DescribeEMREventListResponse DescribeEMREventList(Models\DescribeEMREventListRequest $req) 查询EMR事件监控数据
  * @method Models\DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(Models\DescribeEmrApplicationStaticsRequest $req) yarn application 统计接口查询

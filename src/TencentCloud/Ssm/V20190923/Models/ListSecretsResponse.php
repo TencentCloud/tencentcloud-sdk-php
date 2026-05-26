@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListSecrets返回参数结构体
  *
- * @method integer getTotalCount() 获取根据State和SearchSecretName 筛选的凭据总数。
- * @method void setTotalCount(integer $TotalCount) 设置根据State和SearchSecretName 筛选的凭据总数。
- * @method array getSecretMetadatas() 获取返回凭据信息列表。
- * @method void setSecretMetadatas(array $SecretMetadatas) 设置返回凭据信息列表。
+ * @method integer getTotalCount() 获取<p>根据State和SearchSecretName 筛选的凭据总数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>根据State和SearchSecretName 筛选的凭据总数。</p>
+ * @method array getSecretMetadatas() 获取<p>返回凭据信息列表。</p>
+ * @method void setSecretMetadatas(array $SecretMetadatas) 设置<p>返回凭据信息列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListSecretsResponse extends AbstractModel
 {
     /**
-     * @var integer 根据State和SearchSecretName 筛选的凭据总数。
+     * @var integer <p>根据State和SearchSecretName 筛选的凭据总数。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 返回凭据信息列表。
+     * @var array <p>返回凭据信息列表。</p>
      */
     public $SecretMetadatas;
 
@@ -45,8 +45,8 @@ class ListSecretsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 根据State和SearchSecretName 筛选的凭据总数。
-     * @param array $SecretMetadatas 返回凭据信息列表。
+     * @param integer $TotalCount <p>根据State和SearchSecretName 筛选的凭据总数。</p>
+     * @param array $SecretMetadatas <p>返回凭据信息列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIP(string $IP) 设置<p>IP，可选，需符合IP格式</p>
  * @method string getCode() 获取<p>码</p>
  * @method void setCode(string $Code) 设置<p>码</p>
+ * @method string getExtUid() 获取<p>Uid扩展字段</p>
+ * @method void setExtUid(string $ExtUid) 设置<p>Uid扩展字段</p>
+ * @method float getLatitude() 获取<p>维度</p><p>取值范围：[-90, 90]</p>
+ * @method void setLatitude(float $Latitude) 设置<p>维度</p><p>取值范围：[-90, 90]</p>
+ * @method float getLongitude() 获取<p>精度</p><p>取值范围：[-180, 180]</p>
+ * @method void setLongitude(float $Longitude) 设置<p>精度</p><p>取值范围：[-180, 180]</p>
  */
 class ScanDetailItem extends AbstractModel
 {
@@ -87,6 +93,21 @@ class ScanDetailItem extends AbstractModel
     public $Code;
 
     /**
+     * @var string <p>Uid扩展字段</p>
+     */
+    public $ExtUid;
+
+    /**
+     * @var float <p>维度</p><p>取值范围：[-90, 90]</p>
+     */
+    public $Latitude;
+
+    /**
+     * @var float <p>精度</p><p>取值范围：[-180, 180]</p>
+     */
+    public $Longitude;
+
+    /**
      * @param string $Uid <p>用户ID，也可以为手机号</p>
      * @param string $Time <p>时间</p><p>参数格式：YYYYMMDDHHMMSS</p>
      * @param string $ProvinceName <p>省</p>
@@ -96,6 +117,9 @@ class ScanDetailItem extends AbstractModel
      * @param string $SpecName <p>品规</p>
      * @param string $IP <p>IP，可选，需符合IP格式</p>
      * @param string $Code <p>码</p>
+     * @param string $ExtUid <p>Uid扩展字段</p>
+     * @param float $Latitude <p>维度</p><p>取值范围：[-90, 90]</p>
+     * @param float $Longitude <p>精度</p><p>取值范围：[-180, 180]</p>
      */
     function __construct()
     {
@@ -144,6 +168,18 @@ class ScanDetailItem extends AbstractModel
 
         if (array_key_exists("Code",$param) and $param["Code"] !== null) {
             $this->Code = $param["Code"];
+        }
+
+        if (array_key_exists("ExtUid",$param) and $param["ExtUid"] !== null) {
+            $this->ExtUid = $param["ExtUid"];
+        }
+
+        if (array_key_exists("Latitude",$param) and $param["Latitude"] !== null) {
+            $this->Latitude = $param["Latitude"];
+        }
+
+        if (array_key_exists("Longitude",$param) and $param["Longitude"] !== null) {
+            $this->Longitude = $param["Longitude"];
         }
     }
 }

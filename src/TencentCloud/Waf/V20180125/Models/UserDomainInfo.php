@@ -18,116 +18,124 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * saas和clb信息
+ * saas和clb、四层域名信息
  *
- * @method integer getAppid() 获取用户id
- * @method void setAppid(integer $Appid) 设置用户id
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
- * @method string getDomainId() 获取域名id
- * @method void setDomainId(string $DomainId) 设置域名id
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getInstanceName() 获取实例名
- * @method void setInstanceName(string $InstanceName) 设置实例名
- * @method string getEdition() 获取waf类型
- * @method void setEdition(string $Edition) 设置waf类型
- * @method string getLevel() 获取版本
- * @method void setLevel(string $Level) 设置版本
- * @method string getWriteConfig() 获取指定域名访问日志字段的开关
- * @method void setWriteConfig(string $WriteConfig) 设置指定域名访问日志字段的开关
- * @method integer getCls() 获取指定域名是否写cls的开关 1:写 0:不写
- * @method void setCls(integer $Cls) 设置指定域名是否写cls的开关 1:写 0:不写
- * @method string getCloudType() 获取标记是否是混合云接入。hybrid表示混合云接入域名
- * @method void setCloudType(string $CloudType) 设置标记是否是混合云接入。hybrid表示混合云接入域名
- * @method string getAlbType() 获取标记clbwaf类型
- * @method void setAlbType(string $AlbType) 设置标记clbwaf类型
- * @method integer getBotStatus() 获取BOT开关状态
- * @method void setBotStatus(integer $BotStatus) 设置BOT开关状态
- * @method integer getApiStatus() 获取API开关状态
- * @method void setApiStatus(integer $ApiStatus) 设置API开关状态
+ * @method integer getAppid() 获取<p>用户id</p>
+ * @method void setAppid(integer $Appid) 设置<p>用户id</p>
+ * @method string getDomain() 获取<p>域名</p>
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
+ * @method string getDomainId() 获取<p>域名id</p>
+ * @method void setDomainId(string $DomainId) 设置<p>域名id</p>
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method string getInstanceName() 获取<p>实例名</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名</p>
+ * @method string getEdition() 获取<p>waf类型</p>
+ * @method void setEdition(string $Edition) 设置<p>waf类型</p>
+ * @method string getLevel() 获取<p>版本</p>
+ * @method void setLevel(string $Level) 设置<p>版本</p>
+ * @method string getWriteConfig() 获取<p>指定域名访问日志字段的开关</p>
+ * @method void setWriteConfig(string $WriteConfig) 设置<p>指定域名访问日志字段的开关</p>
+ * @method integer getCls() 获取<p>指定域名是否写cls的开关 1:写 0:不写</p>
+ * @method void setCls(integer $Cls) 设置<p>指定域名是否写cls的开关 1:写 0:不写</p>
+ * @method string getCloudType() 获取<p>标记是否是混合云接入。hybrid表示混合云接入域名</p>
+ * @method void setCloudType(string $CloudType) 设置<p>标记是否是混合云接入。hybrid表示混合云接入域名</p>
+ * @method string getAlbType() 获取<p>标记clbwaf类型</p>
+ * @method void setAlbType(string $AlbType) 设置<p>标记clbwaf类型</p>
+ * @method integer getBotStatus() 获取<p>BOT开关状态</p>
+ * @method void setBotStatus(integer $BotStatus) 设置<p>BOT开关状态</p>
+ * @method integer getApiStatus() 获取<p>API开关状态</p>
+ * @method void setApiStatus(integer $ApiStatus) 设置<p>API开关状态</p>
+ * @method integer getIsREIP() 获取<p>是否是四层clbwaf域名</p>
+ * @method void setIsREIP(integer $IsREIP) 设置<p>是否是四层clbwaf域名</p>
  */
 class UserDomainInfo extends AbstractModel
 {
     /**
-     * @var integer 用户id
+     * @var integer <p>用户id</p>
      */
     public $Appid;
 
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 域名id
+     * @var string <p>域名id</p>
      */
     public $DomainId;
 
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名
+     * @var string <p>实例名</p>
      */
     public $InstanceName;
 
     /**
-     * @var string waf类型
+     * @var string <p>waf类型</p>
      */
     public $Edition;
 
     /**
-     * @var string 版本
+     * @var string <p>版本</p>
      */
     public $Level;
 
     /**
-     * @var string 指定域名访问日志字段的开关
+     * @var string <p>指定域名访问日志字段的开关</p>
      */
     public $WriteConfig;
 
     /**
-     * @var integer 指定域名是否写cls的开关 1:写 0:不写
+     * @var integer <p>指定域名是否写cls的开关 1:写 0:不写</p>
      */
     public $Cls;
 
     /**
-     * @var string 标记是否是混合云接入。hybrid表示混合云接入域名
+     * @var string <p>标记是否是混合云接入。hybrid表示混合云接入域名</p>
      */
     public $CloudType;
 
     /**
-     * @var string 标记clbwaf类型
+     * @var string <p>标记clbwaf类型</p>
      */
     public $AlbType;
 
     /**
-     * @var integer BOT开关状态
+     * @var integer <p>BOT开关状态</p>
      */
     public $BotStatus;
 
     /**
-     * @var integer API开关状态
+     * @var integer <p>API开关状态</p>
      */
     public $ApiStatus;
 
     /**
-     * @param integer $Appid 用户id
-     * @param string $Domain 域名
-     * @param string $DomainId 域名id
-     * @param string $InstanceId 实例id
-     * @param string $InstanceName 实例名
-     * @param string $Edition waf类型
-     * @param string $Level 版本
-     * @param string $WriteConfig 指定域名访问日志字段的开关
-     * @param integer $Cls 指定域名是否写cls的开关 1:写 0:不写
-     * @param string $CloudType 标记是否是混合云接入。hybrid表示混合云接入域名
-     * @param string $AlbType 标记clbwaf类型
-     * @param integer $BotStatus BOT开关状态
-     * @param integer $ApiStatus API开关状态
+     * @var integer <p>是否是四层clbwaf域名</p>
+     */
+    public $IsREIP;
+
+    /**
+     * @param integer $Appid <p>用户id</p>
+     * @param string $Domain <p>域名</p>
+     * @param string $DomainId <p>域名id</p>
+     * @param string $InstanceId <p>实例id</p>
+     * @param string $InstanceName <p>实例名</p>
+     * @param string $Edition <p>waf类型</p>
+     * @param string $Level <p>版本</p>
+     * @param string $WriteConfig <p>指定域名访问日志字段的开关</p>
+     * @param integer $Cls <p>指定域名是否写cls的开关 1:写 0:不写</p>
+     * @param string $CloudType <p>标记是否是混合云接入。hybrid表示混合云接入域名</p>
+     * @param string $AlbType <p>标记clbwaf类型</p>
+     * @param integer $BotStatus <p>BOT开关状态</p>
+     * @param integer $ApiStatus <p>API开关状态</p>
+     * @param integer $IsREIP <p>是否是四层clbwaf域名</p>
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class UserDomainInfo extends AbstractModel
 
         if (array_key_exists("ApiStatus",$param) and $param["ApiStatus"] !== null) {
             $this->ApiStatus = $param["ApiStatus"];
+        }
+
+        if (array_key_exists("IsREIP",$param) and $param["IsREIP"] !== null) {
+            $this->IsREIP = $param["IsREIP"];
         }
     }
 }

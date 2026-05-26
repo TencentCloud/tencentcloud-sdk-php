@@ -20,234 +20,258 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Clb类型防护对象
  *
- * @method string getObjectId() 获取对象ID
- * @method void setObjectId(string $ObjectId) 设置对象ID
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method array getPreciseDomains() 获取精准域名列表
- * @method void setPreciseDomains(array $PreciseDomains) 设置精准域名列表
- * @method integer getStatus() 获取WAF功能开关状态，0关闭1开启
- * @method void setStatus(integer $Status) 设置WAF功能开关状态，0关闭1开启
- * @method integer getClsStatus() 获取WAF日志开关状态，0关闭1开启
- * @method void setClsStatus(integer $ClsStatus) 设置WAF日志开关状态，0关闭1开启
- * @method string getVirtualDomain() 获取CLB对象对应的虚拟域名
- * @method void setVirtualDomain(string $VirtualDomain) 设置CLB对象对应的虚拟域名
- * @method string getObjectName() 获取对象名称
- * @method void setObjectName(string $ObjectName) 设置对象名称
- * @method array getPublicIp() 获取公网地址
- * @method void setPublicIp(array $PublicIp) 设置公网地址
- * @method array getPrivateIp() 获取内网地址
- * @method void setPrivateIp(array $PrivateIp) 设置内网地址
- * @method string getVpcName() 获取VPC名称
- * @method void setVpcName(string $VpcName) 设置VPC名称
- * @method string getVpc() 获取VPC ID
- * @method void setVpc(string $Vpc) 设置VPC ID
- * @method integer getInstanceLevel() 获取waf实例等级，如果未绑定实例为0
- * @method void setInstanceLevel(integer $InstanceLevel) 设置waf实例等级，如果未绑定实例为0
- * @method integer getPostCLSStatus() 获取clb投递开关
- * @method void setPostCLSStatus(integer $PostCLSStatus) 设置clb投递开关
- * @method integer getPostCKafkaStatus() 获取kafka投递开关
- * @method void setPostCKafkaStatus(integer $PostCKafkaStatus) 设置kafka投递开关
- * @method string getType() 获取对象类型：CLB:负载均衡器，TSE:云原生网关
- * @method void setType(string $Type) 设置对象类型：CLB:负载均衡器，TSE:云原生网关
- * @method string getRegion() 获取对象地域
- * @method void setRegion(string $Region) 设置对象地域
- * @method integer getProxy() 获取代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
- * @method void setProxy(integer $Proxy) 设置代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
- * @method array getIpHeaders() 获取指定获取客户端IP的头部字段列表。IsCdn为3时有效
- * @method void setIpHeaders(array $IpHeaders) 设置指定获取客户端IP的头部字段列表。IsCdn为3时有效
- * @method integer getBotStatus() 获取bot防护开关
- * @method void setBotStatus(integer $BotStatus) 设置bot防护开关
- * @method integer getApiStatus() 获取api防护开关
- * @method void setApiStatus(integer $ApiStatus) 设置api防护开关
- * @method integer getObjectFlowMode() 获取对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
- * @method void setObjectFlowMode(integer $ObjectFlowMode) 设置对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
- * @method integer getNumericalVpcId() 获取数值形式的私有网络 ID
- * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID
- * @method string getModifyTime() 获取修改时间
- * @method void setModifyTime(string $ModifyTime) 设置修改时间
- * @method string getAddTime() 获取创建时间
- * @method void setAddTime(string $AddTime) 设置创建时间
- * @method integer getMemberAppId() 获取跨账号时，表示成员账号的appid
- * @method void setMemberAppId(integer $MemberAppId) 设置跨账号时，表示成员账号的appid
- * @method string getMemberUin() 获取跨账号时，表示成员账号的uin
- * @method void setMemberUin(string $MemberUin) 设置跨账号时，表示成员账号的uin
- * @method string getMemberNickName() 获取跨账号时，表示成员账号的昵称
- * @method void setMemberNickName(string $MemberNickName) 设置跨账号时，表示成员账号的昵称
+ * @method string getObjectId() 获取<p>对象ID</p>
+ * @method void setObjectId(string $ObjectId) 设置<p>对象ID</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method array getPreciseDomains() 获取<p>精准域名列表</p>
+ * @method void setPreciseDomains(array $PreciseDomains) 设置<p>精准域名列表</p>
+ * @method integer getStatus() 获取<p>WAF功能开关状态，0关闭1开启</p>
+ * @method void setStatus(integer $Status) 设置<p>WAF功能开关状态，0关闭1开启</p>
+ * @method integer getClsStatus() 获取<p>WAF日志开关状态，0关闭1开启</p>
+ * @method void setClsStatus(integer $ClsStatus) 设置<p>WAF日志开关状态，0关闭1开启</p>
+ * @method string getVirtualDomain() 获取<p>CLB对象对应的虚拟域名</p>
+ * @method void setVirtualDomain(string $VirtualDomain) 设置<p>CLB对象对应的虚拟域名</p>
+ * @method string getObjectName() 获取<p>对象名称</p>
+ * @method void setObjectName(string $ObjectName) 设置<p>对象名称</p>
+ * @method array getPublicIp() 获取<p>公网地址</p>
+ * @method void setPublicIp(array $PublicIp) 设置<p>公网地址</p>
+ * @method array getPrivateIp() 获取<p>内网地址</p>
+ * @method void setPrivateIp(array $PrivateIp) 设置<p>内网地址</p>
+ * @method string getVpcName() 获取<p>VPC名称</p>
+ * @method void setVpcName(string $VpcName) 设置<p>VPC名称</p>
+ * @method string getVpc() 获取<p>VPC ID</p>
+ * @method void setVpc(string $Vpc) 设置<p>VPC ID</p>
+ * @method integer getInstanceLevel() 获取<p>waf实例等级，如果未绑定实例为0</p>
+ * @method void setInstanceLevel(integer $InstanceLevel) 设置<p>waf实例等级，如果未绑定实例为0</p>
+ * @method integer getPostCLSStatus() 获取<p>clb投递开关</p>
+ * @method void setPostCLSStatus(integer $PostCLSStatus) 设置<p>clb投递开关</p>
+ * @method integer getPostCKafkaStatus() 获取<p>kafka投递开关</p>
+ * @method void setPostCKafkaStatus(integer $PostCKafkaStatus) 设置<p>kafka投递开关</p>
+ * @method string getType() 获取<p>对象类型：CLB:负载均衡器，TSE:云原生网关</p>
+ * @method void setType(string $Type) 设置<p>对象类型：CLB:负载均衡器，TSE:云原生网关</p>
+ * @method string getRegion() 获取<p>对象地域</p>
+ * @method void setRegion(string $Region) 设置<p>对象地域</p>
+ * @method integer getProxy() 获取<p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p>
+ * @method void setProxy(integer $Proxy) 设置<p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p>
+ * @method array getIpHeaders() 获取<p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p>
+ * @method void setIpHeaders(array $IpHeaders) 设置<p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p>
+ * @method integer getBotStatus() 获取<p>bot防护开关</p>
+ * @method void setBotStatus(integer $BotStatus) 设置<p>bot防护开关</p>
+ * @method integer getApiStatus() 获取<p>api防护开关</p>
+ * @method void setApiStatus(integer $ApiStatus) 设置<p>api防护开关</p>
+ * @method integer getObjectFlowMode() 获取<p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
+ * @method void setObjectFlowMode(integer $ObjectFlowMode) 设置<p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
+ * @method integer getNumericalVpcId() 获取<p>数值形式的私有网络 ID</p>
+ * @method void setNumericalVpcId(integer $NumericalVpcId) 设置<p>数值形式的私有网络 ID</p>
+ * @method string getModifyTime() 获取<p>修改时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间</p>
+ * @method string getAddTime() 获取<p>创建时间</p>
+ * @method void setAddTime(string $AddTime) 设置<p>创建时间</p>
+ * @method integer getMemberAppId() 获取<p>跨账号时，表示成员账号的appid</p>
+ * @method void setMemberAppId(integer $MemberAppId) 设置<p>跨账号时，表示成员账号的appid</p>
+ * @method string getMemberUin() 获取<p>跨账号时，表示成员账号的uin</p>
+ * @method void setMemberUin(string $MemberUin) 设置<p>跨账号时，表示成员账号的uin</p>
+ * @method string getMemberNickName() 获取<p>跨账号时，表示成员账号的昵称</p>
+ * @method void setMemberNickName(string $MemberNickName) 设置<p>跨账号时，表示成员账号的昵称</p>
+ * @method array getTagInfos() 获取<p>标签信息</p>
+ * @method void setTagInfos(array $TagInfos) 设置<p>标签信息</p>
+ * @method array getPreciseDomainDetails() 获取<p>精准域名信息</p>
+ * @method void setPreciseDomainDetails(array $PreciseDomainDetails) 设置<p>精准域名信息</p>
+ * @method integer getWafAccessStatus() 获取<p>waf接入状态</p>
+ * @method void setWafAccessStatus(integer $WafAccessStatus) 设置<p>waf接入状态</p>
  */
 class ClbObject extends AbstractModel
 {
     /**
-     * @var string 对象ID
+     * @var string <p>对象ID</p>
      */
     public $ObjectId;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var array 精准域名列表
+     * @var array <p>精准域名列表</p>
      */
     public $PreciseDomains;
 
     /**
-     * @var integer WAF功能开关状态，0关闭1开启
+     * @var integer <p>WAF功能开关状态，0关闭1开启</p>
      */
     public $Status;
 
     /**
-     * @var integer WAF日志开关状态，0关闭1开启
+     * @var integer <p>WAF日志开关状态，0关闭1开启</p>
      */
     public $ClsStatus;
 
     /**
-     * @var string CLB对象对应的虚拟域名
+     * @var string <p>CLB对象对应的虚拟域名</p>
      */
     public $VirtualDomain;
 
     /**
-     * @var string 对象名称
+     * @var string <p>对象名称</p>
      */
     public $ObjectName;
 
     /**
-     * @var array 公网地址
+     * @var array <p>公网地址</p>
      */
     public $PublicIp;
 
     /**
-     * @var array 内网地址
+     * @var array <p>内网地址</p>
      */
     public $PrivateIp;
 
     /**
-     * @var string VPC名称
+     * @var string <p>VPC名称</p>
      */
     public $VpcName;
 
     /**
-     * @var string VPC ID
+     * @var string <p>VPC ID</p>
      */
     public $Vpc;
 
     /**
-     * @var integer waf实例等级，如果未绑定实例为0
+     * @var integer <p>waf实例等级，如果未绑定实例为0</p>
      */
     public $InstanceLevel;
 
     /**
-     * @var integer clb投递开关
+     * @var integer <p>clb投递开关</p>
      */
     public $PostCLSStatus;
 
     /**
-     * @var integer kafka投递开关
+     * @var integer <p>kafka投递开关</p>
      */
     public $PostCKafkaStatus;
 
     /**
-     * @var string 对象类型：CLB:负载均衡器，TSE:云原生网关
+     * @var string <p>对象类型：CLB:负载均衡器，TSE:云原生网关</p>
      */
     public $Type;
 
     /**
-     * @var string 对象地域
+     * @var string <p>对象地域</p>
      */
     public $Region;
 
     /**
-     * @var integer 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
+     * @var integer <p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p>
      */
     public $Proxy;
 
     /**
-     * @var array 指定获取客户端IP的头部字段列表。IsCdn为3时有效
+     * @var array <p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p>
      */
     public $IpHeaders;
 
     /**
-     * @var integer bot防护开关
+     * @var integer <p>bot防护开关</p>
      */
     public $BotStatus;
 
     /**
-     * @var integer api防护开关
+     * @var integer <p>api防护开关</p>
      */
     public $ApiStatus;
 
     /**
-     * @var integer 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+     * @var integer <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
      */
     public $ObjectFlowMode;
 
     /**
-     * @var integer 数值形式的私有网络 ID
+     * @var integer <p>数值形式的私有网络 ID</p>
      */
     public $NumericalVpcId;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $AddTime;
 
     /**
-     * @var integer 跨账号时，表示成员账号的appid
+     * @var integer <p>跨账号时，表示成员账号的appid</p>
      */
     public $MemberAppId;
 
     /**
-     * @var string 跨账号时，表示成员账号的uin
+     * @var string <p>跨账号时，表示成员账号的uin</p>
      */
     public $MemberUin;
 
     /**
-     * @var string 跨账号时，表示成员账号的昵称
+     * @var string <p>跨账号时，表示成员账号的昵称</p>
      */
     public $MemberNickName;
 
     /**
-     * @param string $ObjectId 对象ID
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
-     * @param array $PreciseDomains 精准域名列表
-     * @param integer $Status WAF功能开关状态，0关闭1开启
-     * @param integer $ClsStatus WAF日志开关状态，0关闭1开启
-     * @param string $VirtualDomain CLB对象对应的虚拟域名
-     * @param string $ObjectName 对象名称
-     * @param array $PublicIp 公网地址
-     * @param array $PrivateIp 内网地址
-     * @param string $VpcName VPC名称
-     * @param string $Vpc VPC ID
-     * @param integer $InstanceLevel waf实例等级，如果未绑定实例为0
-     * @param integer $PostCLSStatus clb投递开关
-     * @param integer $PostCKafkaStatus kafka投递开关
-     * @param string $Type 对象类型：CLB:负载均衡器，TSE:云原生网关
-     * @param string $Region 对象地域
-     * @param integer $Proxy 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-     * @param array $IpHeaders 指定获取客户端IP的头部字段列表。IsCdn为3时有效
-     * @param integer $BotStatus bot防护开关
-     * @param integer $ApiStatus api防护开关
-     * @param integer $ObjectFlowMode 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-     * @param integer $NumericalVpcId 数值形式的私有网络 ID
-     * @param string $ModifyTime 修改时间
-     * @param string $AddTime 创建时间
-     * @param integer $MemberAppId 跨账号时，表示成员账号的appid
-     * @param string $MemberUin 跨账号时，表示成员账号的uin
-     * @param string $MemberNickName 跨账号时，表示成员账号的昵称
+     * @var array <p>标签信息</p>
+     */
+    public $TagInfos;
+
+    /**
+     * @var array <p>精准域名信息</p>
+     */
+    public $PreciseDomainDetails;
+
+    /**
+     * @var integer <p>waf接入状态</p>
+     */
+    public $WafAccessStatus;
+
+    /**
+     * @param string $ObjectId <p>对象ID</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param array $PreciseDomains <p>精准域名列表</p>
+     * @param integer $Status <p>WAF功能开关状态，0关闭1开启</p>
+     * @param integer $ClsStatus <p>WAF日志开关状态，0关闭1开启</p>
+     * @param string $VirtualDomain <p>CLB对象对应的虚拟域名</p>
+     * @param string $ObjectName <p>对象名称</p>
+     * @param array $PublicIp <p>公网地址</p>
+     * @param array $PrivateIp <p>内网地址</p>
+     * @param string $VpcName <p>VPC名称</p>
+     * @param string $Vpc <p>VPC ID</p>
+     * @param integer $InstanceLevel <p>waf实例等级，如果未绑定实例为0</p>
+     * @param integer $PostCLSStatus <p>clb投递开关</p>
+     * @param integer $PostCKafkaStatus <p>kafka投递开关</p>
+     * @param string $Type <p>对象类型：CLB:负载均衡器，TSE:云原生网关</p>
+     * @param string $Region <p>对象地域</p>
+     * @param integer $Proxy <p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p>
+     * @param array $IpHeaders <p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p>
+     * @param integer $BotStatus <p>bot防护开关</p>
+     * @param integer $ApiStatus <p>api防护开关</p>
+     * @param integer $ObjectFlowMode <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
+     * @param integer $NumericalVpcId <p>数值形式的私有网络 ID</p>
+     * @param string $ModifyTime <p>修改时间</p>
+     * @param string $AddTime <p>创建时间</p>
+     * @param integer $MemberAppId <p>跨账号时，表示成员账号的appid</p>
+     * @param string $MemberUin <p>跨账号时，表示成员账号的uin</p>
+     * @param string $MemberNickName <p>跨账号时，表示成员账号的昵称</p>
+     * @param array $TagInfos <p>标签信息</p>
+     * @param array $PreciseDomainDetails <p>精准域名信息</p>
+     * @param integer $WafAccessStatus <p>waf接入状态</p>
      */
     function __construct()
     {
@@ -372,6 +396,28 @@ class ClbObject extends AbstractModel
 
         if (array_key_exists("MemberNickName",$param) and $param["MemberNickName"] !== null) {
             $this->MemberNickName = $param["MemberNickName"];
+        }
+
+        if (array_key_exists("TagInfos",$param) and $param["TagInfos"] !== null) {
+            $this->TagInfos = [];
+            foreach ($param["TagInfos"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("PreciseDomainDetails",$param) and $param["PreciseDomainDetails"] !== null) {
+            $this->PreciseDomainDetails = [];
+            foreach ($param["PreciseDomainDetails"] as $key => $value){
+                $obj = new DomainInfo();
+                $obj->deserialize($value);
+                array_push($this->PreciseDomainDetails, $obj);
+            }
+        }
+
+        if (array_key_exists("WafAccessStatus",$param) and $param["WafAccessStatus"] !== null) {
+            $this->WafAccessStatus = $param["WafAccessStatus"];
         }
     }
 }

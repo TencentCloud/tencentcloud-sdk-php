@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyHost返回参数结构体
  *
- * @method string getDomainId() 获取编辑的域名ID
- * @method void setDomainId(string $DomainId) 设置编辑的域名ID
+ * @method string getDomainId() 获取<p>编辑的域名ID</p>
+ * @method void setDomainId(string $DomainId) 设置<p>编辑的域名ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyHostResponse extends AbstractModel
 {
     /**
-     * @var string 编辑的域名ID
+     * @var string <p>编辑的域名ID</p>
      */
     public $DomainId;
 
@@ -38,7 +38,7 @@ class ModifyHostResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DomainId 编辑的域名ID
+     * @param string $DomainId <p>编辑的域名ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

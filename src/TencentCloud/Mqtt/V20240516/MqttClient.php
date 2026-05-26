@@ -75,6 +75,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DescribeProductSKUListResponse DescribeProductSKUList(Models\DescribeProductSKUListRequest $req) 获取产品售卖规格
  * @method Models\DescribeSharedSubscriptionClientResponse DescribeSharedSubscriptionClient(Models\DescribeSharedSubscriptionClientRequest $req) 查询共享订阅组详情信息
  * @method Models\DescribeSharedSubscriptionGroupsResponse DescribeSharedSubscriptionGroups(Models\DescribeSharedSubscriptionGroupsRequest $req) 查询集群下共享订阅组列表
+ * @method Models\DescribeSharedSubscriptionGroupsWithSubscriptionsResponse DescribeSharedSubscriptionGroupsWithSubscriptions(Models\DescribeSharedSubscriptionGroupsWithSubscriptionsRequest $req) 查询集群下共享订阅组列表
  * @method Models\DescribeSharedSubscriptionLagResponse DescribeSharedSubscriptionLag(Models\DescribeSharedSubscriptionLagRequest $req) 查询共享订阅消息堆积量
  * @method Models\DescribeSharedSubscriptionsResponse DescribeSharedSubscriptions(Models\DescribeSharedSubscriptionsRequest $req) 查询共享订阅组订阅列表
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 查询mqtt主题详情
@@ -99,6 +100,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
 注意：需要提交当前规则的所有属性，即使某些字段没有修改。
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题属性
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改MQTT角色
+ * @method Models\ModifyX509ConfigResponse ModifyX509Config(Models\ModifyX509ConfigRequest $req) 修改集群X509配置
  * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 发布 MQTT 消息到消息主题或客户端
  * @method Models\RegisterCaCertificateResponse RegisterCaCertificate(Models\RegisterCaCertificateRequest $req) 注册CA证书（仅一机一证场景支持），可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817)
  * @method Models\RegisterDeviceCertificateResponse RegisterDeviceCertificate(Models\RegisterDeviceCertificateRequest $req) 注册设备证书（仅一机一证场景生效），可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817#6cb39d46-efad-4220-8f11-2e7fab207bc8)

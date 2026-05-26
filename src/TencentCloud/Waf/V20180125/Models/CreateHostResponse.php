@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHost返回参数结构体
  *
- * @method string getDomainId() 获取新增防护域名ID
- * @method void setDomainId(string $DomainId) 设置新增防护域名ID
+ * @method string getDomainId() 获取<p>新增防护域名ID</p>
+ * @method void setDomainId(string $DomainId) 设置<p>新增防护域名ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateHostResponse extends AbstractModel
 {
     /**
-     * @var string 新增防护域名ID
+     * @var string <p>新增防护域名ID</p>
      */
     public $DomainId;
 
@@ -38,7 +38,7 @@ class CreateHostResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DomainId 新增防护域名ID
+     * @param string $DomainId <p>新增防护域名ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

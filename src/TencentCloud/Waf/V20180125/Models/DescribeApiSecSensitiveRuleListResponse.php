@@ -20,97 +20,104 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApiSecSensitiveRuleList返回参数结构体
  *
- * @method array getData() 获取api敏感规则列表
+ * @method array getData() 获取<p>api敏感规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置api敏感规则列表
+ * @method void setData(array $Data) 设置<p>api敏感规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取规则数量
+ * @method integer getTotal() 获取<p>规则数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置规则数量
+ * @method void setTotal(integer $Total) 设置<p>规则数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取自定义敏感检测规则总开关
- * @method void setStatus(integer $Status) 设置自定义敏感检测规则总开关
- * @method array getRuleNameList() 获取非内置规则的rulename列表
+ * @method integer getStatus() 获取<p>自定义敏感检测规则总开关</p>
+ * @method void setStatus(integer $Status) 设置<p>自定义敏感检测规则总开关</p>
+ * @method array getRuleNameList() 获取<p>非内置规则的rulename列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleNameList(array $RuleNameList) 设置非内置规则的rulename列表
+ * @method void setRuleNameList(array $RuleNameList) 设置<p>非内置规则的rulename列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getApiExtractRule() 获取api提取规则列表
+ * @method array getApiExtractRule() 获取<p>api提取规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiExtractRule(array $ApiExtractRule) 设置api提取规则列表
+ * @method void setApiExtractRule(array $ApiExtractRule) 设置<p>api提取规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getApiSecPrivilegeRule() 获取api鉴权规则列表
+ * @method array getApiSecPrivilegeRule() 获取<p>api鉴权规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiSecPrivilegeRule(array $ApiSecPrivilegeRule) 设置api鉴权规则列表
+ * @method void setApiSecPrivilegeRule(array $ApiSecPrivilegeRule) 设置<p>api鉴权规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getApiSecSceneRule() 获取api场景规则列表
+ * @method array getApiSecSceneRule() 获取<p>api场景规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiSecSceneRule(array $ApiSecSceneRule) 设置api场景规则列表
+ * @method void setApiSecSceneRule(array $ApiSecSceneRule) 设置<p>api场景规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getApiSecCustomEventRule() 获取自定义事件规则
+ * @method array getApiSecCustomEventRule() 获取<p>自定义事件规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiSecCustomEventRule(array $ApiSecCustomEventRule) 设置自定义事件规则
+ * @method void setApiSecCustomEventRule(array $ApiSecCustomEventRule) 设置<p>自定义事件规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getApiExcludeRule() 获取无效api排除规则列表
+ * @method array getApiExcludeRule() 获取<p>无效api排除规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiExcludeRule(array $ApiExcludeRule) 设置无效api排除规则列表
+ * @method void setApiExcludeRule(array $ApiExcludeRule) 设置<p>无效api排除规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getApiSecSensitiveWhiteRule() 获取<p>敏感数据加白规则列表</p>
+ * @method void setApiSecSensitiveWhiteRule(array $ApiSecSensitiveWhiteRule) 设置<p>敏感数据加白规则列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeApiSecSensitiveRuleListResponse extends AbstractModel
 {
     /**
-     * @var array api敏感规则列表
+     * @var array <p>api敏感规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
-     * @var integer 规则数量
+     * @var integer <p>规则数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var integer 自定义敏感检测规则总开关
+     * @var integer <p>自定义敏感检测规则总开关</p>
      */
     public $Status;
 
     /**
-     * @var array 非内置规则的rulename列表
+     * @var array <p>非内置规则的rulename列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleNameList;
 
     /**
-     * @var array api提取规则列表
+     * @var array <p>api提取规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiExtractRule;
 
     /**
-     * @var array api鉴权规则列表
+     * @var array <p>api鉴权规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiSecPrivilegeRule;
 
     /**
-     * @var array api场景规则列表
+     * @var array <p>api场景规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiSecSceneRule;
 
     /**
-     * @var array 自定义事件规则
+     * @var array <p>自定义事件规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiSecCustomEventRule;
 
     /**
-     * @var array 无效api排除规则列表
+     * @var array <p>无效api排除规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiExcludeRule;
+
+    /**
+     * @var array <p>敏感数据加白规则列表</p>
+     */
+    public $ApiSecSensitiveWhiteRule;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -118,23 +125,24 @@ class DescribeApiSecSensitiveRuleListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data api敏感规则列表
+     * @param array $Data <p>api敏感规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total 规则数量
+     * @param integer $Total <p>规则数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 自定义敏感检测规则总开关
-     * @param array $RuleNameList 非内置规则的rulename列表
+     * @param integer $Status <p>自定义敏感检测规则总开关</p>
+     * @param array $RuleNameList <p>非内置规则的rulename列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ApiExtractRule api提取规则列表
+     * @param array $ApiExtractRule <p>api提取规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ApiSecPrivilegeRule api鉴权规则列表
+     * @param array $ApiSecPrivilegeRule <p>api鉴权规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ApiSecSceneRule api场景规则列表
+     * @param array $ApiSecSceneRule <p>api场景规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ApiSecCustomEventRule 自定义事件规则
+     * @param array $ApiSecCustomEventRule <p>自定义事件规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ApiExcludeRule 无效api排除规则列表
+     * @param array $ApiExcludeRule <p>无效api排除规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ApiSecSensitiveWhiteRule <p>敏感数据加白规则列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -213,6 +221,15 @@ class DescribeApiSecSensitiveRuleListResponse extends AbstractModel
                 $obj = new ApiSecExcludeRule();
                 $obj->deserialize($value);
                 array_push($this->ApiExcludeRule, $obj);
+            }
+        }
+
+        if (array_key_exists("ApiSecSensitiveWhiteRule",$param) and $param["ApiSecSensitiveWhiteRule"] !== null) {
+            $this->ApiSecSensitiveWhiteRule = [];
+            foreach ($param["ApiSecSensitiveWhiteRule"] as $key => $value){
+                $obj = new ApiSecSensitiveWhiteRule();
+                $obj->deserialize($value);
+                array_push($this->ApiSecSensitiveWhiteRule, $obj);
             }
         }
 

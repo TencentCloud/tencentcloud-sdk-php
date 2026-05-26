@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProtectGroup请求参数结构体
  *
- * @method string getName() 获取防护对象组名称
- * @method void setName(string $Name) 设置防护对象组名称
- * @method array getDomains() 获取防护对象组的应用范围
- * @method void setDomains(array $Domains) 设置防护对象组的应用范围
- * @method string getRemark() 获取防护对象组备注
- * @method void setRemark(string $Remark) 设置防护对象组备注
+ * @method string getName() 获取<p>防护对象组名称</p>
+ * @method void setName(string $Name) 设置<p>防护对象组名称</p>
+ * @method array getDomains() 获取<p>防护对象组的应用范围</p>
+ * @method void setDomains(array $Domains) 设置<p>防护对象组的应用范围</p>
+ * @method string getRemark() 获取<p>防护对象组备注</p>
+ * @method void setRemark(string $Remark) 设置<p>防护对象组备注</p>
+ * @method array getTags() 获取<p>标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>标签信息</p>
  */
 class CreateProtectGroupRequest extends AbstractModel
 {
     /**
-     * @var string 防护对象组名称
+     * @var string <p>防护对象组名称</p>
      */
     public $Name;
 
     /**
-     * @var array 防护对象组的应用范围
+     * @var array <p>防护对象组的应用范围</p>
      */
     public $Domains;
 
     /**
-     * @var string 防护对象组备注
+     * @var string <p>防护对象组备注</p>
      */
     public $Remark;
 
     /**
-     * @param string $Name 防护对象组名称
-     * @param array $Domains 防护对象组的应用范围
-     * @param string $Remark 防护对象组备注
+     * @var array <p>标签信息</p>
+     */
+    public $Tags;
+
+    /**
+     * @param string $Name <p>防护对象组名称</p>
+     * @param array $Domains <p>防护对象组的应用范围</p>
+     * @param string $Remark <p>防护对象组备注</p>
+     * @param array $Tags <p>标签信息</p>
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class CreateProtectGroupRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

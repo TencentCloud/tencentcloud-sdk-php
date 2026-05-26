@@ -20,138 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 负载均衡型WAF域名详情
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
- * @method string getDomainId() 获取域名唯一ID
- * @method void setDomainId(string $DomainId) 设置域名唯一ID
- * @method string getInstanceId() 获取域名所属实例ID
- * @method void setInstanceId(string $InstanceId) 设置域名所属实例ID
- * @method string getInstanceName() 获取域名所属实例名
- * @method void setInstanceName(string $InstanceName) 设置域名所属实例名
- * @method string getEdition() 获取域名所属实例类型
- * @method void setEdition(string $Edition) 设置域名所属实例类型
- * @method integer getIsCdn() 获取waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
- * @method void setIsCdn(integer $IsCdn) 设置waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
- * @method array getLoadBalancerSet() 获取负载均衡类型为clb时，对应的负载均衡器信息
- * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置负载均衡类型为clb时，对应的负载均衡器信息
- * @method integer getFlowMode() 获取负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
- * @method void setFlowMode(integer $FlowMode) 设置负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
- * @method integer getState() 获取域名绑定负载均衡器状态
- * @method void setState(integer $State) 设置域名绑定负载均衡器状态
- * @method string getAlbType() 获取负载均衡类型，clb或者apisix
- * @method void setAlbType(string $AlbType) 设置负载均衡类型，clb或者apisix
- * @method array getIpHeaders() 获取IsCdn=3时，表示自定义header
- * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，表示自定义header
- * @method string getCdcClusters() 获取cdc-clb-waf类型WAF的CDC集群信息
- * @method void setCdcClusters(string $CdcClusters) 设置cdc-clb-waf类型WAF的CDC集群信息
- * @method string getCloudType() 获取云类型:public:公有云；private:私有云;hybrid:混合云
- * @method void setCloudType(string $CloudType) 设置云类型:public:公有云；private:私有云;hybrid:混合云
- * @method string getNote() 获取域名备注信息
- * @method void setNote(string $Note) 设置域名备注信息
- * @method array getLabels() 获取域名标签
- * @method void setLabels(array $Labels) 设置域名标签
- * @method integer getAccessStatus() 获取clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
- * @method void setAccessStatus(integer $AccessStatus) 设置clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+ * @method string getDomain() 获取<p>域名</p>
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
+ * @method string getDomainId() 获取<p>域名唯一ID</p>
+ * @method void setDomainId(string $DomainId) 设置<p>域名唯一ID</p>
+ * @method string getInstanceId() 获取<p>域名所属实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>域名所属实例ID</p>
+ * @method string getInstanceName() 获取<p>域名所属实例名</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>域名所属实例名</p>
+ * @method string getEdition() 获取<p>域名所属实例类型</p>
+ * @method void setEdition(string $Edition) 设置<p>域名所属实例类型</p>
+ * @method integer getIsCdn() 获取<p>waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
+ * @method void setIsCdn(integer $IsCdn) 设置<p>waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
+ * @method array getLoadBalancerSet() 获取<p>负载均衡类型为clb时，对应的负载均衡器信息</p>
+ * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置<p>负载均衡类型为clb时，对应的负载均衡器信息</p>
+ * @method integer getFlowMode() 获取<p>负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式</p>
+ * @method void setFlowMode(integer $FlowMode) 设置<p>负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式</p>
+ * @method integer getState() 获取<p>域名绑定负载均衡器状态</p>
+ * @method void setState(integer $State) 设置<p>域名绑定负载均衡器状态</p>
+ * @method string getAlbType() 获取<p>负载均衡类型，clb或者apisix</p>
+ * @method void setAlbType(string $AlbType) 设置<p>负载均衡类型，clb或者apisix</p>
+ * @method array getIpHeaders() 获取<p>IsCdn=3时，表示自定义header</p>
+ * @method void setIpHeaders(array $IpHeaders) 设置<p>IsCdn=3时，表示自定义header</p>
+ * @method string getCdcClusters() 获取<p>cdc-clb-waf类型WAF的CDC集群信息</p>
+ * @method void setCdcClusters(string $CdcClusters) 设置<p>cdc-clb-waf类型WAF的CDC集群信息</p>
+ * @method string getCloudType() 获取<p>云类型:public:公有云；private:私有云;hybrid:混合云</p>
+ * @method void setCloudType(string $CloudType) 设置<p>云类型:public:公有云；private:私有云;hybrid:混合云</p>
+ * @method string getNote() 获取<p>域名备注信息</p>
+ * @method void setNote(string $Note) 设置<p>域名备注信息</p>
+ * @method array getLabels() 获取<p>域名标签</p>
+ * @method void setLabels(array $Labels) 设置<p>域名标签</p>
+ * @method integer getAccessStatus() 获取<p>clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”</p>
+ * @method void setAccessStatus(integer $AccessStatus) 设置<p>clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”</p>
+ * @method array getTagInfos() 获取<p>标签信息</p>
+ * @method void setTagInfos(array $TagInfos) 设置<p>标签信息</p>
  */
 class ClbDomainsInfo extends AbstractModel
 {
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 域名唯一ID
+     * @var string <p>域名唯一ID</p>
      */
     public $DomainId;
 
     /**
-     * @var string 域名所属实例ID
+     * @var string <p>域名所属实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 域名所属实例名
+     * @var string <p>域名所属实例名</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 域名所属实例类型
+     * @var string <p>域名所属实例类型</p>
      */
     public $Edition;
 
     /**
-     * @var integer waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * @var integer <p>waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
      */
     public $IsCdn;
 
     /**
-     * @var array 负载均衡类型为clb时，对应的负载均衡器信息
+     * @var array <p>负载均衡类型为clb时，对应的负载均衡器信息</p>
      */
     public $LoadBalancerSet;
 
     /**
-     * @var integer 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
+     * @var integer <p>负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式</p>
      */
     public $FlowMode;
 
     /**
-     * @var integer 域名绑定负载均衡器状态
+     * @var integer <p>域名绑定负载均衡器状态</p>
      */
     public $State;
 
     /**
-     * @var string 负载均衡类型，clb或者apisix
+     * @var string <p>负载均衡类型，clb或者apisix</p>
      */
     public $AlbType;
 
     /**
-     * @var array IsCdn=3时，表示自定义header
+     * @var array <p>IsCdn=3时，表示自定义header</p>
      */
     public $IpHeaders;
 
     /**
-     * @var string cdc-clb-waf类型WAF的CDC集群信息
+     * @var string <p>cdc-clb-waf类型WAF的CDC集群信息</p>
      */
     public $CdcClusters;
 
     /**
-     * @var string 云类型:public:公有云；private:私有云;hybrid:混合云
+     * @var string <p>云类型:public:公有云；private:私有云;hybrid:混合云</p>
      */
     public $CloudType;
 
     /**
-     * @var string 域名备注信息
+     * @var string <p>域名备注信息</p>
      */
     public $Note;
 
     /**
-     * @var array 域名标签
+     * @var array <p>域名标签</p>
      */
     public $Labels;
 
     /**
-     * @var integer clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     * @var integer <p>clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”</p>
      */
     public $AccessStatus;
 
     /**
-     * @param string $Domain 域名
-     * @param string $DomainId 域名唯一ID
-     * @param string $InstanceId 域名所属实例ID
-     * @param string $InstanceName 域名所属实例名
-     * @param string $Edition 域名所属实例类型
-     * @param integer $IsCdn waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
-     * @param array $LoadBalancerSet 负载均衡类型为clb时，对应的负载均衡器信息
-     * @param integer $FlowMode 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
-     * @param integer $State 域名绑定负载均衡器状态
-     * @param string $AlbType 负载均衡类型，clb或者apisix
-     * @param array $IpHeaders IsCdn=3时，表示自定义header
-     * @param string $CdcClusters cdc-clb-waf类型WAF的CDC集群信息
-     * @param string $CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
-     * @param string $Note 域名备注信息
-     * @param array $Labels 域名标签
-     * @param integer $AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     * @var array <p>标签信息</p>
+     */
+    public $TagInfos;
+
+    /**
+     * @param string $Domain <p>域名</p>
+     * @param string $DomainId <p>域名唯一ID</p>
+     * @param string $InstanceId <p>域名所属实例ID</p>
+     * @param string $InstanceName <p>域名所属实例名</p>
+     * @param string $Edition <p>域名所属实例类型</p>
+     * @param integer $IsCdn <p>waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
+     * @param array $LoadBalancerSet <p>负载均衡类型为clb时，对应的负载均衡器信息</p>
+     * @param integer $FlowMode <p>负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式</p>
+     * @param integer $State <p>域名绑定负载均衡器状态</p>
+     * @param string $AlbType <p>负载均衡类型，clb或者apisix</p>
+     * @param array $IpHeaders <p>IsCdn=3时，表示自定义header</p>
+     * @param string $CdcClusters <p>cdc-clb-waf类型WAF的CDC集群信息</p>
+     * @param string $CloudType <p>云类型:public:公有云；private:私有云;hybrid:混合云</p>
+     * @param string $Note <p>域名备注信息</p>
+     * @param array $Labels <p>域名标签</p>
+     * @param integer $AccessStatus <p>clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”</p>
+     * @param array $TagInfos <p>标签信息</p>
      */
     function __construct()
     {
@@ -233,6 +241,15 @@ class ClbDomainsInfo extends AbstractModel
 
         if (array_key_exists("AccessStatus",$param) and $param["AccessStatus"] !== null) {
             $this->AccessStatus = $param["AccessStatus"];
+        }
+
+        if (array_key_exists("TagInfos",$param) and $param["TagInfos"] !== null) {
+            $this->TagInfos = [];
+            foreach ($param["TagInfos"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagInfos, $obj);
+            }
         }
     }
 }

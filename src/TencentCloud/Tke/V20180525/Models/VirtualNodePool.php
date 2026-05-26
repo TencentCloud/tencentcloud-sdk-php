@@ -20,82 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 虚拟节点池
  *
- * @method string getNodePoolId() 获取节点池ID
- * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
- * @method array getSubnetIds() 获取子网列表
+ * @method string getNodePoolId() 获取<p>节点池ID</p>
+ * @method void setNodePoolId(string $NodePoolId) 设置<p>节点池ID</p>
+ * @method array getSubnetIds() 获取<p>子网列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnetIds(array $SubnetIds) 设置子网列表
+ * @method void setSubnetIds(array $SubnetIds) 设置<p>子网列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取节点池名称
- * @method void setName(string $Name) 设置节点池名称
- * @method string getLifeState() 获取节点池生命周期
-- creating：创建中
-- normal：正常
-- updating：更新中
- * @method void setLifeState(string $LifeState) 设置节点池生命周期
-- creating：创建中
-- normal：正常
-- updating：更新中
- * @method array getLabels() 获取虚拟节点label
+ * @method string getName() 获取<p>节点池名称</p>
+ * @method void setName(string $Name) 设置<p>节点池名称</p>
+ * @method string getLifeState() 获取<p>节点池生命周期</p><ul><li>creating：创建中</li><li>normal：正常</li><li>updating：更新中</li></ul>
+ * @method void setLifeState(string $LifeState) 设置<p>节点池生命周期</p><ul><li>creating：创建中</li><li>normal：正常</li><li>updating：更新中</li></ul>
+ * @method array getLabels() 获取<p>虚拟节点label</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabels(array $Labels) 设置虚拟节点label
+ * @method void setLabels(array $Labels) 设置<p>虚拟节点label</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTaints() 获取虚拟节点taint
+ * @method array getTaints() 获取<p>虚拟节点taint</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaints(array $Taints) 设置虚拟节点taint
+ * @method void setTaints(array $Taints) 设置<p>虚拟节点taint</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SubnetAllocationPolicy getSubnetAllocationPolicy() 获取<p>子网分配策略</p>
+ * @method void setSubnetAllocationPolicy(SubnetAllocationPolicy $SubnetAllocationPolicy) 设置<p>子网分配策略</p>
  */
 class VirtualNodePool extends AbstractModel
 {
     /**
-     * @var string 节点池ID
+     * @var string <p>节点池ID</p>
      */
     public $NodePoolId;
 
     /**
-     * @var array 子网列表
+     * @var array <p>子网列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetIds;
 
     /**
-     * @var string 节点池名称
+     * @var string <p>节点池名称</p>
      */
     public $Name;
 
     /**
-     * @var string 节点池生命周期
-- creating：创建中
-- normal：正常
-- updating：更新中
+     * @var string <p>节点池生命周期</p><ul><li>creating：创建中</li><li>normal：正常</li><li>updating：更新中</li></ul>
      */
     public $LifeState;
 
     /**
-     * @var array 虚拟节点label
+     * @var array <p>虚拟节点label</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
-     * @var array 虚拟节点taint
+     * @var array <p>虚拟节点taint</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Taints;
 
     /**
-     * @param string $NodePoolId 节点池ID
-     * @param array $SubnetIds 子网列表
+     * @var SubnetAllocationPolicy <p>子网分配策略</p>
+     */
+    public $SubnetAllocationPolicy;
+
+    /**
+     * @param string $NodePoolId <p>节点池ID</p>
+     * @param array $SubnetIds <p>子网列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 节点池名称
-     * @param string $LifeState 节点池生命周期
-- creating：创建中
-- normal：正常
-- updating：更新中
-     * @param array $Labels 虚拟节点label
+     * @param string $Name <p>节点池名称</p>
+     * @param string $LifeState <p>节点池生命周期</p><ul><li>creating：创建中</li><li>normal：正常</li><li>updating：更新中</li></ul>
+     * @param array $Labels <p>虚拟节点label</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Taints 虚拟节点taint
+     * @param array $Taints <p>虚拟节点taint</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetAllocationPolicy $SubnetAllocationPolicy <p>子网分配策略</p>
      */
     function __construct()
     {
@@ -142,6 +138,11 @@ class VirtualNodePool extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Taints, $obj);
             }
+        }
+
+        if (array_key_exists("SubnetAllocationPolicy",$param) and $param["SubnetAllocationPolicy"] !== null) {
+            $this->SubnetAllocationPolicy = new SubnetAllocationPolicy();
+            $this->SubnetAllocationPolicy->deserialize($param["SubnetAllocationPolicy"]);
         }
     }
 }

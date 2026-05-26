@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomains返回参数结构体
  *
- * @method integer getTotal() 获取总数
- * @method void setTotal(integer $Total) 设置总数
- * @method array getDomains() 获取domain列表
- * @method void setDomains(array $Domains) 设置domain列表
+ * @method integer getTotal() 获取<p>总数</p>
+ * @method void setTotal(integer $Total) 设置<p>总数</p>
+ * @method array getDomains() 获取<p>domain列表</p>
+ * @method void setDomains(array $Domains) 设置<p>domain列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDomainsResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var integer <p>总数</p>
      */
     public $Total;
 
     /**
-     * @var array domain列表
+     * @var array <p>domain列表</p>
      */
     public $Domains;
 
@@ -45,8 +45,8 @@ class DescribeDomainsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总数
-     * @param array $Domains domain列表
+     * @param integer $Total <p>总数</p>
+     * @param array $Domains <p>domain列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

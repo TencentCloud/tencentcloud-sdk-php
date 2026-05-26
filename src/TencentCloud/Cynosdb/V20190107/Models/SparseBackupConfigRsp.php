@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 稀疏备份配置
  *
- * @method string getSparseBackupSwitch() 获取稀疏备份开关：ON/OFF
+ * @method string getSparseBackupSwitch() 获取<p>稀疏备份开关：ON/OFF</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSparseBackupSwitch(string $SparseBackupSwitch) 设置稀疏备份开关：ON/OFF
+ * @method void setSparseBackupSwitch(string $SparseBackupSwitch) 设置<p>稀疏备份开关：ON/OFF</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSparseBackupConfigInfos() 获取稀疏备份策略列表（1-3条）
+ * @method array getSparseBackupConfigInfos() 获取<p>稀疏备份策略列表（1-3条）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSparseBackupConfigInfos(array $SparseBackupConfigInfos) 设置稀疏备份策略列表（1-3条）
+ * @method void setSparseBackupConfigInfos(array $SparseBackupConfigInfos) 设置<p>稀疏备份策略列表（1-3条）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SparseBackupConfigRsp extends AbstractModel
 {
     /**
-     * @var string 稀疏备份开关：ON/OFF
+     * @var string <p>稀疏备份开关：ON/OFF</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparseBackupSwitch;
 
     /**
-     * @var array 稀疏备份策略列表（1-3条）
+     * @var array <p>稀疏备份策略列表（1-3条）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparseBackupConfigInfos;
 
     /**
-     * @param string $SparseBackupSwitch 稀疏备份开关：ON/OFF
+     * @param string $SparseBackupSwitch <p>稀疏备份开关：ON/OFF</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SparseBackupConfigInfos 稀疏备份策略列表（1-3条）
+     * @param array $SparseBackupConfigInfos <p>稀疏备份策略列表（1-3条）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

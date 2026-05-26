@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHost请求参数结构体
  *
- * @method HostRecord getHost() 获取防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
- * @method void setHost(HostRecord $Host) 设置防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
- * @method string getInstanceID() 获取实例id
- * @method void setInstanceID(string $InstanceID) 设置实例id
+ * @method HostRecord getHost() 获取<p>防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。</p>
+ * @method void setHost(HostRecord $Host) 设置<p>防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。</p>
+ * @method string getInstanceID() 获取<p>实例id</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例id</p>
+ * @method array getTags() 获取<p>标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>标签信息</p>
  */
 class CreateHostRequest extends AbstractModel
 {
     /**
-     * @var HostRecord 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
+     * @var HostRecord <p>防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。</p>
      */
     public $Host;
 
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceID;
 
     /**
-     * @param HostRecord $Host 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
-     * @param string $InstanceID 实例id
+     * @var array <p>标签信息</p>
+     */
+    public $Tags;
+
+    /**
+     * @param HostRecord $Host <p>防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。</p>
+     * @param string $InstanceID <p>实例id</p>
+     * @param array $Tags <p>标签信息</p>
      */
     function __construct()
     {
@@ -61,6 +69,15 @@ class CreateHostRequest extends AbstractModel
 
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
             $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

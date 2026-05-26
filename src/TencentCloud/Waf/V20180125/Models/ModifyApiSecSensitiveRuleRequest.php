@@ -20,130 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApiSecSensitiveRule请求参数结构体
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
- * @method integer getStatus() 获取1表示开，0表示关，3表示删除
- * @method void setStatus(integer $Status) 设置1表示开，0表示关，3表示删除
- * @method string getRuleName() 获取规则名称
- * @method void setRuleName(string $RuleName) 设置规则名称
- * @method ApiSecCustomSensitiveRule getCustomRule() 获取客户自定义配置
- * @method void setCustomRule(ApiSecCustomSensitiveRule $CustomRule) 设置客户自定义配置
- * @method array getRuleNameList() 获取rulename列表，批量操作的时候填改值
- * @method void setRuleNameList(array $RuleNameList) 设置rulename列表，批量操作的时候填改值
- * @method ApiSecExtractRule getCustomApiExtractRule() 获取api提取规则内容
- * @method void setCustomApiExtractRule(ApiSecExtractRule $CustomApiExtractRule) 设置api提取规则内容
- * @method array getApiExtractRuleName() 获取批量操作的时候的api提取规则
- * @method void setApiExtractRuleName(array $ApiExtractRuleName) 设置批量操作的时候的api提取规则
- * @method ApiSecPrivilegeRule getApiSecPrivilegeRule() 获取自定义api鉴权规则
- * @method void setApiSecPrivilegeRule(ApiSecPrivilegeRule $ApiSecPrivilegeRule) 设置自定义api鉴权规则
- * @method array getApiSecPrivilegeRuleName() 获取匹配操作时候的api鉴权规则
- * @method void setApiSecPrivilegeRuleName(array $ApiSecPrivilegeRuleName) 设置匹配操作时候的api鉴权规则
- * @method array getApiSecSceneRuleNameList() 获取批量操作的时候的自定义场景列表
- * @method void setApiSecSceneRuleNameList(array $ApiSecSceneRuleNameList) 设置批量操作的时候的自定义场景列表
- * @method ApiSecSceneRule getApiSecSceneRule() 获取单条自定义api场景规则
- * @method void setApiSecSceneRule(ApiSecSceneRule $ApiSecSceneRule) 设置单条自定义api场景规则
- * @method array getApiSecCustomEventRuleNameList() 获取批量操作的时候的自定义事件规则列表
- * @method void setApiSecCustomEventRuleNameList(array $ApiSecCustomEventRuleNameList) 设置批量操作的时候的自定义事件规则列表
- * @method ApiSecCustomEventRule getApiSecCustomEventRuleRule() 获取自定义事件规则
- * @method void setApiSecCustomEventRuleRule(ApiSecCustomEventRule $ApiSecCustomEventRuleRule) 设置自定义事件规则
- * @method ApiSecExcludeRule getCustomApiExcludeRule() 获取无效api排除规则
- * @method void setCustomApiExcludeRule(ApiSecExcludeRule $CustomApiExcludeRule) 设置无效api排除规则
- * @method array getApiExcludeRuleName() 获取批量操作的时候的无效api排除规则
- * @method void setApiExcludeRuleName(array $ApiExcludeRuleName) 设置批量操作的时候的无效api排除规则
+ * @method string getDomain() 获取<p>域名</p>
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
+ * @method integer getStatus() 获取<p>1表示开，0表示关，3表示删除</p>
+ * @method void setStatus(integer $Status) 设置<p>1表示开，0表示关，3表示删除</p>
+ * @method string getRuleName() 获取<p>规则名称</p>
+ * @method void setRuleName(string $RuleName) 设置<p>规则名称</p>
+ * @method array getRuleNameList() 获取<p>rulename列表，批量操作的时候填改值</p>
+ * @method void setRuleNameList(array $RuleNameList) 设置<p>rulename列表，批量操作的时候填改值</p>
+ * @method ApiSecCustomSensitiveRule getCustomRule() 获取<p>客户自定义配置</p>
+ * @method void setCustomRule(ApiSecCustomSensitiveRule $CustomRule) 设置<p>客户自定义配置</p>
+ * @method array getApiExtractRuleName() 获取<p>批量操作的时候的api提取规则</p>
+ * @method void setApiExtractRuleName(array $ApiExtractRuleName) 设置<p>批量操作的时候的api提取规则</p>
+ * @method ApiSecExtractRule getCustomApiExtractRule() 获取<p>api提取规则内容</p>
+ * @method void setCustomApiExtractRule(ApiSecExtractRule $CustomApiExtractRule) 设置<p>api提取规则内容</p>
+ * @method array getApiSecPrivilegeRuleName() 获取<p>匹配操作时候的api鉴权规则</p>
+ * @method void setApiSecPrivilegeRuleName(array $ApiSecPrivilegeRuleName) 设置<p>匹配操作时候的api鉴权规则</p>
+ * @method ApiSecPrivilegeRule getApiSecPrivilegeRule() 获取<p>自定义api鉴权规则</p>
+ * @method void setApiSecPrivilegeRule(ApiSecPrivilegeRule $ApiSecPrivilegeRule) 设置<p>自定义api鉴权规则</p>
+ * @method array getApiSecSceneRuleNameList() 获取<p>批量操作的时候的自定义场景列表</p>
+ * @method void setApiSecSceneRuleNameList(array $ApiSecSceneRuleNameList) 设置<p>批量操作的时候的自定义场景列表</p>
+ * @method ApiSecSceneRule getApiSecSceneRule() 获取<p>单条自定义api场景规则</p>
+ * @method void setApiSecSceneRule(ApiSecSceneRule $ApiSecSceneRule) 设置<p>单条自定义api场景规则</p>
+ * @method array getApiSecCustomEventRuleNameList() 获取<p>批量操作的时候的自定义事件规则列表</p>
+ * @method void setApiSecCustomEventRuleNameList(array $ApiSecCustomEventRuleNameList) 设置<p>批量操作的时候的自定义事件规则列表</p>
+ * @method ApiSecCustomEventRule getApiSecCustomEventRuleRule() 获取<p>自定义事件规则</p>
+ * @method void setApiSecCustomEventRuleRule(ApiSecCustomEventRule $ApiSecCustomEventRuleRule) 设置<p>自定义事件规则</p>
+ * @method array getApiExcludeRuleName() 获取<p>批量操作的时候的无效api排除规则</p>
+ * @method void setApiExcludeRuleName(array $ApiExcludeRuleName) 设置<p>批量操作的时候的无效api排除规则</p>
+ * @method ApiSecExcludeRule getCustomApiExcludeRule() 获取<p>无效api排除规则</p>
+ * @method void setCustomApiExcludeRule(ApiSecExcludeRule $CustomApiExcludeRule) 设置<p>无效api排除规则</p>
+ * @method array getApiSecSensitiveWhiteRuleNameList() 获取<p>批量操作时的敏感数据加白规则名称列表</p>
+ * @method void setApiSecSensitiveWhiteRuleNameList(array $ApiSecSensitiveWhiteRuleNameList) 设置<p>批量操作时的敏感数据加白规则名称列表</p>
+ * @method ApiSecSensitiveWhiteRule getApiSecSensitiveWhiteRuleRule() 获取<p>敏感数据加白规则</p>
+ * @method void setApiSecSensitiveWhiteRuleRule(ApiSecSensitiveWhiteRule $ApiSecSensitiveWhiteRuleRule) 设置<p>敏感数据加白规则</p>
  */
 class ModifyApiSecSensitiveRuleRequest extends AbstractModel
 {
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
      */
     public $Domain;
 
     /**
-     * @var integer 1表示开，0表示关，3表示删除
+     * @var integer <p>1表示开，0表示关，3表示删除</p>
      */
     public $Status;
 
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
      */
     public $RuleName;
 
     /**
-     * @var ApiSecCustomSensitiveRule 客户自定义配置
-     */
-    public $CustomRule;
-
-    /**
-     * @var array rulename列表，批量操作的时候填改值
+     * @var array <p>rulename列表，批量操作的时候填改值</p>
      */
     public $RuleNameList;
 
     /**
-     * @var ApiSecExtractRule api提取规则内容
+     * @var ApiSecCustomSensitiveRule <p>客户自定义配置</p>
      */
-    public $CustomApiExtractRule;
+    public $CustomRule;
 
     /**
-     * @var array 批量操作的时候的api提取规则
+     * @var array <p>批量操作的时候的api提取规则</p>
      */
     public $ApiExtractRuleName;
 
     /**
-     * @var ApiSecPrivilegeRule 自定义api鉴权规则
+     * @var ApiSecExtractRule <p>api提取规则内容</p>
      */
-    public $ApiSecPrivilegeRule;
+    public $CustomApiExtractRule;
 
     /**
-     * @var array 匹配操作时候的api鉴权规则
+     * @var array <p>匹配操作时候的api鉴权规则</p>
      */
     public $ApiSecPrivilegeRuleName;
 
     /**
-     * @var array 批量操作的时候的自定义场景列表
+     * @var ApiSecPrivilegeRule <p>自定义api鉴权规则</p>
+     */
+    public $ApiSecPrivilegeRule;
+
+    /**
+     * @var array <p>批量操作的时候的自定义场景列表</p>
      */
     public $ApiSecSceneRuleNameList;
 
     /**
-     * @var ApiSecSceneRule 单条自定义api场景规则
+     * @var ApiSecSceneRule <p>单条自定义api场景规则</p>
      */
     public $ApiSecSceneRule;
 
     /**
-     * @var array 批量操作的时候的自定义事件规则列表
+     * @var array <p>批量操作的时候的自定义事件规则列表</p>
      */
     public $ApiSecCustomEventRuleNameList;
 
     /**
-     * @var ApiSecCustomEventRule 自定义事件规则
+     * @var ApiSecCustomEventRule <p>自定义事件规则</p>
      */
     public $ApiSecCustomEventRuleRule;
 
     /**
-     * @var ApiSecExcludeRule 无效api排除规则
-     */
-    public $CustomApiExcludeRule;
-
-    /**
-     * @var array 批量操作的时候的无效api排除规则
+     * @var array <p>批量操作的时候的无效api排除规则</p>
      */
     public $ApiExcludeRuleName;
 
     /**
-     * @param string $Domain 域名
-     * @param integer $Status 1表示开，0表示关，3表示删除
-     * @param string $RuleName 规则名称
-     * @param ApiSecCustomSensitiveRule $CustomRule 客户自定义配置
-     * @param array $RuleNameList rulename列表，批量操作的时候填改值
-     * @param ApiSecExtractRule $CustomApiExtractRule api提取规则内容
-     * @param array $ApiExtractRuleName 批量操作的时候的api提取规则
-     * @param ApiSecPrivilegeRule $ApiSecPrivilegeRule 自定义api鉴权规则
-     * @param array $ApiSecPrivilegeRuleName 匹配操作时候的api鉴权规则
-     * @param array $ApiSecSceneRuleNameList 批量操作的时候的自定义场景列表
-     * @param ApiSecSceneRule $ApiSecSceneRule 单条自定义api场景规则
-     * @param array $ApiSecCustomEventRuleNameList 批量操作的时候的自定义事件规则列表
-     * @param ApiSecCustomEventRule $ApiSecCustomEventRuleRule 自定义事件规则
-     * @param ApiSecExcludeRule $CustomApiExcludeRule 无效api排除规则
-     * @param array $ApiExcludeRuleName 批量操作的时候的无效api排除规则
+     * @var ApiSecExcludeRule <p>无效api排除规则</p>
+     */
+    public $CustomApiExcludeRule;
+
+    /**
+     * @var array <p>批量操作时的敏感数据加白规则名称列表</p>
+     */
+    public $ApiSecSensitiveWhiteRuleNameList;
+
+    /**
+     * @var ApiSecSensitiveWhiteRule <p>敏感数据加白规则</p>
+     */
+    public $ApiSecSensitiveWhiteRuleRule;
+
+    /**
+     * @param string $Domain <p>域名</p>
+     * @param integer $Status <p>1表示开，0表示关，3表示删除</p>
+     * @param string $RuleName <p>规则名称</p>
+     * @param array $RuleNameList <p>rulename列表，批量操作的时候填改值</p>
+     * @param ApiSecCustomSensitiveRule $CustomRule <p>客户自定义配置</p>
+     * @param array $ApiExtractRuleName <p>批量操作的时候的api提取规则</p>
+     * @param ApiSecExtractRule $CustomApiExtractRule <p>api提取规则内容</p>
+     * @param array $ApiSecPrivilegeRuleName <p>匹配操作时候的api鉴权规则</p>
+     * @param ApiSecPrivilegeRule $ApiSecPrivilegeRule <p>自定义api鉴权规则</p>
+     * @param array $ApiSecSceneRuleNameList <p>批量操作的时候的自定义场景列表</p>
+     * @param ApiSecSceneRule $ApiSecSceneRule <p>单条自定义api场景规则</p>
+     * @param array $ApiSecCustomEventRuleNameList <p>批量操作的时候的自定义事件规则列表</p>
+     * @param ApiSecCustomEventRule $ApiSecCustomEventRuleRule <p>自定义事件规则</p>
+     * @param array $ApiExcludeRuleName <p>批量操作的时候的无效api排除规则</p>
+     * @param ApiSecExcludeRule $CustomApiExcludeRule <p>无效api排除规则</p>
+     * @param array $ApiSecSensitiveWhiteRuleNameList <p>批量操作时的敏感数据加白规则名称列表</p>
+     * @param ApiSecSensitiveWhiteRule $ApiSecSensitiveWhiteRuleRule <p>敏感数据加白规则</p>
      */
     function __construct()
     {
@@ -170,13 +186,17 @@ class ModifyApiSecSensitiveRuleRequest extends AbstractModel
             $this->RuleName = $param["RuleName"];
         }
 
+        if (array_key_exists("RuleNameList",$param) and $param["RuleNameList"] !== null) {
+            $this->RuleNameList = $param["RuleNameList"];
+        }
+
         if (array_key_exists("CustomRule",$param) and $param["CustomRule"] !== null) {
             $this->CustomRule = new ApiSecCustomSensitiveRule();
             $this->CustomRule->deserialize($param["CustomRule"]);
         }
 
-        if (array_key_exists("RuleNameList",$param) and $param["RuleNameList"] !== null) {
-            $this->RuleNameList = $param["RuleNameList"];
+        if (array_key_exists("ApiExtractRuleName",$param) and $param["ApiExtractRuleName"] !== null) {
+            $this->ApiExtractRuleName = $param["ApiExtractRuleName"];
         }
 
         if (array_key_exists("CustomApiExtractRule",$param) and $param["CustomApiExtractRule"] !== null) {
@@ -184,17 +204,13 @@ class ModifyApiSecSensitiveRuleRequest extends AbstractModel
             $this->CustomApiExtractRule->deserialize($param["CustomApiExtractRule"]);
         }
 
-        if (array_key_exists("ApiExtractRuleName",$param) and $param["ApiExtractRuleName"] !== null) {
-            $this->ApiExtractRuleName = $param["ApiExtractRuleName"];
+        if (array_key_exists("ApiSecPrivilegeRuleName",$param) and $param["ApiSecPrivilegeRuleName"] !== null) {
+            $this->ApiSecPrivilegeRuleName = $param["ApiSecPrivilegeRuleName"];
         }
 
         if (array_key_exists("ApiSecPrivilegeRule",$param) and $param["ApiSecPrivilegeRule"] !== null) {
             $this->ApiSecPrivilegeRule = new ApiSecPrivilegeRule();
             $this->ApiSecPrivilegeRule->deserialize($param["ApiSecPrivilegeRule"]);
-        }
-
-        if (array_key_exists("ApiSecPrivilegeRuleName",$param) and $param["ApiSecPrivilegeRuleName"] !== null) {
-            $this->ApiSecPrivilegeRuleName = $param["ApiSecPrivilegeRuleName"];
         }
 
         if (array_key_exists("ApiSecSceneRuleNameList",$param) and $param["ApiSecSceneRuleNameList"] !== null) {
@@ -215,13 +231,22 @@ class ModifyApiSecSensitiveRuleRequest extends AbstractModel
             $this->ApiSecCustomEventRuleRule->deserialize($param["ApiSecCustomEventRuleRule"]);
         }
 
+        if (array_key_exists("ApiExcludeRuleName",$param) and $param["ApiExcludeRuleName"] !== null) {
+            $this->ApiExcludeRuleName = $param["ApiExcludeRuleName"];
+        }
+
         if (array_key_exists("CustomApiExcludeRule",$param) and $param["CustomApiExcludeRule"] !== null) {
             $this->CustomApiExcludeRule = new ApiSecExcludeRule();
             $this->CustomApiExcludeRule->deserialize($param["CustomApiExcludeRule"]);
         }
 
-        if (array_key_exists("ApiExcludeRuleName",$param) and $param["ApiExcludeRuleName"] !== null) {
-            $this->ApiExcludeRuleName = $param["ApiExcludeRuleName"];
+        if (array_key_exists("ApiSecSensitiveWhiteRuleNameList",$param) and $param["ApiSecSensitiveWhiteRuleNameList"] !== null) {
+            $this->ApiSecSensitiveWhiteRuleNameList = $param["ApiSecSensitiveWhiteRuleNameList"];
+        }
+
+        if (array_key_exists("ApiSecSensitiveWhiteRuleRule",$param) and $param["ApiSecSensitiveWhiteRuleRule"] !== null) {
+            $this->ApiSecSensitiveWhiteRuleRule = new ApiSecSensitiveWhiteRule();
+            $this->ApiSecSensitiveWhiteRuleRule->deserialize($param["ApiSecSensitiveWhiteRuleRule"]);
         }
     }
 }

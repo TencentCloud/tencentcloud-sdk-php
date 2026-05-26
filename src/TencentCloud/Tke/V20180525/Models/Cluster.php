@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdcId(string $CdcId) 设置<p>本地专用集群Id</p>
  * @method boolean getIsHighAvailability() 获取<p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
  * @method void setIsHighAvailability(boolean $IsHighAvailability) 设置<p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
+ * @method string getClusterCategory() 获取<p>集群分类：tke=标准TKE集群，agent=Agent集群</p><p>默认值：tke</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterCategory(string $ClusterCategory) 设置<p>集群分类：tke=标准TKE集群，agent=Agent集群</p><p>默认值：tke</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method SecurityModeConfig getSecurityModeConfig() 获取<p>开启后会下发Gatekeeper和网络策略</p>
  * @method void setSecurityModeConfig(SecurityModeConfig $SecurityModeConfig) 设置<p>开启后会下发Gatekeeper和网络策略</p>
  */
@@ -211,6 +215,12 @@ class Cluster extends AbstractModel
     public $IsHighAvailability;
 
     /**
+     * @var string <p>集群分类：tke=标准TKE集群，agent=Agent集群</p><p>默认值：tke</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterCategory;
+
+    /**
      * @var SecurityModeConfig <p>开启后会下发Gatekeeper和网络策略</p>
      */
     public $SecurityModeConfig;
@@ -243,6 +253,8 @@ class Cluster extends AbstractModel
      * @param integer $ClusterEtcdNodeNum <p>集群当前etcd数量</p>
      * @param string $CdcId <p>本地专用集群Id</p>
      * @param boolean $IsHighAvailability <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
+     * @param string $ClusterCategory <p>集群分类：tke=标准TKE集群，agent=Agent集群</p><p>默认值：tke</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityModeConfig $SecurityModeConfig <p>开启后会下发Gatekeeper和网络策略</p>
      */
     function __construct()
@@ -366,6 +378,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("IsHighAvailability",$param) and $param["IsHighAvailability"] !== null) {
             $this->IsHighAvailability = $param["IsHighAvailability"];
+        }
+
+        if (array_key_exists("ClusterCategory",$param) and $param["ClusterCategory"] !== null) {
+            $this->ClusterCategory = $param["ClusterCategory"];
         }
 
         if (array_key_exists("SecurityModeConfig",$param) and $param["SecurityModeConfig"] !== null) {

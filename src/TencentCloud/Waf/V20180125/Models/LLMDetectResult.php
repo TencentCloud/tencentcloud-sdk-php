@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageResult(array $ImageResult) 设置<p>图片检测结果</p>
  * @method string getMsgID() 获取<p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p>
  * @method void setMsgID(string $MsgID) 设置<p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p>
+ * @method ToolCallResult getToolCallResult() 获取<p>toolcall的检测结果</p>
+ * @method void setToolCallResult(ToolCallResult $ToolCallResult) 设置<p>toolcall的检测结果</p>
  */
 class LLMDetectResult extends AbstractModel
 {
@@ -94,6 +96,11 @@ class LLMDetectResult extends AbstractModel
     public $MsgID;
 
     /**
+     * @var ToolCallResult <p>toolcall的检测结果</p>
+     */
+    public $ToolCallResult;
+
+    /**
      * @param array $SensitiveResult <p>仅输出侧：涉敏信息</p>
      * @param array $KeyWordsResult <p>输入输出均检测：关键词库命中信息</p>
      * @param array $DataCategoryResult <p>输入输出均检测：数据分类分级结果</p>
@@ -104,6 +111,7 @@ class LLMDetectResult extends AbstractModel
      * @param string $Payload <p>攻击payload</p>
      * @param array $ImageResult <p>图片检测结果</p>
      * @param string $MsgID <p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p>
+     * @param ToolCallResult $ToolCallResult <p>toolcall的检测结果</p>
      */
     function __construct()
     {
@@ -172,6 +180,11 @@ class LLMDetectResult extends AbstractModel
 
         if (array_key_exists("MsgID",$param) and $param["MsgID"] !== null) {
             $this->MsgID = $param["MsgID"];
+        }
+
+        if (array_key_exists("ToolCallResult",$param) and $param["ToolCallResult"] !== null) {
+            $this->ToolCallResult = new ToolCallResult();
+            $this->ToolCallResult->deserialize($param["ToolCallResult"]);
         }
     }
 }

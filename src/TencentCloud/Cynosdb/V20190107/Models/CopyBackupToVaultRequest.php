@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CopyBackupToVault请求参数结构体
  *
- * @method string getVaultId() 获取目标保险箱ID，备份文件将复制到此保险箱
- * @method void setVaultId(string $VaultId) 设置目标保险箱ID，备份文件将复制到此保险箱
- * @method array getBackupIds() 获取备份文件ID列表，支持批量复制多个备份文件
- * @method void setBackupIds(array $BackupIds) 设置备份文件ID列表，支持批量复制多个备份文件
+ * @method string getVaultId() 获取<p>目标保险箱ID，备份文件将复制到此保险箱</p>
+ * @method void setVaultId(string $VaultId) 设置<p>目标保险箱ID，备份文件将复制到此保险箱</p>
+ * @method array getBackupIds() 获取<p>备份文件ID列表，支持批量复制多个备份文件</p>
+ * @method void setBackupIds(array $BackupIds) 设置<p>备份文件ID列表，支持批量复制多个备份文件</p>
  */
 class CopyBackupToVaultRequest extends AbstractModel
 {
     /**
-     * @var string 目标保险箱ID，备份文件将复制到此保险箱
+     * @var string <p>目标保险箱ID，备份文件将复制到此保险箱</p>
      */
     public $VaultId;
 
     /**
-     * @var array 备份文件ID列表，支持批量复制多个备份文件
+     * @var array <p>备份文件ID列表，支持批量复制多个备份文件</p>
      */
     public $BackupIds;
 
     /**
-     * @param string $VaultId 目标保险箱ID，备份文件将复制到此保险箱
-     * @param array $BackupIds 备份文件ID列表，支持批量复制多个备份文件
+     * @param string $VaultId <p>目标保险箱ID，备份文件将复制到此保险箱</p>
+     * @param array $BackupIds <p>备份文件ID列表，支持批量复制多个备份文件</p>
      */
     function __construct()
     {

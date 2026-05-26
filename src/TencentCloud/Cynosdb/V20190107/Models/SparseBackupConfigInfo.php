@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 稀疏备份策略配置信息
  *
- * @method string getOpType() 获取操作类型:add,modify,remove
- * @method void setOpType(string $OpType) 设置操作类型:add,modify,remove
- * @method string getConfigId() 获取配置 ID
- * @method void setConfigId(string $ConfigId) 设置配置 ID
- * @method string getSparsePeriodConfig() 获取周期策略类型：weekly/monthly/yearly
- * @method void setSparsePeriodConfig(string $SparsePeriodConfig) 设置周期策略类型：weekly/monthly/yearly
- * @method SparsePeriodTime getSparsePeriodTime() 获取周期时间配置
- * @method void setSparsePeriodTime(SparsePeriodTime $SparsePeriodTime) 设置周期时间配置
- * @method integer getSparseBackupSaveDays() 获取保留天数（7-7320天，最长20年）
- * @method void setSparseBackupSaveDays(integer $SparseBackupSaveDays) 设置保留天数（7-7320天，最长20年）
+ * @method string getOpType() 获取<p>操作类型:add,modify,remove</p>
+ * @method void setOpType(string $OpType) 设置<p>操作类型:add,modify,remove</p>
+ * @method string getConfigId() 获取<p>配置 ID</p>
+ * @method void setConfigId(string $ConfigId) 设置<p>配置 ID</p>
+ * @method string getSparsePeriodConfig() 获取<p>周期策略类型：weekly/monthly/yearly</p>
+ * @method void setSparsePeriodConfig(string $SparsePeriodConfig) 设置<p>周期策略类型：weekly/monthly/yearly</p>
+ * @method SparsePeriodTime getSparsePeriodTime() 获取<p>周期时间配置</p>
+ * @method void setSparsePeriodTime(SparsePeriodTime $SparsePeriodTime) 设置<p>周期时间配置</p>
+ * @method integer getSparseBackupSaveDays() 获取<p>保留天数（7-7320天，最长20年）</p>
+ * @method void setSparseBackupSaveDays(integer $SparseBackupSaveDays) 设置<p>保留天数（7-7320天，最长20年）</p>
  */
 class SparseBackupConfigInfo extends AbstractModel
 {
     /**
-     * @var string 操作类型:add,modify,remove
+     * @var string <p>操作类型:add,modify,remove</p>
      */
     public $OpType;
 
     /**
-     * @var string 配置 ID
+     * @var string <p>配置 ID</p>
      */
     public $ConfigId;
 
     /**
-     * @var string 周期策略类型：weekly/monthly/yearly
+     * @var string <p>周期策略类型：weekly/monthly/yearly</p>
      */
     public $SparsePeriodConfig;
 
     /**
-     * @var SparsePeriodTime 周期时间配置
+     * @var SparsePeriodTime <p>周期时间配置</p>
      */
     public $SparsePeriodTime;
 
     /**
-     * @var integer 保留天数（7-7320天，最长20年）
+     * @var integer <p>保留天数（7-7320天，最长20年）</p>
      */
     public $SparseBackupSaveDays;
 
     /**
-     * @param string $OpType 操作类型:add,modify,remove
-     * @param string $ConfigId 配置 ID
-     * @param string $SparsePeriodConfig 周期策略类型：weekly/monthly/yearly
-     * @param SparsePeriodTime $SparsePeriodTime 周期时间配置
-     * @param integer $SparseBackupSaveDays 保留天数（7-7320天，最长20年）
+     * @param string $OpType <p>操作类型:add,modify,remove</p>
+     * @param string $ConfigId <p>配置 ID</p>
+     * @param string $SparsePeriodConfig <p>周期策略类型：weekly/monthly/yearly</p>
+     * @param SparsePeriodTime $SparsePeriodTime <p>周期时间配置</p>
+     * @param integer $SparseBackupSaveDays <p>保留天数（7-7320天，最长20年）</p>
      */
     function __construct()
     {

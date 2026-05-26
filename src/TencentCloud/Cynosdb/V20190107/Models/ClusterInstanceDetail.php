@@ -20,170 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群实例信息
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getInstanceType() 获取引擎类型
- * @method void setInstanceType(string $InstanceType) 设置引擎类型
- * @method string getInstanceStatus() 获取实例状态
- * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态
- * @method string getInstanceStatusDesc() 获取实例状态描述
- * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置实例状态描述
- * @method integer getInstanceCpu() 获取cpu核数
- * @method void setInstanceCpu(integer $InstanceCpu) 设置cpu核数
- * @method integer getInstanceMemory() 获取内存
- * @method void setInstanceMemory(integer $InstanceMemory) 设置内存
- * @method integer getInstanceStorage() 获取硬盘
- * @method void setInstanceStorage(integer $InstanceStorage) 设置硬盘
- * @method string getInstanceRole() 获取实例角色
- * @method void setInstanceRole(string $InstanceRole) 设置实例角色
- * @method integer getMaintainStartTime() 获取执行开始时间(距离0点的秒数)	
- * @method void setMaintainStartTime(integer $MaintainStartTime) 设置执行开始时间(距离0点的秒数)	
- * @method integer getMaintainDuration() 获取持续的时间(单位：秒)	
- * @method void setMaintainDuration(integer $MaintainDuration) 设置持续的时间(单位：秒)	
- * @method array getMaintainWeekDays() 获取可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
- * @method void setMaintainWeekDays(array $MaintainWeekDays) 设置可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
- * @method string getServerlessStatus() 获取serverless实例子状态
- * @method void setServerlessStatus(string $ServerlessStatus) 设置serverless实例子状态
- * @method array getInstanceTasks() 获取实例任务信息
- * @method void setInstanceTasks(array $InstanceTasks) 设置实例任务信息
- * @method string getInstanceDeviceType() 获取实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
- * @method void setInstanceDeviceType(string $InstanceDeviceType) 设置实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
- * @method string getInstanceStorageType() 获取实例存储类型
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
- * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
- * @method string getDbMode() 获取数据库类型
- * @method void setDbMode(string $DbMode) 设置数据库类型
- * @method array getNodeList() 获取节点列表
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
- * @method void setNodeList(array $NodeList) 设置节点列表
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method string getInstanceType() 获取<p>引擎类型</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>引擎类型</p>
+ * @method string getInstanceStatus() 获取<p>实例状态</p>
+ * @method void setInstanceStatus(string $InstanceStatus) 设置<p>实例状态</p>
+ * @method string getInstanceStatusDesc() 获取<p>实例状态描述</p>
+ * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置<p>实例状态描述</p>
+ * @method integer getInstanceCpu() 获取<p>cpu核数</p>
+ * @method void setInstanceCpu(integer $InstanceCpu) 设置<p>cpu核数</p>
+ * @method integer getInstanceMemory() 获取<p>内存</p>
+ * @method void setInstanceMemory(integer $InstanceMemory) 设置<p>内存</p>
+ * @method integer getInstanceStorage() 获取<p>硬盘</p>
+ * @method void setInstanceStorage(integer $InstanceStorage) 设置<p>硬盘</p>
+ * @method string getInstanceRole() 获取<p>实例角色</p>
+ * @method void setInstanceRole(string $InstanceRole) 设置<p>实例角色</p>
+ * @method integer getMaintainStartTime() 获取<p>执行开始时间(距离0点的秒数)</p>
+ * @method void setMaintainStartTime(integer $MaintainStartTime) 设置<p>执行开始时间(距离0点的秒数)</p>
+ * @method integer getMaintainDuration() 获取<p>持续的时间(单位：秒)</p>
+ * @method void setMaintainDuration(integer $MaintainDuration) 设置<p>持续的时间(单位：秒)</p>
+ * @method array getMaintainWeekDays() 获取<p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
+ * @method void setMaintainWeekDays(array $MaintainWeekDays) 设置<p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
+ * @method string getServerlessStatus() 获取<p>serverless实例子状态</p>
+ * @method void setServerlessStatus(string $ServerlessStatus) 设置<p>serverless实例子状态</p>
+ * @method array getInstanceTasks() 获取<p>实例任务信息</p>
+ * @method void setInstanceTasks(array $InstanceTasks) 设置<p>实例任务信息</p>
+ * @method string getInstanceDeviceType() 获取<p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+ * @method void setInstanceDeviceType(string $InstanceDeviceType) 设置<p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+ * @method string getInstanceStorageType() 获取<p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
+ * @method void setInstanceStorageType(string $InstanceStorageType) 设置<p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
+ * @method string getDbMode() 获取<p>数据库类型</p>
+ * @method void setDbMode(string $DbMode) 设置<p>数据库类型</p>
+ * @method array getNodeList() 获取<p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
+ * @method void setNodeList(array $NodeList) 设置<p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
+ * @method AIOptimizerStatus getAIOptimizerStatus() 获取<p>AI优化器状态</p>
+ * @method void setAIOptimizerStatus(AIOptimizerStatus $AIOptimizerStatus) 设置<p>AI优化器状态</p>
  */
 class ClusterInstanceDetail extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 引擎类型
+     * @var string <p>引擎类型</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 实例状态
+     * @var string <p>实例状态</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string 实例状态描述
+     * @var string <p>实例状态描述</p>
      */
     public $InstanceStatusDesc;
 
     /**
-     * @var integer cpu核数
+     * @var integer <p>cpu核数</p>
      */
     public $InstanceCpu;
 
     /**
-     * @var integer 内存
+     * @var integer <p>内存</p>
      */
     public $InstanceMemory;
 
     /**
-     * @var integer 硬盘
+     * @var integer <p>硬盘</p>
      */
     public $InstanceStorage;
 
     /**
-     * @var string 实例角色
+     * @var string <p>实例角色</p>
      */
     public $InstanceRole;
 
     /**
-     * @var integer 执行开始时间(距离0点的秒数)	
+     * @var integer <p>执行开始时间(距离0点的秒数)</p>
      */
     public $MaintainStartTime;
 
     /**
-     * @var integer 持续的时间(单位：秒)	
+     * @var integer <p>持续的时间(单位：秒)</p>
      */
     public $MaintainDuration;
 
     /**
-     * @var array 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+     * @var array <p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
      */
     public $MaintainWeekDays;
 
     /**
-     * @var string serverless实例子状态
+     * @var string <p>serverless实例子状态</p>
      */
     public $ServerlessStatus;
 
     /**
-     * @var array 实例任务信息
+     * @var array <p>实例任务信息</p>
      */
     public $InstanceTasks;
 
     /**
-     * @var string 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+     * @var string <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      */
     public $InstanceDeviceType;
 
     /**
-     * @var string 实例存储类型
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+     * @var string <p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
      */
     public $InstanceStorageType;
 
     /**
-     * @var string 数据库类型
+     * @var string <p>数据库类型</p>
      */
     public $DbMode;
 
     /**
-     * @var array 节点列表
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+     * @var array <p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
      */
     public $NodeList;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
-     * @param string $InstanceType 引擎类型
-     * @param string $InstanceStatus 实例状态
-     * @param string $InstanceStatusDesc 实例状态描述
-     * @param integer $InstanceCpu cpu核数
-     * @param integer $InstanceMemory 内存
-     * @param integer $InstanceStorage 硬盘
-     * @param string $InstanceRole 实例角色
-     * @param integer $MaintainStartTime 执行开始时间(距离0点的秒数)	
-     * @param integer $MaintainDuration 持续的时间(单位：秒)	
-     * @param array $MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-     * @param string $ServerlessStatus serverless实例子状态
-     * @param array $InstanceTasks 实例任务信息
-     * @param string $InstanceDeviceType 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
-     * @param string $InstanceStorageType 实例存储类型
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
-     * @param string $DbMode 数据库类型
-     * @param array $NodeList 节点列表
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+     * @var AIOptimizerStatus <p>AI优化器状态</p>
+     */
+    public $AIOptimizerStatus;
+
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param string $InstanceType <p>引擎类型</p>
+     * @param string $InstanceStatus <p>实例状态</p>
+     * @param string $InstanceStatusDesc <p>实例状态描述</p>
+     * @param integer $InstanceCpu <p>cpu核数</p>
+     * @param integer $InstanceMemory <p>内存</p>
+     * @param integer $InstanceStorage <p>硬盘</p>
+     * @param string $InstanceRole <p>实例角色</p>
+     * @param integer $MaintainStartTime <p>执行开始时间(距离0点的秒数)</p>
+     * @param integer $MaintainDuration <p>持续的时间(单位：秒)</p>
+     * @param array $MaintainWeekDays <p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
+     * @param string $ServerlessStatus <p>serverless实例子状态</p>
+     * @param array $InstanceTasks <p>实例任务信息</p>
+     * @param string $InstanceDeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+     * @param string $InstanceStorageType <p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
+     * @param string $DbMode <p>数据库类型</p>
+     * @param array $NodeList <p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
+     * @param AIOptimizerStatus $AIOptimizerStatus <p>AI优化器状态</p>
      */
     function __construct()
     {
@@ -273,6 +265,11 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("NodeList",$param) and $param["NodeList"] !== null) {
             $this->NodeList = $param["NodeList"];
+        }
+
+        if (array_key_exists("AIOptimizerStatus",$param) and $param["AIOptimizerStatus"] !== null) {
+            $this->AIOptimizerStatus = new AIOptimizerStatus();
+            $this->AIOptimizerStatus->deserialize($param["AIOptimizerStatus"]);
         }
     }
 }

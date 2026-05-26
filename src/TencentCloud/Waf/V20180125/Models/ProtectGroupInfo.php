@@ -20,66 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 防护对象组对象详情
  *
- * @method integer getID() 获取防护对象组ID
- * @method void setID(integer $ID) 设置防护对象组ID
- * @method string getName() 获取防护对象组名称
- * @method void setName(string $Name) 设置防护对象组名称
- * @method string getRemark() 获取防护对象组备注
- * @method void setRemark(string $Remark) 设置防护对象组备注
- * @method array getDomains() 获取防护对象组中绑定的域名详情
- * @method void setDomains(array $Domains) 设置防护对象组中绑定的域名详情
- * @method integer getRuleNum() 获取关联的批量规则数
- * @method void setRuleNum(integer $RuleNum) 设置关联的批量规则数
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method integer getID() 获取<p>防护对象组ID</p>
+ * @method void setID(integer $ID) 设置<p>防护对象组ID</p>
+ * @method string getName() 获取<p>防护对象组名称</p>
+ * @method void setName(string $Name) 设置<p>防护对象组名称</p>
+ * @method string getRemark() 获取<p>防护对象组备注</p>
+ * @method void setRemark(string $Remark) 设置<p>防护对象组备注</p>
+ * @method array getDomains() 获取<p>防护对象组中绑定的域名详情</p>
+ * @method void setDomains(array $Domains) 设置<p>防护对象组中绑定的域名详情</p>
+ * @method integer getRuleNum() 获取<p>关联的批量规则数</p>
+ * @method void setRuleNum(integer $RuleNum) 设置<p>关联的批量规则数</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method array getTagInfos() 获取<p>标签信息</p>
+ * @method void setTagInfos(array $TagInfos) 设置<p>标签信息</p>
+ * @method boolean getBoundTemplate() 获取<p>是否绑定了模板</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBoundTemplate(boolean $BoundTemplate) 设置<p>是否绑定了模板</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtectGroupInfo extends AbstractModel
 {
     /**
-     * @var integer 防护对象组ID
+     * @var integer <p>防护对象组ID</p>
      */
     public $ID;
 
     /**
-     * @var string 防护对象组名称
+     * @var string <p>防护对象组名称</p>
      */
     public $Name;
 
     /**
-     * @var string 防护对象组备注
+     * @var string <p>防护对象组备注</p>
      */
     public $Remark;
 
     /**
-     * @var array 防护对象组中绑定的域名详情
+     * @var array <p>防护对象组中绑定的域名详情</p>
      */
     public $Domains;
 
     /**
-     * @var integer 关联的批量规则数
+     * @var integer <p>关联的批量规则数</p>
      */
     public $RuleNum;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @param integer $ID 防护对象组ID
-     * @param string $Name 防护对象组名称
-     * @param string $Remark 防护对象组备注
-     * @param array $Domains 防护对象组中绑定的域名详情
-     * @param integer $RuleNum 关联的批量规则数
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 更新时间
+     * @var array <p>标签信息</p>
+     */
+    public $TagInfos;
+
+    /**
+     * @var boolean <p>是否绑定了模板</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BoundTemplate;
+
+    /**
+     * @param integer $ID <p>防护对象组ID</p>
+     * @param string $Name <p>防护对象组名称</p>
+     * @param string $Remark <p>防护对象组备注</p>
+     * @param array $Domains <p>防护对象组中绑定的域名详情</p>
+     * @param integer $RuleNum <p>关联的批量规则数</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param array $TagInfos <p>标签信息</p>
+     * @param boolean $BoundTemplate <p>是否绑定了模板</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -125,6 +145,19 @@ class ProtectGroupInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("TagInfos",$param) and $param["TagInfos"] !== null) {
+            $this->TagInfos = [];
+            foreach ($param["TagInfos"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("BoundTemplate",$param) and $param["BoundTemplate"] !== null) {
+            $this->BoundTemplate = $param["BoundTemplate"];
         }
     }
 }

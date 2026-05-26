@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApiSecSensitiveRuleList请求参数结构体
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
- * @method boolean getIsQueryApiExtractRule() 获取是否查询api提取规则策略，true表示查询
- * @method void setIsQueryApiExtractRule(boolean $IsQueryApiExtractRule) 设置是否查询api提取规则策略，true表示查询
- * @method boolean getIsQueryApiPrivilegeRule() 获取是否查询api鉴权规则
- * @method void setIsQueryApiPrivilegeRule(boolean $IsQueryApiPrivilegeRule) 设置是否查询api鉴权规则
- * @method boolean getIsQueryApiSceneRule() 获取是否查询api场景规则
- * @method void setIsQueryApiSceneRule(boolean $IsQueryApiSceneRule) 设置是否查询api场景规则
- * @method string getRuleName() 获取查询鉴权配置的时候，该rule只返回鉴权配置的规则
- * @method void setRuleName(string $RuleName) 设置查询鉴权配置的时候，该rule只返回鉴权配置的规则
- * @method boolean getIsQueryApiCustomEventRule() 获取是否查询api自定义事件规则
- * @method void setIsQueryApiCustomEventRule(boolean $IsQueryApiCustomEventRule) 设置是否查询api自定义事件规则
- * @method boolean getIsQueryApiExcludeRule() 获取是否查询无效api排除策略
- * @method void setIsQueryApiExcludeRule(boolean $IsQueryApiExcludeRule) 设置是否查询无效api排除策略
+ * @method string getDomain() 获取<p>域名</p>
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
+ * @method boolean getIsQueryApiExtractRule() 获取<p>是否查询api提取规则策略，true表示查询</p>
+ * @method void setIsQueryApiExtractRule(boolean $IsQueryApiExtractRule) 设置<p>是否查询api提取规则策略，true表示查询</p>
+ * @method boolean getIsQueryApiPrivilegeRule() 获取<p>是否查询api鉴权规则</p>
+ * @method void setIsQueryApiPrivilegeRule(boolean $IsQueryApiPrivilegeRule) 设置<p>是否查询api鉴权规则</p>
+ * @method boolean getIsQueryApiSceneRule() 获取<p>是否查询api场景规则</p>
+ * @method void setIsQueryApiSceneRule(boolean $IsQueryApiSceneRule) 设置<p>是否查询api场景规则</p>
+ * @method string getRuleName() 获取<p>查询鉴权配置的时候，该rule只返回鉴权配置的规则</p>
+ * @method void setRuleName(string $RuleName) 设置<p>查询鉴权配置的时候，该rule只返回鉴权配置的规则</p>
+ * @method boolean getIsQueryApiCustomEventRule() 获取<p>是否查询api自定义事件规则</p>
+ * @method void setIsQueryApiCustomEventRule(boolean $IsQueryApiCustomEventRule) 设置<p>是否查询api自定义事件规则</p>
+ * @method boolean getIsQueryApiExcludeRule() 获取<p>是否查询无效api排除策略</p>
+ * @method void setIsQueryApiExcludeRule(boolean $IsQueryApiExcludeRule) 设置<p>是否查询无效api排除策略</p>
+ * @method boolean getIsQueryApiSensitiveWhiteRule() 获取<p>是否查询敏感数据加白规则</p>
+ * @method void setIsQueryApiSensitiveWhiteRule(boolean $IsQueryApiSensitiveWhiteRule) 设置<p>是否查询敏感数据加白规则</p>
  */
 class DescribeApiSecSensitiveRuleListRequest extends AbstractModel
 {
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
      */
     public $Domain;
 
     /**
-     * @var boolean 是否查询api提取规则策略，true表示查询
+     * @var boolean <p>是否查询api提取规则策略，true表示查询</p>
      */
     public $IsQueryApiExtractRule;
 
     /**
-     * @var boolean 是否查询api鉴权规则
+     * @var boolean <p>是否查询api鉴权规则</p>
      */
     public $IsQueryApiPrivilegeRule;
 
     /**
-     * @var boolean 是否查询api场景规则
+     * @var boolean <p>是否查询api场景规则</p>
      */
     public $IsQueryApiSceneRule;
 
     /**
-     * @var string 查询鉴权配置的时候，该rule只返回鉴权配置的规则
+     * @var string <p>查询鉴权配置的时候，该rule只返回鉴权配置的规则</p>
      */
     public $RuleName;
 
     /**
-     * @var boolean 是否查询api自定义事件规则
+     * @var boolean <p>是否查询api自定义事件规则</p>
      */
     public $IsQueryApiCustomEventRule;
 
     /**
-     * @var boolean 是否查询无效api排除策略
+     * @var boolean <p>是否查询无效api排除策略</p>
      */
     public $IsQueryApiExcludeRule;
 
     /**
-     * @param string $Domain 域名
-     * @param boolean $IsQueryApiExtractRule 是否查询api提取规则策略，true表示查询
-     * @param boolean $IsQueryApiPrivilegeRule 是否查询api鉴权规则
-     * @param boolean $IsQueryApiSceneRule 是否查询api场景规则
-     * @param string $RuleName 查询鉴权配置的时候，该rule只返回鉴权配置的规则
-     * @param boolean $IsQueryApiCustomEventRule 是否查询api自定义事件规则
-     * @param boolean $IsQueryApiExcludeRule 是否查询无效api排除策略
+     * @var boolean <p>是否查询敏感数据加白规则</p>
+     */
+    public $IsQueryApiSensitiveWhiteRule;
+
+    /**
+     * @param string $Domain <p>域名</p>
+     * @param boolean $IsQueryApiExtractRule <p>是否查询api提取规则策略，true表示查询</p>
+     * @param boolean $IsQueryApiPrivilegeRule <p>是否查询api鉴权规则</p>
+     * @param boolean $IsQueryApiSceneRule <p>是否查询api场景规则</p>
+     * @param string $RuleName <p>查询鉴权配置的时候，该rule只返回鉴权配置的规则</p>
+     * @param boolean $IsQueryApiCustomEventRule <p>是否查询api自定义事件规则</p>
+     * @param boolean $IsQueryApiExcludeRule <p>是否查询无效api排除策略</p>
+     * @param boolean $IsQueryApiSensitiveWhiteRule <p>是否查询敏感数据加白规则</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeApiSecSensitiveRuleListRequest extends AbstractModel
 
         if (array_key_exists("IsQueryApiExcludeRule",$param) and $param["IsQueryApiExcludeRule"] !== null) {
             $this->IsQueryApiExcludeRule = $param["IsQueryApiExcludeRule"];
+        }
+
+        if (array_key_exists("IsQueryApiSensitiveWhiteRule",$param) and $param["IsQueryApiSensitiveWhiteRule"] !== null) {
+            $this->IsQueryApiSensitiveWhiteRule = $param["IsQueryApiSensitiveWhiteRule"];
         }
     }
 }

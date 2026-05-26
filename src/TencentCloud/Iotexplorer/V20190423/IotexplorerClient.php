@@ -56,9 +56,12 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 为用户提供新建项目的能力，用于集中管理产品和应用。
  * @method Models\CreateStudioProductResponse CreateStudioProduct(Models\CreateStudioProductRequest $req) 为用户提供新建产品的能力，用于管理用户的设备
  * @method Models\CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomId(Models\CreateTRTCSignaturesWithRoomIdRequest $req) 创建TRTC通话参数
+ * @method Models\CreateTWeSeeCallbackResponse CreateTWeSeeCallback(Models\CreateTWeSeeCallbackRequest $req) 创建 TWeSee 回调目标
+ * @method Models\CreateTWeSeePostPaidServiceResponse CreateTWeSeePostPaidService(Models\CreateTWeSeePostPaidServiceRequest $req) 开通 TWeSee 后付费服务
  * @method Models\CreateTWeSeeRecognitionTaskResponse CreateTWeSeeRecognitionTask(Models\CreateTWeSeeRecognitionTaskRequest $req) 创建 TWeSee 语义理解任务
  * @method Models\CreateTWeSeeRecognitionTaskWithFileResponse CreateTWeSeeRecognitionTaskWithFile(Models\CreateTWeSeeRecognitionTaskWithFileRequest $req) 同步执行 TWeSee 语义理解任务
  * @method Models\CreateTWeSeeServiceResponse CreateTWeSeeService(Models\CreateTWeSeeServiceRequest $req) 开通 TWeSee 后付费服务
+ * @method Models\CreateTWeSeeSubscriptionResponse CreateTWeSeeSubscription(Models\CreateTWeSeeSubscriptionRequest $req) 开通 TWeSee 预付费订阅
  * @method Models\CreateTWeTalkAIBotResponse CreateTWeTalkAIBot(Models\CreateTWeTalkAIBotRequest $req) 用于新增TWeTalk智能体。
  * @method Models\CreateTWeTalkProductConfigResponse CreateTWeTalkProductConfig(Models\CreateTWeTalkProductConfigRequest $req) 用于配置TWeTalk服务连接产品配置信息。
  * @method Models\CreateTWeTalkProductConfigV2Response CreateTWeTalkProductConfigV2(Models\CreateTWeTalkProductConfigV2Request $req) 用于配置TWeTalk服务连接产品配置信息。
@@ -75,6 +78,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeletePositionSpaceResponse DeletePositionSpace(Models\DeletePositionSpaceRequest $req) 删除位置空间。
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 提供删除某个项目的能力。
  * @method Models\DeleteStudioProductResponse DeleteStudioProduct(Models\DeleteStudioProductRequest $req) 提供删除某个项目下产品的能力
+ * @method Models\DeleteTWeSeeCallbackResponse DeleteTWeSeeCallback(Models\DeleteTWeSeeCallbackRequest $req) 删除 TWeSee 回调目标
  * @method Models\DeleteTWeTalkAIBotResponse DeleteTWeTalkAIBot(Models\DeleteTWeTalkAIBotRequest $req) 用于删除TWeTalk智能体。
  * @method Models\DeleteTWeTalkProductConfigV2Response DeleteTWeTalkProductConfigV2(Models\DeleteTWeTalkProductConfigV2Request $req) 用于删除配置TWeTalk服务连接产品配置信息。
  * @method Models\DeleteTopicPolicyResponse DeleteTopicPolicy(Models\DeleteTopicPolicyRequest $req) 本接口（DeleteTopicPolicy）用于删除Topic
@@ -135,15 +139,23 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeSpaceFenceEventListResponse DescribeSpaceFenceEventList(Models\DescribeSpaceFenceEventListRequest $req) 获取位置空间中围栏告警事件列表。
  * @method Models\DescribeStudioProductResponse DescribeStudioProduct(Models\DescribeStudioProductRequest $req) 提供查看产品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
  * @method Models\DescribeSubscribedTopicPolicyResponse DescribeSubscribedTopicPolicy(Models\DescribeSubscribedTopicPolicyRequest $req) 本接口（DescribeSubscribedTopicPolicy）用于获取设备已订阅Topic列表
+ * @method Models\DescribeTWeSeeCallbackResponse DescribeTWeSeeCallback(Models\DescribeTWeSeeCallbackRequest $req) 查询 TWeSee 回调目标详情
  * @method Models\DescribeTWeSeeConfigResponse DescribeTWeSeeConfig(Models\DescribeTWeSeeConfigRequest $req) 拉取 TWeSee 配置
+ * @method Models\DescribeTWeSeePostPaidServiceResponse DescribeTWeSeePostPaidService(Models\DescribeTWeSeePostPaidServiceRequest $req) 查询 TWeSee 后付费服务
  * @method Models\DescribeTWeSeeRecognitionTaskResponse DescribeTWeSeeRecognitionTask(Models\DescribeTWeSeeRecognitionTaskRequest $req) 查询 TWeSee 语义理解任务
+ * @method Models\DescribeTWeSeeSubscriptionResponse DescribeTWeSeeSubscription(Models\DescribeTWeSeeSubscriptionRequest $req) 查询 TWeSee 预付费订阅
+ * @method Models\DescribeTWeSeeTaskResponse DescribeTWeSeeTask(Models\DescribeTWeSeeTaskRequest $req) 查询 TWeSee 任务详情
+ * @method Models\DescribeTWeSeeTaskStatisticsResponse DescribeTWeSeeTaskStatistics(Models\DescribeTWeSeeTaskStatisticsRequest $req) 获取 TWeSee 任务统计数据
  * @method Models\DescribeTWeTalkAIBotResponse DescribeTWeTalkAIBot(Models\DescribeTWeTalkAIBotRequest $req) 用于查询TWeTalk智能体详情。
  * @method Models\DescribeTWeTalkProductConfigResponse DescribeTWeTalkProductConfig(Models\DescribeTWeTalkProductConfigRequest $req) 用于获取TWeTalk服务连接产品配置信息。
  * @method Models\DescribeTWeTalkProductConfigV2Response DescribeTWeTalkProductConfigV2(Models\DescribeTWeTalkProductConfigV2Request $req) 用于查询TWeTalk服务连接产品配置信息。
  * @method Models\DescribeTopicPolicyResponse DescribeTopicPolicy(Models\DescribeTopicPolicyRequest $req) 本接口（DescribeTopicPolicy）用于查看Topic详细信息
  * @method Models\DescribeTopicRuleResponse DescribeTopicRule(Models\DescribeTopicRuleRequest $req) 获取规则信息
  * @method Models\DescribeUnbindedDevicesResponse DescribeUnbindedDevices(Models\DescribeUnbindedDevicesRequest $req) 获取未绑定的设备列表
- * @method Models\DescribeVideoLicenseResponse DescribeVideoLicense(Models\DescribeVideoLicenseRequest $req) 用于查询视频激活码统计概览
+ * @method Models\DescribeVideoLicenseResponse DescribeVideoLicense(Models\DescribeVideoLicenseRequest $req) DescribeLicenseOverView代替
+
+用于查询视频激活码统计概览
+ * @method Models\DestroyTWeSeeSubscriptionResponse DestroyTWeSeeSubscription(Models\DestroyTWeSeeSubscriptionRequest $req) 销毁 TWeSee 预付费订阅
  * @method Models\DirectBindDeviceInFamilyResponse DirectBindDeviceInFamily(Models\DirectBindDeviceInFamilyRequest $req) 直接绑定设备和家庭
  * @method Models\DisableTopicRuleResponse DisableTopicRule(Models\DisableTopicRuleRequest $req) 禁用规则
  * @method Models\DismissRoomByStrRoomIdFromTRTCResponse DismissRoomByStrRoomIdFromTRTC(Models\DismissRoomByStrRoomIdFromTRTCRequest $req) 解散TRTC房间
@@ -172,9 +184,12 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetTopicRuleListResponse GetTopicRuleList(Models\GetTopicRuleListRequest $req) 获取规则列表
  * @method Models\GetWechatDeviceTicketResponse GetWechatDeviceTicket(Models\GetWechatDeviceTicketRequest $req) 查询微信设备授权票据
  * @method Models\InheritCloudStorageUserResponse InheritCloudStorageUser(Models\InheritCloudStorageUserRequest $req) 继承云存用户
+ * @method Models\InquireTWeSeeSubscriptionCreatePriceResponse InquireTWeSeeSubscriptionCreatePrice(Models\InquireTWeSeeSubscriptionCreatePriceRequest $req) 查询 TWeSee 预付费新购价格
+ * @method Models\InquireTWeSeeSubscriptionRenewPriceResponse InquireTWeSeeSubscriptionRenewPrice(Models\InquireTWeSeeSubscriptionRenewPriceRequest $req) 查询 TWeSee 预付费续费价格
  * @method Models\InvokeAISearchServiceResponse InvokeAISearchService(Models\InvokeAISearchServiceRequest $req) 视频语义搜索
  * @method Models\InvokeCloudStorageAIServiceTaskResponse InvokeCloudStorageAIServiceTask(Models\InvokeCloudStorageAIServiceTaskRequest $req) 同步执行设备云存 AI 分析任务
  * @method Models\InvokeExternalSourceAIServiceTaskResponse InvokeExternalSourceAIServiceTask(Models\InvokeExternalSourceAIServiceTaskRequest $req) 创建外部视频 AI 分析任务
+ * @method Models\InvokeTWeSeeComprehensionResponse InvokeTWeSeeComprehension(Models\InvokeTWeSeeComprehensionRequest $req) 调用 TWeSee 视觉理解算法
  * @method Models\InvokeTWeSeeRecognitionTaskResponse InvokeTWeSeeRecognitionTask(Models\InvokeTWeSeeRecognitionTaskRequest $req) 同步执行 TWeSee 语义理解任务
  * @method Models\InvokeTWeSeeRecognitionTaskWithFileResponse InvokeTWeSeeRecognitionTaskWithFile(Models\InvokeTWeSeeRecognitionTaskWithFileRequest $req) 上传文件并同步执行 TWeSee 语义理解任务
  * @method Models\InvokeVideosKeywordsAnalyzerResponse InvokeVideosKeywordsAnalyzer(Models\InvokeVideosKeywordsAnalyzerRequest $req) 获取某个时间段的视频内容关键字
@@ -182,6 +197,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ListFirmwaresResponse ListFirmwares(Models\ListFirmwaresRequest $req) 本接口（ListFirmwares）用于获取固件列表
  * @method Models\ListOtaModulesResponse ListOtaModules(Models\ListOtaModulesRequest $req) 本接口（ListOtaModules）用于获取OTA模块列表
  * @method Models\ListProductOtaModulesResponse ListProductOtaModules(Models\ListProductOtaModulesRequest $req) 本接口（ListProductOtaModules）用于获取产品OTA模块列表
+ * @method Models\ListTWeSeeCallbackResponse ListTWeSeeCallback(Models\ListTWeSeeCallbackRequest $req) 查询 TWeSee 回调目标列表
+ * @method Models\ListTWeSeeTasksResponse ListTWeSeeTasks(Models\ListTWeSeeTasksRequest $req) 短摘要列表查询
  * @method Models\ListTopicPolicyResponse ListTopicPolicy(Models\ListTopicPolicyRequest $req) 本接口（ListTopicPolicy）用于获取Topic列表
  * @method Models\ModifyApplicationResponse ModifyApplication(Models\ModifyApplicationRequest $req) 更新应用信息
  * @method Models\ModifyCloudStorageAIServiceResponse ModifyCloudStorageAIService(Models\ModifyCloudStorageAIServiceRequest $req) 修改指定设备的云存 AI 服务参数配置
@@ -197,7 +214,10 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目。
  * @method Models\ModifySpacePropertyResponse ModifySpaceProperty(Models\ModifySpacePropertyRequest $req) 更新位置空间产品属性
  * @method Models\ModifyStudioProductResponse ModifyStudioProduct(Models\ModifyStudioProductRequest $req) 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
+ * @method Models\ModifyTWeSeeCallbackResponse ModifyTWeSeeCallback(Models\ModifyTWeSeeCallbackRequest $req) 修改 TWeSee 回调目标
  * @method Models\ModifyTWeSeeConfigResponse ModifyTWeSeeConfig(Models\ModifyTWeSeeConfigRequest $req) 修改 TWeSee 配置
+ * @method Models\ModifyTWeSeeSubscriptionResponse ModifyTWeSeeSubscription(Models\ModifyTWeSeeSubscriptionRequest $req) 修改 TWeSee 预付费订阅
+ * @method Models\ModifyTWeSeeSubscriptionRenewFlagResponse ModifyTWeSeeSubscriptionRenewFlag(Models\ModifyTWeSeeSubscriptionRenewFlagRequest $req) 修改 TWeSee 预付费订阅续费标识
  * @method Models\ModifyTWeTalkAIBotResponse ModifyTWeTalkAIBot(Models\ModifyTWeTalkAIBotRequest $req) 用于修改TWeTalk智能体。
  * @method Models\ModifyTWeTalkProductConfigResponse ModifyTWeTalkProductConfig(Models\ModifyTWeTalkProductConfigRequest $req) 用于修改TWeTalk服务连接产品配置信息。
  * @method Models\ModifyTWeTalkProductConfigV2Response ModifyTWeTalkProductConfigV2(Models\ModifyTWeTalkProductConfigV2Request $req) 用于修改配置TWeTalk服务连接产品配置信息。
@@ -214,6 +234,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
 下发RRPC消息
  * @method Models\ReleaseStudioProductResponse ReleaseStudioProduct(Models\ReleaseStudioProductRequest $req) 产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
  * @method Models\RemoveUserByRoomIdFromTRTCResponse RemoveUserByRoomIdFromTRTC(Models\RemoveUserByRoomIdFromTRTCRequest $req) TRTC操作，将用户从房间移出
+ * @method Models\RenewTWeSeeSubscriptionResponse RenewTWeSeeSubscription(Models\RenewTWeSeeSubscriptionRequest $req) 续费 TWeSee 预付费订阅
  * @method Models\ResetCloudStorageResponse ResetCloudStorage(Models\ResetCloudStorageRequest $req) 重置云存服务
  * @method Models\ResetCloudStorageAIServiceResponse ResetCloudStorageAIService(Models\ResetCloudStorageAIServiceRequest $req) 重置指定设备的云存 AI 服务
  * @method Models\ResetCloudStorageEventResponse ResetCloudStorageEvent(Models\ResetCloudStorageEventRequest $req) 重置云存事件
@@ -222,6 +243,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\SearchPositionSpaceResponse SearchPositionSpace(Models\SearchPositionSpaceRequest $req) 搜索位置空间
  * @method Models\SearchStudioProductResponse SearchStudioProduct(Models\SearchStudioProductRequest $req) 提供根据产品名称查找产品的能力
  * @method Models\SearchTopicRuleResponse SearchTopicRule(Models\SearchTopicRuleRequest $req) 搜索规则
+ * @method Models\TerminateTWeSeeSubscriptionResponse TerminateTWeSeeSubscription(Models\TerminateTWeSeeSubscriptionRequest $req) 退订 TWeSee 预付费订阅
  * @method Models\TransferCloudStorageResponse TransferCloudStorage(Models\TransferCloudStorageRequest $req) 转移云存服务
  * @method Models\TransferTWeCallDeviceResponse TransferTWeCallDevice(Models\TransferTWeCallDeviceRequest $req) 转移设备
  * @method Models\UnbindDevicesResponse UnbindDevices(Models\UnbindDevicesRequest $req) 批量解绑子设备

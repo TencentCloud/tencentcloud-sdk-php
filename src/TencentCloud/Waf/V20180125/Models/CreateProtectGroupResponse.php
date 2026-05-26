@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProtectGroup返回参数结构体
  *
- * @method integer getGroupId() 获取防护对象组的ID
- * @method void setGroupId(integer $GroupId) 设置防护对象组的ID
+ * @method integer getGroupId() 获取<p>防护对象组的ID</p>
+ * @method void setGroupId(integer $GroupId) 设置<p>防护对象组的ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateProtectGroupResponse extends AbstractModel
 {
     /**
-     * @var integer 防护对象组的ID
+     * @var integer <p>防护对象组的ID</p>
      */
     public $GroupId;
 
@@ -38,7 +38,7 @@ class CreateProtectGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $GroupId 防护对象组的ID
+     * @param integer $GroupId <p>防护对象组的ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

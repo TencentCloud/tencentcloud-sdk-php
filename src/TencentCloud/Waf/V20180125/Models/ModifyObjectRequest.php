@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyObject请求参数结构体
  *
- * @method string getObjectId() 获取修改对象标识
- * @method void setObjectId(string $ObjectId) 设置修改对象标识
- * @method string getOpType() 获取改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
- * @method void setOpType(string $OpType) 设置改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
- * @method integer getStatus() 获取新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
- * @method void setStatus(integer $Status) 设置新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
- * @method string getInstanceId() 获取新的实例ID，如果和已绑定的实例相同认为修改成功
- * @method void setInstanceId(string $InstanceId) 设置新的实例ID，如果和已绑定的实例相同认为修改成功
- * @method integer getProxy() 获取是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
- * @method void setProxy(integer $Proxy) 设置是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
- * @method array getIpHeaders() 获取IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
- * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
- * @method integer getMemberAppId() 获取对象所属集团成员appid
- * @method void setMemberAppId(integer $MemberAppId) 设置对象所属集团成员appid
- * @method string getMemberUin() 获取对象所属集团成员uin
- * @method void setMemberUin(string $MemberUin) 设置对象所属集团成员uin
+ * @method string getObjectId() 获取<p>修改对象标识</p>
+ * @method void setObjectId(string $ObjectId) 设置<p>修改对象标识</p>
+ * @method string getOpType() 获取<p>改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态</p>
+ * @method void setOpType(string $OpType) 设置<p>改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态</p>
+ * @method integer getStatus() 获取<p>新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1</p>
+ * @method void setStatus(integer $Status) 设置<p>新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1</p>
+ * @method string getInstanceId() 获取<p>新的实例ID，如果和已绑定的实例相同认为修改成功</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>新的实例ID，如果和已绑定的实例相同认为修改成功</p>
+ * @method integer getProxy() 获取<p>是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)</p>
+ * @method void setProxy(integer $Proxy) 设置<p>是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)</p>
+ * @method array getIpHeaders() 获取<p>IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)</p>
+ * @method void setIpHeaders(array $IpHeaders) 设置<p>IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)</p>
+ * @method integer getMemberAppId() 获取<p>对象所属集团成员appid</p>
+ * @method void setMemberAppId(integer $MemberAppId) 设置<p>对象所属集团成员appid</p>
+ * @method string getMemberUin() 获取<p>对象所属集团成员uin</p>
+ * @method void setMemberUin(string $MemberUin) 设置<p>对象所属集团成员uin</p>
+ * @method array getTags() 获取<p>标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>标签信息</p>
  */
 class ModifyObjectRequest extends AbstractModel
 {
     /**
-     * @var string 修改对象标识
+     * @var string <p>修改对象标识</p>
      */
     public $ObjectId;
 
     /**
-     * @var string 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
+     * @var string <p>改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态</p>
      */
     public $OpType;
 
     /**
-     * @var integer 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
+     * @var integer <p>新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1</p>
      */
     public $Status;
 
     /**
-     * @var string 新的实例ID，如果和已绑定的实例相同认为修改成功
+     * @var string <p>新的实例ID，如果和已绑定的实例相同认为修改成功</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+     * @var integer <p>是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)</p>
      */
     public $Proxy;
 
     /**
-     * @var array IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+     * @var array <p>IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)</p>
      */
     public $IpHeaders;
 
     /**
-     * @var integer 对象所属集团成员appid
+     * @var integer <p>对象所属集团成员appid</p>
      */
     public $MemberAppId;
 
     /**
-     * @var string 对象所属集团成员uin
+     * @var string <p>对象所属集团成员uin</p>
      */
     public $MemberUin;
 
     /**
-     * @param string $ObjectId 修改对象标识
-     * @param string $OpType 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
-     * @param integer $Status 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
-     * @param string $InstanceId 新的实例ID，如果和已绑定的实例相同认为修改成功
-     * @param integer $Proxy 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
-     * @param array $IpHeaders IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
-     * @param integer $MemberAppId 对象所属集团成员appid
-     * @param string $MemberUin 对象所属集团成员uin
+     * @var array <p>标签信息</p>
+     */
+    public $Tags;
+
+    /**
+     * @param string $ObjectId <p>修改对象标识</p>
+     * @param string $OpType <p>改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态</p>
+     * @param integer $Status <p>新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1</p>
+     * @param string $InstanceId <p>新的实例ID，如果和已绑定的实例相同认为修改成功</p>
+     * @param integer $Proxy <p>是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)</p>
+     * @param array $IpHeaders <p>IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)</p>
+     * @param integer $MemberAppId <p>对象所属集团成员appid</p>
+     * @param string $MemberUin <p>对象所属集团成员uin</p>
+     * @param array $Tags <p>标签信息</p>
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class ModifyObjectRequest extends AbstractModel
 
         if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
             $this->MemberUin = $param["MemberUin"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

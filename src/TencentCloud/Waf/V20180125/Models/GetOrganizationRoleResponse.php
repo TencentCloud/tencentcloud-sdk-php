@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetOrganizationRole返回参数结构体
  *
- * @method string getRole() 获取Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员
- * @method void setRole(string $Role) 设置Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员
+ * @method string getRole() 获取<p>Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员</p>
+ * @method void setRole(string $Role) 设置<p>Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetOrganizationRoleResponse extends AbstractModel
 {
     /**
-     * @var string Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员
+     * @var string <p>Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员</p>
      */
     public $Role;
 
@@ -38,7 +38,7 @@ class GetOrganizationRoleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Role Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员
+     * @param string $Role <p>Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

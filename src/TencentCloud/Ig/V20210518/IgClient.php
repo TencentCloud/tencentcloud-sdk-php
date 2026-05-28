@@ -24,6 +24,11 @@ use TencentCloud\Ig\V20210518\Models as Models;
 
 /**
  * @method Models\DescribeIgOrderListResponse DescribeIgOrderList(Models\DescribeIgOrderListRequest $req) 查询智能导诊订单列表
+ * @method Models\GetLLMDiagnosisDrugResponse GetLLMDiagnosisDrug(Models\GetLLMDiagnosisDrugRequest $req) 大模型问药拍药盒
+ * @method Models\GetLLMDiagnosisDrugChatResponse GetLLMDiagnosisDrugChat(Models\GetLLMDiagnosisDrugChatRequest $req) 大模型问药问答
+ * @method Models\GetLLMDiagnosisHealthResponse GetLLMDiagnosisHealth(Models\GetLLMDiagnosisHealthRequest $req) 大模型健康自诊
+ * @method Models\GetLLMReportInterpretationResponse GetLLMReportInterpretation(Models\GetLLMReportInterpretationRequest $req) 大模型报告解读
+ * @method Models\QueryDrugInstructionsResponse QueryDrugInstructions(Models\QueryDrugInstructionsRequest $req) 查询药品说明书
  */
 
 class IgClient extends AbstractClient

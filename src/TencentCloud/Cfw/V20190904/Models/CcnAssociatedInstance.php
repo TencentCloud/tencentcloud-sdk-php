@@ -20,54 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CCN关联的实例信息
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getInsType() 获取实例类型
- * @method void setInsType(string $InsType) 设置实例类型
- * @method array getCidrLst() 获取实例的网段列表
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method string getInsType() 获取<p>实例类型</p>
+ * @method void setInsType(string $InsType) 设置<p>实例类型</p>
+ * @method array getCidrLst() 获取<p>实例的网段列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCidrLst(array $CidrLst) 设置实例的网段列表
+ * @method void setCidrLst(array $CidrLst) 设置<p>实例的网段列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceRegion() 获取实例所属地域
- * @method void setInstanceRegion(string $InstanceRegion) 设置实例所属地域
+ * @method string getInstanceRegion() 获取<p>实例所属地域</p>
+ * @method void setInstanceRegion(string $InstanceRegion) 设置<p>实例所属地域</p>
+ * @method integer getIsCrossInstance() 获取<p>是否跨账号</p>
+ * @method void setIsCrossInstance(integer $IsCrossInstance) 设置<p>是否跨账号</p>
  */
 class CcnAssociatedInstance extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例类型
+     * @var string <p>实例类型</p>
      */
     public $InsType;
 
     /**
-     * @var array 实例的网段列表
+     * @var array <p>实例的网段列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CidrLst;
 
     /**
-     * @var string 实例所属地域
+     * @var string <p>实例所属地域</p>
      */
     public $InstanceRegion;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
-     * @param string $InsType 实例类型
-     * @param array $CidrLst 实例的网段列表
+     * @var integer <p>是否跨账号</p>
+     */
+    public $IsCrossInstance;
+
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param string $InsType <p>实例类型</p>
+     * @param array $CidrLst <p>实例的网段列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceRegion 实例所属地域
+     * @param string $InstanceRegion <p>实例所属地域</p>
+     * @param integer $IsCrossInstance <p>是否跨账号</p>
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class CcnAssociatedInstance extends AbstractModel
 
         if (array_key_exists("InstanceRegion",$param) and $param["InstanceRegion"] !== null) {
             $this->InstanceRegion = $param["InstanceRegion"];
+        }
+
+        if (array_key_exists("IsCrossInstance",$param) and $param["IsCrossInstance"] !== null) {
+            $this->IsCrossInstance = $param["IsCrossInstance"];
         }
     }
 }

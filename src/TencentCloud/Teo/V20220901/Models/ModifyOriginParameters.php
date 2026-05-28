@@ -23,13 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOriginType() 获取源站类型。取值有：
 <li>IPDomain：IPV4、IPV6 或域名类型源站；</li>
 <li>OriginGroup：源站组类型源站；</li>
-<li>LoadBalance：负载均衡，该功能内测中，如需使用，请提工单或联系智能客服；</li>
+<li>LoadBalance：负载均衡，该功能内测中，如需使用，请提工单；</li>
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWSS3：支持 AWS S3 协议的所有对象存储源站。</li>
  * @method void setOriginType(string $OriginType) 设置源站类型。取值有：
 <li>IPDomain：IPV4、IPV6 或域名类型源站；</li>
 <li>OriginGroup：源站组类型源站；</li>
-<li>LoadBalance：负载均衡，该功能内测中，如需使用，请提工单或联系智能客服；</li>
+<li>LoadBalance：负载均衡，该功能内测中，如需使用，请提工单；</li>
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWSS3：支持 AWS S3 协议的所有对象存储源站。</li>
  * @method string getOrigin() 获取源站地址，根据 OriginType 的取值分为以下情况：
@@ -73,7 +73,7 @@ class ModifyOriginParameters extends AbstractModel
      * @var string 源站类型。取值有：
 <li>IPDomain：IPV4、IPV6 或域名类型源站；</li>
 <li>OriginGroup：源站组类型源站；</li>
-<li>LoadBalance：负载均衡，该功能内测中，如需使用，请提工单或联系智能客服；</li>
+<li>LoadBalance：负载均衡，该功能内测中，如需使用，请提工单；</li>
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWSS3：支持 AWS S3 协议的所有对象存储源站。</li>
      */
@@ -124,7 +124,7 @@ class ModifyOriginParameters extends AbstractModel
      * @param string $OriginType 源站类型。取值有：
 <li>IPDomain：IPV4、IPV6 或域名类型源站；</li>
 <li>OriginGroup：源站组类型源站；</li>
-<li>LoadBalance：负载均衡，该功能内测中，如需使用，请提工单或联系智能客服；</li>
+<li>LoadBalance：负载均衡，该功能内测中，如需使用，请提工单；</li>
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWSS3：支持 AWS S3 协议的所有对象存储源站。</li>
      * @param string $Origin 源站地址，根据 OriginType 的取值分为以下情况：

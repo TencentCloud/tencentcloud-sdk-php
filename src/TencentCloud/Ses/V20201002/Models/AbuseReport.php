@@ -20,114 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 垃圾投诉数据
  *
- * @method string getDeliverTime() 获取发送时间
- * @method void setDeliverTime(string $DeliverTime) 设置发送时间
- * @method string getOriginalMailFrom() 获取发信地址
- * @method void setOriginalMailFrom(string $OriginalMailFrom) 设置发信地址
- * @method string getOriginalRcptTo() 获取收信地址
- * @method void setOriginalRcptTo(string $OriginalRcptTo) 设置收信地址
- * @method string getFromDomain() 获取发信域名
- * @method void setFromDomain(string $FromDomain) 设置发信域名
- * @method string getComplainTime() 获取投诉时间
- * @method void setComplainTime(string $ComplainTime) 设置投诉时间
- * @method string getMta() 获取收信域名
- * @method void setMta(string $Mta) 设置收信域名
- * @method string getSourceIp() 获取来源ip
- * @method void setSourceIp(string $SourceIp) 设置来源ip
- * @method string getInsertTime() 获取数据时间
- * @method void setInsertTime(string $InsertTime) 设置数据时间
- * @method string getTemplateId() 获取模板id
- * @method void setTemplateId(string $TemplateId) 设置模板id
- * @method string getBulkId() 获取bulkId
- * @method void setBulkId(string $BulkId) 设置bulkId
- * @method string getMessageId() 获取邮件Message-Id
- * @method void setMessageId(string $MessageId) 设置邮件Message-Id
- * @method string getAbuseTime() 获取投诉时间
- * @method void setAbuseTime(string $AbuseTime) 设置投诉时间
- * @method string getSubject() 获取邮件主题
- * @method void setSubject(string $Subject) 设置邮件主题
+ * @method string getDeliverTime() 获取<p>发送时间</p>
+ * @method void setDeliverTime(string $DeliverTime) 设置<p>发送时间</p>
+ * @method string getOriginalMailFrom() 获取<p>发信地址</p>
+ * @method void setOriginalMailFrom(string $OriginalMailFrom) 设置<p>发信地址</p>
+ * @method string getOriginalRcptTo() 获取<p>收信地址</p>
+ * @method void setOriginalRcptTo(string $OriginalRcptTo) 设置<p>收信地址</p>
+ * @method string getFromDomain() 获取<p>发信域名</p>
+ * @method void setFromDomain(string $FromDomain) 设置<p>发信域名</p>
+ * @method string getComplainTime() 获取<p>投诉时间</p>
+ * @method void setComplainTime(string $ComplainTime) 设置<p>投诉时间</p>
+ * @method string getMta() 获取<p>收信域名</p>
+ * @method void setMta(string $Mta) 设置<p>收信域名</p>
+ * @method string getSourceIp() 获取<p>来源ip</p>
+ * @method void setSourceIp(string $SourceIp) 设置<p>来源ip</p>
+ * @method string getInsertTime() 获取<p>数据时间</p>
+ * @method void setInsertTime(string $InsertTime) 设置<p>数据时间</p>
+ * @method string getTemplateId() 获取<p>模板ID</p>
+ * @method void setTemplateId(string $TemplateId) 设置<p>模板ID</p>
+ * @method string getBulkId() 获取<p>bulkId</p>
+ * @method void setBulkId(string $BulkId) 设置<p>bulkId</p>
+ * @method string getMessageId() 获取<p>邮件Message-Id</p>
+ * @method void setMessageId(string $MessageId) 设置<p>邮件Message-Id</p>
+ * @method string getAbuseTime() 获取<p>投诉时间</p>
+ * @method void setAbuseTime(string $AbuseTime) 设置<p>投诉时间</p>
+ * @method string getSubject() 获取<p>邮件主题</p>
+ * @method void setSubject(string $Subject) 设置<p>邮件主题</p>
  */
 class AbuseReport extends AbstractModel
 {
     /**
-     * @var string 发送时间
+     * @var string <p>发送时间</p>
      */
     public $DeliverTime;
 
     /**
-     * @var string 发信地址
+     * @var string <p>发信地址</p>
      */
     public $OriginalMailFrom;
 
     /**
-     * @var string 收信地址
+     * @var string <p>收信地址</p>
      */
     public $OriginalRcptTo;
 
     /**
-     * @var string 发信域名
+     * @var string <p>发信域名</p>
      */
     public $FromDomain;
 
     /**
-     * @var string 投诉时间
+     * @var string <p>投诉时间</p>
      */
     public $ComplainTime;
 
     /**
-     * @var string 收信域名
+     * @var string <p>收信域名</p>
      */
     public $Mta;
 
     /**
-     * @var string 来源ip
+     * @var string <p>来源ip</p>
      */
     public $SourceIp;
 
     /**
-     * @var string 数据时间
+     * @var string <p>数据时间</p>
      */
     public $InsertTime;
 
     /**
-     * @var string 模板id
+     * @var string <p>模板ID</p>
      */
     public $TemplateId;
 
     /**
-     * @var string bulkId
+     * @var string <p>bulkId</p>
      */
     public $BulkId;
 
     /**
-     * @var string 邮件Message-Id
+     * @var string <p>邮件Message-Id</p>
      */
     public $MessageId;
 
     /**
-     * @var string 投诉时间
+     * @var string <p>投诉时间</p>
      */
     public $AbuseTime;
 
     /**
-     * @var string 邮件主题
+     * @var string <p>邮件主题</p>
      */
     public $Subject;
 
     /**
-     * @param string $DeliverTime 发送时间
-     * @param string $OriginalMailFrom 发信地址
-     * @param string $OriginalRcptTo 收信地址
-     * @param string $FromDomain 发信域名
-     * @param string $ComplainTime 投诉时间
-     * @param string $Mta 收信域名
-     * @param string $SourceIp 来源ip
-     * @param string $InsertTime 数据时间
-     * @param string $TemplateId 模板id
-     * @param string $BulkId bulkId
-     * @param string $MessageId 邮件Message-Id
-     * @param string $AbuseTime 投诉时间
-     * @param string $Subject 邮件主题
+     * @param string $DeliverTime <p>发送时间</p>
+     * @param string $OriginalMailFrom <p>发信地址</p>
+     * @param string $OriginalRcptTo <p>收信地址</p>
+     * @param string $FromDomain <p>发信域名</p>
+     * @param string $ComplainTime <p>投诉时间</p>
+     * @param string $Mta <p>收信域名</p>
+     * @param string $SourceIp <p>来源ip</p>
+     * @param string $InsertTime <p>数据时间</p>
+     * @param string $TemplateId <p>模板ID</p>
+     * @param string $BulkId <p>bulkId</p>
+     * @param string $MessageId <p>邮件Message-Id</p>
+     * @param string $AbuseTime <p>投诉时间</p>
+     * @param string $Subject <p>邮件主题</p>
      */
     function __construct()
     {

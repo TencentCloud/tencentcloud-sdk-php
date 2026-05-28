@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述集群文件系统选项
  *
- * @method array getCFSOptions() 获取集群挂载CFS文件系统选项。
- * @method void setCFSOptions(array $CFSOptions) 设置集群挂载CFS文件系统选项。
- * @method array getGooseFSOptions() 获取集群挂载GooseFS文件系统选项。
- * @method void setGooseFSOptions(array $GooseFSOptions) 设置集群挂载GooseFS文件系统选项。
- * @method array getGooseFSxOptions() 获取集群挂载GooseFSx文件系统选项。
- * @method void setGooseFSxOptions(array $GooseFSxOptions) 设置集群挂载GooseFSx文件系统选项。
+ * @method array getCFSOptions() 获取<p>集群挂载CFS文件系统选项。</p>
+ * @method void setCFSOptions(array $CFSOptions) 设置<p>集群挂载CFS文件系统选项。</p>
+ * @method array getGooseFSOptions() 获取<p>集群挂载GooseFS文件系统选项。</p>
+ * @method void setGooseFSOptions(array $GooseFSOptions) 设置<p>集群挂载GooseFS文件系统选项。</p>
+ * @method array getGooseFSxOptions() 获取<p>集群挂载GooseFSx文件系统选项。</p>
+ * @method void setGooseFSxOptions(array $GooseFSxOptions) 设置<p>集群挂载GooseFSx文件系统选项。</p>
+ * @method array getCosOptions() 获取<p>集群挂载COS文件系统选项。</p>
+ * @method void setCosOptions(array $CosOptions) 设置<p>集群挂载COS文件系统选项。</p>
  */
 class StorageOption extends AbstractModel
 {
     /**
-     * @var array 集群挂载CFS文件系统选项。
+     * @var array <p>集群挂载CFS文件系统选项。</p>
      */
     public $CFSOptions;
 
     /**
-     * @var array 集群挂载GooseFS文件系统选项。
+     * @var array <p>集群挂载GooseFS文件系统选项。</p>
      */
     public $GooseFSOptions;
 
     /**
-     * @var array 集群挂载GooseFSx文件系统选项。
+     * @var array <p>集群挂载GooseFSx文件系统选项。</p>
      */
     public $GooseFSxOptions;
 
     /**
-     * @param array $CFSOptions 集群挂载CFS文件系统选项。
-     * @param array $GooseFSOptions 集群挂载GooseFS文件系统选项。
-     * @param array $GooseFSxOptions 集群挂载GooseFSx文件系统选项。
+     * @var array <p>集群挂载COS文件系统选项。</p>
+     */
+    public $CosOptions;
+
+    /**
+     * @param array $CFSOptions <p>集群挂载CFS文件系统选项。</p>
+     * @param array $GooseFSOptions <p>集群挂载GooseFS文件系统选项。</p>
+     * @param array $GooseFSxOptions <p>集群挂载GooseFSx文件系统选项。</p>
+     * @param array $CosOptions <p>集群挂载COS文件系统选项。</p>
      */
     function __construct()
     {
@@ -86,6 +94,15 @@ class StorageOption extends AbstractModel
                 $obj = new GooseFSxOption();
                 $obj->deserialize($value);
                 array_push($this->GooseFSxOptions, $obj);
+            }
+        }
+
+        if (array_key_exists("CosOptions",$param) and $param["CosOptions"] !== null) {
+            $this->CosOptions = [];
+            foreach ($param["CosOptions"] as $key => $value){
+                $obj = new CosOption();
+                $obj->deserialize($value);
+                array_push($this->CosOptions, $obj);
             }
         }
     }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Ig\V20210518\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TerminateDisks请求参数结构体
+ * 猜你想问信息
  *
- * @method array getDiskIds() 获取需退还的云盘ID列表。
- * @method void setDiskIds(array $DiskIds) 设置需退还的云盘ID列表。
+ * @method string getTitle() 获取问题标题
+ * @method void setTitle(string $Title) 设置问题标题
  */
-class TerminateDisksRequest extends AbstractModel
+class GuessQuestion extends AbstractModel
 {
     /**
-     * @var array 需退还的云盘ID列表。
+     * @var string 问题标题
      */
-    public $DiskIds;
+    public $Title;
 
     /**
-     * @param array $DiskIds 需退还的云盘ID列表。
+     * @param string $Title 问题标题
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class TerminateDisksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
-            $this->DiskIds = $param["DiskIds"];
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
         }
     }
 }

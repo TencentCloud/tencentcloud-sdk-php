@@ -20,28 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云端审核的控制参数。
  *
- * @method integer getModerationType() 获取审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核4:音频流式审核 5:音频流式+视频截帧审核  默认值1 （流式审核需要供应商支持才生效）
- * @method void setModerationType(integer $ModerationType) 设置审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核4:音频流式审核 5:音频流式+视频截帧审核  默认值1 （流式审核需要供应商支持才生效）
+ * @method integer getModerationType() 获取审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1 
+ * @method void setModerationType(integer $ModerationType) 设置审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1 
  * @method integer getMaxIdleTime() 获取房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止切片，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于1800秒(0.5小时)。示例值：30 
  * @method void setMaxIdleTime(integer $MaxIdleTime) 设置房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止切片，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于1800秒(0.5小时)。示例值：30 
- * @method integer getSliceAudio() 获取音频切片时长，默认15s 示例值：15
- * @method void setSliceAudio(integer $SliceAudio) 设置音频切片时长，默认15s 示例值：15
- * @method integer getSliceVideo() 获取视频截帧间隔时长，默认5s
- * @method void setSliceVideo(integer $SliceVideo) 设置视频截帧间隔时长，默认5s
+ * @method integer getSliceAudio() 获取音频切片时长，默认15s 示例值：15, 范围15-60s
+ * @method void setSliceAudio(integer $SliceAudio) 设置音频切片时长，默认15s 示例值：15, 范围15-60s
+ * @method integer getSliceVideo() 获取视频截帧间隔时长，默认5s, 范围1-60s
+ * @method void setSliceVideo(integer $SliceVideo) 设置视频截帧间隔时长，默认5s, 范围1-60s
  * @method string getModerationSupplier() 获取供应商枚举，
+trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
  * @method void setModerationSupplier(string $ModerationSupplier) 设置供应商枚举，
+trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
- * @method ModerationSupplierParam getModerationSupplierParam() 获取第三方审核商送审需要配置信息
- * @method void setModerationSupplierParam(ModerationSupplierParam $ModerationSupplierParam) 设置第三方审核商送审需要配置信息
- * @method integer getSaveModerationFile() 获取是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
- * @method void setSaveModerationFile(integer $SaveModerationFile) 设置是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
+ * @method ModerationSupplierParam getModerationSupplierParam() 获取第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化
+ * @method void setModerationSupplierParam(ModerationSupplierParam $ModerationSupplierParam) 设置第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化
+ * @method integer getSaveModerationFile() 获取是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件
+ * @method void setSaveModerationFile(integer $SaveModerationFile) 设置是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件
  * @method integer getCallbackAllResults() 获取是否回调所有审核结果:0 默认回调所有结果 1 仅回调命中结果 
  * @method void setCallbackAllResults(integer $CallbackAllResults) 设置是否回调所有审核结果:0 默认回调所有结果 1 仅回调命中结果 
  * @method SubscribeModerationUserIds getSubscribeStreamUserIds() 获取指定订阅流白名单或者黑名单。
@@ -50,7 +52,7 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
 class ModerationParams extends AbstractModel
 {
     /**
-     * @var integer 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核4:音频流式审核 5:音频流式+视频截帧审核  默认值1 （流式审核需要供应商支持才生效）
+     * @var integer 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1 
      */
     public $ModerationType;
 
@@ -60,17 +62,18 @@ class ModerationParams extends AbstractModel
     public $MaxIdleTime;
 
     /**
-     * @var integer 音频切片时长，默认15s 示例值：15
+     * @var integer 音频切片时长，默认15s 示例值：15, 范围15-60s
      */
     public $SliceAudio;
 
     /**
-     * @var integer 视频截帧间隔时长，默认5s
+     * @var integer 视频截帧间隔时长，默认5s, 范围1-60s
      */
     public $SliceVideo;
 
     /**
      * @var string 供应商枚举，
+trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
@@ -79,12 +82,12 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
     public $ModerationSupplier;
 
     /**
-     * @var ModerationSupplierParam 第三方审核商送审需要配置信息
+     * @var ModerationSupplierParam 第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化
      */
     public $ModerationSupplierParam;
 
     /**
-     * @var integer 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
+     * @var integer 是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件
      */
     public $SaveModerationFile;
 
@@ -99,17 +102,18 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
     public $SubscribeStreamUserIds;
 
     /**
-     * @param integer $ModerationType 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核4:音频流式审核 5:音频流式+视频截帧审核  默认值1 （流式审核需要供应商支持才生效）
+     * @param integer $ModerationType 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1 
      * @param integer $MaxIdleTime 房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止切片，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于1800秒(0.5小时)。示例值：30 
-     * @param integer $SliceAudio 音频切片时长，默认15s 示例值：15
-     * @param integer $SliceVideo 视频截帧间隔时长，默认5s
+     * @param integer $SliceAudio 音频切片时长，默认15s 示例值：15, 范围15-60s
+     * @param integer $SliceVideo 视频截帧间隔时长，默认5s, 范围1-60s
      * @param string $ModerationSupplier 供应商枚举，
+trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
-     * @param ModerationSupplierParam $ModerationSupplierParam 第三方审核商送审需要配置信息
-     * @param integer $SaveModerationFile 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
+     * @param ModerationSupplierParam $ModerationSupplierParam 第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化
+     * @param integer $SaveModerationFile 是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件
      * @param integer $CallbackAllResults 是否回调所有审核结果:0 默认回调所有结果 1 仅回调命中结果 
      * @param SubscribeModerationUserIds $SubscribeStreamUserIds 指定订阅流白名单或者黑名单。
      */

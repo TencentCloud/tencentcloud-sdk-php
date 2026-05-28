@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetAppCustomContent请求参数结构体
  *
- * @method array getCustomContent() 获取自定义内容。
- * @method void setCustomContent(array $CustomContent) 设置自定义内容。
- * @method integer getSdkAppId() 获取应用ID。
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID。
+ * @method array getCustomContent() 获取<p>自定义内容。</p>
+ * @method void setCustomContent(array $CustomContent) 设置<p>自定义内容。</p>
+ * @method integer getSdkAppId() 获取<p>应用ID。</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>应用ID。</p>
  */
 class SetAppCustomContentRequest extends AbstractModel
 {
     /**
-     * @var array 自定义内容。
+     * @var array <p>自定义内容。</p>
      */
     public $CustomContent;
 
     /**
-     * @var integer 应用ID。
+     * @var integer <p>应用ID。</p>
      */
     public $SdkAppId;
 
     /**
-     * @param array $CustomContent 自定义内容。
-     * @param integer $SdkAppId 应用ID。
+     * @param array $CustomContent <p>自定义内容。</p>
+     * @param integer $SdkAppId <p>应用ID。</p>
      */
     function __construct()
     {

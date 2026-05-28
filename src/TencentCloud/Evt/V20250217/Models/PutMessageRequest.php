@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置<p>需要推送的事件数据内容，格式为json，字段定义需要与事件中的定义一致</p>
  * @method string getSource() 获取<p>数据推送来源，会在生成的单据中展示数据来源</p>
  * @method void setSource(string $Source) 设置<p>数据推送来源，会在生成的单据中展示数据来源</p>
+ * @method string getPluginId() 获取<p>插件ID</p>
+ * @method void setPluginId(string $PluginId) 设置<p>插件ID</p>
  */
 class PutMessageRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class PutMessageRequest extends AbstractModel
     public $Source;
 
     /**
+     * @var string <p>插件ID</p>
+     */
+    public $PluginId;
+
+    /**
      * @param string $EventId <p>事件ID</p>
      * @param string $Data <p>需要推送的事件数据内容，格式为json，字段定义需要与事件中的定义一致</p>
      * @param string $Source <p>数据推送来源，会在生成的单据中展示数据来源</p>
+     * @param string $PluginId <p>插件ID</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class PutMessageRequest extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("PluginId",$param) and $param["PluginId"] !== null) {
+            $this->PluginId = $param["PluginId"];
         }
     }
 }

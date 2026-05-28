@@ -20,78 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchPro请求参数结构体
  *
- * @method string getQuery() 获取搜索词
- * @method void setQuery(string $Query) 设置搜索词
- * @method integer getMode() 获取返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
- * @method void setMode(integer $Mode) 设置返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
- * @method string getSite() 获取指定域名站内搜索（用于过滤自然检索结果）
-注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
- * @method void setSite(string $Site) 设置指定域名站内搜索（用于过滤自然检索结果）
-注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
- * @method integer getFromTime() 获取起始时间（用于过滤自然检索结果），精确到秒时间戳格式
-注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
- * @method void setFromTime(integer $FromTime) 设置起始时间（用于过滤自然检索结果），精确到秒时间戳格式
-注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
- * @method integer getToTime() 获取结束时间（用于过滤自然检索结果），精确到秒时间戳格式
-注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
- * @method void setToTime(integer $ToTime) 设置结束时间（用于过滤自然检索结果），精确到秒时间戳格式
-注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
- * @method integer getCnt() 获取cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
- * @method void setCnt(integer $Cnt) 设置cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
- * @method string getIndustry() 获取Industry=gov/news/acad/finance，对应党政机关、权威媒体、学术（英文）、金融，**仅限尊享版使用**
- * @method void setIndustry(string $Industry) 设置Industry=gov/news/acad/finance，对应党政机关、权威媒体、学术（英文）、金融，**仅限尊享版使用**
+ * @method string getQuery() 获取<p>搜索词</p>
+ * @method void setQuery(string $Query) 设置<p>搜索词</p>
+ * @method integer getMode() 获取<p>返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）</p>
+ * @method void setMode(integer $Mode) 设置<p>返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）</p>
+ * @method string getSite() 获取<p>指定域名站内搜索（用于过滤自然检索结果）<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+ * @method void setSite(string $Site) 设置<p>指定域名站内搜索（用于过滤自然检索结果）<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+ * @method integer getFromTime() 获取<p>起始时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+ * @method void setFromTime(integer $FromTime) 设置<p>起始时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+ * @method integer getToTime() 获取<p>结束时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+ * @method void setToTime(integer $ToTime) 设置<p>结束时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+ * @method integer getCnt() 获取<p>cnt=10/20/30/40/50，最多可支持返回50条搜索结果，<strong>仅限尊享版使用</strong></p>
+ * @method void setCnt(integer $Cnt) 设置<p>cnt=10/20/30/40/50，最多可支持返回50条搜索结果，<strong>仅限尊享版使用</strong></p>
+ * @method string getIndustry() 获取<p>Industry=gov/news/acad/finance，对应党政机关、权威媒体、学术（英文）、金融，<strong>仅限尊享版使用</strong></p>
+ * @method void setIndustry(string $Industry) 设置<p>Industry=gov/news/acad/finance，对应党政机关、权威媒体、学术（英文）、金融，<strong>仅限尊享版使用</strong></p>
  */
 class SearchProRequest extends AbstractModel
 {
     /**
-     * @var string 搜索词
+     * @var string <p>搜索词</p>
      */
     public $Query;
 
     /**
-     * @var integer 返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
+     * @var integer <p>返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）</p>
      */
     public $Mode;
 
     /**
-     * @var string 指定域名站内搜索（用于过滤自然检索结果）
-注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+     * @var string <p>指定域名站内搜索（用于过滤自然检索结果）<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
      */
     public $Site;
 
     /**
-     * @var integer 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
-注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+     * @var integer <p>起始时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
      */
     public $FromTime;
 
     /**
-     * @var integer 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
-注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+     * @var integer <p>结束时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
      */
     public $ToTime;
 
     /**
-     * @var integer cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+     * @var integer <p>cnt=10/20/30/40/50，最多可支持返回50条搜索结果，<strong>仅限尊享版使用</strong></p>
      */
     public $Cnt;
 
     /**
-     * @var string Industry=gov/news/acad/finance，对应党政机关、权威媒体、学术（英文）、金融，**仅限尊享版使用**
+     * @var string <p>Industry=gov/news/acad/finance，对应党政机关、权威媒体、学术（英文）、金融，<strong>仅限尊享版使用</strong></p>
      */
     public $Industry;
 
     /**
-     * @param string $Query 搜索词
-     * @param integer $Mode 返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
-     * @param string $Site 指定域名站内搜索（用于过滤自然检索结果）
-注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
-     * @param integer $FromTime 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
-注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
-     * @param integer $ToTime 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
-注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
-     * @param integer $Cnt cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
-     * @param string $Industry Industry=gov/news/acad/finance，对应党政机关、权威媒体、学术（英文）、金融，**仅限尊享版使用**
+     * @param string $Query <p>搜索词</p>
+     * @param integer $Mode <p>返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）</p>
+     * @param string $Site <p>指定域名站内搜索（用于过滤自然检索结果）<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+     * @param integer $FromTime <p>起始时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+     * @param integer $ToTime <p>结束时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+     * @param integer $Cnt <p>cnt=10/20/30/40/50，最多可支持返回50条搜索结果，<strong>仅限尊享版使用</strong></p>
+     * @param string $Industry <p>Industry=gov/news/acad/finance，对应党政机关、权威媒体、学术（英文）、金融，<strong>仅限尊享版使用</strong></p>
      */
     function __construct()
     {

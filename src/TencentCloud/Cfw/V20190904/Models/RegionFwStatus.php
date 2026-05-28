@@ -20,50 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 地域的防火墙引流网络状态
  *
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getStatus() 获取引流网络部署状态
-1. "NotDeployed"  防火墙集群未部署
-2. "Deployed"        防火墙集群已部署，但未创建引流网络
-3. "Auto"                防火墙集群已部署，并自动选择网段创建了引流网络
-4. "Custom"            防火墙集群已部署，并根据用户自定义网段创建了引流网络
- * @method void setStatus(string $Status) 设置引流网络部署状态
-1. "NotDeployed"  防火墙集群未部署
-2. "Deployed"        防火墙集群已部署，但未创建引流网络
-3. "Auto"                防火墙集群已部署，并自动选择网段创建了引流网络
-4. "Custom"            防火墙集群已部署，并根据用户自定义网段创建了引流网络
- * @method string getCidr() 获取引流网络的cidr，如果没有部署引流网络则为空
- * @method void setCidr(string $Cidr) 设置引流网络的cidr，如果没有部署引流网络则为空
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getStatus() 获取<p>引流网络部署状态</p><ol><li>&quot;NotDeployed&quot;  防火墙集群未部署</li><li>&quot;Deployed&quot;        防火墙集群已部署，但未创建引流网络</li><li>&quot;DeployedCustomOnly&quot;  防火墙集群已部署，但内网段被全覆盖，无法自动选择引流网络，需自定义设置引流网段</li><li>&quot;Auto&quot;                防火墙集群已部署，并自动选择网段创建了引流网络</li><li>&quot;Custom&quot;            防火墙集群已部署，并根据用户自定义网段创建了引流网络</li></ol>
+ * @method void setStatus(string $Status) 设置<p>引流网络部署状态</p><ol><li>&quot;NotDeployed&quot;  防火墙集群未部署</li><li>&quot;Deployed&quot;        防火墙集群已部署，但未创建引流网络</li><li>&quot;DeployedCustomOnly&quot;  防火墙集群已部署，但内网段被全覆盖，无法自动选择引流网络，需自定义设置引流网段</li><li>&quot;Auto&quot;                防火墙集群已部署，并自动选择网段创建了引流网络</li><li>&quot;Custom&quot;            防火墙集群已部署，并根据用户自定义网段创建了引流网络</li></ol>
+ * @method string getCidr() 获取<p>引流网络的cidr，如果没有部署引流网络则为空</p>
+ * @method void setCidr(string $Cidr) 设置<p>引流网络的cidr，如果没有部署引流网络则为空</p>
  */
 class RegionFwStatus extends AbstractModel
 {
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 引流网络部署状态
-1. "NotDeployed"  防火墙集群未部署
-2. "Deployed"        防火墙集群已部署，但未创建引流网络
-3. "Auto"                防火墙集群已部署，并自动选择网段创建了引流网络
-4. "Custom"            防火墙集群已部署，并根据用户自定义网段创建了引流网络
+     * @var string <p>引流网络部署状态</p><ol><li>&quot;NotDeployed&quot;  防火墙集群未部署</li><li>&quot;Deployed&quot;        防火墙集群已部署，但未创建引流网络</li><li>&quot;DeployedCustomOnly&quot;  防火墙集群已部署，但内网段被全覆盖，无法自动选择引流网络，需自定义设置引流网段</li><li>&quot;Auto&quot;                防火墙集群已部署，并自动选择网段创建了引流网络</li><li>&quot;Custom&quot;            防火墙集群已部署，并根据用户自定义网段创建了引流网络</li></ol>
      */
     public $Status;
 
     /**
-     * @var string 引流网络的cidr，如果没有部署引流网络则为空
+     * @var string <p>引流网络的cidr，如果没有部署引流网络则为空</p>
      */
     public $Cidr;
 
     /**
-     * @param string $Region 地域
-     * @param string $Status 引流网络部署状态
-1. "NotDeployed"  防火墙集群未部署
-2. "Deployed"        防火墙集群已部署，但未创建引流网络
-3. "Auto"                防火墙集群已部署，并自动选择网段创建了引流网络
-4. "Custom"            防火墙集群已部署，并根据用户自定义网段创建了引流网络
-     * @param string $Cidr 引流网络的cidr，如果没有部署引流网络则为空
+     * @param string $Region <p>地域</p>
+     * @param string $Status <p>引流网络部署状态</p><ol><li>&quot;NotDeployed&quot;  防火墙集群未部署</li><li>&quot;Deployed&quot;        防火墙集群已部署，但未创建引流网络</li><li>&quot;DeployedCustomOnly&quot;  防火墙集群已部署，但内网段被全覆盖，无法自动选择引流网络，需自定义设置引流网段</li><li>&quot;Auto&quot;                防火墙集群已部署，并自动选择网段创建了引流网络</li><li>&quot;Custom&quot;            防火墙集群已部署，并根据用户自定义网段创建了引流网络</li></ol>
+     * @param string $Cidr <p>引流网络的cidr，如果没有部署引流网络则为空</p>
      */
     function __construct()
     {

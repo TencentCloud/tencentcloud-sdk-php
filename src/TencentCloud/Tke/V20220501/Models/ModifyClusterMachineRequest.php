@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyClusterMachine请求参数结构体
  *
- * @method string getClusterId() 获取集群 ID
- * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method array getMachineNames() 获取节点名列表
- * @method void setMachineNames(array $MachineNames) 设置节点名列表
- * @method string getDisplayName() 获取machine的display name
- * @method void setDisplayName(string $DisplayName) 设置machine的display name
- * @method Disk getSystemDisk() 获取系统盘的信息
- * @method void setSystemDisk(Disk $SystemDisk) 设置系统盘的信息
- * @method array getSecurityGroupIDs() 获取安全组列表
- * @method void setSecurityGroupIDs(array $SecurityGroupIDs) 设置安全组列表
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取节点预付费信息
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置节点预付费信息
+ * @method string getClusterId() 获取<p>集群 ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群 ID</p>
+ * @method array getMachineNames() 获取<p>节点名列表</p>
+ * @method void setMachineNames(array $MachineNames) 设置<p>节点名列表</p>
+ * @method string getDisplayName() 获取<p>machine的display name</p>
+ * @method void setDisplayName(string $DisplayName) 设置<p>machine的display name</p>
+ * @method Disk getSystemDisk() 获取<p>系统盘的信息</p>
+ * @method void setSystemDisk(Disk $SystemDisk) 设置<p>系统盘的信息</p>
+ * @method array getSecurityGroupIDs() 获取<p>安全组列表</p>
+ * @method void setSecurityGroupIDs(array $SecurityGroupIDs) 设置<p>安全组列表</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取<p>节点预付费信息</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置<p>节点预付费信息</p>
  */
 class ModifyClusterMachineRequest extends AbstractModel
 {
     /**
-     * @var string 集群 ID
+     * @var string <p>集群 ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var array 节点名列表
+     * @var array <p>节点名列表</p>
      */
     public $MachineNames;
 
     /**
-     * @var string machine的display name
+     * @var string <p>machine的display name</p>
      */
     public $DisplayName;
 
     /**
-     * @var Disk 系统盘的信息
+     * @var Disk <p>系统盘的信息</p>
      */
     public $SystemDisk;
 
     /**
-     * @var array 安全组列表
+     * @var array <p>安全组列表</p>
      */
     public $SecurityGroupIDs;
 
     /**
-     * @var InstanceChargePrepaid 节点预付费信息
+     * @var InstanceChargePrepaid <p>节点预付费信息</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @param string $ClusterId 集群 ID
-     * @param array $MachineNames 节点名列表
-     * @param string $DisplayName machine的display name
-     * @param Disk $SystemDisk 系统盘的信息
-     * @param array $SecurityGroupIDs 安全组列表
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 节点预付费信息
+     * @param string $ClusterId <p>集群 ID</p>
+     * @param array $MachineNames <p>节点名列表</p>
+     * @param string $DisplayName <p>machine的display name</p>
+     * @param Disk $SystemDisk <p>系统盘的信息</p>
+     * @param array $SecurityGroupIDs <p>安全组列表</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>节点预付费信息</p>
      */
     function __construct()
     {

@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述GooseFS挂载信息
  *
- * @method string getLocalPath() 获取文件系统本地挂载路径。
- * @method void setLocalPath(string $LocalPath) 设置文件系统本地挂载路径。
- * @method string getRemotePath() 获取文件系统远程挂载路径。
- * @method void setRemotePath(string $RemotePath) 设置文件系统远程挂载路径。
- * @method array getMasters() 获取文件系统master的ip和端口。
- * @method void setMasters(array $Masters) 设置文件系统master的ip和端口。
+ * @method string getLocalPath() 获取<p>文件系统本地挂载路径。</p>
+ * @method void setLocalPath(string $LocalPath) 设置<p>文件系统本地挂载路径。</p>
+ * @method string getRemotePath() 获取<p>文件系统远程挂载路径。</p>
+ * @method void setRemotePath(string $RemotePath) 设置<p>文件系统远程挂载路径。</p>
+ * @method array getMasters() 获取<p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
+ * @method void setMasters(array $Masters) 设置<p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
+ * @method string getFileSystemId() 获取<p>GooseFS的文件ID；此参数和Masters 互斥。</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>GooseFS的文件ID；此参数和Masters 互斥。</p>
  */
 class GooseFSOption extends AbstractModel
 {
     /**
-     * @var string 文件系统本地挂载路径。
+     * @var string <p>文件系统本地挂载路径。</p>
      */
     public $LocalPath;
 
     /**
-     * @var string 文件系统远程挂载路径。
+     * @var string <p>文件系统远程挂载路径。</p>
      */
     public $RemotePath;
 
     /**
-     * @var array 文件系统master的ip和端口。
+     * @var array <p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
      */
     public $Masters;
 
     /**
-     * @param string $LocalPath 文件系统本地挂载路径。
-     * @param string $RemotePath 文件系统远程挂载路径。
-     * @param array $Masters 文件系统master的ip和端口。
+     * @var string <p>GooseFS的文件ID；此参数和Masters 互斥。</p>
+     */
+    public $FileSystemId;
+
+    /**
+     * @param string $LocalPath <p>文件系统本地挂载路径。</p>
+     * @param string $RemotePath <p>文件系统远程挂载路径。</p>
+     * @param array $Masters <p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
+     * @param string $FileSystemId <p>GooseFS的文件ID；此参数和Masters 互斥。</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class GooseFSOption extends AbstractModel
 
         if (array_key_exists("Masters",$param) and $param["Masters"] !== null) {
             $this->Masters = $param["Masters"];
+        }
+
+        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
+            $this->FileSystemId = $param["FileSystemId"];
         }
     }
 }

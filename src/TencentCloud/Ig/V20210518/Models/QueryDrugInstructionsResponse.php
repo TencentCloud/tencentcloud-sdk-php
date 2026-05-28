@@ -14,30 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Ig\V20210518\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDisks返回参数结构体
+ * QueryDrugInstructions返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的云硬盘数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的云硬盘数量。
- * @method array getDiskSet() 获取云硬盘的详细信息列表。
- * @method void setDiskSet(array $DiskSet) 设置云硬盘的详细信息列表。
+ * @method integer getCode() 获取<p>错误码，0成功，非0失败</p>
+ * @method void setCode(integer $Code) 设置<p>错误码，0成功，非0失败</p>
+ * @method string getMessage() 获取<p>错误信息</p>
+ * @method void setMessage(string $Message) 设置<p>错误信息</p>
+ * @method array getData() 获取<p>返回数据</p>
+ * @method void setData(array $Data) 设置<p>返回数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDisksResponse extends AbstractModel
+class QueryDrugInstructionsResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的云硬盘数量。
+     * @var integer <p>错误码，0成功，非0失败</p>
      */
-    public $TotalCount;
+    public $Code;
 
     /**
-     * @var array 云硬盘的详细信息列表。
+     * @var string <p>错误信息</p>
      */
-    public $DiskSet;
+    public $Message;
+
+    /**
+     * @var array <p>返回数据</p>
+     */
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeDisksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的云硬盘数量。
-     * @param array $DiskSet 云硬盘的详细信息列表。
+     * @param integer $Code <p>错误码，0成功，非0失败</p>
+     * @param string $Message <p>错误信息</p>
+     * @param array $Data <p>返回数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +70,20 @@ class DescribeDisksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
         }
 
-        if (array_key_exists("DiskSet",$param) and $param["DiskSet"] !== null) {
-            $this->DiskSet = [];
-            foreach ($param["DiskSet"] as $key => $value){
-                $obj = new Disk();
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new StandardDrugInstructionInfo();
                 $obj->deserialize($value);
-                array_push($this->DiskSet, $obj);
+                array_push($this->Data, $obj);
             }
         }
 

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeSet(array $ComputeSet) 设置算力详情
  * @method array getSupportFunc() 获取当前部署模板所支持的增强功能
  * @method void setSupportFunc(array $SupportFunc) 设置当前部署模板所支持的增强功能
+ * @method array getRoleComputeSet() 获取
+ * @method void setRoleComputeSet(array $RoleComputeSet) 设置
  */
 class TemplateDetail extends AbstractModel
 {
@@ -59,11 +61,17 @@ class TemplateDetail extends AbstractModel
     public $SupportFunc;
 
     /**
+     * @var array 
+     */
+    public $RoleComputeSet;
+
+    /**
      * @param string $TemplateId 模板id
      * @param string $DeployMode 部署方式
      * @param string $EngineType 推理引擎
      * @param array $ComputeSet 算力详情
      * @param array $SupportFunc 当前部署模板所支持的增强功能
+     * @param array $RoleComputeSet 
      */
     function __construct()
     {
@@ -101,6 +109,15 @@ class TemplateDetail extends AbstractModel
 
         if (array_key_exists("SupportFunc",$param) and $param["SupportFunc"] !== null) {
             $this->SupportFunc = $param["SupportFunc"];
+        }
+
+        if (array_key_exists("RoleComputeSet",$param) and $param["RoleComputeSet"] !== null) {
+            $this->RoleComputeSet = [];
+            foreach ($param["RoleComputeSet"] as $key => $value){
+                $obj = new ComputeDetail();
+                $obj->deserialize($value);
+                array_push($this->RoleComputeSet, $obj);
+            }
         }
     }
 }

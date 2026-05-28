@@ -29,6 +29,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\AddClusterSlaveZoneResponse AddClusterSlaveZone(Models\AddClusterSlaveZoneRequest $req) 本接口（AddClusterSlaveZone）用于对集群开启多可用区部署。
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) 本接口（AddInstances）用于集群添加实例。
  * @method Models\AddLibraDBInstancesResponse AddLibraDBInstances(Models\AddLibraDBInstancesRequest $req) 本接口（AddLibraDBInstances）用于集群添加只读分析引擎
+ * @method Models\AddServerlessRoInstancesResponse AddServerlessRoInstances(Models\AddServerlessRoInstancesRequest $req) 添加serverless集群只读实例
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口（AssociateSecurityGroups）用于安全组批量绑定云资源。
  * @method Models\BindClusterResourcePackagesResponse BindClusterResourcePackages(Models\BindClusterResourcePackagesRequest $req) 本接口（BindClusterResourcePackages）用于为集群绑定资源包。
  * @method Models\CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpires(Models\CalculateBackupSaveSecExpiresRequest $req) 计算修改备份保留时长后将会过期删除的备份文件列表
@@ -141,6 +142,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeResourcePackageSaleSpecResponse DescribeResourcePackageSaleSpec(Models\DescribeResourcePackageSaleSpecRequest $req) 本接口（DescribeResourcePackageSaleSpec）用于查询资源包规格。
  * @method Models\DescribeResourcesByDealNameResponse DescribeResourcesByDealName(Models\DescribeResourcesByDealNameRequest $req) 本接口（DescribeResourcesByDealName）用于查询订单关联实例。
  * @method Models\DescribeRollbackTimeRangeResponse DescribeRollbackTimeRange(Models\DescribeRollbackTimeRangeRequest $req) 本接口（DescribeRollbackTimeRange）用于查询回档时间范围。
+ * @method Models\DescribeSQLExecutionPlanResponse DescribeSQLExecutionPlan(Models\DescribeSQLExecutionPlanRequest $req) 本接口(DescribeSQLExecutionPlan)用于查询执行计划详情
  * @method Models\DescribeSSLStatusResponse DescribeSSLStatus(Models\DescribeSSLStatusRequest $req) 查询实例SSL状态
  * @method Models\DescribeSaveBackupClustersResponse DescribeSaveBackupClusters(Models\DescribeSaveBackupClustersRequest $req) 本接口（DescribeSaveBackupClusters）用于查询遗留备份集群信息。
  * @method Models\DescribeServerlessInstanceSpecsResponse DescribeServerlessInstanceSpecs(Models\DescribeServerlessInstanceSpecsRequest $req) 查询Serverless实例可选规格

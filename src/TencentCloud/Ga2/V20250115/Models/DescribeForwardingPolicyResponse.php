@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcaplusdb\V20190823\Models;
+namespace TencentCloud\Ga2\V20250115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateCluster返回参数结构体
+ * DescribeForwardingPolicy返回参数结构体
  *
- * @method string getClusterId() 获取<p>集群ID</p>
- * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method array getForwardingPolicySet() 获取符合条件的策略信息。
+ * @method void setForwardingPolicySet(array $ForwardingPolicySet) 设置符合条件的策略信息。
+ * @method integer getTotalCount() 获取符合条件的实例个数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例个数。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateClusterResponse extends AbstractModel
+class DescribeForwardingPolicyResponse extends AbstractModel
 {
     /**
-     * @var string <p>集群ID</p>
+     * @var array 符合条件的策略信息。
      */
-    public $ClusterId;
+    public $ForwardingPolicySet;
+
+    /**
+     * @var integer 符合条件的实例个数。
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class CreateClusterResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ClusterId <p>集群ID</p>
+     * @param array $ForwardingPolicySet 符合条件的策略信息。
+     * @param integer $TotalCount 符合条件的实例个数。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class CreateClusterResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("ForwardingPolicySet",$param) and $param["ForwardingPolicySet"] !== null) {
+            $this->ForwardingPolicySet = [];
+            foreach ($param["ForwardingPolicySet"] as $key => $value){
+                $obj = new ForwardingPolicySet();
+                $obj->deserialize($value);
+                array_push($this->ForwardingPolicySet, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

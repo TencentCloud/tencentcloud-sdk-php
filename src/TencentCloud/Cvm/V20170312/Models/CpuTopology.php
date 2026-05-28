@@ -21,29 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * 描述了实例CPU拓扑结构的相关信息。
  *
  * @method integer getCoreCount() 获取决定启用的CPU物理核心数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoreCount(integer $CoreCount) 设置决定启用的CPU物理核心数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getThreadPerCore() 获取每核心线程数。该参数决定是否开启或关闭超线程。<br><li>1 表示关闭超线程 </li><br><li>2 表示开启超线程</li>
  不设置时，实例使用默认的超线程策略。开关超线程请参考文档：[开启与关闭超线程](https://cloud.tencent.com/document/product/213/103798)。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThreadPerCore(integer $ThreadPerCore) 设置每核心线程数。该参数决定是否开启或关闭超线程。<br><li>1 表示关闭超线程 </li><br><li>2 表示开启超线程</li>
  不设置时，实例使用默认的超线程策略。开关超线程请参考文档：[开启与关闭超线程](https://cloud.tencent.com/document/product/213/103798)。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CpuTopology extends AbstractModel
 {
     /**
      * @var integer 决定启用的CPU物理核心数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoreCount;
 
     /**
      * @var integer 每核心线程数。该参数决定是否开启或关闭超线程。<br><li>1 表示关闭超线程 </li><br><li>2 表示开启超线程</li>
  不设置时，实例使用默认的超线程策略。开关超线程请参考文档：[开启与关闭超线程](https://cloud.tencent.com/document/product/213/103798)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThreadPerCore;
 
     /**
      * @param integer $CoreCount 决定启用的CPU物理核心数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ThreadPerCore 每核心线程数。该参数决定是否开启或关闭超线程。<br><li>1 表示关闭超线程 </li><br><li>2 表示开启超线程</li>
  不设置时，实例使用默认的超线程策略。开关超线程请参考文档：[开启与关闭超线程](https://cloud.tencent.com/document/product/213/103798)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

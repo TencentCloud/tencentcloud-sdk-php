@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificateDetail请求参数结构体
  *
- * @method string getCertificateId() 获取证书 ID。
- * @method void setCertificateId(string $CertificateId) 设置证书 ID。
+ * @method string getCertificateId() 获取<p>证书 ID。</p>
+ * @method void setCertificateId(string $CertificateId) 设置<p>证书 ID。</p>
  */
 class DescribeCertificateDetailRequest extends AbstractModel
 {
     /**
-     * @var string 证书 ID。
+     * @var string <p>证书 ID。</p>
      */
     public $CertificateId;
 
     /**
-     * @param string $CertificateId 证书 ID。
+     * @param string $CertificateId <p>证书 ID。</p>
      */
     function __construct()
     {

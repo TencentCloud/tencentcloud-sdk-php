@@ -20,90 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 存储桶数量
  *
- * @method integer getAppId() 获取appid
- * @method void setAppId(integer $AppId) 设置appid
- * @method string getOwnerUin() 获取uin
- * @method void setOwnerUin(string $OwnerUin) 设置uin
- * @method string getOwnerNickName() 获取昵称
- * @method void setOwnerNickName(string $OwnerNickName) 设置昵称
- * @method integer getBucketCount() 获取存储桶数量
- * @method void setBucketCount(integer $BucketCount) 设置存储桶数量
- * @method integer getBuyStatus() 获取0 未购买 1  已单独购买 2 已被共享
- * @method void setBuyStatus(integer $BuyStatus) 设置0 未购买 1  已单独购买 2 已被共享
- * @method integer getShareFromAppId() 获取共享账号appid
- * @method void setShareFromAppId(integer $ShareFromAppId) 设置共享账号appid
- * @method string getShareFromUin() 获取共享账号uin
- * @method void setShareFromUin(string $ShareFromUin) 设置共享账号uin
- * @method string getShareFromNickName() 获取共享账号昵称
- * @method void setShareFromNickName(string $ShareFromNickName) 设置共享账号昵称
- * @method integer getMonitorBucketCount() 获取监控的存储桶数
- * @method void setMonitorBucketCount(integer $MonitorBucketCount) 设置监控的存储桶数
- * @method integer getIsAutoMonitor() 获取0 关闭 1 开启
- * @method void setIsAutoMonitor(integer $IsAutoMonitor) 设置0 关闭 1 开启
+ * @method integer getAppId() 获取<p>appid</p>
+ * @method void setAppId(integer $AppId) 设置<p>appid</p>
+ * @method string getOwnerUin() 获取<p>uin</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>uin</p>
+ * @method string getOwnerNickName() 获取<p>昵称</p>
+ * @method void setOwnerNickName(string $OwnerNickName) 设置<p>昵称</p>
+ * @method integer getBucketCount() 获取<p>存储桶数量</p>
+ * @method void setBucketCount(integer $BucketCount) 设置<p>存储桶数量</p>
+ * @method integer getBuyStatus() 获取<p>0 未购买 1  已单独购买 2 已被共享</p>
+ * @method void setBuyStatus(integer $BuyStatus) 设置<p>0 未购买 1  已单独购买 2 已被共享</p>
+ * @method integer getShareFromAppId() 获取<p>共享账号appid</p>
+ * @method void setShareFromAppId(integer $ShareFromAppId) 设置<p>共享账号appid</p>
+ * @method string getShareFromUin() 获取<p>共享账号uin</p>
+ * @method void setShareFromUin(string $ShareFromUin) 设置<p>共享账号uin</p>
+ * @method string getShareFromNickName() 获取<p>共享账号昵称</p>
+ * @method void setShareFromNickName(string $ShareFromNickName) 设置<p>共享账号昵称</p>
+ * @method integer getMonitorBucketCount() 获取<p>监控的存储桶数</p>
+ * @method void setMonitorBucketCount(integer $MonitorBucketCount) 设置<p>监控的存储桶数</p>
+ * @method integer getIsAutoMonitor() 获取<p>0 关闭 1 开启</p>
+ * @method void setIsAutoMonitor(integer $IsAutoMonitor) 设置<p>0 关闭 1 开启</p>
+ * @method boolean getLogFeatureWhitelist() 获取<p>是否启用白名单日志功能</p>
+ * @method void setLogFeatureWhitelist(boolean $LogFeatureWhitelist) 设置<p>是否启用白名单日志功能</p>
+ * @method boolean getIsHaveNewPostOrder() 获取<p>是否存在新的后付费订单</p>
+ * @method void setIsHaveNewPostOrder(boolean $IsHaveNewPostOrder) 设置<p>是否存在新的后付费订单</p>
+ * @method boolean getIsHaveOldPostOrder() 获取<p>是否存在旧后付费订单</p>
+ * @method void setIsHaveOldPostOrder(boolean $IsHaveOldPostOrder) 设置<p>是否存在旧后付费订单</p>
+ * @method array getPostProductList() 获取<p>后付费产品列表</p>
+ * @method void setPostProductList(array $PostProductList) 设置<p>后付费产品列表</p>
  */
 class CosBucketBillingInfo extends AbstractModel
 {
     /**
-     * @var integer appid
+     * @var integer <p>appid</p>
      */
     public $AppId;
 
     /**
-     * @var string uin
+     * @var string <p>uin</p>
      */
     public $OwnerUin;
 
     /**
-     * @var string 昵称
+     * @var string <p>昵称</p>
      */
     public $OwnerNickName;
 
     /**
-     * @var integer 存储桶数量
+     * @var integer <p>存储桶数量</p>
      */
     public $BucketCount;
 
     /**
-     * @var integer 0 未购买 1  已单独购买 2 已被共享
+     * @var integer <p>0 未购买 1  已单独购买 2 已被共享</p>
      */
     public $BuyStatus;
 
     /**
-     * @var integer 共享账号appid
+     * @var integer <p>共享账号appid</p>
      */
     public $ShareFromAppId;
 
     /**
-     * @var string 共享账号uin
+     * @var string <p>共享账号uin</p>
      */
     public $ShareFromUin;
 
     /**
-     * @var string 共享账号昵称
+     * @var string <p>共享账号昵称</p>
      */
     public $ShareFromNickName;
 
     /**
-     * @var integer 监控的存储桶数
+     * @var integer <p>监控的存储桶数</p>
      */
     public $MonitorBucketCount;
 
     /**
-     * @var integer 0 关闭 1 开启
+     * @var integer <p>0 关闭 1 开启</p>
      */
     public $IsAutoMonitor;
 
     /**
-     * @param integer $AppId appid
-     * @param string $OwnerUin uin
-     * @param string $OwnerNickName 昵称
-     * @param integer $BucketCount 存储桶数量
-     * @param integer $BuyStatus 0 未购买 1  已单独购买 2 已被共享
-     * @param integer $ShareFromAppId 共享账号appid
-     * @param string $ShareFromUin 共享账号uin
-     * @param string $ShareFromNickName 共享账号昵称
-     * @param integer $MonitorBucketCount 监控的存储桶数
-     * @param integer $IsAutoMonitor 0 关闭 1 开启
+     * @var boolean <p>是否启用白名单日志功能</p>
+     */
+    public $LogFeatureWhitelist;
+
+    /**
+     * @var boolean <p>是否存在新的后付费订单</p>
+     */
+    public $IsHaveNewPostOrder;
+
+    /**
+     * @var boolean <p>是否存在旧后付费订单</p>
+     */
+    public $IsHaveOldPostOrder;
+
+    /**
+     * @var array <p>后付费产品列表</p>
+     */
+    public $PostProductList;
+
+    /**
+     * @param integer $AppId <p>appid</p>
+     * @param string $OwnerUin <p>uin</p>
+     * @param string $OwnerNickName <p>昵称</p>
+     * @param integer $BucketCount <p>存储桶数量</p>
+     * @param integer $BuyStatus <p>0 未购买 1  已单独购买 2 已被共享</p>
+     * @param integer $ShareFromAppId <p>共享账号appid</p>
+     * @param string $ShareFromUin <p>共享账号uin</p>
+     * @param string $ShareFromNickName <p>共享账号昵称</p>
+     * @param integer $MonitorBucketCount <p>监控的存储桶数</p>
+     * @param integer $IsAutoMonitor <p>0 关闭 1 开启</p>
+     * @param boolean $LogFeatureWhitelist <p>是否启用白名单日志功能</p>
+     * @param boolean $IsHaveNewPostOrder <p>是否存在新的后付费订单</p>
+     * @param boolean $IsHaveOldPostOrder <p>是否存在旧后付费订单</p>
+     * @param array $PostProductList <p>后付费产品列表</p>
      */
     function __construct()
     {
@@ -156,6 +188,22 @@ class CosBucketBillingInfo extends AbstractModel
 
         if (array_key_exists("IsAutoMonitor",$param) and $param["IsAutoMonitor"] !== null) {
             $this->IsAutoMonitor = $param["IsAutoMonitor"];
+        }
+
+        if (array_key_exists("LogFeatureWhitelist",$param) and $param["LogFeatureWhitelist"] !== null) {
+            $this->LogFeatureWhitelist = $param["LogFeatureWhitelist"];
+        }
+
+        if (array_key_exists("IsHaveNewPostOrder",$param) and $param["IsHaveNewPostOrder"] !== null) {
+            $this->IsHaveNewPostOrder = $param["IsHaveNewPostOrder"];
+        }
+
+        if (array_key_exists("IsHaveOldPostOrder",$param) and $param["IsHaveOldPostOrder"] !== null) {
+            $this->IsHaveOldPostOrder = $param["IsHaveOldPostOrder"];
+        }
+
+        if (array_key_exists("PostProductList",$param) and $param["PostProductList"] !== null) {
+            $this->PostProductList = $param["PostProductList"];
         }
     }
 }

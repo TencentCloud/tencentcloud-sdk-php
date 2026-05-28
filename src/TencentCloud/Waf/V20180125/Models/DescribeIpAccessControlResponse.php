@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIpAccessControl返回参数结构体
  *
- * @method IpAccessControlData getData() 获取输出
- * @method void setData(IpAccessControlData $Data) 设置输出
- * @method integer getUsedTotal() 获取已经使用的IP黑白名单的IP总数
- * @method void setUsedTotal(integer $UsedTotal) 设置已经使用的IP黑白名单的IP总数
+ * @method IpAccessControlData getData() 获取<p>输出</p>
+ * @method void setData(IpAccessControlData $Data) 设置<p>输出</p>
+ * @method integer getUsedTotal() 获取<p>已经使用的IP黑白名单的IP总数</p>
+ * @method void setUsedTotal(integer $UsedTotal) 设置<p>已经使用的IP黑白名单的IP总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeIpAccessControlResponse extends AbstractModel
 {
     /**
-     * @var IpAccessControlData 输出
+     * @var IpAccessControlData <p>输出</p>
      */
     public $Data;
 
     /**
-     * @var integer 已经使用的IP黑白名单的IP总数
+     * @var integer <p>已经使用的IP黑白名单的IP总数</p>
      */
     public $UsedTotal;
 
@@ -45,8 +45,8 @@ class DescribeIpAccessControlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param IpAccessControlData $Data 输出
-     * @param integer $UsedTotal 已经使用的IP黑白名单的IP总数
+     * @param IpAccessControlData $Data <p>输出</p>
+     * @param integer $UsedTotal <p>已经使用的IP黑白名单的IP总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

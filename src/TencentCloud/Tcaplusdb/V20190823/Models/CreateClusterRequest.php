@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCluster请求参数结构体
  *
- * @method string getIdlType() 获取集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
- * @method void setIdlType(string $IdlType) 设置集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
- * @method string getClusterName() 获取集群名称，可使用中文或英文字符，最大长度32个字符
- * @method void setClusterName(string $ClusterName) 设置集群名称，可使用中文或英文字符，最大长度32个字符
- * @method string getVpcId() 获取集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
- * @method void setVpcId(string $VpcId) 设置集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
- * @method string getSubnetId() 获取集群所绑定的子网实例ID，形如：subnet-pxir56ns
- * @method void setSubnetId(string $SubnetId) 设置集群所绑定的子网实例ID，形如：subnet-pxir56ns
- * @method string getPassword() 获取集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
- * @method void setPassword(string $Password) 设置集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
- * @method array getResourceTags() 获取集群标签列表
- * @method void setResourceTags(array $ResourceTags) 设置集群标签列表
- * @method integer getIpv6Enable() 获取集群是否开启IPv6功能
- * @method void setIpv6Enable(integer $Ipv6Enable) 设置集群是否开启IPv6功能
- * @method array getServerList() 获取独占集群占用的svr机器
- * @method void setServerList(array $ServerList) 设置独占集群占用的svr机器
- * @method array getProxyList() 获取独占集群占用的proxy机器
- * @method void setProxyList(array $ProxyList) 设置独占集群占用的proxy机器
- * @method integer getClusterType() 获取集群类型1共享2独占
- * @method void setClusterType(integer $ClusterType) 设置集群类型1共享2独占
- * @method integer getAuthType() 获取密码认证类型，0 静态认证， 1 签名认证
- * @method void setAuthType(integer $AuthType) 设置密码认证类型，0 静态认证， 1 签名认证
+ * @method string getIdlType() 获取<p>集群数据描述语言类型，统一填<code>MIX</code></p><p>枚举值：</p><ul><li>MIX： 同时支持<code>PROTO</code>，<code>TDR</code>表</li></ul>
+ * @method void setIdlType(string $IdlType) 设置<p>集群数据描述语言类型，统一填<code>MIX</code></p><p>枚举值：</p><ul><li>MIX： 同时支持<code>PROTO</code>，<code>TDR</code>表</li></ul>
+ * @method string getClusterName() 获取<p>集群名称，可使用中文或英文字符，最大长度32个字符</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称，可使用中文或英文字符，最大长度32个字符</p>
+ * @method string getVpcId() 获取<p>集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z</p>
+ * @method void setVpcId(string $VpcId) 设置<p>集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z</p>
+ * @method string getSubnetId() 获取<p>集群所绑定的子网实例ID，形如：subnet-pxir56ns</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>集群所绑定的子网实例ID，形如：subnet-pxir56ns</p>
+ * @method string getPassword() 获取<p>集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母</p>
+ * @method void setPassword(string $Password) 设置<p>集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母</p>
+ * @method array getResourceTags() 获取<p>集群标签列表</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>集群标签列表</p>
+ * @method integer getIpv6Enable() 获取<p>集群是否开启IPv6功能</p>
+ * @method void setIpv6Enable(integer $Ipv6Enable) 设置<p>集群是否开启IPv6功能</p>
+ * @method array getServerList() 获取<p>独占集群占用的svr机器</p>
+ * @method void setServerList(array $ServerList) 设置<p>独占集群占用的svr机器</p>
+ * @method array getProxyList() 获取<p>独占集群占用的proxy机器</p>
+ * @method void setProxyList(array $ProxyList) 设置<p>独占集群占用的proxy机器</p>
+ * @method integer getClusterType() 获取<p>集群类型1共享2独占</p>
+ * @method void setClusterType(integer $ClusterType) 设置<p>集群类型1共享2独占</p>
+ * @method integer getAuthType() 获取<p>密码认证类型，0 静态认证， 1 签名认证</p>
+ * @method void setAuthType(integer $AuthType) 设置<p>密码认证类型，0 静态认证， 1 签名认证</p>
  */
 class CreateClusterRequest extends AbstractModel
 {
     /**
-     * @var string 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
+     * @var string <p>集群数据描述语言类型，统一填<code>MIX</code></p><p>枚举值：</p><ul><li>MIX： 同时支持<code>PROTO</code>，<code>TDR</code>表</li></ul>
      */
     public $IdlType;
 
     /**
-     * @var string 集群名称，可使用中文或英文字符，最大长度32个字符
+     * @var string <p>集群名称，可使用中文或英文字符，最大长度32个字符</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
+     * @var string <p>集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z</p>
      */
     public $VpcId;
 
     /**
-     * @var string 集群所绑定的子网实例ID，形如：subnet-pxir56ns
+     * @var string <p>集群所绑定的子网实例ID，形如：subnet-pxir56ns</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
+     * @var string <p>集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母</p>
      */
     public $Password;
 
     /**
-     * @var array 集群标签列表
+     * @var array <p>集群标签列表</p>
      */
     public $ResourceTags;
 
     /**
-     * @var integer 集群是否开启IPv6功能
+     * @var integer <p>集群是否开启IPv6功能</p>
      */
     public $Ipv6Enable;
 
     /**
-     * @var array 独占集群占用的svr机器
+     * @var array <p>独占集群占用的svr机器</p>
      */
     public $ServerList;
 
     /**
-     * @var array 独占集群占用的proxy机器
+     * @var array <p>独占集群占用的proxy机器</p>
      */
     public $ProxyList;
 
     /**
-     * @var integer 集群类型1共享2独占
+     * @var integer <p>集群类型1共享2独占</p>
      */
     public $ClusterType;
 
     /**
-     * @var integer 密码认证类型，0 静态认证， 1 签名认证
+     * @var integer <p>密码认证类型，0 静态认证， 1 签名认证</p>
      */
     public $AuthType;
 
     /**
-     * @param string $IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
-     * @param string $ClusterName 集群名称，可使用中文或英文字符，最大长度32个字符
-     * @param string $VpcId 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
-     * @param string $SubnetId 集群所绑定的子网实例ID，形如：subnet-pxir56ns
-     * @param string $Password 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
-     * @param array $ResourceTags 集群标签列表
-     * @param integer $Ipv6Enable 集群是否开启IPv6功能
-     * @param array $ServerList 独占集群占用的svr机器
-     * @param array $ProxyList 独占集群占用的proxy机器
-     * @param integer $ClusterType 集群类型1共享2独占
-     * @param integer $AuthType 密码认证类型，0 静态认证， 1 签名认证
+     * @param string $IdlType <p>集群数据描述语言类型，统一填<code>MIX</code></p><p>枚举值：</p><ul><li>MIX： 同时支持<code>PROTO</code>，<code>TDR</code>表</li></ul>
+     * @param string $ClusterName <p>集群名称，可使用中文或英文字符，最大长度32个字符</p>
+     * @param string $VpcId <p>集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z</p>
+     * @param string $SubnetId <p>集群所绑定的子网实例ID，形如：subnet-pxir56ns</p>
+     * @param string $Password <p>集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母</p>
+     * @param array $ResourceTags <p>集群标签列表</p>
+     * @param integer $Ipv6Enable <p>集群是否开启IPv6功能</p>
+     * @param array $ServerList <p>独占集群占用的svr机器</p>
+     * @param array $ProxyList <p>独占集群占用的proxy机器</p>
+     * @param integer $ClusterType <p>集群类型1共享2独占</p>
+     * @param integer $AuthType <p>密码认证类型，0 静态认证， 1 签名认证</p>
      */
     function __construct()
     {

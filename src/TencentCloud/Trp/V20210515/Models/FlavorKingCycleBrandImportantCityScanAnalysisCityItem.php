@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOtherMarketShare(float $OtherMarketShare) 设置<p>其他品牌市场份额</p>
  * @method float getLastCycleRatio() 获取<p>上周期口味王分布</p>
  * @method void setLastCycleRatio(float $LastCycleRatio) 设置<p>上周期口味王分布</p>
- * @method float getLastCycleMarketShare() 获取<p>上周期口味王牌市场份额</p>
- * @method void setLastCycleMarketShare(float $LastCycleMarketShare) 设置<p>上周期口味王牌市场份额</p>
+ * @method float getLastCycleMarketShare() 获取<p>上周期口味王品牌市场份额</p>
+ * @method void setLastCycleMarketShare(float $LastCycleMarketShare) 设置<p>上周期口味王品牌市场份额</p>
  * @method float getLastCycleOtherMarketShare() 获取<p>上周期其他品牌市场份额</p>
  * @method void setLastCycleOtherMarketShare(float $LastCycleOtherMarketShare) 设置<p>上周期其他品牌市场份额</p>
  * @method float getGrowRatio() 获取<p>口味王增长率</p>
@@ -64,7 +64,7 @@ class FlavorKingCycleBrandImportantCityScanAnalysisCityItem extends AbstractMode
     public $LastCycleRatio;
 
     /**
-     * @var float <p>上周期口味王牌市场份额</p>
+     * @var float <p>上周期口味王品牌市场份额</p>
      */
     public $LastCycleMarketShare;
 
@@ -98,7 +98,7 @@ class FlavorKingCycleBrandImportantCityScanAnalysisCityItem extends AbstractMode
      * @param float $MarketShare <p>口味王市场份额</p>
      * @param float $OtherMarketShare <p>其他品牌市场份额</p>
      * @param float $LastCycleRatio <p>上周期口味王分布</p>
-     * @param float $LastCycleMarketShare <p>上周期口味王牌市场份额</p>
+     * @param float $LastCycleMarketShare <p>上周期口味王品牌市场份额</p>
      * @param float $LastCycleOtherMarketShare <p>上周期其他品牌市场份额</p>
      * @param float $GrowRatio <p>口味王增长率</p>
      * @param float $OtherGrowRatio <p>其他品牌增长率</p>

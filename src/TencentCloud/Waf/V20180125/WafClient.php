@@ -122,7 +122,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheck(Models\DescribeLLMContentSecCheckRequest $req) 大模型请求内容和响应内容审核接口
  * @method Models\DescribeLogHistogramResponse DescribeLogHistogram(Models\DescribeLogHistogramRequest $req) 本接口用于构建日志数量直方图
  * @method Models\DescribeModuleStatusResponse DescribeModuleStatus(Models\DescribeModuleStatusRequest $req) 查询各个waf基础安全模块的开关状态，看每个模块是否开启
- * @method Models\DescribeObjectsResponse DescribeObjects(Models\DescribeObjectsRequest $req) 查看防护对象列表
+ * @method Models\DescribeObjectsResponse DescribeObjects(Models\DescribeObjectsRequest $req) 查看CLB/TSE防护对象列表
  * @method Models\DescribeOwaspRuleTypesResponse DescribeOwaspRuleTypes(Models\DescribeOwaspRuleTypesRequest $req) 查询规则引擎的规则类型列表
  * @method Models\DescribeOwaspRulesResponse DescribeOwaspRules(Models\DescribeOwaspRulesRequest $req) 查询规则引擎的规则列表
  * @method Models\DescribeOwaspWhiteRulesResponse DescribeOwaspWhiteRules(Models\DescribeOwaspWhiteRulesRequest $req) 获取规则引擎白名单列表

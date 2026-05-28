@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeDistribution(NodeDistribution $NodeDistribution) 设置<p>独享集群 CDB 实例的节点分布情况。</p>
  * @method ClusterTopology getClusterTopology() 获取<p>云盘版的节点拓扑配置。Nodeld 信息可通过 <a href="https://cloud.tencent.com/document/api/236/105116">DescribeClusterInfo</a> 接口获取。</p>
  * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置<p>云盘版的节点拓扑配置。Nodeld 信息可通过 <a href="https://cloud.tencent.com/document/api/236/105116">DescribeClusterInfo</a> 接口获取。</p>
+ * @method integer getDstFourthZone() 获取<p>目标实例备机3可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p>
+ * @method void setDstFourthZone(integer $DstFourthZone) 设置<p>目标实例备机3可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p>
  */
 class DescribeInstanceUpgradeTypeRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeInstanceUpgradeTypeRequest extends AbstractModel
     public $ClusterTopology;
 
     /**
+     * @var integer <p>目标实例备机3可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p>
+     */
+    public $DstFourthZone;
+
+    /**
      * @param string $InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      * @param float $DstCpu <p>目标实例 CPU 的核数。为保证传入值有效，请使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取实例可售卖的 CPU 值范围。</p>
      * @param integer $DstMemory <p>目标实例内存大小，单位：MB。为保证传入值有效，请使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取实例可售卖的内存大小范围。</p>
@@ -128,6 +135,7 @@ class DescribeInstanceUpgradeTypeRequest extends AbstractModel
      * @param integer $DstZoneId <p>目标实例主可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p>
      * @param NodeDistribution $NodeDistribution <p>独享集群 CDB 实例的节点分布情况。</p>
      * @param ClusterTopology $ClusterTopology <p>云盘版的节点拓扑配置。Nodeld 信息可通过 <a href="https://cloud.tencent.com/document/api/236/105116">DescribeClusterInfo</a> 接口获取。</p>
+     * @param integer $DstFourthZone <p>目标实例备机3可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p>
      */
     function __construct()
     {
@@ -194,6 +202,10 @@ class DescribeInstanceUpgradeTypeRequest extends AbstractModel
         if (array_key_exists("ClusterTopology",$param) and $param["ClusterTopology"] !== null) {
             $this->ClusterTopology = new ClusterTopology();
             $this->ClusterTopology->deserialize($param["ClusterTopology"]);
+        }
+
+        if (array_key_exists("DstFourthZone",$param) and $param["DstFourthZone"] !== null) {
+            $this->DstFourthZone = $param["DstFourthZone"];
         }
     }
 }

@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeploymentConfigs(array $DeploymentConfigs) 设置服务部署信息
  * @method HyperParam getHyperParam() 获取服务超参数配置
  * @method void setHyperParam(HyperParam $HyperParam) 设置服务超参数配置
+ * @method string getSecurityType() 获取
+ * @method void setSecurityType(string $SecurityType) 设置
+ * @method array getRoleComputeSet() 获取
+ * @method void setRoleComputeSet(array $RoleComputeSet) 设置
+ * @method integer getTargetReplicas() 获取
+ * @method void setTargetReplicas(integer $TargetReplicas) 设置
  */
 class ServiceDetail extends AbstractModel
 {
@@ -94,6 +100,21 @@ class ServiceDetail extends AbstractModel
     public $HyperParam;
 
     /**
+     * @var string 
+     */
+    public $SecurityType;
+
+    /**
+     * @var array 
+     */
+    public $RoleComputeSet;
+
+    /**
+     * @var integer 
+     */
+    public $TargetReplicas;
+
+    /**
      * @param string $ServiceId 服务id
      * @param string $ServiceName 服务名称
      * @param string $ServiceState 服务状态
@@ -104,6 +125,9 @@ class ServiceDetail extends AbstractModel
      * @param string $ModelName 模型名称
      * @param array $DeploymentConfigs 服务部署信息
      * @param HyperParam $HyperParam 服务超参数配置
+     * @param string $SecurityType 
+     * @param array $RoleComputeSet 
+     * @param integer $TargetReplicas 
      */
     function __construct()
     {
@@ -167,6 +191,23 @@ class ServiceDetail extends AbstractModel
         if (array_key_exists("HyperParam",$param) and $param["HyperParam"] !== null) {
             $this->HyperParam = new HyperParam();
             $this->HyperParam->deserialize($param["HyperParam"]);
+        }
+
+        if (array_key_exists("SecurityType",$param) and $param["SecurityType"] !== null) {
+            $this->SecurityType = $param["SecurityType"];
+        }
+
+        if (array_key_exists("RoleComputeSet",$param) and $param["RoleComputeSet"] !== null) {
+            $this->RoleComputeSet = [];
+            foreach ($param["RoleComputeSet"] as $key => $value){
+                $obj = new ComputeDetail();
+                $obj->deserialize($value);
+                array_push($this->RoleComputeSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TargetReplicas",$param) and $param["TargetReplicas"] !== null) {
+            $this->TargetReplicas = $param["TargetReplicas"];
         }
     }
 }

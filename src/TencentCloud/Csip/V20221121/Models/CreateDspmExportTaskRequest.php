@@ -20,258 +20,258 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDspmExportTask请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method integer getDangerLevel() 获取风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)
- * @method void setDangerLevel(integer $DangerLevel) 设置风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)
- * @method string getDbName() 获取数据库名称
- * @method void setDbName(string $DbName) 设置数据库名称
- * @method integer getDbPort() 获取数据库端口
- * @method void setDbPort(integer $DbPort) 设置数据库端口
- * @method string getDbIp() 获取数据库 IP
- * @method void setDbIp(string $DbIp) 设置数据库 IP
- * @method integer getAssetsId() 获取资产 ID
- * @method void setAssetsId(integer $AssetsId) 设置资产 ID
- * @method string getSessionId() 获取会话 ID
- * @method void setSessionId(string $SessionId) 设置会话 ID
- * @method string getClientSideIp() 获取客户端 IP
- * @method void setClientSideIp(string $ClientSideIp) 设置客户端 IP
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
- * @method integer getHitRule() 获取命中规则
- * @method void setHitRule(integer $HitRule) 设置命中规则
- * @method integer getStartTime() 获取开始时间
- * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method string getFuzzySearch() 获取模糊查询
- * @method void setFuzzySearch(string $FuzzySearch) 设置模糊查询
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getClientName() 获取客户端
- * @method void setClientName(string $ClientName) 设置客户端
- * @method array getSourceTypes() 获取流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都都传或不传则返回所有
- * @method void setSourceTypes(array $SourceTypes) 设置流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都都传或不传则返回所有
- * @method string getTableName() 获取表名，长度限制64，多个表名查询的话可以用空格连接	
- * @method void setTableName(string $TableName) 设置表名，长度限制64，多个表名查询的话可以用空格连接	
- * @method string getFieldName() 获取字段名，长度限制64，多个字段名查询的话可以用空格连接
- * @method void setFieldName(string $FieldName) 设置字段名，长度限制64，多个字段名查询的话可以用空格连接
- * @method array getSqlMainTypes() 获取SQL 主要类型，DDL, DML, DCL, TCL	
- * @method void setSqlMainTypes(array $SqlMainTypes) 设置SQL 主要类型，DDL, DML, DCL, TCL	
- * @method string getSqlType() 获取操作类型	
- * @method void setSqlType(string $SqlType) 设置操作类型	
- * @method integer getRowNumMin() 获取影响行数最小值	
- * @method void setRowNumMin(integer $RowNumMin) 设置影响行数最小值	
- * @method integer getRowNumMax() 获取影响行数最大值	
- * @method void setRowNumMax(integer $RowNumMax) 设置影响行数最大值	
- * @method array getDbTypes() 获取数据库类型	
- * @method void setDbTypes(array $DbTypes) 设置数据库类型	
- * @method integer getRetNo() 获取返回码	
- * @method void setRetNo(integer $RetNo) 设置返回码	
- * @method string getClientDriverName() 获取客户端工具	
- * @method void setClientDriverName(string $ClientDriverName) 设置客户端工具	
- * @method integer getClientPort() 获取客户端端口	
- * @method void setClientPort(integer $ClientPort) 设置客户端端口	
- * @method string getLogId() 获取审计日志 ID
- * @method void setLogId(string $LogId) 设置审计日志 ID
- * @method array getDangerLevels() 获取风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参
- * @method void setDangerLevels(array $DangerLevels) 设置风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参
- * @method string getSensitiveCategoryRule() 获取字段分类
- * @method void setSensitiveCategoryRule(string $SensitiveCategoryRule) 设置字段分类
- * @method string getSensitiveLevelRisk() 获取字段分级
- * @method void setSensitiveLevelRisk(string $SensitiveLevelRisk) 设置字段分级
- * @method integer getTrxId() 获取事务Id
- * @method void setTrxId(integer $TrxId) 设置事务Id
- * @method string getClientMac() 获取clientMac
- * @method void setClientMac(string $ClientMac) 设置clientMac
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method integer getDangerLevel() 获取<p>风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)</p>
+ * @method void setDangerLevel(integer $DangerLevel) 设置<p>风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)</p>
+ * @method string getDbName() 获取<p>数据库名称</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名称</p>
+ * @method integer getDbPort() 获取<p>数据库端口</p>
+ * @method void setDbPort(integer $DbPort) 设置<p>数据库端口</p>
+ * @method string getDbIp() 获取<p>数据库 IP</p>
+ * @method void setDbIp(string $DbIp) 设置<p>数据库 IP</p>
+ * @method integer getAssetsId() 获取<p>资产 ID</p>
+ * @method void setAssetsId(integer $AssetsId) 设置<p>资产 ID</p>
+ * @method string getSessionId() 获取<p>会话 ID</p>
+ * @method void setSessionId(string $SessionId) 设置<p>会话 ID</p>
+ * @method string getClientSideIp() 获取<p>客户端 IP</p>
+ * @method void setClientSideIp(string $ClientSideIp) 设置<p>客户端 IP</p>
+ * @method integer getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间</p>
+ * @method integer getHitRule() 获取<p>命中规则</p>
+ * @method void setHitRule(integer $HitRule) 设置<p>命中规则</p>
+ * @method integer getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间</p>
+ * @method string getFuzzySearch() 获取<p>模糊查询</p>
+ * @method void setFuzzySearch(string $FuzzySearch) 设置<p>模糊查询</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getClientName() 获取<p>客户端</p>
+ * @method void setClientName(string $ClientName) 设置<p>客户端</p>
+ * @method array getSourceTypes() 获取<p>流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都传或不传则返回所有</p>
+ * @method void setSourceTypes(array $SourceTypes) 设置<p>流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都传或不传则返回所有</p>
+ * @method string getTableName() 获取<p>表名，长度限制64，多个表名查询的话可以用空格连接</p>
+ * @method void setTableName(string $TableName) 设置<p>表名，长度限制64，多个表名查询的话可以用空格连接</p>
+ * @method string getFieldName() 获取<p>字段名，长度限制64，多个字段名查询的话可以用空格连接</p>
+ * @method void setFieldName(string $FieldName) 设置<p>字段名，长度限制64，多个字段名查询的话可以用空格连接</p>
+ * @method array getSqlMainTypes() 获取<p>SQL 主要类型，DDL, DML, DCL, TCL</p>
+ * @method void setSqlMainTypes(array $SqlMainTypes) 设置<p>SQL 主要类型，DDL, DML, DCL, TCL</p>
+ * @method string getSqlType() 获取<p>操作类型</p>
+ * @method void setSqlType(string $SqlType) 设置<p>操作类型</p>
+ * @method integer getRowNumMin() 获取<p>影响行数最小值</p>
+ * @method void setRowNumMin(integer $RowNumMin) 设置<p>影响行数最小值</p>
+ * @method integer getRowNumMax() 获取<p>影响行数最大值</p>
+ * @method void setRowNumMax(integer $RowNumMax) 设置<p>影响行数最大值</p>
+ * @method array getDbTypes() 获取<p>数据库类型</p>
+ * @method void setDbTypes(array $DbTypes) 设置<p>数据库类型</p>
+ * @method integer getRetNo() 获取<p>返回码</p>
+ * @method void setRetNo(integer $RetNo) 设置<p>返回码</p>
+ * @method string getClientDriverName() 获取<p>客户端工具</p>
+ * @method void setClientDriverName(string $ClientDriverName) 设置<p>客户端工具</p>
+ * @method integer getClientPort() 获取<p>客户端端口</p>
+ * @method void setClientPort(integer $ClientPort) 设置<p>客户端端口</p>
+ * @method string getLogId() 获取<p>审计日志 ID</p>
+ * @method void setLogId(string $LogId) 设置<p>审计日志 ID</p>
+ * @method array getDangerLevels() 获取<p>风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参</p>
+ * @method void setDangerLevels(array $DangerLevels) 设置<p>风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参</p>
+ * @method string getSensitiveCategoryRule() 获取<p>字段分类</p>
+ * @method void setSensitiveCategoryRule(string $SensitiveCategoryRule) 设置<p>字段分类</p>
+ * @method string getSensitiveLevelRisk() 获取<p>字段分级</p>
+ * @method void setSensitiveLevelRisk(string $SensitiveLevelRisk) 设置<p>字段分级</p>
+ * @method integer getTrxId() 获取<p>事务Id</p>
+ * @method void setTrxId(integer $TrxId) 设置<p>事务Id</p>
+ * @method string getClientMac() 获取<p>clientMac</p>
+ * @method void setClientMac(string $ClientMac) 设置<p>clientMac</p>
  */
 class CreateDspmExportTaskRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
     /**
-     * @var integer 风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)
+     * @var integer <p>风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)</p>
      */
     public $DangerLevel;
 
     /**
-     * @var string 数据库名称
+     * @var string <p>数据库名称</p>
      */
     public $DbName;
 
     /**
-     * @var integer 数据库端口
+     * @var integer <p>数据库端口</p>
      */
     public $DbPort;
 
     /**
-     * @var string 数据库 IP
+     * @var string <p>数据库 IP</p>
      */
     public $DbIp;
 
     /**
-     * @var integer 资产 ID
+     * @var integer <p>资产 ID</p>
      */
     public $AssetsId;
 
     /**
-     * @var string 会话 ID
+     * @var string <p>会话 ID</p>
      */
     public $SessionId;
 
     /**
-     * @var string 客户端 IP
+     * @var string <p>客户端 IP</p>
      */
     public $ClientSideIp;
 
     /**
-     * @var integer 结束时间
+     * @var integer <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 命中规则
+     * @var integer <p>命中规则</p>
      */
     public $HitRule;
 
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 模糊查询
+     * @var string <p>模糊查询</p>
      */
     public $FuzzySearch;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 客户端
+     * @var string <p>客户端</p>
      */
     public $ClientName;
 
     /**
-     * @var array 流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都都传或不传则返回所有
+     * @var array <p>流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都传或不传则返回所有</p>
      */
     public $SourceTypes;
 
     /**
-     * @var string 表名，长度限制64，多个表名查询的话可以用空格连接	
+     * @var string <p>表名，长度限制64，多个表名查询的话可以用空格连接</p>
      */
     public $TableName;
 
     /**
-     * @var string 字段名，长度限制64，多个字段名查询的话可以用空格连接
+     * @var string <p>字段名，长度限制64，多个字段名查询的话可以用空格连接</p>
      */
     public $FieldName;
 
     /**
-     * @var array SQL 主要类型，DDL, DML, DCL, TCL	
+     * @var array <p>SQL 主要类型，DDL, DML, DCL, TCL</p>
      */
     public $SqlMainTypes;
 
     /**
-     * @var string 操作类型	
+     * @var string <p>操作类型</p>
      */
     public $SqlType;
 
     /**
-     * @var integer 影响行数最小值	
+     * @var integer <p>影响行数最小值</p>
      */
     public $RowNumMin;
 
     /**
-     * @var integer 影响行数最大值	
+     * @var integer <p>影响行数最大值</p>
      */
     public $RowNumMax;
 
     /**
-     * @var array 数据库类型	
+     * @var array <p>数据库类型</p>
      */
     public $DbTypes;
 
     /**
-     * @var integer 返回码	
+     * @var integer <p>返回码</p>
      */
     public $RetNo;
 
     /**
-     * @var string 客户端工具	
+     * @var string <p>客户端工具</p>
      */
     public $ClientDriverName;
 
     /**
-     * @var integer 客户端端口	
+     * @var integer <p>客户端端口</p>
      */
     public $ClientPort;
 
     /**
-     * @var string 审计日志 ID
+     * @var string <p>审计日志 ID</p>
      */
     public $LogId;
 
     /**
-     * @var array 风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参
+     * @var array <p>风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参</p>
      */
     public $DangerLevels;
 
     /**
-     * @var string 字段分类
+     * @var string <p>字段分类</p>
      */
     public $SensitiveCategoryRule;
 
     /**
-     * @var string 字段分级
+     * @var string <p>字段分级</p>
      */
     public $SensitiveLevelRisk;
 
     /**
-     * @var integer 事务Id
+     * @var integer <p>事务Id</p>
      */
     public $TrxId;
 
     /**
-     * @var string clientMac
+     * @var string <p>clientMac</p>
      */
     public $ClientMac;
 
     /**
-     * @param array $MemberId 集团账号的成员id
-     * @param integer $DangerLevel 风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)
-     * @param string $DbName 数据库名称
-     * @param integer $DbPort 数据库端口
-     * @param string $DbIp 数据库 IP
-     * @param integer $AssetsId 资产 ID
-     * @param string $SessionId 会话 ID
-     * @param string $ClientSideIp 客户端 IP
-     * @param integer $EndTime 结束时间
-     * @param integer $HitRule 命中规则
-     * @param integer $StartTime 开始时间
-     * @param string $FuzzySearch 模糊查询
-     * @param string $UserName 用户名
-     * @param string $ClientName 客户端
-     * @param array $SourceTypes 流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都都传或不传则返回所有
-     * @param string $TableName 表名，长度限制64，多个表名查询的话可以用空格连接	
-     * @param string $FieldName 字段名，长度限制64，多个字段名查询的话可以用空格连接
-     * @param array $SqlMainTypes SQL 主要类型，DDL, DML, DCL, TCL	
-     * @param string $SqlType 操作类型	
-     * @param integer $RowNumMin 影响行数最小值	
-     * @param integer $RowNumMax 影响行数最大值	
-     * @param array $DbTypes 数据库类型	
-     * @param integer $RetNo 返回码	
-     * @param string $ClientDriverName 客户端工具	
-     * @param integer $ClientPort 客户端端口	
-     * @param string $LogId 审计日志 ID
-     * @param array $DangerLevels 风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参
-     * @param string $SensitiveCategoryRule 字段分类
-     * @param string $SensitiveLevelRisk 字段分级
-     * @param integer $TrxId 事务Id
-     * @param string $ClientMac clientMac
+     * @param array $MemberId <p>集团账号的成员id</p>
+     * @param integer $DangerLevel <p>风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)</p>
+     * @param string $DbName <p>数据库名称</p>
+     * @param integer $DbPort <p>数据库端口</p>
+     * @param string $DbIp <p>数据库 IP</p>
+     * @param integer $AssetsId <p>资产 ID</p>
+     * @param string $SessionId <p>会话 ID</p>
+     * @param string $ClientSideIp <p>客户端 IP</p>
+     * @param integer $EndTime <p>结束时间</p>
+     * @param integer $HitRule <p>命中规则</p>
+     * @param integer $StartTime <p>开始时间</p>
+     * @param string $FuzzySearch <p>模糊查询</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $ClientName <p>客户端</p>
+     * @param array $SourceTypes <p>流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都传或不传则返回所有</p>
+     * @param string $TableName <p>表名，长度限制64，多个表名查询的话可以用空格连接</p>
+     * @param string $FieldName <p>字段名，长度限制64，多个字段名查询的话可以用空格连接</p>
+     * @param array $SqlMainTypes <p>SQL 主要类型，DDL, DML, DCL, TCL</p>
+     * @param string $SqlType <p>操作类型</p>
+     * @param integer $RowNumMin <p>影响行数最小值</p>
+     * @param integer $RowNumMax <p>影响行数最大值</p>
+     * @param array $DbTypes <p>数据库类型</p>
+     * @param integer $RetNo <p>返回码</p>
+     * @param string $ClientDriverName <p>客户端工具</p>
+     * @param integer $ClientPort <p>客户端端口</p>
+     * @param string $LogId <p>审计日志 ID</p>
+     * @param array $DangerLevels <p>风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参</p>
+     * @param string $SensitiveCategoryRule <p>字段分类</p>
+     * @param string $SensitiveLevelRisk <p>字段分级</p>
+     * @param integer $TrxId <p>事务Id</p>
+     * @param string $ClientMac <p>clientMac</p>
      */
     function __construct()
     {

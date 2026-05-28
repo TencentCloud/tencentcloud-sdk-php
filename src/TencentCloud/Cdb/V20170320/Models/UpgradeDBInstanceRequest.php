@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckFastUpgradeReboot(integer $CheckFastUpgradeReboot) 设置<p>检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。</p>
  * @method string getDataCheckSensitive() 获取<p>数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源<br>对应的选项为: &quot;high&quot;、&quot;normal&quot;、&quot;low&quot;，默认为空<br>参数详解，：<br>&quot;high&quot;: 对应控制台中的高，数据库负载过高不建议使用<br>&quot;normal&quot;：对应控制台中的标准<br>&quot;low&quot;：对应控制台中的低</p>
  * @method void setDataCheckSensitive(string $DataCheckSensitive) 设置<p>数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源<br>对应的选项为: &quot;high&quot;、&quot;normal&quot;、&quot;low&quot;，默认为空<br>参数详解，：<br>&quot;high&quot;: 对应控制台中的高，数据库负载过高不建议使用<br>&quot;normal&quot;：对应控制台中的标准<br>&quot;low&quot;：对应控制台中的低</p>
+ * @method string getFourthZone() 获取<p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+ * @method void setFourthZone(string $FourthZone) 设置<p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $DataCheckSensitive;
 
     /**
+     * @var string <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     */
+    public $FourthZone;
+
+    /**
      * @param string $InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 <a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。</p>
      * @param integer $Memory <p>升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用 <a href="https://cloud.tencent.com/document/product/236/17229">获取云数据库可售卖规格</a> 接口获取可升级的内存规格。<br>说明：如果进行迁移业务，请一定填写实例规格（CPU、内存），不然系统会默认以最小允许规格传参。</p>
      * @param integer $Volume <p>升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用 <a href="https://cloud.tencent.com/document/product/236/17229">获取云数据库可售卖规格</a> 接口获取可升级的硬盘范围。</p>
@@ -184,6 +191,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param ClusterTopology $ClusterTopology <p>云盘版节点拓扑配置。</p>
      * @param integer $CheckFastUpgradeReboot <p>检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。</p>
      * @param string $DataCheckSensitive <p>数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源<br>对应的选项为: &quot;high&quot;、&quot;normal&quot;、&quot;low&quot;，默认为空<br>参数详解，：<br>&quot;high&quot;: 对应控制台中的高，数据库负载过高不建议使用<br>&quot;normal&quot;：对应控制台中的标准<br>&quot;low&quot;：对应控制台中的低</p>
+     * @param string $FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
      */
     function __construct()
     {
@@ -277,6 +285,10 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DataCheckSensitive",$param) and $param["DataCheckSensitive"] !== null) {
             $this->DataCheckSensitive = $param["DataCheckSensitive"];
+        }
+
+        if (array_key_exists("FourthZone",$param) and $param["FourthZone"] !== null) {
+            $this->FourthZone = $param["FourthZone"];
         }
     }
 }

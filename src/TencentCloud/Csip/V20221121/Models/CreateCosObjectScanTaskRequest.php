@@ -20,22 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCosObjectScanTask请求参数结构体
  *
- * @method integer getTaskType() 获取<p>1: 敏感数据识别 2:恶意文件扫描</p>
- * @method void setTaskType(integer $TaskType) 设置<p>1: 敏感数据识别 2:恶意文件扫描</p>
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method integer getTaskType() 获取<p>1: 敏感数据识别 2:恶意文件扫描 3:批量扫描敏感数据</p>
+ * @method void setTaskType(integer $TaskType) 设置<p>1: 敏感数据识别 2:恶意文件扫描 3:批量扫描敏感数据</p>
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method array getBucketSet() 获取<p>存储桶列表</p>
  * @method void setBucketSet(array $BucketSet) 设置<p>存储桶列表</p>
+ * @method string getTaskArgs() 获取<p>任务参数</p>
+ * @method void setTaskArgs(string $TaskArgs) 设置<p>任务参数</p>
+ * @method boolean getIsScanAll() 获取<p>是否全部扫描</p>
+ * @method void setIsScanAll(boolean $IsScanAll) 设置<p>是否全部扫描</p>
+ * @method array getDeleteBucketSet() 获取<p>扫描时需要剔除的存储桶</p>
+ * @method void setDeleteBucketSet(array $DeleteBucketSet) 设置<p>扫描时需要剔除的存储桶</p>
  */
 class CreateCosObjectScanTaskRequest extends AbstractModel
 {
     /**
-     * @var integer <p>1: 敏感数据识别 2:恶意文件扫描</p>
+     * @var integer <p>1: 敏感数据识别 2:恶意文件扫描 3:批量扫描敏感数据</p>
      */
     public $TaskType;
 
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -45,9 +51,27 @@ class CreateCosObjectScanTaskRequest extends AbstractModel
     public $BucketSet;
 
     /**
-     * @param integer $TaskType <p>1: 敏感数据识别 2:恶意文件扫描</p>
-     * @param array $MemberId 集团账号的成员id
+     * @var string <p>任务参数</p>
+     */
+    public $TaskArgs;
+
+    /**
+     * @var boolean <p>是否全部扫描</p>
+     */
+    public $IsScanAll;
+
+    /**
+     * @var array <p>扫描时需要剔除的存储桶</p>
+     */
+    public $DeleteBucketSet;
+
+    /**
+     * @param integer $TaskType <p>1: 敏感数据识别 2:恶意文件扫描 3:批量扫描敏感数据</p>
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param array $BucketSet <p>存储桶列表</p>
+     * @param string $TaskArgs <p>任务参数</p>
+     * @param boolean $IsScanAll <p>是否全部扫描</p>
+     * @param array $DeleteBucketSet <p>扫描时需要剔除的存储桶</p>
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class CreateCosObjectScanTaskRequest extends AbstractModel
 
         if (array_key_exists("BucketSet",$param) and $param["BucketSet"] !== null) {
             $this->BucketSet = $param["BucketSet"];
+        }
+
+        if (array_key_exists("TaskArgs",$param) and $param["TaskArgs"] !== null) {
+            $this->TaskArgs = $param["TaskArgs"];
+        }
+
+        if (array_key_exists("IsScanAll",$param) and $param["IsScanAll"] !== null) {
+            $this->IsScanAll = $param["IsScanAll"];
+        }
+
+        if (array_key_exists("DeleteBucketSet",$param) and $param["DeleteBucketSet"] !== null) {
+            $this->DeleteBucketSet = $param["DeleteBucketSet"];
         }
     }
 }

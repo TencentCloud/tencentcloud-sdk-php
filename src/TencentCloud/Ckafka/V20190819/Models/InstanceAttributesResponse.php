@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxGroupNum(integer $MaxGroupNum) 设置<p>最大分组数</p>
  * @method integer getCvm() 获取<p>售卖类型,0:标准版,1:专业版</p>
  * @method void setCvm(integer $Cvm) 设置<p>售卖类型,0:标准版,1:专业版</p>
- * @method string getInstanceType() 获取<p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
- * @method void setInstanceType(string $InstanceType) 设置<p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
+ * @method string getInstanceType() 获取<p>实例类型</p><p>枚举值：</p><ul><li>profession： 专业版</li><li>premium： 高级版</li><li>serverless： serverless版</li><li>其他： 标准版（如:standards2/standard，该版本已停售）</li></ul>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型</p><p>枚举值：</p><ul><li>profession： 专业版</li><li>premium： 高级版</li><li>serverless： serverless版</li><li>其他： 标准版（如:standards2/standard，该版本已停售）</li></ul>
  * @method array getFeatures() 获取<p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
  * @method void setFeatures(array $Features) 设置<p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
  * @method DynamicRetentionTime getRetentionTimeConfig() 获取<p>动态消息保留策略</p>
@@ -250,7 +250,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $Cvm;
 
     /**
-     * @var string <p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
+     * @var string <p>实例类型</p><p>枚举值：</p><ul><li>profession： 专业版</li><li>premium： 高级版</li><li>serverless： serverless版</li><li>其他： 标准版（如:standards2/standard，该版本已停售）</li></ul>
      */
     public $InstanceType;
 
@@ -386,7 +386,7 @@ class InstanceAttributesResponse extends AbstractModel
      * @param string $Version <p>ckafka集群实例版本</p>
      * @param integer $MaxGroupNum <p>最大分组数</p>
      * @param integer $Cvm <p>售卖类型,0:标准版,1:专业版</p>
-     * @param string $InstanceType <p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
+     * @param string $InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>profession： 专业版</li><li>premium： 高级版</li><li>serverless： serverless版</li><li>其他： 标准版（如:standards2/standard，该版本已停售）</li></ul>
      * @param array $Features <p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
      * @param DynamicRetentionTime $RetentionTimeConfig <p>动态消息保留策略</p>
      * @param integer $MaxConnection <p>最大连接数</p>

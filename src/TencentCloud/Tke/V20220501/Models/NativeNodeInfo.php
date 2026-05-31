@@ -20,325 +20,301 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节点信息
  *
- * @method string getMachineName() 获取节点名称
- * @method void setMachineName(string $MachineName) 设置节点名称
- * @method string getMachineState() 获取Machine 状态
- * @method void setMachineState(string $MachineState) 设置Machine 状态
- * @method string getZone() 获取Machine 所在可用区
- * @method void setZone(string $Zone) 设置Machine 所在可用区
- * @method string getInstanceChargeType() 获取节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
- * @method string getCreatedAt() 获取创建时间
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间
- * @method string getLoginStatus() 获取Machine 登录状态
+ * @method string getMachineName() 获取<p>节点名称</p>
+ * @method void setMachineName(string $MachineName) 设置<p>节点名称</p>
+ * @method string getMachineState() 获取<p>Machine 状态</p>
+ * @method void setMachineState(string $MachineState) 设置<p>Machine 状态</p>
+ * @method string getZone() 获取<p>Machine 所在可用区</p>
+ * @method void setZone(string $Zone) 设置<p>Machine 所在可用区</p>
+ * @method string getInstanceChargeType() 获取<p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
+ * @method string getCreatedAt() 获取<p>创建时间</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间</p>
+ * @method string getLoginStatus() 获取<p>Machine 登录状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLoginStatus(string $LoginStatus) 设置Machine 登录状态
+ * @method void setLoginStatus(string $LoginStatus) 设置<p>Machine 登录状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsProtectedFromScaleIn() 获取是否开启缩容保护
+ * @method boolean getIsProtectedFromScaleIn() 获取<p>是否开启缩容保护</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsProtectedFromScaleIn(boolean $IsProtectedFromScaleIn) 设置是否开启缩容保护
+ * @method void setIsProtectedFromScaleIn(boolean $IsProtectedFromScaleIn) 设置<p>是否开启缩容保护</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDisplayName() 获取Machine 名字
+ * @method string getDisplayName() 获取<p>Machine 名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisplayName(string $DisplayName) 设置Machine 名字
+ * @method void setDisplayName(string $DisplayName) 设置<p>Machine 名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCPU() 获取CPU核数，单位：核
- * @method void setCPU(integer $CPU) 设置CPU核数，单位：核
- * @method integer getGPU() 获取GPU核数，单位：核
+ * @method integer getCPU() 获取<p>CPU核数，单位：核</p>
+ * @method void setCPU(integer $CPU) 设置<p>CPU核数，单位：核</p>
+ * @method integer getGPU() 获取<p>GPU核数，单位：核</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGPU(integer $GPU) 设置GPU核数，单位：核
+ * @method void setGPU(integer $GPU) 设置<p>GPU核数，单位：核</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRenewFlag() 获取自动续费标识
- * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识
- * @method string getPayMode() 获取节点计费模式
- * @method void setPayMode(string $PayMode) 设置节点计费模式
- * @method integer getMemory() 获取节点内存容量，单位：`GB`
- * @method void setMemory(integer $Memory) 设置节点内存容量，单位：`GB`
- * @method Disk getSystemDisk() 获取节点系统盘配置信息
- * @method void setSystemDisk(Disk $SystemDisk) 设置节点系统盘配置信息
- * @method InternetAccessible getInternetAccessible() 获取公网带宽相关信息设置
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽相关信息设置
- * @method string getInstanceFamily() 获取机型所属机型族
- * @method void setInstanceFamily(string $InstanceFamily) 设置机型所属机型族
- * @method string getLanIp() 获取节点内网 IP
- * @method void setLanIp(string $LanIp) 设置节点内网 IP
- * @method string getInstanceType() 获取机型
- * @method void setInstanceType(string $InstanceType) 设置机型
- * @method string getExpiredTime() 获取包年包月节点计费过期时间
+ * @method string getRenewFlag() 获取<p>自动续费标识</p>
+ * @method void setRenewFlag(string $RenewFlag) 设置<p>自动续费标识</p>
+ * @method string getPayMode() 获取<p>节点计费模式</p>
+ * @method void setPayMode(string $PayMode) 设置<p>节点计费模式</p>
+ * @method integer getMemory() 获取<p>节点内存容量，单位：<code>GB</code></p>
+ * @method void setMemory(integer $Memory) 设置<p>节点内存容量，单位：<code>GB</code></p>
+ * @method Disk getSystemDisk() 获取<p>节点系统盘配置信息</p>
+ * @method void setSystemDisk(Disk $SystemDisk) 设置<p>节点系统盘配置信息</p>
+ * @method InternetAccessible getInternetAccessible() 获取<p>公网带宽相关信息设置</p>
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置<p>公网带宽相关信息设置</p>
+ * @method string getInstanceFamily() 获取<p>机型所属机型族</p>
+ * @method void setInstanceFamily(string $InstanceFamily) 设置<p>机型所属机型族</p>
+ * @method string getLanIp() 获取<p>节点内网 IP</p>
+ * @method void setLanIp(string $LanIp) 设置<p>节点内网 IP</p>
+ * @method string getInstanceType() 获取<p>机型</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>机型</p>
+ * @method string getExpiredTime() 获取<p>包年包月节点计费过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpiredTime(string $ExpiredTime) 设置包年包月节点计费过期时间
+ * @method void setExpiredTime(string $ExpiredTime) 设置<p>包年包月节点计费过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWanIp() 获取节点外网 IP
+ * @method string getWanIp() 获取<p>节点外网 IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWanIp(string $WanIp) 设置节点外网 IP
+ * @method void setWanIp(string $WanIp) 设置<p>节点外网 IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getKeyIds() 获取节点密钥 ID 列表
+ * @method array getKeyIds() 获取<p>节点密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeyIds(array $KeyIds) 设置节点密钥 ID 列表
+ * @method void setKeyIds(array $KeyIds) 设置<p>节点密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method GPUParams getGPUParams() 获取节点GPU相关配置
+ * @method GPUParams getGPUParams() 获取<p>节点GPU相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGPUParams(GPUParams $GPUParams) 设置节点GPU相关配置
+ * @method void setGPUParams(GPUParams $GPUParams) 设置<p>节点GPU相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataDisks() 获取数据盘列表
+ * @method array getDataDisks() 获取<p>数据盘列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataDisks(array $DataDisks) 设置数据盘列表
+ * @method void setDataDisks(array $DataDisks) 设置<p>数据盘列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSecurityGroupIDs() 获取安全组列表
+ * @method array getSecurityGroupIDs() 获取<p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityGroupIDs(array $SecurityGroupIDs) 设置安全组列表
+ * @method void setSecurityGroupIDs(array $SecurityGroupIDs) 设置<p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcId() 获取VPC 唯一 ID
- * @method void setVpcId(string $VpcId) 设置VPC 唯一 ID
- * @method string getSubnetId() 获取子网唯一 ID
- * @method void setSubnetId(string $SubnetId) 设置子网唯一 ID
- * @method string getOsImage() 获取OS的名称
+ * @method string getVpcId() 获取<p>VPC 唯一 ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC 唯一 ID</p>
+ * @method string getSubnetId() 获取<p>子网唯一 ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网唯一 ID</p>
+ * @method string getOsImage() 获取<p>OS的名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOsImage(string $OsImage) 设置OS的名称
+ * @method void setOsImage(string $OsImage) 设置<p>OS的名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMachineType() 获取**原生节点的 Machine 类型**
-
-- Native 表示 CXM 类型的原生节点
-- NativeCVM 表示 CVM 类型的原生节点
- * @method void setMachineType(string $MachineType) 设置**原生节点的 Machine 类型**
-
-- Native 表示 CXM 类型的原生节点
-- NativeCVM 表示 CVM 类型的原生节点
- * @method string getInstanceId() 获取**原生节点对应的实例 ID**
-
-- ins-q47ofw6 表示这个实例是一个 CVM 的实例
-- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+ * @method string getMachineType() 获取<p><strong>原生节点的 Machine 类型</strong></p><ul><li>Native 表示 CXM 类型的原生节点</li><li>NativeCVM 表示 CVM 类型的原生节点</li></ul>
+ * @method void setMachineType(string $MachineType) 设置<p><strong>原生节点的 Machine 类型</strong></p><ul><li>Native 表示 CXM 类型的原生节点</li><li>NativeCVM 表示 CVM 类型的原生节点</li></ul>
+ * @method string getInstanceId() 获取<p><strong>原生节点对应的实例 ID</strong></p><ul><li>ins-q47ofw6 表示这个实例是一个 CVM 的实例</li><li>eks-f8mvyaep 表示这个实例是一个 CXM 的实例</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置**原生节点对应的实例 ID**
-
-- ins-q47ofw6 表示这个实例是一个 CVM 的实例
-- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+ * @method void setInstanceId(string $InstanceId) 设置<p><strong>原生节点对应的实例 ID</strong></p><ul><li>ins-q47ofw6 表示这个实例是一个 CVM 的实例</li><li>eks-f8mvyaep 表示这个实例是一个 CXM 的实例</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取原生节点云标签
+ * @method array getTags() 获取<p>原生节点云标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置原生节点云标签
+ * @method void setTags(array $Tags) 设置<p>原生节点云标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class NativeNodeInfo extends AbstractModel
 {
     /**
-     * @var string 节点名称
+     * @var string <p>节点名称</p>
      */
     public $MachineName;
 
     /**
-     * @var string Machine 状态
+     * @var string <p>Machine 状态</p>
      */
     public $MachineState;
 
     /**
-     * @var string Machine 所在可用区
+     * @var string <p>Machine 所在可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
+     * @var string <p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
      */
     public $InstanceChargeType;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string Machine 登录状态
+     * @var string <p>Machine 登录状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoginStatus;
 
     /**
-     * @var boolean 是否开启缩容保护
+     * @var boolean <p>是否开启缩容保护</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsProtectedFromScaleIn;
 
     /**
-     * @var string Machine 名字
+     * @var string <p>Machine 名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisplayName;
 
     /**
-     * @var integer CPU核数，单位：核
+     * @var integer <p>CPU核数，单位：核</p>
      */
     public $CPU;
 
     /**
-     * @var integer GPU核数，单位：核
+     * @var integer <p>GPU核数，单位：核</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GPU;
 
     /**
-     * @var string 自动续费标识
+     * @var string <p>自动续费标识</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string 节点计费模式
+     * @var string <p>节点计费模式</p>
      */
     public $PayMode;
 
     /**
-     * @var integer 节点内存容量，单位：`GB`
+     * @var integer <p>节点内存容量，单位：<code>GB</code></p>
      */
     public $Memory;
 
     /**
-     * @var Disk 节点系统盘配置信息
+     * @var Disk <p>节点系统盘配置信息</p>
      */
     public $SystemDisk;
 
     /**
-     * @var InternetAccessible 公网带宽相关信息设置
+     * @var InternetAccessible <p>公网带宽相关信息设置</p>
      */
     public $InternetAccessible;
 
     /**
-     * @var string 机型所属机型族
+     * @var string <p>机型所属机型族</p>
      */
     public $InstanceFamily;
 
     /**
-     * @var string 节点内网 IP
+     * @var string <p>节点内网 IP</p>
      */
     public $LanIp;
 
     /**
-     * @var string 机型
+     * @var string <p>机型</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 包年包月节点计费过期时间
+     * @var string <p>包年包月节点计费过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiredTime;
 
     /**
-     * @var string 节点外网 IP
+     * @var string <p>节点外网 IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanIp;
 
     /**
-     * @var array 节点密钥 ID 列表
+     * @var array <p>节点密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyIds;
 
     /**
-     * @var GPUParams 节点GPU相关配置
+     * @var GPUParams <p>节点GPU相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GPUParams;
 
     /**
-     * @var array 数据盘列表
+     * @var array <p>数据盘列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataDisks;
 
     /**
-     * @var array 安全组列表
+     * @var array <p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupIDs;
 
     /**
-     * @var string VPC 唯一 ID
+     * @var string <p>VPC 唯一 ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网唯一 ID
+     * @var string <p>子网唯一 ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string OS的名称
+     * @var string <p>OS的名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsImage;
 
     /**
-     * @var string **原生节点的 Machine 类型**
-
-- Native 表示 CXM 类型的原生节点
-- NativeCVM 表示 CVM 类型的原生节点
+     * @var string <p><strong>原生节点的 Machine 类型</strong></p><ul><li>Native 表示 CXM 类型的原生节点</li><li>NativeCVM 表示 CVM 类型的原生节点</li></ul>
      */
     public $MachineType;
 
     /**
-     * @var string **原生节点对应的实例 ID**
-
-- ins-q47ofw6 表示这个实例是一个 CVM 的实例
-- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+     * @var string <p><strong>原生节点对应的实例 ID</strong></p><ul><li>ins-q47ofw6 表示这个实例是一个 CVM 的实例</li><li>eks-f8mvyaep 表示这个实例是一个 CXM 的实例</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
-     * @var array 原生节点云标签
+     * @var array <p>原生节点云标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @param string $MachineName 节点名称
-     * @param string $MachineState Machine 状态
-     * @param string $Zone Machine 所在可用区
-     * @param string $InstanceChargeType 节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
-     * @param string $CreatedAt 创建时间
-     * @param string $LoginStatus Machine 登录状态
+     * @param string $MachineName <p>节点名称</p>
+     * @param string $MachineState <p>Machine 状态</p>
+     * @param string $Zone <p>Machine 所在可用区</p>
+     * @param string $InstanceChargeType <p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
+     * @param string $CreatedAt <p>创建时间</p>
+     * @param string $LoginStatus <p>Machine 登录状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsProtectedFromScaleIn 是否开启缩容保护
+     * @param boolean $IsProtectedFromScaleIn <p>是否开启缩容保护</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DisplayName Machine 名字
+     * @param string $DisplayName <p>Machine 名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CPU CPU核数，单位：核
-     * @param integer $GPU GPU核数，单位：核
+     * @param integer $CPU <p>CPU核数，单位：核</p>
+     * @param integer $GPU <p>GPU核数，单位：核</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RenewFlag 自动续费标识
-     * @param string $PayMode 节点计费模式
-     * @param integer $Memory 节点内存容量，单位：`GB`
-     * @param Disk $SystemDisk 节点系统盘配置信息
-     * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置
-     * @param string $InstanceFamily 机型所属机型族
-     * @param string $LanIp 节点内网 IP
-     * @param string $InstanceType 机型
-     * @param string $ExpiredTime 包年包月节点计费过期时间
+     * @param string $RenewFlag <p>自动续费标识</p>
+     * @param string $PayMode <p>节点计费模式</p>
+     * @param integer $Memory <p>节点内存容量，单位：<code>GB</code></p>
+     * @param Disk $SystemDisk <p>节点系统盘配置信息</p>
+     * @param InternetAccessible $InternetAccessible <p>公网带宽相关信息设置</p>
+     * @param string $InstanceFamily <p>机型所属机型族</p>
+     * @param string $LanIp <p>节点内网 IP</p>
+     * @param string $InstanceType <p>机型</p>
+     * @param string $ExpiredTime <p>包年包月节点计费过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WanIp 节点外网 IP
+     * @param string $WanIp <p>节点外网 IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $KeyIds 节点密钥 ID 列表
+     * @param array $KeyIds <p>节点密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GPUParams $GPUParams 节点GPU相关配置
+     * @param GPUParams $GPUParams <p>节点GPU相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataDisks 数据盘列表
+     * @param array $DataDisks <p>数据盘列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SecurityGroupIDs 安全组列表
+     * @param array $SecurityGroupIDs <p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcId VPC 唯一 ID
-     * @param string $SubnetId 子网唯一 ID
-     * @param string $OsImage OS的名称
+     * @param string $VpcId <p>VPC 唯一 ID</p>
+     * @param string $SubnetId <p>子网唯一 ID</p>
+     * @param string $OsImage <p>OS的名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MachineType **原生节点的 Machine 类型**
-
-- Native 表示 CXM 类型的原生节点
-- NativeCVM 表示 CVM 类型的原生节点
-     * @param string $InstanceId **原生节点对应的实例 ID**
-
-- ins-q47ofw6 表示这个实例是一个 CVM 的实例
-- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+     * @param string $MachineType <p><strong>原生节点的 Machine 类型</strong></p><ul><li>Native 表示 CXM 类型的原生节点</li><li>NativeCVM 表示 CVM 类型的原生节点</li></ul>
+     * @param string $InstanceId <p><strong>原生节点对应的实例 ID</strong></p><ul><li>ins-q47ofw6 表示这个实例是一个 CVM 的实例</li><li>eks-f8mvyaep 表示这个实例是一个 CXM 的实例</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 原生节点云标签
+     * @param array $Tags <p>原生节点云标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

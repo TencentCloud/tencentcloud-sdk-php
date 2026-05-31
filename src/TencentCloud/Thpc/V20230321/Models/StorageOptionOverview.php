@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群存储选项概览信息。
  *
- * @method array getCFSOptions() 获取CFS存储选项概览信息列表。
- * @method void setCFSOptions(array $CFSOptions) 设置CFS存储选项概览信息列表。
- * @method array getGooseFSOptions() 获取GooseFS存储选项概览信息列表。
- * @method void setGooseFSOptions(array $GooseFSOptions) 设置GooseFS存储选项概览信息列表。
- * @method array getGooseFSxOptions() 获取GooseFSx存储选项概览信息列表。
- * @method void setGooseFSxOptions(array $GooseFSxOptions) 设置GooseFSx存储选项概览信息列表。
+ * @method array getCFSOptions() 获取<p>CFS存储选项概览信息列表。</p>
+ * @method void setCFSOptions(array $CFSOptions) 设置<p>CFS存储选项概览信息列表。</p>
+ * @method array getGooseFSOptions() 获取<p>GooseFS存储选项概览信息列表。</p>
+ * @method void setGooseFSOptions(array $GooseFSOptions) 设置<p>GooseFS存储选项概览信息列表。</p>
+ * @method array getGooseFSxOptions() 获取<p>GooseFSx存储选项概览信息列表。</p>
+ * @method void setGooseFSxOptions(array $GooseFSxOptions) 设置<p>GooseFSx存储选项概览信息列表。</p>
+ * @method array getCosOptions() 获取<p>COS存储选项概览信息列表。</p>
+ * @method void setCosOptions(array $CosOptions) 设置<p>COS存储选项概览信息列表。</p>
  */
 class StorageOptionOverview extends AbstractModel
 {
     /**
-     * @var array CFS存储选项概览信息列表。
+     * @var array <p>CFS存储选项概览信息列表。</p>
      */
     public $CFSOptions;
 
     /**
-     * @var array GooseFS存储选项概览信息列表。
+     * @var array <p>GooseFS存储选项概览信息列表。</p>
      */
     public $GooseFSOptions;
 
     /**
-     * @var array GooseFSx存储选项概览信息列表。
+     * @var array <p>GooseFSx存储选项概览信息列表。</p>
      */
     public $GooseFSxOptions;
 
     /**
-     * @param array $CFSOptions CFS存储选项概览信息列表。
-     * @param array $GooseFSOptions GooseFS存储选项概览信息列表。
-     * @param array $GooseFSxOptions GooseFSx存储选项概览信息列表。
+     * @var array <p>COS存储选项概览信息列表。</p>
+     */
+    public $CosOptions;
+
+    /**
+     * @param array $CFSOptions <p>CFS存储选项概览信息列表。</p>
+     * @param array $GooseFSOptions <p>GooseFS存储选项概览信息列表。</p>
+     * @param array $GooseFSxOptions <p>GooseFSx存储选项概览信息列表。</p>
+     * @param array $CosOptions <p>COS存储选项概览信息列表。</p>
      */
     function __construct()
     {
@@ -86,6 +94,15 @@ class StorageOptionOverview extends AbstractModel
                 $obj = new GooseFSxOptionOverview();
                 $obj->deserialize($value);
                 array_push($this->GooseFSxOptions, $obj);
+            }
+        }
+
+        if (array_key_exists("CosOptions",$param) and $param["CosOptions"] !== null) {
+            $this->CosOptions = [];
+            foreach ($param["CosOptions"] as $key => $value){
+                $obj = new CosOptionOverview();
+                $obj->deserialize($value);
+                array_push($this->CosOptions, $obj);
             }
         }
     }

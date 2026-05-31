@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudNativeAPIGatewaySecretKey返回参数结构体
  *
- * @method CNAPIGwCreateCommonResult getResult() 获取允许的操作
- * @method void setResult(CNAPIGwCreateCommonResult $Result) 设置允许的操作
+ * @method CNAPIGwCreateCommonResult getResult() 获取<p>创建结果。包含成功标识与新建资源 ID。</p>
+ * @method void setResult(CNAPIGwCreateCommonResult $Result) 设置<p>创建结果。包含成功标识与新建资源 ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCloudNativeAPIGatewaySecretKeyResponse extends AbstractModel
 {
     /**
-     * @var CNAPIGwCreateCommonResult 允许的操作
+     * @var CNAPIGwCreateCommonResult <p>创建结果。包含成功标识与新建资源 ID。</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class CreateCloudNativeAPIGatewaySecretKeyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CNAPIGwCreateCommonResult $Result 允许的操作
+     * @param CNAPIGwCreateCommonResult $Result <p>创建结果。包含成功标识与新建资源 ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

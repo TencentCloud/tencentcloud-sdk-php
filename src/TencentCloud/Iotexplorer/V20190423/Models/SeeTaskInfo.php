@@ -39,17 +39,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getServiceCategory() 获取算法类目。可能取值：
 
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
  * @method void setServiceCategory(string $ServiceCategory) 设置算法类目。可能取值：
 
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
  * @method string getServiceType() 获取算法类型。可能取值：
 
 - `VID_COMP`：视频理解
 - `IMG_COMP`：图片理解
+- `COMP_HIGHLIGHT`：视频浓缩
  * @method void setServiceType(string $ServiceType) 设置算法类型。可能取值：
 
 - `VID_COMP`：视频理解
 - `IMG_COMP`：图片理解
+- `COMP_HIGHLIGHT`：视频浓缩
  * @method string getServiceTier() 获取套餐规格。可能取值：
 
 - `POSTPAID`：后付费（适用于视频理解、图片理解）
@@ -62,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComprehensionResult(SeeComprehensionResult $ComprehensionResult) 设置视觉理解结果（适用于视频理解、图片理解）
  * @method SeeCompHighlightResult getCompHighlightResult() 获取视频语义浓缩结果（适用于视频语义浓缩）
  * @method void setCompHighlightResult(SeeCompHighlightResult $CompHighlightResult) 设置视频语义浓缩结果（适用于视频语义浓缩）
+ * @method SeeDetectContinuousResult getDetectContinuousResult() 获取标签持续检测结果
+ * @method void setDetectContinuousResult(SeeDetectContinuousResult $DetectContinuousResult) 设置标签持续检测结果
  * @method integer getCostBasic() 获取完成该任务所消耗的基础能力额度
  * @method void setCostBasic(integer $CostBasic) 设置完成该任务所消耗的基础能力额度
  * @method integer getCostAdvanced() 获取完成该任务所消耗的高级能力额度
@@ -101,6 +107,7 @@ class SeeTaskInfo extends AbstractModel
      * @var string 算法类目。可能取值：
 
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
      */
     public $ServiceCategory;
 
@@ -109,6 +116,7 @@ class SeeTaskInfo extends AbstractModel
 
 - `VID_COMP`：视频理解
 - `IMG_COMP`：图片理解
+- `COMP_HIGHLIGHT`：视频浓缩
      */
     public $ServiceType;
 
@@ -129,6 +137,11 @@ class SeeTaskInfo extends AbstractModel
      * @var SeeCompHighlightResult 视频语义浓缩结果（适用于视频语义浓缩）
      */
     public $CompHighlightResult;
+
+    /**
+     * @var SeeDetectContinuousResult 标签持续检测结果
+     */
+    public $DetectContinuousResult;
 
     /**
      * @var integer 完成该任务所消耗的基础能力额度
@@ -172,16 +185,19 @@ class SeeTaskInfo extends AbstractModel
      * @param string $ServiceCategory 算法类目。可能取值：
 
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
      * @param string $ServiceType 算法类型。可能取值：
 
 - `VID_COMP`：视频理解
 - `IMG_COMP`：图片理解
+- `COMP_HIGHLIGHT`：视频浓缩
      * @param string $ServiceTier 套餐规格。可能取值：
 
 - `POSTPAID`：后付费（适用于视频理解、图片理解）
 - `BASIC`：包年包月基础版（适用于视频理解）
      * @param SeeComprehensionResult $ComprehensionResult 视觉理解结果（适用于视频理解、图片理解）
      * @param SeeCompHighlightResult $CompHighlightResult 视频语义浓缩结果（适用于视频语义浓缩）
+     * @param SeeDetectContinuousResult $DetectContinuousResult 标签持续检测结果
      * @param integer $CostBasic 完成该任务所消耗的基础能力额度
      * @param integer $CostAdvanced 完成该任务所消耗的高级能力额度
      * @param array $Files 输出文件名列表
@@ -235,6 +251,11 @@ class SeeTaskInfo extends AbstractModel
         if (array_key_exists("CompHighlightResult",$param) and $param["CompHighlightResult"] !== null) {
             $this->CompHighlightResult = new SeeCompHighlightResult();
             $this->CompHighlightResult->deserialize($param["CompHighlightResult"]);
+        }
+
+        if (array_key_exists("DetectContinuousResult",$param) and $param["DetectContinuousResult"] !== null) {
+            $this->DetectContinuousResult = new SeeDetectContinuousResult();
+            $this->DetectContinuousResult->deserialize($param["DetectContinuousResult"]);
         }
 
         if (array_key_exists("CostBasic",$param) and $param["CostBasic"] !== null) {

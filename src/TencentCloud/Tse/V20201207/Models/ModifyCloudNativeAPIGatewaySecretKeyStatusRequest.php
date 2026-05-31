@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCloudNativeAPIGatewaySecretKeyStatus请求参数结构体
  *
- * @method string getGatewayId() 获取实例 ID
- * @method void setGatewayId(string $GatewayId) 设置实例 ID
- * @method string getStatus() 获取密钥名字
- * @method void setStatus(string $Status) 设置密钥名字
- * @method string getSecretKeyId() 获取密钥id
- * @method void setSecretKeyId(string $SecretKeyId) 设置密钥id
+ * @method string getGatewayId() 获取<p>实例 ID</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>实例 ID</p>
+ * @method string getStatus() 获取<p>密钥状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
+ * @method void setStatus(string $Status) 设置<p>密钥状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
+ * @method string getSecretKeyId() 获取<p>密钥 ID（以 secret- 开头）。</p>
+ * @method void setSecretKeyId(string $SecretKeyId) 设置<p>密钥 ID（以 secret- 开头）。</p>
  */
 class ModifyCloudNativeAPIGatewaySecretKeyStatusRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 密钥名字
+     * @var string <p>密钥状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 密钥id
+     * @var string <p>密钥 ID（以 secret- 开头）。</p>
      */
     public $SecretKeyId;
 
     /**
-     * @param string $GatewayId 实例 ID
-     * @param string $Status 密钥名字
-     * @param string $SecretKeyId 密钥id
+     * @param string $GatewayId <p>实例 ID</p>
+     * @param string $Status <p>密钥状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
+     * @param string $SecretKeyId <p>密钥 ID（以 secret- 开头）。</p>
      */
     function __construct()
     {

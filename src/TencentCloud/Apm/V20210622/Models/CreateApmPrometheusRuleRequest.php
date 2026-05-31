@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApmPrometheusRule请求参数结构体
  *
- * @method string getName() 获取指标匹配规则名
- * @method void setName(string $Name) 设置指标匹配规则名
- * @method string getServiceName() 获取规则生效的应用。作用全部应用就传空字符串
- * @method void setServiceName(string $ServiceName) 设置规则生效的应用。作用全部应用就传空字符串
- * @method integer getMetricMatchType() 获取指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配
- * @method void setMetricMatchType(integer $MetricMatchType) 设置指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配
- * @method string getMetricNameRule() 获取客户定义的命中指标名规则。
- * @method void setMetricNameRule(string $MetricNameRule) 设置客户定义的命中指标名规则。
- * @method string getInstanceId() 获取业务系统ID
- * @method void setInstanceId(string $InstanceId) 设置业务系统ID
+ * @method string getName() 获取<p>指标匹配规则名</p>
+ * @method void setName(string $Name) 设置<p>指标匹配规则名</p>
+ * @method string getServiceName() 获取<p>规则生效的应用。作用全部应用就传空字符串</p>
+ * @method void setServiceName(string $ServiceName) 设置<p>规则生效的应用。作用全部应用就传空字符串</p>
+ * @method integer getMetricMatchType() 获取<p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
+ * @method void setMetricMatchType(integer $MetricMatchType) 设置<p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
+ * @method string getMetricNameRule() 获取<p>客户定义的命中指标名规则。</p>
+ * @method void setMetricNameRule(string $MetricNameRule) 设置<p>客户定义的命中指标名规则。</p>
+ * @method string getInstanceId() 获取<p>业务系统ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>业务系统ID</p>
+ * @method boolean getAppendResourceAttributes() 获取<p>是否追加资源属性</p>
+ * @method void setAppendResourceAttributes(boolean $AppendResourceAttributes) 设置<p>是否追加资源属性</p>
  */
 class CreateApmPrometheusRuleRequest extends AbstractModel
 {
     /**
-     * @var string 指标匹配规则名
+     * @var string <p>指标匹配规则名</p>
      */
     public $Name;
 
     /**
-     * @var string 规则生效的应用。作用全部应用就传空字符串
+     * @var string <p>规则生效的应用。作用全部应用就传空字符串</p>
      */
     public $ServiceName;
 
     /**
-     * @var integer 指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+     * @var integer <p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
      */
     public $MetricMatchType;
 
     /**
-     * @var string 客户定义的命中指标名规则。
+     * @var string <p>客户定义的命中指标名规则。</p>
      */
     public $MetricNameRule;
 
     /**
-     * @var string 业务系统ID
+     * @var string <p>业务系统ID</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $Name 指标匹配规则名
-     * @param string $ServiceName 规则生效的应用。作用全部应用就传空字符串
-     * @param integer $MetricMatchType 指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配
-     * @param string $MetricNameRule 客户定义的命中指标名规则。
-     * @param string $InstanceId 业务系统ID
+     * @var boolean <p>是否追加资源属性</p>
+     */
+    public $AppendResourceAttributes;
+
+    /**
+     * @param string $Name <p>指标匹配规则名</p>
+     * @param string $ServiceName <p>规则生效的应用。作用全部应用就传空字符串</p>
+     * @param integer $MetricMatchType <p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
+     * @param string $MetricNameRule <p>客户定义的命中指标名规则。</p>
+     * @param string $InstanceId <p>业务系统ID</p>
+     * @param boolean $AppendResourceAttributes <p>是否追加资源属性</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateApmPrometheusRuleRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AppendResourceAttributes",$param) and $param["AppendResourceAttributes"] !== null) {
+            $this->AppendResourceAttributes = $param["AppendResourceAttributes"];
         }
     }
 }

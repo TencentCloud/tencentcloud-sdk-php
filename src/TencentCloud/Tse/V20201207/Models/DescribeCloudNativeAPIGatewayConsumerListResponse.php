@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayConsumerList返回参数结构体
  *
- * @method CNAPIGwConsumerList getResult() 获取消费者列表
- * @method void setResult(CNAPIGwConsumerList $Result) 设置消费者列表
+ * @method CNAPIGwConsumerList getResult() 获取<p>消费者列表</p>
+ * @method void setResult(CNAPIGwConsumerList $Result) 设置<p>消费者列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudNativeAPIGatewayConsumerListResponse extends AbstractModel
 {
     /**
-     * @var CNAPIGwConsumerList 消费者列表
+     * @var CNAPIGwConsumerList <p>消费者列表</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeCloudNativeAPIGatewayConsumerListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CNAPIGwConsumerList $Result 消费者列表
+     * @param CNAPIGwConsumerList $Result <p>消费者列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

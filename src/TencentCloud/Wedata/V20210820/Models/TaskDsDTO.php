@@ -308,9 +308,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置<p>上层产品 数据质量 / 数据开发 / ...</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwnId() 获取<p>创建者帐号</p>
+ * @method string getOwnId() 获取<p>创建者账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnId(string $OwnId) 设置<p>创建者帐号</p>
+ * @method void setOwnId(string $OwnId) 设置<p>创建者账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserId() 获取<p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -880,7 +880,7 @@ class TaskDsDTO extends AbstractModel
     public $ProductName;
 
     /**
-     * @var string <p>创建者帐号</p>
+     * @var string <p>创建者账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnId;
@@ -1228,7 +1228,7 @@ class TaskDsDTO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName <p>上层产品 数据质量 / 数据开发 / ...</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OwnId <p>创建者帐号</p>
+     * @param string $OwnId <p>创建者账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserId <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。

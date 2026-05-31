@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取网关实例id
  * @method void setGatewayId(string $GatewayId) 设置网关实例id
- * @method string getName() 获取消费者名称
- * @method void setName(string $Name) 设置消费者名称
- * @method string getDescription() 获取消费者描述
- * @method void setDescription(string $Description) 设置消费者描述
+ * @method string getName() 获取<p>消费者名称，最长 60 字符。同一网关下唯一。</p>
+ * @method void setName(string $Name) 设置<p>消费者名称，最长 60 字符。同一网关下唯一。</p>
+ * @method string getDescription() 获取<p>消费者描述。最长 200 字符。</p>
+ * @method void setDescription(string $Description) 设置<p>消费者描述。最长 200 字符。</p>
  */
 class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var string 消费者名称
+     * @var string <p>消费者名称，最长 60 字符。同一网关下唯一。</p>
      */
     public $Name;
 
     /**
-     * @var string 消费者描述
+     * @var string <p>消费者描述。最长 200 字符。</p>
      */
     public $Description;
 
     /**
      * @param string $GatewayId 网关实例id
-     * @param string $Name 消费者名称
-     * @param string $Description 消费者描述
+     * @param string $Name <p>消费者名称，最长 60 字符。同一网关下唯一。</p>
+     * @param string $Description <p>消费者描述。最长 200 字符。</p>
      */
     function __construct()
     {

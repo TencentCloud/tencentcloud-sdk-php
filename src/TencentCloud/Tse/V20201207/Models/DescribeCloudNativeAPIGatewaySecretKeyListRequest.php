@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewaySecretKeyList请求参数结构体
  *
- * @method string getGatewayId() 获取实例 ID
- * @method void setGatewayId(string $GatewayId) 设置实例 ID
- * @method integer getLimit() 获取每页数量，最大20个
- * @method void setLimit(integer $Limit) 设置每页数量，最大20个
- * @method integer getOffset() 获取起始值
- * @method void setOffset(integer $Offset) 设置起始值
+ * @method string getGatewayId() 获取<p>实例 ID</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>实例 ID</p>
+ * @method integer getLimit() 获取<p>每页条数，范围 [1, 100]，默认 10。</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页条数，范围 [1, 100]，默认 10。</p>
+ * @method integer getOffset() 获取<p>起始位置，从 0 开始。</p>
+ * @method void setOffset(integer $Offset) 设置<p>起始位置，从 0 开始。</p>
+ * @method string getResourceType() 获取<p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+ * @method void setResourceType(string $ResourceType) 设置<p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
  */
 class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $GatewayId;
 
     /**
-     * @var integer 每页数量，最大20个
+     * @var integer <p>每页条数，范围 [1, 100]，默认 10。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 起始值
+     * @var integer <p>起始位置，从 0 开始。</p>
      */
     public $Offset;
 
     /**
-     * @param string $GatewayId 实例 ID
-     * @param integer $Limit 每页数量，最大20个
-     * @param integer $Offset 起始值
+     * @var string <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+     */
+    public $ResourceType;
+
+    /**
+     * @param string $GatewayId <p>实例 ID</p>
+     * @param integer $Limit <p>每页条数，范围 [1, 100]，默认 10。</p>
+     * @param integer $Offset <p>起始位置，从 0 开始。</p>
+     * @param string $ResourceType <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
         }
     }
 }

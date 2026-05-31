@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewaySecretKey请求参数结构体
  *
- * @method string getGatewayId() 获取实例 ID
- * @method void setGatewayId(string $GatewayId) 设置实例 ID
- * @method string getSecretKeyId() 获取密钥id
- * @method void setSecretKeyId(string $SecretKeyId) 设置密钥id
+ * @method string getGatewayId() 获取<p>实例 ID</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>实例 ID</p>
+ * @method string getSecretKeyId() 获取<p>密钥id</p>
+ * @method void setSecretKeyId(string $SecretKeyId) 设置<p>密钥id</p>
  */
 class DescribeCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 密钥id
+     * @var string <p>密钥id</p>
      */
     public $SecretKeyId;
 
     /**
-     * @param string $GatewayId 实例 ID
-     * @param string $SecretKeyId 密钥id
+     * @param string $GatewayId <p>实例 ID</p>
+     * @param string $SecretKeyId <p>密钥id</p>
      */
     function __construct()
     {

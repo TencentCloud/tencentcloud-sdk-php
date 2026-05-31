@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLocalPath() 获取<p>文件系统本地挂载路径。</p>
  * @method void setLocalPath(string $LocalPath) 设置<p>文件系统本地挂载路径。</p>
- * @method string getRemotePath() 获取<p>文件系统远程挂载路径。</p>
- * @method void setRemotePath(string $RemotePath) 设置<p>文件系统远程挂载路径。</p>
+ * @method string getRemotePath() 获取<p>文件系统远程挂载路径; 远端路径为GooseFS控制台看到的命名空间的url;命名空间文档参考https://cloud.tencent.com/document/product/1424/117877</p>
+ * @method void setRemotePath(string $RemotePath) 设置<p>文件系统远程挂载路径; 远端路径为GooseFS控制台看到的命名空间的url;命名空间文档参考https://cloud.tencent.com/document/product/1424/117877</p>
  * @method array getMasters() 获取<p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
  * @method void setMasters(array $Masters) 设置<p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
  * @method string getFileSystemId() 获取<p>GooseFS的文件ID；此参数和Masters 互斥。</p>
@@ -37,7 +37,7 @@ class GooseFSOption extends AbstractModel
     public $LocalPath;
 
     /**
-     * @var string <p>文件系统远程挂载路径。</p>
+     * @var string <p>文件系统远程挂载路径; 远端路径为GooseFS控制台看到的命名空间的url;命名空间文档参考https://cloud.tencent.com/document/product/1424/117877</p>
      */
     public $RemotePath;
 
@@ -53,7 +53,7 @@ class GooseFSOption extends AbstractModel
 
     /**
      * @param string $LocalPath <p>文件系统本地挂载路径。</p>
-     * @param string $RemotePath <p>文件系统远程挂载路径。</p>
+     * @param string $RemotePath <p>文件系统远程挂载路径; 远端路径为GooseFS控制台看到的命名空间的url;命名空间文档参考https://cloud.tencent.com/document/product/1424/117877</p>
      * @param array $Masters <p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
      * @param string $FileSystemId <p>GooseFS的文件ID；此参数和Masters 互斥。</p>
      */

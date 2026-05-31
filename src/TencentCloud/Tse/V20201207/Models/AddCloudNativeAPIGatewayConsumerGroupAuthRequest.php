@@ -20,50 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddCloudNativeAPIGatewayConsumerGroupAuth请求参数结构体
  *
- * @method string getGatewayId() 获取网关实例id
- * @method void setGatewayId(string $GatewayId) 设置网关实例id
- * @method string getResourceType() 获取资源类型:
-
-- ModelAPI: 模型API
- * @method void setResourceType(string $ResourceType) 设置资源类型:
-
-- ModelAPI: 模型API
- * @method string getResourceId() 获取对应资源的id
- * @method void setResourceId(string $ResourceId) 设置对应资源的id
- * @method array getConsumerGroupIds() 获取资源ID
- * @method void setConsumerGroupIds(array $ConsumerGroupIds) 设置资源ID
+ * @method string getGatewayId() 获取<p>网关实例id</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关实例id</p>
+ * @method string getResourceType() 获取<p>授权资源类型。</p><p>枚举值：</p><ul><li>ModelAPI：模型 API</li><li>MCPServer：MCP Server</li></ul>
+ * @method void setResourceType(string $ResourceType) 设置<p>授权资源类型。</p><p>枚举值：</p><ul><li>ModelAPI：模型 API</li><li>MCPServer：MCP Server</li></ul>
+ * @method string getResourceId() 获取<p>对应资源的 ID。</p><ul><li>ResourceType=ModelAPI 时是模型 API ID</li><li>ResourceType=MCPServer 时是 MCP Server ID</li></ul>
+ * @method void setResourceId(string $ResourceId) 设置<p>对应资源的 ID。</p><ul><li>ResourceType=ModelAPI 时是模型 API ID</li><li>ResourceType=MCPServer 时是 MCP Server ID</li></ul>
+ * @method array getConsumerGroupIds() 获取<p>消费者组 ID 列表（每个 ID 以 cg- 开头），长度 1-10。</p>
+ * @method void setConsumerGroupIds(array $ConsumerGroupIds) 设置<p>消费者组 ID 列表（每个 ID 以 cg- 开头），长度 1-10。</p>
  */
 class AddCloudNativeAPIGatewayConsumerGroupAuthRequest extends AbstractModel
 {
     /**
-     * @var string 网关实例id
+     * @var string <p>网关实例id</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 资源类型:
-
-- ModelAPI: 模型API
+     * @var string <p>授权资源类型。</p><p>枚举值：</p><ul><li>ModelAPI：模型 API</li><li>MCPServer：MCP Server</li></ul>
      */
     public $ResourceType;
 
     /**
-     * @var string 对应资源的id
+     * @var string <p>对应资源的 ID。</p><ul><li>ResourceType=ModelAPI 时是模型 API ID</li><li>ResourceType=MCPServer 时是 MCP Server ID</li></ul>
      */
     public $ResourceId;
 
     /**
-     * @var array 资源ID
+     * @var array <p>消费者组 ID 列表（每个 ID 以 cg- 开头），长度 1-10。</p>
      */
     public $ConsumerGroupIds;
 
     /**
-     * @param string $GatewayId 网关实例id
-     * @param string $ResourceType 资源类型:
-
-- ModelAPI: 模型API
-     * @param string $ResourceId 对应资源的id
-     * @param array $ConsumerGroupIds 资源ID
+     * @param string $GatewayId <p>网关实例id</p>
+     * @param string $ResourceType <p>授权资源类型。</p><p>枚举值：</p><ul><li>ModelAPI：模型 API</li><li>MCPServer：MCP Server</li></ul>
+     * @param string $ResourceId <p>对应资源的 ID。</p><ul><li>ResourceType=ModelAPI 时是模型 API ID</li><li>ResourceType=MCPServer 时是 MCP Server ID</li></ul>
+     * @param array $ConsumerGroupIds <p>消费者组 ID 列表（每个 ID 以 cg- 开头），长度 1-10。</p>
      */
     function __construct()
     {

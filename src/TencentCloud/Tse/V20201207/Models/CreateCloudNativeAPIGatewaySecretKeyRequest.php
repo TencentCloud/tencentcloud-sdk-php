@@ -22,48 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取实例 ID
  * @method void setGatewayId(string $GatewayId) 设置实例 ID
- * @method string getSecretType() 获取密钥类型： ApiKey
- * @method void setSecretType(string $SecretType) 设置密钥类型： ApiKey
- * @method string getName() 获取密钥名字
- * @method void setName(string $Name) 设置密钥名字
- * @method string getGenerateType() 获取生成方式：  
-
-密钥类型 Consumer 时选项：  
-
-- KMS
-- System 系统  
-- Custom  自定义  
-
-密钥类型是 LLM 时选项 
-
-- KMS 
-- Custom  自定义 
- * @method void setGenerateType(string $GenerateType) 设置生成方式：  
-
-密钥类型 Consumer 时选项：  
-
-- KMS
-- System 系统  
-- Custom  自定义  
-
-密钥类型是 LLM 时选项 
-
-- KMS 
-- Custom  自定义 
- * @method string getResourceType() 获取资源类型：
-- Consumer 消费者
-- LLM 模型服务
- * @method void setResourceType(string $ResourceType) 设置资源类型：
-- Consumer 消费者
-- LLM 模型服务
- * @method string getKmsKeyName() 获取KMS 的凭证名字， GenerateType 时 kms 必填
- * @method void setKmsKeyName(string $KmsKeyName) 设置KMS 的凭证名字， GenerateType 时 kms 必填
- * @method string getKmsKeyVersion() 获取KMS 的凭证版本， GenerateType 时 kms 必填
- * @method void setKmsKeyVersion(string $KmsKeyVersion) 设置KMS 的凭证版本， GenerateType 时 kms 必填
- * @method string getSecretValue() 获取GenerateType 等于 Custom 是必填
- * @method void setSecretValue(string $SecretValue) 设置GenerateType 等于 Custom 是必填
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
+ * @method string getSecretType() 获取<p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
+ * @method void setSecretType(string $SecretType) 设置<p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
+ * @method string getName() 获取<p>密钥名称，2-60 字符。</p>
+ * @method void setName(string $Name) 设置<p>密钥名称，2-60 字符。</p>
+ * @method string getGenerateType() 获取<p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
+ * @method void setGenerateType(string $GenerateType) 设置<p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
+ * @method string getResourceType() 获取<p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+ * @method void setResourceType(string $ResourceType) 设置<p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+ * @method string getKmsKeyName() 获取<p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+ * @method void setKmsKeyName(string $KmsKeyName) 设置<p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+ * @method string getKmsKeyVersion() 获取<p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
+ * @method void setKmsKeyVersion(string $KmsKeyVersion) 设置<p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
+ * @method string getSecretValue() 获取<p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+ * @method void setSecretValue(string $SecretValue) 设置<p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+ * @method string getDescription() 获取<p>密钥描述。最长 200 字符。</p>
+ * @method void setDescription(string $Description) 设置<p>密钥描述。最长 200 字符。</p>
  */
 class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
 {
@@ -73,81 +47,55 @@ class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var string 密钥类型： ApiKey
+     * @var string <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
      */
     public $SecretType;
 
     /**
-     * @var string 密钥名字
+     * @var string <p>密钥名称，2-60 字符。</p>
      */
     public $Name;
 
     /**
-     * @var string 生成方式：  
-
-密钥类型 Consumer 时选项：  
-
-- KMS
-- System 系统  
-- Custom  自定义  
-
-密钥类型是 LLM 时选项 
-
-- KMS 
-- Custom  自定义 
+     * @var string <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
      */
     public $GenerateType;
 
     /**
-     * @var string 资源类型：
-- Consumer 消费者
-- LLM 模型服务
+     * @var string <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
      */
     public $ResourceType;
 
     /**
-     * @var string KMS 的凭证名字， GenerateType 时 kms 必填
+     * @var string <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
      */
     public $KmsKeyName;
 
     /**
-     * @var string KMS 的凭证版本， GenerateType 时 kms 必填
+     * @var string <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
      */
     public $KmsKeyVersion;
 
     /**
-     * @var string GenerateType 等于 Custom 是必填
+     * @var string <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
      */
     public $SecretValue;
 
     /**
-     * @var string 描述
+     * @var string <p>密钥描述。最长 200 字符。</p>
      */
     public $Description;
 
     /**
      * @param string $GatewayId 实例 ID
-     * @param string $SecretType 密钥类型： ApiKey
-     * @param string $Name 密钥名字
-     * @param string $GenerateType 生成方式：  
-
-密钥类型 Consumer 时选项：  
-
-- KMS
-- System 系统  
-- Custom  自定义  
-
-密钥类型是 LLM 时选项 
-
-- KMS 
-- Custom  自定义 
-     * @param string $ResourceType 资源类型：
-- Consumer 消费者
-- LLM 模型服务
-     * @param string $KmsKeyName KMS 的凭证名字， GenerateType 时 kms 必填
-     * @param string $KmsKeyVersion KMS 的凭证版本， GenerateType 时 kms 必填
-     * @param string $SecretValue GenerateType 等于 Custom 是必填
-     * @param string $Description 描述
+     * @param string $SecretType <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
+     * @param string $Name <p>密钥名称，2-60 字符。</p>
+     * @param string $GenerateType <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
+     * @param string $ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+     * @param string $KmsKeyName <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+     * @param string $KmsKeyVersion <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
+     * @param string $SecretValue <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+     * @param string $Description <p>密钥描述。最长 200 字符。</p>
      */
     function __construct()
     {

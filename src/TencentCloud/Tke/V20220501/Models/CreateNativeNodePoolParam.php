@@ -20,202 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 原生节点池创建参数
  *
- * @method MachineSetScaling getScaling() 获取节点池伸缩配置
- * @method void setScaling(MachineSetScaling $Scaling) 设置节点池伸缩配置
- * @method array getSubnetIds() 获取子网列表
- * @method void setSubnetIds(array $SubnetIds) 设置子网列表
- * @method string getInstanceChargeType() 获取节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
- * @method Disk getSystemDisk() 获取系统盘配置
- * @method void setSystemDisk(Disk $SystemDisk) 设置系统盘配置
- * @method array getInstanceTypes() 获取机型列表
- * @method void setInstanceTypes(array $InstanceTypes) 设置机型列表
- * @method array getSecurityGroupIds() 获取安全组列表
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组列表
- * @method MachineUpgradeSettings getUpgradeSettings() 获取自动升级配置
- * @method void setUpgradeSettings(MachineUpgradeSettings $UpgradeSettings) 设置自动升级配置
- * @method boolean getAutoRepair() 获取是否开启自愈能力
- * @method void setAutoRepair(boolean $AutoRepair) 设置是否开启自愈能力
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取包年包月机型计费配置
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置包年包月机型计费配置
- * @method ManagementConfig getManagement() 获取节点池 Management 参数设置
- * @method void setManagement(ManagementConfig $Management) 设置节点池 Management 参数设置
- * @method string getHealthCheckPolicyName() 获取故障自愈规则名称
- * @method void setHealthCheckPolicyName(string $HealthCheckPolicyName) 设置故障自愈规则名称
- * @method string getHostNamePattern() 获取原生节点池hostName模式串
- * @method void setHostNamePattern(string $HostNamePattern) 设置原生节点池hostName模式串
- * @method array getKubeletArgs() 获取kubelet 自定义参数
- * @method void setKubeletArgs(array $KubeletArgs) 设置kubelet 自定义参数
- * @method LifecycleConfig getLifecycle() 获取预定义脚本
- * @method void setLifecycle(LifecycleConfig $Lifecycle) 设置预定义脚本
- * @method string getRuntimeRootDir() 获取运行时根目录
- * @method void setRuntimeRootDir(string $RuntimeRootDir) 设置运行时根目录
- * @method boolean getEnableAutoscaling() 获取是否开启弹性伸缩
- * @method void setEnableAutoscaling(boolean $EnableAutoscaling) 设置是否开启弹性伸缩
- * @method integer getReplicas() 获取期望节点数
- * @method void setReplicas(integer $Replicas) 设置期望节点数
- * @method InternetAccessible getInternetAccessible() 获取公网带宽设置
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽设置
- * @method array getDataDisks() 获取原生节点池数据盘列表
- * @method void setDataDisks(array $DataDisks) 设置原生节点池数据盘列表
- * @method boolean getQGPUEnable() 获取qgpu开关
- * @method void setQGPUEnable(boolean $QGPUEnable) 设置qgpu开关
- * @method array getKeyIds() 获取节点池ssh公钥id数组
- * @method void setKeyIds(array $KeyIds) 设置节点池ssh公钥id数组
- * @method string getMachineType() 获取节点池类型
- * @method void setMachineType(string $MachineType) 设置节点池类型
- * @method boolean getAutomationService() 获取原生节点池安装节点自动化助手开关
- * @method void setAutomationService(boolean $AutomationService) 设置原生节点池安装节点自动化助手开关
- * @method string getPassword() 获取原生节点池密码
- * @method void setPassword(string $Password) 设置原生节点池密码
+ * @method MachineSetScaling getScaling() 获取<p>节点池伸缩配置</p>
+ * @method void setScaling(MachineSetScaling $Scaling) 设置<p>节点池伸缩配置</p>
+ * @method array getSubnetIds() 获取<p>子网列表</p>
+ * @method void setSubnetIds(array $SubnetIds) 设置<p>子网列表</p>
+ * @method string getInstanceChargeType() 获取<p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
+ * @method Disk getSystemDisk() 获取<p>系统盘配置</p>
+ * @method void setSystemDisk(Disk $SystemDisk) 设置<p>系统盘配置</p>
+ * @method array getInstanceTypes() 获取<p>机型列表</p>
+ * @method void setInstanceTypes(array $InstanceTypes) 设置<p>机型列表</p>
+ * @method array getSecurityGroupIds() 获取<p>安全组列表</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组列表</p>
+ * @method MachineUpgradeSettings getUpgradeSettings() 获取<p>自动升级配置</p>
+ * @method void setUpgradeSettings(MachineUpgradeSettings $UpgradeSettings) 设置<p>自动升级配置</p>
+ * @method boolean getAutoRepair() 获取<p>是否开启自愈能力</p>
+ * @method void setAutoRepair(boolean $AutoRepair) 设置<p>是否开启自愈能力</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取<p>包年包月机型计费配置</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置<p>包年包月机型计费配置</p>
+ * @method ManagementConfig getManagement() 获取<p>节点池 Management 参数设置</p>
+ * @method void setManagement(ManagementConfig $Management) 设置<p>节点池 Management 参数设置</p>
+ * @method string getHealthCheckPolicyName() 获取<p>故障自愈规则名称</p>
+ * @method void setHealthCheckPolicyName(string $HealthCheckPolicyName) 设置<p>故障自愈规则名称</p>
+ * @method string getHostNamePattern() 获取<p>原生节点池hostName模式串</p>
+ * @method void setHostNamePattern(string $HostNamePattern) 设置<p>原生节点池hostName模式串</p>
+ * @method array getKubeletArgs() 获取<p>kubelet 自定义参数</p>
+ * @method void setKubeletArgs(array $KubeletArgs) 设置<p>kubelet 自定义参数</p>
+ * @method LifecycleConfig getLifecycle() 获取<p>预定义脚本</p>
+ * @method void setLifecycle(LifecycleConfig $Lifecycle) 设置<p>预定义脚本</p>
+ * @method string getRuntimeRootDir() 获取<p>运行时根目录</p>
+ * @method void setRuntimeRootDir(string $RuntimeRootDir) 设置<p>运行时根目录</p>
+ * @method boolean getEnableAutoscaling() 获取<p>是否开启弹性伸缩</p>
+ * @method void setEnableAutoscaling(boolean $EnableAutoscaling) 设置<p>是否开启弹性伸缩</p>
+ * @method integer getReplicas() 获取<p>期望节点数</p>
+ * @method void setReplicas(integer $Replicas) 设置<p>期望节点数</p>
+ * @method InternetAccessible getInternetAccessible() 获取<p>公网带宽设置</p>
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置<p>公网带宽设置</p>
+ * @method array getDataDisks() 获取<p>原生节点池数据盘列表</p>
+ * @method void setDataDisks(array $DataDisks) 设置<p>原生节点池数据盘列表</p>
+ * @method boolean getQGPUEnable() 获取<p>qgpu开关</p>
+ * @method void setQGPUEnable(boolean $QGPUEnable) 设置<p>qgpu开关</p>
+ * @method array getKeyIds() 获取<p>节点池ssh公钥id数组</p>
+ * @method void setKeyIds(array $KeyIds) 设置<p>节点池ssh公钥id数组</p>
+ * @method string getMachineType() 获取<p>节点池类型</p>
+ * @method void setMachineType(string $MachineType) 设置<p>节点池类型</p>
+ * @method boolean getAutomationService() 获取<p>原生节点池安装节点自动化助手开关</p>
+ * @method void setAutomationService(boolean $AutomationService) 设置<p>原生节点池安装节点自动化助手开关</p>
+ * @method string getPassword() 获取<p>原生节点池密码</p>
+ * @method void setPassword(string $Password) 设置<p>原生节点池密码</p>
  */
 class CreateNativeNodePoolParam extends AbstractModel
 {
     /**
-     * @var MachineSetScaling 节点池伸缩配置
+     * @var MachineSetScaling <p>节点池伸缩配置</p>
      */
     public $Scaling;
 
     /**
-     * @var array 子网列表
+     * @var array <p>子网列表</p>
      */
     public $SubnetIds;
 
     /**
-     * @var string 节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
+     * @var string <p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
      */
     public $InstanceChargeType;
 
     /**
-     * @var Disk 系统盘配置
+     * @var Disk <p>系统盘配置</p>
      */
     public $SystemDisk;
 
     /**
-     * @var array 机型列表
+     * @var array <p>机型列表</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var array 安全组列表
+     * @var array <p>安全组列表</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var MachineUpgradeSettings 自动升级配置
+     * @var MachineUpgradeSettings <p>自动升级配置</p>
      */
     public $UpgradeSettings;
 
     /**
-     * @var boolean 是否开启自愈能力
+     * @var boolean <p>是否开启自愈能力</p>
      */
     public $AutoRepair;
 
     /**
-     * @var InstanceChargePrepaid 包年包月机型计费配置
+     * @var InstanceChargePrepaid <p>包年包月机型计费配置</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var ManagementConfig 节点池 Management 参数设置
+     * @var ManagementConfig <p>节点池 Management 参数设置</p>
      */
     public $Management;
 
     /**
-     * @var string 故障自愈规则名称
+     * @var string <p>故障自愈规则名称</p>
      */
     public $HealthCheckPolicyName;
 
     /**
-     * @var string 原生节点池hostName模式串
+     * @var string <p>原生节点池hostName模式串</p>
      */
     public $HostNamePattern;
 
     /**
-     * @var array kubelet 自定义参数
+     * @var array <p>kubelet 自定义参数</p>
      */
     public $KubeletArgs;
 
     /**
-     * @var LifecycleConfig 预定义脚本
+     * @var LifecycleConfig <p>预定义脚本</p>
      */
     public $Lifecycle;
 
     /**
-     * @var string 运行时根目录
+     * @var string <p>运行时根目录</p>
      */
     public $RuntimeRootDir;
 
     /**
-     * @var boolean 是否开启弹性伸缩
+     * @var boolean <p>是否开启弹性伸缩</p>
      */
     public $EnableAutoscaling;
 
     /**
-     * @var integer 期望节点数
+     * @var integer <p>期望节点数</p>
      */
     public $Replicas;
 
     /**
-     * @var InternetAccessible 公网带宽设置
+     * @var InternetAccessible <p>公网带宽设置</p>
      */
     public $InternetAccessible;
 
     /**
-     * @var array 原生节点池数据盘列表
+     * @var array <p>原生节点池数据盘列表</p>
      */
     public $DataDisks;
 
     /**
-     * @var boolean qgpu开关
+     * @var boolean <p>qgpu开关</p>
      */
     public $QGPUEnable;
 
     /**
-     * @var array 节点池ssh公钥id数组
+     * @var array <p>节点池ssh公钥id数组</p>
      */
     public $KeyIds;
 
     /**
-     * @var string 节点池类型
+     * @var string <p>节点池类型</p>
      */
     public $MachineType;
 
     /**
-     * @var boolean 原生节点池安装节点自动化助手开关
+     * @var boolean <p>原生节点池安装节点自动化助手开关</p>
      */
     public $AutomationService;
 
     /**
-     * @var string 原生节点池密码
+     * @var string <p>原生节点池密码</p>
      */
     public $Password;
 
     /**
-     * @param MachineSetScaling $Scaling 节点池伸缩配置
-     * @param array $SubnetIds 子网列表
-     * @param string $InstanceChargeType 节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
-     * @param Disk $SystemDisk 系统盘配置
-     * @param array $InstanceTypes 机型列表
-     * @param array $SecurityGroupIds 安全组列表
-     * @param MachineUpgradeSettings $UpgradeSettings 自动升级配置
-     * @param boolean $AutoRepair 是否开启自愈能力
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 包年包月机型计费配置
-     * @param ManagementConfig $Management 节点池 Management 参数设置
-     * @param string $HealthCheckPolicyName 故障自愈规则名称
-     * @param string $HostNamePattern 原生节点池hostName模式串
-     * @param array $KubeletArgs kubelet 自定义参数
-     * @param LifecycleConfig $Lifecycle 预定义脚本
-     * @param string $RuntimeRootDir 运行时根目录
-     * @param boolean $EnableAutoscaling 是否开启弹性伸缩
-     * @param integer $Replicas 期望节点数
-     * @param InternetAccessible $InternetAccessible 公网带宽设置
-     * @param array $DataDisks 原生节点池数据盘列表
-     * @param boolean $QGPUEnable qgpu开关
-     * @param array $KeyIds 节点池ssh公钥id数组
-     * @param string $MachineType 节点池类型
-     * @param boolean $AutomationService 原生节点池安装节点自动化助手开关
-     * @param string $Password 原生节点池密码
+     * @param MachineSetScaling $Scaling <p>节点池伸缩配置</p>
+     * @param array $SubnetIds <p>子网列表</p>
+     * @param string $InstanceChargeType <p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
+     * @param Disk $SystemDisk <p>系统盘配置</p>
+     * @param array $InstanceTypes <p>机型列表</p>
+     * @param array $SecurityGroupIds <p>安全组列表</p>
+     * @param MachineUpgradeSettings $UpgradeSettings <p>自动升级配置</p>
+     * @param boolean $AutoRepair <p>是否开启自愈能力</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>包年包月机型计费配置</p>
+     * @param ManagementConfig $Management <p>节点池 Management 参数设置</p>
+     * @param string $HealthCheckPolicyName <p>故障自愈规则名称</p>
+     * @param string $HostNamePattern <p>原生节点池hostName模式串</p>
+     * @param array $KubeletArgs <p>kubelet 自定义参数</p>
+     * @param LifecycleConfig $Lifecycle <p>预定义脚本</p>
+     * @param string $RuntimeRootDir <p>运行时根目录</p>
+     * @param boolean $EnableAutoscaling <p>是否开启弹性伸缩</p>
+     * @param integer $Replicas <p>期望节点数</p>
+     * @param InternetAccessible $InternetAccessible <p>公网带宽设置</p>
+     * @param array $DataDisks <p>原生节点池数据盘列表</p>
+     * @param boolean $QGPUEnable <p>qgpu开关</p>
+     * @param array $KeyIds <p>节点池ssh公钥id数组</p>
+     * @param string $MachineType <p>节点池类型</p>
+     * @param boolean $AutomationService <p>原生节点池安装节点自动化助手开关</p>
+     * @param string $Password <p>原生节点池密码</p>
      */
     function __construct()
     {

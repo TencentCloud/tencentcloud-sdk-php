@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型服务模型名称路由策略
  *
- * @method string getModelServiceId() 获取模型服务id
- * @method void setModelServiceId(string $ModelServiceId) 设置模型服务id
- * @method string getMatchModelName() 获取匹配模型服务
- * @method void setMatchModelName(string $MatchModelName) 设置匹配模型服务
- * @method string getRewriteModelName() 获取重写模型
- * @method void setRewriteModelName(string $RewriteModelName) 设置重写模型
+ * @method string getModelServiceId() 获取<p>模型服务id</p>
+ * @method void setModelServiceId(string $ModelServiceId) 设置<p>模型服务id</p>
+ * @method string getMatchModelName() 获取<p>匹配模型服务</p>
+ * @method void setMatchModelName(string $MatchModelName) 设置<p>匹配模型服务</p>
+ * @method string getRewriteModelName() 获取<p>重写模型</p>
+ * @method void setRewriteModelName(string $RewriteModelName) 设置<p>重写模型</p>
  */
 class CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy extends AbstractModel
 {
     /**
-     * @var string 模型服务id
+     * @var string <p>模型服务id</p>
      */
     public $ModelServiceId;
 
     /**
-     * @var string 匹配模型服务
+     * @var string <p>匹配模型服务</p>
      */
     public $MatchModelName;
 
     /**
-     * @var string 重写模型
+     * @var string <p>重写模型</p>
      */
     public $RewriteModelName;
 
     /**
-     * @param string $ModelServiceId 模型服务id
-     * @param string $MatchModelName 匹配模型服务
-     * @param string $RewriteModelName 重写模型
+     * @param string $ModelServiceId <p>模型服务id</p>
+     * @param string $MatchModelName <p>匹配模型服务</p>
+     * @param string $RewriteModelName <p>重写模型</p>
      */
     function __construct()
     {

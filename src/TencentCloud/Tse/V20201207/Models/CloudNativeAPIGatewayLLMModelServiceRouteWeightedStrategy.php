@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 权重路由配置
  *
- * @method string getModelServiceId() 获取模型服务id
- * @method void setModelServiceId(string $ModelServiceId) 设置模型服务id
- * @method integer getWeight() 获取权重值
- * @method void setWeight(integer $Weight) 设置权重值
+ * @method string getModelServiceId() 获取<p>模型服务id</p>
+ * @method void setModelServiceId(string $ModelServiceId) 设置<p>模型服务id</p>
+ * @method integer getWeight() 获取<p>权重值</p>
+ * @method void setWeight(integer $Weight) 设置<p>权重值</p>
  */
 class CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy extends AbstractModel
 {
     /**
-     * @var string 模型服务id
+     * @var string <p>模型服务id</p>
      */
     public $ModelServiceId;
 
     /**
-     * @var integer 权重值
+     * @var integer <p>权重值</p>
      */
     public $Weight;
 
     /**
-     * @param string $ModelServiceId 模型服务id
-     * @param integer $Weight 权重值
+     * @param string $ModelServiceId <p>模型服务id</p>
+     * @param integer $Weight <p>权重值</p>
      */
     function __construct()
     {

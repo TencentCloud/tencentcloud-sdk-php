@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyClusterVirtualNodePool请求参数结构体
  *
- * @method string getClusterId() 获取集群ID，通过DescribeClusters接口获取
- * @method void setClusterId(string $ClusterId) 设置集群ID，通过DescribeClusters接口获取
- * @method string getNodePoolId() 获取节点池ID，通过DescribeNodePools接口获取
- * @method void setNodePoolId(string $NodePoolId) 设置节点池ID，通过DescribeNodePools接口获取
- * @method string getName() 获取节点池名称，必须修改至少一个参数
- * @method void setName(string $Name) 设置节点池名称，必须修改至少一个参数
- * @method array getSecurityGroupIds() 获取安全组ID列表，必须修改至少一个参数
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表，必须修改至少一个参数
- * @method array getLabels() 获取虚拟节点label，必须修改至少一个参数
- * @method void setLabels(array $Labels) 设置虚拟节点label，必须修改至少一个参数
- * @method array getTaints() 获取虚拟节点taint，必须修改至少一个参数
- * @method void setTaints(array $Taints) 设置虚拟节点taint，必须修改至少一个参数
- * @method boolean getDeletionProtection() 获取删除保护开关，必须修改至少一个参数
- * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关，必须修改至少一个参数
+ * @method string getClusterId() 获取<p>集群ID，通过DescribeClusters接口获取</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID，通过DescribeClusters接口获取</p>
+ * @method string getNodePoolId() 获取<p>节点池ID，通过DescribeNodePools接口获取</p>
+ * @method void setNodePoolId(string $NodePoolId) 设置<p>节点池ID，通过DescribeNodePools接口获取</p>
+ * @method string getName() 获取<p>节点池名称，必须修改至少一个参数</p>
+ * @method void setName(string $Name) 设置<p>节点池名称，必须修改至少一个参数</p>
+ * @method array getSecurityGroupIds() 获取<p>安全组ID列表，必须修改至少一个参数</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组ID列表，必须修改至少一个参数</p>
+ * @method array getLabels() 获取<p>虚拟节点label，必须修改至少一个参数</p>
+ * @method void setLabels(array $Labels) 设置<p>虚拟节点label，必须修改至少一个参数</p>
+ * @method array getTaints() 获取<p>虚拟节点taint，必须修改至少一个参数</p>
+ * @method void setTaints(array $Taints) 设置<p>虚拟节点taint，必须修改至少一个参数</p>
+ * @method boolean getDeletionProtection() 获取<p>删除保护开关，必须修改至少一个参数</p>
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>删除保护开关，必须修改至少一个参数</p>
+ * @method SubnetAllocationPolicy getSubnetAllocationPolicy() 获取<p>子网分配策略</p>
+ * @method void setSubnetAllocationPolicy(SubnetAllocationPolicy $SubnetAllocationPolicy) 设置<p>子网分配策略</p>
  */
 class ModifyClusterVirtualNodePoolRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID，通过DescribeClusters接口获取
+     * @var string <p>集群ID，通过DescribeClusters接口获取</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 节点池ID，通过DescribeNodePools接口获取
+     * @var string <p>节点池ID，通过DescribeNodePools接口获取</p>
      */
     public $NodePoolId;
 
     /**
-     * @var string 节点池名称，必须修改至少一个参数
+     * @var string <p>节点池名称，必须修改至少一个参数</p>
      */
     public $Name;
 
     /**
-     * @var array 安全组ID列表，必须修改至少一个参数
+     * @var array <p>安全组ID列表，必须修改至少一个参数</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array 虚拟节点label，必须修改至少一个参数
+     * @var array <p>虚拟节点label，必须修改至少一个参数</p>
      */
     public $Labels;
 
     /**
-     * @var array 虚拟节点taint，必须修改至少一个参数
+     * @var array <p>虚拟节点taint，必须修改至少一个参数</p>
      */
     public $Taints;
 
     /**
-     * @var boolean 删除保护开关，必须修改至少一个参数
+     * @var boolean <p>删除保护开关，必须修改至少一个参数</p>
      */
     public $DeletionProtection;
 
     /**
-     * @param string $ClusterId 集群ID，通过DescribeClusters接口获取
-     * @param string $NodePoolId 节点池ID，通过DescribeNodePools接口获取
-     * @param string $Name 节点池名称，必须修改至少一个参数
-     * @param array $SecurityGroupIds 安全组ID列表，必须修改至少一个参数
-     * @param array $Labels 虚拟节点label，必须修改至少一个参数
-     * @param array $Taints 虚拟节点taint，必须修改至少一个参数
-     * @param boolean $DeletionProtection 删除保护开关，必须修改至少一个参数
+     * @var SubnetAllocationPolicy <p>子网分配策略</p>
+     */
+    public $SubnetAllocationPolicy;
+
+    /**
+     * @param string $ClusterId <p>集群ID，通过DescribeClusters接口获取</p>
+     * @param string $NodePoolId <p>节点池ID，通过DescribeNodePools接口获取</p>
+     * @param string $Name <p>节点池名称，必须修改至少一个参数</p>
+     * @param array $SecurityGroupIds <p>安全组ID列表，必须修改至少一个参数</p>
+     * @param array $Labels <p>虚拟节点label，必须修改至少一个参数</p>
+     * @param array $Taints <p>虚拟节点taint，必须修改至少一个参数</p>
+     * @param boolean $DeletionProtection <p>删除保护开关，必须修改至少一个参数</p>
+     * @param SubnetAllocationPolicy $SubnetAllocationPolicy <p>子网分配策略</p>
      */
     function __construct()
     {
@@ -130,6 +138,11 @@ class ModifyClusterVirtualNodePoolRequest extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("SubnetAllocationPolicy",$param) and $param["SubnetAllocationPolicy"] !== null) {
+            $this->SubnetAllocationPolicy = new SubnetAllocationPolicy();
+            $this->SubnetAllocationPolicy->deserialize($param["SubnetAllocationPolicy"]);
         }
     }
 }

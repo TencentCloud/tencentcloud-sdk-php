@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取网关实例id
  * @method void setGatewayId(string $GatewayId) 设置网关实例id
- * @method string getConsumerGroupId() 获取消费者组ID
- * @method void setConsumerGroupId(string $ConsumerGroupId) 设置消费者组ID
- * @method array getConsumerIds() 获取消费者ID
- * @method void setConsumerIds(array $ConsumerIds) 设置消费者ID
+ * @method string getConsumerGroupId() 获取<p>消费者组 ID（以 cg- 开头）。</p>
+ * @method void setConsumerGroupId(string $ConsumerGroupId) 设置<p>消费者组 ID（以 cg- 开头）。</p>
+ * @method array getConsumerIds() 获取<p>消费者 ID 列表，长度 1-10。</p>
+ * @method void setConsumerIds(array $ConsumerIds) 设置<p>消费者 ID 列表，长度 1-10。</p>
  */
 class AddCloudNativeAPIGatewayConsumerInGroupRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AddCloudNativeAPIGatewayConsumerInGroupRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var string 消费者组ID
+     * @var string <p>消费者组 ID（以 cg- 开头）。</p>
      */
     public $ConsumerGroupId;
 
     /**
-     * @var array 消费者ID
+     * @var array <p>消费者 ID 列表，长度 1-10。</p>
      */
     public $ConsumerIds;
 
     /**
      * @param string $GatewayId 网关实例id
-     * @param string $ConsumerGroupId 消费者组ID
-     * @param array $ConsumerIds 消费者ID
+     * @param string $ConsumerGroupId <p>消费者组 ID（以 cg- 开头）。</p>
+     * @param array $ConsumerIds <p>消费者 ID 列表，长度 1-10。</p>
      */
     function __construct()
     {

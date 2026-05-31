@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method string getUpdatedTime() 获取修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method void setUpdatedTime(string $UpdatedTime) 设置修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method array getTags() 获取标签信息。
+ * @method void setTags(array $Tags) 设置标签信息。
  */
 class Invoker extends AbstractModel
 {
@@ -101,6 +103,11 @@ class Invoker extends AbstractModel
     public $UpdatedTime;
 
     /**
+     * @var array 标签信息。
+     */
+    public $Tags;
+
+    /**
      * @param string $InvokerId 执行器ID。
      * @param string $Name 执行器名称。
      * @param string $Type 执行器类型。目前仅支持 SCHEDULE 一种。
@@ -112,6 +119,7 @@ class Invoker extends AbstractModel
      * @param ScheduleSettings $ScheduleSettings 执行器周期计划。周期执行器会返回此字段。
      * @param string $CreatedTime 创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      * @param string $UpdatedTime 修改时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param array $Tags 标签信息。
      */
     function __construct()
     {
@@ -169,6 +177,15 @@ class Invoker extends AbstractModel
 
         if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
             $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

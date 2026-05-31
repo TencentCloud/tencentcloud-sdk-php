@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApmPrometheusRule返回参数结构体
  *
- * @method integer getRuleId() 获取指标匹配规则的ID
- * @method void setRuleId(integer $RuleId) 设置指标匹配规则的ID
+ * @method integer getRuleId() 获取<p>指标匹配规则的ID</p>
+ * @method void setRuleId(integer $RuleId) 设置<p>指标匹配规则的ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateApmPrometheusRuleResponse extends AbstractModel
 {
     /**
-     * @var integer 指标匹配规则的ID
+     * @var integer <p>指标匹配规则的ID</p>
      */
     public $RuleId;
 
@@ -38,7 +38,7 @@ class CreateApmPrometheusRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $RuleId 指标匹配规则的ID
+     * @param integer $RuleId <p>指标匹配规则的ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

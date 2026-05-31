@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型服务路由配置
  *
- * @method array getSelectedTypes() 获取生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)
- * @method void setSelectedTypes(array $SelectedTypes) 设置生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)
- * @method array getWeightedConfig() 获取权重路由配置，最多10个
- * @method void setWeightedConfig(array $WeightedConfig) 设置权重路由配置，最多10个
- * @method array getModelNameConfig() 获取模型名称路由配置，最多10个
- * @method void setModelNameConfig(array $ModelNameConfig) 设置模型名称路由配置，最多10个
+ * @method array getSelectedTypes() 获取<p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
+ * @method void setSelectedTypes(array $SelectedTypes) 设置<p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
+ * @method array getWeightedConfig() 获取<p>权重路由配置，最多10个</p>
+ * @method void setWeightedConfig(array $WeightedConfig) 设置<p>权重路由配置，最多10个</p>
+ * @method array getModelNameConfig() 获取<p>模型名称路由配置，最多10个</p>
+ * @method void setModelNameConfig(array $ModelNameConfig) 设置<p>模型名称路由配置，最多10个</p>
+ * @method AIGWIntentRoute getIntentRouteConfig() 获取<p>意图识别</p>
+ * @method void setIntentRouteConfig(AIGWIntentRoute $IntentRouteConfig) 设置<p>意图识别</p>
+ * @method AIGWLatencyPriorityConfig getLatencyPriorityConfig() 获取<p>延迟路由</p>
+ * @method void setLatencyPriorityConfig(AIGWLatencyPriorityConfig $LatencyPriorityConfig) 设置<p>延迟路由</p>
  */
 class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel
 {
     /**
-     * @var array 生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)
+     * @var array <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
      */
     public $SelectedTypes;
 
     /**
-     * @var array 权重路由配置，最多10个
+     * @var array <p>权重路由配置，最多10个</p>
      */
     public $WeightedConfig;
 
     /**
-     * @var array 模型名称路由配置，最多10个
+     * @var array <p>模型名称路由配置，最多10个</p>
      */
     public $ModelNameConfig;
 
     /**
-     * @param array $SelectedTypes 生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)
-     * @param array $WeightedConfig 权重路由配置，最多10个
-     * @param array $ModelNameConfig 模型名称路由配置，最多10个
+     * @var AIGWIntentRoute <p>意图识别</p>
+     */
+    public $IntentRouteConfig;
+
+    /**
+     * @var AIGWLatencyPriorityConfig <p>延迟路由</p>
+     */
+    public $LatencyPriorityConfig;
+
+    /**
+     * @param array $SelectedTypes <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
+     * @param array $WeightedConfig <p>权重路由配置，最多10个</p>
+     * @param array $ModelNameConfig <p>模型名称路由配置，最多10个</p>
+     * @param AIGWIntentRoute $IntentRouteConfig <p>意图识别</p>
+     * @param AIGWLatencyPriorityConfig $LatencyPriorityConfig <p>延迟路由</p>
      */
     function __construct()
     {
@@ -82,6 +98,16 @@ class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ModelNameConfig, $obj);
             }
+        }
+
+        if (array_key_exists("IntentRouteConfig",$param) and $param["IntentRouteConfig"] !== null) {
+            $this->IntentRouteConfig = new AIGWIntentRoute();
+            $this->IntentRouteConfig->deserialize($param["IntentRouteConfig"]);
+        }
+
+        if (array_key_exists("LatencyPriorityConfig",$param) and $param["LatencyPriorityConfig"] !== null) {
+            $this->LatencyPriorityConfig = new AIGWLatencyPriorityConfig();
+            $this->LatencyPriorityConfig->deserialize($param["LatencyPriorityConfig"]);
         }
     }
 }

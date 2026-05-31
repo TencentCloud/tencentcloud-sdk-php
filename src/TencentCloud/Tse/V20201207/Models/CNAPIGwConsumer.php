@@ -20,65 +20,65 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 消费者结构
  *
- * @method string getConsumerId() 获取分组id
- * @method void setConsumerId(string $ConsumerId) 设置分组id
- * @method string getName() 获取名字
- * @method void setName(string $Name) 设置名字
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getModifyTime() 获取更新时间 yyyy-MM-dd hh:mm:ss
- * @method void setModifyTime(string $ModifyTime) 设置更新时间 yyyy-MM-dd hh:mm:ss
- * @method string getDescription() 获取描述
+ * @method string getConsumerId() 获取<p>消费者 ID。</p>
+ * @method void setConsumerId(string $ConsumerId) 设置<p>消费者 ID。</p>
+ * @method string getName() 获取<p>名字</p>
+ * @method void setName(string $Name) 设置<p>名字</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getModifyTime() 获取<p>更新时间 yyyy-MM-dd hh:mm:ss</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>更新时间 yyyy-MM-dd hh:mm:ss</p>
+ * @method string getDescription() 获取<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setDescription(string $Description) 设置<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getConsumerGroups() 获取消费者分组
+ * @method array getConsumerGroups() 获取<p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConsumerGroups(array $ConsumerGroups) 设置消费者分组
+ * @method void setConsumerGroups(array $ConsumerGroups) 设置<p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CNAPIGwConsumer extends AbstractModel
 {
     /**
-     * @var string 分组id
+     * @var string <p>消费者 ID。</p>
      */
     public $ConsumerId;
 
     /**
-     * @var string 名字
+     * @var string <p>名字</p>
      */
     public $Name;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间 yyyy-MM-dd hh:mm:ss
+     * @var string <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var array 消费者分组
+     * @var array <p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerGroups;
 
     /**
-     * @param string $ConsumerId 分组id
-     * @param string $Name 名字
-     * @param string $CreateTime 创建时间
-     * @param string $ModifyTime 更新时间 yyyy-MM-dd hh:mm:ss
-     * @param string $Description 描述
+     * @param string $ConsumerId <p>消费者 ID。</p>
+     * @param string $Name <p>名字</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $ModifyTime <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
+     * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ConsumerGroups 消费者分组
+     * @param array $ConsumerGroups <p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

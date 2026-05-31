@@ -22,18 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取网关实例id
  * @method void setGatewayId(string $GatewayId) 设置网关实例id
- * @method string getConsumerGroupId() 获取消费者组ID
- * @method void setConsumerGroupId(string $ConsumerGroupId) 设置消费者组ID
- * @method string getName() 获取新的消费者组名称
- * @method void setName(string $Name) 设置新的消费者组名称
- * @method string getStatus() 获取状态：
-- Enable 启用
-- Disable 禁用
- * @method void setStatus(string $Status) 设置状态：
-- Enable 启用
-- Disable 禁用
- * @method string getDescription() 获取新的消费者组描述
- * @method void setDescription(string $Description) 设置新的消费者组描述
+ * @method string getConsumerGroupId() 获取<p>消费者组 ID（以 cg- 开头）。</p>
+ * @method void setConsumerGroupId(string $ConsumerGroupId) 设置<p>消费者组 ID（以 cg- 开头）。</p>
+ * @method string getName() 获取<p>消费者组名称，最长 60 字符。</p>
+ * @method void setName(string $Name) 设置<p>消费者组名称，最长 60 字符。</p>
+ * @method string getStatus() 获取<p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
+ * @method void setStatus(string $Status) 设置<p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
+ * @method string getDescription() 获取<p>消费者组描述。最长 200 字符。</p>
+ * @method void setDescription(string $Description) 设置<p>消费者组描述。最长 200 字符。</p>
  */
 class ModifyCloudNativeAPIGatewayConsumerGroupRequest extends AbstractModel
 {
@@ -43,35 +39,31 @@ class ModifyCloudNativeAPIGatewayConsumerGroupRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var string 消费者组ID
+     * @var string <p>消费者组 ID（以 cg- 开头）。</p>
      */
     public $ConsumerGroupId;
 
     /**
-     * @var string 新的消费者组名称
+     * @var string <p>消费者组名称，最长 60 字符。</p>
      */
     public $Name;
 
     /**
-     * @var string 状态：
-- Enable 启用
-- Disable 禁用
+     * @var string <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 新的消费者组描述
+     * @var string <p>消费者组描述。最长 200 字符。</p>
      */
     public $Description;
 
     /**
      * @param string $GatewayId 网关实例id
-     * @param string $ConsumerGroupId 消费者组ID
-     * @param string $Name 新的消费者组名称
-     * @param string $Status 状态：
-- Enable 启用
-- Disable 禁用
-     * @param string $Description 新的消费者组描述
+     * @param string $ConsumerGroupId <p>消费者组 ID（以 cg- 开头）。</p>
+     * @param string $Name <p>消费者组名称，最长 60 字符。</p>
+     * @param string $Status <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
+     * @param string $Description <p>消费者组描述。最长 200 字符。</p>
      */
     function __construct()
     {

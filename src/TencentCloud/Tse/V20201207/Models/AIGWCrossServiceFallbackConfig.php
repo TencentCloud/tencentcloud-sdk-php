@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerConditions(array $TriggerConditions) 设置<p>触发条件</p><p>枚举值：</p><ul><li>ServiceUnavailable： 服务不可用</li><li>ConnectionTimeout： 连接超时</li><li>RateLimited： 限流</li></ul>
  * @method array getFallbackServiceChain() 获取<p>fallback 服务链</p>
  * @method void setFallbackServiceChain(array $FallbackServiceChain) 设置<p>fallback 服务链</p>
+ * @method AIGWLLMQuotaFallbackTrigger getQuotaFallbackTrigger() 获取<p>额度降级触发配置</p>
+ * @method void setQuotaFallbackTrigger(AIGWLLMQuotaFallbackTrigger $QuotaFallbackTrigger) 设置<p>额度降级触发配置</p>
  */
 class AIGWCrossServiceFallbackConfig extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AIGWCrossServiceFallbackConfig extends AbstractModel
     public $FallbackServiceChain;
 
     /**
+     * @var AIGWLLMQuotaFallbackTrigger <p>额度降级触发配置</p>
+     */
+    public $QuotaFallbackTrigger;
+
+    /**
      * @param array $TriggerConditions <p>触发条件</p><p>枚举值：</p><ul><li>ServiceUnavailable： 服务不可用</li><li>ConnectionTimeout： 连接超时</li><li>RateLimited： 限流</li></ul>
      * @param array $FallbackServiceChain <p>fallback 服务链</p>
+     * @param AIGWLLMQuotaFallbackTrigger $QuotaFallbackTrigger <p>额度降级触发配置</p>
      */
     function __construct()
     {
@@ -65,6 +73,11 @@ class AIGWCrossServiceFallbackConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FallbackServiceChain, $obj);
             }
+        }
+
+        if (array_key_exists("QuotaFallbackTrigger",$param) and $param["QuotaFallbackTrigger"] !== null) {
+            $this->QuotaFallbackTrigger = new AIGWLLMQuotaFallbackTrigger();
+            $this->QuotaFallbackTrigger->deserialize($param["QuotaFallbackTrigger"]);
         }
     }
 }

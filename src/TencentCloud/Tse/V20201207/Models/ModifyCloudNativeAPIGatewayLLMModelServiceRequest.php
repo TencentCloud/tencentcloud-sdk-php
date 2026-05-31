@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpstreamUrlMode(string $UpstreamUrlMode) 设置<p>路径拼接模式</p><p>枚举值：</p><ul><li>FixedPath： 固定路径</li><li>AutoConcat： 自动拼接</li></ul>
  * @method string getSNI() 获取<p>SNI</p>
  * @method void setSNI(string $SNI) 设置<p>SNI</p>
+ * @method AIGWLLMQuotaLimit getQuotaLimit() 获取<p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
+ * @method void setQuotaLimit(AIGWLLMQuotaLimit $QuotaLimit) 设置<p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
+ * @method array getTags() 获取<p>标签</p>
+ * @method void setTags(array $Tags) 设置<p>标签</p>
  */
 class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 {
@@ -143,6 +147,16 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
     public $SNI;
 
     /**
+     * @var AIGWLLMQuotaLimit <p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
+     */
+    public $QuotaLimit;
+
+    /**
+     * @var array <p>标签</p>
+     */
+    public $Tags;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $ModelServiceId <p>模型服务 ID，全局唯一标识。</p>
      * @param string $Name <p>修改服务名称，长度2-50字符，支持中英文、数字、下划线。</p>
@@ -160,6 +174,8 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
      * @param integer $Retries <p>重试次数</p><p>取值范围：[0, 5]</p><p>单位：次</p><p>默认值：0</p>
      * @param string $UpstreamUrlMode <p>路径拼接模式</p><p>枚举值：</p><ul><li>FixedPath： 固定路径</li><li>AutoConcat： 自动拼接</li></ul>
      * @param string $SNI <p>SNI</p>
+     * @param AIGWLLMQuotaLimit $QuotaLimit <p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
+     * @param array $Tags <p>标签</p>
      */
     function __construct()
     {
@@ -242,6 +258,15 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 
         if (array_key_exists("SNI",$param) and $param["SNI"] !== null) {
             $this->SNI = $param["SNI"];
+        }
+
+        if (array_key_exists("QuotaLimit",$param) and $param["QuotaLimit"] !== null) {
+            $this->QuotaLimit = new AIGWLLMQuotaLimit();
+            $this->QuotaLimit->deserialize($param["QuotaLimit"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
         }
     }
 }

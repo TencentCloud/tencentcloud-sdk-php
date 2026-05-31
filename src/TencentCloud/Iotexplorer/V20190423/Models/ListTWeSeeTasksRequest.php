@@ -24,14 +24,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品 ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getServiceCategory() 获取算法类目。可能取值：
+ * @method string getServiceCategory() 获取算法类目。可选值：
 - `COMPREHENSION`：视觉理解
- * @method void setServiceCategory(string $ServiceCategory) 设置算法类目。可能取值：
+- `HIGHLIGHT`：视频浓缩
+ * @method void setServiceCategory(string $ServiceCategory) 设置算法类目。可选值：
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
  * @method integer getLimit() 获取分页拉取数量
  * @method void setLimit(integer $Limit) 设置分页拉取数量
  * @method integer getOffset() 获取分页拉取偏移
  * @method void setOffset(integer $Offset) 设置分页拉取偏移
+ * @method array getServiceTypes() 获取算法类型。
+
+当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
+- `VID_COMP`：视频理解
+- `IMG_COMP`：图片理解
+- `CONT_PERSON_MOTIONLESS`：静姿检测
+
+当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
+- `COMP_HIGHLIGHT`：视频浓缩
+ * @method void setServiceTypes(array $ServiceTypes) 设置算法类型。
+
+当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
+- `VID_COMP`：视频理解
+- `IMG_COMP`：图片理解
+- `CONT_PERSON_MOTIONLESS`：静姿检测
+
+当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
+- `COMP_HIGHLIGHT`：视频浓缩
  * @method integer getChannelId() 获取通道 ID
  * @method void setChannelId(integer $ChannelId) 设置通道 ID
  * @method integer getStartTimeMs() 获取查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
@@ -48,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 - `1`：失败
 - `2`：空结果
 - `3`：有效结果
+ * @method integer getFileURLExpireTime() 获取下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+ * @method void setFileURLExpireTime(integer $FileURLExpireTime) 设置下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
  */
 class ListTWeSeeTasksRequest extends AbstractModel
 {
@@ -62,8 +84,9 @@ class ListTWeSeeTasksRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var string 算法类目。可能取值：
+     * @var string 算法类目。可选值：
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
      */
     public $ServiceCategory;
 
@@ -76,6 +99,19 @@ class ListTWeSeeTasksRequest extends AbstractModel
      * @var integer 分页拉取偏移
      */
     public $Offset;
+
+    /**
+     * @var array 算法类型。
+
+当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
+- `VID_COMP`：视频理解
+- `IMG_COMP`：图片理解
+- `CONT_PERSON_MOTIONLESS`：静姿检测
+
+当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
+- `COMP_HIGHLIGHT`：视频浓缩
+     */
+    public $ServiceTypes;
 
     /**
      * @var integer 通道 ID
@@ -102,12 +138,27 @@ class ListTWeSeeTasksRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+     */
+    public $FileURLExpireTime;
+
+    /**
      * @param string $ProductId 产品 ID
      * @param string $DeviceName 设备名称
-     * @param string $ServiceCategory 算法类目。可能取值：
+     * @param string $ServiceCategory 算法类目。可选值：
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
      * @param integer $Limit 分页拉取数量
      * @param integer $Offset 分页拉取偏移
+     * @param array $ServiceTypes 算法类型。
+
+当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
+- `VID_COMP`：视频理解
+- `IMG_COMP`：图片理解
+- `CONT_PERSON_MOTIONLESS`：静姿检测
+
+当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
+- `COMP_HIGHLIGHT`：视频浓缩
      * @param integer $ChannelId 通道 ID
      * @param integer $StartTimeMs 查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
      * @param integer $EndTimeMs 查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
@@ -116,6 +167,7 @@ class ListTWeSeeTasksRequest extends AbstractModel
 - `1`：失败
 - `2`：空结果
 - `3`：有效结果
+     * @param integer $FileURLExpireTime 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
      */
     function __construct()
     {
@@ -150,6 +202,10 @@ class ListTWeSeeTasksRequest extends AbstractModel
             $this->Offset = $param["Offset"];
         }
 
+        if (array_key_exists("ServiceTypes",$param) and $param["ServiceTypes"] !== null) {
+            $this->ServiceTypes = $param["ServiceTypes"];
+        }
+
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
             $this->ChannelId = $param["ChannelId"];
         }
@@ -164,6 +220,10 @@ class ListTWeSeeTasksRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("FileURLExpireTime",$param) and $param["FileURLExpireTime"] !== null) {
+            $this->FileURLExpireTime = $param["FileURLExpireTime"];
         }
     }
 }

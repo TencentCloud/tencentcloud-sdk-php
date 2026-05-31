@@ -20,230 +20,210 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 修改原生节点池参数
  *
- * @method MachineSetScaling getScaling() 获取伸缩配置
- * @method void setScaling(MachineSetScaling $Scaling) 设置伸缩配置
- * @method array getSubnetIds() 获取子网列表
- * @method void setSubnetIds(array $SubnetIds) 设置子网列表
- * @method array getSecurityGroupIds() 获取安全组列表
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组列表
- * @method MachineUpgradeSettings getUpgradeSettings() 获取自动升级配置
- * @method void setUpgradeSettings(MachineUpgradeSettings $UpgradeSettings) 设置自动升级配置
- * @method boolean getAutoRepair() 获取是否开启自愈能力
- * @method void setAutoRepair(boolean $AutoRepair) 设置是否开启自愈能力
- * @method string getInstanceChargeType() 获取节点计费类型变更
-当前仅支持按量计费转包年包月：
-- PREPAID
-
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置节点计费类型变更
-当前仅支持按量计费转包年包月：
-- PREPAID
-
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取包年包月机型计费配置
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置包年包月机型计费配置
- * @method Disk getSystemDisk() 获取系统盘配置
- * @method void setSystemDisk(Disk $SystemDisk) 设置系统盘配置
- * @method ManagementConfig getManagement() 获取Machine 系统配置
- * @method void setManagement(ManagementConfig $Management) 设置Machine 系统配置
- * @method string getHealthCheckPolicyName() 获取故障自愈规则名称
- * @method void setHealthCheckPolicyName(string $HealthCheckPolicyName) 设置故障自愈规则名称
- * @method string getHostNamePattern() 获取原生节点池hostName模式串
- * @method void setHostNamePattern(string $HostNamePattern) 设置原生节点池hostName模式串
- * @method array getKubeletArgs() 获取kubelet 自定义参数
- * @method void setKubeletArgs(array $KubeletArgs) 设置kubelet 自定义参数
- * @method LifecycleConfig getLifecycle() 获取预定义脚本
- * @method void setLifecycle(LifecycleConfig $Lifecycle) 设置预定义脚本
- * @method string getRuntimeRootDir() 获取运行时根目录
- * @method void setRuntimeRootDir(string $RuntimeRootDir) 设置运行时根目录
- * @method boolean getEnableAutoscaling() 获取是否开启弹性伸缩
- * @method void setEnableAutoscaling(boolean $EnableAutoscaling) 设置是否开启弹性伸缩
- * @method array getInstanceTypes() 获取机型列表
- * @method void setInstanceTypes(array $InstanceTypes) 设置机型列表
- * @method integer getReplicas() 获取期望节点数
- * @method void setReplicas(integer $Replicas) 设置期望节点数
- * @method boolean getUpdateExistedNode() 获取是否更新存量节点MetaData(包括： metadata、annotation、label)
- * @method void setUpdateExistedNode(boolean $UpdateExistedNode) 设置是否更新存量节点MetaData(包括： metadata、annotation、label)
- * @method array getDataDisks() 获取数据盘列表
- * @method void setDataDisks(array $DataDisks) 设置数据盘列表
- * @method string getUpdateMachineManagement() 获取节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
-
-management包括：nameserver、host、kubelet、kernel参数
- * @method void setUpdateMachineManagement(string $UpdateMachineManagement) 设置节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
-
-management包括：nameserver、host、kubelet、kernel参数
- * @method array getKeyIds() 获取ssh公钥id数组
- * @method void setKeyIds(array $KeyIds) 设置ssh公钥id数组
- * @method string getDeletePolicy() 获取节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
- * @method void setDeletePolicy(string $DeletePolicy) 设置节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
- * @method array getGPUConfigs() 获取节点池 GPU 配置
- * @method void setGPUConfigs(array $GPUConfigs) 设置节点池 GPU 配置
- * @method boolean getAutomationService() 获取原生节点池安装自动化助手开关状态
- * @method void setAutomationService(boolean $AutomationService) 设置原生节点池安装自动化助手开关状态
- * @method string getPassword() 获取原生节点池密码
- * @method void setPassword(string $Password) 设置原生节点池密码
+ * @method MachineSetScaling getScaling() 获取<p>伸缩配置</p>
+ * @method void setScaling(MachineSetScaling $Scaling) 设置<p>伸缩配置</p>
+ * @method array getSubnetIds() 获取<p>子网列表</p>
+ * @method void setSubnetIds(array $SubnetIds) 设置<p>子网列表</p>
+ * @method array getSecurityGroupIds() 获取<p>安全组列表</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组列表</p>
+ * @method MachineUpgradeSettings getUpgradeSettings() 获取<p>自动升级配置</p>
+ * @method void setUpgradeSettings(MachineUpgradeSettings $UpgradeSettings) 设置<p>自动升级配置</p>
+ * @method boolean getAutoRepair() 获取<p>是否开启自愈能力</p>
+ * @method void setAutoRepair(boolean $AutoRepair) 设置<p>是否开启自愈能力</p>
+ * @method string getInstanceChargeType() 获取<p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取<p>包年包月机型计费配置</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置<p>包年包月机型计费配置</p>
+ * @method Disk getSystemDisk() 获取<p>系统盘配置</p>
+ * @method void setSystemDisk(Disk $SystemDisk) 设置<p>系统盘配置</p>
+ * @method ManagementConfig getManagement() 获取<p>Machine 系统配置</p>
+ * @method void setManagement(ManagementConfig $Management) 设置<p>Machine 系统配置</p>
+ * @method string getHealthCheckPolicyName() 获取<p>故障自愈规则名称</p>
+ * @method void setHealthCheckPolicyName(string $HealthCheckPolicyName) 设置<p>故障自愈规则名称</p>
+ * @method string getHostNamePattern() 获取<p>原生节点池hostName模式串</p>
+ * @method void setHostNamePattern(string $HostNamePattern) 设置<p>原生节点池hostName模式串</p>
+ * @method array getKubeletArgs() 获取<p>kubelet 自定义参数</p>
+ * @method void setKubeletArgs(array $KubeletArgs) 设置<p>kubelet 自定义参数</p>
+ * @method LifecycleConfig getLifecycle() 获取<p>预定义脚本</p>
+ * @method void setLifecycle(LifecycleConfig $Lifecycle) 设置<p>预定义脚本</p>
+ * @method string getRuntimeRootDir() 获取<p>运行时根目录</p>
+ * @method void setRuntimeRootDir(string $RuntimeRootDir) 设置<p>运行时根目录</p>
+ * @method boolean getEnableAutoscaling() 获取<p>是否开启弹性伸缩</p>
+ * @method void setEnableAutoscaling(boolean $EnableAutoscaling) 设置<p>是否开启弹性伸缩</p>
+ * @method array getInstanceTypes() 获取<p>机型列表</p>
+ * @method void setInstanceTypes(array $InstanceTypes) 设置<p>机型列表</p>
+ * @method integer getReplicas() 获取<p>期望节点数</p>
+ * @method void setReplicas(integer $Replicas) 设置<p>期望节点数</p>
+ * @method boolean getUpdateExistedNode() 获取<p>是否更新存量节点MetaData(包括： metadata、annotation、label)</p>
+ * @method void setUpdateExistedNode(boolean $UpdateExistedNode) 设置<p>是否更新存量节点MetaData(包括： metadata、annotation、label)</p>
+ * @method array getDataDisks() 获取<p>数据盘列表</p>
+ * @method void setDataDisks(array $DataDisks) 设置<p>数据盘列表</p>
+ * @method string getUpdateMachineManagement() 获取<p>节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选</p><p>management包括：nameserver、host、kubelet、kernel参数</p>
+ * @method void setUpdateMachineManagement(string $UpdateMachineManagement) 设置<p>节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选</p><p>management包括：nameserver、host、kubelet、kernel参数</p>
+ * @method array getKeyIds() 获取<p>ssh公钥id数组</p>
+ * @method void setKeyIds(array $KeyIds) 设置<p>ssh公钥id数组</p>
+ * @method string getDeletePolicy() 获取<p>节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest</p>
+ * @method void setDeletePolicy(string $DeletePolicy) 设置<p>节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest</p>
+ * @method array getGPUConfigs() 获取<p>节点池 GPU 配置</p>
+ * @method void setGPUConfigs(array $GPUConfigs) 设置<p>节点池 GPU 配置</p>
+ * @method boolean getAutomationService() 获取<p>原生节点池安装自动化助手开关状态</p>
+ * @method void setAutomationService(boolean $AutomationService) 设置<p>原生节点池安装自动化助手开关状态</p>
+ * @method string getPassword() 获取<p>原生节点池密码</p>
+ * @method void setPassword(string $Password) 设置<p>原生节点池密码</p>
  */
 class UpdateNativeNodePoolParam extends AbstractModel
 {
     /**
-     * @var MachineSetScaling 伸缩配置
+     * @var MachineSetScaling <p>伸缩配置</p>
      */
     public $Scaling;
 
     /**
-     * @var array 子网列表
+     * @var array <p>子网列表</p>
      */
     public $SubnetIds;
 
     /**
-     * @var array 安全组列表
+     * @var array <p>安全组列表</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var MachineUpgradeSettings 自动升级配置
+     * @var MachineUpgradeSettings <p>自动升级配置</p>
      */
     public $UpgradeSettings;
 
     /**
-     * @var boolean 是否开启自愈能力
+     * @var boolean <p>是否开启自愈能力</p>
      */
     public $AutoRepair;
 
     /**
-     * @var string 节点计费类型变更
-当前仅支持按量计费转包年包月：
-- PREPAID
-
+     * @var string <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
      */
     public $InstanceChargeType;
 
     /**
-     * @var InstanceChargePrepaid 包年包月机型计费配置
+     * @var InstanceChargePrepaid <p>包年包月机型计费配置</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var Disk 系统盘配置
+     * @var Disk <p>系统盘配置</p>
      */
     public $SystemDisk;
 
     /**
-     * @var ManagementConfig Machine 系统配置
+     * @var ManagementConfig <p>Machine 系统配置</p>
      */
     public $Management;
 
     /**
-     * @var string 故障自愈规则名称
+     * @var string <p>故障自愈规则名称</p>
      */
     public $HealthCheckPolicyName;
 
     /**
-     * @var string 原生节点池hostName模式串
+     * @var string <p>原生节点池hostName模式串</p>
      */
     public $HostNamePattern;
 
     /**
-     * @var array kubelet 自定义参数
+     * @var array <p>kubelet 自定义参数</p>
      */
     public $KubeletArgs;
 
     /**
-     * @var LifecycleConfig 预定义脚本
+     * @var LifecycleConfig <p>预定义脚本</p>
      */
     public $Lifecycle;
 
     /**
-     * @var string 运行时根目录
+     * @var string <p>运行时根目录</p>
      */
     public $RuntimeRootDir;
 
     /**
-     * @var boolean 是否开启弹性伸缩
+     * @var boolean <p>是否开启弹性伸缩</p>
      */
     public $EnableAutoscaling;
 
     /**
-     * @var array 机型列表
+     * @var array <p>机型列表</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var integer 期望节点数
+     * @var integer <p>期望节点数</p>
      */
     public $Replicas;
 
     /**
-     * @var boolean 是否更新存量节点MetaData(包括： metadata、annotation、label)
+     * @var boolean <p>是否更新存量节点MetaData(包括： metadata、annotation、label)</p>
      */
     public $UpdateExistedNode;
 
     /**
-     * @var array 数据盘列表
+     * @var array <p>数据盘列表</p>
      */
     public $DataDisks;
 
     /**
-     * @var string 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
-
-management包括：nameserver、host、kubelet、kernel参数
+     * @var string <p>节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选</p><p>management包括：nameserver、host、kubelet、kernel参数</p>
      */
     public $UpdateMachineManagement;
 
     /**
-     * @var array ssh公钥id数组
+     * @var array <p>ssh公钥id数组</p>
      */
     public $KeyIds;
 
     /**
-     * @var string 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+     * @var string <p>节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest</p>
      */
     public $DeletePolicy;
 
     /**
-     * @var array 节点池 GPU 配置
+     * @var array <p>节点池 GPU 配置</p>
      */
     public $GPUConfigs;
 
     /**
-     * @var boolean 原生节点池安装自动化助手开关状态
+     * @var boolean <p>原生节点池安装自动化助手开关状态</p>
      */
     public $AutomationService;
 
     /**
-     * @var string 原生节点池密码
+     * @var string <p>原生节点池密码</p>
      */
     public $Password;
 
     /**
-     * @param MachineSetScaling $Scaling 伸缩配置
-     * @param array $SubnetIds 子网列表
-     * @param array $SecurityGroupIds 安全组列表
-     * @param MachineUpgradeSettings $UpgradeSettings 自动升级配置
-     * @param boolean $AutoRepair 是否开启自愈能力
-     * @param string $InstanceChargeType 节点计费类型变更
-当前仅支持按量计费转包年包月：
-- PREPAID
-
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 包年包月机型计费配置
-     * @param Disk $SystemDisk 系统盘配置
-     * @param ManagementConfig $Management Machine 系统配置
-     * @param string $HealthCheckPolicyName 故障自愈规则名称
-     * @param string $HostNamePattern 原生节点池hostName模式串
-     * @param array $KubeletArgs kubelet 自定义参数
-     * @param LifecycleConfig $Lifecycle 预定义脚本
-     * @param string $RuntimeRootDir 运行时根目录
-     * @param boolean $EnableAutoscaling 是否开启弹性伸缩
-     * @param array $InstanceTypes 机型列表
-     * @param integer $Replicas 期望节点数
-     * @param boolean $UpdateExistedNode 是否更新存量节点MetaData(包括： metadata、annotation、label)
-     * @param array $DataDisks 数据盘列表
-     * @param string $UpdateMachineManagement 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
-
-management包括：nameserver、host、kubelet、kernel参数
-     * @param array $KeyIds ssh公钥id数组
-     * @param string $DeletePolicy 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
-     * @param array $GPUConfigs 节点池 GPU 配置
-     * @param boolean $AutomationService 原生节点池安装自动化助手开关状态
-     * @param string $Password 原生节点池密码
+     * @param MachineSetScaling $Scaling <p>伸缩配置</p>
+     * @param array $SubnetIds <p>子网列表</p>
+     * @param array $SecurityGroupIds <p>安全组列表</p>
+     * @param MachineUpgradeSettings $UpgradeSettings <p>自动升级配置</p>
+     * @param boolean $AutoRepair <p>是否开启自愈能力</p>
+     * @param string $InstanceChargeType <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>包年包月机型计费配置</p>
+     * @param Disk $SystemDisk <p>系统盘配置</p>
+     * @param ManagementConfig $Management <p>Machine 系统配置</p>
+     * @param string $HealthCheckPolicyName <p>故障自愈规则名称</p>
+     * @param string $HostNamePattern <p>原生节点池hostName模式串</p>
+     * @param array $KubeletArgs <p>kubelet 自定义参数</p>
+     * @param LifecycleConfig $Lifecycle <p>预定义脚本</p>
+     * @param string $RuntimeRootDir <p>运行时根目录</p>
+     * @param boolean $EnableAutoscaling <p>是否开启弹性伸缩</p>
+     * @param array $InstanceTypes <p>机型列表</p>
+     * @param integer $Replicas <p>期望节点数</p>
+     * @param boolean $UpdateExistedNode <p>是否更新存量节点MetaData(包括： metadata、annotation、label)</p>
+     * @param array $DataDisks <p>数据盘列表</p>
+     * @param string $UpdateMachineManagement <p>节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选</p><p>management包括：nameserver、host、kubelet、kernel参数</p>
+     * @param array $KeyIds <p>ssh公钥id数组</p>
+     * @param string $DeletePolicy <p>节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest</p>
+     * @param array $GPUConfigs <p>节点池 GPU 配置</p>
+     * @param boolean $AutomationService <p>原生节点池安装自动化助手开关状态</p>
+     * @param string $Password <p>原生节点池密码</p>
      */
     function __construct()
     {

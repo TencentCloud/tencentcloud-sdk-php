@@ -22,28 +22,32 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取<p>网关 id。</p>
  * @method void setGatewayId(string $GatewayId) 设置<p>网关 id。</p>
- * @method string getName() 获取<p>AI 网关 LLM 模型 API 的唯一标识名称，格式规则：最长60个字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
- * @method void setName(string $Name) 设置<p>AI 网关 LLM 模型 API 的唯一标识名称，格式规则：最长60个字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
- * @method string getSceneType() 获取<p>选择业务场景,  选项：Chat（聊天）。</p>
- * @method void setSceneType(string $SceneType) 设置<p>选择业务场景,  选项：Chat（聊天）。</p>
- * @method string getRequestProtocol() 获取<p>业务场景对应的请求协议，选项：OpenAI（目前只支持 OpenAI）。</p>
- * @method void setRequestProtocol(string $RequestProtocol) 设置<p>业务场景对应的请求协议，选项：OpenAI（目前只支持 OpenAI）。</p>
- * @method array getListModelServiceId() 获取<p>初始化关联的模型服务列表。</p>
- * @method void setListModelServiceId(array $ListModelServiceId) 设置<p>初始化关联的模型服务列表。</p>
- * @method array getRouteList() 获取<p>路由列表</p>
- * @method void setRouteList(array $RouteList) 设置<p>路由列表</p>
- * @method string getBasePath() 获取<p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
- * @method void setBasePath(string $BasePath) 设置<p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
- * @method string getDescription() 获取<p>模型 API 的相关描述。</p>
- * @method void setDescription(string $Description) 设置<p>模型 API 的相关描述。</p>
- * @method CloudNativeAPIGatewayLLMModelServiceRoute getModelServiceRoute() 获取<p>模型服务路由策略（是指如何路由到模型服务）</p>
- * @method void setModelServiceRoute(CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute) 设置<p>模型服务路由策略（是指如何路由到模型服务）</p>
- * @method array getMatchHeaders() 获取<p>路由 Header 匹配规则</p>
- * @method void setMatchHeaders(array $MatchHeaders) 设置<p>路由 Header 匹配规则</p>
- * @method boolean getEnableCrossServiceFallback() 获取<p>跨服务 fallback 开关</p>
- * @method void setEnableCrossServiceFallback(boolean $EnableCrossServiceFallback) 设置<p>跨服务 fallback 开关</p>
- * @method AIGWCrossServiceFallbackConfig getCrossServiceFallbackConfig() 获取<p>跨服务 fallback 配置</p>
- * @method void setCrossServiceFallbackConfig(AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig) 设置<p>跨服务 fallback 配置</p>
+ * @method string getName() 获取<p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
+ * @method void setName(string $Name) 设置<p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
+ * @method string getSceneType() 获取<p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
+ * @method void setSceneType(string $SceneType) 设置<p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
+ * @method string getRequestProtocol() 获取<p>请求协议（小写）。当前仅支持：</p><ul><li>openai</li></ul>
+ * @method void setRequestProtocol(string $RequestProtocol) 设置<p>请求协议（小写）。当前仅支持：</p><ul><li>openai</li></ul>
+ * @method array getListModelServiceId() 获取<p>关联的模型服务 ID 列表，长度 1-10。</p><p>注：字段名建议改为 ModelServiceIds，当前保留用于兼容。</p>
+ * @method void setListModelServiceId(array $ListModelServiceId) 设置<p>关联的模型服务 ID 列表，长度 1-10。</p><p>注：字段名建议改为 ModelServiceIds，当前保留用于兼容。</p>
+ * @method array getRouteList() 获取<p>路由列表，至少 1 条。每条包含 Methods/Paths/Hosts 等 Kong 路由属性。</p>
+ * @method void setRouteList(array $RouteList) 设置<p>路由列表，至少 1 条。每条包含 Methods/Paths/Hosts 等 Kong 路由属性。</p>
+ * @method string getBasePath() 获取<p>统一前缀路径（可选）。例如 /v1/openai。</p>
+ * @method void setBasePath(string $BasePath) 设置<p>统一前缀路径（可选）。例如 /v1/openai。</p>
+ * @method string getDescription() 获取<p>模型 API 描述。最长 200 字符。</p>
+ * @method void setDescription(string $Description) 设置<p>模型 API 描述。最长 200 字符。</p>
+ * @method CloudNativeAPIGatewayLLMModelServiceRoute getModelServiceRoute() 获取<p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
+ * @method void setModelServiceRoute(CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute) 设置<p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
+ * @method array getMatchHeaders() 获取<p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+ * @method void setMatchHeaders(array $MatchHeaders) 设置<p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+ * @method boolean getEnableCrossServiceFallback() 获取<p>是否启用跨服务 Fallback。开启后需提供 CrossServiceFallbackConfig。</p>
+ * @method void setEnableCrossServiceFallback(boolean $EnableCrossServiceFallback) 设置<p>是否启用跨服务 Fallback。开启后需提供 CrossServiceFallbackConfig。</p>
+ * @method AIGWCrossServiceFallbackConfig getCrossServiceFallbackConfig() 获取<p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
+ * @method void setCrossServiceFallbackConfig(AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig) 设置<p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
+ * @method AIGWTagFilter getTagFilter() 获取<p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+ * @method void setTagFilter(AIGWTagFilter $TagFilter) 设置<p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+ * @method AIGWLogConfig getLogConfig() 获取<p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
+ * @method void setLogConfig(AIGWLogConfig $LogConfig) 设置<p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
  */
 class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
 {
@@ -53,73 +57,85 @@ class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var string <p>AI 网关 LLM 模型 API 的唯一标识名称，格式规则：最长60个字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
+     * @var string <p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
      */
     public $Name;
 
     /**
-     * @var string <p>选择业务场景,  选项：Chat（聊天）。</p>
+     * @var string <p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
      */
     public $SceneType;
 
     /**
-     * @var string <p>业务场景对应的请求协议，选项：OpenAI（目前只支持 OpenAI）。</p>
+     * @var string <p>请求协议（小写）。当前仅支持：</p><ul><li>openai</li></ul>
      */
     public $RequestProtocol;
 
     /**
-     * @var array <p>初始化关联的模型服务列表。</p>
+     * @var array <p>关联的模型服务 ID 列表，长度 1-10。</p><p>注：字段名建议改为 ModelServiceIds，当前保留用于兼容。</p>
      */
     public $ListModelServiceId;
 
     /**
-     * @var array <p>路由列表</p>
+     * @var array <p>路由列表，至少 1 条。每条包含 Methods/Paths/Hosts 等 Kong 路由属性。</p>
      */
     public $RouteList;
 
     /**
-     * @var string <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+     * @var string <p>统一前缀路径（可选）。例如 /v1/openai。</p>
      */
     public $BasePath;
 
     /**
-     * @var string <p>模型 API 的相关描述。</p>
+     * @var string <p>模型 API 描述。最长 200 字符。</p>
      */
     public $Description;
 
     /**
-     * @var CloudNativeAPIGatewayLLMModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
+     * @var CloudNativeAPIGatewayLLMModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
      */
     public $ModelServiceRoute;
 
     /**
-     * @var array <p>路由 Header 匹配规则</p>
+     * @var array <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
      */
     public $MatchHeaders;
 
     /**
-     * @var boolean <p>跨服务 fallback 开关</p>
+     * @var boolean <p>是否启用跨服务 Fallback。开启后需提供 CrossServiceFallbackConfig。</p>
      */
     public $EnableCrossServiceFallback;
 
     /**
-     * @var AIGWCrossServiceFallbackConfig <p>跨服务 fallback 配置</p>
+     * @var AIGWCrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
      */
     public $CrossServiceFallbackConfig;
 
     /**
+     * @var AIGWTagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+     */
+    public $TagFilter;
+
+    /**
+     * @var AIGWLogConfig <p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
+     */
+    public $LogConfig;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
-     * @param string $Name <p>AI 网关 LLM 模型 API 的唯一标识名称，格式规则：最长60个字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
-     * @param string $SceneType <p>选择业务场景,  选项：Chat（聊天）。</p>
-     * @param string $RequestProtocol <p>业务场景对应的请求协议，选项：OpenAI（目前只支持 OpenAI）。</p>
-     * @param array $ListModelServiceId <p>初始化关联的模型服务列表。</p>
-     * @param array $RouteList <p>路由列表</p>
-     * @param string $BasePath <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
-     * @param string $Description <p>模型 API 的相关描述。</p>
-     * @param CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
-     * @param array $MatchHeaders <p>路由 Header 匹配规则</p>
-     * @param boolean $EnableCrossServiceFallback <p>跨服务 fallback 开关</p>
-     * @param AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig <p>跨服务 fallback 配置</p>
+     * @param string $Name <p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
+     * @param string $SceneType <p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
+     * @param string $RequestProtocol <p>请求协议（小写）。当前仅支持：</p><ul><li>openai</li></ul>
+     * @param array $ListModelServiceId <p>关联的模型服务 ID 列表，长度 1-10。</p><p>注：字段名建议改为 ModelServiceIds，当前保留用于兼容。</p>
+     * @param array $RouteList <p>路由列表，至少 1 条。每条包含 Methods/Paths/Hosts 等 Kong 路由属性。</p>
+     * @param string $BasePath <p>统一前缀路径（可选）。例如 /v1/openai。</p>
+     * @param string $Description <p>模型 API 描述。最长 200 字符。</p>
+     * @param CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
+     * @param array $MatchHeaders <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+     * @param boolean $EnableCrossServiceFallback <p>是否启用跨服务 Fallback。开启后需提供 CrossServiceFallbackConfig。</p>
+     * @param AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
+     * @param AIGWTagFilter $TagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+     * @param AIGWLogConfig $LogConfig <p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
      */
     function __construct()
     {
@@ -192,6 +208,16 @@ class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (array_key_exists("CrossServiceFallbackConfig",$param) and $param["CrossServiceFallbackConfig"] !== null) {
             $this->CrossServiceFallbackConfig = new AIGWCrossServiceFallbackConfig();
             $this->CrossServiceFallbackConfig->deserialize($param["CrossServiceFallbackConfig"]);
+        }
+
+        if (array_key_exists("TagFilter",$param) and $param["TagFilter"] !== null) {
+            $this->TagFilter = new AIGWTagFilter();
+            $this->TagFilter->deserialize($param["TagFilter"]);
+        }
+
+        if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
+            $this->LogConfig = new AIGWLogConfig();
+            $this->LogConfig->deserialize($param["LogConfig"]);
         }
     }
 }

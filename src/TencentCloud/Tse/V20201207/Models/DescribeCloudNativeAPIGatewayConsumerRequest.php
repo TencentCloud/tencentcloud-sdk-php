@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayConsumer请求参数结构体
  *
- * @method string getGatewayId() 获取网关实例id
- * @method void setGatewayId(string $GatewayId) 设置网关实例id
- * @method string getConsumerId() 获取消费者ID
- * @method void setConsumerId(string $ConsumerId) 设置消费者ID
+ * @method string getGatewayId() 获取<p>网关实例id</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关实例id</p>
+ * @method string getConsumerId() 获取<p>消费者ID</p>
+ * @method void setConsumerId(string $ConsumerId) 设置<p>消费者ID</p>
  */
 class DescribeCloudNativeAPIGatewayConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 网关实例id
+     * @var string <p>网关实例id</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 消费者ID
+     * @var string <p>消费者ID</p>
      */
     public $ConsumerId;
 
     /**
-     * @param string $GatewayId 网关实例id
-     * @param string $ConsumerId 消费者ID
+     * @param string $GatewayId <p>网关实例id</p>
+     * @param string $ConsumerId <p>消费者ID</p>
      */
     function __construct()
     {

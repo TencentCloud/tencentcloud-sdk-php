@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取网关 id。
  * @method void setGatewayId(string $GatewayId) 设置网关 id。
- * @method integer getLimit() 获取返回数量，默认为 10，最大值为 1000。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为 10，最大值为 1000。
- * @method integer getOffset() 获取偏移量，默认为 0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
- * @method array getFilters() 获取过滤条件，多个过滤条件之间是“与”的关系
- * @method void setFilters(array $Filters) 设置过滤条件，多个过滤条件之间是“与”的关系
- * @method string getKeyword() 获取搜索关键词，模糊匹配 name 和 description
- * @method void setKeyword(string $Keyword) 设置搜索关键词，模糊匹配 name 和 description
- * @method string getConsumerGroupId() 获取通过消费者组Id筛选，UseToBind 为 true 时ConsumerGroupId不为空
- * @method void setConsumerGroupId(string $ConsumerGroupId) 设置通过消费者组Id筛选，UseToBind 为 true 时ConsumerGroupId不为空
- * @method boolean getUseToBind() 获取筛选可被绑定的数据， 比如模型API里面绑定模型服务筛选时，如果设置true, 返回结果只会有可以被绑定的数据。
- * @method void setUseToBind(boolean $UseToBind) 设置筛选可被绑定的数据， 比如模型API里面绑定模型服务筛选时，如果设置true, 返回结果只会有可以被绑定的数据。
+ * @method integer getLimit() 获取<p>每页条数，范围 [1, 1000]，默认 10。</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页条数，范围 [1, 1000]，默认 10。</p>
+ * @method integer getOffset() 获取<p>起始位置，从 0 开始。</p>
+ * @method void setOffset(integer $Offset) 设置<p>起始位置，从 0 开始。</p>
+ * @method array getFilters() 获取<p>过滤条件。当前未启用具体字段。</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。当前未启用具体字段。</p>
+ * @method string getKeyword() 获取<p>模糊匹配模型 API 名称。</p>
+ * @method void setKeyword(string $Keyword) 设置<p>模糊匹配模型 API 名称。</p>
+ * @method string getConsumerGroupId() 获取<p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
+ * @method void setConsumerGroupId(string $ConsumerGroupId) 设置<p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
+ * @method boolean getUseToBind() 获取<p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
+ * @method void setUseToBind(boolean $UseToBind) 设置<p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
  */
 class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
 {
@@ -43,43 +43,43 @@ class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var integer 返回数量，默认为 10，最大值为 1000。
+     * @var integer <p>每页条数，范围 [1, 1000]，默认 10。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为 0。
+     * @var integer <p>起始位置，从 0 开始。</p>
      */
     public $Offset;
 
     /**
-     * @var array 过滤条件，多个过滤条件之间是“与”的关系
+     * @var array <p>过滤条件。当前未启用具体字段。</p>
      */
     public $Filters;
 
     /**
-     * @var string 搜索关键词，模糊匹配 name 和 description
+     * @var string <p>模糊匹配模型 API 名称。</p>
      */
     public $Keyword;
 
     /**
-     * @var string 通过消费者组Id筛选，UseToBind 为 true 时ConsumerGroupId不为空
+     * @var string <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
      */
     public $ConsumerGroupId;
 
     /**
-     * @var boolean 筛选可被绑定的数据， 比如模型API里面绑定模型服务筛选时，如果设置true, 返回结果只会有可以被绑定的数据。
+     * @var boolean <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
      */
     public $UseToBind;
 
     /**
      * @param string $GatewayId 网关 id。
-     * @param integer $Limit 返回数量，默认为 10，最大值为 1000。
-     * @param integer $Offset 偏移量，默认为 0。
-     * @param array $Filters 过滤条件，多个过滤条件之间是“与”的关系
-     * @param string $Keyword 搜索关键词，模糊匹配 name 和 description
-     * @param string $ConsumerGroupId 通过消费者组Id筛选，UseToBind 为 true 时ConsumerGroupId不为空
-     * @param boolean $UseToBind 筛选可被绑定的数据， 比如模型API里面绑定模型服务筛选时，如果设置true, 返回结果只会有可以被绑定的数据。
+     * @param integer $Limit <p>每页条数，范围 [1, 1000]，默认 10。</p>
+     * @param integer $Offset <p>起始位置，从 0 开始。</p>
+     * @param array $Filters <p>过滤条件。当前未启用具体字段。</p>
+     * @param string $Keyword <p>模糊匹配模型 API 名称。</p>
+     * @param string $ConsumerGroupId <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
+     * @param boolean $UseToBind <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
      */
     function __construct()
     {

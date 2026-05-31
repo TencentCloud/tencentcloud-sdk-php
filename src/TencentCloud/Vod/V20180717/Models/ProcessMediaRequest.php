@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtInfo(string $ExtInfo) 设置<p>保留字段，特殊用途时使用。</p>
  * @method string getUrl() 获取<p>FileID为空时有效，拉取Url生成新媒资产生新FileID，媒体处理产物将作为新媒资的附属产物。</p><p>注意：新媒资会产生存储费用</p>
  * @method void setUrl(string $Url) 设置<p>FileID为空时有效，拉取Url生成新媒资产生新FileID，媒体处理产物将作为新媒资的附属产物。</p><p>注意：新媒资会产生存储费用</p>
+ * @method string getOutputAsIndependentMedia() 获取<p>媒体处理转码结果输出为独立媒资, 开启该选项会使产物输出为独立媒资，生成全新FileID，目前仅支持TranscodeTask转码任务输出为独立媒资。</p><p>枚举值：</p><ul><li>ON： 开启</li><li>OFF： 关闭</li></ul><p>默认值：OFF</p><p>注意：新媒资会产生存储费用，转码任务中片头片尾、溯源水印等暂不支持开启该选项。</p>
+ * @method void setOutputAsIndependentMedia(string $OutputAsIndependentMedia) 设置<p>媒体处理转码结果输出为独立媒资, 开启该选项会使产物输出为独立媒资，生成全新FileID，目前仅支持TranscodeTask转码任务输出为独立媒资。</p><p>枚举值：</p><ul><li>ON： 开启</li><li>OFF： 关闭</li></ul><p>默认值：OFF</p><p>注意：新媒资会产生存储费用，转码任务中片头片尾、溯源水印等暂不支持开启该选项。</p>
  */
 class ProcessMediaRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class ProcessMediaRequest extends AbstractModel
     public $Url;
 
     /**
+     * @var string <p>媒体处理转码结果输出为独立媒资, 开启该选项会使产物输出为独立媒资，生成全新FileID，目前仅支持TranscodeTask转码任务输出为独立媒资。</p><p>枚举值：</p><ul><li>ON： 开启</li><li>OFF： 关闭</li></ul><p>默认值：OFF</p><p>注意：新媒资会产生存储费用，转码任务中片头片尾、溯源水印等暂不支持开启该选项。</p>
+     */
+    public $OutputAsIndependentMedia;
+
+    /**
      * @param string $FileId <p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。<br>FileId和MediaStoragePath必须提供其中一个。</p>
      * @param string $MediaStoragePath <p>媒体的存储路径。<br>只有<a href="https://cloud.tencent.com/document/product/266/126825">FileID + Path 模式</a>的子应用可以通过MediaStoragePath发起任务。<br>FileId和MediaStoragePath必须提供其中一个。</p>
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
@@ -128,6 +135,7 @@ class ProcessMediaRequest extends AbstractModel
      * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      * @param string $ExtInfo <p>保留字段，特殊用途时使用。</p>
      * @param string $Url <p>FileID为空时有效，拉取Url生成新媒资产生新FileID，媒体处理产物将作为新媒资的附属产物。</p><p>注意：新媒资会产生存储费用</p>
+     * @param string $OutputAsIndependentMedia <p>媒体处理转码结果输出为独立媒资, 开启该选项会使产物输出为独立媒资，生成全新FileID，目前仅支持TranscodeTask转码任务输出为独立媒资。</p><p>枚举值：</p><ul><li>ON： 开启</li><li>OFF： 关闭</li></ul><p>默认值：OFF</p><p>注意：新媒资会产生存储费用，转码任务中片头片尾、溯源水印等暂不支持开启该选项。</p>
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ class ProcessMediaRequest extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("OutputAsIndependentMedia",$param) and $param["OutputAsIndependentMedia"] !== null) {
+            $this->OutputAsIndependentMedia = $param["OutputAsIndependentMedia"];
         }
     }
 }

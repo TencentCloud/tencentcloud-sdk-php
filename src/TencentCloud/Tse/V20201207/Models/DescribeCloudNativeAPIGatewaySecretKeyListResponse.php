@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewaySecretKeyList返回参数结构体
  *
- * @method CNAPIGwSecretKeyList getResult() 获取允许的操作
- * @method void setResult(CNAPIGwSecretKeyList $Result) 设置允许的操作
+ * @method CNAPIGwSecretKeyList getResult() 获取<p>密钥列表</p>
+ * @method void setResult(CNAPIGwSecretKeyList $Result) 设置<p>密钥列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudNativeAPIGatewaySecretKeyListResponse extends AbstractModel
 {
     /**
-     * @var CNAPIGwSecretKeyList 允许的操作
+     * @var CNAPIGwSecretKeyList <p>密钥列表</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeCloudNativeAPIGatewaySecretKeyListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CNAPIGwSecretKeyList $Result 允许的操作
+     * @param CNAPIGwSecretKeyList $Result <p>密钥列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

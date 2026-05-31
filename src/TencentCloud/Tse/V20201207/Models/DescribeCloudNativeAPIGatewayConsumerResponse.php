@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayConsumer返回参数结构体
  *
- * @method CNAPIGwConsumer getResult() 获取删除结果
- * @method void setResult(CNAPIGwConsumer $Result) 设置删除结果
+ * @method CNAPIGwConsumer getResult() 获取<p>消费者详情</p>
+ * @method void setResult(CNAPIGwConsumer $Result) 设置<p>消费者详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudNativeAPIGatewayConsumerResponse extends AbstractModel
 {
     /**
-     * @var CNAPIGwConsumer 删除结果
+     * @var CNAPIGwConsumer <p>消费者详情</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeCloudNativeAPIGatewayConsumerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CNAPIGwConsumer $Result 删除结果
+     * @param CNAPIGwConsumer $Result <p>消费者详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

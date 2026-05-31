@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCrossServiceFallbackConfig(AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig) 设置<p>跨服务fallback配置详情</p>
  * @method boolean getDescribeCloudNativeAPIGatewayLLMModelAPI() 获取<p>是否展示模型API</p>
  * @method void setDescribeCloudNativeAPIGatewayLLMModelAPI(boolean $DescribeCloudNativeAPIGatewayLLMModelAPI) 设置<p>是否展示模型API</p>
+ * @method AIGWTagFilter getTagFilter() 获取<p>标签</p>
+ * @method void setTagFilter(AIGWTagFilter $TagFilter) 设置<p>标签</p>
+ * @method AIGWLogConfig getLogConfig() 获取<p>日志显示相关开关</p>
+ * @method void setLogConfig(AIGWLogConfig $LogConfig) 设置<p>日志显示相关开关</p>
+ * @method AIGWLogDesensitizeConfig getLogDesensitizeConfig() 获取<p>日志脱敏规则</p>
+ * @method void setLogDesensitizeConfig(AIGWLogDesensitizeConfig $LogDesensitizeConfig) 设置<p>日志脱敏规则</p>
+ * @method AIGWForwardDesensitizeConfig getForwardDesensitizeConfig() 获取<p>转发脱敏规则</p>
+ * @method void setForwardDesensitizeConfig(AIGWForwardDesensitizeConfig $ForwardDesensitizeConfig) 设置<p>转发脱敏规则</p>
  */
 class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
 {
@@ -143,6 +151,26 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
     public $DescribeCloudNativeAPIGatewayLLMModelAPI;
 
     /**
+     * @var AIGWTagFilter <p>标签</p>
+     */
+    public $TagFilter;
+
+    /**
+     * @var AIGWLogConfig <p>日志显示相关开关</p>
+     */
+    public $LogConfig;
+
+    /**
+     * @var AIGWLogDesensitizeConfig <p>日志脱敏规则</p>
+     */
+    public $LogDesensitizeConfig;
+
+    /**
+     * @var AIGWForwardDesensitizeConfig <p>转发脱敏规则</p>
+     */
+    public $ForwardDesensitizeConfig;
+
+    /**
      * @param string $Id <p>模型 API ID。</p>
      * @param string $CreateTime <p>创建时间</p>
      * @param string $ModifyTime <p>修改时间</p>
@@ -160,6 +188,10 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
      * @param boolean $EnableCrossServiceFallback <p>是否开启跨服务fallback</p>
      * @param AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig <p>跨服务fallback配置详情</p>
      * @param boolean $DescribeCloudNativeAPIGatewayLLMModelAPI <p>是否展示模型API</p>
+     * @param AIGWTagFilter $TagFilter <p>标签</p>
+     * @param AIGWLogConfig $LogConfig <p>日志显示相关开关</p>
+     * @param AIGWLogDesensitizeConfig $LogDesensitizeConfig <p>日志脱敏规则</p>
+     * @param AIGWForwardDesensitizeConfig $ForwardDesensitizeConfig <p>转发脱敏规则</p>
      */
     function __construct()
     {
@@ -252,6 +284,26 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
 
         if (array_key_exists("DescribeCloudNativeAPIGatewayLLMModelAPI",$param) and $param["DescribeCloudNativeAPIGatewayLLMModelAPI"] !== null) {
             $this->DescribeCloudNativeAPIGatewayLLMModelAPI = $param["DescribeCloudNativeAPIGatewayLLMModelAPI"];
+        }
+
+        if (array_key_exists("TagFilter",$param) and $param["TagFilter"] !== null) {
+            $this->TagFilter = new AIGWTagFilter();
+            $this->TagFilter->deserialize($param["TagFilter"]);
+        }
+
+        if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
+            $this->LogConfig = new AIGWLogConfig();
+            $this->LogConfig->deserialize($param["LogConfig"]);
+        }
+
+        if (array_key_exists("LogDesensitizeConfig",$param) and $param["LogDesensitizeConfig"] !== null) {
+            $this->LogDesensitizeConfig = new AIGWLogDesensitizeConfig();
+            $this->LogDesensitizeConfig->deserialize($param["LogDesensitizeConfig"]);
+        }
+
+        if (array_key_exists("ForwardDesensitizeConfig",$param) and $param["ForwardDesensitizeConfig"] !== null) {
+            $this->ForwardDesensitizeConfig = new AIGWForwardDesensitizeConfig();
+            $this->ForwardDesensitizeConfig->deserialize($param["ForwardDesensitizeConfig"]);
         }
     }
 }

@@ -20,214 +20,214 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 原生节点池信息
  *
- * @method MachineSetScaling getScaling() 获取伸缩配置
- * @method void setScaling(MachineSetScaling $Scaling) 设置伸缩配置
- * @method array getSubnetIds() 获取子网列表
- * @method void setSubnetIds(array $SubnetIds) 设置子网列表
- * @method array getSecurityGroupIds() 获取安全组列表
+ * @method MachineSetScaling getScaling() 获取<p>伸缩配置</p>
+ * @method void setScaling(MachineSetScaling $Scaling) 设置<p>伸缩配置</p>
+ * @method array getSubnetIds() 获取<p>子网列表</p>
+ * @method void setSubnetIds(array $SubnetIds) 设置<p>子网列表</p>
+ * @method array getSecurityGroupIds() 获取<p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组列表
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MachineUpgradeSettings getUpgradeSettings() 获取自动升级配置
- * @method void setUpgradeSettings(MachineUpgradeSettings $UpgradeSettings) 设置自动升级配置
- * @method boolean getAutoRepair() 获取是否开启自愈能力
+ * @method MachineUpgradeSettings getUpgradeSettings() 获取<p>自动升级配置</p>
+ * @method void setUpgradeSettings(MachineUpgradeSettings $UpgradeSettings) 设置<p>自动升级配置</p>
+ * @method boolean getAutoRepair() 获取<p>是否开启自愈能力</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoRepair(boolean $AutoRepair) 设置是否开启自愈能力
+ * @method void setAutoRepair(boolean $AutoRepair) 设置<p>是否开启自愈能力</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceChargeType() 获取节点计费类型
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置节点计费类型
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取包年包月机型计费配置
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置包年包月机型计费配置
- * @method Disk getSystemDisk() 获取系统盘配置
- * @method void setSystemDisk(Disk $SystemDisk) 设置系统盘配置
- * @method array getKeyIds() 获取密钥 ID 列表
+ * @method string getInstanceChargeType() 获取<p>节点计费类型</p>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>节点计费类型</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取<p>包年包月机型计费配置</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置<p>包年包月机型计费配置</p>
+ * @method Disk getSystemDisk() 获取<p>系统盘配置</p>
+ * @method void setSystemDisk(Disk $SystemDisk) 设置<p>系统盘配置</p>
+ * @method array getKeyIds() 获取<p>密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeyIds(array $KeyIds) 设置密钥 ID 列表
+ * @method void setKeyIds(array $KeyIds) 设置<p>密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ManagementConfig getManagement() 获取Machine 系统配置
- * @method void setManagement(ManagementConfig $Management) 设置Machine 系统配置
- * @method string getHealthCheckPolicyName() 获取故障自愈规则名称
+ * @method ManagementConfig getManagement() 获取<p>Machine 系统配置</p>
+ * @method void setManagement(ManagementConfig $Management) 设置<p>Machine 系统配置</p>
+ * @method string getHealthCheckPolicyName() 获取<p>故障自愈规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHealthCheckPolicyName(string $HealthCheckPolicyName) 设置故障自愈规则名称
+ * @method void setHealthCheckPolicyName(string $HealthCheckPolicyName) 设置<p>故障自愈规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHostNamePattern() 获取原生节点池hostName模式串
+ * @method string getHostNamePattern() 获取<p>原生节点池hostName模式串</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHostNamePattern(string $HostNamePattern) 设置原生节点池hostName模式串
+ * @method void setHostNamePattern(string $HostNamePattern) 设置<p>原生节点池hostName模式串</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getKubeletArgs() 获取kubelet 自定义参数
+ * @method array getKubeletArgs() 获取<p>kubelet 自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKubeletArgs(array $KubeletArgs) 设置kubelet 自定义参数
+ * @method void setKubeletArgs(array $KubeletArgs) 设置<p>kubelet 自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method LifecycleConfig getLifecycle() 获取预定义脚本
- * @method void setLifecycle(LifecycleConfig $Lifecycle) 设置预定义脚本
- * @method string getRuntimeRootDir() 获取运行时根目录
- * @method void setRuntimeRootDir(string $RuntimeRootDir) 设置运行时根目录
- * @method boolean getEnableAutoscaling() 获取是否开启弹性伸缩
- * @method void setEnableAutoscaling(boolean $EnableAutoscaling) 设置是否开启弹性伸缩
- * @method array getInstanceTypes() 获取机型列表
- * @method void setInstanceTypes(array $InstanceTypes) 设置机型列表
- * @method integer getReplicas() 获取期望节点数
- * @method void setReplicas(integer $Replicas) 设置期望节点数
- * @method integer getReadyReplicas() 获取就绪 Machine 个数
- * @method void setReadyReplicas(integer $ReadyReplicas) 设置就绪 Machine 个数
- * @method InternetAccessible getInternetAccessible() 获取公网带宽设置
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽设置
- * @method array getDataDisks() 获取原生节点池数据盘
+ * @method LifecycleConfig getLifecycle() 获取<p>预定义脚本</p>
+ * @method void setLifecycle(LifecycleConfig $Lifecycle) 设置<p>预定义脚本</p>
+ * @method string getRuntimeRootDir() 获取<p>运行时根目录</p>
+ * @method void setRuntimeRootDir(string $RuntimeRootDir) 设置<p>运行时根目录</p>
+ * @method boolean getEnableAutoscaling() 获取<p>是否开启弹性伸缩</p>
+ * @method void setEnableAutoscaling(boolean $EnableAutoscaling) 设置<p>是否开启弹性伸缩</p>
+ * @method array getInstanceTypes() 获取<p>机型列表</p>
+ * @method void setInstanceTypes(array $InstanceTypes) 设置<p>机型列表</p>
+ * @method integer getReplicas() 获取<p>期望节点数</p>
+ * @method void setReplicas(integer $Replicas) 设置<p>期望节点数</p>
+ * @method integer getReadyReplicas() 获取<p>就绪 Machine 个数</p>
+ * @method void setReadyReplicas(integer $ReadyReplicas) 设置<p>就绪 Machine 个数</p>
+ * @method InternetAccessible getInternetAccessible() 获取<p>公网带宽设置</p>
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置<p>公网带宽设置</p>
+ * @method array getDataDisks() 获取<p>原生节点池数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataDisks(array $DataDisks) 设置原生节点池数据盘
+ * @method void setDataDisks(array $DataDisks) 设置<p>原生节点池数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMachineType() 获取原生节点机型 Native, NativeCVM
- * @method void setMachineType(string $MachineType) 设置原生节点机型 Native, NativeCVM
+ * @method string getMachineType() 获取<p>原生节点机型 Native, NativeCVM</p>
+ * @method void setMachineType(string $MachineType) 设置<p>原生节点机型 Native, NativeCVM</p>
  */
 class NativeNodePoolInfo extends AbstractModel
 {
     /**
-     * @var MachineSetScaling 伸缩配置
+     * @var MachineSetScaling <p>伸缩配置</p>
      */
     public $Scaling;
 
     /**
-     * @var array 子网列表
+     * @var array <p>子网列表</p>
      */
     public $SubnetIds;
 
     /**
-     * @var array 安全组列表
+     * @var array <p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupIds;
 
     /**
-     * @var MachineUpgradeSettings 自动升级配置
+     * @var MachineUpgradeSettings <p>自动升级配置</p>
      */
     public $UpgradeSettings;
 
     /**
-     * @var boolean 是否开启自愈能力
+     * @var boolean <p>是否开启自愈能力</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRepair;
 
     /**
-     * @var string 节点计费类型
+     * @var string <p>节点计费类型</p>
      */
     public $InstanceChargeType;
 
     /**
-     * @var InstanceChargePrepaid 包年包月机型计费配置
+     * @var InstanceChargePrepaid <p>包年包月机型计费配置</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var Disk 系统盘配置
+     * @var Disk <p>系统盘配置</p>
      */
     public $SystemDisk;
 
     /**
-     * @var array 密钥 ID 列表
+     * @var array <p>密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyIds;
 
     /**
-     * @var ManagementConfig Machine 系统配置
+     * @var ManagementConfig <p>Machine 系统配置</p>
      */
     public $Management;
 
     /**
-     * @var string 故障自愈规则名称
+     * @var string <p>故障自愈规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheckPolicyName;
 
     /**
-     * @var string 原生节点池hostName模式串
+     * @var string <p>原生节点池hostName模式串</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostNamePattern;
 
     /**
-     * @var array kubelet 自定义参数
+     * @var array <p>kubelet 自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeletArgs;
 
     /**
-     * @var LifecycleConfig 预定义脚本
+     * @var LifecycleConfig <p>预定义脚本</p>
      */
     public $Lifecycle;
 
     /**
-     * @var string 运行时根目录
+     * @var string <p>运行时根目录</p>
      */
     public $RuntimeRootDir;
 
     /**
-     * @var boolean 是否开启弹性伸缩
+     * @var boolean <p>是否开启弹性伸缩</p>
      */
     public $EnableAutoscaling;
 
     /**
-     * @var array 机型列表
+     * @var array <p>机型列表</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var integer 期望节点数
+     * @var integer <p>期望节点数</p>
      */
     public $Replicas;
 
     /**
-     * @var integer 就绪 Machine 个数
+     * @var integer <p>就绪 Machine 个数</p>
      */
     public $ReadyReplicas;
 
     /**
-     * @var InternetAccessible 公网带宽设置
+     * @var InternetAccessible <p>公网带宽设置</p>
      */
     public $InternetAccessible;
 
     /**
-     * @var array 原生节点池数据盘
+     * @var array <p>原生节点池数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataDisks;
 
     /**
-     * @var string 原生节点机型 Native, NativeCVM
+     * @var string <p>原生节点机型 Native, NativeCVM</p>
      */
     public $MachineType;
 
     /**
-     * @param MachineSetScaling $Scaling 伸缩配置
-     * @param array $SubnetIds 子网列表
-     * @param array $SecurityGroupIds 安全组列表
+     * @param MachineSetScaling $Scaling <p>伸缩配置</p>
+     * @param array $SubnetIds <p>子网列表</p>
+     * @param array $SecurityGroupIds <p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MachineUpgradeSettings $UpgradeSettings 自动升级配置
-     * @param boolean $AutoRepair 是否开启自愈能力
+     * @param MachineUpgradeSettings $UpgradeSettings <p>自动升级配置</p>
+     * @param boolean $AutoRepair <p>是否开启自愈能力</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceChargeType 节点计费类型
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 包年包月机型计费配置
-     * @param Disk $SystemDisk 系统盘配置
-     * @param array $KeyIds 密钥 ID 列表
+     * @param string $InstanceChargeType <p>节点计费类型</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>包年包月机型计费配置</p>
+     * @param Disk $SystemDisk <p>系统盘配置</p>
+     * @param array $KeyIds <p>密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ManagementConfig $Management Machine 系统配置
-     * @param string $HealthCheckPolicyName 故障自愈规则名称
+     * @param ManagementConfig $Management <p>Machine 系统配置</p>
+     * @param string $HealthCheckPolicyName <p>故障自愈规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HostNamePattern 原生节点池hostName模式串
+     * @param string $HostNamePattern <p>原生节点池hostName模式串</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $KubeletArgs kubelet 自定义参数
+     * @param array $KubeletArgs <p>kubelet 自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LifecycleConfig $Lifecycle 预定义脚本
-     * @param string $RuntimeRootDir 运行时根目录
-     * @param boolean $EnableAutoscaling 是否开启弹性伸缩
-     * @param array $InstanceTypes 机型列表
-     * @param integer $Replicas 期望节点数
-     * @param integer $ReadyReplicas 就绪 Machine 个数
-     * @param InternetAccessible $InternetAccessible 公网带宽设置
-     * @param array $DataDisks 原生节点池数据盘
+     * @param LifecycleConfig $Lifecycle <p>预定义脚本</p>
+     * @param string $RuntimeRootDir <p>运行时根目录</p>
+     * @param boolean $EnableAutoscaling <p>是否开启弹性伸缩</p>
+     * @param array $InstanceTypes <p>机型列表</p>
+     * @param integer $Replicas <p>期望节点数</p>
+     * @param integer $ReadyReplicas <p>就绪 Machine 个数</p>
+     * @param InternetAccessible $InternetAccessible <p>公网带宽设置</p>
+     * @param array $DataDisks <p>原生节点池数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MachineType 原生节点机型 Native, NativeCVM
+     * @param string $MachineType <p>原生节点机型 Native, NativeCVM</p>
      */
     function __construct()
     {

@@ -232,6 +232,8 @@ use TencentCloud\Common\AbstractModel;
 	
  * @method array getCustomDetectQueries() 获取自定义检测标签
  * @method void setCustomDetectQueries(array $CustomDetectQueries) 设置自定义检测标签
+ * @method array getDetectContinuous() 获取标签持续检测配置
+ * @method void setDetectContinuous(array $DetectContinuous) 设置标签持续检测配置
  */
 class VisionSummaryConfig extends AbstractModel
 {
@@ -362,6 +364,11 @@ class VisionSummaryConfig extends AbstractModel
     public $CustomDetectQueries;
 
     /**
+     * @var array 标签持续检测配置
+     */
+    public $DetectContinuous;
+
+    /**
      * @param string $OutputLang 主输出语言，可选值包括：
 - `zh` 中文（默认值）
 - `en` 英语
@@ -468,6 +475,7 @@ class VisionSummaryConfig extends AbstractModel
 - `pet_scratching_door` 宠物挠门
 	
      * @param array $CustomDetectQueries 自定义检测标签
+     * @param array $DetectContinuous 标签持续检测配置
      */
     function __construct()
     {
@@ -504,6 +512,15 @@ class VisionSummaryConfig extends AbstractModel
                 $obj = new VisionCustomDetectQuery();
                 $obj->deserialize($value);
                 array_push($this->CustomDetectQueries, $obj);
+            }
+        }
+
+        if (array_key_exists("DetectContinuous",$param) and $param["DetectContinuous"] !== null) {
+            $this->DetectContinuous = [];
+            foreach ($param["DetectContinuous"] as $key => $value){
+                $obj = new SeeDetectContinuousConfig();
+                $obj->deserialize($value);
+                array_push($this->DetectContinuous, $obj);
             }
         }
     }

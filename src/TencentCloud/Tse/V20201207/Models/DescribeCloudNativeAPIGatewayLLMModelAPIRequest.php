@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayLLMModelAPI请求参数结构体
  *
- * @method string getGatewayId() 获取网关 id。
- * @method void setGatewayId(string $GatewayId) 设置网关 id。
- * @method string getModelAPIId() 获取模型 API ID，全局唯一标识。
- * @method void setModelAPIId(string $ModelAPIId) 设置模型 API ID，全局唯一标识。
+ * @method string getGatewayId() 获取<p>网关 id。</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关 id。</p>
+ * @method string getModelAPIId() 获取<p>模型 API ID，全局唯一标识。</p>
+ * @method void setModelAPIId(string $ModelAPIId) 设置<p>模型 API ID，全局唯一标识。</p>
  */
 class DescribeCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
 {
     /**
-     * @var string 网关 id。
+     * @var string <p>网关 id。</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 模型 API ID，全局唯一标识。
+     * @var string <p>模型 API ID，全局唯一标识。</p>
      */
     public $ModelAPIId;
 
     /**
-     * @param string $GatewayId 网关 id。
-     * @param string $ModelAPIId 模型 API ID，全局唯一标识。
+     * @param string $GatewayId <p>网关 id。</p>
+     * @param string $ModelAPIId <p>模型 API ID，全局唯一标识。</p>
      */
     function __construct()
     {

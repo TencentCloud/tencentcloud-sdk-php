@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayConsumerList请求参数结构体
  *
- * @method string getGatewayId() 获取网关实例id
- * @method void setGatewayId(string $GatewayId) 设置网关实例id
- * @method integer getLimit() 获取页显示条数，最大20
- * @method void setLimit(integer $Limit) 设置页显示条数，最大20
- * @method integer getOffset() 获取起始位置
- * @method void setOffset(integer $Offset) 设置起始位置
+ * @method string getGatewayId() 获取<p>网关实例id</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关实例id</p>
+ * @method integer getLimit() 获取<p>每页条数，范围 [1, 100]，默认 20。</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页条数，范围 [1, 100]，默认 20。</p>
+ * @method integer getOffset() 获取<p>起始位置，从 0 开始。</p>
+ * @method void setOffset(integer $Offset) 设置<p>起始位置，从 0 开始。</p>
  */
 class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractModel
 {
     /**
-     * @var string 网关实例id
+     * @var string <p>网关实例id</p>
      */
     public $GatewayId;
 
     /**
-     * @var integer 页显示条数，最大20
+     * @var integer <p>每页条数，范围 [1, 100]，默认 20。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 起始位置
+     * @var integer <p>起始位置，从 0 开始。</p>
      */
     public $Offset;
 
     /**
-     * @param string $GatewayId 网关实例id
-     * @param integer $Limit 页显示条数，最大20
-     * @param integer $Offset 起始位置
+     * @param string $GatewayId <p>网关实例id</p>
+     * @param integer $Limit <p>每页条数，范围 [1, 100]，默认 20。</p>
+     * @param integer $Offset <p>起始位置，从 0 开始。</p>
      */
     function __construct()
     {

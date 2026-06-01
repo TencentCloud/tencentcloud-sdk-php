@@ -20,262 +20,270 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 服务基础配置信息
  *
- * @method string getEnvId() 获取环境 Id
- * @method void setEnvId(string $EnvId) 设置环境 Id
- * @method string getServerName() 获取服务名
- * @method void setServerName(string $ServerName) 设置服务名
- * @method array getOpenAccessTypes() 获取是否开启公网访问
- * @method void setOpenAccessTypes(array $OpenAccessTypes) 设置是否开启公网访问
- * @method float getCpu() 获取Cpu 规格
- * @method void setCpu(float $Cpu) 设置Cpu 规格
- * @method float getMem() 获取Mem 规格
- * @method void setMem(float $Mem) 设置Mem 规格
- * @method integer getMinNum() 获取最小副本数
- * @method void setMinNum(integer $MinNum) 设置最小副本数
- * @method integer getMaxNum() 获取最大副本数
- * @method void setMaxNum(integer $MaxNum) 设置最大副本数
- * @method array getPolicyDetails() 获取扩缩容配置
- * @method void setPolicyDetails(array $PolicyDetails) 设置扩缩容配置
- * @method string getCustomLogs() 获取日志采集路径
- * @method void setCustomLogs(string $CustomLogs) 设置日志采集路径
- * @method string getEnvParams() 获取环境变量
- * @method void setEnvParams(string $EnvParams) 设置环境变量
- * @method integer getInitialDelaySeconds() 获取延迟检测时间
- * @method void setInitialDelaySeconds(integer $InitialDelaySeconds) 设置延迟检测时间
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method integer getPort() 获取服务端口
- * @method void setPort(integer $Port) 设置服务端口
- * @method boolean getHasDockerfile() 获取是否有Dockerfile
- * @method void setHasDockerfile(boolean $HasDockerfile) 设置是否有Dockerfile
- * @method string getDockerfile() 获取Dockerfile 文件名
- * @method void setDockerfile(string $Dockerfile) 设置Dockerfile 文件名
- * @method string getBuildDir() 获取构建目录
- * @method void setBuildDir(string $BuildDir) 设置构建目录
- * @method string getLogType() 获取日志类型: none | default | custom
- * @method void setLogType(string $LogType) 设置日志类型: none | default | custom
- * @method string getLogSetId() 获取cls setId
- * @method void setLogSetId(string $LogSetId) 设置cls setId
- * @method string getLogTopicId() 获取cls 主题id
- * @method void setLogTopicId(string $LogTopicId) 设置cls 主题id
- * @method string getLogParseType() 获取解析类型：json ｜ line
- * @method void setLogParseType(string $LogParseType) 设置解析类型：json ｜ line
- * @method string getTag() 获取服务标签, function: 函数托管
- * @method void setTag(string $Tag) 设置服务标签, function: 函数托管
- * @method string getInternalAccess() 获取内网访问开关 close | open
- * @method void setInternalAccess(string $InternalAccess) 设置内网访问开关 close | open
- * @method string getInternalDomain() 获取内网域名
- * @method void setInternalDomain(string $InternalDomain) 设置内网域名
- * @method string getOperationMode() 获取运行模式
- * @method void setOperationMode(string $OperationMode) 设置运行模式
- * @method array getTimerScale() 获取定时扩缩容配置
- * @method void setTimerScale(array $TimerScale) 设置定时扩缩容配置
- * @method array getEntryPoint() 获取Dockerfile EntryPoint 参数
- * @method void setEntryPoint(array $EntryPoint) 设置Dockerfile EntryPoint 参数
- * @method array getCmd() 获取Dockerfile Cmd 参数
- * @method void setCmd(array $Cmd) 设置Dockerfile Cmd 参数
- * @method string getSessionAffinity() 获取会话亲和性开关
+ * @method string getEnvId() 获取<p>环境 Id</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境 Id</p>
+ * @method string getServerName() 获取<p>服务名</p>
+ * @method void setServerName(string $ServerName) 设置<p>服务名</p>
+ * @method array getOpenAccessTypes() 获取<p>是否开启公网访问</p>
+ * @method void setOpenAccessTypes(array $OpenAccessTypes) 设置<p>是否开启公网访问</p>
+ * @method float getCpu() 获取<p>Cpu 规格</p>
+ * @method void setCpu(float $Cpu) 设置<p>Cpu 规格</p>
+ * @method float getMem() 获取<p>Mem 规格</p>
+ * @method void setMem(float $Mem) 设置<p>Mem 规格</p>
+ * @method integer getMinNum() 获取<p>最小副本数</p>
+ * @method void setMinNum(integer $MinNum) 设置<p>最小副本数</p>
+ * @method integer getMaxNum() 获取<p>最大副本数</p>
+ * @method void setMaxNum(integer $MaxNum) 设置<p>最大副本数</p>
+ * @method array getPolicyDetails() 获取<p>扩缩容配置</p>
+ * @method void setPolicyDetails(array $PolicyDetails) 设置<p>扩缩容配置</p>
+ * @method string getCustomLogs() 获取<p>日志采集路径</p>
+ * @method void setCustomLogs(string $CustomLogs) 设置<p>日志采集路径</p>
+ * @method string getEnvParams() 获取<p>环境变量</p>
+ * @method void setEnvParams(string $EnvParams) 设置<p>环境变量</p>
+ * @method integer getInitialDelaySeconds() 获取<p>延迟检测时间</p>
+ * @method void setInitialDelaySeconds(integer $InitialDelaySeconds) 设置<p>延迟检测时间</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method integer getPort() 获取<p>服务端口</p>
+ * @method void setPort(integer $Port) 设置<p>服务端口</p>
+ * @method boolean getHasDockerfile() 获取<p>是否有Dockerfile</p>
+ * @method void setHasDockerfile(boolean $HasDockerfile) 设置<p>是否有Dockerfile</p>
+ * @method string getDockerfile() 获取<p>Dockerfile 文件名</p>
+ * @method void setDockerfile(string $Dockerfile) 设置<p>Dockerfile 文件名</p>
+ * @method string getBuildDir() 获取<p>构建目录</p>
+ * @method void setBuildDir(string $BuildDir) 设置<p>构建目录</p>
+ * @method string getLogType() 获取<p>日志类型: none | default | custom</p>
+ * @method void setLogType(string $LogType) 设置<p>日志类型: none | default | custom</p>
+ * @method string getLogSetId() 获取<p>cls setId</p>
+ * @method void setLogSetId(string $LogSetId) 设置<p>cls setId</p>
+ * @method string getLogTopicId() 获取<p>cls 主题id</p>
+ * @method void setLogTopicId(string $LogTopicId) 设置<p>cls 主题id</p>
+ * @method string getLogParseType() 获取<p>解析类型：json ｜ line</p>
+ * @method void setLogParseType(string $LogParseType) 设置<p>解析类型：json ｜ line</p>
+ * @method string getTag() 获取<p>服务标签, function: 函数托管</p>
+ * @method void setTag(string $Tag) 设置<p>服务标签, function: 函数托管</p>
+ * @method string getInternalAccess() 获取<p>内网访问开关 close | open</p>
+ * @method void setInternalAccess(string $InternalAccess) 设置<p>内网访问开关 close | open</p>
+ * @method string getInternalDomain() 获取<p>内网域名</p>
+ * @method void setInternalDomain(string $InternalDomain) 设置<p>内网域名</p>
+ * @method string getOperationMode() 获取<p>运行模式</p>
+ * @method void setOperationMode(string $OperationMode) 设置<p>运行模式</p>
+ * @method array getTimerScale() 获取<p>定时扩缩容配置</p>
+ * @method void setTimerScale(array $TimerScale) 设置<p>定时扩缩容配置</p>
+ * @method array getEntryPoint() 获取<p>Dockerfile EntryPoint 参数</p>
+ * @method void setEntryPoint(array $EntryPoint) 设置<p>Dockerfile EntryPoint 参数</p>
+ * @method array getCmd() 获取<p>Dockerfile Cmd 参数</p>
+ * @method void setCmd(array $Cmd) 设置<p>Dockerfile Cmd 参数</p>
+ * @method string getSessionAffinity() 获取<p>会话亲和性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSessionAffinity(string $SessionAffinity) 设置会话亲和性开关
+ * @method void setSessionAffinity(string $SessionAffinity) 设置<p>会话亲和性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method VpcConf getVpcConf() 获取Vpc 配置参数
- * @method void setVpcConf(VpcConf $VpcConf) 设置Vpc 配置参数
- * @method array getVolumesConf() 获取存储配置信息
- * @method void setVolumesConf(array $VolumesConf) 设置存储配置信息
- * @method string getLinkImageRegistry() 获取关联镜像密钥
- * @method void setLinkImageRegistry(string $LinkImageRegistry) 设置关联镜像密钥
+ * @method VpcConf getVpcConf() 获取<p>Vpc 配置参数</p>
+ * @method void setVpcConf(VpcConf $VpcConf) 设置<p>Vpc 配置参数</p>
+ * @method array getVolumesConf() 获取<p>存储配置信息</p>
+ * @method void setVolumesConf(array $VolumesConf) 设置<p>存储配置信息</p>
+ * @method string getLinkImageRegistry() 获取<p>关联镜像密钥</p>
+ * @method void setLinkImageRegistry(string $LinkImageRegistry) 设置<p>关联镜像密钥</p>
+ * @method PublicNetConf getPublicNetConf() 获取<p>公网访问配置</p>
+ * @method void setPublicNetConf(PublicNetConf $PublicNetConf) 设置<p>公网访问配置</p>
  */
 class ServerBaseConfig extends AbstractModel
 {
     /**
-     * @var string 环境 Id
+     * @var string <p>环境 Id</p>
      */
     public $EnvId;
 
     /**
-     * @var string 服务名
+     * @var string <p>服务名</p>
      */
     public $ServerName;
 
     /**
-     * @var array 是否开启公网访问
+     * @var array <p>是否开启公网访问</p>
      */
     public $OpenAccessTypes;
 
     /**
-     * @var float Cpu 规格
+     * @var float <p>Cpu 规格</p>
      */
     public $Cpu;
 
     /**
-     * @var float Mem 规格
+     * @var float <p>Mem 规格</p>
      */
     public $Mem;
 
     /**
-     * @var integer 最小副本数
+     * @var integer <p>最小副本数</p>
      */
     public $MinNum;
 
     /**
-     * @var integer 最大副本数
+     * @var integer <p>最大副本数</p>
      */
     public $MaxNum;
 
     /**
-     * @var array 扩缩容配置
+     * @var array <p>扩缩容配置</p>
      */
     public $PolicyDetails;
 
     /**
-     * @var string 日志采集路径
+     * @var string <p>日志采集路径</p>
      */
     public $CustomLogs;
 
     /**
-     * @var string 环境变量
+     * @var string <p>环境变量</p>
      */
     public $EnvParams;
 
     /**
-     * @var integer 延迟检测时间
+     * @var integer <p>延迟检测时间</p>
      */
     public $InitialDelaySeconds;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 服务端口
+     * @var integer <p>服务端口</p>
      */
     public $Port;
 
     /**
-     * @var boolean 是否有Dockerfile
+     * @var boolean <p>是否有Dockerfile</p>
      */
     public $HasDockerfile;
 
     /**
-     * @var string Dockerfile 文件名
+     * @var string <p>Dockerfile 文件名</p>
      */
     public $Dockerfile;
 
     /**
-     * @var string 构建目录
+     * @var string <p>构建目录</p>
      */
     public $BuildDir;
 
     /**
-     * @var string 日志类型: none | default | custom
+     * @var string <p>日志类型: none | default | custom</p>
      */
     public $LogType;
 
     /**
-     * @var string cls setId
+     * @var string <p>cls setId</p>
      */
     public $LogSetId;
 
     /**
-     * @var string cls 主题id
+     * @var string <p>cls 主题id</p>
      */
     public $LogTopicId;
 
     /**
-     * @var string 解析类型：json ｜ line
+     * @var string <p>解析类型：json ｜ line</p>
      */
     public $LogParseType;
 
     /**
-     * @var string 服务标签, function: 函数托管
+     * @var string <p>服务标签, function: 函数托管</p>
      */
     public $Tag;
 
     /**
-     * @var string 内网访问开关 close | open
+     * @var string <p>内网访问开关 close | open</p>
      */
     public $InternalAccess;
 
     /**
-     * @var string 内网域名
+     * @var string <p>内网域名</p>
      */
     public $InternalDomain;
 
     /**
-     * @var string 运行模式
+     * @var string <p>运行模式</p>
      */
     public $OperationMode;
 
     /**
-     * @var array 定时扩缩容配置
+     * @var array <p>定时扩缩容配置</p>
      */
     public $TimerScale;
 
     /**
-     * @var array Dockerfile EntryPoint 参数
+     * @var array <p>Dockerfile EntryPoint 参数</p>
      */
     public $EntryPoint;
 
     /**
-     * @var array Dockerfile Cmd 参数
+     * @var array <p>Dockerfile Cmd 参数</p>
      */
     public $Cmd;
 
     /**
-     * @var string 会话亲和性开关
+     * @var string <p>会话亲和性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionAffinity;
 
     /**
-     * @var VpcConf Vpc 配置参数
+     * @var VpcConf <p>Vpc 配置参数</p>
      */
     public $VpcConf;
 
     /**
-     * @var array 存储配置信息
+     * @var array <p>存储配置信息</p>
      */
     public $VolumesConf;
 
     /**
-     * @var string 关联镜像密钥
+     * @var string <p>关联镜像密钥</p>
      */
     public $LinkImageRegistry;
 
     /**
-     * @param string $EnvId 环境 Id
-     * @param string $ServerName 服务名
-     * @param array $OpenAccessTypes 是否开启公网访问
-     * @param float $Cpu Cpu 规格
-     * @param float $Mem Mem 规格
-     * @param integer $MinNum 最小副本数
-     * @param integer $MaxNum 最大副本数
-     * @param array $PolicyDetails 扩缩容配置
-     * @param string $CustomLogs 日志采集路径
-     * @param string $EnvParams 环境变量
-     * @param integer $InitialDelaySeconds 延迟检测时间
-     * @param string $CreateTime 创建时间
-     * @param integer $Port 服务端口
-     * @param boolean $HasDockerfile 是否有Dockerfile
-     * @param string $Dockerfile Dockerfile 文件名
-     * @param string $BuildDir 构建目录
-     * @param string $LogType 日志类型: none | default | custom
-     * @param string $LogSetId cls setId
-     * @param string $LogTopicId cls 主题id
-     * @param string $LogParseType 解析类型：json ｜ line
-     * @param string $Tag 服务标签, function: 函数托管
-     * @param string $InternalAccess 内网访问开关 close | open
-     * @param string $InternalDomain 内网域名
-     * @param string $OperationMode 运行模式
-     * @param array $TimerScale 定时扩缩容配置
-     * @param array $EntryPoint Dockerfile EntryPoint 参数
-     * @param array $Cmd Dockerfile Cmd 参数
-     * @param string $SessionAffinity 会话亲和性开关
+     * @var PublicNetConf <p>公网访问配置</p>
+     */
+    public $PublicNetConf;
+
+    /**
+     * @param string $EnvId <p>环境 Id</p>
+     * @param string $ServerName <p>服务名</p>
+     * @param array $OpenAccessTypes <p>是否开启公网访问</p>
+     * @param float $Cpu <p>Cpu 规格</p>
+     * @param float $Mem <p>Mem 规格</p>
+     * @param integer $MinNum <p>最小副本数</p>
+     * @param integer $MaxNum <p>最大副本数</p>
+     * @param array $PolicyDetails <p>扩缩容配置</p>
+     * @param string $CustomLogs <p>日志采集路径</p>
+     * @param string $EnvParams <p>环境变量</p>
+     * @param integer $InitialDelaySeconds <p>延迟检测时间</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param integer $Port <p>服务端口</p>
+     * @param boolean $HasDockerfile <p>是否有Dockerfile</p>
+     * @param string $Dockerfile <p>Dockerfile 文件名</p>
+     * @param string $BuildDir <p>构建目录</p>
+     * @param string $LogType <p>日志类型: none | default | custom</p>
+     * @param string $LogSetId <p>cls setId</p>
+     * @param string $LogTopicId <p>cls 主题id</p>
+     * @param string $LogParseType <p>解析类型：json ｜ line</p>
+     * @param string $Tag <p>服务标签, function: 函数托管</p>
+     * @param string $InternalAccess <p>内网访问开关 close | open</p>
+     * @param string $InternalDomain <p>内网域名</p>
+     * @param string $OperationMode <p>运行模式</p>
+     * @param array $TimerScale <p>定时扩缩容配置</p>
+     * @param array $EntryPoint <p>Dockerfile EntryPoint 参数</p>
+     * @param array $Cmd <p>Dockerfile Cmd 参数</p>
+     * @param string $SessionAffinity <p>会话亲和性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcConf $VpcConf Vpc 配置参数
-     * @param array $VolumesConf 存储配置信息
-     * @param string $LinkImageRegistry 关联镜像密钥
+     * @param VpcConf $VpcConf <p>Vpc 配置参数</p>
+     * @param array $VolumesConf <p>存储配置信息</p>
+     * @param string $LinkImageRegistry <p>关联镜像密钥</p>
+     * @param PublicNetConf $PublicNetConf <p>公网访问配置</p>
      */
     function __construct()
     {
@@ -428,6 +436,11 @@ class ServerBaseConfig extends AbstractModel
 
         if (array_key_exists("LinkImageRegistry",$param) and $param["LinkImageRegistry"] !== null) {
             $this->LinkImageRegistry = $param["LinkImageRegistry"];
+        }
+
+        if (array_key_exists("PublicNetConf",$param) and $param["PublicNetConf"] !== null) {
+            $this->PublicNetConf = new PublicNetConf();
+            $this->PublicNetConf->deserialize($param["PublicNetConf"]);
         }
     }
 }

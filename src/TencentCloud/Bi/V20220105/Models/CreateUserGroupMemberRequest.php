@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserGroupMember请求参数结构体
  *
-
+ * @method integer getGroupId() 获取<p>用户组id</p>
+ * @method void setGroupId(integer $GroupId) 设置<p>用户组id</p>
+ * @method array getUserIdList() 获取<p>用户id集合</p>
+ * @method void setUserIdList(array $UserIdList) 设置<p>用户id集合</p>
  */
 class CreateUserGroupMemberRequest extends AbstractModel
 {
-
+    /**
+     * @var integer <p>用户组id</p>
+     */
+    public $GroupId;
 
     /**
+     * @var array <p>用户id集合</p>
+     */
+    public $UserIdList;
 
+    /**
+     * @param integer $GroupId <p>用户组id</p>
+     * @param array $UserIdList <p>用户id集合</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class CreateUserGroupMemberRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
 
+        if (array_key_exists("UserIdList",$param) and $param["UserIdList"] !== null) {
+            $this->UserIdList = $param["UserIdList"];
+        }
     }
 }

@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserGroup请求参数结构体
  *
- * @method string getGroupName() 获取用户组名称
- * @method void setGroupName(string $GroupName) 设置用户组名称
- * @method integer getLocation() 获取位置
- * @method void setLocation(integer $Location) 设置位置
- * @method integer getParentId() 获取父用户组id
- * @method void setParentId(integer $ParentId) 设置父用户组id
+ * @method string getAdminUserId() 获取<p>组管理员</p>
+ * @method void setAdminUserId(string $AdminUserId) 设置<p>组管理员</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method string getGroupName() 获取<p>用户组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>用户组名称</p>
+ * @method integer getLocation() 获取<p>位置</p>
+ * @method void setLocation(integer $Location) 设置<p>位置</p>
+ * @method integer getParentId() 获取<p>父用户组id</p>
+ * @method void setParentId(integer $ParentId) 设置<p>父用户组id</p>
  */
 class CreateUserGroupRequest extends AbstractModel
 {
     /**
-     * @var string 用户组名称
+     * @var string <p>组管理员</p>
+     */
+    public $AdminUserId;
+
+    /**
+     * @var string <p>描述</p>
+     */
+    public $Description;
+
+    /**
+     * @var string <p>用户组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var integer 位置
+     * @var integer <p>位置</p>
      */
     public $Location;
 
     /**
-     * @var integer 父用户组id
+     * @var integer <p>父用户组id</p>
      */
     public $ParentId;
 
     /**
-     * @param string $GroupName 用户组名称
-     * @param integer $Location 位置
-     * @param integer $ParentId 父用户组id
+     * @param string $AdminUserId <p>组管理员</p>
+     * @param string $Description <p>描述</p>
+     * @param string $GroupName <p>用户组名称</p>
+     * @param integer $Location <p>位置</p>
+     * @param integer $ParentId <p>父用户组id</p>
      */
     function __construct()
     {
@@ -62,6 +78,14 @@ class CreateUserGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AdminUserId",$param) and $param["AdminUserId"] !== null) {
+            $this->AdminUserId = $param["AdminUserId"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
         if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
             $this->GroupName = $param["GroupName"];
         }

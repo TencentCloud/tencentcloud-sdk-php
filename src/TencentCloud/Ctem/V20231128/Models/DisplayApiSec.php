@@ -20,98 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * API安全详情
  *
- * @method integer getId() 获取主键ID
- * @method void setId(integer $Id) 设置主键ID
- * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
- * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
- * @method string getUrl() 获取Url
- * @method void setUrl(string $Url) 设置Url
- * @method string getHost() 获取Host地址
- * @method void setHost(string $Host) 设置Host地址
- * @method string getPath() 获取Path路径
- * @method void setPath(string $Path) 设置Path路径
- * @method string getMethod() 获取方法：POST、GET、DELETE等
- * @method void setMethod(string $Method) 设置方法：POST、GET、DELETE等
- * @method string getStatus() 获取修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中
- * @method void setStatus(string $Status) 设置修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中
- * @method integer getCode() 获取状态码
- * @method void setCode(integer $Code) 设置状态码
- * @method string getRequest() 获取请求体
- * @method void setRequest(string $Request) 设置请求体
- * @method string getResponse() 获取响应体
- * @method void setResponse(string $Response) 设置响应体
- * @method boolean getIsRiskAPI() 获取是否风险API
- * @method void setIsRiskAPI(boolean $IsRiskAPI) 设置是否风险API
+ * @method integer getId() 获取<p>主键ID</p>
+ * @method void setId(integer $Id) 设置<p>主键ID</p>
+ * @method DisplayToolCommon getDisplayToolCommon() 获取<p>公共字段</p>
+ * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置<p>公共字段</p>
+ * @method string getUrl() 获取<p>Url</p>
+ * @method void setUrl(string $Url) 设置<p>Url</p>
+ * @method string getHost() 获取<p>Host地址</p>
+ * @method void setHost(string $Host) 设置<p>Host地址</p>
+ * @method string getPath() 获取<p>Path路径</p>
+ * @method void setPath(string $Path) 设置<p>Path路径</p>
+ * @method string getMethod() 获取<p>方法：POST、GET、DELETE等</p>
+ * @method void setMethod(string $Method) 设置<p>方法：POST、GET、DELETE等</p>
+ * @method string getStatus() 获取<p>修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中</p>
+ * @method void setStatus(string $Status) 设置<p>修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中</p>
+ * @method integer getCode() 获取<p>状态码</p>
+ * @method void setCode(integer $Code) 设置<p>状态码</p>
+ * @method string getRequest() 获取<p>请求体</p>
+ * @method void setRequest(string $Request) 设置<p>请求体</p>
+ * @method string getResponse() 获取<p>响应体</p>
+ * @method void setResponse(string $Response) 设置<p>响应体</p>
+ * @method boolean getIsRiskAPI() 获取<p>是否风险API</p>
+ * @method void setIsRiskAPI(boolean $IsRiskAPI) 设置<p>是否风险API</p>
+ * @method integer getAggregationCount() 获取<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+ * @method void setAggregationCount(integer $AggregationCount) 设置<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
  */
 class DisplayApiSec extends AbstractModel
 {
     /**
-     * @var integer 主键ID
+     * @var integer <p>主键ID</p>
      */
     public $Id;
 
     /**
-     * @var DisplayToolCommon 公共字段
+     * @var DisplayToolCommon <p>公共字段</p>
      */
     public $DisplayToolCommon;
 
     /**
-     * @var string Url
+     * @var string <p>Url</p>
      */
     public $Url;
 
     /**
-     * @var string Host地址
+     * @var string <p>Host地址</p>
      */
     public $Host;
 
     /**
-     * @var string Path路径
+     * @var string <p>Path路径</p>
      */
     public $Path;
 
     /**
-     * @var string 方法：POST、GET、DELETE等
+     * @var string <p>方法：POST、GET、DELETE等</p>
      */
     public $Method;
 
     /**
-     * @var string 修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中
+     * @var string <p>修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中</p>
      */
     public $Status;
 
     /**
-     * @var integer 状态码
+     * @var integer <p>状态码</p>
      */
     public $Code;
 
     /**
-     * @var string 请求体
+     * @var string <p>请求体</p>
      */
     public $Request;
 
     /**
-     * @var string 响应体
+     * @var string <p>响应体</p>
      */
     public $Response;
 
     /**
-     * @var boolean 是否风险API
+     * @var boolean <p>是否风险API</p>
      */
     public $IsRiskAPI;
 
     /**
-     * @param integer $Id 主键ID
-     * @param DisplayToolCommon $DisplayToolCommon 公共字段
-     * @param string $Url Url
-     * @param string $Host Host地址
-     * @param string $Path Path路径
-     * @param string $Method 方法：POST、GET、DELETE等
-     * @param string $Status 修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中
-     * @param integer $Code 状态码
-     * @param string $Request 请求体
-     * @param string $Response 响应体
-     * @param boolean $IsRiskAPI 是否风险API
+     * @var integer <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public $AggregationCount;
+
+    /**
+     * @param integer $Id <p>主键ID</p>
+     * @param DisplayToolCommon $DisplayToolCommon <p>公共字段</p>
+     * @param string $Url <p>Url</p>
+     * @param string $Host <p>Host地址</p>
+     * @param string $Path <p>Path路径</p>
+     * @param string $Method <p>方法：POST、GET、DELETE等</p>
+     * @param string $Status <p>修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中</p>
+     * @param integer $Code <p>状态码</p>
+     * @param string $Request <p>请求体</p>
+     * @param string $Response <p>响应体</p>
+     * @param boolean $IsRiskAPI <p>是否风险API</p>
+     * @param integer $AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class DisplayApiSec extends AbstractModel
 
         if (array_key_exists("IsRiskAPI",$param) and $param["IsRiskAPI"] !== null) {
             $this->IsRiskAPI = $param["IsRiskAPI"];
+        }
+
+        if (array_key_exists("AggregationCount",$param) and $param["AggregationCount"] !== null) {
+            $this->AggregationCount = $param["AggregationCount"];
         }
     }
 }

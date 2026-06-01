@@ -20,146 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCustomer请求参数结构体
  *
- * @method string getName() 获取企业名称
- * @method void setName(string $Name) 设置企业名称
- * @method integer getPercent() 获取百分比取值范围为30-100
- * @method void setPercent(integer $Percent) 设置百分比取值范围为30-100
- * @method string getScanType() 获取资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
- * @method void setScanType(string $ScanType) 设置资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
- * @method integer getId() 获取企业ID
- * @method void setId(integer $Id) 设置企业ID
- * @method string getScanCron() 获取周期测绘时间
- * @method void setScanCron(string $ScanCron) 设置周期测绘时间
- * @method boolean getIsScanNow() 获取是否立即启动
- * @method void setIsScanNow(boolean $IsScanNow) 设置是否立即启动
- * @method boolean getEnableCron() 获取是否启用周期测绘
- * @method void setEnableCron(boolean $EnableCron) 设置是否启用周期测绘
- * @method boolean getEnableScanSubEnterprise() 获取是否扫描子公司
- * @method void setEnableScanSubEnterprise(boolean $EnableScanSubEnterprise) 设置是否扫描子公司
- * @method boolean getEnableAuth() 获取是否授权
- * @method void setEnableAuth(boolean $EnableAuth) 设置是否授权
- * @method string getAuthStartAt() 获取授权开始时间
- * @method void setAuthStartAt(string $AuthStartAt) 设置授权开始时间
- * @method string getAuthEndAt() 获取授权结束时间
- * @method void setAuthEndAt(string $AuthEndAt) 设置授权结束时间
- * @method string getAuthFile() 获取授权文件id
- * @method void setAuthFile(string $AuthFile) 设置授权文件id
- * @method string getScanTime() 获取测绘时间配置项，采用json字符串格式
- * @method void setScanTime(string $ScanTime) 设置测绘时间配置项，采用json字符串格式
- * @method string getIcon() 获取企业图标
- * @method void setIcon(string $Icon) 设置企业图标
- * @method integer getQps() 获取并发
- * @method void setQps(integer $Qps) 设置并发
- * @method integer getSubCompanyLevel() 获取子公司拓展层次
- * @method void setSubCompanyLevel(integer $SubCompanyLevel) 设置子公司拓展层次
- * @method boolean getIsIncludeFullScan() 获取是否包含完整的扫描
- * @method void setIsIncludeFullScan(boolean $IsIncludeFullScan) 设置是否包含完整的扫描
+ * @method string getName() 获取<p>企业名称</p>
+ * @method void setName(string $Name) 设置<p>企业名称</p>
+ * @method integer getPercent() 获取<p>百分比取值范围为30-100</p>
+ * @method void setPercent(integer $Percent) 设置<p>百分比取值范围为30-100</p>
+ * @method string getScanType() 获取<p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
+ * @method void setScanType(string $ScanType) 设置<p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
+ * @method integer getId() 获取<p>企业ID</p>
+ * @method void setId(integer $Id) 设置<p>企业ID</p>
+ * @method string getScanCron() 获取<p>周期测绘时间</p>
+ * @method void setScanCron(string $ScanCron) 设置<p>周期测绘时间</p>
+ * @method boolean getIsScanNow() 获取<p>是否立即启动</p>
+ * @method void setIsScanNow(boolean $IsScanNow) 设置<p>是否立即启动</p>
+ * @method boolean getEnableCron() 获取<p>是否启用周期测绘</p>
+ * @method void setEnableCron(boolean $EnableCron) 设置<p>是否启用周期测绘</p>
+ * @method boolean getEnableScanSubEnterprise() 获取<p>是否扫描子公司</p>
+ * @method void setEnableScanSubEnterprise(boolean $EnableScanSubEnterprise) 设置<p>是否扫描子公司</p>
+ * @method boolean getEnableAuth() 获取<p>是否授权</p>
+ * @method void setEnableAuth(boolean $EnableAuth) 设置<p>是否授权</p>
+ * @method string getAuthStartAt() 获取<p>授权开始时间</p>
+ * @method void setAuthStartAt(string $AuthStartAt) 设置<p>授权开始时间</p>
+ * @method string getAuthEndAt() 获取<p>授权结束时间</p>
+ * @method void setAuthEndAt(string $AuthEndAt) 设置<p>授权结束时间</p>
+ * @method string getAuthFile() 获取<p>授权文件id</p>
+ * @method void setAuthFile(string $AuthFile) 设置<p>授权文件id</p>
+ * @method string getScanTime() 获取<p>测绘时间配置项，采用json字符串格式</p>
+ * @method void setScanTime(string $ScanTime) 设置<p>测绘时间配置项，采用json字符串格式</p>
+ * @method string getIcon() 获取<p>企业图标</p>
+ * @method void setIcon(string $Icon) 设置<p>企业图标</p>
+ * @method integer getQps() 获取<p>并发</p>
+ * @method void setQps(integer $Qps) 设置<p>并发</p>
+ * @method integer getSubCompanyLevel() 获取<p>子公司拓展层次</p>
+ * @method void setSubCompanyLevel(integer $SubCompanyLevel) 设置<p>子公司拓展层次</p>
+ * @method boolean getIsIncludeFullScan() 获取<p>是否包含完整的扫描</p>
+ * @method void setIsIncludeFullScan(boolean $IsIncludeFullScan) 设置<p>是否包含完整的扫描</p>
+ * @method integer getPortScanQps() 获取<p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p><p>默认值：100</p>
+ * @method void setPortScanQps(integer $PortScanQps) 设置<p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p><p>默认值：100</p>
+ * @method integer getSingleIPTaskLimit() 获取<p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p><p>默认值：1</p>
+ * @method void setSingleIPTaskLimit(integer $SingleIPTaskLimit) 设置<p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p><p>默认值：1</p>
+ * @method boolean getHighRiskAck() 获取<p>任一速率超过保守值时必须为 true，否则参数错误</p>
+ * @method void setHighRiskAck(boolean $HighRiskAck) 设置<p>任一速率超过保守值时必须为 true，否则参数错误</p>
+ * @method array getScanRateAckChecklist() 获取<p>知情同意勾选清单，用于审计回放</p>
+ * @method void setScanRateAckChecklist(array $ScanRateAckChecklist) 设置<p>知情同意勾选清单，用于审计回放</p>
  */
 class ModifyCustomerRequest extends AbstractModel
 {
     /**
-     * @var string 企业名称
+     * @var string <p>企业名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 百分比取值范围为30-100
+     * @var integer <p>百分比取值范围为30-100</p>
      */
     public $Percent;
 
     /**
-     * @var string 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
+     * @var string <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
      */
     public $ScanType;
 
     /**
-     * @var integer 企业ID
+     * @var integer <p>企业ID</p>
      */
     public $Id;
 
     /**
-     * @var string 周期测绘时间
+     * @var string <p>周期测绘时间</p>
      */
     public $ScanCron;
 
     /**
-     * @var boolean 是否立即启动
+     * @var boolean <p>是否立即启动</p>
      */
     public $IsScanNow;
 
     /**
-     * @var boolean 是否启用周期测绘
+     * @var boolean <p>是否启用周期测绘</p>
      */
     public $EnableCron;
 
     /**
-     * @var boolean 是否扫描子公司
+     * @var boolean <p>是否扫描子公司</p>
      */
     public $EnableScanSubEnterprise;
 
     /**
-     * @var boolean 是否授权
+     * @var boolean <p>是否授权</p>
      */
     public $EnableAuth;
 
     /**
-     * @var string 授权开始时间
+     * @var string <p>授权开始时间</p>
      */
     public $AuthStartAt;
 
     /**
-     * @var string 授权结束时间
+     * @var string <p>授权结束时间</p>
      */
     public $AuthEndAt;
 
     /**
-     * @var string 授权文件id
+     * @var string <p>授权文件id</p>
      */
     public $AuthFile;
 
     /**
-     * @var string 测绘时间配置项，采用json字符串格式
+     * @var string <p>测绘时间配置项，采用json字符串格式</p>
      */
     public $ScanTime;
 
     /**
-     * @var string 企业图标
+     * @var string <p>企业图标</p>
      */
     public $Icon;
 
     /**
-     * @var integer 并发
+     * @var integer <p>并发</p>
      */
     public $Qps;
 
     /**
-     * @var integer 子公司拓展层次
+     * @var integer <p>子公司拓展层次</p>
      */
     public $SubCompanyLevel;
 
     /**
-     * @var boolean 是否包含完整的扫描
+     * @var boolean <p>是否包含完整的扫描</p>
      */
     public $IsIncludeFullScan;
 
     /**
-     * @param string $Name 企业名称
-     * @param integer $Percent 百分比取值范围为30-100
-     * @param string $ScanType 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
-     * @param integer $Id 企业ID
-     * @param string $ScanCron 周期测绘时间
-     * @param boolean $IsScanNow 是否立即启动
-     * @param boolean $EnableCron 是否启用周期测绘
-     * @param boolean $EnableScanSubEnterprise 是否扫描子公司
-     * @param boolean $EnableAuth 是否授权
-     * @param string $AuthStartAt 授权开始时间
-     * @param string $AuthEndAt 授权结束时间
-     * @param string $AuthFile 授权文件id
-     * @param string $ScanTime 测绘时间配置项，采用json字符串格式
-     * @param string $Icon 企业图标
-     * @param integer $Qps 并发
-     * @param integer $SubCompanyLevel 子公司拓展层次
-     * @param boolean $IsIncludeFullScan 是否包含完整的扫描
+     * @var integer <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p><p>默认值：100</p>
+     */
+    public $PortScanQps;
+
+    /**
+     * @var integer <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p><p>默认值：1</p>
+     */
+    public $SingleIPTaskLimit;
+
+    /**
+     * @var boolean <p>任一速率超过保守值时必须为 true，否则参数错误</p>
+     */
+    public $HighRiskAck;
+
+    /**
+     * @var array <p>知情同意勾选清单，用于审计回放</p>
+     */
+    public $ScanRateAckChecklist;
+
+    /**
+     * @param string $Name <p>企业名称</p>
+     * @param integer $Percent <p>百分比取值范围为30-100</p>
+     * @param string $ScanType <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
+     * @param integer $Id <p>企业ID</p>
+     * @param string $ScanCron <p>周期测绘时间</p>
+     * @param boolean $IsScanNow <p>是否立即启动</p>
+     * @param boolean $EnableCron <p>是否启用周期测绘</p>
+     * @param boolean $EnableScanSubEnterprise <p>是否扫描子公司</p>
+     * @param boolean $EnableAuth <p>是否授权</p>
+     * @param string $AuthStartAt <p>授权开始时间</p>
+     * @param string $AuthEndAt <p>授权结束时间</p>
+     * @param string $AuthFile <p>授权文件id</p>
+     * @param string $ScanTime <p>测绘时间配置项，采用json字符串格式</p>
+     * @param string $Icon <p>企业图标</p>
+     * @param integer $Qps <p>并发</p>
+     * @param integer $SubCompanyLevel <p>子公司拓展层次</p>
+     * @param boolean $IsIncludeFullScan <p>是否包含完整的扫描</p>
+     * @param integer $PortScanQps <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p><p>默认值：100</p>
+     * @param integer $SingleIPTaskLimit <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p><p>默认值：1</p>
+     * @param boolean $HighRiskAck <p>任一速率超过保守值时必须为 true，否则参数错误</p>
+     * @param array $ScanRateAckChecklist <p>知情同意勾选清单，用于审计回放</p>
      */
     function __construct()
     {
@@ -240,6 +272,22 @@ class ModifyCustomerRequest extends AbstractModel
 
         if (array_key_exists("IsIncludeFullScan",$param) and $param["IsIncludeFullScan"] !== null) {
             $this->IsIncludeFullScan = $param["IsIncludeFullScan"];
+        }
+
+        if (array_key_exists("PortScanQps",$param) and $param["PortScanQps"] !== null) {
+            $this->PortScanQps = $param["PortScanQps"];
+        }
+
+        if (array_key_exists("SingleIPTaskLimit",$param) and $param["SingleIPTaskLimit"] !== null) {
+            $this->SingleIPTaskLimit = $param["SingleIPTaskLimit"];
+        }
+
+        if (array_key_exists("HighRiskAck",$param) and $param["HighRiskAck"] !== null) {
+            $this->HighRiskAck = $param["HighRiskAck"];
+        }
+
+        if (array_key_exists("ScanRateAckChecklist",$param) and $param["ScanRateAckChecklist"] !== null) {
+            $this->ScanRateAckChecklist = $param["ScanRateAckChecklist"];
         }
     }
 }

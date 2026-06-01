@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsType(string $DnsType) 设置<p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
  * @method string getDnsValue() 获取<p>DNS解析值</p>
  * @method void setDnsValue(string $DnsValue) 设置<p>DNS解析值</p>
+ * @method integer getAggregationCount() 获取<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+ * @method void setAggregationCount(integer $AggregationCount) 设置<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
  */
 class DisplaySubDomain extends AbstractModel
 {
@@ -143,6 +145,11 @@ class DisplaySubDomain extends AbstractModel
     public $DnsValue;
 
     /**
+     * @var integer <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public $AggregationCount;
+
+    /**
      * @param integer $Id <p>主键ID</p>
      * @param string $SubDomain <p>子域名</p>
      * @param string $Ip <p>Ip</p>
@@ -160,6 +167,7 @@ class DisplaySubDomain extends AbstractModel
      * @param integer $LossRate <p>丢包率（百分比）</p>
      * @param string $DnsType <p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
      * @param string $DnsValue <p>DNS解析值</p>
+     * @param integer $AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
      */
     function __construct()
     {
@@ -241,6 +249,10 @@ class DisplaySubDomain extends AbstractModel
 
         if (array_key_exists("DnsValue",$param) and $param["DnsValue"] !== null) {
             $this->DnsValue = $param["DnsValue"];
+        }
+
+        if (array_key_exists("AggregationCount",$param) and $param["AggregationCount"] !== null) {
+            $this->AggregationCount = $param["AggregationCount"];
         }
     }
 }

@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAgentApp请求参数结构体
  *
- * @method string getInstanceID() 获取实例ID
- * @method void setInstanceID(string $InstanceID) 设置实例ID
- * @method string getID() 获取应用ID
- * @method void setID(string $ID) 设置应用ID
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method string getOAuth2ResourceServerID() 获取OAuth2资源服务器ID
- * @method void setOAuth2ResourceServerID(string $OAuth2ResourceServerID) 设置OAuth2资源服务器ID
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
+ * @method string getInstanceID() 获取<p>实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
+ * @method string getID() 获取<p>应用ID</p>
+ * @method void setID(string $ID) 设置<p>应用ID</p>
+ * @method string getName() 获取<p>名称</p>
+ * @method void setName(string $Name) 设置<p>名称</p>
+ * @method string getOAuth2ResourceServerID() 获取<p>OAuth2资源服务器ID</p>
+ * @method void setOAuth2ResourceServerID(string $OAuth2ResourceServerID) 设置<p>OAuth2资源服务器ID</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method array getConnectorIDs() 获取<p>凭据ID</p>
+ * @method void setConnectorIDs(array $ConnectorIDs) 设置<p>凭据ID</p>
  */
 class ModifyAgentAppRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceID;
 
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
      */
     public $ID;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
      */
     public $Name;
 
     /**
-     * @var string OAuth2资源服务器ID
+     * @var string <p>OAuth2资源服务器ID</p>
      */
     public $OAuth2ResourceServerID;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @param string $InstanceID 实例ID
-     * @param string $ID 应用ID
-     * @param string $Name 名称
-     * @param string $OAuth2ResourceServerID OAuth2资源服务器ID
-     * @param string $Description 描述
+     * @var array <p>凭据ID</p>
+     */
+    public $ConnectorIDs;
+
+    /**
+     * @param string $InstanceID <p>实例ID</p>
+     * @param string $ID <p>应用ID</p>
+     * @param string $Name <p>名称</p>
+     * @param string $OAuth2ResourceServerID <p>OAuth2资源服务器ID</p>
+     * @param string $Description <p>描述</p>
+     * @param array $ConnectorIDs <p>凭据ID</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyAgentAppRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ConnectorIDs",$param) and $param["ConnectorIDs"] !== null) {
+            $this->ConnectorIDs = $param["ConnectorIDs"];
         }
     }
 }

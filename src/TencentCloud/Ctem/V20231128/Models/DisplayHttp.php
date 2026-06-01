@@ -20,174 +20,182 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Http详情
  *
- * @method integer getId() 获取主键ID
- * @method void setId(integer $Id) 设置主键ID
- * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
- * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
- * @method string getUrl() 获取Url
- * @method void setUrl(string $Url) 设置Url
- * @method string getTitle() 获取标题
- * @method void setTitle(string $Title) 设置标题
- * @method integer getContentLength() 获取报文长度
- * @method void setContentLength(integer $ContentLength) 设置报文长度
- * @method string getContent() 获取报文内容
- * @method void setContent(string $Content) 设置报文内容
- * @method string getScreenshotThumbUrl() 获取截图缩略图URL
- * @method void setScreenshotThumbUrl(string $ScreenshotThumbUrl) 设置截图缩略图URL
- * @method string getScreenshotUrl() 获取截图URL
- * @method void setScreenshotUrl(string $ScreenshotUrl) 设置截图URL
- * @method integer getCode() 获取状态码
- * @method void setCode(integer $Code) 设置状态码
- * @method string getApi() 获取Api地址
- * @method void setApi(string $Api) 设置Api地址
- * @method string getIp() 获取解析的IP
- * @method void setIp(string $Ip) 设置解析的IP
- * @method string getSsl() 获取证书信息
- * @method void setSsl(string $Ssl) 设置证书信息
- * @method string getSslExpiredTime() 获取ssl证书过期时间
- * @method void setSslExpiredTime(string $SslExpiredTime) 设置ssl证书过期时间
- * @method boolean getIsChange() 获取资产是否发生变动
+ * @method integer getId() 获取<p>主键ID</p>
+ * @method void setId(integer $Id) 设置<p>主键ID</p>
+ * @method DisplayToolCommon getDisplayToolCommon() 获取<p>公共字段</p>
+ * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置<p>公共字段</p>
+ * @method string getUrl() 获取<p>Url</p>
+ * @method void setUrl(string $Url) 设置<p>Url</p>
+ * @method string getTitle() 获取<p>标题</p>
+ * @method void setTitle(string $Title) 设置<p>标题</p>
+ * @method integer getContentLength() 获取<p>报文长度</p>
+ * @method void setContentLength(integer $ContentLength) 设置<p>报文长度</p>
+ * @method string getContent() 获取<p>报文内容</p>
+ * @method void setContent(string $Content) 设置<p>报文内容</p>
+ * @method string getScreenshotThumbUrl() 获取<p>截图缩略图URL</p>
+ * @method void setScreenshotThumbUrl(string $ScreenshotThumbUrl) 设置<p>截图缩略图URL</p>
+ * @method string getScreenshotUrl() 获取<p>截图URL</p>
+ * @method void setScreenshotUrl(string $ScreenshotUrl) 设置<p>截图URL</p>
+ * @method integer getCode() 获取<p>状态码</p>
+ * @method void setCode(integer $Code) 设置<p>状态码</p>
+ * @method string getApi() 获取<p>Api地址</p>
+ * @method void setApi(string $Api) 设置<p>Api地址</p>
+ * @method string getIp() 获取<p>解析的IP</p>
+ * @method void setIp(string $Ip) 设置<p>解析的IP</p>
+ * @method string getSsl() 获取<p>证书信息</p>
+ * @method void setSsl(string $Ssl) 设置<p>证书信息</p>
+ * @method string getSslExpiredTime() 获取<p>ssl证书过期时间</p>
+ * @method void setSslExpiredTime(string $SslExpiredTime) 设置<p>ssl证书过期时间</p>
+ * @method boolean getIsChange() 获取<p>资产是否发生变动</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsChange(boolean $IsChange) 设置资产是否发生变动
+ * @method void setIsChange(boolean $IsChange) 设置<p>资产是否发生变动</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsCloudAsset() 获取是否为云资产：0-非云资产 1-是云资产
- * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产：0-非云资产 1-是云资产
- * @method integer getCloudAssetStatus() 获取云资产是否下线：-1-已下线 0-正常
- * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产是否下线：-1-已下线 0-正常
- * @method integer getAvailabilityRate() 获取可用率（百分比）
- * @method void setAvailabilityRate(integer $AvailabilityRate) 设置可用率（百分比）
- * @method integer getAvailabilityState() 获取可用状态 1:异常 0:正常
- * @method void setAvailabilityState(integer $AvailabilityState) 设置可用状态 1:异常 0:正常
- * @method integer getResponseTime() 获取平均响应时间：单位ms
- * @method void setResponseTime(integer $ResponseTime) 设置平均响应时间：单位ms
- * @method integer getAnalysisState() 获取域名解析状态 1:异常 0:正常
- * @method void setAnalysisState(integer $AnalysisState) 设置域名解析状态 1:异常 0:正常
+ * @method integer getIsCloudAsset() 获取<p>是否为云资产：0-非云资产 1-是云资产</p>
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置<p>是否为云资产：0-非云资产 1-是云资产</p>
+ * @method integer getCloudAssetStatus() 获取<p>云资产是否下线：-1-已下线 0-正常</p>
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置<p>云资产是否下线：-1-已下线 0-正常</p>
+ * @method integer getAvailabilityRate() 获取<p>可用率（百分比）</p>
+ * @method void setAvailabilityRate(integer $AvailabilityRate) 设置<p>可用率（百分比）</p>
+ * @method integer getAvailabilityState() 获取<p>可用状态 1:异常 0:正常</p>
+ * @method void setAvailabilityState(integer $AvailabilityState) 设置<p>可用状态 1:异常 0:正常</p>
+ * @method integer getResponseTime() 获取<p>平均响应时间：单位ms</p>
+ * @method void setResponseTime(integer $ResponseTime) 设置<p>平均响应时间：单位ms</p>
+ * @method integer getAnalysisState() 获取<p>域名解析状态 1:异常 0:正常</p>
+ * @method void setAnalysisState(integer $AnalysisState) 设置<p>域名解析状态 1:异常 0:正常</p>
+ * @method integer getAggregationCount() 获取<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+ * @method void setAggregationCount(integer $AggregationCount) 设置<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
  */
 class DisplayHttp extends AbstractModel
 {
     /**
-     * @var integer 主键ID
+     * @var integer <p>主键ID</p>
      */
     public $Id;
 
     /**
-     * @var DisplayToolCommon 公共字段
+     * @var DisplayToolCommon <p>公共字段</p>
      */
     public $DisplayToolCommon;
 
     /**
-     * @var string Url
+     * @var string <p>Url</p>
      */
     public $Url;
 
     /**
-     * @var string 标题
+     * @var string <p>标题</p>
      */
     public $Title;
 
     /**
-     * @var integer 报文长度
+     * @var integer <p>报文长度</p>
      */
     public $ContentLength;
 
     /**
-     * @var string 报文内容
+     * @var string <p>报文内容</p>
      */
     public $Content;
 
     /**
-     * @var string 截图缩略图URL
+     * @var string <p>截图缩略图URL</p>
      */
     public $ScreenshotThumbUrl;
 
     /**
-     * @var string 截图URL
+     * @var string <p>截图URL</p>
      */
     public $ScreenshotUrl;
 
     /**
-     * @var integer 状态码
+     * @var integer <p>状态码</p>
      */
     public $Code;
 
     /**
-     * @var string Api地址
+     * @var string <p>Api地址</p>
      */
     public $Api;
 
     /**
-     * @var string 解析的IP
+     * @var string <p>解析的IP</p>
      */
     public $Ip;
 
     /**
-     * @var string 证书信息
+     * @var string <p>证书信息</p>
      */
     public $Ssl;
 
     /**
-     * @var string ssl证书过期时间
+     * @var string <p>ssl证书过期时间</p>
      */
     public $SslExpiredTime;
 
     /**
-     * @var boolean 资产是否发生变动
+     * @var boolean <p>资产是否发生变动</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsChange;
 
     /**
-     * @var integer 是否为云资产：0-非云资产 1-是云资产
+     * @var integer <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public $IsCloudAsset;
 
     /**
-     * @var integer 云资产是否下线：-1-已下线 0-正常
+     * @var integer <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public $CloudAssetStatus;
 
     /**
-     * @var integer 可用率（百分比）
+     * @var integer <p>可用率（百分比）</p>
      */
     public $AvailabilityRate;
 
     /**
-     * @var integer 可用状态 1:异常 0:正常
+     * @var integer <p>可用状态 1:异常 0:正常</p>
      */
     public $AvailabilityState;
 
     /**
-     * @var integer 平均响应时间：单位ms
+     * @var integer <p>平均响应时间：单位ms</p>
      */
     public $ResponseTime;
 
     /**
-     * @var integer 域名解析状态 1:异常 0:正常
+     * @var integer <p>域名解析状态 1:异常 0:正常</p>
      */
     public $AnalysisState;
 
     /**
-     * @param integer $Id 主键ID
-     * @param DisplayToolCommon $DisplayToolCommon 公共字段
-     * @param string $Url Url
-     * @param string $Title 标题
-     * @param integer $ContentLength 报文长度
-     * @param string $Content 报文内容
-     * @param string $ScreenshotThumbUrl 截图缩略图URL
-     * @param string $ScreenshotUrl 截图URL
-     * @param integer $Code 状态码
-     * @param string $Api Api地址
-     * @param string $Ip 解析的IP
-     * @param string $Ssl 证书信息
-     * @param string $SslExpiredTime ssl证书过期时间
-     * @param boolean $IsChange 资产是否发生变动
+     * @var integer <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public $AggregationCount;
+
+    /**
+     * @param integer $Id <p>主键ID</p>
+     * @param DisplayToolCommon $DisplayToolCommon <p>公共字段</p>
+     * @param string $Url <p>Url</p>
+     * @param string $Title <p>标题</p>
+     * @param integer $ContentLength <p>报文长度</p>
+     * @param string $Content <p>报文内容</p>
+     * @param string $ScreenshotThumbUrl <p>截图缩略图URL</p>
+     * @param string $ScreenshotUrl <p>截图URL</p>
+     * @param integer $Code <p>状态码</p>
+     * @param string $Api <p>Api地址</p>
+     * @param string $Ip <p>解析的IP</p>
+     * @param string $Ssl <p>证书信息</p>
+     * @param string $SslExpiredTime <p>ssl证书过期时间</p>
+     * @param boolean $IsChange <p>资产是否发生变动</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
-     * @param integer $CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
-     * @param integer $AvailabilityRate 可用率（百分比）
-     * @param integer $AvailabilityState 可用状态 1:异常 0:正常
-     * @param integer $ResponseTime 平均响应时间：单位ms
-     * @param integer $AnalysisState 域名解析状态 1:异常 0:正常
+     * @param integer $IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
+     * @param integer $CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
+     * @param integer $AvailabilityRate <p>可用率（百分比）</p>
+     * @param integer $AvailabilityState <p>可用状态 1:异常 0:正常</p>
+     * @param integer $ResponseTime <p>平均响应时间：单位ms</p>
+     * @param integer $AnalysisState <p>域名解析状态 1:异常 0:正常</p>
+     * @param integer $AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
      */
     function __construct()
     {
@@ -281,6 +289,10 @@ class DisplayHttp extends AbstractModel
 
         if (array_key_exists("AnalysisState",$param) and $param["AnalysisState"] !== null) {
             $this->AnalysisState = $param["AnalysisState"];
+        }
+
+        if (array_key_exists("AggregationCount",$param) and $param["AggregationCount"] !== null) {
+            $this->AggregationCount = $param["AggregationCount"];
         }
     }
 }

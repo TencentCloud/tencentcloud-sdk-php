@@ -20,50 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateJobRecord请求参数结构体
  *
- * @method integer getCustomerId() 获取企业ID
- * @method void setCustomerId(integer $CustomerId) 设置企业ID
- * @method string getTaskType() 获取任务类型：即时任务
- * @method void setTaskType(string $TaskType) 设置任务类型：即时任务
- * @method string getScanType() 获取资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
- * @method void setScanType(string $ScanType) 设置资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
- * @method integer getQps() 获取qps设置
- * @method void setQps(integer $Qps) 设置qps设置
- * @method boolean getIsIncludeFullScan() 获取是否包含完整扫描
- * @method void setIsIncludeFullScan(boolean $IsIncludeFullScan) 设置是否包含完整扫描
+ * @method integer getCustomerId() 获取<p>企业ID</p>
+ * @method void setCustomerId(integer $CustomerId) 设置<p>企业ID</p>
+ * @method string getTaskType() 获取<p>任务类型：即时任务</p>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型：即时任务</p>
+ * @method string getScanType() 获取<p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
+ * @method void setScanType(string $ScanType) 设置<p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
+ * @method integer getQps() 获取<p>qps设置</p>
+ * @method void setQps(integer $Qps) 设置<p>qps设置</p>
+ * @method boolean getIsIncludeFullScan() 获取<p>是否包含完整扫描</p>
+ * @method void setIsIncludeFullScan(boolean $IsIncludeFullScan) 设置<p>是否包含完整扫描</p>
+ * @method integer getPortScanQps() 获取<p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p><p>默认值：100</p>
+ * @method void setPortScanQps(integer $PortScanQps) 设置<p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p><p>默认值：100</p>
+ * @method integer getSingleIPTaskLimit() 获取<p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p><p>默认值：1</p>
+ * @method void setSingleIPTaskLimit(integer $SingleIPTaskLimit) 设置<p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p><p>默认值：1</p>
+ * @method boolean getHighRiskAck() 获取<p>任一速率超过保守值时必须为 true，否则参数错误</p>
+ * @method void setHighRiskAck(boolean $HighRiskAck) 设置<p>任一速率超过保守值时必须为 true，否则参数错误</p>
+ * @method array getScanRateAckChecklist() 获取<p>知情同意勾选清单，用于审计回放</p>
+ * @method void setScanRateAckChecklist(array $ScanRateAckChecklist) 设置<p>知情同意勾选清单，用于审计回放</p>
  */
 class CreateJobRecordRequest extends AbstractModel
 {
     /**
-     * @var integer 企业ID
+     * @var integer <p>企业ID</p>
      */
     public $CustomerId;
 
     /**
-     * @var string 任务类型：即时任务
+     * @var string <p>任务类型：即时任务</p>
      */
     public $TaskType;
 
     /**
-     * @var string 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
+     * @var string <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
      */
     public $ScanType;
 
     /**
-     * @var integer qps设置
+     * @var integer <p>qps设置</p>
      */
     public $Qps;
 
     /**
-     * @var boolean 是否包含完整扫描
+     * @var boolean <p>是否包含完整扫描</p>
      */
     public $IsIncludeFullScan;
 
     /**
-     * @param integer $CustomerId 企业ID
-     * @param string $TaskType 任务类型：即时任务
-     * @param string $ScanType 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
-     * @param integer $Qps qps设置
-     * @param boolean $IsIncludeFullScan 是否包含完整扫描
+     * @var integer <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p><p>默认值：100</p>
+     */
+    public $PortScanQps;
+
+    /**
+     * @var integer <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p><p>默认值：1</p>
+     */
+    public $SingleIPTaskLimit;
+
+    /**
+     * @var boolean <p>任一速率超过保守值时必须为 true，否则参数错误</p>
+     */
+    public $HighRiskAck;
+
+    /**
+     * @var array <p>知情同意勾选清单，用于审计回放</p>
+     */
+    public $ScanRateAckChecklist;
+
+    /**
+     * @param integer $CustomerId <p>企业ID</p>
+     * @param string $TaskType <p>任务类型：即时任务</p>
+     * @param string $ScanType <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
+     * @param integer $Qps <p>qps设置</p>
+     * @param boolean $IsIncludeFullScan <p>是否包含完整扫描</p>
+     * @param integer $PortScanQps <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p><p>默认值：100</p>
+     * @param integer $SingleIPTaskLimit <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p><p>默认值：1</p>
+     * @param boolean $HighRiskAck <p>任一速率超过保守值时必须为 true，否则参数错误</p>
+     * @param array $ScanRateAckChecklist <p>知情同意勾选清单，用于审计回放</p>
      */
     function __construct()
     {
@@ -96,6 +128,22 @@ class CreateJobRecordRequest extends AbstractModel
 
         if (array_key_exists("IsIncludeFullScan",$param) and $param["IsIncludeFullScan"] !== null) {
             $this->IsIncludeFullScan = $param["IsIncludeFullScan"];
+        }
+
+        if (array_key_exists("PortScanQps",$param) and $param["PortScanQps"] !== null) {
+            $this->PortScanQps = $param["PortScanQps"];
+        }
+
+        if (array_key_exists("SingleIPTaskLimit",$param) and $param["SingleIPTaskLimit"] !== null) {
+            $this->SingleIPTaskLimit = $param["SingleIPTaskLimit"];
+        }
+
+        if (array_key_exists("HighRiskAck",$param) and $param["HighRiskAck"] !== null) {
+            $this->HighRiskAck = $param["HighRiskAck"];
+        }
+
+        if (array_key_exists("ScanRateAckChecklist",$param) and $param["ScanRateAckChecklist"] !== null) {
+            $this->ScanRateAckChecklist = $param["ScanRateAckChecklist"];
         }
     }
 }

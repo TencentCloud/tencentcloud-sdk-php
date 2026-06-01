@@ -1,0 +1,101 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Teo\V20220901\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * ModifyFunctionReplica请求参数结构体
+ *
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method string getFunctionId() 获取函数 ID。
+ * @method void setFunctionId(string $FunctionId) 设置函数 ID。
+ * @method string getReplicaName() 获取需要修改的边缘函数副本名称。
+ * @method void setReplicaName(string $ReplicaName) 设置需要修改的边缘函数副本名称。
+ * @method string getContent() 获取边缘函数副本内容，当前仅支持 JavaScript 代码，最大支持 5MB。
+ * @method void setContent(string $Content) 设置边缘函数副本内容，当前仅支持 JavaScript 代码，最大支持 5MB。
+ * @method string getRemark() 获取边缘函数副本描述。最大支持 50 个字符。
+ * @method void setRemark(string $Remark) 设置边缘函数副本描述。最大支持 50 个字符。
+ */
+class ModifyFunctionReplicaRequest extends AbstractModel
+{
+    /**
+     * @var string 站点 ID。
+     */
+    public $ZoneId;
+
+    /**
+     * @var string 函数 ID。
+     */
+    public $FunctionId;
+
+    /**
+     * @var string 需要修改的边缘函数副本名称。
+     */
+    public $ReplicaName;
+
+    /**
+     * @var string 边缘函数副本内容，当前仅支持 JavaScript 代码，最大支持 5MB。
+     */
+    public $Content;
+
+    /**
+     * @var string 边缘函数副本描述。最大支持 50 个字符。
+     */
+    public $Remark;
+
+    /**
+     * @param string $ZoneId 站点 ID。
+     * @param string $FunctionId 函数 ID。
+     * @param string $ReplicaName 需要修改的边缘函数副本名称。
+     * @param string $Content 边缘函数副本内容，当前仅支持 JavaScript 代码，最大支持 5MB。
+     * @param string $Remark 边缘函数副本描述。最大支持 50 个字符。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("FunctionId",$param) and $param["FunctionId"] !== null) {
+            $this->FunctionId = $param["FunctionId"];
+        }
+
+        if (array_key_exists("ReplicaName",$param) and $param["ReplicaName"] !== null) {
+            $this->ReplicaName = $param["ReplicaName"];
+        }
+
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+    }
+}

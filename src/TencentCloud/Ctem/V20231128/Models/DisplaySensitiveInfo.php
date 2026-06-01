@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 敏感信息泄露数据
  *
- * @method integer getId() 获取主键Id
- * @method void setId(integer $Id) 设置主键Id
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
- * @method string getSource() 获取来源
- * @method void setSource(string $Source) 设置来源
- * @method string getValue() 获取值
- * @method void setValue(string $Value) 设置值
- * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
- * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
- * @method integer getIsCloudAsset() 获取是否为云资产：0-非云资产 1-是云资产
- * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产：0-非云资产 1-是云资产
- * @method integer getCloudAssetStatus() 获取云资产是否下线：-1-已下线 0-正常
- * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产是否下线：-1-已下线 0-正常
+ * @method integer getId() 获取<p>主键Id</p>
+ * @method void setId(integer $Id) 设置<p>主键Id</p>
+ * @method string getType() 获取<p>类型</p>
+ * @method void setType(string $Type) 设置<p>类型</p>
+ * @method string getSource() 获取<p>来源</p>
+ * @method void setSource(string $Source) 设置<p>来源</p>
+ * @method string getValue() 获取<p>值</p>
+ * @method void setValue(string $Value) 设置<p>值</p>
+ * @method DisplayToolCommon getDisplayToolCommon() 获取<p>公共字段</p>
+ * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置<p>公共字段</p>
+ * @method integer getIsCloudAsset() 获取<p>是否为云资产：0-非云资产 1-是云资产</p>
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置<p>是否为云资产：0-非云资产 1-是云资产</p>
+ * @method integer getCloudAssetStatus() 获取<p>云资产是否下线：-1-已下线 0-正常</p>
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置<p>云资产是否下线：-1-已下线 0-正常</p>
+ * @method integer getAggregationCount() 获取<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+ * @method void setAggregationCount(integer $AggregationCount) 设置<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
  */
 class DisplaySensitiveInfo extends AbstractModel
 {
     /**
-     * @var integer 主键Id
+     * @var integer <p>主键Id</p>
      */
     public $Id;
 
     /**
-     * @var string 类型
+     * @var string <p>类型</p>
      */
     public $Type;
 
     /**
-     * @var string 来源
+     * @var string <p>来源</p>
      */
     public $Source;
 
     /**
-     * @var string 值
+     * @var string <p>值</p>
      */
     public $Value;
 
     /**
-     * @var DisplayToolCommon 公共字段
+     * @var DisplayToolCommon <p>公共字段</p>
      */
     public $DisplayToolCommon;
 
     /**
-     * @var integer 是否为云资产：0-非云资产 1-是云资产
+     * @var integer <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public $IsCloudAsset;
 
     /**
-     * @var integer 云资产是否下线：-1-已下线 0-正常
+     * @var integer <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public $CloudAssetStatus;
 
     /**
-     * @param integer $Id 主键Id
-     * @param string $Type 类型
-     * @param string $Source 来源
-     * @param string $Value 值
-     * @param DisplayToolCommon $DisplayToolCommon 公共字段
-     * @param integer $IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
-     * @param integer $CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * @var integer <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public $AggregationCount;
+
+    /**
+     * @param integer $Id <p>主键Id</p>
+     * @param string $Type <p>类型</p>
+     * @param string $Source <p>来源</p>
+     * @param string $Value <p>值</p>
+     * @param DisplayToolCommon $DisplayToolCommon <p>公共字段</p>
+     * @param integer $IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
+     * @param integer $CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
+     * @param integer $AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class DisplaySensitiveInfo extends AbstractModel
 
         if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
             $this->CloudAssetStatus = $param["CloudAssetStatus"];
+        }
+
+        if (array_key_exists("AggregationCount",$param) and $param["AggregationCount"] !== null) {
+            $this->AggregationCount = $param["AggregationCount"];
         }
     }
 }

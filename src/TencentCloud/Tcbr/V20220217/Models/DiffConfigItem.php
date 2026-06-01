@@ -20,198 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 服务配置入参
  *
- * @method string getKey() 获取配置项 Key
-MinNum 最小副本数
-MaxNum 最大副本数
-PolicyDetails 扩缩容策略
-AccessTypes 访问类型
-TimerScale 定时扩缩容
-InternalAccess 内网访问
-OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale
-SessionAffinity 会话亲和性 open | close
-CpuSpecs cpu 规格
-MemSpecs mem规格
-EnvParam 环境变量
-LogPath 日志采集路径
-Port 端口
-Dockerfile dockerfile 文件名
-BuildDir 目标目录
-Tag 服务标签
-LogType 日志类型 none | default | custom 
-LogSetId 日志集Id
-LogTopicId 日志主题ID
-LogParseType 日志解析类型 json ｜ line
-EntryPoint entrypoint 命令
-Cmd cmd命令
-VpcConf 网络信息
- * @method void setKey(string $Key) 设置配置项 Key
-MinNum 最小副本数
-MaxNum 最大副本数
-PolicyDetails 扩缩容策略
-AccessTypes 访问类型
-TimerScale 定时扩缩容
-InternalAccess 内网访问
-OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale
-SessionAffinity 会话亲和性 open | close
-CpuSpecs cpu 规格
-MemSpecs mem规格
-EnvParam 环境变量
-LogPath 日志采集路径
-Port 端口
-Dockerfile dockerfile 文件名
-BuildDir 目标目录
-Tag 服务标签
-LogType 日志类型 none | default | custom 
-LogSetId 日志集Id
-LogTopicId 日志主题ID
-LogParseType 日志解析类型 json ｜ line
-EntryPoint entrypoint 命令
-Cmd cmd命令
-VpcConf 网络信息
- * @method string getValue() 获取字符串类型配置项值
-InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType
- * @method void setValue(string $Value) 设置字符串类型配置项值
-InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType
- * @method integer getIntValue() 获取int 类型配置项值
-MinNum、MaxNum、Port
- * @method void setIntValue(integer $IntValue) 设置int 类型配置项值
-MinNum、MaxNum、Port
- * @method boolean getBoolValue() 获取bool 类型配置项值
- * @method void setBoolValue(boolean $BoolValue) 设置bool 类型配置项值
- * @method float getFloatValue() 获取浮点型配置项值
-CpuSpecs、MemSpecs
- * @method void setFloatValue(float $FloatValue) 设置浮点型配置项值
-CpuSpecs、MemSpecs
- * @method array getArrayValue() 获取字符串数组配置项值
-AccessTypes，EntryPoint，Cmd
- * @method void setArrayValue(array $ArrayValue) 设置字符串数组配置项值
-AccessTypes，EntryPoint，Cmd
- * @method array getPolicyDetails() 获取扩缩容策略配置项值
- * @method void setPolicyDetails(array $PolicyDetails) 设置扩缩容策略配置项值
- * @method array getTimerScale() 获取定时扩缩容配置项值
- * @method void setTimerScale(array $TimerScale) 设置定时扩缩容配置项值
- * @method VpcConf getVpcConf() 获取配置内网访问时网络信息
- * @method void setVpcConf(VpcConf $VpcConf) 设置配置内网访问时网络信息
- * @method array getVolumesConf() 获取存储配置信息
- * @method void setVolumesConf(array $VolumesConf) 设置存储配置信息
+ * @method string getKey() 获取<p>配置项 Key<br>MinNum 最小副本数<br>MaxNum 最大副本数<br>PolicyDetails 扩缩容策略<br>AccessTypes 访问类型<br>TimerScale 定时扩缩容<br>InternalAccess 内网访问<br>OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale<br>SessionAffinity 会话亲和性 open | close<br>CpuSpecs cpu 规格<br>MemSpecs mem规格<br>EnvParam 环境变量<br>LogPath 日志采集路径<br>Port 端口<br>Dockerfile dockerfile 文件名<br>BuildDir 目标目录<br>Tag 服务标签<br>LogType 日志类型 none | default | custom<br>LogSetId 日志集Id<br>LogTopicId 日志主题ID<br>LogParseType 日志解析类型 json ｜ line<br>EntryPoint entrypoint 命令<br>Cmd cmd命令<br>VpcConf 网络信息</p>
+ * @method void setKey(string $Key) 设置<p>配置项 Key<br>MinNum 最小副本数<br>MaxNum 最大副本数<br>PolicyDetails 扩缩容策略<br>AccessTypes 访问类型<br>TimerScale 定时扩缩容<br>InternalAccess 内网访问<br>OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale<br>SessionAffinity 会话亲和性 open | close<br>CpuSpecs cpu 规格<br>MemSpecs mem规格<br>EnvParam 环境变量<br>LogPath 日志采集路径<br>Port 端口<br>Dockerfile dockerfile 文件名<br>BuildDir 目标目录<br>Tag 服务标签<br>LogType 日志类型 none | default | custom<br>LogSetId 日志集Id<br>LogTopicId 日志主题ID<br>LogParseType 日志解析类型 json ｜ line<br>EntryPoint entrypoint 命令<br>Cmd cmd命令<br>VpcConf 网络信息</p>
+ * @method string getValue() 获取<p>字符串类型配置项值<br>InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType</p>
+ * @method void setValue(string $Value) 设置<p>字符串类型配置项值<br>InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType</p>
+ * @method integer getIntValue() 获取<p>int 类型配置项值<br>MinNum、MaxNum、Port</p>
+ * @method void setIntValue(integer $IntValue) 设置<p>int 类型配置项值<br>MinNum、MaxNum、Port</p>
+ * @method boolean getBoolValue() 获取<p>bool 类型配置项值</p>
+ * @method void setBoolValue(boolean $BoolValue) 设置<p>bool 类型配置项值</p>
+ * @method float getFloatValue() 获取<p>浮点型配置项值<br>CpuSpecs、MemSpecs</p>
+ * @method void setFloatValue(float $FloatValue) 设置<p>浮点型配置项值<br>CpuSpecs、MemSpecs</p>
+ * @method array getArrayValue() 获取<p>字符串数组配置项值<br>AccessTypes，EntryPoint，Cmd</p>
+ * @method void setArrayValue(array $ArrayValue) 设置<p>字符串数组配置项值<br>AccessTypes，EntryPoint，Cmd</p>
+ * @method array getPolicyDetails() 获取<p>扩缩容策略配置项值</p>
+ * @method void setPolicyDetails(array $PolicyDetails) 设置<p>扩缩容策略配置项值</p>
+ * @method array getTimerScale() 获取<p>定时扩缩容配置项值</p>
+ * @method void setTimerScale(array $TimerScale) 设置<p>定时扩缩容配置项值</p>
+ * @method VpcConf getVpcConf() 获取<p>配置内网访问时网络信息</p>
+ * @method void setVpcConf(VpcConf $VpcConf) 设置<p>配置内网访问时网络信息</p>
+ * @method array getVolumesConf() 获取<p>存储配置信息</p>
+ * @method void setVolumesConf(array $VolumesConf) 设置<p>存储配置信息</p>
+ * @method PublicNetConf getPublicNetConf() 获取<p>公网访问配置</p>
+ * @method void setPublicNetConf(PublicNetConf $PublicNetConf) 设置<p>公网访问配置</p>
  */
 class DiffConfigItem extends AbstractModel
 {
     /**
-     * @var string 配置项 Key
-MinNum 最小副本数
-MaxNum 最大副本数
-PolicyDetails 扩缩容策略
-AccessTypes 访问类型
-TimerScale 定时扩缩容
-InternalAccess 内网访问
-OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale
-SessionAffinity 会话亲和性 open | close
-CpuSpecs cpu 规格
-MemSpecs mem规格
-EnvParam 环境变量
-LogPath 日志采集路径
-Port 端口
-Dockerfile dockerfile 文件名
-BuildDir 目标目录
-Tag 服务标签
-LogType 日志类型 none | default | custom 
-LogSetId 日志集Id
-LogTopicId 日志主题ID
-LogParseType 日志解析类型 json ｜ line
-EntryPoint entrypoint 命令
-Cmd cmd命令
-VpcConf 网络信息
+     * @var string <p>配置项 Key<br>MinNum 最小副本数<br>MaxNum 最大副本数<br>PolicyDetails 扩缩容策略<br>AccessTypes 访问类型<br>TimerScale 定时扩缩容<br>InternalAccess 内网访问<br>OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale<br>SessionAffinity 会话亲和性 open | close<br>CpuSpecs cpu 规格<br>MemSpecs mem规格<br>EnvParam 环境变量<br>LogPath 日志采集路径<br>Port 端口<br>Dockerfile dockerfile 文件名<br>BuildDir 目标目录<br>Tag 服务标签<br>LogType 日志类型 none | default | custom<br>LogSetId 日志集Id<br>LogTopicId 日志主题ID<br>LogParseType 日志解析类型 json ｜ line<br>EntryPoint entrypoint 命令<br>Cmd cmd命令<br>VpcConf 网络信息</p>
      */
     public $Key;
 
     /**
-     * @var string 字符串类型配置项值
-InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType
+     * @var string <p>字符串类型配置项值<br>InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType</p>
      */
     public $Value;
 
     /**
-     * @var integer int 类型配置项值
-MinNum、MaxNum、Port
+     * @var integer <p>int 类型配置项值<br>MinNum、MaxNum、Port</p>
      */
     public $IntValue;
 
     /**
-     * @var boolean bool 类型配置项值
+     * @var boolean <p>bool 类型配置项值</p>
      */
     public $BoolValue;
 
     /**
-     * @var float 浮点型配置项值
-CpuSpecs、MemSpecs
+     * @var float <p>浮点型配置项值<br>CpuSpecs、MemSpecs</p>
      */
     public $FloatValue;
 
     /**
-     * @var array 字符串数组配置项值
-AccessTypes，EntryPoint，Cmd
+     * @var array <p>字符串数组配置项值<br>AccessTypes，EntryPoint，Cmd</p>
      */
     public $ArrayValue;
 
     /**
-     * @var array 扩缩容策略配置项值
+     * @var array <p>扩缩容策略配置项值</p>
      */
     public $PolicyDetails;
 
     /**
-     * @var array 定时扩缩容配置项值
+     * @var array <p>定时扩缩容配置项值</p>
      */
     public $TimerScale;
 
     /**
-     * @var VpcConf 配置内网访问时网络信息
+     * @var VpcConf <p>配置内网访问时网络信息</p>
      */
     public $VpcConf;
 
     /**
-     * @var array 存储配置信息
+     * @var array <p>存储配置信息</p>
      */
     public $VolumesConf;
 
     /**
-     * @param string $Key 配置项 Key
-MinNum 最小副本数
-MaxNum 最大副本数
-PolicyDetails 扩缩容策略
-AccessTypes 访问类型
-TimerScale 定时扩缩容
-InternalAccess 内网访问
-OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale
-SessionAffinity 会话亲和性 open | close
-CpuSpecs cpu 规格
-MemSpecs mem规格
-EnvParam 环境变量
-LogPath 日志采集路径
-Port 端口
-Dockerfile dockerfile 文件名
-BuildDir 目标目录
-Tag 服务标签
-LogType 日志类型 none | default | custom 
-LogSetId 日志集Id
-LogTopicId 日志主题ID
-LogParseType 日志解析类型 json ｜ line
-EntryPoint entrypoint 命令
-Cmd cmd命令
-VpcConf 网络信息
-     * @param string $Value 字符串类型配置项值
-InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType
-     * @param integer $IntValue int 类型配置项值
-MinNum、MaxNum、Port
-     * @param boolean $BoolValue bool 类型配置项值
-     * @param float $FloatValue 浮点型配置项值
-CpuSpecs、MemSpecs
-     * @param array $ArrayValue 字符串数组配置项值
-AccessTypes，EntryPoint，Cmd
-     * @param array $PolicyDetails 扩缩容策略配置项值
-     * @param array $TimerScale 定时扩缩容配置项值
-     * @param VpcConf $VpcConf 配置内网访问时网络信息
-     * @param array $VolumesConf 存储配置信息
+     * @var PublicNetConf <p>公网访问配置</p>
+     */
+    public $PublicNetConf;
+
+    /**
+     * @param string $Key <p>配置项 Key<br>MinNum 最小副本数<br>MaxNum 最大副本数<br>PolicyDetails 扩缩容策略<br>AccessTypes 访问类型<br>TimerScale 定时扩缩容<br>InternalAccess 内网访问<br>OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale<br>SessionAffinity 会话亲和性 open | close<br>CpuSpecs cpu 规格<br>MemSpecs mem规格<br>EnvParam 环境变量<br>LogPath 日志采集路径<br>Port 端口<br>Dockerfile dockerfile 文件名<br>BuildDir 目标目录<br>Tag 服务标签<br>LogType 日志类型 none | default | custom<br>LogSetId 日志集Id<br>LogTopicId 日志主题ID<br>LogParseType 日志解析类型 json ｜ line<br>EntryPoint entrypoint 命令<br>Cmd cmd命令<br>VpcConf 网络信息</p>
+     * @param string $Value <p>字符串类型配置项值<br>InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType</p>
+     * @param integer $IntValue <p>int 类型配置项值<br>MinNum、MaxNum、Port</p>
+     * @param boolean $BoolValue <p>bool 类型配置项值</p>
+     * @param float $FloatValue <p>浮点型配置项值<br>CpuSpecs、MemSpecs</p>
+     * @param array $ArrayValue <p>字符串数组配置项值<br>AccessTypes，EntryPoint，Cmd</p>
+     * @param array $PolicyDetails <p>扩缩容策略配置项值</p>
+     * @param array $TimerScale <p>定时扩缩容配置项值</p>
+     * @param VpcConf $VpcConf <p>配置内网访问时网络信息</p>
+     * @param array $VolumesConf <p>存储配置信息</p>
+     * @param PublicNetConf $PublicNetConf <p>公网访问配置</p>
      */
     function __construct()
     {
@@ -280,6 +180,11 @@ AccessTypes，EntryPoint，Cmd
                 $obj->deserialize($value);
                 array_push($this->VolumesConf, $obj);
             }
+        }
+
+        if (array_key_exists("PublicNetConf",$param) and $param["PublicNetConf"] !== null) {
+            $this->PublicNetConf = new PublicNetConf();
+            $this->PublicNetConf->deserialize($param["PublicNetConf"]);
         }
     }
 }

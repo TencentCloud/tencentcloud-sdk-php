@@ -20,142 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转码信息
  *
- * @method string getUrl() 获取转码后的视频文件地址。
- * @method void setUrl(string $Url) 设置转码后的视频文件地址。
- * @method integer getDefinition() 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
-<font color=red>注意：取值 0 表示原始文件。</font> 
- * @method void setDefinition(integer $Definition) 设置转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
-<font color=red>注意：取值 0 表示原始文件。</font> 
- * @method integer getBitrate() 获取视频流码率平均值与音频流码率平均值之和， 单位：bps。
- * @method void setBitrate(integer $Bitrate) 设置视频流码率平均值与音频流码率平均值之和， 单位：bps。
- * @method integer getHeight() 获取视频流高度的最大值，单位：px。
- * @method void setHeight(integer $Height) 设置视频流高度的最大值，单位：px。
- * @method integer getWidth() 获取视频流宽度的最大值，单位：px。
- * @method void setWidth(integer $Width) 设置视频流宽度的最大值，单位：px。
- * @method integer getSize() 获取媒体文件总大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
- * @method void setSize(integer $Size) 设置媒体文件总大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
- * @method float getDuration() 获取视频时长，单位：秒。
- * @method void setDuration(float $Duration) 设置视频时长，单位：秒。
- * @method string getMd5() 获取视频的 md5 值。
- * @method void setMd5(string $Md5) 设置视频的 md5 值。
- * @method string getContainer() 获取容器类型，例如 m4a，mp4 等。
- * @method void setContainer(string $Container) 设置容器类型，例如 m4a，mp4 等。
- * @method array getVideoStreamSet() 获取视频流信息。
- * @method void setVideoStreamSet(array $VideoStreamSet) 设置视频流信息。
- * @method array getAudioStreamSet() 获取音频流信息。
- * @method void setAudioStreamSet(array $AudioStreamSet) 设置音频流信息。
- * @method string getDigitalWatermarkType() 获取数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
- * @method void setDigitalWatermarkType(string $DigitalWatermarkType) 设置数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
- * @method string getCopyRightWatermarkText() 获取版权信息。
- * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) 设置版权信息。
- * @method integer getBlindWatermarkDefinition() 获取数字水印模板id。
- * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) 设置数字水印模板id。
+ * @method string getUrl() 获取<p>转码后的视频文件地址。</p>
+ * @method void setUrl(string $Url) 设置<p>转码后的视频文件地址。</p>
+ * @method integer getDefinition() 获取<p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33476">转码参数模板</a>。<br><font color="red">注意：取值 0 表示原始文件。</font></p>
+ * @method void setDefinition(integer $Definition) 设置<p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33476">转码参数模板</a>。<br><font color="red">注意：取值 0 表示原始文件。</font></p>
+ * @method integer getBitrate() 获取<p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
+ * @method void setBitrate(integer $Bitrate) 设置<p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
+ * @method integer getHeight() 获取<p>视频流高度的最大值，单位：px。</p>
+ * @method void setHeight(integer $Height) 设置<p>视频流高度的最大值，单位：px。</p>
+ * @method integer getWidth() 获取<p>视频流宽度的最大值，单位：px。</p>
+ * @method void setWidth(integer $Width) 设置<p>视频流宽度的最大值，单位：px。</p>
+ * @method integer getSize() 获取<p>媒体文件总大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
+ * @method void setSize(integer $Size) 设置<p>媒体文件总大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
+ * @method float getDuration() 获取<p>视频时长，单位：秒。</p>
+ * @method void setDuration(float $Duration) 设置<p>视频时长，单位：秒。</p>
+ * @method string getMd5() 获取<p>视频的 md5 值。</p>
+ * @method void setMd5(string $Md5) 设置<p>视频的 md5 值。</p>
+ * @method string getContainer() 获取<p>容器类型，例如 m4a，mp4 等。</p>
+ * @method void setContainer(string $Container) 设置<p>容器类型，例如 m4a，mp4 等。</p>
+ * @method array getVideoStreamSet() 获取<p>视频流信息。</p>
+ * @method void setVideoStreamSet(array $VideoStreamSet) 设置<p>视频流信息。</p>
+ * @method array getAudioStreamSet() 获取<p>音频流信息。</p>
+ * @method void setAudioStreamSet(array $AudioStreamSet) 设置<p>音频流信息。</p>
+ * @method string getDigitalWatermarkType() 获取<p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
+ * @method void setDigitalWatermarkType(string $DigitalWatermarkType) 设置<p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
+ * @method string getCopyRightWatermarkText() 获取<p>版权信息。</p>
+ * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) 设置<p>版权信息。</p>
+ * @method integer getBlindWatermarkDefinition() 获取<p>数字水印模板id。</p>
+ * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) 设置<p>数字水印模板id。</p>
+ * @method string getFileId() 获取<p>转码生成的新FileId，请求开启独立媒资输出时有效。</p>
+ * @method void setFileId(string $FileId) 设置<p>转码生成的新FileId，请求开启独立媒资输出时有效。</p>
  */
 class MediaTranscodeItem extends AbstractModel
 {
     /**
-     * @var string 转码后的视频文件地址。
+     * @var string <p>转码后的视频文件地址。</p>
      */
     public $Url;
 
     /**
-     * @var integer 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
-<font color=red>注意：取值 0 表示原始文件。</font> 
+     * @var integer <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33476">转码参数模板</a>。<br><font color="red">注意：取值 0 表示原始文件。</font></p>
      */
     public $Definition;
 
     /**
-     * @var integer 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+     * @var integer <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
      */
     public $Bitrate;
 
     /**
-     * @var integer 视频流高度的最大值，单位：px。
+     * @var integer <p>视频流高度的最大值，单位：px。</p>
      */
     public $Height;
 
     /**
-     * @var integer 视频流宽度的最大值，单位：px。
+     * @var integer <p>视频流宽度的最大值，单位：px。</p>
      */
     public $Width;
 
     /**
-     * @var integer 媒体文件总大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
+     * @var integer <p>媒体文件总大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
      */
     public $Size;
 
     /**
-     * @var float 视频时长，单位：秒。
+     * @var float <p>视频时长，单位：秒。</p>
      */
     public $Duration;
 
     /**
-     * @var string 视频的 md5 值。
+     * @var string <p>视频的 md5 值。</p>
      */
     public $Md5;
 
     /**
-     * @var string 容器类型，例如 m4a，mp4 等。
+     * @var string <p>容器类型，例如 m4a，mp4 等。</p>
      */
     public $Container;
 
     /**
-     * @var array 视频流信息。
+     * @var array <p>视频流信息。</p>
      */
     public $VideoStreamSet;
 
     /**
-     * @var array 音频流信息。
+     * @var array <p>音频流信息。</p>
      */
     public $AudioStreamSet;
 
     /**
-     * @var string 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
+     * @var string <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
      */
     public $DigitalWatermarkType;
 
     /**
-     * @var string 版权信息。
+     * @var string <p>版权信息。</p>
      */
     public $CopyRightWatermarkText;
 
     /**
-     * @var integer 数字水印模板id。
+     * @var integer <p>数字水印模板id。</p>
      */
     public $BlindWatermarkDefinition;
 
     /**
-     * @param string $Url 转码后的视频文件地址。
-     * @param integer $Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
-<font color=red>注意：取值 0 表示原始文件。</font> 
-     * @param integer $Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
-     * @param integer $Height 视频流高度的最大值，单位：px。
-     * @param integer $Width 视频流宽度的最大值，单位：px。
-     * @param integer $Size 媒体文件总大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
-     * @param float $Duration 视频时长，单位：秒。
-     * @param string $Md5 视频的 md5 值。
-     * @param string $Container 容器类型，例如 m4a，mp4 等。
-     * @param array $VideoStreamSet 视频流信息。
-     * @param array $AudioStreamSet 音频流信息。
-     * @param string $DigitalWatermarkType 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
-     * @param string $CopyRightWatermarkText 版权信息。
-     * @param integer $BlindWatermarkDefinition 数字水印模板id。
+     * @var string <p>转码生成的新FileId，请求开启独立媒资输出时有效。</p>
+     */
+    public $FileId;
+
+    /**
+     * @param string $Url <p>转码后的视频文件地址。</p>
+     * @param integer $Definition <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33476">转码参数模板</a>。<br><font color="red">注意：取值 0 表示原始文件。</font></p>
+     * @param integer $Bitrate <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
+     * @param integer $Height <p>视频流高度的最大值，单位：px。</p>
+     * @param integer $Width <p>视频流宽度的最大值，单位：px。</p>
+     * @param integer $Size <p>媒体文件总大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
+     * @param float $Duration <p>视频时长，单位：秒。</p>
+     * @param string $Md5 <p>视频的 md5 值。</p>
+     * @param string $Container <p>容器类型，例如 m4a，mp4 等。</p>
+     * @param array $VideoStreamSet <p>视频流信息。</p>
+     * @param array $AudioStreamSet <p>音频流信息。</p>
+     * @param string $DigitalWatermarkType <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
+     * @param string $CopyRightWatermarkText <p>版权信息。</p>
+     * @param integer $BlindWatermarkDefinition <p>数字水印模板id。</p>
+     * @param string $FileId <p>转码生成的新FileId，请求开启独立媒资输出时有效。</p>
      */
     function __construct()
     {
@@ -234,6 +222,10 @@ class MediaTranscodeItem extends AbstractModel
 
         if (array_key_exists("BlindWatermarkDefinition",$param) and $param["BlindWatermarkDefinition"] !== null) {
             $this->BlindWatermarkDefinition = $param["BlindWatermarkDefinition"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

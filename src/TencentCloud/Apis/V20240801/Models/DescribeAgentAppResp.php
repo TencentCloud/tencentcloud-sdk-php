@@ -20,138 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询app详情响应
  *
- * @method integer getAppID() 获取租户appID
- * @method void setAppID(integer $AppID) 设置租户appID
- * @method string getUin() 获取租户ID
- * @method void setUin(string $Uin) 设置租户ID
- * @method string getInstanceID() 获取实例ID
- * @method void setInstanceID(string $InstanceID) 设置实例ID
- * @method string getID() 获取应用ID
- * @method void setID(string $ID) 设置应用ID
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取修改时间
- * @method void setUpdateTime(string $UpdateTime) 设置修改时间
- * @method string getAuthType() 获取认证类型
- * @method void setAuthType(string $AuthType) 设置认证类型
- * @method array getApiKeys() 获取apiKeys列表，脱敏
- * @method void setApiKeys(array $ApiKeys) 设置apiKeys列表，脱敏
- * @method array getSecretKeys() 获取secretKey列表，脱敏
- * @method void setSecretKeys(array $SecretKeys) 设置secretKey列表，脱敏
- * @method string getOAuth2ResourceServerID() 获取OAuth2 Resource Server ID
+ * @method integer getAppID() 获取<p>租户appID</p>
+ * @method void setAppID(integer $AppID) 设置<p>租户appID</p>
+ * @method string getUin() 获取<p>租户ID</p>
+ * @method void setUin(string $Uin) 设置<p>租户ID</p>
+ * @method string getInstanceID() 获取<p>实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
+ * @method string getID() 获取<p>应用ID</p>
+ * @method void setID(string $ID) 设置<p>应用ID</p>
+ * @method string getName() 获取<p>名称</p>
+ * @method void setName(string $Name) 设置<p>名称</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>修改时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>修改时间</p>
+ * @method string getAuthType() 获取<p>认证类型</p>
+ * @method void setAuthType(string $AuthType) 设置<p>认证类型</p>
+ * @method array getApiKeys() 获取<p>apiKeys列表，脱敏</p>
+ * @method void setApiKeys(array $ApiKeys) 设置<p>apiKeys列表，脱敏</p>
+ * @method array getSecretKeys() 获取<p>secretKey列表，脱敏</p>
+ * @method void setSecretKeys(array $SecretKeys) 设置<p>secretKey列表，脱敏</p>
+ * @method string getOAuth2ResourceServerID() 获取<p>OAuth2 Resource Server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOAuth2ResourceServerID(string $OAuth2ResourceServerID) 设置OAuth2 Resource Server ID
+ * @method void setOAuth2ResourceServerID(string $OAuth2ResourceServerID) 设置<p>OAuth2 Resource Server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMcpServersNum() 获取绑定mcpServer数量
- * @method void setMcpServersNum(integer $McpServersNum) 设置绑定mcpServer数量
- * @method integer getModelServicesNum() 获取绑定的模型服务数量
+ * @method integer getMcpServersNum() 获取<p>绑定mcpServer数量</p>
+ * @method void setMcpServersNum(integer $McpServersNum) 设置<p>绑定mcpServer数量</p>
+ * @method integer getModelServicesNum() 获取<p>绑定的模型服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelServicesNum(integer $ModelServicesNum) 设置绑定的模型服务数量
+ * @method void setModelServicesNum(integer $ModelServicesNum) 设置<p>绑定的模型服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getConnectorIDs() 获取<p>API认证列表</p>
+ * @method void setConnectorIDs(array $ConnectorIDs) 设置<p>API认证列表</p>
+ * @method integer getServicesNum() 获取<p>关联API数量</p>
+ * @method void setServicesNum(integer $ServicesNum) 设置<p>关联API数量</p>
  */
 class DescribeAgentAppResp extends AbstractModel
 {
     /**
-     * @var integer 租户appID
+     * @var integer <p>租户appID</p>
      */
     public $AppID;
 
     /**
-     * @var string 租户ID
+     * @var string <p>租户ID</p>
      */
     public $Uin;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceID;
 
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
      */
     public $ID;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
      */
     public $Name;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
      */
     public $Status;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 认证类型
+     * @var string <p>认证类型</p>
      */
     public $AuthType;
 
     /**
-     * @var array apiKeys列表，脱敏
+     * @var array <p>apiKeys列表，脱敏</p>
      */
     public $ApiKeys;
 
     /**
-     * @var array secretKey列表，脱敏
+     * @var array <p>secretKey列表，脱敏</p>
      */
     public $SecretKeys;
 
     /**
-     * @var string OAuth2 Resource Server ID
+     * @var string <p>OAuth2 Resource Server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OAuth2ResourceServerID;
 
     /**
-     * @var integer 绑定mcpServer数量
+     * @var integer <p>绑定mcpServer数量</p>
      */
     public $McpServersNum;
 
     /**
-     * @var integer 绑定的模型服务数量
+     * @var integer <p>绑定的模型服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelServicesNum;
 
     /**
-     * @param integer $AppID 租户appID
-     * @param string $Uin 租户ID
-     * @param string $InstanceID 实例ID
-     * @param string $ID 应用ID
-     * @param string $Name 名称
-     * @param string $Description 描述
-     * @param string $Status 状态
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 修改时间
-     * @param string $AuthType 认证类型
-     * @param array $ApiKeys apiKeys列表，脱敏
-     * @param array $SecretKeys secretKey列表，脱敏
-     * @param string $OAuth2ResourceServerID OAuth2 Resource Server ID
+     * @var array <p>API认证列表</p>
+     */
+    public $ConnectorIDs;
+
+    /**
+     * @var integer <p>关联API数量</p>
+     */
+    public $ServicesNum;
+
+    /**
+     * @param integer $AppID <p>租户appID</p>
+     * @param string $Uin <p>租户ID</p>
+     * @param string $InstanceID <p>实例ID</p>
+     * @param string $ID <p>应用ID</p>
+     * @param string $Name <p>名称</p>
+     * @param string $Description <p>描述</p>
+     * @param string $Status <p>状态</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>修改时间</p>
+     * @param string $AuthType <p>认证类型</p>
+     * @param array $ApiKeys <p>apiKeys列表，脱敏</p>
+     * @param array $SecretKeys <p>secretKey列表，脱敏</p>
+     * @param string $OAuth2ResourceServerID <p>OAuth2 Resource Server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $McpServersNum 绑定mcpServer数量
-     * @param integer $ModelServicesNum 绑定的模型服务数量
+     * @param integer $McpServersNum <p>绑定mcpServer数量</p>
+     * @param integer $ModelServicesNum <p>绑定的模型服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ConnectorIDs <p>API认证列表</p>
+     * @param integer $ServicesNum <p>关联API数量</p>
      */
     function __construct()
     {
@@ -229,6 +245,14 @@ class DescribeAgentAppResp extends AbstractModel
 
         if (array_key_exists("ModelServicesNum",$param) and $param["ModelServicesNum"] !== null) {
             $this->ModelServicesNum = $param["ModelServicesNum"];
+        }
+
+        if (array_key_exists("ConnectorIDs",$param) and $param["ConnectorIDs"] !== null) {
+            $this->ConnectorIDs = $param["ConnectorIDs"];
+        }
+
+        if (array_key_exists("ServicesNum",$param) and $param["ServicesNum"] !== null) {
+            $this->ServicesNum = $param["ServicesNum"];
         }
     }
 }

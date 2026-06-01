@@ -20,102 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 后台详情
  *
- * @method integer getId() 获取主键ID
- * @method void setId(integer $Id) 设置主键ID
- * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
- * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
- * @method string getUrl() 获取Url
- * @method void setUrl(string $Url) 设置Url
- * @method string getTitle() 获取标题
- * @method void setTitle(string $Title) 设置标题
- * @method string getIcon() 获取Icon
- * @method void setIcon(string $Icon) 设置Icon
- * @method string getScreenshot() 获取缩略图
- * @method void setScreenshot(string $Screenshot) 设置缩略图
- * @method integer getCode() 获取状态码
- * @method void setCode(integer $Code) 设置状态码
- * @method string getHost() 获取后台Host
- * @method void setHost(string $Host) 设置后台Host
- * @method string getStatus() 获取状态：not_converged:未收敛, converged:已收敛, ignore:已忽略
-
- * @method void setStatus(string $Status) 设置状态：not_converged:未收敛, converged:已收敛, ignore:已忽略
-
- * @method integer getIsCloudAsset() 获取是否为云资产：0-非云资产 1-是云资产
- * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产：0-非云资产 1-是云资产
- * @method integer getCloudAssetStatus() 获取云资产是否下线：-1-已下线 0-正常
- * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产是否下线：-1-已下线 0-正常
+ * @method integer getId() 获取<p>主键ID</p>
+ * @method void setId(integer $Id) 设置<p>主键ID</p>
+ * @method DisplayToolCommon getDisplayToolCommon() 获取<p>公共字段</p>
+ * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置<p>公共字段</p>
+ * @method string getUrl() 获取<p>Url</p>
+ * @method void setUrl(string $Url) 设置<p>Url</p>
+ * @method string getTitle() 获取<p>标题</p>
+ * @method void setTitle(string $Title) 设置<p>标题</p>
+ * @method string getIcon() 获取<p>Icon</p>
+ * @method void setIcon(string $Icon) 设置<p>Icon</p>
+ * @method string getScreenshot() 获取<p>缩略图</p>
+ * @method void setScreenshot(string $Screenshot) 设置<p>缩略图</p>
+ * @method integer getCode() 获取<p>状态码</p>
+ * @method void setCode(integer $Code) 设置<p>状态码</p>
+ * @method string getHost() 获取<p>后台Host</p>
+ * @method void setHost(string $Host) 设置<p>后台Host</p>
+ * @method string getStatus() 获取<p>状态：not_converged:未收敛, converged:已收敛, ignore:已忽略</p>
+ * @method void setStatus(string $Status) 设置<p>状态：not_converged:未收敛, converged:已收敛, ignore:已忽略</p>
+ * @method integer getIsCloudAsset() 获取<p>是否为云资产：0-非云资产 1-是云资产</p>
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置<p>是否为云资产：0-非云资产 1-是云资产</p>
+ * @method integer getCloudAssetStatus() 获取<p>云资产是否下线：-1-已下线 0-正常</p>
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置<p>云资产是否下线：-1-已下线 0-正常</p>
+ * @method integer getAggregationCount() 获取<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+ * @method void setAggregationCount(integer $AggregationCount) 设置<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
  */
 class DisplayManage extends AbstractModel
 {
     /**
-     * @var integer 主键ID
+     * @var integer <p>主键ID</p>
      */
     public $Id;
 
     /**
-     * @var DisplayToolCommon 公共字段
+     * @var DisplayToolCommon <p>公共字段</p>
      */
     public $DisplayToolCommon;
 
     /**
-     * @var string Url
+     * @var string <p>Url</p>
      */
     public $Url;
 
     /**
-     * @var string 标题
+     * @var string <p>标题</p>
      */
     public $Title;
 
     /**
-     * @var string Icon
+     * @var string <p>Icon</p>
      */
     public $Icon;
 
     /**
-     * @var string 缩略图
+     * @var string <p>缩略图</p>
      */
     public $Screenshot;
 
     /**
-     * @var integer 状态码
+     * @var integer <p>状态码</p>
      */
     public $Code;
 
     /**
-     * @var string 后台Host
+     * @var string <p>后台Host</p>
      */
     public $Host;
 
     /**
-     * @var string 状态：not_converged:未收敛, converged:已收敛, ignore:已忽略
-
+     * @var string <p>状态：not_converged:未收敛, converged:已收敛, ignore:已忽略</p>
      */
     public $Status;
 
     /**
-     * @var integer 是否为云资产：0-非云资产 1-是云资产
+     * @var integer <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public $IsCloudAsset;
 
     /**
-     * @var integer 云资产是否下线：-1-已下线 0-正常
+     * @var integer <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public $CloudAssetStatus;
 
     /**
-     * @param integer $Id 主键ID
-     * @param DisplayToolCommon $DisplayToolCommon 公共字段
-     * @param string $Url Url
-     * @param string $Title 标题
-     * @param string $Icon Icon
-     * @param string $Screenshot 缩略图
-     * @param integer $Code 状态码
-     * @param string $Host 后台Host
-     * @param string $Status 状态：not_converged:未收敛, converged:已收敛, ignore:已忽略
+     * @var integer <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public $AggregationCount;
 
-     * @param integer $IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
-     * @param integer $CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+    /**
+     * @param integer $Id <p>主键ID</p>
+     * @param DisplayToolCommon $DisplayToolCommon <p>公共字段</p>
+     * @param string $Url <p>Url</p>
+     * @param string $Title <p>标题</p>
+     * @param string $Icon <p>Icon</p>
+     * @param string $Screenshot <p>缩略图</p>
+     * @param integer $Code <p>状态码</p>
+     * @param string $Host <p>后台Host</p>
+     * @param string $Status <p>状态：not_converged:未收敛, converged:已收敛, ignore:已忽略</p>
+     * @param integer $IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
+     * @param integer $CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
+     * @param integer $AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
      */
     function __construct()
     {
@@ -173,6 +177,10 @@ class DisplayManage extends AbstractModel
 
         if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
             $this->CloudAssetStatus = $param["CloudAssetStatus"];
+        }
+
+        if (array_key_exists("AggregationCount",$param) and $param["AggregationCount"] !== null) {
+            $this->AggregationCount = $param["AggregationCount"];
         }
     }
 }

@@ -93,6 +93,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\DescribeAllScenesResponse DescribeAllScenes(Models\DescribeAllScenesRequest $req) 本接口(DescribeAllScenes)用于查询全地域使用场景列表。
  * @method Models\DescribeBlueprintInstancesResponse DescribeBlueprintInstances(Models\DescribeBlueprintInstancesRequest $req) 本接口（DescribeBlueprintInstances）用于查询镜像实例信息。
  * @method Models\DescribeBlueprintsResponse DescribeBlueprints(Models\DescribeBlueprintsRequest $req) 本接口（DescribeBlueprints）用于查询镜像信息。该接口返回的镜像类型有：自定义镜像、共享镜像、公共镜像。
+ * @method Models\DescribeBlueprintsShareAcrossAccountInfosResponse DescribeBlueprintsShareAcrossAccountInfos(Models\DescribeBlueprintsShareAcrossAccountInfosRequest $req) 本接口（DescribeBlueprintsShareAcrossAccountInfos）用于查询一个或多个镜像的跨账号共享信息。
  * @method Models\DescribeBundleDiscountResponse DescribeBundleDiscount(Models\DescribeBundleDiscountRequest $req) 本接口（DescribeBundleDiscount）用于查询套餐折扣信息。
  * @method Models\DescribeBundlesResponse DescribeBundles(Models\DescribeBundlesRequest $req) 本接口（DescribeBundles）用于查询套餐信息。
  * @method Models\DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstances(Models\DescribeCcnAttachedInstancesRequest $req) 本接口 (DescribeCcnAttachedInstances) 用于查询云联网关联的实例信息。

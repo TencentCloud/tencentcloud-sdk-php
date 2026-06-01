@@ -24,6 +24,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorInfo(ErrorInfo $ErrorInfo) 设置自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExtra() 获取<p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtra(string $Extra) 设置<p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMsg() 获取<p>结果信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMsg(string $Msg) 设置<p>结果信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getData() 获取<p>数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(string $Data) 设置<p>数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +48,36 @@ class DeleteUserGroupMemberResponse extends AbstractModel
     public $ErrorInfo;
 
     /**
+     * @var string <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Extra;
+
+    /**
+     * @var string <p>结果信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Msg;
+
+    /**
+     * @var string <p>数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Data;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param ErrorInfo $ErrorInfo 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Extra <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Msg <p>结果信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Data <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -61,6 +97,18 @@ class DeleteUserGroupMemberResponse extends AbstractModel
         if (array_key_exists("ErrorInfo",$param) and $param["ErrorInfo"] !== null) {
             $this->ErrorInfo = new ErrorInfo();
             $this->ErrorInfo->deserialize($param["ErrorInfo"]);
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
+        }
+
+        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
+            $this->Msg = $param["Msg"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

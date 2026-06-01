@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserGroupMemberList请求参数结构体
  *
- * @method array getGroupIds() 获取用户组id集合
- * @method void setGroupIds(array $GroupIds) 设置用户组id集合
- * @method string getCreatedOnOrder() 获取asc正序,desc倒序
- * @method void setCreatedOnOrder(string $CreatedOnOrder) 设置asc正序,desc倒序
- * @method string getKeyword() 获取搜索关键字
- * @method void setKeyword(string $Keyword) 设置搜索关键字
- * @method integer getPageSize() 获取分页大小
- * @method void setPageSize(integer $PageSize) 设置分页大小
- * @method integer getPageNo() 获取分页页码
- * @method void setPageNo(integer $PageNo) 设置分页页码
- * @method boolean getAllPage() 获取是否需要分页
- * @method void setAllPage(boolean $AllPage) 设置是否需要分页
+ * @method array getGroupIds() 获取<p>用户组id集合</p>
+ * @method void setGroupIds(array $GroupIds) 设置<p>用户组id集合</p>
+ * @method string getCreatedOnOrder() 获取<p>asc正序,desc倒序</p>
+ * @method void setCreatedOnOrder(string $CreatedOnOrder) 设置<p>asc正序,desc倒序</p>
+ * @method string getKeyword() 获取<p>搜索关键字</p>
+ * @method void setKeyword(string $Keyword) 设置<p>搜索关键字</p>
+ * @method integer getPageSize() 获取<p>分页大小</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>分页大小</p>
+ * @method integer getPageNo() 获取<p>分页页码</p>
+ * @method void setPageNo(integer $PageNo) 设置<p>分页页码</p>
+ * @method boolean getAllPage() 获取<p>是否需要分页</p>
+ * @method void setAllPage(boolean $AllPage) 设置<p>是否需要分页</p>
  */
 class DescribeUserGroupMemberListRequest extends AbstractModel
 {
     /**
-     * @var array 用户组id集合
+     * @var array <p>用户组id集合</p>
      */
     public $GroupIds;
 
     /**
-     * @var string asc正序,desc倒序
+     * @var string <p>asc正序,desc倒序</p>
      */
     public $CreatedOnOrder;
 
     /**
-     * @var string 搜索关键字
+     * @var string <p>搜索关键字</p>
      */
     public $Keyword;
 
     /**
-     * @var integer 分页大小
+     * @var integer <p>分页大小</p>
      */
     public $PageSize;
 
     /**
-     * @var integer 分页页码
+     * @var integer <p>分页页码</p>
      */
     public $PageNo;
 
     /**
-     * @var boolean 是否需要分页
+     * @var boolean <p>是否需要分页</p>
      */
     public $AllPage;
 
     /**
-     * @param array $GroupIds 用户组id集合
-     * @param string $CreatedOnOrder asc正序,desc倒序
-     * @param string $Keyword 搜索关键字
-     * @param integer $PageSize 分页大小
-     * @param integer $PageNo 分页页码
-     * @param boolean $AllPage 是否需要分页
+     * @param array $GroupIds <p>用户组id集合</p>
+     * @param string $CreatedOnOrder <p>asc正序,desc倒序</p>
+     * @param string $Keyword <p>搜索关键字</p>
+     * @param integer $PageSize <p>分页大小</p>
+     * @param integer $PageNo <p>分页页码</p>
+     * @param boolean $AllPage <p>是否需要分页</p>
      */
     function __construct()
     {

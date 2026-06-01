@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserGroup请求参数结构体
  *
- * @method array getUpdateList() 获取用户组更新list
- * @method void setUpdateList(array $UpdateList) 设置用户组更新list
+ * @method array getUpdateList() 获取<p>用户组更新list</p>
+ * @method void setUpdateList(array $UpdateList) 设置<p>用户组更新list</p>
  */
 class ModifyUserGroupRequest extends AbstractModel
 {
     /**
-     * @var array 用户组更新list
+     * @var array <p>用户组更新list</p>
      */
     public $UpdateList;
 
     /**
-     * @param array $UpdateList 用户组更新list
+     * @param array $UpdateList <p>用户组更新list</p>
      */
     function __construct()
     {

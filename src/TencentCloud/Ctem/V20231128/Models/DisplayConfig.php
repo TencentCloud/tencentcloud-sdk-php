@@ -20,114 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 目录爆破详情
  *
- * @method integer getId() 获取主键Id
- * @method void setId(integer $Id) 设置主键Id
- * @method string getUrl() 获取地址
- * @method void setUrl(string $Url) 设置地址
- * @method string getTitle() 获取站点标题
- * @method void setTitle(string $Title) 设置站点标题
- * @method integer getCode() 获取状态码
- * @method void setCode(integer $Code) 设置状态码
- * @method integer getContentLength() 获取响应长度
- * @method void setContentLength(integer $ContentLength) 设置响应长度
- * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
- * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
- * @method string getIp() 获取Ip数据
- * @method void setIp(string $Ip) 设置Ip数据
- * @method integer getAIRating() 获取AI评分
- * @method void setAIRating(integer $AIRating) 设置AI评分
- * @method string getAIAnalysis() 获取AI分析
- * @method void setAIAnalysis(string $AIAnalysis) 设置AI分析
- * @method integer getRiskLevel() 获取风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
- * @method void setRiskLevel(integer $RiskLevel) 设置风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
- * @method string getSuggestion() 获取建议
- * @method void setSuggestion(string $Suggestion) 设置建议
- * @method integer getIsCloudAsset() 获取是否为云资产
- * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产
- * @method integer getCloudAssetStatus() 获取云资产状态，-1为下线
- * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产状态，-1为下线
+ * @method integer getId() 获取<p>主键Id</p>
+ * @method void setId(integer $Id) 设置<p>主键Id</p>
+ * @method string getUrl() 获取<p>地址</p>
+ * @method void setUrl(string $Url) 设置<p>地址</p>
+ * @method string getTitle() 获取<p>站点标题</p>
+ * @method void setTitle(string $Title) 设置<p>站点标题</p>
+ * @method integer getCode() 获取<p>状态码</p>
+ * @method void setCode(integer $Code) 设置<p>状态码</p>
+ * @method integer getContentLength() 获取<p>响应长度</p>
+ * @method void setContentLength(integer $ContentLength) 设置<p>响应长度</p>
+ * @method DisplayToolCommon getDisplayToolCommon() 获取<p>公共字段</p>
+ * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置<p>公共字段</p>
+ * @method string getIp() 获取<p>Ip数据</p>
+ * @method void setIp(string $Ip) 设置<p>Ip数据</p>
+ * @method integer getAIRating() 获取<p>AI评分</p>
+ * @method void setAIRating(integer $AIRating) 设置<p>AI评分</p>
+ * @method string getAIAnalysis() 获取<p>AI分析</p>
+ * @method void setAIAnalysis(string $AIAnalysis) 设置<p>AI分析</p>
+ * @method integer getRiskLevel() 获取<p>风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报</p>
+ * @method void setRiskLevel(integer $RiskLevel) 设置<p>风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报</p>
+ * @method string getSuggestion() 获取<p>建议</p>
+ * @method void setSuggestion(string $Suggestion) 设置<p>建议</p>
+ * @method integer getIsCloudAsset() 获取<p>是否为云资产</p>
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置<p>是否为云资产</p>
+ * @method integer getCloudAssetStatus() 获取<p>云资产状态，-1为下线</p>
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置<p>云资产状态，-1为下线</p>
+ * @method integer getAggregationCount() 获取<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+ * @method void setAggregationCount(integer $AggregationCount) 设置<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
  */
 class DisplayConfig extends AbstractModel
 {
     /**
-     * @var integer 主键Id
+     * @var integer <p>主键Id</p>
      */
     public $Id;
 
     /**
-     * @var string 地址
+     * @var string <p>地址</p>
      */
     public $Url;
 
     /**
-     * @var string 站点标题
+     * @var string <p>站点标题</p>
      */
     public $Title;
 
     /**
-     * @var integer 状态码
+     * @var integer <p>状态码</p>
      */
     public $Code;
 
     /**
-     * @var integer 响应长度
+     * @var integer <p>响应长度</p>
      */
     public $ContentLength;
 
     /**
-     * @var DisplayToolCommon 公共字段
+     * @var DisplayToolCommon <p>公共字段</p>
      */
     public $DisplayToolCommon;
 
     /**
-     * @var string Ip数据
+     * @var string <p>Ip数据</p>
      */
     public $Ip;
 
     /**
-     * @var integer AI评分
+     * @var integer <p>AI评分</p>
      */
     public $AIRating;
 
     /**
-     * @var string AI分析
+     * @var string <p>AI分析</p>
      */
     public $AIAnalysis;
 
     /**
-     * @var integer 风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
+     * @var integer <p>风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 建议
+     * @var string <p>建议</p>
      */
     public $Suggestion;
 
     /**
-     * @var integer 是否为云资产
+     * @var integer <p>是否为云资产</p>
      */
     public $IsCloudAsset;
 
     /**
-     * @var integer 云资产状态，-1为下线
+     * @var integer <p>云资产状态，-1为下线</p>
      */
     public $CloudAssetStatus;
 
     /**
-     * @param integer $Id 主键Id
-     * @param string $Url 地址
-     * @param string $Title 站点标题
-     * @param integer $Code 状态码
-     * @param integer $ContentLength 响应长度
-     * @param DisplayToolCommon $DisplayToolCommon 公共字段
-     * @param string $Ip Ip数据
-     * @param integer $AIRating AI评分
-     * @param string $AIAnalysis AI分析
-     * @param integer $RiskLevel 风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
-     * @param string $Suggestion 建议
-     * @param integer $IsCloudAsset 是否为云资产
-     * @param integer $CloudAssetStatus 云资产状态，-1为下线
+     * @var integer <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public $AggregationCount;
+
+    /**
+     * @param integer $Id <p>主键Id</p>
+     * @param string $Url <p>地址</p>
+     * @param string $Title <p>站点标题</p>
+     * @param integer $Code <p>状态码</p>
+     * @param integer $ContentLength <p>响应长度</p>
+     * @param DisplayToolCommon $DisplayToolCommon <p>公共字段</p>
+     * @param string $Ip <p>Ip数据</p>
+     * @param integer $AIRating <p>AI评分</p>
+     * @param string $AIAnalysis <p>AI分析</p>
+     * @param integer $RiskLevel <p>风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报</p>
+     * @param string $Suggestion <p>建议</p>
+     * @param integer $IsCloudAsset <p>是否为云资产</p>
+     * @param integer $CloudAssetStatus <p>云资产状态，-1为下线</p>
+     * @param integer $AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
      */
     function __construct()
     {
@@ -193,6 +201,10 @@ class DisplayConfig extends AbstractModel
 
         if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
             $this->CloudAssetStatus = $param["CloudAssetStatus"];
+        }
+
+        if (array_key_exists("AggregationCount",$param) and $param["AggregationCount"] !== null) {
+            $this->AggregationCount = $param["AggregationCount"];
         }
     }
 }

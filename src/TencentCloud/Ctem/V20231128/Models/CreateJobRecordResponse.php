@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateJobRecord返回参数结构体
  *
- * @method integer getId() 获取任务Id
- * @method void setId(integer $Id) 设置任务Id
+ * @method integer getId() 获取<p>任务Id</p>
+ * @method void setId(integer $Id) 设置<p>任务Id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateJobRecordResponse extends AbstractModel
 {
     /**
-     * @var integer 任务Id
+     * @var integer <p>任务Id</p>
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class CreateJobRecordResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Id 任务Id
+     * @param integer $Id <p>任务Id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

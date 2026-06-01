@@ -20,18 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillingInfo请求参数结构体
  *
- * @method string getEnvId() 获取环境ID
- * @method void setEnvId(string $EnvId) 设置环境ID
+ * @method string getEnvId() 获取<p>环境ID</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境ID</p>
+ * @method array getEnvIds() 获取<p>环境列表，当环境列表不为空时，查询的环境以该参数为准</p>
+ * @method void setEnvIds(array $EnvIds) 设置<p>环境列表，当环境列表不为空时，查询的环境以该参数为准</p>
+ * @method integer getLimit() 获取<p>每页条数（用于拉取列表时分页）</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页条数（用于拉取列表时分页）</p>
+ * @method integer getOffset() 获取<p>偏移</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移</p>
  */
 class DescribeBillingInfoRequest extends AbstractModel
 {
     /**
-     * @var string 环境ID
+     * @var string <p>环境ID</p>
      */
     public $EnvId;
 
     /**
-     * @param string $EnvId 环境ID
+     * @var array <p>环境列表，当环境列表不为空时，查询的环境以该参数为准</p>
+     */
+    public $EnvIds;
+
+    /**
+     * @var integer <p>每页条数（用于拉取列表时分页）</p>
+     */
+    public $Limit;
+
+    /**
+     * @var integer <p>偏移</p>
+     */
+    public $Offset;
+
+    /**
+     * @param string $EnvId <p>环境ID</p>
+     * @param array $EnvIds <p>环境列表，当环境列表不为空时，查询的环境以该参数为准</p>
+     * @param integer $Limit <p>每页条数（用于拉取列表时分页）</p>
+     * @param integer $Offset <p>偏移</p>
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class DescribeBillingInfoRequest extends AbstractModel
         }
         if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
             $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("EnvIds",$param) and $param["EnvIds"] !== null) {
+            $this->EnvIds = $param["EnvIds"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

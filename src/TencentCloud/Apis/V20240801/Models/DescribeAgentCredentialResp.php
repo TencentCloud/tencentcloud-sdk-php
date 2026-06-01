@@ -20,118 +20,131 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 凭据详情响应
  *
- * @method integer getAppID() 获取租户应用ID
- * @method void setAppID(integer $AppID) 设置租户应用ID
- * @method string getUin() 获取租户ID
- * @method void setUin(string $Uin) 设置租户ID
- * @method string getInstanceID() 获取实例ID
- * @method void setInstanceID(string $InstanceID) 设置实例ID
- * @method string getID() 获取凭据ID
- * @method void setID(string $ID) 设置凭据ID
- * @method string getName() 获取凭据名称
- * @method void setName(string $Name) 设置凭据名称
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method integer getRelateAgentAppNum() 获取关联应用数
- * @method void setRelateAgentAppNum(integer $RelateAgentAppNum) 设置关联应用数
- * @method integer getRelateMcpServerNum() 获取关联mcp数
- * @method void setRelateMcpServerNum(integer $RelateMcpServerNum) 设置关联mcp数
- * @method integer getRelateModelNum() 获取关联模型数
+ * @method integer getAppID() 获取<p>租户应用ID</p>
+ * @method void setAppID(integer $AppID) 设置<p>租户应用ID</p>
+ * @method string getUin() 获取<p>租户ID</p>
+ * @method void setUin(string $Uin) 设置<p>租户ID</p>
+ * @method string getInstanceID() 获取<p>实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
+ * @method string getID() 获取<p>凭据ID</p>
+ * @method void setID(string $ID) 设置<p>凭据ID</p>
+ * @method string getName() 获取<p>凭据名称</p>
+ * @method void setName(string $Name) 设置<p>凭据名称</p>
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method integer getRelateAgentAppNum() 获取<p>关联应用数</p>
+ * @method void setRelateAgentAppNum(integer $RelateAgentAppNum) 设置<p>关联应用数</p>
+ * @method integer getRelateMcpServerNum() 获取<p>关联mcp数</p>
+ * @method void setRelateMcpServerNum(integer $RelateMcpServerNum) 设置<p>关联mcp数</p>
+ * @method integer getRelateModelNum() 获取<p>关联模型数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRelateModelNum(integer $RelateModelNum) 设置关联模型数
+ * @method void setRelateModelNum(integer $RelateModelNum) 设置<p>关联模型数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AgentCredentialContentDTO getContent() 获取凭据内容
- * @method void setContent(AgentCredentialContentDTO $Content) 设置凭据内容
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getLastUpdateTime() 获取修改时间
- * @method void setLastUpdateTime(string $LastUpdateTime) 设置修改时间
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
+ * @method integer getRelateServiceNum() 获取<p>关联服务数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRelateServiceNum(integer $RelateServiceNum) 设置<p>关联服务数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AgentCredentialContentDTO getContent() 获取<p>凭据内容</p>
+ * @method void setContent(AgentCredentialContentDTO $Content) 设置<p>凭据内容</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getLastUpdateTime() 获取<p>修改时间</p>
+ * @method void setLastUpdateTime(string $LastUpdateTime) 设置<p>修改时间</p>
+ * @method string getType() 获取<p>类型</p>
+ * @method void setType(string $Type) 设置<p>类型</p>
  */
 class DescribeAgentCredentialResp extends AbstractModel
 {
     /**
-     * @var integer 租户应用ID
+     * @var integer <p>租户应用ID</p>
      */
     public $AppID;
 
     /**
-     * @var string 租户ID
+     * @var string <p>租户ID</p>
      */
     public $Uin;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceID;
 
     /**
-     * @var string 凭据ID
+     * @var string <p>凭据ID</p>
      */
     public $ID;
 
     /**
-     * @var string 凭据名称
+     * @var string <p>凭据名称</p>
      */
     public $Name;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
      */
     public $Status;
 
     /**
-     * @var integer 关联应用数
+     * @var integer <p>关联应用数</p>
+     * @deprecated
      */
     public $RelateAgentAppNum;
 
     /**
-     * @var integer 关联mcp数
+     * @var integer <p>关联mcp数</p>
      */
     public $RelateMcpServerNum;
 
     /**
-     * @var integer 关联模型数
+     * @var integer <p>关联模型数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelateModelNum;
 
     /**
-     * @var AgentCredentialContentDTO 凭据内容
+     * @var integer <p>关联服务数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RelateServiceNum;
+
+    /**
+     * @var AgentCredentialContentDTO <p>凭据内容</p>
      */
     public $Content;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $LastUpdateTime;
 
     /**
-     * @var string 类型
+     * @var string <p>类型</p>
      */
     public $Type;
 
     /**
-     * @param integer $AppID 租户应用ID
-     * @param string $Uin 租户ID
-     * @param string $InstanceID 实例ID
-     * @param string $ID 凭据ID
-     * @param string $Name 凭据名称
-     * @param string $Status 状态
-     * @param integer $RelateAgentAppNum 关联应用数
-     * @param integer $RelateMcpServerNum 关联mcp数
-     * @param integer $RelateModelNum 关联模型数
+     * @param integer $AppID <p>租户应用ID</p>
+     * @param string $Uin <p>租户ID</p>
+     * @param string $InstanceID <p>实例ID</p>
+     * @param string $ID <p>凭据ID</p>
+     * @param string $Name <p>凭据名称</p>
+     * @param string $Status <p>状态</p>
+     * @param integer $RelateAgentAppNum <p>关联应用数</p>
+     * @param integer $RelateMcpServerNum <p>关联mcp数</p>
+     * @param integer $RelateModelNum <p>关联模型数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentCredentialContentDTO $Content 凭据内容
-     * @param string $CreateTime 创建时间
-     * @param string $LastUpdateTime 修改时间
-     * @param string $Type 类型
+     * @param integer $RelateServiceNum <p>关联服务数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentCredentialContentDTO $Content <p>凭据内容</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $LastUpdateTime <p>修改时间</p>
+     * @param string $Type <p>类型</p>
      */
     function __construct()
     {
@@ -180,6 +193,10 @@ class DescribeAgentCredentialResp extends AbstractModel
 
         if (array_key_exists("RelateModelNum",$param) and $param["RelateModelNum"] !== null) {
             $this->RelateModelNum = $param["RelateModelNum"];
+        }
+
+        if (array_key_exists("RelateServiceNum",$param) and $param["RelateServiceNum"] !== null) {
+            $this->RelateServiceNum = $param["RelateServiceNum"];
         }
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {

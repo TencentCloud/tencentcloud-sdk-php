@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteUserGroupMember请求参数结构体
  *
- * @method integer getGroupId() 获取用户组id
- * @method void setGroupId(integer $GroupId) 设置用户组id
- * @method array getUserIdList() 获取用户id集合
- * @method void setUserIdList(array $UserIdList) 设置用户id集合
+ * @method integer getGroupId() 获取<p>用户组id</p>
+ * @method void setGroupId(integer $GroupId) 设置<p>用户组id</p>
+ * @method array getUserIdList() 获取<p>用户id集合</p>
+ * @method void setUserIdList(array $UserIdList) 设置<p>用户id集合</p>
  */
 class DeleteUserGroupMemberRequest extends AbstractModel
 {
     /**
-     * @var integer 用户组id
+     * @var integer <p>用户组id</p>
      */
     public $GroupId;
 
     /**
-     * @var array 用户id集合
+     * @var array <p>用户id集合</p>
      */
     public $UserIdList;
 
     /**
-     * @param integer $GroupId 用户组id
-     * @param array $UserIdList 用户id集合
+     * @param integer $GroupId <p>用户组id</p>
+     * @param array $UserIdList <p>用户id集合</p>
      */
     function __construct()
     {

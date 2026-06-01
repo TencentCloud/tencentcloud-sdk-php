@@ -20,122 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 端口详情
  *
- * @method integer getId() 获取主键ID
- * @method void setId(integer $Id) 设置主键ID
- * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
- * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
- * @method string getAsset() 获取IP或域名地址
- * @method void setAsset(string $Asset) 设置IP或域名地址
- * @method string getIp() 获取解析的IP
- * @method void setIp(string $Ip) 设置解析的IP
- * @method integer getPort() 获取端口
- * @method void setPort(integer $Port) 设置端口
- * @method boolean getIsHighRisk() 获取是否高危
- * @method void setIsHighRisk(boolean $IsHighRisk) 设置是否高危
- * @method string getApp() 获取组件名称
- * @method void setApp(string $App) 设置组件名称
- * @method string getService() 获取服务名称
- * @method void setService(string $Service) 设置服务名称
- * @method string getBanner() 获取端口响应详情
- * @method void setBanner(string $Banner) 设置端口响应详情
- * @method string getLastCheckTime() 获取上次检测时间
- * @method void setLastCheckTime(string $LastCheckTime) 设置上次检测时间
- * @method string getStatus() 获取状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
- * @method void setStatus(string $Status) 设置状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
- * @method integer getIsCloudAsset() 获取是否为云资产：0-非云资产 1-是云资产
- * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产：0-非云资产 1-是云资产
- * @method integer getCloudAssetStatus() 获取云资产是否下线：-1-已下线 0-正常
- * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产是否下线：-1-已下线 0-正常
- * @method integer getAnalysisState() 获取域名解析状态 1:异常 0:正常
- * @method void setAnalysisState(integer $AnalysisState) 设置域名解析状态 1:异常 0:正常
+ * @method integer getId() 获取<p>主键ID</p>
+ * @method void setId(integer $Id) 设置<p>主键ID</p>
+ * @method DisplayToolCommon getDisplayToolCommon() 获取<p>公共字段</p>
+ * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置<p>公共字段</p>
+ * @method string getAsset() 获取<p>IP或域名地址</p>
+ * @method void setAsset(string $Asset) 设置<p>IP或域名地址</p>
+ * @method string getIp() 获取<p>解析的IP</p>
+ * @method void setIp(string $Ip) 设置<p>解析的IP</p>
+ * @method integer getPort() 获取<p>端口</p>
+ * @method void setPort(integer $Port) 设置<p>端口</p>
+ * @method boolean getIsHighRisk() 获取<p>是否高危</p>
+ * @method void setIsHighRisk(boolean $IsHighRisk) 设置<p>是否高危</p>
+ * @method string getApp() 获取<p>组件名称</p>
+ * @method void setApp(string $App) 设置<p>组件名称</p>
+ * @method string getService() 获取<p>服务名称</p>
+ * @method void setService(string $Service) 设置<p>服务名称</p>
+ * @method string getBanner() 获取<p>端口响应详情</p>
+ * @method void setBanner(string $Banner) 设置<p>端口响应详情</p>
+ * @method string getLastCheckTime() 获取<p>上次检测时间</p>
+ * @method void setLastCheckTime(string $LastCheckTime) 设置<p>上次检测时间</p>
+ * @method string getStatus() 获取<p>状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略</p>
+ * @method void setStatus(string $Status) 设置<p>状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略</p>
+ * @method integer getIsCloudAsset() 获取<p>是否为云资产：0-非云资产 1-是云资产</p>
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置<p>是否为云资产：0-非云资产 1-是云资产</p>
+ * @method integer getCloudAssetStatus() 获取<p>云资产是否下线：-1-已下线 0-正常</p>
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置<p>云资产是否下线：-1-已下线 0-正常</p>
+ * @method integer getAnalysisState() 获取<p>域名解析状态 1:异常 0:正常</p>
+ * @method void setAnalysisState(integer $AnalysisState) 设置<p>域名解析状态 1:异常 0:正常</p>
+ * @method integer getAggregationCount() 获取<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+ * @method void setAggregationCount(integer $AggregationCount) 设置<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
  */
 class DisplayPort extends AbstractModel
 {
     /**
-     * @var integer 主键ID
+     * @var integer <p>主键ID</p>
      */
     public $Id;
 
     /**
-     * @var DisplayToolCommon 公共字段
+     * @var DisplayToolCommon <p>公共字段</p>
      */
     public $DisplayToolCommon;
 
     /**
-     * @var string IP或域名地址
+     * @var string <p>IP或域名地址</p>
      */
     public $Asset;
 
     /**
-     * @var string 解析的IP
+     * @var string <p>解析的IP</p>
      */
     public $Ip;
 
     /**
-     * @var integer 端口
+     * @var integer <p>端口</p>
      */
     public $Port;
 
     /**
-     * @var boolean 是否高危
+     * @var boolean <p>是否高危</p>
      */
     public $IsHighRisk;
 
     /**
-     * @var string 组件名称
+     * @var string <p>组件名称</p>
      */
     public $App;
 
     /**
-     * @var string 服务名称
+     * @var string <p>服务名称</p>
      */
     public $Service;
 
     /**
-     * @var string 端口响应详情
+     * @var string <p>端口响应详情</p>
      */
     public $Banner;
 
     /**
-     * @var string 上次检测时间
+     * @var string <p>上次检测时间</p>
      */
     public $LastCheckTime;
 
     /**
-     * @var string 状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
+     * @var string <p>状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略</p>
      */
     public $Status;
 
     /**
-     * @var integer 是否为云资产：0-非云资产 1-是云资产
+     * @var integer <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public $IsCloudAsset;
 
     /**
-     * @var integer 云资产是否下线：-1-已下线 0-正常
+     * @var integer <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public $CloudAssetStatus;
 
     /**
-     * @var integer 域名解析状态 1:异常 0:正常
+     * @var integer <p>域名解析状态 1:异常 0:正常</p>
      */
     public $AnalysisState;
 
     /**
-     * @param integer $Id 主键ID
-     * @param DisplayToolCommon $DisplayToolCommon 公共字段
-     * @param string $Asset IP或域名地址
-     * @param string $Ip 解析的IP
-     * @param integer $Port 端口
-     * @param boolean $IsHighRisk 是否高危
-     * @param string $App 组件名称
-     * @param string $Service 服务名称
-     * @param string $Banner 端口响应详情
-     * @param string $LastCheckTime 上次检测时间
-     * @param string $Status 状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
-     * @param integer $IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
-     * @param integer $CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
-     * @param integer $AnalysisState 域名解析状态 1:异常 0:正常
+     * @var integer <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public $AggregationCount;
+
+    /**
+     * @param integer $Id <p>主键ID</p>
+     * @param DisplayToolCommon $DisplayToolCommon <p>公共字段</p>
+     * @param string $Asset <p>IP或域名地址</p>
+     * @param string $Ip <p>解析的IP</p>
+     * @param integer $Port <p>端口</p>
+     * @param boolean $IsHighRisk <p>是否高危</p>
+     * @param string $App <p>组件名称</p>
+     * @param string $Service <p>服务名称</p>
+     * @param string $Banner <p>端口响应详情</p>
+     * @param string $LastCheckTime <p>上次检测时间</p>
+     * @param string $Status <p>状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略</p>
+     * @param integer $IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
+     * @param integer $CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
+     * @param integer $AnalysisState <p>域名解析状态 1:异常 0:正常</p>
+     * @param integer $AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
      */
     function __construct()
     {
@@ -205,6 +213,10 @@ class DisplayPort extends AbstractModel
 
         if (array_key_exists("AnalysisState",$param) and $param["AnalysisState"] !== null) {
             $this->AnalysisState = $param["AnalysisState"];
+        }
+
+        if (array_key_exists("AggregationCount",$param) and $param["AggregationCount"] !== null) {
+            $this->AggregationCount = $param["AggregationCount"];
         }
     }
 }

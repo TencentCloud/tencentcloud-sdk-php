@@ -20,21 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DataSight访问控制规则
  *
- * @method string getAccessMode() 获取访问方式：public - 公网，internal - 内网
+ * @method array getCidrBlocks() 获取<p>网段或IP，支持IPv4或IPv6。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessMode(string $AccessMode) 设置访问方式：public - 公网，internal - 内网
+ * @method void setCidrBlocks(array $CidrBlocks) 设置<p>网段或IP，支持IPv4或IPv6。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAction() 获取<p>ACCEPT 或 DROP。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAction(string $Action) 设置<p>ACCEPT 或 DROP。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccessMode() 获取<p>访问方式：public - 公网，internal - 内网</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessMode(string $AccessMode) 设置<p>访问方式：public - 公网，internal - 内网</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessControlRule extends AbstractModel
 {
     /**
-     * @var string 访问方式：public - 公网，internal - 内网
+     * @var array <p>网段或IP，支持IPv4或IPv6。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CidrBlocks;
+
+    /**
+     * @var string <p>ACCEPT 或 DROP。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Action;
+
+    /**
+     * @var string <p>访问方式：public - 公网，internal - 内网</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessMode;
 
     /**
-     * @param string $AccessMode 访问方式：public - 公网，internal - 内网
+     * @param array $CidrBlocks <p>网段或IP，支持IPv4或IPv6。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Action <p>ACCEPT 或 DROP。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccessMode <p>访问方式：public - 公网，internal - 内网</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -50,6 +74,14 @@ class AccessControlRule extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CidrBlocks",$param) and $param["CidrBlocks"] !== null) {
+            $this->CidrBlocks = $param["CidrBlocks"];
+        }
+
+        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
+            $this->Action = $param["Action"];
+        }
+
         if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
             $this->AccessMode = $param["AccessMode"];
         }

@@ -32,6 +32,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\CreateCfsRuleResponse CreateCfsRule(Models\CreateCfsRuleRequest $req) 本接口（CreateCfsRule）用于创建权限组规则。
  * @method Models\CreateCfsSnapshotResponse CreateCfsSnapshot(Models\CreateCfsSnapshotRequest $req) 创建文件系统快照
  * @method Models\CreateDataFlowResponse CreateDataFlow(Models\CreateDataFlowRequest $req) 创建数据流动接口
+ * @method Models\CreateDataRetrievalResponse CreateDataRetrieval(Models\CreateDataRetrievalRequest $req) 创建数据检索
  * @method Models\CreateLifecycleDataTaskResponse CreateLifecycleDataTask(Models\CreateLifecycleDataTaskRequest $req) 支持主动沉降/预热接口
  * @method Models\CreateLifecyclePolicyResponse CreateLifecyclePolicy(Models\CreateLifecyclePolicyRequest $req) 创建文件存储生命周期策略
  * @method Models\CreateLifecyclePolicyDownloadTaskResponse CreateLifecyclePolicyDownloadTask(Models\CreateLifecyclePolicyDownloadTaskRequest $req) 下载生命周期任务中文件列表
@@ -42,6 +43,9 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DeleteCfsRuleResponse DeleteCfsRule(Models\DeleteCfsRuleRequest $req) 本接口（DeleteCfsRule）用于删除权限组规则。
  * @method Models\DeleteCfsSnapshotResponse DeleteCfsSnapshot(Models\DeleteCfsSnapshotRequest $req) 删除文件系统快照
  * @method Models\DeleteDataFlowResponse DeleteDataFlow(Models\DeleteDataFlowRequest $req) 删除数据流动
+ * @method Models\DeleteDataRetrievalResponse DeleteDataRetrieval(Models\DeleteDataRetrievalRequest $req) 删除数据检索。
+
+删除指定的数据检索配置，不允许在存在关联任务时删除。调用接口后，若通过 DescribeDataRetrieval 接口查询不到对应的数据检索，则表示删除成功。
  * @method Models\DeleteLifecyclePolicyResponse DeleteLifecyclePolicy(Models\DeleteLifecyclePolicyRequest $req) 删除生命周期管理策略
  * @method Models\DeleteMigrationTaskResponse DeleteMigrationTask(Models\DeleteMigrationTaskRequest $req) 用于删除迁移任务。不支持删除等待中、创建中、运行中、取消中、终止中状态的任务。
  * @method Models\DeleteUserQuotaResponse DeleteUserQuota(Models\DeleteUserQuotaRequest $req) 指定条件删除文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
@@ -56,6 +60,10 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DescribeCfsSnapshotOverviewResponse DescribeCfsSnapshotOverview(Models\DescribeCfsSnapshotOverviewRequest $req) 文件系统快照概览
  * @method Models\DescribeCfsSnapshotsResponse DescribeCfsSnapshots(Models\DescribeCfsSnapshotsRequest $req) 查询文件系统快照列表
  * @method Models\DescribeDataFlowResponse DescribeDataFlow(Models\DescribeDataFlowRequest $req) 查询数据流动信息接口
+ * @method Models\DescribeDataRetrievalResponse DescribeDataRetrieval(Models\DescribeDataRetrievalRequest $req) 查询数据检索。
+
+查询数据检索列表，支持按文件系统 ID、数据检索 ID、名称等条件筛选。
+ * @method Models\DescribeDataRetrievalTaskResponse DescribeDataRetrievalTask(Models\DescribeDataRetrievalTaskRequest $req) 查询数据检索任务
  * @method Models\DescribeLifecycleDataTaskResponse DescribeLifecycleDataTask(Models\DescribeLifecycleDataTaskRequest $req) 查询生命周期任务的接口。仅支持查询最近三个月内的任务数据。
  * @method Models\DescribeLifecyclePoliciesResponse DescribeLifecyclePolicies(Models\DescribeLifecyclePoliciesRequest $req) 查询生命周期管理策略
  * @method Models\DescribeMigrationTasksResponse DescribeMigrationTasks(Models\DescribeMigrationTasksRequest $req) 用于获取迁移任务列表。
@@ -65,9 +73,13 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 查询文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
  * @method Models\DoDirectoryOperationResponse DoDirectoryOperation(Models\DoDirectoryOperationRequest $req) 文件系统目录操作接口。当前仅 Turbo 系列文件系统支持调用此接口进行目录操作，通用系列文件系统（含增强型）不支持调用。
  * @method Models\ModifyDataFlowResponse ModifyDataFlow(Models\ModifyDataFlowRequest $req) 修改数据流动相关参数
+ * @method Models\ModifyDataRetrievalResponse ModifyDataRetrieval(Models\ModifyDataRetrievalRequest $req) 修改数据检索
  * @method Models\ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(Models\ModifyFileSystemAutoScaleUpRuleRequest $req) 用来设置文件系统扩容策略，该接口只支持turbo文件系统
  * @method Models\ModifyLifecyclePolicyResponse ModifyLifecyclePolicy(Models\ModifyLifecyclePolicyRequest $req) 更新文件存储生命周期策略
  * @method Models\OverrideCfsRulesResponse OverrideCfsRules(Models\OverrideCfsRulesRequest $req) 本接口（OverrideCfsRules）用于批量覆盖式创建权限组规则。
+ * @method Models\RunDataRetrievalTaskResponse RunDataRetrievalTask(Models\RunDataRetrievalTaskRequest $req) 执行数据检索任务。
+
+手动触发指定数据检索的执行，创建一个新的数据检索任务。单个文件系统同时执行的任务数不超过 20 个。
  * @method Models\ScaleUpFileSystemResponse ScaleUpFileSystem(Models\ScaleUpFileSystemRequest $req) 该接口用于对turbo 文件系统扩容使用,该接口只支持扩容不支持缩容。turbo标准型扩容步长是10240GIB，turbo性能型扩容步长是5120GIB
  * @method Models\SetUserQuotaResponse SetUserQuota(Models\SetUserQuotaRequest $req) 设置文件系统配额，提供UID/GID的配额设置的接口（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
  * @method Models\SignUpCfsServiceResponse SignUpCfsService(Models\SignUpCfsServiceRequest $req) 本接口（SignUpCfsService）用于开通CFS服务。

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHyperParam(HyperParam $HyperParam) 设置<p>描述了服务的超参数配置</p>
  * @method NetworkSetting getNetworkSetting() 获取<p>网络设置</p>
  * @method void setNetworkSetting(NetworkSetting $NetworkSetting) 设置<p>网络设置</p>
+ * @method string getSecurityType() 获取<p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
+ * @method void setSecurityType(string $SecurityType) 设置<p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
  */
 class CreateInferServiceByTemplateRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateInferServiceByTemplateRequest extends AbstractModel
     public $NetworkSetting;
 
     /**
+     * @var string <p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
+     */
+    public $SecurityType;
+
+    /**
      * @param string $TemplateId <p>模版ID</p>
      * @param string $ServiceName <p>服务名称</p>
      * @param integer $Replicas <p>副本数</p>
      * @param string $ServiceChargeType <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
      * @param HyperParam $HyperParam <p>描述了服务的超参数配置</p>
      * @param NetworkSetting $NetworkSetting <p>网络设置</p>
+     * @param string $SecurityType <p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
      */
     function __construct()
     {
@@ -110,6 +118,10 @@ class CreateInferServiceByTemplateRequest extends AbstractModel
         if (array_key_exists("NetworkSetting",$param) and $param["NetworkSetting"] !== null) {
             $this->NetworkSetting = new NetworkSetting();
             $this->NetworkSetting->deserialize($param["NetworkSetting"]);
+        }
+
+        if (array_key_exists("SecurityType",$param) and $param["SecurityType"] !== null) {
+            $this->SecurityType = $param["SecurityType"];
         }
     }
 }

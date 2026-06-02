@@ -20,352 +20,356 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务信息
  *
- * @method integer getID() 获取任务id
- * @method void setID(integer $ID) 设置任务id
- * @method integer getAppId() 获取用户appid
- * @method void setAppId(integer $AppId) 设置用户appid
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getCreateTime() 获取任务创建时间
- * @method void setCreateTime(string $CreateTime) 设置任务创建时间
- * @method string getDelayTime() 获取延迟执行时间
- * @method void setDelayTime(string $DelayTime) 设置延迟执行时间
- * @method string getErrMsg() 获取任务失败信息
- * @method void setErrMsg(string $ErrMsg) 设置任务失败信息
- * @method integer getFlowId() 获取异步任务流id
- * @method void setFlowId(integer $FlowId) 设置异步任务流id
- * @method string getInput() 获取任务输入信息
- * @method void setInput(string $Input) 设置任务输入信息
- * @method string getInstanceGrpId() 获取实例组id
- * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组id
- * @method string getInstanceGroupId() 获取实例组id
- * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组id
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getObjectId() 获取任务操作对象id
- * @method void setObjectId(string $ObjectId) 设置任务操作对象id
- * @method string getObjectType() 获取任务操作对象类型
- * @method void setObjectType(string $ObjectType) 设置任务操作对象类型
- * @method string getOperator() 获取操作者uin
- * @method void setOperator(string $Operator) 设置操作者uin
- * @method string getOutput() 获取任务输出信息
- * @method void setOutput(string $Output) 设置任务输出信息
- * @method string getStatus() 获取任务状态
- * @method void setStatus(string $Status) 设置任务状态
- * @method string getTaskType() 获取任务类型
- * @method void setTaskType(string $TaskType) 设置任务类型
- * @method integer getTriggerTaskId() 获取触发本任务的父任务ID
- * @method void setTriggerTaskId(integer $TriggerTaskId) 设置触发本任务的父任务ID
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method string getStartTime() 获取任务开始时间
- * @method void setStartTime(string $StartTime) 设置任务开始时间
- * @method string getEndTime() 获取任务结束时间
- * @method void setEndTime(string $EndTime) 设置任务结束时间
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getProcess() 获取任务进度
- * @method void setProcess(integer $Process) 设置任务进度
- * @method array getModifyParamsData() 获取修改参数任务信息
+ * @method integer getID() 获取<p>任务id</p>
+ * @method void setID(integer $ID) 设置<p>任务id</p>
+ * @method integer getAppId() 获取<p>用户appid</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户appid</p>
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getCreateTime() 获取<p>任务创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>任务创建时间</p>
+ * @method string getDelayTime() 获取<p>延迟执行时间</p>
+ * @method void setDelayTime(string $DelayTime) 设置<p>延迟执行时间</p>
+ * @method string getErrMsg() 获取<p>任务失败信息</p>
+ * @method void setErrMsg(string $ErrMsg) 设置<p>任务失败信息</p>
+ * @method integer getFlowId() 获取<p>异步任务流id</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>异步任务流id</p>
+ * @method string getInput() 获取<p>任务输入信息</p>
+ * @method void setInput(string $Input) 设置<p>任务输入信息</p>
+ * @method string getInstanceGrpId() 获取<p>实例组id</p>
+ * @method void setInstanceGrpId(string $InstanceGrpId) 设置<p>实例组id</p>
+ * @method string getInstanceGroupId() 获取<p>实例组id</p>
+ * @method void setInstanceGroupId(string $InstanceGroupId) 设置<p>实例组id</p>
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method string getObjectId() 获取<p>任务操作对象id</p>
+ * @method void setObjectId(string $ObjectId) 设置<p>任务操作对象id</p>
+ * @method string getObjectType() 获取<p>任务操作对象类型</p>
+ * @method void setObjectType(string $ObjectType) 设置<p>任务操作对象类型</p>
+ * @method string getOperator() 获取<p>操作者uin</p>
+ * @method void setOperator(string $Operator) 设置<p>操作者uin</p>
+ * @method string getOutput() 获取<p>任务输出信息</p>
+ * @method void setOutput(string $Output) 设置<p>任务输出信息</p>
+ * @method string getStatus() 获取<p>任务状态</p>
+ * @method void setStatus(string $Status) 设置<p>任务状态</p>
+ * @method string getTaskType() 获取<p>任务类型</p>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型</p>
+ * @method integer getTriggerTaskId() 获取<p>触发本任务的父任务ID</p>
+ * @method void setTriggerTaskId(integer $TriggerTaskId) 设置<p>触发本任务的父任务ID</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method string getStartTime() 获取<p>任务开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>任务开始时间</p>
+ * @method string getEndTime() 获取<p>任务结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>任务结束时间</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method integer getProcess() 获取<p>任务进度</p>
+ * @method void setProcess(integer $Process) 设置<p>任务进度</p>
+ * @method array getModifyParamsData() 获取<p>修改参数任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModifyParamsData(array $ModifyParamsData) 设置修改参数任务信息
+ * @method void setModifyParamsData(array $ModifyParamsData) 设置<p>修改参数任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CreateClustersData getCreateClustersData() 获取创建集群任务信息
- * @method void setCreateClustersData(CreateClustersData $CreateClustersData) 设置创建集群任务信息
- * @method RollbackData getRollbackData() 获取集群回档任务信息
- * @method void setRollbackData(RollbackData $RollbackData) 设置集群回档任务信息
- * @method ModifyInstanceData getModifyInstanceData() 获取实例变配任务信息
- * @method void setModifyInstanceData(ModifyInstanceData $ModifyInstanceData) 设置实例变配任务信息
- * @method ManualBackupData getManualBackupData() 获取手动备份任务信息
+ * @method CreateClustersData getCreateClustersData() 获取<p>创建集群任务信息</p>
+ * @method void setCreateClustersData(CreateClustersData $CreateClustersData) 设置<p>创建集群任务信息</p>
+ * @method RollbackData getRollbackData() 获取<p>集群回档任务信息</p>
+ * @method void setRollbackData(RollbackData $RollbackData) 设置<p>集群回档任务信息</p>
+ * @method ModifyInstanceData getModifyInstanceData() 获取<p>实例变配任务信息</p>
+ * @method void setModifyInstanceData(ModifyInstanceData $ModifyInstanceData) 设置<p>实例变配任务信息</p>
+ * @method ManualBackupData getManualBackupData() 获取<p>手动备份任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setManualBackupData(ManualBackupData $ManualBackupData) 设置手动备份任务信息
+ * @method void setManualBackupData(ManualBackupData $ManualBackupData) 设置<p>手动备份任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ModifyDbVersionData getModifyDbVersionData() 获取修改内核版本任务信息
- * @method void setModifyDbVersionData(ModifyDbVersionData $ModifyDbVersionData) 设置修改内核版本任务信息
- * @method ClusterSlaveData getClusterSlaveData() 获取集群可用区信息
- * @method void setClusterSlaveData(ClusterSlaveData $ClusterSlaveData) 设置集群可用区信息
- * @method SwitchClusterLogBin getSwitchClusterLogBin() 获取转换集群日志
+ * @method ModifyDbVersionData getModifyDbVersionData() 获取<p>修改内核版本任务信息</p>
+ * @method void setModifyDbVersionData(ModifyDbVersionData $ModifyDbVersionData) 设置<p>修改内核版本任务信息</p>
+ * @method ClusterSlaveData getClusterSlaveData() 获取<p>集群可用区信息</p>
+ * @method void setClusterSlaveData(ClusterSlaveData $ClusterSlaveData) 设置<p>集群可用区信息</p>
+ * @method SwitchClusterLogBin getSwitchClusterLogBin() 获取<p>转换集群日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitchClusterLogBin(SwitchClusterLogBin $SwitchClusterLogBin) 设置转换集群日志
+ * @method void setSwitchClusterLogBin(SwitchClusterLogBin $SwitchClusterLogBin) 设置<p>转换集群日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BizTaskModifyParamsData getModifyInstanceParamsData() 获取修改实例参数数据
+ * @method BizTaskModifyParamsData getModifyInstanceParamsData() 获取<p>修改实例参数数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModifyInstanceParamsData(BizTaskModifyParamsData $ModifyInstanceParamsData) 设置修改实例参数数据
+ * @method void setModifyInstanceParamsData(BizTaskModifyParamsData $ModifyInstanceParamsData) 设置<p>修改实例参数数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TaskMaintainInfo getTaskMaintainInfo() 获取维护时间
- * @method void setTaskMaintainInfo(TaskMaintainInfo $TaskMaintainInfo) 设置维护时间
- * @method array getInstanceCLSDeliveryInfos() 获取实例日志投递信息
-
- * @method void setInstanceCLSDeliveryInfos(array $InstanceCLSDeliveryInfos) 设置实例日志投递信息
-
- * @method TaskProgressInfo getTaskProgressInfo() 获取任务进度信息
- * @method void setTaskProgressInfo(TaskProgressInfo $TaskProgressInfo) 设置任务进度信息
- * @method GdnTaskInfo getGdnTaskInfo() 获取全球数据库网络任务
- * @method void setGdnTaskInfo(GdnTaskInfo $GdnTaskInfo) 设置全球数据库网络任务
- * @method string getVaultId() 获取保险箱id
- * @method void setVaultId(string $VaultId) 设置保险箱id
- * @method string getVaultName() 获取保险箱名称
- * @method void setVaultName(string $VaultName) 设置保险箱名称
+ * @method TaskMaintainInfo getTaskMaintainInfo() 获取<p>维护时间</p>
+ * @method void setTaskMaintainInfo(TaskMaintainInfo $TaskMaintainInfo) 设置<p>维护时间</p>
+ * @method array getInstanceCLSDeliveryInfos() 获取<p>实例日志投递信息</p>
+ * @method void setInstanceCLSDeliveryInfos(array $InstanceCLSDeliveryInfos) 设置<p>实例日志投递信息</p>
+ * @method TaskProgressInfo getTaskProgressInfo() 获取<p>任务进度信息</p>
+ * @method void setTaskProgressInfo(TaskProgressInfo $TaskProgressInfo) 设置<p>任务进度信息</p>
+ * @method GdnTaskInfo getGdnTaskInfo() 获取<p>全球数据库网络任务</p>
+ * @method void setGdnTaskInfo(GdnTaskInfo $GdnTaskInfo) 设置<p>全球数据库网络任务</p>
+ * @method string getVaultId() 获取<p>保险箱id</p>
+ * @method void setVaultId(string $VaultId) 设置<p>保险箱id</p>
+ * @method string getVaultName() 获取<p>保险箱名称</p>
+ * @method void setVaultName(string $VaultName) 设置<p>保险箱名称</p>
+ * @method AIOptimizerTaskData getAIOptimizerTaskData() 获取<p>AI优化器任务信息</p>
+ * @method void setAIOptimizerTaskData(AIOptimizerTaskData $AIOptimizerTaskData) 设置<p>AI优化器任务信息</p>
  */
 class BizTaskInfo extends AbstractModel
 {
     /**
-     * @var integer 任务id
+     * @var integer <p>任务id</p>
      */
     public $ID;
 
     /**
-     * @var integer 用户appid
+     * @var integer <p>用户appid</p>
      */
     public $AppId;
 
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 任务创建时间
+     * @var string <p>任务创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 延迟执行时间
+     * @var string <p>延迟执行时间</p>
      */
     public $DelayTime;
 
     /**
-     * @var string 任务失败信息
+     * @var string <p>任务失败信息</p>
      */
     public $ErrMsg;
 
     /**
-     * @var integer 异步任务流id
+     * @var integer <p>异步任务流id</p>
      */
     public $FlowId;
 
     /**
-     * @var string 任务输入信息
+     * @var string <p>任务输入信息</p>
      */
     public $Input;
 
     /**
-     * @var string 实例组id
+     * @var string <p>实例组id</p>
      * @deprecated
      */
     public $InstanceGrpId;
 
     /**
-     * @var string 实例组id
+     * @var string <p>实例组id</p>
      */
     public $InstanceGroupId;
 
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 任务操作对象id
+     * @var string <p>任务操作对象id</p>
      */
     public $ObjectId;
 
     /**
-     * @var string 任务操作对象类型
+     * @var string <p>任务操作对象类型</p>
      */
     public $ObjectType;
 
     /**
-     * @var string 操作者uin
+     * @var string <p>操作者uin</p>
      */
     public $Operator;
 
     /**
-     * @var string 任务输出信息
+     * @var string <p>任务输出信息</p>
      */
     public $Output;
 
     /**
-     * @var string 任务状态
+     * @var string <p>任务状态</p>
      */
     public $Status;
 
     /**
-     * @var string 任务类型
+     * @var string <p>任务类型</p>
      */
     public $TaskType;
 
     /**
-     * @var integer 触发本任务的父任务ID
+     * @var integer <p>触发本任务的父任务ID</p>
      */
     public $TriggerTaskId;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 任务开始时间
+     * @var string <p>任务开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 任务结束时间
+     * @var string <p>任务结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 任务进度
+     * @var integer <p>任务进度</p>
      */
     public $Process;
 
     /**
-     * @var array 修改参数任务信息
+     * @var array <p>修改参数任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $ModifyParamsData;
 
     /**
-     * @var CreateClustersData 创建集群任务信息
+     * @var CreateClustersData <p>创建集群任务信息</p>
      */
     public $CreateClustersData;
 
     /**
-     * @var RollbackData 集群回档任务信息
+     * @var RollbackData <p>集群回档任务信息</p>
      */
     public $RollbackData;
 
     /**
-     * @var ModifyInstanceData 实例变配任务信息
+     * @var ModifyInstanceData <p>实例变配任务信息</p>
      */
     public $ModifyInstanceData;
 
     /**
-     * @var ManualBackupData 手动备份任务信息
+     * @var ManualBackupData <p>手动备份任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManualBackupData;
 
     /**
-     * @var ModifyDbVersionData 修改内核版本任务信息
+     * @var ModifyDbVersionData <p>修改内核版本任务信息</p>
      */
     public $ModifyDbVersionData;
 
     /**
-     * @var ClusterSlaveData 集群可用区信息
+     * @var ClusterSlaveData <p>集群可用区信息</p>
      */
     public $ClusterSlaveData;
 
     /**
-     * @var SwitchClusterLogBin 转换集群日志
+     * @var SwitchClusterLogBin <p>转换集群日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchClusterLogBin;
 
     /**
-     * @var BizTaskModifyParamsData 修改实例参数数据
+     * @var BizTaskModifyParamsData <p>修改实例参数数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyInstanceParamsData;
 
     /**
-     * @var TaskMaintainInfo 维护时间
+     * @var TaskMaintainInfo <p>维护时间</p>
      */
     public $TaskMaintainInfo;
 
     /**
-     * @var array 实例日志投递信息
-
+     * @var array <p>实例日志投递信息</p>
      */
     public $InstanceCLSDeliveryInfos;
 
     /**
-     * @var TaskProgressInfo 任务进度信息
+     * @var TaskProgressInfo <p>任务进度信息</p>
      */
     public $TaskProgressInfo;
 
     /**
-     * @var GdnTaskInfo 全球数据库网络任务
+     * @var GdnTaskInfo <p>全球数据库网络任务</p>
      */
     public $GdnTaskInfo;
 
     /**
-     * @var string 保险箱id
+     * @var string <p>保险箱id</p>
      */
     public $VaultId;
 
     /**
-     * @var string 保险箱名称
+     * @var string <p>保险箱名称</p>
      */
     public $VaultName;
 
     /**
-     * @param integer $ID 任务id
-     * @param integer $AppId 用户appid
-     * @param string $ClusterId 集群id
-     * @param string $Region 地域
-     * @param string $CreateTime 任务创建时间
-     * @param string $DelayTime 延迟执行时间
-     * @param string $ErrMsg 任务失败信息
-     * @param integer $FlowId 异步任务流id
-     * @param string $Input 任务输入信息
-     * @param string $InstanceGrpId 实例组id
-     * @param string $InstanceGroupId 实例组id
-     * @param string $InstanceId 实例id
-     * @param string $ObjectId 任务操作对象id
-     * @param string $ObjectType 任务操作对象类型
-     * @param string $Operator 操作者uin
-     * @param string $Output 任务输出信息
-     * @param string $Status 任务状态
-     * @param string $TaskType 任务类型
-     * @param integer $TriggerTaskId 触发本任务的父任务ID
-     * @param string $UpdateTime 更新时间
-     * @param string $StartTime 任务开始时间
-     * @param string $EndTime 任务结束时间
-     * @param string $ClusterName 集群名称
-     * @param string $InstanceName 实例名称
-     * @param integer $Process 任务进度
-     * @param array $ModifyParamsData 修改参数任务信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateClustersData $CreateClustersData 创建集群任务信息
-     * @param RollbackData $RollbackData 集群回档任务信息
-     * @param ModifyInstanceData $ModifyInstanceData 实例变配任务信息
-     * @param ManualBackupData $ManualBackupData 手动备份任务信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyDbVersionData $ModifyDbVersionData 修改内核版本任务信息
-     * @param ClusterSlaveData $ClusterSlaveData 集群可用区信息
-     * @param SwitchClusterLogBin $SwitchClusterLogBin 转换集群日志
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param BizTaskModifyParamsData $ModifyInstanceParamsData 修改实例参数数据
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskMaintainInfo $TaskMaintainInfo 维护时间
-     * @param array $InstanceCLSDeliveryInfos 实例日志投递信息
+     * @var AIOptimizerTaskData <p>AI优化器任务信息</p>
+     */
+    public $AIOptimizerTaskData;
 
-     * @param TaskProgressInfo $TaskProgressInfo 任务进度信息
-     * @param GdnTaskInfo $GdnTaskInfo 全球数据库网络任务
-     * @param string $VaultId 保险箱id
-     * @param string $VaultName 保险箱名称
+    /**
+     * @param integer $ID <p>任务id</p>
+     * @param integer $AppId <p>用户appid</p>
+     * @param string $ClusterId <p>集群id</p>
+     * @param string $Region <p>地域</p>
+     * @param string $CreateTime <p>任务创建时间</p>
+     * @param string $DelayTime <p>延迟执行时间</p>
+     * @param string $ErrMsg <p>任务失败信息</p>
+     * @param integer $FlowId <p>异步任务流id</p>
+     * @param string $Input <p>任务输入信息</p>
+     * @param string $InstanceGrpId <p>实例组id</p>
+     * @param string $InstanceGroupId <p>实例组id</p>
+     * @param string $InstanceId <p>实例id</p>
+     * @param string $ObjectId <p>任务操作对象id</p>
+     * @param string $ObjectType <p>任务操作对象类型</p>
+     * @param string $Operator <p>操作者uin</p>
+     * @param string $Output <p>任务输出信息</p>
+     * @param string $Status <p>任务状态</p>
+     * @param string $TaskType <p>任务类型</p>
+     * @param integer $TriggerTaskId <p>触发本任务的父任务ID</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param string $StartTime <p>任务开始时间</p>
+     * @param string $EndTime <p>任务结束时间</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param integer $Process <p>任务进度</p>
+     * @param array $ModifyParamsData <p>修改参数任务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateClustersData $CreateClustersData <p>创建集群任务信息</p>
+     * @param RollbackData $RollbackData <p>集群回档任务信息</p>
+     * @param ModifyInstanceData $ModifyInstanceData <p>实例变配任务信息</p>
+     * @param ManualBackupData $ManualBackupData <p>手动备份任务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyDbVersionData $ModifyDbVersionData <p>修改内核版本任务信息</p>
+     * @param ClusterSlaveData $ClusterSlaveData <p>集群可用区信息</p>
+     * @param SwitchClusterLogBin $SwitchClusterLogBin <p>转换集群日志</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BizTaskModifyParamsData $ModifyInstanceParamsData <p>修改实例参数数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskMaintainInfo $TaskMaintainInfo <p>维护时间</p>
+     * @param array $InstanceCLSDeliveryInfos <p>实例日志投递信息</p>
+     * @param TaskProgressInfo $TaskProgressInfo <p>任务进度信息</p>
+     * @param GdnTaskInfo $GdnTaskInfo <p>全球数据库网络任务</p>
+     * @param string $VaultId <p>保险箱id</p>
+     * @param string $VaultName <p>保险箱名称</p>
+     * @param AIOptimizerTaskData $AIOptimizerTaskData <p>AI优化器任务信息</p>
      */
     function __construct()
     {
@@ -559,6 +563,11 @@ class BizTaskInfo extends AbstractModel
 
         if (array_key_exists("VaultName",$param) and $param["VaultName"] !== null) {
             $this->VaultName = $param["VaultName"];
+        }
+
+        if (array_key_exists("AIOptimizerTaskData",$param) and $param["AIOptimizerTaskData"] !== null) {
+            $this->AIOptimizerTaskData = new AIOptimizerTaskData();
+            $this->AIOptimizerTaskData->deserialize($param["AIOptimizerTaskData"]);
         }
     }
 }

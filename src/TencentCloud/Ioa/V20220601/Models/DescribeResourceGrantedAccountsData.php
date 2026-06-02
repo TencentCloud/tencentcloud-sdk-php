@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceGrantedAccountsData
  *
- * @method integer getTotalCount() 获取总数
- * @method void setTotalCount(integer $TotalCount) 设置总数
- * @method array getItems() 获取 
- * @method void setItems(array $Items) 设置 
+ * @method integer getTotalCount() 获取<p>总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>总数</p>
+ * @method array getItems() 获取<p>授权信息</p>
+ * @method void setItems(array $Items) 设置<p>授权信息</p>
  */
 class DescribeResourceGrantedAccountsData extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var integer <p>总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array  
+     * @var array <p>授权信息</p>
      */
     public $Items;
 
     /**
-     * @param integer $TotalCount 总数
-     * @param array $Items  
+     * @param integer $TotalCount <p>总数</p>
+     * @param array $Items <p>授权信息</p>
      */
     function __construct()
     {

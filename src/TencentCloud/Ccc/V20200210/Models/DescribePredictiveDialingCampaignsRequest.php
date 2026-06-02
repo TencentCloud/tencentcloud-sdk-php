@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePredictiveDialingCampaigns请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method integer getPageSize() 获取分页尺寸，最大为 100
- * @method void setPageSize(integer $PageSize) 设置分页尺寸，最大为 100
- * @method integer getPageNumber() 获取分页页码，从 0 开始
- * @method void setPageNumber(integer $PageNumber) 设置分页页码，从 0 开始
- * @method string getName() 获取查询任务列表名称关键字
- * @method void setName(string $Name) 设置查询任务列表名称关键字
- * @method integer getSkillGroupId() 获取查询任务列表技能组 ID
- * @method void setSkillGroupId(integer $SkillGroupId) 设置查询任务列表技能组 ID
+ * @method integer getSdkAppId() 获取<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method integer getPageSize() 获取<p>分页尺寸，最大为 100</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>分页尺寸，最大为 100</p>
+ * @method integer getPageNumber() 获取<p>分页页码，从 0 开始</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>分页页码，从 0 开始</p>
+ * @method string getName() 获取<p>查询任务列表名称关键字</p>
+ * @method void setName(string $Name) 设置<p>查询任务列表名称关键字</p>
+ * @method integer getSkillGroupId() 获取<p>查询任务列表技能组 ID</p>
+ * @method void setSkillGroupId(integer $SkillGroupId) 设置<p>查询任务列表技能组 ID</p>
+ * @method integer getCampaignId() 获取<p>任务 ID</p>
+ * @method void setCampaignId(integer $CampaignId) 设置<p>任务 ID</p>
  */
 class DescribePredictiveDialingCampaignsRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @var integer <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public $SdkAppId;
 
     /**
-     * @var integer 分页尺寸，最大为 100
+     * @var integer <p>分页尺寸，最大为 100</p>
      */
     public $PageSize;
 
     /**
-     * @var integer 分页页码，从 0 开始
+     * @var integer <p>分页页码，从 0 开始</p>
      */
     public $PageNumber;
 
     /**
-     * @var string 查询任务列表名称关键字
+     * @var string <p>查询任务列表名称关键字</p>
      */
     public $Name;
 
     /**
-     * @var integer 查询任务列表技能组 ID
+     * @var integer <p>查询任务列表技能组 ID</p>
      */
     public $SkillGroupId;
 
     /**
-     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param integer $PageSize 分页尺寸，最大为 100
-     * @param integer $PageNumber 分页页码，从 0 开始
-     * @param string $Name 查询任务列表名称关键字
-     * @param integer $SkillGroupId 查询任务列表技能组 ID
+     * @var integer <p>任务 ID</p>
+     */
+    public $CampaignId;
+
+    /**
+     * @param integer $SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param integer $PageSize <p>分页尺寸，最大为 100</p>
+     * @param integer $PageNumber <p>分页页码，从 0 开始</p>
+     * @param string $Name <p>查询任务列表名称关键字</p>
+     * @param integer $SkillGroupId <p>查询任务列表技能组 ID</p>
+     * @param integer $CampaignId <p>任务 ID</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribePredictiveDialingCampaignsRequest extends AbstractModel
 
         if (array_key_exists("SkillGroupId",$param) and $param["SkillGroupId"] !== null) {
             $this->SkillGroupId = $param["SkillGroupId"];
+        }
+
+        if (array_key_exists("CampaignId",$param) and $param["CampaignId"] !== null) {
+            $this->CampaignId = $param["CampaignId"];
         }
     }
 }

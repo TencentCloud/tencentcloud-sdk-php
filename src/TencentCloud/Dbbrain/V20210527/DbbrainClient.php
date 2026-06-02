@@ -61,6 +61,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeDBDiagReportTasksResponse DescribeDBDiagReportTasks(Models\DescribeDBDiagReportTasksRequest $req) 查询健康报告生成任务列表。
  * @method Models\DescribeDBPerfTimeSeriesResponse DescribeDBPerfTimeSeries(Models\DescribeDBPerfTimeSeriesRequest $req) 根据实例ID获取指定时间段的性能趋势。
  * @method Models\DescribeDBSpaceStatusResponse DescribeDBSpaceStatus(Models\DescribeDBSpaceStatusRequest $req) 获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
+ * @method Models\DescribeDatabaseAutonomyStatusResponse DescribeDatabaseAutonomyStatus(Models\DescribeDatabaseAutonomyStatusRequest $req) 查询数据库自治功能的开关状态。当前支持 MongoDB 的索引推荐（AutoIndexAdvice）功能状态查询。
  * @method Models\DescribeDiagDBInstancesResponse DescribeDiagDBInstances(Models\DescribeDiagDBInstancesRequest $req) 获取实例信息列表。Region统一选择广州。
  * @method Models\DescribeHealthScoreResponse DescribeHealthScore(Models\DescribeHealthScoreRequest $req) 根据实例ID获取指定时间段（30分钟）的健康得分，以及异常扣分项。
  * @method Models\DescribeHealthScoreTimeSeriesResponse DescribeHealthScoreTimeSeries(Models\DescribeHealthScoreTimeSeriesRequest $req) 获取指定时间段内的健康得分趋势
@@ -107,6 +108,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\ModifyUserAutonomyProfileResponse ModifyUserAutonomyProfile(Models\ModifyUserAutonomyProfileRequest $req) 自治中心-终止自治任务（单次）；注意：接口需要加白名单。
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) 开启数据库审计服务
  * @method Models\UpdateAgentSwitchResponse UpdateAgentSwitch(Models\UpdateAgentSwitchRequest $req) 更新agent状态（停止或重连Agent）
+ * @method Models\UpdateDatabaseAutonomyStatusResponse UpdateDatabaseAutonomyStatus(Models\UpdateDatabaseAutonomyStatusRequest $req) 设置数据库自治功能的开关状态。当前支持 MongoDB 的索引推荐（AutoIndexAdvice）功能的开启或关闭。
  * @method Models\UpdateMonitorSwitchResponse UpdateMonitorSwitch(Models\UpdateMonitorSwitchRequest $req) 更新Agent实例状态（停止或重连实例）
  * @method Models\VerifyUserAccountResponse VerifyUserAccount(Models\VerifyUserAccountRequest $req) 验证用户数据库账号权限，获取会话token。
  */

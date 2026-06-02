@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePredictiveDialingCampaigns返回参数结构体
  *
- * @method integer getTotalCount() 获取数据总量
- * @method void setTotalCount(integer $TotalCount) 设置数据总量
- * @method array getCampaignList() 获取数据
- * @method void setCampaignList(array $CampaignList) 设置数据
+ * @method integer getTotalCount() 获取<p>数据总量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>数据总量</p>
+ * @method array getCampaignList() 获取<p>数据</p>
+ * @method void setCampaignList(array $CampaignList) 设置<p>数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribePredictiveDialingCampaignsResponse extends AbstractModel
 {
     /**
-     * @var integer 数据总量
+     * @var integer <p>数据总量</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 数据
+     * @var array <p>数据</p>
      */
     public $CampaignList;
 
@@ -45,8 +45,8 @@ class DescribePredictiveDialingCampaignsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 数据总量
-     * @param array $CampaignList 数据
+     * @param integer $TotalCount <p>数据总量</p>
+     * @param array $CampaignList <p>数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

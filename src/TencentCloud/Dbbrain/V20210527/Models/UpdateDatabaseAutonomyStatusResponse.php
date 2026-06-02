@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RecognizeOnlineTaxiItineraryOCR返回参数结构体
+ * UpdateDatabaseAutonomyStatus返回参数结构体
  *
- * @method array getOnlineTaxiItineraryInfos() 获取网约车行程单识别结果，具体内容请点击左侧链接。
- * @method void setOnlineTaxiItineraryInfos(array $OnlineTaxiItineraryInfos) 设置网约车行程单识别结果，具体内容请点击左侧链接。
+ * @method integer getStatus() 获取<p>操作结果状态。取值：1（操作成功）。</p>
+ * @method void setStatus(integer $Status) 设置<p>操作结果状态。取值：1（操作成功）。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class RecognizeOnlineTaxiItineraryOCRResponse extends AbstractModel
+class UpdateDatabaseAutonomyStatusResponse extends AbstractModel
 {
     /**
-     * @var array 网约车行程单识别结果，具体内容请点击左侧链接。
+     * @var integer <p>操作结果状态。取值：1（操作成功）。</p>
      */
-    public $OnlineTaxiItineraryInfos;
+    public $Status;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class RecognizeOnlineTaxiItineraryOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $OnlineTaxiItineraryInfos 网约车行程单识别结果，具体内容请点击左侧链接。
+     * @param integer $Status <p>操作结果状态。取值：1（操作成功）。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,8 @@ class RecognizeOnlineTaxiItineraryOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OnlineTaxiItineraryInfos",$param) and $param["OnlineTaxiItineraryInfos"] !== null) {
-            $this->OnlineTaxiItineraryInfos = [];
-            foreach ($param["OnlineTaxiItineraryInfos"] as $key => $value){
-                $obj = new OnlineTaxiItineraryInfo();
-                $obj->deserialize($value);
-                array_push($this->OnlineTaxiItineraryInfos, $obj);
-            }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

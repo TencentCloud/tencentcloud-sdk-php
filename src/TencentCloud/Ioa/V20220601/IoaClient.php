@@ -48,7 +48,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\DescribeDeviceInfoResponse DescribeDeviceInfo(Models\DescribeDeviceInfoRequest $req) 获取终端进程网络服务信息，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
  * @method Models\DescribeDeviceVirtualGroupsResponse DescribeDeviceVirtualGroups(Models\DescribeDeviceVirtualGroupsRequest $req) 查询终端自定义分组列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceVirtualGroups
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 查询满足条件的终端数据详情，私有化调用path为：/capi/Assets/Device/DescribeDevices
- * @method Models\DescribeDirectAccountGroupResourcesResponse DescribeDirectAccountGroupResources(Models\DescribeDirectAccountGroupResourcesRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/Assets/DescribeDirectAccountGroupResources
+ * @method Models\DescribeDirectAccountGroupResourcesResponse DescribeDirectAccountGroupResources(Models\DescribeDirectAccountGroupResourcesRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeDirectAccountGroupResources
  * @method Models\DescribeLocalAccountsResponse DescribeLocalAccounts(Models\DescribeLocalAccountsRequest $req) 获取账号列表，支持分页，模糊搜索，私有化调用path为：/capi/Assets/Account/DescribeLocalAccounts
  * @method Models\DescribeResourceGrantedAccountGroupsResponse DescribeResourceGrantedAccountGroups(Models\DescribeResourceGrantedAccountGroupsRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
  * @method Models\DescribeResourceGrantedAccountsResponse DescribeResourceGrantedAccounts(Models\DescribeResourceGrantedAccountsRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts

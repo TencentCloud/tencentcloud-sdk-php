@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceGrantedAccountsData
  *
- * @method array getItems() 获取 
- * @method void setItems(array $Items) 设置 
+ * @method array getItems() 获取<p>授权信息</p>
+ * @method void setItems(array $Items) 设置<p>授权信息</p>
  */
 class DescribeResourceGrantedVirtualGroupsData extends AbstractModel
 {
     /**
-     * @var array  
+     * @var array <p>授权信息</p>
      */
     public $Items;
 
     /**
-     * @param array $Items  
+     * @param array $Items <p>授权信息</p>
      */
     function __construct()
     {

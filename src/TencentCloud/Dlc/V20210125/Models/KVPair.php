@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 配置格式
  *
- * @method string getKey() 获取配置的key值
- * @method void setKey(string $Key) 设置配置的key值
- * @method string getValue() 获取配置的value值
- * @method void setValue(string $Value) 设置配置的value值
+ * @method string getKey() 获取<p>配置的key值</p>
+ * @method void setKey(string $Key) 设置<p>配置的key值</p>
+ * @method string getValue() 获取<p>配置的value值</p>
+ * @method void setValue(string $Value) 设置<p>配置的value值</p>
  */
 class KVPair extends AbstractModel
 {
     /**
-     * @var string 配置的key值
+     * @var string <p>配置的key值</p>
      */
     public $Key;
 
     /**
-     * @var string 配置的value值
+     * @var string <p>配置的value值</p>
      */
     public $Value;
 
     /**
-     * @param string $Key 配置的key值
-     * @param string $Value 配置的value值
+     * @param string $Key <p>配置的key值</p>
+     * @param string $Value <p>配置的value值</p>
      */
     function __construct()
     {

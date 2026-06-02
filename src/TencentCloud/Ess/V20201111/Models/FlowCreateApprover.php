@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecipientId(string $RecipientId) 设置<p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p><p><b>模板发起合同时，该参数为必填项，可以通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/DescribeFlowTemplates">查询模板信息接口</a>获得。</b><br><b>文件发起合同时，该参数无需传值。</b></p><p>如果开发者后续用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。</p>
  * @method array getVerifyChannel() 获取<p>签署意愿确认渠道，默认为WEIXINAPP:人脸识别</p><p>注: &lt;font color=&quot;red&quot;&gt;不再使用, <code>用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置</code></p>
  * @method void setVerifyChannel(array $VerifyChannel) 设置<p>签署意愿确认渠道，默认为WEIXINAPP:人脸识别</p><p>注: &lt;font color=&quot;red&quot;&gt;不再使用, <code>用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置</code></p>
- * @method string getNotifyType() 获取<p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **sms**  :  (默认)短信</li><li>  **email**  :  邮件</li><li>  **all**  :  邮件+短信</li><li>   **none**   : 不通知</li></ul><p>注: <code>既是发起方又是签署方时，不给此签署方发送短信</code></p><p>枚举值：</p><ul><li>sms： 短信通知</li><li>email： 邮件通知</li><li>all： 邮件通知+短信通知</li><li>none： 不做任何形式的通知</li></ul>
- * @method void setNotifyType(string $NotifyType) 设置<p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **sms**  :  (默认)短信</li><li>  **email**  :  邮件</li><li>  **all**  :  邮件+短信</li><li>   **none**   : 不通知</li></ul><p>注: <code>既是发起方又是签署方时，不给此签署方发送短信</code></p><p>枚举值：</p><ul><li>sms： 短信通知</li><li>email： 邮件通知</li><li>all： 邮件通知+短信通知</li><li>none： 不做任何形式的通知</li></ul>
+ * @method string getNotifyType() 获取<p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **SMS**  :  (默认)短信</li><li>  **EMAIL**  :  邮件</li><li>  **ALL**  :  邮件+短信</li><li>   **NONE**   : 不通知</li></ul><p>注: <code>既是发起方又是签署方时，不给此签署方发送短信</code></p><p>枚举值：</p><ul><li>SMS： 短信通知</li><li>EMAIL： 邮件通知</li><li>ALL： 邮件通知+短信通知</li><li>NONE： 不做任何形式的通知</li></ul>
+ * @method void setNotifyType(string $NotifyType) 设置<p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **SMS**  :  (默认)短信</li><li>  **EMAIL**  :  邮件</li><li>  **ALL**  :  邮件+短信</li><li>   **NONE**   : 不通知</li></ul><p>注: <code>既是发起方又是签署方时，不给此签署方发送短信</code></p><p>枚举值：</p><ul><li>SMS： 短信通知</li><li>EMAIL： 邮件通知</li><li>ALL： 邮件通知+短信通知</li><li>NONE： 不做任何形式的通知</li></ul>
  * @method boolean getIsFullText() 获取<p>合同强制需要阅读全文，无需传此参数</p>
  * @method void setIsFullText(boolean $IsFullText) 设置<p>合同强制需要阅读全文，无需传此参数</p>
  * @method integer getPreReadTime() 获取<p>签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。</p><p>若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：</p><ul><li>合同页数少于等于2页，阅读时间为3秒；</li><li>合同页数为3到5页，阅读时间为5秒；</li><li>合同页数大于等于6页，阅读时间为10秒。</li></ul>
@@ -126,7 +126,7 @@ class FlowCreateApprover extends AbstractModel
     public $VerifyChannel;
 
     /**
-     * @var string <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **sms**  :  (默认)短信</li><li>  **email**  :  邮件</li><li>  **all**  :  邮件+短信</li><li>   **none**   : 不通知</li></ul><p>注: <code>既是发起方又是签署方时，不给此签署方发送短信</code></p><p>枚举值：</p><ul><li>sms： 短信通知</li><li>email： 邮件通知</li><li>all： 邮件通知+短信通知</li><li>none： 不做任何形式的通知</li></ul>
+     * @var string <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **SMS**  :  (默认)短信</li><li>  **EMAIL**  :  邮件</li><li>  **ALL**  :  邮件+短信</li><li>   **NONE**   : 不通知</li></ul><p>注: <code>既是发起方又是签署方时，不给此签署方发送短信</code></p><p>枚举值：</p><ul><li>SMS： 短信通知</li><li>EMAIL： 邮件通知</li><li>ALL： 邮件通知+短信通知</li><li>NONE： 不做任何形式的通知</li></ul>
      */
     public $NotifyType;
 
@@ -250,7 +250,7 @@ class FlowCreateApprover extends AbstractModel
      * @param string $ApproverIdCardNumber <p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      * @param string $RecipientId <p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p><p><b>模板发起合同时，该参数为必填项，可以通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/DescribeFlowTemplates">查询模板信息接口</a>获得。</b><br><b>文件发起合同时，该参数无需传值。</b></p><p>如果开发者后续用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。</p>
      * @param array $VerifyChannel <p>签署意愿确认渠道，默认为WEIXINAPP:人脸识别</p><p>注: &lt;font color=&quot;red&quot;&gt;不再使用, <code>用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置</code></p>
-     * @param string $NotifyType <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **sms**  :  (默认)短信</li><li>  **email**  :  邮件</li><li>  **all**  :  邮件+短信</li><li>   **none**   : 不通知</li></ul><p>注: <code>既是发起方又是签署方时，不给此签署方发送短信</code></p><p>枚举值：</p><ul><li>sms： 短信通知</li><li>email： 邮件通知</li><li>all： 邮件通知+短信通知</li><li>none： 不做任何形式的通知</li></ul>
+     * @param string $NotifyType <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **SMS**  :  (默认)短信</li><li>  **EMAIL**  :  邮件</li><li>  **ALL**  :  邮件+短信</li><li>   **NONE**   : 不通知</li></ul><p>注: <code>既是发起方又是签署方时，不给此签署方发送短信</code></p><p>枚举值：</p><ul><li>SMS： 短信通知</li><li>EMAIL： 邮件通知</li><li>ALL： 邮件通知+短信通知</li><li>NONE： 不做任何形式的通知</li></ul>
      * @param boolean $IsFullText <p>合同强制需要阅读全文，无需传此参数</p>
      * @param integer $PreReadTime <p>签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。</p><p>若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：</p><ul><li>合同页数少于等于2页，阅读时间为3秒；</li><li>合同页数为3到5页，阅读时间为5秒；</li><li>合同页数大于等于6页，阅读时间为10秒。</li></ul>
      * @param string $UserId <p>签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得</p><p>注：<br>如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）</p>

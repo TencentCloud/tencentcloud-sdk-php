@@ -672,9 +672,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\RecognizeMedicalInvoiceOCRResponse RecognizeMedicalInvoiceOCR(Models\RecognizeMedicalInvoiceOCRRequest $req) 医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCR(Models\RecognizeOnlineTaxiItineraryOCRRequest $req) 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
-
-默认接口请求频率限制：20次/秒。
  * @method Models\RecognizeStoreNameResponse RecognizeStoreName(Models\RecognizeStoreNameRequest $req) 本接口用于识别门头照文字识别结果以及对应分类标签信息
 默认接口请求频率限制：1次/秒
  * @method Models\RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCR(Models\RecognizeTableAccurateOCRRequest $req) 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。
@@ -724,9 +721,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。
 
 默认接口请求频率限制：10次/秒。
- * @method Models\TaxiInvoiceOCRResponse TaxiInvoiceOCR(Models\TaxiInvoiceOCRRequest $req) 本接口支持出租车发票关键字段的识别，包括发票号码、发票代码、金额、日期、上下车时间、里程、车牌号、发票类型及所属地区等字段。
-
-默认接口请求频率限制：5次/秒。
  * @method Models\TextDetectResponse TextDetect(Models\TextDetectRequest $req) 本接口通过检测图片中的文字信息特征，快速判断图片中有无文字并返回判断结果，帮助用户过滤无文字的图片。
 
 默认接口请求频率限制：5次/秒。

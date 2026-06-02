@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePredictiveDialingCampaign请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method integer getCampaignId() 获取任务 ID
- * @method void setCampaignId(integer $CampaignId) 设置任务 ID
+ * @method integer getSdkAppId() 获取<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method integer getCampaignId() 获取<p>任务 ID</p>
+ * @method void setCampaignId(integer $CampaignId) 设置<p>任务 ID</p>
  */
 class DescribePredictiveDialingCampaignRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @var integer <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public $SdkAppId;
 
     /**
-     * @var integer 任务 ID
+     * @var integer <p>任务 ID</p>
      */
     public $CampaignId;
 
     /**
-     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param integer $CampaignId 任务 ID
+     * @param integer $SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param integer $CampaignId <p>任务 ID</p>
      */
     function __construct()
     {

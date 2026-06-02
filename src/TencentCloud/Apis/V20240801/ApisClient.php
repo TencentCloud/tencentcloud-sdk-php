@@ -26,20 +26,25 @@ use TencentCloud\Apis\V20240801\Models as Models;
  * @method Models\CreateAgentAppResponse CreateAgentApp(Models\CreateAgentAppRequest $req) 创建app
  * @method Models\CreateAgentAppMcpServersResponse CreateAgentAppMcpServers(Models\CreateAgentAppMcpServersRequest $req) 创建app的mcp server关联
  * @method Models\CreateAgentAppModelServicesResponse CreateAgentAppModelServices(Models\CreateAgentAppModelServicesRequest $req) 创建app的model service关联
+ * @method Models\CreateAgentAppServicesResponse CreateAgentAppServices(Models\CreateAgentAppServicesRequest $req) 应用关联API
  * @method Models\CreateAgentCredentialResponse CreateAgentCredential(Models\CreateAgentCredentialRequest $req) 创建Credential
  * @method Models\CreateMcpServerResponse CreateMcpServer(Models\CreateMcpServerRequest $req) 创建mcp server
  * @method Models\CreateModelResponse CreateModel(Models\CreateModelRequest $req) 创建模型
  * @method Models\CreateModelServiceResponse CreateModelService(Models\CreateModelServiceRequest $req) 创建模型服务
+ * @method Models\CreateServiceResponse CreateService(Models\CreateServiceRequest $req) 创建服务
  * @method Models\DeleteAgentAppResponse DeleteAgentApp(Models\DeleteAgentAppRequest $req) 删除app
  * @method Models\DeleteAgentAppMcpServersResponse DeleteAgentAppMcpServers(Models\DeleteAgentAppMcpServersRequest $req) 删除app的mcp server
  * @method Models\DeleteAgentAppModelServicesResponse DeleteAgentAppModelServices(Models\DeleteAgentAppModelServicesRequest $req) 删除app的model service关联
+ * @method Models\DeleteAgentAppServicesResponse DeleteAgentAppServices(Models\DeleteAgentAppServicesRequest $req) 应用API关联解除
  * @method Models\DeleteAgentCredentialResponse DeleteAgentCredential(Models\DeleteAgentCredentialRequest $req) 删除Credential
  * @method Models\DeleteMcpServerResponse DeleteMcpServer(Models\DeleteMcpServerRequest $req) 删除mcp server
  * @method Models\DeleteModelResponse DeleteModel(Models\DeleteModelRequest $req) 删除模型
  * @method Models\DeleteModelServiceResponse DeleteModelService(Models\DeleteModelServiceRequest $req) 删除模型服务
+ * @method Models\DeleteServiceResponse DeleteService(Models\DeleteServiceRequest $req) 删除服务
  * @method Models\DescribeAgentAppResponse DescribeAgentApp(Models\DescribeAgentAppRequest $req) 查询app详情
  * @method Models\DescribeAgentAppMcpServersResponse DescribeAgentAppMcpServers(Models\DescribeAgentAppMcpServersRequest $req) 查询app mcpServer关联列表
  * @method Models\DescribeAgentAppModelServicesResponse DescribeAgentAppModelServices(Models\DescribeAgentAppModelServicesRequest $req) 查询app modelService关联列表
+ * @method Models\DescribeAgentAppServicesResponse DescribeAgentAppServices(Models\DescribeAgentAppServicesRequest $req) 创建app
  * @method Models\DescribeAgentAppsResponse DescribeAgentApps(Models\DescribeAgentAppsRequest $req) 查询app列表
  * @method Models\DescribeAgentCredentialResponse DescribeAgentCredential(Models\DescribeAgentCredentialRequest $req) 查询Credential详情
  * @method Models\DescribeAgentCredentialsResponse DescribeAgentCredentials(Models\DescribeAgentCredentialsRequest $req) 查询Credential列表
@@ -49,12 +54,15 @@ use TencentCloud\Apis\V20240801\Models as Models;
  * @method Models\DescribeModelServiceResponse DescribeModelService(Models\DescribeModelServiceRequest $req) 查询模型服务详情
  * @method Models\DescribeModelServicesResponse DescribeModelServices(Models\DescribeModelServicesRequest $req) 查询模型服务列表
  * @method Models\DescribeModelsResponse DescribeModels(Models\DescribeModelsRequest $req) 查询模型列表
+ * @method Models\DescribeServiceResponse DescribeService(Models\DescribeServiceRequest $req) 查询服务详情
+ * @method Models\DescribeServicesResponse DescribeServices(Models\DescribeServicesRequest $req) 查询服务列表
  * @method Models\ModifyAgentAppResponse ModifyAgentApp(Models\ModifyAgentAppRequest $req) 修改app
  * @method Models\ModifyAgentAppModelServicesResponse ModifyAgentAppModelServices(Models\ModifyAgentAppModelServicesRequest $req) 编辑app的model service关联
  * @method Models\ModifyAgentCredentialResponse ModifyAgentCredential(Models\ModifyAgentCredentialRequest $req) 修改Credential
  * @method Models\ModifyMcpServerResponse ModifyMcpServer(Models\ModifyMcpServerRequest $req) 修改mcp server
  * @method Models\ModifyModelResponse ModifyModel(Models\ModifyModelRequest $req) 修改模型
  * @method Models\ModifyModelServiceResponse ModifyModelService(Models\ModifyModelServiceRequest $req) 修改模型服务
+ * @method Models\ModifyServiceResponse ModifyService(Models\ModifyServiceRequest $req) 修改服务
  */
 
 class ApisClient extends AbstractClient

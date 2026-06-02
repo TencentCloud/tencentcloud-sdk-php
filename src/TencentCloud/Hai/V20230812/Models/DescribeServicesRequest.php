@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeServices请求参数结构体
  *
- * @method array getServiceIds() 获取服务列表
- * @method void setServiceIds(array $ServiceIds) 设置服务列表
- * @method integer getLimit() 获取分页大小
- * @method void setLimit(integer $Limit) 设置分页大小
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
+ * @method array getServiceIds() 获取<p>服务列表</p>
+ * @method void setServiceIds(array $ServiceIds) 设置<p>服务列表</p>
+ * @method integer getLimit() 获取<p>分页大小</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页大小</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
  */
 class DescribeServicesRequest extends AbstractModel
 {
     /**
-     * @var array 服务列表
+     * @var array <p>服务列表</p>
      */
     public $ServiceIds;
 
     /**
-     * @var integer 分页大小
+     * @var integer <p>分页大小</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @param array $ServiceIds 服务列表
-     * @param integer $Limit 分页大小
-     * @param integer $Offset 偏移量
+     * @param array $ServiceIds <p>服务列表</p>
+     * @param integer $Limit <p>分页大小</p>
+     * @param integer $Offset <p>偏移量</p>
      */
     function __construct()
     {

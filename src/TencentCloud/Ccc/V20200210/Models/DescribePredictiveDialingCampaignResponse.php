@@ -20,87 +20,115 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePredictiveDialingCampaign返回参数结构体
  *
- * @method integer getCampaignId() 获取任务 ID
- * @method void setCampaignId(integer $CampaignId) 设置任务 ID
- * @method string getName() 获取任务名称
- * @method void setName(string $Name) 设置任务名称
- * @method integer getCallOrder() 获取被叫呼叫顺序 0 随机 1 顺序
- * @method void setCallOrder(integer $CallOrder) 设置被叫呼叫顺序 0 随机 1 顺序
- * @method integer getSkillGroupId() 获取使用的座席技能组 ID
- * @method void setSkillGroupId(integer $SkillGroupId) 设置使用的座席技能组 ID
- * @method integer getIVRId() 获取指定的 IVR ID
- * @method void setIVRId(integer $IVRId) 设置指定的 IVR ID
- * @method integer getPriority() 获取相同应用内多个任务运行优先级，从高到底 1 - 5
- * @method void setPriority(integer $Priority) 设置相同应用内多个任务运行优先级，从高到底 1 - 5
- * @method integer getExpectedAbandonRate() 获取预期呼损率，百分比，5 - 50
- * @method void setExpectedAbandonRate(integer $ExpectedAbandonRate) 设置预期呼损率，百分比，5 - 50
- * @method integer getRetryTimes() 获取呼叫重试次数，0 - 2
- * @method void setRetryTimes(integer $RetryTimes) 设置呼叫重试次数，0 - 2
- * @method integer getRetryInterval() 获取呼叫重试间隔时间，单位秒，60 - 86400
- * @method void setRetryInterval(integer $RetryInterval) 设置呼叫重试间隔时间，单位秒，60 - 86400
- * @method integer getStartTime() 获取任务启动时间，Unix 时间戳，到此时间后会自动启动任务
- * @method void setStartTime(integer $StartTime) 设置任务启动时间，Unix 时间戳，到此时间后会自动启动任务
- * @method integer getEndTime() 获取任务结束时间，Unix 时间戳，到此时间后会自动终止任务
- * @method void setEndTime(integer $EndTime) 设置任务结束时间，Unix 时间戳，到此时间后会自动终止任务
+ * @method integer getCampaignId() 获取<p>任务 ID</p>
+ * @method void setCampaignId(integer $CampaignId) 设置<p>任务 ID</p>
+ * @method string getName() 获取<p>任务名称</p>
+ * @method void setName(string $Name) 设置<p>任务名称</p>
+ * @method integer getCallOrder() 获取<p>被叫呼叫顺序 0 随机 1 顺序</p>
+ * @method void setCallOrder(integer $CallOrder) 设置<p>被叫呼叫顺序 0 随机 1 顺序</p>
+ * @method integer getSkillGroupId() 获取<p>使用的座席技能组 ID</p>
+ * @method void setSkillGroupId(integer $SkillGroupId) 设置<p>使用的座席技能组 ID</p>
+ * @method integer getIVRId() 获取<p>指定的 IVR ID</p>
+ * @method void setIVRId(integer $IVRId) 设置<p>指定的 IVR ID</p>
+ * @method integer getPriority() 获取<p>相同应用内多个任务运行优先级，从高到底 1 - 5</p>
+ * @method void setPriority(integer $Priority) 设置<p>相同应用内多个任务运行优先级，从高到底 1 - 5</p>
+ * @method integer getExpectedAbandonRate() 获取<p>预期呼损率，百分比，5 - 50</p>
+ * @method void setExpectedAbandonRate(integer $ExpectedAbandonRate) 设置<p>预期呼损率，百分比，5 - 50</p>
+ * @method integer getRetryTimes() 获取<p>呼叫重试次数，0 - 2</p>
+ * @method void setRetryTimes(integer $RetryTimes) 设置<p>呼叫重试次数，0 - 2</p>
+ * @method integer getRetryInterval() 获取<p>呼叫重试间隔时间，单位秒，60 - 86400</p>
+ * @method void setRetryInterval(integer $RetryInterval) 设置<p>呼叫重试间隔时间，单位秒，60 - 86400</p>
+ * @method integer getStartTime() 获取<p>任务启动时间，Unix 时间戳，到此时间后会自动启动任务</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>任务启动时间，Unix 时间戳，到此时间后会自动启动任务</p>
+ * @method integer getEndTime() 获取<p>任务结束时间，Unix 时间戳，到此时间后会自动终止任务</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>任务结束时间，Unix 时间戳，到此时间后会自动终止任务</p>
+ * @method array getVariables() 获取<p>自定义变量</p>
+ * @method void setVariables(array $Variables) 设置<p>自定义变量</p>
+ * @method string getUUI() 获取<p>UUI</p>
+ * @method void setUUI(string $UUI) 设置<p>UUI</p>
+ * @method integer getStatus() 获取<p>任务状态</p><p>枚举值：</p><ul><li>0： 待开始 </li><li>1： 进行中</li><li>2： 已暂停</li><li>3： 已终止</li><li>4： 已完成</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>任务状态</p><p>枚举值：</p><ul><li>0： 待开始 </li><li>1： 进行中</li><li>2： 已暂停</li><li>3： 已终止</li><li>4： 已完成</li></ul>
+ * @method integer getStatusReason() 获取<p>任务状态原因 0 正常 1 手动结束 2 超时结束</p>
+ * @method void setStatusReason(integer $StatusReason) 设置<p>任务状态原因 0 正常 1 手动结束 2 超时结束</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribePredictiveDialingCampaignResponse extends AbstractModel
 {
     /**
-     * @var integer 任务 ID
+     * @var integer <p>任务 ID</p>
      */
     public $CampaignId;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 被叫呼叫顺序 0 随机 1 顺序
+     * @var integer <p>被叫呼叫顺序 0 随机 1 顺序</p>
      */
     public $CallOrder;
 
     /**
-     * @var integer 使用的座席技能组 ID
+     * @var integer <p>使用的座席技能组 ID</p>
      */
     public $SkillGroupId;
 
     /**
-     * @var integer 指定的 IVR ID
+     * @var integer <p>指定的 IVR ID</p>
      */
     public $IVRId;
 
     /**
-     * @var integer 相同应用内多个任务运行优先级，从高到底 1 - 5
+     * @var integer <p>相同应用内多个任务运行优先级，从高到底 1 - 5</p>
      */
     public $Priority;
 
     /**
-     * @var integer 预期呼损率，百分比，5 - 50
+     * @var integer <p>预期呼损率，百分比，5 - 50</p>
      */
     public $ExpectedAbandonRate;
 
     /**
-     * @var integer 呼叫重试次数，0 - 2
+     * @var integer <p>呼叫重试次数，0 - 2</p>
      */
     public $RetryTimes;
 
     /**
-     * @var integer 呼叫重试间隔时间，单位秒，60 - 86400
+     * @var integer <p>呼叫重试间隔时间，单位秒，60 - 86400</p>
      */
     public $RetryInterval;
 
     /**
-     * @var integer 任务启动时间，Unix 时间戳，到此时间后会自动启动任务
+     * @var integer <p>任务启动时间，Unix 时间戳，到此时间后会自动启动任务</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 任务结束时间，Unix 时间戳，到此时间后会自动终止任务
+     * @var integer <p>任务结束时间，Unix 时间戳，到此时间后会自动终止任务</p>
      */
     public $EndTime;
+
+    /**
+     * @var array <p>自定义变量</p>
+     */
+    public $Variables;
+
+    /**
+     * @var string <p>UUI</p>
+     */
+    public $UUI;
+
+    /**
+     * @var integer <p>任务状态</p><p>枚举值：</p><ul><li>0： 待开始 </li><li>1： 进行中</li><li>2： 已暂停</li><li>3： 已终止</li><li>4： 已完成</li></ul>
+     */
+    public $Status;
+
+    /**
+     * @var integer <p>任务状态原因 0 正常 1 手动结束 2 超时结束</p>
+     */
+    public $StatusReason;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -108,17 +136,21 @@ class DescribePredictiveDialingCampaignResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $CampaignId 任务 ID
-     * @param string $Name 任务名称
-     * @param integer $CallOrder 被叫呼叫顺序 0 随机 1 顺序
-     * @param integer $SkillGroupId 使用的座席技能组 ID
-     * @param integer $IVRId 指定的 IVR ID
-     * @param integer $Priority 相同应用内多个任务运行优先级，从高到底 1 - 5
-     * @param integer $ExpectedAbandonRate 预期呼损率，百分比，5 - 50
-     * @param integer $RetryTimes 呼叫重试次数，0 - 2
-     * @param integer $RetryInterval 呼叫重试间隔时间，单位秒，60 - 86400
-     * @param integer $StartTime 任务启动时间，Unix 时间戳，到此时间后会自动启动任务
-     * @param integer $EndTime 任务结束时间，Unix 时间戳，到此时间后会自动终止任务
+     * @param integer $CampaignId <p>任务 ID</p>
+     * @param string $Name <p>任务名称</p>
+     * @param integer $CallOrder <p>被叫呼叫顺序 0 随机 1 顺序</p>
+     * @param integer $SkillGroupId <p>使用的座席技能组 ID</p>
+     * @param integer $IVRId <p>指定的 IVR ID</p>
+     * @param integer $Priority <p>相同应用内多个任务运行优先级，从高到底 1 - 5</p>
+     * @param integer $ExpectedAbandonRate <p>预期呼损率，百分比，5 - 50</p>
+     * @param integer $RetryTimes <p>呼叫重试次数，0 - 2</p>
+     * @param integer $RetryInterval <p>呼叫重试间隔时间，单位秒，60 - 86400</p>
+     * @param integer $StartTime <p>任务启动时间，Unix 时间戳，到此时间后会自动启动任务</p>
+     * @param integer $EndTime <p>任务结束时间，Unix 时间戳，到此时间后会自动终止任务</p>
+     * @param array $Variables <p>自定义变量</p>
+     * @param string $UUI <p>UUI</p>
+     * @param integer $Status <p>任务状态</p><p>枚举值：</p><ul><li>0： 待开始 </li><li>1： 进行中</li><li>2： 已暂停</li><li>3： 已终止</li><li>4： 已完成</li></ul>
+     * @param integer $StatusReason <p>任务状态原因 0 正常 1 手动结束 2 超时结束</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -176,6 +208,27 @@ class DescribePredictiveDialingCampaignResponse extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Variables",$param) and $param["Variables"] !== null) {
+            $this->Variables = [];
+            foreach ($param["Variables"] as $key => $value){
+                $obj = new Variable();
+                $obj->deserialize($value);
+                array_push($this->Variables, $obj);
+            }
+        }
+
+        if (array_key_exists("UUI",$param) and $param["UUI"] !== null) {
+            $this->UUI = $param["UUI"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StatusReason",$param) and $param["StatusReason"] !== null) {
+            $this->StatusReason = $param["StatusReason"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

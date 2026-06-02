@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelVersion(string $ModelVersion) 设置<p>模型版本。</p>
  * @method array getFileInfos() 获取<p>AIGC生图任务输入文件信息。</p>
  * @method void setFileInfos(array $FileInfos) 设置<p>AIGC生图任务输入文件信息。</p>
- * @method string getPrompt() 获取<p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
- * @method void setPrompt(string $Prompt) 设置<p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
- * @method string getNegativePrompt() 获取<p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
- * @method void setNegativePrompt(string $NegativePrompt) 设置<p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
+ * @method string getPrompt() 获取<p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
+ * @method void setPrompt(string $Prompt) 设置<p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
+ * @method string getNegativePrompt() 获取<p>要阻止模型生成图片的提示词。</p>
+ * @method void setNegativePrompt(string $NegativePrompt) 设置<p>要阻止模型生成图片的提示词。</p>
  * @method string getEnhancePrompt() 获取<p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method void setEnhancePrompt(string $EnhancePrompt) 设置<p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method string getGenerationMode() 获取<p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
@@ -59,12 +59,12 @@ class AigcImageTaskInput extends AbstractModel
     public $FileInfos;
 
     /**
-     * @var string <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
+     * @var string <p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
      */
     public $Prompt;
 
     /**
-     * @var string <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
+     * @var string <p>要阻止模型生成图片的提示词。</p>
      */
     public $NegativePrompt;
 
@@ -97,8 +97,8 @@ class AigcImageTaskInput extends AbstractModel
      * @param string $ModelName <p>模型名称。</p>
      * @param string $ModelVersion <p>模型版本。</p>
      * @param array $FileInfos <p>AIGC生图任务输入文件信息。</p>
-     * @param string $Prompt <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
-     * @param string $NegativePrompt <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
+     * @param string $Prompt <p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
+     * @param string $NegativePrompt <p>要阻止模型生成图片的提示词。</p>
      * @param string $EnhancePrompt <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      * @param string $GenerationMode <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
      * @param AigcImageOutputConfig $OutputConfig <p>AIGC 生图输出结果文件输出。</p>

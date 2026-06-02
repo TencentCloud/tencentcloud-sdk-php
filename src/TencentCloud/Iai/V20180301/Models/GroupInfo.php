@@ -20,78 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回的人员库信息
  *
- * @method string getGroupName() 获取人员库名称
- * @method void setGroupName(string $GroupName) 设置人员库名称
- * @method string getGroupId() 获取人员库ID
- * @method void setGroupId(string $GroupId) 设置人员库ID
- * @method array getGroupExDescriptions() 获取人员库自定义描述字段
+ * @method string getGroupName() 获取<p>人员库名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>人员库名称</p>
+ * @method string getGroupId() 获取<p>人员库ID</p>
+ * @method void setGroupId(string $GroupId) 设置<p>人员库ID</p>
+ * @method array getGroupExDescriptions() 获取<p>人员库自定义描述字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupExDescriptions(array $GroupExDescriptions) 设置人员库自定义描述字段
+ * @method void setGroupExDescriptions(array $GroupExDescriptions) 设置<p>人员库自定义描述字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTag() 获取人员库信息备注
+ * @method string getTag() 获取<p>人员库信息备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTag(string $Tag) 设置人员库信息备注
+ * @method void setTag(string $Tag) 设置<p>人员库信息备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
+ * @method string getFaceModelVersion() 获取<p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置<p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreationTimestamp() 获取Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+ * @method integer getCreationTimestamp() 获取<p>Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreationTimestamp(integer $CreationTimestamp) 设置Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+ * @method void setCreationTimestamp(integer $CreationTimestamp) 设置<p>Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpdateTimestamp() 获取<p>Group的更新时间和日期 UpdateTimestamp。</p><ul><li>UpdateTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul>
+ * @method void setUpdateTimestamp(integer $UpdateTimestamp) 设置<p>Group的更新时间和日期 UpdateTimestamp。</p><ul><li>UpdateTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul>
  */
 class GroupInfo extends AbstractModel
 {
     /**
-     * @var string 人员库名称
+     * @var string <p>人员库名称</p>
      */
     public $GroupName;
 
     /**
-     * @var string 人员库ID
+     * @var string <p>人员库ID</p>
      */
     public $GroupId;
 
     /**
-     * @var array 人员库自定义描述字段
+     * @var array <p>人员库自定义描述字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupExDescriptions;
 
     /**
-     * @var string 人员库信息备注
+     * @var string <p>人员库信息备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
-     * @var string 人脸识别所用的算法模型版本。
+     * @var string <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaceModelVersion;
 
     /**
-     * @var integer Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * @var integer <p>Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreationTimestamp;
 
     /**
-     * @param string $GroupName 人员库名称
-     * @param string $GroupId 人员库ID
-     * @param array $GroupExDescriptions 人员库自定义描述字段
+     * @var integer <p>Group的更新时间和日期 UpdateTimestamp。</p><ul><li>UpdateTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul>
+     */
+    public $UpdateTimestamp;
+
+    /**
+     * @param string $GroupName <p>人员库名称</p>
+     * @param string $GroupId <p>人员库ID</p>
+     * @param array $GroupExDescriptions <p>人员库自定义描述字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Tag 人员库信息备注
+     * @param string $Tag <p>人员库信息备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
+     * @param string $FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * @param integer $CreationTimestamp <p>Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpdateTimestamp <p>Group的更新时间和日期 UpdateTimestamp。</p><ul><li>UpdateTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul>
      */
     function __construct()
     {
@@ -128,6 +132,10 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
 
         if (array_key_exists("CreationTimestamp",$param) and $param["CreationTimestamp"] !== null) {
             $this->CreationTimestamp = $param["CreationTimestamp"];
+        }
+
+        if (array_key_exists("UpdateTimestamp",$param) and $param["UpdateTimestamp"] !== null) {
+            $this->UpdateTimestamp = $param["UpdateTimestamp"];
         }
     }
 }

@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetType(string $AssetType) 设置<p>资产类型</p>
  * @method string getAssetTypeIconURL() 获取<p>资产类型图标</p>
  * @method void setAssetTypeIconURL(string $AssetTypeIconURL) 设置<p>资产类型图标</p>
+ * @method string getAssetTypeName() 获取<p>资产类型</p>
+ * @method void setAssetTypeName(string $AssetTypeName) 设置<p>资产类型</p>
  */
 class AssetRiskItem extends AbstractModel
 {
@@ -150,6 +152,11 @@ class AssetRiskItem extends AbstractModel
     public $AssetTypeIconURL;
 
     /**
+     * @var string <p>资产类型</p>
+     */
+    public $AssetTypeName;
+
+    /**
      * @param integer $AppId <p>租户ID</p>
      * @param string $Provider <p>云厂商</p>
      * @param string $ProviderName <p>云厂商名称</p>
@@ -168,6 +175,7 @@ class AssetRiskItem extends AbstractModel
      * @param array $StandardTerms <p>等保合规</p>
      * @param string $AssetType <p>资产类型</p>
      * @param string $AssetTypeIconURL <p>资产类型图标</p>
+     * @param string $AssetTypeName <p>资产类型</p>
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class AssetRiskItem extends AbstractModel
 
         if (array_key_exists("AssetTypeIconURL",$param) and $param["AssetTypeIconURL"] !== null) {
             $this->AssetTypeIconURL = $param["AssetTypeIconURL"];
+        }
+
+        if (array_key_exists("AssetTypeName",$param) and $param["AssetTypeName"] !== null) {
+            $this->AssetTypeName = $param["AssetTypeName"];
         }
     }
 }

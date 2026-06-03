@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实时会话访问来源详情。
  *
- * @method string getIp() 获取访问来源。
- * @method void setIp(string $Ip) 设置访问来源。
- * @method string getActiveConn() 获取当前访问来源活跃连接数
- * @method void setActiveConn(string $ActiveConn) 设置当前访问来源活跃连接数
- * @method integer getAllConn() 获取当前访问来源总连接数
- * @method void setAllConn(integer $AllConn) 设置当前访问来源总连接数
+ * @method string getIp() 获取<p>访问来源。</p>
+ * @method void setIp(string $Ip) 设置<p>访问来源。</p>
+ * @method string getActiveConn() 获取<p>当前访问来源活跃连接数</p>
+ * @method void setActiveConn(string $ActiveConn) 设置<p>当前访问来源活跃连接数</p>
+ * @method integer getAllConn() 获取<p>当前访问来源总连接数</p>
+ * @method void setAllConn(integer $AllConn) 设置<p>当前访问来源总连接数</p>
+ * @method boolean getIsInternalIp() 获取<p>是否为内网ip</p>
+ * @method void setIsInternalIp(boolean $IsInternalIp) 设置<p>是否为内网ip</p>
  */
 class SessionItem extends AbstractModel
 {
     /**
-     * @var string 访问来源。
+     * @var string <p>访问来源。</p>
      */
     public $Ip;
 
     /**
-     * @var string 当前访问来源活跃连接数
+     * @var string <p>当前访问来源活跃连接数</p>
      */
     public $ActiveConn;
 
     /**
-     * @var integer 当前访问来源总连接数
+     * @var integer <p>当前访问来源总连接数</p>
      */
     public $AllConn;
 
     /**
-     * @param string $Ip 访问来源。
-     * @param string $ActiveConn 当前访问来源活跃连接数
-     * @param integer $AllConn 当前访问来源总连接数
+     * @var boolean <p>是否为内网ip</p>
+     */
+    public $IsInternalIp;
+
+    /**
+     * @param string $Ip <p>访问来源。</p>
+     * @param string $ActiveConn <p>当前访问来源活跃连接数</p>
+     * @param integer $AllConn <p>当前访问来源总连接数</p>
+     * @param boolean $IsInternalIp <p>是否为内网ip</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class SessionItem extends AbstractModel
 
         if (array_key_exists("AllConn",$param) and $param["AllConn"] !== null) {
             $this->AllConn = $param["AllConn"];
+        }
+
+        if (array_key_exists("IsInternalIp",$param) and $param["IsInternalIp"] !== null) {
+            $this->IsInternalIp = $param["IsInternalIp"];
         }
     }
 }

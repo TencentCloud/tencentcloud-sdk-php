@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceTagsByTagKeys请求参数结构体
  *
- * @method string getServiceType() 获取业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
- * @method void setServiceType(string $ServiceType) 设置业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
- * @method string getResourcePrefix() 获取该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
- * @method void setResourcePrefix(string $ResourcePrefix) 设置该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
- * @method string getResourceRegion() 获取资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
- * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
- * @method array getResourceIds() 获取资源唯一标识ID的列表，列表容量不超过20
- * @method void setResourceIds(array $ResourceIds) 设置资源唯一标识ID的列表，列表容量不超过20
- * @method array getTagKeys() 获取资源标签键列表，列表容量不超过20
- * @method void setTagKeys(array $TagKeys) 设置资源标签键列表，列表容量不超过20
- * @method integer getLimit() 获取每页大小，默认为 400
- * @method void setLimit(integer $Limit) 设置每页大小，默认为 400
- * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
- * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
+ * @method string getServiceType() 获取<p>业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka</p>
+ * @method void setServiceType(string $ServiceType) 设置<p>业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka</p>
+ * @method string getResourcePrefix() 获取<p>该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId</p>
+ * @method void setResourcePrefix(string $ResourcePrefix) 设置<p>该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId</p>
+ * @method string getResourceRegion() 获取<p>资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填</p>
+ * @method void setResourceRegion(string $ResourceRegion) 设置<p>资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填</p>
+ * @method array getResourceIds() 获取<p>资源唯一标识ID的列表，列表容量不超过20</p>
+ * @method void setResourceIds(array $ResourceIds) 设置<p>资源唯一标识ID的列表，列表容量不超过20</p>
+ * @method array getTagKeys() 获取<p>资源标签键列表，列表容量不超过20</p>
+ * @method void setTagKeys(array $TagKeys) 设置<p>资源标签键列表，列表容量不超过20</p>
+ * @method integer getLimit() 获取<p>每页大小，默认为 400</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页大小，默认为 400</p>
+ * @method integer getOffset() 获取<p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
+ * @method void setOffset(integer $Offset) 设置<p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
  */
 class DescribeResourceTagsByTagKeysRequest extends AbstractModel
 {
     /**
-     * @var string 业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
+     * @var string <p>业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka</p>
      */
     public $ServiceType;
 
     /**
-     * @var string 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
+     * @var string <p>该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId</p>
      */
     public $ResourcePrefix;
 
     /**
-     * @var string 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @var string <p>资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填</p>
      */
     public $ResourceRegion;
 
     /**
-     * @var array 资源唯一标识ID的列表，列表容量不超过20
+     * @var array <p>资源唯一标识ID的列表，列表容量不超过20</p>
      */
     public $ResourceIds;
 
     /**
-     * @var array 资源标签键列表，列表容量不超过20
+     * @var array <p>资源标签键列表，列表容量不超过20</p>
      */
     public $TagKeys;
 
     /**
-     * @var integer 每页大小，默认为 400
+     * @var integer <p>每页大小，默认为 400</p>
      */
     public $Limit;
 
     /**
-     * @var integer 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * @var integer <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
      */
     public $Offset;
 
     /**
-     * @param string $ServiceType 业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
-     * @param string $ResourcePrefix 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
-     * @param string $ResourceRegion 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
-     * @param array $ResourceIds 资源唯一标识ID的列表，列表容量不超过20
-     * @param array $TagKeys 资源标签键列表，列表容量不超过20
-     * @param integer $Limit 每页大小，默认为 400
-     * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * @param string $ServiceType <p>业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka</p>
+     * @param string $ResourcePrefix <p>该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId</p>
+     * @param string $ResourceRegion <p>资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填</p>
+     * @param array $ResourceIds <p>资源唯一标识ID的列表，列表容量不超过20</p>
+     * @param array $TagKeys <p>资源标签键列表，列表容量不超过20</p>
+     * @param integer $Limit <p>每页大小，默认为 400</p>
+     * @param integer $Offset <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
      */
     function __construct()
     {

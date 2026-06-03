@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setElementImageList(string $ElementImageList) 设置<p>主体参考图，可通过多张图片设定主体及其细节。</p><ul><li>包括正面参考图和其他角度或特写参考图，其中：<ul><li>至少包括1张正面参考图，由frontal_image参数定义。</li><li>需包括1～3张其他参考图，需与正面参考图有差异，由image_url参数定义。</li></ul></li><li>用key:value承载，如下：<br><pre><code>{  &quot;frontal_image&quot;:&quot;image_url_0&quot;,  &quot;refer_images&quot;:[    {      &quot;image_url&quot;:&quot;image_url_1&quot;    },    {      &quot;image_url&quot;:&quot;image_url_2&quot;    },    {      &quot;image_url&quot;:&quot;image_url_3&quot;    }  ]}</code></pre></li></ul>
  * @method string getTagList() 获取<p>为主体配置标签，一个主体可以配置多个标签。</p><ul><li>用key:value承载，其中具体如下：</li></ul><p><pre><code>[  {        &quot;tag_id&quot;: &quot;o_101&quot;  }, {        &quot;tag_id&quot;: &quot;o_102&quot;    }]</code></pre></p>
  * @method void setTagList(string $TagList) 设置<p>为主体配置标签，一个主体可以配置多个标签。</p><ul><li>用key:value承载，其中具体如下：</li></ul><p><pre><code>[  {        &quot;tag_id&quot;: &quot;o_101&quot;  }, {        &quot;tag_id&quot;: &quot;o_102&quot;    }]</code></pre></p>
+ * @method string getDisableModeration() 获取<p>若已开通海外自定义主体库，可传入<code>True</code>使用海外自定义主体库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义主体库。</li><li>False： 不使用海外自定义主体库。</li></ul>
+ * @method void setDisableModeration(string $DisableModeration) 设置<p>若已开通海外自定义主体库，可传入<code>True</code>使用海外自定义主体库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义主体库。</li><li>False： 不使用海外自定义主体库。</li></ul>
  * @method string getSessionId() 获取<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
  * @method void setSessionId(string $SessionId) 设置<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
  * @method string getSessionContext() 获取<p>来源上下文，用于透传用户请求信息，任务完成回调将返回该字段值，最长 1000 个字符。</p>
@@ -86,6 +88,11 @@ class CreateAigcAdvancedCustomElementRequest extends AbstractModel
     public $TagList;
 
     /**
+     * @var string <p>若已开通海外自定义主体库，可传入<code>True</code>使用海外自定义主体库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义主体库。</li><li>False： 不使用海外自定义主体库。</li></ul>
+     */
+    public $DisableModeration;
+
+    /**
      * @var string <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public $SessionId;
@@ -109,6 +116,7 @@ class CreateAigcAdvancedCustomElementRequest extends AbstractModel
      * @param string $ElementVideoList <p>主体参考视频，可通过视频设定主体及其细节。</p><ul><li>可上传有声视频，有声视频包含人声则触发音色定制（定制+入音色库+与主体绑定）</li><li>参考视频时当前参数必填，参考图片时当前参数无效</li><li>用key:value承载，如下：<br><pre><code>{  &quot;refer_videos&quot;:[    {      &quot;video_url&quot;:&quot;video_url_1&quot;    }  ]}</code></pre>● 视频格式仅支持MP4/MOV<br>● 仅支持时长介于3s～8s之间、宽高比例需为16:9或9:16的1080P视频<br>● 至多仅支持上传1段视频，视频大小不超过200MB<br>● video_url参数值不得为空</li></ul>
      * @param string $ElementImageList <p>主体参考图，可通过多张图片设定主体及其细节。</p><ul><li>包括正面参考图和其他角度或特写参考图，其中：<ul><li>至少包括1张正面参考图，由frontal_image参数定义。</li><li>需包括1～3张其他参考图，需与正面参考图有差异，由image_url参数定义。</li></ul></li><li>用key:value承载，如下：<br><pre><code>{  &quot;frontal_image&quot;:&quot;image_url_0&quot;,  &quot;refer_images&quot;:[    {      &quot;image_url&quot;:&quot;image_url_1&quot;    },    {      &quot;image_url&quot;:&quot;image_url_2&quot;    },    {      &quot;image_url&quot;:&quot;image_url_3&quot;    }  ]}</code></pre></li></ul>
      * @param string $TagList <p>为主体配置标签，一个主体可以配置多个标签。</p><ul><li>用key:value承载，其中具体如下：</li></ul><p><pre><code>[  {        &quot;tag_id&quot;: &quot;o_101&quot;  }, {        &quot;tag_id&quot;: &quot;o_102&quot;    }]</code></pre></p>
+     * @param string $DisableModeration <p>若已开通海外自定义主体库，可传入<code>True</code>使用海外自定义主体库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义主体库。</li><li>False： 不使用海外自定义主体库。</li></ul>
      * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      * @param string $SessionContext <p>来源上下文，用于透传用户请求信息，任务完成回调将返回该字段值，最长 1000 个字符。</p>
      * @param integer $TasksPriority <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
@@ -156,6 +164,10 @@ class CreateAigcAdvancedCustomElementRequest extends AbstractModel
 
         if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
             $this->TagList = $param["TagList"];
+        }
+
+        if (array_key_exists("DisableModeration",$param) and $param["DisableModeration"] !== null) {
+            $this->DisableModeration = $param["DisableModeration"];
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

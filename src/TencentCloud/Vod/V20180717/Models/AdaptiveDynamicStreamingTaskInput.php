@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubtitleSet(array $SubtitleSet) 设置<p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
  * @method array getSubtitleInfoSet() 获取<p>字幕压制信息列表。最大可支持 2 个。</p>
  * @method void setSubtitleInfoSet(array $SubtitleInfoSet) 设置<p>字幕压制信息列表。最大可支持 2 个。</p>
+ * @method ThirdPartyDrmInfo getDrmInfo() 获取<p>第三方DRM加密信息。暂不支持任务流的方式使用第三方DRM信息发起任务。</p>
+ * @method void setDrmInfo(ThirdPartyDrmInfo $DrmInfo) 设置<p>第三方DRM加密信息。暂不支持任务流的方式使用第三方DRM信息发起任务。</p>
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -73,6 +75,11 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $SubtitleInfoSet;
 
     /**
+     * @var ThirdPartyDrmInfo <p>第三方DRM加密信息。暂不支持任务流的方式使用第三方DRM信息发起任务。</p>
+     */
+    public $DrmInfo;
+
+    /**
      * @param integer $Definition <p>转自适应码流模板 ID。</p>
      * @param array $WatermarkSet <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
      * @param TraceWatermarkInput $TraceWatermark <p>溯源水印。</p>
@@ -80,6 +87,7 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
      * @param BlindWatermarkInput $BlindWatermark <p>数字水印。</p>
      * @param array $SubtitleSet <p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
      * @param array $SubtitleInfoSet <p>字幕压制信息列表。最大可支持 2 个。</p>
+     * @param ThirdPartyDrmInfo $DrmInfo <p>第三方DRM加密信息。暂不支持任务流的方式使用第三方DRM信息发起任务。</p>
      */
     function __construct()
     {
@@ -133,6 +141,11 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SubtitleInfoSet, $obj);
             }
+        }
+
+        if (array_key_exists("DrmInfo",$param) and $param["DrmInfo"] !== null) {
+            $this->DrmInfo = new ThirdPartyDrmInfo();
+            $this->DrmInfo->deserialize($param["DrmInfo"]);
         }
     }
 }

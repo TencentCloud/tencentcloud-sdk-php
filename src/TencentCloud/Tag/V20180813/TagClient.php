@@ -35,19 +35,24 @@ use TencentCloud\Tag\V20180813\Models as Models;
  * @method Models\DescribeResourceTagsResponse DescribeResourceTags(Models\DescribeResourceTagsRequest $req) 查询资源关联标签
  * @method Models\DescribeResourceTagsByResourceIdsResponse DescribeResourceTagsByResourceIds(Models\DescribeResourceTagsByResourceIdsRequest $req) 用于批量查询已有资源关联的标签键值对
  * @method Models\DescribeResourceTagsByResourceIdsSeqResponse DescribeResourceTagsByResourceIdsSeq(Models\DescribeResourceTagsByResourceIdsSeqRequest $req) 按顺序查看资源关联的标签
- * @method Models\DescribeResourceTagsByTagKeysResponse DescribeResourceTagsByTagKeys(Models\DescribeResourceTagsByTagKeysRequest $req) 根据标签键获取资源标签
- * @method Models\DescribeResourcesByTagsResponse DescribeResourcesByTags(Models\DescribeResourcesByTagsRequest $req) 通过标签查询资源列表
- * @method Models\DescribeResourcesByTagsUnionResponse DescribeResourcesByTagsUnion(Models\DescribeResourcesByTagsUnionRequest $req) 通过标签查询资源列表并集
+ * @method Models\DescribeResourceTagsByTagKeysResponse DescribeResourceTagsByTagKeys(Models\DescribeResourceTagsByTagKeysRequest $req) 根据标签键获取指定资源上的标签值
+ * @method Models\DescribeResourcesByTagsResponse DescribeResourcesByTags(Models\DescribeResourcesByTagsRequest $req) 通过标签查询资源列表，按TagKey取交集。
+举例：TagFilters 为 [ {"TagKey": "k1", "TagValue":["v1","v2"]}, {"TagKey": "k2", "TagValue":["v3","v4"]} ]。交集查询逻辑：找出资源，其包含标签TagKey=k1且TagValue in (v1, v2)，同时包含标签TagKey=k2且TagValue in (v3, v4)
+ * @method Models\DescribeResourcesByTagsUnionResponse DescribeResourcesByTagsUnion(Models\DescribeResourcesByTagsUnionRequest $req) 通过标签查询资源列表，按TagKey取并集。
+举例：TagFilters 为 [ {"TagKey": "k1", "TagValue":["v1","v2"]}, {"TagKey": "k2", "TagValue":["v3","v4"]} ]。并集查询逻辑：找出资源，其包含标签TagKey=k1且TagValue in (v1, v2)，或者包含标签TagKey=k2且TagValue in (v3, v4)
  * @method Models\DescribeTagKeysResponse DescribeTagKeys(Models\DescribeTagKeysRequest $req) 用于查询已建立的标签列表中的标签键。
  * @method Models\DescribeTagValuesResponse DescribeTagValues(Models\DescribeTagValuesRequest $req) 用于查询已建立的标签列表中的标签值。
  * @method Models\DescribeTagValuesSeqResponse DescribeTagValuesSeq(Models\DescribeTagValuesSeqRequest $req) 用于查询已建立的标签列表中的标签值。
- * @method Models\DescribeTagsResponse DescribeTags(Models\DescribeTagsRequest $req) 用于查询已建立的标签列表。
- * @method Models\DescribeTagsSeqResponse DescribeTagsSeq(Models\DescribeTagsSeqRequest $req) 用于查询已建立的标签列表。
+ * @method Models\DescribeTagsResponse DescribeTags(Models\DescribeTagsRequest $req) 用于获取已建立的标签列表。
+举例：TagKeys为["k1","k2"], TagValues为["v3","v4"], 查出标签，其标签键tagKey in (k1, k2)，同时标签值tagValue in (v3, v4)
+ * @method Models\DescribeTagsSeqResponse DescribeTagsSeq(Models\DescribeTagsSeqRequest $req) 用于获取已建立的标签列表。
+举例：TagKeys为["k1","k2"], TagValues为["v3","v4"], 查出标签，其标签键tagKey in (k1, k2)，同时标签值tagValue in (v3, v4)
  * @method Models\DetachResourcesTagResponse DetachResourcesTag(Models\DetachResourcesTagRequest $req) 解绑多个资源关联的某个标签
- * @method Models\GetResourcesResponse GetResources(Models\GetResourcesRequest $req) 查询绑定了标签的资源列表。
+ * @method Models\GetResourcesResponse GetResources(Models\GetResourcesRequest $req) 查询资源标签列表。
  * @method Models\GetTagKeysResponse GetTagKeys(Models\GetTagKeysRequest $req) 查询标签键列表。
  * @method Models\GetTagValuesResponse GetTagValues(Models\GetTagValuesRequest $req) 用于查询已建立的标签列表中的标签值。
  * @method Models\GetTagsResponse GetTags(Models\GetTagsRequest $req) 用于获取已建立的标签列表。
+举例：TagKeys 为["k1","k2"], TagValues为["v3","v4"], 查出标签，其标签键tagKey in (k1, k2)，同时标签值tagValue in (v3, v4)
  * @method Models\ModifyResourceTagsResponse ModifyResourceTags(Models\ModifyResourceTagsRequest $req) 本接口用于修改资源关联的所有标签
  * @method Models\ModifyResourcesTagValueResponse ModifyResourcesTagValue(Models\ModifyResourcesTagValueRequest $req) 修改多个资源关联的某个标签键对应的标签值
  * @method Models\TagResourcesResponse TagResources(Models\TagResourcesRequest $req) 为指定的多个云产品的多个云资源统一创建并绑定标签。

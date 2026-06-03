@@ -20,575 +20,499 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例详细信息列表。
  *
- * @method string getInstanceName() 获取实例名称。
- * @method void setInstanceName(string $InstanceName) 设置实例名称。
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method integer getAppid() 获取用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
-
- * @method void setAppid(integer $Appid) 设置用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
-
- * @method integer getProjectId() 获取项目 ID。
- * @method void setProjectId(integer $ProjectId) 设置项目 ID。
- * @method integer getRegionId() 获取地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
- * @method void setRegionId(integer $RegionId) 设置地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
- * @method integer getZoneId() 获取区域 ID。
- * @method void setZoneId(integer $ZoneId) 设置区域 ID。
- * @method integer getVpcId() 获取vpc网络 ID，例如75101。
- * @method void setVpcId(integer $VpcId) 设置vpc网络 ID，例如75101。
- * @method integer getSubnetId() 获取vpc网络下子网ID，如：46315。
- * @method void setSubnetId(integer $SubnetId) 设置vpc网络下子网ID，如：46315。
- * @method integer getStatus() 获取实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
- * @method void setStatus(integer $Status) 设置实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
- * @method string getWanIp() 获取实例 VIP。
- * @method void setWanIp(string $WanIp) 设置实例 VIP。
- * @method integer getPort() 获取实例端口号。
- * @method void setPort(integer $Port) 设置实例端口号。
- * @method string getCreatetime() 获取实例创建时间。格式如：2020-01-15 10:20:00。
- * @method void setCreatetime(string $Createtime) 设置实例创建时间。格式如：2020-01-15 10:20:00。
- * @method float getSize() 获取实例内存容量大小。单位：MB，1MB=1024KB。
- * @method void setSize(float $Size) 设置实例内存容量大小。单位：MB，1MB=1024KB。
- * @method float getSizeUsed() 获取该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
- * @method void setSizeUsed(float $SizeUsed) 设置该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
- * @method integer getType() 获取实例类型。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 5：Redis 2.8 内存版（单机）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
-- 200:Memcached 1.6 内存版（集群架构）。
- * @method void setType(integer $Type) 设置实例类型。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 5：Redis 2.8 内存版（单机）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
-- 200:Memcached 1.6 内存版（集群架构）。
- * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
- * @method string getDeadlineTime() 获取包年包月计费实例到期的时间。
- * @method void setDeadlineTime(string $DeadlineTime) 设置包年包月计费实例到期的时间。
- * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV。
- * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV。
- * @method string getProductType() 获取产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
- * @method void setProductType(string $ProductType) 设置产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
- * @method string getUniqVpcId() 获取vpc网络id，例如vpc-fk33jsf43kgv。
- * @method void setUniqVpcId(string $UniqVpcId) 设置vpc网络id，例如vpc-fk33jsf43kgv。
- * @method string getUniqSubnetId() 获取vpc网络下子网id，例如：subnet-fd3j6l35mm0。
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置vpc网络下子网id，例如：subnet-fd3j6l35mm0。
- * @method integer getBillingMode() 获取计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
- * @method void setBillingMode(integer $BillingMode) 设置计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
- * @method string getInstanceTitle() 获取实例运行状态描述：如”实例运行中“。
- * @method void setInstanceTitle(string $InstanceTitle) 设置实例运行状态描述：如”实例运行中“。
- * @method string getOfflineTime() 获取已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
- * @method void setOfflineTime(string $OfflineTime) 设置已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
- * @method integer getSubStatus() 获取流程中的实例返回的子状态。
-- 0：磁盘读写状态。
-- 1：磁盘超限只读状态。
- * @method void setSubStatus(integer $SubStatus) 设置流程中的实例返回的子状态。
-- 0：磁盘读写状态。
-- 1：磁盘超限只读状态。
- * @method array getTags() 获取反亲和性标签。
- * @method void setTags(array $Tags) 设置反亲和性标签。
- * @method array getInstanceNode() 获取实例节点信息。
- * @method void setInstanceNode(array $InstanceNode) 设置实例节点信息。
- * @method integer getRedisShardSize() 获取分片大小。
- * @method void setRedisShardSize(integer $RedisShardSize) 设置分片大小。
- * @method integer getRedisShardNum() 获取分片数量。
- * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量。
- * @method integer getRedisReplicasNum() 获取副本数量。
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量。
- * @method integer getPriceId() 获取计费 ID。
- * @method void setPriceId(integer $PriceId) 设置计费 ID。
- * @method string getCloseTime() 获取实例隔离开始的时间。
- * @method void setCloseTime(string $CloseTime) 设置实例隔离开始的时间。
- * @method integer getSlaveReadWeight() 获取从节点读取权重。
-- 0：表示关闭副本只读。
-- 100：表示开启副本只读。
- * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置从节点读取权重。
-- 0：表示关闭副本只读。
-- 100：表示开启副本只读。
- * @method array getInstanceTags() 获取实例关联的标签信息。
- * @method void setInstanceTags(array $InstanceTags) 设置实例关联的标签信息。
- * @method string getProjectName() 获取项目名称。
- * @method void setProjectName(string $ProjectName) 设置项目名称。
- * @method boolean getNoAuth() 获取是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
- * @method void setNoAuth(boolean $NoAuth) 设置是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
- * @method integer getClientLimit() 获取客户端连接数。
- * @method void setClientLimit(integer $ClientLimit) 设置客户端连接数。
- * @method integer getDtsStatus() 获取DTS状态（内部参数，用户可忽略）。
- * @method void setDtsStatus(integer $DtsStatus) 设置DTS状态（内部参数，用户可忽略）。
- * @method integer getNetLimit() 获取分片带宽上限，单位MB。
- * @method void setNetLimit(integer $NetLimit) 设置分片带宽上限，单位MB。
- * @method integer getPasswordFree() 获取免密实例标识（内部参数，用户可忽略）。
- * @method void setPasswordFree(integer $PasswordFree) 设置免密实例标识（内部参数，用户可忽略）。
- * @method string getVip6() 获取该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
- * @method void setVip6(string $Vip6) 设置该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
- * @method string getIPv6() 获取内部参数，用户可忽略。
- * @method void setIPv6(string $IPv6) 设置内部参数，用户可忽略。
- * @method integer getReadOnly() 获取实例只读标识（内部参数，用户可忽略）。
- * @method void setReadOnly(integer $ReadOnly) 设置实例只读标识（内部参数，用户可忽略）。
- * @method string getRemainBandwidthDuration() 获取内部参数，用户可忽略。
- * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置内部参数，用户可忽略。
- * @method integer getDiskSize() 获取Redis实例请忽略该参数。
- * @method void setDiskSize(integer $DiskSize) 设置Redis实例请忽略该参数。
- * @method string getMonitorVersion() 获取监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
- * @method void setMonitorVersion(string $MonitorVersion) 设置监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
- * @method integer getClientLimitMin() 获取客户端最大连接数可设置的最小值。
- * @method void setClientLimitMin(integer $ClientLimitMin) 设置客户端最大连接数可设置的最小值。
- * @method integer getClientLimitMax() 获取客户端最大连接数可设置的最大值。
- * @method void setClientLimitMax(integer $ClientLimitMax) 设置客户端最大连接数可设置的最大值。
- * @method array getNodeSet() 获取实例的节点详细信息。
-只有多可用区实例会返回。
- * @method void setNodeSet(array $NodeSet) 设置实例的节点详细信息。
-只有多可用区实例会返回。
- * @method string getRegion() 获取实例所在的地域信息，比如ap-guangzhou。
- * @method void setRegion(string $Region) 设置实例所在的地域信息，比如ap-guangzhou。
- * @method string getWanAddress() 获取外网地址。
- * @method void setWanAddress(string $WanAddress) 设置外网地址。
- * @method string getPolarisServer() 获取北极星服务地址，内部使用。
- * @method void setPolarisServer(string $PolarisServer) 设置北极星服务地址，内部使用。
- * @method string getRedisClusterId() 获取CDC Redis集群ID。
- * @method void setRedisClusterId(string $RedisClusterId) 设置CDC Redis集群ID。
- * @method string getDedicatedClusterId() 获取CDC 集群ID。
- * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置CDC 集群ID。
- * @method string getProductVersion() 获取产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
- * @method void setProductVersion(string $ProductVersion) 设置产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
- * @method string getCurrentProxyVersion() 获取实例当前Proxy版本。
- * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置实例当前Proxy版本。
- * @method string getCurrentRedisVersion() 获取实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
- * @method void setCurrentRedisVersion(string $CurrentRedisVersion) 设置实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
- * @method string getUpgradeProxyVersion() 获取实例可升级Proxy版本。
- * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) 设置实例可升级Proxy版本。
- * @method string getUpgradeRedisVersion() 获取实例可升级Cache小版本。
- * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) 设置实例可升级Cache小版本。
- * @method string getBackupMode() 获取备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
- * @method void setBackupMode(string $BackupMode) 设置备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
- * @method integer getDeleteProtectionSwitch() 获取删除保护开关，0关闭，1开启
- * @method void setDeleteProtectionSwitch(integer $DeleteProtectionSwitch) 设置删除保护开关，0关闭，1开启
+ * @method string getInstanceName() 获取<p>实例名称。</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称。</p>
+ * @method string getInstanceId() 获取<p>实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。</p>
+ * @method integer getAppid() 获取<p>用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。</p>
+ * @method void setAppid(integer $Appid) 设置<p>用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。</p>
+ * @method integer getProjectId() 获取<p>项目 ID。</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目 ID。</p>
+ * @method integer getRegionId() 获取<p>地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul></p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul></p>
+ * @method integer getZoneId() 获取<p>区域 ID。</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>区域 ID。</p>
+ * @method integer getVpcId() 获取<p>vpc网络 ID，例如75101。</p>
+ * @method void setVpcId(integer $VpcId) 设置<p>vpc网络 ID，例如75101。</p>
+ * @method integer getSubnetId() 获取<p>vpc网络下子网ID，如：46315。</p>
+ * @method void setSubnetId(integer $SubnetId) 设置<p>vpc网络下子网ID，如：46315。</p>
+ * @method integer getStatus() 获取<p>实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul></p>
+ * @method void setStatus(integer $Status) 设置<p>实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul></p>
+ * @method string getWanIp() 获取<p>实例 VIP。</p>
+ * @method void setWanIp(string $WanIp) 设置<p>实例 VIP。</p>
+ * @method integer getPort() 获取<p>实例端口号。</p>
+ * @method void setPort(integer $Port) 设置<p>实例端口号。</p>
+ * @method string getCreatetime() 获取<p>实例创建时间。格式如：2020-01-15 10:20:00。</p>
+ * @method void setCreatetime(string $Createtime) 设置<p>实例创建时间。格式如：2020-01-15 10:20:00。</p>
+ * @method float getSize() 获取<p>实例内存容量大小。单位：MB，1MB=1024KB。</p>
+ * @method void setSize(float $Size) 设置<p>实例内存容量大小。单位：MB，1MB=1024KB。</p>
+ * @method float getSizeUsed() 获取<p>该字段已废弃。请使用腾讯云可观测平台API 接口 <a href="https://cloud.tencent.com/document/product/248/31014">GetMonitorData</a> 获取实例已使用的内存容量。</p>
+ * @method void setSizeUsed(float $SizeUsed) 设置<p>该字段已废弃。请使用腾讯云可观测平台API 接口 <a href="https://cloud.tencent.com/document/product/248/31014">GetMonitorData</a> 获取实例已使用的内存容量。</p>
+ * @method integer getType() 获取<p>实例类型。</p><p>枚举值：</p><ul><li>2： Redis 2.8 内存版（标准架构）。</li><li>3： CKV 3.2 内存版（标准架构）。</li><li>4： CKV 3.2 内存版（集群架构）。</li><li>5： Redis 2.8 内存版（单机）。</li><li>6： Redis 4.0 内存版（标准架构）。</li><li>7： Redis 4.0 内存版（集群架构）。</li><li>8： Redis 5.0 内存版（标准架构）。</li><li>9： Redis 5.0 内存版（集群架构）。</li><li>15： Redis 6.2 内存版（标准架构）。</li><li>16： Redis 6.2 内存版（集群架构）。</li><li>17： Redis 7.0 内存版（标准架构）。</li><li>18： Redis 7.0 内存版（集群架构）。</li><li>19： Valkey 8.0 内存版（标准架构）。</li><li>20： Valkey 8.0 内存版（集群架构）。</li><li>200： Memcached 1.6 内存版（集群架构）。</li></ul>
+ * @method void setType(integer $Type) 设置<p>实例类型。</p><p>枚举值：</p><ul><li>2： Redis 2.8 内存版（标准架构）。</li><li>3： CKV 3.2 内存版（标准架构）。</li><li>4： CKV 3.2 内存版（集群架构）。</li><li>5： Redis 2.8 内存版（单机）。</li><li>6： Redis 4.0 内存版（标准架构）。</li><li>7： Redis 4.0 内存版（集群架构）。</li><li>8： Redis 5.0 内存版（标准架构）。</li><li>9： Redis 5.0 内存版（集群架构）。</li><li>15： Redis 6.2 内存版（标准架构）。</li><li>16： Redis 6.2 内存版（集群架构）。</li><li>17： Redis 7.0 内存版（标准架构）。</li><li>18： Redis 7.0 内存版（集群架构）。</li><li>19： Valkey 8.0 内存版（标准架构）。</li><li>20： Valkey 8.0 内存版（集群架构）。</li><li>200： Memcached 1.6 内存版（集群架构）。</li></ul>
+ * @method integer getAutoRenewFlag() 获取<p>实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul></p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul></p>
+ * @method string getDeadlineTime() 获取<p>包年包月计费实例到期的时间。</p>
+ * @method void setDeadlineTime(string $DeadlineTime) 设置<p>包年包月计费实例到期的时间。</p>
+ * @method string getEngine() 获取<p>引擎：社区版Redis、腾讯云CKV。</p>
+ * @method void setEngine(string $Engine) 设置<p>引擎：社区版Redis、腾讯云CKV。</p>
+ * @method string getProductType() 获取<p>产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul></p>
+ * @method void setProductType(string $ProductType) 设置<p>产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul></p>
+ * @method string getUniqVpcId() 获取<p>vpc网络id，例如vpc-fk33jsf43kgv。</p>
+ * @method void setUniqVpcId(string $UniqVpcId) 设置<p>vpc网络id，例如vpc-fk33jsf43kgv。</p>
+ * @method string getUniqSubnetId() 获取<p>vpc网络下子网id，例如：subnet-fd3j6l35mm0。</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置<p>vpc网络下子网id，例如：subnet-fd3j6l35mm0。</p>
+ * @method integer getBillingMode() 获取<p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+ * @method void setBillingMode(integer $BillingMode) 设置<p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+ * @method string getInstanceTitle() 获取<p>实例运行状态描述：如”实例运行中“。</p>
+ * @method void setInstanceTitle(string $InstanceTitle) 设置<p>实例运行状态描述：如”实例运行中“。</p>
+ * @method string getOfflineTime() 获取<p>已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。</p>
+ * @method void setOfflineTime(string $OfflineTime) 设置<p>已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。</p>
+ * @method integer getSubStatus() 获取<p>流程中的实例返回的子状态。</p><ul><li>0：磁盘读写状态。</li><li>1：磁盘超限只读状态。</li></ul>
+ * @method void setSubStatus(integer $SubStatus) 设置<p>流程中的实例返回的子状态。</p><ul><li>0：磁盘读写状态。</li><li>1：磁盘超限只读状态。</li></ul>
+ * @method array getTags() 获取<p>反亲和性标签。</p>
+ * @method void setTags(array $Tags) 设置<p>反亲和性标签。</p>
+ * @method array getInstanceNode() 获取<p>实例节点信息。</p>
+ * @method void setInstanceNode(array $InstanceNode) 设置<p>实例节点信息。</p>
+ * @method integer getRedisShardSize() 获取<p>分片大小。</p>
+ * @method void setRedisShardSize(integer $RedisShardSize) 设置<p>分片大小。</p>
+ * @method integer getRedisShardNum() 获取<p>分片数量。</p>
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置<p>分片数量。</p>
+ * @method integer getRedisReplicasNum() 获取<p>副本数量。</p>
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置<p>副本数量。</p>
+ * @method integer getPriceId() 获取<p>计费 ID。</p>
+ * @method void setPriceId(integer $PriceId) 设置<p>计费 ID。</p>
+ * @method string getCloseTime() 获取<p>实例隔离开始的时间。</p>
+ * @method void setCloseTime(string $CloseTime) 设置<p>实例隔离开始的时间。</p>
+ * @method integer getSlaveReadWeight() 获取<p>从节点读取权重。</p><ul><li>0：表示关闭副本只读。</li><li>100：表示开启副本只读。</li></ul>
+ * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置<p>从节点读取权重。</p><ul><li>0：表示关闭副本只读。</li><li>100：表示开启副本只读。</li></ul>
+ * @method array getInstanceTags() 获取<p>实例关联的标签信息。</p>
+ * @method void setInstanceTags(array $InstanceTags) 设置<p>实例关联的标签信息。</p>
+ * @method string getProjectName() 获取<p>项目名称。</p>
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名称。</p>
+ * @method boolean getNoAuth() 获取<p>是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul></p>
+ * @method void setNoAuth(boolean $NoAuth) 设置<p>是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul></p>
+ * @method integer getClientLimit() 获取<p>客户端连接数。</p>
+ * @method void setClientLimit(integer $ClientLimit) 设置<p>客户端连接数。</p>
+ * @method integer getDtsStatus() 获取<p>DTS状态（内部参数，用户可忽略）。</p>
+ * @method void setDtsStatus(integer $DtsStatus) 设置<p>DTS状态（内部参数，用户可忽略）。</p>
+ * @method integer getNetLimit() 获取<p>分片带宽上限，单位MB。</p>
+ * @method void setNetLimit(integer $NetLimit) 设置<p>分片带宽上限，单位MB。</p>
+ * @method integer getPasswordFree() 获取<p>免密实例标识（内部参数，用户可忽略）。</p>
+ * @method void setPasswordFree(integer $PasswordFree) 设置<p>免密实例标识（内部参数，用户可忽略）。</p>
+ * @method string getVip6() 获取<p>该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。</p>
+ * @method void setVip6(string $Vip6) 设置<p>该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。</p>
+ * @method string getIPv6() 获取<p>内部参数，用户可忽略。</p>
+ * @method void setIPv6(string $IPv6) 设置<p>内部参数，用户可忽略。</p>
+ * @method integer getReadOnly() 获取<p>实例只读标识（内部参数，用户可忽略）。</p>
+ * @method void setReadOnly(integer $ReadOnly) 设置<p>实例只读标识（内部参数，用户可忽略）。</p>
+ * @method string getRemainBandwidthDuration() 获取<p>内部参数，用户可忽略。</p>
+ * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置<p>内部参数，用户可忽略。</p>
+ * @method integer getDiskSize() 获取<p>Redis实例请忽略该参数。</p>
+ * @method void setDiskSize(integer $DiskSize) 设置<p>Redis实例请忽略该参数。</p>
+ * @method string getMonitorVersion() 获取<p>监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/80653">云数据库 Redis 1分钟粒度下线公告</a>。</li><li>5s：5秒粒度监控。</li></ul></p>
+ * @method void setMonitorVersion(string $MonitorVersion) 设置<p>监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/80653">云数据库 Redis 1分钟粒度下线公告</a>。</li><li>5s：5秒粒度监控。</li></ul></p>
+ * @method integer getClientLimitMin() 获取<p>客户端最大连接数可设置的最小值。</p>
+ * @method void setClientLimitMin(integer $ClientLimitMin) 设置<p>客户端最大连接数可设置的最小值。</p>
+ * @method integer getClientLimitMax() 获取<p>客户端最大连接数可设置的最大值。</p>
+ * @method void setClientLimitMax(integer $ClientLimitMax) 设置<p>客户端最大连接数可设置的最大值。</p>
+ * @method array getNodeSet() 获取<p>实例的节点详细信息。<br>只有多可用区实例会返回。</p>
+ * @method void setNodeSet(array $NodeSet) 设置<p>实例的节点详细信息。<br>只有多可用区实例会返回。</p>
+ * @method string getRegion() 获取<p>实例所在的地域信息，比如ap-guangzhou。</p>
+ * @method void setRegion(string $Region) 设置<p>实例所在的地域信息，比如ap-guangzhou。</p>
+ * @method string getWanAddress() 获取<p>外网地址。</p>
+ * @method void setWanAddress(string $WanAddress) 设置<p>外网地址。</p>
+ * @method string getPolarisServer() 获取<p>北极星服务地址，内部使用。</p>
+ * @method void setPolarisServer(string $PolarisServer) 设置<p>北极星服务地址，内部使用。</p>
+ * @method string getRedisClusterId() 获取<p>CDC Redis集群ID。</p>
+ * @method void setRedisClusterId(string $RedisClusterId) 设置<p>CDC Redis集群ID。</p>
+ * @method string getDedicatedClusterId() 获取<p>CDC 集群ID。</p>
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置<p>CDC 集群ID。</p>
+ * @method string getProductVersion() 获取<p>产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul></p>
+ * @method void setProductVersion(string $ProductVersion) 设置<p>产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul></p>
+ * @method string getCurrentProxyVersion() 获取<p>实例当前Proxy版本。</p>
+ * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置<p>实例当前Proxy版本。</p>
+ * @method string getCurrentRedisVersion() 获取<p>实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。</p>
+ * @method void setCurrentRedisVersion(string $CurrentRedisVersion) 设置<p>实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。</p>
+ * @method string getUpgradeProxyVersion() 获取<p>实例可升级Proxy版本。</p>
+ * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) 设置<p>实例可升级Proxy版本。</p>
+ * @method string getUpgradeRedisVersion() 获取<p>实例可升级Cache小版本。</p>
+ * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) 设置<p>实例可升级Cache小版本。</p>
+ * @method string getBackupMode() 获取<p>备份模式。</p><ul><li>SecondLevelBackup：秒级备份。</li><li>NormalLevelBackup：普通备份。</li></ul>
+ * @method void setBackupMode(string $BackupMode) 设置<p>备份模式。</p><ul><li>SecondLevelBackup：秒级备份。</li><li>NormalLevelBackup：普通备份。</li></ul>
+ * @method integer getDeleteProtectionSwitch() 获取<p>实例销毁保护开关。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
+ * @method void setDeleteProtectionSwitch(integer $DeleteProtectionSwitch) 设置<p>实例销毁保护开关。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
  */
 class InstanceSet extends AbstractModel
 {
     /**
-     * @var string 实例名称。
+     * @var string <p>实例名称。</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例 ID。
+     * @var string <p>实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
-
+     * @var integer <p>用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。</p>
      */
     public $Appid;
 
     /**
-     * @var integer 项目 ID。
+     * @var integer <p>项目 ID。</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
+     * @var integer <p>地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul></p>
      */
     public $RegionId;
 
     /**
-     * @var integer 区域 ID。
+     * @var integer <p>区域 ID。</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer vpc网络 ID，例如75101。
+     * @var integer <p>vpc网络 ID，例如75101。</p>
      */
     public $VpcId;
 
     /**
-     * @var integer vpc网络下子网ID，如：46315。
+     * @var integer <p>vpc网络下子网ID，如：46315。</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
+     * @var integer <p>实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul></p>
      */
     public $Status;
 
     /**
-     * @var string 实例 VIP。
+     * @var string <p>实例 VIP。</p>
      */
     public $WanIp;
 
     /**
-     * @var integer 实例端口号。
+     * @var integer <p>实例端口号。</p>
      */
     public $Port;
 
     /**
-     * @var string 实例创建时间。格式如：2020-01-15 10:20:00。
+     * @var string <p>实例创建时间。格式如：2020-01-15 10:20:00。</p>
      */
     public $Createtime;
 
     /**
-     * @var float 实例内存容量大小。单位：MB，1MB=1024KB。
+     * @var float <p>实例内存容量大小。单位：MB，1MB=1024KB。</p>
      */
     public $Size;
 
     /**
-     * @var float 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
+     * @var float <p>该字段已废弃。请使用腾讯云可观测平台API 接口 <a href="https://cloud.tencent.com/document/product/248/31014">GetMonitorData</a> 获取实例已使用的内存容量。</p>
      * @deprecated
      */
     public $SizeUsed;
 
     /**
-     * @var integer 实例类型。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 5：Redis 2.8 内存版（单机）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
-- 200:Memcached 1.6 内存版（集群架构）。
+     * @var integer <p>实例类型。</p><p>枚举值：</p><ul><li>2： Redis 2.8 内存版（标准架构）。</li><li>3： CKV 3.2 内存版（标准架构）。</li><li>4： CKV 3.2 内存版（集群架构）。</li><li>5： Redis 2.8 内存版（单机）。</li><li>6： Redis 4.0 内存版（标准架构）。</li><li>7： Redis 4.0 内存版（集群架构）。</li><li>8： Redis 5.0 内存版（标准架构）。</li><li>9： Redis 5.0 内存版（集群架构）。</li><li>15： Redis 6.2 内存版（标准架构）。</li><li>16： Redis 6.2 内存版（集群架构）。</li><li>17： Redis 7.0 内存版（标准架构）。</li><li>18： Redis 7.0 内存版（集群架构）。</li><li>19： Valkey 8.0 内存版（标准架构）。</li><li>20： Valkey 8.0 内存版（集群架构）。</li><li>200： Memcached 1.6 内存版（集群架构）。</li></ul>
      */
     public $Type;
 
     /**
-     * @var integer 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
+     * @var integer <p>实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul></p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 包年包月计费实例到期的时间。
+     * @var string <p>包年包月计费实例到期的时间。</p>
      */
     public $DeadlineTime;
 
     /**
-     * @var string 引擎：社区版Redis、腾讯云CKV。
+     * @var string <p>引擎：社区版Redis、腾讯云CKV。</p>
      */
     public $Engine;
 
     /**
-     * @var string 产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
+     * @var string <p>产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul></p>
      */
     public $ProductType;
 
     /**
-     * @var string vpc网络id，例如vpc-fk33jsf43kgv。
+     * @var string <p>vpc网络id，例如vpc-fk33jsf43kgv。</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string vpc网络下子网id，例如：subnet-fd3j6l35mm0。
+     * @var string <p>vpc网络下子网id，例如：subnet-fd3j6l35mm0。</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var integer 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+     * @var integer <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
      */
     public $BillingMode;
 
     /**
-     * @var string 实例运行状态描述：如”实例运行中“。
+     * @var string <p>实例运行状态描述：如”实例运行中“。</p>
      */
     public $InstanceTitle;
 
     /**
-     * @var string 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
+     * @var string <p>已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。</p>
      */
     public $OfflineTime;
 
     /**
-     * @var integer 流程中的实例返回的子状态。
-- 0：磁盘读写状态。
-- 1：磁盘超限只读状态。
+     * @var integer <p>流程中的实例返回的子状态。</p><ul><li>0：磁盘读写状态。</li><li>1：磁盘超限只读状态。</li></ul>
      */
     public $SubStatus;
 
     /**
-     * @var array 反亲和性标签。
+     * @var array <p>反亲和性标签。</p>
      */
     public $Tags;
 
     /**
-     * @var array 实例节点信息。
+     * @var array <p>实例节点信息。</p>
      */
     public $InstanceNode;
 
     /**
-     * @var integer 分片大小。
+     * @var integer <p>分片大小。</p>
      */
     public $RedisShardSize;
 
     /**
-     * @var integer 分片数量。
+     * @var integer <p>分片数量。</p>
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 副本数量。
+     * @var integer <p>副本数量。</p>
      */
     public $RedisReplicasNum;
 
     /**
-     * @var integer 计费 ID。
+     * @var integer <p>计费 ID。</p>
      */
     public $PriceId;
 
     /**
-     * @var string 实例隔离开始的时间。
+     * @var string <p>实例隔离开始的时间。</p>
      */
     public $CloseTime;
 
     /**
-     * @var integer 从节点读取权重。
-- 0：表示关闭副本只读。
-- 100：表示开启副本只读。
+     * @var integer <p>从节点读取权重。</p><ul><li>0：表示关闭副本只读。</li><li>100：表示开启副本只读。</li></ul>
      */
     public $SlaveReadWeight;
 
     /**
-     * @var array 实例关联的标签信息。
+     * @var array <p>实例关联的标签信息。</p>
      */
     public $InstanceTags;
 
     /**
-     * @var string 项目名称。
+     * @var string <p>项目名称。</p>
      */
     public $ProjectName;
 
     /**
-     * @var boolean 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
+     * @var boolean <p>是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul></p>
      */
     public $NoAuth;
 
     /**
-     * @var integer 客户端连接数。
+     * @var integer <p>客户端连接数。</p>
      */
     public $ClientLimit;
 
     /**
-     * @var integer DTS状态（内部参数，用户可忽略）。
+     * @var integer <p>DTS状态（内部参数，用户可忽略）。</p>
      */
     public $DtsStatus;
 
     /**
-     * @var integer 分片带宽上限，单位MB。
+     * @var integer <p>分片带宽上限，单位MB。</p>
      */
     public $NetLimit;
 
     /**
-     * @var integer 免密实例标识（内部参数，用户可忽略）。
+     * @var integer <p>免密实例标识（内部参数，用户可忽略）。</p>
      */
     public $PasswordFree;
 
     /**
-     * @var string 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
+     * @var string <p>该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。</p>
      */
     public $Vip6;
 
     /**
-     * @var string 内部参数，用户可忽略。
+     * @var string <p>内部参数，用户可忽略。</p>
      */
     public $IPv6;
 
     /**
-     * @var integer 实例只读标识（内部参数，用户可忽略）。
+     * @var integer <p>实例只读标识（内部参数，用户可忽略）。</p>
      */
     public $ReadOnly;
 
     /**
-     * @var string 内部参数，用户可忽略。
+     * @var string <p>内部参数，用户可忽略。</p>
      */
     public $RemainBandwidthDuration;
 
     /**
-     * @var integer Redis实例请忽略该参数。
+     * @var integer <p>Redis实例请忽略该参数。</p>
      */
     public $DiskSize;
 
     /**
-     * @var string 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
+     * @var string <p>监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/80653">云数据库 Redis 1分钟粒度下线公告</a>。</li><li>5s：5秒粒度监控。</li></ul></p>
      */
     public $MonitorVersion;
 
     /**
-     * @var integer 客户端最大连接数可设置的最小值。
+     * @var integer <p>客户端最大连接数可设置的最小值。</p>
      */
     public $ClientLimitMin;
 
     /**
-     * @var integer 客户端最大连接数可设置的最大值。
+     * @var integer <p>客户端最大连接数可设置的最大值。</p>
      */
     public $ClientLimitMax;
 
     /**
-     * @var array 实例的节点详细信息。
-只有多可用区实例会返回。
+     * @var array <p>实例的节点详细信息。<br>只有多可用区实例会返回。</p>
      */
     public $NodeSet;
 
     /**
-     * @var string 实例所在的地域信息，比如ap-guangzhou。
+     * @var string <p>实例所在的地域信息，比如ap-guangzhou。</p>
      */
     public $Region;
 
     /**
-     * @var string 外网地址。
+     * @var string <p>外网地址。</p>
      */
     public $WanAddress;
 
     /**
-     * @var string 北极星服务地址，内部使用。
+     * @var string <p>北极星服务地址，内部使用。</p>
      */
     public $PolarisServer;
 
     /**
-     * @var string CDC Redis集群ID。
+     * @var string <p>CDC Redis集群ID。</p>
      */
     public $RedisClusterId;
 
     /**
-     * @var string CDC 集群ID。
+     * @var string <p>CDC 集群ID。</p>
      */
     public $DedicatedClusterId;
 
     /**
-     * @var string 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+     * @var string <p>产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul></p>
      */
     public $ProductVersion;
 
     /**
-     * @var string 实例当前Proxy版本。
+     * @var string <p>实例当前Proxy版本。</p>
      */
     public $CurrentProxyVersion;
 
     /**
-     * @var string 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
+     * @var string <p>实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。</p>
      */
     public $CurrentRedisVersion;
 
     /**
-     * @var string 实例可升级Proxy版本。
+     * @var string <p>实例可升级Proxy版本。</p>
      */
     public $UpgradeProxyVersion;
 
     /**
-     * @var string 实例可升级Cache小版本。
+     * @var string <p>实例可升级Cache小版本。</p>
      */
     public $UpgradeRedisVersion;
 
     /**
-     * @var string 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+     * @var string <p>备份模式。</p><ul><li>SecondLevelBackup：秒级备份。</li><li>NormalLevelBackup：普通备份。</li></ul>
      */
     public $BackupMode;
 
     /**
-     * @var integer 删除保护开关，0关闭，1开启
+     * @var integer <p>实例销毁保护开关。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
      */
     public $DeleteProtectionSwitch;
 
     /**
-     * @param string $InstanceName 实例名称。
-     * @param string $InstanceId 实例 ID。
-     * @param integer $Appid 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
-
-     * @param integer $ProjectId 项目 ID。
-     * @param integer $RegionId 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
-     * @param integer $ZoneId 区域 ID。
-     * @param integer $VpcId vpc网络 ID，例如75101。
-     * @param integer $SubnetId vpc网络下子网ID，如：46315。
-     * @param integer $Status 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
-     * @param string $WanIp 实例 VIP。
-     * @param integer $Port 实例端口号。
-     * @param string $Createtime 实例创建时间。格式如：2020-01-15 10:20:00。
-     * @param float $Size 实例内存容量大小。单位：MB，1MB=1024KB。
-     * @param float $SizeUsed 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
-     * @param integer $Type 实例类型。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 5：Redis 2.8 内存版（单机）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
-- 200:Memcached 1.6 内存版（集群架构）。
-     * @param integer $AutoRenewFlag 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
-     * @param string $DeadlineTime 包年包月计费实例到期的时间。
-     * @param string $Engine 引擎：社区版Redis、腾讯云CKV。
-     * @param string $ProductType 产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
-     * @param string $UniqVpcId vpc网络id，例如vpc-fk33jsf43kgv。
-     * @param string $UniqSubnetId vpc网络下子网id，例如：subnet-fd3j6l35mm0。
-     * @param integer $BillingMode 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
-     * @param string $InstanceTitle 实例运行状态描述：如”实例运行中“。
-     * @param string $OfflineTime 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
-     * @param integer $SubStatus 流程中的实例返回的子状态。
-- 0：磁盘读写状态。
-- 1：磁盘超限只读状态。
-     * @param array $Tags 反亲和性标签。
-     * @param array $InstanceNode 实例节点信息。
-     * @param integer $RedisShardSize 分片大小。
-     * @param integer $RedisShardNum 分片数量。
-     * @param integer $RedisReplicasNum 副本数量。
-     * @param integer $PriceId 计费 ID。
-     * @param string $CloseTime 实例隔离开始的时间。
-     * @param integer $SlaveReadWeight 从节点读取权重。
-- 0：表示关闭副本只读。
-- 100：表示开启副本只读。
-     * @param array $InstanceTags 实例关联的标签信息。
-     * @param string $ProjectName 项目名称。
-     * @param boolean $NoAuth 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-     * @param integer $ClientLimit 客户端连接数。
-     * @param integer $DtsStatus DTS状态（内部参数，用户可忽略）。
-     * @param integer $NetLimit 分片带宽上限，单位MB。
-     * @param integer $PasswordFree 免密实例标识（内部参数，用户可忽略）。
-     * @param string $Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-     * @param string $IPv6 内部参数，用户可忽略。
-     * @param integer $ReadOnly 实例只读标识（内部参数，用户可忽略）。
-     * @param string $RemainBandwidthDuration 内部参数，用户可忽略。
-     * @param integer $DiskSize Redis实例请忽略该参数。
-     * @param string $MonitorVersion 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-     * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值。
-     * @param integer $ClientLimitMax 客户端最大连接数可设置的最大值。
-     * @param array $NodeSet 实例的节点详细信息。
-只有多可用区实例会返回。
-     * @param string $Region 实例所在的地域信息，比如ap-guangzhou。
-     * @param string $WanAddress 外网地址。
-     * @param string $PolarisServer 北极星服务地址，内部使用。
-     * @param string $RedisClusterId CDC Redis集群ID。
-     * @param string $DedicatedClusterId CDC 集群ID。
-     * @param string $ProductVersion 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
-     * @param string $CurrentProxyVersion 实例当前Proxy版本。
-     * @param string $CurrentRedisVersion 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-     * @param string $UpgradeProxyVersion 实例可升级Proxy版本。
-     * @param string $UpgradeRedisVersion 实例可升级Cache小版本。
-     * @param string $BackupMode 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-     * @param integer $DeleteProtectionSwitch 删除保护开关，0关闭，1开启
+     * @param string $InstanceName <p>实例名称。</p>
+     * @param string $InstanceId <p>实例 ID。</p>
+     * @param integer $Appid <p>用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。</p>
+     * @param integer $ProjectId <p>项目 ID。</p>
+     * @param integer $RegionId <p>地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul></p>
+     * @param integer $ZoneId <p>区域 ID。</p>
+     * @param integer $VpcId <p>vpc网络 ID，例如75101。</p>
+     * @param integer $SubnetId <p>vpc网络下子网ID，如：46315。</p>
+     * @param integer $Status <p>实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul></p>
+     * @param string $WanIp <p>实例 VIP。</p>
+     * @param integer $Port <p>实例端口号。</p>
+     * @param string $Createtime <p>实例创建时间。格式如：2020-01-15 10:20:00。</p>
+     * @param float $Size <p>实例内存容量大小。单位：MB，1MB=1024KB。</p>
+     * @param float $SizeUsed <p>该字段已废弃。请使用腾讯云可观测平台API 接口 <a href="https://cloud.tencent.com/document/product/248/31014">GetMonitorData</a> 获取实例已使用的内存容量。</p>
+     * @param integer $Type <p>实例类型。</p><p>枚举值：</p><ul><li>2： Redis 2.8 内存版（标准架构）。</li><li>3： CKV 3.2 内存版（标准架构）。</li><li>4： CKV 3.2 内存版（集群架构）。</li><li>5： Redis 2.8 内存版（单机）。</li><li>6： Redis 4.0 内存版（标准架构）。</li><li>7： Redis 4.0 内存版（集群架构）。</li><li>8： Redis 5.0 内存版（标准架构）。</li><li>9： Redis 5.0 内存版（集群架构）。</li><li>15： Redis 6.2 内存版（标准架构）。</li><li>16： Redis 6.2 内存版（集群架构）。</li><li>17： Redis 7.0 内存版（标准架构）。</li><li>18： Redis 7.0 内存版（集群架构）。</li><li>19： Valkey 8.0 内存版（标准架构）。</li><li>20： Valkey 8.0 内存版（集群架构）。</li><li>200： Memcached 1.6 内存版（集群架构）。</li></ul>
+     * @param integer $AutoRenewFlag <p>实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul></p>
+     * @param string $DeadlineTime <p>包年包月计费实例到期的时间。</p>
+     * @param string $Engine <p>引擎：社区版Redis、腾讯云CKV。</p>
+     * @param string $ProductType <p>产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul></p>
+     * @param string $UniqVpcId <p>vpc网络id，例如vpc-fk33jsf43kgv。</p>
+     * @param string $UniqSubnetId <p>vpc网络下子网id，例如：subnet-fd3j6l35mm0。</p>
+     * @param integer $BillingMode <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+     * @param string $InstanceTitle <p>实例运行状态描述：如”实例运行中“。</p>
+     * @param string $OfflineTime <p>已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。</p>
+     * @param integer $SubStatus <p>流程中的实例返回的子状态。</p><ul><li>0：磁盘读写状态。</li><li>1：磁盘超限只读状态。</li></ul>
+     * @param array $Tags <p>反亲和性标签。</p>
+     * @param array $InstanceNode <p>实例节点信息。</p>
+     * @param integer $RedisShardSize <p>分片大小。</p>
+     * @param integer $RedisShardNum <p>分片数量。</p>
+     * @param integer $RedisReplicasNum <p>副本数量。</p>
+     * @param integer $PriceId <p>计费 ID。</p>
+     * @param string $CloseTime <p>实例隔离开始的时间。</p>
+     * @param integer $SlaveReadWeight <p>从节点读取权重。</p><ul><li>0：表示关闭副本只读。</li><li>100：表示开启副本只读。</li></ul>
+     * @param array $InstanceTags <p>实例关联的标签信息。</p>
+     * @param string $ProjectName <p>项目名称。</p>
+     * @param boolean $NoAuth <p>是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul></p>
+     * @param integer $ClientLimit <p>客户端连接数。</p>
+     * @param integer $DtsStatus <p>DTS状态（内部参数，用户可忽略）。</p>
+     * @param integer $NetLimit <p>分片带宽上限，单位MB。</p>
+     * @param integer $PasswordFree <p>免密实例标识（内部参数，用户可忽略）。</p>
+     * @param string $Vip6 <p>该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。</p>
+     * @param string $IPv6 <p>内部参数，用户可忽略。</p>
+     * @param integer $ReadOnly <p>实例只读标识（内部参数，用户可忽略）。</p>
+     * @param string $RemainBandwidthDuration <p>内部参数，用户可忽略。</p>
+     * @param integer $DiskSize <p>Redis实例请忽略该参数。</p>
+     * @param string $MonitorVersion <p>监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/80653">云数据库 Redis 1分钟粒度下线公告</a>。</li><li>5s：5秒粒度监控。</li></ul></p>
+     * @param integer $ClientLimitMin <p>客户端最大连接数可设置的最小值。</p>
+     * @param integer $ClientLimitMax <p>客户端最大连接数可设置的最大值。</p>
+     * @param array $NodeSet <p>实例的节点详细信息。<br>只有多可用区实例会返回。</p>
+     * @param string $Region <p>实例所在的地域信息，比如ap-guangzhou。</p>
+     * @param string $WanAddress <p>外网地址。</p>
+     * @param string $PolarisServer <p>北极星服务地址，内部使用。</p>
+     * @param string $RedisClusterId <p>CDC Redis集群ID。</p>
+     * @param string $DedicatedClusterId <p>CDC 集群ID。</p>
+     * @param string $ProductVersion <p>产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul></p>
+     * @param string $CurrentProxyVersion <p>实例当前Proxy版本。</p>
+     * @param string $CurrentRedisVersion <p>实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。</p>
+     * @param string $UpgradeProxyVersion <p>实例可升级Proxy版本。</p>
+     * @param string $UpgradeRedisVersion <p>实例可升级Cache小版本。</p>
+     * @param string $BackupMode <p>备份模式。</p><ul><li>SecondLevelBackup：秒级备份。</li><li>NormalLevelBackup：普通备份。</li></ul>
+     * @param integer $DeleteProtectionSwitch <p>实例销毁保护开关。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
      */
     function __construct()
     {

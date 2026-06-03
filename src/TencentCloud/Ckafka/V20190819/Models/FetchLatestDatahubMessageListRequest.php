@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FetchLatestDatahubMessageList请求参数结构体
  *
- * @method string getName() 获取弹性topic名称
- * @method void setName(string $Name) 设置弹性topic名称
- * @method integer getPartition() 获取分区id
- * @method void setPartition(integer $Partition) 设置分区id
- * @method integer getOffset() 获取位点信息
- * @method void setOffset(integer $Offset) 设置位点信息
- * @method integer getMessageCount() 获取最大查询条数，最小1，最大100
- * @method void setMessageCount(integer $MessageCount) 设置最大查询条数，最小1，最大100
+ * @method string getName() 获取<p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
+ * @method void setName(string $Name) 设置<p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
+ * @method integer getPartition() 获取<p>分区id</p>
+ * @method void setPartition(integer $Partition) 设置<p>分区id</p>
+ * @method integer getOffset() 获取<p>位点信息</p>
+ * @method void setOffset(integer $Offset) 设置<p>位点信息</p>
+ * @method integer getMessageCount() 获取<p>最大查询条数</p><p>取值范围：[1, 100]</p>
+ * @method void setMessageCount(integer $MessageCount) 设置<p>最大查询条数</p><p>取值范围：[1, 100]</p>
  */
 class FetchLatestDatahubMessageListRequest extends AbstractModel
 {
     /**
-     * @var string 弹性topic名称
+     * @var string <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
      */
     public $Name;
 
     /**
-     * @var integer 分区id
+     * @var integer <p>分区id</p>
      */
     public $Partition;
 
     /**
-     * @var integer 位点信息
+     * @var integer <p>位点信息</p>
      */
     public $Offset;
 
     /**
-     * @var integer 最大查询条数，最小1，最大100
+     * @var integer <p>最大查询条数</p><p>取值范围：[1, 100]</p>
      */
     public $MessageCount;
 
     /**
-     * @param string $Name 弹性topic名称
-     * @param integer $Partition 分区id
-     * @param integer $Offset 位点信息
-     * @param integer $MessageCount 最大查询条数，最小1，最大100
+     * @param string $Name <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
+     * @param integer $Partition <p>分区id</p>
+     * @param integer $Offset <p>位点信息</p>
+     * @param integer $MessageCount <p>最大查询条数</p><p>取值范围：[1, 100]</p>
      */
     function __construct()
     {

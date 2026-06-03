@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQualityControlResultSet(array $QualityControlResultSet) 设置<p>内容质检检出异常项。</p>
  * @method array getContainerDiagnoseResultSet() 获取<p>格式诊断检出异常项。</p>
  * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) 设置<p>格式诊断检出异常项。</p>
+ * @method LLMDetectionReport getLLMDetectionReport() 获取<p>LLM大模型AIGC质量检测结果。</p>
+ * @method void setLLMDetectionReport(LLMDetectionReport $LLMDetectionReport) 设置<p>LLM大模型AIGC质量检测结果。</p>
  */
 class QualityControlData extends AbstractModel
 {
@@ -73,6 +75,11 @@ class QualityControlData extends AbstractModel
     public $ContainerDiagnoseResultSet;
 
     /**
+     * @var LLMDetectionReport <p>LLM大模型AIGC质量检测结果。</p>
+     */
+    public $LLMDetectionReport;
+
+    /**
      * @param boolean $NoAudio <p>为true时表示视频无音频轨。</p>
      * @param boolean $NoVideo <p>为true时表示视频无视频轨。</p>
      * @param integer $QualityEvaluationScore <p>视频无参考质量评分，百分制。</p>
@@ -80,6 +87,7 @@ class QualityControlData extends AbstractModel
      * @param integer $AestheticEvaluationScore <p>视频美学评分，范围：[0,100]。</p>
      * @param array $QualityControlResultSet <p>内容质检检出异常项。</p>
      * @param array $ContainerDiagnoseResultSet <p>格式诊断检出异常项。</p>
+     * @param LLMDetectionReport $LLMDetectionReport <p>LLM大模型AIGC质量检测结果。</p>
      */
     function __construct()
     {
@@ -130,6 +138,11 @@ class QualityControlData extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ContainerDiagnoseResultSet, $obj);
             }
+        }
+
+        if (array_key_exists("LLMDetectionReport",$param) and $param["LLMDetectionReport"] !== null) {
+            $this->LLMDetectionReport = new LLMDetectionReport();
+            $this->LLMDetectionReport->deserialize($param["LLMDetectionReport"]);
         }
     }
 }

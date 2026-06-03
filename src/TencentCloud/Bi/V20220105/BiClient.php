@@ -26,6 +26,7 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\ApplyEmbedIntervalResponse ApplyEmbedInterval(Models\ApplyEmbedIntervalRequest $req) 申请延长Token可用时间接口-强鉴权
  * @method Models\ClearEmbedTokenResponse ClearEmbedToken(Models\ClearEmbedTokenRequest $req) 强鉴权token 清理，只有企业管理员才能调用该接口
  * @method Models\CreateAuthApiKeyResponse CreateAuthApiKey(Models\CreateAuthApiKeyRequest $req) 创建ApiKey
+ * @method Models\CreateDataTableResponse CreateDataTable(Models\CreateDataTableRequest $req) 添加数据表
  * @method Models\CreateDatasourceResponse CreateDatasource(Models\CreateDatasourceRequest $req) 创建数据源
  * @method Models\CreateDatasourceCloudResponse CreateDatasourceCloud(Models\CreateDatasourceCloudRequest $req) 创建云数据库
  * @method Models\CreateEmbedTokenResponse CreateEmbedToken(Models\CreateEmbedTokenRequest $req) 创建嵌出报表-强鉴权
@@ -52,6 +53,7 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\DescribeProjectInfoResponse DescribeProjectInfo(Models\DescribeProjectInfoRequest $req) 项目详情接口
  * @method Models\DescribeProjectListResponse DescribeProjectList(Models\DescribeProjectListRequest $req) 项目信息
  * @method Models\DescribeResourceUserGroupPageListResponse DescribeResourceUserGroupPageList(Models\DescribeResourceUserGroupPageListRequest $req) 用户组资源权限查询接口
+ * @method Models\DescribeSourceFieldListResponse DescribeSourceFieldList(Models\DescribeSourceFieldListRequest $req) 原始数据表字段接口信息
  * @method Models\DescribeUserGroupInfoResponse DescribeUserGroupInfo(Models\DescribeUserGroupInfoRequest $req) DescribeUserGroupInfo
  * @method Models\DescribeUserGroupMemberListResponse DescribeUserGroupMemberList(Models\DescribeUserGroupMemberListRequest $req) DescribeUserGroupMemberList
  * @method Models\DescribeUserGroupTreeListResponse DescribeUserGroupTreeList(Models\DescribeUserGroupTreeListRequest $req) 用户组数查询接口

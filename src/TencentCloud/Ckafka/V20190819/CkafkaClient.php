@@ -37,6 +37,9 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateDatahubTaskResponse CreateDatahubTask(Models\CreateDatahubTaskRequest $req) 创建连接器任务
  * @method Models\CreateDatahubTopicResponse CreateDatahubTopic(Models\CreateDatahubTopicRequest $req) 创建DIP主题
  * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) 创建实例(预付费包年包月),  仅支持创建专业版实例
+ * @method Models\CreateMetaAndDataSyncDatahubTaskResponse CreateMetaAndDataSyncDatahubTask(Models\CreateMetaAndDataSyncDatahubTaskRequest $req) 连接器实例同步任务-元数据、消息同步
+ * @method Models\CreateMetaDataAndOffsetSyncDatahubTaskResponse CreateMetaDataAndOffsetSyncDatahubTask(Models\CreateMetaDataAndOffsetSyncDatahubTaskRequest $req) 连接器实例同步任务-同步元数据、消息数据、消费微点
+ * @method Models\CreateMetaSyncDatahubTaskResponse CreateMetaSyncDatahubTask(Models\CreateMetaSyncDatahubTaskRequest $req) 连接器实例同步任务-元数据同步
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 本接口用于增加主题中的分区
  * @method Models\CreatePostPaidInstanceResponse CreatePostPaidInstance(Models\CreatePostPaidInstanceRequest $req) 当前接口用来替代 CreateInstancePost 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
  * @method Models\CreatePrometheusResponse CreatePrometheus(Models\CreatePrometheusRequest $req) 添加普罗米修斯监控

@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListGroups返回参数结构体
  *
- * @method string getNextToken() 获取查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。
- * @method void setNextToken(string $NextToken) 设置查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。
- * @method array getGroups() 获取用户组列表。
- * @method void setGroups(array $Groups) 设置用户组列表。
- * @method integer getMaxResults() 获取每页的最大数据条数。
- * @method void setMaxResults(integer $MaxResults) 设置每页的最大数据条数。
- * @method integer getTotalCounts() 获取符合请求参数条件的数据总条数。
- * @method void setTotalCounts(integer $TotalCounts) 设置符合请求参数条件的数据总条数。
- * @method boolean getIsTruncated() 获取返回结果是否被截断。取值：  true：已截断。 false：未截断。
- * @method void setIsTruncated(boolean $IsTruncated) 设置返回结果是否被截断。取值：  true：已截断。 false：未截断。
+ * @method string getNextToken() 获取<p>查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。</p>
+ * @method void setNextToken(string $NextToken) 设置<p>查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。</p>
+ * @method array getGroups() 获取<p>用户组列表。</p>
+ * @method void setGroups(array $Groups) 设置<p>用户组列表。</p>
+ * @method integer getMaxResults() 获取<p>每页的最大数据条数。</p>
+ * @method void setMaxResults(integer $MaxResults) 设置<p>每页的最大数据条数。</p>
+ * @method integer getTotalCounts() 获取<p>符合请求参数条件的数据总条数。</p>
+ * @method void setTotalCounts(integer $TotalCounts) 设置<p>符合请求参数条件的数据总条数。</p>
+ * @method boolean getIsTruncated() 获取<p>返回结果是否被截断。取值：  true：已截断。 false：未截断。</p>
+ * @method void setIsTruncated(boolean $IsTruncated) 设置<p>返回结果是否被截断。取值：  true：已截断。 false：未截断。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListGroupsResponse extends AbstractModel
 {
     /**
-     * @var string 查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。
+     * @var string <p>查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。</p>
      */
     public $NextToken;
 
     /**
-     * @var array 用户组列表。
+     * @var array <p>用户组列表。</p>
      */
     public $Groups;
 
     /**
-     * @var integer 每页的最大数据条数。
+     * @var integer <p>每页的最大数据条数。</p>
      */
     public $MaxResults;
 
     /**
-     * @var integer 符合请求参数条件的数据总条数。
+     * @var integer <p>符合请求参数条件的数据总条数。</p>
      */
     public $TotalCounts;
 
     /**
-     * @var boolean 返回结果是否被截断。取值：  true：已截断。 false：未截断。
+     * @var boolean <p>返回结果是否被截断。取值：  true：已截断。 false：未截断。</p>
      */
     public $IsTruncated;
 
@@ -66,11 +66,11 @@ class ListGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $NextToken 查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。
-     * @param array $Groups 用户组列表。
-     * @param integer $MaxResults 每页的最大数据条数。
-     * @param integer $TotalCounts 符合请求参数条件的数据总条数。
-     * @param boolean $IsTruncated 返回结果是否被截断。取值：  true：已截断。 false：未截断。
+     * @param string $NextToken <p>查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。</p>
+     * @param array $Groups <p>用户组列表。</p>
+     * @param integer $MaxResults <p>每页的最大数据条数。</p>
+     * @param integer $TotalCounts <p>符合请求参数条件的数据总条数。</p>
+     * @param boolean $IsTruncated <p>返回结果是否被截断。取值：  true：已截断。 false：未截断。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

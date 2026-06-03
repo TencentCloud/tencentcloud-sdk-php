@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateUin(integer $CreateUin) 设置<p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
  * @method array getTagKeys() 获取<p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
  * @method void setTagKeys(array $TagKeys) 设置<p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
- * @method integer getShowProject() 获取<p>是否展现项目标签。1:展示  0:不展示</p>
- * @method void setShowProject(integer $ShowProject) 设置<p>是否展现项目标签。1:展示  0:不展示</p>
+ * @method integer getShowProject() 获取<p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
+ * @method void setShowProject(integer $ShowProject) 设置<p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
  */
 class DescribeTagsRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeTagsRequest extends AbstractModel
     public $TagKeys;
 
     /**
-     * @var integer <p>是否展现项目标签。1:展示  0:不展示</p>
+     * @var integer <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
      */
     public $ShowProject;
 
@@ -79,7 +79,7 @@ class DescribeTagsRequest extends AbstractModel
      * @param integer $Limit <p>每页大小，默认为 15，最大1000</p>
      * @param integer $CreateUin <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
      * @param array $TagKeys <p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
-     * @param integer $ShowProject <p>是否展现项目标签。1:展示  0:不展示</p>
+     * @param integer $ShowProject <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
      */
     function __construct()
     {

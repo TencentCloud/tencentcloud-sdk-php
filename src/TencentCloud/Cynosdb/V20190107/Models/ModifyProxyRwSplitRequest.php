@@ -20,182 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyProxyRwSplit请求参数结构体
  *
- * @method string getClusterId() 获取集群ID，例如cynosdbmysql-asd123
- * @method void setClusterId(string $ClusterId) 设置集群ID，例如cynosdbmysql-asd123
- * @method string getProxyGroupId() 获取数据库代理组ID，例如cynosdbmysql-proxy-qwe123
- * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组ID，例如cynosdbmysql-proxy-qwe123
- * @method string getConsistencyType() 获取一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
- * @method void setConsistencyType(string $ConsistencyType) 设置一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
- * @method string getConsistencyTimeOut() 获取一致性超时时间。
-取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
- * @method void setConsistencyTimeOut(string $ConsistencyTimeOut) 设置一致性超时时间。
-取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
- * @method string getWeightMode() 获取读写权重分配模式；系统自动分配："system"， 自定义："custom"
- * @method void setWeightMode(string $WeightMode) 设置读写权重分配模式；系统自动分配："system"， 自定义："custom"
- * @method array getInstanceWeights() 获取实例只读权重。
-
- * @method void setInstanceWeights(array $InstanceWeights) 设置实例只读权重。
-
- * @method string getFailOver() 获取是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
- * @method void setFailOver(string $FailOver) 设置是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
- * @method string getAutoAddRo() 获取是否自动添加只读实例，取值："yes" , "no"
- * @method void setAutoAddRo(string $AutoAddRo) 设置是否自动添加只读实例，取值："yes" , "no"
- * @method string getOpenRw() 获取是否打开读写分离。
-该参数已废弃，请通过RwType设置读写属性。
- * @method void setOpenRw(string $OpenRw) 设置是否打开读写分离。
-该参数已废弃，请通过RwType设置读写属性。
- * @method string getRwType() 获取读写类型：
-READWRITE,READONLY
- * @method void setRwType(string $RwType) 设置读写类型：
-READWRITE,READONLY
- * @method boolean getTransSplit() 获取事务拆分。
-在一个事务中拆分读和写到不同的实例上去执行。
- * @method void setTransSplit(boolean $TransSplit) 设置事务拆分。
-在一个事务中拆分读和写到不同的实例上去执行。
- * @method string getAccessMode() 获取连接模式：
-nearby,balance
- * @method void setAccessMode(string $AccessMode) 设置连接模式：
-nearby,balance
- * @method string getOpenConnectionPool() 获取是否打开连接池：
-yes,no
- * @method void setOpenConnectionPool(string $OpenConnectionPool) 设置是否打开连接池：
-yes,no
- * @method string getConnectionPoolType() 获取连接池类型：
-SessionConnectionPool
- * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型：
-SessionConnectionPool
- * @method integer getConnectionPoolTimeOut() 获取连接池时间。
-可选范围:0~300（秒）
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置连接池时间。
-可选范围:0~300（秒）
- * @method boolean getApNodeAsRoNode() 获取是否将libra节点当作普通RO节点
- * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) 设置是否将libra节点当作普通RO节点
- * @method boolean getApQueryToOtherNode() 获取libra节点故障，是否转发给其他节点
- * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) 设置libra节点故障，是否转发给其他节点
+ * @method string getClusterId() 获取<p>集群ID，例如cynosdbmysql-asd123</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID，例如cynosdbmysql-asd123</p>
+ * @method string getProxyGroupId() 获取<p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置<p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
+ * @method string getConsistencyType() 获取<p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
+ * @method void setConsistencyType(string $ConsistencyType) 设置<p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
+ * @method string getConsistencyTimeOut() 获取<p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+ * @method void setConsistencyTimeOut(string $ConsistencyTimeOut) 设置<p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+ * @method string getWeightMode() 获取<p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+ * @method void setWeightMode(string $WeightMode) 设置<p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+ * @method array getInstanceWeights() 获取<p>实例只读权重。</p>
+ * @method void setInstanceWeights(array $InstanceWeights) 设置<p>实例只读权重。</p>
+ * @method string getFailOver() 获取<p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
+ * @method void setFailOver(string $FailOver) 设置<p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
+ * @method string getAutoAddRo() 获取<p>是否自动添加只读实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
+ * @method void setAutoAddRo(string $AutoAddRo) 设置<p>是否自动添加只读实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
+ * @method string getOpenRw() 获取<p>是否打开读写分离。<br>该参数已废弃，请通过RwType设置读写属性。</p>
+ * @method void setOpenRw(string $OpenRw) 设置<p>是否打开读写分离。<br>该参数已废弃，请通过RwType设置读写属性。</p>
+ * @method string getRwType() 获取<p>读写类型：<br>READWRITE,READONLY</p>
+ * @method void setRwType(string $RwType) 设置<p>读写类型：<br>READWRITE,READONLY</p>
+ * @method boolean getTransSplit() 获取<p>事务拆分。<br>在一个事务中拆分读和写到不同的实例上去执行。</p>
+ * @method void setTransSplit(boolean $TransSplit) 设置<p>事务拆分。<br>在一个事务中拆分读和写到不同的实例上去执行。</p>
+ * @method string getAccessMode() 获取<p>连接模式：<br>nearby,balance</p>
+ * @method void setAccessMode(string $AccessMode) 设置<p>连接模式：<br>nearby,balance</p>
+ * @method string getOpenConnectionPool() 获取<p>是否打开连接池：<br>yes,no</p>
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) 设置<p>是否打开连接池：<br>yes,no</p>
+ * @method string getConnectionPoolType() 获取<p>连接池类型：<br>SessionConnectionPool</p>
+ * @method void setConnectionPoolType(string $ConnectionPoolType) 设置<p>连接池类型：<br>SessionConnectionPool</p>
+ * @method integer getConnectionPoolTimeOut() 获取<p>连接池时间。<br>可选范围:0~300（秒）</p>
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置<p>连接池时间。<br>可选范围:0~300（秒）</p>
+ * @method boolean getApNodeAsRoNode() 获取<p>是否将libra节点当作普通RO节点</p>
+ * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) 设置<p>是否将libra节点当作普通RO节点</p>
+ * @method boolean getApQueryToOtherNode() 获取<p>libra节点故障，是否转发给其他节点</p>
+ * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) 设置<p>libra节点故障，是否转发给其他节点</p>
  */
 class ModifyProxyRwSplitRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID，例如cynosdbmysql-asd123
+     * @var string <p>集群ID，例如cynosdbmysql-asd123</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
+     * @var string <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var string 一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
+     * @var string <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
      */
     public $ConsistencyType;
 
     /**
-     * @var string 一致性超时时间。
-取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
+     * @var string <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
      */
     public $ConsistencyTimeOut;
 
     /**
-     * @var string 读写权重分配模式；系统自动分配："system"， 自定义："custom"
+     * @var string <p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public $WeightMode;
 
     /**
-     * @var array 实例只读权重。
-
+     * @var array <p>实例只读权重。</p>
      */
     public $InstanceWeights;
 
     /**
-     * @var string 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
+     * @var string <p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
      */
     public $FailOver;
 
     /**
-     * @var string 是否自动添加只读实例，取值："yes" , "no"
+     * @var string <p>是否自动添加只读实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
      */
     public $AutoAddRo;
 
     /**
-     * @var string 是否打开读写分离。
-该参数已废弃，请通过RwType设置读写属性。
+     * @var string <p>是否打开读写分离。<br>该参数已废弃，请通过RwType设置读写属性。</p>
      */
     public $OpenRw;
 
     /**
-     * @var string 读写类型：
-READWRITE,READONLY
+     * @var string <p>读写类型：<br>READWRITE,READONLY</p>
      */
     public $RwType;
 
     /**
-     * @var boolean 事务拆分。
-在一个事务中拆分读和写到不同的实例上去执行。
+     * @var boolean <p>事务拆分。<br>在一个事务中拆分读和写到不同的实例上去执行。</p>
      */
     public $TransSplit;
 
     /**
-     * @var string 连接模式：
-nearby,balance
+     * @var string <p>连接模式：<br>nearby,balance</p>
      */
     public $AccessMode;
 
     /**
-     * @var string 是否打开连接池：
-yes,no
+     * @var string <p>是否打开连接池：<br>yes,no</p>
      */
     public $OpenConnectionPool;
 
     /**
-     * @var string 连接池类型：
-SessionConnectionPool
+     * @var string <p>连接池类型：<br>SessionConnectionPool</p>
      */
     public $ConnectionPoolType;
 
     /**
-     * @var integer 连接池时间。
-可选范围:0~300（秒）
+     * @var integer <p>连接池时间。<br>可选范围:0~300（秒）</p>
      */
     public $ConnectionPoolTimeOut;
 
     /**
-     * @var boolean 是否将libra节点当作普通RO节点
+     * @var boolean <p>是否将libra节点当作普通RO节点</p>
      */
     public $ApNodeAsRoNode;
 
     /**
-     * @var boolean libra节点故障，是否转发给其他节点
+     * @var boolean <p>libra节点故障，是否转发给其他节点</p>
      */
     public $ApQueryToOtherNode;
 
     /**
-     * @param string $ClusterId 集群ID，例如cynosdbmysql-asd123
-     * @param string $ProxyGroupId 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
-     * @param string $ConsistencyType 一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
-     * @param string $ConsistencyTimeOut 一致性超时时间。
-取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
-     * @param string $WeightMode 读写权重分配模式；系统自动分配："system"， 自定义："custom"
-     * @param array $InstanceWeights 实例只读权重。
-
-     * @param string $FailOver 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
-     * @param string $AutoAddRo 是否自动添加只读实例，取值："yes" , "no"
-     * @param string $OpenRw 是否打开读写分离。
-该参数已废弃，请通过RwType设置读写属性。
-     * @param string $RwType 读写类型：
-READWRITE,READONLY
-     * @param boolean $TransSplit 事务拆分。
-在一个事务中拆分读和写到不同的实例上去执行。
-     * @param string $AccessMode 连接模式：
-nearby,balance
-     * @param string $OpenConnectionPool 是否打开连接池：
-yes,no
-     * @param string $ConnectionPoolType 连接池类型：
-SessionConnectionPool
-     * @param integer $ConnectionPoolTimeOut 连接池时间。
-可选范围:0~300（秒）
-     * @param boolean $ApNodeAsRoNode 是否将libra节点当作普通RO节点
-     * @param boolean $ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     * @param string $ClusterId <p>集群ID，例如cynosdbmysql-asd123</p>
+     * @param string $ProxyGroupId <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
+     * @param string $ConsistencyType <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
+     * @param string $ConsistencyTimeOut <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+     * @param string $WeightMode <p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+     * @param array $InstanceWeights <p>实例只读权重。</p>
+     * @param string $FailOver <p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
+     * @param string $AutoAddRo <p>是否自动添加只读实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
+     * @param string $OpenRw <p>是否打开读写分离。<br>该参数已废弃，请通过RwType设置读写属性。</p>
+     * @param string $RwType <p>读写类型：<br>READWRITE,READONLY</p>
+     * @param boolean $TransSplit <p>事务拆分。<br>在一个事务中拆分读和写到不同的实例上去执行。</p>
+     * @param string $AccessMode <p>连接模式：<br>nearby,balance</p>
+     * @param string $OpenConnectionPool <p>是否打开连接池：<br>yes,no</p>
+     * @param string $ConnectionPoolType <p>连接池类型：<br>SessionConnectionPool</p>
+     * @param integer $ConnectionPoolTimeOut <p>连接池时间。<br>可选范围:0~300（秒）</p>
+     * @param boolean $ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
+     * @param boolean $ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */
     function __construct()
     {

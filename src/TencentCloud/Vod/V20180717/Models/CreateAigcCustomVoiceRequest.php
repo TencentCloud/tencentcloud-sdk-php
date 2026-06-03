@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceUrl(string $VoiceUrl) 设置<p>音色数据文件获取链接，支持 .mp3 / .wav / .mp4 / .mov 格式的音视频文件。音频中人声需干净无杂音，有且只能有一种人声，时长不短于 5 秒且不长于 30 秒。</p>
  * @method string getVideoId() 获取<p>历史作品 ID，可通过引用历史作品提供音频素材。</p>
  * @method void setVideoId(string $VideoId) 设置<p>历史作品 ID，可通过引用历史作品提供音频素材。</p>
+ * @method string getDisableModeration() 获取<p>若已开通海外自定义音色库，可传入<code>True</code>使用海外自定义音色库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义音色库。</li><li>False： 不使用海外自定义音色库。</li></ul>
+ * @method void setDisableModeration(string $DisableModeration) 设置<p>若已开通海外自定义音色库，可传入<code>True</code>使用海外自定义音色库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义音色库。</li><li>False： 不使用海外自定义音色库。</li></ul>
  * @method string getSessionId() 获取<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
  * @method void setSessionId(string $SessionId) 设置<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
  * @method string getSessionContext() 获取<p>来源上下文，用于透传用户请求信息，任务完成回调将返回该字段值，最长 1000 个字符。</p>
@@ -58,6 +60,11 @@ class CreateAigcCustomVoiceRequest extends AbstractModel
     public $VideoId;
 
     /**
+     * @var string <p>若已开通海外自定义音色库，可传入<code>True</code>使用海外自定义音色库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义音色库。</li><li>False： 不使用海外自定义音色库。</li></ul>
+     */
+    public $DisableModeration;
+
+    /**
      * @var string <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public $SessionId;
@@ -77,6 +84,7 @@ class CreateAigcCustomVoiceRequest extends AbstractModel
      * @param string $VoiceName <p>音色名称，文本内容最大长度 20 个字符</p>
      * @param string $VoiceUrl <p>音色数据文件获取链接，支持 .mp3 / .wav / .mp4 / .mov 格式的音视频文件。音频中人声需干净无杂音，有且只能有一种人声，时长不短于 5 秒且不长于 30 秒。</p>
      * @param string $VideoId <p>历史作品 ID，可通过引用历史作品提供音频素材。</p>
+     * @param string $DisableModeration <p>若已开通海外自定义音色库，可传入<code>True</code>使用海外自定义音色库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义音色库。</li><li>False： 不使用海外自定义音色库。</li></ul>
      * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      * @param string $SessionContext <p>来源上下文，用于透传用户请求信息，任务完成回调将返回该字段值，最长 1000 个字符。</p>
      * @param integer $TasksPriority <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
@@ -108,6 +116,10 @@ class CreateAigcCustomVoiceRequest extends AbstractModel
 
         if (array_key_exists("VideoId",$param) and $param["VideoId"] !== null) {
             $this->VideoId = $param["VideoId"];
+        }
+
+        if (array_key_exists("DisableModeration",$param) and $param["DisableModeration"] !== null) {
+            $this->DisableModeration = $param["DisableModeration"];
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

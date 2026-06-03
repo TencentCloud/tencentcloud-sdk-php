@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeBrokerVersion请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method integer getType() 获取1.平滑升配.2.垂直升配
- * @method void setType(integer $Type) 设置1.平滑升配.2.垂直升配
- * @method string getSourceVersion() 获取版本号
- * @method void setSourceVersion(string $SourceVersion) 设置版本号
- * @method string getTargetVersion() 获取版本号
- * @method void setTargetVersion(string $TargetVersion) 设置版本号
- * @method string getDelayTimeStamp() 获取延迟时间
- * @method void setDelayTimeStamp(string $DelayTimeStamp) 设置延迟时间
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p>
+ * @method integer getType() 获取<p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
+ * @method void setType(integer $Type) 设置<p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
+ * @method string getSourceVersion() 获取<p>版本号</p>
+ * @method void setSourceVersion(string $SourceVersion) 设置<p>版本号</p>
+ * @method string getTargetVersion() 获取<p>版本号</p>
+ * @method void setTargetVersion(string $TargetVersion) 设置<p>版本号</p>
+ * @method string getDelayTimeStamp() 获取<p>延迟时间</p>
+ * @method void setDelayTimeStamp(string $DelayTimeStamp) 设置<p>延迟时间</p>
  */
 class UpgradeBrokerVersionRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 1.平滑升配.2.垂直升配
+     * @var integer <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
      */
     public $Type;
 
     /**
-     * @var string 版本号
+     * @var string <p>版本号</p>
      */
     public $SourceVersion;
 
     /**
-     * @var string 版本号
+     * @var string <p>版本号</p>
      */
     public $TargetVersion;
 
     /**
-     * @var string 延迟时间
+     * @var string <p>延迟时间</p>
      */
     public $DelayTimeStamp;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param integer $Type 1.平滑升配.2.垂直升配
-     * @param string $SourceVersion 版本号
-     * @param string $TargetVersion 版本号
-     * @param string $DelayTimeStamp 延迟时间
+     * @param string $InstanceId <p>ckafka集群实例Id</p>
+     * @param integer $Type <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
+     * @param string $SourceVersion <p>版本号</p>
+     * @param string $TargetVersion <p>版本号</p>
+     * @param string $DelayTimeStamp <p>延迟时间</p>
      */
     function __construct()
     {

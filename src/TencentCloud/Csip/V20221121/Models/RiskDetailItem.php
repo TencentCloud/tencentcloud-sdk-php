@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckStatus(string $CheckStatus) 设置<p>风险验证状态</p>
  * @method integer getAppID() 获取<p>用户AppID</p>
  * @method void setAppID(integer $AppID) 设置<p>用户AppID</p>
+ * @method string getAssetType() 获取<p>资产类型</p>
+ * @method void setAssetType(string $AssetType) 设置<p>资产类型</p>
  */
 class RiskDetailItem extends AbstractModel
 {
@@ -122,6 +124,11 @@ class RiskDetailItem extends AbstractModel
     public $AppID;
 
     /**
+     * @var string <p>资产类型</p>
+     */
+    public $AssetType;
+
+    /**
      * @param string $CreateTime <p>首次发现时间</p>
      * @param string $UpdateTime <p>更新时间</p>
      * @param integer $RiskStatus <p>风险状态</p>
@@ -136,6 +143,7 @@ class RiskDetailItem extends AbstractModel
      * @param string $RiskRuleId <p>风险规则ID</p>
      * @param string $CheckStatus <p>风险验证状态</p>
      * @param integer $AppID <p>用户AppID</p>
+     * @param string $AssetType <p>资产类型</p>
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class RiskDetailItem extends AbstractModel
 
         if (array_key_exists("AppID",$param) and $param["AppID"] !== null) {
             $this->AppID = $param["AppID"];
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

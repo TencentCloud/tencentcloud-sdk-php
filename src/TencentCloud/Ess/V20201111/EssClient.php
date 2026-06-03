@@ -67,6 +67,18 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注:
 <ul><li>若个人用户已经用生成的完成自动签署的开通，撤销链接无效不会对开通结果产生影响(此情况接口会报错)。</li>
 <li>处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。</li></ul>
+ * @method Models\CreateArchiveFlowTaskResponse CreateArchiveFlowTask(Models\CreateArchiveFlowTaskRequest $req) 创建合同归档任务
+
+合同归档接口用于将外部系统生成的合同、线下签署完成的合同或历史存量合同归档至腾讯电子签系统，实现合同统一管理。
+
+调用方提交合同文件资源、合同基础信息、签署方信息等数据后，系统将异步创建归档任务进行处理。归档成功后，系统会生成唯一的归档合同 ID（ArchivedFlowId），用于后续合同查询和管理。
+
+合同归档流程：
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/1c99715285540088b97a0435895736a1.png)
+1. 使用<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a> 上传文件返回resourceId
+2. 根据resourceId调用CreateArchiveFlowTask创建合同归档任务返回任务id
+3. 通过任务ID查询合同归档任务状态
  * @method Models\CreateBatchAdminChangeInvitationsResponse CreateBatchAdminChangeInvitations(Models\CreateBatchAdminChangeInvitationsRequest $req) 本接口（CreateBatchAdminChangeInvitations）用于批量创建企业超管信息变更。
 该接口为提交任务接口,如果需要获得链接， 需要使用接口创建超管变更链接(CreateBatchAdminChangeInvitationsUrl)。
 
@@ -901,6 +913,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 此接口只能删除未跟腾讯电子签绑定的单点登录企业员工，
 如果企业员工的单点登录信息已经和腾讯电子签里面的企业员工绑定，需要企业的超级管理员或者组织管理员在腾讯电子签控制台对当前企业员工进行离职操作，如下图操作。
 ![image](https://qcloudimg.tencent-cloud.cn/raw/5e69f6e11859972d466900040f68c105.png)
+ * @method Models\DescribeArchiveFlowTaskResponse DescribeArchiveFlowTask(Models\DescribeArchiveFlowTaskRequest $req) 查询归档任务的执行结果， 用于获取合同归档任务的当前处理状态及执行结果。
  * @method Models\DescribeBatchOrganizationRegistrationTasksResponse DescribeBatchOrganizationRegistrationTasks(Models\DescribeBatchOrganizationRegistrationTasksRequest $req) 本接口（DescribeBatchOrganizationRegistrationTasks）用于查询企业批量认证任务状态。
  * @method Models\DescribeBatchOrganizationRegistrationUrlsResponse DescribeBatchOrganizationRegistrationUrls(Models\DescribeBatchOrganizationRegistrationUrlsRequest $req) 此接口用于获取企业批量认证异步任务的状态及结果。
 

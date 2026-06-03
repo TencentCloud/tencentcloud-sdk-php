@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRiskRuleDetail请求参数结构体
  *
- * @method string getRiskRuleId() 获取风险规则ID
- * @method void setRiskRuleId(string $RiskRuleId) 设置风险规则ID
+ * @method string getRiskRuleId() 获取<p>风险规则ID</p>
+ * @method void setRiskRuleId(string $RiskRuleId) 设置<p>风险规则ID</p>
  */
 class DescribeRiskRuleDetailRequest extends AbstractModel
 {
     /**
-     * @var string 风险规则ID
+     * @var string <p>风险规则ID</p>
      */
     public $RiskRuleId;
 
     /**
-     * @param string $RiskRuleId 风险规则ID
+     * @param string $RiskRuleId <p>风险规则ID</p>
      */
     function __construct()
     {

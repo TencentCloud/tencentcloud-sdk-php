@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUser请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
- * @method string getName() 获取用户名称
- * @method void setName(string $Name) 设置用户名称
- * @method string getPassword() 获取用户密码
- * @method void setPassword(string $Password) 设置用户密码
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+ * @method string getName() 获取<p>用户名称</p>
+ * @method void setName(string $Name) 设置<p>用户名称</p>
+ * @method string getPassword() 获取<p>用户密码</p>
+ * @method void setPassword(string $Password) 设置<p>用户密码</p>
  */
 class CreateUserRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @var string <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 用户名称
+     * @var string <p>用户名称</p>
      */
     public $Name;
 
     /**
-     * @var string 用户密码
+     * @var string <p>用户密码</p>
      */
     public $Password;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
-     * @param string $Name 用户名称
-     * @param string $Password 用户密码
+     * @param string $InstanceId <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+     * @param string $Name <p>用户名称</p>
+     * @param string $Password <p>用户密码</p>
      */
     function __construct()
     {

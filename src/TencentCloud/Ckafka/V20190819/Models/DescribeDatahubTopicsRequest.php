@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatahubTopics请求参数结构体
  *
- * @method string getSearchWord() 获取搜索词
- * @method void setSearchWord(string $SearchWord) 设置搜索词
- * @method integer getOffset() 获取本次查询的偏移位置，默认为0
- * @method void setOffset(integer $Offset) 设置本次查询的偏移位置，默认为0
- * @method integer getLimit() 获取本次返回结果的最大个数，默认为50，最大值为50
- * @method void setLimit(integer $Limit) 设置本次返回结果的最大个数，默认为50，最大值为50
- * @method boolean getQueryFromConnectResource() 获取是否从连接查询topic列表
- * @method void setQueryFromConnectResource(boolean $QueryFromConnectResource) 设置是否从连接查询topic列表
- * @method string getConnectResourceId() 获取连接的ID
- * @method void setConnectResourceId(string $ConnectResourceId) 设置连接的ID
- * @method string getTopicRegularExpression() 获取topic资源表达式
- * @method void setTopicRegularExpression(string $TopicRegularExpression) 设置topic资源表达式
+ * @method string getSearchWord() 获取<p>搜索词</p><p>对Name或TopicName或TopicId字段进行模糊匹配</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>搜索词</p><p>对Name或TopicName或TopicId字段进行模糊匹配</p>
+ * @method integer getOffset() 获取<p>本次查询的偏移位置，默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>本次查询的偏移位置，默认为0</p>
+ * @method integer getLimit() 获取<p>本次返回结果的最大个数</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
+ * @method void setLimit(integer $Limit) 设置<p>本次返回结果的最大个数</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
+ * @method boolean getQueryFromConnectResource() 获取<p>是否从连接查询topic列表</p><p>默认值：false</p>
+ * @method void setQueryFromConnectResource(boolean $QueryFromConnectResource) 设置<p>是否从连接查询topic列表</p><p>默认值：false</p>
+ * @method string getConnectResourceId() 获取<p>连接的ID</p>
+ * @method void setConnectResourceId(string $ConnectResourceId) 设置<p>连接的ID</p>
+ * @method string getTopicRegularExpression() 获取<p>topic资源表达式</p>
+ * @method void setTopicRegularExpression(string $TopicRegularExpression) 设置<p>topic资源表达式</p>
  */
 class DescribeDatahubTopicsRequest extends AbstractModel
 {
     /**
-     * @var string 搜索词
+     * @var string <p>搜索词</p><p>对Name或TopicName或TopicId字段进行模糊匹配</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer 本次查询的偏移位置，默认为0
+     * @var integer <p>本次查询的偏移位置，默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 本次返回结果的最大个数，默认为50，最大值为50
+     * @var integer <p>本次返回结果的最大个数</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
      */
     public $Limit;
 
     /**
-     * @var boolean 是否从连接查询topic列表
+     * @var boolean <p>是否从连接查询topic列表</p><p>默认值：false</p>
      */
     public $QueryFromConnectResource;
 
     /**
-     * @var string 连接的ID
+     * @var string <p>连接的ID</p>
      */
     public $ConnectResourceId;
 
     /**
-     * @var string topic资源表达式
+     * @var string <p>topic资源表达式</p>
      */
     public $TopicRegularExpression;
 
     /**
-     * @param string $SearchWord 搜索词
-     * @param integer $Offset 本次查询的偏移位置，默认为0
-     * @param integer $Limit 本次返回结果的最大个数，默认为50，最大值为50
-     * @param boolean $QueryFromConnectResource 是否从连接查询topic列表
-     * @param string $ConnectResourceId 连接的ID
-     * @param string $TopicRegularExpression topic资源表达式
+     * @param string $SearchWord <p>搜索词</p><p>对Name或TopicName或TopicId字段进行模糊匹配</p>
+     * @param integer $Offset <p>本次查询的偏移位置，默认为0</p>
+     * @param integer $Limit <p>本次返回结果的最大个数</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
+     * @param boolean $QueryFromConnectResource <p>是否从连接查询topic列表</p><p>默认值：false</p>
+     * @param string $ConnectResourceId <p>连接的ID</p>
+     * @param string $TopicRegularExpression <p>topic资源表达式</p>
      */
     function __construct()
     {

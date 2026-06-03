@@ -20,38 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCheckViewRisks返回参数结构体
  *
- * @method integer getTotalCount() 获取检查视角下风险数量
- * @method void setTotalCount(integer $TotalCount) 设置检查视角下风险数量
- * @method array getCheckViewRiskList() 获取检查视角下风险列表
- * @method void setCheckViewRiskList(array $CheckViewRiskList) 设置检查视角下风险列表
- * @method array getStandardNameList() 获取检查视角下cspm规范标签列表
- * @method void setStandardNameList(array $StandardNameList) 设置检查视角下cspm规范标签列表
- * @method array getAssetTypeList() 获取资产类型集合
- * @method void setAssetTypeList(array $AssetTypeList) 设置资产类型集合
+ * @method integer getTotalCount() 获取<p>检查视角下风险数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>检查视角下风险数量</p>
+ * @method array getCheckViewRiskList() 获取<p>检查视角下风险列表</p>
+ * @method void setCheckViewRiskList(array $CheckViewRiskList) 设置<p>检查视角下风险列表</p>
+ * @method array getStandardNameList() 获取<p>检查视角下cspm规范标签列表</p>
+ * @method void setStandardNameList(array $StandardNameList) 设置<p>检查视角下cspm规范标签列表</p>
+ * @method array getAssetTypeList() 获取<p>资产类型集合</p>
+ * @method void setAssetTypeList(array $AssetTypeList) 设置<p>资产类型集合</p>
+ * @method array getProviderList() 获取<p>云厂商类型集合</p>
+ * @method void setProviderList(array $ProviderList) 设置<p>云厂商类型集合</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCheckViewRisksResponse extends AbstractModel
 {
     /**
-     * @var integer 检查视角下风险数量
+     * @var integer <p>检查视角下风险数量</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 检查视角下风险列表
+     * @var array <p>检查视角下风险列表</p>
      */
     public $CheckViewRiskList;
 
     /**
-     * @var array 检查视角下cspm规范标签列表
+     * @var array <p>检查视角下cspm规范标签列表</p>
      */
     public $StandardNameList;
 
     /**
-     * @var array 资产类型集合
+     * @var array <p>资产类型集合</p>
      */
     public $AssetTypeList;
+
+    /**
+     * @var array <p>云厂商类型集合</p>
+     */
+    public $ProviderList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +66,11 @@ class DescribeCheckViewRisksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 检查视角下风险数量
-     * @param array $CheckViewRiskList 检查视角下风险列表
-     * @param array $StandardNameList 检查视角下cspm规范标签列表
-     * @param array $AssetTypeList 资产类型集合
+     * @param integer $TotalCount <p>检查视角下风险数量</p>
+     * @param array $CheckViewRiskList <p>检查视角下风险列表</p>
+     * @param array $StandardNameList <p>检查视角下cspm规范标签列表</p>
+     * @param array $AssetTypeList <p>资产类型集合</p>
+     * @param array $ProviderList <p>云厂商类型集合</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -106,6 +114,15 @@ class DescribeCheckViewRisksResponse extends AbstractModel
                 $obj = new AttributeOptionSet();
                 $obj->deserialize($value);
                 array_push($this->AssetTypeList, $obj);
+            }
+        }
+
+        if (array_key_exists("ProviderList",$param) and $param["ProviderList"] !== null) {
+            $this->ProviderList = [];
+            foreach ($param["ProviderList"] as $key => $value){
+                $obj = new AttributeOptionSet();
+                $obj->deserialize($value);
+                array_push($this->ProviderList, $obj);
             }
         }
 

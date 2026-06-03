@@ -20,45 +20,52 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRiskRuleDetail返回参数结构体
  *
- * @method string getRiskRuleId() 获取风险规则ID
- * @method void setRiskRuleId(string $RiskRuleId) 设置风险规则ID
- * @method string getProvider() 获取云厂商
- * @method void setProvider(string $Provider) 设置云厂商
- * @method string getRiskName() 获取风险名称
- * @method void setRiskName(string $RiskName) 设置风险名称
- * @method string getRiskInfluence() 获取风险危害
- * @method void setRiskInfluence(string $RiskInfluence) 设置风险危害
- * @method string getRiskFixAdvice() 获取修复指引
- * @method void setRiskFixAdvice(string $RiskFixAdvice) 设置修复指引
+ * @method string getRiskRuleId() 获取<p>风险规则ID</p>
+ * @method void setRiskRuleId(string $RiskRuleId) 设置<p>风险规则ID</p>
+ * @method string getProvider() 获取<p>云厂商</p>
+ * @method void setProvider(string $Provider) 设置<p>云厂商</p>
+ * @method string getRiskName() 获取<p>风险名称</p>
+ * @method void setRiskName(string $RiskName) 设置<p>风险名称</p>
+ * @method string getRiskInfluence() 获取<p>风险危害</p>
+ * @method void setRiskInfluence(string $RiskInfluence) 设置<p>风险危害</p>
+ * @method string getRiskFixAdvice() 获取<p>修复指引</p>
+ * @method void setRiskFixAdvice(string $RiskFixAdvice) 设置<p>修复指引</p>
+ * @method string getAssetType() 获取<p>资产类型</p>
+ * @method void setAssetType(string $AssetType) 设置<p>资产类型</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRiskRuleDetailResponse extends AbstractModel
 {
     /**
-     * @var string 风险规则ID
+     * @var string <p>风险规则ID</p>
      */
     public $RiskRuleId;
 
     /**
-     * @var string 云厂商
+     * @var string <p>云厂商</p>
      */
     public $Provider;
 
     /**
-     * @var string 风险名称
+     * @var string <p>风险名称</p>
      */
     public $RiskName;
 
     /**
-     * @var string 风险危害
+     * @var string <p>风险危害</p>
      */
     public $RiskInfluence;
 
     /**
-     * @var string 修复指引
+     * @var string <p>修复指引</p>
      */
     public $RiskFixAdvice;
+
+    /**
+     * @var string <p>资产类型</p>
+     */
+    public $AssetType;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +73,12 @@ class DescribeRiskRuleDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $RiskRuleId 风险规则ID
-     * @param string $Provider 云厂商
-     * @param string $RiskName 风险名称
-     * @param string $RiskInfluence 风险危害
-     * @param string $RiskFixAdvice 修复指引
+     * @param string $RiskRuleId <p>风险规则ID</p>
+     * @param string $Provider <p>云厂商</p>
+     * @param string $RiskName <p>风险名称</p>
+     * @param string $RiskInfluence <p>风险危害</p>
+     * @param string $RiskFixAdvice <p>修复指引</p>
+     * @param string $AssetType <p>资产类型</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +112,10 @@ class DescribeRiskRuleDetailResponse extends AbstractModel
 
         if (array_key_exists("RiskFixAdvice",$param) and $param["RiskFixAdvice"] !== null) {
             $this->RiskFixAdvice = $param["RiskFixAdvice"];
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

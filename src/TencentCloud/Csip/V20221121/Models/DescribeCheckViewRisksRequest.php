@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
- * @method array getFilters() 获取过滤内容
- * @method void setFilters(array $Filters) 设置过滤内容
- * @method integer getLimit() 获取分页大小
- * @method void setLimit(integer $Limit) 设置分页大小
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method string getOrder() 获取排序类型
- * @method void setOrder(string $Order) 设置排序类型
- * @method string getBy() 获取排序字段
- * @method void setBy(string $By) 设置排序字段
+ * @method array getFilters() 获取<p>过滤内容</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤内容</p>
+ * @method integer getLimit() 获取<p>分页大小</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页大小</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method string getOrder() 获取<p>排序类型</p>
+ * @method void setOrder(string $Order) 设置<p>排序类型</p>
+ * @method string getBy() 获取<p>排序字段</p>
+ * @method void setBy(string $By) 设置<p>排序字段</p>
  */
 class DescribeCheckViewRisksRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class DescribeCheckViewRisksRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array 过滤内容
+     * @var array <p>过滤内容</p>
      */
     public $Filters;
 
     /**
-     * @var integer 分页大小
+     * @var integer <p>分页大小</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var string 排序类型
+     * @var string <p>排序类型</p>
      */
     public $Order;
 
     /**
-     * @var string 排序字段
+     * @var string <p>排序字段</p>
      */
     public $By;
 
     /**
      * @param array $MemberId <p>集团账号的成员id</p>
-     * @param array $Filters 过滤内容
-     * @param integer $Limit 分页大小
-     * @param integer $Offset 偏移量
-     * @param string $Order 排序类型
-     * @param string $By 排序字段
+     * @param array $Filters <p>过滤内容</p>
+     * @param integer $Limit <p>分页大小</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param string $Order <p>排序类型</p>
+     * @param string $By <p>排序字段</p>
      */
     function __construct()
     {

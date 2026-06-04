@@ -18,7 +18,7 @@ namespace TencentCloud\Rce\V20201103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 全栈式风控引擎入参
+ * 风险识别RCE入参
  *
  * @method string getIsAuthorized() 获取是否授权：1已授权，否则未授权。
  调用全栈式风控引擎接口服务时，客户需先明确授权。

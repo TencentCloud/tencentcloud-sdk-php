@@ -1,0 +1,161 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Adp\V20260520\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * DescribeConversationList请求参数结构体
+ *
+ * @method integer getType() 获取<p>会话类型，传 CONVERSATION_TYPE_UNSPECIFIED 表示全部 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
+ * @method void setType(integer $Type) 设置<p>会话类型，传 CONVERSATION_TYPE_UNSPECIFIED 表示全部 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
+ * @method string getAppId() 获取<p>应用 ID</p>
+ * @method void setAppId(string $AppId) 设置<p>应用 ID</p>
+ * @method string getAppKey() 获取<p>Type=CONVERSATION_TYPE_API 时必填，应用密钥</p>
+ * @method void setAppKey(string $AppKey) 设置<p>Type=CONVERSATION_TYPE_API 时必填，应用密钥</p>
+ * @method string getKeyword() 获取<p>关键词</p>
+ * @method void setKeyword(string $Keyword) 设置<p>关键词</p>
+ * @method integer getLimit() 获取<p>限制数目（整型），配合Offset使用</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制数目（整型），配合Offset使用</p>
+ * @method string getLoginSubAccountUin() 获取<p>子账户Uin</p>
+ * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置<p>子账户Uin</p>
+ * @method string getLoginUin() 获取<p>主账户Uin</p>
+ * @method void setLoginUin(string $LoginUin) 设置<p>主账户Uin</p>
+ * @method integer getOffset() 获取<p>偏移量（整型），配合Limit使用，从0开始</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量（整型），配合Limit使用，从0开始</p>
+ * @method string getShareCode() 获取<p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p>
+ * @method void setShareCode(string $ShareCode) 设置<p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p>
+ * @method string getUserId() 获取<p>Type=CONVERSATION_TYPE_API 时必填，访客ID</p>
+ * @method void setUserId(string $UserId) 设置<p>Type=CONVERSATION_TYPE_API 时必填，访客ID</p>
+ */
+class DescribeConversationListRequest extends AbstractModel
+{
+    /**
+     * @var integer <p>会话类型，传 CONVERSATION_TYPE_UNSPECIFIED 表示全部 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
+     */
+    public $Type;
+
+    /**
+     * @var string <p>应用 ID</p>
+     */
+    public $AppId;
+
+    /**
+     * @var string <p>Type=CONVERSATION_TYPE_API 时必填，应用密钥</p>
+     */
+    public $AppKey;
+
+    /**
+     * @var string <p>关键词</p>
+     */
+    public $Keyword;
+
+    /**
+     * @var integer <p>限制数目（整型），配合Offset使用</p>
+     */
+    public $Limit;
+
+    /**
+     * @var string <p>子账户Uin</p>
+     */
+    public $LoginSubAccountUin;
+
+    /**
+     * @var string <p>主账户Uin</p>
+     */
+    public $LoginUin;
+
+    /**
+     * @var integer <p>偏移量（整型），配合Limit使用，从0开始</p>
+     */
+    public $Offset;
+
+    /**
+     * @var string <p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p>
+     */
+    public $ShareCode;
+
+    /**
+     * @var string <p>Type=CONVERSATION_TYPE_API 时必填，访客ID</p>
+     */
+    public $UserId;
+
+    /**
+     * @param integer $Type <p>会话类型，传 CONVERSATION_TYPE_UNSPECIFIED 表示全部 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
+     * @param string $AppId <p>应用 ID</p>
+     * @param string $AppKey <p>Type=CONVERSATION_TYPE_API 时必填，应用密钥</p>
+     * @param string $Keyword <p>关键词</p>
+     * @param integer $Limit <p>限制数目（整型），配合Offset使用</p>
+     * @param string $LoginSubAccountUin <p>子账户Uin</p>
+     * @param string $LoginUin <p>主账户Uin</p>
+     * @param integer $Offset <p>偏移量（整型），配合Limit使用，从0开始</p>
+     * @param string $ShareCode <p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p>
+     * @param string $UserId <p>Type=CONVERSATION_TYPE_API 时必填，访客ID</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("AppKey",$param) and $param["AppKey"] !== null) {
+            $this->AppKey = $param["AppKey"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("LoginSubAccountUin",$param) and $param["LoginSubAccountUin"] !== null) {
+            $this->LoginSubAccountUin = $param["LoginSubAccountUin"];
+        }
+
+        if (array_key_exists("LoginUin",$param) and $param["LoginUin"] !== null) {
+            $this->LoginUin = $param["LoginUin"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("ShareCode",$param) and $param["ShareCode"] !== null) {
+            $this->ShareCode = $param["ShareCode"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
+        }
+    }
+}

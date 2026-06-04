@@ -1,0 +1,113 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Adp\V20260520\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 发布摘要信息
+ *
+ * @method string getCreateTime() 获取创建时间 (Unix时间戳,秒级)
+ * @method void setCreateTime(string $CreateTime) 设置创建时间 (Unix时间戳,秒级)
+ * @method string getDescription() 获取发布描述
+ * @method void setDescription(string $Description) 设置发布描述
+ * @method string getReleaseId() 获取发布ID
+ * @method void setReleaseId(string $ReleaseId) 设置发布ID
+ * @method integer getStatus() 获取发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过
+ * @method void setStatus(integer $Status) 设置发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过
+ * @method string getStatusDescription() 获取状态描述
+ * @method void setStatusDescription(string $StatusDescription) 设置状态描述
+ * @method array getChannelIdList() 获取发布渠道ID列表
+ * @method void setChannelIdList(array $ChannelIdList) 设置发布渠道ID列表
+ */
+class ReleaseSummary extends AbstractModel
+{
+    /**
+     * @var string 创建时间 (Unix时间戳,秒级)
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 发布描述
+     */
+    public $Description;
+
+    /**
+     * @var string 发布ID
+     */
+    public $ReleaseId;
+
+    /**
+     * @var integer 发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过
+     */
+    public $Status;
+
+    /**
+     * @var string 状态描述
+     */
+    public $StatusDescription;
+
+    /**
+     * @var array 发布渠道ID列表
+     */
+    public $ChannelIdList;
+
+    /**
+     * @param string $CreateTime 创建时间 (Unix时间戳,秒级)
+     * @param string $Description 发布描述
+     * @param string $ReleaseId 发布ID
+     * @param integer $Status 发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过
+     * @param string $StatusDescription 状态描述
+     * @param array $ChannelIdList 发布渠道ID列表
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ReleaseId",$param) and $param["ReleaseId"] !== null) {
+            $this->ReleaseId = $param["ReleaseId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StatusDescription",$param) and $param["StatusDescription"] !== null) {
+            $this->StatusDescription = $param["StatusDescription"];
+        }
+
+        if (array_key_exists("ChannelIdList",$param) and $param["ChannelIdList"] !== null) {
+            $this->ChannelIdList = $param["ChannelIdList"];
+        }
+    }
+}

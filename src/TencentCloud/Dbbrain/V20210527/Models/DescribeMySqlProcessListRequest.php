@@ -20,114 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMySqlProcessList请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method integer getID() 获取线程的ID，用于筛选线程列表。
- * @method void setID(integer $ID) 设置线程的ID，用于筛选线程列表。
- * @method string getUser() 获取线程的操作账号名，用于筛选线程列表。
- * @method void setUser(string $User) 设置线程的操作账号名，用于筛选线程列表。
- * @method string getHost() 获取线程的操作主机地址，用于筛选线程列表。
- * @method void setHost(string $Host) 设置线程的操作主机地址，用于筛选线程列表。
- * @method string getDB() 获取线程的操作数据库，用于筛选线程列表。
- * @method void setDB(string $DB) 设置线程的操作数据库，用于筛选线程列表。
- * @method string getState() 获取线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
- * @method void setState(string $State) 设置线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
- * @method string getCommand() 获取线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
- * @method void setCommand(string $Command) 设置线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
- * @method integer getTime() 获取线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
- * @method void setTime(integer $Time) 设置线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
- * @method string getInfo() 获取线程的操作语句，用于筛选线程列表。
- * @method void setInfo(string $Info) 设置线程的操作语句，用于筛选线程列表。
- * @method integer getLimit() 获取返回数量，默认20。
- * @method void setLimit(integer $Limit) 设置返回数量，默认20。
- * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
-
-
- * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
-
-
- * @method array getStatDimensions() 获取会话统计的维度信息,可以多个维度。
- * @method void setStatDimensions(array $StatDimensions) 设置会话统计的维度信息,可以多个维度。
+ * @method string getInstanceId() 获取<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。<strong>其中 dcdb(即TDSQL MySQL) 的查询入参InstanceId特殊，需要使用 ClusterId + &amp; + InstanceId 来组合代替， 如：<code>tdsqlshard-s1230&amp;shard-abcd</code></strong></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。<strong>其中 dcdb(即TDSQL MySQL) 的查询入参InstanceId特殊，需要使用 ClusterId + &amp; + InstanceId 来组合代替， 如：<code>tdsqlshard-s1230&amp;shard-abcd</code></strong></p>
+ * @method integer getID() 获取<p>线程的ID，用于筛选线程列表。</p>
+ * @method void setID(integer $ID) 设置<p>线程的ID，用于筛选线程列表。</p>
+ * @method string getUser() 获取<p>线程的操作账号名，用于筛选线程列表。</p>
+ * @method void setUser(string $User) 设置<p>线程的操作账号名，用于筛选线程列表。</p>
+ * @method string getHost() 获取<p>线程的操作主机地址，用于筛选线程列表。</p>
+ * @method void setHost(string $Host) 设置<p>线程的操作主机地址，用于筛选线程列表。</p>
+ * @method string getDB() 获取<p>线程的操作数据库，用于筛选线程列表。</p>
+ * @method void setDB(string $DB) 设置<p>线程的操作数据库，用于筛选线程列表。</p>
+ * @method string getState() 获取<p>线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。</p>
+ * @method void setState(string $State) 设置<p>线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。</p>
+ * @method string getCommand() 获取<p>线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。</p>
+ * @method void setCommand(string $Command) 设置<p>线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。</p>
+ * @method integer getTime() 获取<p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
+ * @method void setTime(integer $Time) 设置<p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
+ * @method string getInfo() 获取<p>线程的操作语句，用于筛选线程列表。</p>
+ * @method void setInfo(string $Info) 设置<p>线程的操作语句，用于筛选线程列表。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认20。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认20。</p>
+ * @method string getProduct() 获取<p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;mariadb&quot;-mariadb;&quot;cynosdb&quot;-TDSQL-C for MySQL ;&quot;dcdb&quot;-TDSQL MySQL 默认为&quot;mysql&quot;。</p>
+ * @method void setProduct(string $Product) 设置<p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;mariadb&quot;-mariadb;&quot;cynosdb&quot;-TDSQL-C for MySQL ;&quot;dcdb&quot;-TDSQL MySQL 默认为&quot;mysql&quot;。</p>
+ * @method array getStatDimensions() 获取<p>会话统计的维度信息,可以多个维度。</p>
+ * @method void setStatDimensions(array $StatDimensions) 设置<p>会话统计的维度信息,可以多个维度。</p>
  */
 class DescribeMySqlProcessListRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @var string <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。<strong>其中 dcdb(即TDSQL MySQL) 的查询入参InstanceId特殊，需要使用 ClusterId + &amp; + InstanceId 来组合代替， 如：<code>tdsqlshard-s1230&amp;shard-abcd</code></strong></p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 线程的ID，用于筛选线程列表。
+     * @var integer <p>线程的ID，用于筛选线程列表。</p>
      */
     public $ID;
 
     /**
-     * @var string 线程的操作账号名，用于筛选线程列表。
+     * @var string <p>线程的操作账号名，用于筛选线程列表。</p>
      */
     public $User;
 
     /**
-     * @var string 线程的操作主机地址，用于筛选线程列表。
+     * @var string <p>线程的操作主机地址，用于筛选线程列表。</p>
      */
     public $Host;
 
     /**
-     * @var string 线程的操作数据库，用于筛选线程列表。
+     * @var string <p>线程的操作数据库，用于筛选线程列表。</p>
      */
     public $DB;
 
     /**
-     * @var string 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
+     * @var string <p>线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。</p>
      */
     public $State;
 
     /**
-     * @var string 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
+     * @var string <p>线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。</p>
      */
     public $Command;
 
     /**
-     * @var integer 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
+     * @var integer <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
      */
     public $Time;
 
     /**
-     * @var string 线程的操作语句，用于筛选线程列表。
+     * @var string <p>线程的操作语句，用于筛选线程列表。</p>
      */
     public $Info;
 
     /**
-     * @var integer 返回数量，默认20。
+     * @var integer <p>返回数量，默认20。</p>
      */
     public $Limit;
 
     /**
-     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
-
-
+     * @var string <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;mariadb&quot;-mariadb;&quot;cynosdb&quot;-TDSQL-C for MySQL ;&quot;dcdb&quot;-TDSQL MySQL 默认为&quot;mysql&quot;。</p>
      */
     public $Product;
 
     /**
-     * @var array 会话统计的维度信息,可以多个维度。
+     * @var array <p>会话统计的维度信息,可以多个维度。</p>
      */
     public $StatDimensions;
 
     /**
-     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param integer $ID 线程的ID，用于筛选线程列表。
-     * @param string $User 线程的操作账号名，用于筛选线程列表。
-     * @param string $Host 线程的操作主机地址，用于筛选线程列表。
-     * @param string $DB 线程的操作数据库，用于筛选线程列表。
-     * @param string $State 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
-     * @param string $Command 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
-     * @param integer $Time 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
-     * @param string $Info 线程的操作语句，用于筛选线程列表。
-     * @param integer $Limit 返回数量，默认20。
-     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
-
-
-     * @param array $StatDimensions 会话统计的维度信息,可以多个维度。
+     * @param string $InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。<strong>其中 dcdb(即TDSQL MySQL) 的查询入参InstanceId特殊，需要使用 ClusterId + &amp; + InstanceId 来组合代替， 如：<code>tdsqlshard-s1230&amp;shard-abcd</code></strong></p>
+     * @param integer $ID <p>线程的ID，用于筛选线程列表。</p>
+     * @param string $User <p>线程的操作账号名，用于筛选线程列表。</p>
+     * @param string $Host <p>线程的操作主机地址，用于筛选线程列表。</p>
+     * @param string $DB <p>线程的操作数据库，用于筛选线程列表。</p>
+     * @param string $State <p>线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。</p>
+     * @param string $Command <p>线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。</p>
+     * @param integer $Time <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
+     * @param string $Info <p>线程的操作语句，用于筛选线程列表。</p>
+     * @param integer $Limit <p>返回数量，默认20。</p>
+     * @param string $Product <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;mariadb&quot;-mariadb;&quot;cynosdb&quot;-TDSQL-C for MySQL ;&quot;dcdb&quot;-TDSQL MySQL 默认为&quot;mysql&quot;。</p>
+     * @param array $StatDimensions <p>会话统计的维度信息,可以多个维度。</p>
      */
     function __construct()
     {

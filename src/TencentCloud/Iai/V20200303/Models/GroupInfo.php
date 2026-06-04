@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreationTimestamp(integer $CreationTimestamp) 设置<p>Group的创建时间和日期 CreationTimestamp。</p><ul><li>CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpdateTimestamp() 获取<p>Group的创建时间和日期 CreationTimestamp。- CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 - Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。- 有关更多信息，请参阅 Unix 时间。</p>
- * @method void setUpdateTimestamp(integer $UpdateTimestamp) 设置<p>Group的创建时间和日期 CreationTimestamp。- CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 - Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。- 有关更多信息，请参阅 Unix 时间。</p>
+ * @method integer getUpdateTimestamp() 获取<p>Group的更新时间和日期 UpdateTimestamp。<br>UpdateTimestamp 的值是自 Unix 纪元时间到Group更新时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。<br>有关更多信息，请参阅 Unix 时间。</p>
+ * @method void setUpdateTimestamp(integer $UpdateTimestamp) 设置<p>Group的更新时间和日期 UpdateTimestamp。<br>UpdateTimestamp 的值是自 Unix 纪元时间到Group更新时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。<br>有关更多信息，请参阅 Unix 时间。</p>
  */
 class GroupInfo extends AbstractModel
 {
@@ -80,7 +80,7 @@ class GroupInfo extends AbstractModel
     public $CreationTimestamp;
 
     /**
-     * @var integer <p>Group的创建时间和日期 CreationTimestamp。- CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 - Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。- 有关更多信息，请参阅 Unix 时间。</p>
+     * @var integer <p>Group的更新时间和日期 UpdateTimestamp。<br>UpdateTimestamp 的值是自 Unix 纪元时间到Group更新时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。<br>有关更多信息，请参阅 Unix 时间。</p>
      */
     public $UpdateTimestamp;
 
@@ -95,7 +95,7 @@ class GroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreationTimestamp <p>Group的创建时间和日期 CreationTimestamp。</p><ul><li>CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpdateTimestamp <p>Group的创建时间和日期 CreationTimestamp。- CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 - Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。- 有关更多信息，请参阅 Unix 时间。</p>
+     * @param integer $UpdateTimestamp <p>Group的更新时间和日期 UpdateTimestamp。<br>UpdateTimestamp 的值是自 Unix 纪元时间到Group更新时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。<br>有关更多信息，请参阅 Unix 时间。</p>
      */
     function __construct()
     {

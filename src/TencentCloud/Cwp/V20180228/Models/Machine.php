@@ -20,310 +20,298 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 主机列表
  *
- * @method string getMachineName() 获取主机名称。
- * @method void setMachineName(string $MachineName) 设置主机名称。
- * @method string getMachineOs() 获取主机系统。
- * @method void setMachineOs(string $MachineOs) 设置主机系统。
- * @method string getMachineStatus() 获取主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
- * @method void setMachineStatus(string $MachineStatus) 设置主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
- * @method string getAgentStatus() 获取ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
- * @method void setAgentStatus(string $AgentStatus) 设置ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
- * @method string getInstanceStatus() 获取RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
- * @method void setInstanceStatus(string $InstanceStatus) 设置RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
- * @method string getUuid() 获取主机安全Uuid，若客户端长时间不在线将返回空字符。
- * @method void setUuid(string $Uuid) 设置主机安全Uuid，若客户端长时间不在线将返回空字符。
- * @method string getQuuid() 获取CVM或BM机器唯一Uuid。
- * @method void setQuuid(string $Quuid) 设置CVM或BM机器唯一Uuid。
- * @method integer getVulNum() 获取漏洞数。
- * @method void setVulNum(integer $VulNum) 设置漏洞数。
- * @method string getMachineIp() 获取主机IP。
- * @method void setMachineIp(string $MachineIp) 设置主机IP。
- * @method boolean getIsProVersion() 获取是否是专业版。
-<li>true： 是</li>
-<li>false：否</li>
- * @method void setIsProVersion(boolean $IsProVersion) 设置是否是专业版。
-<li>true： 是</li>
-<li>false：否</li>
- * @method string getMachineWanIp() 获取主机外网IP。
- * @method void setMachineWanIp(string $MachineWanIp) 设置主机外网IP。
- * @method string getPayMode() 获取主机状态。
-<li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li>
- * @method void setPayMode(string $PayMode) 设置主机状态。
-<li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li>
- * @method integer getMalwareNum() 获取木马数。
- * @method void setMalwareNum(integer $MalwareNum) 设置木马数。
- * @method array getTag() 获取标签信息
- * @method void setTag(array $Tag) 设置标签信息
- * @method integer getBaselineNum() 获取基线风险数。
- * @method void setBaselineNum(integer $BaselineNum) 设置基线风险数。
- * @method integer getCyberAttackNum() 获取网络风险数。
- * @method void setCyberAttackNum(integer $CyberAttackNum) 设置网络风险数。
- * @method string getSecurityStatus() 获取风险状态。
-<li>SAFE：安全</li>
-<li>RISK：风险</li>
-<li>UNKNOWN：未知</li>
- * @method void setSecurityStatus(string $SecurityStatus) 设置风险状态。
-<li>SAFE：安全</li>
-<li>RISK：风险</li>
-<li>UNKNOWN：未知</li>
- * @method integer getInvasionNum() 获取入侵事件数
- * @method void setInvasionNum(integer $InvasionNum) 设置入侵事件数
- * @method RegionInfo getRegionInfo() 获取地域信息
- * @method void setRegionInfo(RegionInfo $RegionInfo) 设置地域信息
- * @method string getInstanceState() 获取实例状态 TERMINATED_PRO_VERSION 已销毁
- * @method void setInstanceState(string $InstanceState) 设置实例状态 TERMINATED_PRO_VERSION 已销毁
- * @method integer getLicenseStatus() 获取防篡改 授权状态 1 授权 0 未授权
- * @method void setLicenseStatus(integer $LicenseStatus) 设置防篡改 授权状态 1 授权 0 未授权
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method integer getHasAssetScan() 获取是否有资产扫描接口，0无，1有
- * @method void setHasAssetScan(integer $HasAssetScan) 设置是否有资产扫描接口，0无，1有
- * @method string getMachineType() 获取机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
- * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
- * @method string getKernelVersion() 获取内核版本
- * @method void setKernelVersion(string $KernelVersion) 设置内核版本
- * @method string getProtectType() 获取防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
- * @method void setProtectType(string $ProtectType) 设置防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
- * @method array getCloudTags() 获取云标签信息
- * @method void setCloudTags(array $CloudTags) 设置云标签信息
- * @method integer getIsAddedOnTheFifteen() 获取是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
- * @method void setIsAddedOnTheFifteen(integer $IsAddedOnTheFifteen) 设置是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
- * @method string getIpList() 获取主机ip列表
- * @method void setIpList(string $IpList) 设置主机ip列表
- * @method string getVpcId() 获取所属网络
- * @method void setVpcId(string $VpcId) 设置所属网络
- * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
- * @method string getAgentVersion() 获取主机安全agent版本
- * @method void setAgentVersion(string $AgentVersion) 设置主机安全agent版本
+ * @method string getMachineName() 获取<p>主机名称。</p>
+ * @method void setMachineName(string $MachineName) 设置<p>主机名称。</p>
+ * @method string getMachineOs() 获取<p>主机系统。</p>
+ * @method void setMachineOs(string $MachineOs) 设置<p>主机系统。</p>
+ * @method string getMachineStatus() 获取<p>主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li></p>
+ * @method void setMachineStatus(string $MachineStatus) 设置<p>主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li></p>
+ * @method string getAgentStatus() 获取<p>ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装</p>
+ * @method void setAgentStatus(string $AgentStatus) 设置<p>ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装</p>
+ * @method string getInstanceStatus() 获取<p>RUNNING 运行中; STOPED 已关机; EXPIRED 待回收</p>
+ * @method void setInstanceStatus(string $InstanceStatus) 设置<p>RUNNING 运行中; STOPED 已关机; EXPIRED 待回收</p>
+ * @method string getUuid() 获取<p>主机安全Uuid，若客户端长时间不在线将返回空字符。</p>
+ * @method void setUuid(string $Uuid) 设置<p>主机安全Uuid，若客户端长时间不在线将返回空字符。</p>
+ * @method string getQuuid() 获取<p>CVM或BM机器唯一Uuid。</p>
+ * @method void setQuuid(string $Quuid) 设置<p>CVM或BM机器唯一Uuid。</p>
+ * @method integer getVulNum() 获取<p>漏洞数。</p>
+ * @method void setVulNum(integer $VulNum) 设置<p>漏洞数。</p>
+ * @method string getMachineIp() 获取<p>主机IP。</p>
+ * @method void setMachineIp(string $MachineIp) 设置<p>主机IP。</p>
+ * @method boolean getIsProVersion() 获取<p>是否是专业版。</p><li>true： 是</li><li>false：否</li>
+ * @method void setIsProVersion(boolean $IsProVersion) 设置<p>是否是专业版。</p><li>true： 是</li><li>false：否</li>
+ * @method string getMachineWanIp() 获取<p>主机外网IP。</p>
+ * @method void setMachineWanIp(string $MachineWanIp) 设置<p>主机外网IP。</p>
+ * @method string getPayMode() 获取<p>主机状态。</p><li>POSTPAY: 表示后付费，即按量计费  </li><li>PREPAY: 表示预付费，即包年包月</li>
+ * @method void setPayMode(string $PayMode) 设置<p>主机状态。</p><li>POSTPAY: 表示后付费，即按量计费  </li><li>PREPAY: 表示预付费，即包年包月</li>
+ * @method integer getMalwareNum() 获取<p>木马数。</p>
+ * @method void setMalwareNum(integer $MalwareNum) 设置<p>木马数。</p>
+ * @method array getTag() 获取<p>标签信息</p>
+ * @method void setTag(array $Tag) 设置<p>标签信息</p>
+ * @method integer getBaselineNum() 获取<p>基线风险数。</p>
+ * @method void setBaselineNum(integer $BaselineNum) 设置<p>基线风险数。</p>
+ * @method integer getCyberAttackNum() 获取<p>网络风险数。</p>
+ * @method void setCyberAttackNum(integer $CyberAttackNum) 设置<p>网络风险数。</p>
+ * @method string getSecurityStatus() 获取<p>风险状态。</p><li>SAFE：安全</li><li>RISK：风险</li><li>UNKNOWN：未知</li>
+ * @method void setSecurityStatus(string $SecurityStatus) 设置<p>风险状态。</p><li>SAFE：安全</li><li>RISK：风险</li><li>UNKNOWN：未知</li>
+ * @method integer getInvasionNum() 获取<p>入侵事件数</p>
+ * @method void setInvasionNum(integer $InvasionNum) 设置<p>入侵事件数</p>
+ * @method RegionInfo getRegionInfo() 获取<p>地域信息</p>
+ * @method void setRegionInfo(RegionInfo $RegionInfo) 设置<p>地域信息</p>
+ * @method string getInstanceState() 获取<p>实例状态 TERMINATED_PRO_VERSION 已销毁</p>
+ * @method void setInstanceState(string $InstanceState) 设置<p>实例状态 TERMINATED_PRO_VERSION 已销毁</p>
+ * @method integer getLicenseStatus() 获取<p>防篡改 授权状态 1 授权 0 未授权</p>
+ * @method void setLicenseStatus(integer $LicenseStatus) 设置<p>防篡改 授权状态 1 授权 0 未授权</p>
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
+ * @method integer getHasAssetScan() 获取<p>是否有资产扫描接口，0无，1有</p>
+ * @method void setHasAssetScan(integer $HasAssetScan) 设置<p>是否有资产扫描接口，0无，1有</p>
+ * @method string getMachineType() 获取<p>机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区</p>
+ * @method void setMachineType(string $MachineType) 设置<p>机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区</p>
+ * @method string getKernelVersion() 获取<p>内核版本</p>
+ * @method void setKernelVersion(string $KernelVersion) 设置<p>内核版本</p>
+ * @method string getProtectType() 获取<p>防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版</p>
+ * @method void setProtectType(string $ProtectType) 设置<p>防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版</p>
+ * @method array getCloudTags() 获取<p>云标签信息</p>
+ * @method void setCloudTags(array $CloudTags) 设置<p>云标签信息</p>
+ * @method integer getIsAddedOnTheFifteen() 获取<p>是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机</p>
+ * @method void setIsAddedOnTheFifteen(integer $IsAddedOnTheFifteen) 设置<p>是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机</p>
+ * @method string getIpList() 获取<p>主机ip列表</p>
+ * @method void setIpList(string $IpList) 设置<p>主机ip列表</p>
+ * @method string getVpcId() 获取<p>所属网络</p>
+ * @method void setVpcId(string $VpcId) 设置<p>所属网络</p>
+ * @method MachineExtraInfo getMachineExtraInfo() 获取<p>附加信息</p>
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置<p>附加信息</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getRemark() 获取<p>备注信息</p>
+ * @method void setRemark(string $Remark) 设置<p>备注信息</p>
+ * @method string getAgentVersion() 获取<p>主机安全agent版本</p>
+ * @method void setAgentVersion(string $AgentVersion) 设置<p>主机安全agent版本</p>
+ * @method integer getAppId() 获取<p>机器对应APPID</p>
+ * @method void setAppId(integer $AppId) 设置<p>机器对应APPID</p>
+ * @method string getCSIPProtectType() 获取<p>安全中心付费版本</p>
+ * @method void setCSIPProtectType(string $CSIPProtectType) 设置<p>安全中心付费版本</p>
  */
 class Machine extends AbstractModel
 {
     /**
-     * @var string 主机名称。
+     * @var string <p>主机名称。</p>
      */
     public $MachineName;
 
     /**
-     * @var string 主机系统。
+     * @var string <p>主机系统。</p>
      */
     public $MachineOs;
 
     /**
-     * @var string 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+     * @var string <p>主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li></p>
      */
     public $MachineStatus;
 
     /**
-     * @var string ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+     * @var string <p>ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装</p>
      */
     public $AgentStatus;
 
     /**
-     * @var string RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+     * @var string <p>RUNNING 运行中; STOPED 已关机; EXPIRED 待回收</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string 主机安全Uuid，若客户端长时间不在线将返回空字符。
+     * @var string <p>主机安全Uuid，若客户端长时间不在线将返回空字符。</p>
      */
     public $Uuid;
 
     /**
-     * @var string CVM或BM机器唯一Uuid。
+     * @var string <p>CVM或BM机器唯一Uuid。</p>
      */
     public $Quuid;
 
     /**
-     * @var integer 漏洞数。
+     * @var integer <p>漏洞数。</p>
      */
     public $VulNum;
 
     /**
-     * @var string 主机IP。
+     * @var string <p>主机IP。</p>
      */
     public $MachineIp;
 
     /**
-     * @var boolean 是否是专业版。
-<li>true： 是</li>
-<li>false：否</li>
+     * @var boolean <p>是否是专业版。</p><li>true： 是</li><li>false：否</li>
      */
     public $IsProVersion;
 
     /**
-     * @var string 主机外网IP。
+     * @var string <p>主机外网IP。</p>
      */
     public $MachineWanIp;
 
     /**
-     * @var string 主机状态。
-<li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li>
+     * @var string <p>主机状态。</p><li>POSTPAY: 表示后付费，即按量计费  </li><li>PREPAY: 表示预付费，即包年包月</li>
      */
     public $PayMode;
 
     /**
-     * @var integer 木马数。
+     * @var integer <p>木马数。</p>
      */
     public $MalwareNum;
 
     /**
-     * @var array 标签信息
+     * @var array <p>标签信息</p>
      */
     public $Tag;
 
     /**
-     * @var integer 基线风险数。
+     * @var integer <p>基线风险数。</p>
      */
     public $BaselineNum;
 
     /**
-     * @var integer 网络风险数。
+     * @var integer <p>网络风险数。</p>
      */
     public $CyberAttackNum;
 
     /**
-     * @var string 风险状态。
-<li>SAFE：安全</li>
-<li>RISK：风险</li>
-<li>UNKNOWN：未知</li>
+     * @var string <p>风险状态。</p><li>SAFE：安全</li><li>RISK：风险</li><li>UNKNOWN：未知</li>
      */
     public $SecurityStatus;
 
     /**
-     * @var integer 入侵事件数
+     * @var integer <p>入侵事件数</p>
      */
     public $InvasionNum;
 
     /**
-     * @var RegionInfo 地域信息
+     * @var RegionInfo <p>地域信息</p>
      */
     public $RegionInfo;
 
     /**
-     * @var string 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * @var string <p>实例状态 TERMINATED_PRO_VERSION 已销毁</p>
      */
     public $InstanceState;
 
     /**
-     * @var integer 防篡改 授权状态 1 授权 0 未授权
+     * @var integer <p>防篡改 授权状态 1 授权 0 未授权</p>
      */
     public $LicenseStatus;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 是否有资产扫描接口，0无，1有
+     * @var integer <p>是否有资产扫描接口，0无，1有</p>
      */
     public $HasAssetScan;
 
     /**
-     * @var string 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     * @var string <p>机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区</p>
      */
     public $MachineType;
 
     /**
-     * @var string 内核版本
+     * @var string <p>内核版本</p>
      */
     public $KernelVersion;
 
     /**
-     * @var string 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
+     * @var string <p>防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版</p>
      */
     public $ProtectType;
 
     /**
-     * @var array 云标签信息
+     * @var array <p>云标签信息</p>
      */
     public $CloudTags;
 
     /**
-     * @var integer 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+     * @var integer <p>是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机</p>
      */
     public $IsAddedOnTheFifteen;
 
     /**
-     * @var string 主机ip列表
+     * @var string <p>主机ip列表</p>
      */
     public $IpList;
 
     /**
-     * @var string 所属网络
+     * @var string <p>所属网络</p>
      */
     public $VpcId;
 
     /**
-     * @var MachineExtraInfo 附加信息
+     * @var MachineExtraInfo <p>附加信息</p>
      */
     public $MachineExtraInfo;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 备注信息
+     * @var string <p>备注信息</p>
      */
     public $Remark;
 
     /**
-     * @var string 主机安全agent版本
+     * @var string <p>主机安全agent版本</p>
      */
     public $AgentVersion;
 
     /**
-     * @param string $MachineName 主机名称。
-     * @param string $MachineOs 主机系统。
-     * @param string $MachineStatus 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
-     * @param string $AgentStatus ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
-     * @param string $InstanceStatus RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
-     * @param string $Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
-     * @param string $Quuid CVM或BM机器唯一Uuid。
-     * @param integer $VulNum 漏洞数。
-     * @param string $MachineIp 主机IP。
-     * @param boolean $IsProVersion 是否是专业版。
-<li>true： 是</li>
-<li>false：否</li>
-     * @param string $MachineWanIp 主机外网IP。
-     * @param string $PayMode 主机状态。
-<li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li>
-     * @param integer $MalwareNum 木马数。
-     * @param array $Tag 标签信息
-     * @param integer $BaselineNum 基线风险数。
-     * @param integer $CyberAttackNum 网络风险数。
-     * @param string $SecurityStatus 风险状态。
-<li>SAFE：安全</li>
-<li>RISK：风险</li>
-<li>UNKNOWN：未知</li>
-     * @param integer $InvasionNum 入侵事件数
-     * @param RegionInfo $RegionInfo 地域信息
-     * @param string $InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
-     * @param integer $LicenseStatus 防篡改 授权状态 1 授权 0 未授权
-     * @param integer $ProjectId 项目ID
-     * @param integer $HasAssetScan 是否有资产扫描接口，0无，1有
-     * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
-     * @param string $KernelVersion 内核版本
-     * @param string $ProtectType 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
-     * @param array $CloudTags 云标签信息
-     * @param integer $IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-     * @param string $IpList 主机ip列表
-     * @param string $VpcId 所属网络
-     * @param MachineExtraInfo $MachineExtraInfo 附加信息
-     * @param string $InstanceId 实例ID
-     * @param string $Remark 备注信息
-     * @param string $AgentVersion 主机安全agent版本
+     * @var integer <p>机器对应APPID</p>
+     */
+    public $AppId;
+
+    /**
+     * @var string <p>安全中心付费版本</p>
+     */
+    public $CSIPProtectType;
+
+    /**
+     * @param string $MachineName <p>主机名称。</p>
+     * @param string $MachineOs <p>主机系统。</p>
+     * @param string $MachineStatus <p>主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li></p>
+     * @param string $AgentStatus <p>ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装</p>
+     * @param string $InstanceStatus <p>RUNNING 运行中; STOPED 已关机; EXPIRED 待回收</p>
+     * @param string $Uuid <p>主机安全Uuid，若客户端长时间不在线将返回空字符。</p>
+     * @param string $Quuid <p>CVM或BM机器唯一Uuid。</p>
+     * @param integer $VulNum <p>漏洞数。</p>
+     * @param string $MachineIp <p>主机IP。</p>
+     * @param boolean $IsProVersion <p>是否是专业版。</p><li>true： 是</li><li>false：否</li>
+     * @param string $MachineWanIp <p>主机外网IP。</p>
+     * @param string $PayMode <p>主机状态。</p><li>POSTPAY: 表示后付费，即按量计费  </li><li>PREPAY: 表示预付费，即包年包月</li>
+     * @param integer $MalwareNum <p>木马数。</p>
+     * @param array $Tag <p>标签信息</p>
+     * @param integer $BaselineNum <p>基线风险数。</p>
+     * @param integer $CyberAttackNum <p>网络风险数。</p>
+     * @param string $SecurityStatus <p>风险状态。</p><li>SAFE：安全</li><li>RISK：风险</li><li>UNKNOWN：未知</li>
+     * @param integer $InvasionNum <p>入侵事件数</p>
+     * @param RegionInfo $RegionInfo <p>地域信息</p>
+     * @param string $InstanceState <p>实例状态 TERMINATED_PRO_VERSION 已销毁</p>
+     * @param integer $LicenseStatus <p>防篡改 授权状态 1 授权 0 未授权</p>
+     * @param integer $ProjectId <p>项目ID</p>
+     * @param integer $HasAssetScan <p>是否有资产扫描接口，0无，1有</p>
+     * @param string $MachineType <p>机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区</p>
+     * @param string $KernelVersion <p>内核版本</p>
+     * @param string $ProtectType <p>防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版</p>
+     * @param array $CloudTags <p>云标签信息</p>
+     * @param integer $IsAddedOnTheFifteen <p>是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机</p>
+     * @param string $IpList <p>主机ip列表</p>
+     * @param string $VpcId <p>所属网络</p>
+     * @param MachineExtraInfo $MachineExtraInfo <p>附加信息</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $Remark <p>备注信息</p>
+     * @param string $AgentVersion <p>主机安全agent版本</p>
+     * @param integer $AppId <p>机器对应APPID</p>
+     * @param string $CSIPProtectType <p>安全中心付费版本</p>
      */
     function __construct()
     {
@@ -484,6 +472,14 @@ class Machine extends AbstractModel
 
         if (array_key_exists("AgentVersion",$param) and $param["AgentVersion"] !== null) {
             $this->AgentVersion = $param["AgentVersion"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("CSIPProtectType",$param) and $param["CSIPProtectType"] !== null) {
+            $this->CSIPProtectType = $param["CSIPProtectType"];
         }
     }
 }

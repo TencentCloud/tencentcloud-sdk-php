@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 获取弹性qps的默认相关值
  *
- * @method integer getElasticBillingDefault() 获取弹性qps默认值
- * @method void setElasticBillingDefault(integer $ElasticBillingDefault) 设置弹性qps默认值
- * @method integer getElasticBillingMin() 获取弹性qps最小值
- * @method void setElasticBillingMin(integer $ElasticBillingMin) 设置弹性qps最小值
- * @method integer getElasticBillingMax() 获取弹性qps最大值
- * @method void setElasticBillingMax(integer $ElasticBillingMax) 设置弹性qps最大值
- * @method integer getQPSExtendMax() 获取业务扩展包最大qps
- * @method void setQPSExtendMax(integer $QPSExtendMax) 设置业务扩展包最大qps
- * @method integer getQPSExtendIntlMax() 获取境外业务扩展包最大qps
- * @method void setQPSExtendIntlMax(integer $QPSExtendIntlMax) 设置境外业务扩展包最大qps
+ * @method integer getElasticBillingDefault() 获取<p>弹性qps默认值</p>
+ * @method void setElasticBillingDefault(integer $ElasticBillingDefault) 设置<p>弹性qps默认值</p>
+ * @method integer getElasticBillingMin() 获取<p>弹性qps最小值</p>
+ * @method void setElasticBillingMin(integer $ElasticBillingMin) 设置<p>弹性qps最小值</p>
+ * @method integer getElasticBillingMax() 获取<p>弹性qps最大值</p>
+ * @method void setElasticBillingMax(integer $ElasticBillingMax) 设置<p>弹性qps最大值</p>
+ * @method integer getQPSExtendMax() 获取<p>业务扩展包最大qps</p>
+ * @method void setQPSExtendMax(integer $QPSExtendMax) 设置<p>业务扩展包最大qps</p>
+ * @method integer getQPSExtendIntlMax() 获取<p>境外业务扩展包最大qps</p>
+ * @method void setQPSExtendIntlMax(integer $QPSExtendIntlMax) 设置<p>境外业务扩展包最大qps</p>
+ * @method float getElasticPrepaidRatio() 获取<p>预付费/后付费QPS扩容比</p>
+ * @method void setElasticPrepaidRatio(float $ElasticPrepaidRatio) 设置<p>预付费/后付费QPS扩容比</p>
  */
 class QpsData extends AbstractModel
 {
     /**
-     * @var integer 弹性qps默认值
+     * @var integer <p>弹性qps默认值</p>
      */
     public $ElasticBillingDefault;
 
     /**
-     * @var integer 弹性qps最小值
+     * @var integer <p>弹性qps最小值</p>
      */
     public $ElasticBillingMin;
 
     /**
-     * @var integer 弹性qps最大值
+     * @var integer <p>弹性qps最大值</p>
      */
     public $ElasticBillingMax;
 
     /**
-     * @var integer 业务扩展包最大qps
+     * @var integer <p>业务扩展包最大qps</p>
      */
     public $QPSExtendMax;
 
     /**
-     * @var integer 境外业务扩展包最大qps
+     * @var integer <p>境外业务扩展包最大qps</p>
      */
     public $QPSExtendIntlMax;
 
     /**
-     * @param integer $ElasticBillingDefault 弹性qps默认值
-     * @param integer $ElasticBillingMin 弹性qps最小值
-     * @param integer $ElasticBillingMax 弹性qps最大值
-     * @param integer $QPSExtendMax 业务扩展包最大qps
-     * @param integer $QPSExtendIntlMax 境外业务扩展包最大qps
+     * @var float <p>预付费/后付费QPS扩容比</p>
+     */
+    public $ElasticPrepaidRatio;
+
+    /**
+     * @param integer $ElasticBillingDefault <p>弹性qps默认值</p>
+     * @param integer $ElasticBillingMin <p>弹性qps最小值</p>
+     * @param integer $ElasticBillingMax <p>弹性qps最大值</p>
+     * @param integer $QPSExtendMax <p>业务扩展包最大qps</p>
+     * @param integer $QPSExtendIntlMax <p>境外业务扩展包最大qps</p>
+     * @param float $ElasticPrepaidRatio <p>预付费/后付费QPS扩容比</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class QpsData extends AbstractModel
 
         if (array_key_exists("QPSExtendIntlMax",$param) and $param["QPSExtendIntlMax"] !== null) {
             $this->QPSExtendIntlMax = $param["QPSExtendIntlMax"];
+        }
+
+        if (array_key_exists("ElasticPrepaidRatio",$param) and $param["ElasticPrepaidRatio"] !== null) {
+            $this->ElasticPrepaidRatio = $param["ElasticPrepaidRatio"];
         }
     }
 }

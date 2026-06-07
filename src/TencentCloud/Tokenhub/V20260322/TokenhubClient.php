@@ -36,6 +36,9 @@ use TencentCloud\Tokenhub\V20260322\Models as Models;
  * @method Models\DescribeApiKeyListResponse DescribeApiKeyList(Models\DescribeApiKeyListRequest $req) 查询 API 密钥列表。
 
 查询当前用户的 API 密钥列表，密钥值脱敏展示。支持分页、过滤和排序。
+ * @method Models\DescribeModelListResponse DescribeModelList(Models\DescribeModelListRequest $req) 查询模型列表。
+
+支持按模型 ID、模型名称、模型能力等条件筛选，支持分页和排序。
  * @method Models\DescribeTokenPlanResponse DescribeTokenPlan(Models\DescribeTokenPlanRequest $req) 查询 TokenPlan 套餐详情。
 
 返回套餐基本信息及额度中心主额度包余量。

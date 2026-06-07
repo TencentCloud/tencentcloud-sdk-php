@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyMachineAutoClearConfig请求参数结构体
+ * OpenClsService请求参数结构体
  *
- * @method integer getClearRule() 获取<p>清理规则时间, 0 表示关闭, 单位为天, 最大为 30天</p>
- * @method void setClearRule(integer $ClearRule) 设置<p>清理规则时间, 0 表示关闭, 单位为天, 最大为 30天</p>
+
  */
-class ModifyMachineAutoClearConfigRequest extends AbstractModel
+class OpenClsServiceRequest extends AbstractModel
 {
-    /**
-     * @var integer <p>清理规则时间, 0 表示关闭, 单位为天, 最大为 30天</p>
-     */
-    public $ClearRule;
+
 
     /**
-     * @param integer $ClearRule <p>清理规则时间, 0 表示关闭, 单位为天, 最大为 30天</p>
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class ModifyMachineAutoClearConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClearRule",$param) and $param["ClearRule"] !== null) {
-            $this->ClearRule = $param["ClearRule"];
-        }
+
     }
 }

@@ -20,15 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchClusterZone返回参数结构体
  *
- * @method integer getFlowId() 获取异步FlowId
- * @method void setFlowId(integer $FlowId) 设置异步FlowId
+ * @method integer getTaskId() 获取<p>任务id</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>任务id</p>
+ * @method integer getFlowId() 获取<p>异步FlowId</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>异步FlowId</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SwitchClusterZoneResponse extends AbstractModel
 {
     /**
-     * @var integer 异步FlowId
+     * @var integer <p>任务id</p>
+     */
+    public $TaskId;
+
+    /**
+     * @var integer <p>异步FlowId</p>
      */
     public $FlowId;
 
@@ -38,7 +45,8 @@ class SwitchClusterZoneResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步FlowId
+     * @param integer $TaskId <p>任务id</p>
+     * @param integer $FlowId <p>异步FlowId</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,6 +62,10 @@ class SwitchClusterZoneResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
         }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
  * @method string getAPIKey() 获取<p>API Key</p>
  * @method void setAPIKey(string $APIKey) 设置<p>API Key</p>
+ * @method array getAPIKeys() 获取<p>API Key</p>
+ * @method void setAPIKeys(array $APIKeys) 设置<p>API Key</p>
  */
 class DescribeAigcUsageDataRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeAigcUsageDataRequest extends AbstractModel
     public $APIKey;
 
     /**
+     * @var array <p>API Key</p>
+     */
+    public $APIKeys;
+
+    /**
      * @param string $StartTime <p>起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#52">ISO 日期格式</a>。</p>
      * @param string $EndTime <p>结束日期，需大于等于起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#52">ISO 日期格式</a>。</p>
      * @param string $AigcType <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul>
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      * @param string $APIKey <p>API Key</p>
+     * @param array $APIKeys <p>API Key</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeAigcUsageDataRequest extends AbstractModel
 
         if (array_key_exists("APIKey",$param) and $param["APIKey"] !== null) {
             $this->APIKey = $param["APIKey"];
+        }
+
+        if (array_key_exists("APIKeys",$param) and $param["APIKeys"] !== null) {
+            $this->APIKeys = $param["APIKeys"];
         }
     }
 }

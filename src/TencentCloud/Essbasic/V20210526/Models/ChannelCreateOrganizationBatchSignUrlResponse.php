@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateOrganizationBatchSignUrl返回参数结构体
  *
- * @method string getSignUrl() 获取批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	
- * @method void setSignUrl(string $SignUrl) 设置批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	
- * @method integer getExpiredTime() 获取链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
- * @method void setExpiredTime(integer $ExpiredTime) 设置链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+ * @method string getSignUrl() 获取<p>批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。</p>
+ * @method void setSignUrl(string $SignUrl) 设置<p>批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。</p>
+ * @method integer getExpiredTime() 获取<p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
+ * @method void setExpiredTime(integer $ExpiredTime) 设置<p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelCreateOrganizationBatchSignUrlResponse extends AbstractModel
 {
     /**
-     * @var string 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	
+     * @var string <p>批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。</p>
      */
     public $SignUrl;
 
     /**
-     * @var integer 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+     * @var integer <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
      */
     public $ExpiredTime;
 
@@ -45,8 +45,8 @@ class ChannelCreateOrganizationBatchSignUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SignUrl 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	
-     * @param integer $ExpiredTime 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+     * @param string $SignUrl <p>批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。</p>
+     * @param integer $ExpiredTime <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchClusterZone请求参数结构体
  *
- * @method string getClusterId() 获取集群Id
- * @method void setClusterId(string $ClusterId) 设置集群Id
- * @method string getOldZone() 获取当前可用区
- * @method void setOldZone(string $OldZone) 设置当前可用区
- * @method string getNewZone() 获取要切换到的可用区
- * @method void setNewZone(string $NewZone) 设置要切换到的可用区
- * @method string getIsInMaintainPeriod() 获取维护期间执行-yes,立即执行-no
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) 设置维护期间执行-yes,立即执行-no
+ * @method string getClusterId() 获取<p>集群Id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群Id</p>
+ * @method string getOldZone() 获取<p>当前可用区</p>
+ * @method void setOldZone(string $OldZone) 设置<p>当前可用区</p>
+ * @method string getNewZone() 获取<p>要切换到的可用区</p>
+ * @method void setNewZone(string $NewZone) 设置<p>要切换到的可用区</p>
+ * @method string getIsInMaintainPeriod() 获取<p>维护期间执行-yes,立即执行-no</p>
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) 设置<p>维护期间执行-yes,立即执行-no</p>
  */
 class SwitchClusterZoneRequest extends AbstractModel
 {
     /**
-     * @var string 集群Id
+     * @var string <p>集群Id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 当前可用区
+     * @var string <p>当前可用区</p>
      */
     public $OldZone;
 
     /**
-     * @var string 要切换到的可用区
+     * @var string <p>要切换到的可用区</p>
      */
     public $NewZone;
 
     /**
-     * @var string 维护期间执行-yes,立即执行-no
+     * @var string <p>维护期间执行-yes,立即执行-no</p>
      */
     public $IsInMaintainPeriod;
 
     /**
-     * @param string $ClusterId 集群Id
-     * @param string $OldZone 当前可用区
-     * @param string $NewZone 要切换到的可用区
-     * @param string $IsInMaintainPeriod 维护期间执行-yes,立即执行-no
+     * @param string $ClusterId <p>集群Id</p>
+     * @param string $OldZone <p>当前可用区</p>
+     * @param string $NewZone <p>要切换到的可用区</p>
+     * @param string $IsInMaintainPeriod <p>维护期间执行-yes,立即执行-no</p>
      */
     function __construct()
     {

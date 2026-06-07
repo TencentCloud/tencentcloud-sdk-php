@@ -27,34 +27,34 @@ use TencentCloud\Common\AbstractModel;
 * 同一个Filter存在多个Values，Values值数量最多不能超过5个。
 
  *
- * @method string getName() 获取过滤键的名称。
- * @method void setName(string $Name) 设置过滤键的名称。
- * @method array getValues() 获取一个或者多个过滤值。
- * @method void setValues(array $Values) 设置一个或者多个过滤值。
- * @method boolean getExactMatch() 获取模糊搜索
- * @method void setExactMatch(boolean $ExactMatch) 设置模糊搜索
+ * @method string getName() 获取<p>过滤键的名称。</p>
+ * @method void setName(string $Name) 设置<p>过滤键的名称。</p>
+ * @method array getValues() 获取<p>一个或者多个过滤值。</p>
+ * @method void setValues(array $Values) 设置<p>一个或者多个过滤值。</p>
+ * @method boolean getExactMatch() 获取<p>模糊搜索</p>
+ * @method void setExactMatch(boolean $ExactMatch) 设置<p>模糊搜索</p>
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string 过滤键的名称。
+     * @var string <p>过滤键的名称。</p>
      */
     public $Name;
 
     /**
-     * @var array 一个或者多个过滤值。
+     * @var array <p>一个或者多个过滤值。</p>
      */
     public $Values;
 
     /**
-     * @var boolean 模糊搜索
+     * @var boolean <p>模糊搜索</p>
      */
     public $ExactMatch;
 
     /**
-     * @param string $Name 过滤键的名称。
-     * @param array $Values 一个或者多个过滤值。
-     * @param boolean $ExactMatch 模糊搜索
+     * @param string $Name <p>过滤键的名称。</p>
+     * @param array $Values <p>一个或者多个过滤值。</p>
+     * @param boolean $ExactMatch <p>模糊搜索</p>
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBanMode请求参数结构体
  *
- * @method string getMode() 获取阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
- * @method void setMode(string $Mode) 设置阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
- * @method integer getTtl() 获取阻断时间，用于标准阻断模式
- * @method void setTtl(integer $Ttl) 设置阻断时间，用于标准阻断模式
+ * @method string getMode() 获取<p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
+ * @method void setMode(string $Mode) 设置<p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
+ * @method integer getTtl() 获取<p>阻断时间，用于标准阻断模式</p>
+ * @method void setTtl(integer $Ttl) 设置<p>阻断时间，用于标准阻断模式</p>
  */
 class ModifyBanModeRequest extends AbstractModel
 {
     /**
-     * @var string 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
+     * @var string <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
      */
     public $Mode;
 
     /**
-     * @var integer 阻断时间，用于标准阻断模式
+     * @var integer <p>阻断时间，用于标准阻断模式</p>
      */
     public $Ttl;
 
     /**
-     * @param string $Mode 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
-     * @param integer $Ttl 阻断时间，用于标准阻断模式
+     * @param string $Mode <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
+     * @param integer $Ttl <p>阻断时间，用于标准阻断模式</p>
      */
     function __construct()
     {

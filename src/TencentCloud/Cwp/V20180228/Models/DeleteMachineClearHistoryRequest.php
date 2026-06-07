@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteMachineClearHistory请求参数结构体
  *
- * @method array getIds() 获取需要删除的记录id值,最大长度100个
- * @method void setIds(array $Ids) 设置需要删除的记录id值,最大长度100个
+ * @method array getIds() 获取<p>需要删除的记录id值,最大长度100个</p>
+ * @method void setIds(array $Ids) 设置<p>需要删除的记录id值,最大长度100个</p>
  */
 class DeleteMachineClearHistoryRequest extends AbstractModel
 {
     /**
-     * @var array 需要删除的记录id值,最大长度100个
+     * @var array <p>需要删除的记录id值,最大长度100个</p>
      */
     public $Ids;
 
     /**
-     * @param array $Ids 需要删除的记录id值,最大长度100个
+     * @param array $Ids <p>需要删除的记录id值,最大长度100个</p>
      */
     function __construct()
     {

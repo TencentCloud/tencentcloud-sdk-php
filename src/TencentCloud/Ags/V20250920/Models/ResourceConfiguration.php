@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源配置
  *
- * @method string getCPU() 获取cpu 资源量
- * @method void setCPU(string $CPU) 设置cpu 资源量
- * @method string getMemory() 获取内存资源量
- * @method void setMemory(string $Memory) 设置内存资源量
+ * @method string getCPU() 获取<p>cpu 资源量</p>
+ * @method void setCPU(string $CPU) 设置<p>cpu 资源量</p>
+ * @method string getMemory() 获取<p>内存资源量</p>
+ * @method void setMemory(string $Memory) 设置<p>内存资源量</p>
  */
 class ResourceConfiguration extends AbstractModel
 {
     /**
-     * @var string cpu 资源量
+     * @var string <p>cpu 资源量</p>
      */
     public $CPU;
 
     /**
-     * @var string 内存资源量
+     * @var string <p>内存资源量</p>
      */
     public $Memory;
 
     /**
-     * @param string $CPU cpu 资源量
-     * @param string $Memory 内存资源量
+     * @param string $CPU <p>cpu 资源量</p>
+     * @param string $Memory <p>内存资源量</p>
      */
     function __construct()
     {

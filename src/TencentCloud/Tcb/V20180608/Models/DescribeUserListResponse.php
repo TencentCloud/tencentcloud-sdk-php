@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserList返回参数结构体
  *
- * @method DescribeUserListResp getData() 获取结果返回
- * @method void setData(DescribeUserListResp $Data) 设置结果返回
+ * @method DescribeUserListResp getData() 获取<p>结果返回</p>
+ * @method void setData(DescribeUserListResp $Data) 设置<p>结果返回</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUserListResponse extends AbstractModel
 {
     /**
-     * @var DescribeUserListResp 结果返回
+     * @var DescribeUserListResp <p>结果返回</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeUserListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DescribeUserListResp $Data 结果返回
+     * @param DescribeUserListResp $Data <p>结果返回</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

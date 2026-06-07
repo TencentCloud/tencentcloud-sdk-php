@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBanStatus返回参数结构体
  *
- * @method integer getStatus() 获取(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
- * @method void setStatus(integer $Status) 设置(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
- * @method boolean getShowTips() 获取是否弹窗提示信息 false: 关闭，true: 开启
- * @method void setShowTips(boolean $ShowTips) 设置是否弹窗提示信息 false: 关闭，true: 开启
- * @method boolean getOpenSmartMode() 获取是否开启智能过白模式
- * @method void setOpenSmartMode(boolean $OpenSmartMode) 设置是否开启智能过白模式
- * @method boolean getBanBlackIp() 获取是否开启情报IP阻断
- * @method void setBanBlackIp(boolean $BanBlackIp) 设置是否开启情报IP阻断
- * @method boolean getBanVulIp() 获取是否开启漏洞IP阻断
- * @method void setBanVulIp(boolean $BanVulIp) 设置是否开启漏洞IP阻断
- * @method boolean getBanByRule() 获取是否开启规则阻断
- * @method void setBanByRule(boolean $BanByRule) 设置是否开启规则阻断
+ * @method integer getStatus() 获取<p>(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)</p>
+ * @method void setStatus(integer $Status) 设置<p>(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)</p>
+ * @method boolean getShowTips() 获取<p>是否弹窗提示信息 false: 关闭，true: 开启</p>
+ * @method void setShowTips(boolean $ShowTips) 设置<p>是否弹窗提示信息 false: 关闭，true: 开启</p>
+ * @method boolean getOpenSmartMode() 获取<p>是否开启智能过白模式</p>
+ * @method void setOpenSmartMode(boolean $OpenSmartMode) 设置<p>是否开启智能过白模式</p>
+ * @method boolean getBanBlackIp() 获取<p>是否开启情报IP阻断</p>
+ * @method void setBanBlackIp(boolean $BanBlackIp) 设置<p>是否开启情报IP阻断</p>
+ * @method boolean getBanVulIp() 获取<p>是否开启漏洞IP阻断</p>
+ * @method void setBanVulIp(boolean $BanVulIp) 设置<p>是否开启漏洞IP阻断</p>
+ * @method boolean getBanByRule() 获取<p>是否开启规则阻断</p>
+ * @method void setBanByRule(boolean $BanByRule) 设置<p>是否开启规则阻断</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBanStatusResponse extends AbstractModel
 {
     /**
-     * @var integer (已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
+     * @var integer <p>(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)</p>
      */
     public $Status;
 
     /**
-     * @var boolean 是否弹窗提示信息 false: 关闭，true: 开启
+     * @var boolean <p>是否弹窗提示信息 false: 关闭，true: 开启</p>
      */
     public $ShowTips;
 
     /**
-     * @var boolean 是否开启智能过白模式
+     * @var boolean <p>是否开启智能过白模式</p>
      */
     public $OpenSmartMode;
 
     /**
-     * @var boolean 是否开启情报IP阻断
+     * @var boolean <p>是否开启情报IP阻断</p>
      */
     public $BanBlackIp;
 
     /**
-     * @var boolean 是否开启漏洞IP阻断
+     * @var boolean <p>是否开启漏洞IP阻断</p>
      */
     public $BanVulIp;
 
     /**
-     * @var boolean 是否开启规则阻断
+     * @var boolean <p>是否开启规则阻断</p>
      */
     public $BanByRule;
 
@@ -73,12 +73,12 @@ class DescribeBanStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status (已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
-     * @param boolean $ShowTips 是否弹窗提示信息 false: 关闭，true: 开启
-     * @param boolean $OpenSmartMode 是否开启智能过白模式
-     * @param boolean $BanBlackIp 是否开启情报IP阻断
-     * @param boolean $BanVulIp 是否开启漏洞IP阻断
-     * @param boolean $BanByRule 是否开启规则阻断
+     * @param integer $Status <p>(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)</p>
+     * @param boolean $ShowTips <p>是否弹窗提示信息 false: 关闭，true: 开启</p>
+     * @param boolean $OpenSmartMode <p>是否开启智能过白模式</p>
+     * @param boolean $BanBlackIp <p>是否开启情报IP阻断</p>
+     * @param boolean $BanVulIp <p>是否开启漏洞IP阻断</p>
+     * @param boolean $BanByRule <p>是否开启规则阻断</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

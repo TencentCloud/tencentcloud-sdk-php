@@ -20,78 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 防火墙实例运行状态
  *
- * @method string getCfwInsId() 获取防火墙实例id
- * @method void setCfwInsId(string $CfwInsId) 设置防火墙实例id
- * @method string getFwType() 获取防火墙类型，nat：nat防火墙；ew：vpc间防火墙
- * @method void setFwType(string $FwType) 设置防火墙类型，nat：nat防火墙；ew：vpc间防火墙
- * @method string getRegion() 获取实例所属地域
- * @method void setRegion(string $Region) 设置实例所属地域
- * @method string getStatus() 获取实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
- * @method void setStatus(string $Status) 设置实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
- * @method string getEventTime() 获取事件时间
- * @method void setEventTime(string $EventTime) 设置事件时间
- * @method string getRecoverTime() 获取恢复时间
- * @method void setRecoverTime(string $RecoverTime) 设置恢复时间
- * @method string getCfwInsName() 获取实例名称
- * @method void setCfwInsName(string $CfwInsName) 设置实例名称
- * @method string getTrafficMode() 获取Normal: 正常模式
-OnlyRoute: 透明模式
- * @method void setTrafficMode(string $TrafficMode) 设置Normal: 正常模式
-OnlyRoute: 透明模式
+ * @method string getCfwInsId() 获取<p>防火墙实例id</p>
+ * @method void setCfwInsId(string $CfwInsId) 设置<p>防火墙实例id</p>
+ * @method string getFwType() 获取<p>防火墙类型，nat：nat防火墙；ew：vpc间防火墙</p>
+ * @method void setFwType(string $FwType) 设置<p>防火墙类型，nat：nat防火墙；ew：vpc间防火墙</p>
+ * @method string getRegion() 获取<p>实例所属地域</p>
+ * @method void setRegion(string $Region) 设置<p>实例所属地域</p>
+ * @method string getStatus() 获取<p>实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中；BypassTcDrop：丢包触发bypass中</p><p>枚举值：</p><ul><li>Running： 正常运行</li><li>BypassAutoFix： 自动bypass已修复</li><li>Updating： 实例升级中</li><li>Expand： 实例扩容中</li><li>BypassManual： 手动触发bypass中</li><li>BypassAuto： 自动触发bypass中</li><li>BypassTcDrop： 丢包触发bypass中</li></ul>
+ * @method void setStatus(string $Status) 设置<p>实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中；BypassTcDrop：丢包触发bypass中</p><p>枚举值：</p><ul><li>Running： 正常运行</li><li>BypassAutoFix： 自动bypass已修复</li><li>Updating： 实例升级中</li><li>Expand： 实例扩容中</li><li>BypassManual： 手动触发bypass中</li><li>BypassAuto： 自动触发bypass中</li><li>BypassTcDrop： 丢包触发bypass中</li></ul>
+ * @method string getEventTime() 获取<p>事件时间</p>
+ * @method void setEventTime(string $EventTime) 设置<p>事件时间</p>
+ * @method string getRecoverTime() 获取<p>恢复时间</p>
+ * @method void setRecoverTime(string $RecoverTime) 设置<p>恢复时间</p>
+ * @method string getCfwInsName() 获取<p>实例名称</p>
+ * @method void setCfwInsName(string $CfwInsName) 设置<p>实例名称</p>
+ * @method string getTrafficMode() 获取<p>Normal: 正常模式<br>OnlyRoute: 透明模式</p>
+ * @method void setTrafficMode(string $TrafficMode) 设置<p>Normal: 正常模式<br>OnlyRoute: 透明模式</p>
  */
 class CfwInsStatus extends AbstractModel
 {
     /**
-     * @var string 防火墙实例id
+     * @var string <p>防火墙实例id</p>
      */
     public $CfwInsId;
 
     /**
-     * @var string 防火墙类型，nat：nat防火墙；ew：vpc间防火墙
+     * @var string <p>防火墙类型，nat：nat防火墙；ew：vpc间防火墙</p>
      */
     public $FwType;
 
     /**
-     * @var string 实例所属地域
+     * @var string <p>实例所属地域</p>
      */
     public $Region;
 
     /**
-     * @var string 实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
+     * @var string <p>实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中；BypassTcDrop：丢包触发bypass中</p><p>枚举值：</p><ul><li>Running： 正常运行</li><li>BypassAutoFix： 自动bypass已修复</li><li>Updating： 实例升级中</li><li>Expand： 实例扩容中</li><li>BypassManual： 手动触发bypass中</li><li>BypassAuto： 自动触发bypass中</li><li>BypassTcDrop： 丢包触发bypass中</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 事件时间
+     * @var string <p>事件时间</p>
      */
     public $EventTime;
 
     /**
-     * @var string 恢复时间
+     * @var string <p>恢复时间</p>
      */
     public $RecoverTime;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $CfwInsName;
 
     /**
-     * @var string Normal: 正常模式
-OnlyRoute: 透明模式
+     * @var string <p>Normal: 正常模式<br>OnlyRoute: 透明模式</p>
      */
     public $TrafficMode;
 
     /**
-     * @param string $CfwInsId 防火墙实例id
-     * @param string $FwType 防火墙类型，nat：nat防火墙；ew：vpc间防火墙
-     * @param string $Region 实例所属地域
-     * @param string $Status 实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
-     * @param string $EventTime 事件时间
-     * @param string $RecoverTime 恢复时间
-     * @param string $CfwInsName 实例名称
-     * @param string $TrafficMode Normal: 正常模式
-OnlyRoute: 透明模式
+     * @param string $CfwInsId <p>防火墙实例id</p>
+     * @param string $FwType <p>防火墙类型，nat：nat防火墙；ew：vpc间防火墙</p>
+     * @param string $Region <p>实例所属地域</p>
+     * @param string $Status <p>实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中；BypassTcDrop：丢包触发bypass中</p><p>枚举值：</p><ul><li>Running： 正常运行</li><li>BypassAutoFix： 自动bypass已修复</li><li>Updating： 实例升级中</li><li>Expand： 实例扩容中</li><li>BypassManual： 手动触发bypass中</li><li>BypassAuto： 自动触发bypass中</li><li>BypassTcDrop： 丢包触发bypass中</li></ul>
+     * @param string $EventTime <p>事件时间</p>
+     * @param string $RecoverTime <p>恢复时间</p>
+     * @param string $CfwInsName <p>实例名称</p>
+     * @param string $TrafficMode <p>Normal: 正常模式<br>OnlyRoute: 透明模式</p>
      */
     function __construct()
     {

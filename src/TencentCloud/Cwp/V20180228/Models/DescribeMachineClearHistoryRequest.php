@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachineClearHistory请求参数结构体
  *
- * @method array getFilters() 获取筛选条件
-多个条件筛选时 Keywords,TimeBetween,取交集
-<li> Keywords 实例名称/内网/公网IP</li>
-<li> TimeBetween 时间区间</li>
- * @method void setFilters(array $Filters) 设置筛选条件
-多个条件筛选时 Keywords,TimeBetween,取交集
-<li> Keywords 实例名称/内网/公网IP</li>
-<li> TimeBetween 时间区间</li>
- * @method integer getLimit() 获取限制条数,默认10 ,最大100
- * @method void setLimit(integer $Limit) 设置限制条数,默认10 ,最大100
- * @method integer getOffset() 获取偏移量,默认0
- * @method void setOffset(integer $Offset) 设置偏移量,默认0
- * @method string getOrder() 获取正序, ASC , 倒序 DESC , 默认ASC
- * @method void setOrder(string $Order) 设置正序, ASC , 倒序 DESC , 默认ASC
- * @method string getBy() 获取AgentLastOfflineTime 客户端最后离线时间
-AutoClearTime 清理时间
- * @method void setBy(string $By) 设置AgentLastOfflineTime 客户端最后离线时间
-AutoClearTime 清理时间
+ * @method array getFilters() 获取<p>筛选条件<br>多个条件筛选时 Keywords,TimeBetween,取交集</p><li> Keywords 实例名称/内网/公网IP</li><li> TimeBetween 时间区间</li>
+ * @method void setFilters(array $Filters) 设置<p>筛选条件<br>多个条件筛选时 Keywords,TimeBetween,取交集</p><li> Keywords 实例名称/内网/公网IP</li><li> TimeBetween 时间区间</li>
+ * @method integer getLimit() 获取<p>限制条数,默认10 ,最大100</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制条数,默认10 ,最大100</p>
+ * @method integer getOffset() 获取<p>偏移量,默认0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量,默认0</p>
+ * @method string getOrder() 获取<p>正序, ASC , 倒序 DESC , 默认ASC</p>
+ * @method void setOrder(string $Order) 设置<p>正序, ASC , 倒序 DESC , 默认ASC</p>
+ * @method string getBy() 获取<p>AgentLastOfflineTime 客户端最后离线时间<br>AutoClearTime 清理时间</p>
+ * @method void setBy(string $By) 设置<p>AgentLastOfflineTime 客户端最后离线时间<br>AutoClearTime 清理时间</p>
  */
 class DescribeMachineClearHistoryRequest extends AbstractModel
 {
     /**
-     * @var array 筛选条件
-多个条件筛选时 Keywords,TimeBetween,取交集
-<li> Keywords 实例名称/内网/公网IP</li>
-<li> TimeBetween 时间区间</li>
+     * @var array <p>筛选条件<br>多个条件筛选时 Keywords,TimeBetween,取交集</p><li> Keywords 实例名称/内网/公网IP</li><li> TimeBetween 时间区间</li>
      */
     public $Filters;
 
     /**
-     * @var integer 限制条数,默认10 ,最大100
+     * @var integer <p>限制条数,默认10 ,最大100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量,默认0
+     * @var integer <p>偏移量,默认0</p>
      */
     public $Offset;
 
     /**
-     * @var string 正序, ASC , 倒序 DESC , 默认ASC
+     * @var string <p>正序, ASC , 倒序 DESC , 默认ASC</p>
      */
     public $Order;
 
     /**
-     * @var string AgentLastOfflineTime 客户端最后离线时间
-AutoClearTime 清理时间
+     * @var string <p>AgentLastOfflineTime 客户端最后离线时间<br>AutoClearTime 清理时间</p>
      */
     public $By;
 
     /**
-     * @param array $Filters 筛选条件
-多个条件筛选时 Keywords,TimeBetween,取交集
-<li> Keywords 实例名称/内网/公网IP</li>
-<li> TimeBetween 时间区间</li>
-     * @param integer $Limit 限制条数,默认10 ,最大100
-     * @param integer $Offset 偏移量,默认0
-     * @param string $Order 正序, ASC , 倒序 DESC , 默认ASC
-     * @param string $By AgentLastOfflineTime 客户端最后离线时间
-AutoClearTime 清理时间
+     * @param array $Filters <p>筛选条件<br>多个条件筛选时 Keywords,TimeBetween,取交集</p><li> Keywords 实例名称/内网/公网IP</li><li> TimeBetween 时间区间</li>
+     * @param integer $Limit <p>限制条数,默认10 ,最大100</p>
+     * @param integer $Offset <p>偏移量,默认0</p>
+     * @param string $Order <p>正序, ASC , 倒序 DESC , 默认ASC</p>
+     * @param string $By <p>AgentLastOfflineTime 客户端最后离线时间<br>AutoClearTime 清理时间</p>
      */
     function __construct()
     {

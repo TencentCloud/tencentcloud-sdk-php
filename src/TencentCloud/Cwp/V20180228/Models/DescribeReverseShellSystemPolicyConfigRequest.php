@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReverseShellSystemPolicyConfig请求参数结构体
  *
-
+ * @method integer getProductType() 获取<p>产品类型 0-主机安全(默认) 1-安全中心</p>
+ * @method void setProductType(integer $ProductType) 设置<p>产品类型 0-主机安全(默认) 1-安全中心</p>
  */
 class DescribeReverseShellSystemPolicyConfigRequest extends AbstractModel
 {
-
+    /**
+     * @var integer <p>产品类型 0-主机安全(默认) 1-安全中心</p>
+     */
+    public $ProductType;
 
     /**
-
+     * @param integer $ProductType <p>产品类型 0-主机安全(默认) 1-安全中心</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeReverseShellSystemPolicyConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
+            $this->ProductType = $param["ProductType"];
+        }
     }
 }

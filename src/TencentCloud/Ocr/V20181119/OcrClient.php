@@ -292,9 +292,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\HandwritingEssayOCRResponse HandwritingEssayOCR(Models\HandwritingEssayOCRRequest $req) 本接口专为教育场景设计，可高精度识别中英文手写字符，智能分栏并按阅读顺序分割内容，自动过滤手写与印刷体混排干扰，精准返回词、行、段落及标题的文本与坐标信息。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\HmtResidentPermitOCRResponse HmtResidentPermitOCR(Models\HmtResidentPermitOCRRequest $req) 港澳台居住证OCR支持港澳台居住证正反面全字段内容检测识别功能，包括姓名、性别、出生日期、地址、身份证号、签发机关、有效期限、签发次数、通行证号码关键字段识别。可以应用于港澳台居住证信息识别场景，例如银行开户、用户注册等。
-
-默认接口请求频率限制：20次/秒。
  * @method Models\IDCardOCRResponse IDCardOCR(Models\IDCardOCRRequest $req) 本接口支持中国大陆居民二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限，识别准确度达到99%以上。
 
 另外，本接口还支持多种扩展能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备7种告警功能，如下表所示。

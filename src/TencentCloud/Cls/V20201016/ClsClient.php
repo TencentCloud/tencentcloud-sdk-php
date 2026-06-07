@@ -180,6 +180,8 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\DescribeWebCallbacksResponse DescribeWebCallbacks(Models\DescribeWebCallbacksRequest $req) 获取告警渠道回调配置列表。
  * @method Models\EstimateRebuildIndexTaskResponse EstimateRebuildIndexTask(Models\EstimateRebuildIndexTaskRequest $req) 预估重建索引任务
  * @method Models\GetAlarmLogResponse GetAlarmLog(Models\GetAlarmLogRequest $req) 本接口用于获取告警策略执行详情
+ * @method Models\GetClsServiceResponse GetClsService(Models\GetClsServiceRequest $req) 查询日志服务是否开通
+API 中 Region 填写任意一个地域均可，建议使用广州(ap-guangzhou)
  * @method Models\GetMetricLabelValuesResponse GetMetricLabelValues(Models\GetMetricLabelValuesRequest $req) 获取时序label values列表
  * @method Models\MergePartitionResponse MergePartition(Models\MergePartitionRequest $req) 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。
  * @method Models\ModifyAlarmResponse ModifyAlarm(Models\ModifyAlarmRequest $req) 本接口用于修改告警策略。需要至少修改一项有效内容。
@@ -219,6 +221,8 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 本接口用于修改日志或指标主题。
  * @method Models\ModifyWebCallbackResponse ModifyWebCallback(Models\ModifyWebCallbackRequest $req) 该接口用于修改告警渠道回调配置。
  * @method Models\OpenClawServiceResponse OpenClawService(Models\OpenClawServiceRequest $req) 本接口用于创建OpenClaw依赖的资源与索引
+ * @method Models\OpenClsServiceResponse OpenClsService(Models\OpenClsServiceRequest $req) 开通日志服务
+API 中 Region 填写任意一个地域均可开通所有地域的 CLS，建议使用广州(ap-guangzhou)
  * @method Models\OpenKafkaConsumerResponse OpenKafkaConsumer(Models\OpenKafkaConsumerRequest $req) 打开Kafka协议消费功能
  * @method Models\PreviewKafkaRechargeResponse PreviewKafkaRecharge(Models\PreviewKafkaRechargeRequest $req) 本接口用于预览Kafka数据订阅任务客户日志信息
  * @method Models\QueryMetricResponse QueryMetric(Models\QueryMetricRequest $req) 查询指定时刻指标的最新值。

@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserList请求参数结构体
  *
- * @method string getEnvId() 获取环境id
- * @method void setEnvId(string $EnvId) 设置环境id
- * @method integer getPageNo() 获取页码，从1开始，默认1
- * @method void setPageNo(integer $PageNo) 设置页码，从1开始，默认1
- * @method integer getPageSize() 获取每页数量，默认20，最大100
- * @method void setPageSize(integer $PageSize) 设置每页数量，默认20，最大100
- * @method string getName() 获取用户名，模糊查询
- * @method void setName(string $Name) 设置用户名，模糊查询
- * @method string getNickName() 获取用户昵称，模糊查询
- * @method void setNickName(string $NickName) 设置用户昵称，模糊查询
- * @method string getPhone() 获取手机号，模糊查询
- * @method void setPhone(string $Phone) 设置手机号，模糊查询
- * @method string getEmail() 获取邮箱，模糊查询
- * @method void setEmail(string $Email) 设置邮箱，模糊查询
+ * @method string getEnvId() 获取<p>环境id</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境id</p>
+ * @method integer getPageNo() 获取<p>页码，从1开始，默认1</p>
+ * @method void setPageNo(integer $PageNo) 设置<p>页码，从1开始，默认1</p>
+ * @method integer getPageSize() 获取<p>每页数量，默认20，最大100</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页数量，默认20，最大100</p>
+ * @method string getName() 获取<p>用户名，模糊查询</p>
+ * @method void setName(string $Name) 设置<p>用户名，模糊查询</p>
+ * @method string getNickName() 获取<p>用户昵称，模糊查询</p>
+ * @method void setNickName(string $NickName) 设置<p>用户昵称，模糊查询</p>
+ * @method string getPhone() 获取<p>手机号，模糊查询</p>
+ * @method void setPhone(string $Phone) 设置<p>手机号，模糊查询</p>
+ * @method string getEmail() 获取<p>邮箱，模糊查询</p>
+ * @method void setEmail(string $Email) 设置<p>邮箱，模糊查询</p>
+ * @method array getUidList() 获取<p>用户id列表，根据id过滤用户</p>
+ * @method void setUidList(array $UidList) 设置<p>用户id列表，根据id过滤用户</p>
  */
 class DescribeUserListRequest extends AbstractModel
 {
     /**
-     * @var string 环境id
+     * @var string <p>环境id</p>
      */
     public $EnvId;
 
     /**
-     * @var integer 页码，从1开始，默认1
+     * @var integer <p>页码，从1开始，默认1</p>
      */
     public $PageNo;
 
     /**
-     * @var integer 每页数量，默认20，最大100
+     * @var integer <p>每页数量，默认20，最大100</p>
      */
     public $PageSize;
 
     /**
-     * @var string 用户名，模糊查询
+     * @var string <p>用户名，模糊查询</p>
      */
     public $Name;
 
     /**
-     * @var string 用户昵称，模糊查询
+     * @var string <p>用户昵称，模糊查询</p>
      */
     public $NickName;
 
     /**
-     * @var string 手机号，模糊查询
+     * @var string <p>手机号，模糊查询</p>
      */
     public $Phone;
 
     /**
-     * @var string 邮箱，模糊查询
+     * @var string <p>邮箱，模糊查询</p>
      */
     public $Email;
 
     /**
-     * @param string $EnvId 环境id
-     * @param integer $PageNo 页码，从1开始，默认1
-     * @param integer $PageSize 每页数量，默认20，最大100
-     * @param string $Name 用户名，模糊查询
-     * @param string $NickName 用户昵称，模糊查询
-     * @param string $Phone 手机号，模糊查询
-     * @param string $Email 邮箱，模糊查询
+     * @var array <p>用户id列表，根据id过滤用户</p>
+     */
+    public $UidList;
+
+    /**
+     * @param string $EnvId <p>环境id</p>
+     * @param integer $PageNo <p>页码，从1开始，默认1</p>
+     * @param integer $PageSize <p>每页数量，默认20，最大100</p>
+     * @param string $Name <p>用户名，模糊查询</p>
+     * @param string $NickName <p>用户昵称，模糊查询</p>
+     * @param string $Phone <p>手机号，模糊查询</p>
+     * @param string $Email <p>邮箱，模糊查询</p>
+     * @param array $UidList <p>用户id列表，根据id过滤用户</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeUserListRequest extends AbstractModel
 
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {
             $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("UidList",$param) and $param["UidList"] !== null) {
+            $this->UidList = $param["UidList"];
         }
     }
 }

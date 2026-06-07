@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBanMode返回参数结构体
  *
- * @method string getMode() 获取阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
- * @method void setMode(string $Mode) 设置阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
- * @method StandardModeConfig getStandardModeConfig() 获取标准阻断模式的配置
- * @method void setStandardModeConfig(StandardModeConfig $StandardModeConfig) 设置标准阻断模式的配置
+ * @method string getMode() 获取<p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
+ * @method void setMode(string $Mode) 设置<p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
+ * @method StandardModeConfig getStandardModeConfig() 获取<p>标准阻断模式的配置</p>
+ * @method void setStandardModeConfig(StandardModeConfig $StandardModeConfig) 设置<p>标准阻断模式的配置</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBanModeResponse extends AbstractModel
 {
     /**
-     * @var string 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
+     * @var string <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
      */
     public $Mode;
 
     /**
-     * @var StandardModeConfig 标准阻断模式的配置
+     * @var StandardModeConfig <p>标准阻断模式的配置</p>
      */
     public $StandardModeConfig;
 
@@ -45,8 +45,8 @@ class DescribeBanModeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Mode 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
-     * @param StandardModeConfig $StandardModeConfig 标准阻断模式的配置
+     * @param string $Mode <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
+     * @param StandardModeConfig $StandardModeConfig <p>标准阻断模式的配置</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

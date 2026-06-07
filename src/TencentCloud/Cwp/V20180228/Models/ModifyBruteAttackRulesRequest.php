@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBruteAttackRules请求参数结构体
  *
- * @method array getRules() 获取暴力破解判断规则
- * @method void setRules(array $Rules) 设置暴力破解判断规则
+ * @method array getRules() 获取<p>暴力破解判断规则</p>
+ * @method void setRules(array $Rules) 设置<p>暴力破解判断规则</p>
  */
 class ModifyBruteAttackRulesRequest extends AbstractModel
 {
     /**
-     * @var array 暴力破解判断规则
+     * @var array <p>暴力破解判断规则</p>
      */
     public $Rules;
 
     /**
-     * @param array $Rules 暴力破解判断规则
+     * @param array $Rules <p>暴力破解判断规则</p>
      */
     function __construct()
     {

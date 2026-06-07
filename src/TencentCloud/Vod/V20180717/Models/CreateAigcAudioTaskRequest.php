@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcAudioTask请求参数结构体
  *
+ * @method integer getSubAppId() 获取<p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
  * @method string getModelName() 获取<p>模型名称。</p>
  * @method void setModelName(string $ModelName) 设置<p>模型名称。</p>
  * @method string getModelVersion() 获取<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p>
  * @method void setModelVersion(string $ModelVersion) 设置<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p>
- * @method string getSceneType() 获取<p>指定场景，目前支持sfx（音效）。</p>
- * @method void setSceneType(string $SceneType) 设置<p>指定场景，目前支持sfx（音效）。</p>
+ * @method string getSceneType() 获取<p>指定场景，目前支持sfx（音效）、music（音乐）。</p>
+ * @method void setSceneType(string $SceneType) 设置<p>指定场景，目前支持sfx（音效）、music（音乐）。</p>
  * @method string getPrompt() 获取<p>生成音频的描述</p>
  * @method void setPrompt(string $Prompt) 设置<p>生成音频的描述</p>
  * @method array getVideoInfos() 获取<p>参考视频信息</p>
@@ -40,6 +42,11 @@ use TencentCloud\Common\AbstractModel;
 class CreateAigcAudioTaskRequest extends AbstractModel
 {
     /**
+     * @var integer <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
+     */
+    public $SubAppId;
+
+    /**
      * @var string <p>模型名称。</p>
      */
     public $ModelName;
@@ -50,7 +57,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $ModelVersion;
 
     /**
-     * @var string <p>指定场景，目前支持sfx（音效）。</p>
+     * @var string <p>指定场景，目前支持sfx（音效）、music（音乐）。</p>
      */
     public $SceneType;
 
@@ -80,9 +87,10 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $AdditionalParameters;
 
     /**
+     * @param integer $SubAppId <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
      * @param string $ModelName <p>模型名称。</p>
      * @param string $ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p>
-     * @param string $SceneType <p>指定场景，目前支持sfx（音效）。</p>
+     * @param string $SceneType <p>指定场景，目前支持sfx（音效）、music（音乐）。</p>
      * @param string $Prompt <p>生成音频的描述</p>
      * @param array $VideoInfos <p>参考视频信息</p>
      * @param array $AudioInfos <p>传入参考音频信息。</p><p>比如传入音频生成音乐时需要传入。</p>
@@ -102,6 +110,10 @@ class CreateAigcAudioTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
             $this->ModelName = $param["ModelName"];
         }

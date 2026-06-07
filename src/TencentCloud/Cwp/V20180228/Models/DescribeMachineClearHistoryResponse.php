@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachineClearHistory返回参数结构体
  *
- * @method integer getTotalCount() 获取总条数
- * @method void setTotalCount(integer $TotalCount) 设置总条数
- * @method array getList() 获取列表数据
- * @method void setList(array $List) 设置列表数据
+ * @method integer getTotalCount() 获取<p>总条数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>总条数</p>
+ * @method array getList() 获取<p>列表数据</p>
+ * @method void setList(array $List) 设置<p>列表数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeMachineClearHistoryResponse extends AbstractModel
 {
     /**
-     * @var integer 总条数
+     * @var integer <p>总条数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 列表数据
+     * @var array <p>列表数据</p>
      */
     public $List;
 
@@ -45,8 +45,8 @@ class DescribeMachineClearHistoryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总条数
-     * @param array $List 列表数据
+     * @param integer $TotalCount <p>总条数</p>
+     * @param array $List <p>列表数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

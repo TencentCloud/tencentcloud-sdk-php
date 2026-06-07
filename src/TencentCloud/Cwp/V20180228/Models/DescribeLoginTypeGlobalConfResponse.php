@@ -20,64 +20,64 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoginTypeGlobalConf返回参数结构体
  *
- * @method integer getEnable() 获取是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li>
- * @method void setEnable(integer $Enable) 设置是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li>
- * @method integer getScope() 获取开启范围 <li>0 自选主机</li> <li>1 全部主机</li>
- * @method void setScope(integer $Scope) 设置开启范围 <li>0 自选主机</li> <li>1 全部主机</li>
- * @method integer getIncludeHostCount() 获取正选主机配置数
- * @method void setIncludeHostCount(integer $IncludeHostCount) 设置正选主机配置数
- * @method integer getExcludeHostCount() 获取反选主机配置数
- * @method void setExcludeHostCount(integer $ExcludeHostCount) 设置反选主机配置数
- * @method array getIncludeQuuid() 获取正选quuid配置列表
- * @method void setIncludeQuuid(array $IncludeQuuid) 设置正选quuid配置列表
- * @method array getExcludeQuuid() 获取反选quuid配置列表
- * @method void setExcludeQuuid(array $ExcludeQuuid) 设置反选quuid配置列表
- * @method integer getEnableCount() 获取已开启机器数
- * @method void setEnableCount(integer $EnableCount) 设置已开启机器数
- * @method integer getDisableCount() 获取未启机器数
- * @method void setDisableCount(integer $DisableCount) 设置未启机器数
+ * @method integer getEnable() 获取<p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+ * @method void setEnable(integer $Enable) 设置<p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+ * @method integer getScope() 获取<p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
+ * @method void setScope(integer $Scope) 设置<p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
+ * @method integer getIncludeHostCount() 获取<p>正选主机配置数</p>
+ * @method void setIncludeHostCount(integer $IncludeHostCount) 设置<p>正选主机配置数</p>
+ * @method integer getExcludeHostCount() 获取<p>反选主机配置数</p>
+ * @method void setExcludeHostCount(integer $ExcludeHostCount) 设置<p>反选主机配置数</p>
+ * @method array getIncludeQuuid() 获取<p>正选quuid配置列表</p>
+ * @method void setIncludeQuuid(array $IncludeQuuid) 设置<p>正选quuid配置列表</p>
+ * @method array getExcludeQuuid() 获取<p>反选quuid配置列表</p>
+ * @method void setExcludeQuuid(array $ExcludeQuuid) 设置<p>反选quuid配置列表</p>
+ * @method integer getEnableCount() 获取<p>已开启机器数</p>
+ * @method void setEnableCount(integer $EnableCount) 设置<p>已开启机器数</p>
+ * @method integer getDisableCount() 获取<p>未启机器数</p>
+ * @method void setDisableCount(integer $DisableCount) 设置<p>未启机器数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLoginTypeGlobalConfResponse extends AbstractModel
 {
     /**
-     * @var integer 是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li>
+     * @var integer <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
      */
     public $Enable;
 
     /**
-     * @var integer 开启范围 <li>0 自选主机</li> <li>1 全部主机</li>
+     * @var integer <p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
      */
     public $Scope;
 
     /**
-     * @var integer 正选主机配置数
+     * @var integer <p>正选主机配置数</p>
      */
     public $IncludeHostCount;
 
     /**
-     * @var integer 反选主机配置数
+     * @var integer <p>反选主机配置数</p>
      */
     public $ExcludeHostCount;
 
     /**
-     * @var array 正选quuid配置列表
+     * @var array <p>正选quuid配置列表</p>
      */
     public $IncludeQuuid;
 
     /**
-     * @var array 反选quuid配置列表
+     * @var array <p>反选quuid配置列表</p>
      */
     public $ExcludeQuuid;
 
     /**
-     * @var integer 已开启机器数
+     * @var integer <p>已开启机器数</p>
      */
     public $EnableCount;
 
     /**
-     * @var integer 未启机器数
+     * @var integer <p>未启机器数</p>
      */
     public $DisableCount;
 
@@ -87,14 +87,14 @@ class DescribeLoginTypeGlobalConfResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Enable 是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li>
-     * @param integer $Scope 开启范围 <li>0 自选主机</li> <li>1 全部主机</li>
-     * @param integer $IncludeHostCount 正选主机配置数
-     * @param integer $ExcludeHostCount 反选主机配置数
-     * @param array $IncludeQuuid 正选quuid配置列表
-     * @param array $ExcludeQuuid 反选quuid配置列表
-     * @param integer $EnableCount 已开启机器数
-     * @param integer $DisableCount 未启机器数
+     * @param integer $Enable <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+     * @param integer $Scope <p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
+     * @param integer $IncludeHostCount <p>正选主机配置数</p>
+     * @param integer $ExcludeHostCount <p>反选主机配置数</p>
+     * @param array $IncludeQuuid <p>正选quuid配置列表</p>
+     * @param array $ExcludeQuuid <p>反选quuid配置列表</p>
+     * @param integer $EnableCount <p>已开启机器数</p>
+     * @param integer $DisableCount <p>未启机器数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

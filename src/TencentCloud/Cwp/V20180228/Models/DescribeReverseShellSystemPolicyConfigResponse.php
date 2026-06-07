@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReverseShellSystemPolicyConfig返回参数结构体
  *
- * @method boolean getInnerNetAlarmShow() 获取内网告警展示
- * @method void setInnerNetAlarmShow(boolean $InnerNetAlarmShow) 设置内网告警展示
- * @method boolean getInnerIPShow() 获取内网ip展示
- * @method void setInnerIPShow(boolean $InnerIPShow) 设置内网ip展示
+ * @method boolean getInnerNetAlarmShow() 获取<p>内网告警展示</p>
+ * @method void setInnerNetAlarmShow(boolean $InnerNetAlarmShow) 设置<p>内网告警展示</p>
+ * @method boolean getInnerIPShow() 获取<p>内网ip展示</p>
+ * @method void setInnerIPShow(boolean $InnerIPShow) 设置<p>内网ip展示</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeReverseShellSystemPolicyConfigResponse extends AbstractModel
 {
     /**
-     * @var boolean 内网告警展示
+     * @var boolean <p>内网告警展示</p>
      */
     public $InnerNetAlarmShow;
 
     /**
-     * @var boolean 内网ip展示
+     * @var boolean <p>内网ip展示</p>
      */
     public $InnerIPShow;
 
@@ -45,8 +45,8 @@ class DescribeReverseShellSystemPolicyConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $InnerNetAlarmShow 内网告警展示
-     * @param boolean $InnerIPShow 内网ip展示
+     * @param boolean $InnerNetAlarmShow <p>内网告警展示</p>
+     * @param boolean $InnerIPShow <p>内网ip展示</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

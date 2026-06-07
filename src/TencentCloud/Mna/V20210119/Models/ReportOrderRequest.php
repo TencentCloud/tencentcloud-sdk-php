@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReportOrder请求参数结构体
  *
- * @method string getOrderId() 获取订单编号唯一标识符
- * @method void setOrderId(string $OrderId) 设置订单编号唯一标识符
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
- * @method string getPackageType() 获取用量类型
- * @method void setPackageType(string $PackageType) 设置用量类型
- * @method string getReportMonth() 获取上报月份，默认当前月
- * @method void setReportMonth(string $ReportMonth) 设置上报月份，默认当前月
+ * @method string getOrderId() 获取<p>订单编号唯一标识符</p>
+ * @method void setOrderId(string $OrderId) 设置<p>订单编号唯一标识符</p>
+ * @method string getProjectId() 获取<p>项目id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
+ * @method string getPackageType() 获取<p>用量类型</p>
+ * @method void setPackageType(string $PackageType) 设置<p>用量类型</p>
+ * @method string getReportMonth() 获取<p>上报月份，默认当前月</p>
+ * @method void setReportMonth(string $ReportMonth) 设置<p>上报月份，默认当前月</p>
  */
 class ReportOrderRequest extends AbstractModel
 {
     /**
-     * @var string 订单编号唯一标识符
+     * @var string <p>订单编号唯一标识符</p>
      */
     public $OrderId;
 
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 用量类型
+     * @var string <p>用量类型</p>
      */
     public $PackageType;
 
     /**
-     * @var string 上报月份，默认当前月
+     * @var string <p>上报月份，默认当前月</p>
      */
     public $ReportMonth;
 
     /**
-     * @param string $OrderId 订单编号唯一标识符
-     * @param string $ProjectId 项目id
-     * @param string $PackageType 用量类型
-     * @param string $ReportMonth 上报月份，默认当前月
+     * @param string $OrderId <p>订单编号唯一标识符</p>
+     * @param string $ProjectId <p>项目id</p>
+     * @param string $PackageType <p>用量类型</p>
+     * @param string $ReportMonth <p>上报月份，默认当前月</p>
      */
     function __construct()
     {

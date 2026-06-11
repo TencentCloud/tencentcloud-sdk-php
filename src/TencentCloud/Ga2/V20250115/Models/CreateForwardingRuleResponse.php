@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateForwardingRule返回参数结构体
  *
- * @method string getTaskId() 获取异步任务ID。
- * @method void setTaskId(string $TaskId) 设置异步任务ID。
- * @method string getForwardingRuleId() 获取七层转发规则ID。
- * @method void setForwardingRuleId(string $ForwardingRuleId) 设置七层转发规则ID。
+ * @method string getTaskId() 获取<p>异步任务ID。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>异步任务ID。</p>
+ * @method string getForwardingRuleId() 获取<p>七层转发规则ID。</p>
+ * @method void setForwardingRuleId(string $ForwardingRuleId) 设置<p>七层转发规则ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateForwardingRuleResponse extends AbstractModel
 {
     /**
-     * @var string 异步任务ID。
+     * @var string <p>异步任务ID。</p>
      */
     public $TaskId;
 
     /**
-     * @var string 七层转发规则ID。
+     * @var string <p>七层转发规则ID。</p>
      */
     public $ForwardingRuleId;
 
@@ -45,8 +45,8 @@ class CreateForwardingRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 异步任务ID。
-     * @param string $ForwardingRuleId 七层转发规则ID。
+     * @param string $TaskId <p>异步任务ID。</p>
+     * @param string $ForwardingRuleId <p>七层转发规则ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

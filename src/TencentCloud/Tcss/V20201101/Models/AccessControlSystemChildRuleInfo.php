@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 容器运行时安全，访问控制系统策略的子策略信息
  *
+ * @method boolean getIsEnable() 获取子策略状态，true为开启，false为关闭
+ * @method void setIsEnable(boolean $IsEnable) 设置子策略状态，true为开启，false为关闭
  * @method string getRuleId() 获取子策略Id
  * @method void setRuleId(string $RuleId) 设置子策略Id
  * @method string getRuleMode() 获取策略模式,  RULE_MODE_RELEASE: 放行
@@ -28,8 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleMode(string $RuleMode) 设置策略模式,  RULE_MODE_RELEASE: 放行
    RULE_MODE_ALERT: 告警
    RULE_MODE_HOLDUP:拦截
- * @method boolean getIsEnable() 获取子策略状态，true为开启，false为关闭
- * @method void setIsEnable(boolean $IsEnable) 设置子策略状态，true为开启，false为关闭
  * @method string getRuleType() 获取子策略检测的入侵行为类型
 CHANGE_CRONTAB：篡改计划任务
 CHANGE_SYS_BIN：篡改系统程序
@@ -41,6 +41,11 @@ CHANGE_USRCFG：篡改用户配置
  */
 class AccessControlSystemChildRuleInfo extends AbstractModel
 {
+    /**
+     * @var boolean 子策略状态，true为开启，false为关闭
+     */
+    public $IsEnable;
+
     /**
      * @var string 子策略Id
      */
@@ -54,11 +59,6 @@ class AccessControlSystemChildRuleInfo extends AbstractModel
     public $RuleMode;
 
     /**
-     * @var boolean 子策略状态，true为开启，false为关闭
-     */
-    public $IsEnable;
-
-    /**
      * @var string 子策略检测的入侵行为类型
 CHANGE_CRONTAB：篡改计划任务
 CHANGE_SYS_BIN：篡改系统程序
@@ -67,11 +67,11 @@ CHANGE_USRCFG：篡改用户配置
     public $RuleType;
 
     /**
+     * @param boolean $IsEnable 子策略状态，true为开启，false为关闭
      * @param string $RuleId 子策略Id
      * @param string $RuleMode 策略模式,  RULE_MODE_RELEASE: 放行
    RULE_MODE_ALERT: 告警
    RULE_MODE_HOLDUP:拦截
-     * @param boolean $IsEnable 子策略状态，true为开启，false为关闭
      * @param string $RuleType 子策略检测的入侵行为类型
 CHANGE_CRONTAB：篡改计划任务
 CHANGE_SYS_BIN：篡改系统程序
@@ -90,16 +90,16 @@ CHANGE_USRCFG：篡改用户配置
         if ($param === null) {
             return;
         }
+        if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
+            $this->IsEnable = $param["IsEnable"];
+        }
+
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
         }
 
         if (array_key_exists("RuleMode",$param) and $param["RuleMode"] !== null) {
             $this->RuleMode = $param["RuleMode"];
-        }
-
-        if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
-            $this->IsEnable = $param["IsEnable"];
         }
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {

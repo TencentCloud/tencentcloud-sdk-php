@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoginWhiteCombinedList返回参数结构体
  *
- * @method integer getTotalCount() 获取总数量
- * @method void setTotalCount(integer $TotalCount) 设置总数量
- * @method array getLoginWhiteCombinedInfos() 获取合并后的白名单列表
- * @method void setLoginWhiteCombinedInfos(array $LoginWhiteCombinedInfos) 设置合并后的白名单列表
+ * @method integer getTotalCount() 获取<p>总数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>总数量</p>
+ * @method array getLoginWhiteCombinedInfos() 获取<p>合并后的白名单列表</p>
+ * @method void setLoginWhiteCombinedInfos(array $LoginWhiteCombinedInfos) 设置<p>合并后的白名单列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLoginWhiteCombinedListResponse extends AbstractModel
 {
     /**
-     * @var integer 总数量
+     * @var integer <p>总数量</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 合并后的白名单列表
+     * @var array <p>合并后的白名单列表</p>
      */
     public $LoginWhiteCombinedInfos;
 
@@ -45,8 +45,8 @@ class DescribeLoginWhiteCombinedListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总数量
-     * @param array $LoginWhiteCombinedInfos 合并后的白名单列表
+     * @param integer $TotalCount <p>总数量</p>
+     * @param array $LoginWhiteCombinedInfos <p>合并后的白名单列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSQLMode(string $SQLMode) 设置<p>兼容模式，enum:MySQL,HBase</p>
  * @method AutoScalingConfig getAutoScaleConfig() 获取<p>svls实例的ccu变配配置</p>
  * @method void setAutoScaleConfig(AutoScalingConfig $AutoScaleConfig) 设置<p>svls实例的ccu变配配置</p>
+ * @method array getSecurityGroupIds() 获取<p>绑定安全组列表</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>绑定安全组列表</p>
+ * @method string getUserName() 获取<p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
+ * @method void setUserName(string $UserName) 设置<p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
+ * @method string getPassword() 获取<p>dbaadmin密码</p>
+ * @method void setPassword(string $Password) 设置<p>dbaadmin密码</p>
+ * @method integer getEncryptionEnable() 获取<p>是否开启透明加密，0：不开启，1：开启</p>
+ * @method void setEncryptionEnable(integer $EncryptionEnable) 设置<p>是否开启透明加密，0：不开启，1：开启</p>
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -234,6 +242,26 @@ class CreateDBInstancesRequest extends AbstractModel
     public $AutoScaleConfig;
 
     /**
+     * @var array <p>绑定安全组列表</p>
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @var string <p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
+     */
+    public $UserName;
+
+    /**
+     * @var string <p>dbaadmin密码</p>
+     */
+    public $Password;
+
+    /**
+     * @var integer <p>是否开启透明加密，0：不开启，1：开启</p>
+     */
+    public $EncryptionEnable;
+
+    /**
      * @param string $Zone <p>创建实例区域</p>
      * @param string $VpcId <p>字符型vpcid</p>
      * @param string $SubnetId <p>字符型subnetid</p>
@@ -264,6 +292,10 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $TemplateId <p>参数模板id</p>
      * @param string $SQLMode <p>兼容模式，enum:MySQL,HBase</p>
      * @param AutoScalingConfig $AutoScaleConfig <p>svls实例的ccu变配配置</p>
+     * @param array $SecurityGroupIds <p>绑定安全组列表</p>
+     * @param string $UserName <p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
+     * @param string $Password <p>dbaadmin密码</p>
+     * @param integer $EncryptionEnable <p>是否开启透明加密，0：不开启，1：开启</p>
      */
     function __construct()
     {
@@ -407,6 +439,22 @@ class CreateDBInstancesRequest extends AbstractModel
         if (array_key_exists("AutoScaleConfig",$param) and $param["AutoScaleConfig"] !== null) {
             $this->AutoScaleConfig = new AutoScalingConfig();
             $this->AutoScaleConfig->deserialize($param["AutoScaleConfig"]);
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("EncryptionEnable",$param) and $param["EncryptionEnable"] !== null) {
+            $this->EncryptionEnable = $param["EncryptionEnable"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置资源 ID（模型 ID 或服务 ID）。
  * @method string getResourceType() 获取资源类型。取值：endpoint（服务）、model（模型）。
  * @method void setResourceType(string $ResourceType) 设置资源类型。取值：endpoint（服务）、model（模型）。
+ * @method string getStatus() 获取资源状态
+ * @method void setStatus(string $Status) 设置资源状态
  */
 class BindingItem extends AbstractModel
 {
@@ -38,8 +40,14 @@ class BindingItem extends AbstractModel
     public $ResourceType;
 
     /**
+     * @var string 资源状态
+     */
+    public $Status;
+
+    /**
      * @param string $ResourceId 资源 ID（模型 ID 或服务 ID）。
      * @param string $ResourceType 资源类型。取值：endpoint（服务）、model（模型）。
+     * @param string $Status 资源状态
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BindingItem extends AbstractModel
 
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

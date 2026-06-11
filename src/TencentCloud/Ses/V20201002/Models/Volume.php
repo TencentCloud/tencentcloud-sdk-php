@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 统计数据的结构体
  *
- * @method string getSendDate() 获取日期
- * @method void setSendDate(string $SendDate) 设置日期
- * @method integer getRequestCount() 获取邮件请求数量
- * @method void setRequestCount(integer $RequestCount) 设置邮件请求数量
- * @method integer getAcceptedCount() 获取腾讯云通过数量
- * @method void setAcceptedCount(integer $AcceptedCount) 设置腾讯云通过数量
- * @method integer getDeliveredCount() 获取送达数量
- * @method void setDeliveredCount(integer $DeliveredCount) 设置送达数量
- * @method integer getOpenedCount() 获取打开邮件的用户数量，根据收件人去重
- * @method void setOpenedCount(integer $OpenedCount) 设置打开邮件的用户数量，根据收件人去重
- * @method integer getClickedCount() 获取点击了邮件中的链接数量用户数量
- * @method void setClickedCount(integer $ClickedCount) 设置点击了邮件中的链接数量用户数量
- * @method integer getBounceCount() 获取退信数量
- * @method void setBounceCount(integer $BounceCount) 设置退信数量
- * @method integer getUnsubscribeCount() 获取取消订阅的用户数量
- * @method void setUnsubscribeCount(integer $UnsubscribeCount) 设置取消订阅的用户数量
+ * @method string getSendDate() 获取<p>日期</p>
+ * @method void setSendDate(string $SendDate) 设置<p>日期</p>
+ * @method integer getRequestCount() 获取<p>邮件请求数量</p>
+ * @method void setRequestCount(integer $RequestCount) 设置<p>邮件请求数量</p>
+ * @method integer getAcceptedCount() 获取<p>腾讯云通过数量</p>
+ * @method void setAcceptedCount(integer $AcceptedCount) 设置<p>腾讯云通过数量</p>
+ * @method integer getDeliveredCount() 获取<p>送达数量</p>
+ * @method void setDeliveredCount(integer $DeliveredCount) 设置<p>送达数量</p>
+ * @method integer getOpenedCount() 获取<p>打开邮件总次数</p>
+ * @method void setOpenedCount(integer $OpenedCount) 设置<p>打开邮件总次数</p>
+ * @method integer getClickedCount() 获取<p>点击了邮件中的链接数量用户数量</p>
+ * @method void setClickedCount(integer $ClickedCount) 设置<p>点击了邮件中的链接数量用户数量</p>
+ * @method integer getBounceCount() 获取<p>退信数量</p>
+ * @method void setBounceCount(integer $BounceCount) 设置<p>退信数量</p>
+ * @method integer getUnsubscribeCount() 获取<p>取消订阅的用户数量</p>
+ * @method void setUnsubscribeCount(integer $UnsubscribeCount) 设置<p>取消订阅的用户数量</p>
  */
 class Volume extends AbstractModel
 {
     /**
-     * @var string 日期
+     * @var string <p>日期</p>
      */
     public $SendDate;
 
     /**
-     * @var integer 邮件请求数量
+     * @var integer <p>邮件请求数量</p>
      */
     public $RequestCount;
 
     /**
-     * @var integer 腾讯云通过数量
+     * @var integer <p>腾讯云通过数量</p>
      */
     public $AcceptedCount;
 
     /**
-     * @var integer 送达数量
+     * @var integer <p>送达数量</p>
      */
     public $DeliveredCount;
 
     /**
-     * @var integer 打开邮件的用户数量，根据收件人去重
+     * @var integer <p>打开邮件总次数</p>
      */
     public $OpenedCount;
 
     /**
-     * @var integer 点击了邮件中的链接数量用户数量
+     * @var integer <p>点击了邮件中的链接数量用户数量</p>
      */
     public $ClickedCount;
 
     /**
-     * @var integer 退信数量
+     * @var integer <p>退信数量</p>
      */
     public $BounceCount;
 
     /**
-     * @var integer 取消订阅的用户数量
+     * @var integer <p>取消订阅的用户数量</p>
      */
     public $UnsubscribeCount;
 
     /**
-     * @param string $SendDate 日期
-     * @param integer $RequestCount 邮件请求数量
-     * @param integer $AcceptedCount 腾讯云通过数量
-     * @param integer $DeliveredCount 送达数量
-     * @param integer $OpenedCount 打开邮件的用户数量，根据收件人去重
-     * @param integer $ClickedCount 点击了邮件中的链接数量用户数量
-     * @param integer $BounceCount 退信数量
-     * @param integer $UnsubscribeCount 取消订阅的用户数量
+     * @param string $SendDate <p>日期</p>
+     * @param integer $RequestCount <p>邮件请求数量</p>
+     * @param integer $AcceptedCount <p>腾讯云通过数量</p>
+     * @param integer $DeliveredCount <p>送达数量</p>
+     * @param integer $OpenedCount <p>打开邮件总次数</p>
+     * @param integer $ClickedCount <p>点击了邮件中的链接数量用户数量</p>
+     * @param integer $BounceCount <p>退信数量</p>
+     * @param integer $UnsubscribeCount <p>取消订阅的用户数量</p>
      */
     function __construct()
     {

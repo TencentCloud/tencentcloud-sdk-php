@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddLoginWhiteLists请求参数结构体
  *
- * @method HostLoginWhiteObj getHostLoginWhiteObj() 获取异地登录白名单实体
- * @method void setHostLoginWhiteObj(HostLoginWhiteObj $HostLoginWhiteObj) 设置异地登录白名单实体
- * @method string getProcessType() 获取事件同步处理方式：
-  "" -- 不操作
-  "All" -- 将符合此配置的所有事件记录加白
-  "Id" -- 将EventId对应的事件记录加白
- * @method void setProcessType(string $ProcessType) 设置事件同步处理方式：
-  "" -- 不操作
-  "All" -- 将符合此配置的所有事件记录加白
-  "Id" -- 将EventId对应的事件记录加白
- * @method integer getEventId() 获取异地登录事件ID，当ProcessType为Id时此项必填
- * @method void setEventId(integer $EventId) 设置异地登录事件ID，当ProcessType为Id时此项必填
+ * @method HostLoginWhiteObj getHostLoginWhiteObj() 获取<p>异地登录白名单实体</p>
+ * @method void setHostLoginWhiteObj(HostLoginWhiteObj $HostLoginWhiteObj) 设置<p>异地登录白名单实体</p>
+ * @method string getProcessType() 获取<p>事件同步处理方式：<br>  &quot;&quot; -- 不操作<br>  &quot;All&quot; -- 将符合此配置的所有事件记录加白<br>  &quot;Id&quot; -- 将EventId对应的事件记录加白</p>
+ * @method void setProcessType(string $ProcessType) 设置<p>事件同步处理方式：<br>  &quot;&quot; -- 不操作<br>  &quot;All&quot; -- 将符合此配置的所有事件记录加白<br>  &quot;Id&quot; -- 将EventId对应的事件记录加白</p>
+ * @method integer getEventId() 获取<p>异地登录事件ID，当ProcessType为Id时此项必填</p>
+ * @method void setEventId(integer $EventId) 设置<p>异地登录事件ID，当ProcessType为Id时此项必填</p>
  */
 class AddLoginWhiteListsRequest extends AbstractModel
 {
     /**
-     * @var HostLoginWhiteObj 异地登录白名单实体
+     * @var HostLoginWhiteObj <p>异地登录白名单实体</p>
      */
     public $HostLoginWhiteObj;
 
     /**
-     * @var string 事件同步处理方式：
-  "" -- 不操作
-  "All" -- 将符合此配置的所有事件记录加白
-  "Id" -- 将EventId对应的事件记录加白
+     * @var string <p>事件同步处理方式：<br>  &quot;&quot; -- 不操作<br>  &quot;All&quot; -- 将符合此配置的所有事件记录加白<br>  &quot;Id&quot; -- 将EventId对应的事件记录加白</p>
      */
     public $ProcessType;
 
     /**
-     * @var integer 异地登录事件ID，当ProcessType为Id时此项必填
+     * @var integer <p>异地登录事件ID，当ProcessType为Id时此项必填</p>
      */
     public $EventId;
 
     /**
-     * @param HostLoginWhiteObj $HostLoginWhiteObj 异地登录白名单实体
-     * @param string $ProcessType 事件同步处理方式：
-  "" -- 不操作
-  "All" -- 将符合此配置的所有事件记录加白
-  "Id" -- 将EventId对应的事件记录加白
-     * @param integer $EventId 异地登录事件ID，当ProcessType为Id时此项必填
+     * @param HostLoginWhiteObj $HostLoginWhiteObj <p>异地登录白名单实体</p>
+     * @param string $ProcessType <p>事件同步处理方式：<br>  &quot;&quot; -- 不操作<br>  &quot;All&quot; -- 将符合此配置的所有事件记录加白<br>  &quot;Id&quot; -- 将EventId对应的事件记录加白</p>
+     * @param integer $EventId <p>异地登录事件ID，当ProcessType为Id时此项必填</p>
      */
     function __construct()
     {

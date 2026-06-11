@@ -20,25 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFileUrls返回参数结构体
  *
- * @method array getFileUrls() 获取文件URL信息；
-链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
- * @method void setFileUrls(array $FileUrls) 设置文件URL信息；
-链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
- * @method integer getTotalCount() 获取URL数量
- * @method void setTotalCount(integer $TotalCount) 设置URL数量
+ * @method array getFileUrls() 获取<p>文件URL信息；<br>链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。</p>
+ * @method void setFileUrls(array $FileUrls) 设置<p>文件URL信息；<br>链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。</p>
+ * @method integer getTotalCount() 获取<p>URL数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>URL数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFileUrlsResponse extends AbstractModel
 {
     /**
-     * @var array 文件URL信息；
-链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
+     * @var array <p>文件URL信息；<br>链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。</p>
      */
     public $FileUrls;
 
     /**
-     * @var integer URL数量
+     * @var integer <p>URL数量</p>
      */
     public $TotalCount;
 
@@ -48,9 +45,8 @@ class DescribeFileUrlsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FileUrls 文件URL信息；
-链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
-     * @param integer $TotalCount URL数量
+     * @param array $FileUrls <p>文件URL信息；<br>链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。</p>
+     * @param integer $TotalCount <p>URL数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

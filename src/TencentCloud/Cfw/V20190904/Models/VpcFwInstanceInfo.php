@@ -20,258 +20,258 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VPC防火墙实例卡片信息
  *
- * @method string getFwInsName() 获取VPC防火墙实例名称
- * @method void setFwInsName(string $FwInsName) 设置VPC防火墙实例名称
- * @method string getFwInsId() 获取VPC防火墙实例ID
- * @method void setFwInsId(string $FwInsId) 设置VPC防火墙实例ID
- * @method integer getFwMode() 获取VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
- * @method void setFwMode(integer $FwMode) 设置VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
- * @method integer getJoinInsNum() 获取VPC防火墙接入网络实例个数
- * @method void setJoinInsNum(integer $JoinInsNum) 设置VPC防火墙接入网络实例个数
- * @method integer getFwSwitchNum() 获取VPC防火墙开关个数
- * @method void setFwSwitchNum(integer $FwSwitchNum) 设置VPC防火墙开关个数
- * @method integer getStatus() 获取VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
- * @method void setStatus(integer $Status) 设置VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
- * @method string getTime() 获取VPC防火墙创建时间
- * @method void setTime(string $Time) 设置VPC防火墙创建时间
- * @method array getCcnId() 获取VPC 相关云联网ID列表
- * @method void setCcnId(array $CcnId) 设置VPC 相关云联网ID列表
- * @method array getCcnName() 获取VPC 相关云联网名称列表
- * @method void setCcnName(array $CcnName) 设置VPC 相关云联网名称列表
- * @method array getPeerConnectionId() 获取VPC 相关对等连接ID列表
- * @method void setPeerConnectionId(array $PeerConnectionId) 设置VPC 相关对等连接ID列表
- * @method array getPeerConnectionName() 获取VPC 相关对等连接名称列表
- * @method void setPeerConnectionName(array $PeerConnectionName) 设置VPC 相关对等连接名称列表
- * @method array getFwCvmLst() 获取VPC防火墙CVM的列表
- * @method void setFwCvmLst(array $FwCvmLst) 设置VPC防火墙CVM的列表
- * @method array getJoinInsLst() 获取VPC防火墙接入网络实例类型列表
- * @method void setJoinInsLst(array $JoinInsLst) 设置VPC防火墙接入网络实例类型列表
- * @method array getFwGateway() 获取防火墙网关信息
- * @method void setFwGateway(array $FwGateway) 设置防火墙网关信息
- * @method string getFwGroupId() 获取防火墙(组)ID
- * @method void setFwGroupId(string $FwGroupId) 设置防火墙(组)ID
- * @method integer getRuleUsed() 获取已使用规则数
- * @method void setRuleUsed(integer $RuleUsed) 设置已使用规则数
- * @method integer getRuleMax() 获取最大规则数
- * @method void setRuleMax(integer $RuleMax) 设置最大规则数
- * @method integer getWidth() 获取防火墙实例带宽
- * @method void setWidth(integer $Width) 设置防火墙实例带宽
- * @method integer getUserVpcWidth() 获取用户VPC墙总带宽
- * @method void setUserVpcWidth(integer $UserVpcWidth) 设置用户VPC墙总带宽
- * @method array getJoinInsIdLst() 获取接入的vpc列表
- * @method void setJoinInsIdLst(array $JoinInsIdLst) 设置接入的vpc列表
- * @method integer getFlowMax() 获取内网间峰值带宽 (单位 bps )
- * @method void setFlowMax(integer $FlowMax) 设置内网间峰值带宽 (单位 bps )
- * @method string getEngineVersion() 获取实例引擎版本
- * @method void setEngineVersion(string $EngineVersion) 设置实例引擎版本
- * @method integer getUpdateEnable() 获取引擎是否可升级：0，不可升级；1，可升级
- * @method void setUpdateEnable(integer $UpdateEnable) 设置引擎是否可升级：0，不可升级；1，可升级
- * @method string getTrafficMode() 获取引擎运行模式，Normal:正常, OnlyRoute:透明模式
- * @method void setTrafficMode(string $TrafficMode) 设置引擎运行模式，Normal:正常, OnlyRoute:透明模式
- * @method string getReserveTime() 获取引擎预约升级时间
- * @method void setReserveTime(string $ReserveTime) 设置引擎预约升级时间
- * @method string getReserveVersion() 获取预约引擎升级版本
- * @method void setReserveVersion(string $ReserveVersion) 设置预约引擎升级版本
- * @method string getReserveVersionState() 获取引擎预约升级版本状态
- * @method void setReserveVersionState(string $ReserveVersionState) 设置引擎预约升级版本状态
- * @method integer getElasticSwitch() 获取弹性开关 1打开 0关闭
- * @method void setElasticSwitch(integer $ElasticSwitch) 设置弹性开关 1打开 0关闭
- * @method integer getElasticBandwidth() 获取弹性带宽，单位Mbps
- * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置弹性带宽，单位Mbps
- * @method integer getIsFirstAfterPay() 获取是否首次开通按量付费
-1 是
-0 不是
- * @method void setIsFirstAfterPay(integer $IsFirstAfterPay) 设置是否首次开通按量付费
-1 是
-0 不是
+ * @method string getFwInsName() 获取<p>VPC防火墙实例名称</p>
+ * @method void setFwInsName(string $FwInsName) 设置<p>VPC防火墙实例名称</p>
+ * @method string getFwInsId() 获取<p>VPC防火墙实例ID</p>
+ * @method void setFwInsId(string $FwInsId) 设置<p>VPC防火墙实例ID</p>
+ * @method integer getFwMode() 获取<p>VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙</p>
+ * @method void setFwMode(integer $FwMode) 设置<p>VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙</p>
+ * @method integer getJoinInsNum() 获取<p>VPC防火墙接入网络实例个数</p>
+ * @method void setJoinInsNum(integer $JoinInsNum) 设置<p>VPC防火墙接入网络实例个数</p>
+ * @method integer getFwSwitchNum() 获取<p>VPC防火墙开关个数</p>
+ * @method void setFwSwitchNum(integer $FwSwitchNum) 设置<p>VPC防火墙开关个数</p>
+ * @method integer getStatus() 获取<p>VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中</p>
+ * @method void setStatus(integer $Status) 设置<p>VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中</p>
+ * @method string getTime() 获取<p>VPC防火墙创建时间</p>
+ * @method void setTime(string $Time) 设置<p>VPC防火墙创建时间</p>
+ * @method array getCcnId() 获取<p>VPC 相关云联网ID列表</p>
+ * @method void setCcnId(array $CcnId) 设置<p>VPC 相关云联网ID列表</p>
+ * @method array getCcnName() 获取<p>VPC 相关云联网名称列表</p>
+ * @method void setCcnName(array $CcnName) 设置<p>VPC 相关云联网名称列表</p>
+ * @method array getPeerConnectionId() 获取<p>VPC 相关对等连接ID列表</p>
+ * @method void setPeerConnectionId(array $PeerConnectionId) 设置<p>VPC 相关对等连接ID列表</p>
+ * @method array getPeerConnectionName() 获取<p>VPC 相关对等连接名称列表</p>
+ * @method void setPeerConnectionName(array $PeerConnectionName) 设置<p>VPC 相关对等连接名称列表</p>
+ * @method array getFwCvmLst() 获取<p>VPC防火墙CVM的列表</p>
+ * @method void setFwCvmLst(array $FwCvmLst) 设置<p>VPC防火墙CVM的列表</p>
+ * @method array getJoinInsLst() 获取<p>VPC防火墙接入网络实例类型列表</p>
+ * @method void setJoinInsLst(array $JoinInsLst) 设置<p>VPC防火墙接入网络实例类型列表</p>
+ * @method array getFwGateway() 获取<p>防火墙网关信息</p>
+ * @method void setFwGateway(array $FwGateway) 设置<p>防火墙网关信息</p>
+ * @method string getFwGroupId() 获取<p>防火墙(组)ID</p>
+ * @method void setFwGroupId(string $FwGroupId) 设置<p>防火墙(组)ID</p>
+ * @method integer getRuleUsed() 获取<p>已使用规则数</p>
+ * @method void setRuleUsed(integer $RuleUsed) 设置<p>已使用规则数</p>
+ * @method integer getRuleMax() 获取<p>最大规则数</p>
+ * @method void setRuleMax(integer $RuleMax) 设置<p>最大规则数</p>
+ * @method integer getWidth() 获取<p>防火墙实例带宽</p>
+ * @method void setWidth(integer $Width) 设置<p>防火墙实例带宽</p>
+ * @method integer getUserVpcWidth() 获取<p>用户VPC墙总带宽</p>
+ * @method void setUserVpcWidth(integer $UserVpcWidth) 设置<p>用户VPC墙总带宽</p>
+ * @method array getJoinInsIdLst() 获取<p>接入的vpc列表</p>
+ * @method void setJoinInsIdLst(array $JoinInsIdLst) 设置<p>接入的vpc列表</p>
+ * @method integer getFlowMax() 获取<p>内网间峰值带宽 (单位 bps )</p>
+ * @method void setFlowMax(integer $FlowMax) 设置<p>内网间峰值带宽 (单位 bps )</p>
+ * @method string getEngineVersion() 获取<p>实例引擎版本</p>
+ * @method void setEngineVersion(string $EngineVersion) 设置<p>实例引擎版本</p>
+ * @method integer getUpdateEnable() 获取<p>引擎是否可升级：0，不可升级；1，可升级</p>
+ * @method void setUpdateEnable(integer $UpdateEnable) 设置<p>引擎是否可升级：0，不可升级；1，可升级</p>
+ * @method string getTrafficMode() 获取<p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
+ * @method void setTrafficMode(string $TrafficMode) 设置<p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
+ * @method string getReserveTime() 获取<p>引擎预约升级时间</p>
+ * @method void setReserveTime(string $ReserveTime) 设置<p>引擎预约升级时间</p>
+ * @method string getReserveVersion() 获取<p>预约引擎升级版本</p>
+ * @method void setReserveVersion(string $ReserveVersion) 设置<p>预约引擎升级版本</p>
+ * @method string getReserveVersionState() 获取<p>引擎预约升级版本状态</p>
+ * @method void setReserveVersionState(string $ReserveVersionState) 设置<p>引擎预约升级版本状态</p>
+ * @method integer getElasticSwitch() 获取<p>弹性开关 1打开 0关闭</p>
+ * @method void setElasticSwitch(integer $ElasticSwitch) 设置<p>弹性开关 1打开 0关闭</p>
+ * @method integer getElasticBandwidth() 获取<p>弹性带宽，单位Mbps</p>
+ * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置<p>弹性带宽，单位Mbps</p>
+ * @method integer getIsFirstAfterPay() 获取<p>是否首次开通按量付费<br>1 是<br>0 不是</p>
+ * @method void setIsFirstAfterPay(integer $IsFirstAfterPay) 设置<p>是否首次开通按量付费<br>1 是<br>0 不是</p>
+ * @method integer getElasticTrafficSwitch() 获取<p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+ * @method void setElasticTrafficSwitch(integer $ElasticTrafficSwitch) 设置<p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
  */
 class VpcFwInstanceInfo extends AbstractModel
 {
     /**
-     * @var string VPC防火墙实例名称
+     * @var string <p>VPC防火墙实例名称</p>
      */
     public $FwInsName;
 
     /**
-     * @var string VPC防火墙实例ID
+     * @var string <p>VPC防火墙实例ID</p>
      */
     public $FwInsId;
 
     /**
-     * @var integer VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
+     * @var integer <p>VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙</p>
      */
     public $FwMode;
 
     /**
-     * @var integer VPC防火墙接入网络实例个数
+     * @var integer <p>VPC防火墙接入网络实例个数</p>
      */
     public $JoinInsNum;
 
     /**
-     * @var integer VPC防火墙开关个数
+     * @var integer <p>VPC防火墙开关个数</p>
      */
     public $FwSwitchNum;
 
     /**
-     * @var integer VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
+     * @var integer <p>VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中</p>
      */
     public $Status;
 
     /**
-     * @var string VPC防火墙创建时间
+     * @var string <p>VPC防火墙创建时间</p>
      */
     public $Time;
 
     /**
-     * @var array VPC 相关云联网ID列表
+     * @var array <p>VPC 相关云联网ID列表</p>
      */
     public $CcnId;
 
     /**
-     * @var array VPC 相关云联网名称列表
+     * @var array <p>VPC 相关云联网名称列表</p>
      */
     public $CcnName;
 
     /**
-     * @var array VPC 相关对等连接ID列表
+     * @var array <p>VPC 相关对等连接ID列表</p>
      */
     public $PeerConnectionId;
 
     /**
-     * @var array VPC 相关对等连接名称列表
+     * @var array <p>VPC 相关对等连接名称列表</p>
      */
     public $PeerConnectionName;
 
     /**
-     * @var array VPC防火墙CVM的列表
+     * @var array <p>VPC防火墙CVM的列表</p>
      */
     public $FwCvmLst;
 
     /**
-     * @var array VPC防火墙接入网络实例类型列表
+     * @var array <p>VPC防火墙接入网络实例类型列表</p>
      */
     public $JoinInsLst;
 
     /**
-     * @var array 防火墙网关信息
+     * @var array <p>防火墙网关信息</p>
      */
     public $FwGateway;
 
     /**
-     * @var string 防火墙(组)ID
+     * @var string <p>防火墙(组)ID</p>
      */
     public $FwGroupId;
 
     /**
-     * @var integer 已使用规则数
+     * @var integer <p>已使用规则数</p>
      */
     public $RuleUsed;
 
     /**
-     * @var integer 最大规则数
+     * @var integer <p>最大规则数</p>
      */
     public $RuleMax;
 
     /**
-     * @var integer 防火墙实例带宽
+     * @var integer <p>防火墙实例带宽</p>
      */
     public $Width;
 
     /**
-     * @var integer 用户VPC墙总带宽
+     * @var integer <p>用户VPC墙总带宽</p>
      */
     public $UserVpcWidth;
 
     /**
-     * @var array 接入的vpc列表
+     * @var array <p>接入的vpc列表</p>
      */
     public $JoinInsIdLst;
 
     /**
-     * @var integer 内网间峰值带宽 (单位 bps )
+     * @var integer <p>内网间峰值带宽 (单位 bps )</p>
      */
     public $FlowMax;
 
     /**
-     * @var string 实例引擎版本
+     * @var string <p>实例引擎版本</p>
      */
     public $EngineVersion;
 
     /**
-     * @var integer 引擎是否可升级：0，不可升级；1，可升级
+     * @var integer <p>引擎是否可升级：0，不可升级；1，可升级</p>
      */
     public $UpdateEnable;
 
     /**
-     * @var string 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+     * @var string <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
      */
     public $TrafficMode;
 
     /**
-     * @var string 引擎预约升级时间
+     * @var string <p>引擎预约升级时间</p>
      */
     public $ReserveTime;
 
     /**
-     * @var string 预约引擎升级版本
+     * @var string <p>预约引擎升级版本</p>
      */
     public $ReserveVersion;
 
     /**
-     * @var string 引擎预约升级版本状态
+     * @var string <p>引擎预约升级版本状态</p>
      */
     public $ReserveVersionState;
 
     /**
-     * @var integer 弹性开关 1打开 0关闭
+     * @var integer <p>弹性开关 1打开 0关闭</p>
      */
     public $ElasticSwitch;
 
     /**
-     * @var integer 弹性带宽，单位Mbps
+     * @var integer <p>弹性带宽，单位Mbps</p>
      */
     public $ElasticBandwidth;
 
     /**
-     * @var integer 是否首次开通按量付费
-1 是
-0 不是
+     * @var integer <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
      */
     public $IsFirstAfterPay;
 
     /**
-     * @param string $FwInsName VPC防火墙实例名称
-     * @param string $FwInsId VPC防火墙实例ID
-     * @param integer $FwMode VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-     * @param integer $JoinInsNum VPC防火墙接入网络实例个数
-     * @param integer $FwSwitchNum VPC防火墙开关个数
-     * @param integer $Status VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-     * @param string $Time VPC防火墙创建时间
-     * @param array $CcnId VPC 相关云联网ID列表
-     * @param array $CcnName VPC 相关云联网名称列表
-     * @param array $PeerConnectionId VPC 相关对等连接ID列表
-     * @param array $PeerConnectionName VPC 相关对等连接名称列表
-     * @param array $FwCvmLst VPC防火墙CVM的列表
-     * @param array $JoinInsLst VPC防火墙接入网络实例类型列表
-     * @param array $FwGateway 防火墙网关信息
-     * @param string $FwGroupId 防火墙(组)ID
-     * @param integer $RuleUsed 已使用规则数
-     * @param integer $RuleMax 最大规则数
-     * @param integer $Width 防火墙实例带宽
-     * @param integer $UserVpcWidth 用户VPC墙总带宽
-     * @param array $JoinInsIdLst 接入的vpc列表
-     * @param integer $FlowMax 内网间峰值带宽 (单位 bps )
-     * @param string $EngineVersion 实例引擎版本
-     * @param integer $UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
-     * @param string $TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-     * @param string $ReserveTime 引擎预约升级时间
-     * @param string $ReserveVersion 预约引擎升级版本
-     * @param string $ReserveVersionState 引擎预约升级版本状态
-     * @param integer $ElasticSwitch 弹性开关 1打开 0关闭
-     * @param integer $ElasticBandwidth 弹性带宽，单位Mbps
-     * @param integer $IsFirstAfterPay 是否首次开通按量付费
-1 是
-0 不是
+     * @var integer <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public $ElasticTrafficSwitch;
+
+    /**
+     * @param string $FwInsName <p>VPC防火墙实例名称</p>
+     * @param string $FwInsId <p>VPC防火墙实例ID</p>
+     * @param integer $FwMode <p>VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙</p>
+     * @param integer $JoinInsNum <p>VPC防火墙接入网络实例个数</p>
+     * @param integer $FwSwitchNum <p>VPC防火墙开关个数</p>
+     * @param integer $Status <p>VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中</p>
+     * @param string $Time <p>VPC防火墙创建时间</p>
+     * @param array $CcnId <p>VPC 相关云联网ID列表</p>
+     * @param array $CcnName <p>VPC 相关云联网名称列表</p>
+     * @param array $PeerConnectionId <p>VPC 相关对等连接ID列表</p>
+     * @param array $PeerConnectionName <p>VPC 相关对等连接名称列表</p>
+     * @param array $FwCvmLst <p>VPC防火墙CVM的列表</p>
+     * @param array $JoinInsLst <p>VPC防火墙接入网络实例类型列表</p>
+     * @param array $FwGateway <p>防火墙网关信息</p>
+     * @param string $FwGroupId <p>防火墙(组)ID</p>
+     * @param integer $RuleUsed <p>已使用规则数</p>
+     * @param integer $RuleMax <p>最大规则数</p>
+     * @param integer $Width <p>防火墙实例带宽</p>
+     * @param integer $UserVpcWidth <p>用户VPC墙总带宽</p>
+     * @param array $JoinInsIdLst <p>接入的vpc列表</p>
+     * @param integer $FlowMax <p>内网间峰值带宽 (单位 bps )</p>
+     * @param string $EngineVersion <p>实例引擎版本</p>
+     * @param integer $UpdateEnable <p>引擎是否可升级：0，不可升级；1，可升级</p>
+     * @param string $TrafficMode <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
+     * @param string $ReserveTime <p>引擎预约升级时间</p>
+     * @param string $ReserveVersion <p>预约引擎升级版本</p>
+     * @param string $ReserveVersionState <p>引擎预约升级版本状态</p>
+     * @param integer $ElasticSwitch <p>弹性开关 1打开 0关闭</p>
+     * @param integer $ElasticBandwidth <p>弹性带宽，单位Mbps</p>
+     * @param integer $IsFirstAfterPay <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
+     * @param integer $ElasticTrafficSwitch <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
      */
     function __construct()
     {
@@ -419,6 +419,10 @@ class VpcFwInstanceInfo extends AbstractModel
 
         if (array_key_exists("IsFirstAfterPay",$param) and $param["IsFirstAfterPay"] !== null) {
             $this->IsFirstAfterPay = $param["IsFirstAfterPay"];
+        }
+
+        if (array_key_exists("ElasticTrafficSwitch",$param) and $param["ElasticTrafficSwitch"] !== null) {
+            $this->ElasticTrafficSwitch = $param["ElasticTrafficSwitch"];
         }
     }
 }

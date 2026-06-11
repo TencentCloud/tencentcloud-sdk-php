@@ -49,6 +49,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CreateTagRetentionRuleResponse CreateTagRetentionRule(Models\CreateTagRetentionRuleRequest $req) 创建版本保留规则
  * @method Models\CreateUserPersonalResponse CreateUserPersonal(Models\CreateUserPersonalRequest $req) 创建个人用户
  * @method Models\CreateWebhookTriggerResponse CreateWebhookTrigger(Models\CreateWebhookTriggerRequest $req) 创建触发器
+ * @method Models\DeleteAIModelResponse DeleteAIModel(Models\DeleteAIModelRequest $req) 删除指定模型版本（通过 tag 或 digest 引用）。调用 Harbor v2 API 删除 artifact。
  * @method Models\DeleteApplicationTriggerPersonalResponse DeleteApplicationTriggerPersonal(Models\DeleteApplicationTriggerPersonalRequest $req) 用于删除应用更新触发器
  * @method Models\DeleteImageResponse DeleteImage(Models\DeleteImageRequest $req) 删除指定镜像
  * @method Models\DeleteImageAccelerateServiceResponse DeleteImageAccelerateService(Models\DeleteImageAccelerateServiceRequest $req) 删除镜像加速服务
@@ -72,8 +73,10 @@ use TencentCloud\Tcr\V20190924\Models as Models;
 注意：当PolicyIndex和CidrBlock同时存在时，CidrBlock优先级更高
  * @method Models\DeleteServiceAccountResponse DeleteServiceAccount(Models\DeleteServiceAccountRequest $req) 删除服务级账号
  * @method Models\DeleteSignaturePolicyResponse DeleteSignaturePolicy(Models\DeleteSignaturePolicyRequest $req) 删除命名空间加签策略
+ * @method Models\DeleteSkillResponse DeleteSkill(Models\DeleteSkillRequest $req) 删除指定 Skill
  * @method Models\DeleteTagRetentionRuleResponse DeleteTagRetentionRule(Models\DeleteTagRetentionRuleRequest $req) 删除版本保留规则
  * @method Models\DeleteWebhookTriggerResponse DeleteWebhookTrigger(Models\DeleteWebhookTriggerRequest $req) 删除触发器
+ * @method Models\DescribeAIModelVersionDetailResponse DescribeAIModelVersionDetail(Models\DescribeAIModelVersionDetailRequest $req) 查询模型详情
  * @method Models\DescribeApplicationTriggerLogPersonalResponse DescribeApplicationTriggerLogPersonal(Models\DescribeApplicationTriggerLogPersonalRequest $req) 用于查询应用更新触发器触发日志
  * @method Models\DescribeApplicationTriggerPersonalResponse DescribeApplicationTriggerPersonal(Models\DescribeApplicationTriggerPersonalRequest $req) 用于查询应用更新触发器
  * @method Models\DescribeChartDownloadInfoResponse DescribeChartDownloadInfo(Models\DescribeChartDownloadInfoRequest $req) 用于在企业版中返回Chart的下载信息
@@ -108,6 +111,8 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeRepositoryPersonalResponse DescribeRepositoryPersonal(Models\DescribeRepositoryPersonalRequest $req) 查询个人版仓库信息
  * @method Models\DescribeSecurityPoliciesResponse DescribeSecurityPolicies(Models\DescribeSecurityPoliciesRequest $req) 查询实例公网访问白名单策略
  * @method Models\DescribeServiceAccountsResponse DescribeServiceAccounts(Models\DescribeServiceAccountsRequest $req) 查询服务级账号
+ * @method Models\DescribeSkillDetailResponse DescribeSkillDetail(Models\DescribeSkillDetailRequest $req) 查询单个 Skill 的完整详情
+ * @method Models\DescribeSkillDownloadInfoResponse DescribeSkillDownloadInfo(Models\DescribeSkillDownloadInfoRequest $req) 返回 Skill 下载链接
  * @method Models\DescribeTagRetentionExecutionResponse DescribeTagRetentionExecution(Models\DescribeTagRetentionExecutionRequest $req) 查询版本保留执行记录
  * @method Models\DescribeTagRetentionExecutionTaskResponse DescribeTagRetentionExecutionTask(Models\DescribeTagRetentionExecutionTaskRequest $req) 查询版本保留执行任务
  * @method Models\DescribeTagRetentionRulesResponse DescribeTagRetentionRules(Models\DescribeTagRetentionRulesRequest $req) 查询镜像版本保留规则
@@ -117,6 +122,10 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DownloadHelmChartResponse DownloadHelmChart(Models\DownloadHelmChartRequest $req) 用于在TCR中下载helm chart
  * @method Models\DuplicateImageResponse DuplicateImage(Models\DuplicateImageRequest $req) 用于在企业版镜像仓库中复制镜像版本
  * @method Models\DuplicateImagePersonalResponse DuplicateImagePersonal(Models\DuplicateImagePersonalRequest $req) 用于在个人版镜像仓库中复制镜像版本
+ * @method Models\ListAIModelVersionsResponse ListAIModelVersions(Models\ListAIModelVersionsRequest $req) 查询指定模型仓库的所有版本列表。调用 Harbor v2 API 获取 artifact 列表，从 extra_attrs 提取模型元数据（框架、任务类型、精度等），从 tags 判断是否为推荐版本。
+ * @method Models\ListAIModelsResponse ListAIModels(Models\ListAIModelsRequest $req) 查询指定实例下的 AI 模型列表。可按 namespace 和仓库名过滤。每条记录代表一个模型仓库，返回最新版本信息。
+ * @method Models\ListSkillVersionsResponse ListSkillVersions(Models\ListSkillVersionsRequest $req) 查询指定 Skill 的版本历史列表
+ * @method Models\ListSkillsResponse ListSkills(Models\ListSkillsRequest $req) 查询指定实例下的 AI Skill 列表。
  * @method Models\ManageExternalEndpointResponse ManageExternalEndpoint(Models\ManageExternalEndpointRequest $req) 管理实例公网访问
  * @method Models\ManageImageLifecycleGlobalPersonalResponse ManageImageLifecycleGlobalPersonal(Models\ManageImageLifecycleGlobalPersonalRequest $req) 用于设置个人版全局镜像版本自动清理策略
  * @method Models\ManageInternalEndpointResponse ManageInternalEndpoint(Models\ManageInternalEndpointRequest $req) 管理实例内网访问VPC链接

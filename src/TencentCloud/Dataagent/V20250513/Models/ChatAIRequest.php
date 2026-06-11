@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChatAI请求参数结构体
  *
- * @method string getSessionId() 获取会话ID
- * @method void setSessionId(string $SessionId) 设置会话ID
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getQuestion() 获取问题内容
- * @method void setQuestion(string $Question) 设置问题内容
- * @method string getContext() 获取上下文
- * @method void setContext(string $Context) 设置上下文
- * @method string getModel() 获取模型
- * @method void setModel(string $Model) 设置模型
- * @method boolean getDeepThinking() 获取是否深度思考
- * @method void setDeepThinking(boolean $DeepThinking) 设置是否深度思考
- * @method array getDataSourceIds() 获取数据源id
- * @method void setDataSourceIds(array $DataSourceIds) 设置数据源id
- * @method string getAgentType() 获取agent类型
- * @method void setAgentType(string $AgentType) 设置agent类型
- * @method string getOldRecordId() 获取需要重新生成答案的记录ID
- * @method void setOldRecordId(string $OldRecordId) 设置需要重新生成答案的记录ID
- * @method array getKnowledgeBaseIds() 获取知识库id列表
- * @method void setKnowledgeBaseIds(array $KnowledgeBaseIds) 设置知识库id列表
+ * @method string getSessionId() 获取<p>会话ID</p>
+ * @method void setSessionId(string $SessionId) 设置<p>会话ID</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getQuestion() 获取<p>问题内容</p>
+ * @method void setQuestion(string $Question) 设置<p>问题内容</p>
+ * @method string getContext() 获取<p>上下文</p>
+ * @method void setContext(string $Context) 设置<p>上下文</p>
+ * @method string getModel() 获取<p>模型</p>
+ * @method void setModel(string $Model) 设置<p>模型</p>
+ * @method boolean getDeepThinking() 获取<p>是否深度思考</p>
+ * @method void setDeepThinking(boolean $DeepThinking) 设置<p>是否深度思考</p>
+ * @method array getDataSourceIds() 获取<p>数据源id</p>
+ * @method void setDataSourceIds(array $DataSourceIds) 设置<p>数据源id</p>
+ * @method string getAgentType() 获取<p>agent类型</p>
+ * @method void setAgentType(string $AgentType) 设置<p>agent类型</p>
+ * @method string getOldRecordId() 获取<p>需要重新生成答案的记录ID</p>
+ * @method void setOldRecordId(string $OldRecordId) 设置<p>需要重新生成答案的记录ID</p>
+ * @method array getKnowledgeBaseIds() 获取<p>知识库id列表</p>
+ * @method void setKnowledgeBaseIds(array $KnowledgeBaseIds) 设置<p>知识库id列表</p>
  */
 class ChatAIRequest extends AbstractModel
 {
     /**
-     * @var string 会话ID
+     * @var string <p>会话ID</p>
      */
     public $SessionId;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 问题内容
+     * @var string <p>问题内容</p>
      */
     public $Question;
 
     /**
-     * @var string 上下文
+     * @var string <p>上下文</p>
      */
     public $Context;
 
     /**
-     * @var string 模型
+     * @var string <p>模型</p>
      */
     public $Model;
 
     /**
-     * @var boolean 是否深度思考
+     * @var boolean <p>是否深度思考</p>
      */
     public $DeepThinking;
 
     /**
-     * @var array 数据源id
+     * @var array <p>数据源id</p>
      */
     public $DataSourceIds;
 
     /**
-     * @var string agent类型
+     * @var string <p>agent类型</p>
      */
     public $AgentType;
 
     /**
-     * @var string 需要重新生成答案的记录ID
+     * @var string <p>需要重新生成答案的记录ID</p>
      */
     public $OldRecordId;
 
     /**
-     * @var array 知识库id列表
+     * @var array <p>知识库id列表</p>
      */
     public $KnowledgeBaseIds;
 
     /**
-     * @param string $SessionId 会话ID
-     * @param string $InstanceId 实例ID
-     * @param string $Question 问题内容
-     * @param string $Context 上下文
-     * @param string $Model 模型
-     * @param boolean $DeepThinking 是否深度思考
-     * @param array $DataSourceIds 数据源id
-     * @param string $AgentType agent类型
-     * @param string $OldRecordId 需要重新生成答案的记录ID
-     * @param array $KnowledgeBaseIds 知识库id列表
+     * @param string $SessionId <p>会话ID</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $Question <p>问题内容</p>
+     * @param string $Context <p>上下文</p>
+     * @param string $Model <p>模型</p>
+     * @param boolean $DeepThinking <p>是否深度思考</p>
+     * @param array $DataSourceIds <p>数据源id</p>
+     * @param string $AgentType <p>agent类型</p>
+     * @param string $OldRecordId <p>需要重新生成答案的记录ID</p>
+     * @param array $KnowledgeBaseIds <p>知识库id列表</p>
      */
     function __construct()
     {

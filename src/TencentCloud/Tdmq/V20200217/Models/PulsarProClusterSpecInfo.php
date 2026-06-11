@@ -20,118 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Pulsar专业版集群规格信息
  *
- * @method string getSpecName() 获取集群规格名称
- * @method void setSpecName(string $SpecName) 设置集群规格名称
- * @method integer getMaxTps() 获取峰值tps
- * @method void setMaxTps(integer $MaxTps) 设置峰值tps
- * @method integer getMaxBandWidth() 获取峰值带宽。单位：mbps
- * @method void setMaxBandWidth(integer $MaxBandWidth) 设置峰值带宽。单位：mbps
- * @method integer getMaxNamespaces() 获取最大命名空间个数
- * @method void setMaxNamespaces(integer $MaxNamespaces) 设置最大命名空间个数
- * @method integer getMaxTopics() 获取可以创建的最大主题数
- * @method void setMaxTopics(integer $MaxTopics) 设置可以创建的最大主题数
- * @method integer getScalableTps() 获取规格外弹性TPS
+ * @method string getSpecName() 获取<p>集群规格名称</p>
+ * @method void setSpecName(string $SpecName) 设置<p>集群规格名称</p>
+ * @method integer getMaxTps() 获取<p>峰值tps</p>
+ * @method void setMaxTps(integer $MaxTps) 设置<p>峰值tps</p>
+ * @method integer getMaxBandWidth() 获取<p>峰值带宽。单位：mbps</p>
+ * @method void setMaxBandWidth(integer $MaxBandWidth) 设置<p>峰值带宽。单位：mbps</p>
+ * @method integer getMaxNamespaces() 获取<p>最大命名空间个数</p>
+ * @method void setMaxNamespaces(integer $MaxNamespaces) 设置<p>最大命名空间个数</p>
+ * @method integer getMaxTopics() 获取<p>可以创建的最大主题数</p>
+ * @method void setMaxTopics(integer $MaxTopics) 设置<p>可以创建的最大主题数</p>
+ * @method integer getScalableTps() 获取<p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScalableTps(integer $ScalableTps) 设置规格外弹性TPS
+ * @method void setScalableTps(integer $ScalableTps) 设置<p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxPartitions() 获取32或者128
-当前集群topic的最大分区数
+ * @method integer getMaxPartitions() 获取<p>32或者128<br>当前集群topic的最大分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxPartitions(integer $MaxPartitions) 设置32或者128
-当前集群topic的最大分区数
+ * @method void setMaxPartitions(integer $MaxPartitions) 设置<p>32或者128<br>当前集群topic的最大分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxDelayedMessages() 获取最大延迟消息数量。0代表没有限制	
- * @method void setMaxDelayedMessages(integer $MaxDelayedMessages) 设置最大延迟消息数量。0代表没有限制	
- * @method integer getMaxTopicsPartitioned() 获取可以创建的最大主题分区数
- * @method void setMaxTopicsPartitioned(integer $MaxTopicsPartitioned) 设置可以创建的最大主题分区数
- * @method integer getBrokerMaxConnections() 获取单broker最大链接数
- * @method void setBrokerMaxConnections(integer $BrokerMaxConnections) 设置单broker最大链接数
- * @method integer getBrokerMaxConnectionsPerIp() 获取单IP最大链接数
- * @method void setBrokerMaxConnectionsPerIp(integer $BrokerMaxConnectionsPerIp) 设置单IP最大链接数
- * @method integer getMaximumElasticStorage() 获取弹性存储集群最大存储规格；固定存储该值为0
- * @method void setMaximumElasticStorage(integer $MaximumElasticStorage) 设置弹性存储集群最大存储规格；固定存储该值为0
+ * @method integer getMaxDelayedMessages() 获取<p>最大延迟消息数量。0代表没有限制</p>
+ * @method void setMaxDelayedMessages(integer $MaxDelayedMessages) 设置<p>最大延迟消息数量。0代表没有限制</p>
+ * @method integer getMaxTopicsPartitioned() 获取<p>可以创建的最大主题分区数</p>
+ * @method void setMaxTopicsPartitioned(integer $MaxTopicsPartitioned) 设置<p>可以创建的最大主题分区数</p>
+ * @method integer getBrokerMaxConnections() 获取<p>单broker最大链接数</p>
+ * @method void setBrokerMaxConnections(integer $BrokerMaxConnections) 设置<p>单broker最大链接数</p>
+ * @method integer getBrokerMaxConnectionsPerIp() 获取<p>单IP最大链接数</p>
+ * @method void setBrokerMaxConnectionsPerIp(integer $BrokerMaxConnectionsPerIp) 设置<p>单IP最大链接数</p>
+ * @method integer getMaximumElasticStorage() 获取<p>弹性存储集群最大存储规格；固定存储该值为0</p>
+ * @method void setMaximumElasticStorage(integer $MaximumElasticStorage) 设置<p>弹性存储集群最大存储规格；固定存储该值为0</p>
+ * @method integer getTotalTps() 获取<p>当前集群可使用的全量TPS，包括弹性TPS</p>
+ * @method void setTotalTps(integer $TotalTps) 设置<p>当前集群可使用的全量TPS，包括弹性TPS</p>
  */
 class PulsarProClusterSpecInfo extends AbstractModel
 {
     /**
-     * @var string 集群规格名称
+     * @var string <p>集群规格名称</p>
      */
     public $SpecName;
 
     /**
-     * @var integer 峰值tps
+     * @var integer <p>峰值tps</p>
      */
     public $MaxTps;
 
     /**
-     * @var integer 峰值带宽。单位：mbps
+     * @var integer <p>峰值带宽。单位：mbps</p>
      */
     public $MaxBandWidth;
 
     /**
-     * @var integer 最大命名空间个数
+     * @var integer <p>最大命名空间个数</p>
      */
     public $MaxNamespaces;
 
     /**
-     * @var integer 可以创建的最大主题数
+     * @var integer <p>可以创建的最大主题数</p>
      */
     public $MaxTopics;
 
     /**
-     * @var integer 规格外弹性TPS
+     * @var integer <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScalableTps;
 
     /**
-     * @var integer 32或者128
-当前集群topic的最大分区数
+     * @var integer <p>32或者128<br>当前集群topic的最大分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxPartitions;
 
     /**
-     * @var integer 最大延迟消息数量。0代表没有限制	
+     * @var integer <p>最大延迟消息数量。0代表没有限制</p>
      */
     public $MaxDelayedMessages;
 
     /**
-     * @var integer 可以创建的最大主题分区数
+     * @var integer <p>可以创建的最大主题分区数</p>
      */
     public $MaxTopicsPartitioned;
 
     /**
-     * @var integer 单broker最大链接数
+     * @var integer <p>单broker最大链接数</p>
      */
     public $BrokerMaxConnections;
 
     /**
-     * @var integer 单IP最大链接数
+     * @var integer <p>单IP最大链接数</p>
      */
     public $BrokerMaxConnectionsPerIp;
 
     /**
-     * @var integer 弹性存储集群最大存储规格；固定存储该值为0
+     * @var integer <p>弹性存储集群最大存储规格；固定存储该值为0</p>
      */
     public $MaximumElasticStorage;
 
     /**
-     * @param string $SpecName 集群规格名称
-     * @param integer $MaxTps 峰值tps
-     * @param integer $MaxBandWidth 峰值带宽。单位：mbps
-     * @param integer $MaxNamespaces 最大命名空间个数
-     * @param integer $MaxTopics 可以创建的最大主题数
-     * @param integer $ScalableTps 规格外弹性TPS
+     * @var integer <p>当前集群可使用的全量TPS，包括弹性TPS</p>
+     */
+    public $TotalTps;
+
+    /**
+     * @param string $SpecName <p>集群规格名称</p>
+     * @param integer $MaxTps <p>峰值tps</p>
+     * @param integer $MaxBandWidth <p>峰值带宽。单位：mbps</p>
+     * @param integer $MaxNamespaces <p>最大命名空间个数</p>
+     * @param integer $MaxTopics <p>可以创建的最大主题数</p>
+     * @param integer $ScalableTps <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxPartitions 32或者128
-当前集群topic的最大分区数
+     * @param integer $MaxPartitions <p>32或者128<br>当前集群topic的最大分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxDelayedMessages 最大延迟消息数量。0代表没有限制	
-     * @param integer $MaxTopicsPartitioned 可以创建的最大主题分区数
-     * @param integer $BrokerMaxConnections 单broker最大链接数
-     * @param integer $BrokerMaxConnectionsPerIp 单IP最大链接数
-     * @param integer $MaximumElasticStorage 弹性存储集群最大存储规格；固定存储该值为0
+     * @param integer $MaxDelayedMessages <p>最大延迟消息数量。0代表没有限制</p>
+     * @param integer $MaxTopicsPartitioned <p>可以创建的最大主题分区数</p>
+     * @param integer $BrokerMaxConnections <p>单broker最大链接数</p>
+     * @param integer $BrokerMaxConnectionsPerIp <p>单IP最大链接数</p>
+     * @param integer $MaximumElasticStorage <p>弹性存储集群最大存储规格；固定存储该值为0</p>
+     * @param integer $TotalTps <p>当前集群可使用的全量TPS，包括弹性TPS</p>
      */
     function __construct()
     {
@@ -192,6 +196,10 @@ class PulsarProClusterSpecInfo extends AbstractModel
 
         if (array_key_exists("MaximumElasticStorage",$param) and $param["MaximumElasticStorage"] !== null) {
             $this->MaximumElasticStorage = $param["MaximumElasticStorage"];
+        }
+
+        if (array_key_exists("TotalTps",$param) and $param["TotalTps"] !== null) {
+            $this->TotalTps = $param["TotalTps"];
         }
     }
 }

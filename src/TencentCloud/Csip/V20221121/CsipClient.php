@@ -42,6 +42,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreateDspmPersonalIdentifyResponse CreateDspmPersonalIdentify(Models\CreateDspmPersonalIdentifyRequest $req) 创建Dspm个人身份id
  * @method Models\CreateDspmRiskExportJobResponse CreateDspmRiskExportJob(Models\CreateDspmRiskExportJobRequest $req) 创建Dspm风险导出任务
  * @method Models\CreateDspmWhitelistStrategyResponse CreateDspmWhitelistStrategy(Models\CreateDspmWhitelistStrategyRequest $req) 创建Dspm白名单策略
+ * @method Models\CreateIaCAccessTokenResponse CreateIaCAccessToken(Models\CreateIaCAccessTokenRequest $req) 创建IaC检测接入Token
+ * @method Models\CreateIaCFileExportJobResponse CreateIaCFileExportJob(Models\CreateIaCFileExportJobRequest $req) 创建IaC检测文件导出任务
+ * @method Models\CreateIaCFileReScanTaskResponse CreateIaCFileReScanTask(Models\CreateIaCFileReScanTaskRequest $req) 创建IaC检测文件重新扫描任务
  * @method Models\CreateRiskCenterScanTaskResponse CreateRiskCenterScanTask(Models\CreateRiskCenterScanTaskRequest $req) 创建风险中心扫描任务
  * @method Models\CreateSkillScanResponse CreateSkillScan(Models\CreateSkillScanRequest $req) 上传 Skill ZIP 文件，触发异步安全检测。上传成功后应使用返回的 ContentHash + EngineVersion 轮询 DescribeSkillScanResult 接口获取结果。上传接口具备幂等性，同一 Hash 的文件重复上传不会创建重复任务。检测结果保留90天，超期后需重新上传检测。
  * @method Models\DeleteCosAkAssetResponse DeleteCosAkAsset(Models\DeleteCosAkAssetRequest $req) 删除已删除的cos ak资产
@@ -54,6 +57,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DeleteDspmPersonalIdentifyResponse DeleteDspmPersonalIdentify(Models\DeleteDspmPersonalIdentifyRequest $req) 删除Dspm个人身份id
  * @method Models\DeleteDspmRestoreLogListResponse DeleteDspmRestoreLogList(Models\DeleteDspmRestoreLogListRequest $req) 删除恢复日志
  * @method Models\DeleteDspmWhitelistStrategyResponse DeleteDspmWhitelistStrategy(Models\DeleteDspmWhitelistStrategyRequest $req) 删除Dspm白名单策略
+ * @method Models\DeleteIaCAccessTokenResponse DeleteIaCAccessToken(Models\DeleteIaCAccessTokenRequest $req) 删除IaC检测接入Token
+ * @method Models\DeleteIaCFileResponse DeleteIaCFile(Models\DeleteIaCFileRequest $req) 删除IaC检测文件
  * @method Models\DeleteRiskScanTaskResponse DeleteRiskScanTask(Models\DeleteRiskScanTaskRequest $req) 删除风险中心扫描任务
  * @method Models\DescribeAIAgentAssetListResponse DescribeAIAgentAssetList(Models\DescribeAIAgentAssetListRequest $req) 获取 AI agent 资产列表
  * @method Models\DescribeAKAnalysisDetailResponse DescribeAKAnalysisDetail(Models\DescribeAKAnalysisDetailRequest $req) 访问密钥告警记录AI分析结果详情
@@ -158,6 +163,10 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeExposuresResponse DescribeExposures(Models\DescribeExposuresRequest $req) 云边界分析资产列表
  * @method Models\DescribeGatewayAssetsResponse DescribeGatewayAssets(Models\DescribeGatewayAssetsRequest $req) 获取网关列表
  * @method Models\DescribeHighBaseLineRiskListResponse DescribeHighBaseLineRiskList(Models\DescribeHighBaseLineRiskListRequest $req) 查询云边界分析-暴露路径下主机节点的高危基线风险列表
+ * @method Models\DescribeIaCFileListResponse DescribeIaCFileList(Models\DescribeIaCFileListRequest $req) 获取IaC检测文件列表
+ * @method Models\DescribeIaCFileOverviewResponse DescribeIaCFileOverview(Models\DescribeIaCFileOverviewRequest $req) 获取IaC检测文件概览
+ * @method Models\DescribeIaCFileReportResponse DescribeIaCFileReport(Models\DescribeIaCFileReportRequest $req) 获取IaC检测文件报告
+ * @method Models\DescribeIaCTokenListResponse DescribeIaCTokenList(Models\DescribeIaCTokenListRequest $req) 获取IaC检测接入Token列表
  * @method Models\DescribeIpInvokeRecordResponse DescribeIpInvokeRecord(Models\DescribeIpInvokeRecordRequest $req) 对象存储异常检测调用记录信息
  * @method Models\DescribeIpInvokeRecordDetailResponse DescribeIpInvokeRecordDetail(Models\DescribeIpInvokeRecordDetailRequest $req) ip访问列表详情信息
  * @method Models\DescribeKeySandboxCredentialResponse DescribeKeySandboxCredential(Models\DescribeKeySandboxCredentialRequest $req) 查询凭证详情，返回凭证元数据和打码后的凭据数据。access类型返回Access数组（Key原文、Value打码），sts类型返回STS对象（System原文、SecretID和SecretKey打码）
@@ -226,6 +235,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\ModifyDspmRiskInfoResponse ModifyDspmRiskInfo(Models\ModifyDspmRiskInfoRequest $req) 修改Dspm风险信息
  * @method Models\ModifyDspmRiskStrategyResponse ModifyDspmRiskStrategy(Models\ModifyDspmRiskStrategyRequest $req) 修改Dspm风险策略
  * @method Models\ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategy(Models\ModifyDspmWhitelistStrategyRequest $req) 修改Dspm白名单策略
+ * @method Models\ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriod(Models\ModifyIaCTokenPeriodRequest $req) 修改IaC检测接入Token存储周期
  * @method Models\ModifyOrganizationAccountStatusResponse ModifyOrganizationAccountStatus(Models\ModifyOrganizationAccountStatusRequest $req) 修改集团账号状态
  * @method Models\ModifyPolicyStatusResponse ModifyPolicyStatus(Models\ModifyPolicyStatusRequest $req) 修改策略状态
  * @method Models\ModifyRiskCenterRiskStatusResponse ModifyRiskCenterRiskStatus(Models\ModifyRiskCenterRiskStatusRequest $req) 修改风险中心风险状态

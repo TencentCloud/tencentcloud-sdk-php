@@ -23,7 +23,6 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Iss\V20230517\Models as Models;
 
 /**
- * @method Models\AddAITaskResponse AddAITask(Models\AddAITaskRequest $req) 添加AI任务
  * @method Models\AddOrganizationResponse AddOrganization(Models\AddOrganizationRequest $req) 用于新增组织。
  * @method Models\AddRecordBackupPlanResponse AddRecordBackupPlan(Models\AddRecordBackupPlanRequest $req) 用于新增录像上云计划 （当前仅适用于通过GB28181协议和网关接入的设备/视频通道）
  * @method Models\AddRecordBackupTemplateResponse AddRecordBackupTemplate(Models\AddRecordBackupTemplateRequest $req) 用于新增录像上云模板。
@@ -45,7 +44,6 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\ControlRecordResponse ControlRecord(Models\ControlRecordRequest $req) 用于录像回放过程中的倍速、跳转、播放/暂停/停止等控制。
  * @method Models\ControlRecordTimelineResponse ControlRecordTimeline(Models\ControlRecordTimelineRequest $req) 用于查询设备本地录像时间轴信息，为NVR/IPC本地存储的录像。
  * @method Models\CreateVideoDownloadTaskResponse CreateVideoDownloadTask(Models\CreateVideoDownloadTaskRequest $req) 创建本地录像下载任务
- * @method Models\DeleteAITaskResponse DeleteAITask(Models\DeleteAITaskRequest $req) 删除AI任务
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 用于删除域名。
  * @method Models\DeleteGatewayResponse DeleteGateway(Models\DeleteGatewayRequest $req) 用于删除网关。
  * @method Models\DeleteOrganizationResponse DeleteOrganization(Models\DeleteOrganizationRequest $req) 用于删除组织。
@@ -56,8 +54,6 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DeleteRecordTemplateResponse DeleteRecordTemplate(Models\DeleteRecordTemplateRequest $req) 用于删除实时上云模板
  * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 用于删除执行完成的任务
  * @method Models\DeleteUserDeviceResponse DeleteUserDevice(Models\DeleteUserDeviceRequest $req) 用于删除已添加的设备。
- * @method Models\DescribeAITaskResponse DescribeAITask(Models\DescribeAITaskRequest $req) 获取AI任务详情
- * @method Models\DescribeAITaskResultResponse DescribeAITaskResult(Models\DescribeAITaskResultRequest $req) 获取AI任务识别结果
  * @method Models\DescribeCNAMEResponse DescribeCNAME(Models\DescribeCNAMERequest $req) 用于根据服务节点获取 CNAME 值。
  * @method Models\DescribeDeviceChannelResponse DescribeDeviceChannel(Models\DescribeDeviceChannelRequest $req) 用于查询设备的通道。
  * @method Models\DescribeDevicePresetResponse DescribeDevicePreset(Models\DescribeDevicePresetRequest $req) 用于查询设备通道预置位信息。
@@ -85,7 +81,6 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeUserDeviceListResponse DescribeUserDeviceList(Models\DescribeUserDeviceListRequest $req) 用于批量查询设备详细信息。
  * @method Models\DescribeVideoBitRateResponse DescribeVideoBitRate(Models\DescribeVideoBitRateRequest $req) 用于获取视频通道的码率信息
  * @method Models\DescribeVideoDownloadUrlResponse DescribeVideoDownloadUrl(Models\DescribeVideoDownloadUrlRequest $req) 用于获取云录像下载 url
- * @method Models\ListAITasksResponse ListAITasks(Models\ListAITasksRequest $req) 获取AI任务列表
  * @method Models\ListDeviceSnapshotsResponse ListDeviceSnapshots(Models\ListDeviceSnapshotsRequest $req) 获取设备抓拍结果列表
  * @method Models\ListDevicesResponse ListDevices(Models\ListDevicesRequest $req) 用于获取对应组织下的设备列表。
  * @method Models\ListGatewayDevicesResponse ListGatewayDevices(Models\ListGatewayDevicesRequest $req) 用于查询网关下挂载的设备列表。
@@ -107,8 +102,6 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\QueryForbidPlayChannelListResponse QueryForbidPlayChannelList(Models\QueryForbidPlayChannelListRequest $req) 查询禁播通道列表
  * @method Models\RefreshDeviceChannelResponse RefreshDeviceChannel(Models\RefreshDeviceChannelRequest $req) 用于同步国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
  * @method Models\SetForbidPlayChannelsResponse SetForbidPlayChannels(Models\SetForbidPlayChannelsRequest $req) 禁止主、子账号对视频通道的实况预览
- * @method Models\UpdateAITaskResponse UpdateAITask(Models\UpdateAITaskRequest $req) 更新AI任务
- * @method Models\UpdateAITaskStatusResponse UpdateAITaskStatus(Models\UpdateAITaskStatusRequest $req) 更新 AI 任务状态
  * @method Models\UpdateDeviceOrganizationResponse UpdateDeviceOrganization(Models\UpdateDeviceOrganizationRequest $req) 用于批量更改设备的组织。
  * @method Models\UpdateDeviceStatusResponse UpdateDeviceStatus(Models\UpdateDeviceStatusRequest $req) 用于启用/禁用设备，禁用后拒绝设备注册。
  * @method Models\UpdateGatewayResponse UpdateGateway(Models\UpdateGatewayRequest $req) 用于修改网关信息（支持对网关名称和描述的修改）。

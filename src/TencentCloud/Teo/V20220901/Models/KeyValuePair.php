@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * KV 键值对数据，包含键名、键值和过期时间信息。
  *
- * @method string getKey() 获取键名。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。
- * @method void setKey(string $Key) 设置键名。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。
+ * @method string getKey() 获取键名。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。
+ * @method void setKey(string $Key) 设置键名。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。
  * @method string getValue() 获取键值。入参时不能为空，最大支持 1 MB。出参时若键不存在，则返回空字符串。
  * @method void setValue(string $Value) 设置键值。入参时不能为空，最大支持 1 MB。出参时若键不存在，则返回空字符串。
  * @method string getExpiration() 获取过期时间，遵循 ISO 8601 标准，格式为 YYYY-MM-DDThh:mm:ssZ（UTC 时间）。出参时若为空字符串，表示该键值对永不过期。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class KeyValuePair extends AbstractModel
 {
     /**
-     * @var string 键名。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。
+     * @var string 键名。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。
      */
     public $Key;
 
@@ -45,7 +45,7 @@ class KeyValuePair extends AbstractModel
     public $Expiration;
 
     /**
-     * @param string $Key 键名。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。
+     * @param string $Key 键名。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。
      * @param string $Value 键值。入参时不能为空，最大支持 1 MB。出参时若键不存在，则返回空字符串。
      * @param string $Expiration 过期时间，遵循 ISO 8601 标准，格式为 YYYY-MM-DDThh:mm:ssZ（UTC 时间）。出参时若为空字符串，表示该键值对永不过期。
      */

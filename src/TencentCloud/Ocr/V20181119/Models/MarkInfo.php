@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuestionImagePositions(array $QuestionImagePositions) 设置<p>题干插图坐标列表，每个元素包含一张插图的4个角点坐标</p>
  * @method string getRightAnswer() 获取<p>题目级正确答案（步骤批改时使用，包含完整解题步骤）</p>
  * @method void setRightAnswer(string $RightAnswer) 设置<p>题目级正确答案（步骤批改时使用，包含完整解题步骤）</p>
+ * @method string getSubject() 获取<p>学科（如语文、数学、英语）</p>
+ * @method void setSubject(string $Subject) 设置<p>学科（如语文、数学、英语）</p>
+ * @method string getQuestionType() 获取<p>题型（如选择题、填空题、计算题、应用题、判断题、作文题）</p>
+ * @method void setQuestionType(string $QuestionType) 设置<p>题型（如选择题、填空题、计算题、应用题、判断题、作文题）</p>
  */
 class MarkInfo extends AbstractModel
 {
@@ -66,12 +70,24 @@ class MarkInfo extends AbstractModel
     public $RightAnswer;
 
     /**
+     * @var string <p>学科（如语文、数学、英语）</p>
+     */
+    public $Subject;
+
+    /**
+     * @var string <p>题型（如选择题、填空题、计算题、应用题、判断题、作文题）</p>
+     */
+    public $QuestionType;
+
+    /**
      * @param string $MarkItemTitle <p>题目的题干信息</p>
      * @param array $AnswerInfos <p>批改答案列表（每个小题存在多个答案，比如多个填空区域答案，循序按照从左到右，从上到下排列）</p>
      * @param array $MarkInfos <p>嵌套题目结构（如果有多层嵌套则会返回子题信息，如果没有嵌套题目则返回空）</p>
      * @param array $QuestionPositions <p>题干坐标</p><p>单位：px</p>
      * @param array $QuestionImagePositions <p>题干插图坐标列表，每个元素包含一张插图的4个角点坐标</p>
      * @param string $RightAnswer <p>题目级正确答案（步骤批改时使用，包含完整解题步骤）</p>
+     * @param string $Subject <p>学科（如语文、数学、英语）</p>
+     * @param string $QuestionType <p>题型（如选择题、填空题、计算题、应用题、判断题、作文题）</p>
      */
     function __construct()
     {
@@ -123,6 +139,14 @@ class MarkInfo extends AbstractModel
 
         if (array_key_exists("RightAnswer",$param) and $param["RightAnswer"] !== null) {
             $this->RightAnswer = $param["RightAnswer"];
+        }
+
+        if (array_key_exists("Subject",$param) and $param["Subject"] !== null) {
+            $this->Subject = $param["Subject"];
+        }
+
+        if (array_key_exists("QuestionType",$param) and $param["QuestionType"] !== null) {
+            $this->QuestionType = $param["QuestionType"];
         }
     }
 }

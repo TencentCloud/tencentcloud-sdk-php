@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResizeDisk请求参数结构体
  *
- * @method integer getDiskSize() 获取云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
- * @method void setDiskSize(integer $DiskSize) 设置云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
- * @method string getDiskId() 获取云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。该字段仅供单块云硬盘扩容时传入。
- * @method void setDiskId(string $DiskId) 设置云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。该字段仅供单块云硬盘扩容时传入。
+ * @method integer getDiskSize() 获取<p>云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘<a href="/document/product/362/2353">产品分类</a>的说明。</p>
+ * @method void setDiskSize(integer $DiskSize) 设置<p>云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘<a href="/document/product/362/2353">产品分类</a>的说明。</p>
+ * @method string getDiskId() 获取<p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。该字段仅供单块云硬盘扩容时传入。</p>
+ * @method void setDiskId(string $DiskId) 设置<p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。该字段仅供单块云硬盘扩容时传入。</p>
  */
 class ResizeDiskRequest extends AbstractModel
 {
     /**
-     * @var integer 云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+     * @var integer <p>云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘<a href="/document/product/362/2353">产品分类</a>的说明。</p>
      */
     public $DiskSize;
 
     /**
-     * @var string 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。该字段仅供单块云硬盘扩容时传入。
+     * @var string <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。该字段仅供单块云硬盘扩容时传入。</p>
      */
     public $DiskId;
 
     /**
-     * @param integer $DiskSize 云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
-     * @param string $DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。该字段仅供单块云硬盘扩容时传入。
+     * @param integer $DiskSize <p>云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘<a href="/document/product/362/2353">产品分类</a>的说明。</p>
+     * @param string $DiskId <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。该字段仅供单块云硬盘扩容时传入。</p>
      */
     function __construct()
     {

@@ -20,27 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 运行时安全，异常进程检测策略
  *
- * @method boolean getIsEnable() 获取true:策略启用，false:策略禁用
- * @method void setIsEnable(boolean $IsEnable) 设置true:策略启用，false:策略禁用
- * @method array getImageIds() 获取生效镜像id，空数组代表全部镜像
- * @method void setImageIds(array $ImageIds) 设置生效镜像id，空数组代表全部镜像
  * @method array getChildRules() 获取用户策略的子策略数组
  * @method void setChildRules(array $ChildRules) 设置用户策略的子策略数组
+ * @method array getImageIds() 获取生效镜像id，空数组代表全部镜像
+ * @method void setImageIds(array $ImageIds) 设置生效镜像id，空数组代表全部镜像
+ * @method boolean getIsEnable() 获取true:策略启用，false:策略禁用
+ * @method void setIsEnable(boolean $IsEnable) 设置true:策略启用，false:策略禁用
  * @method string getRuleName() 获取策略名字
  * @method void setRuleName(string $RuleName) 设置策略名字
+ * @method boolean getIsDefault() 获取是否是系统默认策略
+ * @method void setIsDefault(boolean $IsDefault) 设置是否是系统默认策略
+ * @method boolean getIsGlobal() 获取是否为全部镜像规则。true表示对所有镜像生效
+ * @method void setIsGlobal(boolean $IsGlobal) 设置是否为全部镜像规则。true表示对所有镜像生效
  * @method string getRuleId() 获取策略id
  * @method void setRuleId(string $RuleId) 设置策略id
  * @method array getSystemChildRules() 获取系统策略的子策略数组
  * @method void setSystemChildRules(array $SystemChildRules) 设置系统策略的子策略数组
- * @method boolean getIsDefault() 获取是否是系统默认策略
- * @method void setIsDefault(boolean $IsDefault) 设置是否是系统默认策略
  */
 class AbnormalProcessRuleInfo extends AbstractModel
 {
     /**
-     * @var boolean true:策略启用，false:策略禁用
+     * @var array 用户策略的子策略数组
      */
-    public $IsEnable;
+    public $ChildRules;
 
     /**
      * @var array 生效镜像id，空数组代表全部镜像
@@ -48,14 +50,24 @@ class AbnormalProcessRuleInfo extends AbstractModel
     public $ImageIds;
 
     /**
-     * @var array 用户策略的子策略数组
+     * @var boolean true:策略启用，false:策略禁用
      */
-    public $ChildRules;
+    public $IsEnable;
 
     /**
      * @var string 策略名字
      */
     public $RuleName;
+
+    /**
+     * @var boolean 是否是系统默认策略
+     */
+    public $IsDefault;
+
+    /**
+     * @var boolean 是否为全部镜像规则。true表示对所有镜像生效
+     */
+    public $IsGlobal;
 
     /**
      * @var string 策略id
@@ -68,18 +80,14 @@ class AbnormalProcessRuleInfo extends AbstractModel
     public $SystemChildRules;
 
     /**
-     * @var boolean 是否是系统默认策略
-     */
-    public $IsDefault;
-
-    /**
-     * @param boolean $IsEnable true:策略启用，false:策略禁用
-     * @param array $ImageIds 生效镜像id，空数组代表全部镜像
      * @param array $ChildRules 用户策略的子策略数组
+     * @param array $ImageIds 生效镜像id，空数组代表全部镜像
+     * @param boolean $IsEnable true:策略启用，false:策略禁用
      * @param string $RuleName 策略名字
+     * @param boolean $IsDefault 是否是系统默认策略
+     * @param boolean $IsGlobal 是否为全部镜像规则。true表示对所有镜像生效
      * @param string $RuleId 策略id
      * @param array $SystemChildRules 系统策略的子策略数组
-     * @param boolean $IsDefault 是否是系统默认策略
      */
     function __construct()
     {
@@ -94,14 +102,6 @@ class AbnormalProcessRuleInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
-            $this->IsEnable = $param["IsEnable"];
-        }
-
-        if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
-            $this->ImageIds = $param["ImageIds"];
-        }
-
         if (array_key_exists("ChildRules",$param) and $param["ChildRules"] !== null) {
             $this->ChildRules = [];
             foreach ($param["ChildRules"] as $key => $value){
@@ -111,8 +111,24 @@ class AbnormalProcessRuleInfo extends AbstractModel
             }
         }
 
+        if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
+            $this->ImageIds = $param["ImageIds"];
+        }
+
+        if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
+            $this->IsEnable = $param["IsEnable"];
+        }
+
         if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
             $this->RuleName = $param["RuleName"];
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
         }
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
@@ -126,10 +142,6 @@ class AbnormalProcessRuleInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SystemChildRules, $obj);
             }
-        }
-
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
         }
     }
 }

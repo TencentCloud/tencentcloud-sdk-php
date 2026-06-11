@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置<p>描述</p>
  * @method string getCreateTime() 获取<p>集群创建时间</p>
  * @method void setCreateTime(string $CreateTime) 设置<p>集群创建时间</p>
- * @method string getUpdateTime() 获取<p>最后一次操作集群的时间</p>
- * @method void setUpdateTime(string $UpdateTime) 设置<p>最后一次操作集群的时间</p>
+ * @method string getUpdateTime() 获取<p>最后一次操作集群的时间</p><p>默认值：-</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最后一次操作集群的时间</p><p>默认值：-</p>
  * @method integer getCuNum() 获取<p>CU 数量</p>
  * @method void setCuNum(integer $CuNum) 设置<p>CU 数量</p>
  * @method integer getCuMem() 获取<p>CU 内存规格</p>
@@ -58,9 +58,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置<p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIsolatedTime() 获取<p>集群隔离时间; 没隔离时间，则为 -</p>
+ * @method string getIsolatedTime() 获取<p>集群隔离时间; 没隔离时间，则为 -</p><p>默认值：-</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsolatedTime(string $IsolatedTime) 设置<p>集群隔离时间; 没隔离时间，则为 -</p>
+ * @method void setIsolatedTime(string $IsolatedTime) 设置<p>集群隔离时间; 没隔离时间，则为 -</p><p>默认值：-</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取<p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -212,6 +212,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxCuPerJob() 获取<p>单作业最大可配置 CU 数</p>
  * @method void setMaxCuPerJob(integer $MaxCuPerJob) 设置<p>单作业最大可配置 CU 数</p>
+ * @method HiveMetastoreInfo getHiveMetastore() 获取<p>元数据服务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHiveMetastore(HiveMetastoreInfo $HiveMetastore) 设置<p>元数据服务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecurityGroupIds() 获取<p>安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNetEniType() 获取<p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
+ * @method void setNetEniType(integer $NetEniType) 设置<p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
  */
 class Cluster extends AbstractModel
 {
@@ -261,7 +271,7 @@ class Cluster extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string <p>最后一次操作集群的时间</p>
+     * @var string <p>最后一次操作集群的时间</p><p>默认值：-</p>
      */
     public $UpdateTime;
 
@@ -307,7 +317,7 @@ class Cluster extends AbstractModel
     public $Tags;
 
     /**
-     * @var string <p>集群隔离时间; 没隔离时间，则为 -</p>
+     * @var string <p>集群隔离时间; 没隔离时间，则为 -</p><p>默认值：-</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolatedTime;
@@ -552,6 +562,23 @@ class Cluster extends AbstractModel
     public $MaxCuPerJob;
 
     /**
+     * @var HiveMetastoreInfo <p>元数据服务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HiveMetastore;
+
+    /**
+     * @var array <p>安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @var integer <p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
+     */
+    public $NetEniType;
+
+    /**
      * @param string $ClusterId <p>集群 ID</p>
      * @param string $Name <p>集群名称</p>
      * @param string $Region <p>地域</p>
@@ -561,7 +588,7 @@ class Cluster extends AbstractModel
      * @param integer $Status <p>集群状态, 1 未初始化,3 初始化中，2 运行中</p>
      * @param string $Remark <p>描述</p>
      * @param string $CreateTime <p>集群创建时间</p>
-     * @param string $UpdateTime <p>最后一次操作集群的时间</p>
+     * @param string $UpdateTime <p>最后一次操作集群的时间</p><p>默认值：-</p>
      * @param integer $CuNum <p>CU 数量</p>
      * @param integer $CuMem <p>CU 内存规格</p>
      * @param string $Zone <p>可用区</p>
@@ -571,7 +598,7 @@ class Cluster extends AbstractModel
      * @param integer $FreeCuNum <p>空闲 CU</p>
      * @param array $Tags <p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IsolatedTime <p>集群隔离时间; 没隔离时间，则为 -</p>
+     * @param string $IsolatedTime <p>集群隔离时间; 没隔离时间，则为 -</p><p>默认值：-</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime <p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -648,6 +675,11 @@ class Cluster extends AbstractModel
      * @param string $ClusterProcessMsg <p>集群进度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxCuPerJob <p>单作业最大可配置 CU 数</p>
+     * @param HiveMetastoreInfo $HiveMetastore <p>元数据服务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecurityGroupIds <p>安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NetEniType <p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
      */
     function __construct()
     {
@@ -943,6 +975,19 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("MaxCuPerJob",$param) and $param["MaxCuPerJob"] !== null) {
             $this->MaxCuPerJob = $param["MaxCuPerJob"];
+        }
+
+        if (array_key_exists("HiveMetastore",$param) and $param["HiveMetastore"] !== null) {
+            $this->HiveMetastore = new HiveMetastoreInfo();
+            $this->HiveMetastore->deserialize($param["HiveMetastore"]);
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("NetEniType",$param) and $param["NetEniType"] !== null) {
+            $this->NetEniType = $param["NetEniType"];
         }
     }
 }

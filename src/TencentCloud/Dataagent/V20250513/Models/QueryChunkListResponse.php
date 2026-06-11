@@ -20,22 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryChunkList返回参数结构体
  *
- * @method integer getTotal() 获取总数
- * @method void setTotal(integer $Total) 设置总数
- * @method array getChunks() 获取分片信息
- * @method void setChunks(array $Chunks) 设置分片信息
+ * @method integer getTotal() 获取<p>总数</p>
+ * @method void setTotal(integer $Total) 设置<p>总数</p>
+ * @method integer getAutoTotal() 获取<p>文档的自动分段数</p>
+ * @method void setAutoTotal(integer $AutoTotal) 设置<p>文档的自动分段数</p>
+ * @method integer getManualTotal() 获取<p>文档的手动新建分段数</p>
+ * @method void setManualTotal(integer $ManualTotal) 设置<p>文档的手动新建分段数</p>
+ * @method array getChunks() 获取<p>分片信息</p>
+ * @method void setChunks(array $Chunks) 设置<p>分片信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class QueryChunkListResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var integer <p>总数</p>
      */
     public $Total;
 
     /**
-     * @var array 分片信息
+     * @var integer <p>文档的自动分段数</p>
+     */
+    public $AutoTotal;
+
+    /**
+     * @var integer <p>文档的手动新建分段数</p>
+     */
+    public $ManualTotal;
+
+    /**
+     * @var array <p>分片信息</p>
      */
     public $Chunks;
 
@@ -45,8 +59,10 @@ class QueryChunkListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总数
-     * @param array $Chunks 分片信息
+     * @param integer $Total <p>总数</p>
+     * @param integer $AutoTotal <p>文档的自动分段数</p>
+     * @param integer $ManualTotal <p>文档的手动新建分段数</p>
+     * @param array $Chunks <p>分片信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -64,6 +80,14 @@ class QueryChunkListResponse extends AbstractModel
         }
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("AutoTotal",$param) and $param["AutoTotal"] !== null) {
+            $this->AutoTotal = $param["AutoTotal"];
+        }
+
+        if (array_key_exists("ManualTotal",$param) and $param["ManualTotal"] !== null) {
+            $this->ManualTotal = $param["ManualTotal"];
         }
 
         if (array_key_exists("Chunks",$param) and $param["Chunks"] !== null) {

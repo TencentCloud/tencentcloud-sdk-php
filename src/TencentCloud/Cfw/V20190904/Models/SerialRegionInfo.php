@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 防火墙串行地域带宽分配情况
  *
- * @method string getRegion() 获取地域
+ * @method string getRegion() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
+ * @method void setRegion(string $Region) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWidth() 获取分配带宽值 单位Mbps
+ * @method integer getWidth() 获取<p>分配带宽值 单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidth(integer $Width) 设置分配带宽值 单位Mbps
+ * @method void setWidth(integer $Width) 设置<p>分配带宽值 单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getElasticSwitch() 获取弹性开关
+ * @method integer getElasticSwitch() 获取<p>弹性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setElasticSwitch(integer $ElasticSwitch) 设置弹性开关
+ * @method void setElasticSwitch(integer $ElasticSwitch) 设置<p>弹性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getElasticBandwidth() 获取弹性带宽上限，单位Mbps
+ * @method integer getElasticBandwidth() 获取<p>弹性带宽上限，单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置弹性带宽上限，单位Mbps
+ * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置<p>弹性带宽上限，单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInFlowMax() 获取七天入向峰值带宽，单位bps
- * @method void setInFlowMax(integer $InFlowMax) 设置七天入向峰值带宽，单位bps
- * @method integer getOutFlowMax() 获取七天出向峰值带宽，单位bps
- * @method void setOutFlowMax(integer $OutFlowMax) 设置七天出向峰值带宽，单位bps
+ * @method integer getInFlowMax() 获取<p>七天入向峰值带宽，单位bps</p>
+ * @method void setInFlowMax(integer $InFlowMax) 设置<p>七天入向峰值带宽，单位bps</p>
+ * @method integer getOutFlowMax() 获取<p>七天出向峰值带宽，单位bps</p>
+ * @method void setOutFlowMax(integer $OutFlowMax) 设置<p>七天出向峰值带宽，单位bps</p>
+ * @method integer getElasticTrafficSwitch() 获取<p>边界按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+ * @method void setElasticTrafficSwitch(integer $ElasticTrafficSwitch) 设置<p>边界按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
  */
 class SerialRegionInfo extends AbstractModel
 {
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var integer 分配带宽值 单位Mbps
+     * @var integer <p>分配带宽值 单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
-     * @var integer 弹性开关
+     * @var integer <p>弹性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticSwitch;
 
     /**
-     * @var integer 弹性带宽上限，单位Mbps
+     * @var integer <p>弹性带宽上限，单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticBandwidth;
 
     /**
-     * @var integer 七天入向峰值带宽，单位bps
+     * @var integer <p>七天入向峰值带宽，单位bps</p>
      */
     public $InFlowMax;
 
     /**
-     * @var integer 七天出向峰值带宽，单位bps
+     * @var integer <p>七天出向峰值带宽，单位bps</p>
      */
     public $OutFlowMax;
 
     /**
-     * @param string $Region 地域
+     * @var integer <p>边界按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public $ElasticTrafficSwitch;
+
+    /**
+     * @param string $Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Width 分配带宽值 单位Mbps
+     * @param integer $Width <p>分配带宽值 单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ElasticSwitch 弹性开关
+     * @param integer $ElasticSwitch <p>弹性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ElasticBandwidth 弹性带宽上限，单位Mbps
+     * @param integer $ElasticBandwidth <p>弹性带宽上限，单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InFlowMax 七天入向峰值带宽，单位bps
-     * @param integer $OutFlowMax 七天出向峰值带宽，单位bps
+     * @param integer $InFlowMax <p>七天入向峰值带宽，单位bps</p>
+     * @param integer $OutFlowMax <p>七天出向峰值带宽，单位bps</p>
+     * @param integer $ElasticTrafficSwitch <p>边界按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ class SerialRegionInfo extends AbstractModel
 
         if (array_key_exists("OutFlowMax",$param) and $param["OutFlowMax"] !== null) {
             $this->OutFlowMax = $param["OutFlowMax"];
+        }
+
+        if (array_key_exists("ElasticTrafficSwitch",$param) and $param["ElasticTrafficSwitch"] !== null) {
+            $this->ElasticTrafficSwitch = $param["ElasticTrafficSwitch"];
         }
     }
 }

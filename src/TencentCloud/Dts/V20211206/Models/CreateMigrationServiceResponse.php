@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMigrationService返回参数结构体
  *
- * @method array getJobIds() 获取下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21
+ * @method array getJobIds() 获取<p>下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobIds(array $JobIds) 设置下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21
+ * @method void setJobIds(array $JobIds) 设置<p>下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateMigrationServiceResponse extends AbstractModel
 {
     /**
-     * @var array 下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21
+     * @var array <p>下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobIds;
@@ -41,7 +41,7 @@ class CreateMigrationServiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $JobIds 下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21
+     * @param array $JobIds <p>下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

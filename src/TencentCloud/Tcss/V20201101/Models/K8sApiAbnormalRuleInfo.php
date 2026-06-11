@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * k8a api 异常请求规则详情
  *
- * @method string getRuleName() 获取规则名称
- * @method void setRuleName(string $RuleName) 设置规则名称
- * @method boolean getStatus() 获取状态
- * @method void setStatus(boolean $Status) 设置状态
- * @method array getRuleInfoList() 获取规则信息列表
- * @method void setRuleInfoList(array $RuleInfoList) 设置规则信息列表
+ * @method boolean getEffectAllCluster() 获取是否所有集群生效
+ * @method void setEffectAllCluster(boolean $EffectAllCluster) 设置是否所有集群生效
  * @method array getEffectClusterIDSet() 获取生效集群IDSet
  * @method void setEffectClusterIDSet(array $EffectClusterIDSet) 设置生效集群IDSet
+ * @method array getRuleInfoList() 获取规则信息列表
+ * @method void setRuleInfoList(array $RuleInfoList) 设置规则信息列表
+ * @method string getRuleName() 获取规则名称
+ * @method void setRuleName(string $RuleName) 设置规则名称
  * @method string getRuleType() 获取规则类型
 RT_SYSTEM 系统规则
 RT_USER 用户自定义
  * @method void setRuleType(string $RuleType) 设置规则类型
 RT_SYSTEM 系统规则
 RT_USER 用户自定义
- * @method boolean getEffectAllCluster() 获取是否所有集群生效
- * @method void setEffectAllCluster(boolean $EffectAllCluster) 设置是否所有集群生效
+ * @method boolean getStatus() 获取状态
+ * @method void setStatus(boolean $Status) 设置状态
  * @method string getRuleID() 获取规则ID
  * @method void setRuleID(string $RuleID) 设置规则ID
  */
 class K8sApiAbnormalRuleInfo extends AbstractModel
 {
     /**
-     * @var string 规则名称
+     * @var boolean 是否所有集群生效
      */
-    public $RuleName;
+    public $EffectAllCluster;
 
     /**
-     * @var boolean 状态
+     * @var array 生效集群IDSet
      */
-    public $Status;
+    public $EffectClusterIDSet;
 
     /**
      * @var array 规则信息列表
@@ -57,9 +57,9 @@ class K8sApiAbnormalRuleInfo extends AbstractModel
     public $RuleInfoList;
 
     /**
-     * @var array 生效集群IDSet
+     * @var string 规则名称
      */
-    public $EffectClusterIDSet;
+    public $RuleName;
 
     /**
      * @var string 规则类型
@@ -69,9 +69,9 @@ RT_USER 用户自定义
     public $RuleType;
 
     /**
-     * @var boolean 是否所有集群生效
+     * @var boolean 状态
      */
-    public $EffectAllCluster;
+    public $Status;
 
     /**
      * @var string 规则ID
@@ -79,14 +79,14 @@ RT_USER 用户自定义
     public $RuleID;
 
     /**
-     * @param string $RuleName 规则名称
-     * @param boolean $Status 状态
-     * @param array $RuleInfoList 规则信息列表
+     * @param boolean $EffectAllCluster 是否所有集群生效
      * @param array $EffectClusterIDSet 生效集群IDSet
+     * @param array $RuleInfoList 规则信息列表
+     * @param string $RuleName 规则名称
      * @param string $RuleType 规则类型
 RT_SYSTEM 系统规则
 RT_USER 用户自定义
-     * @param boolean $EffectAllCluster 是否所有集群生效
+     * @param boolean $Status 状态
      * @param string $RuleID 规则ID
      */
     function __construct()
@@ -102,12 +102,12 @@ RT_USER 用户自定义
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists("EffectAllCluster",$param) and $param["EffectAllCluster"] !== null) {
+            $this->EffectAllCluster = $param["EffectAllCluster"];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("EffectClusterIDSet",$param) and $param["EffectClusterIDSet"] !== null) {
+            $this->EffectClusterIDSet = $param["EffectClusterIDSet"];
         }
 
         if (array_key_exists("RuleInfoList",$param) and $param["RuleInfoList"] !== null) {
@@ -119,16 +119,16 @@ RT_USER 用户自定义
             }
         }
 
-        if (array_key_exists("EffectClusterIDSet",$param) and $param["EffectClusterIDSet"] !== null) {
-            $this->EffectClusterIDSet = $param["EffectClusterIDSet"];
+        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
+            $this->RuleName = $param["RuleName"];
         }
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
         }
 
-        if (array_key_exists("EffectAllCluster",$param) and $param["EffectAllCluster"] !== null) {
-            $this->EffectAllCluster = $param["EffectAllCluster"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RuleID",$param) and $param["RuleID"] !== null) {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateUser(string $CreateUser) 设置<p>操作者</p>
  * @method string getCreateTime() 获取<p>创建时间</p>
  * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
  * @method KnowledgeTaskConfig getChunkConfig() 获取<p>分片策略</p>
  * @method void setChunkConfig(KnowledgeTaskConfig $ChunkConfig) 设置<p>分片策略</p>
  * @method integer getSource() 获取<p>文件来源0=unknow,1=user_cos,2=local</p>
@@ -87,6 +89,11 @@ class FileInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string <p>更新时间</p>
+     */
+    public $UpdateTime;
+
+    /**
      * @var KnowledgeTaskConfig <p>分片策略</p>
      */
     public $ChunkConfig;
@@ -129,6 +136,7 @@ class FileInfo extends AbstractModel
      * @param integer $Status <p>状态，0：数据处理中  1：可用 -1：错误</p>
      * @param string $CreateUser <p>操作者</p>
      * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>更新时间</p>
      * @param KnowledgeTaskConfig $ChunkConfig <p>分片策略</p>
      * @param integer $Source <p>文件来源0=unknow,1=user_cos,2=local</p>
      * @param string $FileUrl <p>文件url</p>
@@ -176,6 +184,10 @@ class FileInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
 
         if (array_key_exists("ChunkConfig",$param) and $param["ChunkConfig"] !== null) {

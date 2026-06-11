@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDeleteAll() 获取是否删除全部
  * @method void setDeleteAll(integer $DeleteAll) 设置是否删除全部
+ * @method string getShowType() 获取blocklist 封禁列表 whitelist 白名单列表
+ * @method void setShowType(string $ShowType) 设置blocklist 封禁列表 whitelist 白名单列表
  * @method array getRules() 获取规则列表
  * @method void setRules(array $Rules) 设置规则列表
  * @method integer getRuleType() 获取封禁：1，放通：100，
 主要用于全部删除时区分列表类型
  * @method void setRuleType(integer $RuleType) 设置封禁：1，放通：100，
 主要用于全部删除时区分列表类型
- * @method string getShowType() 获取blocklist 封禁列表 whitelist 白名单列表
- * @method void setShowType(string $ShowType) 设置blocklist 封禁列表 whitelist 白名单列表
  */
 class DeleteBlockIgnoreRuleNewRequest extends AbstractModel
 {
@@ -37,6 +37,11 @@ class DeleteBlockIgnoreRuleNewRequest extends AbstractModel
      * @var integer 是否删除全部
      */
     public $DeleteAll;
+
+    /**
+     * @var string blocklist 封禁列表 whitelist 白名单列表
+     */
+    public $ShowType;
 
     /**
      * @var array 规则列表
@@ -50,16 +55,11 @@ class DeleteBlockIgnoreRuleNewRequest extends AbstractModel
     public $RuleType;
 
     /**
-     * @var string blocklist 封禁列表 whitelist 白名单列表
-     */
-    public $ShowType;
-
-    /**
      * @param integer $DeleteAll 是否删除全部
+     * @param string $ShowType blocklist 封禁列表 whitelist 白名单列表
      * @param array $Rules 规则列表
      * @param integer $RuleType 封禁：1，放通：100，
 主要用于全部删除时区分列表类型
-     * @param string $ShowType blocklist 封禁列表 whitelist 白名单列表
      */
     function __construct()
     {
@@ -78,6 +78,10 @@ class DeleteBlockIgnoreRuleNewRequest extends AbstractModel
             $this->DeleteAll = $param["DeleteAll"];
         }
 
+        if (array_key_exists("ShowType",$param) and $param["ShowType"] !== null) {
+            $this->ShowType = $param["ShowType"];
+        }
+
         if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
             $this->Rules = [];
             foreach ($param["Rules"] as $key => $value){
@@ -89,10 +93,6 @@ class DeleteBlockIgnoreRuleNewRequest extends AbstractModel
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
-        }
-
-        if (array_key_exists("ShowType",$param) and $param["ShowType"] !== null) {
-            $this->ShowType = $param["ShowType"];
         }
     }
 }

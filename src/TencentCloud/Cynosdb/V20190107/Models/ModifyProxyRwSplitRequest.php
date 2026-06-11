@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) 设置<p>是否将libra节点当作普通RO节点</p>
  * @method boolean getApQueryToOtherNode() 获取<p>libra节点故障，是否转发给其他节点</p>
  * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) 设置<p>libra节点故障，是否转发给其他节点</p>
+ * @method string getLoadBalanceMode() 获取<p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+ * @method void setLoadBalanceMode(string $LoadBalanceMode) 设置<p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
  */
 class ModifyProxyRwSplitRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $ApQueryToOtherNode;
 
     /**
+     * @var string <p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+     */
+    public $LoadBalanceMode;
+
+    /**
      * @param string $ClusterId <p>集群ID，例如cynosdbmysql-asd123</p>
      * @param string $ProxyGroupId <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
      * @param string $ConsistencyType <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
@@ -160,6 +167,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
      * @param integer $ConnectionPoolTimeOut <p>连接池时间。<br>可选范围:0~300（秒）</p>
      * @param boolean $ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
      * @param boolean $ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
+     * @param string $LoadBalanceMode <p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class ModifyProxyRwSplitRequest extends AbstractModel
 
         if (array_key_exists("ApQueryToOtherNode",$param) and $param["ApQueryToOtherNode"] !== null) {
             $this->ApQueryToOtherNode = $param["ApQueryToOtherNode"];
+        }
+
+        if (array_key_exists("LoadBalanceMode",$param) and $param["LoadBalanceMode"] !== null) {
+            $this->LoadBalanceMode = $param["LoadBalanceMode"];
         }
     }
 }

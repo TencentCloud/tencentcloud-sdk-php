@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLoginWhiteRecord请求参数结构体
  *
- * @method string getUserName() 获取白名单用户（多个用户逗号隔开）
- * @method void setUserName(string $UserName) 设置白名单用户（多个用户逗号隔开）
- * @method string getSrcIp() 获取更新后记录的白名单维度信息
- * @method void setSrcIp(string $SrcIp) 设置更新后记录的白名单维度信息
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method integer getIsGlobal() 获取是否对所有服务器生效，0-否，1-是
- * @method void setIsGlobal(integer $IsGlobal) 设置是否对所有服务器生效，0-否，1-是
- * @method integer getId() 获取白名单ID
- * @method void setId(integer $Id) 设置白名单ID
- * @method array getHosts() 获取服务器列表
- * @method void setHosts(array $Hosts) 设置服务器列表
- * @method array getPlaces() 获取地域列表
- * @method void setPlaces(array $Places) 设置地域列表
+ * @method string getUserName() 获取<p>白名单用户（多个用户逗号隔开）</p>
+ * @method void setUserName(string $UserName) 设置<p>白名单用户（多个用户逗号隔开）</p>
+ * @method string getSrcIp() 获取<p>更新后记录的白名单维度信息</p>
+ * @method void setSrcIp(string $SrcIp) 设置<p>更新后记录的白名单维度信息</p>
+ * @method string getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间</p>
+ * @method string getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method integer getIsGlobal() 获取<p>是否对所有服务器生效，0-否，1-是</p>
+ * @method void setIsGlobal(integer $IsGlobal) 设置<p>是否对所有服务器生效，0-否，1-是</p>
+ * @method integer getId() 获取<p>白名单ID</p>
+ * @method void setId(integer $Id) 设置<p>白名单ID</p>
+ * @method array getHosts() 获取<p>服务器列表</p>
+ * @method void setHosts(array $Hosts) 设置<p>服务器列表</p>
+ * @method array getPlaces() 获取<p>地域列表</p>
+ * @method void setPlaces(array $Places) 设置<p>地域列表</p>
  */
 class ModifyLoginWhiteRecordRequest extends AbstractModel
 {
     /**
-     * @var string 白名单用户（多个用户逗号隔开）
+     * @var string <p>白名单用户（多个用户逗号隔开）</p>
      */
     public $UserName;
 
     /**
-     * @var string 更新后记录的白名单维度信息
+     * @var string <p>更新后记录的白名单维度信息</p>
      */
     public $SrcIp;
 
     /**
-     * @var string 开始时间
+     * @var string <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var integer 是否对所有服务器生效，0-否，1-是
+     * @var integer <p>是否对所有服务器生效，0-否，1-是</p>
      */
     public $IsGlobal;
 
     /**
-     * @var integer 白名单ID
+     * @var integer <p>白名单ID</p>
      */
     public $Id;
 
     /**
-     * @var array 服务器列表
+     * @var array <p>服务器列表</p>
      */
     public $Hosts;
 
     /**
-     * @var array 地域列表
+     * @var array <p>地域列表</p>
      */
     public $Places;
 
     /**
-     * @param string $UserName 白名单用户（多个用户逗号隔开）
-     * @param string $SrcIp 更新后记录的白名单维度信息
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param string $Remark 备注
-     * @param integer $IsGlobal 是否对所有服务器生效，0-否，1-是
-     * @param integer $Id 白名单ID
-     * @param array $Hosts 服务器列表
-     * @param array $Places 地域列表
+     * @param string $UserName <p>白名单用户（多个用户逗号隔开）</p>
+     * @param string $SrcIp <p>更新后记录的白名单维度信息</p>
+     * @param string $StartTime <p>开始时间</p>
+     * @param string $EndTime <p>结束时间</p>
+     * @param string $Remark <p>备注</p>
+     * @param integer $IsGlobal <p>是否对所有服务器生效，0-否，1-是</p>
+     * @param integer $Id <p>白名单ID</p>
+     * @param array $Hosts <p>服务器列表</p>
+     * @param array $Places <p>地域列表</p>
      */
     function __construct()
     {

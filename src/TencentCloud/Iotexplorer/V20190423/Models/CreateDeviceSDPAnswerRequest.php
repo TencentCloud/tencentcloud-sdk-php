@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getSDPOffer() 获取SDP提议
  * @method void setSDPOffer(string $SDPOffer) 设置SDP提议
+ * @method string getRequesterTag() 获取客户自定义拉流标识
+ * @method void setRequesterTag(string $RequesterTag) 设置客户自定义拉流标识
  */
 class CreateDeviceSDPAnswerRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateDeviceSDPAnswerRequest extends AbstractModel
     public $SDPOffer;
 
     /**
+     * @var string 客户自定义拉流标识
+     */
+    public $RequesterTag;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $SDPOffer SDP提议
+     * @param string $RequesterTag 客户自定义拉流标识
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateDeviceSDPAnswerRequest extends AbstractModel
 
         if (array_key_exists("SDPOffer",$param) and $param["SDPOffer"] !== null) {
             $this->SDPOffer = $param["SDPOffer"];
+        }
+
+        if (array_key_exists("RequesterTag",$param) and $param["RequesterTag"] !== null) {
+            $this->RequesterTag = $param["RequesterTag"];
         }
     }
 }

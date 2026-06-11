@@ -20,128 +20,100 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFileUrls请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method string getBusinessType() 获取文件对应的业务类型，目前支持：<ul><li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li><li>**TEMPLATE ** : 如需下载模板文件请选择此项</li><li>**DOCUMENT  **: 如需下载文档文件请选择此项</li><li>**SEAL  **: 如需下载印章图片请选择此项</li><li>**DIGITFILE**: 如需下载加签文件请选择此项</li></ul>
- * @method void setBusinessType(string $BusinessType) 设置文件对应的业务类型，目前支持：<ul><li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li><li>**TEMPLATE ** : 如需下载模板文件请选择此项</li><li>**DOCUMENT  **: 如需下载文档文件请选择此项</li><li>**SEAL  **: 如需下载印章图片请选择此项</li><li>**DIGITFILE**: 如需下载加签文件请选择此项</li></ul>
- * @method array getBusinessIds() 获取业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul>
- * @method void setBusinessIds(array $BusinessIds) 设置业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul>
- * @method string getFileName() 获取下载后的文件命名，只有FileType为zip的时候生效
- * @method void setFileName(string $FileName) 设置下载后的文件命名，只有FileType为zip的时候生效
- * @method string getFileType() 获取要下载的文件类型，取值如下：
-<ul>
-<li>JPG</li>
-<li>PDF</li>
-<li>ZIP</li>
-</ul>
- * @method void setFileType(string $FileType) 设置要下载的文件类型，取值如下：
-<ul>
-<li>JPG</li>
-<li>PDF</li>
-<li>ZIP</li>
-</ul>
- * @method integer getOffset() 获取指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。
- * @method void setOffset(integer $Offset) 设置指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。
- * @method integer getLimit() 获取指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。
- * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。
- * @method integer getUrlTtl() 获取下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
- * @method void setUrlTtl(integer $UrlTtl) 设置下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
- * @method string getCcToken() 获取暂不开放
- * @method void setCcToken(string $CcToken) 设置暂不开放
- * @method string getScene() 获取暂不开放
- * @method void setScene(string $Scene) 设置暂不开放
- * @method Agent getAgent() 获取代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method string getBusinessType() 获取<p>文件对应的业务类型，目前支持：<ul><li><strong>FLOW</strong> : <font color="red">如需下载合同文件请选择此项</font></li><li><strong>TEMPLATE</strong> : 如需下载模板文件请选择此项</li><li><strong>DOCUMENT</strong>: 如需下载文档文件请选择此项</li><li><strong>SEAL</strong>: 如需下载印章图片请选择此项</li><li><strong>DIGITFILE</strong>: 如需下载加签文件请选择此项</li><li><strong>ARCHIVE</strong>: 如需下载合同归档文件请选择此项</li></ul></p><p>枚举值：</p><ul><li>FLOW： 如需下载合同文件请选择此项</li><li>TEMPLATE： 如需下载模板文件请选择此项</li><li>DOCUMENT： 如需下载文档文件请选择此项</li><li>SEAL： 如需下载印章图片请选择此项</li><li>DIGITFILE： 如需下载加签文件请选择此项</li><li>ARCHIVE： 如需下载合同归档文件请选择此项</li></ul>
+ * @method void setBusinessType(string $BusinessType) 设置<p>文件对应的业务类型，目前支持：<ul><li><strong>FLOW</strong> : <font color="red">如需下载合同文件请选择此项</font></li><li><strong>TEMPLATE</strong> : 如需下载模板文件请选择此项</li><li><strong>DOCUMENT</strong>: 如需下载文档文件请选择此项</li><li><strong>SEAL</strong>: 如需下载印章图片请选择此项</li><li><strong>DIGITFILE</strong>: 如需下载加签文件请选择此项</li><li><strong>ARCHIVE</strong>: 如需下载合同归档文件请选择此项</li></ul></p><p>枚举值：</p><ul><li>FLOW： 如需下载合同文件请选择此项</li><li>TEMPLATE： 如需下载模板文件请选择此项</li><li>DOCUMENT： 如需下载文档文件请选择此项</li><li>SEAL： 如需下载印章图片请选择此项</li><li>DIGITFILE： 如需下载加签文件请选择此项</li><li>ARCHIVE： 如需下载合同归档文件请选择此项</li></ul>
+ * @method array getBusinessIds() 获取<p>业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul></p>
+ * @method void setBusinessIds(array $BusinessIds) 设置<p>业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul></p>
+ * @method string getFileName() 获取<p>下载后的文件命名，只有FileType为zip的时候生效</p>
+ * @method void setFileName(string $FileName) 设置<p>下载后的文件命名，只有FileType为zip的时候生效</p>
+ * @method string getFileType() 获取<p>要下载的文件类型，取值如下：</p><ul><li>JPG</li><li>PDF</li><li>ZIP</li></ul>
+ * @method void setFileType(string $FileType) 设置<p>要下载的文件类型，取值如下：</p><ul><li>JPG</li><li>PDF</li><li>ZIP</li></ul>
+ * @method integer getOffset() 获取<p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。</p>
+ * @method void setOffset(integer $Offset) 设置<p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。</p>
+ * @method integer getLimit() 获取<p>指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。</p>
+ * @method integer getUrlTtl() 获取<p>下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)</p>
+ * @method void setUrlTtl(integer $UrlTtl) 设置<p>下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)</p>
+ * @method string getCcToken() 获取<p>暂不开放</p>
+ * @method void setCcToken(string $CcToken) 设置<p>暂不开放</p>
+ * @method string getScene() 获取<p>暂不开放</p>
+ * @method void setScene(string $Scene) 设置<p>暂不开放</p>
+ * @method Agent getAgent() 获取<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method void setAgent(Agent $Agent) 设置<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
  */
 class DescribeFileUrlsRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @var UserInfo <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public $Operator;
 
     /**
-     * @var string 文件对应的业务类型，目前支持：<ul><li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li><li>**TEMPLATE ** : 如需下载模板文件请选择此项</li><li>**DOCUMENT  **: 如需下载文档文件请选择此项</li><li>**SEAL  **: 如需下载印章图片请选择此项</li><li>**DIGITFILE**: 如需下载加签文件请选择此项</li></ul>
+     * @var string <p>文件对应的业务类型，目前支持：<ul><li><strong>FLOW</strong> : <font color="red">如需下载合同文件请选择此项</font></li><li><strong>TEMPLATE</strong> : 如需下载模板文件请选择此项</li><li><strong>DOCUMENT</strong>: 如需下载文档文件请选择此项</li><li><strong>SEAL</strong>: 如需下载印章图片请选择此项</li><li><strong>DIGITFILE</strong>: 如需下载加签文件请选择此项</li><li><strong>ARCHIVE</strong>: 如需下载合同归档文件请选择此项</li></ul></p><p>枚举值：</p><ul><li>FLOW： 如需下载合同文件请选择此项</li><li>TEMPLATE： 如需下载模板文件请选择此项</li><li>DOCUMENT： 如需下载文档文件请选择此项</li><li>SEAL： 如需下载印章图片请选择此项</li><li>DIGITFILE： 如需下载加签文件请选择此项</li><li>ARCHIVE： 如需下载合同归档文件请选择此项</li></ul>
      */
     public $BusinessType;
 
     /**
-     * @var array 业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul>
+     * @var array <p>业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul></p>
      */
     public $BusinessIds;
 
     /**
-     * @var string 下载后的文件命名，只有FileType为zip的时候生效
+     * @var string <p>下载后的文件命名，只有FileType为zip的时候生效</p>
      */
     public $FileName;
 
     /**
-     * @var string 要下载的文件类型，取值如下：
-<ul>
-<li>JPG</li>
-<li>PDF</li>
-<li>ZIP</li>
-</ul>
+     * @var string <p>要下载的文件类型，取值如下：</p><ul><li>JPG</li><li>PDF</li><li>ZIP</li></ul>
      */
     public $FileType;
 
     /**
-     * @var integer 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。
+     * @var integer <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。
+     * @var integer <p>指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
+     * @var integer <p>下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)</p>
      */
     public $UrlTtl;
 
     /**
-     * @var string 暂不开放
+     * @var string <p>暂不开放</p>
      * @deprecated
      */
     public $CcToken;
 
     /**
-     * @var string 暂不开放
+     * @var string <p>暂不开放</p>
      * @deprecated
      */
     public $Scene;
 
     /**
-     * @var Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $BusinessType 文件对应的业务类型，目前支持：<ul><li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li><li>**TEMPLATE ** : 如需下载模板文件请选择此项</li><li>**DOCUMENT  **: 如需下载文档文件请选择此项</li><li>**SEAL  **: 如需下载印章图片请选择此项</li><li>**DIGITFILE**: 如需下载加签文件请选择此项</li></ul>
-     * @param array $BusinessIds 业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul>
-     * @param string $FileName 下载后的文件命名，只有FileType为zip的时候生效
-     * @param string $FileType 要下载的文件类型，取值如下：
-<ul>
-<li>JPG</li>
-<li>PDF</li>
-<li>ZIP</li>
-</ul>
-     * @param integer $Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。
-     * @param integer $Limit 指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。
-     * @param integer $UrlTtl 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
-     * @param string $CcToken 暂不开放
-     * @param string $Scene 暂不开放
-     * @param Agent $Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param UserInfo $Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param string $BusinessType <p>文件对应的业务类型，目前支持：<ul><li><strong>FLOW</strong> : <font color="red">如需下载合同文件请选择此项</font></li><li><strong>TEMPLATE</strong> : 如需下载模板文件请选择此项</li><li><strong>DOCUMENT</strong>: 如需下载文档文件请选择此项</li><li><strong>SEAL</strong>: 如需下载印章图片请选择此项</li><li><strong>DIGITFILE</strong>: 如需下载加签文件请选择此项</li><li><strong>ARCHIVE</strong>: 如需下载合同归档文件请选择此项</li></ul></p><p>枚举值：</p><ul><li>FLOW： 如需下载合同文件请选择此项</li><li>TEMPLATE： 如需下载模板文件请选择此项</li><li>DOCUMENT： 如需下载文档文件请选择此项</li><li>SEAL： 如需下载印章图片请选择此项</li><li>DIGITFILE： 如需下载加签文件请选择此项</li><li>ARCHIVE： 如需下载合同归档文件请选择此项</li></ul>
+     * @param array $BusinessIds <p>业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul></p>
+     * @param string $FileName <p>下载后的文件命名，只有FileType为zip的时候生效</p>
+     * @param string $FileType <p>要下载的文件类型，取值如下：</p><ul><li>JPG</li><li>PDF</li><li>ZIP</li></ul>
+     * @param integer $Offset <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。</p>
+     * @param integer $Limit <p>指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。</p>
+     * @param integer $UrlTtl <p>下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)</p>
+     * @param string $CcToken <p>暂不开放</p>
+     * @param string $Scene <p>暂不开放</p>
+     * @param Agent $Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     function __construct()
     {

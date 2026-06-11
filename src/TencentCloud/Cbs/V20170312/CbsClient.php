@@ -41,6 +41,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
  
 * 支持批量操作，将多块云盘挂载到同一云主机。如果多个云盘中存在不允许挂载的云盘，则操作不执行，返回特定的错误码。
 * 本接口为异步接口，当挂载云盘的请求成功返回时，表示后台已发起挂载云盘的操作，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHING”变为“ATTACHED”，则为挂载成功。
+ * @method Models\AttachRemoteDisksResponse AttachRemoteDisks(Models\AttachRemoteDisksRequest $req) 本接口用于挂载一个或多个弹性单副本SSD硬盘到指定的云服务器实例上。仅支持弹性盘类型。
  * @method Models\BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(Models\BindAutoSnapshotPolicyRequest $req) 本接口（BindAutoSnapshotPolicy）用于绑定云硬盘到指定的定期快照策略。
 
 * 每个地域下的定期快照策略配额限制请参考文档[定期快照](/document/product/362/8191)。
@@ -60,6 +61,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。
 * 本接口支持传入数据盘快照来创建云盘，实现将快照数据复制到新购云盘上。
 * 本接口为异步接口，当创建请求下发成功后会返回一个新建的云盘ID列表，此时云盘的创建并未立即完成。可以通过调用[DescribeDisks](/document/product/362/16315)接口根据DiskId查询对应云盘，如果能查到云盘，且状态为'UNATTACHED'或'ATTACHED'，则表示创建成功。
+ * @method Models\CreateRemoteDisksResponse CreateRemoteDisks(Models\CreateRemoteDisksRequest $req) 本接口用于创建弹性单副本SSD硬盘并自动挂载到指定实例。弹性盘在创建时就需要绑定目标实例，计费回调后由CBS自身完成装箱+挂载的全流程。
  * @method Models\CreateSnapshotResponse CreateSnapshot(Models\CreateSnapshotRequest $req) 本接口（CreateSnapshot）用于对指定云盘创建快照。
 
 * 只有具有快照能力的云硬盘才能创建快照。云硬盘是否具有快照能力可由[DescribeDisks](/document/product/362/16315)接口查询，见SnapshotAbility字段。
@@ -100,6 +102,9 @@ use TencentCloud\Cbs\V20170312\Models as Models;
  * @method Models\DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(Models\DescribeInstancesDiskNumRequest $req) 本接口（DescribeInstancesDiskNum）用于查询实例已挂载云硬盘数量。
 
 * 支持批量操作，当传入多个云服务器实例ID，返回结果会分别列出每个云服务器挂载的云硬盘数量。
+ * @method Models\DescribeRemoteDiskConfigQuotaResponse DescribeRemoteDiskConfigQuota(Models\DescribeRemoteDiskConfigQuotaRequest $req) 本接口用于查询单副本SSD硬盘机型搭配配额。可根据机型族、机型规格、可用区、付费方式等条件过滤查询结果。
+ * @method Models\DescribeRemoteDisksResponse DescribeRemoteDisks(Models\DescribeRemoteDisksRequest $req) 本接口用于查询已购买的单副本SSD硬盘列表。可根据单副本SSD硬盘ID、类型、状态等条件过滤查询结果。
+ * @method Models\DescribeRemoteDisksDeniedActionsResponse DescribeRemoteDisksDeniedActions(Models\DescribeRemoteDisksDeniedActionsRequest $req) 本接口用于查询一个或多个单副本SSD硬盘的操作限制列表。
  * @method Models\DescribeSnapshotGroupsResponse DescribeSnapshotGroups(Models\DescribeSnapshotGroupsRequest $req) 本接口（DescribeSnapshotGroups）用于查询快照组列表。
 * 可以根据快照组ID、快照组状态、快照组关联的快照ID等来查询快照组列表，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
 * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的快照组列表。
@@ -113,6 +118,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * 支持批量操作，卸载挂载在同一主机上的多块云盘。如果多块云盘中存在不允许卸载的云盘，则操作不执行，返回特定的错误码。
 * 本接口为异步接口，当请求成功返回时，云盘并未立即从主机卸载，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHED”变为“UNATTACHED”，则为卸载成功。
+ * @method Models\DetachRemoteDisksResponse DetachRemoteDisks(Models\DetachRemoteDisksRequest $req) 本接口用于从云服务器实例上卸载一个或多个弹性单副本SSD硬盘。仅支持弹性盘类型。
  * @method Models\GetSnapOverviewResponse GetSnapOverview(Models\GetSnapOverviewRequest $req) 为进一步规范化API命名，该接口决定预下线，新接口命名为：DescribeSnapshotOverview
 
 获取快照概览信息
@@ -121,8 +127,10 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 2. 如果云硬盘不是通过快照创建的，则重新初始化会清空此云硬盘的数据；请在重新初始化云硬盘前检查并备份必要的数据；
 3. 当前仅未挂载的、非共享属性的数据盘云硬盘支持重新初始化；
 4. 当创建此云硬盘的原始快照被删除时，不再支持重新初始化此云硬盘。
+ * @method Models\InquirePriceCreateRemoteDisksResponse InquirePriceCreateRemoteDisks(Models\InquirePriceCreateRemoteDisksRequest $req) 该接口用于查询创建弹性单副本SSD硬盘的价格。支持预付费和后付费两种计费类型的询价。
  * @method Models\InquirePriceModifyDiskBackupQuotaResponse InquirePriceModifyDiskBackupQuota(Models\InquirePriceModifyDiskBackupQuotaRequest $req) 本接口（InquirePricePriceModifyDiskBackupQuota）用于修改云硬盘备份点配额询价。
  * @method Models\InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformance(Models\InquirePriceModifyDiskExtraPerformanceRequest $req) 本接口（InquirePriceModifyDiskExtraPerformance）用于调整云硬盘额外性能询价。
+ * @method Models\InquirePriceRenewRemoteDisksResponse InquirePriceRenewRemoteDisks(Models\InquirePriceRenewRemoteDisksRequest $req) 该接口用于查询续费弹性单副本SSD硬盘的价格。
  * @method Models\InquiryPriceCreateDisksResponse InquiryPriceCreateDisks(Models\InquiryPriceCreateDisksRequest $req) 本接口（InquiryPriceCreateDisks）用于创建云硬盘询价。
 
 * 支持查询创建多块云硬盘的价格，此时返回结果为总价格。
@@ -147,6 +155,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 非弹性云硬盘不支持此接口，请通过修改实例计费模式接口将实例连同非弹性云硬盘一起转换。
  * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识，支持批量修改。
+ * @method Models\ModifyRemoteDiskAttributesResponse ModifyRemoteDiskAttributes(Models\ModifyRemoteDiskAttributesRequest $req) 本接口用于修改单副本SSD硬盘的属性，包括硬盘名称和项目ID。
  * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
 
 * 本接口支持修改快照名称及到期时间，以及将非永久快照修改为永久快照。
@@ -162,15 +171,19 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * 只支持预付费的云硬盘。云硬盘类型可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中DiskChargeType字段解释。
 * 支持与挂载实例一起续费的场景，需要在[DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid)参数中指定CurInstanceDeadline，此时会按对齐到子机续费后的到期时间来续费。
+ * @method Models\RenewRemoteDiskResponse RenewRemoteDisk(Models\RenewRemoteDiskRequest $req) 该接口用于续费弹性单副本SSD硬盘。用户发起续费下单后，由计费系统完成扣费和到期时间更新。
  * @method Models\ResizeDiskResponse ResizeDisk(Models\ResizeDiskRequest $req) 本接口（ResizeDisk）用于扩容云硬盘。
 
 * 只支持扩容弹性云盘。云硬盘类型可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。非弹性云硬盘需通过[ResizeInstanceDisks](/document/product/213/15731)接口扩容。
 * 本接口为异步接口，接口成功返回时，云盘并未立即扩容到指定大小，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态为“EXPANDING”，表示正在扩容中。
+ * @method Models\SwitchParameterCreateRemoteDisksResponse SwitchParameterCreateRemoteDisks(Models\SwitchParameterCreateRemoteDisksRequest $req) 该接口用于获取创建弹性单副本SSD硬盘的订单参数，生成的订单参数由前端透传到计费系统用于发货。创建时必须指定云服务器实例。
+ * @method Models\SwitchParameterRenewRemoteDisksResponse SwitchParameterRenewRemoteDisks(Models\SwitchParameterRenewRemoteDisksRequest $req) 该接口用于获取续费弹性单副本SSD硬盘的订单参数，生成的订单参数由前端透传到计费系统用于续费。
  * @method Models\TerminateDisksResponse TerminateDisks(Models\TerminateDisksRequest $req) 本接口（TerminateDisks）用于退还云硬盘。
 
 * 不再使用的云盘，可通过本接口主动退还。
 * 本接口支持退还预付费云盘和按小时后付费云盘。按小时后付费云盘可直接退还，预付费云盘需符合退还规则。
 * 支持批量操作，每次请求批量云硬盘的上限为100。如果批量云盘存在不允许操作的，请求会以特定错误码返回。
+ * @method Models\TerminateRemoteDisksResponse TerminateRemoteDisks(Models\TerminateRemoteDisksRequest $req) 本接口用于销毁一个或多个弹性单副本SSD硬盘。仅支持弹性盘类型，且要求硬盘处于 INITED 或 UNINIT 状态。
  * @method Models\UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(Models\UnbindAutoSnapshotPolicyRequest $req) 本接口（UnbindAutoSnapshotPolicy）用于解除云硬盘绑定的定期快照策略。
 
 * 支持批量操作，可一次解除多个云盘与同一定期快照策略的绑定。 

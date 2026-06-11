@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VoiceClone返回参数结构体
  *
- * @method string getVoiceId() 获取克隆出的音色ID，可以用此id进行语音合成
- * @method void setVoiceId(string $VoiceId) 设置克隆出的音色ID，可以用此id进行语音合成
+ * @method string getVoiceId() 获取<p>克隆出的音色ID，可以用此id进行语音合成</p>
+ * @method void setVoiceId(string $VoiceId) 设置<p>克隆出的音色ID，可以用此id进行语音合成</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class VoiceCloneResponse extends AbstractModel
 {
     /**
-     * @var string 克隆出的音色ID，可以用此id进行语音合成
+     * @var string <p>克隆出的音色ID，可以用此id进行语音合成</p>
      */
     public $VoiceId;
 
@@ -38,7 +38,7 @@ class VoiceCloneResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $VoiceId 克隆出的音色ID，可以用此id进行语音合成
+     * @param string $VoiceId <p>克隆出的音色ID，可以用此id进行语音合成</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFullReplications(integer $FullReplications) 设置<p>全能型副本数</p>
  * @method string getInstanceMode() 获取<p>实例模式，normal：标准型；enhanced:加强型</p>
  * @method void setInstanceMode(string $InstanceMode) 设置<p>实例模式，normal：标准型；enhanced:加强型</p>
+ * @method array getSecurityGroupIds() 获取<p>安全组id列表</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组id列表</p>
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $InstanceMode;
 
     /**
+     * @var array <p>安全组id列表</p>
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $Zone <p>创建实例区域</p>
      * @param string $VpcId <p>字符型vpcid</p>
      * @param string $SubnetId <p>字符型subnetid</p>
@@ -184,6 +191,7 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param array $Zones <p>多可用区列表，Zones[0]表示主可用区</p>
      * @param integer $FullReplications <p>全能型副本数</p>
      * @param string $InstanceMode <p>实例模式，normal：标准型；enhanced:加强型</p>
+     * @param array $SecurityGroupIds <p>安全组id列表</p>
      */
     function __construct()
     {
@@ -281,6 +289,10 @@ class CreateCloneInstanceRequest extends AbstractModel
 
         if (array_key_exists("InstanceMode",$param) and $param["InstanceMode"] !== null) {
             $this->InstanceMode = $param["InstanceMode"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

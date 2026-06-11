@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * http访问服务客户端限频
  *
- * @method string getLimitBy() 获取客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。
- * @method void setLimitBy(string $LimitBy) 设置客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。
- * @method integer getLimitValue() 获取限制QPS值，每秒请求次数
- * @method void setLimitValue(integer $LimitValue) 设置限制QPS值，每秒请求次数
+ * @method string getLimitBy() 获取<p>客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。</p><p>枚举值：</p><ul><li>UserID： 云开发用户 ID 或 微信 openid</li><li>ClientIP： 客户端ip</li></ul>
+ * @method void setLimitBy(string $LimitBy) 设置<p>客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。</p><p>枚举值：</p><ul><li>UserID： 云开发用户 ID 或 微信 openid</li><li>ClientIP： 客户端ip</li></ul>
+ * @method integer getLimitValue() 获取<p>限制QPS值，每秒请求次数</p>
+ * @method void setLimitValue(integer $LimitValue) 设置<p>限制QPS值，每秒请求次数</p>
  */
 class HTTPServiceQPSPerClient extends AbstractModel
 {
     /**
-     * @var string 客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。
+     * @var string <p>客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。</p><p>枚举值：</p><ul><li>UserID： 云开发用户 ID 或 微信 openid</li><li>ClientIP： 客户端ip</li></ul>
      */
     public $LimitBy;
 
     /**
-     * @var integer 限制QPS值，每秒请求次数
+     * @var integer <p>限制QPS值，每秒请求次数</p>
      */
     public $LimitValue;
 
     /**
-     * @param string $LimitBy 客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。
-     * @param integer $LimitValue 限制QPS值，每秒请求次数
+     * @param string $LimitBy <p>客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。</p><p>枚举值：</p><ul><li>UserID： 云开发用户 ID 或 微信 openid</li><li>ClientIP： 客户端ip</li></ul>
+     * @param integer $LimitValue <p>限制QPS值，每秒请求次数</p>
      */
     function __construct()
     {

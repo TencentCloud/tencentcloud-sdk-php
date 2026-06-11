@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetInstanceMaintenance请求参数结构体
  *
- * @method string getInstanceId() 获取指定实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
- * @method void setInstanceId(string $InstanceId) 设置指定实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
- * @method string getMaintenanceStart() 获取维护时间窗开始时间。取值范围为"00:00-23:00"的任意整点或半点，如00:00或00:30。
- * @method void setMaintenanceStart(string $MaintenanceStart) 设置维护时间窗开始时间。取值范围为"00:00-23:00"的任意整点或半点，如00:00或00:30。
- * @method string getMaintenanceEnd() 获取维护时间窗结束时间。
-- 取值范围为"00:00-23:00"的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。
-- 结束时间务必是基于开始时间向后的时间。
- * @method void setMaintenanceEnd(string $MaintenanceEnd) 设置维护时间窗结束时间。
-- 取值范围为"00:00-23:00"的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。
-- 结束时间务必是基于开始时间向后的时间。
+ * @method string getInstanceId() 获取<p>指定实例ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>指定实例ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+ * @method string getMaintenanceStart() 获取<p>维护时间窗开始时间。取值范围为&quot;00:00-23:00&quot;的任意整点或半点，如00:00或00:30。</p>
+ * @method void setMaintenanceStart(string $MaintenanceStart) 设置<p>维护时间窗开始时间。取值范围为&quot;00:00-23:00&quot;的任意整点或半点，如00:00或00:30。</p>
+ * @method string getMaintenanceEnd() 获取<p>维护时间窗结束时间。</p><ul><li>取值范围为&quot;00:00-23:00&quot;的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。</li><li>结束时间务必是基于开始时间向后的时间。</li></ul>
+ * @method void setMaintenanceEnd(string $MaintenanceEnd) 设置<p>维护时间窗结束时间。</p><ul><li>取值范围为&quot;00:00-23:00&quot;的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。</li><li>结束时间务必是基于开始时间向后的时间。</li></ul>
+ * @method string getMaintenanceDays() 获取<p>指定每周内维护时间窗口的具体日期。  格式：请输入 1-7 之间的数字代表周一到周日（例如：1 代表周一），多个日期请用英文逗号 , 分隔。 示例：输入 1,3,5 表示维护窗口周期在每周的周一、周三、周五。 默认值：不设置，则默认为全周期 (1,2,3,4,5,6,7)。</p>
+ * @method void setMaintenanceDays(string $MaintenanceDays) 设置<p>指定每周内维护时间窗口的具体日期。  格式：请输入 1-7 之间的数字代表周一到周日（例如：1 代表周一），多个日期请用英文逗号 , 分隔。 示例：输入 1,3,5 表示维护窗口周期在每周的周一、周三、周五。 默认值：不设置，则默认为全周期 (1,2,3,4,5,6,7)。</p>
  */
 class SetInstanceMaintenanceRequest extends AbstractModel
 {
     /**
-     * @var string 指定实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
+     * @var string <p>指定实例ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 维护时间窗开始时间。取值范围为"00:00-23:00"的任意整点或半点，如00:00或00:30。
+     * @var string <p>维护时间窗开始时间。取值范围为&quot;00:00-23:00&quot;的任意整点或半点，如00:00或00:30。</p>
      */
     public $MaintenanceStart;
 
     /**
-     * @var string 维护时间窗结束时间。
-- 取值范围为"00:00-23:00"的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。
-- 结束时间务必是基于开始时间向后的时间。
+     * @var string <p>维护时间窗结束时间。</p><ul><li>取值范围为&quot;00:00-23:00&quot;的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。</li><li>结束时间务必是基于开始时间向后的时间。</li></ul>
      */
     public $MaintenanceEnd;
 
     /**
-     * @param string $InstanceId 指定实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @var string <p>指定每周内维护时间窗口的具体日期。  格式：请输入 1-7 之间的数字代表周一到周日（例如：1 代表周一），多个日期请用英文逗号 , 分隔。 示例：输入 1,3,5 表示维护窗口周期在每周的周一、周三、周五。 默认值：不设置，则默认为全周期 (1,2,3,4,5,6,7)。</p>
+     */
+    public $MaintenanceDays;
 
-     * @param string $MaintenanceStart 维护时间窗开始时间。取值范围为"00:00-23:00"的任意整点或半点，如00:00或00:30。
-     * @param string $MaintenanceEnd 维护时间窗结束时间。
-- 取值范围为"00:00-23:00"的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。
-- 结束时间务必是基于开始时间向后的时间。
+    /**
+     * @param string $InstanceId <p>指定实例ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+     * @param string $MaintenanceStart <p>维护时间窗开始时间。取值范围为&quot;00:00-23:00&quot;的任意整点或半点，如00:00或00:30。</p>
+     * @param string $MaintenanceEnd <p>维护时间窗结束时间。</p><ul><li>取值范围为&quot;00:00-23:00&quot;的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。</li><li>结束时间务必是基于开始时间向后的时间。</li></ul>
+     * @param string $MaintenanceDays <p>指定每周内维护时间窗口的具体日期。  格式：请输入 1-7 之间的数字代表周一到周日（例如：1 代表周一），多个日期请用英文逗号 , 分隔。 示例：输入 1,3,5 表示维护窗口周期在每周的周一、周三、周五。 默认值：不设置，则默认为全周期 (1,2,3,4,5,6,7)。</p>
      */
     function __construct()
     {
@@ -84,6 +80,10 @@ class SetInstanceMaintenanceRequest extends AbstractModel
 
         if (array_key_exists("MaintenanceEnd",$param) and $param["MaintenanceEnd"] !== null) {
             $this->MaintenanceEnd = $param["MaintenanceEnd"];
+        }
+
+        if (array_key_exists("MaintenanceDays",$param) and $param["MaintenanceDays"] !== null) {
+            $this->MaintenanceDays = $param["MaintenanceDays"];
         }
     }
 }

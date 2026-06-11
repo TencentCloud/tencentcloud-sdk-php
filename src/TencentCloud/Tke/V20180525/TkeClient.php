@@ -105,7 +105,9 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeAddonResponse DescribeAddon(Models\DescribeAddonRequest $req) 获取addon列表
  * @method Models\DescribeAddonValuesResponse DescribeAddonValues(Models\DescribeAddonValuesRequest $req) 获取一个addon的参数
  * @method Models\DescribeAvailableClusterVersionResponse DescribeAvailableClusterVersion(Models\DescribeAvailableClusterVersionRequest $req) 获取集群可以升级的所有版本
- * @method Models\DescribeAvailableTKEEdgeVersionResponse DescribeAvailableTKEEdgeVersion(Models\DescribeAvailableTKEEdgeVersionRequest $req) 边缘计算支持版本和k8s版本
+ * @method Models\DescribeAvailableTKEEdgeVersionResponse DescribeAvailableTKEEdgeVersion(Models\DescribeAvailableTKEEdgeVersionRequest $req) edge-dashboard 接口，当前edge产品已完成下线周知，同时edge-dashboard功能已经全部转移至edge-gw，申请将edge-dashboard所有接口先下线
+
+边缘计算支持版本和k8s版本
  * @method Models\DescribeBackupStorageLocationsResponse DescribeBackupStorageLocations(Models\DescribeBackupStorageLocationsRequest $req) 查询备份仓库信息
  * @method Models\DescribeBatchModifyTagsStatusResponse DescribeBatchModifyTagsStatus(Models\DescribeBatchModifyTagsStatusRequest $req) 查询批量修改标签状态
  * @method Models\DescribeClusterAsGroupOptionResponse DescribeClusterAsGroupOption(Models\DescribeClusterAsGroupOptionRequest $req) 集群弹性伸缩配置
@@ -146,7 +148,9 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeEKSContainerInstanceEventResponse DescribeEKSContainerInstanceEvent(Models\DescribeEKSContainerInstanceEventRequest $req) 查询容器实例的事件
  * @method Models\DescribeEKSContainerInstanceRegionsResponse DescribeEKSContainerInstanceRegions(Models\DescribeEKSContainerInstanceRegionsRequest $req) 查询容器实例支持的地域
  * @method Models\DescribeEKSContainerInstancesResponse DescribeEKSContainerInstances(Models\DescribeEKSContainerInstancesRequest $req) 查询容器实例
- * @method Models\DescribeEdgeAvailableExtraArgsResponse DescribeEdgeAvailableExtraArgs(Models\DescribeEdgeAvailableExtraArgsRequest $req) 查询边缘容器集群可用的自定义参数
+ * @method Models\DescribeEdgeAvailableExtraArgsResponse DescribeEdgeAvailableExtraArgs(Models\DescribeEdgeAvailableExtraArgsRequest $req) edge-dashboard 接口，当前edge产品已完成下线周知，同时edge-dashboard功能已经全部转移至edge-gw，申请将edge-dashboard所有接口先下线
+
+查询边缘容器集群可用的自定义参数
  * @method Models\DescribeEdgeCVMInstancesResponse DescribeEdgeCVMInstances(Models\DescribeEdgeCVMInstancesRequest $req) 获取边缘容器CVM实例相关信息
  * @method Models\DescribeEdgeClusterExtraArgsResponse DescribeEdgeClusterExtraArgs(Models\DescribeEdgeClusterExtraArgsRequest $req) 查询边缘集群自定义参数
  * @method Models\DescribeEdgeClusterInstancesResponse DescribeEdgeClusterInstances(Models\DescribeEdgeClusterInstancesRequest $req) 查询边缘计算集群的节点信息
@@ -203,8 +207,12 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeTKEEdgeClusterCredentialResponse DescribeTKEEdgeClusterCredential(Models\DescribeTKEEdgeClusterCredentialRequest $req) 获取边缘计算集群的认证信息
  * @method Models\DescribeTKEEdgeClusterStatusResponse DescribeTKEEdgeClusterStatus(Models\DescribeTKEEdgeClusterStatusRequest $req) 获取边缘计算集群的当前状态以及过程信息
  * @method Models\DescribeTKEEdgeClustersResponse DescribeTKEEdgeClusters(Models\DescribeTKEEdgeClustersRequest $req) 查询边缘集群列表
- * @method Models\DescribeTKEEdgeExternalKubeconfigResponse DescribeTKEEdgeExternalKubeconfig(Models\DescribeTKEEdgeExternalKubeconfigRequest $req) 获取边缘计算外部访问的kubeconfig
- * @method Models\DescribeTKEEdgeScriptResponse DescribeTKEEdgeScript(Models\DescribeTKEEdgeScriptRequest $req) 获取边缘脚本链接，此接口用于添加第三方节点，通过下载脚本从而将节点添加到边缘集群。
+ * @method Models\DescribeTKEEdgeExternalKubeconfigResponse DescribeTKEEdgeExternalKubeconfig(Models\DescribeTKEEdgeExternalKubeconfigRequest $req) edge-dashboard 接口，当前edge产品已完成下线周知，同时edge-dashboard功能已经全部转移至edge-gw，申请将edge-dashboard所有接口先下线
+
+获取边缘计算外部访问的kubeconfig
+ * @method Models\DescribeTKEEdgeScriptResponse DescribeTKEEdgeScript(Models\DescribeTKEEdgeScriptRequest $req) edge-dashboard 接口，当前edge产品已完成下线周知，同时edge-dashboard功能已经全部转移至edge-gw，申请将edge-dashboard所有接口先下线
+
+获取边缘脚本链接，此接口用于添加第三方节点，通过下载脚本从而将节点添加到边缘集群。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 查询任务相关信息，只会查询对应任务类型的最新的一条任务状态
  * @method Models\DescribeUpgradeTaskDetailResponse DescribeUpgradeTaskDetail(Models\DescribeUpgradeTaskDetailRequest $req) 查询计划升级任务详情
  * @method Models\DescribeUpgradeTasksResponse DescribeUpgradeTasks(Models\DescribeUpgradeTasksRequest $req) 查询计划升级任务

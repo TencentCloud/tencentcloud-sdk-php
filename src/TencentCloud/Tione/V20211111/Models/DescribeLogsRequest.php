@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getService() 获取<p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
  * @method void setService(string $Service) 设置<p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method string getStartTime() 获取<p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
  * @method void setStartTime(string $StartTime) 设置<p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
  * @method string getEndTime() 获取<p>日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间</p>
@@ -49,6 +51,11 @@ class DescribeLogsRequest extends AbstractModel
      * @var string <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
      */
     public $Service;
+
+    /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
 
     /**
      * @var string <p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
@@ -102,6 +109,7 @@ class DescribeLogsRequest extends AbstractModel
 
     /**
      * @param string $Service <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param string $StartTime <p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
      * @param string $EndTime <p>日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间</p>
      * @param integer $Limit <p>日志查询条数，默认值100，最大值1000</p>
@@ -128,6 +136,10 @@ class DescribeLogsRequest extends AbstractModel
         }
         if (array_key_exists("Service",$param) and $param["Service"] !== null) {
             $this->Service = $param["Service"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {

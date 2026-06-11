@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
  * @method string getNamespace() 获取命名空间名称。
  * @method void setNamespace(string $Namespace) 设置命名空间名称。
- * @method array getKeys() 获取键名列表。数组长度上限为 20。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。删除单个键时传入包含一个元素的数组。
- * @method void setKeys(array $Keys) 设置键名列表。数组长度上限为 20。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。删除单个键时传入包含一个元素的数组。
+ * @method array getKeys() 获取键名列表。数组长度上限为 20。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。删除单个键时传入包含一个元素的数组。
+ * @method void setKeys(array $Keys) 设置键名列表。数组长度上限为 20。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。删除单个键时传入包含一个元素的数组。
  */
 class EdgeKVDeleteRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class EdgeKVDeleteRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var array 键名列表。数组长度上限为 20。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。删除单个键时传入包含一个元素的数组。
+     * @var array 键名列表。数组长度上限为 20。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。删除单个键时传入包含一个元素的数组。
      */
     public $Keys;
 
     /**
      * @param string $ZoneId 站点 ID。
      * @param string $Namespace 命名空间名称。
-     * @param array $Keys 键名列表。数组长度上限为 20。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。删除单个键时传入包含一个元素的数组。
+     * @param array $Keys 键名列表。数组长度上限为 20。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。删除单个键时传入包含一个元素的数组。
      */
     function __construct()
     {

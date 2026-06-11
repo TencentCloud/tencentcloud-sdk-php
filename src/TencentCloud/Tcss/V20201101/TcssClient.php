@@ -79,7 +79,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\CreateImageExportJobResponse CreateImageExportJob(Models\CreateImageExportJobRequest $req) 创建镜像导出任务
  * @method Models\CreateK8sApiAbnormalEventExportJobResponse CreateK8sApiAbnormalEventExportJob(Models\CreateK8sApiAbnormalEventExportJobRequest $req) 创建k8s api异常事件导出任务
  * @method Models\CreateK8sApiAbnormalRuleExportJobResponse CreateK8sApiAbnormalRuleExportJob(Models\CreateK8sApiAbnormalRuleExportJobRequest $req) 创建k8sApi异常规则导出任务
- * @method Models\CreateK8sApiAbnormalRuleInfoResponse CreateK8sApiAbnormalRuleInfo(Models\CreateK8sApiAbnormalRuleInfoRequest $req) 创建k8sapi异常事件规则
+ * @method Models\CreateK8sApiAbnormalRuleInfoResponse CreateK8sApiAbnormalRuleInfo(Models\CreateK8sApiAbnormalRuleInfoRequest $req) 创建k8sapi异常事件规则。RuleInfoList中的Action仅支持RULE_MODE_ALERT（告警），不再支持RULE_MODE_RELEASE/PASS（放行）。EventID参数已移除，事件加白请使用白名单接口ModifyK8sApiAbnormalWhitelist。
  * @method Models\CreateNetworkFirewallClusterRefreshResponse CreateNetworkFirewallClusterRefresh(Models\CreateNetworkFirewallClusterRefreshRequest $req) 功能已下线待三合一重构
 
 容器网络集群下发刷新任务
@@ -240,7 +240,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeK8sApiAbnormalEventInfoResponse DescribeK8sApiAbnormalEventInfo(Models\DescribeK8sApiAbnormalEventInfoRequest $req) 查询k8s api 异常事件详情
  * @method Models\DescribeK8sApiAbnormalEventListResponse DescribeK8sApiAbnormalEventList(Models\DescribeK8sApiAbnormalEventListRequest $req) 查询k8s api异常事件列表
  * @method Models\DescribeK8sApiAbnormalRuleInfoResponse DescribeK8sApiAbnormalRuleInfo(Models\DescribeK8sApiAbnormalRuleInfoRequest $req) 查询k8sapi异常请求规则详情
- * @method Models\DescribeK8sApiAbnormalRuleListResponse DescribeK8sApiAbnormalRuleList(Models\DescribeK8sApiAbnormalRuleListRequest $req) 查询k8sapi异常请求规则列表
+ * @method Models\DescribeK8sApiAbnormalRuleListResponse DescribeK8sApiAbnormalRuleList(Models\DescribeK8sApiAbnormalRuleListRequest $req) 查询k8sapi异常请求规则列表。支持按集群名称（ClusterName）和集群ID（ClusterID）模糊查找规则，全集群规则（is_all=1）始终返回。响应新增RuleInfoList（子规则内容）、RuleActions（执行动作去重列表）、EffectAllCluster字段。
  * @method Models\DescribeK8sApiAbnormalRuleScopeListResponse DescribeK8sApiAbnormalRuleScopeList(Models\DescribeK8sApiAbnormalRuleScopeListRequest $req) 查询k8sapi 异常规则中范围列表
  * @method Models\DescribeK8sApiAbnormalSummaryResponse DescribeK8sApiAbnormalSummary(Models\DescribeK8sApiAbnormalSummaryRequest $req) 查询k8sapi异常事件统计
  * @method Models\DescribeK8sApiAbnormalTendencyResponse DescribeK8sApiAbnormalTendency(Models\DescribeK8sApiAbnormalTendencyRequest $req) 查询k8sapi异常事件趋势
@@ -389,7 +389,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\ModifyEscapeWhiteListResponse ModifyEscapeWhiteList(Models\ModifyEscapeWhiteListRequest $req) 修改逃逸白名单
  * @method Models\ModifyImageAuthorizedResponse ModifyImageAuthorized(Models\ModifyImageAuthorizedRequest $req) 批量授权镜像扫描V2.0
  * @method Models\ModifyK8sApiAbnormalEventStatusResponse ModifyK8sApiAbnormalEventStatus(Models\ModifyK8sApiAbnormalEventStatusRequest $req) 修改k8sapi异常事件状态
- * @method Models\ModifyK8sApiAbnormalRuleInfoResponse ModifyK8sApiAbnormalRuleInfo(Models\ModifyK8sApiAbnormalRuleInfoRequest $req) 修改k8sapi异常规则信息
+ * @method Models\ModifyK8sApiAbnormalRuleInfoResponse ModifyK8sApiAbnormalRuleInfo(Models\ModifyK8sApiAbnormalRuleInfoRequest $req) 修改k8sapi异常规则信息。RuleInfoList中的Action仅支持RULE_MODE_ALERT（告警），不再支持RULE_MODE_RELEASE/PASS（放行）。
  * @method Models\ModifyK8sApiAbnormalRuleStatusResponse ModifyK8sApiAbnormalRuleStatus(Models\ModifyK8sApiAbnormalRuleStatusRequest $req) 修改k8sapi异常事件规则状态
  * @method Models\ModifyRaspRulesResponse ModifyRaspRules(Models\ModifyRaspRulesRequest $req) 编辑或者创建java内存马白名单
  * @method Models\ModifyReverseShellStatusResponse ModifyReverseShellStatus(Models\ModifyReverseShellStatusRequest $req) 修改反弹shell事件的状态信息

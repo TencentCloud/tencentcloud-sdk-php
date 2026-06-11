@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleInfo(K8sApiAbnormalRuleInfo $RuleInfo) 设置规则详情
  * @method string getCopySrcRuleID() 获取拷贝规则ID(适用于复制规则场景)
  * @method void setCopySrcRuleID(string $CopySrcRuleID) 设置拷贝规则ID(适用于复制规则场景)
- * @method integer getEventID() 获取事件ID(适用于事件加白场景)
- * @method void setEventID(integer $EventID) 设置事件ID(适用于事件加白场景)
+ * @method integer getEventID() 获取事件ID(已废弃，保留兼容性。事件加白请使用白名单接口 ModifyK8sApiAbnormalWhitelist)
+ * @method void setEventID(integer $EventID) 设置事件ID(已废弃，保留兼容性。事件加白请使用白名单接口 ModifyK8sApiAbnormalWhitelist)
  */
 class CreateK8sApiAbnormalRuleInfoRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateK8sApiAbnormalRuleInfoRequest extends AbstractModel
     public $CopySrcRuleID;
 
     /**
-     * @var integer 事件ID(适用于事件加白场景)
+     * @var integer 事件ID(已废弃，保留兼容性。事件加白请使用白名单接口 ModifyK8sApiAbnormalWhitelist)
      */
     public $EventID;
 
     /**
      * @param K8sApiAbnormalRuleInfo $RuleInfo 规则详情
      * @param string $CopySrcRuleID 拷贝规则ID(适用于复制规则场景)
-     * @param integer $EventID 事件ID(适用于事件加白场景)
+     * @param integer $EventID 事件ID(已废弃，保留兼容性。事件加白请使用白名单接口 ModifyK8sApiAbnormalWhitelist)
      */
     function __construct()
     {

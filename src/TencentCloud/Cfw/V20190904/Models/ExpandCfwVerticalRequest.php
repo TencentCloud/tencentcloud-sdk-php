@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExpandCfwVertical请求参数结构体
  *
- * @method string getFwType() 获取nat：nat防火墙，ew：东西向防火墙
- * @method void setFwType(string $FwType) 设置nat：nat防火墙，ew：东西向防火墙
- * @method integer getWidth() 获取带宽值
- * @method void setWidth(integer $Width) 设置带宽值
- * @method string getCfwInstance() 获取防火墙实例id
- * @method void setCfwInstance(string $CfwInstance) 设置防火墙实例id
- * @method integer getElasticSwitch() 获取弹性开关 1打开 0 关闭
- * @method void setElasticSwitch(integer $ElasticSwitch) 设置弹性开关 1打开 0 关闭
- * @method integer getElasticBandwidth() 获取弹性带宽上限，单位Mbps
- * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置弹性带宽上限，单位Mbps
- * @method array getTags() 获取按量计费标签
- * @method void setTags(array $Tags) 设置按量计费标签
+ * @method string getFwType() 获取<p>nat：nat防火墙，ew：东西向防火墙</p>
+ * @method void setFwType(string $FwType) 设置<p>nat：nat防火墙，ew：东西向防火墙</p>
+ * @method integer getWidth() 获取<p>带宽值</p>
+ * @method void setWidth(integer $Width) 设置<p>带宽值</p>
+ * @method string getCfwInstance() 获取<p>防火墙实例id</p>
+ * @method void setCfwInstance(string $CfwInstance) 设置<p>防火墙实例id</p>
+ * @method integer getElasticSwitch() 获取<p>弹性开关 1打开 0 关闭</p>
+ * @method void setElasticSwitch(integer $ElasticSwitch) 设置<p>弹性开关 1打开 0 关闭</p>
+ * @method integer getElasticBandwidth() 获取<p>弹性带宽上限，单位Mbps</p>
+ * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置<p>弹性带宽上限，单位Mbps</p>
+ * @method array getTags() 获取<p>按量计费标签</p>
+ * @method void setTags(array $Tags) 设置<p>按量计费标签</p>
+ * @method integer getElasticTrafficSwitch() 获取<p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+ * @method void setElasticTrafficSwitch(integer $ElasticTrafficSwitch) 设置<p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
  */
 class ExpandCfwVerticalRequest extends AbstractModel
 {
     /**
-     * @var string nat：nat防火墙，ew：东西向防火墙
+     * @var string <p>nat：nat防火墙，ew：东西向防火墙</p>
      */
     public $FwType;
 
     /**
-     * @var integer 带宽值
+     * @var integer <p>带宽值</p>
      */
     public $Width;
 
     /**
-     * @var string 防火墙实例id
+     * @var string <p>防火墙实例id</p>
      */
     public $CfwInstance;
 
     /**
-     * @var integer 弹性开关 1打开 0 关闭
+     * @var integer <p>弹性开关 1打开 0 关闭</p>
      */
     public $ElasticSwitch;
 
     /**
-     * @var integer 弹性带宽上限，单位Mbps
+     * @var integer <p>弹性带宽上限，单位Mbps</p>
      */
     public $ElasticBandwidth;
 
     /**
-     * @var array 按量计费标签
+     * @var array <p>按量计费标签</p>
      */
     public $Tags;
 
     /**
-     * @param string $FwType nat：nat防火墙，ew：东西向防火墙
-     * @param integer $Width 带宽值
-     * @param string $CfwInstance 防火墙实例id
-     * @param integer $ElasticSwitch 弹性开关 1打开 0 关闭
-     * @param integer $ElasticBandwidth 弹性带宽上限，单位Mbps
-     * @param array $Tags 按量计费标签
+     * @var integer <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public $ElasticTrafficSwitch;
+
+    /**
+     * @param string $FwType <p>nat：nat防火墙，ew：东西向防火墙</p>
+     * @param integer $Width <p>带宽值</p>
+     * @param string $CfwInstance <p>防火墙实例id</p>
+     * @param integer $ElasticSwitch <p>弹性开关 1打开 0 关闭</p>
+     * @param integer $ElasticBandwidth <p>弹性带宽上限，单位Mbps</p>
+     * @param array $Tags <p>按量计费标签</p>
+     * @param integer $ElasticTrafficSwitch <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class ExpandCfwVerticalRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ElasticTrafficSwitch",$param) and $param["ElasticTrafficSwitch"] !== null) {
+            $this->ElasticTrafficSwitch = $param["ElasticTrafficSwitch"];
         }
     }
 }

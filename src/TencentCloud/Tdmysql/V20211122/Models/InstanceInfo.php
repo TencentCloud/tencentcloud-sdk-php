@@ -200,6 +200,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAnalysisMode(string $AnalysisMode) 设置<p>分析引擎模式</p><p>枚举值：</p><ul><li>libra： LibraDB分析引擎模式</li></ul>
  * @method array getAnalysisRelationInfos() 获取<p>分析引擎关系信息</p>
  * @method void setAnalysisRelationInfos(array $AnalysisRelationInfos) 设置<p>分析引擎关系信息</p>
+ * @method AnalysisInstanceInfo getAnalysisInstanceInfo() 获取<p>分析引擎实例信息</p>
+ * @method void setAnalysisInstanceInfo(AnalysisInstanceInfo $AnalysisInstanceInfo) 设置<p>分析引擎实例信息</p>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -554,6 +556,11 @@ class InstanceInfo extends AbstractModel
     public $AnalysisRelationInfos;
 
     /**
+     * @var AnalysisInstanceInfo <p>分析引擎实例信息</p>
+     */
+    public $AnalysisInstanceInfo;
+
+    /**
      * @param integer $ComputeNodeNum <p>计算节点数量</p>
      * @param string $Zone <p>区域</p>
      * @param string $CreateVersion <p>创建实例版本</p>
@@ -644,6 +651,7 @@ class InstanceInfo extends AbstractModel
      * @param AutoScalingConfig $AutoScaleConfig <p>自动扩容配置</p>
      * @param string $AnalysisMode <p>分析引擎模式</p><p>枚举值：</p><ul><li>libra： LibraDB分析引擎模式</li></ul>
      * @param array $AnalysisRelationInfos <p>分析引擎关系信息</p>
+     * @param AnalysisInstanceInfo $AnalysisInstanceInfo <p>分析引擎实例信息</p>
      */
     function __construct()
     {
@@ -925,6 +933,11 @@ class InstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AnalysisRelationInfos, $obj);
             }
+        }
+
+        if (array_key_exists("AnalysisInstanceInfo",$param) and $param["AnalysisInstanceInfo"] !== null) {
+            $this->AnalysisInstanceInfo = new AnalysisInstanceInfo();
+            $this->AnalysisInstanceInfo->deserialize($param["AnalysisInstanceInfo"]);
         }
     }
 }

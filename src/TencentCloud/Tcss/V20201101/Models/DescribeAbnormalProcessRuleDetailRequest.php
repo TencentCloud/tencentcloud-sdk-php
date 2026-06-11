@@ -20,22 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAbnormalProcessRuleDetail请求参数结构体
  *
- * @method string getRuleId() 获取策略唯一id
- * @method void setRuleId(string $RuleId) 设置策略唯一id
  * @method string getImageId() 获取镜像id, 在添加白名单的时候使用
  * @method void setImageId(string $ImageId) 设置镜像id, 在添加白名单的时候使用
  * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method string getRuleId() 获取策略唯一id
+ * @method void setRuleId(string $RuleId) 设置策略唯一id
  */
 class DescribeAbnormalProcessRuleDetailRequest extends AbstractModel
 {
-    /**
-     * @var string 策略唯一id
-     */
-    public $RuleId;
-
     /**
      * @var string 镜像id, 在添加白名单的时候使用
      */
@@ -52,10 +47,15 @@ class DescribeAbnormalProcessRuleDetailRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $RuleId 策略唯一id
+     * @var string 策略唯一id
+     */
+    public $RuleId;
+
+    /**
      * @param string $ImageId 镜像id, 在添加白名单的时候使用
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
+     * @param string $RuleId 策略唯一id
      */
     function __construct()
     {
@@ -70,10 +70,6 @@ class DescribeAbnormalProcessRuleDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
-        }
-
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
             $this->ImageId = $param["ImageId"];
         }
@@ -84,6 +80,10 @@ class DescribeAbnormalProcessRuleDetailRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
     }
 }

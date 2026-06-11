@@ -20,67 +20,67 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VoiceClone请求参数结构体
  *
- * @method integer getSdkAppId() 获取TRTC的SdkAppId
- * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SdkAppId
- * @method string getVoiceName() 获取声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
- * @method void setVoiceName(string $VoiceName) 设置声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
- * @method string getPromptAudio() 获取声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
- * @method void setPromptAudio(string $PromptAudio) 设置声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
- * @method string getAPIKey() 获取TTS的API密钥
- * @method void setAPIKey(string $APIKey) 设置TTS的API密钥
- * @method string getPromptText() 获取声音克隆的参考文本，为参考音频对应的文字。
- * @method void setPromptText(string $PromptText) 设置声音克隆的参考文本，为参考音频对应的文字。
- * @method string getModel() 获取TTS的模型：flow_01_turbo，flow_01_ex
- * @method void setModel(string $Model) 设置TTS的模型：flow_01_turbo，flow_01_ex
- * @method string getLanguage() 获取语言参数，默认为空， 参考： (ISO 639-1) 
- * @method void setLanguage(string $Language) 设置语言参数，默认为空， 参考： (ISO 639-1) 
+ * @method integer getSdkAppId() 获取<p>TRTC的SdkAppId</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>TRTC的SdkAppId</p>
+ * @method string getVoiceName() 获取<p>声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位</p>
+ * @method void setVoiceName(string $VoiceName) 设置<p>声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位</p>
+ * @method string getPromptAudio() 获取<p>声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间</p>
+ * @method void setPromptAudio(string $PromptAudio) 设置<p>声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间</p>
+ * @method string getAPIKey() 获取<p>TTS的API密钥</p>
+ * @method void setAPIKey(string $APIKey) 设置<p>TTS的API密钥</p>
+ * @method string getPromptText() 获取<p>声音克隆的参考文本，为参考音频对应的文字。</p>
+ * @method void setPromptText(string $PromptText) 设置<p>声音克隆的参考文本，为参考音频对应的文字。</p>
+ * @method string getModel() 获取<p>TTS的模型：flow_02_turbo，flow_01_ex</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li><li>flow_01_ex： flow_01_ex</li></ul>
+ * @method void setModel(string $Model) 设置<p>TTS的模型：flow_02_turbo，flow_01_ex</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li><li>flow_01_ex： flow_01_ex</li></ul>
+ * @method string getLanguage() 获取<p>语言参数，默认为空， 参考： (ISO 639-1)</p>
+ * @method void setLanguage(string $Language) 设置<p>语言参数，默认为空， 参考： (ISO 639-1)</p>
  */
 class VoiceCloneRequest extends AbstractModel
 {
     /**
-     * @var integer TRTC的SdkAppId
+     * @var integer <p>TRTC的SdkAppId</p>
      */
     public $SdkAppId;
 
     /**
-     * @var string 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
+     * @var string <p>声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位</p>
      */
     public $VoiceName;
 
     /**
-     * @var string 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
+     * @var string <p>声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间</p>
      */
     public $PromptAudio;
 
     /**
-     * @var string TTS的API密钥
+     * @var string <p>TTS的API密钥</p>
      * @deprecated
      */
     public $APIKey;
 
     /**
-     * @var string 声音克隆的参考文本，为参考音频对应的文字。
+     * @var string <p>声音克隆的参考文本，为参考音频对应的文字。</p>
      */
     public $PromptText;
 
     /**
-     * @var string TTS的模型：flow_01_turbo，flow_01_ex
+     * @var string <p>TTS的模型：flow_02_turbo，flow_01_ex</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li><li>flow_01_ex： flow_01_ex</li></ul>
      */
     public $Model;
 
     /**
-     * @var string 语言参数，默认为空， 参考： (ISO 639-1) 
+     * @var string <p>语言参数，默认为空， 参考： (ISO 639-1)</p>
      */
     public $Language;
 
     /**
-     * @param integer $SdkAppId TRTC的SdkAppId
-     * @param string $VoiceName 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
-     * @param string $PromptAudio 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
-     * @param string $APIKey TTS的API密钥
-     * @param string $PromptText 声音克隆的参考文本，为参考音频对应的文字。
-     * @param string $Model TTS的模型：flow_01_turbo，flow_01_ex
-     * @param string $Language 语言参数，默认为空， 参考： (ISO 639-1) 
+     * @param integer $SdkAppId <p>TRTC的SdkAppId</p>
+     * @param string $VoiceName <p>声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位</p>
+     * @param string $PromptAudio <p>声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间</p>
+     * @param string $APIKey <p>TTS的API密钥</p>
+     * @param string $PromptText <p>声音克隆的参考文本，为参考音频对应的文字。</p>
+     * @param string $Model <p>TTS的模型：flow_02_turbo，flow_01_ex</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li><li>flow_01_ex： flow_01_ex</li></ul>
+     * @param string $Language <p>语言参数，默认为空， 参考： (ISO 639-1)</p>
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoginWhiteHostList请求参数结构体
  *
- * @method integer getId() 获取白名单ID
- * @method void setId(integer $Id) 设置白名单ID
- * @method integer getLimit() 获取需要返回的数量，最大值为1000
- * @method void setLimit(integer $Limit) 设置需要返回的数量，最大值为1000
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method array getFilters() 获取过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
- * @method void setFilters(array $Filters) 设置过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+ * @method integer getId() 获取<p>白名单ID</p>
+ * @method void setId(integer $Id) 设置<p>白名单ID</p>
+ * @method integer getLimit() 获取<p>需要返回的数量，最大值为1000</p>
+ * @method void setLimit(integer $Limit) 设置<p>需要返回的数量，最大值为1000</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method array getFilters() 获取<p>过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li></p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li></p>
  */
 class DescribeLoginWhiteHostListRequest extends AbstractModel
 {
     /**
-     * @var integer 白名单ID
+     * @var integer <p>白名单ID</p>
      */
     public $Id;
 
     /**
-     * @var integer 需要返回的数量，最大值为1000
+     * @var integer <p>需要返回的数量，最大值为1000</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var array 过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+     * @var array <p>过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li></p>
      */
     public $Filters;
 
     /**
-     * @param integer $Id 白名单ID
-     * @param integer $Limit 需要返回的数量，最大值为1000
-     * @param integer $Offset 偏移量，默认为0。
-     * @param array $Filters 过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+     * @param integer $Id <p>白名单ID</p>
+     * @param integer $Limit <p>需要返回的数量，最大值为1000</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param array $Filters <p>过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li></p>
      */
     function __construct()
     {

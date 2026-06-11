@@ -20,162 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Pulsar专业版集群信息
  *
- * @method string getClusterId() 获取集群Id。
- * @method void setClusterId(string $ClusterId) 设置集群Id。
- * @method string getClusterName() 获取集群名称。
- * @method void setClusterName(string $ClusterName) 设置集群名称。
- * @method string getRemark() 获取说明信息。
- * @method void setRemark(string $Remark) 设置说明信息。
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method integer getStatus() 获取集群状态，0:创建中，1:正常，2:隔离
- * @method void setStatus(integer $Status) 设置集群状态，0:创建中，1:正常，2:隔离
- * @method string getVersion() 获取集群版本
- * @method void setVersion(string $Version) 设置集群版本
- * @method array getNodeDistribution() 获取节点分布情况
+ * @method string getClusterId() 获取<p>集群Id。</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群Id。</p>
+ * @method string getClusterName() 获取<p>集群名称。</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称。</p>
+ * @method string getRemark() 获取<p>说明信息。</p>
+ * @method void setRemark(string $Remark) 设置<p>说明信息。</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method integer getStatus() 获取<p>集群状态，0:创建中，1:正常，2:隔离</p>
+ * @method void setStatus(integer $Status) 设置<p>集群状态，0:创建中，1:正常，2:隔离</p>
+ * @method string getVersion() 获取<p>集群版本</p>
+ * @method void setVersion(string $Version) 设置<p>集群版本</p>
+ * @method array getNodeDistribution() 获取<p>节点分布情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeDistribution(array $NodeDistribution) 设置节点分布情况
+ * @method void setNodeDistribution(array $NodeDistribution) 设置<p>节点分布情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxStorage() 获取最大储存容量，单位：MB
- * @method void setMaxStorage(integer $MaxStorage) 设置最大储存容量，单位：MB
- * @method boolean getCanEditRoute() 获取是否可以修改路由
+ * @method integer getMaxStorage() 获取<p>最大储存容量，单位：MB</p>
+ * @method void setMaxStorage(integer $MaxStorage) 设置<p>最大储存容量，单位：MB</p>
+ * @method boolean getCanEditRoute() 获取<p>是否可以修改路由</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCanEditRoute(boolean $CanEditRoute) 设置是否可以修改路由
+ * @method void setCanEditRoute(boolean $CanEditRoute) 设置<p>是否可以修改路由</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingLabelVersion() 获取代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+ * @method string getBillingLabelVersion() 获取<p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+ * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置<p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getExpireTime() 获取实例到期时间戳，毫秒级精度。
+ * @method integer getExpireTime() 获取<p>实例到期时间戳，毫秒级精度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpireTime(integer $ExpireTime) 设置实例到期时间戳，毫秒级精度。
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>实例到期时间戳，毫秒级精度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getAutoCreateTopicStatus() 获取是否开启自动创建主题
-true就是开启了，false是关闭
+ * @method boolean getAutoCreateTopicStatus() 获取<p>是否开启自动创建主题<br>true就是开启了，false是关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoCreateTopicStatus(boolean $AutoCreateTopicStatus) 设置是否开启自动创建主题
-true就是开启了，false是关闭
+ * @method void setAutoCreateTopicStatus(boolean $AutoCreateTopicStatus) 设置<p>是否开启自动创建主题<br>true就是开启了，false是关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDefaultPartitionNumber() 获取自动创建主题的默认分区数，如果没开启就是0
+ * @method integer getDefaultPartitionNumber() 获取<p>自动创建主题的默认分区数，如果没开启就是0</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultPartitionNumber(integer $DefaultPartitionNumber) 设置自动创建主题的默认分区数，如果没开启就是0
+ * @method void setDefaultPartitionNumber(integer $DefaultPartitionNumber) 设置<p>自动创建主题的默认分区数，如果没开启就是0</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTenant() 获取用户自定义的租户别名，如果没有，会复用专业集群 ID
-
- * @method void setTenant(string $Tenant) 设置用户自定义的租户别名，如果没有，会复用专业集群 ID
-
- * @method integer getDeleteProtection() 获取删除保护开关标识
- * @method void setDeleteProtection(integer $DeleteProtection) 设置删除保护开关标识
+ * @method string getTenant() 获取<p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+ * @method void setTenant(string $Tenant) 设置<p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+ * @method integer getDeleteProtection() 获取<p>删除保护开关标识</p>
+ * @method void setDeleteProtection(integer $DeleteProtection) 设置<p>删除保护开关标识</p>
+ * @method integer getElasticTpsEnabled() 获取<p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+ * @method void setElasticTpsEnabled(integer $ElasticTpsEnabled) 设置<p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+ * @method integer getEncryptionStatus() 获取<p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
+ * @method void setEncryptionStatus(integer $EncryptionStatus) 设置<p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
  */
 class PulsarProClusterInfo extends AbstractModel
 {
     /**
-     * @var string 集群Id。
+     * @var string <p>集群Id。</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称。
+     * @var string <p>集群名称。</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 说明信息。
+     * @var string <p>说明信息。</p>
      */
     public $Remark;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 集群状态，0:创建中，1:正常，2:隔离
+     * @var integer <p>集群状态，0:创建中，1:正常，2:隔离</p>
      */
     public $Status;
 
     /**
-     * @var string 集群版本
+     * @var string <p>集群版本</p>
      */
     public $Version;
 
     /**
-     * @var array 节点分布情况
+     * @var array <p>节点分布情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeDistribution;
 
     /**
-     * @var integer 最大储存容量，单位：MB
+     * @var integer <p>最大储存容量，单位：MB</p>
      */
     public $MaxStorage;
 
     /**
-     * @var boolean 是否可以修改路由
+     * @var boolean <p>是否可以修改路由</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanEditRoute;
 
     /**
-     * @var string 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+     * @var string <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingLabelVersion;
 
     /**
-     * @var integer 实例到期时间戳，毫秒级精度。
+     * @var integer <p>实例到期时间戳，毫秒级精度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
-     * @var boolean 是否开启自动创建主题
-true就是开启了，false是关闭
+     * @var boolean <p>是否开启自动创建主题<br>true就是开启了，false是关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoCreateTopicStatus;
 
     /**
-     * @var integer 自动创建主题的默认分区数，如果没开启就是0
+     * @var integer <p>自动创建主题的默认分区数，如果没开启就是0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultPartitionNumber;
 
     /**
-     * @var string 用户自定义的租户别名，如果没有，会复用专业集群 ID
-
+     * @var string <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
      */
     public $Tenant;
 
     /**
-     * @var integer 删除保护开关标识
+     * @var integer <p>删除保护开关标识</p>
      */
     public $DeleteProtection;
 
     /**
-     * @param string $ClusterId 集群Id。
-     * @param string $ClusterName 集群名称。
-     * @param string $Remark 说明信息。
-     * @param string $CreateTime 创建时间
-     * @param integer $Status 集群状态，0:创建中，1:正常，2:隔离
-     * @param string $Version 集群版本
-     * @param array $NodeDistribution 节点分布情况
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxStorage 最大储存容量，单位：MB
-     * @param boolean $CanEditRoute 是否可以修改路由
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ExpireTime 实例到期时间戳，毫秒级精度。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $AutoCreateTopicStatus 是否开启自动创建主题
-true就是开启了，false是关闭
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Tenant 用户自定义的租户别名，如果没有，会复用专业集群 ID
+     * @var integer <p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public $ElasticTpsEnabled;
 
-     * @param integer $DeleteProtection 删除保护开关标识
+    /**
+     * @var integer <p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
+     */
+    public $EncryptionStatus;
+
+    /**
+     * @param string $ClusterId <p>集群Id。</p>
+     * @param string $ClusterName <p>集群名称。</p>
+     * @param string $Remark <p>说明信息。</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param integer $Status <p>集群状态，0:创建中，1:正常，2:隔离</p>
+     * @param string $Version <p>集群版本</p>
+     * @param array $NodeDistribution <p>节点分布情况</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxStorage <p>最大储存容量，单位：MB</p>
+     * @param boolean $CanEditRoute <p>是否可以修改路由</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillingLabelVersion <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExpireTime <p>实例到期时间戳，毫秒级精度。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoCreateTopicStatus <p>是否开启自动创建主题<br>true就是开启了，false是关闭</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefaultPartitionNumber <p>自动创建主题的默认分区数，如果没开启就是0</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Tenant <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+     * @param integer $DeleteProtection <p>删除保护开关标识</p>
+     * @param integer $ElasticTpsEnabled <p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     * @param integer $EncryptionStatus <p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
      */
     function __construct()
     {
@@ -253,6 +261,14 @@ true就是开启了，false是关闭
 
         if (array_key_exists("DeleteProtection",$param) and $param["DeleteProtection"] !== null) {
             $this->DeleteProtection = $param["DeleteProtection"];
+        }
+
+        if (array_key_exists("ElasticTpsEnabled",$param) and $param["ElasticTpsEnabled"] !== null) {
+            $this->ElasticTpsEnabled = $param["ElasticTpsEnabled"];
+        }
+
+        if (array_key_exists("EncryptionStatus",$param) and $param["EncryptionStatus"] !== null) {
+            $this->EncryptionStatus = $param["EncryptionStatus"];
         }
     }
 }

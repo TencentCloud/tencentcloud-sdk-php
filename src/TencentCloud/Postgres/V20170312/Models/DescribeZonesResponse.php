@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZones返回参数结构体
  *
- * @method integer getTotalCount() 获取返回的结果数量。
- * @method void setTotalCount(integer $TotalCount) 设置返回的结果数量。
- * @method array getZoneSet() 获取可用区信息集合。
- * @method void setZoneSet(array $ZoneSet) 设置可用区信息集合。
+ * @method integer getTotalCount() 获取<p>返回的结果数量。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>返回的结果数量。</p>
+ * @method array getZoneSet() 获取<p>可用区信息集合。</p>
+ * @method void setZoneSet(array $ZoneSet) 设置<p>可用区信息集合。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeZonesResponse extends AbstractModel
 {
     /**
-     * @var integer 返回的结果数量。
+     * @var integer <p>返回的结果数量。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 可用区信息集合。
+     * @var array <p>可用区信息集合。</p>
      */
     public $ZoneSet;
 
@@ -45,8 +45,8 @@ class DescribeZonesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 返回的结果数量。
-     * @param array $ZoneSet 可用区信息集合。
+     * @param integer $TotalCount <p>返回的结果数量。</p>
+     * @param array $ZoneSet <p>可用区信息集合。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

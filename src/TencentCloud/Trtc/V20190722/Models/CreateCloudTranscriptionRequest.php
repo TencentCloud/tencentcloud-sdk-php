@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudTranscription请求参数结构体
  *
- * @method integer getSdkAppId() 获取TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转录的房间所对应的SdkAppId相同。
- * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转录的房间所对应的SdkAppId相同。
- * @method string getRoomId() 获取TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，转录的TRTC房间所对应的RoomId。注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
- * @method void setRoomId(string $RoomId) 设置TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，转录的TRTC房间所对应的RoomId。注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
- * @method integer getRoomIdType() 获取房间信息RoomType，必须和转录的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
- * @method void setRoomIdType(integer $RoomIdType) 设置房间信息RoomType，必须和转录的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
- * @method TranscriptionParam getTranscriptionParam() 获取转录服务加入TRTC房间的参数。
- * @method void setTranscriptionParam(TranscriptionParam $TranscriptionParam) 设置转录服务加入TRTC房间的参数。
- * @method AsrParam getAsrParam() 获取转录服务ASR使用的参数。
- * @method void setAsrParam(AsrParam $AsrParam) 设置转录服务ASR使用的参数。
- * @method TranslationParam getTranslationParam() 获取转录服务翻译使用的参数。
- * @method void setTranslationParam(TranslationParam $TranslationParam) 设置转录服务翻译使用的参数。
+ * @method integer getSdkAppId() 获取<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转录的房间所对应的SdkAppId相同。</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转录的房间所对应的SdkAppId相同。</p>
+ * @method string getRoomId() 获取<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#roomid">RoomId</a>，转录的TRTC房间所对应的RoomId。注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。</p>
+ * @method void setRoomId(string $RoomId) 设置<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#roomid">RoomId</a>，转录的TRTC房间所对应的RoomId。注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。</p>
+ * @method integer getRoomIdType() 获取<p>房间信息RoomType，必须和转录的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。</p>
+ * @method void setRoomIdType(integer $RoomIdType) 设置<p>房间信息RoomType，必须和转录的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。</p>
+ * @method TranscriptionParam getTranscriptionParam() 获取<p>转录服务加入TRTC房间的参数。</p>
+ * @method void setTranscriptionParam(TranscriptionParam $TranscriptionParam) 设置<p>转录服务加入TRTC房间的参数。</p>
+ * @method AsrParam getAsrParam() 获取<p>转录服务ASR使用的参数。</p>
+ * @method void setAsrParam(AsrParam $AsrParam) 设置<p>转录服务ASR使用的参数。</p>
+ * @method TranslationParam getTranslationParam() 获取<p>转录服务翻译使用的参数。</p>
+ * @method void setTranslationParam(TranslationParam $TranslationParam) 设置<p>转录服务翻译使用的参数。</p>
+ * @method array getTTSParam() 获取<p>转录服务TTS使用的参数。</p>
+ * @method void setTTSParam(array $TTSParam) 设置<p>转录服务TTS使用的参数。</p>
  */
 class CreateCloudTranscriptionRequest extends AbstractModel
 {
     /**
-     * @var integer TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转录的房间所对应的SdkAppId相同。
+     * @var integer <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转录的房间所对应的SdkAppId相同。</p>
      */
     public $SdkAppId;
 
     /**
-     * @var string TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，转录的TRTC房间所对应的RoomId。注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
+     * @var string <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#roomid">RoomId</a>，转录的TRTC房间所对应的RoomId。注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。</p>
      */
     public $RoomId;
 
     /**
-     * @var integer 房间信息RoomType，必须和转录的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
+     * @var integer <p>房间信息RoomType，必须和转录的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。</p>
      */
     public $RoomIdType;
 
     /**
-     * @var TranscriptionParam 转录服务加入TRTC房间的参数。
+     * @var TranscriptionParam <p>转录服务加入TRTC房间的参数。</p>
      */
     public $TranscriptionParam;
 
     /**
-     * @var AsrParam 转录服务ASR使用的参数。
+     * @var AsrParam <p>转录服务ASR使用的参数。</p>
      */
     public $AsrParam;
 
     /**
-     * @var TranslationParam 转录服务翻译使用的参数。
+     * @var TranslationParam <p>转录服务翻译使用的参数。</p>
      */
     public $TranslationParam;
 
     /**
-     * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转录的房间所对应的SdkAppId相同。
-     * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，转录的TRTC房间所对应的RoomId。注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
-     * @param integer $RoomIdType 房间信息RoomType，必须和转录的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
-     * @param TranscriptionParam $TranscriptionParam 转录服务加入TRTC房间的参数。
-     * @param AsrParam $AsrParam 转录服务ASR使用的参数。
-     * @param TranslationParam $TranslationParam 转录服务翻译使用的参数。
+     * @var array <p>转录服务TTS使用的参数。</p>
+     */
+    public $TTSParam;
+
+    /**
+     * @param integer $SdkAppId <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转录的房间所对应的SdkAppId相同。</p>
+     * @param string $RoomId <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#roomid">RoomId</a>，转录的TRTC房间所对应的RoomId。注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。</p>
+     * @param integer $RoomIdType <p>房间信息RoomType，必须和转录的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。</p>
+     * @param TranscriptionParam $TranscriptionParam <p>转录服务加入TRTC房间的参数。</p>
+     * @param AsrParam $AsrParam <p>转录服务ASR使用的参数。</p>
+     * @param TranslationParam $TranslationParam <p>转录服务翻译使用的参数。</p>
+     * @param array $TTSParam <p>转录服务TTS使用的参数。</p>
      */
     function __construct()
     {
@@ -111,6 +119,15 @@ class CreateCloudTranscriptionRequest extends AbstractModel
         if (array_key_exists("TranslationParam",$param) and $param["TranslationParam"] !== null) {
             $this->TranslationParam = new TranslationParam();
             $this->TranslationParam->deserialize($param["TranslationParam"]);
+        }
+
+        if (array_key_exists("TTSParam",$param) and $param["TTSParam"] !== null) {
+            $this->TTSParam = [];
+            foreach ($param["TTSParam"] as $key => $value){
+                $obj = new TTSParam();
+                $obj->deserialize($value);
+                array_push($this->TTSParam, $obj);
+            }
         }
     }
 }

@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyChunk请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getFileId() 获取文件ID
- * @method void setFileId(string $FileId) 设置文件ID
- * @method string getChunkId() 获取切片ID
- * @method void setChunkId(string $ChunkId) 设置切片ID
- * @method string getContent() 获取编辑后的文本
- * @method void setContent(string $Content) 设置编辑后的文本
- * @method string getKnowledgeBaseId() 获取知识库id
- * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库id
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getFileId() 获取<p>文件ID</p>
+ * @method void setFileId(string $FileId) 设置<p>文件ID</p>
+ * @method string getChunkId() 获取<p>切片ID</p>
+ * @method void setChunkId(string $ChunkId) 设置<p>切片ID</p>
+ * @method string getContent() 获取<p>编辑后的文本</p>
+ * @method void setContent(string $Content) 设置<p>编辑后的文本</p>
+ * @method string getSummary() 获取<p>分段概要</p>
+ * @method void setSummary(string $Summary) 设置<p>分段概要</p>
+ * @method string getKnowledgeBaseId() 获取<p>知识库id</p>
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置<p>知识库id</p>
  */
 class ModifyChunkRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 文件ID
+     * @var string <p>文件ID</p>
      */
     public $FileId;
 
     /**
-     * @var string 切片ID
+     * @var string <p>切片ID</p>
      */
     public $ChunkId;
 
     /**
-     * @var string 编辑后的文本
+     * @var string <p>编辑后的文本</p>
      */
     public $Content;
 
     /**
-     * @var string 知识库id
+     * @var string <p>分段概要</p>
+     */
+    public $Summary;
+
+    /**
+     * @var string <p>知识库id</p>
      */
     public $KnowledgeBaseId;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $FileId 文件ID
-     * @param string $ChunkId 切片ID
-     * @param string $Content 编辑后的文本
-     * @param string $KnowledgeBaseId 知识库id
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $FileId <p>文件ID</p>
+     * @param string $ChunkId <p>切片ID</p>
+     * @param string $Content <p>编辑后的文本</p>
+     * @param string $Summary <p>分段概要</p>
+     * @param string $KnowledgeBaseId <p>知识库id</p>
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class ModifyChunkRequest extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
+            $this->Summary = $param["Summary"];
         }
 
         if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {

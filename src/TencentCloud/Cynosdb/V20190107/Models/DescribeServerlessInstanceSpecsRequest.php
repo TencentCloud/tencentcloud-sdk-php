@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeServerlessInstanceSpecs请求参数结构体
  *
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getClusterLevel() 获取<p>集群级别</p>
+ * @method void setClusterLevel(string $ClusterLevel) 设置<p>集群级别</p>
  */
 class DescribeServerlessInstanceSpecsRequest extends AbstractModel
 {
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @param string $Zone 可用区
+     * @var string <p>集群级别</p>
+     */
+    public $ClusterLevel;
+
+    /**
+     * @param string $Zone <p>可用区</p>
+     * @param string $ClusterLevel <p>集群级别</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeServerlessInstanceSpecsRequest extends AbstractModel
         }
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
         }
     }
 }

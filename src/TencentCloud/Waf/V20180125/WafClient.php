@@ -80,6 +80,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeApiAggregateTopNResponse DescribeApiAggregateTopN(Models\DescribeApiAggregateTopNRequest $req) 获取Api安全模块的访问日志聚合topN
  * @method Models\DescribeApiDetailResponse DescribeApiDetail(Models\DescribeApiDetailRequest $req) 获取Api请求详情信息
  * @method Models\DescribeApiListVersionTwoResponse DescribeApiListVersionTwo(Models\DescribeApiListVersionTwoRequest $req) api资产列表
+ * @method Models\DescribeApiSecEventDetailResponse DescribeApiSecEventDetail(Models\DescribeApiSecEventDetailRequest $req) API安全事件详情查询接口
+ * @method Models\DescribeApiSecEventListResponse DescribeApiSecEventList(Models\DescribeApiSecEventListRequest $req) api安全事件列表
  * @method Models\DescribeApiSecSensitiveRuleListResponse DescribeApiSecSensitiveRuleList(Models\DescribeApiSecSensitiveRuleListRequest $req) 获取api安全敏感规则列表
  * @method Models\DescribeAreaBanAreasResponse DescribeAreaBanAreas(Models\DescribeAreaBanAreasRequest $req) 获取地域封禁配置包括地域封禁开关，设置封禁的地区信息
  * @method Models\DescribeAreaBanRuleResponse DescribeAreaBanRule(Models\DescribeAreaBanRuleRequest $req) 获取地域封禁规则配置

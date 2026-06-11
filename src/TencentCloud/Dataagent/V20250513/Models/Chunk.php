@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文件分片
  *
- * @method string getId() 获取切片ID
- * @method void setId(string $Id) 设置切片ID
- * @method string getContent() 获取切片内容
- * @method void setContent(string $Content) 设置切片内容
- * @method integer getSize() 获取切片的字数
- * @method void setSize(integer $Size) 设置切片的字数
- * @method string getSummary() 获取切片概要
- * @method void setSummary(string $Summary) 设置切片概要
+ * @method string getId() 获取<p>切片ID</p>
+ * @method void setId(string $Id) 设置<p>切片ID</p>
+ * @method string getContent() 获取<p>切片内容</p>
+ * @method void setContent(string $Content) 设置<p>切片内容</p>
+ * @method integer getSize() 获取<p>切片的字数</p>
+ * @method void setSize(integer $Size) 设置<p>切片的字数</p>
+ * @method string getSummary() 获取<p>切片概要</p>
+ * @method void setSummary(string $Summary) 设置<p>切片概要</p>
+ * @method integer getChunkSource() 获取<p>分段类型</p><p>枚举值：</p><ul><li>0： 自动分段</li><li>1： 新建分段</li></ul>
+ * @method void setChunkSource(integer $ChunkSource) 设置<p>分段类型</p><p>枚举值：</p><ul><li>0： 自动分段</li><li>1： 新建分段</li></ul>
  */
 class Chunk extends AbstractModel
 {
     /**
-     * @var string 切片ID
+     * @var string <p>切片ID</p>
      */
     public $Id;
 
     /**
-     * @var string 切片内容
+     * @var string <p>切片内容</p>
      */
     public $Content;
 
     /**
-     * @var integer 切片的字数
+     * @var integer <p>切片的字数</p>
      */
     public $Size;
 
     /**
-     * @var string 切片概要
+     * @var string <p>切片概要</p>
      */
     public $Summary;
 
     /**
-     * @param string $Id 切片ID
-     * @param string $Content 切片内容
-     * @param integer $Size 切片的字数
-     * @param string $Summary 切片概要
+     * @var integer <p>分段类型</p><p>枚举值：</p><ul><li>0： 自动分段</li><li>1： 新建分段</li></ul>
+     */
+    public $ChunkSource;
+
+    /**
+     * @param string $Id <p>切片ID</p>
+     * @param string $Content <p>切片内容</p>
+     * @param integer $Size <p>切片的字数</p>
+     * @param string $Summary <p>切片概要</p>
+     * @param integer $ChunkSource <p>分段类型</p><p>枚举值：</p><ul><li>0： 自动分段</li><li>1： 新建分段</li></ul>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class Chunk extends AbstractModel
 
         if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
             $this->Summary = $param["Summary"];
+        }
+
+        if (array_key_exists("ChunkSource",$param) and $param["ChunkSource"] !== null) {
+            $this->ChunkSource = $param["ChunkSource"];
         }
     }
 }

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置<p>私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 <a href="/document/api/215/15784">查询子网列表</a>。<br>说明：若此项不填，则系统会选择默认 VPC 下的默认子网。</p>
  * @method integer getProjectId() 获取<p>项目 ID，不填为默认项目。</p>
  * @method void setProjectId(integer $ProjectId) 设置<p>项目 ID，不填为默认项目。</p>
- * @method string getZone() 获取<p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
- * @method void setZone(string $Zone) 设置<p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
+ * @method string getZone() 获取<p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版集群实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
+ * @method void setZone(string $Zone) 设置<p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版集群实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
  * @method string getMasterInstanceId() 获取<p>实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 <a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口查询云数据库实例 ID。</p>
  * @method void setMasterInstanceId(string $MasterInstanceId) 设置<p>实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 <a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口查询云数据库实例 ID。</p>
  * @method string getInstanceRole() 获取<p>实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。<br>说明：请选择实例类型，不填会默认选择 master。</p>
@@ -70,14 +70,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployGroupId(string $DeployGroupId) 设置<p>置放群组 ID。</p>
  * @method string getClientToken() 获取<p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
  * @method void setClientToken(string $ClientToken) 设置<p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
- * @method string getDeviceType() 获取<p>实例隔离类型。支持值包括：&quot;UNIVERSAL&quot; - 通用型实例，&quot;EXCLUSIVE&quot; - 独享型实例，&quot;BASIC_V2&quot; - ONTKE 单节点实例，&quot;CLOUD_NATIVE_CLUSTER&quot; - 云盘版标准型，&quot;CLOUD_NATIVE_CLUSTER_EXCLUSIVE&quot; - 云盘版加强型。不指定则默认为通用型实例。<br>说明：如果创建的是云盘版实例，此参数为必填。</p>
- * @method void setDeviceType(string $DeviceType) 设置<p>实例隔离类型。支持值包括：&quot;UNIVERSAL&quot; - 通用型实例，&quot;EXCLUSIVE&quot; - 独享型实例，&quot;BASIC_V2&quot; - ONTKE 单节点实例，&quot;CLOUD_NATIVE_CLUSTER&quot; - 云盘版标准型，&quot;CLOUD_NATIVE_CLUSTER_EXCLUSIVE&quot; - 云盘版加强型。不指定则默认为通用型实例。<br>说明：如果创建的是云盘版实例，此参数为必填。</p>
+ * @method string getDeviceType() 获取<p>实例隔离类型。</p><p>枚举值：</p><ul><li><p>UNIVERSAL： 通用型实例</p></li><li><p>EXCLUSIVE： 独享型实例</p></li><li><p>CLOUD_NATIVE_CLUSTER： 云盘版标准型</p></li><li><p>CLOUD_NATIVE_CLUSTER_EXCLUSIVE： 云盘版加强型</p></li><li><p>CLOUD_NATIVE_CLUSTER_ULTRA： 云盘版旗舰型</p></li><li><p>若此参数不指定，则默认为通用型实例。</p></li><li><p>如果创建的是云盘版实例，此参数为必填。</p></li><li><p>如果创建的是单节点实例，此参数请填写为：CLOUD_NATIVE_CLUSTER，并指定参数 InstanceNodes 等于1。</p></li></ul>
+ * @method void setDeviceType(string $DeviceType) 设置<p>实例隔离类型。</p><p>枚举值：</p><ul><li><p>UNIVERSAL： 通用型实例</p></li><li><p>EXCLUSIVE： 独享型实例</p></li><li><p>CLOUD_NATIVE_CLUSTER： 云盘版标准型</p></li><li><p>CLOUD_NATIVE_CLUSTER_EXCLUSIVE： 云盘版加强型</p></li><li><p>CLOUD_NATIVE_CLUSTER_ULTRA： 云盘版旗舰型</p></li><li><p>若此参数不指定，则默认为通用型实例。</p></li><li><p>如果创建的是云盘版实例，此参数为必填。</p></li><li><p>如果创建的是单节点实例，此参数请填写为：CLOUD_NATIVE_CLUSTER，并指定参数 InstanceNodes 等于1。</p></li></ul>
  * @method integer getParamTemplateId() 获取<p>参数模板 id。<br>备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。</p>
  * @method void setParamTemplateId(integer $ParamTemplateId) 设置<p>参数模板 id。<br>备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。</p>
  * @method array getAlarmPolicyList() 获取<p>告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。</p>
  * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置<p>告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。</p>
- * @method integer getInstanceNodes() 获取<p>实例节点数。</p><p>对于 RO 和 基础版实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
- * @method void setInstanceNodes(integer $InstanceNodes) 设置<p>实例节点数。</p><p>对于 RO 和 基础版实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
+ * @method integer getInstanceNodes() 获取<p>实例节点数。</p><p>对于 RO 和单节点实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
+ * @method void setInstanceNodes(integer $InstanceNodes) 设置<p>实例节点数。</p><p>对于 RO 和单节点实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
  * @method integer getCpu() 获取<p>实例 Cpu 核数。</p><p>当内存规格 Memory 存在多种 Cpu 配置时（如 64000MB 内存对应 8核/16核/32核），必须传入 Cpu 参数。</p>
  * @method void setCpu(integer $Cpu) 设置<p>实例 Cpu 核数。</p><p>当内存规格 Memory 存在多种 Cpu 配置时（如 64000MB 内存对应 8核/16核/32核），必须传入 Cpu 参数。</p>
  * @method integer getAutoSyncFlag() 获取<p>是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。该值默认为0。</p>
@@ -145,7 +145,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
+     * @var string <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版集群实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
      */
     public $Zone;
 
@@ -235,7 +235,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var string <p>实例隔离类型。支持值包括：&quot;UNIVERSAL&quot; - 通用型实例，&quot;EXCLUSIVE&quot; - 独享型实例，&quot;BASIC_V2&quot; - ONTKE 单节点实例，&quot;CLOUD_NATIVE_CLUSTER&quot; - 云盘版标准型，&quot;CLOUD_NATIVE_CLUSTER_EXCLUSIVE&quot; - 云盘版加强型。不指定则默认为通用型实例。<br>说明：如果创建的是云盘版实例，此参数为必填。</p>
+     * @var string <p>实例隔离类型。</p><p>枚举值：</p><ul><li><p>UNIVERSAL： 通用型实例</p></li><li><p>EXCLUSIVE： 独享型实例</p></li><li><p>CLOUD_NATIVE_CLUSTER： 云盘版标准型</p></li><li><p>CLOUD_NATIVE_CLUSTER_EXCLUSIVE： 云盘版加强型</p></li><li><p>CLOUD_NATIVE_CLUSTER_ULTRA： 云盘版旗舰型</p></li><li><p>若此参数不指定，则默认为通用型实例。</p></li><li><p>如果创建的是云盘版实例，此参数为必填。</p></li><li><p>如果创建的是单节点实例，此参数请填写为：CLOUD_NATIVE_CLUSTER，并指定参数 InstanceNodes 等于1。</p></li></ul>
      */
     public $DeviceType;
 
@@ -250,7 +250,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $AlarmPolicyList;
 
     /**
-     * @var integer <p>实例节点数。</p><p>对于 RO 和 基础版实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
+     * @var integer <p>实例节点数。</p><p>对于 RO 和单节点实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
      */
     public $InstanceNodes;
 
@@ -332,7 +332,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $UniqVpcId <p>私有网络 ID，请使用 <a href="/document/api/215/15778">查询私有网络列表</a>。<br>说明：如果创建的是云盘版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。</p>
      * @param string $UniqSubnetId <p>私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 <a href="/document/api/215/15784">查询子网列表</a>。<br>说明：若此项不填，则系统会选择默认 VPC 下的默认子网。</p>
      * @param integer $ProjectId <p>项目 ID，不填为默认项目。</p>
-     * @param string $Zone <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
+     * @param string $Zone <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版集群实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
      * @param string $MasterInstanceId <p>实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 <a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口查询云数据库实例 ID。</p>
      * @param string $InstanceRole <p>实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。<br>说明：请选择实例类型，不填会默认选择 master。</p>
      * @param string $MasterRegion <p>主实例地域信息，购买灾备、RO实例时，该字段必填。</p>
@@ -350,10 +350,10 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param array $ResourceTags <p>实例标签信息。</p>
      * @param string $DeployGroupId <p>置放群组 ID。</p>
      * @param string $ClientToken <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
-     * @param string $DeviceType <p>实例隔离类型。支持值包括：&quot;UNIVERSAL&quot; - 通用型实例，&quot;EXCLUSIVE&quot; - 独享型实例，&quot;BASIC_V2&quot; - ONTKE 单节点实例，&quot;CLOUD_NATIVE_CLUSTER&quot; - 云盘版标准型，&quot;CLOUD_NATIVE_CLUSTER_EXCLUSIVE&quot; - 云盘版加强型。不指定则默认为通用型实例。<br>说明：如果创建的是云盘版实例，此参数为必填。</p>
+     * @param string $DeviceType <p>实例隔离类型。</p><p>枚举值：</p><ul><li><p>UNIVERSAL： 通用型实例</p></li><li><p>EXCLUSIVE： 独享型实例</p></li><li><p>CLOUD_NATIVE_CLUSTER： 云盘版标准型</p></li><li><p>CLOUD_NATIVE_CLUSTER_EXCLUSIVE： 云盘版加强型</p></li><li><p>CLOUD_NATIVE_CLUSTER_ULTRA： 云盘版旗舰型</p></li><li><p>若此参数不指定，则默认为通用型实例。</p></li><li><p>如果创建的是云盘版实例，此参数为必填。</p></li><li><p>如果创建的是单节点实例，此参数请填写为：CLOUD_NATIVE_CLUSTER，并指定参数 InstanceNodes 等于1。</p></li></ul>
      * @param integer $ParamTemplateId <p>参数模板 id。<br>备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。</p>
      * @param array $AlarmPolicyList <p>告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。</p>
-     * @param integer $InstanceNodes <p>实例节点数。</p><p>对于 RO 和 基础版实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
+     * @param integer $InstanceNodes <p>实例节点数。</p><p>对于 RO 和单节点实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
      * @param integer $Cpu <p>实例 Cpu 核数。</p><p>当内存规格 Memory 存在多种 Cpu 配置时（如 64000MB 内存对应 8核/16核/32核），必须传入 Cpu 参数。</p>
      * @param integer $AutoSyncFlag <p>是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。该值默认为0。</p>
      * @param string $CageId <p>金融围拢 ID 。</p>

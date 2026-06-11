@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreemptVerb(string $PreemptVerb) 设置<p>抢占接口</p>
  * @method boolean getNodeCacheCapable() 获取<p>节点缓存能力</p>
  * @method void setNodeCacheCapable(boolean $NodeCacheCapable) 设置<p>节点缓存能力</p>
+ * @method boolean getIgnorable() 获取<p>extender 是否可忽略</p>
+ * @method void setIgnorable(boolean $Ignorable) 设置<p>extender 是否可忽略</p>
  */
 class Extenders extends AbstractModel
 {
@@ -73,6 +75,11 @@ class Extenders extends AbstractModel
     public $NodeCacheCapable;
 
     /**
+     * @var boolean <p>extender 是否可忽略</p>
+     */
+    public $Ignorable;
+
+    /**
      * @param string $FilterVerb <p>过滤阶段接口</p>
      * @param string $PrioritizeVerb <p>打分阶段扩展接口</p>
      * @param integer $Weight <p>打分阶段节点分数的权重,取值范围限定(0,2】</p>
@@ -80,6 +87,7 @@ class Extenders extends AbstractModel
      * @param ExtenderClientConfig $ExtenderClientConfig <p>extender客户端配置</p>
      * @param string $PreemptVerb <p>抢占接口</p>
      * @param boolean $NodeCacheCapable <p>节点缓存能力</p>
+     * @param boolean $Ignorable <p>extender 是否可忽略</p>
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class Extenders extends AbstractModel
 
         if (array_key_exists("NodeCacheCapable",$param) and $param["NodeCacheCapable"] !== null) {
             $this->NodeCacheCapable = $param["NodeCacheCapable"];
+        }
+
+        if (array_key_exists("Ignorable",$param) and $param["Ignorable"] !== null) {
+            $this->Ignorable = $param["Ignorable"];
         }
     }
 }

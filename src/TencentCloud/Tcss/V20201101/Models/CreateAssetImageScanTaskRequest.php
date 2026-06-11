@@ -20,99 +20,107 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAssetImageScanTask请求参数结构体
  *
- * @method boolean getAll() 获取是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
- * @method void setAll(boolean $All) 设置是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
- * @method array getImages() 获取需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
- * @method void setImages(array $Images) 设置需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
- * @method boolean getScanVul() 获取扫描漏洞；漏洞，木马和风险需选其一
- * @method void setScanVul(boolean $ScanVul) 设置扫描漏洞；漏洞，木马和风险需选其一
- * @method boolean getScanVirus() 获取扫描木马；漏洞，木马和风险需选其一
- * @method void setScanVirus(boolean $ScanVirus) 设置扫描木马；漏洞，木马和风险需选其一
- * @method boolean getScanRisk() 获取扫描风险；漏洞，木马和风险需选其一
- * @method void setScanRisk(boolean $ScanRisk) 设置扫描风险；漏洞，木马和风险需选其一
- * @method array getFilters() 获取根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
- * @method void setFilters(array $Filters) 设置根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
- * @method array getExcludeImageIds() 获取根据过滤条件筛选出镜像，再排除个别镜像
- * @method void setExcludeImageIds(array $ExcludeImageIds) 设置根据过滤条件筛选出镜像，再排除个别镜像
- * @method boolean getContainerRunning() 获取镜像是否存在运行中的容器
- * @method void setContainerRunning(boolean $ContainerRunning) 设置镜像是否存在运行中的容器
- * @method integer getScanScope() 获取扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
- * @method void setScanScope(integer $ScanScope) 设置扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
- * @method integer getTimeout() 获取任务超时时长单位秒，默认1小时
- * @method void setTimeout(integer $Timeout) 设置任务超时时长单位秒，默认1小时
- * @method boolean getIsOneClickScanningTask() 获取一键扫描任务。默认false表示非一键扫描，true一键扫描
- * @method void setIsOneClickScanningTask(boolean $IsOneClickScanningTask) 设置一键扫描任务。默认false表示非一键扫描，true一键扫描
+ * @method boolean getAll() 获取<p>是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+ * @method void setAll(boolean $All) 设置<p>是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+ * @method array getImages() 获取<p>需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+ * @method void setImages(array $Images) 设置<p>需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+ * @method boolean getScanVul() 获取<p>扫描漏洞；漏洞，木马和风险需选其一</p>
+ * @method void setScanVul(boolean $ScanVul) 设置<p>扫描漏洞；漏洞，木马和风险需选其一</p>
+ * @method boolean getScanVirus() 获取<p>扫描木马；漏洞，木马和风险需选其一</p>
+ * @method void setScanVirus(boolean $ScanVirus) 设置<p>扫描木马；漏洞，木马和风险需选其一</p>
+ * @method boolean getScanRisk() 获取<p>扫描风险；漏洞，木马和风险需选其一</p>
+ * @method void setScanRisk(boolean $ScanRisk) 设置<p>扫描风险；漏洞，木马和风险需选其一</p>
+ * @method array getFilters() 获取<p>根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+ * @method void setFilters(array $Filters) 设置<p>根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+ * @method array getExcludeImageIds() 获取<p>根据过滤条件筛选出镜像，再排除个别镜像</p>
+ * @method void setExcludeImageIds(array $ExcludeImageIds) 设置<p>根据过滤条件筛选出镜像，再排除个别镜像</p>
+ * @method boolean getContainerRunning() 获取<p>镜像是否存在运行中的容器</p>
+ * @method void setContainerRunning(boolean $ContainerRunning) 设置<p>镜像是否存在运行中的容器</p>
+ * @method integer getScanScope() 获取<p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
+ * @method void setScanScope(integer $ScanScope) 设置<p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
+ * @method integer getTimeout() 获取<p>任务超时时长单位秒，默认1小时</p>
+ * @method void setTimeout(integer $Timeout) 设置<p>任务超时时长单位秒，默认1小时</p>
+ * @method boolean getIsOneClickScanningTask() 获取<p>一键扫描任务。默认false表示非一键扫描，true一键扫描</p>
+ * @method void setIsOneClickScanningTask(boolean $IsOneClickScanningTask) 设置<p>一键扫描任务。默认false表示非一键扫描，true一键扫描</p>
+ * @method array getClusterIDs() 获取<p>集群id</p>
+ * @method void setClusterIDs(array $ClusterIDs) 设置<p>集群id</p>
  */
 class CreateAssetImageScanTaskRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @var boolean <p>是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
      * @deprecated
      */
     public $All;
 
     /**
-     * @var array 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @var array <p>需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
      */
     public $Images;
 
     /**
-     * @var boolean 扫描漏洞；漏洞，木马和风险需选其一
+     * @var boolean <p>扫描漏洞；漏洞，木马和风险需选其一</p>
      */
     public $ScanVul;
 
     /**
-     * @var boolean 扫描木马；漏洞，木马和风险需选其一
+     * @var boolean <p>扫描木马；漏洞，木马和风险需选其一</p>
      */
     public $ScanVirus;
 
     /**
-     * @var boolean 扫描风险；漏洞，木马和风险需选其一
+     * @var boolean <p>扫描风险；漏洞，木马和风险需选其一</p>
      */
     public $ScanRisk;
 
     /**
-     * @var array 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @var array <p>根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
      */
     public $Filters;
 
     /**
-     * @var array 根据过滤条件筛选出镜像，再排除个别镜像
+     * @var array <p>根据过滤条件筛选出镜像，再排除个别镜像</p>
      */
     public $ExcludeImageIds;
 
     /**
-     * @var boolean 镜像是否存在运行中的容器
+     * @var boolean <p>镜像是否存在运行中的容器</p>
      */
     public $ContainerRunning;
 
     /**
-     * @var integer 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * @var integer <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
      */
     public $ScanScope;
 
     /**
-     * @var integer 任务超时时长单位秒，默认1小时
+     * @var integer <p>任务超时时长单位秒，默认1小时</p>
      */
     public $Timeout;
 
     /**
-     * @var boolean 一键扫描任务。默认false表示非一键扫描，true一键扫描
+     * @var boolean <p>一键扫描任务。默认false表示非一键扫描，true一键扫描</p>
      */
     public $IsOneClickScanningTask;
 
     /**
-     * @param boolean $All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
-     * @param array $Images 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
-     * @param boolean $ScanVul 扫描漏洞；漏洞，木马和风险需选其一
-     * @param boolean $ScanVirus 扫描木马；漏洞，木马和风险需选其一
-     * @param boolean $ScanRisk 扫描风险；漏洞，木马和风险需选其一
-     * @param array $Filters 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
-     * @param array $ExcludeImageIds 根据过滤条件筛选出镜像，再排除个别镜像
-     * @param boolean $ContainerRunning 镜像是否存在运行中的容器
-     * @param integer $ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
-     * @param integer $Timeout 任务超时时长单位秒，默认1小时
-     * @param boolean $IsOneClickScanningTask 一键扫描任务。默认false表示非一键扫描，true一键扫描
+     * @var array <p>集群id</p>
+     */
+    public $ClusterIDs;
+
+    /**
+     * @param boolean $All <p>是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+     * @param array $Images <p>需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+     * @param boolean $ScanVul <p>扫描漏洞；漏洞，木马和风险需选其一</p>
+     * @param boolean $ScanVirus <p>扫描木马；漏洞，木马和风险需选其一</p>
+     * @param boolean $ScanRisk <p>扫描风险；漏洞，木马和风险需选其一</p>
+     * @param array $Filters <p>根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+     * @param array $ExcludeImageIds <p>根据过滤条件筛选出镜像，再排除个别镜像</p>
+     * @param boolean $ContainerRunning <p>镜像是否存在运行中的容器</p>
+     * @param integer $ScanScope <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
+     * @param integer $Timeout <p>任务超时时长单位秒，默认1小时</p>
+     * @param boolean $IsOneClickScanningTask <p>一键扫描任务。默认false表示非一键扫描，true一键扫描</p>
+     * @param array $ClusterIDs <p>集群id</p>
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class CreateAssetImageScanTaskRequest extends AbstractModel
 
         if (array_key_exists("IsOneClickScanningTask",$param) and $param["IsOneClickScanningTask"] !== null) {
             $this->IsOneClickScanningTask = $param["IsOneClickScanningTask"];
+        }
+
+        if (array_key_exists("ClusterIDs",$param) and $param["ClusterIDs"] !== null) {
+            $this->ClusterIDs = $param["ClusterIDs"];
         }
     }
 }

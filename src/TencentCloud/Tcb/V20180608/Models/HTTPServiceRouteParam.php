@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建或修改HTTP访问服务输入的路由信息，修改HTTP访问服务路由信息时对应字段不传参数表示不用修改。
  *
- * @method string getPath() 获取路径
- * @method void setPath(string $Path) 设置路径
- * @method string getUpstreamResourceType() 获取上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
- * @method void setUpstreamResourceType(string $UpstreamResourceType) 设置上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
- * @method string getUpstreamResourceName() 获取上游服务名。创建时必填，修改时可选填
- * @method void setUpstreamResourceName(string $UpstreamResourceName) 设置上游服务名。创建时必填，修改时可选填
- * @method HTTPServicePathRewrite getPathRewrite() 获取路径重写
- * @method void setPathRewrite(HTTPServicePathRewrite $PathRewrite) 设置路径重写
- * @method boolean getEnableSafeDomain() 获取是否开启安全域名。默认开启
- * @method void setEnableSafeDomain(boolean $EnableSafeDomain) 设置是否开启安全域名。默认开启
- * @method boolean getEnableAuth() 获取是否开启身份认证。默认关闭
- * @method void setEnableAuth(boolean $EnableAuth) 设置是否开启身份认证。默认关闭
- * @method boolean getEnablePathTransmission() 获取是否开启路径透传。默认关闭
- * @method void setEnablePathTransmission(boolean $EnablePathTransmission) 设置是否开启路径透传。默认关闭
- * @method HTTPServiceRouteQPSPolicy getQPSPolicy() 获取QPS限频策略
- * @method void setQPSPolicy(HTTPServiceRouteQPSPolicy $QPSPolicy) 设置QPS限频策略
- * @method boolean getEnable() 获取是否开启路由
- * @method void setEnable(boolean $Enable) 设置是否开启路由
- * @method HTTPServiceExtension getExtension() 获取扩展字段，内部包含headers处理等
- * @method void setExtension(HTTPServiceExtension $Extension) 设置扩展字段，内部包含headers处理等
+ * @method string getPath() 获取<p>路径</p>
+ * @method void setPath(string $Path) 设置<p>路径</p>
+ * @method string getUpstreamResourceType() 获取<p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
+ * @method void setUpstreamResourceType(string $UpstreamResourceType) 设置<p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
+ * @method string getUpstreamResourceName() 获取<p>上游服务名。创建时必填，修改时可选填</p>
+ * @method void setUpstreamResourceName(string $UpstreamResourceName) 设置<p>上游服务名。创建时必填，修改时可选填</p>
+ * @method HTTPServicePathRewrite getPathRewrite() 获取<p>路径重写</p>
+ * @method void setPathRewrite(HTTPServicePathRewrite $PathRewrite) 设置<p>路径重写</p>
+ * @method boolean getEnableSafeDomain() 获取<p>是否开启安全域名。默认开启</p>
+ * @method void setEnableSafeDomain(boolean $EnableSafeDomain) 设置<p>是否开启安全域名。默认开启</p>
+ * @method boolean getEnableAuth() 获取<p>是否开启身份认证。默认关闭</p>
+ * @method void setEnableAuth(boolean $EnableAuth) 设置<p>是否开启身份认证。默认关闭</p>
+ * @method boolean getEnablePathTransmission() 获取<p>是否开启路径透传。默认关闭</p>
+ * @method void setEnablePathTransmission(boolean $EnablePathTransmission) 设置<p>是否开启路径透传。默认关闭</p>
+ * @method HTTPServiceRouteQPSPolicy getQPSPolicy() 获取<p>QPS限频策略</p>
+ * @method void setQPSPolicy(HTTPServiceRouteQPSPolicy $QPSPolicy) 设置<p>QPS限频策略</p>
+ * @method boolean getEnable() 获取<p>是否开启路由</p>
+ * @method void setEnable(boolean $Enable) 设置<p>是否开启路由</p>
+ * @method HTTPServiceExtension getExtension() 获取<p>扩展字段，内部包含headers处理等</p>
+ * @method void setExtension(HTTPServiceExtension $Extension) 设置<p>扩展字段，内部包含headers处理等</p>
  */
 class HTTPServiceRouteParam extends AbstractModel
 {
     /**
-     * @var string 路径
+     * @var string <p>路径</p>
      */
     public $Path;
 
     /**
-     * @var string 上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
+     * @var string <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
      */
     public $UpstreamResourceType;
 
     /**
-     * @var string 上游服务名。创建时必填，修改时可选填
+     * @var string <p>上游服务名。创建时必填，修改时可选填</p>
      */
     public $UpstreamResourceName;
 
     /**
-     * @var HTTPServicePathRewrite 路径重写
+     * @var HTTPServicePathRewrite <p>路径重写</p>
      */
     public $PathRewrite;
 
     /**
-     * @var boolean 是否开启安全域名。默认开启
+     * @var boolean <p>是否开启安全域名。默认开启</p>
      */
     public $EnableSafeDomain;
 
     /**
-     * @var boolean 是否开启身份认证。默认关闭
+     * @var boolean <p>是否开启身份认证。默认关闭</p>
      */
     public $EnableAuth;
 
     /**
-     * @var boolean 是否开启路径透传。默认关闭
+     * @var boolean <p>是否开启路径透传。默认关闭</p>
      */
     public $EnablePathTransmission;
 
     /**
-     * @var HTTPServiceRouteQPSPolicy QPS限频策略
+     * @var HTTPServiceRouteQPSPolicy <p>QPS限频策略</p>
      */
     public $QPSPolicy;
 
     /**
-     * @var boolean 是否开启路由
+     * @var boolean <p>是否开启路由</p>
      */
     public $Enable;
 
     /**
-     * @var HTTPServiceExtension 扩展字段，内部包含headers处理等
+     * @var HTTPServiceExtension <p>扩展字段，内部包含headers处理等</p>
      */
     public $Extension;
 
     /**
-     * @param string $Path 路径
-     * @param string $UpstreamResourceType 上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
-     * @param string $UpstreamResourceName 上游服务名。创建时必填，修改时可选填
-     * @param HTTPServicePathRewrite $PathRewrite 路径重写
-     * @param boolean $EnableSafeDomain 是否开启安全域名。默认开启
-     * @param boolean $EnableAuth 是否开启身份认证。默认关闭
-     * @param boolean $EnablePathTransmission 是否开启路径透传。默认关闭
-     * @param HTTPServiceRouteQPSPolicy $QPSPolicy QPS限频策略
-     * @param boolean $Enable 是否开启路由
-     * @param HTTPServiceExtension $Extension 扩展字段，内部包含headers处理等
+     * @param string $Path <p>路径</p>
+     * @param string $UpstreamResourceType <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
+     * @param string $UpstreamResourceName <p>上游服务名。创建时必填，修改时可选填</p>
+     * @param HTTPServicePathRewrite $PathRewrite <p>路径重写</p>
+     * @param boolean $EnableSafeDomain <p>是否开启安全域名。默认开启</p>
+     * @param boolean $EnableAuth <p>是否开启身份认证。默认关闭</p>
+     * @param boolean $EnablePathTransmission <p>是否开启路径透传。默认关闭</p>
+     * @param HTTPServiceRouteQPSPolicy $QPSPolicy <p>QPS限频策略</p>
+     * @param boolean $Enable <p>是否开启路由</p>
+     * @param HTTPServiceExtension $Extension <p>扩展字段，内部包含headers处理等</p>
      */
     function __construct()
     {

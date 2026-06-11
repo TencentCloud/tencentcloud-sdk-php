@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置<p>负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。</p>
  * @method string getVpcId() 获取<p>负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a> 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。</p>
  * @method void setVpcId(string $VpcId) 设置<p>负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a> 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。</p>
- * @method string getSubnetId() 获取<p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
- * @method void setSubnetId(string $SubnetId) 设置<p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
+ * @method string getSubnetId() 获取<p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。<br>创建内网负载均衡实例，或者创建 IPv6FullChain 版本的负载均衡实例，此参数必填。<br>创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。<br>创建内网负载均衡实例，或者创建 IPv6FullChain 版本的负载均衡实例，此参数必填。<br>创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
  * @method integer getProjectId() 获取<p>负载均衡实例所属的项目 ID，默认项目 ID 为0。可以通过 <a href="https://cloud.tencent.com/document/api/651/78725">DescribeProject</a> 接口获取。不填此参数则视为默认项目。</p>
  * @method void setProjectId(integer $ProjectId) 设置<p>负载均衡实例所属的项目 ID，默认项目 ID 为0。可以通过 <a href="https://cloud.tencent.com/document/api/651/78725">DescribeProject</a> 接口获取。不填此参数则视为默认项目。</p>
  * @method string getAddressIPVersion() 获取<p>仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，不区分大小写，默认值 IPV4。说明：取值为IPV6表示为IPV6 NAT64版本；取值为IPv6FullChain，表示为IPv6版本。</p>
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterZoneId(string $MasterZoneId) 设置<p>仅适用于公网且IP版本为IPv4的负载均衡。设置跨可用区容灾时的主可用区ID， 可用区 ID 和名称均支持，例如 100001 或 ap-guangzhou-1<br>注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区。</p>
  * @method string getZoneId() 获取<p>仅适用于公网且IP版本为IPv4的负载均衡。可用区ID，可用区 ID 和名称均支持，指定可用区以创建负载均衡实例。如：100001 或 ap-guangzhou-1。</p>
  * @method void setZoneId(string $ZoneId) 设置<p>仅适用于公网且IP版本为IPv4的负载均衡。可用区ID，可用区 ID 和名称均支持，指定可用区以创建负载均衡实例。如：100001 或 ap-guangzhou-1。</p>
- * @method InternetAccessible getInternetAccessible() 获取<p>网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置<p>网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+ * @method InternetAccessible getInternetAccessible() 获取<p>网络计费模式，其中的最大出带宽，仅对内网属性的性能容量型实例和公网属性的所有实例生效。</p>
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置<p>网络计费模式，其中的最大出带宽，仅对内网属性的性能容量型实例和公网属性的所有实例生效。</p>
  * @method string getVipIsp() 获取<p>仅适用于公网负载均衡。目前仅广州、上海、南京、济南、杭州、福州、北京、石家庄、武汉、长沙、成都、重庆地域支持静态单线 IP 线路类型，如需体验，请联系商务经理申请。申请通过后，即可选择中国移动（CMCC）、中国联通（CUCC）或中国电信（CTCC）的运营商类型，网络计费模式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。 如果不指定本参数，则默认使用BGP。可通过 <a href="https://cloud.tencent.com/document/api/214/70213">DescribeResources</a>  接口查询一个地域所支持的Isp。</p>
  * @method void setVipIsp(string $VipIsp) 设置<p>仅适用于公网负载均衡。目前仅广州、上海、南京、济南、杭州、福州、北京、石家庄、武汉、长沙、成都、重庆地域支持静态单线 IP 线路类型，如需体验，请联系商务经理申请。申请通过后，即可选择中国移动（CMCC）、中国联通（CUCC）或中国电信（CTCC）的运营商类型，网络计费模式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。 如果不指定本参数，则默认使用BGP。可通过 <a href="https://cloud.tencent.com/document/api/214/70213">DescribeResources</a>  接口查询一个地域所支持的Isp。</p>
  * @method array getTags() 获取<p>购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。</p>
@@ -74,14 +74,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDynamicVip(boolean $DynamicVip) 设置<p>创建域名化负载均衡。</p>
  * @method string getEgress() 获取<p>网络出口</p>
  * @method void setEgress(string $Egress) 设置<p>网络出口</p>
- * @method LBChargePrepaid getLBChargePrepaid() 获取<p>负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
- * @method void setLBChargePrepaid(LBChargePrepaid $LBChargePrepaid) 设置<p>负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
- * @method string getLBChargeType() 获取<p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
- * @method void setLBChargeType(string $LBChargeType) 设置<p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+ * @method LBChargePrepaid getLBChargePrepaid() 获取<p>负载均衡实例的预付费相关属性</p>
+ * @method void setLBChargePrepaid(LBChargePrepaid $LBChargePrepaid) 设置<p>负载均衡实例的预付费相关属性</p>
+ * @method string getLBChargeType() 获取<p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量计费</li><li>PREPAID： 包年包月</li></ul>
+ * @method void setLBChargeType(string $LBChargeType) 设置<p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量计费</li><li>PREPAID： 包年包月</li></ul>
  * @method string getAccessLogTopicId() 获取<p>七层访问日志主题ID</p>
  * @method void setAccessLogTopicId(string $AccessLogTopicId) 设置<p>七层访问日志主题ID</p>
  * @method boolean getAdvancedRoute() 获取<p>是否开启七层高级路由</p>
  * @method void setAdvancedRoute(boolean $AdvancedRoute) 设置<p>是否开启七层高级路由</p>
+ * @method AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() 获取<p>可用区亲和信息</p>
+ * @method void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo $AvailableZoneAffinityInfo) 设置<p>可用区亲和信息</p>
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -106,7 +108,7 @@ class CreateLoadBalancerRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
+     * @var string <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。<br>创建内网负载均衡实例，或者创建 IPv6FullChain 版本的负载均衡实例，此参数必填。<br>创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
      */
     public $SubnetId;
 
@@ -136,7 +138,7 @@ class CreateLoadBalancerRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var InternetAccessible <p>网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * @var InternetAccessible <p>网络计费模式，其中的最大出带宽，仅对内网属性的性能容量型实例和公网属性的所有实例生效。</p>
      */
     public $InternetAccessible;
 
@@ -221,12 +223,12 @@ class CreateLoadBalancerRequest extends AbstractModel
     public $Egress;
 
     /**
-     * @var LBChargePrepaid <p>负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * @var LBChargePrepaid <p>负载均衡实例的预付费相关属性</p>
      */
     public $LBChargePrepaid;
 
     /**
-     * @var string <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * @var string <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量计费</li><li>PREPAID： 包年包月</li></ul>
      */
     public $LBChargeType;
 
@@ -241,17 +243,22 @@ class CreateLoadBalancerRequest extends AbstractModel
     public $AdvancedRoute;
 
     /**
+     * @var AvailableZoneAffinityInfo <p>可用区亲和信息</p>
+     */
+    public $AvailableZoneAffinityInfo;
+
+    /**
      * @param string $LoadBalancerType <p>负载均衡实例的网络类型：<br>OPEN：公网属性， INTERNAL：内网属性。</p>
      * @param integer $Forward <p>负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。</p>
      * @param string $LoadBalancerName <p>负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。</p>
      * @param string $VpcId <p>负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a> 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。</p>
-     * @param string $SubnetId <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
+     * @param string $SubnetId <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。<br>创建内网负载均衡实例，或者创建 IPv6FullChain 版本的负载均衡实例，此参数必填。<br>创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
      * @param integer $ProjectId <p>负载均衡实例所属的项目 ID，默认项目 ID 为0。可以通过 <a href="https://cloud.tencent.com/document/api/651/78725">DescribeProject</a> 接口获取。不填此参数则视为默认项目。</p>
      * @param string $AddressIPVersion <p>仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，不区分大小写，默认值 IPV4。说明：取值为IPV6表示为IPV6 NAT64版本；取值为IPv6FullChain，表示为IPv6版本。</p>
      * @param integer $Number <p>创建负载均衡的个数，默认值 1。创建个数不能超过账号所能创建的最大值，默认创建最大值为20。</p>
      * @param string $MasterZoneId <p>仅适用于公网且IP版本为IPv4的负载均衡。设置跨可用区容灾时的主可用区ID， 可用区 ID 和名称均支持，例如 100001 或 ap-guangzhou-1<br>注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区。</p>
      * @param string $ZoneId <p>仅适用于公网且IP版本为IPv4的负载均衡。可用区ID，可用区 ID 和名称均支持，指定可用区以创建负载均衡实例。如：100001 或 ap-guangzhou-1。</p>
-     * @param InternetAccessible $InternetAccessible <p>网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * @param InternetAccessible $InternetAccessible <p>网络计费模式，其中的最大出带宽，仅对内网属性的性能容量型实例和公网属性的所有实例生效。</p>
      * @param string $VipIsp <p>仅适用于公网负载均衡。目前仅广州、上海、南京、济南、杭州、福州、北京、石家庄、武汉、长沙、成都、重庆地域支持静态单线 IP 线路类型，如需体验，请联系商务经理申请。申请通过后，即可选择中国移动（CMCC）、中国联通（CUCC）或中国电信（CTCC）的运营商类型，网络计费模式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。 如果不指定本参数，则默认使用BGP。可通过 <a href="https://cloud.tencent.com/document/api/214/70213">DescribeResources</a>  接口查询一个地域所支持的Isp。</p>
      * @param array $Tags <p>购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。</p>
      * @param string $Vip <p>指定VIP申请负载均衡。此参数选填，不填写此参数时自动分配VIP。IPv4和IPv6类型支持此参数，IPv6 NAT64类型不支持。<br>注意：当指定VIP创建内网实例、或公网IPv6 BGP实例时，若VIP不属于指定VPC子网的网段内时，会创建失败；若VIP已被占用，也会创建失败。</p>
@@ -268,10 +275,11 @@ class CreateLoadBalancerRequest extends AbstractModel
      * @param boolean $LoadBalancerPassToTarget <p>Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。IPv6 CLB安全组默认放通，不需要传此参数。</p>
      * @param boolean $DynamicVip <p>创建域名化负载均衡。</p>
      * @param string $Egress <p>网络出口</p>
-     * @param LBChargePrepaid $LBChargePrepaid <p>负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
-     * @param string $LBChargeType <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * @param LBChargePrepaid $LBChargePrepaid <p>负载均衡实例的预付费相关属性</p>
+     * @param string $LBChargeType <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量计费</li><li>PREPAID： 包年包月</li></ul>
      * @param string $AccessLogTopicId <p>七层访问日志主题ID</p>
      * @param boolean $AdvancedRoute <p>是否开启七层高级路由</p>
+     * @param AvailableZoneAffinityInfo $AvailableZoneAffinityInfo <p>可用区亲和信息</p>
      */
     function __construct()
     {
@@ -421,6 +429,11 @@ class CreateLoadBalancerRequest extends AbstractModel
 
         if (array_key_exists("AdvancedRoute",$param) and $param["AdvancedRoute"] !== null) {
             $this->AdvancedRoute = $param["AdvancedRoute"];
+        }
+
+        if (array_key_exists("AvailableZoneAffinityInfo",$param) and $param["AvailableZoneAffinityInfo"] !== null) {
+            $this->AvailableZoneAffinityInfo = new AvailableZoneAffinityInfo();
+            $this->AvailableZoneAffinityInfo->deserialize($param["AvailableZoneAffinityInfo"]);
         }
     }
 }

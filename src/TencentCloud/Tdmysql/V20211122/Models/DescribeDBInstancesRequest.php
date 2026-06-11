@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances请求参数结构体
  *
- * @method array getFilters() 获取过滤参数
- * @method void setFilters(array $Filters) 设置过滤参数
- * @method integer getLimit() 获取最大返回个数，默认为20，上限为100
- * @method void setLimit(integer $Limit) 设置最大返回个数，默认为20，上限为100
- * @method integer getOffset() 获取偏移量，取Limit整数倍
- * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍
+ * @method array getFilters() 获取<p>过滤参数</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤参数</p>
+ * @method integer getLimit() 获取<p>最大返回个数，默认为20，上限为100</p>
+ * @method void setLimit(integer $Limit) 设置<p>最大返回个数，默认为20，上限为100</p>
+ * @method integer getOffset() 获取<p>偏移量，取Limit整数倍</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，取Limit整数倍</p>
+ * @method string getEngineType() 获取<p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
+ * @method void setEngineType(string $EngineType) 设置<p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 过滤参数
+     * @var array <p>过滤参数</p>
      */
     public $Filters;
 
     /**
-     * @var integer 最大返回个数，默认为20，上限为100
+     * @var integer <p>最大返回个数，默认为20，上限为100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，取Limit整数倍
+     * @var integer <p>偏移量，取Limit整数倍</p>
      */
     public $Offset;
 
     /**
-     * @param array $Filters 过滤参数
-     * @param integer $Limit 最大返回个数，默认为20，上限为100
-     * @param integer $Offset 偏移量，取Limit整数倍
+     * @var string <p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
+     */
+    public $EngineType;
+
+    /**
+     * @param array $Filters <p>过滤参数</p>
+     * @param integer $Limit <p>最大返回个数，默认为20，上限为100</p>
+     * @param integer $Offset <p>偏移量，取Limit整数倍</p>
+     * @param string $EngineType <p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

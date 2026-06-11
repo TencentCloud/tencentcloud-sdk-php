@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAssetImageScanTask返回参数结构体
  *
- * @method string getTaskID() 获取任务id
- * @method void setTaskID(string $TaskID) 设置任务id
+ * @method string getTaskID() 获取<p>任务id</p>
+ * @method void setTaskID(string $TaskID) 设置<p>任务id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAssetImageScanTaskResponse extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
      */
     public $TaskID;
 
@@ -38,7 +38,7 @@ class CreateAssetImageScanTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskID 任务id
+     * @param string $TaskID <p>任务id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

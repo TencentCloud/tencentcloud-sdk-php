@@ -20,162 +20,234 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用资产信息
  *
- * @method integer getId() 获取应用资产id
- * @method void setId(integer $Id) 设置应用资产id
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getName() 获取资产名称
- * @method void setName(string $Name) 设置资产名称
- * @method integer getDeviceId() 获取应用服务器id
- * @method void setDeviceId(integer $DeviceId) 设置应用服务器id
- * @method integer getDeviceAccountId() 获取应用服务器账号id
- * @method void setDeviceAccountId(integer $DeviceAccountId) 设置应用服务器账号id
- * @method integer getKind() 获取应用资产类型。1-web应用
- * @method void setKind(integer $Kind) 设置应用资产类型。1-web应用
- * @method string getClientAppPath() 获取客户端工具路径
- * @method void setClientAppPath(string $ClientAppPath) 设置客户端工具路径
- * @method string getClientAppKind() 获取客户端工具类型
- * @method void setClientAppKind(string $ClientAppKind) 设置客户端工具类型
- * @method string getUrl() 获取应用资产url
- * @method void setUrl(string $Url) 设置应用资产url
- * @method integer getBindStatus() 获取托管状态。0-未托管，1-已托管
- * @method void setBindStatus(integer $BindStatus) 设置托管状态。0-未托管，1-已托管
- * @method string getDeviceInstanceId() 获取应用服务器实例id
- * @method void setDeviceInstanceId(string $DeviceInstanceId) 设置应用服务器实例id
- * @method string getDeviceName() 获取应用服务器名称
- * @method void setDeviceName(string $DeviceName) 设置应用服务器名称
- * @method string getDeviceAccountName() 获取应用服务器账号名称
- * @method void setDeviceAccountName(string $DeviceAccountName) 设置应用服务器账号名称
- * @method string getResourceId() 获取堡垒机实例id
- * @method void setResourceId(string $ResourceId) 设置堡垒机实例id
- * @method Resource getResource() 获取堡垒机实例信息
- * @method void setResource(Resource $Resource) 设置堡垒机实例信息
- * @method string getDomainId() 获取网络域id
- * @method void setDomainId(string $DomainId) 设置网络域id
- * @method string getDomainName() 获取网络域名称
- * @method void setDomainName(string $DomainName) 设置网络域名称
- * @method array getGroupSet() 获取资产组信息
- * @method void setGroupSet(array $GroupSet) 设置资产组信息
- * @method Department getDepartment() 获取资产所属部门
- * @method void setDepartment(Department $Department) 设置资产所属部门
+ * @method integer getId() 获取<p>应用资产id</p>
+ * @method void setId(integer $Id) 设置<p>应用资产id</p>
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method string getName() 获取<p>资产名称</p>
+ * @method void setName(string $Name) 设置<p>资产名称</p>
+ * @method integer getDeviceId() 获取<p>应用服务器id</p>
+ * @method void setDeviceId(integer $DeviceId) 设置<p>应用服务器id</p>
+ * @method integer getDeviceAccountId() 获取<p>应用服务器账号id</p>
+ * @method void setDeviceAccountId(integer $DeviceAccountId) 设置<p>应用服务器账号id</p>
+ * @method integer getKind() 获取<p>应用资产类型。1-web应用</p>
+ * @method void setKind(integer $Kind) 设置<p>应用资产类型。1-web应用</p>
+ * @method string getClientAppPath() 获取<p>客户端工具路径</p>
+ * @method void setClientAppPath(string $ClientAppPath) 设置<p>客户端工具路径</p>
+ * @method string getClientAppKind() 获取<p>客户端工具类型</p>
+ * @method void setClientAppKind(string $ClientAppKind) 设置<p>客户端工具类型</p>
+ * @method string getUrl() 获取<p>应用资产url</p>
+ * @method void setUrl(string $Url) 设置<p>应用资产url</p>
+ * @method integer getBindStatus() 获取<p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul>
+ * @method void setBindStatus(integer $BindStatus) 设置<p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul>
+ * @method string getDeviceInstanceId() 获取<p>应用服务器实例id</p>
+ * @method void setDeviceInstanceId(string $DeviceInstanceId) 设置<p>应用服务器实例id</p>
+ * @method string getDeviceName() 获取<p>应用服务器名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>应用服务器名称</p>
+ * @method string getDeviceAccountName() 获取<p>应用服务器账号名称</p>
+ * @method void setDeviceAccountName(string $DeviceAccountName) 设置<p>应用服务器账号名称</p>
+ * @method string getResourceId() 获取<p>堡垒机实例id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>堡垒机实例id</p>
+ * @method Resource getResource() 获取<p>堡垒机实例信息</p>
+ * @method void setResource(Resource $Resource) 设置<p>堡垒机实例信息</p>
+ * @method string getDomainId() 获取<p>网络域id</p>
+ * @method void setDomainId(string $DomainId) 设置<p>网络域id</p>
+ * @method string getDomainName() 获取<p>网络域名称</p>
+ * @method void setDomainName(string $DomainName) 设置<p>网络域名称</p>
+ * @method array getGroupSet() 获取<p>资产组信息</p>
+ * @method void setGroupSet(array $GroupSet) 设置<p>资产组信息</p>
+ * @method Department getDepartment() 获取<p>资产所属部门</p>
+ * @method void setDepartment(Department $Department) 设置<p>资产所属部门</p>
+ * @method integer getAccountCount() 获取<p>账号数量</p>
+ * @method void setAccountCount(integer $AccountCount) 设置<p>账号数量</p>
+ * @method integer getAgentInputType() 获取<p>代填类型</p><p>枚举值：</p><ul><li>0： 不支持代填</li><li>1： 元素定位代填</li></ul>
+ * @method void setAgentInputType(integer $AgentInputType) 设置<p>代填类型</p><p>枚举值：</p><ul><li>0： 不支持代填</li><li>1： 元素定位代填</li></ul>
+ * @method integer getAgentInputSubmit() 获取<p>是否自动提交</p><p>枚举值：</p><ul><li>0： 不自动提交</li><li>1： 自动提交</li></ul>
+ * @method void setAgentInputSubmit(integer $AgentInputSubmit) 设置<p>是否自动提交</p><p>枚举值：</p><ul><li>0： 不自动提交</li><li>1： 自动提交</li></ul>
+ * @method string getUserNameType() 获取<p>用户名输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+ * @method void setUserNameType(string $UserNameType) 设置<p>用户名输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+ * @method string getUserNameValue() 获取<p>用户名输入框选择器属性</p>
+ * @method void setUserNameValue(string $UserNameValue) 设置<p>用户名输入框选择器属性</p>
+ * @method string getPasswordType() 获取<p>密码输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+ * @method void setPasswordType(string $PasswordType) 设置<p>密码输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+ * @method string getPasswordValue() 获取<p>密码输入框选择器属性</p>
+ * @method void setPasswordValue(string $PasswordValue) 设置<p>密码输入框选择器属性</p>
+ * @method string getSubmitType() 获取<p>提交按钮选择器类型，为空表示不支持自动提交</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+ * @method void setSubmitType(string $SubmitType) 设置<p>提交按钮选择器类型，为空表示不支持自动提交</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+ * @method string getSubmitValue() 获取<p>提交按钮选择器属性值</p>
+ * @method void setSubmitValue(string $SubmitValue) 设置<p>提交按钮选择器属性值</p>
  */
 class AppAsset extends AbstractModel
 {
     /**
-     * @var integer 应用资产id
+     * @var integer <p>应用资产id</p>
      */
     public $Id;
 
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 资产名称
+     * @var string <p>资产名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 应用服务器id
+     * @var integer <p>应用服务器id</p>
      */
     public $DeviceId;
 
     /**
-     * @var integer 应用服务器账号id
+     * @var integer <p>应用服务器账号id</p>
      */
     public $DeviceAccountId;
 
     /**
-     * @var integer 应用资产类型。1-web应用
+     * @var integer <p>应用资产类型。1-web应用</p>
      */
     public $Kind;
 
     /**
-     * @var string 客户端工具路径
+     * @var string <p>客户端工具路径</p>
      */
     public $ClientAppPath;
 
     /**
-     * @var string 客户端工具类型
+     * @var string <p>客户端工具类型</p>
      */
     public $ClientAppKind;
 
     /**
-     * @var string 应用资产url
+     * @var string <p>应用资产url</p>
      */
     public $Url;
 
     /**
-     * @var integer 托管状态。0-未托管，1-已托管
+     * @var integer <p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul>
      */
     public $BindStatus;
 
     /**
-     * @var string 应用服务器实例id
+     * @var string <p>应用服务器实例id</p>
      */
     public $DeviceInstanceId;
 
     /**
-     * @var string 应用服务器名称
+     * @var string <p>应用服务器名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 应用服务器账号名称
+     * @var string <p>应用服务器账号名称</p>
      */
     public $DeviceAccountName;
 
     /**
-     * @var string 堡垒机实例id
+     * @var string <p>堡垒机实例id</p>
      */
     public $ResourceId;
 
     /**
-     * @var Resource 堡垒机实例信息
+     * @var Resource <p>堡垒机实例信息</p>
      */
     public $Resource;
 
     /**
-     * @var string 网络域id
+     * @var string <p>网络域id</p>
      */
     public $DomainId;
 
     /**
-     * @var string 网络域名称
+     * @var string <p>网络域名称</p>
      */
     public $DomainName;
 
     /**
-     * @var array 资产组信息
+     * @var array <p>资产组信息</p>
      */
     public $GroupSet;
 
     /**
-     * @var Department 资产所属部门
+     * @var Department <p>资产所属部门</p>
      */
     public $Department;
 
     /**
-     * @param integer $Id 应用资产id
-     * @param string $InstanceId 实例id
-     * @param string $Name 资产名称
-     * @param integer $DeviceId 应用服务器id
-     * @param integer $DeviceAccountId 应用服务器账号id
-     * @param integer $Kind 应用资产类型。1-web应用
-     * @param string $ClientAppPath 客户端工具路径
-     * @param string $ClientAppKind 客户端工具类型
-     * @param string $Url 应用资产url
-     * @param integer $BindStatus 托管状态。0-未托管，1-已托管
-     * @param string $DeviceInstanceId 应用服务器实例id
-     * @param string $DeviceName 应用服务器名称
-     * @param string $DeviceAccountName 应用服务器账号名称
-     * @param string $ResourceId 堡垒机实例id
-     * @param Resource $Resource 堡垒机实例信息
-     * @param string $DomainId 网络域id
-     * @param string $DomainName 网络域名称
-     * @param array $GroupSet 资产组信息
-     * @param Department $Department 资产所属部门
+     * @var integer <p>账号数量</p>
+     */
+    public $AccountCount;
+
+    /**
+     * @var integer <p>代填类型</p><p>枚举值：</p><ul><li>0： 不支持代填</li><li>1： 元素定位代填</li></ul>
+     */
+    public $AgentInputType;
+
+    /**
+     * @var integer <p>是否自动提交</p><p>枚举值：</p><ul><li>0： 不自动提交</li><li>1： 自动提交</li></ul>
+     */
+    public $AgentInputSubmit;
+
+    /**
+     * @var string <p>用户名输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     */
+    public $UserNameType;
+
+    /**
+     * @var string <p>用户名输入框选择器属性</p>
+     */
+    public $UserNameValue;
+
+    /**
+     * @var string <p>密码输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     */
+    public $PasswordType;
+
+    /**
+     * @var string <p>密码输入框选择器属性</p>
+     */
+    public $PasswordValue;
+
+    /**
+     * @var string <p>提交按钮选择器类型，为空表示不支持自动提交</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     */
+    public $SubmitType;
+
+    /**
+     * @var string <p>提交按钮选择器属性值</p>
+     */
+    public $SubmitValue;
+
+    /**
+     * @param integer $Id <p>应用资产id</p>
+     * @param string $InstanceId <p>实例id</p>
+     * @param string $Name <p>资产名称</p>
+     * @param integer $DeviceId <p>应用服务器id</p>
+     * @param integer $DeviceAccountId <p>应用服务器账号id</p>
+     * @param integer $Kind <p>应用资产类型。1-web应用</p>
+     * @param string $ClientAppPath <p>客户端工具路径</p>
+     * @param string $ClientAppKind <p>客户端工具类型</p>
+     * @param string $Url <p>应用资产url</p>
+     * @param integer $BindStatus <p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul>
+     * @param string $DeviceInstanceId <p>应用服务器实例id</p>
+     * @param string $DeviceName <p>应用服务器名称</p>
+     * @param string $DeviceAccountName <p>应用服务器账号名称</p>
+     * @param string $ResourceId <p>堡垒机实例id</p>
+     * @param Resource $Resource <p>堡垒机实例信息</p>
+     * @param string $DomainId <p>网络域id</p>
+     * @param string $DomainName <p>网络域名称</p>
+     * @param array $GroupSet <p>资产组信息</p>
+     * @param Department $Department <p>资产所属部门</p>
+     * @param integer $AccountCount <p>账号数量</p>
+     * @param integer $AgentInputType <p>代填类型</p><p>枚举值：</p><ul><li>0： 不支持代填</li><li>1： 元素定位代填</li></ul>
+     * @param integer $AgentInputSubmit <p>是否自动提交</p><p>枚举值：</p><ul><li>0： 不自动提交</li><li>1： 自动提交</li></ul>
+     * @param string $UserNameType <p>用户名输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     * @param string $UserNameValue <p>用户名输入框选择器属性</p>
+     * @param string $PasswordType <p>密码输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     * @param string $PasswordValue <p>密码输入框选择器属性</p>
+     * @param string $SubmitType <p>提交按钮选择器类型，为空表示不支持自动提交</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     * @param string $SubmitValue <p>提交按钮选择器属性值</p>
      */
     function __construct()
     {
@@ -271,6 +343,42 @@ class AppAsset extends AbstractModel
         if (array_key_exists("Department",$param) and $param["Department"] !== null) {
             $this->Department = new Department();
             $this->Department->deserialize($param["Department"]);
+        }
+
+        if (array_key_exists("AccountCount",$param) and $param["AccountCount"] !== null) {
+            $this->AccountCount = $param["AccountCount"];
+        }
+
+        if (array_key_exists("AgentInputType",$param) and $param["AgentInputType"] !== null) {
+            $this->AgentInputType = $param["AgentInputType"];
+        }
+
+        if (array_key_exists("AgentInputSubmit",$param) and $param["AgentInputSubmit"] !== null) {
+            $this->AgentInputSubmit = $param["AgentInputSubmit"];
+        }
+
+        if (array_key_exists("UserNameType",$param) and $param["UserNameType"] !== null) {
+            $this->UserNameType = $param["UserNameType"];
+        }
+
+        if (array_key_exists("UserNameValue",$param) and $param["UserNameValue"] !== null) {
+            $this->UserNameValue = $param["UserNameValue"];
+        }
+
+        if (array_key_exists("PasswordType",$param) and $param["PasswordType"] !== null) {
+            $this->PasswordType = $param["PasswordType"];
+        }
+
+        if (array_key_exists("PasswordValue",$param) and $param["PasswordValue"] !== null) {
+            $this->PasswordValue = $param["PasswordValue"];
+        }
+
+        if (array_key_exists("SubmitType",$param) and $param["SubmitType"] !== null) {
+            $this->SubmitType = $param["SubmitType"];
+        }
+
+        if (array_key_exists("SubmitValue",$param) and $param["SubmitValue"] !== null) {
+            $this->SubmitValue = $param["SubmitValue"];
         }
     }
 }

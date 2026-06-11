@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPortOverrides(array $PortOverrides) 设置<p>端口映射。</p>
  * @method string getCipherPolicyId() 获取<p>HPPTS加密算法套件</p>
  * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>HPPTS加密算法套件</p>
+ * @method string getHttpVersion() 获取<p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+ * @method void setHttpVersion(string $HttpVersion) 设置<p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
  */
 class ModifyEndpointGroupRequest extends AbstractModel
 {
@@ -185,6 +187,11 @@ class ModifyEndpointGroupRequest extends AbstractModel
     public $CipherPolicyId;
 
     /**
+     * @var string <p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     */
+    public $HttpVersion;
+
+    /**
      * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
      * @param string $ListenerId <p>监听器ID。</p>
      * @param string $EndpointGroupId <p>终端节点组ID。</p>
@@ -208,6 +215,7 @@ class ModifyEndpointGroupRequest extends AbstractModel
      * @param string $ForwardProtocol <p>回源协议。</p>
      * @param array $PortOverrides <p>端口映射。</p>
      * @param string $CipherPolicyId <p>HPPTS加密算法套件</p>
+     * @param string $HttpVersion <p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
      */
     function __construct()
     {
@@ -322,6 +330,10 @@ class ModifyEndpointGroupRequest extends AbstractModel
 
         if (array_key_exists("CipherPolicyId",$param) and $param["CipherPolicyId"] !== null) {
             $this->CipherPolicyId = $param["CipherPolicyId"];
+        }
+
+        if (array_key_exists("HttpVersion",$param) and $param["HttpVersion"] !== null) {
+            $this->HttpVersion = $param["HttpVersion"];
         }
     }
 }

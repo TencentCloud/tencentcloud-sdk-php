@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExtendedServiceAuthDetail返回参数结构体
  *
- * @method AuthInfoDetail getAuthInfoDetail() 获取服务授权的信息列表，根据查询类型返回特定扩展服务的授权状况。
- * @method void setAuthInfoDetail(AuthInfoDetail $AuthInfoDetail) 设置服务授权的信息列表，根据查询类型返回特定扩展服务的授权状况。
+ * @method AuthInfoDetail getAuthInfoDetail() 获取<p>服务授权的信息列表，根据查询类型返回特定扩展服务的授权状况。</p>
+ * @method void setAuthInfoDetail(AuthInfoDetail $AuthInfoDetail) 设置<p>服务授权的信息列表，根据查询类型返回特定扩展服务的授权状况。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeExtendedServiceAuthDetailResponse extends AbstractModel
 {
     /**
-     * @var AuthInfoDetail 服务授权的信息列表，根据查询类型返回特定扩展服务的授权状况。
+     * @var AuthInfoDetail <p>服务授权的信息列表，根据查询类型返回特定扩展服务的授权状况。</p>
      */
     public $AuthInfoDetail;
 
@@ -38,7 +38,7 @@ class DescribeExtendedServiceAuthDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AuthInfoDetail $AuthInfoDetail 服务授权的信息列表，根据查询类型返回特定扩展服务的授权状况。
+     * @param AuthInfoDetail $AuthInfoDetail <p>服务授权的信息列表，根据查询类型返回特定扩展服务的授权状况。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

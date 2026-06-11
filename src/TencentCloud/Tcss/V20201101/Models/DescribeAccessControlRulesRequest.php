@@ -20,19 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccessControlRules请求参数结构体
  *
+ * @method string getBy() 获取排序字段
+ * @method void setBy(string $By) 设置排序字段
+ * @method array getFilters() 获取过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName- String - 是否必填：否 - 镜像名称，模糊查找绑定了该镜像的规则 </li>
+<li>ImageId- String - 是否必填：否 - 镜像ID，模糊查找绑定了该镜像的规则 </li>
+<li>RuleType- String - 是否必填：否 - 策略类型过滤，取值：system（系统策略）、user（用户策略） </li>
+<li>RuleAction- String - 是否必填：否 - 执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截） </li>
+
+ * @method void setFilters(array $Filters) 设置过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName- String - 是否必填：否 - 镜像名称，模糊查找绑定了该镜像的规则 </li>
+<li>ImageId- String - 是否必填：否 - 镜像ID，模糊查找绑定了该镜像的规则 </li>
+<li>RuleType- String - 是否必填：否 - 策略类型过滤，取值：system（系统策略）、user（用户策略） </li>
+<li>RuleAction- String - 是否必填：否 - 执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截） </li>
+
  * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method array getFilters() 获取过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
- * @method void setFilters(array $Filters) 设置过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
  * @method string getOrder() 获取升序降序,asc desc
  * @method void setOrder(string $Order) 设置升序降序,asc desc
- * @method string getBy() 获取排序字段
- * @method void setBy(string $By) 设置排序字段
  */
 class DescribeAccessControlRulesRequest extends AbstractModel
 {
+    /**
+     * @var string 排序字段
+     */
+    public $By;
+
+    /**
+     * @var array 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName- String - 是否必填：否 - 镜像名称，模糊查找绑定了该镜像的规则 </li>
+<li>ImageId- String - 是否必填：否 - 镜像ID，模糊查找绑定了该镜像的规则 </li>
+<li>RuleType- String - 是否必填：否 - 策略类型过滤，取值：system（系统策略）、user（用户策略） </li>
+<li>RuleAction- String - 是否必填：否 - 执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截） </li>
+
+     */
+    public $Filters;
+
     /**
      * @var integer 需要返回的数量，默认为10，最大值为100
      */
@@ -44,26 +69,21 @@ class DescribeAccessControlRulesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     */
-    public $Filters;
-
-    /**
      * @var string 升序降序,asc desc
      */
     public $Order;
 
     /**
-     * @var string 排序字段
-     */
-    public $By;
+     * @param string $By 排序字段
+     * @param array $Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName- String - 是否必填：否 - 镜像名称，模糊查找绑定了该镜像的规则 </li>
+<li>ImageId- String - 是否必填：否 - 镜像ID，模糊查找绑定了该镜像的规则 </li>
+<li>RuleType- String - 是否必填：否 - 策略类型过滤，取值：system（系统策略）、user（用户策略） </li>
+<li>RuleAction- String - 是否必填：否 - 执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截） </li>
 
-    /**
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
-     * @param array $Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
      * @param string $Order 升序降序,asc desc
-     * @param string $By 排序字段
      */
     function __construct()
     {
@@ -78,12 +98,8 @@ class DescribeAccessControlRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
@@ -95,12 +111,16 @@ class DescribeAccessControlRulesRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("By",$param) and $param["By"] !== null) {
-            $this->By = $param["By"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
         }
     }
 }

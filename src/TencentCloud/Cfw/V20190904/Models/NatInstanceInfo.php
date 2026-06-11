@@ -20,258 +20,250 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Nat实例卡片详细信息
  *
- * @method string getNatinsId() 获取nat实例id
- * @method void setNatinsId(string $NatinsId) 设置nat实例id
- * @method string getNatinsName() 获取nat实例名称
- * @method void setNatinsName(string $NatinsName) 设置nat实例名称
- * @method string getRegion() 获取实例所在地域
- * @method void setRegion(string $Region) 设置实例所在地域
- * @method integer getFwMode() 获取0: 新增模式，1:接入模式
- * @method void setFwMode(integer $FwMode) 设置0: 新增模式，1:接入模式
- * @method integer getBandWidth() 获取实例带宽大小 Mbps
- * @method void setBandWidth(integer $BandWidth) 设置实例带宽大小 Mbps
- * @method integer getInFlowMax() 获取入向带宽峰值 bps
- * @method void setInFlowMax(integer $InFlowMax) 设置入向带宽峰值 bps
- * @method integer getOutFlowMax() 获取出向带宽峰值 bps
- * @method void setOutFlowMax(integer $OutFlowMax) 设置出向带宽峰值 bps
- * @method string getRegionZh() 获取地域中文信息
- * @method void setRegionZh(string $RegionZh) 设置地域中文信息
- * @method array getEipAddress() 获取公网ip数组
- * @method void setEipAddress(array $EipAddress) 设置公网ip数组
- * @method array getVpcIp() 获取内外使用ip数组
- * @method void setVpcIp(array $VpcIp) 设置内外使用ip数组
- * @method array getSubnets() 获取实例关联子网数组
- * @method void setSubnets(array $Subnets) 设置实例关联子网数组
- * @method integer getStatus() 获取0 :正常 1：正在初始化
- * @method void setStatus(integer $Status) 设置0 :正常 1：正在初始化
- * @method string getRegionDetail() 获取地域区域信息
- * @method void setRegionDetail(string $RegionDetail) 设置地域区域信息
- * @method string getZoneZh() 获取实例所在可用区
- * @method void setZoneZh(string $ZoneZh) 设置实例所在可用区
- * @method string getZoneZhBak() 获取实例所在可用区
- * @method void setZoneZhBak(string $ZoneZhBak) 设置实例所在可用区
- * @method integer getRuleUsed() 获取已使用规则数
- * @method void setRuleUsed(integer $RuleUsed) 设置已使用规则数
- * @method integer getRuleMax() 获取实例的规则限制最大规格数
- * @method void setRuleMax(integer $RuleMax) 设置实例的规则限制最大规格数
- * @method string getEngineVersion() 获取实例引擎版本
- * @method void setEngineVersion(string $EngineVersion) 设置实例引擎版本
- * @method integer getUpdateEnable() 获取引擎是否可升级：0，不可升级；1，可升级
- * @method void setUpdateEnable(integer $UpdateEnable) 设置引擎是否可升级：0，不可升级；1，可升级
- * @method integer getNeedProbeEngineUpdate() 获取是的需要升级引擎 支持 nat拨测 1需要 0不需要
- * @method void setNeedProbeEngineUpdate(integer $NeedProbeEngineUpdate) 设置是的需要升级引擎 支持 nat拨测 1需要 0不需要
- * @method string getTrafficMode() 获取引擎运行模式，Normal:正常, OnlyRoute:透明模式
- * @method void setTrafficMode(string $TrafficMode) 设置引擎运行模式，Normal:正常, OnlyRoute:透明模式
- * @method string getZone() 获取实例主所在可用区
- * @method void setZone(string $Zone) 设置实例主所在可用区
- * @method string getZoneBak() 获取实例备所在可用区
- * @method void setZoneBak(string $ZoneBak) 设置实例备所在可用区
- * @method string getReserveTime() 获取引擎预约升级时间
- * @method void setReserveTime(string $ReserveTime) 设置引擎预约升级时间
- * @method string getReserveVersion() 获取引擎预约升级版本
- * @method void setReserveVersion(string $ReserveVersion) 设置引擎预约升级版本
- * @method string getReserveVersionState() 获取引擎预约升级版本状态 stable:稳定版；previewed:预览版
- * @method void setReserveVersionState(string $ReserveVersionState) 设置引擎预约升级版本状态 stable:稳定版；previewed:预览版
- * @method integer getElasticSwitch() 获取弹性开关
-1 打开
-0 关闭
- * @method void setElasticSwitch(integer $ElasticSwitch) 设置弹性开关
-1 打开
-0 关闭
- * @method integer getElasticBandwidth() 获取弹性带宽，单位Mbps
- * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置弹性带宽，单位Mbps
- * @method integer getIsFirstAfterPay() 获取是否首次开通按量付费
-1 是
-0 不是
- * @method void setIsFirstAfterPay(integer $IsFirstAfterPay) 设置是否首次开通按量付费
-1 是
-0 不是
+ * @method string getNatinsId() 获取<p>nat实例id</p>
+ * @method void setNatinsId(string $NatinsId) 设置<p>nat实例id</p>
+ * @method string getNatinsName() 获取<p>nat实例名称</p>
+ * @method void setNatinsName(string $NatinsName) 设置<p>nat实例名称</p>
+ * @method string getRegion() 获取<p>实例所在地域</p>
+ * @method void setRegion(string $Region) 设置<p>实例所在地域</p>
+ * @method integer getFwMode() 获取<p>0: 新增模式，1:接入模式</p>
+ * @method void setFwMode(integer $FwMode) 设置<p>0: 新增模式，1:接入模式</p>
+ * @method integer getBandWidth() 获取<p>实例带宽大小 Mbps</p>
+ * @method void setBandWidth(integer $BandWidth) 设置<p>实例带宽大小 Mbps</p>
+ * @method integer getInFlowMax() 获取<p>入向带宽峰值 bps</p>
+ * @method void setInFlowMax(integer $InFlowMax) 设置<p>入向带宽峰值 bps</p>
+ * @method integer getOutFlowMax() 获取<p>出向带宽峰值 bps</p>
+ * @method void setOutFlowMax(integer $OutFlowMax) 设置<p>出向带宽峰值 bps</p>
+ * @method string getRegionZh() 获取<p>地域中文信息</p>
+ * @method void setRegionZh(string $RegionZh) 设置<p>地域中文信息</p>
+ * @method array getEipAddress() 获取<p>公网ip数组</p>
+ * @method void setEipAddress(array $EipAddress) 设置<p>公网ip数组</p>
+ * @method array getVpcIp() 获取<p>内外使用ip数组</p>
+ * @method void setVpcIp(array $VpcIp) 设置<p>内外使用ip数组</p>
+ * @method array getSubnets() 获取<p>实例关联子网数组</p>
+ * @method void setSubnets(array $Subnets) 设置<p>实例关联子网数组</p>
+ * @method integer getStatus() 获取<p>0 :正常 1：正在初始化</p>
+ * @method void setStatus(integer $Status) 设置<p>0 :正常 1：正在初始化</p>
+ * @method string getRegionDetail() 获取<p>地域区域信息</p>
+ * @method void setRegionDetail(string $RegionDetail) 设置<p>地域区域信息</p>
+ * @method string getZoneZh() 获取<p>实例所在可用区</p>
+ * @method void setZoneZh(string $ZoneZh) 设置<p>实例所在可用区</p>
+ * @method string getZoneZhBak() 获取<p>实例所在可用区</p>
+ * @method void setZoneZhBak(string $ZoneZhBak) 设置<p>实例所在可用区</p>
+ * @method integer getRuleUsed() 获取<p>已使用规则数</p>
+ * @method void setRuleUsed(integer $RuleUsed) 设置<p>已使用规则数</p>
+ * @method integer getRuleMax() 获取<p>实例的规则限制最大规格数</p>
+ * @method void setRuleMax(integer $RuleMax) 设置<p>实例的规则限制最大规格数</p>
+ * @method string getEngineVersion() 获取<p>实例引擎版本</p>
+ * @method void setEngineVersion(string $EngineVersion) 设置<p>实例引擎版本</p>
+ * @method integer getUpdateEnable() 获取<p>引擎是否可升级：0，不可升级；1，可升级</p>
+ * @method void setUpdateEnable(integer $UpdateEnable) 设置<p>引擎是否可升级：0，不可升级；1，可升级</p>
+ * @method integer getNeedProbeEngineUpdate() 获取<p>是的需要升级引擎 支持 nat拨测 1需要 0不需要</p>
+ * @method void setNeedProbeEngineUpdate(integer $NeedProbeEngineUpdate) 设置<p>是的需要升级引擎 支持 nat拨测 1需要 0不需要</p>
+ * @method string getTrafficMode() 获取<p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
+ * @method void setTrafficMode(string $TrafficMode) 设置<p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
+ * @method string getZone() 获取<p>实例主所在可用区</p>
+ * @method void setZone(string $Zone) 设置<p>实例主所在可用区</p>
+ * @method string getZoneBak() 获取<p>实例备所在可用区</p>
+ * @method void setZoneBak(string $ZoneBak) 设置<p>实例备所在可用区</p>
+ * @method string getReserveTime() 获取<p>引擎预约升级时间</p>
+ * @method void setReserveTime(string $ReserveTime) 设置<p>引擎预约升级时间</p>
+ * @method string getReserveVersion() 获取<p>引擎预约升级版本</p>
+ * @method void setReserveVersion(string $ReserveVersion) 设置<p>引擎预约升级版本</p>
+ * @method string getReserveVersionState() 获取<p>引擎预约升级版本状态 stable:稳定版；previewed:预览版</p>
+ * @method void setReserveVersionState(string $ReserveVersionState) 设置<p>引擎预约升级版本状态 stable:稳定版；previewed:预览版</p>
+ * @method integer getElasticSwitch() 获取<p>弹性开关<br>1 打开<br>0 关闭</p>
+ * @method void setElasticSwitch(integer $ElasticSwitch) 设置<p>弹性开关<br>1 打开<br>0 关闭</p>
+ * @method integer getElasticBandwidth() 获取<p>弹性带宽，单位Mbps</p>
+ * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置<p>弹性带宽，单位Mbps</p>
+ * @method integer getIsFirstAfterPay() 获取<p>是否首次开通按量付费<br>1 是<br>0 不是</p>
+ * @method void setIsFirstAfterPay(integer $IsFirstAfterPay) 设置<p>是否首次开通按量付费<br>1 是<br>0 不是</p>
+ * @method integer getElasticTrafficSwitch() 获取<p>按流量弹性开关</p><p>默认值：0</p>
+ * @method void setElasticTrafficSwitch(integer $ElasticTrafficSwitch) 设置<p>按流量弹性开关</p><p>默认值：0</p>
  */
 class NatInstanceInfo extends AbstractModel
 {
     /**
-     * @var string nat实例id
+     * @var string <p>nat实例id</p>
      */
     public $NatinsId;
 
     /**
-     * @var string nat实例名称
+     * @var string <p>nat实例名称</p>
      */
     public $NatinsName;
 
     /**
-     * @var string 实例所在地域
+     * @var string <p>实例所在地域</p>
      */
     public $Region;
 
     /**
-     * @var integer 0: 新增模式，1:接入模式
+     * @var integer <p>0: 新增模式，1:接入模式</p>
      */
     public $FwMode;
 
     /**
-     * @var integer 实例带宽大小 Mbps
+     * @var integer <p>实例带宽大小 Mbps</p>
      */
     public $BandWidth;
 
     /**
-     * @var integer 入向带宽峰值 bps
+     * @var integer <p>入向带宽峰值 bps</p>
      */
     public $InFlowMax;
 
     /**
-     * @var integer 出向带宽峰值 bps
+     * @var integer <p>出向带宽峰值 bps</p>
      */
     public $OutFlowMax;
 
     /**
-     * @var string 地域中文信息
+     * @var string <p>地域中文信息</p>
      */
     public $RegionZh;
 
     /**
-     * @var array 公网ip数组
+     * @var array <p>公网ip数组</p>
      */
     public $EipAddress;
 
     /**
-     * @var array 内外使用ip数组
+     * @var array <p>内外使用ip数组</p>
      */
     public $VpcIp;
 
     /**
-     * @var array 实例关联子网数组
+     * @var array <p>实例关联子网数组</p>
      */
     public $Subnets;
 
     /**
-     * @var integer 0 :正常 1：正在初始化
+     * @var integer <p>0 :正常 1：正在初始化</p>
      */
     public $Status;
 
     /**
-     * @var string 地域区域信息
+     * @var string <p>地域区域信息</p>
      */
     public $RegionDetail;
 
     /**
-     * @var string 实例所在可用区
+     * @var string <p>实例所在可用区</p>
      */
     public $ZoneZh;
 
     /**
-     * @var string 实例所在可用区
+     * @var string <p>实例所在可用区</p>
      */
     public $ZoneZhBak;
 
     /**
-     * @var integer 已使用规则数
+     * @var integer <p>已使用规则数</p>
      */
     public $RuleUsed;
 
     /**
-     * @var integer 实例的规则限制最大规格数
+     * @var integer <p>实例的规则限制最大规格数</p>
      */
     public $RuleMax;
 
     /**
-     * @var string 实例引擎版本
+     * @var string <p>实例引擎版本</p>
      */
     public $EngineVersion;
 
     /**
-     * @var integer 引擎是否可升级：0，不可升级；1，可升级
+     * @var integer <p>引擎是否可升级：0，不可升级；1，可升级</p>
      */
     public $UpdateEnable;
 
     /**
-     * @var integer 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+     * @var integer <p>是的需要升级引擎 支持 nat拨测 1需要 0不需要</p>
      */
     public $NeedProbeEngineUpdate;
 
     /**
-     * @var string 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+     * @var string <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
      */
     public $TrafficMode;
 
     /**
-     * @var string 实例主所在可用区
+     * @var string <p>实例主所在可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 实例备所在可用区
+     * @var string <p>实例备所在可用区</p>
      */
     public $ZoneBak;
 
     /**
-     * @var string 引擎预约升级时间
+     * @var string <p>引擎预约升级时间</p>
      */
     public $ReserveTime;
 
     /**
-     * @var string 引擎预约升级版本
+     * @var string <p>引擎预约升级版本</p>
      */
     public $ReserveVersion;
 
     /**
-     * @var string 引擎预约升级版本状态 stable:稳定版；previewed:预览版
+     * @var string <p>引擎预约升级版本状态 stable:稳定版；previewed:预览版</p>
      */
     public $ReserveVersionState;
 
     /**
-     * @var integer 弹性开关
-1 打开
-0 关闭
+     * @var integer <p>弹性开关<br>1 打开<br>0 关闭</p>
      */
     public $ElasticSwitch;
 
     /**
-     * @var integer 弹性带宽，单位Mbps
+     * @var integer <p>弹性带宽，单位Mbps</p>
      */
     public $ElasticBandwidth;
 
     /**
-     * @var integer 是否首次开通按量付费
-1 是
-0 不是
+     * @var integer <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
      */
     public $IsFirstAfterPay;
 
     /**
-     * @param string $NatinsId nat实例id
-     * @param string $NatinsName nat实例名称
-     * @param string $Region 实例所在地域
-     * @param integer $FwMode 0: 新增模式，1:接入模式
-     * @param integer $BandWidth 实例带宽大小 Mbps
-     * @param integer $InFlowMax 入向带宽峰值 bps
-     * @param integer $OutFlowMax 出向带宽峰值 bps
-     * @param string $RegionZh 地域中文信息
-     * @param array $EipAddress 公网ip数组
-     * @param array $VpcIp 内外使用ip数组
-     * @param array $Subnets 实例关联子网数组
-     * @param integer $Status 0 :正常 1：正在初始化
-     * @param string $RegionDetail 地域区域信息
-     * @param string $ZoneZh 实例所在可用区
-     * @param string $ZoneZhBak 实例所在可用区
-     * @param integer $RuleUsed 已使用规则数
-     * @param integer $RuleMax 实例的规则限制最大规格数
-     * @param string $EngineVersion 实例引擎版本
-     * @param integer $UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
-     * @param integer $NeedProbeEngineUpdate 是的需要升级引擎 支持 nat拨测 1需要 0不需要
-     * @param string $TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-     * @param string $Zone 实例主所在可用区
-     * @param string $ZoneBak 实例备所在可用区
-     * @param string $ReserveTime 引擎预约升级时间
-     * @param string $ReserveVersion 引擎预约升级版本
-     * @param string $ReserveVersionState 引擎预约升级版本状态 stable:稳定版；previewed:预览版
-     * @param integer $ElasticSwitch 弹性开关
-1 打开
-0 关闭
-     * @param integer $ElasticBandwidth 弹性带宽，单位Mbps
-     * @param integer $IsFirstAfterPay 是否首次开通按量付费
-1 是
-0 不是
+     * @var integer <p>按流量弹性开关</p><p>默认值：0</p>
+     */
+    public $ElasticTrafficSwitch;
+
+    /**
+     * @param string $NatinsId <p>nat实例id</p>
+     * @param string $NatinsName <p>nat实例名称</p>
+     * @param string $Region <p>实例所在地域</p>
+     * @param integer $FwMode <p>0: 新增模式，1:接入模式</p>
+     * @param integer $BandWidth <p>实例带宽大小 Mbps</p>
+     * @param integer $InFlowMax <p>入向带宽峰值 bps</p>
+     * @param integer $OutFlowMax <p>出向带宽峰值 bps</p>
+     * @param string $RegionZh <p>地域中文信息</p>
+     * @param array $EipAddress <p>公网ip数组</p>
+     * @param array $VpcIp <p>内外使用ip数组</p>
+     * @param array $Subnets <p>实例关联子网数组</p>
+     * @param integer $Status <p>0 :正常 1：正在初始化</p>
+     * @param string $RegionDetail <p>地域区域信息</p>
+     * @param string $ZoneZh <p>实例所在可用区</p>
+     * @param string $ZoneZhBak <p>实例所在可用区</p>
+     * @param integer $RuleUsed <p>已使用规则数</p>
+     * @param integer $RuleMax <p>实例的规则限制最大规格数</p>
+     * @param string $EngineVersion <p>实例引擎版本</p>
+     * @param integer $UpdateEnable <p>引擎是否可升级：0，不可升级；1，可升级</p>
+     * @param integer $NeedProbeEngineUpdate <p>是的需要升级引擎 支持 nat拨测 1需要 0不需要</p>
+     * @param string $TrafficMode <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
+     * @param string $Zone <p>实例主所在可用区</p>
+     * @param string $ZoneBak <p>实例备所在可用区</p>
+     * @param string $ReserveTime <p>引擎预约升级时间</p>
+     * @param string $ReserveVersion <p>引擎预约升级版本</p>
+     * @param string $ReserveVersionState <p>引擎预约升级版本状态 stable:稳定版；previewed:预览版</p>
+     * @param integer $ElasticSwitch <p>弹性开关<br>1 打开<br>0 关闭</p>
+     * @param integer $ElasticBandwidth <p>弹性带宽，单位Mbps</p>
+     * @param integer $IsFirstAfterPay <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
+     * @param integer $ElasticTrafficSwitch <p>按流量弹性开关</p><p>默认值：0</p>
      */
     function __construct()
     {
@@ -400,6 +392,10 @@ class NatInstanceInfo extends AbstractModel
 
         if (array_key_exists("IsFirstAfterPay",$param) and $param["IsFirstAfterPay"] !== null) {
             $this->IsFirstAfterPay = $param["IsFirstAfterPay"];
+        }
+
+        if (array_key_exists("ElasticTrafficSwitch",$param) and $param["ElasticTrafficSwitch"] !== null) {
+            $this->ElasticTrafficSwitch = $param["ElasticTrafficSwitch"];
         }
     }
 }

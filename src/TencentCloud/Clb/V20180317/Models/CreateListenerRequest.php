@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnatEnable(boolean $SnatEnable) 设置<p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
  * @method array getFullEndPorts() 获取<p>全端口段监听器的结束端口，端口范围：2 - 65535</p>
  * @method void setFullEndPorts(array $FullEndPorts) 设置<p>全端口段监听器的结束端口，端口范围：2 - 65535</p>
- * @method boolean getH2cSwitch() 获取<p>内网http监听器开启h2c开关，True（开启）、False（关闭）。<br>默认为关闭。</p>
- * @method void setH2cSwitch(boolean $H2cSwitch) 设置<p>内网http监听器开启h2c开关，True（开启）、False（关闭）。<br>默认为关闭。</p>
+ * @method boolean getH2cSwitch() 获取<p>内网 HTTP 监听器开启 h2c 开关。<br>True（开启）、False（关闭）。默认为关闭。<br>开启后，监听器仅支持创建后端转发类型为 GRPC 或 GRPCS 的七层规则；创建规则时需在 Rules.N.ForwardType 中显式传入 GRPC 或 GRPCS。</p>
+ * @method void setH2cSwitch(boolean $H2cSwitch) 设置<p>内网 HTTP 监听器开启 h2c 开关。<br>True（开启）、False（关闭）。默认为关闭。<br>开启后，监听器仅支持创建后端转发类型为 GRPC 或 GRPCS 的七层规则；创建规则时需在 Rules.N.ForwardType 中显式传入 GRPC 或 GRPCS。</p>
  * @method boolean getSslCloseSwitch() 获取<p>控制 TCP_SSL 类型的监听器是否移除 SSL 加密层。开启后，监听器将作为普通 TCP 协议运行。 可选值：</p><ul><li>True： 关闭 SSL 功能（协议降级为纯文本 TCP）。</li><li>False（默认）： 保持 SSL 功能开启。</li></ul>
  * @method void setSslCloseSwitch(boolean $SslCloseSwitch) 设置<p>控制 TCP_SSL 类型的监听器是否移除 SSL 加密层。开启后，监听器将作为普通 TCP 协议运行。 可选值：</p><ul><li>True： 关闭 SSL 功能（协议降级为纯文本 TCP）。</li><li>False（默认）： 保持 SSL 功能开启。</li></ul>
  * @method string getDataCompressMode() 获取<p>数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式）</p>
@@ -187,7 +187,7 @@ class CreateListenerRequest extends AbstractModel
     public $FullEndPorts;
 
     /**
-     * @var boolean <p>内网http监听器开启h2c开关，True（开启）、False（关闭）。<br>默认为关闭。</p>
+     * @var boolean <p>内网 HTTP 监听器开启 h2c 开关。<br>True（开启）、False（关闭）。默认为关闭。<br>开启后，监听器仅支持创建后端转发类型为 GRPC 或 GRPCS 的七层规则；创建规则时需在 Rules.N.ForwardType 中显式传入 GRPC 或 GRPCS。</p>
      */
     public $H2cSwitch;
 
@@ -248,7 +248,7 @@ class CreateListenerRequest extends AbstractModel
      * @param boolean $ProxyProtocol <p>TCP_SSL和QUIC是否支持PP</p>
      * @param boolean $SnatEnable <p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
      * @param array $FullEndPorts <p>全端口段监听器的结束端口，端口范围：2 - 65535</p>
-     * @param boolean $H2cSwitch <p>内网http监听器开启h2c开关，True（开启）、False（关闭）。<br>默认为关闭。</p>
+     * @param boolean $H2cSwitch <p>内网 HTTP 监听器开启 h2c 开关。<br>True（开启）、False（关闭）。默认为关闭。<br>开启后，监听器仅支持创建后端转发类型为 GRPC 或 GRPCS 的七层规则；创建规则时需在 Rules.N.ForwardType 中显式传入 GRPC 或 GRPCS。</p>
      * @param boolean $SslCloseSwitch <p>控制 TCP_SSL 类型的监听器是否移除 SSL 加密层。开启后，监听器将作为普通 TCP 协议运行。 可选值：</p><ul><li>True： 关闭 SSL 功能（协议降级为纯文本 TCP）。</li><li>False（默认）： 保持 SSL 功能开启。</li></ul>
      * @param string $DataCompressMode <p>数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式）</p>
      * @param boolean $RescheduleTargetZeroWeight <p>重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。</p>

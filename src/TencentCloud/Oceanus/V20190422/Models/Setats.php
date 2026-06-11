@@ -78,10 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageVersion(string $ImageVersion) 设置<p>setats镜像版本</p>
  * @method integer getWebUIType() 获取<p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
  * @method void setWebUIType(integer $WebUIType) 设置<p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
- * @method string getName() 获取<p>setats集群的名字</p>
- * @method void setName(string $Name) 设置<p>setats集群的名字</p>
- * @method string getRemark() 获取<p>setats集群注释</p>
- * @method void setRemark(string $Remark) 设置<p>setats集群注释</p>
+ * @method string getName() 获取<p>Setats集群名字</p>
+ * @method void setName(string $Name) 设置<p>Setats集群名字</p>
+ * @method string getRemark() 获取<p>Setats集群描述</p>
+ * @method void setRemark(string $Remark) 设置<p>Setats集群描述</p>
  */
 class Setats extends AbstractModel
 {
@@ -183,12 +183,12 @@ class Setats extends AbstractModel
     public $WebUIType;
 
     /**
-     * @var string <p>setats集群的名字</p>
+     * @var string <p>Setats集群名字</p>
      */
     public $Name;
 
     /**
-     * @var string <p>setats集群注释</p>
+     * @var string <p>Setats集群描述</p>
      */
     public $Remark;
 
@@ -222,8 +222,8 @@ class Setats extends AbstractModel
      * @param string $SetatsUiUrl <p>Setats UI url</p>
      * @param string $ImageVersion <p>setats镜像版本</p>
      * @param integer $WebUIType <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
-     * @param string $Name <p>setats集群的名字</p>
-     * @param string $Remark <p>setats集群注释</p>
+     * @param string $Name <p>Setats集群名字</p>
+     * @param string $Remark <p>Setats集群描述</p>
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoginWhiteHostList返回参数结构体
  *
- * @method integer getTotalCount() 获取总数
- * @method void setTotalCount(integer $TotalCount) 设置总数
- * @method array getHosts() 获取服务器列表
- * @method void setHosts(array $Hosts) 设置服务器列表
+ * @method integer getTotalCount() 获取<p>总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>总数</p>
+ * @method array getHosts() 获取<p>服务器列表</p>
+ * @method void setHosts(array $Hosts) 设置<p>服务器列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLoginWhiteHostListResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var integer <p>总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 服务器列表
+     * @var array <p>服务器列表</p>
      */
     public $Hosts;
 
@@ -45,8 +45,8 @@ class DescribeLoginWhiteHostListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总数
-     * @param array $Hosts 服务器列表
+     * @param integer $TotalCount <p>总数</p>
+     * @param array $Hosts <p>服务器列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

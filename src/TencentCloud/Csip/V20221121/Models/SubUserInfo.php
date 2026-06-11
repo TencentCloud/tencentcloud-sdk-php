@@ -20,154 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 子账号详情
  *
- * @method integer getID() 获取主键ID，无业务意义仅作为唯一键
- * @method void setID(integer $ID) 设置主键ID，无业务意义仅作为唯一键
- * @method string getAppID() 获取子账号Appid
- * @method void setAppID(string $AppID) 设置子账号Appid
- * @method string getUin() 获取子账号UIn
- * @method void setUin(string $Uin) 设置子账号UIn
- * @method string getNickName() 获取子账号名称
- * @method void setNickName(string $NickName) 设置子账号名称
- * @method string getOwnerAppID() 获取主账号Appid
- * @method void setOwnerAppID(string $OwnerAppID) 设置主账号Appid
- * @method string getOwnerUin() 获取主账号Uin
- * @method void setOwnerUin(string $OwnerUin) 设置主账号Uin
- * @method string getOwnerNickName() 获取主账号名称
- * @method void setOwnerNickName(string $OwnerNickName) 设置主账号名称
- * @method string getOwnerMemberID() 获取所属主账号memberId信息
- * @method void setOwnerMemberID(string $OwnerMemberID) 设置所属主账号memberId信息
- * @method integer getCloudType() 获取账户类型，0为腾讯云账户，1为AWS账户
- * @method void setCloudType(integer $CloudType) 设置账户类型，0为腾讯云账户，1为AWS账户
- * @method integer getServiceCount() 获取可访问服务数量
- * @method void setServiceCount(integer $ServiceCount) 设置可访问服务数量
- * @method integer getInterfaceCount() 获取可访问接口数量
- * @method void setInterfaceCount(integer $InterfaceCount) 设置可访问接口数量
- * @method integer getAssetCount() 获取可访问资源数量
- * @method void setAssetCount(integer $AssetCount) 设置可访问资源数量
- * @method integer getLogCount() 获取访问/行为日志数量
- * @method void setLogCount(integer $LogCount) 设置访问/行为日志数量
- * @method integer getConfigRiskCount() 获取权限配置风险
- * @method void setConfigRiskCount(integer $ConfigRiskCount) 设置权限配置风险
- * @method integer getActionRiskCount() 获取危险行为告警
- * @method void setActionRiskCount(integer $ActionRiskCount) 设置危险行为告警
- * @method boolean getIsAccessCloudAudit() 获取是否接入操作审计日志
- * @method void setIsAccessCloudAudit(boolean $IsAccessCloudAudit) 设置是否接入操作审计日志
- * @method boolean getIsAccessCheck() 获取是否配置风险的安全体检
- * @method void setIsAccessCheck(boolean $IsAccessCheck) 设置是否配置风险的安全体检
- * @method boolean getIsAccessUeba() 获取是否配置用户行为管理策略
- * @method void setIsAccessUeba(boolean $IsAccessUeba) 设置是否配置用户行为管理策略
+ * @method integer getID() 获取<p>主键ID，无业务意义仅作为唯一键</p>
+ * @method void setID(integer $ID) 设置<p>主键ID，无业务意义仅作为唯一键</p>
+ * @method string getAppID() 获取<p>子账号Appid</p>
+ * @method void setAppID(string $AppID) 设置<p>子账号Appid</p>
+ * @method string getUin() 获取<p>子账号UIn</p>
+ * @method void setUin(string $Uin) 设置<p>子账号UIn</p>
+ * @method string getNickName() 获取<p>子账号名称</p>
+ * @method void setNickName(string $NickName) 设置<p>子账号名称</p>
+ * @method string getOwnerAppID() 获取<p>主账号Appid</p>
+ * @method void setOwnerAppID(string $OwnerAppID) 设置<p>主账号Appid</p>
+ * @method string getOwnerUin() 获取<p>主账号Uin</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>主账号Uin</p>
+ * @method string getOwnerNickName() 获取<p>主账号名称</p>
+ * @method void setOwnerNickName(string $OwnerNickName) 设置<p>主账号名称</p>
+ * @method string getOwnerMemberID() 获取<p>所属主账号memberId信息</p>
+ * @method void setOwnerMemberID(string $OwnerMemberID) 设置<p>所属主账号memberId信息</p>
+ * @method integer getCloudType() 获取<p>账户类型，0为腾讯云账户，1为AWS账户</p>
+ * @method void setCloudType(integer $CloudType) 设置<p>账户类型，0为腾讯云账户，1为AWS账户</p>
+ * @method integer getServiceCount() 获取<p>可访问服务数量</p>
+ * @method void setServiceCount(integer $ServiceCount) 设置<p>可访问服务数量</p>
+ * @method integer getInterfaceCount() 获取<p>可访问接口数量</p>
+ * @method void setInterfaceCount(integer $InterfaceCount) 设置<p>可访问接口数量</p>
+ * @method integer getAssetCount() 获取<p>可访问资源数量</p>
+ * @method void setAssetCount(integer $AssetCount) 设置<p>可访问资源数量</p>
+ * @method integer getLogCount() 获取<p>访问/行为日志数量</p>
+ * @method void setLogCount(integer $LogCount) 设置<p>访问/行为日志数量</p>
+ * @method integer getConfigRiskCount() 获取<p>权限配置风险</p>
+ * @method void setConfigRiskCount(integer $ConfigRiskCount) 设置<p>权限配置风险</p>
+ * @method integer getActionRiskCount() 获取<p>危险行为告警</p>
+ * @method void setActionRiskCount(integer $ActionRiskCount) 设置<p>危险行为告警</p>
+ * @method boolean getIsAccessCloudAudit() 获取<p>是否接入操作审计日志</p>
+ * @method void setIsAccessCloudAudit(boolean $IsAccessCloudAudit) 设置<p>是否接入操作审计日志</p>
+ * @method boolean getIsAccessCheck() 获取<p>是否配置风险的安全体检</p>
+ * @method void setIsAccessCheck(boolean $IsAccessCheck) 设置<p>是否配置风险的安全体检</p>
+ * @method boolean getIsAccessUeba() 获取<p>是否配置用户行为管理策略</p>
+ * @method void setIsAccessUeba(boolean $IsAccessUeba) 设置<p>是否配置用户行为管理策略</p>
+ * @method integer getCreateTime() 获取<p>创建时间（Unix时间戳）</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间（Unix时间戳）</p>
  */
 class SubUserInfo extends AbstractModel
 {
     /**
-     * @var integer 主键ID，无业务意义仅作为唯一键
+     * @var integer <p>主键ID，无业务意义仅作为唯一键</p>
      */
     public $ID;
 
     /**
-     * @var string 子账号Appid
+     * @var string <p>子账号Appid</p>
      */
     public $AppID;
 
     /**
-     * @var string 子账号UIn
+     * @var string <p>子账号UIn</p>
      */
     public $Uin;
 
     /**
-     * @var string 子账号名称
+     * @var string <p>子账号名称</p>
      */
     public $NickName;
 
     /**
-     * @var string 主账号Appid
+     * @var string <p>主账号Appid</p>
      */
     public $OwnerAppID;
 
     /**
-     * @var string 主账号Uin
+     * @var string <p>主账号Uin</p>
      */
     public $OwnerUin;
 
     /**
-     * @var string 主账号名称
+     * @var string <p>主账号名称</p>
      */
     public $OwnerNickName;
 
     /**
-     * @var string 所属主账号memberId信息
+     * @var string <p>所属主账号memberId信息</p>
      */
     public $OwnerMemberID;
 
     /**
-     * @var integer 账户类型，0为腾讯云账户，1为AWS账户
+     * @var integer <p>账户类型，0为腾讯云账户，1为AWS账户</p>
      */
     public $CloudType;
 
     /**
-     * @var integer 可访问服务数量
+     * @var integer <p>可访问服务数量</p>
      */
     public $ServiceCount;
 
     /**
-     * @var integer 可访问接口数量
+     * @var integer <p>可访问接口数量</p>
      */
     public $InterfaceCount;
 
     /**
-     * @var integer 可访问资源数量
+     * @var integer <p>可访问资源数量</p>
      */
     public $AssetCount;
 
     /**
-     * @var integer 访问/行为日志数量
+     * @var integer <p>访问/行为日志数量</p>
      */
     public $LogCount;
 
     /**
-     * @var integer 权限配置风险
+     * @var integer <p>权限配置风险</p>
      */
     public $ConfigRiskCount;
 
     /**
-     * @var integer 危险行为告警
+     * @var integer <p>危险行为告警</p>
      */
     public $ActionRiskCount;
 
     /**
-     * @var boolean 是否接入操作审计日志
+     * @var boolean <p>是否接入操作审计日志</p>
      */
     public $IsAccessCloudAudit;
 
     /**
-     * @var boolean 是否配置风险的安全体检
+     * @var boolean <p>是否配置风险的安全体检</p>
      */
     public $IsAccessCheck;
 
     /**
-     * @var boolean 是否配置用户行为管理策略
+     * @var boolean <p>是否配置用户行为管理策略</p>
      */
     public $IsAccessUeba;
 
     /**
-     * @param integer $ID 主键ID，无业务意义仅作为唯一键
-     * @param string $AppID 子账号Appid
-     * @param string $Uin 子账号UIn
-     * @param string $NickName 子账号名称
-     * @param string $OwnerAppID 主账号Appid
-     * @param string $OwnerUin 主账号Uin
-     * @param string $OwnerNickName 主账号名称
-     * @param string $OwnerMemberID 所属主账号memberId信息
-     * @param integer $CloudType 账户类型，0为腾讯云账户，1为AWS账户
-     * @param integer $ServiceCount 可访问服务数量
-     * @param integer $InterfaceCount 可访问接口数量
-     * @param integer $AssetCount 可访问资源数量
-     * @param integer $LogCount 访问/行为日志数量
-     * @param integer $ConfigRiskCount 权限配置风险
-     * @param integer $ActionRiskCount 危险行为告警
-     * @param boolean $IsAccessCloudAudit 是否接入操作审计日志
-     * @param boolean $IsAccessCheck 是否配置风险的安全体检
-     * @param boolean $IsAccessUeba 是否配置用户行为管理策略
+     * @var integer <p>创建时间（Unix时间戳）</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @param integer $ID <p>主键ID，无业务意义仅作为唯一键</p>
+     * @param string $AppID <p>子账号Appid</p>
+     * @param string $Uin <p>子账号UIn</p>
+     * @param string $NickName <p>子账号名称</p>
+     * @param string $OwnerAppID <p>主账号Appid</p>
+     * @param string $OwnerUin <p>主账号Uin</p>
+     * @param string $OwnerNickName <p>主账号名称</p>
+     * @param string $OwnerMemberID <p>所属主账号memberId信息</p>
+     * @param integer $CloudType <p>账户类型，0为腾讯云账户，1为AWS账户</p>
+     * @param integer $ServiceCount <p>可访问服务数量</p>
+     * @param integer $InterfaceCount <p>可访问接口数量</p>
+     * @param integer $AssetCount <p>可访问资源数量</p>
+     * @param integer $LogCount <p>访问/行为日志数量</p>
+     * @param integer $ConfigRiskCount <p>权限配置风险</p>
+     * @param integer $ActionRiskCount <p>危险行为告警</p>
+     * @param boolean $IsAccessCloudAudit <p>是否接入操作审计日志</p>
+     * @param boolean $IsAccessCheck <p>是否配置风险的安全体检</p>
+     * @param boolean $IsAccessUeba <p>是否配置用户行为管理策略</p>
+     * @param integer $CreateTime <p>创建时间（Unix时间戳）</p>
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class SubUserInfo extends AbstractModel
 
         if (array_key_exists("IsAccessUeba",$param) and $param["IsAccessUeba"] !== null) {
             $this->IsAccessUeba = $param["IsAccessUeba"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

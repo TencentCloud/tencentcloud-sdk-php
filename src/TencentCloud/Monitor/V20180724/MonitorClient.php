@@ -40,6 +40,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\CreateGrafanaInstanceResponse CreateGrafanaInstance(Models\CreateGrafanaInstanceRequest $req) 本接口（CreateGrafanaInstance）用于创建 Grafana 包年包月实例，默认基础版、到期自动续费。
  * @method Models\CreateGrafanaIntegrationResponse CreateGrafanaIntegration(Models\CreateGrafanaIntegrationRequest $req) 创建 Grafana 集成配置，其中 Prometheus 集成不通过该接口创建，可参考 BindPrometheusManagedGrafana 接口
  * @method Models\CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannel(Models\CreateGrafanaNotificationChannelRequest $req) 创建 Grafana 告警通道
+ * @method Models\CreateOnCallFormResponse CreateOnCallForm(Models\CreateOnCallFormRequest $req) 创建值班表
  * @method Models\CreatePolicyGroupResponse CreatePolicyGroup(Models\CreatePolicyGroupRequest $req) 增加策略组
  * @method Models\CreatePrometheusAgentResponse CreatePrometheusAgent(Models\CreatePrometheusAgentRequest $req) 创建 Prometheus CVM Agent
  * @method Models\CreatePrometheusAlertGroupResponse CreatePrometheusAlertGroup(Models\CreatePrometheusAlertGroupRequest $req) 创建Prometheus告警规则分组
@@ -66,6 +67,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DeleteGrafanaInstanceResponse DeleteGrafanaInstance(Models\DeleteGrafanaInstanceRequest $req) 本接口（DeleteGrafanaInstance）用于 Grafana 包年包月实例的退费，调用后实例处于停服状态，不可使用，7天后自动销毁。
  * @method Models\DeleteGrafanaIntegrationResponse DeleteGrafanaIntegration(Models\DeleteGrafanaIntegrationRequest $req) 删除 Grafana 集成配置
  * @method Models\DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(Models\DeleteGrafanaNotificationChannelRequest $req) 删除 Grafana 告警通道
+ * @method Models\DeleteOnCallFormsResponse DeleteOnCallForms(Models\DeleteOnCallFormsRequest $req) 删除值班表接口
  * @method Models\DeletePolicyGroupResponse DeletePolicyGroup(Models\DeletePolicyGroupRequest $req) 告警 1.0 API，不能再使用否则会导致后端数据不一致
 
 删除告警策略组
@@ -116,6 +118,8 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribeMonitorResourceInfoResponse DescribeMonitorResourceInfo(Models\DescribeMonitorResourceInfoRequest $req) 获取资源消耗页概览
  * @method Models\DescribeMonitorTypesResponse DescribeMonitorTypes(Models\DescribeMonitorTypesRequest $req) 腾讯云可观测平台支持多种类型的监控，此接口列出支持的所有类型
  * @method Models\DescribeNotificationContentTemplateSupportsResponse DescribeNotificationContentTemplateSupports(Models\DescribeNotificationContentTemplateSupportsRequest $req) 查询告警通知内容模板支持的变量或者函数列表
+ * @method Models\DescribeOnCallFormResponse DescribeOnCallForm(Models\DescribeOnCallFormRequest $req) 查询值班表详情
+ * @method Models\DescribeOnCallFormsResponse DescribeOnCallForms(Models\DescribeOnCallFormsRequest $req) 查询值班列表
  * @method Models\DescribePhoneAlarmFlowTotalCountResponse DescribePhoneAlarmFlowTotalCount(Models\DescribePhoneAlarmFlowTotalCountRequest $req) 查询周期内电话流水总数
  * @method Models\DescribePluginOverviewsResponse DescribePluginOverviews(Models\DescribePluginOverviewsRequest $req) 列出可安装的所有 Grafana 插件。
  * @method Models\DescribePolicyConditionListResponse DescribePolicyConditionList(Models\DescribePolicyConditionListRequest $req) 获取基础告警策略条件
@@ -247,6 +251,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\UpdateGrafanaIntegrationResponse UpdateGrafanaIntegration(Models\UpdateGrafanaIntegrationRequest $req) 更新 Grafana 集成配置
  * @method Models\UpdateGrafanaNotificationChannelResponse UpdateGrafanaNotificationChannel(Models\UpdateGrafanaNotificationChannelRequest $req) 更新 Grafana 告警通道
  * @method Models\UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteList(Models\UpdateGrafanaWhiteListRequest $req) 更新 Grafana 白名单
+ * @method Models\UpdateOnCallFormResponse UpdateOnCallForm(Models\UpdateOnCallFormRequest $req) 修改值班表
  * @method Models\UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatus(Models\UpdatePrometheusAgentStatusRequest $req) 更新 Prometheus CVM Agent 状态
  * @method Models\UpdatePrometheusAlertGroupResponse UpdatePrometheusAlertGroup(Models\UpdatePrometheusAlertGroupRequest $req) 更新Prometheus告警规则分组
  * @method Models\UpdatePrometheusAlertGroupStateResponse UpdatePrometheusAlertGroupState(Models\UpdatePrometheusAlertGroupStateRequest $req) 批量更新告警分组状态，将分组中全部告警规则更新为目标状态

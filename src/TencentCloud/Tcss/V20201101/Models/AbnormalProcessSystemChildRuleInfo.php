@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 异常进程系统策略的子策略信息
  *
- * @method string getRuleId() 获取子策略Id
- * @method void setRuleId(string $RuleId) 设置子策略Id
  * @method boolean getIsEnable() 获取子策略状态，true为开启，false为关闭
  * @method void setIsEnable(boolean $IsEnable) 设置子策略状态，true为开启，false为关闭
+ * @method string getRuleId() 获取子策略Id
+ * @method void setRuleId(string $RuleId) 设置子策略Id
  * @method string getRuleMode() 获取策略模式,  RULE_MODE_RELEASE: 放行
    RULE_MODE_ALERT: 告警
    RULE_MODE_HOLDUP:拦截
@@ -52,14 +52,14 @@ ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
 class AbnormalProcessSystemChildRuleInfo extends AbstractModel
 {
     /**
-     * @var string 子策略Id
-     */
-    public $RuleId;
-
-    /**
      * @var boolean 子策略状态，true为开启，false为关闭
      */
     public $IsEnable;
+
+    /**
+     * @var string 子策略Id
+     */
+    public $RuleId;
 
     /**
      * @var string 策略模式,  RULE_MODE_RELEASE: 放行
@@ -86,8 +86,8 @@ ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
     public $RuleLevel;
 
     /**
-     * @param string $RuleId 子策略Id
      * @param boolean $IsEnable 子策略状态，true为开启，false为关闭
+     * @param string $RuleId 子策略Id
      * @param string $RuleMode 策略模式,  RULE_MODE_RELEASE: 放行
    RULE_MODE_ALERT: 告警
    RULE_MODE_HOLDUP:拦截
@@ -114,12 +114,12 @@ ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
-        }
-
         if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
             $this->IsEnable = $param["IsEnable"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
 
         if (array_key_exists("RuleMode",$param) and $param["RuleMode"] !== null) {

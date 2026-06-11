@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryChunkList请求参数结构体
  *
- * @method integer getPage() 获取表示第一页
- * @method void setPage(integer $Page) 设置表示第一页
- * @method integer getPageSize() 获取默认一页展示 10 条
- * @method void setPageSize(integer $PageSize) 设置默认一页展示 10 条
- * @method string getKnowledgeBaseId() 获取知识库id
- * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库id
+ * @method integer getPage() 获取<p>表示第一页</p>
+ * @method void setPage(integer $Page) 设置<p>表示第一页</p>
+ * @method integer getPageSize() 获取<p>默认一页展示 10 条</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>默认一页展示 10 条</p>
+ * @method string getKnowledgeBaseId() 获取<p>知识库id</p>
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置<p>知识库id</p>
  */
 class QueryChunkListRequest extends AbstractModel
 {
     /**
-     * @var integer 表示第一页
+     * @var integer <p>表示第一页</p>
      */
     public $Page;
 
     /**
-     * @var integer 默认一页展示 10 条
+     * @var integer <p>默认一页展示 10 条</p>
      */
     public $PageSize;
 
     /**
-     * @var string 知识库id
+     * @var string <p>知识库id</p>
      */
     public $KnowledgeBaseId;
 
     /**
-     * @param integer $Page 表示第一页
-     * @param integer $PageSize 默认一页展示 10 条
-     * @param string $KnowledgeBaseId 知识库id
+     * @param integer $Page <p>表示第一页</p>
+     * @param integer $PageSize <p>默认一页展示 10 条</p>
+     * @param string $KnowledgeBaseId <p>知识库id</p>
      */
     function __construct()
     {

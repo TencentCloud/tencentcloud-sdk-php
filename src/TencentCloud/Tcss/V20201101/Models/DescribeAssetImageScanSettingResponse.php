@@ -20,109 +20,116 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageScanSetting返回参数结构体
  *
- * @method boolean getEnable() 获取开关
- * @method void setEnable(boolean $Enable) 设置开关
- * @method string getScanTime() 获取扫描时刻(完整时间;后端按0时区解析时分秒)
- * @method void setScanTime(string $ScanTime) 设置扫描时刻(完整时间;后端按0时区解析时分秒)
- * @method integer getScanPeriod() 获取扫描间隔
- * @method void setScanPeriod(integer $ScanPeriod) 设置扫描间隔
- * @method boolean getScanVirus() 获取扫描木马
- * @method void setScanVirus(boolean $ScanVirus) 设置扫描木马
- * @method boolean getScanRisk() 获取扫描敏感信息
- * @method void setScanRisk(boolean $ScanRisk) 设置扫描敏感信息
- * @method boolean getScanVul() 获取扫描漏洞
- * @method void setScanVul(boolean $ScanVul) 设置扫描漏洞
- * @method boolean getAll() 获取扫描全部镜像
- * @method void setAll(boolean $All) 设置扫描全部镜像
- * @method array getImages() 获取自定义扫描镜像
- * @method void setImages(array $Images) 设置自定义扫描镜像
- * @method boolean getContainerRunning() 获取镜像是否存在运行中的容器
- * @method void setContainerRunning(boolean $ContainerRunning) 设置镜像是否存在运行中的容器
- * @method integer getScanScope() 获取扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
- * @method void setScanScope(integer $ScanScope) 设置扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
- * @method string getScanEndTime() 获取扫描结束时间 02:00 时分
- * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间 02:00 时分
- * @method array getExcludeImages() 获取排除的扫描镜像
- * @method void setExcludeImages(array $ExcludeImages) 设置排除的扫描镜像
- * @method string getLastScanTime() 获取最后一次扫描时间
- * @method void setLastScanTime(string $LastScanTime) 设置最后一次扫描时间
- * @method string getScanResult() 获取扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
- * @method void setScanResult(string $ScanResult) 设置扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+ * @method boolean getEnable() 获取<p>开关</p>
+ * @method void setEnable(boolean $Enable) 设置<p>开关</p>
+ * @method string getScanTime() 获取<p>扫描时刻(完整时间;后端按0时区解析时分秒)</p>
+ * @method void setScanTime(string $ScanTime) 设置<p>扫描时刻(完整时间;后端按0时区解析时分秒)</p>
+ * @method integer getScanPeriod() 获取<p>扫描间隔</p>
+ * @method void setScanPeriod(integer $ScanPeriod) 设置<p>扫描间隔</p>
+ * @method boolean getScanVirus() 获取<p>扫描木马</p>
+ * @method void setScanVirus(boolean $ScanVirus) 设置<p>扫描木马</p>
+ * @method boolean getScanRisk() 获取<p>扫描敏感信息</p>
+ * @method void setScanRisk(boolean $ScanRisk) 设置<p>扫描敏感信息</p>
+ * @method boolean getScanVul() 获取<p>扫描漏洞</p>
+ * @method void setScanVul(boolean $ScanVul) 设置<p>扫描漏洞</p>
+ * @method boolean getAll() 获取<p>扫描全部镜像</p>
+ * @method void setAll(boolean $All) 设置<p>扫描全部镜像</p>
+ * @method array getImages() 获取<p>自定义扫描镜像</p>
+ * @method void setImages(array $Images) 设置<p>自定义扫描镜像</p>
+ * @method boolean getContainerRunning() 获取<p>镜像是否存在运行中的容器</p>
+ * @method void setContainerRunning(boolean $ContainerRunning) 设置<p>镜像是否存在运行中的容器</p>
+ * @method integer getScanScope() 获取<p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群筛选扫描</p>
+ * @method void setScanScope(integer $ScanScope) 设置<p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群筛选扫描</p>
+ * @method string getScanEndTime() 获取<p>扫描结束时间 02:00 时分</p>
+ * @method void setScanEndTime(string $ScanEndTime) 设置<p>扫描结束时间 02:00 时分</p>
+ * @method array getExcludeImages() 获取<p>排除的扫描镜像</p>
+ * @method void setExcludeImages(array $ExcludeImages) 设置<p>排除的扫描镜像</p>
+ * @method string getLastScanTime() 获取<p>最后一次扫描时间</p>
+ * @method void setLastScanTime(string $LastScanTime) 设置<p>最后一次扫描时间</p>
+ * @method string getScanResult() 获取<p>扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)</p>
+ * @method void setScanResult(string $ScanResult) 设置<p>扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)</p>
+ * @method array getClusterIDs() 获取<p>集群id</p>
+ * @method void setClusterIDs(array $ClusterIDs) 设置<p>集群id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAssetImageScanSettingResponse extends AbstractModel
 {
     /**
-     * @var boolean 开关
+     * @var boolean <p>开关</p>
      */
     public $Enable;
 
     /**
-     * @var string 扫描时刻(完整时间;后端按0时区解析时分秒)
+     * @var string <p>扫描时刻(完整时间;后端按0时区解析时分秒)</p>
      */
     public $ScanTime;
 
     /**
-     * @var integer 扫描间隔
+     * @var integer <p>扫描间隔</p>
      */
     public $ScanPeriod;
 
     /**
-     * @var boolean 扫描木马
+     * @var boolean <p>扫描木马</p>
      */
     public $ScanVirus;
 
     /**
-     * @var boolean 扫描敏感信息
+     * @var boolean <p>扫描敏感信息</p>
      */
     public $ScanRisk;
 
     /**
-     * @var boolean 扫描漏洞
+     * @var boolean <p>扫描漏洞</p>
      */
     public $ScanVul;
 
     /**
-     * @var boolean 扫描全部镜像
+     * @var boolean <p>扫描全部镜像</p>
      * @deprecated
      */
     public $All;
 
     /**
-     * @var array 自定义扫描镜像
+     * @var array <p>自定义扫描镜像</p>
      */
     public $Images;
 
     /**
-     * @var boolean 镜像是否存在运行中的容器
+     * @var boolean <p>镜像是否存在运行中的容器</p>
      */
     public $ContainerRunning;
 
     /**
-     * @var integer 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * @var integer <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群筛选扫描</p>
      */
     public $ScanScope;
 
     /**
-     * @var string 扫描结束时间 02:00 时分
+     * @var string <p>扫描结束时间 02:00 时分</p>
      */
     public $ScanEndTime;
 
     /**
-     * @var array 排除的扫描镜像
+     * @var array <p>排除的扫描镜像</p>
      */
     public $ExcludeImages;
 
     /**
-     * @var string 最后一次扫描时间
+     * @var string <p>最后一次扫描时间</p>
      */
     public $LastScanTime;
 
     /**
-     * @var string 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+     * @var string <p>扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)</p>
      */
     public $ScanResult;
+
+    /**
+     * @var array <p>集群id</p>
+     */
+    public $ClusterIDs;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -130,20 +137,21 @@ class DescribeAssetImageScanSettingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Enable 开关
-     * @param string $ScanTime 扫描时刻(完整时间;后端按0时区解析时分秒)
-     * @param integer $ScanPeriod 扫描间隔
-     * @param boolean $ScanVirus 扫描木马
-     * @param boolean $ScanRisk 扫描敏感信息
-     * @param boolean $ScanVul 扫描漏洞
-     * @param boolean $All 扫描全部镜像
-     * @param array $Images 自定义扫描镜像
-     * @param boolean $ContainerRunning 镜像是否存在运行中的容器
-     * @param integer $ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
-     * @param string $ScanEndTime 扫描结束时间 02:00 时分
-     * @param array $ExcludeImages 排除的扫描镜像
-     * @param string $LastScanTime 最后一次扫描时间
-     * @param string $ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+     * @param boolean $Enable <p>开关</p>
+     * @param string $ScanTime <p>扫描时刻(完整时间;后端按0时区解析时分秒)</p>
+     * @param integer $ScanPeriod <p>扫描间隔</p>
+     * @param boolean $ScanVirus <p>扫描木马</p>
+     * @param boolean $ScanRisk <p>扫描敏感信息</p>
+     * @param boolean $ScanVul <p>扫描漏洞</p>
+     * @param boolean $All <p>扫描全部镜像</p>
+     * @param array $Images <p>自定义扫描镜像</p>
+     * @param boolean $ContainerRunning <p>镜像是否存在运行中的容器</p>
+     * @param integer $ScanScope <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群筛选扫描</p>
+     * @param string $ScanEndTime <p>扫描结束时间 02:00 时分</p>
+     * @param array $ExcludeImages <p>排除的扫描镜像</p>
+     * @param string $LastScanTime <p>最后一次扫描时间</p>
+     * @param string $ScanResult <p>扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)</p>
+     * @param array $ClusterIDs <p>集群id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -213,6 +221,10 @@ class DescribeAssetImageScanSettingResponse extends AbstractModel
 
         if (array_key_exists("ScanResult",$param) and $param["ScanResult"] !== null) {
             $this->ScanResult = $param["ScanResult"];
+        }
+
+        if (array_key_exists("ClusterIDs",$param) and $param["ClusterIDs"] !== null) {
+            $this->ClusterIDs = $param["ClusterIDs"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

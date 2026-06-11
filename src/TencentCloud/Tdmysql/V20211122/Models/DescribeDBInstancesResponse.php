@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances返回参数结构体
  *
- * @method array getInstances() 获取返回实例列表信息
- * @method void setInstances(array $Instances) 设置返回实例列表信息
- * @method integer getTotalCount() 获取满足条件总数量
- * @method void setTotalCount(integer $TotalCount) 设置满足条件总数量
+ * @method array getInstances() 获取<p>返回实例列表信息</p>
+ * @method void setInstances(array $Instances) 设置<p>返回实例列表信息</p>
+ * @method integer getTotalCount() 获取<p>满足条件总数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>满足条件总数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var array 返回实例列表信息
+     * @var array <p>返回实例列表信息</p>
      */
     public $Instances;
 
     /**
-     * @var integer 满足条件总数量
+     * @var integer <p>满足条件总数量</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Instances 返回实例列表信息
-     * @param integer $TotalCount 满足条件总数量
+     * @param array $Instances <p>返回实例列表信息</p>
+     * @param integer $TotalCount <p>满足条件总数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

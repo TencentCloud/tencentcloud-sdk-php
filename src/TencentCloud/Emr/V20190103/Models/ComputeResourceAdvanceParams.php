@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserScript(string $UserScript) 设置<p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
  * @method string getTkeClusterNodePool() 获取<p>节点组Id</p>
  * @method void setTkeClusterNodePool(string $TkeClusterNodePool) 设置<p>节点组Id</p>
+ * @method string getNodePoolJoinMode() 获取<p>加入节点池的模式</p><p>枚举值：</p><ul><li>Inherit： 从节点池继承配置</li><li>OnlyJoin： 仅加入节点池，不继承配置</li></ul><p>默认值：Inherit</p>
+ * @method void setNodePoolJoinMode(string $NodePoolJoinMode) 设置<p>加入节点池的模式</p><p>枚举值：</p><ul><li>Inherit： 从节点池继承配置</li><li>OnlyJoin： 仅加入节点池，不继承配置</li></ul><p>默认值：Inherit</p>
  */
 class ComputeResourceAdvanceParams extends AbstractModel
 {
@@ -65,6 +67,11 @@ class ComputeResourceAdvanceParams extends AbstractModel
     public $TkeClusterNodePool;
 
     /**
+     * @var string <p>加入节点池的模式</p><p>枚举值：</p><ul><li>Inherit： 从节点池继承配置</li><li>OnlyJoin： 仅加入节点池，不继承配置</li></ul><p>默认值：Inherit</p>
+     */
+    public $NodePoolJoinMode;
+
+    /**
      * @param array $Labels <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Taints <p>节点污点</p>
@@ -72,6 +79,7 @@ class ComputeResourceAdvanceParams extends AbstractModel
      * @param string $PreStartUserScript <p>base64 编码的用户脚本，在初始化节点之前执行</p>
      * @param string $UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
      * @param string $TkeClusterNodePool <p>节点组Id</p>
+     * @param string $NodePoolJoinMode <p>加入节点池的模式</p><p>枚举值：</p><ul><li>Inherit： 从节点池继承配置</li><li>OnlyJoin： 仅加入节点池，不继承配置</li></ul><p>默认值：Inherit</p>
      */
     function __construct()
     {
@@ -114,6 +122,10 @@ class ComputeResourceAdvanceParams extends AbstractModel
 
         if (array_key_exists("TkeClusterNodePool",$param) and $param["TkeClusterNodePool"] !== null) {
             $this->TkeClusterNodePool = $param["TkeClusterNodePool"];
+        }
+
+        if (array_key_exists("NodePoolJoinMode",$param) and $param["NodePoolJoinMode"] !== null) {
+            $this->NodePoolJoinMode = $param["NodePoolJoinMode"];
         }
     }
 }

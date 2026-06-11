@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 企业扩展服务授权列表详情
  *
- * @method string getType() 获取扩展服务类型，和入参一致
- * @method void setType(string $Type) 设置扩展服务类型，和入参一致
- * @method string getName() 获取扩展服务名称
- * @method void setName(string $Name) 设置扩展服务名称
- * @method array getHasAuthUserList() 获取授权员工列表
- * @method void setHasAuthUserList(array $HasAuthUserList) 设置授权员工列表
- * @method array getHasAuthOrganizationList() 获取授权企业列表（企业自动签时，该字段有值）
- * @method void setHasAuthOrganizationList(array $HasAuthOrganizationList) 设置授权企业列表（企业自动签时，该字段有值）
- * @method integer getAuthUserTotal() 获取授权员工列表总数
- * @method void setAuthUserTotal(integer $AuthUserTotal) 设置授权员工列表总数
- * @method integer getAuthOrganizationTotal() 获取授权企业列表总数
- * @method void setAuthOrganizationTotal(integer $AuthOrganizationTotal) 设置授权企业列表总数
+ * @method string getType() 获取<p>扩展服务类型，和入参一致</p>
+ * @method void setType(string $Type) 设置<p>扩展服务类型，和入参一致</p>
+ * @method string getName() 获取<p>扩展服务名称</p>
+ * @method void setName(string $Name) 设置<p>扩展服务名称</p>
+ * @method array getHasAuthUserList() 获取<p>授权员工列表</p>
+ * @method void setHasAuthUserList(array $HasAuthUserList) 设置<p>授权员工列表</p>
+ * @method array getHasAuthOrganizationList() 获取<p>授权企业列表（企业自动签时，该字段有值）</p>
+ * @method void setHasAuthOrganizationList(array $HasAuthOrganizationList) 设置<p>授权企业列表（企业自动签时，该字段有值）</p>
+ * @method integer getAuthUserTotal() 获取<p>授权员工列表总数</p>
+ * @method void setAuthUserTotal(integer $AuthUserTotal) 设置<p>授权员工列表总数</p>
+ * @method integer getAuthOrganizationTotal() 获取<p>授权企业列表总数</p>
+ * @method void setAuthOrganizationTotal(integer $AuthOrganizationTotal) 设置<p>授权企业列表总数</p>
  */
 class AuthInfoDetail extends AbstractModel
 {
     /**
-     * @var string 扩展服务类型，和入参一致
+     * @var string <p>扩展服务类型，和入参一致</p>
      */
     public $Type;
 
     /**
-     * @var string 扩展服务名称
+     * @var string <p>扩展服务名称</p>
      */
     public $Name;
 
     /**
-     * @var array 授权员工列表
+     * @var array <p>授权员工列表</p>
      */
     public $HasAuthUserList;
 
     /**
-     * @var array 授权企业列表（企业自动签时，该字段有值）
+     * @var array <p>授权企业列表（企业自动签时，该字段有值）</p>
      */
     public $HasAuthOrganizationList;
 
     /**
-     * @var integer 授权员工列表总数
+     * @var integer <p>授权员工列表总数</p>
      */
     public $AuthUserTotal;
 
     /**
-     * @var integer 授权企业列表总数
+     * @var integer <p>授权企业列表总数</p>
      */
     public $AuthOrganizationTotal;
 
     /**
-     * @param string $Type 扩展服务类型，和入参一致
-     * @param string $Name 扩展服务名称
-     * @param array $HasAuthUserList 授权员工列表
-     * @param array $HasAuthOrganizationList 授权企业列表（企业自动签时，该字段有值）
-     * @param integer $AuthUserTotal 授权员工列表总数
-     * @param integer $AuthOrganizationTotal 授权企业列表总数
+     * @param string $Type <p>扩展服务类型，和入参一致</p>
+     * @param string $Name <p>扩展服务名称</p>
+     * @param array $HasAuthUserList <p>授权员工列表</p>
+     * @param array $HasAuthOrganizationList <p>授权企业列表（企业自动签时，该字段有值）</p>
+     * @param integer $AuthUserTotal <p>授权员工列表总数</p>
+     * @param integer $AuthOrganizationTotal <p>授权企业列表总数</p>
      */
     function __construct()
     {

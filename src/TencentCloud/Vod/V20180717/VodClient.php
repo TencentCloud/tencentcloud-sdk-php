@@ -176,6 +176,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\DescribeAigcAdvancedCustomElementsResponse DescribeAigcAdvancedCustomElements(Models\DescribeAigcAdvancedCustomElementsRequest $req) 该接口用于获取 AIGC 高级自定义主体。
  * @method Models\DescribeAigcApiTokensResponse DescribeAigcApiTokens(Models\DescribeAigcApiTokensRequest $req) 查询 AIGC API Token 列表。创建或删除后数据同步有延时，约30秒后可查询最新数据。
  * @method Models\DescribeAigcFaceInfoResponse DescribeAigcFaceInfo(Models\DescribeAigcFaceInfoRequest $req) 该接口用于获取 AIGC 人脸信息。注意，调用本接口会产生人脸识别费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+ * @method Models\DescribeAigcFaceInfoAsyncResponse DescribeAigcFaceInfoAsync(Models\DescribeAigcFaceInfoAsyncRequest $req) 该接口用于异步获取 AIGC 人脸信息。注意，调用本接口会产生人脸识别费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
  * @method Models\DescribeAigcUsageDataResponse DescribeAigcUsageData(Models\DescribeAigcUsageDataRequest $req) 该接口返回查询时间范围内AIGC的统计信息。
    1. 可以查询最近365天内的AIGC统计数据。
    2. 查询时间跨度不超过90天。

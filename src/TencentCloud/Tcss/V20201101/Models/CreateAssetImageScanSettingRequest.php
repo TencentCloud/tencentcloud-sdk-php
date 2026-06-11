@@ -20,115 +20,115 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAssetImageScanSetting请求参数结构体
  *
- * @method boolean getEnable() 获取开关
- * @method void setEnable(boolean $Enable) 设置开关
- * @method string getScanTime() 获取扫描开始时间
-01:00 时分
- * @method void setScanTime(string $ScanTime) 设置扫描开始时间
-01:00 时分
- * @method integer getScanPeriod() 获取扫描周期
- * @method void setScanPeriod(integer $ScanPeriod) 设置扫描周期
- * @method boolean getScanVirus() 获取扫描木马
- * @method void setScanVirus(boolean $ScanVirus) 设置扫描木马
- * @method boolean getScanRisk() 获取扫描敏感信息
- * @method void setScanRisk(boolean $ScanRisk) 设置扫描敏感信息
- * @method boolean getScanVul() 获取扫描漏洞
- * @method void setScanVul(boolean $ScanVul) 设置扫描漏洞
- * @method boolean getAll() 获取全部镜像
- * @method void setAll(boolean $All) 设置全部镜像
- * @method array getImages() 获取自定义镜像
- * @method void setImages(array $Images) 设置自定义镜像
- * @method boolean getContainerRunning() 获取镜像是否存在运行中的容器
- * @method void setContainerRunning(boolean $ContainerRunning) 设置镜像是否存在运行中的容器
- * @method integer getScanScope() 获取扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
- * @method void setScanScope(integer $ScanScope) 设置扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
- * @method string getScanEndTime() 获取扫描结束时间
-02:00 时分
- * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间
-02:00 时分
- * @method array getExcludeImages() 获取排除扫描的镜像
- * @method void setExcludeImages(array $ExcludeImages) 设置排除扫描的镜像
+ * @method boolean getEnable() 获取<p>开关</p>
+ * @method void setEnable(boolean $Enable) 设置<p>开关</p>
+ * @method string getScanTime() 获取<p>扫描开始时间<br>01:00 时分</p>
+ * @method void setScanTime(string $ScanTime) 设置<p>扫描开始时间<br>01:00 时分</p>
+ * @method integer getScanPeriod() 获取<p>扫描周期</p>
+ * @method void setScanPeriod(integer $ScanPeriod) 设置<p>扫描周期</p>
+ * @method boolean getScanVirus() 获取<p>扫描木马</p>
+ * @method void setScanVirus(boolean $ScanVirus) 设置<p>扫描木马</p>
+ * @method boolean getScanRisk() 获取<p>扫描敏感信息</p>
+ * @method void setScanRisk(boolean $ScanRisk) 设置<p>扫描敏感信息</p>
+ * @method boolean getScanVul() 获取<p>扫描漏洞</p>
+ * @method void setScanVul(boolean $ScanVul) 设置<p>扫描漏洞</p>
+ * @method boolean getAll() 获取<p>全部镜像</p>
+ * @method void setAll(boolean $All) 设置<p>全部镜像</p>
+ * @method array getImages() 获取<p>自定义镜像</p>
+ * @method void setImages(array $Images) 设置<p>自定义镜像</p>
+ * @method boolean getContainerRunning() 获取<p>镜像是否存在运行中的容器</p>
+ * @method void setContainerRunning(boolean $ContainerRunning) 设置<p>镜像是否存在运行中的容器</p>
+ * @method integer getScanScope() 获取<p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 , 3:集群筛选扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
+ * @method void setScanScope(integer $ScanScope) 设置<p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 , 3:集群筛选扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
+ * @method string getScanEndTime() 获取<p>扫描结束时间<br>02:00 时分</p>
+ * @method void setScanEndTime(string $ScanEndTime) 设置<p>扫描结束时间<br>02:00 时分</p>
+ * @method array getExcludeImages() 获取<p>排除扫描的镜像</p>
+ * @method void setExcludeImages(array $ExcludeImages) 设置<p>排除扫描的镜像</p>
+ * @method array getClusterIDs() 获取<p>集群id</p>
+ * @method void setClusterIDs(array $ClusterIDs) 设置<p>集群id</p>
  */
 class CreateAssetImageScanSettingRequest extends AbstractModel
 {
     /**
-     * @var boolean 开关
+     * @var boolean <p>开关</p>
      */
     public $Enable;
 
     /**
-     * @var string 扫描开始时间
-01:00 时分
+     * @var string <p>扫描开始时间<br>01:00 时分</p>
      */
     public $ScanTime;
 
     /**
-     * @var integer 扫描周期
+     * @var integer <p>扫描周期</p>
      */
     public $ScanPeriod;
 
     /**
-     * @var boolean 扫描木马
+     * @var boolean <p>扫描木马</p>
      */
     public $ScanVirus;
 
     /**
-     * @var boolean 扫描敏感信息
+     * @var boolean <p>扫描敏感信息</p>
      */
     public $ScanRisk;
 
     /**
-     * @var boolean 扫描漏洞
+     * @var boolean <p>扫描漏洞</p>
      */
     public $ScanVul;
 
     /**
-     * @var boolean 全部镜像
+     * @var boolean <p>全部镜像</p>
      * @deprecated
      */
     public $All;
 
     /**
-     * @var array 自定义镜像
+     * @var array <p>自定义镜像</p>
      */
     public $Images;
 
     /**
-     * @var boolean 镜像是否存在运行中的容器
+     * @var boolean <p>镜像是否存在运行中的容器</p>
      */
     public $ContainerRunning;
 
     /**
-     * @var integer 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * @var integer <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 , 3:集群筛选扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
      */
     public $ScanScope;
 
     /**
-     * @var string 扫描结束时间
-02:00 时分
+     * @var string <p>扫描结束时间<br>02:00 时分</p>
      */
     public $ScanEndTime;
 
     /**
-     * @var array 排除扫描的镜像
+     * @var array <p>排除扫描的镜像</p>
      */
     public $ExcludeImages;
 
     /**
-     * @param boolean $Enable 开关
-     * @param string $ScanTime 扫描开始时间
-01:00 时分
-     * @param integer $ScanPeriod 扫描周期
-     * @param boolean $ScanVirus 扫描木马
-     * @param boolean $ScanRisk 扫描敏感信息
-     * @param boolean $ScanVul 扫描漏洞
-     * @param boolean $All 全部镜像
-     * @param array $Images 自定义镜像
-     * @param boolean $ContainerRunning 镜像是否存在运行中的容器
-     * @param integer $ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
-     * @param string $ScanEndTime 扫描结束时间
-02:00 时分
-     * @param array $ExcludeImages 排除扫描的镜像
+     * @var array <p>集群id</p>
+     */
+    public $ClusterIDs;
+
+    /**
+     * @param boolean $Enable <p>开关</p>
+     * @param string $ScanTime <p>扫描开始时间<br>01:00 时分</p>
+     * @param integer $ScanPeriod <p>扫描周期</p>
+     * @param boolean $ScanVirus <p>扫描木马</p>
+     * @param boolean $ScanRisk <p>扫描敏感信息</p>
+     * @param boolean $ScanVul <p>扫描漏洞</p>
+     * @param boolean $All <p>全部镜像</p>
+     * @param array $Images <p>自定义镜像</p>
+     * @param boolean $ContainerRunning <p>镜像是否存在运行中的容器</p>
+     * @param integer $ScanScope <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 , 3:集群筛选扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
+     * @param string $ScanEndTime <p>扫描结束时间<br>02:00 时分</p>
+     * @param array $ExcludeImages <p>排除扫描的镜像</p>
+     * @param array $ClusterIDs <p>集群id</p>
      */
     function __construct()
     {
@@ -189,6 +189,10 @@ class CreateAssetImageScanSettingRequest extends AbstractModel
 
         if (array_key_exists("ExcludeImages",$param) and $param["ExcludeImages"] !== null) {
             $this->ExcludeImages = $param["ExcludeImages"];
+        }
+
+        if (array_key_exists("ClusterIDs",$param) and $param["ClusterIDs"] !== null) {
+            $this->ClusterIDs = $param["ClusterIDs"];
         }
     }
 }

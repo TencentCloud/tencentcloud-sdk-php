@@ -22,158 +22,90 @@ use TencentCloud\Common\AbstractModel;
 - RecipientId 必须指定
 - 补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充
  *
- * @method string getRecipientId() 获取签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
-
- * @method void setRecipientId(string $RecipientId) 设置签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
-
- * @method string getOpenId() 获取指定企业经办签署人OpenId
-
-注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
- * @method void setOpenId(string $OpenId) 设置指定企业经办签署人OpenId
-
-注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
- * @method string getApproverName() 获取签署人姓名
- * @method void setApproverName(string $ApproverName) 设置签署人姓名
- * @method string getApproverMobile() 获取签署人手机号码
- * @method void setApproverMobile(string $ApproverMobile) 设置签署人手机号码
- * @method string getOrganizationName() 获取企业名称
- * @method void setOrganizationName(string $OrganizationName) 设置企业名称
- * @method string getOrganizationOpenId() 获取企业OpenId
- * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业OpenId
- * @method boolean getNotChannelOrganization() 获取签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
- * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
- * @method string getApproverIdCardType() 获取签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 中国大陆居民身份证</li>
-<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE 其他证件</li></ul>
-
-注: `1.其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
- * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 中国大陆居民身份证</li>
-<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE 其他证件</li></ul>
-
-注: `1.其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
- * @method string getApproverIdCardNumber() 获取签署方经办人的证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
-
-注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
- * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署方经办人的证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
-
-注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
- * @method string getFlowId() 获取合同流程ID
-- 补充合同组子合同动态签署人时必传。
-- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
- * @method void setFlowId(string $FlowId) 设置合同流程ID
-- 补充合同组子合同动态签署人时必传。
-- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
+ * @method string getRecipientId() 获取<p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p>
+ * @method void setRecipientId(string $RecipientId) 设置<p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p>
+ * @method string getOpenId() 获取<p>指定企业经办签署人OpenId</p><p>注: <code>签署人OpenId未实名时，需要传入签署人姓名以及手机号码。</code></p>
+ * @method void setOpenId(string $OpenId) 设置<p>指定企业经办签署人OpenId</p><p>注: <code>签署人OpenId未实名时，需要传入签署人姓名以及手机号码。</code></p>
+ * @method string getApproverName() 获取<p>签署人姓名</p>
+ * @method void setApproverName(string $ApproverName) 设置<p>签署人姓名</p>
+ * @method string getApproverMobile() 获取<p>签署人手机号码</p>
+ * @method void setApproverMobile(string $ApproverMobile) 设置<p>签署人手机号码</p>
+ * @method string getOrganizationName() 获取<p>企业名称</p>
+ * @method void setOrganizationName(string $OrganizationName) 设置<p>企业名称</p>
+ * @method string getOrganizationOpenId() 获取<p>企业OpenId</p>
+ * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置<p>企业OpenId</p>
+ * @method boolean getNotChannelOrganization() 获取<p>签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传</p>
+ * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置<p>签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传</p>
+ * @method string getApproverIdCardType() 获取<p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>注:补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</p>
+ * @method void setApproverIdCardType(string $ApproverIdCardType) 设置<p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>注:补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</p>
+ * @method string getApproverIdCardNumber() 获取<p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p>
+ * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置<p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p>
+ * @method string getFlowId() 获取<p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
+ * @method void setFlowId(string $FlowId) 设置<p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
  */
 class FillApproverInfo extends AbstractModel
 {
     /**
-     * @var string 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
-
+     * @var string <p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p>
      */
     public $RecipientId;
 
     /**
-     * @var string 指定企业经办签署人OpenId
-
-注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
+     * @var string <p>指定企业经办签署人OpenId</p><p>注: <code>签署人OpenId未实名时，需要传入签署人姓名以及手机号码。</code></p>
      */
     public $OpenId;
 
     /**
-     * @var string 签署人姓名
+     * @var string <p>签署人姓名</p>
      */
     public $ApproverName;
 
     /**
-     * @var string 签署人手机号码
+     * @var string <p>签署人手机号码</p>
      */
     public $ApproverMobile;
 
     /**
-     * @var string 企业名称
+     * @var string <p>企业名称</p>
      */
     public $OrganizationName;
 
     /**
-     * @var string 企业OpenId
+     * @var string <p>企业OpenId</p>
      */
     public $OrganizationOpenId;
 
     /**
-     * @var boolean 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
+     * @var boolean <p>签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传</p>
      */
     public $NotChannelOrganization;
 
     /**
-     * @var string 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 中国大陆居民身份证</li>
-<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE 其他证件</li></ul>
-
-注: `1.其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
+     * @var string <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>注:补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</p>
      */
     public $ApproverIdCardType;
 
     /**
-     * @var string 签署方经办人的证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
-
-注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
+     * @var string <p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p>
      */
     public $ApproverIdCardNumber;
 
     /**
-     * @var string 合同流程ID
-- 补充合同组子合同动态签署人时必传。
-- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
+     * @var string <p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
      */
     public $FlowId;
 
     /**
-     * @param string $RecipientId 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
-
-     * @param string $OpenId 指定企业经办签署人OpenId
-
-注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
-     * @param string $ApproverName 签署人姓名
-     * @param string $ApproverMobile 签署人手机号码
-     * @param string $OrganizationName 企业名称
-     * @param string $OrganizationOpenId 企业OpenId
-     * @param boolean $NotChannelOrganization 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
-     * @param string $ApproverIdCardType 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 中国大陆居民身份证</li>
-<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE 其他证件</li></ul>
-
-注: `1.其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
-     * @param string $ApproverIdCardNumber 签署方经办人的证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
-
-注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
-     * @param string $FlowId 合同流程ID
-- 补充合同组子合同动态签署人时必传。
-- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
+     * @param string $RecipientId <p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p>
+     * @param string $OpenId <p>指定企业经办签署人OpenId</p><p>注: <code>签署人OpenId未实名时，需要传入签署人姓名以及手机号码。</code></p>
+     * @param string $ApproverName <p>签署人姓名</p>
+     * @param string $ApproverMobile <p>签署人手机号码</p>
+     * @param string $OrganizationName <p>企业名称</p>
+     * @param string $OrganizationOpenId <p>企业OpenId</p>
+     * @param boolean $NotChannelOrganization <p>签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传</p>
+     * @param string $ApproverIdCardType <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>注:补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</p>
+     * @param string $ApproverIdCardNumber <p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p>
+     * @param string $FlowId <p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
      */
     function __construct()
     {

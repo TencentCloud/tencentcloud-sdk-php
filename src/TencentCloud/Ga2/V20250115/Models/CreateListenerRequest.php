@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerCertificates(array $ServerCertificates) 设置<p>服务器证书。</p>
  * @method array getClientCaCertificates() 获取<p>客户端证书。</p>
  * @method void setClientCaCertificates(array $ClientCaCertificates) 设置<p>客户端证书。</p>
+ * @method string getHttpVersion() 获取<p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： HTTP/1.1</li><li>HTTP/2： HTTP/2</li></ul>
+ * @method void setHttpVersion(string $HttpVersion) 设置<p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： HTTP/1.1</li><li>HTTP/2： HTTP/2</li></ul>
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateListenerRequest extends AbstractModel
     public $ClientCaCertificates;
 
     /**
+     * @var string <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： HTTP/1.1</li><li>HTTP/2： HTTP/2</li></ul>
+     */
+    public $HttpVersion;
+
+    /**
      * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
      * @param string $Name <p>名称，最大长度不能超过60个字节。</p>
      * @param PortRanges $PortRanges <p>端口范围。</p>
@@ -144,6 +151,7 @@ class CreateListenerRequest extends AbstractModel
      * @param string $CipherPolicyId <p>加密算法套件。</p>
      * @param array $ServerCertificates <p>服务器证书。</p>
      * @param array $ClientCaCertificates <p>客户端证书。</p>
+     * @param string $HttpVersion <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： HTTP/1.1</li><li>HTTP/2： HTTP/2</li></ul>
      */
     function __construct()
     {
@@ -217,6 +225,10 @@ class CreateListenerRequest extends AbstractModel
 
         if (array_key_exists("ClientCaCertificates",$param) and $param["ClientCaCertificates"] !== null) {
             $this->ClientCaCertificates = $param["ClientCaCertificates"];
+        }
+
+        if (array_key_exists("HttpVersion",$param) and $param["HttpVersion"] !== null) {
+            $this->HttpVersion = $param["HttpVersion"];
         }
     }
 }

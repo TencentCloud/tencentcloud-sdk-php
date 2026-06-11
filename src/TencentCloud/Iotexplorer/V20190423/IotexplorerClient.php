@@ -43,7 +43,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateCloudStorageAIServiceTaskResponse CreateCloudStorageAIServiceTask(Models\CreateCloudStorageAIServiceTaskRequest $req) 创建设备云存 AI 分析任务
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 创建设备
  * @method Models\CreateDeviceChannelResponse CreateDeviceChannel(Models\CreateDeviceChannelRequest $req) 创建设备通道
- * @method Models\CreateDeviceSDPAnswerResponse CreateDeviceSDPAnswer(Models\CreateDeviceSDPAnswerRequest $req) 创建设备SDP应答
+ * @method Models\CreateDevicePublishSDPAnswerResponse CreateDevicePublishSDPAnswer(Models\CreateDevicePublishSDPAnswerRequest $req) 创建设备推流SDP应答，此接口调用前需要先调用CreateDeviceSDPAnswer接口以保证设备处于拉流状态，接口返回是另外一路webrtc推流SDP信息，可以用来进行标准的WHIP推流
+ * @method Models\CreateDeviceSDPAnswerResponse CreateDeviceSDPAnswer(Models\CreateDeviceSDPAnswerRequest $req) 创建设备SDP应答，调用此接口后，后台会对传入参数的设备进行拉流，并返回webrtc answer SDP返回，可以进行WHEP协议拉流。
  * @method Models\CreateExternalSourceAIServiceTaskResponse CreateExternalSourceAIServiceTask(Models\CreateExternalSourceAIServiceTaskRequest $req) 创建外部视频 AI 分析任务
  * @method Models\CreateFenceBindResponse CreateFenceBind(Models\CreateFenceBindRequest $req) > 创建围栏绑定信息。
  * @method Models\CreateFreeCloudStorageResponse CreateFreeCloudStorage(Models\CreateFreeCloudStorageRequest $req) 开通云存卡服务
@@ -69,6 +70,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateTopicRuleResponse CreateTopicRule(Models\CreateTopicRuleRequest $req) 创建规则
  * @method Models\DeleteCloudStorageEventResponse DeleteCloudStorageEvent(Models\DeleteCloudStorageEventRequest $req) 删除云存事件
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 删除设备
+ * @method Models\DeleteDeviceSDPResponse DeleteDeviceSDP(Models\DeleteDeviceSDPRequest $req) 删除设备SDP应答，此接口调用是手动结束设备后台推拉流信息，快速响应挂断需求。
  * @method Models\DeleteDevicesResponse DeleteDevices(Models\DeleteDevicesRequest $req) 批量删除设备
  * @method Models\DeleteFenceBindResponse DeleteFenceBind(Models\DeleteFenceBindRequest $req) 删除围栏绑定信息。
  * @method Models\DeleteLoRaFrequencyResponse DeleteLoRaFrequency(Models\DeleteLoRaFrequencyRequest $req) 提供删除LoRa自定义频点的能力

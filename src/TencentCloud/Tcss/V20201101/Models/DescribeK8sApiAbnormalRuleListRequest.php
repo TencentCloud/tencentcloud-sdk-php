@@ -20,31 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeK8sApiAbnormalRuleList请求参数结构体
  *
- * @method array getFilters() 获取过滤条件。
-<li>RuleType - string  - 是否必填: 否 -规则类型</li>
-<li>Status - string  - 是否必填: 否 -状态</li>
- * @method void setFilters(array $Filters) 设置过滤条件。
-<li>RuleType - string  - 是否必填: 否 -规则类型</li>
-<li>Status - string  - 是否必填: 否 -状态</li>
- * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
- * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method string getOrder() 获取排序方式
- * @method void setOrder(string $Order) 设置排序方式
  * @method string getBy() 获取排序字段。
 <li>UpdateTime - string  - 是否必填: 否 -最后更新时间</li>
 <li>EffectClusterCount - string  - 是否必填: 否 -影响集群数</li>
  * @method void setBy(string $By) 设置排序字段。
 <li>UpdateTime - string  - 是否必填: 否 -最后更新时间</li>
 <li>EffectClusterCount - string  - 是否必填: 否 -影响集群数</li>
+ * @method array getFilters() 获取过滤条件。
+<li>RuleType - string  - 是否必填: 否 -规则类型</li>
+<li>Status - string  - 是否必填: 否 -状态</li>
+<li>RuleName - string  - 是否必填: 否 -规则名称(模糊查询)</li>
+<li>ClusterName - string  - 是否必填: 否 -集群名称，模糊查找绑定了该集群的规则（含全集群规则）</li>
+<li>ClusterID - string  - 是否必填: 否 -集群ID，模糊查找绑定了该集群的规则（含全集群规则）</li>
+<li>RuleAction - string  - 是否必填: 否 -执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截）</li>
+ * @method void setFilters(array $Filters) 设置过滤条件。
+<li>RuleType - string  - 是否必填: 否 -规则类型</li>
+<li>Status - string  - 是否必填: 否 -状态</li>
+<li>RuleName - string  - 是否必填: 否 -规则名称(模糊查询)</li>
+<li>ClusterName - string  - 是否必填: 否 -集群名称，模糊查找绑定了该集群的规则（含全集群规则）</li>
+<li>ClusterID - string  - 是否必填: 否 -集群ID，模糊查找绑定了该集群的规则（含全集群规则）</li>
+<li>RuleAction - string  - 是否必填: 否 -执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截）</li>
+ * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
+ * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method string getOrder() 获取排序方式
+ * @method void setOrder(string $Order) 设置排序方式
  */
 class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel
 {
     /**
+     * @var string 排序字段。
+<li>UpdateTime - string  - 是否必填: 否 -最后更新时间</li>
+<li>EffectClusterCount - string  - 是否必填: 否 -影响集群数</li>
+     */
+    public $By;
+
+    /**
      * @var array 过滤条件。
 <li>RuleType - string  - 是否必填: 否 -规则类型</li>
 <li>Status - string  - 是否必填: 否 -状态</li>
+<li>RuleName - string  - 是否必填: 否 -规则名称(模糊查询)</li>
+<li>ClusterName - string  - 是否必填: 否 -集群名称，模糊查找绑定了该集群的规则（含全集群规则）</li>
+<li>ClusterID - string  - 是否必填: 否 -集群ID，模糊查找绑定了该集群的规则（含全集群规则）</li>
+<li>RuleAction - string  - 是否必填: 否 -执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截）</li>
      */
     public $Filters;
 
@@ -64,22 +83,19 @@ class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string 排序字段。
-<li>UpdateTime - string  - 是否必填: 否 -最后更新时间</li>
-<li>EffectClusterCount - string  - 是否必填: 否 -影响集群数</li>
-     */
-    public $By;
-
-    /**
-     * @param array $Filters 过滤条件。
-<li>RuleType - string  - 是否必填: 否 -规则类型</li>
-<li>Status - string  - 是否必填: 否 -状态</li>
-     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
-     * @param integer $Offset 偏移量，默认为0。
-     * @param string $Order 排序方式
      * @param string $By 排序字段。
 <li>UpdateTime - string  - 是否必填: 否 -最后更新时间</li>
 <li>EffectClusterCount - string  - 是否必填: 否 -影响集群数</li>
+     * @param array $Filters 过滤条件。
+<li>RuleType - string  - 是否必填: 否 -规则类型</li>
+<li>Status - string  - 是否必填: 否 -状态</li>
+<li>RuleName - string  - 是否必填: 否 -规则名称(模糊查询)</li>
+<li>ClusterName - string  - 是否必填: 否 -集群名称，模糊查找绑定了该集群的规则（含全集群规则）</li>
+<li>ClusterID - string  - 是否必填: 否 -集群ID，模糊查找绑定了该集群的规则（含全集群规则）</li>
+<li>RuleAction - string  - 是否必填: 否 -执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截）</li>
+     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
+     * @param integer $Offset 偏移量，默认为0。
+     * @param string $Order 排序方式
      */
     function __construct()
     {
@@ -94,6 +110,10 @@ class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -113,10 +133,6 @@ class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
-        }
-
-        if (array_key_exists("By",$param) and $param["By"] !== null) {
-            $this->By = $param["By"];
         }
     }
 }

@@ -20,119 +20,91 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TextToSpeechSSE请求参数结构体
  *
- * @method string getText() 获取需要转语音的文字内容，长度范围：[1, 255]
- * @method void setText(string $Text) 设置需要转语音的文字内容，长度范围：[1, 255]
- * @method Voice getVoice() 获取文本转语音的声音配置
- * @method void setVoice(Voice $Voice) 设置文本转语音的声音配置
- * @method integer getSdkAppId() 获取TRTC的SdkAppId
- * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SdkAppId
- * @method AudioFormat getAudioFormat() 获取文本转语音的输出音频的格式
- * @method void setAudioFormat(AudioFormat $AudioFormat) 设置文本转语音的输出音频的格式
- * @method string getAPIKey() 获取TTS的API密钥
- * @method void setAPIKey(string $APIKey) 设置TTS的API密钥
- * @method string getModel() 获取TTS的模型，当前固定为：flow_01_turbo
- * @method void setModel(string $Model) 设置TTS的模型，当前固定为：flow_01_turbo
- * @method string getLanguage() 获取 需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
- * @method void setLanguage(string $Language) 设置 需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
- * @method array getPronunciationDict() 获取多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
- * @method void setPronunciationDict(array $PronunciationDict) 设置多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
- * @method integer getAlignmentMode() 获取默认为0，0表示不生成字幕，1表示生成字幕
- * @method void setAlignmentMode(integer $AlignmentMode) 设置默认为0，0表示不生成字幕，1表示生成字幕
+ * @method string getText() 获取<p>需要转语音的文字内容，长度范围：[1, 255]</p>
+ * @method void setText(string $Text) 设置<p>需要转语音的文字内容，长度范围：[1, 255]</p>
+ * @method Voice getVoice() 获取<p>文本转语音的声音配置</p>
+ * @method void setVoice(Voice $Voice) 设置<p>文本转语音的声音配置</p>
+ * @method integer getSdkAppId() 获取<p>TRTC的SdkAppId</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>TRTC的SdkAppId</p>
+ * @method AudioFormat getAudioFormat() 获取<p>文本转语音的输出音频的格式</p>
+ * @method void setAudioFormat(AudioFormat $AudioFormat) 设置<p>文本转语音的输出音频的格式</p>
+ * @method string getAPIKey() 获取<p>TTS的API密钥</p>
+ * @method void setAPIKey(string $APIKey) 设置<p>TTS的API密钥</p>
+ * @method string getModel() 获取<p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
+ * @method void setModel(string $Model) 设置<p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
+ * @method string getLanguage() 获取<p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
+ * @method void setLanguage(string $Language) 设置<p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
+ * @method array getPronunciationDict() 获取<p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
+ * @method void setPronunciationDict(array $PronunciationDict) 设置<p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
+ * @method integer getAlignmentMode() 获取<p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+ * @method void setAlignmentMode(integer $AlignmentMode) 设置<p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+ * @method string getExtraParams() 获取<p>json字符串，用于拓展用法</p>
+ * @method void setExtraParams(string $ExtraParams) 设置<p>json字符串，用于拓展用法</p>
  */
 class TextToSpeechSSERequest extends AbstractModel
 {
     /**
-     * @var string 需要转语音的文字内容，长度范围：[1, 255]
+     * @var string <p>需要转语音的文字内容，长度范围：[1, 255]</p>
      */
     public $Text;
 
     /**
-     * @var Voice 文本转语音的声音配置
+     * @var Voice <p>文本转语音的声音配置</p>
      */
     public $Voice;
 
     /**
-     * @var integer TRTC的SdkAppId
+     * @var integer <p>TRTC的SdkAppId</p>
      */
     public $SdkAppId;
 
     /**
-     * @var AudioFormat 文本转语音的输出音频的格式
+     * @var AudioFormat <p>文本转语音的输出音频的格式</p>
      */
     public $AudioFormat;
 
     /**
-     * @var string TTS的API密钥
+     * @var string <p>TTS的API密钥</p>
      * @deprecated
      */
     public $APIKey;
 
     /**
-     * @var string TTS的模型，当前固定为：flow_01_turbo
+     * @var string <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
      */
     public $Model;
 
     /**
-     * @var string  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
+     * @var string <p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
      */
     public $Language;
 
     /**
-     * @var array 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+     * @var array <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
      */
     public $PronunciationDict;
 
     /**
-     * @var integer 默认为0，0表示不生成字幕，1表示生成字幕
+     * @var integer <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
      */
     public $AlignmentMode;
 
     /**
-     * @param string $Text 需要转语音的文字内容，长度范围：[1, 255]
-     * @param Voice $Voice 文本转语音的声音配置
-     * @param integer $SdkAppId TRTC的SdkAppId
-     * @param AudioFormat $AudioFormat 文本转语音的输出音频的格式
-     * @param string $APIKey TTS的API密钥
-     * @param string $Model TTS的模型，当前固定为：flow_01_turbo
-     * @param string $Language  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
+     * @var string <p>json字符串，用于拓展用法</p>
+     */
+    public $ExtraParams;
 
-     * @param array $PronunciationDict 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
-     * @param integer $AlignmentMode 默认为0，0表示不生成字幕，1表示生成字幕
+    /**
+     * @param string $Text <p>需要转语音的文字内容，长度范围：[1, 255]</p>
+     * @param Voice $Voice <p>文本转语音的声音配置</p>
+     * @param integer $SdkAppId <p>TRTC的SdkAppId</p>
+     * @param AudioFormat $AudioFormat <p>文本转语音的输出音频的格式</p>
+     * @param string $APIKey <p>TTS的API密钥</p>
+     * @param string $Model <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
+     * @param string $Language <p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
+     * @param array $PronunciationDict <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
+     * @param integer $AlignmentMode <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+     * @param string $ExtraParams <p>json字符串，用于拓展用法</p>
      */
     function __construct()
     {
@@ -188,6 +160,10 @@ class TextToSpeechSSERequest extends AbstractModel
 
         if (array_key_exists("AlignmentMode",$param) and $param["AlignmentMode"] !== null) {
             $this->AlignmentMode = $param["AlignmentMode"];
+        }
+
+        if (array_key_exists("ExtraParams",$param) and $param["ExtraParams"] !== null) {
+            $this->ExtraParams = $param["ExtraParams"];
         }
     }
 }

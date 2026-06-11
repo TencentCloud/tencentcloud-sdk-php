@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIspType(string $IspType) 设置<p>运用商类型。</p>
  * @method string getCipherPolicyId() 获取<p>HPPTS加密算法套件</p>
  * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>HPPTS加密算法套件</p>
+ * @method string getHttpVersion() 获取<p>HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+ * @method void setHttpVersion(string $HttpVersion) 设置<p>HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
  */
 class EndpointGroupConfiguration extends AbstractModel
 {
@@ -178,6 +180,11 @@ class EndpointGroupConfiguration extends AbstractModel
     public $CipherPolicyId;
 
     /**
+     * @var string <p>HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     */
+    public $HttpVersion;
+
+    /**
      * @param string $Name <p>名称，最大长度不能超过60个字节。</p>
      * @param string $EndpointGroupRegion <p>地域。</p>
      * @param array $EndpointConfigurations <p>终端节点配置。</p>
@@ -200,6 +207,7 @@ class EndpointGroupConfiguration extends AbstractModel
      * @param array $PortOverrides <p>端口映射。</p>
      * @param string $IspType <p>运用商类型。</p>
      * @param string $CipherPolicyId <p>HPPTS加密算法套件</p>
+     * @param string $HttpVersion <p>HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
      */
     function __construct()
     {
@@ -310,6 +318,10 @@ class EndpointGroupConfiguration extends AbstractModel
 
         if (array_key_exists("CipherPolicyId",$param) and $param["CipherPolicyId"] !== null) {
             $this->CipherPolicyId = $param["CipherPolicyId"];
+        }
+
+        if (array_key_exists("HttpVersion",$param) and $param["HttpVersion"] !== null) {
+            $this->HttpVersion = $param["HttpVersion"];
         }
     }
 }

@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceComp(string $SourceComp) 设置边上源节点类型 应用/MQ/DB
  * @method string getTargetComp() 获取边上目标节点类型 应用/MQ/DB
  * @method void setTargetComp(string $TargetComp) 设置边上目标节点类型 应用/MQ/DB
+ * @method integer getReqCnt() 获取组件间调用次数
+ * @method void setReqCnt(integer $ReqCnt) 设置组件间调用次数
  */
 class TopologyEdgeNew extends AbstractModel
 {
@@ -139,6 +141,11 @@ class TopologyEdgeNew extends AbstractModel
     public $TargetComp;
 
     /**
+     * @var integer 组件间调用次数
+     */
+    public $ReqCnt;
+
+    /**
      * @param string $Source 源节点
      * @param string $Id 边ID
      * @param float $Weight 边权重
@@ -160,6 +167,7 @@ class TopologyEdgeNew extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceComp 边上源节点类型 应用/MQ/DB
      * @param string $TargetComp 边上目标节点类型 应用/MQ/DB
+     * @param integer $ReqCnt 组件间调用次数
      */
     function __construct()
     {
@@ -224,6 +232,10 @@ class TopologyEdgeNew extends AbstractModel
 
         if (array_key_exists("TargetComp",$param) and $param["TargetComp"] !== null) {
             $this->TargetComp = $param["TargetComp"];
+        }
+
+        if (array_key_exists("ReqCnt",$param) and $param["ReqCnt"] !== null) {
+            $this->ReqCnt = $param["ReqCnt"];
         }
     }
 }

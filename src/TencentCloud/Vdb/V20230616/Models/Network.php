@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 网络信息
  *
- * @method string getVpcId() 获取VpcId(VPC网络下有效)
- * @method void setVpcId(string $VpcId) 设置VpcId(VPC网络下有效)
- * @method string getSubnetId() 获取子网Id(VPC网络下有效)。
- * @method void setSubnetId(string $SubnetId) 设置子网Id(VPC网络下有效)。
- * @method string getVip() 获取内网访问IP。
- * @method void setVip(string $Vip) 设置内网访问IP。
- * @method integer getPort() 获取内网访问Port。
- * @method void setPort(integer $Port) 设置内网访问Port。
- * @method integer getPreserveDuration() 获取旧 ip 保留时长，单位天
- * @method void setPreserveDuration(integer $PreserveDuration) 设置旧 ip 保留时长，单位天
- * @method string getExpireTime() 获取旧 ip 到期时间
- * @method void setExpireTime(string $ExpireTime) 设置旧 ip 到期时间
+ * @method string getVpcId() 获取<p>VpcId(VPC网络下有效)</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VpcId(VPC网络下有效)</p>
+ * @method string getSubnetId() 获取<p>子网Id(VPC网络下有效)。</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网Id(VPC网络下有效)。</p>
+ * @method string getVip() 获取<p>内网访问IP。</p>
+ * @method void setVip(string $Vip) 设置<p>内网访问IP。</p>
+ * @method integer getPort() 获取<p>内网访问Port。</p>
+ * @method void setPort(integer $Port) 设置<p>内网访问Port。</p>
+ * @method integer getPreserveDuration() 获取<p>旧 ip 保留时长，单位天</p>
+ * @method void setPreserveDuration(integer $PreserveDuration) 设置<p>旧 ip 保留时长，单位天</p>
+ * @method string getExpireTime() 获取<p>旧 ip 到期时间</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>旧 ip 到期时间</p>
+ * @method boolean getIsSSL() 获取<p>是否是ssl网络</p>
+ * @method void setIsSSL(boolean $IsSSL) 设置<p>是否是ssl网络</p>
  */
 class Network extends AbstractModel
 {
     /**
-     * @var string VpcId(VPC网络下有效)
+     * @var string <p>VpcId(VPC网络下有效)</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网Id(VPC网络下有效)。
+     * @var string <p>子网Id(VPC网络下有效)。</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 内网访问IP。
+     * @var string <p>内网访问IP。</p>
      */
     public $Vip;
 
     /**
-     * @var integer 内网访问Port。
+     * @var integer <p>内网访问Port。</p>
      */
     public $Port;
 
     /**
-     * @var integer 旧 ip 保留时长，单位天
+     * @var integer <p>旧 ip 保留时长，单位天</p>
      */
     public $PreserveDuration;
 
     /**
-     * @var string 旧 ip 到期时间
+     * @var string <p>旧 ip 到期时间</p>
      */
     public $ExpireTime;
 
     /**
-     * @param string $VpcId VpcId(VPC网络下有效)
-     * @param string $SubnetId 子网Id(VPC网络下有效)。
-     * @param string $Vip 内网访问IP。
-     * @param integer $Port 内网访问Port。
-     * @param integer $PreserveDuration 旧 ip 保留时长，单位天
-     * @param string $ExpireTime 旧 ip 到期时间
+     * @var boolean <p>是否是ssl网络</p>
+     */
+    public $IsSSL;
+
+    /**
+     * @param string $VpcId <p>VpcId(VPC网络下有效)</p>
+     * @param string $SubnetId <p>子网Id(VPC网络下有效)。</p>
+     * @param string $Vip <p>内网访问IP。</p>
+     * @param integer $Port <p>内网访问Port。</p>
+     * @param integer $PreserveDuration <p>旧 ip 保留时长，单位天</p>
+     * @param string $ExpireTime <p>旧 ip 到期时间</p>
+     * @param boolean $IsSSL <p>是否是ssl网络</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class Network extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("IsSSL",$param) and $param["IsSSL"] !== null) {
+            $this->IsSSL = $param["IsSSL"];
         }
     }
 }

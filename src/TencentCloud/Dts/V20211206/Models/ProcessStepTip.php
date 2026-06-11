@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 错误信息及告警信息对象
  *
- * @method string getMessage() 获取提示信息
- * @method void setMessage(string $Message) 设置提示信息
- * @method string getSolution() 获取解决方案
- * @method void setSolution(string $Solution) 设置解决方案
- * @method string getHelpDoc() 获取文档提示
- * @method void setHelpDoc(string $HelpDoc) 设置文档提示
+ * @method string getMessage() 获取<p>提示信息</p>
+ * @method void setMessage(string $Message) 设置<p>提示信息</p>
+ * @method string getSolution() 获取<p>解决方案</p>
+ * @method void setSolution(string $Solution) 设置<p>解决方案</p>
+ * @method string getHelpDoc() 获取<p>文档提示</p>
+ * @method void setHelpDoc(string $HelpDoc) 设置<p>文档提示</p>
  */
 class ProcessStepTip extends AbstractModel
 {
     /**
-     * @var string 提示信息
+     * @var string <p>提示信息</p>
      */
     public $Message;
 
     /**
-     * @var string 解决方案
+     * @var string <p>解决方案</p>
      */
     public $Solution;
 
     /**
-     * @var string 文档提示
+     * @var string <p>文档提示</p>
      */
     public $HelpDoc;
 
     /**
-     * @param string $Message 提示信息
-     * @param string $Solution 解决方案
-     * @param string $HelpDoc 文档提示
+     * @param string $Message <p>提示信息</p>
+     * @param string $Solution <p>解决方案</p>
+     * @param string $HelpDoc <p>文档提示</p>
      */
     function __construct()
     {

@@ -20,289 +20,305 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例信息，用于实例列表
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getName() 获取实例自定义名称。
- * @method void setName(string $Name) 设置实例自定义名称。
- * @method integer getAppId() 获取用户APPID。
- * @method void setAppId(integer $AppId) 设置用户APPID。
- * @method string getRegion() 获取地域。
- * @method void setRegion(string $Region) 设置地域。
- * @method string getZone() 获取可用区。
- * @method void setZone(string $Zone) 设置可用区。
- * @method string getProduct() 获取产品。
- * @method void setProduct(string $Product) 设置产品。
- * @method array getNetworks() 获取网络信息。
- * @method void setNetworks(array $Networks) 设置网络信息。
- * @method integer getShardNum() 获取分片信息。
- * @method void setShardNum(integer $ShardNum) 设置分片信息。
- * @method integer getReplicaNum() 获取副本数。
- * @method void setReplicaNum(integer $ReplicaNum) 设置副本数。
- * @method float getCpu() 获取CPU.
- * @method void setCpu(float $Cpu) 设置CPU.
- * @method float getMemory() 获取内存。
- * @method void setMemory(float $Memory) 设置内存。
- * @method integer getDisk() 获取磁盘。
- * @method void setDisk(integer $Disk) 设置磁盘。
- * @method float getHealthScore() 获取健康得分。
+ * @method string getInstanceId() 获取<p>实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID。</p>
+ * @method string getName() 获取<p>实例自定义名称。</p>
+ * @method void setName(string $Name) 设置<p>实例自定义名称。</p>
+ * @method integer getAppId() 获取<p>用户APPID。</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户APPID。</p>
+ * @method string getRegion() 获取<p>地域。</p>
+ * @method void setRegion(string $Region) 设置<p>地域。</p>
+ * @method string getZone() 获取<p>可用区。</p>
+ * @method void setZone(string $Zone) 设置<p>可用区。</p>
+ * @method string getProduct() 获取<p>产品。</p>
+ * @method void setProduct(string $Product) 设置<p>产品。</p>
+ * @method array getNetworks() 获取<p>网络信息。</p>
+ * @method void setNetworks(array $Networks) 设置<p>网络信息。</p>
+ * @method integer getShardNum() 获取<p>分片信息。</p>
+ * @method void setShardNum(integer $ShardNum) 设置<p>分片信息。</p>
+ * @method integer getReplicaNum() 获取<p>副本数。</p>
+ * @method void setReplicaNum(integer $ReplicaNum) 设置<p>副本数。</p>
+ * @method float getCpu() 获取<p>CPU.</p>
+ * @method void setCpu(float $Cpu) 设置<p>CPU.</p>
+ * @method float getMemory() 获取<p>内存。</p>
+ * @method void setMemory(float $Memory) 设置<p>内存。</p>
+ * @method integer getDisk() 获取<p>磁盘。</p>
+ * @method void setDisk(integer $Disk) 设置<p>磁盘。</p>
+ * @method float getHealthScore() 获取<p>健康得分。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHealthScore(float $HealthScore) 设置健康得分。
+ * @method void setHealthScore(float $HealthScore) 设置<p>健康得分。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWarning() 获取异常告警。
+ * @method integer getWarning() 获取<p>异常告警。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarning(integer $Warning) 设置异常告警。
+ * @method void setWarning(integer $Warning) 设置<p>异常告警。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProject() 获取所属项目。
+ * @method string getProject() 获取<p>所属项目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProject(string $Project) 设置所属项目。
+ * @method void setProject(string $Project) 设置<p>所属项目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResourceTags() 获取所属标签。
- * @method void setResourceTags(array $ResourceTags) 设置所属标签。
- * @method string getCreatedAt() 获取创建时间。
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间。
- * @method string getStatus() 获取资源状态。
- * @method void setStatus(string $Status) 设置资源状态。
- * @method string getEngineName() 获取引擎名称。
- * @method void setEngineName(string $EngineName) 设置引擎名称。
- * @method string getEngineVersion() 获取引擎版本。
- * @method void setEngineVersion(string $EngineVersion) 设置引擎版本。
- * @method string getApiVersion() 获取api版本
- * @method void setApiVersion(string $ApiVersion) 设置api版本
- * @method integer getPayMode() 获取计费模式。
- * @method void setPayMode(integer $PayMode) 设置计费模式。
- * @method string getExtend() 获取差异化扩展信息, json格式。
- * @method void setExtend(string $Extend) 设置差异化扩展信息, json格式。
- * @method string getExpiredAt() 获取过期时间。
- * @method void setExpiredAt(string $ExpiredAt) 设置过期时间。
- * @method boolean getIsNoExpired() 获取是否不过期(永久)。
- * @method void setIsNoExpired(boolean $IsNoExpired) 设置是否不过期(永久)。
- * @method integer getProductType() 获取产品版本，0-标准版，1-容量增强版
- * @method void setProductType(integer $ProductType) 设置产品版本，0-标准版，1-容量增强版
- * @method string getInstanceType() 获取实例类型
- * @method void setInstanceType(string $InstanceType) 设置实例类型
- * @method string getNodeType() 获取节点类型
- * @method void setNodeType(string $NodeType) 设置节点类型
- * @method string getWanAddress() 获取外网地址。
- * @method void setWanAddress(string $WanAddress) 设置外网地址。
- * @method string getIsolateAt() 获取隔离时间
- * @method void setIsolateAt(string $IsolateAt) 设置隔离时间
- * @method integer getAutoRenew() 获取是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
- * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
- * @method integer getTaskStatus() 获取任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
- * @method void setTaskStatus(integer $TaskStatus) 设置任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
- * @method array getSecurityGroupIds() 获取绑定的安全组id
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的安全组id
+ * @method array getResourceTags() 获取<p>所属标签。</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>所属标签。</p>
+ * @method string getCreatedAt() 获取<p>创建时间。</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间。</p>
+ * @method string getStatus() 获取<p>资源状态。</p>
+ * @method void setStatus(string $Status) 设置<p>资源状态。</p>
+ * @method string getEngineName() 获取<p>引擎名称。</p>
+ * @method void setEngineName(string $EngineName) 设置<p>引擎名称。</p>
+ * @method string getEngineVersion() 获取<p>引擎版本。</p>
+ * @method void setEngineVersion(string $EngineVersion) 设置<p>引擎版本。</p>
+ * @method string getApiVersion() 获取<p>api版本</p>
+ * @method void setApiVersion(string $ApiVersion) 设置<p>api版本</p>
+ * @method integer getPayMode() 获取<p>计费模式。</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>计费模式。</p>
+ * @method string getExtend() 获取<p>差异化扩展信息, json格式。</p>
+ * @method void setExtend(string $Extend) 设置<p>差异化扩展信息, json格式。</p>
+ * @method string getExpiredAt() 获取<p>过期时间。</p>
+ * @method void setExpiredAt(string $ExpiredAt) 设置<p>过期时间。</p>
+ * @method boolean getIsNoExpired() 获取<p>是否不过期(永久)。</p>
+ * @method void setIsNoExpired(boolean $IsNoExpired) 设置<p>是否不过期(永久)。</p>
+ * @method integer getProductType() 获取<p>产品版本，0-标准版，1-容量增强版</p>
+ * @method void setProductType(integer $ProductType) 设置<p>产品版本，0-标准版，1-容量增强版</p>
+ * @method string getInstanceType() 获取<p>实例类型</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型</p>
+ * @method string getNodeType() 获取<p>节点类型</p>
+ * @method void setNodeType(string $NodeType) 设置<p>节点类型</p>
+ * @method string getWanAddress() 获取<p>外网地址。</p>
+ * @method void setWanAddress(string $WanAddress) 设置<p>外网地址。</p>
+ * @method string getIsolateAt() 获取<p>隔离时间</p>
+ * @method void setIsolateAt(string $IsolateAt) 设置<p>隔离时间</p>
+ * @method integer getAutoRenew() 获取<p>是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.</p>
+ * @method void setAutoRenew(integer $AutoRenew) 设置<p>是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.</p>
+ * @method integer getTaskStatus() 获取<p>任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中</p>
+ * @method void setTaskStatus(integer $TaskStatus) 设置<p>任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中</p>
+ * @method array getSecurityGroupIds() 获取<p>绑定的安全组id</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>绑定的安全组id</p>
+ * @method string getUpgradeVersion() 获取<p>可升级版本号</p>
+ * @method void setUpgradeVersion(string $UpgradeVersion) 设置<p>可升级版本号</p>
+ * @method boolean getIsInternal() 获取<p>是否为内部实例</p>
+ * @method void setIsInternal(boolean $IsInternal) 设置<p>是否为内部实例</p>
  */
 class InstanceInfo extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string <p>实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例自定义名称。
+     * @var string <p>实例自定义名称。</p>
      */
     public $Name;
 
     /**
-     * @var integer 用户APPID。
+     * @var integer <p>用户APPID。</p>
      */
     public $AppId;
 
     /**
-     * @var string 地域。
+     * @var string <p>地域。</p>
      */
     public $Region;
 
     /**
-     * @var string 可用区。
+     * @var string <p>可用区。</p>
      */
     public $Zone;
 
     /**
-     * @var string 产品。
+     * @var string <p>产品。</p>
      */
     public $Product;
 
     /**
-     * @var array 网络信息。
+     * @var array <p>网络信息。</p>
      */
     public $Networks;
 
     /**
-     * @var integer 分片信息。
+     * @var integer <p>分片信息。</p>
      */
     public $ShardNum;
 
     /**
-     * @var integer 副本数。
+     * @var integer <p>副本数。</p>
      */
     public $ReplicaNum;
 
     /**
-     * @var float CPU.
+     * @var float <p>CPU.</p>
      */
     public $Cpu;
 
     /**
-     * @var float 内存。
+     * @var float <p>内存。</p>
      */
     public $Memory;
 
     /**
-     * @var integer 磁盘。
+     * @var integer <p>磁盘。</p>
      */
     public $Disk;
 
     /**
-     * @var float 健康得分。
+     * @var float <p>健康得分。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $HealthScore;
 
     /**
-     * @var integer 异常告警。
+     * @var integer <p>异常告警。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $Warning;
 
     /**
-     * @var string 所属项目。
+     * @var string <p>所属项目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $Project;
 
     /**
-     * @var array 所属标签。
+     * @var array <p>所属标签。</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string 资源状态。
+     * @var string <p>资源状态。</p>
      */
     public $Status;
 
     /**
-     * @var string 引擎名称。
+     * @var string <p>引擎名称。</p>
      */
     public $EngineName;
 
     /**
-     * @var string 引擎版本。
+     * @var string <p>引擎版本。</p>
      */
     public $EngineVersion;
 
     /**
-     * @var string api版本
+     * @var string <p>api版本</p>
      */
     public $ApiVersion;
 
     /**
-     * @var integer 计费模式。
+     * @var integer <p>计费模式。</p>
      */
     public $PayMode;
 
     /**
-     * @var string 差异化扩展信息, json格式。
+     * @var string <p>差异化扩展信息, json格式。</p>
      */
     public $Extend;
 
     /**
-     * @var string 过期时间。
+     * @var string <p>过期时间。</p>
      */
     public $ExpiredAt;
 
     /**
-     * @var boolean 是否不过期(永久)。
+     * @var boolean <p>是否不过期(永久)。</p>
      */
     public $IsNoExpired;
 
     /**
-     * @var integer 产品版本，0-标准版，1-容量增强版
+     * @var integer <p>产品版本，0-标准版，1-容量增强版</p>
      */
     public $ProductType;
 
     /**
-     * @var string 实例类型
+     * @var string <p>实例类型</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 节点类型
+     * @var string <p>节点类型</p>
      */
     public $NodeType;
 
     /**
-     * @var string 外网地址。
+     * @var string <p>外网地址。</p>
      */
     public $WanAddress;
 
     /**
-     * @var string 隔离时间
+     * @var string <p>隔离时间</p>
      */
     public $IsolateAt;
 
     /**
-     * @var integer 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+     * @var integer <p>是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.</p>
      */
     public $AutoRenew;
 
     /**
-     * @var integer 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     * @var integer <p>任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中</p>
      */
     public $TaskStatus;
 
     /**
-     * @var array 绑定的安全组id
+     * @var array <p>绑定的安全组id</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @param string $InstanceId 实例ID。
-     * @param string $Name 实例自定义名称。
-     * @param integer $AppId 用户APPID。
-     * @param string $Region 地域。
-     * @param string $Zone 可用区。
-     * @param string $Product 产品。
-     * @param array $Networks 网络信息。
-     * @param integer $ShardNum 分片信息。
-     * @param integer $ReplicaNum 副本数。
-     * @param float $Cpu CPU.
-     * @param float $Memory 内存。
-     * @param integer $Disk 磁盘。
-     * @param float $HealthScore 健康得分。
+     * @var string <p>可升级版本号</p>
+     */
+    public $UpgradeVersion;
+
+    /**
+     * @var boolean <p>是否为内部实例</p>
+     */
+    public $IsInternal;
+
+    /**
+     * @param string $InstanceId <p>实例ID。</p>
+     * @param string $Name <p>实例自定义名称。</p>
+     * @param integer $AppId <p>用户APPID。</p>
+     * @param string $Region <p>地域。</p>
+     * @param string $Zone <p>可用区。</p>
+     * @param string $Product <p>产品。</p>
+     * @param array $Networks <p>网络信息。</p>
+     * @param integer $ShardNum <p>分片信息。</p>
+     * @param integer $ReplicaNum <p>副本数。</p>
+     * @param float $Cpu <p>CPU.</p>
+     * @param float $Memory <p>内存。</p>
+     * @param integer $Disk <p>磁盘。</p>
+     * @param float $HealthScore <p>健康得分。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Warning 异常告警。
+     * @param integer $Warning <p>异常告警。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Project 所属项目。
+     * @param string $Project <p>所属项目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ResourceTags 所属标签。
-     * @param string $CreatedAt 创建时间。
-     * @param string $Status 资源状态。
-     * @param string $EngineName 引擎名称。
-     * @param string $EngineVersion 引擎版本。
-     * @param string $ApiVersion api版本
-     * @param integer $PayMode 计费模式。
-     * @param string $Extend 差异化扩展信息, json格式。
-     * @param string $ExpiredAt 过期时间。
-     * @param boolean $IsNoExpired 是否不过期(永久)。
-     * @param integer $ProductType 产品版本，0-标准版，1-容量增强版
-     * @param string $InstanceType 实例类型
-     * @param string $NodeType 节点类型
-     * @param string $WanAddress 外网地址。
-     * @param string $IsolateAt 隔离时间
-     * @param integer $AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-     * @param integer $TaskStatus 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
-     * @param array $SecurityGroupIds 绑定的安全组id
+     * @param array $ResourceTags <p>所属标签。</p>
+     * @param string $CreatedAt <p>创建时间。</p>
+     * @param string $Status <p>资源状态。</p>
+     * @param string $EngineName <p>引擎名称。</p>
+     * @param string $EngineVersion <p>引擎版本。</p>
+     * @param string $ApiVersion <p>api版本</p>
+     * @param integer $PayMode <p>计费模式。</p>
+     * @param string $Extend <p>差异化扩展信息, json格式。</p>
+     * @param string $ExpiredAt <p>过期时间。</p>
+     * @param boolean $IsNoExpired <p>是否不过期(永久)。</p>
+     * @param integer $ProductType <p>产品版本，0-标准版，1-容量增强版</p>
+     * @param string $InstanceType <p>实例类型</p>
+     * @param string $NodeType <p>节点类型</p>
+     * @param string $WanAddress <p>外网地址。</p>
+     * @param string $IsolateAt <p>隔离时间</p>
+     * @param integer $AutoRenew <p>是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.</p>
+     * @param integer $TaskStatus <p>任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中</p>
+     * @param array $SecurityGroupIds <p>绑定的安全组id</p>
+     * @param string $UpgradeVersion <p>可升级版本号</p>
+     * @param boolean $IsInternal <p>是否为内部实例</p>
      */
     function __construct()
     {
@@ -457,6 +473,14 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("UpgradeVersion",$param) and $param["UpgradeVersion"] !== null) {
+            $this->UpgradeVersion = $param["UpgradeVersion"];
+        }
+
+        if (array_key_exists("IsInternal",$param) and $param["IsInternal"] !== null) {
+            $this->IsInternal = $param["IsInternal"];
         }
     }
 }

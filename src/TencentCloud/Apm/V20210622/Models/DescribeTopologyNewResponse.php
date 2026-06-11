@@ -20,19 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopologyNew返回参数结构体
  *
- * @method array getNodes() 获取节点集合
+ * @method array getNodes() 获取<p>节点集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodes(array $Nodes) 设置节点集合
+ * @method void setNodes(array $Nodes) 设置<p>节点集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getEdges() 获取边集合
- * @method void setEdges(array $Edges) 设置边集合
- * @method integer getTopologyModifyFlag() 获取拓扑图是否有修改
+ * @method array getEdges() 获取<p>边集合</p>
+ * @method void setEdges(array $Edges) 设置<p>边集合</p>
+ * @method integer getTopologyModifyFlag() 获取<p>拓扑图是否有修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopologyModifyFlag(integer $TopologyModifyFlag) 设置拓扑图是否有修改
+ * @method void setTopologyModifyFlag(integer $TopologyModifyFlag) 设置<p>拓扑图是否有修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SelectorView getSelectors() 获取节点数量
+ * @method SelectorView getSelectors() 获取<p>节点数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSelectors(SelectorView $Selectors) 设置节点数量
+ * @method void setSelectors(SelectorView $Selectors) 设置<p>节点数量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OverviewStats getOverviewStats() 获取<p>节点状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOverviewStats(OverviewStats $OverviewStats) 设置<p>节点状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -40,27 +44,33 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTopologyNewResponse extends AbstractModel
 {
     /**
-     * @var array 节点集合
+     * @var array <p>节点集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nodes;
 
     /**
-     * @var array 边集合
+     * @var array <p>边集合</p>
      */
     public $Edges;
 
     /**
-     * @var integer 拓扑图是否有修改
+     * @var integer <p>拓扑图是否有修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopologyModifyFlag;
 
     /**
-     * @var SelectorView 节点数量
+     * @var SelectorView <p>节点数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Selectors;
+
+    /**
+     * @var OverviewStats <p>节点状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OverviewStats;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -68,12 +78,14 @@ class DescribeTopologyNewResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Nodes 节点集合
+     * @param array $Nodes <p>节点集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Edges 边集合
-     * @param integer $TopologyModifyFlag 拓扑图是否有修改
+     * @param array $Edges <p>边集合</p>
+     * @param integer $TopologyModifyFlag <p>拓扑图是否有修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelectorView $Selectors 节点数量
+     * @param SelectorView $Selectors <p>节点数量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OverviewStats $OverviewStats <p>节点状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -115,6 +127,11 @@ class DescribeTopologyNewResponse extends AbstractModel
         if (array_key_exists("Selectors",$param) and $param["Selectors"] !== null) {
             $this->Selectors = new SelectorView();
             $this->Selectors->deserialize($param["Selectors"]);
+        }
+
+        if (array_key_exists("OverviewStats",$param) and $param["OverviewStats"] !== null) {
+            $this->OverviewStats = new OverviewStats();
+            $this->OverviewStats->deserialize($param["OverviewStats"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

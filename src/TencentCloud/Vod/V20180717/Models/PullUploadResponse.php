@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PullUpload返回参数结构体
  *
- * @method string getTaskId() 获取拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。
- * @method void setTaskId(string $TaskId) 设置拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。
+ * @method string getTaskId() 获取<p>拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class PullUploadResponse extends AbstractModel
 {
     /**
-     * @var string 拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。
+     * @var string <p>拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。</p>
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class PullUploadResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。
+     * @param string $TaskId <p>拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

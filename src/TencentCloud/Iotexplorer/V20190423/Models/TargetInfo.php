@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视频语义搜索结果
  *
- * @method string getId() 获取视频唯一ID
- * @method void setId(string $Id) 设置视频唯一ID
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method integer getStartTimeMs() 获取视频起始时间（毫秒级Unix时间戳）
- * @method void setStartTimeMs(integer $StartTimeMs) 设置视频起始时间（毫秒级Unix时间戳）
- * @method integer getEndTimeMs() 获取视频结束时间（毫秒级Unix时间戳）
- * @method void setEndTimeMs(integer $EndTimeMs) 设置视频结束时间（毫秒级Unix时间戳）
- * @method string getEventId() 获取用户自定义事件ID，后续扩展使用
- * @method void setEventId(string $EventId) 设置用户自定义事件ID，后续扩展使用
- * @method string getSummary() 获取视频内容摘要
- * @method void setSummary(string $Summary) 设置视频内容摘要
- * @method integer getChannelId() 获取通道ID
- * @method void setChannelId(integer $ChannelId) 设置通道ID
- * @method string getThumbnail() 获取缩略图路径
- * @method void setThumbnail(string $Thumbnail) 设置缩略图路径
+ * @method string getId() 获取<p>视频唯一ID</p>
+ * @method void setId(string $Id) 设置<p>视频唯一ID</p>
+ * @method string getProductId() 获取<p>产品ID</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品ID</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method integer getStartTimeMs() 获取<p>视频起始时间（毫秒级Unix时间戳）</p>
+ * @method void setStartTimeMs(integer $StartTimeMs) 设置<p>视频起始时间（毫秒级Unix时间戳）</p>
+ * @method integer getEndTimeMs() 获取<p>视频结束时间（毫秒级Unix时间戳）</p>
+ * @method void setEndTimeMs(integer $EndTimeMs) 设置<p>视频结束时间（毫秒级Unix时间戳）</p>
+ * @method string getEventId() 获取<p>用户自定义事件ID，后续扩展使用</p>
+ * @method void setEventId(string $EventId) 设置<p>用户自定义事件ID，后续扩展使用</p>
+ * @method string getSummary() 获取<p>视频内容摘要</p>
+ * @method void setSummary(string $Summary) 设置<p>视频内容摘要</p>
+ * @method integer getChannelId() 获取<p>通道ID</p>
+ * @method void setChannelId(integer $ChannelId) 设置<p>通道ID</p>
+ * @method string getThumbnail() 获取<p>缩略图路径</p>
+ * @method void setThumbnail(string $Thumbnail) 设置<p>缩略图路径</p>
  */
 class TargetInfo extends AbstractModel
 {
     /**
-     * @var string 视频唯一ID
+     * @var string <p>视频唯一ID</p>
      */
     public $Id;
 
     /**
-     * @var string 产品ID
+     * @var string <p>产品ID</p>
      */
     public $ProductId;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var integer 视频起始时间（毫秒级Unix时间戳）
+     * @var integer <p>视频起始时间（毫秒级Unix时间戳）</p>
      */
     public $StartTimeMs;
 
     /**
-     * @var integer 视频结束时间（毫秒级Unix时间戳）
+     * @var integer <p>视频结束时间（毫秒级Unix时间戳）</p>
      */
     public $EndTimeMs;
 
     /**
-     * @var string 用户自定义事件ID，后续扩展使用
+     * @var string <p>用户自定义事件ID，后续扩展使用</p>
      */
     public $EventId;
 
     /**
-     * @var string 视频内容摘要
+     * @var string <p>视频内容摘要</p>
      */
     public $Summary;
 
     /**
-     * @var integer 通道ID
+     * @var integer <p>通道ID</p>
      */
     public $ChannelId;
 
     /**
-     * @var string 缩略图路径
+     * @var string <p>缩略图路径</p>
      */
     public $Thumbnail;
 
     /**
-     * @param string $Id 视频唯一ID
-     * @param string $ProductId 产品ID
-     * @param string $DeviceName 设备名称
-     * @param integer $StartTimeMs 视频起始时间（毫秒级Unix时间戳）
-     * @param integer $EndTimeMs 视频结束时间（毫秒级Unix时间戳）
-     * @param string $EventId 用户自定义事件ID，后续扩展使用
-     * @param string $Summary 视频内容摘要
-     * @param integer $ChannelId 通道ID
-     * @param string $Thumbnail 缩略图路径
+     * @param string $Id <p>视频唯一ID</p>
+     * @param string $ProductId <p>产品ID</p>
+     * @param string $DeviceName <p>设备名称</p>
+     * @param integer $StartTimeMs <p>视频起始时间（毫秒级Unix时间戳）</p>
+     * @param integer $EndTimeMs <p>视频结束时间（毫秒级Unix时间戳）</p>
+     * @param string $EventId <p>用户自定义事件ID，后续扩展使用</p>
+     * @param string $Summary <p>视频内容摘要</p>
+     * @param integer $ChannelId <p>通道ID</p>
+     * @param string $Thumbnail <p>缩略图路径</p>
      */
     function __construct()
     {

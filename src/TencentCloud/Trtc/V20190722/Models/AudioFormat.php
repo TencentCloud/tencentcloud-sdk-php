@@ -20,90 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TTS音频输出的格式
  *
- * @method string getFormat() 获取生成的音频格式
-
-- TextToSpeechSSE 流式接口
-
- 支持 pcm, 默认: pcm
-
-- TextToSpeech 非流式接口
-
- 支持 pcm,wav,mp3,  默认: pcm
-
-- AsyncTextToSpeech
-支持pcm,mp3, 默认：mp3
- * @method void setFormat(string $Format) 设置生成的音频格式
-
-- TextToSpeechSSE 流式接口
-
- 支持 pcm, 默认: pcm
-
-- TextToSpeech 非流式接口
-
- 支持 pcm,wav,mp3,  默认: pcm
-
-- AsyncTextToSpeech
-支持pcm,mp3, 默认：mp3
- * @method integer getSampleRate() 获取生成的音频采样率，默认24000
-可选
-- 16000
-- 24000 
- * @method void setSampleRate(integer $SampleRate) 设置生成的音频采样率，默认24000
-可选
-- 16000
-- 24000 
- * @method integer getBitrate() 获取 MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
- * @method void setBitrate(integer $Bitrate) 设置 MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+ * @method string getFormat() 获取<p>生成的音频格式</p><ul><li><p>TextToSpeechSSE 流式接口</p><p>支持 pcm,mp3,  默认: pcm</p></li><li><p>TextToSpeech 非流式接口</p><p>支持 pcm,wav,mp3,  默认: pcm</p></li><li><p>AsyncTextToSpeech<br>支持pcm,mp3, 默认: mp3</p></li></ul>
+ * @method void setFormat(string $Format) 设置<p>生成的音频格式</p><ul><li><p>TextToSpeechSSE 流式接口</p><p>支持 pcm,mp3,  默认: pcm</p></li><li><p>TextToSpeech 非流式接口</p><p>支持 pcm,wav,mp3,  默认: pcm</p></li><li><p>AsyncTextToSpeech<br>支持pcm,mp3, 默认: mp3</p></li></ul>
+ * @method integer getSampleRate() 获取<p>生成的音频采样率，默认24000<br>可选</p><ul><li>16000</li><li>24000</li></ul>
+ * @method void setSampleRate(integer $SampleRate) 设置<p>生成的音频采样率，默认24000<br>可选</p><ul><li>16000</li><li>24000</li></ul>
+ * @method integer getBitrate() 获取<p>MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： <code>64</code>, <code>128</code>, <code>192</code>, <code>256</code> ,  默认： <code>128</code></p>
+ * @method void setBitrate(integer $Bitrate) 设置<p>MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： <code>64</code>, <code>128</code>, <code>192</code>, <code>256</code> ,  默认： <code>128</code></p>
  */
 class AudioFormat extends AbstractModel
 {
     /**
-     * @var string 生成的音频格式
-
-- TextToSpeechSSE 流式接口
-
- 支持 pcm, 默认: pcm
-
-- TextToSpeech 非流式接口
-
- 支持 pcm,wav,mp3,  默认: pcm
-
-- AsyncTextToSpeech
-支持pcm,mp3, 默认：mp3
+     * @var string <p>生成的音频格式</p><ul><li><p>TextToSpeechSSE 流式接口</p><p>支持 pcm,mp3,  默认: pcm</p></li><li><p>TextToSpeech 非流式接口</p><p>支持 pcm,wav,mp3,  默认: pcm</p></li><li><p>AsyncTextToSpeech<br>支持pcm,mp3, 默认: mp3</p></li></ul>
      */
     public $Format;
 
     /**
-     * @var integer 生成的音频采样率，默认24000
-可选
-- 16000
-- 24000 
+     * @var integer <p>生成的音频采样率，默认24000<br>可选</p><ul><li>16000</li><li>24000</li></ul>
      */
     public $SampleRate;
 
     /**
-     * @var integer  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+     * @var integer <p>MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： <code>64</code>, <code>128</code>, <code>192</code>, <code>256</code> ,  默认： <code>128</code></p>
      */
     public $Bitrate;
 
     /**
-     * @param string $Format 生成的音频格式
-
-- TextToSpeechSSE 流式接口
-
- 支持 pcm, 默认: pcm
-
-- TextToSpeech 非流式接口
-
- 支持 pcm,wav,mp3,  默认: pcm
-
-- AsyncTextToSpeech
-支持pcm,mp3, 默认：mp3
-     * @param integer $SampleRate 生成的音频采样率，默认24000
-可选
-- 16000
-- 24000 
-     * @param integer $Bitrate  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+     * @param string $Format <p>生成的音频格式</p><ul><li><p>TextToSpeechSSE 流式接口</p><p>支持 pcm,mp3,  默认: pcm</p></li><li><p>TextToSpeech 非流式接口</p><p>支持 pcm,wav,mp3,  默认: pcm</p></li><li><p>AsyncTextToSpeech<br>支持pcm,mp3, 默认: mp3</p></li></ul>
+     * @param integer $SampleRate <p>生成的音频采样率，默认24000<br>可选</p><ul><li>16000</li><li>24000</li></ul>
+     * @param integer $Bitrate <p>MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： <code>64</code>, <code>128</code>, <code>192</code>, <code>256</code> ,  默认： <code>128</code></p>
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TextToSpeechSSE请求参数结构体
  *
- * @method string getText() 获取<p>需要转语音的文字内容，长度范围：[1, 255]</p>
- * @method void setText(string $Text) 设置<p>需要转语音的文字内容，长度范围：[1, 255]</p>
+ * @method string getText() 获取<p>需要转语音的文字内容，最大支持20000字符</p>
+ * @method void setText(string $Text) 设置<p>需要转语音的文字内容，最大支持20000字符</p>
  * @method Voice getVoice() 获取<p>文本转语音的声音配置</p>
  * @method void setVoice(Voice $Voice) 设置<p>文本转语音的声音配置</p>
  * @method integer getSdkAppId() 获取<p>TRTC的SdkAppId</p>
@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioFormat(AudioFormat $AudioFormat) 设置<p>文本转语音的输出音频的格式</p>
  * @method string getAPIKey() 获取<p>TTS的API密钥</p>
  * @method void setAPIKey(string $APIKey) 设置<p>TTS的API密钥</p>
- * @method string getModel() 获取<p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
- * @method void setModel(string $Model) 设置<p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
- * @method string getLanguage() 获取<p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
- * @method void setLanguage(string $Language) 设置<p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
+ * @method string getModel() 获取<p>TTS的模型，支持flow_02_turbo，flow_01_ex，默认为flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： 高性价比模型，兼顾效果和成本</li><li>flow_01_ex： 高天花板模型，能力全面，在音色克隆上表现更优</li></ul>
+ * @method void setModel(string $Model) 设置<p>TTS的模型，支持flow_02_turbo，flow_01_ex，默认为flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： 高性价比模型，兼顾效果和成本</li><li>flow_01_ex： 高天花板模型，能力全面，在音色克隆上表现更优</li></ul>
+ * @method string getLanguage() 获取<p>需要合成的语言，默认为空，表示自动识别</p><p>枚举值：</p><ul><li>zh： 中文</li><li>en： 英文</li><li>ja： 日语</li><li>ko： 韩语</li><li>yue： 粤语</li><li>ms： 马来语</li><li>ar： 阿拉伯语</li><li>id： 印尼语</li><li>th： 泰语</li><li>vi： 越南语</li></ul>
+ * @method void setLanguage(string $Language) 设置<p>需要合成的语言，默认为空，表示自动识别</p><p>枚举值：</p><ul><li>zh： 中文</li><li>en： 英文</li><li>ja： 日语</li><li>ko： 韩语</li><li>yue： 粤语</li><li>ms： 马来语</li><li>ar： 阿拉伯语</li><li>id： 印尼语</li><li>th： 泰语</li><li>vi： 越南语</li></ul>
  * @method array getPronunciationDict() 获取<p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
  * @method void setPronunciationDict(array $PronunciationDict) 设置<p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
  * @method integer getAlignmentMode() 获取<p>默认为0，0表示不生成字幕，1表示生成字幕</p>
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class TextToSpeechSSERequest extends AbstractModel
 {
     /**
-     * @var string <p>需要转语音的文字内容，长度范围：[1, 255]</p>
+     * @var string <p>需要转语音的文字内容，最大支持20000字符</p>
      */
     public $Text;
 
@@ -70,12 +70,12 @@ class TextToSpeechSSERequest extends AbstractModel
     public $APIKey;
 
     /**
-     * @var string <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
+     * @var string <p>TTS的模型，支持flow_02_turbo，flow_01_ex，默认为flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： 高性价比模型，兼顾效果和成本</li><li>flow_01_ex： 高天花板模型，能力全面，在音色克隆上表现更优</li></ul>
      */
     public $Model;
 
     /**
-     * @var string <p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
+     * @var string <p>需要合成的语言，默认为空，表示自动识别</p><p>枚举值：</p><ul><li>zh： 中文</li><li>en： 英文</li><li>ja： 日语</li><li>ko： 韩语</li><li>yue： 粤语</li><li>ms： 马来语</li><li>ar： 阿拉伯语</li><li>id： 印尼语</li><li>th： 泰语</li><li>vi： 越南语</li></ul>
      */
     public $Language;
 
@@ -95,13 +95,13 @@ class TextToSpeechSSERequest extends AbstractModel
     public $ExtraParams;
 
     /**
-     * @param string $Text <p>需要转语音的文字内容，长度范围：[1, 255]</p>
+     * @param string $Text <p>需要转语音的文字内容，最大支持20000字符</p>
      * @param Voice $Voice <p>文本转语音的声音配置</p>
      * @param integer $SdkAppId <p>TRTC的SdkAppId</p>
      * @param AudioFormat $AudioFormat <p>文本转语音的输出音频的格式</p>
      * @param string $APIKey <p>TTS的API密钥</p>
-     * @param string $Model <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
-     * @param string $Language <p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
+     * @param string $Model <p>TTS的模型，支持flow_02_turbo，flow_01_ex，默认为flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： 高性价比模型，兼顾效果和成本</li><li>flow_01_ex： 高天花板模型，能力全面，在音色克隆上表现更优</li></ul>
+     * @param string $Language <p>需要合成的语言，默认为空，表示自动识别</p><p>枚举值：</p><ul><li>zh： 中文</li><li>en： 英文</li><li>ja： 日语</li><li>ko： 韩语</li><li>yue： 粤语</li><li>ms： 马来语</li><li>ar： 阿拉伯语</li><li>id： 印尼语</li><li>th： 泰语</li><li>vi： 越南语</li></ul>
      * @param array $PronunciationDict <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
      * @param integer $AlignmentMode <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
      * @param string $ExtraParams <p>json字符串，用于拓展用法</p>

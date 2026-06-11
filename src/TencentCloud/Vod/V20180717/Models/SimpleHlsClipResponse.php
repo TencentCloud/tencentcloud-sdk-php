@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SimpleHlsClip返回参数结构体
  *
- * @method string getUrl() 获取裁剪后的视频地址。
- * @method void setUrl(string $Url) 设置裁剪后的视频地址。
- * @method MediaMetaData getMetaData() 获取裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
- * @method void setMetaData(MediaMetaData $MetaData) 设置裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
- * @method string getFileId() 获取剪辑固化后的视频的媒体文件的唯一标识。
- * @method void setFileId(string $FileId) 设置剪辑固化后的视频的媒体文件的唯一标识。
- * @method string getTaskId() 获取剪辑固化后的视频任务流 ID。
- * @method void setTaskId(string $TaskId) 设置剪辑固化后的视频任务流 ID。
+ * @method string getUrl() 获取<p>裁剪后的视频地址。</p>
+ * @method void setUrl(string $Url) 设置<p>裁剪后的视频地址。</p>
+ * @method MediaMetaData getMetaData() 获取<p>裁剪后的视频元信息。目前<code>Size</code>，<code>Rotate</code>，<code>VideoDuration</code>，<code>AudioDuration</code> 几个字段暂时缺省，没有真实数据。</p>
+ * @method void setMetaData(MediaMetaData $MetaData) 设置<p>裁剪后的视频元信息。目前<code>Size</code>，<code>Rotate</code>，<code>VideoDuration</code>，<code>AudioDuration</code> 几个字段暂时缺省，没有真实数据。</p>
+ * @method string getFileId() 获取<p>剪辑固化后的视频的媒体文件的唯一标识。</p>
+ * @method void setFileId(string $FileId) 设置<p>剪辑固化后的视频的媒体文件的唯一标识。</p>
+ * @method string getTaskId() 获取<p>剪辑固化后的视频任务流 ID。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>剪辑固化后的视频任务流 ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SimpleHlsClipResponse extends AbstractModel
 {
     /**
-     * @var string 裁剪后的视频地址。
+     * @var string <p>裁剪后的视频地址。</p>
      */
     public $Url;
 
     /**
-     * @var MediaMetaData 裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
+     * @var MediaMetaData <p>裁剪后的视频元信息。目前<code>Size</code>，<code>Rotate</code>，<code>VideoDuration</code>，<code>AudioDuration</code> 几个字段暂时缺省，没有真实数据。</p>
      */
     public $MetaData;
 
     /**
-     * @var string 剪辑固化后的视频的媒体文件的唯一标识。
+     * @var string <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
      */
     public $FileId;
 
     /**
-     * @var string 剪辑固化后的视频任务流 ID。
+     * @var string <p>剪辑固化后的视频任务流 ID。</p>
      */
     public $TaskId;
 
@@ -59,10 +59,10 @@ class SimpleHlsClipResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Url 裁剪后的视频地址。
-     * @param MediaMetaData $MetaData 裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
-     * @param string $FileId 剪辑固化后的视频的媒体文件的唯一标识。
-     * @param string $TaskId 剪辑固化后的视频任务流 ID。
+     * @param string $Url <p>裁剪后的视频地址。</p>
+     * @param MediaMetaData $MetaData <p>裁剪后的视频元信息。目前<code>Size</code>，<code>Rotate</code>，<code>VideoDuration</code>，<code>AudioDuration</code> 几个字段暂时缺省，没有真实数据。</p>
+     * @param string $FileId <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
+     * @param string $TaskId <p>剪辑固化后的视频任务流 ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

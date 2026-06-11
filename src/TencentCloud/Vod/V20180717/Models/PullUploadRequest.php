@@ -20,150 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PullUpload请求参数结构体
  *
- * @method string getMediaUrl() 获取要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
-支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。
- * @method void setMediaUrl(string $MediaUrl) 设置要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
-支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。
- * @method string getMediaType() 获取媒体文件类型（扩展名），支持的类型详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
-如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。
- * @method void setMediaType(string $MediaType) 设置媒体文件类型（扩展名），支持的类型详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
-如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method string getMediaName() 获取媒体名称。
- * @method void setMediaName(string $MediaName) 设置媒体名称。
- * @method string getCoverUrl() 获取要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。
- * @method void setCoverUrl(string $CoverUrl) 设置要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。
- * @method string getProcedure() 获取媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
- * @method void setProcedure(string $Procedure) 设置媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
- * @method string getExpireTime() 获取媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setExpireTime(string $ExpireTime) 设置媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getStorageRegion() 获取指定上传园区，仅适用于对上传地域有特殊需求的用户：
-<li>不填默认上传至您的[默认地域](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)。</li>
-<li>若指定上传园区，请先确认[上传存储设置](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)已经开启相应的存储地域。</li>
- * @method void setStorageRegion(string $StorageRegion) 设置指定上传园区，仅适用于对上传地域有特殊需求的用户：
-<li>不填默认上传至您的[默认地域](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)。</li>
-<li>若指定上传园区，请先确认[上传存储设置](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)已经开启相应的存储地域。</li>
- * @method integer getClassId() 获取分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
- * @method void setClassId(integer $ClassId) 设置分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
- * @method integer getTasksPriority() 获取任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
- * @method void setTasksPriority(integer $TasksPriority) 设置任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
- * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- * @method string getSessionId() 获取用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method string getExtInfo() 获取保留字段，特殊用途时使用。
- * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
- * @method string getSourceContext() 获取来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
- * @method void setSourceContext(string $SourceContext) 设置来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
- * @method string getMediaStoragePath() 获取媒体存储路径，以/开头。
-只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
- * @method void setMediaStoragePath(string $MediaStoragePath) 设置媒体存储路径，以/开头。
-只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
+ * @method string getMediaUrl() 获取<p>要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。<br>支持的扩展名详见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">媒体类型</a>。请确保媒体 URL 可以访问。</p>
+ * @method void setMediaUrl(string $MediaUrl) 设置<p>要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。<br>支持的扩展名详见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">媒体类型</a>。请确保媒体 URL 可以访问。</p>
+ * @method string getMediaType() 获取<p>媒体文件类型（扩展名），支持的类型详见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">媒体类型</a>。<br>如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。</p>
+ * @method void setMediaType(string $MediaType) 设置<p>媒体文件类型（扩展名），支持的类型详见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">媒体类型</a>。<br>如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。</p>
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method string getMediaName() 获取<p>媒体名称。</p>
+ * @method void setMediaName(string $MediaName) 设置<p>媒体名称。</p>
+ * @method string getCoverUrl() 获取<p>要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。</p>
+ * @method void setCoverUrl(string $CoverUrl) 设置<p>要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。</p>
+ * @method string getProcedure() 获取<p>媒体后续任务操作，详见<a href="https://cloud.tencent.com/document/product/266/9759">上传指定任务流</a>。</p>
+ * @method void setProcedure(string $Procedure) 设置<p>媒体后续任务操作，详见<a href="https://cloud.tencent.com/document/product/266/9759">上传指定任务流</a>。</p>
+ * @method string getExpireTime() 获取<p>媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+ * @method string getStorageRegion() 获取<p>指定上传园区，仅适用于对上传地域有特殊需求的用户：</p><li>不填默认上传至您的[默认地域](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)。</li><li>若指定上传园区，请先确认[上传存储设置](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)已经开启相应的存储地域。</li>
+ * @method void setStorageRegion(string $StorageRegion) 设置<p>指定上传园区，仅适用于对上传地域有特殊需求的用户：</p><li>不填默认上传至您的[默认地域](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)。</li><li>若指定上传园区，请先确认[上传存储设置](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)已经开启相应的存储地域。</li>
+ * @method integer getClassId() 获取<p>分类ID，用于对媒体进行分类管理，可通过<a href="https://cloud.tencent.com/document/product/266/31772">创建分类</a>接口，创建分类，获得分类 ID。</p>
+ * @method void setClassId(integer $ClassId) 设置<p>分类ID，用于对媒体进行分类管理，可通过<a href="https://cloud.tencent.com/document/product/266/31772">创建分类</a>接口，创建分类，获得分类 ID。</p>
+ * @method integer getTasksPriority() 获取<p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
+ * @method void setTasksPriority(integer $TasksPriority) 设置<p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
+ * @method string getSessionContext() 获取<p>来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+ * @method void setSessionContext(string $SessionContext) 设置<p>来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+ * @method string getSessionId() 获取<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+ * @method void setSessionId(string $SessionId) 设置<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+ * @method string getExtInfo() 获取<p>保留字段，特殊用途时使用。</p>
+ * @method void setExtInfo(string $ExtInfo) 设置<p>保留字段，特殊用途时使用。</p>
+ * @method string getSourceContext() 获取<p>来源上下文，用于透传用户请求信息，<a href="/document/product/266/7830">上传完成回调</a> 将返回该字段值，最长 250 个字符。</p>
+ * @method void setSourceContext(string $SourceContext) 设置<p>来源上下文，用于透传用户请求信息，<a href="/document/product/266/7830">上传完成回调</a> 将返回该字段值，最长 250 个字符。</p>
+ * @method string getMediaStoragePath() 获取<p>媒体存储路径，以/开头。<br>只有<a href="https://cloud.tencent.com/document/product/266/126825">FileID + Path 模式</a>的子应用可以指定存储路径。</p>
+ * @method void setMediaStoragePath(string $MediaStoragePath) 设置<p>媒体存储路径，以/开头。<br>只有<a href="https://cloud.tencent.com/document/product/266/126825">FileID + Path 模式</a>的子应用可以指定存储路径。</p>
  */
 class PullUploadRequest extends AbstractModel
 {
     /**
-     * @var string 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
-支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。
+     * @var string <p>要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。<br>支持的扩展名详见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">媒体类型</a>。请确保媒体 URL 可以访问。</p>
      */
     public $MediaUrl;
 
     /**
-     * @var string 媒体文件类型（扩展名），支持的类型详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
-如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。
+     * @var string <p>媒体文件类型（扩展名），支持的类型详见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">媒体类型</a>。<br>如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。</p>
      */
     public $MediaType;
 
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 媒体名称。
+     * @var string <p>媒体名称。</p>
      */
     public $MediaName;
 
     /**
-     * @var string 要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。
+     * @var string <p>要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。</p>
      */
     public $CoverUrl;
 
     /**
-     * @var string 媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
+     * @var string <p>媒体后续任务操作，详见<a href="https://cloud.tencent.com/document/product/266/9759">上传指定任务流</a>。</p>
      */
     public $Procedure;
 
     /**
-     * @var string 媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 指定上传园区，仅适用于对上传地域有特殊需求的用户：
-<li>不填默认上传至您的[默认地域](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)。</li>
-<li>若指定上传园区，请先确认[上传存储设置](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)已经开启相应的存储地域。</li>
+     * @var string <p>指定上传园区，仅适用于对上传地域有特殊需求的用户：</p><li>不填默认上传至您的[默认地域](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)。</li><li>若指定上传园区，请先确认[上传存储设置](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)已经开启相应的存储地域。</li>
      */
     public $StorageRegion;
 
     /**
-     * @var integer 分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
+     * @var integer <p>分类ID，用于对媒体进行分类管理，可通过<a href="https://cloud.tencent.com/document/product/266/31772">创建分类</a>接口，创建分类，获得分类 ID。</p>
      */
     public $ClassId;
 
     /**
-     * @var integer 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * @var integer <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
      */
     public $TasksPriority;
 
     /**
-     * @var string 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * @var string <p>来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public $SessionContext;
 
     /**
-     * @var string 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @var string <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public $SessionId;
 
     /**
-     * @var string 保留字段，特殊用途时使用。
+     * @var string <p>保留字段，特殊用途时使用。</p>
      */
     public $ExtInfo;
 
     /**
-     * @var string 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
+     * @var string <p>来源上下文，用于透传用户请求信息，<a href="/document/product/266/7830">上传完成回调</a> 将返回该字段值，最长 250 个字符。</p>
      */
     public $SourceContext;
 
     /**
-     * @var string 媒体存储路径，以/开头。
-只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
+     * @var string <p>媒体存储路径，以/开头。<br>只有<a href="https://cloud.tencent.com/document/product/266/126825">FileID + Path 模式</a>的子应用可以指定存储路径。</p>
      */
     public $MediaStoragePath;
 
     /**
-     * @param string $MediaUrl 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
-支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。
-     * @param string $MediaType 媒体文件类型（扩展名），支持的类型详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
-如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param string $MediaName 媒体名称。
-     * @param string $CoverUrl 要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。
-     * @param string $Procedure 媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
-     * @param string $ExpireTime 媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $StorageRegion 指定上传园区，仅适用于对上传地域有特殊需求的用户：
-<li>不填默认上传至您的[默认地域](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)。</li>
-<li>若指定上传园区，请先确认[上传存储设置](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)已经开启相应的存储地域。</li>
-     * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
-     * @param integer $TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
-     * @param string $SessionContext 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-     * @param string $ExtInfo 保留字段，特殊用途时使用。
-     * @param string $SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
-     * @param string $MediaStoragePath 媒体存储路径，以/开头。
-只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
+     * @param string $MediaUrl <p>要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。<br>支持的扩展名详见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">媒体类型</a>。请确保媒体 URL 可以访问。</p>
+     * @param string $MediaType <p>媒体文件类型（扩展名），支持的类型详见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">媒体类型</a>。<br>如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。</p>
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param string $MediaName <p>媒体名称。</p>
+     * @param string $CoverUrl <p>要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。</p>
+     * @param string $Procedure <p>媒体后续任务操作，详见<a href="https://cloud.tencent.com/document/product/266/9759">上传指定任务流</a>。</p>
+     * @param string $ExpireTime <p>媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+     * @param string $StorageRegion <p>指定上传园区，仅适用于对上传地域有特殊需求的用户：</p><li>不填默认上传至您的[默认地域](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)。</li><li>若指定上传园区，请先确认[上传存储设置](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4)已经开启相应的存储地域。</li>
+     * @param integer $ClassId <p>分类ID，用于对媒体进行分类管理，可通过<a href="https://cloud.tencent.com/document/product/266/31772">创建分类</a>接口，创建分类，获得分类 ID。</p>
+     * @param integer $TasksPriority <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
+     * @param string $SessionContext <p>来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+     * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+     * @param string $ExtInfo <p>保留字段，特殊用途时使用。</p>
+     * @param string $SourceContext <p>来源上下文，用于透传用户请求信息，<a href="/document/product/266/7830">上传完成回调</a> 将返回该字段值，最长 250 个字符。</p>
+     * @param string $MediaStoragePath <p>媒体存储路径，以/开头。<br>只有<a href="https://cloud.tencent.com/document/product/266/126825">FileID + Path 模式</a>的子应用可以指定存储路径。</p>
      */
     function __construct()
     {

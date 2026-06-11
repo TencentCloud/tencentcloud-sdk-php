@@ -20,94 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 同步任务的步骤信息
  *
- * @method integer getStepAll() 获取总步骤数
- * @method void setStepAll(integer $StepAll) 设置总步骤数
- * @method integer getStepNow() 获取当前步骤
- * @method void setStepNow(integer $StepNow) 设置当前步骤
- * @method integer getProgress() 获取总体进度
- * @method void setProgress(integer $Progress) 设置总体进度
- * @method integer getCurrentStepProgress() 获取当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
- * @method void setCurrentStepProgress(integer $CurrentStepProgress) 设置当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
- * @method integer getMasterSlaveDistance() 获取同步两端数据量差距
- * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) 设置同步两端数据量差距
- * @method integer getSecondsBehindMaster() 获取同步两端时间差距
- * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) 设置同步两端时间差距
- * @method string getMessage() 获取总体描述信息
- * @method void setMessage(string $Message) 设置总体描述信息
- * @method array getStepInfos() 获取详细步骤信息
+ * @method integer getStepAll() 获取<p>总步骤数</p>
+ * @method void setStepAll(integer $StepAll) 设置<p>总步骤数</p>
+ * @method integer getStepNow() 获取<p>当前步骤</p>
+ * @method void setStepNow(integer $StepNow) 设置<p>当前步骤</p>
+ * @method integer getProgress() 获取<p>总体进度</p>
+ * @method void setProgress(integer $Progress) 设置<p>总体进度</p>
+ * @method integer getCurrentStepProgress() 获取<p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
+ * @method void setCurrentStepProgress(integer $CurrentStepProgress) 设置<p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
+ * @method integer getMasterSlaveDistance() 获取<p>同步两端数据量差距</p>
+ * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) 设置<p>同步两端数据量差距</p>
+ * @method integer getSecondsBehindMaster() 获取<p>同步两端时间差距</p>
+ * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) 设置<p>同步两端时间差距</p>
+ * @method string getMessage() 获取<p>总体描述信息</p>
+ * @method void setMessage(string $Message) 设置<p>总体描述信息</p>
+ * @method array getStepInfos() 获取<p>详细步骤信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStepInfos(array $StepInfos) 设置详细步骤信息
+ * @method void setStepInfos(array $StepInfos) 设置<p>详细步骤信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCauseOfCompareDisable() 获取不能发起内置校验的原因
- * @method void setCauseOfCompareDisable(string $CauseOfCompareDisable) 设置不能发起内置校验的原因
- * @method ErrInfo getErrInfo() 获取任务的错误和解决方案信息
- * @method void setErrInfo(ErrInfo $ErrInfo) 设置任务的错误和解决方案信息
+ * @method string getCauseOfCompareDisable() 获取<p>不能发起内置校验的原因</p>
+ * @method void setCauseOfCompareDisable(string $CauseOfCompareDisable) 设置<p>不能发起内置校验的原因</p>
+ * @method ErrInfo getErrInfo() 获取<p>任务的错误和解决方案信息</p>
+ * @method void setErrInfo(ErrInfo $ErrInfo) 设置<p>任务的错误和解决方案信息</p>
  */
 class SyncDetailInfo extends AbstractModel
 {
     /**
-     * @var integer 总步骤数
+     * @var integer <p>总步骤数</p>
      */
     public $StepAll;
 
     /**
-     * @var integer 当前步骤
+     * @var integer <p>当前步骤</p>
      */
     public $StepNow;
 
     /**
-     * @var integer 总体进度
+     * @var integer <p>总体进度</p>
      */
     public $Progress;
 
     /**
-     * @var integer 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
+     * @var integer <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
      */
     public $CurrentStepProgress;
 
     /**
-     * @var integer 同步两端数据量差距
+     * @var integer <p>同步两端数据量差距</p>
      */
     public $MasterSlaveDistance;
 
     /**
-     * @var integer 同步两端时间差距
+     * @var integer <p>同步两端时间差距</p>
      */
     public $SecondsBehindMaster;
 
     /**
-     * @var string 总体描述信息
+     * @var string <p>总体描述信息</p>
      */
     public $Message;
 
     /**
-     * @var array 详细步骤信息
+     * @var array <p>详细步骤信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepInfos;
 
     /**
-     * @var string 不能发起内置校验的原因
+     * @var string <p>不能发起内置校验的原因</p>
      */
     public $CauseOfCompareDisable;
 
     /**
-     * @var ErrInfo 任务的错误和解决方案信息
+     * @var ErrInfo <p>任务的错误和解决方案信息</p>
      */
     public $ErrInfo;
 
     /**
-     * @param integer $StepAll 总步骤数
-     * @param integer $StepNow 当前步骤
-     * @param integer $Progress 总体进度
-     * @param integer $CurrentStepProgress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-     * @param integer $MasterSlaveDistance 同步两端数据量差距
-     * @param integer $SecondsBehindMaster 同步两端时间差距
-     * @param string $Message 总体描述信息
-     * @param array $StepInfos 详细步骤信息
+     * @param integer $StepAll <p>总步骤数</p>
+     * @param integer $StepNow <p>当前步骤</p>
+     * @param integer $Progress <p>总体进度</p>
+     * @param integer $CurrentStepProgress <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
+     * @param integer $MasterSlaveDistance <p>同步两端数据量差距</p>
+     * @param integer $SecondsBehindMaster <p>同步两端时间差距</p>
+     * @param string $Message <p>总体描述信息</p>
+     * @param array $StepInfos <p>详细步骤信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CauseOfCompareDisable 不能发起内置校验的原因
-     * @param ErrInfo $ErrInfo 任务的错误和解决方案信息
+     * @param string $CauseOfCompareDisable <p>不能发起内置校验的原因</p>
+     * @param ErrInfo $ErrInfo <p>任务的错误和解决方案信息</p>
      */
     function __construct()
     {

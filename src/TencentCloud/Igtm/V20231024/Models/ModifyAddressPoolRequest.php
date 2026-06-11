@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAddressPool请求参数结构体
  *
- * @method integer getPoolId() 获取地址池id
- * @method void setPoolId(integer $PoolId) 设置地址池id
- * @method string getPoolName() 获取地址池名称，不允许重复
- * @method void setPoolName(string $PoolName) 设置地址池名称，不允许重复
- * @method string getTrafficStrategy() 获取流量策略: WEIGHT负载均衡，ALL解析全部
- * @method void setTrafficStrategy(string $TrafficStrategy) 设置流量策略: WEIGHT负载均衡，ALL解析全部
- * @method integer getMonitorId() 获取监控器id，当监控器已关联策略时，此字段必传
- * @method void setMonitorId(integer $MonitorId) 设置监控器id，当监控器已关联策略时，此字段必传
- * @method array getAddressSet() 获取地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
- * @method void setAddressSet(array $AddressSet) 设置地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
+ * @method integer getPoolId() 获取<p>地址池id</p>
+ * @method void setPoolId(integer $PoolId) 设置<p>地址池id</p>
+ * @method string getPoolName() 获取<p>地址池名称，不允许重复</p>
+ * @method void setPoolName(string $PoolName) 设置<p>地址池名称，不允许重复</p>
+ * @method string getTrafficStrategy() 获取<p>流量策略: WEIGHT负载均衡，ALL解析全部</p>
+ * @method void setTrafficStrategy(string $TrafficStrategy) 设置<p>流量策略: WEIGHT负载均衡，ALL解析全部</p>
+ * @method integer getMonitorId() 获取<p>监控器id，当监控器已关联策略时，此字段必传</p>
+ * @method void setMonitorId(integer $MonitorId) 设置<p>监控器id，当监控器已关联策略时，此字段必传</p>
+ * @method array getAddressSet() 获取<p>地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。</p>
+ * @method void setAddressSet(array $AddressSet) 设置<p>地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。</p>
+ * @method boolean getKeepResource() 获取<p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+ * @method void setKeepResource(boolean $KeepResource) 设置<p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
  */
 class ModifyAddressPoolRequest extends AbstractModel
 {
     /**
-     * @var integer 地址池id
+     * @var integer <p>地址池id</p>
      */
     public $PoolId;
 
     /**
-     * @var string 地址池名称，不允许重复
+     * @var string <p>地址池名称，不允许重复</p>
      */
     public $PoolName;
 
     /**
-     * @var string 流量策略: WEIGHT负载均衡，ALL解析全部
+     * @var string <p>流量策略: WEIGHT负载均衡，ALL解析全部</p>
      */
     public $TrafficStrategy;
 
     /**
-     * @var integer 监控器id，当监控器已关联策略时，此字段必传
+     * @var integer <p>监控器id，当监控器已关联策略时，此字段必传</p>
      */
     public $MonitorId;
 
     /**
-     * @var array 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
+     * @var array <p>地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。</p>
      */
     public $AddressSet;
 
     /**
-     * @param integer $PoolId 地址池id
-     * @param string $PoolName 地址池名称，不允许重复
-     * @param string $TrafficStrategy 流量策略: WEIGHT负载均衡，ALL解析全部
-     * @param integer $MonitorId 监控器id，当监控器已关联策略时，此字段必传
-     * @param array $AddressSet 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
+     * @var boolean <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+     */
+    public $KeepResource;
+
+    /**
+     * @param integer $PoolId <p>地址池id</p>
+     * @param string $PoolName <p>地址池名称，不允许重复</p>
+     * @param string $TrafficStrategy <p>流量策略: WEIGHT负载均衡，ALL解析全部</p>
+     * @param integer $MonitorId <p>监控器id，当监控器已关联策略时，此字段必传</p>
+     * @param array $AddressSet <p>地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。</p>
+     * @param boolean $KeepResource <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class ModifyAddressPoolRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AddressSet, $obj);
             }
+        }
+
+        if (array_key_exists("KeepResource",$param) and $param["KeepResource"] !== null) {
+            $this->KeepResource = $param["KeepResource"];
         }
     }
 }

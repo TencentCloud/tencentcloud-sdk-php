@@ -20,17 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApmInstances返回参数结构体
  *
- * @method array getInstances() 获取APM 业务系统列表
- * @method void setInstances(array $Instances) 设置APM 业务系统列表
+ * @method array getInstances() 获取<p>APM 业务系统列表</p>
+ * @method void setInstances(array $Instances) 设置<p>APM 业务系统列表</p>
+ * @method integer getTotalCount() 获取<p>总数</p><p>单位：个</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>总数</p><p>单位：个</p>
+ * @method integer getPageIndex() 获取<p>页码，从1开始 </p><p>单位：页</p>
+ * @method void setPageIndex(integer $PageIndex) 设置<p>页码，从1开始 </p><p>单位：页</p>
+ * @method integer getPageSize() 获取<p>每页数量，默认20，最大100</p><p>单位：个</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页数量，默认20，最大100</p><p>单位：个</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeApmInstancesResponse extends AbstractModel
 {
     /**
-     * @var array APM 业务系统列表
+     * @var array <p>APM 业务系统列表</p>
      */
     public $Instances;
+
+    /**
+     * @var integer <p>总数</p><p>单位：个</p>
+     */
+    public $TotalCount;
+
+    /**
+     * @var integer <p>页码，从1开始 </p><p>单位：页</p>
+     */
+    public $PageIndex;
+
+    /**
+     * @var integer <p>每页数量，默认20，最大100</p><p>单位：个</p>
+     */
+    public $PageSize;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +59,10 @@ class DescribeApmInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Instances APM 业务系统列表
+     * @param array $Instances <p>APM 业务系统列表</p>
+     * @param integer $TotalCount <p>总数</p><p>单位：个</p>
+     * @param integer $PageIndex <p>页码，从1开始 </p><p>单位：页</p>
+     * @param integer $PageSize <p>每页数量，默认20，最大100</p><p>单位：个</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +85,18 @@ class DescribeApmInstancesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Instances, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("PageIndex",$param) and $param["PageIndex"] !== null) {
+            $this->PageIndex = $param["PageIndex"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

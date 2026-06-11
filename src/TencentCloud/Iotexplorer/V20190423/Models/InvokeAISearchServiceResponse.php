@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InvokeAISearchService返回参数结构体
  *
- * @method string getSummary() 获取基于搜索结果的总结
- * @method void setSummary(string $Summary) 设置基于搜索结果的总结
- * @method array getTargets() 获取视频结果集
- * @method void setTargets(array $Targets) 设置视频结果集
- * @method string getVideoURL() 获取视频回放URL
- * @method void setVideoURL(string $VideoURL) 设置视频回放URL
+ * @method string getSummary() 获取<p>基于搜索结果的总结</p>
+ * @method void setSummary(string $Summary) 设置<p>基于搜索结果的总结</p>
+ * @method array getTargets() 获取<p>视频结果集</p>
+ * @method void setTargets(array $Targets) 设置<p>视频结果集</p>
+ * @method string getVideoURL() 获取<p>视频回放URL</p>
+ * @method void setVideoURL(string $VideoURL) 设置<p>视频回放URL</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class InvokeAISearchServiceResponse extends AbstractModel
 {
     /**
-     * @var string 基于搜索结果的总结
+     * @var string <p>基于搜索结果的总结</p>
      */
     public $Summary;
 
     /**
-     * @var array 视频结果集
+     * @var array <p>视频结果集</p>
      */
     public $Targets;
 
     /**
-     * @var string 视频回放URL
+     * @var string <p>视频回放URL</p>
      */
     public $VideoURL;
 
@@ -52,9 +52,9 @@ class InvokeAISearchServiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Summary 基于搜索结果的总结
-     * @param array $Targets 视频结果集
-     * @param string $VideoURL 视频回放URL
+     * @param string $Summary <p>基于搜索结果的总结</p>
+     * @param array $Targets <p>视频结果集</p>
+     * @param string $VideoURL <p>视频回放URL</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,194 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InvokeAISearchService请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getQuery() 获取自然语言查询
- * @method void setQuery(string $Query) 设置自然语言查询
- * @method string getSummaryLang() 获取搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
- * @method void setSummaryLang(string $SummaryLang) 设置搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
- * @method integer getChannelId() 获取通道ID
- * @method void setChannelId(integer $ChannelId) 设置通道ID
- * @method boolean getEnableSummary() 获取是否需要返回总结，默认为True；  开启后会加大接口响应时长
- * @method void setEnableSummary(boolean $EnableSummary) 设置是否需要返回总结，默认为True；  开启后会加大接口响应时长
- * @method integer getStartTimeMs() 获取开始时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
- * @method void setStartTimeMs(integer $StartTimeMs) 设置开始时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
- * @method integer getEndTimeMs() 获取结束时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
- * @method void setEndTimeMs(integer $EndTimeMs) 设置结束时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
- * @method string getTimeZone() 获取时区。默认值：Asia/Shanghai
-
-注：
-符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
-
- * @method void setTimeZone(string $TimeZone) 设置时区。默认值：Asia/Shanghai
-
-注：
-符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
-
- * @method integer getSearchMode() 获取取值为1表示高级搜索，取值为2表示简单搜索，默认为1
- * @method void setSearchMode(integer $SearchMode) 设置取值为1表示高级搜索，取值为2表示简单搜索，默认为1
- * @method integer getLimit() 获取最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
- * @method void setLimit(integer $Limit) 设置最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
- * @method float getVectorSearchRadius() 获取向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
- * @method void setVectorSearchRadius(float $VectorSearchRadius) 设置向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
- * @method integer getVectorSearchTopK() 获取指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
- * @method void setVectorSearchTopK(integer $VectorSearchTopK) 设置指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
- * @method string getOrder() 获取搜索结果的排序方式，可选值：
-
-- `CORRELATION`：按相关性（默认）
-- `TIME_ASC`：按时间升序
-- `TIME_DESC`：按时间降序
- * @method void setOrder(string $Order) 设置搜索结果的排序方式，可选值：
-
-- `CORRELATION`：按相关性（默认）
-- `TIME_ASC`：按时间升序
-- `TIME_DESC`：按时间降序
+ * @method string getProductId() 获取<p>产品ID</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品ID</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method string getQuery() 获取<p>自然语言查询</p>
+ * @method void setQuery(string $Query) 设置<p>自然语言查询</p>
+ * @method string getSummaryLang() 获取<p>搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH</p>
+ * @method void setSummaryLang(string $SummaryLang) 设置<p>搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH</p>
+ * @method integer getChannelId() 获取<p>通道ID</p>
+ * @method void setChannelId(integer $ChannelId) 设置<p>通道ID</p>
+ * @method boolean getEnableSummary() 获取<p>是否需要返回总结，默认为True；  开启后会加大接口响应时长</p>
+ * @method void setEnableSummary(boolean $EnableSummary) 设置<p>是否需要返回总结，默认为True；  开启后会加大接口响应时长</p>
+ * @method integer getStartTimeMs() 获取<p>开始时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
+ * @method void setStartTimeMs(integer $StartTimeMs) 设置<p>开始时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
+ * @method integer getEndTimeMs() 获取<p>结束时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
+ * @method void setEndTimeMs(integer $EndTimeMs) 设置<p>结束时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
+ * @method string getTimeZone() 获取<p>时区。默认值：Asia/Shanghai</p><p>注：<br>符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok</p>
+ * @method void setTimeZone(string $TimeZone) 设置<p>时区。默认值：Asia/Shanghai</p><p>注：<br>符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok</p>
+ * @method integer getSearchMode() 获取<p>取值为1表示高级搜索，取值为2表示简单搜索，默认为1</p>
+ * @method void setSearchMode(integer $SearchMode) 设置<p>取值为1表示高级搜索，取值为2表示简单搜索，默认为1</p>
+ * @method integer getLimit() 获取<p>最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50</p>
+ * @method void setLimit(integer $Limit) 设置<p>最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50</p>
+ * @method float getVectorSearchRadius() 获取<p>向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5</p>
+ * @method void setVectorSearchRadius(float $VectorSearchRadius) 设置<p>向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5</p>
+ * @method integer getVectorSearchTopK() 获取<p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p>
+ * @method void setVectorSearchTopK(integer $VectorSearchTopK) 设置<p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p>
+ * @method string getOrder() 获取<p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
+ * @method void setOrder(string $Order) 设置<p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
  */
 class InvokeAISearchServiceRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string <p>产品ID</p>
      */
     public $ProductId;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 自然语言查询
+     * @var string <p>自然语言查询</p>
      */
     public $Query;
 
     /**
-     * @var string 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
+     * @var string <p>搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH</p>
      */
     public $SummaryLang;
 
     /**
-     * @var integer 通道ID
+     * @var integer <p>通道ID</p>
      */
     public $ChannelId;
 
     /**
-     * @var boolean 是否需要返回总结，默认为True；  开启后会加大接口响应时长
+     * @var boolean <p>是否需要返回总结，默认为True；  开启后会加大接口响应时长</p>
      */
     public $EnableSummary;
 
     /**
-     * @var integer 开始时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     * @var integer <p>开始时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
      */
     public $StartTimeMs;
 
     /**
-     * @var integer 结束时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     * @var integer <p>结束时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
      */
     public $EndTimeMs;
 
     /**
-     * @var string 时区。默认值：Asia/Shanghai
-
-注：
-符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
-
+     * @var string <p>时区。默认值：Asia/Shanghai</p><p>注：<br>符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok</p>
      */
     public $TimeZone;
 
     /**
-     * @var integer 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+     * @var integer <p>取值为1表示高级搜索，取值为2表示简单搜索，默认为1</p>
      */
     public $SearchMode;
 
     /**
-     * @var integer 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+     * @var integer <p>最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50</p>
      */
     public $Limit;
 
     /**
-     * @var float 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+     * @var float <p>向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5</p>
      */
     public $VectorSearchRadius;
 
     /**
-     * @var integer 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+     * @var integer <p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p>
      */
     public $VectorSearchTopK;
 
     /**
-     * @var string 搜索结果的排序方式，可选值：
-
-- `CORRELATION`：按相关性（默认）
-- `TIME_ASC`：按时间升序
-- `TIME_DESC`：按时间降序
+     * @var string <p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
      */
     public $Order;
 
     /**
-     * @param string $ProductId 产品ID
-     * @param string $DeviceName 设备名称
-     * @param string $Query 自然语言查询
-     * @param string $SummaryLang 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
-     * @param integer $ChannelId 通道ID
-     * @param boolean $EnableSummary 是否需要返回总结，默认为True；  开启后会加大接口响应时长
-     * @param integer $StartTimeMs 开始时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
-     * @param integer $EndTimeMs 结束时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
-     * @param string $TimeZone 时区。默认值：Asia/Shanghai
-
-注：
-符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
-
-     * @param integer $SearchMode 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
-     * @param integer $Limit 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
-     * @param float $VectorSearchRadius 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
-     * @param integer $VectorSearchTopK 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
-     * @param string $Order 搜索结果的排序方式，可选值：
-
-- `CORRELATION`：按相关性（默认）
-- `TIME_ASC`：按时间升序
-- `TIME_DESC`：按时间降序
+     * @param string $ProductId <p>产品ID</p>
+     * @param string $DeviceName <p>设备名称</p>
+     * @param string $Query <p>自然语言查询</p>
+     * @param string $SummaryLang <p>搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH</p>
+     * @param integer $ChannelId <p>通道ID</p>
+     * @param boolean $EnableSummary <p>是否需要返回总结，默认为True；  开启后会加大接口响应时长</p>
+     * @param integer $StartTimeMs <p>开始时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
+     * @param integer $EndTimeMs <p>结束时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
+     * @param string $TimeZone <p>时区。默认值：Asia/Shanghai</p><p>注：<br>符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok</p>
+     * @param integer $SearchMode <p>取值为1表示高级搜索，取值为2表示简单搜索，默认为1</p>
+     * @param integer $Limit <p>最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50</p>
+     * @param float $VectorSearchRadius <p>向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5</p>
+     * @param integer $VectorSearchTopK <p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p>
+     * @param string $Order <p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
      */
     function __construct()
     {

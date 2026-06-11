@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBaseBackup请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getDBInstanceId() 获取<p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method void setDBInstanceId(string $DBInstanceId) 设置<p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method string getBackupMethod() 获取<p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+ * @method void setBackupMethod(string $BackupMethod) 设置<p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
  */
 class CreateBaseBackupRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @var string <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public $DBInstanceId;
 
     /**
-     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @var string <p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+     */
+    public $BackupMethod;
+
+    /**
+     * @param string $DBInstanceId <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param string $BackupMethod <p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateBaseBackupRequest extends AbstractModel
         }
         if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
             $this->DBInstanceId = $param["DBInstanceId"];
+        }
+
+        if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
+            $this->BackupMethod = $param["BackupMethod"];
         }
     }
 }

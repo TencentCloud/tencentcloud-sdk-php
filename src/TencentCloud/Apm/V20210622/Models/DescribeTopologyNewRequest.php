@@ -20,146 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopologyNew请求参数结构体
  *
- * @method string getInstanceId() 获取业务系统 ID
- * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
- * @method integer getStartTime() 获取查询开始时间
- * @method void setStartTime(integer $StartTime) 设置查询开始时间
- * @method integer getEndTime() 获取查询结束时间
- * @method void setEndTime(integer $EndTime) 设置查询结束时间
- * @method string getServiceName() 获取应用名
- * @method void setServiceName(string $ServiceName) 设置应用名
- * @method integer getUpLevel() 获取上游层级
- * @method void setUpLevel(integer $UpLevel) 设置上游层级
- * @method string getServiceInstance() 获取应用实例信息
- * @method void setServiceInstance(string $ServiceInstance) 设置应用实例信息
- * @method integer getDownLevel() 获取下游层级
- * @method void setDownLevel(integer $DownLevel) 设置下游层级
- * @method string getView() 获取视角
- * @method void setView(string $View) 设置视角
- * @method array getFilters() 获取过滤器
- * @method void setFilters(array $Filters) 设置过滤器
- * @method string getTopic() 获取表示Topic（MQ拓扑图用）
- * @method void setTopic(string $Topic) 设置表示Topic（MQ拓扑图用）
- * @method Selectors getSelectors() 获取视图筛选列表
- * @method void setSelectors(Selectors $Selectors) 设置视图筛选列表
- * @method string getId() 获取视图ID
- * @method void setId(string $Id) 设置视图ID
- * @method string getTraceID() 获取TraceID
- * @method void setTraceID(string $TraceID) 设置TraceID
- * @method boolean getIsSlowTopFive() 获取查询top5慢响应节点
- * @method void setIsSlowTopFive(boolean $IsSlowTopFive) 设置查询top5慢响应节点
- * @method boolean getGetResource() 获取是否获取资源层信息
- * @method void setGetResource(boolean $GetResource) 设置是否获取资源层信息
- * @method array getTags() 获取根据应用标签过滤
- * @method void setTags(array $Tags) 设置根据应用标签过滤
- * @method Selectors getHidden() 获取不显示的节点类型
- * @method void setHidden(Selectors $Hidden) 设置不显示的节点类型
+ * @method string getInstanceId() 获取<p>业务系统 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>业务系统 ID</p>
+ * @method integer getStartTime() 获取<p>查询开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>查询开始时间</p>
+ * @method integer getEndTime() 获取<p>查询结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>查询结束时间</p>
+ * @method string getServiceName() 获取<p>应用名</p>
+ * @method void setServiceName(string $ServiceName) 设置<p>应用名</p>
+ * @method integer getUpLevel() 获取<p>上游层级</p>
+ * @method void setUpLevel(integer $UpLevel) 设置<p>上游层级</p>
+ * @method string getServiceInstance() 获取<p>应用实例信息</p>
+ * @method void setServiceInstance(string $ServiceInstance) 设置<p>应用实例信息</p>
+ * @method integer getDownLevel() 获取<p>下游层级</p>
+ * @method void setDownLevel(integer $DownLevel) 设置<p>下游层级</p>
+ * @method string getView() 获取<p>视角</p>
+ * @method void setView(string $View) 设置<p>视角</p>
+ * @method array getFilters() 获取<p>过滤器</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤器</p>
+ * @method string getTopic() 获取<p>表示Topic（MQ拓扑图用）</p>
+ * @method void setTopic(string $Topic) 设置<p>表示Topic（MQ拓扑图用）</p>
+ * @method Selectors getSelectors() 获取<p>视图筛选列表</p>
+ * @method void setSelectors(Selectors $Selectors) 设置<p>视图筛选列表</p>
+ * @method string getId() 获取<p>视图ID</p>
+ * @method void setId(string $Id) 设置<p>视图ID</p>
+ * @method string getTraceID() 获取<p>TraceID</p>
+ * @method void setTraceID(string $TraceID) 设置<p>TraceID</p>
+ * @method boolean getIsSlowTopFive() 获取<p>查询top5慢响应节点</p>
+ * @method void setIsSlowTopFive(boolean $IsSlowTopFive) 设置<p>查询top5慢响应节点</p>
+ * @method boolean getGetResource() 获取<p>是否获取资源层信息</p>
+ * @method void setGetResource(boolean $GetResource) 设置<p>是否获取资源层信息</p>
+ * @method array getTags() 获取<p>根据应用标签过滤</p>
+ * @method void setTags(array $Tags) 设置<p>根据应用标签过滤</p>
+ * @method Selectors getHidden() 获取<p>不显示的节点类型</p>
+ * @method void setHidden(Selectors $Hidden) 设置<p>不显示的节点类型</p>
+ * @method boolean getEnableResourceLink() 获取<p>是否开启云资源关联</p>
+ * @method void setEnableResourceLink(boolean $EnableResourceLink) 设置<p>是否开启云资源关联</p>
  */
 class DescribeTopologyNewRequest extends AbstractModel
 {
     /**
-     * @var string 业务系统 ID
+     * @var string <p>业务系统 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 查询开始时间
+     * @var integer <p>查询开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 查询结束时间
+     * @var integer <p>查询结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 应用名
+     * @var string <p>应用名</p>
      */
     public $ServiceName;
 
     /**
-     * @var integer 上游层级
+     * @var integer <p>上游层级</p>
      */
     public $UpLevel;
 
     /**
-     * @var string 应用实例信息
+     * @var string <p>应用实例信息</p>
      */
     public $ServiceInstance;
 
     /**
-     * @var integer 下游层级
+     * @var integer <p>下游层级</p>
      */
     public $DownLevel;
 
     /**
-     * @var string 视角
+     * @var string <p>视角</p>
      */
     public $View;
 
     /**
-     * @var array 过滤器
+     * @var array <p>过滤器</p>
      */
     public $Filters;
 
     /**
-     * @var string 表示Topic（MQ拓扑图用）
+     * @var string <p>表示Topic（MQ拓扑图用）</p>
      */
     public $Topic;
 
     /**
-     * @var Selectors 视图筛选列表
+     * @var Selectors <p>视图筛选列表</p>
      */
     public $Selectors;
 
     /**
-     * @var string 视图ID
+     * @var string <p>视图ID</p>
      */
     public $Id;
 
     /**
-     * @var string TraceID
+     * @var string <p>TraceID</p>
      */
     public $TraceID;
 
     /**
-     * @var boolean 查询top5慢响应节点
+     * @var boolean <p>查询top5慢响应节点</p>
      */
     public $IsSlowTopFive;
 
     /**
-     * @var boolean 是否获取资源层信息
+     * @var boolean <p>是否获取资源层信息</p>
      */
     public $GetResource;
 
     /**
-     * @var array 根据应用标签过滤
+     * @var array <p>根据应用标签过滤</p>
      */
     public $Tags;
 
     /**
-     * @var Selectors 不显示的节点类型
+     * @var Selectors <p>不显示的节点类型</p>
      */
     public $Hidden;
 
     /**
-     * @param string $InstanceId 业务系统 ID
-     * @param integer $StartTime 查询开始时间
-     * @param integer $EndTime 查询结束时间
-     * @param string $ServiceName 应用名
-     * @param integer $UpLevel 上游层级
-     * @param string $ServiceInstance 应用实例信息
-     * @param integer $DownLevel 下游层级
-     * @param string $View 视角
-     * @param array $Filters 过滤器
-     * @param string $Topic 表示Topic（MQ拓扑图用）
-     * @param Selectors $Selectors 视图筛选列表
-     * @param string $Id 视图ID
-     * @param string $TraceID TraceID
-     * @param boolean $IsSlowTopFive 查询top5慢响应节点
-     * @param boolean $GetResource 是否获取资源层信息
-     * @param array $Tags 根据应用标签过滤
-     * @param Selectors $Hidden 不显示的节点类型
+     * @var boolean <p>是否开启云资源关联</p>
+     */
+    public $EnableResourceLink;
+
+    /**
+     * @param string $InstanceId <p>业务系统 ID</p>
+     * @param integer $StartTime <p>查询开始时间</p>
+     * @param integer $EndTime <p>查询结束时间</p>
+     * @param string $ServiceName <p>应用名</p>
+     * @param integer $UpLevel <p>上游层级</p>
+     * @param string $ServiceInstance <p>应用实例信息</p>
+     * @param integer $DownLevel <p>下游层级</p>
+     * @param string $View <p>视角</p>
+     * @param array $Filters <p>过滤器</p>
+     * @param string $Topic <p>表示Topic（MQ拓扑图用）</p>
+     * @param Selectors $Selectors <p>视图筛选列表</p>
+     * @param string $Id <p>视图ID</p>
+     * @param string $TraceID <p>TraceID</p>
+     * @param boolean $IsSlowTopFive <p>查询top5慢响应节点</p>
+     * @param boolean $GetResource <p>是否获取资源层信息</p>
+     * @param array $Tags <p>根据应用标签过滤</p>
+     * @param Selectors $Hidden <p>不显示的节点类型</p>
+     * @param boolean $EnableResourceLink <p>是否开启云资源关联</p>
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class DescribeTopologyNewRequest extends AbstractModel
         if (array_key_exists("Hidden",$param) and $param["Hidden"] !== null) {
             $this->Hidden = new Selectors();
             $this->Hidden->deserialize($param["Hidden"]);
+        }
+
+        if (array_key_exists("EnableResourceLink",$param) and $param["EnableResourceLink"] !== null) {
+            $this->EnableResourceLink = $param["EnableResourceLink"];
         }
     }
 }

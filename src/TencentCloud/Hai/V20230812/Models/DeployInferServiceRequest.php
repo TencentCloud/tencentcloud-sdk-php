@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeployInferService请求参数结构体
  *
- * @method ServiceMetaData getServiceMetaData() 获取服务元数据信息，如服务名
- * @method void setServiceMetaData(ServiceMetaData $ServiceMetaData) 设置服务元数据信息，如服务名
- * @method ComputeInfo getComputeInfo() 获取资源相关信息
- * @method void setComputeInfo(ComputeInfo $ComputeInfo) 设置资源相关信息
- * @method array getDeploymentConfigs() 获取服务部署信息
- * @method void setDeploymentConfigs(array $DeploymentConfigs) 设置服务部署信息
- * @method HyperParam getHyperParam() 获取服务超参数配置
- * @method void setHyperParam(HyperParam $HyperParam) 设置服务超参数配置
- * @method NetworkSetting getNetworkSetting() 获取网络设置
- * @method void setNetworkSetting(NetworkSetting $NetworkSetting) 设置网络设置
+ * @method ServiceMetaData getServiceMetaData() 获取<p>服务元数据信息，如服务名</p>
+ * @method void setServiceMetaData(ServiceMetaData $ServiceMetaData) 设置<p>服务元数据信息，如服务名</p>
+ * @method ComputeInfo getComputeInfo() 获取<p>资源相关信息</p>
+ * @method void setComputeInfo(ComputeInfo $ComputeInfo) 设置<p>资源相关信息</p>
+ * @method array getDeploymentConfigs() 获取<p>服务部署信息</p>
+ * @method void setDeploymentConfigs(array $DeploymentConfigs) 设置<p>服务部署信息</p>
+ * @method HyperParam getHyperParam() 获取<p>服务超参数配置</p>
+ * @method void setHyperParam(HyperParam $HyperParam) 设置<p>服务超参数配置</p>
+ * @method NetworkSetting getNetworkSetting() 获取<p>网络设置</p>
+ * @method void setNetworkSetting(NetworkSetting $NetworkSetting) 设置<p>网络设置</p>
+ * @method string getSecurityType() 获取<p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
+ * @method void setSecurityType(string $SecurityType) 设置<p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
  */
 class DeployInferServiceRequest extends AbstractModel
 {
     /**
-     * @var ServiceMetaData 服务元数据信息，如服务名
+     * @var ServiceMetaData <p>服务元数据信息，如服务名</p>
      */
     public $ServiceMetaData;
 
     /**
-     * @var ComputeInfo 资源相关信息
+     * @var ComputeInfo <p>资源相关信息</p>
      */
     public $ComputeInfo;
 
     /**
-     * @var array 服务部署信息
+     * @var array <p>服务部署信息</p>
      */
     public $DeploymentConfigs;
 
     /**
-     * @var HyperParam 服务超参数配置
+     * @var HyperParam <p>服务超参数配置</p>
      */
     public $HyperParam;
 
     /**
-     * @var NetworkSetting 网络设置
+     * @var NetworkSetting <p>网络设置</p>
      */
     public $NetworkSetting;
 
     /**
-     * @param ServiceMetaData $ServiceMetaData 服务元数据信息，如服务名
-     * @param ComputeInfo $ComputeInfo 资源相关信息
-     * @param array $DeploymentConfigs 服务部署信息
-     * @param HyperParam $HyperParam 服务超参数配置
-     * @param NetworkSetting $NetworkSetting 网络设置
+     * @var string <p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
+     */
+    public $SecurityType;
+
+    /**
+     * @param ServiceMetaData $ServiceMetaData <p>服务元数据信息，如服务名</p>
+     * @param ComputeInfo $ComputeInfo <p>资源相关信息</p>
+     * @param array $DeploymentConfigs <p>服务部署信息</p>
+     * @param HyperParam $HyperParam <p>服务超参数配置</p>
+     * @param NetworkSetting $NetworkSetting <p>网络设置</p>
+     * @param string $SecurityType <p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
      */
     function __construct()
     {
@@ -105,6 +113,10 @@ class DeployInferServiceRequest extends AbstractModel
         if (array_key_exists("NetworkSetting",$param) and $param["NetworkSetting"] !== null) {
             $this->NetworkSetting = new NetworkSetting();
             $this->NetworkSetting->deserialize($param["NetworkSetting"]);
+        }
+
+        if (array_key_exists("SecurityType",$param) and $param["SecurityType"] !== null) {
+            $this->SecurityType = $param["SecurityType"];
         }
     }
 }

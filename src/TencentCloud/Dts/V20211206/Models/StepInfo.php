@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 单个步骤的详细信息
  *
- * @method integer getStepNo() 获取步骤编号
- * @method void setStepNo(integer $StepNo) 设置步骤编号
- * @method string getStepName() 获取步骤名
- * @method void setStepName(string $StepName) 设置步骤名
- * @method string getStepId() 获取步骤标号
- * @method void setStepId(string $StepId) 设置步骤标号
- * @method string getStatus() 获取当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
- * @method void setStatus(string $Status) 设置当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
- * @method string getStartTime() 获取步骤开始时间，可能为空
- * @method void setStartTime(string $StartTime) 设置步骤开始时间，可能为空
- * @method array getErrors() 获取错误信息
+ * @method integer getStepNo() 获取<p>步骤编号</p>
+ * @method void setStepNo(integer $StepNo) 设置<p>步骤编号</p>
+ * @method string getStepName() 获取<p>步骤名</p>
+ * @method void setStepName(string $StepName) 设置<p>步骤名</p>
+ * @method string getStepId() 获取<p>步骤标号</p>
+ * @method void setStepId(string $StepId) 设置<p>步骤标号</p>
+ * @method string getStatus() 获取<p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
+ * @method void setStatus(string $Status) 设置<p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
+ * @method string getStartTime() 获取<p>步骤开始时间，可能为空</p>
+ * @method void setStartTime(string $StartTime) 设置<p>步骤开始时间，可能为空</p>
+ * @method string getFinishTime() 获取<p>完成时间</p>
+ * @method void setFinishTime(string $FinishTime) 设置<p>完成时间</p>
+ * @method array getErrors() 获取<p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrors(array $Errors) 设置错误信息
+ * @method void setErrors(array $Errors) 设置<p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getWarnings() 获取警告信息
+ * @method array getWarnings() 获取<p>警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarnings(array $Warnings) 设置警告信息
+ * @method void setWarnings(array $Warnings) 设置<p>警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProgress() 获取当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
- * @method void setProgress(integer $Progress) 设置当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
+ * @method integer getProgress() 获取<p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
+ * @method void setProgress(integer $Progress) 设置<p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
  */
 class StepInfo extends AbstractModel
 {
     /**
-     * @var integer 步骤编号
+     * @var integer <p>步骤编号</p>
      */
     public $StepNo;
 
     /**
-     * @var string 步骤名
+     * @var string <p>步骤名</p>
      */
     public $StepName;
 
     /**
-     * @var string 步骤标号
+     * @var string <p>步骤标号</p>
      */
     public $StepId;
 
     /**
-     * @var string 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
+     * @var string <p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
      */
     public $Status;
 
     /**
-     * @var string 步骤开始时间，可能为空
+     * @var string <p>步骤开始时间，可能为空</p>
      */
     public $StartTime;
 
     /**
-     * @var array 错误信息
+     * @var string <p>完成时间</p>
+     */
+    public $FinishTime;
+
+    /**
+     * @var array <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errors;
 
     /**
-     * @var array 警告信息
+     * @var array <p>警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Warnings;
 
     /**
-     * @var integer 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
+     * @var integer <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
      */
     public $Progress;
 
     /**
-     * @param integer $StepNo 步骤编号
-     * @param string $StepName 步骤名
-     * @param string $StepId 步骤标号
-     * @param string $Status 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
-     * @param string $StartTime 步骤开始时间，可能为空
-     * @param array $Errors 错误信息
+     * @param integer $StepNo <p>步骤编号</p>
+     * @param string $StepName <p>步骤名</p>
+     * @param string $StepId <p>步骤标号</p>
+     * @param string $Status <p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
+     * @param string $StartTime <p>步骤开始时间，可能为空</p>
+     * @param string $FinishTime <p>完成时间</p>
+     * @param array $Errors <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Warnings 警告信息
+     * @param array $Warnings <p>警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Progress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
+     * @param integer $Progress <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ class StepInfo extends AbstractModel
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
 
         if (array_key_exists("Errors",$param) and $param["Errors"] !== null) {

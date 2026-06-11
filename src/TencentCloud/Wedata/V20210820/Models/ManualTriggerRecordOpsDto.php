@@ -20,226 +20,294 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 手动工作流触发运行记录实体
  *
- * @method string getTriggerId() 获取运行触发记录ID
+ * @method string getTriggerId() 获取<p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerId(string $TriggerId) 设置运行触发记录ID
+ * @method void setTriggerId(string $TriggerId) 设置<p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTriggerName() 获取用户提交运行时配置的运行名称
+ * @method string getTriggerName() 获取<p>用户提交运行时配置的运行名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerName(string $TriggerName) 设置用户提交运行时配置的运行名称
+ * @method void setTriggerName(string $TriggerName) 设置<p>用户提交运行时配置的运行名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemark() 获取用户提交运行的备注
+ * @method string getRemark() 获取<p>用户提交运行的备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemark(string $Remark) 设置用户提交运行的备注
+ * @method void setRemark(string $Remark) 设置<p>用户提交运行的备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDatetimeList() 获取数据时间列表
+ * @method array getDatetimeList() 获取<p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatetimeList(array $DatetimeList) 设置数据时间列表
+ * @method void setDatetimeList(array $DatetimeList) 设置<p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskCnt() 获取任务数
+ * @method integer getTaskCnt() 获取<p>任务数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskCnt(integer $TaskCnt) 设置任务数
+ * @method void setTaskCnt(integer $TaskCnt) 设置<p>任务数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInstanceCnt() 获取实例数
+ * @method integer getInstanceCnt() 获取<p>实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceCnt(integer $InstanceCnt) 设置实例数
+ * @method void setInstanceCnt(integer $InstanceCnt) 设置<p>实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFinishedInstanceCnt() 获取已完成的实例数
+ * @method integer getFinishedInstanceCnt() 获取<p>已完成的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFinishedInstanceCnt(integer $FinishedInstanceCnt) 设置已完成的实例数
+ * @method void setFinishedInstanceCnt(integer $FinishedInstanceCnt) 设置<p>已完成的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSuccessInstanceCnt() 获取成功的实例数
+ * @method integer getSuccessInstanceCnt() 获取<p>成功的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuccessInstanceCnt(integer $SuccessInstanceCnt) 设置成功的实例数
+ * @method void setSuccessInstanceCnt(integer $SuccessInstanceCnt) 设置<p>成功的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取记录运行状态
- INIT, RUNNING, FINISHED
+ * @method string getStatus() 获取<p>记录运行状态<br> INIT, RUNNING, FINISHED</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置记录运行状态
- INIT, RUNNING, FINISHED
+ * @method void setStatus(string $Status) 设置<p>记录运行状态<br> INIT, RUNNING, FINISHED</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTriggerParams() 获取用户提交运行时的入参，主要用于前端反显和记录原始提交信息
+ * @method string getTriggerParams() 获取<p>用户提交运行时的入参，主要用于前端反显和记录原始提交信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerParams(string $TriggerParams) 设置用户提交运行时的入参，主要用于前端反显和记录原始提交信息
+ * @method void setTriggerParams(string $TriggerParams) 设置<p>用户提交运行时的入参，主要用于前端反显和记录原始提交信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwnerUin() 获取用户主账号ID
+ * @method string getOwnerUin() 获取<p>用户主账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnerUin(string $OwnerUin) 设置用户主账号ID
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>用户主账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserUin() 获取用户ID
+ * @method string getUserUin() 获取<p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserUin(string $UserUin) 设置用户ID
+ * @method void setUserUin(string $UserUin) 设置<p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserName() 获取用户展示名
+ * @method string getUserName() 获取<p>用户展示名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserName(string $UserName) 设置用户展示名
+ * @method void setUserName(string $UserName) 设置<p>用户展示名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTenantId() 获取租户ID
+ * @method string getTenantId() 获取<p>租户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTenantId(string $TenantId) 设置租户ID
+ * @method void setTenantId(string $TenantId) 设置<p>租户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目ID
+ * @method string getProjectId() 获取<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleTimeZone() 获取数据实例时间的时区
+ * @method string getScheduleTimeZone() 获取<p>数据实例时间的时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置数据实例时间的时区
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置<p>数据实例时间的时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTimeType() 获取时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
- * @method void setTimeType(string $TimeType) 设置时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+ * @method string getTimeType() 获取<p>时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理</p>
+ * @method void setTimeType(string $TimeType) 设置<p>时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理</p>
+ * @method string getTriggerSource() 获取<p>触发类型</p><p>枚举值：</p><ul><li>SUB_PROCESS_TRIGGER： 由嵌套工作流 SP 任务触发</li><li>SUB_PROCESS_MAKEUP： 由嵌套工作流 SP 任务补录触发</li><li>MANUAL_RUN_BY_USER： 手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerSource(string $TriggerSource) 设置<p>触发类型</p><p>枚举值：</p><ul><li>SUB_PROCESS_TRIGGER： 由嵌套工作流 SP 任务触发</li><li>SUB_PROCESS_MAKEUP： 由嵌套工作流 SP 任务补录触发</li><li>MANUAL_RUN_BY_USER： 手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTriggerSourceId() 获取<p>触发实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerSourceId(string $TriggerSourceId) 设置<p>触发实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentSpTaskId() 获取<p>父嵌套工作流任务 ID。仅 <code>triggerSource</code> 以 <code>SUB_PROCESS_</code> 开头时有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentSpTaskId(string $ParentSpTaskId) 设置<p>父嵌套工作流任务 ID。仅 <code>triggerSource</code> 以 <code>SUB_PROCESS_</code> 开头时有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentSpInstanceName() 获取<p>父嵌套工作流任务实例名称（即任务名称）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentSpInstanceName(string $ParentSpInstanceName) 设置<p>父嵌套工作流任务实例名称（即任务名称）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentSpInstanceDataTime() 获取<p>父嵌套工作流任务实例数据时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentSpInstanceDataTime(string $ParentSpInstanceDataTime) 设置<p>父嵌套工作流任务实例数据时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getScheduleTimeList() 获取<p>数据时间列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleTimeList(array $ScheduleTimeList) 设置<p>数据时间列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ManualTriggerRecordOpsDto extends AbstractModel
 {
     /**
-     * @var string 运行触发记录ID
+     * @var string <p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerId;
 
     /**
-     * @var string 用户提交运行时配置的运行名称
+     * @var string <p>用户提交运行时配置的运行名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerName;
 
     /**
-     * @var string 用户提交运行的备注
+     * @var string <p>用户提交运行的备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
-     * @var array 数据时间列表
+     * @var array <p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatetimeList;
 
     /**
-     * @var integer 任务数
+     * @var integer <p>任务数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskCnt;
 
     /**
-     * @var integer 实例数
+     * @var integer <p>实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceCnt;
 
     /**
-     * @var integer 已完成的实例数
+     * @var integer <p>已完成的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinishedInstanceCnt;
 
     /**
-     * @var integer 成功的实例数
+     * @var integer <p>成功的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccessInstanceCnt;
 
     /**
-     * @var string 记录运行状态
- INIT, RUNNING, FINISHED
+     * @var string <p>记录运行状态<br> INIT, RUNNING, FINISHED</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 用户提交运行时的入参，主要用于前端反显和记录原始提交信息
+     * @var string <p>用户提交运行时的入参，主要用于前端反显和记录原始提交信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerParams;
 
     /**
-     * @var string 用户主账号ID
+     * @var string <p>用户主账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
-     * @var string 用户ID
+     * @var string <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserUin;
 
     /**
-     * @var string 用户展示名
+     * @var string <p>用户展示名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
-     * @var string 租户ID
+     * @var string <p>租户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TenantId;
 
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 数据实例时间的时区
+     * @var string <p>数据实例时间的时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTimeZone;
 
     /**
-     * @var string 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     * @var string <p>时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理</p>
      */
     public $TimeType;
 
     /**
-     * @param string $TriggerId 运行触发记录ID
+     * @var string <p>触发类型</p><p>枚举值：</p><ul><li>SUB_PROCESS_TRIGGER： 由嵌套工作流 SP 任务触发</li><li>SUB_PROCESS_MAKEUP： 由嵌套工作流 SP 任务补录触发</li><li>MANUAL_RUN_BY_USER： 手动触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TriggerName 用户提交运行时配置的运行名称
+     */
+    public $TriggerSource;
+
+    /**
+     * @var string <p>触发实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Remark 用户提交运行的备注
+     */
+    public $TriggerSourceId;
+
+    /**
+     * @var string <p>父嵌套工作流任务 ID。仅 <code>triggerSource</code> 以 <code>SUB_PROCESS_</code> 开头时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DatetimeList 数据时间列表
+     */
+    public $ParentSpTaskId;
+
+    /**
+     * @var string <p>父嵌套工作流任务实例名称（即任务名称）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskCnt 任务数
+     */
+    public $ParentSpInstanceName;
+
+    /**
+     * @var string <p>父嵌套工作流任务实例数据时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InstanceCnt 实例数
+     */
+    public $ParentSpInstanceDataTime;
+
+    /**
+     * @var array <p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FinishedInstanceCnt 已完成的实例数
+     */
+    public $ScheduleTimeList;
+
+    /**
+     * @param string $TriggerId <p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SuccessInstanceCnt 成功的实例数
+     * @param string $TriggerName <p>用户提交运行时配置的运行名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 记录运行状态
- INIT, RUNNING, FINISHED
+     * @param string $Remark <p>用户提交运行的备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TriggerParams 用户提交运行时的入参，主要用于前端反显和记录原始提交信息
+     * @param array $DatetimeList <p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OwnerUin 用户主账号ID
+     * @param integer $TaskCnt <p>任务数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserUin 用户ID
+     * @param integer $InstanceCnt <p>实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserName 用户展示名
+     * @param integer $FinishedInstanceCnt <p>已完成的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TenantId 租户ID
+     * @param integer $SuccessInstanceCnt <p>成功的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目ID
+     * @param string $Status <p>记录运行状态<br> INIT, RUNNING, FINISHED</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param string $TriggerParams <p>用户提交运行时的入参，主要用于前端反显和记录原始提交信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleTimeZone 数据实例时间的时区
+     * @param string $OwnerUin <p>用户主账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TimeType 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     * @param string $UserUin <p>用户ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserName <p>用户展示名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TenantId <p>租户ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectId <p>项目ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime <p>创建时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleTimeZone <p>数据实例时间的时区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TimeType <p>时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理</p>
+     * @param string $TriggerSource <p>触发类型</p><p>枚举值：</p><ul><li>SUB_PROCESS_TRIGGER： 由嵌套工作流 SP 任务触发</li><li>SUB_PROCESS_MAKEUP： 由嵌套工作流 SP 任务补录触发</li><li>MANUAL_RUN_BY_USER： 手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TriggerSourceId <p>触发实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentSpTaskId <p>父嵌套工作流任务 ID。仅 <code>triggerSource</code> 以 <code>SUB_PROCESS_</code> 开头时有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentSpInstanceName <p>父嵌套工作流任务实例名称（即任务名称）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentSpInstanceDataTime <p>父嵌套工作流任务实例数据时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ScheduleTimeList <p>数据时间列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -324,6 +392,30 @@ class ManualTriggerRecordOpsDto extends AbstractModel
 
         if (array_key_exists("TimeType",$param) and $param["TimeType"] !== null) {
             $this->TimeType = $param["TimeType"];
+        }
+
+        if (array_key_exists("TriggerSource",$param) and $param["TriggerSource"] !== null) {
+            $this->TriggerSource = $param["TriggerSource"];
+        }
+
+        if (array_key_exists("TriggerSourceId",$param) and $param["TriggerSourceId"] !== null) {
+            $this->TriggerSourceId = $param["TriggerSourceId"];
+        }
+
+        if (array_key_exists("ParentSpTaskId",$param) and $param["ParentSpTaskId"] !== null) {
+            $this->ParentSpTaskId = $param["ParentSpTaskId"];
+        }
+
+        if (array_key_exists("ParentSpInstanceName",$param) and $param["ParentSpInstanceName"] !== null) {
+            $this->ParentSpInstanceName = $param["ParentSpInstanceName"];
+        }
+
+        if (array_key_exists("ParentSpInstanceDataTime",$param) and $param["ParentSpInstanceDataTime"] !== null) {
+            $this->ParentSpInstanceDataTime = $param["ParentSpInstanceDataTime"];
+        }
+
+        if (array_key_exists("ScheduleTimeList",$param) and $param["ScheduleTimeList"] !== null) {
+            $this->ScheduleTimeList = $param["ScheduleTimeList"];
         }
     }
 }

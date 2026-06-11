@@ -20,530 +20,474 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群详情详细信息
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method string getPhysicalZone() 获取物理可用区
- * @method void setPhysicalZone(string $PhysicalZone) 设置物理可用区
- * @method string getStatus() 获取状态，支持的值如下：
-- creating：创建中
-- running：运行中
-- isolating：隔离中
-- isolated：已隔离
-- activating：从回收站重新恢复
-- offlining：下线中
-- offlined：已下线
-- deleting：删除中
-- deleted：已删除
- * @method void setStatus(string $Status) 设置状态，支持的值如下：
-- creating：创建中
-- running：运行中
-- isolating：隔离中
-- isolated：已隔离
-- activating：从回收站重新恢复
-- offlining：下线中
-- offlined：已下线
-- deleting：删除中
-- deleted：已删除
- * @method string getStatusDesc() 获取状态描述
- * @method void setStatusDesc(string $StatusDesc) 设置状态描述
- * @method string getServerlessStatus() 获取当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
- * @method void setServerlessStatus(string $ServerlessStatus) 设置当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
- * @method string getStorageId() 获取存储Id
- * @method void setStorageId(string $StorageId) 设置存储Id
- * @method integer getStorage() 获取存储大小，单位为G
- * @method void setStorage(integer $Storage) 设置存储大小，单位为G
- * @method integer getMaxStorageSize() 获取最大存储规格，单位为G
- * @method void setMaxStorageSize(integer $MaxStorageSize) 设置最大存储规格，单位为G
- * @method integer getMinStorageSize() 获取最小存储规格，单位为G
- * @method void setMinStorageSize(integer $MinStorageSize) 设置最小存储规格，单位为G
- * @method integer getStoragePayMode() 获取存储付费类型，1为包年包月，0为按量计费
- * @method void setStoragePayMode(integer $StoragePayMode) 设置存储付费类型，1为包年包月，0为按量计费
- * @method string getVpcName() 获取VPC名称
- * @method void setVpcName(string $VpcName) 设置VPC名称
- * @method string getVpcId() 获取vpc唯一id
- * @method void setVpcId(string $VpcId) 设置vpc唯一id
- * @method string getSubnetName() 获取子网名称
- * @method void setSubnetName(string $SubnetName) 设置子网名称
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method string getCharset() 获取字符集
- * @method void setCharset(string $Charset) 设置字符集
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getDbType() 获取数据库类型
- * @method void setDbType(string $DbType) 设置数据库类型
- * @method string getDbMode() 获取Db类型：<li>NORMAL</li><li>SERVERLESS</li>
- * @method void setDbMode(string $DbMode) 设置Db类型：<li>NORMAL</li><li>SERVERLESS</li>
- * @method string getDbVersion() 获取数据库版本
- * @method void setDbVersion(string $DbVersion) 设置数据库版本
- * @method integer getStorageLimit() 获取存储空间上限
- * @method void setStorageLimit(integer $StorageLimit) 设置存储空间上限
- * @method integer getUsedStorage() 获取使用容量
- * @method void setUsedStorage(integer $UsedStorage) 设置使用容量
- * @method string getVip() 获取vip地址
- * @method void setVip(string $Vip) 设置vip地址
- * @method integer getVport() 获取vport端口
- * @method void setVport(integer $Vport) 设置vport端口
- * @method array getRoAddr() 获取集群只读实例的vip地址和vport端口
- * @method void setRoAddr(array $RoAddr) 设置集群只读实例的vip地址和vport端口
- * @method Ability getAbility() 获取集群支持的功能
- * @method void setAbility(Ability $Ability) 设置集群支持的功能
- * @method string getCynosVersion() 获取cynos版本
- * @method void setCynosVersion(string $CynosVersion) 设置cynos版本
- * @method string getBusinessType() 获取商业类型
- * @method void setBusinessType(string $BusinessType) 设置商业类型
- * @method string getHasSlaveZone() 获取是否有从可用区
- * @method void setHasSlaveZone(string $HasSlaveZone) 设置是否有从可用区
- * @method string getIsFreeze() 获取是否冻结
- * @method void setIsFreeze(string $IsFreeze) 设置是否冻结
- * @method array getTasks() 获取任务列表
- * @method void setTasks(array $Tasks) 设置任务列表
- * @method string getMasterZone() 获取主可用区
- * @method void setMasterZone(string $MasterZone) 设置主可用区
- * @method array getSlaveZones() 获取从可用区列表
- * @method void setSlaveZones(array $SlaveZones) 设置从可用区列表
- * @method array getInstanceSet() 获取实例信息
- * @method void setInstanceSet(array $InstanceSet) 设置实例信息
- * @method integer getPayMode() 获取付费模式
- * @method void setPayMode(integer $PayMode) 设置付费模式
- * @method string getPeriodEndTime() 获取到期时间
- * @method void setPeriodEndTime(string $PeriodEndTime) 设置到期时间
- * @method integer getProjectID() 获取项目id
- * @method void setProjectID(integer $ProjectID) 设置项目id
- * @method array getResourceTags() 获取实例绑定的tag数组信息
- * @method void setResourceTags(array $ResourceTags) 设置实例绑定的tag数组信息
- * @method string getProxyStatus() 获取Proxy状态
- * @method void setProxyStatus(string $ProxyStatus) 设置Proxy状态
- * @method string getLogBin() 获取binlog开关，可选值：ON, OFF
- * @method void setLogBin(string $LogBin) 设置binlog开关，可选值：ON, OFF
- * @method string getIsSkipTrade() 获取是否跳过交易
- * @method void setIsSkipTrade(string $IsSkipTrade) 设置是否跳过交易
- * @method string getPitrType() 获取pitr类型，可选值：normal, redo_pitr
- * @method void setPitrType(string $PitrType) 设置pitr类型，可选值：normal, redo_pitr
- * @method string getIsOpenPasswordComplexity() 获取是否打开密码复杂度
- * @method void setIsOpenPasswordComplexity(string $IsOpenPasswordComplexity) 设置是否打开密码复杂度
- * @method string getNetworkStatus() 获取网络类型
- * @method void setNetworkStatus(string $NetworkStatus) 设置网络类型
- * @method array getResourcePackages() 获取集群绑定的资源包信息	
- * @method void setResourcePackages(array $ResourcePackages) 设置集群绑定的资源包信息	
- * @method integer getRenewFlag() 获取自动续费标识，1为自动续费，0为到期不续
- * @method void setRenewFlag(integer $RenewFlag) 设置自动续费标识，1为自动续费，0为到期不续
- * @method string getNetworkType() 获取节点网络类型
- * @method void setNetworkType(string $NetworkType) 设置节点网络类型
- * @method array getSlaveZoneAttr() 获取备可用区属性
- * @method void setSlaveZoneAttr(array $SlaveZoneAttr) 设置备可用区属性
- * @method string getCynosVersionTag() 获取版本标签
- * @method void setCynosVersionTag(string $CynosVersionTag) 设置版本标签
- * @method string getGdnId() 获取全球数据库网络唯一标识
- * @method void setGdnId(string $GdnId) 设置全球数据库网络唯一标识
- * @method string getGdnRole() 获取集群在全球数据网络中的角色。
-主集群- primary
-从集群 - standby
-如为空，该字段无效
- * @method void setGdnRole(string $GdnRole) 设置集群在全球数据网络中的角色。
-主集群- primary
-从集群 - standby
-如为空，该字段无效
- * @method integer getUsedArchiveStorage() 获取二级存储使用量，单位：G
- * @method void setUsedArchiveStorage(integer $UsedArchiveStorage) 设置二级存储使用量，单位：G
- * @method string getArchiveStatus() 获取归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
- * @method void setArchiveStatus(string $ArchiveStatus) 设置归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
- * @method integer getArchiveProgress() 获取归档进度，百分比。
- * @method void setArchiveProgress(integer $ArchiveProgress) 设置归档进度，百分比。
- * @method boolean getIsOpenTDE() 获取是否开启透明加密
- * @method void setIsOpenTDE(boolean $IsOpenTDE) 设置是否开启透明加密
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getPhysicalZone() 获取<p>物理可用区</p>
+ * @method void setPhysicalZone(string $PhysicalZone) 设置<p>物理可用区</p>
+ * @method string getStatus() 获取<p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul>
+ * @method void setStatus(string $Status) 设置<p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul>
+ * @method string getStatusDesc() 获取<p>状态描述</p>
+ * @method void setStatusDesc(string $StatusDesc) 设置<p>状态描述</p>
+ * @method string getServerlessStatus() 获取<p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>resuming<br>pause<br>pausing</p>
+ * @method void setServerlessStatus(string $ServerlessStatus) 设置<p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>resuming<br>pause<br>pausing</p>
+ * @method string getStorageId() 获取<p>存储Id</p>
+ * @method void setStorageId(string $StorageId) 设置<p>存储Id</p>
+ * @method integer getStorage() 获取<p>存储大小，单位为G</p>
+ * @method void setStorage(integer $Storage) 设置<p>存储大小，单位为G</p>
+ * @method integer getMaxStorageSize() 获取<p>最大存储规格，单位为G</p>
+ * @method void setMaxStorageSize(integer $MaxStorageSize) 设置<p>最大存储规格，单位为G</p>
+ * @method integer getMinStorageSize() 获取<p>最小存储规格，单位为G</p>
+ * @method void setMinStorageSize(integer $MinStorageSize) 设置<p>最小存储规格，单位为G</p>
+ * @method integer getStoragePayMode() 获取<p>存储付费类型，1为包年包月，0为按量计费</p>
+ * @method void setStoragePayMode(integer $StoragePayMode) 设置<p>存储付费类型，1为包年包月，0为按量计费</p>
+ * @method string getVpcName() 获取<p>VPC名称</p>
+ * @method void setVpcName(string $VpcName) 设置<p>VPC名称</p>
+ * @method string getVpcId() 获取<p>vpc唯一id</p>
+ * @method void setVpcId(string $VpcId) 设置<p>vpc唯一id</p>
+ * @method string getSubnetName() 获取<p>子网名称</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>子网名称</p>
+ * @method string getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
+ * @method string getCharset() 获取<p>字符集</p>
+ * @method void setCharset(string $Charset) 设置<p>字符集</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getDbType() 获取<p>数据库类型</p>
+ * @method void setDbType(string $DbType) 设置<p>数据库类型</p>
+ * @method string getDbMode() 获取<p>Db类型：<li>NORMAL</li><li>SERVERLESS</li></p>
+ * @method void setDbMode(string $DbMode) 设置<p>Db类型：<li>NORMAL</li><li>SERVERLESS</li></p>
+ * @method string getDbVersion() 获取<p>数据库版本</p>
+ * @method void setDbVersion(string $DbVersion) 设置<p>数据库版本</p>
+ * @method integer getStorageLimit() 获取<p>存储空间上限</p>
+ * @method void setStorageLimit(integer $StorageLimit) 设置<p>存储空间上限</p>
+ * @method integer getUsedStorage() 获取<p>使用容量</p>
+ * @method void setUsedStorage(integer $UsedStorage) 设置<p>使用容量</p>
+ * @method string getVip() 获取<p>vip地址</p>
+ * @method void setVip(string $Vip) 设置<p>vip地址</p>
+ * @method integer getVport() 获取<p>vport端口</p>
+ * @method void setVport(integer $Vport) 设置<p>vport端口</p>
+ * @method array getRoAddr() 获取<p>集群只读实例的vip地址和vport端口</p>
+ * @method void setRoAddr(array $RoAddr) 设置<p>集群只读实例的vip地址和vport端口</p>
+ * @method Ability getAbility() 获取<p>集群支持的功能</p>
+ * @method void setAbility(Ability $Ability) 设置<p>集群支持的功能</p>
+ * @method string getCynosVersion() 获取<p>cynos版本</p>
+ * @method void setCynosVersion(string $CynosVersion) 设置<p>cynos版本</p>
+ * @method string getBusinessType() 获取<p>商业类型</p>
+ * @method void setBusinessType(string $BusinessType) 设置<p>商业类型</p>
+ * @method string getHasSlaveZone() 获取<p>是否有从可用区</p>
+ * @method void setHasSlaveZone(string $HasSlaveZone) 设置<p>是否有从可用区</p>
+ * @method string getIsFreeze() 获取<p>是否冻结</p>
+ * @method void setIsFreeze(string $IsFreeze) 设置<p>是否冻结</p>
+ * @method array getTasks() 获取<p>任务列表</p>
+ * @method void setTasks(array $Tasks) 设置<p>任务列表</p>
+ * @method string getMasterZone() 获取<p>主可用区</p>
+ * @method void setMasterZone(string $MasterZone) 设置<p>主可用区</p>
+ * @method array getSlaveZones() 获取<p>从可用区列表</p>
+ * @method void setSlaveZones(array $SlaveZones) 设置<p>从可用区列表</p>
+ * @method array getInstanceSet() 获取<p>实例信息</p>
+ * @method void setInstanceSet(array $InstanceSet) 设置<p>实例信息</p>
+ * @method integer getPayMode() 获取<p>付费模式</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>付费模式</p>
+ * @method string getPeriodEndTime() 获取<p>到期时间</p>
+ * @method void setPeriodEndTime(string $PeriodEndTime) 设置<p>到期时间</p>
+ * @method integer getProjectID() 获取<p>项目id</p>
+ * @method void setProjectID(integer $ProjectID) 设置<p>项目id</p>
+ * @method array getResourceTags() 获取<p>实例绑定的tag数组信息</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>实例绑定的tag数组信息</p>
+ * @method string getProxyStatus() 获取<p>Proxy状态</p>
+ * @method void setProxyStatus(string $ProxyStatus) 设置<p>Proxy状态</p>
+ * @method string getLogBin() 获取<p>binlog开关，可选值：ON, OFF</p>
+ * @method void setLogBin(string $LogBin) 设置<p>binlog开关，可选值：ON, OFF</p>
+ * @method string getIsSkipTrade() 获取<p>是否跳过交易</p>
+ * @method void setIsSkipTrade(string $IsSkipTrade) 设置<p>是否跳过交易</p>
+ * @method string getPitrType() 获取<p>pitr类型，可选值：normal, redo_pitr</p>
+ * @method void setPitrType(string $PitrType) 设置<p>pitr类型，可选值：normal, redo_pitr</p>
+ * @method string getIsOpenPasswordComplexity() 获取<p>是否打开密码复杂度</p>
+ * @method void setIsOpenPasswordComplexity(string $IsOpenPasswordComplexity) 设置<p>是否打开密码复杂度</p>
+ * @method string getNetworkStatus() 获取<p>网络类型</p>
+ * @method void setNetworkStatus(string $NetworkStatus) 设置<p>网络类型</p>
+ * @method array getResourcePackages() 获取<p>集群绑定的资源包信息</p>
+ * @method void setResourcePackages(array $ResourcePackages) 设置<p>集群绑定的资源包信息</p>
+ * @method integer getRenewFlag() 获取<p>自动续费标识，1为自动续费，0为到期不续</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>自动续费标识，1为自动续费，0为到期不续</p>
+ * @method string getNetworkType() 获取<p>节点网络类型</p>
+ * @method void setNetworkType(string $NetworkType) 设置<p>节点网络类型</p>
+ * @method array getSlaveZoneAttr() 获取<p>备可用区属性</p>
+ * @method void setSlaveZoneAttr(array $SlaveZoneAttr) 设置<p>备可用区属性</p>
+ * @method string getCynosVersionTag() 获取<p>版本标签</p>
+ * @method void setCynosVersionTag(string $CynosVersionTag) 设置<p>版本标签</p>
+ * @method string getGdnId() 获取<p>全球数据库网络唯一标识</p>
+ * @method void setGdnId(string $GdnId) 设置<p>全球数据库网络唯一标识</p>
+ * @method string getGdnRole() 获取<p>集群在全球数据网络中的角色。<br>主集群- primary<br>从集群 - standby<br>如为空，该字段无效</p>
+ * @method void setGdnRole(string $GdnRole) 设置<p>集群在全球数据网络中的角色。<br>主集群- primary<br>从集群 - standby<br>如为空，该字段无效</p>
+ * @method integer getUsedArchiveStorage() 获取<p>二级存储使用量，单位：G</p>
+ * @method void setUsedArchiveStorage(integer $UsedArchiveStorage) 设置<p>二级存储使用量，单位：G</p>
+ * @method string getArchiveStatus() 获取<p>归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li></p>
+ * @method void setArchiveStatus(string $ArchiveStatus) 设置<p>归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li></p>
+ * @method integer getArchiveProgress() 获取<p>归档进度，百分比。</p>
+ * @method void setArchiveProgress(integer $ArchiveProgress) 设置<p>归档进度，百分比。</p>
+ * @method string getClusterLevel() 获取<p>集群级别。例如 P0, P1</p>
+ * @method void setClusterLevel(string $ClusterLevel) 设置<p>集群级别。例如 P0, P1</p>
+ * @method boolean getIsOpenTDE() 获取<p>是否开启透明加密</p>
+ * @method void setIsOpenTDE(boolean $IsOpenTDE) 设置<p>是否开启透明加密</p>
  */
 class CynosdbClusterDetail extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 物理可用区
+     * @var string <p>物理可用区</p>
      */
     public $PhysicalZone;
 
     /**
-     * @var string 状态，支持的值如下：
-- creating：创建中
-- running：运行中
-- isolating：隔离中
-- isolated：已隔离
-- activating：从回收站重新恢复
-- offlining：下线中
-- offlined：已下线
-- deleting：删除中
-- deleted：已删除
+     * @var string <p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 状态描述
+     * @var string <p>状态描述</p>
      */
     public $StatusDesc;
 
     /**
-     * @var string 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
+     * @var string <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>resuming<br>pause<br>pausing</p>
      */
     public $ServerlessStatus;
 
     /**
-     * @var string 存储Id
+     * @var string <p>存储Id</p>
      */
     public $StorageId;
 
     /**
-     * @var integer 存储大小，单位为G
+     * @var integer <p>存储大小，单位为G</p>
      */
     public $Storage;
 
     /**
-     * @var integer 最大存储规格，单位为G
+     * @var integer <p>最大存储规格，单位为G</p>
      */
     public $MaxStorageSize;
 
     /**
-     * @var integer 最小存储规格，单位为G
+     * @var integer <p>最小存储规格，单位为G</p>
      */
     public $MinStorageSize;
 
     /**
-     * @var integer 存储付费类型，1为包年包月，0为按量计费
+     * @var integer <p>存储付费类型，1为包年包月，0为按量计费</p>
      */
     public $StoragePayMode;
 
     /**
-     * @var string VPC名称
+     * @var string <p>VPC名称</p>
      */
     public $VpcName;
 
     /**
-     * @var string vpc唯一id
+     * @var string <p>vpc唯一id</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网名称
+     * @var string <p>子网名称</p>
      */
     public $SubnetName;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 字符集
+     * @var string <p>字符集</p>
      */
     public $Charset;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 数据库类型
+     * @var string <p>数据库类型</p>
      */
     public $DbType;
 
     /**
-     * @var string Db类型：<li>NORMAL</li><li>SERVERLESS</li>
+     * @var string <p>Db类型：<li>NORMAL</li><li>SERVERLESS</li></p>
      */
     public $DbMode;
 
     /**
-     * @var string 数据库版本
+     * @var string <p>数据库版本</p>
      */
     public $DbVersion;
 
     /**
-     * @var integer 存储空间上限
+     * @var integer <p>存储空间上限</p>
      */
     public $StorageLimit;
 
     /**
-     * @var integer 使用容量
+     * @var integer <p>使用容量</p>
      */
     public $UsedStorage;
 
     /**
-     * @var string vip地址
+     * @var string <p>vip地址</p>
      */
     public $Vip;
 
     /**
-     * @var integer vport端口
+     * @var integer <p>vport端口</p>
      */
     public $Vport;
 
     /**
-     * @var array 集群只读实例的vip地址和vport端口
+     * @var array <p>集群只读实例的vip地址和vport端口</p>
      */
     public $RoAddr;
 
     /**
-     * @var Ability 集群支持的功能
+     * @var Ability <p>集群支持的功能</p>
      */
     public $Ability;
 
     /**
-     * @var string cynos版本
+     * @var string <p>cynos版本</p>
      */
     public $CynosVersion;
 
     /**
-     * @var string 商业类型
+     * @var string <p>商业类型</p>
      */
     public $BusinessType;
 
     /**
-     * @var string 是否有从可用区
+     * @var string <p>是否有从可用区</p>
      */
     public $HasSlaveZone;
 
     /**
-     * @var string 是否冻结
+     * @var string <p>是否冻结</p>
      */
     public $IsFreeze;
 
     /**
-     * @var array 任务列表
+     * @var array <p>任务列表</p>
      */
     public $Tasks;
 
     /**
-     * @var string 主可用区
+     * @var string <p>主可用区</p>
      */
     public $MasterZone;
 
     /**
-     * @var array 从可用区列表
+     * @var array <p>从可用区列表</p>
      */
     public $SlaveZones;
 
     /**
-     * @var array 实例信息
+     * @var array <p>实例信息</p>
      */
     public $InstanceSet;
 
     /**
-     * @var integer 付费模式
+     * @var integer <p>付费模式</p>
      */
     public $PayMode;
 
     /**
-     * @var string 到期时间
+     * @var string <p>到期时间</p>
      */
     public $PeriodEndTime;
 
     /**
-     * @var integer 项目id
+     * @var integer <p>项目id</p>
      */
     public $ProjectID;
 
     /**
-     * @var array 实例绑定的tag数组信息
+     * @var array <p>实例绑定的tag数组信息</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string Proxy状态
+     * @var string <p>Proxy状态</p>
      */
     public $ProxyStatus;
 
     /**
-     * @var string binlog开关，可选值：ON, OFF
+     * @var string <p>binlog开关，可选值：ON, OFF</p>
      */
     public $LogBin;
 
     /**
-     * @var string 是否跳过交易
+     * @var string <p>是否跳过交易</p>
      */
     public $IsSkipTrade;
 
     /**
-     * @var string pitr类型，可选值：normal, redo_pitr
+     * @var string <p>pitr类型，可选值：normal, redo_pitr</p>
      */
     public $PitrType;
 
     /**
-     * @var string 是否打开密码复杂度
+     * @var string <p>是否打开密码复杂度</p>
      */
     public $IsOpenPasswordComplexity;
 
     /**
-     * @var string 网络类型
+     * @var string <p>网络类型</p>
      */
     public $NetworkStatus;
 
     /**
-     * @var array 集群绑定的资源包信息	
+     * @var array <p>集群绑定的资源包信息</p>
      */
     public $ResourcePackages;
 
     /**
-     * @var integer 自动续费标识，1为自动续费，0为到期不续
+     * @var integer <p>自动续费标识，1为自动续费，0为到期不续</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string 节点网络类型
+     * @var string <p>节点网络类型</p>
      */
     public $NetworkType;
 
     /**
-     * @var array 备可用区属性
+     * @var array <p>备可用区属性</p>
      */
     public $SlaveZoneAttr;
 
     /**
-     * @var string 版本标签
+     * @var string <p>版本标签</p>
      */
     public $CynosVersionTag;
 
     /**
-     * @var string 全球数据库网络唯一标识
+     * @var string <p>全球数据库网络唯一标识</p>
      */
     public $GdnId;
 
     /**
-     * @var string 集群在全球数据网络中的角色。
-主集群- primary
-从集群 - standby
-如为空，该字段无效
+     * @var string <p>集群在全球数据网络中的角色。<br>主集群- primary<br>从集群 - standby<br>如为空，该字段无效</p>
      */
     public $GdnRole;
 
     /**
-     * @var integer 二级存储使用量，单位：G
+     * @var integer <p>二级存储使用量，单位：G</p>
      */
     public $UsedArchiveStorage;
 
     /**
-     * @var string 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
+     * @var string <p>归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li></p>
      */
     public $ArchiveStatus;
 
     /**
-     * @var integer 归档进度，百分比。
+     * @var integer <p>归档进度，百分比。</p>
      */
     public $ArchiveProgress;
 
     /**
-     * @var boolean 是否开启透明加密
+     * @var string <p>集群级别。例如 P0, P1</p>
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var boolean <p>是否开启透明加密</p>
      */
     public $IsOpenTDE;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $ClusterName 集群名称
-     * @param string $Region 地域
-     * @param string $Zone 可用区
-     * @param string $PhysicalZone 物理可用区
-     * @param string $Status 状态，支持的值如下：
-- creating：创建中
-- running：运行中
-- isolating：隔离中
-- isolated：已隔离
-- activating：从回收站重新恢复
-- offlining：下线中
-- offlined：已下线
-- deleting：删除中
-- deleted：已删除
-     * @param string $StatusDesc 状态描述
-     * @param string $ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
-     * @param string $StorageId 存储Id
-     * @param integer $Storage 存储大小，单位为G
-     * @param integer $MaxStorageSize 最大存储规格，单位为G
-     * @param integer $MinStorageSize 最小存储规格，单位为G
-     * @param integer $StoragePayMode 存储付费类型，1为包年包月，0为按量计费
-     * @param string $VpcName VPC名称
-     * @param string $VpcId vpc唯一id
-     * @param string $SubnetName 子网名称
-     * @param string $SubnetId 子网ID
-     * @param string $Charset 字符集
-     * @param string $CreateTime 创建时间
-     * @param string $DbType 数据库类型
-     * @param string $DbMode Db类型：<li>NORMAL</li><li>SERVERLESS</li>
-     * @param string $DbVersion 数据库版本
-     * @param integer $StorageLimit 存储空间上限
-     * @param integer $UsedStorage 使用容量
-     * @param string $Vip vip地址
-     * @param integer $Vport vport端口
-     * @param array $RoAddr 集群只读实例的vip地址和vport端口
-     * @param Ability $Ability 集群支持的功能
-     * @param string $CynosVersion cynos版本
-     * @param string $BusinessType 商业类型
-     * @param string $HasSlaveZone 是否有从可用区
-     * @param string $IsFreeze 是否冻结
-     * @param array $Tasks 任务列表
-     * @param string $MasterZone 主可用区
-     * @param array $SlaveZones 从可用区列表
-     * @param array $InstanceSet 实例信息
-     * @param integer $PayMode 付费模式
-     * @param string $PeriodEndTime 到期时间
-     * @param integer $ProjectID 项目id
-     * @param array $ResourceTags 实例绑定的tag数组信息
-     * @param string $ProxyStatus Proxy状态
-     * @param string $LogBin binlog开关，可选值：ON, OFF
-     * @param string $IsSkipTrade 是否跳过交易
-     * @param string $PitrType pitr类型，可选值：normal, redo_pitr
-     * @param string $IsOpenPasswordComplexity 是否打开密码复杂度
-     * @param string $NetworkStatus 网络类型
-     * @param array $ResourcePackages 集群绑定的资源包信息	
-     * @param integer $RenewFlag 自动续费标识，1为自动续费，0为到期不续
-     * @param string $NetworkType 节点网络类型
-     * @param array $SlaveZoneAttr 备可用区属性
-     * @param string $CynosVersionTag 版本标签
-     * @param string $GdnId 全球数据库网络唯一标识
-     * @param string $GdnRole 集群在全球数据网络中的角色。
-主集群- primary
-从集群 - standby
-如为空，该字段无效
-     * @param integer $UsedArchiveStorage 二级存储使用量，单位：G
-     * @param string $ArchiveStatus 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
-     * @param integer $ArchiveProgress 归档进度，百分比。
-     * @param boolean $IsOpenTDE 是否开启透明加密
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $Region <p>地域</p>
+     * @param string $Zone <p>可用区</p>
+     * @param string $PhysicalZone <p>物理可用区</p>
+     * @param string $Status <p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul>
+     * @param string $StatusDesc <p>状态描述</p>
+     * @param string $ServerlessStatus <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>resuming<br>pause<br>pausing</p>
+     * @param string $StorageId <p>存储Id</p>
+     * @param integer $Storage <p>存储大小，单位为G</p>
+     * @param integer $MaxStorageSize <p>最大存储规格，单位为G</p>
+     * @param integer $MinStorageSize <p>最小存储规格，单位为G</p>
+     * @param integer $StoragePayMode <p>存储付费类型，1为包年包月，0为按量计费</p>
+     * @param string $VpcName <p>VPC名称</p>
+     * @param string $VpcId <p>vpc唯一id</p>
+     * @param string $SubnetName <p>子网名称</p>
+     * @param string $SubnetId <p>子网ID</p>
+     * @param string $Charset <p>字符集</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $DbType <p>数据库类型</p>
+     * @param string $DbMode <p>Db类型：<li>NORMAL</li><li>SERVERLESS</li></p>
+     * @param string $DbVersion <p>数据库版本</p>
+     * @param integer $StorageLimit <p>存储空间上限</p>
+     * @param integer $UsedStorage <p>使用容量</p>
+     * @param string $Vip <p>vip地址</p>
+     * @param integer $Vport <p>vport端口</p>
+     * @param array $RoAddr <p>集群只读实例的vip地址和vport端口</p>
+     * @param Ability $Ability <p>集群支持的功能</p>
+     * @param string $CynosVersion <p>cynos版本</p>
+     * @param string $BusinessType <p>商业类型</p>
+     * @param string $HasSlaveZone <p>是否有从可用区</p>
+     * @param string $IsFreeze <p>是否冻结</p>
+     * @param array $Tasks <p>任务列表</p>
+     * @param string $MasterZone <p>主可用区</p>
+     * @param array $SlaveZones <p>从可用区列表</p>
+     * @param array $InstanceSet <p>实例信息</p>
+     * @param integer $PayMode <p>付费模式</p>
+     * @param string $PeriodEndTime <p>到期时间</p>
+     * @param integer $ProjectID <p>项目id</p>
+     * @param array $ResourceTags <p>实例绑定的tag数组信息</p>
+     * @param string $ProxyStatus <p>Proxy状态</p>
+     * @param string $LogBin <p>binlog开关，可选值：ON, OFF</p>
+     * @param string $IsSkipTrade <p>是否跳过交易</p>
+     * @param string $PitrType <p>pitr类型，可选值：normal, redo_pitr</p>
+     * @param string $IsOpenPasswordComplexity <p>是否打开密码复杂度</p>
+     * @param string $NetworkStatus <p>网络类型</p>
+     * @param array $ResourcePackages <p>集群绑定的资源包信息</p>
+     * @param integer $RenewFlag <p>自动续费标识，1为自动续费，0为到期不续</p>
+     * @param string $NetworkType <p>节点网络类型</p>
+     * @param array $SlaveZoneAttr <p>备可用区属性</p>
+     * @param string $CynosVersionTag <p>版本标签</p>
+     * @param string $GdnId <p>全球数据库网络唯一标识</p>
+     * @param string $GdnRole <p>集群在全球数据网络中的角色。<br>主集群- primary<br>从集群 - standby<br>如为空，该字段无效</p>
+     * @param integer $UsedArchiveStorage <p>二级存储使用量，单位：G</p>
+     * @param string $ArchiveStatus <p>归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li></p>
+     * @param integer $ArchiveProgress <p>归档进度，百分比。</p>
+     * @param string $ClusterLevel <p>集群级别。例如 P0, P1</p>
+     * @param boolean $IsOpenTDE <p>是否开启透明加密</p>
      */
     function __construct()
     {
@@ -811,6 +755,10 @@ pausing
 
         if (array_key_exists("ArchiveProgress",$param) and $param["ArchiveProgress"] !== null) {
             $this->ArchiveProgress = $param["ArchiveProgress"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
         }
 
         if (array_key_exists("IsOpenTDE",$param) and $param["IsOpenTDE"] !== null) {

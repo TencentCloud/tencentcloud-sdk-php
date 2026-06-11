@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelName(string $ModelName) 设置<p>模型名称。<br>当前支持的模型列表:<br>Hunyuan，<br>Hailuo，<br>Kling，<br>Vidu，<br>PixVerse，<br>Mingmou，<br>H2。</p>
  * @method string getModelVersion() 获取<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>Hunyuan，可选 [1.5]。</li><li>Hailuo，可选 [02、2.3、2.3-fast]。</li><li>Kling，可选 [1.6、2.0、2.1、2.5、O1、2.6、3.0、3.0-Omni]。</li><li>Vidu，可选 [q2、q2-pro、q2-turbo、q3-pro、q3-turbo、q3、q3-mix]。</li><li>PixVerse，可选 [v5.6、v6、c1]。</li><li>H2，可选 [1.0]。</li></ol>
  * @method void setModelVersion(string $ModelVersion) 设置<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>Hunyuan，可选 [1.5]。</li><li>Hailuo，可选 [02、2.3、2.3-fast]。</li><li>Kling，可选 [1.6、2.0、2.1、2.5、O1、2.6、3.0、3.0-Omni]。</li><li>Vidu，可选 [q2、q2-pro、q2-turbo、q3-pro、q3-turbo、q3、q3-mix]。</li><li>PixVerse，可选 [v5.6、v6、c1]。</li><li>H2，可选 [1.0]。</li></ol>
- * @method string getSceneType() 获取<p>指定场景生视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持：动作控制，motion_control；数字人，avatar_i2v；对口型，lip_sync。</li><li>Mingmou支持：横转竖，land2port。</li><li>Vidu支持：特效模板，template_effect。</li></ol>
- * @method void setSceneType(string $SceneType) 设置<p>指定场景生视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持：动作控制，motion_control；数字人，avatar_i2v；对口型，lip_sync。</li><li>Mingmou支持：横转竖，land2port。</li><li>Vidu支持：特效模板，template_effect。</li></ol>
+ * @method string getSceneType() 获取<p>指定场景生成视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持：动作控制，motion_control；数字人，avatar_i2v；对口型，lip_sync。</li><li>Mingmou支持：横转竖，land2port。</li><li>Vidu支持：特效模板，template_effect。</li><li>Hunyuan支持: 3d世界模型, 3d_scene；涉及的返回文件非视频。</li></ol>
+ * @method void setSceneType(string $SceneType) 设置<p>指定场景生成视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持：动作控制，motion_control；数字人，avatar_i2v；对口型，lip_sync。</li><li>Mingmou支持：横转竖，land2port。</li><li>Vidu支持：特效模板，template_effect。</li><li>Hunyuan支持: 3d世界模型, 3d_scene；涉及的返回文件非视频。</li></ol>
  * @method string getPrompt() 获取<p>生成视频的描述。当未传入图片时，此参数必填。</p>
  * @method void setPrompt(string $Prompt) 设置<p>生成视频的描述。当未传入图片时，此参数必填。</p>
  * @method string getNegativePrompt() 获取<p>用于描述您想要阻止模型生成的内容。<br>注意：部分模型支持。<br>例如：<br>顶部照明、明亮的色彩。<br>人物、动物。<br>多辆汽车、风。</p>
@@ -64,7 +64,7 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     public $ModelVersion;
 
     /**
-     * @var string <p>指定场景生视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持：动作控制，motion_control；数字人，avatar_i2v；对口型，lip_sync。</li><li>Mingmou支持：横转竖，land2port。</li><li>Vidu支持：特效模板，template_effect。</li></ol>
+     * @var string <p>指定场景生成视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持：动作控制，motion_control；数字人，avatar_i2v；对口型，lip_sync。</li><li>Mingmou支持：横转竖，land2port。</li><li>Vidu支持：特效模板，template_effect。</li><li>Hunyuan支持: 3d世界模型, 3d_scene；涉及的返回文件非视频。</li></ol>
      */
     public $SceneType;
 
@@ -131,7 +131,7 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     /**
      * @param string $ModelName <p>模型名称。<br>当前支持的模型列表:<br>Hunyuan，<br>Hailuo，<br>Kling，<br>Vidu，<br>PixVerse，<br>Mingmou，<br>H2。</p>
      * @param string $ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>Hunyuan，可选 [1.5]。</li><li>Hailuo，可选 [02、2.3、2.3-fast]。</li><li>Kling，可选 [1.6、2.0、2.1、2.5、O1、2.6、3.0、3.0-Omni]。</li><li>Vidu，可选 [q2、q2-pro、q2-turbo、q3-pro、q3-turbo、q3、q3-mix]。</li><li>PixVerse，可选 [v5.6、v6、c1]。</li><li>H2，可选 [1.0]。</li></ol>
-     * @param string $SceneType <p>指定场景生视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持：动作控制，motion_control；数字人，avatar_i2v；对口型，lip_sync。</li><li>Mingmou支持：横转竖，land2port。</li><li>Vidu支持：特效模板，template_effect。</li></ol>
+     * @param string $SceneType <p>指定场景生成视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持：动作控制，motion_control；数字人，avatar_i2v；对口型，lip_sync。</li><li>Mingmou支持：横转竖，land2port。</li><li>Vidu支持：特效模板，template_effect。</li><li>Hunyuan支持: 3d世界模型, 3d_scene；涉及的返回文件非视频。</li></ol>
      * @param string $Prompt <p>生成视频的描述。当未传入图片时，此参数必填。</p>
      * @param string $NegativePrompt <p>用于描述您想要阻止模型生成的内容。<br>注意：部分模型支持。<br>例如：<br>顶部照明、明亮的色彩。<br>人物、动物。<br>多辆汽车、风。</p>
      * @param boolean $EnhancePrompt <p>默认取值为False，模型会严格地遵循指令。<br>如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>

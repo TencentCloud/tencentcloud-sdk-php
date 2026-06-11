@@ -33,6 +33,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口（AssociateSecurityGroups）用于安全组批量绑定云资源。
  * @method Models\BindClusterResourcePackagesResponse BindClusterResourcePackages(Models\BindClusterResourcePackagesRequest $req) 本接口（BindClusterResourcePackages）用于为集群绑定资源包。
  * @method Models\CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpires(Models\CalculateBackupSaveSecExpiresRequest $req) 计算修改备份保留时长后将会过期删除的备份文件列表
+ * @method Models\CancelClusterServerlessScalePlanResponse CancelClusterServerlessScalePlan(Models\CancelClusterServerlessScalePlanRequest $req) 取消Serverless集群的弹性计划
  * @method Models\CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstance(Models\CheckCreateLibraDBInstanceRequest $req) 本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
  * @method Models\CheckTransferClusterZoneResponse CheckTransferClusterZone(Models\CheckTransferClusterZoneRequest $req) 本接口（CheckTransferClusterZone）用于检查是否可以发起跨可用区迁移。
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 本接口（CloseAuditService）用于关闭 TDSQL-C MySQL 实例的数据库审计服务。
@@ -49,6 +50,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) 本接口（CreateBackup）用于为集群创建手动备份。
  * @method Models\CreateCLSDeliveryResponse CreateCLSDelivery(Models\CreateCLSDeliveryRequest $req) 本接口（CreateCLSDelivery）用于创建日志投递。
  * @method Models\CreateClusterDatabaseResponse CreateClusterDatabase(Models\CreateClusterDatabaseRequest $req) 本接口（CreateClusterDatabase）用于创建数据库。
+ * @method Models\CreateClusterPeriodScalePolicyResponse CreateClusterPeriodScalePolicy(Models\CreateClusterPeriodScalePolicyRequest $req) 创建集群的周期弹性策略
  * @method Models\CreateClustersResponse CreateClusters(Models\CreateClustersRequest $req) 本接口（CreateClusters）用于新购集群。
  * @method Models\CreateIntegrateClusterResponse CreateIntegrateCluster(Models\CreateIntegrateClusterRequest $req) 本接口（CreateClusters）用于新购集群。
  * @method Models\CreateLibraDBClusterAccountsResponse CreateLibraDBClusterAccounts(Models\CreateLibraDBClusterAccountsRequest $req) 本接口（CreateLibraDBClusterAccounts）用于创建分析集群账号
@@ -65,6 +67,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DeleteBackupVaultResponse DeleteBackupVault(Models\DeleteBackupVaultRequest $req) 从备份保险箱中删除指定的备份文件
  * @method Models\DeleteCLSDeliveryResponse DeleteCLSDelivery(Models\DeleteCLSDeliveryRequest $req) 本接口（DeleteCLSDelivery）用于删除日志投递。
  * @method Models\DeleteClusterDatabaseResponse DeleteClusterDatabase(Models\DeleteClusterDatabaseRequest $req) 本接口（DeleteClusterDatabase）用于删除数据库。
+ * @method Models\DeleteClusterPeriodScalePolicyResponse DeleteClusterPeriodScalePolicy(Models\DeleteClusterPeriodScalePolicyRequest $req) 删除周期弹性策略
  * @method Models\DeleteClusterSaveBackupResponse DeleteClusterSaveBackup(Models\DeleteClusterSaveBackupRequest $req) 本接口（DeleteClusterSaveBackup）用于为集群删除遗留备份
  * @method Models\DeleteLibraDBClusterResponse DeleteLibraDBCluster(Models\DeleteLibraDBClusterRequest $req) 删除 TDSQL-C 分析集群
  * @method Models\DeleteLibraDBClusterAccountsResponse DeleteLibraDBClusterAccounts(Models\DeleteLibraDBClusterAccountsRequest $req) 本接口（DeleteLibraDBClusterAccounts）用于删除分析集群账号
@@ -99,7 +102,9 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeClusterParamLogsResponse DescribeClusterParamLogs(Models\DescribeClusterParamLogsRequest $req) 本接口（DescribeClusterParamLogs）用于查询参数修改记录。
  * @method Models\DescribeClusterParamsResponse DescribeClusterParams(Models\DescribeClusterParamsRequest $req) 本接口（DescribeClusterParams）用于查询集群参数。
  * @method Models\DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexity(Models\DescribeClusterPasswordComplexityRequest $req) 本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情。
+ * @method Models\DescribeClusterPeriodScalePolicyResponse DescribeClusterPeriodScalePolicy(Models\DescribeClusterPeriodScalePolicyRequest $req) 查询集群内所有的周期弹性策略
  * @method Models\DescribeClusterReadOnlyResponse DescribeClusterReadOnly(Models\DescribeClusterReadOnlyRequest $req) 本接口（DescribeClusterReadOnly）用于查询集群只读开关。
+ * @method Models\DescribeClusterServerlessScalePlansResponse DescribeClusterServerlessScalePlans(Models\DescribeClusterServerlessScalePlansRequest $req) 查询Serverless弹性扩容计划
  * @method Models\DescribeClusterTransparentEncryptInfoResponse DescribeClusterTransparentEncryptInfo(Models\DescribeClusterTransparentEncryptInfoRequest $req) 查询集群透明加密信息
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息。
@@ -185,6 +190,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyClusterNameResponse ModifyClusterName(Models\ModifyClusterNameRequest $req) 本接口（ModifyClusterName）用于修改集群名称。
  * @method Models\ModifyClusterParamResponse ModifyClusterParam(Models\ModifyClusterParamRequest $req) 本接口（ModifyClusterParam）用于修改集群参数。
  * @method Models\ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexity(Models\ModifyClusterPasswordComplexityRequest $req) 本接口（ModifyClusterPasswordComplexity）用于修改/开启集群密码复杂度。
+ * @method Models\ModifyClusterPeriodScalePolicyResponse ModifyClusterPeriodScalePolicy(Models\ModifyClusterPeriodScalePolicyRequest $req) 更新集群的周期弹性策略
  * @method Models\ModifyClusterReadOnlyResponse ModifyClusterReadOnly(Models\ModifyClusterReadOnlyRequest $req) 本接口（ModifyClusterReadOnly）用于修改集群只读开关。
  * @method Models\ModifyClusterSlaveZoneResponse ModifyClusterSlaveZone(Models\ModifyClusterSlaveZoneRequest $req) 本接口（ModifyClusterSlaveZone）用于变更集群的备可用区。
  * @method Models\ModifyClusterStorageResponse ModifyClusterStorage(Models\ModifyClusterStorageRequest $req) 本接口（ModifyClusterStorage）用于调整包年包月存储容量。
@@ -215,6 +221,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\OfflineInstanceResponse OfflineInstance(Models\OfflineInstanceRequest $req) 本接口（OfflineInstance）用于销毁实例。
  * @method Models\OfflineLibraDBClusterResponse OfflineLibraDBCluster(Models\OfflineLibraDBClusterRequest $req) 下线分析集群
  * @method Models\OfflineLibraDBInstanceResponse OfflineLibraDBInstance(Models\OfflineLibraDBInstanceRequest $req) 本接口(OfflineLibraDBInstance)用于下线的只读分析引擎实例。
+ * @method Models\OpenAIOptimizerResponse OpenAIOptimizer(Models\OpenAIOptimizerRequest $req) 本接口(OpenAIOptimizer)用于开启实例的AI优化器开关。
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) 本接口（OpenAuditService）用于为实例开通数据库审计服务。
  * @method Models\OpenClusterPasswordComplexityResponse OpenClusterPasswordComplexity(Models\OpenClusterPasswordComplexityRequest $req) 本接口（OpenClusterPasswordComplexity）用于开启自定义密码复杂度功能。
  * @method Models\OpenClusterReadOnlyInstanceGroupAccessResponse OpenClusterReadOnlyInstanceGroupAccess(Models\OpenClusterReadOnlyInstanceGroupAccessRequest $req) 本接口（OpenClusterReadOnlyInstanceGroupAccess）用于开启只读实例组接入。

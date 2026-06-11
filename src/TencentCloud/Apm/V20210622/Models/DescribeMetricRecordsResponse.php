@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMetricRecords返回参数结构体
  *
- * @method array getRecords() 获取指标结果集
- * @method void setRecords(array $Records) 设置指标结果集
- * @method integer getTotalCount() 获取查询指标结果集条数
- * @method void setTotalCount(integer $TotalCount) 设置查询指标结果集条数
+ * @method array getRecords() 获取<p>指标结果集</p>
+ * @method void setRecords(array $Records) 设置<p>指标结果集</p>
+ * @method integer getTotalCount() 获取<p>查询指标结果集条数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>查询指标结果集条数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeMetricRecordsResponse extends AbstractModel
 {
     /**
-     * @var array 指标结果集
+     * @var array <p>指标结果集</p>
      */
     public $Records;
 
     /**
-     * @var integer 查询指标结果集条数
+     * @var integer <p>查询指标结果集条数</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeMetricRecordsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Records 指标结果集
-     * @param integer $TotalCount 查询指标结果集条数
+     * @param array $Records <p>指标结果集</p>
+     * @param integer $TotalCount <p>查询指标结果集条数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

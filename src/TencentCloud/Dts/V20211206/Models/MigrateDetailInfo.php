@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 迁移执行过程信息
  *
- * @method integer getStepAll() 获取总步骤数
- * @method void setStepAll(integer $StepAll) 设置总步骤数
- * @method integer getStepNow() 获取当前步骤
- * @method void setStepNow(integer $StepNow) 设置当前步骤
- * @method integer getMasterSlaveDistance() 获取主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
- * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) 设置主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
- * @method integer getSecondsBehindMaster() 获取主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
- * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) 设置主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
- * @method array getStepInfo() 获取步骤信息
- * @method void setStepInfo(array $StepInfo) 设置步骤信息
+ * @method integer getStepAll() 获取<p>总步骤数</p>
+ * @method void setStepAll(integer $StepAll) 设置<p>总步骤数</p>
+ * @method integer getStepNow() 获取<p>当前步骤</p>
+ * @method void setStepNow(integer $StepNow) 设置<p>当前步骤</p>
+ * @method integer getMasterSlaveDistance() 获取<p>主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
+ * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) 设置<p>主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
+ * @method integer getSecondsBehindMaster() 获取<p>主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
+ * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) 设置<p>主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
+ * @method array getStepInfo() 获取<p>步骤信息</p>
+ * @method void setStepInfo(array $StepInfo) 设置<p>步骤信息</p>
  */
 class MigrateDetailInfo extends AbstractModel
 {
     /**
-     * @var integer 总步骤数
+     * @var integer <p>总步骤数</p>
      */
     public $StepAll;
 
     /**
-     * @var integer 当前步骤
+     * @var integer <p>当前步骤</p>
      */
     public $StepNow;
 
     /**
-     * @var integer 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
+     * @var integer <p>主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
      */
     public $MasterSlaveDistance;
 
     /**
-     * @var integer 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
+     * @var integer <p>主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
      */
     public $SecondsBehindMaster;
 
     /**
-     * @var array 步骤信息
+     * @var array <p>步骤信息</p>
      */
     public $StepInfo;
 
     /**
-     * @param integer $StepAll 总步骤数
-     * @param integer $StepNow 当前步骤
-     * @param integer $MasterSlaveDistance 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-     * @param integer $SecondsBehindMaster 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-     * @param array $StepInfo 步骤信息
+     * @param integer $StepAll <p>总步骤数</p>
+     * @param integer $StepNow <p>当前步骤</p>
+     * @param integer $MasterSlaveDistance <p>主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
+     * @param integer $SecondsBehindMaster <p>主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
+     * @param array $StepInfo <p>步骤信息</p>
      */
     function __construct()
     {

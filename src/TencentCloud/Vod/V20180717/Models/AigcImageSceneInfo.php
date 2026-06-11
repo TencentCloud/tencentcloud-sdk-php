@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 场景化 AIGC 生图配置。
  *
- * @method string getType() 获取<p>AI生图场景类型，可选值：</p><ul><li>change_clothes：常规场景换衣。</li><li>change_clothes_under：特殊场景换衣。</li><li>change_clothes_top_wear：上半身换衣。</li><li>change_clothes_bottom_wear：下半身换衣。</li><li>change_clothes_full_wear：全身换衣。</li><li>product_image：AI生商品图。</li><li>outpainting: AI扩图。</li></ul>
- * @method void setType(string $Type) 设置<p>AI生图场景类型，可选值：</p><ul><li>change_clothes：常规场景换衣。</li><li>change_clothes_under：特殊场景换衣。</li><li>change_clothes_top_wear：上半身换衣。</li><li>change_clothes_bottom_wear：下半身换衣。</li><li>change_clothes_full_wear：全身换衣。</li><li>product_image：AI生商品图。</li><li>outpainting: AI扩图。</li></ul>
- * @method ChangeClothesConfig getChangeClothesConfig() 获取<p>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
- * @method void setChangeClothesConfig(ChangeClothesConfig $ChangeClothesConfig) 设置<p>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
- * @method ProductImageConfig getProductImageConfig() 获取<p>当 Type 为 product_image 时有效，表示AI 生商品图配置参数。</p>
- * @method void setProductImageConfig(ProductImageConfig $ProductImageConfig) 设置<p>当 Type 为 product_image 时有效，表示AI 生商品图配置参数。</p>
+ * @method string getType() 获取<p>AI生图场景类型，可选值：</p><ul><li><code>ai_try_on</code>：AI 换装。</li><li><code>product_image</code>：AI 生商品图。</li><li><code>outpainting</code>: AI 扩图。</li></ul><p>下列 <code>Type</code> 已废弃，后续不再更新：</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+ * @method void setType(string $Type) 设置<p>AI生图场景类型，可选值：</p><ul><li><code>ai_try_on</code>：AI 换装。</li><li><code>product_image</code>：AI 生商品图。</li><li><code>outpainting</code>: AI 扩图。</li></ul><p>下列 <code>Type</code> 已废弃，后续不再更新：</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+ * @method AiTryOnConfig getAiTryOnConfig() 获取<p>当 Type 为 ai_try_on 时必填，表示 AI 换装配置参数。</p>
+ * @method void setAiTryOnConfig(AiTryOnConfig $AiTryOnConfig) 设置<p>当 Type 为 ai_try_on 时必填，表示 AI 换装配置参数。</p>
+ * @method ChangeClothesConfig getChangeClothesConfig() 获取<p><strong>已废弃，请使用AiTryOnConfig。</strong>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+ * @method void setChangeClothesConfig(ChangeClothesConfig $ChangeClothesConfig) 设置<p><strong>已废弃，请使用AiTryOnConfig。</strong>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+ * @method ProductImageConfig getProductImageConfig() 获取<p>当 Type 为 product_image 时必填，表示AI 生商品图配置参数。</p>
+ * @method void setProductImageConfig(ProductImageConfig $ProductImageConfig) 设置<p>当 Type 为 product_image 时必填，表示AI 生商品图配置参数。</p>
  */
 class AigcImageSceneInfo extends AbstractModel
 {
     /**
-     * @var string <p>AI生图场景类型，可选值：</p><ul><li>change_clothes：常规场景换衣。</li><li>change_clothes_under：特殊场景换衣。</li><li>change_clothes_top_wear：上半身换衣。</li><li>change_clothes_bottom_wear：下半身换衣。</li><li>change_clothes_full_wear：全身换衣。</li><li>product_image：AI生商品图。</li><li>outpainting: AI扩图。</li></ul>
+     * @var string <p>AI生图场景类型，可选值：</p><ul><li><code>ai_try_on</code>：AI 换装。</li><li><code>product_image</code>：AI 生商品图。</li><li><code>outpainting</code>: AI 扩图。</li></ul><p>下列 <code>Type</code> 已废弃，后续不再更新：</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
      */
     public $Type;
 
     /**
-     * @var ChangeClothesConfig <p>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
+     * @var AiTryOnConfig <p>当 Type 为 ai_try_on 时必填，表示 AI 换装配置参数。</p>
+     */
+    public $AiTryOnConfig;
+
+    /**
+     * @var ChangeClothesConfig <p><strong>已废弃，请使用AiTryOnConfig。</strong>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
      */
     public $ChangeClothesConfig;
 
     /**
-     * @var ProductImageConfig <p>当 Type 为 product_image 时有效，表示AI 生商品图配置参数。</p>
+     * @var ProductImageConfig <p>当 Type 为 product_image 时必填，表示AI 生商品图配置参数。</p>
      */
     public $ProductImageConfig;
 
     /**
-     * @param string $Type <p>AI生图场景类型，可选值：</p><ul><li>change_clothes：常规场景换衣。</li><li>change_clothes_under：特殊场景换衣。</li><li>change_clothes_top_wear：上半身换衣。</li><li>change_clothes_bottom_wear：下半身换衣。</li><li>change_clothes_full_wear：全身换衣。</li><li>product_image：AI生商品图。</li><li>outpainting: AI扩图。</li></ul>
-     * @param ChangeClothesConfig $ChangeClothesConfig <p>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
-     * @param ProductImageConfig $ProductImageConfig <p>当 Type 为 product_image 时有效，表示AI 生商品图配置参数。</p>
+     * @param string $Type <p>AI生图场景类型，可选值：</p><ul><li><code>ai_try_on</code>：AI 换装。</li><li><code>product_image</code>：AI 生商品图。</li><li><code>outpainting</code>: AI 扩图。</li></ul><p>下列 <code>Type</code> 已废弃，后续不再更新：</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+     * @param AiTryOnConfig $AiTryOnConfig <p>当 Type 为 ai_try_on 时必填，表示 AI 换装配置参数。</p>
+     * @param ChangeClothesConfig $ChangeClothesConfig <p><strong>已废弃，请使用AiTryOnConfig。</strong>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+     * @param ProductImageConfig $ProductImageConfig <p>当 Type 为 product_image 时必填，表示AI 生商品图配置参数。</p>
      */
     function __construct()
     {
@@ -64,6 +72,11 @@ class AigcImageSceneInfo extends AbstractModel
         }
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("AiTryOnConfig",$param) and $param["AiTryOnConfig"] !== null) {
+            $this->AiTryOnConfig = new AiTryOnConfig();
+            $this->AiTryOnConfig->deserialize($param["AiTryOnConfig"]);
         }
 
         if (array_key_exists("ChangeClothesConfig",$param) and $param["ChangeClothesConfig"] !== null) {

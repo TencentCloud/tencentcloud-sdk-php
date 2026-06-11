@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(string $ExpireTime) 设置<p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
  * @method string getAspectRatio() 获取<p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
  * @method void setAspectRatio(string $AspectRatio) 设置<p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
- * @method ImageSceneAigcEncodeConfig getEncodeConfig() 获取<p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
- * @method void setEncodeConfig(ImageSceneAigcEncodeConfig $EncodeConfig) 设置<p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+ * @method ImageSceneAigcEncodeConfig getEncodeConfig() 获取<p>输出图片编码格式参数。</p>
+ * @method void setEncodeConfig(ImageSceneAigcEncodeConfig $EncodeConfig) 设置<p>输出图片编码格式参数。</p>
  * @method integer getImageWidth() 获取<p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
  * @method void setImageWidth(integer $ImageWidth) 设置<p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
  * @method integer getImageHeight() 获取<p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
  * @method void setImageHeight(integer $ImageHeight) 设置<p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
- * @method string getResolution() 获取<p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
- * @method void setResolution(string $Resolution) 设置<p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+ * @method string getResolution() 获取<p>输出分辨率。仅<code>ai_try_on</code>场景有效。可选值：1K、2K、4K。</p>
+ * @method void setResolution(string $Resolution) 设置<p>输出分辨率。仅<code>ai_try_on</code>场景有效。可选值：1K、2K、4K。</p>
  */
 class SceneAigcImageOutputConfig extends AbstractModel
 {
@@ -67,7 +67,7 @@ class SceneAigcImageOutputConfig extends AbstractModel
     public $AspectRatio;
 
     /**
-     * @var ImageSceneAigcEncodeConfig <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+     * @var ImageSceneAigcEncodeConfig <p>输出图片编码格式参数。</p>
      */
     public $EncodeConfig;
 
@@ -82,7 +82,7 @@ class SceneAigcImageOutputConfig extends AbstractModel
     public $ImageHeight;
 
     /**
-     * @var string <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+     * @var string <p>输出分辨率。仅<code>ai_try_on</code>场景有效。可选值：1K、2K、4K。</p>
      */
     public $Resolution;
 
@@ -92,10 +92,10 @@ class SceneAigcImageOutputConfig extends AbstractModel
      * @param integer $ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
      * @param string $ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      * @param string $AspectRatio <p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
-     * @param ImageSceneAigcEncodeConfig $EncodeConfig <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+     * @param ImageSceneAigcEncodeConfig $EncodeConfig <p>输出图片编码格式参数。</p>
      * @param integer $ImageWidth <p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
      * @param integer $ImageHeight <p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
-     * @param string $Resolution <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+     * @param string $Resolution <p>输出分辨率。仅<code>ai_try_on</code>场景有效。可选值：1K、2K、4K。</p>
      */
     function __construct()
     {

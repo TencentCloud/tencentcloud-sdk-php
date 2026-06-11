@@ -20,46 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LiveRealTimeClip返回参数结构体
  *
- * @method string getUrl() 获取剪辑后的视频播放 URL。
- * @method void setUrl(string $Url) 设置剪辑后的视频播放 URL。
- * @method string getFileId() 获取剪辑固化后的视频的媒体文件的唯一标识。
- * @method void setFileId(string $FileId) 设置剪辑固化后的视频的媒体文件的唯一标识。
- * @method string getVodTaskId() 获取剪辑固化后的视频任务流 ID。
- * @method void setVodTaskId(string $VodTaskId) 设置剪辑固化后的视频任务流 ID。
- * @method MediaMetaData getMetaData() 获取剪辑后的视频元信息。
+ * @method string getUrl() 获取<p>剪辑后的视频播放 URL。</p>
+ * @method void setUrl(string $Url) 设置<p>剪辑后的视频播放 URL。</p>
+ * @method string getFileId() 获取<p>剪辑固化后的视频的媒体文件的唯一标识。</p>
+ * @method void setFileId(string $FileId) 设置<p>剪辑固化后的视频的媒体文件的唯一标识。</p>
+ * @method string getVodTaskId() 获取<p>剪辑固化后的视频任务流 ID。</p>
+ * @method void setVodTaskId(string $VodTaskId) 设置<p>剪辑固化后的视频任务流 ID。</p>
+ * @method MediaMetaData getMetaData() 获取<p>剪辑后的视频元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetaData(MediaMetaData $MetaData) 设置剪辑后的视频元信息。
+ * @method void setMetaData(MediaMetaData $MetaData) 设置<p>剪辑后的视频元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSegmentSet() 获取<span id="p_segmentset">剪辑后的视频片段信息。</span>
- * @method void setSegmentSet(array $SegmentSet) 设置<span id="p_segmentset">剪辑后的视频片段信息。</span>
+ * @method array getSegmentSet() 获取<p><span id="p_segmentset">剪辑后的视频片段信息。</span></p>
+ * @method void setSegmentSet(array $SegmentSet) 设置<p><span id="p_segmentset">剪辑后的视频片段信息。</span></p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class LiveRealTimeClipResponse extends AbstractModel
 {
     /**
-     * @var string 剪辑后的视频播放 URL。
+     * @var string <p>剪辑后的视频播放 URL。</p>
      */
     public $Url;
 
     /**
-     * @var string 剪辑固化后的视频的媒体文件的唯一标识。
+     * @var string <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
      */
     public $FileId;
 
     /**
-     * @var string 剪辑固化后的视频任务流 ID。
+     * @var string <p>剪辑固化后的视频任务流 ID。</p>
      */
     public $VodTaskId;
 
     /**
-     * @var MediaMetaData 剪辑后的视频元信息。
+     * @var MediaMetaData <p>剪辑后的视频元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaData;
 
     /**
-     * @var array <span id="p_segmentset">剪辑后的视频片段信息。</span>
+     * @var array <p><span id="p_segmentset">剪辑后的视频片段信息。</span></p>
      */
     public $SegmentSet;
 
@@ -69,12 +69,12 @@ class LiveRealTimeClipResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Url 剪辑后的视频播放 URL。
-     * @param string $FileId 剪辑固化后的视频的媒体文件的唯一标识。
-     * @param string $VodTaskId 剪辑固化后的视频任务流 ID。
-     * @param MediaMetaData $MetaData 剪辑后的视频元信息。
+     * @param string $Url <p>剪辑后的视频播放 URL。</p>
+     * @param string $FileId <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
+     * @param string $VodTaskId <p>剪辑固化后的视频任务流 ID。</p>
+     * @param MediaMetaData $MetaData <p>剪辑后的视频元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SegmentSet <span id="p_segmentset">剪辑后的视频片段信息。</span>
+     * @param array $SegmentSet <p><span id="p_segmentset">剪辑后的视频片段信息。</span></p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

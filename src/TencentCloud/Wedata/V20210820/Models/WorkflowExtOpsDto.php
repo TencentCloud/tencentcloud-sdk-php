@@ -20,218 +20,230 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流
  *
- * @method integer getTaskCount() 获取任务数量count
+ * @method integer getTaskCount() 获取<p>任务数量count</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskCount(integer $TaskCount) 设置任务数量count
+ * @method void setTaskCount(integer $TaskCount) 设置<p>任务数量count</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFolderName() 获取文件名
+ * @method string getFolderName() 获取<p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderName(string $FolderName) 设置文件名
+ * @method void setFolderName(string $FolderName) 设置<p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkFlowId() 获取工作流id
+ * @method string getWorkFlowId() 获取<p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkFlowId(string $WorkFlowId) 设置工作流id
+ * @method void setWorkFlowId(string $WorkFlowId) 设置<p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwner() 获取责任人
+ * @method string getOwner() 获取<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwner(string $Owner) 设置责任人
+ * @method void setOwner(string $Owner) 设置<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwnerId() 获取责任人userId
+ * @method string getOwnerId() 获取<p>责任人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnerId(string $OwnerId) 设置责任人userId
+ * @method void setOwnerId(string $OwnerId) 设置<p>责任人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目id
+ * @method string getProjectId() 获取<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectIdent() 获取项目标识
+ * @method string getProjectIdent() 获取<p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectIdent(string $ProjectIdent) 设置项目标识
+ * @method void setProjectIdent(string $ProjectIdent) 设置<p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectName() 获取项目名称
+ * @method string getProjectName() 获取<p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectName(string $ProjectName) 设置项目名称
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkFlowDesc() 获取工作流描述
+ * @method string getWorkFlowDesc() 获取<p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkFlowDesc(string $WorkFlowDesc) 设置工作流描述
+ * @method void setWorkFlowDesc(string $WorkFlowDesc) 设置<p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkFlowName() 获取工作流名称
+ * @method string getWorkFlowName() 获取<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkFlowName(string $WorkFlowName) 设置工作流名称
+ * @method void setWorkFlowName(string $WorkFlowName) 设置<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFolderId() 获取工作流文件id
+ * @method string getFolderId() 获取<p>工作流文件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderId(string $FolderId) 设置工作流文件id
+ * @method void setFolderId(string $FolderId) 设置<p>工作流文件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取工作流状态
+ * @method string getStatus() 获取<p>工作流状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置工作流状态
+ * @method void setStatus(string $Status) 设置<p>工作流状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取工作流创建时间
+ * @method string getCreateTime() 获取<p>工作流创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置工作流创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>工作流创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModifyTime() 获取最近更新时间
+ * @method string getModifyTime() 获取<p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModifyTime(string $ModifyTime) 设置最近更新时间
+ * @method void setModifyTime(string $ModifyTime) 设置<p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModifyUser() 获取最近更新人
+ * @method string getModifyUser() 获取<p>最近更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModifyUser(string $ModifyUser) 设置最近更新人
+ * @method void setModifyUser(string $ModifyUser) 设置<p>最近更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowType() 获取工作流类型，周期cycle，手动manual
+ * @method string getWorkflowType() 获取<p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowType(string $WorkflowType) 设置工作流类型，周期cycle，手动manual
+ * @method void setWorkflowType(string $WorkflowType) 设置<p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBundleId() 获取bundle客户端绑定唯一id
- * @method void setBundleId(string $BundleId) 设置bundle客户端绑定唯一id
- * @method string getBundleInfo() 获取bundle客户端扩展信息，json格式
- * @method void setBundleInfo(string $BundleInfo) 设置bundle客户端扩展信息，json格式
+ * @method string getBundleId() 获取<p>bundle客户端绑定唯一id</p>
+ * @method void setBundleId(string $BundleId) 设置<p>bundle客户端绑定唯一id</p>
+ * @method string getBundleInfo() 获取<p>bundle客户端扩展信息，json格式</p>
+ * @method void setBundleInfo(string $BundleInfo) 设置<p>bundle客户端扩展信息，json格式</p>
+ * @method array getNestedBySpTaskIds() 获取<p>引用该手动工作流的嵌套工作流任务ID列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNestedBySpTaskIds(array $NestedBySpTaskIds) 设置<p>引用该手动工作流的嵌套工作流任务ID列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowExtOpsDto extends AbstractModel
 {
     /**
-     * @var integer 任务数量count
+     * @var integer <p>任务数量count</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskCount;
 
     /**
-     * @var string 文件名
+     * @var string <p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderName;
 
     /**
-     * @var string 工作流id
+     * @var string <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkFlowId;
 
     /**
-     * @var string 责任人
+     * @var string <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Owner;
 
     /**
-     * @var string 责任人userId
+     * @var string <p>责任人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerId;
 
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 项目标识
+     * @var string <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectIdent;
 
     /**
-     * @var string 项目名称
+     * @var string <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
-     * @var string 工作流描述
+     * @var string <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkFlowDesc;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkFlowName;
 
     /**
-     * @var string 工作流文件id
+     * @var string <p>工作流文件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderId;
 
     /**
-     * @var string 工作流状态
+     * @var string <p>工作流状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 工作流创建时间
+     * @var string <p>工作流创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 最近更新时间
+     * @var string <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
-     * @var string 最近更新人
+     * @var string <p>最近更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyUser;
 
     /**
-     * @var string 工作流类型，周期cycle，手动manual
+     * @var string <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowType;
 
     /**
-     * @var string bundle客户端绑定唯一id
+     * @var string <p>bundle客户端绑定唯一id</p>
      */
     public $BundleId;
 
     /**
-     * @var string bundle客户端扩展信息，json格式
+     * @var string <p>bundle客户端扩展信息，json格式</p>
      */
     public $BundleInfo;
 
     /**
-     * @param integer $TaskCount 任务数量count
+     * @var array <p>引用该手动工作流的嵌套工作流任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FolderName 文件名
+     */
+    public $NestedBySpTaskIds;
+
+    /**
+     * @param integer $TaskCount <p>任务数量count</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkFlowId 工作流id
+     * @param string $FolderName <p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Owner 责任人
+     * @param string $WorkFlowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OwnerId 责任人userId
+     * @param string $Owner <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目id
+     * @param string $OwnerId <p>责任人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectIdent 项目标识
+     * @param string $ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectName 项目名称
+     * @param string $ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkFlowDesc 工作流描述
+     * @param string $ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkFlowName 工作流名称
+     * @param string $WorkFlowDesc <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FolderId 工作流文件id
+     * @param string $WorkFlowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 工作流状态
+     * @param string $FolderId <p>工作流文件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 工作流创建时间
+     * @param string $Status <p>工作流状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModifyTime 最近更新时间
+     * @param string $CreateTime <p>工作流创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModifyUser 最近更新人
+     * @param string $ModifyTime <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowType 工作流类型，周期cycle，手动manual
+     * @param string $ModifyUser <p>最近更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BundleId bundle客户端绑定唯一id
-     * @param string $BundleInfo bundle客户端扩展信息，json格式
+     * @param string $WorkflowType <p>工作流类型，周期cycle，手动manual</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleId <p>bundle客户端绑定唯一id</p>
+     * @param string $BundleInfo <p>bundle客户端扩展信息，json格式</p>
+     * @param array $NestedBySpTaskIds <p>引用该手动工作流的嵌套工作流任务ID列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -316,6 +328,10 @@ class WorkflowExtOpsDto extends AbstractModel
 
         if (array_key_exists("BundleInfo",$param) and $param["BundleInfo"] !== null) {
             $this->BundleInfo = $param["BundleInfo"];
+        }
+
+        if (array_key_exists("NestedBySpTaskIds",$param) and $param["NestedBySpTaskIds"] !== null) {
+            $this->NestedBySpTaskIds = $param["NestedBySpTaskIds"];
         }
     }
 }

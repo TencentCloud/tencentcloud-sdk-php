@@ -20,58 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApmInstances请求参数结构体
  *
- * @method array getTags() 获取Tag 列表
- * @method void setTags(array $Tags) 设置Tag 列表
- * @method string getInstanceName() 获取按业务系统名过滤，支持模糊检索
- * @method void setInstanceName(string $InstanceName) 设置按业务系统名过滤，支持模糊检索
- * @method string getInstanceId() 获取按业务系统 ID 过滤，支持模糊检索
- * @method void setInstanceId(string $InstanceId) 设置按业务系统 ID 过滤，支持模糊检索
- * @method array getInstanceIds() 获取按业务系统 ID 过滤
- * @method void setInstanceIds(array $InstanceIds) 设置按业务系统 ID 过滤
- * @method integer getDemoInstanceFlag() 获取是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
- * @method void setDemoInstanceFlag(integer $DemoInstanceFlag) 设置是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
- * @method integer getAllRegionsFlag() 获取是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
- * @method void setAllRegionsFlag(integer $AllRegionsFlag) 设置是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
+ * @method array getTags() 获取<p>Tag 列表</p>
+ * @method void setTags(array $Tags) 设置<p>Tag 列表</p>
+ * @method string getInstanceName() 获取<p>按业务系统名过滤，支持模糊检索</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>按业务系统名过滤，支持模糊检索</p>
+ * @method string getInstanceId() 获取<p>按业务系统 ID 过滤，支持模糊检索</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>按业务系统 ID 过滤，支持模糊检索</p>
+ * @method array getInstanceIds() 获取<p>按业务系统 ID 过滤</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>按业务系统 ID 过滤</p>
+ * @method integer getDemoInstanceFlag() 获取<p>是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）</p>
+ * @method void setDemoInstanceFlag(integer $DemoInstanceFlag) 设置<p>是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）</p>
+ * @method integer getAllRegionsFlag() 获取<p>是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）</p>
+ * @method void setAllRegionsFlag(integer $AllRegionsFlag) 设置<p>是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）</p>
+ * @method integer getPageIndex() 获取<p>页码，从1开始</p><p>单位：页</p>
+ * @method void setPageIndex(integer $PageIndex) 设置<p>页码，从1开始</p><p>单位：页</p>
+ * @method integer getPageSize() 获取<p>每页数量，默认20，最大100</p><p>单位：个</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页数量，默认20，最大100</p><p>单位：个</p>
+ * @method string getKeyword() 获取<p>搜索参数（OR 匹配 Name / InstanceKey）</p>
+ * @method void setKeyword(string $Keyword) 设置<p>搜索参数（OR 匹配 Name / InstanceKey）</p>
+ * @method string getOrderDirection() 获取<p>排序类型：ASC | DESC</p>
+ * @method void setOrderDirection(string $OrderDirection) 设置<p>排序类型：ASC | DESC</p>
+ * @method string getOrderBy() 获取<p>排序字段：ServiceCount / TotalCount</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序字段：ServiceCount / TotalCount</p>
  */
 class DescribeApmInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Tag 列表
+     * @var array <p>Tag 列表</p>
      */
     public $Tags;
 
     /**
-     * @var string 按业务系统名过滤，支持模糊检索
+     * @var string <p>按业务系统名过滤，支持模糊检索</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 按业务系统 ID 过滤，支持模糊检索
+     * @var string <p>按业务系统 ID 过滤，支持模糊检索</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 按业务系统 ID 过滤
+     * @var array <p>按业务系统 ID 过滤</p>
      */
     public $InstanceIds;
 
     /**
-     * @var integer 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+     * @var integer <p>是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）</p>
      */
     public $DemoInstanceFlag;
 
     /**
-     * @var integer 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
+     * @var integer <p>是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）</p>
      */
     public $AllRegionsFlag;
 
     /**
-     * @param array $Tags Tag 列表
-     * @param string $InstanceName 按业务系统名过滤，支持模糊检索
-     * @param string $InstanceId 按业务系统 ID 过滤，支持模糊检索
-     * @param array $InstanceIds 按业务系统 ID 过滤
-     * @param integer $DemoInstanceFlag 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
-     * @param integer $AllRegionsFlag 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
+     * @var integer <p>页码，从1开始</p><p>单位：页</p>
+     */
+    public $PageIndex;
+
+    /**
+     * @var integer <p>每页数量，默认20，最大100</p><p>单位：个</p>
+     */
+    public $PageSize;
+
+    /**
+     * @var string <p>搜索参数（OR 匹配 Name / InstanceKey）</p>
+     */
+    public $Keyword;
+
+    /**
+     * @var string <p>排序类型：ASC | DESC</p>
+     */
+    public $OrderDirection;
+
+    /**
+     * @var string <p>排序字段：ServiceCount / TotalCount</p>
+     */
+    public $OrderBy;
+
+    /**
+     * @param array $Tags <p>Tag 列表</p>
+     * @param string $InstanceName <p>按业务系统名过滤，支持模糊检索</p>
+     * @param string $InstanceId <p>按业务系统 ID 过滤，支持模糊检索</p>
+     * @param array $InstanceIds <p>按业务系统 ID 过滤</p>
+     * @param integer $DemoInstanceFlag <p>是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）</p>
+     * @param integer $AllRegionsFlag <p>是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）</p>
+     * @param integer $PageIndex <p>页码，从1开始</p><p>单位：页</p>
+     * @param integer $PageSize <p>每页数量，默认20，最大100</p><p>单位：个</p>
+     * @param string $Keyword <p>搜索参数（OR 匹配 Name / InstanceKey）</p>
+     * @param string $OrderDirection <p>排序类型：ASC | DESC</p>
+     * @param string $OrderBy <p>排序字段：ServiceCount / TotalCount</p>
      */
     function __construct()
     {
@@ -113,6 +153,26 @@ class DescribeApmInstancesRequest extends AbstractModel
 
         if (array_key_exists("AllRegionsFlag",$param) and $param["AllRegionsFlag"] !== null) {
             $this->AllRegionsFlag = $param["AllRegionsFlag"];
+        }
+
+        if (array_key_exists("PageIndex",$param) and $param["PageIndex"] !== null) {
+            $this->PageIndex = $param["PageIndex"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
         }
     }
 }

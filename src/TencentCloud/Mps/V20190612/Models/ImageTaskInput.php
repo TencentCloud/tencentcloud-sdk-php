@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片任务输入参数
  *
- * @method ImageEncodeConfig getEncodeConfig() 获取图片编码配置。
+ * @method ImageEncodeConfig getEncodeConfig() 获取<p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) 设置图片编码配置。
+ * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) 设置<p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageEnhanceConfig getEnhanceConfig() 获取图片增强配置。
+ * @method ImageEnhanceConfig getEnhanceConfig() 获取<p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) 设置图片增强配置。
+ * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) 设置<p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageEraseConfig getEraseConfig() 获取图片擦除配置。
+ * @method ImageEraseConfig getEraseConfig() 获取<p>图片擦除配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEraseConfig(ImageEraseConfig $EraseConfig) 设置图片擦除配置。
+ * @method void setEraseConfig(ImageEraseConfig $EraseConfig) 设置<p>图片擦除配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlindWatermarkConfig getBlindWatermarkConfig() 获取盲水印配置。
+ * @method BlindWatermarkConfig getBlindWatermarkConfig() 获取<p>盲水印配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBlindWatermarkConfig(BlindWatermarkConfig $BlindWatermarkConfig) 设置盲水印配置。
+ * @method void setBlindWatermarkConfig(BlindWatermarkConfig $BlindWatermarkConfig) 设置<p>盲水印配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BeautyConfig getBeautyConfig() 获取美颜配置。
- * @method void setBeautyConfig(BeautyConfig $BeautyConfig) 设置美颜配置。
- * @method ImageTransformConfig getTransformConfig() 获取图片基础转换能力。
- * @method void setTransformConfig(ImageTransformConfig $TransformConfig) 设置图片基础转换能力。
+ * @method BeautyConfig getBeautyConfig() 获取<p>美颜配置。</p>
+ * @method void setBeautyConfig(BeautyConfig $BeautyConfig) 设置<p>美颜配置。</p>
+ * @method ImageTransformConfig getTransformConfig() 获取<p>图片基础转换能力。</p>
+ * @method void setTransformConfig(ImageTransformConfig $TransformConfig) 设置<p>图片基础转换能力。</p>
+ * @method AiTryOnConfig getAiTryOnConfig() 获取<p>Ai 换装配置。</p>
+ * @method void setAiTryOnConfig(AiTryOnConfig $AiTryOnConfig) 设置<p>Ai 换装配置。</p>
  */
 class ImageTaskInput extends AbstractModel
 {
     /**
-     * @var ImageEncodeConfig 图片编码配置。
+     * @var ImageEncodeConfig <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncodeConfig;
 
     /**
-     * @var ImageEnhanceConfig 图片增强配置。
+     * @var ImageEnhanceConfig <p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnhanceConfig;
 
     /**
-     * @var ImageEraseConfig 图片擦除配置。
+     * @var ImageEraseConfig <p>图片擦除配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EraseConfig;
 
     /**
-     * @var BlindWatermarkConfig 盲水印配置。
+     * @var BlindWatermarkConfig <p>盲水印配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlindWatermarkConfig;
 
     /**
-     * @var BeautyConfig 美颜配置。
+     * @var BeautyConfig <p>美颜配置。</p>
      */
     public $BeautyConfig;
 
     /**
-     * @var ImageTransformConfig 图片基础转换能力。
+     * @var ImageTransformConfig <p>图片基础转换能力。</p>
      */
     public $TransformConfig;
 
     /**
-     * @param ImageEncodeConfig $EncodeConfig 图片编码配置。
+     * @var AiTryOnConfig <p>Ai 换装配置。</p>
+     */
+    public $AiTryOnConfig;
+
+    /**
+     * @param ImageEncodeConfig $EncodeConfig <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageEnhanceConfig $EnhanceConfig 图片增强配置。
+     * @param ImageEnhanceConfig $EnhanceConfig <p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageEraseConfig $EraseConfig 图片擦除配置。
+     * @param ImageEraseConfig $EraseConfig <p>图片擦除配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlindWatermarkConfig $BlindWatermarkConfig 盲水印配置。
+     * @param BlindWatermarkConfig $BlindWatermarkConfig <p>盲水印配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BeautyConfig $BeautyConfig 美颜配置。
-     * @param ImageTransformConfig $TransformConfig 图片基础转换能力。
+     * @param BeautyConfig $BeautyConfig <p>美颜配置。</p>
+     * @param ImageTransformConfig $TransformConfig <p>图片基础转换能力。</p>
+     * @param AiTryOnConfig $AiTryOnConfig <p>Ai 换装配置。</p>
      */
     function __construct()
     {
@@ -130,6 +138,11 @@ class ImageTaskInput extends AbstractModel
         if (array_key_exists("TransformConfig",$param) and $param["TransformConfig"] !== null) {
             $this->TransformConfig = new ImageTransformConfig();
             $this->TransformConfig->deserialize($param["TransformConfig"]);
+        }
+
+        if (array_key_exists("AiTryOnConfig",$param) and $param["AiTryOnConfig"] !== null) {
+            $this->AiTryOnConfig = new AiTryOnConfig();
+            $this->AiTryOnConfig->deserialize($param["AiTryOnConfig"]);
         }
     }
 }

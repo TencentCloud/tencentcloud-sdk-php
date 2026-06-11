@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyStrategy请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method integer getStrategyId() 获取策略id
- * @method void setStrategyId(integer $StrategyId) 设置策略id
- * @method array getSource() 获取解析线路，需要全量传参
- * @method void setSource(array $Source) 设置解析线路，需要全量传参
- * @method array getMainAddressPoolSet() 获取主力地址池集合，需要全量传参
- * @method void setMainAddressPoolSet(array $MainAddressPoolSet) 设置主力地址池集合，需要全量传参
- * @method array getFallbackAddressPoolSet() 获取兜底地址池集合，需要全量传参
- * @method void setFallbackAddressPoolSet(array $FallbackAddressPoolSet) 设置兜底地址池集合，需要全量传参
- * @method string getStrategyName() 获取策略名称，不允许重复
- * @method void setStrategyName(string $StrategyName) 设置策略名称，不允许重复
- * @method string getIsEnabled() 获取策略开启状态：ENABLED开启；DISABLED关闭
- * @method void setIsEnabled(string $IsEnabled) 设置策略开启状态：ENABLED开启；DISABLED关闭
- * @method string getKeepDomainRecords() 获取是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启
- * @method void setKeepDomainRecords(string $KeepDomainRecords) 设置是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启
- * @method string getSwitchPoolType() 获取调度模式：AUTO默认；STOP仅暂停不切换
- * @method void setSwitchPoolType(string $SwitchPoolType) 设置调度模式：AUTO默认；STOP仅暂停不切换
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method integer getStrategyId() 获取<p>策略id</p>
+ * @method void setStrategyId(integer $StrategyId) 设置<p>策略id</p>
+ * @method array getSource() 获取<p>解析线路，需要全量传参</p>
+ * @method void setSource(array $Source) 设置<p>解析线路，需要全量传参</p>
+ * @method array getMainAddressPoolSet() 获取<p>主力地址池集合，需要全量传参</p>
+ * @method void setMainAddressPoolSet(array $MainAddressPoolSet) 设置<p>主力地址池集合，需要全量传参</p>
+ * @method array getFallbackAddressPoolSet() 获取<p>兜底地址池集合，需要全量传参</p>
+ * @method void setFallbackAddressPoolSet(array $FallbackAddressPoolSet) 设置<p>兜底地址池集合，需要全量传参</p>
+ * @method string getStrategyName() 获取<p>策略名称，不允许重复</p>
+ * @method void setStrategyName(string $StrategyName) 设置<p>策略名称，不允许重复</p>
+ * @method string getIsEnabled() 获取<p>策略开启状态：ENABLED开启；DISABLED关闭</p>
+ * @method void setIsEnabled(string $IsEnabled) 设置<p>策略开启状态：ENABLED开启；DISABLED关闭</p>
+ * @method string getKeepDomainRecords() 获取<p>是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启</p>
+ * @method void setKeepDomainRecords(string $KeepDomainRecords) 设置<p>是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启</p>
+ * @method string getSwitchPoolType() 获取<p>调度模式：AUTO默认；STOP仅暂停不切换</p>
+ * @method void setSwitchPoolType(string $SwitchPoolType) 设置<p>调度模式：AUTO默认；STOP仅暂停不切换</p>
+ * @method boolean getKeepResource() 获取<p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+ * @method void setKeepResource(boolean $KeepResource) 设置<p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
  */
 class ModifyStrategyRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 策略id
+     * @var integer <p>策略id</p>
      */
     public $StrategyId;
 
     /**
-     * @var array 解析线路，需要全量传参
+     * @var array <p>解析线路，需要全量传参</p>
      */
     public $Source;
 
     /**
-     * @var array 主力地址池集合，需要全量传参
+     * @var array <p>主力地址池集合，需要全量传参</p>
      */
     public $MainAddressPoolSet;
 
     /**
-     * @var array 兜底地址池集合，需要全量传参
+     * @var array <p>兜底地址池集合，需要全量传参</p>
      */
     public $FallbackAddressPoolSet;
 
     /**
-     * @var string 策略名称，不允许重复
+     * @var string <p>策略名称，不允许重复</p>
      */
     public $StrategyName;
 
     /**
-     * @var string 策略开启状态：ENABLED开启；DISABLED关闭
+     * @var string <p>策略开启状态：ENABLED开启；DISABLED关闭</p>
      */
     public $IsEnabled;
 
     /**
-     * @var string 是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启
+     * @var string <p>是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启</p>
      */
     public $KeepDomainRecords;
 
     /**
-     * @var string 调度模式：AUTO默认；STOP仅暂停不切换
+     * @var string <p>调度模式：AUTO默认；STOP仅暂停不切换</p>
      */
     public $SwitchPoolType;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param integer $StrategyId 策略id
-     * @param array $Source 解析线路，需要全量传参
-     * @param array $MainAddressPoolSet 主力地址池集合，需要全量传参
-     * @param array $FallbackAddressPoolSet 兜底地址池集合，需要全量传参
-     * @param string $StrategyName 策略名称，不允许重复
-     * @param string $IsEnabled 策略开启状态：ENABLED开启；DISABLED关闭
-     * @param string $KeepDomainRecords 是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启
-     * @param string $SwitchPoolType 调度模式：AUTO默认；STOP仅暂停不切换
+     * @var boolean <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+     */
+    public $KeepResource;
+
+    /**
+     * @param string $InstanceId <p>实例id</p>
+     * @param integer $StrategyId <p>策略id</p>
+     * @param array $Source <p>解析线路，需要全量传参</p>
+     * @param array $MainAddressPoolSet <p>主力地址池集合，需要全量传参</p>
+     * @param array $FallbackAddressPoolSet <p>兜底地址池集合，需要全量传参</p>
+     * @param string $StrategyName <p>策略名称，不允许重复</p>
+     * @param string $IsEnabled <p>策略开启状态：ENABLED开启；DISABLED关闭</p>
+     * @param string $KeepDomainRecords <p>是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启</p>
+     * @param string $SwitchPoolType <p>调度模式：AUTO默认；STOP仅暂停不切换</p>
+     * @param boolean $KeepResource <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
      */
     function __construct()
     {
@@ -159,6 +167,10 @@ class ModifyStrategyRequest extends AbstractModel
 
         if (array_key_exists("SwitchPoolType",$param) and $param["SwitchPoolType"] !== null) {
             $this->SwitchPoolType = $param["SwitchPoolType"];
+        }
+
+        if (array_key_exists("KeepResource",$param) and $param["KeepResource"] !== null) {
+            $this->KeepResource = $param["KeepResource"];
         }
     }
 }

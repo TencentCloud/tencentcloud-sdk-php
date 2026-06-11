@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLifecycleDataTask请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统唯一 ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统唯一 ID
- * @method string getType() 获取生命周期任务类型；archive：沉降；restore：预热；release：数据释放；metaload：元数据加载
- * @method void setType(string $Type) 设置生命周期任务类型；archive：沉降；restore：预热；release：数据释放；metaload：元数据加载
- * @method string getTaskPath() 获取需要沉降的路径或文件，仅支持传入1个路径，不允许为空。
- * @method void setTaskPath(string $TaskPath) 设置需要沉降的路径或文件，仅支持传入1个路径，不允许为空。
- * @method string getTaskName() 获取任务名称
- * @method void setTaskName(string $TaskName) 设置任务名称
- * @method string getDataFlowId() 获取数据流动 ID ，该接口可以通过 DescribeDataFlow 查询
- * @method void setDataFlowId(string $DataFlowId) 设置数据流动 ID ，该接口可以通过 DescribeDataFlow 查询
- * @method boolean getIsOverwrite() 获取	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
- * @method void setIsOverwrite(boolean $IsOverwrite) 设置	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
+ * @method string getFileSystemId() 获取<p>文件系统唯一 ID</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统唯一 ID</p>
+ * @method string getType() 获取<p>生命周期任务类型；archive：沉降；restore：预热；release：数据释放；metaload：元数据加载</p>
+ * @method void setType(string $Type) 设置<p>生命周期任务类型；archive：沉降；restore：预热；release：数据释放；metaload：元数据加载</p>
+ * @method string getTaskName() 获取<p>任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
+ * @method string getTaskPath() 获取<p>需要沉降的路径或文件，仅支持传入1个路径，不允许为空。</p>
+ * @method void setTaskPath(string $TaskPath) 设置<p>需要沉降的路径或文件，仅支持传入1个路径，不允许为空。</p>
+ * @method string getDataFlowId() 获取<p>数据流动 ID ，该接口可以通过 DescribeDataFlow 查询</p>
+ * @method void setDataFlowId(string $DataFlowId) 设置<p>数据流动 ID ，该接口可以通过 DescribeDataFlow 查询</p>
+ * @method boolean getIsOverwrite() 获取<p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false</p>
+ * @method void setIsOverwrite(boolean $IsOverwrite) 设置<p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false</p>
+ * @method string getListPath() 获取<p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+ * @method void setListPath(string $ListPath) 设置<p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
  */
 class CreateLifecycleDataTaskRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统唯一 ID
+     * @var string <p>文件系统唯一 ID</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string 生命周期任务类型；archive：沉降；restore：预热；release：数据释放；metaload：元数据加载
+     * @var string <p>生命周期任务类型；archive：沉降；restore：预热；release：数据释放；metaload：元数据加载</p>
      */
     public $Type;
 
     /**
-     * @var string 需要沉降的路径或文件，仅支持传入1个路径，不允许为空。
-     */
-    public $TaskPath;
-
-    /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var string 数据流动 ID ，该接口可以通过 DescribeDataFlow 查询
+     * @var string <p>需要沉降的路径或文件，仅支持传入1个路径，不允许为空。</p>
+     */
+    public $TaskPath;
+
+    /**
+     * @var string <p>数据流动 ID ，该接口可以通过 DescribeDataFlow 查询</p>
      */
     public $DataFlowId;
 
     /**
-     * @var boolean 	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
+     * @var boolean <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false</p>
      */
     public $IsOverwrite;
 
     /**
-     * @param string $FileSystemId 文件系统唯一 ID
-     * @param string $Type 生命周期任务类型；archive：沉降；restore：预热；release：数据释放；metaload：元数据加载
-     * @param string $TaskPath 需要沉降的路径或文件，仅支持传入1个路径，不允许为空。
-     * @param string $TaskName 任务名称
-     * @param string $DataFlowId 数据流动 ID ，该接口可以通过 DescribeDataFlow 查询
-     * @param boolean $IsOverwrite 	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
+     * @var string <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+     */
+    public $ListPath;
+
+    /**
+     * @param string $FileSystemId <p>文件系统唯一 ID</p>
+     * @param string $Type <p>生命周期任务类型；archive：沉降；restore：预热；release：数据释放；metaload：元数据加载</p>
+     * @param string $TaskName <p>任务名称</p>
+     * @param string $TaskPath <p>需要沉降的路径或文件，仅支持传入1个路径，不允许为空。</p>
+     * @param string $DataFlowId <p>数据流动 ID ，该接口可以通过 DescribeDataFlow 查询</p>
+     * @param boolean $IsOverwrite <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false</p>
+     * @param string $ListPath <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
      */
     function __construct()
     {
@@ -94,12 +102,12 @@ class CreateLifecycleDataTaskRequest extends AbstractModel
             $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("TaskPath",$param) and $param["TaskPath"] !== null) {
-            $this->TaskPath = $param["TaskPath"];
-        }
-
         if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
             $this->TaskName = $param["TaskName"];
+        }
+
+        if (array_key_exists("TaskPath",$param) and $param["TaskPath"] !== null) {
+            $this->TaskPath = $param["TaskPath"];
         }
 
         if (array_key_exists("DataFlowId",$param) and $param["DataFlowId"] !== null) {
@@ -108,6 +116,10 @@ class CreateLifecycleDataTaskRequest extends AbstractModel
 
         if (array_key_exists("IsOverwrite",$param) and $param["IsOverwrite"] !== null) {
             $this->IsOverwrite = $param["IsOverwrite"];
+        }
+
+        if (array_key_exists("ListPath",$param) and $param["ListPath"] !== null) {
+            $this->ListPath = $param["ListPath"];
         }
     }
 }

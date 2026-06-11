@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAddressPool返回参数结构体
  *
- * @method string getMsg() 获取是否修改成功
- * @method void setMsg(string $Msg) 设置是否修改成功
+ * @method string getMsg() 获取<p>是否修改成功</p>
+ * @method void setMsg(string $Msg) 设置<p>是否修改成功</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyAddressPoolResponse extends AbstractModel
 {
     /**
-     * @var string 是否修改成功
+     * @var string <p>是否修改成功</p>
      */
     public $Msg;
 
@@ -38,7 +38,7 @@ class ModifyAddressPoolResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Msg 是否修改成功
+     * @param string $Msg <p>是否修改成功</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

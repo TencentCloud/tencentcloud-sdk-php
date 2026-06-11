@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachRemoteDisks请求参数结构体
  *
-
+ * @method string getInstanceId() 获取<p>指定待挂载单副本SSD硬盘的CVM实例。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>指定待挂载单副本SSD硬盘的CVM实例。</p>
+ * @method array getRemoteDiskIds() 获取<p>一个或多个待挂载的单副本SSD硬盘ID。</p>
+ * @method void setRemoteDiskIds(array $RemoteDiskIds) 设置<p>一个或多个待挂载的单副本SSD硬盘ID。</p>
  */
 class AttachRemoteDisksRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>指定待挂载单副本SSD硬盘的CVM实例。</p>
+     */
+    public $InstanceId;
 
     /**
+     * @var array <p>一个或多个待挂载的单副本SSD硬盘ID。</p>
+     */
+    public $RemoteDiskIds;
 
+    /**
+     * @param string $InstanceId <p>指定待挂载单副本SSD硬盘的CVM实例。</p>
+     * @param array $RemoteDiskIds <p>一个或多个待挂载的单副本SSD硬盘ID。</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class AttachRemoteDisksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("RemoteDiskIds",$param) and $param["RemoteDiskIds"] !== null) {
+            $this->RemoteDiskIds = $param["RemoteDiskIds"];
+        }
     }
 }

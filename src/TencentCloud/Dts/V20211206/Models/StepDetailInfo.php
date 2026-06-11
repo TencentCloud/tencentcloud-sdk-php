@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 步骤信息
  *
- * @method integer getStepNo() 获取步骤序列
- * @method void setStepNo(integer $StepNo) 设置步骤序列
- * @method string getStepName() 获取步骤展现名称
- * @method void setStepName(string $StepName) 设置步骤展现名称
- * @method string getStepId() 获取步骤英文标识
- * @method void setStepId(string $StepId) 设置步骤英文标识
- * @method string getStatus() 获取步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
- * @method void setStatus(string $Status) 设置步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
- * @method string getStartTime() 获取当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStepMessage() 获取步骤错误信息
- * @method void setStepMessage(string $StepMessage) 设置步骤错误信息
- * @method integer getPercent() 获取执行进度
- * @method void setPercent(integer $Percent) 设置执行进度
- * @method array getErrors() 获取错误信息
- * @method void setErrors(array $Errors) 设置错误信息
- * @method array getWarnings() 获取告警提示
- * @method void setWarnings(array $Warnings) 设置告警提示
+ * @method integer getStepNo() 获取<p>步骤序列</p>
+ * @method void setStepNo(integer $StepNo) 设置<p>步骤序列</p>
+ * @method string getStepName() 获取<p>步骤展现名称</p>
+ * @method void setStepName(string $StepName) 设置<p>步骤展现名称</p>
+ * @method string getStepId() 获取<p>步骤英文标识</p>
+ * @method void setStepId(string $StepId) 设置<p>步骤英文标识</p>
+ * @method string getStatus() 获取<p>步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted</p>
+ * @method void setStatus(string $Status) 设置<p>步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted</p>
+ * @method string getStartTime() 获取<p>当前步骤开始的时间，格式为&quot;yyyy-mm-dd hh:mm:ss&quot;，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>当前步骤开始的时间，格式为&quot;yyyy-mm-dd hh:mm:ss&quot;，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。</p>
+ * @method string getFinishTime() 获取<p>完成时间</p>
+ * @method void setFinishTime(string $FinishTime) 设置<p>完成时间</p>
+ * @method string getStepMessage() 获取<p>步骤错误信息</p>
+ * @method void setStepMessage(string $StepMessage) 设置<p>步骤错误信息</p>
+ * @method integer getPercent() 获取<p>执行进度</p>
+ * @method void setPercent(integer $Percent) 设置<p>执行进度</p>
+ * @method array getErrors() 获取<p>错误信息</p>
+ * @method void setErrors(array $Errors) 设置<p>错误信息</p>
+ * @method array getWarnings() 获取<p>告警提示</p>
+ * @method void setWarnings(array $Warnings) 设置<p>告警提示</p>
  */
 class StepDetailInfo extends AbstractModel
 {
     /**
-     * @var integer 步骤序列
+     * @var integer <p>步骤序列</p>
      */
     public $StepNo;
 
     /**
-     * @var string 步骤展现名称
+     * @var string <p>步骤展现名称</p>
      */
     public $StepName;
 
     /**
-     * @var string 步骤英文标识
+     * @var string <p>步骤英文标识</p>
      */
     public $StepId;
 
     /**
-     * @var string 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
+     * @var string <p>步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted</p>
      */
     public $Status;
 
     /**
-     * @var string 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
+     * @var string <p>当前步骤开始的时间，格式为&quot;yyyy-mm-dd hh:mm:ss&quot;，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 步骤错误信息
+     * @var string <p>完成时间</p>
+     */
+    public $FinishTime;
+
+    /**
+     * @var string <p>步骤错误信息</p>
      */
     public $StepMessage;
 
     /**
-     * @var integer 执行进度
+     * @var integer <p>执行进度</p>
      */
     public $Percent;
 
     /**
-     * @var array 错误信息
+     * @var array <p>错误信息</p>
      */
     public $Errors;
 
     /**
-     * @var array 告警提示
+     * @var array <p>告警提示</p>
      */
     public $Warnings;
 
     /**
-     * @param integer $StepNo 步骤序列
-     * @param string $StepName 步骤展现名称
-     * @param string $StepId 步骤英文标识
-     * @param string $Status 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
-     * @param string $StartTime 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StepMessage 步骤错误信息
-     * @param integer $Percent 执行进度
-     * @param array $Errors 错误信息
-     * @param array $Warnings 告警提示
+     * @param integer $StepNo <p>步骤序列</p>
+     * @param string $StepName <p>步骤展现名称</p>
+     * @param string $StepId <p>步骤英文标识</p>
+     * @param string $Status <p>步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted</p>
+     * @param string $StartTime <p>当前步骤开始的时间，格式为&quot;yyyy-mm-dd hh:mm:ss&quot;，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。</p>
+     * @param string $FinishTime <p>完成时间</p>
+     * @param string $StepMessage <p>步骤错误信息</p>
+     * @param integer $Percent <p>执行进度</p>
+     * @param array $Errors <p>错误信息</p>
+     * @param array $Warnings <p>告警提示</p>
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ class StepDetailInfo extends AbstractModel
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
 
         if (array_key_exists("StepMessage",$param) and $param["StepMessage"] !== null) {

@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumerQps(float $ConsumerQps) 设置MQ 消费者视角的吞吐量
  * @method string getServiceId() 获取应用 ID
  * @method void setServiceId(string $ServiceId) 设置应用 ID
+ * @method integer getReqCnt() 获取调用次数
+ * @method void setReqCnt(integer $ReqCnt) 设置调用次数
+ * @method integer getConsumerReqCnt() 获取消息队列消费者视角的调用次数
+ * @method void setConsumerReqCnt(integer $ConsumerReqCnt) 设置消息队列消费者视角的调用次数
  */
 class TopologyNode extends AbstractModel
 {
@@ -203,6 +207,16 @@ class TopologyNode extends AbstractModel
     public $ServiceId;
 
     /**
+     * @var integer 调用次数
+     */
+    public $ReqCnt;
+
+    /**
+     * @var integer 消息队列消费者视角的调用次数
+     */
+    public $ConsumerReqCnt;
+
+    /**
      * @param float $ErrRate 错误率
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Kind 节点类型
@@ -236,6 +250,8 @@ class TopologyNode extends AbstractModel
      * @param float $ConsumerErrRate MQ 消费者视角的错误率 %
      * @param float $ConsumerQps MQ 消费者视角的吞吐量
      * @param string $ServiceId 应用 ID
+     * @param integer $ReqCnt 调用次数
+     * @param integer $ConsumerReqCnt 消息队列消费者视角的调用次数
      */
     function __construct()
     {
@@ -335,6 +351,14 @@ class TopologyNode extends AbstractModel
 
         if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
             $this->ServiceId = $param["ServiceId"];
+        }
+
+        if (array_key_exists("ReqCnt",$param) and $param["ReqCnt"] !== null) {
+            $this->ReqCnt = $param["ReqCnt"];
+        }
+
+        if (array_key_exists("ConsumerReqCnt",$param) and $param["ConsumerReqCnt"] !== null) {
+            $this->ConsumerReqCnt = $param["ConsumerReqCnt"];
         }
     }
 }

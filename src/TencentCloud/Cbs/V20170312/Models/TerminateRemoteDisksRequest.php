@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateRemoteDisks请求参数结构体
  *
-
+ * @method array getRemoteDiskIds() 获取<p>一个或多个单副本SSD硬盘ID。</p>
+ * @method void setRemoteDiskIds(array $RemoteDiskIds) 设置<p>一个或多个单副本SSD硬盘ID。</p>
  */
 class TerminateRemoteDisksRequest extends AbstractModel
 {
-
+    /**
+     * @var array <p>一个或多个单副本SSD硬盘ID。</p>
+     */
+    public $RemoteDiskIds;
 
     /**
-
+     * @param array $RemoteDiskIds <p>一个或多个单副本SSD硬盘ID。</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class TerminateRemoteDisksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("RemoteDiskIds",$param) and $param["RemoteDiskIds"] !== null) {
+            $this->RemoteDiskIds = $param["RemoteDiskIds"];
+        }
     }
 }

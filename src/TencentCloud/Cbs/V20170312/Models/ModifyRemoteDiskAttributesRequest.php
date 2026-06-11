@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRemoteDiskAttributes请求参数结构体
  *
-
+ * @method array getRemoteDiskIds() 获取<p>一个或多个待操作的单副本SSD硬盘ID。如果传入多个单副本SSD硬盘ID，只支持所有硬盘修改为同一属性。</p>
+ * @method void setRemoteDiskIds(array $RemoteDiskIds) 设置<p>一个或多个待操作的单副本SSD硬盘ID。如果传入多个单副本SSD硬盘ID，只支持所有硬盘修改为同一属性。</p>
+ * @method string getDiskName() 获取<p>新的单副本SSD硬盘名称</p>
+ * @method void setDiskName(string $DiskName) 设置<p>新的单副本SSD硬盘名称</p>
+ * @method integer getProjectId() 获取<p>新的单副本SSD硬盘项目ID。</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>新的单副本SSD硬盘项目ID。</p>
  */
 class ModifyRemoteDiskAttributesRequest extends AbstractModel
 {
-
+    /**
+     * @var array <p>一个或多个待操作的单副本SSD硬盘ID。如果传入多个单副本SSD硬盘ID，只支持所有硬盘修改为同一属性。</p>
+     */
+    public $RemoteDiskIds;
 
     /**
+     * @var string <p>新的单副本SSD硬盘名称</p>
+     */
+    public $DiskName;
 
+    /**
+     * @var integer <p>新的单副本SSD硬盘项目ID。</p>
+     */
+    public $ProjectId;
+
+    /**
+     * @param array $RemoteDiskIds <p>一个或多个待操作的单副本SSD硬盘ID。如果传入多个单副本SSD硬盘ID，只支持所有硬盘修改为同一属性。</p>
+     * @param string $DiskName <p>新的单副本SSD硬盘名称</p>
+     * @param integer $ProjectId <p>新的单副本SSD硬盘项目ID。</p>
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class ModifyRemoteDiskAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RemoteDiskIds",$param) and $param["RemoteDiskIds"] !== null) {
+            $this->RemoteDiskIds = $param["RemoteDiskIds"];
+        }
 
+        if (array_key_exists("DiskName",$param) and $param["DiskName"] !== null) {
+            $this->DiskName = $param["DiskName"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
     }
 }

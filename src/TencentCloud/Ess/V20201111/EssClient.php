@@ -824,7 +824,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 - 返回的FlowGroupId 为临时id，只有在页面内成功发起后FlowGroupId才会有效。
  * @method Models\CreatePreparedPersonalEsignResponse CreatePreparedPersonalEsign(Models\CreatePreparedPersonalEsignRequest $req) 本接口（CreatePreparedPersonalEsign）用于创建导入个人印章（处方单场景专用，使用此接口请与客户经理确认）。
  * @method Models\CreateReleaseFlowResponse CreateReleaseFlow(Models\CreateReleaseFlowRequest $req) 发起解除协议的主要应用场景为：基于一份已经签署的合同（签署流程），进行解除操作。
-解除协议的模板是官方提供 ，经过提供法务审核，暂不支持自定义。具体用法可以参考文档[合同解除](https://qian.tencent.com/developers/company/flow_release)。
+解除协议的模板是官方提供 ，经过提供法务审核，暂不支持自定义，[点击查看解除协议模板示例PDF](https://qcloudimg.tencent-cloud.cn/raw/279b53002cf178ac89ba2c4f31b2dd8a.pdf)。具体用法可以参考文档[合同解除](https://qian.tencent.com/developers/company/flow_release)。
 
 注意：
 <ul>

@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBackupPlan请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
- * @method string getMinBackupStartTime() 获取实例最早开始备份时间
- * @method void setMinBackupStartTime(string $MinBackupStartTime) 设置实例最早开始备份时间
- * @method string getMaxBackupStartTime() 获取实例最晚开始备份时间
- * @method void setMaxBackupStartTime(string $MaxBackupStartTime) 设置实例最晚开始备份时间
- * @method integer getBaseBackupRetentionPeriod() 获取实例备份保留时长，取值范围为7-1830，单位是天
- * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置实例备份保留时长，取值范围为7-1830，单位是天
- * @method array getBackupPeriod() 获取实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
- * @method void setBackupPeriod(array $BackupPeriod) 设置实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
- * @method integer getLogBackupRetentionPeriod() 获取实例日志备份保留时长，取值范围为7-1830，单位是天
- * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) 设置实例日志备份保留时长，取值范围为7-1830，单位是天
- * @method string getPlanId() 获取备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
- * @method void setPlanId(string $PlanId) 设置备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
- * @method string getPlanName() 获取要修改的备份计划名称。
- * @method void setPlanName(string $PlanName) 设置要修改的备份计划名称。
+ * @method string getDBInstanceId() 获取<p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method void setDBInstanceId(string $DBInstanceId) 设置<p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method string getMinBackupStartTime() 获取<p>实例最早开始备份时间</p>
+ * @method void setMinBackupStartTime(string $MinBackupStartTime) 设置<p>实例最早开始备份时间</p>
+ * @method string getMaxBackupStartTime() 获取<p>实例最晚开始备份时间</p>
+ * @method void setMaxBackupStartTime(string $MaxBackupStartTime) 设置<p>实例最晚开始备份时间</p>
+ * @method integer getBaseBackupRetentionPeriod() 获取<p>实例备份保留时长，取值范围为7-1830，单位是天</p>
+ * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置<p>实例备份保留时长，取值范围为7-1830，单位是天</p>
+ * @method array getBackupPeriod() 获取<p>实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如[&quot;1&quot;,&quot;2&quot;]。</p>
+ * @method void setBackupPeriod(array $BackupPeriod) 设置<p>实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如[&quot;1&quot;,&quot;2&quot;]。</p>
+ * @method integer getLogBackupRetentionPeriod() 获取<p>实例日志备份保留时长，取值范围为7-1830，单位是天</p>
+ * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) 设置<p>实例日志备份保留时长，取值范围为7-1830，单位是天</p>
+ * @method string getPlanId() 获取<p>备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。</p>
+ * @method void setPlanId(string $PlanId) 设置<p>备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。</p>
+ * @method string getPlanName() 获取<p>要修改的备份计划名称。</p>
+ * @method void setPlanName(string $PlanName) 设置<p>要修改的备份计划名称。</p>
+ * @method string getBackupMethod() 获取<p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+ * @method void setBackupMethod(string $BackupMethod) 设置<p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
  */
 class ModifyBackupPlanRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @var string <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public $DBInstanceId;
 
     /**
-     * @var string 实例最早开始备份时间
+     * @var string <p>实例最早开始备份时间</p>
      */
     public $MinBackupStartTime;
 
     /**
-     * @var string 实例最晚开始备份时间
+     * @var string <p>实例最晚开始备份时间</p>
      */
     public $MaxBackupStartTime;
 
     /**
-     * @var integer 实例备份保留时长，取值范围为7-1830，单位是天
+     * @var integer <p>实例备份保留时长，取值范围为7-1830，单位是天</p>
      */
     public $BaseBackupRetentionPeriod;
 
     /**
-     * @var array 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
+     * @var array <p>实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如[&quot;1&quot;,&quot;2&quot;]。</p>
      */
     public $BackupPeriod;
 
     /**
-     * @var integer 实例日志备份保留时长，取值范围为7-1830，单位是天
+     * @var integer <p>实例日志备份保留时长，取值范围为7-1830，单位是天</p>
      */
     public $LogBackupRetentionPeriod;
 
     /**
-     * @var string 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
+     * @var string <p>备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。</p>
      */
     public $PlanId;
 
     /**
-     * @var string 要修改的备份计划名称。
+     * @var string <p>要修改的备份计划名称。</p>
      */
     public $PlanName;
 
     /**
-     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param string $MinBackupStartTime 实例最早开始备份时间
-     * @param string $MaxBackupStartTime 实例最晚开始备份时间
-     * @param integer $BaseBackupRetentionPeriod 实例备份保留时长，取值范围为7-1830，单位是天
-     * @param array $BackupPeriod 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
-     * @param integer $LogBackupRetentionPeriod 实例日志备份保留时长，取值范围为7-1830，单位是天
-     * @param string $PlanId 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
-     * @param string $PlanName 要修改的备份计划名称。
+     * @var string <p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+     */
+    public $BackupMethod;
+
+    /**
+     * @param string $DBInstanceId <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param string $MinBackupStartTime <p>实例最早开始备份时间</p>
+     * @param string $MaxBackupStartTime <p>实例最晚开始备份时间</p>
+     * @param integer $BaseBackupRetentionPeriod <p>实例备份保留时长，取值范围为7-1830，单位是天</p>
+     * @param array $BackupPeriod <p>实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如[&quot;1&quot;,&quot;2&quot;]。</p>
+     * @param integer $LogBackupRetentionPeriod <p>实例日志备份保留时长，取值范围为7-1830，单位是天</p>
+     * @param string $PlanId <p>备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。</p>
+     * @param string $PlanName <p>要修改的备份计划名称。</p>
+     * @param string $BackupMethod <p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ModifyBackupPlanRequest extends AbstractModel
 
         if (array_key_exists("PlanName",$param) and $param["PlanName"] !== null) {
             $this->PlanName = $param["PlanName"];
+        }
+
+        if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
+            $this->BackupMethod = $param["BackupMethod"];
         }
     }
 }

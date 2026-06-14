@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ManualTriggerRecordOpsDtoPage getData() 获取详情结果
+ * @method ManualTriggerRecordOpsDtoPage getData() 获取<p>详情结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(ManualTriggerRecordOpsDtoPage $Data) 设置详情结果
+ * @method void setData(ManualTriggerRecordOpsDtoPage $Data) 设置<p>详情结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ class DescribeManualTriggerRecordPageResponse extends AbstractModel
     public $RequestFromSource;
 
     /**
-     * @var ManualTriggerRecordOpsDtoPage 详情结果
+     * @var ManualTriggerRecordOpsDtoPage <p>详情结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -53,7 +53,7 @@ class DescribeManualTriggerRecordPageResponse extends AbstractModel
     /**
      * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ManualTriggerRecordOpsDtoPage $Data 详情结果
+     * @param ManualTriggerRecordOpsDtoPage $Data <p>详情结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

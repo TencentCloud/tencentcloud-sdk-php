@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorInfo(ErrorInfo $ErrorInfo) 设置自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtra() 获取额外数据
- * @method void setExtra(string $Extra) 设置额外数据
- * @method Data getData() 获取数据
- * @method void setData(Data $Data) 设置数据
- * @method string getMsg() 获取返回信息
- * @method void setMsg(string $Msg) 设置返回信息
+ * @method string getExtra() 获取<p>额外数据</p>
+ * @method void setExtra(string $Extra) 设置<p>额外数据</p>
+ * @method Data getData() 获取<p>数据</p>
+ * @method void setData(Data $Data) 设置<p>数据</p>
+ * @method string getMsg() 获取<p>返回信息</p>
+ * @method void setMsg(string $Msg) 设置<p>返回信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,17 +42,17 @@ class CreateProjectResponse extends AbstractModel
     public $ErrorInfo;
 
     /**
-     * @var string 额外数据
+     * @var string <p>额外数据</p>
      */
     public $Extra;
 
     /**
-     * @var Data 数据
+     * @var Data <p>数据</p>
      */
     public $Data;
 
     /**
-     * @var string 返回信息
+     * @var string <p>返回信息</p>
      */
     public $Msg;
 
@@ -64,9 +64,9 @@ class CreateProjectResponse extends AbstractModel
     /**
      * @param ErrorInfo $ErrorInfo 自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Extra 额外数据
-     * @param Data $Data 数据
-     * @param string $Msg 返回信息
+     * @param string $Extra <p>额外数据</p>
+     * @param Data $Data <p>数据</p>
+     * @param string $Msg <p>返回信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

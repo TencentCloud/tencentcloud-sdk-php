@@ -20,102 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyProject请求参数结构体
  *
- * @method integer getId() 获取项目Id
- * @method void setId(integer $Id) 设置项目Id
- * @method string getName() 获取名字
- * @method void setName(string $Name) 设置名字
- * @method string getColorCode() 获取颜色值
- * @method void setColorCode(string $ColorCode) 设置颜色值
- * @method string getLogo() 获取图标
- * @method void setLogo(string $Logo) 设置图标
- * @method string getMark() 获取备注
- * @method void setMark(string $Mark) 设置备注
- * @method boolean getIsApply() 获取可申请
- * @method void setIsApply(boolean $IsApply) 设置可申请
- * @method string getSeed() 获取种子
- * @method void setSeed(string $Seed) 设置种子
- * @method integer getDefaultPanelType() 获取默认看板
-取值范围：
-1：项目看板 
-2：我的看板
- * @method void setDefaultPanelType(integer $DefaultPanelType) 设置默认看板
-取值范围：
-1：项目看板 
-2：我的看板
- * @method string getPanelScope() 获取2
- * @method void setPanelScope(string $PanelScope) 设置2
- * @method string getManagePlatform() 获取项目管理平台
- * @method void setManagePlatform(string $ManagePlatform) 设置项目管理平台
+ * @method integer getId() 获取<p>项目Id</p>
+ * @method void setId(integer $Id) 设置<p>项目Id</p>
+ * @method string getName() 获取<p>名字</p>
+ * @method void setName(string $Name) 设置<p>名字</p>
+ * @method string getColorCode() 获取<p>颜色值</p>
+ * @method void setColorCode(string $ColorCode) 设置<p>颜色值</p>
+ * @method string getLogo() 获取<p>图标</p>
+ * @method void setLogo(string $Logo) 设置<p>图标</p>
+ * @method string getMark() 获取<p>备注</p>
+ * @method void setMark(string $Mark) 设置<p>备注</p>
+ * @method boolean getIsApply() 获取<p>可申请</p>
+ * @method void setIsApply(boolean $IsApply) 设置<p>可申请</p>
+ * @method string getSeed() 获取<p>种子</p>
+ * @method void setSeed(string $Seed) 设置<p>种子</p>
+ * @method integer getDefaultPanelType() 获取<p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+ * @method void setDefaultPanelType(integer $DefaultPanelType) 设置<p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+ * @method string getPanelScope() 获取<p>2</p>
+ * @method void setPanelScope(string $PanelScope) 设置<p>2</p>
+ * @method string getManagePlatform() 获取<p>项目管理平台</p>
+ * @method void setManagePlatform(string $ManagePlatform) 设置<p>项目管理平台</p>
  */
 class ModifyProjectRequest extends AbstractModel
 {
     /**
-     * @var integer 项目Id
+     * @var integer <p>项目Id</p>
      */
     public $Id;
 
     /**
-     * @var string 名字
+     * @var string <p>名字</p>
      */
     public $Name;
 
     /**
-     * @var string 颜色值
+     * @var string <p>颜色值</p>
      */
     public $ColorCode;
 
     /**
-     * @var string 图标
+     * @var string <p>图标</p>
      */
     public $Logo;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Mark;
 
     /**
-     * @var boolean 可申请
+     * @var boolean <p>可申请</p>
      */
     public $IsApply;
 
     /**
-     * @var string 种子
+     * @var string <p>种子</p>
      */
     public $Seed;
 
     /**
-     * @var integer 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * @var integer <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public $DefaultPanelType;
 
     /**
-     * @var string 2
+     * @var string <p>2</p>
      */
     public $PanelScope;
 
     /**
-     * @var string 项目管理平台
+     * @var string <p>项目管理平台</p>
      */
     public $ManagePlatform;
 
     /**
-     * @param integer $Id 项目Id
-     * @param string $Name 名字
-     * @param string $ColorCode 颜色值
-     * @param string $Logo 图标
-     * @param string $Mark 备注
-     * @param boolean $IsApply 可申请
-     * @param string $Seed 种子
-     * @param integer $DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
-     * @param string $PanelScope 2
-     * @param string $ManagePlatform 项目管理平台
+     * @param integer $Id <p>项目Id</p>
+     * @param string $Name <p>名字</p>
+     * @param string $ColorCode <p>颜色值</p>
+     * @param string $Logo <p>图标</p>
+     * @param string $Mark <p>备注</p>
+     * @param boolean $IsApply <p>可申请</p>
+     * @param string $Seed <p>种子</p>
+     * @param integer $DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+     * @param string $PanelScope <p>2</p>
+     * @param string $ManagePlatform <p>项目管理平台</p>
      */
     function __construct()
     {

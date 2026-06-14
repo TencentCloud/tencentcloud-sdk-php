@@ -20,174 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TWeSee 视觉理解配置
  *
- * @method array getDetectTypes() 获取拓展的目标及事件检测类别
- * @method void setDetectTypes(array $DetectTypes) 设置拓展的目标及事件检测类别
- * @method boolean getEnableSearch() 获取使该视频 / 图片录入搜索库，后续可进行搜索
- * @method void setEnableSearch(boolean $EnableSearch) 设置使该视频 / 图片录入搜索库，后续可进行搜索
- * @method string getOutputLang() 获取主输出语言，可选值包括：
-- `zh` 中文（默认值）
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
- * @method void setOutputLang(string $OutputLang) 设置主输出语言，可选值包括：
-- `zh` 中文（默认值）
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
- * @method string getAlternativeOutputLang() 获取次选输出语言，可选值包括：
-- `zh` 中文
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
-
- * @method void setAlternativeOutputLang(string $AlternativeOutputLang) 设置次选输出语言，可选值包括：
-- `zh` 中文
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
-
- * @method string getMultiCameraLayout() 获取多摄像头布局定义。可选值包括：
-
-- 单摄（默认值）：`Single`
-
-- 双摄（纵向排列）- 全部画面：`Vertical,Num=2,Index=0;1`
-- 双摄（纵向排列）- 画面1：`Vertical,Num=2,Index=0`
-- 双摄（纵向排列）- 画面2：`Vertical,Num=2,Index=1`
-
-- 三摄（纵向排列）- 全部画面：`Vertical,Num=3,Index=0;1;2`
-- 三摄（纵向排列）- 画面1：`Vertical,Num=3,Index=0`
-- 三摄（纵向排列）- 画面2：`Vertical,Num=3,Index=1`
-- 三摄（纵向排列）- 画面3：`Vertical,Num=3,Index=2`
-- 三摄（纵向排列）- 画面1+2：`Vertical,Num=3,Index=0;1`
-- 三摄（纵向排列）- 画面1+3：`Vertical,Num=3,Index=0;2`
-- 三摄（纵向排列）- 画面2+3：`Vertical,Num=3,Index=1;2`
- * @method void setMultiCameraLayout(string $MultiCameraLayout) 设置多摄像头布局定义。可选值包括：
-
-- 单摄（默认值）：`Single`
-
-- 双摄（纵向排列）- 全部画面：`Vertical,Num=2,Index=0;1`
-- 双摄（纵向排列）- 画面1：`Vertical,Num=2,Index=0`
-- 双摄（纵向排列）- 画面2：`Vertical,Num=2,Index=1`
-
-- 三摄（纵向排列）- 全部画面：`Vertical,Num=3,Index=0;1;2`
-- 三摄（纵向排列）- 画面1：`Vertical,Num=3,Index=0`
-- 三摄（纵向排列）- 画面2：`Vertical,Num=3,Index=1`
-- 三摄（纵向排列）- 画面3：`Vertical,Num=3,Index=2`
-- 三摄（纵向排列）- 画面1+2：`Vertical,Num=3,Index=0;1`
-- 三摄（纵向排列）- 画面1+3：`Vertical,Num=3,Index=0;2`
-- 三摄（纵向排列）- 画面2+3：`Vertical,Num=3,Index=1;2`
- * @method integer getMaxDuration() 获取最大处理的输入视频时长，单位：秒（仅对视频输入生效）
- * @method void setMaxDuration(integer $MaxDuration) 设置最大处理的输入视频时长，单位：秒（仅对视频输入生效）
+ * @method array getDetectTypes() 获取<p>拓展的目标及事件检测类别</p>
+ * @method void setDetectTypes(array $DetectTypes) 设置<p>拓展的目标及事件检测类别</p>
+ * @method boolean getEnableSearch() 获取<p>使该视频 / 图片录入搜索库，后续可进行搜索</p>
+ * @method void setEnableSearch(boolean $EnableSearch) 设置<p>使该视频 / 图片录入搜索库，后续可进行搜索</p>
+ * @method string getOutputLang() 获取<p>主输出语言，可选值包括：</p><ul><li><code>zh</code> 中文（默认值）</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
+ * @method void setOutputLang(string $OutputLang) 设置<p>主输出语言，可选值包括：</p><ul><li><code>zh</code> 中文（默认值）</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
+ * @method string getAlternativeOutputLang() 获取<p>次选输出语言，可选值包括：</p><ul><li><code>zh</code> 中文</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
+ * @method void setAlternativeOutputLang(string $AlternativeOutputLang) 设置<p>次选输出语言，可选值包括：</p><ul><li><code>zh</code> 中文</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
+ * @method string getMultiCameraLayout() 获取<p>多摄像头布局定义。可选值包括：</p><ul><li><p>单摄（默认值）：<code>Single</code></p></li><li><p>双摄（纵向排列）- 全部画面：<code>Vertical,Num=2,Index=0;1</code></p></li><li><p>双摄（纵向排列）- 画面1：<code>Vertical,Num=2,Index=0</code></p></li><li><p>双摄（纵向排列）- 画面2：<code>Vertical,Num=2,Index=1</code></p></li><li><p>三摄（纵向排列）- 全部画面：<code>Vertical,Num=3,Index=0;1;2</code></p></li><li><p>三摄（纵向排列）- 画面1：<code>Vertical,Num=3,Index=0</code></p></li><li><p>三摄（纵向排列）- 画面2：<code>Vertical,Num=3,Index=1</code></p></li><li><p>三摄（纵向排列）- 画面3：<code>Vertical,Num=3,Index=2</code></p></li><li><p>三摄（纵向排列）- 画面1+2：<code>Vertical,Num=3,Index=0;1</code></p></li><li><p>三摄（纵向排列）- 画面1+3：<code>Vertical,Num=3,Index=0;2</code></p></li><li><p>三摄（纵向排列）- 画面2+3：<code>Vertical,Num=3,Index=1;2</code></p></li></ul>
+ * @method void setMultiCameraLayout(string $MultiCameraLayout) 设置<p>多摄像头布局定义。可选值包括：</p><ul><li><p>单摄（默认值）：<code>Single</code></p></li><li><p>双摄（纵向排列）- 全部画面：<code>Vertical,Num=2,Index=0;1</code></p></li><li><p>双摄（纵向排列）- 画面1：<code>Vertical,Num=2,Index=0</code></p></li><li><p>双摄（纵向排列）- 画面2：<code>Vertical,Num=2,Index=1</code></p></li><li><p>三摄（纵向排列）- 全部画面：<code>Vertical,Num=3,Index=0;1;2</code></p></li><li><p>三摄（纵向排列）- 画面1：<code>Vertical,Num=3,Index=0</code></p></li><li><p>三摄（纵向排列）- 画面2：<code>Vertical,Num=3,Index=1</code></p></li><li><p>三摄（纵向排列）- 画面3：<code>Vertical,Num=3,Index=2</code></p></li><li><p>三摄（纵向排列）- 画面1+2：<code>Vertical,Num=3,Index=0;1</code></p></li><li><p>三摄（纵向排列）- 画面1+3：<code>Vertical,Num=3,Index=0;2</code></p></li><li><p>三摄（纵向排列）- 画面2+3：<code>Vertical,Num=3,Index=1;2</code></p></li></ul>
+ * @method integer getMaxDuration() 获取<p>最大处理的输入视频时长，单位：秒（仅对视频输入生效）</p>
+ * @method void setMaxDuration(integer $MaxDuration) 设置<p>最大处理的输入视频时长，单位：秒（仅对视频输入生效）</p>
  */
 class SeeComprehensionConfig extends AbstractModel
 {
     /**
-     * @var array 拓展的目标及事件检测类别
+     * @var array <p>拓展的目标及事件检测类别</p>
      */
     public $DetectTypes;
 
     /**
-     * @var boolean 使该视频 / 图片录入搜索库，后续可进行搜索
+     * @var boolean <p>使该视频 / 图片录入搜索库，后续可进行搜索</p>
      */
     public $EnableSearch;
 
     /**
-     * @var string 主输出语言，可选值包括：
-- `zh` 中文（默认值）
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
+     * @var string <p>主输出语言，可选值包括：</p><ul><li><code>zh</code> 中文（默认值）</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
      */
     public $OutputLang;
 
     /**
-     * @var string 次选输出语言，可选值包括：
-- `zh` 中文
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
-
+     * @var string <p>次选输出语言，可选值包括：</p><ul><li><code>zh</code> 中文</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
      */
     public $AlternativeOutputLang;
 
     /**
-     * @var string 多摄像头布局定义。可选值包括：
-
-- 单摄（默认值）：`Single`
-
-- 双摄（纵向排列）- 全部画面：`Vertical,Num=2,Index=0;1`
-- 双摄（纵向排列）- 画面1：`Vertical,Num=2,Index=0`
-- 双摄（纵向排列）- 画面2：`Vertical,Num=2,Index=1`
-
-- 三摄（纵向排列）- 全部画面：`Vertical,Num=3,Index=0;1;2`
-- 三摄（纵向排列）- 画面1：`Vertical,Num=3,Index=0`
-- 三摄（纵向排列）- 画面2：`Vertical,Num=3,Index=1`
-- 三摄（纵向排列）- 画面3：`Vertical,Num=3,Index=2`
-- 三摄（纵向排列）- 画面1+2：`Vertical,Num=3,Index=0;1`
-- 三摄（纵向排列）- 画面1+3：`Vertical,Num=3,Index=0;2`
-- 三摄（纵向排列）- 画面2+3：`Vertical,Num=3,Index=1;2`
+     * @var string <p>多摄像头布局定义。可选值包括：</p><ul><li><p>单摄（默认值）：<code>Single</code></p></li><li><p>双摄（纵向排列）- 全部画面：<code>Vertical,Num=2,Index=0;1</code></p></li><li><p>双摄（纵向排列）- 画面1：<code>Vertical,Num=2,Index=0</code></p></li><li><p>双摄（纵向排列）- 画面2：<code>Vertical,Num=2,Index=1</code></p></li><li><p>三摄（纵向排列）- 全部画面：<code>Vertical,Num=3,Index=0;1;2</code></p></li><li><p>三摄（纵向排列）- 画面1：<code>Vertical,Num=3,Index=0</code></p></li><li><p>三摄（纵向排列）- 画面2：<code>Vertical,Num=3,Index=1</code></p></li><li><p>三摄（纵向排列）- 画面3：<code>Vertical,Num=3,Index=2</code></p></li><li><p>三摄（纵向排列）- 画面1+2：<code>Vertical,Num=3,Index=0;1</code></p></li><li><p>三摄（纵向排列）- 画面1+3：<code>Vertical,Num=3,Index=0;2</code></p></li><li><p>三摄（纵向排列）- 画面2+3：<code>Vertical,Num=3,Index=1;2</code></p></li></ul>
      */
     public $MultiCameraLayout;
 
     /**
-     * @var integer 最大处理的输入视频时长，单位：秒（仅对视频输入生效）
+     * @var integer <p>最大处理的输入视频时长，单位：秒（仅对视频输入生效）</p>
      */
     public $MaxDuration;
 
     /**
-     * @param array $DetectTypes 拓展的目标及事件检测类别
-     * @param boolean $EnableSearch 使该视频 / 图片录入搜索库，后续可进行搜索
-     * @param string $OutputLang 主输出语言，可选值包括：
-- `zh` 中文（默认值）
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
-     * @param string $AlternativeOutputLang 次选输出语言，可选值包括：
-- `zh` 中文
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
-
-     * @param string $MultiCameraLayout 多摄像头布局定义。可选值包括：
-
-- 单摄（默认值）：`Single`
-
-- 双摄（纵向排列）- 全部画面：`Vertical,Num=2,Index=0;1`
-- 双摄（纵向排列）- 画面1：`Vertical,Num=2,Index=0`
-- 双摄（纵向排列）- 画面2：`Vertical,Num=2,Index=1`
-
-- 三摄（纵向排列）- 全部画面：`Vertical,Num=3,Index=0;1;2`
-- 三摄（纵向排列）- 画面1：`Vertical,Num=3,Index=0`
-- 三摄（纵向排列）- 画面2：`Vertical,Num=3,Index=1`
-- 三摄（纵向排列）- 画面3：`Vertical,Num=3,Index=2`
-- 三摄（纵向排列）- 画面1+2：`Vertical,Num=3,Index=0;1`
-- 三摄（纵向排列）- 画面1+3：`Vertical,Num=3,Index=0;2`
-- 三摄（纵向排列）- 画面2+3：`Vertical,Num=3,Index=1;2`
-     * @param integer $MaxDuration 最大处理的输入视频时长，单位：秒（仅对视频输入生效）
+     * @param array $DetectTypes <p>拓展的目标及事件检测类别</p>
+     * @param boolean $EnableSearch <p>使该视频 / 图片录入搜索库，后续可进行搜索</p>
+     * @param string $OutputLang <p>主输出语言，可选值包括：</p><ul><li><code>zh</code> 中文（默认值）</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
+     * @param string $AlternativeOutputLang <p>次选输出语言，可选值包括：</p><ul><li><code>zh</code> 中文</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
+     * @param string $MultiCameraLayout <p>多摄像头布局定义。可选值包括：</p><ul><li><p>单摄（默认值）：<code>Single</code></p></li><li><p>双摄（纵向排列）- 全部画面：<code>Vertical,Num=2,Index=0;1</code></p></li><li><p>双摄（纵向排列）- 画面1：<code>Vertical,Num=2,Index=0</code></p></li><li><p>双摄（纵向排列）- 画面2：<code>Vertical,Num=2,Index=1</code></p></li><li><p>三摄（纵向排列）- 全部画面：<code>Vertical,Num=3,Index=0;1;2</code></p></li><li><p>三摄（纵向排列）- 画面1：<code>Vertical,Num=3,Index=0</code></p></li><li><p>三摄（纵向排列）- 画面2：<code>Vertical,Num=3,Index=1</code></p></li><li><p>三摄（纵向排列）- 画面3：<code>Vertical,Num=3,Index=2</code></p></li><li><p>三摄（纵向排列）- 画面1+2：<code>Vertical,Num=3,Index=0;1</code></p></li><li><p>三摄（纵向排列）- 画面1+3：<code>Vertical,Num=3,Index=0;2</code></p></li><li><p>三摄（纵向排列）- 画面2+3：<code>Vertical,Num=3,Index=1;2</code></p></li></ul>
+     * @param integer $MaxDuration <p>最大处理的输入视频时长，单位：秒（仅对视频输入生效）</p>
      */
     function __construct()
     {

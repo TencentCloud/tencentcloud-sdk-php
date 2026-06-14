@@ -20,81 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 定制化查询
  *
- * @method string getModuleId() 获取配置名称
+ * @method string getModuleId() 获取<p>配置名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModuleId(string $ModuleId) 设置配置名称
+ * @method void setModuleId(string $ModuleId) 设置<p>配置名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIncludeType() 获取配置方式。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+ * @method string getIncludeType() 获取<p>配置方式</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIncludeType(string $IncludeType) 设置配置方式。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+ * @method void setIncludeType(string $IncludeType) 设置<p>配置方式</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParams() 获取额外参数
+ * @method string getParams() 获取<p>额外参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParams(string $Params) 设置额外参数
+ * @method void setParams(string $Params) 设置<p>额外参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProjectConfigResult extends AbstractModel
 {
     /**
-     * @var string 配置名称
+     * @var string <p>配置名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModuleId;
 
     /**
-     * @var string 配置方式。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * @var string <p>配置方式</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncludeType;
 
     /**
-     * @var string 额外参数
+     * @var string <p>额外参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Params;
 
     /**
-     * @param string $ModuleId 配置名称
+     * @param string $ModuleId <p>配置名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IncludeType 配置方式。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * @param string $IncludeType <p>配置方式</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Params 额外参数
+     * @param string $Params <p>额外参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

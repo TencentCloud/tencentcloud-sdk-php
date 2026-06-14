@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeManualTriggerRecordPage请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getTriggerName() 获取触发运行名称
- * @method void setTriggerName(string $TriggerName) 设置触发运行名称
- * @method string getWorkflowKeyword() 获取工作流过滤关键字，工作流名称 or 工作流ID
- * @method void setWorkflowKeyword(string $WorkflowKeyword) 设置工作流过滤关键字，工作流名称 or 工作流ID
- * @method string getCreator() 获取触发运行提交人过滤，多个提交人用英文逗号分割
- * @method void setCreator(string $Creator) 设置触发运行提交人过滤，多个提交人用英文逗号分割
- * @method string getTriggerStartTime() 获取触发提交创建时间过滤，起始时间
- * @method void setTriggerStartTime(string $TriggerStartTime) 设置触发提交创建时间过滤，起始时间
- * @method string getTriggerEndTime() 获取触发提交创建时间过滤，结束时间
- * @method void setTriggerEndTime(string $TriggerEndTime) 设置触发提交创建时间过滤，结束时间
- * @method integer getPageNumber() 获取页码，整型
- * @method void setPageNumber(integer $PageNumber) 设置页码，整型
- * @method integer getPageSize() 获取每页数目，整型
- * @method void setPageSize(integer $PageSize) 设置每页数目，整型
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method string getTriggerName() 获取<p>触发运行名称</p>
+ * @method void setTriggerName(string $TriggerName) 设置<p>触发运行名称</p>
+ * @method string getWorkflowKeyword() 获取<p>工作流过滤关键字，工作流名称 or 工作流ID</p>
+ * @method void setWorkflowKeyword(string $WorkflowKeyword) 设置<p>工作流过滤关键字，工作流名称 or 工作流ID</p>
+ * @method string getCreator() 获取<p>触发运行提交人过滤，多个提交人用英文逗号分割</p>
+ * @method void setCreator(string $Creator) 设置<p>触发运行提交人过滤，多个提交人用英文逗号分割</p>
+ * @method string getTriggerStartTime() 获取<p>触发提交创建时间过滤，起始时间</p>
+ * @method void setTriggerStartTime(string $TriggerStartTime) 设置<p>触发提交创建时间过滤，起始时间</p>
+ * @method string getTriggerEndTime() 获取<p>触发提交创建时间过滤，结束时间</p>
+ * @method void setTriggerEndTime(string $TriggerEndTime) 设置<p>触发提交创建时间过滤，结束时间</p>
+ * @method integer getPageNumber() 获取<p>页码，整型</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码，整型</p>
+ * @method integer getPageSize() 获取<p>每页数目，整型</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页数目，整型</p>
+ * @method string getTriggerId() 获取<p>触发ID</p>
+ * @method void setTriggerId(string $TriggerId) 设置<p>触发ID</p>
  */
 class DescribeManualTriggerRecordPageRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 触发运行名称
+     * @var string <p>触发运行名称</p>
      */
     public $TriggerName;
 
     /**
-     * @var string 工作流过滤关键字，工作流名称 or 工作流ID
+     * @var string <p>工作流过滤关键字，工作流名称 or 工作流ID</p>
      */
     public $WorkflowKeyword;
 
     /**
-     * @var string 触发运行提交人过滤，多个提交人用英文逗号分割
+     * @var string <p>触发运行提交人过滤，多个提交人用英文逗号分割</p>
      */
     public $Creator;
 
     /**
-     * @var string 触发提交创建时间过滤，起始时间
+     * @var string <p>触发提交创建时间过滤，起始时间</p>
      */
     public $TriggerStartTime;
 
     /**
-     * @var string 触发提交创建时间过滤，结束时间
+     * @var string <p>触发提交创建时间过滤，结束时间</p>
      */
     public $TriggerEndTime;
 
     /**
-     * @var integer 页码，整型
+     * @var integer <p>页码，整型</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页数目，整型
+     * @var integer <p>每页数目，整型</p>
      */
     public $PageSize;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param string $TriggerName 触发运行名称
-     * @param string $WorkflowKeyword 工作流过滤关键字，工作流名称 or 工作流ID
-     * @param string $Creator 触发运行提交人过滤，多个提交人用英文逗号分割
-     * @param string $TriggerStartTime 触发提交创建时间过滤，起始时间
-     * @param string $TriggerEndTime 触发提交创建时间过滤，结束时间
-     * @param integer $PageNumber 页码，整型
-     * @param integer $PageSize 每页数目，整型
+     * @var string <p>触发ID</p>
+     */
+    public $TriggerId;
+
+    /**
+     * @param string $ProjectId <p>项目ID</p>
+     * @param string $TriggerName <p>触发运行名称</p>
+     * @param string $WorkflowKeyword <p>工作流过滤关键字，工作流名称 or 工作流ID</p>
+     * @param string $Creator <p>触发运行提交人过滤，多个提交人用英文逗号分割</p>
+     * @param string $TriggerStartTime <p>触发提交创建时间过滤，起始时间</p>
+     * @param string $TriggerEndTime <p>触发提交创建时间过滤，结束时间</p>
+     * @param integer $PageNumber <p>页码，整型</p>
+     * @param integer $PageSize <p>每页数目，整型</p>
+     * @param string $TriggerId <p>触发ID</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeManualTriggerRecordPageRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("TriggerId",$param) and $param["TriggerId"] !== null) {
+            $this->TriggerId = $param["TriggerId"];
         }
     }
 }

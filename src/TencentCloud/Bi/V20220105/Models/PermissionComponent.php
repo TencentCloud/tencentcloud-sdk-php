@@ -20,105 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 商业版本权限单元
  *
- * @method string getModuleId() 获取权限值
+ * @method string getModuleId() 获取<p>权限值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModuleId(string $ModuleId) 设置权限值
+ * @method void setModuleId(string $ModuleId) 设置<p>权限值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIncludeType() 获取可用性。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+ * @method string getIncludeType() 获取<p>可用性</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIncludeType(string $IncludeType) 设置可用性。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+ * @method void setIncludeType(string $IncludeType) 设置<p>可用性</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpgradeVersionType() 获取目标升级版本
+ * @method string getUpgradeVersionType() 获取<p>目标升级版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpgradeVersionType(string $UpgradeVersionType) 设置目标升级版本
+ * @method void setUpgradeVersionType(string $UpgradeVersionType) 设置<p>目标升级版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTips() 获取补充信息
+ * @method string getTips() 获取<p>补充信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTips(string $Tips) 设置补充信息
+ * @method void setTips(string $Tips) 设置<p>补充信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTipsKey() 获取补充信息的key值
+ * @method string getTipsKey() 获取<p>补充信息的key值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTipsKey(string $TipsKey) 设置补充信息的key值
+ * @method void setTipsKey(string $TipsKey) 设置<p>补充信息的key值</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PermissionComponent extends AbstractModel
 {
     /**
-     * @var string 权限值
+     * @var string <p>权限值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModuleId;
 
     /**
-     * @var string 可用性。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * @var string <p>可用性</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncludeType;
 
     /**
-     * @var string 目标升级版本
+     * @var string <p>目标升级版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpgradeVersionType;
 
     /**
-     * @var string 补充信息
+     * @var string <p>补充信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tips;
 
     /**
-     * @var string 补充信息的key值
+     * @var string <p>补充信息的key值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TipsKey;
 
     /**
-     * @param string $ModuleId 权限值
+     * @param string $ModuleId <p>权限值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IncludeType 可用性。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * @param string $IncludeType <p>可用性</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpgradeVersionType 目标升级版本
+     * @param string $UpgradeVersionType <p>目标升级版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Tips 补充信息
+     * @param string $Tips <p>补充信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TipsKey 补充信息的key值
+     * @param string $TipsKey <p>补充信息的key值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

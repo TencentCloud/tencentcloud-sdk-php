@@ -20,38 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjectInfo请求参数结构体
  *
- * @method integer getId() 获取项目Id
- * @method void setId(integer $Id) 设置项目Id
- * @method integer getDefaultPanelType() 获取默认看板
-取值范围：
-1：项目看板 
-2：我的看板
- * @method void setDefaultPanelType(integer $DefaultPanelType) 设置默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+ * @method integer getId() 获取<p>项目Id</p>
+ * @method void setId(integer $Id) 设置<p>项目Id</p>
+ * @method integer getDefaultPanelType() 获取<p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+ * @method void setDefaultPanelType(integer $DefaultPanelType) 设置<p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
  */
 class DescribeProjectInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 项目Id
+     * @var integer <p>项目Id</p>
      */
     public $Id;
 
     /**
-     * @var integer 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * @var integer <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public $DefaultPanelType;
 
     /**
-     * @param integer $Id 项目Id
-     * @param integer $DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * @param integer $Id <p>项目Id</p>
+     * @param integer $DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     function __construct()
     {

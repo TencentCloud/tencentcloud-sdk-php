@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserRoleProject请求参数结构体
  *
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method array getRoleIdList() 获取角色ID列表
- * @method void setRoleIdList(array $RoleIdList) 设置角色ID列表
- * @method array getUserList() 获取用户列表（废弃）
- * @method void setUserList(array $UserList) 设置用户列表（废弃）
- * @method array getUserInfoList() 获取用户列表（新）
- * @method void setUserInfoList(array $UserInfoList) 设置用户列表（新）
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
+ * @method array getRoleIdList() 获取<p>角色ID列表</p>
+ * @method void setRoleIdList(array $RoleIdList) 设置<p>角色ID列表</p>
+ * @method array getUserList() 获取<p>用户列表（废弃）</p>
+ * @method void setUserList(array $UserList) 设置<p>用户列表（废弃）</p>
+ * @method array getUserInfoList() 获取<p>用户列表（新）</p>
+ * @method void setUserInfoList(array $UserInfoList) 设置<p>用户列表（新）</p>
  */
 class CreateUserRoleProjectRequest extends AbstractModel
 {
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var array 角色ID列表
+     * @var array <p>角色ID列表</p>
      */
     public $RoleIdList;
 
     /**
-     * @var array 用户列表（废弃）
+     * @var array <p>用户列表（废弃）</p>
      * @deprecated
      */
     public $UserList;
 
     /**
-     * @var array 用户列表（新）
+     * @var array <p>用户列表（新）</p>
      */
     public $UserInfoList;
 
     /**
-     * @param integer $ProjectId 项目ID
-     * @param array $RoleIdList 角色ID列表
-     * @param array $UserList 用户列表（废弃）
-     * @param array $UserInfoList 用户列表（新）
+     * @param integer $ProjectId <p>项目ID</p>
+     * @param array $RoleIdList <p>角色ID列表</p>
+     * @param array $UserList <p>用户列表（废弃）</p>
+     * @param array $UserInfoList <p>用户列表（新）</p>
      */
     function __construct()
     {

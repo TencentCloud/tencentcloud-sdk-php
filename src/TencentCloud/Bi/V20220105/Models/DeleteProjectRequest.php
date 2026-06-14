@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteProject请求参数结构体
  *
- * @method integer getId() 获取项目ID
- * @method void setId(integer $Id) 设置项目ID
- * @method string getSeed() 获取随机数
- * @method void setSeed(string $Seed) 设置随机数
- * @method integer getDefaultPanelType() 获取默认看板
-取值范围：
-1：项目看板 
-2：我的看板
- * @method void setDefaultPanelType(integer $DefaultPanelType) 设置默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+ * @method integer getId() 获取<p>项目ID</p>
+ * @method void setId(integer $Id) 设置<p>项目ID</p>
+ * @method string getSeed() 获取<p>随机数</p>
+ * @method void setSeed(string $Seed) 设置<p>随机数</p>
+ * @method integer getDefaultPanelType() 获取<p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+ * @method void setDefaultPanelType(integer $DefaultPanelType) 设置<p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
  */
 class DeleteProjectRequest extends AbstractModel
 {
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $Id;
 
     /**
-     * @var string 随机数
+     * @var string <p>随机数</p>
      */
     public $Seed;
 
     /**
-     * @var integer 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * @var integer <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public $DefaultPanelType;
 
     /**
-     * @param integer $Id 项目ID
-     * @param string $Seed 随机数
-     * @param integer $DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * @param integer $Id <p>项目ID</p>
+     * @param string $Seed <p>随机数</p>
+     * @param integer $DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     function __construct()
     {

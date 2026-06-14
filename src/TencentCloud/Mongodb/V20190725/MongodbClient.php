@@ -34,6 +34,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\CreateDBInstanceParamTplResponse CreateDBInstanceParamTpl(Models\CreateDBInstanceParamTplRequest $req) 本接口(CreateDBInstanceParamTpl)用于创建云数据库MongoDB实例的参数模板
 **说明：CreateDBInstanceParamTpl API正在公测中，在此期间，该接口仅对公测用户开放**
  * @method Models\CreateLogDownloadTaskResponse CreateLogDownloadTask(Models\CreateLogDownloadTaskRequest $req) 创建日志下载任务
+ * @method Models\CreateSlowLogPatternDownloadTaskResponse CreateSlowLogPatternDownloadTask(Models\CreateSlowLogPatternDownloadTaskRequest $req) 创建慢日志统计下载任务
  * @method Models\DeleteAccountUserResponse DeleteAccountUser(Models\DeleteAccountUserRequest $req) 本接口（DeleteAccountUser）用于删除实例的自定义账号。
  * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
  * @method Models\DeleteDBBackupsResponse DeleteDBBackups(Models\DeleteDBBackupsRequest $req) 删除全量备份
@@ -50,6 +51,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeCurrentOpResponse DescribeCurrentOp(Models\DescribeCurrentOpRequest $req) 本接口（DescribeCurrentOp）用于查询云数据库实例的当前正在执行的操作。
  * @method Models\DescribeDBBackupsResponse DescribeDBBackups(Models\DescribeDBBackupsRequest $req) 本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持查询7天内的备份记录。
  * @method Models\DescribeDBInstanceDealResponse DescribeDBInstanceDeal(Models\DescribeDBInstanceDealRequest $req) 本接口（DescribeDBInstanceDeal）用于获取MongoDB购买、续费及变配订单详细。
+ * @method Models\DescribeDBInstanceLogToCLSResponse DescribeDBInstanceLogToCLS(Models\DescribeDBInstanceLogToCLSRequest $req) 获取日志投递的相关配置信息
  * @method Models\DescribeDBInstanceNamespaceResponse DescribeDBInstanceNamespace(Models\DescribeDBInstanceNamespaceRequest $req) 本接口（DescribeDBInstanceNamespace）用于查询数据库的表信息。
  * @method Models\DescribeDBInstanceNodePropertyResponse DescribeDBInstanceNodeProperty(Models\DescribeDBInstanceNodePropertyRequest $req) 本接口用于查询节点的属性，包括节点所在可用区、节点名称、地址、角色、状态、主从延迟、优先级、投票权、标签等属性。
  * @method Models\DescribeDBInstanceParamTplResponse DescribeDBInstanceParamTpl(Models\DescribeDBInstanceParamTplRequest $req) 本接口(DescribeDBInstanceParamTpl )用于查询当前账号下所有MongoDB数据库参数模板
@@ -80,6 +82,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\FlashBackDBInstanceResponse FlashBackDBInstance(Models\FlashBackDBInstanceRequest $req) 该接口用于发起按 Key 闪回任务，依据数据的闪回 Key（默认为 id）对数据进行极速回档，快速恢复业务。
 **说明：按 Key 闪回于2023年09月11日正式进行公测，在此期间，该接口仅对公测用户开放。**
  * @method Models\FlushInstanceRouterConfigResponse FlushInstanceRouterConfig(Models\FlushInstanceRouterConfigRequest $req) 在所有mongos上执行FlushRouterConfig命令
+ * @method Models\IncreaseDBInstanceConnectionLimitResponse IncreaseDBInstanceConnectionLimit(Models\IncreaseDBInstanceConnectionLimitRequest $req) 终止实例流程
  * @method Models\InquirePriceCreateDBInstancesResponse InquirePriceCreateDBInstances(Models\InquirePriceCreateDBInstancesRequest $req) 本接口（InquirePriceCreateDBInstances）用于创建数据库实例询价。本接口参数中必须传入region参数，否则无法通过校验。本接口仅允许针对购买限制范围内的实例配置进行询价。
  * @method Models\InquirePriceModifyDBInstanceSpecResponse InquirePriceModifyDBInstanceSpec(Models\InquirePriceModifyDBInstanceSpecRequest $req) 本接口 (InquirePriceModifyDBInstanceSpec) 用于查询实例配置变更后的价格。
  * @method Models\InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstances(Models\InquirePriceRenewDBInstancesRequest $req) 本接口 (InquiryPriceRenewDBInstances) 用于续费包年包月实例询价。
@@ -88,6 +91,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\KillOpsResponse KillOps(Models\KillOpsRequest $req) 本接口（KillOps）用于终止 MongoDB 云数据库实例上执行的特定操作。
  * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) 本接口(ModifyAuditService)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。
  * @method Models\ModifyBackupExpireTimeResponse ModifyBackupExpireTime(Models\ModifyBackupExpireTimeRequest $req) 修改备份过期时间
+ * @method Models\ModifyDBInstanceLogToCLSResponse ModifyDBInstanceLogToCLS(Models\ModifyDBInstanceLogToCLSRequest $req) 开启或关闭MongoDB慢日志、错误日志、操作日志投递CLS
  * @method Models\ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddress(Models\ModifyDBInstanceNetworkAddressRequest $req) 本接口（ModifyDBInstanceNetworkAddress）用于修改云数据库实例的网络信息，支持基础网络切换为私有网络、私有网络切换私有网络。
  * @method Models\ModifyDBInstanceParamTplResponse ModifyDBInstanceParamTpl(Models\ModifyDBInstanceParamTplRequest $req) 本接口(ModifyDBInstanceParamTpl )用于修改MongoDB云数据库实例的参数模板。
 **说明：ModifyDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**

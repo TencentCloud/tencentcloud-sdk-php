@@ -23,12 +23,24 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tokenhub\V20260322\Models as Models;
 
 /**
+ * @method Models\CreateGlossaryResponse CreateGlossary(Models\CreateGlossaryRequest $req) 创建术语库。
+
+在当前应用下创建一个新的翻译术语库，用于自定义源语言到目标语言的术语映射。创建成功后返回术语库 ID，可通过该 ID 进一步管理术语条目。
+ * @method Models\CreateGlossaryEntriesResponse CreateGlossaryEntries(Models\CreateGlossaryEntriesRequest $req) 批量创建术语条目。
+
+在指定术语库下批量创建术语条目。单次最多创建 100 条。
  * @method Models\CreateTokenPlanApiKeysResponse CreateTokenPlanApiKeys(Models\CreateTokenPlanApiKeysRequest $req) 批量创建 TokenPlan APIKey。
 
 传入名称前缀和数量，自动按 {ApiKeyName}-{序号} 格式生成名称（如 aaa-1, aaa-2）。允许同名。支持部分成功，最多 100 条。
  * @method Models\CreateTokenPlanTeamOrderAndBuyResponse CreateTokenPlanTeamOrderAndBuy(Models\CreateTokenPlanTeamOrderAndBuyRequest $req) 购买套餐。
 
 发起 TokenPlan 套餐下单并完成支付，成功后返回大订单 ID 及关联的子订单、资源信息。
+ * @method Models\DeleteGlossaryResponse DeleteGlossary(Models\DeleteGlossaryRequest $req) 删除术语库。
+
+删除指定的术语库及其下所有术语条目。删除操作幂等，对不存在的术语库返回成功。调用接口后，若通过 DescribeGlossaries 接口查询不到对应术语库，则表示删除成功。
+ * @method Models\DeleteGlossaryEntriesResponse DeleteGlossaryEntries(Models\DeleteGlossaryEntriesRequest $req) 批量删除术语条目。
+
+在指定术语库下批量删除术语条目。单次最多删除 200 条。若术语库不存在或不属于当前应用，返回 ResourceNotFound 错误。
  * @method Models\DeleteTokenPlanApiKeyResponse DeleteTokenPlanApiKey(Models\DeleteTokenPlanApiKeyRequest $req) 删除 TokenPlan APIKey。
 
 同时删除额度中心子额度包并通知网关清除缓存。
@@ -36,6 +48,12 @@ use TencentCloud\Tokenhub\V20260322\Models as Models;
  * @method Models\DescribeApiKeyListResponse DescribeApiKeyList(Models\DescribeApiKeyListRequest $req) 查询 API 密钥列表。
 
 查询当前用户的 API 密钥列表，密钥值脱敏展示。支持分页、过滤和排序。
+ * @method Models\DescribeGlossariesResponse DescribeGlossaries(Models\DescribeGlossariesRequest $req) 查询术语库列表。
+
+查询当前应用下的术语库列表。支持分页、过滤和排序。
+ * @method Models\DescribeGlossaryEntriesResponse DescribeGlossaryEntries(Models\DescribeGlossaryEntriesRequest $req) 查询术语条目列表。
+
+查询指定术语库下的术语条目。支持分页。
  * @method Models\DescribeModelListResponse DescribeModelList(Models\DescribeModelListRequest $req) 查询模型列表。
 
 支持按模型 ID、模型名称、模型能力等条件筛选，支持分页和排序。
@@ -62,6 +80,9 @@ use TencentCloud\Tokenhub\V20260322\Models as Models;
 按 apikey、endpoint、model 三个维度统计指定时间窗内的用量排行，返回顶部数据卡所需的 PageStats/TotalStats、左侧 Top 列表（含每对象整段累计值）、右侧色块趋势图所需的逐点曲线。前端通过 Offset 翻页、ShowAll 切换 CSV 全量导出模式。
 
 MetricType 字段用于切换指标族，本期支持 tokens；接口预留以支持后续指标族扩展。响应回显 MetricType 与 MetricKeys（实际参与渲染的 metric key 列表，顺序固定 [Total, Input, Output]），前端按此渲染顶部数据卡与趋势图，无需硬编码 key 名。
+ * @method Models\ModifyGlossaryEntriesResponse ModifyGlossaryEntries(Models\ModifyGlossaryEntriesRequest $req) 批量修改术语条目。
+
+在指定术语库下批量修改术语条目。单次最多修改 200 条。
  * @method Models\ModifyTokenPlanApiKeyResponse ModifyTokenPlanApiKey(Models\ModifyTokenPlanApiKeyRequest $req) 修改 TokenPlan APIKey 配置（网关关注字段）。
 
 修改后自动通知网关更新缓存并同步额度中心。

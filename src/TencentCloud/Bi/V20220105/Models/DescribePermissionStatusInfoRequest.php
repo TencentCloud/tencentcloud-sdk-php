@@ -20,62 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePermissionStatusInfo请求参数结构体
  *
- * @method integer getTableId() 获取页数
- * @method void setTableId(integer $TableId) 设置页数
- * @method string getType() 获取类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
- * @method void setType(string $Type) 设置类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
- * @method string getProjectId() 获取1
- * @method void setProjectId(string $ProjectId) 设置1
+ * @method integer getTableId() 获取<p>页数</p>
+ * @method void setTableId(integer $TableId) 设置<p>页数</p>
+ * @method string getType() 获取<p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
+ * @method void setType(string $Type) 设置<p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
+ * @method string getProjectId() 获取<p>1</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>1</p>
  */
 class DescribePermissionStatusInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 页数
+     * @var integer <p>页数</p>
      */
     public $TableId;
 
     /**
-     * @var string 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
+     * @var string <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
      */
     public $Type;
 
     /**
-     * @var string 1
+     * @var string <p>1</p>
      */
     public $ProjectId;
 
     /**
-     * @param integer $TableId 页数
-     * @param string $Type 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
-     * @param string $ProjectId 1
+     * @param integer $TableId <p>页数</p>
+     * @param string $Type <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
+     * @param string $ProjectId <p>1</p>
      */
     function __construct()
     {

@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserProjectList请求参数结构体
  *
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method boolean getAllPage() 获取无
- * @method void setAllPage(boolean $AllPage) 设置无
- * @method integer getPageNo() 获取无
- * @method void setPageNo(integer $PageNo) 设置无
- * @method integer getPageSize() 获取无
- * @method void setPageSize(integer $PageSize) 设置无
- * @method boolean getIsFilterPerAuthUser() 获取是否过滤掉企业管理员
- * @method void setIsFilterPerAuthUser(boolean $IsFilterPerAuthUser) 设置是否过滤掉企业管理员
- * @method boolean getIsFilterCurrentUser() 获取是否过滤掉当前用户
- * @method void setIsFilterCurrentUser(boolean $IsFilterCurrentUser) 设置是否过滤掉当前用户
- * @method string getKeyword() 获取关键字
- * @method void setKeyword(string $Keyword) 设置关键字
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
+ * @method boolean getAllPage() 获取<p>无</p>
+ * @method void setAllPage(boolean $AllPage) 设置<p>无</p>
+ * @method integer getPageNo() 获取<p>无</p>
+ * @method void setPageNo(integer $PageNo) 设置<p>无</p>
+ * @method integer getPageSize() 获取<p>无</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>无</p>
+ * @method boolean getIsFilterPerAuthUser() 获取<p>是否过滤掉企业管理员</p>
+ * @method void setIsFilterPerAuthUser(boolean $IsFilterPerAuthUser) 设置<p>是否过滤掉企业管理员</p>
+ * @method boolean getIsFilterCurrentUser() 获取<p>是否过滤掉当前用户</p>
+ * @method void setIsFilterCurrentUser(boolean $IsFilterCurrentUser) 设置<p>是否过滤掉当前用户</p>
+ * @method string getKeyword() 获取<p>关键字</p>
+ * @method void setKeyword(string $Keyword) 设置<p>关键字</p>
  */
 class DescribeUserProjectListRequest extends AbstractModel
 {
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var boolean 无
+     * @var boolean <p>无</p>
      */
     public $AllPage;
 
     /**
-     * @var integer 无
+     * @var integer <p>无</p>
      */
     public $PageNo;
 
     /**
-     * @var integer 无
+     * @var integer <p>无</p>
      */
     public $PageSize;
 
     /**
-     * @var boolean 是否过滤掉企业管理员
+     * @var boolean <p>是否过滤掉企业管理员</p>
      */
     public $IsFilterPerAuthUser;
 
     /**
-     * @var boolean 是否过滤掉当前用户
+     * @var boolean <p>是否过滤掉当前用户</p>
      */
     public $IsFilterCurrentUser;
 
     /**
-     * @var string 关键字
+     * @var string <p>关键字</p>
      */
     public $Keyword;
 
     /**
-     * @param integer $ProjectId 项目ID
-     * @param boolean $AllPage 无
-     * @param integer $PageNo 无
-     * @param integer $PageSize 无
-     * @param boolean $IsFilterPerAuthUser 是否过滤掉企业管理员
-     * @param boolean $IsFilterCurrentUser 是否过滤掉当前用户
-     * @param string $Keyword 关键字
+     * @param integer $ProjectId <p>项目ID</p>
+     * @param boolean $AllPage <p>无</p>
+     * @param integer $PageNo <p>无</p>
+     * @param integer $PageSize <p>无</p>
+     * @param boolean $IsFilterPerAuthUser <p>是否过滤掉企业管理员</p>
+     * @param boolean $IsFilterCurrentUser <p>是否过滤掉当前用户</p>
+     * @param string $Keyword <p>关键字</p>
      */
     function __construct()
     {

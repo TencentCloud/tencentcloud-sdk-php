@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCluster请求参数结构体
  *
- * @method string getClusterType() 获取集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
- * @method void setClusterType(string $ClusterType) 设置集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
- * @method ClusterCIDRSettings getClusterCIDRSettings() 获取集群容器网络配置信息
- * @method void setClusterCIDRSettings(ClusterCIDRSettings $ClusterCIDRSettings) 设置集群容器网络配置信息
- * @method array getRunInstancesForNode() 获取CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
- * @method void setRunInstancesForNode(array $RunInstancesForNode) 设置CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
- * @method ClusterBasicSettings getClusterBasicSettings() 获取集群的基本配置信息
- * @method void setClusterBasicSettings(ClusterBasicSettings $ClusterBasicSettings) 设置集群的基本配置信息
- * @method ClusterAdvancedSettings getClusterAdvancedSettings() 获取集群高级配置信息
- * @method void setClusterAdvancedSettings(ClusterAdvancedSettings $ClusterAdvancedSettings) 设置集群高级配置信息
- * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取节点高级配置信息
- * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置节点高级配置信息
- * @method array getExistedInstancesForNode() 获取已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
- * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) 设置已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
- * @method array getInstanceDataDiskMountSettings() 获取CVM类型和其对应的数据盘挂载配置信息
- * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) 设置CVM类型和其对应的数据盘挂载配置信息
- * @method array getExtensionAddons() 获取需要安装的扩展组件信息
- * @method void setExtensionAddons(array $ExtensionAddons) 设置需要安装的扩展组件信息
- * @method string getCdcId() 获取本地专用集群Id
- * @method void setCdcId(string $CdcId) 设置本地专用集群Id
- * @method array getDisableAddons() 获取屏蔽安装指定Addon组件，填写相应的AddonName
- * @method void setDisableAddons(array $DisableAddons) 设置屏蔽安装指定Addon组件，填写相应的AddonName
+ * @method string getClusterType() 获取<p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
+ * @method void setClusterType(string $ClusterType) 设置<p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
+ * @method ClusterCIDRSettings getClusterCIDRSettings() 获取<p>集群容器网络配置信息</p>
+ * @method void setClusterCIDRSettings(ClusterCIDRSettings $ClusterCIDRSettings) 设置<p>集群容器网络配置信息</p>
+ * @method array getRunInstancesForNode() 获取<p>CVM创建透传参数，json化字符串格式，详见<a href="https://cloud.tencent.com/document/product/213/15730">CVM创建实例</a>接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。</p>
+ * @method void setRunInstancesForNode(array $RunInstancesForNode) 设置<p>CVM创建透传参数，json化字符串格式，详见<a href="https://cloud.tencent.com/document/product/213/15730">CVM创建实例</a>接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。</p>
+ * @method ClusterBasicSettings getClusterBasicSettings() 获取<p>集群的基本配置信息</p>
+ * @method void setClusterBasicSettings(ClusterBasicSettings $ClusterBasicSettings) 设置<p>集群的基本配置信息</p>
+ * @method ClusterAdvancedSettings getClusterAdvancedSettings() 获取<p>集群高级配置信息</p>
+ * @method void setClusterAdvancedSettings(ClusterAdvancedSettings $ClusterAdvancedSettings) 设置<p>集群高级配置信息</p>
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取<p>节点高级配置信息</p>
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置<p>节点高级配置信息</p>
+ * @method array getExistedInstancesForNode() 获取<p>已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过 50，不支持添加竞价实例。</p>
+ * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) 设置<p>已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过 50，不支持添加竞价实例。</p>
+ * @method array getInstanceDataDiskMountSettings() 获取<p>CVM类型和其对应的数据盘挂载配置信息</p>
+ * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) 设置<p>CVM类型和其对应的数据盘挂载配置信息</p>
+ * @method array getExtensionAddons() 获取<p>需要安装的扩展组件信息</p>
+ * @method void setExtensionAddons(array $ExtensionAddons) 设置<p>需要安装的扩展组件信息</p>
+ * @method string getCdcId() 获取<p>本地专用集群Id</p>
+ * @method void setCdcId(string $CdcId) 设置<p>本地专用集群Id</p>
+ * @method array getDisableAddons() 获取<p>屏蔽安装指定Addon组件，填写相应的AddonName</p>
+ * @method void setDisableAddons(array $DisableAddons) 设置<p>屏蔽安装指定Addon组件，填写相应的AddonName</p>
  */
 class CreateClusterRequest extends AbstractModel
 {
     /**
-     * @var string 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+     * @var string <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
      */
     public $ClusterType;
 
     /**
-     * @var ClusterCIDRSettings 集群容器网络配置信息
+     * @var ClusterCIDRSettings <p>集群容器网络配置信息</p>
      */
     public $ClusterCIDRSettings;
 
     /**
-     * @var array CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
+     * @var array <p>CVM创建透传参数，json化字符串格式，详见<a href="https://cloud.tencent.com/document/product/213/15730">CVM创建实例</a>接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。</p>
      */
     public $RunInstancesForNode;
 
     /**
-     * @var ClusterBasicSettings 集群的基本配置信息
+     * @var ClusterBasicSettings <p>集群的基本配置信息</p>
      */
     public $ClusterBasicSettings;
 
     /**
-     * @var ClusterAdvancedSettings 集群高级配置信息
+     * @var ClusterAdvancedSettings <p>集群高级配置信息</p>
      */
     public $ClusterAdvancedSettings;
 
     /**
-     * @var InstanceAdvancedSettings 节点高级配置信息
+     * @var InstanceAdvancedSettings <p>节点高级配置信息</p>
      */
     public $InstanceAdvancedSettings;
 
     /**
-     * @var array 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
+     * @var array <p>已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过 50，不支持添加竞价实例。</p>
      */
     public $ExistedInstancesForNode;
 
     /**
-     * @var array CVM类型和其对应的数据盘挂载配置信息
+     * @var array <p>CVM类型和其对应的数据盘挂载配置信息</p>
      */
     public $InstanceDataDiskMountSettings;
 
     /**
-     * @var array 需要安装的扩展组件信息
+     * @var array <p>需要安装的扩展组件信息</p>
      */
     public $ExtensionAddons;
 
     /**
-     * @var string 本地专用集群Id
+     * @var string <p>本地专用集群Id</p>
      */
     public $CdcId;
 
     /**
-     * @var array 屏蔽安装指定Addon组件，填写相应的AddonName
+     * @var array <p>屏蔽安装指定Addon组件，填写相应的AddonName</p>
      */
     public $DisableAddons;
 
     /**
-     * @param string $ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
-     * @param ClusterCIDRSettings $ClusterCIDRSettings 集群容器网络配置信息
-     * @param array $RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
-     * @param ClusterBasicSettings $ClusterBasicSettings 集群的基本配置信息
-     * @param ClusterAdvancedSettings $ClusterAdvancedSettings 集群高级配置信息
-     * @param InstanceAdvancedSettings $InstanceAdvancedSettings 节点高级配置信息
-     * @param array $ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
-     * @param array $InstanceDataDiskMountSettings CVM类型和其对应的数据盘挂载配置信息
-     * @param array $ExtensionAddons 需要安装的扩展组件信息
-     * @param string $CdcId 本地专用集群Id
-     * @param array $DisableAddons 屏蔽安装指定Addon组件，填写相应的AddonName
+     * @param string $ClusterType <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
+     * @param ClusterCIDRSettings $ClusterCIDRSettings <p>集群容器网络配置信息</p>
+     * @param array $RunInstancesForNode <p>CVM创建透传参数，json化字符串格式，详见<a href="https://cloud.tencent.com/document/product/213/15730">CVM创建实例</a>接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。</p>
+     * @param ClusterBasicSettings $ClusterBasicSettings <p>集群的基本配置信息</p>
+     * @param ClusterAdvancedSettings $ClusterAdvancedSettings <p>集群高级配置信息</p>
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings <p>节点高级配置信息</p>
+     * @param array $ExistedInstancesForNode <p>已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过 50，不支持添加竞价实例。</p>
+     * @param array $InstanceDataDiskMountSettings <p>CVM类型和其对应的数据盘挂载配置信息</p>
+     * @param array $ExtensionAddons <p>需要安装的扩展组件信息</p>
+     * @param string $CdcId <p>本地专用集群Id</p>
+     * @param array $DisableAddons <p>屏蔽安装指定Addon组件，填写相应的AddonName</p>
      */
     function __construct()
     {

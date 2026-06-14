@@ -20,138 +20,134 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述了k8s集群相关配置与信息。
  *
- * @method integer getDesiredPodNumber() 获取该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+ * @method integer getDesiredPodNumber() 获取<p>该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDesiredPodNumber(integer $DesiredPodNumber) 设置该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+ * @method void setDesiredPodNumber(integer $DesiredPodNumber) 设置<p>该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method GPUArgs getGPUArgs() 获取GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
+ * @method GPUArgs getGPUArgs() 获取<p>GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGPUArgs(GPUArgs $GPUArgs) 设置GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
+ * @method void setGPUArgs(GPUArgs $GPUArgs) 设置<p>GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPreStartUserScript() 获取base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+ * @method string getPreStartUserScript() 获取<p>base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreStartUserScript(string $PreStartUserScript) 设置base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+ * @method void setPreStartUserScript(string $PreStartUserScript) 设置<p>base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTaints() 获取节点污点
+ * @method array getTaints() 获取<p>节点污点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaints(array $Taints) 设置节点污点
+ * @method void setTaints(array $Taints) 设置<p>节点污点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMountTarget() 获取数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+ * @method string getMountTarget() 获取<p>数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。<br>注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMountTarget(string $MountTarget) 设置数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+ * @method void setMountTarget(string $MountTarget) 设置<p>数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。<br>注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDockerGraphPath() 获取dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
+ * @method string getDockerGraphPath() 获取<p>dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDockerGraphPath(string $DockerGraphPath) 设置dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
+ * @method void setDockerGraphPath(string $DockerGraphPath) 设置<p>dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserScript() 获取base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+ * @method string getUserScript() 获取<p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserScript(string $UserScript) 设置base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+ * @method void setUserScript(string $UserScript) 设置<p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUnschedulable() 获取设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
- * @method void setUnschedulable(integer $Unschedulable) 设置设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
- * @method array getLabels() 获取节点Label数组
+ * @method integer getUnschedulable() 获取<p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
+ * @method void setUnschedulable(integer $Unschedulable) 设置<p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
+ * @method array getLabels() 获取<p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabels(array $Labels) 设置节点Label数组
+ * @method void setLabels(array $Labels) 设置<p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataDisks() 获取多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+ * @method array getDataDisks() 获取<p>多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataDisks(array $DataDisks) 设置多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+ * @method void setDataDisks(array $DataDisks) 设置<p>多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method InstanceExtraArgs getExtraArgs() 获取节点相关的自定义参数信息
- * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置节点相关的自定义参数信息
+ * @method InstanceExtraArgs getExtraArgs() 获取<p>节点相关的自定义参数信息</p>
+ * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置<p>节点相关的自定义参数信息</p>
  */
 class InstanceAdvancedSettings extends AbstractModel
 {
     /**
-     * @var integer 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+     * @var integer <p>该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DesiredPodNumber;
 
     /**
-     * @var GPUArgs GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
+     * @var GPUArgs <p>GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GPUArgs;
 
     /**
-     * @var string base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+     * @var string <p>base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreStartUserScript;
 
     /**
-     * @var array 节点污点
+     * @var array <p>节点污点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Taints;
 
     /**
-     * @var string 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+     * @var string <p>数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。<br>注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountTarget;
 
     /**
-     * @var string dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
+     * @var string <p>dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DockerGraphPath;
 
     /**
-     * @var string base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+     * @var string <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserScript;
 
     /**
-     * @var integer 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     * @var integer <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
      */
     public $Unschedulable;
 
     /**
-     * @var array 节点Label数组
+     * @var array <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
-     * @var array 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+     * @var array <p>多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataDisks;
 
     /**
-     * @var InstanceExtraArgs 节点相关的自定义参数信息
+     * @var InstanceExtraArgs <p>节点相关的自定义参数信息</p>
      */
     public $ExtraArgs;
 
     /**
-     * @param integer $DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+     * @param integer $DesiredPodNumber <p>该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GPUArgs $GPUArgs GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
+     * @param GPUArgs $GPUArgs <p>GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+     * @param string $PreStartUserScript <p>base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Taints 节点污点
+     * @param array $Taints <p>节点污点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+     * @param string $MountTarget <p>数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。<br>注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DockerGraphPath dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
+     * @param string $DockerGraphPath <p>dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+     * @param string $UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
-     * @param array $Labels 节点Label数组
+     * @param integer $Unschedulable <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
+     * @param array $Labels <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataDisks 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+     * @param array $DataDisks <p>多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceExtraArgs $ExtraArgs 节点相关的自定义参数信息
+     * @param InstanceExtraArgs $ExtraArgs <p>节点相关的自定义参数信息</p>
      */
     function __construct()
     {

@@ -20,226 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDatasource请求参数结构体
  *
- * @method string getDbHost() 获取HOST
- * @method void setDbHost(string $DbHost) 设置HOST
- * @method integer getDbPort() 获取端口
- * @method void setDbPort(integer $DbPort) 设置端口
- * @method string getServiceType() 获取后端提供字典：域类型，1、腾讯云，2、本地
- * @method void setServiceType(string $ServiceType) 设置后端提供字典：域类型，1、腾讯云，2、本地
- * @method string getDbType() 获取驱动
-取值范围：
-MYSQL：MySQL数据库
-PRESTO：PRESTO数据库
-POSTGRE：PostgreSQL数据库
-DLC：DLC数据库
-MSSQL：微软SQL Server数据库
- * @method void setDbType(string $DbType) 设置驱动
-取值范围：
-MYSQL：MySQL数据库
-PRESTO：PRESTO数据库
-POSTGRE：PostgreSQL数据库
-DLC：DLC数据库
-MSSQL：微软SQL Server数据库
- * @method string getCharset() 获取数据库编码
- * @method void setCharset(string $Charset) 设置数据库编码
- * @method string getDbUser() 获取用户名
- * @method void setDbUser(string $DbUser) 设置用户名
- * @method string getDbPwd() 获取密码
- * @method void setDbPwd(string $DbPwd) 设置密码
- * @method string getDbName() 获取数据库名称
- * @method void setDbName(string $DbName) 设置数据库名称
- * @method string getSourceName() 获取数据库别名
- * @method void setSourceName(string $SourceName) 设置数据库别名
- * @method integer getId() 获取数据源id
- * @method void setId(integer $Id) 设置数据源id
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method string getCatalog() 获取catalog值
- * @method void setCatalog(string $Catalog) 设置catalog值
- * @method string getDataOrigin() 获取第三方数据源标识
- * @method void setDataOrigin(string $DataOrigin) 设置第三方数据源标识
- * @method string getDataOriginProjectId() 获取第三方项目id
- * @method void setDataOriginProjectId(string $DataOriginProjectId) 设置第三方项目id
- * @method string getDataOriginDatasourceId() 获取第三方数据源id
- * @method void setDataOriginDatasourceId(string $DataOriginDatasourceId) 设置第三方数据源id
- * @method string getExtraParam() 获取扩展参数
- * @method void setExtraParam(string $ExtraParam) 设置扩展参数
- * @method string getUniqVpcId() 获取腾讯云私有网络统一标识
- * @method void setUniqVpcId(string $UniqVpcId) 设置腾讯云私有网络统一标识
- * @method string getVip() 获取私有网络ip
- * @method void setVip(string $Vip) 设置私有网络ip
- * @method string getVport() 获取私有网络端口
- * @method void setVport(string $Vport) 设置私有网络端口
- * @method string getVpcId() 获取腾讯云私有网络标识
- * @method void setVpcId(string $VpcId) 设置腾讯云私有网络标识
- * @method boolean getUseVPC() 获取开启vpc	
- * @method void setUseVPC(boolean $UseVPC) 设置开启vpc	
- * @method string getRegionId() 获取地域
- * @method void setRegionId(string $RegionId) 设置地域
- * @method string getSchema() 获取数据库schema
- * @method void setSchema(string $Schema) 设置数据库schema
- * @method string getDbVersion() 获取数据库版本
- * @method void setDbVersion(string $DbVersion) 设置数据库版本
+ * @method string getDbHost() 获取<p>HOST</p>
+ * @method void setDbHost(string $DbHost) 设置<p>HOST</p>
+ * @method integer getDbPort() 获取<p>端口</p>
+ * @method void setDbPort(integer $DbPort) 设置<p>端口</p>
+ * @method string getServiceType() 获取<p>后端提供字典：域类型，1、腾讯云，2、本地</p>
+ * @method void setServiceType(string $ServiceType) 设置<p>后端提供字典：域类型，1、腾讯云，2、本地</p>
+ * @method string getDbType() 获取<p>驱动</p><p>枚举值：</p><ul><li>MYSQL： MySQL数据库</li><li>PRESTO： PRESTO数据库</li><li>POSTGRE： PostgreSQL数据库</li><li>DLC： DLC数据库</li><li>MSSQL： 微软SQL Server数据库</li></ul>
+ * @method void setDbType(string $DbType) 设置<p>驱动</p><p>枚举值：</p><ul><li>MYSQL： MySQL数据库</li><li>PRESTO： PRESTO数据库</li><li>POSTGRE： PostgreSQL数据库</li><li>DLC： DLC数据库</li><li>MSSQL： 微软SQL Server数据库</li></ul>
+ * @method string getCharset() 获取<p>数据库编码</p>
+ * @method void setCharset(string $Charset) 设置<p>数据库编码</p>
+ * @method string getDbUser() 获取<p>用户名</p>
+ * @method void setDbUser(string $DbUser) 设置<p>用户名</p>
+ * @method string getDbPwd() 获取<p>密码</p>
+ * @method void setDbPwd(string $DbPwd) 设置<p>密码</p>
+ * @method string getDbName() 获取<p>数据库名称</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名称</p>
+ * @method string getSourceName() 获取<p>数据库别名</p>
+ * @method void setSourceName(string $SourceName) 设置<p>数据库别名</p>
+ * @method integer getId() 获取<p>数据源id</p>
+ * @method void setId(integer $Id) 设置<p>数据源id</p>
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
+ * @method string getCatalog() 获取<p>catalog值</p>
+ * @method void setCatalog(string $Catalog) 设置<p>catalog值</p>
+ * @method string getDataOrigin() 获取<p>第三方数据源标识</p>
+ * @method void setDataOrigin(string $DataOrigin) 设置<p>第三方数据源标识</p>
+ * @method string getDataOriginProjectId() 获取<p>第三方项目id</p>
+ * @method void setDataOriginProjectId(string $DataOriginProjectId) 设置<p>第三方项目id</p>
+ * @method string getDataOriginDatasourceId() 获取<p>第三方数据源id</p>
+ * @method void setDataOriginDatasourceId(string $DataOriginDatasourceId) 设置<p>第三方数据源id</p>
+ * @method string getExtraParam() 获取<p>扩展参数</p>
+ * @method void setExtraParam(string $ExtraParam) 设置<p>扩展参数</p>
+ * @method string getUniqVpcId() 获取<p>腾讯云私有网络统一标识</p>
+ * @method void setUniqVpcId(string $UniqVpcId) 设置<p>腾讯云私有网络统一标识</p>
+ * @method string getVip() 获取<p>私有网络ip</p>
+ * @method void setVip(string $Vip) 设置<p>私有网络ip</p>
+ * @method string getVport() 获取<p>私有网络端口</p>
+ * @method void setVport(string $Vport) 设置<p>私有网络端口</p>
+ * @method string getVpcId() 获取<p>腾讯云私有网络标识</p>
+ * @method void setVpcId(string $VpcId) 设置<p>腾讯云私有网络标识</p>
+ * @method boolean getUseVPC() 获取<p>开启vpc</p>
+ * @method void setUseVPC(boolean $UseVPC) 设置<p>开启vpc</p>
+ * @method string getRegionId() 获取<p>地域</p>
+ * @method void setRegionId(string $RegionId) 设置<p>地域</p>
+ * @method string getSchema() 获取<p>数据库schema</p>
+ * @method void setSchema(string $Schema) 设置<p>数据库schema</p>
+ * @method string getDbVersion() 获取<p>数据库版本</p>
+ * @method void setDbVersion(string $DbVersion) 设置<p>数据库版本</p>
  */
 class ModifyDatasourceRequest extends AbstractModel
 {
     /**
-     * @var string HOST
+     * @var string <p>HOST</p>
      */
     public $DbHost;
 
     /**
-     * @var integer 端口
+     * @var integer <p>端口</p>
      */
     public $DbPort;
 
     /**
-     * @var string 后端提供字典：域类型，1、腾讯云，2、本地
+     * @var string <p>后端提供字典：域类型，1、腾讯云，2、本地</p>
      */
     public $ServiceType;
 
     /**
-     * @var string 驱动
-取值范围：
-MYSQL：MySQL数据库
-PRESTO：PRESTO数据库
-POSTGRE：PostgreSQL数据库
-DLC：DLC数据库
-MSSQL：微软SQL Server数据库
+     * @var string <p>驱动</p><p>枚举值：</p><ul><li>MYSQL： MySQL数据库</li><li>PRESTO： PRESTO数据库</li><li>POSTGRE： PostgreSQL数据库</li><li>DLC： DLC数据库</li><li>MSSQL： 微软SQL Server数据库</li></ul>
      */
     public $DbType;
 
     /**
-     * @var string 数据库编码
+     * @var string <p>数据库编码</p>
      */
     public $Charset;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $DbUser;
 
     /**
-     * @var string 密码
+     * @var string <p>密码</p>
      */
     public $DbPwd;
 
     /**
-     * @var string 数据库名称
+     * @var string <p>数据库名称</p>
      */
     public $DbName;
 
     /**
-     * @var string 数据库别名
+     * @var string <p>数据库别名</p>
      */
     public $SourceName;
 
     /**
-     * @var integer 数据源id
+     * @var integer <p>数据源id</p>
      */
     public $Id;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string catalog值
+     * @var string <p>catalog值</p>
      */
     public $Catalog;
 
     /**
-     * @var string 第三方数据源标识
+     * @var string <p>第三方数据源标识</p>
      */
     public $DataOrigin;
 
     /**
-     * @var string 第三方项目id
+     * @var string <p>第三方项目id</p>
      */
     public $DataOriginProjectId;
 
     /**
-     * @var string 第三方数据源id
+     * @var string <p>第三方数据源id</p>
      */
     public $DataOriginDatasourceId;
 
     /**
-     * @var string 扩展参数
+     * @var string <p>扩展参数</p>
      */
     public $ExtraParam;
 
     /**
-     * @var string 腾讯云私有网络统一标识
+     * @var string <p>腾讯云私有网络统一标识</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string 私有网络ip
+     * @var string <p>私有网络ip</p>
      */
     public $Vip;
 
     /**
-     * @var string 私有网络端口
+     * @var string <p>私有网络端口</p>
      */
     public $Vport;
 
     /**
-     * @var string 腾讯云私有网络标识
+     * @var string <p>腾讯云私有网络标识</p>
      */
     public $VpcId;
 
     /**
-     * @var boolean 开启vpc	
+     * @var boolean <p>开启vpc</p>
      */
     public $UseVPC;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $RegionId;
 
     /**
-     * @var string 数据库schema
+     * @var string <p>数据库schema</p>
      */
     public $Schema;
 
     /**
-     * @var string 数据库版本
+     * @var string <p>数据库版本</p>
      */
     public $DbVersion;
 
     /**
-     * @param string $DbHost HOST
-     * @param integer $DbPort 端口
-     * @param string $ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
-     * @param string $DbType 驱动
-取值范围：
-MYSQL：MySQL数据库
-PRESTO：PRESTO数据库
-POSTGRE：PostgreSQL数据库
-DLC：DLC数据库
-MSSQL：微软SQL Server数据库
-     * @param string $Charset 数据库编码
-     * @param string $DbUser 用户名
-     * @param string $DbPwd 密码
-     * @param string $DbName 数据库名称
-     * @param string $SourceName 数据库别名
-     * @param integer $Id 数据源id
-     * @param integer $ProjectId 项目ID
-     * @param string $Catalog catalog值
-     * @param string $DataOrigin 第三方数据源标识
-     * @param string $DataOriginProjectId 第三方项目id
-     * @param string $DataOriginDatasourceId 第三方数据源id
-     * @param string $ExtraParam 扩展参数
-     * @param string $UniqVpcId 腾讯云私有网络统一标识
-     * @param string $Vip 私有网络ip
-     * @param string $Vport 私有网络端口
-     * @param string $VpcId 腾讯云私有网络标识
-     * @param boolean $UseVPC 开启vpc	
-     * @param string $RegionId 地域
-     * @param string $Schema 数据库schema
-     * @param string $DbVersion 数据库版本
+     * @param string $DbHost <p>HOST</p>
+     * @param integer $DbPort <p>端口</p>
+     * @param string $ServiceType <p>后端提供字典：域类型，1、腾讯云，2、本地</p>
+     * @param string $DbType <p>驱动</p><p>枚举值：</p><ul><li>MYSQL： MySQL数据库</li><li>PRESTO： PRESTO数据库</li><li>POSTGRE： PostgreSQL数据库</li><li>DLC： DLC数据库</li><li>MSSQL： 微软SQL Server数据库</li></ul>
+     * @param string $Charset <p>数据库编码</p>
+     * @param string $DbUser <p>用户名</p>
+     * @param string $DbPwd <p>密码</p>
+     * @param string $DbName <p>数据库名称</p>
+     * @param string $SourceName <p>数据库别名</p>
+     * @param integer $Id <p>数据源id</p>
+     * @param integer $ProjectId <p>项目ID</p>
+     * @param string $Catalog <p>catalog值</p>
+     * @param string $DataOrigin <p>第三方数据源标识</p>
+     * @param string $DataOriginProjectId <p>第三方项目id</p>
+     * @param string $DataOriginDatasourceId <p>第三方数据源id</p>
+     * @param string $ExtraParam <p>扩展参数</p>
+     * @param string $UniqVpcId <p>腾讯云私有网络统一标识</p>
+     * @param string $Vip <p>私有网络ip</p>
+     * @param string $Vport <p>私有网络端口</p>
+     * @param string $VpcId <p>腾讯云私有网络标识</p>
+     * @param boolean $UseVPC <p>开启vpc</p>
+     * @param string $RegionId <p>地域</p>
+     * @param string $Schema <p>数据库schema</p>
+     * @param string $DbVersion <p>数据库版本</p>
      */
     function __construct()
     {

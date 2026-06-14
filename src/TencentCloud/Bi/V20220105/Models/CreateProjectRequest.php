@@ -20,78 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProject请求参数结构体
  *
- * @method string getName() 获取项目名称
- * @method void setName(string $Name) 设置项目名称
- * @method string getColorCode() 获取logo底色
- * @method void setColorCode(string $ColorCode) 设置logo底色
- * @method string getLogo() 获取项目Logo
- * @method void setLogo(string $Logo) 设置项目Logo
- * @method string getMark() 获取备注
- * @method void setMark(string $Mark) 设置备注
- * @method boolean getIsApply() 获取是否允许用户申请
- * @method void setIsApply(boolean $IsApply) 设置是否允许用户申请
- * @method integer getDefaultPanelType() 获取默认看板
-取值范围：
-1：项目看板 
-2：我的看板
- * @method void setDefaultPanelType(integer $DefaultPanelType) 设置默认看板
-取值范围：
-1：项目看板 
-2：我的看板
- * @method string getManagePlatform() 获取管理平台
- * @method void setManagePlatform(string $ManagePlatform) 设置管理平台
+ * @method string getName() 获取<p>项目名称</p>
+ * @method void setName(string $Name) 设置<p>项目名称</p>
+ * @method string getColorCode() 获取<p>logo底色</p>
+ * @method void setColorCode(string $ColorCode) 设置<p>logo底色</p>
+ * @method string getLogo() 获取<p>项目Logo</p>
+ * @method void setLogo(string $Logo) 设置<p>项目Logo</p>
+ * @method string getMark() 获取<p>备注</p>
+ * @method void setMark(string $Mark) 设置<p>备注</p>
+ * @method boolean getIsApply() 获取<p>是否允许用户申请</p>
+ * @method void setIsApply(boolean $IsApply) 设置<p>是否允许用户申请</p>
+ * @method integer getDefaultPanelType() 获取<p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+ * @method void setDefaultPanelType(integer $DefaultPanelType) 设置<p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+ * @method string getManagePlatform() 获取<p>管理平台</p>
+ * @method void setManagePlatform(string $ManagePlatform) 设置<p>管理平台</p>
  */
 class CreateProjectRequest extends AbstractModel
 {
     /**
-     * @var string 项目名称
+     * @var string <p>项目名称</p>
      */
     public $Name;
 
     /**
-     * @var string logo底色
+     * @var string <p>logo底色</p>
      */
     public $ColorCode;
 
     /**
-     * @var string 项目Logo
+     * @var string <p>项目Logo</p>
      */
     public $Logo;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Mark;
 
     /**
-     * @var boolean 是否允许用户申请
+     * @var boolean <p>是否允许用户申请</p>
      */
     public $IsApply;
 
     /**
-     * @var integer 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * @var integer <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public $DefaultPanelType;
 
     /**
-     * @var string 管理平台
+     * @var string <p>管理平台</p>
      */
     public $ManagePlatform;
 
     /**
-     * @param string $Name 项目名称
-     * @param string $ColorCode logo底色
-     * @param string $Logo 项目Logo
-     * @param string $Mark 备注
-     * @param boolean $IsApply 是否允许用户申请
-     * @param integer $DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
-     * @param string $ManagePlatform 管理平台
+     * @param string $Name <p>项目名称</p>
+     * @param string $ColorCode <p>logo底色</p>
+     * @param string $Logo <p>项目Logo</p>
+     * @param string $Mark <p>备注</p>
+     * @param boolean $IsApply <p>是否允许用户申请</p>
+     * @param integer $DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+     * @param string $ManagePlatform <p>管理平台</p>
      */
     function __construct()
     {

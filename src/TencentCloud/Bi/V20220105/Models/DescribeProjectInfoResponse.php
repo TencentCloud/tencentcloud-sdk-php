@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorInfo(ErrorInfo $ErrorInfo) 设置自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtra() 获取""
+ * @method string getExtra() 获取<p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtra(string $Extra) 设置""
+ * @method void setExtra(string $Extra) 设置<p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMsg() 获取""
+ * @method string getMsg() 获取<p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMsg(string $Msg) 设置""
+ * @method void setMsg(string $Msg) 设置<p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Project getData() 获取项目详情
+ * @method Project getData() 获取<p>项目详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(Project $Data) 设置项目详情
+ * @method void setData(Project $Data) 设置<p>项目详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,19 +48,19 @@ class DescribeProjectInfoResponse extends AbstractModel
     public $ErrorInfo;
 
     /**
-     * @var string ""
+     * @var string <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
 
     /**
-     * @var string ""
+     * @var string <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Msg;
 
     /**
-     * @var Project 项目详情
+     * @var Project <p>项目详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -73,11 +73,11 @@ class DescribeProjectInfoResponse extends AbstractModel
     /**
      * @param ErrorInfo $ErrorInfo 自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Extra ""
+     * @param string $Extra <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Msg ""
+     * @param string $Msg <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Project $Data 项目详情
+     * @param Project $Data <p>项目详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

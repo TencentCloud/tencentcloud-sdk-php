@@ -20,85 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 仅包含id的对象
  *
- * @method integer getId() 获取请求id
+ * @method integer getId() 获取<p>请求id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置请求id
+ * @method void setId(integer $Id) 设置<p>请求id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccessKey() 获取key
+ * @method string getAccessKey() 获取<p>key</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessKey(string $AccessKey) 设置key
+ * @method void setAccessKey(string $AccessKey) 设置<p>key</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProjectId() 获取id
+ * @method integer getProjectId() 获取<p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(integer $ProjectId) 设置id
+ * @method void setProjectId(integer $ProjectId) 设置<p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTranId() 获取事务id
+ * @method string getTranId() 获取<p>事务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranId(string $TranId) 设置事务id
+ * @method void setTranId(string $TranId) 设置<p>事务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTranStatus() 获取事务状态
-取值范围：
-1: 处理中
-2: 处理成功
-3: 处理失败
+ * @method integer getTranStatus() 获取<p>事务状态</p><p>枚举值：</p><ul><li>1： 处理中</li><li>2： 处理成功</li><li>3： 处理失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranStatus(integer $TranStatus) 设置事务状态
-取值范围：
-1: 处理中
-2: 处理成功
-3: 处理失败
+ * @method void setTranStatus(integer $TranStatus) 设置<p>事务状态</p><p>枚举值：</p><ul><li>1： 处理中</li><li>2： 处理成功</li><li>3： 处理失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class IdDTO extends AbstractModel
 {
     /**
-     * @var integer 请求id
+     * @var integer <p>请求id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string key
+     * @var string <p>key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessKey;
 
     /**
-     * @var integer id
+     * @var integer <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 事务id
+     * @var string <p>事务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranId;
 
     /**
-     * @var integer 事务状态
-取值范围：
-1: 处理中
-2: 处理成功
-3: 处理失败
+     * @var integer <p>事务状态</p><p>枚举值：</p><ul><li>1： 处理中</li><li>2： 处理成功</li><li>3： 处理失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranStatus;
 
     /**
-     * @param integer $Id 请求id
+     * @param integer $Id <p>请求id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccessKey key
+     * @param string $AccessKey <p>key</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProjectId id
+     * @param integer $ProjectId <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TranId 事务id
+     * @param string $TranId <p>事务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TranStatus 事务状态
-取值范围：
-1: 处理中
-2: 处理成功
-3: 处理失败
+     * @param integer $TranStatus <p>事务状态</p><p>枚举值：</p><ul><li>1： 处理中</li><li>2： 处理成功</li><li>3： 处理失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

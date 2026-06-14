@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopWebRecord请求参数结构体
  *
- * @method string getTaskId() 获取需要停止的任务Id
- * @method void setTaskId(string $TaskId) 设置需要停止的任务Id
+ * @method string getTaskId() 获取<p>需要停止的任务Id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>需要停止的任务Id</p>
  */
 class StopWebRecordRequest extends AbstractModel
 {
     /**
-     * @var string 需要停止的任务Id
+     * @var string <p>需要停止的任务Id</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 需要停止的任务Id
+     * @param string $TaskId <p>需要停止的任务Id</p>
      */
     function __construct()
     {

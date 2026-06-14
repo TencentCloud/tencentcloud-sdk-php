@@ -20,305 +20,277 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户ID和用户名
  *
- * @method string getUserId() 获取用户ID
- * @method void setUserId(string $UserId) 设置用户ID
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getCorpId() 获取企业ID
+ * @method string getUserId() 获取<p>用户ID</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getCorpId() 获取<p>企业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCorpId(string $CorpId) 设置企业ID
+ * @method void setCorpId(string $CorpId) 设置<p>企业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEmail() 获取电子邮箱
+ * @method string getEmail() 获取<p>电子邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmail(string $Email) 设置电子邮箱
+ * @method void setEmail(string $Email) 设置<p>电子邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastLogin() 获取最后一次登录时间
+ * @method string getLastLogin() 获取<p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastLogin(string $LastLogin) 设置最后一次登录时间
+ * @method void setLastLogin(string $LastLogin) 设置<p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取用户状态。
-取值范围：
-
-- 1：启用
-- 0：停用
-
-默认值：1
-示例值：1
+ * @method integer getStatus() 获取<p>用户状态</p><p>枚举值：</p><ul><li>1： 启用</li><li>0： 停用</li></ul><p>默认值：1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置用户状态。
-取值范围：
-
-- 1：启用
-- 0：停用
-
-默认值：1
-示例值：1
+ * @method void setStatus(integer $Status) 设置<p>用户状态</p><p>枚举值：</p><ul><li>1： 启用</li><li>0： 停用</li></ul><p>默认值：1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFirstModify() 获取首次登录是否修改密码
+ * @method integer getFirstModify() 获取<p>首次登录是否修改密码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFirstModify(integer $FirstModify) 设置首次登录是否修改密码
+ * @method void setFirstModify(integer $FirstModify) 设置<p>首次登录是否修改密码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPhoneNumber() 获取手机号码
+ * @method string getPhoneNumber() 获取<p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码
+ * @method void setPhoneNumber(string $PhoneNumber) 设置<p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAreaCode() 获取手机区号
+ * @method string getAreaCode() 获取<p>手机区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAreaCode(string $AreaCode) 设置手机区号
+ * @method void setAreaCode(string $AreaCode) 设置<p>手机区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedUser() 获取创建人
+ * @method string getCreatedUser() 获取<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedUser(string $CreatedUser) 设置创建人
+ * @method void setCreatedUser(string $CreatedUser) 设置<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedAt() 获取创建时间
+ * @method string getCreatedAt() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedUser() 获取修改人
+ * @method string getUpdatedUser() 获取<p>修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedUser(string $UpdatedUser) 设置修改人
+ * @method void setUpdatedUser(string $UpdatedUser) 设置<p>修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedAt() 获取更改时间
+ * @method string getUpdatedAt() 获取<p>更改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedAt(string $UpdatedAt) 设置更改时间
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>更改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGlobalUserName() 获取系统全局角色
+ * @method string getGlobalUserName() 获取<p>系统全局角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGlobalUserName(string $GlobalUserName) 设置系统全局角色
+ * @method void setGlobalUserName(string $GlobalUserName) 设置<p>系统全局角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGlobalUserCode() 获取系统全局角色编码
+ * @method string getGlobalUserCode() 获取<p>系统全局角色编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGlobalUserCode(string $GlobalUserCode) 设置系统全局角色编码
+ * @method void setGlobalUserCode(string $GlobalUserCode) 设置<p>系统全局角色编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMobile() 获取手机号
+ * @method string getMobile() 获取<p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMobile(string $Mobile) 设置手机号
+ * @method void setMobile(string $Mobile) 设置<p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppId() 获取1
+ * @method string getAppId() 获取<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(string $AppId) 设置1
+ * @method void setAppId(string $AppId) 设置<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppUserId() 获取1
+ * @method string getAppUserId() 获取<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppUserId(string $AppUserId) 设置1
+ * @method void setAppUserId(string $AppUserId) 设置<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppUserAliasName() 获取1
+ * @method string getAppUserAliasName() 获取<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppUserAliasName(string $AppUserAliasName) 设置1
+ * @method void setAppUserAliasName(string $AppUserAliasName) 设置<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppUserName() 获取1
+ * @method string getAppUserName() 获取<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppUserName(string $AppUserName) 设置1
+ * @method void setAppUserName(string $AppUserName) 设置<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getInValidateAppRange() 获取1
+ * @method boolean getInValidateAppRange() 获取<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInValidateAppRange(boolean $InValidateAppRange) 设置1
+ * @method void setInValidateAppRange(boolean $InValidateAppRange) 设置<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEmailActivationStatus() 获取-1 免激活  0 未激活  1 已激活 空代表待绑定
+ * @method integer getEmailActivationStatus() 获取<p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmailActivationStatus(integer $EmailActivationStatus) 设置-1 免激活  0 未激活  1 已激活 空代表待绑定
+ * @method void setEmailActivationStatus(integer $EmailActivationStatus) 设置<p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getId() 获取1
+ * @method integer getId() 获取<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置1
+ * @method void setId(integer $Id) 设置<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserIdAndUserName extends AbstractModel
 {
     /**
-     * @var string 用户ID
+     * @var string <p>用户ID</p>
      */
     public $UserId;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 企业ID
+     * @var string <p>企业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CorpId;
 
     /**
-     * @var string 电子邮箱
+     * @var string <p>电子邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Email;
 
     /**
-     * @var string 最后一次登录时间
+     * @var string <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastLogin;
 
     /**
-     * @var integer 用户状态。
-取值范围：
-
-- 1：启用
-- 0：停用
-
-默认值：1
-示例值：1
+     * @var integer <p>用户状态</p><p>枚举值：</p><ul><li>1： 启用</li><li>0： 停用</li></ul><p>默认值：1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var integer 首次登录是否修改密码
+     * @var integer <p>首次登录是否修改密码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstModify;
 
     /**
-     * @var string 手机号码
+     * @var string <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneNumber;
 
     /**
-     * @var string 手机区号
+     * @var string <p>手机区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AreaCode;
 
     /**
-     * @var string 创建人
+     * @var string <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedUser;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
-     * @var string 修改人
+     * @var string <p>修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedUser;
 
     /**
-     * @var string 更改时间
+     * @var string <p>更改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
-     * @var string 系统全局角色
+     * @var string <p>系统全局角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GlobalUserName;
 
     /**
-     * @var string 系统全局角色编码
+     * @var string <p>系统全局角色编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GlobalUserCode;
 
     /**
-     * @var string 手机号
+     * @var string <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mobile;
 
     /**
-     * @var string 1
+     * @var string <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var string 1
+     * @var string <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppUserId;
 
     /**
-     * @var string 1
+     * @var string <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppUserAliasName;
 
     /**
-     * @var string 1
+     * @var string <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppUserName;
 
     /**
-     * @var boolean 1
+     * @var boolean <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InValidateAppRange;
 
     /**
-     * @var integer -1 免激活  0 未激活  1 已激活 空代表待绑定
+     * @var integer <p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmailActivationStatus;
 
     /**
-     * @var integer 1
+     * @var integer <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @param string $UserId 用户ID
-     * @param string $UserName 用户名
-     * @param string $CorpId 企业ID
+     * @param string $UserId <p>用户ID</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $CorpId <p>企业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Email 电子邮箱
+     * @param string $Email <p>电子邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastLogin 最后一次登录时间
+     * @param string $LastLogin <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 用户状态。
-取值范围：
-
-- 1：启用
-- 0：停用
-
-默认值：1
-示例值：1
+     * @param integer $Status <p>用户状态</p><p>枚举值：</p><ul><li>1： 启用</li><li>0： 停用</li></ul><p>默认值：1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FirstModify 首次登录是否修改密码
+     * @param integer $FirstModify <p>首次登录是否修改密码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PhoneNumber 手机号码
+     * @param string $PhoneNumber <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AreaCode 手机区号
+     * @param string $AreaCode <p>手机区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedUser 创建人
+     * @param string $CreatedUser <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedAt 创建时间
+     * @param string $CreatedAt <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedUser 修改人
+     * @param string $UpdatedUser <p>修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedAt 更改时间
+     * @param string $UpdatedAt <p>更改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GlobalUserName 系统全局角色
+     * @param string $GlobalUserName <p>系统全局角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GlobalUserCode 系统全局角色编码
+     * @param string $GlobalUserCode <p>系统全局角色编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Mobile 手机号
+     * @param string $Mobile <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppId 1
+     * @param string $AppId <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppUserId 1
+     * @param string $AppUserId <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppUserAliasName 1
+     * @param string $AppUserAliasName <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppUserName 1
+     * @param string $AppUserName <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $InValidateAppRange 1
+     * @param boolean $InValidateAppRange <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EmailActivationStatus -1 免激活  0 未激活  1 已激活 空代表待绑定
+     * @param integer $EmailActivationStatus <p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Id 1
+     * @param integer $Id <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

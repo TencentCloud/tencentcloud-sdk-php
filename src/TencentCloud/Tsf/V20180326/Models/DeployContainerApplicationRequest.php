@@ -20,506 +20,514 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeployContainerApplication请求参数结构体
  *
- * @method string getApplicationId() 获取应用ID
- * @method void setApplicationId(string $ApplicationId) 设置应用ID
- * @method ContainerGroupObservabilityConfig getObservabilityConfig() 获取可观测配置
- * @method void setObservabilityConfig(ContainerGroupObservabilityConfig $ObservabilityConfig) 设置可观测配置
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getGroupId() 获取部署组ID，分组唯一标识
- * @method void setGroupId(string $GroupId) 设置部署组ID，分组唯一标识
- * @method array getEnvs() 获取业务容器的环境变量参数
- * @method void setEnvs(array $Envs) 设置业务容器的环境变量参数
- * @method array getVolumeMountInfoList() 获取业务容器的挂载信息
- * @method void setVolumeMountInfoList(array $VolumeMountInfoList) 设置业务容器的挂载信息
- * @method array getLifeCycleHookList() 获取业务主容器生命周期钩子列表
- * @method void setLifeCycleHookList(array $LifeCycleHookList) 设置业务主容器生命周期钩子列表
- * @method array getAdditionalContainerList() 获取附属容器列表
- * @method void setAdditionalContainerList(array $AdditionalContainerList) 设置附属容器列表
- * @method array getVolumeInfoList() 获取容器卷信息
- * @method void setVolumeInfoList(array $VolumeInfoList) 设置容器卷信息
- * @method array getServiceSettingList() 获取Service访问配置列表
- * @method void setServiceSettingList(array $ServiceSettingList) 设置Service访问配置列表
- * @method string getAlias() 获取备注
- * @method void setAlias(string $Alias) 设置备注
- * @method string getGroupName() 获取部署组名称
- * @method void setGroupName(string $GroupName) 设置部署组名称
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
- * @method string getContainerKind() 获取容器类型
- * @method void setContainerKind(string $ContainerKind) 设置容器类型
- * @method string getServer() 获取业务容器的 镜像Server ccr.ccs.tencentyun.com
- * @method void setServer(string $Server) 设置业务容器的 镜像Server ccr.ccs.tencentyun.com
- * @method string getRepoName() 获取业务容器的镜像名
- * @method void setRepoName(string $RepoName) 设置业务容器的镜像名
- * @method string getRepoType() 获取仓库类型
- * @method void setRepoType(string $RepoType) 设置仓库类型
- * @method TcrRepoInfo getTcrRepoInfo() 获取TCR仓库信息
- * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TCR仓库信息
- * @method string getSecretName() 获取容器访问凭证名称
- * @method void setSecretName(string $SecretName) 设置容器访问凭证名称
- * @method string getTagName() 获取业务容器的镜像版本号
- * @method void setTagName(string $TagName) 设置业务容器的镜像版本号
- * @method HealthCheckSettings getHealthCheckSettings() 获取健康检查
- * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查
- * @method string getCpuRequest() 获取业务容器的 cpu  request
- * @method void setCpuRequest(string $CpuRequest) 设置业务容器的 cpu  request
- * @method string getCpuLimit() 获取业务容器的 cpu limit
- * @method void setCpuLimit(string $CpuLimit) 设置业务容器的 cpu limit
- * @method string getMemRequest() 获取业务容器的 mem request
- * @method void setMemRequest(string $MemRequest) 设置业务容器的 mem request
- * @method string getMemLimit() 获取业务容器的 mem limit
- * @method void setMemLimit(string $MemLimit) 设置业务容器的 mem limit
- * @method string getJvmOpts() 获取业务容器的 jvm 参数
- * @method void setJvmOpts(string $JvmOpts) 设置业务容器的 jvm 参数
- * @method boolean getInitContainerEnable() 获取是否为初始化容器 业务主容器不能为初始化容
- * @method void setInitContainerEnable(boolean $InitContainerEnable) 设置是否为初始化容器 业务主容器不能为初始化容
- * @method boolean getPrivilegeContainerEnable() 获取业务主容器是否为特权容器
- * @method void setPrivilegeContainerEnable(boolean $PrivilegeContainerEnable) 设置业务主容器是否为特权容器
- * @method string getRunCommand() 获取业务主容器运行命令(转base64)
- * @method void setRunCommand(string $RunCommand) 设置业务主容器运行命令(转base64)
- * @method string getRunArg() 获取业务主容器运行参数(转base64)
- * @method void setRunArg(string $RunArg) 设置业务主容器运行参数(转base64)
- * @method integer getInstanceNum() 获取实例数量
- * @method void setInstanceNum(integer $InstanceNum) 设置实例数量
- * @method SchedulingStrategy getSchedulingStrategy() 获取调度策略
- * @method void setSchedulingStrategy(SchedulingStrategy $SchedulingStrategy) 设置调度策略
- * @method string getRestartPolicy() 获取重启策略
- * @method void setRestartPolicy(string $RestartPolicy) 设置重启策略
- * @method string getServiceSpecEncode() 获取服务治理配置
- * @method void setServiceSpecEncode(string $ServiceSpecEncode) 设置服务治理配置
- * @method string getIstioMemRequest() 获取istio容器的 mem Request
- * @method void setIstioMemRequest(string $IstioMemRequest) 设置istio容器的 mem Request
- * @method string getIstioCpuRequest() 获取 istio容器的 cpu Request
- * @method void setIstioCpuRequest(string $IstioCpuRequest) 设置 istio容器的 cpu Request
- * @method string getIstioMemLimit() 获取istio容器的 mem Limit
- * @method void setIstioMemLimit(string $IstioMemLimit) 设置istio容器的 mem Limit
- * @method string getIstioCpuLimit() 获取istio容器的 cpu Limit
- * @method void setIstioCpuLimit(string $IstioCpuLimit) 设置istio容器的 cpu Limit
- * @method ContainerGroupServiceGovernanceConfig getServiceGovernanceConfig() 获取服务治理配置
- * @method void setServiceGovernanceConfig(ContainerGroupServiceGovernanceConfig $ServiceGovernanceConfig) 设置服务治理配置
- * @method string getAgentMemRequest() 获取agent容器的 mem Request
- * @method void setAgentMemRequest(string $AgentMemRequest) 设置agent容器的 mem Request
- * @method string getAgentCpuRequest() 获取agent容器的 cpu Request
- * @method void setAgentCpuRequest(string $AgentCpuRequest) 设置agent容器的 cpu Request
- * @method string getAgentMemLimit() 获取agent容器的 mem Limit
- * @method void setAgentMemLimit(string $AgentMemLimit) 设置agent容器的 mem Limit
- * @method string getAgentCpuLimit() 获取agent容器的 cpu Limit
- * @method void setAgentCpuLimit(string $AgentCpuLimit) 设置agent容器的 cpu Limit
- * @method integer getUpdateType() 获取发布策略(0表示快速更新，1表示滚动更新。默认值为0)
- * @method void setUpdateType(integer $UpdateType) 设置发布策略(0表示快速更新，1表示滚动更新。默认值为0)
- * @method integer getUpdateIvl() 获取更新间隔,单位秒
- * @method void setUpdateIvl(integer $UpdateIvl) 设置更新间隔,单位秒
- * @method string getMaxSurge() 获取对应更新策略和策略配置参数
- * @method void setMaxSurge(string $MaxSurge) 设置对应更新策略和策略配置参数
- * @method string getMaxUnavailable() 获取对应更新策略和策略配置参数
- * @method void setMaxUnavailable(string $MaxUnavailable) 设置对应更新策略和策略配置参数
- * @method WarmupSetting getWarmupSetting() 获取预热参数配置
- * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置预热参数配置
- * @method string getConfigTemplateId() 获取配置模版ID
- * @method void setConfigTemplateId(string $ConfigTemplateId) 设置配置模版ID
- * @method integer getConfigTemplateVersion() 获取配置模版Version
- * @method void setConfigTemplateVersion(integer $ConfigTemplateVersion) 设置配置模版Version
- * @method boolean getVolumeClean() 获取是否清除数据卷信息
- * @method void setVolumeClean(boolean $VolumeClean) 设置是否清除数据卷信息
- * @method string getNamespaceId() 获取命名空间Id
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间Id
- * @method boolean getDeployAgent() 获取是否部署agent容器
- * @method void setDeployAgent(boolean $DeployAgent) 设置是否部署agent容器
- * @method array getAgentProfileList() 获取javaagent信息: SERVICE_AGENT/OT_AGENT
- * @method void setAgentProfileList(array $AgentProfileList) 设置javaagent信息: SERVICE_AGENT/OT_AGENT
- * @method boolean getServiceClean() 获取是否清除Service信息
- * @method void setServiceClean(boolean $ServiceClean) 设置是否清除Service信息
- * @method boolean getEnvClean() 获取是否清除Env信息
- * @method void setEnvClean(boolean $EnvClean) 设置是否清除Env信息
- * @method string getDeployDesc() 获取本次部署的描述信息
- * @method void setDeployDesc(string $DeployDesc) 设置本次部署的描述信息
- * @method string getK8sNamespaceName() 获取k8s命名空间名称
- * @method void setK8sNamespaceName(string $K8sNamespaceName) 设置k8s命名空间名称
- * @method boolean getStaticIpEnabled() 获取是否启用静态IP
- * @method void setStaticIpEnabled(boolean $StaticIpEnabled) 设置是否启用静态IP
- * @method string getPodManagementPolicyType() 获取启动策略[OrderedReady/Parallel]
- * @method void setPodManagementPolicyType(string $PodManagementPolicyType) 设置启动策略[OrderedReady/Parallel]
- * @method integer getPartition() 获取滚动更新分区序号
- * @method void setPartition(integer $Partition) 设置滚动更新分区序号
- * @method boolean getIncrementalDeployment() 获取是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
- * @method void setIncrementalDeployment(boolean $IncrementalDeployment) 设置是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+ * @method string getApplicationId() 获取<p>应用ID</p>
+ * @method void setApplicationId(string $ApplicationId) 设置<p>应用ID</p>
+ * @method ContainerGroupObservabilityConfig getObservabilityConfig() 获取<p>可观测配置</p>
+ * @method void setObservabilityConfig(ContainerGroupObservabilityConfig $ObservabilityConfig) 设置<p>可观测配置</p>
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getGroupId() 获取<p>部署组ID，分组唯一标识</p>
+ * @method void setGroupId(string $GroupId) 设置<p>部署组ID，分组唯一标识</p>
+ * @method array getEnvs() 获取<p>业务容器的环境变量参数</p>
+ * @method void setEnvs(array $Envs) 设置<p>业务容器的环境变量参数</p>
+ * @method array getVolumeMountInfoList() 获取<p>业务容器的挂载信息</p>
+ * @method void setVolumeMountInfoList(array $VolumeMountInfoList) 设置<p>业务容器的挂载信息</p>
+ * @method array getLifeCycleHookList() 获取<p>业务主容器生命周期钩子列表</p>
+ * @method void setLifeCycleHookList(array $LifeCycleHookList) 设置<p>业务主容器生命周期钩子列表</p>
+ * @method array getAdditionalContainerList() 获取<p>附属容器列表</p>
+ * @method void setAdditionalContainerList(array $AdditionalContainerList) 设置<p>附属容器列表</p>
+ * @method array getVolumeInfoList() 获取<p>容器卷信息</p>
+ * @method void setVolumeInfoList(array $VolumeInfoList) 设置<p>容器卷信息</p>
+ * @method array getServiceSettingList() 获取<p>Service访问配置列表</p>
+ * @method void setServiceSettingList(array $ServiceSettingList) 设置<p>Service访问配置列表</p>
+ * @method string getAlias() 获取<p>备注</p>
+ * @method void setAlias(string $Alias) 设置<p>备注</p>
+ * @method string getGroupName() 获取<p>部署组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>部署组名称</p>
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
+ * @method string getContainerKind() 获取<p>容器类型</p>
+ * @method void setContainerKind(string $ContainerKind) 设置<p>容器类型</p>
+ * @method string getServer() 获取<p>业务容器的 镜像Server ccr.ccs.tencentyun.com</p>
+ * @method void setServer(string $Server) 设置<p>业务容器的 镜像Server ccr.ccs.tencentyun.com</p>
+ * @method string getRepoName() 获取<p>业务容器的镜像名</p>
+ * @method void setRepoName(string $RepoName) 设置<p>业务容器的镜像名</p>
+ * @method string getRepoType() 获取<p>仓库类型</p>
+ * @method void setRepoType(string $RepoType) 设置<p>仓库类型</p>
+ * @method TcrRepoInfo getTcrRepoInfo() 获取<p>TCR仓库信息</p>
+ * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置<p>TCR仓库信息</p>
+ * @method string getSecretName() 获取<p>容器访问凭证名称</p>
+ * @method void setSecretName(string $SecretName) 设置<p>容器访问凭证名称</p>
+ * @method string getTagName() 获取<p>业务容器的镜像版本号</p>
+ * @method void setTagName(string $TagName) 设置<p>业务容器的镜像版本号</p>
+ * @method HealthCheckSettings getHealthCheckSettings() 获取<p>健康检查</p>
+ * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置<p>健康检查</p>
+ * @method string getCpuRequest() 获取<p>业务容器的 cpu  request</p>
+ * @method void setCpuRequest(string $CpuRequest) 设置<p>业务容器的 cpu  request</p>
+ * @method string getCpuLimit() 获取<p>业务容器的 cpu limit</p>
+ * @method void setCpuLimit(string $CpuLimit) 设置<p>业务容器的 cpu limit</p>
+ * @method string getMemRequest() 获取<p>业务容器的 mem request</p>
+ * @method void setMemRequest(string $MemRequest) 设置<p>业务容器的 mem request</p>
+ * @method string getMemLimit() 获取<p>业务容器的 mem limit</p>
+ * @method void setMemLimit(string $MemLimit) 设置<p>业务容器的 mem limit</p>
+ * @method string getJvmOpts() 获取<p>业务容器的 jvm 参数</p>
+ * @method void setJvmOpts(string $JvmOpts) 设置<p>业务容器的 jvm 参数</p>
+ * @method boolean getInitContainerEnable() 获取<p>是否为初始化容器 业务主容器不能为初始化容</p>
+ * @method void setInitContainerEnable(boolean $InitContainerEnable) 设置<p>是否为初始化容器 业务主容器不能为初始化容</p>
+ * @method boolean getPrivilegeContainerEnable() 获取<p>业务主容器是否为特权容器</p>
+ * @method void setPrivilegeContainerEnable(boolean $PrivilegeContainerEnable) 设置<p>业务主容器是否为特权容器</p>
+ * @method string getRunCommand() 获取<p>业务主容器运行命令(转base64)</p>
+ * @method void setRunCommand(string $RunCommand) 设置<p>业务主容器运行命令(转base64)</p>
+ * @method string getRunArg() 获取<p>业务主容器运行参数(转base64)</p>
+ * @method void setRunArg(string $RunArg) 设置<p>业务主容器运行参数(转base64)</p>
+ * @method integer getInstanceNum() 获取<p>实例数量</p>
+ * @method void setInstanceNum(integer $InstanceNum) 设置<p>实例数量</p>
+ * @method SchedulingStrategy getSchedulingStrategy() 获取<p>调度策略</p>
+ * @method void setSchedulingStrategy(SchedulingStrategy $SchedulingStrategy) 设置<p>调度策略</p>
+ * @method string getRestartPolicy() 获取<p>重启策略</p>
+ * @method void setRestartPolicy(string $RestartPolicy) 设置<p>重启策略</p>
+ * @method string getServiceSpecEncode() 获取<p>服务治理配置</p>
+ * @method void setServiceSpecEncode(string $ServiceSpecEncode) 设置<p>服务治理配置</p>
+ * @method string getIstioMemRequest() 获取<p>istio容器的 mem Request</p>
+ * @method void setIstioMemRequest(string $IstioMemRequest) 设置<p>istio容器的 mem Request</p>
+ * @method string getIstioCpuRequest() 获取<p>istio容器的 cpu Request</p>
+ * @method void setIstioCpuRequest(string $IstioCpuRequest) 设置<p>istio容器的 cpu Request</p>
+ * @method string getIstioMemLimit() 获取<p>istio容器的 mem Limit</p>
+ * @method void setIstioMemLimit(string $IstioMemLimit) 设置<p>istio容器的 mem Limit</p>
+ * @method string getIstioCpuLimit() 获取<p>istio容器的 cpu Limit</p>
+ * @method void setIstioCpuLimit(string $IstioCpuLimit) 设置<p>istio容器的 cpu Limit</p>
+ * @method ContainerGroupServiceGovernanceConfig getServiceGovernanceConfig() 获取<p>服务治理配置</p>
+ * @method void setServiceGovernanceConfig(ContainerGroupServiceGovernanceConfig $ServiceGovernanceConfig) 设置<p>服务治理配置</p>
+ * @method string getAgentMemRequest() 获取<p>agent容器的 mem Request</p>
+ * @method void setAgentMemRequest(string $AgentMemRequest) 设置<p>agent容器的 mem Request</p>
+ * @method string getAgentCpuRequest() 获取<p>agent容器的 cpu Request</p>
+ * @method void setAgentCpuRequest(string $AgentCpuRequest) 设置<p>agent容器的 cpu Request</p>
+ * @method string getAgentMemLimit() 获取<p>agent容器的 mem Limit</p>
+ * @method void setAgentMemLimit(string $AgentMemLimit) 设置<p>agent容器的 mem Limit</p>
+ * @method string getAgentCpuLimit() 获取<p>agent容器的 cpu Limit</p>
+ * @method void setAgentCpuLimit(string $AgentCpuLimit) 设置<p>agent容器的 cpu Limit</p>
+ * @method integer getUpdateType() 获取<p>发布策略(0表示快速更新，1表示滚动更新。默认值为0)</p>
+ * @method void setUpdateType(integer $UpdateType) 设置<p>发布策略(0表示快速更新，1表示滚动更新。默认值为0)</p>
+ * @method integer getUpdateIvl() 获取<p>更新间隔,单位秒</p>
+ * @method void setUpdateIvl(integer $UpdateIvl) 设置<p>更新间隔,单位秒</p>
+ * @method string getMaxSurge() 获取<p>对应更新策略和策略配置参数</p>
+ * @method void setMaxSurge(string $MaxSurge) 设置<p>对应更新策略和策略配置参数</p>
+ * @method string getMaxUnavailable() 获取<p>对应更新策略和策略配置参数</p>
+ * @method void setMaxUnavailable(string $MaxUnavailable) 设置<p>对应更新策略和策略配置参数</p>
+ * @method WarmupSetting getWarmupSetting() 获取<p>预热参数配置</p>
+ * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置<p>预热参数配置</p>
+ * @method string getConfigTemplateId() 获取<p>配置模版ID</p>
+ * @method void setConfigTemplateId(string $ConfigTemplateId) 设置<p>配置模版ID</p>
+ * @method integer getConfigTemplateVersion() 获取<p>配置模版Version</p>
+ * @method void setConfigTemplateVersion(integer $ConfigTemplateVersion) 设置<p>配置模版Version</p>
+ * @method boolean getVolumeClean() 获取<p>是否清除数据卷信息</p>
+ * @method void setVolumeClean(boolean $VolumeClean) 设置<p>是否清除数据卷信息</p>
+ * @method string getNamespaceId() 获取<p>命名空间Id</p>
+ * @method void setNamespaceId(string $NamespaceId) 设置<p>命名空间Id</p>
+ * @method boolean getDeployAgent() 获取<p>是否部署agent容器</p>
+ * @method void setDeployAgent(boolean $DeployAgent) 设置<p>是否部署agent容器</p>
+ * @method array getAgentProfileList() 获取<p>javaagent信息: SERVICE_AGENT/OT_AGENT</p>
+ * @method void setAgentProfileList(array $AgentProfileList) 设置<p>javaagent信息: SERVICE_AGENT/OT_AGENT</p>
+ * @method boolean getServiceClean() 获取<p>是否清除Service信息</p>
+ * @method void setServiceClean(boolean $ServiceClean) 设置<p>是否清除Service信息</p>
+ * @method boolean getEnvClean() 获取<p>是否清除Env信息</p>
+ * @method void setEnvClean(boolean $EnvClean) 设置<p>是否清除Env信息</p>
+ * @method string getDeployDesc() 获取<p>本次部署的描述信息</p>
+ * @method void setDeployDesc(string $DeployDesc) 设置<p>本次部署的描述信息</p>
+ * @method string getK8sNamespaceName() 获取<p>k8s命名空间名称</p>
+ * @method void setK8sNamespaceName(string $K8sNamespaceName) 设置<p>k8s命名空间名称</p>
+ * @method boolean getStaticIpEnabled() 获取<p>是否启用静态IP</p>
+ * @method void setStaticIpEnabled(boolean $StaticIpEnabled) 设置<p>是否启用静态IP</p>
+ * @method string getPodManagementPolicyType() 获取<p>启动策略[OrderedReady/Parallel]</p>
+ * @method void setPodManagementPolicyType(string $PodManagementPolicyType) 设置<p>启动策略[OrderedReady/Parallel]</p>
+ * @method integer getPartition() 获取<p>滚动更新分区序号</p>
+ * @method void setPartition(integer $Partition) 设置<p>滚动更新分区序号</p>
+ * @method boolean getIncrementalDeployment() 获取<p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
+ * @method void setIncrementalDeployment(boolean $IncrementalDeployment) 设置<p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
+ * @method boolean getDoNotStart() 获取<p>是否不立即启动</p>
+ * @method void setDoNotStart(boolean $DoNotStart) 设置<p>是否不立即启动</p>
  */
 class DeployContainerApplicationRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
      */
     public $ApplicationId;
 
     /**
-     * @var ContainerGroupObservabilityConfig 可观测配置
+     * @var ContainerGroupObservabilityConfig <p>可观测配置</p>
      */
     public $ObservabilityConfig;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 部署组ID，分组唯一标识
+     * @var string <p>部署组ID，分组唯一标识</p>
      */
     public $GroupId;
 
     /**
-     * @var array 业务容器的环境变量参数
+     * @var array <p>业务容器的环境变量参数</p>
      */
     public $Envs;
 
     /**
-     * @var array 业务容器的挂载信息
+     * @var array <p>业务容器的挂载信息</p>
      */
     public $VolumeMountInfoList;
 
     /**
-     * @var array 业务主容器生命周期钩子列表
+     * @var array <p>业务主容器生命周期钩子列表</p>
      */
     public $LifeCycleHookList;
 
     /**
-     * @var array 附属容器列表
+     * @var array <p>附属容器列表</p>
      */
     public $AdditionalContainerList;
 
     /**
-     * @var array 容器卷信息
+     * @var array <p>容器卷信息</p>
      */
     public $VolumeInfoList;
 
     /**
-     * @var array Service访问配置列表
+     * @var array <p>Service访问配置列表</p>
      */
     public $ServiceSettingList;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Alias;
 
     /**
-     * @var string 部署组名称
+     * @var string <p>部署组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @var string 容器类型
+     * @var string <p>容器类型</p>
      */
     public $ContainerKind;
 
     /**
-     * @var string 业务容器的 镜像Server ccr.ccs.tencentyun.com
+     * @var string <p>业务容器的 镜像Server ccr.ccs.tencentyun.com</p>
      */
     public $Server;
 
     /**
-     * @var string 业务容器的镜像名
+     * @var string <p>业务容器的镜像名</p>
      */
     public $RepoName;
 
     /**
-     * @var string 仓库类型
+     * @var string <p>仓库类型</p>
      */
     public $RepoType;
 
     /**
-     * @var TcrRepoInfo TCR仓库信息
+     * @var TcrRepoInfo <p>TCR仓库信息</p>
      */
     public $TcrRepoInfo;
 
     /**
-     * @var string 容器访问凭证名称
+     * @var string <p>容器访问凭证名称</p>
      */
     public $SecretName;
 
     /**
-     * @var string 业务容器的镜像版本号
+     * @var string <p>业务容器的镜像版本号</p>
      */
     public $TagName;
 
     /**
-     * @var HealthCheckSettings 健康检查
+     * @var HealthCheckSettings <p>健康检查</p>
      */
     public $HealthCheckSettings;
 
     /**
-     * @var string 业务容器的 cpu  request
+     * @var string <p>业务容器的 cpu  request</p>
      */
     public $CpuRequest;
 
     /**
-     * @var string 业务容器的 cpu limit
+     * @var string <p>业务容器的 cpu limit</p>
      */
     public $CpuLimit;
 
     /**
-     * @var string 业务容器的 mem request
+     * @var string <p>业务容器的 mem request</p>
      */
     public $MemRequest;
 
     /**
-     * @var string 业务容器的 mem limit
+     * @var string <p>业务容器的 mem limit</p>
      */
     public $MemLimit;
 
     /**
-     * @var string 业务容器的 jvm 参数
+     * @var string <p>业务容器的 jvm 参数</p>
      */
     public $JvmOpts;
 
     /**
-     * @var boolean 是否为初始化容器 业务主容器不能为初始化容
+     * @var boolean <p>是否为初始化容器 业务主容器不能为初始化容</p>
      */
     public $InitContainerEnable;
 
     /**
-     * @var boolean 业务主容器是否为特权容器
+     * @var boolean <p>业务主容器是否为特权容器</p>
      */
     public $PrivilegeContainerEnable;
 
     /**
-     * @var string 业务主容器运行命令(转base64)
+     * @var string <p>业务主容器运行命令(转base64)</p>
      */
     public $RunCommand;
 
     /**
-     * @var string 业务主容器运行参数(转base64)
+     * @var string <p>业务主容器运行参数(转base64)</p>
      */
     public $RunArg;
 
     /**
-     * @var integer 实例数量
+     * @var integer <p>实例数量</p>
      */
     public $InstanceNum;
 
     /**
-     * @var SchedulingStrategy 调度策略
+     * @var SchedulingStrategy <p>调度策略</p>
      */
     public $SchedulingStrategy;
 
     /**
-     * @var string 重启策略
+     * @var string <p>重启策略</p>
      */
     public $RestartPolicy;
 
     /**
-     * @var string 服务治理配置
+     * @var string <p>服务治理配置</p>
      */
     public $ServiceSpecEncode;
 
     /**
-     * @var string istio容器的 mem Request
+     * @var string <p>istio容器的 mem Request</p>
      */
     public $IstioMemRequest;
 
     /**
-     * @var string  istio容器的 cpu Request
+     * @var string <p>istio容器的 cpu Request</p>
      */
     public $IstioCpuRequest;
 
     /**
-     * @var string istio容器的 mem Limit
+     * @var string <p>istio容器的 mem Limit</p>
      */
     public $IstioMemLimit;
 
     /**
-     * @var string istio容器的 cpu Limit
+     * @var string <p>istio容器的 cpu Limit</p>
      */
     public $IstioCpuLimit;
 
     /**
-     * @var ContainerGroupServiceGovernanceConfig 服务治理配置
+     * @var ContainerGroupServiceGovernanceConfig <p>服务治理配置</p>
      */
     public $ServiceGovernanceConfig;
 
     /**
-     * @var string agent容器的 mem Request
+     * @var string <p>agent容器的 mem Request</p>
      */
     public $AgentMemRequest;
 
     /**
-     * @var string agent容器的 cpu Request
+     * @var string <p>agent容器的 cpu Request</p>
      */
     public $AgentCpuRequest;
 
     /**
-     * @var string agent容器的 mem Limit
+     * @var string <p>agent容器的 mem Limit</p>
      */
     public $AgentMemLimit;
 
     /**
-     * @var string agent容器的 cpu Limit
+     * @var string <p>agent容器的 cpu Limit</p>
      */
     public $AgentCpuLimit;
 
     /**
-     * @var integer 发布策略(0表示快速更新，1表示滚动更新。默认值为0)
+     * @var integer <p>发布策略(0表示快速更新，1表示滚动更新。默认值为0)</p>
      */
     public $UpdateType;
 
     /**
-     * @var integer 更新间隔,单位秒
+     * @var integer <p>更新间隔,单位秒</p>
      */
     public $UpdateIvl;
 
     /**
-     * @var string 对应更新策略和策略配置参数
+     * @var string <p>对应更新策略和策略配置参数</p>
      */
     public $MaxSurge;
 
     /**
-     * @var string 对应更新策略和策略配置参数
+     * @var string <p>对应更新策略和策略配置参数</p>
      */
     public $MaxUnavailable;
 
     /**
-     * @var WarmupSetting 预热参数配置
+     * @var WarmupSetting <p>预热参数配置</p>
      */
     public $WarmupSetting;
 
     /**
-     * @var string 配置模版ID
+     * @var string <p>配置模版ID</p>
      */
     public $ConfigTemplateId;
 
     /**
-     * @var integer 配置模版Version
+     * @var integer <p>配置模版Version</p>
      */
     public $ConfigTemplateVersion;
 
     /**
-     * @var boolean 是否清除数据卷信息
+     * @var boolean <p>是否清除数据卷信息</p>
      */
     public $VolumeClean;
 
     /**
-     * @var string 命名空间Id
+     * @var string <p>命名空间Id</p>
      */
     public $NamespaceId;
 
     /**
-     * @var boolean 是否部署agent容器
+     * @var boolean <p>是否部署agent容器</p>
      */
     public $DeployAgent;
 
     /**
-     * @var array javaagent信息: SERVICE_AGENT/OT_AGENT
+     * @var array <p>javaagent信息: SERVICE_AGENT/OT_AGENT</p>
      */
     public $AgentProfileList;
 
     /**
-     * @var boolean 是否清除Service信息
+     * @var boolean <p>是否清除Service信息</p>
      */
     public $ServiceClean;
 
     /**
-     * @var boolean 是否清除Env信息
+     * @var boolean <p>是否清除Env信息</p>
      */
     public $EnvClean;
 
     /**
-     * @var string 本次部署的描述信息
+     * @var string <p>本次部署的描述信息</p>
      */
     public $DeployDesc;
 
     /**
-     * @var string k8s命名空间名称
+     * @var string <p>k8s命名空间名称</p>
      */
     public $K8sNamespaceName;
 
     /**
-     * @var boolean 是否启用静态IP
+     * @var boolean <p>是否启用静态IP</p>
      */
     public $StaticIpEnabled;
 
     /**
-     * @var string 启动策略[OrderedReady/Parallel]
+     * @var string <p>启动策略[OrderedReady/Parallel]</p>
      */
     public $PodManagementPolicyType;
 
     /**
-     * @var integer 滚动更新分区序号
+     * @var integer <p>滚动更新分区序号</p>
      */
     public $Partition;
 
     /**
-     * @var boolean 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+     * @var boolean <p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
      */
     public $IncrementalDeployment;
 
     /**
-     * @param string $ApplicationId 应用ID
-     * @param ContainerGroupObservabilityConfig $ObservabilityConfig 可观测配置
-     * @param string $ClusterId 集群ID
-     * @param string $GroupId 部署组ID，分组唯一标识
-     * @param array $Envs 业务容器的环境变量参数
-     * @param array $VolumeMountInfoList 业务容器的挂载信息
-     * @param array $LifeCycleHookList 业务主容器生命周期钩子列表
-     * @param array $AdditionalContainerList 附属容器列表
-     * @param array $VolumeInfoList 容器卷信息
-     * @param array $ServiceSettingList Service访问配置列表
-     * @param string $Alias 备注
-     * @param string $GroupName 部署组名称
-     * @param array $Tags 标签列表
-     * @param string $ContainerKind 容器类型
-     * @param string $Server 业务容器的 镜像Server ccr.ccs.tencentyun.com
-     * @param string $RepoName 业务容器的镜像名
-     * @param string $RepoType 仓库类型
-     * @param TcrRepoInfo $TcrRepoInfo TCR仓库信息
-     * @param string $SecretName 容器访问凭证名称
-     * @param string $TagName 业务容器的镜像版本号
-     * @param HealthCheckSettings $HealthCheckSettings 健康检查
-     * @param string $CpuRequest 业务容器的 cpu  request
-     * @param string $CpuLimit 业务容器的 cpu limit
-     * @param string $MemRequest 业务容器的 mem request
-     * @param string $MemLimit 业务容器的 mem limit
-     * @param string $JvmOpts 业务容器的 jvm 参数
-     * @param boolean $InitContainerEnable 是否为初始化容器 业务主容器不能为初始化容
-     * @param boolean $PrivilegeContainerEnable 业务主容器是否为特权容器
-     * @param string $RunCommand 业务主容器运行命令(转base64)
-     * @param string $RunArg 业务主容器运行参数(转base64)
-     * @param integer $InstanceNum 实例数量
-     * @param SchedulingStrategy $SchedulingStrategy 调度策略
-     * @param string $RestartPolicy 重启策略
-     * @param string $ServiceSpecEncode 服务治理配置
-     * @param string $IstioMemRequest istio容器的 mem Request
-     * @param string $IstioCpuRequest  istio容器的 cpu Request
-     * @param string $IstioMemLimit istio容器的 mem Limit
-     * @param string $IstioCpuLimit istio容器的 cpu Limit
-     * @param ContainerGroupServiceGovernanceConfig $ServiceGovernanceConfig 服务治理配置
-     * @param string $AgentMemRequest agent容器的 mem Request
-     * @param string $AgentCpuRequest agent容器的 cpu Request
-     * @param string $AgentMemLimit agent容器的 mem Limit
-     * @param string $AgentCpuLimit agent容器的 cpu Limit
-     * @param integer $UpdateType 发布策略(0表示快速更新，1表示滚动更新。默认值为0)
-     * @param integer $UpdateIvl 更新间隔,单位秒
-     * @param string $MaxSurge 对应更新策略和策略配置参数
-     * @param string $MaxUnavailable 对应更新策略和策略配置参数
-     * @param WarmupSetting $WarmupSetting 预热参数配置
-     * @param string $ConfigTemplateId 配置模版ID
-     * @param integer $ConfigTemplateVersion 配置模版Version
-     * @param boolean $VolumeClean 是否清除数据卷信息
-     * @param string $NamespaceId 命名空间Id
-     * @param boolean $DeployAgent 是否部署agent容器
-     * @param array $AgentProfileList javaagent信息: SERVICE_AGENT/OT_AGENT
-     * @param boolean $ServiceClean 是否清除Service信息
-     * @param boolean $EnvClean 是否清除Env信息
-     * @param string $DeployDesc 本次部署的描述信息
-     * @param string $K8sNamespaceName k8s命名空间名称
-     * @param boolean $StaticIpEnabled 是否启用静态IP
-     * @param string $PodManagementPolicyType 启动策略[OrderedReady/Parallel]
-     * @param integer $Partition 滚动更新分区序号
-     * @param boolean $IncrementalDeployment 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+     * @var boolean <p>是否不立即启动</p>
+     */
+    public $DoNotStart;
+
+    /**
+     * @param string $ApplicationId <p>应用ID</p>
+     * @param ContainerGroupObservabilityConfig $ObservabilityConfig <p>可观测配置</p>
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $GroupId <p>部署组ID，分组唯一标识</p>
+     * @param array $Envs <p>业务容器的环境变量参数</p>
+     * @param array $VolumeMountInfoList <p>业务容器的挂载信息</p>
+     * @param array $LifeCycleHookList <p>业务主容器生命周期钩子列表</p>
+     * @param array $AdditionalContainerList <p>附属容器列表</p>
+     * @param array $VolumeInfoList <p>容器卷信息</p>
+     * @param array $ServiceSettingList <p>Service访问配置列表</p>
+     * @param string $Alias <p>备注</p>
+     * @param string $GroupName <p>部署组名称</p>
+     * @param array $Tags <p>标签列表</p>
+     * @param string $ContainerKind <p>容器类型</p>
+     * @param string $Server <p>业务容器的 镜像Server ccr.ccs.tencentyun.com</p>
+     * @param string $RepoName <p>业务容器的镜像名</p>
+     * @param string $RepoType <p>仓库类型</p>
+     * @param TcrRepoInfo $TcrRepoInfo <p>TCR仓库信息</p>
+     * @param string $SecretName <p>容器访问凭证名称</p>
+     * @param string $TagName <p>业务容器的镜像版本号</p>
+     * @param HealthCheckSettings $HealthCheckSettings <p>健康检查</p>
+     * @param string $CpuRequest <p>业务容器的 cpu  request</p>
+     * @param string $CpuLimit <p>业务容器的 cpu limit</p>
+     * @param string $MemRequest <p>业务容器的 mem request</p>
+     * @param string $MemLimit <p>业务容器的 mem limit</p>
+     * @param string $JvmOpts <p>业务容器的 jvm 参数</p>
+     * @param boolean $InitContainerEnable <p>是否为初始化容器 业务主容器不能为初始化容</p>
+     * @param boolean $PrivilegeContainerEnable <p>业务主容器是否为特权容器</p>
+     * @param string $RunCommand <p>业务主容器运行命令(转base64)</p>
+     * @param string $RunArg <p>业务主容器运行参数(转base64)</p>
+     * @param integer $InstanceNum <p>实例数量</p>
+     * @param SchedulingStrategy $SchedulingStrategy <p>调度策略</p>
+     * @param string $RestartPolicy <p>重启策略</p>
+     * @param string $ServiceSpecEncode <p>服务治理配置</p>
+     * @param string $IstioMemRequest <p>istio容器的 mem Request</p>
+     * @param string $IstioCpuRequest <p>istio容器的 cpu Request</p>
+     * @param string $IstioMemLimit <p>istio容器的 mem Limit</p>
+     * @param string $IstioCpuLimit <p>istio容器的 cpu Limit</p>
+     * @param ContainerGroupServiceGovernanceConfig $ServiceGovernanceConfig <p>服务治理配置</p>
+     * @param string $AgentMemRequest <p>agent容器的 mem Request</p>
+     * @param string $AgentCpuRequest <p>agent容器的 cpu Request</p>
+     * @param string $AgentMemLimit <p>agent容器的 mem Limit</p>
+     * @param string $AgentCpuLimit <p>agent容器的 cpu Limit</p>
+     * @param integer $UpdateType <p>发布策略(0表示快速更新，1表示滚动更新。默认值为0)</p>
+     * @param integer $UpdateIvl <p>更新间隔,单位秒</p>
+     * @param string $MaxSurge <p>对应更新策略和策略配置参数</p>
+     * @param string $MaxUnavailable <p>对应更新策略和策略配置参数</p>
+     * @param WarmupSetting $WarmupSetting <p>预热参数配置</p>
+     * @param string $ConfigTemplateId <p>配置模版ID</p>
+     * @param integer $ConfigTemplateVersion <p>配置模版Version</p>
+     * @param boolean $VolumeClean <p>是否清除数据卷信息</p>
+     * @param string $NamespaceId <p>命名空间Id</p>
+     * @param boolean $DeployAgent <p>是否部署agent容器</p>
+     * @param array $AgentProfileList <p>javaagent信息: SERVICE_AGENT/OT_AGENT</p>
+     * @param boolean $ServiceClean <p>是否清除Service信息</p>
+     * @param boolean $EnvClean <p>是否清除Env信息</p>
+     * @param string $DeployDesc <p>本次部署的描述信息</p>
+     * @param string $K8sNamespaceName <p>k8s命名空间名称</p>
+     * @param boolean $StaticIpEnabled <p>是否启用静态IP</p>
+     * @param string $PodManagementPolicyType <p>启动策略[OrderedReady/Parallel]</p>
+     * @param integer $Partition <p>滚动更新分区序号</p>
+     * @param boolean $IncrementalDeployment <p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
+     * @param boolean $DoNotStart <p>是否不立即启动</p>
      */
     function __construct()
     {
@@ -826,6 +834,10 @@ class DeployContainerApplicationRequest extends AbstractModel
 
         if (array_key_exists("IncrementalDeployment",$param) and $param["IncrementalDeployment"] !== null) {
             $this->IncrementalDeployment = $param["IncrementalDeployment"];
+        }
+
+        if (array_key_exists("DoNotStart",$param) and $param["DoNotStart"] !== null) {
+            $this->DoNotStart = $param["DoNotStart"];
         }
     }
 }

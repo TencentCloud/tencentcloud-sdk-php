@@ -65,6 +65,7 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\ModifyDatasourceResponse ModifyDatasource(Models\ModifyDatasourceRequest $req) 更新数据源
  * @method Models\ModifyDatasourceCloudResponse ModifyDatasourceCloud(Models\ModifyDatasourceCloudRequest $req) 更新云数据库
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目信息
+ * @method Models\ModifyResourceUserResponse ModifyResourceUser(Models\ModifyResourceUserRequest $req) 按用户资源修改
  * @method Models\ModifyResourceUserGroupResponse ModifyResourceUserGroup(Models\ModifyResourceUserGroupRequest $req) 更新用户组权限
  * @method Models\ModifyResourceUserGroupResourceResponse ModifyResourceUserGroupResource(Models\ModifyResourceUserGroupResourceRequest $req) 按资源 - 更新用户组权限
  * @method Models\ModifyUserDetailInfoResponse ModifyUserDetailInfo(Models\ModifyUserDetailInfoRequest $req) 修改用户角色信息

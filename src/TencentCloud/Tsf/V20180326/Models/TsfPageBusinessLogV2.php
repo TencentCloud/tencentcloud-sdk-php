@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 业务日志列表
  *
- * @method integer getTotalCount() 获取总条数
- * @method void setTotalCount(integer $TotalCount) 设置总条数
- * @method array getContent() 获取业务日志列表
- * @method void setContent(array $Content) 设置业务日志列表
- * @method string getScrollId() 获取游标ID
- * @method void setScrollId(string $ScrollId) 设置游标ID
- * @method string getStatus() 获取查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
- * @method void setStatus(string $Status) 设置查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
- * @method array getSearchAfter() 获取查询es时，使用searchAfter返回的游标
- * @method void setSearchAfter(array $SearchAfter) 设置查询es时，使用searchAfter返回的游标
+ * @method integer getTotalCount() 获取<p>总条数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>总条数</p>
+ * @method array getContent() 获取<p>业务日志列表</p>
+ * @method void setContent(array $Content) 设置<p>业务日志列表</p>
+ * @method string getScrollId() 获取<p>游标ID</p>
+ * @method void setScrollId(string $ScrollId) 设置<p>游标ID</p>
+ * @method string getStatus() 获取<p>查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常</p>
+ * @method void setStatus(string $Status) 设置<p>查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常</p>
+ * @method array getSearchAfter() 获取<p>查询es时，使用searchAfter返回的游标</p>
+ * @method void setSearchAfter(array $SearchAfter) 设置<p>查询es时，使用searchAfter返回的游标</p>
+ * @method boolean getCompressed() 获取<p>是否压缩</p>
+ * @method void setCompressed(boolean $Compressed) 设置<p>是否压缩</p>
  */
 class TsfPageBusinessLogV2 extends AbstractModel
 {
     /**
-     * @var integer 总条数
+     * @var integer <p>总条数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 业务日志列表
+     * @var array <p>业务日志列表</p>
      */
     public $Content;
 
     /**
-     * @var string 游标ID
+     * @var string <p>游标ID</p>
      */
     public $ScrollId;
 
     /**
-     * @var string 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
+     * @var string <p>查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常</p>
      */
     public $Status;
 
     /**
-     * @var array 查询es时，使用searchAfter返回的游标
+     * @var array <p>查询es时，使用searchAfter返回的游标</p>
      */
     public $SearchAfter;
 
     /**
-     * @param integer $TotalCount 总条数
-     * @param array $Content 业务日志列表
-     * @param string $ScrollId 游标ID
-     * @param string $Status 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
-     * @param array $SearchAfter 查询es时，使用searchAfter返回的游标
+     * @var boolean <p>是否压缩</p>
+     */
+    public $Compressed;
+
+    /**
+     * @param integer $TotalCount <p>总条数</p>
+     * @param array $Content <p>业务日志列表</p>
+     * @param string $ScrollId <p>游标ID</p>
+     * @param string $Status <p>查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常</p>
+     * @param array $SearchAfter <p>查询es时，使用searchAfter返回的游标</p>
+     * @param boolean $Compressed <p>是否压缩</p>
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class TsfPageBusinessLogV2 extends AbstractModel
 
         if (array_key_exists("SearchAfter",$param) and $param["SearchAfter"] !== null) {
             $this->SearchAfter = $param["SearchAfter"];
+        }
+
+        if (array_key_exists("Compressed",$param) and $param["Compressed"] !== null) {
+            $this->Compressed = $param["Compressed"];
         }
     }
 }

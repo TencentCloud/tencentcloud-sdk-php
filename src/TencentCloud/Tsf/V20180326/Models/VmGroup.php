@@ -20,418 +20,426 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 虚拟机部署组信息
  *
- * @method string getGroupId() 获取部署组ID
- * @method void setGroupId(string $GroupId) 设置部署组ID
- * @method string getGroupName() 获取部署组名称
- * @method void setGroupName(string $GroupName) 设置部署组名称
- * @method string getGroupStatus() 获取部署组状态
- * @method void setGroupStatus(string $GroupStatus) 设置部署组状态
- * @method string getPackageId() 获取程序包ID
+ * @method string getGroupId() 获取<p>部署组ID</p>
+ * @method void setGroupId(string $GroupId) 设置<p>部署组ID</p>
+ * @method string getGroupName() 获取<p>部署组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>部署组名称</p>
+ * @method string getGroupStatus() 获取<p>部署组状态</p>
+ * @method void setGroupStatus(string $GroupStatus) 设置<p>部署组状态</p>
+ * @method string getPackageId() 获取<p>程序包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageId(string $PackageId) 设置程序包ID
+ * @method void setPackageId(string $PackageId) 设置<p>程序包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageName() 获取程序包名称
+ * @method string getPackageName() 获取<p>程序包名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageName(string $PackageName) 设置程序包名称
+ * @method void setPackageName(string $PackageName) 设置<p>程序包名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageVersion() 获取程序包版本号
+ * @method string getPackageVersion() 获取<p>程序包版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageVersion(string $PackageVersion) 设置程序包版本号
+ * @method void setPackageVersion(string $PackageVersion) 设置<p>程序包版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getNamespaceId() 获取命名空间ID
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
- * @method string getNamespaceName() 获取命名空间名称
- * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
- * @method string getApplicationId() 获取应用ID
- * @method void setApplicationId(string $ApplicationId) 设置应用ID
- * @method string getApplicationName() 获取应用名称
- * @method void setApplicationName(string $ApplicationName) 设置应用名称
- * @method integer getInstanceCount() 获取部署组机器数目
- * @method void setInstanceCount(integer $InstanceCount) 设置部署组机器数目
- * @method integer getRunInstanceCount() 获取部署组运行中机器数目
- * @method void setRunInstanceCount(integer $RunInstanceCount) 设置部署组运行中机器数目
- * @method string getStartupParameters() 获取部署组启动参数信息
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getNamespaceId() 获取<p>命名空间ID</p>
+ * @method void setNamespaceId(string $NamespaceId) 设置<p>命名空间ID</p>
+ * @method string getNamespaceName() 获取<p>命名空间名称</p>
+ * @method void setNamespaceName(string $NamespaceName) 设置<p>命名空间名称</p>
+ * @method string getApplicationId() 获取<p>应用ID</p>
+ * @method void setApplicationId(string $ApplicationId) 设置<p>应用ID</p>
+ * @method string getApplicationName() 获取<p>应用名称</p>
+ * @method void setApplicationName(string $ApplicationName) 设置<p>应用名称</p>
+ * @method integer getInstanceCount() 获取<p>部署组机器数目</p>
+ * @method void setInstanceCount(integer $InstanceCount) 设置<p>部署组机器数目</p>
+ * @method integer getRunInstanceCount() 获取<p>部署组运行中机器数目</p>
+ * @method void setRunInstanceCount(integer $RunInstanceCount) 设置<p>部署组运行中机器数目</p>
+ * @method string getStartupParameters() 获取<p>部署组启动参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartupParameters(string $StartupParameters) 设置部署组启动参数信息
+ * @method void setStartupParameters(string $StartupParameters) 设置<p>部署组启动参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取部署组创建时间
- * @method void setCreateTime(string $CreateTime) 设置部署组创建时间
- * @method string getUpdateTime() 获取部署组更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置部署组更新时间
- * @method integer getOffInstanceCount() 获取部署组停止机器数目
- * @method void setOffInstanceCount(integer $OffInstanceCount) 设置部署组停止机器数目
- * @method string getGroupDesc() 获取部署组描述信息
+ * @method string getCreateTime() 获取<p>部署组创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>部署组创建时间</p>
+ * @method string getUpdateTime() 获取<p>部署组更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>部署组更新时间</p>
+ * @method integer getOffInstanceCount() 获取<p>部署组停止机器数目</p>
+ * @method void setOffInstanceCount(integer $OffInstanceCount) 设置<p>部署组停止机器数目</p>
+ * @method string getGroupDesc() 获取<p>部署组描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupDesc(string $GroupDesc) 设置部署组描述信息
+ * @method void setGroupDesc(string $GroupDesc) 设置<p>部署组描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMicroserviceType() 获取微服务类型
- * @method void setMicroserviceType(string $MicroserviceType) 设置微服务类型
- * @method string getApplicationType() 获取应用类型
- * @method void setApplicationType(string $ApplicationType) 设置应用类型
- * @method string getGroupResourceType() 获取部署组资源类型
- * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型
- * @method integer getUpdatedTime() 获取部署组更新时间戳
- * @method void setUpdatedTime(integer $UpdatedTime) 设置部署组更新时间戳
- * @method string getDeployDesc() 获取部署应用描述信息
+ * @method string getMicroserviceType() 获取<p>微服务类型</p>
+ * @method void setMicroserviceType(string $MicroserviceType) 设置<p>微服务类型</p>
+ * @method string getApplicationType() 获取<p>应用类型</p>
+ * @method void setApplicationType(string $ApplicationType) 设置<p>应用类型</p>
+ * @method string getGroupResourceType() 获取<p>部署组资源类型</p>
+ * @method void setGroupResourceType(string $GroupResourceType) 设置<p>部署组资源类型</p>
+ * @method integer getUpdatedTime() 获取<p>部署组更新时间戳</p>
+ * @method void setUpdatedTime(integer $UpdatedTime) 设置<p>部署组更新时间戳</p>
+ * @method string getDeployDesc() 获取<p>部署应用描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeployDesc(string $DeployDesc) 设置部署应用描述信息
+ * @method void setDeployDesc(string $DeployDesc) 设置<p>部署应用描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpdateType() 获取滚动发布的更新方式
- * @method void setUpdateType(integer $UpdateType) 设置滚动发布的更新方式
- * @method boolean getDeployBetaEnable() 获取发布是否启用beta批次
- * @method void setDeployBetaEnable(boolean $DeployBetaEnable) 设置发布是否启用beta批次
- * @method array getDeployBatch() 获取滚动发布的批次比例列表
- * @method void setDeployBatch(array $DeployBatch) 设置滚动发布的批次比例列表
- * @method string getDeployExeMode() 获取滚动发布的批次执行方式
- * @method void setDeployExeMode(string $DeployExeMode) 设置滚动发布的批次执行方式
- * @method integer getDeployWaitTime() 获取滚动发布的每个批次的等待时间
- * @method void setDeployWaitTime(integer $DeployWaitTime) 设置滚动发布的每个批次的等待时间
- * @method boolean getEnableHealthCheck() 获取是否开启了健康检查
- * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否开启了健康检查
- * @method HealthCheckSettings getHealthCheckSettings() 获取健康检查配置
+ * @method integer getUpdateType() 获取<p>滚动发布的更新方式</p>
+ * @method void setUpdateType(integer $UpdateType) 设置<p>滚动发布的更新方式</p>
+ * @method boolean getDeployBetaEnable() 获取<p>发布是否启用beta批次</p>
+ * @method void setDeployBetaEnable(boolean $DeployBetaEnable) 设置<p>发布是否启用beta批次</p>
+ * @method array getDeployBatch() 获取<p>滚动发布的批次比例列表</p>
+ * @method void setDeployBatch(array $DeployBatch) 设置<p>滚动发布的批次比例列表</p>
+ * @method string getDeployExeMode() 获取<p>滚动发布的批次执行方式</p>
+ * @method void setDeployExeMode(string $DeployExeMode) 设置<p>滚动发布的批次执行方式</p>
+ * @method integer getDeployWaitTime() 获取<p>滚动发布的每个批次的等待时间</p>
+ * @method void setDeployWaitTime(integer $DeployWaitTime) 设置<p>滚动发布的每个批次的等待时间</p>
+ * @method boolean getEnableHealthCheck() 获取<p>是否开启了健康检查</p>
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置<p>是否开启了健康检查</p>
+ * @method HealthCheckSettings getHealthCheckSettings() 获取<p>健康检查配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查配置
+ * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置<p>健康检查配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageType() 获取程序包类型
+ * @method string getPackageType() 获取<p>程序包类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageType(string $PackageType) 设置程序包类型
+ * @method void setPackageType(string $PackageType) 设置<p>程序包类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartScript() 获取启动脚本 base64编码
+ * @method string getStartScript() 获取<p>启动脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartScript(string $StartScript) 设置启动脚本 base64编码
+ * @method void setStartScript(string $StartScript) 设置<p>启动脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStopScript() 获取停止脚本 base64编码
+ * @method string getStopScript() 获取<p>停止脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStopScript(string $StopScript) 设置停止脚本 base64编码
+ * @method void setStopScript(string $StopScript) 设置<p>停止脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlias() 获取部署组备注
+ * @method string getAlias() 获取<p>部署组备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlias(string $Alias) 设置部署组备注
+ * @method void setAlias(string $Alias) 设置<p>部署组备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAgentProfileList() 获取javaagent信息
- * @method void setAgentProfileList(array $AgentProfileList) 设置javaagent信息
- * @method WarmupSetting getWarmupSetting() 获取预热属性配置
- * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置预热属性配置
- * @method GatewayConfig getGatewayConfig() 获取Envoy网关配置
+ * @method array getAgentProfileList() 获取<p>javaagent信息</p>
+ * @method void setAgentProfileList(array $AgentProfileList) 设置<p>javaagent信息</p>
+ * @method WarmupSetting getWarmupSetting() 获取<p>预热属性配置</p>
+ * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置<p>预热属性配置</p>
+ * @method GatewayConfig getGatewayConfig() 获取<p>Envoy网关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置Envoy网关配置
+ * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置<p>Envoy网关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnableBatchHealthCheck() 获取批次是否开启健康检查
- * @method void setEnableBatchHealthCheck(boolean $EnableBatchHealthCheck) 设置批次是否开启健康检查
- * @method boolean getFilebeatCgroupEnable() 获取是否开启cgroup控制内存cpu
- * @method void setFilebeatCgroupEnable(boolean $FilebeatCgroupEnable) 设置是否开启cgroup控制内存cpu
- * @method float getFilebeatMaxCpu() 获取filebeat使用cpu上限
- * @method void setFilebeatMaxCpu(float $FilebeatMaxCpu) 设置filebeat使用cpu上限
- * @method integer getFilebeatMaxMem() 获取filebeat使用内存上限
- * @method void setFilebeatMaxMem(integer $FilebeatMaxMem) 设置filebeat使用内存上限
- * @method string getRepositoryId() 获取仓库ID
- * @method void setRepositoryId(string $RepositoryId) 设置仓库ID
- * @method string getRepositoryName() 获取仓库名称
- * @method void setRepositoryName(string $RepositoryName) 设置仓库名称
- * @method string getRepositoryType() 获取仓库类型
- * @method void setRepositoryType(string $RepositoryType) 设置仓库类型
+ * @method boolean getEnableBatchHealthCheck() 获取<p>批次是否开启健康检查</p>
+ * @method void setEnableBatchHealthCheck(boolean $EnableBatchHealthCheck) 设置<p>批次是否开启健康检查</p>
+ * @method boolean getFilebeatCgroupEnable() 获取<p>是否开启cgroup控制内存cpu</p>
+ * @method void setFilebeatCgroupEnable(boolean $FilebeatCgroupEnable) 设置<p>是否开启cgroup控制内存cpu</p>
+ * @method float getFilebeatMaxCpu() 获取<p>filebeat使用cpu上限</p>
+ * @method void setFilebeatMaxCpu(float $FilebeatMaxCpu) 设置<p>filebeat使用cpu上限</p>
+ * @method integer getFilebeatMaxMem() 获取<p>filebeat使用内存上限</p>
+ * @method void setFilebeatMaxMem(integer $FilebeatMaxMem) 设置<p>filebeat使用内存上限</p>
+ * @method string getRepositoryId() 获取<p>仓库ID</p>
+ * @method void setRepositoryId(string $RepositoryId) 设置<p>仓库ID</p>
+ * @method string getRepositoryName() 获取<p>仓库名称</p>
+ * @method void setRepositoryName(string $RepositoryName) 设置<p>仓库名称</p>
+ * @method string getRepositoryType() 获取<p>仓库类型</p>
+ * @method void setRepositoryType(string $RepositoryType) 设置<p>仓库类型</p>
+ * @method boolean getLivenessAutoRestart() 获取<p>是否自动重启</p>
+ * @method void setLivenessAutoRestart(boolean $LivenessAutoRestart) 设置<p>是否自动重启</p>
  */
 class VmGroup extends AbstractModel
 {
     /**
-     * @var string 部署组ID
+     * @var string <p>部署组ID</p>
      */
     public $GroupId;
 
     /**
-     * @var string 部署组名称
+     * @var string <p>部署组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var string 部署组状态
+     * @var string <p>部署组状态</p>
      */
     public $GroupStatus;
 
     /**
-     * @var string 程序包ID
+     * @var string <p>程序包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageId;
 
     /**
-     * @var string 程序包名称
+     * @var string <p>程序包名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageName;
 
     /**
-     * @var string 程序包版本号
+     * @var string <p>程序包版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageVersion;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 命名空间ID
+     * @var string <p>命名空间ID</p>
      */
     public $NamespaceId;
 
     /**
-     * @var string 命名空间名称
+     * @var string <p>命名空间名称</p>
      */
     public $NamespaceName;
 
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
      */
     public $ApplicationId;
 
     /**
-     * @var string 应用名称
+     * @var string <p>应用名称</p>
      */
     public $ApplicationName;
 
     /**
-     * @var integer 部署组机器数目
+     * @var integer <p>部署组机器数目</p>
      */
     public $InstanceCount;
 
     /**
-     * @var integer 部署组运行中机器数目
+     * @var integer <p>部署组运行中机器数目</p>
      */
     public $RunInstanceCount;
 
     /**
-     * @var string 部署组启动参数信息
+     * @var string <p>部署组启动参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartupParameters;
 
     /**
-     * @var string 部署组创建时间
+     * @var string <p>部署组创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 部署组更新时间
+     * @var string <p>部署组更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer 部署组停止机器数目
+     * @var integer <p>部署组停止机器数目</p>
      */
     public $OffInstanceCount;
 
     /**
-     * @var string 部署组描述信息
+     * @var string <p>部署组描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupDesc;
 
     /**
-     * @var string 微服务类型
+     * @var string <p>微服务类型</p>
      */
     public $MicroserviceType;
 
     /**
-     * @var string 应用类型
+     * @var string <p>应用类型</p>
      */
     public $ApplicationType;
 
     /**
-     * @var string 部署组资源类型
+     * @var string <p>部署组资源类型</p>
      */
     public $GroupResourceType;
 
     /**
-     * @var integer 部署组更新时间戳
+     * @var integer <p>部署组更新时间戳</p>
      */
     public $UpdatedTime;
 
     /**
-     * @var string 部署应用描述信息
+     * @var string <p>部署应用描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployDesc;
 
     /**
-     * @var integer 滚动发布的更新方式
+     * @var integer <p>滚动发布的更新方式</p>
      */
     public $UpdateType;
 
     /**
-     * @var boolean 发布是否启用beta批次
+     * @var boolean <p>发布是否启用beta批次</p>
      */
     public $DeployBetaEnable;
 
     /**
-     * @var array 滚动发布的批次比例列表
+     * @var array <p>滚动发布的批次比例列表</p>
      */
     public $DeployBatch;
 
     /**
-     * @var string 滚动发布的批次执行方式
+     * @var string <p>滚动发布的批次执行方式</p>
      */
     public $DeployExeMode;
 
     /**
-     * @var integer 滚动发布的每个批次的等待时间
+     * @var integer <p>滚动发布的每个批次的等待时间</p>
      */
     public $DeployWaitTime;
 
     /**
-     * @var boolean 是否开启了健康检查
+     * @var boolean <p>是否开启了健康检查</p>
      */
     public $EnableHealthCheck;
 
     /**
-     * @var HealthCheckSettings 健康检查配置
+     * @var HealthCheckSettings <p>健康检查配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheckSettings;
 
     /**
-     * @var string 程序包类型
+     * @var string <p>程序包类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
 
     /**
-     * @var string 启动脚本 base64编码
+     * @var string <p>启动脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartScript;
 
     /**
-     * @var string 停止脚本 base64编码
+     * @var string <p>停止脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StopScript;
 
     /**
-     * @var string 部署组备注
+     * @var string <p>部署组备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alias;
 
     /**
-     * @var array javaagent信息
+     * @var array <p>javaagent信息</p>
      */
     public $AgentProfileList;
 
     /**
-     * @var WarmupSetting 预热属性配置
+     * @var WarmupSetting <p>预热属性配置</p>
      */
     public $WarmupSetting;
 
     /**
-     * @var GatewayConfig Envoy网关配置
+     * @var GatewayConfig <p>Envoy网关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayConfig;
 
     /**
-     * @var boolean 批次是否开启健康检查
+     * @var boolean <p>批次是否开启健康检查</p>
      */
     public $EnableBatchHealthCheck;
 
     /**
-     * @var boolean 是否开启cgroup控制内存cpu
+     * @var boolean <p>是否开启cgroup控制内存cpu</p>
      */
     public $FilebeatCgroupEnable;
 
     /**
-     * @var float filebeat使用cpu上限
+     * @var float <p>filebeat使用cpu上限</p>
      */
     public $FilebeatMaxCpu;
 
     /**
-     * @var integer filebeat使用内存上限
+     * @var integer <p>filebeat使用内存上限</p>
      */
     public $FilebeatMaxMem;
 
     /**
-     * @var string 仓库ID
+     * @var string <p>仓库ID</p>
      */
     public $RepositoryId;
 
     /**
-     * @var string 仓库名称
+     * @var string <p>仓库名称</p>
      */
     public $RepositoryName;
 
     /**
-     * @var string 仓库类型
+     * @var string <p>仓库类型</p>
      */
     public $RepositoryType;
 
     /**
-     * @param string $GroupId 部署组ID
-     * @param string $GroupName 部署组名称
-     * @param string $GroupStatus 部署组状态
-     * @param string $PackageId 程序包ID
+     * @var boolean <p>是否自动重启</p>
+     */
+    public $LivenessAutoRestart;
+
+    /**
+     * @param string $GroupId <p>部署组ID</p>
+     * @param string $GroupName <p>部署组名称</p>
+     * @param string $GroupStatus <p>部署组状态</p>
+     * @param string $PackageId <p>程序包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageName 程序包名称
+     * @param string $PackageName <p>程序包名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageVersion 程序包版本号
+     * @param string $PackageVersion <p>程序包版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterId 集群ID
-     * @param string $ClusterName 集群名称
-     * @param string $NamespaceId 命名空间ID
-     * @param string $NamespaceName 命名空间名称
-     * @param string $ApplicationId 应用ID
-     * @param string $ApplicationName 应用名称
-     * @param integer $InstanceCount 部署组机器数目
-     * @param integer $RunInstanceCount 部署组运行中机器数目
-     * @param string $StartupParameters 部署组启动参数信息
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $NamespaceId <p>命名空间ID</p>
+     * @param string $NamespaceName <p>命名空间名称</p>
+     * @param string $ApplicationId <p>应用ID</p>
+     * @param string $ApplicationName <p>应用名称</p>
+     * @param integer $InstanceCount <p>部署组机器数目</p>
+     * @param integer $RunInstanceCount <p>部署组运行中机器数目</p>
+     * @param string $StartupParameters <p>部署组启动参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 部署组创建时间
-     * @param string $UpdateTime 部署组更新时间
-     * @param integer $OffInstanceCount 部署组停止机器数目
-     * @param string $GroupDesc 部署组描述信息
+     * @param string $CreateTime <p>部署组创建时间</p>
+     * @param string $UpdateTime <p>部署组更新时间</p>
+     * @param integer $OffInstanceCount <p>部署组停止机器数目</p>
+     * @param string $GroupDesc <p>部署组描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MicroserviceType 微服务类型
-     * @param string $ApplicationType 应用类型
-     * @param string $GroupResourceType 部署组资源类型
-     * @param integer $UpdatedTime 部署组更新时间戳
-     * @param string $DeployDesc 部署应用描述信息
+     * @param string $MicroserviceType <p>微服务类型</p>
+     * @param string $ApplicationType <p>应用类型</p>
+     * @param string $GroupResourceType <p>部署组资源类型</p>
+     * @param integer $UpdatedTime <p>部署组更新时间戳</p>
+     * @param string $DeployDesc <p>部署应用描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpdateType 滚动发布的更新方式
-     * @param boolean $DeployBetaEnable 发布是否启用beta批次
-     * @param array $DeployBatch 滚动发布的批次比例列表
-     * @param string $DeployExeMode 滚动发布的批次执行方式
-     * @param integer $DeployWaitTime 滚动发布的每个批次的等待时间
-     * @param boolean $EnableHealthCheck 是否开启了健康检查
-     * @param HealthCheckSettings $HealthCheckSettings 健康检查配置
+     * @param integer $UpdateType <p>滚动发布的更新方式</p>
+     * @param boolean $DeployBetaEnable <p>发布是否启用beta批次</p>
+     * @param array $DeployBatch <p>滚动发布的批次比例列表</p>
+     * @param string $DeployExeMode <p>滚动发布的批次执行方式</p>
+     * @param integer $DeployWaitTime <p>滚动发布的每个批次的等待时间</p>
+     * @param boolean $EnableHealthCheck <p>是否开启了健康检查</p>
+     * @param HealthCheckSettings $HealthCheckSettings <p>健康检查配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageType 程序包类型
+     * @param string $PackageType <p>程序包类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartScript 启动脚本 base64编码
+     * @param string $StartScript <p>启动脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StopScript 停止脚本 base64编码
+     * @param string $StopScript <p>停止脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Alias 部署组备注
+     * @param string $Alias <p>部署组备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AgentProfileList javaagent信息
-     * @param WarmupSetting $WarmupSetting 预热属性配置
-     * @param GatewayConfig $GatewayConfig Envoy网关配置
+     * @param array $AgentProfileList <p>javaagent信息</p>
+     * @param WarmupSetting $WarmupSetting <p>预热属性配置</p>
+     * @param GatewayConfig $GatewayConfig <p>Envoy网关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $EnableBatchHealthCheck 批次是否开启健康检查
-     * @param boolean $FilebeatCgroupEnable 是否开启cgroup控制内存cpu
-     * @param float $FilebeatMaxCpu filebeat使用cpu上限
-     * @param integer $FilebeatMaxMem filebeat使用内存上限
-     * @param string $RepositoryId 仓库ID
-     * @param string $RepositoryName 仓库名称
-     * @param string $RepositoryType 仓库类型
+     * @param boolean $EnableBatchHealthCheck <p>批次是否开启健康检查</p>
+     * @param boolean $FilebeatCgroupEnable <p>是否开启cgroup控制内存cpu</p>
+     * @param float $FilebeatMaxCpu <p>filebeat使用cpu上限</p>
+     * @param integer $FilebeatMaxMem <p>filebeat使用内存上限</p>
+     * @param string $RepositoryId <p>仓库ID</p>
+     * @param string $RepositoryName <p>仓库名称</p>
+     * @param string $RepositoryType <p>仓库类型</p>
+     * @param boolean $LivenessAutoRestart <p>是否自动重启</p>
      */
     function __construct()
     {
@@ -632,6 +640,10 @@ class VmGroup extends AbstractModel
 
         if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
             $this->RepositoryType = $param["RepositoryType"];
+        }
+
+        if (array_key_exists("LivenessAutoRestart",$param) and $param["LivenessAutoRestart"] !== null) {
+            $this->LivenessAutoRestart = $param["LivenessAutoRestart"];
         }
     }
 }

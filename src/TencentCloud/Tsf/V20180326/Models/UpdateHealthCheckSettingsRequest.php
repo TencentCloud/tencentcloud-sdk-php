@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateHealthCheckSettings请求参数结构体
  *
- * @method string getGroupId() 获取部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
- * @method void setGroupId(string $GroupId) 设置部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
- * @method boolean getEnableHealthCheck() 获取是否开启健康检查
- * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否开启健康检查
- * @method HealthCheckSettings getHealthCheckSettings() 获取健康检查配置
- * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查配置
+ * @method string getGroupId() 获取<p>部署组ID，可通过调用<a href="https://cloud.tencent.com/document/api/649/36068">DescribeContainerGroups</a>查询已创建的部署组列表或登录控制台进行查看；也可以调用<a href="https://cloud.tencent.com/document/api/649/36075">CreateContainGroup</a>创建新的部署组。</p>
+ * @method void setGroupId(string $GroupId) 设置<p>部署组ID，可通过调用<a href="https://cloud.tencent.com/document/api/649/36068">DescribeContainerGroups</a>查询已创建的部署组列表或登录控制台进行查看；也可以调用<a href="https://cloud.tencent.com/document/api/649/36075">CreateContainGroup</a>创建新的部署组。</p>
+ * @method boolean getEnableHealthCheck() 获取<p>是否开启健康检查</p>
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置<p>是否开启健康检查</p>
+ * @method HealthCheckSettings getHealthCheckSettings() 获取<p>健康检查配置</p>
+ * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置<p>健康检查配置</p>
+ * @method boolean getLivenessAutoRestart() 获取<p>是否自动重启</p>
+ * @method void setLivenessAutoRestart(boolean $LivenessAutoRestart) 设置<p>是否自动重启</p>
  */
 class UpdateHealthCheckSettingsRequest extends AbstractModel
 {
     /**
-     * @var string 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+     * @var string <p>部署组ID，可通过调用<a href="https://cloud.tencent.com/document/api/649/36068">DescribeContainerGroups</a>查询已创建的部署组列表或登录控制台进行查看；也可以调用<a href="https://cloud.tencent.com/document/api/649/36075">CreateContainGroup</a>创建新的部署组。</p>
      */
     public $GroupId;
 
     /**
-     * @var boolean 是否开启健康检查
+     * @var boolean <p>是否开启健康检查</p>
      */
     public $EnableHealthCheck;
 
     /**
-     * @var HealthCheckSettings 健康检查配置
+     * @var HealthCheckSettings <p>健康检查配置</p>
      */
     public $HealthCheckSettings;
 
     /**
-     * @param string $GroupId 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
-     * @param boolean $EnableHealthCheck 是否开启健康检查
-     * @param HealthCheckSettings $HealthCheckSettings 健康检查配置
+     * @var boolean <p>是否自动重启</p>
+     */
+    public $LivenessAutoRestart;
+
+    /**
+     * @param string $GroupId <p>部署组ID，可通过调用<a href="https://cloud.tencent.com/document/api/649/36068">DescribeContainerGroups</a>查询已创建的部署组列表或登录控制台进行查看；也可以调用<a href="https://cloud.tencent.com/document/api/649/36075">CreateContainGroup</a>创建新的部署组。</p>
+     * @param boolean $EnableHealthCheck <p>是否开启健康检查</p>
+     * @param HealthCheckSettings $HealthCheckSettings <p>健康检查配置</p>
+     * @param boolean $LivenessAutoRestart <p>是否自动重启</p>
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class UpdateHealthCheckSettingsRequest extends AbstractModel
         if (array_key_exists("HealthCheckSettings",$param) and $param["HealthCheckSettings"] !== null) {
             $this->HealthCheckSettings = new HealthCheckSettings();
             $this->HealthCheckSettings->deserialize($param["HealthCheckSettings"]);
+        }
+
+        if (array_key_exists("LivenessAutoRestart",$param) and $param["LivenessAutoRestart"] !== null) {
+            $this->LivenessAutoRestart = $param["LivenessAutoRestart"];
         }
     }
 }

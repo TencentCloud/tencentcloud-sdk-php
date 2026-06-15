@@ -128,6 +128,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPathMappingUnsupported(boolean $PathMappingUnsupported) 设置<p>是否禁用短路径访问开关</p>
  * @method string getPathMappingUnsupportedMsg() 获取<p>禁用短路径访问开关原因</p>
  * @method void setPathMappingUnsupportedMsg(string $PathMappingUnsupportedMsg) 设置<p>禁用短路径访问开关原因</p>
+ * @method string getApiOnlineStatus() 获取<p>API在线状态</p><p>枚举值：</p><ul><li>ONLINE： 在线</li><li>OFFLINE： 离线</li><li>UNKNOWN： 未知</li><li>DELETED： 查询服务治理API不存在</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiOnlineStatus(string $ApiOnlineStatus) 设置<p>API在线状态</p><p>枚举值：</p><ul><li>ONLINE： 在线</li><li>OFFLINE： 离线</li><li>UNKNOWN： 未知</li><li>DELETED： 查询服务治理API不存在</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiDetailInfo extends AbstractModel
 {
@@ -298,6 +302,12 @@ class ApiDetailInfo extends AbstractModel
     public $PathMappingUnsupportedMsg;
 
     /**
+     * @var string <p>API在线状态</p><p>枚举值：</p><ul><li>ONLINE： 在线</li><li>OFFLINE： 离线</li><li>UNKNOWN： 未知</li><li>DELETED： 查询服务治理API不存在</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiOnlineStatus;
+
+    /**
      * @param string $ApiId <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceId <p>命名空间ID</p>
@@ -352,6 +362,8 @@ class ApiDetailInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PathMappingUnsupported <p>是否禁用短路径访问开关</p>
      * @param string $PathMappingUnsupportedMsg <p>禁用短路径访问开关原因</p>
+     * @param string $ApiOnlineStatus <p>API在线状态</p><p>枚举值：</p><ul><li>ONLINE： 在线</li><li>OFFLINE： 离线</li><li>UNKNOWN： 未知</li><li>DELETED： 查询服务治理API不存在</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -476,6 +488,10 @@ class ApiDetailInfo extends AbstractModel
 
         if (array_key_exists("PathMappingUnsupportedMsg",$param) and $param["PathMappingUnsupportedMsg"] !== null) {
             $this->PathMappingUnsupportedMsg = $param["PathMappingUnsupportedMsg"];
+        }
+
+        if (array_key_exists("ApiOnlineStatus",$param) and $param["ApiOnlineStatus"] !== null) {
+            $this->ApiOnlineStatus = $param["ApiOnlineStatus"];
         }
     }
 }

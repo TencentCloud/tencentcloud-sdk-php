@@ -20,58 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGatewayApis请求参数结构体
  *
- * @method string getGroupId() 获取分组ID
- * @method void setGroupId(string $GroupId) 设置分组ID
- * @method integer getOffset() 获取翻页偏移量
- * @method void setOffset(integer $Offset) 设置翻页偏移量
- * @method integer getLimit() 获取每页的记录数
- * @method void setLimit(integer $Limit) 设置每页的记录数
- * @method string getSearchWord() 获取搜索关键字，支持 API path
- * @method void setSearchWord(string $SearchWord) 设置搜索关键字，支持 API path
- * @method string getGatewayDeployGroupId() 获取部署组ID
- * @method void setGatewayDeployGroupId(string $GatewayDeployGroupId) 设置部署组ID
- * @method string getReleaseStatus() 获取发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
- * @method void setReleaseStatus(string $ReleaseStatus) 设置发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+ * @method string getGroupId() 获取<p>分组ID</p>
+ * @method void setGroupId(string $GroupId) 设置<p>分组ID</p>
+ * @method integer getOffset() 获取<p>翻页偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>翻页偏移量</p>
+ * @method integer getLimit() 获取<p>每页的记录数</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页的记录数</p>
+ * @method string getSearchWord() 获取<p>搜索关键字，支持 API path</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>搜索关键字，支持 API path</p>
+ * @method string getGatewayDeployGroupId() 获取<p>部署组ID</p>
+ * @method void setGatewayDeployGroupId(string $GatewayDeployGroupId) 设置<p>部署组ID</p>
+ * @method string getReleaseStatus() 获取<p>发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)</p>
+ * @method void setReleaseStatus(string $ReleaseStatus) 设置<p>发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)</p>
+ * @method array getExtendFieldList() 获取<p>返回扩展出参字段名</p>
+ * @method void setExtendFieldList(array $ExtendFieldList) 设置<p>返回扩展出参字段名</p>
+ * @method string getApiOnlineStatus() 获取<p>服务接口状态</p><p>枚举值：</p><ul><li>ONLINE： 在线状态</li><li>OFFLINE： 离线状态</li><li>UNKNOWN： 未知</li><li>DELETED： 查询MS API不存在</li></ul>
+ * @method void setApiOnlineStatus(string $ApiOnlineStatus) 设置<p>服务接口状态</p><p>枚举值：</p><ul><li>ONLINE： 在线状态</li><li>OFFLINE： 离线状态</li><li>UNKNOWN： 未知</li><li>DELETED： 查询MS API不存在</li></ul>
  */
 class DescribeGatewayApisRequest extends AbstractModel
 {
     /**
-     * @var string 分组ID
+     * @var string <p>分组ID</p>
      */
     public $GroupId;
 
     /**
-     * @var integer 翻页偏移量
+     * @var integer <p>翻页偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 每页的记录数
+     * @var integer <p>每页的记录数</p>
      */
     public $Limit;
 
     /**
-     * @var string 搜索关键字，支持 API path
+     * @var string <p>搜索关键字，支持 API path</p>
      */
     public $SearchWord;
 
     /**
-     * @var string 部署组ID
+     * @var string <p>部署组ID</p>
      */
     public $GatewayDeployGroupId;
 
     /**
-     * @var string 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+     * @var string <p>发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)</p>
      */
     public $ReleaseStatus;
 
     /**
-     * @param string $GroupId 分组ID
-     * @param integer $Offset 翻页偏移量
-     * @param integer $Limit 每页的记录数
-     * @param string $SearchWord 搜索关键字，支持 API path
-     * @param string $GatewayDeployGroupId 部署组ID
-     * @param string $ReleaseStatus 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+     * @var array <p>返回扩展出参字段名</p>
+     */
+    public $ExtendFieldList;
+
+    /**
+     * @var string <p>服务接口状态</p><p>枚举值：</p><ul><li>ONLINE： 在线状态</li><li>OFFLINE： 离线状态</li><li>UNKNOWN： 未知</li><li>DELETED： 查询MS API不存在</li></ul>
+     */
+    public $ApiOnlineStatus;
+
+    /**
+     * @param string $GroupId <p>分组ID</p>
+     * @param integer $Offset <p>翻页偏移量</p>
+     * @param integer $Limit <p>每页的记录数</p>
+     * @param string $SearchWord <p>搜索关键字，支持 API path</p>
+     * @param string $GatewayDeployGroupId <p>部署组ID</p>
+     * @param string $ReleaseStatus <p>发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)</p>
+     * @param array $ExtendFieldList <p>返回扩展出参字段名</p>
+     * @param string $ApiOnlineStatus <p>服务接口状态</p><p>枚举值：</p><ul><li>ONLINE： 在线状态</li><li>OFFLINE： 离线状态</li><li>UNKNOWN： 未知</li><li>DELETED： 查询MS API不存在</li></ul>
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribeGatewayApisRequest extends AbstractModel
 
         if (array_key_exists("ReleaseStatus",$param) and $param["ReleaseStatus"] !== null) {
             $this->ReleaseStatus = $param["ReleaseStatus"];
+        }
+
+        if (array_key_exists("ExtendFieldList",$param) and $param["ExtendFieldList"] !== null) {
+            $this->ExtendFieldList = $param["ExtendFieldList"];
+        }
+
+        if (array_key_exists("ApiOnlineStatus",$param) and $param["ApiOnlineStatus"] !== null) {
+            $this->ApiOnlineStatus = $param["ApiOnlineStatus"];
         }
     }
 }

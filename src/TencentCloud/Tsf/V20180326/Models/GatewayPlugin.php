@@ -20,110 +20,118 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 微服务网关插件实例对象
  *
- * @method string getId() 获取网关插件id
+ * @method string getId() 获取<p>网关插件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置网关插件id
+ * @method void setId(string $Id) 设置<p>网关插件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取插件名称
+ * @method string getName() 获取<p>插件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置插件名称
+ * @method void setName(string $Name) 设置<p>插件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取插件类型
+ * @method string getType() 获取<p>插件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置插件类型
+ * @method void setType(string $Type) 设置<p>插件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取插件描述
+ * @method string getDescription() 获取<p>插件描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置插件描述
+ * @method void setDescription(string $Description) 设置<p>插件描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedTime() 获取创建时间
+ * @method string getCreatedTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedTime() 获取更新时间
+ * @method string getUpdatedTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
+ * @method void setUpdatedTime(string $UpdatedTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取发布状态
+ * @method string getStatus() 获取<p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置发布状态
+ * @method void setStatus(string $Status) 设置<p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getDeleteDisabled() 获取是否禁用删除
- * @method void setDeleteDisabled(boolean $DeleteDisabled) 设置是否禁用删除
- * @method string getDeleteDisabledReason() 获取禁用原因
- * @method void setDeleteDisabledReason(string $DeleteDisabledReason) 设置禁用原因
+ * @method boolean getDeleteDisabled() 获取<p>是否禁用删除</p>
+ * @method void setDeleteDisabled(boolean $DeleteDisabled) 设置<p>是否禁用删除</p>
+ * @method string getDeleteDisabledReason() 获取<p>禁用原因</p>
+ * @method void setDeleteDisabledReason(string $DeleteDisabledReason) 设置<p>禁用原因</p>
+ * @method boolean getBindDisabled() 获取<p>是否不可绑定</p><p>枚举值：</p><ul><li>true： 禁止绑定</li><li>false： 允许绑定</li></ul>
+ * @method void setBindDisabled(boolean $BindDisabled) 设置<p>是否不可绑定</p><p>枚举值：</p><ul><li>true： 禁止绑定</li><li>false： 允许绑定</li></ul>
  */
 class GatewayPlugin extends AbstractModel
 {
     /**
-     * @var string 网关插件id
+     * @var string <p>网关插件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 插件名称
+     * @var string <p>插件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 插件类型
+     * @var string <p>插件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 插件描述
+     * @var string <p>插件描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedTime;
 
     /**
-     * @var string 发布状态
+     * @var string <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var boolean 是否禁用删除
+     * @var boolean <p>是否禁用删除</p>
      */
     public $DeleteDisabled;
 
     /**
-     * @var string 禁用原因
+     * @var string <p>禁用原因</p>
      */
     public $DeleteDisabledReason;
 
     /**
-     * @param string $Id 网关插件id
+     * @var boolean <p>是否不可绑定</p><p>枚举值：</p><ul><li>true： 禁止绑定</li><li>false： 允许绑定</li></ul>
+     */
+    public $BindDisabled;
+
+    /**
+     * @param string $Id <p>网关插件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 插件名称
+     * @param string $Name <p>插件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 插件类型
+     * @param string $Type <p>插件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 插件描述
+     * @param string $Description <p>插件描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedTime 创建时间
+     * @param string $CreatedTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedTime 更新时间
+     * @param string $UpdatedTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 发布状态
+     * @param string $Status <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $DeleteDisabled 是否禁用删除
-     * @param string $DeleteDisabledReason 禁用原因
+     * @param boolean $DeleteDisabled <p>是否禁用删除</p>
+     * @param string $DeleteDisabledReason <p>禁用原因</p>
+     * @param boolean $BindDisabled <p>是否不可绑定</p><p>枚举值：</p><ul><li>true： 禁止绑定</li><li>false： 允许绑定</li></ul>
      */
     function __construct()
     {
@@ -172,6 +180,10 @@ class GatewayPlugin extends AbstractModel
 
         if (array_key_exists("DeleteDisabledReason",$param) and $param["DeleteDisabledReason"] !== null) {
             $this->DeleteDisabledReason = $param["DeleteDisabledReason"];
+        }
+
+        if (array_key_exists("BindDisabled",$param) and $param["BindDisabled"] !== null) {
+            $this->BindDisabled = $param["BindDisabled"];
         }
     }
 }

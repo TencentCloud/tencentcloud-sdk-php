@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContainerGroups返回参数结构体
  *
- * @method ContainGroupResult getResult() 获取查询的权限数据对象
- * @method void setResult(ContainGroupResult $Result) 设置查询的权限数据对象
+ * @method ContainGroupResult getResult() 获取<p>查询的权限数据对象</p>
+ * @method void setResult(ContainGroupResult $Result) 设置<p>查询的权限数据对象</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeContainerGroupsResponse extends AbstractModel
 {
     /**
-     * @var ContainGroupResult 查询的权限数据对象
+     * @var ContainGroupResult <p>查询的权限数据对象</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeContainerGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ContainGroupResult $Result 查询的权限数据对象
+     * @param ContainGroupResult $Result <p>查询的权限数据对象</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,94 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 独占实例
  *
- * @method string getCenterType() 获取配置中心类型[注册中心Registration、配置中心Configuration]
- * @method void setCenterType(string $CenterType) 设置配置中心类型[注册中心Registration、配置中心Configuration]
- * @method string getInstanceId() 获取实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
- * @method void setInstanceId(string $InstanceId) 设置实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
- * @method string getInstanceType() 获取实例类型，例如北极星Polaris
- * @method void setInstanceType(string $InstanceType) 设置实例类型，例如北极星Polaris
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getRegionId() 获取实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
- * @method void setRegionId(string $RegionId) 设置实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
- * @method string getInstanceNamespaceId() 获取实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
- * @method void setInstanceNamespaceId(string $InstanceNamespaceId) 设置实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
- * @method string getGroupId() 获取部署组Id
+ * @method string getCenterType() 获取<p>配置中心类型[注册中心Registration、配置中心Configuration]</p>
+ * @method void setCenterType(string $CenterType) 设置<p>配置中心类型[注册中心Registration、配置中心Configuration]</p>
+ * @method string getInstanceId() 获取<p>实例id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+ * @method string getInstanceType() 获取<p>实例类型，例如北极星Polaris</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型，例如北极星Polaris</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method string getRegionId() 获取<p>实例地域id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+ * @method void setRegionId(string $RegionId) 设置<p>实例地域id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+ * @method string getInstanceNamespaceId() 获取<p>实例命名空间ID，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+ * @method void setInstanceNamespaceId(string $InstanceNamespaceId) 设置<p>实例命名空间ID，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+ * @method string getGroupId() 获取<p>部署组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupId(string $GroupId) 设置部署组Id
+ * @method void setGroupId(string $GroupId) 设置<p>部署组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateTime() 获取创建时间
+ * @method integer getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(integer $CreateTime) 设置创建时间
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpdateTime() 获取更新时间
+ * @method integer getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取<p>文档ID</p>
+ * @method void setApplicationId(string $ApplicationId) 设置<p>文档ID</p>
  */
 class ExclusiveInstance extends AbstractModel
 {
     /**
-     * @var string 配置中心类型[注册中心Registration、配置中心Configuration]
+     * @var string <p>配置中心类型[注册中心Registration、配置中心Configuration]</p>
      */
     public $CenterType;
 
     /**
-     * @var string 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * @var string <p>实例id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例类型，例如北极星Polaris
+     * @var string <p>实例类型，例如北极星Polaris</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * @var string <p>实例地域id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
      */
     public $RegionId;
 
     /**
-     * @var string 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * @var string <p>实例命名空间ID，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
      */
     public $InstanceNamespaceId;
 
     /**
-     * @var string 部署组Id
+     * @var string <p>部署组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var integer 更新时间
+     * @var integer <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @param string $CenterType 配置中心类型[注册中心Registration、配置中心Configuration]
-     * @param string $InstanceId 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
-     * @param string $InstanceType 实例类型，例如北极星Polaris
-     * @param string $InstanceName 实例名称
-     * @param string $RegionId 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
-     * @param string $InstanceNamespaceId 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
-     * @param string $GroupId 部署组Id
+     * @var string <p>文档ID</p>
+     */
+    public $ApplicationId;
+
+    /**
+     * @param string $CenterType <p>配置中心类型[注册中心Registration、配置中心Configuration]</p>
+     * @param string $InstanceId <p>实例id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+     * @param string $InstanceType <p>实例类型，例如北极星Polaris</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param string $RegionId <p>实例地域id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+     * @param string $InstanceNamespaceId <p>实例命名空间ID，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+     * @param string $GroupId <p>部署组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateTime 创建时间
+     * @param integer $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpdateTime 更新时间
+     * @param integer $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId <p>文档ID</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ExclusiveInstance extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }

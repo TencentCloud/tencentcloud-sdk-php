@@ -1,0 +1,77 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Dbdc\V20201029\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * CreateDBCustomNodes返回参数结构体
+ *
+ * @method array getNodeIds() 获取<p>节点ID列表</p>
+ * @method void setNodeIds(array $NodeIds) 设置<p>节点ID列表</p>
+ * @method integer getTaskId() 获取<p>创建节点的任务ID</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>创建节点的任务ID</p>
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ */
+class CreateDBCustomNodesResponse extends AbstractModel
+{
+    /**
+     * @var array <p>节点ID列表</p>
+     */
+    public $NodeIds;
+
+    /**
+     * @var integer <p>创建节点的任务ID</p>
+     */
+    public $TaskId;
+
+    /**
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public $RequestId;
+
+    /**
+     * @param array $NodeIds <p>节点ID列表</p>
+     * @param integer $TaskId <p>创建节点的任务ID</p>
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("NodeIds",$param) and $param["NodeIds"] !== null) {
+            $this->NodeIds = $param["NodeIds"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
+        }
+    }
+}

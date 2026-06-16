@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateModelService请求参数结构体
  *
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method string getServiceGroupId() 获取<p>新增版本时需要填写</p>
  * @method void setServiceGroupId(string $ServiceGroupId) 设置<p>新增版本时需要填写</p>
  * @method string getServiceGroupName() 获取<p>不超过60个字，仅支持英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以英文、数字开头</p>
@@ -113,6 +115,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreateModelServiceRequest extends AbstractModel
 {
+    /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
     /**
      * @var string <p>新增版本时需要填写</p>
      */
@@ -339,6 +346,7 @@ class CreateModelServiceRequest extends AbstractModel
     public $GatewayConfig;
 
     /**
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param string $ServiceGroupId <p>新增版本时需要填写</p>
      * @param string $ServiceGroupName <p>不超过60个字，仅支持英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以英文、数字开头</p>
      * @param string $ServiceDescription <p>模型服务的描述</p>
@@ -398,6 +406,10 @@ class CreateModelServiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
+        }
+
         if (array_key_exists("ServiceGroupId",$param) and $param["ServiceGroupId"] !== null) {
             $this->ServiceGroupId = $param["ServiceGroupId"];
         }

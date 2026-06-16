@@ -129,12 +129,15 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeBillingInfoResponse DescribeBillingInfo(Models\DescribeBillingInfoRequest $req) 获取云开发环境的计费相关信息。
 包括环境的 状态、当前套餐、购买时间、到期时间 等。
  * @method Models\DescribeClientResponse DescribeClient(Models\DescribeClientRequest $req) 查询客户端详情。获取指定云开发环境下某个客户端的配置信息，包括客户端基本信息（名称、图标、描述）、OAuth 凭证（ClientId、ClientSecret）、安全域名、允许的 Scope 列表、Token 有效期、会话控制策略等。当客户端 ID 等于环境 ID 时，返回该环境的默认客户端配置。
+ * @method Models\DescribeCloudAppListResponse DescribeCloudAppList(Models\DescribeCloudAppListRequest $req) 查询云应用服务列表信息
  * @method Models\DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildService(Models\DescribeCloudBaseBuildServiceRequest $req) 获取云托管代码上传url
  * @method Models\DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersion(Models\DescribeCloudBaseRunServerVersionRequest $req) 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
  * @method Models\DescribeCreateMySQLResultResponse DescribeCreateMySQLResult(Models\DescribeCreateMySQLResultRequest $req) 本接口（DescribeCreateMySQLResult）用于查询开通Mysql结果。
 
 `Response.Data.Status = "notexist"` 表示未开通，如果未开通，可以调用 [CreateMySQL](https://cloud.tencent.com/document/api/876/128186) 来开通
  `Response.Data. Status = "success"` 表示开通成功，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)，可以通过 [RunSql](https://cloud.tencent.com/document/api/876/127880) 接口来执行 sql 命令，比如创建表格、插入数据、删除表格等 MySql 命令。
+ * @method Models\DescribeCreditsUsageResponse DescribeCreditsUsage(Models\DescribeCreditsUsageRequest $req) 查询资源点模式下的资源点用量
+ * @method Models\DescribeCreditsUsageDetailResponse DescribeCreditsUsageDetail(Models\DescribeCreditsUsageDetailRequest $req) 查询资源点模式下的资源点用量及原始用量明细
  * @method Models\DescribeCurveDataResponse DescribeCurveData(Models\DescribeCurveDataRequest $req) 根据指定指标名称，查询某环境在指定时间范围内的监控数据，返回按统计粒度聚合后的时序数据。
  * @method Models\DescribeDatabaseACLResponse DescribeDatabaseACL(Models\DescribeDatabaseACLRequest $req) 本接口（DescribeDatabaseACL）获取文档型数据库权限。
  * @method Models\DescribeEnvAccountCircleResponse DescribeEnvAccountCircle(Models\DescribeEnvAccountCircleRequest $req) 查询环境计费周期。

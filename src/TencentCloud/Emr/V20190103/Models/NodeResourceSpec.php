@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源详情
  *
- * @method string getInstanceType() 获取规格类型，如S2.MEDIUM8
- * @method void setInstanceType(string $InstanceType) 设置规格类型，如S2.MEDIUM8
- * @method array getSystemDisk() 获取系统盘，系统盘个数不超过1块
+ * @method string getInstanceType() 获取<p>规格类型，如S2.MEDIUM8</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>规格类型，如S2.MEDIUM8</p>
+ * @method array getSystemDisk() 获取<p>系统盘，系统盘个数不超过1块</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSystemDisk(array $SystemDisk) 设置系统盘，系统盘个数不超过1块
+ * @method void setSystemDisk(array $SystemDisk) 设置<p>系统盘，系统盘个数不超过1块</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取需要绑定的标签列表
+ * @method array getTags() 获取<p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置需要绑定的标签列表
+ * @method void setTags(array $Tags) 设置<p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataDisk() 获取云数据盘，云数据盘总个数不超过15块
+ * @method array getDataDisk() 获取<p>云数据盘，云数据盘总个数不超过15块</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataDisk(array $DataDisk) 设置云数据盘，云数据盘总个数不超过15块
+ * @method void setDataDisk(array $DataDisk) 设置<p>云数据盘，云数据盘总个数不超过15块</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLocalDataDisk() 获取本地数据盘
+ * @method array getLocalDataDisk() 获取<p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLocalDataDisk(array $LocalDataDisk) 设置本地数据盘
+ * @method void setLocalDataDisk(array $LocalDataDisk) 设置<p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSoftwareConfig() 获取<p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
+ * @method void setSoftwareConfig(array $SoftwareConfig) 设置<p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
  */
 class NodeResourceSpec extends AbstractModel
 {
     /**
-     * @var string 规格类型，如S2.MEDIUM8
+     * @var string <p>规格类型，如S2.MEDIUM8</p>
      */
     public $InstanceType;
 
     /**
-     * @var array 系统盘，系统盘个数不超过1块
+     * @var array <p>系统盘，系统盘个数不超过1块</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SystemDisk;
 
     /**
-     * @var array 需要绑定的标签列表
+     * @var array <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var array 云数据盘，云数据盘总个数不超过15块
+     * @var array <p>云数据盘，云数据盘总个数不超过15块</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataDisk;
 
     /**
-     * @var array 本地数据盘
+     * @var array <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalDataDisk;
 
     /**
-     * @param string $InstanceType 规格类型，如S2.MEDIUM8
-     * @param array $SystemDisk 系统盘，系统盘个数不超过1块
+     * @var array <p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
+     */
+    public $SoftwareConfig;
+
+    /**
+     * @param string $InstanceType <p>规格类型，如S2.MEDIUM8</p>
+     * @param array $SystemDisk <p>系统盘，系统盘个数不超过1块</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 需要绑定的标签列表
+     * @param array $Tags <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataDisk 云数据盘，云数据盘总个数不超过15块
+     * @param array $DataDisk <p>云数据盘，云数据盘总个数不超过15块</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LocalDataDisk 本地数据盘
+     * @param array $LocalDataDisk <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SoftwareConfig <p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
      */
     function __construct()
     {
@@ -131,6 +139,15 @@ class NodeResourceSpec extends AbstractModel
                 $obj = new DiskSpecInfo();
                 $obj->deserialize($value);
                 array_push($this->LocalDataDisk, $obj);
+            }
+        }
+
+        if (array_key_exists("SoftwareConfig",$param) and $param["SoftwareConfig"] !== null) {
+            $this->SoftwareConfig = [];
+            foreach ($param["SoftwareConfig"] as $key => $value){
+                $obj = new ServiceDeploy();
+                $obj->deserialize($value);
+                array_push($this->SoftwareConfig, $obj);
             }
         }
     }

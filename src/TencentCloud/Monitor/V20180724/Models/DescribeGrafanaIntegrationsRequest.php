@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaIntegrations请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getIntegrationId() 获取集成 ID
- * @method void setIntegrationId(string $IntegrationId) 设置集成 ID
- * @method string getKind() 获取类型
- * @method void setKind(string $Kind) 设置类型
+ * @method string getInstanceId() 获取<p>实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID</p>
+ * @method string getIntegrationId() 获取<p>集成 ID</p>
+ * @method void setIntegrationId(string $IntegrationId) 设置<p>集成 ID</p>
+ * @method string getKind() 获取<p>类型</p>
+ * @method void setKind(string $Kind) 设置<p>类型</p>
  */
 class DescribeGrafanaIntegrationsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 集成 ID
+     * @var string <p>集成 ID</p>
      */
     public $IntegrationId;
 
     /**
-     * @var string 类型
+     * @var string <p>类型</p>
      */
     public $Kind;
 
     /**
-     * @param string $InstanceId 实例 ID
-     * @param string $IntegrationId 集成 ID
-     * @param string $Kind 类型
+     * @param string $InstanceId <p>实例 ID</p>
+     * @param string $IntegrationId <p>集成 ID</p>
+     * @param string $Kind <p>类型</p>
      */
     function __construct()
     {

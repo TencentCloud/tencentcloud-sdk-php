@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNote(string $Note) 设置<p>主题备注</p><p>入参限制：不超过 64 个字符</p>
  * @method integer getMinInsyncReplicas() 获取<p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
  * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) 设置<p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
- * @method integer getUncleanLeaderElectionEnable() 获取<p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
- * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置<p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
+ * @method integer getUncleanLeaderElectionEnable() 获取<p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认取实例维度的值</p>
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置<p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认取实例维度的值</p>
  * @method integer getRetentionMs() 获取<p>可选参数，消息保留时间</p><p>取值范围：[60000, 7776000000]</p><p>单位：毫秒</p><p>默认值：7200000</p>
  * @method void setRetentionMs(integer $RetentionMs) 设置<p>可选参数，消息保留时间</p><p>取值范围：[60000, 7776000000]</p><p>单位：毫秒</p><p>默认值：7200000</p>
  * @method integer getSegmentMs() 获取<p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
@@ -105,7 +105,7 @@ class CreateTopicRequest extends AbstractModel
     public $MinInsyncReplicas;
 
     /**
-     * @var integer <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
+     * @var integer <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认取实例维度的值</p>
      */
     public $UncleanLeaderElectionEnable;
 
@@ -159,7 +159,7 @@ class CreateTopicRequest extends AbstractModel
      * @param string $CleanUpPolicy <p>清理日志策略，日志清理模式，默认为&quot;delete&quot;。&quot;delete&quot;：日志按保存时间删除，&quot;compact&quot;：日志按 key 压缩，&quot;compact, delete&quot;：日志按 key 压缩且会按保存时间删除。</p>
      * @param string $Note <p>主题备注</p><p>入参限制：不超过 64 个字符</p>
      * @param integer $MinInsyncReplicas <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
-     * @param integer $UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
+     * @param integer $UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认取实例维度的值</p>
      * @param integer $RetentionMs <p>可选参数，消息保留时间</p><p>取值范围：[60000, 7776000000]</p><p>单位：毫秒</p><p>默认值：7200000</p>
      * @param integer $SegmentMs <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
      * @param integer $MaxMessageBytes <p>主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）</p>

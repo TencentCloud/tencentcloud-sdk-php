@@ -211,6 +211,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) 根据工作流 ID，获取工作流详情列表。
  * @method Models\DesignVoiceAsyncResponse DesignVoiceAsync(Models\DesignVoiceAsyncRequest $req) 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
  * @method Models\DetectVideoSubtitleAreaResponse DetectVideoSubtitleArea(Models\DetectVideoSubtitleAreaRequest $req) 快速探测视频文件的硬字幕区域
+ * @method Models\DetectVideoWatermarkResponse DetectVideoWatermark(Models\DetectVideoWatermarkRequest $req) 快速探测视频文件是否包含水印
  * @method Models\DisableScheduleResponse DisableSchedule(Models\DisableScheduleRequest $req) 禁用自动化触发编排任务。
  * @method Models\DisableWorkflowResponse DisableWorkflow(Models\DisableWorkflowRequest $req) 禁用工作流。
  * @method Models\DisassociateSecurityGroupResponse DisassociateSecurityGroup(Models\DisassociateSecurityGroupRequest $req) 批量解绑安全组下面关联的输入输出。

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSSOAccount请求参数结构体
  *
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
- * @method string getUserId() 获取填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
- * @method void setUserId(string $UserId) 设置填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
+ * @method string getInstanceId() 获取<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method string getUserId() 获取<p>填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000</p>
+ * @method void setUserId(string $UserId) 设置<p>填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000</p>
  */
 class DescribeSSOAccountRequest extends AbstractModel
 {
     /**
-     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
+     * @var string <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
+     * @var string <p>填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000</p>
      */
     public $UserId;
 
     /**
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param string $UserId 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
+     * @param string $InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param string $UserId <p>填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000</p>
      */
     function __construct()
     {

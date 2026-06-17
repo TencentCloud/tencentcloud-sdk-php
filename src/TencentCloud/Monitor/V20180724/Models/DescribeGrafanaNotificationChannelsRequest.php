@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaNotificationChannels请求参数结构体
  *
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-12345678
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-12345678
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取查询数量
- * @method void setLimit(integer $Limit) 设置查询数量
- * @method string getChannelName() 获取告警通道名称，例如：test
- * @method void setChannelName(string $ChannelName) 设置告警通道名称，例如：test
- * @method array getChannelIDs() 获取告警通道 ID，例如：nchannel-abcd1234
- * @method void setChannelIDs(array $ChannelIDs) 设置告警通道 ID，例如：nchannel-abcd1234
- * @method integer getChannelState() 获取告警通道状态
- * @method void setChannelState(integer $ChannelState) 设置告警通道状态
+ * @method string getInstanceId() 获取<p>Grafana 实例 ID，例如：grafana-12345678</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>Grafana 实例 ID，例如：grafana-12345678</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method integer getLimit() 获取<p>查询数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>查询数量</p>
+ * @method string getChannelName() 获取<p>告警通道名称，例如：test</p>
+ * @method void setChannelName(string $ChannelName) 设置<p>告警通道名称，例如：test</p>
+ * @method array getChannelIDs() 获取<p>告警通道 ID，例如：nchannel-abcd1234</p>
+ * @method void setChannelIDs(array $ChannelIDs) 设置<p>告警通道 ID，例如：nchannel-abcd1234</p>
+ * @method integer getChannelState() 获取<p>告警通道状态</p>
+ * @method void setChannelState(integer $ChannelState) 设置<p>告警通道状态</p>
  */
 class DescribeGrafanaNotificationChannelsRequest extends AbstractModel
 {
     /**
-     * @var string Grafana 实例 ID，例如：grafana-12345678
+     * @var string <p>Grafana 实例 ID，例如：grafana-12345678</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 查询数量
+     * @var integer <p>查询数量</p>
      */
     public $Limit;
 
     /**
-     * @var string 告警通道名称，例如：test
+     * @var string <p>告警通道名称，例如：test</p>
      */
     public $ChannelName;
 
     /**
-     * @var array 告警通道 ID，例如：nchannel-abcd1234
+     * @var array <p>告警通道 ID，例如：nchannel-abcd1234</p>
      */
     public $ChannelIDs;
 
     /**
-     * @var integer 告警通道状态
+     * @var integer <p>告警通道状态</p>
      */
     public $ChannelState;
 
     /**
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-12345678
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 查询数量
-     * @param string $ChannelName 告警通道名称，例如：test
-     * @param array $ChannelIDs 告警通道 ID，例如：nchannel-abcd1234
-     * @param integer $ChannelState 告警通道状态
+     * @param string $InstanceId <p>Grafana 实例 ID，例如：grafana-12345678</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param integer $Limit <p>查询数量</p>
+     * @param string $ChannelName <p>告警通道名称，例如：test</p>
+     * @param array $ChannelIDs <p>告警通道 ID，例如：nchannel-abcd1234</p>
+     * @param integer $ChannelState <p>告警通道状态</p>
      */
     function __construct()
     {

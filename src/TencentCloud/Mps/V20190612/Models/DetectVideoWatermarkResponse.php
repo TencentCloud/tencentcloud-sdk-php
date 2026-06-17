@@ -14,23 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDNSConfig返回参数结构体
+ * DetectVideoWatermark返回参数结构体
  *
- * @method array getNameServers() 获取<p>DNS 服务器数组</p>
- * @method void setNameServers(array $NameServers) 设置<p>DNS 服务器数组</p>
+ * @method float getConfidence() 获取<p>是否存在水印的置信度</p><p>取值范围：[0, 100]</p>
+ * @method void setConfidence(float $Confidence) 设置<p>是否存在水印的置信度</p><p>取值范围：[0, 100]</p>
+ * @method boolean getHasWatermark() 获取<p>视频中是否存在水印</p>
+ * @method void setHasWatermark(boolean $HasWatermark) 设置<p>视频中是否存在水印</p>
+ * @method string getDescription() 获取<p>关于水印的一些描述性说明</p>
+ * @method void setDescription(string $Description) 设置<p>关于水印的一些描述性说明</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDNSConfigResponse extends AbstractModel
+class DetectVideoWatermarkResponse extends AbstractModel
 {
     /**
-     * @var array <p>DNS 服务器数组</p>
+     * @var float <p>是否存在水印的置信度</p><p>取值范围：[0, 100]</p>
      */
-    public $NameServers;
+    public $Confidence;
+
+    /**
+     * @var boolean <p>视频中是否存在水印</p>
+     */
+    public $HasWatermark;
+
+    /**
+     * @var string <p>关于水印的一些描述性说明</p>
+     */
+    public $Description;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +52,9 @@ class DescribeDNSConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $NameServers <p>DNS 服务器数组</p>
+     * @param float $Confidence <p>是否存在水印的置信度</p><p>取值范围：[0, 100]</p>
+     * @param boolean $HasWatermark <p>视频中是否存在水印</p>
+     * @param string $Description <p>关于水印的一些描述性说明</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +70,16 @@ class DescribeDNSConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NameServers",$param) and $param["NameServers"] !== null) {
-            $this->NameServers = $param["NameServers"];
+        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
+            $this->Confidence = $param["Confidence"];
+        }
+
+        if (array_key_exists("HasWatermark",$param) and $param["HasWatermark"] !== null) {
+            $this->HasWatermark = $param["HasWatermark"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

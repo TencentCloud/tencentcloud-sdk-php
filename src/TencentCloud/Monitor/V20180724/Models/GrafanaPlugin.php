@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Grafana 插件
  *
- * @method string getPluginId() 获取Grafana 插件 ID
- * @method void setPluginId(string $PluginId) 设置Grafana 插件 ID
- * @method string getVersion() 获取Grafana 插件版本
+ * @method string getPluginId() 获取<p>Grafana 插件 ID</p>
+ * @method void setPluginId(string $PluginId) 设置<p>Grafana 插件 ID</p>
+ * @method string getVersion() 获取<p>Grafana 插件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置Grafana 插件版本
+ * @method void setVersion(string $Version) 设置<p>Grafana 插件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GrafanaPlugin extends AbstractModel
 {
     /**
-     * @var string Grafana 插件 ID
+     * @var string <p>Grafana 插件 ID</p>
      */
     public $PluginId;
 
     /**
-     * @var string Grafana 插件版本
+     * @var string <p>Grafana 插件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
-     * @param string $PluginId Grafana 插件 ID
-     * @param string $Version Grafana 插件版本
+     * @param string $PluginId <p>Grafana 插件 ID</p>
+     * @param string $Version <p>Grafana 插件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

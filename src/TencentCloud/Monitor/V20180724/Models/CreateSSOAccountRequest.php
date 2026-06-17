@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSSOAccount请求参数结构体
  *
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
- * @method string getUserId() 获取用户账号 ID ，例如：10000000
- * @method void setUserId(string $UserId) 设置用户账号 ID ，例如：10000000
- * @method array getRole() 获取权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
- * @method void setRole(array $Role) 设置权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
- * @method string getNotes() 获取备注
- * @method void setNotes(string $Notes) 设置备注
+ * @method string getInstanceId() 获取<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method string getUserId() 获取<p>用户账号 ID ，例如：10000000</p>
+ * @method void setUserId(string $UserId) 设置<p>用户账号 ID ，例如：10000000</p>
+ * @method array getRole() 获取<p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
+ * @method void setRole(array $Role) 设置<p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
+ * @method string getNotes() 获取<p>备注</p>
+ * @method void setNotes(string $Notes) 设置<p>备注</p>
  */
 class CreateSSOAccountRequest extends AbstractModel
 {
     /**
-     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
+     * @var string <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 用户账号 ID ，例如：10000000
+     * @var string <p>用户账号 ID ，例如：10000000</p>
      */
     public $UserId;
 
     /**
-     * @var array 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
+     * @var array <p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
      */
     public $Role;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Notes;
 
     /**
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param string $UserId 用户账号 ID ，例如：10000000
-     * @param array $Role 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
-     * @param string $Notes 备注
+     * @param string $InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param string $UserId <p>用户账号 ID ，例如：10000000</p>
+     * @param array $Role <p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
+     * @param string $Notes <p>备注</p>
      */
     function __construct()
     {

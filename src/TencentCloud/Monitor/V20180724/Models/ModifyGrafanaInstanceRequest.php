@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGrafanaInstance请求参数结构体
  *
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
- * @method string getInstanceName() 获取Grafana 实例名称，例如：test
- * @method void setInstanceName(string $InstanceName) 设置Grafana 实例名称，例如：test
+ * @method string getInstanceId() 获取<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method string getInstanceName() 获取<p>Grafana 实例名称，例如：test</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>Grafana 实例名称，例如：test</p>
  */
 class ModifyGrafanaInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
+     * @var string <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Grafana 实例名称，例如：test
+     * @var string <p>Grafana 实例名称，例如：test</p>
      */
     public $InstanceName;
 
     /**
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param string $InstanceName Grafana 实例名称，例如：test
+     * @param string $InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param string $InstanceName <p>Grafana 实例名称，例如：test</p>
      */
     function __construct()
     {

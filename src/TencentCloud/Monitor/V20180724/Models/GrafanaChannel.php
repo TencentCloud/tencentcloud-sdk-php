@@ -20,61 +20,61 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Grafana 告警渠道
  *
- * @method string getChannelId() 获取渠道 ID
- * @method void setChannelId(string $ChannelId) 设置渠道 ID
- * @method string getChannelName() 获取渠道名
- * @method void setChannelName(string $ChannelName) 设置渠道名
- * @method array getReceivers() 获取告警通道模板 ID 数组
- * @method void setReceivers(array $Receivers) 设置告警通道模板 ID 数组
- * @method string getCreatedAt() 获取创建时间
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间
- * @method string getUpdatedAt() 获取更新时间
- * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
- * @method array getOrganizationIds() 获取告警渠道的所有生效组织
+ * @method string getChannelId() 获取<p>渠道 ID</p>
+ * @method void setChannelId(string $ChannelId) 设置<p>渠道 ID</p>
+ * @method string getChannelName() 获取<p>渠道名</p>
+ * @method void setChannelName(string $ChannelName) 设置<p>渠道名</p>
+ * @method array getReceivers() 获取<p>告警通道模板 ID 数组</p>
+ * @method void setReceivers(array $Receivers) 设置<p>告警通道模板 ID 数组</p>
+ * @method string getCreatedAt() 获取<p>创建时间</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间</p>
+ * @method string getUpdatedAt() 获取<p>更新时间</p>
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>更新时间</p>
+ * @method array getOrganizationIds() 获取<p>告警渠道的所有生效组织</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganizationIds(array $OrganizationIds) 设置告警渠道的所有生效组织
+ * @method void setOrganizationIds(array $OrganizationIds) 设置<p>告警渠道的所有生效组织</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GrafanaChannel extends AbstractModel
 {
     /**
-     * @var string 渠道 ID
+     * @var string <p>渠道 ID</p>
      */
     public $ChannelId;
 
     /**
-     * @var string 渠道名
+     * @var string <p>渠道名</p>
      */
     public $ChannelName;
 
     /**
-     * @var array 告警通道模板 ID 数组
+     * @var array <p>告警通道模板 ID 数组</p>
      */
     public $Receivers;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdatedAt;
 
     /**
-     * @var array 告警渠道的所有生效组织
+     * @var array <p>告警渠道的所有生效组织</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationIds;
 
     /**
-     * @param string $ChannelId 渠道 ID
-     * @param string $ChannelName 渠道名
-     * @param array $Receivers 告警通道模板 ID 数组
-     * @param string $CreatedAt 创建时间
-     * @param string $UpdatedAt 更新时间
-     * @param array $OrganizationIds 告警渠道的所有生效组织
+     * @param string $ChannelId <p>渠道 ID</p>
+     * @param string $ChannelName <p>渠道名</p>
+     * @param array $Receivers <p>告警通道模板 ID 数组</p>
+     * @param string $CreatedAt <p>创建时间</p>
+     * @param string $UpdatedAt <p>更新时间</p>
+     * @param array $OrganizationIds <p>告警渠道的所有生效组织</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

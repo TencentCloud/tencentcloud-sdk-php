@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpWhitelist(array $IpWhitelist) 设置IP 白名单列表。支持 IPv4和 CIDR 格式。空数组表示不限制 IP。
  * @method string getCreator() 获取当Platform为maas时该字段为空
  * @method void setCreator(string $Creator) 设置当Platform为maas时该字段为空
+ * @method array getQuotaSet() 获取Token 限额多维度信息。未配置限额时不返回该字段。
+ * @method void setQuotaSet(array $QuotaSet) 设置Token 限额多维度信息。未配置限额时不返回该字段。
+ * @method string getQuotaStatus() 获取Token 限额状态。空字符串表示未配置任何限额包；active 表示已配置且当前可用；inactive 表示已配置但额度耗尽
+ * @method void setQuotaStatus(string $QuotaStatus) 设置Token 限额状态。空字符串表示未配置任何限额包；active 表示已配置且当前可用；inactive 表示已配置但额度耗尽
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -138,6 +142,16 @@ class DescribeApiKeyResponse extends AbstractModel
     public $Creator;
 
     /**
+     * @var array Token 限额多维度信息。未配置限额时不返回该字段。
+     */
+    public $QuotaSet;
+
+    /**
+     * @var string Token 限额状态。空字符串表示未配置任何限额包；active 表示已配置且当前可用；inactive 表示已配置但额度耗尽
+     */
+    public $QuotaStatus;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -159,6 +173,8 @@ class DescribeApiKeyResponse extends AbstractModel
      * @param array $BindingItems 绑定资源列表，区分 endpoint 和 model 类型。
      * @param array $IpWhitelist IP 白名单列表。支持 IPv4和 CIDR 格式。空数组表示不限制 IP。
      * @param string $Creator 当Platform为maas时该字段为空
+     * @param array $QuotaSet Token 限额多维度信息。未配置限额时不返回该字段。
+     * @param string $QuotaStatus Token 限额状态。空字符串表示未配置任何限额包；active 表示已配置且当前可用；inactive 表示已配置但额度耗尽
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -241,6 +257,19 @@ class DescribeApiKeyResponse extends AbstractModel
 
         if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
             $this->Creator = $param["Creator"];
+        }
+
+        if (array_key_exists("QuotaSet",$param) and $param["QuotaSet"] !== null) {
+            $this->QuotaSet = [];
+            foreach ($param["QuotaSet"] as $key => $value){
+                $obj = new QuotaInfo();
+                $obj->deserialize($value);
+                array_push($this->QuotaSet, $obj);
+            }
+        }
+
+        if (array_key_exists("QuotaStatus",$param) and $param["QuotaStatus"] !== null) {
+            $this->QuotaStatus = $param["QuotaStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

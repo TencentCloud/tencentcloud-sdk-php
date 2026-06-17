@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGrafanaNotificationChannel请求参数结构体
  *
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
- * @method string getChannelName() 获取告警通道名称，例如：test
- * @method void setChannelName(string $ChannelName) 设置告警通道名称，例如：test
- * @method array getReceivers() 获取接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
- * @method void setReceivers(array $Receivers) 设置接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
- * @method integer getOrgId() 获取默认为1，建议使用 OrganizationIds
- * @method void setOrgId(integer $OrgId) 设置默认为1，建议使用 OrganizationIds
- * @method array getExtraOrgIds() 获取额外组织 ID 数组，已废弃，请使用 OrganizationIds
- * @method void setExtraOrgIds(array $ExtraOrgIds) 设置额外组织 ID 数组，已废弃，请使用 OrganizationIds
- * @method array getOrganizationIds() 获取生效的所有组织 ID 数组，默认为 ["1"]
- * @method void setOrganizationIds(array $OrganizationIds) 设置生效的所有组织 ID 数组，默认为 ["1"]
+ * @method string getInstanceId() 获取<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method string getChannelName() 获取<p>告警通道名称，例如：my-channel</p>
+ * @method void setChannelName(string $ChannelName) 设置<p>告警通道名称，例如：my-channel</p>
+ * @method array getReceivers() 获取<p>接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID</p>
+ * @method void setReceivers(array $Receivers) 设置<p>接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID</p>
+ * @method integer getOrgId() 获取<p>默认为1，建议使用 OrganizationIds</p>
+ * @method void setOrgId(integer $OrgId) 设置<p>默认为1，建议使用 OrganizationIds</p>
+ * @method array getExtraOrgIds() 获取<p>额外组织 ID 数组，已废弃，请使用 OrganizationIds</p>
+ * @method void setExtraOrgIds(array $ExtraOrgIds) 设置<p>额外组织 ID 数组，已废弃，请使用 OrganizationIds</p>
+ * @method array getOrganizationIds() 获取<p>生效的所有组织 ID 数组，默认为 [&quot;1&quot;]</p>
+ * @method void setOrganizationIds(array $OrganizationIds) 设置<p>生效的所有组织 ID 数组，默认为 [&quot;1&quot;]</p>
  */
 class CreateGrafanaNotificationChannelRequest extends AbstractModel
 {
     /**
-     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
+     * @var string <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 告警通道名称，例如：test
+     * @var string <p>告警通道名称，例如：my-channel</p>
      */
     public $ChannelName;
 
     /**
-     * @var array 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
+     * @var array <p>接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID</p>
      */
     public $Receivers;
 
     /**
-     * @var integer 默认为1，建议使用 OrganizationIds
+     * @var integer <p>默认为1，建议使用 OrganizationIds</p>
      */
     public $OrgId;
 
     /**
-     * @var array 额外组织 ID 数组，已废弃，请使用 OrganizationIds
+     * @var array <p>额外组织 ID 数组，已废弃，请使用 OrganizationIds</p>
      */
     public $ExtraOrgIds;
 
     /**
-     * @var array 生效的所有组织 ID 数组，默认为 ["1"]
+     * @var array <p>生效的所有组织 ID 数组，默认为 [&quot;1&quot;]</p>
      */
     public $OrganizationIds;
 
     /**
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param string $ChannelName 告警通道名称，例如：test
-     * @param array $Receivers 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
-     * @param integer $OrgId 默认为1，建议使用 OrganizationIds
-     * @param array $ExtraOrgIds 额外组织 ID 数组，已废弃，请使用 OrganizationIds
-     * @param array $OrganizationIds 生效的所有组织 ID 数组，默认为 ["1"]
+     * @param string $InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param string $ChannelName <p>告警通道名称，例如：my-channel</p>
+     * @param array $Receivers <p>接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID</p>
+     * @param integer $OrgId <p>默认为1，建议使用 OrganizationIds</p>
+     * @param array $ExtraOrgIds <p>额外组织 ID 数组，已废弃，请使用 OrganizationIds</p>
+     * @param array $OrganizationIds <p>生效的所有组织 ID 数组，默认为 [&quot;1&quot;]</p>
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGrafanaNotificationChannel请求参数结构体
  *
- * @method array getChannelIDs() 获取通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
- * @method void setChannelIDs(array $ChannelIDs) 设置通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method array getChannelIDs() 获取<p>通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取</p>
+ * @method void setChannelIDs(array $ChannelIDs) 设置<p>通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取</p>
+ * @method string getInstanceId() 获取<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
  */
 class DeleteGrafanaNotificationChannelRequest extends AbstractModel
 {
     /**
-     * @var array 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
+     * @var array <p>通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取</p>
      */
     public $ChannelIDs;
 
     /**
-     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
+     * @var string <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public $InstanceId;
 
     /**
-     * @param array $ChannelIDs 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param array $ChannelIDs <p>通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取</p>
+     * @param string $InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     function __construct()
     {

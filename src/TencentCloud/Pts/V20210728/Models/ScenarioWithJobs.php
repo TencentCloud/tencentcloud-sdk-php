@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 带已执行任务的scenario
  *
- * @method Scenario getScenario() 获取scecario结果
- * @method void setScenario(Scenario $Scenario) 设置scecario结果
- * @method array getJobs() 获取job结果
+ * @method Scenario getScenario() 获取<p>Scenario结果</p>
+ * @method void setScenario(Scenario $Scenario) 设置<p>Scenario结果</p>
+ * @method array getJobs() 获取<p>job结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobs(array $Jobs) 设置job结果
+ * @method void setJobs(array $Jobs) 设置<p>job结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScenarioWithJobs extends AbstractModel
 {
     /**
-     * @var Scenario scecario结果
+     * @var Scenario <p>Scenario结果</p>
      */
     public $Scenario;
 
     /**
-     * @var array job结果
+     * @var array <p>job结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Jobs;
 
     /**
-     * @param Scenario $Scenario scecario结果
-     * @param array $Jobs job结果
+     * @param Scenario $Scenario <p>Scenario结果</p>
+     * @param array $Jobs <p>job结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

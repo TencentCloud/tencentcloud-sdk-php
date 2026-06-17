@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGrafanaConfig请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getConfig() 获取JSON 编码后的字符串，如 "{"server":{"root_url":"http://custom.domain"}}"
- * @method void setConfig(string $Config) 设置JSON 编码后的字符串，如 "{"server":{"root_url":"http://custom.domain"}}"
+ * @method string getInstanceId() 获取<p>实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID</p>
+ * @method string getConfig() 获取<p>JSON 编码后的字符串，如 &quot;{&quot;server&quot;:{&quot;root_url&quot;:&quot;http://custom.domain&quot;}}&quot;</p>
+ * @method void setConfig(string $Config) 设置<p>JSON 编码后的字符串，如 &quot;{&quot;server&quot;:{&quot;root_url&quot;:&quot;http://custom.domain&quot;}}&quot;</p>
  */
 class UpdateGrafanaConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string JSON 编码后的字符串，如 "{"server":{"root_url":"http://custom.domain"}}"
+     * @var string <p>JSON 编码后的字符串，如 &quot;{&quot;server&quot;:{&quot;root_url&quot;:&quot;http://custom.domain&quot;}}&quot;</p>
      */
     public $Config;
 
     /**
-     * @param string $InstanceId 实例 ID
-     * @param string $Config JSON 编码后的字符串，如 "{"server":{"root_url":"http://custom.domain"}}"
+     * @param string $InstanceId <p>实例 ID</p>
+     * @param string $Config <p>JSON 编码后的字符串，如 &quot;{&quot;server&quot;:{&quot;root_url&quot;:&quot;http://custom.domain&quot;}}&quot;</p>
      */
     function __construct()
     {

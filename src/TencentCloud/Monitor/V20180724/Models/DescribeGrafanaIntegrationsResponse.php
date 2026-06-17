@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaIntegrations返回参数结构体
  *
- * @method array getIntegrationSet() 获取集成数组
- * @method void setIntegrationSet(array $IntegrationSet) 设置集成数组
+ * @method array getIntegrationSet() 获取<p>集成数组</p>
+ * @method void setIntegrationSet(array $IntegrationSet) 设置<p>集成数组</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGrafanaIntegrationsResponse extends AbstractModel
 {
     /**
-     * @var array 集成数组
+     * @var array <p>集成数组</p>
      */
     public $IntegrationSet;
 
@@ -38,7 +38,7 @@ class DescribeGrafanaIntegrationsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $IntegrationSet 集成数组
+     * @param array $IntegrationSet <p>集成数组</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

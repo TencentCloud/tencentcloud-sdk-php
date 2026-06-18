@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPU(string $CPU) 设置<p>cpu 资源量</p>
  * @method string getMemory() 获取<p>内存资源量</p>
  * @method void setMemory(string $Memory) 设置<p>内存资源量</p>
+ * @method string getStorage() 获取<p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorage(string $Storage) 设置<p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceConfiguration extends AbstractModel
 {
@@ -38,8 +42,16 @@ class ResourceConfiguration extends AbstractModel
     public $Memory;
 
     /**
+     * @var string <p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Storage;
+
+    /**
      * @param string $CPU <p>cpu 资源量</p>
      * @param string $Memory <p>内存资源量</p>
+     * @param string $Storage <p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class ResourceConfiguration extends AbstractModel
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
             $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+            $this->Storage = $param["Storage"];
         }
     }
 }

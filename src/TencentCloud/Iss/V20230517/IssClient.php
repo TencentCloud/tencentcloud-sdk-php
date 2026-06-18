@@ -45,7 +45,6 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\ControlRecordTimelineResponse ControlRecordTimeline(Models\ControlRecordTimelineRequest $req) 用于查询设备本地录像时间轴信息，为NVR/IPC本地存储的录像。
  * @method Models\CreateVideoDownloadTaskResponse CreateVideoDownloadTask(Models\CreateVideoDownloadTaskRequest $req) 创建本地录像下载任务
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 用于删除域名。
- * @method Models\DeleteGatewayResponse DeleteGateway(Models\DeleteGatewayRequest $req) 用于删除网关。
  * @method Models\DeleteOrganizationResponse DeleteOrganization(Models\DeleteOrganizationRequest $req) 用于删除组织。
  * @method Models\DeleteRecordBackupPlanResponse DeleteRecordBackupPlan(Models\DeleteRecordBackupPlanRequest $req) 用于删除录像上云模板。
  * @method Models\DeleteRecordBackupTemplateResponse DeleteRecordBackupTemplate(Models\DeleteRecordBackupTemplateRequest $req) 用于删除录像上云模板。
@@ -61,10 +60,6 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeDomainResponse DescribeDomain(Models\DescribeDomainRequest $req) 用于查询添加的域名列表。
  * @method Models\DescribeDomainRegionResponse DescribeDomainRegion(Models\DescribeDomainRegionRequest $req) 用于用户添加域名时，查询可以绑定的服务节点，结果为平台支持的所有服务节点。（注意：每个服务节点只能绑定一个域名）
  * @method Models\DescribeGBDeviceAddrResponse DescribeGBDeviceAddr(Models\DescribeGBDeviceAddrRequest $req) 用于获取国标设备的公网地址
- * @method Models\DescribeGatewayResponse DescribeGateway(Models\DescribeGatewayRequest $req) 用于获取网关详情。
- * @method Models\DescribeGatewayMonitorResponse DescribeGatewayMonitor(Models\DescribeGatewayMonitorRequest $req) 用于获取网关的数据及流量监控信息。
- * @method Models\DescribeGatewayProtocolResponse DescribeGatewayProtocol(Models\DescribeGatewayProtocolRequest $req) 用于查询网关接入协议。
- * @method Models\DescribeGatewayVersionResponse DescribeGatewayVersion(Models\DescribeGatewayVersionRequest $req) 查询网关服务版本
  * @method Models\DescribeOrganizationResponse DescribeOrganization(Models\DescribeOrganizationRequest $req) 用于查询组织。
  * @method Models\DescribeRecordBackupPlanResponse DescribeRecordBackupPlan(Models\DescribeRecordBackupPlanRequest $req) 用于查询录像上云计划详情。
  * @method Models\DescribeRecordBackupTemplateResponse DescribeRecordBackupTemplate(Models\DescribeRecordBackupTemplateRequest $req) 用于查询录像上云模板详情。
@@ -83,8 +78,6 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeVideoDownloadUrlResponse DescribeVideoDownloadUrl(Models\DescribeVideoDownloadUrlRequest $req) 用于获取云录像下载 url
  * @method Models\ListDeviceSnapshotsResponse ListDeviceSnapshots(Models\ListDeviceSnapshotsRequest $req) 获取设备抓拍结果列表
  * @method Models\ListDevicesResponse ListDevices(Models\ListDevicesRequest $req) 用于获取对应组织下的设备列表。
- * @method Models\ListGatewayDevicesResponse ListGatewayDevices(Models\ListGatewayDevicesRequest $req) 用于查询网关下挂载的设备列表。
- * @method Models\ListGatewaysResponse ListGateways(Models\ListGatewaysRequest $req) 用于获取网关列表。
  * @method Models\ListOrganizationChannelNumbersResponse ListOrganizationChannelNumbers(Models\ListOrganizationChannelNumbersRequest $req) 用于查询组织目录下的未添加到实时上云计划中的通道数量
  * @method Models\ListOrganizationChannelsResponse ListOrganizationChannels(Models\ListOrganizationChannelsRequest $req) 用于查询组织目录下的通道列表
  * @method Models\ListRecordBackupPlanDevicesResponse ListRecordBackupPlanDevices(Models\ListRecordBackupPlanDevicesRequest $req) 用于查询录像上云计划下的设备通道列表。
@@ -104,14 +97,12 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\SetForbidPlayChannelsResponse SetForbidPlayChannels(Models\SetForbidPlayChannelsRequest $req) 禁止主、子账号对视频通道的实况预览
  * @method Models\UpdateDeviceOrganizationResponse UpdateDeviceOrganization(Models\UpdateDeviceOrganizationRequest $req) 用于批量更改设备的组织。
  * @method Models\UpdateDeviceStatusResponse UpdateDeviceStatus(Models\UpdateDeviceStatusRequest $req) 用于启用/禁用设备，禁用后拒绝设备注册。
- * @method Models\UpdateGatewayResponse UpdateGateway(Models\UpdateGatewayRequest $req) 用于修改网关信息（支持对网关名称和描述的修改）。
  * @method Models\UpdateOrganizationResponse UpdateOrganization(Models\UpdateOrganizationRequest $req) 用于修改组织。
  * @method Models\UpdateRecordBackupPlanResponse UpdateRecordBackupPlan(Models\UpdateRecordBackupPlanRequest $req) 用于修改录像上云计划。
  * @method Models\UpdateRecordBackupTemplateResponse UpdateRecordBackupTemplate(Models\UpdateRecordBackupTemplateRequest $req) 用于修改录像上云模板。
  * @method Models\UpdateRecordPlanResponse UpdateRecordPlan(Models\UpdateRecordPlanRequest $req) 用于修改实时上云计划
  * @method Models\UpdateRecordTemplateResponse UpdateRecordTemplate(Models\UpdateRecordTemplateRequest $req) 用于修改实时上云模板
  * @method Models\UpdateUserDeviceResponse UpdateUserDevice(Models\UpdateUserDeviceRequest $req) 用于修改设备的配置信息。
- * @method Models\UpgradeGatewayResponse UpgradeGateway(Models\UpgradeGatewayRequest $req) 用于网关升级（支持对所有待更新的服务一键升级）。
  */
 
 class IssClient extends AbstractClient

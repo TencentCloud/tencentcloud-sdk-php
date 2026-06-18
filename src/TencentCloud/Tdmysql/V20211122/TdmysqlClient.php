@@ -27,7 +27,9 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\CreateCloneInstanceResponse CreateCloneInstance(Models\CreateCloneInstanceRequest $req) 本接口（CreateCloneInstance）提供创建克隆实例功能
  * @method Models\CreateDBInstancesResponse CreateDBInstances(Models\CreateDBInstancesRequest $req) 本接口（CreateDBInstances）提供批量创建实例功能
  * @method Models\CreateDBSBackupResponse CreateDBSBackup(Models\CreateDBSBackupRequest $req) 创建实例手工备份  CreateDBSBackup
+ * @method Models\CreateUsersResponse CreateUsers(Models\CreateUsersRequest $req) 本接口（CreateUsers）用于批量创建用户
  * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) 删除实例手工备份 DeleteDBSBackupSets
+ * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 本接口（DeleteUsers）用于批量删除用户
  * @method Models\DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(Models\DescribeDBInstanceDetailRequest $req) 本接口（DescribeDBInstanceDetail）提供查询实例详情功能
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口（DescribeDBInstances）提供查询实例列表功能
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) 本接口（DescribeDBParameters）用于获取实例的当前参数设置。
@@ -42,7 +44,10 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) 本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
  * @method Models\DescribeFlowResponse DescribeFlow(Models\DescribeFlowRequest $req) 本接口（DescribeFlow）用于查询异步任务流程状态
+ * @method Models\DescribeInstanceSSLStatusResponse DescribeInstanceSSLStatus(Models\DescribeInstanceSSLStatusRequest $req) 本接口（DescribeInstanceSSLStatus）提供实例SSL状态查询
+ * @method Models\DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(Models\DescribeMaintenanceWindowRequest $req) 查询维护时间窗口配置
  * @method Models\DescribeSaleInfoResponse DescribeSaleInfo(Models\DescribeSaleInfoRequest $req) 本接口（DescribeSaleInfo）提供查询可用售卖地域功能
+ * @method Models\DescribeSlowLogsResponse DescribeSlowLogs(Models\DescribeSlowLogsRequest $req) 本接口提供查询慢日志功能
  * @method Models\DescribeSpecsResponse DescribeSpecs(Models\DescribeSpecsRequest $req) 本接口（DescribeSpecs）提供查询售卖规格功能
  * @method Models\DescribeUserPrivilegesResponse DescribeUserPrivileges(Models\DescribeUserPrivilegesRequest $req) 本接口（DescribeUserPrivileges）提供查询用户的权限功能
  * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) 本接口（DescribeUsers）提供查询用户列表功能
@@ -51,11 +56,16 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) 本接口（IsolateDBInstance）提供批量隔离实例功能
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) 本接口（ModifyAutoRenewFlag）用于修改自动续费标志
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组
+ * @method Models\ModifyDBInstanceVPortResponse ModifyDBInstanceVPort(Models\ModifyDBInstanceVPortRequest $req) 本接口(ModifyDBInstanceVPort)修改实例VPC端口
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) 本接口（ModifyDBParameters）用于修改实例参数。
  * @method Models\ModifyDBSBackupPolicyResponse ModifyDBSBackupPolicy(Models\ModifyDBSBackupPolicyRequest $req) 修改实例备份策略 ModifyDBSBackupPolicy
  * @method Models\ModifyDBSBackupSetCommentResponse ModifyDBSBackupSetComment(Models\ModifyDBSBackupSetCommentRequest $req) 修改实例备份备注 ModifyDBSBackupSetComment
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 本接口（ModifyInstanceName）提供修改实例名称功能
+ * @method Models\ModifyInstanceNetworkResponse ModifyInstanceNetwork(Models\ModifyInstanceNetworkRequest $req) 本接口（ModifyInstanceNetwork）用于修改实例所属网络
+ * @method Models\ModifyInstanceSSLStatusResponse ModifyInstanceSSLStatus(Models\ModifyInstanceSSLStatusRequest $req) 本接口（ModifyInstanceSSLStatus）提供开关实例SSL的功能
+ * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) 新增/修改实例维护时间窗口配置
  * @method Models\ModifyUserPrivilegesResponse ModifyUserPrivileges(Models\ModifyUserPrivilegesRequest $req) 本接口(ModifyPrivileges)修改用户权限
+ * @method Models\ResetUserPasswordResponse ResetUserPassword(Models\ResetUserPasswordRequest $req) 本接口（ResetUserPassword）提供重置用户密码功能
  * @method Models\RestartDBInstancesResponse RestartDBInstances(Models\RestartDBInstancesRequest $req) 本接口（RestartDBInstances）用于重启数据库实例
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 本接口（UpgradeInstance）提供纵向扩容实例功能
  */

@@ -26,12 +26,14 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\ApplyEmbedIntervalResponse ApplyEmbedInterval(Models\ApplyEmbedIntervalRequest $req) 申请延长Token可用时间接口-强鉴权
  * @method Models\ClearEmbedTokenResponse ClearEmbedToken(Models\ClearEmbedTokenRequest $req) 强鉴权token 清理，只有企业管理员才能调用该接口
  * @method Models\CreateAuthApiKeyResponse CreateAuthApiKey(Models\CreateAuthApiKeyRequest $req) 创建ApiKey
+ * @method Models\CreateCorpTagResponse CreateCorpTag(Models\CreateCorpTagRequest $req) 创建企业标签
  * @method Models\CreateDataTableResponse CreateDataTable(Models\CreateDataTableRequest $req) 添加数据表
  * @method Models\CreateDatasourceResponse CreateDatasource(Models\CreateDatasourceRequest $req) 创建数据源
  * @method Models\CreateDatasourceCloudResponse CreateDatasourceCloud(Models\CreateDatasourceCloudRequest $req) 创建云数据库
  * @method Models\CreateEmbedTokenResponse CreateEmbedToken(Models\CreateEmbedTokenRequest $req) 创建嵌出报表-强鉴权
  * @method Models\CreatePermissionRanksResponse CreatePermissionRanks(Models\CreatePermissionRanksRequest $req) 创建行列权限
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建项目
+ * @method Models\CreateTagTableResponse CreateTagTable(Models\CreateTagTableRequest $req) 创建标签表
  * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) CreateUserGroup
  * @method Models\CreateUserGroupMemberResponse CreateUserGroupMember(Models\CreateUserGroupMemberRequest $req) CreateUserGroupMember
  * @method Models\CreateUserRoleResponse CreateUserRole(Models\CreateUserRoleRequest $req) 创建用户角色
@@ -60,6 +62,7 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\DescribeUserProjectListResponse DescribeUserProjectList(Models\DescribeUserProjectListRequest $req) 项目内-用户接口
  * @method Models\DescribeUserRoleListResponse DescribeUserRoleList(Models\DescribeUserRoleListRequest $req) 用户角色列表
  * @method Models\DescribeUserRoleProjectListResponse DescribeUserRoleProjectList(Models\DescribeUserRoleProjectListRequest $req) 项目内-用户角色列表
+ * @method Models\EditCorpTagResponse EditCorpTag(Models\EditCorpTagRequest $req) 编辑企业标签(异步)
  * @method Models\ExportScreenPageResponse ExportScreenPage(Models\ExportScreenPageRequest $req) 页面截图导出
  * @method Models\ModifyAuthApiKeyResponse ModifyAuthApiKey(Models\ModifyAuthApiKeyRequest $req) 更新ApiKey
  * @method Models\ModifyDatasourceResponse ModifyDatasource(Models\ModifyDatasourceRequest $req) 更新数据源
@@ -68,10 +71,12 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\ModifyResourceUserResponse ModifyResourceUser(Models\ModifyResourceUserRequest $req) 按用户资源修改
  * @method Models\ModifyResourceUserGroupResponse ModifyResourceUserGroup(Models\ModifyResourceUserGroupRequest $req) 更新用户组权限
  * @method Models\ModifyResourceUserGroupResourceResponse ModifyResourceUserGroupResource(Models\ModifyResourceUserGroupResourceRequest $req) 按资源 - 更新用户组权限
+ * @method Models\ModifyTagTableResponse ModifyTagTable(Models\ModifyTagTableRequest $req) 编辑标签表
  * @method Models\ModifyUserDetailInfoResponse ModifyUserDetailInfo(Models\ModifyUserDetailInfoRequest $req) 修改用户角色信息
  * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) ModifyUserGroup
  * @method Models\ModifyUserRoleResponse ModifyUserRole(Models\ModifyUserRoleRequest $req) 修改用户角色信息
  * @method Models\ModifyUserRoleProjectResponse ModifyUserRoleProject(Models\ModifyUserRoleProjectRequest $req) 项目-修改用户角色信息
+ * @method Models\ModifyUserTagResponse ModifyUserTag(Models\ModifyUserTagRequest $req) 修改用户标签值
  * @method Models\QueryUserGroupMemberResponse QueryUserGroupMember(Models\QueryUserGroupMemberRequest $req) QueryUserGroupMember
  */
 

@@ -22,22 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
  * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
- * @method integer getMaxRetryTimes() 获取最大重试次数，取值范围0～1000
- * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数，取值范围0～1000
- * @method boolean getConsumeEnable() 获取是否开启消费
- * @method void setConsumeEnable(boolean $ConsumeEnable) 设置是否开启消费
- * @method boolean getConsumeMessageOrderly() 获取顺序投递：true
-并发投递：false
- * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置顺序投递：true
-并发投递：false
+ * @method integer getMaxRetryTimes() 获取<p>最大重试次数，取值范围0～1000</p>
+ * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置<p>最大重试次数，取值范围0～1000</p>
+ * @method boolean getConsumeEnable() 获取<p>是否开启消费</p>
+ * @method void setConsumeEnable(boolean $ConsumeEnable) 设置<p>是否开启消费</p>
+ * @method boolean getConsumeMessageOrderly() 获取<p>顺序投递：true<br>并发投递：false</p>
+ * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置<p>顺序投递：true<br>并发投递：false</p>
  * @method string getConsumerGroup() 获取消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
  * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
- * @method string getRemark() 获取备注信息，最多 128 个字符
- * @method void setRemark(string $Remark) 设置备注信息，最多 128 个字符
- * @method array getTagList() 获取标签列表
- * @method void setTagList(array $TagList) 设置标签列表
- * @method RetryPolicy getRetryPolicy() 获取重试策略
- * @method void setRetryPolicy(RetryPolicy $RetryPolicy) 设置重试策略
+ * @method string getRemark() 获取<p>备注信息，最多 128 个字符</p>
+ * @method void setRemark(string $Remark) 设置<p>备注信息，最多 128 个字符</p>
+ * @method array getTagList() 获取<p>标签列表</p>
+ * @method void setTagList(array $TagList) 设置<p>标签列表</p>
+ * @method RetryPolicy getRetryPolicy() 获取<p>重试策略</p>
+ * @method void setRetryPolicy(RetryPolicy $RetryPolicy) 设置<p>重试策略</p>
+ * @method string getLiteTopic() 获取<p>轻量主题</p>
+ * @method void setLiteTopic(string $LiteTopic) 设置<p>轻量主题</p>
  */
 class CreateConsumerGroupRequest extends AbstractModel
 {
@@ -47,18 +47,17 @@ class CreateConsumerGroupRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 最大重试次数，取值范围0～1000
+     * @var integer <p>最大重试次数，取值范围0～1000</p>
      */
     public $MaxRetryTimes;
 
     /**
-     * @var boolean 是否开启消费
+     * @var boolean <p>是否开启消费</p>
      */
     public $ConsumeEnable;
 
     /**
-     * @var boolean 顺序投递：true
-并发投递：false
+     * @var boolean <p>顺序投递：true<br>并发投递：false</p>
      */
     public $ConsumeMessageOrderly;
 
@@ -68,30 +67,35 @@ class CreateConsumerGroupRequest extends AbstractModel
     public $ConsumerGroup;
 
     /**
-     * @var string 备注信息，最多 128 个字符
+     * @var string <p>备注信息，最多 128 个字符</p>
      */
     public $Remark;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $TagList;
 
     /**
-     * @var RetryPolicy 重试策略
+     * @var RetryPolicy <p>重试策略</p>
      */
     public $RetryPolicy;
 
     /**
+     * @var string <p>轻量主题</p>
+     */
+    public $LiteTopic;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
-     * @param integer $MaxRetryTimes 最大重试次数，取值范围0～1000
-     * @param boolean $ConsumeEnable 是否开启消费
-     * @param boolean $ConsumeMessageOrderly 顺序投递：true
-并发投递：false
+     * @param integer $MaxRetryTimes <p>最大重试次数，取值范围0～1000</p>
+     * @param boolean $ConsumeEnable <p>是否开启消费</p>
+     * @param boolean $ConsumeMessageOrderly <p>顺序投递：true<br>并发投递：false</p>
      * @param string $ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
-     * @param string $Remark 备注信息，最多 128 个字符
-     * @param array $TagList 标签列表
-     * @param RetryPolicy $RetryPolicy 重试策略
+     * @param string $Remark <p>备注信息，最多 128 个字符</p>
+     * @param array $TagList <p>标签列表</p>
+     * @param RetryPolicy $RetryPolicy <p>重试策略</p>
+     * @param string $LiteTopic <p>轻量主题</p>
      */
     function __construct()
     {
@@ -142,6 +146,10 @@ class CreateConsumerGroupRequest extends AbstractModel
         if (array_key_exists("RetryPolicy",$param) and $param["RetryPolicy"] !== null) {
             $this->RetryPolicy = new RetryPolicy();
             $this->RetryPolicy->deserialize($param["RetryPolicy"]);
+        }
+
+        if (array_key_exists("LiteTopic",$param) and $param["LiteTopic"] !== null) {
+            $this->LiteTopic = $param["LiteTopic"];
         }
     }
 }

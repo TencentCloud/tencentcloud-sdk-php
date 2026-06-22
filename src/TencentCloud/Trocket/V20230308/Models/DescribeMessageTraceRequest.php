@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
  * @method string getTopic() 获取主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
  * @method void setTopic(string $Topic) 设置主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
- * @method string getMsgId() 获取消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
- * @method void setMsgId(string $MsgId) 设置消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
- * @method boolean getQueryDeadLetterMessage() 获取是否是死信消息，默认为false
- * @method void setQueryDeadLetterMessage(boolean $QueryDeadLetterMessage) 设置是否是死信消息，默认为false
- * @method boolean getQueryDelayMessage() 获取是否是延时消息，默认为false
- * @method void setQueryDelayMessage(boolean $QueryDelayMessage) 设置是否是延时消息，默认为false
+ * @method string getMsgId() 获取<p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p>
+ * @method void setMsgId(string $MsgId) 设置<p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p>
+ * @method boolean getQueryDeadLetterMessage() 获取<p>是否是死信消息，默认为false</p>
+ * @method void setQueryDeadLetterMessage(boolean $QueryDeadLetterMessage) 设置<p>是否是死信消息，默认为false</p>
+ * @method boolean getQueryDelayMessage() 获取<p>是否是延时消息，默认为false</p>
+ * @method void setQueryDelayMessage(boolean $QueryDelayMessage) 设置<p>是否是延时消息，默认为false</p>
  */
 class DescribeMessageTraceRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class DescribeMessageTraceRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @var string 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
+     * @var string <p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p>
      */
     public $MsgId;
 
     /**
-     * @var boolean 是否是死信消息，默认为false
+     * @var boolean <p>是否是死信消息，默认为false</p>
      */
     public $QueryDeadLetterMessage;
 
     /**
-     * @var boolean 是否是延时消息，默认为false
+     * @var boolean <p>是否是延时消息，默认为false</p>
      */
     public $QueryDelayMessage;
 
     /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
-     * @param string $MsgId 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
-     * @param boolean $QueryDeadLetterMessage 是否是死信消息，默认为false
-     * @param boolean $QueryDelayMessage 是否是延时消息，默认为false
+     * @param string $MsgId <p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p>
+     * @param boolean $QueryDeadLetterMessage <p>是否是死信消息，默认为false</p>
+     * @param boolean $QueryDelayMessage <p>是否是延时消息，默认为false</p>
      */
     function __construct()
     {

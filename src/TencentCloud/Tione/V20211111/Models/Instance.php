@@ -66,6 +66,32 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMsg(string $ErrMsg) 设置<p>部署失败错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ResourceInfo getAvailableResource() 获取<p>节点可用资源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvailableResource(ResourceInfo $AvailableResource) 设置<p>节点可用资源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceIP() 获取<p>资源组节点的IP</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceIP(string $InstanceIP) 设置<p>资源组节点的IP</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceName() 获取<p>资源组节点的名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceName(string $InstanceName) 设置<p>资源组节点的名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCvmInstanceType() 获取<p>cvm机型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCvmInstanceType(string $CvmInstanceType) 设置<p>cvm机型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoRenew() 获取<p>是否自动续买</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoRenew(boolean $AutoRenew) 设置<p>是否自动续买</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsolated() 获取<p>是否被隔离</p>
+ * @method void setIsolated(boolean $Isolated) 设置<p>是否被隔离</p>
+ * @method RepairTaskInfo getRepairTaskInfo() 获取<p>维修任务信息</p>
+ * @method void setRepairTaskInfo(RepairTaskInfo $RepairTaskInfo) 设置<p>维修任务信息</p>
+ * @method string getZoneName() 获取<p>节点可用区名称</p>
+ * @method void setZoneName(string $ZoneName) 设置<p>节点可用区名称</p>
  */
 class Instance extends AbstractModel
 {
@@ -149,6 +175,51 @@ class Instance extends AbstractModel
     public $ErrMsg;
 
     /**
+     * @var ResourceInfo <p>节点可用资源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvailableResource;
+
+    /**
+     * @var string <p>资源组节点的IP</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceIP;
+
+    /**
+     * @var string <p>资源组节点的名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceName;
+
+    /**
+     * @var string <p>cvm机型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CvmInstanceType;
+
+    /**
+     * @var boolean <p>是否自动续买</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoRenew;
+
+    /**
+     * @var boolean <p>是否被隔离</p>
+     */
+    public $Isolated;
+
+    /**
+     * @var RepairTaskInfo <p>维修任务信息</p>
+     */
+    public $RepairTaskInfo;
+
+    /**
+     * @var string <p>节点可用区名称</p>
+     */
+    public $ZoneName;
+
+    /**
      * @param string $InstanceId <p>资源组节点id</p>
      * @param ResourceInfo $UsedResource <p>节点已用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -172,6 +243,19 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg <p>部署失败错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceInfo $AvailableResource <p>节点可用资源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceIP <p>资源组节点的IP</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceName <p>资源组节点的名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CvmInstanceType <p>cvm机型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoRenew <p>是否自动续买</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Isolated <p>是否被隔离</p>
+     * @param RepairTaskInfo $RepairTaskInfo <p>维修任务信息</p>
+     * @param string $ZoneName <p>节点可用区名称</p>
      */
     function __construct()
     {
@@ -242,6 +326,40 @@ class Instance extends AbstractModel
 
         if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
             $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("AvailableResource",$param) and $param["AvailableResource"] !== null) {
+            $this->AvailableResource = new ResourceInfo();
+            $this->AvailableResource->deserialize($param["AvailableResource"]);
+        }
+
+        if (array_key_exists("InstanceIP",$param) and $param["InstanceIP"] !== null) {
+            $this->InstanceIP = $param["InstanceIP"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("CvmInstanceType",$param) and $param["CvmInstanceType"] !== null) {
+            $this->CvmInstanceType = $param["CvmInstanceType"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
+        }
+
+        if (array_key_exists("Isolated",$param) and $param["Isolated"] !== null) {
+            $this->Isolated = $param["Isolated"];
+        }
+
+        if (array_key_exists("RepairTaskInfo",$param) and $param["RepairTaskInfo"] !== null) {
+            $this->RepairTaskInfo = new RepairTaskInfo();
+            $this->RepairTaskInfo->deserialize($param["RepairTaskInfo"]);
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
         }
     }
 }

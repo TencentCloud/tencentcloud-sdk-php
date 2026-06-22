@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRabbitMQServerlessBinding返回参数结构体
  *
- * @method string getInstanceId() 获取队列名称
- * @method void setInstanceId(string $InstanceId) 设置队列名称
- * @method string getVirtualHost() 获取vhost参数
- * @method void setVirtualHost(string $VirtualHost) 设置vhost参数
- * @method integer getBindingId() 获取路由关系Id
- * @method void setBindingId(integer $BindingId) 设置路由关系Id
+ * @method string getInstanceId() 获取<p>队列名称</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>队列名称</p>
+ * @method string getVirtualHost() 获取<p>vhost参数</p>
+ * @method void setVirtualHost(string $VirtualHost) 设置<p>vhost参数</p>
+ * @method integer getBindingId() 获取<p>路由关系Id</p>
+ * @method void setBindingId(integer $BindingId) 设置<p>路由关系Id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateRabbitMQServerlessBindingResponse extends AbstractModel
 {
     /**
-     * @var string 队列名称
+     * @var string <p>队列名称</p>
      */
     public $InstanceId;
 
     /**
-     * @var string vhost参数
+     * @var string <p>vhost参数</p>
      */
     public $VirtualHost;
 
     /**
-     * @var integer 路由关系Id
+     * @var integer <p>路由关系Id</p>
      */
     public $BindingId;
 
@@ -52,9 +52,9 @@ class CreateRabbitMQServerlessBindingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 队列名称
-     * @param string $VirtualHost vhost参数
-     * @param integer $BindingId 路由关系Id
+     * @param string $InstanceId <p>队列名称</p>
+     * @param string $VirtualHost <p>vhost参数</p>
+     * @param integer $BindingId <p>路由关系Id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

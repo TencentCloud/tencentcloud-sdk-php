@@ -20,162 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RocketMQ专享实例信息
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getInstanceVersion() 获取实例版本
- * @method void setInstanceVersion(string $InstanceVersion) 设置实例版本
- * @method integer getStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
- * @method void setStatus(integer $Status) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
- * @method integer getNodeCount() 获取节点数量
- * @method void setNodeCount(integer $NodeCount) 设置节点数量
- * @method string getConfigDisplay() 获取实例配置规格名称
- * @method void setConfigDisplay(string $ConfigDisplay) 设置实例配置规格名称
- * @method integer getMaxTps() 获取峰值TPS
- * @method void setMaxTps(integer $MaxTps) 设置峰值TPS
- * @method integer getMaxBandWidth() 获取峰值带宽，Mbps为单位
- * @method void setMaxBandWidth(integer $MaxBandWidth) 设置峰值带宽，Mbps为单位
- * @method integer getMaxStorage() 获取存储容量，GB为单位
- * @method void setMaxStorage(integer $MaxStorage) 设置存储容量，GB为单位
- * @method integer getExpireTime() 获取实例到期时间，毫秒为单位
- * @method void setExpireTime(integer $ExpireTime) 设置实例到期时间，毫秒为单位
- * @method integer getAutoRenewFlag() 获取自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method integer getPayMode() 获取0-后付费，1-预付费
- * @method void setPayMode(integer $PayMode) 设置0-后付费，1-预付费
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
- * @method string getSpecName() 获取实例配置ID
- * @method void setSpecName(string $SpecName) 设置实例配置ID
- * @method integer getMaxRetention() 获取最大可设置消息保留时间，小时为单位
- * @method void setMaxRetention(integer $MaxRetention) 设置最大可设置消息保留时间，小时为单位
- * @method integer getMinRetention() 获取最小可设置消息保留时间，小时为单位
- * @method void setMinRetention(integer $MinRetention) 设置最小可设置消息保留时间，小时为单位
- * @method integer getRetention() 获取实例消息保留时间，小时为单位
- * @method void setRetention(integer $Retention) 设置实例消息保留时间，小时为单位
- * @method boolean getAclEnabled() 获取是否开启ACL鉴权
- * @method void setAclEnabled(boolean $AclEnabled) 设置是否开启ACL鉴权
- * @method integer getDestroyTime() 获取销毁时间
- * @method void setDestroyTime(integer $DestroyTime) 设置销毁时间
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method string getInstanceVersion() 获取<p>实例版本</p>
+ * @method void setInstanceVersion(string $InstanceVersion) 设置<p>实例版本</p>
+ * @method integer getStatus() 获取<p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
+ * @method void setStatus(integer $Status) 设置<p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
+ * @method integer getNodeCount() 获取<p>节点数量</p>
+ * @method void setNodeCount(integer $NodeCount) 设置<p>节点数量</p>
+ * @method string getConfigDisplay() 获取<p>实例配置规格名称</p>
+ * @method void setConfigDisplay(string $ConfigDisplay) 设置<p>实例配置规格名称</p>
+ * @method integer getMaxTps() 获取<p>峰值TPS</p>
+ * @method void setMaxTps(integer $MaxTps) 设置<p>峰值TPS</p>
+ * @method integer getMaxBandWidth() 获取<p>峰值带宽，Mbps为单位</p>
+ * @method void setMaxBandWidth(integer $MaxBandWidth) 设置<p>峰值带宽，Mbps为单位</p>
+ * @method integer getMaxStorage() 获取<p>存储容量，GB为单位</p>
+ * @method void setMaxStorage(integer $MaxStorage) 设置<p>存储容量，GB为单位</p>
+ * @method integer getExpireTime() 获取<p>实例到期时间，毫秒为单位</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>实例到期时间，毫秒为单位</p>
+ * @method integer getAutoRenewFlag() 获取<p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+ * @method integer getPayMode() 获取<p>0-后付费，1-预付费</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>0-后付费，1-预付费</p>
+ * @method string getRemark() 获取<p>备注信息</p>
+ * @method void setRemark(string $Remark) 设置<p>备注信息</p>
+ * @method string getSpecName() 获取<p>实例规格</p><p>枚举值：</p><ul><li>rocket-vip-basic-0： 通用集群</li><li>rocket-vip-basic-1： 专享集群-基础型</li><li>rocket-vip-basic-2： 专享集群-标准型</li><li>rocket-vip-basic-3： 专享集群-高阶I型</li><li>rocket-vip-basic-4： 专享集群-高阶II型</li></ul>
+ * @method void setSpecName(string $SpecName) 设置<p>实例规格</p><p>枚举值：</p><ul><li>rocket-vip-basic-0： 通用集群</li><li>rocket-vip-basic-1： 专享集群-基础型</li><li>rocket-vip-basic-2： 专享集群-标准型</li><li>rocket-vip-basic-3： 专享集群-高阶I型</li><li>rocket-vip-basic-4： 专享集群-高阶II型</li></ul>
+ * @method integer getMaxRetention() 获取<p>最大可设置消息保留时间，小时为单位</p>
+ * @method void setMaxRetention(integer $MaxRetention) 设置<p>最大可设置消息保留时间，小时为单位</p>
+ * @method integer getMinRetention() 获取<p>最小可设置消息保留时间，小时为单位</p>
+ * @method void setMinRetention(integer $MinRetention) 设置<p>最小可设置消息保留时间，小时为单位</p>
+ * @method integer getRetention() 获取<p>实例消息保留时间，小时为单位</p>
+ * @method void setRetention(integer $Retention) 设置<p>实例消息保留时间，小时为单位</p>
+ * @method boolean getAclEnabled() 获取<p>是否开启ACL鉴权</p>
+ * @method void setAclEnabled(boolean $AclEnabled) 设置<p>是否开启ACL鉴权</p>
+ * @method integer getDestroyTime() 获取<p>销毁时间</p>
+ * @method void setDestroyTime(integer $DestroyTime) 设置<p>销毁时间</p>
  */
 class RocketMQVipInstance extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例版本
+     * @var string <p>实例版本</p>
      */
     public $InstanceVersion;
 
     /**
-     * @var integer 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+     * @var integer <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
      */
     public $Status;
 
     /**
-     * @var integer 节点数量
+     * @var integer <p>节点数量</p>
      */
     public $NodeCount;
 
     /**
-     * @var string 实例配置规格名称
+     * @var string <p>实例配置规格名称</p>
      */
     public $ConfigDisplay;
 
     /**
-     * @var integer 峰值TPS
+     * @var integer <p>峰值TPS</p>
      */
     public $MaxTps;
 
     /**
-     * @var integer 峰值带宽，Mbps为单位
+     * @var integer <p>峰值带宽，Mbps为单位</p>
      */
     public $MaxBandWidth;
 
     /**
-     * @var integer 存储容量，GB为单位
+     * @var integer <p>存储容量，GB为单位</p>
      */
     public $MaxStorage;
 
     /**
-     * @var integer 实例到期时间，毫秒为单位
+     * @var integer <p>实例到期时间，毫秒为单位</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * @var integer <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 0-后付费，1-预付费
+     * @var integer <p>0-后付费，1-预付费</p>
      */
     public $PayMode;
 
     /**
-     * @var string 备注信息
+     * @var string <p>备注信息</p>
      */
     public $Remark;
 
     /**
-     * @var string 实例配置ID
+     * @var string <p>实例规格</p><p>枚举值：</p><ul><li>rocket-vip-basic-0： 通用集群</li><li>rocket-vip-basic-1： 专享集群-基础型</li><li>rocket-vip-basic-2： 专享集群-标准型</li><li>rocket-vip-basic-3： 专享集群-高阶I型</li><li>rocket-vip-basic-4： 专享集群-高阶II型</li></ul>
      */
     public $SpecName;
 
     /**
-     * @var integer 最大可设置消息保留时间，小时为单位
+     * @var integer <p>最大可设置消息保留时间，小时为单位</p>
      */
     public $MaxRetention;
 
     /**
-     * @var integer 最小可设置消息保留时间，小时为单位
+     * @var integer <p>最小可设置消息保留时间，小时为单位</p>
      */
     public $MinRetention;
 
     /**
-     * @var integer 实例消息保留时间，小时为单位
+     * @var integer <p>实例消息保留时间，小时为单位</p>
      */
     public $Retention;
 
     /**
-     * @var boolean 是否开启ACL鉴权
+     * @var boolean <p>是否开启ACL鉴权</p>
      */
     public $AclEnabled;
 
     /**
-     * @var integer 销毁时间
+     * @var integer <p>销毁时间</p>
      */
     public $DestroyTime;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $InstanceName 实例名称
-     * @param string $InstanceVersion 实例版本
-     * @param integer $Status 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
-     * @param integer $NodeCount 节点数量
-     * @param string $ConfigDisplay 实例配置规格名称
-     * @param integer $MaxTps 峰值TPS
-     * @param integer $MaxBandWidth 峰值带宽，Mbps为单位
-     * @param integer $MaxStorage 存储容量，GB为单位
-     * @param integer $ExpireTime 实例到期时间，毫秒为单位
-     * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param integer $PayMode 0-后付费，1-预付费
-     * @param string $Remark 备注信息
-     * @param string $SpecName 实例配置ID
-     * @param integer $MaxRetention 最大可设置消息保留时间，小时为单位
-     * @param integer $MinRetention 最小可设置消息保留时间，小时为单位
-     * @param integer $Retention 实例消息保留时间，小时为单位
-     * @param boolean $AclEnabled 是否开启ACL鉴权
-     * @param integer $DestroyTime 销毁时间
+     * @param string $InstanceId <p>实例id</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param string $InstanceVersion <p>实例版本</p>
+     * @param integer $Status <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
+     * @param integer $NodeCount <p>节点数量</p>
+     * @param string $ConfigDisplay <p>实例配置规格名称</p>
+     * @param integer $MaxTps <p>峰值TPS</p>
+     * @param integer $MaxBandWidth <p>峰值带宽，Mbps为单位</p>
+     * @param integer $MaxStorage <p>存储容量，GB为单位</p>
+     * @param integer $ExpireTime <p>实例到期时间，毫秒为单位</p>
+     * @param integer $AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+     * @param integer $PayMode <p>0-后付费，1-预付费</p>
+     * @param string $Remark <p>备注信息</p>
+     * @param string $SpecName <p>实例规格</p><p>枚举值：</p><ul><li>rocket-vip-basic-0： 通用集群</li><li>rocket-vip-basic-1： 专享集群-基础型</li><li>rocket-vip-basic-2： 专享集群-标准型</li><li>rocket-vip-basic-3： 专享集群-高阶I型</li><li>rocket-vip-basic-4： 专享集群-高阶II型</li></ul>
+     * @param integer $MaxRetention <p>最大可设置消息保留时间，小时为单位</p>
+     * @param integer $MinRetention <p>最小可设置消息保留时间，小时为单位</p>
+     * @param integer $Retention <p>实例消息保留时间，小时为单位</p>
+     * @param boolean $AclEnabled <p>是否开启ACL鉴权</p>
+     * @param integer $DestroyTime <p>销毁时间</p>
      */
     function __construct()
     {

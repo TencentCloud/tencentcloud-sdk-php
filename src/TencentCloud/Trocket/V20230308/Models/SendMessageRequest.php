@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgKey(string $MsgKey) 设置消息Key
  * @method string getMsgTag() 获取消息Tag
  * @method void setMsgTag(string $MsgTag) 设置消息Tag
+ * @method string getLiteTopic() 获取轻量主题
+ * @method void setLiteTopic(string $LiteTopic) 设置轻量主题
  */
 class SendMessageRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class SendMessageRequest extends AbstractModel
     public $MsgTag;
 
     /**
+     * @var string 轻量主题
+     */
+    public $LiteTopic;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
      * @param string $MsgBody 消息内容
      * @param string $MsgKey 消息Key
      * @param string $MsgTag 消息Tag
+     * @param string $LiteTopic 轻量主题
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class SendMessageRequest extends AbstractModel
 
         if (array_key_exists("MsgTag",$param) and $param["MsgTag"] !== null) {
             $this->MsgTag = $param["MsgTag"];
+        }
+
+        if (array_key_exists("LiteTopic",$param) and $param["LiteTopic"] !== null) {
+            $this->LiteTopic = $param["LiteTopic"];
         }
     }
 }

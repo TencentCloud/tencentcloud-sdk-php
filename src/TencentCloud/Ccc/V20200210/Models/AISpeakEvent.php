@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatencyMetrics(AICallLatencyMetrics $LatencyMetrics) 设置<p>本次响应生成的时延结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTraverseReason() 获取<p>节点跳转的原因，仅画布为灵活模式时有值</p>
+ * @method void setTraverseReason(string $TraverseReason) 设置<p>节点跳转的原因，仅画布为灵活模式时有值</p>
  */
 class AISpeakEvent extends AbstractModel
 {
@@ -55,11 +57,17 @@ class AISpeakEvent extends AbstractModel
     public $LatencyMetrics;
 
     /**
+     * @var string <p>节点跳转的原因，仅画布为灵活模式时有值</p>
+     */
+    public $TraverseReason;
+
+    /**
      * @param boolean $CanBeInterrupted <p>本次话术是否允许被用户VAD打断</p>
      * @param string $SpokenText <p>智能体播报的话术文本内容</p>
      * @param string $SpokenType <p>智能体发言类型</p><p>枚举值：</p><ul><li>Script： 智能体话术</li><li>KnowledgeBase： 知识库</li><li>LLMFallback： 大模型兜底</li><li>NoResponseTip： 无响应提示</li><li>智能追问： SmartFollowUp</li><li>FAQ： FAQ</li><li>转人工 - 排队等待音： TransferWaitingPrompt</li><li>无响应挂断前放音： PlayNoResponseEndPrompt</li><li>转人工 - 排队前放音： PlayQueuePrompt</li><li>转人工 - 接待前放音： PlayPromptBeforeReception</li><li>转人工 - 排队超时放音： PlayQueueTimeoutPrompt</li><li>转人工 - 转人工失败放音： PlayTransferFailPrompt</li><li>DTMF收号（按键用户输入）： Dtmf</li><li>按键节点 - 播放提示音： PlayDtmfPrompt</li><li>按键节点 - 输入错误提示音： PlayInvalidDtmfPrompt</li><li>按键节点 - 超时提示音： PlayDtmfTimeoutPrompt</li><li>其他类型： Other</li></ul>
      * @param AICallLatencyMetrics $LatencyMetrics <p>本次响应生成的时延结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TraverseReason <p>节点跳转的原因，仅画布为灵活模式时有值</p>
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class AISpeakEvent extends AbstractModel
         if (array_key_exists("LatencyMetrics",$param) and $param["LatencyMetrics"] !== null) {
             $this->LatencyMetrics = new AICallLatencyMetrics();
             $this->LatencyMetrics->deserialize($param["LatencyMetrics"]);
+        }
+
+        if (array_key_exists("TraverseReason",$param) and $param["TraverseReason"] !== null) {
+            $this->TraverseReason = $param["TraverseReason"];
         }
     }
 }

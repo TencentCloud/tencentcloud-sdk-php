@@ -20,11 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMessageTrace返回参数结构体
  *
- * @method string getShowTopicName() 获取主题名称
- * @method void setShowTopicName(string $ShowTopicName) 设置主题名称
- * @method array getData() 获取轨迹详情
+ * @method string getShowTopicName() 获取<p>主题名称</p>
+ * @method void setShowTopicName(string $ShowTopicName) 设置<p>主题名称</p>
+ * @method string getLiteTopic() 获取<p>轻量主题名称</p>
+ * @method void setLiteTopic(string $LiteTopic) 设置<p>轻量主题名称</p>
+ * @method array getData() 获取<p>轨迹详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置轨迹详情
+ * @method void setData(array $Data) 设置<p>轨迹详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeMessageTraceResponse extends AbstractModel
 {
     /**
-     * @var string 主题名称
+     * @var string <p>主题名称</p>
      */
     public $ShowTopicName;
 
     /**
-     * @var array 轨迹详情
+     * @var string <p>轻量主题名称</p>
+     */
+    public $LiteTopic;
+
+    /**
+     * @var array <p>轨迹详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -48,8 +55,9 @@ class DescribeMessageTraceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ShowTopicName 主题名称
-     * @param array $Data 轨迹详情
+     * @param string $ShowTopicName <p>主题名称</p>
+     * @param string $LiteTopic <p>轻量主题名称</p>
+     * @param array $Data <p>轨迹详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -68,6 +76,10 @@ class DescribeMessageTraceResponse extends AbstractModel
         }
         if (array_key_exists("ShowTopicName",$param) and $param["ShowTopicName"] !== null) {
             $this->ShowTopicName = $param["ShowTopicName"];
+        }
+
+        if (array_key_exists("LiteTopic",$param) and $param["LiteTopic"] !== null) {
+            $this->LiteTopic = $param["LiteTopic"];
         }
 
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {

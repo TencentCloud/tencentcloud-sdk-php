@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRocketMQInstance请求参数结构体
  *
- * @method string getInstanceId() 获取专享实例ID
- * @method void setInstanceId(string $InstanceId) 设置专享实例ID
- * @method string getName() 获取实例名称
- * @method void setName(string $Name) 设置实例名称
- * @method string getRemark() 获取实例备注信息
- * @method void setRemark(string $Remark) 设置实例备注信息
- * @method integer getMessageRetention() 获取实例消息保留时间，小时为单位
- * @method void setMessageRetention(integer $MessageRetention) 设置实例消息保留时间，小时为单位
- * @method boolean getEnableDeletionProtection() 获取是否开启删除保护
- * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护
- * @method float getSendReceiveRatio() 获取控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
- * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+ * @method string getInstanceId() 获取<p>专享实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>专享实例ID</p>
+ * @method string getName() 获取<p>实例名称</p>
+ * @method void setName(string $Name) 设置<p>实例名称</p>
+ * @method string getRemark() 获取<p>实例备注信息</p>
+ * @method void setRemark(string $Remark) 设置<p>实例备注信息</p>
+ * @method integer getMessageRetention() 获取<p>实例消息保留时间，小时为单位</p>
+ * @method void setMessageRetention(integer $MessageRetention) 设置<p>实例消息保留时间，小时为单位</p>
+ * @method boolean getEnableDeletionProtection() 获取<p>是否开启删除保护</p>
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置<p>是否开启删除保护</p>
+ * @method float getSendReceiveRatio() 获取<p>控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5</p>
+ * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置<p>控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5</p>
+ * @method boolean getAclEnabled() 获取<p>是否开启ACL</p>
+ * @method void setAclEnabled(boolean $AclEnabled) 设置<p>是否开启ACL</p>
  */
 class ModifyRocketMQInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 专享实例ID
+     * @var string <p>专享实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $Name;
 
     /**
-     * @var string 实例备注信息
+     * @var string <p>实例备注信息</p>
      */
     public $Remark;
 
     /**
-     * @var integer 实例消息保留时间，小时为单位
+     * @var integer <p>实例消息保留时间，小时为单位</p>
      */
     public $MessageRetention;
 
     /**
-     * @var boolean 是否开启删除保护
+     * @var boolean <p>是否开启删除保护</p>
      */
     public $EnableDeletionProtection;
 
     /**
-     * @var float 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     * @var float <p>控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5</p>
      */
     public $SendReceiveRatio;
 
     /**
-     * @param string $InstanceId 专享实例ID
-     * @param string $Name 实例名称
-     * @param string $Remark 实例备注信息
-     * @param integer $MessageRetention 实例消息保留时间，小时为单位
-     * @param boolean $EnableDeletionProtection 是否开启删除保护
-     * @param float $SendReceiveRatio 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     * @var boolean <p>是否开启ACL</p>
+     */
+    public $AclEnabled;
+
+    /**
+     * @param string $InstanceId <p>专享实例ID</p>
+     * @param string $Name <p>实例名称</p>
+     * @param string $Remark <p>实例备注信息</p>
+     * @param integer $MessageRetention <p>实例消息保留时间，小时为单位</p>
+     * @param boolean $EnableDeletionProtection <p>是否开启删除保护</p>
+     * @param float $SendReceiveRatio <p>控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5</p>
+     * @param boolean $AclEnabled <p>是否开启ACL</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ModifyRocketMQInstanceRequest extends AbstractModel
 
         if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
             $this->SendReceiveRatio = $param["SendReceiveRatio"];
+        }
+
+        if (array_key_exists("AclEnabled",$param) and $param["AclEnabled"] !== null) {
+            $this->AclEnabled = $param["AclEnabled"];
         }
     }
 }

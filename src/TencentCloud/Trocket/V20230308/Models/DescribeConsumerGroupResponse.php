@@ -20,108 +20,101 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerGroup返回参数结构体
  *
- * @method integer getConsumerNum() 获取在线消费者数量
- * @method void setConsumerNum(integer $ConsumerNum) 设置在线消费者数量
- * @method integer getTps() 获取TPS
- * @method void setTps(integer $Tps) 设置TPS
- * @method integer getConsumerLag() 获取消息堆积数量
- * @method void setConsumerLag(integer $ConsumerLag) 设置消息堆积数量
- * @method string getConsumeType() 获取消费类型，枚举值如下：
-
-- PULL：PULL 消费类型
-- PUSH：PUSH 消费类型
-- POP：POP 消费类型
- * @method void setConsumeType(string $ConsumeType) 设置消费类型，枚举值如下：
-
-- PULL：PULL 消费类型
-- PUSH：PUSH 消费类型
-- POP：POP 消费类型
- * @method integer getCreatedTime() 获取创建时间，**Unix时间戳（毫秒）**
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，**Unix时间戳（毫秒）**
- * @method boolean getConsumeMessageOrderly() 获取顺序投递：true
-并发投递：false
- * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置顺序投递：true
-并发投递：false
- * @method boolean getConsumeEnable() 获取是否开启消费
- * @method void setConsumeEnable(boolean $ConsumeEnable) 设置是否开启消费
- * @method integer getMaxRetryTimes() 获取最大重试次数
- * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method string getMessageModel() 获取消费模式：
-BROADCASTING 广播模式
-CLUSTERING 集群模式
- * @method void setMessageModel(string $MessageModel) 设置消费模式：
-BROADCASTING 广播模式
-CLUSTERING 集群模式
- * @method RetryPolicy getRetryPolicy() 获取重试策略
- * @method void setRetryPolicy(RetryPolicy $RetryPolicy) 设置重试策略
+ * @method integer getConsumerNum() 获取<p>在线消费者数量</p>
+ * @method void setConsumerNum(integer $ConsumerNum) 设置<p>在线消费者数量</p>
+ * @method integer getTps() 获取<p>TPS</p>
+ * @method void setTps(integer $Tps) 设置<p>TPS</p>
+ * @method integer getConsumerLag() 获取<p>消息堆积数量</p>
+ * @method void setConsumerLag(integer $ConsumerLag) 设置<p>消息堆积数量</p>
+ * @method string getConsumeType() 获取<p>消费类型，枚举值如下：</p><ul><li>PULL：PULL 消费类型</li><li>PUSH：PUSH 消费类型</li><li>POP：POP 消费类型</li></ul>
+ * @method void setConsumeType(string $ConsumeType) 设置<p>消费类型，枚举值如下：</p><ul><li>PULL：PULL 消费类型</li><li>PUSH：PUSH 消费类型</li><li>POP：POP 消费类型</li></ul>
+ * @method integer getCreatedTime() 获取<p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
+ * @method void setCreatedTime(integer $CreatedTime) 设置<p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
+ * @method boolean getConsumeMessageOrderly() 获取<p>顺序投递：true<br>并发投递：false</p>
+ * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置<p>顺序投递：true<br>并发投递：false</p>
+ * @method boolean getConsumeEnable() 获取<p>是否开启消费</p>
+ * @method void setConsumeEnable(boolean $ConsumeEnable) 设置<p>是否开启消费</p>
+ * @method integer getMaxRetryTimes() 获取<p>最大重试次数</p>
+ * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置<p>最大重试次数</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getMessageModel() 获取<p>消费模式：<br>BROADCASTING 广播模式<br>CLUSTERING 集群模式</p>
+ * @method void setMessageModel(string $MessageModel) 设置<p>消费模式：<br>BROADCASTING 广播模式<br>CLUSTERING 集群模式</p>
+ * @method RetryPolicy getRetryPolicy() 获取<p>重试策略</p>
+ * @method void setRetryPolicy(RetryPolicy $RetryPolicy) 设置<p>重试策略</p>
+ * @method string getConsumeModel() 获取<p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
+ * @method void setConsumeModel(string $ConsumeModel) 设置<p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
+ * @method string getLiteTopic() 获取<p>订阅的轻量主题（仅适用于轻量消费模式）</p>
+ * @method void setLiteTopic(string $LiteTopic) 设置<p>订阅的轻量主题（仅适用于轻量消费模式）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeConsumerGroupResponse extends AbstractModel
 {
     /**
-     * @var integer 在线消费者数量
+     * @var integer <p>在线消费者数量</p>
      */
     public $ConsumerNum;
 
     /**
-     * @var integer TPS
+     * @var integer <p>TPS</p>
      */
     public $Tps;
 
     /**
-     * @var integer 消息堆积数量
+     * @var integer <p>消息堆积数量</p>
      */
     public $ConsumerLag;
 
     /**
-     * @var string 消费类型，枚举值如下：
-
-- PULL：PULL 消费类型
-- PUSH：PUSH 消费类型
-- POP：POP 消费类型
+     * @var string <p>消费类型，枚举值如下：</p><ul><li>PULL：PULL 消费类型</li><li>PUSH：PUSH 消费类型</li><li>POP：POP 消费类型</li></ul>
      */
     public $ConsumeType;
 
     /**
-     * @var integer 创建时间，**Unix时间戳（毫秒）**
+     * @var integer <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
      */
     public $CreatedTime;
 
     /**
-     * @var boolean 顺序投递：true
-并发投递：false
+     * @var boolean <p>顺序投递：true<br>并发投递：false</p>
      */
     public $ConsumeMessageOrderly;
 
     /**
-     * @var boolean 是否开启消费
+     * @var boolean <p>是否开启消费</p>
      */
     public $ConsumeEnable;
 
     /**
-     * @var integer 最大重试次数
+     * @var integer <p>最大重试次数</p>
      */
     public $MaxRetryTimes;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var string 消费模式：
-BROADCASTING 广播模式
-CLUSTERING 集群模式
+     * @var string <p>消费模式：<br>BROADCASTING 广播模式<br>CLUSTERING 集群模式</p>
      */
     public $MessageModel;
 
     /**
-     * @var RetryPolicy 重试策略
+     * @var RetryPolicy <p>重试策略</p>
      */
     public $RetryPolicy;
+
+    /**
+     * @var string <p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
+     */
+    public $ConsumeModel;
+
+    /**
+     * @var string <p>订阅的轻量主题（仅适用于轻量消费模式）</p>
+     */
+    public $LiteTopic;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -129,24 +122,19 @@ CLUSTERING 集群模式
     public $RequestId;
 
     /**
-     * @param integer $ConsumerNum 在线消费者数量
-     * @param integer $Tps TPS
-     * @param integer $ConsumerLag 消息堆积数量
-     * @param string $ConsumeType 消费类型，枚举值如下：
-
-- PULL：PULL 消费类型
-- PUSH：PUSH 消费类型
-- POP：POP 消费类型
-     * @param integer $CreatedTime 创建时间，**Unix时间戳（毫秒）**
-     * @param boolean $ConsumeMessageOrderly 顺序投递：true
-并发投递：false
-     * @param boolean $ConsumeEnable 是否开启消费
-     * @param integer $MaxRetryTimes 最大重试次数
-     * @param string $Remark 备注
-     * @param string $MessageModel 消费模式：
-BROADCASTING 广播模式
-CLUSTERING 集群模式
-     * @param RetryPolicy $RetryPolicy 重试策略
+     * @param integer $ConsumerNum <p>在线消费者数量</p>
+     * @param integer $Tps <p>TPS</p>
+     * @param integer $ConsumerLag <p>消息堆积数量</p>
+     * @param string $ConsumeType <p>消费类型，枚举值如下：</p><ul><li>PULL：PULL 消费类型</li><li>PUSH：PUSH 消费类型</li><li>POP：POP 消费类型</li></ul>
+     * @param integer $CreatedTime <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * @param boolean $ConsumeMessageOrderly <p>顺序投递：true<br>并发投递：false</p>
+     * @param boolean $ConsumeEnable <p>是否开启消费</p>
+     * @param integer $MaxRetryTimes <p>最大重试次数</p>
+     * @param string $Remark <p>备注</p>
+     * @param string $MessageModel <p>消费模式：<br>BROADCASTING 广播模式<br>CLUSTERING 集群模式</p>
+     * @param RetryPolicy $RetryPolicy <p>重试策略</p>
+     * @param string $ConsumeModel <p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
+     * @param string $LiteTopic <p>订阅的轻量主题（仅适用于轻量消费模式）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -205,6 +193,14 @@ CLUSTERING 集群模式
         if (array_key_exists("RetryPolicy",$param) and $param["RetryPolicy"] !== null) {
             $this->RetryPolicy = new RetryPolicy();
             $this->RetryPolicy->deserialize($param["RetryPolicy"]);
+        }
+
+        if (array_key_exists("ConsumeModel",$param) and $param["ConsumeModel"] !== null) {
+            $this->ConsumeModel = $param["ConsumeModel"];
+        }
+
+        if (array_key_exists("LiteTopic",$param) and $param["LiteTopic"] !== null) {
+            $this->LiteTopic = $param["LiteTopic"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

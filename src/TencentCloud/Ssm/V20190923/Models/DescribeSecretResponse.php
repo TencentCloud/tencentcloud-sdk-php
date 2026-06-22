@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptType(integer $EncryptType) 设置<p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
  * @method boolean getEncryptSwitching() 获取<p>凭据更新状态</p>
  * @method void setEncryptSwitching(boolean $EncryptSwitching) 设置<p>凭据更新状态</p>
+ * @method string getCreateUinString() 获取<p>创建者 uin 字符串</p>
+ * @method void setCreateUinString(string $CreateUinString) 设置<p>创建者 uin 字符串</p>
+ * @method string getTargetUinString() 获取<p>所属用户UIN 字符串</p>
+ * @method void setTargetUinString(string $TargetUinString) 设置<p>所属用户UIN 字符串</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -159,6 +163,16 @@ class DescribeSecretResponse extends AbstractModel
     public $EncryptSwitching;
 
     /**
+     * @var string <p>创建者 uin 字符串</p>
+     */
+    public $CreateUinString;
+
+    /**
+     * @var string <p>所属用户UIN 字符串</p>
+     */
+    public $TargetUinString;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -183,6 +197,8 @@ class DescribeSecretResponse extends AbstractModel
      * @param string $AdditionalConfig <p>凭据额外配置</p>
      * @param integer $EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
      * @param boolean $EncryptSwitching <p>凭据更新状态</p>
+     * @param string $CreateUinString <p>创建者 uin 字符串</p>
+     * @param string $TargetUinString <p>所属用户UIN 字符串</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -272,6 +288,14 @@ class DescribeSecretResponse extends AbstractModel
 
         if (array_key_exists("EncryptSwitching",$param) and $param["EncryptSwitching"] !== null) {
             $this->EncryptSwitching = $param["EncryptSwitching"];
+        }
+
+        if (array_key_exists("CreateUinString",$param) and $param["CreateUinString"] !== null) {
+            $this->CreateUinString = $param["CreateUinString"];
+        }
+
+        if (array_key_exists("TargetUinString",$param) and $param["TargetUinString"] !== null) {
+            $this->TargetUinString = $param["TargetUinString"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProbeMetricData返回参数结构体
  *
- * @method string getMetricSet() 获取 返回指标 JSON 序列化后的字符串，具体如下所示："[{\"name\":\"task_navigate_request_gauge\",\"columns\":[\"time\",\"avg(first_screen_time) / 1000\"],\"values\":[[1641571200,6.756600000000001]],\"tags\":null}]"
- * @method void setMetricSet(string $MetricSet) 设置 返回指标 JSON 序列化后的字符串，具体如下所示："[{\"name\":\"task_navigate_request_gauge\",\"columns\":[\"time\",\"avg(first_screen_time) / 1000\"],\"values\":[[1641571200,6.756600000000001]],\"tags\":null}]"
+ * @method string getMetricSet() 获取<p>返回指标 JSON 序列化后的字符串，具体如下所示：&quot;[{"name":"task_navigate_request_gauge","columns":["time","avg(first_screen_time) / 1000"],"values":[[1641571200,6.756600000000001]],"tags":null}]&quot;</p>
+ * @method void setMetricSet(string $MetricSet) 设置<p>返回指标 JSON 序列化后的字符串，具体如下所示：&quot;[{"name":"task_navigate_request_gauge","columns":["time","avg(first_screen_time) / 1000"],"values":[[1641571200,6.756600000000001]],"tags":null}]&quot;</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeProbeMetricDataResponse extends AbstractModel
 {
     /**
-     * @var string  返回指标 JSON 序列化后的字符串，具体如下所示："[{\"name\":\"task_navigate_request_gauge\",\"columns\":[\"time\",\"avg(first_screen_time) / 1000\"],\"values\":[[1641571200,6.756600000000001]],\"tags\":null}]"
+     * @var string <p>返回指标 JSON 序列化后的字符串，具体如下所示：&quot;[{"name":"task_navigate_request_gauge","columns":["time","avg(first_screen_time) / 1000"],"values":[[1641571200,6.756600000000001]],"tags":null}]&quot;</p>
      */
     public $MetricSet;
 
@@ -38,7 +38,7 @@ class DescribeProbeMetricDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MetricSet  返回指标 JSON 序列化后的字符串，具体如下所示："[{\"name\":\"task_navigate_request_gauge\",\"columns\":[\"time\",\"avg(first_screen_time) / 1000\"],\"values\":[[1641571200,6.756600000000001]],\"tags\":null}]"
+     * @param string $MetricSet <p>返回指标 JSON 序列化后的字符串，具体如下所示：&quot;[{"name":"task_navigate_request_gauge","columns":["time","avg(first_screen_time) / 1000"],"values":[[1641571200,6.756600000000001]],"tags":null}]&quot;</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

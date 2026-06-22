@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tione\V20211111\Models;
+namespace TencentCloud\Trabbit\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据源挂载配置
+ * 键值对
  *
- * @method string getWorkDir() 获取<p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p>
- * @method void setWorkDir(string $WorkDir) 设置<p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p>
+ * @method string getKey() 获取键
+ * @method void setKey(string $Key) 设置键
+ * @method string getValue() 获取值
+ * @method void setValue(string $Value) 设置值
  */
-class MountConfigureInfo extends AbstractModel
+class RabbitMQServerlessKeyValuePair extends AbstractModel
 {
     /**
-     * @var string <p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p>
+     * @var string 键
      */
-    public $WorkDir;
+    public $Key;
 
     /**
-     * @param string $WorkDir <p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p>
+     * @var string 值
+     */
+    public $Value;
+
+    /**
+     * @param string $Key 键
+     * @param string $Value 值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class MountConfigureInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WorkDir",$param) and $param["WorkDir"] !== null) {
-            $this->WorkDir = $param["WorkDir"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

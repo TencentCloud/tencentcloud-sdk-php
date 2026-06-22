@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryDeadLetterMessage(boolean $QueryDeadLetterMessage) 设置是否查询死信消息，默认为false
  * @method string getTag() 获取消息 Tag，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
  * @method void setTag(string $Tag) 设置消息 Tag，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
+ * @method string getLiteTopic() 获取轻量主题
+ * @method void setLiteTopic(string $LiteTopic) 设置轻量主题
  */
 class DescribeMessageListRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeMessageListRequest extends AbstractModel
     public $Tag;
 
     /**
+     * @var string 轻量主题
+     */
+    public $LiteTopic;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
      * @param integer $StartTime 要查询消息的开始时间，**Unix时间戳（毫秒）**
@@ -128,6 +135,7 @@ class DescribeMessageListRequest extends AbstractModel
      * @param integer $RecentMessageNum 查询最近N条消息 最大不超过1024，默认-1为其他查询条件
      * @param boolean $QueryDeadLetterMessage 是否查询死信消息，默认为false
      * @param string $Tag 消息 Tag，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
+     * @param string $LiteTopic 轻量主题
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DescribeMessageListRequest extends AbstractModel
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("LiteTopic",$param) and $param["LiteTopic"] !== null) {
+            $this->LiteTopic = $param["LiteTopic"];
         }
     }
 }

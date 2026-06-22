@@ -20,94 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQServerlessQueues请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getVirtualHost() 获取Vhost参数
- * @method void setVirtualHost(string $VirtualHost) 设置Vhost参数
- * @method integer getOffset() 获取分页Offset
- * @method void setOffset(integer $Offset) 设置分页Offset
- * @method integer getLimit() 获取分页Limit
- * @method void setLimit(integer $Limit) 设置分页Limit
- * @method string getSearchWord() 获取搜索关键词
- * @method void setSearchWord(string $SearchWord) 设置搜索关键词
- * @method string getQueueType() 获取队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
- * @method void setQueueType(string $QueueType) 设置队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
- * @method string getSortElement() 获取排序依据的字段：
-ConsumerNumber - 在线消费者数量；
-MessageHeapCount - 消息堆积数；
-MessageRateInOut - 生产消费速率之和；
-MessageRateIn - 生产速率；
-MessageRateOut - 消费速率；
- * @method void setSortElement(string $SortElement) 设置排序依据的字段：
-ConsumerNumber - 在线消费者数量；
-MessageHeapCount - 消息堆积数；
-MessageRateInOut - 生产消费速率之和；
-MessageRateIn - 生产速率；
-MessageRateOut - 消费速率；
- * @method string getSortOrder() 获取排序顺序，ascend 或 descend
- * @method void setSortOrder(string $SortOrder) 设置排序顺序，ascend 或 descend
+ * @method string getInstanceId() 获取<p>实例Id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例Id</p>
+ * @method string getVirtualHost() 获取<p>Vhost参数</p>
+ * @method void setVirtualHost(string $VirtualHost) 设置<p>Vhost参数</p>
+ * @method integer getOffset() 获取<p>分页Offset</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页Offset</p>
+ * @method integer getLimit() 获取<p>分页Limit</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页Limit</p>
+ * @method string getSearchWord() 获取<p>搜索关键词</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>搜索关键词</p>
+ * @method string getQueueType() 获取<p>队列类型筛选，不填或 &quot;all&quot;：classic 和 quorum 队列；&quot;classic&quot;：筛选 classic 队列；&quot;quorum&quot;：筛选 quorum 队列</p>
+ * @method void setQueueType(string $QueueType) 设置<p>队列类型筛选，不填或 &quot;all&quot;：classic 和 quorum 队列；&quot;classic&quot;：筛选 classic 队列；&quot;quorum&quot;：筛选 quorum 队列</p>
+ * @method string getSortElement() 获取<p>排序依据的字段：<br>messages_ready - 消息堆积数；<br>publish - 生产速率；<br>deliver - 消费速率；<br>consumers - 在线消费者数量；</p>
+ * @method void setSortElement(string $SortElement) 设置<p>排序依据的字段：<br>messages_ready - 消息堆积数；<br>publish - 生产速率；<br>deliver - 消费速率；<br>consumers - 在线消费者数量；</p>
+ * @method string getSortOrder() 获取<p>排序顺序，asc 或 desc</p>
+ * @method void setSortOrder(string $SortOrder) 设置<p>排序顺序，asc 或 desc</p>
  */
 class DescribeRabbitMQServerlessQueuesRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string <p>实例Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Vhost参数
+     * @var string <p>Vhost参数</p>
      */
     public $VirtualHost;
 
     /**
-     * @var integer 分页Offset
+     * @var integer <p>分页Offset</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页Limit
+     * @var integer <p>分页Limit</p>
      */
     public $Limit;
 
     /**
-     * @var string 搜索关键词
+     * @var string <p>搜索关键词</p>
      */
     public $SearchWord;
 
     /**
-     * @var string 队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
+     * @var string <p>队列类型筛选，不填或 &quot;all&quot;：classic 和 quorum 队列；&quot;classic&quot;：筛选 classic 队列；&quot;quorum&quot;：筛选 quorum 队列</p>
      */
     public $QueueType;
 
     /**
-     * @var string 排序依据的字段：
-ConsumerNumber - 在线消费者数量；
-MessageHeapCount - 消息堆积数；
-MessageRateInOut - 生产消费速率之和；
-MessageRateIn - 生产速率；
-MessageRateOut - 消费速率；
+     * @var string <p>排序依据的字段：<br>messages_ready - 消息堆积数；<br>publish - 生产速率；<br>deliver - 消费速率；<br>consumers - 在线消费者数量；</p>
      */
     public $SortElement;
 
     /**
-     * @var string 排序顺序，ascend 或 descend
+     * @var string <p>排序顺序，asc 或 desc</p>
      */
     public $SortOrder;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $VirtualHost Vhost参数
-     * @param integer $Offset 分页Offset
-     * @param integer $Limit 分页Limit
-     * @param string $SearchWord 搜索关键词
-     * @param string $QueueType 队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
-     * @param string $SortElement 排序依据的字段：
-ConsumerNumber - 在线消费者数量；
-MessageHeapCount - 消息堆积数；
-MessageRateInOut - 生产消费速率之和；
-MessageRateIn - 生产速率；
-MessageRateOut - 消费速率；
-     * @param string $SortOrder 排序顺序，ascend 或 descend
+     * @param string $InstanceId <p>实例Id</p>
+     * @param string $VirtualHost <p>Vhost参数</p>
+     * @param integer $Offset <p>分页Offset</p>
+     * @param integer $Limit <p>分页Limit</p>
+     * @param string $SearchWord <p>搜索关键词</p>
+     * @param string $QueueType <p>队列类型筛选，不填或 &quot;all&quot;：classic 和 quorum 队列；&quot;classic&quot;：筛选 classic 队列；&quot;quorum&quot;：筛选 quorum 队列</p>
+     * @param string $SortElement <p>排序依据的字段：<br>messages_ready - 消息堆积数；<br>publish - 生产速率；<br>deliver - 消费速率；<br>consumers - 在线消费者数量；</p>
+     * @param string $SortOrder <p>排序顺序，asc 或 desc</p>
      */
     function __construct()
     {

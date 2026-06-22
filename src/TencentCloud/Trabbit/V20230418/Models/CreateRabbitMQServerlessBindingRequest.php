@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRabbitMQServerlessBinding请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getVirtualHost() 获取Vhost参数
- * @method void setVirtualHost(string $VirtualHost) 设置Vhost参数
- * @method string getSource() 获取源exchange
- * @method void setSource(string $Source) 设置源exchange
- * @method string getDestinationType() 获取目标类型,取值queue或exchange
- * @method void setDestinationType(string $DestinationType) 设置目标类型,取值queue或exchange
- * @method string getDestination() 获取目标队列或者交换机
- * @method void setDestination(string $Destination) 设置目标队列或者交换机
- * @method string getRoutingKey() 获取绑定key
- * @method void setRoutingKey(string $RoutingKey) 设置绑定key
+ * @method string getInstanceId() 获取<p>实例Id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例Id</p>
+ * @method string getVirtualHost() 获取<p>Vhost参数</p>
+ * @method void setVirtualHost(string $VirtualHost) 设置<p>Vhost参数</p>
+ * @method string getSource() 获取<p>源exchange</p>
+ * @method void setSource(string $Source) 设置<p>源exchange</p>
+ * @method string getDestinationType() 获取<p>目标类型,取值queue或exchange</p>
+ * @method void setDestinationType(string $DestinationType) 设置<p>目标类型,取值queue或exchange</p>
+ * @method string getDestination() 获取<p>目标队列或者交换机</p>
+ * @method void setDestination(string $Destination) 设置<p>目标队列或者交换机</p>
+ * @method string getRoutingKey() 获取<p>绑定key</p>
+ * @method void setRoutingKey(string $RoutingKey) 设置<p>绑定key</p>
+ * @method array getArguments() 获取<p>创建 Header 类型 Exchange 的 Binding 时，可以传入参数。其它类型 Exchange 无需传入</p>
+ * @method void setArguments(array $Arguments) 设置<p>创建 Header 类型 Exchange 的 Binding 时，可以传入参数。其它类型 Exchange 无需传入</p>
  */
 class CreateRabbitMQServerlessBindingRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string <p>实例Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Vhost参数
+     * @var string <p>Vhost参数</p>
      */
     public $VirtualHost;
 
     /**
-     * @var string 源exchange
+     * @var string <p>源exchange</p>
      */
     public $Source;
 
     /**
-     * @var string 目标类型,取值queue或exchange
+     * @var string <p>目标类型,取值queue或exchange</p>
      */
     public $DestinationType;
 
     /**
-     * @var string 目标队列或者交换机
+     * @var string <p>目标队列或者交换机</p>
      */
     public $Destination;
 
     /**
-     * @var string 绑定key
+     * @var string <p>绑定key</p>
      */
     public $RoutingKey;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $VirtualHost Vhost参数
-     * @param string $Source 源exchange
-     * @param string $DestinationType 目标类型,取值queue或exchange
-     * @param string $Destination 目标队列或者交换机
-     * @param string $RoutingKey 绑定key
+     * @var array <p>创建 Header 类型 Exchange 的 Binding 时，可以传入参数。其它类型 Exchange 无需传入</p>
+     */
+    public $Arguments;
+
+    /**
+     * @param string $InstanceId <p>实例Id</p>
+     * @param string $VirtualHost <p>Vhost参数</p>
+     * @param string $Source <p>源exchange</p>
+     * @param string $DestinationType <p>目标类型,取值queue或exchange</p>
+     * @param string $Destination <p>目标队列或者交换机</p>
+     * @param string $RoutingKey <p>绑定key</p>
+     * @param array $Arguments <p>创建 Header 类型 Exchange 的 Binding 时，可以传入参数。其它类型 Exchange 无需传入</p>
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CreateRabbitMQServerlessBindingRequest extends AbstractModel
 
         if (array_key_exists("RoutingKey",$param) and $param["RoutingKey"] !== null) {
             $this->RoutingKey = $param["RoutingKey"];
+        }
+
+        if (array_key_exists("Arguments",$param) and $param["Arguments"] !== null) {
+            $this->Arguments = [];
+            foreach ($param["Arguments"] as $key => $value){
+                $obj = new RabbitMQServerlessKeyValuePair();
+                $obj->deserialize($value);
+                array_push($this->Arguments, $obj);
+            }
         }
     }
 }

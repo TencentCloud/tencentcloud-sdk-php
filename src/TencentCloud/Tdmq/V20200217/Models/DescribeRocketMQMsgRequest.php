@@ -20,91 +20,99 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQMsg请求参数结构体
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method string getEnvironmentId() 获取命名空间，4.x 通用集群命名空间固定为: tdmq_default
- * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间，4.x 通用集群命名空间固定为: tdmq_default
- * @method string getTopicName() 获取主题，查询死信时传groupId
- * @method void setTopicName(string $TopicName) 设置主题，查询死信时传groupId
- * @method string getMsgId() 获取消息id
- * @method void setMsgId(string $MsgId) 设置消息id
- * @method string getPulsarMsgId() 获取pulsar消息id
- * @method void setPulsarMsgId(string $PulsarMsgId) 设置pulsar消息id
- * @method boolean getQueryDlqMsg() 获取查询死信时该值为true，只对Rocketmq有效
- * @method void setQueryDlqMsg(boolean $QueryDlqMsg) 设置查询死信时该值为true，只对Rocketmq有效
- * @method boolean getQueryDeadLetterMessage() 获取查询死信时该值为true，只对Rocketmq有效
- * @method void setQueryDeadLetterMessage(boolean $QueryDeadLetterMessage) 设置查询死信时该值为true，只对Rocketmq有效
- * @method integer getOffset() 获取分页Offset
- * @method void setOffset(integer $Offset) 设置分页Offset
- * @method integer getLimit() 获取分页Limit
- * @method void setLimit(integer $Limit) 设置分页Limit
- * @method string getFilterTrackGroup() 获取根据消费组名称过滤消费详情
- * @method void setFilterTrackGroup(string $FilterTrackGroup) 设置根据消费组名称过滤消费详情
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method string getEnvironmentId() 获取<p>命名空间，4.x 通用集群命名空间固定为: tdmq_default</p>
+ * @method void setEnvironmentId(string $EnvironmentId) 设置<p>命名空间，4.x 通用集群命名空间固定为: tdmq_default</p>
+ * @method string getTopicName() 获取<p>主题，查询死信时传groupId</p>
+ * @method void setTopicName(string $TopicName) 设置<p>主题，查询死信时传groupId</p>
+ * @method string getMsgId() 获取<p>消息id</p>
+ * @method void setMsgId(string $MsgId) 设置<p>消息id</p>
+ * @method string getPulsarMsgId() 获取<p>pulsar消息id</p>
+ * @method void setPulsarMsgId(string $PulsarMsgId) 设置<p>pulsar消息id</p>
+ * @method boolean getQueryDlqMsg() 获取<p>查询死信时该值为true，只对Rocketmq有效</p>
+ * @method void setQueryDlqMsg(boolean $QueryDlqMsg) 设置<p>查询死信时该值为true，只对Rocketmq有效</p>
+ * @method boolean getQueryDeadLetterMessage() 获取<p>查询死信时该值为true，只对Rocketmq有效</p>
+ * @method void setQueryDeadLetterMessage(boolean $QueryDeadLetterMessage) 设置<p>查询死信时该值为true，只对Rocketmq有效</p>
+ * @method integer getOffset() 获取<p>分页Offset</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页Offset</p>
+ * @method integer getLimit() 获取<p>分页Limit</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页Limit</p>
+ * @method string getFilterTrackGroup() 获取<p>根据消费组名称过滤消费详情</p>
+ * @method void setFilterTrackGroup(string $FilterTrackGroup) 设置<p>根据消费组名称过滤消费详情</p>
+ * @method boolean getQueryDelayMessage() 获取<p>查询延迟消息或定时消息时，该值为true</p>
+ * @method void setQueryDelayMessage(boolean $QueryDelayMessage) 设置<p>查询延迟消息或定时消息时，该值为true</p>
  */
 class DescribeRocketMQMsgRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 命名空间，4.x 通用集群命名空间固定为: tdmq_default
+     * @var string <p>命名空间，4.x 通用集群命名空间固定为: tdmq_default</p>
      */
     public $EnvironmentId;
 
     /**
-     * @var string 主题，查询死信时传groupId
+     * @var string <p>主题，查询死信时传groupId</p>
      */
     public $TopicName;
 
     /**
-     * @var string 消息id
+     * @var string <p>消息id</p>
      */
     public $MsgId;
 
     /**
-     * @var string pulsar消息id
+     * @var string <p>pulsar消息id</p>
      */
     public $PulsarMsgId;
 
     /**
-     * @var boolean 查询死信时该值为true，只对Rocketmq有效
+     * @var boolean <p>查询死信时该值为true，只对Rocketmq有效</p>
      * @deprecated
      */
     public $QueryDlqMsg;
 
     /**
-     * @var boolean 查询死信时该值为true，只对Rocketmq有效
+     * @var boolean <p>查询死信时该值为true，只对Rocketmq有效</p>
      */
     public $QueryDeadLetterMessage;
 
     /**
-     * @var integer 分页Offset
+     * @var integer <p>分页Offset</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页Limit
+     * @var integer <p>分页Limit</p>
      */
     public $Limit;
 
     /**
-     * @var string 根据消费组名称过滤消费详情
+     * @var string <p>根据消费组名称过滤消费详情</p>
      */
     public $FilterTrackGroup;
 
     /**
-     * @param string $ClusterId 集群id
-     * @param string $EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
-     * @param string $TopicName 主题，查询死信时传groupId
-     * @param string $MsgId 消息id
-     * @param string $PulsarMsgId pulsar消息id
-     * @param boolean $QueryDlqMsg 查询死信时该值为true，只对Rocketmq有效
-     * @param boolean $QueryDeadLetterMessage 查询死信时该值为true，只对Rocketmq有效
-     * @param integer $Offset 分页Offset
-     * @param integer $Limit 分页Limit
-     * @param string $FilterTrackGroup 根据消费组名称过滤消费详情
+     * @var boolean <p>查询延迟消息或定时消息时，该值为true</p>
+     */
+    public $QueryDelayMessage;
+
+    /**
+     * @param string $ClusterId <p>集群id</p>
+     * @param string $EnvironmentId <p>命名空间，4.x 通用集群命名空间固定为: tdmq_default</p>
+     * @param string $TopicName <p>主题，查询死信时传groupId</p>
+     * @param string $MsgId <p>消息id</p>
+     * @param string $PulsarMsgId <p>pulsar消息id</p>
+     * @param boolean $QueryDlqMsg <p>查询死信时该值为true，只对Rocketmq有效</p>
+     * @param boolean $QueryDeadLetterMessage <p>查询死信时该值为true，只对Rocketmq有效</p>
+     * @param integer $Offset <p>分页Offset</p>
+     * @param integer $Limit <p>分页Limit</p>
+     * @param string $FilterTrackGroup <p>根据消费组名称过滤消费详情</p>
+     * @param boolean $QueryDelayMessage <p>查询延迟消息或定时消息时，该值为true</p>
      */
     function __construct()
     {
@@ -157,6 +165,10 @@ class DescribeRocketMQMsgRequest extends AbstractModel
 
         if (array_key_exists("FilterTrackGroup",$param) and $param["FilterTrackGroup"] !== null) {
             $this->FilterTrackGroup = $param["FilterTrackGroup"];
+        }
+
+        if (array_key_exists("QueryDelayMessage",$param) and $param["QueryDelayMessage"] !== null) {
+            $this->QueryDelayMessage = $param["QueryDelayMessage"];
         }
     }
 }

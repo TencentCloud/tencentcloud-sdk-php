@@ -24,12 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
  * @method string getTopic() 获取主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
  * @method void setTopic(string $Topic) 设置主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
- * @method integer getQueueNum() 获取队列数量，取值范围3～16
- * @method void setQueueNum(integer $QueueNum) 设置队列数量，取值范围3～16
- * @method string getRemark() 获取备注信息，最多 128 个字符
- * @method void setRemark(string $Remark) 设置备注信息，最多 128 个字符
- * @method integer getMsgTTL() 获取消息保留时长（单位：小时）
- * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长（单位：小时）
+ * @method integer getQueueNum() 获取<p>队列数量，取值范围3～16</p>
+ * @method void setQueueNum(integer $QueueNum) 设置<p>队列数量，取值范围3～16</p>
+ * @method string getRemark() 获取<p>备注信息，最多 128 个字符</p>
+ * @method void setRemark(string $Remark) 设置<p>备注信息，最多 128 个字符</p>
+ * @method integer getMsgTTL() 获取<p>消息保留时长（单位：小时）</p>
+ * @method void setMsgTTL(integer $MsgTTL) 设置<p>消息保留时长（单位：小时）</p>
+ * @method boolean getAutoExpireDelete() 获取<p>是否过期自动删除（仅针对轻量主题类型）</p>
+ * @method void setAutoExpireDelete(boolean $AutoExpireDelete) 设置<p>是否过期自动删除（仅针对轻量主题类型）</p>
+ * @method integer getAutoExpireTime() 获取<p>过期时间（仅针对轻量主题类型）</p><p>取值范围：[30, 720]</p><p>单位：分钟</p>
+ * @method void setAutoExpireTime(integer $AutoExpireTime) 设置<p>过期时间（仅针对轻量主题类型）</p><p>取值范围：[30, 720]</p><p>单位：分钟</p>
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -44,26 +48,38 @@ class ModifyTopicRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @var integer 队列数量，取值范围3～16
+     * @var integer <p>队列数量，取值范围3～16</p>
      */
     public $QueueNum;
 
     /**
-     * @var string 备注信息，最多 128 个字符
+     * @var string <p>备注信息，最多 128 个字符</p>
      */
     public $Remark;
 
     /**
-     * @var integer 消息保留时长（单位：小时）
+     * @var integer <p>消息保留时长（单位：小时）</p>
      */
     public $MsgTTL;
 
     /**
+     * @var boolean <p>是否过期自动删除（仅针对轻量主题类型）</p>
+     */
+    public $AutoExpireDelete;
+
+    /**
+     * @var integer <p>过期时间（仅针对轻量主题类型）</p><p>取值范围：[30, 720]</p><p>单位：分钟</p>
+     */
+    public $AutoExpireTime;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
-     * @param integer $QueueNum 队列数量，取值范围3～16
-     * @param string $Remark 备注信息，最多 128 个字符
-     * @param integer $MsgTTL 消息保留时长（单位：小时）
+     * @param integer $QueueNum <p>队列数量，取值范围3～16</p>
+     * @param string $Remark <p>备注信息，最多 128 个字符</p>
+     * @param integer $MsgTTL <p>消息保留时长（单位：小时）</p>
+     * @param boolean $AutoExpireDelete <p>是否过期自动删除（仅针对轻量主题类型）</p>
+     * @param integer $AutoExpireTime <p>过期时间（仅针对轻量主题类型）</p><p>取值范围：[30, 720]</p><p>单位：分钟</p>
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
             $this->MsgTTL = $param["MsgTTL"];
+        }
+
+        if (array_key_exists("AutoExpireDelete",$param) and $param["AutoExpireDelete"] !== null) {
+            $this->AutoExpireDelete = $param["AutoExpireDelete"];
+        }
+
+        if (array_key_exists("AutoExpireTime",$param) and $param["AutoExpireTime"] !== null) {
+            $this->AutoExpireTime = $param["AutoExpireTime"];
         }
     }
 }

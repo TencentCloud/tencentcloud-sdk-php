@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillingResourceGroupAttachedWorkspaces请求参数结构体
  *
+ * @method string getResourceGroupId() 获取<p>资源组ID</p>
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>资源组ID</p>
  * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  */
 class DescribeBillingResourceGroupAttachedWorkspacesRequest extends AbstractModel
 {
     /**
+     * @var string <p>资源组ID</p>
+     */
+    public $ResourceGroupId;
+
+    /**
      * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      */
     public $TiProjectId;
 
     /**
+     * @param string $ResourceGroupId <p>资源组ID</p>
      * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      */
     function __construct()
@@ -46,6 +54,10 @@ class DescribeBillingResourceGroupAttachedWorkspacesRequest extends AbstractMode
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
+            $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
         if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
             $this->TiProjectId = $param["TiProjectId"];
         }

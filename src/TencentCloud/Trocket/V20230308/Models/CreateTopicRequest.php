@@ -30,12 +30,14 @@ use TencentCloud\Common\AbstractModel;
 - FIFO: 顺序消息
 - DELAY: 延时消息
 - TRANSACTION: 事务消息
+- LITE: 轻量消息
  * @method void setTopicType(string $TopicType) 设置主题类型，枚举值如下：
 
 - NORMAL: 普通消息
 - FIFO: 顺序消息
 - DELAY: 延时消息
 - TRANSACTION: 事务消息
+- LITE: 轻量消息
  * @method integer getQueueNum() 获取队列数量，取值范围3～16
  * @method void setQueueNum(integer $QueueNum) 设置队列数量，取值范围3～16
  * @method string getRemark() 获取备注信息，最多 128 个字符
@@ -44,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长（单位：小时）
  * @method array getTagList() 获取标签列表
  * @method void setTagList(array $TagList) 设置标签列表
+ * @method boolean getAutoExpireDelete() 获取是否过期自动删除（仅针对轻量主题类型）
+ * @method void setAutoExpireDelete(boolean $AutoExpireDelete) 设置是否过期自动删除（仅针对轻量主题类型）
+ * @method integer getAutoExpireTime() 获取过期时间，单位：秒（仅针对轻量主题类型）
+ * @method void setAutoExpireTime(integer $AutoExpireTime) 设置过期时间，单位：秒（仅针对轻量主题类型）
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -64,6 +70,7 @@ class CreateTopicRequest extends AbstractModel
 - FIFO: 顺序消息
 - DELAY: 延时消息
 - TRANSACTION: 事务消息
+- LITE: 轻量消息
      */
     public $TopicType;
 
@@ -88,6 +95,16 @@ class CreateTopicRequest extends AbstractModel
     public $TagList;
 
     /**
+     * @var boolean 是否过期自动删除（仅针对轻量主题类型）
+     */
+    public $AutoExpireDelete;
+
+    /**
+     * @var integer 过期时间，单位：秒（仅针对轻量主题类型）
+     */
+    public $AutoExpireTime;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
      * @param string $TopicType 主题类型，枚举值如下：
@@ -96,10 +113,13 @@ class CreateTopicRequest extends AbstractModel
 - FIFO: 顺序消息
 - DELAY: 延时消息
 - TRANSACTION: 事务消息
+- LITE: 轻量消息
      * @param integer $QueueNum 队列数量，取值范围3～16
      * @param string $Remark 备注信息，最多 128 个字符
      * @param integer $MsgTTL 消息保留时长（单位：小时）
      * @param array $TagList 标签列表
+     * @param boolean $AutoExpireDelete 是否过期自动删除（仅针对轻量主题类型）
+     * @param integer $AutoExpireTime 过期时间，单位：秒（仅针对轻量主题类型）
      */
     function __construct()
     {
@@ -145,6 +165,14 @@ class CreateTopicRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("AutoExpireDelete",$param) and $param["AutoExpireDelete"] !== null) {
+            $this->AutoExpireDelete = $param["AutoExpireDelete"];
+        }
+
+        if (array_key_exists("AutoExpireTime",$param) and $param["AutoExpireTime"] !== null) {
+            $this->AutoExpireTime = $param["AutoExpireTime"];
         }
     }
 }

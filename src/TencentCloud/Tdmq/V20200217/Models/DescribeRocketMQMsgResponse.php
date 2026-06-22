@@ -20,70 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQMsg返回参数结构体
  *
- * @method string getBody() 获取消息体
- * @method void setBody(string $Body) 设置消息体
- * @method string getProperties() 获取详情参数
- * @method void setProperties(string $Properties) 设置详情参数
- * @method string getProduceTime() 获取生产时间
- * @method void setProduceTime(string $ProduceTime) 设置生产时间
- * @method string getMsgId() 获取消息id
- * @method void setMsgId(string $MsgId) 设置消息id
- * @method string getProducerAddr() 获取生产者地址
- * @method void setProducerAddr(string $ProducerAddr) 设置生产者地址
- * @method array getMessageTracks() 获取消费组消费情况列表
+ * @method string getBody() 获取<p>消息体</p>
+ * @method void setBody(string $Body) 设置<p>消息体</p>
+ * @method string getProperties() 获取<p>详情参数</p>
+ * @method void setProperties(string $Properties) 设置<p>详情参数</p>
+ * @method string getProduceTime() 获取<p>生产时间</p>
+ * @method void setProduceTime(string $ProduceTime) 设置<p>生产时间</p>
+ * @method string getMsgId() 获取<p>消息id</p>
+ * @method void setMsgId(string $MsgId) 设置<p>消息id</p>
+ * @method string getProducerAddr() 获取<p>生产者地址</p>
+ * @method void setProducerAddr(string $ProducerAddr) 设置<p>生产者地址</p>
+ * @method array getMessageTracks() 获取<p>消费组消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessageTracks(array $MessageTracks) 设置消费组消费情况列表
+ * @method void setMessageTracks(array $MessageTracks) 设置<p>消费组消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getShowTopicName() 获取详情页展示的topic名称
+ * @method string getShowTopicName() 获取<p>详情页展示的topic名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShowTopicName(string $ShowTopicName) 设置详情页展示的topic名称
+ * @method void setShowTopicName(string $ShowTopicName) 设置<p>详情页展示的topic名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMessageTracksCount() 获取消费组消费情况列表总数
- * @method void setMessageTracksCount(integer $MessageTracksCount) 设置消费组消费情况列表总数
+ * @method integer getMessageTracksCount() 获取<p>消费组消费情况列表总数</p>
+ * @method void setMessageTracksCount(integer $MessageTracksCount) 设置<p>消费组消费情况列表总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRocketMQMsgResponse extends AbstractModel
 {
     /**
-     * @var string 消息体
+     * @var string <p>消息体</p>
      */
     public $Body;
 
     /**
-     * @var string 详情参数
+     * @var string <p>详情参数</p>
      */
     public $Properties;
 
     /**
-     * @var string 生产时间
+     * @var string <p>生产时间</p>
      */
     public $ProduceTime;
 
     /**
-     * @var string 消息id
+     * @var string <p>消息id</p>
      */
     public $MsgId;
 
     /**
-     * @var string 生产者地址
+     * @var string <p>生产者地址</p>
      */
     public $ProducerAddr;
 
     /**
-     * @var array 消费组消费情况列表
+     * @var array <p>消费组消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageTracks;
 
     /**
-     * @var string 详情页展示的topic名称
+     * @var string <p>详情页展示的topic名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShowTopicName;
 
     /**
-     * @var integer 消费组消费情况列表总数
+     * @var integer <p>消费组消费情况列表总数</p>
      */
     public $MessageTracksCount;
 
@@ -93,16 +93,16 @@ class DescribeRocketMQMsgResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Body 消息体
-     * @param string $Properties 详情参数
-     * @param string $ProduceTime 生产时间
-     * @param string $MsgId 消息id
-     * @param string $ProducerAddr 生产者地址
-     * @param array $MessageTracks 消费组消费情况列表
+     * @param string $Body <p>消息体</p>
+     * @param string $Properties <p>详情参数</p>
+     * @param string $ProduceTime <p>生产时间</p>
+     * @param string $MsgId <p>消息id</p>
+     * @param string $ProducerAddr <p>生产者地址</p>
+     * @param array $MessageTracks <p>消费组消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ShowTopicName 详情页展示的topic名称
+     * @param string $ShowTopicName <p>详情页展示的topic名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MessageTracksCount 消费组消费情况列表总数
+     * @param integer $MessageTracksCount <p>消费组消费情况列表总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

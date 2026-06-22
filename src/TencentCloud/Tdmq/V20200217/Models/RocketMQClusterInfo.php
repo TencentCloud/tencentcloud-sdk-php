@@ -20,342 +20,354 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RocketMQ集群基本信息
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getRegion() 获取地域信息
- * @method void setRegion(string $Region) 设置地域信息
- * @method integer getCreateTime() 获取创建时间，毫秒为单位
- * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒为单位
- * @method string getRemark() 获取集群说明信息
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getRegion() 获取<p>地域信息</p>
+ * @method void setRegion(string $Region) 设置<p>地域信息</p>
+ * @method integer getCreateTime() 获取<p>创建时间，毫秒为单位</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间，毫秒为单位</p>
+ * @method string getRemark() 获取<p>集群说明信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemark(string $Remark) 设置集群说明信息
+ * @method void setRemark(string $Remark) 设置<p>集群说明信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPublicEndPoint() 获取公网接入地址
- * @method void setPublicEndPoint(string $PublicEndPoint) 设置公网接入地址
- * @method string getVpcEndPoint() 获取VPC接入地址
- * @method void setVpcEndPoint(string $VpcEndPoint) 设置VPC接入地址
- * @method boolean getSupportNamespaceEndpoint() 获取是否支持命名空间接入点
+ * @method string getPublicEndPoint() 获取<p>公网接入地址</p>
+ * @method void setPublicEndPoint(string $PublicEndPoint) 设置<p>公网接入地址</p>
+ * @method string getVpcEndPoint() 获取<p>VPC接入地址</p>
+ * @method void setVpcEndPoint(string $VpcEndPoint) 设置<p>VPC接入地址</p>
+ * @method boolean getSupportNamespaceEndpoint() 获取<p>是否支持命名空间接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSupportNamespaceEndpoint(boolean $SupportNamespaceEndpoint) 设置是否支持命名空间接入点
+ * @method void setSupportNamespaceEndpoint(boolean $SupportNamespaceEndpoint) 设置<p>是否支持命名空间接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getVpcs() 获取VPC信息
+ * @method array getVpcs() 获取<p>VPC信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcs(array $Vpcs) 设置VPC信息
+ * @method void setVpcs(array $Vpcs) 设置<p>VPC信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsVip() 获取是否为专享实例
+ * @method boolean getIsVip() 获取<p>是否为专享实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsVip(boolean $IsVip) 设置是否为专享实例
+ * @method void setIsVip(boolean $IsVip) 设置<p>是否为专享实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getRocketMQFlag() 获取Rocketmq集群标识
+ * @method boolean getRocketMQFlag() 获取<p>Rocketmq集群标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRocketMQFlag(boolean $RocketMQFlag) 设置Rocketmq集群标识
+ * @method void setRocketMQFlag(boolean $RocketMQFlag) 设置<p>Rocketmq集群标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取计费状态，1表示正常，2表示已停服，3表示已销毁
+ * @method integer getStatus() 获取<p>计费状态，1表示正常，2表示已停服，3表示已销毁</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置计费状态，1表示正常，2表示已停服，3表示已销毁
+ * @method void setStatus(integer $Status) 设置<p>计费状态，1表示正常，2表示已停服，3表示已销毁</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsolateTime() 获取欠费停服时间，毫秒为单位
+ * @method integer getIsolateTime() 获取<p>欠费停服时间，毫秒为单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsolateTime(integer $IsolateTime) 设置欠费停服时间，毫秒为单位
+ * @method void setIsolateTime(integer $IsolateTime) 设置<p>欠费停服时间，毫秒为单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHttpPublicEndpoint() 获取HTTP协议公网接入地址
+ * @method string getHttpPublicEndpoint() 获取<p>HTTP协议公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttpPublicEndpoint(string $HttpPublicEndpoint) 设置HTTP协议公网接入地址
+ * @method void setHttpPublicEndpoint(string $HttpPublicEndpoint) 设置<p>HTTP协议公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHttpVpcEndpoint() 获取HTTP协议VPC接入地址
+ * @method string getHttpVpcEndpoint() 获取<p>HTTP协议VPC接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttpVpcEndpoint(string $HttpVpcEndpoint) 设置HTTP协议VPC接入地址
+ * @method void setHttpVpcEndpoint(string $HttpVpcEndpoint) 设置<p>HTTP协议VPC接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInternalEndpoint() 获取TCP内部接入地址
+ * @method string getInternalEndpoint() 获取<p>TCP内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInternalEndpoint(string $InternalEndpoint) 设置TCP内部接入地址
+ * @method void setInternalEndpoint(string $InternalEndpoint) 设置<p>TCP内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHttpInternalEndpoint() 获取HTTP协议内部接入地址
+ * @method string getHttpInternalEndpoint() 获取<p>HTTP协议内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttpInternalEndpoint(string $HttpInternalEndpoint) 设置HTTP协议内部接入地址
+ * @method void setHttpInternalEndpoint(string $HttpInternalEndpoint) 设置<p>HTTP协议内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getAclEnabled() 获取是否开启ACL鉴权，专享实例支持关闭
+ * @method boolean getAclEnabled() 获取<p>是否开启ACL鉴权，专享实例支持关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAclEnabled(boolean $AclEnabled) 设置是否开启ACL鉴权，专享实例支持关闭
+ * @method void setAclEnabled(boolean $AclEnabled) 设置<p>是否开启ACL鉴权，专享实例支持关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPublicClbId() 获取公网CLB实例ID
+ * @method string getPublicClbId() 获取<p>公网CLB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicClbId(string $PublicClbId) 设置公网CLB实例ID
+ * @method void setPublicClbId(string $PublicClbId) 设置<p>公网CLB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVip() 获取vip
+ * @method string getVip() 获取<p>vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVip(string $Vip) 设置vip
+ * @method void setVip(string $Vip) 设置<p>vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcId() 获取所属VPC
+ * @method string getVpcId() 获取<p>所属VPC</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcId(string $VpcId) 设置所属VPC
+ * @method void setVpcId(string $VpcId) 设置<p>所属VPC</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSupportMigration() 获取是否支持迁移
+ * @method boolean getSupportMigration() 获取<p>是否支持迁移</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSupportMigration(boolean $SupportMigration) 设置是否支持迁移
+ * @method void setSupportMigration(boolean $SupportMigration) 设置<p>是否支持迁移</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInstanceStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+ * @method integer getInstanceStatus() 获取<p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceStatus(integer $InstanceStatus) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+ * @method void setInstanceStatus(integer $InstanceStatus) 设置<p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getZoneId() 获取集群所属可用区，表明集群归属的可用区
+ * @method integer getZoneId() 获取<p>集群所属可用区，表明集群归属的可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneId(integer $ZoneId) 设置集群所属可用区，表明集群归属的可用区
+ * @method void setZoneId(integer $ZoneId) 设置<p>集群所属可用区，表明集群归属的可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getZoneIds() 获取集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+ * @method array getZoneIds() 获取<p>集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneIds(array $ZoneIds) 设置集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+ * @method void setZoneIds(array $ZoneIds) 设置<p>集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsFrozen() 获取是否已冻结
- * @method void setIsFrozen(boolean $IsFrozen) 设置是否已冻结
- * @method boolean getAutoCreateTopicEnabled() 获取是否开启自动创建主题
- * @method void setAutoCreateTopicEnabled(boolean $AutoCreateTopicEnabled) 设置是否开启自动创建主题
- * @method boolean getAdminFeatureEnabled() 获取是否开启集群Admin能力
- * @method void setAdminFeatureEnabled(boolean $AdminFeatureEnabled) 设置是否开启集群Admin能力
- * @method string getAdminAccessKey() 获取Admin AK
+ * @method boolean getIsFrozen() 获取<p>是否已冻结</p>
+ * @method void setIsFrozen(boolean $IsFrozen) 设置<p>是否已冻结</p>
+ * @method boolean getAutoCreateTopicEnabled() 获取<p>是否开启自动创建主题</p>
+ * @method void setAutoCreateTopicEnabled(boolean $AutoCreateTopicEnabled) 设置<p>是否开启自动创建主题</p>
+ * @method boolean getAdminFeatureEnabled() 获取<p>是否开启集群Admin能力</p>
+ * @method void setAdminFeatureEnabled(boolean $AdminFeatureEnabled) 设置<p>是否开启集群Admin能力</p>
+ * @method string getAdminAccessKey() 获取<p>Admin AK</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdminAccessKey(string $AdminAccessKey) 设置Admin AK
+ * @method void setAdminAccessKey(string $AdminAccessKey) 设置<p>Admin AK</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAdminSecretKey() 获取Admin SK
+ * @method string getAdminSecretKey() 获取<p>Admin SK</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdminSecretKey(string $AdminSecretKey) 设置Admin SK
+ * @method void setAdminSecretKey(string $AdminSecretKey) 设置<p>Admin SK</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnableDeletionProtection() 获取是否开启删除保护
- * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护
+ * @method boolean getEnableDeletionProtection() 获取<p>是否开启删除保护</p>
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置<p>是否开启删除保护</p>
+ * @method boolean getAutoCreateConsumeGroupEnabled() 获取<p>是否开启自动创建消费组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoCreateConsumeGroupEnabled(boolean $AutoCreateConsumeGroupEnabled) 设置<p>是否开启自动创建消费组</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQClusterInfo extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 地域信息
+     * @var string <p>地域信息</p>
      */
     public $Region;
 
     /**
-     * @var integer 创建时间，毫秒为单位
+     * @var integer <p>创建时间，毫秒为单位</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 集群说明信息
+     * @var string <p>集群说明信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
-     * @var string 公网接入地址
+     * @var string <p>公网接入地址</p>
      */
     public $PublicEndPoint;
 
     /**
-     * @var string VPC接入地址
+     * @var string <p>VPC接入地址</p>
      */
     public $VpcEndPoint;
 
     /**
-     * @var boolean 是否支持命名空间接入点
+     * @var boolean <p>是否支持命名空间接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportNamespaceEndpoint;
 
     /**
-     * @var array VPC信息
+     * @var array <p>VPC信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vpcs;
 
     /**
-     * @var boolean 是否为专享实例
+     * @var boolean <p>是否为专享实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsVip;
 
     /**
-     * @var boolean Rocketmq集群标识
+     * @var boolean <p>Rocketmq集群标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RocketMQFlag;
 
     /**
-     * @var integer 计费状态，1表示正常，2表示已停服，3表示已销毁
+     * @var integer <p>计费状态，1表示正常，2表示已停服，3表示已销毁</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var integer 欠费停服时间，毫秒为单位
+     * @var integer <p>欠费停服时间，毫秒为单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateTime;
 
     /**
-     * @var string HTTP协议公网接入地址
+     * @var string <p>HTTP协议公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpPublicEndpoint;
 
     /**
-     * @var string HTTP协议VPC接入地址
+     * @var string <p>HTTP协议VPC接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpVpcEndpoint;
 
     /**
-     * @var string TCP内部接入地址
+     * @var string <p>TCP内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternalEndpoint;
 
     /**
-     * @var string HTTP协议内部接入地址
+     * @var string <p>HTTP协议内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpInternalEndpoint;
 
     /**
-     * @var boolean 是否开启ACL鉴权，专享实例支持关闭
+     * @var boolean <p>是否开启ACL鉴权，专享实例支持关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AclEnabled;
 
     /**
-     * @var string 公网CLB实例ID
+     * @var string <p>公网CLB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicClbId;
 
     /**
-     * @var string vip
+     * @var string <p>vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip;
 
     /**
-     * @var string 所属VPC
+     * @var string <p>所属VPC</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
-     * @var boolean 是否支持迁移
+     * @var boolean <p>是否支持迁移</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportMigration;
 
     /**
-     * @var integer 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+     * @var integer <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceStatus;
 
     /**
-     * @var integer 集群所属可用区，表明集群归属的可用区
+     * @var integer <p>集群所属可用区，表明集群归属的可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
-     * @var array 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+     * @var array <p>集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneIds;
 
     /**
-     * @var boolean 是否已冻结
+     * @var boolean <p>是否已冻结</p>
      */
     public $IsFrozen;
 
     /**
-     * @var boolean 是否开启自动创建主题
+     * @var boolean <p>是否开启自动创建主题</p>
      */
     public $AutoCreateTopicEnabled;
 
     /**
-     * @var boolean 是否开启集群Admin能力
+     * @var boolean <p>是否开启集群Admin能力</p>
      */
     public $AdminFeatureEnabled;
 
     /**
-     * @var string Admin AK
+     * @var string <p>Admin AK</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdminAccessKey;
 
     /**
-     * @var string Admin SK
+     * @var string <p>Admin SK</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdminSecretKey;
 
     /**
-     * @var boolean 是否开启删除保护
+     * @var boolean <p>是否开启删除保护</p>
      */
     public $EnableDeletionProtection;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $ClusterName 集群名称
-     * @param string $Region 地域信息
-     * @param integer $CreateTime 创建时间，毫秒为单位
-     * @param string $Remark 集群说明信息
+     * @var boolean <p>是否开启自动创建消费组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PublicEndPoint 公网接入地址
-     * @param string $VpcEndPoint VPC接入地址
-     * @param boolean $SupportNamespaceEndpoint 是否支持命名空间接入点
+     */
+    public $AutoCreateConsumeGroupEnabled;
+
+    /**
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $Region <p>地域信息</p>
+     * @param integer $CreateTime <p>创建时间，毫秒为单位</p>
+     * @param string $Remark <p>集群说明信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Vpcs VPC信息
+     * @param string $PublicEndPoint <p>公网接入地址</p>
+     * @param string $VpcEndPoint <p>VPC接入地址</p>
+     * @param boolean $SupportNamespaceEndpoint <p>是否支持命名空间接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsVip 是否为专享实例
+     * @param array $Vpcs <p>VPC信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $RocketMQFlag Rocketmq集群标识
+     * @param boolean $IsVip <p>是否为专享实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 计费状态，1表示正常，2表示已停服，3表示已销毁
+     * @param boolean $RocketMQFlag <p>Rocketmq集群标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsolateTime 欠费停服时间，毫秒为单位
+     * @param integer $Status <p>计费状态，1表示正常，2表示已停服，3表示已销毁</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HttpPublicEndpoint HTTP协议公网接入地址
+     * @param integer $IsolateTime <p>欠费停服时间，毫秒为单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HttpVpcEndpoint HTTP协议VPC接入地址
+     * @param string $HttpPublicEndpoint <p>HTTP协议公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InternalEndpoint TCP内部接入地址
+     * @param string $HttpVpcEndpoint <p>HTTP协议VPC接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HttpInternalEndpoint HTTP协议内部接入地址
+     * @param string $InternalEndpoint <p>TCP内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $AclEnabled 是否开启ACL鉴权，专享实例支持关闭
+     * @param string $HttpInternalEndpoint <p>HTTP协议内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PublicClbId 公网CLB实例ID
+     * @param boolean $AclEnabled <p>是否开启ACL鉴权，专享实例支持关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Vip vip
+     * @param string $PublicClbId <p>公网CLB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcId 所属VPC
+     * @param string $Vip <p>vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $SupportMigration 是否支持迁移
+     * @param string $VpcId <p>所属VPC</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InstanceStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+     * @param boolean $SupportMigration <p>是否支持迁移</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ZoneId 集群所属可用区，表明集群归属的可用区
+     * @param integer $InstanceStatus <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ZoneIds 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+     * @param integer $ZoneId <p>集群所属可用区，表明集群归属的可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsFrozen 是否已冻结
-     * @param boolean $AutoCreateTopicEnabled 是否开启自动创建主题
-     * @param boolean $AdminFeatureEnabled 是否开启集群Admin能力
-     * @param string $AdminAccessKey Admin AK
+     * @param array $ZoneIds <p>集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AdminSecretKey Admin SK
+     * @param boolean $IsFrozen <p>是否已冻结</p>
+     * @param boolean $AutoCreateTopicEnabled <p>是否开启自动创建主题</p>
+     * @param boolean $AdminFeatureEnabled <p>是否开启集群Admin能力</p>
+     * @param string $AdminAccessKey <p>Admin AK</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $EnableDeletionProtection 是否开启删除保护
+     * @param string $AdminSecretKey <p>Admin SK</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableDeletionProtection <p>是否开启删除保护</p>
+     * @param boolean $AutoCreateConsumeGroupEnabled <p>是否开启自动创建消费组</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -497,6 +509,10 @@ class RocketMQClusterInfo extends AbstractModel
 
         if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
             $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
+        }
+
+        if (array_key_exists("AutoCreateConsumeGroupEnabled",$param) and $param["AutoCreateConsumeGroupEnabled"] !== null) {
+            $this->AutoCreateConsumeGroupEnabled = $param["AutoCreateConsumeGroupEnabled"];
         }
     }
 }

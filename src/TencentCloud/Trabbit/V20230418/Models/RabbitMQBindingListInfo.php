@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rabbitmq路由关系列表成员
  *
- * @method integer getBindingId() 获取路由关系id
- * @method void setBindingId(integer $BindingId) 设置路由关系id
- * @method string getVirtualHost() 获取Vhost参数
- * @method void setVirtualHost(string $VirtualHost) 设置Vhost参数
- * @method string getSource() 获取源exchange名称
- * @method void setSource(string $Source) 设置源exchange名称
- * @method string getDestinationType() 获取目标类型,queue或exchange
- * @method void setDestinationType(string $DestinationType) 设置目标类型,queue或exchange
- * @method string getDestination() 获取目标资源名称
- * @method void setDestination(string $Destination) 设置目标资源名称
- * @method string getRoutingKey() 获取绑定key
- * @method void setRoutingKey(string $RoutingKey) 设置绑定key
- * @method string getSourceExchangeType() 获取源exchange类型
- * @method void setSourceExchangeType(string $SourceExchangeType) 设置源exchange类型
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getModifyTime() 获取修改时间
- * @method void setModifyTime(string $ModifyTime) 设置修改时间
+ * @method integer getBindingId() 获取<p>路由关系id</p>
+ * @method void setBindingId(integer $BindingId) 设置<p>路由关系id</p>
+ * @method string getVirtualHost() 获取<p>Vhost参数</p>
+ * @method void setVirtualHost(string $VirtualHost) 设置<p>Vhost参数</p>
+ * @method string getSource() 获取<p>源exchange名称</p>
+ * @method void setSource(string $Source) 设置<p>源exchange名称</p>
+ * @method string getDestinationType() 获取<p>目标类型,queue或exchange</p>
+ * @method void setDestinationType(string $DestinationType) 设置<p>目标类型,queue或exchange</p>
+ * @method string getDestination() 获取<p>目标资源名称</p>
+ * @method void setDestination(string $Destination) 设置<p>目标资源名称</p>
+ * @method string getRoutingKey() 获取<p>绑定key</p>
+ * @method void setRoutingKey(string $RoutingKey) 设置<p>绑定key</p>
+ * @method string getSourceExchangeType() 获取<p>源exchange类型</p>
+ * @method void setSourceExchangeType(string $SourceExchangeType) 设置<p>源exchange类型</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getModifyTime() 获取<p>修改时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间</p>
+ * @method array getArguments() 获取<p>绑定参数，header类型的Exchange绑定时，可以传入参数。其它类型 Exchange 无需传入</p>
+ * @method void setArguments(array $Arguments) 设置<p>绑定参数，header类型的Exchange绑定时，可以传入参数。其它类型 Exchange 无需传入</p>
  */
 class RabbitMQBindingListInfo extends AbstractModel
 {
     /**
-     * @var integer 路由关系id
+     * @var integer <p>路由关系id</p>
      */
     public $BindingId;
 
     /**
-     * @var string Vhost参数
+     * @var string <p>Vhost参数</p>
      */
     public $VirtualHost;
 
     /**
-     * @var string 源exchange名称
+     * @var string <p>源exchange名称</p>
      */
     public $Source;
 
     /**
-     * @var string 目标类型,queue或exchange
+     * @var string <p>目标类型,queue或exchange</p>
      */
     public $DestinationType;
 
     /**
-     * @var string 目标资源名称
+     * @var string <p>目标资源名称</p>
      */
     public $Destination;
 
     /**
-     * @var string 绑定key
+     * @var string <p>绑定key</p>
      */
     public $RoutingKey;
 
     /**
-     * @var string 源exchange类型
+     * @var string <p>源exchange类型</p>
      */
     public $SourceExchangeType;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @param integer $BindingId 路由关系id
-     * @param string $VirtualHost Vhost参数
-     * @param string $Source 源exchange名称
-     * @param string $DestinationType 目标类型,queue或exchange
-     * @param string $Destination 目标资源名称
-     * @param string $RoutingKey 绑定key
-     * @param string $SourceExchangeType 源exchange类型
-     * @param string $CreateTime 创建时间
-     * @param string $ModifyTime 修改时间
+     * @var array <p>绑定参数，header类型的Exchange绑定时，可以传入参数。其它类型 Exchange 无需传入</p>
+     */
+    public $Arguments;
+
+    /**
+     * @param integer $BindingId <p>路由关系id</p>
+     * @param string $VirtualHost <p>Vhost参数</p>
+     * @param string $Source <p>源exchange名称</p>
+     * @param string $DestinationType <p>目标类型,queue或exchange</p>
+     * @param string $Destination <p>目标资源名称</p>
+     * @param string $RoutingKey <p>绑定key</p>
+     * @param string $SourceExchangeType <p>源exchange类型</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $ModifyTime <p>修改时间</p>
+     * @param array $Arguments <p>绑定参数，header类型的Exchange绑定时，可以传入参数。其它类型 Exchange 无需传入</p>
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class RabbitMQBindingListInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("Arguments",$param) and $param["Arguments"] !== null) {
+            $this->Arguments = [];
+            foreach ($param["Arguments"] as $key => $value){
+                $obj = new RabbitMQServerlessKeyValuePair();
+                $obj->deserialize($value);
+                array_push($this->Arguments, $obj);
+            }
         }
     }
 }

@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptType(integer $EncryptType) 设置<p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
  * @method boolean getEncryptSwitching() 获取<p>凭据密钥加密切换中</p>
  * @method void setEncryptSwitching(boolean $EncryptSwitching) 设置<p>凭据密钥加密切换中</p>
+ * @method string getCreateUinString() 获取<p>创建者 UIN 字符串</p>
+ * @method void setCreateUinString(string $CreateUinString) 设置<p>创建者 UIN 字符串</p>
+ * @method string getTargetUinString() 获取<p>所属者 UIN 字符串</p><p>用以兼容uint64,防止精度丢失</p>
+ * @method void setTargetUinString(string $TargetUinString) 设置<p>所属者 UIN 字符串</p><p>用以兼容uint64,防止精度丢失</p>
  */
 class SecretMetadata extends AbstractModel
 {
@@ -171,6 +175,16 @@ class SecretMetadata extends AbstractModel
     public $EncryptSwitching;
 
     /**
+     * @var string <p>创建者 UIN 字符串</p>
+     */
+    public $CreateUinString;
+
+    /**
+     * @var string <p>所属者 UIN 字符串</p><p>用以兼容uint64,防止精度丢失</p>
+     */
+    public $TargetUinString;
+
+    /**
      * @param string $SecretName <p>凭据名称</p>
      * @param string $Description <p>凭据的描述信息</p>
      * @param string $KmsKeyId <p>用于加密凭据的KMS KeyId</p>
@@ -192,6 +206,8 @@ class SecretMetadata extends AbstractModel
      * @param string $RotationBeginTime <p>用户指定的轮转开始时间。</p>
      * @param integer $EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
      * @param boolean $EncryptSwitching <p>凭据密钥加密切换中</p>
+     * @param string $CreateUinString <p>创建者 UIN 字符串</p>
+     * @param string $TargetUinString <p>所属者 UIN 字符串</p><p>用以兼容uint64,防止精度丢失</p>
      */
     function __construct()
     {
@@ -288,6 +304,14 @@ class SecretMetadata extends AbstractModel
 
         if (array_key_exists("EncryptSwitching",$param) and $param["EncryptSwitching"] !== null) {
             $this->EncryptSwitching = $param["EncryptSwitching"];
+        }
+
+        if (array_key_exists("CreateUinString",$param) and $param["CreateUinString"] !== null) {
+            $this->CreateUinString = $param["CreateUinString"];
+        }
+
+        if (array_key_exists("TargetUinString",$param) and $param["TargetUinString"] !== null) {
+            $this->TargetUinString = $param["TargetUinString"];
         }
     }
 }

@@ -18,76 +18,92 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询云联网策略路由匹配规则
+ * 云联网策略路由匹配规则
  *
- * @method string getPolicyBasedRoutingNextHopId() 获取策略路由下一跳ID
- * @method void setPolicyBasedRoutingNextHopId(string $PolicyBasedRoutingNextHopId) 设置策略路由下一跳ID
- * @method string getInstanceType() 获取实例类型[VPC,DIRECTCONNECT,VPNGW]
- * @method void setInstanceType(string $InstanceType) 设置实例类型[VPC,DIRECTCONNECT,VPNGW]
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getSourceCidrBlock() 获取源地址CIDR
- * @method void setSourceCidrBlock(string $SourceCidrBlock) 设置源地址CIDR
- * @method string getDestinationCidrBlock() 获取目的地址CIDR
- * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的地址CIDR
- * @method integer getPriority() 获取优先级
- * @method void setPriority(integer $Priority) 设置优先级
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method string getPolicyBasedRoutingRuleId() 获取策略路由匹配策略ID
- * @method void setPolicyBasedRoutingRuleId(string $PolicyBasedRoutingRuleId) 设置策略路由匹配策略ID
+ * @method string getPolicyBasedRoutingNextHopId() 获取<p>策略路由下一跳ID</p>
+ * @method void setPolicyBasedRoutingNextHopId(string $PolicyBasedRoutingNextHopId) 设置<p>策略路由下一跳ID</p>
+ * @method string getInstanceType() 获取<p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getSourceCidrBlock() 获取<p>源地址CIDR</p>
+ * @method void setSourceCidrBlock(string $SourceCidrBlock) 设置<p>源地址CIDR</p>
+ * @method string getDestinationCidrBlock() 获取<p>目的地址CIDR</p>
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置<p>目的地址CIDR</p>
+ * @method integer getPriority() 获取<p>优先级</p>
+ * @method void setPriority(integer $Priority) 设置<p>优先级</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method string getPolicyBasedRoutingRuleId() 获取<p>策略路由匹配策略ID</p>
+ * @method void setPolicyBasedRoutingRuleId(string $PolicyBasedRoutingRuleId) 设置<p>策略路由匹配策略ID</p>
+ * @method string getDestinationInstanceType() 获取<p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul>
+ * @method void setDestinationInstanceType(string $DestinationInstanceType) 设置<p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul>
+ * @method string getDestinationInstanceId() 获取<p>目的端实例ID</p>
+ * @method void setDestinationInstanceId(string $DestinationInstanceId) 设置<p>目的端实例ID</p>
  */
 class CcnPolicyBasedRoutingRule extends AbstractModel
 {
     /**
-     * @var string 策略路由下一跳ID
+     * @var string <p>策略路由下一跳ID</p>
      */
     public $PolicyBasedRoutingNextHopId;
 
     /**
-     * @var string 实例类型[VPC,DIRECTCONNECT,VPNGW]
+     * @var string <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 源地址CIDR
+     * @var string <p>源地址CIDR</p>
      */
     public $SourceCidrBlock;
 
     /**
-     * @var string 目的地址CIDR
+     * @var string <p>目的地址CIDR</p>
      */
     public $DestinationCidrBlock;
 
     /**
-     * @var integer 优先级
+     * @var integer <p>优先级</p>
      */
     public $Priority;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @var string 策略路由匹配策略ID
+     * @var string <p>策略路由匹配策略ID</p>
      */
     public $PolicyBasedRoutingRuleId;
 
     /**
-     * @param string $PolicyBasedRoutingNextHopId 策略路由下一跳ID
-     * @param string $InstanceType 实例类型[VPC,DIRECTCONNECT,VPNGW]
-     * @param string $InstanceId 实例ID
-     * @param string $SourceCidrBlock 源地址CIDR
-     * @param string $DestinationCidrBlock 目的地址CIDR
-     * @param integer $Priority 优先级
-     * @param string $Description 描述
-     * @param string $PolicyBasedRoutingRuleId 策略路由匹配策略ID
+     * @var string <p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul>
+     */
+    public $DestinationInstanceType;
+
+    /**
+     * @var string <p>目的端实例ID</p>
+     */
+    public $DestinationInstanceId;
+
+    /**
+     * @param string $PolicyBasedRoutingNextHopId <p>策略路由下一跳ID</p>
+     * @param string $InstanceType <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $SourceCidrBlock <p>源地址CIDR</p>
+     * @param string $DestinationCidrBlock <p>目的地址CIDR</p>
+     * @param integer $Priority <p>优先级</p>
+     * @param string $Description <p>描述</p>
+     * @param string $PolicyBasedRoutingRuleId <p>策略路由匹配策略ID</p>
+     * @param string $DestinationInstanceType <p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul>
+     * @param string $DestinationInstanceId <p>目的端实例ID</p>
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class CcnPolicyBasedRoutingRule extends AbstractModel
 
         if (array_key_exists("PolicyBasedRoutingRuleId",$param) and $param["PolicyBasedRoutingRuleId"] !== null) {
             $this->PolicyBasedRoutingRuleId = $param["PolicyBasedRoutingRuleId"];
+        }
+
+        if (array_key_exists("DestinationInstanceType",$param) and $param["DestinationInstanceType"] !== null) {
+            $this->DestinationInstanceType = $param["DestinationInstanceType"];
+        }
+
+        if (array_key_exists("DestinationInstanceId",$param) and $param["DestinationInstanceId"] !== null) {
+            $this->DestinationInstanceId = $param["DestinationInstanceId"];
         }
     }
 }

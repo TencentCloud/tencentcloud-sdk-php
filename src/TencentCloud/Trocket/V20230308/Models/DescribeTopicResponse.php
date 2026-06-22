@@ -20,88 +20,87 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopic返回参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getTopic() 获取主题名称
- * @method void setTopic(string $Topic) 设置主题名称
- * @method string getTopicType() 获取主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
- * @method void setTopicType(string $TopicType) 设置主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method integer getCreatedTime() 获取创建时间，**Unix时间戳（毫秒）**
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，**Unix时间戳（毫秒）**
- * @method integer getLastUpdateTime() 获取最后写入时间，**Unix时间戳（毫秒）**
- * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后写入时间，**Unix时间戳（毫秒）**
- * @method integer getSubscriptionCount() 获取订阅数量
- * @method void setSubscriptionCount(integer $SubscriptionCount) 设置订阅数量
- * @method array getSubscriptionData() 获取订阅关系列表
- * @method void setSubscriptionData(array $SubscriptionData) 设置订阅关系列表
- * @method integer getMsgTTL() 获取消息保留时长，单位：小时
- * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长，单位：小时
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getTopic() 获取<p>主题名称</p>
+ * @method void setTopic(string $Topic) 设置<p>主题名称</p>
+ * @method string getTopicType() 获取<p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
+ * @method void setTopicType(string $TopicType) 设置<p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method integer getCreatedTime() 获取<p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
+ * @method void setCreatedTime(integer $CreatedTime) 设置<p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
+ * @method integer getLastUpdateTime() 获取<p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p>
+ * @method void setLastUpdateTime(integer $LastUpdateTime) 设置<p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p>
+ * @method integer getSubscriptionCount() 获取<p>订阅数量</p>
+ * @method void setSubscriptionCount(integer $SubscriptionCount) 设置<p>订阅数量</p>
+ * @method array getSubscriptionData() 获取<p>订阅关系列表</p>
+ * @method void setSubscriptionData(array $SubscriptionData) 设置<p>订阅关系列表</p>
+ * @method integer getMsgTTL() 获取<p>消息保留时长，单位：小时</p>
+ * @method void setMsgTTL(integer $MsgTTL) 设置<p>消息保留时长，单位：小时</p>
+ * @method boolean getAutoExpireDelete() 获取<p>是否自动删除</p><p>仅适用于轻量主题</p>
+ * @method void setAutoExpireDelete(boolean $AutoExpireDelete) 设置<p>是否自动删除</p><p>仅适用于轻量主题</p>
+ * @method integer getAutoExpireTime() 获取<p>自动过期时间</p><p>单位：分钟</p><p>仅适用于轻量主题</p>
+ * @method void setAutoExpireTime(integer $AutoExpireTime) 设置<p>自动过期时间</p><p>单位：分钟</p><p>仅适用于轻量主题</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTopicResponse extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名称
+     * @var string <p>主题名称</p>
      */
     public $Topic;
 
     /**
-     * @var string 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+     * @var string <p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
      */
     public $TopicType;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var integer 创建时间，**Unix时间戳（毫秒）**
+     * @var integer <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
      */
     public $CreatedTime;
 
     /**
-     * @var integer 最后写入时间，**Unix时间戳（毫秒）**
+     * @var integer <p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p>
      */
     public $LastUpdateTime;
 
     /**
-     * @var integer 订阅数量
+     * @var integer <p>订阅数量</p>
      */
     public $SubscriptionCount;
 
     /**
-     * @var array 订阅关系列表
+     * @var array <p>订阅关系列表</p>
      */
     public $SubscriptionData;
 
     /**
-     * @var integer 消息保留时长，单位：小时
+     * @var integer <p>消息保留时长，单位：小时</p>
      */
     public $MsgTTL;
+
+    /**
+     * @var boolean <p>是否自动删除</p><p>仅适用于轻量主题</p>
+     */
+    public $AutoExpireDelete;
+
+    /**
+     * @var integer <p>自动过期时间</p><p>单位：分钟</p><p>仅适用于轻量主题</p>
+     */
+    public $AutoExpireTime;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -109,20 +108,17 @@ TRANSACTION:事务消息
     public $RequestId;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Topic 主题名称
-     * @param string $TopicType 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
-     * @param string $Remark 备注
-     * @param integer $CreatedTime 创建时间，**Unix时间戳（毫秒）**
-     * @param integer $LastUpdateTime 最后写入时间，**Unix时间戳（毫秒）**
-     * @param integer $SubscriptionCount 订阅数量
-     * @param array $SubscriptionData 订阅关系列表
-     * @param integer $MsgTTL 消息保留时长，单位：小时
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $Topic <p>主题名称</p>
+     * @param string $TopicType <p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
+     * @param string $Remark <p>备注</p>
+     * @param integer $CreatedTime <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * @param integer $LastUpdateTime <p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * @param integer $SubscriptionCount <p>订阅数量</p>
+     * @param array $SubscriptionData <p>订阅关系列表</p>
+     * @param integer $MsgTTL <p>消息保留时长，单位：小时</p>
+     * @param boolean $AutoExpireDelete <p>是否自动删除</p><p>仅适用于轻量主题</p>
+     * @param integer $AutoExpireTime <p>自动过期时间</p><p>单位：分钟</p><p>仅适用于轻量主题</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -177,6 +173,14 @@ TRANSACTION:事务消息
 
         if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
             $this->MsgTTL = $param["MsgTTL"];
+        }
+
+        if (array_key_exists("AutoExpireDelete",$param) and $param["AutoExpireDelete"] !== null) {
+            $this->AutoExpireDelete = $param["AutoExpireDelete"];
+        }
+
+        if (array_key_exists("AutoExpireTime",$param) and $param["AutoExpireTime"] !== null) {
+            $this->AutoExpireTime = $param["AutoExpireTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

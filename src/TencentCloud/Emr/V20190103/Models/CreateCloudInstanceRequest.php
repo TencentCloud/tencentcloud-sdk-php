@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSgIP(string $SgIP) 设置<p>安全组来源IP</p>
  * @method ContainerExtraConf getContainerExtraConf() 获取<p>额外容器相关配置</p>
  * @method void setContainerExtraConf(ContainerExtraConf $ContainerExtraConf) 设置<p>额外容器相关配置</p>
+ * @method EnableSparkAppMonitorInfo getEnableSparkAppMonitorInfo() 获取<p>spark监控</p>
+ * @method void setEnableSparkAppMonitorInfo(EnableSparkAppMonitorInfo $EnableSparkAppMonitorInfo) 设置<p>spark监控</p>
  */
 class CreateCloudInstanceRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class CreateCloudInstanceRequest extends AbstractModel
     public $ContainerExtraConf;
 
     /**
+     * @var EnableSparkAppMonitorInfo <p>spark监控</p>
+     */
+    public $EnableSparkAppMonitorInfo;
+
+    /**
      * @param string $InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      * @param string $ClusterClass <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li>
      * @param array $Software <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p>
@@ -184,6 +191,7 @@ class CreateCloudInstanceRequest extends AbstractModel
      * @param integer $NeedCdbAudit <p>是否开通审计</p>
      * @param string $SgIP <p>安全组来源IP</p>
      * @param ContainerExtraConf $ContainerExtraConf <p>额外容器相关配置</p>
+     * @param EnableSparkAppMonitorInfo $EnableSparkAppMonitorInfo <p>spark监控</p>
      */
     function __construct()
     {
@@ -295,6 +303,11 @@ class CreateCloudInstanceRequest extends AbstractModel
         if (array_key_exists("ContainerExtraConf",$param) and $param["ContainerExtraConf"] !== null) {
             $this->ContainerExtraConf = new ContainerExtraConf();
             $this->ContainerExtraConf->deserialize($param["ContainerExtraConf"]);
+        }
+
+        if (array_key_exists("EnableSparkAppMonitorInfo",$param) and $param["EnableSparkAppMonitorInfo"] !== null) {
+            $this->EnableSparkAppMonitorInfo = new EnableSparkAppMonitorInfo();
+            $this->EnableSparkAppMonitorInfo->deserialize($param["EnableSparkAppMonitorInfo"]);
         }
     }
 }

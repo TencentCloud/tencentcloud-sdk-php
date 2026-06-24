@@ -21,137 +21,221 @@ use TencentCloud\Common\AbstractModel;
  * 创建DynamicInstance提交的表单数据
  *
  * @method string getDynamicInstanceName() 获取<p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDynamicInstanceName(string $DynamicInstanceName) 设置<p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取<p>命名空间</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置<p>命名空间</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSupportHA() 获取<p>是否支持高可用</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportHA(boolean $SupportHA) 设置<p>是否支持高可用</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CustomImage getCustomImage() 获取<p>自定义镜像信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomImage(CustomImage $CustomImage) 设置<p>自定义镜像信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDynamicInstanceGroups() 获取<p>资源组配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDynamicInstanceGroups(array $DynamicInstanceGroups) 设置<p>资源组配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSupportPV() 获取<p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportPV(boolean $SupportPV) 设置<p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCBSVolumes() 获取<p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCBSVolumes(array $CBSVolumes) 设置<p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCFSVolumes() 获取<p>cfs存储卷列表，只包含cfs，不包含cfs turbo</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCFSVolumes(array $CFSVolumes) 设置<p>cfs存储卷列表，只包含cfs，不包含cfs turbo</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCOSVolumes() 获取<p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCOSVolumes(array $COSVolumes) 设置<p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVolumeMounts() 获取<p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeMounts(array $VolumeMounts) 设置<p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabels() 获取<p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置<p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTolerations() 获取<p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTolerations(array $Tolerations) 设置<p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEnvs() 获取<p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvs(array $Envs) 设置<p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDependServices() 获取<p>依赖外部组件</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDependServices(array $DependServices) 设置<p>依赖外部组件</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSupportToken() 获取<p>是否开启token鉴权</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportToken(boolean $SupportToken) 设置<p>是否开启token鉴权</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCFSTurboVolumes() 获取<p>cfs trubo挂载列表，不包含标准版cfs</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCFSTurboVolumes(array $CFSTurboVolumes) 设置<p>cfs trubo挂载列表，不包含标准版cfs</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageInfoV2 getImageInfoV2() 获取<p>自定义镜像</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageInfoV2(ImageInfoV2 $ImageInfoV2) 设置<p>自定义镜像</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getGooseFSVolumes() 获取<p>GooseFS盘</p>
+ * @method void setGooseFSVolumes(array $GooseFSVolumes) 设置<p>GooseFS盘</p>
  */
 class DynamicInstanceForm extends AbstractModel
 {
     /**
      * @var string <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DynamicInstanceName;
 
     /**
      * @var string <p>命名空间</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var boolean <p>是否支持高可用</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportHA;
 
     /**
      * @var CustomImage <p>自定义镜像信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomImage;
 
     /**
      * @var array <p>资源组配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DynamicInstanceGroups;
 
     /**
      * @var boolean <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportPV;
 
     /**
      * @var array <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CBSVolumes;
 
     /**
      * @var array <p>cfs存储卷列表，只包含cfs，不包含cfs turbo</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CFSVolumes;
 
     /**
      * @var array <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $COSVolumes;
 
     /**
      * @var array <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeMounts;
 
     /**
      * @var array <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
      * @var array <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tolerations;
 
     /**
      * @var array <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Envs;
 
     /**
      * @var array <p>依赖外部组件</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependServices;
 
     /**
      * @var boolean <p>是否开启token鉴权</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportToken;
 
     /**
      * @var array <p>cfs trubo挂载列表，不包含标准版cfs</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CFSTurboVolumes;
 
     /**
+     * @var ImageInfoV2 <p>自定义镜像</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageInfoV2;
+
+    /**
+     * @var array <p>GooseFS盘</p>
+     */
+    public $GooseFSVolumes;
+
+    /**
      * @param string $DynamicInstanceName <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace <p>命名空间</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SupportHA <p>是否支持高可用</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomImage $CustomImage <p>自定义镜像信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DynamicInstanceGroups <p>资源组配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SupportPV <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CBSVolumes <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CFSVolumes <p>cfs存储卷列表，只包含cfs，不包含cfs turbo</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $COSVolumes <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VolumeMounts <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Labels <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tolerations <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Envs <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DependServices <p>依赖外部组件</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SupportToken <p>是否开启token鉴权</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CFSTurboVolumes <p>cfs trubo挂载列表，不包含标准版cfs</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageInfoV2 $ImageInfoV2 <p>自定义镜像</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $GooseFSVolumes <p>GooseFS盘</p>
      */
     function __construct()
     {
@@ -278,6 +362,20 @@ class DynamicInstanceForm extends AbstractModel
                 $obj = new CFSTurboVolume();
                 $obj->deserialize($value);
                 array_push($this->CFSTurboVolumes, $obj);
+            }
+        }
+
+        if (array_key_exists("ImageInfoV2",$param) and $param["ImageInfoV2"] !== null) {
+            $this->ImageInfoV2 = new ImageInfoV2();
+            $this->ImageInfoV2->deserialize($param["ImageInfoV2"]);
+        }
+
+        if (array_key_exists("GooseFSVolumes",$param) and $param["GooseFSVolumes"] !== null) {
+            $this->GooseFSVolumes = [];
+            foreach ($param["GooseFSVolumes"] as $key => $value){
+                $obj = new GooseFSVolume();
+                $obj->deserialize($value);
+                array_push($this->GooseFSVolumes, $obj);
             }
         }
     }

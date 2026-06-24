@@ -20,82 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetStatisticData请求参数结构体
  *
- * @method string getDeviceId() 获取设备ID。若不指定设备，可传"-1"
- * @method void setDeviceId(string $DeviceId) 设置设备ID。若不指定设备，可传"-1"
- * @method integer getBeginTime() 获取统计开始时间，单位：s
- * @method void setBeginTime(integer $BeginTime) 设置统计开始时间，单位：s
- * @method integer getEndTime() 获取统计结束时间，单位：s
- * @method void setEndTime(integer $EndTime) 设置统计结束时间，单位：s
- * @method integer getTimeGranularity() 获取聚合粒度：
-1:按小时统计
-2:按天统计
- * @method void setTimeGranularity(integer $TimeGranularity) 设置聚合粒度：
-1:按小时统计
-2:按天统计
- * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
- * @method void setAccessRegion(string $AccessRegion) 设置接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
- * @method integer getGatewayType() 获取网关类型。0：公有云网关；1：自有网关。不传默认为0。
- * @method void setGatewayType(integer $GatewayType) 设置网关类型。0：公有云网关；1：自有网关。不传默认为0。
- * @method array getDeviceList() 获取设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1"
- * @method void setDeviceList(array $DeviceList) 设置设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1"
- * @method string getGroupId() 获取设备分组ID，若不指定分组则不传，按分组下载数据时使用
- * @method void setGroupId(string $GroupId) 设置设备分组ID，若不指定分组则不传，按分组下载数据时使用
+ * @method string getDeviceId() 获取<p>设备ID。若不指定设备，可传&quot;-1&quot;</p>
+ * @method void setDeviceId(string $DeviceId) 设置<p>设备ID。若不指定设备，可传&quot;-1&quot;</p>
+ * @method integer getBeginTime() 获取<p>统计开始时间，单位：s</p>
+ * @method void setBeginTime(integer $BeginTime) 设置<p>统计开始时间，单位：s</p>
+ * @method integer getEndTime() 获取<p>统计结束时间，单位：s</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>统计结束时间，单位：s</p>
+ * @method integer getTimeGranularity() 获取<p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
+ * @method void setTimeGranularity(integer $TimeGranularity) 设置<p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
+ * @method string getAccessRegion() 获取<p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
+ * @method void setAccessRegion(string $AccessRegion) 设置<p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
+ * @method integer getGatewayType() 获取<p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
+ * @method void setGatewayType(integer $GatewayType) 设置<p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
+ * @method array getDeviceList() 获取<p>设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传&quot;-1&quot;</p>
+ * @method void setDeviceList(array $DeviceList) 设置<p>设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传&quot;-1&quot;</p>
+ * @method string getGroupId() 获取<p>设备分组ID，若不指定分组则不传，按分组下载数据时使用</p>
+ * @method void setGroupId(string $GroupId) 设置<p>设备分组ID，若不指定分组则不传，按分组下载数据时使用</p>
  */
 class GetStatisticDataRequest extends AbstractModel
 {
     /**
-     * @var string 设备ID。若不指定设备，可传"-1"
+     * @var string <p>设备ID。若不指定设备，可传&quot;-1&quot;</p>
      */
     public $DeviceId;
 
     /**
-     * @var integer 统计开始时间，单位：s
+     * @var integer <p>统计开始时间，单位：s</p>
      */
     public $BeginTime;
 
     /**
-     * @var integer 统计结束时间，单位：s
+     * @var integer <p>统计结束时间，单位：s</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 聚合粒度：
-1:按小时统计
-2:按天统计
+     * @var integer <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
      */
     public $TimeGranularity;
 
     /**
-     * @var string 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+     * @var string <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
      */
     public $AccessRegion;
 
     /**
-     * @var integer 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * @var integer <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
      */
     public $GatewayType;
 
     /**
-     * @var array 设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1"
+     * @var array <p>设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传&quot;-1&quot;</p>
      */
     public $DeviceList;
 
     /**
-     * @var string 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+     * @var string <p>设备分组ID，若不指定分组则不传，按分组下载数据时使用</p>
      */
     public $GroupId;
 
     /**
-     * @param string $DeviceId 设备ID。若不指定设备，可传"-1"
-     * @param integer $BeginTime 统计开始时间，单位：s
-     * @param integer $EndTime 统计结束时间，单位：s
-     * @param integer $TimeGranularity 聚合粒度：
-1:按小时统计
-2:按天统计
-     * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
-     * @param integer $GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
-     * @param array $DeviceList 设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1"
-     * @param string $GroupId 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+     * @param string $DeviceId <p>设备ID。若不指定设备，可传&quot;-1&quot;</p>
+     * @param integer $BeginTime <p>统计开始时间，单位：s</p>
+     * @param integer $EndTime <p>统计结束时间，单位：s</p>
+     * @param integer $TimeGranularity <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
+     * @param string $AccessRegion <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
+     * @param integer $GatewayType <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
+     * @param array $DeviceList <p>设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传&quot;-1&quot;</p>
+     * @param string $GroupId <p>设备分组ID，若不指定分组则不传，按分组下载数据时使用</p>
      */
     function __construct()
     {

@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFlowStatistic返回参数结构体
  *
- * @method array getNetDetails() 获取流量详细信息
- * @method void setNetDetails(array $NetDetails) 设置流量详细信息
- * @method float getMaxValue() 获取查找时间段流量使用最大值（单位：byte）
- * @method void setMaxValue(float $MaxValue) 设置查找时间段流量使用最大值（单位：byte）
- * @method float getAvgValue() 获取查找时间段流量使用平均值（单位：byte）
- * @method void setAvgValue(float $AvgValue) 设置查找时间段流量使用平均值（单位：byte）
- * @method float getTotalValue() 获取查找时间段流量使用总量（单位：byte）
- * @method void setTotalValue(float $TotalValue) 设置查找时间段流量使用总量（单位：byte）
+ * @method array getNetDetails() 获取<p>流量详细信息</p>
+ * @method void setNetDetails(array $NetDetails) 设置<p>流量详细信息</p>
+ * @method float getMaxValue() 获取<p>查找时间段流量使用最大值（单位：byte）</p>
+ * @method void setMaxValue(float $MaxValue) 设置<p>查找时间段流量使用最大值（单位：byte）</p>
+ * @method float getAvgValue() 获取<p>查找时间段流量使用平均值（单位：byte）</p>
+ * @method void setAvgValue(float $AvgValue) 设置<p>查找时间段流量使用平均值（单位：byte）</p>
+ * @method float getTotalValue() 获取<p>查找时间段流量使用总量（单位：byte）</p>
+ * @method void setTotalValue(float $TotalValue) 设置<p>查找时间段流量使用总量（单位：byte）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetFlowStatisticResponse extends AbstractModel
 {
     /**
-     * @var array 流量详细信息
+     * @var array <p>流量详细信息</p>
      */
     public $NetDetails;
 
     /**
-     * @var float 查找时间段流量使用最大值（单位：byte）
+     * @var float <p>查找时间段流量使用最大值（单位：byte）</p>
      */
     public $MaxValue;
 
     /**
-     * @var float 查找时间段流量使用平均值（单位：byte）
+     * @var float <p>查找时间段流量使用平均值（单位：byte）</p>
      */
     public $AvgValue;
 
     /**
-     * @var float 查找时间段流量使用总量（单位：byte）
+     * @var float <p>查找时间段流量使用总量（单位：byte）</p>
      */
     public $TotalValue;
 
@@ -59,10 +59,10 @@ class GetFlowStatisticResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $NetDetails 流量详细信息
-     * @param float $MaxValue 查找时间段流量使用最大值（单位：byte）
-     * @param float $AvgValue 查找时间段流量使用平均值（单位：byte）
-     * @param float $TotalValue 查找时间段流量使用总量（单位：byte）
+     * @param array $NetDetails <p>流量详细信息</p>
+     * @param float $MaxValue <p>查找时间段流量使用最大值（单位：byte）</p>
+     * @param float $AvgValue <p>查找时间段流量使用平均值（单位：byte）</p>
+     * @param float $TotalValue <p>查找时间段流量使用总量（单位：byte）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

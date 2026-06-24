@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Emr\V20190103\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDynamicInstanceList请求参数结构体
+ * 大模型安全意图检测响应数据
  *
- * @method string getInstanceId() 获取<p>emr 集群 id</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>emr 集群 id</p>
+ * @method integer getIsUnSafe() 获取<p>是否恶意意图</p><p>枚举值：</p><ul><li>1： 恶意</li><li>0： 正常</li></ul>
+ * @method void setIsUnSafe(integer $IsUnSafe) 设置<p>是否恶意意图</p><p>枚举值：</p><ul><li>1： 恶意</li><li>0： 正常</li></ul>
  */
-class DescribeDynamicInstanceListRequest extends AbstractModel
+class IntentDetectResult extends AbstractModel
 {
     /**
-     * @var string <p>emr 集群 id</p>
+     * @var integer <p>是否恶意意图</p><p>枚举值：</p><ul><li>1： 恶意</li><li>0： 正常</li></ul>
      */
-    public $InstanceId;
+    public $IsUnSafe;
 
     /**
-     * @param string $InstanceId <p>emr 集群 id</p>
+     * @param integer $IsUnSafe <p>是否恶意意图</p><p>枚举值：</p><ul><li>1： 恶意</li><li>0： 正常</li></ul>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeDynamicInstanceListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("IsUnSafe",$param) and $param["IsUnSafe"] !== null) {
+            $this->IsUnSafe = $param["IsUnSafe"];
         }
     }
 }

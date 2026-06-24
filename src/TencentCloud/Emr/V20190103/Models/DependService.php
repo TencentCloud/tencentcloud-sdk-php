@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 共用组件信息
  *
  * @method string getServiceName() 获取共用组件名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置共用组件名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取共用组件集群
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置共用组件集群
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DependService extends AbstractModel
 {
     /**
      * @var string 共用组件名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
      * @var string 共用组件集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @param string $ServiceName 共用组件名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 共用组件集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

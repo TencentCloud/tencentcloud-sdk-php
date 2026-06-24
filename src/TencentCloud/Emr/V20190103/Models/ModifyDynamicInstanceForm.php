@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyDynamicInstanceGroup(DynamicInstanceGroup $ModifyDynamicInstanceGroup) 设置<p>DynamicInstance-group级别的更新信息</p>
  * @method array getCFSTurboVolumes() 获取<p>cfs turbo挂载列表，不包含标准版</p>
  * @method void setCFSTurboVolumes(array $CFSTurboVolumes) 设置<p>cfs turbo挂载列表，不包含标准版</p>
+ * @method CustomImage getCustomImage() 获取<p>自定义镜像</p>
+ * @method void setCustomImage(CustomImage $CustomImage) 设置<p>自定义镜像</p>
+ * @method ImageInfoV2 getImageInfoV2() 获取<p>自定义镜像</p>
+ * @method void setImageInfoV2(ImageInfoV2 $ImageInfoV2) 设置<p>自定义镜像</p>
+ * @method array getGooseFSVolumes() 获取<p>GooseFS盘</p>
+ * @method void setGooseFSVolumes(array $GooseFSVolumes) 设置<p>GooseFS盘</p>
  */
 class ModifyDynamicInstanceForm extends AbstractModel
 {
@@ -122,6 +128,21 @@ class ModifyDynamicInstanceForm extends AbstractModel
     public $CFSTurboVolumes;
 
     /**
+     * @var CustomImage <p>自定义镜像</p>
+     */
+    public $CustomImage;
+
+    /**
+     * @var ImageInfoV2 <p>自定义镜像</p>
+     */
+    public $ImageInfoV2;
+
+    /**
+     * @var array <p>GooseFS盘</p>
+     */
+    public $GooseFSVolumes;
+
+    /**
      * @param integer $ModifyScope <p>更新作用域：<br>1：添加workerGroup（DynamicInstance级别）<br>2：更新存储配置（DynamicInstance级别）<br>3：更新标签配置（DynamicInstance级别）<br>4：更新高级配置（DynamicInstance级别）<br>5：更新PodCpu、PodMem（DynamicInstance-group级别）<br>6：更新PodNum、MinPodNum、MaxPodNum（DynamicInstance-group级别）<br>7：更新存储配置（DynamicInstance-group级别）<br>8：更新标签配置（DynamicInstance-group级别）</p>
      * @param DynamicInstanceGroup $AddDynamicInstanceGroup <p>添加的workerGroup信息</p>
      * @param boolean $SupportPV <p>是否支持存储配置</p>
@@ -136,6 +157,9 @@ class ModifyDynamicInstanceForm extends AbstractModel
      * @param boolean $SupportNewToken <p>是否生成新token鉴权</p>
      * @param DynamicInstanceGroup $ModifyDynamicInstanceGroup <p>DynamicInstance-group级别的更新信息</p>
      * @param array $CFSTurboVolumes <p>cfs turbo挂载列表，不包含标准版</p>
+     * @param CustomImage $CustomImage <p>自定义镜像</p>
+     * @param ImageInfoV2 $ImageInfoV2 <p>自定义镜像</p>
+     * @param array $GooseFSVolumes <p>GooseFS盘</p>
      */
     function __construct()
     {
@@ -250,6 +274,25 @@ class ModifyDynamicInstanceForm extends AbstractModel
                 $obj = new CFSTurboVolume();
                 $obj->deserialize($value);
                 array_push($this->CFSTurboVolumes, $obj);
+            }
+        }
+
+        if (array_key_exists("CustomImage",$param) and $param["CustomImage"] !== null) {
+            $this->CustomImage = new CustomImage();
+            $this->CustomImage->deserialize($param["CustomImage"]);
+        }
+
+        if (array_key_exists("ImageInfoV2",$param) and $param["ImageInfoV2"] !== null) {
+            $this->ImageInfoV2 = new ImageInfoV2();
+            $this->ImageInfoV2->deserialize($param["ImageInfoV2"]);
+        }
+
+        if (array_key_exists("GooseFSVolumes",$param) and $param["GooseFSVolumes"] !== null) {
+            $this->GooseFSVolumes = [];
+            foreach ($param["GooseFSVolumes"] as $key => $value){
+                $obj = new GooseFSVolume();
+                $obj->deserialize($value);
+                array_push($this->GooseFSVolumes, $obj);
             }
         }
     }

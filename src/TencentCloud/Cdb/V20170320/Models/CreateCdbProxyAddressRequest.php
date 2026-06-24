@@ -20,178 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCdbProxyAddress请求参数结构体
  *
- * @method string getProxyGroupId() 获取代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method string getWeightMode() 获取权重分配模式，
-系统自动分配："system"， 自定义："custom"
- * @method void setWeightMode(string $WeightMode) 设置权重分配模式，
-系统自动分配："system"， 自定义："custom"
- * @method boolean getIsKickOut() 获取是否开启延迟剔除，取值："true" | "false"
- * @method void setIsKickOut(boolean $IsKickOut) 设置是否开启延迟剔除，取值："true" | "false"
- * @method integer getMinCount() 获取最小保留数量，最小取值：0
- * @method void setMinCount(integer $MinCount) 设置最小保留数量，最小取值：0
- * @method integer getMaxDelay() 获取延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
- * @method void setMaxDelay(integer $MaxDelay) 设置延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
- * @method boolean getFailOver() 获取是否开启故障转移，取值："true" | "false"
- * @method void setFailOver(boolean $FailOver) 设置是否开启故障转移，取值："true" | "false"
- * @method boolean getAutoAddRo() 获取是否自动添加RO，取值："true" | "false"
- * @method void setAutoAddRo(boolean $AutoAddRo) 设置是否自动添加RO，取值："true" | "false"
- * @method boolean getReadOnly() 获取是否是只读，取值："true" | "false"
- * @method void setReadOnly(boolean $ReadOnly) 设置是否是只读，取值："true" | "false"
- * @method boolean getTransSplit() 获取是否开启事务分离，取值："true" | "false"
- * @method void setTransSplit(boolean $TransSplit) 设置是否开启事务分离，取值："true" | "false"
- * @method array getProxyAllocation() 获取读写权重分配
- * @method void setProxyAllocation(array $ProxyAllocation) 设置读写权重分配
- * @method string getUniqVpcId() 获取私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
- * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
- * @method string getUniqSubnetId() 获取私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
- * @method boolean getConnectionPool() 获取是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
- * @method void setConnectionPool(boolean $ConnectionPool) 设置是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
- * @method string getDesc() 获取描述
- * @method void setDesc(string $Desc) 设置描述
- * @method string getVip() 获取IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
- * @method void setVip(string $Vip) 设置IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
- * @method integer getVPort() 获取端口。默认值3306。
- * @method void setVPort(integer $VPort) 设置端口。默认值3306。
- * @method array getSecurityGroup() 获取安全组
- * @method void setSecurityGroup(array $SecurityGroup) 设置安全组
- * @method string getConnectionPoolType() 获取连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
- * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
- * @method boolean getAutoLoadBalance() 获取是否开启自适应负载均衡。默认关闭。
- * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置是否开启自适应负载均衡。默认关闭。
- * @method string getAccessMode() 获取接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
- * @method void setAccessMode(string $AccessMode) 设置接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
+ * @method string getProxyGroupId() 获取<p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置<p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+ * @method string getWeightMode() 获取<p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+ * @method void setWeightMode(string $WeightMode) 设置<p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+ * @method boolean getIsKickOut() 获取<p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method void setIsKickOut(boolean $IsKickOut) 设置<p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method integer getMinCount() 获取<p>最小保留数量，最小取值：0</p>
+ * @method void setMinCount(integer $MinCount) 设置<p>最小保留数量，最小取值：0</p>
+ * @method integer getMaxDelay() 获取<p>延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。</p>
+ * @method void setMaxDelay(integer $MaxDelay) 设置<p>延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。</p>
+ * @method boolean getFailOver() 获取<p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method void setFailOver(boolean $FailOver) 设置<p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method boolean getAutoAddRo() 获取<p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method void setAutoAddRo(boolean $AutoAddRo) 设置<p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method boolean getReadOnly() 获取<p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method void setReadOnly(boolean $ReadOnly) 设置<p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method boolean getTransSplit() 获取<p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method void setTransSplit(boolean $TransSplit) 设置<p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method array getProxyAllocation() 获取<p>读写权重分配</p>
+ * @method void setProxyAllocation(array $ProxyAllocation) 设置<p>读写权重分配</p>
+ * @method string getUniqVpcId() 获取<p>私有网络 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+ * @method void setUniqVpcId(string $UniqVpcId) 设置<p>私有网络 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+ * @method string getUniqSubnetId() 获取<p>私有子网 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置<p>私有子网 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+ * @method boolean getConnectionPool() 获取<p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
+ * @method void setConnectionPool(boolean $ConnectionPool) 设置<p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
+ * @method string getDesc() 获取<p>描述</p>
+ * @method void setDesc(string $Desc) 设置<p>描述</p>
+ * @method string getVip() 获取<p>IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。</p>
+ * @method void setVip(string $Vip) 设置<p>IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。</p>
+ * @method integer getVPort() 获取<p>端口。默认值3306。</p>
+ * @method void setVPort(integer $VPort) 设置<p>端口。默认值3306。</p>
+ * @method array getSecurityGroup() 获取<p>安全组</p>
+ * @method void setSecurityGroup(array $SecurityGroup) 设置<p>安全组</p>
+ * @method string getConnectionPoolType() 获取<p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
+ * @method void setConnectionPoolType(string $ConnectionPoolType) 设置<p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
+ * @method boolean getAutoLoadBalance() 获取<p>是否开启自适应负载均衡。默认关闭。</p>
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置<p>是否开启自适应负载均衡。默认关闭。</p>
+ * @method string getAccessMode() 获取<p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
+ * @method void setAccessMode(string $AccessMode) 设置<p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
  */
 class CreateCdbProxyAddressRequest extends AbstractModel
 {
     /**
-     * @var string 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @var string <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var string 权重分配模式，
-系统自动分配："system"， 自定义："custom"
+     * @var string <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public $WeightMode;
 
     /**
-     * @var boolean 是否开启延迟剔除，取值："true" | "false"
+     * @var boolean <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public $IsKickOut;
 
     /**
-     * @var integer 最小保留数量，最小取值：0
+     * @var integer <p>最小保留数量，最小取值：0</p>
      */
     public $MinCount;
 
     /**
-     * @var integer 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
+     * @var integer <p>延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。</p>
      */
     public $MaxDelay;
 
     /**
-     * @var boolean 是否开启故障转移，取值："true" | "false"
+     * @var boolean <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public $FailOver;
 
     /**
-     * @var boolean 是否自动添加RO，取值："true" | "false"
+     * @var boolean <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public $AutoAddRo;
 
     /**
-     * @var boolean 是否是只读，取值："true" | "false"
+     * @var boolean <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public $ReadOnly;
 
     /**
-     * @var boolean 是否开启事务分离，取值："true" | "false"
+     * @var boolean <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public $TransSplit;
 
     /**
-     * @var array 读写权重分配
+     * @var array <p>读写权重分配</p>
      */
     public $ProxyAllocation;
 
     /**
-     * @var string 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @var string <p>私有网络 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @var string <p>私有子网 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var boolean 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
+     * @var boolean <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
      */
     public $ConnectionPool;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Desc;
 
     /**
-     * @var string IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
+     * @var string <p>IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。</p>
      */
     public $Vip;
 
     /**
-     * @var integer 端口。默认值3306。
+     * @var integer <p>端口。默认值3306。</p>
      */
     public $VPort;
 
     /**
-     * @var array 安全组
+     * @var array <p>安全组</p>
      */
     public $SecurityGroup;
 
     /**
-     * @var string 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
+     * @var string <p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
      */
     public $ConnectionPoolType;
 
     /**
-     * @var boolean 是否开启自适应负载均衡。默认关闭。
+     * @var boolean <p>是否开启自适应负载均衡。默认关闭。</p>
      */
     public $AutoLoadBalance;
 
     /**
-     * @var string 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
+     * @var string <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
      */
     public $AccessMode;
 
     /**
-     * @param string $ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param string $WeightMode 权重分配模式，
-系统自动分配："system"， 自定义："custom"
-     * @param boolean $IsKickOut 是否开启延迟剔除，取值："true" | "false"
-     * @param integer $MinCount 最小保留数量，最小取值：0
-     * @param integer $MaxDelay 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
-     * @param boolean $FailOver 是否开启故障转移，取值："true" | "false"
-     * @param boolean $AutoAddRo 是否自动添加RO，取值："true" | "false"
-     * @param boolean $ReadOnly 是否是只读，取值："true" | "false"
-     * @param boolean $TransSplit 是否开启事务分离，取值："true" | "false"
-     * @param array $ProxyAllocation 读写权重分配
-     * @param string $UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-     * @param string $UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-     * @param boolean $ConnectionPool 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
-     * @param string $Desc 描述
-     * @param string $Vip IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
-     * @param integer $VPort 端口。默认值3306。
-     * @param array $SecurityGroup 安全组
-     * @param string $ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
-     * @param boolean $AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
-     * @param string $AccessMode 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
+     * @param string $ProxyGroupId <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+     * @param string $WeightMode <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+     * @param boolean $IsKickOut <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param integer $MinCount <p>最小保留数量，最小取值：0</p>
+     * @param integer $MaxDelay <p>延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。</p>
+     * @param boolean $FailOver <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param boolean $AutoAddRo <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param boolean $ReadOnly <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param boolean $TransSplit <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param array $ProxyAllocation <p>读写权重分配</p>
+     * @param string $UniqVpcId <p>私有网络 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+     * @param string $UniqSubnetId <p>私有子网 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+     * @param boolean $ConnectionPool <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
+     * @param string $Desc <p>描述</p>
+     * @param string $Vip <p>IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。</p>
+     * @param integer $VPort <p>端口。默认值3306。</p>
+     * @param array $SecurityGroup <p>安全组</p>
+     * @param string $ConnectionPoolType <p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
+     * @param boolean $AutoLoadBalance <p>是否开启自适应负载均衡。默认关闭。</p>
+     * @param string $AccessMode <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
      */
     function __construct()
     {

@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFlowStatisticByName请求参数结构体
  *
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method integer getBeginTime() 获取开始查找时间
- * @method void setBeginTime(integer $BeginTime) 设置开始查找时间
- * @method integer getEndTime() 获取截止时间
- * @method void setEndTime(integer $EndTime) 设置截止时间
- * @method integer getType() 获取流量种类（1：上行流量，2：下行流量，3：上下行总和）
- * @method void setType(integer $Type) 设置流量种类（1：上行流量，2：下行流量，3：上下行总和）
- * @method integer getTimeGranularity() 获取时间粒度（1：按小时统计，2：按天统计）
- * @method void setTimeGranularity(integer $TimeGranularity) 设置时间粒度（1：按小时统计，2：按天统计）
- * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
- * @method void setAccessRegion(string $AccessRegion) 设置接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
- * @method integer getGatewayType() 获取网关类型。0：公有云网关；1：自有网关。不传默认为0。
- * @method void setGatewayType(integer $GatewayType) 设置网关类型。0：公有云网关；1：自有网关。不传默认为0。
- * @method array getDeviceList() 获取设备名列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
- * @method void setDeviceList(array $DeviceList) 设置设备名列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method integer getBeginTime() 获取<p>开始查找时间</p>
+ * @method void setBeginTime(integer $BeginTime) 设置<p>开始查找时间</p>
+ * @method integer getEndTime() 获取<p>截止时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>截止时间</p>
+ * @method integer getType() 获取<p>流量种类（1：上行流量，2：下行流量，3：上下行总和）</p>
+ * @method void setType(integer $Type) 设置<p>流量种类（1：上行流量，2：下行流量，3：上下行总和）</p>
+ * @method integer getTimeGranularity() 获取<p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
+ * @method void setTimeGranularity(integer $TimeGranularity) 设置<p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
+ * @method string getAccessRegion() 获取<p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
+ * @method void setAccessRegion(string $AccessRegion) 设置<p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
+ * @method integer getGatewayType() 获取<p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
+ * @method void setGatewayType(integer $GatewayType) 设置<p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
+ * @method array getDeviceList() 获取<p>设备名列表，用于查询多设备流量，该字段启用时DeviceId可传&quot;-1&quot;</p>
+ * @method void setDeviceList(array $DeviceList) 设置<p>设备名列表，用于查询多设备流量，该字段启用时DeviceId可传&quot;-1&quot;</p>
  */
 class GetFlowStatisticByNameRequest extends AbstractModel
 {
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var integer 开始查找时间
+     * @var integer <p>开始查找时间</p>
      */
     public $BeginTime;
 
     /**
-     * @var integer 截止时间
+     * @var integer <p>截止时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 流量种类（1：上行流量，2：下行流量，3：上下行总和）
+     * @var integer <p>流量种类（1：上行流量，2：下行流量，3：上下行总和）</p>
      */
     public $Type;
 
     /**
-     * @var integer 时间粒度（1：按小时统计，2：按天统计）
+     * @var integer <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
      */
     public $TimeGranularity;
 
     /**
-     * @var string 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+     * @var string <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
      */
     public $AccessRegion;
 
     /**
-     * @var integer 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * @var integer <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
      */
     public $GatewayType;
 
     /**
-     * @var array 设备名列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
+     * @var array <p>设备名列表，用于查询多设备流量，该字段启用时DeviceId可传&quot;-1&quot;</p>
      */
     public $DeviceList;
 
     /**
-     * @param string $DeviceName 设备名称
-     * @param integer $BeginTime 开始查找时间
-     * @param integer $EndTime 截止时间
-     * @param integer $Type 流量种类（1：上行流量，2：下行流量，3：上下行总和）
-     * @param integer $TimeGranularity 时间粒度（1：按小时统计，2：按天统计）
-     * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
-     * @param integer $GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
-     * @param array $DeviceList 设备名列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
+     * @param string $DeviceName <p>设备名称</p>
+     * @param integer $BeginTime <p>开始查找时间</p>
+     * @param integer $EndTime <p>截止时间</p>
+     * @param integer $Type <p>流量种类（1：上行流量，2：下行流量，3：上下行总和）</p>
+     * @param integer $TimeGranularity <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
+     * @param string $AccessRegion <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
+     * @param integer $GatewayType <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
+     * @param array $DeviceList <p>设备名列表，用于查询多设备流量，该字段启用时DeviceId可传&quot;-1&quot;</p>
      */
     function __construct()
     {

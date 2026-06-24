@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取<p>任务id</p>
  * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
- * @method string getTaskStatus() 获取<p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
- * @method void setTaskStatus(string $TaskStatus) 设置<p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
+ * @method string getTaskStatus() 获取<p>任务状态</p><p>枚举值：</p><ul><li>init： 排队中</li><li>running： 执行中</li><li>finished： 已完成</li><li>failed： 失败</li><li>stopping： 停止中</li><li>stopped： 已停止</li></ul>
+ * @method void setTaskStatus(string $TaskStatus) 设置<p>任务状态</p><p>枚举值：</p><ul><li>init： 排队中</li><li>running： 执行中</li><li>finished： 已完成</li><li>failed： 失败</li><li>stopping： 停止中</li><li>stopped： 已停止</li></ul>
  * @method string getCreationTime() 获取<p>任务创建时间</p>
  * @method void setCreationTime(string $CreationTime) 设置<p>任务创建时间</p>
  * @method string getFinishTime() 获取<p>任务结束时间</p>
@@ -69,7 +69,7 @@ class LifecycleDataTaskInfo extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
+     * @var string <p>任务状态</p><p>枚举值：</p><ul><li>init： 排队中</li><li>running： 执行中</li><li>finished： 已完成</li><li>failed： 失败</li><li>stopping： 停止中</li><li>stopped： 已停止</li></ul>
      */
     public $TaskStatus;
 
@@ -165,7 +165,7 @@ class LifecycleDataTaskInfo extends AbstractModel
 
     /**
      * @param string $TaskId <p>任务id</p>
-     * @param string $TaskStatus <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
+     * @param string $TaskStatus <p>任务状态</p><p>枚举值：</p><ul><li>init： 排队中</li><li>running： 执行中</li><li>finished： 已完成</li><li>failed： 失败</li><li>stopping： 停止中</li><li>stopped： 已停止</li></ul>
      * @param string $CreationTime <p>任务创建时间</p>
      * @param string $FinishTime <p>任务结束时间</p>
      * @param integer $FileTotalCount <p>文件总数</p>

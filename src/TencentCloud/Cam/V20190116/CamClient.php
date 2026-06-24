@@ -82,6 +82,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\GetUserAppIdResponse GetUserAppId(Models\GetUserAppIdRequest $req) 获取用户AppId
  * @method Models\GetUserPermissionBoundaryResponse GetUserPermissionBoundary(Models\GetUserPermissionBoundaryRequest $req) 获取用户权限边界
  * @method Models\ListAccessKeysResponse ListAccessKeys(Models\ListAccessKeysRequest $req) 列出指定CAM用户的访问密钥
+ * @method Models\ListAccountsResponse ListAccounts(Models\ListAccountsRequest $req) 查询所有账号列表
  * @method Models\ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(Models\ListAttachedGroupPoliciesRequest $req) 本接口（ListAttachedGroupPolicies）可用于查询用户组关联的策略列表。
  * @method Models\ListAttachedRolePoliciesResponse ListAttachedRolePolicies(Models\ListAttachedRolePoliciesRequest $req) 本接口（ListAttachedRolePolicies）用于获取角色绑定的策略列表。
  * @method Models\ListAttachedUserAllPoliciesResponse ListAttachedUserAllPolicies(Models\ListAttachedUserAllPoliciesRequest $req) 列出用户关联的策略（包括随组关联）

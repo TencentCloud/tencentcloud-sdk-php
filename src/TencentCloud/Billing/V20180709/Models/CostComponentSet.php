@@ -20,106 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 消耗组件明细
  *
- * @method string getComponentCodeName() 获取组件类型名称
- * @method void setComponentCodeName(string $ComponentCodeName) 设置组件类型名称
- * @method string getItemCodeName() 获取组件名称
- * @method void setItemCodeName(string $ItemCodeName) 设置组件名称
- * @method string getSinglePrice() 获取刊例价
- * @method void setSinglePrice(string $SinglePrice) 设置刊例价
- * @method string getPriceUnit() 获取刊例价单位
- * @method void setPriceUnit(string $PriceUnit) 设置刊例价单位
- * @method string getUsedAmount() 获取用量
- * @method void setUsedAmount(string $UsedAmount) 设置用量
- * @method string getUsedAmountUnit() 获取用量单位
- * @method void setUsedAmountUnit(string $UsedAmountUnit) 设置用量单位
- * @method string getCost() 获取原价
- * @method void setCost(string $Cost) 设置原价
- * @method string getDiscount() 获取折扣
- * @method void setDiscount(string $Discount) 设置折扣
- * @method string getRealCost() 获取折后价
- * @method void setRealCost(string $RealCost) 设置折后价
- * @method string getVoucherPayAmount() 获取代金券支付金额
- * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券支付金额
- * @method string getCashPayAmount() 获取现金支付金额
- * @method void setCashPayAmount(string $CashPayAmount) 设置现金支付金额
- * @method string getIncentivePayAmount() 获取赠送金支付金额
- * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金支付金额
+ * @method string getComponentCodeName() 获取<p>组件类型名称</p>
+ * @method void setComponentCodeName(string $ComponentCodeName) 设置<p>组件类型名称</p>
+ * @method string getItemCodeName() 获取<p>组件名称</p>
+ * @method void setItemCodeName(string $ItemCodeName) 设置<p>组件名称</p>
+ * @method string getSinglePrice() 获取<p>刊例价</p>
+ * @method void setSinglePrice(string $SinglePrice) 设置<p>刊例价</p>
+ * @method string getPriceUnit() 获取<p>刊例价单位</p>
+ * @method void setPriceUnit(string $PriceUnit) 设置<p>刊例价单位</p>
+ * @method string getUsedAmount() 获取<p>用量</p>
+ * @method void setUsedAmount(string $UsedAmount) 设置<p>用量</p>
+ * @method string getUsedAmountUnit() 获取<p>用量单位</p>
+ * @method void setUsedAmountUnit(string $UsedAmountUnit) 设置<p>用量单位</p>
+ * @method string getCost() 获取<p>原价</p>
+ * @method void setCost(string $Cost) 设置<p>原价</p>
+ * @method string getDiscount() 获取<p>折扣</p>
+ * @method void setDiscount(string $Discount) 设置<p>折扣</p>
+ * @method string getRealCost() 获取<p>折后价</p>
+ * @method void setRealCost(string $RealCost) 设置<p>折后价</p>
+ * @method string getVoucherPayAmount() 获取<p>代金券支付金额</p>
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置<p>代金券支付金额</p>
+ * @method string getCashPayAmount() 获取<p>现金支付金额</p>
+ * @method void setCashPayAmount(string $CashPayAmount) 设置<p>现金支付金额</p>
+ * @method string getIncentivePayAmount() 获取<p>赠送金支付金额</p>
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置<p>赠送金支付金额</p>
+ * @method string getComponentCode() 获取<p>组件类型code</p>
+ * @method void setComponentCode(string $ComponentCode) 设置<p>组件类型code</p>
+ * @method string getItemCode() 获取<p>组件名称code</p>
+ * @method void setItemCode(string $ItemCode) 设置<p>组件名称code</p>
  */
 class CostComponentSet extends AbstractModel
 {
     /**
-     * @var string 组件类型名称
+     * @var string <p>组件类型名称</p>
      */
     public $ComponentCodeName;
 
     /**
-     * @var string 组件名称
+     * @var string <p>组件名称</p>
      */
     public $ItemCodeName;
 
     /**
-     * @var string 刊例价
+     * @var string <p>刊例价</p>
      */
     public $SinglePrice;
 
     /**
-     * @var string 刊例价单位
+     * @var string <p>刊例价单位</p>
      */
     public $PriceUnit;
 
     /**
-     * @var string 用量
+     * @var string <p>用量</p>
      */
     public $UsedAmount;
 
     /**
-     * @var string 用量单位
+     * @var string <p>用量单位</p>
      */
     public $UsedAmountUnit;
 
     /**
-     * @var string 原价
+     * @var string <p>原价</p>
      */
     public $Cost;
 
     /**
-     * @var string 折扣
+     * @var string <p>折扣</p>
      */
     public $Discount;
 
     /**
-     * @var string 折后价
+     * @var string <p>折后价</p>
      */
     public $RealCost;
 
     /**
-     * @var string 代金券支付金额
+     * @var string <p>代金券支付金额</p>
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string 现金支付金额
+     * @var string <p>现金支付金额</p>
      */
     public $CashPayAmount;
 
     /**
-     * @var string 赠送金支付金额
+     * @var string <p>赠送金支付金额</p>
      */
     public $IncentivePayAmount;
 
     /**
-     * @param string $ComponentCodeName 组件类型名称
-     * @param string $ItemCodeName 组件名称
-     * @param string $SinglePrice 刊例价
-     * @param string $PriceUnit 刊例价单位
-     * @param string $UsedAmount 用量
-     * @param string $UsedAmountUnit 用量单位
-     * @param string $Cost 原价
-     * @param string $Discount 折扣
-     * @param string $RealCost 折后价
-     * @param string $VoucherPayAmount 代金券支付金额
-     * @param string $CashPayAmount 现金支付金额
-     * @param string $IncentivePayAmount 赠送金支付金额
+     * @var string <p>组件类型code</p>
+     */
+    public $ComponentCode;
+
+    /**
+     * @var string <p>组件名称code</p>
+     */
+    public $ItemCode;
+
+    /**
+     * @param string $ComponentCodeName <p>组件类型名称</p>
+     * @param string $ItemCodeName <p>组件名称</p>
+     * @param string $SinglePrice <p>刊例价</p>
+     * @param string $PriceUnit <p>刊例价单位</p>
+     * @param string $UsedAmount <p>用量</p>
+     * @param string $UsedAmountUnit <p>用量单位</p>
+     * @param string $Cost <p>原价</p>
+     * @param string $Discount <p>折扣</p>
+     * @param string $RealCost <p>折后价</p>
+     * @param string $VoucherPayAmount <p>代金券支付金额</p>
+     * @param string $CashPayAmount <p>现金支付金额</p>
+     * @param string $IncentivePayAmount <p>赠送金支付金额</p>
+     * @param string $ComponentCode <p>组件类型code</p>
+     * @param string $ItemCode <p>组件名称code</p>
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class CostComponentSet extends AbstractModel
 
         if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
             $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        }
+
+        if (array_key_exists("ComponentCode",$param) and $param["ComponentCode"] !== null) {
+            $this->ComponentCode = $param["ComponentCode"];
+        }
+
+        if (array_key_exists("ItemCode",$param) and $param["ItemCode"] !== null) {
+            $this->ItemCode = $param["ItemCode"];
         }
     }
 }

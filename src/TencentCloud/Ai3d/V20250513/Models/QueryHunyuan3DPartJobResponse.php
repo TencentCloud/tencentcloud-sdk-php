@@ -20,38 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryHunyuan3DPartJob返回参数结构体
  *
- * @method string getStatus() 获取任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。
- * @method void setStatus(string $Status) 设置任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。
- * @method string getErrorCode() 获取错误码。
- * @method void setErrorCode(string $ErrorCode) 设置错误码。
- * @method string getErrorMessage() 获取错误信息。
- * @method void setErrorMessage(string $ErrorMessage) 设置错误信息。
- * @method array getResultFile3Ds() 获取生成文件的URL地址，有效期1天。
- * @method void setResultFile3Ds(array $ResultFile3Ds) 设置生成文件的URL地址，有效期1天。
+ * @method string getStatus() 获取<p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。</p>
+ * @method void setStatus(string $Status) 设置<p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。</p>
+ * @method string getErrorCode() 获取<p>错误码。</p>
+ * @method void setErrorCode(string $ErrorCode) 设置<p>错误码。</p>
+ * @method string getErrorMessage() 获取<p>错误信息。</p>
+ * @method void setErrorMessage(string $ErrorMessage) 设置<p>错误信息。</p>
+ * @method array getResultFile3Ds() 获取<p>生成文件的URL地址，有效期1天。</p>
+ * @method void setResultFile3Ds(array $ResultFile3Ds) 设置<p>生成文件的URL地址，有效期1天。</p>
+ * @method string getPartSegmentationInfo() 获取<p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+ * @method void setPartSegmentationInfo(string $PartSegmentationInfo) 设置<p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class QueryHunyuan3DPartJobResponse extends AbstractModel
 {
     /**
-     * @var string 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。
+     * @var string <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。</p>
      */
     public $Status;
 
     /**
-     * @var string 错误码。
+     * @var string <p>错误码。</p>
      */
     public $ErrorCode;
 
     /**
-     * @var string 错误信息。
+     * @var string <p>错误信息。</p>
      */
     public $ErrorMessage;
 
     /**
-     * @var array 生成文件的URL地址，有效期1天。
+     * @var array <p>生成文件的URL地址，有效期1天。</p>
      */
     public $ResultFile3Ds;
+
+    /**
+     * @var string <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     */
+    public $PartSegmentationInfo;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +66,11 @@ class QueryHunyuan3DPartJobResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。
-     * @param string $ErrorCode 错误码。
-     * @param string $ErrorMessage 错误信息。
-     * @param array $ResultFile3Ds 生成文件的URL地址，有效期1天。
+     * @param string $Status <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。</p>
+     * @param string $ErrorCode <p>错误码。</p>
+     * @param string $ErrorMessage <p>错误信息。</p>
+     * @param array $ResultFile3Ds <p>生成文件的URL地址，有效期1天。</p>
+     * @param string $PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +105,10 @@ class QueryHunyuan3DPartJobResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResultFile3Ds, $obj);
             }
+        }
+
+        if (array_key_exists("PartSegmentationInfo",$param) and $param["PartSegmentationInfo"] !== null) {
+            $this->PartSegmentationInfo = $param["PartSegmentationInfo"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

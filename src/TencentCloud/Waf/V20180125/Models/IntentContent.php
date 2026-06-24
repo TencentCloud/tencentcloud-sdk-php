@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Emr\V20190103\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDynamicInstanceList请求参数结构体
+ * 大模型意图检测的请求内容
  *
- * @method string getInstanceId() 获取<p>emr 集群 id</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>emr 集群 id</p>
+ * @method string getAgentTrace() 获取<p>agent的轨迹内容，参考用例</p>
+ * @method void setAgentTrace(string $AgentTrace) 设置<p>agent的轨迹内容，参考用例</p>
  */
-class DescribeDynamicInstanceListRequest extends AbstractModel
+class IntentContent extends AbstractModel
 {
     /**
-     * @var string <p>emr 集群 id</p>
+     * @var string <p>agent的轨迹内容，参考用例</p>
      */
-    public $InstanceId;
+    public $AgentTrace;
 
     /**
-     * @param string $InstanceId <p>emr 集群 id</p>
+     * @param string $AgentTrace <p>agent的轨迹内容，参考用例</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeDynamicInstanceListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("AgentTrace",$param) and $param["AgentTrace"] !== null) {
+            $this->AgentTrace = $param["AgentTrace"];
         }
     }
 }

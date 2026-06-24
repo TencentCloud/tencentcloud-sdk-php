@@ -20,115 +20,115 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccountBalance返回参数结构体
  *
- * @method integer getBalance() 获取接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
- * @method void setBalance(integer $Balance) 设置接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
- * @method integer getUin() 获取查询的用户Uin
- * @method void setUin(integer $Uin) 设置查询的用户Uin
- * @method float getRealBalance() 获取当前真实可用余额,单位 分
- * @method void setRealBalance(float $RealBalance) 设置当前真实可用余额,单位 分
- * @method float getCashAccountBalance() 获取现金账户余额,单位 分
- * @method void setCashAccountBalance(float $CashAccountBalance) 设置现金账户余额,单位 分
- * @method float getIncomeIntoAccountBalance() 获取收益转入账户余额,单位 分
- * @method void setIncomeIntoAccountBalance(float $IncomeIntoAccountBalance) 设置收益转入账户余额,单位 分
- * @method float getPresentAccountBalance() 获取赠送账户余额,单位 分
- * @method void setPresentAccountBalance(float $PresentAccountBalance) 设置赠送账户余额,单位 分
- * @method float getFreezeAmount() 获取冻结金额,单位 分
- * @method void setFreezeAmount(float $FreezeAmount) 设置冻结金额,单位 分
- * @method float getOweAmount() 获取欠费金额,单位 分
- * @method void setOweAmount(float $OweAmount) 设置欠费金额,单位 分
- * @method boolean getIsAllowArrears() 获取是否允许欠费消费
- * @method void setIsAllowArrears(boolean $IsAllowArrears) 设置是否允许欠费消费
- * @method boolean getIsCreditLimited() 获取是否限制信用额度
- * @method void setIsCreditLimited(boolean $IsCreditLimited) 设置是否限制信用额度
- * @method float getCreditAmount() 获取信用额度,单位 分
- * @method void setCreditAmount(float $CreditAmount) 设置信用额度,单位 分
- * @method float getCreditBalance() 获取可用信用额度,单位 分
- * @method void setCreditBalance(float $CreditBalance) 设置可用信用额度,单位 分
- * @method float getRealCreditBalance() 获取真实可用信用额度,单位 分
- * @method void setRealCreditBalance(float $RealCreditBalance) 设置真实可用信用额度,单位 分
- * @method float getTempCredit() 获取临时额度，单位 分
- * @method void setTempCredit(float $TempCredit) 设置临时额度，单位 分
- * @method array getTempAmountInfoList() 获取临时额度详情
- * @method void setTempAmountInfoList(array $TempAmountInfoList) 设置临时额度详情
+ * @method integer getBalance() 获取<p>接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分</p>
+ * @method void setBalance(integer $Balance) 设置<p>接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分</p>
+ * @method integer getUin() 获取<p>查询的用户Uin</p>
+ * @method void setUin(integer $Uin) 设置<p>查询的用户Uin</p>
+ * @method float getRealBalance() 获取<p>当前真实可用余额,单位 分。RealBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance-FreezeAmount-OweAmount</p><p>单位：分</p>
+ * @method void setRealBalance(float $RealBalance) 设置<p>当前真实可用余额,单位 分。RealBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance-FreezeAmount-OweAmount</p><p>单位：分</p>
+ * @method float getCashAccountBalance() 获取<p>现金账户余额,单位 分</p>
+ * @method void setCashAccountBalance(float $CashAccountBalance) 设置<p>现金账户余额,单位 分</p>
+ * @method float getIncomeIntoAccountBalance() 获取<p>收益转入账户余额,单位 分</p>
+ * @method void setIncomeIntoAccountBalance(float $IncomeIntoAccountBalance) 设置<p>收益转入账户余额,单位 分</p>
+ * @method float getPresentAccountBalance() 获取<p>赠送账户余额,单位 分</p>
+ * @method void setPresentAccountBalance(float $PresentAccountBalance) 设置<p>赠送账户余额,单位 分</p>
+ * @method float getFreezeAmount() 获取<p>冻结金额,单位 分</p>
+ * @method void setFreezeAmount(float $FreezeAmount) 设置<p>冻结金额,单位 分</p>
+ * @method float getOweAmount() 获取<p>欠费金额,单位 分</p>
+ * @method void setOweAmount(float $OweAmount) 设置<p>欠费金额,单位 分</p>
+ * @method boolean getIsAllowArrears() 获取<p>是否允许欠费消费</p>
+ * @method void setIsAllowArrears(boolean $IsAllowArrears) 设置<p>是否允许欠费消费</p>
+ * @method boolean getIsCreditLimited() 获取<p>是否限制信用额度</p>
+ * @method void setIsCreditLimited(boolean $IsCreditLimited) 设置<p>是否限制信用额度</p>
+ * @method float getCreditAmount() 获取<p>信用额度,单位 分</p>
+ * @method void setCreditAmount(float $CreditAmount) 设置<p>信用额度,单位 分</p>
+ * @method float getCreditBalance() 获取<p>可用信用额度,单位 分。CreditBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance+CreditAmount-OweAmount</p><p>单位：分</p>
+ * @method void setCreditBalance(float $CreditBalance) 设置<p>可用信用额度,单位 分。CreditBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance+CreditAmount-OweAmount</p><p>单位：分</p>
+ * @method float getRealCreditBalance() 获取<p>真实可用信用额度,单位 分。RealCreditBalance=CreditBalance-FreezeAmount</p><p>单位：分</p>
+ * @method void setRealCreditBalance(float $RealCreditBalance) 设置<p>真实可用信用额度,单位 分。RealCreditBalance=CreditBalance-FreezeAmount</p><p>单位：分</p>
+ * @method float getTempCredit() 获取<p>临时额度，单位 分</p>
+ * @method void setTempCredit(float $TempCredit) 设置<p>临时额度，单位 分</p>
+ * @method array getTempAmountInfoList() 获取<p>临时额度详情</p>
+ * @method void setTempAmountInfoList(array $TempAmountInfoList) 设置<p>临时额度详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAccountBalanceResponse extends AbstractModel
 {
     /**
-     * @var integer 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
+     * @var integer <p>接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分</p>
      */
     public $Balance;
 
     /**
-     * @var integer 查询的用户Uin
+     * @var integer <p>查询的用户Uin</p>
      */
     public $Uin;
 
     /**
-     * @var float 当前真实可用余额,单位 分
+     * @var float <p>当前真实可用余额,单位 分。RealBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance-FreezeAmount-OweAmount</p><p>单位：分</p>
      */
     public $RealBalance;
 
     /**
-     * @var float 现金账户余额,单位 分
+     * @var float <p>现金账户余额,单位 分</p>
      */
     public $CashAccountBalance;
 
     /**
-     * @var float 收益转入账户余额,单位 分
+     * @var float <p>收益转入账户余额,单位 分</p>
      */
     public $IncomeIntoAccountBalance;
 
     /**
-     * @var float 赠送账户余额,单位 分
+     * @var float <p>赠送账户余额,单位 分</p>
      */
     public $PresentAccountBalance;
 
     /**
-     * @var float 冻结金额,单位 分
+     * @var float <p>冻结金额,单位 分</p>
      */
     public $FreezeAmount;
 
     /**
-     * @var float 欠费金额,单位 分
+     * @var float <p>欠费金额,单位 分</p>
      */
     public $OweAmount;
 
     /**
-     * @var boolean 是否允许欠费消费
+     * @var boolean <p>是否允许欠费消费</p>
      * @deprecated
      */
     public $IsAllowArrears;
 
     /**
-     * @var boolean 是否限制信用额度
+     * @var boolean <p>是否限制信用额度</p>
      * @deprecated
      */
     public $IsCreditLimited;
 
     /**
-     * @var float 信用额度,单位 分
+     * @var float <p>信用额度,单位 分</p>
      */
     public $CreditAmount;
 
     /**
-     * @var float 可用信用额度,单位 分
+     * @var float <p>可用信用额度,单位 分。CreditBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance+CreditAmount-OweAmount</p><p>单位：分</p>
      */
     public $CreditBalance;
 
     /**
-     * @var float 真实可用信用额度,单位 分
+     * @var float <p>真实可用信用额度,单位 分。RealCreditBalance=CreditBalance-FreezeAmount</p><p>单位：分</p>
      */
     public $RealCreditBalance;
 
     /**
-     * @var float 临时额度，单位 分
+     * @var float <p>临时额度，单位 分</p>
      */
     public $TempCredit;
 
     /**
-     * @var array 临时额度详情
+     * @var array <p>临时额度详情</p>
      */
     public $TempAmountInfoList;
 
@@ -138,21 +138,21 @@ class DescribeAccountBalanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Balance 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
-     * @param integer $Uin 查询的用户Uin
-     * @param float $RealBalance 当前真实可用余额,单位 分
-     * @param float $CashAccountBalance 现金账户余额,单位 分
-     * @param float $IncomeIntoAccountBalance 收益转入账户余额,单位 分
-     * @param float $PresentAccountBalance 赠送账户余额,单位 分
-     * @param float $FreezeAmount 冻结金额,单位 分
-     * @param float $OweAmount 欠费金额,单位 分
-     * @param boolean $IsAllowArrears 是否允许欠费消费
-     * @param boolean $IsCreditLimited 是否限制信用额度
-     * @param float $CreditAmount 信用额度,单位 分
-     * @param float $CreditBalance 可用信用额度,单位 分
-     * @param float $RealCreditBalance 真实可用信用额度,单位 分
-     * @param float $TempCredit 临时额度，单位 分
-     * @param array $TempAmountInfoList 临时额度详情
+     * @param integer $Balance <p>接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分</p>
+     * @param integer $Uin <p>查询的用户Uin</p>
+     * @param float $RealBalance <p>当前真实可用余额,单位 分。RealBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance-FreezeAmount-OweAmount</p><p>单位：分</p>
+     * @param float $CashAccountBalance <p>现金账户余额,单位 分</p>
+     * @param float $IncomeIntoAccountBalance <p>收益转入账户余额,单位 分</p>
+     * @param float $PresentAccountBalance <p>赠送账户余额,单位 分</p>
+     * @param float $FreezeAmount <p>冻结金额,单位 分</p>
+     * @param float $OweAmount <p>欠费金额,单位 分</p>
+     * @param boolean $IsAllowArrears <p>是否允许欠费消费</p>
+     * @param boolean $IsCreditLimited <p>是否限制信用额度</p>
+     * @param float $CreditAmount <p>信用额度,单位 分</p>
+     * @param float $CreditBalance <p>可用信用额度,单位 分。CreditBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance+CreditAmount-OweAmount</p><p>单位：分</p>
+     * @param float $RealCreditBalance <p>真实可用信用额度,单位 分。RealCreditBalance=CreditBalance-FreezeAmount</p><p>单位：分</p>
+     * @param float $TempCredit <p>临时额度，单位 分</p>
+     * @param array $TempAmountInfoList <p>临时额度详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

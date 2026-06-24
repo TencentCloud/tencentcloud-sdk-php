@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageVolumeDetail(array $StorageVolumeDetail) 设置<p>存储卷详情</p>
  * @method array getCFSTurboVolumes() 获取<p>cfs trubo存储卷</p>
  * @method void setCFSTurboVolumes(array $CFSTurboVolumes) 设置<p>cfs trubo存储卷</p>
+ * @method array getGooseFSVolumes() 获取<p>goosefs volume挂载信息</p>
+ * @method void setGooseFSVolumes(array $GooseFSVolumes) 设置<p>goosefs volume挂载信息</p>
  */
 class PersistentVolume extends AbstractModel
 {
@@ -73,6 +75,11 @@ class PersistentVolume extends AbstractModel
     public $CFSTurboVolumes;
 
     /**
+     * @var array <p>goosefs volume挂载信息</p>
+     */
+    public $GooseFSVolumes;
+
+    /**
      * @param array $CBSVolumes <p>cbs 存储卷</p>
      * @param array $CFSVolumes <p>cfs存储卷</p>
      * @param array $COSVolumes <p>cos 存储卷</p>
@@ -80,6 +87,7 @@ class PersistentVolume extends AbstractModel
      * @param array $VolumeMounts <p>存储卷列表</p>
      * @param array $StorageVolumeDetail <p>存储卷详情</p>
      * @param array $CFSTurboVolumes <p>cfs trubo存储卷</p>
+     * @param array $GooseFSVolumes <p>goosefs volume挂载信息</p>
      */
     function __construct()
     {
@@ -149,6 +157,15 @@ class PersistentVolume extends AbstractModel
                 $obj = new CFSTurboVolume();
                 $obj->deserialize($value);
                 array_push($this->CFSTurboVolumes, $obj);
+            }
+        }
+
+        if (array_key_exists("GooseFSVolumes",$param) and $param["GooseFSVolumes"] !== null) {
+            $this->GooseFSVolumes = [];
+            foreach ($param["GooseFSVolumes"] as $key => $value){
+                $obj = new GooseFSVolume();
+                $obj->deserialize($value);
+                array_push($this->GooseFSVolumes, $obj);
             }
         }
     }

@@ -20,38 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyClusterTags请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getTags() 获取集群标签:
-[{"TagKey":"env","TagValue":"dev"}]}]
- * @method void setTags(array $Tags) 设置集群标签:
-[{"TagKey":"env","TagValue":"dev"}]}]
- * @method boolean getSyncSubresource() 获取是否同步集群内子资源标签
- * @method void setSyncSubresource(boolean $SyncSubresource) 设置是否同步集群内子资源标签
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method array getTags() 获取<p>集群标签:<br>[{&quot;TagKey&quot;:&quot;env&quot;,&quot;TagValue&quot;:&quot;dev&quot;}]}]</p>
+ * @method void setTags(array $Tags) 设置<p>集群标签:<br>[{&quot;TagKey&quot;:&quot;env&quot;,&quot;TagValue&quot;:&quot;dev&quot;}]}]</p>
+ * @method boolean getSyncSubresource() 获取<p>是否同步集群内子资源标签</p>
+ * @method void setSyncSubresource(boolean $SyncSubresource) 设置<p>是否同步集群内子资源标签</p>
+ * @method boolean getSyncNodePoolTags() 获取<p>是否同步节点池标签</p>
+ * @method void setSyncNodePoolTags(boolean $SyncNodePoolTags) 设置<p>是否同步节点池标签</p>
  */
 class ModifyClusterTagsRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var array 集群标签:
-[{"TagKey":"env","TagValue":"dev"}]}]
+     * @var array <p>集群标签:<br>[{&quot;TagKey&quot;:&quot;env&quot;,&quot;TagValue&quot;:&quot;dev&quot;}]}]</p>
      */
     public $Tags;
 
     /**
-     * @var boolean 是否同步集群内子资源标签
+     * @var boolean <p>是否同步集群内子资源标签</p>
      */
     public $SyncSubresource;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param array $Tags 集群标签:
-[{"TagKey":"env","TagValue":"dev"}]}]
-     * @param boolean $SyncSubresource 是否同步集群内子资源标签
+     * @var boolean <p>是否同步节点池标签</p>
+     */
+    public $SyncNodePoolTags;
+
+    /**
+     * @param string $ClusterId <p>集群ID</p>
+     * @param array $Tags <p>集群标签:<br>[{&quot;TagKey&quot;:&quot;env&quot;,&quot;TagValue&quot;:&quot;dev&quot;}]}]</p>
+     * @param boolean $SyncSubresource <p>是否同步集群内子资源标签</p>
+     * @param boolean $SyncNodePoolTags <p>是否同步节点池标签</p>
      */
     function __construct()
     {
@@ -81,6 +85,10 @@ class ModifyClusterTagsRequest extends AbstractModel
 
         if (array_key_exists("SyncSubresource",$param) and $param["SyncSubresource"] !== null) {
             $this->SyncSubresource = $param["SyncSubresource"];
+        }
+
+        if (array_key_exists("SyncNodePoolTags",$param) and $param["SyncNodePoolTags"] !== null) {
+            $this->SyncNodePoolTags = $param["SyncNodePoolTags"];
         }
     }
 }

@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDynamicInstanceList返回参数结构体
  *
- * @method array getDynamicInstanceList() 获取RayCluster 集群列表
- * @method void setDynamicInstanceList(array $DynamicInstanceList) 设置RayCluster 集群列表
+ * @method array getDynamicInstanceList() 获取<p>RayCluster 集群列表</p>
+ * @method void setDynamicInstanceList(array $DynamicInstanceList) 设置<p>RayCluster 集群列表</p>
+ * @method array getWebUIInfos() 获取<p>服务访问url</p>
+ * @method void setWebUIInfos(array $WebUIInfos) 设置<p>服务访问url</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDynamicInstanceListResponse extends AbstractModel
 {
     /**
-     * @var array RayCluster 集群列表
+     * @var array <p>RayCluster 集群列表</p>
      */
     public $DynamicInstanceList;
+
+    /**
+     * @var array <p>服务访问url</p>
+     */
+    public $WebUIInfos;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeDynamicInstanceListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DynamicInstanceList RayCluster 集群列表
+     * @param array $DynamicInstanceList <p>RayCluster 集群列表</p>
+     * @param array $WebUIInfos <p>服务访问url</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,15 @@ class DescribeDynamicInstanceListResponse extends AbstractModel
                 $obj = new RayCluster();
                 $obj->deserialize($value);
                 array_push($this->DynamicInstanceList, $obj);
+            }
+        }
+
+        if (array_key_exists("WebUIInfos",$param) and $param["WebUIInfos"] !== null) {
+            $this->WebUIInfos = [];
+            foreach ($param["WebUIInfos"] as $key => $value){
+                $obj = new WebUIInfo();
+                $obj->deserialize($value);
+                array_push($this->WebUIInfos, $obj);
             }
         }
 

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuccessThreshold(integer $SuccessThreshold) 设置<p>探测失败后，最小连续成功次数才被认为成功</p>
  * @method integer getFailureThreshold() 获取<p>探测失败后，Kubernetes的重试次数</p>
  * @method void setFailureThreshold(integer $FailureThreshold) 设置<p>探测失败后，Kubernetes的重试次数</p>
+ * @method TcpSocketConfig getTcpSocket() 获取<p>TCP Socket请求进行健康检查</p>
+ * @method void setTcpSocket(TcpSocketConfig $TcpSocket) 设置<p>TCP Socket请求进行健康检查</p>
  */
 class ProbeConfig extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ProbeConfig extends AbstractModel
     public $FailureThreshold;
 
     /**
+     * @var TcpSocketConfig <p>TCP Socket请求进行健康检查</p>
+     */
+    public $TcpSocket;
+
+    /**
      * @param HttpConfig $HttpGet <p>HTTP GET请求进行健康检查</p>
      * @param integer $InitialDelaySeconds <p>容器启动后，等待多少秒开始第一次探测</p>
      * @param integer $PeriodSeconds <p>每次执行探测的间隔时间（秒）</p>
      * @param integer $TimeoutSeconds <p>每次探测等待响应的超时时间（秒）</p>
      * @param integer $SuccessThreshold <p>探测失败后，最小连续成功次数才被认为成功</p>
      * @param integer $FailureThreshold <p>探测失败后，Kubernetes的重试次数</p>
+     * @param TcpSocketConfig $TcpSocket <p>TCP Socket请求进行健康检查</p>
      */
     function __construct()
     {
@@ -109,6 +117,11 @@ class ProbeConfig extends AbstractModel
 
         if (array_key_exists("FailureThreshold",$param) and $param["FailureThreshold"] !== null) {
             $this->FailureThreshold = $param["FailureThreshold"];
+        }
+
+        if (array_key_exists("TcpSocket",$param) and $param["TcpSocket"] !== null) {
+            $this->TcpSocket = new TcpSocketConfig();
+            $this->TcpSocket->deserialize($param["TcpSocket"]);
         }
     }
 }

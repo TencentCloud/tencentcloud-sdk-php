@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodLabels(array $PodLabels) 设置<p>pod标签</p>
  * @method boolean getEnableDefaultRayCluster() 获取<p>是否创建默认raycluster</p>
  * @method void setEnableDefaultRayCluster(boolean $EnableDefaultRayCluster) 设置<p>是否创建默认raycluster</p>
+ * @method ImageInfoV2 getImageInfoV2() 获取<p>自定义镜像</p>
+ * @method void setImageInfoV2(ImageInfoV2 $ImageInfoV2) 设置<p>自定义镜像</p>
+ * @method DynamicInstanceForm getDynamicInstanceForm() 获取<p>创建动态实例参数</p>
+ * @method void setDynamicInstanceForm(DynamicInstanceForm $DynamicInstanceForm) 设置<p>创建动态实例参数</p>
  */
 class CloudResource extends AbstractModel
 {
@@ -144,6 +148,16 @@ class CloudResource extends AbstractModel
     public $EnableDefaultRayCluster;
 
     /**
+     * @var ImageInfoV2 <p>自定义镜像</p>
+     */
+    public $ImageInfoV2;
+
+    /**
+     * @var DynamicInstanceForm <p>创建动态实例参数</p>
+     */
+    public $DynamicInstanceForm;
+
+    /**
      * @param string $ComponentName <p>组件角色名</p>
      * @param integer $PodNumber <p>pod请求数量</p>
      * @param integer $LimitCpu <p>Cpu请求数量最大值</p>
@@ -164,6 +178,8 @@ class CloudResource extends AbstractModel
      * @param array $TopologySpreadConstraints <p>拓扑分布约束</p>
      * @param array $PodLabels <p>pod标签</p>
      * @param boolean $EnableDefaultRayCluster <p>是否创建默认raycluster</p>
+     * @param ImageInfoV2 $ImageInfoV2 <p>自定义镜像</p>
+     * @param DynamicInstanceForm $DynamicInstanceForm <p>创建动态实例参数</p>
      */
     function __construct()
     {
@@ -261,6 +277,16 @@ class CloudResource extends AbstractModel
 
         if (array_key_exists("EnableDefaultRayCluster",$param) and $param["EnableDefaultRayCluster"] !== null) {
             $this->EnableDefaultRayCluster = $param["EnableDefaultRayCluster"];
+        }
+
+        if (array_key_exists("ImageInfoV2",$param) and $param["ImageInfoV2"] !== null) {
+            $this->ImageInfoV2 = new ImageInfoV2();
+            $this->ImageInfoV2->deserialize($param["ImageInfoV2"]);
+        }
+
+        if (array_key_exists("DynamicInstanceForm",$param) and $param["DynamicInstanceForm"] !== null) {
+            $this->DynamicInstanceForm = new DynamicInstanceForm();
+            $this->DynamicInstanceForm->deserialize($param["DynamicInstanceForm"]);
         }
     }
 }

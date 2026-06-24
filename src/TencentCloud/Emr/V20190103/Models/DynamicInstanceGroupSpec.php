@@ -20,142 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DynamicInstanceGroupSpec
  *
- * @method string getName() 获取group 名称
- * @method void setName(string $Name) 设置group 名称
- * @method integer getPodCount() 获取pod 数量
- * @method void setPodCount(integer $PodCount) 设置pod 数量
- * @method integer getMinNodes() 获取最小节点数
- * @method void setMinNodes(integer $MinNodes) 设置最小节点数
- * @method integer getMaxNodes() 获取最大节点数
- * @method void setMaxNodes(integer $MaxNodes) 设置最大节点数
- * @method boolean getStorageConfigEnabled() 获取 是否开启存储配置
- * @method void setStorageConfigEnabled(boolean $StorageConfigEnabled) 设置 是否开启存储配置
- * @method string getGroupType() 获取headGroup:head;
-workerGroup:worker
- * @method void setGroupType(string $GroupType) 设置headGroup:head;
-workerGroup:worker
- * @method integer getCpu() 获取CPU 核数
- * @method void setCpu(integer $Cpu) 设置CPU 核数
- * @method integer getMemSize() 获取内存(GB)
- * @method void setMemSize(integer $MemSize) 设置内存(GB)
- * @method string getGpuType() 获取GPU类型
- * @method void setGpuType(string $GpuType) 设置GPU类型
- * @method integer getGpu() 获取GPU核数
- * @method void setGpu(integer $Gpu) 设置GPU核数
- * @method string getResourceLabels() 获取资源标签
- * @method void setResourceLabels(string $ResourceLabels) 设置资源标签
- * @method array getEnv() 获取环境变量
- * @method void setEnv(array $Env) 设置环境变量
- * @method array getLabels() 获取标签
- * @method void setLabels(array $Labels) 设置标签
- * @method array getTolerations() 获取容忍度
- * @method void setTolerations(array $Tolerations) 设置容忍度
- * @method string getScheduler() 获取调度策略
- * @method void setScheduler(string $Scheduler) 设置调度策略
- * @method PersistentVolume getPersistentVolume() 获取卷目录
- * @method void setPersistentVolume(PersistentVolume $PersistentVolume) 设置卷目录
+ * @method string getName() 获取<p>group 名称</p>
+ * @method void setName(string $Name) 设置<p>group 名称</p>
+ * @method integer getPodCount() 获取<p>pod 数量</p>
+ * @method void setPodCount(integer $PodCount) 设置<p>pod 数量</p>
+ * @method integer getMinNodes() 获取<p>最小节点数</p>
+ * @method void setMinNodes(integer $MinNodes) 设置<p>最小节点数</p>
+ * @method integer getMaxNodes() 获取<p>最大节点数</p>
+ * @method void setMaxNodes(integer $MaxNodes) 设置<p>最大节点数</p>
+ * @method boolean getStorageConfigEnabled() 获取<p>是否开启存储配置</p>
+ * @method void setStorageConfigEnabled(boolean $StorageConfigEnabled) 设置<p>是否开启存储配置</p>
+ * @method string getGroupType() 获取<p>headGroup:head;<br>workerGroup:worker</p>
+ * @method void setGroupType(string $GroupType) 设置<p>headGroup:head;<br>workerGroup:worker</p>
+ * @method integer getCpu() 获取<p>CPU 核数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>CPU 核数</p>
+ * @method integer getMemSize() 获取<p>内存(GB)</p>
+ * @method void setMemSize(integer $MemSize) 设置<p>内存(GB)</p>
+ * @method string getGpuType() 获取<p>GPU类型</p>
+ * @method void setGpuType(string $GpuType) 设置<p>GPU类型</p>
+ * @method integer getGpu() 获取<p>GPU核数</p>
+ * @method void setGpu(integer $Gpu) 设置<p>GPU核数</p>
+ * @method string getResourceLabels() 获取<p>资源标签</p>
+ * @method void setResourceLabels(string $ResourceLabels) 设置<p>资源标签</p>
+ * @method array getEnv() 获取<p>环境变量</p>
+ * @method void setEnv(array $Env) 设置<p>环境变量</p>
+ * @method array getLabels() 获取<p>标签</p>
+ * @method void setLabels(array $Labels) 设置<p>标签</p>
+ * @method array getTolerations() 获取<p>容忍度</p>
+ * @method void setTolerations(array $Tolerations) 设置<p>容忍度</p>
+ * @method string getScheduler() 获取<p>调度策略</p>
+ * @method void setScheduler(string $Scheduler) 设置<p>调度策略</p>
+ * @method PersistentVolume getPersistentVolume() 获取<p>卷目录</p>
+ * @method void setPersistentVolume(PersistentVolume $PersistentVolume) 设置<p>卷目录</p>
+ * @method string getPreStartCommand() 获取<p>前置启动命令</p>
+ * @method void setPreStartCommand(string $PreStartCommand) 设置<p>前置启动命令</p>
+ * @method string getRayStartParams() 获取<p>RayStart启动参数</p>
+ * @method void setRayStartParams(string $RayStartParams) 设置<p>RayStart启动参数</p>
  */
 class DynamicInstanceGroupSpec extends AbstractModel
 {
     /**
-     * @var string group 名称
+     * @var string <p>group 名称</p>
      */
     public $Name;
 
     /**
-     * @var integer pod 数量
+     * @var integer <p>pod 数量</p>
      */
     public $PodCount;
 
     /**
-     * @var integer 最小节点数
+     * @var integer <p>最小节点数</p>
      */
     public $MinNodes;
 
     /**
-     * @var integer 最大节点数
+     * @var integer <p>最大节点数</p>
      */
     public $MaxNodes;
 
     /**
-     * @var boolean  是否开启存储配置
+     * @var boolean <p>是否开启存储配置</p>
      */
     public $StorageConfigEnabled;
 
     /**
-     * @var string headGroup:head;
-workerGroup:worker
+     * @var string <p>headGroup:head;<br>workerGroup:worker</p>
      */
     public $GroupType;
 
     /**
-     * @var integer CPU 核数
+     * @var integer <p>CPU 核数</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 内存(GB)
+     * @var integer <p>内存(GB)</p>
      */
     public $MemSize;
 
     /**
-     * @var string GPU类型
+     * @var string <p>GPU类型</p>
      */
     public $GpuType;
 
     /**
-     * @var integer GPU核数
+     * @var integer <p>GPU核数</p>
      */
     public $Gpu;
 
     /**
-     * @var string 资源标签
+     * @var string <p>资源标签</p>
      */
     public $ResourceLabels;
 
     /**
-     * @var array 环境变量
+     * @var array <p>环境变量</p>
      */
     public $Env;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
      */
     public $Labels;
 
     /**
-     * @var array 容忍度
+     * @var array <p>容忍度</p>
      */
     public $Tolerations;
 
     /**
-     * @var string 调度策略
+     * @var string <p>调度策略</p>
      */
     public $Scheduler;
 
     /**
-     * @var PersistentVolume 卷目录
+     * @var PersistentVolume <p>卷目录</p>
      */
     public $PersistentVolume;
 
     /**
-     * @param string $Name group 名称
-     * @param integer $PodCount pod 数量
-     * @param integer $MinNodes 最小节点数
-     * @param integer $MaxNodes 最大节点数
-     * @param boolean $StorageConfigEnabled  是否开启存储配置
-     * @param string $GroupType headGroup:head;
-workerGroup:worker
-     * @param integer $Cpu CPU 核数
-     * @param integer $MemSize 内存(GB)
-     * @param string $GpuType GPU类型
-     * @param integer $Gpu GPU核数
-     * @param string $ResourceLabels 资源标签
-     * @param array $Env 环境变量
-     * @param array $Labels 标签
-     * @param array $Tolerations 容忍度
-     * @param string $Scheduler 调度策略
-     * @param PersistentVolume $PersistentVolume 卷目录
+     * @var string <p>前置启动命令</p>
+     */
+    public $PreStartCommand;
+
+    /**
+     * @var string <p>RayStart启动参数</p>
+     */
+    public $RayStartParams;
+
+    /**
+     * @param string $Name <p>group 名称</p>
+     * @param integer $PodCount <p>pod 数量</p>
+     * @param integer $MinNodes <p>最小节点数</p>
+     * @param integer $MaxNodes <p>最大节点数</p>
+     * @param boolean $StorageConfigEnabled <p>是否开启存储配置</p>
+     * @param string $GroupType <p>headGroup:head;<br>workerGroup:worker</p>
+     * @param integer $Cpu <p>CPU 核数</p>
+     * @param integer $MemSize <p>内存(GB)</p>
+     * @param string $GpuType <p>GPU类型</p>
+     * @param integer $Gpu <p>GPU核数</p>
+     * @param string $ResourceLabels <p>资源标签</p>
+     * @param array $Env <p>环境变量</p>
+     * @param array $Labels <p>标签</p>
+     * @param array $Tolerations <p>容忍度</p>
+     * @param string $Scheduler <p>调度策略</p>
+     * @param PersistentVolume $PersistentVolume <p>卷目录</p>
+     * @param string $PreStartCommand <p>前置启动命令</p>
+     * @param string $RayStartParams <p>RayStart启动参数</p>
      */
     function __construct()
     {
@@ -248,6 +260,14 @@ workerGroup:worker
         if (array_key_exists("PersistentVolume",$param) and $param["PersistentVolume"] !== null) {
             $this->PersistentVolume = new PersistentVolume();
             $this->PersistentVolume->deserialize($param["PersistentVolume"]);
+        }
+
+        if (array_key_exists("PreStartCommand",$param) and $param["PreStartCommand"] !== null) {
+            $this->PreStartCommand = $param["PreStartCommand"];
+        }
+
+        if (array_key_exists("RayStartParams",$param) and $param["RayStartParams"] !== null) {
+            $this->RayStartParams = $param["RayStartParams"];
         }
     }
 }

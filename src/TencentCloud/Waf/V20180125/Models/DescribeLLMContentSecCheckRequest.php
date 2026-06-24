@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLLMContentSecCheck请求参数结构体
  *
- * @method string getServiceId() 获取<p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
- * @method void setServiceId(string $ServiceId) 设置<p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
+ * @method string getServiceId() 获取<p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
  * @method integer getType() 获取<p>流量类型，是入向流量还是出向流量，入向：1，出向：2；入向和出向必填</p>
  * @method void setType(integer $Type) 设置<p>流量类型，是入向流量还是出向流量，入向：1，出向：2；入向和出向必填</p>
  * @method string getInstanceId() 获取<p>实例id，必传</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>实例id，必传</p>
  * @method string getContent() 获取<p>要审核的内容</p>
  * @method void setContent(string $Content) 设置<p>要审核的内容</p>
- * @method string getChatId() 获取<p>对话的id</p>
- * @method void setChatId(string $ChatId) 设置<p>对话的id</p>
+ * @method string getChatId() 获取<p>一问一答的对话的id</p>
+ * @method void setChatId(string $ChatId) 设置<p>一问一答的对话的id</p>
  * @method string getUserId() 获取<p>标识用户的id，限速使用，不填，则限速会不生效</p>
  * @method void setUserId(string $UserId) 设置<p>标识用户的id，限速使用，不填，则限速会不生效</p>
  * @method integer getTokenUsage() 获取<p>token使用量，不填，会采用默认的token计算方法，计算的是模型的消耗，因为该值时在出向方向上添加，即Type=2</p>
@@ -40,11 +40,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setToolName(string $ToolName) 设置<p>tool_call 场景工具名称</p>
  * @method string getToolArgs() 获取<p>tool_call 场景工具参数</p>
  * @method void setToolArgs(string $ToolArgs) 设置<p>tool_call 场景工具参数</p>
+ * @method string getSessionId() 获取<p>多轮对话的id</p>
+ * @method void setSessionId(string $SessionId) 设置<p>多轮对话的id</p>
+ * @method IntentContent getIntentContent() 获取<p>意图检测请求内容</p>
+ * @method void setIntentContent(IntentContent $IntentContent) 设置<p>意图检测请求内容</p>
  */
 class DescribeLLMContentSecCheckRequest extends AbstractModel
 {
     /**
-     * @var string <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
+     * @var string <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      */
     public $ServiceId;
 
@@ -64,7 +68,7 @@ class DescribeLLMContentSecCheckRequest extends AbstractModel
     public $Content;
 
     /**
-     * @var string <p>对话的id</p>
+     * @var string <p>一问一答的对话的id</p>
      */
     public $ChatId;
 
@@ -94,16 +98,28 @@ class DescribeLLMContentSecCheckRequest extends AbstractModel
     public $ToolArgs;
 
     /**
-     * @param string $ServiceId <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
+     * @var string <p>多轮对话的id</p>
+     */
+    public $SessionId;
+
+    /**
+     * @var IntentContent <p>意图检测请求内容</p>
+     */
+    public $IntentContent;
+
+    /**
+     * @param string $ServiceId <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      * @param integer $Type <p>流量类型，是入向流量还是出向流量，入向：1，出向：2；入向和出向必填</p>
      * @param string $InstanceId <p>实例id，必传</p>
      * @param string $Content <p>要审核的内容</p>
-     * @param string $ChatId <p>对话的id</p>
+     * @param string $ChatId <p>一问一答的对话的id</p>
      * @param string $UserId <p>标识用户的id，限速使用，不填，则限速会不生效</p>
      * @param integer $TokenUsage <p>token使用量，不填，会采用默认的token计算方法，计算的是模型的消耗，因为该值时在出向方向上添加，即Type=2</p>
      * @param string $ImageEncode <p>图片base64编码后的数据,body大小最大支持10M</p>
      * @param string $ToolName <p>tool_call 场景工具名称</p>
      * @param string $ToolArgs <p>tool_call 场景工具参数</p>
+     * @param string $SessionId <p>多轮对话的id</p>
+     * @param IntentContent $IntentContent <p>意图检测请求内容</p>
      */
     function __construct()
     {
@@ -156,6 +172,15 @@ class DescribeLLMContentSecCheckRequest extends AbstractModel
 
         if (array_key_exists("ToolArgs",$param) and $param["ToolArgs"] !== null) {
             $this->ToolArgs = $param["ToolArgs"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("IntentContent",$param) and $param["IntentContent"] !== null) {
+            $this->IntentContent = new IntentContent();
+            $this->IntentContent->deserialize($param["IntentContent"]);
         }
     }
 }

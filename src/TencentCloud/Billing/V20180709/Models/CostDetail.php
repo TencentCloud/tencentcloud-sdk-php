@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) 设置<p>使用者UIN：实际使用资源的账号 ID</p>
  * @method string getPayTime() 获取<p>扣费时间：结算扣费时间</p>
  * @method void setPayTime(string $PayTime) 设置<p>扣费时间：结算扣费时间</p>
+ * @method string getBusinessCode() 获取<p>产品名称code</p>
+ * @method void setBusinessCode(string $BusinessCode) 设置<p>产品名称code</p>
  */
 class CostDetail extends AbstractModel
 {
@@ -164,6 +166,11 @@ class CostDetail extends AbstractModel
     public $PayTime;
 
     /**
+     * @var string <p>产品名称code</p>
+     */
+    public $BusinessCode;
+
+    /**
      * @param string $PayerUin <p>支付者uin</p>
      * @param string $BusinessCodeName <p>产品名称</p>
      * @param string $ProductCodeName <p>子产品名称</p>
@@ -184,6 +191,7 @@ class CostDetail extends AbstractModel
      * @param string $OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
      * @param string $OwnerUin <p>使用者UIN：实际使用资源的账号 ID</p>
      * @param string $PayTime <p>扣费时间：结算扣费时间</p>
+     * @param string $BusinessCode <p>产品名称code</p>
      */
     function __construct()
     {
@@ -286,6 +294,10 @@ class CostDetail extends AbstractModel
 
         if (array_key_exists("PayTime",$param) and $param["PayTime"] !== null) {
             $this->PayTime = $param["PayTime"];
+        }
+
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
         }
     }
 }

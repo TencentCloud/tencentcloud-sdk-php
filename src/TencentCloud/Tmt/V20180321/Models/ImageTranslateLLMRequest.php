@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(string $Target) 设置<p>目标语言，支持语言列表：</p><ul><li>中文：zh</li><li>繁体（中国台湾）：zh-TW</li><li>繁体（中国香港）：zh-HK</li><li>英文：en</li><li>日语：ja</li><li>韩语：ko</li><li>泰语：th</li><li>越南语：vi</li><li>俄语：ru</li><li>德语：de</li><li>法语：fr</li><li>阿拉伯语：ar</li><li>西班牙语：es</li><li>意大利语：it</li><li>印度尼西亚语：id</li><li>马来西亚语：ms</li><li>葡萄牙语：pt</li><li>土耳其语：tr<br>-</li></ul>
  * @method string getUrl() 获取<p>输入图 Url。 使用Url的时候，Data参数需要传入&quot;&quot;。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。</p>
  * @method void setUrl(string $Url) 设置<p>输入图 Url。 使用Url的时候，Data参数需要传入&quot;&quot;。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。</p>
+ * @method integer getMode() 获取<p>调用模式。</p><p>枚举值：</p><ul><li>0： 端到端图片翻译大模型pro版</li><li>1： 端到端图片翻译大模型lite版</li></ul><p>默认值：0</p>
+ * @method void setMode(integer $Mode) 设置<p>调用模式。</p><p>枚举值：</p><ul><li>0： 端到端图片翻译大模型pro版</li><li>1： 端到端图片翻译大模型lite版</li></ul><p>默认值：0</p>
  */
 class ImageTranslateLLMRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ImageTranslateLLMRequest extends AbstractModel
     public $Url;
 
     /**
+     * @var integer <p>调用模式。</p><p>枚举值：</p><ul><li>0： 端到端图片翻译大模型pro版</li><li>1： 端到端图片翻译大模型lite版</li></ul><p>默认值：0</p>
+     */
+    public $Mode;
+
+    /**
      * @param string $Data <p>图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。</p>
      * @param string $Target <p>目标语言，支持语言列表：</p><ul><li>中文：zh</li><li>繁体（中国台湾）：zh-TW</li><li>繁体（中国香港）：zh-HK</li><li>英文：en</li><li>日语：ja</li><li>韩语：ko</li><li>泰语：th</li><li>越南语：vi</li><li>俄语：ru</li><li>德语：de</li><li>法语：fr</li><li>阿拉伯语：ar</li><li>西班牙语：es</li><li>意大利语：it</li><li>印度尼西亚语：id</li><li>马来西亚语：ms</li><li>葡萄牙语：pt</li><li>土耳其语：tr<br>-</li></ul>
      * @param string $Url <p>输入图 Url。 使用Url的时候，Data参数需要传入&quot;&quot;。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。</p>
+     * @param integer $Mode <p>调用模式。</p><p>枚举值：</p><ul><li>0： 端到端图片翻译大模型pro版</li><li>1： 端到端图片翻译大模型lite版</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ImageTranslateLLMRequest extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
     }
 }

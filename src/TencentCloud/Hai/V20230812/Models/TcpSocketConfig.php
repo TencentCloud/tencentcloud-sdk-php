@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Emr\V20190103\Models;
+namespace TencentCloud\Hai\V20230812\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDynamicInstanceList请求参数结构体
+ * 推理服务TcpSocket的配置
  *
- * @method string getInstanceId() 获取<p>emr 集群 id</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>emr 集群 id</p>
+ * @method integer getPort() 获取
+ * @method void setPort(integer $Port) 设置
  */
-class DescribeDynamicInstanceListRequest extends AbstractModel
+class TcpSocketConfig extends AbstractModel
 {
     /**
-     * @var string <p>emr 集群 id</p>
+     * @var integer 
      */
-    public $InstanceId;
+    public $Port;
 
     /**
-     * @param string $InstanceId <p>emr 集群 id</p>
+     * @param integer $Port 
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeDynamicInstanceListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
     }
 }

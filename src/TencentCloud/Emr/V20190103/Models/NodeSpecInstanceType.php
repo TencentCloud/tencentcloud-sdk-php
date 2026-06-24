@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuotaNum(integer $QuotaNum) 设置<p>配额数量</p>
  * @method string getQuotaUnit() 获取<p>配额单位</p>
  * @method void setQuotaUnit(string $QuotaUnit) 设置<p>配额单位</p>
+ * @method boolean getNeedHpcClusterId() 获取<p>是否需要提供高性能计算集群</p>
+ * @method void setNeedHpcClusterId(boolean $NeedHpcClusterId) 设置<p>是否需要提供高性能计算集群</p>
+ * @method boolean getIsGpuInstance() 获取<p>是否是GPU机型</p>
+ * @method void setIsGpuInstance(boolean $IsGpuInstance) 设置<p>是否是GPU机型</p>
  */
 class NodeSpecInstanceType extends AbstractModel
 {
@@ -197,6 +201,16 @@ class NodeSpecInstanceType extends AbstractModel
     public $QuotaUnit;
 
     /**
+     * @var boolean <p>是否需要提供高性能计算集群</p>
+     */
+    public $NeedHpcClusterId;
+
+    /**
+     * @var boolean <p>是否是GPU机型</p>
+     */
+    public $IsGpuInstance;
+
+    /**
      * @param string $InstanceType <p>规格</p>
      * @param integer $Cpu <p>4</p>
      * @param integer $Memory <p>8，单位G</p>
@@ -224,6 +238,8 @@ class NodeSpecInstanceType extends AbstractModel
      * @param string $GpuDesc <p>GPU信息</p>
      * @param integer $QuotaNum <p>配额数量</p>
      * @param string $QuotaUnit <p>配额单位</p>
+     * @param boolean $NeedHpcClusterId <p>是否需要提供高性能计算集群</p>
+     * @param boolean $IsGpuInstance <p>是否是GPU机型</p>
      */
     function __construct()
     {
@@ -343,6 +359,14 @@ class NodeSpecInstanceType extends AbstractModel
 
         if (array_key_exists("QuotaUnit",$param) and $param["QuotaUnit"] !== null) {
             $this->QuotaUnit = $param["QuotaUnit"];
+        }
+
+        if (array_key_exists("NeedHpcClusterId",$param) and $param["NeedHpcClusterId"] !== null) {
+            $this->NeedHpcClusterId = $param["NeedHpcClusterId"];
+        }
+
+        if (array_key_exists("IsGpuInstance",$param) and $param["IsGpuInstance"] !== null) {
+            $this->IsGpuInstance = $param["IsGpuInstance"];
         }
     }
 }

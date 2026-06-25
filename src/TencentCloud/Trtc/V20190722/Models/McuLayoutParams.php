@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 混流布局参数。
  *
- * @method integer getMixLayoutMode() 获取布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
- * @method void setMixLayoutMode(integer $MixLayoutMode) 设置布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
- * @method integer getPureAudioHoldPlaceMode() 获取纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。
- * @method void setPureAudioHoldPlaceMode(integer $PureAudioHoldPlaceMode) 设置纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。
- * @method array getMixLayoutList() 获取自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
- * @method void setMixLayoutList(array $MixLayoutList) 设置自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
- * @method MaxVideoUser getMaxVideoUser() 获取指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
- * @method void setMaxVideoUser(MaxVideoUser $MaxVideoUser) 设置指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
- * @method integer getRenderMode() 获取屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
- * @method void setRenderMode(integer $RenderMode) 设置屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+ * @method integer getMixLayoutMode() 获取<p>布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。</p>
+ * @method void setMixLayoutMode(integer $MixLayoutMode) 设置<p>布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。</p>
+ * @method integer getPureAudioHoldPlaceMode() 获取<p>纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。</p>
+ * @method void setPureAudioHoldPlaceMode(integer $PureAudioHoldPlaceMode) 设置<p>纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。</p>
+ * @method array getMixLayoutList() 获取<p>自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。</p>
+ * @method void setMixLayoutList(array $MixLayoutList) 设置<p>自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。</p>
+ * @method MaxVideoUser getMaxVideoUser() 获取<p>指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。</p>
+ * @method void setMaxVideoUser(MaxVideoUser $MaxVideoUser) 设置<p>指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。</p>
+ * @method integer getRenderMode() 获取<p>屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底</p>
+ * @method void setRenderMode(integer $RenderMode) 设置<p>屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底</p>
+ * @method integer getEnableStreamSEI() 获取<p>是否保留上行sei，1：保留 0：不保留，只对动态布局生效，自定义布局不生效</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+ * @method void setEnableStreamSEI(integer $EnableStreamSEI) 设置<p>是否保留上行sei，1：保留 0：不保留，只对动态布局生效，自定义布局不生效</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
  */
 class McuLayoutParams extends AbstractModel
 {
     /**
-     * @var integer 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
+     * @var integer <p>布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。</p>
      */
     public $MixLayoutMode;
 
     /**
-     * @var integer 纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。
+     * @var integer <p>纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。</p>
      */
     public $PureAudioHoldPlaceMode;
 
     /**
-     * @var array 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
+     * @var array <p>自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。</p>
      */
     public $MixLayoutList;
 
     /**
-     * @var MaxVideoUser 指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
+     * @var MaxVideoUser <p>指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。</p>
      */
     public $MaxVideoUser;
 
     /**
-     * @var integer 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+     * @var integer <p>屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底</p>
      */
     public $RenderMode;
 
     /**
-     * @param integer $MixLayoutMode 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
-     * @param integer $PureAudioHoldPlaceMode 纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。
-     * @param array $MixLayoutList 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
-     * @param MaxVideoUser $MaxVideoUser 指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
-     * @param integer $RenderMode 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+     * @var integer <p>是否保留上行sei，1：保留 0：不保留，只对动态布局生效，自定义布局不生效</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+     */
+    public $EnableStreamSEI;
+
+    /**
+     * @param integer $MixLayoutMode <p>布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。</p>
+     * @param integer $PureAudioHoldPlaceMode <p>纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。</p>
+     * @param array $MixLayoutList <p>自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。</p>
+     * @param MaxVideoUser $MaxVideoUser <p>指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。</p>
+     * @param integer $RenderMode <p>屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底</p>
+     * @param integer $EnableStreamSEI <p>是否保留上行sei，1：保留 0：不保留，只对动态布局生效，自定义布局不生效</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
      */
     function __construct()
     {
@@ -102,6 +110,10 @@ class McuLayoutParams extends AbstractModel
 
         if (array_key_exists("RenderMode",$param) and $param["RenderMode"] !== null) {
             $this->RenderMode = $param["RenderMode"];
+        }
+
+        if (array_key_exists("EnableStreamSEI",$param) and $param["EnableStreamSEI"] !== null) {
+            $this->EnableStreamSEI = $param["EnableStreamSEI"];
         }
     }
 }

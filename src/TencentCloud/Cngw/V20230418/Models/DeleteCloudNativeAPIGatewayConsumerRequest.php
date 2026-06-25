@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apigateway\V20180808\Models;
+namespace TencentCloud\Cngw\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeApiApp请求参数结构体
+ * DeleteCloudNativeAPIGatewayConsumer请求参数结构体
  *
- * @method string getApiAppId() 获取应用ID。
- * @method void setApiAppId(string $ApiAppId) 设置应用ID。
+ * @method string getGatewayId() 获取网关实例id
+ * @method void setGatewayId(string $GatewayId) 设置网关实例id
+ * @method string getConsumerId() 获取消费者ID
+ * @method void setConsumerId(string $ConsumerId) 设置消费者ID
  */
-class DescribeApiAppRequest extends AbstractModel
+class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID。
+     * @var string 网关实例id
      */
-    public $ApiAppId;
+    public $GatewayId;
 
     /**
-     * @param string $ApiAppId 应用ID。
+     * @var string 消费者ID
+     */
+    public $ConsumerId;
+
+    /**
+     * @param string $GatewayId 网关实例id
+     * @param string $ConsumerId 消费者ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeApiAppRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApiAppId",$param) and $param["ApiAppId"] !== null) {
-            $this->ApiAppId = $param["ApiAppId"];
+        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
+            $this->GatewayId = $param["GatewayId"];
+        }
+
+        if (array_key_exists("ConsumerId",$param) and $param["ConsumerId"] !== null) {
+            $this->ConsumerId = $param["ConsumerId"];
         }
     }
 }

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLanguage(string $Language) 设置<p>需要合成的语言，默认为空，表示自动识别</p><p>枚举值：</p><ul><li>zh： 中文</li><li>en： 英文</li><li>ja： 日语</li><li>ko： 韩语</li><li>yue： 粤语</li><li>ms： 马来语</li><li>ar： 阿拉伯语</li><li>id： 印尼语</li><li>th： 泰语</li><li>vi： 越南语</li></ul>
  * @method array getPronunciationDict() 获取<p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
  * @method void setPronunciationDict(array $PronunciationDict) 设置<p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
- * @method integer getAlignmentMode() 获取<p>默认为0，0表示不生成字幕，1表示生成字幕</p>
- * @method void setAlignmentMode(integer $AlignmentMode) 设置<p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+ * @method integer getAlignmentMode() 获取<p>字幕级别</p><p>枚举值：</p><ul><li>0： 无字幕</li><li>1： 句子级别字幕</li><li>2： 词级别字幕，目前只有flow_01_ex支持</li></ul><p>默认值：0</p>
+ * @method void setAlignmentMode(integer $AlignmentMode) 设置<p>字幕级别</p><p>枚举值：</p><ul><li>0： 无字幕</li><li>1： 句子级别字幕</li><li>2： 词级别字幕，目前只有flow_01_ex支持</li></ul><p>默认值：0</p>
  * @method string getExtraParams() 获取<p>json字符串，用于拓展用法</p>
  * @method void setExtraParams(string $ExtraParams) 设置<p>json字符串，用于拓展用法</p>
  */
@@ -85,7 +85,7 @@ class TextToSpeechSSERequest extends AbstractModel
     public $PronunciationDict;
 
     /**
-     * @var integer <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+     * @var integer <p>字幕级别</p><p>枚举值：</p><ul><li>0： 无字幕</li><li>1： 句子级别字幕</li><li>2： 词级别字幕，目前只有flow_01_ex支持</li></ul><p>默认值：0</p>
      */
     public $AlignmentMode;
 
@@ -103,7 +103,7 @@ class TextToSpeechSSERequest extends AbstractModel
      * @param string $Model <p>TTS的模型，支持flow_02_turbo，flow_01_ex，默认为flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： 高性价比模型，兼顾效果和成本</li><li>flow_01_ex： 高天花板模型，能力全面，在音色克隆上表现更优</li></ul>
      * @param string $Language <p>需要合成的语言，默认为空，表示自动识别</p><p>枚举值：</p><ul><li>zh： 中文</li><li>en： 英文</li><li>ja： 日语</li><li>ko： 韩语</li><li>yue： 粤语</li><li>ms： 马来语</li><li>ar： 阿拉伯语</li><li>id： 印尼语</li><li>th： 泰语</li><li>vi： 越南语</li></ul>
      * @param array $PronunciationDict <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
-     * @param integer $AlignmentMode <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+     * @param integer $AlignmentMode <p>字幕级别</p><p>枚举值：</p><ul><li>0： 无字幕</li><li>1： 句子级别字幕</li><li>2： 词级别字幕，目前只有flow_01_ex支持</li></ul><p>默认值：0</p>
      * @param string $ExtraParams <p>json字符串，用于拓展用法</p>
      */
     function __construct()

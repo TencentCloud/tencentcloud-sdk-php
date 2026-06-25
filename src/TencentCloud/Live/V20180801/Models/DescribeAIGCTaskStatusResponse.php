@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskResultCode(integer $TaskResultCode) 设置<p>任务错误码</p>
  * @method string getTaskResultMsg() 获取<p>任务返回错误信息</p>
  * @method void setTaskResultMsg(string $TaskResultMsg) 设置<p>任务返回错误信息</p>
+ * @method string getRequestBody() 获取<p>请求参数</p>
+ * @method void setRequestBody(string $RequestBody) 设置<p>请求参数</p>
+ * @method string getTaskType() 获取<p>任务类型</p>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -85,6 +89,16 @@ class DescribeAIGCTaskStatusResponse extends AbstractModel
     public $TaskResultMsg;
 
     /**
+     * @var string <p>请求参数</p>
+     */
+    public $RequestBody;
+
+    /**
+     * @var string <p>任务类型</p>
+     */
+    public $TaskType;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -99,6 +113,8 @@ class DescribeAIGCTaskStatusResponse extends AbstractModel
      * @param string $FinishedTime <p>任务完成时间</p>
      * @param integer $TaskResultCode <p>任务错误码</p>
      * @param string $TaskResultMsg <p>任务返回错误信息</p>
+     * @param string $RequestBody <p>请求参数</p>
+     * @param string $TaskType <p>任务类型</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -144,6 +160,14 @@ class DescribeAIGCTaskStatusResponse extends AbstractModel
 
         if (array_key_exists("TaskResultMsg",$param) and $param["TaskResultMsg"] !== null) {
             $this->TaskResultMsg = $param["TaskResultMsg"];
+        }
+
+        if (array_key_exists("RequestBody",$param) and $param["RequestBody"] !== null) {
+            $this->RequestBody = $param["RequestBody"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

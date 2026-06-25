@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置负载均衡实例ID。绑定解绑时，必传此字段。
 可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel
     public $LoadBalancerIds;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $OperationType 操作类型。
 - ADD：创建
 - DELETE：删除
@@ -92,6 +99,7 @@ class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel
      * @param string $ConfigName 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段。
      * @param array $LoadBalancerIds 负载均衡实例ID。绑定解绑时，必传此字段。
 可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -124,6 +132,15 @@ class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel
 
         if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
             $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

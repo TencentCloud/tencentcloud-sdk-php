@@ -20,98 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份计划
  *
- * @method string getBackupPeriod() 获取备份周期
- * @method void setBackupPeriod(string $BackupPeriod) 设置备份周期
- * @method integer getBaseBackupRetentionPeriod() 获取数据备份保留时长。单位：天
- * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置数据备份保留时长。单位：天
- * @method string getMinBackupStartTime() 获取开始备份的最早时间
- * @method void setMinBackupStartTime(string $MinBackupStartTime) 设置开始备份的最早时间
- * @method string getMaxBackupStartTime() 获取开始备份的最晚时间
- * @method void setMaxBackupStartTime(string $MaxBackupStartTime) 设置开始备份的最晚时间
- * @method string getPlanId() 获取备份计划ID
- * @method void setPlanId(string $PlanId) 设置备份计划ID
- * @method string getPlanName() 获取备份计划自定义名称。
- * @method void setPlanName(string $PlanName) 设置备份计划自定义名称。
- * @method integer getLogBackupRetentionPeriod() 获取日志备份保留时长。单位：天
- * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) 设置日志备份保留时长。单位：天
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method string getUpdatedTime() 获取最近一次的修改时间。
- * @method void setUpdatedTime(string $UpdatedTime) 设置最近一次的修改时间。
- * @method string getPlanType() 获取备份计划类型。系统默认创建的为default，自定义的为custom。
- * @method void setPlanType(string $PlanType) 设置备份计划类型。系统默认创建的为default，自定义的为custom。
- * @method string getBackupPeriodType() 获取备份周期类型。当前支持week、month。
- * @method void setBackupPeriodType(string $BackupPeriodType) 设置备份周期类型。当前支持week、month。
+ * @method string getBackupPeriod() 获取<p>备份周期</p>
+ * @method void setBackupPeriod(string $BackupPeriod) 设置<p>备份周期</p>
+ * @method integer getBaseBackupRetentionPeriod() 获取<p>数据备份保留时长。单位：天</p>
+ * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置<p>数据备份保留时长。单位：天</p>
+ * @method string getMinBackupStartTime() 获取<p>开始备份的最早时间</p>
+ * @method void setMinBackupStartTime(string $MinBackupStartTime) 设置<p>开始备份的最早时间</p>
+ * @method string getMaxBackupStartTime() 获取<p>开始备份的最晚时间</p>
+ * @method void setMaxBackupStartTime(string $MaxBackupStartTime) 设置<p>开始备份的最晚时间</p>
+ * @method string getBackupMethod() 获取<p>备份类型</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+ * @method void setBackupMethod(string $BackupMethod) 设置<p>备份类型</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+ * @method string getPlanId() 获取<p>备份计划ID</p>
+ * @method void setPlanId(string $PlanId) 设置<p>备份计划ID</p>
+ * @method string getPlanName() 获取<p>备份计划自定义名称。</p>
+ * @method void setPlanName(string $PlanName) 设置<p>备份计划自定义名称。</p>
+ * @method integer getLogBackupRetentionPeriod() 获取<p>日志备份保留时长。单位：天</p>
+ * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) 设置<p>日志备份保留时长。单位：天</p>
+ * @method string getCreatedTime() 获取<p>创建时间。</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间。</p>
+ * @method string getUpdatedTime() 获取<p>最近一次的修改时间。</p>
+ * @method void setUpdatedTime(string $UpdatedTime) 设置<p>最近一次的修改时间。</p>
+ * @method string getPlanType() 获取<p>备份计划类型。系统默认创建的为default，自定义的为custom。</p>
+ * @method void setPlanType(string $PlanType) 设置<p>备份计划类型。系统默认创建的为default，自定义的为custom。</p>
+ * @method string getBackupPeriodType() 获取<p>备份周期类型。当前支持week、month。</p>
+ * @method void setBackupPeriodType(string $BackupPeriodType) 设置<p>备份周期类型。当前支持week、month。</p>
  */
 class BackupPlan extends AbstractModel
 {
     /**
-     * @var string 备份周期
+     * @var string <p>备份周期</p>
      */
     public $BackupPeriod;
 
     /**
-     * @var integer 数据备份保留时长。单位：天
+     * @var integer <p>数据备份保留时长。单位：天</p>
      */
     public $BaseBackupRetentionPeriod;
 
     /**
-     * @var string 开始备份的最早时间
+     * @var string <p>开始备份的最早时间</p>
      */
     public $MinBackupStartTime;
 
     /**
-     * @var string 开始备份的最晚时间
+     * @var string <p>开始备份的最晚时间</p>
      */
     public $MaxBackupStartTime;
 
     /**
-     * @var string 备份计划ID
+     * @var string <p>备份类型</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+     */
+    public $BackupMethod;
+
+    /**
+     * @var string <p>备份计划ID</p>
      */
     public $PlanId;
 
     /**
-     * @var string 备份计划自定义名称。
+     * @var string <p>备份计划自定义名称。</p>
      */
     public $PlanName;
 
     /**
-     * @var integer 日志备份保留时长。单位：天
+     * @var integer <p>日志备份保留时长。单位：天</p>
      */
     public $LogBackupRetentionPeriod;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 最近一次的修改时间。
+     * @var string <p>最近一次的修改时间。</p>
      */
     public $UpdatedTime;
 
     /**
-     * @var string 备份计划类型。系统默认创建的为default，自定义的为custom。
+     * @var string <p>备份计划类型。系统默认创建的为default，自定义的为custom。</p>
      */
     public $PlanType;
 
     /**
-     * @var string 备份周期类型。当前支持week、month。
+     * @var string <p>备份周期类型。当前支持week、month。</p>
      */
     public $BackupPeriodType;
 
     /**
-     * @param string $BackupPeriod 备份周期
-     * @param integer $BaseBackupRetentionPeriod 数据备份保留时长。单位：天
-     * @param string $MinBackupStartTime 开始备份的最早时间
-     * @param string $MaxBackupStartTime 开始备份的最晚时间
-     * @param string $PlanId 备份计划ID
-     * @param string $PlanName 备份计划自定义名称。
-     * @param integer $LogBackupRetentionPeriod 日志备份保留时长。单位：天
-     * @param string $CreatedTime 创建时间。
-     * @param string $UpdatedTime 最近一次的修改时间。
-     * @param string $PlanType 备份计划类型。系统默认创建的为default，自定义的为custom。
-     * @param string $BackupPeriodType 备份周期类型。当前支持week、month。
+     * @param string $BackupPeriod <p>备份周期</p>
+     * @param integer $BaseBackupRetentionPeriod <p>数据备份保留时长。单位：天</p>
+     * @param string $MinBackupStartTime <p>开始备份的最早时间</p>
+     * @param string $MaxBackupStartTime <p>开始备份的最晚时间</p>
+     * @param string $BackupMethod <p>备份类型</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+     * @param string $PlanId <p>备份计划ID</p>
+     * @param string $PlanName <p>备份计划自定义名称。</p>
+     * @param integer $LogBackupRetentionPeriod <p>日志备份保留时长。单位：天</p>
+     * @param string $CreatedTime <p>创建时间。</p>
+     * @param string $UpdatedTime <p>最近一次的修改时间。</p>
+     * @param string $PlanType <p>备份计划类型。系统默认创建的为default，自定义的为custom。</p>
+     * @param string $BackupPeriodType <p>备份周期类型。当前支持week、month。</p>
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ class BackupPlan extends AbstractModel
 
         if (array_key_exists("MaxBackupStartTime",$param) and $param["MaxBackupStartTime"] !== null) {
             $this->MaxBackupStartTime = $param["MaxBackupStartTime"];
+        }
+
+        if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
+            $this->BackupMethod = $param["BackupMethod"];
         }
 
         if (array_key_exists("PlanId",$param) and $param["PlanId"] !== null) {

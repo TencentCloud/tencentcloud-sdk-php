@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserDirectory返回参数结构体
  *
- * @method integer getId() 获取目录Id
- * @method void setId(integer $Id) 设置目录Id
+ * @method integer getId() 获取<p>目录Id</p>
+ * @method void setId(integer $Id) 设置<p>目录Id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateUserDirectoryResponse extends AbstractModel
 {
     /**
-     * @var integer 目录Id
+     * @var integer <p>目录Id</p>
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class CreateUserDirectoryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Id 目录Id
+     * @param integer $Id <p>目录Id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

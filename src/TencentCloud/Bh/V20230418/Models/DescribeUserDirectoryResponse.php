@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserDirectory返回参数结构体
  *
- * @method array getUserDirSet() 获取用户目录集
- * @method void setUserDirSet(array $UserDirSet) 设置用户目录集
- * @method integer getTotalCount() 获取用户目录集总数
- * @method void setTotalCount(integer $TotalCount) 设置用户目录集总数
+ * @method array getUserDirSet() 获取<p>用户目录集</p>
+ * @method void setUserDirSet(array $UserDirSet) 设置<p>用户目录集</p>
+ * @method integer getTotalCount() 获取<p>用户目录集总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>用户目录集总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUserDirectoryResponse extends AbstractModel
 {
     /**
-     * @var array 用户目录集
+     * @var array <p>用户目录集</p>
      */
     public $UserDirSet;
 
     /**
-     * @var integer 用户目录集总数
+     * @var integer <p>用户目录集总数</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeUserDirectoryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $UserDirSet 用户目录集
-     * @param integer $TotalCount 用户目录集总数
+     * @param array $UserDirSet <p>用户目录集</p>
+     * @param integer $TotalCount <p>用户目录集总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskEnhance(integer $DiskEnhance) 设置<p>硬盘额外性能</p>
  * @method boolean getEnableDiagnose() 获取<p>是否开启智能巡检</p>
  * @method void setEnableDiagnose(boolean $EnableDiagnose) 设置<p>是否开启智能巡检</p>
+ * @method boolean getEnableCosBackup() 获取<p>是否开启自动备份</p>
+ * @method void setEnableCosBackup(boolean $EnableCosBackup) 设置<p>是否开启自动备份</p>
  * @method string getCdcId() 获取<p>cdcId，使用cdc子网时传递</p>
  * @method void setCdcId(string $CdcId) 设置<p>cdcId，使用cdc子网时传递</p>
  * @method integer getDisasterRecoverGroupAffinity() 获取<p>置放群组亲和度，范围[0,10]，0表示不开启</p>
@@ -280,6 +282,11 @@ class CreateInstanceRequest extends AbstractModel
     public $EnableDiagnose;
 
     /**
+     * @var boolean <p>是否开启自动备份</p>
+     */
+    public $EnableCosBackup;
+
+    /**
      * @var string <p>cdcId，使用cdc子网时传递</p>
      */
     public $CdcId;
@@ -359,6 +366,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param boolean $EnableHybridStorage <p>是否开启存算分离</p>
      * @param integer $DiskEnhance <p>硬盘额外性能</p>
      * @param boolean $EnableDiagnose <p>是否开启智能巡检</p>
+     * @param boolean $EnableCosBackup <p>是否开启自动备份</p>
      * @param string $CdcId <p>cdcId，使用cdc子网时传递</p>
      * @param integer $DisasterRecoverGroupAffinity <p>置放群组亲和度，范围[0,10]，0表示不开启</p>
      * @param string $SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
@@ -533,6 +541,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("EnableDiagnose",$param) and $param["EnableDiagnose"] !== null) {
             $this->EnableDiagnose = $param["EnableDiagnose"];
+        }
+
+        if (array_key_exists("EnableCosBackup",$param) and $param["EnableCosBackup"] !== null) {
+            $this->EnableCosBackup = $param["EnableCosBackup"];
         }
 
         if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {

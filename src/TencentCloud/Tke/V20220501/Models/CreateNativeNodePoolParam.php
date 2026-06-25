@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAutoscaling(boolean $EnableAutoscaling) 设置<p>是否开启弹性伸缩</p>
  * @method integer getReplicas() 获取<p>期望节点数</p>
  * @method void setReplicas(integer $Replicas) 设置<p>期望节点数</p>
+ * @method array getGPUConfigs() 获取<p>机型和GPU配置相关信息</p>
+ * @method void setGPUConfigs(array $GPUConfigs) 设置<p>机型和GPU配置相关信息</p>
  * @method InternetAccessible getInternetAccessible() 获取<p>公网带宽设置</p>
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置<p>公网带宽设置</p>
  * @method array getDataDisks() 获取<p>原生节点池数据盘列表</p>
@@ -157,6 +159,11 @@ class CreateNativeNodePoolParam extends AbstractModel
     public $Replicas;
 
     /**
+     * @var array <p>机型和GPU配置相关信息</p>
+     */
+    public $GPUConfigs;
+
+    /**
      * @var InternetAccessible <p>公网带宽设置</p>
      */
     public $InternetAccessible;
@@ -209,6 +216,7 @@ class CreateNativeNodePoolParam extends AbstractModel
      * @param string $RuntimeRootDir <p>运行时根目录</p>
      * @param boolean $EnableAutoscaling <p>是否开启弹性伸缩</p>
      * @param integer $Replicas <p>期望节点数</p>
+     * @param array $GPUConfigs <p>机型和GPU配置相关信息</p>
      * @param InternetAccessible $InternetAccessible <p>公网带宽设置</p>
      * @param array $DataDisks <p>原生节点池数据盘列表</p>
      * @param boolean $QGPUEnable <p>qgpu开关</p>
@@ -302,6 +310,15 @@ class CreateNativeNodePoolParam extends AbstractModel
 
         if (array_key_exists("Replicas",$param) and $param["Replicas"] !== null) {
             $this->Replicas = $param["Replicas"];
+        }
+
+        if (array_key_exists("GPUConfigs",$param) and $param["GPUConfigs"] !== null) {
+            $this->GPUConfigs = [];
+            foreach ($param["GPUConfigs"] as $key => $value){
+                $obj = new GPUConfig();
+                $obj->deserialize($value);
+                array_push($this->GPUConfigs, $obj);
+            }
         }
 
         if (array_key_exists("InternetAccessible",$param) and $param["InternetAccessible"] !== null) {

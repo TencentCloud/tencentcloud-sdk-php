@@ -36,6 +36,7 @@ use TencentCloud\Tke\V20220501\Models as Models;
  * @method Models\DescribeHealthCheckPolicyBindingsResponse DescribeHealthCheckPolicyBindings(Models\DescribeHealthCheckPolicyBindingsRequest $req) 查询健康检测策略绑定关系
  * @method Models\DescribeHealthCheckTemplateResponse DescribeHealthCheckTemplate(Models\DescribeHealthCheckTemplateRequest $req) 查询健康检测策略模板
  * @method Models\DescribeNodePoolsResponse DescribeNodePools(Models\DescribeNodePoolsRequest $req) 查询 TKE 节点池列表
+ * @method Models\DescribeNodePoolsElasticityStrengthResponse DescribeNodePoolsElasticityStrength(Models\DescribeNodePoolsElasticityStrengthRequest $req) 查询节点池健康度相关信息
  * @method Models\DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(Models\DescribeZoneInstanceConfigInfosRequest $req) 查询原生节点机型配置
  * @method Models\ModifyClusterMachineResponse ModifyClusterMachine(Models\ModifyClusterMachineRequest $req) 修改原生节点
  * @method Models\ModifyHealthCheckPolicyResponse ModifyHealthCheckPolicy(Models\ModifyHealthCheckPolicyRequest $req) 修改健康检测策略

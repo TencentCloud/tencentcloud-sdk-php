@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 同步的ioa用户组织信息
  *
- * @method integer getOrgId() 获取ioa用户组织id
- * @method void setOrgId(integer $OrgId) 设置ioa用户组织id
- * @method string getOrgName() 获取ioa用户组织名称
- * @method void setOrgName(string $OrgName) 设置ioa用户组织名称
- * @method string getOrgIdPath() 获取ioa用户组织id路径
- * @method void setOrgIdPath(string $OrgIdPath) 设置ioa用户组织id路径
- * @method string getOrgNamePath() 获取ioa用户组织名称路径
- * @method void setOrgNamePath(string $OrgNamePath) 设置ioa用户组织名称路径
- * @method integer getUserTotal() 获取ioa用户组织id下的用户数
- * @method void setUserTotal(integer $UserTotal) 设置ioa用户组织id下的用户数
+ * @method integer getOrgId() 获取<p>ioa用户组织id</p>
+ * @method void setOrgId(integer $OrgId) 设置<p>ioa用户组织id</p>
+ * @method string getOrgName() 获取<p>ioa用户组织名称</p>
+ * @method void setOrgName(string $OrgName) 设置<p>ioa用户组织名称</p>
+ * @method string getOrgIdPath() 获取<p>ioa用户组织id路径</p>
+ * @method void setOrgIdPath(string $OrgIdPath) 设置<p>ioa用户组织id路径</p>
+ * @method string getOrgNamePath() 获取<p>ioa用户组织名称路径</p>
+ * @method void setOrgNamePath(string $OrgNamePath) 设置<p>ioa用户组织名称路径</p>
+ * @method integer getUserTotal() 获取<p>ioa用户组织id下的用户数</p>
+ * @method void setUserTotal(integer $UserTotal) 设置<p>ioa用户组织id下的用户数</p>
+ * @method array getBindGroupIds() 获取<p>组织绑定的用户组 id 列表</p>
+ * @method void setBindGroupIds(array $BindGroupIds) 设置<p>组织绑定的用户组 id 列表</p>
  */
 class UserOrg extends AbstractModel
 {
     /**
-     * @var integer ioa用户组织id
+     * @var integer <p>ioa用户组织id</p>
      */
     public $OrgId;
 
     /**
-     * @var string ioa用户组织名称
+     * @var string <p>ioa用户组织名称</p>
      */
     public $OrgName;
 
     /**
-     * @var string ioa用户组织id路径
+     * @var string <p>ioa用户组织id路径</p>
      */
     public $OrgIdPath;
 
     /**
-     * @var string ioa用户组织名称路径
+     * @var string <p>ioa用户组织名称路径</p>
      */
     public $OrgNamePath;
 
     /**
-     * @var integer ioa用户组织id下的用户数
+     * @var integer <p>ioa用户组织id下的用户数</p>
      */
     public $UserTotal;
 
     /**
-     * @param integer $OrgId ioa用户组织id
-     * @param string $OrgName ioa用户组织名称
-     * @param string $OrgIdPath ioa用户组织id路径
-     * @param string $OrgNamePath ioa用户组织名称路径
-     * @param integer $UserTotal ioa用户组织id下的用户数
+     * @var array <p>组织绑定的用户组 id 列表</p>
+     */
+    public $BindGroupIds;
+
+    /**
+     * @param integer $OrgId <p>ioa用户组织id</p>
+     * @param string $OrgName <p>ioa用户组织名称</p>
+     * @param string $OrgIdPath <p>ioa用户组织id路径</p>
+     * @param string $OrgNamePath <p>ioa用户组织名称路径</p>
+     * @param integer $UserTotal <p>ioa用户组织id下的用户数</p>
+     * @param array $BindGroupIds <p>组织绑定的用户组 id 列表</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UserOrg extends AbstractModel
 
         if (array_key_exists("UserTotal",$param) and $param["UserTotal"] !== null) {
             $this->UserTotal = $param["UserTotal"];
+        }
+
+        if (array_key_exists("BindGroupIds",$param) and $param["BindGroupIds"] !== null) {
+            $this->BindGroupIds = $param["BindGroupIds"];
         }
     }
 }

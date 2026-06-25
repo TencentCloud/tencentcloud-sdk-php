@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 字幕对齐
  *
- * @method integer getTimeBeginMs() 获取字幕对应的时间起点
- * @method void setTimeBeginMs(integer $TimeBeginMs) 设置字幕对应的时间起点
- * @method integer getTimeEndMs() 获取字幕对应的时间尾点
- * @method void setTimeEndMs(integer $TimeEndMs) 设置字幕对应的时间尾点
- * @method integer getTextBegin() 获取字幕对应的文本索引起点
- * @method void setTextBegin(integer $TextBegin) 设置字幕对应的文本索引起点
- * @method integer getTextEnd() 获取字幕对应的文本索引尾点
- * @method void setTextEnd(integer $TextEnd) 设置字幕对应的文本索引尾点
+ * @method string getText() 获取<p>字幕文本</p>
+ * @method void setText(string $Text) 设置<p>字幕文本</p>
+ * @method integer getTimeBeginMs() 获取<p>字幕对应的时间起点</p>
+ * @method void setTimeBeginMs(integer $TimeBeginMs) 设置<p>字幕对应的时间起点</p>
+ * @method integer getTimeEndMs() 获取<p>字幕对应的时间尾点</p>
+ * @method void setTimeEndMs(integer $TimeEndMs) 设置<p>字幕对应的时间尾点</p>
+ * @method integer getTextBegin() 获取<p>字幕对应的文本索引起点</p>
+ * @method void setTextBegin(integer $TextBegin) 设置<p>字幕对应的文本索引起点</p>
+ * @method integer getTextEnd() 获取<p>字幕对应的文本索引尾点</p>
+ * @method void setTextEnd(integer $TextEnd) 设置<p>字幕对应的文本索引尾点</p>
+ * @method array getWords() 获取<p>词级别时间戳</p>
+ * @method void setWords(array $Words) 设置<p>词级别时间戳</p>
  */
 class AlignmentItem extends AbstractModel
 {
     /**
-     * @var integer 字幕对应的时间起点
+     * @var string <p>字幕文本</p>
+     */
+    public $Text;
+
+    /**
+     * @var integer <p>字幕对应的时间起点</p>
      */
     public $TimeBeginMs;
 
     /**
-     * @var integer 字幕对应的时间尾点
+     * @var integer <p>字幕对应的时间尾点</p>
      */
     public $TimeEndMs;
 
     /**
-     * @var integer 字幕对应的文本索引起点
+     * @var integer <p>字幕对应的文本索引起点</p>
      */
     public $TextBegin;
 
     /**
-     * @var integer 字幕对应的文本索引尾点
+     * @var integer <p>字幕对应的文本索引尾点</p>
      */
     public $TextEnd;
 
     /**
-     * @param integer $TimeBeginMs 字幕对应的时间起点
-     * @param integer $TimeEndMs 字幕对应的时间尾点
-     * @param integer $TextBegin 字幕对应的文本索引起点
-     * @param integer $TextEnd 字幕对应的文本索引尾点
+     * @var array <p>词级别时间戳</p>
+     */
+    public $Words;
+
+    /**
+     * @param string $Text <p>字幕文本</p>
+     * @param integer $TimeBeginMs <p>字幕对应的时间起点</p>
+     * @param integer $TimeEndMs <p>字幕对应的时间尾点</p>
+     * @param integer $TextBegin <p>字幕对应的文本索引起点</p>
+     * @param integer $TextEnd <p>字幕对应的文本索引尾点</p>
+     * @param array $Words <p>词级别时间戳</p>
      */
     function __construct()
     {
@@ -70,6 +86,10 @@ class AlignmentItem extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
+        }
+
         if (array_key_exists("TimeBeginMs",$param) and $param["TimeBeginMs"] !== null) {
             $this->TimeBeginMs = $param["TimeBeginMs"];
         }
@@ -84,6 +104,15 @@ class AlignmentItem extends AbstractModel
 
         if (array_key_exists("TextEnd",$param) and $param["TextEnd"] !== null) {
             $this->TextEnd = $param["TextEnd"];
+        }
+
+        if (array_key_exists("Words",$param) and $param["Words"] !== null) {
+            $this->Words = [];
+            foreach ($param["Words"] as $key => $value){
+                $obj = new WordItem();
+                $obj->deserialize($value);
+                array_push($this->Words, $obj);
+            }
         }
     }
 }

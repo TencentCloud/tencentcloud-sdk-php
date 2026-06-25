@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExtractDocAgent返回参数结构体
  *
- * @method float getAngle() 获取图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
- * @method void setAngle(float $Angle) 设置图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
- * @method array getStructuralList() 获取配置结构化文本信息。
- * @method void setStructuralList(array $StructuralList) 设置配置结构化文本信息。
- * @method string getErrorCode() 获取任务执行错误码。当任务状态不为 FAIL 时，该值为""。
- * @method void setErrorCode(string $ErrorCode) 设置任务执行错误码。当任务状态不为 FAIL 时，该值为""。
- * @method string getErrorMessage() 获取任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
- * @method void setErrorMessage(string $ErrorMessage) 设置任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+ * @method float getAngle() 获取<p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
+ * @method void setAngle(float $Angle) 设置<p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
+ * @method array getStructuralList() 获取<p>配置结构化文本信息。</p>
+ * @method void setStructuralList(array $StructuralList) 设置<p>配置结构化文本信息。</p>
+ * @method string getErrorCode() 获取<p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
+ * @method void setErrorCode(string $ErrorCode) 设置<p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
+ * @method string getErrorMessage() 获取<p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
+ * @method void setErrorMessage(string $ErrorMessage) 设置<p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ExtractDocAgentResponse extends AbstractModel
 {
     /**
-     * @var float 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+     * @var float <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
      */
     public $Angle;
 
     /**
-     * @var array 配置结构化文本信息。
+     * @var array <p>配置结构化文本信息。</p>
      */
     public $StructuralList;
 
     /**
-     * @var string 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+     * @var string <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public $ErrorCode;
 
     /**
-     * @var string 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+     * @var string <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public $ErrorMessage;
 
@@ -59,10 +59,10 @@ class ExtractDocAgentResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
-     * @param array $StructuralList 配置结构化文本信息。
-     * @param string $ErrorCode 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
-     * @param string $ErrorMessage 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+     * @param float $Angle <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
+     * @param array $StructuralList <p>配置结构化文本信息。</p>
+     * @param string $ErrorCode <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
+     * @param string $ErrorMessage <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

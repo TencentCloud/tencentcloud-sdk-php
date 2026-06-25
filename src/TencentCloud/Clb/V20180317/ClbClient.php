@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Clb\V20180317\Models as Models;
 
 /**
+ * @method Models\AssociateBudgetResponse AssociateBudget(Models\AssociateBudgetRequest $req) 将Budget关联到企业型模型路由实例或企业型实例下的Key。资源已关联其他Budget时，本次请求会替换为新的Budget。
  * @method Models\AssociateCustomizedConfigResponse AssociateCustomizedConfig(Models\AssociateCustomizedConfigRequest $req) 关联配置到server或location，根据配置类型关联到server或location。准备下线，请使用SetCustomizedConfigForLoadBalancer。
  * @method Models\AssociateTargetGroupsResponse AssociateTargetGroups(Models\AssociateTargetGroupsRequest $req) 本接口(AssociateTargetGroups)用来将目标组绑定到负载均衡的监听器（四层协议）或转发规则（七层协议）上。
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
@@ -57,7 +58,10 @@ use TencentCloud\Clb\V20180317\Models as Models;
 通过接口调用：
 BGP带宽包必须传带宽包id
 独占集群克隆必须传对应的参数，否则按共享型创建
+ * @method Models\CreateBudgetResponse CreateBudget(Models\CreateBudgetRequest $req) 创建Budget对象。可在创建时通过Resources同时关联已存在的企业型模型路由实例或企业型实例下的Key。创建请求提交后，可通过DescribeBudgets查询状态。
  * @method Models\CreateClsLogSetResponse CreateClsLogSet(Models\CreateClsLogSetRequest $req) 创建CLB专有日志集，此日志集用于存储CLB的日志。
+ * @method Models\CreateKeyResponse CreateKey(Models\CreateKeyRequest $req) 创建 API Key
+ * @method Models\CreateKeysResponse CreateKeys(Models\CreateKeysRequest $req) 批量创建Key
  * @method Models\CreateListenerResponse CreateListener(Models\CreateListenerRequest $req) 在一个负载均衡实例下创建监听器。
 本接口为异步接口，接口返回成功后，需以返回的 RequestId 为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
  * @method Models\CreateLoadBalancerResponse CreateLoadBalancer(Models\CreateLoadBalancerRequest $req) 本接口(CreateLoadBalancer)用来创建负载均衡实例。为了使用负载均衡服务，您必须购买一个或多个负载均衡实例。成功调用该接口后，会返回负载均衡实例的唯一 ID。负载均衡实例的类型分为：公网、内网。详情可参考产品说明中的产品类型。
@@ -65,10 +69,14 @@ BGP带宽包必须传带宽包id
 本接口为异步接口，接口成功返回后，可使用 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询负载均衡实例的状态（如创建中、正常），以确定是否创建成功。
  * @method Models\CreateLoadBalancerSnatIpsResponse CreateLoadBalancerSnatIps(Models\CreateLoadBalancerSnatIpsRequest $req) 针对SnatPro负载均衡，这个接口用于添加SnatIp，如果负载均衡没有开启SnatPro，添加SnatIp后会自动开启。
 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
+ * @method Models\CreateModelRouterResponse CreateModelRouter(Models\CreateModelRouterRequest $req) 创建模型路由实例
  * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) CreateRule 接口用于在一个已存在的负载均衡七层监听器下创建转发规则，七层监听器中，后端服务必须绑定到规则上而非监听器上。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
  * @method Models\CreateTargetGroupResponse CreateTargetGroup(Models\CreateTargetGroupRequest $req) 创建目标组。该功能正在内测中，如需使用，请通过[工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20LB&step=1)。
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建主题，默认开启全文索引和键值索引。如果不存在CLB专有日志集，则创建失败。
+ * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) 在指定模型路由实例下创建一个用户组。用户组是介于模型路由实例与 Key 之间的一层可选分组，可为组内 Key 统一配置模型白名单，并通过关联 Budget 统一管理额度。创建为异步操作，接口会同步返回用户组ID，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询创建进度。
+ * @method Models\DeleteBudgetsResponse DeleteBudgets(Models\DeleteBudgetsRequest $req) 删除Budget对象。Budget存在任何关联资源时不允许删除，需要先调用DisassociateBudget解除关联。
+ * @method Models\DeleteKeysResponse DeleteKeys(Models\DeleteKeysRequest $req) 批量删除 API Key。
  * @method Models\DeleteListenerResponse DeleteListener(Models\DeleteListenerRequest $req) 本接口用来删除负载均衡实例下的监听器（四层和七层）。
 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
  * @method Models\DeleteLoadBalancerResponse DeleteLoadBalancer(Models\DeleteLoadBalancerRequest $req) DeleteLoadBalancer 接口用以删除指定的一个或多个负载均衡实例。成功删除后，会把负载均衡实例下的监听器、转发规则一起删除，并把后端服务解绑。
@@ -77,11 +85,13 @@ BGP带宽包必须传带宽包id
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
  * @method Models\DeleteLoadBalancerSnatIpsResponse DeleteLoadBalancerSnatIps(Models\DeleteLoadBalancerSnatIpsRequest $req) 这个接口用于删除SnatPro的负载均衡的SnatIp。
 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
+ * @method Models\DeleteModelRoutersResponse DeleteModelRouters(Models\DeleteModelRoutersRequest $req) 删除模型路由实例
  * @method Models\DeleteRewriteResponse DeleteRewrite(Models\DeleteRewriteRequest $req) DeleteRewrite 接口支持删除指定转发规则之间的重定向关系。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
  * @method Models\DeleteRuleResponse DeleteRule(Models\DeleteRuleRequest $req) DeleteRule 接口用来删除负载均衡实例七层监听器下的转发规则。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
  * @method Models\DeleteTargetGroupsResponse DeleteTargetGroups(Models\DeleteTargetGroupsRequest $req) 删除目标组，支持批量删除目标组，单次最多批量删除 20 个目标组。
+ * @method Models\DeleteUserGroupsResponse DeleteUserGroups(Models\DeleteUserGroupsRequest $req) 批量删除用户组。组内若仍存在 Key，将拒绝删除（错误码 ResourceInUse），需先将 Key 移出或迁移到其他组。删除为异步操作，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询进度。
  * @method Models\DeregisterFunctionTargetsResponse DeregisterFunctionTargets(Models\DeregisterFunctionTargetsRequest $req) DeregisterFunctionTargets 接口用来将一个云函数从负载均衡的转发规则上解绑，对于七层监听器，还需通过 LocationId 或 Domain+Url 指定转发规则。
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
 <br/>限制说明：
@@ -99,8 +109,11 @@ BGP带宽包必须传带宽包id
  * @method Models\DeregisterTargetsResponse DeregisterTargets(Models\DeregisterTargetsRequest $req) DeregisterTargets 接口用来将一台或多台后端服务从负载均衡的监听器或转发规则上解绑，对于四层监听器，只需指定监听器ID即可，对于七层监听器，还需通过LocationId或Domain+Url指定转发规则。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
  * @method Models\DeregisterTargetsFromClassicalLBResponse DeregisterTargetsFromClassicalLB(Models\DeregisterTargetsFromClassicalLBRequest $req) DeregisterTargetsFromClassicalLB 接口用于解绑负载均衡后端服务。本接口为异步接口，接口返回成功后，需以返回的 RequestId 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+ * @method Models\DescribeAsyncJobsResponse DescribeAsyncJobs(Models\DescribeAsyncJobsRequest $req) 查询异步任务信息
  * @method Models\DescribeBlockIPListResponse DescribeBlockIPList(Models\DescribeBlockIPListRequest $req) 查询一个负载均衡所封禁的IP列表（黑名单）。（接口灰度中，如需使用请提工单）
  * @method Models\DescribeBlockIPTaskResponse DescribeBlockIPTask(Models\DescribeBlockIPTaskRequest $req) 根据 ModifyBlockIPList 接口返回的异步任务的ID，查询封禁IP（黑名单）异步任务的执行状态。（接口灰度中，如需使用请提工单）
+ * @method Models\DescribeBudgetAssociationsResponse DescribeBudgetAssociations(Models\DescribeBudgetAssociationsRequest $req) 查询指定Budget关联的资源列表。支持按资源类型过滤。
+ * @method Models\DescribeBudgetsResponse DescribeBudgets(Models\DescribeBudgetsRequest $req) 查询Budget列表。
  * @method Models\DescribeClassicalLBByInstanceIdResponse DescribeClassicalLBByInstanceId(Models\DescribeClassicalLBByInstanceIdRequest $req) DescribeClassicalLBByInstanceId用于通过后端实例ID获取传统型负载均衡ID列表。
  * @method Models\DescribeClassicalLBHealthStatusResponse DescribeClassicalLBHealthStatus(Models\DescribeClassicalLBHealthStatusRequest $req) DescribeClassicalLBHealthStatus用于获取传统型负载均衡后端的健康状态
  * @method Models\DescribeClassicalLBListenersResponse DescribeClassicalLBListeners(Models\DescribeClassicalLBListenersRequest $req) DescribeClassicalLBListeners 接口用于获取传统型负载均衡的监听器信息。
@@ -120,6 +133,9 @@ BGP带宽包必须传带宽包id
  * @method Models\DescribeLoadBalancerTrafficResponse DescribeLoadBalancerTraffic(Models\DescribeLoadBalancerTrafficRequest $req) 查询账号下的高流量负载均衡，返回前10个负载均衡。如果是子账号登录，只返回子账号有权限的负载均衡。
  * @method Models\DescribeLoadBalancersResponse DescribeLoadBalancers(Models\DescribeLoadBalancersRequest $req) 查询一个地域的负载均衡实例列表。
  * @method Models\DescribeLoadBalancersDetailResponse DescribeLoadBalancersDetail(Models\DescribeLoadBalancersDetailRequest $req) 查询负载均衡的详细信息，包括监听器，规则及后端目标。
+ * @method Models\DescribeModelRouterDetailResponse DescribeModelRouterDetail(Models\DescribeModelRouterDetailRequest $req) 查询模型路由详细信息
+ * @method Models\DescribeModelRouterQuotaResponse DescribeModelRouterQuota(Models\DescribeModelRouterQuotaRequest $req) 查询用户配额信息
+ * @method Models\DescribeModelRoutersResponse DescribeModelRouters(Models\DescribeModelRoutersRequest $req) 查询模型路由列表页
  * @method Models\DescribeQuotaResponse DescribeQuota(Models\DescribeQuotaRequest $req) 查询用户当前地域下的各项配额
  * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) 查询用户在当前地域支持可用区列表和资源列表。
  * @method Models\DescribeRewriteResponse DescribeRewrite(Models\DescribeRewriteRequest $req) DescribeRewrite 接口可根据负载均衡实例ID，查询一个负载均衡实例下转发规则的重定向关系。如果不指定监听器ID或转发规则ID，则返回该负载均衡实例下的所有重定向关系。
@@ -130,6 +146,8 @@ BGP带宽包必须传带宽包id
  * @method Models\DescribeTargetHealthResponse DescribeTargetHealth(Models\DescribeTargetHealthRequest $req) DescribeTargetHealth 接口用来获取负载均衡后端服务的健康检查结果，不支持传统型负载均衡。
  * @method Models\DescribeTargetsResponse DescribeTargets(Models\DescribeTargetsRequest $req) DescribeTargets 接口用来查询负载均衡实例的某些监听器绑定的后端服务列表。
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 本接口用于查询异步任务的执行状态，对于非查询类的接口（创建/删除负载均衡实例、监听器、规则以及绑定或解绑后端服务等），在接口调用成功后，都需要使用本接口查询任务最终是否执行成功。
+ * @method Models\DescribeUserGroupsResponse DescribeUserGroups(Models\DescribeUserGroupsRequest $req) 查询指定模型路由实例下的用户组列表或详情，支持按ID、名称、状态、标签过滤及分页。真实用户组按名称字典序升序返回；返回列表末尾恒追加一个「未分组」虚拟分组（UserGroupId 固定为 ugrp-ungrouped、UserGroupName 固定为 ungrouped），它并非用户真实创建的用户组，而是代表该实例下所有未归属任何用户组的 Key（其 KeyCount 为无组 Key 数，不计入 TotalCount，不可修改或删除）。
+ * @method Models\DisassociateBudgetResponse DisassociateBudget(Models\DisassociateBudgetRequest $req) 解除Budget与模型路由实例或Key的关联。
  * @method Models\DisassociateCustomizedConfigResponse DisassociateCustomizedConfig(Models\DisassociateCustomizedConfigRequest $req) 去关联个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
  * @method Models\DisassociateTargetGroupsResponse DisassociateTargetGroups(Models\DisassociateTargetGroupsRequest $req) 解除规则的目标组关联关系。
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
@@ -144,6 +162,7 @@ BGP带宽包必须传带宽包id
 本接口为异步接口，接口成功返回后，可使用 DescribeLoadBalancers 接口查询负载均衡实例的状态（如创建中、正常），以确定是否创建成功。
  * @method Models\ModifyBlockIPListResponse ModifyBlockIPList(Models\ModifyBlockIPListRequest $req) 修改负载均衡的IP（client IP）封禁黑名单列表，一个转发规则最多支持封禁 2000000 个IP，及黑名单容量为 2000000。
 （接口灰度中，如需使用请提工单）
+ * @method Models\ModifyBudgetAttributesResponse ModifyBudgetAttributes(Models\ModifyBudgetAttributesRequest $req) 修改Budget属性。BudgetResetAt不支持作为入参设置。修改请求提交后，可通过DescribeBudgets查询状态。
  * @method Models\ModifyDomainResponse ModifyDomain(Models\ModifyDomainRequest $req) ModifyDomain接口用来修改负载均衡七层监听器下的域名。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
  * @method Models\ModifyDomainAttributesResponse ModifyDomainAttributes(Models\ModifyDomainAttributesRequest $req) ModifyDomainAttributes接口用于修改负载均衡7层监听器转发规则的域名级别属性，如修改域名、修改DefaultServer、开启/关闭Http2、修改证书
@@ -151,6 +170,9 @@ BGP带宽包必须传带宽包id
  * @method Models\ModifyFunctionTargetsResponse ModifyFunctionTargets(Models\ModifyFunctionTargetsRequest $req) 修改负载均衡转发规则上所绑定的云函数。
 限制说明：
 - 仅支持绑定“Event 函数”类型的云函数。
+ * @method Models\ModifyKeyAttributesResponse ModifyKeyAttributes(Models\ModifyKeyAttributesRequest $req) 修改 API Key 的属性
+ * @method Models\ModifyKeysBlockStatusResponse ModifyKeysBlockStatus(Models\ModifyKeysBlockStatusRequest $req) 禁用/启用Key
+ * @method Models\ModifyKeysUserGroupResponse ModifyKeysUserGroup(Models\ModifyKeysUserGroupRequest $req) 批量变更 Key 的用户组归属：UserGroupId 传真实用户组ID表示批量入组/跨组移动，传 ugrp-ungrouped 表示批量移出到未分组。变更为异步操作，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询进度。
  * @method Models\ModifyListenerResponse ModifyListener(Models\ModifyListenerRequest $req) ModifyListener接口用来修改负载均衡监听器的属性，包括监听器名称、健康检查参数、证书信息、转发策略等。本接口不支持传统型负载均衡。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
  * @method Models\ModifyLoadBalancerAttributesResponse ModifyLoadBalancerAttributes(Models\ModifyLoadBalancerAttributesRequest $req) 修改负载均衡实例的属性。支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
@@ -162,6 +184,7 @@ BGP带宽包必须传带宽包id
 - 共享型升级为性能容量型实例后，不支持再回退到共享型实例。
 - 传统型负载均衡实例不支持升级为性能容量型实例。
  * @method Models\ModifyLoadBalancersProjectResponse ModifyLoadBalancersProject(Models\ModifyLoadBalancersProjectRequest $req) 修改一个或多个负载均衡实例所属项目。
+ * @method Models\ModifyModelRouterAttributesResponse ModifyModelRouterAttributes(Models\ModifyModelRouterAttributesRequest $req) 修改模型路由属性。支持修改实例名称、限速配置、路由配置，以及替换企业型实例 HTTPS 服务端点绑定的证书（CertId）。每次调用至少传入一个待修改的属性字段，未传入的字段保持原值不变。其中证书替换在请求内同步完成，成功返回即已生效；其余属性修改异步生效，可通过 DescribeModelRouterDetail 接口查询修改结果。
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) ModifyRule 接口用来修改负载均衡七层监听器下的转发规则的各项属性，包括转发路径、健康检查属性、转发策略等。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
  * @method Models\ModifyTargetGroupAttributeResponse ModifyTargetGroupAttribute(Models\ModifyTargetGroupAttributeRequest $req) 修改目标组的名称或者默认端口属性
@@ -173,6 +196,8 @@ BGP带宽包必须传带宽包id
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
  * @method Models\ModifyTargetWeightResponse ModifyTargetWeight(Models\ModifyTargetWeightRequest $req) ModifyTargetWeight 接口用于修改负载均衡绑定的后端服务的转发权重。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
+ * @method Models\ModifyUserGroupAttributesResponse ModifyUserGroupAttributes(Models\ModifyUserGroupAttributesRequest $req) 修改用户组的名称、模型白名单或关联预算。仅修改传入的字段；其中数组类字段（Models）传入即整体覆盖。BudgetId 传入即关联/替换该组预算（不支持解绑，解绑用 DisassociateBudget）。修改为异步操作，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询进度。
+ * @method Models\RegenerateKeysResponse RegenerateKeys(Models\RegenerateKeysRequest $req) 批量重新生成Key
  * @method Models\RegisterFunctionTargetsResponse RegisterFunctionTargets(Models\RegisterFunctionTargetsRequest $req) RegisterFunctionTargets 接口用来将一个云函数绑定到负载均衡的7层转发规则，在此之前您需要先行创建相关的7层监听器（HTTP、HTTPS）和转发规则。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。<br/>
 限制说明：

@@ -20,310 +20,314 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 账单明细数据对象
  *
- * @method string getBusinessCodeName() 获取产品名称：用户所采购的各类云产品，例如：云服务器 CVM
- * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：用户所采购的各类云产品，例如：云服务器 CVM
- * @method string getProductCodeName() 获取子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
- * @method void setProductCodeName(string $ProductCodeName) 设置子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
- * @method string getPayModeName() 获取计费模式：资源的计费模式，区分为包年包月和按量计费
- * @method void setPayModeName(string $PayModeName) 设置计费模式：资源的计费模式，区分为包年包月和按量计费
- * @method string getProjectName() 获取项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
- * @method void setProjectName(string $ProjectName) 设置项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
- * @method string getRegionName() 获取地域：资源所属地域，如华南地区（广州）
- * @method void setRegionName(string $RegionName) 设置地域：资源所属地域，如华南地区（广州）
- * @method string getZoneName() 获取可用区：资源所属可用区，如广州三区
- * @method void setZoneName(string $ZoneName) 设置可用区：资源所属可用区，如广州三区
- * @method string getResourceId() 获取资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
- * @method void setResourceId(string $ResourceId) 设置资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
- * @method string getResourceName() 获取资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
- * @method void setResourceName(string $ResourceName) 设置资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
- * @method string getActionTypeName() 获取交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
- * @method void setActionTypeName(string $ActionTypeName) 设置交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
- * @method string getOrderId() 获取订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
-
- * @method void setOrderId(string $OrderId) 设置订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
-
- * @method string getBillId() 获取交易ID：结算扣费单号
- * @method void setBillId(string $BillId) 设置交易ID：结算扣费单号
- * @method string getPayTime() 获取扣费时间：结算扣费时间
- * @method void setPayTime(string $PayTime) 设置扣费时间：结算扣费时间
- * @method string getFeeBeginTime() 获取开始使用时间：产品服务开始使用时间
- * @method void setFeeBeginTime(string $FeeBeginTime) 设置开始使用时间：产品服务开始使用时间
- * @method string getFeeEndTime() 获取结束使用时间：产品服务结束使用时间
- * @method void setFeeEndTime(string $FeeEndTime) 设置结束使用时间：产品服务结束使用时间
- * @method array getComponentSet() 获取组件列表
- * @method void setComponentSet(array $ComponentSet) 设置组件列表
- * @method string getPayerUin() 获取支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
- * @method void setPayerUin(string $PayerUin) 设置支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
- * @method string getOwnerUin() 获取使用者UIN：实际使用资源的账号 ID
- * @method void setOwnerUin(string $OwnerUin) 设置使用者UIN：实际使用资源的账号 ID
- * @method string getOperateUin() 获取操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
- * @method void setOperateUin(string $OperateUin) 设置操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
- * @method array getTags() 获取标签信息
- * @method void setTags(array $Tags) 设置标签信息
- * @method string getBusinessCode() 获取产品编码
- * @method void setBusinessCode(string $BusinessCode) 设置产品编码
- * @method string getProductCode() 获取子产品编码
- * @method void setProductCode(string $ProductCode) 设置子产品编码
- * @method string getActionType() 获取交易类型编码
- * @method void setActionType(string $ActionType) 设置交易类型编码
- * @method string getRegionId() 获取地域ID
- * @method void setRegionId(string $RegionId) 设置地域ID
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method array getPriceInfo() 获取价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
- * @method void setPriceInfo(array $PriceInfo) 设置价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
- * @method BillDetailAssociatedOrder getAssociatedOrder() 获取关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
- * @method void setAssociatedOrder(BillDetailAssociatedOrder $AssociatedOrder) 设置关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
- * @method string getFormula() 获取计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
- * @method void setFormula(string $Formula) 设置计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
- * @method string getFormulaUrl() 获取计费规则：各产品详细的计费规则官网说明链接
- * @method void setFormulaUrl(string $FormulaUrl) 设置计费规则：各产品详细的计费规则官网说明链接
- * @method string getBillDay() 获取账单归属日
- * @method void setBillDay(string $BillDay) 设置账单归属日
- * @method string getBillMonth() 获取账单归属月
- * @method void setBillMonth(string $BillMonth) 设置账单归属月
- * @method string getId() 获取账单记录ID
- * @method void setId(string $Id) 设置账单记录ID
- * @method string getRegionType() 获取国内国际编码
- * @method void setRegionType(string $RegionType) 设置国内国际编码
- * @method string getRegionTypeName() 获取国内国际：资源所属区域类型（国内、国际）
- * @method void setRegionTypeName(string $RegionTypeName) 设置国内国际：资源所属区域类型（国内、国际）
- * @method string getReserveDetail() 获取备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
- * @method void setReserveDetail(string $ReserveDetail) 设置备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
- * @method string getDiscountObject() 获取优惠对象
- * @method void setDiscountObject(string $DiscountObject) 设置优惠对象
- * @method string getDiscountType() 获取优惠类型
- * @method void setDiscountType(string $DiscountType) 设置优惠类型
- * @method string getDiscountContent() 获取优惠内容
- * @method void setDiscountContent(string $DiscountContent) 设置优惠内容
+ * @method string getBusinessCodeName() 获取<p>产品名称：用户所采购的各类云产品，例如：云服务器 CVM</p>
+ * @method void setBusinessCodeName(string $BusinessCodeName) 设置<p>产品名称：用户所采购的各类云产品，例如：云服务器 CVM</p>
+ * @method string getProductCodeName() 获取<p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
+ * @method void setProductCodeName(string $ProductCodeName) 设置<p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
+ * @method string getPayModeName() 获取<p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
+ * @method void setPayModeName(string $PayModeName) 设置<p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
+ * @method string getProjectName() 获取<p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
+ * @method string getRegionName() 获取<p>地域：资源所属地域，如华南地区（广州）</p>
+ * @method void setRegionName(string $RegionName) 设置<p>地域：资源所属地域，如华南地区（广州）</p>
+ * @method string getZoneName() 获取<p>可用区：资源所属可用区，如广州三区</p>
+ * @method void setZoneName(string $ZoneName) 设置<p>可用区：资源所属可用区，如广州三区</p>
+ * @method string getResourceId() 获取<p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
+ * @method string getResourceName() 获取<p>资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空</p>
+ * @method void setResourceName(string $ResourceName) 设置<p>资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空</p>
+ * @method string getActionTypeName() 获取<p>交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型</p>
+ * @method void setActionTypeName(string $ActionTypeName) 设置<p>交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型</p>
+ * @method string getOrderId() 获取<p>订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。</p>
+ * @method void setOrderId(string $OrderId) 设置<p>订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。</p>
+ * @method string getBillId() 获取<p>交易ID：结算扣费单号</p>
+ * @method void setBillId(string $BillId) 设置<p>交易ID：结算扣费单号</p>
+ * @method string getPayTime() 获取<p>扣费时间：结算扣费时间</p>
+ * @method void setPayTime(string $PayTime) 设置<p>扣费时间：结算扣费时间</p>
+ * @method string getFeeBeginTime() 获取<p>开始使用时间：产品服务开始使用时间</p>
+ * @method void setFeeBeginTime(string $FeeBeginTime) 设置<p>开始使用时间：产品服务开始使用时间</p>
+ * @method string getFeeEndTime() 获取<p>结束使用时间：产品服务结束使用时间</p>
+ * @method void setFeeEndTime(string $FeeEndTime) 设置<p>结束使用时间：产品服务结束使用时间</p>
+ * @method array getComponentSet() 获取<p>组件列表</p>
+ * @method void setComponentSet(array $ComponentSet) 设置<p>组件列表</p>
+ * @method string getPayerUin() 获取<p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
+ * @method void setPayerUin(string $PayerUin) 设置<p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
+ * @method string getOwnerUin() 获取<p>使用者UIN：实际使用资源的账号 ID</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>使用者UIN：实际使用资源的账号 ID</p>
+ * @method string getOperateUin() 获取<p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+ * @method void setOperateUin(string $OperateUin) 设置<p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+ * @method array getTags() 获取<p>标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>标签信息</p>
+ * @method string getBusinessCode() 获取<p>产品编码</p>
+ * @method void setBusinessCode(string $BusinessCode) 设置<p>产品编码</p>
+ * @method string getProductCode() 获取<p>子产品编码</p>
+ * @method void setProductCode(string $ProductCode) 设置<p>子产品编码</p>
+ * @method string getActionType() 获取<p>交易类型编码</p>
+ * @method void setActionType(string $ActionType) 设置<p>交易类型编码</p>
+ * @method string getRegionId() 获取<p>地域ID</p>
+ * @method void setRegionId(string $RegionId) 设置<p>地域ID</p>
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
+ * @method array getPriceInfo() 获取<p>价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息</p>
+ * @method void setPriceInfo(array $PriceInfo) 设置<p>价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息</p>
+ * @method BillDetailAssociatedOrder getAssociatedOrder() 获取<p>关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号</p>
+ * @method void setAssociatedOrder(BillDetailAssociatedOrder $AssociatedOrder) 设置<p>关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号</p>
+ * @method string getFormula() 获取<p>计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配</p>
+ * @method void setFormula(string $Formula) 设置<p>计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配</p>
+ * @method string getFormulaUrl() 获取<p>计费规则：各产品详细的计费规则官网说明链接</p>
+ * @method void setFormulaUrl(string $FormulaUrl) 设置<p>计费规则：各产品详细的计费规则官网说明链接</p>
+ * @method string getBillDay() 获取<p>账单归属日</p>
+ * @method void setBillDay(string $BillDay) 设置<p>账单归属日</p>
+ * @method string getBillMonth() 获取<p>账单归属月</p>
+ * @method void setBillMonth(string $BillMonth) 设置<p>账单归属月</p>
+ * @method string getId() 获取<p>账单记录ID</p>
+ * @method void setId(string $Id) 设置<p>账单记录ID</p>
+ * @method string getRegionType() 获取<p>国内国际编码</p>
+ * @method void setRegionType(string $RegionType) 设置<p>国内国际编码</p>
+ * @method string getRegionTypeName() 获取<p>国内国际：资源所属区域类型（国内、国际）</p>
+ * @method void setRegionTypeName(string $RegionTypeName) 设置<p>国内国际：资源所属区域类型（国内、国际）</p>
+ * @method string getReserveDetail() 获取<p>备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息</p>
+ * @method void setReserveDetail(string $ReserveDetail) 设置<p>备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息</p>
+ * @method string getDiscountObject() 获取<p>优惠对象</p>
+ * @method void setDiscountObject(string $DiscountObject) 设置<p>优惠对象</p>
+ * @method string getDiscountType() 获取<p>优惠类型</p>
+ * @method void setDiscountType(string $DiscountType) 设置<p>优惠类型</p>
+ * @method string getDiscountContent() 获取<p>优惠内容</p>
+ * @method void setDiscountContent(string $DiscountContent) 设置<p>优惠内容</p>
+ * @method string getExtendField() 获取<p>资源扩展信息：体现资源维度的扩展信息，与L2账单的扩展字段信息保持一致。</p>
+ * @method void setExtendField(string $ExtendField) 设置<p>资源扩展信息：体现资源维度的扩展信息，与L2账单的扩展字段信息保持一致。</p>
  */
 class BillDetail extends AbstractModel
 {
     /**
-     * @var string 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
+     * @var string <p>产品名称：用户所采购的各类云产品，例如：云服务器 CVM</p>
      */
     public $BusinessCodeName;
 
     /**
-     * @var string 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+     * @var string <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
      */
     public $ProductCodeName;
 
     /**
-     * @var string 计费模式：资源的计费模式，区分为包年包月和按量计费
+     * @var string <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
      */
     public $PayModeName;
 
     /**
-     * @var string 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
+     * @var string <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
      */
     public $ProjectName;
 
     /**
-     * @var string 地域：资源所属地域，如华南地区（广州）
+     * @var string <p>地域：资源所属地域，如华南地区（广州）</p>
      */
     public $RegionName;
 
     /**
-     * @var string 可用区：资源所属可用区，如广州三区
+     * @var string <p>可用区：资源所属可用区，如广州三区</p>
      */
     public $ZoneName;
 
     /**
-     * @var string 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * @var string <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
+     * @var string <p>资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空</p>
      */
     public $ResourceName;
 
     /**
-     * @var string 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
+     * @var string <p>交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型</p>
      */
     public $ActionTypeName;
 
     /**
-     * @var string 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
-
+     * @var string <p>订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。</p>
      */
     public $OrderId;
 
     /**
-     * @var string 交易ID：结算扣费单号
+     * @var string <p>交易ID：结算扣费单号</p>
      */
     public $BillId;
 
     /**
-     * @var string 扣费时间：结算扣费时间
+     * @var string <p>扣费时间：结算扣费时间</p>
      */
     public $PayTime;
 
     /**
-     * @var string 开始使用时间：产品服务开始使用时间
+     * @var string <p>开始使用时间：产品服务开始使用时间</p>
      */
     public $FeeBeginTime;
 
     /**
-     * @var string 结束使用时间：产品服务结束使用时间
+     * @var string <p>结束使用时间：产品服务结束使用时间</p>
      */
     public $FeeEndTime;
 
     /**
-     * @var array 组件列表
+     * @var array <p>组件列表</p>
      */
     public $ComponentSet;
 
     /**
-     * @var string 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+     * @var string <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
      */
     public $PayerUin;
 
     /**
-     * @var string 使用者UIN：实际使用资源的账号 ID
+     * @var string <p>使用者UIN：实际使用资源的账号 ID</p>
      */
     public $OwnerUin;
 
     /**
-     * @var string 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     * @var string <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
      */
     public $OperateUin;
 
     /**
-     * @var array 标签信息
+     * @var array <p>标签信息</p>
      */
     public $Tags;
 
     /**
-     * @var string 产品编码
+     * @var string <p>产品编码</p>
      */
     public $BusinessCode;
 
     /**
-     * @var string 子产品编码
+     * @var string <p>子产品编码</p>
      */
     public $ProductCode;
 
     /**
-     * @var string 交易类型编码
+     * @var string <p>交易类型编码</p>
      */
     public $ActionType;
 
     /**
-     * @var string 地域ID
+     * @var string <p>地域ID</p>
      */
     public $RegionId;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var array 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
+     * @var array <p>价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息</p>
      */
     public $PriceInfo;
 
     /**
-     * @var BillDetailAssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+     * @var BillDetailAssociatedOrder <p>关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号</p>
      */
     public $AssociatedOrder;
 
     /**
-     * @var string 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+     * @var string <p>计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配</p>
      */
     public $Formula;
 
     /**
-     * @var string 计费规则：各产品详细的计费规则官网说明链接
+     * @var string <p>计费规则：各产品详细的计费规则官网说明链接</p>
      */
     public $FormulaUrl;
 
     /**
-     * @var string 账单归属日
+     * @var string <p>账单归属日</p>
      */
     public $BillDay;
 
     /**
-     * @var string 账单归属月
+     * @var string <p>账单归属月</p>
      */
     public $BillMonth;
 
     /**
-     * @var string 账单记录ID
+     * @var string <p>账单记录ID</p>
      */
     public $Id;
 
     /**
-     * @var string 国内国际编码
+     * @var string <p>国内国际编码</p>
      */
     public $RegionType;
 
     /**
-     * @var string 国内国际：资源所属区域类型（国内、国际）
+     * @var string <p>国内国际：资源所属区域类型（国内、国际）</p>
      */
     public $RegionTypeName;
 
     /**
-     * @var string 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+     * @var string <p>备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息</p>
      */
     public $ReserveDetail;
 
     /**
-     * @var string 优惠对象
+     * @var string <p>优惠对象</p>
      */
     public $DiscountObject;
 
     /**
-     * @var string 优惠类型
+     * @var string <p>优惠类型</p>
      */
     public $DiscountType;
 
     /**
-     * @var string 优惠内容
+     * @var string <p>优惠内容</p>
      */
     public $DiscountContent;
 
     /**
-     * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
-     * @param string $ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-     * @param string $PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
-     * @param string $ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-     * @param string $RegionName 地域：资源所属地域，如华南地区（广州）
-     * @param string $ZoneName 可用区：资源所属可用区，如广州三区
-     * @param string $ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
-     * @param string $ResourceName 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
-     * @param string $ActionTypeName 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
-     * @param string $OrderId 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+     * @var string <p>资源扩展信息：体现资源维度的扩展信息，与L2账单的扩展字段信息保持一致。</p>
+     */
+    public $ExtendField;
 
-     * @param string $BillId 交易ID：结算扣费单号
-     * @param string $PayTime 扣费时间：结算扣费时间
-     * @param string $FeeBeginTime 开始使用时间：产品服务开始使用时间
-     * @param string $FeeEndTime 结束使用时间：产品服务结束使用时间
-     * @param array $ComponentSet 组件列表
-     * @param string $PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-     * @param string $OwnerUin 使用者UIN：实际使用资源的账号 ID
-     * @param string $OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-     * @param array $Tags 标签信息
-     * @param string $BusinessCode 产品编码
-     * @param string $ProductCode 子产品编码
-     * @param string $ActionType 交易类型编码
-     * @param string $RegionId 地域ID
-     * @param integer $ProjectId 项目ID
-     * @param array $PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-     * @param BillDetailAssociatedOrder $AssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-     * @param string $Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-     * @param string $FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
-     * @param string $BillDay 账单归属日
-     * @param string $BillMonth 账单归属月
-     * @param string $Id 账单记录ID
-     * @param string $RegionType 国内国际编码
-     * @param string $RegionTypeName 国内国际：资源所属区域类型（国内、国际）
-     * @param string $ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-     * @param string $DiscountObject 优惠对象
-     * @param string $DiscountType 优惠类型
-     * @param string $DiscountContent 优惠内容
+    /**
+     * @param string $BusinessCodeName <p>产品名称：用户所采购的各类云产品，例如：云服务器 CVM</p>
+     * @param string $ProductCodeName <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
+     * @param string $PayModeName <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
+     * @param string $ProjectName <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
+     * @param string $RegionName <p>地域：资源所属地域，如华南地区（广州）</p>
+     * @param string $ZoneName <p>可用区：资源所属可用区，如广州三区</p>
+     * @param string $ResourceId <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
+     * @param string $ResourceName <p>资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空</p>
+     * @param string $ActionTypeName <p>交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型</p>
+     * @param string $OrderId <p>订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。</p>
+     * @param string $BillId <p>交易ID：结算扣费单号</p>
+     * @param string $PayTime <p>扣费时间：结算扣费时间</p>
+     * @param string $FeeBeginTime <p>开始使用时间：产品服务开始使用时间</p>
+     * @param string $FeeEndTime <p>结束使用时间：产品服务结束使用时间</p>
+     * @param array $ComponentSet <p>组件列表</p>
+     * @param string $PayerUin <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
+     * @param string $OwnerUin <p>使用者UIN：实际使用资源的账号 ID</p>
+     * @param string $OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+     * @param array $Tags <p>标签信息</p>
+     * @param string $BusinessCode <p>产品编码</p>
+     * @param string $ProductCode <p>子产品编码</p>
+     * @param string $ActionType <p>交易类型编码</p>
+     * @param string $RegionId <p>地域ID</p>
+     * @param integer $ProjectId <p>项目ID</p>
+     * @param array $PriceInfo <p>价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息</p>
+     * @param BillDetailAssociatedOrder $AssociatedOrder <p>关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号</p>
+     * @param string $Formula <p>计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配</p>
+     * @param string $FormulaUrl <p>计费规则：各产品详细的计费规则官网说明链接</p>
+     * @param string $BillDay <p>账单归属日</p>
+     * @param string $BillMonth <p>账单归属月</p>
+     * @param string $Id <p>账单记录ID</p>
+     * @param string $RegionType <p>国内国际编码</p>
+     * @param string $RegionTypeName <p>国内国际：资源所属区域类型（国内、国际）</p>
+     * @param string $ReserveDetail <p>备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息</p>
+     * @param string $DiscountObject <p>优惠对象</p>
+     * @param string $DiscountType <p>优惠类型</p>
+     * @param string $DiscountContent <p>优惠内容</p>
+     * @param string $ExtendField <p>资源扩展信息：体现资源维度的扩展信息，与L2账单的扩展字段信息保持一致。</p>
      */
     function __construct()
     {
@@ -495,6 +499,10 @@ class BillDetail extends AbstractModel
 
         if (array_key_exists("DiscountContent",$param) and $param["DiscountContent"] !== null) {
             $this->DiscountContent = $param["DiscountContent"];
+        }
+
+        if (array_key_exists("ExtendField",$param) and $param["ExtendField"] !== null) {
+            $this->ExtendField = $param["ExtendField"];
         }
     }
 }

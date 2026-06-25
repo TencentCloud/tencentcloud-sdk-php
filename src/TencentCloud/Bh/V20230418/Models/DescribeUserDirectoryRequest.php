@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserDirectory请求参数结构体
  *
- * @method integer getLimit() 获取分页大小
- * @method void setLimit(integer $Limit) 设置分页大小
- * @method integer getOffset() 获取分页偏移
- * @method void setOffset(integer $Offset) 设置分页偏移
+ * @method integer getLimit() 获取<p>分页大小</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页大小</p>
+ * @method integer getOffset() 获取<p>分页偏移</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移</p>
  */
 class DescribeUserDirectoryRequest extends AbstractModel
 {
     /**
-     * @var integer 分页大小
+     * @var integer <p>分页大小</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移
+     * @var integer <p>分页偏移</p>
      */
     public $Offset;
 
     /**
-     * @param integer $Limit 分页大小
-     * @param integer $Offset 分页偏移
+     * @param integer $Limit <p>分页大小</p>
+     * @param integer $Offset <p>分页偏移</p>
      */
     function __construct()
     {

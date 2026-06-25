@@ -66,6 +66,7 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) 新增/修改实例维护时间窗口配置
  * @method Models\ModifyUserPrivilegesResponse ModifyUserPrivileges(Models\ModifyUserPrivilegesRequest $req) 本接口(ModifyPrivileges)修改用户权限
  * @method Models\ResetUserPasswordResponse ResetUserPassword(Models\ResetUserPasswordRequest $req) 本接口（ResetUserPassword）提供重置用户密码功能
+ * @method Models\ResetUsersPasswordResponse ResetUsersPassword(Models\ResetUsersPasswordRequest $req) 本接口（ResetUsersPassword）用于批量重置用户密码
  * @method Models\RestartDBInstancesResponse RestartDBInstances(Models\RestartDBInstancesRequest $req) 本接口（RestartDBInstances）用于重启数据库实例
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 本接口（UpgradeInstance）提供纵向扩容实例功能
  */

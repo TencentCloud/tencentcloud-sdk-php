@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 同步过来的ioa用户分组信息
  *
- * @method integer getOrgId() 获取ioa用户组织id
- * @method void setOrgId(integer $OrgId) 设置ioa用户组织id
- * @method string getOrgName() 获取ioa用户组织名称
- * @method void setOrgName(string $OrgName) 设置ioa用户组织名称
- * @method string getOrgIdPath() 获取ioa用户组织id路径	
- * @method void setOrgIdPath(string $OrgIdPath) 设置ioa用户组织id路径	
- * @method string getOrgNamePath() 获取ioa用户组织名称路径	
- * @method void setOrgNamePath(string $OrgNamePath) 设置ioa用户组织名称路径	
- * @method integer getSource() 获取ioa关联用户源类型
- * @method void setSource(integer $Source) 设置ioa关联用户源类型
+ * @method integer getOrgId() 获取<p>ioa用户组织id</p>
+ * @method void setOrgId(integer $OrgId) 设置<p>ioa用户组织id</p>
+ * @method string getOrgName() 获取<p>ioa用户组织名称</p>
+ * @method void setOrgName(string $OrgName) 设置<p>ioa用户组织名称</p>
+ * @method string getOrgIdPath() 获取<p>ioa用户组织id路径</p>
+ * @method void setOrgIdPath(string $OrgIdPath) 设置<p>ioa用户组织id路径</p>
+ * @method string getOrgNamePath() 获取<p>ioa用户组织名称路径</p>
+ * @method void setOrgNamePath(string $OrgNamePath) 设置<p>ioa用户组织名称路径</p>
+ * @method integer getSource() 获取<p>ioa关联用户源类型</p>
+ * @method void setSource(integer $Source) 设置<p>ioa关联用户源类型</p>
+ * @method string getUserDirName() 获取<p>用户所属目录</p>
+ * @method void setUserDirName(string $UserDirName) 设置<p>用户所属目录</p>
  */
 class IOAUserGroup extends AbstractModel
 {
     /**
-     * @var integer ioa用户组织id
+     * @var integer <p>ioa用户组织id</p>
      */
     public $OrgId;
 
     /**
-     * @var string ioa用户组织名称
+     * @var string <p>ioa用户组织名称</p>
      */
     public $OrgName;
 
     /**
-     * @var string ioa用户组织id路径	
+     * @var string <p>ioa用户组织id路径</p>
      */
     public $OrgIdPath;
 
     /**
-     * @var string ioa用户组织名称路径	
+     * @var string <p>ioa用户组织名称路径</p>
      */
     public $OrgNamePath;
 
     /**
-     * @var integer ioa关联用户源类型
+     * @var integer <p>ioa关联用户源类型</p>
      */
     public $Source;
 
     /**
-     * @param integer $OrgId ioa用户组织id
-     * @param string $OrgName ioa用户组织名称
-     * @param string $OrgIdPath ioa用户组织id路径	
-     * @param string $OrgNamePath ioa用户组织名称路径	
-     * @param integer $Source ioa关联用户源类型
+     * @var string <p>用户所属目录</p>
+     */
+    public $UserDirName;
+
+    /**
+     * @param integer $OrgId <p>ioa用户组织id</p>
+     * @param string $OrgName <p>ioa用户组织名称</p>
+     * @param string $OrgIdPath <p>ioa用户组织id路径</p>
+     * @param string $OrgNamePath <p>ioa用户组织名称路径</p>
+     * @param integer $Source <p>ioa关联用户源类型</p>
+     * @param string $UserDirName <p>用户所属目录</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class IOAUserGroup extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("UserDirName",$param) and $param["UserDirName"] !== null) {
+            $this->UserDirName = $param["UserDirName"];
         }
     }
 }

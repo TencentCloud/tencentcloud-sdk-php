@@ -18,7 +18,7 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 负载均衡的标签信息
+ * 模型路由实例的标签信息
  *
  * @method string getTagKey() 获取标签的键
  * @method void setTagKey(string $TagKey) 设置标签的键

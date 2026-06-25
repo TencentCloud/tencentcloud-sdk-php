@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDealType(integer $DealType) 设置<p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p>
  * @method integer getGoodsType() 获取<p>商品类型，1 域名套餐 2 增值服务</p>
  * @method void setGoodsType(integer $GoodsType) 设置<p>商品类型，1 域名套餐 2 增值服务</p>
- * @method string getGoodsChildType() 获取<p>套餐类型：<br>DP_PLUS：专业版<br>DP_EXPERT：企业版<br>DP_ULTRA：尊享版</p><p>增值服务类型<br>LB：负载均衡<br>URL：URL转发<br>DMONITOR_TASKS：D监控任务数<br>DMONITOR_IP：D监控备用 IP 数<br>CUSTOMLINE：自定义线路数</p>
- * @method void setGoodsChildType(string $GoodsChildType) 设置<p>套餐类型：<br>DP_PLUS：专业版<br>DP_EXPERT：企业版<br>DP_ULTRA：尊享版</p><p>增值服务类型<br>LB：负载均衡<br>URL：URL转发<br>DMONITOR_TASKS：D监控任务数<br>DMONITOR_IP：D监控备用 IP 数<br>CUSTOMLINE：自定义线路数</p>
+ * @method string getGoodsChildType() 获取<p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
+ * @method void setGoodsChildType(string $GoodsChildType) 设置<p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
  * @method integer getGoodsNum() 获取<p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
  * @method void setGoodsNum(integer $GoodsNum) 设置<p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
  * @method integer getAutoRenew() 获取<p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p>
@@ -52,7 +52,7 @@ class CreateAndPayDealRequest extends AbstractModel
     public $GoodsType;
 
     /**
-     * @var string <p>套餐类型：<br>DP_PLUS：专业版<br>DP_EXPERT：企业版<br>DP_ULTRA：尊享版</p><p>增值服务类型<br>LB：负载均衡<br>URL：URL转发<br>DMONITOR_TASKS：D监控任务数<br>DMONITOR_IP：D监控备用 IP 数<br>CUSTOMLINE：自定义线路数</p>
+     * @var string <p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
      */
     public $GoodsChildType;
 
@@ -89,7 +89,7 @@ class CreateAndPayDealRequest extends AbstractModel
     /**
      * @param integer $DealType <p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p>
      * @param integer $GoodsType <p>商品类型，1 域名套餐 2 增值服务</p>
-     * @param string $GoodsChildType <p>套餐类型：<br>DP_PLUS：专业版<br>DP_EXPERT：企业版<br>DP_ULTRA：尊享版</p><p>增值服务类型<br>LB：负载均衡<br>URL：URL转发<br>DMONITOR_TASKS：D监控任务数<br>DMONITOR_IP：D监控备用 IP 数<br>CUSTOMLINE：自定义线路数</p>
+     * @param string $GoodsChildType <p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
      * @param integer $GoodsNum <p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
      * @param integer $AutoRenew <p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p>
      * @param string $Domain <p>需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。</p>

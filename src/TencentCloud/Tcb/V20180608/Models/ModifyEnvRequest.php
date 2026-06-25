@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyEnv请求参数结构体
  *
- * @method string getEnvId() 获取环境ID
- * @method void setEnvId(string $EnvId) 设置环境ID
- * @method string getAlias() 获取环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
- * @method void setAlias(string $Alias) 设置环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+ * @method string getEnvId() 获取<p>环境ID</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境ID</p>
+ * @method string getAlias() 获取<p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+ * @method void setAlias(string $Alias) 设置<p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+ * @method integer getCustomQps() 获取<p>按量计费QPS上限，大于套餐配额时生效。-1表示关闭QPS按量计费。</p>
+ * @method void setCustomQps(integer $CustomQps) 设置<p>按量计费QPS上限，大于套餐配额时生效。-1表示关闭QPS按量计费。</p>
  */
 class ModifyEnvRequest extends AbstractModel
 {
     /**
-     * @var string 环境ID
+     * @var string <p>环境ID</p>
      */
     public $EnvId;
 
     /**
-     * @var string 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * @var string <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
      */
     public $Alias;
 
     /**
-     * @param string $EnvId 环境ID
-     * @param string $Alias 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * @var integer <p>按量计费QPS上限，大于套餐配额时生效。-1表示关闭QPS按量计费。</p>
+     */
+    public $CustomQps;
+
+    /**
+     * @param string $EnvId <p>环境ID</p>
+     * @param string $Alias <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+     * @param integer $CustomQps <p>按量计费QPS上限，大于套餐配额时生效。-1表示关闭QPS按量计费。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyEnvRequest extends AbstractModel
 
         if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
             $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("CustomQps",$param) and $param["CustomQps"] !== null) {
+            $this->CustomQps = $param["CustomQps"];
         }
     }
 }

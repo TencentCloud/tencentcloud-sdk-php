@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserDirectory请求参数结构体
  *
- * @method integer getId() 获取目录id
- * @method void setId(integer $Id) 设置目录id
- * @method array getUserOrgSet() 获取ioa分组信息
- * @method void setUserOrgSet(array $UserOrgSet) 设置ioa分组信息
+ * @method integer getId() 获取<p>目录id</p>
+ * @method void setId(integer $Id) 设置<p>目录id</p>
+ * @method array getUserOrgSet() 获取<p>ioa分组信息</p>
+ * @method void setUserOrgSet(array $UserOrgSet) 设置<p>ioa分组信息</p>
+ * @method boolean getAutoSync() 获取<p>是否开启自动同步</p>
+ * @method void setAutoSync(boolean $AutoSync) 设置<p>是否开启自动同步</p>
+ * @method string getSyncCron() 获取<p>同步周期（5段式 crontab 表达式）</p>
+ * @method void setSyncCron(string $SyncCron) 设置<p>同步周期（5段式 crontab 表达式）</p>
  */
 class ModifyUserDirectoryRequest extends AbstractModel
 {
     /**
-     * @var integer 目录id
+     * @var integer <p>目录id</p>
      */
     public $Id;
 
     /**
-     * @var array ioa分组信息
+     * @var array <p>ioa分组信息</p>
      */
     public $UserOrgSet;
 
     /**
-     * @param integer $Id 目录id
-     * @param array $UserOrgSet ioa分组信息
+     * @var boolean <p>是否开启自动同步</p>
+     */
+    public $AutoSync;
+
+    /**
+     * @var string <p>同步周期（5段式 crontab 表达式）</p>
+     */
+    public $SyncCron;
+
+    /**
+     * @param integer $Id <p>目录id</p>
+     * @param array $UserOrgSet <p>ioa分组信息</p>
+     * @param boolean $AutoSync <p>是否开启自动同步</p>
+     * @param string $SyncCron <p>同步周期（5段式 crontab 表达式）</p>
      */
     function __construct()
     {
@@ -65,6 +81,14 @@ class ModifyUserDirectoryRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->UserOrgSet, $obj);
             }
+        }
+
+        if (array_key_exists("AutoSync",$param) and $param["AutoSync"] !== null) {
+            $this->AutoSync = $param["AutoSync"];
+        }
+
+        if (array_key_exists("SyncCron",$param) and $param["SyncCron"] !== null) {
+            $this->SyncCron = $param["SyncCron"];
         }
     }
 }

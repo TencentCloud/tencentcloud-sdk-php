@@ -48,6 +48,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GetFlowStatisticByGroupResponse GetFlowStatisticByGroup(Models\GetFlowStatisticByGroupRequest $req) 获取指定分组，指定时间数据流量使用情况
  * @method Models\GetFlowStatisticByNameResponse GetFlowStatisticByName(Models\GetFlowStatisticByNameRequest $req) 获取指定设备Id，指定时间点数据流量使用情况
  * @method Models\GetFlowStatisticByRegionResponse GetFlowStatisticByRegion(Models\GetFlowStatisticByRegionRequest $req) 获取指定区域，指定时间点数据流量使用情况
+ * @method Models\GetGatewayListResponse GetGatewayList(Models\GetGatewayListRequest $req) 支持网关列表查询。包含网关名称、创建时间和网关状态（正常/异常）。支持基于网关名称的查询。默认按照创建时间倒序排列。
  * @method Models\GetGroupDetailResponse GetGroupDetail(Models\GetGroupDetailRequest $req) 查看分组详细信息
  * @method Models\GetGroupListResponse GetGroupList(Models\GetGroupListRequest $req) 获取分组列表
  * @method Models\GetHardwareInfoResponse GetHardwareInfo(Models\GetHardwareInfoRequest $req) 获取硬件设备信息

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 目标端为kafka时添加的同步选项字段
  *
- * @method string getDataType() 获取投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
- * @method void setDataType(string $DataType) 设置投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
- * @method string getTopicType() 获取同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
- * @method void setTopicType(string $TopicType) 设置同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
- * @method string getDDLTopicName() 获取用于存储ddl的topic
- * @method void setDDLTopicName(string $DDLTopicName) 设置用于存储ddl的topic
- * @method array getTopicRules() 获取单topic和自定义topic的描述
- * @method void setTopicRules(array $TopicRules) 设置单topic和自定义topic的描述
- * @method array getDataOption() 获取其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
- * @method void setDataOption(array $DataOption) 设置其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+ * @method string getDataType() 获取<p>投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium</p>
+ * @method void setDataType(string $DataType) 设置<p>投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium</p>
+ * @method string getTopicType() 获取<p>同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)</p>
+ * @method void setTopicType(string $TopicType) 设置<p>同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)</p>
+ * @method string getDDLTopicName() 获取<p>用于存储ddl的topic</p>
+ * @method void setDDLTopicName(string $DDLTopicName) 设置<p>用于存储ddl的topic</p>
+ * @method array getTopicRules() 获取<p>单topic和自定义topic的描述</p>
+ * @method void setTopicRules(array $TopicRules) 设置<p>单topic和自定义topic的描述</p>
+ * @method array getDataOption() 获取<p>其他附加信息，对于特定数据类型可设置额外参数。比如针对Canal兼容的功能支持：&quot;canalOfficialFormat&quot;:&quot;on&quot;表示打开Canal兼容功能，默认不带。针对大消息跳过的功能支持：&quot;skipLargeMessage&quot;:&quot;on&quot;表示开启跳过大消息，默认不带；开启时需同时设置&quot;maxMessageSizeMB&quot;为1~100的正整数字符串，表示最大消息大小阈值（MB），超过该大小的消息将被跳过，默认不带。</p>
+ * @method void setDataOption(array $DataOption) 设置<p>其他附加信息，对于特定数据类型可设置额外参数。比如针对Canal兼容的功能支持：&quot;canalOfficialFormat&quot;:&quot;on&quot;表示打开Canal兼容功能，默认不带。针对大消息跳过的功能支持：&quot;skipLargeMessage&quot;:&quot;on&quot;表示开启跳过大消息，默认不带；开启时需同时设置&quot;maxMessageSizeMB&quot;为1~100的正整数字符串，表示最大消息大小阈值（MB），超过该大小的消息将被跳过，默认不带。</p>
  */
 class KafkaOption extends AbstractModel
 {
     /**
-     * @var string 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
+     * @var string <p>投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium</p>
      */
     public $DataType;
 
     /**
-     * @var string 同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
+     * @var string <p>同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)</p>
      */
     public $TopicType;
 
     /**
-     * @var string 用于存储ddl的topic
+     * @var string <p>用于存储ddl的topic</p>
      */
     public $DDLTopicName;
 
     /**
-     * @var array 单topic和自定义topic的描述
+     * @var array <p>单topic和自定义topic的描述</p>
      */
     public $TopicRules;
 
     /**
-     * @var array 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+     * @var array <p>其他附加信息，对于特定数据类型可设置额外参数。比如针对Canal兼容的功能支持：&quot;canalOfficialFormat&quot;:&quot;on&quot;表示打开Canal兼容功能，默认不带。针对大消息跳过的功能支持：&quot;skipLargeMessage&quot;:&quot;on&quot;表示开启跳过大消息，默认不带；开启时需同时设置&quot;maxMessageSizeMB&quot;为1~100的正整数字符串，表示最大消息大小阈值（MB），超过该大小的消息将被跳过，默认不带。</p>
      */
     public $DataOption;
 
     /**
-     * @param string $DataType 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
-     * @param string $TopicType 同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
-     * @param string $DDLTopicName 用于存储ddl的topic
-     * @param array $TopicRules 单topic和自定义topic的描述
-     * @param array $DataOption 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+     * @param string $DataType <p>投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium</p>
+     * @param string $TopicType <p>同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)</p>
+     * @param string $DDLTopicName <p>用于存储ddl的topic</p>
+     * @param array $TopicRules <p>单topic和自定义topic的描述</p>
+     * @param array $DataOption <p>其他附加信息，对于特定数据类型可设置额外参数。比如针对Canal兼容的功能支持：&quot;canalOfficialFormat&quot;:&quot;on&quot;表示打开Canal兼容功能，默认不带。针对大消息跳过的功能支持：&quot;skipLargeMessage&quot;:&quot;on&quot;表示开启跳过大消息，默认不带；开启时需同时设置&quot;maxMessageSizeMB&quot;为1~100的正整数字符串，表示最大消息大小阈值（MB），超过该大小的消息将被跳过，默认不带。</p>
      */
     function __construct()
     {

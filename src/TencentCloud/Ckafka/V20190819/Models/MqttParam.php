@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建MQTT 为Source的Data Hub Task参数
  *
- * @method string getTopics() 获取需要同步的MQTT Topic列表, CSV格式
- * @method void setTopics(string $Topics) 设置需要同步的MQTT Topic列表, CSV格式
- * @method boolean getCleanSession() 获取用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
- * @method void setCleanSession(boolean $CleanSession) 设置用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
- * @method string getResource() 获取MQTT instance-id
- * @method void setResource(string $Resource) 设置MQTT instance-id
- * @method string getIp() 获取MQTT实例VIP
- * @method void setIp(string $Ip) 设置MQTT实例VIP
- * @method integer getPort() 获取MQTT VIP 端口
- * @method void setPort(integer $Port) 设置MQTT VIP 端口
- * @method string getUserName() 获取MQTT实例用户名
- * @method void setUserName(string $UserName) 设置MQTT实例用户名
- * @method string getPassword() 获取MQTT实例内账户密码
- * @method void setPassword(string $Password) 设置MQTT实例内账户密码
- * @method integer getQos() 获取QoS
- * @method void setQos(integer $Qos) 设置QoS
- * @method integer getMaxTasks() 获取tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
- * @method void setMaxTasks(integer $MaxTasks) 设置tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
- * @method string getServiceVip() 获取MQTT 实例的Service VIP
- * @method void setServiceVip(string $ServiceVip) 设置MQTT 实例的Service VIP
- * @method string getUniqVpcId() 获取MQTT实例的VPC ID
- * @method void setUniqVpcId(string $UniqVpcId) 设置MQTT实例的VPC ID
- * @method boolean getSelfBuilt() 获取是否为自建集群, MQTT只支持非自建集群
- * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群, MQTT只支持非自建集群
+ * @method string getTopics() 获取<p>需要同步的MQTT Topic列表, CSV格式</p>
+ * @method void setTopics(string $Topics) 设置<p>需要同步的MQTT Topic列表, CSV格式</p>
+ * @method boolean getCleanSession() 获取<p>用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。</p>
+ * @method void setCleanSession(boolean $CleanSession) 设置<p>用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。</p>
+ * @method string getResource() 获取<p>MQTT instance-id</p>
+ * @method void setResource(string $Resource) 设置<p>MQTT instance-id</p>
+ * @method string getIp() 获取<p>MQTT实例VIP</p>
+ * @method void setIp(string $Ip) 设置<p>MQTT实例VIP</p>
+ * @method integer getPort() 获取<p>MQTT VIP 端口</p>
+ * @method void setPort(integer $Port) 设置<p>MQTT VIP 端口</p>
+ * @method string getUserName() 获取<p>MQTT实例用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>MQTT实例用户名</p>
+ * @method string getPassword() 获取<p>MQTT实例内账户密码</p>
+ * @method void setPassword(string $Password) 设置<p>MQTT实例内账户密码</p>
+ * @method integer getQos() 获取<p>QoS</p>
+ * @method void setQos(integer $Qos) 设置<p>QoS</p>
+ * @method integer getMaxTasks() 获取<p>tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription</p>
+ * @method void setMaxTasks(integer $MaxTasks) 设置<p>tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription</p>
+ * @method string getServiceVip() 获取<p>MQTT 实例的Service VIP</p>
+ * @method void setServiceVip(string $ServiceVip) 设置<p>MQTT 实例的Service VIP</p>
+ * @method string getUniqVpcId() 获取<p>MQTT实例的VPC ID</p>
+ * @method void setUniqVpcId(string $UniqVpcId) 设置<p>MQTT实例的VPC ID</p>
+ * @method boolean getSelfBuilt() 获取<p>是否为自建集群, MQTT只支持非自建集群</p>
+ * @method void setSelfBuilt(boolean $SelfBuilt) 设置<p>是否为自建集群, MQTT只支持非自建集群</p>
+ * @method string getSqlFilter() 获取<p>MQTT消息过滤sql语句</p>
+ * @method void setSqlFilter(string $SqlFilter) 设置<p>MQTT消息过滤sql语句</p>
  */
 class MqttParam extends AbstractModel
 {
     /**
-     * @var string 需要同步的MQTT Topic列表, CSV格式
+     * @var string <p>需要同步的MQTT Topic列表, CSV格式</p>
      */
     public $Topics;
 
     /**
-     * @var boolean 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
+     * @var boolean <p>用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。</p>
      */
     public $CleanSession;
 
     /**
-     * @var string MQTT instance-id
+     * @var string <p>MQTT instance-id</p>
      */
     public $Resource;
 
     /**
-     * @var string MQTT实例VIP
+     * @var string <p>MQTT实例VIP</p>
      */
     public $Ip;
 
     /**
-     * @var integer MQTT VIP 端口
+     * @var integer <p>MQTT VIP 端口</p>
      */
     public $Port;
 
     /**
-     * @var string MQTT实例用户名
+     * @var string <p>MQTT实例用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string MQTT实例内账户密码
+     * @var string <p>MQTT实例内账户密码</p>
      */
     public $Password;
 
     /**
-     * @var integer QoS
+     * @var integer <p>QoS</p>
      */
     public $Qos;
 
     /**
-     * @var integer tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
+     * @var integer <p>tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription</p>
      */
     public $MaxTasks;
 
     /**
-     * @var string MQTT 实例的Service VIP
+     * @var string <p>MQTT 实例的Service VIP</p>
      */
     public $ServiceVip;
 
     /**
-     * @var string MQTT实例的VPC ID
+     * @var string <p>MQTT实例的VPC ID</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var boolean 是否为自建集群, MQTT只支持非自建集群
+     * @var boolean <p>是否为自建集群, MQTT只支持非自建集群</p>
      */
     public $SelfBuilt;
 
     /**
-     * @param string $Topics 需要同步的MQTT Topic列表, CSV格式
-     * @param boolean $CleanSession 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
-     * @param string $Resource MQTT instance-id
-     * @param string $Ip MQTT实例VIP
-     * @param integer $Port MQTT VIP 端口
-     * @param string $UserName MQTT实例用户名
-     * @param string $Password MQTT实例内账户密码
-     * @param integer $Qos QoS
-     * @param integer $MaxTasks tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-     * @param string $ServiceVip MQTT 实例的Service VIP
-     * @param string $UniqVpcId MQTT实例的VPC ID
-     * @param boolean $SelfBuilt 是否为自建集群, MQTT只支持非自建集群
+     * @var string <p>MQTT消息过滤sql语句</p>
+     */
+    public $SqlFilter;
+
+    /**
+     * @param string $Topics <p>需要同步的MQTT Topic列表, CSV格式</p>
+     * @param boolean $CleanSession <p>用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。</p>
+     * @param string $Resource <p>MQTT instance-id</p>
+     * @param string $Ip <p>MQTT实例VIP</p>
+     * @param integer $Port <p>MQTT VIP 端口</p>
+     * @param string $UserName <p>MQTT实例用户名</p>
+     * @param string $Password <p>MQTT实例内账户密码</p>
+     * @param integer $Qos <p>QoS</p>
+     * @param integer $MaxTasks <p>tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription</p>
+     * @param string $ServiceVip <p>MQTT 实例的Service VIP</p>
+     * @param string $UniqVpcId <p>MQTT实例的VPC ID</p>
+     * @param boolean $SelfBuilt <p>是否为自建集群, MQTT只支持非自建集群</p>
+     * @param string $SqlFilter <p>MQTT消息过滤sql语句</p>
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class MqttParam extends AbstractModel
 
         if (array_key_exists("SelfBuilt",$param) and $param["SelfBuilt"] !== null) {
             $this->SelfBuilt = $param["SelfBuilt"];
+        }
+
+        if (array_key_exists("SqlFilter",$param) and $param["SqlFilter"] !== null) {
+            $this->SqlFilter = $param["SqlFilter"];
         }
     }
 }

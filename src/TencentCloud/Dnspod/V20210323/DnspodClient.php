@@ -65,6 +65,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
  * @method Models\DescribeDomainGroupListResponse DescribeDomainGroupList(Models\DescribeDomainGroupListRequest $req) 获取域名分组列表
  * @method Models\DescribeDomainListResponse DescribeDomainList(Models\DescribeDomainListRequest $req) 获取域名列表
+ * @method Models\DescribeDomainLogFilterFileResponse DescribeDomainLogFilterFile(Models\DescribeDomainLogFilterFileRequest $req) 获取域名操作日志导出文件下载地址
  * @method Models\DescribeDomainLogListResponse DescribeDomainLogList(Models\DescribeDomainLogListRequest $req) 获取域名日志
  * @method Models\DescribeDomainPreviewResponse DescribeDomainPreview(Models\DescribeDomainPreviewRequest $req) 获取域名概览信息
  * @method Models\DescribeDomainPurviewResponse DescribeDomainPurview(Models\DescribeDomainPurviewRequest $req) 获取域名权限

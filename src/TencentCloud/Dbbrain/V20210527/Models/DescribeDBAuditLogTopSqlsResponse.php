@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StartWebRecord返回参数结构体
+ * DescribeDBAuditLogTopSqls返回参数结构体
  *
- * @method string getTaskId() 获取<p>录制任务的唯一Id</p>
- * @method void setTaskId(string $TaskId) 设置<p>录制任务的唯一Id</p>
+ * @method integer getTotalCount() 获取<p>符合条件的记录总数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的记录总数。</p>
+ * @method array getTopSqls() 获取<p>top sql 列表</p>
+ * @method void setTopSqls(array $TopSqls) 设置<p>top sql 列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class StartWebRecordResponse extends AbstractModel
+class DescribeDBAuditLogTopSqlsResponse extends AbstractModel
 {
     /**
-     * @var string <p>录制任务的唯一Id</p>
+     * @var integer <p>符合条件的记录总数。</p>
      */
-    public $TaskId;
+    public $TotalCount;
+
+    /**
+     * @var array <p>top sql 列表</p>
+     */
+    public $TopSqls;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class StartWebRecordResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId <p>录制任务的唯一Id</p>
+     * @param integer $TotalCount <p>符合条件的记录总数。</p>
+     * @param array $TopSqls <p>top sql 列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class StartWebRecordResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TopSqls",$param) and $param["TopSqls"] !== null) {
+            $this->TopSqls = [];
+            foreach ($param["TopSqls"] as $key => $value){
+                $obj = new TopSqlTpl();
+                $obj->deserialize($value);
+                array_push($this->TopSqls, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

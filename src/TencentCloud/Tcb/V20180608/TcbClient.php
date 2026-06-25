@@ -151,6 +151,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 本接口，用于获取环境当前属于哪个计费周期内。
  * @method Models\DescribeEnvLimitResponse DescribeEnvLimit(Models\DescribeEnvLimitRequest $req) 查询环境个数上限
+ * @method Models\DescribeEnvPlansResponse DescribeEnvPlans(Models\DescribeEnvPlansRequest $req) 获取可售卖的新套餐列表，含详情，如果传了PackageId，则只获取指定套餐详情
  * @method Models\DescribeEnvsResponse DescribeEnvs(Models\DescribeEnvsRequest $req) 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
  * @method Models\DescribeGatewayVersionsResponse DescribeGatewayVersions(Models\DescribeGatewayVersionsRequest $req) 查询网关版本信息
 暂不鉴权

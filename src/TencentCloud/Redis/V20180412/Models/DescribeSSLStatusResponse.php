@@ -20,63 +20,59 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSSLStatus返回参数结构体
  *
- * @method string getCertDownloadUrl() 获取SSL 证书下载地址。
- * @method void setCertDownloadUrl(string $CertDownloadUrl) 设置SSL 证书下载地址。
- * @method string getUrlExpiredTime() 获取证书下载链接到期时间。
- * @method void setUrlExpiredTime(string $UrlExpiredTime) 设置证书下载链接到期时间。
- * @method boolean getSSLConfig() 获取标识实例开启 SSL 功能。
-- true：开启 。
-- false：关闭。
- * @method void setSSLConfig(boolean $SSLConfig) 设置标识实例开启 SSL 功能。
-- true：开启 。
-- false：关闭。
- * @method boolean getFeatureSupport() 获取标识实例是否支持 SSL特性。
-- true：支持。
-- false：不支持。
- * @method void setFeatureSupport(boolean $FeatureSupport) 设置标识实例是否支持 SSL特性。
-- true：支持。
-- false：不支持。
- * @method integer getStatus() 获取说明配置 SSL 的状态。
-- 1: 配置中。
-- 2：配置成功。
- * @method void setStatus(integer $Status) 设置说明配置 SSL 的状态。
-- 1: 配置中。
-- 2：配置成功。
+ * @method string getCertDownloadUrl() 获取<p>SSL 证书下载地址。</p>
+ * @method void setCertDownloadUrl(string $CertDownloadUrl) 设置<p>SSL 证书下载地址。</p>
+ * @method string getUrlExpiredTime() 获取<p>证书下载链接到期时间。</p>
+ * @method void setUrlExpiredTime(string $UrlExpiredTime) 设置<p>证书下载链接到期时间。</p>
+ * @method boolean getSSLConfig() 获取<p>标识实例开启 SSL 功能。</p><ul><li>true：开启 。</li><li>false：关闭。</li></ul>
+ * @method void setSSLConfig(boolean $SSLConfig) 设置<p>标识实例开启 SSL 功能。</p><ul><li>true：开启 。</li><li>false：关闭。</li></ul>
+ * @method boolean getFeatureSupport() 获取<p>标识实例是否支持 SSL特性。</p><ul><li>true：支持。</li><li>false：不支持。</li></ul>
+ * @method void setFeatureSupport(boolean $FeatureSupport) 设置<p>标识实例是否支持 SSL特性。</p><ul><li>true：支持。</li><li>false：不支持。</li></ul>
+ * @method integer getStatus() 获取<p>说明配置 SSL 的状态。</p><ul><li>1: 配置中。</li><li>2：配置成功。</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>说明配置 SSL 的状态。</p><ul><li>1: 配置中。</li><li>2：配置成功。</li></ul>
+ * @method integer getAddressType() 获取<p>地址类型</p><p>枚举值：</p><ul><li>0： 不限</li><li>1： 内网IPv4</li><li>2： 内网IPv6</li><li>3： 外网</li><li>-1： 未指定</li></ul>
+ * @method void setAddressType(integer $AddressType) 设置<p>地址类型</p><p>枚举值：</p><ul><li>0： 不限</li><li>1： 内网IPv4</li><li>2： 内网IPv6</li><li>3： 外网</li><li>-1： 未指定</li></ul>
+ * @method string getEncryptAddress() 获取<p>当前加密连接地址</p>
+ * @method void setEncryptAddress(string $EncryptAddress) 设置<p>当前加密连接地址</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSSLStatusResponse extends AbstractModel
 {
     /**
-     * @var string SSL 证书下载地址。
+     * @var string <p>SSL 证书下载地址。</p>
      */
     public $CertDownloadUrl;
 
     /**
-     * @var string 证书下载链接到期时间。
+     * @var string <p>证书下载链接到期时间。</p>
      */
     public $UrlExpiredTime;
 
     /**
-     * @var boolean 标识实例开启 SSL 功能。
-- true：开启 。
-- false：关闭。
+     * @var boolean <p>标识实例开启 SSL 功能。</p><ul><li>true：开启 。</li><li>false：关闭。</li></ul>
      */
     public $SSLConfig;
 
     /**
-     * @var boolean 标识实例是否支持 SSL特性。
-- true：支持。
-- false：不支持。
+     * @var boolean <p>标识实例是否支持 SSL特性。</p><ul><li>true：支持。</li><li>false：不支持。</li></ul>
      */
     public $FeatureSupport;
 
     /**
-     * @var integer 说明配置 SSL 的状态。
-- 1: 配置中。
-- 2：配置成功。
+     * @var integer <p>说明配置 SSL 的状态。</p><ul><li>1: 配置中。</li><li>2：配置成功。</li></ul>
      */
     public $Status;
+
+    /**
+     * @var integer <p>地址类型</p><p>枚举值：</p><ul><li>0： 不限</li><li>1： 内网IPv4</li><li>2： 内网IPv6</li><li>3： 外网</li><li>-1： 未指定</li></ul>
+     */
+    public $AddressType;
+
+    /**
+     * @var string <p>当前加密连接地址</p>
+     */
+    public $EncryptAddress;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -84,17 +80,13 @@ class DescribeSSLStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CertDownloadUrl SSL 证书下载地址。
-     * @param string $UrlExpiredTime 证书下载链接到期时间。
-     * @param boolean $SSLConfig 标识实例开启 SSL 功能。
-- true：开启 。
-- false：关闭。
-     * @param boolean $FeatureSupport 标识实例是否支持 SSL特性。
-- true：支持。
-- false：不支持。
-     * @param integer $Status 说明配置 SSL 的状态。
-- 1: 配置中。
-- 2：配置成功。
+     * @param string $CertDownloadUrl <p>SSL 证书下载地址。</p>
+     * @param string $UrlExpiredTime <p>证书下载链接到期时间。</p>
+     * @param boolean $SSLConfig <p>标识实例开启 SSL 功能。</p><ul><li>true：开启 。</li><li>false：关闭。</li></ul>
+     * @param boolean $FeatureSupport <p>标识实例是否支持 SSL特性。</p><ul><li>true：支持。</li><li>false：不支持。</li></ul>
+     * @param integer $Status <p>说明配置 SSL 的状态。</p><ul><li>1: 配置中。</li><li>2：配置成功。</li></ul>
+     * @param integer $AddressType <p>地址类型</p><p>枚举值：</p><ul><li>0： 不限</li><li>1： 内网IPv4</li><li>2： 内网IPv6</li><li>3： 外网</li><li>-1： 未指定</li></ul>
+     * @param string $EncryptAddress <p>当前加密连接地址</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +120,14 @@ class DescribeSSLStatusResponse extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
+            $this->AddressType = $param["AddressType"];
+        }
+
+        if (array_key_exists("EncryptAddress",$param) and $param["EncryptAddress"] !== null) {
+            $this->EncryptAddress = $param["EncryptAddress"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

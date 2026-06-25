@@ -20,86 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartWebRecord请求参数结构体
  *
- * @method string getRecordUrl() 获取【必填】需要录制的网页URL
- * @method void setRecordUrl(string $RecordUrl) 设置【必填】需要录制的网页URL
- * @method StorageParams getStorageParams() 获取【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
- * @method void setStorageParams(StorageParams $StorageParams) 设置【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
- * @method integer getSdkAppId() 获取【必填】TRTC的SdkAppId
- * @method void setSdkAppId(integer $SdkAppId) 设置【必填】TRTC的SdkAppId
- * @method integer getMaxDurationLimit() 获取录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
- * @method void setMaxDurationLimit(integer $MaxDurationLimit) 设置录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
- * @method WebRecordVideoParams getWebRecordVideoParams() 获取页面录制视频参数
- * @method void setWebRecordVideoParams(WebRecordVideoParams $WebRecordVideoParams) 设置页面录制视频参数
- * @method string getRecordId() 获取当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
-传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
- * @method void setRecordId(string $RecordId) 设置当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
-传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
- * @method array getPublishCdnParams() 获取若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
- * @method void setPublishCdnParams(array $PublishCdnParams) 设置若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
- * @method integer getReadyTimeout() 获取录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
- * @method void setReadyTimeout(integer $ReadyTimeout) 设置录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
- * @method EmulateMobileParams getEmulateMobileParams() 获取渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
- * @method void setEmulateMobileParams(EmulateMobileParams $EmulateMobileParams) 设置渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+ * @method string getRecordUrl() 获取<p>【必填】需要录制的网页URL</p>
+ * @method void setRecordUrl(string $RecordUrl) 设置<p>【必填】需要录制的网页URL</p>
+ * @method StorageParams getStorageParams() 获取<p>【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4</p>
+ * @method void setStorageParams(StorageParams $StorageParams) 设置<p>【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4</p>
+ * @method integer getSdkAppId() 获取<p>【必填】TRTC的SdkAppId</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>【必填】TRTC的SdkAppId</p>
+ * @method integer getMaxDurationLimit() 获取<p>录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)</p>
+ * @method void setMaxDurationLimit(integer $MaxDurationLimit) 设置<p>录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)</p>
+ * @method WebRecordVideoParams getWebRecordVideoParams() 获取<p>页面录制视频参数</p>
+ * @method void setWebRecordVideoParams(WebRecordVideoParams $WebRecordVideoParams) 设置<p>页面录制视频参数</p>
+ * @method string getRecordId() 获取<p>当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复<br>传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。</p>
+ * @method void setRecordId(string $RecordId) 设置<p>当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复<br>传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。</p>
+ * @method array getPublishCdnParams() 获取<p>若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1</p>
+ * @method void setPublishCdnParams(array $PublishCdnParams) 设置<p>若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1</p>
+ * @method integer getReadyTimeout() 获取<p>录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。</p>
+ * @method void setReadyTimeout(integer $ReadyTimeout) 设置<p>录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。</p>
+ * @method EmulateMobileParams getEmulateMobileParams() 获取<p>渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。</p>
+ * @method void setEmulateMobileParams(EmulateMobileParams $EmulateMobileParams) 设置<p>渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。</p>
  */
 class StartWebRecordRequest extends AbstractModel
 {
     /**
-     * @var string 【必填】需要录制的网页URL
+     * @var string <p>【必填】需要录制的网页URL</p>
      */
     public $RecordUrl;
 
     /**
-     * @var StorageParams 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
+     * @var StorageParams <p>【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4</p>
      */
     public $StorageParams;
 
     /**
-     * @var integer 【必填】TRTC的SdkAppId
+     * @var integer <p>【必填】TRTC的SdkAppId</p>
      */
     public $SdkAppId;
 
     /**
-     * @var integer 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+     * @var integer <p>录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)</p>
      */
     public $MaxDurationLimit;
 
     /**
-     * @var WebRecordVideoParams 页面录制视频参数
+     * @var WebRecordVideoParams <p>页面录制视频参数</p>
      */
     public $WebRecordVideoParams;
 
     /**
-     * @var string 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
-传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
+     * @var string <p>当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复<br>传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。</p>
      */
     public $RecordId;
 
     /**
-     * @var array 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+     * @var array <p>若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1</p>
      */
     public $PublishCdnParams;
 
     /**
-     * @var integer 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+     * @var integer <p>录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。</p>
      */
     public $ReadyTimeout;
 
     /**
-     * @var EmulateMobileParams 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+     * @var EmulateMobileParams <p>渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。</p>
      */
     public $EmulateMobileParams;
 
     /**
-     * @param string $RecordUrl 【必填】需要录制的网页URL
-     * @param StorageParams $StorageParams 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
-     * @param integer $SdkAppId 【必填】TRTC的SdkAppId
-     * @param integer $MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
-     * @param WebRecordVideoParams $WebRecordVideoParams 页面录制视频参数
-     * @param string $RecordId 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
-传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
-     * @param array $PublishCdnParams 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
-     * @param integer $ReadyTimeout 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
-     * @param EmulateMobileParams $EmulateMobileParams 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+     * @param string $RecordUrl <p>【必填】需要录制的网页URL</p>
+     * @param StorageParams $StorageParams <p>【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4</p>
+     * @param integer $SdkAppId <p>【必填】TRTC的SdkAppId</p>
+     * @param integer $MaxDurationLimit <p>录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)</p>
+     * @param WebRecordVideoParams $WebRecordVideoParams <p>页面录制视频参数</p>
+     * @param string $RecordId <p>当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复<br>传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。</p>
+     * @param array $PublishCdnParams <p>若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1</p>
+     * @param integer $ReadyTimeout <p>录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。</p>
+     * @param EmulateMobileParams $EmulateMobileParams <p>渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。</p>
      */
     function __construct()
     {

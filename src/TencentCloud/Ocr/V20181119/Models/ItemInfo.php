@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文档智能元素组
  *
- * @method Key getKey() 获取key信息组
+ * @method Key getKey() 获取<p>key信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(Key $Key) 设置key信息组
+ * @method void setKey(Key $Key) 设置<p>key信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Value getValue() 获取Value信息组
+ * @method Value getValue() 获取<p>Value信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(Value $Value) 设置Value信息组
+ * @method void setValue(Value $Value) 设置<p>Value信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAuditResult() 获取<p>返回这个字段是否比对审核通过</p><p>默认值：false</p>
+ * @method void setAuditResult(boolean $AuditResult) 设置<p>返回这个字段是否比对审核通过</p><p>默认值：false</p>
  */
 class ItemInfo extends AbstractModel
 {
     /**
-     * @var Key key信息组
+     * @var Key <p>key信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
-     * @var Value Value信息组
+     * @var Value <p>Value信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @param Key $Key key信息组
+     * @var boolean <p>返回这个字段是否比对审核通过</p><p>默认值：false</p>
+     */
+    public $AuditResult;
+
+    /**
+     * @param Key $Key <p>key信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value $Value Value信息组
+     * @param Value $Value <p>Value信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AuditResult <p>返回这个字段是否比对审核通过</p><p>默认值：false</p>
      */
     function __construct()
     {
@@ -70,6 +78,10 @@ class ItemInfo extends AbstractModel
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = new Value();
             $this->Value->deserialize($param["Value"]);
+        }
+
+        if (array_key_exists("AuditResult",$param) and $param["AuditResult"] !== null) {
+            $this->AuditResult = $param["AuditResult"];
         }
     }
 }

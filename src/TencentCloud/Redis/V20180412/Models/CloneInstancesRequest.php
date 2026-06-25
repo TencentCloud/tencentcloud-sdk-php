@@ -20,202 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloneInstances请求参数结构体
  *
- * @method string getInstanceId() 获取指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
- * @method integer getGoodsNum() 获取单次克隆实例的数量。
-- 包年包月每次购买最大数量为100。
-- 按量计费每次购买最大数量为30。
- * @method void setGoodsNum(integer $GoodsNum) 设置单次克隆实例的数量。
-- 包年包月每次购买最大数量为100。
-- 按量计费每次购买最大数量为30。
- * @method integer getZoneId() 获取克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106) 。
- * @method void setZoneId(integer $ZoneId) 设置克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106) 。
- * @method integer getBillingMode() 获取付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
- * @method void setBillingMode(integer $BillingMode) 设置付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
- * @method integer getPeriod() 获取购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
- * @method void setPeriod(integer $Period) 设置购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
- * @method array getSecurityGroupIdList() 获取安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
- * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
- * @method string getBackupId() 获取克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
- * @method void setBackupId(string $BackupId) 设置克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
- * @method boolean getNoAuth() 获取配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul>
- * @method void setNoAuth(boolean $NoAuth) 设置配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul>
- * @method string getVpcId() 获取配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
- * @method void setVpcId(string $VpcId) 设置配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
- * @method string getSubnetId() 获取配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
- * @method void setSubnetId(string $SubnetId) 设置配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
- * @method string getInstanceName() 获取克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</br>
- * @method void setInstanceName(string $InstanceName) 设置克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</br>
- * @method string getPassword() 获取克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul>
- * @method void setPassword(string $Password) 设置克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul>
- * @method integer getAutoRenew() 获取自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
- * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
- * @method integer getVPort() 获取用户自定义的端口，默认为6379，取值范围[1024,65535]。
- * @method void setVPort(integer $VPort) 设置用户自定义的端口，默认为6379，取值范围[1024,65535]。
- * @method array getNodeSet() 获取实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见[RedisNodeInfo](https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo)。</li><li>单可用区部署可不配置该参数。</li></ul>
- * @method void setNodeSet(array $NodeSet) 设置实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见[RedisNodeInfo](https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo)。</li><li>单可用区部署可不配置该参数。</li></ul>
- * @method integer getProjectId() 获取项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
- * @method void setProjectId(integer $ProjectId) 设置项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
- * @method array getResourceTags() 获取克隆实例需绑定的标签。
- * @method void setResourceTags(array $ResourceTags) 设置克隆实例需绑定的标签。
- * @method string getTemplateId() 获取指定克隆实例相关的参数模板 ID。
-- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
-- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
- * @method void setTemplateId(string $TemplateId) 设置指定克隆实例相关的参数模板 ID。
-- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
-- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
- * @method array getAlarmPolicyList() 获取指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
- * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
- * @method string getCloneTime() 获取克隆指定恢复数据的时间。
-仅支持已开通秒级备份的实例
-
- * @method void setCloneTime(string $CloneTime) 设置克隆指定恢复数据的时间。
-仅支持已开通秒级备份的实例
-
- * @method boolean getEncryptPassword() 获取是否加密密码
- * @method void setEncryptPassword(boolean $EncryptPassword) 设置是否加密密码
+ * @method string getInstanceId() 获取<p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
+ * @method integer getGoodsNum() 获取<p>单次克隆实例的数量。</p><ul><li>包年包月每次购买最大数量为100。</li><li>按量计费每次购买最大数量为30。</li></ul>
+ * @method void setGoodsNum(integer $GoodsNum) 设置<p>单次克隆实例的数量。</p><ul><li>包年包月每次购买最大数量为100。</li><li>按量计费每次购买最大数量为30。</li></ul>
+ * @method integer getZoneId() 获取<p>克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a> 。</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a> 。</p>
+ * @method integer getBillingMode() 获取<p>付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+ * @method void setBillingMode(integer $BillingMode) 设置<p>付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+ * @method integer getPeriod() 获取<p>购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul></p>
+ * @method void setPeriod(integer $Period) 设置<p>购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul></p>
+ * @method array getSecurityGroupIdList() 获取<p>安全组ID。请通过 <a href="https://cloud.tencent.com/document/product/239/34447">DescribeInstanceSecurityGroup</a> 接口获取实例的安全组 ID。</p>
+ * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置<p>安全组ID。请通过 <a href="https://cloud.tencent.com/document/product/239/34447">DescribeInstanceSecurityGroup</a> 接口获取实例的安全组 ID。</p>
+ * @method string getBackupId() 获取<p>克隆实例使用的备份ID。请通过接口<a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a>获取备份ID。</p>
+ * @method void setBackupId(string $BackupId) 设置<p>克隆实例使用的备份ID。请通过接口<a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a>获取备份ID。</p>
+ * @method boolean getNoAuth() 获取<p>配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul></p>
+ * @method void setNoAuth(boolean $NoAuth) 设置<p>配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul></p>
+ * @method string getVpcId() 获取<p>配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。</p>
+ * @method void setVpcId(string $VpcId) 设置<p>配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。</p>
+ * @method string getSubnetId() 获取<p>配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。</p>
+ * @method string getInstanceName() 获取<p>克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线&quot;-&quot;、下划线&quot;_&quot;。<br></p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线&quot;-&quot;、下划线&quot;_&quot;。<br></p>
+ * @method string getPassword() 获取<p>克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种，不能以&quot;/&quot;开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul></p>
+ * @method void setPassword(string $Password) 设置<p>克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种，不能以&quot;/&quot;开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul></p>
+ * @method integer getAutoRenew() 获取<p>自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul></p>
+ * @method void setAutoRenew(integer $AutoRenew) 设置<p>自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul></p>
+ * @method integer getVPort() 获取<p>用户自定义的端口，默认为6379，取值范围[1024,65535]。</p>
+ * @method void setVPort(integer $VPort) 设置<p>用户自定义的端口，默认为6379，取值范围[1024,65535]。</p>
+ * @method array getNodeSet() 获取<p>实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo">RedisNodeInfo</a>。</li><li>单可用区部署可不配置该参数。</li></ul></p>
+ * @method void setNodeSet(array $NodeSet) 设置<p>实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo">RedisNodeInfo</a>。</li><li>单可用区部署可不配置该参数。</li></ul></p>
+ * @method integer getProjectId() 获取<p>项目 ID。登录<a href="https://console.cloud.tencent.com/redis#/">Redis 控制台</a>，可在右上角的<b>账号中心</b> &gt; <b>项目管理</b>中查找项目ID。</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目 ID。登录<a href="https://console.cloud.tencent.com/redis#/">Redis 控制台</a>，可在右上角的<b>账号中心</b> &gt; <b>项目管理</b>中查找项目ID。</p>
+ * @method array getResourceTags() 获取<p>克隆实例需绑定的标签。</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>克隆实例需绑定的标签。</p>
+ * @method string getTemplateId() 获取<p>指定克隆实例相关的参数模板 ID。</p><ul><li>若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。</li><li>请通过<a href="https://cloud.tencent.com/document/product/239/58750">DescribeParamTemplates</a>接口，查询实例的参数模板列表，获取模板 ID 编号。</li></ul>
+ * @method void setTemplateId(string $TemplateId) 设置<p>指定克隆实例相关的参数模板 ID。</p><ul><li>若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。</li><li>请通过<a href="https://cloud.tencent.com/document/product/239/58750">DescribeParamTemplates</a>接口，查询实例的参数模板列表，获取模板 ID 编号。</li></ul>
+ * @method array getAlarmPolicyList() 获取<p>指定克隆实例的告警策略 ID。请登录<a href="https://console.cloud.tencent.com/monitor/alarm2/policy">腾讯云可观测平台控制台</a>，在 <b>告警管理</b> &gt; <b>策略管理</b>页面获取策略 ID 信息。</p>
+ * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置<p>指定克隆实例的告警策略 ID。请登录<a href="https://console.cloud.tencent.com/monitor/alarm2/policy">腾讯云可观测平台控制台</a>，在 <b>告警管理</b> &gt; <b>策略管理</b>页面获取策略 ID 信息。</p>
+ * @method string getCloneTime() 获取<p>克隆指定恢复数据的时间。<br>仅支持已开通秒级备份的实例</p>
+ * @method void setCloneTime(string $CloneTime) 设置<p>克隆指定恢复数据的时间。<br>仅支持已开通秒级备份的实例</p>
+ * @method boolean getEncryptPassword() 获取<p>是否加密密码</p>
+ * @method void setEncryptPassword(boolean $EncryptPassword) 设置<p>是否加密密码</p>
+ * @method PasswordPolicy getPasswordPolicy() 获取<p>实例密码复杂度策略</p><p>入参限制：未传或 Enabled=false 视为不启用，按默认规则校验</p>
+ * @method void setPasswordPolicy(PasswordPolicy $PasswordPolicy) 设置<p>实例密码复杂度策略</p><p>入参限制：未传或 Enabled=false 视为不启用，按默认规则校验</p>
+ * @method boolean getEnableSSL() 获取<p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p>
+ * @method void setEnableSSL(boolean $EnableSSL) 设置<p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p>
+ * @method boolean getSSLBindPrivateIPv4() 获取<p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
+ * @method void setSSLBindPrivateIPv4(boolean $SSLBindPrivateIPv4) 设置<p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
  */
 class CloneInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @var string <p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 单次克隆实例的数量。
-- 包年包月每次购买最大数量为100。
-- 按量计费每次购买最大数量为30。
+     * @var integer <p>单次克隆实例的数量。</p><ul><li>包年包月每次购买最大数量为100。</li><li>按量计费每次购买最大数量为30。</li></ul>
      */
     public $GoodsNum;
 
     /**
-     * @var integer 克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106) 。
+     * @var integer <p>克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a> 。</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer 付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+     * @var integer <p>付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
      */
     public $BillingMode;
 
     /**
-     * @var integer 购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
+     * @var integer <p>购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul></p>
      */
     public $Period;
 
     /**
-     * @var array 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
+     * @var array <p>安全组ID。请通过 <a href="https://cloud.tencent.com/document/product/239/34447">DescribeInstanceSecurityGroup</a> 接口获取实例的安全组 ID。</p>
      */
     public $SecurityGroupIdList;
 
     /**
-     * @var string 克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
+     * @var string <p>克隆实例使用的备份ID。请通过接口<a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a>获取备份ID。</p>
      */
     public $BackupId;
 
     /**
-     * @var boolean 配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul>
+     * @var boolean <p>配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul></p>
      */
     public $NoAuth;
 
     /**
-     * @var string 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
+     * @var string <p>配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。</p>
      */
     public $VpcId;
 
     /**
-     * @var string 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
+     * @var string <p>配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</br>
+     * @var string <p>克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线&quot;-&quot;、下划线&quot;_&quot;。<br></p>
      */
     public $InstanceName;
 
     /**
-     * @var string 克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul>
+     * @var string <p>克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种，不能以&quot;/&quot;开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul></p>
      */
     public $Password;
 
     /**
-     * @var integer 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
+     * @var integer <p>自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul></p>
      */
     public $AutoRenew;
 
     /**
-     * @var integer 用户自定义的端口，默认为6379，取值范围[1024,65535]。
+     * @var integer <p>用户自定义的端口，默认为6379，取值范围[1024,65535]。</p>
      */
     public $VPort;
 
     /**
-     * @var array 实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见[RedisNodeInfo](https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo)。</li><li>单可用区部署可不配置该参数。</li></ul>
+     * @var array <p>实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo">RedisNodeInfo</a>。</li><li>单可用区部署可不配置该参数。</li></ul></p>
      */
     public $NodeSet;
 
     /**
-     * @var integer 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
+     * @var integer <p>项目 ID。登录<a href="https://console.cloud.tencent.com/redis#/">Redis 控制台</a>，可在右上角的<b>账号中心</b> &gt; <b>项目管理</b>中查找项目ID。</p>
      */
     public $ProjectId;
 
     /**
-     * @var array 克隆实例需绑定的标签。
+     * @var array <p>克隆实例需绑定的标签。</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string 指定克隆实例相关的参数模板 ID。
-- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
-- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
+     * @var string <p>指定克隆实例相关的参数模板 ID。</p><ul><li>若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。</li><li>请通过<a href="https://cloud.tencent.com/document/product/239/58750">DescribeParamTemplates</a>接口，查询实例的参数模板列表，获取模板 ID 编号。</li></ul>
      */
     public $TemplateId;
 
     /**
-     * @var array 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
+     * @var array <p>指定克隆实例的告警策略 ID。请登录<a href="https://console.cloud.tencent.com/monitor/alarm2/policy">腾讯云可观测平台控制台</a>，在 <b>告警管理</b> &gt; <b>策略管理</b>页面获取策略 ID 信息。</p>
      */
     public $AlarmPolicyList;
 
     /**
-     * @var string 克隆指定恢复数据的时间。
-仅支持已开通秒级备份的实例
-
+     * @var string <p>克隆指定恢复数据的时间。<br>仅支持已开通秒级备份的实例</p>
      */
     public $CloneTime;
 
     /**
-     * @var boolean 是否加密密码
+     * @var boolean <p>是否加密密码</p>
      */
     public $EncryptPassword;
 
     /**
-     * @param string $InstanceId 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
-     * @param integer $GoodsNum 单次克隆实例的数量。
-- 包年包月每次购买最大数量为100。
-- 按量计费每次购买最大数量为30。
-     * @param integer $ZoneId 克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106) 。
-     * @param integer $BillingMode 付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
-     * @param integer $Period 购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
-     * @param array $SecurityGroupIdList 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
-     * @param string $BackupId 克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
-     * @param boolean $NoAuth 配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul>
-     * @param string $VpcId 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
-     * @param string $SubnetId 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
-     * @param string $InstanceName 克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</br>
-     * @param string $Password 克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul>
-     * @param integer $AutoRenew 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
-     * @param integer $VPort 用户自定义的端口，默认为6379，取值范围[1024,65535]。
-     * @param array $NodeSet 实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见[RedisNodeInfo](https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo)。</li><li>单可用区部署可不配置该参数。</li></ul>
-     * @param integer $ProjectId 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
-     * @param array $ResourceTags 克隆实例需绑定的标签。
-     * @param string $TemplateId 指定克隆实例相关的参数模板 ID。
-- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
-- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
-     * @param array $AlarmPolicyList 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
-     * @param string $CloneTime 克隆指定恢复数据的时间。
-仅支持已开通秒级备份的实例
+     * @var PasswordPolicy <p>实例密码复杂度策略</p><p>入参限制：未传或 Enabled=false 视为不启用，按默认规则校验</p>
+     */
+    public $PasswordPolicy;
 
-     * @param boolean $EncryptPassword 是否加密密码
+    /**
+     * @var boolean <p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p>
+     */
+    public $EnableSSL;
+
+    /**
+     * @var boolean <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
+     */
+    public $SSLBindPrivateIPv4;
+
+    /**
+     * @param string $InstanceId <p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
+     * @param integer $GoodsNum <p>单次克隆实例的数量。</p><ul><li>包年包月每次购买最大数量为100。</li><li>按量计费每次购买最大数量为30。</li></ul>
+     * @param integer $ZoneId <p>克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a> 。</p>
+     * @param integer $BillingMode <p>付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+     * @param integer $Period <p>购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul></p>
+     * @param array $SecurityGroupIdList <p>安全组ID。请通过 <a href="https://cloud.tencent.com/document/product/239/34447">DescribeInstanceSecurityGroup</a> 接口获取实例的安全组 ID。</p>
+     * @param string $BackupId <p>克隆实例使用的备份ID。请通过接口<a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a>获取备份ID。</p>
+     * @param boolean $NoAuth <p>配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul></p>
+     * @param string $VpcId <p>配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。</p>
+     * @param string $SubnetId <p>配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。</p>
+     * @param string $InstanceName <p>克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线&quot;-&quot;、下划线&quot;_&quot;。<br></p>
+     * @param string $Password <p>克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种，不能以&quot;/&quot;开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul></p>
+     * @param integer $AutoRenew <p>自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul></p>
+     * @param integer $VPort <p>用户自定义的端口，默认为6379，取值范围[1024,65535]。</p>
+     * @param array $NodeSet <p>实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo">RedisNodeInfo</a>。</li><li>单可用区部署可不配置该参数。</li></ul></p>
+     * @param integer $ProjectId <p>项目 ID。登录<a href="https://console.cloud.tencent.com/redis#/">Redis 控制台</a>，可在右上角的<b>账号中心</b> &gt; <b>项目管理</b>中查找项目ID。</p>
+     * @param array $ResourceTags <p>克隆实例需绑定的标签。</p>
+     * @param string $TemplateId <p>指定克隆实例相关的参数模板 ID。</p><ul><li>若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。</li><li>请通过<a href="https://cloud.tencent.com/document/product/239/58750">DescribeParamTemplates</a>接口，查询实例的参数模板列表，获取模板 ID 编号。</li></ul>
+     * @param array $AlarmPolicyList <p>指定克隆实例的告警策略 ID。请登录<a href="https://console.cloud.tencent.com/monitor/alarm2/policy">腾讯云可观测平台控制台</a>，在 <b>告警管理</b> &gt; <b>策略管理</b>页面获取策略 ID 信息。</p>
+     * @param string $CloneTime <p>克隆指定恢复数据的时间。<br>仅支持已开通秒级备份的实例</p>
+     * @param boolean $EncryptPassword <p>是否加密密码</p>
+     * @param PasswordPolicy $PasswordPolicy <p>实例密码复杂度策略</p><p>入参限制：未传或 Enabled=false 视为不启用，按默认规则校验</p>
+     * @param boolean $EnableSSL <p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p>
+     * @param boolean $SSLBindPrivateIPv4 <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
      */
     function __construct()
     {
@@ -322,6 +322,19 @@ class CloneInstancesRequest extends AbstractModel
 
         if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
             $this->EncryptPassword = $param["EncryptPassword"];
+        }
+
+        if (array_key_exists("PasswordPolicy",$param) and $param["PasswordPolicy"] !== null) {
+            $this->PasswordPolicy = new PasswordPolicy();
+            $this->PasswordPolicy->deserialize($param["PasswordPolicy"]);
+        }
+
+        if (array_key_exists("EnableSSL",$param) and $param["EnableSSL"] !== null) {
+            $this->EnableSSL = $param["EnableSSL"];
+        }
+
+        if (array_key_exists("SSLBindPrivateIPv4",$param) and $param["SSLBindPrivateIPv4"] !== null) {
+            $this->SSLBindPrivateIPv4 = $param["SSLBindPrivateIPv4"];
         }
     }
 }

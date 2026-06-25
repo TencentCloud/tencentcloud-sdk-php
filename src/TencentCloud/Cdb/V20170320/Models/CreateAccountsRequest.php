@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccounts请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method array getAccounts() 获取云数据库账号。
- * @method void setAccounts(array $Accounts) 设置云数据库账号。
- * @method string getPassword() 获取新账户的密码。
-说明：
-1. 在8 ～ 64位字符数以内（推荐12位以上）。
-2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
-3. 不能包含非法字符。
- * @method void setPassword(string $Password) 设置新账户的密码。
-说明：
-1. 在8 ～ 64位字符数以内（推荐12位以上）。
-2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
-3. 不能包含非法字符。
- * @method string getDescription() 获取备注信息。最多支持输入255个字符。
- * @method void setDescription(string $Description) 设置备注信息。最多支持输入255个字符。
- * @method integer getMaxUserConnections() 获取新账户最大可用连接数，默认值为10240，最大可设置值为10240。
- * @method void setMaxUserConnections(integer $MaxUserConnections) 设置新账户最大可用连接数，默认值为10240，最大可设置值为10240。
+ * @method string getInstanceId() 获取<p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method array getAccounts() 获取<p>云数据库账号。</p>
+ * @method void setAccounts(array $Accounts) 设置<p>云数据库账号。</p>
+ * @method string getPassword() 获取<p>新账户的密码。<br>说明：</p><ol><li>在8 ～ 64位字符数以内（推荐12位以上）。</li><li>至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&amp;=!@#$%^*().|。</li><li>不能包含非法字符。</li></ol>
+ * @method void setPassword(string $Password) 设置<p>新账户的密码。<br>说明：</p><ol><li>在8 ～ 64位字符数以内（推荐12位以上）。</li><li>至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&amp;=!@#$%^*().|。</li><li>不能包含非法字符。</li></ol>
+ * @method string getDescription() 获取<p>备注信息。最多支持输入255个字符。</p>
+ * @method void setDescription(string $Description) 设置<p>备注信息。最多支持输入255个字符。</p>
+ * @method integer getMaxUserConnections() 获取<p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
+ * @method void setMaxUserConnections(integer $MaxUserConnections) 设置<p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
  */
 class CreateAccountsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 云数据库账号。
+     * @var array <p>云数据库账号。</p>
      */
     public $Accounts;
 
     /**
-     * @var string 新账户的密码。
-说明：
-1. 在8 ～ 64位字符数以内（推荐12位以上）。
-2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
-3. 不能包含非法字符。
+     * @var string <p>新账户的密码。<br>说明：</p><ol><li>在8 ～ 64位字符数以内（推荐12位以上）。</li><li>至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&amp;=!@#$%^*().|。</li><li>不能包含非法字符。</li></ol>
      */
     public $Password;
 
     /**
-     * @var string 备注信息。最多支持输入255个字符。
+     * @var string <p>备注信息。最多支持输入255个字符。</p>
      */
     public $Description;
 
     /**
-     * @var integer 新账户最大可用连接数，默认值为10240，最大可设置值为10240。
+     * @var integer <p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
      */
     public $MaxUserConnections;
 
     /**
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param array $Accounts 云数据库账号。
-     * @param string $Password 新账户的密码。
-说明：
-1. 在8 ～ 64位字符数以内（推荐12位以上）。
-2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
-3. 不能包含非法字符。
-     * @param string $Description 备注信息。最多支持输入255个字符。
-     * @param integer $MaxUserConnections 新账户最大可用连接数，默认值为10240，最大可设置值为10240。
+     * @param string $InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param array $Accounts <p>云数据库账号。</p>
+     * @param string $Password <p>新账户的密码。<br>说明：</p><ol><li>在8 ～ 64位字符数以内（推荐12位以上）。</li><li>至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&amp;=!@#$%^*().|。</li><li>不能包含非法字符。</li></ol>
+     * @param string $Description <p>备注信息。最多支持输入255个字符。</p>
+     * @param integer $MaxUserConnections <p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
      */
     function __construct()
     {

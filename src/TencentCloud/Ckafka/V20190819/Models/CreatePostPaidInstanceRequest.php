@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) 设置<p>弹性带宽开关 0不开启  1开启（0默认)</p>
  * @method string getCustomSSLCertId() 获取<p>自定义证书Id,仅当SpecificationsType为profession时生效,支持自定义证书能力</p><p>可通过<a href="https://cloud.tencent.com/document/product/400/41673">DescribeCertificateDetail</a>接口获取</p>
  * @method void setCustomSSLCertId(string $CustomSSLCertId) 设置<p>自定义证书Id,仅当SpecificationsType为profession时生效,支持自定义证书能力</p><p>可通过<a href="https://cloud.tencent.com/document/product/400/41673">DescribeCertificateDetail</a>接口获取</p>
+ * @method integer getStoreQuantityType() 获取<p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+ * @method void setStoreQuantityType(integer $StoreQuantityType) 设置<p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
  */
 class CreatePostPaidInstanceRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class CreatePostPaidInstanceRequest extends AbstractModel
     public $CustomSSLCertId;
 
     /**
+     * @var integer <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public $StoreQuantityType;
+
+    /**
      * @param string $VpcId <p>私有网络Id,可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口获取</p>
      * @param string $SubnetId <p>子网Id,可通过<a href="https://cloud.tencent.com/document/product/215/15784">DescribeSubnets</a>接口获取</p>
      * @param string $InstanceName <p>ckafka集群实例名称，是一个长度不超过128的任意字符。</p>
@@ -192,6 +199,7 @@ class CreatePostPaidInstanceRequest extends AbstractModel
      * @param array $Tags <p>标签</p>
      * @param integer $ElasticBandwidthSwitch <p>弹性带宽开关 0不开启  1开启（0默认)</p>
      * @param string $CustomSSLCertId <p>自定义证书Id,仅当SpecificationsType为profession时生效,支持自定义证书能力</p><p>可通过<a href="https://cloud.tencent.com/document/product/400/41673">DescribeCertificateDetail</a>接口获取</p>
+     * @param integer $StoreQuantityType <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class CreatePostPaidInstanceRequest extends AbstractModel
 
         if (array_key_exists("CustomSSLCertId",$param) and $param["CustomSSLCertId"] !== null) {
             $this->CustomSSLCertId = $param["CustomSSLCertId"];
+        }
+
+        if (array_key_exists("StoreQuantityType",$param) and $param["StoreQuantityType"] !== null) {
+            $this->StoreQuantityType = $param["StoreQuantityType"];
         }
     }
 }

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEndpointGroups请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- * @method array getFilters() 获取过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。
- * @method void setFilters(array $Filters) 设置过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为10，最大值为10。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为10，最大值为10。</p>
+ * @method array getFilters() 获取<p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
  */
 class DescribeEndpointGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer <p>返回数量，默认为10，最大值为10。</p>
      */
     public $Limit;
 
     /**
-     * @var array 过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。
+     * @var array <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
      */
     public $Filters;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
-     * @param array $Filters 过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param integer $Limit <p>返回数量，默认为10，最大值为10。</p>
+     * @param array $Filters <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
      */
     function __construct()
     {

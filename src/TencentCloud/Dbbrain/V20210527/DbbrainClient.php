@@ -51,6 +51,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeAllUserGroupResponse DescribeAllUserGroup(Models\DescribeAllUserGroupRequest $req) 获取邮件发送联系组的相关信息。
  * @method Models\DescribeAuditInstanceListResponse DescribeAuditInstanceList(Models\DescribeAuditInstanceListRequest $req) 查询实例列表
  * @method Models\DescribeAuditLogFilesResponse DescribeAuditLogFiles(Models\DescribeAuditLogFilesRequest $req) 用于创建云数据库实例的审计日志文件
+ * @method Models\DescribeDBAuditLogTopSqlsResponse DescribeDBAuditLogTopSqls(Models\DescribeDBAuditLogTopSqlsRequest $req) 按照Sql模板+schema的聚合方式，统计排序指定时间段内的top慢sql。
  * @method Models\DescribeDBAutonomyActionResponse DescribeDBAutonomyAction(Models\DescribeDBAutonomyActionRequest $req) 自治中心-查询自治事件任务详情。
  * @method Models\DescribeDBAutonomyActionsResponse DescribeDBAutonomyActions(Models\DescribeDBAutonomyActionsRequest $req) 自治中心-终止自治任务（单次）
  * @method Models\DescribeDBAutonomyEventsResponse DescribeDBAutonomyEvents(Models\DescribeDBAutonomyEventsRequest $req) 自治中心-终止自治任务（单次）

@@ -20,38 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据库账号信息
  *
- * @method string getUser() 获取账号名，可输入1 - 32个字符。
- * @method void setUser(string $User) 设置账号名，可输入1 - 32个字符。
- * @method string getHost() 获取账号的主机。
-说明：
-1. IP 形式，支持填入%。
-2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
- * @method void setHost(string $Host) 设置账号的主机。
-说明：
-1. IP 形式，支持填入%。
-2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
+ * @method string getUser() 获取<p>账号名，可输入1 - 32个字符。</p>
+ * @method void setUser(string $User) 设置<p>账号名，可输入1 - 32个字符。</p>
+ * @method string getHost() 获取<p>账号的主机。</p><p>IP 形式，支持填入%。</p>
+ * @method void setHost(string $Host) 设置<p>账号的主机。</p><p>IP 形式，支持填入%。</p>
  */
 class Account extends AbstractModel
 {
     /**
-     * @var string 账号名，可输入1 - 32个字符。
+     * @var string <p>账号名，可输入1 - 32个字符。</p>
      */
     public $User;
 
     /**
-     * @var string 账号的主机。
-说明：
-1. IP 形式，支持填入%。
-2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
+     * @var string <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
      */
     public $Host;
 
     /**
-     * @param string $User 账号名，可输入1 - 32个字符。
-     * @param string $Host 账号的主机。
-说明：
-1. IP 形式，支持填入%。
-2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
+     * @param string $User <p>账号名，可输入1 - 32个字符。</p>
+     * @param string $Host <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
      */
     function __construct()
     {

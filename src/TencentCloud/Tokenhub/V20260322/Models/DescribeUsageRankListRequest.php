@@ -20,88 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsageRankList请求参数结构体
  *
- * @method string getDimension() 获取统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。
- * @method void setDimension(string $Dimension) 设置统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。
- * @method string getStartTime() 获取起始时间（闭区间），RFC3339 格式。
- * @method void setStartTime(string $StartTime) 设置起始时间（闭区间），RFC3339 格式。
- * @method string getEndTime() 获取结束时间（开区间），RFC3339 格式。与 StartTime 的跨度最大 90 天。
- * @method void setEndTime(string $EndTime) 设置结束时间（开区间），RFC3339 格式。与 StartTime 的跨度最大 90 天。
- * @method string getMetricType() 获取指标族切换字段。本期支持 tokens（累计 Token 用量，statistics=sum）；传其他值将返回 InvalidParameter。空字符串或不传时默认 tokens。接口预留 MetricType 字段以支持后续指标族扩展。
- * @method void setMetricType(string $MetricType) 设置指标族切换字段。本期支持 tokens（累计 Token 用量，statistics=sum）；传其他值将返回 InvalidParameter。空字符串或不传时默认 tokens。接口预留 MetricType 字段以支持后续指标族扩展。
- * @method string getTarget() 获取维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。
- * @method void setTarget(string $Target) 设置维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。
- * @method integer getPeriod() 获取统计粒度（秒）。取值：60、300、3600、86400。必须不小于跨度对应下限：跨度 ≤ 1 天 → 60；1 ~ 5 天 → 300；5 ~ 10 天 → 3600；> 10 天 → 86400。仅 ShowAll=false 时使用。
- * @method void setPeriod(integer $Period) 设置统计粒度（秒）。取值：60、300、3600、86400。必须不小于跨度对应下限：跨度 ≤ 1 天 → 60；1 ~ 5 天 → 300；5 ~ 10 天 → 3600；> 10 天 → 86400。仅 ShowAll=false 时使用。
- * @method integer getOffset() 获取翻页起点，从 0 起，默认 0。ShowAll=true 时忽略。页大小固定为 10。
- * @method void setOffset(integer $Offset) 设置翻页起点，从 0 起，默认 0。ShowAll=true 时忽略。页大小固定为 10。
- * @method boolean getShowAll() 获取是否返回全量结果。
-- false（默认）：按 Offset 分页返回 TopList（每页 10 条），每个对象包含
-  Series 时序点用于绘制曲线。
-- true：忽略 Offset，返回全量对象列表，不返回 Series（CSV 导出场景）。
-
- * @method void setShowAll(boolean $ShowAll) 设置是否返回全量结果。
-- false（默认）：按 Offset 分页返回 TopList（每页 10 条），每个对象包含
-  Series 时序点用于绘制曲线。
-- true：忽略 Offset，返回全量对象列表，不返回 Series（CSV 导出场景）。
+ * @method string getDimension() 获取<p>统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。</p>
+ * @method void setDimension(string $Dimension) 设置<p>统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。</p>
+ * @method string getStartTime() 获取<p>起始时间（闭区间），RFC3339 格式。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>起始时间（闭区间），RFC3339 格式。</p>
+ * @method string getEndTime() 获取<p>结束时间（开区间），RFC3339 格式。与 StartTime 的跨度最大 90 天。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间（开区间），RFC3339 格式。与 StartTime 的跨度最大 90 天。</p>
+ * @method string getMetricType() 获取<p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+ * @method void setMetricType(string $MetricType) 设置<p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+ * @method string getTarget() 获取<p>维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。</p>
+ * @method void setTarget(string $Target) 设置<p>维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。</p>
+ * @method integer getPeriod() 获取<p>统计粒度（秒）。取值：60、300、3600、86400。必须不小于跨度对应下限：跨度 ≤ 1 天 → 60；1 ~ 5 天 → 300；5 ~ 10 天 → 3600；&gt; 10 天 → 86400。仅 ShowAll=false 时使用。</p>
+ * @method void setPeriod(integer $Period) 设置<p>统计粒度（秒）。取值：60、300、3600、86400。必须不小于跨度对应下限：跨度 ≤ 1 天 → 60；1 ~ 5 天 → 300；5 ~ 10 天 → 3600；&gt; 10 天 → 86400。仅 ShowAll=false 时使用。</p>
+ * @method integer getOffset() 获取<p>翻页起点，从 0 起，默认 0。ShowAll=true 时忽略。页大小固定为 10。</p>
+ * @method void setOffset(integer $Offset) 设置<p>翻页起点，从 0 起，默认 0。ShowAll=true 时忽略。页大小固定为 10。</p>
+ * @method boolean getShowAll() 获取<p>是否返回全量结果。</p><ul><li>false（默认）：按 Offset 分页返回 TopList（每页 10 条），每个对象包含<br>Series 时序点用于绘制曲线。</li><li>true：忽略 Offset，返回全量对象列表，不返回 Series（CSV 导出场景）。</li></ul>
+ * @method void setShowAll(boolean $ShowAll) 设置<p>是否返回全量结果。</p><ul><li>false（默认）：按 Offset 分页返回 TopList（每页 10 条），每个对象包含<br>Series 时序点用于绘制曲线。</li><li>true：忽略 Offset，返回全量对象列表，不返回 Series（CSV 导出场景）。</li></ul>
  */
 class DescribeUsageRankListRequest extends AbstractModel
 {
     /**
-     * @var string 统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。
+     * @var string <p>统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。</p>
      */
     public $Dimension;
 
     /**
-     * @var string 起始时间（闭区间），RFC3339 格式。
+     * @var string <p>起始时间（闭区间），RFC3339 格式。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间（开区间），RFC3339 格式。与 StartTime 的跨度最大 90 天。
+     * @var string <p>结束时间（开区间），RFC3339 格式。与 StartTime 的跨度最大 90 天。</p>
      */
     public $EndTime;
 
     /**
-     * @var string 指标族切换字段。本期支持 tokens（累计 Token 用量，statistics=sum）；传其他值将返回 InvalidParameter。空字符串或不传时默认 tokens。接口预留 MetricType 字段以支持后续指标族扩展。
+     * @var string <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
      */
     public $MetricType;
 
     /**
-     * @var string 维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。
+     * @var string <p>维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。</p>
      */
     public $Target;
 
     /**
-     * @var integer 统计粒度（秒）。取值：60、300、3600、86400。必须不小于跨度对应下限：跨度 ≤ 1 天 → 60；1 ~ 5 天 → 300；5 ~ 10 天 → 3600；> 10 天 → 86400。仅 ShowAll=false 时使用。
+     * @var integer <p>统计粒度（秒）。取值：60、300、3600、86400。必须不小于跨度对应下限：跨度 ≤ 1 天 → 60；1 ~ 5 天 → 300；5 ~ 10 天 → 3600；&gt; 10 天 → 86400。仅 ShowAll=false 时使用。</p>
      */
     public $Period;
 
     /**
-     * @var integer 翻页起点，从 0 起，默认 0。ShowAll=true 时忽略。页大小固定为 10。
+     * @var integer <p>翻页起点，从 0 起，默认 0。ShowAll=true 时忽略。页大小固定为 10。</p>
      */
     public $Offset;
 
     /**
-     * @var boolean 是否返回全量结果。
-- false（默认）：按 Offset 分页返回 TopList（每页 10 条），每个对象包含
-  Series 时序点用于绘制曲线。
-- true：忽略 Offset，返回全量对象列表，不返回 Series（CSV 导出场景）。
-
+     * @var boolean <p>是否返回全量结果。</p><ul><li>false（默认）：按 Offset 分页返回 TopList（每页 10 条），每个对象包含<br>Series 时序点用于绘制曲线。</li><li>true：忽略 Offset，返回全量对象列表，不返回 Series（CSV 导出场景）。</li></ul>
      */
     public $ShowAll;
 
     /**
-     * @param string $Dimension 统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。
-     * @param string $StartTime 起始时间（闭区间），RFC3339 格式。
-     * @param string $EndTime 结束时间（开区间），RFC3339 格式。与 StartTime 的跨度最大 90 天。
-     * @param string $MetricType 指标族切换字段。本期支持 tokens（累计 Token 用量，statistics=sum）；传其他值将返回 InvalidParameter。空字符串或不传时默认 tokens。接口预留 MetricType 字段以支持后续指标族扩展。
-     * @param string $Target 维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。
-     * @param integer $Period 统计粒度（秒）。取值：60、300、3600、86400。必须不小于跨度对应下限：跨度 ≤ 1 天 → 60；1 ~ 5 天 → 300；5 ~ 10 天 → 3600；> 10 天 → 86400。仅 ShowAll=false 时使用。
-     * @param integer $Offset 翻页起点，从 0 起，默认 0。ShowAll=true 时忽略。页大小固定为 10。
-     * @param boolean $ShowAll 是否返回全量结果。
-- false（默认）：按 Offset 分页返回 TopList（每页 10 条），每个对象包含
-  Series 时序点用于绘制曲线。
-- true：忽略 Offset，返回全量对象列表，不返回 Series（CSV 导出场景）。
+     * @param string $Dimension <p>统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。</p>
+     * @param string $StartTime <p>起始时间（闭区间），RFC3339 格式。</p>
+     * @param string $EndTime <p>结束时间（开区间），RFC3339 格式。与 StartTime 的跨度最大 90 天。</p>
+     * @param string $MetricType <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+     * @param string $Target <p>维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。</p>
+     * @param integer $Period <p>统计粒度（秒）。取值：60、300、3600、86400。必须不小于跨度对应下限：跨度 ≤ 1 天 → 60；1 ~ 5 天 → 300；5 ~ 10 天 → 3600；&gt; 10 天 → 86400。仅 ShowAll=false 时使用。</p>
+     * @param integer $Offset <p>翻页起点，从 0 起，默认 0。ShowAll=true 时忽略。页大小固定为 10。</p>
+     * @param boolean $ShowAll <p>是否返回全量结果。</p><ul><li>false（默认）：按 Offset 分页返回 TopList（每页 10 条），每个对象包含<br>Series 时序点用于绘制曲线。</li><li>true：忽略 Offset，返回全量对象列表，不返回 Series（CSV 导出场景）。</li></ul>
      */
     function __construct()
     {

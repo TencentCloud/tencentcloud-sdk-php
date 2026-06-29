@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReleaseFiles请求参数结构体
  *
- * @method integer getProjectID() 获取项目 id
- * @method void setProjectID(integer $ProjectID) 设置项目 id
- * @method string getFileVersion() 获取文件版本
- * @method void setFileVersion(string $FileVersion) 设置文件版本
- * @method string getFileName() 获取查询过滤条件（根据sourcemap的文件名模糊匹配）
- * @method void setFileName(string $FileName) 设置查询过滤条件（根据sourcemap的文件名模糊匹配）
+ * @method integer getProjectID() 获取<p>项目 id</p>
+ * @method void setProjectID(integer $ProjectID) 设置<p>项目 id</p>
+ * @method string getFileVersion() 获取<p>文件版本</p>
+ * @method void setFileVersion(string $FileVersion) 设置<p>文件版本</p>
+ * @method string getFileName() 获取<p>查询过滤条件（根据sourcemap的文件名模糊匹配）</p>
+ * @method void setFileName(string $FileName) 设置<p>查询过滤条件（根据sourcemap的文件名模糊匹配）</p>
+ * @method boolean getIgnoreDefaultTimeRange() 获取<p>false/不传=保留「最近 3 个月」约束（旧行为）；true=绕过时间窗口</p>
+ * @method void setIgnoreDefaultTimeRange(boolean $IgnoreDefaultTimeRange) 设置<p>false/不传=保留「最近 3 个月」约束（旧行为）；true=绕过时间窗口</p>
  */
 class DescribeReleaseFilesRequest extends AbstractModel
 {
     /**
-     * @var integer 项目 id
+     * @var integer <p>项目 id</p>
      */
     public $ProjectID;
 
     /**
-     * @var string 文件版本
+     * @var string <p>文件版本</p>
      */
     public $FileVersion;
 
     /**
-     * @var string 查询过滤条件（根据sourcemap的文件名模糊匹配）
+     * @var string <p>查询过滤条件（根据sourcemap的文件名模糊匹配）</p>
      */
     public $FileName;
 
     /**
-     * @param integer $ProjectID 项目 id
-     * @param string $FileVersion 文件版本
-     * @param string $FileName 查询过滤条件（根据sourcemap的文件名模糊匹配）
+     * @var boolean <p>false/不传=保留「最近 3 个月」约束（旧行为）；true=绕过时间窗口</p>
+     */
+    public $IgnoreDefaultTimeRange;
+
+    /**
+     * @param integer $ProjectID <p>项目 id</p>
+     * @param string $FileVersion <p>文件版本</p>
+     * @param string $FileName <p>查询过滤条件（根据sourcemap的文件名模糊匹配）</p>
+     * @param boolean $IgnoreDefaultTimeRange <p>false/不传=保留「最近 3 个月」约束（旧行为）；true=绕过时间窗口</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeReleaseFilesRequest extends AbstractModel
 
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
             $this->FileName = $param["FileName"];
+        }
+
+        if (array_key_exists("IgnoreDefaultTimeRange",$param) and $param["IgnoreDefaultTimeRange"] !== null) {
+            $this->IgnoreDefaultTimeRange = $param["IgnoreDefaultTimeRange"];
         }
     }
 }

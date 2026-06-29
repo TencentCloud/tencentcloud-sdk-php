@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(string $AppId) 设置<p>应用Id</p>
  * @method AgentSpec getAgent() 获取<p>Agent 配置</p>
  * @method void setAgent(AgentSpec $Agent) 设置<p>Agent 配置</p>
+ * @method integer getKind() 获取<p>Agent 类型，区分 B 端配置态 Agent 与 C 端用户态 Agent</p><p>枚举值：</p><ul><li>0： 配置端Agent</li><li>1： 用户态 Agent</li></ul>
+ * @method void setKind(integer $Kind) 设置<p>Agent 类型，区分 B 端配置态 Agent 与 C 端用户态 Agent</p><p>枚举值：</p><ul><li>0： 配置端Agent</li><li>1： 用户态 Agent</li></ul>
  */
 class CreateAgentRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateAgentRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var integer <p>Agent 类型，区分 B 端配置态 Agent 与 C 端用户态 Agent</p><p>枚举值：</p><ul><li>0： 配置端Agent</li><li>1： 用户态 Agent</li></ul>
+     */
+    public $Kind;
+
+    /**
      * @param string $AppId <p>应用Id</p>
      * @param AgentSpec $Agent <p>Agent 配置</p>
+     * @param integer $Kind <p>Agent 类型，区分 B 端配置态 Agent 与 C 端用户态 Agent</p><p>枚举值：</p><ul><li>0： 配置端Agent</li><li>1： 用户态 Agent</li></ul>
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class CreateAgentRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new AgentSpec();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("Kind",$param) and $param["Kind"] !== null) {
+            $this->Kind = $param["Kind"];
         }
     }
 }

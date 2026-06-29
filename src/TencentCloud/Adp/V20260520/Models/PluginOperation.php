@@ -22,20 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getAllowExternalAccess() 获取是否允许外部调用
  * @method void setAllowExternalAccess(boolean $AllowExternalAccess) 设置是否允许外部调用
- * @method integer getBillingType() 获取计费类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 免费 |
-| 1 | 限时免费 |
-| 2 | 官方收费 |
- * @method void setBillingType(integer $BillingType) 设置计费类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 免费 |
-| 1 | 限时免费 |
-| 2 | 官方收费 |
+ * @method integer getBillingType() 获取<p>计费类型。</p><p>枚举值：</p><ul><li>0：免费</li><li>1：公测</li><li>2：官方收费</li></ul>
+ * @method void setBillingType(integer $BillingType) 设置<p>计费类型。</p><p>枚举值：</p><ul><li>0：免费</li><li>1：公测</li><li>2：官方收费</li></ul>
  * @method string getCategoryKey() 获取插件分类标识
  * @method void setCategoryKey(string $CategoryKey) 设置插件分类标识
  * @method string getIntroduction() 获取插件概述
@@ -51,13 +39,7 @@ class PluginOperation extends AbstractModel
     public $AllowExternalAccess;
 
     /**
-     * @var integer 计费类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 免费 |
-| 1 | 限时免费 |
-| 2 | 官方收费 |
+     * @var integer <p>计费类型。</p><p>枚举值：</p><ul><li>0：免费</li><li>1：公测</li><li>2：官方收费</li></ul>
      */
     public $BillingType;
 
@@ -78,13 +60,7 @@ class PluginOperation extends AbstractModel
 
     /**
      * @param boolean $AllowExternalAccess 是否允许外部调用
-     * @param integer $BillingType 计费类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 免费 |
-| 1 | 限时免费 |
-| 2 | 官方收费 |
+     * @param integer $BillingType <p>计费类型。</p><p>枚举值：</p><ul><li>0：免费</li><li>1：公测</li><li>2：官方收费</li></ul>
      * @param string $CategoryKey 插件分类标识
      * @param string $Introduction 插件概述
      * @param boolean $IsRecommended 是否精选

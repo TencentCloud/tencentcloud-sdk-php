@@ -83,6 +83,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeIpsModeSwitchResponse DescribeIpsModeSwitch(Models\DescribeIpsModeSwitchRequest $req) 获取入侵防御防护模式
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 租户日志存储统计
  * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 日志审计日志查询
+ * @method Models\DescribeNDRAssetIdentificationCursorListResponse DescribeNDRAssetIdentificationCursorList(Models\DescribeNDRAssetIdentificationCursorListRequest $req) DescribeNDRAssetIdentificationCursorList - 游标获取NDR资产识别结果列表
  * @method Models\DescribeNDRAssetIdentificationListResponse DescribeNDRAssetIdentificationList(Models\DescribeNDRAssetIdentificationListRequest $req) DescribeNDRAssetIdentificationList - 获取NDR资产识别结果列表
  * @method Models\DescribeNatAcRuleResponse DescribeNatAcRule(Models\DescribeNatAcRuleRequest $req) 查询NAT访问控制列表
  * @method Models\DescribeNatCcnFwSwitchResponse DescribeNatCcnFwSwitch(Models\DescribeNatCcnFwSwitchRequest $req) 查询NAT CCN防火墙开关配置

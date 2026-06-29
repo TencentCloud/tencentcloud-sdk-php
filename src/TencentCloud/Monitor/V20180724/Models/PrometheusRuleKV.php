@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * prometheus 报警规则 KV 参数
  *
- * @method string getKey() 获取键
- * @method void setKey(string $Key) 设置键
- * @method string getValue() 获取值
- * @method void setValue(string $Value) 设置值
+ * @method string getKey() 获取<p>键</p>
+ * @method void setKey(string $Key) 设置<p>键</p>
+ * @method string getValue() 获取<p>值</p>
+ * @method void setValue(string $Value) 设置<p>值</p>
  */
 class PrometheusRuleKV extends AbstractModel
 {
     /**
-     * @var string 键
+     * @var string <p>键</p>
      */
     public $Key;
 
     /**
-     * @var string 值
+     * @var string <p>值</p>
      */
     public $Value;
 
     /**
-     * @param string $Key 键
-     * @param string $Value 值
+     * @param string $Key <p>键</p>
+     * @param string $Value <p>值</p>
      */
     function __construct()
     {

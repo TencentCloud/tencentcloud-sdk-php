@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) 设置模型别名
  * @method integer getHistoryLimit() 获取历史对话条数限制
  * @method void setHistoryLimit(integer $HistoryLimit) 设置历史对话条数限制
- * @method string getModelId() 获取模型唯一ID
- * @method void setModelId(string $ModelId) 设置模型唯一ID
+ * @method string getModelId() 获取模型唯一 ID
+ * @method void setModelId(string $ModelId) 设置模型唯一 ID
  * @method ModelParams getModelParams() 获取模型参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelParams(ModelParams $ModelParams) 设置模型参数
@@ -44,7 +44,7 @@ class ModelDetailInfo extends AbstractModel
     public $HistoryLimit;
 
     /**
-     * @var string 模型唯一ID
+     * @var string 模型唯一 ID
      */
     public $ModelId;
 
@@ -57,7 +57,7 @@ class ModelDetailInfo extends AbstractModel
     /**
      * @param string $Alias 模型别名
      * @param integer $HistoryLimit 历史对话条数限制
-     * @param string $ModelId 模型唯一ID
+     * @param string $ModelId 模型唯一 ID
      * @param ModelParams $ModelParams 模型参数
 注意：此字段可能返回 null，表示取不到有效值。
      */

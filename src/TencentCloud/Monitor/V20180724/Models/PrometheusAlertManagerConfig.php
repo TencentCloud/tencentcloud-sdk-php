@@ -20,41 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警渠道使用自建alertmanager的配置
  *
- * @method string getUrl() 获取alertmanager url
- * @method void setUrl(string $Url) 设置alertmanager url
- * @method string getClusterType() 获取alertmanager部署所在集群类型
+ * @method string getUrl() 获取<p>alertmanager url</p>
+ * @method void setUrl(string $Url) 设置<p>alertmanager url</p>
+ * @method string getClusterType() 获取<p>alertmanager部署所在集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterType(string $ClusterType) 设置alertmanager部署所在集群类型
+ * @method void setClusterType(string $ClusterType) 设置<p>alertmanager部署所在集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterId() 获取alertmanager部署所在集群ID
+ * @method string getClusterId() 获取<p>alertmanager部署所在集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterId(string $ClusterId) 设置alertmanager部署所在集群ID
+ * @method void setClusterId(string $ClusterId) 设置<p>alertmanager部署所在集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusAlertManagerConfig extends AbstractModel
 {
     /**
-     * @var string alertmanager url
+     * @var string <p>alertmanager url</p>
      */
     public $Url;
 
     /**
-     * @var string alertmanager部署所在集群类型
+     * @var string <p>alertmanager部署所在集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
 
     /**
-     * @var string alertmanager部署所在集群ID
+     * @var string <p>alertmanager部署所在集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
-     * @param string $Url alertmanager url
-     * @param string $ClusterType alertmanager部署所在集群类型
+     * @param string $Url <p>alertmanager url</p>
+     * @param string $ClusterType <p>alertmanager部署所在集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterId alertmanager部署所在集群ID
+     * @param string $ClusterId <p>alertmanager部署所在集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

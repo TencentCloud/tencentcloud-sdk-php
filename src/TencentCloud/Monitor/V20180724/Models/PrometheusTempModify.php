@@ -20,105 +20,89 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云原生Prometheus模板可修改项
  *
- * @method string getName() 获取修改名称
- * @method void setName(string $Name) 设置修改名称
- * @method string getDescribe() 获取修改描述
+ * @method string getName() 获取<p>修改名称</p>
+ * @method void setName(string $Name) 设置<p>修改名称</p>
+ * @method string getDescribe() 获取<p>修改描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescribe(string $Describe) 设置修改描述
+ * @method void setDescribe(string $Describe) 设置<p>修改描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getServiceMonitors() 获取当Level为cluster时有效，
-模板中的ServiceMonitor规则列表
+ * @method array getServiceMonitors() 获取<p>当Level为cluster时有效，<br>模板中的ServiceMonitor规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceMonitors(array $ServiceMonitors) 设置当Level为cluster时有效，
-模板中的ServiceMonitor规则列表
+ * @method void setServiceMonitors(array $ServiceMonitors) 设置<p>当Level为cluster时有效，<br>模板中的ServiceMonitor规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPodMonitors() 获取当Level为cluster时有效，
-模板中的PodMonitors规则列表
+ * @method array getPodMonitors() 获取<p>当Level为cluster时有效，<br>模板中的PodMonitors规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPodMonitors(array $PodMonitors) 设置当Level为cluster时有效，
-模板中的PodMonitors规则列表
+ * @method void setPodMonitors(array $PodMonitors) 设置<p>当Level为cluster时有效，<br>模板中的PodMonitors规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRawJobs() 获取当Level为cluster时有效，
-模板中的RawJobs规则列表
+ * @method array getRawJobs() 获取<p>当Level为cluster时有效，<br>模板中的RawJobs规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRawJobs(array $RawJobs) 设置当Level为cluster时有效，
-模板中的RawJobs规则列表
+ * @method void setRawJobs(array $RawJobs) 设置<p>当Level为cluster时有效，<br>模板中的RawJobs规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRecordRules() 获取当Level为instance时有效，
-模板中的聚合规则列表
+ * @method array getRecordRules() 获取<p>当Level为instance时有效，<br>模板中的聚合规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordRules(array $RecordRules) 设置当Level为instance时有效，
-模板中的聚合规则列表
+ * @method void setRecordRules(array $RecordRules) 设置<p>当Level为instance时有效，<br>模板中的聚合规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAlertDetailRules() 获取修改内容，只有当模板类型是Alert时生效
+ * @method array getAlertDetailRules() 获取<p>修改内容，只有当模板类型是Alert时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlertDetailRules(array $AlertDetailRules) 设置修改内容，只有当模板类型是Alert时生效
+ * @method void setAlertDetailRules(array $AlertDetailRules) 设置<p>修改内容，只有当模板类型是Alert时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusTempModify extends AbstractModel
 {
     /**
-     * @var string 修改名称
+     * @var string <p>修改名称</p>
      */
     public $Name;
 
     /**
-     * @var string 修改描述
+     * @var string <p>修改描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Describe;
 
     /**
-     * @var array 当Level为cluster时有效，
-模板中的ServiceMonitor规则列表
+     * @var array <p>当Level为cluster时有效，<br>模板中的ServiceMonitor规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceMonitors;
 
     /**
-     * @var array 当Level为cluster时有效，
-模板中的PodMonitors规则列表
+     * @var array <p>当Level为cluster时有效，<br>模板中的PodMonitors规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodMonitors;
 
     /**
-     * @var array 当Level为cluster时有效，
-模板中的RawJobs规则列表
+     * @var array <p>当Level为cluster时有效，<br>模板中的RawJobs规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RawJobs;
 
     /**
-     * @var array 当Level为instance时有效，
-模板中的聚合规则列表
+     * @var array <p>当Level为instance时有效，<br>模板中的聚合规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordRules;
 
     /**
-     * @var array 修改内容，只有当模板类型是Alert时生效
+     * @var array <p>修改内容，只有当模板类型是Alert时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlertDetailRules;
 
     /**
-     * @param string $Name 修改名称
-     * @param string $Describe 修改描述
+     * @param string $Name <p>修改名称</p>
+     * @param string $Describe <p>修改描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ServiceMonitors 当Level为cluster时有效，
-模板中的ServiceMonitor规则列表
+     * @param array $ServiceMonitors <p>当Level为cluster时有效，<br>模板中的ServiceMonitor规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PodMonitors 当Level为cluster时有效，
-模板中的PodMonitors规则列表
+     * @param array $PodMonitors <p>当Level为cluster时有效，<br>模板中的PodMonitors规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RawJobs 当Level为cluster时有效，
-模板中的RawJobs规则列表
+     * @param array $RawJobs <p>当Level为cluster时有效，<br>模板中的RawJobs规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RecordRules 当Level为instance时有效，
-模板中的聚合规则列表
+     * @param array $RecordRules <p>当Level为instance时有效，<br>模板中的聚合规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AlertDetailRules 修改内容，只有当模板类型是Alert时生效
+     * @param array $AlertDetailRules <p>修改内容，只有当模板类型是Alert时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getBases() 获取<p>当前媒资当导入的知识库列表</p>
  * @method void setBases(array $Bases) 设置<p>当前媒资当导入的知识库列表</p>
+ * @method array getKnowledgeAnalysisInfos() 获取<p>知识库中媒体分析信息</p>
+ * @method void setKnowledgeAnalysisInfos(array $KnowledgeAnalysisInfos) 设置<p>知识库中媒体分析信息</p>
  */
 class KnowledgeBasesInfo extends AbstractModel
 {
@@ -31,7 +33,13 @@ class KnowledgeBasesInfo extends AbstractModel
     public $Bases;
 
     /**
+     * @var array <p>知识库中媒体分析信息</p>
+     */
+    public $KnowledgeAnalysisInfos;
+
+    /**
      * @param array $Bases <p>当前媒资当导入的知识库列表</p>
+     * @param array $KnowledgeAnalysisInfos <p>知识库中媒体分析信息</p>
      */
     function __construct()
     {
@@ -48,6 +56,15 @@ class KnowledgeBasesInfo extends AbstractModel
         }
         if (array_key_exists("Bases",$param) and $param["Bases"] !== null) {
             $this->Bases = $param["Bases"];
+        }
+
+        if (array_key_exists("KnowledgeAnalysisInfos",$param) and $param["KnowledgeAnalysisInfos"] !== null) {
+            $this->KnowledgeAnalysisInfos = [];
+            foreach ($param["KnowledgeAnalysisInfos"] as $key => $value){
+                $obj = new KnowledgeAnalysisInfo();
+                $obj->deserialize($value);
+                array_push($this->KnowledgeAnalysisInfos, $obj);
+            }
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MCPToolConfig
  *
- * @method array getInputs() 获取输入参数
- * @method void setInputs(array $Inputs) 设置输入参数
- * @method array getOutputs() 获取输出参数
- * @method void setOutputs(array $Outputs) 设置输出参数
+ * @method array getInputs() 获取<p>输入参数</p>
+ * @method void setInputs(array $Inputs) 设置<p>输入参数</p>
+ * @method array getOutputs() 获取<p>输出参数</p>
+ * @method void setOutputs(array $Outputs) 设置<p>输出参数</p>
  */
 class MCPToolConfig extends AbstractModel
 {
     /**
-     * @var array 输入参数
+     * @var array <p>输入参数</p>
      */
     public $Inputs;
 
     /**
-     * @var array 输出参数
+     * @var array <p>输出参数</p>
      */
     public $Outputs;
 
     /**
-     * @param array $Inputs 输入参数
-     * @param array $Outputs 输出参数
+     * @param array $Inputs <p>输入参数</p>
+     * @param array $Outputs <p>输出参数</p>
      */
     function __construct()
     {

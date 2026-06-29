@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置空间描述，长度最大150个字符
  * @method string getSpaceId() 获取空间id
  * @method void setSpaceId(string $SpaceId) 设置空间id
- * @method FieldMask getFieldMask() 获取指定需要更新的字段，支持name和description
- * @method void setFieldMask(FieldMask $FieldMask) 设置指定需要更新的字段，支持name和description
+ * @method FieldMask getFieldMask() 获取指定需要更新的字段，支持Name和Description
+ * @method void setFieldMask(FieldMask $FieldMask) 设置指定需要更新的字段，支持Name和Description
  */
 class ModifySpaceRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifySpaceRequest extends AbstractModel
     public $SpaceId;
 
     /**
-     * @var FieldMask 指定需要更新的字段，支持name和description
+     * @var FieldMask 指定需要更新的字段，支持Name和Description
      */
     public $FieldMask;
 
@@ -55,7 +55,7 @@ class ModifySpaceRequest extends AbstractModel
      * @param string $Name 工作空间名称,长度最大30个字符
      * @param string $Description 空间描述，长度最大150个字符
      * @param string $SpaceId 空间id
-     * @param FieldMask $FieldMask 指定需要更新的字段，支持name和description
+     * @param FieldMask $FieldMask 指定需要更新的字段，支持Name和Description
      */
     function __construct()
     {

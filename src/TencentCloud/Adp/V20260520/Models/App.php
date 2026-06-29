@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(AppStatusInfo $Status) 设置状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSharedKnowledgeList() 获取应用引用的共享知识库列表
- * @method void setSharedKnowledgeList(array $SharedKnowledgeList) 设置应用引用的共享知识库列表
+ * @method array getSharedKbList() 获取应用引用的共享知识库列表
+ * @method void setSharedKbList(array $SharedKbList) 设置应用引用的共享知识库列表
  */
 class App extends AbstractModel
 {
@@ -88,7 +88,7 @@ class App extends AbstractModel
     /**
      * @var array 应用引用的共享知识库列表
      */
-    public $SharedKnowledgeList;
+    public $SharedKbList;
 
     /**
      * @param AppAuxiliaryInfo $AuxiliaryInfo 辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
@@ -103,7 +103,7 @@ class App extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AppStatusInfo $Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SharedKnowledgeList 应用引用的共享知识库列表
+     * @param array $SharedKbList 应用引用的共享知识库列表
      */
     function __construct()
     {
@@ -148,12 +148,12 @@ class App extends AbstractModel
             $this->Status->deserialize($param["Status"]);
         }
 
-        if (array_key_exists("SharedKnowledgeList",$param) and $param["SharedKnowledgeList"] !== null) {
-            $this->SharedKnowledgeList = [];
-            foreach ($param["SharedKnowledgeList"] as $key => $value){
-                $obj = new AppSharedKnowledgeInfo();
+        if (array_key_exists("SharedKbList",$param) and $param["SharedKbList"] !== null) {
+            $this->SharedKbList = [];
+            foreach ($param["SharedKbList"] as $key => $value){
+                $obj = new AppSharedKbInfo();
                 $obj->deserialize($value);
-                array_push($this->SharedKnowledgeList, $obj);
+                array_push($this->SharedKbList, $obj);
             }
         }
     }

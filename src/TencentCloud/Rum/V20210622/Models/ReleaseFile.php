@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 发布文件列表(SOURCEMAP)
  *
- * @method string getVersion() 获取文件版本
- * @method void setVersion(string $Version) 设置文件版本
- * @method string getFileKey() 获取文件唯一 key
- * @method void setFileKey(string $FileKey) 设置文件唯一 key
- * @method string getFileName() 获取文件名
- * @method void setFileName(string $FileName) 设置文件名
- * @method string getFileHash() 获取文件哈希值
- * @method void setFileHash(string $FileHash) 设置文件哈希值
- * @method integer getID() 获取文件 id
- * @method void setID(integer $ID) 设置文件 id
+ * @method string getVersion() 获取<p>文件版本</p>
+ * @method void setVersion(string $Version) 设置<p>文件版本</p>
+ * @method string getFileKey() 获取<p>文件唯一 key</p>
+ * @method void setFileKey(string $FileKey) 设置<p>文件唯一 key</p>
+ * @method string getFileName() 获取<p>文件名</p>
+ * @method void setFileName(string $FileName) 设置<p>文件名</p>
+ * @method string getFileHash() 获取<p>文件哈希值</p>
+ * @method void setFileHash(string $FileHash) 设置<p>文件哈希值</p>
+ * @method integer getID() 获取<p>文件 id</p>
+ * @method void setID(integer $ID) 设置<p>文件 id</p>
+ * @method string getCreatedAt() 获取<p>创建时间</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间</p>
  */
 class ReleaseFile extends AbstractModel
 {
     /**
-     * @var string 文件版本
+     * @var string <p>文件版本</p>
      */
     public $Version;
 
     /**
-     * @var string 文件唯一 key
+     * @var string <p>文件唯一 key</p>
      */
     public $FileKey;
 
     /**
-     * @var string 文件名
+     * @var string <p>文件名</p>
      */
     public $FileName;
 
     /**
-     * @var string 文件哈希值
+     * @var string <p>文件哈希值</p>
      */
     public $FileHash;
 
     /**
-     * @var integer 文件 id
+     * @var integer <p>文件 id</p>
      */
     public $ID;
 
     /**
-     * @param string $Version 文件版本
-     * @param string $FileKey 文件唯一 key
-     * @param string $FileName 文件名
-     * @param string $FileHash 文件哈希值
-     * @param integer $ID 文件 id
+     * @var string <p>创建时间</p>
+     */
+    public $CreatedAt;
+
+    /**
+     * @param string $Version <p>文件版本</p>
+     * @param string $FileKey <p>文件唯一 key</p>
+     * @param string $FileName <p>文件名</p>
+     * @param string $FileHash <p>文件哈希值</p>
+     * @param integer $ID <p>文件 id</p>
+     * @param string $CreatedAt <p>创建时间</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ReleaseFile extends AbstractModel
 
         if (array_key_exists("ID",$param) and $param["ID"] !== null) {
             $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
         }
     }
 }

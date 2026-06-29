@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShareCode(string $ShareCode) 设置<p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p>
  * @method string getUserId() 获取<p>Type=CONVERSATION_TYPE_API 时必填，访客ID</p>
  * @method void setUserId(string $UserId) 设置<p>Type=CONVERSATION_TYPE_API 时必填，访客ID</p>
+ * @method string getAgentId() 获取<p>用户端 AgentId，当需要查询基于用户端 AgentId 创建的会话时使用</p>
+ * @method void setAgentId(string $AgentId) 设置<p>用户端 AgentId，当需要查询基于用户端 AgentId 创建的会话时使用</p>
  */
 class DescribeConversationListRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeConversationListRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var string <p>用户端 AgentId，当需要查询基于用户端 AgentId 创建的会话时使用</p>
+     */
+    public $AgentId;
+
+    /**
      * @param integer $Type <p>会话类型，传 CONVERSATION_TYPE_UNSPECIFIED 表示全部 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
      * @param string $AppId <p>应用 ID</p>
      * @param string $AppKey <p>Type=CONVERSATION_TYPE_API 时必填，应用密钥</p>
@@ -104,6 +111,7 @@ class DescribeConversationListRequest extends AbstractModel
      * @param integer $Offset <p>偏移量（整型），配合Limit使用，从0开始</p>
      * @param string $ShareCode <p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p>
      * @param string $UserId <p>Type=CONVERSATION_TYPE_API 时必填，访客ID</p>
+     * @param string $AgentId <p>用户端 AgentId，当需要查询基于用户端 AgentId 创建的会话时使用</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeConversationListRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
+            $this->AgentId = $param["AgentId"];
         }
     }
 }

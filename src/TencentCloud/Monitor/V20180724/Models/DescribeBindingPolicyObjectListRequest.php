@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBindingPolicyObjectList请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method integer getGroupId() 获取策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
- * @method void setGroupId(integer $GroupId) 设置策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
- * @method string getPolicyId() 获取告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
- * @method void setPolicyId(string $PolicyId) 设置告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
- * @method integer getLimit() 获取每次返回的数量，取值1~100，默认20
- * @method void setLimit(integer $Limit) 设置每次返回的数量，取值1~100，默认20
- * @method integer getOffset() 获取偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
- * @method void setOffset(integer $Offset) 设置偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
- * @method array getDimensions() 获取筛选对象的维度信息
- * @method void setDimensions(array $Dimensions) 设置筛选对象的维度信息
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method integer getGroupId() 获取<p>策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0</p>
+ * @method void setGroupId(integer $GroupId) 设置<p>策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0</p>
+ * @method string getPolicyId() 获取<p>告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0</p>
+ * @method void setPolicyId(string $PolicyId) 设置<p>告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0</p>
+ * @method integer getLimit() 获取<p>每次返回的数量，取值1~100，默认20</p>
+ * @method void setLimit(integer $Limit) 设置<p>每次返回的数量，取值1~100，默认20</p>
+ * @method integer getOffset() 获取<p>偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&amp;Limit=20 返回第 0 到 19 项，Offset=20&amp;Limit=20 返回第 20 到 39 项，以此类推</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&amp;Limit=20 返回第 0 到 19 项，Offset=20&amp;Limit=20 返回第 20 到 39 项，以此类推</p>
+ * @method array getDimensions() 获取<p>筛选对象的维度信息</p>
+ * @method void setDimensions(array $Dimensions) 设置<p>筛选对象的维度信息</p>
  */
 class DescribeBindingPolicyObjectListRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var integer 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
+     * @var integer <p>策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0</p>
      */
     public $GroupId;
 
     /**
-     * @var string 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
+     * @var string <p>告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0</p>
      */
     public $PolicyId;
 
     /**
-     * @var integer 每次返回的数量，取值1~100，默认20
+     * @var integer <p>每次返回的数量，取值1~100，默认20</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
+     * @var integer <p>偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&amp;Limit=20 返回第 0 到 19 项，Offset=20&amp;Limit=20 返回第 20 到 39 项，以此类推</p>
      */
     public $Offset;
 
     /**
-     * @var array 筛选对象的维度信息
+     * @var array <p>筛选对象的维度信息</p>
      */
     public $Dimensions;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param integer $GroupId 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
-     * @param string $PolicyId 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
-     * @param integer $Limit 每次返回的数量，取值1~100，默认20
-     * @param integer $Offset 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
-     * @param array $Dimensions 筛选对象的维度信息
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param integer $GroupId <p>策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0</p>
+     * @param string $PolicyId <p>告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0</p>
+     * @param integer $Limit <p>每次返回的数量，取值1~100，默认20</p>
+     * @param integer $Offset <p>偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&amp;Limit=20 返回第 0 到 19 项，Offset=20&amp;Limit=20 返回第 20 到 39 项，以此类推</p>
+     * @param array $Dimensions <p>筛选对象的维度信息</p>
      */
     function __construct()
     {

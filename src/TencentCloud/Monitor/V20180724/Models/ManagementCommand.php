@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Prometheus Agent 管理命令行
  *
- * @method string getInstall() 获取Agent 安装命令
+ * @method string getInstall() 获取<p>Agent 安装命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstall(string $Install) 设置Agent 安装命令
+ * @method void setInstall(string $Install) 设置<p>Agent 安装命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRestart() 获取Agent 重启命令
+ * @method string getRestart() 获取<p>Agent 重启命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRestart(string $Restart) 设置Agent 重启命令
+ * @method void setRestart(string $Restart) 设置<p>Agent 重启命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStop() 获取Agent 停止命令
+ * @method string getStop() 获取<p>Agent 停止命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStop(string $Stop) 设置Agent 停止命令
+ * @method void setStop(string $Stop) 设置<p>Agent 停止命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatusCheck() 获取Agent 状态检测命令
+ * @method string getStatusCheck() 获取<p>Agent 状态检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusCheck(string $StatusCheck) 设置Agent 状态检测命令
+ * @method void setStatusCheck(string $StatusCheck) 设置<p>Agent 状态检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogCheck() 获取Agent 日志检测命令
+ * @method string getLogCheck() 获取<p>Agent 日志检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogCheck(string $LogCheck) 设置Agent 日志检测命令
+ * @method void setLogCheck(string $LogCheck) 设置<p>Agent 日志检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ManagementCommand extends AbstractModel
 {
     /**
-     * @var string Agent 安装命令
+     * @var string <p>Agent 安装命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Install;
 
     /**
-     * @var string Agent 重启命令
+     * @var string <p>Agent 重启命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Restart;
 
     /**
-     * @var string Agent 停止命令
+     * @var string <p>Agent 停止命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Stop;
 
     /**
-     * @var string Agent 状态检测命令
+     * @var string <p>Agent 状态检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusCheck;
 
     /**
-     * @var string Agent 日志检测命令
+     * @var string <p>Agent 日志检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogCheck;
 
     /**
-     * @param string $Install Agent 安装命令
+     * @param string $Install <p>Agent 安装命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Restart Agent 重启命令
+     * @param string $Restart <p>Agent 重启命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Stop Agent 停止命令
+     * @param string $Stop <p>Agent 停止命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StatusCheck Agent 状态检测命令
+     * @param string $StatusCheck <p>Agent 状态检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogCheck Agent 日志检测命令
+     * @param string $LogCheck <p>Agent 日志检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

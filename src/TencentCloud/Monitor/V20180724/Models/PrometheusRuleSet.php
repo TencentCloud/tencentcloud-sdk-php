@@ -20,153 +20,137 @@ use TencentCloud\Common\AbstractModel;
 /**
  * prometheus 报警规则集
  *
- * @method string getRuleId() 获取规则 ID
- * @method void setRuleId(string $RuleId) 设置规则 ID
- * @method string getRuleName() 获取规则名称
- * @method void setRuleName(string $RuleName) 设置规则名称
- * @method integer getRuleState() 获取规则状态码
- * @method void setRuleState(integer $RuleState) 设置规则状态码
- * @method string getType() 获取规则类别
+ * @method string getRuleId() 获取<p>规则 ID</p>
+ * @method void setRuleId(string $RuleId) 设置<p>规则 ID</p>
+ * @method string getRuleName() 获取<p>规则名称</p>
+ * @method void setRuleName(string $RuleName) 设置<p>规则名称</p>
+ * @method integer getRuleState() 获取<p>规则状态码</p>
+ * @method void setRuleState(integer $RuleState) 设置<p>规则状态码</p>
+ * @method string getType() 获取<p>规则类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置规则类别
+ * @method void setType(string $Type) 设置<p>规则类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLabels() 获取规则标签列表
+ * @method array getLabels() 获取<p>规则标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabels(array $Labels) 设置规则标签列表
+ * @method void setLabels(array $Labels) 设置<p>规则标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnnotations() 获取规则注释列表
+ * @method array getAnnotations() 获取<p>规则注释列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnnotations(array $Annotations) 设置规则注释列表
+ * @method void setAnnotations(array $Annotations) 设置<p>规则注释列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExpr() 获取规则表达式
+ * @method string getExpr() 获取<p>规则表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpr(string $Expr) 设置规则表达式
+ * @method void setExpr(string $Expr) 设置<p>规则表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDuration() 获取规则报警持续时间
+ * @method string getDuration() 获取<p>规则报警持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDuration(string $Duration) 设置规则报警持续时间
+ * @method void setDuration(string $Duration) 设置<p>规则报警持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getReceivers() 获取报警接收组列表
+ * @method array getReceivers() 获取<p>报警接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReceivers(array $Receivers) 设置报警接收组列表
+ * @method void setReceivers(array $Receivers) 设置<p>报警接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHealth() 获取规则运行健康状态，取值如下：
-<li>unknown 未知状态</li>
-<li>pending 加载中</li>
-<li>ok 运行正常</li>
-<li>err 运行错误</li>
- * @method void setHealth(string $Health) 设置规则运行健康状态，取值如下：
-<li>unknown 未知状态</li>
-<li>pending 加载中</li>
-<li>ok 运行正常</li>
-<li>err 运行错误</li>
- * @method string getCreatedAt() 获取规则创建时间
+ * @method string getHealth() 获取<p>规则运行健康状态，取值如下：</p><li>unknown 未知状态</li><li>pending 加载中</li><li>ok 运行正常</li><li>err 运行错误</li>
+ * @method void setHealth(string $Health) 设置<p>规则运行健康状态，取值如下：</p><li>unknown 未知状态</li><li>pending 加载中</li><li>ok 运行正常</li><li>err 运行错误</li>
+ * @method string getCreatedAt() 获取<p>规则创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedAt(string $CreatedAt) 设置规则创建时间
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>规则创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedAt() 获取规则更新时间
+ * @method string getUpdatedAt() 获取<p>规则更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedAt(string $UpdatedAt) 设置规则更新时间
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>规则更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusRuleSet extends AbstractModel
 {
     /**
-     * @var string 规则 ID
+     * @var string <p>规则 ID</p>
      */
     public $RuleId;
 
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
      */
     public $RuleName;
 
     /**
-     * @var integer 规则状态码
+     * @var integer <p>规则状态码</p>
      */
     public $RuleState;
 
     /**
-     * @var string 规则类别
+     * @var string <p>规则类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var array 规则标签列表
+     * @var array <p>规则标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
-     * @var array 规则注释列表
+     * @var array <p>规则注释列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Annotations;
 
     /**
-     * @var string 规则表达式
+     * @var string <p>规则表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expr;
 
     /**
-     * @var string 规则报警持续时间
+     * @var string <p>规则报警持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
-     * @var array 报警接收组列表
+     * @var array <p>报警接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Receivers;
 
     /**
-     * @var string 规则运行健康状态，取值如下：
-<li>unknown 未知状态</li>
-<li>pending 加载中</li>
-<li>ok 运行正常</li>
-<li>err 运行错误</li>
+     * @var string <p>规则运行健康状态，取值如下：</p><li>unknown 未知状态</li><li>pending 加载中</li><li>ok 运行正常</li><li>err 运行错误</li>
      */
     public $Health;
 
     /**
-     * @var string 规则创建时间
+     * @var string <p>规则创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
-     * @var string 规则更新时间
+     * @var string <p>规则更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
-     * @param string $RuleId 规则 ID
-     * @param string $RuleName 规则名称
-     * @param integer $RuleState 规则状态码
-     * @param string $Type 规则类别
+     * @param string $RuleId <p>规则 ID</p>
+     * @param string $RuleName <p>规则名称</p>
+     * @param integer $RuleState <p>规则状态码</p>
+     * @param string $Type <p>规则类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Labels 规则标签列表
+     * @param array $Labels <p>规则标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Annotations 规则注释列表
+     * @param array $Annotations <p>规则注释列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Expr 规则表达式
+     * @param string $Expr <p>规则表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Duration 规则报警持续时间
+     * @param string $Duration <p>规则报警持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Receivers 报警接收组列表
+     * @param array $Receivers <p>报警接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Health 规则运行健康状态，取值如下：
-<li>unknown 未知状态</li>
-<li>pending 加载中</li>
-<li>ok 运行正常</li>
-<li>err 运行错误</li>
-     * @param string $CreatedAt 规则创建时间
+     * @param string $Health <p>规则运行健康状态，取值如下：</p><li>unknown 未知状态</li><li>pending 加载中</li><li>ok 运行正常</li><li>err 运行错误</li>
+     * @param string $CreatedAt <p>规则创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedAt 规则更新时间
+     * @param string $UpdatedAt <p>规则更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

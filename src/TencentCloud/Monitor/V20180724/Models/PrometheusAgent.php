@@ -20,94 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * prometheus agent
  *
- * @method string getName() 获取Agent 名
+ * @method string getName() 获取<p>Agent 名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置Agent 名
+ * @method void setName(string $Name) 设置<p>Agent 名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAgentId() 获取Agent ID
- * @method void setAgentId(string $AgentId) 设置Agent ID
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getIpv4() 获取Agent IP
+ * @method string getAgentId() 获取<p>Agent ID</p>
+ * @method void setAgentId(string $AgentId) 设置<p>Agent ID</p>
+ * @method string getInstanceId() 获取<p>实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID</p>
+ * @method string getIpv4() 获取<p>Agent IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpv4(string $Ipv4) 设置Agent IP
+ * @method void setIpv4(string $Ipv4) 设置<p>Agent IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHeartbeatTime() 获取心跳时间
+ * @method string getHeartbeatTime() 获取<p>心跳时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeartbeatTime(string $HeartbeatTime) 设置心跳时间
+ * @method void setHeartbeatTime(string $HeartbeatTime) 设置<p>心跳时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastError() 获取最近一次错误
+ * @method string getLastError() 获取<p>最近一次错误</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastError(string $LastError) 设置最近一次错误
+ * @method void setLastError(string $LastError) 设置<p>最近一次错误</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAgentVersion() 获取Agent 版本
+ * @method string getAgentVersion() 获取<p>Agent 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAgentVersion(string $AgentVersion) 设置Agent 版本
+ * @method void setAgentVersion(string $AgentVersion) 设置<p>Agent 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取Agent 状态
- * @method void setStatus(integer $Status) 设置Agent 状态
+ * @method integer getStatus() 获取<p>Agent 状态</p>
+ * @method void setStatus(integer $Status) 设置<p>Agent 状态</p>
  */
 class PrometheusAgent extends AbstractModel
 {
     /**
-     * @var string Agent 名
+     * @var string <p>Agent 名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string Agent ID
+     * @var string <p>Agent ID</p>
      */
     public $AgentId;
 
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Agent IP
+     * @var string <p>Agent IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv4;
 
     /**
-     * @var string 心跳时间
+     * @var string <p>心跳时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeartbeatTime;
 
     /**
-     * @var string 最近一次错误
+     * @var string <p>最近一次错误</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastError;
 
     /**
-     * @var string Agent 版本
+     * @var string <p>Agent 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AgentVersion;
 
     /**
-     * @var integer Agent 状态
+     * @var integer <p>Agent 状态</p>
      */
     public $Status;
 
     /**
-     * @param string $Name Agent 名
+     * @param string $Name <p>Agent 名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AgentId Agent ID
-     * @param string $InstanceId 实例 ID
-     * @param string $Ipv4 Agent IP
+     * @param string $AgentId <p>Agent ID</p>
+     * @param string $InstanceId <p>实例 ID</p>
+     * @param string $Ipv4 <p>Agent IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HeartbeatTime 心跳时间
+     * @param string $HeartbeatTime <p>心跳时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastError 最近一次错误
+     * @param string $LastError <p>最近一次错误</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AgentVersion Agent 版本
+     * @param string $AgentVersion <p>Agent 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status Agent 状态
+     * @param integer $Status <p>Agent 状态</p>
      */
     function __construct()
     {

@@ -20,85 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Prometheus告警规则
  *
- * @method string getName() 获取规则名称
- * @method void setName(string $Name) 设置规则名称
- * @method string getRule() 获取prometheus语句
- * @method void setRule(string $Rule) 设置prometheus语句
- * @method array getLabels() 获取额外标签
- * @method void setLabels(array $Labels) 设置额外标签
- * @method string getTemplate() 获取告警发送模板
- * @method void setTemplate(string $Template) 设置告警发送模板
- * @method string getFor() 获取持续时间
- * @method void setFor(string $For) 设置持续时间
- * @method string getDescribe() 获取该条规则的描述信息
+ * @method string getName() 获取<p>规则名称</p>
+ * @method void setName(string $Name) 设置<p>规则名称</p>
+ * @method string getRule() 获取<p>prometheus语句</p>
+ * @method void setRule(string $Rule) 设置<p>prometheus语句</p>
+ * @method array getLabels() 获取<p>额外标签</p>
+ * @method void setLabels(array $Labels) 设置<p>额外标签</p>
+ * @method string getTemplate() 获取<p>告警发送模板</p>
+ * @method void setTemplate(string $Template) 设置<p>告警发送模板</p>
+ * @method string getFor() 获取<p>持续时间</p>
+ * @method void setFor(string $For) 设置<p>持续时间</p>
+ * @method string getDescribe() 获取<p>该条规则的描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescribe(string $Describe) 设置该条规则的描述信息
+ * @method void setDescribe(string $Describe) 设置<p>该条规则的描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnnotations() 获取参考prometheus rule中的annotations
+ * @method array getAnnotations() 获取<p>参考prometheus rule中的annotations</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnnotations(array $Annotations) 设置参考prometheus rule中的annotations
+ * @method void setAnnotations(array $Annotations) 设置<p>参考prometheus rule中的annotations</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRuleState() 获取告警规则状态
+ * @method integer getRuleState() 获取<p>告警规则状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleState(integer $RuleState) 设置告警规则状态
+ * @method void setRuleState(integer $RuleState) 设置<p>告警规则状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusAlertRule extends AbstractModel
 {
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
      */
     public $Name;
 
     /**
-     * @var string prometheus语句
+     * @var string <p>prometheus语句</p>
      */
     public $Rule;
 
     /**
-     * @var array 额外标签
+     * @var array <p>额外标签</p>
      */
     public $Labels;
 
     /**
-     * @var string 告警发送模板
+     * @var string <p>告警发送模板</p>
      */
     public $Template;
 
     /**
-     * @var string 持续时间
+     * @var string <p>持续时间</p>
      */
     public $For;
 
     /**
-     * @var string 该条规则的描述信息
+     * @var string <p>该条规则的描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Describe;
 
     /**
-     * @var array 参考prometheus rule中的annotations
+     * @var array <p>参考prometheus rule中的annotations</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Annotations;
 
     /**
-     * @var integer 告警规则状态
+     * @var integer <p>告警规则状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleState;
 
     /**
-     * @param string $Name 规则名称
-     * @param string $Rule prometheus语句
-     * @param array $Labels 额外标签
-     * @param string $Template 告警发送模板
-     * @param string $For 持续时间
-     * @param string $Describe 该条规则的描述信息
+     * @param string $Name <p>规则名称</p>
+     * @param string $Rule <p>prometheus语句</p>
+     * @param array $Labels <p>额外标签</p>
+     * @param string $Template <p>告警发送模板</p>
+     * @param string $For <p>持续时间</p>
+     * @param string $Describe <p>该条规则的描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Annotations 参考prometheus rule中的annotations
+     * @param array $Annotations <p>参考prometheus rule中的annotations</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RuleState 告警规则状态
+     * @param integer $RuleState <p>告警规则状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,189 +20,157 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警通知渠道配置
  *
- * @method boolean getEnabled() 获取是否启用
- * @method void setEnabled(boolean $Enabled) 设置是否启用
- * @method string getType() 获取通道类型，默认为amp，支持以下
-amp
-webhook
-alertmanager
- * @method void setType(string $Type) 设置通道类型，默认为amp，支持以下
-amp
-webhook
-alertmanager
- * @method string getWebHook() 获取如果Type为webhook, 则该字段为必填项
+ * @method boolean getEnabled() 获取<p>是否启用</p>
+ * @method void setEnabled(boolean $Enabled) 设置<p>是否启用</p>
+ * @method string getType() 获取<p>通道类型，默认为amp，支持以下<br>amp<br>webhook<br>alertmanager</p>
+ * @method void setType(string $Type) 设置<p>通道类型，默认为amp，支持以下<br>amp<br>webhook<br>alertmanager</p>
+ * @method string getWebHook() 获取<p>如果Type为webhook, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebHook(string $WebHook) 设置如果Type为webhook, 则该字段为必填项
+ * @method void setWebHook(string $WebHook) 设置<p>如果Type为webhook, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PrometheusAlertManagerConfig getAlertManager() 获取如果Type为alertmanager, 则该字段为必填项
+ * @method PrometheusAlertManagerConfig getAlertManager() 获取<p>如果Type为alertmanager, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlertManager(PrometheusAlertManagerConfig $AlertManager) 设置如果Type为alertmanager, 则该字段为必填项
+ * @method void setAlertManager(PrometheusAlertManagerConfig $AlertManager) 设置<p>如果Type为alertmanager, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRepeatInterval() 获取收敛时间
- * @method void setRepeatInterval(string $RepeatInterval) 设置收敛时间
- * @method string getTimeRangeStart() 获取生效起始时间
- * @method void setTimeRangeStart(string $TimeRangeStart) 设置生效起始时间
- * @method string getTimeRangeEnd() 获取生效结束时间
- * @method void setTimeRangeEnd(string $TimeRangeEnd) 设置生效结束时间
- * @method array getNotifyWay() 获取告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。
+ * @method string getRepeatInterval() 获取<p>收敛时间</p>
+ * @method void setRepeatInterval(string $RepeatInterval) 设置<p>收敛时间</p>
+ * @method string getTimeRangeStart() 获取<p>生效起始时间</p>
+ * @method void setTimeRangeStart(string $TimeRangeStart) 设置<p>生效起始时间</p>
+ * @method string getTimeRangeEnd() 获取<p>生效结束时间</p>
+ * @method void setTimeRangeEnd(string $TimeRangeEnd) 设置<p>生效结束时间</p>
+ * @method array getNotifyWay() 获取<p>告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNotifyWay(array $NotifyWay) 设置告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。
+ * @method void setNotifyWay(array $NotifyWay) 设置<p>告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getReceiverGroups() 获取告警接收组（用户组）
+ * @method array getReceiverGroups() 获取<p>告警接收组（用户组）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReceiverGroups(array $ReceiverGroups) 设置告警接收组（用户组）
+ * @method void setReceiverGroups(array $ReceiverGroups) 设置<p>告警接收组（用户组）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPhoneNotifyOrder() 获取电话告警顺序。
-注：NotifyWay选择CALL，采用该参数。
+ * @method array getPhoneNotifyOrder() 获取<p>电话告警顺序。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhoneNotifyOrder(array $PhoneNotifyOrder) 设置电话告警顺序。
-注：NotifyWay选择CALL，采用该参数。
+ * @method void setPhoneNotifyOrder(array $PhoneNotifyOrder) 设置<p>电话告警顺序。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPhoneCircleTimes() 获取电话告警次数。
-注：NotifyWay选择CALL，采用该参数。
+ * @method integer getPhoneCircleTimes() 获取<p>电话告警次数。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhoneCircleTimes(integer $PhoneCircleTimes) 设置电话告警次数。
-注：NotifyWay选择CALL，采用该参数。
+ * @method void setPhoneCircleTimes(integer $PhoneCircleTimes) 设置<p>电话告警次数。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPhoneInnerInterval() 获取电话告警轮内间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+ * @method integer getPhoneInnerInterval() 获取<p>电话告警轮内间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhoneInnerInterval(integer $PhoneInnerInterval) 设置电话告警轮内间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+ * @method void setPhoneInnerInterval(integer $PhoneInnerInterval) 设置<p>电话告警轮内间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPhoneCircleInterval() 获取电话告警轮外间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+ * @method integer getPhoneCircleInterval() 获取<p>电话告警轮外间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhoneCircleInterval(integer $PhoneCircleInterval) 设置电话告警轮外间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+ * @method void setPhoneCircleInterval(integer $PhoneCircleInterval) 设置<p>电话告警轮外间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getPhoneArriveNotice() 获取电话告警触达通知
-注：NotifyWay选择CALL，采用该参数。
+ * @method boolean getPhoneArriveNotice() 获取<p>电话告警触达通知<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhoneArriveNotice(boolean $PhoneArriveNotice) 设置电话告警触达通知
-注：NotifyWay选择CALL，采用该参数。
+ * @method void setPhoneArriveNotice(boolean $PhoneArriveNotice) 设置<p>电话告警触达通知<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusNotificationItem extends AbstractModel
 {
     /**
-     * @var boolean 是否启用
+     * @var boolean <p>是否启用</p>
      */
     public $Enabled;
 
     /**
-     * @var string 通道类型，默认为amp，支持以下
-amp
-webhook
-alertmanager
+     * @var string <p>通道类型，默认为amp，支持以下<br>amp<br>webhook<br>alertmanager</p>
      */
     public $Type;
 
     /**
-     * @var string 如果Type为webhook, 则该字段为必填项
+     * @var string <p>如果Type为webhook, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebHook;
 
     /**
-     * @var PrometheusAlertManagerConfig 如果Type为alertmanager, 则该字段为必填项
+     * @var PrometheusAlertManagerConfig <p>如果Type为alertmanager, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlertManager;
 
     /**
-     * @var string 收敛时间
+     * @var string <p>收敛时间</p>
      */
     public $RepeatInterval;
 
     /**
-     * @var string 生效起始时间
+     * @var string <p>生效起始时间</p>
      */
     public $TimeRangeStart;
 
     /**
-     * @var string 生效结束时间
+     * @var string <p>生效结束时间</p>
      */
     public $TimeRangeEnd;
 
     /**
-     * @var array 告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。
+     * @var array <p>告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotifyWay;
 
     /**
-     * @var array 告警接收组（用户组）
+     * @var array <p>告警接收组（用户组）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiverGroups;
 
     /**
-     * @var array 电话告警顺序。
-注：NotifyWay选择CALL，采用该参数。
+     * @var array <p>电话告警顺序。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneNotifyOrder;
 
     /**
-     * @var integer 电话告警次数。
-注：NotifyWay选择CALL，采用该参数。
+     * @var integer <p>电话告警次数。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneCircleTimes;
 
     /**
-     * @var integer 电话告警轮内间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * @var integer <p>电话告警轮内间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneInnerInterval;
 
     /**
-     * @var integer 电话告警轮外间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * @var integer <p>电话告警轮外间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneCircleInterval;
 
     /**
-     * @var boolean 电话告警触达通知
-注：NotifyWay选择CALL，采用该参数。
+     * @var boolean <p>电话告警触达通知<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneArriveNotice;
 
     /**
-     * @param boolean $Enabled 是否启用
-     * @param string $Type 通道类型，默认为amp，支持以下
-amp
-webhook
-alertmanager
-     * @param string $WebHook 如果Type为webhook, 则该字段为必填项
+     * @param boolean $Enabled <p>是否启用</p>
+     * @param string $Type <p>通道类型，默认为amp，支持以下<br>amp<br>webhook<br>alertmanager</p>
+     * @param string $WebHook <p>如果Type为webhook, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrometheusAlertManagerConfig $AlertManager 如果Type为alertmanager, 则该字段为必填项
+     * @param PrometheusAlertManagerConfig $AlertManager <p>如果Type为alertmanager, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RepeatInterval 收敛时间
-     * @param string $TimeRangeStart 生效起始时间
-     * @param string $TimeRangeEnd 生效结束时间
-     * @param array $NotifyWay 告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。
+     * @param string $RepeatInterval <p>收敛时间</p>
+     * @param string $TimeRangeStart <p>生效起始时间</p>
+     * @param string $TimeRangeEnd <p>生效结束时间</p>
+     * @param array $NotifyWay <p>告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ReceiverGroups 告警接收组（用户组）
+     * @param array $ReceiverGroups <p>告警接收组（用户组）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PhoneNotifyOrder 电话告警顺序。
-注：NotifyWay选择CALL，采用该参数。
+     * @param array $PhoneNotifyOrder <p>电话告警顺序。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PhoneCircleTimes 电话告警次数。
-注：NotifyWay选择CALL，采用该参数。
+     * @param integer $PhoneCircleTimes <p>电话告警次数。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PhoneInnerInterval 电话告警轮内间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * @param integer $PhoneInnerInterval <p>电话告警轮内间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PhoneCircleInterval 电话告警轮外间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * @param integer $PhoneCircleInterval <p>电话告警轮外间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $PhoneArriveNotice 电话告警触达通知
-注：NotifyWay选择CALL，采用该参数。
+     * @param boolean $PhoneArriveNotice <p>电话告警触达通知<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

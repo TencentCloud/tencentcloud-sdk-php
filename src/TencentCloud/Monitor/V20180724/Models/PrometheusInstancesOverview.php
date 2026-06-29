@@ -20,177 +20,177 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 托管prometheusV2实例概览
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名
- * @method void setInstanceName(string $InstanceName) 设置实例名
- * @method string getVpcId() 获取VPC ID
- * @method void setVpcId(string $VpcId) 设置VPC ID
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method integer getInstanceStatus() 获取运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）
- * @method void setInstanceStatus(integer $InstanceStatus) 设置运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）
- * @method integer getChargeStatus() 获取计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名</p>
+ * @method string getVpcId() 获取<p>VPC ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC ID</p>
+ * @method string getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
+ * @method integer getInstanceStatus() 获取<p>运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）</p>
+ * @method void setInstanceStatus(integer $InstanceStatus) 设置<p>运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）</p>
+ * @method integer getChargeStatus() 获取<p>计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeStatus(integer $ChargeStatus) 设置计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）
+ * @method void setChargeStatus(integer $ChargeStatus) 设置<p>计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEnableGrafana() 获取是否开启 Grafana（0:不开启，1:开启）
- * @method void setEnableGrafana(integer $EnableGrafana) 设置是否开启 Grafana（0:不开启，1:开启）
- * @method string getGrafanaURL() 获取Grafana 面板 URL
+ * @method integer getEnableGrafana() 获取<p>是否开启 Grafana（0:不开启，1:开启）</p>
+ * @method void setEnableGrafana(integer $EnableGrafana) 设置<p>是否开启 Grafana（0:不开启，1:开启）</p>
+ * @method string getGrafanaURL() 获取<p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGrafanaURL(string $GrafanaURL) 设置Grafana 面板 URL
+ * @method void setGrafanaURL(string $GrafanaURL) 设置<p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInstanceChargeType() 获取实例付费类型（1:试用版；2:预付费）
- * @method void setInstanceChargeType(integer $InstanceChargeType) 设置实例付费类型（1:试用版；2:预付费）
- * @method string getSpecName() 获取规格名称
+ * @method integer getInstanceChargeType() 获取<p>实例付费类型（1:试用版；2:预付费）</p>
+ * @method void setInstanceChargeType(integer $InstanceChargeType) 设置<p>实例付费类型（1:试用版；2:预付费）</p>
+ * @method string getSpecName() 获取<p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSpecName(string $SpecName) 设置规格名称
+ * @method void setSpecName(string $SpecName) 设置<p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDataRetentionTime() 获取存储周期
+ * @method integer getDataRetentionTime() 获取<p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataRetentionTime(integer $DataRetentionTime) 设置存储周期
+ * @method void setDataRetentionTime(integer $DataRetentionTime) 设置<p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExpireTime() 获取购买的实例过期时间
+ * @method string getExpireTime() 获取<p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpireTime(string $ExpireTime) 设置购买的实例过期时间
+ * @method void setExpireTime(string $ExpireTime) 设置<p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAutoRenewFlag() 获取自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)
+ * @method integer getAutoRenewFlag() 获取<p>自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBoundTotal() 获取绑定集群总数
- * @method void setBoundTotal(integer $BoundTotal) 设置绑定集群总数
- * @method integer getBoundNormal() 获取绑定集群正常状态总数
- * @method void setBoundNormal(integer $BoundNormal) 设置绑定集群正常状态总数
- * @method integer getResourcePackageStatus() 获取资源包状态，0-无可用资源包，1-有可用资源包
+ * @method integer getBoundTotal() 获取<p>绑定集群总数</p>
+ * @method void setBoundTotal(integer $BoundTotal) 设置<p>绑定集群总数</p>
+ * @method integer getBoundNormal() 获取<p>绑定集群正常状态总数</p>
+ * @method void setBoundNormal(integer $BoundNormal) 设置<p>绑定集群正常状态总数</p>
+ * @method integer getResourcePackageStatus() 获取<p>资源包状态，0-无可用资源包，1-有可用资源包</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourcePackageStatus(integer $ResourcePackageStatus) 设置资源包状态，0-无可用资源包，1-有可用资源包
+ * @method void setResourcePackageStatus(integer $ResourcePackageStatus) 设置<p>资源包状态，0-无可用资源包，1-有可用资源包</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourcePackageSpecName() 获取资源包规格名称
+ * @method string getResourcePackageSpecName() 获取<p>资源包规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourcePackageSpecName(string $ResourcePackageSpecName) 设置资源包规格名称
+ * @method void setResourcePackageSpecName(string $ResourcePackageSpecName) 设置<p>资源包规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusInstancesOverview extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名
+     * @var string <p>实例名</p>
      */
     public $InstanceName;
 
     /**
-     * @var string VPC ID
+     * @var string <p>VPC ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）
+     * @var integer <p>运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var integer 计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）
+     * @var integer <p>计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeStatus;
 
     /**
-     * @var integer 是否开启 Grafana（0:不开启，1:开启）
+     * @var integer <p>是否开启 Grafana（0:不开启，1:开启）</p>
      */
     public $EnableGrafana;
 
     /**
-     * @var string Grafana 面板 URL
+     * @var string <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GrafanaURL;
 
     /**
-     * @var integer 实例付费类型（1:试用版；2:预付费）
+     * @var integer <p>实例付费类型（1:试用版；2:预付费）</p>
      */
     public $InstanceChargeType;
 
     /**
-     * @var string 规格名称
+     * @var string <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecName;
 
     /**
-     * @var integer 存储周期
+     * @var integer <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataRetentionTime;
 
     /**
-     * @var string 购买的实例过期时间
+     * @var string <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
-     * @var integer 自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)
+     * @var integer <p>自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 绑定集群总数
+     * @var integer <p>绑定集群总数</p>
      */
     public $BoundTotal;
 
     /**
-     * @var integer 绑定集群正常状态总数
+     * @var integer <p>绑定集群正常状态总数</p>
      */
     public $BoundNormal;
 
     /**
-     * @var integer 资源包状态，0-无可用资源包，1-有可用资源包
+     * @var integer <p>资源包状态，0-无可用资源包，1-有可用资源包</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourcePackageStatus;
 
     /**
-     * @var string 资源包规格名称
+     * @var string <p>资源包规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourcePackageSpecName;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名
-     * @param string $VpcId VPC ID
-     * @param string $SubnetId 子网ID
-     * @param integer $InstanceStatus 运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）
-     * @param integer $ChargeStatus 计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名</p>
+     * @param string $VpcId <p>VPC ID</p>
+     * @param string $SubnetId <p>子网ID</p>
+     * @param integer $InstanceStatus <p>运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）</p>
+     * @param integer $ChargeStatus <p>计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EnableGrafana 是否开启 Grafana（0:不开启，1:开启）
-     * @param string $GrafanaURL Grafana 面板 URL
+     * @param integer $EnableGrafana <p>是否开启 Grafana（0:不开启，1:开启）</p>
+     * @param string $GrafanaURL <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InstanceChargeType 实例付费类型（1:试用版；2:预付费）
-     * @param string $SpecName 规格名称
+     * @param integer $InstanceChargeType <p>实例付费类型（1:试用版；2:预付费）</p>
+     * @param string $SpecName <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DataRetentionTime 存储周期
+     * @param integer $DataRetentionTime <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExpireTime 购买的实例过期时间
+     * @param string $ExpireTime <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AutoRenewFlag 自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)
+     * @param integer $AutoRenewFlag <p>自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BoundTotal 绑定集群总数
-     * @param integer $BoundNormal 绑定集群正常状态总数
-     * @param integer $ResourcePackageStatus 资源包状态，0-无可用资源包，1-有可用资源包
+     * @param integer $BoundTotal <p>绑定集群总数</p>
+     * @param integer $BoundNormal <p>绑定集群正常状态总数</p>
+     * @param integer $ResourcePackageStatus <p>资源包状态，0-无可用资源包，1-有可用资源包</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourcePackageSpecName 资源包规格名称
+     * @param string $ResourcePackageSpecName <p>资源包规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

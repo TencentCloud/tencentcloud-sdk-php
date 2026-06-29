@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 撤销失败的流程信息
  *
- * @method string getFlowId() 获取合同流程ID，为32位字符串。
- * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
- * @method string getReason() 获取撤销失败原因
- * @method void setReason(string $Reason) 设置撤销失败原因
+ * @method string getFlowId() 获取<p>合同流程ID，为32位字符串。</p>
+ * @method void setFlowId(string $FlowId) 设置<p>合同流程ID，为32位字符串。</p>
+ * @method string getReason() 获取<p>撤销失败原因</p>
+ * @method void setReason(string $Reason) 设置<p>撤销失败原因</p>
+ * @method string getFlowName() 获取<p>合同流程名称</p>
+ * @method void setFlowName(string $FlowName) 设置<p>合同流程名称</p>
  */
 class CancelFailureFlow extends AbstractModel
 {
     /**
-     * @var string 合同流程ID，为32位字符串。
+     * @var string <p>合同流程ID，为32位字符串。</p>
      */
     public $FlowId;
 
     /**
-     * @var string 撤销失败原因
+     * @var string <p>撤销失败原因</p>
      */
     public $Reason;
 
     /**
-     * @param string $FlowId 合同流程ID，为32位字符串。
-     * @param string $Reason 撤销失败原因
+     * @var string <p>合同流程名称</p>
+     */
+    public $FlowName;
+
+    /**
+     * @param string $FlowId <p>合同流程ID，为32位字符串。</p>
+     * @param string $Reason <p>撤销失败原因</p>
+     * @param string $FlowName <p>合同流程名称</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CancelFailureFlow extends AbstractModel
 
         if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
             $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("FlowName",$param) and $param["FlowName"] !== null) {
+            $this->FlowName = $param["FlowName"];
         }
     }
 }

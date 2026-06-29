@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBindingPolicyObjectList返回参数结构体
  *
- * @method array getList() 获取绑定的对象实例列表
+ * @method array getList() 获取<p>绑定的对象实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setList(array $List) 设置绑定的对象实例列表
+ * @method void setList(array $List) 设置<p>绑定的对象实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取绑定的对象实例总数
- * @method void setTotal(integer $Total) 设置绑定的对象实例总数
- * @method integer getNoShieldedSum() 获取未屏蔽的对象实例数
- * @method void setNoShieldedSum(integer $NoShieldedSum) 设置未屏蔽的对象实例数
- * @method DescribeBindingPolicyObjectListInstanceGroup getInstanceGroup() 获取绑定的实例分组信息，没有绑定实例分组则为空
+ * @method integer getTotal() 获取<p>绑定的对象实例总数</p>
+ * @method void setTotal(integer $Total) 设置<p>绑定的对象实例总数</p>
+ * @method integer getNoShieldedSum() 获取<p>未屏蔽的对象实例数</p>
+ * @method void setNoShieldedSum(integer $NoShieldedSum) 设置<p>未屏蔽的对象实例数</p>
+ * @method DescribeBindingPolicyObjectListInstanceGroup getInstanceGroup() 获取<p>绑定的实例分组信息，没有绑定实例分组则为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceGroup(DescribeBindingPolicyObjectListInstanceGroup $InstanceGroup) 设置绑定的实例分组信息，没有绑定实例分组则为空
+ * @method void setInstanceGroup(DescribeBindingPolicyObjectListInstanceGroup $InstanceGroup) 设置<p>绑定的实例分组信息，没有绑定实例分组则为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +38,23 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBindingPolicyObjectListResponse extends AbstractModel
 {
     /**
-     * @var array 绑定的对象实例列表
+     * @var array <p>绑定的对象实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
-     * @var integer 绑定的对象实例总数
+     * @var integer <p>绑定的对象实例总数</p>
      */
     public $Total;
 
     /**
-     * @var integer 未屏蔽的对象实例数
+     * @var integer <p>未屏蔽的对象实例数</p>
      */
     public $NoShieldedSum;
 
     /**
-     * @var DescribeBindingPolicyObjectListInstanceGroup 绑定的实例分组信息，没有绑定实例分组则为空
+     * @var DescribeBindingPolicyObjectListInstanceGroup <p>绑定的实例分组信息，没有绑定实例分组则为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceGroup;
@@ -65,11 +65,11 @@ class DescribeBindingPolicyObjectListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $List 绑定的对象实例列表
+     * @param array $List <p>绑定的对象实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total 绑定的对象实例总数
-     * @param integer $NoShieldedSum 未屏蔽的对象实例数
-     * @param DescribeBindingPolicyObjectListInstanceGroup $InstanceGroup 绑定的实例分组信息，没有绑定实例分组则为空
+     * @param integer $Total <p>绑定的对象实例总数</p>
+     * @param integer $NoShieldedSum <p>未屏蔽的对象实例数</p>
+     * @param DescribeBindingPolicyObjectListInstanceGroup $InstanceGroup <p>绑定的实例分组信息，没有绑定实例分组则为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

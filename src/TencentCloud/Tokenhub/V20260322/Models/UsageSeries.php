@@ -20,34 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用量时间周期内的时序点列表（按 metric key 索引）。为 JSON 数组的字符串形式,数组长度与响应 Timestamps 一致，无数据点处为 null。具体包含哪些 key 由响应 MetricKeys 决定。
  *
- * @method string getTotalToken() 获取总 token 数用量时间周期内的 JSON 字符串形式，如 `"[12,null,15]"`。
- * @method void setTotalToken(string $TotalToken) 设置总 token 数用量时间周期内的 JSON 字符串形式，如 `"[12,null,15]"`。
- * @method string getInputTotalToken() 获取输入 token 数用量时间周期内的 JSON 字符串形式，如 `"[7,null,9]"`。
- * @method void setInputTotalToken(string $InputTotalToken) 设置输入 token 数用量时间周期内的 JSON 字符串形式，如 `"[7,null,9]"`。
- * @method string getOutputTotalToken() 获取输出 token 数用量时间周期内的 JSON 字符串形式，如 `"[5,null,6]"`。
- * @method void setOutputTotalToken(string $OutputTotalToken) 设置输出 token 数用量时间周期内的 JSON 字符串形式，如 `"[5,null,6]"`。
+ * @method string getTotalToken() 获取<p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+ * @method void setTotalToken(string $TotalToken) 设置<p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+ * @method string getInputTotalToken() 获取<p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
+ * @method void setInputTotalToken(string $InputTotalToken) 设置<p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
+ * @method string getOutputTotalToken() 获取<p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
+ * @method void setOutputTotalToken(string $OutputTotalToken) 设置<p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
+ * @method string getCacheTotalToken() 获取<p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+ * @method void setCacheTotalToken(string $CacheTotalToken) 设置<p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+ * @method string getSearchRequestCount() 获取<p>[search 族] 搜索请求数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+ * @method void setSearchRequestCount(string $SearchRequestCount) 设置<p>[search 族] 搜索请求数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+ * @method string getSearchCount() 获取<p>[search 族] 搜索引擎调用次数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+ * @method void setSearchCount(string $SearchCount) 设置<p>[search 族] 搜索引擎调用次数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
  */
 class UsageSeries extends AbstractModel
 {
     /**
-     * @var string 总 token 数用量时间周期内的 JSON 字符串形式，如 `"[12,null,15]"`。
+     * @var string <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
      */
     public $TotalToken;
 
     /**
-     * @var string 输入 token 数用量时间周期内的 JSON 字符串形式，如 `"[7,null,9]"`。
+     * @var string <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
      */
     public $InputTotalToken;
 
     /**
-     * @var string 输出 token 数用量时间周期内的 JSON 字符串形式，如 `"[5,null,6]"`。
+     * @var string <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
      */
     public $OutputTotalToken;
 
     /**
-     * @param string $TotalToken 总 token 数用量时间周期内的 JSON 字符串形式，如 `"[12,null,15]"`。
-     * @param string $InputTotalToken 输入 token 数用量时间周期内的 JSON 字符串形式，如 `"[7,null,9]"`。
-     * @param string $OutputTotalToken 输出 token 数用量时间周期内的 JSON 字符串形式，如 `"[5,null,6]"`。
+     * @var string <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     */
+    public $CacheTotalToken;
+
+    /**
+     * @var string <p>[search 族] 搜索请求数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     */
+    public $SearchRequestCount;
+
+    /**
+     * @var string <p>[search 族] 搜索引擎调用次数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     */
+    public $SearchCount;
+
+    /**
+     * @param string $TotalToken <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+     * @param string $InputTotalToken <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
+     * @param string $OutputTotalToken <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
+     * @param string $CacheTotalToken <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     * @param string $SearchRequestCount <p>[search 族] 搜索请求数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     * @param string $SearchCount <p>[search 族] 搜索引擎调用次数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class UsageSeries extends AbstractModel
 
         if (array_key_exists("OutputTotalToken",$param) and $param["OutputTotalToken"] !== null) {
             $this->OutputTotalToken = $param["OutputTotalToken"];
+        }
+
+        if (array_key_exists("CacheTotalToken",$param) and $param["CacheTotalToken"] !== null) {
+            $this->CacheTotalToken = $param["CacheTotalToken"];
+        }
+
+        if (array_key_exists("SearchRequestCount",$param) and $param["SearchRequestCount"] !== null) {
+            $this->SearchRequestCount = $param["SearchRequestCount"];
+        }
+
+        if (array_key_exists("SearchCount",$param) and $param["SearchCount"] !== null) {
+            $this->SearchCount = $param["SearchCount"];
         }
     }
 }

@@ -36,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubStatus(AppSubStatusInfo $SubStatus) 设置子状态信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TemplatePublishInfo getTemplatePublish() 获取模版中心同步信息(私有化独有)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplatePublish(TemplatePublishInfo $TemplatePublish) 设置模版中心同步信息(私有化独有)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppAuxiliaryInfo extends AbstractModel
 {
@@ -68,12 +64,6 @@ class AppAuxiliaryInfo extends AbstractModel
     public $SubStatus;
 
     /**
-     * @var TemplatePublishInfo 模版中心同步信息(私有化独有)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TemplatePublish;
-
-    /**
      * @param AppAppeal $Appeal 申诉信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SearchResourceStatusInfo $SearchResourceStatus 搜索资源状态
@@ -81,8 +71,6 @@ class AppAuxiliaryInfo extends AbstractModel
      * @param SpecialStatusInfo $SpecialStatusInfo 特殊状态信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AppSubStatusInfo $SubStatus 子状态信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplatePublishInfo $TemplatePublish 模版中心同步信息(私有化独有)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,11 +104,6 @@ class AppAuxiliaryInfo extends AbstractModel
         if (array_key_exists("SubStatus",$param) and $param["SubStatus"] !== null) {
             $this->SubStatus = new AppSubStatusInfo();
             $this->SubStatus->deserialize($param["SubStatus"]);
-        }
-
-        if (array_key_exists("TemplatePublish",$param) and $param["TemplatePublish"] !== null) {
-            $this->TemplatePublish = new TemplatePublishInfo();
-            $this->TemplatePublish->deserialize($param["TemplatePublish"]);
         }
     }
 }

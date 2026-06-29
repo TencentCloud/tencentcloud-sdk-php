@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置<p>会话类型 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
  * @method string getUpdateTime() 获取<p>更新时间</p>
  * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
- * @method string getTitle() 获取会话标题
- * @method void setTitle(string $Title) 设置会话标题
+ * @method string getTitle() 获取<p>会话标题</p>
+ * @method void setTitle(string $Title) 设置<p>会话标题</p>
+ * @method string getAgentId() 获取<p>会话使用的用户端 AgentId</p>
+ * @method void setAgentId(string $AgentId) 设置<p>会话使用的用户端 AgentId</p>
  */
 class Conversation extends AbstractModel
 {
@@ -61,9 +63,14 @@ class Conversation extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string 会话标题
+     * @var string <p>会话标题</p>
      */
     public $Title;
+
+    /**
+     * @var string <p>会话使用的用户端 AgentId</p>
+     */
+    public $AgentId;
 
     /**
      * @param string $AppId <p>应用 ID</p>
@@ -71,7 +78,8 @@ class Conversation extends AbstractModel
      * @param string $CreateTime <p>创建时间</p>
      * @param integer $Type <p>会话类型 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
      * @param string $UpdateTime <p>更新时间</p>
-     * @param string $Title 会话标题
+     * @param string $Title <p>会话标题</p>
+     * @param string $AgentId <p>会话使用的用户端 AgentId</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class Conversation extends AbstractModel
 
         if (array_key_exists("Title",$param) and $param["Title"] !== null) {
             $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
+            $this->AgentId = $param["AgentId"];
         }
     }
 }

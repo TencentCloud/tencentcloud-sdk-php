@@ -138,6 +138,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置<p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
  * @method boolean getUseDefaultFuseConfig() 获取<p>是否使用探针默认熔断阈值</p>
  * @method void setUseDefaultFuseConfig(boolean $UseDefaultFuseConfig) 设置<p>是否使用探针默认熔断阈值</p>
+ * @method boolean getEnableHeadSampler() 获取<p>是否开启探针头采样</p>
+ * @method void setEnableHeadSampler(boolean $EnableHeadSampler) 设置<p>是否开启探针头采样</p>
+ * @method string getHeadSamplerType() 获取<p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+ * @method void setHeadSamplerType(string $HeadSamplerType) 设置<p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+ * @method integer getHeadSamplerArg() 获取<p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+ * @method void setHeadSamplerArg(integer $HeadSamplerArg) 设置<p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
  */
 class ModifyApmApplicationConfigRequest extends AbstractModel
 {
@@ -437,6 +443,21 @@ class ModifyApmApplicationConfigRequest extends AbstractModel
     public $UseDefaultFuseConfig;
 
     /**
+     * @var boolean <p>是否开启探针头采样</p>
+     */
+    public $EnableHeadSampler;
+
+    /**
+     * @var string <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+     */
+    public $HeadSamplerType;
+
+    /**
+     * @var integer <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+     */
+    public $HeadSamplerArg;
+
+    /**
      * @param string $InstanceId <p>业务系统 ID</p>
      * @param string $ServiceName <p>应用名</p>
      * @param integer $UrlConvergenceSwitch <p>URL收敛开关,0 关 | 1 开</p>
@@ -496,6 +517,9 @@ class ModifyApmApplicationConfigRequest extends AbstractModel
      * @param integer $ErrRateThreshold <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p>
      * @param integer $ResponseDurationWarningThreshold <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
      * @param boolean $UseDefaultFuseConfig <p>是否使用探针默认熔断阈值</p>
+     * @param boolean $EnableHeadSampler <p>是否开启探针头采样</p>
+     * @param string $HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+     * @param integer $HeadSamplerArg <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
      */
     function __construct()
     {
@@ -756,6 +780,18 @@ class ModifyApmApplicationConfigRequest extends AbstractModel
 
         if (array_key_exists("UseDefaultFuseConfig",$param) and $param["UseDefaultFuseConfig"] !== null) {
             $this->UseDefaultFuseConfig = $param["UseDefaultFuseConfig"];
+        }
+
+        if (array_key_exists("EnableHeadSampler",$param) and $param["EnableHeadSampler"] !== null) {
+            $this->EnableHeadSampler = $param["EnableHeadSampler"];
+        }
+
+        if (array_key_exists("HeadSamplerType",$param) and $param["HeadSamplerType"] !== null) {
+            $this->HeadSamplerType = $param["HeadSamplerType"];
+        }
+
+        if (array_key_exists("HeadSamplerArg",$param) and $param["HeadSamplerArg"] !== null) {
+            $this->HeadSamplerArg = $param["HeadSamplerArg"];
         }
     }
 }

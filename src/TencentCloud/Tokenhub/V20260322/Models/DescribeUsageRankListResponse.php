@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsageRankList返回参数结构体
  *
- * @method string getDimension() 获取回填请求的统计维度。
- * @method void setDimension(string $Dimension) 设置回填请求的统计维度。
- * @method string getMetricType() 获取回填请求的指标族（本期固定为 tokens）。前端按本字段切换图表渲染逻辑。
- * @method void setMetricType(string $MetricType) 设置回填请求的指标族（本期固定为 tokens）。前端按本字段切换图表渲染逻辑。
- * @method array getMetricKeys() 获取本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，顺序固定为 [Total, Input, Output]。本期为 [TotalToken, InputTotalToken, OutputTotalToken]。前端可遍历此列表渲染图表，无需硬编码 key 名。
- * @method void setMetricKeys(array $MetricKeys) 设置本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，顺序固定为 [Total, Input, Output]。本期为 [TotalToken, InputTotalToken, OutputTotalToken]。前端可遍历此列表渲染图表，无需硬编码 key 名。
- * @method string getViewName() 获取视图（数据来源）
- * @method void setViewName(string $ViewName) 设置视图（数据来源）
- * @method integer getPeriod() 获取回填请求的统计粒度（秒）。ShowAll=true 时为 0。
- * @method void setPeriod(integer $Period) 设置回填请求的统计粒度（秒）。ShowAll=true 时为 0。
- * @method string getStartTime() 获取回填请求的起始时间。
- * @method void setStartTime(string $StartTime) 设置回填请求的起始时间。
- * @method string getEndTime() 获取回填请求的结束时间。
- * @method void setEndTime(string $EndTime) 设置回填请求的结束时间。
- * @method integer getTotal() 获取全量对象数。
- * @method void setTotal(integer $Total) 设置全量对象数。
- * @method integer getOffset() 获取回填请求的翻页起点。ShowAll=true 时为 0。
- * @method void setOffset(integer $Offset) 设置回填请求的翻页起点。ShowAll=true 时为 0。
- * @method integer getLimit() 获取页大小，恒为 10。ShowAll=true 时为 Total。
- * @method void setLimit(integer $Limit) 设置页大小，恒为 10。ShowAll=true 时为 Total。
- * @method array getTimestamps() 获取Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。
- * @method void setTimestamps(array $Timestamps) 设置Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。
- * @method array getTopList() 获取对象排行列表，按主指标（`MetricKeys[0]`，本期为 TotalToken）降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。
- * @method void setTopList(array $TopList) 设置对象排行列表，按主指标（`MetricKeys[0]`，本期为 TotalToken）降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。
- * @method UsageStats getPageStats() 获取分页统计结果
- * @method void setPageStats(UsageStats $PageStats) 设置分页统计结果
- * @method UsageStats getTotalStats() 获取总统计结果
- * @method void setTotalStats(UsageStats $TotalStats) 设置总统计结果
+ * @method string getDimension() 获取<p>回填请求的统计维度。</p>
+ * @method void setDimension(string $Dimension) 设置<p>回填请求的统计维度。</p>
+ * @method string getMetricType() 获取<p>回填请求的指标族：tokens / search 。</p>
+ * @method void setMetricType(string $MetricType) 设置<p>回填请求的指标族：tokens / search 。</p>
+ * @method array getMetricKeys() 获取<p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+ * @method void setMetricKeys(array $MetricKeys) 设置<p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+ * @method string getViewName() 获取<p>视图（数据来源）</p>
+ * @method void setViewName(string $ViewName) 设置<p>视图（数据来源）</p>
+ * @method integer getPeriod() 获取<p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
+ * @method void setPeriod(integer $Period) 设置<p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
+ * @method string getStartTime() 获取<p>回填请求的起始时间。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>回填请求的起始时间。</p>
+ * @method string getEndTime() 获取<p>回填请求的结束时间。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>回填请求的结束时间。</p>
+ * @method integer getTotal() 获取<p>全量对象数。</p>
+ * @method void setTotal(integer $Total) 设置<p>全量对象数。</p>
+ * @method integer getOffset() 获取<p>回填请求的翻页起点。ShowAll=true 时为 0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>回填请求的翻页起点。ShowAll=true 时为 0。</p>
+ * @method integer getLimit() 获取<p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
+ * @method void setLimit(integer $Limit) 设置<p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
+ * @method array getTimestamps() 获取<p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
+ * @method void setTimestamps(array $Timestamps) 设置<p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
+ * @method array getTopList() 获取<p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+ * @method void setTopList(array $TopList) 设置<p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+ * @method UsageStats getPageStats() 获取<p>分页统计结果</p>
+ * @method void setPageStats(UsageStats $PageStats) 设置<p>分页统计结果</p>
+ * @method UsageStats getTotalStats() 获取<p>总统计结果</p>
+ * @method void setTotalStats(UsageStats $TotalStats) 设置<p>总统计结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUsageRankListResponse extends AbstractModel
 {
     /**
-     * @var string 回填请求的统计维度。
+     * @var string <p>回填请求的统计维度。</p>
      */
     public $Dimension;
 
     /**
-     * @var string 回填请求的指标族（本期固定为 tokens）。前端按本字段切换图表渲染逻辑。
+     * @var string <p>回填请求的指标族：tokens / search 。</p>
      */
     public $MetricType;
 
     /**
-     * @var array 本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，顺序固定为 [Total, Input, Output]。本期为 [TotalToken, InputTotalToken, OutputTotalToken]。前端可遍历此列表渲染图表，无需硬编码 key 名。
+     * @var array <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
      */
     public $MetricKeys;
 
     /**
-     * @var string 视图（数据来源）
+     * @var string <p>视图（数据来源）</p>
      */
     public $ViewName;
 
     /**
-     * @var integer 回填请求的统计粒度（秒）。ShowAll=true 时为 0。
+     * @var integer <p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
      */
     public $Period;
 
     /**
-     * @var string 回填请求的起始时间。
+     * @var string <p>回填请求的起始时间。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 回填请求的结束时间。
+     * @var string <p>回填请求的结束时间。</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 全量对象数。
+     * @var integer <p>全量对象数。</p>
      */
     public $Total;
 
     /**
-     * @var integer 回填请求的翻页起点。ShowAll=true 时为 0。
+     * @var integer <p>回填请求的翻页起点。ShowAll=true 时为 0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 页大小，恒为 10。ShowAll=true 时为 Total。
+     * @var integer <p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
      */
     public $Limit;
 
     /**
-     * @var array Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。
+     * @var array <p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
      */
     public $Timestamps;
 
     /**
-     * @var array 对象排行列表，按主指标（`MetricKeys[0]`，本期为 TotalToken）降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。
+     * @var array <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
      */
     public $TopList;
 
     /**
-     * @var UsageStats 分页统计结果
+     * @var UsageStats <p>分页统计结果</p>
      */
     public $PageStats;
 
     /**
-     * @var UsageStats 总统计结果
+     * @var UsageStats <p>总统计结果</p>
      */
     public $TotalStats;
 
@@ -129,20 +129,20 @@ class DescribeUsageRankListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Dimension 回填请求的统计维度。
-     * @param string $MetricType 回填请求的指标族（本期固定为 tokens）。前端按本字段切换图表渲染逻辑。
-     * @param array $MetricKeys 本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，顺序固定为 [Total, Input, Output]。本期为 [TotalToken, InputTotalToken, OutputTotalToken]。前端可遍历此列表渲染图表，无需硬编码 key 名。
-     * @param string $ViewName 视图（数据来源）
-     * @param integer $Period 回填请求的统计粒度（秒）。ShowAll=true 时为 0。
-     * @param string $StartTime 回填请求的起始时间。
-     * @param string $EndTime 回填请求的结束时间。
-     * @param integer $Total 全量对象数。
-     * @param integer $Offset 回填请求的翻页起点。ShowAll=true 时为 0。
-     * @param integer $Limit 页大小，恒为 10。ShowAll=true 时为 Total。
-     * @param array $Timestamps Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。
-     * @param array $TopList 对象排行列表，按主指标（`MetricKeys[0]`，本期为 TotalToken）降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。
-     * @param UsageStats $PageStats 分页统计结果
-     * @param UsageStats $TotalStats 总统计结果
+     * @param string $Dimension <p>回填请求的统计维度。</p>
+     * @param string $MetricType <p>回填请求的指标族：tokens / search 。</p>
+     * @param array $MetricKeys <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+     * @param string $ViewName <p>视图（数据来源）</p>
+     * @param integer $Period <p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
+     * @param string $StartTime <p>回填请求的起始时间。</p>
+     * @param string $EndTime <p>回填请求的结束时间。</p>
+     * @param integer $Total <p>全量对象数。</p>
+     * @param integer $Offset <p>回填请求的翻页起点。ShowAll=true 时为 0。</p>
+     * @param integer $Limit <p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
+     * @param array $Timestamps <p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
+     * @param array $TopList <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+     * @param UsageStats $PageStats <p>分页统计结果</p>
+     * @param UsageStats $TotalStats <p>总统计结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

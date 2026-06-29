@@ -22,10 +22,6 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeepThinking() 获取是否开启深度思考
  * @method void setDeepThinking(string $DeepThinking) 设置是否开启深度思考
- * @method string getReasoningEffort() 获取深度思考效果
- * @method void setReasoningEffort(string $ReasoningEffort) 设置深度思考效果
- * @method string getReplyFormat() 获取输出格式  text、json_object
- * @method void setReplyFormat(string $ReplyFormat) 设置输出格式  text、json_object
  * @method float getFrequencyPenalty() 获取频率惩罚
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrequencyPenalty(float $FrequencyPenalty) 设置频率惩罚
@@ -38,10 +34,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPresencePenalty(float $PresencePenalty) 设置存在惩罚
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReasoningEffort() 获取深度思考效果
+ * @method void setReasoningEffort(string $ReasoningEffort) 设置深度思考效果
  * @method float getRepetitionPenalty() 获取重复惩罚
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepetitionPenalty(float $RepetitionPenalty) 设置重复惩罚
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReplyFormat() 获取输出格式（text、json_object）
+ * @method void setReplyFormat(string $ReplyFormat) 设置输出格式（text、json_object）
  * @method integer getSeed() 获取seed 随机种子
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeed(integer $Seed) 设置seed 随机种子
@@ -65,16 +65,6 @@ class ModelParams extends AbstractModel
     public $DeepThinking;
 
     /**
-     * @var string 深度思考效果
-     */
-    public $ReasoningEffort;
-
-    /**
-     * @var string 输出格式  text、json_object
-     */
-    public $ReplyFormat;
-
-    /**
      * @var float 频率惩罚
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -93,10 +83,20 @@ class ModelParams extends AbstractModel
     public $PresencePenalty;
 
     /**
+     * @var string 深度思考效果
+     */
+    public $ReasoningEffort;
+
+    /**
      * @var float 重复惩罚
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepetitionPenalty;
+
+    /**
+     * @var string 输出格式（text、json_object）
+     */
+    public $ReplyFormat;
 
     /**
      * @var integer seed 随机种子
@@ -123,16 +123,16 @@ class ModelParams extends AbstractModel
 
     /**
      * @param string $DeepThinking 是否开启深度思考
-     * @param string $ReasoningEffort 深度思考效果
-     * @param string $ReplyFormat 输出格式  text、json_object
      * @param float $FrequencyPenalty 频率惩罚
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxTokens 最大输出长度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $PresencePenalty 存在惩罚
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReasoningEffort 深度思考效果
      * @param float $RepetitionPenalty 重复惩罚
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReplyFormat 输出格式（text、json_object）
      * @param integer $Seed seed 随机种子
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StopSequenceList 停止序列
@@ -158,14 +158,6 @@ class ModelParams extends AbstractModel
             $this->DeepThinking = $param["DeepThinking"];
         }
 
-        if (array_key_exists("ReasoningEffort",$param) and $param["ReasoningEffort"] !== null) {
-            $this->ReasoningEffort = $param["ReasoningEffort"];
-        }
-
-        if (array_key_exists("ReplyFormat",$param) and $param["ReplyFormat"] !== null) {
-            $this->ReplyFormat = $param["ReplyFormat"];
-        }
-
         if (array_key_exists("FrequencyPenalty",$param) and $param["FrequencyPenalty"] !== null) {
             $this->FrequencyPenalty = $param["FrequencyPenalty"];
         }
@@ -178,8 +170,16 @@ class ModelParams extends AbstractModel
             $this->PresencePenalty = $param["PresencePenalty"];
         }
 
+        if (array_key_exists("ReasoningEffort",$param) and $param["ReasoningEffort"] !== null) {
+            $this->ReasoningEffort = $param["ReasoningEffort"];
+        }
+
         if (array_key_exists("RepetitionPenalty",$param) and $param["RepetitionPenalty"] !== null) {
             $this->RepetitionPenalty = $param["RepetitionPenalty"];
+        }
+
+        if (array_key_exists("ReplyFormat",$param) and $param["ReplyFormat"] !== null) {
+            $this->ReplyFormat = $param["ReplyFormat"];
         }
 
         if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {

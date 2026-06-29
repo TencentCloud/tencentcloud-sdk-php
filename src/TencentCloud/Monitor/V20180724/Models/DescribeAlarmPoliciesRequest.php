@@ -20,246 +20,234 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmPolicies请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method integer getPageNumber() 获取页数，从 1 开始计数，默认 1
- * @method void setPageNumber(integer $PageNumber) 设置页数，从 1 开始计数，默认 1
- * @method integer getPageSize() 获取每页的数量，取值1~100，默认20
- * @method void setPageSize(integer $PageSize) 设置每页的数量，取值1~100，默认20
- * @method string getPolicyName() 获取按策略名称模糊搜索
- * @method void setPolicyName(string $PolicyName) 设置按策略名称模糊搜索
- * @method array getMonitorTypes() 获取根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
- * @method void setMonitorTypes(array $MonitorTypes) 设置根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
- * @method array getNamespaces() 获取根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
- * @method void setNamespaces(array $Namespaces) 设置根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
- * @method string getDimensions() 获取告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
- * @method void setDimensions(string $Dimensions) 设置告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
- * @method array getReceiverUids() 获取根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
- * @method void setReceiverUids(array $ReceiverUids) 设置根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
- * @method array getReceiverGroups() 获取根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
- * @method void setReceiverGroups(array $ReceiverGroups) 设置根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
- * @method array getPolicyType() 获取根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
- * @method void setPolicyType(array $PolicyType) 设置根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
- * @method string getField() 获取排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
- * @method void setField(string $Field) 设置排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
- * @method string getOrder() 获取排序顺序：升序：ASC  降序：DESC
- * @method void setOrder(string $Order) 设置排序顺序：升序：ASC  降序：DESC
- * @method array getProjectIds() 获取策略所属项目的id数组，可在此页面查看
-[项目管理](https://console.cloud.tencent.com/project)
- * @method void setProjectIds(array $ProjectIds) 设置策略所属项目的id数组，可在此页面查看
-[项目管理](https://console.cloud.tencent.com/project)
- * @method array getNoticeIds() 获取通知模板的id列表，可查询通知模板列表获取。
-可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
- * @method void setNoticeIds(array $NoticeIds) 设置通知模板的id列表，可查询通知模板列表获取。
-可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
- * @method array getRuleTypes() 获取根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
- * @method void setRuleTypes(array $RuleTypes) 设置根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
- * @method array getEnable() 获取告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
- * @method void setEnable(array $Enable) 设置告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
- * @method integer getNotBindingNoticeRule() 获取传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
- * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) 设置传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
- * @method integer getInstanceGroupId() 获取实例分组id
- * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组id
- * @method integer getNeedCorrespondence() 获取是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
- * @method void setNeedCorrespondence(integer $NeedCorrespondence) 设置是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
- * @method array getTriggerTasks() 获取按照触发任务（例如弹性伸缩）过滤策略。最多10个
- * @method void setTriggerTasks(array $TriggerTasks) 设置按照触发任务（例如弹性伸缩）过滤策略。最多10个
- * @method array getOneClickPolicyType() 获取根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
- * @method void setOneClickPolicyType(array $OneClickPolicyType) 设置根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
- * @method integer getNotBindAll() 获取返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
- * @method void setNotBindAll(integer $NotBindAll) 设置返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
- * @method integer getNotInstanceGroup() 获取返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
- * @method void setNotInstanceGroup(integer $NotInstanceGroup) 设置返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
- * @method array getTags() 获取策略根据标签过滤
- * @method void setTags(array $Tags) 设置策略根据标签过滤
- * @method string getPromInsId() 获取prom实例id，自定义指标策略时会用到
- * @method void setPromInsId(string $PromInsId) 设置prom实例id，自定义指标策略时会用到
- * @method array getReceiverOnCallFormIDs() 获取根据排班表搜索
- * @method void setReceiverOnCallFormIDs(array $ReceiverOnCallFormIDs) 设置根据排班表搜索
- * @method array getNoticeContentTmplIDs() 获取通知内容模板ID筛选
- * @method void setNoticeContentTmplIDs(array $NoticeContentTmplIDs) 设置通知内容模板ID筛选
- * @method integer getIsPredefined() 获取是否为预设策略，1是，0否
- * @method void setIsPredefined(integer $IsPredefined) 设置是否为预设策略，1是，0否
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method integer getPageNumber() 获取<p>页数，从 1 开始计数，默认 1</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页数，从 1 开始计数，默认 1</p>
+ * @method integer getPageSize() 获取<p>每页的数量，取值1~100，默认20</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页的数量，取值1~100，默认20</p>
+ * @method string getPolicyName() 获取<p>按策略名称模糊搜索</p>
+ * @method void setPolicyName(string $PolicyName) 设置<p>按策略名称模糊搜索</p>
+ * @method array getMonitorTypes() 获取<p>根据监控类型过滤 不选默认查所有类型 &quot;MT_QCE&quot;=云产品监控,当Dimension不为空时，该项为必填项</p>
+ * @method void setMonitorTypes(array $MonitorTypes) 设置<p>根据监控类型过滤 不选默认查所有类型 &quot;MT_QCE&quot;=云产品监控,当Dimension不为空时，该项为必填项</p>
+ * @method array getNamespaces() 获取<p>根据命名空间过滤，不同策略类型的值详见<br><a href="https://cloud.tencent.com/document/product/248/50397">策略类型列表</a>当Dimension不为空时，该项为必填项</p>
+ * @method void setNamespaces(array $Namespaces) 设置<p>根据命名空间过滤，不同策略类型的值详见<br><a href="https://cloud.tencent.com/document/product/248/50397">策略类型列表</a>当Dimension不为空时，该项为必填项</p>
+ * @method string getDimensions() 获取<p>告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：<code>[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-qr888845g&quot;}]]</code>具体也可以参考下方的示例 2。不同云产品参数示例详见 <a href="https://cloud.tencent.com/document/product/248/50397">维度信息Dimensions列表</a>注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时</p>
+ * @method void setDimensions(string $Dimensions) 设置<p>告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：<code>[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-qr888845g&quot;}]]</code>具体也可以参考下方的示例 2。不同云产品参数示例详见 <a href="https://cloud.tencent.com/document/product/248/50397">维度信息Dimensions列表</a>注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时</p>
+ * @method array getReceiverUids() 获取<p>根据接收人搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34587">拉取子用户 ListUsers</a> 接口获取用户列表 或 <a href="https://cloud.tencent.com/document/product/598/34590">查询子用户 GetUser</a> 接口查询子用户详情，此处填入返回结果中的 <code>Uid</code> 字段</p>
+ * @method void setReceiverUids(array $ReceiverUids) 设置<p>根据接收人搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34587">拉取子用户 ListUsers</a> 接口获取用户列表 或 <a href="https://cloud.tencent.com/document/product/598/34590">查询子用户 GetUser</a> 接口查询子用户详情，此处填入返回结果中的 <code>Uid</code> 字段</p>
+ * @method array getReceiverGroups() 获取<p>根据接收组搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34589">查询用户组列表 ListGroups</a> 接口获取用户组列表 或 <a href="https://cloud.tencent.com/document/product/598/34588">列出用户关联的用户组 ListGroupsForUser</a> 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 <code>GroupId</code> 字段</p>
+ * @method void setReceiverGroups(array $ReceiverGroups) 设置<p>根据接收组搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34589">查询用户组列表 ListGroups</a> 接口获取用户组列表 或 <a href="https://cloud.tencent.com/document/product/598/34588">列出用户关联的用户组 ListGroupsForUser</a> 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 <code>GroupId</code> 字段</p>
+ * @method array getPolicyType() 获取<p>根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略</p>
+ * @method void setPolicyType(array $PolicyType) 设置<p>根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略</p>
+ * @method string getField() 获取<p>排序字段，例如按照最后修改时间排序，Field: &quot;UpdateTime&quot;</p>
+ * @method void setField(string $Field) 设置<p>排序字段，例如按照最后修改时间排序，Field: &quot;UpdateTime&quot;</p>
+ * @method string getOrder() 获取<p>排序顺序：升序：ASC  降序：DESC</p>
+ * @method void setOrder(string $Order) 设置<p>排序顺序：升序：ASC  降序：DESC</p>
+ * @method array getProjectIds() 获取<p>策略所属项目的id数组，可在此页面查看<br><a href="https://console.cloud.tencent.com/project">项目管理</a></p>
+ * @method void setProjectIds(array $ProjectIds) 设置<p>策略所属项目的id数组，可在此页面查看<br><a href="https://console.cloud.tencent.com/project">项目管理</a></p>
+ * @method array getNoticeIds() 获取<p>通知模板的id列表，可查询通知模板列表获取。<br>可使用 <a href="https://cloud.tencent.com/document/product/248/51280">查询通知模板列表</a> 接口查询。</p>
+ * @method void setNoticeIds(array $NoticeIds) 设置<p>通知模板的id列表，可查询通知模板列表获取。<br>可使用 <a href="https://cloud.tencent.com/document/product/248/51280">查询通知模板列表</a> 接口查询。</p>
+ * @method array getRuleTypes() 获取<p>根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略</p>
+ * @method void setRuleTypes(array $RuleTypes) 设置<p>根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略</p>
+ * @method array getEnable() 获取<p>告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]</p>
+ * @method void setEnable(array $Enable) 设置<p>告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]</p>
+ * @method integer getNotBindingNoticeRule() 获取<p>传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。</p>
+ * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) 设置<p>传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。</p>
+ * @method integer getInstanceGroupId() 获取<p>实例分组id</p>
+ * @method void setInstanceGroupId(integer $InstanceGroupId) 设置<p>实例分组id</p>
+ * @method integer getNeedCorrespondence() 获取<p>是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0</p>
+ * @method void setNeedCorrespondence(integer $NeedCorrespondence) 设置<p>是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0</p>
+ * @method array getTriggerTasks() 获取<p>按照触发任务（例如弹性伸缩）过滤策略。最多10个</p>
+ * @method void setTriggerTasks(array $TriggerTasks) 设置<p>按照触发任务（例如弹性伸缩）过滤策略。最多10个</p>
+ * @method array getOneClickPolicyType() 获取<p>根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略</p>
+ * @method void setOneClickPolicyType(array $OneClickPolicyType) 设置<p>根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略</p>
+ * @method integer getNotBindAll() 获取<p>返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤</p>
+ * @method void setNotBindAll(integer $NotBindAll) 设置<p>返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤</p>
+ * @method integer getNotInstanceGroup() 获取<p>返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤</p>
+ * @method void setNotInstanceGroup(integer $NotInstanceGroup) 设置<p>返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤</p>
+ * @method array getTags() 获取<p>策略根据标签过滤</p>
+ * @method void setTags(array $Tags) 设置<p>策略根据标签过滤</p>
+ * @method string getPromInsId() 获取<p>prom实例id，自定义指标策略时会用到</p>
+ * @method void setPromInsId(string $PromInsId) 设置<p>prom实例id，自定义指标策略时会用到</p>
+ * @method array getReceiverOnCallFormIDs() 获取<p>根据排班表搜索</p>
+ * @method void setReceiverOnCallFormIDs(array $ReceiverOnCallFormIDs) 设置<p>根据排班表搜索</p>
+ * @method array getNoticeContentTmplIDs() 获取<p>通知内容模板ID筛选</p>
+ * @method void setNoticeContentTmplIDs(array $NoticeContentTmplIDs) 设置<p>通知内容模板ID筛选</p>
+ * @method integer getIsPredefined() 获取<p>是否为预设策略，1是，0否</p>
+ * @method void setIsPredefined(integer $IsPredefined) 设置<p>是否为预设策略，1是，0否</p>
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var integer 页数，从 1 开始计数，默认 1
+     * @var integer <p>页数，从 1 开始计数，默认 1</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页的数量，取值1~100，默认20
+     * @var integer <p>每页的数量，取值1~100，默认20</p>
      */
     public $PageSize;
 
     /**
-     * @var string 按策略名称模糊搜索
+     * @var string <p>按策略名称模糊搜索</p>
      */
     public $PolicyName;
 
     /**
-     * @var array 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
+     * @var array <p>根据监控类型过滤 不选默认查所有类型 &quot;MT_QCE&quot;=云产品监控,当Dimension不为空时，该项为必填项</p>
      */
     public $MonitorTypes;
 
     /**
-     * @var array 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
+     * @var array <p>根据命名空间过滤，不同策略类型的值详见<br><a href="https://cloud.tencent.com/document/product/248/50397">策略类型列表</a>当Dimension不为空时，该项为必填项</p>
      */
     public $Namespaces;
 
     /**
-     * @var string 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+     * @var string <p>告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：<code>[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-qr888845g&quot;}]]</code>具体也可以参考下方的示例 2。不同云产品参数示例详见 <a href="https://cloud.tencent.com/document/product/248/50397">维度信息Dimensions列表</a>注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时</p>
      */
     public $Dimensions;
 
     /**
-     * @var array 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
+     * @var array <p>根据接收人搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34587">拉取子用户 ListUsers</a> 接口获取用户列表 或 <a href="https://cloud.tencent.com/document/product/598/34590">查询子用户 GetUser</a> 接口查询子用户详情，此处填入返回结果中的 <code>Uid</code> 字段</p>
      */
     public $ReceiverUids;
 
     /**
-     * @var array 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
+     * @var array <p>根据接收组搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34589">查询用户组列表 ListGroups</a> 接口获取用户组列表 或 <a href="https://cloud.tencent.com/document/product/598/34588">列出用户关联的用户组 ListGroupsForUser</a> 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 <code>GroupId</code> 字段</p>
      */
     public $ReceiverGroups;
 
     /**
-     * @var array 根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
+     * @var array <p>根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略</p>
      */
     public $PolicyType;
 
     /**
-     * @var string 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
+     * @var string <p>排序字段，例如按照最后修改时间排序，Field: &quot;UpdateTime&quot;</p>
      */
     public $Field;
 
     /**
-     * @var string 排序顺序：升序：ASC  降序：DESC
+     * @var string <p>排序顺序：升序：ASC  降序：DESC</p>
      */
     public $Order;
 
     /**
-     * @var array 策略所属项目的id数组，可在此页面查看
-[项目管理](https://console.cloud.tencent.com/project)
+     * @var array <p>策略所属项目的id数组，可在此页面查看<br><a href="https://console.cloud.tencent.com/project">项目管理</a></p>
      */
     public $ProjectIds;
 
     /**
-     * @var array 通知模板的id列表，可查询通知模板列表获取。
-可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
+     * @var array <p>通知模板的id列表，可查询通知模板列表获取。<br>可使用 <a href="https://cloud.tencent.com/document/product/248/51280">查询通知模板列表</a> 接口查询。</p>
      */
     public $NoticeIds;
 
     /**
-     * @var array 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
+     * @var array <p>根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略</p>
      */
     public $RuleTypes;
 
     /**
-     * @var array 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
+     * @var array <p>告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]</p>
      */
     public $Enable;
 
     /**
-     * @var integer 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
+     * @var integer <p>传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。</p>
      */
     public $NotBindingNoticeRule;
 
     /**
-     * @var integer 实例分组id
+     * @var integer <p>实例分组id</p>
      */
     public $InstanceGroupId;
 
     /**
-     * @var integer 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+     * @var integer <p>是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0</p>
      */
     public $NeedCorrespondence;
 
     /**
-     * @var array 按照触发任务（例如弹性伸缩）过滤策略。最多10个
+     * @var array <p>按照触发任务（例如弹性伸缩）过滤策略。最多10个</p>
      */
     public $TriggerTasks;
 
     /**
-     * @var array 根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
+     * @var array <p>根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略</p>
      */
     public $OneClickPolicyType;
 
     /**
-     * @var integer 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
+     * @var integer <p>返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤</p>
      */
     public $NotBindAll;
 
     /**
-     * @var integer 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
+     * @var integer <p>返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤</p>
      */
     public $NotInstanceGroup;
 
     /**
-     * @var array 策略根据标签过滤
+     * @var array <p>策略根据标签过滤</p>
      */
     public $Tags;
 
     /**
-     * @var string prom实例id，自定义指标策略时会用到
+     * @var string <p>prom实例id，自定义指标策略时会用到</p>
      */
     public $PromInsId;
 
     /**
-     * @var array 根据排班表搜索
+     * @var array <p>根据排班表搜索</p>
      */
     public $ReceiverOnCallFormIDs;
 
     /**
-     * @var array 通知内容模板ID筛选
+     * @var array <p>通知内容模板ID筛选</p>
      */
     public $NoticeContentTmplIDs;
 
     /**
-     * @var integer 是否为预设策略，1是，0否
+     * @var integer <p>是否为预设策略，1是，0否</p>
      */
     public $IsPredefined;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param integer $PageNumber 页数，从 1 开始计数，默认 1
-     * @param integer $PageSize 每页的数量，取值1~100，默认20
-     * @param string $PolicyName 按策略名称模糊搜索
-     * @param array $MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
-     * @param array $Namespaces 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
-     * @param string $Dimensions 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
-     * @param array $ReceiverUids 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
-     * @param array $ReceiverGroups 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
-     * @param array $PolicyType 根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
-     * @param string $Field 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
-     * @param string $Order 排序顺序：升序：ASC  降序：DESC
-     * @param array $ProjectIds 策略所属项目的id数组，可在此页面查看
-[项目管理](https://console.cloud.tencent.com/project)
-     * @param array $NoticeIds 通知模板的id列表，可查询通知模板列表获取。
-可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
-     * @param array $RuleTypes 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
-     * @param array $Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
-     * @param integer $NotBindingNoticeRule 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
-     * @param integer $InstanceGroupId 实例分组id
-     * @param integer $NeedCorrespondence 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
-     * @param array $TriggerTasks 按照触发任务（例如弹性伸缩）过滤策略。最多10个
-     * @param array $OneClickPolicyType 根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
-     * @param integer $NotBindAll 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
-     * @param integer $NotInstanceGroup 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
-     * @param array $Tags 策略根据标签过滤
-     * @param string $PromInsId prom实例id，自定义指标策略时会用到
-     * @param array $ReceiverOnCallFormIDs 根据排班表搜索
-     * @param array $NoticeContentTmplIDs 通知内容模板ID筛选
-     * @param integer $IsPredefined 是否为预设策略，1是，0否
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param integer $PageNumber <p>页数，从 1 开始计数，默认 1</p>
+     * @param integer $PageSize <p>每页的数量，取值1~100，默认20</p>
+     * @param string $PolicyName <p>按策略名称模糊搜索</p>
+     * @param array $MonitorTypes <p>根据监控类型过滤 不选默认查所有类型 &quot;MT_QCE&quot;=云产品监控,当Dimension不为空时，该项为必填项</p>
+     * @param array $Namespaces <p>根据命名空间过滤，不同策略类型的值详见<br><a href="https://cloud.tencent.com/document/product/248/50397">策略类型列表</a>当Dimension不为空时，该项为必填项</p>
+     * @param string $Dimensions <p>告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：<code>[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-qr888845g&quot;}]]</code>具体也可以参考下方的示例 2。不同云产品参数示例详见 <a href="https://cloud.tencent.com/document/product/248/50397">维度信息Dimensions列表</a>注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时</p>
+     * @param array $ReceiverUids <p>根据接收人搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34587">拉取子用户 ListUsers</a> 接口获取用户列表 或 <a href="https://cloud.tencent.com/document/product/598/34590">查询子用户 GetUser</a> 接口查询子用户详情，此处填入返回结果中的 <code>Uid</code> 字段</p>
+     * @param array $ReceiverGroups <p>根据接收组搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34589">查询用户组列表 ListGroups</a> 接口获取用户组列表 或 <a href="https://cloud.tencent.com/document/product/598/34588">列出用户关联的用户组 ListGroupsForUser</a> 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 <code>GroupId</code> 字段</p>
+     * @param array $PolicyType <p>根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略</p>
+     * @param string $Field <p>排序字段，例如按照最后修改时间排序，Field: &quot;UpdateTime&quot;</p>
+     * @param string $Order <p>排序顺序：升序：ASC  降序：DESC</p>
+     * @param array $ProjectIds <p>策略所属项目的id数组，可在此页面查看<br><a href="https://console.cloud.tencent.com/project">项目管理</a></p>
+     * @param array $NoticeIds <p>通知模板的id列表，可查询通知模板列表获取。<br>可使用 <a href="https://cloud.tencent.com/document/product/248/51280">查询通知模板列表</a> 接口查询。</p>
+     * @param array $RuleTypes <p>根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略</p>
+     * @param array $Enable <p>告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]</p>
+     * @param integer $NotBindingNoticeRule <p>传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。</p>
+     * @param integer $InstanceGroupId <p>实例分组id</p>
+     * @param integer $NeedCorrespondence <p>是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0</p>
+     * @param array $TriggerTasks <p>按照触发任务（例如弹性伸缩）过滤策略。最多10个</p>
+     * @param array $OneClickPolicyType <p>根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略</p>
+     * @param integer $NotBindAll <p>返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤</p>
+     * @param integer $NotInstanceGroup <p>返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤</p>
+     * @param array $Tags <p>策略根据标签过滤</p>
+     * @param string $PromInsId <p>prom实例id，自定义指标策略时会用到</p>
+     * @param array $ReceiverOnCallFormIDs <p>根据排班表搜索</p>
+     * @param array $NoticeContentTmplIDs <p>通知内容模板ID筛选</p>
+     * @param integer $IsPredefined <p>是否为预设策略，1是，0否</p>
      */
     function __construct()
     {

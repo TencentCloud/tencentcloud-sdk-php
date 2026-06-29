@@ -18,20 +18,28 @@ namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模版中心同步信息(私有化独有 - 公有云/SaaS 版本忽略此字段)
+ * BillingAttribute
  *
- * @method boolean getIsPublished() 获取是否已同步到模版中心
- * @method void setIsPublished(boolean $IsPublished) 设置是否已同步到模版中心
+ * @method string getName() 获取<p>属性名称</p>
+ * @method void setName(string $Name) 设置<p>属性名称</p>
+ * @method string getValue() 获取<p>属性值</p>
+ * @method void setValue(string $Value) 设置<p>属性值</p>
  */
-class TemplatePublishInfo extends AbstractModel
+class BillingAttribute extends AbstractModel
 {
     /**
-     * @var boolean 是否已同步到模版中心
+     * @var string <p>属性名称</p>
      */
-    public $IsPublished;
+    public $Name;
 
     /**
-     * @param boolean $IsPublished 是否已同步到模版中心
+     * @var string <p>属性值</p>
+     */
+    public $Value;
+
+    /**
+     * @param string $Name <p>属性名称</p>
+     * @param string $Value <p>属性值</p>
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class TemplatePublishInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsPublished",$param) and $param["IsPublished"] !== null) {
-            $this->IsPublished = $param["IsPublished"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

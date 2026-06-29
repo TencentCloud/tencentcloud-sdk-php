@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConditionsTemplate请求参数结构体
  *
- * @method string getModule() 获取固定值，monitor
- * @method void setModule(string $Module) 设置固定值，monitor
- * @method string getViewName() 获取视图名
- * @method void setViewName(string $ViewName) 设置视图名
- * @method string getGroupName() 获取组名
- * @method void setGroupName(string $GroupName) 设置组名
- * @method integer getIsUnionRule() 获取是否为与关系
- * @method void setIsUnionRule(integer $IsUnionRule) 设置是否为与关系
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method integer getParentGroupID() 获取父ID
- * @method void setParentGroupID(integer $ParentGroupID) 设置父ID
- * @method integer getIsShielded() 获取是否屏蔽
- * @method void setIsShielded(integer $IsShielded) 设置是否屏蔽
- * @method string getComplexExpression() 获取复合告警表达式
- * @method void setComplexExpression(string $ComplexExpression) 设置复合告警表达式
- * @method array getConditions() 获取指标告警条件
- * @method void setConditions(array $Conditions) 设置指标告警条件
- * @method array getEventConditions() 获取事件告警条件
- * @method void setEventConditions(array $EventConditions) 设置事件告警条件
+ * @method string getModule() 获取<p>固定值，monitor</p>
+ * @method void setModule(string $Module) 设置<p>固定值，monitor</p>
+ * @method string getViewName() 获取<p>视图名</p>
+ * @method void setViewName(string $ViewName) 设置<p>视图名</p>
+ * @method string getGroupName() 获取<p>组名</p>
+ * @method void setGroupName(string $GroupName) 设置<p>组名</p>
+ * @method integer getIsUnionRule() 获取<p>是否为与关系</p>
+ * @method void setIsUnionRule(integer $IsUnionRule) 设置<p>是否为与关系</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method integer getParentGroupID() 获取<p>父ID</p>
+ * @method void setParentGroupID(integer $ParentGroupID) 设置<p>父ID</p>
+ * @method integer getIsShielded() 获取<p>是否屏蔽</p>
+ * @method void setIsShielded(integer $IsShielded) 设置<p>是否屏蔽</p>
+ * @method string getComplexExpression() 获取<p>复合告警表达式</p>
+ * @method void setComplexExpression(string $ComplexExpression) 设置<p>复合告警表达式</p>
+ * @method array getConditions() 获取<p>指标告警条件</p>
+ * @method void setConditions(array $Conditions) 设置<p>指标告警条件</p>
+ * @method array getEventConditions() 获取<p>事件告警条件</p>
+ * @method void setEventConditions(array $EventConditions) 设置<p>事件告警条件</p>
  */
 class CreateConditionsTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，monitor
+     * @var string <p>固定值，monitor</p>
      */
     public $Module;
 
     /**
-     * @var string 视图名
+     * @var string <p>视图名</p>
      */
     public $ViewName;
 
     /**
-     * @var string 组名
+     * @var string <p>组名</p>
      */
     public $GroupName;
 
     /**
-     * @var integer 是否为与关系
+     * @var integer <p>是否为与关系</p>
      */
     public $IsUnionRule;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var integer 父ID
+     * @var integer <p>父ID</p>
      */
     public $ParentGroupID;
 
     /**
-     * @var integer 是否屏蔽
+     * @var integer <p>是否屏蔽</p>
      */
     public $IsShielded;
 
     /**
-     * @var string 复合告警表达式
+     * @var string <p>复合告警表达式</p>
      */
     public $ComplexExpression;
 
     /**
-     * @var array 指标告警条件
+     * @var array <p>指标告警条件</p>
      */
     public $Conditions;
 
     /**
-     * @var array 事件告警条件
+     * @var array <p>事件告警条件</p>
      */
     public $EventConditions;
 
     /**
-     * @param string $Module 固定值，monitor
-     * @param string $ViewName 视图名
-     * @param string $GroupName 组名
-     * @param integer $IsUnionRule 是否为与关系
-     * @param string $Remark 备注
-     * @param integer $ParentGroupID 父ID
-     * @param integer $IsShielded 是否屏蔽
-     * @param string $ComplexExpression 复合告警表达式
-     * @param array $Conditions 指标告警条件
-     * @param array $EventConditions 事件告警条件
+     * @param string $Module <p>固定值，monitor</p>
+     * @param string $ViewName <p>视图名</p>
+     * @param string $GroupName <p>组名</p>
+     * @param integer $IsUnionRule <p>是否为与关系</p>
+     * @param string $Remark <p>备注</p>
+     * @param integer $ParentGroupID <p>父ID</p>
+     * @param integer $IsShielded <p>是否屏蔽</p>
+     * @param string $ComplexExpression <p>复合告警表达式</p>
+     * @param array $Conditions <p>指标告警条件</p>
+     * @param array $EventConditions <p>事件告警条件</p>
      */
     function __construct()
     {

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSingleWorkflowConfig(SingleWorkflowConfig $SingleWorkflowConfig) 设置单工作流配置(单工作流模式)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ClawAgentConfig getClawAgentConfig() 获取ClawAgent配置(ClawAgent模式)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClawAgentConfig(ClawAgentConfig $ClawAgentConfig) 设置ClawAgent配置(ClawAgent模式)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppModeConfig extends AbstractModel
 {
@@ -44,9 +48,17 @@ class AppModeConfig extends AbstractModel
     public $SingleWorkflowConfig;
 
     /**
+     * @var ClawAgentConfig ClawAgent配置(ClawAgent模式)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClawAgentConfig;
+
+    /**
      * @param MultiAgentConfig $MultiAgentConfig 多智能体配置(Agent模式)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SingleWorkflowConfig $SingleWorkflowConfig 单工作流配置(单工作流模式)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClawAgentConfig $ClawAgentConfig ClawAgent配置(ClawAgent模式)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,6 +82,11 @@ class AppModeConfig extends AbstractModel
         if (array_key_exists("SingleWorkflowConfig",$param) and $param["SingleWorkflowConfig"] !== null) {
             $this->SingleWorkflowConfig = new SingleWorkflowConfig();
             $this->SingleWorkflowConfig->deserialize($param["SingleWorkflowConfig"]);
+        }
+
+        if (array_key_exists("ClawAgentConfig",$param) and $param["ClawAgentConfig"] !== null) {
+            $this->ClawAgentConfig = new ClawAgentConfig();
+            $this->ClawAgentConfig->deserialize($param["ClawAgentConfig"]);
         }
     }
 }

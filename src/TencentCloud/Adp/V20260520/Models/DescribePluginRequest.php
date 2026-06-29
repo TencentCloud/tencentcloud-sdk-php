@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePlugin请求参数结构体
  *
- * @method string getPluginId() 获取插件id
- * @method void setPluginId(string $PluginId) 设置插件id
- * @method string getSpaceId() 获取当前空间id
- * @method void setSpaceId(string $SpaceId) 设置当前空间id
+ * @method string getPluginId() 获取<p>插件id</p>
+ * @method void setPluginId(string $PluginId) 设置<p>插件id</p>
+ * @method string getSpaceId() 获取<p>当前空间id</p>
+ * @method void setSpaceId(string $SpaceId) 设置<p>当前空间id</p>
+ * @method FieldMask getFieldMask() 获取<p>获取指定字段</p>
+ * @method void setFieldMask(FieldMask $FieldMask) 设置<p>获取指定字段</p>
  */
 class DescribePluginRequest extends AbstractModel
 {
     /**
-     * @var string 插件id
+     * @var string <p>插件id</p>
      */
     public $PluginId;
 
     /**
-     * @var string 当前空间id
+     * @var string <p>当前空间id</p>
      */
     public $SpaceId;
 
     /**
-     * @param string $PluginId 插件id
-     * @param string $SpaceId 当前空间id
+     * @var FieldMask <p>获取指定字段</p>
+     */
+    public $FieldMask;
+
+    /**
+     * @param string $PluginId <p>插件id</p>
+     * @param string $SpaceId <p>当前空间id</p>
+     * @param FieldMask $FieldMask <p>获取指定字段</p>
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class DescribePluginRequest extends AbstractModel
 
         if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
             $this->SpaceId = $param["SpaceId"];
+        }
+
+        if (array_key_exists("FieldMask",$param) and $param["FieldMask"] !== null) {
+            $this->FieldMask = new FieldMask();
+            $this->FieldMask->deserialize($param["FieldMask"]);
         }
     }
 }

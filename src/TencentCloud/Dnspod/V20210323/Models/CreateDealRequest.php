@@ -20,130 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDeal请求参数结构体
  *
- * @method integer getDealType() 获取询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）
- * @method void setDealType(integer $DealType) 设置询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）
- * @method integer getGoodsType() 获取商品类型，1 域名套餐 2 增值服务
- * @method void setGoodsType(integer $GoodsType) 设置商品类型，1 域名套餐 2 增值服务
- * @method string getGoodsChildType() 获取套餐类型：
-DP_PLUS：专业版
-DP_EXPERT：企业版
-DP_ULTRA：尊享版
-
-增值服务类型
-LB：负载均衡
-URL：URL转发
-DMONITOR_TASKS：D监控任务数
-DMONITOR_IP：D监控备用 IP 数
-CUSTOMLINE：自定义线路数
- * @method void setGoodsChildType(string $GoodsChildType) 设置套餐类型：
-DP_PLUS：专业版
-DP_EXPERT：企业版
-DP_ULTRA：尊享版
-
-增值服务类型
-LB：负载均衡
-URL：URL转发
-DMONITOR_TASKS：D监控任务数
-DMONITOR_IP：D监控备用 IP 数
-CUSTOMLINE：自定义线路数
- * @method integer getGoodsNum() 获取增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：
-负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）
- * @method void setGoodsNum(integer $GoodsNum) 设置增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：
-负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）
- * @method integer getAutoRenew() 获取是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启
- * @method void setAutoRenew(integer $AutoRenew) 设置是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启
- * @method string getDomain() 获取需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。
- * @method void setDomain(string $Domain) 设置需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。
- * @method integer getTimeSpan() 获取套餐时长：
-1. 套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）
-2. 升级套餐时不需要传。
-3. 增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）
- * @method void setTimeSpan(integer $TimeSpan) 设置套餐时长：
-1. 套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）
-2. 升级套餐时不需要传。
-3. 增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）
- * @method string getNewPackageType() 获取套餐类型，需要升级到的套餐类型，只有升级时需要。
- * @method void setNewPackageType(string $NewPackageType) 设置套餐类型，需要升级到的套餐类型，只有升级时需要。
+ * @method integer getDealType() 获取<p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p>
+ * @method void setDealType(integer $DealType) 设置<p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p>
+ * @method integer getGoodsType() 获取<p>商品类型，1 域名套餐 2 增值服务</p>
+ * @method void setGoodsType(integer $GoodsType) 设置<p>商品类型，1 域名套餐 2 增值服务</p>
+ * @method string getGoodsChildType() 获取<p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
+ * @method void setGoodsChildType(string $GoodsChildType) 设置<p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
+ * @method integer getGoodsNum() 获取<p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
+ * @method void setGoodsNum(integer $GoodsNum) 设置<p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
+ * @method integer getAutoRenew() 获取<p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p>
+ * @method void setAutoRenew(integer $AutoRenew) 设置<p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p>
+ * @method string getDomain() 获取<p>需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。</p>
+ * @method void setDomain(string $Domain) 设置<p>需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。</p>
+ * @method integer getTimeSpan() 获取<p>套餐时长：</p><ol><li>套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）</li><li>升级套餐时不需要传。</li><li>增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）</li></ol>
+ * @method void setTimeSpan(integer $TimeSpan) 设置<p>套餐时长：</p><ol><li>套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）</li><li>升级套餐时不需要传。</li><li>增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）</li></ol>
+ * @method string getNewPackageType() 获取<p>套餐类型，需要升级到的套餐类型，只有升级时需要。</p>
+ * @method void setNewPackageType(string $NewPackageType) 设置<p>套餐类型，需要升级到的套餐类型，只有升级时需要。</p>
  */
 class CreateDealRequest extends AbstractModel
 {
     /**
-     * @var integer 询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）
+     * @var integer <p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p>
      */
     public $DealType;
 
     /**
-     * @var integer 商品类型，1 域名套餐 2 增值服务
+     * @var integer <p>商品类型，1 域名套餐 2 增值服务</p>
      */
     public $GoodsType;
 
     /**
-     * @var string 套餐类型：
-DP_PLUS：专业版
-DP_EXPERT：企业版
-DP_ULTRA：尊享版
-
-增值服务类型
-LB：负载均衡
-URL：URL转发
-DMONITOR_TASKS：D监控任务数
-DMONITOR_IP：D监控备用 IP 数
-CUSTOMLINE：自定义线路数
+     * @var string <p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
      */
     public $GoodsChildType;
 
     /**
-     * @var integer 增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：
-负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）
+     * @var integer <p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
      */
     public $GoodsNum;
 
     /**
-     * @var integer 是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启
+     * @var integer <p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p>
      */
     public $AutoRenew;
 
     /**
-     * @var string 需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。
+     * @var string <p>需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。</p>
      */
     public $Domain;
 
     /**
-     * @var integer 套餐时长：
-1. 套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）
-2. 升级套餐时不需要传。
-3. 增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）
+     * @var integer <p>套餐时长：</p><ol><li>套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）</li><li>升级套餐时不需要传。</li><li>增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）</li></ol>
      */
     public $TimeSpan;
 
     /**
-     * @var string 套餐类型，需要升级到的套餐类型，只有升级时需要。
+     * @var string <p>套餐类型，需要升级到的套餐类型，只有升级时需要。</p>
      */
     public $NewPackageType;
 
     /**
-     * @param integer $DealType 询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）
-     * @param integer $GoodsType 商品类型，1 域名套餐 2 增值服务
-     * @param string $GoodsChildType 套餐类型：
-DP_PLUS：专业版
-DP_EXPERT：企业版
-DP_ULTRA：尊享版
-
-增值服务类型
-LB：负载均衡
-URL：URL转发
-DMONITOR_TASKS：D监控任务数
-DMONITOR_IP：D监控备用 IP 数
-CUSTOMLINE：自定义线路数
-     * @param integer $GoodsNum 增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：
-负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）
-     * @param integer $AutoRenew 是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启
-     * @param string $Domain 需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。
-     * @param integer $TimeSpan 套餐时长：
-1. 套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）
-2. 升级套餐时不需要传。
-3. 增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）
-     * @param string $NewPackageType 套餐类型，需要升级到的套餐类型，只有升级时需要。
+     * @param integer $DealType <p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p>
+     * @param integer $GoodsType <p>商品类型，1 域名套餐 2 增值服务</p>
+     * @param string $GoodsChildType <p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
+     * @param integer $GoodsNum <p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
+     * @param integer $AutoRenew <p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p>
+     * @param string $Domain <p>需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。</p>
+     * @param integer $TimeSpan <p>套餐时长：</p><ol><li>套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）</li><li>升级套餐时不需要传。</li><li>增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）</li></ol>
+     * @param string $NewPackageType <p>套餐类型，需要升级到的套餐类型，只有升级时需要。</p>
      */
     function __construct()
     {

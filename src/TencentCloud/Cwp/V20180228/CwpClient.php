@@ -24,6 +24,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
 
 /**
  * @method Models\AddLoginWhiteListsResponse AddLoginWhiteLists(Models\AddLoginWhiteListsRequest $req) 批量添加异地登录白名单
+ * @method Models\AddVulIgnoreRuleResponse AddVulIgnoreRule(Models\AddVulIgnoreRuleRequest $req) 添加漏洞忽略规则
  * @method Models\ChangeRuleEventsIgnoreStatusResponse ChangeRuleEventsIgnoreStatus(Models\ChangeRuleEventsIgnoreStatusRequest $req) 根据检测项id或事件id批量忽略事件或取消忽略
  * @method Models\ChangeStrategyEnableStatusResponse ChangeStrategyEnableStatus(Models\ChangeStrategyEnableStatusRequest $req) 根据策略id修改策略可用状态
  * @method Models\CheckBashPolicyParamsResponse CheckBashPolicyParams(Models\CheckBashPolicyParamsRequest $req) 校验高危命令用户规则新增和编辑时的参数。

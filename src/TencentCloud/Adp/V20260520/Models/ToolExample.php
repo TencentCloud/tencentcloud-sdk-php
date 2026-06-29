@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ToolExample
  *
- * @method string getRequest() 获取请求示例，json字符串
- * @method void setRequest(string $Request) 设置请求示例，json字符串
- * @method string getResponse() 获取回复示例，json字符串
- * @method void setResponse(string $Response) 设置回复示例，json字符串
+ * @method string getRequest() 获取<p>请求参数</p>
+ * @method void setRequest(string $Request) 设置<p>请求参数</p>
+ * @method string getResponse() 获取<p>响应参数</p>
+ * @method void setResponse(string $Response) 设置<p>响应参数</p>
  */
 class ToolExample extends AbstractModel
 {
     /**
-     * @var string 请求示例，json字符串
+     * @var string <p>请求参数</p>
      */
     public $Request;
 
     /**
-     * @var string 回复示例，json字符串
+     * @var string <p>响应参数</p>
      */
     public $Response;
 
     /**
-     * @param string $Request 请求示例，json字符串
-     * @param string $Response 回复示例，json字符串
+     * @param string $Request <p>请求参数</p>
+     * @param string $Response <p>响应参数</p>
      */
     function __construct()
     {

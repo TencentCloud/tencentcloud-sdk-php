@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 插件详情
  *
+ * @method PluginConfig getConfig() 获取插件配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfig(PluginConfig $Config) 设置插件配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间，unix时间戳
  * @method void setCreateTime(string $CreateTime) 设置创建时间，unix时间戳
  * @method PluginOperation getOperation() 获取插件运营管理信息
@@ -43,6 +47,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class Plugin extends AbstractModel
 {
+    /**
+     * @var PluginConfig 插件配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Config;
+
     /**
      * @var string 创建时间，unix时间戳
      */
@@ -94,6 +104,8 @@ class Plugin extends AbstractModel
     public $UserState;
 
     /**
+     * @param PluginConfig $Config 插件配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间，unix时间戳
      * @param PluginOperation $Operation 插件运营管理信息
      * @param string $PluginId 插件id
@@ -118,6 +130,11 @@ class Plugin extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+            $this->Config = new PluginConfig();
+            $this->Config->deserialize($param["Config"]);
+        }
+
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
         }

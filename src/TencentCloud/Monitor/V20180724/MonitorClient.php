@@ -135,6 +135,9 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribePrometheusAlertmanagerConfigResponse DescribePrometheusAlertmanagerConfig(Models\DescribePrometheusAlertmanagerConfigRequest $req) 获取 Prometheus Alertmanager 配置
  * @method Models\DescribePrometheusClusterAgentsResponse DescribePrometheusClusterAgents(Models\DescribePrometheusClusterAgentsRequest $req) 获取TMP实例关联集群列表
  * @method Models\DescribePrometheusConfigResponse DescribePrometheusConfig(Models\DescribePrometheusConfigRequest $req) 拉取Prometheus配置
+ * @method Models\DescribePrometheusCreateInstanceQuotaResponse DescribePrometheusCreateInstanceQuota(Models\DescribePrometheusCreateInstanceQuotaRequest $req) 查询Prometheus实例创建配额
+
+配额不分地域，可从任意支持地域请求
  * @method Models\DescribePrometheusGlobalConfigResponse DescribePrometheusGlobalConfig(Models\DescribePrometheusGlobalConfigRequest $req) 获得实例级别抓取配置
  * @method Models\DescribePrometheusGlobalNotificationResponse DescribePrometheusGlobalNotification(Models\DescribePrometheusGlobalNotificationRequest $req) 之前TPS的接口，迁移后已经不需要
 

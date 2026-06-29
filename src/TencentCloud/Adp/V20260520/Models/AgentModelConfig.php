@@ -29,7 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getInstructionsWordsLimit() 获取<p>指令长度字符限制</p>
  * @method void setInstructionsWordsLimit(integer $InstructionsWordsLimit) 设置<p>指令长度字符限制</p>
  * @method ModelParams getModelParameters() 获取<p>模型参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelParameters(ModelParams $ModelParameters) 设置<p>模型参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentModelConfig extends AbstractModel
 {
@@ -55,6 +57,7 @@ class AgentModelConfig extends AbstractModel
 
     /**
      * @var ModelParams <p>模型参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelParameters;
 
@@ -64,6 +67,7 @@ class AgentModelConfig extends AbstractModel
      * @param integer $ContextWordsLimit <p>模型上下文长度字符限制</p>
      * @param integer $InstructionsWordsLimit <p>指令长度字符限制</p>
      * @param ModelParams $ModelParameters <p>模型参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

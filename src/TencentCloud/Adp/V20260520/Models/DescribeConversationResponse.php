@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspace(ConversationWorkspace $Workspace) 设置<p>工作空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTitle() 获取会话标题
- * @method void setTitle(string $Title) 设置会话标题
+ * @method string getTitle() 获取<p>会话标题</p>
+ * @method void setTitle(string $Title) 设置<p>会话标题</p>
+ * @method string getAgentId() 获取<p>会话使用的用户端 AgentId</p>
+ * @method void setAgentId(string $AgentId) 设置<p>会话使用的用户端 AgentId</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,9 +75,14 @@ class DescribeConversationResponse extends AbstractModel
     public $Workspace;
 
     /**
-     * @var string 会话标题
+     * @var string <p>会话标题</p>
      */
     public $Title;
+
+    /**
+     * @var string <p>会话使用的用户端 AgentId</p>
+     */
+    public $AgentId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -90,7 +97,8 @@ class DescribeConversationResponse extends AbstractModel
      * @param string $UpdateTime <p>更新时间</p>
      * @param ConversationWorkspace $Workspace <p>工作空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Title 会话标题
+     * @param string $Title <p>会话标题</p>
+     * @param string $AgentId <p>会话使用的用户端 AgentId</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -133,6 +141,10 @@ class DescribeConversationResponse extends AbstractModel
 
         if (array_key_exists("Title",$param) and $param["Title"] !== null) {
             $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
+            $this->AgentId = $param["AgentId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

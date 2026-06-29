@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ToolConfig
  *
- * @method ApiToolConfig getApiToolConfig() 获取API插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiToolConfig(ApiToolConfig $ApiToolConfig) 设置API插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
- * @method AppToolConfig getAppToolConfig() 获取应用插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppToolConfig(AppToolConfig $AppToolConfig) 设置应用插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
- * @method CodeToolConfig getCodeToolConfig() 获取代码插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCodeToolConfig(CodeToolConfig $CodeToolConfig) 设置代码插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
- * @method MCPToolConfig getMCPToolConfig() 获取mcp插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMCPToolConfig(MCPToolConfig $MCPToolConfig) 设置mcp插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method ApiToolConfig getApiToolConfig() 获取<p>API工具配置信息</p>
+ * @method void setApiToolConfig(ApiToolConfig $ApiToolConfig) 设置<p>API工具配置信息</p>
+ * @method AppToolConfig getAppToolConfig() 获取<p>应用配置信息</p>
+ * @method void setAppToolConfig(AppToolConfig $AppToolConfig) 设置<p>应用配置信息</p>
+ * @method CodeToolConfig getCodeToolConfig() 获取<p>代码工具配置信息</p>
+ * @method void setCodeToolConfig(CodeToolConfig $CodeToolConfig) 设置<p>代码工具配置信息</p>
+ * @method MCPToolConfig getMCPToolConfig() 获取<p>MCP工具配置信息</p>
+ * @method void setMCPToolConfig(MCPToolConfig $MCPToolConfig) 设置<p>MCP工具配置信息</p>
  */
 class ToolConfig extends AbstractModel
 {
     /**
-     * @var ApiToolConfig API插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var ApiToolConfig <p>API工具配置信息</p>
      */
     public $ApiToolConfig;
 
     /**
-     * @var AppToolConfig 应用插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var AppToolConfig <p>应用配置信息</p>
      */
     public $AppToolConfig;
 
     /**
-     * @var CodeToolConfig 代码插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var CodeToolConfig <p>代码工具配置信息</p>
      */
     public $CodeToolConfig;
 
     /**
-     * @var MCPToolConfig mcp插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var MCPToolConfig <p>MCP工具配置信息</p>
      */
     public $MCPToolConfig;
 
     /**
-     * @param ApiToolConfig $ApiToolConfig API插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppToolConfig $AppToolConfig 应用插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeToolConfig $CodeToolConfig 代码插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MCPToolConfig $MCPToolConfig mcp插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiToolConfig $ApiToolConfig <p>API工具配置信息</p>
+     * @param AppToolConfig $AppToolConfig <p>应用配置信息</p>
+     * @param CodeToolConfig $CodeToolConfig <p>代码工具配置信息</p>
+     * @param MCPToolConfig $MCPToolConfig <p>MCP工具配置信息</p>
      */
     function __construct()
     {

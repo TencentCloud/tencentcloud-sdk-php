@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置应用名称
  * @method AppShareAccessControl getShareConfig() 获取分享配置
  * @method void setShareConfig(AppShareAccessControl $ShareConfig) 设置分享配置
- * @method array getSharedKnowledgeIdList() 获取引用的共享知识库ID列表(全量覆盖)
- * @method void setSharedKnowledgeIdList(array $SharedKnowledgeIdList) 设置引用的共享知识库ID列表(全量覆盖)
+ * @method array getSharedKbIdList() 获取引用的共享知识库ID列表(全量覆盖)
+ * @method void setSharedKbIdList(array $SharedKbIdList) 设置引用的共享知识库ID列表(全量覆盖)
  * @method FieldMask getUpdateMask() 获取字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKnowledgeIdList
+【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
 【WebSearch】Config.WebSearch
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 【Experience.Conversation.AiCall】Config.Experience.Conversation.AiCall.VoiceInteract, Config.Experience.Conversation.AiCall.VoiceCall, Config.Experience.Conversation.AiCall.DigitalHuman
 【Experience.Advanced】Config.Experience.Advanced.ContextRewrite, Config.Experience.Advanced.ImageTextRetrieval, Config.Experience.Advanced.IntentAchievement, Config.Experience.Advanced.ReplyFlexibility
  * @method void setUpdateMask(FieldMask $UpdateMask) 设置字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKnowledgeIdList
+【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
 【WebSearch】Config.WebSearch
@@ -99,11 +99,11 @@ class ModifyAppRequest extends AbstractModel
     /**
      * @var array 引用的共享知识库ID列表(全量覆盖)
      */
-    public $SharedKnowledgeIdList;
+    public $SharedKbIdList;
 
     /**
      * @var FieldMask 字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKnowledgeIdList
+【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
 【WebSearch】Config.WebSearch
@@ -124,9 +124,9 @@ class ModifyAppRequest extends AbstractModel
      * @param string $Description 应用描述
      * @param string $Name 应用名称
      * @param AppShareAccessControl $ShareConfig 分享配置
-     * @param array $SharedKnowledgeIdList 引用的共享知识库ID列表(全量覆盖)
+     * @param array $SharedKbIdList 引用的共享知识库ID列表(全量覆盖)
      * @param FieldMask $UpdateMask 字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKnowledgeIdList
+【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
 【WebSearch】Config.WebSearch
@@ -180,8 +180,8 @@ class ModifyAppRequest extends AbstractModel
             $this->ShareConfig->deserialize($param["ShareConfig"]);
         }
 
-        if (array_key_exists("SharedKnowledgeIdList",$param) and $param["SharedKnowledgeIdList"] !== null) {
-            $this->SharedKnowledgeIdList = $param["SharedKnowledgeIdList"];
+        if (array_key_exists("SharedKbIdList",$param) and $param["SharedKbIdList"] !== null) {
+            $this->SharedKbIdList = $param["SharedKbIdList"];
         }
 
         if (array_key_exists("UpdateMask",$param) and $param["UpdateMask"] !== null) {

@@ -28,48 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIconUrl(string $IconUrl) 设置插件图标url
  * @method string getName() 获取插件名称
  * @method void setName(string $Name) 设置插件名称
- * @method integer getPluginClass() 获取插件产品分类
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 普通插件 |
-| 1 | 连接器类插件 |
- * @method void setPluginClass(integer $PluginClass) 设置插件产品分类
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 普通插件 |
-| 1 | 连接器类插件 |
- * @method integer getPluginKind() 获取插件类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | API接口 |
-| 1 | 代码 |
-| 2 | MCP |
-| 3 | 应用 |
- * @method void setPluginKind(integer $PluginKind) 设置插件类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | API接口 |
-| 1 | 代码 |
-| 2 | MCP |
-| 3 | 应用 |
- * @method integer getPluginSource() 获取插件来源
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 自定义插件 |
-| 1 | 官方插件 |
-| 2 | 第三方插件 |
- * @method void setPluginSource(integer $PluginSource) 设置插件来源
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 自定义插件 |
-| 1 | 官方插件 |
-| 2 | 第三方插件 |
+ * @method integer getPluginClass() 获取<p>插件产品分类</p><p>枚举值：</p><ul><li>0：普通插件</li><li>1：连接器类插件</li></ul>
+ * @method void setPluginClass(integer $PluginClass) 设置<p>插件产品分类</p><p>枚举值：</p><ul><li>0：普通插件</li><li>1：连接器类插件</li></ul>
+ * @method integer getPluginKind() 获取<p>插件类型</p><p>枚举值：</p><ul><li>0：API接口</li><li>1：代码</li><li>2：MCP</li><li>3：应用</li></ul>
+ * @method void setPluginKind(integer $PluginKind) 设置<p>插件类型</p><p>枚举值：</p><ul><li>0：API接口</li><li>1：代码</li><li>2：MCP</li><li>3：应用</li></ul>
+ * @method integer getPluginSource() 获取<p>插件来源</p><p>枚举值：</p><ul><li>0：自定义插件</li><li>1：官方插件</li><li>2：第三方插件</li></ul>
+ * @method void setPluginSource(integer $PluginSource) 设置<p>插件来源</p><p>枚举值：</p><ul><li>0：自定义插件</li><li>1：官方插件</li><li>2：第三方插件</li></ul>
  */
 class PluginProfile extends AbstractModel
 {
@@ -94,35 +58,17 @@ class PluginProfile extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 插件产品分类
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 普通插件 |
-| 1 | 连接器类插件 |
+     * @var integer <p>插件产品分类</p><p>枚举值：</p><ul><li>0：普通插件</li><li>1：连接器类插件</li></ul>
      */
     public $PluginClass;
 
     /**
-     * @var integer 插件类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | API接口 |
-| 1 | 代码 |
-| 2 | MCP |
-| 3 | 应用 |
+     * @var integer <p>插件类型</p><p>枚举值：</p><ul><li>0：API接口</li><li>1：代码</li><li>2：MCP</li><li>3：应用</li></ul>
      */
     public $PluginKind;
 
     /**
-     * @var integer 插件来源
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 自定义插件 |
-| 1 | 官方插件 |
-| 2 | 第三方插件 |
+     * @var integer <p>插件来源</p><p>枚举值：</p><ul><li>0：自定义插件</li><li>1：官方插件</li><li>2：第三方插件</li></ul>
      */
     public $PluginSource;
 
@@ -131,27 +77,9 @@ class PluginProfile extends AbstractModel
      * @param string $Description 插件描述
      * @param string $IconUrl 插件图标url
      * @param string $Name 插件名称
-     * @param integer $PluginClass 插件产品分类
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 普通插件 |
-| 1 | 连接器类插件 |
-     * @param integer $PluginKind 插件类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | API接口 |
-| 1 | 代码 |
-| 2 | MCP |
-| 3 | 应用 |
-     * @param integer $PluginSource 插件来源
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 自定义插件 |
-| 1 | 官方插件 |
-| 2 | 第三方插件 |
+     * @param integer $PluginClass <p>插件产品分类</p><p>枚举值：</p><ul><li>0：普通插件</li><li>1：连接器类插件</li></ul>
+     * @param integer $PluginKind <p>插件类型</p><p>枚举值：</p><ul><li>0：API接口</li><li>1：代码</li><li>2：MCP</li><li>3：应用</li></ul>
+     * @param integer $PluginSource <p>插件来源</p><p>枚举值：</p><ul><li>0：自定义插件</li><li>1：官方插件</li><li>2：第三方插件</li></ul>
      */
     function __construct()
     {

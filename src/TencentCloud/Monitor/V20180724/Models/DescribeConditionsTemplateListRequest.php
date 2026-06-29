@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConditionsTemplateList请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method string getViewName() 获取视图名，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
- * @method void setViewName(string $ViewName) 设置视图名，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
- * @method string getGroupName() 获取根据触发条件模板名称过滤查询
- * @method void setGroupName(string $GroupName) 设置根据触发条件模板名称过滤查询
- * @method string getGroupID() 获取根据触发条件模板ID过滤查询
- * @method void setGroupID(string $GroupID) 设置根据触发条件模板ID过滤查询
- * @method integer getLimit() 获取分页参数，每页返回的数量，取值1~100，默认20
- * @method void setLimit(integer $Limit) 设置分页参数，每页返回的数量，取值1~100，默认20
- * @method integer getOffset() 获取分页参数，页偏移量，从0开始计数，默认0
- * @method void setOffset(integer $Offset) 设置分页参数，页偏移量，从0开始计数，默认0
- * @method string getUpdateTimeOrder() 获取指定按更新时间的排序方式，asc=升序, desc=降序
- * @method void setUpdateTimeOrder(string $UpdateTimeOrder) 设置指定按更新时间的排序方式，asc=升序, desc=降序
- * @method string getPolicyCountOrder() 获取指定按绑定策略数目的排序方式，asc=升序, desc=降序
- * @method void setPolicyCountOrder(string $PolicyCountOrder) 设置指定按绑定策略数目的排序方式，asc=升序, desc=降序
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method string getViewName() 获取<p>视图名，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
+ * @method void setViewName(string $ViewName) 设置<p>视图名，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
+ * @method string getGroupName() 获取<p>根据触发条件模板名称过滤查询</p>
+ * @method void setGroupName(string $GroupName) 设置<p>根据触发条件模板名称过滤查询</p>
+ * @method string getGroupID() 获取<p>根据触发条件模板ID过滤查询</p>
+ * @method void setGroupID(string $GroupID) 设置<p>根据触发条件模板ID过滤查询</p>
+ * @method integer getLimit() 获取<p>分页参数，每页返回的数量，取值1~100，默认20</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页参数，每页返回的数量，取值1~100，默认20</p>
+ * @method integer getOffset() 获取<p>分页参数，页偏移量，从0开始计数，默认0</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页参数，页偏移量，从0开始计数，默认0</p>
+ * @method string getUpdateTimeOrder() 获取<p>指定按更新时间的排序方式，asc=升序, desc=降序</p>
+ * @method void setUpdateTimeOrder(string $UpdateTimeOrder) 设置<p>指定按更新时间的排序方式，asc=升序, desc=降序</p>
+ * @method string getPolicyCountOrder() 获取<p>指定按绑定策略数目的排序方式，asc=升序, desc=降序</p>
+ * @method void setPolicyCountOrder(string $PolicyCountOrder) 设置<p>指定按绑定策略数目的排序方式，asc=升序, desc=降序</p>
  */
 class DescribeConditionsTemplateListRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var string 视图名，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
+     * @var string <p>视图名，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
      */
     public $ViewName;
 
     /**
-     * @var string 根据触发条件模板名称过滤查询
+     * @var string <p>根据触发条件模板名称过滤查询</p>
      */
     public $GroupName;
 
     /**
-     * @var string 根据触发条件模板ID过滤查询
+     * @var string <p>根据触发条件模板ID过滤查询</p>
      */
     public $GroupID;
 
     /**
-     * @var integer 分页参数，每页返回的数量，取值1~100，默认20
+     * @var integer <p>分页参数，每页返回的数量，取值1~100，默认20</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页参数，页偏移量，从0开始计数，默认0
+     * @var integer <p>分页参数，页偏移量，从0开始计数，默认0</p>
      */
     public $Offset;
 
     /**
-     * @var string 指定按更新时间的排序方式，asc=升序, desc=降序
+     * @var string <p>指定按更新时间的排序方式，asc=升序, desc=降序</p>
      */
     public $UpdateTimeOrder;
 
     /**
-     * @var string 指定按绑定策略数目的排序方式，asc=升序, desc=降序
+     * @var string <p>指定按绑定策略数目的排序方式，asc=升序, desc=降序</p>
      */
     public $PolicyCountOrder;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param string $ViewName 视图名，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
-     * @param string $GroupName 根据触发条件模板名称过滤查询
-     * @param string $GroupID 根据触发条件模板ID过滤查询
-     * @param integer $Limit 分页参数，每页返回的数量，取值1~100，默认20
-     * @param integer $Offset 分页参数，页偏移量，从0开始计数，默认0
-     * @param string $UpdateTimeOrder 指定按更新时间的排序方式，asc=升序, desc=降序
-     * @param string $PolicyCountOrder 指定按绑定策略数目的排序方式，asc=升序, desc=降序
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param string $ViewName <p>视图名，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
+     * @param string $GroupName <p>根据触发条件模板名称过滤查询</p>
+     * @param string $GroupID <p>根据触发条件模板ID过滤查询</p>
+     * @param integer $Limit <p>分页参数，每页返回的数量，取值1~100，默认20</p>
+     * @param integer $Offset <p>分页参数，页偏移量，从0开始计数，默认0</p>
+     * @param string $UpdateTimeOrder <p>指定按更新时间的排序方式，asc=升序, desc=降序</p>
+     * @param string $PolicyCountOrder <p>指定按绑定策略数目的排序方式，asc=升序, desc=降序</p>
      */
     function __construct()
     {

@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Prometheus 托管服务标签
  *
- * @method string getKey() 获取标签的健值
- * @method void setKey(string $Key) 设置标签的健值
- * @method string getValue() 获取标签对应的值
+ * @method string getKey() 获取<p>标签的健值</p>
+ * @method void setKey(string $Key) 设置<p>标签的健值</p>
+ * @method string getValue() 获取<p>标签对应的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置标签对应的值
+ * @method void setValue(string $Value) 设置<p>标签对应的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusTag extends AbstractModel
 {
     /**
-     * @var string 标签的健值
+     * @var string <p>标签的健值</p>
      */
     public $Key;
 
     /**
-     * @var string 标签对应的值
+     * @var string <p>标签对应的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @param string $Key 标签的健值
-     * @param string $Value 标签对应的值
+     * @param string $Key <p>标签的健值</p>
+     * @param string $Value <p>标签对应的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CodeToolConfig
  *
- * @method string getCode() 获取代码
- * @method void setCode(string $Code) 设置代码
- * @method ToolExample getExample() 获取示例
- * @method void setExample(ToolExample $Example) 设置示例
- * @method array getInputs() 获取输入参数
- * @method void setInputs(array $Inputs) 设置输入参数
- * @method array getOutputs() 获取输出参数
- * @method void setOutputs(array $Outputs) 设置输出参数
+ * @method string getCode() 获取<p>代码</p>
+ * @method void setCode(string $Code) 设置<p>代码</p>
+ * @method ToolExample getExample() 获取<p>示例</p>
+ * @method void setExample(ToolExample $Example) 设置<p>示例</p>
+ * @method array getInputs() 获取<p>输入参数</p>
+ * @method void setInputs(array $Inputs) 设置<p>输入参数</p>
+ * @method array getOutputs() 获取<p>输出参数</p>
+ * @method void setOutputs(array $Outputs) 设置<p>输出参数</p>
  */
 class CodeToolConfig extends AbstractModel
 {
     /**
-     * @var string 代码
+     * @var string <p>代码</p>
      */
     public $Code;
 
     /**
-     * @var ToolExample 示例
+     * @var ToolExample <p>示例</p>
      */
     public $Example;
 
     /**
-     * @var array 输入参数
+     * @var array <p>输入参数</p>
      */
     public $Inputs;
 
     /**
-     * @var array 输出参数
+     * @var array <p>输出参数</p>
      */
     public $Outputs;
 
     /**
-     * @param string $Code 代码
-     * @param ToolExample $Example 示例
-     * @param array $Inputs 输入参数
-     * @param array $Outputs 输出参数
+     * @param string $Code <p>代码</p>
+     * @param ToolExample $Example <p>示例</p>
+     * @param array $Inputs <p>输入参数</p>
+     * @param array $Outputs <p>输出参数</p>
      */
     function __construct()
     {

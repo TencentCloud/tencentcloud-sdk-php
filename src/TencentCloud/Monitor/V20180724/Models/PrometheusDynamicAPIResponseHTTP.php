@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Prometheus 内部动态 api 代理响应
  *
- * @method integer getStatusCode() 获取HTTP 状态码
- * @method void setStatusCode(integer $StatusCode) 设置HTTP 状态码
- * @method string getResponseBody() 获取HTTP 响应体
- * @method void setResponseBody(string $ResponseBody) 设置HTTP 响应体
+ * @method integer getStatusCode() 获取<p>HTTP 状态码</p>
+ * @method void setStatusCode(integer $StatusCode) 设置<p>HTTP 状态码</p>
+ * @method string getResponseBody() 获取<p>HTTP 响应体</p>
+ * @method void setResponseBody(string $ResponseBody) 设置<p>HTTP 响应体</p>
  */
 class PrometheusDynamicAPIResponseHTTP extends AbstractModel
 {
     /**
-     * @var integer HTTP 状态码
+     * @var integer <p>HTTP 状态码</p>
      */
     public $StatusCode;
 
     /**
-     * @var string HTTP 响应体
+     * @var string <p>HTTP 响应体</p>
      */
     public $ResponseBody;
 
     /**
-     * @param integer $StatusCode HTTP 状态码
-     * @param string $ResponseBody HTTP 响应体
+     * @param integer $StatusCode <p>HTTP 状态码</p>
+     * @param string $ResponseBody <p>HTTP 响应体</p>
      */
     function __construct()
     {

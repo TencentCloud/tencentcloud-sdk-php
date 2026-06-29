@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDefaultValue() 获取默认值
  * @method void setDefaultValue(string $DefaultValue) 设置默认值
- * @method array getEnumValueList() 获取枚举值列表（仅枚举类型有效）
- * @method void setEnumValueList(array $EnumValueList) 设置枚举值列表（仅枚举类型有效）
+ * @method array getEnumValueList() 获取可选值列表
+ * @method void setEnumValueList(array $EnumValueList) 设置可选值列表
  * @method float getMaxValue() 获取最大值（仅数值类型有效）
  * @method void setMaxValue(float $MaxValue) 设置最大值（仅数值类型有效）
  * @method float getMinValue() 获取最小值（仅数值类型有效）
  * @method void setMinValue(float $MinValue) 设置最小值（仅数值类型有效）
  * @method string getName() 获取超参名称
  * @method void setName(string $Name) 设置超参名称
- * @method integer getType() 获取超参类型。1-浮点数, 2-整数, 3-字符串, 4-枚举
- * @method void setType(integer $Type) 设置超参类型。1-浮点数, 2-整数, 3-字符串, 4-枚举
+ * @method integer getType() 获取超参类型。1-浮点数, 2-整数, 3-字符串
+ * @method void setType(integer $Type) 设置超参类型。1-浮点数, 2-整数, 3-字符串
  */
 class ModelParameter extends AbstractModel
 {
@@ -41,7 +41,7 @@ class ModelParameter extends AbstractModel
     public $DefaultValue;
 
     /**
-     * @var array 枚举值列表（仅枚举类型有效）
+     * @var array 可选值列表
      */
     public $EnumValueList;
 
@@ -61,17 +61,17 @@ class ModelParameter extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 超参类型。1-浮点数, 2-整数, 3-字符串, 4-枚举
+     * @var integer 超参类型。1-浮点数, 2-整数, 3-字符串
      */
     public $Type;
 
     /**
      * @param string $DefaultValue 默认值
-     * @param array $EnumValueList 枚举值列表（仅枚举类型有效）
+     * @param array $EnumValueList 可选值列表
      * @param float $MaxValue 最大值（仅数值类型有效）
      * @param float $MinValue 最小值（仅数值类型有效）
      * @param string $Name 超参名称
-     * @param integer $Type 超参类型。1-浮点数, 2-整数, 3-字符串, 4-枚举
+     * @param integer $Type 超参类型。1-浮点数, 2-整数, 3-字符串
      */
     function __construct()
     {

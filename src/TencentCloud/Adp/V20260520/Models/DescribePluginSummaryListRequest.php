@@ -24,48 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpaceId(string $SpaceId) 设置空间ID，查询空间内的插件列表时使用
  * @method array getFilterList() 获取过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
  * @method void setFilterList(array $FilterList) 设置过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
- * @method boolean getIsFavoriteOnly() 获取true-筛选收藏的插件，false不过滤
- * @method void setIsFavoriteOnly(boolean $IsFavoriteOnly) 设置true-筛选收藏的插件，false不过滤
- * @method integer getModule() 获取module
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 所有模块 |
-| 1 | agent模式模块 |
-| 2 | 工作流模块 |
-| 3 | 企业员工助理模块 |
- * @method void setModule(integer $Module) 设置module
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 所有模块 |
-| 1 | agent模式模块 |
-| 2 | 工作流模块 |
-| 3 | 企业员工助理模块 |
+ * @method boolean getIsFavoriteOnly() 获取<p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
+ * @method void setIsFavoriteOnly(boolean $IsFavoriteOnly) 设置<p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
+ * @method integer getModule() 获取<p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
+ * @method void setModule(integer $Module) 设置<p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
  * @method integer getPageNumber() 获取页码 从0开始
  * @method void setPageNumber(integer $PageNumber) 设置页码 从0开始
  * @method integer getPageSize() 获取每页大小
  * @method void setPageSize(integer $PageSize) 设置每页大小
  * @method string getQuery() 获取查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
  * @method void setQuery(string $Query) 设置查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
- * @method integer getSortType() 获取排序类型，仅搜索场景有效
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未指定，使用默认行为 |
-| 1 | 按相关性排序 |
-| 2 | 按更新时间排序 |
- * @method void setSortType(integer $SortType) 设置排序类型，仅搜索场景有效
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未指定，使用默认行为 |
-| 1 | 按相关性排序 |
-| 2 | 按更新时间排序 |
+ * @method integer getSortType() 获取<p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
+ * @method void setSortType(integer $SortType) 设置<p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
  */
 class DescribePluginSummaryListRequest extends AbstractModel
 {
@@ -80,20 +50,12 @@ class DescribePluginSummaryListRequest extends AbstractModel
     public $FilterList;
 
     /**
-     * @var boolean true-筛选收藏的插件，false不过滤
+     * @var boolean <p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
      */
     public $IsFavoriteOnly;
 
     /**
-     * @var integer module
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 所有模块 |
-| 1 | agent模式模块 |
-| 2 | 工作流模块 |
-| 3 | 企业员工助理模块 |
+     * @var integer <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
      */
     public $Module;
 
@@ -113,41 +75,19 @@ class DescribePluginSummaryListRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var integer 排序类型，仅搜索场景有效
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未指定，使用默认行为 |
-| 1 | 按相关性排序 |
-| 2 | 按更新时间排序 |
+     * @var integer <p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
      */
     public $SortType;
 
     /**
      * @param string $SpaceId 空间ID，查询空间内的插件列表时使用
      * @param array $FilterList 过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
-     * @param boolean $IsFavoriteOnly true-筛选收藏的插件，false不过滤
-     * @param integer $Module module
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 所有模块 |
-| 1 | agent模式模块 |
-| 2 | 工作流模块 |
-| 3 | 企业员工助理模块 |
+     * @param boolean $IsFavoriteOnly <p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
+     * @param integer $Module <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
      * @param integer $PageNumber 页码 从0开始
      * @param integer $PageSize 每页大小
      * @param string $Query 查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
-     * @param integer $SortType 排序类型，仅搜索场景有效
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未指定，使用默认行为 |
-| 1 | 按相关性排序 |
-| 2 | 按更新时间排序 |
+     * @param integer $SortType <p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
      */
     function __construct()
     {

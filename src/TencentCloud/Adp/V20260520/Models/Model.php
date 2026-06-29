@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型完整信息
  *
- * @method array getBadgeList() 获取模型徽章列表
- * @method void setBadgeList(array $BadgeList) 设置模型徽章列表
- * @method ModelLimit getLimitInfo() 获取模型限制信息
+ * @method array getBadgeList() 获取<p>模型徽章列表</p>
+ * @method void setBadgeList(array $BadgeList) 设置<p>模型徽章列表</p>
+ * @method ModelLimit getLimitInfo() 获取<p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLimitInfo(ModelLimit $LimitInfo) 设置模型限制信息
+ * @method void setLimitInfo(ModelLimit $LimitInfo) 设置<p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ModelBasic getModelBasic() 获取模型基本信息
+ * @method ModelBasic getModelBasic() 获取<p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelBasic(ModelBasic $ModelBasic) 设置模型基本信息
+ * @method void setModelBasic(ModelBasic $ModelBasic) 设置<p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getParameterList() 获取模型超参配置
- * @method void setParameterList(array $ParameterList) 设置模型超参配置
- * @method array getPropertyList() 获取模型属性配置
- * @method void setPropertyList(array $PropertyList) 设置模型属性配置
- * @method ModelProviderBasic getProviderInfo() 获取模型提供商信息
+ * @method array getParameterList() 获取<p>模型超参配置</p>
+ * @method void setParameterList(array $ParameterList) 设置<p>模型超参配置</p>
+ * @method array getPropertyList() 获取<p>模型属性配置</p>
+ * @method void setPropertyList(array $PropertyList) 设置<p>模型属性配置</p>
+ * @method ModelProviderBasic getProviderInfo() 获取<p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProviderInfo(ModelProviderBasic $ProviderInfo) 设置模型提供商信息
+ * @method void setProviderInfo(ModelProviderBasic $ProviderInfo) 设置<p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ModelStatus getStatusInfo() 获取模型状态信息
+ * @method ModelStatus getStatusInfo() 获取<p>模型状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusInfo(ModelStatus $StatusInfo) 设置模型状态信息
+ * @method void setStatusInfo(ModelStatus $StatusInfo) 设置<p>模型状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTagList() 获取模型标签列表
- * @method void setTagList(array $TagList) 设置模型标签列表
+ * @method array getTagList() 获取<p>模型标签列表</p>
+ * @method void setTagList(array $TagList) 设置<p>模型标签列表</p>
+ * @method ModelDeveloperBasic getDeveloperInfo() 获取<p>模型作者信息</p>
+ * @method void setDeveloperInfo(ModelDeveloperBasic $DeveloperInfo) 设置<p>模型作者信息</p>
  */
 class Model extends AbstractModel
 {
     /**
-     * @var array 模型徽章列表
+     * @var array <p>模型徽章列表</p>
      */
     public $BadgeList;
 
     /**
-     * @var ModelLimit 模型限制信息
+     * @var ModelLimit <p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LimitInfo;
 
     /**
-     * @var ModelBasic 模型基本信息
+     * @var ModelBasic <p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelBasic;
 
     /**
-     * @var array 模型超参配置
+     * @var array <p>模型超参配置</p>
      */
     public $ParameterList;
 
     /**
-     * @var array 模型属性配置
+     * @var array <p>模型属性配置</p>
      */
     public $PropertyList;
 
     /**
-     * @var ModelProviderBasic 模型提供商信息
+     * @var ModelProviderBasic <p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProviderInfo;
 
     /**
-     * @var ModelStatus 模型状态信息
+     * @var ModelStatus <p>模型状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusInfo;
 
     /**
-     * @var array 模型标签列表
+     * @var array <p>模型标签列表</p>
      */
     public $TagList;
 
     /**
-     * @param array $BadgeList 模型徽章列表
-     * @param ModelLimit $LimitInfo 模型限制信息
+     * @var ModelDeveloperBasic <p>模型作者信息</p>
+     */
+    public $DeveloperInfo;
+
+    /**
+     * @param array $BadgeList <p>模型徽章列表</p>
+     * @param ModelLimit $LimitInfo <p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelBasic $ModelBasic 模型基本信息
+     * @param ModelBasic $ModelBasic <p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ParameterList 模型超参配置
-     * @param array $PropertyList 模型属性配置
-     * @param ModelProviderBasic $ProviderInfo 模型提供商信息
+     * @param array $ParameterList <p>模型超参配置</p>
+     * @param array $PropertyList <p>模型属性配置</p>
+     * @param ModelProviderBasic $ProviderInfo <p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelStatus $StatusInfo 模型状态信息
+     * @param ModelStatus $StatusInfo <p>模型状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TagList 模型标签列表
+     * @param array $TagList <p>模型标签列表</p>
+     * @param ModelDeveloperBasic $DeveloperInfo <p>模型作者信息</p>
      */
     function __construct()
     {
@@ -167,6 +175,11 @@ class Model extends AbstractModel
 
         if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
             $this->TagList = $param["TagList"];
+        }
+
+        if (array_key_exists("DeveloperInfo",$param) and $param["DeveloperInfo"] !== null) {
+            $this->DeveloperInfo = new ModelDeveloperBasic();
+            $this->DeveloperInfo->deserialize($param["DeveloperInfo"]);
         }
     }
 }

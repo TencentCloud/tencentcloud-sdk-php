@@ -24,20 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsFavorite(boolean $IsFavorite) 设置是否已收藏该插件
  * @method boolean getIsInWhiteList() 获取是否在插件白名单内
  * @method void setIsInWhiteList(boolean $IsInWhiteList) 设置是否在插件白名单内
- * @method integer getWhiteListType() 获取白名单类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 非白名单插件，全量开放 |
-| 1 | 在白名单里 |
-| 2 | 不在白名单里，需要提交申请 |
- * @method void setWhiteListType(integer $WhiteListType) 设置白名单类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 非白名单插件，全量开放 |
-| 1 | 在白名单里 |
-| 2 | 不在白名单里，需要提交申请 |
+ * @method integer getWhiteListType() 获取<p>白名单类型，用于表示当前用户是否可直接使用该插件。</p><p>枚举值：</p><ul><li>0：非白名单插件，全量开放</li><li>1：当前用户在白名单内</li><li>2：当前用户不在白名单内，需提交申请</li></ul>
+ * @method void setWhiteListType(integer $WhiteListType) 设置<p>白名单类型，用于表示当前用户是否可直接使用该插件。</p><p>枚举值：</p><ul><li>0：非白名单插件，全量开放</li><li>1：当前用户在白名单内</li><li>2：当前用户不在白名单内，需提交申请</li></ul>
  */
 class PluginUserState extends AbstractModel
 {
@@ -52,26 +40,14 @@ class PluginUserState extends AbstractModel
     public $IsInWhiteList;
 
     /**
-     * @var integer 白名单类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 非白名单插件，全量开放 |
-| 1 | 在白名单里 |
-| 2 | 不在白名单里，需要提交申请 |
+     * @var integer <p>白名单类型，用于表示当前用户是否可直接使用该插件。</p><p>枚举值：</p><ul><li>0：非白名单插件，全量开放</li><li>1：当前用户在白名单内</li><li>2：当前用户不在白名单内，需提交申请</li></ul>
      */
     public $WhiteListType;
 
     /**
      * @param boolean $IsFavorite 是否已收藏该插件
      * @param boolean $IsInWhiteList 是否在插件白名单内
-     * @param integer $WhiteListType 白名单类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 非白名单插件，全量开放 |
-| 1 | 在白名单里 |
-| 2 | 不在白名单里，需要提交申请 |
+     * @param integer $WhiteListType <p>白名单类型，用于表示当前用户是否可直接使用该插件。</p><p>枚举值：</p><ul><li>0：非白名单插件，全量开放</li><li>1：当前用户在白名单内</li><li>2：当前用户不在白名单内，需提交申请</li></ul>
      */
     function __construct()
     {

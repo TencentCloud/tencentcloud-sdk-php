@@ -20,45 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCancelFlowsTask返回参数结构体
  *
- * @method string getTaskId() 获取批量撤销任务编号，为32位字符串，通过接口[获取批量撤销签署流程腾讯电子签小程序链接](https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl)获得。
- * @method void setTaskId(string $TaskId) 设置批量撤销任务编号，为32位字符串，通过接口[获取批量撤销签署流程腾讯电子签小程序链接](https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl)获得。
- * @method string getTaskStatus() 获取任务状态，需要关注的状态
-<ul><li>**PROCESSING**  - 任务执行中</li>
-<li>**END** - 任务处理完成</li>
-<li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
- * @method void setTaskStatus(string $TaskStatus) 设置任务状态，需要关注的状态
-<ul><li>**PROCESSING**  - 任务执行中</li>
-<li>**END** - 任务处理完成</li>
-<li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
- * @method array getSuccessFlowIds() 获取批量撤销成功的签署流程编号
- * @method void setSuccessFlowIds(array $SuccessFlowIds) 设置批量撤销成功的签署流程编号
- * @method array getFailureFlows() 获取批量撤销失败的签署流程信息
- * @method void setFailureFlows(array $FailureFlows) 设置批量撤销失败的签署流程信息
+ * @method string getTaskId() 获取<p>批量撤销任务编号，为32位字符串，通过接口<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl">获取批量撤销签署流程腾讯电子签小程序链接</a>获得。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>批量撤销任务编号，为32位字符串，通过接口<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl">获取批量撤销签署流程腾讯电子签小程序链接</a>获得。</p>
+ * @method string getTaskStatus() 获取<p>任务状态，需要关注的状态</p><ul><li>**PROCESSING**  - 任务执行中</li><li>**END** - 任务处理完成</li><li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
+ * @method void setTaskStatus(string $TaskStatus) 设置<p>任务状态，需要关注的状态</p><ul><li>**PROCESSING**  - 任务执行中</li><li>**END** - 任务处理完成</li><li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
+ * @method array getSuccessFlowIds() 获取<p>批量撤销成功的签署流程编号</p>
+ * @method void setSuccessFlowIds(array $SuccessFlowIds) 设置<p>批量撤销成功的签署流程编号</p>
+ * @method array getFailureFlows() 获取<p>批量撤销失败的签署流程信息</p>
+ * @method void setFailureFlows(array $FailureFlows) 设置<p>批量撤销失败的签署流程信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCancelFlowsTaskResponse extends AbstractModel
 {
     /**
-     * @var string 批量撤销任务编号，为32位字符串，通过接口[获取批量撤销签署流程腾讯电子签小程序链接](https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl)获得。
+     * @var string <p>批量撤销任务编号，为32位字符串，通过接口<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl">获取批量撤销签署流程腾讯电子签小程序链接</a>获得。</p>
      */
     public $TaskId;
 
     /**
-     * @var string 任务状态，需要关注的状态
-<ul><li>**PROCESSING**  - 任务执行中</li>
-<li>**END** - 任务处理完成</li>
-<li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
+     * @var string <p>任务状态，需要关注的状态</p><ul><li>**PROCESSING**  - 任务执行中</li><li>**END** - 任务处理完成</li><li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
      */
     public $TaskStatus;
 
     /**
-     * @var array 批量撤销成功的签署流程编号
+     * @var array <p>批量撤销成功的签署流程编号</p>
      */
     public $SuccessFlowIds;
 
     /**
-     * @var array 批量撤销失败的签署流程信息
+     * @var array <p>批量撤销失败的签署流程信息</p>
      */
     public $FailureFlows;
 
@@ -68,13 +59,10 @@ class DescribeCancelFlowsTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 批量撤销任务编号，为32位字符串，通过接口[获取批量撤销签署流程腾讯电子签小程序链接](https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl)获得。
-     * @param string $TaskStatus 任务状态，需要关注的状态
-<ul><li>**PROCESSING**  - 任务执行中</li>
-<li>**END** - 任务处理完成</li>
-<li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
-     * @param array $SuccessFlowIds 批量撤销成功的签署流程编号
-     * @param array $FailureFlows 批量撤销失败的签署流程信息
+     * @param string $TaskId <p>批量撤销任务编号，为32位字符串，通过接口<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl">获取批量撤销签署流程腾讯电子签小程序链接</a>获得。</p>
+     * @param string $TaskStatus <p>任务状态，需要关注的状态</p><ul><li>**PROCESSING**  - 任务执行中</li><li>**END** - 任务处理完成</li><li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
+     * @param array $SuccessFlowIds <p>批量撤销成功的签署流程编号</p>
+     * @param array $FailureFlows <p>批量撤销失败的签署流程信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

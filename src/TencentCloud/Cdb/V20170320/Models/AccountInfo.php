@@ -20,75 +20,75 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 账号详细信息
  *
- * @method string getNotes() 获取账号备注信息
- * @method void setNotes(string $Notes) 设置账号备注信息
- * @method string getHost() 获取账号的域名
- * @method void setHost(string $Host) 设置账号的域名
- * @method string getUser() 获取账号的名称
- * @method void setUser(string $User) 设置账号的名称
- * @method string getModifyTime() 获取账号信息修改时间
- * @method void setModifyTime(string $ModifyTime) 设置账号信息修改时间
- * @method string getModifyPasswordTime() 获取修改密码的时间
- * @method void setModifyPasswordTime(string $ModifyPasswordTime) 设置修改密码的时间
- * @method string getCreateTime() 获取该值已废弃
- * @method void setCreateTime(string $CreateTime) 设置该值已废弃
- * @method integer getMaxUserConnections() 获取用户最大可用实例连接数
- * @method void setMaxUserConnections(integer $MaxUserConnections) 设置用户最大可用实例连接数
- * @method boolean getOpenCam() 获取用户账号是否开启了密码轮转
- * @method void setOpenCam(boolean $OpenCam) 设置用户账号是否开启了密码轮转
+ * @method string getNotes() 获取<p>账号备注信息</p>
+ * @method void setNotes(string $Notes) 设置<p>账号备注信息</p>
+ * @method string getHost() 获取<p>账号的域名</p>
+ * @method void setHost(string $Host) 设置<p>账号的域名</p>
+ * @method string getUser() 获取<p>账号的名称</p>
+ * @method void setUser(string $User) 设置<p>账号的名称</p>
+ * @method string getModifyTime() 获取<p>账号信息修改时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>账号信息修改时间</p>
+ * @method string getModifyPasswordTime() 获取<p>修改密码的时间</p>
+ * @method void setModifyPasswordTime(string $ModifyPasswordTime) 设置<p>修改密码的时间</p>
+ * @method string getCreateTime() 获取<p>该值已废弃</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>该值已废弃</p>
+ * @method integer getMaxUserConnections() 获取<p>用户最大可用实例连接数</p>
+ * @method void setMaxUserConnections(integer $MaxUserConnections) 设置<p>用户最大可用实例连接数</p>
+ * @method boolean getOpenCam() 获取<p>用户账号是否开启了密码轮转</p>
+ * @method void setOpenCam(boolean $OpenCam) 设置<p>用户账号是否开启了密码轮转</p>
  */
 class AccountInfo extends AbstractModel
 {
     /**
-     * @var string 账号备注信息
+     * @var string <p>账号备注信息</p>
      */
     public $Notes;
 
     /**
-     * @var string 账号的域名
+     * @var string <p>账号的域名</p>
      */
     public $Host;
 
     /**
-     * @var string 账号的名称
+     * @var string <p>账号的名称</p>
      */
     public $User;
 
     /**
-     * @var string 账号信息修改时间
+     * @var string <p>账号信息修改时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 修改密码的时间
+     * @var string <p>修改密码的时间</p>
      */
     public $ModifyPasswordTime;
 
     /**
-     * @var string 该值已废弃
+     * @var string <p>该值已废弃</p>
      * @deprecated
      */
     public $CreateTime;
 
     /**
-     * @var integer 用户最大可用实例连接数
+     * @var integer <p>用户最大可用实例连接数</p>
      */
     public $MaxUserConnections;
 
     /**
-     * @var boolean 用户账号是否开启了密码轮转
+     * @var boolean <p>用户账号是否开启了密码轮转</p>
      */
     public $OpenCam;
 
     /**
-     * @param string $Notes 账号备注信息
-     * @param string $Host 账号的域名
-     * @param string $User 账号的名称
-     * @param string $ModifyTime 账号信息修改时间
-     * @param string $ModifyPasswordTime 修改密码的时间
-     * @param string $CreateTime 该值已废弃
-     * @param integer $MaxUserConnections 用户最大可用实例连接数
-     * @param boolean $OpenCam 用户账号是否开启了密码轮转
+     * @param string $Notes <p>账号备注信息</p>
+     * @param string $Host <p>账号的域名</p>
+     * @param string $User <p>账号的名称</p>
+     * @param string $ModifyTime <p>账号信息修改时间</p>
+     * @param string $ModifyPasswordTime <p>修改密码的时间</p>
+     * @param string $CreateTime <p>该值已废弃</p>
+     * @param integer $MaxUserConnections <p>用户最大可用实例连接数</p>
+     * @param boolean $OpenCam <p>用户账号是否开启了密码轮转</p>
      */
     function __construct()
     {

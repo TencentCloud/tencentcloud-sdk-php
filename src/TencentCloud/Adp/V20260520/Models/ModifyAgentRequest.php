@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentId(string $AgentId) 设置<p>Agent Id</p>
  * @method AgentSpec getAgent() 获取<p>修改后的Agent的信息</p>
  * @method void setAgent(AgentSpec $Agent) 设置<p>修改后的Agent的信息</p>
- * @method FieldMask getUpdateMask() 获取<p>需要更新的字段路径，如 [&quot;instructions&quot;, &quot;model&quot;, &quot;tool_list&quot;, &quot;plugin_list&quot;, &quot;skill_list&quot;, &quot;advanced_config&quot;]</p>
- * @method void setUpdateMask(FieldMask $UpdateMask) 设置<p>需要更新的字段路径，如 [&quot;instructions&quot;, &quot;model&quot;, &quot;tool_list&quot;, &quot;plugin_list&quot;, &quot;skill_list&quot;, &quot;advanced_config&quot;]</p>
+ * @method FieldMask getUpdateMask() 获取<p>需要更新的字段路径，如 ["Profile.Name", "Profile.IconUrl", "Instructions", "Model", "ToolList", "PluginList", "SkillList", "AdvancedConfig"]</p>
+ * @method void setUpdateMask(FieldMask $UpdateMask) 设置<p>需要更新的字段路径，如 ["Profile.Name", "Profile.IconUrl", "Instructions", "Model", "ToolList", "PluginList", "SkillList", "AdvancedConfig"]</p>
  */
 class ModifyAgentRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyAgentRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var FieldMask <p>需要更新的字段路径，如 [&quot;instructions&quot;, &quot;model&quot;, &quot;tool_list&quot;, &quot;plugin_list&quot;, &quot;skill_list&quot;, &quot;advanced_config&quot;]</p>
+     * @var FieldMask <p>需要更新的字段路径，如 ["Profile.Name", "Profile.IconUrl", "Instructions", "Model", "ToolList", "PluginList", "SkillList", "AdvancedConfig"]</p>
      */
     public $UpdateMask;
 
@@ -55,7 +55,7 @@ class ModifyAgentRequest extends AbstractModel
      * @param string $AppId <p>应用Id</p>
      * @param string $AgentId <p>Agent Id</p>
      * @param AgentSpec $Agent <p>修改后的Agent的信息</p>
-     * @param FieldMask $UpdateMask <p>需要更新的字段路径，如 [&quot;instructions&quot;, &quot;model&quot;, &quot;tool_list&quot;, &quot;plugin_list&quot;, &quot;skill_list&quot;, &quot;advanced_config&quot;]</p>
+     * @param FieldMask $UpdateMask <p>需要更新的字段路径，如 ["Profile.Name", "Profile.IconUrl", "Instructions", "Model", "ToolList", "PluginList", "SkillList", "AdvancedConfig"]</p>
      */
     function __construct()
     {

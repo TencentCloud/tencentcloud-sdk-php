@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * export 集成配置
  *
- * @method string getName() 获取名字
- * @method void setName(string $Name) 设置名字
- * @method string getKind() 获取类型
- * @method void setKind(string $Kind) 设置类型
- * @method string getContent() 获取内容
- * @method void setContent(string $Content) 设置内容
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
- * @method string getCategory() 获取实例类型
- * @method void setCategory(string $Category) 设置实例类型
- * @method string getInstanceDesc() 获取实例描述
- * @method void setInstanceDesc(string $InstanceDesc) 设置实例描述
- * @method string getGrafanaDashboardURL() 获取dashboard 的 URL
- * @method void setGrafanaDashboardURL(string $GrafanaDashboardURL) 设置dashboard 的 URL
+ * @method string getName() 获取<p>名字</p>
+ * @method void setName(string $Name) 设置<p>名字</p>
+ * @method string getKind() 获取<p>类型</p>
+ * @method void setKind(string $Kind) 设置<p>类型</p>
+ * @method string getContent() 获取<p>内容</p>
+ * @method void setContent(string $Content) 设置<p>内容</p>
+ * @method integer getStatus() 获取<p>状态</p>
+ * @method void setStatus(integer $Status) 设置<p>状态</p>
+ * @method string getCategory() 获取<p>实例类型</p>
+ * @method void setCategory(string $Category) 设置<p>实例类型</p>
+ * @method string getInstanceDesc() 获取<p>实例描述</p>
+ * @method void setInstanceDesc(string $InstanceDesc) 设置<p>实例描述</p>
+ * @method string getGrafanaDashboardURL() 获取<p>dashboard 的 URL</p>
+ * @method void setGrafanaDashboardURL(string $GrafanaDashboardURL) 设置<p>dashboard 的 URL</p>
  */
 class IntegrationConfiguration extends AbstractModel
 {
     /**
-     * @var string 名字
+     * @var string <p>名字</p>
      */
     public $Name;
 
     /**
-     * @var string 类型
+     * @var string <p>类型</p>
      */
     public $Kind;
 
     /**
-     * @var string 内容
+     * @var string <p>内容</p>
      */
     public $Content;
 
     /**
-     * @var integer 状态
+     * @var integer <p>状态</p>
      */
     public $Status;
 
     /**
-     * @var string 实例类型
+     * @var string <p>实例类型</p>
      */
     public $Category;
 
     /**
-     * @var string 实例描述
+     * @var string <p>实例描述</p>
      */
     public $InstanceDesc;
 
     /**
-     * @var string dashboard 的 URL
+     * @var string <p>dashboard 的 URL</p>
      */
     public $GrafanaDashboardURL;
 
     /**
-     * @param string $Name 名字
-     * @param string $Kind 类型
-     * @param string $Content 内容
-     * @param integer $Status 状态
-     * @param string $Category 实例类型
-     * @param string $InstanceDesc 实例描述
-     * @param string $GrafanaDashboardURL dashboard 的 URL
+     * @param string $Name <p>名字</p>
+     * @param string $Kind <p>类型</p>
+     * @param string $Content <p>内容</p>
+     * @param integer $Status <p>状态</p>
+     * @param string $Category <p>实例类型</p>
+     * @param string $InstanceDesc <p>实例描述</p>
+     * @param string $GrafanaDashboardURL <p>dashboard 的 URL</p>
      */
     function __construct()
     {

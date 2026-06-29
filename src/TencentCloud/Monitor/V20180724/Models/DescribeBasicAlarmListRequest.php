@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBasicAlarmList请求参数结构体
  *
- * @method string getModule() 获取接口模块名，当前取值monitor
- * @method void setModule(string $Module) 设置接口模块名，当前取值monitor
- * @method integer getStartTime() 获取起始时间，默认一天前的时间戳
- * @method void setStartTime(integer $StartTime) 设置起始时间，默认一天前的时间戳
- * @method integer getEndTime() 获取结束时间，默认当前时间戳
- * @method void setEndTime(integer $EndTime) 设置结束时间，默认当前时间戳
- * @method integer getLimit() 获取分页参数，每页返回的数量，取值1~100，默认20
- * @method void setLimit(integer $Limit) 设置分页参数，每页返回的数量，取值1~100，默认20
- * @method integer getOffset() 获取分页参数，页偏移量，从0开始计数，默认0
- * @method void setOffset(integer $Offset) 设置分页参数，页偏移量，从0开始计数，默认0
- * @method string getOccurTimeOrder() 获取根据发生时间排序，取值ASC或DESC
- * @method void setOccurTimeOrder(string $OccurTimeOrder) 设置根据发生时间排序，取值ASC或DESC
- * @method array getProjectIds() 获取根据项目ID过滤
- * @method void setProjectIds(array $ProjectIds) 设置根据项目ID过滤
- * @method array getViewNames() 获取根据策略类型过滤
- * @method void setViewNames(array $ViewNames) 设置根据策略类型过滤
- * @method array getAlarmStatus() 获取根据告警状态过滤
- * @method void setAlarmStatus(array $AlarmStatus) 设置根据告警状态过滤
- * @method string getObjLike() 获取根据告警对象过滤
- * @method void setObjLike(string $ObjLike) 设置根据告警对象过滤
- * @method array getInstanceGroupIds() 获取根据实例组ID过滤
- * @method void setInstanceGroupIds(array $InstanceGroupIds) 设置根据实例组ID过滤
- * @method array getMetricNames() 获取根据指标名过滤
- * @method void setMetricNames(array $MetricNames) 设置根据指标名过滤
+ * @method string getModule() 获取<p>接口模块名，当前取值monitor</p>
+ * @method void setModule(string $Module) 设置<p>接口模块名，当前取值monitor</p>
+ * @method integer getStartTime() 获取<p>起始时间，默认一天前的时间戳</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>起始时间，默认一天前的时间戳</p>
+ * @method integer getEndTime() 获取<p>结束时间，默认当前时间戳</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间，默认当前时间戳</p>
+ * @method integer getLimit() 获取<p>分页参数，每页返回的数量，取值1~100，默认20</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页参数，每页返回的数量，取值1~100，默认20</p>
+ * @method integer getOffset() 获取<p>分页参数，页偏移量，从0开始计数，默认0</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页参数，页偏移量，从0开始计数，默认0</p>
+ * @method string getOccurTimeOrder() 获取<p>根据发生时间排序，取值ASC或DESC</p>
+ * @method void setOccurTimeOrder(string $OccurTimeOrder) 设置<p>根据发生时间排序，取值ASC或DESC</p>
+ * @method array getProjectIds() 获取<p>根据项目ID过滤</p>
+ * @method void setProjectIds(array $ProjectIds) 设置<p>根据项目ID过滤</p>
+ * @method array getViewNames() 获取<p>根据策略类型过滤</p>
+ * @method void setViewNames(array $ViewNames) 设置<p>根据策略类型过滤</p>
+ * @method array getAlarmStatus() 获取<p>根据告警状态过滤</p>
+ * @method void setAlarmStatus(array $AlarmStatus) 设置<p>根据告警状态过滤</p>
+ * @method string getObjLike() 获取<p>根据告警对象过滤</p>
+ * @method void setObjLike(string $ObjLike) 设置<p>根据告警对象过滤</p>
+ * @method array getInstanceGroupIds() 获取<p>根据实例组ID过滤</p>
+ * @method void setInstanceGroupIds(array $InstanceGroupIds) 设置<p>根据实例组ID过滤</p>
+ * @method array getMetricNames() 获取<p>根据指标名过滤</p>
+ * @method void setMetricNames(array $MetricNames) 设置<p>根据指标名过滤</p>
  */
 class DescribeBasicAlarmListRequest extends AbstractModel
 {
     /**
-     * @var string 接口模块名，当前取值monitor
+     * @var string <p>接口模块名，当前取值monitor</p>
      */
     public $Module;
 
     /**
-     * @var integer 起始时间，默认一天前的时间戳
+     * @var integer <p>起始时间，默认一天前的时间戳</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间，默认当前时间戳
+     * @var integer <p>结束时间，默认当前时间戳</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 分页参数，每页返回的数量，取值1~100，默认20
+     * @var integer <p>分页参数，每页返回的数量，取值1~100，默认20</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页参数，页偏移量，从0开始计数，默认0
+     * @var integer <p>分页参数，页偏移量，从0开始计数，默认0</p>
      */
     public $Offset;
 
     /**
-     * @var string 根据发生时间排序，取值ASC或DESC
+     * @var string <p>根据发生时间排序，取值ASC或DESC</p>
      */
     public $OccurTimeOrder;
 
     /**
-     * @var array 根据项目ID过滤
+     * @var array <p>根据项目ID过滤</p>
      */
     public $ProjectIds;
 
     /**
-     * @var array 根据策略类型过滤
+     * @var array <p>根据策略类型过滤</p>
      */
     public $ViewNames;
 
     /**
-     * @var array 根据告警状态过滤
+     * @var array <p>根据告警状态过滤</p>
      */
     public $AlarmStatus;
 
     /**
-     * @var string 根据告警对象过滤
+     * @var string <p>根据告警对象过滤</p>
      */
     public $ObjLike;
 
     /**
-     * @var array 根据实例组ID过滤
+     * @var array <p>根据实例组ID过滤</p>
      */
     public $InstanceGroupIds;
 
     /**
-     * @var array 根据指标名过滤
+     * @var array <p>根据指标名过滤</p>
      */
     public $MetricNames;
 
     /**
-     * @param string $Module 接口模块名，当前取值monitor
-     * @param integer $StartTime 起始时间，默认一天前的时间戳
-     * @param integer $EndTime 结束时间，默认当前时间戳
-     * @param integer $Limit 分页参数，每页返回的数量，取值1~100，默认20
-     * @param integer $Offset 分页参数，页偏移量，从0开始计数，默认0
-     * @param string $OccurTimeOrder 根据发生时间排序，取值ASC或DESC
-     * @param array $ProjectIds 根据项目ID过滤
-     * @param array $ViewNames 根据策略类型过滤
-     * @param array $AlarmStatus 根据告警状态过滤
-     * @param string $ObjLike 根据告警对象过滤
-     * @param array $InstanceGroupIds 根据实例组ID过滤
-     * @param array $MetricNames 根据指标名过滤
+     * @param string $Module <p>接口模块名，当前取值monitor</p>
+     * @param integer $StartTime <p>起始时间，默认一天前的时间戳</p>
+     * @param integer $EndTime <p>结束时间，默认当前时间戳</p>
+     * @param integer $Limit <p>分页参数，每页返回的数量，取值1~100，默认20</p>
+     * @param integer $Offset <p>分页参数，页偏移量，从0开始计数，默认0</p>
+     * @param string $OccurTimeOrder <p>根据发生时间排序，取值ASC或DESC</p>
+     * @param array $ProjectIds <p>根据项目ID过滤</p>
+     * @param array $ViewNames <p>根据策略类型过滤</p>
+     * @param array $AlarmStatus <p>根据告警状态过滤</p>
+     * @param string $ObjLike <p>根据告警对象过滤</p>
+     * @param array $InstanceGroupIds <p>根据实例组ID过滤</p>
+     * @param array $MetricNames <p>根据指标名过滤</p>
      */
     function __construct()
     {

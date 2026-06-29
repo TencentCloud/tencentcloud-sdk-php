@@ -20,77 +20,77 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Prometheus 聚合规则响应结构体内信息
  *
- * @method string getRuleId() 获取规则 ID
- * @method void setRuleId(string $RuleId) 设置规则 ID
- * @method integer getRuleState() 获取规则状态码
- * @method void setRuleState(integer $RuleState) 设置规则状态码
- * @method string getName() 获取分组名称
- * @method void setName(string $Name) 设置分组名称
- * @method string getGroup() 获取规则内容组
- * @method void setGroup(string $Group) 设置规则内容组
- * @method integer getTotal() 获取规则数量
- * @method void setTotal(integer $Total) 设置规则数量
- * @method string getCreatedAt() 获取规则创建时间
- * @method void setCreatedAt(string $CreatedAt) 设置规则创建时间
- * @method string getUpdatedAt() 获取规则最近更新时间
- * @method void setUpdatedAt(string $UpdatedAt) 设置规则最近更新时间
- * @method string getRuleName() 获取规则名称
+ * @method string getRuleId() 获取<p>规则 ID</p>
+ * @method void setRuleId(string $RuleId) 设置<p>规则 ID</p>
+ * @method integer getRuleState() 获取<p>规则状态码</p>
+ * @method void setRuleState(integer $RuleState) 设置<p>规则状态码</p>
+ * @method string getName() 获取<p>分组名称</p>
+ * @method void setName(string $Name) 设置<p>分组名称</p>
+ * @method string getGroup() 获取<p>规则内容组</p>
+ * @method void setGroup(string $Group) 设置<p>规则内容组</p>
+ * @method integer getTotal() 获取<p>规则数量</p>
+ * @method void setTotal(integer $Total) 设置<p>规则数量</p>
+ * @method string getCreatedAt() 获取<p>规则创建时间</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>规则创建时间</p>
+ * @method string getUpdatedAt() 获取<p>规则最近更新时间</p>
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>规则最近更新时间</p>
+ * @method string getRuleName() 获取<p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleName(string $RuleName) 设置规则名称
+ * @method void setRuleName(string $RuleName) 设置<p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordingRuleSet extends AbstractModel
 {
     /**
-     * @var string 规则 ID
+     * @var string <p>规则 ID</p>
      */
     public $RuleId;
 
     /**
-     * @var integer 规则状态码
+     * @var integer <p>规则状态码</p>
      */
     public $RuleState;
 
     /**
-     * @var string 分组名称
+     * @var string <p>分组名称</p>
      */
     public $Name;
 
     /**
-     * @var string 规则内容组
+     * @var string <p>规则内容组</p>
      */
     public $Group;
 
     /**
-     * @var integer 规则数量
+     * @var integer <p>规则数量</p>
      */
     public $Total;
 
     /**
-     * @var string 规则创建时间
+     * @var string <p>规则创建时间</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string 规则最近更新时间
+     * @var string <p>规则最近更新时间</p>
      */
     public $UpdatedAt;
 
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
-     * @param string $RuleId 规则 ID
-     * @param integer $RuleState 规则状态码
-     * @param string $Name 分组名称
-     * @param string $Group 规则内容组
-     * @param integer $Total 规则数量
-     * @param string $CreatedAt 规则创建时间
-     * @param string $UpdatedAt 规则最近更新时间
-     * @param string $RuleName 规则名称
+     * @param string $RuleId <p>规则 ID</p>
+     * @param integer $RuleState <p>规则状态码</p>
+     * @param string $Name <p>分组名称</p>
+     * @param string $Group <p>规则内容组</p>
+     * @param integer $Total <p>规则数量</p>
+     * @param string $CreatedAt <p>规则创建时间</p>
+     * @param string $UpdatedAt <p>规则最近更新时间</p>
+     * @param string $RuleName <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

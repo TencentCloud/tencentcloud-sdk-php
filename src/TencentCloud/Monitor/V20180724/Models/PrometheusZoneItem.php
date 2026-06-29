@@ -20,61 +20,61 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PrometheusZoneItem 响应结构体内的地域信息
  *
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method integer getZoneId() 获取可用区 ID
- * @method void setZoneId(integer $ZoneId) 设置可用区 ID
- * @method integer getZoneState() 获取可用区状态( 0: 不可用；1: 可用)
- * @method void setZoneState(integer $ZoneState) 设置可用区状态( 0: 不可用；1: 可用)
- * @method integer getRegionId() 获取地域 ID
- * @method void setRegionId(integer $RegionId) 设置地域 ID
- * @method string getZoneName() 获取可用区名（目前为中文）
- * @method void setZoneName(string $ZoneName) 设置可用区名（目前为中文）
- * @method integer getZoneResourceState() 获取可用区资源状态(0:资源不足，不可使用；1:资源足够)
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method integer getZoneId() 获取<p>可用区 ID</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>可用区 ID</p>
+ * @method integer getZoneState() 获取<p>可用区状态( 0: 不可用；1: 可用)</p>
+ * @method void setZoneState(integer $ZoneState) 设置<p>可用区状态( 0: 不可用；1: 可用)</p>
+ * @method integer getRegionId() 获取<p>地域 ID</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域 ID</p>
+ * @method string getZoneName() 获取<p>可用区名（目前为中文）</p>
+ * @method void setZoneName(string $ZoneName) 设置<p>可用区名（目前为中文）</p>
+ * @method integer getZoneResourceState() 获取<p>可用区资源状态(0:资源不足，不可使用；1:资源足够)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneResourceState(integer $ZoneResourceState) 设置可用区资源状态(0:资源不足，不可使用；1:资源足够)
+ * @method void setZoneResourceState(integer $ZoneResourceState) 设置<p>可用区资源状态(0:资源不足，不可使用；1:资源足够)</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusZoneItem extends AbstractModel
 {
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var integer 可用区 ID
+     * @var integer <p>可用区 ID</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer 可用区状态( 0: 不可用；1: 可用)
+     * @var integer <p>可用区状态( 0: 不可用；1: 可用)</p>
      */
     public $ZoneState;
 
     /**
-     * @var integer 地域 ID
+     * @var integer <p>地域 ID</p>
      */
     public $RegionId;
 
     /**
-     * @var string 可用区名（目前为中文）
+     * @var string <p>可用区名（目前为中文）</p>
      */
     public $ZoneName;
 
     /**
-     * @var integer 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+     * @var integer <p>可用区资源状态(0:资源不足，不可使用；1:资源足够)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneResourceState;
 
     /**
-     * @param string $Zone 可用区
-     * @param integer $ZoneId 可用区 ID
-     * @param integer $ZoneState 可用区状态( 0: 不可用；1: 可用)
-     * @param integer $RegionId 地域 ID
-     * @param string $ZoneName 可用区名（目前为中文）
-     * @param integer $ZoneResourceState 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+     * @param string $Zone <p>可用区</p>
+     * @param integer $ZoneId <p>可用区 ID</p>
+     * @param integer $ZoneState <p>可用区状态( 0: 不可用；1: 可用)</p>
+     * @param integer $RegionId <p>地域 ID</p>
+     * @param string $ZoneName <p>可用区名（目前为中文）</p>
+     * @param integer $ZoneResourceState <p>可用区资源状态(0:资源不足，不可使用；1:资源足够)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

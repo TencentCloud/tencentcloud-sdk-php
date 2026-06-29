@@ -18,28 +18,24 @@ namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 应用引用的共享知识库简要信息(查询时仅返回ID和名称)
+ * API插件配置
  *
- * @method string getKnowledgeId() 获取共享知识库ID
- * @method void setKnowledgeId(string $KnowledgeId) 设置共享知识库ID
- * @method string getKnowledgeName() 获取共享知识库名称
- * @method void setKnowledgeName(string $KnowledgeName) 设置共享知识库名称
+ * @method AuthConfig getAuthConfig() 获取授权配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAuthConfig(AuthConfig $AuthConfig) 设置授权配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class AppSharedKnowledgeInfo extends AbstractModel
+class ApiPluginConfig extends AbstractModel
 {
     /**
-     * @var string 共享知识库ID
+     * @var AuthConfig 授权配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $KnowledgeId;
+    public $AuthConfig;
 
     /**
-     * @var string 共享知识库名称
-     */
-    public $KnowledgeName;
-
-    /**
-     * @param string $KnowledgeId 共享知识库ID
-     * @param string $KnowledgeName 共享知识库名称
+     * @param AuthConfig $AuthConfig 授权配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -54,12 +50,9 @@ class AppSharedKnowledgeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KnowledgeId",$param) and $param["KnowledgeId"] !== null) {
-            $this->KnowledgeId = $param["KnowledgeId"];
-        }
-
-        if (array_key_exists("KnowledgeName",$param) and $param["KnowledgeName"] !== null) {
-            $this->KnowledgeName = $param["KnowledgeName"];
+        if (array_key_exists("AuthConfig",$param) and $param["AuthConfig"] !== null) {
+            $this->AuthConfig = new AuthConfig();
+            $this->AuthConfig->deserialize($param["AuthConfig"]);
         }
     }
 }

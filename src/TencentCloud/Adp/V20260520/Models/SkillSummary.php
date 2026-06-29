@@ -36,8 +36,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSkillId() 获取Skill ID
  * @method void setSkillId(string $SkillId) 设置Skill ID
+ * @method array getNoticeList() 获取Skill 异常通知列表
+ * @method void setNoticeList(array $NoticeList) 设置Skill 异常通知列表
+ * @method array getPermissionIdList() 获取当前用户对该 Skill 的资源操作权限位列表；内置/共享 Skill 固定为空数组
+ * @method void setPermissionIdList(array $PermissionIdList) 设置当前用户对该 Skill 的资源操作权限位列表；内置/共享 Skill 固定为空数组
  * @method array getShareList() 获取共享信息；可能有两条，一条是已共享的，一条是审核中的
  * @method void setShareList(array $ShareList) 设置共享信息；可能有两条，一条是已共享的，一条是审核中的
+ * @method integer getSkillStatus() 获取Skill状态 
+
+枚举值:
+| uint | 描述 |
+| --- | --- |
+| 0 | 初始化（无任何已发布版本，且最新版本处于 INITIALIZED/UNRELEASED） |
+| 1 | 安全检测中（无任何已发布版本，且最新版本处于 AUDITING） |
+| 2 | 待发布（无任何已发布版本，且最新版本处于 PENDING_RELEASE） |
+| 3 | 已发布（存在任一 RELEASED 版本，吸收态） |
+ * @method void setSkillStatus(integer $SkillStatus) 设置Skill状态 
+
+枚举值:
+| uint | 描述 |
+| --- | --- |
+| 0 | 初始化（无任何已发布版本，且最新版本处于 INITIALIZED/UNRELEASED） |
+| 1 | 安全检测中（无任何已发布版本，且最新版本处于 AUDITING） |
+| 2 | 待发布（无任何已发布版本，且最新版本处于 PENDING_RELEASE） |
+| 3 | 已发布（存在任一 RELEASED 版本，吸收态） |
  */
 class SkillSummary extends AbstractModel
 {
@@ -70,9 +92,32 @@ class SkillSummary extends AbstractModel
     public $SkillId;
 
     /**
+     * @var array Skill 异常通知列表
+     */
+    public $NoticeList;
+
+    /**
+     * @var array 当前用户对该 Skill 的资源操作权限位列表；内置/共享 Skill 固定为空数组
+     */
+    public $PermissionIdList;
+
+    /**
      * @var array 共享信息；可能有两条，一条是已共享的，一条是审核中的
      */
     public $ShareList;
+
+    /**
+     * @var integer Skill状态 
+
+枚举值:
+| uint | 描述 |
+| --- | --- |
+| 0 | 初始化（无任何已发布版本，且最新版本处于 INITIALIZED/UNRELEASED） |
+| 1 | 安全检测中（无任何已发布版本，且最新版本处于 AUDITING） |
+| 2 | 待发布（无任何已发布版本，且最新版本处于 PENDING_RELEASE） |
+| 3 | 已发布（存在任一 RELEASED 版本，吸收态） |
+     */
+    public $SkillStatus;
 
     /**
      * @param SkillClassification $ClassificationInfo 分类信息
@@ -83,7 +128,18 @@ class SkillSummary extends AbstractModel
      * @param SkillProfile $Profile 基础信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SkillId Skill ID
+     * @param array $NoticeList Skill 异常通知列表
+     * @param array $PermissionIdList 当前用户对该 Skill 的资源操作权限位列表；内置/共享 Skill 固定为空数组
      * @param array $ShareList 共享信息；可能有两条，一条是已共享的，一条是审核中的
+     * @param integer $SkillStatus Skill状态 
+
+枚举值:
+| uint | 描述 |
+| --- | --- |
+| 0 | 初始化（无任何已发布版本，且最新版本处于 INITIALIZED/UNRELEASED） |
+| 1 | 安全检测中（无任何已发布版本，且最新版本处于 AUDITING） |
+| 2 | 待发布（无任何已发布版本，且最新版本处于 PENDING_RELEASE） |
+| 3 | 已发布（存在任一 RELEASED 版本，吸收态） |
      */
     function __construct()
     {
@@ -121,6 +177,19 @@ class SkillSummary extends AbstractModel
             $this->SkillId = $param["SkillId"];
         }
 
+        if (array_key_exists("NoticeList",$param) and $param["NoticeList"] !== null) {
+            $this->NoticeList = [];
+            foreach ($param["NoticeList"] as $key => $value){
+                $obj = new SkillNotice();
+                $obj->deserialize($value);
+                array_push($this->NoticeList, $obj);
+            }
+        }
+
+        if (array_key_exists("PermissionIdList",$param) and $param["PermissionIdList"] !== null) {
+            $this->PermissionIdList = $param["PermissionIdList"];
+        }
+
         if (array_key_exists("ShareList",$param) and $param["ShareList"] !== null) {
             $this->ShareList = [];
             foreach ($param["ShareList"] as $key => $value){
@@ -128,6 +197,10 @@ class SkillSummary extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ShareList, $obj);
             }
+        }
+
+        if (array_key_exists("SkillStatus",$param) and $param["SkillStatus"] !== null) {
+            $this->SkillStatus = $param["SkillStatus"];
         }
     }
 }

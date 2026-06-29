@@ -190,6 +190,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置<p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
  * @method boolean getUseDefaultFuseConfig() 获取<p>是否默认使用探针自带熔断阈值</p>
  * @method void setUseDefaultFuseConfig(boolean $UseDefaultFuseConfig) 设置<p>是否默认使用探针自带熔断阈值</p>
+ * @method boolean getAnalysisAutoEnable() 获取<p>是否开启自动分析</p>
+ * @method void setAnalysisAutoEnable(boolean $AnalysisAutoEnable) 设置<p>是否开启自动分析</p>
+ * @method boolean getEnableHeadSampler() 获取<p>头采样开关</p>
+ * @method void setEnableHeadSampler(boolean $EnableHeadSampler) 设置<p>头采样开关</p>
+ * @method string getHeadSamplerType() 获取<p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
+ * @method void setHeadSamplerType(string $HeadSamplerType) 设置<p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
+ * @method integer getHeadSamplerArg() 获取<p>采样阈值，100等于关闭采样，0表示全采样</p>
+ * @method void setHeadSamplerArg(integer $HeadSamplerArg) 设置<p>采样阈值，100等于关闭采样，0表示全采样</p>
  */
 class ApmAppConfig extends AbstractModel
 {
@@ -527,6 +535,26 @@ class ApmAppConfig extends AbstractModel
     public $UseDefaultFuseConfig;
 
     /**
+     * @var boolean <p>是否开启自动分析</p>
+     */
+    public $AnalysisAutoEnable;
+
+    /**
+     * @var boolean <p>头采样开关</p>
+     */
+    public $EnableHeadSampler;
+
+    /**
+     * @var string <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
+     */
+    public $HeadSamplerType;
+
+    /**
+     * @var integer <p>采样阈值，100等于关闭采样，0表示全采样</p>
+     */
+    public $HeadSamplerArg;
+
+    /**
      * @param string $InstanceKey <p>实例ID</p>
      * @param string $ServiceName <p>服务名</p>
      * @param integer $UrlConvergenceSwitch <p>URL收敛开关</p>
@@ -612,6 +640,10 @@ class ApmAppConfig extends AbstractModel
      * @param integer $ErrRateThreshold <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p>
      * @param integer $ResponseDurationWarningThreshold <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
      * @param boolean $UseDefaultFuseConfig <p>是否默认使用探针自带熔断阈值</p>
+     * @param boolean $AnalysisAutoEnable <p>是否开启自动分析</p>
+     * @param boolean $EnableHeadSampler <p>头采样开关</p>
+     * @param string $HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
+     * @param integer $HeadSamplerArg <p>采样阈值，100等于关闭采样，0表示全采样</p>
      */
     function __construct()
     {
@@ -884,6 +916,22 @@ class ApmAppConfig extends AbstractModel
 
         if (array_key_exists("UseDefaultFuseConfig",$param) and $param["UseDefaultFuseConfig"] !== null) {
             $this->UseDefaultFuseConfig = $param["UseDefaultFuseConfig"];
+        }
+
+        if (array_key_exists("AnalysisAutoEnable",$param) and $param["AnalysisAutoEnable"] !== null) {
+            $this->AnalysisAutoEnable = $param["AnalysisAutoEnable"];
+        }
+
+        if (array_key_exists("EnableHeadSampler",$param) and $param["EnableHeadSampler"] !== null) {
+            $this->EnableHeadSampler = $param["EnableHeadSampler"];
+        }
+
+        if (array_key_exists("HeadSamplerType",$param) and $param["HeadSamplerType"] !== null) {
+            $this->HeadSamplerType = $param["HeadSamplerType"];
+        }
+
+        if (array_key_exists("HeadSamplerArg",$param) and $param["HeadSamplerArg"] !== null) {
+            $this->HeadSamplerArg = $param["HeadSamplerArg"];
         }
     }
 }

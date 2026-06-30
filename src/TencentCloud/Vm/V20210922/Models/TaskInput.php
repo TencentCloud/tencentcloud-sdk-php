@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音视频任务结构
  *
- * @method string getDataId() 获取数据ID
- * @method void setDataId(string $DataId) 设置数据ID
- * @method string getName() 获取任务名
- * @method void setName(string $Name) 设置任务名
- * @method StorageInfo getInput() 获取任务输入
- * @method void setInput(StorageInfo $Input) 设置任务输入
+ * @method string getDataId() 获取<p>数据ID</p>
+ * @method void setDataId(string $DataId) 设置<p>数据ID</p>
+ * @method string getName() 获取<p>任务名</p>
+ * @method void setName(string $Name) 设置<p>任务名</p>
+ * @method StorageInfo getInput() 获取<p>任务输入</p>
+ * @method void setInput(StorageInfo $Input) 设置<p>任务输入</p>
+ * @method DecodeParams getDecodeParams() 获取<p>视频解码参数</p>
+ * @method void setDecodeParams(DecodeParams $DecodeParams) 设置<p>视频解码参数</p>
  */
 class TaskInput extends AbstractModel
 {
     /**
-     * @var string 数据ID
+     * @var string <p>数据ID</p>
      */
     public $DataId;
 
     /**
-     * @var string 任务名
+     * @var string <p>任务名</p>
      */
     public $Name;
 
     /**
-     * @var StorageInfo 任务输入
+     * @var StorageInfo <p>任务输入</p>
      */
     public $Input;
 
     /**
-     * @param string $DataId 数据ID
-     * @param string $Name 任务名
-     * @param StorageInfo $Input 任务输入
+     * @var DecodeParams <p>视频解码参数</p>
+     */
+    public $DecodeParams;
+
+    /**
+     * @param string $DataId <p>数据ID</p>
+     * @param string $Name <p>任务名</p>
+     * @param StorageInfo $Input <p>任务输入</p>
+     * @param DecodeParams $DecodeParams <p>视频解码参数</p>
      */
     function __construct()
     {
@@ -73,6 +81,11 @@ class TaskInput extends AbstractModel
         if (array_key_exists("Input",$param) and $param["Input"] !== null) {
             $this->Input = new StorageInfo();
             $this->Input->deserialize($param["Input"]);
+        }
+
+        if (array_key_exists("DecodeParams",$param) and $param["DecodeParams"] !== null) {
+            $this->DecodeParams = new DecodeParams();
+            $this->DecodeParams->deserialize($param["DecodeParams"]);
         }
     }
 }

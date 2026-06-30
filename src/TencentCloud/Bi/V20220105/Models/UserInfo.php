@@ -20,85 +20,97 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户ID和用户名
  *
- * @method string getUserId() 获取用户ID
- * @method void setUserId(string $UserId) 设置用户ID
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getEmail() 获取邮箱
+ * @method string getUserId() 获取<p>用户ID</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getEmail() 获取<p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmail(string $Email) 设置邮箱
+ * @method void setEmail(string $Email) 设置<p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPhoneNumber() 获取手机号
+ * @method string getPhoneNumber() 获取<p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号
+ * @method void setPhoneNumber(string $PhoneNumber) 设置<p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAreaCode() 获取手机号区号
+ * @method string getAreaCode() 获取<p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAreaCode(string $AreaCode) 设置手机号区号
+ * @method void setAreaCode(string $AreaCode) 设置<p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppUserId() 获取企微账号id
+ * @method string getAppUserId() 获取<p>企微账号id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppUserId(string $AppUserId) 设置企微账号id
+ * @method void setAppUserId(string $AppUserId) 设置<p>企微账号id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppUserName() 获取企微账号名称
+ * @method string getAppUserName() 获取<p>企微账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppUserName(string $AppUserName) 设置企微账号名称
+ * @method void setAppUserName(string $AppUserName) 设置<p>企微账号名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLarkOpenId() 获取<p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLarkOpenId(string $LarkOpenId) 设置<p>飞书OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserInfo extends AbstractModel
 {
     /**
-     * @var string 用户ID
+     * @var string <p>用户ID</p>
      */
     public $UserId;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 邮箱
+     * @var string <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Email;
 
     /**
-     * @var string 手机号
+     * @var string <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneNumber;
 
     /**
-     * @var string 手机号区号
+     * @var string <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AreaCode;
 
     /**
-     * @var string 企微账号id
+     * @var string <p>企微账号id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppUserId;
 
     /**
-     * @var string 企微账号名称
+     * @var string <p>企微账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppUserName;
 
     /**
-     * @param string $UserId 用户ID
-     * @param string $UserName 用户名
-     * @param string $Email 邮箱
+     * @var string <p>飞书OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PhoneNumber 手机号
+     */
+    public $LarkOpenId;
+
+    /**
+     * @param string $UserId <p>用户ID</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $Email <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AreaCode 手机号区号
+     * @param string $PhoneNumber <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppUserId 企微账号id
+     * @param string $AreaCode <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppUserName 企微账号名称
+     * @param string $AppUserId <p>企微账号id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppUserName <p>企微账号名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LarkOpenId <p>飞书OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +152,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("AppUserName",$param) and $param["AppUserName"] !== null) {
             $this->AppUserName = $param["AppUserName"];
+        }
+
+        if (array_key_exists("LarkOpenId",$param) and $param["LarkOpenId"] !== null) {
+            $this->LarkOpenId = $param["LarkOpenId"];
         }
     }
 }

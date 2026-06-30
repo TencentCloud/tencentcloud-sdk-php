@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPlatformEventTemplate请求参数结构体
  *
- * @method string getEventType() 获取平台产品事件类型
- * @method void setEventType(string $EventType) 设置平台产品事件类型
+ * @method string getEventType() 获取<p>平台产品事件类型</p>
+ * @method void setEventType(string $EventType) 设置<p>平台产品事件类型</p>
  */
 class GetPlatformEventTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 平台产品事件类型
+     * @var string <p>平台产品事件类型</p>
      */
     public $EventType;
 
     /**
-     * @param string $EventType 平台产品事件类型
+     * @param string $EventType <p>平台产品事件类型</p>
      */
     function __construct()
     {

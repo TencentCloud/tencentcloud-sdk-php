@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedCdbAudit(integer $NeedCdbAudit) 设置<p>是否开通审计</p>
  * @method ContainerExtraConf getContainerExtraConf() 获取<p>额外容器相关配置</p>
  * @method void setContainerExtraConf(ContainerExtraConf $ContainerExtraConf) 设置<p>额外容器相关配置</p>
+ * @method boolean getCheckServiceDeployInfo() 获取<p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
+ * @method void setCheckServiceDeployInfo(boolean $CheckServiceDeployInfo) 设置<p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
  */
 class InstallSoftwareRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class InstallSoftwareRequest extends AbstractModel
     public $ContainerExtraConf;
 
     /**
+     * @var boolean <p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
+     */
+    public $CheckServiceDeployInfo;
+
+    /**
      * @param string $InstanceId <p>集群实例号</p>
      * @param array $SoftInfo <p>组件版本号，例如presto-0.161，可根据InstallSoftWareInfo查看当前集群可安装的组件</p>
      * @param string $CdbAutoRenew <p>如果需要购买CDB，如果是包年包月集群，是否为这个cdb自动续费，默认AUTO_RENEW,如不自动续费新增的CDB，则填入NOT_AUTO_RENEW</p>
@@ -128,6 +135,7 @@ class InstallSoftwareRequest extends AbstractModel
      * @param string $DefaultMetaVersion <p>数据库版本</p>
      * @param integer $NeedCdbAudit <p>是否开通审计</p>
      * @param ContainerExtraConf $ContainerExtraConf <p>额外容器相关配置</p>
+     * @param boolean $CheckServiceDeployInfo <p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
      */
     function __construct()
     {
@@ -214,6 +222,10 @@ class InstallSoftwareRequest extends AbstractModel
         if (array_key_exists("ContainerExtraConf",$param) and $param["ContainerExtraConf"] !== null) {
             $this->ContainerExtraConf = new ContainerExtraConf();
             $this->ContainerExtraConf->deserialize($param["ContainerExtraConf"]);
+        }
+
+        if (array_key_exists("CheckServiceDeployInfo",$param) and $param["CheckServiceDeployInfo"] !== null) {
+            $this->CheckServiceDeployInfo = $param["CheckServiceDeployInfo"];
         }
     }
 }

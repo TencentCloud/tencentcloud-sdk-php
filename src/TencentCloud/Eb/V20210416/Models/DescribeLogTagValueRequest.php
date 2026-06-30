@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogTagValue请求参数结构体
  *
- * @method integer getStartTime() 获取起始时间
- * @method void setStartTime(integer $StartTime) 设置起始时间
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
- * @method string getEventBusId() 获取事件集ID
- * @method void setEventBusId(string $EventBusId) 设置事件集ID
- * @method string getGroupField() 获取聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
- * @method void setGroupField(string $GroupField) 设置聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
- * @method integer getPage() 获取页数
- * @method void setPage(integer $Page) 设置页数
- * @method integer getLimit() 获取每页数据大小
- * @method void setLimit(integer $Limit) 设置每页数据大小
- * @method array getFilter() 获取筛选条件
- * @method void setFilter(array $Filter) 设置筛选条件
+ * @method integer getStartTime() 获取<p>起始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>起始时间</p>
+ * @method integer getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间</p>
+ * @method string getEventBusId() 获取<p>事件集ID</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
+ * @method string getGroupField() 获取<p>聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)</p>
+ * @method void setGroupField(string $GroupField) 设置<p>聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)</p>
+ * @method integer getPage() 获取<p>页数</p>
+ * @method void setPage(integer $Page) 设置<p>页数</p>
+ * @method integer getLimit() 获取<p>每页数据大小</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页数据大小</p>
+ * @method array getFilter() 获取<p>筛选条件</p>
+ * @method void setFilter(array $Filter) 设置<p>筛选条件</p>
  */
 class DescribeLogTagValueRequest extends AbstractModel
 {
     /**
-     * @var integer 起始时间
+     * @var integer <p>起始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间
+     * @var integer <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 事件集ID
+     * @var string <p>事件集ID</p>
      */
     public $EventBusId;
 
     /**
-     * @var string 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
+     * @var string <p>聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)</p>
      */
     public $GroupField;
 
     /**
-     * @var integer 页数
+     * @var integer <p>页数</p>
      */
     public $Page;
 
     /**
-     * @var integer 每页数据大小
+     * @var integer <p>每页数据大小</p>
      */
     public $Limit;
 
     /**
-     * @var array 筛选条件
+     * @var array <p>筛选条件</p>
      */
     public $Filter;
 
     /**
-     * @param integer $StartTime 起始时间
-     * @param integer $EndTime 结束时间
-     * @param string $EventBusId 事件集ID
-     * @param string $GroupField 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
-     * @param integer $Page 页数
-     * @param integer $Limit 每页数据大小
-     * @param array $Filter 筛选条件
+     * @param integer $StartTime <p>起始时间</p>
+     * @param integer $EndTime <p>结束时间</p>
+     * @param string $EventBusId <p>事件集ID</p>
+     * @param string $GroupField <p>聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)</p>
+     * @param integer $Page <p>页数</p>
+     * @param integer $Limit <p>每页数据大小</p>
+     * @param array $Filter <p>筛选条件</p>
      */
     function __construct()
     {

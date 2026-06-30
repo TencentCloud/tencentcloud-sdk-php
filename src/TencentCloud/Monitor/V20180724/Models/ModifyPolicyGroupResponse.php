@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPolicyGroup返回参数结构体
  *
- * @method integer getGroupId() 获取策略组id
- * @method void setGroupId(integer $GroupId) 设置策略组id
+ * @method integer getGroupId() 获取<p>策略组id</p>
+ * @method void setGroupId(integer $GroupId) 设置<p>策略组id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyPolicyGroupResponse extends AbstractModel
 {
     /**
-     * @var integer 策略组id
+     * @var integer <p>策略组id</p>
      */
     public $GroupId;
 
@@ -38,7 +38,7 @@ class ModifyPolicyGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $GroupId 策略组id
+     * @param integer $GroupId <p>策略组id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

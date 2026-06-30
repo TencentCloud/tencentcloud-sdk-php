@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAlarmPolicyCondition请求参数结构体
  *
- * @method string getModule() 获取模块名，固定值 monitor
- * @method void setModule(string $Module) 设置模块名，固定值 monitor
- * @method string getPolicyId() 获取告警策略 ID
- * @method void setPolicyId(string $PolicyId) 设置告警策略 ID
- * @method integer getConditionTemplateId() 获取触发条件模板 Id，可不传
- * @method void setConditionTemplateId(integer $ConditionTemplateId) 设置触发条件模板 Id，可不传
- * @method AlarmPolicyCondition getCondition() 获取指标触发条件
- * @method void setCondition(AlarmPolicyCondition $Condition) 设置指标触发条件
- * @method AlarmPolicyEventCondition getEventCondition() 获取事件触发条件
- * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) 设置事件触发条件
- * @method AlarmPolicyFilter getFilter() 获取全局过滤条件
- * @method void setFilter(AlarmPolicyFilter $Filter) 设置全局过滤条件
- * @method array getGroupBy() 获取聚合维度列表，指定按哪些维度 key 来做 group by
- * @method void setGroupBy(array $GroupBy) 设置聚合维度列表，指定按哪些维度 key 来做 group by
- * @method LogAlarmReq getLogAlarmReqInfo() 获取日志告警创建请求参数信息
- * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) 设置日志告警创建请求参数信息
- * @method array getNoticeIds() 获取模板id，专供prom使用
- * @method void setNoticeIds(array $NoticeIds) 设置模板id，专供prom使用
- * @method integer getEnable() 获取启停状态，0=停用，1=启用
- * @method void setEnable(integer $Enable) 设置启停状态，0=停用，1=启用
- * @method string getPolicyName() 获取专供prom策略名称
- * @method void setPolicyName(string $PolicyName) 设置专供prom策略名称
- * @method string getEbSubject() 获取事件配置的告警
- * @method void setEbSubject(string $EbSubject) 设置事件配置的告警
+ * @method string getModule() 获取<p>模块名，固定值 monitor</p>
+ * @method void setModule(string $Module) 设置<p>模块名，固定值 monitor</p>
+ * @method string getPolicyId() 获取<p>告警策略 ID</p>
+ * @method void setPolicyId(string $PolicyId) 设置<p>告警策略 ID</p>
+ * @method integer getConditionTemplateId() 获取<p>触发条件模板 Id，可不传</p>
+ * @method void setConditionTemplateId(integer $ConditionTemplateId) 设置<p>触发条件模板 Id，可不传</p>
+ * @method AlarmPolicyCondition getCondition() 获取<p>指标触发条件</p>
+ * @method void setCondition(AlarmPolicyCondition $Condition) 设置<p>指标触发条件</p>
+ * @method AlarmPolicyEventCondition getEventCondition() 获取<p>事件触发条件</p>
+ * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) 设置<p>事件触发条件</p>
+ * @method AlarmPolicyFilter getFilter() 获取<p>全局过滤条件</p>
+ * @method void setFilter(AlarmPolicyFilter $Filter) 设置<p>全局过滤条件</p>
+ * @method array getGroupBy() 获取<p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
+ * @method void setGroupBy(array $GroupBy) 设置<p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
+ * @method LogAlarmReq getLogAlarmReqInfo() 获取<p>日志告警创建请求参数信息</p>
+ * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) 设置<p>日志告警创建请求参数信息</p>
+ * @method array getNoticeIds() 获取<p>模板id，专供prom使用</p>
+ * @method void setNoticeIds(array $NoticeIds) 设置<p>模板id，专供prom使用</p>
+ * @method integer getEnable() 获取<p>启停状态，0=停用，1=启用</p>
+ * @method void setEnable(integer $Enable) 设置<p>启停状态，0=停用，1=启用</p>
+ * @method string getPolicyName() 获取<p>专供prom策略名称</p>
+ * @method void setPolicyName(string $PolicyName) 设置<p>专供prom策略名称</p>
+ * @method string getEbSubject() 获取<p>事件配置的告警</p>
+ * @method void setEbSubject(string $EbSubject) 设置<p>事件配置的告警</p>
  */
 class ModifyAlarmPolicyConditionRequest extends AbstractModel
 {
     /**
-     * @var string 模块名，固定值 monitor
+     * @var string <p>模块名，固定值 monitor</p>
      */
     public $Module;
 
     /**
-     * @var string 告警策略 ID
+     * @var string <p>告警策略 ID</p>
      */
     public $PolicyId;
 
     /**
-     * @var integer 触发条件模板 Id，可不传
+     * @var integer <p>触发条件模板 Id，可不传</p>
      */
     public $ConditionTemplateId;
 
     /**
-     * @var AlarmPolicyCondition 指标触发条件
+     * @var AlarmPolicyCondition <p>指标触发条件</p>
      */
     public $Condition;
 
     /**
-     * @var AlarmPolicyEventCondition 事件触发条件
+     * @var AlarmPolicyEventCondition <p>事件触发条件</p>
      */
     public $EventCondition;
 
     /**
-     * @var AlarmPolicyFilter 全局过滤条件
+     * @var AlarmPolicyFilter <p>全局过滤条件</p>
      */
     public $Filter;
 
     /**
-     * @var array 聚合维度列表，指定按哪些维度 key 来做 group by
+     * @var array <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
      */
     public $GroupBy;
 
     /**
-     * @var LogAlarmReq 日志告警创建请求参数信息
+     * @var LogAlarmReq <p>日志告警创建请求参数信息</p>
      */
     public $LogAlarmReqInfo;
 
     /**
-     * @var array 模板id，专供prom使用
+     * @var array <p>模板id，专供prom使用</p>
      */
     public $NoticeIds;
 
     /**
-     * @var integer 启停状态，0=停用，1=启用
+     * @var integer <p>启停状态，0=停用，1=启用</p>
      */
     public $Enable;
 
     /**
-     * @var string 专供prom策略名称
+     * @var string <p>专供prom策略名称</p>
      */
     public $PolicyName;
 
     /**
-     * @var string 事件配置的告警
+     * @var string <p>事件配置的告警</p>
      */
     public $EbSubject;
 
     /**
-     * @param string $Module 模块名，固定值 monitor
-     * @param string $PolicyId 告警策略 ID
-     * @param integer $ConditionTemplateId 触发条件模板 Id，可不传
-     * @param AlarmPolicyCondition $Condition 指标触发条件
-     * @param AlarmPolicyEventCondition $EventCondition 事件触发条件
-     * @param AlarmPolicyFilter $Filter 全局过滤条件
-     * @param array $GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
-     * @param LogAlarmReq $LogAlarmReqInfo 日志告警创建请求参数信息
-     * @param array $NoticeIds 模板id，专供prom使用
-     * @param integer $Enable 启停状态，0=停用，1=启用
-     * @param string $PolicyName 专供prom策略名称
-     * @param string $EbSubject 事件配置的告警
+     * @param string $Module <p>模块名，固定值 monitor</p>
+     * @param string $PolicyId <p>告警策略 ID</p>
+     * @param integer $ConditionTemplateId <p>触发条件模板 Id，可不传</p>
+     * @param AlarmPolicyCondition $Condition <p>指标触发条件</p>
+     * @param AlarmPolicyEventCondition $EventCondition <p>事件触发条件</p>
+     * @param AlarmPolicyFilter $Filter <p>全局过滤条件</p>
+     * @param array $GroupBy <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
+     * @param LogAlarmReq $LogAlarmReqInfo <p>日志告警创建请求参数信息</p>
+     * @param array $NoticeIds <p>模板id，专供prom使用</p>
+     * @param integer $Enable <p>启停状态，0=停用，1=启用</p>
+     * @param string $PolicyName <p>专供prom策略名称</p>
+     * @param string $EbSubject <p>事件配置的告警</p>
      */
     function __construct()
     {

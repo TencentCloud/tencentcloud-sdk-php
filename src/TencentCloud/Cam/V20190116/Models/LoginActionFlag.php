@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 登录和敏感操作flag（校验方式是单选）
  *
- * @method integer getPhone() 获取0: 非安全手机校验 1: 安全手机校验。
- * @method void setPhone(integer $Phone) 设置0: 非安全手机校验 1: 安全手机校验。
- * @method integer getToken() 获取0: 非硬token校验 1: 硬token校验。
- * @method void setToken(integer $Token) 设置0: 非硬token校验 1: 硬token校验。
- * @method integer getStoken() 获取0: 非软token校验 1: 软token校验
- * @method void setStoken(integer $Stoken) 设置0: 非软token校验 1: 软token校验
- * @method integer getWechat() 获取0: 非微信校验 1: 微信校验
- * @method void setWechat(integer $Wechat) 设置0: 非微信校验 1: 微信校验
- * @method integer getCustom() 获取0: 非自定义校验 1: 自定义校验
- * @method void setCustom(integer $Custom) 设置0: 非自定义校验 1: 自定义校验
- * @method integer getMail() 获取0: 非邮箱校验 1: 邮箱校验
- * @method void setMail(integer $Mail) 设置0: 非邮箱校验 1: 邮箱校验
- * @method integer getU2FToken() 获取0: 非u2f硬件token 1: u2f硬件token
- * @method void setU2FToken(integer $U2FToken) 设置0: 非u2f硬件token 1: u2f硬件token
+ * @method integer getPhone() 获取<p>0: 非安全手机校验 1: 安全手机校验。</p>
+ * @method void setPhone(integer $Phone) 设置<p>0: 非安全手机校验 1: 安全手机校验。</p>
+ * @method integer getToken() 获取<p>0: 非硬token校验 1: 硬token校验。</p>
+ * @method void setToken(integer $Token) 设置<p>0: 非硬token校验 1: 硬token校验。</p>
+ * @method integer getStoken() 获取<p>0: 非软token校验 1: 软token校验</p>
+ * @method void setStoken(integer $Stoken) 设置<p>0: 非软token校验 1: 软token校验</p>
+ * @method integer getWechat() 获取<p>0: 非微信校验 1: 微信校验</p>
+ * @method void setWechat(integer $Wechat) 设置<p>0: 非微信校验 1: 微信校验</p>
+ * @method integer getCustom() 获取<p>0: 非自定义校验 1: 自定义校验</p>
+ * @method void setCustom(integer $Custom) 设置<p>0: 非自定义校验 1: 自定义校验</p>
+ * @method integer getMail() 获取<p>0: 非邮箱校验 1: 邮箱校验</p>
+ * @method void setMail(integer $Mail) 设置<p>0: 非邮箱校验 1: 邮箱校验</p>
+ * @method integer getU2FToken() 获取<p>0: 非u2f硬件token 1: u2f硬件token</p>
+ * @method void setU2FToken(integer $U2FToken) 设置<p>0: 非u2f硬件token 1: u2f硬件token</p>
+ * @method integer getPasskey() 获取<p>0: 非passkey 校验 1: passkey校验</p>
+ * @method void setPasskey(integer $Passkey) 设置<p>0: 非passkey 校验 1: passkey校验</p>
  */
 class LoginActionFlag extends AbstractModel
 {
     /**
-     * @var integer 0: 非安全手机校验 1: 安全手机校验。
+     * @var integer <p>0: 非安全手机校验 1: 安全手机校验。</p>
      */
     public $Phone;
 
     /**
-     * @var integer 0: 非硬token校验 1: 硬token校验。
+     * @var integer <p>0: 非硬token校验 1: 硬token校验。</p>
      */
     public $Token;
 
     /**
-     * @var integer 0: 非软token校验 1: 软token校验
+     * @var integer <p>0: 非软token校验 1: 软token校验</p>
      */
     public $Stoken;
 
     /**
-     * @var integer 0: 非微信校验 1: 微信校验
+     * @var integer <p>0: 非微信校验 1: 微信校验</p>
      */
     public $Wechat;
 
     /**
-     * @var integer 0: 非自定义校验 1: 自定义校验
+     * @var integer <p>0: 非自定义校验 1: 自定义校验</p>
      */
     public $Custom;
 
     /**
-     * @var integer 0: 非邮箱校验 1: 邮箱校验
+     * @var integer <p>0: 非邮箱校验 1: 邮箱校验</p>
      */
     public $Mail;
 
     /**
-     * @var integer 0: 非u2f硬件token 1: u2f硬件token
+     * @var integer <p>0: 非u2f硬件token 1: u2f硬件token</p>
      */
     public $U2FToken;
 
     /**
-     * @param integer $Phone 0: 非安全手机校验 1: 安全手机校验。
-     * @param integer $Token 0: 非硬token校验 1: 硬token校验。
-     * @param integer $Stoken 0: 非软token校验 1: 软token校验
-     * @param integer $Wechat 0: 非微信校验 1: 微信校验
-     * @param integer $Custom 0: 非自定义校验 1: 自定义校验
-     * @param integer $Mail 0: 非邮箱校验 1: 邮箱校验
-     * @param integer $U2FToken 0: 非u2f硬件token 1: u2f硬件token
+     * @var integer <p>0: 非passkey 校验 1: passkey校验</p>
+     */
+    public $Passkey;
+
+    /**
+     * @param integer $Phone <p>0: 非安全手机校验 1: 安全手机校验。</p>
+     * @param integer $Token <p>0: 非硬token校验 1: 硬token校验。</p>
+     * @param integer $Stoken <p>0: 非软token校验 1: 软token校验</p>
+     * @param integer $Wechat <p>0: 非微信校验 1: 微信校验</p>
+     * @param integer $Custom <p>0: 非自定义校验 1: 自定义校验</p>
+     * @param integer $Mail <p>0: 非邮箱校验 1: 邮箱校验</p>
+     * @param integer $U2FToken <p>0: 非u2f硬件token 1: u2f硬件token</p>
+     * @param integer $Passkey <p>0: 非passkey 校验 1: passkey校验</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class LoginActionFlag extends AbstractModel
 
         if (array_key_exists("U2FToken",$param) and $param["U2FToken"] !== null) {
             $this->U2FToken = $param["U2FToken"];
+        }
+
+        if (array_key_exists("Passkey",$param) and $param["Passkey"] !== null) {
+            $this->Passkey = $param["Passkey"];
         }
     }
 }

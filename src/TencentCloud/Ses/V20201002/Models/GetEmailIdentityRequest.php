@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEmailIdentity请求参数结构体
  *
- * @method string getEmailIdentity() 获取发信域名
- * @method void setEmailIdentity(string $EmailIdentity) 设置发信域名
+ * @method string getEmailIdentity() 获取<p>发信域名</p>
+ * @method void setEmailIdentity(string $EmailIdentity) 设置<p>发信域名</p>
  */
 class GetEmailIdentityRequest extends AbstractModel
 {
     /**
-     * @var string 发信域名
+     * @var string <p>发信域名</p>
      */
     public $EmailIdentity;
 
     /**
-     * @param string $EmailIdentity 发信域名
+     * @param string $EmailIdentity <p>发信域名</p>
      */
     function __construct()
     {

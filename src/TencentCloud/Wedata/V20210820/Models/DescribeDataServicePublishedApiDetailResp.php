@@ -20,193 +20,205 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询数据服务API的发布态信息详情出参
  *
- * @method string getApiName() 获取服务Api名称
- * @method void setApiName(string $ApiName) 设置服务Api名称
- * @method string getPathUrl() 获取服务请求Path
- * @method void setPathUrl(string $PathUrl) 设置服务请求Path
- * @method string getOwnerName() 获取服务责任人名称
- * @method void setOwnerName(string $OwnerName) 设置服务责任人名称
- * @method string getRequestType() 获取服务请求方式
- * @method void setRequestType(string $RequestType) 设置服务请求方式
- * @method string getApiTagNames() 获取服务标签名称集合
+ * @method string getApiName() 获取<p>服务Api名称</p>
+ * @method void setApiName(string $ApiName) 设置<p>服务Api名称</p>
+ * @method string getPathUrl() 获取<p>服务请求Path</p>
+ * @method void setPathUrl(string $PathUrl) 设置<p>服务请求Path</p>
+ * @method string getOwnerName() 获取<p>服务责任人名称</p>
+ * @method void setOwnerName(string $OwnerName) 设置<p>服务责任人名称</p>
+ * @method string getRequestType() 获取<p>服务请求方式</p>
+ * @method void setRequestType(string $RequestType) 设置<p>服务请求方式</p>
+ * @method string getApiTagNames() 获取<p>服务标签名称集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiTagNames(string $ApiTagNames) 设置服务标签名称集合
+ * @method void setApiTagNames(string $ApiTagNames) 设置<p>服务标签名称集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApiDescription() 获取服务描述
+ * @method string getApiDescription() 获取<p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiDescription(string $ApiDescription) 设置服务描述
+ * @method void setApiDescription(string $ApiDescription) 设置<p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestExample() 获取服务请求返回示例
+ * @method string getRequestExample() 获取<p>服务请求返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestExample(string $RequestExample) 设置服务请求返回示例
+ * @method void setRequestExample(string $RequestExample) 设置<p>服务请求返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestSuccess() 获取服务请求成功返回示例
+ * @method string getRequestSuccess() 获取<p>服务请求成功返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestSuccess(string $RequestSuccess) 设置服务请求成功返回示例
+ * @method void setRequestSuccess(string $RequestSuccess) 设置<p>服务请求成功返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestError() 获取服务请求失败返回示例
+ * @method string getRequestError() 获取<p>服务请求失败返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestError(string $RequestError) 设置服务请求失败返回示例
+ * @method void setRequestError(string $RequestError) 设置<p>服务请求失败返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRequestParam() 获取服务请求参数列表
+ * @method array getRequestParam() 获取<p>服务请求参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestParam(array $RequestParam) 设置服务请求参数列表
+ * @method void setRequestParam(array $RequestParam) 设置<p>服务请求参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResponseParam() 获取服务响应参数列表
+ * @method array getResponseParam() 获取<p>服务响应参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResponseParam(array $ResponseParam) 设置服务响应参数列表
+ * @method void setResponseParam(array $ResponseParam) 设置<p>服务响应参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxAllowQps() 获取最大qps
- * @method void setMaxAllowQps(integer $MaxAllowQps) 设置最大qps
- * @method integer getMaxAllowPageSize() 获取最大记录数
- * @method void setMaxAllowPageSize(integer $MaxAllowPageSize) 设置最大记录数
- * @method integer getTimeoutPeriod() 获取超时时间，单位ms
- * @method void setTimeoutPeriod(integer $TimeoutPeriod) 设置超时时间，单位ms
- * @method string getApiId() 获取ApiId
+ * @method integer getMaxAllowQps() 获取<p>最大qps</p>
+ * @method void setMaxAllowQps(integer $MaxAllowQps) 设置<p>最大qps</p>
+ * @method integer getMaxAllowPageSize() 获取<p>最大记录数</p>
+ * @method void setMaxAllowPageSize(integer $MaxAllowPageSize) 设置<p>最大记录数</p>
+ * @method integer getTimeoutPeriod() 获取<p>超时时间，单位ms</p>
+ * @method void setTimeoutPeriod(integer $TimeoutPeriod) 设置<p>超时时间，单位ms</p>
+ * @method string getApiId() 获取<p>ApiId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiId(string $ApiId) 设置ApiId
+ * @method void setApiId(string $ApiId) 设置<p>ApiId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAuthType() 获取0:免认证 1:应用认证
- * @method void setAuthType(integer $AuthType) 设置0:免认证 1:应用认证
- * @method string getGatewayApiUrl() 获取请求地址
+ * @method integer getAuthType() 获取<p>认证方式</p><p>枚举值：</p><ul><li>0： 免认证</li><li>1： 应用认证</li><li>2： OAuth2.0认证</li></ul>
+ * @method void setAuthType(integer $AuthType) 设置<p>认证方式</p><p>枚举值：</p><ul><li>0： 免认证</li><li>1： 应用认证</li><li>2： OAuth2.0认证</li></ul>
+ * @method string getGatewayApiUrl() 获取<p>请求地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGatewayApiUrl(string $GatewayApiUrl) 设置请求地址
+ * @method void setGatewayApiUrl(string $GatewayApiUrl) 设置<p>请求地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getApiStatus() 获取服务Api状态 1:已上线  3:已下线
+ * @method integer getApiStatus() 获取<p>服务Api状态 1:已上线  3:已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiStatus(integer $ApiStatus) 设置服务Api状态 1:已上线  3:已下线
+ * @method void setApiStatus(integer $ApiStatus) 设置<p>服务Api状态 1:已上线  3:已下线</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnablePage() 获取<p>是否开启分页</p><p>枚举值：</p><ul><li>0： 开启分页</li><li>1： 未开启</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnablePage(integer $EnablePage) 设置<p>是否开启分页</p><p>枚举值：</p><ul><li>0： 开启分页</li><li>1： 未开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDataServicePublishedApiDetailResp extends AbstractModel
 {
     /**
-     * @var string 服务Api名称
+     * @var string <p>服务Api名称</p>
      */
     public $ApiName;
 
     /**
-     * @var string 服务请求Path
+     * @var string <p>服务请求Path</p>
      */
     public $PathUrl;
 
     /**
-     * @var string 服务责任人名称
+     * @var string <p>服务责任人名称</p>
      */
     public $OwnerName;
 
     /**
-     * @var string 服务请求方式
+     * @var string <p>服务请求方式</p>
      */
     public $RequestType;
 
     /**
-     * @var string 服务标签名称集合
+     * @var string <p>服务标签名称集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiTagNames;
 
     /**
-     * @var string 服务描述
+     * @var string <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiDescription;
 
     /**
-     * @var string 服务请求返回示例
+     * @var string <p>服务请求返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestExample;
 
     /**
-     * @var string 服务请求成功返回示例
+     * @var string <p>服务请求成功返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestSuccess;
 
     /**
-     * @var string 服务请求失败返回示例
+     * @var string <p>服务请求失败返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestError;
 
     /**
-     * @var array 服务请求参数列表
+     * @var array <p>服务请求参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestParam;
 
     /**
-     * @var array 服务响应参数列表
+     * @var array <p>服务响应参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResponseParam;
 
     /**
-     * @var integer 最大qps
+     * @var integer <p>最大qps</p>
      */
     public $MaxAllowQps;
 
     /**
-     * @var integer 最大记录数
+     * @var integer <p>最大记录数</p>
      */
     public $MaxAllowPageSize;
 
     /**
-     * @var integer 超时时间，单位ms
+     * @var integer <p>超时时间，单位ms</p>
      */
     public $TimeoutPeriod;
 
     /**
-     * @var string ApiId
+     * @var string <p>ApiId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiId;
 
     /**
-     * @var integer 0:免认证 1:应用认证
+     * @var integer <p>认证方式</p><p>枚举值：</p><ul><li>0： 免认证</li><li>1： 应用认证</li><li>2： OAuth2.0认证</li></ul>
      */
     public $AuthType;
 
     /**
-     * @var string 请求地址
+     * @var string <p>请求地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayApiUrl;
 
     /**
-     * @var integer 服务Api状态 1:已上线  3:已下线
+     * @var integer <p>服务Api状态 1:已上线  3:已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiStatus;
 
     /**
-     * @param string $ApiName 服务Api名称
-     * @param string $PathUrl 服务请求Path
-     * @param string $OwnerName 服务责任人名称
-     * @param string $RequestType 服务请求方式
-     * @param string $ApiTagNames 服务标签名称集合
+     * @var integer <p>是否开启分页</p><p>枚举值：</p><ul><li>0： 开启分页</li><li>1： 未开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApiDescription 服务描述
+     */
+    public $EnablePage;
+
+    /**
+     * @param string $ApiName <p>服务Api名称</p>
+     * @param string $PathUrl <p>服务请求Path</p>
+     * @param string $OwnerName <p>服务责任人名称</p>
+     * @param string $RequestType <p>服务请求方式</p>
+     * @param string $ApiTagNames <p>服务标签名称集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestExample 服务请求返回示例
+     * @param string $ApiDescription <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestSuccess 服务请求成功返回示例
+     * @param string $RequestExample <p>服务请求返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestError 服务请求失败返回示例
+     * @param string $RequestSuccess <p>服务请求成功返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RequestParam 服务请求参数列表
+     * @param string $RequestError <p>服务请求失败返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ResponseParam 服务响应参数列表
+     * @param array $RequestParam <p>服务请求参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxAllowQps 最大qps
-     * @param integer $MaxAllowPageSize 最大记录数
-     * @param integer $TimeoutPeriod 超时时间，单位ms
-     * @param string $ApiId ApiId
+     * @param array $ResponseParam <p>服务响应参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AuthType 0:免认证 1:应用认证
-     * @param string $GatewayApiUrl 请求地址
+     * @param integer $MaxAllowQps <p>最大qps</p>
+     * @param integer $MaxAllowPageSize <p>最大记录数</p>
+     * @param integer $TimeoutPeriod <p>超时时间，单位ms</p>
+     * @param string $ApiId <p>ApiId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ApiStatus 服务Api状态 1:已上线  3:已下线
+     * @param integer $AuthType <p>认证方式</p><p>枚举值：</p><ul><li>0： 免认证</li><li>1： 应用认证</li><li>2： OAuth2.0认证</li></ul>
+     * @param string $GatewayApiUrl <p>请求地址</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ApiStatus <p>服务Api状态 1:已上线  3:已下线</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnablePage <p>是否开启分页</p><p>枚举值：</p><ul><li>0： 开启分页</li><li>1： 未开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -302,6 +314,10 @@ class DescribeDataServicePublishedApiDetailResp extends AbstractModel
 
         if (array_key_exists("ApiStatus",$param) and $param["ApiStatus"] !== null) {
             $this->ApiStatus = $param["ApiStatus"];
+        }
+
+        if (array_key_exists("EnablePage",$param) and $param["EnablePage"] !== null) {
+            $this->EnablePage = $param["EnablePage"];
         }
     }
 }

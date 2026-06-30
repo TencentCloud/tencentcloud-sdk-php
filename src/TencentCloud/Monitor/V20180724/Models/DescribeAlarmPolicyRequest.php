@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmPolicy请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method string getPolicyId() 获取告警策略ID
- * @method void setPolicyId(string $PolicyId) 设置告警策略ID
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method string getPolicyId() 获取<p>告警策略ID</p>
+ * @method void setPolicyId(string $PolicyId) 设置<p>告警策略ID</p>
  */
 class DescribeAlarmPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var string 告警策略ID
+     * @var string <p>告警策略ID</p>
      */
     public $PolicyId;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param string $PolicyId 告警策略ID
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param string $PolicyId <p>告警策略ID</p>
      */
     function __construct()
     {

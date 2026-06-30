@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmSmsQuota请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
  */
 class DescribeAlarmSmsQuotaRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @param string $Module 固定值，为"monitor"
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
      */
     function __construct()
     {

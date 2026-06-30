@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRuleGroupId() 获取规则组ID
  * @method void setRuleGroupId(integer $RuleGroupId) 设置规则组ID
- * @method integer getTriggerType() 获取触发类型 1.手动触发 2.调度事中触发 3.周期调度触发
- * @method void setTriggerType(integer $TriggerType) 设置触发类型 1.手动触发 2.调度事中触发 3.周期调度触发
+ * @method integer getTriggerType() 获取触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
+ * @method void setTriggerType(integer $TriggerType) 设置触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
  * @method array getExecRuleConfig() 获取规则配置列表
  * @method void setExecRuleConfig(array $ExecRuleConfig) 设置规则配置列表
  * @method RuleExecConfig getExecConfig() 获取执行配置
  * @method void setExecConfig(RuleExecConfig $ExecConfig) 设置执行配置
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getEngineType() 获取该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
- * @method void setEngineType(string $EngineType) 设置该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+ * @method string getEngineType() 获取执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
+ * @method void setEngineType(string $EngineType) 设置执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
  */
 class CommitRuleGroupTaskRequest extends AbstractModel
 {
@@ -41,7 +41,7 @@ class CommitRuleGroupTaskRequest extends AbstractModel
     public $RuleGroupId;
 
     /**
-     * @var integer 触发类型 1.手动触发 2.调度事中触发 3.周期调度触发
+     * @var integer 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
      */
     public $TriggerType;
 
@@ -61,17 +61,17 @@ class CommitRuleGroupTaskRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @var string 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     public $EngineType;
 
     /**
      * @param integer $RuleGroupId 规则组ID
-     * @param integer $TriggerType 触发类型 1.手动触发 2.调度事中触发 3.周期调度触发
+     * @param integer $TriggerType 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
      * @param array $ExecRuleConfig 规则配置列表
      * @param RuleExecConfig $ExecConfig 执行配置
      * @param string $ProjectId 项目ID
-     * @param string $EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @param string $EngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     function __construct()
     {

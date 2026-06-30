@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 平台事件名称
  *
- * @method string getEventName() 获取事件名称
+ * @method string getEventName() 获取<p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventName(string $EventName) 设置事件名称
+ * @method void setEventName(string $EventName) 设置<p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEventType() 获取事件类型
+ * @method string getEventType() 获取<p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventType(string $EventType) 设置事件类型
+ * @method void setEventType(string $EventType) 设置<p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PlatformEventDetail extends AbstractModel
 {
     /**
-     * @var string 事件名称
+     * @var string <p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventName;
 
     /**
-     * @var string 事件类型
+     * @var string <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventType;
 
     /**
-     * @param string $EventName 事件名称
+     * @param string $EventName <p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EventType 事件类型
+     * @param string $EventType <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBasicAlarmList返回的Alarms里的InstanceGroup
  *
- * @method integer getInstanceGroupId() 获取实例组ID
+ * @method integer getInstanceGroupId() 获取<p>实例组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例组ID
+ * @method void setInstanceGroupId(integer $InstanceGroupId) 设置<p>实例组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceGroupName() 获取实例组名
+ * @method string getInstanceGroupName() 获取<p>实例组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceGroupName(string $InstanceGroupName) 设置实例组名
+ * @method void setInstanceGroupName(string $InstanceGroupName) 设置<p>实例组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceGroup extends AbstractModel
 {
     /**
-     * @var integer 实例组ID
+     * @var integer <p>实例组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceGroupId;
 
     /**
-     * @var string 实例组名
+     * @var string <p>实例组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceGroupName;
 
     /**
-     * @param integer $InstanceGroupId 实例组ID
+     * @param integer $InstanceGroupId <p>实例组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceGroupName 实例组名
+     * @param string $InstanceGroupName <p>实例组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

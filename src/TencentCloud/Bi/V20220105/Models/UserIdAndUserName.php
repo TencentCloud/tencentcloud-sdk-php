@@ -108,6 +108,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置<p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLarkAppId() 获取<p>飞书应用ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLarkAppId(string $LarkAppId) 设置<p>飞书应用ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLarkUserId() 获取<p>飞书UserId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLarkUserId(string $LarkUserId) 设置<p>飞书UserId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLarkOpenId() 获取<p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLarkOpenId(string $LarkOpenId) 设置<p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLarkUserName() 获取<p>飞书UserName</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLarkUserName(string $LarkUserName) 设置<p>飞书UserName</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserIdAndUserName extends AbstractModel
 {
@@ -248,6 +264,30 @@ class UserIdAndUserName extends AbstractModel
     public $Id;
 
     /**
+     * @var string <p>飞书应用ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LarkAppId;
+
+    /**
+     * @var string <p>飞书UserId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LarkUserId;
+
+    /**
+     * @var string <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LarkOpenId;
+
+    /**
+     * @var string <p>飞书UserName</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LarkUserName;
+
+    /**
      * @param string $UserId <p>用户ID</p>
      * @param string $UserName <p>用户名</p>
      * @param string $CorpId <p>企业ID</p>
@@ -291,6 +331,14 @@ class UserIdAndUserName extends AbstractModel
      * @param integer $EmailActivationStatus <p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id <p>1</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LarkAppId <p>飞书应用ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LarkUserId <p>飞书UserId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LarkOpenId <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LarkUserName <p>飞书UserName</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -396,6 +444,22 @@ class UserIdAndUserName extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("LarkAppId",$param) and $param["LarkAppId"] !== null) {
+            $this->LarkAppId = $param["LarkAppId"];
+        }
+
+        if (array_key_exists("LarkUserId",$param) and $param["LarkUserId"] !== null) {
+            $this->LarkUserId = $param["LarkUserId"];
+        }
+
+        if (array_key_exists("LarkOpenId",$param) and $param["LarkOpenId"] !== null) {
+            $this->LarkOpenId = $param["LarkOpenId"];
+        }
+
+        if (array_key_exists("LarkUserName",$param) and $param["LarkUserName"] !== null) {
+            $this->LarkUserName = $param["LarkUserName"];
         }
     }
 }

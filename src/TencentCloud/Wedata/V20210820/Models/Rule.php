@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置规则名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getType() 获取规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+ * @method integer getType() 获取规则类型：1-系统模版，2-自定义模版，3-自定义SQL
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+ * @method void setType(integer $Type) 设置规则类型：1-系统模版，2-自定义模版，3-自定义SQL
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleTemplateId() 获取规则模板Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,13 +48,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleTemplateContent(string $RuleTemplateContent) 设置规则模板概述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQualityDim() 获取规则所属质量维度 1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+ * @method integer getQualityDim() 获取质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQualityDim(integer $QualityDim) 设置规则所属质量维度 1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+ * @method void setQualityDim(integer $QualityDim) 设置质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSourceObjectType() 获取规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+ * @method integer getSourceObjectType() 获取源数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceObjectType(integer $SourceObjectType) 设置规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+ * @method void setSourceObjectType(integer $SourceObjectType) 设置源数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSourceObjectDataType() 获取规则适用的源数据对象类型（1：数值，2：字符串）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,9 +68,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceObjectValue(string $SourceObjectValue) 设置源字段名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getConditionType() 获取检测范围 1.全表, 2.条件扫描
+ * @method integer getConditionType() 获取检测范围类型：1-全表，2-条件扫描
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConditionType(integer $ConditionType) 设置检测范围 1.全表, 2.条件扫描
+ * @method void setConditionType(integer $ConditionType) 设置检测范围类型：1-全表，2-条件扫描
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConditionExpression() 获取条件扫描WHERE条件表达式
 注意：此字段可能返回 null，表示取不到有效值。
@@ -84,9 +84,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompareRule(CompareRule $CompareRule) 设置报警触发条件
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAlarmLevel() 获取报警触发级别 1.低, 2.中, 3.高
+ * @method integer getAlarmLevel() 获取告警级别：1-低，2-中，3-高
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmLevel(integer $AlarmLevel) 设置报警触发级别 1.低, 2.中, 3.高
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别：1-低，2-中，3-高
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取规则描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -140,13 +140,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubQualityDim(integer $SubQualityDim) 设置模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTargetObjectType() 获取规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+ * @method integer getTargetObjectType() 获取目标数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetObjectType(integer $TargetObjectType) 设置规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+ * @method void setTargetObjectType(integer $TargetObjectType) 设置目标数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTargetObjectDataType() 获取规则适用的目标数据对象类型（1：数值，2：字符串）
+ * @method integer getTargetObjectDataType() 获取目标字段数据类型：1-数值，2-字符串
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetObjectDataType(integer $TargetObjectDataType) 设置规则适用的目标数据对象类型（1：数值，2：字符串）
+ * @method void setTargetObjectDataType(integer $TargetObjectDataType) 设置目标字段数据类型：1-数值，2-字符串
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetObjectDataTypeName() 获取目标字段详细类型，INT、STRING
 注意：此字段可能返回 null，表示取不到有效值。
@@ -156,9 +156,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetObjectValue(string $TargetObjectValue) 设置目标字段名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSourceEngineTypes() 获取源端对应的引擎类型
+ * @method array getSourceEngineTypes() 获取执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置源端对应的引擎类型
+ * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableName() 获取表名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -188,9 +188,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseId(string $DatabaseId) 设置数据库 id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMonitorStatus() 获取监控是否开启.0false,1true
+ * @method integer getMonitorStatus() 获取监控是否开启：0-关闭，1-开启
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMonitorStatus(integer $MonitorStatus) 设置监控是否开启.0false,1true
+ * @method void setMonitorStatus(integer $MonitorStatus) 设置监控是否开启：0-关闭，1-开启
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTriggerCondition() 获取触发条件
 注意：此字段可能返回 null，表示取不到有效值。
@@ -200,9 +200,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDsEnvType(integer $DsEnvType) 设置0或者未返回或者null：未定义，1：生产，2：开发
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDatasourceType() 获取数据源类型
+ * @method integer getDatasourceType() 获取数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatasourceType(integer $DatasourceType) 设置数据源类型
+ * @method void setDatasourceType(integer $DatasourceType) 设置数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSchemaName() 获取模式名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -236,9 +236,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailMsg(string $FailMsg) 设置失败原因
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGroupType() 获取任务类型
+ * @method string getGroupType() 获取任务类型（同MonitorType）：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupType(string $GroupType) 设置任务类型
+ * @method void setGroupType(string $GroupType) 设置任务类型（同MonitorType）：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAspectTaskId() 获取编排任务id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -280,7 +280,7 @@ class Rule extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * @var integer 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -298,13 +298,13 @@ class Rule extends AbstractModel
     public $RuleTemplateContent;
 
     /**
-     * @var integer 规则所属质量维度 1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+     * @var integer 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityDim;
 
     /**
-     * @var integer 规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * @var integer 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceObjectType;
@@ -328,7 +328,7 @@ class Rule extends AbstractModel
     public $SourceObjectValue;
 
     /**
-     * @var integer 检测范围 1.全表, 2.条件扫描
+     * @var integer 检测范围类型：1-全表，2-条件扫描
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionType;
@@ -352,7 +352,7 @@ class Rule extends AbstractModel
     public $CompareRule;
 
     /**
-     * @var integer 报警触发级别 1.低, 2.中, 3.高
+     * @var integer 告警级别：1-低，2-中，3-高
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmLevel;
@@ -436,13 +436,13 @@ class Rule extends AbstractModel
     public $SubQualityDim;
 
     /**
-     * @var integer 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * @var integer 目标数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetObjectType;
 
     /**
-     * @var integer 规则适用的目标数据对象类型（1：数值，2：字符串）
+     * @var integer 目标字段数据类型：1-数值，2-字符串
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetObjectDataType;
@@ -460,7 +460,7 @@ class Rule extends AbstractModel
     public $TargetObjectValue;
 
     /**
-     * @var array 源端对应的引擎类型
+     * @var array 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceEngineTypes;
@@ -508,7 +508,7 @@ class Rule extends AbstractModel
     public $DatabaseId;
 
     /**
-     * @var integer 监控是否开启.0false,1true
+     * @var integer 监控是否开启：0-关闭，1-开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorStatus;
@@ -526,7 +526,7 @@ class Rule extends AbstractModel
     public $DsEnvType;
 
     /**
-     * @var integer 数据源类型
+     * @var integer 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceType;
@@ -580,7 +580,7 @@ class Rule extends AbstractModel
     public $FailMsg;
 
     /**
-     * @var string 任务类型
+     * @var string 任务类型（同MonitorType）：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupType;
@@ -612,15 +612,15 @@ class Rule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 规则名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Type 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * @param integer $Type 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleTemplateId 规则模板Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleTemplateContent 规则模板概述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QualityDim 规则所属质量维度 1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+     * @param integer $QualityDim 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SourceObjectType 规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * @param integer $SourceObjectType 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SourceObjectDataType 规则适用的源数据对象类型（1：数值，2：字符串）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -628,7 +628,7 @@ class Rule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceObjectValue 源字段名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ConditionType 检测范围 1.全表, 2.条件扫描
+     * @param integer $ConditionType 检测范围类型：1-全表，2-条件扫描
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConditionExpression 条件扫描WHERE条件表达式
 注意：此字段可能返回 null，表示取不到有效值。
@@ -636,7 +636,7 @@ class Rule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CompareRule $CompareRule 报警触发条件
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AlarmLevel 报警触发级别 1.低, 2.中, 3.高
+     * @param integer $AlarmLevel 告警级别：1-低，2-中，3-高
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 规则描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -664,15 +664,15 @@ class Rule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubQualityDim 模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TargetObjectType 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * @param integer $TargetObjectType 目标数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TargetObjectDataType 规则适用的目标数据对象类型（1：数值，2：字符串）
+     * @param integer $TargetObjectDataType 目标字段数据类型：1-数值，2-字符串
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetObjectDataTypeName 目标字段详细类型，INT、STRING
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetObjectValue 目标字段名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SourceEngineTypes 源端对应的引擎类型
+     * @param array $SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -688,13 +688,13 @@ class Rule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseId 数据库 id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MonitorStatus 监控是否开启.0false,1true
+     * @param integer $MonitorStatus 监控是否开启：0-关闭，1-开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerCondition 触发条件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DsEnvType 0或者未返回或者null：未定义，1：生产，2：开发
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DatasourceType 数据源类型
+     * @param integer $DatasourceType 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchemaName 模式名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -712,7 +712,7 @@ class Rule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailMsg 失败原因
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GroupType 任务类型
+     * @param string $GroupType 任务类型（同MonitorType）：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AspectTaskId 编排任务id
 注意：此字段可能返回 null，表示取不到有效值。

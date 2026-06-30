@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置<p>节点标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAutoRenew() 获取<p>节点是否自动续费标记</p><p>枚举值：</p><ul><li>1： 自动续费</li><li>0： 不自动续费</li></ul>
- * @method void setAutoRenew(integer $AutoRenew) 设置<p>节点是否自动续费标记</p><p>枚举值：</p><ul><li>1： 自动续费</li><li>0： 不自动续费</li></ul>
+ * @method integer getAutoRenew() 获取<p>节点是否自动续费标记</p><p>枚举值：</p><ul><li>1： 自动续费</li><li>2： 不自动续费</li></ul>
+ * @method void setAutoRenew(integer $AutoRenew) 设置<p>节点是否自动续费标记</p><p>枚举值：</p><ul><li>1： 自动续费</li><li>2： 不自动续费</li></ul>
  * @method string getSwitchId() 获取<p>交换机ID（已加密）</p>
  * @method void setSwitchId(string $SwitchId) 设置<p>交换机ID（已加密）</p>
  * @method string getRackId() 获取<p>机架ID（已加密）</p>
@@ -188,7 +188,7 @@ class DBCustomNode extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer <p>节点是否自动续费标记</p><p>枚举值：</p><ul><li>1： 自动续费</li><li>0： 不自动续费</li></ul>
+     * @var integer <p>节点是否自动续费标记</p><p>枚举值：</p><ul><li>1： 自动续费</li><li>2： 不自动续费</li></ul>
      */
     public $AutoRenew;
 
@@ -232,7 +232,7 @@ class DBCustomNode extends AbstractModel
      * @param string $IsolatedTime <p>节点隔离时间</p>
      * @param array $Tags <p>节点标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AutoRenew <p>节点是否自动续费标记</p><p>枚举值：</p><ul><li>1： 自动续费</li><li>0： 不自动续费</li></ul>
+     * @param integer $AutoRenew <p>节点是否自动续费标记</p><p>枚举值：</p><ul><li>1： 自动续费</li><li>2： 不自动续费</li></ul>
      * @param string $SwitchId <p>交换机ID（已加密）</p>
      * @param string $RackId <p>机架ID（已加密）</p>
      * @param string $HostIp <p>底层物理机IP（已加密）</p>

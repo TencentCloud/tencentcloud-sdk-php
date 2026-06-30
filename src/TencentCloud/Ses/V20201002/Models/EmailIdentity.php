@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 发信域名验证列表结构体
  *
- * @method string getIdentityName() 获取发信域名
- * @method void setIdentityName(string $IdentityName) 设置发信域名
- * @method string getIdentityType() 获取验证类型，固定为DOMAIN
- * @method void setIdentityType(string $IdentityType) 设置验证类型，固定为DOMAIN
- * @method boolean getSendingEnabled() 获取是否已通过验证
- * @method void setSendingEnabled(boolean $SendingEnabled) 设置是否已通过验证
- * @method integer getCurrentReputationLevel() 获取当前信誉等级
- * @method void setCurrentReputationLevel(integer $CurrentReputationLevel) 设置当前信誉等级
- * @method integer getDailyQuota() 获取当日最高发信量
- * @method void setDailyQuota(integer $DailyQuota) 设置当日最高发信量
- * @method array getSendIp() 获取域名配置的独立ip
- * @method void setSendIp(array $SendIp) 设置域名配置的独立ip
- * @method array getTagList() 获取tag 标签
- * @method void setTagList(array $TagList) 设置tag 标签
+ * @method string getIdentityName() 获取<p>发信域名</p>
+ * @method void setIdentityName(string $IdentityName) 设置<p>发信域名</p>
+ * @method string getIdentityType() 获取<p>验证类型，固定为DOMAIN</p>
+ * @method void setIdentityType(string $IdentityType) 设置<p>验证类型，固定为DOMAIN</p>
+ * @method boolean getSendingEnabled() 获取<p>是否已通过验证</p>
+ * @method void setSendingEnabled(boolean $SendingEnabled) 设置<p>是否已通过验证</p>
+ * @method integer getCurrentReputationLevel() 获取<p>当前信誉等级</p>
+ * @method void setCurrentReputationLevel(integer $CurrentReputationLevel) 设置<p>当前信誉等级</p>
+ * @method integer getDailyQuota() 获取<p>当日最高发信量</p>
+ * @method void setDailyQuota(integer $DailyQuota) 设置<p>当日最高发信量</p>
+ * @method array getSendIp() 获取<p>域名配置的独立ip</p>
+ * @method void setSendIp(array $SendIp) 设置<p>域名配置的独立ip</p>
+ * @method array getTagList() 获取<p>tag 标签</p>
+ * @method void setTagList(array $TagList) 设置<p>tag 标签</p>
+ * @method integer getDKIMOption() 获取<p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul><p>默认值：0</p>
+ * @method void setDKIMOption(integer $DKIMOption) 设置<p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul><p>默认值：0</p>
  */
 class EmailIdentity extends AbstractModel
 {
     /**
-     * @var string 发信域名
+     * @var string <p>发信域名</p>
      */
     public $IdentityName;
 
     /**
-     * @var string 验证类型，固定为DOMAIN
+     * @var string <p>验证类型，固定为DOMAIN</p>
      */
     public $IdentityType;
 
     /**
-     * @var boolean 是否已通过验证
+     * @var boolean <p>是否已通过验证</p>
      */
     public $SendingEnabled;
 
     /**
-     * @var integer 当前信誉等级
+     * @var integer <p>当前信誉等级</p>
      */
     public $CurrentReputationLevel;
 
     /**
-     * @var integer 当日最高发信量
+     * @var integer <p>当日最高发信量</p>
      */
     public $DailyQuota;
 
     /**
-     * @var array 域名配置的独立ip
+     * @var array <p>域名配置的独立ip</p>
      */
     public $SendIp;
 
     /**
-     * @var array tag 标签
+     * @var array <p>tag 标签</p>
      */
     public $TagList;
 
     /**
-     * @param string $IdentityName 发信域名
-     * @param string $IdentityType 验证类型，固定为DOMAIN
-     * @param boolean $SendingEnabled 是否已通过验证
-     * @param integer $CurrentReputationLevel 当前信誉等级
-     * @param integer $DailyQuota 当日最高发信量
-     * @param array $SendIp 域名配置的独立ip
-     * @param array $TagList tag 标签
+     * @var integer <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul><p>默认值：0</p>
+     */
+    public $DKIMOption;
+
+    /**
+     * @param string $IdentityName <p>发信域名</p>
+     * @param string $IdentityType <p>验证类型，固定为DOMAIN</p>
+     * @param boolean $SendingEnabled <p>是否已通过验证</p>
+     * @param integer $CurrentReputationLevel <p>当前信誉等级</p>
+     * @param integer $DailyQuota <p>当日最高发信量</p>
+     * @param array $SendIp <p>域名配置的独立ip</p>
+     * @param array $TagList <p>tag 标签</p>
+     * @param integer $DKIMOption <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class EmailIdentity extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("DKIMOption",$param) and $param["DKIMOption"] !== null) {
+            $this->DKIMOption = $param["DKIMOption"];
         }
     }
 }

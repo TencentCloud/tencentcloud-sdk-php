@@ -124,6 +124,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelProtocol(string $ModelProtocol) 设置<p>模型类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRawCustomModelProtocolConfig() 获取<p>自定义模型协议配置</p>
+ * @method void setRawCustomModelProtocolConfig(string $RawCustomModelProtocolConfig) 设置<p>自定义模型协议配置</p>
  */
 class DescribeModelServiceResponseVO extends AbstractModel
 {
@@ -328,6 +330,11 @@ class DescribeModelServiceResponseVO extends AbstractModel
     public $ModelProtocol;
 
     /**
+     * @var string <p>自定义模型协议配置</p>
+     */
+    public $RawCustomModelProtocolConfig;
+
+    /**
      * @param integer $AppID <p>腾讯云AppID</p>
      * @param string $Uin <p>腾讯云Uin</p>
      * @param string $InstanceID <p>实例ID</p>
@@ -380,6 +387,7 @@ class DescribeModelServiceResponseVO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelProtocol <p>模型类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RawCustomModelProtocolConfig <p>自定义模型协议配置</p>
      */
     function __construct()
     {
@@ -560,6 +568,10 @@ class DescribeModelServiceResponseVO extends AbstractModel
 
         if (array_key_exists("ModelProtocol",$param) and $param["ModelProtocol"] !== null) {
             $this->ModelProtocol = $param["ModelProtocol"];
+        }
+
+        if (array_key_exists("RawCustomModelProtocolConfig",$param) and $param["RawCustomModelProtocolConfig"] !== null) {
+            $this->RawCustomModelProtocolConfig = $param["RawCustomModelProtocolConfig"];
         }
     }
 }

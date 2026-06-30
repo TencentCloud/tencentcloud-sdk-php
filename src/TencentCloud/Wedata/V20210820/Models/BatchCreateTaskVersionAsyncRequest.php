@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchCreateTaskVersionAsync请求参数结构体
  *
- * @method array getTasks() 获取任务信息
- * @method void setTasks(array $Tasks) 设置任务信息
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method boolean getAutoRun() 获取是否自动运行
- * @method void setAutoRun(boolean $AutoRun) 设置是否自动运行
- * @method string getAlarmWays() 获取告警方式:email-邮件;sms-短信;wecom-企业微信
- * @method void setAlarmWays(string $AlarmWays) 设置告警方式:email-邮件;sms-短信;wecom-企业微信
- * @method string getAlarmRecipientTypes() 获取告警对象:1-项目管理员，2-任务责任人
- * @method void setAlarmRecipientTypes(string $AlarmRecipientTypes) 设置告警对象:1-项目管理员，2-任务责任人
- * @method boolean getNeedCheckParentSubmitted() 获取是否需要校验父任务已经提交到调度
- * @method void setNeedCheckParentSubmitted(boolean $NeedCheckParentSubmitted) 设置是否需要校验父任务已经提交到调度
- * @method boolean getEnableMakeUp() 获取是否需要补录中间实例
- * @method void setEnableMakeUp(boolean $EnableMakeUp) 设置是否需要补录中间实例
- * @method array getAssignApprovalList() 获取指定审批人列表
- * @method void setAssignApprovalList(array $AssignApprovalList) 设置指定审批人列表
+ * @method array getTasks() 获取<p>任务信息</p>
+ * @method void setTasks(array $Tasks) 设置<p>任务信息</p>
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method boolean getAutoRun() 获取<p>是否自动运行</p>
+ * @method void setAutoRun(boolean $AutoRun) 设置<p>是否自动运行</p>
+ * @method string getAlarmWays() 获取<p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
+ * @method void setAlarmWays(string $AlarmWays) 设置<p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
+ * @method string getAlarmRecipientTypes() 获取<p>告警对象:1-项目管理员，2-任务责任人</p>
+ * @method void setAlarmRecipientTypes(string $AlarmRecipientTypes) 设置<p>告警对象:1-项目管理员，2-任务责任人</p>
+ * @method boolean getNeedCheckParentSubmitted() 获取<p>是否需要校验父任务已经提交到调度</p>
+ * @method void setNeedCheckParentSubmitted(boolean $NeedCheckParentSubmitted) 设置<p>是否需要校验父任务已经提交到调度</p>
+ * @method boolean getEnableMakeUp() 获取<p>是否需要补录中间实例</p>
+ * @method void setEnableMakeUp(boolean $EnableMakeUp) 设置<p>是否需要补录中间实例</p>
+ * @method array getAssignApprovalList() 获取<p>指定审批人列表</p>
+ * @method void setAssignApprovalList(array $AssignApprovalList) 设置<p>指定审批人列表</p>
+ * @method array getPerTaskMissingInstanceStrategy() 获取<p>任务缺失实例处理策略</p><p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+ * @method void setPerTaskMissingInstanceStrategy(array $PerTaskMissingInstanceStrategy) 设置<p>任务缺失实例处理策略</p><p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
  */
 class BatchCreateTaskVersionAsyncRequest extends AbstractModel
 {
     /**
-     * @var array 任务信息
+     * @var array <p>任务信息</p>
      */
     public $Tasks;
 
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var boolean 是否自动运行
+     * @var boolean <p>是否自动运行</p>
      */
     public $AutoRun;
 
     /**
-     * @var string 告警方式:email-邮件;sms-短信;wecom-企业微信
+     * @var string <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
      */
     public $AlarmWays;
 
     /**
-     * @var string 告警对象:1-项目管理员，2-任务责任人
+     * @var string <p>告警对象:1-项目管理员，2-任务责任人</p>
      */
     public $AlarmRecipientTypes;
 
     /**
-     * @var boolean 是否需要校验父任务已经提交到调度
+     * @var boolean <p>是否需要校验父任务已经提交到调度</p>
      */
     public $NeedCheckParentSubmitted;
 
     /**
-     * @var boolean 是否需要补录中间实例
+     * @var boolean <p>是否需要补录中间实例</p>
      */
     public $EnableMakeUp;
 
     /**
-     * @var array 指定审批人列表
+     * @var array <p>指定审批人列表</p>
      */
     public $AssignApprovalList;
 
     /**
-     * @param array $Tasks 任务信息
-     * @param string $ProjectId 项目ID
-     * @param boolean $AutoRun 是否自动运行
-     * @param string $AlarmWays 告警方式:email-邮件;sms-短信;wecom-企业微信
-     * @param string $AlarmRecipientTypes 告警对象:1-项目管理员，2-任务责任人
-     * @param boolean $NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度
-     * @param boolean $EnableMakeUp 是否需要补录中间实例
-     * @param array $AssignApprovalList 指定审批人列表
+     * @var array <p>任务缺失实例处理策略</p><p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+     */
+    public $PerTaskMissingInstanceStrategy;
+
+    /**
+     * @param array $Tasks <p>任务信息</p>
+     * @param string $ProjectId <p>项目ID</p>
+     * @param boolean $AutoRun <p>是否自动运行</p>
+     * @param string $AlarmWays <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
+     * @param string $AlarmRecipientTypes <p>告警对象:1-项目管理员，2-任务责任人</p>
+     * @param boolean $NeedCheckParentSubmitted <p>是否需要校验父任务已经提交到调度</p>
+     * @param boolean $EnableMakeUp <p>是否需要补录中间实例</p>
+     * @param array $AssignApprovalList <p>指定审批人列表</p>
+     * @param array $PerTaskMissingInstanceStrategy <p>任务缺失实例处理策略</p><p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
      */
     function __construct()
     {
@@ -137,6 +145,15 @@ class BatchCreateTaskVersionAsyncRequest extends AbstractModel
 
         if (array_key_exists("AssignApprovalList",$param) and $param["AssignApprovalList"] !== null) {
             $this->AssignApprovalList = $param["AssignApprovalList"];
+        }
+
+        if (array_key_exists("PerTaskMissingInstanceStrategy",$param) and $param["PerTaskMissingInstanceStrategy"] !== null) {
+            $this->PerTaskMissingInstanceStrategy = [];
+            foreach ($param["PerTaskMissingInstanceStrategy"] as $key => $value){
+                $obj = new TaskMissingInstanceStrategy();
+                $obj->deserialize($value);
+                array_push($this->PerTaskMissingInstanceStrategy, $obj);
+            }
         }
     }
 }

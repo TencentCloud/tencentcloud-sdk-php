@@ -20,142 +20,142 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 策略组信息
  *
- * @method boolean getCanSetDefault() 获取是否可设为默认告警策略
- * @method void setCanSetDefault(boolean $CanSetDefault) 设置是否可设为默认告警策略
- * @method integer getGroupID() 获取告警策略组ID
- * @method void setGroupID(integer $GroupID) 设置告警策略组ID
- * @method string getGroupName() 获取告警策略组名称
- * @method void setGroupName(string $GroupName) 设置告警策略组名称
- * @method integer getInsertTime() 获取创建时间
- * @method void setInsertTime(integer $InsertTime) 设置创建时间
- * @method integer getIsDefault() 获取是否为默认告警策略
- * @method void setIsDefault(integer $IsDefault) 设置是否为默认告警策略
- * @method boolean getEnable() 获取告警策略启用状态
- * @method void setEnable(boolean $Enable) 设置告警策略启用状态
- * @method integer getLastEditUin() 获取最后修改人UIN
- * @method void setLastEditUin(integer $LastEditUin) 设置最后修改人UIN
- * @method integer getNoShieldedInstanceCount() 获取未屏蔽的实例数
- * @method void setNoShieldedInstanceCount(integer $NoShieldedInstanceCount) 设置未屏蔽的实例数
- * @method integer getParentGroupID() 获取父策略组ID
- * @method void setParentGroupID(integer $ParentGroupID) 设置父策略组ID
- * @method integer getProjectID() 获取所属项目ID
- * @method void setProjectID(integer $ProjectID) 设置所属项目ID
- * @method array getReceiverInfos() 获取告警接收对象信息
+ * @method boolean getCanSetDefault() 获取<p>是否可设为默认告警策略</p>
+ * @method void setCanSetDefault(boolean $CanSetDefault) 设置<p>是否可设为默认告警策略</p>
+ * @method integer getGroupID() 获取<p>告警策略组ID</p>
+ * @method void setGroupID(integer $GroupID) 设置<p>告警策略组ID</p>
+ * @method string getGroupName() 获取<p>告警策略组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>告警策略组名称</p>
+ * @method integer getInsertTime() 获取<p>创建时间</p>
+ * @method void setInsertTime(integer $InsertTime) 设置<p>创建时间</p>
+ * @method integer getIsDefault() 获取<p>是否为默认告警策略</p>
+ * @method void setIsDefault(integer $IsDefault) 设置<p>是否为默认告警策略</p>
+ * @method boolean getEnable() 获取<p>告警策略启用状态</p>
+ * @method void setEnable(boolean $Enable) 设置<p>告警策略启用状态</p>
+ * @method integer getLastEditUin() 获取<p>最后修改人UIN</p>
+ * @method void setLastEditUin(integer $LastEditUin) 设置<p>最后修改人UIN</p>
+ * @method integer getNoShieldedInstanceCount() 获取<p>未屏蔽的实例数</p>
+ * @method void setNoShieldedInstanceCount(integer $NoShieldedInstanceCount) 设置<p>未屏蔽的实例数</p>
+ * @method integer getParentGroupID() 获取<p>父策略组ID</p>
+ * @method void setParentGroupID(integer $ParentGroupID) 设置<p>父策略组ID</p>
+ * @method integer getProjectID() 获取<p>所属项目ID</p>
+ * @method void setProjectID(integer $ProjectID) 设置<p>所属项目ID</p>
+ * @method array getReceiverInfos() 获取<p>告警接收对象信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReceiverInfos(array $ReceiverInfos) 设置告警接收对象信息
+ * @method void setReceiverInfos(array $ReceiverInfos) 设置<p>告警接收对象信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
- * @method integer getUpdateTime() 获取修改时间
- * @method void setUpdateTime(integer $UpdateTime) 设置修改时间
- * @method integer getTotalInstanceCount() 获取总绑定实例数
- * @method void setTotalInstanceCount(integer $TotalInstanceCount) 设置总绑定实例数
- * @method string getViewName() 获取视图
- * @method void setViewName(string $ViewName) 设置视图
- * @method integer getIsUnionRule() 获取是否为与关系规则
- * @method void setIsUnionRule(integer $IsUnionRule) 设置是否为与关系规则
+ * @method string getRemark() 获取<p>备注信息</p>
+ * @method void setRemark(string $Remark) 设置<p>备注信息</p>
+ * @method integer getUpdateTime() 获取<p>修改时间</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>修改时间</p>
+ * @method integer getTotalInstanceCount() 获取<p>总绑定实例数</p>
+ * @method void setTotalInstanceCount(integer $TotalInstanceCount) 设置<p>总绑定实例数</p>
+ * @method string getViewName() 获取<p>视图</p>
+ * @method void setViewName(string $ViewName) 设置<p>视图</p>
+ * @method integer getIsUnionRule() 获取<p>是否为与关系规则</p>
+ * @method void setIsUnionRule(integer $IsUnionRule) 设置<p>是否为与关系规则</p>
  */
 class PolicyGroup extends AbstractModel
 {
     /**
-     * @var boolean 是否可设为默认告警策略
+     * @var boolean <p>是否可设为默认告警策略</p>
      */
     public $CanSetDefault;
 
     /**
-     * @var integer 告警策略组ID
+     * @var integer <p>告警策略组ID</p>
      */
     public $GroupID;
 
     /**
-     * @var string 告警策略组名称
+     * @var string <p>告警策略组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
      */
     public $InsertTime;
 
     /**
-     * @var integer 是否为默认告警策略
+     * @var integer <p>是否为默认告警策略</p>
      */
     public $IsDefault;
 
     /**
-     * @var boolean 告警策略启用状态
+     * @var boolean <p>告警策略启用状态</p>
      */
     public $Enable;
 
     /**
-     * @var integer 最后修改人UIN
+     * @var integer <p>最后修改人UIN</p>
      */
     public $LastEditUin;
 
     /**
-     * @var integer 未屏蔽的实例数
+     * @var integer <p>未屏蔽的实例数</p>
      */
     public $NoShieldedInstanceCount;
 
     /**
-     * @var integer 父策略组ID
+     * @var integer <p>父策略组ID</p>
      */
     public $ParentGroupID;
 
     /**
-     * @var integer 所属项目ID
+     * @var integer <p>所属项目ID</p>
      */
     public $ProjectID;
 
     /**
-     * @var array 告警接收对象信息
+     * @var array <p>告警接收对象信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiverInfos;
 
     /**
-     * @var string 备注信息
+     * @var string <p>备注信息</p>
      */
     public $Remark;
 
     /**
-     * @var integer 修改时间
+     * @var integer <p>修改时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer 总绑定实例数
+     * @var integer <p>总绑定实例数</p>
      */
     public $TotalInstanceCount;
 
     /**
-     * @var string 视图
+     * @var string <p>视图</p>
      */
     public $ViewName;
 
     /**
-     * @var integer 是否为与关系规则
+     * @var integer <p>是否为与关系规则</p>
      */
     public $IsUnionRule;
 
     /**
-     * @param boolean $CanSetDefault 是否可设为默认告警策略
-     * @param integer $GroupID 告警策略组ID
-     * @param string $GroupName 告警策略组名称
-     * @param integer $InsertTime 创建时间
-     * @param integer $IsDefault 是否为默认告警策略
-     * @param boolean $Enable 告警策略启用状态
-     * @param integer $LastEditUin 最后修改人UIN
-     * @param integer $NoShieldedInstanceCount 未屏蔽的实例数
-     * @param integer $ParentGroupID 父策略组ID
-     * @param integer $ProjectID 所属项目ID
-     * @param array $ReceiverInfos 告警接收对象信息
+     * @param boolean $CanSetDefault <p>是否可设为默认告警策略</p>
+     * @param integer $GroupID <p>告警策略组ID</p>
+     * @param string $GroupName <p>告警策略组名称</p>
+     * @param integer $InsertTime <p>创建时间</p>
+     * @param integer $IsDefault <p>是否为默认告警策略</p>
+     * @param boolean $Enable <p>告警策略启用状态</p>
+     * @param integer $LastEditUin <p>最后修改人UIN</p>
+     * @param integer $NoShieldedInstanceCount <p>未屏蔽的实例数</p>
+     * @param integer $ParentGroupID <p>父策略组ID</p>
+     * @param integer $ProjectID <p>所属项目ID</p>
+     * @param array $ReceiverInfos <p>告警接收对象信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Remark 备注信息
-     * @param integer $UpdateTime 修改时间
-     * @param integer $TotalInstanceCount 总绑定实例数
-     * @param string $ViewName 视图
-     * @param integer $IsUnionRule 是否为与关系规则
+     * @param string $Remark <p>备注信息</p>
+     * @param integer $UpdateTime <p>修改时间</p>
+     * @param integer $TotalInstanceCount <p>总绑定实例数</p>
+     * @param string $ViewName <p>视图</p>
+     * @param integer $IsUnionRule <p>是否为与关系规则</p>
      */
     function __construct()
     {

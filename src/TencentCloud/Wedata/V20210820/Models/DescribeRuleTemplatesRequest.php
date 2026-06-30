@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRuleTemplates请求参数结构体
  *
- * @method integer getType() 获取模板类型 1.系统模板 2.自定义模板
- * @method void setType(integer $Type) 设置模板类型 1.系统模板 2.自定义模板
- * @method integer getSourceObjectType() 获取1.常量 2.离线表级 2.离线字段级
- * @method void setSourceObjectType(integer $SourceObjectType) 设置1.常量 2.离线表级 2.离线字段级
+ * @method integer getType() 获取模版类型：1-系统模版，2-用户自定义模版
+ * @method void setType(integer $Type) 设置模版类型：1-系统模版，2-用户自定义模版
+ * @method integer getSourceObjectType() 获取源数据对象类型：1-常量，2-离线表级，3-离线字段级别
+ * @method void setSourceObjectType(integer $SourceObjectType) 设置源数据对象类型：1-常量，2-离线表级，3-离线字段级别
  * @method string getProjectId() 获取项目Id
  * @method void setProjectId(string $ProjectId) 设置项目Id
- * @method array getSourceEngineTypes() 获取源端对应的引擎类型
- * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置源端对应的引擎类型
+ * @method array getSourceEngineTypes() 获取执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
+ * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
  */
 class DescribeRuleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer 模板类型 1.系统模板 2.自定义模板
+     * @var integer 模版类型：1-系统模版，2-用户自定义模版
      */
     public $Type;
 
     /**
-     * @var integer 1.常量 2.离线表级 2.离线字段级
+     * @var integer 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
      */
     public $SourceObjectType;
 
@@ -47,15 +47,15 @@ class DescribeRuleTemplatesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array 源端对应的引擎类型
+     * @var array 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      */
     public $SourceEngineTypes;
 
     /**
-     * @param integer $Type 模板类型 1.系统模板 2.自定义模板
-     * @param integer $SourceObjectType 1.常量 2.离线表级 2.离线字段级
+     * @param integer $Type 模版类型：1-系统模版，2-用户自定义模版
+     * @param integer $SourceObjectType 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
      * @param string $ProjectId 项目Id
-     * @param array $SourceEngineTypes 源端对应的引擎类型
+     * @param array $SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      */
     function __construct()
     {

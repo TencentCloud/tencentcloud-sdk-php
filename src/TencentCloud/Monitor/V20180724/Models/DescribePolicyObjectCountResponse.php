@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyObjectCount返回参数结构体
  *
- * @method boolean getIsMultiRegion() 获取是否为多地域
+ * @method boolean getIsMultiRegion() 获取<p>是否为多地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsMultiRegion(boolean $IsMultiRegion) 设置是否为多地域
+ * @method void setIsMultiRegion(boolean $IsMultiRegion) 设置<p>是否为多地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRegionList() 获取地域统计列表
+ * @method array getRegionList() 获取<p>地域统计列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionList(array $RegionList) 设置地域统计列表
+ * @method void setRegionList(array $RegionList) 设置<p>地域统计列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribePolicyObjectCountResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否为多地域
+     * @var boolean <p>是否为多地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsMultiRegion;
 
     /**
-     * @var array 地域统计列表
+     * @var array <p>地域统计列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionList;
@@ -51,9 +51,9 @@ class DescribePolicyObjectCountResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $IsMultiRegion 是否为多地域
+     * @param boolean $IsMultiRegion <p>是否为多地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RegionList 地域统计列表
+     * @param array $RegionList <p>地域统计列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -32,24 +32,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableId(string $TableId) 设置数据表ID
  * @method integer getRuleTemplateId() 获取规则模板ID
  * @method void setRuleTemplateId(integer $RuleTemplateId) 设置规则模板ID
- * @method integer getType() 获取规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
- * @method void setType(integer $Type) 设置规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
- * @method integer getQualityDim() 获取规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
- * @method void setQualityDim(integer $QualityDim) 设置规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
+ * @method integer getType() 获取规则类型：1-系统模版，2-自定义模版，3-自定义SQL
+ * @method void setType(integer $Type) 设置规则类型：1-系统模版，2-自定义模版，3-自定义SQL
+ * @method integer getQualityDim() 获取质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
+ * @method void setQualityDim(integer $QualityDim) 设置质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
  * @method string getSourceObjectDataTypeName() 获取源字段详细类型，int、string
  * @method void setSourceObjectDataTypeName(string $SourceObjectDataTypeName) 设置源字段详细类型，int、string
  * @method string getSourceObjectValue() 获取源字段名称
  * @method void setSourceObjectValue(string $SourceObjectValue) 设置源字段名称
- * @method integer getConditionType() 获取检测范围 1.全表   2.条件扫描
- * @method void setConditionType(integer $ConditionType) 设置检测范围 1.全表   2.条件扫描
+ * @method integer getConditionType() 获取检测范围类型：1-全表，2-条件扫描
+ * @method void setConditionType(integer $ConditionType) 设置检测范围类型：1-全表，2-条件扫描
  * @method string getConditionExpression() 获取条件扫描WHERE条件表达式
  * @method void setConditionExpression(string $ConditionExpression) 设置条件扫描WHERE条件表达式
  * @method string getCustomSql() 获取自定义SQL
  * @method void setCustomSql(string $CustomSql) 设置自定义SQL
  * @method CompareRule getCompareRule() 获取报警触发条件
  * @method void setCompareRule(CompareRule $CompareRule) 设置报警触发条件
- * @method integer getAlarmLevel() 获取报警触发级别 1.低, 2.中, 3.高
- * @method void setAlarmLevel(integer $AlarmLevel) 设置报警触发级别 1.低, 2.中, 3.高
+ * @method integer getAlarmLevel() 获取告警级别：1-低，2-中，3-高
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别：1-低，2-中，3-高
  * @method string getDescription() 获取规则描述
  * @method void setDescription(string $Description) 设置规则描述
  * @method string getTargetDatabaseId() 获取目标库Id
@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFieldConfig(RuleFieldConfig $FieldConfig) 设置自定义模版sql表达式字段替换参数
  * @method string getTargetObjectValue() 获取目标字段名称  CITY
  * @method void setTargetObjectValue(string $TargetObjectValue) 设置目标字段名称  CITY
- * @method array getSourceEngineTypes() 获取该规则适配的执行引擎
- * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置该规则适配的执行引擎
+ * @method array getSourceEngineTypes() 获取执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
+ * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
  * @method string getTargetDatabaseName() 获取目标库名
  * @method void setTargetDatabaseName(string $TargetDatabaseName) 设置目标库名
  * @method string getTargetSchemaName() 获取目标模式名
@@ -110,12 +110,12 @@ class ModifyRuleRequest extends AbstractModel
     public $RuleTemplateId;
 
     /**
-     * @var integer 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * @var integer 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
      */
     public $Type;
 
     /**
-     * @var integer 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
+     * @var integer 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
      */
     public $QualityDim;
 
@@ -130,7 +130,7 @@ class ModifyRuleRequest extends AbstractModel
     public $SourceObjectValue;
 
     /**
-     * @var integer 检测范围 1.全表   2.条件扫描
+     * @var integer 检测范围类型：1-全表，2-条件扫描
      */
     public $ConditionType;
 
@@ -150,7 +150,7 @@ class ModifyRuleRequest extends AbstractModel
     public $CompareRule;
 
     /**
-     * @var integer 报警触发级别 1.低, 2.中, 3.高
+     * @var integer 告警级别：1-低，2-中，3-高
      */
     public $AlarmLevel;
 
@@ -190,7 +190,7 @@ class ModifyRuleRequest extends AbstractModel
     public $TargetObjectValue;
 
     /**
-     * @var array 该规则适配的执行引擎
+     * @var array 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      */
     public $SourceEngineTypes;
 
@@ -226,15 +226,15 @@ class ModifyRuleRequest extends AbstractModel
      * @param string $Name 规则名称
      * @param string $TableId 数据表ID
      * @param integer $RuleTemplateId 规则模板ID
-     * @param integer $Type 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
-     * @param integer $QualityDim 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
+     * @param integer $Type 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
+     * @param integer $QualityDim 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
      * @param string $SourceObjectDataTypeName 源字段详细类型，int、string
      * @param string $SourceObjectValue 源字段名称
-     * @param integer $ConditionType 检测范围 1.全表   2.条件扫描
+     * @param integer $ConditionType 检测范围类型：1-全表，2-条件扫描
      * @param string $ConditionExpression 条件扫描WHERE条件表达式
      * @param string $CustomSql 自定义SQL
      * @param CompareRule $CompareRule 报警触发条件
-     * @param integer $AlarmLevel 报警触发级别 1.低, 2.中, 3.高
+     * @param integer $AlarmLevel 告警级别：1-低，2-中，3-高
      * @param string $Description 规则描述
      * @param string $TargetDatabaseId 目标库Id
      * @param string $TargetTableId 目标表Id
@@ -242,7 +242,7 @@ class ModifyRuleRequest extends AbstractModel
      * @param string $RelConditionExpr 源字段与目标字段关联条件on表达式
      * @param RuleFieldConfig $FieldConfig 自定义模版sql表达式字段替换参数
      * @param string $TargetObjectValue 目标字段名称  CITY
-     * @param array $SourceEngineTypes 该规则适配的执行引擎
+     * @param array $SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      * @param string $TargetDatabaseName 目标库名
      * @param string $TargetSchemaName 目标模式名
      * @param string $TargetTableName 目标表名

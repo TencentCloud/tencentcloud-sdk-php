@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 策略标签
  *
- * @method string getKey() 获取标签Key
- * @method void setKey(string $Key) 设置标签Key
- * @method string getValue() 获取标签Value
- * @method void setValue(string $Value) 设置标签Value
+ * @method string getKey() 获取<p>标签Key</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKey(string $Key) 设置<p>标签Key</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getValue() 获取<p>标签Value</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValue(string $Value) 设置<p>标签Value</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PolicyTag extends AbstractModel
 {
     /**
-     * @var string 标签Key
+     * @var string <p>标签Key</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
-     * @var string 标签Value
+     * @var string <p>标签Value</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @param string $Key 标签Key
-     * @param string $Value 标签Value
+     * @param string $Key <p>标签Key</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Value <p>标签Value</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

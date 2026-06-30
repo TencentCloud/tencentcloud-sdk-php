@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method integer getRuleGroupId() 获取规则组id
  * @method void setRuleGroupId(integer $RuleGroupId) 设置规则组id
- * @method string getEngineType() 获取该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
- * @method void setEngineType(string $EngineType) 设置该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+ * @method string getEngineType() 获取执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
+ * @method void setEngineType(string $EngineType) 设置执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
  */
 class DescribeRulesRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeRulesRequest extends AbstractModel
     public $RuleGroupId;
 
     /**
-     * @var string 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @var string 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     public $EngineType;
 
     /**
      * @param string $ProjectId 项目id
      * @param integer $RuleGroupId 规则组id
-     * @param string $EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @param string $EngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     function __construct()
     {

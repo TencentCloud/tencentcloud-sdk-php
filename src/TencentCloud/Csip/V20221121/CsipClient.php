@@ -177,6 +177,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeKeySandboxCredentialListResponse DescribeKeySandboxCredentialList(Models\DescribeKeySandboxCredentialListRequest $req) 查询凭证列表
  * @method Models\DescribeListenerListResponse DescribeListenerList(Models\DescribeListenerListRequest $req) 查询clb监听器列表
  * @method Models\DescribeNICAssetsResponse DescribeNICAssets(Models\DescribeNICAssetsRequest $req) 获取网卡列表
+ * @method Models\DescribeNotifyAssetConfigResponse DescribeNotifyAssetConfig(Models\DescribeNotifyAssetConfigRequest $req) 获取通知资产范围配置
+ * @method Models\DescribeNotifySettingResponse DescribeNotifySetting(Models\DescribeNotifySettingRequest $req) 获取通知设置
+ * @method Models\DescribeNotifySettingAlertResponse DescribeNotifySettingAlert(Models\DescribeNotifySettingAlertRequest $req) 获取告警中心通知高级配置
  * @method Models\DescribeOrganizationInfoResponse DescribeOrganizationInfo(Models\DescribeOrganizationInfoRequest $req) 查询集团账号详情
  * @method Models\DescribeOrganizationUserInfoResponse DescribeOrganizationUserInfo(Models\DescribeOrganizationUserInfoRequest $req) 查询集团账号用户列表
  * @method Models\DescribeOtherCloudAssetsResponse DescribeOtherCloudAssets(Models\DescribeOtherCloudAssetsRequest $req) 资产列表
@@ -241,6 +244,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategy(Models\ModifyDspmWhitelistStrategyRequest $req) 修改Dspm白名单策略
  * @method Models\ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriod(Models\ModifyIaCTokenPeriodRequest $req) 修改IaC检测接入Token存储周期
  * @method Models\ModifyMachineRemarkResponse ModifyMachineRemark(Models\ModifyMachineRemarkRequest $req) 修改主机资产备注信息
+ * @method Models\ModifyNotifyAssetConfigResponse ModifyNotifyAssetConfig(Models\ModifyNotifyAssetConfigRequest $req) 修改通知资产范围配置
+ * @method Models\ModifyNotifySettingResponse ModifyNotifySetting(Models\ModifyNotifySettingRequest $req) 修改通知设置
+ * @method Models\ModifyNotifySettingAlertResponse ModifyNotifySettingAlert(Models\ModifyNotifySettingAlertRequest $req) 修改告警中心通知高级配置
  * @method Models\ModifyOrganizationAccountStatusResponse ModifyOrganizationAccountStatus(Models\ModifyOrganizationAccountStatusRequest $req) 修改集团账号状态
  * @method Models\ModifyPolicyStatusResponse ModifyPolicyStatus(Models\ModifyPolicyStatusRequest $req) 修改策略状态
  * @method Models\ModifyRiskCenterRiskStatusResponse ModifyRiskCenterRiskStatus(Models\ModifyRiskCenterRiskStatusRequest $req) 修改风险中心风险状态

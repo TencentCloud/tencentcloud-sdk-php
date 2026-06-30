@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 平台产品基础信息
  *
- * @method string getProductName() 获取平台产品名称
- * @method void setProductName(string $ProductName) 设置平台产品名称
- * @method string getProductType() 获取平台产品类型
- * @method void setProductType(string $ProductType) 设置平台产品类型
+ * @method string getProductName() 获取<p>平台产品名称</p>
+ * @method void setProductName(string $ProductName) 设置<p>平台产品名称</p>
+ * @method string getProductType() 获取<p>平台产品类型</p>
+ * @method void setProductType(string $ProductType) 设置<p>平台产品类型</p>
  */
 class PlatformProduct extends AbstractModel
 {
     /**
-     * @var string 平台产品名称
+     * @var string <p>平台产品名称</p>
      */
     public $ProductName;
 
     /**
-     * @var string 平台产品类型
+     * @var string <p>平台产品类型</p>
      */
     public $ProductType;
 
     /**
-     * @param string $ProductName 平台产品名称
-     * @param string $ProductType 平台产品类型
+     * @param string $ProductName <p>平台产品名称</p>
+     * @param string $ProductType <p>平台产品类型</p>
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRuleGroupId() 获取规则组ID
  * @method void setRuleGroupId(integer $RuleGroupId) 设置规则组ID
- * @method integer getMonitorType() 获取监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
- * @method void setMonitorType(integer $MonitorType) 设置监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+ * @method integer getMonitorType() 获取监控类型：1-未配置，2-关联生产调度，3-离线周期检测
+ * @method void setMonitorType(integer $MonitorType) 设置监控类型：1-未配置，2-关联生产调度，3-离线周期检测
  * @method string getExecQueue() 获取计算队列
  * @method void setExecQueue(string $ExecQueue) 设置计算队列
  * @method string getExecutorGroupId() 获取执行资源组ID
@@ -38,18 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置离线周期模式下,生效日期-开始时间
  * @method string getEndTime() 获取离线周期模式下,生效日期-结束时间
  * @method void setEndTime(string $EndTime) 设置离线周期模式下,生效日期-结束时间
- * @method string getCycleType() 获取离线周期模式下,调度周期 
-MINUTE_CYCLE:I,
-HOUR_CYCLE:H,
-DAY_CYCLE:D,
-WEEK_CYCLE:W,
-MONTH_CYCLE:M
- * @method void setCycleType(string $CycleType) 设置离线周期模式下,调度周期 
-MINUTE_CYCLE:I,
-HOUR_CYCLE:H,
-DAY_CYCLE:D,
-WEEK_CYCLE:W,
-MONTH_CYCLE:M
+ * @method string getCycleType() 获取周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
+ * @method void setCycleType(string $CycleType) 设置周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
  * @method integer getCycleStep() 获取离线周期模式下,调度步长
  * @method void setCycleStep(integer $CycleStep) 设置离线周期模式下,调度步长
  * @method string getTaskAction() 获取离线周期模式下,指定时间
@@ -62,10 +52,10 @@ MONTH_CYCLE:M
  * @method void setDatasourceId(string $DatasourceId) 设置数据源Id
  * @method string getTableId() 获取数据表Id
  * @method void setTableId(string $TableId) 设置数据表Id
- * @method string getExecEngineType() 获取运行的执行引擎，不传时会请求该数据源下默认的执行引擎
- * @method void setExecEngineType(string $ExecEngineType) 设置运行的执行引擎，不传时会请求该数据源下默认的执行引擎
- * @method array getTriggerTypes() 获取触发场景
- * @method void setTriggerTypes(array $TriggerTypes) 设置触发场景
+ * @method string getExecEngineType() 获取执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
+ * @method void setExecEngineType(string $ExecEngineType) 设置执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
+ * @method array getTriggerTypes() 获取触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
+ * @method void setTriggerTypes(array $TriggerTypes) 设置触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
  */
 class ModifyExecStrategyRequest extends AbstractModel
 {
@@ -75,7 +65,7 @@ class ModifyExecStrategyRequest extends AbstractModel
     public $RuleGroupId;
 
     /**
-     * @var integer 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * @var integer 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
      */
     public $MonitorType;
 
@@ -115,12 +105,7 @@ class ModifyExecStrategyRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 离线周期模式下,调度周期 
-MINUTE_CYCLE:I,
-HOUR_CYCLE:H,
-DAY_CYCLE:D,
-WEEK_CYCLE:W,
-MONTH_CYCLE:M
+     * @var string 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
      */
     public $CycleType;
 
@@ -155,18 +140,18 @@ MONTH_CYCLE:M
     public $TableId;
 
     /**
-     * @var string 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @var string 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     public $ExecEngineType;
 
     /**
-     * @var array 触发场景
+     * @var array 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
      */
     public $TriggerTypes;
 
     /**
      * @param integer $RuleGroupId 规则组ID
-     * @param integer $MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * @param integer $MonitorType 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
      * @param string $ExecQueue 计算队列
      * @param string $ExecutorGroupId 执行资源组ID
      * @param string $ExecutorGroupName 执行资源组名称
@@ -174,20 +159,15 @@ MONTH_CYCLE:M
      * @param string $ProjectId 项目ID
      * @param string $StartTime 离线周期模式下,生效日期-开始时间
      * @param string $EndTime 离线周期模式下,生效日期-结束时间
-     * @param string $CycleType 离线周期模式下,调度周期 
-MINUTE_CYCLE:I,
-HOUR_CYCLE:H,
-DAY_CYCLE:D,
-WEEK_CYCLE:W,
-MONTH_CYCLE:M
+     * @param string $CycleType 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
      * @param integer $CycleStep 离线周期模式下,调度步长
      * @param string $TaskAction 离线周期模式下,指定时间
      * @param integer $DelayTime 延时执行时间，单位分钟，可选: <0-1439
      * @param string $DatabaseId 数据库Id
      * @param string $DatasourceId 数据源Id
      * @param string $TableId 数据表Id
-     * @param string $ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
-     * @param array $TriggerTypes 触发场景
+     * @param string $ExecEngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
+     * @param array $TriggerTypes 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
      */
     function __construct()
     {

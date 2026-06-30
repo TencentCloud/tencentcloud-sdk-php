@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UnBindingAllPolicyObject请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method integer getGroupId() 获取策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
- * @method void setGroupId(integer $GroupId) 设置策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
- * @method string getPolicyId() 获取告警策略ID，使用此字段时 GroupId 会被忽略
- * @method void setPolicyId(string $PolicyId) 设置告警策略ID，使用此字段时 GroupId 会被忽略
- * @method string getEbSubject() 获取事件配置的告警
- * @method void setEbSubject(string $EbSubject) 设置事件配置的告警
- * @method integer getEbEventFlag() 获取是否配置了事件告警
- * @method void setEbEventFlag(integer $EbEventFlag) 设置是否配置了事件告警
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method integer getGroupId() 获取<p>策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0</p>
+ * @method void setGroupId(integer $GroupId) 设置<p>策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0</p>
+ * @method string getPolicyId() 获取<p>告警策略ID，使用此字段时 GroupId 会被忽略</p>
+ * @method void setPolicyId(string $PolicyId) 设置<p>告警策略ID，使用此字段时 GroupId 会被忽略</p>
+ * @method string getEbSubject() 获取<p>事件配置的告警</p>
+ * @method void setEbSubject(string $EbSubject) 设置<p>事件配置的告警</p>
+ * @method integer getEbEventFlag() 获取<p>是否配置了事件告警</p>
+ * @method void setEbEventFlag(integer $EbEventFlag) 设置<p>是否配置了事件告警</p>
  */
 class UnBindingAllPolicyObjectRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var integer 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
+     * @var integer <p>策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0</p>
      */
     public $GroupId;
 
     /**
-     * @var string 告警策略ID，使用此字段时 GroupId 会被忽略
+     * @var string <p>告警策略ID，使用此字段时 GroupId 会被忽略</p>
      */
     public $PolicyId;
 
     /**
-     * @var string 事件配置的告警
+     * @var string <p>事件配置的告警</p>
      */
     public $EbSubject;
 
     /**
-     * @var integer 是否配置了事件告警
+     * @var integer <p>是否配置了事件告警</p>
      */
     public $EbEventFlag;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param integer $GroupId 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
-     * @param string $PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
-     * @param string $EbSubject 事件配置的告警
-     * @param integer $EbEventFlag 是否配置了事件告警
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param integer $GroupId <p>策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0</p>
+     * @param string $PolicyId <p>告警策略ID，使用此字段时 GroupId 会被忽略</p>
+     * @param string $EbSubject <p>事件配置的告警</p>
+     * @param integer $EbEventFlag <p>是否配置了事件告警</p>
      */
     function __construct()
     {

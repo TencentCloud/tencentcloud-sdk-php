@@ -44,6 +44,7 @@ class AssociateSecurityGroupsRequest extends AbstractModel
 
     /**
      * @var string 可用区
+     * @deprecated
      */
     public $Zone;
 

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePhoneAlarmFlowTotalCount请求参数结构体
  *
- * @method string getModule() 获取默认monitor
- * @method void setModule(string $Module) 设置默认monitor
- * @method integer getQueryTime() 获取unix时间戳，单位：s
- * @method void setQueryTime(integer $QueryTime) 设置unix时间戳，单位：s
+ * @method string getModule() 获取<p>默认monitor</p>
+ * @method void setModule(string $Module) 设置<p>默认monitor</p>
+ * @method integer getQueryTime() 获取<p>unix时间戳，单位：s</p>
+ * @method void setQueryTime(integer $QueryTime) 设置<p>unix时间戳，单位：s</p>
  */
 class DescribePhoneAlarmFlowTotalCountRequest extends AbstractModel
 {
     /**
-     * @var string 默认monitor
+     * @var string <p>默认monitor</p>
      */
     public $Module;
 
     /**
-     * @var integer unix时间戳，单位：s
+     * @var integer <p>unix时间戳，单位：s</p>
      */
     public $QueryTime;
 
     /**
-     * @param string $Module 默认monitor
-     * @param integer $QueryTime unix时间戳，单位：s
+     * @param string $Module <p>默认monitor</p>
+     * @param integer $QueryTime <p>unix时间戳，单位：s</p>
      */
     function __construct()
     {

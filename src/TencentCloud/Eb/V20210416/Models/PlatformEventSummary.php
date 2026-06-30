@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 平台事件匹配规则
  *
- * @method string getEventName() 获取平台事件名称
+ * @method string getEventName() 获取<p>平台事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventName(string $EventName) 设置平台事件名称
+ * @method void setEventName(string $EventName) 设置<p>平台事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEventPattern() 获取平台事件匹配规则
+ * @method string getEventPattern() 获取<p>平台事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventPattern(string $EventPattern) 设置平台事件匹配规则
+ * @method void setEventPattern(string $EventPattern) 设置<p>平台事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PlatformEventSummary extends AbstractModel
 {
     /**
-     * @var string 平台事件名称
+     * @var string <p>平台事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventName;
 
     /**
-     * @var string 平台事件匹配规则
+     * @var string <p>平台事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventPattern;
 
     /**
-     * @param string $EventName 平台事件名称
+     * @param string $EventName <p>平台事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EventPattern 平台事件匹配规则
+     * @param string $EventPattern <p>平台事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

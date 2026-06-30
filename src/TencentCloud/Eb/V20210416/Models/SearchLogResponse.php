@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog返回参数结构体
  *
- * @method integer getTotal() 获取事件总数
+ * @method integer getTotal() 获取<p>事件总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置事件总数
+ * @method void setTotal(integer $Total) 设置<p>事件总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLimit() 获取每页事件条数
+ * @method integer getLimit() 获取<p>每页事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLimit(integer $Limit) 设置每页事件条数
+ * @method void setLimit(integer $Limit) 设置<p>每页事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPage() 获取页码
+ * @method integer getPage() 获取<p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPage(integer $Page) 设置页码
+ * @method void setPage(integer $Page) 设置<p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResults() 获取事件查询结果
+ * @method array getResults() 获取<p>事件查询结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResults(array $Results) 设置事件查询结果
+ * @method void setResults(array $Results) 设置<p>事件查询结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,25 +42,25 @@ use TencentCloud\Common\AbstractModel;
 class SearchLogResponse extends AbstractModel
 {
     /**
-     * @var integer 事件总数
+     * @var integer <p>事件总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var integer 每页事件条数
+     * @var integer <p>每页事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Limit;
 
     /**
-     * @var integer 页码
+     * @var integer <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
-     * @var array 事件查询结果
+     * @var array <p>事件查询结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
@@ -71,13 +71,13 @@ class SearchLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 事件总数
+     * @param integer $Total <p>事件总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Limit 每页事件条数
+     * @param integer $Limit <p>每页事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Page 页码
+     * @param integer $Page <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Results 事件查询结果
+     * @param array $Results <p>事件查询结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

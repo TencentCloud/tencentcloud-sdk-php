@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAlarmShields请求参数结构体
  *
- * @method string getModule() 获取模块名，这里填“monitor”
- * @method void setModule(string $Module) 设置模块名，这里填“monitor”
- * @method array getShields() 获取屏蔽策略Id列表
- * @method void setShields(array $Shields) 设置屏蔽策略Id列表
+ * @method string getModule() 获取<p>模块名，这里填“monitor”</p>
+ * @method void setModule(string $Module) 设置<p>模块名，这里填“monitor”</p>
+ * @method array getShields() 获取<p>屏蔽策略Id列表</p>
+ * @method void setShields(array $Shields) 设置<p>屏蔽策略Id列表</p>
  */
 class DeleteAlarmShieldsRequest extends AbstractModel
 {
     /**
-     * @var string 模块名，这里填“monitor”
+     * @var string <p>模块名，这里填“monitor”</p>
      */
     public $Module;
 
     /**
-     * @var array 屏蔽策略Id列表
+     * @var array <p>屏蔽策略Id列表</p>
      */
     public $Shields;
 
     /**
-     * @param string $Module 模块名，这里填“monitor”
-     * @param array $Shields 屏蔽策略Id列表
+     * @param string $Module <p>模块名，这里填“monitor”</p>
+     * @param array $Shields <p>屏蔽策略Id列表</p>
      */
     function __construct()
     {

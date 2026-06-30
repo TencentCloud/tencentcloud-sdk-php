@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamTaskLogList返回参数结构体
  *
- * @method boolean getListOver() 获取是否是全量
+ * @method boolean getListOver() 获取<p>是否是全量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setListOver(boolean $ListOver) 设置是否是全量
+ * @method void setListOver(boolean $ListOver) 设置<p>是否是全量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLogContentList() 获取日志集合
+ * @method array getLogContentList() 获取<p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogContentList(array $LogContentList) 设置日志集合
+ * @method void setLogContentList(array $LogContentList) 设置<p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeStreamTaskLogListResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否是全量
+     * @var boolean <p>是否是全量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListOver;
 
     /**
-     * @var array 日志集合
+     * @var array <p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogContentList;
@@ -51,9 +51,9 @@ class DescribeStreamTaskLogListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $ListOver 是否是全量
+     * @param boolean $ListOver <p>是否是全量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LogContentList 日志集合
+     * @param array $LogContentList <p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

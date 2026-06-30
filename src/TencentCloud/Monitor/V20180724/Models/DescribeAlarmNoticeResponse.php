@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmNotice返回参数结构体
  *
- * @method AlarmNotice getNotice() 获取告警通知模板详细信息
- * @method void setNotice(AlarmNotice $Notice) 设置告警通知模板详细信息
+ * @method AlarmNotice getNotice() 获取<p>告警通知模板详细信息</p>
+ * @method void setNotice(AlarmNotice $Notice) 设置<p>告警通知模板详细信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAlarmNoticeResponse extends AbstractModel
 {
     /**
-     * @var AlarmNotice 告警通知模板详细信息
+     * @var AlarmNotice <p>告警通知模板详细信息</p>
      */
     public $Notice;
 
@@ -38,7 +38,7 @@ class DescribeAlarmNoticeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AlarmNotice $Notice 告警通知模板详细信息
+     * @param AlarmNotice $Notice <p>告警通知模板详细信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

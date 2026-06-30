@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleGroupId(integer $RuleGroupId) 设置规则组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerType() 获取执行触发类型（1：手动触发， 2：调度事中触发，3：周期调度触发）
+ * @method integer getTriggerType() 获取触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerType(integer $TriggerType) 设置执行触发类型（1：手动触发， 2：调度事中触发，3：周期调度触发）
+ * @method void setTriggerType(integer $TriggerType) 设置触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecTime() 获取执行时间 yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
@@ -76,9 +76,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecDetail(string $ExecDetail) 设置执行详情，调度计划或者关联生产任务ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineType() 获取实际执行引擎
+ * @method string getEngineType() 获取执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineType(string $EngineType) 设置实际执行引擎
+ * @method void setEngineType(string $EngineType) 设置执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRuleExecResultVOList() 获取规则执行结果
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,7 +148,7 @@ class RuleGroupExecResult extends AbstractModel
     public $RuleGroupId;
 
     /**
-     * @var integer 执行触发类型（1：手动触发， 2：调度事中触发，3：周期调度触发）
+     * @var integer 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerType;
@@ -220,7 +220,7 @@ class RuleGroupExecResult extends AbstractModel
     public $ExecDetail;
 
     /**
-     * @var string 实际执行引擎
+     * @var string 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineType;
@@ -308,7 +308,7 @@ class RuleGroupExecResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerType 执行触发类型（1：手动触发， 2：调度事中触发，3：周期调度触发）
+     * @param integer $TriggerType 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecTime 执行时间 yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
@@ -332,7 +332,7 @@ class RuleGroupExecResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecDetail 执行详情，调度计划或者关联生产任务ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineType 实际执行引擎
+     * @param string $EngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RuleExecResultVOList 规则执行结果
 注意：此字段可能返回 null，表示取不到有效值。

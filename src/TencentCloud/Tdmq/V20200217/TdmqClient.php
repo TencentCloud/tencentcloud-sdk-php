@@ -139,7 +139,9 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
 当前 API 适用集群：4.x 通用集群。查询 5.x 集群的售卖规格接口文档见 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676)。
  * @method Models\DescribeRocketMQGroupsResponse DescribeRocketMQGroups(Models\DescribeRocketMQGroupsRequest $req) 查询 RocketMQ 消费组列表。
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。查询 5.x 集群的消费组列表接口文档见 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535)。
- * @method Models\DescribeRocketMQMigratingTopicListResponse DescribeRocketMQMigratingTopicList(Models\DescribeRocketMQMigratingTopicListRequest $req) 查询Topic迁移状态列表，源集群和目标集群客户端数量信息需要配合DescribeRocketMQSmoothMigrationTaskTopicInsNum接口查询
+ * @method Models\DescribeRocketMQMigratingTopicListResponse DescribeRocketMQMigratingTopicList(Models\DescribeRocketMQMigratingTopicListRequest $req) 历史接口，对应接口已迁移到trocket
+
+查询Topic迁移状态列表，源集群和目标集群客户端数量信息需要配合DescribeRocketMQSmoothMigrationTaskTopicInsNum接口查询
  * @method Models\DescribeRocketMQMsgResponse DescribeRocketMQMsg(Models\DescribeRocketMQMsgRequest $req) 查询 RocketMQ 消息详情。
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询消息详情接口文档见 [DescribeMessage](https://cloud.tencent.com/document/api/1493/114594)。
  * @method Models\DescribeRocketMQMsgTraceResponse DescribeRocketMQMsgTrace(Models\DescribeRocketMQMsgTraceRequest $req) 查询消息轨迹。
@@ -154,7 +156,9 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。查询 5.x 集群的公网接入点信息接口文档见 [DescribeInstance](https://cloud.tencent.com/document/api/1493/97866)。
  * @method Models\DescribeRocketMQRolesResponse DescribeRocketMQRoles(Models\DescribeRocketMQRolesRequest $req) 查询角色列表。
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询角色列表接口文档见 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862)。
- * @method Models\DescribeRocketMQSmoothMigrationTaskResponse DescribeRocketMQSmoothMigrationTask(Models\DescribeRocketMQSmoothMigrationTaskRequest $req) 用于获取RocketMQ平滑迁移任务详情
+ * @method Models\DescribeRocketMQSmoothMigrationTaskResponse DescribeRocketMQSmoothMigrationTask(Models\DescribeRocketMQSmoothMigrationTaskRequest $req) 历史接口，对应接口已迁移到trocket
+
+用于获取RocketMQ平滑迁移任务详情
  * @method Models\DescribeRocketMQSubscriptionsResponse DescribeRocketMQSubscriptions(Models\DescribeRocketMQSubscriptionsRequest $req) 查询 RocketMQ 消费组订阅关系列表。
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群查询消费组订阅的主题列表接口文档见 [DescribeTopicListByGroup](https://cloud.tencent.com/document/api/1493/115314)。
  * @method Models\DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsages(Models\DescribeRocketMQTopUsagesRequest $req) 用于获取RocketMQ指标排序列表，比如集群实例下占用存储空间最多的主题排序。
@@ -179,8 +183,12 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\ExecuteDisasterRecoveryResponse ExecuteDisasterRecovery(Models\ExecuteDisasterRecoveryRequest $req) 执行域名异地访问切换，域名的访问指向将切换至备份集群。
  * @method Models\ExportRocketMQMessageDetailResponse ExportRocketMQMessageDetail(Models\ExportRocketMQMessageDetailRequest $req) 导出RocketMQ消息详情
  * @method Models\GetTopicListResponse GetTopicList(Models\GetTopicListRequest $req) 获取环境下主题列表
- * @method Models\ImportRocketMQConsumerGroupsResponse ImportRocketMQConsumerGroups(Models\ImportRocketMQConsumerGroupsRequest $req) 输入迁移任务id和要导入的Group，导入后台
- * @method Models\ImportRocketMQTopicsResponse ImportRocketMQTopics(Models\ImportRocketMQTopicsRequest $req) 导入topic列表
+ * @method Models\ImportRocketMQConsumerGroupsResponse ImportRocketMQConsumerGroups(Models\ImportRocketMQConsumerGroupsRequest $req) 历史接口，对应接口已迁移到trocket
+
+输入迁移任务id和要导入的Group，导入后台
+ * @method Models\ImportRocketMQTopicsResponse ImportRocketMQTopics(Models\ImportRocketMQTopicsRequest $req) 历史接口，对应接口已迁移到trocket
+
+导入topic列表
  * @method Models\ModifyClusterResponse ModifyCluster(Models\ModifyClusterRequest $req) 更新集群信息
  * @method Models\ModifyCmqQueueAttributeResponse ModifyCmqQueueAttribute(Models\ModifyCmqQueueAttributeRequest $req) 修改cmq队列属性
  * @method Models\ModifyCmqSubscriptionAttributeResponse ModifyCmqSubscriptionAttribute(Models\ModifyCmqSubscriptionAttributeRequest $req) 修改cmq订阅属性

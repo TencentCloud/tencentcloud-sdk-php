@@ -47,6 +47,7 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     /**
      * @var string 可用区。
 说明：请正确输入集群所在的主可用区，若输入非集群所在的主可用区可能显示调用成功，但实际执行会失败。
+     * @deprecated
      */
     public $Zone;
 

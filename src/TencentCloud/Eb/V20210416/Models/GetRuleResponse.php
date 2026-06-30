@@ -20,71 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetRule返回参数结构体
  *
- * @method string getEventBusId() 获取事件集id
- * @method void setEventBusId(string $EventBusId) 设置事件集id
- * @method string getRuleId() 获取事件规则id
- * @method void setRuleId(string $RuleId) 设置事件规则id
- * @method string getRuleName() 获取事件规则名称
- * @method void setRuleName(string $RuleName) 设置事件规则名称
- * @method string getStatus() 获取事件规则状态
- * @method void setStatus(string $Status) 设置事件规则状态
- * @method boolean getEnable() 获取使能开关
- * @method void setEnable(boolean $Enable) 设置使能开关
- * @method string getDescription() 获取事件规则描述
- * @method void setDescription(string $Description) 设置事件规则描述
- * @method string getEventPattern() 获取事件模式
- * @method void setEventPattern(string $EventPattern) 设置事件模式
- * @method string getAddTime() 获取创建时间
- * @method void setAddTime(string $AddTime) 设置创建时间
- * @method string getModTime() 获取更新时间
- * @method void setModTime(string $ModTime) 设置更新时间
+ * @method string getEventBusId() 获取<p>事件集id</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集id</p>
+ * @method string getRuleId() 获取<p>事件规则id</p>
+ * @method void setRuleId(string $RuleId) 设置<p>事件规则id</p>
+ * @method string getRuleName() 获取<p>事件规则名称</p>
+ * @method void setRuleName(string $RuleName) 设置<p>事件规则名称</p>
+ * @method string getStatus() 获取<p>事件规则状态</p>
+ * @method void setStatus(string $Status) 设置<p>事件规则状态</p>
+ * @method boolean getEnable() 获取<p>使能开关</p>
+ * @method void setEnable(boolean $Enable) 设置<p>使能开关</p>
+ * @method string getDescription() 获取<p>事件规则描述</p>
+ * @method void setDescription(string $Description) 设置<p>事件规则描述</p>
+ * @method string getEventPattern() 获取<p>事件模式</p>
+ * @method void setEventPattern(string $EventPattern) 设置<p>事件模式</p>
+ * @method string getAddTime() 获取<p>创建时间</p>
+ * @method void setAddTime(string $AddTime) 设置<p>创建时间</p>
+ * @method string getModTime() 获取<p>更新时间</p>
+ * @method void setModTime(string $ModTime) 设置<p>更新时间</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetRuleResponse extends AbstractModel
 {
     /**
-     * @var string 事件集id
+     * @var string <p>事件集id</p>
      */
     public $EventBusId;
 
     /**
-     * @var string 事件规则id
+     * @var string <p>事件规则id</p>
      */
     public $RuleId;
 
     /**
-     * @var string 事件规则名称
+     * @var string <p>事件规则名称</p>
      */
     public $RuleName;
 
     /**
-     * @var string 事件规则状态
+     * @var string <p>事件规则状态</p>
      */
     public $Status;
 
     /**
-     * @var boolean 使能开关
+     * @var boolean <p>使能开关</p>
      */
     public $Enable;
 
     /**
-     * @var string 事件规则描述
+     * @var string <p>事件规则描述</p>
      */
     public $Description;
 
     /**
-     * @var string 事件模式
+     * @var string <p>事件模式</p>
      */
     public $EventPattern;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $AddTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $ModTime;
 
@@ -94,15 +94,15 @@ class GetRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $EventBusId 事件集id
-     * @param string $RuleId 事件规则id
-     * @param string $RuleName 事件规则名称
-     * @param string $Status 事件规则状态
-     * @param boolean $Enable 使能开关
-     * @param string $Description 事件规则描述
-     * @param string $EventPattern 事件模式
-     * @param string $AddTime 创建时间
-     * @param string $ModTime 更新时间
+     * @param string $EventBusId <p>事件集id</p>
+     * @param string $RuleId <p>事件规则id</p>
+     * @param string $RuleName <p>事件规则名称</p>
+     * @param string $Status <p>事件规则状态</p>
+     * @param boolean $Enable <p>使能开关</p>
+     * @param string $Description <p>事件规则描述</p>
+     * @param string $EventPattern <p>事件模式</p>
+     * @param string $AddTime <p>创建时间</p>
+     * @param string $ModTime <p>更新时间</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

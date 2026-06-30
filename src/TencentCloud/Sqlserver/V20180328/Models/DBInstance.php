@@ -20,458 +20,466 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例详细信息
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getName() 获取实例名称
- * @method void setName(string $Name) 设置实例名称
- * @method integer getProjectId() 获取实例所在项目ID
- * @method void setProjectId(integer $ProjectId) 设置实例所在项目ID
- * @method integer getRegionId() 获取实例所在地域ID
- * @method void setRegionId(integer $RegionId) 设置实例所在地域ID
- * @method integer getZoneId() 获取实例所在可用区ID
- * @method void setZoneId(integer $ZoneId) 设置实例所在可用区ID
- * @method integer getVpcId() 获取实例所在私有网络ID，基础网络时为 0
- * @method void setVpcId(integer $VpcId) 设置实例所在私有网络ID，基础网络时为 0
- * @method integer getSubnetId() 获取实例所在私有网络子网ID，基础网络时为 0
- * @method void setSubnetId(integer $SubnetId) 设置实例所在私有网络子网ID，基础网络时为 0
- * @method integer getStatus() 获取实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
- * @method void setStatus(integer $Status) 设置实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
- * @method string getVip() 获取实例访问IP
- * @method void setVip(string $Vip) 设置实例访问IP
- * @method integer getVport() 获取实例访问端口
- * @method void setVport(integer $Vport) 设置实例访问端口
- * @method string getCreateTime() 获取实例创建时间
- * @method void setCreateTime(string $CreateTime) 设置实例创建时间
- * @method string getUpdateTime() 获取实例更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置实例更新时间
- * @method string getStartTime() 获取实例计费开始时间
- * @method void setStartTime(string $StartTime) 设置实例计费开始时间
- * @method string getEndTime() 获取实例计费结束时间
- * @method void setEndTime(string $EndTime) 设置实例计费结束时间
- * @method string getIsolateTime() 获取实例隔离时间
- * @method void setIsolateTime(string $IsolateTime) 设置实例隔离时间
- * @method integer getMemory() 获取实例内存大小，单位G
- * @method void setMemory(integer $Memory) 设置实例内存大小，单位G
- * @method integer getUsedStorage() 获取实例已经使用存储空间大小，单位G
- * @method void setUsedStorage(integer $UsedStorage) 设置实例已经使用存储空间大小，单位G
- * @method integer getStorage() 获取实例存储空间大小，单位G
- * @method void setStorage(integer $Storage) 设置实例存储空间大小，单位G
- * @method string getVersionName() 获取实例版本
- * @method void setVersionName(string $VersionName) 设置实例版本
- * @method integer getRenewFlag() 获取实例续费标记，0-正常续费，1-自动续费，2-到期不续费
- * @method void setRenewFlag(integer $RenewFlag) 设置实例续费标记，0-正常续费，1-自动续费，2-到期不续费
- * @method integer getModel() 获取实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
- * @method void setModel(integer $Model) 设置实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
- * @method string getRegion() 获取实例所在地域名称，如 ap-guangzhou
- * @method void setRegion(string $Region) 设置实例所在地域名称，如 ap-guangzhou
- * @method string getZone() 获取实例所在可用区名称，如 ap-guangzhou-1
- * @method void setZone(string $Zone) 设置实例所在可用区名称，如 ap-guangzhou-1
- * @method string getBackupTime() 获取备份时间点
- * @method void setBackupTime(string $BackupTime) 设置备份时间点
- * @method integer getPayMode() 获取实例付费模式， 0-按量计费，1-包年包月
- * @method void setPayMode(integer $PayMode) 设置实例付费模式， 0-按量计费，1-包年包月
- * @method string getUid() 获取实例唯一UID
- * @method void setUid(string $Uid) 设置实例唯一UID
- * @method integer getCpu() 获取实例cpu核心数
- * @method void setCpu(integer $Cpu) 设置实例cpu核心数
- * @method string getVersion() 获取实例版本代号
- * @method void setVersion(string $Version) 设置实例版本代号
- * @method string getType() 获取实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
- * @method void setType(string $Type) 设置实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
- * @method integer getPid() 获取计费ID
- * @method void setPid(integer $Pid) 设置计费ID
- * @method string getUniqVpcId() 获取实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
- * @method void setUniqVpcId(string $UniqVpcId) 设置实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
- * @method string getUniqSubnetId() 获取实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
- * @method string getIsolateOperator() 获取实例隔离操作
- * @method void setIsolateOperator(string $IsolateOperator) 设置实例隔离操作
- * @method string getSubFlag() 获取发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
- * @method void setSubFlag(string $SubFlag) 设置发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
- * @method string getROFlag() 获取只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
- * @method void setROFlag(string $ROFlag) 设置只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
- * @method string getHAFlag() 获取容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
- * @method void setHAFlag(string $HAFlag) 设置容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
- * @method array getResourceTags() 获取实例绑定的标签列表
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getName() 获取<p>实例名称</p>
+ * @method void setName(string $Name) 设置<p>实例名称</p>
+ * @method integer getProjectId() 获取<p>实例所在项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>实例所在项目ID</p>
+ * @method integer getRegionId() 获取<p>实例所在地域ID</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>实例所在地域ID</p>
+ * @method integer getZoneId() 获取<p>实例所在可用区ID</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>实例所在可用区ID</p>
+ * @method integer getVpcId() 获取<p>实例所在私有网络ID，基础网络时为 0</p>
+ * @method void setVpcId(integer $VpcId) 设置<p>实例所在私有网络ID，基础网络时为 0</p>
+ * @method integer getSubnetId() 获取<p>实例所在私有网络子网ID，基础网络时为 0</p>
+ * @method void setSubnetId(integer $SubnetId) 设置<p>实例所在私有网络子网ID，基础网络时为 0</p>
+ * @method integer getStatus() 获取<p>实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li></p>
+ * @method void setStatus(integer $Status) 设置<p>实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li></p>
+ * @method string getVip() 获取<p>实例访问IP</p>
+ * @method void setVip(string $Vip) 设置<p>实例访问IP</p>
+ * @method integer getVport() 获取<p>实例访问端口</p>
+ * @method void setVport(integer $Vport) 设置<p>实例访问端口</p>
+ * @method string getCreateTime() 获取<p>实例创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>实例创建时间</p>
+ * @method string getUpdateTime() 获取<p>实例更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>实例更新时间</p>
+ * @method string getStartTime() 获取<p>实例计费开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>实例计费开始时间</p>
+ * @method string getEndTime() 获取<p>实例计费结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>实例计费结束时间</p>
+ * @method string getIsolateTime() 获取<p>实例隔离时间</p>
+ * @method void setIsolateTime(string $IsolateTime) 设置<p>实例隔离时间</p>
+ * @method integer getMemory() 获取<p>实例内存大小，单位G</p>
+ * @method void setMemory(integer $Memory) 设置<p>实例内存大小，单位G</p>
+ * @method integer getUsedStorage() 获取<p>实例已经使用存储空间大小，单位G</p>
+ * @method void setUsedStorage(integer $UsedStorage) 设置<p>实例已经使用存储空间大小，单位G</p>
+ * @method integer getStorage() 获取<p>实例存储空间大小，单位G</p>
+ * @method void setStorage(integer $Storage) 设置<p>实例存储空间大小，单位G</p>
+ * @method string getVersionName() 获取<p>实例版本</p>
+ * @method void setVersionName(string $VersionName) 设置<p>实例版本</p>
+ * @method integer getRenewFlag() 获取<p>实例续费标记，0-正常续费，1-自动续费，2-到期不续费</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>实例续费标记，0-正常续费，1-自动续费，2-到期不续费</p>
+ * @method integer getModel() 获取<p>实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房</p>
+ * @method void setModel(integer $Model) 设置<p>实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房</p>
+ * @method string getRegion() 获取<p>实例所在地域名称，如 ap-guangzhou</p>
+ * @method void setRegion(string $Region) 设置<p>实例所在地域名称，如 ap-guangzhou</p>
+ * @method string getZone() 获取<p>实例所在可用区名称，如 ap-guangzhou-1</p>
+ * @method void setZone(string $Zone) 设置<p>实例所在可用区名称，如 ap-guangzhou-1</p>
+ * @method string getBackupTime() 获取<p>备份时间点</p>
+ * @method void setBackupTime(string $BackupTime) 设置<p>备份时间点</p>
+ * @method integer getPayMode() 获取<p>实例付费模式， 0-按量计费，1-包年包月</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>实例付费模式， 0-按量计费，1-包年包月</p>
+ * @method string getUid() 获取<p>实例唯一UID</p>
+ * @method void setUid(string $Uid) 设置<p>实例唯一UID</p>
+ * @method integer getCpu() 获取<p>实例cpu核心数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>实例cpu核心数</p>
+ * @method string getVersion() 获取<p>实例版本代号</p>
+ * @method void setVersion(string $Version) 设置<p>实例版本代号</p>
+ * @method string getType() 获取<p>实例类型代号：&quot;TS85&quot;-物理机，本地SSD硬盘；&quot;Z3&quot;-物理机早期版本，本地SSD硬盘；&quot;CLOUD_BASIC&quot;-虚拟机，普通云硬盘；&quot;CLOUD_PREMIUM&quot;-虚拟机，高性能云硬盘；&quot;CLOUD_SSD&quot;-虚拟机，云SSD硬盘；&quot;CLOUD_HSSD&quot;-虚拟机，增强型SSD云硬盘；&quot;CLOUD_TSSD&quot;-虚拟机，极速型SSD云硬盘；&quot;CLOUD_BSSD&quot;-虚拟机，通用型SSD云硬盘</p>
+ * @method void setType(string $Type) 设置<p>实例类型代号：&quot;TS85&quot;-物理机，本地SSD硬盘；&quot;Z3&quot;-物理机早期版本，本地SSD硬盘；&quot;CLOUD_BASIC&quot;-虚拟机，普通云硬盘；&quot;CLOUD_PREMIUM&quot;-虚拟机，高性能云硬盘；&quot;CLOUD_SSD&quot;-虚拟机，云SSD硬盘；&quot;CLOUD_HSSD&quot;-虚拟机，增强型SSD云硬盘；&quot;CLOUD_TSSD&quot;-虚拟机，极速型SSD云硬盘；&quot;CLOUD_BSSD&quot;-虚拟机，通用型SSD云硬盘</p>
+ * @method integer getPid() 获取<p>计费ID</p>
+ * @method void setPid(integer $Pid) 设置<p>计费ID</p>
+ * @method string getUniqVpcId() 获取<p>实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串</p>
+ * @method void setUniqVpcId(string $UniqVpcId) 设置<p>实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串</p>
+ * @method string getUniqSubnetId() 获取<p>实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置<p>实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串</p>
+ * @method string getIsolateOperator() 获取<p>实例隔离操作</p>
+ * @method void setIsolateOperator(string $IsolateOperator) 设置<p>实例隔离操作</p>
+ * @method string getSubFlag() 获取<p>发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例</p>
+ * @method void setSubFlag(string $SubFlag) 设置<p>发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例</p>
+ * @method string getROFlag() 获取<p>只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例</p>
+ * @method void setROFlag(string $ROFlag) 设置<p>只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例</p>
+ * @method string getHAFlag() 获取<p>容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例</p>
+ * @method void setHAFlag(string $HAFlag) 设置<p>容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例</p>
+ * @method array getResourceTags() 获取<p>实例绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceTags(array $ResourceTags) 设置实例绑定的标签列表
+ * @method void setResourceTags(array $ResourceTags) 设置<p>实例绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBackupModel() 获取备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
- * @method void setBackupModel(string $BackupModel) 设置备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
- * @method string getInstanceNote() 获取实例备份信息
- * @method void setInstanceNote(string $InstanceNote) 设置实例备份信息
- * @method array getBackupCycle() 获取备份周期
- * @method void setBackupCycle(array $BackupCycle) 设置备份周期
- * @method string getBackupCycleType() 获取备份周期类型，[daily、weekly、monthly]
- * @method void setBackupCycleType(string $BackupCycleType) 设置备份周期类型，[daily、weekly、monthly]
- * @method integer getBackupSaveDays() 获取数据(日志)备份保留时间
- * @method void setBackupSaveDays(integer $BackupSaveDays) 设置数据(日志)备份保留时间
- * @method string getInstanceType() 获取实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
-
- * @method void setInstanceType(string $InstanceType) 设置实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
-
- * @method array getCrossRegions() 获取跨地域备份目的地域，如果为空，则表示未开启跨地域备份
- * @method void setCrossRegions(array $CrossRegions) 设置跨地域备份目的地域，如果为空，则表示未开启跨地域备份
- * @method string getCrossBackupEnabled() 获取跨地域备份状态 enable-开启，disable-关闭
- * @method void setCrossBackupEnabled(string $CrossBackupEnabled) 设置跨地域备份状态 enable-开启，disable-关闭
- * @method integer getCrossBackupSaveDays() 获取跨地域备份保留天数，则默认7天
- * @method void setCrossBackupSaveDays(integer $CrossBackupSaveDays) 设置跨地域备份保留天数，则默认7天
- * @method string getDnsPodDomain() 获取外网地址域名
- * @method void setDnsPodDomain(string $DnsPodDomain) 设置外网地址域名
- * @method integer getTgwWanVPort() 获取外网端口号
- * @method void setTgwWanVPort(integer $TgwWanVPort) 设置外网端口号
- * @method string getCollation() 获取系统字符集排序规则，默认：Chinese_PRC_CI_AS
- * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
- * @method string getTimeZone() 获取系统时区，默认：China Standard Time
- * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
- * @method boolean getIsDrZone() 获取是否跨AZ
- * @method void setIsDrZone(boolean $IsDrZone) 设置是否跨AZ
- * @method SlaveZones getSlaveZones() 获取双节点实例备可用区信息
- * @method void setSlaveZones(SlaveZones $SlaveZones) 设置双节点实例备可用区信息
- * @method string getArchitecture() 获取架构标识，SINGLE-单节点 DOUBLE-双节点
- * @method void setArchitecture(string $Architecture) 设置架构标识，SINGLE-单节点 DOUBLE-双节点
- * @method string getStyle() 获取类型标识，EXCLUSIVE-独享型，SHARED-共享型
- * @method void setStyle(string $Style) 设置类型标识，EXCLUSIVE-独享型，SHARED-共享型
- * @method array getMultiSlaveZones() 获取多节点实例备可用区信息
- * @method void setMultiSlaveZones(array $MultiSlaveZones) 设置多节点实例备可用区信息
+ * @method string getBackupModel() 获取<p>备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。</p>
+ * @method void setBackupModel(string $BackupModel) 设置<p>备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。</p>
+ * @method string getInstanceNote() 获取<p>实例备份信息</p>
+ * @method void setInstanceNote(string $InstanceNote) 设置<p>实例备份信息</p>
+ * @method array getBackupCycle() 获取<p>备份周期</p>
+ * @method void setBackupCycle(array $BackupCycle) 设置<p>备份周期</p>
+ * @method string getBackupCycleType() 获取<p>备份周期类型，[daily、weekly、monthly]</p>
+ * @method void setBackupCycleType(string $BackupCycleType) 设置<p>备份周期类型，[daily、weekly、monthly]</p>
+ * @method integer getBackupSaveDays() 获取<p>数据(日志)备份保留时间</p>
+ * @method void setBackupSaveDays(integer $BackupSaveDays) 设置<p>数据(日志)备份保留时间</p>
+ * @method string getInstanceType() 获取<p>实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点</p>
+ * @method array getCrossRegions() 获取<p>跨地域备份目的地域，如果为空，则表示未开启跨地域备份</p>
+ * @method void setCrossRegions(array $CrossRegions) 设置<p>跨地域备份目的地域，如果为空，则表示未开启跨地域备份</p>
+ * @method string getCrossBackupEnabled() 获取<p>跨地域备份状态 enable-开启，disable-关闭</p>
+ * @method void setCrossBackupEnabled(string $CrossBackupEnabled) 设置<p>跨地域备份状态 enable-开启，disable-关闭</p>
+ * @method integer getCrossBackupSaveDays() 获取<p>跨地域备份保留天数，则默认7天</p>
+ * @method void setCrossBackupSaveDays(integer $CrossBackupSaveDays) 设置<p>跨地域备份保留天数，则默认7天</p>
+ * @method string getDnsPodDomain() 获取<p>外网地址域名</p>
+ * @method void setDnsPodDomain(string $DnsPodDomain) 设置<p>外网地址域名</p>
+ * @method integer getTgwWanVPort() 获取<p>外网端口号</p>
+ * @method void setTgwWanVPort(integer $TgwWanVPort) 设置<p>外网端口号</p>
+ * @method string getCollation() 获取<p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
+ * @method void setCollation(string $Collation) 设置<p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
+ * @method string getTimeZone() 获取<p>系统时区，默认：China Standard Time</p>
+ * @method void setTimeZone(string $TimeZone) 设置<p>系统时区，默认：China Standard Time</p>
+ * @method boolean getIsDrZone() 获取<p>是否跨AZ</p>
+ * @method void setIsDrZone(boolean $IsDrZone) 设置<p>是否跨AZ</p>
+ * @method SlaveZones getSlaveZones() 获取<p>双节点实例备可用区信息</p>
+ * @method void setSlaveZones(SlaveZones $SlaveZones) 设置<p>双节点实例备可用区信息</p>
+ * @method string getArchitecture() 获取<p>架构标识，SINGLE-单节点 DOUBLE-双节点</p>
+ * @method void setArchitecture(string $Architecture) 设置<p>架构标识，SINGLE-单节点 DOUBLE-双节点</p>
+ * @method string getStyle() 获取<p>类型标识，EXCLUSIVE-独享型，SHARED-共享型</p>
+ * @method void setStyle(string $Style) 设置<p>类型标识，EXCLUSIVE-独享型，SHARED-共享型</p>
+ * @method array getMultiSlaveZones() 获取<p>多节点实例备可用区信息</p>
+ * @method void setMultiSlaveZones(array $MultiSlaveZones) 设置<p>多节点实例备可用区信息</p>
+ * @method integer getThroughputPerformance() 获取<p>额外IO吞吐量</p><p>单位：MB/s</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置<p>额外IO吞吐量</p><p>单位：MB/s</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 实例所在项目ID
+     * @var integer <p>实例所在项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 实例所在地域ID
+     * @var integer <p>实例所在地域ID</p>
      */
     public $RegionId;
 
     /**
-     * @var integer 实例所在可用区ID
+     * @var integer <p>实例所在可用区ID</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer 实例所在私有网络ID，基础网络时为 0
+     * @var integer <p>实例所在私有网络ID，基础网络时为 0</p>
      */
     public $VpcId;
 
     /**
-     * @var integer 实例所在私有网络子网ID，基础网络时为 0
+     * @var integer <p>实例所在私有网络子网ID，基础网络时为 0</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
+     * @var integer <p>实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li></p>
      */
     public $Status;
 
     /**
-     * @var string 实例访问IP
+     * @var string <p>实例访问IP</p>
      */
     public $Vip;
 
     /**
-     * @var integer 实例访问端口
+     * @var integer <p>实例访问端口</p>
      */
     public $Vport;
 
     /**
-     * @var string 实例创建时间
+     * @var string <p>实例创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 实例更新时间
+     * @var string <p>实例更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 实例计费开始时间
+     * @var string <p>实例计费开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 实例计费结束时间
+     * @var string <p>实例计费结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 实例隔离时间
+     * @var string <p>实例隔离时间</p>
      */
     public $IsolateTime;
 
     /**
-     * @var integer 实例内存大小，单位G
+     * @var integer <p>实例内存大小，单位G</p>
      */
     public $Memory;
 
     /**
-     * @var integer 实例已经使用存储空间大小，单位G
+     * @var integer <p>实例已经使用存储空间大小，单位G</p>
      */
     public $UsedStorage;
 
     /**
-     * @var integer 实例存储空间大小，单位G
+     * @var integer <p>实例存储空间大小，单位G</p>
      */
     public $Storage;
 
     /**
-     * @var string 实例版本
+     * @var string <p>实例版本</p>
      */
     public $VersionName;
 
     /**
-     * @var integer 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
+     * @var integer <p>实例续费标记，0-正常续费，1-自动续费，2-到期不续费</p>
      */
     public $RenewFlag;
 
     /**
-     * @var integer 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
+     * @var integer <p>实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房</p>
      */
     public $Model;
 
     /**
-     * @var string 实例所在地域名称，如 ap-guangzhou
+     * @var string <p>实例所在地域名称，如 ap-guangzhou</p>
      */
     public $Region;
 
     /**
-     * @var string 实例所在可用区名称，如 ap-guangzhou-1
+     * @var string <p>实例所在可用区名称，如 ap-guangzhou-1</p>
      */
     public $Zone;
 
     /**
-     * @var string 备份时间点
+     * @var string <p>备份时间点</p>
      */
     public $BackupTime;
 
     /**
-     * @var integer 实例付费模式， 0-按量计费，1-包年包月
+     * @var integer <p>实例付费模式， 0-按量计费，1-包年包月</p>
      */
     public $PayMode;
 
     /**
-     * @var string 实例唯一UID
+     * @var string <p>实例唯一UID</p>
      */
     public $Uid;
 
     /**
-     * @var integer 实例cpu核心数
+     * @var integer <p>实例cpu核心数</p>
      */
     public $Cpu;
 
     /**
-     * @var string 实例版本代号
+     * @var string <p>实例版本代号</p>
      */
     public $Version;
 
     /**
-     * @var string 实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
+     * @var string <p>实例类型代号：&quot;TS85&quot;-物理机，本地SSD硬盘；&quot;Z3&quot;-物理机早期版本，本地SSD硬盘；&quot;CLOUD_BASIC&quot;-虚拟机，普通云硬盘；&quot;CLOUD_PREMIUM&quot;-虚拟机，高性能云硬盘；&quot;CLOUD_SSD&quot;-虚拟机，云SSD硬盘；&quot;CLOUD_HSSD&quot;-虚拟机，增强型SSD云硬盘；&quot;CLOUD_TSSD&quot;-虚拟机，极速型SSD云硬盘；&quot;CLOUD_BSSD&quot;-虚拟机，通用型SSD云硬盘</p>
      */
     public $Type;
 
     /**
-     * @var integer 计费ID
+     * @var integer <p>计费ID</p>
      */
     public $Pid;
 
     /**
-     * @var string 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+     * @var string <p>实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+     * @var string <p>实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var string 实例隔离操作
+     * @var string <p>实例隔离操作</p>
      */
     public $IsolateOperator;
 
     /**
-     * @var string 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+     * @var string <p>发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例</p>
      */
     public $SubFlag;
 
     /**
-     * @var string 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+     * @var string <p>只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例</p>
      */
     public $ROFlag;
 
     /**
-     * @var string 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+     * @var string <p>容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例</p>
      */
     public $HAFlag;
 
     /**
-     * @var array 实例绑定的标签列表
+     * @var array <p>实例绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceTags;
 
     /**
-     * @var string 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
+     * @var string <p>备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。</p>
      */
     public $BackupModel;
 
     /**
-     * @var string 实例备份信息
+     * @var string <p>实例备份信息</p>
      */
     public $InstanceNote;
 
     /**
-     * @var array 备份周期
+     * @var array <p>备份周期</p>
      */
     public $BackupCycle;
 
     /**
-     * @var string 备份周期类型，[daily、weekly、monthly]
+     * @var string <p>备份周期类型，[daily、weekly、monthly]</p>
      */
     public $BackupCycleType;
 
     /**
-     * @var integer 数据(日志)备份保留时间
+     * @var integer <p>数据(日志)备份保留时间</p>
      */
     public $BackupSaveDays;
 
     /**
-     * @var string 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
-
+     * @var string <p>实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点</p>
      */
     public $InstanceType;
 
     /**
-     * @var array 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+     * @var array <p>跨地域备份目的地域，如果为空，则表示未开启跨地域备份</p>
      */
     public $CrossRegions;
 
     /**
-     * @var string 跨地域备份状态 enable-开启，disable-关闭
+     * @var string <p>跨地域备份状态 enable-开启，disable-关闭</p>
      */
     public $CrossBackupEnabled;
 
     /**
-     * @var integer 跨地域备份保留天数，则默认7天
+     * @var integer <p>跨地域备份保留天数，则默认7天</p>
      */
     public $CrossBackupSaveDays;
 
     /**
-     * @var string 外网地址域名
+     * @var string <p>外网地址域名</p>
      */
     public $DnsPodDomain;
 
     /**
-     * @var integer 外网端口号
+     * @var integer <p>外网端口号</p>
      */
     public $TgwWanVPort;
 
     /**
-     * @var string 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * @var string <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
      */
     public $Collation;
 
     /**
-     * @var string 系统时区，默认：China Standard Time
+     * @var string <p>系统时区，默认：China Standard Time</p>
      */
     public $TimeZone;
 
     /**
-     * @var boolean 是否跨AZ
+     * @var boolean <p>是否跨AZ</p>
      */
     public $IsDrZone;
 
     /**
-     * @var SlaveZones 双节点实例备可用区信息
+     * @var SlaveZones <p>双节点实例备可用区信息</p>
      */
     public $SlaveZones;
 
     /**
-     * @var string 架构标识，SINGLE-单节点 DOUBLE-双节点
+     * @var string <p>架构标识，SINGLE-单节点 DOUBLE-双节点</p>
      */
     public $Architecture;
 
     /**
-     * @var string 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+     * @var string <p>类型标识，EXCLUSIVE-独享型，SHARED-共享型</p>
      */
     public $Style;
 
     /**
-     * @var array 多节点实例备可用区信息
+     * @var array <p>多节点实例备可用区信息</p>
      */
     public $MultiSlaveZones;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Name 实例名称
-     * @param integer $ProjectId 实例所在项目ID
-     * @param integer $RegionId 实例所在地域ID
-     * @param integer $ZoneId 实例所在可用区ID
-     * @param integer $VpcId 实例所在私有网络ID，基础网络时为 0
-     * @param integer $SubnetId 实例所在私有网络子网ID，基础网络时为 0
-     * @param integer $Status 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
-     * @param string $Vip 实例访问IP
-     * @param integer $Vport 实例访问端口
-     * @param string $CreateTime 实例创建时间
-     * @param string $UpdateTime 实例更新时间
-     * @param string $StartTime 实例计费开始时间
-     * @param string $EndTime 实例计费结束时间
-     * @param string $IsolateTime 实例隔离时间
-     * @param integer $Memory 实例内存大小，单位G
-     * @param integer $UsedStorage 实例已经使用存储空间大小，单位G
-     * @param integer $Storage 实例存储空间大小，单位G
-     * @param string $VersionName 实例版本
-     * @param integer $RenewFlag 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
-     * @param integer $Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
-     * @param string $Region 实例所在地域名称，如 ap-guangzhou
-     * @param string $Zone 实例所在可用区名称，如 ap-guangzhou-1
-     * @param string $BackupTime 备份时间点
-     * @param integer $PayMode 实例付费模式， 0-按量计费，1-包年包月
-     * @param string $Uid 实例唯一UID
-     * @param integer $Cpu 实例cpu核心数
-     * @param string $Version 实例版本代号
-     * @param string $Type 实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
-     * @param integer $Pid 计费ID
-     * @param string $UniqVpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
-     * @param string $UniqSubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
-     * @param string $IsolateOperator 实例隔离操作
-     * @param string $SubFlag 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-     * @param string $ROFlag 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-     * @param string $HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-     * @param array $ResourceTags 实例绑定的标签列表
+     * @var integer <p>额外IO吞吐量</p><p>单位：MB/s</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BackupModel 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-     * @param string $InstanceNote 实例备份信息
-     * @param array $BackupCycle 备份周期
-     * @param string $BackupCycleType 备份周期类型，[daily、weekly、monthly]
-     * @param integer $BackupSaveDays 数据(日志)备份保留时间
-     * @param string $InstanceType 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+     */
+    public $ThroughputPerformance;
 
-     * @param array $CrossRegions 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
-     * @param string $CrossBackupEnabled 跨地域备份状态 enable-开启，disable-关闭
-     * @param integer $CrossBackupSaveDays 跨地域备份保留天数，则默认7天
-     * @param string $DnsPodDomain 外网地址域名
-     * @param integer $TgwWanVPort 外网端口号
-     * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
-     * @param string $TimeZone 系统时区，默认：China Standard Time
-     * @param boolean $IsDrZone 是否跨AZ
-     * @param SlaveZones $SlaveZones 双节点实例备可用区信息
-     * @param string $Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点
-     * @param string $Style 类型标识，EXCLUSIVE-独享型，SHARED-共享型
-     * @param array $MultiSlaveZones 多节点实例备可用区信息
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $Name <p>实例名称</p>
+     * @param integer $ProjectId <p>实例所在项目ID</p>
+     * @param integer $RegionId <p>实例所在地域ID</p>
+     * @param integer $ZoneId <p>实例所在可用区ID</p>
+     * @param integer $VpcId <p>实例所在私有网络ID，基础网络时为 0</p>
+     * @param integer $SubnetId <p>实例所在私有网络子网ID，基础网络时为 0</p>
+     * @param integer $Status <p>实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li></p>
+     * @param string $Vip <p>实例访问IP</p>
+     * @param integer $Vport <p>实例访问端口</p>
+     * @param string $CreateTime <p>实例创建时间</p>
+     * @param string $UpdateTime <p>实例更新时间</p>
+     * @param string $StartTime <p>实例计费开始时间</p>
+     * @param string $EndTime <p>实例计费结束时间</p>
+     * @param string $IsolateTime <p>实例隔离时间</p>
+     * @param integer $Memory <p>实例内存大小，单位G</p>
+     * @param integer $UsedStorage <p>实例已经使用存储空间大小，单位G</p>
+     * @param integer $Storage <p>实例存储空间大小，单位G</p>
+     * @param string $VersionName <p>实例版本</p>
+     * @param integer $RenewFlag <p>实例续费标记，0-正常续费，1-自动续费，2-到期不续费</p>
+     * @param integer $Model <p>实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房</p>
+     * @param string $Region <p>实例所在地域名称，如 ap-guangzhou</p>
+     * @param string $Zone <p>实例所在可用区名称，如 ap-guangzhou-1</p>
+     * @param string $BackupTime <p>备份时间点</p>
+     * @param integer $PayMode <p>实例付费模式， 0-按量计费，1-包年包月</p>
+     * @param string $Uid <p>实例唯一UID</p>
+     * @param integer $Cpu <p>实例cpu核心数</p>
+     * @param string $Version <p>实例版本代号</p>
+     * @param string $Type <p>实例类型代号：&quot;TS85&quot;-物理机，本地SSD硬盘；&quot;Z3&quot;-物理机早期版本，本地SSD硬盘；&quot;CLOUD_BASIC&quot;-虚拟机，普通云硬盘；&quot;CLOUD_PREMIUM&quot;-虚拟机，高性能云硬盘；&quot;CLOUD_SSD&quot;-虚拟机，云SSD硬盘；&quot;CLOUD_HSSD&quot;-虚拟机，增强型SSD云硬盘；&quot;CLOUD_TSSD&quot;-虚拟机，极速型SSD云硬盘；&quot;CLOUD_BSSD&quot;-虚拟机，通用型SSD云硬盘</p>
+     * @param integer $Pid <p>计费ID</p>
+     * @param string $UniqVpcId <p>实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串</p>
+     * @param string $UniqSubnetId <p>实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串</p>
+     * @param string $IsolateOperator <p>实例隔离操作</p>
+     * @param string $SubFlag <p>发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例</p>
+     * @param string $ROFlag <p>只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例</p>
+     * @param string $HAFlag <p>容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例</p>
+     * @param array $ResourceTags <p>实例绑定的标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BackupModel <p>备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。</p>
+     * @param string $InstanceNote <p>实例备份信息</p>
+     * @param array $BackupCycle <p>备份周期</p>
+     * @param string $BackupCycleType <p>备份周期类型，[daily、weekly、monthly]</p>
+     * @param integer $BackupSaveDays <p>数据(日志)备份保留时间</p>
+     * @param string $InstanceType <p>实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点</p>
+     * @param array $CrossRegions <p>跨地域备份目的地域，如果为空，则表示未开启跨地域备份</p>
+     * @param string $CrossBackupEnabled <p>跨地域备份状态 enable-开启，disable-关闭</p>
+     * @param integer $CrossBackupSaveDays <p>跨地域备份保留天数，则默认7天</p>
+     * @param string $DnsPodDomain <p>外网地址域名</p>
+     * @param integer $TgwWanVPort <p>外网端口号</p>
+     * @param string $Collation <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
+     * @param string $TimeZone <p>系统时区，默认：China Standard Time</p>
+     * @param boolean $IsDrZone <p>是否跨AZ</p>
+     * @param SlaveZones $SlaveZones <p>双节点实例备可用区信息</p>
+     * @param string $Architecture <p>架构标识，SINGLE-单节点 DOUBLE-双节点</p>
+     * @param string $Style <p>类型标识，EXCLUSIVE-独享型，SHARED-共享型</p>
+     * @param array $MultiSlaveZones <p>多节点实例备可用区信息</p>
+     * @param integer $ThroughputPerformance <p>额外IO吞吐量</p><p>单位：MB/s</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -715,6 +723,10 @@ class DBInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MultiSlaveZones, $obj);
             }
+        }
+
+        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
+            $this->ThroughputPerformance = $param["ThroughputPerformance"];
         }
     }
 }

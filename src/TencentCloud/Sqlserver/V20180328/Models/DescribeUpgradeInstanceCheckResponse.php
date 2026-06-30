@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUpgradeInstanceCheck返回参数结构体
  *
- * @method integer getIsAffect() 获取本变配是否对实例有影响，0-没有影响 1-有影响
- * @method void setIsAffect(integer $IsAffect) 设置本变配是否对实例有影响，0-没有影响 1-有影响
- * @method integer getPassed() 获取本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配
- * @method void setPassed(integer $Passed) 设置本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配
- * @method string getModifyMode() 获取本变配是升配还是降配，down-降配 up-升配
- * @method void setModifyMode(string $ModifyMode) 设置本变配是升配还是降配，down-降配 up-升配
- * @method array getCheckItems() 获取检查项列表
- * @method void setCheckItems(array $CheckItems) 设置检查项列表
+ * @method integer getIsAffect() 获取<p>本变配是否对实例有影响，0-没有影响 1-有影响</p>
+ * @method void setIsAffect(integer $IsAffect) 设置<p>本变配是否对实例有影响，0-没有影响 1-有影响</p>
+ * @method integer getPassed() 获取<p>本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配</p>
+ * @method void setPassed(integer $Passed) 设置<p>本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配</p>
+ * @method string getModifyMode() 获取<p>本变配是升配还是降配，down-降配 up-升配</p>
+ * @method void setModifyMode(string $ModifyMode) 设置<p>本变配是升配还是降配，down-降配 up-升配</p>
+ * @method array getCheckItems() 获取<p>检查项列表</p>
+ * @method void setCheckItems(array $CheckItems) 设置<p>检查项列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUpgradeInstanceCheckResponse extends AbstractModel
 {
     /**
-     * @var integer 本变配是否对实例有影响，0-没有影响 1-有影响
+     * @var integer <p>本变配是否对实例有影响，0-没有影响 1-有影响</p>
      */
     public $IsAffect;
 
     /**
-     * @var integer 本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配
+     * @var integer <p>本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配</p>
      */
     public $Passed;
 
     /**
-     * @var string 本变配是升配还是降配，down-降配 up-升配
+     * @var string <p>本变配是升配还是降配，down-降配 up-升配</p>
      */
     public $ModifyMode;
 
     /**
-     * @var array 检查项列表
+     * @var array <p>检查项列表</p>
      */
     public $CheckItems;
 
@@ -59,10 +59,10 @@ class DescribeUpgradeInstanceCheckResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $IsAffect 本变配是否对实例有影响，0-没有影响 1-有影响
-     * @param integer $Passed 本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配
-     * @param string $ModifyMode 本变配是升配还是降配，down-降配 up-升配
-     * @param array $CheckItems 检查项列表
+     * @param integer $IsAffect <p>本变配是否对实例有影响，0-没有影响 1-有影响</p>
+     * @param integer $Passed <p>本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配</p>
+     * @param string $ModifyMode <p>本变配是升配还是降配，down-降配 up-升配</p>
+     * @param array $CheckItems <p>检查项列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

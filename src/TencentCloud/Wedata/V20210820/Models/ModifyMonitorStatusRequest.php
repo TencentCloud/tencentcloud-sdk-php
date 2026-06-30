@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目Id
  * @method integer getRuleGroupId() 获取规则组ID
  * @method void setRuleGroupId(integer $RuleGroupId) 设置规则组ID
- * @method boolean getMonitorStatus() 获取监控开关状态
- * @method void setMonitorStatus(boolean $MonitorStatus) 设置监控开关状态
+ * @method boolean getMonitorStatus() 获取监控是否开启：0-关闭，1-开启
+ * @method void setMonitorStatus(boolean $MonitorStatus) 设置监控是否开启：0-关闭，1-开启
  */
 class ModifyMonitorStatusRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyMonitorStatusRequest extends AbstractModel
     public $RuleGroupId;
 
     /**
-     * @var boolean 监控开关状态
+     * @var boolean 监控是否开启：0-关闭，1-开启
      */
     public $MonitorStatus;
 
     /**
      * @param string $ProjectId 项目Id
      * @param integer $RuleGroupId 规则组ID
-     * @param boolean $MonitorStatus 监控开关状态
+     * @param boolean $MonitorStatus 监控是否开启：0-关闭，1-开启
      */
     function __construct()
     {

@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateEmailIdentity请求参数结构体
  *
- * @method string getEmailIdentity() 获取请求验证的域名
- * @method void setEmailIdentity(string $EmailIdentity) 设置请求验证的域名
+ * @method string getEmailIdentity() 获取<p>请求验证的域名</p>
+ * @method void setEmailIdentity(string $EmailIdentity) 设置<p>请求验证的域名</p>
+ * @method boolean getNewAPI() 获取<p>匹分控制台新老API</p>
+ * @method void setNewAPI(boolean $NewAPI) 设置<p>匹分控制台新老API</p>
+ * @method integer getDKIMOption() 获取<p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul>
+ * @method void setDKIMOption(integer $DKIMOption) 设置<p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul>
  */
 class UpdateEmailIdentityRequest extends AbstractModel
 {
     /**
-     * @var string 请求验证的域名
+     * @var string <p>请求验证的域名</p>
      */
     public $EmailIdentity;
 
     /**
-     * @param string $EmailIdentity 请求验证的域名
+     * @var boolean <p>匹分控制台新老API</p>
+     */
+    public $NewAPI;
+
+    /**
+     * @var integer <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul>
+     */
+    public $DKIMOption;
+
+    /**
+     * @param string $EmailIdentity <p>请求验证的域名</p>
+     * @param boolean $NewAPI <p>匹分控制台新老API</p>
+     * @param integer $DKIMOption <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul>
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class UpdateEmailIdentityRequest extends AbstractModel
         }
         if (array_key_exists("EmailIdentity",$param) and $param["EmailIdentity"] !== null) {
             $this->EmailIdentity = $param["EmailIdentity"];
+        }
+
+        if (array_key_exists("NewAPI",$param) and $param["NewAPI"] !== null) {
+            $this->NewAPI = $param["NewAPI"];
+        }
+
+        if (array_key_exists("DKIMOption",$param) and $param["DKIMOption"] !== null) {
+            $this->DKIMOption = $param["DKIMOption"];
         }
     }
 }

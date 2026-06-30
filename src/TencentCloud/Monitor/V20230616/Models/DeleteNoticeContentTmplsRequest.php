@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteNoticeContentTmpls请求参数结构体
  *
- * @method array getTmplIDs() 获取要删除的模板id
- * @method void setTmplIDs(array $TmplIDs) 设置要删除的模板id
+ * @method array getTmplIDs() 获取<p>要删除的模板id</p>
+ * @method void setTmplIDs(array $TmplIDs) 设置<p>要删除的模板id</p>
  */
 class DeleteNoticeContentTmplsRequest extends AbstractModel
 {
     /**
-     * @var array 要删除的模板id
+     * @var array <p>要删除的模板id</p>
      */
     public $TmplIDs;
 
     /**
-     * @param array $TmplIDs 要删除的模板id
+     * @param array $TmplIDs <p>要删除的模板id</p>
      */
     function __construct()
     {

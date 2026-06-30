@@ -20,39 +20,39 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEventBus返回参数结构体
  *
- * @method string getModTime() 获取更新时间
- * @method void setModTime(string $ModTime) 设置更新时间
- * @method string getDescription() 获取事件集描述
- * @method void setDescription(string $Description) 设置事件集描述
- * @method string getClsTopicId() 获取日志主题ID
- * @method void setClsTopicId(string $ClsTopicId) 设置日志主题ID
- * @method string getAddTime() 获取创建时间
- * @method void setAddTime(string $AddTime) 设置创建时间
- * @method string getClsLogsetId() 获取日志集ID
- * @method void setClsLogsetId(string $ClsLogsetId) 设置日志集ID
- * @method string getEventBusName() 获取事件集名称
- * @method void setEventBusName(string $EventBusName) 设置事件集名称
- * @method string getEventBusId() 获取事件集ID
- * @method void setEventBusId(string $EventBusId) 设置事件集ID
- * @method string getType() 获取（已废弃）事件集类型
- * @method void setType(string $Type) 设置（已废弃）事件集类型
- * @method string getPayMode() 获取计费模式
- * @method void setPayMode(string $PayMode) 设置计费模式
- * @method integer getSaveDays() 获取EB日志存储时长
+ * @method string getModTime() 获取<p>更新时间</p>
+ * @method void setModTime(string $ModTime) 设置<p>更新时间</p>
+ * @method string getDescription() 获取<p>事件集描述</p>
+ * @method void setDescription(string $Description) 设置<p>事件集描述</p>
+ * @method string getClsTopicId() 获取<p>日志主题ID</p>
+ * @method void setClsTopicId(string $ClsTopicId) 设置<p>日志主题ID</p>
+ * @method string getAddTime() 获取<p>创建时间</p>
+ * @method void setAddTime(string $AddTime) 设置<p>创建时间</p>
+ * @method string getClsLogsetId() 获取<p>日志集ID</p>
+ * @method void setClsLogsetId(string $ClsLogsetId) 设置<p>日志集ID</p>
+ * @method string getEventBusName() 获取<p>事件集名称</p>
+ * @method void setEventBusName(string $EventBusName) 设置<p>事件集名称</p>
+ * @method string getEventBusId() 获取<p>事件集ID</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
+ * @method string getType() 获取<p>事件集类型</p><p>枚举值：</p><ul><li>Cloud： 云服务事件集</li><li>Platform： 平台事件集</li><li>Custom： 自定义事件集</li></ul>
+ * @method void setType(string $Type) 设置<p>事件集类型</p><p>枚举值：</p><ul><li>Cloud： 云服务事件集</li><li>Platform： 平台事件集</li><li>Custom： 自定义事件集</li></ul>
+ * @method string getPayMode() 获取<p>计费模式</p>
+ * @method void setPayMode(string $PayMode) 设置<p>计费模式</p>
+ * @method integer getSaveDays() 获取<p>EB日志存储时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSaveDays(integer $SaveDays) 设置EB日志存储时长
+ * @method void setSaveDays(integer $SaveDays) 设置<p>EB日志存储时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogTopicId() 获取EB日志主题ID
+ * @method string getLogTopicId() 获取<p>EB日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogTopicId(string $LogTopicId) 设置EB日志主题ID
+ * @method void setLogTopicId(string $LogTopicId) 设置<p>EB日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnableStore() 获取是否开启存储
+ * @method boolean getEnableStore() 获取<p>是否开启存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableStore(boolean $EnableStore) 设置是否开启存储
+ * @method void setEnableStore(boolean $EnableStore) 设置<p>是否开启存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLinkMode() 获取消息序列，是否有序
+ * @method string getLinkMode() 获取<p>消息序列，是否有序</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLinkMode(string $LinkMode) 设置消息序列，是否有序
+ * @method void setLinkMode(string $LinkMode) 设置<p>消息序列，是否有序</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,70 +60,70 @@ use TencentCloud\Common\AbstractModel;
 class GetEventBusResponse extends AbstractModel
 {
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $ModTime;
 
     /**
-     * @var string 事件集描述
+     * @var string <p>事件集描述</p>
      */
     public $Description;
 
     /**
-     * @var string 日志主题ID
+     * @var string <p>日志主题ID</p>
      */
     public $ClsTopicId;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $AddTime;
 
     /**
-     * @var string 日志集ID
+     * @var string <p>日志集ID</p>
      */
     public $ClsLogsetId;
 
     /**
-     * @var string 事件集名称
+     * @var string <p>事件集名称</p>
      */
     public $EventBusName;
 
     /**
-     * @var string 事件集ID
+     * @var string <p>事件集ID</p>
      */
     public $EventBusId;
 
     /**
-     * @var string （已废弃）事件集类型
+     * @var string <p>事件集类型</p><p>枚举值：</p><ul><li>Cloud： 云服务事件集</li><li>Platform： 平台事件集</li><li>Custom： 自定义事件集</li></ul>
      */
     public $Type;
 
     /**
-     * @var string 计费模式
+     * @var string <p>计费模式</p>
      */
     public $PayMode;
 
     /**
-     * @var integer EB日志存储时长
+     * @var integer <p>EB日志存储时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SaveDays;
 
     /**
-     * @var string EB日志主题ID
+     * @var string <p>EB日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogTopicId;
 
     /**
-     * @var boolean 是否开启存储
+     * @var boolean <p>是否开启存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableStore;
 
     /**
-     * @var string 消息序列，是否有序
+     * @var string <p>消息序列，是否有序</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LinkMode;
@@ -134,22 +134,22 @@ class GetEventBusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ModTime 更新时间
-     * @param string $Description 事件集描述
-     * @param string $ClsTopicId 日志主题ID
-     * @param string $AddTime 创建时间
-     * @param string $ClsLogsetId 日志集ID
-     * @param string $EventBusName 事件集名称
-     * @param string $EventBusId 事件集ID
-     * @param string $Type （已废弃）事件集类型
-     * @param string $PayMode 计费模式
-     * @param integer $SaveDays EB日志存储时长
+     * @param string $ModTime <p>更新时间</p>
+     * @param string $Description <p>事件集描述</p>
+     * @param string $ClsTopicId <p>日志主题ID</p>
+     * @param string $AddTime <p>创建时间</p>
+     * @param string $ClsLogsetId <p>日志集ID</p>
+     * @param string $EventBusName <p>事件集名称</p>
+     * @param string $EventBusId <p>事件集ID</p>
+     * @param string $Type <p>事件集类型</p><p>枚举值：</p><ul><li>Cloud： 云服务事件集</li><li>Platform： 平台事件集</li><li>Custom： 自定义事件集</li></ul>
+     * @param string $PayMode <p>计费模式</p>
+     * @param integer $SaveDays <p>EB日志存储时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogTopicId EB日志主题ID
+     * @param string $LogTopicId <p>EB日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $EnableStore 是否开启存储
+     * @param boolean $EnableStore <p>是否开启存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LinkMode 消息序列，是否有序
+     * @param string $LinkMode <p>消息序列，是否有序</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -735,8 +735,10 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\VehicleRegCertOCRResponse VehicleRegCertOCR(Models\VehicleRegCertOCRRequest $req) 本接口支持国内机动车登记证书主要字段的结构化识别，包括机动车所有人、身份证明名称、号码、车辆型号、车辆识别代号、发动机号、制造厂名称等。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\VerifyBizLicenseEnterprise3Response VerifyBizLicenseEnterprise3(Models\VerifyBizLicenseEnterprise3Request $req) 提供比对核验企业名称、统一社会信用代码、法人姓名一致性的服务，助力快速核验企业资质。
-注意：核验准确率在99%以上，存在个别特殊情况下核验结果不准确，请选用前知悉。
+ * @method Models\VerifyBizLicenseEnterprise3Response VerifyBizLicenseEnterprise3(Models\VerifyBizLicenseEnterprise3Request $req) 提供比对核验企业名称、统一社会信用代码、法人姓名（可选）一致性的服务，助力快速核验企业资质。
+注意：
+存在个别特殊情况下核验结果不准确，请选用前知悉；
+按周更新企业信息变更情况，如遇到未及时更新的情况，可联系在线客服转产品团队进行人工处理。
  * @method Models\VerifyBizLicenseEnterprise4Response VerifyBizLicenseEnterprise4(Models\VerifyBizLicenseEnterprise4Request $req) 提供比对校验企业名称、统一社会信用代码、法人姓名、注册登记证件号码一致性的服务，助力快速核验企业资质。
 注意：
 存在个别特殊情况下核验结果不准确，请选用前知悉；

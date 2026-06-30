@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEventBus请求参数结构体
  *
- * @method string getEventBusId() 获取事件集ID
- * @method void setEventBusId(string $EventBusId) 设置事件集ID
+ * @method string getEventBusId() 获取<p>事件集ID</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
  */
 class GetEventBusRequest extends AbstractModel
 {
     /**
-     * @var string 事件集ID
+     * @var string <p>事件集ID</p>
      */
     public $EventBusId;
 
     /**
-     * @param string $EventBusId 事件集ID
+     * @param string $EventBusId <p>事件集ID</p>
      */
     function __construct()
     {

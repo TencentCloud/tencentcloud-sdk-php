@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListTargets返回参数结构体
  *
- * @method integer getTotalCount() 获取目标总数
- * @method void setTotalCount(integer $TotalCount) 设置目标总数
- * @method array getTargets() 获取目标信息
- * @method void setTargets(array $Targets) 设置目标信息
+ * @method integer getTotalCount() 获取<p>目标总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>目标总数</p>
+ * @method array getTargets() 获取<p>目标信息</p>
+ * @method void setTargets(array $Targets) 设置<p>目标信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListTargetsResponse extends AbstractModel
 {
     /**
-     * @var integer 目标总数
+     * @var integer <p>目标总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 目标信息
+     * @var array <p>目标信息</p>
      */
     public $Targets;
 
@@ -45,8 +45,8 @@ class ListTargetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 目标总数
-     * @param array $Targets 目标信息
+     * @param integer $TotalCount <p>目标总数</p>
+     * @param array $Targets <p>目标信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

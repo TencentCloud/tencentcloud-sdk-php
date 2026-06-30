@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警对象所属实例组
  *
- * @method integer getId() 获取实例组 Id
- * @method void setId(integer $Id) 设置实例组 Id
- * @method string getName() 获取实例组名称
- * @method void setName(string $Name) 设置实例组名称
+ * @method integer getId() 获取<p>实例组 Id</p>
+ * @method void setId(integer $Id) 设置<p>实例组 Id</p>
+ * @method string getName() 获取<p>实例组名称</p>
+ * @method void setName(string $Name) 设置<p>实例组名称</p>
  */
 class InstanceGroups extends AbstractModel
 {
     /**
-     * @var integer 实例组 Id
+     * @var integer <p>实例组 Id</p>
      */
     public $Id;
 
     /**
-     * @var string 实例组名称
+     * @var string <p>实例组名称</p>
      */
     public $Name;
 
     /**
-     * @param integer $Id 实例组 Id
-     * @param string $Name 实例组名称
+     * @param integer $Id <p>实例组 Id</p>
+     * @param string $Name <p>实例组名称</p>
      */
     function __construct()
     {

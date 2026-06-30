@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置比较操作类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCompareType() 获取比较类型
+ * @method integer getCompareType() 获取比较类型：1-固定值, 2-波动值, 3-数值范围比较, 4-枚举范围比较, 5-不用比较, 6-字段数据相关性, 7-公平性
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompareType(integer $CompareType) 设置比较类型
+ * @method void setCompareType(integer $CompareType) 设置比较类型：1-固定值, 2-波动值, 3-数值范围比较, 4-枚举范围比较, 5-不用比较, 6-字段数据相关性, 7-公平性
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getValueComputeType() 获取值比较类型
+ * @method integer getValueComputeType() 获取值比较类型：1-绝对值, 2-上升, 3-下降, 4-范围内, 5-范围外, 6-公平率, 7-公平差
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValueComputeType(integer $ValueComputeType) 设置值比较类型
+ * @method void setValueComputeType(integer $ValueComputeType) 设置值比较类型：1-绝对值, 2-上升, 3-下降, 4-范围内, 5-范围外, 6-公平率, 7-公平差
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareResultItem extends AbstractModel
@@ -72,13 +72,13 @@ class CompareResultItem extends AbstractModel
     public $Operator;
 
     /**
-     * @var integer 比较类型
+     * @var integer 比较类型：1-固定值, 2-波动值, 3-数值范围比较, 4-枚举范围比较, 5-不用比较, 6-字段数据相关性, 7-公平性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompareType;
 
     /**
-     * @var integer 值比较类型
+     * @var integer 值比较类型：1-绝对值, 2-上升, 3-下降, 4-范围内, 5-范围外, 6-公平率, 7-公平差
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValueComputeType;
@@ -92,9 +92,9 @@ class CompareResultItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operator 比较操作类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CompareType 比较类型
+     * @param integer $CompareType 比较类型：1-固定值, 2-波动值, 3-数值范围比较, 4-枚举范围比较, 5-不用比较, 6-字段数据相关性, 7-公平性
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ValueComputeType 值比较类型
+     * @param integer $ValueComputeType 值比较类型：1-绝对值, 2-上升, 3-下降, 4-范围内, 5-范围外, 6-公平率, 7-公平差
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

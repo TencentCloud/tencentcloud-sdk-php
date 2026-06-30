@@ -20,142 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例可售卖的规格信息
  *
- * @method integer getSpecId() 获取实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
- * @method void setSpecId(integer $SpecId) 设置实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
- * @method string getMachineType() 获取机型ID
- * @method void setMachineType(string $MachineType) 设置机型ID
- * @method string getMachineTypeName() 获取机型中文名称
- * @method void setMachineTypeName(string $MachineTypeName) 设置机型中文名称
- * @method string getVersion() 获取数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
- * @method void setVersion(string $Version) 设置数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
- * @method string getVersionName() 获取Version字段对应的版本名称
- * @method void setVersionName(string $VersionName) 设置Version字段对应的版本名称
- * @method integer getMemory() 获取内存大小，单位GB
- * @method void setMemory(integer $Memory) 设置内存大小，单位GB
- * @method integer getCPU() 获取CPU核数
- * @method void setCPU(integer $CPU) 设置CPU核数
- * @method integer getMinStorage() 获取此规格下最小的磁盘大小，单位GB
- * @method void setMinStorage(integer $MinStorage) 设置此规格下最小的磁盘大小，单位GB
- * @method integer getMaxStorage() 获取此规格下最大的磁盘大小，单位GB
- * @method void setMaxStorage(integer $MaxStorage) 设置此规格下最大的磁盘大小，单位GB
- * @method integer getQPS() 获取此规格对应的QPS大小
- * @method void setQPS(integer $QPS) 设置此规格对应的QPS大小
- * @method string getSuitInfo() 获取此规格的中文描述信息
- * @method void setSuitInfo(string $SuitInfo) 设置此规格的中文描述信息
- * @method integer getPid() 获取此规格对应的包年包月Pid
- * @method void setPid(integer $Pid) 设置此规格对应的包年包月Pid
- * @method array getPostPid() 获取此规格对应的按量计费Pid列表
- * @method void setPostPid(array $PostPid) 设置此规格对应的按量计费Pid列表
- * @method string getPayModeStatus() 获取此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
- * @method void setPayModeStatus(string $PayModeStatus) 设置此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
- * @method string getInstanceType() 获取购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点
-示例值：HA
- * @method void setInstanceType(string $InstanceType) 设置购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点
-示例值：HA
- * @method string getMultiZonesStatus() 获取跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
- * @method void setMultiZonesStatus(string $MultiZonesStatus) 设置跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
+ * @method integer getSpecId() 获取<p>实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例</p>
+ * @method void setSpecId(integer $SpecId) 设置<p>实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例</p>
+ * @method string getMachineType() 获取<p>机型ID</p>
+ * @method void setMachineType(string $MachineType) 设置<p>机型ID</p>
+ * @method string getMachineTypeName() 获取<p>机型中文名称</p>
+ * @method void setMachineTypeName(string $MachineTypeName) 设置<p>机型中文名称</p>
+ * @method string getVersion() 获取<p>数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）</p>
+ * @method void setVersion(string $Version) 设置<p>数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）</p>
+ * @method string getVersionName() 获取<p>Version字段对应的版本名称</p>
+ * @method void setVersionName(string $VersionName) 设置<p>Version字段对应的版本名称</p>
+ * @method integer getMemory() 获取<p>内存大小，单位GB</p>
+ * @method void setMemory(integer $Memory) 设置<p>内存大小，单位GB</p>
+ * @method integer getCPU() 获取<p>CPU核数</p>
+ * @method void setCPU(integer $CPU) 设置<p>CPU核数</p>
+ * @method integer getMinStorage() 获取<p>此规格下最小的磁盘大小，单位GB</p>
+ * @method void setMinStorage(integer $MinStorage) 设置<p>此规格下最小的磁盘大小，单位GB</p>
+ * @method integer getMaxStorage() 获取<p>此规格下最大的磁盘大小，单位GB</p>
+ * @method void setMaxStorage(integer $MaxStorage) 设置<p>此规格下最大的磁盘大小，单位GB</p>
+ * @method integer getQPS() 获取<p>此规格对应的QPS大小</p>
+ * @method void setQPS(integer $QPS) 设置<p>此规格对应的QPS大小</p>
+ * @method string getSuitInfo() 获取<p>此规格的中文描述信息</p>
+ * @method void setSuitInfo(string $SuitInfo) 设置<p>此规格的中文描述信息</p>
+ * @method integer getPid() 获取<p>此规格对应的包年包月Pid</p>
+ * @method void setPid(integer $Pid) 设置<p>此规格对应的包年包月Pid</p>
+ * @method array getPostPid() 获取<p>此规格对应的按量计费Pid列表</p>
+ * @method void setPostPid(array $PostPid) 设置<p>此规格对应的按量计费Pid列表</p>
+ * @method string getPayModeStatus() 获取<p>此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有</p>
+ * @method void setPayModeStatus(string $PayModeStatus) 设置<p>此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有</p>
+ * @method string getInstanceType() 获取<p>购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点<br>示例值：HA</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点<br>示例值：HA</p>
+ * @method string getMultiZonesStatus() 获取<p>跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有</p>
+ * @method void setMultiZonesStatus(string $MultiZonesStatus) 设置<p>跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有</p>
+ * @method integer getMinBaselineIOPS() 获取<p>最小磁盘容量时的基准</p><p>单位：IOPS</p>
+ * @method void setMinBaselineIOPS(integer $MinBaselineIOPS) 设置<p>最小磁盘容量时的基准</p><p>单位：IOPS</p>
+ * @method integer getMaxBaselineIOPS() 获取<p>最大磁盘容量时的基准</p><p>单位：IOPS</p>
+ * @method void setMaxBaselineIOPS(integer $MaxBaselineIOPS) 设置<p>最大磁盘容量时的基准</p><p>单位：IOPS</p>
+ * @method integer getMinBaselineThroughput() 获取<p>最小磁盘容量时的基准吞吐量</p><p>单位：MB/s</p>
+ * @method void setMinBaselineThroughput(integer $MinBaselineThroughput) 设置<p>最小磁盘容量时的基准吞吐量</p><p>单位：MB/s</p>
+ * @method integer getMaxBaselineThroughput() 获取<p>最大磁盘容量时的基准吞吐量</p><p>单位：MB/s</p>
+ * @method void setMaxBaselineThroughput(integer $MaxBaselineThroughput) 设置<p>最大磁盘容量时的基准吞吐量</p><p>单位：MB/s</p>
+ * @method boolean getExtraIOSupported() 获取<p>是否支持额外 IO 性能</p><p>枚举值：</p><ul><li>TRUE： 支持额外 IO 性能</li><li>FALSE： 不支持额外 IO 性能</li></ul>
+ * @method void setExtraIOSupported(boolean $ExtraIOSupported) 设置<p>是否支持额外 IO 性能</p><p>枚举值：</p><ul><li>TRUE： 支持额外 IO 性能</li><li>FALSE： 不支持额外 IO 性能</li></ul>
+ * @method integer getMaxExtraThroughput() 获取<p>额外 IO 最大吞吐量</p><p>单位：MB/s</p>
+ * @method void setMaxExtraThroughput(integer $MaxExtraThroughput) 设置<p>额外 IO 最大吞吐量</p><p>单位：MB/s</p>
+ * @method integer getMinDiskSizeForExtraIO() 获取<p>支持额外 IO 的最小磁盘容量</p><p>单位： GB</p><p>默认值：460</p>
+ * @method void setMinDiskSizeForExtraIO(integer $MinDiskSizeForExtraIO) 设置<p>支持额外 IO 的最小磁盘容量</p><p>单位： GB</p><p>默认值：460</p>
  */
 class SpecInfo extends AbstractModel
 {
     /**
-     * @var integer 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
+     * @var integer <p>实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例</p>
      */
     public $SpecId;
 
     /**
-     * @var string 机型ID
+     * @var string <p>机型ID</p>
      */
     public $MachineType;
 
     /**
-     * @var string 机型中文名称
+     * @var string <p>机型中文名称</p>
      */
     public $MachineTypeName;
 
     /**
-     * @var string 数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
+     * @var string <p>数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）</p>
      */
     public $Version;
 
     /**
-     * @var string Version字段对应的版本名称
+     * @var string <p>Version字段对应的版本名称</p>
      */
     public $VersionName;
 
     /**
-     * @var integer 内存大小，单位GB
+     * @var integer <p>内存大小，单位GB</p>
      */
     public $Memory;
 
     /**
-     * @var integer CPU核数
+     * @var integer <p>CPU核数</p>
      */
     public $CPU;
 
     /**
-     * @var integer 此规格下最小的磁盘大小，单位GB
+     * @var integer <p>此规格下最小的磁盘大小，单位GB</p>
      */
     public $MinStorage;
 
     /**
-     * @var integer 此规格下最大的磁盘大小，单位GB
+     * @var integer <p>此规格下最大的磁盘大小，单位GB</p>
      */
     public $MaxStorage;
 
     /**
-     * @var integer 此规格对应的QPS大小
+     * @var integer <p>此规格对应的QPS大小</p>
      */
     public $QPS;
 
     /**
-     * @var string 此规格的中文描述信息
+     * @var string <p>此规格的中文描述信息</p>
      */
     public $SuitInfo;
 
     /**
-     * @var integer 此规格对应的包年包月Pid
+     * @var integer <p>此规格对应的包年包月Pid</p>
      */
     public $Pid;
 
     /**
-     * @var array 此规格对应的按量计费Pid列表
+     * @var array <p>此规格对应的按量计费Pid列表</p>
      */
     public $PostPid;
 
     /**
-     * @var string 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+     * @var string <p>此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有</p>
      */
     public $PayModeStatus;
 
     /**
-     * @var string 购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点
-示例值：HA
+     * @var string <p>购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点<br>示例值：HA</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
+     * @var string <p>跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有</p>
      */
     public $MultiZonesStatus;
 
     /**
-     * @param integer $SpecId 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
-     * @param string $MachineType 机型ID
-     * @param string $MachineTypeName 机型中文名称
-     * @param string $Version 数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
-     * @param string $VersionName Version字段对应的版本名称
-     * @param integer $Memory 内存大小，单位GB
-     * @param integer $CPU CPU核数
-     * @param integer $MinStorage 此规格下最小的磁盘大小，单位GB
-     * @param integer $MaxStorage 此规格下最大的磁盘大小，单位GB
-     * @param integer $QPS 此规格对应的QPS大小
-     * @param string $SuitInfo 此规格的中文描述信息
-     * @param integer $Pid 此规格对应的包年包月Pid
-     * @param array $PostPid 此规格对应的按量计费Pid列表
-     * @param string $PayModeStatus 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
-     * @param string $InstanceType 购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点
-示例值：HA
-     * @param string $MultiZonesStatus 跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
+     * @var integer <p>最小磁盘容量时的基准</p><p>单位：IOPS</p>
+     */
+    public $MinBaselineIOPS;
+
+    /**
+     * @var integer <p>最大磁盘容量时的基准</p><p>单位：IOPS</p>
+     */
+    public $MaxBaselineIOPS;
+
+    /**
+     * @var integer <p>最小磁盘容量时的基准吞吐量</p><p>单位：MB/s</p>
+     */
+    public $MinBaselineThroughput;
+
+    /**
+     * @var integer <p>最大磁盘容量时的基准吞吐量</p><p>单位：MB/s</p>
+     */
+    public $MaxBaselineThroughput;
+
+    /**
+     * @var boolean <p>是否支持额外 IO 性能</p><p>枚举值：</p><ul><li>TRUE： 支持额外 IO 性能</li><li>FALSE： 不支持额外 IO 性能</li></ul>
+     */
+    public $ExtraIOSupported;
+
+    /**
+     * @var integer <p>额外 IO 最大吞吐量</p><p>单位：MB/s</p>
+     */
+    public $MaxExtraThroughput;
+
+    /**
+     * @var integer <p>支持额外 IO 的最小磁盘容量</p><p>单位： GB</p><p>默认值：460</p>
+     */
+    public $MinDiskSizeForExtraIO;
+
+    /**
+     * @param integer $SpecId <p>实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例</p>
+     * @param string $MachineType <p>机型ID</p>
+     * @param string $MachineTypeName <p>机型中文名称</p>
+     * @param string $Version <p>数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）</p>
+     * @param string $VersionName <p>Version字段对应的版本名称</p>
+     * @param integer $Memory <p>内存大小，单位GB</p>
+     * @param integer $CPU <p>CPU核数</p>
+     * @param integer $MinStorage <p>此规格下最小的磁盘大小，单位GB</p>
+     * @param integer $MaxStorage <p>此规格下最大的磁盘大小，单位GB</p>
+     * @param integer $QPS <p>此规格对应的QPS大小</p>
+     * @param string $SuitInfo <p>此规格的中文描述信息</p>
+     * @param integer $Pid <p>此规格对应的包年包月Pid</p>
+     * @param array $PostPid <p>此规格对应的按量计费Pid列表</p>
+     * @param string $PayModeStatus <p>此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有</p>
+     * @param string $InstanceType <p>购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点<br>示例值：HA</p>
+     * @param string $MultiZonesStatus <p>跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有</p>
+     * @param integer $MinBaselineIOPS <p>最小磁盘容量时的基准</p><p>单位：IOPS</p>
+     * @param integer $MaxBaselineIOPS <p>最大磁盘容量时的基准</p><p>单位：IOPS</p>
+     * @param integer $MinBaselineThroughput <p>最小磁盘容量时的基准吞吐量</p><p>单位：MB/s</p>
+     * @param integer $MaxBaselineThroughput <p>最大磁盘容量时的基准吞吐量</p><p>单位：MB/s</p>
+     * @param boolean $ExtraIOSupported <p>是否支持额外 IO 性能</p><p>枚举值：</p><ul><li>TRUE： 支持额外 IO 性能</li><li>FALSE： 不支持额外 IO 性能</li></ul>
+     * @param integer $MaxExtraThroughput <p>额外 IO 最大吞吐量</p><p>单位：MB/s</p>
+     * @param integer $MinDiskSizeForExtraIO <p>支持额外 IO 的最小磁盘容量</p><p>单位： GB</p><p>默认值：460</p>
      */
     function __construct()
     {
@@ -232,6 +284,34 @@ class SpecInfo extends AbstractModel
 
         if (array_key_exists("MultiZonesStatus",$param) and $param["MultiZonesStatus"] !== null) {
             $this->MultiZonesStatus = $param["MultiZonesStatus"];
+        }
+
+        if (array_key_exists("MinBaselineIOPS",$param) and $param["MinBaselineIOPS"] !== null) {
+            $this->MinBaselineIOPS = $param["MinBaselineIOPS"];
+        }
+
+        if (array_key_exists("MaxBaselineIOPS",$param) and $param["MaxBaselineIOPS"] !== null) {
+            $this->MaxBaselineIOPS = $param["MaxBaselineIOPS"];
+        }
+
+        if (array_key_exists("MinBaselineThroughput",$param) and $param["MinBaselineThroughput"] !== null) {
+            $this->MinBaselineThroughput = $param["MinBaselineThroughput"];
+        }
+
+        if (array_key_exists("MaxBaselineThroughput",$param) and $param["MaxBaselineThroughput"] !== null) {
+            $this->MaxBaselineThroughput = $param["MaxBaselineThroughput"];
+        }
+
+        if (array_key_exists("ExtraIOSupported",$param) and $param["ExtraIOSupported"] !== null) {
+            $this->ExtraIOSupported = $param["ExtraIOSupported"];
+        }
+
+        if (array_key_exists("MaxExtraThroughput",$param) and $param["MaxExtraThroughput"] !== null) {
+            $this->MaxExtraThroughput = $param["MaxExtraThroughput"];
+        }
+
+        if (array_key_exists("MinDiskSizeForExtraIO",$param) and $param["MinDiskSizeForExtraIO"] !== null) {
+            $this->MinDiskSizeForExtraIO = $param["MinDiskSizeForExtraIO"];
         }
     }
 }

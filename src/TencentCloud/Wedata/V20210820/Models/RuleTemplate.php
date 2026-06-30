@@ -26,23 +26,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置规则模版名称
  * @method string getDescription() 获取规则模版描述
  * @method void setDescription(string $Description) 设置规则模版描述
- * @method integer getType() 获取模版类型（1：系统模版，2：自定义）
- * @method void setType(integer $Type) 设置模版类型（1：系统模版，2：自定义）
- * @method integer getSourceObjectType() 获取规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
- * @method void setSourceObjectType(integer $SourceObjectType) 设置规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+ * @method integer getType() 获取模版类型：1-系统模版，2-用户自定义模版
+ * @method void setType(integer $Type) 设置模版类型：1-系统模版，2-用户自定义模版
+ * @method integer getSourceObjectType() 获取源数据对象类型：1-常量，2-离线表级，3-离线字段级别
+ * @method void setSourceObjectType(integer $SourceObjectType) 设置源数据对象类型：1-常量，2-离线表级，3-离线字段级别
  * @method integer getSourceObjectDataType() 获取规则适用的源数据对象类型（1：数值，2：字符串）
  * @method void setSourceObjectDataType(integer $SourceObjectDataType) 设置规则适用的源数据对象类型（1：数值，2：字符串）
  * @method string getSourceContent() 获取规则模版源侧内容，区分引擎，JSON 结构
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceContent(string $SourceContent) 设置规则模版源侧内容，区分引擎，JSON 结构
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSourceEngineTypes() 获取源数据适用类型
+ * @method array getSourceEngineTypes() 获取执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置源数据适用类型
+ * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQualityDim() 获取规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
+ * @method integer getQualityDim() 获取质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQualityDim(integer $QualityDim) 设置规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
+ * @method void setQualityDim(integer $QualityDim) 设置质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCompareType() 获取规则支持的比较方式类型（1：固定值比较，大于、小于，大于等于等 2：波动值比较，绝对值、上升、下降）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,12 +111,12 @@ class RuleTemplate extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 模版类型（1：系统模版，2：自定义）
+     * @var integer 模版类型：1-系统模版，2-用户自定义模版
      */
     public $Type;
 
     /**
-     * @var integer 规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * @var integer 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
      */
     public $SourceObjectType;
 
@@ -132,13 +132,13 @@ class RuleTemplate extends AbstractModel
     public $SourceContent;
 
     /**
-     * @var array 源数据适用类型
+     * @var array 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceEngineTypes;
 
     /**
-     * @var integer 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
+     * @var integer 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityDim;
@@ -219,14 +219,14 @@ class RuleTemplate extends AbstractModel
      * @param integer $RuleTemplateId 规则模版ID
      * @param string $Name 规则模版名称
      * @param string $Description 规则模版描述
-     * @param integer $Type 模版类型（1：系统模版，2：自定义）
-     * @param integer $SourceObjectType 规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * @param integer $Type 模版类型：1-系统模版，2-用户自定义模版
+     * @param integer $SourceObjectType 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
      * @param integer $SourceObjectDataType 规则适用的源数据对象类型（1：数值，2：字符串）
      * @param string $SourceContent 规则模版源侧内容，区分引擎，JSON 结构
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SourceEngineTypes 源数据适用类型
+     * @param array $SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QualityDim 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
+     * @param integer $QualityDim 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CompareType 规则支持的比较方式类型（1：固定值比较，大于、小于，大于等于等 2：波动值比较，绝对值、上升、下降）
 注意：此字段可能返回 null，表示取不到有效值。

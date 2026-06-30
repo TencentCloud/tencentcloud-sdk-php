@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 监控数据点
  *
- * @method integer getTimestamp() 获取该监控数据点生成的时间点
- * @method void setTimestamp(integer $Timestamp) 设置该监控数据点生成的时间点
- * @method float getValue() 获取监控数据点的值
+ * @method integer getTimestamp() 获取<p>该监控数据点生成的时间点</p>
+ * @method void setTimestamp(integer $Timestamp) 设置<p>该监控数据点生成的时间点</p>
+ * @method float getValue() 获取<p>监控数据点的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(float $Value) 设置监控数据点的值
+ * @method void setValue(float $Value) 设置<p>监控数据点的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Point extends AbstractModel
 {
     /**
-     * @var integer 该监控数据点生成的时间点
+     * @var integer <p>该监控数据点生成的时间点</p>
      */
     public $Timestamp;
 
     /**
-     * @var float 监控数据点的值
+     * @var float <p>监控数据点的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @param integer $Timestamp 该监控数据点生成的时间点
-     * @param float $Value 监控数据点的值
+     * @param integer $Timestamp <p>该监控数据点生成的时间点</p>
+     * @param float $Value <p>监控数据点的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

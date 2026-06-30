@@ -20,469 +20,489 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 补录计划
  *
- * @method string getPlanId() 获取补录计划ID
+ * @method string getPlanId() 获取<p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPlanId(string $PlanId) 设置补录计划ID
+ * @method void setPlanId(string $PlanId) 设置<p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMakeName() 获取补录计划名称
+ * @method string getMakeName() 获取<p>补录计划名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMakeName(string $MakeName) 设置补录计划名称
+ * @method void setMakeName(string $MakeName) 设置<p>补录计划名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目ID
+ * @method string getProjectId() 获取<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getCheckParent() 获取补录是否检查父任务状态
+ * @method boolean getCheckParent() 获取<p>补录是否检查父任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCheckParent(boolean $CheckParent) 设置补录是否检查父任务状态
+ * @method void setCheckParent(boolean $CheckParent) 设置<p>补录是否检查父任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSameSelfDependType() 获取是否使用任务原有自依赖配置
+ * @method boolean getSameSelfDependType() 获取<p>是否使用任务原有自依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSameSelfDependType(boolean $SameSelfDependType) 设置是否使用任务原有自依赖配置
+ * @method void setSameSelfDependType(boolean $SameSelfDependType) 设置<p>是否使用任务原有自依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getParallelNum() 获取并行度，在SameSelfDependType为false时生效
+ * @method integer getParallelNum() 获取<p>并行度，在SameSelfDependType为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParallelNum(integer $ParallelNum) 设置并行度，在SameSelfDependType为false时生效
+ * @method void setParallelNum(integer $ParallelNum) 设置<p>并行度，在SameSelfDependType为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSameCycle() 获取补录实例生成周期是否修改
+ * @method boolean getSameCycle() 获取<p>补录实例生成周期是否修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSameCycle(boolean $SameCycle) 设置补录实例生成周期是否修改
+ * @method void setSameCycle(boolean $SameCycle) 设置<p>补录实例生成周期是否修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSourceTaskCycle() 获取调度周期转换方式-原始周期类型
+ * @method string getSourceTaskCycle() 获取<p>调度周期转换方式-原始周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceTaskCycle(string $SourceTaskCycle) 设置调度周期转换方式-原始周期类型
+ * @method void setSourceTaskCycle(string $SourceTaskCycle) 设置<p>调度周期转换方式-原始周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetTaskCycle() 获取调度周期转换方式-目标周期类型
+ * @method string getTargetTaskCycle() 获取<p>调度周期转换方式-目标周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetTaskCycle(string $TargetTaskCycle) 设置调度周期转换方式-目标周期类型
+ * @method void setTargetTaskCycle(string $TargetTaskCycle) 设置<p>调度周期转换方式-目标周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTargetTaskAction() 获取调度周期转换方式-目标周期类型指定时间
+ * @method integer getTargetTaskAction() 获取<p>调度周期转换方式-目标周期类型指定时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetTaskAction(integer $TargetTaskAction) 设置调度周期转换方式-目标周期类型指定时间
+ * @method void setTargetTaskAction(integer $TargetTaskAction) 设置<p>调度周期转换方式-目标周期类型指定时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMapParamList() 获取补录实例自定义参数
+ * @method array getMapParamList() 获取<p>补录实例自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMapParamList(array $MapParamList) 设置补录实例自定义参数
+ * @method void setMapParamList(array $MapParamList) 设置<p>补录实例自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMakeExtList() 获取补录扩展属性
+ * @method array getMakeExtList() 获取<p>补录扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMakeExtList(array $MakeExtList) 设置补录扩展属性
+ * @method void setMakeExtList(array $MakeExtList) 设置<p>补录扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatorId() 获取创建人ID
+ * @method string getCreatorId() 获取<p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatorId(string $CreatorId) 设置创建人ID
+ * @method void setCreatorId(string $CreatorId) 设置<p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreator() 获取创建人
+ * @method string getCreator() 获取<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreator(string $Creator) 设置创建人
+ * @method void setCreator(string $Creator) 设置<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTaskIdList() 获取补录任务ID集合
+ * @method array getTaskIdList() 获取<p>补录任务ID集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskIdList(array $TaskIdList) 设置补录任务ID集合
+ * @method void setTaskIdList(array $TaskIdList) 设置<p>补录任务ID集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMakeDatetimeList() 获取补录计划日期范围
+ * @method array getMakeDatetimeList() 获取<p>补录计划日期范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMakeDatetimeList(array $MakeDatetimeList) 设置补录计划日期范围
+ * @method void setMakeDatetimeList(array $MakeDatetimeList) 设置<p>补录计划日期范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemark() 获取补录计划说明
+ * @method string getRemark() 获取<p>补录计划说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemark(string $Remark) 设置补录计划说明
+ * @method void setRemark(string $Remark) 设置<p>补录计划说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchedulerResourceGroup() 获取补录指定的调度资源组（ID）
+ * @method string getSchedulerResourceGroup() 获取<p>补录指定的调度资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchedulerResourceGroup(string $SchedulerResourceGroup) 设置补录指定的调度资源组（ID）
+ * @method void setSchedulerResourceGroup(string $SchedulerResourceGroup) 设置<p>补录指定的调度资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchedulerResourceGroupName() 获取补录指定的调度资源组名称
+ * @method string getSchedulerResourceGroupName() 获取<p>补录指定的调度资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchedulerResourceGroupName(string $SchedulerResourceGroupName) 设置补录指定的调度资源组名称
+ * @method void setSchedulerResourceGroupName(string $SchedulerResourceGroupName) 设置<p>补录指定的调度资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIntegrationResourceGroup() 获取补录指定的集成资源组（ID）
+ * @method string getIntegrationResourceGroup() 获取<p>补录指定的集成资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntegrationResourceGroup(string $IntegrationResourceGroup) 设置补录指定的集成资源组（ID）
+ * @method void setIntegrationResourceGroup(string $IntegrationResourceGroup) 设置<p>补录指定的集成资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIntegrationResourceGroupName() 获取补录指定的集成资源组名称
+ * @method string getIntegrationResourceGroupName() 获取<p>补录指定的集成资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntegrationResourceGroupName(string $IntegrationResourceGroupName) 设置补录指定的集成资源组名称
+ * @method void setIntegrationResourceGroupName(string $IntegrationResourceGroupName) 设置<p>补录指定的集成资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskCount() 获取补录计划任务数量
+ * @method integer getTaskCount() 获取<p>补录计划任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskCount(integer $TaskCount) 设置补录计划任务数量
+ * @method void setTaskCount(integer $TaskCount) 设置<p>补录计划任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCompletePercent() 获取补录计划实例完成百分数
+ * @method integer getCompletePercent() 获取<p>补录计划实例完成百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompletePercent(integer $CompletePercent) 设置补录计划实例完成百分数
+ * @method void setCompletePercent(integer $CompletePercent) 设置<p>补录计划实例完成百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSuccessPercent() 获取补录计划实例成功百分数
+ * @method integer getSuccessPercent() 获取<p>补录计划实例成功百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuccessPercent(integer $SuccessPercent) 设置补录计划实例成功百分数
+ * @method void setSuccessPercent(integer $SuccessPercent) 设置<p>补录计划实例成功百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCheckParentType() 获取补录检查父任务类型。取值范围：
-<li> NONE: 全部不检查 </li>
-<li> ALL: 检查全部上游父任务 </li>
-<li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+ * @method string getCheckParentType() 获取<p>补录检查父任务类型。取值范围：</p><li> NONE: 全部不检查 </li><li> ALL: 检查全部上游父任务 </li><li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCheckParentType(string $CheckParentType) 设置补录检查父任务类型。取值范围：
-<li> NONE: 全部不检查 </li>
-<li> ALL: 检查全部上游父任务 </li>
-<li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+ * @method void setCheckParentType(string $CheckParentType) 设置<p>补录检查父任务类型。取值范围：</p><li> NONE: 全部不检查 </li><li> ALL: 检查全部上游父任务 </li><li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSameSelfWorkflowDependType() 获取是否和原任务保持相同工作流自依赖属性
+ * @method boolean getSameSelfWorkflowDependType() 获取<p>是否和原任务保持相同工作流自依赖属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSameSelfWorkflowDependType(boolean $SameSelfWorkflowDependType) 设置是否和原任务保持相同工作流自依赖属性
+ * @method void setSameSelfWorkflowDependType(boolean $SameSelfWorkflowDependType) 设置<p>是否和原任务保持相同工作流自依赖属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSelfWorkflowDependency() 获取工作流自依赖类型
+ * @method string getSelfWorkflowDependency() 获取<p>工作流自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSelfWorkflowDependency(string $SelfWorkflowDependency) 设置工作流自依赖类型
+ * @method void setSelfWorkflowDependency(string $SelfWorkflowDependency) 设置<p>工作流自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMakeDataTimeOrder() 获取补录时间顺序
-NORMAL： 正常
-ORDER ： 按照实例时间顺序执行
-REVERSE： 实例数据时间逆序
- * @method void setMakeDataTimeOrder(string $MakeDataTimeOrder) 设置补录时间顺序
-NORMAL： 正常
-ORDER ： 按照实例时间顺序执行
-REVERSE： 实例数据时间逆序
- * @method string getScheduleTimeZone() 获取补录时间范围的时区
- * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置补录时间范围的时区
- * @method string getAppParam() 获取执行应用参数
- * @method void setAppParam(string $AppParam) 设置执行应用参数
- * @method string getTimeType() 获取补录计划时间范围的类型： 
-DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
- * @method void setTimeType(string $TimeType) 设置补录计划时间范围的类型： 
-DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method integer getFailurePercent() 获取失败百分比
+ * @method string getMakeDataTimeOrder() 获取<p>补录时间顺序<br>NORMAL： 正常<br>ORDER ： 按照实例时间顺序执行<br>REVERSE： 实例数据时间逆序</p>
+ * @method void setMakeDataTimeOrder(string $MakeDataTimeOrder) 设置<p>补录时间顺序<br>NORMAL： 正常<br>ORDER ： 按照实例时间顺序执行<br>REVERSE： 实例数据时间逆序</p>
+ * @method string getScheduleTimeZone() 获取<p>补录时间范围的时区</p>
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置<p>补录时间范围的时区</p>
+ * @method string getAppParam() 获取<p>执行应用参数</p>
+ * @method void setAppParam(string $AppParam) 设置<p>执行应用参数</p>
+ * @method string getTimeType() 获取<p>补录计划时间范围的类型：<br>DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间</p>
+ * @method void setTimeType(string $TimeType) 设置<p>补录计划时间范围的类型：<br>DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间</p>
+ * @method string getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间</p>
+ * @method string getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
+ * @method integer getFailurePercent() 获取<p>失败百分比</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailurePercent(integer $FailurePercent) 设置失败百分比
+ * @method void setFailurePercent(integer $FailurePercent) 设置<p>失败百分比</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MakePlanAlarmRule getAlarmRule() 获取补录计划的告警规则
+ * @method MakePlanAlarmRule getAlarmRule() 获取<p>补录计划的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmRule(MakePlanAlarmRule $AlarmRule) 设置补录计划的告警规则
+ * @method void setAlarmRule(MakePlanAlarmRule $AlarmRule) 设置<p>补录计划的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRunType() 获取运行类型
+ * @method integer getRunType() 获取<p>运行类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunType(integer $RunType) 设置运行类型
+ * @method void setRunType(integer $RunType) 设置<p>运行类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunDateTime() 获取定时运行时间
+ * @method string getRunDateTime() 获取<p>定时运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunDateTime(string $RunDateTime) 设置定时运行时间
+ * @method void setRunDateTime(string $RunDateTime) 设置<p>定时运行时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRunScheduleTimeZone() 获取<p>定时补录计划 或者 指定时间段补录 执行时间点的时区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunScheduleTimeZone(string $RunScheduleTimeZone) 设置<p>定时补录计划 或者 指定时间段补录 执行时间点的时区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRunScheduleRangeStartTime() 获取<p>指定时间段补录开始时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunScheduleRangeStartTime(string $RunScheduleRangeStartTime) 设置<p>指定时间段补录开始时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRunScheduleRangeEndTime() 获取<p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunScheduleRangeEndTime(string $RunScheduleRangeEndTime) 设置<p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRunScheduleRangeWeekDays() 获取<p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunScheduleRangeWeekDays(array $RunScheduleRangeWeekDays) 设置<p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MakePlanOpsDto extends AbstractModel
 {
     /**
-     * @var string 补录计划ID
+     * @var string <p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlanId;
 
     /**
-     * @var string 补录计划名称
+     * @var string <p>补录计划名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MakeName;
 
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var boolean 补录是否检查父任务状态
+     * @var boolean <p>补录是否检查父任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckParent;
 
     /**
-     * @var boolean 是否使用任务原有自依赖配置
+     * @var boolean <p>是否使用任务原有自依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SameSelfDependType;
 
     /**
-     * @var integer 并行度，在SameSelfDependType为false时生效
+     * @var integer <p>并行度，在SameSelfDependType为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParallelNum;
 
     /**
-     * @var boolean 补录实例生成周期是否修改
+     * @var boolean <p>补录实例生成周期是否修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SameCycle;
 
     /**
-     * @var string 调度周期转换方式-原始周期类型
+     * @var string <p>调度周期转换方式-原始周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceTaskCycle;
 
     /**
-     * @var string 调度周期转换方式-目标周期类型
+     * @var string <p>调度周期转换方式-目标周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetTaskCycle;
 
     /**
-     * @var integer 调度周期转换方式-目标周期类型指定时间
+     * @var integer <p>调度周期转换方式-目标周期类型指定时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetTaskAction;
 
     /**
-     * @var array 补录实例自定义参数
+     * @var array <p>补录实例自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MapParamList;
 
     /**
-     * @var array 补录扩展属性
+     * @var array <p>补录扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MakeExtList;
 
     /**
-     * @var string 创建人ID
+     * @var string <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorId;
 
     /**
-     * @var string 创建人
+     * @var string <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Creator;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var array 补录任务ID集合
+     * @var array <p>补录任务ID集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskIdList;
 
     /**
-     * @var array 补录计划日期范围
+     * @var array <p>补录计划日期范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MakeDatetimeList;
 
     /**
-     * @var string 补录计划说明
+     * @var string <p>补录计划说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
-     * @var string 补录指定的调度资源组（ID）
+     * @var string <p>补录指定的调度资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchedulerResourceGroup;
 
     /**
-     * @var string 补录指定的调度资源组名称
+     * @var string <p>补录指定的调度资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchedulerResourceGroupName;
 
     /**
-     * @var string 补录指定的集成资源组（ID）
+     * @var string <p>补录指定的集成资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntegrationResourceGroup;
 
     /**
-     * @var string 补录指定的集成资源组名称
+     * @var string <p>补录指定的集成资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntegrationResourceGroupName;
 
     /**
-     * @var integer 补录计划任务数量
+     * @var integer <p>补录计划任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskCount;
 
     /**
-     * @var integer 补录计划实例完成百分数
+     * @var integer <p>补录计划实例完成百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompletePercent;
 
     /**
-     * @var integer 补录计划实例成功百分数
+     * @var integer <p>补录计划实例成功百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccessPercent;
 
     /**
-     * @var string 补录检查父任务类型。取值范围：
-<li> NONE: 全部不检查 </li>
-<li> ALL: 检查全部上游父任务 </li>
-<li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+     * @var string <p>补录检查父任务类型。取值范围：</p><li> NONE: 全部不检查 </li><li> ALL: 检查全部上游父任务 </li><li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckParentType;
 
     /**
-     * @var boolean 是否和原任务保持相同工作流自依赖属性
+     * @var boolean <p>是否和原任务保持相同工作流自依赖属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SameSelfWorkflowDependType;
 
     /**
-     * @var string 工作流自依赖类型
+     * @var string <p>工作流自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfWorkflowDependency;
 
     /**
-     * @var string 补录时间顺序
-NORMAL： 正常
-ORDER ： 按照实例时间顺序执行
-REVERSE： 实例数据时间逆序
+     * @var string <p>补录时间顺序<br>NORMAL： 正常<br>ORDER ： 按照实例时间顺序执行<br>REVERSE： 实例数据时间逆序</p>
      */
     public $MakeDataTimeOrder;
 
     /**
-     * @var string 补录时间范围的时区
+     * @var string <p>补录时间范围的时区</p>
      */
     public $ScheduleTimeZone;
 
     /**
-     * @var string 执行应用参数
+     * @var string <p>执行应用参数</p>
      */
     public $AppParam;
 
     /**
-     * @var string 补录计划时间范围的类型： 
-DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+     * @var string <p>补录计划时间范围的类型：<br>DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间</p>
      */
     public $TimeType;
 
     /**
-     * @var string 开始时间
+     * @var string <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 失败百分比
+     * @var integer <p>失败百分比</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailurePercent;
 
     /**
-     * @var MakePlanAlarmRule 补录计划的告警规则
+     * @var MakePlanAlarmRule <p>补录计划的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmRule;
 
     /**
-     * @var integer 运行类型
+     * @var integer <p>运行类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunType;
 
     /**
-     * @var string 定时运行时间
+     * @var string <p>定时运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunDateTime;
 
     /**
-     * @param string $PlanId 补录计划ID
+     * @var string <p>定时补录计划 或者 指定时间段补录 执行时间点的时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MakeName 补录计划名称
+     */
+    public $RunScheduleTimeZone;
+
+    /**
+     * @var string <p>指定时间段补录开始时间</p><p>参数格式：00:00 - 23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目ID
+     */
+    public $RunScheduleRangeStartTime;
+
+    /**
+     * @var string <p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $CheckParent 补录是否检查父任务状态
+     */
+    public $RunScheduleRangeEndTime;
+
+    /**
+     * @var array <p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $SameSelfDependType 是否使用任务原有自依赖配置
+     */
+    public $RunScheduleRangeWeekDays;
+
+    /**
+     * @param string $PlanId <p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ParallelNum 并行度，在SameSelfDependType为false时生效
+     * @param string $MakeName <p>补录计划名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $SameCycle 补录实例生成周期是否修改
+     * @param string $ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SourceTaskCycle 调度周期转换方式-原始周期类型
+     * @param boolean $CheckParent <p>补录是否检查父任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetTaskCycle 调度周期转换方式-目标周期类型
+     * @param boolean $SameSelfDependType <p>是否使用任务原有自依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TargetTaskAction 调度周期转换方式-目标周期类型指定时间
+     * @param integer $ParallelNum <p>并行度，在SameSelfDependType为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MapParamList 补录实例自定义参数
+     * @param boolean $SameCycle <p>补录实例生成周期是否修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MakeExtList 补录扩展属性
+     * @param string $SourceTaskCycle <p>调度周期转换方式-原始周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatorId 创建人ID
+     * @param string $TargetTaskCycle <p>调度周期转换方式-目标周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Creator 创建人
+     * @param integer $TargetTaskAction <p>调度周期转换方式-目标周期类型指定时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param array $MapParamList <p>补录实例自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TaskIdList 补录任务ID集合
+     * @param array $MakeExtList <p>补录扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MakeDatetimeList 补录计划日期范围
+     * @param string $CreatorId <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Remark 补录计划说明
+     * @param string $Creator <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchedulerResourceGroup 补录指定的调度资源组（ID）
+     * @param string $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchedulerResourceGroupName 补录指定的调度资源组名称
+     * @param array $TaskIdList <p>补录任务ID集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IntegrationResourceGroup 补录指定的集成资源组（ID）
+     * @param array $MakeDatetimeList <p>补录计划日期范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IntegrationResourceGroupName 补录指定的集成资源组名称
+     * @param string $Remark <p>补录计划说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskCount 补录计划任务数量
+     * @param string $SchedulerResourceGroup <p>补录指定的调度资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CompletePercent 补录计划实例完成百分数
+     * @param string $SchedulerResourceGroupName <p>补录指定的调度资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SuccessPercent 补录计划实例成功百分数
+     * @param string $IntegrationResourceGroup <p>补录指定的集成资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CheckParentType 补录检查父任务类型。取值范围：
-<li> NONE: 全部不检查 </li>
-<li> ALL: 检查全部上游父任务 </li>
-<li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+     * @param string $IntegrationResourceGroupName <p>补录指定的集成资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $SameSelfWorkflowDependType 是否和原任务保持相同工作流自依赖属性
+     * @param integer $TaskCount <p>补录计划任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SelfWorkflowDependency 工作流自依赖类型
+     * @param integer $CompletePercent <p>补录计划实例完成百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MakeDataTimeOrder 补录时间顺序
-NORMAL： 正常
-ORDER ： 按照实例时间顺序执行
-REVERSE： 实例数据时间逆序
-     * @param string $ScheduleTimeZone 补录时间范围的时区
-     * @param string $AppParam 执行应用参数
-     * @param string $TimeType 补录计划时间范围的类型： 
-DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param integer $FailurePercent 失败百分比
+     * @param integer $SuccessPercent <p>补录计划实例成功百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MakePlanAlarmRule $AlarmRule 补录计划的告警规则
+     * @param string $CheckParentType <p>补录检查父任务类型。取值范围：</p><li> NONE: 全部不检查 </li><li> ALL: 检查全部上游父任务 </li><li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RunType 运行类型
+     * @param boolean $SameSelfWorkflowDependType <p>是否和原任务保持相同工作流自依赖属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunDateTime 定时运行时间
+     * @param string $SelfWorkflowDependency <p>工作流自依赖类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MakeDataTimeOrder <p>补录时间顺序<br>NORMAL： 正常<br>ORDER ： 按照实例时间顺序执行<br>REVERSE： 实例数据时间逆序</p>
+     * @param string $ScheduleTimeZone <p>补录时间范围的时区</p>
+     * @param string $AppParam <p>执行应用参数</p>
+     * @param string $TimeType <p>补录计划时间范围的类型：<br>DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间</p>
+     * @param string $StartTime <p>开始时间</p>
+     * @param string $EndTime <p>结束时间</p>
+     * @param integer $FailurePercent <p>失败百分比</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MakePlanAlarmRule $AlarmRule <p>补录计划的告警规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RunType <p>运行类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RunDateTime <p>定时运行时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RunScheduleTimeZone <p>定时补录计划 或者 指定时间段补录 执行时间点的时区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RunScheduleRangeStartTime <p>指定时间段补录开始时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RunScheduleRangeEndTime <p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RunScheduleRangeWeekDays <p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -664,6 +684,22 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
 
         if (array_key_exists("RunDateTime",$param) and $param["RunDateTime"] !== null) {
             $this->RunDateTime = $param["RunDateTime"];
+        }
+
+        if (array_key_exists("RunScheduleTimeZone",$param) and $param["RunScheduleTimeZone"] !== null) {
+            $this->RunScheduleTimeZone = $param["RunScheduleTimeZone"];
+        }
+
+        if (array_key_exists("RunScheduleRangeStartTime",$param) and $param["RunScheduleRangeStartTime"] !== null) {
+            $this->RunScheduleRangeStartTime = $param["RunScheduleRangeStartTime"];
+        }
+
+        if (array_key_exists("RunScheduleRangeEndTime",$param) and $param["RunScheduleRangeEndTime"] !== null) {
+            $this->RunScheduleRangeEndTime = $param["RunScheduleRangeEndTime"];
+        }
+
+        if (array_key_exists("RunScheduleRangeWeekDays",$param) and $param["RunScheduleRangeWeekDays"] !== null) {
+            $this->RunScheduleRangeWeekDays = $param["RunScheduleRangeWeekDays"];
         }
     }
 }

@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstanceNew返回参数结构体
  *
- * @method string getFlowId() 获取流程ID
- * @method void setFlowId(string $FlowId) 设置流程ID
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getErrorMsg() 获取错误信息
- * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
+ * @method string getFlowId() 获取<p>流程ID</p>
+ * @method void setFlowId(string $FlowId) 设置<p>流程ID</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getErrorMsg() 获取<p>错误信息</p>
+ * @method void setErrorMsg(string $ErrorMsg) 设置<p>错误信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateInstanceNewResponse extends AbstractModel
 {
     /**
-     * @var string 流程ID
+     * @var string <p>流程ID</p>
      */
     public $FlowId;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 错误信息
+     * @var string <p>错误信息</p>
      */
     public $ErrorMsg;
 
@@ -52,9 +52,9 @@ class CreateInstanceNewResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 流程ID
-     * @param string $InstanceId 实例ID
-     * @param string $ErrorMsg 错误信息
+     * @param string $FlowId <p>流程ID</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $ErrorMsg <p>错误信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

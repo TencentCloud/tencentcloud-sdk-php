@@ -25,7 +25,9 @@ use TencentCloud\Vtc\V20240223\Models as Models;
 /**
  * @method Models\ConfirmVideoTranslateJobResponse ConfirmVideoTranslateJob(Models\ConfirmVideoTranslateJobRequest $req) 确认视频转译结果
  * @method Models\DescribeVideoTranslateJobResponse DescribeVideoTranslateJob(Models\DescribeVideoTranslateJobRequest $req) 查询视频转译任务
- * @method Models\SubmitVideoTranslateJobResponse SubmitVideoTranslateJob(Models\SubmitVideoTranslateJobRequest $req) ###### 支持音色种别列表
+ * @method Models\SubmitVideoTranslateJobResponse SubmitVideoTranslateJob(Models\SubmitVideoTranslateJobRequest $req) 视频转译业务整体下线
+
+###### 支持音色种别列表
 | 音色名称                 | 性别 | 目标语言         | 音色ID |
 | ------------------------ | ---- | ---------------- | ------ |
 | Florian Multilingual     | 男 | 德语(德国)       | 701001 |

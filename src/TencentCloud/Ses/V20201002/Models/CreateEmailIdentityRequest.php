@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEmailIdentity请求参数结构体
  *
- * @method string getEmailIdentity() 获取您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
- * @method void setEmailIdentity(string $EmailIdentity) 设置您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
- * @method integer getDKIMOption() 获取生成的dkim密钥长度。0:1024，1:2048
- * @method void setDKIMOption(integer $DKIMOption) 设置生成的dkim密钥长度。0:1024，1:2048
- * @method array getTagList() 获取tag 标签
- * @method void setTagList(array $TagList) 设置tag 标签
+ * @method string getEmailIdentity() 获取<p>您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。</p>
+ * @method void setEmailIdentity(string $EmailIdentity) 设置<p>您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。</p>
+ * @method integer getDKIMOption() 获取<p>生成的dkim密钥长度。0:1024，1:2048</p>
+ * @method void setDKIMOption(integer $DKIMOption) 设置<p>生成的dkim密钥长度。0:1024，1:2048</p>
+ * @method array getTagList() 获取<p>tag 标签</p>
+ * @method void setTagList(array $TagList) 设置<p>tag 标签</p>
  */
 class CreateEmailIdentityRequest extends AbstractModel
 {
     /**
-     * @var string 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
+     * @var string <p>您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。</p>
      */
     public $EmailIdentity;
 
     /**
-     * @var integer 生成的dkim密钥长度。0:1024，1:2048
+     * @var integer <p>生成的dkim密钥长度。0:1024，1:2048</p>
      */
     public $DKIMOption;
 
     /**
-     * @var array tag 标签
+     * @var array <p>tag 标签</p>
      */
     public $TagList;
 
     /**
-     * @param string $EmailIdentity 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
-     * @param integer $DKIMOption 生成的dkim密钥长度。0:1024，1:2048
-     * @param array $TagList tag 标签
+     * @param string $EmailIdentity <p>您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。</p>
+     * @param integer $DKIMOption <p>生成的dkim密钥长度。0:1024，1:2048</p>
+     * @param array $TagList <p>tag 标签</p>
      */
     function __construct()
     {

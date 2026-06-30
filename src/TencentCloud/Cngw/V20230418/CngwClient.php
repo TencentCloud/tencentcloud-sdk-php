@@ -24,6 +24,8 @@ use TencentCloud\Cngw\V20230418\Models as Models;
 
 /**
  * @method Models\AddCloudNativeAPIGatewayConsumerGroupAuthResponse AddCloudNativeAPIGatewayConsumerGroupAuth(Models\AddCloudNativeAPIGatewayConsumerGroupAuthRequest $req) 为资源（模型 API / MCP Server）添加消费者组授权。
+ * @method Models\AddCloudNativeAPIGatewayConsumerInGroupResponse AddCloudNativeAPIGatewayConsumerInGroup(Models\AddCloudNativeAPIGatewayConsumerInGroupRequest $req) 将消费者添加到消费者组。
+ * @method Models\BindCloudNativeAPIGatewaySecretKeyResponse BindCloudNativeAPIGatewaySecretKey(Models\BindCloudNativeAPIGatewaySecretKeyRequest $req) 添加密钥与资源的引用关系接口
  * @method Models\CreateCloudNativeAPIGatewayConsumerResponse CreateCloudNativeAPIGatewayConsumer(Models\CreateCloudNativeAPIGatewayConsumerRequest $req) 创建AI网关消费者。
  * @method Models\CreateCloudNativeAPIGatewayConsumerGroupResponse CreateCloudNativeAPIGatewayConsumerGroup(Models\CreateCloudNativeAPIGatewayConsumerGroupRequest $req) 创建AI 网关消费者组
  * @method Models\CreateCloudNativeAPIGatewayLLMModelAPIResponse CreateCloudNativeAPIGatewayLLMModelAPI(Models\CreateCloudNativeAPIGatewayLLMModelAPIRequest $req) 创建 LLM 模型 API。
@@ -68,6 +70,8 @@ use TencentCloud\Cngw\V20230418\Models as Models;
  * @method Models\ModifyCloudNativeAPIGatewayMCPToolStatusResponse ModifyCloudNativeAPIGatewayMCPToolStatus(Models\ModifyCloudNativeAPIGatewayMCPToolStatusRequest $req) AI网关修改MCP Tool上下线状态
  * @method Models\ModifyCloudNativeAPIGatewaySecretKeyResponse ModifyCloudNativeAPIGatewaySecretKey(Models\ModifyCloudNativeAPIGatewaySecretKeyRequest $req) 修改AI网关密钥
  * @method Models\RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse RemoveCloudNativeAPIGatewayConsumerGroupAuth(Models\RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest $req) 从资源（模型 API / MCP Server）移除消费者组授权。
+ * @method Models\RemoveCloudNativeAPIGatewayConsumerInGroupResponse RemoveCloudNativeAPIGatewayConsumerInGroup(Models\RemoveCloudNativeAPIGatewayConsumerInGroupRequest $req) 将消费者从消费者组移除。
+ * @method Models\UnbindCloudNativeAPIGatewaySecretKeyResponse UnbindCloudNativeAPIGatewaySecretKey(Models\UnbindCloudNativeAPIGatewaySecretKeyRequest $req) 解绑密钥
  */
 
 class CngwClient extends AbstractClient

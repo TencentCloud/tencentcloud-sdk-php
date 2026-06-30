@@ -19,14 +19,13 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 集群计费相关信息
-
  *
  * @method string getChargeType() 获取计费类型，“PREPAID” 预付费，“POSTPAID_BY_HOUR” 后付费
  * @method void setChargeType(string $ChargeType) 设置计费类型，“PREPAID” 预付费，“POSTPAID_BY_HOUR” 后付费
- * @method integer getRenewFlag() 获取PREPAID需要传递，是否自动续费，1表示自动续费开启
- * @method void setRenewFlag(integer $RenewFlag) 设置PREPAID需要传递，是否自动续费，1表示自动续费开启
- * @method integer getTimeSpan() 获取预付费需要传递，计费时间长度，多少个月
- * @method void setTimeSpan(integer $TimeSpan) 设置预付费需要传递，计费时间长度，多少个月
+ * @method integer getRenewFlag() 获取ChargeType为PREPAID时，必传，表示是否自动续费，1表示自动续费开启
+ * @method void setRenewFlag(integer $RenewFlag) 设置ChargeType为PREPAID时，必传，表示是否自动续费，1表示自动续费开启
+ * @method integer getTimeSpan() 获取ChargeType为PREPAID时，必传，表示计费时间长度，多少个月
+ * @method void setTimeSpan(integer $TimeSpan) 设置ChargeType为PREPAID时，必传，表示计费时间长度，多少个月
  */
 class Charge extends AbstractModel
 {
@@ -36,19 +35,19 @@ class Charge extends AbstractModel
     public $ChargeType;
 
     /**
-     * @var integer PREPAID需要传递，是否自动续费，1表示自动续费开启
+     * @var integer ChargeType为PREPAID时，必传，表示是否自动续费，1表示自动续费开启
      */
     public $RenewFlag;
 
     /**
-     * @var integer 预付费需要传递，计费时间长度，多少个月
+     * @var integer ChargeType为PREPAID时，必传，表示计费时间长度，多少个月
      */
     public $TimeSpan;
 
     /**
      * @param string $ChargeType 计费类型，“PREPAID” 预付费，“POSTPAID_BY_HOUR” 后付费
-     * @param integer $RenewFlag PREPAID需要传递，是否自动续费，1表示自动续费开启
-     * @param integer $TimeSpan 预付费需要传递，计费时间长度，多少个月
+     * @param integer $RenewFlag ChargeType为PREPAID时，必传，表示是否自动续费，1表示自动续费开启
+     * @param integer $TimeSpan ChargeType为PREPAID时，必传，表示计费时间长度，多少个月
      */
     function __construct()
     {

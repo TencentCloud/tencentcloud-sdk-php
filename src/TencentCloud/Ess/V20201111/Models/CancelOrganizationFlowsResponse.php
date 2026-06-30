@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CancelOrganizationFlows返回参数结构体
  *
- * @method string getTaskId() 获取<p>全量撤销企业合同任务编号，为32位字符串，可用于<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CancelOrganizationFlows">查询批量撤销合同结果</a> 或关联<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%BA%8C-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83">全量撤销企业合同任务结果回调</a></p>
- * @method void setTaskId(string $TaskId) 设置<p>全量撤销企业合同任务编号，为32位字符串，可用于<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CancelOrganizationFlows">查询批量撤销合同结果</a> 或关联<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%BA%8C-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83">全量撤销企业合同任务结果回调</a></p>
+ * @method string getTaskId() 获取<p>全量撤销企业合同任务编号，为32位字符串，可用于<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CancelOrganizationFlows">查询批量撤销合同结果</a> 或关联<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%B8%80-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83">全量撤销企业合同任务结果回调</a></p>
+ * @method void setTaskId(string $TaskId) 设置<p>全量撤销企业合同任务编号，为32位字符串，可用于<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CancelOrganizationFlows">查询批量撤销合同结果</a> 或关联<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%B8%80-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83">全量撤销企业合同任务结果回调</a></p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CancelOrganizationFlowsResponse extends AbstractModel
 {
     /**
-     * @var string <p>全量撤销企业合同任务编号，为32位字符串，可用于<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CancelOrganizationFlows">查询批量撤销合同结果</a> 或关联<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%BA%8C-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83">全量撤销企业合同任务结果回调</a></p>
+     * @var string <p>全量撤销企业合同任务编号，为32位字符串，可用于<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CancelOrganizationFlows">查询批量撤销合同结果</a> 或关联<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%B8%80-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83">全量撤销企业合同任务结果回调</a></p>
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class CancelOrganizationFlowsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId <p>全量撤销企业合同任务编号，为32位字符串，可用于<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CancelOrganizationFlows">查询批量撤销合同结果</a> 或关联<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%BA%8C-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83">全量撤销企业合同任务结果回调</a></p>
+     * @param string $TaskId <p>全量撤销企业合同任务编号，为32位字符串，可用于<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CancelOrganizationFlows">查询批量撤销合同结果</a> 或关联<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%B8%80-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83">全量撤销企业合同任务结果回调</a></p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

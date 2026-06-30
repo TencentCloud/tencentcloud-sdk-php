@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyObjectCount接口返回的地域统计
  *
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method integer getCount() 获取绑定的实例数量
- * @method void setCount(integer $Count) 设置绑定的实例数量
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method integer getCount() 获取<p>绑定的实例数量</p>
+ * @method void setCount(integer $Count) 设置<p>绑定的实例数量</p>
  */
 class RegionPolicyObjectCount extends AbstractModel
 {
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var integer 绑定的实例数量
+     * @var integer <p>绑定的实例数量</p>
      */
     public $Count;
 
     /**
-     * @param string $Region 地域
-     * @param integer $Count 绑定的实例数量
+     * @param string $Region <p>地域</p>
+     * @param integer $Count <p>绑定的实例数量</p>
      */
     function __construct()
     {

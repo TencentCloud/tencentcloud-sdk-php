@@ -20,210 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudReadOnlyDBInstances请求参数结构体
  *
- * @method string getInstanceId() 获取主实例ID，格式如：mssql-3l3fgqn7
- * @method void setInstanceId(string $InstanceId) 设置主实例ID，格式如：mssql-3l3fgqn7
- * @method string getZone() 获取实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
- * @method void setZone(string $Zone) 设置实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
- * @method integer getReadOnlyGroupType() 获取只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
- * @method void setReadOnlyGroupType(integer $ReadOnlyGroupType) 设置只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
- * @method integer getMemory() 获取实例内存大小，单位GB
- * @method void setMemory(integer $Memory) 设置实例内存大小，单位GB
- * @method integer getStorage() 获取实例磁盘大小，单位GB
- * @method void setStorage(integer $Storage) 设置实例磁盘大小，单位GB
- * @method integer getCpu() 获取实例核心数
- * @method void setCpu(integer $Cpu) 设置实例核心数
- * @method string getMachineType() 获取购买实例的宿主机磁盘类型,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘
- * @method void setMachineType(string $MachineType) 设置购买实例的宿主机磁盘类型,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘
- * @method integer getReadOnlyGroupForcedUpgrade() 获取0-默认不升级主实例，1-强制升级主实例完成ro部署；主实例为非集群版时需要填1，强制升级为集群版。填1 说明您已同意将主实例升级到集群版实例。
- * @method void setReadOnlyGroupForcedUpgrade(integer $ReadOnlyGroupForcedUpgrade) 设置0-默认不升级主实例，1-强制升级主实例完成ro部署；主实例为非集群版时需要填1，强制升级为集群版。填1 说明您已同意将主实例升级到集群版实例。
- * @method string getReadOnlyGroupId() 获取ReadOnlyGroupType=3时必填,已存在的只读组ID
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置ReadOnlyGroupType=3时必填,已存在的只读组ID
- * @method string getReadOnlyGroupName() 获取ReadOnlyGroupType=2时必填，新建的只读组名称
- * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) 设置ReadOnlyGroupType=2时必填，新建的只读组名称
- * @method integer getReadOnlyGroupIsOfflineDelay() 获取ReadOnlyGroupType=2时必填，新建的只读组是否开启延迟剔除功能，1-开启，0-关闭。当只读副本与主实例延迟大于阈值后，自动剔除。
- * @method void setReadOnlyGroupIsOfflineDelay(integer $ReadOnlyGroupIsOfflineDelay) 设置ReadOnlyGroupType=2时必填，新建的只读组是否开启延迟剔除功能，1-开启，0-关闭。当只读副本与主实例延迟大于阈值后，自动剔除。
- * @method integer getReadOnlyGroupMaxDelayTime() 获取ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。
- * @method void setReadOnlyGroupMaxDelayTime(integer $ReadOnlyGroupMaxDelayTime) 设置ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。
- * @method integer getReadOnlyGroupMinInGroup() 获取ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。
- * @method void setReadOnlyGroupMinInGroup(integer $ReadOnlyGroupMinInGroup) 设置ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。
- * @method string getInstanceChargeType() 获取付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
- * @method integer getGoodsNum() 获取本次即将购买的实例数量，默认取值2。
- * @method void setGoodsNum(integer $GoodsNum) 设置本次即将购买的实例数量，默认取值2。
- * @method string getSubnetId() 获取VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
- * @method void setSubnetId(string $SubnetId) 设置VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
- * @method string getVpcId() 获取VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
- * @method void setVpcId(string $VpcId) 设置VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
- * @method integer getPeriod() 获取购买实例周期，默认取值为1，表示一个月。取值不超过48
- * @method void setPeriod(integer $Period) 设置购买实例周期，默认取值为1，表示一个月。取值不超过48
- * @method array getSecurityGroupList() 获取安全组列表，填写形如sg-xxx的安全组ID
- * @method void setSecurityGroupList(array $SecurityGroupList) 设置安全组列表，填写形如sg-xxx的安全组ID
- * @method integer getAutoVoucher() 获取是否自动使用代金券；1 - 是，0 - 否，默认不使用
- * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券；1 - 是，0 - 否，默认不使用
- * @method array getVoucherIds() 获取代金券ID数组，目前单个订单只能使用一张
- * @method void setVoucherIds(array $VoucherIds) 设置代金券ID数组，目前单个订单只能使用一张
- * @method array getResourceTags() 获取新建实例绑定的标签集合
- * @method void setResourceTags(array $ResourceTags) 设置新建实例绑定的标签集合
- * @method string getCollation() 获取系统字符集排序规则，默认：Chinese_PRC_CI_AS
- * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
- * @method string getTimeZone() 获取系统时区，默认：China Standard Time
- * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
- * @method integer getDiskEncryptFlag() 获取磁盘加密标识，0-不加密，1-加密
- * @method void setDiskEncryptFlag(integer $DiskEncryptFlag) 设置磁盘加密标识，0-不加密，1-加密
+ * @method string getInstanceId() 获取<p>主实例ID，格式如：mssql-3l3fgqn7</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>主实例ID，格式如：mssql-3l3fgqn7</p>
+ * @method string getZone() 获取<p>实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取</p>
+ * @method void setZone(string $Zone) 设置<p>实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取</p>
+ * @method integer getReadOnlyGroupType() 获取<p>只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面</p>
+ * @method void setReadOnlyGroupType(integer $ReadOnlyGroupType) 设置<p>只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面</p>
+ * @method integer getMemory() 获取<p>实例内存大小，单位GB</p>
+ * @method void setMemory(integer $Memory) 设置<p>实例内存大小，单位GB</p>
+ * @method integer getStorage() 获取<p>实例磁盘大小，单位GB</p>
+ * @method void setStorage(integer $Storage) 设置<p>实例磁盘大小，单位GB</p>
+ * @method integer getCpu() 获取<p>实例核心数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>实例核心数</p>
+ * @method string getMachineType() 获取<p>购买实例的宿主机磁盘类型,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘</p>
+ * @method void setMachineType(string $MachineType) 设置<p>购买实例的宿主机磁盘类型,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘</p>
+ * @method integer getReadOnlyGroupForcedUpgrade() 获取<p>0-默认不升级主实例，1-强制升级主实例完成ro部署；主实例为非集群版时需要填1，强制升级为集群版。填1 说明您已同意将主实例升级到集群版实例。</p>
+ * @method void setReadOnlyGroupForcedUpgrade(integer $ReadOnlyGroupForcedUpgrade) 设置<p>0-默认不升级主实例，1-强制升级主实例完成ro部署；主实例为非集群版时需要填1，强制升级为集群版。填1 说明您已同意将主实例升级到集群版实例。</p>
+ * @method string getReadOnlyGroupId() 获取<p>ReadOnlyGroupType=3时必填,已存在的只读组ID</p>
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置<p>ReadOnlyGroupType=3时必填,已存在的只读组ID</p>
+ * @method string getReadOnlyGroupName() 获取<p>ReadOnlyGroupType=2时必填，新建的只读组名称</p>
+ * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) 设置<p>ReadOnlyGroupType=2时必填，新建的只读组名称</p>
+ * @method integer getReadOnlyGroupIsOfflineDelay() 获取<p>ReadOnlyGroupType=2时必填，新建的只读组是否开启延迟剔除功能，1-开启，0-关闭。当只读副本与主实例延迟大于阈值后，自动剔除。</p>
+ * @method void setReadOnlyGroupIsOfflineDelay(integer $ReadOnlyGroupIsOfflineDelay) 设置<p>ReadOnlyGroupType=2时必填，新建的只读组是否开启延迟剔除功能，1-开启，0-关闭。当只读副本与主实例延迟大于阈值后，自动剔除。</p>
+ * @method integer getReadOnlyGroupMaxDelayTime() 获取<p>ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。</p>
+ * @method void setReadOnlyGroupMaxDelayTime(integer $ReadOnlyGroupMaxDelayTime) 设置<p>ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。</p>
+ * @method integer getReadOnlyGroupMinInGroup() 获取<p>ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。</p>
+ * @method void setReadOnlyGroupMinInGroup(integer $ReadOnlyGroupMinInGroup) 设置<p>ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。</p>
+ * @method string getInstanceChargeType() 获取<p>付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。</p>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。</p>
+ * @method integer getGoodsNum() 获取<p>本次即将购买的实例数量，默认取值2。</p>
+ * @method void setGoodsNum(integer $GoodsNum) 设置<p>本次即将购买的实例数量，默认取值2。</p>
+ * @method string getSubnetId() 获取<p>VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置</p>
+ * @method string getVpcId() 获取<p>VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置</p>
+ * @method integer getPeriod() 获取<p>购买实例周期，默认取值为1，表示一个月。取值不超过48</p>
+ * @method void setPeriod(integer $Period) 设置<p>购买实例周期，默认取值为1，表示一个月。取值不超过48</p>
+ * @method array getSecurityGroupList() 获取<p>安全组列表，填写形如sg-xxx的安全组ID</p>
+ * @method void setSecurityGroupList(array $SecurityGroupList) 设置<p>安全组列表，填写形如sg-xxx的安全组ID</p>
+ * @method integer getAutoVoucher() 获取<p>是否自动使用代金券；1 - 是，0 - 否，默认不使用</p>
+ * @method void setAutoVoucher(integer $AutoVoucher) 设置<p>是否自动使用代金券；1 - 是，0 - 否，默认不使用</p>
+ * @method array getVoucherIds() 获取<p>代金券ID数组，目前单个订单只能使用一张</p>
+ * @method void setVoucherIds(array $VoucherIds) 设置<p>代金券ID数组，目前单个订单只能使用一张</p>
+ * @method array getResourceTags() 获取<p>新建实例绑定的标签集合</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>新建实例绑定的标签集合</p>
+ * @method string getCollation() 获取<p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
+ * @method void setCollation(string $Collation) 设置<p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
+ * @method string getTimeZone() 获取<p>系统时区，默认：China Standard Time</p>
+ * @method void setTimeZone(string $TimeZone) 设置<p>系统时区，默认：China Standard Time</p>
+ * @method integer getDiskEncryptFlag() 获取<p>磁盘加密标识，0-不加密，1-加密</p>
+ * @method void setDiskEncryptFlag(integer $DiskEncryptFlag) 设置<p>磁盘加密标识，0-不加密，1-加密</p>
+ * @method integer getThroughputPerformance() 获取<p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置<p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
  */
 class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 主实例ID，格式如：mssql-3l3fgqn7
+     * @var string <p>主实例ID，格式如：mssql-3l3fgqn7</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
+     * @var string <p>实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取</p>
      */
     public $Zone;
 
     /**
-     * @var integer 只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+     * @var integer <p>只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面</p>
      */
     public $ReadOnlyGroupType;
 
     /**
-     * @var integer 实例内存大小，单位GB
+     * @var integer <p>实例内存大小，单位GB</p>
      */
     public $Memory;
 
     /**
-     * @var integer 实例磁盘大小，单位GB
+     * @var integer <p>实例磁盘大小，单位GB</p>
      */
     public $Storage;
 
     /**
-     * @var integer 实例核心数
+     * @var integer <p>实例核心数</p>
      */
     public $Cpu;
 
     /**
-     * @var string 购买实例的宿主机磁盘类型,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘
+     * @var string <p>购买实例的宿主机磁盘类型,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘</p>
      */
     public $MachineType;
 
     /**
-     * @var integer 0-默认不升级主实例，1-强制升级主实例完成ro部署；主实例为非集群版时需要填1，强制升级为集群版。填1 说明您已同意将主实例升级到集群版实例。
+     * @var integer <p>0-默认不升级主实例，1-强制升级主实例完成ro部署；主实例为非集群版时需要填1，强制升级为集群版。填1 说明您已同意将主实例升级到集群版实例。</p>
      */
     public $ReadOnlyGroupForcedUpgrade;
 
     /**
-     * @var string ReadOnlyGroupType=3时必填,已存在的只读组ID
+     * @var string <p>ReadOnlyGroupType=3时必填,已存在的只读组ID</p>
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @var string ReadOnlyGroupType=2时必填，新建的只读组名称
+     * @var string <p>ReadOnlyGroupType=2时必填，新建的只读组名称</p>
      */
     public $ReadOnlyGroupName;
 
     /**
-     * @var integer ReadOnlyGroupType=2时必填，新建的只读组是否开启延迟剔除功能，1-开启，0-关闭。当只读副本与主实例延迟大于阈值后，自动剔除。
+     * @var integer <p>ReadOnlyGroupType=2时必填，新建的只读组是否开启延迟剔除功能，1-开启，0-关闭。当只读副本与主实例延迟大于阈值后，自动剔除。</p>
      */
     public $ReadOnlyGroupIsOfflineDelay;
 
     /**
-     * @var integer ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。
+     * @var integer <p>ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。</p>
      */
     public $ReadOnlyGroupMaxDelayTime;
 
     /**
-     * @var integer ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。
+     * @var integer <p>ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。</p>
      */
     public $ReadOnlyGroupMinInGroup;
 
     /**
-     * @var string 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
+     * @var string <p>付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。</p>
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer 本次即将购买的实例数量，默认取值2。
+     * @var integer <p>本次即将购买的实例数量，默认取值2。</p>
      */
     public $GoodsNum;
 
     /**
-     * @var string VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
+     * @var string <p>VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置</p>
      */
     public $SubnetId;
 
     /**
-     * @var string VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
+     * @var string <p>VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置</p>
      */
     public $VpcId;
 
     /**
-     * @var integer 购买实例周期，默认取值为1，表示一个月。取值不超过48
+     * @var integer <p>购买实例周期，默认取值为1，表示一个月。取值不超过48</p>
      */
     public $Period;
 
     /**
-     * @var array 安全组列表，填写形如sg-xxx的安全组ID
+     * @var array <p>安全组列表，填写形如sg-xxx的安全组ID</p>
      */
     public $SecurityGroupList;
 
     /**
-     * @var integer 是否自动使用代金券；1 - 是，0 - 否，默认不使用
+     * @var integer <p>是否自动使用代金券；1 - 是，0 - 否，默认不使用</p>
      */
     public $AutoVoucher;
 
     /**
-     * @var array 代金券ID数组，目前单个订单只能使用一张
+     * @var array <p>代金券ID数组，目前单个订单只能使用一张</p>
      */
     public $VoucherIds;
 
     /**
-     * @var array 新建实例绑定的标签集合
+     * @var array <p>新建实例绑定的标签集合</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * @var string <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
      */
     public $Collation;
 
     /**
-     * @var string 系统时区，默认：China Standard Time
+     * @var string <p>系统时区，默认：China Standard Time</p>
      */
     public $TimeZone;
 
     /**
-     * @var integer 磁盘加密标识，0-不加密，1-加密
+     * @var integer <p>磁盘加密标识，0-不加密，1-加密</p>
      */
     public $DiskEncryptFlag;
 
     /**
-     * @param string $InstanceId 主实例ID，格式如：mssql-3l3fgqn7
-     * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
-     * @param integer $ReadOnlyGroupType 只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
-     * @param integer $Memory 实例内存大小，单位GB
-     * @param integer $Storage 实例磁盘大小，单位GB
-     * @param integer $Cpu 实例核心数
-     * @param string $MachineType 购买实例的宿主机磁盘类型,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘
-     * @param integer $ReadOnlyGroupForcedUpgrade 0-默认不升级主实例，1-强制升级主实例完成ro部署；主实例为非集群版时需要填1，强制升级为集群版。填1 说明您已同意将主实例升级到集群版实例。
-     * @param string $ReadOnlyGroupId ReadOnlyGroupType=3时必填,已存在的只读组ID
-     * @param string $ReadOnlyGroupName ReadOnlyGroupType=2时必填，新建的只读组名称
-     * @param integer $ReadOnlyGroupIsOfflineDelay ReadOnlyGroupType=2时必填，新建的只读组是否开启延迟剔除功能，1-开启，0-关闭。当只读副本与主实例延迟大于阈值后，自动剔除。
-     * @param integer $ReadOnlyGroupMaxDelayTime ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。
-     * @param integer $ReadOnlyGroupMinInGroup ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。
-     * @param string $InstanceChargeType 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
-     * @param integer $GoodsNum 本次即将购买的实例数量，默认取值2。
-     * @param string $SubnetId VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
-     * @param string $VpcId VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
-     * @param integer $Period 购买实例周期，默认取值为1，表示一个月。取值不超过48
-     * @param array $SecurityGroupList 安全组列表，填写形如sg-xxx的安全组ID
-     * @param integer $AutoVoucher 是否自动使用代金券；1 - 是，0 - 否，默认不使用
-     * @param array $VoucherIds 代金券ID数组，目前单个订单只能使用一张
-     * @param array $ResourceTags 新建实例绑定的标签集合
-     * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
-     * @param string $TimeZone 系统时区，默认：China Standard Time
-     * @param integer $DiskEncryptFlag 磁盘加密标识，0-不加密，1-加密
+     * @var integer <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+     */
+    public $ThroughputPerformance;
+
+    /**
+     * @param string $InstanceId <p>主实例ID，格式如：mssql-3l3fgqn7</p>
+     * @param string $Zone <p>实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取</p>
+     * @param integer $ReadOnlyGroupType <p>只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面</p>
+     * @param integer $Memory <p>实例内存大小，单位GB</p>
+     * @param integer $Storage <p>实例磁盘大小，单位GB</p>
+     * @param integer $Cpu <p>实例核心数</p>
+     * @param string $MachineType <p>购买实例的宿主机磁盘类型,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘</p>
+     * @param integer $ReadOnlyGroupForcedUpgrade <p>0-默认不升级主实例，1-强制升级主实例完成ro部署；主实例为非集群版时需要填1，强制升级为集群版。填1 说明您已同意将主实例升级到集群版实例。</p>
+     * @param string $ReadOnlyGroupId <p>ReadOnlyGroupType=3时必填,已存在的只读组ID</p>
+     * @param string $ReadOnlyGroupName <p>ReadOnlyGroupType=2时必填，新建的只读组名称</p>
+     * @param integer $ReadOnlyGroupIsOfflineDelay <p>ReadOnlyGroupType=2时必填，新建的只读组是否开启延迟剔除功能，1-开启，0-关闭。当只读副本与主实例延迟大于阈值后，自动剔除。</p>
+     * @param integer $ReadOnlyGroupMaxDelayTime <p>ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。</p>
+     * @param integer $ReadOnlyGroupMinInGroup <p>ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。</p>
+     * @param string $InstanceChargeType <p>付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。</p>
+     * @param integer $GoodsNum <p>本次即将购买的实例数量，默认取值2。</p>
+     * @param string $SubnetId <p>VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置</p>
+     * @param string $VpcId <p>VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置</p>
+     * @param integer $Period <p>购买实例周期，默认取值为1，表示一个月。取值不超过48</p>
+     * @param array $SecurityGroupList <p>安全组列表，填写形如sg-xxx的安全组ID</p>
+     * @param integer $AutoVoucher <p>是否自动使用代金券；1 - 是，0 - 否，默认不使用</p>
+     * @param array $VoucherIds <p>代金券ID数组，目前单个订单只能使用一张</p>
+     * @param array $ResourceTags <p>新建实例绑定的标签集合</p>
+     * @param string $Collation <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
+     * @param string $TimeZone <p>系统时区，默认：China Standard Time</p>
+     * @param integer $DiskEncryptFlag <p>磁盘加密标识，0-不加密，1-加密</p>
+     * @param integer $ThroughputPerformance <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
      */
     function __construct()
     {
@@ -341,6 +349,10 @@ class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("DiskEncryptFlag",$param) and $param["DiskEncryptFlag"] !== null) {
             $this->DiskEncryptFlag = $param["DiskEncryptFlag"];
+        }
+
+        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
+            $this->ThroughputPerformance = $param["ThroughputPerformance"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveAssetImageRegistryRegistryDetail请求参数结构体
  *
- * @method integer getRegistryId() 获取仓库唯一id
- * @method void setRegistryId(integer $RegistryId) 设置仓库唯一id
+ * @method integer getRegistryId() 获取<p>仓库唯一id</p>
+ * @method void setRegistryId(integer $RegistryId) 设置<p>仓库唯一id</p>
  */
 class RemoveAssetImageRegistryRegistryDetailRequest extends AbstractModel
 {
     /**
-     * @var integer 仓库唯一id
+     * @var integer <p>仓库唯一id</p>
      */
     public $RegistryId;
 
     /**
-     * @param integer $RegistryId 仓库唯一id
+     * @param integer $RegistryId <p>仓库唯一id</p>
      */
     function __construct()
     {

@@ -20,58 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 流量调度规则
  *
- * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
- * @method integer getQosId() 获取qos id。
- * @method void setQosId(integer $QosId) 设置qos id。
- * @method string getQosPolicyDescription() 获取描述。
- * @method void setQosPolicyDescription(string $QosPolicyDescription) 设置描述。
- * @method string getQosPolicyName() 获取名称。
- * @method void setQosPolicyName(string $QosPolicyName) 设置名称。
- * @method integer getBandwidth() 获取带宽。
- * @method void setBandwidth(integer $Bandwidth) 设置带宽。
- * @method string getQosPolicyId() 获取流量调度策略ID。
- * @method void setQosPolicyId(string $QosPolicyId) 设置流量调度策略ID。
+ * @method string getCcnId() 获取<p>CCN实例ID。形如：ccn-f49l6u0z。</p>
+ * @method void setCcnId(string $CcnId) 设置<p>CCN实例ID。形如：ccn-f49l6u0z。</p>
+ * @method integer getQosId() 获取<p>qos id。</p>
+ * @method void setQosId(integer $QosId) 设置<p>qos id。</p>
+ * @method string getQosPolicyDescription() 获取<p>描述。</p>
+ * @method void setQosPolicyDescription(string $QosPolicyDescription) 设置<p>描述。</p>
+ * @method string getQosPolicyName() 获取<p>名称。</p>
+ * @method void setQosPolicyName(string $QosPolicyName) 设置<p>名称。</p>
+ * @method integer getBandwidth() 获取<p>带宽。</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>带宽。</p>
+ * @method string getQosPolicyId() 获取<p>流量调度策略ID。</p>
+ * @method void setQosPolicyId(string $QosPolicyId) 设置<p>流量调度策略ID。</p>
+ * @method string getQosLevel() 获取<p>服务等级信息</p>
+ * @method void setQosLevel(string $QosLevel) 设置<p>服务等级信息</p>
+ * @method string getServiceLevel() 获取<p>服务等级信息</p>
+ * @method void setServiceLevel(string $ServiceLevel) 设置<p>服务等级信息</p>
+ * @method string getRegionFlowControlId() 获取<p>带宽ID</p><p>参数格式：fcr-xxx</p>
+ * @method void setRegionFlowControlId(string $RegionFlowControlId) 设置<p>带宽ID</p><p>参数格式：fcr-xxx</p>
+ * @method string getLocalRegion() 获取<p>源地域</p><p>参数格式：ap-xxx</p>
+ * @method void setLocalRegion(string $LocalRegion) 设置<p>源地域</p><p>参数格式：ap-xxx</p>
+ * @method string getRemoteRegion() 获取<p>目的地域</p><p>参数格式：ap-xxx</p>
+ * @method void setRemoteRegion(string $RemoteRegion) 设置<p>目的地域</p><p>参数格式：ap-xxx</p>
+ * @method string getTrafficMatchPolicyId() 获取<p>流量匹配策略ID</p>
+ * @method void setTrafficMatchPolicyId(string $TrafficMatchPolicyId) 设置<p>流量匹配策略ID</p>
  */
 class TrafficQosPolicySet extends AbstractModel
 {
     /**
-     * @var string CCN实例ID。形如：ccn-f49l6u0z。
+     * @var string <p>CCN实例ID。形如：ccn-f49l6u0z。</p>
      */
     public $CcnId;
 
     /**
-     * @var integer qos id。
+     * @var integer <p>qos id。</p>
      */
     public $QosId;
 
     /**
-     * @var string 描述。
+     * @var string <p>描述。</p>
      */
     public $QosPolicyDescription;
 
     /**
-     * @var string 名称。
+     * @var string <p>名称。</p>
      */
     public $QosPolicyName;
 
     /**
-     * @var integer 带宽。
+     * @var integer <p>带宽。</p>
      */
     public $Bandwidth;
 
     /**
-     * @var string 流量调度策略ID。
+     * @var string <p>流量调度策略ID。</p>
      */
     public $QosPolicyId;
 
     /**
-     * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     * @param integer $QosId qos id。
-     * @param string $QosPolicyDescription 描述。
-     * @param string $QosPolicyName 名称。
-     * @param integer $Bandwidth 带宽。
-     * @param string $QosPolicyId 流量调度策略ID。
+     * @var string <p>服务等级信息</p>
+     */
+    public $QosLevel;
+
+    /**
+     * @var string <p>服务等级信息</p>
+     */
+    public $ServiceLevel;
+
+    /**
+     * @var string <p>带宽ID</p><p>参数格式：fcr-xxx</p>
+     */
+    public $RegionFlowControlId;
+
+    /**
+     * @var string <p>源地域</p><p>参数格式：ap-xxx</p>
+     */
+    public $LocalRegion;
+
+    /**
+     * @var string <p>目的地域</p><p>参数格式：ap-xxx</p>
+     */
+    public $RemoteRegion;
+
+    /**
+     * @var string <p>流量匹配策略ID</p>
+     */
+    public $TrafficMatchPolicyId;
+
+    /**
+     * @param string $CcnId <p>CCN实例ID。形如：ccn-f49l6u0z。</p>
+     * @param integer $QosId <p>qos id。</p>
+     * @param string $QosPolicyDescription <p>描述。</p>
+     * @param string $QosPolicyName <p>名称。</p>
+     * @param integer $Bandwidth <p>带宽。</p>
+     * @param string $QosPolicyId <p>流量调度策略ID。</p>
+     * @param string $QosLevel <p>服务等级信息</p>
+     * @param string $ServiceLevel <p>服务等级信息</p>
+     * @param string $RegionFlowControlId <p>带宽ID</p><p>参数格式：fcr-xxx</p>
+     * @param string $LocalRegion <p>源地域</p><p>参数格式：ap-xxx</p>
+     * @param string $RemoteRegion <p>目的地域</p><p>参数格式：ap-xxx</p>
+     * @param string $TrafficMatchPolicyId <p>流量匹配策略ID</p>
      */
     function __construct()
     {
@@ -108,6 +156,30 @@ class TrafficQosPolicySet extends AbstractModel
 
         if (array_key_exists("QosPolicyId",$param) and $param["QosPolicyId"] !== null) {
             $this->QosPolicyId = $param["QosPolicyId"];
+        }
+
+        if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
+            $this->QosLevel = $param["QosLevel"];
+        }
+
+        if (array_key_exists("ServiceLevel",$param) and $param["ServiceLevel"] !== null) {
+            $this->ServiceLevel = $param["ServiceLevel"];
+        }
+
+        if (array_key_exists("RegionFlowControlId",$param) and $param["RegionFlowControlId"] !== null) {
+            $this->RegionFlowControlId = $param["RegionFlowControlId"];
+        }
+
+        if (array_key_exists("LocalRegion",$param) and $param["LocalRegion"] !== null) {
+            $this->LocalRegion = $param["LocalRegion"];
+        }
+
+        if (array_key_exists("RemoteRegion",$param) and $param["RemoteRegion"] !== null) {
+            $this->RemoteRegion = $param["RemoteRegion"];
+        }
+
+        if (array_key_exists("TrafficMatchPolicyId",$param) and $param["TrafficMatchPolicyId"] !== null) {
+            $this->TrafficMatchPolicyId = $param["TrafficMatchPolicyId"];
         }
     }
 }

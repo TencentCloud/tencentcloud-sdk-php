@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceUpgradeDBInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，形如mssql-njj2mtpl
- * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-njj2mtpl
- * @method integer getMemory() 获取实例升级后的内存大小，单位GB，其值不能比当前实例内存小
- * @method void setMemory(integer $Memory) 设置实例升级后的内存大小，单位GB，其值不能比当前实例内存小
- * @method integer getStorage() 获取实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
- * @method void setStorage(integer $Storage) 设置实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
- * @method integer getCpu() 获取实例升级后的CPU核心数，其值不能比当前实例CPU小
- * @method void setCpu(integer $Cpu) 设置实例升级后的CPU核心数，其值不能比当前实例CPU小
+ * @method string getInstanceId() 获取<p>实例ID，形如mssql-njj2mtpl</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID，形如mssql-njj2mtpl</p>
+ * @method integer getMemory() 获取<p>实例升级后的内存大小，单位GB，其值不能比当前实例内存小</p>
+ * @method void setMemory(integer $Memory) 设置<p>实例升级后的内存大小，单位GB，其值不能比当前实例内存小</p>
+ * @method integer getStorage() 获取<p>实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小</p>
+ * @method void setStorage(integer $Storage) 设置<p>实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小</p>
+ * @method integer getCpu() 获取<p>实例升级后的CPU核心数，其值不能比当前实例CPU小</p>
+ * @method void setCpu(integer $Cpu) 设置<p>实例升级后的CPU核心数，其值不能比当前实例CPU小</p>
+ * @method integer getThroughputPerformance() 获取<p>额外磁盘 IO 吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置<p>额外磁盘 IO 吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如mssql-njj2mtpl
+     * @var string <p>实例ID，形如mssql-njj2mtpl</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+     * @var integer <p>实例升级后的内存大小，单位GB，其值不能比当前实例内存小</p>
      */
     public $Memory;
 
     /**
-     * @var integer 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+     * @var integer <p>实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小</p>
      */
     public $Storage;
 
     /**
-     * @var integer 实例升级后的CPU核心数，其值不能比当前实例CPU小
+     * @var integer <p>实例升级后的CPU核心数，其值不能比当前实例CPU小</p>
      */
     public $Cpu;
 
     /**
-     * @param string $InstanceId 实例ID，形如mssql-njj2mtpl
-     * @param integer $Memory 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
-     * @param integer $Storage 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
-     * @param integer $Cpu 实例升级后的CPU核心数，其值不能比当前实例CPU小
+     * @var integer <p>额外磁盘 IO 吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+     */
+    public $ThroughputPerformance;
+
+    /**
+     * @param string $InstanceId <p>实例ID，形如mssql-njj2mtpl</p>
+     * @param integer $Memory <p>实例升级后的内存大小，单位GB，其值不能比当前实例内存小</p>
+     * @param integer $Storage <p>实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小</p>
+     * @param integer $Cpu <p>实例升级后的CPU核心数，其值不能比当前实例CPU小</p>
+     * @param integer $ThroughputPerformance <p>额外磁盘 IO 吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
+            $this->ThroughputPerformance = $param["ThroughputPerformance"];
         }
     }
 }

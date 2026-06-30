@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 指标配置
  *
- * @method array getOperator() 获取允许使用的运算符
- * @method void setOperator(array $Operator) 设置允许使用的运算符
- * @method array getPeriod() 获取允许配置的数据周期，以秒为单位
- * @method void setPeriod(array $Period) 设置允许配置的数据周期，以秒为单位
- * @method array getContinuePeriod() 获取允许配置的持续周期个数
- * @method void setContinuePeriod(array $ContinuePeriod) 设置允许配置的持续周期个数
+ * @method array getOperator() 获取<p>允许使用的运算符</p>
+ * @method void setOperator(array $Operator) 设置<p>允许使用的运算符</p>
+ * @method array getPeriod() 获取<p>允许配置的数据周期，以秒为单位</p>
+ * @method void setPeriod(array $Period) 设置<p>允许配置的数据周期，以秒为单位</p>
+ * @method array getContinuePeriod() 获取<p>允许配置的持续周期个数</p>
+ * @method void setContinuePeriod(array $ContinuePeriod) 设置<p>允许配置的持续周期个数</p>
  */
 class MetricConfig extends AbstractModel
 {
     /**
-     * @var array 允许使用的运算符
+     * @var array <p>允许使用的运算符</p>
      */
     public $Operator;
 
     /**
-     * @var array 允许配置的数据周期，以秒为单位
+     * @var array <p>允许配置的数据周期，以秒为单位</p>
      */
     public $Period;
 
     /**
-     * @var array 允许配置的持续周期个数
+     * @var array <p>允许配置的持续周期个数</p>
      */
     public $ContinuePeriod;
 
     /**
-     * @param array $Operator 允许使用的运算符
-     * @param array $Period 允许配置的数据周期，以秒为单位
-     * @param array $ContinuePeriod 允许配置的持续周期个数
+     * @param array $Operator <p>允许使用的运算符</p>
+     * @param array $Period <p>允许配置的数据周期，以秒为单位</p>
+     * @param array $ContinuePeriod <p>允许配置的持续周期个数</p>
      */
     function __construct()
     {

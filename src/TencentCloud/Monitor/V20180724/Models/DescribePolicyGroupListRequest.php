@@ -20,130 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyGroupList请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method integer getLimit() 获取分页参数，每页返回的数量，取值1~100
- * @method void setLimit(integer $Limit) 设置分页参数，每页返回的数量，取值1~100
- * @method integer getOffset() 获取分页参数，页偏移量，从0开始计数
- * @method void setOffset(integer $Offset) 设置分页参数，页偏移量，从0开始计数
- * @method string getLike() 获取按策略名搜索
- * @method void setLike(string $Like) 设置按策略名搜索
- * @method integer getInstanceGroupId() 获取实例分组id
- * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组id
- * @method string getUpdateTimeOrder() 获取按更新时间排序, asc 或者 desc
- * @method void setUpdateTimeOrder(string $UpdateTimeOrder) 设置按更新时间排序, asc 或者 desc
- * @method array getProjectIds() 获取项目id列表
- * @method void setProjectIds(array $ProjectIds) 设置项目id列表
- * @method array getViewNames() 获取告警策略类型列表
- * @method void setViewNames(array $ViewNames) 设置告警策略类型列表
- * @method integer getFilterUnuseReceiver() 获取是否过滤无接收人策略组, 1表示过滤, 0表示不过滤
- * @method void setFilterUnuseReceiver(integer $FilterUnuseReceiver) 设置是否过滤无接收人策略组, 1表示过滤, 0表示不过滤
- * @method array getReceivers() 获取过滤条件, 接收组列表
- * @method void setReceivers(array $Receivers) 设置过滤条件, 接收组列表
- * @method array getReceiverUserList() 获取过滤条件, 接收人列表
- * @method void setReceiverUserList(array $ReceiverUserList) 设置过滤条件, 接收人列表
- * @method string getDimensions() 获取维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
- * @method void setDimensions(string $Dimensions) 设置维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
- * @method string getConditionTempGroupId() 获取模板策略组id, 多个id用逗号分隔
- * @method void setConditionTempGroupId(string $ConditionTempGroupId) 设置模板策略组id, 多个id用逗号分隔
- * @method string getReceiverType() 获取过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
- * @method void setReceiverType(string $ReceiverType) 设置过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
- * @method boolean getIsOpen() 获取过滤条件，告警策略是否已启动或停止
- * @method void setIsOpen(boolean $IsOpen) 设置过滤条件，告警策略是否已启动或停止
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method integer getLimit() 获取<p>分页参数，每页返回的数量，取值1~100</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页参数，每页返回的数量，取值1~100</p>
+ * @method integer getOffset() 获取<p>分页参数，页偏移量，从0开始计数</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页参数，页偏移量，从0开始计数</p>
+ * @method string getLike() 获取<p>按策略名搜索</p>
+ * @method void setLike(string $Like) 设置<p>按策略名搜索</p>
+ * @method integer getInstanceGroupId() 获取<p>实例分组id</p>
+ * @method void setInstanceGroupId(integer $InstanceGroupId) 设置<p>实例分组id</p>
+ * @method string getUpdateTimeOrder() 获取<p>按更新时间排序, asc 或者 desc</p>
+ * @method void setUpdateTimeOrder(string $UpdateTimeOrder) 设置<p>按更新时间排序, asc 或者 desc</p>
+ * @method array getProjectIds() 获取<p>项目id列表</p>
+ * @method void setProjectIds(array $ProjectIds) 设置<p>项目id列表</p>
+ * @method array getViewNames() 获取<p>告警策略类型列表</p>
+ * @method void setViewNames(array $ViewNames) 设置<p>告警策略类型列表</p>
+ * @method integer getFilterUnuseReceiver() 获取<p>是否过滤无接收人策略组, 1表示过滤, 0表示不过滤</p>
+ * @method void setFilterUnuseReceiver(integer $FilterUnuseReceiver) 设置<p>是否过滤无接收人策略组, 1表示过滤, 0表示不过滤</p>
+ * @method array getReceivers() 获取<p>过滤条件, 接收组列表</p>
+ * @method void setReceivers(array $Receivers) 设置<p>过滤条件, 接收组列表</p>
+ * @method array getReceiverUserList() 获取<p>过滤条件, 接收人列表</p>
+ * @method void setReceiverUserList(array $ReceiverUserList) 设置<p>过滤条件, 接收人列表</p>
+ * @method string getDimensions() 获取<p>维度组合字段(json字符串), 例如[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-6e4b2aaa&quot;}]]</p>
+ * @method void setDimensions(string $Dimensions) 设置<p>维度组合字段(json字符串), 例如[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-6e4b2aaa&quot;}]]</p>
+ * @method string getConditionTempGroupId() 获取<p>模板策略组id, 多个id用逗号分隔</p>
+ * @method void setConditionTempGroupId(string $ConditionTempGroupId) 设置<p>模板策略组id, 多个id用逗号分隔</p>
+ * @method string getReceiverType() 获取<p>过滤条件, 接收人或者接收组, user表示接收人, group表示接收组</p>
+ * @method void setReceiverType(string $ReceiverType) 设置<p>过滤条件, 接收人或者接收组, user表示接收人, group表示接收组</p>
+ * @method boolean getIsOpen() 获取<p>过滤条件，告警策略是否已启动或停止</p>
+ * @method void setIsOpen(boolean $IsOpen) 设置<p>过滤条件，告警策略是否已启动或停止</p>
  */
 class DescribePolicyGroupListRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var integer 分页参数，每页返回的数量，取值1~100
+     * @var integer <p>分页参数，每页返回的数量，取值1~100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页参数，页偏移量，从0开始计数
+     * @var integer <p>分页参数，页偏移量，从0开始计数</p>
      */
     public $Offset;
 
     /**
-     * @var string 按策略名搜索
+     * @var string <p>按策略名搜索</p>
      */
     public $Like;
 
     /**
-     * @var integer 实例分组id
+     * @var integer <p>实例分组id</p>
      */
     public $InstanceGroupId;
 
     /**
-     * @var string 按更新时间排序, asc 或者 desc
+     * @var string <p>按更新时间排序, asc 或者 desc</p>
      */
     public $UpdateTimeOrder;
 
     /**
-     * @var array 项目id列表
+     * @var array <p>项目id列表</p>
      */
     public $ProjectIds;
 
     /**
-     * @var array 告警策略类型列表
+     * @var array <p>告警策略类型列表</p>
      */
     public $ViewNames;
 
     /**
-     * @var integer 是否过滤无接收人策略组, 1表示过滤, 0表示不过滤
+     * @var integer <p>是否过滤无接收人策略组, 1表示过滤, 0表示不过滤</p>
      */
     public $FilterUnuseReceiver;
 
     /**
-     * @var array 过滤条件, 接收组列表
+     * @var array <p>过滤条件, 接收组列表</p>
      */
     public $Receivers;
 
     /**
-     * @var array 过滤条件, 接收人列表
+     * @var array <p>过滤条件, 接收人列表</p>
      */
     public $ReceiverUserList;
 
     /**
-     * @var string 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
+     * @var string <p>维度组合字段(json字符串), 例如[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-6e4b2aaa&quot;}]]</p>
      */
     public $Dimensions;
 
     /**
-     * @var string 模板策略组id, 多个id用逗号分隔
+     * @var string <p>模板策略组id, 多个id用逗号分隔</p>
      */
     public $ConditionTempGroupId;
 
     /**
-     * @var string 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
+     * @var string <p>过滤条件, 接收人或者接收组, user表示接收人, group表示接收组</p>
      */
     public $ReceiverType;
 
     /**
-     * @var boolean 过滤条件，告警策略是否已启动或停止
+     * @var boolean <p>过滤条件，告警策略是否已启动或停止</p>
      */
     public $IsOpen;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param integer $Limit 分页参数，每页返回的数量，取值1~100
-     * @param integer $Offset 分页参数，页偏移量，从0开始计数
-     * @param string $Like 按策略名搜索
-     * @param integer $InstanceGroupId 实例分组id
-     * @param string $UpdateTimeOrder 按更新时间排序, asc 或者 desc
-     * @param array $ProjectIds 项目id列表
-     * @param array $ViewNames 告警策略类型列表
-     * @param integer $FilterUnuseReceiver 是否过滤无接收人策略组, 1表示过滤, 0表示不过滤
-     * @param array $Receivers 过滤条件, 接收组列表
-     * @param array $ReceiverUserList 过滤条件, 接收人列表
-     * @param string $Dimensions 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
-     * @param string $ConditionTempGroupId 模板策略组id, 多个id用逗号分隔
-     * @param string $ReceiverType 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
-     * @param boolean $IsOpen 过滤条件，告警策略是否已启动或停止
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param integer $Limit <p>分页参数，每页返回的数量，取值1~100</p>
+     * @param integer $Offset <p>分页参数，页偏移量，从0开始计数</p>
+     * @param string $Like <p>按策略名搜索</p>
+     * @param integer $InstanceGroupId <p>实例分组id</p>
+     * @param string $UpdateTimeOrder <p>按更新时间排序, asc 或者 desc</p>
+     * @param array $ProjectIds <p>项目id列表</p>
+     * @param array $ViewNames <p>告警策略类型列表</p>
+     * @param integer $FilterUnuseReceiver <p>是否过滤无接收人策略组, 1表示过滤, 0表示不过滤</p>
+     * @param array $Receivers <p>过滤条件, 接收组列表</p>
+     * @param array $ReceiverUserList <p>过滤条件, 接收人列表</p>
+     * @param string $Dimensions <p>维度组合字段(json字符串), 例如[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-6e4b2aaa&quot;}]]</p>
+     * @param string $ConditionTempGroupId <p>模板策略组id, 多个id用逗号分隔</p>
+     * @param string $ReceiverType <p>过滤条件, 接收人或者接收组, user表示接收人, group表示接收组</p>
+     * @param boolean $IsOpen <p>过滤条件，告警策略是否已启动或停止</p>
      */
     function __construct()
     {

@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateEventBus请求参数结构体
  *
- * @method string getEventBusId() 获取事件集ID
- * @method void setEventBusId(string $EventBusId) 设置事件集ID
- * @method string getDescription() 获取事件集描述，不限字符类型，200字符描述以内
- * @method void setDescription(string $Description) 设置事件集描述，不限字符类型，200字符描述以内
- * @method string getEventBusName() 获取事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
- * @method void setEventBusName(string $EventBusName) 设置事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
- * @method integer getSaveDays() 获取EB日志存储时长
- * @method void setSaveDays(integer $SaveDays) 设置EB日志存储时长
- * @method string getLogTopicId() 获取EB日志主题ID
- * @method void setLogTopicId(string $LogTopicId) 设置EB日志主题ID
- * @method boolean getEnableStore() 获取是否开启存储
- * @method void setEnableStore(boolean $EnableStore) 设置是否开启存储
+ * @method string getEventBusId() 获取<p>事件集ID</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
+ * @method string getDescription() 获取<p>事件集描述，不限字符类型，200字符描述以内</p>
+ * @method void setDescription(string $Description) 设置<p>事件集描述，不限字符类型，200字符描述以内</p>
+ * @method string getEventBusName() 获取<p>事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符</p>
+ * @method void setEventBusName(string $EventBusName) 设置<p>事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符</p>
+ * @method integer getSaveDays() 获取<p>事件存储时长</p><p>单位：day</p>
+ * @method void setSaveDays(integer $SaveDays) 设置<p>事件存储时长</p><p>单位：day</p>
+ * @method string getLogTopicId() 获取<p>事件存储主题ID</p>
+ * @method void setLogTopicId(string $LogTopicId) 设置<p>事件存储主题ID</p>
+ * @method boolean getEnableStore() 获取<p>是否开启存储</p>
+ * @method void setEnableStore(boolean $EnableStore) 设置<p>是否开启存储</p>
  */
 class UpdateEventBusRequest extends AbstractModel
 {
     /**
-     * @var string 事件集ID
+     * @var string <p>事件集ID</p>
      */
     public $EventBusId;
 
     /**
-     * @var string 事件集描述，不限字符类型，200字符描述以内
+     * @var string <p>事件集描述，不限字符类型，200字符描述以内</p>
      */
     public $Description;
 
     /**
-     * @var string 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+     * @var string <p>事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符</p>
      */
     public $EventBusName;
 
     /**
-     * @var integer EB日志存储时长
+     * @var integer <p>事件存储时长</p><p>单位：day</p>
      */
     public $SaveDays;
 
     /**
-     * @var string EB日志主题ID
+     * @var string <p>事件存储主题ID</p>
      */
     public $LogTopicId;
 
     /**
-     * @var boolean 是否开启存储
+     * @var boolean <p>是否开启存储</p>
      */
     public $EnableStore;
 
     /**
-     * @param string $EventBusId 事件集ID
-     * @param string $Description 事件集描述，不限字符类型，200字符描述以内
-     * @param string $EventBusName 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
-     * @param integer $SaveDays EB日志存储时长
-     * @param string $LogTopicId EB日志主题ID
-     * @param boolean $EnableStore 是否开启存储
+     * @param string $EventBusId <p>事件集ID</p>
+     * @param string $Description <p>事件集描述，不限字符类型，200字符描述以内</p>
+     * @param string $EventBusName <p>事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符</p>
+     * @param integer $SaveDays <p>事件存储时长</p><p>单位：day</p>
+     * @param string $LogTopicId <p>事件存储主题ID</p>
+     * @param boolean $EnableStore <p>是否开启存储</p>
      */
     function __construct()
     {

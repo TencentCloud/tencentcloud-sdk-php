@@ -20,194 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBasicDBInstances请求参数结构体
  *
- * @method string getZone() 获取实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
- * @method void setZone(string $Zone) 设置实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
- * @method integer getCpu() 获取实例的CPU核心数
- * @method void setCpu(integer $Cpu) 设置实例的CPU核心数
- * @method integer getMemory() 获取实例内存大小，单位GB
- * @method void setMemory(integer $Memory) 设置实例内存大小，单位GB
- * @method integer getStorage() 获取实例磁盘大小，单位GB
- * @method void setStorage(integer $Storage) 设置实例磁盘大小，单位GB
- * @method string getSubnetId() 获取VPC子网ID，形如subnet-bdoe83fa
- * @method void setSubnetId(string $SubnetId) 设置VPC子网ID，形如subnet-bdoe83fa
- * @method string getVpcId() 获取VPC网络ID，形如vpc-dsp338hz
- * @method void setVpcId(string $VpcId) 设置VPC网络ID，形如vpc-dsp338hz
- * @method string getMachineType() 获取购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘
- * @method void setMachineType(string $MachineType) 设置购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘
- * @method string getInstanceChargeType() 获取付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method integer getGoodsNum() 获取本次购买几个实例，默认值为1。取值不超过10
- * @method void setGoodsNum(integer $GoodsNum) 设置本次购买几个实例，默认值为1。取值不超过10
- * @method string getDBVersion() 获取sqlserver版本，目前所有支持的版本有：2008R2 (SQL Server 2008 R2 Enterprise)，2012SP3 (SQL Server 2012 Enterprise)，201202 (SQL Server 2012 Standard)，2014SP2 (SQL Server 2014 Enterprise)，201402 (SQL Server 2014 Standard)，2016SP1 (SQL Server 2016 Enterprise)，201602 (SQL Server 2016 Standard)，2017 (SQL Server 2017 Enterprise)，201702 (SQL Server 2017 Standard)，2019 (SQL Server 2019 Enterprise)，201902 (SQL Server 2019 Standard)。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
- * @method void setDBVersion(string $DBVersion) 设置sqlserver版本，目前所有支持的版本有：2008R2 (SQL Server 2008 R2 Enterprise)，2012SP3 (SQL Server 2012 Enterprise)，201202 (SQL Server 2012 Standard)，2014SP2 (SQL Server 2014 Enterprise)，201402 (SQL Server 2014 Standard)，2016SP1 (SQL Server 2016 Enterprise)，201602 (SQL Server 2016 Standard)，2017 (SQL Server 2017 Enterprise)，201702 (SQL Server 2017 Standard)，2019 (SQL Server 2019 Enterprise)，201902 (SQL Server 2019 Standard)。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
- * @method integer getPeriod() 获取购买实例周期，默认取值为1，表示一个月。取值不超过48
- * @method void setPeriod(integer $Period) 设置购买实例周期，默认取值为1，表示一个月。取值不超过48
- * @method array getSecurityGroupList() 获取安全组列表，填写形如sg-xxx的安全组ID
- * @method void setSecurityGroupList(array $SecurityGroupList) 设置安全组列表，填写形如sg-xxx的安全组ID
- * @method integer getAutoRenewFlag() 获取自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
- * @method integer getAutoVoucher() 获取是否自动使用代金券；1 - 是，0 - 否，默认不使用
- * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券；1 - 是，0 - 否，默认不使用
- * @method array getVoucherIds() 获取代金券ID数组，目前单个订单只能使用一张
- * @method void setVoucherIds(array $VoucherIds) 设置代金券ID数组，目前单个订单只能使用一张
- * @method array getWeekly() 获取可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
- * @method void setWeekly(array $Weekly) 设置可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
- * @method string getStartTime() 获取可维护时间窗配置，每天可维护的开始时间
- * @method void setStartTime(string $StartTime) 设置可维护时间窗配置，每天可维护的开始时间
- * @method integer getSpan() 获取可维护时间窗配置，持续时间，单位：小时
- * @method void setSpan(integer $Span) 设置可维护时间窗配置，持续时间，单位：小时
- * @method array getResourceTags() 获取新建实例绑定的标签集合
- * @method void setResourceTags(array $ResourceTags) 设置新建实例绑定的标签集合
- * @method string getCollation() 获取系统字符集排序规则，默认：Chinese_PRC_CI_AS
- * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
- * @method string getTimeZone() 获取系统时区，默认：China Standard Time
- * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
- * @method integer getDiskEncryptFlag() 获取磁盘加密标识，0-不加密，1-加密
- * @method void setDiskEncryptFlag(integer $DiskEncryptFlag) 设置磁盘加密标识，0-不加密，1-加密
+ * @method string getZone() 获取<p>实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取</p>
+ * @method void setZone(string $Zone) 设置<p>实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取</p>
+ * @method integer getCpu() 获取<p>实例的CPU核心数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>实例的CPU核心数</p>
+ * @method integer getMemory() 获取<p>实例内存大小，单位GB</p>
+ * @method void setMemory(integer $Memory) 设置<p>实例内存大小，单位GB</p>
+ * @method integer getStorage() 获取<p>实例磁盘大小，单位GB</p>
+ * @method void setStorage(integer $Storage) 设置<p>实例磁盘大小，单位GB</p>
+ * @method string getSubnetId() 获取<p>VPC子网ID，形如subnet-bdoe83fa</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>VPC子网ID，形如subnet-bdoe83fa</p>
+ * @method string getVpcId() 获取<p>VPC网络ID，形如vpc-dsp338hz</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC网络ID，形如vpc-dsp338hz</p>
+ * @method string getMachineType() 获取<p>购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘</p>
+ * @method void setMachineType(string $MachineType) 设置<p>购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘</p>
+ * @method string getInstanceChargeType() 获取<p>付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。</p>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。</p>
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
+ * @method integer getGoodsNum() 获取<p>本次购买几个实例，默认值为1。取值不超过10</p>
+ * @method void setGoodsNum(integer $GoodsNum) 设置<p>本次购买几个实例，默认值为1。取值不超过10</p>
+ * @method string getDBVersion() 获取<p>sqlserver版本，目前所有支持的版本有：2008R2 (SQL Server 2008 R2 Enterprise)，2012SP3 (SQL Server 2012 Enterprise)，201202 (SQL Server 2012 Standard)，2014SP2 (SQL Server 2014 Enterprise)，201402 (SQL Server 2014 Standard)，2016SP1 (SQL Server 2016 Enterprise)，201602 (SQL Server 2016 Standard)，2017 (SQL Server 2017 Enterprise)，201702 (SQL Server 2017 Standard)，2019 (SQL Server 2019 Enterprise)，201902 (SQL Server 2019 Standard)。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。</p>
+ * @method void setDBVersion(string $DBVersion) 设置<p>sqlserver版本，目前所有支持的版本有：2008R2 (SQL Server 2008 R2 Enterprise)，2012SP3 (SQL Server 2012 Enterprise)，201202 (SQL Server 2012 Standard)，2014SP2 (SQL Server 2014 Enterprise)，201402 (SQL Server 2014 Standard)，2016SP1 (SQL Server 2016 Enterprise)，201602 (SQL Server 2016 Standard)，2017 (SQL Server 2017 Enterprise)，201702 (SQL Server 2017 Standard)，2019 (SQL Server 2019 Enterprise)，201902 (SQL Server 2019 Standard)。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。</p>
+ * @method integer getPeriod() 获取<p>购买实例周期，默认取值为1，表示一个月。取值不超过48</p>
+ * @method void setPeriod(integer $Period) 设置<p>购买实例周期，默认取值为1，表示一个月。取值不超过48</p>
+ * @method array getSecurityGroupList() 获取<p>安全组列表，填写形如sg-xxx的安全组ID</p>
+ * @method void setSecurityGroupList(array $SecurityGroupList) 设置<p>安全组列表，填写形如sg-xxx的安全组ID</p>
+ * @method integer getAutoRenewFlag() 获取<p>自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。</p>
+ * @method integer getAutoVoucher() 获取<p>是否自动使用代金券；1 - 是，0 - 否，默认不使用</p>
+ * @method void setAutoVoucher(integer $AutoVoucher) 设置<p>是否自动使用代金券；1 - 是，0 - 否，默认不使用</p>
+ * @method array getVoucherIds() 获取<p>代金券ID数组，目前单个订单只能使用一张</p>
+ * @method void setVoucherIds(array $VoucherIds) 设置<p>代金券ID数组，目前单个订单只能使用一张</p>
+ * @method array getWeekly() 获取<p>可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末</p>
+ * @method void setWeekly(array $Weekly) 设置<p>可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末</p>
+ * @method string getStartTime() 获取<p>可维护时间窗配置，每天可维护的开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>可维护时间窗配置，每天可维护的开始时间</p>
+ * @method integer getSpan() 获取<p>可维护时间窗配置，持续时间，单位：小时</p>
+ * @method void setSpan(integer $Span) 设置<p>可维护时间窗配置，持续时间，单位：小时</p>
+ * @method array getResourceTags() 获取<p>新建实例绑定的标签集合</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>新建实例绑定的标签集合</p>
+ * @method string getCollation() 获取<p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
+ * @method void setCollation(string $Collation) 设置<p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
+ * @method string getTimeZone() 获取<p>系统时区，默认：China Standard Time</p>
+ * @method void setTimeZone(string $TimeZone) 设置<p>系统时区，默认：China Standard Time</p>
+ * @method integer getDiskEncryptFlag() 获取<p>磁盘加密标识，0-不加密，1-加密</p>
+ * @method void setDiskEncryptFlag(integer $DiskEncryptFlag) 设置<p>磁盘加密标识，0-不加密，1-加密</p>
+ * @method integer getThroughputPerformance() 获取<p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置<p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
  */
 class CreateBasicDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
+     * @var string <p>实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取</p>
      */
     public $Zone;
 
     /**
-     * @var integer 实例的CPU核心数
+     * @var integer <p>实例的CPU核心数</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 实例内存大小，单位GB
+     * @var integer <p>实例内存大小，单位GB</p>
      */
     public $Memory;
 
     /**
-     * @var integer 实例磁盘大小，单位GB
+     * @var integer <p>实例磁盘大小，单位GB</p>
      */
     public $Storage;
 
     /**
-     * @var string VPC子网ID，形如subnet-bdoe83fa
+     * @var string <p>VPC子网ID，形如subnet-bdoe83fa</p>
      */
     public $SubnetId;
 
     /**
-     * @var string VPC网络ID，形如vpc-dsp338hz
+     * @var string <p>VPC网络ID，形如vpc-dsp338hz</p>
      */
     public $VpcId;
 
     /**
-     * @var string 购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘
+     * @var string <p>购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘</p>
      */
     public $MachineType;
 
     /**
-     * @var string 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
+     * @var string <p>付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。</p>
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 本次购买几个实例，默认值为1。取值不超过10
+     * @var integer <p>本次购买几个实例，默认值为1。取值不超过10</p>
      */
     public $GoodsNum;
 
     /**
-     * @var string sqlserver版本，目前所有支持的版本有：2008R2 (SQL Server 2008 R2 Enterprise)，2012SP3 (SQL Server 2012 Enterprise)，201202 (SQL Server 2012 Standard)，2014SP2 (SQL Server 2014 Enterprise)，201402 (SQL Server 2014 Standard)，2016SP1 (SQL Server 2016 Enterprise)，201602 (SQL Server 2016 Standard)，2017 (SQL Server 2017 Enterprise)，201702 (SQL Server 2017 Standard)，2019 (SQL Server 2019 Enterprise)，201902 (SQL Server 2019 Standard)。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
+     * @var string <p>sqlserver版本，目前所有支持的版本有：2008R2 (SQL Server 2008 R2 Enterprise)，2012SP3 (SQL Server 2012 Enterprise)，201202 (SQL Server 2012 Standard)，2014SP2 (SQL Server 2014 Enterprise)，201402 (SQL Server 2014 Standard)，2016SP1 (SQL Server 2016 Enterprise)，201602 (SQL Server 2016 Standard)，2017 (SQL Server 2017 Enterprise)，201702 (SQL Server 2017 Standard)，2019 (SQL Server 2019 Enterprise)，201902 (SQL Server 2019 Standard)。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。</p>
      */
     public $DBVersion;
 
     /**
-     * @var integer 购买实例周期，默认取值为1，表示一个月。取值不超过48
+     * @var integer <p>购买实例周期，默认取值为1，表示一个月。取值不超过48</p>
      */
     public $Period;
 
     /**
-     * @var array 安全组列表，填写形如sg-xxx的安全组ID
+     * @var array <p>安全组列表，填写形如sg-xxx的安全组ID</p>
      */
     public $SecurityGroupList;
 
     /**
-     * @var integer 自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
+     * @var integer <p>自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 是否自动使用代金券；1 - 是，0 - 否，默认不使用
+     * @var integer <p>是否自动使用代金券；1 - 是，0 - 否，默认不使用</p>
      */
     public $AutoVoucher;
 
     /**
-     * @var array 代金券ID数组，目前单个订单只能使用一张
+     * @var array <p>代金券ID数组，目前单个订单只能使用一张</p>
      */
     public $VoucherIds;
 
     /**
-     * @var array 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
+     * @var array <p>可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末</p>
      */
     public $Weekly;
 
     /**
-     * @var string 可维护时间窗配置，每天可维护的开始时间
+     * @var string <p>可维护时间窗配置，每天可维护的开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 可维护时间窗配置，持续时间，单位：小时
+     * @var integer <p>可维护时间窗配置，持续时间，单位：小时</p>
      */
     public $Span;
 
     /**
-     * @var array 新建实例绑定的标签集合
+     * @var array <p>新建实例绑定的标签集合</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * @var string <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
      */
     public $Collation;
 
     /**
-     * @var string 系统时区，默认：China Standard Time
+     * @var string <p>系统时区，默认：China Standard Time</p>
      */
     public $TimeZone;
 
     /**
-     * @var integer 磁盘加密标识，0-不加密，1-加密
+     * @var integer <p>磁盘加密标识，0-不加密，1-加密</p>
      */
     public $DiskEncryptFlag;
 
     /**
-     * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
-     * @param integer $Cpu 实例的CPU核心数
-     * @param integer $Memory 实例内存大小，单位GB
-     * @param integer $Storage 实例磁盘大小，单位GB
-     * @param string $SubnetId VPC子网ID，形如subnet-bdoe83fa
-     * @param string $VpcId VPC网络ID，形如vpc-dsp338hz
-     * @param string $MachineType 购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘
-     * @param string $InstanceChargeType 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
-     * @param integer $ProjectId 项目ID
-     * @param integer $GoodsNum 本次购买几个实例，默认值为1。取值不超过10
-     * @param string $DBVersion sqlserver版本，目前所有支持的版本有：2008R2 (SQL Server 2008 R2 Enterprise)，2012SP3 (SQL Server 2012 Enterprise)，201202 (SQL Server 2012 Standard)，2014SP2 (SQL Server 2014 Enterprise)，201402 (SQL Server 2014 Standard)，2016SP1 (SQL Server 2016 Enterprise)，201602 (SQL Server 2016 Standard)，2017 (SQL Server 2017 Enterprise)，201702 (SQL Server 2017 Standard)，2019 (SQL Server 2019 Enterprise)，201902 (SQL Server 2019 Standard)。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
-     * @param integer $Period 购买实例周期，默认取值为1，表示一个月。取值不超过48
-     * @param array $SecurityGroupList 安全组列表，填写形如sg-xxx的安全组ID
-     * @param integer $AutoRenewFlag 自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
-     * @param integer $AutoVoucher 是否自动使用代金券；1 - 是，0 - 否，默认不使用
-     * @param array $VoucherIds 代金券ID数组，目前单个订单只能使用一张
-     * @param array $Weekly 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
-     * @param string $StartTime 可维护时间窗配置，每天可维护的开始时间
-     * @param integer $Span 可维护时间窗配置，持续时间，单位：小时
-     * @param array $ResourceTags 新建实例绑定的标签集合
-     * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
-     * @param string $TimeZone 系统时区，默认：China Standard Time
-     * @param integer $DiskEncryptFlag 磁盘加密标识，0-不加密，1-加密
+     * @var integer <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+     */
+    public $ThroughputPerformance;
+
+    /**
+     * @param string $Zone <p>实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取</p>
+     * @param integer $Cpu <p>实例的CPU核心数</p>
+     * @param integer $Memory <p>实例内存大小，单位GB</p>
+     * @param integer $Storage <p>实例磁盘大小，单位GB</p>
+     * @param string $SubnetId <p>VPC子网ID，形如subnet-bdoe83fa</p>
+     * @param string $VpcId <p>VPC网络ID，形如vpc-dsp338hz</p>
+     * @param string $MachineType <p>购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘</p>
+     * @param string $InstanceChargeType <p>付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。</p>
+     * @param integer $ProjectId <p>项目ID</p>
+     * @param integer $GoodsNum <p>本次购买几个实例，默认值为1。取值不超过10</p>
+     * @param string $DBVersion <p>sqlserver版本，目前所有支持的版本有：2008R2 (SQL Server 2008 R2 Enterprise)，2012SP3 (SQL Server 2012 Enterprise)，201202 (SQL Server 2012 Standard)，2014SP2 (SQL Server 2014 Enterprise)，201402 (SQL Server 2014 Standard)，2016SP1 (SQL Server 2016 Enterprise)，201602 (SQL Server 2016 Standard)，2017 (SQL Server 2017 Enterprise)，201702 (SQL Server 2017 Standard)，2019 (SQL Server 2019 Enterprise)，201902 (SQL Server 2019 Standard)。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。</p>
+     * @param integer $Period <p>购买实例周期，默认取值为1，表示一个月。取值不超过48</p>
+     * @param array $SecurityGroupList <p>安全组列表，填写形如sg-xxx的安全组ID</p>
+     * @param integer $AutoRenewFlag <p>自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。</p>
+     * @param integer $AutoVoucher <p>是否自动使用代金券；1 - 是，0 - 否，默认不使用</p>
+     * @param array $VoucherIds <p>代金券ID数组，目前单个订单只能使用一张</p>
+     * @param array $Weekly <p>可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末</p>
+     * @param string $StartTime <p>可维护时间窗配置，每天可维护的开始时间</p>
+     * @param integer $Span <p>可维护时间窗配置，持续时间，单位：小时</p>
+     * @param array $ResourceTags <p>新建实例绑定的标签集合</p>
+     * @param string $Collation <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
+     * @param string $TimeZone <p>系统时区，默认：China Standard Time</p>
+     * @param integer $DiskEncryptFlag <p>磁盘加密标识，0-不加密，1-加密</p>
+     * @param integer $ThroughputPerformance <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
      */
     function __construct()
     {
@@ -317,6 +325,10 @@ class CreateBasicDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("DiskEncryptFlag",$param) and $param["DiskEncryptFlag"] !== null) {
             $this->DiskEncryptFlag = $param["DiskEncryptFlag"];
+        }
+
+        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
+            $this->ThroughputPerformance = $param["ThroughputPerformance"];
         }
     }
 }

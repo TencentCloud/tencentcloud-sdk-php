@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TDMQ参数详情
  *
- * @method string getClusterType() 获取集群类型
+ * @method string getClusterType() 获取<p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method void setClusterType(string $ClusterType) 设置<p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterEndPoint() 获取集群支撑网接入点
+ * @method string getClusterEndPoint() 获取<p>集群支撑网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterEndPoint(string $ClusterEndPoint) 设置集群支撑网接入点
+ * @method void setClusterEndPoint(string $ClusterEndPoint) 设置<p>集群支撑网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TDMQParams extends AbstractModel
 {
     /**
-     * @var string 集群类型
+     * @var string <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
 
     /**
-     * @var string 集群支撑网接入点
+     * @var string <p>集群支撑网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterEndPoint;
 
     /**
-     * @param string $ClusterType 集群类型
+     * @param string $ClusterType <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterEndPoint 集群支撑网接入点
+     * @param string $ClusterEndPoint <p>集群支撑网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

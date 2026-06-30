@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePhoneAlarmFlowTotalCount返回参数结构体
  *
- * @method integer getCount() 获取电话流水总数
- * @method void setCount(integer $Count) 设置电话流水总数
+ * @method integer getCount() 获取<p>电话流水总数</p>
+ * @method void setCount(integer $Count) 设置<p>电话流水总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribePhoneAlarmFlowTotalCountResponse extends AbstractModel
 {
     /**
-     * @var integer 电话流水总数
+     * @var integer <p>电话流水总数</p>
      */
     public $Count;
 
@@ -38,7 +38,7 @@ class DescribePhoneAlarmFlowTotalCountResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Count 电话流水总数
+     * @param integer $Count <p>电话流水总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

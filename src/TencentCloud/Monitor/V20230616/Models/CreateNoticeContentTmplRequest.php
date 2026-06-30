@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNoticeContentTmpl请求参数结构体
  *
- * @method string getTmplName() 获取模板名称
- * @method void setTmplName(string $TmplName) 设置模板名称
- * @method string getMonitorType() 获取监控类型
- * @method void setMonitorType(string $MonitorType) 设置监控类型
- * @method NoticeContentTmplItem getTmplContents() 获取模板内容
- * @method void setTmplContents(NoticeContentTmplItem $TmplContents) 设置模板内容
- * @method string getTmplLanguage() 获取模板语言 en/zh
- * @method void setTmplLanguage(string $TmplLanguage) 设置模板语言 en/zh
+ * @method string getTmplName() 获取<p>模板名称</p>
+ * @method void setTmplName(string $TmplName) 设置<p>模板名称</p>
+ * @method string getMonitorType() 获取<p>监控类型</p>
+ * @method void setMonitorType(string $MonitorType) 设置<p>监控类型</p>
+ * @method NoticeContentTmplItem getTmplContents() 获取<p>模板内容</p>
+ * @method void setTmplContents(NoticeContentTmplItem $TmplContents) 设置<p>模板内容</p>
+ * @method string getTmplLanguage() 获取<p>模板语言 en/zh</p>
+ * @method void setTmplLanguage(string $TmplLanguage) 设置<p>模板语言 en/zh</p>
  */
 class CreateNoticeContentTmplRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称
+     * @var string <p>模板名称</p>
      */
     public $TmplName;
 
     /**
-     * @var string 监控类型
+     * @var string <p>监控类型</p>
      */
     public $MonitorType;
 
     /**
-     * @var NoticeContentTmplItem 模板内容
+     * @var NoticeContentTmplItem <p>模板内容</p>
      */
     public $TmplContents;
 
     /**
-     * @var string 模板语言 en/zh
+     * @var string <p>模板语言 en/zh</p>
      */
     public $TmplLanguage;
 
     /**
-     * @param string $TmplName 模板名称
-     * @param string $MonitorType 监控类型
-     * @param NoticeContentTmplItem $TmplContents 模板内容
-     * @param string $TmplLanguage 模板语言 en/zh
+     * @param string $TmplName <p>模板名称</p>
+     * @param string $MonitorType <p>监控类型</p>
+     * @param NoticeContentTmplItem $TmplContents <p>模板内容</p>
+     * @param string $TmplLanguage <p>模板语言 en/zh</p>
      */
     function __construct()
     {

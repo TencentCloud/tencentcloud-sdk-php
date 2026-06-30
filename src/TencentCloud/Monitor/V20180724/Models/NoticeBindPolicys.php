@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通知模板与策略绑定关系
  *
- * @method string getNoticeId() 获取告警通知模板 ID
- * @method void setNoticeId(string $NoticeId) 设置告警通知模板 ID
- * @method array getPolicyIds() 获取告警通知模板绑定的告警策略ID列表
- * @method void setPolicyIds(array $PolicyIds) 设置告警通知模板绑定的告警策略ID列表
+ * @method string getNoticeId() 获取<p>告警通知模板 ID</p>
+ * @method void setNoticeId(string $NoticeId) 设置<p>告警通知模板 ID</p>
+ * @method array getPolicyIds() 获取<p>告警通知模板绑定的告警策略ID列表</p>
+ * @method void setPolicyIds(array $PolicyIds) 设置<p>告警通知模板绑定的告警策略ID列表</p>
  */
 class NoticeBindPolicys extends AbstractModel
 {
     /**
-     * @var string 告警通知模板 ID
+     * @var string <p>告警通知模板 ID</p>
      */
     public $NoticeId;
 
     /**
-     * @var array 告警通知模板绑定的告警策略ID列表
+     * @var array <p>告警通知模板绑定的告警策略ID列表</p>
      */
     public $PolicyIds;
 
     /**
-     * @param string $NoticeId 告警通知模板 ID
-     * @param array $PolicyIds 告警通知模板绑定的告警策略ID列表
+     * @param string $NoticeId <p>告警通知模板 ID</p>
+     * @param array $PolicyIds <p>告警通知模板绑定的告警策略ID列表</p>
      */
     function __construct()
     {

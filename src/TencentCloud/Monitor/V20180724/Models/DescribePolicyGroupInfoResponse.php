@@ -20,51 +20,51 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyGroupInfo返回参数结构体
  *
- * @method string getGroupName() 获取策略组名称
- * @method void setGroupName(string $GroupName) 设置策略组名称
- * @method integer getProjectId() 获取策略组所属的项目id
- * @method void setProjectId(integer $ProjectId) 设置策略组所属的项目id
- * @method integer getIsDefault() 获取是否为默认策略，0表示非默认策略，1表示默认策略
- * @method void setIsDefault(integer $IsDefault) 设置是否为默认策略，0表示非默认策略，1表示默认策略
- * @method string getViewName() 获取策略类型
- * @method void setViewName(string $ViewName) 设置策略类型
- * @method string getRemark() 获取策略说明
- * @method void setRemark(string $Remark) 设置策略说明
- * @method string getShowName() 获取策略类型名称
- * @method void setShowName(string $ShowName) 设置策略类型名称
- * @method string getLastEditUin() 获取最近编辑的用户uin
- * @method void setLastEditUin(string $LastEditUin) 设置最近编辑的用户uin
- * @method string getUpdateTime() 获取最近编辑时间
- * @method void setUpdateTime(string $UpdateTime) 设置最近编辑时间
- * @method array getRegion() 获取该策略支持的地域
- * @method void setRegion(array $Region) 设置该策略支持的地域
- * @method array getDimensionGroup() 获取策略类型的维度列表
- * @method void setDimensionGroup(array $DimensionGroup) 设置策略类型的维度列表
- * @method array getConditionsConfig() 获取阈值规则列表
+ * @method string getGroupName() 获取<p>策略组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>策略组名称</p>
+ * @method integer getProjectId() 获取<p>策略组所属的项目id</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>策略组所属的项目id</p>
+ * @method integer getIsDefault() 获取<p>是否为默认策略，0表示非默认策略，1表示默认策略</p>
+ * @method void setIsDefault(integer $IsDefault) 设置<p>是否为默认策略，0表示非默认策略，1表示默认策略</p>
+ * @method string getViewName() 获取<p>策略类型</p>
+ * @method void setViewName(string $ViewName) 设置<p>策略类型</p>
+ * @method string getRemark() 获取<p>策略说明</p>
+ * @method void setRemark(string $Remark) 设置<p>策略说明</p>
+ * @method string getShowName() 获取<p>策略类型名称</p>
+ * @method void setShowName(string $ShowName) 设置<p>策略类型名称</p>
+ * @method string getLastEditUin() 获取<p>最近编辑的用户uin</p>
+ * @method void setLastEditUin(string $LastEditUin) 设置<p>最近编辑的用户uin</p>
+ * @method string getUpdateTime() 获取<p>最近编辑时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最近编辑时间</p>
+ * @method array getRegion() 获取<p>该策略支持的地域</p>
+ * @method void setRegion(array $Region) 设置<p>该策略支持的地域</p>
+ * @method array getDimensionGroup() 获取<p>策略类型的维度列表</p>
+ * @method void setDimensionGroup(array $DimensionGroup) 设置<p>策略类型的维度列表</p>
+ * @method array getConditionsConfig() 获取<p>阈值规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConditionsConfig(array $ConditionsConfig) 设置阈值规则列表
+ * @method void setConditionsConfig(array $ConditionsConfig) 设置<p>阈值规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getEventConfig() 获取产品事件规则列表
+ * @method array getEventConfig() 获取<p>产品事件规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventConfig(array $EventConfig) 设置产品事件规则列表
+ * @method void setEventConfig(array $EventConfig) 设置<p>产品事件规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getReceiverInfos() 获取用户接收人列表
+ * @method array getReceiverInfos() 获取<p>用户接收人列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReceiverInfos(array $ReceiverInfos) 设置用户接收人列表
+ * @method void setReceiverInfos(array $ReceiverInfos) 设置<p>用户接收人列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribePolicyGroupInfoCallback getCallback() 获取用户回调信息
+ * @method DescribePolicyGroupInfoCallback getCallback() 获取<p>用户回调信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCallback(DescribePolicyGroupInfoCallback $Callback) 设置用户回调信息
+ * @method void setCallback(DescribePolicyGroupInfoCallback $Callback) 设置<p>用户回调信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribePolicyGroupInfoConditionTpl getConditionsTemp() 获取模板策略组
+ * @method DescribePolicyGroupInfoConditionTpl getConditionsTemp() 获取<p>模板策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConditionsTemp(DescribePolicyGroupInfoConditionTpl $ConditionsTemp) 设置模板策略组
+ * @method void setConditionsTemp(DescribePolicyGroupInfoConditionTpl $ConditionsTemp) 设置<p>模板策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getCanSetDefault() 获取是否可以设置成默认策略
- * @method void setCanSetDefault(boolean $CanSetDefault) 设置是否可以设置成默认策略
- * @method integer getIsUnionRule() 获取是否且规则
+ * @method boolean getCanSetDefault() 获取<p>是否可以设置成默认策略</p>
+ * @method void setCanSetDefault(boolean $CanSetDefault) 设置<p>是否可以设置成默认策略</p>
+ * @method integer getIsUnionRule() 获取<p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsUnionRule(integer $IsUnionRule) 设置是否且规则
+ * @method void setIsUnionRule(integer $IsUnionRule) 设置<p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -72,92 +72,92 @@ use TencentCloud\Common\AbstractModel;
 class DescribePolicyGroupInfoResponse extends AbstractModel
 {
     /**
-     * @var string 策略组名称
+     * @var string <p>策略组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var integer 策略组所属的项目id
+     * @var integer <p>策略组所属的项目id</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 是否为默认策略，0表示非默认策略，1表示默认策略
+     * @var integer <p>是否为默认策略，0表示非默认策略，1表示默认策略</p>
      */
     public $IsDefault;
 
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
      */
     public $ViewName;
 
     /**
-     * @var string 策略说明
+     * @var string <p>策略说明</p>
      */
     public $Remark;
 
     /**
-     * @var string 策略类型名称
+     * @var string <p>策略类型名称</p>
      */
     public $ShowName;
 
     /**
-     * @var string 最近编辑的用户uin
+     * @var string <p>最近编辑的用户uin</p>
      */
     public $LastEditUin;
 
     /**
-     * @var string 最近编辑时间
+     * @var string <p>最近编辑时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var array 该策略支持的地域
+     * @var array <p>该策略支持的地域</p>
      */
     public $Region;
 
     /**
-     * @var array 策略类型的维度列表
+     * @var array <p>策略类型的维度列表</p>
      */
     public $DimensionGroup;
 
     /**
-     * @var array 阈值规则列表
+     * @var array <p>阈值规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionsConfig;
 
     /**
-     * @var array 产品事件规则列表
+     * @var array <p>产品事件规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventConfig;
 
     /**
-     * @var array 用户接收人列表
+     * @var array <p>用户接收人列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiverInfos;
 
     /**
-     * @var DescribePolicyGroupInfoCallback 用户回调信息
+     * @var DescribePolicyGroupInfoCallback <p>用户回调信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Callback;
 
     /**
-     * @var DescribePolicyGroupInfoConditionTpl 模板策略组
+     * @var DescribePolicyGroupInfoConditionTpl <p>模板策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionsTemp;
 
     /**
-     * @var boolean 是否可以设置成默认策略
+     * @var boolean <p>是否可以设置成默认策略</p>
      */
     public $CanSetDefault;
 
     /**
-     * @var integer 是否且规则
+     * @var integer <p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUnionRule;
@@ -168,28 +168,28 @@ class DescribePolicyGroupInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $GroupName 策略组名称
-     * @param integer $ProjectId 策略组所属的项目id
-     * @param integer $IsDefault 是否为默认策略，0表示非默认策略，1表示默认策略
-     * @param string $ViewName 策略类型
-     * @param string $Remark 策略说明
-     * @param string $ShowName 策略类型名称
-     * @param string $LastEditUin 最近编辑的用户uin
-     * @param string $UpdateTime 最近编辑时间
-     * @param array $Region 该策略支持的地域
-     * @param array $DimensionGroup 策略类型的维度列表
-     * @param array $ConditionsConfig 阈值规则列表
+     * @param string $GroupName <p>策略组名称</p>
+     * @param integer $ProjectId <p>策略组所属的项目id</p>
+     * @param integer $IsDefault <p>是否为默认策略，0表示非默认策略，1表示默认策略</p>
+     * @param string $ViewName <p>策略类型</p>
+     * @param string $Remark <p>策略说明</p>
+     * @param string $ShowName <p>策略类型名称</p>
+     * @param string $LastEditUin <p>最近编辑的用户uin</p>
+     * @param string $UpdateTime <p>最近编辑时间</p>
+     * @param array $Region <p>该策略支持的地域</p>
+     * @param array $DimensionGroup <p>策略类型的维度列表</p>
+     * @param array $ConditionsConfig <p>阈值规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $EventConfig 产品事件规则列表
+     * @param array $EventConfig <p>产品事件规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ReceiverInfos 用户接收人列表
+     * @param array $ReceiverInfos <p>用户接收人列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribePolicyGroupInfoCallback $Callback 用户回调信息
+     * @param DescribePolicyGroupInfoCallback $Callback <p>用户回调信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribePolicyGroupInfoConditionTpl $ConditionsTemp 模板策略组
+     * @param DescribePolicyGroupInfoConditionTpl $ConditionsTemp <p>模板策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $CanSetDefault 是否可以设置成默认策略
-     * @param integer $IsUnionRule 是否且规则
+     * @param boolean $CanSetDefault <p>是否可以设置成默认策略</p>
+     * @param integer $IsUnionRule <p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

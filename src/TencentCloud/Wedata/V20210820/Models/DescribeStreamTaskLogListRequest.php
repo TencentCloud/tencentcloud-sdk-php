@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamTaskLogList请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getJobId() 获取作业ID
- * @method void setJobId(string $JobId) 设置作业ID
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
- * @method integer getStartTime() 获取开始时间
- * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method string getContainer() 获取container名字
- * @method void setContainer(string $Container) 设置container名字
- * @method integer getLimit() 获取条数
- * @method void setLimit(integer $Limit) 设置条数
- * @method string getOrderType() 获取排序类型 desc asc
- * @method void setOrderType(string $OrderType) 设置排序类型 desc asc
- * @method integer getRunningOrderId() 获取作业运行的实例ID
- * @method void setRunningOrderId(integer $RunningOrderId) 设置作业运行的实例ID
- * @method string getKeyword() 获取关键字
- * @method void setKeyword(string $Keyword) 设置关键字
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method string getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
+ * @method string getJobId() 获取<p>作业ID</p>
+ * @method void setJobId(string $JobId) 设置<p>作业ID</p>
+ * @method integer getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间</p>
+ * @method integer getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间</p>
+ * @method string getContainer() 获取<p>container名字</p>
+ * @method void setContainer(string $Container) 设置<p>container名字</p>
+ * @method integer getLimit() 获取<p>条数</p>
+ * @method void setLimit(integer $Limit) 设置<p>条数</p>
+ * @method string getOrderType() 获取<p>排序类型 desc asc</p>
+ * @method void setOrderType(string $OrderType) 设置<p>排序类型 desc asc</p>
+ * @method integer getRunningOrderId() 获取<p>作业运行的实例ID</p>
+ * @method void setRunningOrderId(integer $RunningOrderId) 设置<p>作业运行的实例ID</p>
+ * @method string getKeyword() 获取<p>关键字</p>
+ * @method void setKeyword(string $Keyword) 设置<p>关键字</p>
+ * @method string getJobType() 获取<p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
+ * @method void setJobType(string $JobType) 设置<p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
  */
 class DescribeStreamTaskLogListRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 任务ID
+     * @var string <p>任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @var string 作业ID
+     * @var string <p>作业ID</p>
      */
     public $JobId;
 
     /**
-     * @var integer 结束时间
+     * @var integer <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string container名字
+     * @var string <p>container名字</p>
      */
     public $Container;
 
     /**
-     * @var integer 条数
+     * @var integer <p>条数</p>
      */
     public $Limit;
 
     /**
-     * @var string 排序类型 desc asc
+     * @var string <p>排序类型 desc asc</p>
      */
     public $OrderType;
 
     /**
-     * @var integer 作业运行的实例ID
+     * @var integer <p>作业运行的实例ID</p>
      */
     public $RunningOrderId;
 
     /**
-     * @var string 关键字
+     * @var string <p>关键字</p>
      */
     public $Keyword;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param string $TaskId 任务ID
-     * @param string $JobId 作业ID
-     * @param integer $EndTime 结束时间
-     * @param integer $StartTime 开始时间
-     * @param string $Container container名字
-     * @param integer $Limit 条数
-     * @param string $OrderType 排序类型 desc asc
-     * @param integer $RunningOrderId 作业运行的实例ID
-     * @param string $Keyword 关键字
+     * @var string <p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
+     */
+    public $JobType;
+
+    /**
+     * @param string $ProjectId <p>项目ID</p>
+     * @param string $TaskId <p>任务ID</p>
+     * @param string $JobId <p>作业ID</p>
+     * @param integer $EndTime <p>结束时间</p>
+     * @param integer $StartTime <p>开始时间</p>
+     * @param string $Container <p>container名字</p>
+     * @param integer $Limit <p>条数</p>
+     * @param string $OrderType <p>排序类型 desc asc</p>
+     * @param integer $RunningOrderId <p>作业运行的实例ID</p>
+     * @param string $Keyword <p>关键字</p>
+     * @param string $JobType <p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeStreamTaskLogListRequest extends AbstractModel
 
         if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
             $this->Keyword = $param["Keyword"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
         }
     }
 }

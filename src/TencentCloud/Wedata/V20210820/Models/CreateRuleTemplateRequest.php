@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRuleTemplate请求参数结构体
  *
- * @method integer getType() 获取模板类型  1.系统模板   2.自定义模板
- * @method void setType(integer $Type) 设置模板类型  1.系统模板   2.自定义模板
+ * @method integer getType() 获取模版类型：1-系统模版，2-用户自定义模版
+ * @method void setType(integer $Type) 设置模版类型：1-系统模版，2-用户自定义模版
  * @method string getName() 获取模板名称
  * @method void setName(string $Name) 设置模板名称
- * @method integer getQualityDim() 获取质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
- * @method void setQualityDim(integer $QualityDim) 设置质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
- * @method integer getSourceObjectType() 获取源端数据对象类型 1.常量  2.离线表级   2.离线字段级
- * @method void setSourceObjectType(integer $SourceObjectType) 设置源端数据对象类型 1.常量  2.离线表级   2.离线字段级
+ * @method integer getQualityDim() 获取质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
+ * @method void setQualityDim(integer $QualityDim) 设置质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
+ * @method integer getSourceObjectType() 获取源数据对象类型：1-常量，2-离线表级，3-离线字段级别
+ * @method void setSourceObjectType(integer $SourceObjectType) 设置源数据对象类型：1-常量，2-离线表级，3-离线字段级别
  * @method string getDescription() 获取模板描述
  * @method void setDescription(string $Description) 设置模板描述
- * @method array getSourceEngineTypes() 获取源端对应的引擎类型
- * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置源端对应的引擎类型
+ * @method array getSourceEngineTypes() 获取执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
+ * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
  * @method boolean getMultiSourceFlag() 获取是否关联其它库表
  * @method void setMultiSourceFlag(boolean $MultiSourceFlag) 设置是否关联其它库表
  * @method string getSqlExpression() 获取SQL 表达式
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateRuleTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模板类型  1.系统模板   2.自定义模板
+     * @var integer 模版类型：1-系统模版，2-用户自定义模版
      */
     public $Type;
 
@@ -54,12 +54,12 @@ class CreateRuleTemplateRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
+     * @var integer 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
      */
     public $QualityDim;
 
     /**
-     * @var integer 源端数据对象类型 1.常量  2.离线表级   2.离线字段级
+     * @var integer 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
      */
     public $SourceObjectType;
 
@@ -69,7 +69,7 @@ class CreateRuleTemplateRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var array 源端对应的引擎类型
+     * @var array 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      */
     public $SourceEngineTypes;
 
@@ -94,12 +94,12 @@ class CreateRuleTemplateRequest extends AbstractModel
     public $WhereFlag;
 
     /**
-     * @param integer $Type 模板类型  1.系统模板   2.自定义模板
+     * @param integer $Type 模版类型：1-系统模版，2-用户自定义模版
      * @param string $Name 模板名称
-     * @param integer $QualityDim 质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
-     * @param integer $SourceObjectType 源端数据对象类型 1.常量  2.离线表级   2.离线字段级
+     * @param integer $QualityDim 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
+     * @param integer $SourceObjectType 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
      * @param string $Description 模板描述
-     * @param array $SourceEngineTypes 源端对应的引擎类型
+     * @param array $SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      * @param boolean $MultiSourceFlag 是否关联其它库表
      * @param string $SqlExpression SQL 表达式
      * @param string $ProjectId 项目Id

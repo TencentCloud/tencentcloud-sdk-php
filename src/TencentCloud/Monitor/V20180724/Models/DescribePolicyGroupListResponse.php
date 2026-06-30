@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyGroupList返回参数结构体
  *
- * @method array getGroupList() 获取策略组列表
+ * @method array getGroupList() 获取<p>策略组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupList(array $GroupList) 设置策略组列表
+ * @method void setGroupList(array $GroupList) 设置<p>策略组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取策略组总数
- * @method void setTotal(integer $Total) 设置策略组总数
- * @method string getWarning() 获取备注信息
+ * @method integer getTotal() 获取<p>策略组总数</p>
+ * @method void setTotal(integer $Total) 设置<p>策略组总数</p>
+ * @method string getWarning() 获取<p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarning(string $Warning) 设置备注信息
+ * @method void setWarning(string $Warning) 设置<p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,18 +36,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribePolicyGroupListResponse extends AbstractModel
 {
     /**
-     * @var array 策略组列表
+     * @var array <p>策略组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupList;
 
     /**
-     * @var integer 策略组总数
+     * @var integer <p>策略组总数</p>
      */
     public $Total;
 
     /**
-     * @var string 备注信息
+     * @var string <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Warning;
@@ -58,10 +58,10 @@ class DescribePolicyGroupListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $GroupList 策略组列表
+     * @param array $GroupList <p>策略组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total 策略组总数
-     * @param string $Warning 备注信息
+     * @param integer $Total <p>策略组总数</p>
+     * @param string $Warning <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

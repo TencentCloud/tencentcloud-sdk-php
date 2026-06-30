@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableOwnerUserId(integer $TableOwnerUserId) 设置表负责人userId
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDatasourceType() 获取2.HIVE 3.DLC
+ * @method integer getDatasourceType() 获取数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatasourceType(integer $DatasourceType) 设置2.HIVE 3.DLC
+ * @method void setDatasourceType(integer $DatasourceType) 设置数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterDeployType() 获取集群部署类型，CVM/TKE
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,7 +122,7 @@ class RuleExecResultDetail extends AbstractModel
     public $TableOwnerUserId;
 
     /**
-     * @var integer 2.HIVE 3.DLC
+     * @var integer 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceType;
@@ -152,7 +152,7 @@ class RuleExecResultDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TableOwnerUserId 表负责人userId
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DatasourceType 2.HIVE 3.DLC
+     * @param integer $DatasourceType 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterDeployType 集群部署类型，CVM/TKE
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmNotice请求参数结构体
  *
- * @method string getModule() 获取模块名，这里填“monitor”
- * @method void setModule(string $Module) 设置模块名，这里填“monitor”
- * @method string getNoticeId() 获取告警通知模板 id
- * @method void setNoticeId(string $NoticeId) 设置告警通知模板 id
+ * @method string getModule() 获取<p>模块名，这里填“monitor”</p>
+ * @method void setModule(string $Module) 设置<p>模块名，这里填“monitor”</p>
+ * @method string getNoticeId() 获取<p>告警通知模板 id</p>
+ * @method void setNoticeId(string $NoticeId) 设置<p>告警通知模板 id</p>
  */
 class DescribeAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string 模块名，这里填“monitor”
+     * @var string <p>模块名，这里填“monitor”</p>
      */
     public $Module;
 
     /**
-     * @var string 告警通知模板 id
+     * @var string <p>告警通知模板 id</p>
      */
     public $NoticeId;
 
     /**
-     * @param string $Module 模块名，这里填“monitor”
-     * @param string $NoticeId 告警通知模板 id
+     * @param string $Module <p>模块名，这里填“monitor”</p>
+     * @param string $NoticeId <p>告警通知模板 id</p>
      */
     function __construct()
     {

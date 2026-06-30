@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterDescription(string $ClusterDescription) 设置<p>集群描述</p>
  * @method string getRegion() 获取<p>集群所属地域</p><p>枚举值：</p><ul><li>ap-shanghai： 上海地域</li><li>ap-nanjing： 南京地域</li></ul>
  * @method void setRegion(string $Region) 设置<p>集群所属地域</p><p>枚举值：</p><ul><li>ap-shanghai： 上海地域</li><li>ap-nanjing： 南京地域</li></ul>
- * @method string getClusterStatus() 获取<p>DB Custom 集群状态</p><p>枚举值：</p><ul><li>Creating： 创建中</li><li>Running： 运行中</li><li>Destroying： 销毁中</li></ul>
- * @method void setClusterStatus(string $ClusterStatus) 设置<p>DB Custom 集群状态</p><p>枚举值：</p><ul><li>Creating： 创建中</li><li>Running： 运行中</li><li>Destroying： 销毁中</li></ul>
+ * @method string getClusterStatus() 获取<p>DB Custom 集群状态</p><p>枚举值：</p><ul><li>Creating： 创建中</li><li>Running： 运行中</li><li>Destroying： 销毁中</li><li>Initializing： 初始化中</li></ul>
+ * @method void setClusterStatus(string $ClusterStatus) 设置<p>DB Custom 集群状态</p><p>枚举值：</p><ul><li>Creating： 创建中</li><li>Running： 运行中</li><li>Destroying： 销毁中</li><li>Initializing： 初始化中</li></ul>
  * @method string getClusterVersion() 获取<p>集群版本</p><p>枚举值：</p><ul><li>1.34.1： 集群版本1.34.1</li></ul><p>默认值：1.34.1</p>
  * @method void setClusterVersion(string $ClusterVersion) 设置<p>集群版本</p><p>枚举值：</p><ul><li>1.34.1： 集群版本1.34.1</li></ul><p>默认值：1.34.1</p>
  * @method integer getClusterNodeNum() 获取<p>集群下的节点数量</p>
@@ -76,7 +76,7 @@ class DescribeDBCustomClusterDetailResponse extends AbstractModel
     public $Region;
 
     /**
-     * @var string <p>DB Custom 集群状态</p><p>枚举值：</p><ul><li>Creating： 创建中</li><li>Running： 运行中</li><li>Destroying： 销毁中</li></ul>
+     * @var string <p>DB Custom 集群状态</p><p>枚举值：</p><ul><li>Creating： 创建中</li><li>Running： 运行中</li><li>Destroying： 销毁中</li><li>Initializing： 初始化中</li></ul>
      */
     public $ClusterStatus;
 
@@ -128,7 +128,7 @@ class DescribeDBCustomClusterDetailResponse extends AbstractModel
      * @param string $ClusterName <p>集群名称</p>
      * @param string $ClusterDescription <p>集群描述</p>
      * @param string $Region <p>集群所属地域</p><p>枚举值：</p><ul><li>ap-shanghai： 上海地域</li><li>ap-nanjing： 南京地域</li></ul>
-     * @param string $ClusterStatus <p>DB Custom 集群状态</p><p>枚举值：</p><ul><li>Creating： 创建中</li><li>Running： 运行中</li><li>Destroying： 销毁中</li></ul>
+     * @param string $ClusterStatus <p>DB Custom 集群状态</p><p>枚举值：</p><ul><li>Creating： 创建中</li><li>Running： 运行中</li><li>Destroying： 销毁中</li><li>Initializing： 初始化中</li></ul>
      * @param string $ClusterVersion <p>集群版本</p><p>枚举值：</p><ul><li>1.34.1： 集群版本1.34.1</li></ul><p>默认值：1.34.1</p>
      * @param integer $ClusterNodeNum <p>集群下的节点数量</p>
      * @param string $ClusterLevel <p>集群规模</p>

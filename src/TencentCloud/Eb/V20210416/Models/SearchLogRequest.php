@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog请求参数结构体
  *
- * @method integer getStartTime() 获取起始时间unix 毫秒时间戳
- * @method void setStartTime(integer $StartTime) 设置起始时间unix 毫秒时间戳
- * @method integer getEndTime() 获取结束时间unix 毫秒时间戳
- * @method void setEndTime(integer $EndTime) 设置结束时间unix 毫秒时间戳
- * @method string getEventBusId() 获取事件集ID
- * @method void setEventBusId(string $EventBusId) 设置事件集ID
- * @method integer getPage() 获取页码
- * @method void setPage(integer $Page) 设置页码
- * @method integer getLimit() 获取每页数据大小
- * @method void setLimit(integer $Limit) 设置每页数据大小
- * @method array getFilter() 获取事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
- * @method void setFilter(array $Filter) 设置事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
- * @method array getOrderFields() 获取事件查询结果排序，["timestamp","subject"]
- * @method void setOrderFields(array $OrderFields) 设置事件查询结果排序，["timestamp","subject"]
- * @method string getOrderBy() 获取排序方式，asc 从旧到新，desc 从新到旧
- * @method void setOrderBy(string $OrderBy) 设置排序方式，asc 从旧到新，desc 从新到旧
+ * @method integer getStartTime() 获取<p>起始时间unix 毫秒时间戳</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>起始时间unix 毫秒时间戳</p>
+ * @method integer getEndTime() 获取<p>结束时间unix 毫秒时间戳</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间unix 毫秒时间戳</p>
+ * @method string getEventBusId() 获取<p>事件集ID</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
+ * @method integer getPage() 获取<p>页码</p>
+ * @method void setPage(integer $Page) 设置<p>页码</p>
+ * @method integer getLimit() 获取<p>每页数据大小</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页数据大小</p>
+ * @method array getFilter() 获取<p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
+ * @method void setFilter(array $Filter) 设置<p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
+ * @method array getOrderFields() 获取<p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
+ * @method void setOrderFields(array $OrderFields) 设置<p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
+ * @method string getOrderBy() 获取<p>排序方式，asc 从旧到新，desc 从新到旧</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序方式，asc 从旧到新，desc 从新到旧</p>
  */
 class SearchLogRequest extends AbstractModel
 {
     /**
-     * @var integer 起始时间unix 毫秒时间戳
+     * @var integer <p>起始时间unix 毫秒时间戳</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间unix 毫秒时间戳
+     * @var integer <p>结束时间unix 毫秒时间戳</p>
      */
     public $EndTime;
 
     /**
-     * @var string 事件集ID
+     * @var string <p>事件集ID</p>
      */
     public $EventBusId;
 
     /**
-     * @var integer 页码
+     * @var integer <p>页码</p>
      */
     public $Page;
 
     /**
-     * @var integer 每页数据大小
+     * @var integer <p>每页数据大小</p>
      */
     public $Limit;
 
     /**
-     * @var array 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
+     * @var array <p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
      */
     public $Filter;
 
     /**
-     * @var array 事件查询结果排序，["timestamp","subject"]
+     * @var array <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
      */
     public $OrderFields;
 
     /**
-     * @var string 排序方式，asc 从旧到新，desc 从新到旧
+     * @var string <p>排序方式，asc 从旧到新，desc 从新到旧</p>
      */
     public $OrderBy;
 
     /**
-     * @param integer $StartTime 起始时间unix 毫秒时间戳
-     * @param integer $EndTime 结束时间unix 毫秒时间戳
-     * @param string $EventBusId 事件集ID
-     * @param integer $Page 页码
-     * @param integer $Limit 每页数据大小
-     * @param array $Filter 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
-     * @param array $OrderFields 事件查询结果排序，["timestamp","subject"]
-     * @param string $OrderBy 排序方式，asc 从旧到新，desc 从新到旧
+     * @param integer $StartTime <p>起始时间unix 毫秒时间戳</p>
+     * @param integer $EndTime <p>结束时间unix 毫秒时间戳</p>
+     * @param string $EventBusId <p>事件集ID</p>
+     * @param integer $Page <p>页码</p>
+     * @param integer $Limit <p>每页数据大小</p>
+     * @param array $Filter <p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
+     * @param array $OrderFields <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
+     * @param string $OrderBy <p>排序方式，asc 从旧到新，desc 从新到旧</p>
      */
     function __construct()
     {

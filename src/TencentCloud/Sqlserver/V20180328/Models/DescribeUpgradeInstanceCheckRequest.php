@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUpgradeInstanceCheck请求参数结构体
  *
- * @method string getInstanceId() 获取数据库实例ID，形如mssql-njj2mtpl
- * @method void setInstanceId(string $InstanceId) 设置数据库实例ID，形如mssql-njj2mtpl
- * @method integer getCpu() 获取实例变配后的CPU核心数，不填则不修改
- * @method void setCpu(integer $Cpu) 设置实例变配后的CPU核心数，不填则不修改
- * @method integer getMemory() 获取实例变配后内存大小，单位GB，不填则不修改
- * @method void setMemory(integer $Memory) 设置实例变配后内存大小，单位GB，不填则不修改
- * @method integer getStorage() 获取实例变配后磁盘大小，单位GB，不填则不修改
- * @method void setStorage(integer $Storage) 设置实例变配后磁盘大小，单位GB，不填则不修改
- * @method string getDBVersion() 获取实例版本，不填则不修改
- * @method void setDBVersion(string $DBVersion) 设置实例版本，不填则不修改
- * @method string getHAType() 获取实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
- * @method void setHAType(string $HAType) 设置实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
- * @method string getMultiZones() 获取实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
- * @method void setMultiZones(string $MultiZones) 设置实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
- * @method array getDrZones() 获取多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
- * @method void setDrZones(array $DrZones) 设置多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+ * @method string getInstanceId() 获取<p>数据库实例ID，形如mssql-njj2mtpl</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>数据库实例ID，形如mssql-njj2mtpl</p>
+ * @method integer getCpu() 获取<p>实例变配后的CPU核心数，不填则不修改</p>
+ * @method void setCpu(integer $Cpu) 设置<p>实例变配后的CPU核心数，不填则不修改</p>
+ * @method integer getMemory() 获取<p>实例变配后内存大小，单位GB，不填则不修改</p>
+ * @method void setMemory(integer $Memory) 设置<p>实例变配后内存大小，单位GB，不填则不修改</p>
+ * @method integer getStorage() 获取<p>实例变配后磁盘大小，单位GB，不填则不修改</p>
+ * @method void setStorage(integer $Storage) 设置<p>实例变配后磁盘大小，单位GB，不填则不修改</p>
+ * @method string getDBVersion() 获取<p>实例版本，不填则不修改</p>
+ * @method void setDBVersion(string $DBVersion) 设置<p>实例版本，不填则不修改</p>
+ * @method string getHAType() 获取<p>实例变配后的类型，可选值：CLUSTER-集群，不填则不修改</p>
+ * @method void setHAType(string $HAType) 设置<p>实例变配后的类型，可选值：CLUSTER-集群，不填则不修改</p>
+ * @method string getMultiZones() 获取<p>实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改</p>
+ * @method void setMultiZones(string $MultiZones) 设置<p>实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改</p>
+ * @method array getDrZones() 获取<p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
+ * @method void setDrZones(array $DrZones) 设置<p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
+ * @method integer getThroughputPerformance() 获取<p>额外磁盘IO吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p><p>不传-保持原值不变；0-取消额外IO；&gt;0-设为新值</p>
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置<p>额外磁盘IO吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p><p>不传-保持原值不变；0-取消额外IO；&gt;0-设为新值</p>
  */
 class DescribeUpgradeInstanceCheckRequest extends AbstractModel
 {
     /**
-     * @var string 数据库实例ID，形如mssql-njj2mtpl
+     * @var string <p>数据库实例ID，形如mssql-njj2mtpl</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 实例变配后的CPU核心数，不填则不修改
+     * @var integer <p>实例变配后的CPU核心数，不填则不修改</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 实例变配后内存大小，单位GB，不填则不修改
+     * @var integer <p>实例变配后内存大小，单位GB，不填则不修改</p>
      */
     public $Memory;
 
     /**
-     * @var integer 实例变配后磁盘大小，单位GB，不填则不修改
+     * @var integer <p>实例变配后磁盘大小，单位GB，不填则不修改</p>
      */
     public $Storage;
 
     /**
-     * @var string 实例版本，不填则不修改
+     * @var string <p>实例版本，不填则不修改</p>
      */
     public $DBVersion;
 
     /**
-     * @var string 实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
+     * @var string <p>实例变配后的类型，可选值：CLUSTER-集群，不填则不修改</p>
      */
     public $HAType;
 
     /**
-     * @var string 实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
+     * @var string <p>实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改</p>
      */
     public $MultiZones;
 
     /**
-     * @var array 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     * @var array <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
      */
     public $DrZones;
 
     /**
-     * @param string $InstanceId 数据库实例ID，形如mssql-njj2mtpl
-     * @param integer $Cpu 实例变配后的CPU核心数，不填则不修改
-     * @param integer $Memory 实例变配后内存大小，单位GB，不填则不修改
-     * @param integer $Storage 实例变配后磁盘大小，单位GB，不填则不修改
-     * @param string $DBVersion 实例版本，不填则不修改
-     * @param string $HAType 实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
-     * @param string $MultiZones 实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
-     * @param array $DrZones 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     * @var integer <p>额外磁盘IO吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p><p>不传-保持原值不变；0-取消额外IO；&gt;0-设为新值</p>
+     */
+    public $ThroughputPerformance;
+
+    /**
+     * @param string $InstanceId <p>数据库实例ID，形如mssql-njj2mtpl</p>
+     * @param integer $Cpu <p>实例变配后的CPU核心数，不填则不修改</p>
+     * @param integer $Memory <p>实例变配后内存大小，单位GB，不填则不修改</p>
+     * @param integer $Storage <p>实例变配后磁盘大小，单位GB，不填则不修改</p>
+     * @param string $DBVersion <p>实例版本，不填则不修改</p>
+     * @param string $HAType <p>实例变配后的类型，可选值：CLUSTER-集群，不填则不修改</p>
+     * @param string $MultiZones <p>实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改</p>
+     * @param array $DrZones <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
+     * @param integer $ThroughputPerformance <p>额外磁盘IO吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p><p>不传-保持原值不变；0-取消额外IO；&gt;0-设为新值</p>
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class DescribeUpgradeInstanceCheckRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DrZones, $obj);
             }
+        }
+
+        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
+            $this->ThroughputPerformance = $param["ThroughputPerformance"];
         }
     }
 }

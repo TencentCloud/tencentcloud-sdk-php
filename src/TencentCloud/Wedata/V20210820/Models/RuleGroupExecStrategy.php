@@ -20,345 +20,357 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 质量规则执行策略
  *
- * @method integer getRuleGroupId() 获取规则组Id
+ * @method integer getRuleGroupId() 获取<p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleGroupId(integer $RuleGroupId) 设置规则组Id
+ * @method void setRuleGroupId(integer $RuleGroupId) 设置<p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMonitorType() 获取监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+ * @method integer getMonitorType() 获取监控类型：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMonitorType(integer $MonitorType) 设置监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+ * @method void setMonitorType(integer $MonitorType) 设置监控类型：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecQueue() 获取计算队列
+ * @method string getExecQueue() 获取<p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecQueue(string $ExecQueue) 设置计算队列
+ * @method void setExecQueue(string $ExecQueue) 设置<p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutorGroupId() 获取执行资源组ID
+ * @method string getExecutorGroupId() 获取<p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutorGroupId(string $ExecutorGroupId) 设置执行资源组ID
+ * @method void setExecutorGroupId(string $ExecutorGroupId) 设置<p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutorGroupName() 获取执行资源组名称
+ * @method string getExecutorGroupName() 获取<p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutorGroupName(string $ExecutorGroupName) 设置执行资源组名称
+ * @method void setExecutorGroupName(string $ExecutorGroupName) 设置<p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTasks() 获取关联的生产调度任务列表
+ * @method array getTasks() 获取<p>关联的生产调度任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTasks(array $Tasks) 设置关联的生产调度任务列表
+ * @method void setTasks(array $Tasks) 设置<p>关联的生产调度任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取周期开始时间
+ * @method string getStartTime() 获取<p>周期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置周期开始时间
+ * @method void setStartTime(string $StartTime) 设置<p>周期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取周期结束时间
+ * @method string getEndTime() 获取<p>周期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置周期结束时间
+ * @method void setEndTime(string $EndTime) 设置<p>周期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCycleType() 获取调度周期类型
+ * @method string getCycleType() 获取周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleType(string $CycleType) 设置调度周期类型
+ * @method void setCycleType(string $CycleType) 设置周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDelayTime() 获取延迟调度时间
+ * @method integer getDelayTime() 获取<p>延迟调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDelayTime(integer $DelayTime) 设置延迟调度时间
+ * @method void setDelayTime(integer $DelayTime) 设置<p>延迟调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCycleStep() 获取间隔
+ * @method integer getCycleStep() 获取<p>间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleStep(integer $CycleStep) 设置间隔
+ * @method void setCycleStep(integer $CycleStep) 设置<p>间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskAction() 获取时间指定
+ * @method string getTaskAction() 获取<p>时间指定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskAction(string $TaskAction) 设置时间指定
+ * @method void setTaskAction(string $TaskAction) 设置<p>时间指定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecEngineType() 获取运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+ * @method string getExecEngineType() 获取执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecEngineType(string $ExecEngineType) 设置运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+ * @method void setExecEngineType(string $ExecEngineType) 设置执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecPlan() 获取执行计划
+ * @method string getExecPlan() 获取<p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecPlan(string $ExecPlan) 设置执行计划
+ * @method void setExecPlan(string $ExecPlan) 设置<p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRuleId() 获取规则id
+ * @method integer getRuleId() 获取<p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleId(integer $RuleId) 设置规则id
+ * @method void setRuleId(integer $RuleId) 设置<p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleName() 获取规则名称
+ * @method string getRuleName() 获取<p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleName(string $RuleName) 设置规则名称
+ * @method void setRuleName(string $RuleName) 设置<p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTriggerTypes() 获取触发类型
+ * @method array getTriggerTypes() 获取触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerTypes(array $TriggerTypes) 设置触发类型
+ * @method void setTriggerTypes(array $TriggerTypes) 设置触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDlcGroupName() 获取DLC资源组
+ * @method string getDlcGroupName() 获取<p>DLC资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDlcGroupName(string $DlcGroupName) 设置DLC资源组
+ * @method void setDlcGroupName(string $DlcGroupName) 设置<p>DLC资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleGroupName() 获取任务名称
+ * @method string getRuleGroupName() 获取<p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleGroupName(string $RuleGroupName) 设置任务名称
+ * @method void setRuleGroupName(string $RuleGroupName) 设置<p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDatabaseName() 获取数据库名称
+ * @method string getDatabaseName() 获取<p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
+ * @method void setDatabaseName(string $DatabaseName) 设置<p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchemaName() 获取schema名称
+ * @method string getSchemaName() 获取<p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchemaName(string $SchemaName) 设置schema名称
+ * @method void setSchemaName(string $SchemaName) 设置<p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTableName() 获取表名称
+ * @method string getTableName() 获取<p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableName(string $TableName) 设置表名称
+ * @method void setTableName(string $TableName) 设置<p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDatasourceId() 获取数据源id
+ * @method string getDatasourceId() 获取<p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatasourceId(string $DatasourceId) 设置数据源id
+ * @method void setDatasourceId(string $DatasourceId) 设置<p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取任务描述
+ * @method string getDescription() 获取<p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置任务描述
+ * @method void setDescription(string $Description) 设置<p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleTimeZone() 获取时区
+ * @method string getScheduleTimeZone() 获取<p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置<p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RuleGroupConfig getGroupConfig() 获取任务监控参数
+ * @method RuleGroupConfig getGroupConfig() 获取<p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupConfig(RuleGroupConfig $GroupConfig) 设置任务监控参数
+ * @method void setGroupConfig(RuleGroupConfig $GroupConfig) 设置<p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineParam() 获取引擎参数
+ * @method string getEngineParam() 获取<p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineParam(string $EngineParam) 设置引擎参数
+ * @method void setEngineParam(string $EngineParam) 设置<p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCatalogName() 获取catalog名称
+ * @method string getCatalogName() 获取<p>catalog名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCatalogName(string $CatalogName) 设置catalog名称
+ * @method void setCatalogName(string $CatalogName) 设置<p>catalog名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExecFailBlock() 获取<p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecFailBlock(integer $ExecFailBlock) 设置<p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupExecStrategy extends AbstractModel
 {
     /**
-     * @var integer 规则组Id
+     * @var integer <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleGroupId;
 
     /**
-     * @var integer 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * @var integer 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorType;
 
     /**
-     * @var string 计算队列
+     * @var string <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecQueue;
 
     /**
-     * @var string 执行资源组ID
+     * @var string <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorGroupId;
 
     /**
-     * @var string 执行资源组名称
+     * @var string <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorGroupName;
 
     /**
-     * @var array 关联的生产调度任务列表
+     * @var array <p>关联的生产调度任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tasks;
 
     /**
-     * @var string 周期开始时间
+     * @var string <p>周期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 周期结束时间
+     * @var string <p>周期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 调度周期类型
+     * @var string 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleType;
 
     /**
-     * @var integer 延迟调度时间
+     * @var integer <p>延迟调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayTime;
 
     /**
-     * @var integer 间隔
+     * @var integer <p>间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleStep;
 
     /**
-     * @var string 时间指定
+     * @var string <p>时间指定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskAction;
 
     /**
-     * @var string 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @var string 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecEngineType;
 
     /**
-     * @var string 执行计划
+     * @var string <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecPlan;
 
     /**
-     * @var integer 规则id
+     * @var integer <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
-     * @var array 触发类型
+     * @var array 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerTypes;
 
     /**
-     * @var string DLC资源组
+     * @var string <p>DLC资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DlcGroupName;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleGroupName;
 
     /**
-     * @var string 数据库名称
+     * @var string <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
     /**
-     * @var string schema名称
+     * @var string <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchemaName;
 
     /**
-     * @var string 表名称
+     * @var string <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
-     * @var string 数据源id
+     * @var string <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceId;
 
     /**
-     * @var string 任务描述
+     * @var string <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 时区
+     * @var string <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTimeZone;
 
     /**
-     * @var RuleGroupConfig 任务监控参数
+     * @var RuleGroupConfig <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupConfig;
 
     /**
-     * @var string 引擎参数
+     * @var string <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineParam;
 
     /**
-     * @var string catalog名称
+     * @var string <p>catalog名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CatalogName;
 
     /**
-     * @param integer $RuleGroupId 规则组Id
+     * @var integer <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     */
+    public $ExecFailBlock;
+
+    /**
+     * @param integer $RuleGroupId <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecQueue 计算队列
+     * @param integer $MonitorType 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutorGroupId 执行资源组ID
+     * @param string $ExecQueue <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutorGroupName 执行资源组名称
+     * @param string $ExecutorGroupId <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tasks 关联的生产调度任务列表
+     * @param string $ExecutorGroupName <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime 周期开始时间
+     * @param array $Tasks <p>关联的生产调度任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 周期结束时间
+     * @param string $StartTime <p>周期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CycleType 调度周期类型
+     * @param string $EndTime <p>周期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DelayTime 延迟调度时间
+     * @param string $CycleType 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CycleStep 间隔
+     * @param integer $DelayTime <p>延迟调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskAction 时间指定
+     * @param integer $CycleStep <p>间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @param string $TaskAction <p>时间指定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecPlan 执行计划
+     * @param string $ExecEngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RuleId 规则id
+     * @param string $ExecPlan <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleName 规则名称
+     * @param integer $RuleId <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TriggerTypes 触发类型
+     * @param string $RuleName <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DlcGroupName DLC资源组
+     * @param array $TriggerTypes 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleGroupName 任务名称
+     * @param string $DlcGroupName <p>DLC资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DatabaseName 数据库名称
+     * @param string $RuleGroupName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchemaName schema名称
+     * @param string $DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TableName 表名称
+     * @param string $SchemaName <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DatasourceId 数据源id
+     * @param string $TableName <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 任务描述
+     * @param string $DatasourceId <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleTimeZone 时区
+     * @param string $Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupConfig $GroupConfig 任务监控参数
+     * @param string $ScheduleTimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineParam 引擎参数
+     * @param RuleGroupConfig $GroupConfig <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CatalogName catalog名称
+     * @param string $EngineParam <p>引擎参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogName <p>catalog名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExecFailBlock <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -490,6 +502,10 @@ class RuleGroupExecStrategy extends AbstractModel
 
         if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
             $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("ExecFailBlock",$param) and $param["ExecFailBlock"] !== null) {
+            $this->ExecFailBlock = $param["ExecFailBlock"];
         }
     }
 }

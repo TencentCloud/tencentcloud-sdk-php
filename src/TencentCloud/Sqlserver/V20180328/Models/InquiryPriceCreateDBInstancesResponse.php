@@ -20,40 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateDBInstances返回参数结构体
  *
- * @method integer getOriginalPrice() 获取未打折前价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
- * @method void setOriginalPrice(integer $OriginalPrice) 设置未打折前价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
- * @method integer getPrice() 获取实际需要支付的价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
- * @method void setPrice(integer $Price) 设置实际需要支付的价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+ * @method integer getOriginalPrice() 获取<p>未打折前价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
+ * @method void setOriginalPrice(integer $OriginalPrice) 设置<p>未打折前价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
+ * @method integer getPrice() 获取<p>实际需要支付的价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
+ * @method void setPrice(integer $Price) 设置<p>实际需要支付的价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class InquiryPriceCreateDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 未打折前价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+     * @var integer <p>未打折前价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
      */
     public $OriginalPrice;
 
     /**
-     * @var integer 实际需要支付的价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+     * @var integer <p>实际需要支付的价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
      */
     public $Price;
 
@@ -63,14 +45,8 @@ InstanceChargeType=POSTPAID时，单位是"每小时"。
     public $RequestId;
 
     /**
-     * @param integer $OriginalPrice 未打折前价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
-     * @param integer $Price 实际需要支付的价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+     * @param integer $OriginalPrice <p>未打折前价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
+     * @param integer $Price <p>实际需要支付的价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

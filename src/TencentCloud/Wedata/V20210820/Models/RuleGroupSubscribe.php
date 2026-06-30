@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceivers(array $Receivers) 设置订阅接收人列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSubscribeType() 获取订阅方式 1.邮件email  2.短信sms
+ * @method array getSubscribeType() 获取订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubscribeType(array $SubscribeType) 设置订阅方式 1.邮件email  2.短信sms
+ * @method void setSubscribeType(array $SubscribeType) 设置订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWebHooks() 获取群机器人配置的webhook信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,7 +64,7 @@ class RuleGroupSubscribe extends AbstractModel
     public $Receivers;
 
     /**
-     * @var array 订阅方式 1.邮件email  2.短信sms
+     * @var array 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubscribeType;
@@ -98,7 +98,7 @@ class RuleGroupSubscribe extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Receivers 订阅接收人列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SubscribeType 订阅方式 1.邮件email  2.短信sms
+     * @param array $SubscribeType 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WebHooks 群机器人配置的webhook信息
 注意：此字段可能返回 null，表示取不到有效值。

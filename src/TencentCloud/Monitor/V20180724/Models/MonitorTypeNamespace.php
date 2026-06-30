@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 策略类型
  *
- * @method string getMonitorType() 获取监控类型
- * @method void setMonitorType(string $MonitorType) 设置监控类型
- * @method string getNamespace() 获取策略类型值
- * @method void setNamespace(string $Namespace) 设置策略类型值
+ * @method string getMonitorType() 获取<p>监控类型</p>
+ * @method void setMonitorType(string $MonitorType) 设置<p>监控类型</p>
+ * @method string getNamespace() 获取<p>策略类型值</p>
+ * @method void setNamespace(string $Namespace) 设置<p>策略类型值</p>
  */
 class MonitorTypeNamespace extends AbstractModel
 {
     /**
-     * @var string 监控类型
+     * @var string <p>监控类型</p>
      */
     public $MonitorType;
 
     /**
-     * @var string 策略类型值
+     * @var string <p>策略类型值</p>
      */
     public $Namespace;
 
     /**
-     * @param string $MonitorType 监控类型
-     * @param string $Namespace 策略类型值
+     * @param string $MonitorType <p>监控类型</p>
+     * @param string $Namespace <p>策略类型值</p>
      */
     function __construct()
     {

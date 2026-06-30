@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyConditionList返回参数结构体
  *
- * @method array getConditions() 获取告警策略条件列表
- * @method void setConditions(array $Conditions) 设置告警策略条件列表
+ * @method array getConditions() 获取<p>告警策略条件列表</p>
+ * @method void setConditions(array $Conditions) 设置<p>告警策略条件列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribePolicyConditionListResponse extends AbstractModel
 {
     /**
-     * @var array 告警策略条件列表
+     * @var array <p>告警策略条件列表</p>
      */
     public $Conditions;
 
@@ -38,7 +38,7 @@ class DescribePolicyConditionListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Conditions 告警策略条件列表
+     * @param array $Conditions <p>告警策略条件列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

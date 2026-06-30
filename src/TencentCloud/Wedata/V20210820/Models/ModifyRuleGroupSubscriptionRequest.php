@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleGroupId(integer $RuleGroupId) 设置规则组ID
  * @method array getReceivers() 获取订阅人信息
  * @method void setReceivers(array $Receivers) 设置订阅人信息
- * @method array getSubscribeType() 获取订阅类型
- * @method void setSubscribeType(array $SubscribeType) 设置订阅类型
+ * @method array getSubscribeType() 获取订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
+ * @method void setSubscribeType(array $SubscribeType) 设置订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getDatabaseId() 获取数据库Id
@@ -50,7 +50,7 @@ class ModifyRuleGroupSubscriptionRequest extends AbstractModel
     public $Receivers;
 
     /**
-     * @var array 订阅类型
+     * @var array 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
      */
     public $SubscribeType;
 
@@ -82,7 +82,7 @@ class ModifyRuleGroupSubscriptionRequest extends AbstractModel
     /**
      * @param integer $RuleGroupId 规则组ID
      * @param array $Receivers 订阅人信息
-     * @param array $SubscribeType 订阅类型
+     * @param array $SubscribeType 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
      * @param string $ProjectId 项目ID
      * @param string $DatabaseId 数据库Id
      * @param string $DatasourceId 数据源Id

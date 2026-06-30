@@ -43,6 +43,7 @@ use TencentCloud\Omics\V20221128\Models as Models;
  * @method Models\DescribeVolumesResponse DescribeVolumes(Models\DescribeVolumesRequest $req) 查询缓存卷列表。
  * @method Models\GetInputTemplateFileResponse GetInputTemplateFile(Models\GetInputTemplateFileRequest $req) 查询运行参数模板内容
  * @method Models\GetRunCallsResponse GetRunCalls(Models\GetRunCallsRequest $req) 查询作业详情。
+ * @method Models\GetRunJobLogResponse GetRunJobLog(Models\GetRunJobLogRequest $req) 获取任务详情文件。
  * @method Models\GetRunMetadataFileResponse GetRunMetadataFile(Models\GetRunMetadataFileRequest $req) 获取任务详情文件。
  * @method Models\GetRunStatusResponse GetRunStatus(Models\GetRunStatusRequest $req) 查询任务详情。
  * @method Models\ImportCommonApplicationResponse ImportCommonApplication(Models\ImportCommonApplicationRequest $req) 导入公共应用到项目

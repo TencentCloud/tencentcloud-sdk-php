@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetRule请求参数结构体
  *
- * @method string getEventBusId() 获取事件集ID
- * @method void setEventBusId(string $EventBusId) 设置事件集ID
- * @method string getRuleId() 获取事件规则ID
- * @method void setRuleId(string $RuleId) 设置事件规则ID
+ * @method string getEventBusId() 获取<p>事件集ID</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
+ * @method string getRuleId() 获取<p>事件规则ID</p>
+ * @method void setRuleId(string $RuleId) 设置<p>事件规则ID</p>
  */
 class GetRuleRequest extends AbstractModel
 {
     /**
-     * @var string 事件集ID
+     * @var string <p>事件集ID</p>
      */
     public $EventBusId;
 
     /**
-     * @var string 事件规则ID
+     * @var string <p>事件规则ID</p>
      */
     public $RuleId;
 
     /**
-     * @param string $EventBusId 事件集ID
-     * @param string $RuleId 事件规则ID
+     * @param string $EventBusId <p>事件集ID</p>
+     * @param string $RuleId <p>事件规则ID</p>
      */
     function __construct()
     {

@@ -52,6 +52,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\DescribeCompareTasksResponse DescribeCompareTasks(Models\DescribeCompareTasksRequest $req) 查询一致性校验任务列表。
  * @method Models\DescribeConsumerGroupsResponse DescribeConsumerGroups(Models\DescribeConsumerGroupsRequest $req) 本接口(DescribeConsumerGroups)用于获取订阅实例配置的消费者组详情。
  * @method Models\DescribeMigrateDBInstancesResponse DescribeMigrateDBInstances(Models\DescribeMigrateDBInstancesRequest $req) 本接口用于查询支持迁移的云数据库实例
+ * @method Models\DescribeMigrateGtidCompareReportResponse DescribeMigrateGtidCompareReport(Models\DescribeMigrateGtidCompareReportRequest $req) gtid校验
  * @method Models\DescribeMigrationCheckJobResponse DescribeMigrationCheckJob(Models\DescribeMigrationCheckJobRequest $req) 本接口用于创建校验后,获取校验的结果. 能查询到当前校验的状态和进度. 
 若通过校验, 则可调用'StartMigrateJob' 开始迁移.
 若未通过校验, 则能查询到校验失败的原因. 请按照报错, 通过'ModifyMigrationJob'修改迁移配置或是调整源/目标实例的相关参数.
@@ -70,6 +71,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\DescribeSyncCompareDiffItemsResponse DescribeSyncCompareDiffItems(Models\DescribeSyncCompareDiffItemsRequest $req) 本接口用于查询一致性校验任务中，不一致数据块的详情信息
  * @method Models\DescribeSyncCompareReportResponse DescribeSyncCompareReport(Models\DescribeSyncCompareReportRequest $req) 查询一致性校验任务详情
  * @method Models\DescribeSyncCompareTasksResponse DescribeSyncCompareTasks(Models\DescribeSyncCompareTasksRequest $req) 查询一致性校验任务列表。通过该接口可查看改任务下所有一致性校验任务。
+ * @method Models\DescribeSyncGtidCompareReportResponse DescribeSyncGtidCompareReport(Models\DescribeSyncGtidCompareReportRequest $req) gtid校验
  * @method Models\DescribeSyncJobsResponse DescribeSyncJobs(Models\DescribeSyncJobsRequest $req) 查询同步任务信息
  * @method Models\DestroyIsolatedSubscribeResponse DestroyIsolatedSubscribe(Models\DestroyIsolatedSubscribeRequest $req) 本接口（DestroyIsolatedSubscribe）用于下线已隔离的数据订阅实例
  * @method Models\DestroyMigrateJobResponse DestroyMigrateJob(Models\DestroyMigrateJobRequest $req) 下线数据迁移任务。计费任务必须先调用隔离(IsolateMigrateJob)接口，且只有是**已隔离**状态下，才能调用此接口销毁任务。对于不计费任务，调用隔离(IsolateMigrateJob)接口删除任务操作。

@@ -20,31 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEmailIdentity返回参数结构体
  *
- * @method string getIdentityType() 获取验证类型。固定值：DOMAIN
- * @method void setIdentityType(string $IdentityType) 设置验证类型。固定值：DOMAIN
- * @method boolean getVerifiedForSendingStatus() 获取是否已通过验证
- * @method void setVerifiedForSendingStatus(boolean $VerifiedForSendingStatus) 设置是否已通过验证
- * @method array getAttributes() 获取DNS配置详情
- * @method void setAttributes(array $Attributes) 设置DNS配置详情
+ * @method string getIdentityType() 获取<p>验证类型。固定值：DOMAIN</p>
+ * @method void setIdentityType(string $IdentityType) 设置<p>验证类型。固定值：DOMAIN</p>
+ * @method boolean getVerifiedForSendingStatus() 获取<p>是否已通过验证</p>
+ * @method void setVerifiedForSendingStatus(boolean $VerifiedForSendingStatus) 设置<p>是否已通过验证</p>
+ * @method array getAttributes() 获取<p>DNS配置详情</p>
+ * @method void setAttributes(array $Attributes) 设置<p>DNS配置详情</p>
+ * @method integer getDKIMOption() 获取<p>dkim密钥长度</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： both</li></ul>
+ * @method void setDKIMOption(integer $DKIMOption) 设置<p>dkim密钥长度</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： both</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetEmailIdentityResponse extends AbstractModel
 {
     /**
-     * @var string 验证类型。固定值：DOMAIN
+     * @var string <p>验证类型。固定值：DOMAIN</p>
      */
     public $IdentityType;
 
     /**
-     * @var boolean 是否已通过验证
+     * @var boolean <p>是否已通过验证</p>
      */
     public $VerifiedForSendingStatus;
 
     /**
-     * @var array DNS配置详情
+     * @var array <p>DNS配置详情</p>
      */
     public $Attributes;
+
+    /**
+     * @var integer <p>dkim密钥长度</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： both</li></ul>
+     */
+    public $DKIMOption;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +59,10 @@ class GetEmailIdentityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $IdentityType 验证类型。固定值：DOMAIN
-     * @param boolean $VerifiedForSendingStatus 是否已通过验证
-     * @param array $Attributes DNS配置详情
+     * @param string $IdentityType <p>验证类型。固定值：DOMAIN</p>
+     * @param boolean $VerifiedForSendingStatus <p>是否已通过验证</p>
+     * @param array $Attributes <p>DNS配置详情</p>
+     * @param integer $DKIMOption <p>dkim密钥长度</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： both</li></ul>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -85,6 +93,10 @@ class GetEmailIdentityResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Attributes, $obj);
             }
+        }
+
+        if (array_key_exists("DKIMOption",$param) and $param["DKIMOption"] !== null) {
+            $this->DKIMOption = $param["DKIMOption"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

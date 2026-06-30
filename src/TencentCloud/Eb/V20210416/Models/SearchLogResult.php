@@ -20,105 +20,105 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 日志检索详情
  *
- * @method string getTimestamp() 获取单条日志上报时间
+ * @method string getTimestamp() 获取<p>单条日志上报时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimestamp(string $Timestamp) 设置单条日志上报时间
+ * @method void setTimestamp(string $Timestamp) 设置<p>单条日志上报时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取日志内容详情
+ * @method string getMessage() 获取<p>日志内容详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置日志内容详情
+ * @method void setMessage(string $Message) 设置<p>日志内容详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSource() 获取事件来源
+ * @method string getSource() 获取<p>事件来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSource(string $Source) 设置事件来源
+ * @method void setSource(string $Source) 设置<p>事件来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取事件类型
+ * @method string getType() 获取<p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置事件类型
+ * @method void setType(string $Type) 设置<p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleIds() 获取事件匹配规则
+ * @method string getRuleIds() 获取<p>事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleIds(string $RuleIds) 设置事件匹配规则
+ * @method void setRuleIds(string $RuleIds) 设置<p>事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubject() 获取实例ID
+ * @method string getSubject() 获取<p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubject(string $Subject) 设置实例ID
+ * @method void setSubject(string $Subject) 设置<p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取地域
+ * @method string getRegion() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
+ * @method void setRegion(string $Region) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取事件状态
+ * @method string getStatus() 获取<p>事件状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置事件状态
+ * @method void setStatus(string $Status) 设置<p>事件状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchLogResult extends AbstractModel
 {
     /**
-     * @var string 单条日志上报时间
+     * @var string <p>单条日志上报时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
-     * @var string 日志内容详情
+     * @var string <p>日志内容详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
-     * @var string 事件来源
+     * @var string <p>事件来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
-     * @var string 事件类型
+     * @var string <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 事件匹配规则
+     * @var string <p>事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleIds;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Subject;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var string 事件状态
+     * @var string <p>事件状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @param string $Timestamp 单条日志上报时间
+     * @param string $Timestamp <p>单条日志上报时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message 日志内容详情
+     * @param string $Message <p>日志内容详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Source 事件来源
+     * @param string $Source <p>事件来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 事件类型
+     * @param string $Type <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleIds 事件匹配规则
+     * @param string $RuleIds <p>事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Subject 实例ID
+     * @param string $Subject <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 地域
+     * @param string $Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 事件状态
+     * @param string $Status <p>事件状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

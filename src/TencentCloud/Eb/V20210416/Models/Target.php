@@ -20,85 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Target信息
  *
- * @method string getType() 获取目标类型
- * @method void setType(string $Type) 设置目标类型
- * @method string getEventBusId() 获取事件集ID
- * @method void setEventBusId(string $EventBusId) 设置事件集ID
- * @method string getTargetId() 获取目标ID
- * @method void setTargetId(string $TargetId) 设置目标ID
- * @method TargetDescription getTargetDescription() 获取目标描述
- * @method void setTargetDescription(TargetDescription $TargetDescription) 设置目标描述
- * @method string getRuleId() 获取事件规则ID
- * @method void setRuleId(string $RuleId) 设置事件规则ID
- * @method boolean getEnableBatchDelivery() 获取开启批量投递使能
+ * @method string getType() 获取<p>目标类型</p>
+ * @method void setType(string $Type) 设置<p>目标类型</p>
+ * @method string getEventBusId() 获取<p>事件集ID</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
+ * @method string getTargetId() 获取<p>目标ID</p>
+ * @method void setTargetId(string $TargetId) 设置<p>目标ID</p>
+ * @method TargetDescription getTargetDescription() 获取<p>目标描述</p>
+ * @method void setTargetDescription(TargetDescription $TargetDescription) 设置<p>目标描述</p>
+ * @method string getRuleId() 获取<p>事件规则ID</p>
+ * @method void setRuleId(string $RuleId) 设置<p>事件规则ID</p>
+ * @method boolean getEnableBatchDelivery() 获取<p>开启批量投递使能</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableBatchDelivery(boolean $EnableBatchDelivery) 设置开启批量投递使能
+ * @method void setEnableBatchDelivery(boolean $EnableBatchDelivery) 设置<p>开启批量投递使能</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBatchTimeout() 获取批量投递最长等待时间
+ * @method integer getBatchTimeout() 获取<p>批量投递最长等待时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBatchTimeout(integer $BatchTimeout) 设置批量投递最长等待时间
+ * @method void setBatchTimeout(integer $BatchTimeout) 设置<p>批量投递最长等待时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBatchEventCount() 获取批量投递最大事件条数
+ * @method integer getBatchEventCount() 获取<p>批量投递最大事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBatchEventCount(integer $BatchEventCount) 设置批量投递最大事件条数
+ * @method void setBatchEventCount(integer $BatchEventCount) 设置<p>批量投递最大事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Target extends AbstractModel
 {
     /**
-     * @var string 目标类型
+     * @var string <p>目标类型</p>
      */
     public $Type;
 
     /**
-     * @var string 事件集ID
+     * @var string <p>事件集ID</p>
      */
     public $EventBusId;
 
     /**
-     * @var string 目标ID
+     * @var string <p>目标ID</p>
      */
     public $TargetId;
 
     /**
-     * @var TargetDescription 目标描述
+     * @var TargetDescription <p>目标描述</p>
      */
     public $TargetDescription;
 
     /**
-     * @var string 事件规则ID
+     * @var string <p>事件规则ID</p>
      */
     public $RuleId;
 
     /**
-     * @var boolean 开启批量投递使能
+     * @var boolean <p>开启批量投递使能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableBatchDelivery;
 
     /**
-     * @var integer 批量投递最长等待时间
+     * @var integer <p>批量投递最长等待时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchTimeout;
 
     /**
-     * @var integer 批量投递最大事件条数
+     * @var integer <p>批量投递最大事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchEventCount;
 
     /**
-     * @param string $Type 目标类型
-     * @param string $EventBusId 事件集ID
-     * @param string $TargetId 目标ID
-     * @param TargetDescription $TargetDescription 目标描述
-     * @param string $RuleId 事件规则ID
-     * @param boolean $EnableBatchDelivery 开启批量投递使能
+     * @param string $Type <p>目标类型</p>
+     * @param string $EventBusId <p>事件集ID</p>
+     * @param string $TargetId <p>目标ID</p>
+     * @param TargetDescription $TargetDescription <p>目标描述</p>
+     * @param string $RuleId <p>事件规则ID</p>
+     * @param boolean $EnableBatchDelivery <p>开启批量投递使能</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BatchTimeout 批量投递最长等待时间
+     * @param integer $BatchTimeout <p>批量投递最长等待时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BatchEventCount 批量投递最大事件条数
+     * @param integer $BatchEventCount <p>批量投递最大事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,137 +20,137 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 2018版策略模板列表接收人信息
  *
- * @method integer getEndTime() 获取有效时段结束时间
- * @method void setEndTime(integer $EndTime) 设置有效时段结束时间
- * @method integer getNeedSendNotice() 获取是否需要发送通知
- * @method void setNeedSendNotice(integer $NeedSendNotice) 设置是否需要发送通知
- * @method array getNotifyWay() 获取告警接收渠道
+ * @method integer getEndTime() 获取<p>有效时段结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>有效时段结束时间</p>
+ * @method integer getNeedSendNotice() 获取<p>是否需要发送通知</p>
+ * @method void setNeedSendNotice(integer $NeedSendNotice) 设置<p>是否需要发送通知</p>
+ * @method array getNotifyWay() 获取<p>告警接收渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNotifyWay(array $NotifyWay) 设置告警接收渠道
+ * @method void setNotifyWay(array $NotifyWay) 设置<p>告警接收渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPersonInterval() 获取电话告警对个人间隔（秒）
- * @method void setPersonInterval(integer $PersonInterval) 设置电话告警对个人间隔（秒）
- * @method array getReceiverGroupList() 获取消息接收组列表
+ * @method integer getPersonInterval() 获取<p>电话告警对个人间隔（秒）</p>
+ * @method void setPersonInterval(integer $PersonInterval) 设置<p>电话告警对个人间隔（秒）</p>
+ * @method array getReceiverGroupList() 获取<p>消息接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReceiverGroupList(array $ReceiverGroupList) 设置消息接收组列表
+ * @method void setReceiverGroupList(array $ReceiverGroupList) 设置<p>消息接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReceiverType() 获取接受者类型
- * @method void setReceiverType(string $ReceiverType) 设置接受者类型
- * @method array getReceiverUserList() 获取接收人列表。通过平台接口查询到的接收人id列表
+ * @method string getReceiverType() 获取<p>接受者类型</p>
+ * @method void setReceiverType(string $ReceiverType) 设置<p>接受者类型</p>
+ * @method array getReceiverUserList() 获取<p>接收人列表。通过平台接口查询到的接收人id列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReceiverUserList(array $ReceiverUserList) 设置接收人列表。通过平台接口查询到的接收人id列表
+ * @method void setReceiverUserList(array $ReceiverUserList) 设置<p>接收人列表。通过平台接口查询到的接收人id列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRecoverNotify() 获取告警恢复通知方式
+ * @method array getRecoverNotify() 获取<p>告警恢复通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecoverNotify(array $RecoverNotify) 设置告警恢复通知方式
+ * @method void setRecoverNotify(array $RecoverNotify) 设置<p>告警恢复通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRoundInterval() 获取电话告警每轮间隔（秒）
- * @method void setRoundInterval(integer $RoundInterval) 设置电话告警每轮间隔（秒）
- * @method integer getRoundNumber() 获取电话告警轮数
- * @method void setRoundNumber(integer $RoundNumber) 设置电话告警轮数
- * @method array getSendFor() 获取电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+ * @method integer getRoundInterval() 获取<p>电话告警每轮间隔（秒）</p>
+ * @method void setRoundInterval(integer $RoundInterval) 设置<p>电话告警每轮间隔（秒）</p>
+ * @method integer getRoundNumber() 获取<p>电话告警轮数</p>
+ * @method void setRoundNumber(integer $RoundNumber) 设置<p>电话告警轮数</p>
+ * @method array getSendFor() 获取<p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSendFor(array $SendFor) 设置电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+ * @method void setSendFor(array $SendFor) 设置<p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStartTime() 获取有效时段开始时间
- * @method void setStartTime(integer $StartTime) 设置有效时段开始时间
- * @method array getUIDList() 获取电话告警接收者uid
+ * @method integer getStartTime() 获取<p>有效时段开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>有效时段开始时间</p>
+ * @method array getUIDList() 获取<p>电话告警接收者uid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUIDList(array $UIDList) 设置电话告警接收者uid
+ * @method void setUIDList(array $UIDList) 设置<p>电话告警接收者uid</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PolicyGroupReceiverInfo extends AbstractModel
 {
     /**
-     * @var integer 有效时段结束时间
+     * @var integer <p>有效时段结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 是否需要发送通知
+     * @var integer <p>是否需要发送通知</p>
      */
     public $NeedSendNotice;
 
     /**
-     * @var array 告警接收渠道
+     * @var array <p>告警接收渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotifyWay;
 
     /**
-     * @var integer 电话告警对个人间隔（秒）
+     * @var integer <p>电话告警对个人间隔（秒）</p>
      */
     public $PersonInterval;
 
     /**
-     * @var array 消息接收组列表
+     * @var array <p>消息接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiverGroupList;
 
     /**
-     * @var string 接受者类型
+     * @var string <p>接受者类型</p>
      */
     public $ReceiverType;
 
     /**
-     * @var array 接收人列表。通过平台接口查询到的接收人id列表
+     * @var array <p>接收人列表。通过平台接口查询到的接收人id列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiverUserList;
 
     /**
-     * @var array 告警恢复通知方式
+     * @var array <p>告警恢复通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecoverNotify;
 
     /**
-     * @var integer 电话告警每轮间隔（秒）
+     * @var integer <p>电话告警每轮间隔（秒）</p>
      */
     public $RoundInterval;
 
     /**
-     * @var integer 电话告警轮数
+     * @var integer <p>电话告警轮数</p>
      */
     public $RoundNumber;
 
     /**
-     * @var array 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+     * @var array <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SendFor;
 
     /**
-     * @var integer 有效时段开始时间
+     * @var integer <p>有效时段开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var array 电话告警接收者uid
+     * @var array <p>电话告警接收者uid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UIDList;
 
     /**
-     * @param integer $EndTime 有效时段结束时间
-     * @param integer $NeedSendNotice 是否需要发送通知
-     * @param array $NotifyWay 告警接收渠道
+     * @param integer $EndTime <p>有效时段结束时间</p>
+     * @param integer $NeedSendNotice <p>是否需要发送通知</p>
+     * @param array $NotifyWay <p>告警接收渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PersonInterval 电话告警对个人间隔（秒）
-     * @param array $ReceiverGroupList 消息接收组列表
+     * @param integer $PersonInterval <p>电话告警对个人间隔（秒）</p>
+     * @param array $ReceiverGroupList <p>消息接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReceiverType 接受者类型
-     * @param array $ReceiverUserList 接收人列表。通过平台接口查询到的接收人id列表
+     * @param string $ReceiverType <p>接受者类型</p>
+     * @param array $ReceiverUserList <p>接收人列表。通过平台接口查询到的接收人id列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RecoverNotify 告警恢复通知方式
+     * @param array $RecoverNotify <p>告警恢复通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RoundInterval 电话告警每轮间隔（秒）
-     * @param integer $RoundNumber 电话告警轮数
-     * @param array $SendFor 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+     * @param integer $RoundInterval <p>电话告警每轮间隔（秒）</p>
+     * @param integer $RoundNumber <p>电话告警轮数</p>
+     * @param array $SendFor <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StartTime 有效时段开始时间
-     * @param array $UIDList 电话告警接收者uid
+     * @param integer $StartTime <p>有效时段开始时间</p>
+     * @param array $UIDList <p>电话告警接收者uid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

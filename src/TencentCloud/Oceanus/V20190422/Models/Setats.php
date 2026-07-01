@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>Setats集群名字</p>
  * @method string getRemark() 获取<p>Setats集群描述</p>
  * @method void setRemark(string $Remark) 设置<p>Setats集群描述</p>
+ * @method integer getIsolationPolicyVersion() 获取<p>集群隔离时间，0为7天，1为15天</p>
+ * @method void setIsolationPolicyVersion(integer $IsolationPolicyVersion) 设置<p>集群隔离时间，0为7天，1为15天</p>
  */
 class Setats extends AbstractModel
 {
@@ -193,6 +195,11 @@ class Setats extends AbstractModel
     public $Remark;
 
     /**
+     * @var integer <p>集群隔离时间，0为7天，1为15天</p>
+     */
+    public $IsolationPolicyVersion;
+
+    /**
      * @param string $SetatsSerialId <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status <p>1  // 停止<br>2  // 运行中<br>3  // 初始化中<br>4  // 扩容中<br>5  // Warehoouse未配置<br>6  // Warehoouse配置中<br>7  // 重启中<br>-2 // 已删除(集群被销毁时更新为此状态)</p>
@@ -224,6 +231,7 @@ class Setats extends AbstractModel
      * @param integer $WebUIType <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
      * @param string $Name <p>Setats集群名字</p>
      * @param string $Remark <p>Setats集群描述</p>
+     * @param integer $IsolationPolicyVersion <p>集群隔离时间，0为7天，1为15天</p>
      */
     function __construct()
     {
@@ -320,6 +328,10 @@ class Setats extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("IsolationPolicyVersion",$param) and $param["IsolationPolicyVersion"] !== null) {
+            $this->IsolationPolicyVersion = $param["IsolationPolicyVersion"];
         }
     }
 }

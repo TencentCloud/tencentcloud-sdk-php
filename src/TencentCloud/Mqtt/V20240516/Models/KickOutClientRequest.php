@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群id
  * @method string getClientId() 获取客户端id
  * @method void setClientId(string $ClientId) 设置客户端id
+ * @method boolean getDeleteSession() 获取是否清理session，默认false
+ * @method void setDeleteSession(boolean $DeleteSession) 设置是否清理session，默认false
  */
 class KickOutClientRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class KickOutClientRequest extends AbstractModel
     public $ClientId;
 
     /**
+     * @var boolean 是否清理session，默认false
+     */
+    public $DeleteSession;
+
+    /**
      * @param string $InstanceId 集群id
      * @param string $ClientId 客户端id
+     * @param boolean $DeleteSession 是否清理session，默认false
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class KickOutClientRequest extends AbstractModel
 
         if (array_key_exists("ClientId",$param) and $param["ClientId"] !== null) {
             $this->ClientId = $param["ClientId"];
+        }
+
+        if (array_key_exists("DeleteSession",$param) and $param["DeleteSession"] !== null) {
+            $this->DeleteSession = $param["DeleteSession"];
         }
     }
 }

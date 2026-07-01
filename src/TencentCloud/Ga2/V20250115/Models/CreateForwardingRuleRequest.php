@@ -26,22 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) 设置<p>监听器ID。</p>
  * @method string getForwardingPolicyId() 获取<p>策略ID。</p>
  * @method void setForwardingPolicyId(string $ForwardingPolicyId) 设置<p>策略ID。</p>
- * @method array getRuleConditions() 获取<p>七层转发规则条件信息。</p>
- * @method void setRuleConditions(array $RuleConditions) 设置<p>七层转发规则条件信息。</p>
- * @method array getRuleActions() 获取<p>七层转发规则行为信息。</p>
- * @method void setRuleActions(array $RuleActions) 设置<p>七层转发规则行为信息。</p>
- * @method array getOriginHeaders() 获取<p>回源Header信息。</p>
- * @method void setOriginHeaders(array $OriginHeaders) 设置<p>回源Header信息。</p>
- * @method boolean getEnableOriginSni() 获取<p>是否开启回源sni。</p>
- * @method void setEnableOriginSni(boolean $EnableOriginSni) 设置<p>是否开启回源sni。</p>
- * @method string getOriginSni() 获取<p>回源sni。</p>
- * @method void setOriginSni(string $OriginSni) 设置<p>回源sni。</p>
- * @method string getOriginHost() 获取<p>回源host。</p>
- * @method void setOriginHost(string $OriginHost) 设置<p>回源host。</p>
- * @method array getResponseHeaders() 获取<p>源站响应头</p>
- * @method void setResponseHeaders(array $ResponseHeaders) 设置<p>源站响应头</p>
- * @method array getHideResponseHeaders() 获取<p>删除源站响应头</p>
- * @method void setHideResponseHeaders(array $HideResponseHeaders) 设置<p>删除源站响应头</p>
+ * @method array getRuleConditions() 获取<p>七层转发规则条件信息。</p><p>数组长度最大不能超过1。</p>
+ * @method void setRuleConditions(array $RuleConditions) 设置<p>七层转发规则条件信息。</p><p>数组长度最大不能超过1。</p>
+ * @method array getRuleActions() 获取<p>七层转发规则行为信息。</p><p>数组长度最大不能超过1。</p>
+ * @method void setRuleActions(array $RuleActions) 设置<p>七层转发规则行为信息。</p><p>数组长度最大不能超过1。</p>
+ * @method array getOriginHeaders() 获取<p>回源Header信息。</p><p>数组长度最大不能超过5。当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+ * @method void setOriginHeaders(array $OriginHeaders) 设置<p>回源Header信息。</p><p>数组长度最大不能超过5。当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+ * @method boolean getEnableOriginSni() 获取<p>是否开启回源sni。</p><p>默认值：False</p><p>当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+ * @method void setEnableOriginSni(boolean $EnableOriginSni) 设置<p>是否开启回源sni。</p><p>默认值：False</p><p>当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+ * @method string getOriginSni() 获取<p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当EnableOriginSni为True时，此字段必传。当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+ * @method void setOriginSni(string $OriginSni) 设置<p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当EnableOriginSni为True时，此字段必传。当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+ * @method string getOriginHost() 获取<p>回源host。</p><p>入参限制：长度不超过80。</p><p>当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+ * @method void setOriginHost(string $OriginHost) 设置<p>回源host。</p><p>入参限制：长度不超过80。</p><p>当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+ * @method array getResponseHeaders() 获取<p>源站响应头</p><p>数组长度不超过5。可以传空数组，代表清空配置。</p>
+ * @method void setResponseHeaders(array $ResponseHeaders) 设置<p>源站响应头</p><p>数组长度不超过5。可以传空数组，代表清空配置。</p>
+ * @method array getHideResponseHeaders() 获取<p>删除源站响应头</p><p>数组长度不超过5。可以传空数组，代表清空配置。</p>
+ * @method void setHideResponseHeaders(array $HideResponseHeaders) 设置<p>删除源站响应头</p><p>数组长度不超过5。可以传空数组，代表清空配置。</p>
  */
 class CreateForwardingRuleRequest extends AbstractModel
 {
@@ -61,42 +61,42 @@ class CreateForwardingRuleRequest extends AbstractModel
     public $ForwardingPolicyId;
 
     /**
-     * @var array <p>七层转发规则条件信息。</p>
+     * @var array <p>七层转发规则条件信息。</p><p>数组长度最大不能超过1。</p>
      */
     public $RuleConditions;
 
     /**
-     * @var array <p>七层转发规则行为信息。</p>
+     * @var array <p>七层转发规则行为信息。</p><p>数组长度最大不能超过1。</p>
      */
     public $RuleActions;
 
     /**
-     * @var array <p>回源Header信息。</p>
+     * @var array <p>回源Header信息。</p><p>数组长度最大不能超过5。当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
      */
     public $OriginHeaders;
 
     /**
-     * @var boolean <p>是否开启回源sni。</p>
+     * @var boolean <p>是否开启回源sni。</p><p>默认值：False</p><p>当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
      */
     public $EnableOriginSni;
 
     /**
-     * @var string <p>回源sni。</p>
+     * @var string <p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当EnableOriginSni为True时，此字段必传。当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
      */
     public $OriginSni;
 
     /**
-     * @var string <p>回源host。</p>
+     * @var string <p>回源host。</p><p>入参限制：长度不超过80。</p><p>当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
      */
     public $OriginHost;
 
     /**
-     * @var array <p>源站响应头</p>
+     * @var array <p>源站响应头</p><p>数组长度不超过5。可以传空数组，代表清空配置。</p>
      */
     public $ResponseHeaders;
 
     /**
-     * @var array <p>删除源站响应头</p>
+     * @var array <p>删除源站响应头</p><p>数组长度不超过5。可以传空数组，代表清空配置。</p>
      */
     public $HideResponseHeaders;
 
@@ -104,14 +104,14 @@ class CreateForwardingRuleRequest extends AbstractModel
      * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
      * @param string $ListenerId <p>监听器ID。</p>
      * @param string $ForwardingPolicyId <p>策略ID。</p>
-     * @param array $RuleConditions <p>七层转发规则条件信息。</p>
-     * @param array $RuleActions <p>七层转发规则行为信息。</p>
-     * @param array $OriginHeaders <p>回源Header信息。</p>
-     * @param boolean $EnableOriginSni <p>是否开启回源sni。</p>
-     * @param string $OriginSni <p>回源sni。</p>
-     * @param string $OriginHost <p>回源host。</p>
-     * @param array $ResponseHeaders <p>源站响应头</p>
-     * @param array $HideResponseHeaders <p>删除源站响应头</p>
+     * @param array $RuleConditions <p>七层转发规则条件信息。</p><p>数组长度最大不能超过1。</p>
+     * @param array $RuleActions <p>七层转发规则行为信息。</p><p>数组长度最大不能超过1。</p>
+     * @param array $OriginHeaders <p>回源Header信息。</p><p>数组长度最大不能超过5。当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+     * @param boolean $EnableOriginSni <p>是否开启回源sni。</p><p>默认值：False</p><p>当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+     * @param string $OriginSni <p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当EnableOriginSni为True时，此字段必传。当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+     * @param string $OriginHost <p>回源host。</p><p>入参限制：长度不超过80。</p><p>当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
+     * @param array $ResponseHeaders <p>源站响应头</p><p>数组长度不超过5。可以传空数组，代表清空配置。</p>
+     * @param array $HideResponseHeaders <p>删除源站响应头</p><p>数组长度不超过5。可以传空数组，代表清空配置。</p>
      */
     function __construct()
     {

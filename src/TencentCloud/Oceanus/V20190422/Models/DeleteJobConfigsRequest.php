@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteJobConfigs请求参数结构体
  *
- * @method string getJobId() 获取作业ID
- * @method void setJobId(string $JobId) 设置作业ID
- * @method array getJobConfigVersions() 获取作业配置版本数组
- * @method void setJobConfigVersions(array $JobConfigVersions) 设置作业配置版本数组
- * @method string getWorkSpaceId() 获取工作空间 SerialId
- * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
+ * @method string getJobId() 获取<p>作业ID</p>
+ * @method void setJobId(string $JobId) 设置<p>作业ID</p>
+ * @method array getJobConfigVersions() 获取<p>作业配置版本数组</p>
+ * @method void setJobConfigVersions(array $JobConfigVersions) 设置<p>作业配置版本数组</p>
+ * @method string getWorkSpaceId() 获取<p>工作空间 SerialId</p>
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置<p>工作空间 SerialId</p>
+ * @method integer getConfigScope() 获取<p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p><p>取值范围：[0, 2]</p>
+ * @method void setConfigScope(integer $ConfigScope) 设置<p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p><p>取值范围：[0, 2]</p>
  */
 class DeleteJobConfigsRequest extends AbstractModel
 {
     /**
-     * @var string 作业ID
+     * @var string <p>作业ID</p>
      */
     public $JobId;
 
     /**
-     * @var array 作业配置版本数组
+     * @var array <p>作业配置版本数组</p>
      */
     public $JobConfigVersions;
 
     /**
-     * @var string 工作空间 SerialId
+     * @var string <p>工作空间 SerialId</p>
      */
     public $WorkSpaceId;
 
     /**
-     * @param string $JobId 作业ID
-     * @param array $JobConfigVersions 作业配置版本数组
-     * @param string $WorkSpaceId 工作空间 SerialId
+     * @var integer <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p><p>取值范围：[0, 2]</p>
+     */
+    public $ConfigScope;
+
+    /**
+     * @param string $JobId <p>作业ID</p>
+     * @param array $JobConfigVersions <p>作业配置版本数组</p>
+     * @param string $WorkSpaceId <p>工作空间 SerialId</p>
+     * @param integer $ConfigScope <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p><p>取值范围：[0, 2]</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteJobConfigsRequest extends AbstractModel
 
         if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
             $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("ConfigScope",$param) and $param["ConfigScope"] !== null) {
+            $this->ConfigScope = $param["ConfigScope"];
         }
     }
 }

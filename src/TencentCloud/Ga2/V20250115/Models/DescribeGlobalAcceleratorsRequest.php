@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGlobalAccelerators请求参数结构体
  *
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- * @method array getFilters() 获取过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li>
- * @method void setFilters(array $Filters) 设置过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method integer getLimit() 获取<p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
+ * @method array getFilters() 获取<p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li></p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li></p>
  */
 class DescribeGlobalAcceleratorsRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer <p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
      */
     public $Limit;
 
     /**
-     * @var array 过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li>
+     * @var array <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li></p>
      */
     public $Filters;
 
     /**
-     * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
-     * @param array $Filters 过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param integer $Limit <p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
+     * @param array $Filters <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li></p>
      */
     function __construct()
     {

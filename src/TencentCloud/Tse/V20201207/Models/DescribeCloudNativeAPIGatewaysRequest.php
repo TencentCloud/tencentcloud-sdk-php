@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGateways请求参数结构体
  *
- * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。
- * @method integer getOffset() 获取偏移量，默认为 0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
- * @method array getFilters() 获取请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选
- * @method void setFilters(array $Filters) 设置请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选
+ * @method integer getLimit() 获取<p>返回数量，默认为 20，最大值为 100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为 20，最大值为 100。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为 0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为 0。</p>
+ * @method array getFilters() 获取<p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
+ * @method void setFilters(array $Filters) 设置<p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
  */
 class DescribeCloudNativeAPIGatewaysRequest extends AbstractModel
 {
     /**
-     * @var integer 返回数量，默认为 20，最大值为 100。
+     * @var integer <p>返回数量，默认为 20，最大值为 100。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为 0。
+     * @var integer <p>偏移量，默认为 0。</p>
      */
     public $Offset;
 
     /**
-     * @var array 请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选
+     * @var array <p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
      */
     public $Filters;
 
     /**
-     * @param integer $Limit 返回数量，默认为 20，最大值为 100。
-     * @param integer $Offset 偏移量，默认为 0。
-     * @param array $Filters 请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选
+     * @param integer $Limit <p>返回数量，默认为 20，最大值为 100。</p>
+     * @param integer $Offset <p>偏移量，默认为 0。</p>
+     * @param array $Filters <p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
      */
     function __construct()
     {

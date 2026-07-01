@@ -164,6 +164,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalogName(string $CatalogName) 设置数据目录
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleExecStatus() 获取规则执行状态（0：初始状态，1：运行中，2：运行成功，3：运行失败，4：被杀死）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleExecStatus(integer $RuleExecStatus) 设置规则执行状态（0：初始状态，1：运行中，2：运行成功，3：运行失败，4：被杀死）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QualityRuleExecResult extends AbstractModel
 {
@@ -384,6 +388,12 @@ class QualityRuleExecResult extends AbstractModel
     public $CatalogName;
 
     /**
+     * @var integer 规则执行状态（0：初始状态，1：运行中，2：运行成功，3：运行失败，4：被杀死）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleExecStatus;
+
+    /**
      * @param integer $RuleExecId 规则执行ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupExecId 规则组执行ID
@@ -455,6 +465,8 @@ class QualityRuleExecResult extends AbstractModel
      * @param string $AspectTaskId 编排任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CatalogName 数据目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleExecStatus 规则执行状态（0：初始状态，1：运行中，2：运行成功，3：运行失败，4：被杀死）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -614,6 +626,10 @@ class QualityRuleExecResult extends AbstractModel
 
         if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
             $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("RuleExecStatus",$param) and $param["RuleExecStatus"] !== null) {
+            $this->RuleExecStatus = $param["RuleExecStatus"];
         }
     }
 }

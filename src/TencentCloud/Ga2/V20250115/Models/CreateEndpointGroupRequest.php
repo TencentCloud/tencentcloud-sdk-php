@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEndpointGroup请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method string getListenerId() 获取监听器ID。
- * @method void setListenerId(string $ListenerId) 设置监听器ID。
- * @method string getEndpointGroupType() 获取终端节点组类型。支持VIRTUAL，DEFAULT。
- * @method void setEndpointGroupType(string $EndpointGroupType) 设置终端节点组类型。支持VIRTUAL，DEFAULT。
- * @method EndpointGroupConfiguration getEndpointGroupConfiguration() 获取终端节点组配置。
- * @method void setEndpointGroupConfiguration(EndpointGroupConfiguration $EndpointGroupConfiguration) 设置终端节点组配置。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method string getListenerId() 获取<p>监听器ID。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器ID。</p>
+ * @method string getEndpointGroupType() 获取<p>终端节点组类型。</p><p>枚举值：</p><ul><li>VIRTUAL： 自定义终端节点组</li><li>DEFAULT： 默认终端节点组</li></ul>
+ * @method void setEndpointGroupType(string $EndpointGroupType) 设置<p>终端节点组类型。</p><p>枚举值：</p><ul><li>VIRTUAL： 自定义终端节点组</li><li>DEFAULT： 默认终端节点组</li></ul>
+ * @method EndpointGroupConfiguration getEndpointGroupConfiguration() 获取<p>终端节点组配置。</p>
+ * @method void setEndpointGroupConfiguration(EndpointGroupConfiguration $EndpointGroupConfiguration) 设置<p>终端节点组配置。</p>
  */
 class CreateEndpointGroupRequest extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var string 监听器ID。
+     * @var string <p>监听器ID。</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 终端节点组类型。支持VIRTUAL，DEFAULT。
+     * @var string <p>终端节点组类型。</p><p>枚举值：</p><ul><li>VIRTUAL： 自定义终端节点组</li><li>DEFAULT： 默认终端节点组</li></ul>
      */
     public $EndpointGroupType;
 
     /**
-     * @var EndpointGroupConfiguration 终端节点组配置。
+     * @var EndpointGroupConfiguration <p>终端节点组配置。</p>
      */
     public $EndpointGroupConfiguration;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param string $ListenerId 监听器ID。
-     * @param string $EndpointGroupType 终端节点组类型。支持VIRTUAL，DEFAULT。
-     * @param EndpointGroupConfiguration $EndpointGroupConfiguration 终端节点组配置。
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param string $ListenerId <p>监听器ID。</p>
+     * @param string $EndpointGroupType <p>终端节点组类型。</p><p>枚举值：</p><ul><li>VIRTUAL： 自定义终端节点组</li><li>DEFAULT： 默认终端节点组</li></ul>
+     * @param EndpointGroupConfiguration $EndpointGroupConfiguration <p>终端节点组配置。</p>
      */
     function __construct()
     {

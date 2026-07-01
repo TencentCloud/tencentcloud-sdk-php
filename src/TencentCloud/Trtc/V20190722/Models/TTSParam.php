@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 伴生转录TTS参数
  *
- * @method string getModel() 获取<p>tts模型</p>
- * @method void setModel(string $Model) 设置<p>tts模型</p>
+ * @method string getModel() 获取<p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
+ * @method void setModel(string $Model) 设置<p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
  * @method string getLanguage() 获取<p>tts语言，必须在TranslationParam 的TargetLang列表中。</p>
  * @method void setLanguage(string $Language) 设置<p>tts语言，必须在TranslationParam 的TargetLang列表中。</p>
  * @method TranscriptionUserInfoParams getTargetUser() 获取<p>需要TTS播报的主播用户，该主播用户必须在订阅白名单里并且不在订阅黑名单里。</p>
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class TTSParam extends AbstractModel
 {
     /**
-     * @var string <p>tts模型</p>
+     * @var string <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
      */
     public $Model;
 
@@ -59,7 +59,7 @@ class TTSParam extends AbstractModel
     public $Voice;
 
     /**
-     * @param string $Model <p>tts模型</p>
+     * @param string $Model <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
      * @param string $Language <p>tts语言，必须在TranslationParam 的TargetLang列表中。</p>
      * @param TranscriptionUserInfoParams $TargetUser <p>需要TTS播报的主播用户，该主播用户必须在订阅白名单里并且不在订阅黑名单里。</p>
      * @param TranscriptionUserInfoParams $TTSRobotUser <p>TTS 音频回推到房间的机器人用户。</p>

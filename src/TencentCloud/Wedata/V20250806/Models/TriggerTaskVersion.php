@@ -20,105 +20,117 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务版本列表信息
  *
- * @method string getCreateTime() 获取保存时间
+ * @method string getCreateTime() 获取<p>保存时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置保存时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>保存时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersionNum() 获取版本号
+ * @method string getVersionNum() 获取<p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersionNum(string $VersionNum) 设置版本号
+ * @method void setVersionNum(string $VersionNum) 设置<p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateUserUin() 获取创建人
+ * @method string getCreateUserUin() 获取<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateUserUin(string $CreateUserUin) 设置创建人
+ * @method void setCreateUserUin(string $CreateUserUin) 设置<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersionId() 获取保存版本id
+ * @method string getVersionId() 获取<p>保存版本id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersionId(string $VersionId) 设置保存版本id
+ * @method void setVersionId(string $VersionId) 设置<p>保存版本id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersionRemark() 获取版本描述信息
+ * @method string getVersionRemark() 获取<p>版本描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersionRemark(string $VersionRemark) 设置版本描述信息
+ * @method void setVersionRemark(string $VersionRemark) 设置<p>版本描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproveStatus() 获取审批状态（只有提交版本有）
+ * @method string getApproveStatus() 获取<p>审批状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproveStatus(string $ApproveStatus) 设置审批状态（只有提交版本有）
+ * @method void setApproveStatus(string $ApproveStatus) 设置<p>审批状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取生产状态（只有提交版本有）
+ * @method string getStatus() 获取<p>生产状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置生产状态（只有提交版本有）
+ * @method void setStatus(string $Status) 设置<p>生产状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproveUserUin() 获取审批人（只有提交版本有）
+ * @method string getApproveUserUin() 获取<p>审批人（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproveUserUin(string $ApproveUserUin) 设置审批人（只有提交版本有）
+ * @method void setApproveUserUin(string $ApproveUserUin) 设置<p>审批人（只有提交版本有）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUsedVersion() 获取<p>是否生产态使用版本，保存版本没有该字段</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsedVersion(boolean $UsedVersion) 设置<p>是否生产态使用版本，保存版本没有该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerTaskVersion extends AbstractModel
 {
     /**
-     * @var string 保存时间
+     * @var string <p>保存时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 版本号
+     * @var string <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionNum;
 
     /**
-     * @var string 创建人
+     * @var string <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUserUin;
 
     /**
-     * @var string 保存版本id
+     * @var string <p>保存版本id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionId;
 
     /**
-     * @var string 版本描述信息
+     * @var string <p>版本描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionRemark;
 
     /**
-     * @var string 审批状态（只有提交版本有）
+     * @var string <p>审批状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveStatus;
 
     /**
-     * @var string 生产状态（只有提交版本有）
+     * @var string <p>生产状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 审批人（只有提交版本有）
+     * @var string <p>审批人（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveUserUin;
 
     /**
-     * @param string $CreateTime 保存时间
+     * @var boolean <p>是否生产态使用版本，保存版本没有该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VersionNum 版本号
+     */
+    public $UsedVersion;
+
+    /**
+     * @param string $CreateTime <p>保存时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateUserUin 创建人
+     * @param string $VersionNum <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VersionId 保存版本id
+     * @param string $CreateUserUin <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VersionRemark 版本描述信息
+     * @param string $VersionId <p>保存版本id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproveStatus 审批状态（只有提交版本有）
+     * @param string $VersionRemark <p>版本描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 生产状态（只有提交版本有）
+     * @param string $ApproveStatus <p>审批状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproveUserUin 审批人（只有提交版本有）
+     * @param string $Status <p>生产状态（只有提交版本有）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApproveUserUin <p>审批人（只有提交版本有）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $UsedVersion <p>是否生产态使用版本，保存版本没有该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class TriggerTaskVersion extends AbstractModel
 
         if (array_key_exists("ApproveUserUin",$param) and $param["ApproveUserUin"] !== null) {
             $this->ApproveUserUin = $param["ApproveUserUin"];
+        }
+
+        if (array_key_exists("UsedVersion",$param) and $param["UsedVersion"] !== null) {
+            $this->UsedVersion = $param["UsedVersion"];
         }
     }
 }

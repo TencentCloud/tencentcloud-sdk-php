@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtraAttr(array $ExtraAttr) 设置<p>其他附加信息，对于特定库可设置额外参数，Redis可定义如下的参数:<br>[&quot;DstWriteMode&quot;:normal,     目标库写入模式,可取值clearData(清空目标实例数据)、overwrite(以覆盖写的方式执行任务)、normal(要求目标端为空，否则校验不通过) ，不显示指定默认以覆盖写的方式执行任务    &quot;IsDstReadOnly&quot;:true,     是否在迁移时设置目标库只读,true(设置只读)、false(不设置只读)     &quot;ClientOutputBufferHardLimit&quot;:512,     从机缓冲区的硬性容量限制(MB)     &quot;ClientOutputBufferSoftLimit&quot;:512,     从机缓冲区的软性容量限制(MB)     &quot;ClientOutputBufferPersistTime&quot;:60, 从机缓冲区的软性限制持续时间(秒)     &quot;ReplBacklogSize&quot;:512,     环形缓冲区容量限制(MB)     &quot;ReplTimeout&quot;:120，        复制超时时间(秒)     &quot;IsExpireKey&quot;:&quot;true&quot;,过期key自动淘汰]</p>
  * @method string getMigrateWay() 获取<p>pgsql迁移分类：logical(逻辑迁移)、physical(物理迁移)</p>
  * @method void setMigrateWay(string $MigrateWay) 设置<p>pgsql迁移分类：logical(逻辑迁移)、physical(物理迁移)</p>
+ * @method RateLimit getRateLimit() 获取<p>迁移配置阶段限速相关参数</p>
+ * @method void setRateLimit(RateLimit $RateLimit) 设置<p>迁移配置阶段限速相关参数</p>
  */
 class MigrateOption extends AbstractModel
 {
@@ -83,6 +85,11 @@ class MigrateOption extends AbstractModel
     public $MigrateWay;
 
     /**
+     * @var RateLimit <p>迁移配置阶段限速相关参数</p>
+     */
+    public $RateLimit;
+
+    /**
      * @param DatabaseTableObject $DatabaseTable <p>迁移对象选项，需要告知迁移服务迁移哪些库表对象</p>
      * @param string $MigrateType <p>迁移类型，full(全量迁移)，structure(结构迁移)，fullAndIncrement(全量加增量迁移)， 默认为fullAndIncrement;注意redis,keewidb产品只支持fullAndIncrement类型。</p>
      * @param ConsistencyOption $Consistency <p>数据一致性校验选项， 默认为不开启一致性校验</p>
@@ -92,6 +99,7 @@ class MigrateOption extends AbstractModel
      * @param boolean $IsDstReadOnly <p>是否在迁移时设置目标库只读(仅对mysql有效)，true(设置只读)、false(不设置只读，默认此值)</p>
      * @param array $ExtraAttr <p>其他附加信息，对于特定库可设置额外参数，Redis可定义如下的参数:<br>[&quot;DstWriteMode&quot;:normal,     目标库写入模式,可取值clearData(清空目标实例数据)、overwrite(以覆盖写的方式执行任务)、normal(要求目标端为空，否则校验不通过) ，不显示指定默认以覆盖写的方式执行任务    &quot;IsDstReadOnly&quot;:true,     是否在迁移时设置目标库只读,true(设置只读)、false(不设置只读)     &quot;ClientOutputBufferHardLimit&quot;:512,     从机缓冲区的硬性容量限制(MB)     &quot;ClientOutputBufferSoftLimit&quot;:512,     从机缓冲区的软性容量限制(MB)     &quot;ClientOutputBufferPersistTime&quot;:60, 从机缓冲区的软性限制持续时间(秒)     &quot;ReplBacklogSize&quot;:512,     环形缓冲区容量限制(MB)     &quot;ReplTimeout&quot;:120，        复制超时时间(秒)     &quot;IsExpireKey&quot;:&quot;true&quot;,过期key自动淘汰]</p>
      * @param string $MigrateWay <p>pgsql迁移分类：logical(逻辑迁移)、physical(物理迁移)</p>
+     * @param RateLimit $RateLimit <p>迁移配置阶段限速相关参数</p>
      */
     function __construct()
     {
@@ -143,6 +151,11 @@ class MigrateOption extends AbstractModel
 
         if (array_key_exists("MigrateWay",$param) and $param["MigrateWay"] !== null) {
             $this->MigrateWay = $param["MigrateWay"];
+        }
+
+        if (array_key_exists("RateLimit",$param) and $param["RateLimit"] !== null) {
+            $this->RateLimit = new RateLimit();
+            $this->RateLimit->deserialize($param["RateLimit"]);
         }
     }
 }

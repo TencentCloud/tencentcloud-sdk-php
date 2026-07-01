@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Adp\V20260520\Models as Models;
 
 /**
+ * @method Models\CopyAgentFromAppResponse CopyAgentFromApp(Models\CopyAgentFromAppRequest $req) 创建Agent
  * @method Models\CopyAppResponse CopyApp(Models\CopyAppRequest $req) 复制应用
  * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 创建Agent
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建应用

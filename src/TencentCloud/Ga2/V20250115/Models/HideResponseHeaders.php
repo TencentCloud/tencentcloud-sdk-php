@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 隐藏Header
  *
- * @method string getKey() 获取<p>key</p>
- * @method void setKey(string $Key) 设置<p>key</p>
- * @method string getValue() 获取<p>value</p>
- * @method void setValue(string $Value) 设置<p>value</p>
+ * @method string getKey() 获取<p>key</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
+ * @method void setKey(string $Key) 设置<p>key</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
+ * @method string getValue() 获取<p>value</p><p>当前传&#39;&#39;值即可。</p>
+ * @method void setValue(string $Value) 设置<p>value</p><p>当前传&#39;&#39;值即可。</p>
  */
 class HideResponseHeaders extends AbstractModel
 {
     /**
-     * @var string <p>key</p>
+     * @var string <p>key</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
      */
     public $Key;
 
     /**
-     * @var string <p>value</p>
+     * @var string <p>value</p><p>当前传&#39;&#39;值即可。</p>
      */
     public $Value;
 
     /**
-     * @param string $Key <p>key</p>
-     * @param string $Value <p>value</p>
+     * @param string $Key <p>key</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
+     * @param string $Value <p>value</p><p>当前传&#39;&#39;值即可。</p>
      */
     function __construct()
     {

@@ -28,28 +28,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPortRanges(PortRanges $PortRanges) 设置<p>端口范围。</p>
  * @method string getDescription() 获取<p>描述信息，最大长度不能超过100个字节。</p>
  * @method void setDescription(string $Description) 设置<p>描述信息，最大长度不能超过100个字节。</p>
- * @method string getListenerType() 获取<p>监听类型，默认为智能路由。</p>
- * @method void setListenerType(string $ListenerType) 设置<p>监听类型，默认为智能路由。</p>
- * @method string getProtocol() 获取<p>协议，默认为TCP。</p>
- * @method void setProtocol(string $Protocol) 设置<p>协议，默认为TCP。</p>
- * @method integer getIdleTimeout() 获取<p>连接空闲等待时间。</p>
- * @method void setIdleTimeout(integer $IdleTimeout) 设置<p>连接空闲等待时间。</p>
- * @method string getGetRealIpType() 获取<p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;。</p>
- * @method void setGetRealIpType(string $GetRealIpType) 设置<p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;。</p>
- * @method string getClientAffinity() 获取<p>是否开启会话保持。</p>
- * @method void setClientAffinity(string $ClientAffinity) 设置<p>是否开启会话保持。</p>
- * @method integer getRequestTimeout() 获取<p>请求超时时间。</p>
- * @method void setRequestTimeout(integer $RequestTimeout) 设置<p>请求超时时间。</p>
+ * @method string getListenerType() 获取<p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
+ * @method void setListenerType(string $ListenerType) 设置<p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
+ * @method string getProtocol() 获取<p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
+ * @method integer getIdleTimeout() 获取<p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p>
+ * @method void setIdleTimeout(integer $IdleTimeout) 设置<p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p>
+ * @method string getGetRealIpType() 获取<p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
+ * @method void setGetRealIpType(string $GetRealIpType) 设置<p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
+ * @method string getClientAffinity() 获取<p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
+ * @method void setClientAffinity(string $ClientAffinity) 设置<p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
+ * @method integer getRequestTimeout() 获取<p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
+ * @method void setRequestTimeout(integer $RequestTimeout) 设置<p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
  * @method boolean getXForwardedForRealIp() 获取<p>是否打开七层获取源IP方式。</p>
  * @method void setXForwardedForRealIp(boolean $XForwardedForRealIp) 设置<p>是否打开七层获取源IP方式。</p>
- * @method string getCertificationType() 获取<p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
- * @method void setCertificationType(string $CertificationType) 设置<p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
- * @method string getCipherPolicyId() 获取<p>加密算法套件。</p>
- * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>加密算法套件。</p>
- * @method array getServerCertificates() 获取<p>服务器证书。</p>
- * @method void setServerCertificates(array $ServerCertificates) 设置<p>服务器证书。</p>
- * @method array getClientCaCertificates() 获取<p>客户端证书。</p>
- * @method void setClientCaCertificates(array $ClientCaCertificates) 设置<p>客户端证书。</p>
+ * @method string getCertificationType() 获取<p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+ * @method void setCertificationType(string $CertificationType) 设置<p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+ * @method string getCipherPolicyId() 获取<p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
+ * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
+ * @method array getServerCertificates() 获取<p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
+ * @method void setServerCertificates(array $ServerCertificates) 设置<p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
+ * @method array getClientCaCertificates() 获取<p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
+ * @method void setClientCaCertificates(array $ClientCaCertificates) 设置<p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
  * @method string getHttpVersion() 获取<p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： HTTP/1.1</li><li>HTTP/2： HTTP/2</li></ul>
  * @method void setHttpVersion(string $HttpVersion) 设置<p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： HTTP/1.1</li><li>HTTP/2： HTTP/2</li></ul>
  */
@@ -76,32 +76,32 @@ class CreateListenerRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string <p>监听类型，默认为智能路由。</p>
+     * @var string <p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
      */
     public $ListenerType;
 
     /**
-     * @var string <p>协议，默认为TCP。</p>
+     * @var string <p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
      */
     public $Protocol;
 
     /**
-     * @var integer <p>连接空闲等待时间。</p>
+     * @var integer <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p>
      */
     public $IdleTimeout;
 
     /**
-     * @var string <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;。</p>
+     * @var string <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
      */
     public $GetRealIpType;
 
     /**
-     * @var string <p>是否开启会话保持。</p>
+     * @var string <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
      */
     public $ClientAffinity;
 
     /**
-     * @var integer <p>请求超时时间。</p>
+     * @var integer <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
      */
     public $RequestTimeout;
 
@@ -111,22 +111,22 @@ class CreateListenerRequest extends AbstractModel
     public $XForwardedForRealIp;
 
     /**
-     * @var string <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+     * @var string <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
      */
     public $CertificationType;
 
     /**
-     * @var string <p>加密算法套件。</p>
+     * @var string <p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
      */
     public $CipherPolicyId;
 
     /**
-     * @var array <p>服务器证书。</p>
+     * @var array <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
      */
     public $ServerCertificates;
 
     /**
-     * @var array <p>客户端证书。</p>
+     * @var array <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
      */
     public $ClientCaCertificates;
 
@@ -140,17 +140,17 @@ class CreateListenerRequest extends AbstractModel
      * @param string $Name <p>名称，最大长度不能超过60个字节。</p>
      * @param PortRanges $PortRanges <p>端口范围。</p>
      * @param string $Description <p>描述信息，最大长度不能超过100个字节。</p>
-     * @param string $ListenerType <p>监听类型，默认为智能路由。</p>
-     * @param string $Protocol <p>协议，默认为TCP。</p>
-     * @param integer $IdleTimeout <p>连接空闲等待时间。</p>
-     * @param string $GetRealIpType <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;。</p>
-     * @param string $ClientAffinity <p>是否开启会话保持。</p>
-     * @param integer $RequestTimeout <p>请求超时时间。</p>
+     * @param string $ListenerType <p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
+     * @param string $Protocol <p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
+     * @param integer $IdleTimeout <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p>
+     * @param string $GetRealIpType <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
+     * @param string $ClientAffinity <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
+     * @param integer $RequestTimeout <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
      * @param boolean $XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
-     * @param string $CertificationType <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
-     * @param string $CipherPolicyId <p>加密算法套件。</p>
-     * @param array $ServerCertificates <p>服务器证书。</p>
-     * @param array $ClientCaCertificates <p>客户端证书。</p>
+     * @param string $CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+     * @param string $CipherPolicyId <p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
+     * @param array $ServerCertificates <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
+     * @param array $ClientCaCertificates <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
      * @param string $HttpVersion <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： HTTP/1.1</li><li>HTTP/2： HTTP/2</li></ul>
      */
     function __construct()

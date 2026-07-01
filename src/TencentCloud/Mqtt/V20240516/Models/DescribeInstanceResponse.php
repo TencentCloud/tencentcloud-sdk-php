@@ -92,6 +92,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageEnrichmentRuleLimit(integer $MessageEnrichmentRuleLimit) 设置<p>消息属性增强规则配额</p>
  * @method integer getBlockRuleLimit() 获取<p>封禁规则最大数量</p>
  * @method void setBlockRuleLimit(integer $BlockRuleLimit) 设置<p>封禁规则最大数量</p>
+ * @method boolean getDeleteProtect() 获取<p>删除保护开关</p>
+ * @method void setDeleteProtect(boolean $DeleteProtect) 设置<p>删除保护开关</p>
+ * @method string getEventDialect() 获取<p>集群客户端事件格式</p><p>枚举值：</p><ul><li>V1： 详见官网文档</li><li>V2： 详见官网文档</li><li>V3： 详见官网文档</li></ul><p>默认值：V3</p>
+ * @method void setEventDialect(string $EventDialect) 设置<p>集群客户端事件格式</p><p>枚举值：</p><ul><li>V1： 详见官网文档</li><li>V2： 详见官网文档</li><li>V3： 详见官网文档</li></ul><p>默认值：V3</p>
+ * @method string getHashMessagePolicy() 获取<p>消息HASH策略</p><p>枚举值：</p><ul><li>TOPIC_NAME： 按主题名</li><li>CLIENT_ID： 按客户端ID</li></ul><p>默认值：TOPIC_NAME</p>
+ * @method void setHashMessagePolicy(string $HashMessagePolicy) 设置<p>消息HASH策略</p><p>枚举值：</p><ul><li>TOPIC_NAME： 按主题名</li><li>CLIENT_ID： 按客户端ID</li></ul><p>默认值：TOPIC_NAME</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -279,6 +285,21 @@ class DescribeInstanceResponse extends AbstractModel
     public $BlockRuleLimit;
 
     /**
+     * @var boolean <p>删除保护开关</p>
+     */
+    public $DeleteProtect;
+
+    /**
+     * @var string <p>集群客户端事件格式</p><p>枚举值：</p><ul><li>V1： 详见官网文档</li><li>V2： 详见官网文档</li><li>V3： 详见官网文档</li></ul><p>默认值：V3</p>
+     */
+    public $EventDialect;
+
+    /**
+     * @var string <p>消息HASH策略</p><p>枚举值：</p><ul><li>TOPIC_NAME： 按主题名</li><li>CLIENT_ID： 按客户端ID</li></ul><p>默认值：TOPIC_NAME</p>
+     */
+    public $HashMessagePolicy;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -320,6 +341,9 @@ class DescribeInstanceResponse extends AbstractModel
      * @param string $TransportLayerSecurity <p>服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
      * @param integer $MessageEnrichmentRuleLimit <p>消息属性增强规则配额</p>
      * @param integer $BlockRuleLimit <p>封禁规则最大数量</p>
+     * @param boolean $DeleteProtect <p>删除保护开关</p>
+     * @param string $EventDialect <p>集群客户端事件格式</p><p>枚举值：</p><ul><li>V1： 详见官网文档</li><li>V2： 详见官网文档</li><li>V3： 详见官网文档</li></ul><p>默认值：V3</p>
+     * @param string $HashMessagePolicy <p>消息HASH策略</p><p>枚举值：</p><ul><li>TOPIC_NAME： 按主题名</li><li>CLIENT_ID： 按客户端ID</li></ul><p>默认值：TOPIC_NAME</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -477,6 +501,18 @@ class DescribeInstanceResponse extends AbstractModel
 
         if (array_key_exists("BlockRuleLimit",$param) and $param["BlockRuleLimit"] !== null) {
             $this->BlockRuleLimit = $param["BlockRuleLimit"];
+        }
+
+        if (array_key_exists("DeleteProtect",$param) and $param["DeleteProtect"] !== null) {
+            $this->DeleteProtect = $param["DeleteProtect"];
+        }
+
+        if (array_key_exists("EventDialect",$param) and $param["EventDialect"] !== null) {
+            $this->EventDialect = $param["EventDialect"];
+        }
+
+        if (array_key_exists("HashMessagePolicy",$param) and $param["HashMessagePolicy"] !== null) {
+            $this->HashMessagePolicy = $param["HashMessagePolicy"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -28,26 +28,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>名称，最大长度不能超过60个字节。</p>
  * @method string getDescription() 获取<p>描述信息，最大长度不能超过100个字节。</p>
  * @method void setDescription(string $Description) 设置<p>描述信息，最大长度不能超过100个字节。</p>
- * @method integer getIdleTimeout() 获取<p>连接空闲等待时间。</p>
- * @method void setIdleTimeout(integer $IdleTimeout) 设置<p>连接空闲等待时间。</p>
- * @method string getClientAffinity() 获取<p>是否开启会话保持。</p>
- * @method void setClientAffinity(string $ClientAffinity) 设置<p>是否开启会话保持。</p>
- * @method integer getClientAffinityTime() 获取<p>会话保持时间。</p>
- * @method void setClientAffinityTime(integer $ClientAffinityTime) 设置<p>会话保持时间。</p>
- * @method integer getRequestTimeout() 获取<p>请求超时时间。</p>
- * @method void setRequestTimeout(integer $RequestTimeout) 设置<p>请求超时时间。</p>
- * @method boolean getXForwardedForRealIp() 获取<p>是否打开七层获取源IP方式。</p>
- * @method void setXForwardedForRealIp(boolean $XForwardedForRealIp) 设置<p>是否打开七层获取源IP方式。</p>
- * @method string getCertificationType() 获取<p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
- * @method void setCertificationType(string $CertificationType) 设置<p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
- * @method string getCipherPolicyId() 获取<p>加密算法套件。</p>
- * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>加密算法套件。</p>
- * @method array getServerCertificates() 获取<p>服务器证书。</p>
- * @method void setServerCertificates(array $ServerCertificates) 设置<p>服务器证书。</p>
- * @method array getClientCaCertificates() 获取<p>客户端证书。</p>
- * @method void setClientCaCertificates(array $ClientCaCertificates) 设置<p>客户端证书。</p>
- * @method string getGetRealIpType() 获取<p>四层获取源IP方式。</p>
- * @method void setGetRealIpType(string $GetRealIpType) 设置<p>四层获取源IP方式。</p>
+ * @method integer getIdleTimeout() 获取<p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，支持范围为1-60；2、TCP监听器，支持范围为10-900；3、UDP监听器，支持范围为10-20；</p>
+ * @method void setIdleTimeout(integer $IdleTimeout) 设置<p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，支持范围为1-60；2、TCP监听器，支持范围为10-900；3、UDP监听器，支持范围为10-20；</p>
+ * @method string getClientAffinity() 获取<p>是否开启会话保持。</p><p>枚举值：</p><ul><li>Open： 打开。</li><li>Close： 关闭。</li></ul><p>TCP/UDP监听器支持修改此参数。</p>
+ * @method void setClientAffinity(string $ClientAffinity) 设置<p>是否开启会话保持。</p><p>枚举值：</p><ul><li>Open： 打开。</li><li>Close： 关闭。</li></ul><p>TCP/UDP监听器支持修改此参数。</p>
+ * @method integer getClientAffinityTime() 获取<p>会话保持时间。</p><p>取值范围：[60, 3600]</p>
+ * @method void setClientAffinityTime(integer $ClientAffinityTime) 设置<p>会话保持时间。</p><p>取值范围：[60, 3600]</p>
+ * @method integer getRequestTimeout() 获取<p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>HTTPS监听器才支持此参数修改。</p>
+ * @method void setRequestTimeout(integer $RequestTimeout) 设置<p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>HTTPS监听器才支持此参数修改。</p>
+ * @method boolean getXForwardedForRealIp() 获取<p>是否打开七层获取源IP方式。</p><p>HTTPS/HTTP监听器才支持此参数修改。</p>
+ * @method void setXForwardedForRealIp(boolean $XForwardedForRealIp) 设置<p>是否打开七层获取源IP方式。</p><p>HTTPS/HTTP监听器才支持此参数修改。</p>
+ * @method string getCertificationType() 获取<p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>MUTUAL： 单向。</li></ul><p>HTTPS/HTTP监听器才支持修改此参数。</p>
+ * @method void setCertificationType(string $CertificationType) 设置<p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>MUTUAL： 单向。</li></ul><p>HTTPS/HTTP监听器才支持修改此参数。</p>
+ * @method string getCipherPolicyId() 获取<p>加密算法套件。</p><p>入参限制：支持选择tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>HTTPS监听器才支持此参数修改。</p>
+ * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>加密算法套件。</p><p>入参限制：支持选择tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>HTTPS监听器才支持此参数修改。</p>
+ * @method array getServerCertificates() 获取<p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
+ * @method void setServerCertificates(array $ServerCertificates) 设置<p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
+ * @method array getClientCaCertificates() 获取<p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
+ * @method void setClientCaCertificates(array $ClientCaCertificates) 设置<p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
+ * @method string getGetRealIpType() 获取<p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
+ * @method void setGetRealIpType(string $GetRealIpType) 设置<p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
  */
 class ModifyListenerRequest extends AbstractModel
 {
@@ -72,52 +72,52 @@ class ModifyListenerRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer <p>连接空闲等待时间。</p>
+     * @var integer <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，支持范围为1-60；2、TCP监听器，支持范围为10-900；3、UDP监听器，支持范围为10-20；</p>
      */
     public $IdleTimeout;
 
     /**
-     * @var string <p>是否开启会话保持。</p>
+     * @var string <p>是否开启会话保持。</p><p>枚举值：</p><ul><li>Open： 打开。</li><li>Close： 关闭。</li></ul><p>TCP/UDP监听器支持修改此参数。</p>
      */
     public $ClientAffinity;
 
     /**
-     * @var integer <p>会话保持时间。</p>
+     * @var integer <p>会话保持时间。</p><p>取值范围：[60, 3600]</p>
      */
     public $ClientAffinityTime;
 
     /**
-     * @var integer <p>请求超时时间。</p>
+     * @var integer <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public $RequestTimeout;
 
     /**
-     * @var boolean <p>是否打开七层获取源IP方式。</p>
+     * @var boolean <p>是否打开七层获取源IP方式。</p><p>HTTPS/HTTP监听器才支持此参数修改。</p>
      */
     public $XForwardedForRealIp;
 
     /**
-     * @var string <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+     * @var string <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>MUTUAL： 单向。</li></ul><p>HTTPS/HTTP监听器才支持修改此参数。</p>
      */
     public $CertificationType;
 
     /**
-     * @var string <p>加密算法套件。</p>
+     * @var string <p>加密算法套件。</p><p>入参限制：支持选择tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public $CipherPolicyId;
 
     /**
-     * @var array <p>服务器证书。</p>
+     * @var array <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public $ServerCertificates;
 
     /**
-     * @var array <p>客户端证书。</p>
+     * @var array <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
      */
     public $ClientCaCertificates;
 
     /**
-     * @var string <p>四层获取源IP方式。</p>
+     * @var string <p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
      */
     public $GetRealIpType;
 
@@ -126,16 +126,16 @@ class ModifyListenerRequest extends AbstractModel
      * @param string $ListenerId <p>监听器ID。</p>
      * @param string $Name <p>名称，最大长度不能超过60个字节。</p>
      * @param string $Description <p>描述信息，最大长度不能超过100个字节。</p>
-     * @param integer $IdleTimeout <p>连接空闲等待时间。</p>
-     * @param string $ClientAffinity <p>是否开启会话保持。</p>
-     * @param integer $ClientAffinityTime <p>会话保持时间。</p>
-     * @param integer $RequestTimeout <p>请求超时时间。</p>
-     * @param boolean $XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
-     * @param string $CertificationType <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
-     * @param string $CipherPolicyId <p>加密算法套件。</p>
-     * @param array $ServerCertificates <p>服务器证书。</p>
-     * @param array $ClientCaCertificates <p>客户端证书。</p>
-     * @param string $GetRealIpType <p>四层获取源IP方式。</p>
+     * @param integer $IdleTimeout <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，支持范围为1-60；2、TCP监听器，支持范围为10-900；3、UDP监听器，支持范围为10-20；</p>
+     * @param string $ClientAffinity <p>是否开启会话保持。</p><p>枚举值：</p><ul><li>Open： 打开。</li><li>Close： 关闭。</li></ul><p>TCP/UDP监听器支持修改此参数。</p>
+     * @param integer $ClientAffinityTime <p>会话保持时间。</p><p>取值范围：[60, 3600]</p>
+     * @param integer $RequestTimeout <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>HTTPS监听器才支持此参数修改。</p>
+     * @param boolean $XForwardedForRealIp <p>是否打开七层获取源IP方式。</p><p>HTTPS/HTTP监听器才支持此参数修改。</p>
+     * @param string $CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>MUTUAL： 单向。</li></ul><p>HTTPS/HTTP监听器才支持修改此参数。</p>
+     * @param string $CipherPolicyId <p>加密算法套件。</p><p>入参限制：支持选择tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>HTTPS监听器才支持此参数修改。</p>
+     * @param array $ServerCertificates <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
+     * @param array $ClientCaCertificates <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
+     * @param string $GetRealIpType <p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
      */
     function __construct()
     {

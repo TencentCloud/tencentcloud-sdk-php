@@ -20,153 +20,165 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据探索脚本业务处理实体
  *
- * @method string getCodeFileId() 获取脚本ID
+ * @method string getCodeFileId() 获取<p>脚本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCodeFileId(string $CodeFileId) 设置脚本ID
+ * @method void setCodeFileId(string $CodeFileId) 设置<p>脚本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCodeFileName() 获取脚本名称
+ * @method string getCodeFileName() 获取<p>脚本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCodeFileName(string $CodeFileName) 设置脚本名称
+ * @method void setCodeFileName(string $CodeFileName) 设置<p>脚本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwnerUin() 获取脚本所有者 uin
+ * @method string getOwnerUin() 获取<p>脚本所有者 uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnerUin(string $OwnerUin) 设置脚本所有者 uin
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>脚本所有者 uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CodeFileConfig getCodeFileConfig() 获取脚本配置
+ * @method CodeFileConfig getCodeFileConfig() 获取<p>脚本配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCodeFileConfig(CodeFileConfig $CodeFileConfig) 设置脚本配置
+ * @method void setCodeFileConfig(CodeFileConfig $CodeFileConfig) 设置<p>脚本配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCodeFileContent() 获取脚本内容
+ * @method string getCodeFileContent() 获取<p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCodeFileContent(string $CodeFileContent) 设置脚本内容
+ * @method void setCodeFileContent(string $CodeFileContent) 设置<p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateUserUin() 获取最近一次操作人
+ * @method string getUpdateUserUin() 获取<p>最近一次操作人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateUserUin(string $UpdateUserUin) 设置最近一次操作人
+ * @method void setUpdateUserUin(string $UpdateUserUin) 设置<p>最近一次操作人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目ID
+ * @method string getProjectId() 获取<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间 yyyy-MM-dd hh:mm:ss
+ * @method string getUpdateTime() 获取<p>更新时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间 yyyy-MM-dd hh:mm:ss
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间 yyyy-MM-dd hh:mm:ss
+ * @method string getCreateTime() 获取<p>创建时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间 yyyy-MM-dd hh:mm:ss
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccessScope() 获取权限范围：SHARED, PRIVATE
+ * @method string getAccessScope() 获取<p>权限范围：SHARED, PRIVATE</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessScope(string $AccessScope) 设置权限范围：SHARED, PRIVATE
+ * @method void setAccessScope(string $AccessScope) 设置<p>权限范围：SHARED, PRIVATE</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPath() 获取节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+ * @method string getPath() 获取<p>节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPath(string $Path) 设置节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+ * @method void setPath(string $Path) 设置<p>节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParentFolderPath() 获取父文件夹路径
+ * @method string getParentFolderPath() 获取<p>父文件夹路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParentFolderPath(string $ParentFolderPath) 设置父文件夹路径
+ * @method void setParentFolderPath(string $ParentFolderPath) 设置<p>父文件夹路径</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersionId() 获取<p>返回保存后的versionId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersionId(string $VersionId) 设置<p>返回保存后的versionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CodeFile extends AbstractModel
 {
     /**
-     * @var string 脚本ID
+     * @var string <p>脚本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeFileId;
 
     /**
-     * @var string 脚本名称
+     * @var string <p>脚本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeFileName;
 
     /**
-     * @var string 脚本所有者 uin
+     * @var string <p>脚本所有者 uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
-     * @var CodeFileConfig 脚本配置
+     * @var CodeFileConfig <p>脚本配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeFileConfig;
 
     /**
-     * @var string 脚本内容
+     * @var string <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeFileContent;
 
     /**
-     * @var string 最近一次操作人
+     * @var string <p>最近一次操作人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateUserUin;
 
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 更新时间 yyyy-MM-dd hh:mm:ss
+     * @var string <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 创建时间 yyyy-MM-dd hh:mm:ss
+     * @var string <p>创建时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 权限范围：SHARED, PRIVATE
+     * @var string <p>权限范围：SHARED, PRIVATE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessScope;
 
     /**
-     * @var string 节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+     * @var string <p>节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
-     * @var string 父文件夹路径
+     * @var string <p>父文件夹路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentFolderPath;
 
     /**
-     * @param string $CodeFileId 脚本ID
+     * @var string <p>返回保存后的versionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CodeFileName 脚本名称
+     */
+    public $VersionId;
+
+    /**
+     * @param string $CodeFileId <p>脚本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OwnerUin 脚本所有者 uin
+     * @param string $CodeFileName <p>脚本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeFileConfig $CodeFileConfig 脚本配置
+     * @param string $OwnerUin <p>脚本所有者 uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CodeFileContent 脚本内容
+     * @param CodeFileConfig $CodeFileConfig <p>脚本配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateUserUin 最近一次操作人
+     * @param string $CodeFileContent <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目ID
+     * @param string $UpdateUserUin <p>最近一次操作人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间 yyyy-MM-dd hh:mm:ss
+     * @param string $ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间 yyyy-MM-dd hh:mm:ss
+     * @param string $UpdateTime <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccessScope 权限范围：SHARED, PRIVATE
+     * @param string $CreateTime <p>创建时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Path 节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+     * @param string $AccessScope <p>权限范围：SHARED, PRIVATE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParentFolderPath 父文件夹路径
+     * @param string $Path <p>节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentFolderPath <p>父文件夹路径</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VersionId <p>返回保存后的versionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -229,6 +241,10 @@ class CodeFile extends AbstractModel
 
         if (array_key_exists("ParentFolderPath",$param) and $param["ParentFolderPath"] !== null) {
             $this->ParentFolderPath = $param["ParentFolderPath"];
+        }
+
+        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
+            $this->VersionId = $param["VersionId"];
         }
     }
 }

@@ -20,225 +20,165 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流调度配置
  *
- * @method string getTriggerMode() 获取触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-- 文件到达：FILE_ARRIVAL
-
-注意：
-- TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；
+ * @method string getTriggerMode() 获取<p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerMode(string $TriggerMode) 设置触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-- 文件到达：FILE_ARRIVAL
-
-注意：
-- TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；
+ * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtraInfo() 获取WorkflowTriggerConfig转换成Json格式，对账使用
+ * @method string getExtraInfo() 获取<p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtraInfo(string $ExtraInfo) 设置WorkflowTriggerConfig转换成Json格式，对账使用
+ * @method void setExtraInfo(string $ExtraInfo) 设置<p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleTimeZone() 获取调度时区
+ * @method string getScheduleTimeZone() 获取<p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置调度时区
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置<p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取调度生效时间
+ * @method string getStartTime() 获取<p>调度生效时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置调度生效时间
+ * @method void setStartTime(string $StartTime) 设置<p>调度生效时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取调度结束时间
+ * @method string getEndTime() 获取<p>调度结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置调度结束时间
+ * @method void setEndTime(string $EndTime) 设置<p>调度结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getConfigMode() 获取配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+ * @method string getConfigMode() 获取<p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfigMode(string $ConfigMode) 设置配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+ * @method void setConfigMode(string $ConfigMode) 设置<p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCycleType() 获取周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+ * @method string getCycleType() 获取<p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleType(string $CycleType) 设置周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+ * @method void setCycleType(string $CycleType) 设置<p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCrontabExpression() 获取cron表达式
+ * @method string getCrontabExpression() 获取<p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCrontabExpression(string $CrontabExpression) 设置cron表达式
+ * @method void setCrontabExpression(string $CrontabExpression) 设置<p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTriggerId() 获取triggerId, uuid
+ * @method string getTriggerId() 获取<p>triggerId, uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerId(string $TriggerId) 设置triggerId, uuid
+ * @method void setTriggerId(string $TriggerId) 设置<p>triggerId, uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileArrivalPath() 获取文件到达模式下	存储系统中的监听路径
+ * @method string getFileArrivalPath() 获取<p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileArrivalPath(string $FileArrivalPath) 设置文件到达模式下	存储系统中的监听路径
+ * @method void setFileArrivalPath(string $FileArrivalPath) 设置<p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerMinimumIntervalSecond() 获取文件到达模式下	触发最短间隔时间（单位：秒）
+ * @method integer getTriggerMinimumIntervalSecond() 获取<p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerMinimumIntervalSecond(integer $TriggerMinimumIntervalSecond) 设置文件到达模式下	触发最短间隔时间（单位：秒）
+ * @method void setTriggerMinimumIntervalSecond(integer $TriggerMinimumIntervalSecond) 设置<p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerWaitTimeSecond() 获取文件到达模式下	触发等待时间（单位：秒）
+ * @method integer getTriggerWaitTimeSecond() 获取<p>文件到达模式下    触发等待时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerWaitTimeSecond(integer $TriggerWaitTimeSecond) 设置文件到达模式下	触发等待时间（单位：秒）
+ * @method void setTriggerWaitTimeSecond(integer $TriggerWaitTimeSecond) 设置<p>文件到达模式下    触发等待时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchedulerStatus() 获取Trigger 状态 启动ACTIVE，暂停PAUSED
+ * @method string getSchedulerStatus() 获取<p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchedulerStatus(string $SchedulerStatus) 设置Trigger 状态 启动ACTIVE，暂停PAUSED
+ * @method void setSchedulerStatus(string $SchedulerStatus) 设置<p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTriggerConfig extends AbstractModel
 {
     /**
-     * @var string 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-- 文件到达：FILE_ARRIVAL
-
-注意：
-- TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；
+     * @var string <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerMode;
 
     /**
-     * @var string WorkflowTriggerConfig转换成Json格式，对账使用
+     * @var string <p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraInfo;
 
     /**
-     * @var string 调度时区
+     * @var string <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTimeZone;
 
     /**
-     * @var string 调度生效时间
+     * @var string <p>调度生效时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 调度结束时间
+     * @var string <p>调度结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * @var string <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigMode;
 
     /**
-     * @var string 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * @var string <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleType;
 
     /**
-     * @var string cron表达式
+     * @var string <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrontabExpression;
 
     /**
-     * @var string triggerId, uuid
+     * @var string <p>triggerId, uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerId;
 
     /**
-     * @var string 文件到达模式下	存储系统中的监听路径
+     * @var string <p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileArrivalPath;
 
     /**
-     * @var integer 文件到达模式下	触发最短间隔时间（单位：秒）
+     * @var integer <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerMinimumIntervalSecond;
 
     /**
-     * @var integer 文件到达模式下	触发等待时间（单位：秒）
+     * @var integer <p>文件到达模式下    触发等待时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerWaitTimeSecond;
 
     /**
-     * @var string Trigger 状态 启动ACTIVE，暂停PAUSED
+     * @var string <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchedulerStatus;
 
     /**
-     * @param string $TriggerMode 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-- 文件到达：FILE_ARRIVAL
-
-注意：
-- TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；
+     * @param string $TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExtraInfo WorkflowTriggerConfig转换成Json格式，对账使用
+     * @param string $ExtraInfo <p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleTimeZone 调度时区
+     * @param string $ScheduleTimeZone <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime 调度生效时间
+     * @param string $StartTime <p>调度生效时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 调度结束时间
+     * @param string $EndTime <p>调度结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ConfigMode 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * @param string $ConfigMode <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CycleType 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * @param string $CycleType <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CrontabExpression cron表达式
+     * @param string $CrontabExpression <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TriggerId triggerId, uuid
+     * @param string $TriggerId <p>triggerId, uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileArrivalPath 文件到达模式下	存储系统中的监听路径
+     * @param string $FileArrivalPath <p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerMinimumIntervalSecond 文件到达模式下	触发最短间隔时间（单位：秒）
+     * @param integer $TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerWaitTimeSecond 文件到达模式下	触发等待时间（单位：秒）
+     * @param integer $TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchedulerStatus Trigger 状态 启动ACTIVE，暂停PAUSED
+     * @param string $SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

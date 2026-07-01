@@ -20,98 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateTriggerWorkflow请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getWorkflowId() 获取工作流ID
- * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
- * @method string getWorkflowName() 获取工作流名称
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
- * @method string getOwnerUin() 获取责任人ID
- * @method void setOwnerUin(string $OwnerUin) 设置责任人ID
- * @method string getWorkflowDesc() 获取备注
- * @method void setWorkflowDesc(string $WorkflowDesc) 设置备注
- * @method array getWorkflowParams() 获取工作流参数列表
- * @method void setWorkflowParams(array $WorkflowParams) 设置工作流参数列表
- * @method array getTriggerWorkflowSchedulerConfigurations() 获取统一调度参数
- * @method void setTriggerWorkflowSchedulerConfigurations(array $TriggerWorkflowSchedulerConfigurations) 设置统一调度参数
- * @method string getBundleId() 获取BundleId项
- * @method void setBundleId(string $BundleId) 设置BundleId项
- * @method string getBundleInfo() 获取Bundle信息
- * @method void setBundleInfo(string $BundleInfo) 设置Bundle信息
- * @method array getGeneralTaskParams() 获取通用参数配置
- * @method void setGeneralTaskParams(array $GeneralTaskParams) 设置通用参数配置
- * @method WorkflowRunConfig getTriggerWorkflowRunConfiguration() 获取
- * @method void setTriggerWorkflowRunConfiguration(WorkflowRunConfig $TriggerWorkflowRunConfiguration) 设置
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method string getWorkflowId() 获取<p>工作流ID</p>
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流ID</p>
+ * @method string getWorkflowName() 获取<p>工作流名称</p>
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名称</p>
+ * @method string getOwnerUin() 获取<p>责任人ID</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>责任人ID</p>
+ * @method string getWorkflowDesc() 获取<p>备注</p>
+ * @method void setWorkflowDesc(string $WorkflowDesc) 设置<p>备注</p>
+ * @method array getWorkflowParams() 获取<p>工作流参数列表</p>
+ * @method void setWorkflowParams(array $WorkflowParams) 设置<p>工作流参数列表</p>
+ * @method array getTriggerWorkflowSchedulerConfigurations() 获取<p>统一调度参数</p>
+ * @method void setTriggerWorkflowSchedulerConfigurations(array $TriggerWorkflowSchedulerConfigurations) 设置<p>统一调度参数</p>
+ * @method string getBundleId() 获取<p>BundleId项</p>
+ * @method void setBundleId(string $BundleId) 设置<p>BundleId项</p>
+ * @method string getBundleInfo() 获取<p>Bundle信息</p>
+ * @method void setBundleInfo(string $BundleInfo) 设置<p>Bundle信息</p>
+ * @method array getGeneralTaskParams() 获取<p>通用参数配置</p>
+ * @method void setGeneralTaskParams(array $GeneralTaskParams) 设置<p>通用参数配置</p>
+ * @method WorkflowRunConfig getTriggerWorkflowRunConfiguration() 获取<p>调度运行配置</p>
+ * @method void setTriggerWorkflowRunConfiguration(WorkflowRunConfig $TriggerWorkflowRunConfiguration) 设置<p>调度运行配置</p>
+ * @method string getSchedulerStatus() 获取<p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+ * @method void setSchedulerStatus(string $SchedulerStatus) 设置<p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+ * @method string getTriggerMode() 获取<p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+ * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
  */
 class UpdateTriggerWorkflowRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 工作流ID
+     * @var string <p>工作流ID</p>
      */
     public $WorkflowId;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
      */
     public $WorkflowName;
 
     /**
-     * @var string 责任人ID
+     * @var string <p>责任人ID</p>
      */
     public $OwnerUin;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $WorkflowDesc;
 
     /**
-     * @var array 工作流参数列表
+     * @var array <p>工作流参数列表</p>
      */
     public $WorkflowParams;
 
     /**
-     * @var array 统一调度参数
+     * @var array <p>统一调度参数</p>
      */
     public $TriggerWorkflowSchedulerConfigurations;
 
     /**
-     * @var string BundleId项
+     * @var string <p>BundleId项</p>
      */
     public $BundleId;
 
     /**
-     * @var string Bundle信息
+     * @var string <p>Bundle信息</p>
      */
     public $BundleInfo;
 
     /**
-     * @var array 通用参数配置
+     * @var array <p>通用参数配置</p>
      */
     public $GeneralTaskParams;
 
     /**
-     * @var WorkflowRunConfig 
+     * @var WorkflowRunConfig <p>调度运行配置</p>
      */
     public $TriggerWorkflowRunConfiguration;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param string $WorkflowId 工作流ID
-     * @param string $WorkflowName 工作流名称
-     * @param string $OwnerUin 责任人ID
-     * @param string $WorkflowDesc 备注
-     * @param array $WorkflowParams 工作流参数列表
-     * @param array $TriggerWorkflowSchedulerConfigurations 统一调度参数
-     * @param string $BundleId BundleId项
-     * @param string $BundleInfo Bundle信息
-     * @param array $GeneralTaskParams 通用参数配置
-     * @param WorkflowRunConfig $TriggerWorkflowRunConfiguration 
+     * @var string <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+     */
+    public $SchedulerStatus;
+
+    /**
+     * @var string <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     */
+    public $TriggerMode;
+
+    /**
+     * @param string $ProjectId <p>项目ID</p>
+     * @param string $WorkflowId <p>工作流ID</p>
+     * @param string $WorkflowName <p>工作流名称</p>
+     * @param string $OwnerUin <p>责任人ID</p>
+     * @param string $WorkflowDesc <p>备注</p>
+     * @param array $WorkflowParams <p>工作流参数列表</p>
+     * @param array $TriggerWorkflowSchedulerConfigurations <p>统一调度参数</p>
+     * @param string $BundleId <p>BundleId项</p>
+     * @param string $BundleInfo <p>Bundle信息</p>
+     * @param array $GeneralTaskParams <p>通用参数配置</p>
+     * @param WorkflowRunConfig $TriggerWorkflowRunConfiguration <p>调度运行配置</p>
+     * @param string $SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+     * @param string $TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
      */
     function __construct()
     {
@@ -184,6 +200,14 @@ class UpdateTriggerWorkflowRequest extends AbstractModel
         if (array_key_exists("TriggerWorkflowRunConfiguration",$param) and $param["TriggerWorkflowRunConfiguration"] !== null) {
             $this->TriggerWorkflowRunConfiguration = new WorkflowRunConfig();
             $this->TriggerWorkflowRunConfiguration->deserialize($param["TriggerWorkflowRunConfiguration"]);
+        }
+
+        if (array_key_exists("SchedulerStatus",$param) and $param["SchedulerStatus"] !== null) {
+            $this->SchedulerStatus = $param["SchedulerStatus"];
+        }
+
+        if (array_key_exists("TriggerMode",$param) and $param["TriggerMode"] !== null) {
+            $this->TriggerMode = $param["TriggerMode"];
         }
     }
 }

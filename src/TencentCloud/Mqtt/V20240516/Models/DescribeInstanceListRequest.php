@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceList请求参数结构体
  *
- * @method array getFilters() 获取查询条件列表,支持以下字段
-InstanceName：集群名模糊搜索
-InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
-注意：配置TagFilters时该查询条件不生效。
- * @method void setFilters(array $Filters) 设置查询条件列表,支持以下字段
-InstanceName：集群名模糊搜索
-InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
-注意：配置TagFilters时该查询条件不生效。
- * @method integer getOffset() 获取查询起始位置，默认0
- * @method void setOffset(integer $Offset) 设置查询起始位置，默认0
- * @method integer getLimit() 获取查询结果限制数量，默认20，最大100
- * @method void setLimit(integer $Limit) 设置查询结果限制数量，默认20，最大100
- * @method array getTagFilters() 获取标签过滤器
- * @method void setTagFilters(array $TagFilters) 设置标签过滤器
+ * @method array getFilters() 获取<p>查询条件列表,支持以下字段<br>InstanceName：集群名模糊搜索<br>InstanceId：集群id精确搜索<br>InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）<br>PayMode：付费模式搜索（PREPAID-包年包月，POSTPAID-按小时计费）<br>ExpiredBefore：按过期时间过滤：仅筛选包年包月（PREPAID）集群<br>注意：配置TagFilters时该查询条件不生效。</p>
+ * @method void setFilters(array $Filters) 设置<p>查询条件列表,支持以下字段<br>InstanceName：集群名模糊搜索<br>InstanceId：集群id精确搜索<br>InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）<br>PayMode：付费模式搜索（PREPAID-包年包月，POSTPAID-按小时计费）<br>ExpiredBefore：按过期时间过滤：仅筛选包年包月（PREPAID）集群<br>注意：配置TagFilters时该查询条件不生效。</p>
+ * @method integer getOffset() 获取<p>查询起始位置，默认0</p>
+ * @method void setOffset(integer $Offset) 设置<p>查询起始位置，默认0</p>
+ * @method integer getLimit() 获取<p>查询结果限制数量，默认20，最大100</p>
+ * @method void setLimit(integer $Limit) 设置<p>查询结果限制数量，默认20，最大100</p>
+ * @method array getTagFilters() 获取<p>标签过滤器</p>
+ * @method void setTagFilters(array $TagFilters) 设置<p>标签过滤器</p>
  */
 class DescribeInstanceListRequest extends AbstractModel
 {
     /**
-     * @var array 查询条件列表,支持以下字段
-InstanceName：集群名模糊搜索
-InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
-注意：配置TagFilters时该查询条件不生效。
+     * @var array <p>查询条件列表,支持以下字段<br>InstanceName：集群名模糊搜索<br>InstanceId：集群id精确搜索<br>InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）<br>PayMode：付费模式搜索（PREPAID-包年包月，POSTPAID-按小时计费）<br>ExpiredBefore：按过期时间过滤：仅筛选包年包月（PREPAID）集群<br>注意：配置TagFilters时该查询条件不生效。</p>
      */
     public $Filters;
 
     /**
-     * @var integer 查询起始位置，默认0
+     * @var integer <p>查询起始位置，默认0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 查询结果限制数量，默认20，最大100
+     * @var integer <p>查询结果限制数量，默认20，最大100</p>
      */
     public $Limit;
 
     /**
-     * @var array 标签过滤器
+     * @var array <p>标签过滤器</p>
      */
     public $TagFilters;
 
     /**
-     * @param array $Filters 查询条件列表,支持以下字段
-InstanceName：集群名模糊搜索
-InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
-注意：配置TagFilters时该查询条件不生效。
-     * @param integer $Offset 查询起始位置，默认0
-     * @param integer $Limit 查询结果限制数量，默认20，最大100
-     * @param array $TagFilters 标签过滤器
+     * @param array $Filters <p>查询条件列表,支持以下字段<br>InstanceName：集群名模糊搜索<br>InstanceId：集群id精确搜索<br>InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）<br>PayMode：付费模式搜索（PREPAID-包年包月，POSTPAID-按小时计费）<br>ExpiredBefore：按过期时间过滤：仅筛选包年包月（PREPAID）集群<br>注意：配置TagFilters时该查询条件不生效。</p>
+     * @param integer $Offset <p>查询起始位置，默认0</p>
+     * @param integer $Limit <p>查询结果限制数量，默认20，最大100</p>
+     * @param array $TagFilters <p>标签过滤器</p>
      */
     function __construct()
     {

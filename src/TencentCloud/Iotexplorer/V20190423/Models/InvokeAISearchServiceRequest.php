@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVectorSearchTopK(integer $VectorSearchTopK) 设置<p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p>
  * @method string getOrder() 获取<p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
  * @method void setOrder(string $Order) 设置<p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
+ * @method boolean getWithTaskInfo() 获取<p>是否输出原始任务信息</p>
+ * @method void setWithTaskInfo(boolean $WithTaskInfo) 设置<p>是否输出原始任务信息</p>
  */
 class InvokeAISearchServiceRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class InvokeAISearchServiceRequest extends AbstractModel
     public $Order;
 
     /**
+     * @var boolean <p>是否输出原始任务信息</p>
+     */
+    public $WithTaskInfo;
+
+    /**
      * @param string $ProductId <p>产品ID</p>
      * @param string $DeviceName <p>设备名称</p>
      * @param string $Query <p>自然语言查询</p>
@@ -136,6 +143,7 @@ class InvokeAISearchServiceRequest extends AbstractModel
      * @param float $VectorSearchRadius <p>向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5</p>
      * @param integer $VectorSearchTopK <p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p>
      * @param string $Order <p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
+     * @param boolean $WithTaskInfo <p>是否输出原始任务信息</p>
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class InvokeAISearchServiceRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("WithTaskInfo",$param) and $param["WithTaskInfo"] !== null) {
+            $this->WithTaskInfo = $param["WithTaskInfo"];
         }
     }
 }

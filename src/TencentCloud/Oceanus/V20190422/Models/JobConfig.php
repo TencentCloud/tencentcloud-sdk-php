@@ -168,12 +168,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobConfigItem(JobConfig $JobConfigItem) 设置<p>运行中配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCheckpointTimeoutSecond() 获取<p>checkpoint 超时时间</p>
- * @method void setCheckpointTimeoutSecond(integer $CheckpointTimeoutSecond) 设置<p>checkpoint 超时时间</p>
- * @method integer getCheckpointIntervalSecond() 获取<p>checkpoint 间隔时间</p>
- * @method void setCheckpointIntervalSecond(integer $CheckpointIntervalSecond) 设置<p>checkpoint 间隔时间</p>
+ * @method integer getCheckpointTimeoutSecond() 获取<p>checkpoint 超时时间</p><p>单位：秒</p>
+ * @method void setCheckpointTimeoutSecond(integer $CheckpointTimeoutSecond) 设置<p>checkpoint 超时时间</p><p>单位：秒</p>
+ * @method integer getCheckpointIntervalSecond() 获取<p>checkpoint 间隔时间</p><p>单位：秒</p>
+ * @method void setCheckpointIntervalSecond(integer $CheckpointIntervalSecond) 设置<p>checkpoint 间隔时间</p><p>单位：秒</p>
  * @method integer getVariableReplaceMode() 获取<p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： 全局SQL变量替换</li></ul><p>默认值：0</p>
  * @method void setVariableReplaceMode(integer $VariableReplaceMode) 设置<p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： 全局SQL变量替换</li></ul><p>默认值：0</p>
+ * @method string getStateCOSBucket() 获取<p>快照桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStateCOSBucket(string $StateCOSBucket) 设置<p>快照桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogCOSBucket() 获取<p>日志桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogCOSBucket(string $LogCOSBucket) 设置<p>日志桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobConfig extends AbstractModel
 {
@@ -408,12 +416,12 @@ class JobConfig extends AbstractModel
     public $JobConfigItem;
 
     /**
-     * @var integer <p>checkpoint 超时时间</p>
+     * @var integer <p>checkpoint 超时时间</p><p>单位：秒</p>
      */
     public $CheckpointTimeoutSecond;
 
     /**
-     * @var integer <p>checkpoint 间隔时间</p>
+     * @var integer <p>checkpoint 间隔时间</p><p>单位：秒</p>
      */
     public $CheckpointIntervalSecond;
 
@@ -421,6 +429,18 @@ class JobConfig extends AbstractModel
      * @var integer <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： 全局SQL变量替换</li></ul><p>默认值：0</p>
      */
     public $VariableReplaceMode;
+
+    /**
+     * @var string <p>快照桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StateCOSBucket;
+
+    /**
+     * @var string <p>日志桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogCOSBucket;
 
     /**
      * @param string $JobId <p>作业Id</p>
@@ -497,9 +517,13 @@ class JobConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param JobConfig $JobConfigItem <p>运行中配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
-     * @param integer $CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
+     * @param integer $CheckpointTimeoutSecond <p>checkpoint 超时时间</p><p>单位：秒</p>
+     * @param integer $CheckpointIntervalSecond <p>checkpoint 间隔时间</p><p>单位：秒</p>
      * @param integer $VariableReplaceMode <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： 全局SQL变量替换</li></ul><p>默认值：0</p>
+     * @param string $StateCOSBucket <p>快照桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogCOSBucket <p>日志桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -699,6 +723,14 @@ class JobConfig extends AbstractModel
 
         if (array_key_exists("VariableReplaceMode",$param) and $param["VariableReplaceMode"] !== null) {
             $this->VariableReplaceMode = $param["VariableReplaceMode"];
+        }
+
+        if (array_key_exists("StateCOSBucket",$param) and $param["StateCOSBucket"] !== null) {
+            $this->StateCOSBucket = $param["StateCOSBucket"];
+        }
+
+        if (array_key_exists("LogCOSBucket",$param) and $param["LogCOSBucket"] !== null) {
+            $this->LogCOSBucket = $param["LogCOSBucket"];
         }
     }
 }

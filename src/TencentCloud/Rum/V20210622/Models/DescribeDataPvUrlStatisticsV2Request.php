@@ -20,266 +20,258 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDataPvUrlStatisticsV2请求参数结构体
  *
- * @method integer getStartTime() 获取开始时间
- * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method string getType() 获取allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等
- * @method void setType(string $Type) 设置allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
- * @method integer getID() 获取项目ID
- * @method void setID(integer $ID) 设置项目ID
- * @method string getExtSecond() 获取自定义2
- * @method void setExtSecond(string $ExtSecond) 设置自定义2
- * @method string getEngine() 获取浏览器引擎
- * @method void setEngine(string $Engine) 设置浏览器引擎
- * @method string getIsp() 获取运营商
- * @method void setIsp(string $Isp) 设置运营商
- * @method string getFrom() 获取来源页面
- * @method void setFrom(string $From) 设置来源页面
- * @method string getLevel() 获取日志等级
- * @method void setLevel(string $Level) 设置日志等级
- * @method string getBrand() 获取品牌
- * @method void setBrand(string $Brand) 设置品牌
- * @method string getArea() 获取地区
- * @method void setArea(string $Area) 设置地区
- * @method string getVersionNum() 获取版本
- * @method void setVersionNum(string $VersionNum) 设置版本
- * @method string getPlatform() 获取平台
- * @method void setPlatform(string $Platform) 设置平台
- * @method string getExtThird() 获取自定义3
- * @method void setExtThird(string $ExtThird) 设置自定义3
- * @method string getExtFirst() 获取自定义1
- * @method void setExtFirst(string $ExtFirst) 设置自定义1
- * @method string getNetType() 获取网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知
- * @method void setNetType(string $NetType) 设置网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知
- * @method string getDevice() 获取机型
- * @method void setDevice(string $Device) 设置机型
- * @method string getIsAbroad() 获取显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
- * @method void setIsAbroad(string $IsAbroad) 设置显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
- * @method string getOs() 获取操作系统
- * @method void setOs(string $Os) 设置操作系统
- * @method string getBrowser() 获取浏览器
- * @method void setBrowser(string $Browser) 设置浏览器
- * @method string getEnv() 获取环境
- * @method void setEnv(string $Env) 设置环境
- * @method integer getGroupByType() 获取group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
- 5:1d
- * @method void setGroupByType(integer $GroupByType) 设置group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
- 5:1d
- * @method integer getIsNewData() 获取1: 查询智研
-0: 走旧逻辑，已下线，勿使用
- * @method void setIsNewData(integer $IsNewData) 设置1: 查询智研
-0: 走旧逻辑，已下线，勿使用
- * @method string getExtFourth() 获取自定义4
- * @method void setExtFourth(string $ExtFourth) 设置自定义4
- * @method string getExtFifth() 获取自定义5
- * @method void setExtFifth(string $ExtFifth) 设置自定义5
- * @method string getExtSixth() 获取自定义6
- * @method void setExtSixth(string $ExtSixth) 设置自定义6
- * @method string getExtSeventh() 获取自定义7
- * @method void setExtSeventh(string $ExtSeventh) 设置自定义7
- * @method string getExtEighth() 获取自定义8
- * @method void setExtEighth(string $ExtEighth) 设置自定义8
- * @method string getExtNinth() 获取自定义9
- * @method void setExtNinth(string $ExtNinth) 设置自定义9
- * @method string getExtTenth() 获取自定义10
- * @method void setExtTenth(string $ExtTenth) 设置自定义10
- * @method string getGranularity() 获取时间段
- * @method void setGranularity(string $Granularity) 设置时间段
+ * @method integer getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间</p>
+ * @method string getType() 获取<p>allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等</p>
+ * @method void setType(string $Type) 设置<p>allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等</p>
+ * @method integer getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间</p>
+ * @method integer getID() 获取<p>项目ID</p>
+ * @method void setID(integer $ID) 设置<p>项目ID</p>
+ * @method string getExtSecond() 获取<p>自定义2</p>
+ * @method void setExtSecond(string $ExtSecond) 设置<p>自定义2</p>
+ * @method string getEngine() 获取<p>浏览器引擎</p>
+ * @method void setEngine(string $Engine) 设置<p>浏览器引擎</p>
+ * @method string getIsp() 获取<p>运营商</p>
+ * @method void setIsp(string $Isp) 设置<p>运营商</p>
+ * @method string getFrom() 获取<p>来源页面， 可多选，用 “,” 隔开的 String</p>
+ * @method void setFrom(string $From) 设置<p>来源页面， 可多选，用 “,” 隔开的 String</p>
+ * @method string getLevel() 获取<p>日志等级</p>
+ * @method void setLevel(string $Level) 设置<p>日志等级</p>
+ * @method string getBrand() 获取<p>品牌</p>
+ * @method void setBrand(string $Brand) 设置<p>品牌</p>
+ * @method string getArea() 获取<p>地区</p>
+ * @method void setArea(string $Area) 设置<p>地区</p>
+ * @method string getVersionNum() 获取<p>版本</p>
+ * @method void setVersionNum(string $VersionNum) 设置<p>版本</p>
+ * @method string getPlatform() 获取<p>平台</p>
+ * @method void setPlatform(string $Platform) 设置<p>平台</p>
+ * @method string getExtThird() 获取<p>自定义3</p>
+ * @method void setExtThird(string $ExtThird) 设置<p>自定义3</p>
+ * @method string getExtFirst() 获取<p>自定义1</p>
+ * @method void setExtFirst(string $ExtFirst) 设置<p>自定义1</p>
+ * @method string getNetType() 获取<p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知</p>
+ * @method void setNetType(string $NetType) 设置<p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知</p>
+ * @method string getDevice() 获取<p>机型</p>
+ * @method void setDevice(string $Device) 设置<p>机型</p>
+ * @method string getIsAbroad() 获取<p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
+ * @method void setIsAbroad(string $IsAbroad) 设置<p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
+ * @method string getOs() 获取<p>操作系统</p>
+ * @method void setOs(string $Os) 设置<p>操作系统</p>
+ * @method string getBrowser() 获取<p>浏览器</p>
+ * @method void setBrowser(string $Browser) 设置<p>浏览器</p>
+ * @method string getEnv() 获取<p>环境</p>
+ * @method void setEnv(string $Env) 设置<p>环境</p>
+ * @method integer getGroupByType() 获取<p>group by 参数值枚举1:1m  2:5m  3:30m  4:1h<br> 5:1d</p>
+ * @method void setGroupByType(integer $GroupByType) 设置<p>group by 参数值枚举1:1m  2:5m  3:30m  4:1h<br> 5:1d</p>
+ * @method integer getIsNewData() 获取<p>1: 查询智研<br>0: 走旧逻辑，已下线，勿使用</p>
+ * @method void setIsNewData(integer $IsNewData) 设置<p>1: 查询智研<br>0: 走旧逻辑，已下线，勿使用</p>
+ * @method string getExtFourth() 获取<p>自定义4</p>
+ * @method void setExtFourth(string $ExtFourth) 设置<p>自定义4</p>
+ * @method string getExtFifth() 获取<p>自定义5</p>
+ * @method void setExtFifth(string $ExtFifth) 设置<p>自定义5</p>
+ * @method string getExtSixth() 获取<p>自定义6</p>
+ * @method void setExtSixth(string $ExtSixth) 设置<p>自定义6</p>
+ * @method string getExtSeventh() 获取<p>自定义7</p>
+ * @method void setExtSeventh(string $ExtSeventh) 设置<p>自定义7</p>
+ * @method string getExtEighth() 获取<p>自定义8</p>
+ * @method void setExtEighth(string $ExtEighth) 设置<p>自定义8</p>
+ * @method string getExtNinth() 获取<p>自定义9</p>
+ * @method void setExtNinth(string $ExtNinth) 设置<p>自定义9</p>
+ * @method string getExtTenth() 获取<p>自定义10</p>
+ * @method void setExtTenth(string $ExtTenth) 设置<p>自定义10</p>
+ * @method string getGranularity() 获取<p>时间段</p>
+ * @method void setGranularity(string $Granularity) 设置<p>时间段</p>
  */
 class DescribeDataPvUrlStatisticsV2Request extends AbstractModel
 {
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等
+     * @var string <p>allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等</p>
      */
     public $Type;
 
     /**
-     * @var integer 结束时间
+     * @var integer <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ID;
 
     /**
-     * @var string 自定义2
+     * @var string <p>自定义2</p>
      */
     public $ExtSecond;
 
     /**
-     * @var string 浏览器引擎
+     * @var string <p>浏览器引擎</p>
      */
     public $Engine;
 
     /**
-     * @var string 运营商
+     * @var string <p>运营商</p>
      */
     public $Isp;
 
     /**
-     * @var string 来源页面
+     * @var string <p>来源页面， 可多选，用 “,” 隔开的 String</p>
      */
     public $From;
 
     /**
-     * @var string 日志等级
+     * @var string <p>日志等级</p>
      */
     public $Level;
 
     /**
-     * @var string 品牌
+     * @var string <p>品牌</p>
      */
     public $Brand;
 
     /**
-     * @var string 地区
+     * @var string <p>地区</p>
      */
     public $Area;
 
     /**
-     * @var string 版本
+     * @var string <p>版本</p>
      */
     public $VersionNum;
 
     /**
-     * @var string 平台
+     * @var string <p>平台</p>
      */
     public $Platform;
 
     /**
-     * @var string 自定义3
+     * @var string <p>自定义3</p>
      */
     public $ExtThird;
 
     /**
-     * @var string 自定义1
+     * @var string <p>自定义1</p>
      */
     public $ExtFirst;
 
     /**
-     * @var string 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知
+     * @var string <p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知</p>
      */
     public $NetType;
 
     /**
-     * @var string 机型
+     * @var string <p>机型</p>
      */
     public $Device;
 
     /**
-     * @var string 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
+     * @var string <p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
      */
     public $IsAbroad;
 
     /**
-     * @var string 操作系统
+     * @var string <p>操作系统</p>
      */
     public $Os;
 
     /**
-     * @var string 浏览器
+     * @var string <p>浏览器</p>
      */
     public $Browser;
 
     /**
-     * @var string 环境
+     * @var string <p>环境</p>
      */
     public $Env;
 
     /**
-     * @var integer group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
- 5:1d
+     * @var integer <p>group by 参数值枚举1:1m  2:5m  3:30m  4:1h<br> 5:1d</p>
      */
     public $GroupByType;
 
     /**
-     * @var integer 1: 查询智研
-0: 走旧逻辑，已下线，勿使用
+     * @var integer <p>1: 查询智研<br>0: 走旧逻辑，已下线，勿使用</p>
      */
     public $IsNewData;
 
     /**
-     * @var string 自定义4
+     * @var string <p>自定义4</p>
      */
     public $ExtFourth;
 
     /**
-     * @var string 自定义5
+     * @var string <p>自定义5</p>
      */
     public $ExtFifth;
 
     /**
-     * @var string 自定义6
+     * @var string <p>自定义6</p>
      */
     public $ExtSixth;
 
     /**
-     * @var string 自定义7
+     * @var string <p>自定义7</p>
      */
     public $ExtSeventh;
 
     /**
-     * @var string 自定义8
+     * @var string <p>自定义8</p>
      */
     public $ExtEighth;
 
     /**
-     * @var string 自定义9
+     * @var string <p>自定义9</p>
      */
     public $ExtNinth;
 
     /**
-     * @var string 自定义10
+     * @var string <p>自定义10</p>
      */
     public $ExtTenth;
 
     /**
-     * @var string 时间段
+     * @var string <p>时间段</p>
      */
     public $Granularity;
 
     /**
-     * @param integer $StartTime 开始时间
-     * @param string $Type allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等
-     * @param integer $EndTime 结束时间
-     * @param integer $ID 项目ID
-     * @param string $ExtSecond 自定义2
-     * @param string $Engine 浏览器引擎
-     * @param string $Isp 运营商
-     * @param string $From 来源页面
-     * @param string $Level 日志等级
-     * @param string $Brand 品牌
-     * @param string $Area 地区
-     * @param string $VersionNum 版本
-     * @param string $Platform 平台
-     * @param string $ExtThird 自定义3
-     * @param string $ExtFirst 自定义1
-     * @param string $NetType 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知
-     * @param string $Device 机型
-     * @param string $IsAbroad 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
-     * @param string $Os 操作系统
-     * @param string $Browser 浏览器
-     * @param string $Env 环境
-     * @param integer $GroupByType group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
- 5:1d
-     * @param integer $IsNewData 1: 查询智研
-0: 走旧逻辑，已下线，勿使用
-     * @param string $ExtFourth 自定义4
-     * @param string $ExtFifth 自定义5
-     * @param string $ExtSixth 自定义6
-     * @param string $ExtSeventh 自定义7
-     * @param string $ExtEighth 自定义8
-     * @param string $ExtNinth 自定义9
-     * @param string $ExtTenth 自定义10
-     * @param string $Granularity 时间段
+     * @param integer $StartTime <p>开始时间</p>
+     * @param string $Type <p>allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等</p>
+     * @param integer $EndTime <p>结束时间</p>
+     * @param integer $ID <p>项目ID</p>
+     * @param string $ExtSecond <p>自定义2</p>
+     * @param string $Engine <p>浏览器引擎</p>
+     * @param string $Isp <p>运营商</p>
+     * @param string $From <p>来源页面， 可多选，用 “,” 隔开的 String</p>
+     * @param string $Level <p>日志等级</p>
+     * @param string $Brand <p>品牌</p>
+     * @param string $Area <p>地区</p>
+     * @param string $VersionNum <p>版本</p>
+     * @param string $Platform <p>平台</p>
+     * @param string $ExtThird <p>自定义3</p>
+     * @param string $ExtFirst <p>自定义1</p>
+     * @param string $NetType <p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知</p>
+     * @param string $Device <p>机型</p>
+     * @param string $IsAbroad <p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
+     * @param string $Os <p>操作系统</p>
+     * @param string $Browser <p>浏览器</p>
+     * @param string $Env <p>环境</p>
+     * @param integer $GroupByType <p>group by 参数值枚举1:1m  2:5m  3:30m  4:1h<br> 5:1d</p>
+     * @param integer $IsNewData <p>1: 查询智研<br>0: 走旧逻辑，已下线，勿使用</p>
+     * @param string $ExtFourth <p>自定义4</p>
+     * @param string $ExtFifth <p>自定义5</p>
+     * @param string $ExtSixth <p>自定义6</p>
+     * @param string $ExtSeventh <p>自定义7</p>
+     * @param string $ExtEighth <p>自定义8</p>
+     * @param string $ExtNinth <p>自定义9</p>
+     * @param string $ExtTenth <p>自定义10</p>
+     * @param string $Granularity <p>时间段</p>
      */
     function __construct()
     {

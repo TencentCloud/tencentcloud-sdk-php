@@ -20,38 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSoftwareInformation请求参数结构体
  *
- * @method string getMid() 获取终端唯一标识Mid
- * @method void setMid(string $Mid) 设置终端唯一标识Mid
- * @method Condition getCondition() 获取过滤条件、分页参数
-<li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
- * @method void setCondition(Condition $Condition) 设置过滤条件、分页参数
-<li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
- * @method integer getOsType() 获取0:win 2:mac
- * @method void setOsType(integer $OsType) 设置0:win 2:mac
+ * @method string getDomainInstanceId() 获取管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+ * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+ * @method string getMid() 获取<p>终端唯一标识Mid</p>
+ * @method void setMid(string $Mid) 设置<p>终端唯一标识Mid</p>
+ * @method Condition getCondition() 获取<p>过滤条件、分页参数</p><li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
+ * @method void setCondition(Condition $Condition) 设置<p>过滤条件、分页参数</p><li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
+ * @method integer getOsType() 获取<p>0:win 2:mac</p>
+ * @method void setOsType(integer $OsType) 设置<p>0:win 2:mac</p>
  */
 class DescribeSoftwareInformationRequest extends AbstractModel
 {
     /**
-     * @var string 终端唯一标识Mid
+     * @var string 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public $DomainInstanceId;
+
+    /**
+     * @var string <p>终端唯一标识Mid</p>
      */
     public $Mid;
 
     /**
-     * @var Condition 过滤条件、分页参数
-<li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
+     * @var Condition <p>过滤条件、分页参数</p><li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
      */
     public $Condition;
 
     /**
-     * @var integer 0:win 2:mac
+     * @var integer <p>0:win 2:mac</p>
      */
     public $OsType;
 
     /**
-     * @param string $Mid 终端唯一标识Mid
-     * @param Condition $Condition 过滤条件、分页参数
-<li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
-     * @param integer $OsType 0:win 2:mac
+     * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param string $Mid <p>终端唯一标识Mid</p>
+     * @param Condition $Condition <p>过滤条件、分页参数</p><li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
+     * @param integer $OsType <p>0:win 2:mac</p>
      */
     function __construct()
     {
@@ -66,6 +70,10 @@ class DescribeSoftwareInformationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DomainInstanceId",$param) and $param["DomainInstanceId"] !== null) {
+            $this->DomainInstanceId = $param["DomainInstanceId"];
+        }
+
         if (array_key_exists("Mid",$param) and $param["Mid"] !== null) {
             $this->Mid = $param["Mid"];
         }

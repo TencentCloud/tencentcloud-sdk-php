@@ -146,6 +146,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncrementalDeployment(boolean $IncrementalDeployment) 设置<p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
  * @method boolean getDoNotStart() 获取<p>是否不立即启动</p>
  * @method void setDoNotStart(boolean $DoNotStart) 设置<p>是否不立即启动</p>
+ * @method array getImagePullSecretList() 获取<p>镜像Secret列表</p>
+ * @method void setImagePullSecretList(array $ImagePullSecretList) 设置<p>镜像Secret列表</p>
  */
 class DeployContainerApplicationRequest extends AbstractModel
 {
@@ -465,6 +467,11 @@ class DeployContainerApplicationRequest extends AbstractModel
     public $DoNotStart;
 
     /**
+     * @var array <p>镜像Secret列表</p>
+     */
+    public $ImagePullSecretList;
+
+    /**
      * @param string $ApplicationId <p>应用ID</p>
      * @param ContainerGroupObservabilityConfig $ObservabilityConfig <p>可观测配置</p>
      * @param string $ClusterId <p>集群ID</p>
@@ -528,6 +535,7 @@ class DeployContainerApplicationRequest extends AbstractModel
      * @param integer $Partition <p>滚动更新分区序号</p>
      * @param boolean $IncrementalDeployment <p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
      * @param boolean $DoNotStart <p>是否不立即启动</p>
+     * @param array $ImagePullSecretList <p>镜像Secret列表</p>
      */
     function __construct()
     {
@@ -838,6 +846,10 @@ class DeployContainerApplicationRequest extends AbstractModel
 
         if (array_key_exists("DoNotStart",$param) and $param["DoNotStart"] !== null) {
             $this->DoNotStart = $param["DoNotStart"];
+        }
+
+        if (array_key_exists("ImagePullSecretList",$param) and $param["ImagePullSecretList"] !== null) {
+            $this->ImagePullSecretList = $param["ImagePullSecretList"];
         }
     }
 }

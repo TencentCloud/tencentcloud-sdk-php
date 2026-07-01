@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisconnectTime(integer $DisconnectTime) 设置上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
  * @method array getMQTTClientSubscriptions() 获取客户端的订阅列表
  * @method void setMQTTClientSubscriptions(array $MQTTClientSubscriptions) 设置客户端的订阅列表
+ * @method boolean getCleanSession() 获取clean-session标志，在客户端使用mqtt5协议时，该字段即clean-start
+ * @method void setCleanSession(boolean $CleanSession) 设置clean-session标志，在客户端使用mqtt5协议时，该字段即clean-start
+ * @method integer getExpireIntervalInSeconds() 获取MQTT5协议：expireIntervalInSeconds
+ * @method void setExpireIntervalInSeconds(integer $ExpireIntervalInSeconds) 设置MQTT5协议：expireIntervalInSeconds
  */
 class MQTTClientInfo extends AbstractModel
 {
@@ -96,6 +100,16 @@ class MQTTClientInfo extends AbstractModel
     public $MQTTClientSubscriptions;
 
     /**
+     * @var boolean clean-session标志，在客户端使用mqtt5协议时，该字段即clean-start
+     */
+    public $CleanSession;
+
+    /**
+     * @var integer MQTT5协议：expireIntervalInSeconds
+     */
+    public $ExpireIntervalInSeconds;
+
+    /**
      * @param string $ClientId 客户端ID
      * @param string $ClientAddress 客户端网络地址
      * @param integer $ProtocolVersion MQTT 协议版本
@@ -108,6 +122,8 @@ class MQTTClientInfo extends AbstractModel
      * @param integer $ConnectTime 上次建立连接时间，毫秒级时间戳 。
      * @param integer $DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义，毫秒级时间戳 。
      * @param array $MQTTClientSubscriptions 客户端的订阅列表
+     * @param boolean $CleanSession clean-session标志，在客户端使用mqtt5协议时，该字段即clean-start
+     * @param integer $ExpireIntervalInSeconds MQTT5协议：expireIntervalInSeconds
      */
     function __construct()
     {
@@ -161,6 +177,14 @@ class MQTTClientInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MQTTClientSubscriptions, $obj);
             }
+        }
+
+        if (array_key_exists("CleanSession",$param) and $param["CleanSession"] !== null) {
+            $this->CleanSession = $param["CleanSession"];
+        }
+
+        if (array_key_exists("ExpireIntervalInSeconds",$param) and $param["ExpireIntervalInSeconds"] !== null) {
+            $this->ExpireIntervalInSeconds = $param["ExpireIntervalInSeconds"];
         }
     }
 }

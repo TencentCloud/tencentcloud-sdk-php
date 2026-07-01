@@ -20,158 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDataBackfillPlan请求参数结构体
  *
- * @method string getProjectId() 获取所属项目Id
- * @method void setProjectId(string $ProjectId) 设置所属项目Id
- * @method array getTaskIds() 获取补录任务集合
- * @method void setTaskIds(array $TaskIds) 设置补录任务集合
- * @method array getDataBackfillRangeList() 获取补录任务的数据时间配置
- * @method void setDataBackfillRangeList(array $DataBackfillRangeList) 设置补录任务的数据时间配置
- * @method string getTimeZone() 获取时区，默认UTC+8
- * @method void setTimeZone(string $TimeZone) 设置时区，默认UTC+8
- * @method string getDataBackfillPlanName() 获取数据补录计划名称，不填则由系统随机生成一串字符
- * @method void setDataBackfillPlanName(string $DataBackfillPlanName) 设置数据补录计划名称，不填则由系统随机生成一串字符
- * @method string getCheckParentType() 获取检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查
- * @method void setCheckParentType(string $CheckParentType) 设置检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查
- * @method boolean getSkipEventListening() 获取补录是否忽略事件依赖,默认true
- * @method void setSkipEventListening(boolean $SkipEventListening) 设置补录是否忽略事件依赖,默认true
- * @method string getRedefineSelfWorkflowDependency() 获取自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖
- * @method void setRedefineSelfWorkflowDependency(string $RedefineSelfWorkflowDependency) 设置自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖
- * @method integer getRedefineParallelNum() 获取自定义实例运行并发度, 如果不配置，则使用任务原有自依赖
- * @method void setRedefineParallelNum(integer $RedefineParallelNum) 设置自定义实例运行并发度, 如果不配置，则使用任务原有自依赖
- * @method string getSchedulerResourceGroupId() 获取调度资源组id，为空则表示使用任务原有调度执行资源组
- * @method void setSchedulerResourceGroupId(string $SchedulerResourceGroupId) 设置调度资源组id，为空则表示使用任务原有调度执行资源组
- * @method string getIntegrationResourceGroupId() 获取集成任务资源组id，为空则表示使用任务原有调度执行资源组
- * @method void setIntegrationResourceGroupId(string $IntegrationResourceGroupId) 设置集成任务资源组id，为空则表示使用任务原有调度执行资源组
- * @method array getRedefineParamList() 获取自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑
- * @method void setRedefineParamList(array $RedefineParamList) 设置自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑
- * @method string getDataTimeOrder() 获取补录是实例数据时间顺序，生效必须满足2个条件:
-1. 必须同周期任务
-2. 优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行
- 
-可选值
-- NORMAL: 不设置
-- ORDER: 顺序
-- REVERSE: 逆序
-不设置默认为NORMAL
- * @method void setDataTimeOrder(string $DataTimeOrder) 设置补录是实例数据时间顺序，生效必须满足2个条件:
-1. 必须同周期任务
-2. 优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行
- 
-可选值
-- NORMAL: 不设置
-- ORDER: 顺序
-- REVERSE: 逆序
-不设置默认为NORMAL
- * @method string getRedefineCycleType() 获取补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例
-* MONTH_CYCLE: 月
- * @method void setRedefineCycleType(string $RedefineCycleType) 设置补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例
-* MONTH_CYCLE: 月
+ * @method string getProjectId() 获取<p>所属项目Id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>所属项目Id</p>
+ * @method array getTaskIds() 获取<p>补录任务集合</p>
+ * @method void setTaskIds(array $TaskIds) 设置<p>补录任务集合</p>
+ * @method array getDataBackfillRangeList() 获取<p>补录任务的数据时间配置</p>
+ * @method void setDataBackfillRangeList(array $DataBackfillRangeList) 设置<p>补录任务的数据时间配置</p>
+ * @method string getTimeZone() 获取<p>时区，默认UTC+8</p>
+ * @method void setTimeZone(string $TimeZone) 设置<p>时区，默认UTC+8</p>
+ * @method string getDataBackfillPlanName() 获取<p>数据补录计划名称，不填则由系统随机生成一串字符</p>
+ * @method void setDataBackfillPlanName(string $DataBackfillPlanName) 设置<p>数据补录计划名称，不填则由系统随机生成一串字符</p>
+ * @method string getCheckParentType() 获取<p>检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查</p>
+ * @method void setCheckParentType(string $CheckParentType) 设置<p>检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查</p>
+ * @method boolean getSkipEventListening() 获取<p>补录是否忽略事件依赖,默认true</p>
+ * @method void setSkipEventListening(boolean $SkipEventListening) 设置<p>补录是否忽略事件依赖,默认true</p>
+ * @method string getRedefineSelfWorkflowDependency() 获取<p>自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖</p>
+ * @method void setRedefineSelfWorkflowDependency(string $RedefineSelfWorkflowDependency) 设置<p>自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖</p>
+ * @method integer getRedefineParallelNum() 获取<p>自定义实例运行并发度, 如果不配置，则使用任务原有自依赖</p>
+ * @method void setRedefineParallelNum(integer $RedefineParallelNum) 设置<p>自定义实例运行并发度, 如果不配置，则使用任务原有自依赖</p>
+ * @method string getSchedulerResourceGroupId() 获取<p>调度资源组id，为空则表示使用任务原有调度执行资源组</p>
+ * @method void setSchedulerResourceGroupId(string $SchedulerResourceGroupId) 设置<p>调度资源组id，为空则表示使用任务原有调度执行资源组</p>
+ * @method string getIntegrationResourceGroupId() 获取<p>集成任务资源组id，为空则表示使用任务原有调度执行资源组</p>
+ * @method void setIntegrationResourceGroupId(string $IntegrationResourceGroupId) 设置<p>集成任务资源组id，为空则表示使用任务原有调度执行资源组</p>
+ * @method array getRedefineParamList() 获取<p>自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑</p>
+ * @method void setRedefineParamList(array $RedefineParamList) 设置<p>自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑</p>
+ * @method string getDataTimeOrder() 获取<p>补录是实例数据时间顺序，生效必须满足2个条件:</p><ol><li>必须同周期任务</li><li>优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行</li></ol><p>可选值</p><ul><li>NORMAL: 不设置</li><li>ORDER: 顺序</li><li>REVERSE: 逆序<br>不设置默认为NORMAL</li></ul>
+ * @method void setDataTimeOrder(string $DataTimeOrder) 设置<p>补录是实例数据时间顺序，生效必须满足2个条件:</p><ol><li>必须同周期任务</li><li>优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行</li></ol><p>可选值</p><ul><li>NORMAL: 不设置</li><li>ORDER: 顺序</li><li>REVERSE: 逆序<br>不设置默认为NORMAL</li></ul>
+ * @method string getRedefineCycleType() 获取<p>补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例</p><ul><li>MONTH_CYCLE: 月</li></ul>
+ * @method void setRedefineCycleType(string $RedefineCycleType) 设置<p>补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例</p><ul><li>MONTH_CYCLE: 月</li></ul>
+ * @method array getComputeConfigMappings() 获取<p>存算配置映射列表，对应页面“存算引擎配置”</p>
+ * @method void setComputeConfigMappings(array $ComputeConfigMappings) 设置<p>存算配置映射列表，对应页面“存算引擎配置”</p>
  */
 class CreateDataBackfillPlanRequest extends AbstractModel
 {
     /**
-     * @var string 所属项目Id
+     * @var string <p>所属项目Id</p>
      */
     public $ProjectId;
 
     /**
-     * @var array 补录任务集合
+     * @var array <p>补录任务集合</p>
      */
     public $TaskIds;
 
     /**
-     * @var array 补录任务的数据时间配置
+     * @var array <p>补录任务的数据时间配置</p>
      */
     public $DataBackfillRangeList;
 
     /**
-     * @var string 时区，默认UTC+8
+     * @var string <p>时区，默认UTC+8</p>
      */
     public $TimeZone;
 
     /**
-     * @var string 数据补录计划名称，不填则由系统随机生成一串字符
+     * @var string <p>数据补录计划名称，不填则由系统随机生成一串字符</p>
      */
     public $DataBackfillPlanName;
 
     /**
-     * @var string 检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查
+     * @var string <p>检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查</p>
      */
     public $CheckParentType;
 
     /**
-     * @var boolean 补录是否忽略事件依赖,默认true
+     * @var boolean <p>补录是否忽略事件依赖,默认true</p>
      */
     public $SkipEventListening;
 
     /**
-     * @var string 自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖
+     * @var string <p>自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖</p>
      */
     public $RedefineSelfWorkflowDependency;
 
     /**
-     * @var integer 自定义实例运行并发度, 如果不配置，则使用任务原有自依赖
+     * @var integer <p>自定义实例运行并发度, 如果不配置，则使用任务原有自依赖</p>
      */
     public $RedefineParallelNum;
 
     /**
-     * @var string 调度资源组id，为空则表示使用任务原有调度执行资源组
+     * @var string <p>调度资源组id，为空则表示使用任务原有调度执行资源组</p>
      */
     public $SchedulerResourceGroupId;
 
     /**
-     * @var string 集成任务资源组id，为空则表示使用任务原有调度执行资源组
+     * @var string <p>集成任务资源组id，为空则表示使用任务原有调度执行资源组</p>
      */
     public $IntegrationResourceGroupId;
 
     /**
-     * @var array 自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑
+     * @var array <p>自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑</p>
      */
     public $RedefineParamList;
 
     /**
-     * @var string 补录是实例数据时间顺序，生效必须满足2个条件:
-1. 必须同周期任务
-2. 优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行
- 
-可选值
-- NORMAL: 不设置
-- ORDER: 顺序
-- REVERSE: 逆序
-不设置默认为NORMAL
+     * @var string <p>补录是实例数据时间顺序，生效必须满足2个条件:</p><ol><li>必须同周期任务</li><li>优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行</li></ol><p>可选值</p><ul><li>NORMAL: 不设置</li><li>ORDER: 顺序</li><li>REVERSE: 逆序<br>不设置默认为NORMAL</li></ul>
      */
     public $DataTimeOrder;
 
     /**
-     * @var string 补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例
-* MONTH_CYCLE: 月
+     * @var string <p>补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例</p><ul><li>MONTH_CYCLE: 月</li></ul>
      */
     public $RedefineCycleType;
 
     /**
-     * @param string $ProjectId 所属项目Id
-     * @param array $TaskIds 补录任务集合
-     * @param array $DataBackfillRangeList 补录任务的数据时间配置
-     * @param string $TimeZone 时区，默认UTC+8
-     * @param string $DataBackfillPlanName 数据补录计划名称，不填则由系统随机生成一串字符
-     * @param string $CheckParentType 检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查
-     * @param boolean $SkipEventListening 补录是否忽略事件依赖,默认true
-     * @param string $RedefineSelfWorkflowDependency 自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖
-     * @param integer $RedefineParallelNum 自定义实例运行并发度, 如果不配置，则使用任务原有自依赖
-     * @param string $SchedulerResourceGroupId 调度资源组id，为空则表示使用任务原有调度执行资源组
-     * @param string $IntegrationResourceGroupId 集成任务资源组id，为空则表示使用任务原有调度执行资源组
-     * @param array $RedefineParamList 自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑
-     * @param string $DataTimeOrder 补录是实例数据时间顺序，生效必须满足2个条件:
-1. 必须同周期任务
-2. 优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行
- 
-可选值
-- NORMAL: 不设置
-- ORDER: 顺序
-- REVERSE: 逆序
-不设置默认为NORMAL
-     * @param string $RedefineCycleType 补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例
-* MONTH_CYCLE: 月
+     * @var array <p>存算配置映射列表，对应页面“存算引擎配置”</p>
+     */
+    public $ComputeConfigMappings;
+
+    /**
+     * @param string $ProjectId <p>所属项目Id</p>
+     * @param array $TaskIds <p>补录任务集合</p>
+     * @param array $DataBackfillRangeList <p>补录任务的数据时间配置</p>
+     * @param string $TimeZone <p>时区，默认UTC+8</p>
+     * @param string $DataBackfillPlanName <p>数据补录计划名称，不填则由系统随机生成一串字符</p>
+     * @param string $CheckParentType <p>检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查</p>
+     * @param boolean $SkipEventListening <p>补录是否忽略事件依赖,默认true</p>
+     * @param string $RedefineSelfWorkflowDependency <p>自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖</p>
+     * @param integer $RedefineParallelNum <p>自定义实例运行并发度, 如果不配置，则使用任务原有自依赖</p>
+     * @param string $SchedulerResourceGroupId <p>调度资源组id，为空则表示使用任务原有调度执行资源组</p>
+     * @param string $IntegrationResourceGroupId <p>集成任务资源组id，为空则表示使用任务原有调度执行资源组</p>
+     * @param array $RedefineParamList <p>自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑</p>
+     * @param string $DataTimeOrder <p>补录是实例数据时间顺序，生效必须满足2个条件:</p><ol><li>必须同周期任务</li><li>优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行</li></ol><p>可选值</p><ul><li>NORMAL: 不设置</li><li>ORDER: 顺序</li><li>REVERSE: 逆序<br>不设置默认为NORMAL</li></ul>
+     * @param string $RedefineCycleType <p>补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例</p><ul><li>MONTH_CYCLE: 月</li></ul>
+     * @param array $ComputeConfigMappings <p>存算配置映射列表，对应页面“存算引擎配置”</p>
      */
     function __construct()
     {
@@ -250,6 +222,15 @@ class CreateDataBackfillPlanRequest extends AbstractModel
 
         if (array_key_exists("RedefineCycleType",$param) and $param["RedefineCycleType"] !== null) {
             $this->RedefineCycleType = $param["RedefineCycleType"];
+        }
+
+        if (array_key_exists("ComputeConfigMappings",$param) and $param["ComputeConfigMappings"] !== null) {
+            $this->ComputeConfigMappings = [];
+            foreach ($param["ComputeConfigMappings"] as $key => $value){
+                $obj = new ComputeConfigMapping();
+                $obj->deserialize($value);
+                array_push($this->ComputeConfigMappings, $obj);
+            }
         }
     }
 }

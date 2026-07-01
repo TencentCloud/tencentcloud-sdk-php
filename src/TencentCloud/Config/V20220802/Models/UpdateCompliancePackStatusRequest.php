@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCompliancePackStatus请求参数结构体
  *
- * @method string getCompliancePackId() 获取合规包ID
- * @method void setCompliancePackId(string $CompliancePackId) 设置合规包ID
- * @method string getStatus() 获取ACTIVE：启用
-UN_ACTIVE ：停用
- * @method void setStatus(string $Status) 设置ACTIVE：启用
-UN_ACTIVE ：停用
+ * @method string getCompliancePackId() 获取<p>合规包ID</p>
+ * @method void setCompliancePackId(string $CompliancePackId) 设置<p>合规包ID</p>
+ * @method string getStatus() 获取<p>ACTIVE：启用<br>UN_ACTIVE ：停用</p>
+ * @method void setStatus(string $Status) 设置<p>ACTIVE：启用<br>UN_ACTIVE ：停用</p>
  */
 class UpdateCompliancePackStatusRequest extends AbstractModel
 {
     /**
-     * @var string 合规包ID
+     * @var string <p>合规包ID</p>
      */
     public $CompliancePackId;
 
     /**
-     * @var string ACTIVE：启用
-UN_ACTIVE ：停用
+     * @var string <p>ACTIVE：启用<br>UN_ACTIVE ：停用</p>
      */
     public $Status;
 
     /**
-     * @param string $CompliancePackId 合规包ID
-     * @param string $Status ACTIVE：启用
-UN_ACTIVE ：停用
+     * @param string $CompliancePackId <p>合规包ID</p>
+     * @param string $Status <p>ACTIVE：启用<br>UN_ACTIVE ：停用</p>
      */
     function __construct()
     {

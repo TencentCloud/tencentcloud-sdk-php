@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGlobalAccelerators返回参数结构体
  *
- * @method array getGlobalAcceleratorSet() 获取符合条件的全球加速实例。
- * @method void setGlobalAcceleratorSet(array $GlobalAcceleratorSet) 设置符合条件的全球加速实例。
- * @method integer getTotalCount() 获取符合条件的实例个数。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例个数。
+ * @method array getGlobalAcceleratorSet() 获取<p>符合条件的全球加速实例。</p>
+ * @method void setGlobalAcceleratorSet(array $GlobalAcceleratorSet) 设置<p>符合条件的全球加速实例。</p>
+ * @method integer getTotalCount() 获取<p>符合条件的实例个数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的实例个数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGlobalAcceleratorsResponse extends AbstractModel
 {
     /**
-     * @var array 符合条件的全球加速实例。
+     * @var array <p>符合条件的全球加速实例。</p>
      */
     public $GlobalAcceleratorSet;
 
     /**
-     * @var integer 符合条件的实例个数。
+     * @var integer <p>符合条件的实例个数。</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeGlobalAcceleratorsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $GlobalAcceleratorSet 符合条件的全球加速实例。
-     * @param integer $TotalCount 符合条件的实例个数。
+     * @param array $GlobalAcceleratorSet <p>符合条件的全球加速实例。</p>
+     * @param integer $TotalCount <p>符合条件的实例个数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

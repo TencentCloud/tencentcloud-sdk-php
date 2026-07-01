@@ -104,6 +104,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置<p>实例所在的专用集群<code>ID</code>。</p>
  * @method string getIsolatedSource() 获取<p>实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li></p>
  * @method void setIsolatedSource(string $IsolatedSource) 设置<p>实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li></p>
+ * @method array getDisasterRecoverGroupIds() 获取<p>置放群组列表(目前仅支持一个)</p>
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置<p>置放群组列表(目前仅支持一个)</p>
  * @method GPUInfo getGPUInfo() 获取<p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
  * @method void setGPUInfo(GPUInfo $GPUInfo) 设置<p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
  * @method string getLicenseType() 获取<p>实例的操作系统许可类型，默认为TencentCloud</p>
@@ -273,6 +275,7 @@ class Instance extends AbstractModel
 
     /**
      * @var string <p>分散置放群组ID。</p>
+     * @deprecated
      */
     public $DisasterRecoverGroupId;
 
@@ -308,6 +311,11 @@ class Instance extends AbstractModel
      * @var string <p>实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li></p>
      */
     public $IsolatedSource;
+
+    /**
+     * @var array <p>置放群组列表(目前仅支持一个)</p>
+     */
+    public $DisasterRecoverGroupIds;
 
     /**
      * @var GPUInfo <p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
@@ -398,6 +406,7 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DedicatedClusterId <p>实例所在的专用集群<code>ID</code>。</p>
      * @param string $IsolatedSource <p>实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li></p>
+     * @param array $DisasterRecoverGroupIds <p>置放群组列表(目前仅支持一个)</p>
      * @param GPUInfo $GPUInfo <p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
      * @param string $LicenseType <p>实例的操作系统许可类型，默认为TencentCloud</p>
      * @param boolean $DisableApiTermination <p>实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。</p>
@@ -575,6 +584,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("IsolatedSource",$param) and $param["IsolatedSource"] !== null) {
             $this->IsolatedSource = $param["IsolatedSource"];
+        }
+
+        if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
+            $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
         }
 
         if (array_key_exists("GPUInfo",$param) and $param["GPUInfo"] !== null) {

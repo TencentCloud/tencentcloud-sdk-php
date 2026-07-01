@@ -20,27 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListAggregateDiscoveredResources返回参数结构体
  *
- * @method array getItems() 获取详情
- * @method void setItems(array $Items) 设置详情
- * @method string getNextToken() 获取下一页
+ * @method array getItems() 获取<p>详情</p>
+ * @method void setItems(array $Items) 设置<p>详情</p>
+ * @method string getNextToken() 获取<p>下一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNextToken(string $NextToken) 设置下一页
+ * @method void setNextToken(string $NextToken) 设置<p>下一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCount() 获取<p>总数</p>
+ * @method void setCount(integer $Count) 设置<p>总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListAggregateDiscoveredResourcesResponse extends AbstractModel
 {
     /**
-     * @var array 详情
+     * @var array <p>详情</p>
      */
     public $Items;
 
     /**
-     * @var string 下一页
+     * @var string <p>下一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NextToken;
+
+    /**
+     * @var integer <p>总数</p>
+     */
+    public $Count;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +55,10 @@ class ListAggregateDiscoveredResourcesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Items 详情
-     * @param string $NextToken 下一页
+     * @param array $Items <p>详情</p>
+     * @param string $NextToken <p>下一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Count <p>总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -77,6 +85,10 @@ class ListAggregateDiscoveredResourcesResponse extends AbstractModel
 
         if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
             $this->NextToken = $param["NextToken"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

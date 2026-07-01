@@ -20,417 +20,357 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 质量监控任务执行策略
  *
- * @method integer getMonitorType() 获取监控类型 2.关联生产调度, 3.离线周期检测
+ * @method integer getMonitorType() 获取<p>监控类型 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMonitorType(integer $MonitorType) 设置监控类型 2.关联生产调度, 3.离线周期检测
+ * @method void setMonitorType(integer $MonitorType) 设置<p>监控类型 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutorGroupId() 获取执行资源组ID
+ * @method string getExecutorGroupId() 获取<p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutorGroupId(string $ExecutorGroupId) 设置执行资源组ID
+ * @method void setExecutorGroupId(string $ExecutorGroupId) 设置<p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleGroupName() 获取监控任务名称
+ * @method string getRuleGroupName() 获取<p>监控任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleGroupName(string $RuleGroupName) 设置监控任务名称
+ * @method void setRuleGroupName(string $RuleGroupName) 设置<p>监控任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDatabaseName() 获取数据库名称
+ * @method string getDatabaseName() 获取<p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
+ * @method void setDatabaseName(string $DatabaseName) 设置<p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDatasourceId() 获取数据源id
+ * @method string getDatasourceId() 获取<p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatasourceId(string $DatasourceId) 设置数据源id
+ * @method void setDatasourceId(string $DatasourceId) 设置<p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTableName() 获取表名称
+ * @method string getTableName() 获取<p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableName(string $TableName) 设置表名称
+ * @method void setTableName(string $TableName) 设置<p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRuleGroupId() 获取监控任务的Id，编辑更新监控任务时必填
+ * @method integer getRuleGroupId() 获取<p>监控任务的Id，编辑更新监控任务时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleGroupId(integer $RuleGroupId) 设置监控任务的Id，编辑更新监控任务时必填
+ * @method void setRuleGroupId(integer $RuleGroupId) 设置<p>监控任务的Id，编辑更新监控任务时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecQueue() 获取计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称
+ * @method string getExecQueue() 获取<p>计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecQueue(string $ExecQueue) 设置计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称
+ * @method void setExecQueue(string $ExecQueue) 设置<p>计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutorGroupName() 获取执行资源组名称
+ * @method string getExecutorGroupName() 获取<p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutorGroupName(string $ExecutorGroupName) 设置执行资源组名称
+ * @method void setExecutorGroupName(string $ExecutorGroupName) 设置<p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTasks() 获取关联的生产调度任务列表，MonitorType=2时必填
+ * @method array getTasks() 获取<p>关联的生产调度任务列表，MonitorType=2时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTasks(array $Tasks) 设置关联的生产调度任务列表，MonitorType=2时必填
+ * @method void setTasks(array $Tasks) 设置<p>关联的生产调度任务列表，MonitorType=2时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取周期开始时间，MonitorType=3时必填
+ * @method string getStartTime() 获取<p>周期开始时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置周期开始时间，MonitorType=3时必填
+ * @method void setStartTime(string $StartTime) 设置<p>周期开始时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取周期结束时间，MonitorType=3时必填
+ * @method string getEndTime() 获取<p>周期结束时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置周期结束时间，MonitorType=3时必填
+ * @method void setEndTime(string $EndTime) 设置<p>周期结束时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCycleType() 获取调度周期类型，MonitorType=3时必填，具体可填值参考：
-I：按分钟调度
-H：按小时调度
-D：按天调度
-W：按周调度
-M：按月调度
+ * @method string getCycleType() 获取<p>调度周期类型，MonitorType=3时必填，具体可填值参考：<br>I：按分钟调度<br>H：按小时调度<br>D：按天调度<br>W：按周调度<br>M：按月调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleType(string $CycleType) 设置调度周期类型，MonitorType=3时必填，具体可填值参考：
-I：按分钟调度
-H：按小时调度
-D：按天调度
-W：按周调度
-M：按月调度
+ * @method void setCycleType(string $CycleType) 设置<p>调度周期类型，MonitorType=3时必填，具体可填值参考：<br>I：按分钟调度<br>H：按小时调度<br>D：按天调度<br>W：按周调度<br>M：按月调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDelayTime() 获取延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，
-计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）
-对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过
+ * @method integer getDelayTime() 获取<p>延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，<br>计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）<br>对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDelayTime(integer $DelayTime) 设置延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，
-计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）
-对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过
+ * @method void setDelayTime(integer $DelayTime) 设置<p>延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，<br>计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）<br>对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCycleStep() 获取间隔，MonitorType=3时必填，表示周期任务间隔时间
-周/月/天任务可选：1
-分钟任务可选：10，20，30
-小时任务可选：1，2，3，4，6，8，12
+ * @method integer getCycleStep() 获取<p>间隔，MonitorType=3时必填，表示周期任务间隔时间<br>周/月/天任务可选：1<br>分钟任务可选：10，20，30<br>小时任务可选：1，2，3，4，6，8，12</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleStep(integer $CycleStep) 设置间隔，MonitorType=3时必填，表示周期任务间隔时间
-周/月/天任务可选：1
-分钟任务可选：10，20，30
-小时任务可选：1，2，3，4，6，8，12
+ * @method void setCycleStep(integer $CycleStep) 设置<p>间隔，MonitorType=3时必填，表示周期任务间隔时间<br>周/月/天任务可选：1<br>分钟任务可选：10，20，30<br>小时任务可选：1，2，3，4，6，8，12</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskAction() 获取时间指定，主要用于调度周期为周/月的任务
-调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开
-可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；
-
-调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开
-可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行
+ * @method string getTaskAction() 获取<p>时间指定，主要用于调度周期为周/月的任务<br>调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开<br>可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；</p><p>调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开<br>可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskAction(string $TaskAction) 设置时间指定，主要用于调度周期为周/月的任务
-调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开
-可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；
-
-调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开
-可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行
+ * @method void setTaskAction(string $TaskAction) 设置<p>时间指定，主要用于调度周期为周/月的任务<br>调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开<br>可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；</p><p>调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开<br>可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecEngineType() 获取运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+ * @method string getExecEngineType() 获取<p>运行的执行引擎，不传时会请求该数据源下默认的执行引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecEngineType(string $ExecEngineType) 设置运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+ * @method void setExecEngineType(string $ExecEngineType) 设置<p>运行的执行引擎，不传时会请求该数据源下默认的执行引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecPlan() 获取执行计划
+ * @method string getExecPlan() 获取<p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecPlan(string $ExecPlan) 设置执行计划
+ * @method void setExecPlan(string $ExecPlan) 设置<p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRuleId() 获取规则id
+ * @method integer getRuleId() 获取<p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleId(integer $RuleId) 设置规则id
+ * @method void setRuleId(integer $RuleId) 设置<p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleName() 获取规则名称
+ * @method string getRuleName() 获取<p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleName(string $RuleName) 设置规则名称
+ * @method void setRuleName(string $RuleName) 设置<p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTriggerTypes() 获取触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：
-CYCLE：周期调度
-MAKE_UP：补录
-RERUN：重跑
+ * @method array getTriggerTypes() 获取<p>触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：<br>CYCLE：周期调度<br>MAKE_UP：补录<br>RERUN：重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerTypes(array $TriggerTypes) 设置触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：
-CYCLE：周期调度
-MAKE_UP：补录
-RERUN：重跑
+ * @method void setTriggerTypes(array $TriggerTypes) 设置<p>触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：<br>CYCLE：周期调度<br>MAKE_UP：补录<br>RERUN：重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDlcGroupName() 获取数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组
+ * @method string getDlcGroupName() 获取<p>数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDlcGroupName(string $DlcGroupName) 设置数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组
+ * @method void setDlcGroupName(string $DlcGroupName) 设置<p>数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchemaName() 获取schema名称
+ * @method string getSchemaName() 获取<p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchemaName(string $SchemaName) 设置schema名称
+ * @method void setSchemaName(string $SchemaName) 设置<p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取任务描述
+ * @method string getDescription() 获取<p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置任务描述
+ * @method void setDescription(string $Description) 设置<p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleTimeZone() 获取时区，默认为UTC+8
+ * @method string getScheduleTimeZone() 获取<p>时区，默认为UTC+8</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区，默认为UTC+8
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置<p>时区，默认为UTC+8</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method QualityRuleGroupConfig getGroupConfig() 获取任务监控参数
+ * @method QualityRuleGroupConfig getGroupConfig() 获取<p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupConfig(QualityRuleGroupConfig $GroupConfig) 设置任务监控参数
+ * @method void setGroupConfig(QualityRuleGroupConfig $GroupConfig) 设置<p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineParam() 获取引擎参数
+ * @method string getEngineParam() 获取<p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineParam(string $EngineParam) 设置引擎参数
+ * @method void setEngineParam(string $EngineParam) 设置<p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCatalogName() 获取数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
+ * @method string getCatalogName() 获取<p>数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCatalogName(string $CatalogName) 设置数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
+ * @method void setCatalogName(string $CatalogName) 设置<p>数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExecFailBlock() 获取<p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecFailBlock(integer $ExecFailBlock) 设置<p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class QualityRuleGroupExecStrategy extends AbstractModel
 {
     /**
-     * @var integer 监控类型 2.关联生产调度, 3.离线周期检测
+     * @var integer <p>监控类型 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorType;
 
     /**
-     * @var string 执行资源组ID
+     * @var string <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorGroupId;
 
     /**
-     * @var string 监控任务名称
+     * @var string <p>监控任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleGroupName;
 
     /**
-     * @var string 数据库名称
+     * @var string <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
     /**
-     * @var string 数据源id
+     * @var string <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceId;
 
     /**
-     * @var string 表名称
+     * @var string <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
-     * @var integer 监控任务的Id，编辑更新监控任务时必填
+     * @var integer <p>监控任务的Id，编辑更新监控任务时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleGroupId;
 
     /**
-     * @var string 计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称
+     * @var string <p>计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecQueue;
 
     /**
-     * @var string 执行资源组名称
+     * @var string <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorGroupName;
 
     /**
-     * @var array 关联的生产调度任务列表，MonitorType=2时必填
+     * @var array <p>关联的生产调度任务列表，MonitorType=2时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tasks;
 
     /**
-     * @var string 周期开始时间，MonitorType=3时必填
+     * @var string <p>周期开始时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 周期结束时间，MonitorType=3时必填
+     * @var string <p>周期结束时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 调度周期类型，MonitorType=3时必填，具体可填值参考：
-I：按分钟调度
-H：按小时调度
-D：按天调度
-W：按周调度
-M：按月调度
+     * @var string <p>调度周期类型，MonitorType=3时必填，具体可填值参考：<br>I：按分钟调度<br>H：按小时调度<br>D：按天调度<br>W：按周调度<br>M：按月调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleType;
 
     /**
-     * @var integer 延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，
-计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）
-对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过
+     * @var integer <p>延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，<br>计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）<br>对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayTime;
 
     /**
-     * @var integer 间隔，MonitorType=3时必填，表示周期任务间隔时间
-周/月/天任务可选：1
-分钟任务可选：10，20，30
-小时任务可选：1，2，3，4，6，8，12
+     * @var integer <p>间隔，MonitorType=3时必填，表示周期任务间隔时间<br>周/月/天任务可选：1<br>分钟任务可选：10，20，30<br>小时任务可选：1，2，3，4，6，8，12</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleStep;
 
     /**
-     * @var string 时间指定，主要用于调度周期为周/月的任务
-调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开
-可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；
-
-调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开
-可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行
+     * @var string <p>时间指定，主要用于调度周期为周/月的任务<br>调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开<br>可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；</p><p>调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开<br>可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskAction;
 
     /**
-     * @var string 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @var string <p>运行的执行引擎，不传时会请求该数据源下默认的执行引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecEngineType;
 
     /**
-     * @var string 执行计划
+     * @var string <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecPlan;
 
     /**
-     * @var integer 规则id
+     * @var integer <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
-     * @var array 触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：
-CYCLE：周期调度
-MAKE_UP：补录
-RERUN：重跑
+     * @var array <p>触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：<br>CYCLE：周期调度<br>MAKE_UP：补录<br>RERUN：重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerTypes;
 
     /**
-     * @var string 数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组
+     * @var string <p>数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DlcGroupName;
 
     /**
-     * @var string schema名称
+     * @var string <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchemaName;
 
     /**
-     * @var string 任务描述
+     * @var string <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 时区，默认为UTC+8
+     * @var string <p>时区，默认为UTC+8</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTimeZone;
 
     /**
-     * @var QualityRuleGroupConfig 任务监控参数
+     * @var QualityRuleGroupConfig <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupConfig;
 
     /**
-     * @var string 引擎参数
+     * @var string <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineParam;
 
     /**
-     * @var string 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
+     * @var string <p>数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CatalogName;
 
     /**
-     * @param integer $MonitorType 监控类型 2.关联生产调度, 3.离线周期检测
+     * @var integer <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutorGroupId 执行资源组ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleGroupName 监控任务名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DatabaseName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DatasourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TableName 表名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RuleGroupId 监控任务的Id，编辑更新监控任务时必填
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecQueue 计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutorGroupName 执行资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tasks 关联的生产调度任务列表，MonitorType=2时必填
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime 周期开始时间，MonitorType=3时必填
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 周期结束时间，MonitorType=3时必填
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CycleType 调度周期类型，MonitorType=3时必填，具体可填值参考：
-I：按分钟调度
-H：按小时调度
-D：按天调度
-W：按周调度
-M：按月调度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DelayTime 延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，
-计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）
-对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CycleStep 间隔，MonitorType=3时必填，表示周期任务间隔时间
-周/月/天任务可选：1
-分钟任务可选：10，20，30
-小时任务可选：1，2，3，4，6，8，12
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskAction 时间指定，主要用于调度周期为周/月的任务
-调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开
-可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；
+     */
+    public $ExecFailBlock;
 
-调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开
-可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行
+    /**
+     * @param integer $MonitorType <p>监控类型 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @param string $ExecutorGroupId <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecPlan 执行计划
+     * @param string $RuleGroupName <p>监控任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RuleId 规则id
+     * @param string $DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleName 规则名称
+     * @param string $DatasourceId <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TriggerTypes 触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：
-CYCLE：周期调度
-MAKE_UP：补录
-RERUN：重跑
+     * @param string $TableName <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DlcGroupName 数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组
+     * @param integer $RuleGroupId <p>监控任务的Id，编辑更新监控任务时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchemaName schema名称
+     * @param string $ExecQueue <p>计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 任务描述
+     * @param string $ExecutorGroupName <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleTimeZone 时区，默认为UTC+8
+     * @param array $Tasks <p>关联的生产调度任务列表，MonitorType=2时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityRuleGroupConfig $GroupConfig 任务监控参数
+     * @param string $StartTime <p>周期开始时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineParam 引擎参数
+     * @param string $EndTime <p>周期结束时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CatalogName 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
+     * @param string $CycleType <p>调度周期类型，MonitorType=3时必填，具体可填值参考：<br>I：按分钟调度<br>H：按小时调度<br>D：按天调度<br>W：按周调度<br>M：按月调度</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DelayTime <p>延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，<br>计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）<br>对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CycleStep <p>间隔，MonitorType=3时必填，表示周期任务间隔时间<br>周/月/天任务可选：1<br>分钟任务可选：10，20，30<br>小时任务可选：1，2，3，4，6，8，12</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskAction <p>时间指定，主要用于调度周期为周/月的任务<br>调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开<br>可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；</p><p>调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开<br>可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecEngineType <p>运行的执行引擎，不传时会请求该数据源下默认的执行引擎</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecPlan <p>执行计划</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleId <p>规则id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleName <p>规则名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TriggerTypes <p>触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：<br>CYCLE：周期调度<br>MAKE_UP：补录<br>RERUN：重跑</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DlcGroupName <p>数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchemaName <p>schema名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description <p>任务描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleTimeZone <p>时区，默认为UTC+8</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityRuleGroupConfig $GroupConfig <p>任务监控参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineParam <p>引擎参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogName <p>数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExecFailBlock <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -562,6 +502,10 @@ RERUN：重跑
 
         if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
             $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("ExecFailBlock",$param) and $param["ExecFailBlock"] !== null) {
+            $this->ExecFailBlock = $param["ExecFailBlock"];
         }
     }
 }

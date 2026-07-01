@@ -92,12 +92,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseOldSystemConnector(integer $UseOldSystemConnector) 设置<p>0=默认使用老的 1=使用新的</p>
  * @method string getProgramArgsAfterGzip() 获取<p>压缩参数</p>
  * @method void setProgramArgsAfterGzip(string $ProgramArgsAfterGzip) 设置<p>压缩参数</p>
- * @method integer getCheckpointTimeoutSecond() 获取<p>checkpoint 超时时间</p>
- * @method void setCheckpointTimeoutSecond(integer $CheckpointTimeoutSecond) 设置<p>checkpoint 超时时间</p>
- * @method integer getCheckpointIntervalSecond() 获取<p>checkpoint 间隔时间</p>
- * @method void setCheckpointIntervalSecond(integer $CheckpointIntervalSecond) 设置<p>checkpoint 间隔时间</p>
+ * @method integer getCheckpointTimeoutSecond() 获取<p>checkpoint 超时时间</p><p>单位：秒</p>
+ * @method void setCheckpointTimeoutSecond(integer $CheckpointTimeoutSecond) 设置<p>checkpoint 超时时间</p><p>单位：秒</p>
+ * @method integer getCheckpointIntervalSecond() 获取<p>checkpoint 间隔时间</p><p>单位：秒</p>
+ * @method void setCheckpointIntervalSecond(integer $CheckpointIntervalSecond) 设置<p>checkpoint 间隔时间</p><p>单位：秒</p>
  * @method integer getVariableReplaceMode() 获取<p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
  * @method void setVariableReplaceMode(integer $VariableReplaceMode) 设置<p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
+ * @method string getOperatorName() 获取<p>user</p>
+ * @method void setOperatorName(string $OperatorName) 设置<p>user</p>
+ * @method integer getConfigScope() 获取<p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p>
+ * @method void setConfigScope(integer $ConfigScope) 设置<p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p>
+ * @method string getStateCOSBucket() 获取<p>状态桶名字</p>
+ * @method void setStateCOSBucket(string $StateCOSBucket) 设置<p>状态桶名字</p>
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -282,12 +288,12 @@ class CreateJobConfigRequest extends AbstractModel
     public $ProgramArgsAfterGzip;
 
     /**
-     * @var integer <p>checkpoint 超时时间</p>
+     * @var integer <p>checkpoint 超时时间</p><p>单位：秒</p>
      */
     public $CheckpointTimeoutSecond;
 
     /**
-     * @var integer <p>checkpoint 间隔时间</p>
+     * @var integer <p>checkpoint 间隔时间</p><p>单位：秒</p>
      */
     public $CheckpointIntervalSecond;
 
@@ -295,6 +301,21 @@ class CreateJobConfigRequest extends AbstractModel
      * @var integer <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
      */
     public $VariableReplaceMode;
+
+    /**
+     * @var string <p>user</p>
+     */
+    public $OperatorName;
+
+    /**
+     * @var integer <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p>
+     */
+    public $ConfigScope;
+
+    /**
+     * @var string <p>状态桶名字</p>
+     */
+    public $StateCOSBucket;
 
     /**
      * @param string $JobId <p>作业Id</p>
@@ -333,9 +354,12 @@ class CreateJobConfigRequest extends AbstractModel
      * @param float $TaskManagerMem <p>TaskManager 内存</p>
      * @param integer $UseOldSystemConnector <p>0=默认使用老的 1=使用新的</p>
      * @param string $ProgramArgsAfterGzip <p>压缩参数</p>
-     * @param integer $CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
-     * @param integer $CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
+     * @param integer $CheckpointTimeoutSecond <p>checkpoint 超时时间</p><p>单位：秒</p>
+     * @param integer $CheckpointIntervalSecond <p>checkpoint 间隔时间</p><p>单位：秒</p>
      * @param integer $VariableReplaceMode <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
+     * @param string $OperatorName <p>user</p>
+     * @param integer $ConfigScope <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p>
+     * @param string $StateCOSBucket <p>状态桶名字</p>
      */
     function __construct()
     {
@@ -522,6 +546,18 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("VariableReplaceMode",$param) and $param["VariableReplaceMode"] !== null) {
             $this->VariableReplaceMode = $param["VariableReplaceMode"];
+        }
+
+        if (array_key_exists("OperatorName",$param) and $param["OperatorName"] !== null) {
+            $this->OperatorName = $param["OperatorName"];
+        }
+
+        if (array_key_exists("ConfigScope",$param) and $param["ConfigScope"] !== null) {
+            $this->ConfigScope = $param["ConfigScope"];
+        }
+
+        if (array_key_exists("StateCOSBucket",$param) and $param["StateCOSBucket"] !== null) {
+            $this->StateCOSBucket = $param["StateCOSBucket"];
         }
     }
 }

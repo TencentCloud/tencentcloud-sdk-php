@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片处理相关提示词。
  *
- * @method string getPrompt() 获取图片处理相关的prompt。
- * @method void setPrompt(string $Prompt) 设置图片处理相关的prompt。
+ * @method string getPrompt() 获取<p>图片处理相关的prompt。</p>
+ * @method void setPrompt(string $Prompt) 设置<p>图片处理相关的prompt。</p>
+ * @method string getRole() 获取<p>prompt 对应的 role。</p>
+ * @method void setRole(string $Role) 设置<p>prompt 对应的 role。</p>
  */
 class ImageProcessPrompt extends AbstractModel
 {
     /**
-     * @var string 图片处理相关的prompt。
+     * @var string <p>图片处理相关的prompt。</p>
      */
     public $Prompt;
 
     /**
-     * @param string $Prompt 图片处理相关的prompt。
+     * @var string <p>prompt 对应的 role。</p>
+     */
+    public $Role;
+
+    /**
+     * @param string $Prompt <p>图片处理相关的prompt。</p>
+     * @param string $Role <p>prompt 对应的 role。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ImageProcessPrompt extends AbstractModel
         }
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
             $this->Prompt = $param["Prompt"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

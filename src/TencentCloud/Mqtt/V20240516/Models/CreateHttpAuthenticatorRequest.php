@@ -40,6 +40,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeader(array $Header) 设置转发请求header
  * @method array getBody() 获取转发请求body
  * @method void setBody(array $Body) 设置转发请求body
+ * @method boolean getIncludingUserProperties() 获取连接UserProperty作为Header转发，默认false
+ * @method void setIncludingUserProperties(boolean $IncludingUserProperties) 设置连接UserProperty作为Header转发，默认false
+ * @method string getVpcSvcId() 获取vpcsvcId
+HTTP认证需要通过vpc网络访问时需要配置
+ * @method void setVpcSvcId(string $VpcSvcId) 设置vpcsvcId
+HTTP认证需要通过vpc网络访问时需要配置
+ * @method string getNetworkType() 获取网络连接类型
+vpc：vpc网络
+public：公网
+通过vpc网络连接需要设置VpcSvcId参数
+ * @method void setNetworkType(string $NetworkType) 设置网络连接类型
+vpc：vpc网络
+public：公网
+通过vpc网络连接需要设置VpcSvcId参数
  */
 class CreateHttpAuthenticatorRequest extends AbstractModel
 {
@@ -94,6 +108,25 @@ class CreateHttpAuthenticatorRequest extends AbstractModel
     public $Body;
 
     /**
+     * @var boolean 连接UserProperty作为Header转发，默认false
+     */
+    public $IncludingUserProperties;
+
+    /**
+     * @var string vpcsvcId
+HTTP认证需要通过vpc网络访问时需要配置
+     */
+    public $VpcSvcId;
+
+    /**
+     * @var string 网络连接类型
+vpc：vpc网络
+public：公网
+通过vpc网络连接需要设置VpcSvcId参数
+     */
+    public $NetworkType;
+
+    /**
      * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param string $Endpoint jwks服务地址
      * @param integer $Concurrency 最大并发连接数，默认8，范围：1-10
@@ -104,6 +137,13 @@ class CreateHttpAuthenticatorRequest extends AbstractModel
      * @param integer $ReadTimeout 请求超时时间，单位：秒，范围：1-30
      * @param array $Header 转发请求header
      * @param array $Body 转发请求body
+     * @param boolean $IncludingUserProperties 连接UserProperty作为Header转发，默认false
+     * @param string $VpcSvcId vpcsvcId
+HTTP认证需要通过vpc网络访问时需要配置
+     * @param string $NetworkType 网络连接类型
+vpc：vpc网络
+public：公网
+通过vpc网络连接需要设置VpcSvcId参数
      */
     function __construct()
     {
@@ -166,6 +206,18 @@ class CreateHttpAuthenticatorRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Body, $obj);
             }
+        }
+
+        if (array_key_exists("IncludingUserProperties",$param) and $param["IncludingUserProperties"] !== null) {
+            $this->IncludingUserProperties = $param["IncludingUserProperties"];
+        }
+
+        if (array_key_exists("VpcSvcId",$param) and $param["VpcSvcId"] !== null) {
+            $this->VpcSvcId = $param["VpcSvcId"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
         }
     }
 }

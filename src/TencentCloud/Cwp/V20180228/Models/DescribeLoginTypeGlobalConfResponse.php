@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoginTypeGlobalConf返回参数结构体
  *
- * @method integer getEnable() 获取<p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
- * @method void setEnable(integer $Enable) 设置<p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+ * @method integer getEnable() 获取<p>是否开启扫码登录 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+ * @method void setEnable(integer $Enable) 设置<p>是否开启扫码登录 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
  * @method integer getScope() 获取<p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
  * @method void setScope(integer $Scope) 设置<p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
  * @method integer getIncludeHostCount() 获取<p>正选主机配置数</p>
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLoginTypeGlobalConfResponse extends AbstractModel
 {
     /**
-     * @var integer <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+     * @var integer <p>是否开启扫码登录 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
      */
     public $Enable;
 
@@ -87,7 +87,7 @@ class DescribeLoginTypeGlobalConfResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Enable <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+     * @param integer $Enable <p>是否开启扫码登录 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
      * @param integer $Scope <p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
      * @param integer $IncludeHostCount <p>正选主机配置数</p>
      * @param integer $ExcludeHostCount <p>反选主机配置数</p>

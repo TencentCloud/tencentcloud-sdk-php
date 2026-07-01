@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateForwardingPolicy请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method string getListenerId() 获取监听器ID。
- * @method void setListenerId(string $ListenerId) 设置监听器ID。
- * @method string getHost() 获取域名。
- * @method void setHost(string $Host) 设置域名。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method string getListenerId() 获取<p>监听器ID。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器ID。</p>
+ * @method string getHost() 获取<p>域名。</p><p>参数格式：格式，必须满足正则表达式：^(<a href="?:[a-z0-9-]{0,61}[a-z0-9]">a-z0-9</a>?.)+[a-z]{2,}$</p><p>入参限制：长度范围是1-80。</p>
+ * @method void setHost(string $Host) 设置<p>域名。</p><p>参数格式：格式，必须满足正则表达式：^(<a href="?:[a-z0-9-]{0,61}[a-z0-9]">a-z0-9</a>?.)+[a-z]{2,}$</p><p>入参限制：长度范围是1-80。</p>
  */
 class CreateForwardingPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var string 监听器ID。
+     * @var string <p>监听器ID。</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 域名。
+     * @var string <p>域名。</p><p>参数格式：格式，必须满足正则表达式：^(<a href="?:[a-z0-9-]{0,61}[a-z0-9]">a-z0-9</a>?.)+[a-z]{2,}$</p><p>入参限制：长度范围是1-80。</p>
      */
     public $Host;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param string $ListenerId 监听器ID。
-     * @param string $Host 域名。
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param string $ListenerId <p>监听器ID。</p>
+     * @param string $Host <p>域名。</p><p>参数格式：格式，必须满足正则表达式：^(<a href="?:[a-z0-9-]{0,61}[a-z0-9]">a-z0-9</a>?.)+[a-z]{2,}$</p><p>入参限制：长度范围是1-80。</p>
      */
     function __construct()
     {

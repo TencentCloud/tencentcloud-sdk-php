@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置<p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
  * @method string getWorkSpaceId() 获取<p>工作空间 Serialid</p>
  * @method void setWorkSpaceId(string $WorkSpaceId) 设置<p>工作空间 Serialid</p>
+ * @method integer getFlatMode() 获取<p>返回形式</p><p>枚举值：</p><ul><li>0： 树形结构</li><li>1： 平铺结构</li></ul>
+ * @method void setFlatMode(integer $FlatMode) 设置<p>返回形式</p><p>枚举值：</p><ul><li>0： 树形结构</li><li>1： 平铺结构</li></ul>
  */
 class DescribeTreeJobsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeTreeJobsRequest extends AbstractModel
     public $WorkSpaceId;
 
     /**
+     * @var integer <p>返回形式</p><p>枚举值：</p><ul><li>0： 树形结构</li><li>1： 平铺结构</li></ul>
+     */
+    public $FlatMode;
+
+    /**
      * @param array $Filters <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
      * @param string $WorkSpaceId <p>工作空间 Serialid</p>
+     * @param integer $FlatMode <p>返回形式</p><p>枚举值：</p><ul><li>0： 树形结构</li><li>1： 平铺结构</li></ul>
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class DescribeTreeJobsRequest extends AbstractModel
 
         if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
             $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("FlatMode",$param) and $param["FlatMode"] !== null) {
+            $this->FlatMode = $param["FlatMode"];
         }
     }
 }

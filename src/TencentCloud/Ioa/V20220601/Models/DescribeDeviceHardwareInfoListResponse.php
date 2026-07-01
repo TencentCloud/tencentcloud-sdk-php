@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceHardwareInfoList返回参数结构体
  *
- * @method DescribeDeviceHardwareInfoListRspData getData() 获取分页的data数据
- * @method void setData(DescribeDeviceHardwareInfoListRspData $Data) 设置分页的data数据
+ * @method DescribeDeviceHardwareInfoListRspData getData() 获取<p>分页的data数据</p>
+ * @method void setData(DescribeDeviceHardwareInfoListRspData $Data) 设置<p>分页的data数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDeviceHardwareInfoListResponse extends AbstractModel
 {
     /**
-     * @var DescribeDeviceHardwareInfoListRspData 分页的data数据
+     * @var DescribeDeviceHardwareInfoListRspData <p>分页的data数据</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeDeviceHardwareInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DescribeDeviceHardwareInfoListRspData $Data 分页的data数据
+     * @param DescribeDeviceHardwareInfoListRspData $Data <p>分页的data数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

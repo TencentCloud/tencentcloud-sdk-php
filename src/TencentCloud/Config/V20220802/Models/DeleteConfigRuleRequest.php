@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteConfigRule请求参数结构体
  *
- * @method string getRuleId() 获取规则ID
- * @method void setRuleId(string $RuleId) 设置规则ID
+ * @method string getRuleId() 获取<p>规则ID</p>
+ * @method void setRuleId(string $RuleId) 设置<p>规则ID</p>
  */
 class DeleteConfigRuleRequest extends AbstractModel
 {
     /**
-     * @var string 规则ID
+     * @var string <p>规则ID</p>
      */
     public $RuleId;
 
     /**
-     * @param string $RuleId 规则ID
+     * @param string $RuleId <p>规则ID</p>
      */
     function __construct()
     {

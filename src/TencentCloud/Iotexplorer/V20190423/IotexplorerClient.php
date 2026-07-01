@@ -58,6 +58,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateStudioProductResponse CreateStudioProduct(Models\CreateStudioProductRequest $req) 为用户提供新建产品的能力，用于管理用户的设备
  * @method Models\CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomId(Models\CreateTRTCSignaturesWithRoomIdRequest $req) 创建TRTC通话参数
  * @method Models\CreateTWeSeeCallbackResponse CreateTWeSeeCallback(Models\CreateTWeSeeCallbackRequest $req) 创建 TWeSee 回调目标
+ * @method Models\CreateTWeSeeDirectUploadCredentialResponse CreateTWeSeeDirectUploadCredential(Models\CreateTWeSeeDirectUploadCredentialRequest $req) 创建 TWeSee COS 直传凭据。调用方获取临时密钥后，可将视频 / 图片上传到返回的 StoragePath 前缀下；对象上传成功后由 COS 事件触发 TWeSee 任务创建。
  * @method Models\CreateTWeSeePostPaidServiceResponse CreateTWeSeePostPaidService(Models\CreateTWeSeePostPaidServiceRequest $req) 开通 TWeSee 后付费服务
  * @method Models\CreateTWeSeeRecognitionTaskResponse CreateTWeSeeRecognitionTask(Models\CreateTWeSeeRecognitionTaskRequest $req) 创建 TWeSee 语义理解任务
  * @method Models\CreateTWeSeeRecognitionTaskWithFileResponse CreateTWeSeeRecognitionTaskWithFile(Models\CreateTWeSeeRecognitionTaskWithFileRequest $req) 同步执行 TWeSee 语义理解任务

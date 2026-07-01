@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetachConfigRuleToCompliancePack请求参数结构体
  *
- * @method string getCompliancePackId() 获取合规包ID
- * @method void setCompliancePackId(string $CompliancePackId) 设置合规包ID
- * @method string getConfigRuleId() 获取规则ID
- * @method void setConfigRuleId(string $ConfigRuleId) 设置规则ID
+ * @method string getCompliancePackId() 获取<p>合规包ID</p>
+ * @method void setCompliancePackId(string $CompliancePackId) 设置<p>合规包ID</p>
+ * @method string getConfigRuleId() 获取<p>规则ID</p>
+ * @method void setConfigRuleId(string $ConfigRuleId) 设置<p>规则ID</p>
  */
 class DetachConfigRuleToCompliancePackRequest extends AbstractModel
 {
     /**
-     * @var string 合规包ID
+     * @var string <p>合规包ID</p>
      */
     public $CompliancePackId;
 
     /**
-     * @var string 规则ID
+     * @var string <p>规则ID</p>
      */
     public $ConfigRuleId;
 
     /**
-     * @param string $CompliancePackId 合规包ID
-     * @param string $ConfigRuleId 规则ID
+     * @param string $CompliancePackId <p>合规包ID</p>
+     * @param string $ConfigRuleId <p>规则ID</p>
      */
     function __construct()
     {

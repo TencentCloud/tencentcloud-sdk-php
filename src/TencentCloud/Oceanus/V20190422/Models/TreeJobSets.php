@@ -20,130 +20,134 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自定义树结构出参作业列表
  *
- * @method string getJobId() 获取作业Id
+ * @method string getJobId() 获取<p>作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobId(string $JobId) 设置作业Id
+ * @method void setJobId(string $JobId) 设置<p>作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取作业名
+ * @method string getName() 获取<p>作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置作业名
+ * @method void setName(string $Name) 设置<p>作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getJobType() 获取作业类型
+ * @method integer getJobType() 获取<p>作业类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobType(integer $JobType) 设置作业类型
+ * @method void setJobType(integer $JobType) 设置<p>作业类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getRunningCu() 获取作业占用资源
+ * @method float getRunningCu() 获取<p>作业占用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunningCu(float $RunningCu) 设置作业占用资源
+ * @method void setRunningCu(float $RunningCu) 设置<p>作业占用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取作业状态 启动或者停止或者暂停
+ * @method integer getStatus() 获取<p>作业状态 启动或者停止或者暂停</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置作业状态 启动或者停止或者暂停
+ * @method void setStatus(integer $Status) 设置<p>作业状态 启动或者停止或者暂停</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScalingType() 获取0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
-
+ * @method integer getScalingType() 获取<p>0:代表没开启调优任务，1:开启智能调优，2:代表定时调优</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScalingType(integer $ScalingType) 设置0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
-
+ * @method void setScalingType(integer $ScalingType) 设置<p>0:代表没开启调优任务，1:开启智能调优，2:代表定时调优</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getRunningCpu() 获取RunningCpu
+ * @method float getRunningCpu() 获取<p>RunningCpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunningCpu(float $RunningCpu) 设置RunningCpu
+ * @method void setRunningCpu(float $RunningCpu) 设置<p>RunningCpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getRunningMem() 获取RunningMem
+ * @method float getRunningMem() 获取<p>RunningMem</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunningMem(float $RunningMem) 设置RunningMem
+ * @method void setRunningMem(float $RunningMem) 设置<p>RunningMem</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDecodeSqlCode() 获取sql
+ * @method string getDecodeSqlCode() 获取<p>sql</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDecodeSqlCode(string $DecodeSqlCode) 设置sql
+ * @method void setDecodeSqlCode(string $DecodeSqlCode) 设置<p>sql</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPublishedJobConfigId() 获取发布版本配置id
- * @method void setPublishedJobConfigId(integer $PublishedJobConfigId) 设置发布版本配置id
+ * @method integer getPublishedJobConfigId() 获取<p>发布版本配置id</p>
+ * @method void setPublishedJobConfigId(integer $PublishedJobConfigId) 设置<p>发布版本配置id</p>
+ * @method string getFolderPath() 获取<p>完整的文件夹路径，仅在平铺模式下返回</p>
+ * @method void setFolderPath(string $FolderPath) 设置<p>完整的文件夹路径，仅在平铺模式下返回</p>
  */
 class TreeJobSets extends AbstractModel
 {
     /**
-     * @var string 作业Id
+     * @var string <p>作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
 
     /**
-     * @var string 作业名
+     * @var string <p>作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var integer 作业类型
+     * @var integer <p>作业类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobType;
 
     /**
-     * @var float 作业占用资源
+     * @var float <p>作业占用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningCu;
 
     /**
-     * @var integer 作业状态 启动或者停止或者暂停
+     * @var integer <p>作业状态 启动或者停止或者暂停</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var integer 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
-
+     * @var integer <p>0:代表没开启调优任务，1:开启智能调优，2:代表定时调优</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScalingType;
 
     /**
-     * @var float RunningCpu
+     * @var float <p>RunningCpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningCpu;
 
     /**
-     * @var float RunningMem
+     * @var float <p>RunningMem</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningMem;
 
     /**
-     * @var string sql
+     * @var string <p>sql</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DecodeSqlCode;
 
     /**
-     * @var integer 发布版本配置id
+     * @var integer <p>发布版本配置id</p>
      */
     public $PublishedJobConfigId;
 
     /**
-     * @param string $JobId 作业Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 作业名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $JobType 作业类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $RunningCu 作业占用资源
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 作业状态 启动或者停止或者暂停
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScalingType 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+     * @var string <p>完整的文件夹路径，仅在平铺模式下返回</p>
+     */
+    public $FolderPath;
 
+    /**
+     * @param string $JobId <p>作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $RunningCpu RunningCpu
+     * @param string $Name <p>作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $RunningMem RunningMem
+     * @param integer $JobType <p>作业类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DecodeSqlCode sql
+     * @param float $RunningCu <p>作业占用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PublishedJobConfigId 发布版本配置id
+     * @param integer $Status <p>作业状态 启动或者停止或者暂停</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScalingType <p>0:代表没开启调优任务，1:开启智能调优，2:代表定时调优</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $RunningCpu <p>RunningCpu</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $RunningMem <p>RunningMem</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DecodeSqlCode <p>sql</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PublishedJobConfigId <p>发布版本配置id</p>
+     * @param string $FolderPath <p>完整的文件夹路径，仅在平铺模式下返回</p>
      */
     function __construct()
     {
@@ -196,6 +200,10 @@ class TreeJobSets extends AbstractModel
 
         if (array_key_exists("PublishedJobConfigId",$param) and $param["PublishedJobConfigId"] !== null) {
             $this->PublishedJobConfigId = $param["PublishedJobConfigId"];
+        }
+
+        if (array_key_exists("FolderPath",$param) and $param["FolderPath"] !== null) {
+            $this->FolderPath = $param["FolderPath"];
         }
     }
 }

@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListTaskVersions请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getTaskVersionType() 获取保存版本：SAVE
-提交版本：SUBMIT
-默认为SAVE
- * @method void setTaskVersionType(string $TaskVersionType) 设置保存版本：SAVE
-提交版本：SUBMIT
-默认为SAVE
- * @method integer getPageNumber() 获取请求的数据页数。默认值为1，取值大于等于1。
- * @method void setPageNumber(integer $PageNumber) 设置请求的数据页数。默认值为1，取值大于等于1。
- * @method integer getPageSize() 获取每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。
- * @method void setPageSize(integer $PageSize) 设置每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method string getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
+ * @method string getTaskVersionType() 获取<p>保存版本：SAVE<br>提交版本：SUBMIT<br>默认为SAVE</p>
+ * @method void setTaskVersionType(string $TaskVersionType) 设置<p>保存版本：SAVE<br>提交版本：SUBMIT<br>默认为SAVE</p>
+ * @method integer getPageNumber() 获取<p>请求的数据页数。默认值为1，取值大于等于1。</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>请求的数据页数。默认值为1，取值大于等于1。</p>
+ * @method integer getPageSize() 获取<p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。</p>
+ * @method boolean getUsedVersion() 获取<p>是否为使用版本</p>
+ * @method void setUsedVersion(boolean $UsedVersion) 设置<p>是否为使用版本</p>
  */
 class ListTaskVersionsRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 任务ID
+     * @var string <p>任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @var string 保存版本：SAVE
-提交版本：SUBMIT
-默认为SAVE
+     * @var string <p>保存版本：SAVE<br>提交版本：SUBMIT<br>默认为SAVE</p>
      */
     public $TaskVersionType;
 
     /**
-     * @var integer 请求的数据页数。默认值为1，取值大于等于1。
+     * @var integer <p>请求的数据页数。默认值为1，取值大于等于1。</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。
+     * @var integer <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。</p>
      */
     public $PageSize;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param string $TaskId 任务ID
-     * @param string $TaskVersionType 保存版本：SAVE
-提交版本：SUBMIT
-默认为SAVE
-     * @param integer $PageNumber 请求的数据页数。默认值为1，取值大于等于1。
-     * @param integer $PageSize 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。
+     * @var boolean <p>是否为使用版本</p>
+     */
+    public $UsedVersion;
+
+    /**
+     * @param string $ProjectId <p>项目ID</p>
+     * @param string $TaskId <p>任务ID</p>
+     * @param string $TaskVersionType <p>保存版本：SAVE<br>提交版本：SUBMIT<br>默认为SAVE</p>
+     * @param integer $PageNumber <p>请求的数据页数。默认值为1，取值大于等于1。</p>
+     * @param integer $PageSize <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。</p>
+     * @param boolean $UsedVersion <p>是否为使用版本</p>
      */
     function __construct()
     {
@@ -104,6 +104,10 @@ class ListTaskVersionsRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("UsedVersion",$param) and $param["UsedVersion"] !== null) {
+            $this->UsedVersion = $param["UsedVersion"];
         }
     }
 }

@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGeneralTaskParams(array $GeneralTaskParams) 设置<p>通用参数配置</p>
  * @method WorkflowRunConfig getTriggerWorkflowRunConfiguration() 获取<p>工作流调度运行配置</p>
  * @method void setTriggerWorkflowRunConfiguration(WorkflowRunConfig $TriggerWorkflowRunConfiguration) 设置<p>工作流调度运行配置</p>
+ * @method string getSchedulerStatus() 获取<p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+ * @method void setSchedulerStatus(string $SchedulerStatus) 设置<p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+ * @method string getTriggerMode() 获取<p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+ * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
  */
 class CreateTriggerWorkflowRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class CreateTriggerWorkflowRequest extends AbstractModel
     public $TriggerWorkflowRunConfiguration;
 
     /**
+     * @var string <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+     */
+    public $SchedulerStatus;
+
+    /**
+     * @var string <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     */
+    public $TriggerMode;
+
+    /**
      * @param string $ProjectId <p>项目ID</p>
      * @param string $WorkflowName <p>工作流名称</p>
      * @param string $ParentFolderPath <p>所属文件夹路径</p>
@@ -112,6 +126,8 @@ class CreateTriggerWorkflowRequest extends AbstractModel
      * @param string $BundleInfo <p>Bundle信息</p>
      * @param array $GeneralTaskParams <p>通用参数配置</p>
      * @param WorkflowRunConfig $TriggerWorkflowRunConfiguration <p>工作流调度运行配置</p>
+     * @param string $SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+     * @param string $TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
      */
     function __construct()
     {
@@ -184,6 +200,14 @@ class CreateTriggerWorkflowRequest extends AbstractModel
         if (array_key_exists("TriggerWorkflowRunConfiguration",$param) and $param["TriggerWorkflowRunConfiguration"] !== null) {
             $this->TriggerWorkflowRunConfiguration = new WorkflowRunConfig();
             $this->TriggerWorkflowRunConfiguration->deserialize($param["TriggerWorkflowRunConfiguration"]);
+        }
+
+        if (array_key_exists("SchedulerStatus",$param) and $param["SchedulerStatus"] !== null) {
+            $this->SchedulerStatus = $param["SchedulerStatus"];
+        }
+
+        if (array_key_exists("TriggerMode",$param) and $param["TriggerMode"] !== null) {
+            $this->TriggerMode = $param["TriggerMode"];
         }
     }
 }

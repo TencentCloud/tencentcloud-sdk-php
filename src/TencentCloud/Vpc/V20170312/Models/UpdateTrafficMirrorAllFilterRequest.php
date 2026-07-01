@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateTrafficMirrorAllFilter请求参数结构体
  *
- * @method string getTrafficMirrorId() 获取流量镜像实例ID
- * @method void setTrafficMirrorId(string $TrafficMirrorId) 设置流量镜像实例ID
- * @method string getDirection() 获取流量镜像采集方向
- * @method void setDirection(string $Direction) 设置流量镜像采集方向
- * @method array getCollectorSrcs() 获取流量镜像采集对象
- * @method void setCollectorSrcs(array $CollectorSrcs) 设置流量镜像采集对象
- * @method string getNatId() 获取流量镜像需要过滤的natgw实例
- * @method void setNatId(string $NatId) 设置流量镜像需要过滤的natgw实例
- * @method array getCollectorNormalFilters() 获取流量镜像需要过滤的五元组规则
- * @method void setCollectorNormalFilters(array $CollectorNormalFilters) 设置流量镜像需要过滤的五元组规则
- * @method array getIngressFilterRules() 获取流量镜像入站过滤规则。
- * @method void setIngressFilterRules(array $IngressFilterRules) 设置流量镜像入站过滤规则。
- * @method array getEgressFilterRules() 获取流量镜像出站过滤规则。
- * @method void setEgressFilterRules(array $EgressFilterRules) 设置流量镜像出站过滤规则。
+ * @method string getTrafficMirrorId() 获取<p>流量镜像实例ID</p>
+ * @method void setTrafficMirrorId(string $TrafficMirrorId) 设置<p>流量镜像实例ID</p>
+ * @method string getDirection() 获取<p>流量镜像采集方向</p>
+ * @method void setDirection(string $Direction) 设置<p>流量镜像采集方向</p>
+ * @method array getCollectorSrcs() 获取<p>流量镜像采集对象</p>
+ * @method void setCollectorSrcs(array $CollectorSrcs) 设置<p>流量镜像采集对象</p>
+ * @method string getNatId() 获取<p>流量镜像需要过滤的natgw实例</p>
+ * @method void setNatId(string $NatId) 设置<p>流量镜像需要过滤的natgw实例</p>
+ * @method array getCollectorNormalFilters() 获取<p>流量镜像需要过滤的五元组规则</p>
+ * @method void setCollectorNormalFilters(array $CollectorNormalFilters) 设置<p>流量镜像需要过滤的五元组规则</p>
+ * @method array getIngressFilterRules() 获取<p>流量镜像入站过滤规则。</p>
+ * @method void setIngressFilterRules(array $IngressFilterRules) 设置<p>流量镜像入站过滤规则。</p>
+ * @method array getEgressFilterRules() 获取<p>流量镜像出站过滤规则。</p>
+ * @method void setEgressFilterRules(array $EgressFilterRules) 设置<p>流量镜像出站过滤规则。</p>
  */
 class UpdateTrafficMirrorAllFilterRequest extends AbstractModel
 {
     /**
-     * @var string 流量镜像实例ID
+     * @var string <p>流量镜像实例ID</p>
      */
     public $TrafficMirrorId;
 
     /**
-     * @var string 流量镜像采集方向
+     * @var string <p>流量镜像采集方向</p>
      */
     public $Direction;
 
     /**
-     * @var array 流量镜像采集对象
+     * @var array <p>流量镜像采集对象</p>
      */
     public $CollectorSrcs;
 
     /**
-     * @var string 流量镜像需要过滤的natgw实例
+     * @var string <p>流量镜像需要过滤的natgw实例</p>
      */
     public $NatId;
 
     /**
-     * @var array 流量镜像需要过滤的五元组规则
+     * @var array <p>流量镜像需要过滤的五元组规则</p>
      */
     public $CollectorNormalFilters;
 
     /**
-     * @var array 流量镜像入站过滤规则。
+     * @var array <p>流量镜像入站过滤规则。</p>
      */
     public $IngressFilterRules;
 
     /**
-     * @var array 流量镜像出站过滤规则。
+     * @var array <p>流量镜像出站过滤规则。</p>
      */
     public $EgressFilterRules;
 
     /**
-     * @param string $TrafficMirrorId 流量镜像实例ID
-     * @param string $Direction 流量镜像采集方向
-     * @param array $CollectorSrcs 流量镜像采集对象
-     * @param string $NatId 流量镜像需要过滤的natgw实例
-     * @param array $CollectorNormalFilters 流量镜像需要过滤的五元组规则
-     * @param array $IngressFilterRules 流量镜像入站过滤规则。
-     * @param array $EgressFilterRules 流量镜像出站过滤规则。
+     * @param string $TrafficMirrorId <p>流量镜像实例ID</p>
+     * @param string $Direction <p>流量镜像采集方向</p>
+     * @param array $CollectorSrcs <p>流量镜像采集对象</p>
+     * @param string $NatId <p>流量镜像需要过滤的natgw实例</p>
+     * @param array $CollectorNormalFilters <p>流量镜像需要过滤的五元组规则</p>
+     * @param array $IngressFilterRules <p>流量镜像入站过滤规则。</p>
+     * @param array $EgressFilterRules <p>流量镜像出站过滤规则。</p>
      */
     function __construct()
     {

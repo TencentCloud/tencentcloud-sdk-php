@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 七层转发规则行为信息
  *
- * @method string getRuleActionType() 获取七层转发规则行为类型
+ * @method string getRuleActionType() 获取<p>七层转发规则行为类型</p><p>枚举值：</p><ul><li>ForwardGroup： 转发策略为转发至终端节点组。</li><li>Drop： 转发策略为丢弃。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleActionType(string $RuleActionType) 设置七层转发规则行为类型
+ * @method void setRuleActionType(string $RuleActionType) 设置<p>七层转发规则行为类型</p><p>枚举值：</p><ul><li>ForwardGroup： 转发策略为转发至终端节点组。</li><li>Drop： 转发策略为丢弃。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleActionValue() 获取七层转发规则行为值
+ * @method string getRuleActionValue() 获取<p>七层转发规则行为值</p><p>当RuleActionType是Drop时，此字段不用传；当RuleActionType是ForwardGroup时，此字段必传，需要填写的是自定义终端节点组ID， 不支持配置默认终端节点组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleActionValue(string $RuleActionValue) 设置七层转发规则行为值
+ * @method void setRuleActionValue(string $RuleActionValue) 设置<p>七层转发规则行为值</p><p>当RuleActionType是Drop时，此字段不用传；当RuleActionType是ForwardGroup时，此字段必传，需要填写的是自定义终端节点组ID， 不支持配置默认终端节点组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleAction extends AbstractModel
 {
     /**
-     * @var string 七层转发规则行为类型
+     * @var string <p>七层转发规则行为类型</p><p>枚举值：</p><ul><li>ForwardGroup： 转发策略为转发至终端节点组。</li><li>Drop： 转发策略为丢弃。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleActionType;
 
     /**
-     * @var string 七层转发规则行为值
+     * @var string <p>七层转发规则行为值</p><p>当RuleActionType是Drop时，此字段不用传；当RuleActionType是ForwardGroup时，此字段必传，需要填写的是自定义终端节点组ID， 不支持配置默认终端节点组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleActionValue;
 
     /**
-     * @param string $RuleActionType 七层转发规则行为类型
+     * @param string $RuleActionType <p>七层转发规则行为类型</p><p>枚举值：</p><ul><li>ForwardGroup： 转发策略为转发至终端节点组。</li><li>Drop： 转发策略为丢弃。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleActionValue 七层转发规则行为值
+     * @param string $RuleActionValue <p>七层转发规则行为值</p><p>当RuleActionType是Drop时，此字段不用传；当RuleActionType是ForwardGroup时，此字段必传，需要填写的是自定义终端节点组ID， 不支持配置默认终端节点组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

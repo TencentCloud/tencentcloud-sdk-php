@@ -61,6 +61,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DeleteIaCFileResponse DeleteIaCFile(Models\DeleteIaCFileRequest $req) 删除IaC检测文件
  * @method Models\DeleteRiskScanTaskResponse DeleteRiskScanTask(Models\DeleteRiskScanTaskRequest $req) 删除风险中心扫描任务
  * @method Models\DescribeAIAgentAssetListResponse DescribeAIAgentAssetList(Models\DescribeAIAgentAssetListRequest $req) 获取 AI agent 资产列表
+ * @method Models\DescribeAILinkSettingResponse DescribeAILinkSetting(Models\DescribeAILinkSettingRequest $req) 查询AI-Link智链引擎配置
  * @method Models\DescribeAKAnalysisDetailResponse DescribeAKAnalysisDetail(Models\DescribeAKAnalysisDetailRequest $req) 访问密钥告警记录AI分析结果详情
  * @method Models\DescribeAbnormalCallRecordResponse DescribeAbnormalCallRecord(Models\DescribeAbnormalCallRecordRequest $req) 获取调用记录列表
  * @method Models\DescribeAccessKeyAlarmResponse DescribeAccessKeyAlarm(Models\DescribeAccessKeyAlarmRequest $req) 访问密钥告警记录列表
@@ -162,6 +163,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeDspmSyncAssetsStatusResponse DescribeDspmSyncAssetsStatus(Models\DescribeDspmSyncAssetsStatusRequest $req) 查询Dspm同步资产状态
  * @method Models\DescribeDspmSyncUsersStatusResponse DescribeDspmSyncUsersStatus(Models\DescribeDspmSyncUsersStatusRequest $req) 查询Dspm同步用户状态
  * @method Models\DescribeDspmWhitelistStrategyResponse DescribeDspmWhitelistStrategy(Models\DescribeDspmWhitelistStrategyRequest $req) 查询Dspm白名单策略
+ * @method Models\DescribeEDRRuleListResponse DescribeEDRRuleList(Models\DescribeEDRRuleListRequest $req) 获取EDR策略列表
+ * @method Models\DescribeEdrAlertInfoResponse DescribeEdrAlertInfo(Models\DescribeEdrAlertInfoRequest $req) 获取EDR告警详情，包含告警内容JSON、资产富化、情报富化等完整信息
+ * @method Models\DescribeEdrAlertListResponse DescribeEdrAlertList(Models\DescribeEdrAlertListRequest $req) 获取EDR告警列表
  * @method Models\DescribeExposeAssetCategoryResponse DescribeExposeAssetCategory(Models\DescribeExposeAssetCategoryRequest $req) 云边界分析资产分类
  * @method Models\DescribeExposePathResponse DescribeExposePath(Models\DescribeExposePathRequest $req) 查询云边界分析路径节点
  * @method Models\DescribeExposuresResponse DescribeExposures(Models\DescribeExposuresRequest $req) 云边界分析资产列表
@@ -224,6 +228,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeVulRiskListResponse DescribeVulRiskList(Models\DescribeVulRiskListRequest $req) 查询云边界分析-暴露路径下主机节点的漏洞列表
  * @method Models\DescribeVulViewVulRiskListResponse DescribeVulViewVulRiskList(Models\DescribeVulViewVulRiskListRequest $req) 获取漏洞视角的漏洞风险列表
  * @method Models\DownloadDspmExportLogResponse DownloadDspmExportLog(Models\DownloadDspmExportLogRequest $req) 下载导出日志
+ * @method Models\ModifyAILinkSettingResponse ModifyAILinkSetting(Models\ModifyAILinkSettingRequest $req) 修改AI-Link智链引擎配置
  * @method Models\ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatus(Models\ModifyAlarmRiskStatusRequest $req) 修改或者更改处置状态
  * @method Models\ModifyCosAuditMonitorAccountResponse ModifyCosAuditMonitorAccount(Models\ModifyCosAuditMonitorAccountRequest $req) 修改cos审计监测账号
  * @method Models\ModifyCosMarkInfoResponse ModifyCosMarkInfo(Models\ModifyCosMarkInfoRequest $req) 修改对象存储备注
@@ -242,6 +247,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\ModifyDspmRiskInfoResponse ModifyDspmRiskInfo(Models\ModifyDspmRiskInfoRequest $req) 修改Dspm风险信息
  * @method Models\ModifyDspmRiskStrategyResponse ModifyDspmRiskStrategy(Models\ModifyDspmRiskStrategyRequest $req) 修改Dspm风险策略
  * @method Models\ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategy(Models\ModifyDspmWhitelistStrategyRequest $req) 修改Dspm白名单策略
+ * @method Models\ModifyEDRRuleResponse ModifyEDRRule(Models\ModifyEDRRuleRequest $req) 编辑或者创建EDR策略
+ * @method Models\ModifyEdrAlertPermanentIgnoreResponse ModifyEdrAlertPermanentIgnore(Models\ModifyEdrAlertPermanentIgnoreRequest $req) 永久忽略EDR多行为告警，将告警对应的主机+规则加入AI-Link永久忽略白名单，后续同类告警将自动丢弃
  * @method Models\ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriod(Models\ModifyIaCTokenPeriodRequest $req) 修改IaC检测接入Token存储周期
  * @method Models\ModifyMachineRemarkResponse ModifyMachineRemark(Models\ModifyMachineRemarkRequest $req) 修改主机资产备注信息
  * @method Models\ModifyNotifyAssetConfigResponse ModifyNotifyAssetConfig(Models\ModifyNotifyAssetConfigRequest $req) 修改通知资产范围配置

@@ -20,31 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEidToken返回参数结构体
  *
- * @method string getEidToken() 获取一次核身流程的标识。
-- 有效时间为600秒。
-- 完成核身后，可用该标识获取验证结果信息。
- * @method void setEidToken(string $EidToken) 设置一次核身流程的标识。
-- 有效时间为600秒。
-- 完成核身后，可用该标识获取验证结果信息。
- * @method string getUrl() 获取发起核身流程的URL。
-- 用于H5场景核身。
- * @method void setUrl(string $Url) 设置发起核身流程的URL。
-- 用于H5场景核身。
+ * @method string getEidToken() 获取<p>一次核身流程的标识。</p><ul><li>有效时间为600秒。</li><li>完成核身后，可用该标识获取验证结果信息。</li></ul>
+ * @method void setEidToken(string $EidToken) 设置<p>一次核身流程的标识。</p><ul><li>有效时间为600秒。</li><li>完成核身后，可用该标识获取验证结果信息。</li></ul>
+ * @method string getUrl() 获取<p>发起核身流程的URL。</p><ul><li>用于H5场景核身。</li></ul>
+ * @method void setUrl(string $Url) 设置<p>发起核身流程的URL。</p><ul><li>用于H5场景核身。</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetEidTokenResponse extends AbstractModel
 {
     /**
-     * @var string 一次核身流程的标识。
-- 有效时间为600秒。
-- 完成核身后，可用该标识获取验证结果信息。
+     * @var string <p>一次核身流程的标识。</p><ul><li>有效时间为600秒。</li><li>完成核身后，可用该标识获取验证结果信息。</li></ul>
      */
     public $EidToken;
 
     /**
-     * @var string 发起核身流程的URL。
-- 用于H5场景核身。
+     * @var string <p>发起核身流程的URL。</p><ul><li>用于H5场景核身。</li></ul>
      */
     public $Url;
 
@@ -54,11 +45,8 @@ class GetEidTokenResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $EidToken 一次核身流程的标识。
-- 有效时间为600秒。
-- 完成核身后，可用该标识获取验证结果信息。
-     * @param string $Url 发起核身流程的URL。
-- 用于H5场景核身。
+     * @param string $EidToken <p>一次核身流程的标识。</p><ul><li>有效时间为600秒。</li><li>完成核身后，可用该标识获取验证结果信息。</li></ul>
+     * @param string $Url <p>发起核身流程的URL。</p><ul><li>用于H5场景核身。</li></ul>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,118 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEidToken请求参数结构体
  *
- * @method string getMerchantId() 获取EID商户ID。
-- 商户ID通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
-- 商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。
-- 必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。
- * @method void setMerchantId(string $MerchantId) 设置EID商户ID。
-- 商户ID通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
-- 商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。
-- 必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。
- * @method string getIdCard() 获取身份标识。
-- 未使用OCR服务时，必须传入。
-- 规则：a-z，A-Z，0-9组合。
-- 最长长度32位。
- * @method void setIdCard(string $IdCard) 设置身份标识。
-- 未使用OCR服务时，必须传入。
-- 规则：a-z，A-Z，0-9组合。
-- 最长长度32位。
- * @method string getName() 获取姓名。
-- 未使用OCR服务时，必须传入。
-- 最长长度32位。
-- 中文请使用UTF-8编码。
- * @method void setName(string $Name) 设置姓名。
-- 未使用OCR服务时，必须传入。
-- 最长长度32位。
-- 中文请使用UTF-8编码。
- * @method string getExtra() 获取透传字段，在获取验证结果时返回。
-- 最长长度1024位。
- * @method void setExtra(string $Extra) 设置透传字段，在获取验证结果时返回。
-- 最长长度1024位。
- * @method GetEidTokenConfig getConfig() 获取小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
- * @method void setConfig(GetEidTokenConfig $Config) 设置小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
- * @method string getRedirectUrl() 获取用户从Url中进入核身认证结束后重定向的回调链接地址。
-- 最长长度1024位。
-- EidToken会在该链接的query参数中。
- * @method void setRedirectUrl(string $RedirectUrl) 设置用户从Url中进入核身认证结束后重定向的回调链接地址。
-- 最长长度1024位。
-- EidToken会在该链接的query参数中。
- * @method Encryption getEncryption() 获取敏感数据加密信息。
-- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。
-- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method string getMerchantId() 获取<p>EID商户ID。</p><ul><li>商户ID通过人脸核身控制台<a href="https://console.cloud.tencent.com/faceid/access">自助接入</a>申请。</li><li>商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。</li><li>必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。</li></ul>
+ * @method void setMerchantId(string $MerchantId) 设置<p>EID商户ID。</p><ul><li>商户ID通过人脸核身控制台<a href="https://console.cloud.tencent.com/faceid/access">自助接入</a>申请。</li><li>商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。</li><li>必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。</li></ul>
+ * @method string getIdCard() 获取<p>身份标识。</p><ul><li>未使用OCR服务时，必须传入。</li><li>规则：a-z，A-Z，0-9组合。</li><li>最长长度32位。</li></ul>
+ * @method void setIdCard(string $IdCard) 设置<p>身份标识。</p><ul><li>未使用OCR服务时，必须传入。</li><li>规则：a-z，A-Z，0-9组合。</li><li>最长长度32位。</li></ul>
+ * @method string getName() 获取<p>姓名。</p><ul><li>未使用OCR服务时，必须传入。</li><li>最长长度32位。</li><li>中文请使用UTF-8编码。</li></ul>
+ * @method void setName(string $Name) 设置<p>姓名。</p><ul><li>未使用OCR服务时，必须传入。</li><li>最长长度32位。</li><li>中文请使用UTF-8编码。</li></ul>
+ * @method string getExtra() 获取<p>透传字段，在获取验证结果时返回。</p><ul><li>最长长度1024位。</li></ul>
+ * @method void setExtra(string $Extra) 设置<p>透传字段，在获取验证结果时返回。</p><ul><li>最长长度1024位。</li></ul>
+ * @method GetEidTokenConfig getConfig() 获取<p>小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。</p>
+ * @method void setConfig(GetEidTokenConfig $Config) 设置<p>小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。</p>
+ * @method string getRedirectUrl() 获取<p>用户从Url中进入核身认证结束后重定向的回调链接地址。</p><ul><li>最长长度1024位。</li><li>EidToken会在该链接的query参数中。</li></ul>
+ * @method void setRedirectUrl(string $RedirectUrl) 设置<p>用户从Url中进入核身认证结束后重定向的回调链接地址。</p><ul><li>最长长度1024位。</li><li>EidToken会在该链接的query参数中。</li></ul>
+ * @method Encryption getEncryption() 获取<p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
+ * @method void setEncryption(Encryption $Encryption) 设置<p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
  */
 class GetEidTokenRequest extends AbstractModel
 {
     /**
-     * @var string EID商户ID。
-- 商户ID通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
-- 商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。
-- 必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。
+     * @var string <p>EID商户ID。</p><ul><li>商户ID通过人脸核身控制台<a href="https://console.cloud.tencent.com/faceid/access">自助接入</a>申请。</li><li>商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。</li><li>必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。</li></ul>
      */
     public $MerchantId;
 
     /**
-     * @var string 身份标识。
-- 未使用OCR服务时，必须传入。
-- 规则：a-z，A-Z，0-9组合。
-- 最长长度32位。
+     * @var string <p>身份标识。</p><ul><li>未使用OCR服务时，必须传入。</li><li>规则：a-z，A-Z，0-9组合。</li><li>最长长度32位。</li></ul>
      */
     public $IdCard;
 
     /**
-     * @var string 姓名。
-- 未使用OCR服务时，必须传入。
-- 最长长度32位。
-- 中文请使用UTF-8编码。
+     * @var string <p>姓名。</p><ul><li>未使用OCR服务时，必须传入。</li><li>最长长度32位。</li><li>中文请使用UTF-8编码。</li></ul>
      */
     public $Name;
 
     /**
-     * @var string 透传字段，在获取验证结果时返回。
-- 最长长度1024位。
+     * @var string <p>透传字段，在获取验证结果时返回。</p><ul><li>最长长度1024位。</li></ul>
      */
     public $Extra;
 
     /**
-     * @var GetEidTokenConfig 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
+     * @var GetEidTokenConfig <p>小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。</p>
      */
     public $Config;
 
     /**
-     * @var string 用户从Url中进入核身认证结束后重定向的回调链接地址。
-- 最长长度1024位。
-- EidToken会在该链接的query参数中。
+     * @var string <p>用户从Url中进入核身认证结束后重定向的回调链接地址。</p><ul><li>最长长度1024位。</li><li>EidToken会在该链接的query参数中。</li></ul>
      */
     public $RedirectUrl;
 
     /**
-     * @var Encryption 敏感数据加密信息。
-- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @var Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     public $Encryption;
 
     /**
-     * @param string $MerchantId EID商户ID。
-- 商户ID通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
-- 商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。
-- 必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。
-     * @param string $IdCard 身份标识。
-- 未使用OCR服务时，必须传入。
-- 规则：a-z，A-Z，0-9组合。
-- 最长长度32位。
-     * @param string $Name 姓名。
-- 未使用OCR服务时，必须传入。
-- 最长长度32位。
-- 中文请使用UTF-8编码。
-     * @param string $Extra 透传字段，在获取验证结果时返回。
-- 最长长度1024位。
-     * @param GetEidTokenConfig $Config 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
-     * @param string $RedirectUrl 用户从Url中进入核身认证结束后重定向的回调链接地址。
-- 最长长度1024位。
-- EidToken会在该链接的query参数中。
-     * @param Encryption $Encryption 敏感数据加密信息。
-- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param string $MerchantId <p>EID商户ID。</p><ul><li>商户ID通过人脸核身控制台<a href="https://console.cloud.tencent.com/faceid/access">自助接入</a>申请。</li><li>商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。</li><li>必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。</li></ul>
+     * @param string $IdCard <p>身份标识。</p><ul><li>未使用OCR服务时，必须传入。</li><li>规则：a-z，A-Z，0-9组合。</li><li>最长长度32位。</li></ul>
+     * @param string $Name <p>姓名。</p><ul><li>未使用OCR服务时，必须传入。</li><li>最长长度32位。</li><li>中文请使用UTF-8编码。</li></ul>
+     * @param string $Extra <p>透传字段，在获取验证结果时返回。</p><ul><li>最长长度1024位。</li></ul>
+     * @param GetEidTokenConfig $Config <p>小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。</p>
+     * @param string $RedirectUrl <p>用户从Url中进入核身认证结束后重定向的回调链接地址。</p><ul><li>最长长度1024位。</li><li>EidToken会在该链接的query参数中。</li></ul>
+     * @param Encryption $Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     function __construct()
     {

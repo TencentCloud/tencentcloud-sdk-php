@@ -53,6 +53,11 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\CreateAigcCustomElementResponse CreateAigcCustomElement(Models\CreateAigcCustomElementRequest $req) 调用该接口，针对指定模型进行主体创建。
  * @method Models\CreateAigcCustomVoiceResponse CreateAigcCustomVoice(Models\CreateAigcCustomVoiceRequest $req) 该接口用于创建 AIGC 自定义音色。注意，调用本接口会产生创建自定义音色费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#5e5217e8-29fc-467e-ac2d-853648f988b7)。
  * @method Models\CreateAigcImageTaskResponse CreateAigcImageTask(Models\CreateAigcImageTaskRequest $req) 该接口用于[生成 AIGC 图片](https://cloud.tencent.com/document/product/266/124473)。默认限制1个并发处理，接口调用会产生实际费用，请参考点播 [AIGC 生图片计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
+ * @method Models\CreateAigcQuotaResponse CreateAigcQuota(Models\CreateAigcQuotaRequest $req) 用于创建并启用 AIGC 配额配置，配额用量从启用配额功能时开始累计，达到限额后将无法继续使用 AIGC 功能。
+
+如果删除配额后重新启用，用量将清零并重新计算。
+
+由于AGC内客生成为异步任务，无法获取实时用量数据，因此配额限制存在一定误差，无法实现与设置额度完全精准的控制。
  * @method Models\CreateAigcSubjectResponse CreateAigcSubject(Models\CreateAigcSubjectRequest $req) 该接口用于创建 AIGC 自定义主体（Vidu）。注意，调用本接口会产生费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
  * @method Models\CreateAigcVideoRedrawTaskResponse CreateAigcVideoRedrawTask(Models\CreateAigcVideoRedrawTaskRequest $req) 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用</b>，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
  * @method Models\CreateAigcVideoTaskResponse CreateAigcVideoTask(Models\CreateAigcVideoTaskRequest $req) 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。默认限制1个并发处理，接口调用会产生实际费用，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
@@ -129,6 +134,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(Models\DeleteAdaptiveDynamicStreamingTemplateRequest $req) 删除转自适应码流模板
  * @method Models\DeleteAigcAdvancedCustomElementResponse DeleteAigcAdvancedCustomElement(Models\DeleteAigcAdvancedCustomElementRequest $req) 该接口用于删除 AIGC 高级自定义主体。
  * @method Models\DeleteAigcApiTokenResponse DeleteAigcApiToken(Models\DeleteAigcApiTokenRequest $req) 删除 AIGC API Token
+ * @method Models\DeleteAigcQuotaResponse DeleteAigcQuota(Models\DeleteAigcQuotaRequest $req) 用于删除 AIGC 配额配置，删除后，将不再限制 AIGC 任务的发起。
+
+如果删除配额后重新启用，用量将清零并重新计算。
  * @method Models\DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(Models\DeleteAnimatedGraphicsTemplateRequest $req) 删除用户自定义转动图模板。
  * @method Models\DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplate(Models\DeleteBlindWatermarkTemplateRequest $req) 删除用户自定义数字水印模板。
  * @method Models\DeleteCLSTopicResponse DeleteCLSTopic(Models\DeleteCLSTopicRequest $req) 删除点播开通的日志主题。
@@ -177,6 +185,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\DescribeAigcApiTokensResponse DescribeAigcApiTokens(Models\DescribeAigcApiTokensRequest $req) 查询 AIGC API Token 列表。创建或删除后数据同步有延时，约30秒后可查询最新数据。
  * @method Models\DescribeAigcFaceInfoResponse DescribeAigcFaceInfo(Models\DescribeAigcFaceInfoRequest $req) 该接口用于获取 AIGC 人脸信息。注意，调用本接口会产生人脸识别费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
  * @method Models\DescribeAigcFaceInfoAsyncResponse DescribeAigcFaceInfoAsync(Models\DescribeAigcFaceInfoAsyncRequest $req) 该接口用于异步获取 AIGC 人脸信息。注意，调用本接口会产生人脸识别费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+ * @method Models\DescribeAigcQuotasResponse DescribeAigcQuotas(Models\DescribeAigcQuotasRequest $req) 用于查询 AIGC 配额配置。
  * @method Models\DescribeAigcUsageDataResponse DescribeAigcUsageData(Models\DescribeAigcUsageDataRequest $req) 该接口返回查询时间范围内AIGC的统计信息。
    1. 可以查询最近365天内的AIGC统计数据。
    2. 查询时间跨度不超过90天。
@@ -391,6 +400,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
 注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
  * @method Models\ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(Models\ModifyAIRecognitionTemplateRequest $req) 修改用户自定义音视频内容识别模板。
  * @method Models\ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(Models\ModifyAdaptiveDynamicStreamingTemplateRequest $req) 修改转自适应码流模板
+ * @method Models\ModifyAigcQuotaResponse ModifyAigcQuota(Models\ModifyAigcQuotaRequest $req) 用于编辑 AIGC 配额配置，配额用量从启用配额功能时开始累计，达到限额后将无法继续使用 AIGC 功能。
+
+由于AGC内客生成为异步任务，无法获取实时用量数据，因此配额限制存在一定误差，无法实现与设置额度完全精准的控制。
  * @method Models\ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(Models\ModifyAnimatedGraphicsTemplateRequest $req) 修改用户自定义转动图模板。
  * @method Models\ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplate(Models\ModifyBlindWatermarkTemplateRequest $req) 修改用户自定义数字水印模板，数字水印类型不允许修改。
  * @method Models\ModifyClassResponse ModifyClass(Models\ModifyClassRequest $req) 修改媒体分类属性。

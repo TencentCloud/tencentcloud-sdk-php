@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateForwardingPolicy返回参数结构体
  *
- * @method string getTaskId() 获取异步任务ID。
- * @method void setTaskId(string $TaskId) 设置异步任务ID。
- * @method string getForwardingPolicyId() 获取七层转发策略ID。
- * @method void setForwardingPolicyId(string $ForwardingPolicyId) 设置七层转发策略ID。
+ * @method string getTaskId() 获取<p>异步任务ID。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>异步任务ID。</p>
+ * @method string getForwardingPolicyId() 获取<p>七层转发策略ID。</p>
+ * @method void setForwardingPolicyId(string $ForwardingPolicyId) 设置<p>七层转发策略ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateForwardingPolicyResponse extends AbstractModel
 {
     /**
-     * @var string 异步任务ID。
+     * @var string <p>异步任务ID。</p>
      */
     public $TaskId;
 
     /**
-     * @var string 七层转发策略ID。
+     * @var string <p>七层转发策略ID。</p>
      */
     public $ForwardingPolicyId;
 
@@ -45,8 +45,8 @@ class CreateForwardingPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 异步任务ID。
-     * @param string $ForwardingPolicyId 七层转发策略ID。
+     * @param string $TaskId <p>异步任务ID。</p>
+     * @param string $ForwardingPolicyId <p>七层转发策略ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

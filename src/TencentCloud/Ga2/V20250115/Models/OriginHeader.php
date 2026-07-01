@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回源Header信息
  *
- * @method string getKey() 获取键。
+ * @method string getKey() 获取<p>键。</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置键。
+ * @method void setKey(string $Key) 设置<p>键。</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取值。
+ * @method string getValue() 获取<p>值。</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置值。
+ * @method void setValue(string $Value) 设置<p>值。</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class OriginHeader extends AbstractModel
 {
     /**
-     * @var string 键。
+     * @var string <p>键。</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
-     * @var string 值。
+     * @var string <p>值。</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @param string $Key 键。
+     * @param string $Key <p>键。</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 值。
+     * @param string $Value <p>值。</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

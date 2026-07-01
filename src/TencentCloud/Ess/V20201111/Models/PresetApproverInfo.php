@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
  *
- * @method string getName() 获取预设参与方姓名。
- * @method void setName(string $Name) 设置预设参与方姓名。
- * @method string getMobile() 获取预设参与方手机号。
- * @method void setMobile(string $Mobile) 设置预设参与方手机号。
- * @method string getIdCardNumber() 获取预设参与方证件号，需要和IdCardType同时传入。
-
-证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
- * @method void setIdCardNumber(string $IdCardNumber) 设置预设参与方证件号，需要和IdCardType同时传入。
-
-证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
- * @method string getIdCardType() 获取预设参与方的证件类型，需要与IdCardNumber同时传入。
-
-证件类型，支持以下类型
-<ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
- * @method void setIdCardType(string $IdCardType) 设置预设参与方的证件类型，需要与IdCardNumber同时传入。
-
-证件类型，支持以下类型
-<ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
+ * @method string getName() 获取<p>预设参与方姓名。</p>
+ * @method void setName(string $Name) 设置<p>预设参与方姓名。</p>
+ * @method string getMobile() 获取<p>预设参与方手机号。</p>
+ * @method void setMobile(string $Mobile) 设置<p>预设参与方手机号。</p>
+ * @method string getIdCardNumber() 获取<p>预设参与方证件号，需要和IdCardType同时传入。</p><p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
+ * @method void setIdCardNumber(string $IdCardNumber) 设置<p>预设参与方证件号，需要和IdCardType同时传入。</p><p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
+ * @method string getIdCardType() 获取<p>预设参与方的证件类型，需要与IdCardNumber同时传入。</p><p>证件类型，支持以下类型</p><ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
+ * @method void setIdCardType(string $IdCardType) 设置<p>预设参与方的证件类型，需要与IdCardNumber同时传入。</p><p>证件类型，支持以下类型</p><ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
+ * @method string getOrganizationName() 获取<p>企业用户动态签署方场景指定预设企业名称。</p><p><code>注意：1. 若为企业动态签署方场景，此参数必须要指定。2. 企业动态签署方场景暂不支持指定姓名证件手机号等参数，仅支持指定企业名称。</code></p>
+ * @method void setOrganizationName(string $OrganizationName) 设置<p>企业用户动态签署方场景指定预设企业名称。</p><p><code>注意：1. 若为企业动态签署方场景，此参数必须要指定。2. 企业动态签署方场景暂不支持指定姓名证件手机号等参数，仅支持指定企业名称。</code></p>
  */
 class PresetApproverInfo extends AbstractModel
 {
     /**
-     * @var string 预设参与方姓名。
+     * @var string <p>预设参与方姓名。</p>
      */
     public $Name;
 
     /**
-     * @var string 预设参与方手机号。
+     * @var string <p>预设参与方手机号。</p>
      */
     public $Mobile;
 
     /**
-     * @var string 预设参与方证件号，需要和IdCardType同时传入。
-
-证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
+     * @var string <p>预设参与方证件号，需要和IdCardType同时传入。</p><p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
      */
     public $IdCardNumber;
 
     /**
-     * @var string 预设参与方的证件类型，需要与IdCardNumber同时传入。
-
-证件类型，支持以下类型
-<ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
+     * @var string <p>预设参与方的证件类型，需要与IdCardNumber同时传入。</p><p>证件类型，支持以下类型</p><ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
      */
     public $IdCardType;
 
     /**
-     * @param string $Name 预设参与方姓名。
-     * @param string $Mobile 预设参与方手机号。
-     * @param string $IdCardNumber 预设参与方证件号，需要和IdCardType同时传入。
+     * @var string <p>企业用户动态签署方场景指定预设企业名称。</p><p><code>注意：1. 若为企业动态签署方场景，此参数必须要指定。2. 企业动态签署方场景暂不支持指定姓名证件手机号等参数，仅支持指定企业名称。</code></p>
+     */
+    public $OrganizationName;
 
-证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
-     * @param string $IdCardType 预设参与方的证件类型，需要与IdCardNumber同时传入。
-
-证件类型，支持以下类型
-<ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
+    /**
+     * @param string $Name <p>预设参与方姓名。</p>
+     * @param string $Mobile <p>预设参与方手机号。</p>
+     * @param string $IdCardNumber <p>预设参与方证件号，需要和IdCardType同时传入。</p><p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
+     * @param string $IdCardType <p>预设参与方的证件类型，需要与IdCardNumber同时传入。</p><p>证件类型，支持以下类型</p><ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
+     * @param string $OrganizationName <p>企业用户动态签署方场景指定预设企业名称。</p><p><code>注意：1. 若为企业动态签署方场景，此参数必须要指定。2. 企业动态签署方场景暂不支持指定姓名证件手机号等参数，仅支持指定企业名称。</code></p>
      */
     function __construct()
     {
@@ -108,6 +92,10 @@ class PresetApproverInfo extends AbstractModel
 
         if (array_key_exists("IdCardType",$param) and $param["IdCardType"] !== null) {
             $this->IdCardType = $param["IdCardType"];
+        }
+
+        if (array_key_exists("OrganizationName",$param) and $param["OrganizationName"] !== null) {
+            $this->OrganizationName = $param["OrganizationName"];
         }
     }
 }

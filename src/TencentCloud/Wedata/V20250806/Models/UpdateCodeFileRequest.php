@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodeFileConfig(CodeFileConfig $CodeFileConfig) 设置代码文件配置
  * @method string getCodeFileContent() 获取代码文件内容
  * @method void setCodeFileContent(string $CodeFileContent) 设置代码文件内容
+ * @method boolean getSubmitAction() 获取
+ * @method void setSubmitAction(boolean $SubmitAction) 设置
  */
 class UpdateCodeFileRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UpdateCodeFileRequest extends AbstractModel
     public $CodeFileContent;
 
     /**
+     * @var boolean 
+     */
+    public $SubmitAction;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $CodeFileId 代码文件ID，参数值来自CreateCodeFile接口的返回
      * @param CodeFileConfig $CodeFileConfig 代码文件配置
      * @param string $CodeFileContent 代码文件内容
+     * @param boolean $SubmitAction 
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class UpdateCodeFileRequest extends AbstractModel
 
         if (array_key_exists("CodeFileContent",$param) and $param["CodeFileContent"] !== null) {
             $this->CodeFileContent = $param["CodeFileContent"];
+        }
+
+        if (array_key_exists("SubmitAction",$param) and $param["SubmitAction"] !== null) {
+            $this->SubmitAction = $param["SubmitAction"];
         }
     }
 }

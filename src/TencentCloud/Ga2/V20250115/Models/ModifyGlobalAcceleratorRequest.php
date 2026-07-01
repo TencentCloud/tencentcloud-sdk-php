@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGlobalAccelerator请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method string getName() 获取名称，最大长度不能超过60个字节。
- * @method void setName(string $Name) 设置名称，最大长度不能超过60个字节。
- * @method string getDescription() 获取描述信息，最大长度不能超过100个字节。
- * @method void setDescription(string $Description) 设置描述信息，最大长度不能超过100个字节。
- * @method string getCrossBorderType() 获取跨境类型。
- * @method void setCrossBorderType(string $CrossBorderType) 设置跨境类型。
- * @method boolean getCrossBorderPromiseFlag() 获取代表是否跨境服务承诺。
- * @method void setCrossBorderPromiseFlag(boolean $CrossBorderPromiseFlag) 设置代表是否跨境服务承诺。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method string getName() 获取<p>名称，最大长度不能超过60个字节。</p>
+ * @method void setName(string $Name) 设置<p>名称，最大长度不能超过60个字节。</p>
+ * @method string getDescription() 获取<p>描述信息，最大长度不能超过100个字节。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息，最大长度不能超过100个字节。</p>
+ * @method string getCrossBorderType() 获取<p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
+ * @method void setCrossBorderType(string $CrossBorderType) 设置<p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
+ * @method boolean getCrossBorderPromiseFlag() 获取<p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
+ * @method void setCrossBorderPromiseFlag(boolean $CrossBorderPromiseFlag) 设置<p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
  */
 class ModifyGlobalAcceleratorRequest extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var string 名称，最大长度不能超过60个字节。
+     * @var string <p>名称，最大长度不能超过60个字节。</p>
      */
     public $Name;
 
     /**
-     * @var string 描述信息，最大长度不能超过100个字节。
+     * @var string <p>描述信息，最大长度不能超过100个字节。</p>
      */
     public $Description;
 
     /**
-     * @var string 跨境类型。
+     * @var string <p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
      */
     public $CrossBorderType;
 
     /**
-     * @var boolean 代表是否跨境服务承诺。
+     * @var boolean <p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
      */
     public $CrossBorderPromiseFlag;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param string $Name 名称，最大长度不能超过60个字节。
-     * @param string $Description 描述信息，最大长度不能超过100个字节。
-     * @param string $CrossBorderType 跨境类型。
-     * @param boolean $CrossBorderPromiseFlag 代表是否跨境服务承诺。
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param string $Name <p>名称，最大长度不能超过60个字节。</p>
+     * @param string $Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * @param string $CrossBorderType <p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
+     * @param boolean $CrossBorderPromiseFlag <p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
      */
     function __construct()
     {

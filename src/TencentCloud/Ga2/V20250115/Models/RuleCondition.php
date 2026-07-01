@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 七层转发规则条件信息
  *
- * @method string getRuleConditionType() 获取七层转发规则条件类型
+ * @method string getRuleConditionType() 获取<p>七层转发规则条件类型</p><p>枚举值：</p><ul><li>Path： Path</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleConditionType(string $RuleConditionType) 设置七层转发规则条件类型
+ * @method void setRuleConditionType(string $RuleConditionType) 设置<p>七层转发规则条件类型</p><p>枚举值：</p><ul><li>Path： Path</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRuleConditionValue() 获取七层转发规则条件值
+ * @method array getRuleConditionValue() 获取<p>七层转发规则条件值</p><p>参数格式：格式必须满足正则表达：^[a-zA-Z0-9_.-/]{1,80}$</p><p>数组长度不能超过1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleConditionValue(array $RuleConditionValue) 设置七层转发规则条件值
+ * @method void setRuleConditionValue(array $RuleConditionValue) 设置<p>七层转发规则条件值</p><p>参数格式：格式必须满足正则表达：^[a-zA-Z0-9_.-/]{1,80}$</p><p>数组长度不能超过1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleCondition extends AbstractModel
 {
     /**
-     * @var string 七层转发规则条件类型
+     * @var string <p>七层转发规则条件类型</p><p>枚举值：</p><ul><li>Path： Path</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleConditionType;
 
     /**
-     * @var array 七层转发规则条件值
+     * @var array <p>七层转发规则条件值</p><p>参数格式：格式必须满足正则表达：^[a-zA-Z0-9_.-/]{1,80}$</p><p>数组长度不能超过1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleConditionValue;
 
     /**
-     * @param string $RuleConditionType 七层转发规则条件类型
+     * @param string $RuleConditionType <p>七层转发规则条件类型</p><p>枚举值：</p><ul><li>Path： Path</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RuleConditionValue 七层转发规则条件值
+     * @param array $RuleConditionValue <p>七层转发规则条件值</p><p>参数格式：格式必须满足正则表达：^[a-zA-Z0-9_.-/]{1,80}$</p><p>数组长度不能超过1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

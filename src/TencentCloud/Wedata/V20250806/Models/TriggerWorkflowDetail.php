@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerWorkflowRunConfiguration(WorkflowRunConfig $TriggerWorkflowRunConfiguration) 设置<p>工作流运行参数配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTriggerMode() 获取<p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerWorkflowDetail extends AbstractModel
 {
@@ -144,6 +148,12 @@ class TriggerWorkflowDetail extends AbstractModel
     public $TriggerWorkflowRunConfiguration;
 
     /**
+     * @var string <p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerMode;
+
+    /**
      * @param string $WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerUin <p>责任人ID</p>
@@ -167,6 +177,8 @@ class TriggerWorkflowDetail extends AbstractModel
      * @param string $SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkflowRunConfig $TriggerWorkflowRunConfiguration <p>工作流运行参数配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,10 @@ class TriggerWorkflowDetail extends AbstractModel
         if (array_key_exists("TriggerWorkflowRunConfiguration",$param) and $param["TriggerWorkflowRunConfiguration"] !== null) {
             $this->TriggerWorkflowRunConfiguration = new WorkflowRunConfig();
             $this->TriggerWorkflowRunConfiguration->deserialize($param["TriggerWorkflowRunConfiguration"]);
+        }
+
+        if (array_key_exists("TriggerMode",$param) and $param["TriggerMode"] !== null) {
+            $this->TriggerMode = $param["TriggerMode"];
         }
     }
 }

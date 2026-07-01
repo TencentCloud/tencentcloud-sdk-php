@@ -222,6 +222,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNetEniType() 获取<p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
  * @method void setNetEniType(integer $NetEniType) 设置<p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
+ * @method array getClusterBuckets() 获取<p>桶列表信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterBuckets(array $ClusterBuckets) 设置<p>桶列表信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsolationPolicyVersion() 获取<p>集群隔离时间，0为7天，1为15天</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolationPolicyVersion(integer $IsolationPolicyVersion) 设置<p>集群隔离时间，0为7天，1为15天</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -579,6 +587,18 @@ class Cluster extends AbstractModel
     public $NetEniType;
 
     /**
+     * @var array <p>桶列表信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterBuckets;
+
+    /**
+     * @var integer <p>集群隔离时间，0为7天，1为15天</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolationPolicyVersion;
+
+    /**
      * @param string $ClusterId <p>集群 ID</p>
      * @param string $Name <p>集群名称</p>
      * @param string $Region <p>地域</p>
@@ -680,6 +700,10 @@ class Cluster extends AbstractModel
      * @param array $SecurityGroupIds <p>安全组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NetEniType <p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
+     * @param array $ClusterBuckets <p>桶列表信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsolationPolicyVersion <p>集群隔离时间，0为7天，1为15天</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -988,6 +1012,19 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("NetEniType",$param) and $param["NetEniType"] !== null) {
             $this->NetEniType = $param["NetEniType"];
+        }
+
+        if (array_key_exists("ClusterBuckets",$param) and $param["ClusterBuckets"] !== null) {
+            $this->ClusterBuckets = [];
+            foreach ($param["ClusterBuckets"] as $key => $value){
+                $obj = new ClusterBucketInfo();
+                $obj->deserialize($value);
+                array_push($this->ClusterBuckets, $obj);
+            }
+        }
+
+        if (array_key_exists("IsolationPolicyVersion",$param) and $param["IsolationPolicyVersion"] !== null) {
+            $this->IsolationPolicyVersion = $param["IsolationPolicyVersion"];
         }
     }
 }

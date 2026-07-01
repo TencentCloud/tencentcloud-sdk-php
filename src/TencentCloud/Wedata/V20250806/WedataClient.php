@@ -149,7 +149,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\ListResourceFilesResponse ListResourceFiles(Models\ListResourceFilesRequest $req) 获取资源文件列表
  * @method Models\ListResourceFoldersResponse ListResourceFolders(Models\ListResourceFoldersRequest $req) 查询资源文件文件夹列表
  * @method Models\ListResourceGroupsResponse ListResourceGroups(Models\ListResourceGroupsRequest $req) 该接口用于查询执行资源组列表
- * @method Models\ListSQLFolderContentsResponse ListSQLFolderContents(Models\ListSQLFolderContentsRequest $req) 查询数据探索文件夹树，包括文件夹下的脚本
+ * @method Models\ListSQLFolderContentsResponse ListSQLFolderContents(Models\ListSQLFolderContentsRequest $req) 查询SQL文件夹树，包括文件夹下的脚本
  * @method Models\ListSQLScriptRunsResponse ListSQLScriptRuns(Models\ListSQLScriptRunsRequest $req) 查询SQL运行记录
  * @method Models\ListSchemaResponse ListSchema(Models\ListSchemaRequest $req) 获取资产数据库Schema信息
  * @method Models\ListTableResponse ListTable(Models\ListTableRequest $req) 获取资产表信息

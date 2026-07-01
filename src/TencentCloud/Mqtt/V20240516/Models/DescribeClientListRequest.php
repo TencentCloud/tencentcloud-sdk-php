@@ -26,6 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientId(string $ClientId) 设置客户端ID
  * @method string getNumber() 获取客户端数量限制,最大1024，默认1024
  * @method void setNumber(string $Number) 设置客户端数量限制,最大1024，默认1024
+ * @method integer getOnlineStatus() 获取0:查询在线和离线客户端（默认值）
+1:查询在线客户端
+2:查询离线客户端
+ * @method void setOnlineStatus(integer $OnlineStatus) 设置0:查询在线和离线客户端（默认值）
+1:查询在线客户端
+2:查询离线客户端
+ * @method integer getMaxTimestamp() 获取在线连接：表示最后的连接时间
+离线连接：表示最后的断开连接时间
+ * @method void setMaxTimestamp(integer $MaxTimestamp) 设置在线连接：表示最后的连接时间
+离线连接：表示最后的断开连接时间
  */
 class DescribeClientListRequest extends AbstractModel
 {
@@ -45,9 +55,27 @@ class DescribeClientListRequest extends AbstractModel
     public $Number;
 
     /**
+     * @var integer 0:查询在线和离线客户端（默认值）
+1:查询在线客户端
+2:查询离线客户端
+     */
+    public $OnlineStatus;
+
+    /**
+     * @var integer 在线连接：表示最后的连接时间
+离线连接：表示最后的断开连接时间
+     */
+    public $MaxTimestamp;
+
+    /**
      * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param string $ClientId 客户端ID
      * @param string $Number 客户端数量限制,最大1024，默认1024
+     * @param integer $OnlineStatus 0:查询在线和离线客户端（默认值）
+1:查询在线客户端
+2:查询离线客户端
+     * @param integer $MaxTimestamp 在线连接：表示最后的连接时间
+离线连接：表示最后的断开连接时间
      */
     function __construct()
     {
@@ -72,6 +100,14 @@ class DescribeClientListRequest extends AbstractModel
 
         if (array_key_exists("Number",$param) and $param["Number"] !== null) {
             $this->Number = $param["Number"];
+        }
+
+        if (array_key_exists("OnlineStatus",$param) and $param["OnlineStatus"] !== null) {
+            $this->OnlineStatus = $param["OnlineStatus"];
+        }
+
+        if (array_key_exists("MaxTimestamp",$param) and $param["MaxTimestamp"] !== null) {
+            $this->MaxTimestamp = $param["MaxTimestamp"];
         }
     }
 }

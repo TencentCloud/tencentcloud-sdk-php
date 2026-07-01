@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCompliancePack请求参数结构体
  *
- * @method string getCompliancePackName() 获取合规包名称
- * @method void setCompliancePackName(string $CompliancePackName) 设置合规包名称
- * @method integer getRiskLevel() 获取风险等级
- * @method void setRiskLevel(integer $RiskLevel) 设置风险等级
- * @method string getCompliancePackId() 获取合规包ID
- * @method void setCompliancePackId(string $CompliancePackId) 设置合规包ID
- * @method array getConfigRules() 获取合规包规则
- * @method void setConfigRules(array $ConfigRules) 设置合规包规则
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
+ * @method string getCompliancePackName() 获取<p>合规包名称</p>
+ * @method void setCompliancePackName(string $CompliancePackName) 设置<p>合规包名称</p>
+ * @method integer getRiskLevel() 获取<p>风险等级</p>
+ * @method void setRiskLevel(integer $RiskLevel) 设置<p>风险等级</p>
+ * @method string getCompliancePackId() 获取<p>合规包ID</p>
+ * @method void setCompliancePackId(string $CompliancePackId) 设置<p>合规包ID</p>
+ * @method array getConfigRules() 获取<p>合规包规则</p>
+ * @method void setConfigRules(array $ConfigRules) 设置<p>合规包规则</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
  */
 class UpdateCompliancePackRequest extends AbstractModel
 {
     /**
-     * @var string 合规包名称
+     * @var string <p>合规包名称</p>
      */
     public $CompliancePackName;
 
     /**
-     * @var integer 风险等级
+     * @var integer <p>风险等级</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 合规包ID
+     * @var string <p>合规包ID</p>
      */
     public $CompliancePackId;
 
     /**
-     * @var array 合规包规则
+     * @var array <p>合规包规则</p>
      */
     public $ConfigRules;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @param string $CompliancePackName 合规包名称
-     * @param integer $RiskLevel 风险等级
-     * @param string $CompliancePackId 合规包ID
-     * @param array $ConfigRules 合规包规则
-     * @param string $Description 描述
+     * @param string $CompliancePackName <p>合规包名称</p>
+     * @param integer $RiskLevel <p>风险等级</p>
+     * @param string $CompliancePackId <p>合规包ID</p>
+     * @param array $ConfigRules <p>合规包规则</p>
+     * @param string $Description <p>描述</p>
      */
     function __construct()
     {

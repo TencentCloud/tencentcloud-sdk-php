@@ -96,6 +96,8 @@ DELETING，删除中
  * @method void setAutoSubscriptionPolicyLimit(integer $AutoSubscriptionPolicyLimit) 设置自动订阅规则条数限制
  * @method integer getMaxTopicFilterPerAutoSubscriptionPolicy() 获取单条自动订阅规则TopicFilter数限制
  * @method void setMaxTopicFilterPerAutoSubscriptionPolicy(integer $MaxTopicFilterPerAutoSubscriptionPolicy) 设置单条自动订阅规则TopicFilter数限制
+ * @method boolean getDeleteProtect() 获取集群删除保护开关
+ * @method void setDeleteProtect(boolean $DeleteProtect) 设置集群删除保护开关
  */
 class MQTTInstanceItem extends AbstractModel
 {
@@ -220,6 +222,7 @@ DELETING，删除中
 
     /**
      * @var integer 单个共享订阅组TopicFilter数限制
+     * @deprecated
      */
     public $MaxTopicFilterPerSharedSubscriptionGroup;
 
@@ -232,6 +235,11 @@ DELETING，删除中
      * @var integer 单条自动订阅规则TopicFilter数限制
      */
     public $MaxTopicFilterPerAutoSubscriptionPolicy;
+
+    /**
+     * @var boolean 集群删除保护开关
+     */
+    public $DeleteProtect;
 
     /**
      * @param string $InstanceId 实例ID
@@ -272,6 +280,7 @@ DELETING，删除中
      * @param integer $MaxTopicFilterPerSharedSubscriptionGroup 单个共享订阅组TopicFilter数限制
      * @param integer $AutoSubscriptionPolicyLimit 自动订阅规则条数限制
      * @param integer $MaxTopicFilterPerAutoSubscriptionPolicy 单条自动订阅规则TopicFilter数限制
+     * @param boolean $DeleteProtect 集群删除保护开关
      */
     function __construct()
     {
@@ -380,6 +389,10 @@ DELETING，删除中
 
         if (array_key_exists("MaxTopicFilterPerAutoSubscriptionPolicy",$param) and $param["MaxTopicFilterPerAutoSubscriptionPolicy"] !== null) {
             $this->MaxTopicFilterPerAutoSubscriptionPolicy = $param["MaxTopicFilterPerAutoSubscriptionPolicy"];
+        }
+
+        if (array_key_exists("DeleteProtect",$param) and $param["DeleteProtect"] !== null) {
+            $this->DeleteProtect = $param["DeleteProtect"];
         }
     }
 }

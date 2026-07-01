@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListDiscoveredResources请求参数结构体
  *
- * @method integer getMaxResults() 获取每页显示数量
- * @method void setMaxResults(integer $MaxResults) 设置每页显示数量
- * @method array getFilters() 获取resourceName：资源名  resourceId ：资源ID
- * @method void setFilters(array $Filters) 设置resourceName：资源名  resourceId ：资源ID
- * @method array getTags() 获取标签
- * @method void setTags(array $Tags) 设置标签
- * @method string getNextToken() 获取下一页token
- * @method void setNextToken(string $NextToken) 设置下一页token
- * @method string getOrderType() 获取排序方式 asc、desc
- * @method void setOrderType(string $OrderType) 设置排序方式 asc、desc
+ * @method integer getMaxResults() 获取<p>每页显示数量</p>
+ * @method void setMaxResults(integer $MaxResults) 设置<p>每页显示数量</p>
+ * @method array getFilters() 获取<p>resourceName：资源名  resourceId ：资源ID</p>
+ * @method void setFilters(array $Filters) 设置<p>resourceName：资源名  resourceId ：资源ID</p>
+ * @method array getTags() 获取<p>标签</p>
+ * @method void setTags(array $Tags) 设置<p>标签</p>
+ * @method string getNextToken() 获取<p>下一页token</p>
+ * @method void setNextToken(string $NextToken) 设置<p>下一页token</p>
+ * @method string getOrderType() 获取<p>排序方式 asc、desc</p>
+ * @method void setOrderType(string $OrderType) 设置<p>排序方式 asc、desc</p>
  */
 class ListDiscoveredResourcesRequest extends AbstractModel
 {
     /**
-     * @var integer 每页显示数量
+     * @var integer <p>每页显示数量</p>
      */
     public $MaxResults;
 
     /**
-     * @var array resourceName：资源名  resourceId ：资源ID
+     * @var array <p>resourceName：资源名  resourceId ：资源ID</p>
      */
     public $Filters;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
      */
     public $Tags;
 
     /**
-     * @var string 下一页token
+     * @var string <p>下一页token</p>
      */
     public $NextToken;
 
     /**
-     * @var string 排序方式 asc、desc
+     * @var string <p>排序方式 asc、desc</p>
      */
     public $OrderType;
 
     /**
-     * @param integer $MaxResults 每页显示数量
-     * @param array $Filters resourceName：资源名  resourceId ：资源ID
-     * @param array $Tags 标签
-     * @param string $NextToken 下一页token
-     * @param string $OrderType 排序方式 asc、desc
+     * @param integer $MaxResults <p>每页显示数量</p>
+     * @param array $Filters <p>resourceName：资源名  resourceId ：资源ID</p>
+     * @param array $Tags <p>标签</p>
+     * @param string $NextToken <p>下一页token</p>
+     * @param string $OrderType <p>排序方式 asc、desc</p>
      */
     function __construct()
     {

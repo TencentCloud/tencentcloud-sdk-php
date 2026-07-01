@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCacheApproverInfo(boolean $CacheApproverInfo) 设置<p>缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。</p><p>注: <code>若参与方为企业员工时，暂不支持对参与方信息进行缓存</code></p>
  * @method boolean getCanBatchReject() 获取<p>是否允许此链接中签署方批量拒签。<br> <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul></p><p>注：<code>当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。</code></p>
  * @method void setCanBatchReject(boolean $CanBatchReject) 设置<p>是否允许此链接中签署方批量拒签。<br> <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul></p><p>注：<code>当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。</code></p>
- * @method PresetApproverInfo getPresetApproverInfo() 获取<p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。</p>
- * @method void setPresetApproverInfo(PresetApproverInfo $PresetApproverInfo) 设置<p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。</p>
+ * @method PresetApproverInfo getPresetApproverInfo() 获取<p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。若为个人动态签署方，支持预设姓名、证件、手机号。若为企业员工动态签署方，仅支持预设企业名称。</p>
+ * @method void setPresetApproverInfo(PresetApproverInfo $PresetApproverInfo) 设置<p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。若为个人动态签署方，支持预设姓名、证件、手机号。若为企业员工动态签署方，仅支持预设企业名称。</p>
  * @method boolean getCanSkipReadFlow() 获取<p>是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：<code>1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。</code></p>
  * @method void setCanSkipReadFlow(boolean $CanSkipReadFlow) 设置<p>是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：<code>1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。</code></p>
  * @method integer getExpiredOn() 获取<p>链接的有效时间，单位为秒。取值范围为 30分钟（1800）-90天（7776000）。如果不传，默认有效期为30分钟。 </p><p>注意： </p><ol><li><code>出于安全性考虑，若有效期大于30分钟，同设备24小时内点击链接查看合同需要进行手机验证码校验。此校验将会扣除短信份额，不建议通过设置此值来缓存签署链接，建议在用户需要签署的时候临时生成链接。</code></li><li><code>动态签署方链接暂不支持修改过期时间。</code></li></ol>
@@ -128,7 +128,7 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
     public $CanBatchReject;
 
     /**
-     * @var PresetApproverInfo <p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。</p>
+     * @var PresetApproverInfo <p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。若为个人动态签署方，支持预设姓名、证件、手机号。若为企业员工动态签署方，仅支持预设企业名称。</p>
      */
     public $PresetApproverInfo;
 
@@ -157,7 +157,7 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
      * @param integer $VideoVerifyTimesLimit <p>用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。</p>
      * @param boolean $CacheApproverInfo <p>缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。</p><p>注: <code>若参与方为企业员工时，暂不支持对参与方信息进行缓存</code></p>
      * @param boolean $CanBatchReject <p>是否允许此链接中签署方批量拒签。<br> <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul></p><p>注：<code>当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。</code></p>
-     * @param PresetApproverInfo $PresetApproverInfo <p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。</p>
+     * @param PresetApproverInfo $PresetApproverInfo <p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。若为个人动态签署方，支持预设姓名、证件、手机号。若为企业员工动态签署方，仅支持预设企业名称。</p>
      * @param boolean $CanSkipReadFlow <p>是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：<code>1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。</code></p>
      * @param integer $ExpiredOn <p>链接的有效时间，单位为秒。取值范围为 30分钟（1800）-90天（7776000）。如果不传，默认有效期为30分钟。 </p><p>注意： </p><ol><li><code>出于安全性考虑，若有效期大于30分钟，同设备24小时内点击链接查看合同需要进行手机验证码校验。此校验将会扣除短信份额，不建议通过设置此值来缓存签署链接，建议在用户需要签署的时候临时生成链接。</code></li><li><code>动态签署方链接暂不支持修改过期时间。</code></li></ol>
      */

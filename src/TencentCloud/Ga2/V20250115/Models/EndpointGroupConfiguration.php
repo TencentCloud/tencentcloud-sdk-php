@@ -20,62 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 终端节点组配置
  *
- * @method string getName() 获取<p>名称，最大长度不能超过60个字节。</p>
- * @method void setName(string $Name) 设置<p>名称，最大长度不能超过60个字节。</p>
- * @method string getEndpointGroupRegion() 获取<p>地域。</p>
- * @method void setEndpointGroupRegion(string $EndpointGroupRegion) 设置<p>地域。</p>
+ * @method string getName() 获取<p>终端节点组名称。</p><p>最大长度不能超过128个字节。必须以字母（a-z, A-Z）或中文字符开头。</p>
+ * @method void setName(string $Name) 设置<p>终端节点组名称。</p><p>最大长度不能超过128个字节。必须以字母（a-z, A-Z）或中文字符开头。</p>
+ * @method string getEndpointGroupRegion() 获取<p>终端节点组所在地域。</p>
+ * @method void setEndpointGroupRegion(string $EndpointGroupRegion) 设置<p>终端节点组所在地域。</p>
  * @method array getEndpointConfigurations() 获取<p>终端节点配置。</p>
  * @method void setEndpointConfigurations(array $EndpointConfigurations) 设置<p>终端节点配置。</p>
- * @method string getCheckType() 获取<p>检查协议。支持&#39;TCP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p>
- * @method void setCheckType(string $CheckType) 设置<p>检查协议。支持&#39;TCP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p>
- * @method string getDescription() 获取<p>描述信息，最大长度不能超过100个字节。</p>
- * @method void setDescription(string $Description) 设置<p>描述信息，最大长度不能超过100个字节。</p>
- * @method string getCheckPort() 获取<p>检查端口。</p>
- * @method void setCheckPort(string $CheckPort) 设置<p>检查端口。</p>
- * @method string getContextType() 获取<p>检查内容。</p>
- * @method void setContextType(string $ContextType) 设置<p>检查内容。</p>
- * @method string getCheckSendContext() 获取<p>检查请求。</p>
- * @method void setCheckSendContext(string $CheckSendContext) 设置<p>检查请求。</p>
- * @method string getCheckRecvContext() 获取<p>检查返回结果。</p>
- * @method void setCheckRecvContext(string $CheckRecvContext) 设置<p>检查返回结果。</p>
- * @method boolean getEnableHealthCheck() 获取<p>是否开启健康检查。</p>
- * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置<p>是否开启健康检查。</p>
- * @method integer getConnectTimeout() 获取<p>响应超时时间。</p>
- * @method void setConnectTimeout(integer $ConnectTimeout) 设置<p>响应超时时间。</p>
- * @method integer getHealthCheckInterval() 获取<p>健康检查间隔。</p>
- * @method void setHealthCheckInterval(integer $HealthCheckInterval) 设置<p>健康检查间隔。</p>
- * @method integer getUnhealthyThreshold() 获取<p>不健康阀值。</p>
- * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) 设置<p>不健康阀值。</p>
- * @method integer getHealthyThreshold() 获取<p>健康阈值。</p>
- * @method void setHealthyThreshold(integer $HealthyThreshold) 设置<p>健康阈值。</p>
- * @method string getForwardProtocol() 获取<p>回源协议。</p>
- * @method void setForwardProtocol(string $ForwardProtocol) 设置<p>回源协议。</p>
- * @method string getCheckDomain() 获取<p>检查域名。</p>
- * @method void setCheckDomain(string $CheckDomain) 设置<p>检查域名。</p>
- * @method string getCheckPath() 获取<p>检查URL。</p>
- * @method void setCheckPath(string $CheckPath) 设置<p>检查URL。</p>
- * @method string getCheckMethod() 获取<p>请求方式。</p>
- * @method void setCheckMethod(string $CheckMethod) 设置<p>请求方式。</p>
- * @method array getStatusMask() 获取<p>状态检测码。</p>
- * @method void setStatusMask(array $StatusMask) 设置<p>状态检测码。</p>
- * @method array getPortOverrides() 获取<p>端口映射。</p>
- * @method void setPortOverrides(array $PortOverrides) 设置<p>端口映射。</p>
- * @method string getIspType() 获取<p>运用商类型。</p>
- * @method void setIspType(string $IspType) 设置<p>运用商类型。</p>
- * @method string getCipherPolicyId() 获取<p>HPPTS加密算法套件</p>
- * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>HPPTS加密算法套件</p>
- * @method string getHttpVersion() 获取<p>HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
- * @method void setHttpVersion(string $HttpVersion) 设置<p>HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+ * @method string getCheckType() 获取<p>检查协议。支持配置&#39;TCP&#39;, &#39;HTTP&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p><p>枚举值：</p><ul><li>TCP： 当终端节点组所在监听器协议是TCP时，可以选择检查协议为TCP。</li><li>HTTP： 当终端节点组所在监听器协议是HTTP或HTTPS时，可以选择检查协议为HTTP。</li><li>PING： 当终端节点组所在监听器协议是UDP时，可以选择检查协议为PING。</li><li>CUSTOM： 当终端节点组所在监听器协议是UDP或TCP时，可以选择检查协议为CUSTOM。</li></ul><p>当开启健康检查时此字段必传。</p>
+ * @method void setCheckType(string $CheckType) 设置<p>检查协议。支持配置&#39;TCP&#39;, &#39;HTTP&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p><p>枚举值：</p><ul><li>TCP： 当终端节点组所在监听器协议是TCP时，可以选择检查协议为TCP。</li><li>HTTP： 当终端节点组所在监听器协议是HTTP或HTTPS时，可以选择检查协议为HTTP。</li><li>PING： 当终端节点组所在监听器协议是UDP时，可以选择检查协议为PING。</li><li>CUSTOM： 当终端节点组所在监听器协议是UDP或TCP时，可以选择检查协议为CUSTOM。</li></ul><p>当开启健康检查时此字段必传。</p>
+ * @method string getDescription() 获取<p>描述信息。</p><p>默认值：默认值为空，代表不配置描述信息。</p><p>最大长度不能超过100个字节。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息。</p><p>默认值：默认值为空，代表不配置描述信息。</p><p>最大长度不能超过100个字节。</p>
+ * @method string getCheckPort() 获取<p>检查端口。</p><p>入参限制：范围是1-65535。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
+ * @method void setCheckPort(string $CheckPort) 设置<p>检查端口。</p><p>入参限制：范围是1-65535。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
+ * @method string getContextType() 获取<p>检查内容。支持配置&#39;TEXT&#39;。</p><p>枚举值：</p><ul><li>TEXT： 文本内容。</li></ul><p>当CheckType为CUSTOM时候，此字段必传。</p>
+ * @method void setContextType(string $ContextType) 设置<p>检查内容。支持配置&#39;TEXT&#39;。</p><p>枚举值：</p><ul><li>TEXT： 文本内容。</li></ul><p>当CheckType为CUSTOM时候，此字段必传。</p>
+ * @method string getCheckSendContext() 获取<p>检查请求。</p><p>入参限制：字节长度要在1-500范围内。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
+ * @method void setCheckSendContext(string $CheckSendContext) 设置<p>检查请求。</p><p>入参限制：字节长度要在1-500范围内。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
+ * @method string getCheckRecvContext() 获取<p>检查返回结果。</p><p>入参限制：字节长度要在1-500范围内。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
+ * @method void setCheckRecvContext(string $CheckRecvContext) 设置<p>检查返回结果。</p><p>入参限制：字节长度要在1-500范围内。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
+ * @method boolean getEnableHealthCheck() 获取<p>是否开启健康检查。</p><p>默认值：False</p>
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置<p>是否开启健康检查。</p><p>默认值：False</p>
+ * @method integer getConnectTimeout() 获取<p>响应超时时间。</p><p>取值范围：[1, 100]</p><p>默认值：2</p><p>开启健康检查时，此字段必传。</p>
+ * @method void setConnectTimeout(integer $ConnectTimeout) 设置<p>响应超时时间。</p><p>取值范围：[1, 100]</p><p>默认值：2</p><p>开启健康检查时，此字段必传。</p>
+ * @method integer getHealthCheckInterval() 获取<p>健康检查间隔。</p><p>取值范围：[5, 300]</p><p>默认值：30</p><p>开启健康检查，此字段必传。</p>
+ * @method void setHealthCheckInterval(integer $HealthCheckInterval) 设置<p>健康检查间隔。</p><p>取值范围：[5, 300]</p><p>默认值：30</p><p>开启健康检查，此字段必传。</p>
+ * @method integer getUnhealthyThreshold() 获取<p>不健康阀值。</p><p>取值范围：[1, 10]</p><p>默认值：3</p><p>开启健康检查，此字段必传。</p>
+ * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) 设置<p>不健康阀值。</p><p>取值范围：[1, 10]</p><p>默认值：3</p><p>开启健康检查，此字段必传。</p>
+ * @method integer getHealthyThreshold() 获取<p>健康阈值。</p><p>取值范围：[1, 10]</p><p>默认值：3</p><p>开启健康检查，此字段必传。</p>
+ * @method void setHealthyThreshold(integer $HealthyThreshold) 设置<p>健康阈值。</p><p>取值范围：[1, 10]</p><p>默认值：3</p><p>开启健康检查，此字段必传。</p>
+ * @method string getForwardProtocol() 获取<p>回源协议。支持配置&#39;HTTP&#39;, &#39;HTTPS&#39;。</p><p>枚举值：</p><ul><li>HTTP： HTTP回源；当终端节点组所在监听器协议是HTTP或HTTPS时可以配置HTTP。</li><li>HTTPS： HTTPS回源；当终端节点组所在监听器协议是HTTPS时可以配置HTTPS。</li></ul><p>当终端节点组所在监听器协议为HTTP或HTTPS时候，此字段必传。</p>
+ * @method void setForwardProtocol(string $ForwardProtocol) 设置<p>回源协议。支持配置&#39;HTTP&#39;, &#39;HTTPS&#39;。</p><p>枚举值：</p><ul><li>HTTP： HTTP回源；当终端节点组所在监听器协议是HTTP或HTTPS时可以配置HTTP。</li><li>HTTPS： HTTPS回源；当终端节点组所在监听器协议是HTTPS时可以配置HTTPS。</li></ul><p>当终端节点组所在监听器协议为HTTP或HTTPS时候，此字段必传。</p>
+ * @method string getCheckDomain() 获取<p>检查域名。</p><p>入参限制：字节长度范围是3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
+ * @method void setCheckDomain(string $CheckDomain) 设置<p>检查域名。</p><p>入参限制：字节长度范围是3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
+ * @method string getCheckPath() 获取<p>检查URL。</p><p>参数格式：必须满足正则：^[a-zA-Z0-9_.\-\/]{1,80}$</p><p>当CheckType是HTTP时，此字段必传。</p>
+ * @method void setCheckPath(string $CheckPath) 设置<p>检查URL。</p><p>参数格式：必须满足正则：^[a-zA-Z0-9_.\-\/]{1,80}$</p><p>当CheckType是HTTP时，此字段必传。</p>
+ * @method string getCheckMethod() 获取<p>请求方式。支持配置&#39;GET&#39;, &#39;HEAD&#39;。</p><p>枚举值：</p><ul><li>GET： 请求方式为GET。</li><li>HEAD： 请求方式为HEAD。</li></ul><p>当CheckType是HTTP时，此字段必传。</p>
+ * @method void setCheckMethod(string $CheckMethod) 设置<p>请求方式。支持配置&#39;GET&#39;, &#39;HEAD&#39;。</p><p>枚举值：</p><ul><li>GET： 请求方式为GET。</li><li>HEAD： 请求方式为HEAD。</li></ul><p>当CheckType是HTTP时，此字段必传。</p>
+ * @method array getStatusMask() 获取<p>状态检测码。支持配置&#39;http_2xx&#39;, &#39;http_3xx&#39;, &#39;http_4xx&#39;, &#39;http_5xx&#39;。</p><p>枚举值：</p><ul><li>http_2xx： 2开头的http code。</li><li>http_3xx： 3开头的http code。</li><li>http_4xx： 4开头的http code。</li><li>http_5xx： 5开头的http code。</li></ul><p>当CheckType是HTTP时，此字段必传。</p>
+ * @method void setStatusMask(array $StatusMask) 设置<p>状态检测码。支持配置&#39;http_2xx&#39;, &#39;http_3xx&#39;, &#39;http_4xx&#39;, &#39;http_5xx&#39;。</p><p>枚举值：</p><ul><li>http_2xx： 2开头的http code。</li><li>http_3xx： 3开头的http code。</li><li>http_4xx： 4开头的http code。</li><li>http_5xx： 5开头的http code。</li></ul><p>当CheckType是HTTP时，此字段必传。</p>
+ * @method array getPortOverrides() 获取<p>端口映射。</p><p>入参限制：七层支持1个端口映射，四层支持最多30个端口映射。</p>
+ * @method void setPortOverrides(array $PortOverrides) 设置<p>端口映射。</p><p>入参限制：七层支持1个端口映射，四层支持最多30个端口映射。</p>
+ * @method string getIspType() 获取<p>运营商类型。支持配置&#39;CMCC&#39;, &#39;CTCC&#39;, &#39;CUCC&#39;。</p><p>枚举值：</p><ul><li>CMCC： 中国移动</li><li>CUCC： 中国联通</li><li>CTCC： 中国电信</li></ul><p>当终端节点组地域为三网地域时，此字段必传。</p>
+ * @method void setIspType(string $IspType) 设置<p>运营商类型。支持配置&#39;CMCC&#39;, &#39;CTCC&#39;, &#39;CUCC&#39;。</p><p>枚举值：</p><ul><li>CMCC： 中国移动</li><li>CUCC： 中国联通</li><li>CTCC： 中国电信</li></ul><p>当终端节点组地域为三网地域时，此字段必传。</p>
+ * @method string getCipherPolicyId() 获取<p>HPPTS加密算法套件；支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;；</p><p>枚举值：</p><ul><li>tls_policy_1.0-2： 加密算法套件。</li><li>tls_policy_1.1-2： 加密算法套件。</li><li>tls_policy_1.2： 加密算法套件。</li><li>tls_policy_1.2_strict： 加密算法套件。</li><li>tls_policy_1.2_strict-1.3： 加密算法套件。</li></ul><p>当回源协议为HTTPS，此字段必传。</p>
+ * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>HPPTS加密算法套件；支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;；</p><p>枚举值：</p><ul><li>tls_policy_1.0-2： 加密算法套件。</li><li>tls_policy_1.1-2： 加密算法套件。</li><li>tls_policy_1.2： 加密算法套件。</li><li>tls_policy_1.2_strict： 加密算法套件。</li><li>tls_policy_1.2_strict-1.3： 加密算法套件。</li></ul><p>当回源协议为HTTPS，此字段必传。</p>
+ * @method string getHttpVersion() 获取<p>回源协议。支持配置&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;。</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul><p>当回源协议为HTTPS时，此字段必传。</p>
+ * @method void setHttpVersion(string $HttpVersion) 设置<p>回源协议。支持配置&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;。</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul><p>当回源协议为HTTPS时，此字段必传。</p>
  */
 class EndpointGroupConfiguration extends AbstractModel
 {
     /**
-     * @var string <p>名称，最大长度不能超过60个字节。</p>
+     * @var string <p>终端节点组名称。</p><p>最大长度不能超过128个字节。必须以字母（a-z, A-Z）或中文字符开头。</p>
      */
     public $Name;
 
     /**
-     * @var string <p>地域。</p>
+     * @var string <p>终端节点组所在地域。</p>
      */
     public $EndpointGroupRegion;
 
@@ -85,129 +85,129 @@ class EndpointGroupConfiguration extends AbstractModel
     public $EndpointConfigurations;
 
     /**
-     * @var string <p>检查协议。支持&#39;TCP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p>
+     * @var string <p>检查协议。支持配置&#39;TCP&#39;, &#39;HTTP&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p><p>枚举值：</p><ul><li>TCP： 当终端节点组所在监听器协议是TCP时，可以选择检查协议为TCP。</li><li>HTTP： 当终端节点组所在监听器协议是HTTP或HTTPS时，可以选择检查协议为HTTP。</li><li>PING： 当终端节点组所在监听器协议是UDP时，可以选择检查协议为PING。</li><li>CUSTOM： 当终端节点组所在监听器协议是UDP或TCP时，可以选择检查协议为CUSTOM。</li></ul><p>当开启健康检查时此字段必传。</p>
      */
     public $CheckType;
 
     /**
-     * @var string <p>描述信息，最大长度不能超过100个字节。</p>
+     * @var string <p>描述信息。</p><p>默认值：默认值为空，代表不配置描述信息。</p><p>最大长度不能超过100个字节。</p>
      */
     public $Description;
 
     /**
-     * @var string <p>检查端口。</p>
+     * @var string <p>检查端口。</p><p>入参限制：范围是1-65535。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
      */
     public $CheckPort;
 
     /**
-     * @var string <p>检查内容。</p>
+     * @var string <p>检查内容。支持配置&#39;TEXT&#39;。</p><p>枚举值：</p><ul><li>TEXT： 文本内容。</li></ul><p>当CheckType为CUSTOM时候，此字段必传。</p>
      */
     public $ContextType;
 
     /**
-     * @var string <p>检查请求。</p>
+     * @var string <p>检查请求。</p><p>入参限制：字节长度要在1-500范围内。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
      */
     public $CheckSendContext;
 
     /**
-     * @var string <p>检查返回结果。</p>
+     * @var string <p>检查返回结果。</p><p>入参限制：字节长度要在1-500范围内。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
      */
     public $CheckRecvContext;
 
     /**
-     * @var boolean <p>是否开启健康检查。</p>
+     * @var boolean <p>是否开启健康检查。</p><p>默认值：False</p>
      */
     public $EnableHealthCheck;
 
     /**
-     * @var integer <p>响应超时时间。</p>
+     * @var integer <p>响应超时时间。</p><p>取值范围：[1, 100]</p><p>默认值：2</p><p>开启健康检查时，此字段必传。</p>
      */
     public $ConnectTimeout;
 
     /**
-     * @var integer <p>健康检查间隔。</p>
+     * @var integer <p>健康检查间隔。</p><p>取值范围：[5, 300]</p><p>默认值：30</p><p>开启健康检查，此字段必传。</p>
      */
     public $HealthCheckInterval;
 
     /**
-     * @var integer <p>不健康阀值。</p>
+     * @var integer <p>不健康阀值。</p><p>取值范围：[1, 10]</p><p>默认值：3</p><p>开启健康检查，此字段必传。</p>
      */
     public $UnhealthyThreshold;
 
     /**
-     * @var integer <p>健康阈值。</p>
+     * @var integer <p>健康阈值。</p><p>取值范围：[1, 10]</p><p>默认值：3</p><p>开启健康检查，此字段必传。</p>
      */
     public $HealthyThreshold;
 
     /**
-     * @var string <p>回源协议。</p>
+     * @var string <p>回源协议。支持配置&#39;HTTP&#39;, &#39;HTTPS&#39;。</p><p>枚举值：</p><ul><li>HTTP： HTTP回源；当终端节点组所在监听器协议是HTTP或HTTPS时可以配置HTTP。</li><li>HTTPS： HTTPS回源；当终端节点组所在监听器协议是HTTPS时可以配置HTTPS。</li></ul><p>当终端节点组所在监听器协议为HTTP或HTTPS时候，此字段必传。</p>
      */
     public $ForwardProtocol;
 
     /**
-     * @var string <p>检查域名。</p>
+     * @var string <p>检查域名。</p><p>入参限制：字节长度范围是3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public $CheckDomain;
 
     /**
-     * @var string <p>检查URL。</p>
+     * @var string <p>检查URL。</p><p>参数格式：必须满足正则：^[a-zA-Z0-9_.\-\/]{1,80}$</p><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public $CheckPath;
 
     /**
-     * @var string <p>请求方式。</p>
+     * @var string <p>请求方式。支持配置&#39;GET&#39;, &#39;HEAD&#39;。</p><p>枚举值：</p><ul><li>GET： 请求方式为GET。</li><li>HEAD： 请求方式为HEAD。</li></ul><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public $CheckMethod;
 
     /**
-     * @var array <p>状态检测码。</p>
+     * @var array <p>状态检测码。支持配置&#39;http_2xx&#39;, &#39;http_3xx&#39;, &#39;http_4xx&#39;, &#39;http_5xx&#39;。</p><p>枚举值：</p><ul><li>http_2xx： 2开头的http code。</li><li>http_3xx： 3开头的http code。</li><li>http_4xx： 4开头的http code。</li><li>http_5xx： 5开头的http code。</li></ul><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public $StatusMask;
 
     /**
-     * @var array <p>端口映射。</p>
+     * @var array <p>端口映射。</p><p>入参限制：七层支持1个端口映射，四层支持最多30个端口映射。</p>
      */
     public $PortOverrides;
 
     /**
-     * @var string <p>运用商类型。</p>
+     * @var string <p>运营商类型。支持配置&#39;CMCC&#39;, &#39;CTCC&#39;, &#39;CUCC&#39;。</p><p>枚举值：</p><ul><li>CMCC： 中国移动</li><li>CUCC： 中国联通</li><li>CTCC： 中国电信</li></ul><p>当终端节点组地域为三网地域时，此字段必传。</p>
      */
     public $IspType;
 
     /**
-     * @var string <p>HPPTS加密算法套件</p>
+     * @var string <p>HPPTS加密算法套件；支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;；</p><p>枚举值：</p><ul><li>tls_policy_1.0-2： 加密算法套件。</li><li>tls_policy_1.1-2： 加密算法套件。</li><li>tls_policy_1.2： 加密算法套件。</li><li>tls_policy_1.2_strict： 加密算法套件。</li><li>tls_policy_1.2_strict-1.3： 加密算法套件。</li></ul><p>当回源协议为HTTPS，此字段必传。</p>
      */
     public $CipherPolicyId;
 
     /**
-     * @var string <p>HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     * @var string <p>回源协议。支持配置&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;。</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul><p>当回源协议为HTTPS时，此字段必传。</p>
      */
     public $HttpVersion;
 
     /**
-     * @param string $Name <p>名称，最大长度不能超过60个字节。</p>
-     * @param string $EndpointGroupRegion <p>地域。</p>
+     * @param string $Name <p>终端节点组名称。</p><p>最大长度不能超过128个字节。必须以字母（a-z, A-Z）或中文字符开头。</p>
+     * @param string $EndpointGroupRegion <p>终端节点组所在地域。</p>
      * @param array $EndpointConfigurations <p>终端节点配置。</p>
-     * @param string $CheckType <p>检查协议。支持&#39;TCP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p>
-     * @param string $Description <p>描述信息，最大长度不能超过100个字节。</p>
-     * @param string $CheckPort <p>检查端口。</p>
-     * @param string $ContextType <p>检查内容。</p>
-     * @param string $CheckSendContext <p>检查请求。</p>
-     * @param string $CheckRecvContext <p>检查返回结果。</p>
-     * @param boolean $EnableHealthCheck <p>是否开启健康检查。</p>
-     * @param integer $ConnectTimeout <p>响应超时时间。</p>
-     * @param integer $HealthCheckInterval <p>健康检查间隔。</p>
-     * @param integer $UnhealthyThreshold <p>不健康阀值。</p>
-     * @param integer $HealthyThreshold <p>健康阈值。</p>
-     * @param string $ForwardProtocol <p>回源协议。</p>
-     * @param string $CheckDomain <p>检查域名。</p>
-     * @param string $CheckPath <p>检查URL。</p>
-     * @param string $CheckMethod <p>请求方式。</p>
-     * @param array $StatusMask <p>状态检测码。</p>
-     * @param array $PortOverrides <p>端口映射。</p>
-     * @param string $IspType <p>运用商类型。</p>
-     * @param string $CipherPolicyId <p>HPPTS加密算法套件</p>
-     * @param string $HttpVersion <p>HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     * @param string $CheckType <p>检查协议。支持配置&#39;TCP&#39;, &#39;HTTP&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p><p>枚举值：</p><ul><li>TCP： 当终端节点组所在监听器协议是TCP时，可以选择检查协议为TCP。</li><li>HTTP： 当终端节点组所在监听器协议是HTTP或HTTPS时，可以选择检查协议为HTTP。</li><li>PING： 当终端节点组所在监听器协议是UDP时，可以选择检查协议为PING。</li><li>CUSTOM： 当终端节点组所在监听器协议是UDP或TCP时，可以选择检查协议为CUSTOM。</li></ul><p>当开启健康检查时此字段必传。</p>
+     * @param string $Description <p>描述信息。</p><p>默认值：默认值为空，代表不配置描述信息。</p><p>最大长度不能超过100个字节。</p>
+     * @param string $CheckPort <p>检查端口。</p><p>入参限制：范围是1-65535。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
+     * @param string $ContextType <p>检查内容。支持配置&#39;TEXT&#39;。</p><p>枚举值：</p><ul><li>TEXT： 文本内容。</li></ul><p>当CheckType为CUSTOM时候，此字段必传。</p>
+     * @param string $CheckSendContext <p>检查请求。</p><p>入参限制：字节长度要在1-500范围内。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
+     * @param string $CheckRecvContext <p>检查返回结果。</p><p>入参限制：字节长度要在1-500范围内。</p><p>当CheckType为CUSTOM时候，此字段必传。</p>
+     * @param boolean $EnableHealthCheck <p>是否开启健康检查。</p><p>默认值：False</p>
+     * @param integer $ConnectTimeout <p>响应超时时间。</p><p>取值范围：[1, 100]</p><p>默认值：2</p><p>开启健康检查时，此字段必传。</p>
+     * @param integer $HealthCheckInterval <p>健康检查间隔。</p><p>取值范围：[5, 300]</p><p>默认值：30</p><p>开启健康检查，此字段必传。</p>
+     * @param integer $UnhealthyThreshold <p>不健康阀值。</p><p>取值范围：[1, 10]</p><p>默认值：3</p><p>开启健康检查，此字段必传。</p>
+     * @param integer $HealthyThreshold <p>健康阈值。</p><p>取值范围：[1, 10]</p><p>默认值：3</p><p>开启健康检查，此字段必传。</p>
+     * @param string $ForwardProtocol <p>回源协议。支持配置&#39;HTTP&#39;, &#39;HTTPS&#39;。</p><p>枚举值：</p><ul><li>HTTP： HTTP回源；当终端节点组所在监听器协议是HTTP或HTTPS时可以配置HTTP。</li><li>HTTPS： HTTPS回源；当终端节点组所在监听器协议是HTTPS时可以配置HTTPS。</li></ul><p>当终端节点组所在监听器协议为HTTP或HTTPS时候，此字段必传。</p>
+     * @param string $CheckDomain <p>检查域名。</p><p>入参限制：字节长度范围是3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
+     * @param string $CheckPath <p>检查URL。</p><p>参数格式：必须满足正则：^[a-zA-Z0-9_.\-\/]{1,80}$</p><p>当CheckType是HTTP时，此字段必传。</p>
+     * @param string $CheckMethod <p>请求方式。支持配置&#39;GET&#39;, &#39;HEAD&#39;。</p><p>枚举值：</p><ul><li>GET： 请求方式为GET。</li><li>HEAD： 请求方式为HEAD。</li></ul><p>当CheckType是HTTP时，此字段必传。</p>
+     * @param array $StatusMask <p>状态检测码。支持配置&#39;http_2xx&#39;, &#39;http_3xx&#39;, &#39;http_4xx&#39;, &#39;http_5xx&#39;。</p><p>枚举值：</p><ul><li>http_2xx： 2开头的http code。</li><li>http_3xx： 3开头的http code。</li><li>http_4xx： 4开头的http code。</li><li>http_5xx： 5开头的http code。</li></ul><p>当CheckType是HTTP时，此字段必传。</p>
+     * @param array $PortOverrides <p>端口映射。</p><p>入参限制：七层支持1个端口映射，四层支持最多30个端口映射。</p>
+     * @param string $IspType <p>运营商类型。支持配置&#39;CMCC&#39;, &#39;CTCC&#39;, &#39;CUCC&#39;。</p><p>枚举值：</p><ul><li>CMCC： 中国移动</li><li>CUCC： 中国联通</li><li>CTCC： 中国电信</li></ul><p>当终端节点组地域为三网地域时，此字段必传。</p>
+     * @param string $CipherPolicyId <p>HPPTS加密算法套件；支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;；</p><p>枚举值：</p><ul><li>tls_policy_1.0-2： 加密算法套件。</li><li>tls_policy_1.1-2： 加密算法套件。</li><li>tls_policy_1.2： 加密算法套件。</li><li>tls_policy_1.2_strict： 加密算法套件。</li><li>tls_policy_1.2_strict-1.3： 加密算法套件。</li></ul><p>当回源协议为HTTPS，此字段必传。</p>
+     * @param string $HttpVersion <p>回源协议。支持配置&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;。</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul><p>当回源协议为HTTPS时，此字段必传。</p>
      */
     function __construct()
     {

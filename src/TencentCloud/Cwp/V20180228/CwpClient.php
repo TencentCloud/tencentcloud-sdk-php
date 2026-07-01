@@ -239,7 +239,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeLogStorageRecordResponse DescribeLogStorageRecord(Models\DescribeLogStorageRecordRequest $req) 获取日志存储量记录
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 获取日志检索容量使用统计
  * @method Models\DescribeLogTypeResponse DescribeLogType(Models\DescribeLogTypeRequest $req) 日志分析功能-获取日志类型，使用该接口返回的结果暂时可过滤的日志类型
- * @method Models\DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConf(Models\DescribeLoginTypeGlobalConfRequest $req) 获取防卸载全局配置
+ * @method Models\DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConf(Models\DescribeLoginTypeGlobalConfRequest $req) 获取扫码登录全局配置
  * @method Models\DescribeLoginTypeHostResponse DescribeLoginTypeHost(Models\DescribeLoginTypeHostRequest $req) 获取扫码登录主机列表
  * @method Models\DescribeLoginWhiteCombinedListResponse DescribeLoginWhiteCombinedList(Models\DescribeLoginWhiteCombinedListRequest $req) 获取异地登录白名单合并后列表
  * @method Models\DescribeLoginWhiteHostListResponse DescribeLoginWhiteHostList(Models\DescribeLoginWhiteHostListRequest $req) 查询合并后白名单机器列表

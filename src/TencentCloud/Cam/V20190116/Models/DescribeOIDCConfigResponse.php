@@ -20,59 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOIDCConfig返回参数结构体
  *
- * @method integer getProviderType() 获取身份提供商类型 11角色身份提供商
- * @method void setProviderType(integer $ProviderType) 设置身份提供商类型 11角色身份提供商
- * @method string getIdentityUrl() 获取身份提供商URL
- * @method void setIdentityUrl(string $IdentityUrl) 设置身份提供商URL
- * @method string getIdentityKey() 获取签名公钥
- * @method void setIdentityKey(string $IdentityKey) 设置签名公钥
- * @method array getClientId() 获取客户端id
- * @method void setClientId(array $ClientId) 设置客户端id
- * @method integer getStatus() 获取状态：0:未设置，11:已开启，2:已禁用
- * @method void setStatus(integer $Status) 设置状态：0:未设置，11:已开启，2:已禁用
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
+ * @method integer getProviderType() 获取<p>身份提供商类型 11角色身份提供商</p>
+ * @method void setProviderType(integer $ProviderType) 设置<p>身份提供商类型 11角色身份提供商</p>
+ * @method string getIdentityUrl() 获取<p>身份提供商URL</p>
+ * @method void setIdentityUrl(string $IdentityUrl) 设置<p>身份提供商URL</p>
+ * @method string getIdentityKey() 获取<p>签名公钥</p>
+ * @method void setIdentityKey(string $IdentityKey) 设置<p>签名公钥</p>
+ * @method array getClientId() 获取<p>客户端id</p>
+ * @method void setClientId(array $ClientId) 设置<p>客户端id</p>
+ * @method integer getStatus() 获取<p>状态：0:未设置，11:已开启，2:已禁用</p>
+ * @method void setStatus(integer $Status) 设置<p>状态：0:未设置，11:已开启，2:已禁用</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method string getName() 获取<p>名称</p>
+ * @method void setName(string $Name) 设置<p>名称</p>
+ * @method integer getAutoRotateKey() 获取<p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+ * @method void setAutoRotateKey(integer $AutoRotateKey) 设置<p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeOIDCConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 身份提供商类型 11角色身份提供商
+     * @var integer <p>身份提供商类型 11角色身份提供商</p>
      */
     public $ProviderType;
 
     /**
-     * @var string 身份提供商URL
+     * @var string <p>身份提供商URL</p>
      */
     public $IdentityUrl;
 
     /**
-     * @var string 签名公钥
+     * @var string <p>签名公钥</p>
      */
     public $IdentityKey;
 
     /**
-     * @var array 客户端id
+     * @var array <p>客户端id</p>
      */
     public $ClientId;
 
     /**
-     * @var integer 状态：0:未设置，11:已开启，2:已禁用
+     * @var integer <p>状态：0:未设置，11:已开启，2:已禁用</p>
      */
     public $Status;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
      */
     public $Name;
+
+    /**
+     * @var integer <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public $AutoRotateKey;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -80,13 +87,14 @@ class DescribeOIDCConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ProviderType 身份提供商类型 11角色身份提供商
-     * @param string $IdentityUrl 身份提供商URL
-     * @param string $IdentityKey 签名公钥
-     * @param array $ClientId 客户端id
-     * @param integer $Status 状态：0:未设置，11:已开启，2:已禁用
-     * @param string $Description 描述
-     * @param string $Name 名称
+     * @param integer $ProviderType <p>身份提供商类型 11角色身份提供商</p>
+     * @param string $IdentityUrl <p>身份提供商URL</p>
+     * @param string $IdentityKey <p>签名公钥</p>
+     * @param array $ClientId <p>客户端id</p>
+     * @param integer $Status <p>状态：0:未设置，11:已开启，2:已禁用</p>
+     * @param string $Description <p>描述</p>
+     * @param string $Name <p>名称</p>
+     * @param integer $AutoRotateKey <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +136,10 @@ class DescribeOIDCConfigResponse extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("AutoRotateKey",$param) and $param["AutoRotateKey"] !== null) {
+            $this->AutoRotateKey = $param["AutoRotateKey"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

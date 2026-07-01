@@ -31,6 +31,8 @@ use TencentCloud\Dataagent\V20250513\Models as Models;
  * @method Models\DeleteChunkResponse DeleteChunk(Models\DeleteChunkRequest $req) 文档切片删除
  * @method Models\DeleteDataAgentSessionResponse DeleteDataAgentSession(Models\DeleteDataAgentSessionRequest $req) 删除会话
  * @method Models\DeleteSceneResponse DeleteScene(Models\DeleteSceneRequest $req) 删除场景
+ * @method Models\ExecuteAgentApiResponse ExecuteAgentApi(Models\ExecuteAgentApiRequest $req) 执行datateam相关的命令行请求
+ * @method Models\ExecuteAgentApiV1Response ExecuteAgentApiV1(Models\ExecuteAgentApiV1Request $req) 执行datateam相关的命令行请求
  * @method Models\GetJobsByKnowledgeBaseIdResponse GetJobsByKnowledgeBaseId(Models\GetJobsByKnowledgeBaseIdRequest $req) 根据知识库id查询jobs 列表
  * @method Models\GetKnowledgeBaseFileListResponse GetKnowledgeBaseFileList(Models\GetKnowledgeBaseFileListRequest $req) 获取知识库文件信息列表
  * @method Models\GetKnowledgeBaseListResponse GetKnowledgeBaseList(Models\GetKnowledgeBaseListRequest $req) 获取知识库列表

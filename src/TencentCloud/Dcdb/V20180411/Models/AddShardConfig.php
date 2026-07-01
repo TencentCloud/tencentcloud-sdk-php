@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 升级实例 -- 新增分片类型
  *
- * @method integer getShardCount() 获取新增分片的数量
- * @method void setShardCount(integer $ShardCount) 设置新增分片的数量
- * @method integer getShardMemory() 获取分片内存大小，单位 GB
- * @method void setShardMemory(integer $ShardMemory) 设置分片内存大小，单位 GB
- * @method integer getShardStorage() 获取分片存储大小，单位 GB
- * @method void setShardStorage(integer $ShardStorage) 设置分片存储大小，单位 GB
+ * @method integer getShardCount() 获取<p>新增分片的数量</p>
+ * @method void setShardCount(integer $ShardCount) 设置<p>新增分片的数量</p>
+ * @method integer getShardMemory() 获取<p>分片内存大小，单位 GB</p>
+ * @method void setShardMemory(integer $ShardMemory) 设置<p>分片内存大小，单位 GB</p>
+ * @method integer getShardStorage() 获取<p>分片存储大小，单位 GB</p>
+ * @method void setShardStorage(integer $ShardStorage) 设置<p>分片存储大小，单位 GB</p>
+ * @method array getDcnInsShardConfigs() 获取<p>DCN实例的规格</p>
+ * @method void setDcnInsShardConfigs(array $DcnInsShardConfigs) 设置<p>DCN实例的规格</p>
  */
 class AddShardConfig extends AbstractModel
 {
     /**
-     * @var integer 新增分片的数量
+     * @var integer <p>新增分片的数量</p>
      */
     public $ShardCount;
 
     /**
-     * @var integer 分片内存大小，单位 GB
+     * @var integer <p>分片内存大小，单位 GB</p>
      */
     public $ShardMemory;
 
     /**
-     * @var integer 分片存储大小，单位 GB
+     * @var integer <p>分片存储大小，单位 GB</p>
      */
     public $ShardStorage;
 
     /**
-     * @param integer $ShardCount 新增分片的数量
-     * @param integer $ShardMemory 分片内存大小，单位 GB
-     * @param integer $ShardStorage 分片存储大小，单位 GB
+     * @var array <p>DCN实例的规格</p>
+     */
+    public $DcnInsShardConfigs;
+
+    /**
+     * @param integer $ShardCount <p>新增分片的数量</p>
+     * @param integer $ShardMemory <p>分片内存大小，单位 GB</p>
+     * @param integer $ShardStorage <p>分片存储大小，单位 GB</p>
+     * @param array $DcnInsShardConfigs <p>DCN实例的规格</p>
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class AddShardConfig extends AbstractModel
 
         if (array_key_exists("ShardStorage",$param) and $param["ShardStorage"] !== null) {
             $this->ShardStorage = $param["ShardStorage"];
+        }
+
+        if (array_key_exists("DcnInsShardConfigs",$param) and $param["DcnInsShardConfigs"] !== null) {
+            $this->DcnInsShardConfigs = [];
+            foreach ($param["DcnInsShardConfigs"] as $key => $value){
+                $obj = new DcnInsShardConfig();
+                $obj->deserialize($value);
+                array_push($this->DcnInsShardConfigs, $obj);
+            }
         }
     }
 }

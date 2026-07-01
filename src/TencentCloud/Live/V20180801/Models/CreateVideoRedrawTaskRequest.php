@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(VideoRedrawInput $Input) 设置<p>输入待转绘视频url信息</p>
  * @method VideoRedrawCosInfo getCosInfo() 获取<p>用户自定义cos信息</p>
  * @method void setCosInfo(VideoRedrawCosInfo $CosInfo) 设置<p>用户自定义cos信息</p>
+ * @method VideoRedrawTaskInfo getTaskInfo() 获取<p>转绘任务参数</p>
+ * @method void setTaskInfo(VideoRedrawTaskInfo $TaskInfo) 设置<p>转绘任务参数</p>
  */
 class CreateVideoRedrawTaskRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateVideoRedrawTaskRequest extends AbstractModel
     public $CosInfo;
 
     /**
+     * @var VideoRedrawTaskInfo <p>转绘任务参数</p>
+     */
+    public $TaskInfo;
+
+    /**
      * @param VideoRedrawInput $Input <p>输入待转绘视频url信息</p>
      * @param VideoRedrawCosInfo $CosInfo <p>用户自定义cos信息</p>
+     * @param VideoRedrawTaskInfo $TaskInfo <p>转绘任务参数</p>
      */
     function __construct()
     {
@@ -62,6 +70,11 @@ class CreateVideoRedrawTaskRequest extends AbstractModel
         if (array_key_exists("CosInfo",$param) and $param["CosInfo"] !== null) {
             $this->CosInfo = new VideoRedrawCosInfo();
             $this->CosInfo->deserialize($param["CosInfo"]);
+        }
+
+        if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
+            $this->TaskInfo = new VideoRedrawTaskInfo();
+            $this->TaskInfo->deserialize($param["TaskInfo"]);
         }
     }
 }

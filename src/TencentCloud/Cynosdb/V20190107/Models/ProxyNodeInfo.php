@@ -20,98 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据库代理组节点
  *
- * @method string getProxyNodeId() 获取数据库代理节点ID
- * @method void setProxyNodeId(string $ProxyNodeId) 设置数据库代理节点ID
- * @method integer getProxyNodeConnections() 获取节点当前连接数, DescribeProxyNodes接口此字段值不返回
- * @method void setProxyNodeConnections(integer $ProxyNodeConnections) 设置节点当前连接数, DescribeProxyNodes接口此字段值不返回
- * @method integer getCpu() 获取数据库代理节点cpu
- * @method void setCpu(integer $Cpu) 设置数据库代理节点cpu
- * @method integer getMem() 获取数据库代理节点内存
- * @method void setMem(integer $Mem) 设置数据库代理节点内存
- * @method string getStatus() 获取数据库代理节点状态
- * @method void setStatus(string $Status) 设置数据库代理节点状态
- * @method string getProxyGroupId() 获取数据库代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组ID
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getAppId() 获取用户AppID
- * @method void setAppId(integer $AppId) 设置用户AppID
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method string getOssProxyNodeName() 获取数据库代理节点名字
- * @method void setOssProxyNodeName(string $OssProxyNodeName) 设置数据库代理节点名字
+ * @method string getProxyNodeId() 获取<p>数据库代理节点ID</p>
+ * @method void setProxyNodeId(string $ProxyNodeId) 设置<p>数据库代理节点ID</p>
+ * @method integer getProxyNodeConnections() 获取<p>节点当前连接数, DescribeProxyNodes接口此字段值不返回</p>
+ * @method void setProxyNodeConnections(integer $ProxyNodeConnections) 设置<p>节点当前连接数, DescribeProxyNodes接口此字段值不返回</p>
+ * @method integer getCpu() 获取<p>数据库代理节点cpu</p>
+ * @method void setCpu(integer $Cpu) 设置<p>数据库代理节点cpu</p>
+ * @method integer getMem() 获取<p>数据库代理节点内存</p>
+ * @method void setMem(integer $Mem) 设置<p>数据库代理节点内存</p>
+ * @method string getStatus() 获取<p>数据库代理节点状态</p>
+ * @method void setStatus(string $Status) 设置<p>数据库代理节点状态</p>
+ * @method string getProxyGroupId() 获取<p>数据库代理组ID</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置<p>数据库代理组ID</p>
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method integer getAppId() 获取<p>用户AppID</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户AppID</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getOssProxyNodeName() 获取<p>数据库代理节点名字</p>
+ * @method void setOssProxyNodeName(string $OssProxyNodeName) 设置<p>数据库代理节点名字</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
  */
 class ProxyNodeInfo extends AbstractModel
 {
     /**
-     * @var string 数据库代理节点ID
+     * @var string <p>数据库代理节点ID</p>
      */
     public $ProxyNodeId;
 
     /**
-     * @var integer 节点当前连接数, DescribeProxyNodes接口此字段值不返回
+     * @var integer <p>节点当前连接数, DescribeProxyNodes接口此字段值不返回</p>
      */
     public $ProxyNodeConnections;
 
     /**
-     * @var integer 数据库代理节点cpu
+     * @var integer <p>数据库代理节点cpu</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 数据库代理节点内存
+     * @var integer <p>数据库代理节点内存</p>
      */
     public $Mem;
 
     /**
-     * @var string 数据库代理节点状态
+     * @var string <p>数据库代理节点状态</p>
      */
     public $Status;
 
     /**
-     * @var string 数据库代理组ID
+     * @var string <p>数据库代理组ID</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 用户AppID
+     * @var integer <p>用户AppID</p>
      */
     public $AppId;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 数据库代理节点名字
+     * @var string <p>数据库代理节点名字</p>
      */
     public $OssProxyNodeName;
 
     /**
-     * @param string $ProxyNodeId 数据库代理节点ID
-     * @param integer $ProxyNodeConnections 节点当前连接数, DescribeProxyNodes接口此字段值不返回
-     * @param integer $Cpu 数据库代理节点cpu
-     * @param integer $Mem 数据库代理节点内存
-     * @param string $Status 数据库代理节点状态
-     * @param string $ProxyGroupId 数据库代理组ID
-     * @param string $ClusterId 集群ID
-     * @param integer $AppId 用户AppID
-     * @param string $Region 地域
-     * @param string $Zone 可用区
-     * @param string $OssProxyNodeName 数据库代理节点名字
+     * @var string <p>创建时间</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @var string <p>更新时间</p>
+     */
+    public $UpdateTime;
+
+    /**
+     * @param string $ProxyNodeId <p>数据库代理节点ID</p>
+     * @param integer $ProxyNodeConnections <p>节点当前连接数, DescribeProxyNodes接口此字段值不返回</p>
+     * @param integer $Cpu <p>数据库代理节点cpu</p>
+     * @param integer $Mem <p>数据库代理节点内存</p>
+     * @param string $Status <p>数据库代理节点状态</p>
+     * @param string $ProxyGroupId <p>数据库代理组ID</p>
+     * @param string $ClusterId <p>集群ID</p>
+     * @param integer $AppId <p>用户AppID</p>
+     * @param string $Region <p>地域</p>
+     * @param string $Zone <p>可用区</p>
+     * @param string $OssProxyNodeName <p>数据库代理节点名字</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>更新时间</p>
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class ProxyNodeInfo extends AbstractModel
 
         if (array_key_exists("OssProxyNodeName",$param) and $param["OssProxyNodeName"] !== null) {
             $this->OssProxyNodeName = $param["OssProxyNodeName"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

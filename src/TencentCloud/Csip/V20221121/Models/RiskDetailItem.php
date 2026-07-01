@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppID(integer $AppID) 设置<p>用户AppID</p>
  * @method string getAssetType() 获取<p>资产类型</p>
  * @method void setAssetType(string $AssetType) 设置<p>资产类型</p>
+ * @method string getReason() 获取<p>风险忽略原因</p>
+ * @method void setReason(string $Reason) 设置<p>风险忽略原因</p>
  */
 class RiskDetailItem extends AbstractModel
 {
@@ -129,6 +131,11 @@ class RiskDetailItem extends AbstractModel
     public $AssetType;
 
     /**
+     * @var string <p>风险忽略原因</p>
+     */
+    public $Reason;
+
+    /**
      * @param string $CreateTime <p>首次发现时间</p>
      * @param string $UpdateTime <p>更新时间</p>
      * @param integer $RiskStatus <p>风险状态</p>
@@ -144,6 +151,7 @@ class RiskDetailItem extends AbstractModel
      * @param string $CheckStatus <p>风险验证状态</p>
      * @param integer $AppID <p>用户AppID</p>
      * @param string $AssetType <p>资产类型</p>
+     * @param string $Reason <p>风险忽略原因</p>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class RiskDetailItem extends AbstractModel
 
         if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
             $this->AssetType = $param["AssetType"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

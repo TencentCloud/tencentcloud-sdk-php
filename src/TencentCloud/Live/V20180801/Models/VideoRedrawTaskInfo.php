@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProVersionStatus请求参数结构体
+ * Aigc 转绘、替换等任务参数
  *
- * @method string getUuid() 获取<p>主机安全客户端UUID、填写&quot;all&quot;表示所有主机。</p>
- * @method void setUuid(string $Uuid) 设置<p>主机安全客户端UUID、填写&quot;all&quot;表示所有主机。</p>
+ * @method string getStyle() 获取<p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
+ * @method void setStyle(string $Style) 设置<p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
  */
-class DescribeProVersionStatusRequest extends AbstractModel
+class VideoRedrawTaskInfo extends AbstractModel
 {
     /**
-     * @var string <p>主机安全客户端UUID、填写&quot;all&quot;表示所有主机。</p>
+     * @var string <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
      */
-    public $Uuid;
+    public $Style;
 
     /**
-     * @param string $Uuid <p>主机安全客户端UUID、填写&quot;all&quot;表示所有主机。</p>
+     * @param string $Style <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeProVersionStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists("Style",$param) and $param["Style"] !== null) {
+            $this->Style = $param["Style"];
         }
     }
 }

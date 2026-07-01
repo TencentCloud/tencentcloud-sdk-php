@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLicenseBinds请求参数结构体
  *
- * @method string getResourceId() 获取资源ID
- * @method void setResourceId(string $ResourceId) 设置资源ID
- * @method integer getLicenseType() 获取授权类型
- * @method void setLicenseType(integer $LicenseType) 设置授权类型
- * @method boolean getIsAll() 获取是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
- * @method void setIsAll(boolean $IsAll) 设置是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
- * @method array getQuuidList() 获取需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000
- * @method void setQuuidList(array $QuuidList) 设置需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000
+ * @method string getResourceId() 获取<p>资源ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源ID</p>
+ * @method integer getLicenseType() 获取<p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
+ * @method void setLicenseType(integer $LicenseType) 设置<p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
+ * @method boolean getIsAll() 获取<p>是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)</p>
+ * @method void setIsAll(boolean $IsAll) 设置<p>是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)</p>
+ * @method array getQuuidList() 获取<p>需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000</p>
+ * @method void setQuuidList(array $QuuidList) 设置<p>需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000</p>
  */
 class ModifyLicenseBindsRequest extends AbstractModel
 {
     /**
-     * @var string 资源ID
+     * @var string <p>资源ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var integer 授权类型
+     * @var integer <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
      */
     public $LicenseType;
 
     /**
-     * @var boolean 是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
+     * @var boolean <p>是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)</p>
      */
     public $IsAll;
 
     /**
-     * @var array 需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000
+     * @var array <p>需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000</p>
      */
     public $QuuidList;
 
     /**
-     * @param string $ResourceId 资源ID
-     * @param integer $LicenseType 授权类型
-     * @param boolean $IsAll 是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
-     * @param array $QuuidList 需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000
+     * @param string $ResourceId <p>资源ID</p>
+     * @param integer $LicenseType <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
+     * @param boolean $IsAll <p>是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)</p>
+     * @param array $QuuidList <p>需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000</p>
      */
     function __construct()
     {

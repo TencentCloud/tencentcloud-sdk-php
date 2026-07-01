@@ -14,23 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Dataagent\V20250513\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyLicenseUnBinds返回参数结构体
+ * ExecuteAgentApi返回参数结构体
  *
- * @method array getErrMsg() 获取<p>只有解绑失败的才有该值.</p>
- * @method void setErrMsg(array $ErrMsg) 设置<p>只有解绑失败的才有该值.</p>
+ * @method string getRequestPath() 获取<p>请求路径</p>
+ * @method void setRequestPath(string $RequestPath) 设置<p>请求路径</p>
+ * @method string getAgentData() 获取<p>返回的具体指</p>
+ * @method void setAgentData(string $AgentData) 设置<p>返回的具体指</p>
+ * @method string getErrorMsg() 获取<p>错误码信息</p>
+ * @method void setErrorMsg(string $ErrorMsg) 设置<p>错误码信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyLicenseUnBindsResponse extends AbstractModel
+class ExecuteAgentApiResponse extends AbstractModel
 {
     /**
-     * @var array <p>只有解绑失败的才有该值.</p>
+     * @var string <p>请求路径</p>
      */
-    public $ErrMsg;
+    public $RequestPath;
+
+    /**
+     * @var string <p>返回的具体指</p>
+     */
+    public $AgentData;
+
+    /**
+     * @var string <p>错误码信息</p>
+     */
+    public $ErrorMsg;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +52,9 @@ class ModifyLicenseUnBindsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ErrMsg <p>只有解绑失败的才有该值.</p>
+     * @param string $RequestPath <p>请求路径</p>
+     * @param string $AgentData <p>返回的具体指</p>
+     * @param string $ErrorMsg <p>错误码信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +70,16 @@ class ModifyLicenseUnBindsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
-            $this->ErrMsg = [];
-            foreach ($param["ErrMsg"] as $key => $value){
-                $obj = new LicenseUnBindRsp();
-                $obj->deserialize($value);
-                array_push($this->ErrMsg, $obj);
-            }
+        if (array_key_exists("RequestPath",$param) and $param["RequestPath"] !== null) {
+            $this->RequestPath = $param["RequestPath"];
+        }
+
+        if (array_key_exists("AgentData",$param) and $param["AgentData"] !== null) {
+            $this->AgentData = $param["AgentData"];
+        }
+
+        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
+            $this->ErrorMsg = $param["ErrorMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

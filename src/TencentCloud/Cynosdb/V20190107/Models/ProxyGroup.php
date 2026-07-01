@@ -20,82 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * proxy组
  *
- * @method string getProxyGroupId() 获取数据库代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组ID
- * @method integer getProxyNodeCount() 获取数据库代理组节点个数
- * @method void setProxyNodeCount(integer $ProxyNodeCount) 设置数据库代理组节点个数
- * @method string getStatus() 获取数据库代理组状态
- * @method void setStatus(string $Status) 设置数据库代理组状态
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method string getCurrentProxyVersion() 获取当前代理版本
- * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置当前代理版本
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getAppId() 获取用户AppId
- * @method void setAppId(integer $AppId) 设置用户AppId
- * @method string getOpenRw() 获取读写节点开通数据库代理
- * @method void setOpenRw(string $OpenRw) 设置读写节点开通数据库代理
+ * @method string getProxyGroupId() 获取<p>数据库代理组ID</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置<p>数据库代理组ID</p>
+ * @method integer getProxyNodeCount() 获取<p>数据库代理组节点个数</p>
+ * @method void setProxyNodeCount(integer $ProxyNodeCount) 设置<p>数据库代理组节点个数</p>
+ * @method string getStatus() 获取<p>数据库代理组状态</p>
+ * @method void setStatus(string $Status) 设置<p>数据库代理组状态</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getCurrentProxyVersion() 获取<p>当前代理版本</p>
+ * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置<p>当前代理版本</p>
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method integer getAppId() 获取<p>用户AppId</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户AppId</p>
+ * @method string getOpenRw() 获取<p>读写节点开通数据库代理</p>
+ * @method void setOpenRw(string $OpenRw) 设置<p>读写节点开通数据库代理</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
  */
 class ProxyGroup extends AbstractModel
 {
     /**
-     * @var string 数据库代理组ID
+     * @var string <p>数据库代理组ID</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var integer 数据库代理组节点个数
+     * @var integer <p>数据库代理组节点个数</p>
      */
     public $ProxyNodeCount;
 
     /**
-     * @var string 数据库代理组状态
+     * @var string <p>数据库代理组状态</p>
      */
     public $Status;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 当前代理版本
+     * @var string <p>当前代理版本</p>
      */
     public $CurrentProxyVersion;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 用户AppId
+     * @var integer <p>用户AppId</p>
      */
     public $AppId;
 
     /**
-     * @var string 读写节点开通数据库代理
+     * @var string <p>读写节点开通数据库代理</p>
      */
     public $OpenRw;
 
     /**
-     * @param string $ProxyGroupId 数据库代理组ID
-     * @param integer $ProxyNodeCount 数据库代理组节点个数
-     * @param string $Status 数据库代理组状态
-     * @param string $Region 地域
-     * @param string $Zone 可用区
-     * @param string $CurrentProxyVersion 当前代理版本
-     * @param string $ClusterId 集群ID
-     * @param integer $AppId 用户AppId
-     * @param string $OpenRw 读写节点开通数据库代理
+     * @var string <p>创建时间</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @var string <p>更新时间</p>
+     */
+    public $UpdateTime;
+
+    /**
+     * @param string $ProxyGroupId <p>数据库代理组ID</p>
+     * @param integer $ProxyNodeCount <p>数据库代理组节点个数</p>
+     * @param string $Status <p>数据库代理组状态</p>
+     * @param string $Region <p>地域</p>
+     * @param string $Zone <p>可用区</p>
+     * @param string $CurrentProxyVersion <p>当前代理版本</p>
+     * @param string $ClusterId <p>集群ID</p>
+     * @param integer $AppId <p>用户AppId</p>
+     * @param string $OpenRw <p>读写节点开通数据库代理</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>更新时间</p>
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class ProxyGroup extends AbstractModel
 
         if (array_key_exists("OpenRw",$param) and $param["OpenRw"] !== null) {
             $this->OpenRw = $param["OpenRw"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

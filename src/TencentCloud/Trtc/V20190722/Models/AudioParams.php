@@ -20,54 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 录制音频转码参数。
  *
- * @method integer getSampleRate() 获取音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
-1：48000Hz（默认）;
-2：44100Hz
-3：16000Hz。
- * @method void setSampleRate(integer $SampleRate) 设置音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
-1：48000Hz（默认）;
-2：44100Hz
-3：16000Hz。
- * @method integer getChannel() 获取声道数枚举值:
-1：单声道;
-2：双声道（默认）。
- * @method void setChannel(integer $Channel) 设置声道数枚举值:
-1：单声道;
-2：双声道（默认）。
- * @method integer getBitRate() 获取音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
- * @method void setBitRate(integer $BitRate) 设置音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
+ * @method integer getSampleRate() 获取<p>音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)<br>1：48000Hz（默认）;<br>2：44100Hz<br>3：16000Hz。</p>
+ * @method void setSampleRate(integer $SampleRate) 设置<p>音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)<br>1：48000Hz（默认）;<br>2：44100Hz<br>3：16000Hz。</p>
+ * @method integer getChannel() 获取<p>声道数枚举值:<br>1：单声道;<br>2：双声道（默认）。</p>
+ * @method void setChannel(integer $Channel) 设置<p>声道数枚举值:<br>1：单声道;<br>2：双声道（默认）。</p>
+ * @method integer getBitRate() 获取<p>音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。</p>
+ * @method void setBitRate(integer $BitRate) 设置<p>音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。</p>
  */
 class AudioParams extends AbstractModel
 {
     /**
-     * @var integer 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
-1：48000Hz（默认）;
-2：44100Hz
-3：16000Hz。
+     * @var integer <p>音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)<br>1：48000Hz（默认）;<br>2：44100Hz<br>3：16000Hz。</p>
      */
     public $SampleRate;
 
     /**
-     * @var integer 声道数枚举值:
-1：单声道;
-2：双声道（默认）。
+     * @var integer <p>声道数枚举值:<br>1：单声道;<br>2：双声道（默认）。</p>
      */
     public $Channel;
 
     /**
-     * @var integer 音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
+     * @var integer <p>音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。</p>
      */
     public $BitRate;
 
     /**
-     * @param integer $SampleRate 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
-1：48000Hz（默认）;
-2：44100Hz
-3：16000Hz。
-     * @param integer $Channel 声道数枚举值:
-1：单声道;
-2：双声道（默认）。
-     * @param integer $BitRate 音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
+     * @param integer $SampleRate <p>音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)<br>1：48000Hz（默认）;<br>2：44100Hz<br>3：16000Hz。</p>
+     * @param integer $Channel <p>声道数枚举值:<br>1：单声道;<br>2：双声道（默认）。</p>
+     * @param integer $BitRate <p>音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。</p>
      */
     function __construct()
     {

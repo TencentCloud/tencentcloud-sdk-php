@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBuyBindTask请求参数结构体
  *
- * @method string getDealName() 获取订单号
- * @method void setDealName(string $DealName) 设置订单号
- * @method integer getLicenseType() 获取可选参数: 1专业版-包年包月 , 2 旗舰版-包年包月
- * @method void setLicenseType(integer $LicenseType) 设置可选参数: 1专业版-包年包月 , 2 旗舰版-包年包月
- * @method array getQuuidList() 获取机器列表
- * @method void setQuuidList(array $QuuidList) 设置机器列表
- * @method boolean getIsAll() 获取是否全选机器
- * @method void setIsAll(boolean $IsAll) 设置是否全选机器
+ * @method string getDealName() 获取<p>订单号</p>
+ * @method void setDealName(string $DealName) 设置<p>订单号</p>
+ * @method integer getLicenseType() 获取<p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
+ * @method void setLicenseType(integer $LicenseType) 设置<p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
+ * @method array getQuuidList() 获取<p>机器列表</p>
+ * @method void setQuuidList(array $QuuidList) 设置<p>机器列表</p>
+ * @method boolean getIsAll() 获取<p>是否全选机器</p>
+ * @method void setIsAll(boolean $IsAll) 设置<p>是否全选机器</p>
  */
 class CreateBuyBindTaskRequest extends AbstractModel
 {
     /**
-     * @var string 订单号
+     * @var string <p>订单号</p>
      */
     public $DealName;
 
     /**
-     * @var integer 可选参数: 1专业版-包年包月 , 2 旗舰版-包年包月
+     * @var integer <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
      */
     public $LicenseType;
 
     /**
-     * @var array 机器列表
+     * @var array <p>机器列表</p>
      */
     public $QuuidList;
 
     /**
-     * @var boolean 是否全选机器
+     * @var boolean <p>是否全选机器</p>
      */
     public $IsAll;
 
     /**
-     * @param string $DealName 订单号
-     * @param integer $LicenseType 可选参数: 1专业版-包年包月 , 2 旗舰版-包年包月
-     * @param array $QuuidList 机器列表
-     * @param boolean $IsAll 是否全选机器
+     * @param string $DealName <p>订单号</p>
+     * @param integer $LicenseType <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
+     * @param array $QuuidList <p>机器列表</p>
+     * @param boolean $IsAll <p>是否全选机器</p>
      */
     function __construct()
     {

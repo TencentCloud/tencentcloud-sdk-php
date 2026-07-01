@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getToolName() 获取<p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p>
  * @method void setToolName(string $ToolName) 设置<p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p>
- * @method string getToolType() 获取<p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
- * @method void setToolType(string $ToolType) 设置<p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
+ * @method string getToolType() 获取<p>沙箱工具类型，目前支持：browser、code-interpreter、custom等</p><p>枚举值：</p><ul><li>browser： browser</li><li>code-interpreter： code-interpreter</li><li>mobile： mobile</li><li>osworld： osworld</li><li>custom： custom</li><li>swebench： swebench</li><li>aio： aio</li><li>android-world： android-world</li><li>waa： waa</li></ul>
+ * @method void setToolType(string $ToolType) 设置<p>沙箱工具类型，目前支持：browser、code-interpreter、custom等</p><p>枚举值：</p><ul><li>browser： browser</li><li>code-interpreter： code-interpreter</li><li>mobile： mobile</li><li>osworld： osworld</li><li>custom： custom</li><li>swebench： swebench</li><li>aio： aio</li><li>android-world： android-world</li><li>waa： waa</li></ul>
  * @method NetworkConfiguration getNetworkConfiguration() 获取<p>网络配置</p>
  * @method void setNetworkConfiguration(NetworkConfiguration $NetworkConfiguration) 设置<p>网络配置</p>
  * @method string getDescription() 获取<p>沙箱工具描述，最大长度 200 字符</p>
@@ -53,7 +53,7 @@ class CreateSandboxToolRequest extends AbstractModel
     public $ToolName;
 
     /**
-     * @var string <p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
+     * @var string <p>沙箱工具类型，目前支持：browser、code-interpreter、custom等</p><p>枚举值：</p><ul><li>browser： browser</li><li>code-interpreter： code-interpreter</li><li>mobile： mobile</li><li>osworld： osworld</li><li>custom： custom</li><li>swebench： swebench</li><li>aio： aio</li><li>android-world： android-world</li><li>waa： waa</li></ul>
      */
     public $ToolType;
 
@@ -109,7 +109,7 @@ class CreateSandboxToolRequest extends AbstractModel
 
     /**
      * @param string $ToolName <p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p>
-     * @param string $ToolType <p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
+     * @param string $ToolType <p>沙箱工具类型，目前支持：browser、code-interpreter、custom等</p><p>枚举值：</p><ul><li>browser： browser</li><li>code-interpreter： code-interpreter</li><li>mobile： mobile</li><li>osworld： osworld</li><li>custom： custom</li><li>swebench： swebench</li><li>aio： aio</li><li>android-world： android-world</li><li>waa： waa</li></ul>
      * @param NetworkConfiguration $NetworkConfiguration <p>网络配置</p>
      * @param string $Description <p>沙箱工具描述，最大长度 200 字符</p>
      * @param string $DefaultTimeout <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>

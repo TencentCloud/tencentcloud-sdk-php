@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 单工作流配置
  *
- * @method boolean getAsyncWorkflow() 获取是否开启异步工作流
- * @method void setAsyncWorkflow(boolean $AsyncWorkflow) 设置是否开启异步工作流
- * @method string getStatus() 获取状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
- * @method void setStatus(string $Status) 设置状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
- * @method string getWorkflowDescription() 获取工作流描述
- * @method void setWorkflowDescription(string $WorkflowDescription) 设置工作流描述
- * @method string getWorkflowId() 获取工作流Id
- * @method void setWorkflowId(string $WorkflowId) 设置工作流Id
- * @method string getWorkflowName() 获取工作流名称
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
+ * @method boolean getAsyncWorkflow() 获取<p>是否开启异步工作流</p>
+ * @method void setAsyncWorkflow(boolean $AsyncWorkflow) 设置<p>是否开启异步工作流</p>
+ * @method string getStatus() 获取<p>状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)</p>
+ * @method void setStatus(string $Status) 设置<p>状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)</p>
+ * @method string getWorkflowDescription() 获取<p>工作流描述</p>
+ * @method void setWorkflowDescription(string $WorkflowDescription) 设置<p>工作流描述</p>
+ * @method string getWorkflowId() 获取<p>工作流Id</p>
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流Id</p>
+ * @method string getWorkflowName() 获取<p>工作流名称</p>
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名称</p>
+ * @method boolean getEnabled() 获取<p>工作流是否启用</p>
+ * @method void setEnabled(boolean $Enabled) 设置<p>工作流是否启用</p>
  */
 class SingleWorkflowConfig extends AbstractModel
 {
     /**
-     * @var boolean 是否开启异步工作流
+     * @var boolean <p>是否开启异步工作流</p>
      */
     public $AsyncWorkflow;
 
     /**
-     * @var string 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
+     * @var string <p>状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)</p>
      */
     public $Status;
 
     /**
-     * @var string 工作流描述
+     * @var string <p>工作流描述</p>
      */
     public $WorkflowDescription;
 
     /**
-     * @var string 工作流Id
+     * @var string <p>工作流Id</p>
      */
     public $WorkflowId;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
      */
     public $WorkflowName;
 
     /**
-     * @param boolean $AsyncWorkflow 是否开启异步工作流
-     * @param string $Status 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
-     * @param string $WorkflowDescription 工作流描述
-     * @param string $WorkflowId 工作流Id
-     * @param string $WorkflowName 工作流名称
+     * @var boolean <p>工作流是否启用</p>
+     */
+    public $Enabled;
+
+    /**
+     * @param boolean $AsyncWorkflow <p>是否开启异步工作流</p>
+     * @param string $Status <p>状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)</p>
+     * @param string $WorkflowDescription <p>工作流描述</p>
+     * @param string $WorkflowId <p>工作流Id</p>
+     * @param string $WorkflowName <p>工作流名称</p>
+     * @param boolean $Enabled <p>工作流是否启用</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class SingleWorkflowConfig extends AbstractModel
 
         if (array_key_exists("WorkflowName",$param) and $param["WorkflowName"] !== null) {
             $this->WorkflowName = $param["WorkflowName"];
+        }
+
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
     }
 }

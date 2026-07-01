@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOIDCConfig请求参数结构体
  *
- * @method string getIdentityUrl() 获取身份提供商URL
- * @method void setIdentityUrl(string $IdentityUrl) 设置身份提供商URL
- * @method array getClientId() 获取客户端ID
- * @method void setClientId(array $ClientId) 设置客户端ID
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method string getIdentityKey() 获取签名公钥，需要base64
- * @method void setIdentityKey(string $IdentityKey) 设置签名公钥，需要base64
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
+ * @method string getIdentityUrl() 获取<p>身份提供商URL</p>
+ * @method void setIdentityUrl(string $IdentityUrl) 设置<p>身份提供商URL</p>
+ * @method array getClientId() 获取<p>客户端ID</p>
+ * @method void setClientId(array $ClientId) 设置<p>客户端ID</p>
+ * @method string getName() 获取<p>名称</p>
+ * @method void setName(string $Name) 设置<p>名称</p>
+ * @method string getIdentityKey() 获取<p>签名公钥，需要base64</p>
+ * @method void setIdentityKey(string $IdentityKey) 设置<p>签名公钥，需要base64</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method integer getAutoRotateKey() 获取<p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+ * @method void setAutoRotateKey(integer $AutoRotateKey) 设置<p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
  */
 class CreateOIDCConfigRequest extends AbstractModel
 {
     /**
-     * @var string 身份提供商URL
+     * @var string <p>身份提供商URL</p>
      */
     public $IdentityUrl;
 
     /**
-     * @var array 客户端ID
+     * @var array <p>客户端ID</p>
      */
     public $ClientId;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
      */
     public $Name;
 
     /**
-     * @var string 签名公钥，需要base64
+     * @var string <p>签名公钥，需要base64</p>
      */
     public $IdentityKey;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @param string $IdentityUrl 身份提供商URL
-     * @param array $ClientId 客户端ID
-     * @param string $Name 名称
-     * @param string $IdentityKey 签名公钥，需要base64
-     * @param string $Description 描述
+     * @var integer <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public $AutoRotateKey;
+
+    /**
+     * @param string $IdentityUrl <p>身份提供商URL</p>
+     * @param array $ClientId <p>客户端ID</p>
+     * @param string $Name <p>名称</p>
+     * @param string $IdentityKey <p>签名公钥，需要base64</p>
+     * @param string $Description <p>描述</p>
+     * @param integer $AutoRotateKey <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateOIDCConfigRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AutoRotateKey",$param) and $param["AutoRotateKey"] !== null) {
+            $this->AutoRotateKey = $param["AutoRotateKey"];
         }
     }
 }

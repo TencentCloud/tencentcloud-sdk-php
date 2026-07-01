@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOIDCConfig请求参数结构体
  *
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
+ * @method string getName() 获取<p>名称</p>
+ * @method void setName(string $Name) 设置<p>名称</p>
  */
 class DescribeOIDCConfigRequest extends AbstractModel
 {
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
      */
     public $Name;
 
     /**
-     * @param string $Name 名称
+     * @param string $Name <p>名称</p>
      */
     function __construct()
     {

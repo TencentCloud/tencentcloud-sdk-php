@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceParams请求参数结构体
  *
- * @method string getInstanceId() 获取指定实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
- * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
- * @method array getInstanceParams() 获取指定需修改的参数名及值。当前所支持的参数名及对应取值范围，请通过 [DescribeInstanceParams ](https://cloud.tencent.com/document/product/240/65903)获取。
- * @method void setInstanceParams(array $InstanceParams) 设置指定需修改的参数名及值。当前所支持的参数名及对应取值范围，请通过 [DescribeInstanceParams ](https://cloud.tencent.com/document/product/240/65903)获取。
- * @method string getModifyType() 获取操作类型，包括：
-- IMMEDIATELY：立即调整。
-- DELAY：延迟调整。可选字段，不配置该参数则默认为立即调整。
- * @method void setModifyType(string $ModifyType) 设置操作类型，包括：
-- IMMEDIATELY：立即调整。
-- DELAY：延迟调整。可选字段，不配置该参数则默认为立即调整。
+ * @method string getInstanceId() 获取<p>指定实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>指定实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+ * @method array getInstanceParams() 获取<p>指定需修改的参数名及值。当前所支持的参数名及对应取值范围，请通过 <a href="https://cloud.tencent.com/document/product/240/65903">DescribeInstanceParams </a>获取。</p>
+ * @method void setInstanceParams(array $InstanceParams) 设置<p>指定需修改的参数名及值。当前所支持的参数名及对应取值范围，请通过 <a href="https://cloud.tencent.com/document/product/240/65903">DescribeInstanceParams </a>获取。</p>
+ * @method string getModifyType() 获取<p>操作类型，包括：</p><ul><li>IMMEDIATELY：立即调整。</li><li>DELAY：延迟调整。可选字段，不配置该参数则默认为立即调整。</li></ul>
+ * @method void setModifyType(string $ModifyType) 设置<p>操作类型，包括：</p><ul><li>IMMEDIATELY：立即调整。</li><li>DELAY：延迟调整。可选字段，不配置该参数则默认为立即调整。</li></ul>
  */
 class ModifyInstanceParamsRequest extends AbstractModel
 {
     /**
-     * @var string 指定实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
+     * @var string <p>指定实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 指定需修改的参数名及值。当前所支持的参数名及对应取值范围，请通过 [DescribeInstanceParams ](https://cloud.tencent.com/document/product/240/65903)获取。
+     * @var array <p>指定需修改的参数名及值。当前所支持的参数名及对应取值范围，请通过 <a href="https://cloud.tencent.com/document/product/240/65903">DescribeInstanceParams </a>获取。</p>
      */
     public $InstanceParams;
 
     /**
-     * @var string 操作类型，包括：
-- IMMEDIATELY：立即调整。
-- DELAY：延迟调整。可选字段，不配置该参数则默认为立即调整。
+     * @var string <p>操作类型，包括：</p><ul><li>IMMEDIATELY：立即调整。</li><li>DELAY：延迟调整。可选字段，不配置该参数则默认为立即调整。</li></ul>
      */
     public $ModifyType;
 
     /**
-     * @param string $InstanceId 指定实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
-     * @param array $InstanceParams 指定需修改的参数名及值。当前所支持的参数名及对应取值范围，请通过 [DescribeInstanceParams ](https://cloud.tencent.com/document/product/240/65903)获取。
-     * @param string $ModifyType 操作类型，包括：
-- IMMEDIATELY：立即调整。
-- DELAY：延迟调整。可选字段，不配置该参数则默认为立即调整。
+     * @param string $InstanceId <p>指定实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+     * @param array $InstanceParams <p>指定需修改的参数名及值。当前所支持的参数名及对应取值范围，请通过 <a href="https://cloud.tencent.com/document/product/240/65903">DescribeInstanceParams </a>获取。</p>
+     * @param string $ModifyType <p>操作类型，包括：</p><ul><li>IMMEDIATELY：立即调整。</li><li>DELAY：延迟调整。可选字段，不配置该参数则默认为立即调整。</li></ul>
      */
     function __construct()
     {

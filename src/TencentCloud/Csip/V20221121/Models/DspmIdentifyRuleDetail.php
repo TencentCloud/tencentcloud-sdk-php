@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * dspm数据项详情
  *
- * @method integer getRuleId() 获取数据项id
- * @method void setRuleId(integer $RuleId) 设置数据项id
- * @method string getRuleName() 获取数据项名称
- * @method void setRuleName(string $RuleName) 设置数据项名称
- * @method integer getLevelId() 获取敏感级别id
- * @method void setLevelId(integer $LevelId) 设置敏感级别id
- * @method string getLevelName() 获取敏感级别名称
- * @method void setLevelName(string $LevelName) 设置敏感级别名称
- * @method integer getLevelScore() 获取敏感程度
- * @method void setLevelScore(integer $LevelScore) 设置敏感程度
+ * @method integer getRuleId() 获取<p>数据项id</p>
+ * @method void setRuleId(integer $RuleId) 设置<p>数据项id</p>
+ * @method string getRuleName() 获取<p>数据项名称</p>
+ * @method void setRuleName(string $RuleName) 设置<p>数据项名称</p>
+ * @method integer getLevelId() 获取<p>敏感级别id</p>
+ * @method void setLevelId(integer $LevelId) 设置<p>敏感级别id</p>
+ * @method string getLevelName() 获取<p>敏感级别名称</p>
+ * @method void setLevelName(string $LevelName) 设置<p>敏感级别名称</p>
+ * @method integer getLevelScore() 获取<p>敏感程度</p>
+ * @method void setLevelScore(integer $LevelScore) 设置<p>敏感程度</p>
  */
 class DspmIdentifyRuleDetail extends AbstractModel
 {
     /**
-     * @var integer 数据项id
+     * @var integer <p>数据项id</p>
      */
     public $RuleId;
 
     /**
-     * @var string 数据项名称
+     * @var string <p>数据项名称</p>
      */
     public $RuleName;
 
     /**
-     * @var integer 敏感级别id
+     * @var integer <p>敏感级别id</p>
      */
     public $LevelId;
 
     /**
-     * @var string 敏感级别名称
+     * @var string <p>敏感级别名称</p>
      */
     public $LevelName;
 
     /**
-     * @var integer 敏感程度
+     * @var integer <p>敏感程度</p>
      */
     public $LevelScore;
 
     /**
-     * @param integer $RuleId 数据项id
-     * @param string $RuleName 数据项名称
-     * @param integer $LevelId 敏感级别id
-     * @param string $LevelName 敏感级别名称
-     * @param integer $LevelScore 敏感程度
+     * @param integer $RuleId <p>数据项id</p>
+     * @param string $RuleName <p>数据项名称</p>
+     * @param integer $LevelId <p>敏感级别id</p>
+     * @param string $LevelName <p>敏感级别名称</p>
+     * @param integer $LevelScore <p>敏感程度</p>
      */
     function __construct()
     {

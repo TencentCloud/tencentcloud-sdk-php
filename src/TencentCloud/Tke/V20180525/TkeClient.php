@@ -282,6 +282,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\RenewReservedInstancesResponse RenewReservedInstances(Models\RenewReservedInstancesRequest $req) 续费时请确保账户余额充足。
  * @method Models\RestartEKSContainerInstancesResponse RestartEKSContainerInstances(Models\RestartEKSContainerInstancesRequest $req) 重启弹性容器实例，支持批量操作
  * @method Models\RollbackClusterReleaseResponse RollbackClusterRelease(Models\RollbackClusterReleaseRequest $req) 在应用市场中集群回滚应用至某个历史版本
+ * @method Models\RotateClusterTokenResponse RotateClusterToken(Models\RotateClusterTokenRequest $req) 轮转集群的token
  * @method Models\RunPrometheusInstanceResponse RunPrometheusInstance(Models\RunPrometheusInstanceRequest $req) 初始化TMP实例，开启集成中心时调用
  * @method Models\ScaleInClusterMasterResponse ScaleInClusterMaster(Models\ScaleInClusterMasterRequest $req) 缩容独立集群master节点，本功能为内测能力，使用之前请先提单联系我们。
  * @method Models\ScaleOutClusterMasterResponse ScaleOutClusterMaster(Models\ScaleOutClusterMasterRequest $req) 扩容独立集群master节点

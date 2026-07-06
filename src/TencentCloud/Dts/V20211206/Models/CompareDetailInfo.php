@@ -20,66 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 一致性校验详细信息
  *
- * @method DifferenceDetail getDifference() 获取数据不一致的表详情
- * @method void setDifference(DifferenceDetail $Difference) 设置数据不一致的表详情
- * @method SkippedDetail getSkipped() 获取跳过校验的表详情
- * @method void setSkipped(SkippedDetail $Skipped) 设置跳过校验的表详情
- * @method DifferenceAdvancedObjectsDetail getDifferenceAdvancedObjects() 获取数据库不一致的详情，mongodb业务用到
- * @method void setDifferenceAdvancedObjects(DifferenceAdvancedObjectsDetail $DifferenceAdvancedObjects) 设置数据库不一致的详情，mongodb业务用到
- * @method DifferenceDataDetail getDifferenceData() 获取数据不一致的详情，mongodb业务用到
- * @method void setDifferenceData(DifferenceDataDetail $DifferenceData) 设置数据不一致的详情，mongodb业务用到
- * @method DifferenceRowDetail getDifferenceRow() 获取数据行不一致的详情，mongodb业务用到
- * @method void setDifferenceRow(DifferenceRowDetail $DifferenceRow) 设置数据行不一致的详情，mongodb业务用到
- * @method DifferenceSchemaDetail getDifferenceSchema() 获取表结构不一致详情，pg用
- * @method void setDifferenceSchema(DifferenceSchemaDetail $DifferenceSchema) 设置表结构不一致详情，pg用
- * @method DifferenceOwnerDetail getDifferenceOwner() 获取对象owner不一致详情，pg用
- * @method void setDifferenceOwner(DifferenceOwnerDetail $DifferenceOwner) 设置对象owner不一致详情，pg用
+ * @method DifferenceDetail getDifference() 获取<p>数据不一致的表详情</p>
+ * @method void setDifference(DifferenceDetail $Difference) 设置<p>数据不一致的表详情</p>
+ * @method SkippedDetail getSkipped() 获取<p>跳过校验的表详情</p>
+ * @method void setSkipped(SkippedDetail $Skipped) 设置<p>跳过校验的表详情</p>
+ * @method DifferenceAdvancedObjectsDetail getDifferenceAdvancedObjects() 获取<p>数据库不一致的详情，mongodb业务用到</p>
+ * @method void setDifferenceAdvancedObjects(DifferenceAdvancedObjectsDetail $DifferenceAdvancedObjects) 设置<p>数据库不一致的详情，mongodb业务用到</p>
+ * @method DifferenceDataDetail getDifferenceData() 获取<p>数据不一致的详情，mongodb业务用到</p>
+ * @method void setDifferenceData(DifferenceDataDetail $DifferenceData) 设置<p>数据不一致的详情，mongodb业务用到</p>
+ * @method DifferenceRowDetail getDifferenceRow() 获取<p>数据行不一致的详情，mongodb业务用到</p>
+ * @method void setDifferenceRow(DifferenceRowDetail $DifferenceRow) 设置<p>数据行不一致的详情，mongodb业务用到</p>
+ * @method DifferenceSchemaDetail getDifferenceSchema() 获取<p>表结构不一致详情，pg用</p>
+ * @method void setDifferenceSchema(DifferenceSchemaDetail $DifferenceSchema) 设置<p>表结构不一致详情，pg用</p>
+ * @method DifferenceOwnerDetail getDifferenceOwner() 获取<p>对象owner不一致详情，pg用</p>
+ * @method void setDifferenceOwner(DifferenceOwnerDetail $DifferenceOwner) 设置<p>对象owner不一致详情，pg用</p>
+ * @method CompareTableInfo getFullProgress() 获取<p>全量阶段表的校验进度。该字段后续逐步取代Difference</p>
+ * @method void setFullProgress(CompareTableInfo $FullProgress) 设置<p>全量阶段表的校验进度。该字段后续逐步取代Difference</p>
+ * @method CompareTableInfo getIncDifference() 获取<p>增量阶段表的校验进度</p>
+ * @method void setIncDifference(CompareTableInfo $IncDifference) 设置<p>增量阶段表的校验进度</p>
  */
 class CompareDetailInfo extends AbstractModel
 {
     /**
-     * @var DifferenceDetail 数据不一致的表详情
+     * @var DifferenceDetail <p>数据不一致的表详情</p>
      */
     public $Difference;
 
     /**
-     * @var SkippedDetail 跳过校验的表详情
+     * @var SkippedDetail <p>跳过校验的表详情</p>
      */
     public $Skipped;
 
     /**
-     * @var DifferenceAdvancedObjectsDetail 数据库不一致的详情，mongodb业务用到
+     * @var DifferenceAdvancedObjectsDetail <p>数据库不一致的详情，mongodb业务用到</p>
      */
     public $DifferenceAdvancedObjects;
 
     /**
-     * @var DifferenceDataDetail 数据不一致的详情，mongodb业务用到
+     * @var DifferenceDataDetail <p>数据不一致的详情，mongodb业务用到</p>
      */
     public $DifferenceData;
 
     /**
-     * @var DifferenceRowDetail 数据行不一致的详情，mongodb业务用到
+     * @var DifferenceRowDetail <p>数据行不一致的详情，mongodb业务用到</p>
      */
     public $DifferenceRow;
 
     /**
-     * @var DifferenceSchemaDetail 表结构不一致详情，pg用
+     * @var DifferenceSchemaDetail <p>表结构不一致详情，pg用</p>
      */
     public $DifferenceSchema;
 
     /**
-     * @var DifferenceOwnerDetail 对象owner不一致详情，pg用
+     * @var DifferenceOwnerDetail <p>对象owner不一致详情，pg用</p>
      */
     public $DifferenceOwner;
 
     /**
-     * @param DifferenceDetail $Difference 数据不一致的表详情
-     * @param SkippedDetail $Skipped 跳过校验的表详情
-     * @param DifferenceAdvancedObjectsDetail $DifferenceAdvancedObjects 数据库不一致的详情，mongodb业务用到
-     * @param DifferenceDataDetail $DifferenceData 数据不一致的详情，mongodb业务用到
-     * @param DifferenceRowDetail $DifferenceRow 数据行不一致的详情，mongodb业务用到
-     * @param DifferenceSchemaDetail $DifferenceSchema 表结构不一致详情，pg用
-     * @param DifferenceOwnerDetail $DifferenceOwner 对象owner不一致详情，pg用
+     * @var CompareTableInfo <p>全量阶段表的校验进度。该字段后续逐步取代Difference</p>
+     */
+    public $FullProgress;
+
+    /**
+     * @var CompareTableInfo <p>增量阶段表的校验进度</p>
+     */
+    public $IncDifference;
+
+    /**
+     * @param DifferenceDetail $Difference <p>数据不一致的表详情</p>
+     * @param SkippedDetail $Skipped <p>跳过校验的表详情</p>
+     * @param DifferenceAdvancedObjectsDetail $DifferenceAdvancedObjects <p>数据库不一致的详情，mongodb业务用到</p>
+     * @param DifferenceDataDetail $DifferenceData <p>数据不一致的详情，mongodb业务用到</p>
+     * @param DifferenceRowDetail $DifferenceRow <p>数据行不一致的详情，mongodb业务用到</p>
+     * @param DifferenceSchemaDetail $DifferenceSchema <p>表结构不一致详情，pg用</p>
+     * @param DifferenceOwnerDetail $DifferenceOwner <p>对象owner不一致详情，pg用</p>
+     * @param CompareTableInfo $FullProgress <p>全量阶段表的校验进度。该字段后续逐步取代Difference</p>
+     * @param CompareTableInfo $IncDifference <p>增量阶段表的校验进度</p>
      */
     function __construct()
     {
@@ -127,6 +143,16 @@ class CompareDetailInfo extends AbstractModel
         if (array_key_exists("DifferenceOwner",$param) and $param["DifferenceOwner"] !== null) {
             $this->DifferenceOwner = new DifferenceOwnerDetail();
             $this->DifferenceOwner->deserialize($param["DifferenceOwner"]);
+        }
+
+        if (array_key_exists("FullProgress",$param) and $param["FullProgress"] !== null) {
+            $this->FullProgress = new CompareTableInfo();
+            $this->FullProgress->deserialize($param["FullProgress"]);
+        }
+
+        if (array_key_exists("IncDifference",$param) and $param["IncDifference"] !== null) {
+            $this->IncDifference = new CompareTableInfo();
+            $this->IncDifference->deserialize($param["IncDifference"]);
         }
     }
 }

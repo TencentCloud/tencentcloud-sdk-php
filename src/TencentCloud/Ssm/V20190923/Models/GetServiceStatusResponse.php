@@ -20,83 +20,87 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetServiceStatus返回参数结构体
  *
- * @method boolean getServiceEnabled() 获取true表示服务已开通，false 表示服务尚未开通。
- * @method void setServiceEnabled(boolean $ServiceEnabled) 设置true表示服务已开通，false 表示服务尚未开通。
- * @method integer getInvalidType() 获取服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
- * @method void setInvalidType(integer $InvalidType) 设置服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
- * @method boolean getAccessKeyEscrowEnabled() 获取true表示用户已经可以使用密钥安全托管功能，
-false表示用户暂时不能使用密钥安全托管功能。
- * @method void setAccessKeyEscrowEnabled(boolean $AccessKeyEscrowEnabled) 设置true表示用户已经可以使用密钥安全托管功能，
-false表示用户暂时不能使用密钥安全托管功能。
- * @method string getExpireTime() 获取过期时间
- * @method void setExpireTime(string $ExpireTime) 设置过期时间
- * @method integer getQPSLimit() 获取计算性能限制
- * @method void setQPSLimit(integer $QPSLimit) 设置计算性能限制
- * @method integer getSecretLimit() 获取凭据个数限制
- * @method void setSecretLimit(integer $SecretLimit) 设置凭据个数限制
- * @method string getPayModel() 获取付费模式
- * @method void setPayModel(string $PayModel) 设置付费模式
- * @method integer getRenewFlag() 获取自动续费标识，0:手动续费 1:自动续费 2:到期不续
- * @method void setRenewFlag(integer $RenewFlag) 设置自动续费标识，0:手动续费 1:自动续费 2:到期不续
- * @method string getResourceId() 获取资源id
- * @method void setResourceId(string $ResourceId) 设置资源id
- * @method integer getTotalCount() 获取已托管凭据个数
- * @method void setTotalCount(integer $TotalCount) 设置已托管凭据个数
+ * @method boolean getServiceEnabled() 获取<p>true表示服务已开通，false 表示服务尚未开通。</p>
+ * @method void setServiceEnabled(boolean $ServiceEnabled) 设置<p>true表示服务已开通，false 表示服务尚未开通。</p>
+ * @method integer getInvalidType() 获取<p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。</p>
+ * @method void setInvalidType(integer $InvalidType) 设置<p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。</p>
+ * @method boolean getAccessKeyEscrowEnabled() 获取<p>true表示用户已经可以使用密钥安全托管功能，<br>false表示用户暂时不能使用密钥安全托管功能。</p>
+ * @method void setAccessKeyEscrowEnabled(boolean $AccessKeyEscrowEnabled) 设置<p>true表示用户已经可以使用密钥安全托管功能，<br>false表示用户暂时不能使用密钥安全托管功能。</p>
+ * @method string getExpireTime() 获取<p>过期时间</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>过期时间</p>
+ * @method integer getQPSLimit() 获取<p>计算性能限制</p>
+ * @method void setQPSLimit(integer $QPSLimit) 设置<p>计算性能限制</p>
+ * @method integer getSecretLimit() 获取<p>凭据个数限制</p>
+ * @method void setSecretLimit(integer $SecretLimit) 设置<p>凭据个数限制</p>
+ * @method string getPayModel() 获取<p>付费模式</p>
+ * @method void setPayModel(string $PayModel) 设置<p>付费模式</p>
+ * @method integer getRenewFlag() 获取<p>自动续费标识，0:手动续费 1:自动续费 2:到期不续</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>自动续费标识，0:手动续费 1:自动续费 2:到期不续</p>
+ * @method string getResourceId() 获取<p>资源id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源id</p>
+ * @method integer getTotalCount() 获取<p>已托管凭据个数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>已托管凭据个数</p>
+ * @method integer getResourceRegion() 获取<p>预付费购买 SSM 资源的地域 ID</p>
+ * @method void setResourceRegion(integer $ResourceRegion) 设置<p>预付费购买 SSM 资源的地域 ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetServiceStatusResponse extends AbstractModel
 {
     /**
-     * @var boolean true表示服务已开通，false 表示服务尚未开通。
+     * @var boolean <p>true表示服务已开通，false 表示服务尚未开通。</p>
      */
     public $ServiceEnabled;
 
     /**
-     * @var integer 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
+     * @var integer <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。</p>
      */
     public $InvalidType;
 
     /**
-     * @var boolean true表示用户已经可以使用密钥安全托管功能，
-false表示用户暂时不能使用密钥安全托管功能。
+     * @var boolean <p>true表示用户已经可以使用密钥安全托管功能，<br>false表示用户暂时不能使用密钥安全托管功能。</p>
      */
     public $AccessKeyEscrowEnabled;
 
     /**
-     * @var string 过期时间
+     * @var string <p>过期时间</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer 计算性能限制
+     * @var integer <p>计算性能限制</p>
      */
     public $QPSLimit;
 
     /**
-     * @var integer 凭据个数限制
+     * @var integer <p>凭据个数限制</p>
      */
     public $SecretLimit;
 
     /**
-     * @var string 付费模式
+     * @var string <p>付费模式</p>
      */
     public $PayModel;
 
     /**
-     * @var integer 自动续费标识，0:手动续费 1:自动续费 2:到期不续
+     * @var integer <p>自动续费标识，0:手动续费 1:自动续费 2:到期不续</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string 资源id
+     * @var string <p>资源id</p>
      */
     public $ResourceId;
 
     /**
-     * @var integer 已托管凭据个数
+     * @var integer <p>已托管凭据个数</p>
      */
     public $TotalCount;
+
+    /**
+     * @var integer <p>预付费购买 SSM 资源的地域 ID</p>
+     */
+    public $ResourceRegion;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -104,17 +108,17 @@ false表示用户暂时不能使用密钥安全托管功能。
     public $RequestId;
 
     /**
-     * @param boolean $ServiceEnabled true表示服务已开通，false 表示服务尚未开通。
-     * @param integer $InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
-     * @param boolean $AccessKeyEscrowEnabled true表示用户已经可以使用密钥安全托管功能，
-false表示用户暂时不能使用密钥安全托管功能。
-     * @param string $ExpireTime 过期时间
-     * @param integer $QPSLimit 计算性能限制
-     * @param integer $SecretLimit 凭据个数限制
-     * @param string $PayModel 付费模式
-     * @param integer $RenewFlag 自动续费标识，0:手动续费 1:自动续费 2:到期不续
-     * @param string $ResourceId 资源id
-     * @param integer $TotalCount 已托管凭据个数
+     * @param boolean $ServiceEnabled <p>true表示服务已开通，false 表示服务尚未开通。</p>
+     * @param integer $InvalidType <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。</p>
+     * @param boolean $AccessKeyEscrowEnabled <p>true表示用户已经可以使用密钥安全托管功能，<br>false表示用户暂时不能使用密钥安全托管功能。</p>
+     * @param string $ExpireTime <p>过期时间</p>
+     * @param integer $QPSLimit <p>计算性能限制</p>
+     * @param integer $SecretLimit <p>凭据个数限制</p>
+     * @param string $PayModel <p>付费模式</p>
+     * @param integer $RenewFlag <p>自动续费标识，0:手动续费 1:自动续费 2:到期不续</p>
+     * @param string $ResourceId <p>资源id</p>
+     * @param integer $TotalCount <p>已托管凭据个数</p>
+     * @param integer $ResourceRegion <p>预付费购买 SSM 资源的地域 ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -168,6 +172,10 @@ false表示用户暂时不能使用密钥安全托管功能。
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
+            $this->ResourceRegion = $param["ResourceRegion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

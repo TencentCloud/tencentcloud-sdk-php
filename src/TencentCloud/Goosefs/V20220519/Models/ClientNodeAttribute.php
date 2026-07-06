@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 客户端节点属性
  *
- * @method string getClientNodeIp() 获取客户端节点IP
- * @method void setClientNodeIp(string $ClientNodeIp) 设置客户端节点IP
- * @method string getStatus() 获取客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
- * @method void setStatus(string $Status) 设置客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
- * @method string getClientType() 获取客户端节点类型，extend(扩展节点)，manager(管理节点)
- * @method void setClientType(string $ClientType) 设置客户端节点类型，extend(扩展节点)，manager(管理节点)
- * @method string getVpcId() 获取节点所属vpcid	
- * @method void setVpcId(string $VpcId) 设置节点所属vpcid	
- * @method string getSubnetId() 获取节点所属子网id
- * @method void setSubnetId(string $SubnetId) 设置节点所属子网id
- * @method string getInstanceId() 获取cvmId
- * @method void setInstanceId(string $InstanceId) 设置cvmId
- * @method string getMountPoint() 获取自定义挂载点
- * @method void setMountPoint(string $MountPoint) 设置自定义挂载点
+ * @method string getClientNodeIp() 获取<p>客户端节点IP</p>
+ * @method void setClientNodeIp(string $ClientNodeIp) 设置<p>客户端节点IP</p>
+ * @method string getStatus() 获取<p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p>
+ * @method void setStatus(string $Status) 设置<p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p>
+ * @method string getClientType() 获取<p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p>
+ * @method void setClientType(string $ClientType) 设置<p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p>
+ * @method string getVpcId() 获取<p>节点所属vpcid</p>
+ * @method void setVpcId(string $VpcId) 设置<p>节点所属vpcid</p>
+ * @method string getSubnetId() 获取<p>节点所属子网id</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>节点所属子网id</p>
+ * @method string getInstanceId() 获取<p>cvmId</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>cvmId</p>
+ * @method string getMountPoint() 获取<p>自定义挂载点</p>
+ * @method void setMountPoint(string $MountPoint) 设置<p>自定义挂载点</p>
+ * @method string getClusterId() 获取<p>客户端集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>客户端集群id</p>
  */
 class ClientNodeAttribute extends AbstractModel
 {
     /**
-     * @var string 客户端节点IP
+     * @var string <p>客户端节点IP</p>
      */
     public $ClientNodeIp;
 
     /**
-     * @var string 客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
+     * @var string <p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p>
      */
     public $Status;
 
     /**
-     * @var string 客户端节点类型，extend(扩展节点)，manager(管理节点)
+     * @var string <p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p>
      */
     public $ClientType;
 
     /**
-     * @var string 节点所属vpcid	
+     * @var string <p>节点所属vpcid</p>
      */
     public $VpcId;
 
     /**
-     * @var string 节点所属子网id
+     * @var string <p>节点所属子网id</p>
      */
     public $SubnetId;
 
     /**
-     * @var string cvmId
+     * @var string <p>cvmId</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 自定义挂载点
+     * @var string <p>自定义挂载点</p>
      */
     public $MountPoint;
 
     /**
-     * @param string $ClientNodeIp 客户端节点IP
-     * @param string $Status 客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
-     * @param string $ClientType 客户端节点类型，extend(扩展节点)，manager(管理节点)
-     * @param string $VpcId 节点所属vpcid	
-     * @param string $SubnetId 节点所属子网id
-     * @param string $InstanceId cvmId
-     * @param string $MountPoint 自定义挂载点
+     * @var string <p>客户端集群id</p>
+     */
+    public $ClusterId;
+
+    /**
+     * @param string $ClientNodeIp <p>客户端节点IP</p>
+     * @param string $Status <p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p>
+     * @param string $ClientType <p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p>
+     * @param string $VpcId <p>节点所属vpcid</p>
+     * @param string $SubnetId <p>节点所属子网id</p>
+     * @param string $InstanceId <p>cvmId</p>
+     * @param string $MountPoint <p>自定义挂载点</p>
+     * @param string $ClusterId <p>客户端集群id</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ClientNodeAttribute extends AbstractModel
 
         if (array_key_exists("MountPoint",$param) and $param["MountPoint"] !== null) {
             $this->MountPoint = $param["MountPoint"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

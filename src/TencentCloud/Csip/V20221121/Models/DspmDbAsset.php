@@ -98,6 +98,8 @@ None 暂无异常
  * @method void setAccountOptSupported(integer $AccountOptSupported) 设置是否支持账号操作。0 不支持；1 支持
  * @method integer getInstanceType() 获取实例类型
  * @method void setInstanceType(integer $InstanceType) 设置实例类型
+ * @method integer getClusterType() 获取集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+ * @method void setClusterType(integer $ClusterType) 设置集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
  * @method integer getIdentifyScanSupported() 获取是否支持敏感数据识别。0 不支持；1 支持
  * @method void setIdentifyScanSupported(integer $IdentifyScanSupported) 设置是否支持敏感数据识别。0 不支持；1 支持
  */
@@ -275,6 +277,11 @@ None 暂无异常
     public $InstanceType;
 
     /**
+     * @var integer 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+     */
+    public $ClusterType;
+
+    /**
      * @var integer 是否支持敏感数据识别。0 不支持；1 支持
      */
     public $IdentifyScanSupported;
@@ -319,6 +326,7 @@ None 暂无异常
      * @param string $OperationErrorMsg 操作错误信息
      * @param integer $AccountOptSupported 是否支持账号操作。0 不支持；1 支持
      * @param integer $InstanceType 实例类型
+     * @param integer $ClusterType 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
      * @param integer $IdentifyScanSupported 是否支持敏感数据识别。0 不支持；1 支持
      */
     function __construct()
@@ -471,6 +479,10 @@ None 暂无异常
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
 
         if (array_key_exists("IdentifyScanSupported",$param) and $param["IdentifyScanSupported"] !== null) {

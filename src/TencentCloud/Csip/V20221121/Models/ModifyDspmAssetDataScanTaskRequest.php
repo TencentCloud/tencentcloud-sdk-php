@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAgreeAuth(boolean $IsAgreeAuth) 设置是否同意一键授权
  * @method boolean getIsRunAtOnce() 获取是否立即执行
  * @method void setIsRunAtOnce(boolean $IsRunAtOnce) 设置是否立即执行
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method DspmScheduleConfig getScheduleConfig() 获取调度周期配置
  * @method void setScheduleConfig(DspmScheduleConfig $ScheduleConfig) 设置调度周期配置
  */
@@ -56,7 +56,7 @@ class ModifyDspmAssetDataScanTaskRequest extends AbstractModel
     public $IsRunAtOnce;
 
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -70,7 +70,7 @@ class ModifyDspmAssetDataScanTaskRequest extends AbstractModel
      * @param boolean $IsScheduled 是否定时任务
      * @param boolean $IsAgreeAuth 是否同意一键授权
      * @param boolean $IsRunAtOnce 是否立即执行
-     * @param array $MemberId 集团账号的成员id
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param DspmScheduleConfig $ScheduleConfig 调度周期配置
      */
     function __construct()

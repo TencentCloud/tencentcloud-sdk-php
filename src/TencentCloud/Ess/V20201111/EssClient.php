@@ -235,6 +235,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 适用场景1：已经上传了一个word文件，希望将该word文件转换成pdf文件后发起合同
 适用场景2：已经上传了一个jpg图片文件，希望将该图片文件转换成pdf文件后发起合同<br />
 转换文件是一个耗时操作，若想查看转换任务是否完成，可以通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi" target="_blank">查询转换任务状态</a>接口获取任务状态。<br />
+<font color="red">此接口于 2026 年 12月 31 日下线</font>，请使用新接口: <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateFileConvertTask" target="_blank">新建文件转换任务（CreateFileConvertTask）</a><br />
 注: 
 1. `支持的文件类型有doc、docx、xls、xlsx、html、jpg、jpeg、png、bmp、txt`
 2. `可通过发起合同时设置预览来检查转换文件是否达到预期效果`
@@ -330,6 +331,15 @@ use TencentCloud\Ess\V20201111\Models as Models;
 该接口作用和电子签控制台 企业设置-扩展服务-企业自动签署和批量签署授权 两个模块功能相同，可通过该接口授权给企业员工。
 
 注：“企业自动签授权”支持集团代子企业操作，请联系运营开通此功能。
+ * @method Models\CreateFileConvertTaskResponse CreateFileConvertTask(Models\CreateFileConvertTaskRequest $req) 此接口（CreateFileConvertTask）用来将word、excel、html、图片、txt类型文件转换为PDF文件。<br />
+<font color="red">原功能接口: </font><a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务（CreateConvertTaskApi）</a><br />
+前提条件：源文件已经通过 <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">文件上传接口</a>完成上传，并得到了源文件的资源Id。<br />
+适用场景1：已经上传了一个word文件，希望将该word文件转换成pdf文件后发起合同
+适用场景2：已经上传了一个jpg图片文件，希望将该图片文件转换成pdf文件后发起合同<br />
+转换文件是一个耗时操作，若想查看转换任务是否完成，可以通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/DescribeFileConvertTask" target="_blank">查询转换任务状态</a>接口获取任务状态。<br />
+注: 
+1. `支持的文件类型有doc、docx、xls、xlsx、html、jpg、jpeg、png、bmp、txt`
+2. `可通过发起合同时设置预览来检查转换文件是否达到预期效果`
  * @method Models\CreateFileCounterSignResponse CreateFileCounterSign(Models\CreateFileCounterSignRequest $req) 此接口用于发起数字文件CA加签操作。可以使用同步或者异步模式进行。
 
 **注意： 1. 文件类型暂时仅支持PDF类型文件。2. 此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。**
@@ -1041,6 +1051,14 @@ use TencentCloud\Ess\V20201111\Models as Models;
 ![image](https://qcloudimg.tencent-cloud.cn/raw/bc1414ed8c257cbc408201579cff72cd/a1111.png)
 
 注: <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Operator.UserId需要传递超管或者法人的UserId)
+ * @method Models\DescribeFileConvertTaskResponse DescribeFileConvertTask(Models\DescribeFileConvertTaskRequest $req) 此接口（DescribeFileConvertTask）用来查询转换任务的状态。如需发起转换任务，请使用<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateFileConvertTask" target="_blank">创建文件转换任务接口</a>进行资源文件的转换操作<br />
+<font color="red">原功能接口: </font><a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi" target="_blank">查询转换任务状态（GetTaskResultApi）</a><br />
+前提条件：已调用 <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateFileConvertTask" target="_blank">创建文件转换任务接口</a>进行文件转换，并得到了返回的转换任务Id。<br />
+
+适用场景：已创建一个文件转换任务，想查询该文件转换任务的状态，或获取转换后的文件资源Id。<br />
+注：
+1. `大文件转换所需的时间可能会比较长`
+2.  `本接口返回的文件资源ID就是PDF资源ID，可以直接用于【用PDF文件创建签署流程】接口发起合同。`
  * @method Models\DescribeFileCounterSignResultResponse DescribeFileCounterSignResult(Models\DescribeFileCounterSignResultRequest $req) 文件CA加签任务结果查询接口，用于查询 CreateFileCounterSign接口 发起的异步加签任务。
 
 注意：`此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。`
@@ -1194,6 +1212,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 前提条件：已调用 <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>进行文件转换，并得到了返回的转换任务Id。<br />
 
 适用场景：已创建一个文件转换任务，想查询该文件转换任务的状态，或获取转换后的文件资源Id。<br />
+<font color="red">此接口于 2026 年 12月 31 日下线</font>，请使用新接口: <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/DescribeFileConvertTask" target="_blank">查询文件转换任务状态（DescribeFileConvertTask）</a><br />
 注：
 1. `大文件转换所需的时间可能会比较长`
 2.  `本接口返回的文件资源ID就是PDF资源ID，可以直接用于【用PDF文件创建签署流程】接口发起合同。`

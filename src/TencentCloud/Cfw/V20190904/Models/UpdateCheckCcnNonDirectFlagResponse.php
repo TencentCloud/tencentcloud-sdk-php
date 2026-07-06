@@ -20,21 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCheckCcnNonDirectFlag返回参数结构体
  *
- * @method string getMessage() 获取检测更新状态
-"Checked"：重新检测完成
-"Checking": 正在重新检测中，请稍后刷新状态查看
- * @method void setMessage(string $Message) 设置检测更新状态
-"Checked"：重新检测完成
-"Checking": 正在重新检测中，请稍后刷新状态查看
+ * @method string getMessage() 获取<p>检测更新状态<br>&quot;Checked&quot;：重新检测完成<br>&quot;Checking&quot;: 正在重新检测中，请稍后刷新状态查看</p>
+ * @method void setMessage(string $Message) 设置<p>检测更新状态<br>&quot;Checked&quot;：重新检测完成<br>&quot;Checking&quot;: 正在重新检测中，请稍后刷新状态查看</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateCheckCcnNonDirectFlagResponse extends AbstractModel
 {
     /**
-     * @var string 检测更新状态
-"Checked"：重新检测完成
-"Checking": 正在重新检测中，请稍后刷新状态查看
+     * @var string <p>检测更新状态<br>&quot;Checked&quot;：重新检测完成<br>&quot;Checking&quot;: 正在重新检测中，请稍后刷新状态查看</p>
      */
     public $Message;
 
@@ -44,9 +38,7 @@ class UpdateCheckCcnNonDirectFlagResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Message 检测更新状态
-"Checked"：重新检测完成
-"Checking": 正在重新检测中，请稍后刷新状态查看
+     * @param string $Message <p>检测更新状态<br>&quot;Checked&quot;：重新检测完成<br>&quot;Checking&quot;: 正在重新检测中，请稍后刷新状态查看</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

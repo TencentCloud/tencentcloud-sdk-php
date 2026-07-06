@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateClusterVpcFw请求参数结构体
  *
- * @method CcnSwitchInfo getCcnSwitch() 获取ccn防火墙开关配置信息
- * @method void setCcnSwitch(CcnSwitchInfo $CcnSwitch) 设置ccn防火墙开关配置信息
+ * @method CcnSwitchInfo getCcnSwitch() 获取<p>ccn防火墙开关配置信息</p>
+ * @method void setCcnSwitch(CcnSwitchInfo $CcnSwitch) 设置<p>ccn防火墙开关配置信息</p>
  */
 class UpdateClusterVpcFwRequest extends AbstractModel
 {
     /**
-     * @var CcnSwitchInfo ccn防火墙开关配置信息
+     * @var CcnSwitchInfo <p>ccn防火墙开关配置信息</p>
      */
     public $CcnSwitch;
 
     /**
-     * @param CcnSwitchInfo $CcnSwitch ccn防火墙开关配置信息
+     * @param CcnSwitchInfo $CcnSwitch <p>ccn防火墙开关配置信息</p>
      */
     function __construct()
     {

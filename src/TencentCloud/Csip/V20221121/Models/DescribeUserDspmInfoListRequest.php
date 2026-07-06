@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserDspmInfoList请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method Filter getFilter() 获取过滤条件
  * @method void setFilter(Filter $Filter) 设置过滤条件
  */
 class DescribeUserDspmInfoListRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -38,7 +38,7 @@ class DescribeUserDspmInfoListRequest extends AbstractModel
     public $Filter;
 
     /**
-     * @param array $MemberId 集团账号的成员id
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param Filter $Filter 过滤条件
      */
     function __construct()

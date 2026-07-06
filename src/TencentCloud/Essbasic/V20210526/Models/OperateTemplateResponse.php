@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OperateTemplate返回参数结构体
  *
- * @method string getTemplateId() 获取模板ID，为32位字符串，模板复制新建时返回
- * @method void setTemplateId(string $TemplateId) 设置模板ID，为32位字符串，模板复制新建时返回
- * @method string getTemplateName() 获取模板名称，模板复制新建时返回
- * @method void setTemplateName(string $TemplateName) 设置模板名称，模板复制新建时返回
+ * @method string getTemplateId() 获取<p>模板ID，为32位字符串，模板复制新建时返回</p>
+ * @method void setTemplateId(string $TemplateId) 设置<p>模板ID，为32位字符串，模板复制新建时返回</p>
+ * @method string getTemplateName() 获取<p>模板名称，模板复制新建时返回</p>
+ * @method void setTemplateName(string $TemplateName) 设置<p>模板名称，模板复制新建时返回</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class OperateTemplateResponse extends AbstractModel
 {
     /**
-     * @var string 模板ID，为32位字符串，模板复制新建时返回
+     * @var string <p>模板ID，为32位字符串，模板复制新建时返回</p>
      */
     public $TemplateId;
 
     /**
-     * @var string 模板名称，模板复制新建时返回
+     * @var string <p>模板名称，模板复制新建时返回</p>
      */
     public $TemplateName;
 
@@ -45,8 +45,8 @@ class OperateTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TemplateId 模板ID，为32位字符串，模板复制新建时返回
-     * @param string $TemplateName 模板名称，模板复制新建时返回
+     * @param string $TemplateId <p>模板ID，为32位字符串，模板复制新建时返回</p>
+     * @param string $TemplateName <p>模板名称，模板复制新建时返回</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,322 +20,282 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群资产返回的结构体
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method string getClusterName() 获取集群名字
- * @method void setClusterName(string $ClusterName) 设置集群名字
- * @method string getClusterVersion() 获取集群版本
- * @method void setClusterVersion(string $ClusterVersion) 设置集群版本
- * @method string getClusterOs() 获取集群操作系统
- * @method void setClusterOs(string $ClusterOs) 设置集群操作系统
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
- * @method integer getClusterNodeNum() 获取集群节点数
- * @method void setClusterNodeNum(integer $ClusterNodeNum) 设置集群节点数
- * @method string getRegion() 获取集群区域
- * @method void setRegion(string $Region) 设置集群区域
- * @method string getDefenderStatus() 获取防护状态: 
-已防护: Defended 
-未防护: UnDefended
-部分防护: PartDefened
- * @method void setDefenderStatus(string $DefenderStatus) 设置防护状态: 
-已防护: Defended 
-未防护: UnDefended
-部分防护: PartDefened
- * @method string getClusterStatus() 获取集群状态
- * @method void setClusterStatus(string $ClusterStatus) 设置集群状态
- * @method string getClusterSubStatus() 获取集群运行子状态
- * @method void setClusterSubStatus(string $ClusterSubStatus) 设置集群运行子状态
- * @method string getClusterCheckMode() 获取集群的检测模式，为Cluster_Normal或者Cluster_Actived.
- * @method void setClusterCheckMode(string $ClusterCheckMode) 设置集群的检测模式，为Cluster_Normal或者Cluster_Actived.
- * @method boolean getClusterAutoCheck() 获取是否自动定期检测
- * @method void setClusterAutoCheck(boolean $ClusterAutoCheck) 设置是否自动定期检测
- * @method string getDefenderErrorReason() 获取防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示
- * @method void setDefenderErrorReason(string $DefenderErrorReason) 设置防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示
- * @method integer getUnreadyNodeNum() 获取防御容器没有ready状态的节点数量
- * @method void setUnreadyNodeNum(integer $UnreadyNodeNum) 设置防御容器没有ready状态的节点数量
- * @method integer getSeriousRiskCount() 获取严重风险检查项的数量
- * @method void setSeriousRiskCount(integer $SeriousRiskCount) 设置严重风险检查项的数量
- * @method integer getHighRiskCount() 获取高风险检查项的数量
- * @method void setHighRiskCount(integer $HighRiskCount) 设置高风险检查项的数量
- * @method integer getMiddleRiskCount() 获取中风险检查项的数量
- * @method void setMiddleRiskCount(integer $MiddleRiskCount) 设置中风险检查项的数量
- * @method integer getHintRiskCount() 获取提示风险检查项的数量
- * @method void setHintRiskCount(integer $HintRiskCount) 设置提示风险检查项的数量
- * @method string getCheckFailReason() 获取检查失败原因
- * @method void setCheckFailReason(string $CheckFailReason) 设置检查失败原因
- * @method string getCheckStatus() 获取检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
- * @method void setCheckStatus(string $CheckStatus) 设置检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
- * @method string getTaskCreateTime() 获取任务创建时间,检查时间
- * @method void setTaskCreateTime(string $TaskCreateTime) 设置任务创建时间,检查时间
- * @method string getAccessedStatus() 获取接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
- * @method void setAccessedStatus(string $AccessedStatus) 设置接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
- * @method string getAccessedSubStatus() 获取接入失败原因
- * @method void setAccessedSubStatus(string $AccessedSubStatus) 设置接入失败原因
- * @method string getAccessedErrorReason() 获取接入/卸载失败原因
- * @method void setAccessedErrorReason(string $AccessedErrorReason) 设置接入/卸载失败原因
- * @method integer getNodeCount() 获取节点总数
- * @method void setNodeCount(integer $NodeCount) 设置节点总数
- * @method integer getOffLineNodeCount() 获取离线节点数
- * @method void setOffLineNodeCount(integer $OffLineNodeCount) 设置离线节点数
- * @method integer getUnInstallAgentNodeCount() 获取未安装agent节点数
- * @method void setUnInstallAgentNodeCount(integer $UnInstallAgentNodeCount) 设置未安装agent节点数
- * @method integer getChargeCoresCnt() 获取计费核数(弹性计费核数+普通计费核数)
- * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置计费核数(弹性计费核数+普通计费核数)
- * @method array getMasterAddresses() 获取master 地址列表
- * @method void setMasterAddresses(array $MasterAddresses) 设置master 地址列表
- * @method integer getCoresCnt() 获取核数
- * @method void setCoresCnt(integer $CoresCnt) 设置核数
- * @method string getClusterAuditStatus() 获取集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
- * @method void setClusterAuditStatus(string $ClusterAuditStatus) 设置集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
- * @method string getClusterAuditFailedInfo() 获取集群审计开关失败信息
- * @method void setClusterAuditFailedInfo(string $ClusterAuditFailedInfo) 设置集群审计开关失败信息
- * @method string getOwnerName() 获取所有者名称
- * @method void setOwnerName(string $OwnerName) 设置所有者名称
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method string getClusterCAMD5() 获取<p>集群ca证书md5值</p>
+ * @method void setClusterCAMD5(string $ClusterCAMD5) 设置<p>集群ca证书md5值</p>
+ * @method string getClusterName() 获取<p>集群名字</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名字</p>
+ * @method string getClusterVersion() 获取<p>集群版本</p>
+ * @method void setClusterVersion(string $ClusterVersion) 设置<p>集群版本</p>
+ * @method string getClusterOs() 获取<p>集群操作系统</p>
+ * @method void setClusterOs(string $ClusterOs) 设置<p>集群操作系统</p>
+ * @method string getClusterType() 获取<p>集群类型</p>
+ * @method void setClusterType(string $ClusterType) 设置<p>集群类型</p>
+ * @method integer getClusterNodeNum() 获取<p>集群节点数</p>
+ * @method void setClusterNodeNum(integer $ClusterNodeNum) 设置<p>集群节点数</p>
+ * @method string getRegion() 获取<p>集群区域</p>
+ * @method void setRegion(string $Region) 设置<p>集群区域</p>
+ * @method string getDefenderStatus() 获取<p>防护状态:<br>已防护: Defended<br>未防护: UnDefended<br>部分防护: PartDefened</p>
+ * @method void setDefenderStatus(string $DefenderStatus) 设置<p>防护状态:<br>已防护: Defended<br>未防护: UnDefended<br>部分防护: PartDefened</p>
+ * @method string getClusterStatus() 获取<p>集群状态</p>
+ * @method void setClusterStatus(string $ClusterStatus) 设置<p>集群状态</p>
+ * @method string getClusterSubStatus() 获取<p>集群运行子状态</p>
+ * @method void setClusterSubStatus(string $ClusterSubStatus) 设置<p>集群运行子状态</p>
+ * @method string getClusterCheckMode() 获取<p>集群的检测模式，为Cluster_Normal或者Cluster_Actived.</p>
+ * @method void setClusterCheckMode(string $ClusterCheckMode) 设置<p>集群的检测模式，为Cluster_Normal或者Cluster_Actived.</p>
+ * @method boolean getClusterAutoCheck() 获取<p>是否自动定期检测</p>
+ * @method void setClusterAutoCheck(boolean $ClusterAutoCheck) 设置<p>是否自动定期检测</p>
+ * @method string getDefenderErrorReason() 获取<p>防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成&quot;N个节点防御容器为就绪&quot;，其他错误直接展示</p>
+ * @method void setDefenderErrorReason(string $DefenderErrorReason) 设置<p>防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成&quot;N个节点防御容器为就绪&quot;，其他错误直接展示</p>
+ * @method integer getUnreadyNodeNum() 获取<p>防御容器没有ready状态的节点数量</p>
+ * @method void setUnreadyNodeNum(integer $UnreadyNodeNum) 设置<p>防御容器没有ready状态的节点数量</p>
+ * @method integer getSeriousRiskCount() 获取<p>严重风险检查项的数量</p>
+ * @method void setSeriousRiskCount(integer $SeriousRiskCount) 设置<p>严重风险检查项的数量</p>
+ * @method integer getHighRiskCount() 获取<p>高风险检查项的数量</p>
+ * @method void setHighRiskCount(integer $HighRiskCount) 设置<p>高风险检查项的数量</p>
+ * @method integer getMiddleRiskCount() 获取<p>中风险检查项的数量</p>
+ * @method void setMiddleRiskCount(integer $MiddleRiskCount) 设置<p>中风险检查项的数量</p>
+ * @method integer getHintRiskCount() 获取<p>提示风险检查项的数量</p>
+ * @method void setHintRiskCount(integer $HintRiskCount) 设置<p>提示风险检查项的数量</p>
+ * @method string getCheckFailReason() 获取<p>检查失败原因</p>
+ * @method void setCheckFailReason(string $CheckFailReason) 设置<p>检查失败原因</p>
+ * @method string getCheckStatus() 获取<p>检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error</p>
+ * @method void setCheckStatus(string $CheckStatus) 设置<p>检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error</p>
+ * @method string getTaskCreateTime() 获取<p>任务创建时间,检查时间</p>
+ * @method void setTaskCreateTime(string $TaskCreateTime) 设置<p>任务创建时间,检查时间</p>
+ * @method string getAccessedStatus() 获取<p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
+ * @method void setAccessedStatus(string $AccessedStatus) 设置<p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
+ * @method string getAccessedSubStatus() 获取<p>接入失败原因</p>
+ * @method void setAccessedSubStatus(string $AccessedSubStatus) 设置<p>接入失败原因</p>
+ * @method string getAccessedErrorReason() 获取<p>接入/卸载失败原因</p>
+ * @method void setAccessedErrorReason(string $AccessedErrorReason) 设置<p>接入/卸载失败原因</p>
+ * @method integer getNodeCount() 获取<p>节点总数</p>
+ * @method void setNodeCount(integer $NodeCount) 设置<p>节点总数</p>
+ * @method integer getOffLineNodeCount() 获取<p>离线节点数</p>
+ * @method void setOffLineNodeCount(integer $OffLineNodeCount) 设置<p>离线节点数</p>
+ * @method integer getUnInstallAgentNodeCount() 获取<p>未安装agent节点数</p>
+ * @method void setUnInstallAgentNodeCount(integer $UnInstallAgentNodeCount) 设置<p>未安装agent节点数</p>
+ * @method integer getChargeCoresCnt() 获取<p>计费核数(弹性计费核数+普通计费核数)</p>
+ * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置<p>计费核数(弹性计费核数+普通计费核数)</p>
+ * @method array getMasterAddresses() 获取<p>master 地址列表</p>
+ * @method void setMasterAddresses(array $MasterAddresses) 设置<p>master 地址列表</p>
+ * @method integer getCoresCnt() 获取<p>核数</p>
+ * @method void setCoresCnt(integer $CoresCnt) 设置<p>核数</p>
+ * @method string getClusterAuditStatus() 获取<p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
+ * @method void setClusterAuditStatus(string $ClusterAuditStatus) 设置<p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
+ * @method string getClusterAuditFailedInfo() 获取<p>集群审计开关失败信息</p>
+ * @method void setClusterAuditFailedInfo(string $ClusterAuditFailedInfo) 设置<p>集群审计开关失败信息</p>
+ * @method string getOwnerName() 获取<p>所有者名称</p>
+ * @method void setOwnerName(string $OwnerName) 设置<p>所有者名称</p>
  */
 class ClusterInfoItem extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名字
+     * @var string <p>集群ca证书md5值</p>
+     */
+    public $ClusterCAMD5;
+
+    /**
+     * @var string <p>集群名字</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 集群版本
+     * @var string <p>集群版本</p>
      */
     public $ClusterVersion;
 
     /**
-     * @var string 集群操作系统
+     * @var string <p>集群操作系统</p>
      */
     public $ClusterOs;
 
     /**
-     * @var string 集群类型
+     * @var string <p>集群类型</p>
      */
     public $ClusterType;
 
     /**
-     * @var integer 集群节点数
+     * @var integer <p>集群节点数</p>
      */
     public $ClusterNodeNum;
 
     /**
-     * @var string 集群区域
+     * @var string <p>集群区域</p>
      */
     public $Region;
 
     /**
-     * @var string 防护状态: 
-已防护: Defended 
-未防护: UnDefended
-部分防护: PartDefened
+     * @var string <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended<br>部分防护: PartDefened</p>
      */
     public $DefenderStatus;
 
     /**
-     * @var string 集群状态
+     * @var string <p>集群状态</p>
      */
     public $ClusterStatus;
 
     /**
-     * @var string 集群运行子状态
+     * @var string <p>集群运行子状态</p>
      */
     public $ClusterSubStatus;
 
     /**
-     * @var string 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
+     * @var string <p>集群的检测模式，为Cluster_Normal或者Cluster_Actived.</p>
      */
     public $ClusterCheckMode;
 
     /**
-     * @var boolean 是否自动定期检测
+     * @var boolean <p>是否自动定期检测</p>
      */
     public $ClusterAutoCheck;
 
     /**
-     * @var string 防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示
+     * @var string <p>防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成&quot;N个节点防御容器为就绪&quot;，其他错误直接展示</p>
      */
     public $DefenderErrorReason;
 
     /**
-     * @var integer 防御容器没有ready状态的节点数量
+     * @var integer <p>防御容器没有ready状态的节点数量</p>
      */
     public $UnreadyNodeNum;
 
     /**
-     * @var integer 严重风险检查项的数量
+     * @var integer <p>严重风险检查项的数量</p>
      */
     public $SeriousRiskCount;
 
     /**
-     * @var integer 高风险检查项的数量
+     * @var integer <p>高风险检查项的数量</p>
      */
     public $HighRiskCount;
 
     /**
-     * @var integer 中风险检查项的数量
+     * @var integer <p>中风险检查项的数量</p>
      */
     public $MiddleRiskCount;
 
     /**
-     * @var integer 提示风险检查项的数量
+     * @var integer <p>提示风险检查项的数量</p>
      */
     public $HintRiskCount;
 
     /**
-     * @var string 检查失败原因
+     * @var string <p>检查失败原因</p>
      */
     public $CheckFailReason;
 
     /**
-     * @var string 检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
+     * @var string <p>检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error</p>
      */
     public $CheckStatus;
 
     /**
-     * @var string 任务创建时间,检查时间
+     * @var string <p>任务创建时间,检查时间</p>
      */
     public $TaskCreateTime;
 
     /**
-     * @var string 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
+     * @var string <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
      */
     public $AccessedStatus;
 
     /**
-     * @var string 接入失败原因
+     * @var string <p>接入失败原因</p>
      */
     public $AccessedSubStatus;
 
     /**
-     * @var string 接入/卸载失败原因
+     * @var string <p>接入/卸载失败原因</p>
      */
     public $AccessedErrorReason;
 
     /**
-     * @var integer 节点总数
+     * @var integer <p>节点总数</p>
      */
     public $NodeCount;
 
     /**
-     * @var integer 离线节点数
+     * @var integer <p>离线节点数</p>
      */
     public $OffLineNodeCount;
 
     /**
-     * @var integer 未安装agent节点数
+     * @var integer <p>未安装agent节点数</p>
      */
     public $UnInstallAgentNodeCount;
 
     /**
-     * @var integer 计费核数(弹性计费核数+普通计费核数)
+     * @var integer <p>计费核数(弹性计费核数+普通计费核数)</p>
      */
     public $ChargeCoresCnt;
 
     /**
-     * @var array master 地址列表
+     * @var array <p>master 地址列表</p>
      */
     public $MasterAddresses;
 
     /**
-     * @var integer 核数
+     * @var integer <p>核数</p>
      */
     public $CoresCnt;
 
     /**
-     * @var string 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     * @var string <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
      */
     public $ClusterAuditStatus;
 
     /**
-     * @var string 集群审计开关失败信息
+     * @var string <p>集群审计开关失败信息</p>
      */
     public $ClusterAuditFailedInfo;
 
     /**
-     * @var string 所有者名称
+     * @var string <p>所有者名称</p>
      */
     public $OwnerName;
 
     /**
-     * @param string $ClusterId 集群id
-     * @param string $ClusterName 集群名字
-     * @param string $ClusterVersion 集群版本
-     * @param string $ClusterOs 集群操作系统
-     * @param string $ClusterType 集群类型
-     * @param integer $ClusterNodeNum 集群节点数
-     * @param string $Region 集群区域
-     * @param string $DefenderStatus 防护状态: 
-已防护: Defended 
-未防护: UnDefended
-部分防护: PartDefened
-     * @param string $ClusterStatus 集群状态
-     * @param string $ClusterSubStatus 集群运行子状态
-     * @param string $ClusterCheckMode 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
-     * @param boolean $ClusterAutoCheck 是否自动定期检测
-     * @param string $DefenderErrorReason 防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示
-     * @param integer $UnreadyNodeNum 防御容器没有ready状态的节点数量
-     * @param integer $SeriousRiskCount 严重风险检查项的数量
-     * @param integer $HighRiskCount 高风险检查项的数量
-     * @param integer $MiddleRiskCount 中风险检查项的数量
-     * @param integer $HintRiskCount 提示风险检查项的数量
-     * @param string $CheckFailReason 检查失败原因
-     * @param string $CheckStatus 检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
-     * @param string $TaskCreateTime 任务创建时间,检查时间
-     * @param string $AccessedStatus 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
-     * @param string $AccessedSubStatus 接入失败原因
-     * @param string $AccessedErrorReason 接入/卸载失败原因
-     * @param integer $NodeCount 节点总数
-     * @param integer $OffLineNodeCount 离线节点数
-     * @param integer $UnInstallAgentNodeCount 未安装agent节点数
-     * @param integer $ChargeCoresCnt 计费核数(弹性计费核数+普通计费核数)
-     * @param array $MasterAddresses master 地址列表
-     * @param integer $CoresCnt 核数
-     * @param string $ClusterAuditStatus 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
-     * @param string $ClusterAuditFailedInfo 集群审计开关失败信息
-     * @param string $OwnerName 所有者名称
+     * @param string $ClusterId <p>集群id</p>
+     * @param string $ClusterCAMD5 <p>集群ca证书md5值</p>
+     * @param string $ClusterName <p>集群名字</p>
+     * @param string $ClusterVersion <p>集群版本</p>
+     * @param string $ClusterOs <p>集群操作系统</p>
+     * @param string $ClusterType <p>集群类型</p>
+     * @param integer $ClusterNodeNum <p>集群节点数</p>
+     * @param string $Region <p>集群区域</p>
+     * @param string $DefenderStatus <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended<br>部分防护: PartDefened</p>
+     * @param string $ClusterStatus <p>集群状态</p>
+     * @param string $ClusterSubStatus <p>集群运行子状态</p>
+     * @param string $ClusterCheckMode <p>集群的检测模式，为Cluster_Normal或者Cluster_Actived.</p>
+     * @param boolean $ClusterAutoCheck <p>是否自动定期检测</p>
+     * @param string $DefenderErrorReason <p>防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成&quot;N个节点防御容器为就绪&quot;，其他错误直接展示</p>
+     * @param integer $UnreadyNodeNum <p>防御容器没有ready状态的节点数量</p>
+     * @param integer $SeriousRiskCount <p>严重风险检查项的数量</p>
+     * @param integer $HighRiskCount <p>高风险检查项的数量</p>
+     * @param integer $MiddleRiskCount <p>中风险检查项的数量</p>
+     * @param integer $HintRiskCount <p>提示风险检查项的数量</p>
+     * @param string $CheckFailReason <p>检查失败原因</p>
+     * @param string $CheckStatus <p>检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error</p>
+     * @param string $TaskCreateTime <p>任务创建时间,检查时间</p>
+     * @param string $AccessedStatus <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
+     * @param string $AccessedSubStatus <p>接入失败原因</p>
+     * @param string $AccessedErrorReason <p>接入/卸载失败原因</p>
+     * @param integer $NodeCount <p>节点总数</p>
+     * @param integer $OffLineNodeCount <p>离线节点数</p>
+     * @param integer $UnInstallAgentNodeCount <p>未安装agent节点数</p>
+     * @param integer $ChargeCoresCnt <p>计费核数(弹性计费核数+普通计费核数)</p>
+     * @param array $MasterAddresses <p>master 地址列表</p>
+     * @param integer $CoresCnt <p>核数</p>
+     * @param string $ClusterAuditStatus <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
+     * @param string $ClusterAuditFailedInfo <p>集群审计开关失败信息</p>
+     * @param string $OwnerName <p>所有者名称</p>
      */
     function __construct()
     {
@@ -352,6 +312,10 @@ class ClusterInfoItem extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterCAMD5",$param) and $param["ClusterCAMD5"] !== null) {
+            $this->ClusterCAMD5 = $param["ClusterCAMD5"];
         }
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {

@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) 设置<p>以键值对（Key-Value）形式为 Memory 实例绑定的标签，用于项目管理、成本分摊、环境隔离等场景。</p>
  * @method integer getGoodsNum() 获取<p>单次批量创建 Memory 实例的数量。取值范围为 1-50。</p>
  * @method void setGoodsNum(integer $GoodsNum) 设置<p>单次批量创建 Memory 实例的数量。取值范围为 1-50。</p>
+ * @method integer getPayMode() 获取<p>计费模式。</p><p>枚举值：</p><ul><li>0： 按量计费。</li><li>1： 包年包月。</li></ul>
+ * @method void setPayMode(integer $PayMode) 设置<p>计费模式。</p><p>枚举值：</p><ul><li>0： 按量计费。</li><li>1： 包年包月。</li></ul>
+ * @method integer getPayPeriod() 获取<p>包年包月周期</p>
+ * @method void setPayPeriod(integer $PayPeriod) 设置<p>包年包月周期</p>
+ * @method integer getAutoRenew() 获取<p>是否自动续费</p>
+ * @method void setAutoRenew(integer $AutoRenew) 设置<p>是否自动续费</p>
  */
 class CreateMemoryPlusSpaceRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class CreateMemoryPlusSpaceRequest extends AbstractModel
     public $GoodsNum;
 
     /**
+     * @var integer <p>计费模式。</p><p>枚举值：</p><ul><li>0： 按量计费。</li><li>1： 包年包月。</li></ul>
+     */
+    public $PayMode;
+
+    /**
+     * @var integer <p>包年包月周期</p>
+     */
+    public $PayPeriod;
+
+    /**
+     * @var integer <p>是否自动续费</p>
+     */
+    public $AutoRenew;
+
+    /**
      * @param string $Name <p>Memory 实例的自定义名称，用于唯一标识和管理实例。支持 60 个字符内的中英文、数字、中划线（-）及下划线（_）。</p>
      * @param string $Description <p>emory 实例的简要描述，包括使用场景、用途或背景信息，便于日常运维识别。长度限制为 0-200 个字符。</p>
      * @param array $ResourceTags <p>以键值对（Key-Value）形式为 Memory 实例绑定的标签，用于项目管理、成本分摊、环境隔离等场景。</p>
      * @param integer $GoodsNum <p>单次批量创建 Memory 实例的数量。取值范围为 1-50。</p>
+     * @param integer $PayMode <p>计费模式。</p><p>枚举值：</p><ul><li>0： 按量计费。</li><li>1： 包年包月。</li></ul>
+     * @param integer $PayPeriod <p>包年包月周期</p>
+     * @param integer $AutoRenew <p>是否自动续费</p>
      */
     function __construct()
     {
@@ -89,6 +113,18 @@ class CreateMemoryPlusSpaceRequest extends AbstractModel
 
         if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
             $this->GoodsNum = $param["GoodsNum"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("PayPeriod",$param) and $param["PayPeriod"] !== null) {
+            $this->PayPeriod = $param["PayPeriod"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
         }
     }
 }

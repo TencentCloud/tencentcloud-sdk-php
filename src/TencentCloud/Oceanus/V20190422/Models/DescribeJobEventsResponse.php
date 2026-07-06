@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJobEvents返回参数结构体
  *
- * @method array getEvents() 获取该作业指定范围内的事件列表
+ * @method array getEvents() 获取<p>该作业指定范围内的事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEvents(array $Events) 设置该作业指定范围内的事件列表
+ * @method void setEvents(array $Events) 设置<p>该作业指定范围内的事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRunningOrderIds() 获取该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出
+ * @method array getRunningOrderIds() 获取<p>该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunningOrderIds(array $RunningOrderIds) 设置该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出
+ * @method void setRunningOrderIds(array $RunningOrderIds) 设置<p>该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取事件的总数
+ * @method integer getTotalCount() 获取<p>事件的总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置事件的总数
+ * @method void setTotalCount(integer $TotalCount) 设置<p>事件的总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getVersions() 获取实例对应的版本
+ * @method array getVersions() 获取<p>实例对应的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersions(array $Versions) 设置实例对应的版本
+ * @method void setVersions(array $Versions) 设置<p>实例对应的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,25 +42,25 @@ use TencentCloud\Common\AbstractModel;
 class DescribeJobEventsResponse extends AbstractModel
 {
     /**
-     * @var array 该作业指定范围内的事件列表
+     * @var array <p>该作业指定范围内的事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Events;
 
     /**
-     * @var array 该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出
+     * @var array <p>该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningOrderIds;
 
     /**
-     * @var integer 事件的总数
+     * @var integer <p>事件的总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
-     * @var array 实例对应的版本
+     * @var array <p>实例对应的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Versions;
@@ -71,13 +71,13 @@ class DescribeJobEventsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Events 该作业指定范围内的事件列表
+     * @param array $Events <p>该作业指定范围内的事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RunningOrderIds 该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出
+     * @param array $RunningOrderIds <p>该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 事件的总数
+     * @param integer $TotalCount <p>事件的总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Versions 实例对应的版本
+     * @param array $Versions <p>实例对应的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getAigcUsageDataSet() 获取<p>AIGC统计数据。</p>
  * @method void setAigcUsageDataSet(array $AigcUsageDataSet) 设置<p>AIGC统计数据。</p>
+ * @method AigcTextDetail getAigcTextDetails() 获取<p>生文详细日志</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAigcTextDetails(AigcTextDetail $AigcTextDetails) 设置<p>生文详细日志</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class DescribeAigcUsageDataResponse extends AbstractModel
     public $AigcUsageDataSet;
 
     /**
+     * @var AigcTextDetail <p>生文详细日志</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AigcTextDetails;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $AigcUsageDataSet <p>AIGC统计数据。</p>
+     * @param AigcTextDetail $AigcTextDetails <p>生文详细日志</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +73,11 @@ class DescribeAigcUsageDataResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AigcUsageDataSet, $obj);
             }
+        }
+
+        if (array_key_exists("AigcTextDetails",$param) and $param["AigcTextDetails"] !== null) {
+            $this->AigcTextDetails = new AigcTextDetail();
+            $this->AigcTextDetails->deserialize($param["AigcTextDetails"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

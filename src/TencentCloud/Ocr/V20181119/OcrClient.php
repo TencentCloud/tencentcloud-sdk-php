@@ -99,7 +99,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 本接口支持机票行程单关键字段的识别，包括旅客姓名、有效身份证件号码、电子客票号码、验证码、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、票价、合计金额、填开日期、国内国际标签、印刷序号、客票级别/类别、客票生效日期、有效期截止日期、免费行李等字段，支持航班信息多行明细输出。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\FormulaOCRResponse FormulaOCR(Models\FormulaOCRRequest $req) 本接口支持识别主流初高中数学符号和公式，返回公式的 Latex 格式文本。
+ * @method Models\FormulaOCRResponse FormulaOCR(Models\FormulaOCRRequest $req) 接口下线
+
+本接口支持识别主流初高中数学符号和公式，返回公式的 Latex 格式文本。
 
 默认接口请求频率限制：5次/秒。
  * @method Models\GeneralAccurateOCRResponse GeneralAccurateOCR(Models\GeneralAccurateOCRRequest $req) 本接口支持图像整体文字的检测和识别。支持中文、英文、中英文、数字和特殊字符号的识别，并返回文字框位置和文字内容。
@@ -449,7 +451,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
     </table>
 
 默认接口请求频率限制：20次/秒。
- * @method Models\RecognizeFormulaOCRResponse RecognizeFormulaOCR(Models\RecognizeFormulaOCRRequest $req) 公式识别是教育的基础OCR识别能力，可支持理科（数学、物理、化学、生物）的印刷体和手写体的公式识别。
+ * @method Models\RecognizeFormulaOCRResponse RecognizeFormulaOCR(Models\RecognizeFormulaOCRRequest $req) 接口下线
+
+公式识别是教育的基础OCR识别能力，可支持理科（数学、物理、化学、生物）的印刷体和手写体的公式识别。
 
 默认接口请求频率限制：2次/秒。
  * @method Models\RecognizeGeneralCardWarnResponse RecognizeGeneralCardWarn(Models\RecognizeGeneralCardWarnRequest $req) 支持通用证照的有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能，支持通用证照的ps伪造检测，可以应用于各种证件信息有效性校验场景。

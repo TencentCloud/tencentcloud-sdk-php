@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableEventPersistence请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getLogsetId() 获取cls服务的logsetID，通过cls接口或者控制台获取
- * @method void setLogsetId(string $LogsetId) 设置cls服务的logsetID，通过cls接口或者控制台获取
- * @method string getTopicId() 获取cls服务的topicID，通过cls接口或者控制台获取
- * @method void setTopicId(string $TopicId) 设置cls服务的topicID，通过cls接口或者控制台获取
- * @method string getTopicRegion() 获取topic所在地域，默认为集群所在地域
- * @method void setTopicRegion(string $TopicRegion) 设置topic所在地域，默认为集群所在地域
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getLogsetId() 获取<p>cls服务的logsetID，通过cls接口或者控制台获取</p>
+ * @method void setLogsetId(string $LogsetId) 设置<p>cls服务的logsetID，通过cls接口或者控制台获取</p>
+ * @method string getTopicId() 获取<p>cls服务的topicID，通过cls接口或者控制台获取</p>
+ * @method void setTopicId(string $TopicId) 设置<p>cls服务的topicID，通过cls接口或者控制台获取</p>
+ * @method string getTopicRegion() 获取<p>topic所在地域，默认为集群所在地域</p>
+ * @method void setTopicRegion(string $TopicRegion) 设置<p>topic所在地域，默认为集群所在地域</p>
+ * @method string getClusterType() 获取<p>集群类型 tke/eks</p><p>默认值：tke</p>
+ * @method void setClusterType(string $ClusterType) 设置<p>集群类型 tke/eks</p><p>默认值：tke</p>
  */
 class EnableEventPersistenceRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string cls服务的logsetID，通过cls接口或者控制台获取
+     * @var string <p>cls服务的logsetID，通过cls接口或者控制台获取</p>
      */
     public $LogsetId;
 
     /**
-     * @var string cls服务的topicID，通过cls接口或者控制台获取
+     * @var string <p>cls服务的topicID，通过cls接口或者控制台获取</p>
      */
     public $TopicId;
 
     /**
-     * @var string topic所在地域，默认为集群所在地域
+     * @var string <p>topic所在地域，默认为集群所在地域</p>
      */
     public $TopicRegion;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $LogsetId cls服务的logsetID，通过cls接口或者控制台获取
-     * @param string $TopicId cls服务的topicID，通过cls接口或者控制台获取
-     * @param string $TopicRegion topic所在地域，默认为集群所在地域
+     * @var string <p>集群类型 tke/eks</p><p>默认值：tke</p>
+     */
+    public $ClusterType;
+
+    /**
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $LogsetId <p>cls服务的logsetID，通过cls接口或者控制台获取</p>
+     * @param string $TopicId <p>cls服务的topicID，通过cls接口或者控制台获取</p>
+     * @param string $TopicRegion <p>topic所在地域，默认为集群所在地域</p>
+     * @param string $ClusterType <p>集群类型 tke/eks</p><p>默认值：tke</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class EnableEventPersistenceRequest extends AbstractModel
 
         if (array_key_exists("TopicRegion",$param) and $param["TopicRegion"] !== null) {
             $this->TopicRegion = $param["TopicRegion"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

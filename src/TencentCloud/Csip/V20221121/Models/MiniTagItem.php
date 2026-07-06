@@ -18,68 +18,68 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 简要的资产标签元素
+ * 简要的资产标签元素，CSIP 内部使用。
  *
- * @method string getColor() 获取<p>标签颜色</p>
- * @method void setColor(string $Color) 设置<p>标签颜色</p>
- * @method string getDescription() 获取<p>描述</p>
- * @method void setDescription(string $Description) 设置<p>描述</p>
- * @method integer getID() 获取<p>标签ID</p>
- * @method void setID(integer $ID) 设置<p>标签ID</p>
- * @method string getTagKey() 获取<p>标签键</p>
- * @method void setTagKey(string $TagKey) 设置<p>标签键</p>
- * @method string getTagValue() 获取<p>标签值</p>
- * @method void setTagValue(string $TagValue) 设置<p>标签值</p>
- * @method string getTagKeyEn() 获取<p>标签键英文</p>
- * @method void setTagKeyEn(string $TagKeyEn) 设置<p>标签键英文</p>
- * @method string getTagValueEn() 获取<p>标签值英文</p>
- * @method void setTagValueEn(string $TagValueEn) 设置<p>标签值英文</p>
+ * @method string getColor() 获取标签展示颜色。
+ * @method void setColor(string $Color) 设置标签展示颜色。
+ * @method string getDescription() 获取标签描述。
+ * @method void setDescription(string $Description) 设置标签描述。
+ * @method integer getID() 获取标签 ID。
+ * @method void setID(integer $ID) 设置标签 ID。
+ * @method string getTagKey() 获取标签键（中文）。
+ * @method void setTagKey(string $TagKey) 设置标签键（中文）。
+ * @method string getTagValue() 获取标签值（中文）。
+ * @method void setTagValue(string $TagValue) 设置标签值（中文）。
+ * @method string getTagKeyEn() 获取标签键（英文）。
+ * @method void setTagKeyEn(string $TagKeyEn) 设置标签键（英文）。
+ * @method string getTagValueEn() 获取标签值（英文）。
+ * @method void setTagValueEn(string $TagValueEn) 设置标签值（英文）。
  */
 class MiniTagItem extends AbstractModel
 {
     /**
-     * @var string <p>标签颜色</p>
+     * @var string 标签展示颜色。
      */
     public $Color;
 
     /**
-     * @var string <p>描述</p>
+     * @var string 标签描述。
      */
     public $Description;
 
     /**
-     * @var integer <p>标签ID</p>
+     * @var integer 标签 ID。
      */
     public $ID;
 
     /**
-     * @var string <p>标签键</p>
+     * @var string 标签键（中文）。
      */
     public $TagKey;
 
     /**
-     * @var string <p>标签值</p>
+     * @var string 标签值（中文）。
      */
     public $TagValue;
 
     /**
-     * @var string <p>标签键英文</p>
+     * @var string 标签键（英文）。
      */
     public $TagKeyEn;
 
     /**
-     * @var string <p>标签值英文</p>
+     * @var string 标签值（英文）。
      */
     public $TagValueEn;
 
     /**
-     * @param string $Color <p>标签颜色</p>
-     * @param string $Description <p>描述</p>
-     * @param integer $ID <p>标签ID</p>
-     * @param string $TagKey <p>标签键</p>
-     * @param string $TagValue <p>标签值</p>
-     * @param string $TagKeyEn <p>标签键英文</p>
-     * @param string $TagValueEn <p>标签值英文</p>
+     * @param string $Color 标签展示颜色。
+     * @param string $Description 标签描述。
+     * @param integer $ID 标签 ID。
+     * @param string $TagKey 标签键（中文）。
+     * @param string $TagValue 标签值（中文）。
+     * @param string $TagKeyEn 标签键（英文）。
+     * @param string $TagValueEn 标签值（英文）。
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDedicatedClusterImageCache请求参数结构体
  *
- * @method string getDedicatedClusterId() 获取集群id
- * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置集群id
- * @method string getImageId() 获取镜像id
- * @method void setImageId(string $ImageId) 设置镜像id
+ * @method string getDedicatedClusterId() 获取<p>集群id</p>
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置<p>集群id</p>
+ * @method string getImageId() 获取<p>镜像id</p>
+ * @method void setImageId(string $ImageId) 设置<p>镜像id</p>
  */
 class DeleteDedicatedClusterImageCacheRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $DedicatedClusterId;
 
     /**
-     * @var string 镜像id
+     * @var string <p>镜像id</p>
      */
     public $ImageId;
 
     /**
-     * @param string $DedicatedClusterId 集群id
-     * @param string $ImageId 镜像id
+     * @param string $DedicatedClusterId <p>集群id</p>
+     * @param string $ImageId <p>镜像id</p>
      */
     function __construct()
     {

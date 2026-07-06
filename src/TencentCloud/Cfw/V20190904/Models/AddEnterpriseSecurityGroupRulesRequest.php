@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddEnterpriseSecurityGroupRules请求参数结构体
  *
- * @method array getData() 获取创建规则数据
- * @method void setData(array $Data) 设置创建规则数据
- * @method integer getType() 获取添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
- * @method void setType(integer $Type) 设置添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
- * @method string getClientToken() 获取保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
- * @method void setClientToken(string $ClientToken) 设置保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
- * @method integer getIsDelay() 获取（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
- * @method void setIsDelay(integer $IsDelay) 设置（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
- * @method string getFrom() 获取来源 默认空 覆盖导入是 batch_import_cover
- * @method void setFrom(string $From) 设置来源 默认空 覆盖导入是 batch_import_cover
- * @method integer getIsUseId() 获取是否复用rule id，1为是，默认不需要
- * @method void setIsUseId(integer $IsUseId) 设置是否复用rule id，1为是，默认不需要
+ * @method array getData() 获取<p>创建规则数据</p>
+ * @method void setData(array $Data) 设置<p>创建规则数据</p>
+ * @method integer getType() 获取<p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
+ * @method void setType(integer $Type) 设置<p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
+ * @method string getClientToken() 获取<p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+ * @method integer getIsDelay() 获取<p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
+ * @method void setIsDelay(integer $IsDelay) 设置<p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
+ * @method string getFrom() 获取<p>来源 默认空 覆盖导入是 batch_import_cover</p>
+ * @method void setFrom(string $From) 设置<p>来源 默认空 覆盖导入是 batch_import_cover</p>
+ * @method integer getIsUseId() 获取<p>是否复用rule id，1为是，默认不需要</p>
+ * @method void setIsUseId(integer $IsUseId) 设置<p>是否复用rule id，1为是，默认不需要</p>
  */
 class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
 {
     /**
-     * @var array 创建规则数据
+     * @var array <p>创建规则数据</p>
      */
     public $Data;
 
     /**
-     * @var integer 添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
+     * @var integer <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
      */
     public $Type;
 
     /**
-     * @var string 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     * @var string <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
      */
     public $ClientToken;
 
     /**
-     * @var integer （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
+     * @var integer <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
      */
     public $IsDelay;
 
     /**
-     * @var string 来源 默认空 覆盖导入是 batch_import_cover
+     * @var string <p>来源 默认空 覆盖导入是 batch_import_cover</p>
      */
     public $From;
 
     /**
-     * @var integer 是否复用rule id，1为是，默认不需要
+     * @var integer <p>是否复用rule id，1为是，默认不需要</p>
      */
     public $IsUseId;
 
     /**
-     * @param array $Data 创建规则数据
-     * @param integer $Type 添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
-     * @param string $ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
-     * @param integer $IsDelay （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
-     * @param string $From 来源 默认空 覆盖导入是 batch_import_cover
-     * @param integer $IsUseId 是否复用rule id，1为是，默认不需要
+     * @param array $Data <p>创建规则数据</p>
+     * @param integer $Type <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
+     * @param string $ClientToken <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+     * @param integer $IsDelay <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
+     * @param string $From <p>来源 默认空 覆盖导入是 batch_import_cover</p>
+     * @param integer $IsUseId <p>是否复用rule id，1为是，默认不需要</p>
      */
     function __construct()
     {

@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBlockIgnoreList请求参数结构体
  *
- * @method integer getRuleType() 获取1封禁列表 2 放通列表
- * @method void setRuleType(integer $RuleType) 设置1封禁列表 2 放通列表
- * @method array getIOC() 获取IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
- * @method void setIOC(array $IOC) 设置IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
- * @method string getIocAction() 获取可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
- * @method void setIocAction(string $IocAction) 设置可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
- * @method string getStartTime() 获取时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
- * @method void setStartTime(string $StartTime) 设置时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
- * @method string getEndTime() 获取时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
- * @method void setEndTime(string $EndTime) 设置时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
+ * @method integer getRuleType() 获取<p>1封禁列表 2 放通列表</p>
+ * @method void setRuleType(integer $RuleType) 设置<p>1封禁列表 2 放通列表</p>
+ * @method array getIOC() 获取<p>IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空</p>
+ * @method void setIOC(array $IOC) 设置<p>IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空</p>
+ * @method string getIocAction() 获取<p>可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效</p>
+ * @method void setIocAction(string $IocAction) 设置<p>可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效</p>
+ * @method string getStartTime() 获取<p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填</p>
+ * @method void setStartTime(string $StartTime) 设置<p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填</p>
+ * @method string getEndTime() 获取<p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime</p>
+ * @method void setEndTime(string $EndTime) 设置<p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime</p>
+ * @method integer getIsFromWeChat() 获取<p>是否来自微信</p><p>取值范围：[0, 1]</p>
+ * @method void setIsFromWeChat(integer $IsFromWeChat) 设置<p>是否来自微信</p><p>取值范围：[0, 1]</p>
  */
 class ModifyBlockIgnoreListRequest extends AbstractModel
 {
     /**
-     * @var integer 1封禁列表 2 放通列表
+     * @var integer <p>1封禁列表 2 放通列表</p>
      */
     public $RuleType;
 
     /**
-     * @var array IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
+     * @var array <p>IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空</p>
      */
     public $IOC;
 
     /**
-     * @var string 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
+     * @var string <p>可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效</p>
      */
     public $IocAction;
 
     /**
-     * @var string 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+     * @var string <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填</p>
      */
     public $StartTime;
 
     /**
-     * @var string 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
+     * @var string <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime</p>
      */
     public $EndTime;
 
     /**
-     * @param integer $RuleType 1封禁列表 2 放通列表
-     * @param array $IOC IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
-     * @param string $IocAction 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
-     * @param string $StartTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
-     * @param string $EndTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
+     * @var integer <p>是否来自微信</p><p>取值范围：[0, 1]</p>
+     */
+    public $IsFromWeChat;
+
+    /**
+     * @param integer $RuleType <p>1封禁列表 2 放通列表</p>
+     * @param array $IOC <p>IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空</p>
+     * @param string $IocAction <p>可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效</p>
+     * @param string $StartTime <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填</p>
+     * @param string $EndTime <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime</p>
+     * @param integer $IsFromWeChat <p>是否来自微信</p><p>取值范围：[0, 1]</p>
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class ModifyBlockIgnoreListRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("IsFromWeChat",$param) and $param["IsFromWeChat"] !== null) {
+            $this->IsFromWeChat = $param["IsFromWeChat"];
         }
     }
 }

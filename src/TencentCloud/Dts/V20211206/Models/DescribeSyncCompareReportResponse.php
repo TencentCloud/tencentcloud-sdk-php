@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSyncCompareReport返回参数结构体
  *
- * @method CompareAbstractInfo getAbstract() 获取一致性校验摘要信息
+ * @method CompareAbstractInfo getAbstract() 获取<p>一致性校验摘要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAbstract(CompareAbstractInfo $Abstract) 设置一致性校验摘要信息
+ * @method void setAbstract(CompareAbstractInfo $Abstract) 设置<p>一致性校验摘要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CompareDetailInfo getDetail() 获取一致性校验详细信息
+ * @method CompareDetailInfo getDetail() 获取<p>一致性校验详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDetail(CompareDetailInfo $Detail) 设置一致性校验详细信息
+ * @method void setDetail(CompareDetailInfo $Detail) 设置<p>一致性校验详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method IncCompareAbstractInfo getIncAbstract() 获取增量校验阶段的摘要
- * @method void setIncAbstract(IncCompareAbstractInfo $IncAbstract) 设置增量校验阶段的摘要
+ * @method IncCompareAbstractInfo getIncAbstract() 获取<p>增量校验阶段的摘要</p>
+ * @method void setIncAbstract(IncCompareAbstractInfo $IncAbstract) 设置<p>增量校验阶段的摘要</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSyncCompareReportResponse extends AbstractModel
 {
     /**
-     * @var CompareAbstractInfo 一致性校验摘要信息
+     * @var CompareAbstractInfo <p>一致性校验摘要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Abstract;
 
     /**
-     * @var CompareDetailInfo 一致性校验详细信息
+     * @var CompareDetailInfo <p>一致性校验详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
     /**
-     * @var IncCompareAbstractInfo 增量校验阶段的摘要
+     * @var IncCompareAbstractInfo <p>增量校验阶段的摘要</p>
      */
     public $IncAbstract;
 
@@ -58,11 +58,11 @@ class DescribeSyncCompareReportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CompareAbstractInfo $Abstract 一致性校验摘要信息
+     * @param CompareAbstractInfo $Abstract <p>一致性校验摘要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CompareDetailInfo $Detail 一致性校验详细信息
+     * @param CompareDetailInfo $Detail <p>一致性校验详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IncCompareAbstractInfo $IncAbstract 增量校验阶段的摘要
+     * @param IncCompareAbstractInfo $IncAbstract <p>增量校验阶段的摘要</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

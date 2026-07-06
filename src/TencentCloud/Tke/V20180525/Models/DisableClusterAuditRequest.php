@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableClusterAudit请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method boolean getDeleteLogSetAndTopic() 获取取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
- * @method void setDeleteLogSetAndTopic(boolean $DeleteLogSetAndTopic) 设置取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method boolean getDeleteLogSetAndTopic() 获取<p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
+ * @method void setDeleteLogSetAndTopic(boolean $DeleteLogSetAndTopic) 设置<p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
  */
 class DisableClusterAuditRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var boolean 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     * @var boolean <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
      */
     public $DeleteLogSetAndTopic;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param boolean $DeleteLogSetAndTopic 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     * @param string $ClusterId <p>集群ID</p>
+     * @param boolean $DeleteLogSetAndTopic <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
      */
     function __construct()
     {

@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * dspm资产数据库信息
  *
- * @method string getAssetId() 获取资产实例id
- * @method void setAssetId(string $AssetId) 设置资产实例id
- * @method string getDbName() 获取数据库名称
- * @method void setDbName(string $DbName) 设置数据库名称
- * @method integer getTableCount() 获取总表数
- * @method void setTableCount(integer $TableCount) 设置总表数
- * @method integer getSensitiveTableCount() 获取敏感表数
- * @method void setSensitiveTableCount(integer $SensitiveTableCount) 设置敏感表数
- * @method array getRuleIds() 获取数据项id集合
- * @method void setRuleIds(array $RuleIds) 设置数据项id集合
- * @method array getRuleNames() 获取数据项名称集合
- * @method void setRuleNames(array $RuleNames) 设置数据项名称集合
- * @method array getCategoryIds() 获取分类id集合
- * @method void setCategoryIds(array $CategoryIds) 设置分类id集合
- * @method array getCategoryNames() 获取分类名称集合
- * @method void setCategoryNames(array $CategoryNames) 设置分类名称集合
- * @method array getCategoryDetails() 获取分类详情
- * @method void setCategoryDetails(array $CategoryDetails) 设置分类详情
+ * @method string getAssetId() 获取<p>资产实例id</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产实例id</p>
+ * @method string getDbName() 获取<p>数据库名称</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名称</p>
+ * @method integer getTableCount() 获取<p>总表数</p>
+ * @method void setTableCount(integer $TableCount) 设置<p>总表数</p>
+ * @method integer getSensitiveTableCount() 获取<p>敏感表数</p>
+ * @method void setSensitiveTableCount(integer $SensitiveTableCount) 设置<p>敏感表数</p>
+ * @method array getRuleIds() 获取<p>数据项id集合</p>
+ * @method void setRuleIds(array $RuleIds) 设置<p>数据项id集合</p>
+ * @method array getRuleNames() 获取<p>数据项名称集合</p>
+ * @method void setRuleNames(array $RuleNames) 设置<p>数据项名称集合</p>
+ * @method array getCategoryIds() 获取<p>分类id集合</p>
+ * @method void setCategoryIds(array $CategoryIds) 设置<p>分类id集合</p>
+ * @method array getCategoryNames() 获取<p>分类名称集合</p>
+ * @method void setCategoryNames(array $CategoryNames) 设置<p>分类名称集合</p>
+ * @method array getCategoryDetails() 获取<p>分类详情</p>
+ * @method void setCategoryDetails(array $CategoryDetails) 设置<p>分类详情</p>
  */
 class DspmAssetDatabaseInfo extends AbstractModel
 {
     /**
-     * @var string 资产实例id
+     * @var string <p>资产实例id</p>
      */
     public $AssetId;
 
     /**
-     * @var string 数据库名称
+     * @var string <p>数据库名称</p>
      */
     public $DbName;
 
     /**
-     * @var integer 总表数
+     * @var integer <p>总表数</p>
      */
     public $TableCount;
 
     /**
-     * @var integer 敏感表数
+     * @var integer <p>敏感表数</p>
      */
     public $SensitiveTableCount;
 
     /**
-     * @var array 数据项id集合
+     * @var array <p>数据项id集合</p>
      */
     public $RuleIds;
 
     /**
-     * @var array 数据项名称集合
+     * @var array <p>数据项名称集合</p>
      */
     public $RuleNames;
 
     /**
-     * @var array 分类id集合
+     * @var array <p>分类id集合</p>
      */
     public $CategoryIds;
 
     /**
-     * @var array 分类名称集合
+     * @var array <p>分类名称集合</p>
      */
     public $CategoryNames;
 
     /**
-     * @var array 分类详情
+     * @var array <p>分类详情</p>
      */
     public $CategoryDetails;
 
     /**
-     * @param string $AssetId 资产实例id
-     * @param string $DbName 数据库名称
-     * @param integer $TableCount 总表数
-     * @param integer $SensitiveTableCount 敏感表数
-     * @param array $RuleIds 数据项id集合
-     * @param array $RuleNames 数据项名称集合
-     * @param array $CategoryIds 分类id集合
-     * @param array $CategoryNames 分类名称集合
-     * @param array $CategoryDetails 分类详情
+     * @param string $AssetId <p>资产实例id</p>
+     * @param string $DbName <p>数据库名称</p>
+     * @param integer $TableCount <p>总表数</p>
+     * @param integer $SensitiveTableCount <p>敏感表数</p>
+     * @param array $RuleIds <p>数据项id集合</p>
+     * @param array $RuleNames <p>数据项名称集合</p>
+     * @param array $CategoryIds <p>分类id集合</p>
+     * @param array $CategoryNames <p>分类名称集合</p>
+     * @param array $CategoryDetails <p>分类详情</p>
      */
     function __construct()
     {

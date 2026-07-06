@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllocateId(string $AllocateId) 设置<p>分配请求ID，会按这个值做幂等</p><p>入参限制：长度不超过64</p>
  * @method string getExternalAppId() 获取<p>客户平台的应用标识，如果没有则不传</p>
  * @method void setExternalAppId(string $ExternalAppId) 设置<p>客户平台的应用标识，如果没有则不传</p>
+ * @method string getExternalTag() 获取<p>自定义标签</p><p>参数格式：逗号分隔的 key=value 对，key/value 仅允许字母、数字、下划线。k1=v1,k2=v2</p>
+ * @method void setExternalTag(string $ExternalTag) 设置<p>自定义标签</p><p>参数格式：逗号分隔的 key=value 对，key/value 仅允许字母、数字、下划线。k1=v1,k2=v2</p>
+ * @method boolean getRequireFunction() 获取<p>是否需要云函数</p><p>默认值：false</p>
+ * @method void setRequireFunction(boolean $RequireFunction) 设置<p>是否需要云函数</p><p>默认值：false</p>
  */
 class AllocateEnvRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class AllocateEnvRequest extends AbstractModel
     public $ExternalAppId;
 
     /**
+     * @var string <p>自定义标签</p><p>参数格式：逗号分隔的 key=value 对，key/value 仅允许字母、数字、下划线。k1=v1,k2=v2</p>
+     */
+    public $ExternalTag;
+
+    /**
+     * @var boolean <p>是否需要云函数</p><p>默认值：false</p>
+     */
+    public $RequireFunction;
+
+    /**
      * @param string $AllocateId <p>分配请求ID，会按这个值做幂等</p><p>入参限制：长度不超过64</p>
      * @param string $ExternalAppId <p>客户平台的应用标识，如果没有则不传</p>
+     * @param string $ExternalTag <p>自定义标签</p><p>参数格式：逗号分隔的 key=value 对，key/value 仅允许字母、数字、下划线。k1=v1,k2=v2</p>
+     * @param boolean $RequireFunction <p>是否需要云函数</p><p>默认值：false</p>
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class AllocateEnvRequest extends AbstractModel
 
         if (array_key_exists("ExternalAppId",$param) and $param["ExternalAppId"] !== null) {
             $this->ExternalAppId = $param["ExternalAppId"];
+        }
+
+        if (array_key_exists("ExternalTag",$param) and $param["ExternalTag"] !== null) {
+            $this->ExternalTag = $param["ExternalTag"];
+        }
+
+        if (array_key_exists("RequireFunction",$param) and $param["RequireFunction"] !== null) {
+            $this->RequireFunction = $param["RequireFunction"];
         }
     }
 }

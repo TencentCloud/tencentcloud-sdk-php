@@ -20,114 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateScheduledSql请求参数结构体
  *
- * @method string getSrcTopicId() 获取源日志主题ID- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method void setSrcTopicId(string $SrcTopicId) 设置源日志主题ID- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method string getName() 获取任务名称，0~255字符
- * @method void setName(string $Name) 设置任务名称，0~255字符
- * @method integer getEnableFlag() 获取任务启动状态.  1开启,  2关闭
- * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态.  1开启,  2关闭
- * @method ScheduledSqlResouceInfo getDstResource() 获取定时SQL分析目标日志主题
- * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) 设置定时SQL分析目标日志主题
- * @method string getScheduledSqlContent() 获取查询语句
- * @method void setScheduledSqlContent(string $ScheduledSqlContent) 设置查询语句
- * @method integer getProcessStartTime() 获取调度开始时间,Unix时间戳，单位ms
- * @method void setProcessStartTime(integer $ProcessStartTime) 设置调度开始时间,Unix时间戳，单位ms
- * @method integer getProcessType() 获取调度类型，1:持续运行 2:指定时间范围
- * @method void setProcessType(integer $ProcessType) 设置调度类型，1:持续运行 2:指定时间范围
- * @method integer getProcessPeriod() 获取调度周期(分钟)，1~1440分钟
- * @method void setProcessPeriod(integer $ProcessPeriod) 设置调度周期(分钟)，1~1440分钟
- * @method string getProcessTimeWindow() 获取单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
- * @method void setProcessTimeWindow(string $ProcessTimeWindow) 设置单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
- * @method integer getProcessDelay() 获取执行延迟(秒)，0~120秒，默认60秒
- * @method void setProcessDelay(integer $ProcessDelay) 设置执行延迟(秒)，0~120秒，默认60秒
- * @method string getSrcTopicRegion() 获取源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
- * @method void setSrcTopicRegion(string $SrcTopicRegion) 设置源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
- * @method integer getProcessEndTime() 获取调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
- * @method void setProcessEndTime(integer $ProcessEndTime) 设置调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
- * @method integer getSyntaxRule() 获取查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
- * @method void setSyntaxRule(integer $SyntaxRule) 设置查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+ * @method string getSrcTopicId() 获取<p>源日志主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+ * @method void setSrcTopicId(string $SrcTopicId) 设置<p>源日志主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+ * @method string getName() 获取<p>任务名称，0~255字符</p>
+ * @method void setName(string $Name) 设置<p>任务名称，0~255字符</p>
+ * @method integer getEnableFlag() 获取<p>任务启动状态.  1开启,  2关闭</p>
+ * @method void setEnableFlag(integer $EnableFlag) 设置<p>任务启动状态.  1开启,  2关闭</p>
+ * @method ScheduledSqlResouceInfo getDstResource() 获取<p>定时SQL分析目标日志主题</p>
+ * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) 设置<p>定时SQL分析目标日志主题</p>
+ * @method string getScheduledSqlContent() 获取<p>查询语句</p>
+ * @method void setScheduledSqlContent(string $ScheduledSqlContent) 设置<p>查询语句</p>
+ * @method integer getProcessStartTime() 获取<p>调度开始时间,Unix时间戳，单位ms</p>
+ * @method void setProcessStartTime(integer $ProcessStartTime) 设置<p>调度开始时间,Unix时间戳，单位ms</p>
+ * @method integer getProcessType() 获取<p>调度类型，1:持续运行 2:指定时间范围</p>
+ * @method void setProcessType(integer $ProcessType) 设置<p>调度类型，1:持续运行 2:指定时间范围</p>
+ * @method integer getProcessPeriod() 获取<p>调度周期(分钟)，1~1440分钟</p>
+ * @method void setProcessPeriod(integer $ProcessPeriod) 设置<p>调度周期(分钟)，1~1440分钟</p>
+ * @method string getProcessTimeWindow() 获取<p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p>
+ * @method void setProcessTimeWindow(string $ProcessTimeWindow) 设置<p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p>
+ * @method integer getProcessDelay() 获取<p>执行延迟(秒)，0~120秒，默认60秒</p>
+ * @method void setProcessDelay(integer $ProcessDelay) 设置<p>执行延迟(秒)，0~120秒，默认60秒</p>
+ * @method string getSrcTopicRegion() 获取<p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
+ * @method void setSrcTopicRegion(string $SrcTopicRegion) 设置<p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
+ * @method integer getProcessEndTime() 获取<p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
+ * @method void setProcessEndTime(integer $ProcessEndTime) 设置<p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
+ * @method integer getSyntaxRule() 获取<p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
+ * @method void setSyntaxRule(integer $SyntaxRule) 设置<p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
+ * @method integer getHasServicesLog() 获取<p>是否开启投递服务日志。1：关闭，2：开启。</p>
+ * @method void setHasServicesLog(integer $HasServicesLog) 设置<p>是否开启投递服务日志。1：关闭，2：开启。</p>
+ * @method integer getFullQuery() 获取<p>全文检索标记。1：关闭，2：打开。默认：1</p>
+ * @method void setFullQuery(integer $FullQuery) 设置<p>全文检索标记。1：关闭，2：打开。默认：1</p>
  */
 class CreateScheduledSqlRequest extends AbstractModel
 {
     /**
-     * @var string 源日志主题ID- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var string <p>源日志主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public $SrcTopicId;
 
     /**
-     * @var string 任务名称，0~255字符
+     * @var string <p>任务名称，0~255字符</p>
      */
     public $Name;
 
     /**
-     * @var integer 任务启动状态.  1开启,  2关闭
+     * @var integer <p>任务启动状态.  1开启,  2关闭</p>
      */
     public $EnableFlag;
 
     /**
-     * @var ScheduledSqlResouceInfo 定时SQL分析目标日志主题
+     * @var ScheduledSqlResouceInfo <p>定时SQL分析目标日志主题</p>
      */
     public $DstResource;
 
     /**
-     * @var string 查询语句
+     * @var string <p>查询语句</p>
      */
     public $ScheduledSqlContent;
 
     /**
-     * @var integer 调度开始时间,Unix时间戳，单位ms
+     * @var integer <p>调度开始时间,Unix时间戳，单位ms</p>
      */
     public $ProcessStartTime;
 
     /**
-     * @var integer 调度类型，1:持续运行 2:指定时间范围
+     * @var integer <p>调度类型，1:持续运行 2:指定时间范围</p>
      */
     public $ProcessType;
 
     /**
-     * @var integer 调度周期(分钟)，1~1440分钟
+     * @var integer <p>调度周期(分钟)，1~1440分钟</p>
      */
     public $ProcessPeriod;
 
     /**
-     * @var string 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
+     * @var string <p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p>
      */
     public $ProcessTimeWindow;
 
     /**
-     * @var integer 执行延迟(秒)，0~120秒，默认60秒
+     * @var integer <p>执行延迟(秒)，0~120秒，默认60秒</p>
      */
     public $ProcessDelay;
 
     /**
-     * @var string 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
+     * @var string <p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
      */
     public $SrcTopicRegion;
 
     /**
-     * @var integer 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
+     * @var integer <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
      */
     public $ProcessEndTime;
 
     /**
-     * @var integer 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+     * @var integer <p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
      */
     public $SyntaxRule;
 
     /**
-     * @param string $SrcTopicId 源日志主题ID- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param string $Name 任务名称，0~255字符
-     * @param integer $EnableFlag 任务启动状态.  1开启,  2关闭
-     * @param ScheduledSqlResouceInfo $DstResource 定时SQL分析目标日志主题
-     * @param string $ScheduledSqlContent 查询语句
-     * @param integer $ProcessStartTime 调度开始时间,Unix时间戳，单位ms
-     * @param integer $ProcessType 调度类型，1:持续运行 2:指定时间范围
-     * @param integer $ProcessPeriod 调度周期(分钟)，1~1440分钟
-     * @param string $ProcessTimeWindow 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
-     * @param integer $ProcessDelay 执行延迟(秒)，0~120秒，默认60秒
-     * @param string $SrcTopicRegion 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
-     * @param integer $ProcessEndTime 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
-     * @param integer $SyntaxRule 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+     * @var integer <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     */
+    public $HasServicesLog;
+
+    /**
+     * @var integer <p>全文检索标记。1：关闭，2：打开。默认：1</p>
+     */
+    public $FullQuery;
+
+    /**
+     * @param string $SrcTopicId <p>源日志主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * @param string $Name <p>任务名称，0~255字符</p>
+     * @param integer $EnableFlag <p>任务启动状态.  1开启,  2关闭</p>
+     * @param ScheduledSqlResouceInfo $DstResource <p>定时SQL分析目标日志主题</p>
+     * @param string $ScheduledSqlContent <p>查询语句</p>
+     * @param integer $ProcessStartTime <p>调度开始时间,Unix时间戳，单位ms</p>
+     * @param integer $ProcessType <p>调度类型，1:持续运行 2:指定时间范围</p>
+     * @param integer $ProcessPeriod <p>调度周期(分钟)，1~1440分钟</p>
+     * @param string $ProcessTimeWindow <p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p>
+     * @param integer $ProcessDelay <p>执行延迟(秒)，0~120秒，默认60秒</p>
+     * @param string $SrcTopicRegion <p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
+     * @param integer $ProcessEndTime <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
+     * @param integer $SyntaxRule <p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
+     * @param integer $HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     * @param integer $FullQuery <p>全文检索标记。1：关闭，2：打开。默认：1</p>
      */
     function __construct()
     {
@@ -193,6 +209,14 @@ class CreateScheduledSqlRequest extends AbstractModel
 
         if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
             $this->SyntaxRule = $param["SyntaxRule"];
+        }
+
+        if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
+            $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("FullQuery",$param) and $param["FullQuery"] !== null) {
+            $this->FullQuery = $param["FullQuery"];
         }
     }
 }

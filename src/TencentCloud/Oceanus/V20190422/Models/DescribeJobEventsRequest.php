@@ -20,58 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJobEvents请求参数结构体
  *
- * @method string getJobId() 获取作业的 ID
- * @method void setJobId(string $JobId) 设置作业的 ID
- * @method integer getStartTimestamp() 获取筛选条件：起始 Unix 时间戳（秒）
- * @method void setStartTimestamp(integer $StartTimestamp) 设置筛选条件：起始 Unix 时间戳（秒）
- * @method integer getEndTimestamp() 获取筛选条件：结束 Unix 时间戳（秒）
- * @method void setEndTimestamp(integer $EndTimestamp) 设置筛选条件：结束 Unix 时间戳（秒）
- * @method array getTypes() 获取事件类型。如果不传则返回所有类型的数据
- * @method void setTypes(array $Types) 设置事件类型。如果不传则返回所有类型的数据
- * @method array getRunningOrderIds() 获取运行实例 ID 数组
- * @method void setRunningOrderIds(array $RunningOrderIds) 设置运行实例 ID 数组
- * @method string getWorkSpaceId() 获取工作空间 SerialId
- * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
+ * @method string getJobId() 获取<p>作业的 ID</p>
+ * @method void setJobId(string $JobId) 设置<p>作业的 ID</p>
+ * @method integer getStartTimestamp() 获取<p>筛选条件：起始 Unix 时间戳（秒）</p>
+ * @method void setStartTimestamp(integer $StartTimestamp) 设置<p>筛选条件：起始 Unix 时间戳（秒）</p>
+ * @method integer getEndTimestamp() 获取<p>筛选条件：结束 Unix 时间戳（秒）</p>
+ * @method void setEndTimestamp(integer $EndTimestamp) 设置<p>筛选条件：结束 Unix 时间戳（秒）</p>
+ * @method array getTypes() 获取<p>事件类型。如果不传则返回所有类型的数据</p>
+ * @method void setTypes(array $Types) 设置<p>事件类型。如果不传则返回所有类型的数据</p>
+ * @method array getRunningOrderIds() 获取<p>运行实例 ID 数组</p>
+ * @method void setRunningOrderIds(array $RunningOrderIds) 设置<p>运行实例 ID 数组</p>
+ * @method string getWorkSpaceId() 获取<p>工作空间 SerialId</p>
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置<p>工作空间 SerialId</p>
+ * @method integer getLimit() 获取<p>返回条数</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回条数</p>
+ * @method integer getOffset() 获取<p>起始偏移个数</p>
+ * @method void setOffset(integer $Offset) 设置<p>起始偏移个数</p>
  */
 class DescribeJobEventsRequest extends AbstractModel
 {
     /**
-     * @var string 作业的 ID
+     * @var string <p>作业的 ID</p>
      */
     public $JobId;
 
     /**
-     * @var integer 筛选条件：起始 Unix 时间戳（秒）
+     * @var integer <p>筛选条件：起始 Unix 时间戳（秒）</p>
      */
     public $StartTimestamp;
 
     /**
-     * @var integer 筛选条件：结束 Unix 时间戳（秒）
+     * @var integer <p>筛选条件：结束 Unix 时间戳（秒）</p>
      */
     public $EndTimestamp;
 
     /**
-     * @var array 事件类型。如果不传则返回所有类型的数据
+     * @var array <p>事件类型。如果不传则返回所有类型的数据</p>
      */
     public $Types;
 
     /**
-     * @var array 运行实例 ID 数组
+     * @var array <p>运行实例 ID 数组</p>
      */
     public $RunningOrderIds;
 
     /**
-     * @var string 工作空间 SerialId
+     * @var string <p>工作空间 SerialId</p>
      */
     public $WorkSpaceId;
 
     /**
-     * @param string $JobId 作业的 ID
-     * @param integer $StartTimestamp 筛选条件：起始 Unix 时间戳（秒）
-     * @param integer $EndTimestamp 筛选条件：结束 Unix 时间戳（秒）
-     * @param array $Types 事件类型。如果不传则返回所有类型的数据
-     * @param array $RunningOrderIds 运行实例 ID 数组
-     * @param string $WorkSpaceId 工作空间 SerialId
+     * @var integer <p>返回条数</p>
+     */
+    public $Limit;
+
+    /**
+     * @var integer <p>起始偏移个数</p>
+     */
+    public $Offset;
+
+    /**
+     * @param string $JobId <p>作业的 ID</p>
+     * @param integer $StartTimestamp <p>筛选条件：起始 Unix 时间戳（秒）</p>
+     * @param integer $EndTimestamp <p>筛选条件：结束 Unix 时间戳（秒）</p>
+     * @param array $Types <p>事件类型。如果不传则返回所有类型的数据</p>
+     * @param array $RunningOrderIds <p>运行实例 ID 数组</p>
+     * @param string $WorkSpaceId <p>工作空间 SerialId</p>
+     * @param integer $Limit <p>返回条数</p>
+     * @param integer $Offset <p>起始偏移个数</p>
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribeJobEventsRequest extends AbstractModel
 
         if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
             $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

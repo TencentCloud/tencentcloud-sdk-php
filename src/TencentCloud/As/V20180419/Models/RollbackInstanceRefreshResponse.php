@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RollbackInstanceRefresh返回参数结构体
  *
- * @method string getRefreshActivityId() 获取刷新活动 ID。
- * @method void setRefreshActivityId(string $RefreshActivityId) 设置刷新活动 ID。
+ * @method string getRefreshActivityId() 获取<p>刷新活动 ID。</p>
+ * @method void setRefreshActivityId(string $RefreshActivityId) 设置<p>刷新活动 ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RollbackInstanceRefreshResponse extends AbstractModel
 {
     /**
-     * @var string 刷新活动 ID。
+     * @var string <p>刷新活动 ID。</p>
      */
     public $RefreshActivityId;
 
@@ -38,7 +38,7 @@ class RollbackInstanceRefreshResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $RefreshActivityId 刷新活动 ID。
+     * @param string $RefreshActivityId <p>刷新活动 ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

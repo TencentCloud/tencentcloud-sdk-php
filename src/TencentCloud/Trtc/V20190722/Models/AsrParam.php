@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHotWordList(string $HotWordList) 设置<p>临时热词表：该参数用于提升识别准确率。</p><ul><li>单个热词限制：&quot;热词|权重&quot;，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：&quot;腾讯云|5&quot; 或 &quot;ASR|11&quot;。</li><li>临时热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：&quot;腾讯云|10,语音识别|5,ASR|11&quot;。<br>注意：<br>热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。<br>热词权重设置为100时，当前热词开启热词增强同音同调替换功能，举例：热词配置&quot;蜜制|100&quot;时，与&quot;蜜制&quot;同拼音（mizhi）的&quot;秘制&quot;的识别结果会被强制替换成&quot;蜜制&quot;。因此建议客户根据自己的实际情况开启该功能。建议仅将重要且必须生效的热词设置到100，设置过多权重为100的热词将影响整体字准率。<br>热词不能包含空格，如：ASR 腾讯云<br>示例值：语音助理|10</li></ul>
  * @method array getAlternativeLanguage() 获取<p>发起模糊识别为高级语言引擎能力, 仅支持填写除&quot;zh-dialect&quot;和&quot;zh-yue&quot;以外的高级语言引擎。注意：最多只能填写4种语言。</p>
  * @method void setAlternativeLanguage(array $AlternativeLanguage) 设置<p>发起模糊识别为高级语言引擎能力, 仅支持填写除&quot;zh-dialect&quot;和&quot;zh-yue&quot;以外的高级语言引擎。注意：最多只能填写4种语言。</p>
- * @method integer getVadLevel() 获取<p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。</p>
- * @method void setVadLevel(integer $VadLevel) 设置<p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。</p>
+ * @method integer getVadLevel() 获取<p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 1]，默认为0。推荐设置为1，有较好的远场人声抑制能力。</p>
+ * @method void setVadLevel(integer $VadLevel) 设置<p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 1]，默认为0。推荐设置为1，有较好的远场人声抑制能力。</p>
  * @method integer getFilterDirty() 获取<p>是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。<br>0：不过滤脏词；1：过滤脏词；2：将脏词替换为 &quot; * &quot;。</p>
  * @method void setFilterDirty(integer $FilterDirty) 设置<p>是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。<br>0：不过滤脏词；1：过滤脏词；2：将脏词替换为 &quot; * &quot;。</p>
  * @method integer getFilterModal() 获取<p>是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。<br>0：不过滤语气词；1：部分过滤；2：严格过滤。</p>
@@ -60,7 +60,7 @@ class AsrParam extends AbstractModel
     public $AlternativeLanguage;
 
     /**
-     * @var integer <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。</p>
+     * @var integer <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 1]，默认为0。推荐设置为1，有较好的远场人声抑制能力。</p>
      */
     public $VadLevel;
 
@@ -84,7 +84,7 @@ class AsrParam extends AbstractModel
      * @param integer $VadSilenceTime <p>语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。<br>示例值：1000</p>
      * @param string $HotWordList <p>临时热词表：该参数用于提升识别准确率。</p><ul><li>单个热词限制：&quot;热词|权重&quot;，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：&quot;腾讯云|5&quot; 或 &quot;ASR|11&quot;。</li><li>临时热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：&quot;腾讯云|10,语音识别|5,ASR|11&quot;。<br>注意：<br>热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。<br>热词权重设置为100时，当前热词开启热词增强同音同调替换功能，举例：热词配置&quot;蜜制|100&quot;时，与&quot;蜜制&quot;同拼音（mizhi）的&quot;秘制&quot;的识别结果会被强制替换成&quot;蜜制&quot;。因此建议客户根据自己的实际情况开启该功能。建议仅将重要且必须生效的热词设置到100，设置过多权重为100的热词将影响整体字准率。<br>热词不能包含空格，如：ASR 腾讯云<br>示例值：语音助理|10</li></ul>
      * @param array $AlternativeLanguage <p>发起模糊识别为高级语言引擎能力, 仅支持填写除&quot;zh-dialect&quot;和&quot;zh-yue&quot;以外的高级语言引擎。注意：最多只能填写4种语言。</p>
-     * @param integer $VadLevel <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。</p>
+     * @param integer $VadLevel <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 1]，默认为0。推荐设置为1，有较好的远场人声抑制能力。</p>
      * @param integer $FilterDirty <p>是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。<br>0：不过滤脏词；1：过滤脏词；2：将脏词替换为 &quot; * &quot;。</p>
      * @param integer $FilterModal <p>是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。<br>0：不过滤语气词；1：部分过滤；2：严格过滤。</p>
      * @param integer $FilterPunc <p>是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。<br>0：不过滤句末的句号；1：过滤句末的句号。</p>

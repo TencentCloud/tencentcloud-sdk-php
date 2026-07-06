@@ -20,70 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述作业发生的一个事件
  *
- * @method string getType() 获取内部定义的事件类型
- * @method void setType(string $Type) 设置内部定义的事件类型
- * @method string getDescription() 获取事件类型的说明文字
- * @method void setDescription(string $Description) 设置事件类型的说明文字
- * @method integer getTimestamp() 获取事件发生的 Unix 时间戳（秒）
- * @method void setTimestamp(integer $Timestamp) 设置事件发生的 Unix 时间戳（秒）
- * @method integer getRunningOrderId() 获取事件发生时的运行 ID
+ * @method string getType() 获取<p>内部定义的事件类型</p>
+ * @method void setType(string $Type) 设置<p>内部定义的事件类型</p>
+ * @method string getDescription() 获取<p>事件类型的说明文字</p>
+ * @method void setDescription(string $Description) 设置<p>事件类型的说明文字</p>
+ * @method integer getTimestamp() 获取<p>事件发生的 Unix 时间戳（秒）</p>
+ * @method void setTimestamp(integer $Timestamp) 设置<p>事件发生的 Unix 时间戳（秒）</p>
+ * @method integer getRunningOrderId() 获取<p>事件发生时的运行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunningOrderId(integer $RunningOrderId) 设置事件发生时的运行 ID
+ * @method void setRunningOrderId(integer $RunningOrderId) 设置<p>事件发生时的运行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取事件的一些可选说明
+ * @method string getMessage() 获取<p>事件的一些可选说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置事件的一些可选说明
+ * @method void setMessage(string $Message) 设置<p>事件的一些可选说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSolutionLink() 获取异常事件的排查手册链接
+ * @method string getSolutionLink() 获取<p>异常事件的排查手册链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSolutionLink(string $SolutionLink) 设置异常事件的排查手册链接
+ * @method void setSolutionLink(string $SolutionLink) 设置<p>异常事件的排查手册链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCauseAnalysis() 获取<p>异常事件原因分析</p>
+ * @method void setCauseAnalysis(string $CauseAnalysis) 设置<p>异常事件原因分析</p>
+ * @method string getSolution() 获取<p>异常事件处理的参考方案</p>
+ * @method void setSolution(string $Solution) 设置<p>异常事件处理的参考方案</p>
  */
 class JobEvent extends AbstractModel
 {
     /**
-     * @var string 内部定义的事件类型
+     * @var string <p>内部定义的事件类型</p>
      */
     public $Type;
 
     /**
-     * @var string 事件类型的说明文字
+     * @var string <p>事件类型的说明文字</p>
      */
     public $Description;
 
     /**
-     * @var integer 事件发生的 Unix 时间戳（秒）
+     * @var integer <p>事件发生的 Unix 时间戳（秒）</p>
      */
     public $Timestamp;
 
     /**
-     * @var integer 事件发生时的运行 ID
+     * @var integer <p>事件发生时的运行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningOrderId;
 
     /**
-     * @var string 事件的一些可选说明
+     * @var string <p>事件的一些可选说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
-     * @var string 异常事件的排查手册链接
+     * @var string <p>异常事件的排查手册链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SolutionLink;
 
     /**
-     * @param string $Type 内部定义的事件类型
-     * @param string $Description 事件类型的说明文字
-     * @param integer $Timestamp 事件发生的 Unix 时间戳（秒）
-     * @param integer $RunningOrderId 事件发生时的运行 ID
+     * @var string <p>异常事件原因分析</p>
+     */
+    public $CauseAnalysis;
+
+    /**
+     * @var string <p>异常事件处理的参考方案</p>
+     */
+    public $Solution;
+
+    /**
+     * @param string $Type <p>内部定义的事件类型</p>
+     * @param string $Description <p>事件类型的说明文字</p>
+     * @param integer $Timestamp <p>事件发生的 Unix 时间戳（秒）</p>
+     * @param integer $RunningOrderId <p>事件发生时的运行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message 事件的一些可选说明
+     * @param string $Message <p>事件的一些可选说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SolutionLink 异常事件的排查手册链接
+     * @param string $SolutionLink <p>异常事件的排查手册链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CauseAnalysis <p>异常事件原因分析</p>
+     * @param string $Solution <p>异常事件处理的参考方案</p>
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class JobEvent extends AbstractModel
 
         if (array_key_exists("SolutionLink",$param) and $param["SolutionLink"] !== null) {
             $this->SolutionLink = $param["SolutionLink"];
+        }
+
+        if (array_key_exists("CauseAnalysis",$param) and $param["CauseAnalysis"] !== null) {
+            $this->CauseAnalysis = $param["CauseAnalysis"];
+        }
+
+        if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
+            $this->Solution = $param["Solution"];
         }
     }
 }

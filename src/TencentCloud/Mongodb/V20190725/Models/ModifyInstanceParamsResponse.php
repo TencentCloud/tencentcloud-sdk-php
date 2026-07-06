@@ -20,31 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceParams返回参数结构体
  *
- * @method boolean getChanged() 获取修改参数配置是否生效。
-- true：参数修改后的值已生效。
-- false：执行失败。
-
- * @method void setChanged(boolean $Changed) 设置修改参数配置是否生效。
-- true：参数修改后的值已生效。
-- false：执行失败。
-
- * @method integer getTaskId() 获取该参数暂时无意义(兼容前端保留)。
- * @method void setTaskId(integer $TaskId) 设置该参数暂时无意义(兼容前端保留)。
+ * @method boolean getChanged() 获取<p>修改参数配置是否生效。</p><ul><li>true：参数修改后的值已生效。</li><li>false：执行失败。</li></ul>
+ * @method void setChanged(boolean $Changed) 设置<p>修改参数配置是否生效。</p><ul><li>true：参数修改后的值已生效。</li><li>false：执行失败。</li></ul>
+ * @method integer getTaskId() 获取<p>该参数暂时无意义(兼容前端保留)。</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>该参数暂时无意义(兼容前端保留)。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyInstanceParamsResponse extends AbstractModel
 {
     /**
-     * @var boolean 修改参数配置是否生效。
-- true：参数修改后的值已生效。
-- false：执行失败。
-
+     * @var boolean <p>修改参数配置是否生效。</p><ul><li>true：参数修改后的值已生效。</li><li>false：执行失败。</li></ul>
      */
     public $Changed;
 
     /**
-     * @var integer 该参数暂时无意义(兼容前端保留)。
+     * @var integer <p>该参数暂时无意义(兼容前端保留)。</p>
      */
     public $TaskId;
 
@@ -54,11 +45,8 @@ class ModifyInstanceParamsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Changed 修改参数配置是否生效。
-- true：参数修改后的值已生效。
-- false：执行失败。
-
-     * @param integer $TaskId 该参数暂时无意义(兼容前端保留)。
+     * @param boolean $Changed <p>修改参数配置是否生效。</p><ul><li>true：参数修改后的值已生效。</li><li>false：执行失败。</li></ul>
+     * @param integer $TaskId <p>该参数暂时无意义(兼容前端保留)。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

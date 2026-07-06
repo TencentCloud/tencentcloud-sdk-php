@@ -20,127 +20,127 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogStorageStatistic返回参数结构体
  *
- * @method integer getReturnCode() 获取返回状态码 0 成功 非0不成功
- * @method void setReturnCode(integer $ReturnCode) 设置返回状态码 0 成功 非0不成功
- * @method string getReturnMsg() 获取返回信息  success 成功 其他 不成功
- * @method void setReturnMsg(string $ReturnMsg) 设置返回信息  success 成功 其他 不成功
- * @method integer getUsedSize() 获取已使用存储量，单位B
- * @method void setUsedSize(integer $UsedSize) 设置已使用存储量，单位B
- * @method integer getTotalSize() 获取配额存储总量，单位B
- * @method void setTotalSize(integer $TotalSize) 设置配额存储总量，单位B
- * @method integer getStorageDay() 获取存储天数
- * @method void setStorageDay(integer $StorageDay) 设置存储天数
- * @method integer getAclSize() 获取访问控制日志存储量，单位B
- * @method void setAclSize(integer $AclSize) 设置访问控制日志存储量，单位B
- * @method integer getIdsSize() 获取入侵防御日志存储量，单位B
- * @method void setIdsSize(integer $IdsSize) 设置入侵防御日志存储量，单位B
- * @method integer getNetFlowSize() 获取流量日志存储量，单位B
- * @method void setNetFlowSize(integer $NetFlowSize) 设置流量日志存储量，单位B
- * @method integer getOperateSize() 获取操作日志存储量，单位B
- * @method void setOperateSize(integer $OperateSize) 设置操作日志存储量，单位B
- * @method integer getLeftSize() 获取剩余存储量，单位B
- * @method void setLeftSize(integer $LeftSize) 设置剩余存储量，单位B
- * @method integer getPayMode() 获取计费模式，0后付费，1预付费
- * @method void setPayMode(integer $PayMode) 设置计费模式，0后付费，1预付费
- * @method array getTimeHistogram() 获取每日增加日志存储量柱状图
- * @method void setTimeHistogram(array $TimeHistogram) 设置每日增加日志存储量柱状图
- * @method StorageHistogramShow getTimeHistogramShow() 获取柱形图格式数据
- * @method void setTimeHistogramShow(StorageHistogramShow $TimeHistogramShow) 设置柱形图格式数据
- * @method integer getArrearsStopWriting() 获取后付费模式存储状态，0正常，1欠费停止写入
- * @method void setArrearsStopWriting(integer $ArrearsStopWriting) 设置后付费模式存储状态，0正常，1欠费停止写入
- * @method integer getNDRNetFlowSize() 获取NDR流量日志存储量，单位B
- * @method void setNDRNetFlowSize(integer $NDRNetFlowSize) 设置NDR流量日志存储量，单位B
- * @method integer getNDRRiskSize() 获取NDR风险日志存储量，单位B
- * @method void setNDRRiskSize(integer $NDRRiskSize) 设置NDR风险日志存储量，单位B
- * @method integer getNDRStorageDay() 获取NDR日志存储天数
- * @method void setNDRStorageDay(integer $NDRStorageDay) 设置NDR日志存储天数
+ * @method integer getReturnCode() 获取<p>返回状态码 0 成功 非0不成功</p>
+ * @method void setReturnCode(integer $ReturnCode) 设置<p>返回状态码 0 成功 非0不成功</p>
+ * @method string getReturnMsg() 获取<p>返回信息  success 成功 其他 不成功</p>
+ * @method void setReturnMsg(string $ReturnMsg) 设置<p>返回信息  success 成功 其他 不成功</p>
+ * @method integer getUsedSize() 获取<p>已使用存储量，单位B</p>
+ * @method void setUsedSize(integer $UsedSize) 设置<p>已使用存储量，单位B</p>
+ * @method integer getTotalSize() 获取<p>配额存储总量，单位B</p>
+ * @method void setTotalSize(integer $TotalSize) 设置<p>配额存储总量，单位B</p>
+ * @method integer getStorageDay() 获取<p>存储天数</p>
+ * @method void setStorageDay(integer $StorageDay) 设置<p>存储天数</p>
+ * @method integer getAclSize() 获取<p>访问控制日志存储量，单位B</p>
+ * @method void setAclSize(integer $AclSize) 设置<p>访问控制日志存储量，单位B</p>
+ * @method integer getIdsSize() 获取<p>入侵防御日志存储量，单位B</p>
+ * @method void setIdsSize(integer $IdsSize) 设置<p>入侵防御日志存储量，单位B</p>
+ * @method integer getNetFlowSize() 获取<p>流量日志存储量，单位B</p>
+ * @method void setNetFlowSize(integer $NetFlowSize) 设置<p>流量日志存储量，单位B</p>
+ * @method integer getOperateSize() 获取<p>操作日志存储量，单位B</p>
+ * @method void setOperateSize(integer $OperateSize) 设置<p>操作日志存储量，单位B</p>
+ * @method integer getLeftSize() 获取<p>剩余存储量，单位B</p>
+ * @method void setLeftSize(integer $LeftSize) 设置<p>剩余存储量，单位B</p>
+ * @method integer getPayMode() 获取<p>计费模式，0后付费，1预付费</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>计费模式，0后付费，1预付费</p>
+ * @method array getTimeHistogram() 获取<p>每日增加日志存储量柱状图</p>
+ * @method void setTimeHistogram(array $TimeHistogram) 设置<p>每日增加日志存储量柱状图</p>
+ * @method StorageHistogramShow getTimeHistogramShow() 获取<p>柱形图格式数据</p>
+ * @method void setTimeHistogramShow(StorageHistogramShow $TimeHistogramShow) 设置<p>柱形图格式数据</p>
+ * @method integer getArrearsStopWriting() 获取<p>后付费模式存储状态，0正常，1欠费停止写入</p>
+ * @method void setArrearsStopWriting(integer $ArrearsStopWriting) 设置<p>后付费模式存储状态，0正常，1欠费停止写入</p>
+ * @method integer getNDRNetFlowSize() 获取<p>NDR流量日志存储量，单位B</p>
+ * @method void setNDRNetFlowSize(integer $NDRNetFlowSize) 设置<p>NDR流量日志存储量，单位B</p>
+ * @method integer getNDRRiskSize() 获取<p>NDR风险日志存储量，单位B</p>
+ * @method void setNDRRiskSize(integer $NDRRiskSize) 设置<p>NDR风险日志存储量，单位B</p>
+ * @method integer getNDRStorageDay() 获取<p>NDR日志存储天数</p>
+ * @method void setNDRStorageDay(integer $NDRStorageDay) 设置<p>NDR日志存储天数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLogStorageStatisticResponse extends AbstractModel
 {
     /**
-     * @var integer 返回状态码 0 成功 非0不成功
+     * @var integer <p>返回状态码 0 成功 非0不成功</p>
      */
     public $ReturnCode;
 
     /**
-     * @var string 返回信息  success 成功 其他 不成功
+     * @var string <p>返回信息  success 成功 其他 不成功</p>
      */
     public $ReturnMsg;
 
     /**
-     * @var integer 已使用存储量，单位B
+     * @var integer <p>已使用存储量，单位B</p>
      */
     public $UsedSize;
 
     /**
-     * @var integer 配额存储总量，单位B
+     * @var integer <p>配额存储总量，单位B</p>
      */
     public $TotalSize;
 
     /**
-     * @var integer 存储天数
+     * @var integer <p>存储天数</p>
      */
     public $StorageDay;
 
     /**
-     * @var integer 访问控制日志存储量，单位B
+     * @var integer <p>访问控制日志存储量，单位B</p>
      */
     public $AclSize;
 
     /**
-     * @var integer 入侵防御日志存储量，单位B
+     * @var integer <p>入侵防御日志存储量，单位B</p>
      */
     public $IdsSize;
 
     /**
-     * @var integer 流量日志存储量，单位B
+     * @var integer <p>流量日志存储量，单位B</p>
      */
     public $NetFlowSize;
 
     /**
-     * @var integer 操作日志存储量，单位B
+     * @var integer <p>操作日志存储量，单位B</p>
      */
     public $OperateSize;
 
     /**
-     * @var integer 剩余存储量，单位B
+     * @var integer <p>剩余存储量，单位B</p>
      */
     public $LeftSize;
 
     /**
-     * @var integer 计费模式，0后付费，1预付费
+     * @var integer <p>计费模式，0后付费，1预付费</p>
      */
     public $PayMode;
 
     /**
-     * @var array 每日增加日志存储量柱状图
+     * @var array <p>每日增加日志存储量柱状图</p>
      */
     public $TimeHistogram;
 
     /**
-     * @var StorageHistogramShow 柱形图格式数据
+     * @var StorageHistogramShow <p>柱形图格式数据</p>
      */
     public $TimeHistogramShow;
 
     /**
-     * @var integer 后付费模式存储状态，0正常，1欠费停止写入
+     * @var integer <p>后付费模式存储状态，0正常，1欠费停止写入</p>
      */
     public $ArrearsStopWriting;
 
     /**
-     * @var integer NDR流量日志存储量，单位B
+     * @var integer <p>NDR流量日志存储量，单位B</p>
      */
     public $NDRNetFlowSize;
 
     /**
-     * @var integer NDR风险日志存储量，单位B
+     * @var integer <p>NDR风险日志存储量，单位B</p>
      */
     public $NDRRiskSize;
 
     /**
-     * @var integer NDR日志存储天数
+     * @var integer <p>NDR日志存储天数</p>
      */
     public $NDRStorageDay;
 
@@ -150,23 +150,23 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ReturnCode 返回状态码 0 成功 非0不成功
-     * @param string $ReturnMsg 返回信息  success 成功 其他 不成功
-     * @param integer $UsedSize 已使用存储量，单位B
-     * @param integer $TotalSize 配额存储总量，单位B
-     * @param integer $StorageDay 存储天数
-     * @param integer $AclSize 访问控制日志存储量，单位B
-     * @param integer $IdsSize 入侵防御日志存储量，单位B
-     * @param integer $NetFlowSize 流量日志存储量，单位B
-     * @param integer $OperateSize 操作日志存储量，单位B
-     * @param integer $LeftSize 剩余存储量，单位B
-     * @param integer $PayMode 计费模式，0后付费，1预付费
-     * @param array $TimeHistogram 每日增加日志存储量柱状图
-     * @param StorageHistogramShow $TimeHistogramShow 柱形图格式数据
-     * @param integer $ArrearsStopWriting 后付费模式存储状态，0正常，1欠费停止写入
-     * @param integer $NDRNetFlowSize NDR流量日志存储量，单位B
-     * @param integer $NDRRiskSize NDR风险日志存储量，单位B
-     * @param integer $NDRStorageDay NDR日志存储天数
+     * @param integer $ReturnCode <p>返回状态码 0 成功 非0不成功</p>
+     * @param string $ReturnMsg <p>返回信息  success 成功 其他 不成功</p>
+     * @param integer $UsedSize <p>已使用存储量，单位B</p>
+     * @param integer $TotalSize <p>配额存储总量，单位B</p>
+     * @param integer $StorageDay <p>存储天数</p>
+     * @param integer $AclSize <p>访问控制日志存储量，单位B</p>
+     * @param integer $IdsSize <p>入侵防御日志存储量，单位B</p>
+     * @param integer $NetFlowSize <p>流量日志存储量，单位B</p>
+     * @param integer $OperateSize <p>操作日志存储量，单位B</p>
+     * @param integer $LeftSize <p>剩余存储量，单位B</p>
+     * @param integer $PayMode <p>计费模式，0后付费，1预付费</p>
+     * @param array $TimeHistogram <p>每日增加日志存储量柱状图</p>
+     * @param StorageHistogramShow $TimeHistogramShow <p>柱形图格式数据</p>
+     * @param integer $ArrearsStopWriting <p>后付费模式存储状态，0正常，1欠费停止写入</p>
+     * @param integer $NDRNetFlowSize <p>NDR流量日志存储量，单位B</p>
+     * @param integer $NDRRiskSize <p>NDR风险日志存储量，单位B</p>
+     * @param integer $NDRStorageDay <p>NDR日志存储天数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

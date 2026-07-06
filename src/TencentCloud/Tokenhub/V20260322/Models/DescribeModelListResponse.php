@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModelList返回参数结构体
  *
+ * @method array getModelSet() 获取<p>模型列表。</p>
+ * @method void setModelSet(array $ModelSet) 设置<p>模型列表。</p>
+ * @method integer getTotalCount() 获取<p>符合条件的模型总数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的模型总数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeModelListResponse extends AbstractModel
 {
     /**
+     * @var array <p>模型列表。</p>
+     */
+    public $ModelSet;
+
+    /**
+     * @var integer <p>符合条件的模型总数。</p>
+     */
+    public $TotalCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $ModelSet <p>模型列表。</p>
+     * @param integer $TotalCount <p>符合条件的模型总数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class DescribeModelListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ModelSet",$param) and $param["ModelSet"] !== null) {
+            $this->ModelSet = [];
+            foreach ($param["ModelSet"] as $key => $value){
+                $obj = new Model();
+                $obj->deserialize($value);
+                array_push($this->ModelSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

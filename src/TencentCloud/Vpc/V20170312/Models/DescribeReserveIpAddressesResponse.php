@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReserveIpAddresses返回参数结构体
  *
- * @method array getReserveIpAddressSet() 获取内网保留 IP返回信息。
- * @method void setReserveIpAddressSet(array $ReserveIpAddressSet) 设置内网保留 IP返回信息。
- * @method integer getTotalCount() 获取返回内网保留IP的个数。
- * @method void setTotalCount(integer $TotalCount) 设置返回内网保留IP的个数。
+ * @method array getReserveIpAddressSet() 获取<p>内网保留 IP返回信息。</p>
+ * @method void setReserveIpAddressSet(array $ReserveIpAddressSet) 设置<p>内网保留 IP返回信息。</p>
+ * @method integer getTotalCount() 获取<p>返回内网保留IP的个数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>返回内网保留IP的个数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeReserveIpAddressesResponse extends AbstractModel
 {
     /**
-     * @var array 内网保留 IP返回信息。
+     * @var array <p>内网保留 IP返回信息。</p>
      */
     public $ReserveIpAddressSet;
 
     /**
-     * @var integer 返回内网保留IP的个数。
+     * @var integer <p>返回内网保留IP的个数。</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeReserveIpAddressesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ReserveIpAddressSet 内网保留 IP返回信息。
-     * @param integer $TotalCount 返回内网保留IP的个数。
+     * @param array $ReserveIpAddressSet <p>内网保留 IP返回信息。</p>
+     * @param integer $TotalCount <p>返回内网保留IP的个数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

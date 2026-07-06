@@ -82,7 +82,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeIPStatusListResponse DescribeIPStatusList(Models\DescribeIPStatusListRequest $req) IP防护状态查询
  * @method Models\DescribeIpsModeSwitchResponse DescribeIpsModeSwitch(Models\DescribeIpsModeSwitchRequest $req) 获取入侵防御防护模式
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 租户日志存储统计
- * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 日志审计日志查询
+ * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 请使用 [日志分析SearchLog接口](https://cloud.tencent.com/document/product/1132/118363)
  * @method Models\DescribeNDRAssetIdentificationCursorListResponse DescribeNDRAssetIdentificationCursorList(Models\DescribeNDRAssetIdentificationCursorListRequest $req) DescribeNDRAssetIdentificationCursorList - 游标获取NDR资产识别结果列表
  * @method Models\DescribeNDRAssetIdentificationListResponse DescribeNDRAssetIdentificationList(Models\DescribeNDRAssetIdentificationListRequest $req) DescribeNDRAssetIdentificationList - 获取NDR资产识别结果列表
  * @method Models\DescribeNatAcRuleResponse DescribeNatAcRule(Models\DescribeNatAcRuleRequest $req) 查询NAT访问控制列表
@@ -95,6 +95,8 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeNatFwInstancesInfoResponse DescribeNatFwInstancesInfo(Models\DescribeNatFwInstancesInfoRequest $req) GetNatInstance 获取租户所有NAT实例及实例卡片信息
  * @method Models\DescribeNatFwSwitchResponse DescribeNatFwSwitch(Models\DescribeNatFwSwitchRequest $req) 查询NAT边界防火墙开关列表
  * @method Models\DescribeNatFwVpcDnsLstResponse DescribeNatFwVpcDnsLst(Models\DescribeNatFwVpcDnsLstRequest $req) 展示当前natfw 实例对应的vpc dns开关
+ * @method Models\DescribeOfflineExportTaskResponse DescribeOfflineExportTask(Models\DescribeOfflineExportTaskRequest $req) 获取日志离线导出任务列表
+ * @method Models\DescribeOfflineExportTemporaryCredentialsResponse DescribeOfflineExportTemporaryCredentials(Models\DescribeOfflineExportTemporaryCredentialsRequest $req) 获取日志离线导出任务文件下载临时凭证
  * @method Models\DescribeResourceGroupResponse DescribeResourceGroup(Models\DescribeResourceGroupRequest $req) DescribeResourceGroup资产中心资产树信息
  * @method Models\DescribeResourceGroupNewResponse DescribeResourceGroupNew(Models\DescribeResourceGroupNewRequest $req) 资产中心资产组数数据信息查询
  * @method Models\DescribeRuleOverviewResponse DescribeRuleOverview(Models\DescribeRuleOverviewRequest $req) 查询规则列表概况
@@ -111,6 +113,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeVpcFwCcnPolicyWhiteListResponse DescribeVpcFwCcnPolicyWhiteList(Models\DescribeVpcFwCcnPolicyWhiteListRequest $req) 查询VPC防火墙策略路由功能开白的CCN列表
  * @method Models\DescribeVpcFwGroupSwitchResponse DescribeVpcFwGroupSwitch(Models\DescribeVpcFwGroupSwitchRequest $req) VPC防火墙(组)开关列表
  * @method Models\ExpandCfwVerticalResponse ExpandCfwVertical(Models\ExpandCfwVerticalRequest $req) 防火墙垂直扩容
+ * @method Models\ExportLogsOfflineResponse ExportLogsOffline(Models\ExportLogsOfflineRequest $req) 日志审计日志离线导出
  * @method Models\ModifyAcRuleResponse ModifyAcRule(Models\ModifyAcRuleRequest $req) 修改规则
  * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) 修改互联网边界访问控制规则
  * @method Models\ModifyAddressTemplateResponse ModifyAddressTemplate(Models\ModifyAddressTemplateRequest $req) 修改地址模板
@@ -158,6 +161,7 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
  * @method Models\RemoveAclRuleResponse RemoveAclRule(Models\RemoveAclRuleRequest $req) 删除互联网边界访问控制规则
  * @method Models\RemoveEnterpriseSecurityGroupRuleResponse RemoveEnterpriseSecurityGroupRule(Models\RemoveEnterpriseSecurityGroupRuleRequest $req) 删除新企业安全组规则
  * @method Models\RemoveNatAcRuleResponse RemoveNatAcRule(Models\RemoveNatAcRuleRequest $req) 删除NAT访问控制规则
+ * @method Models\RemoveOfflineExportTaskResponse RemoveOfflineExportTask(Models\RemoveOfflineExportTaskRequest $req) 删除日志离线导出任务
  * @method Models\RemoveVpcAcRuleResponse RemoveVpcAcRule(Models\RemoveVpcAcRuleRequest $req) 删除VPC间规则
  * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 本接口用于检索分析日志，使用该接口时请注意如下事项：
 1. 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。

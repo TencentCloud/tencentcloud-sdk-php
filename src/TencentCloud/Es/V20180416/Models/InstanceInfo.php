@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) 设置<p>实例拥有的标签列表</p>
  * @method string getLicenseType() 获取<p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
  * @method void setLicenseType(string $LicenseType) 设置<p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
+ * @method string getRealLicenseType() 获取<p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li><li>enterprise：企业版</li>默认值platinum</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRealLicenseType(string $RealLicenseType) 设置<p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li><li>enterprise：企业版</li>默认值platinum</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableHotWarmMode() 获取<p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableHotWarmMode(boolean $EnableHotWarmMode) 设置<p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
@@ -300,9 +304,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisasterRecoverGroupAffinity(integer $DisasterRecoverGroupAffinity) 设置<p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubProductCode() 获取<p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+ * @method string getSubProductCode() 获取<p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，AI搜索增强版：&quot;sp_es_aisearch&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubProductCode(string $SubProductCode) 设置<p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+ * @method void setSubProductCode(string $SubProductCode) 设置<p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，AI搜索增强版：&quot;sp_es_aisearch&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCosBucketStorageSize() 获取<p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -338,6 +342,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMayDestroyPoint(string $MayDestroyPoint) 设置<p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
  * @method integer getDelayDestroyInterval() 获取<p>延迟销毁的时间</p><p>单位：天</p>
  * @method void setDelayDestroyInterval(integer $DelayDestroyInterval) 设置<p>延迟销毁的时间</p><p>单位：天</p>
+ * @method integer getEnableAutoReplace() 获取<p>开启异常节点自动替换，0关闭，1开启</p>
+ * @method void setEnableAutoReplace(integer $EnableAutoReplace) 设置<p>开启异常节点自动替换，0关闭，1开启</p>
+ * @method integer getOpenMTLS() 获取<p>开启mtls，0关闭，1开启</p>
+ * @method void setOpenMTLS(integer $OpenMTLS) 设置<p>开启mtls，0关闭，1开启</p>
+ * @method string getServerCertSource() 获取<p>证书类型</p>
+ * @method void setServerCertSource(string $ServerCertSource) 设置<p>证书类型</p>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -515,6 +525,12 @@ class InstanceInfo extends AbstractModel
      * @var string <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
      */
     public $LicenseType;
+
+    /**
+     * @var string <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li><li>enterprise：企业版</li>默认值platinum</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RealLicenseType;
 
     /**
      * @var boolean <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
@@ -834,7 +850,7 @@ class InstanceInfo extends AbstractModel
     public $DisasterRecoverGroupAffinity;
 
     /**
-     * @var string <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+     * @var string <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，AI搜索增强版：&quot;sp_es_aisearch&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubProductCode;
@@ -905,6 +921,21 @@ class InstanceInfo extends AbstractModel
     public $DelayDestroyInterval;
 
     /**
+     * @var integer <p>开启异常节点自动替换，0关闭，1开启</p>
+     */
+    public $EnableAutoReplace;
+
+    /**
+     * @var integer <p>开启mtls，0关闭，1开启</p>
+     */
+    public $OpenMTLS;
+
+    /**
+     * @var string <p>证书类型</p>
+     */
+    public $ServerCertSource;
+
+    /**
      * @param string $InstanceId <p>实例ID</p>
      * @param string $InstanceName <p>实例名称</p>
      * @param string $Region <p>地域</p>
@@ -940,6 +971,8 @@ class InstanceInfo extends AbstractModel
      * @param boolean $AllowCosBackup <p>是否允许cos自动备份</p>
      * @param array $TagList <p>实例拥有的标签列表</p>
      * @param string $LicenseType <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
+     * @param string $RealLicenseType <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li><li>enterprise：企业版</li>默认值platinum</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableHotWarmMode <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WarmNodeType <p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
@@ -1045,7 +1078,7 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DisasterRecoverGroupAffinity <p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+     * @param string $SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，AI搜索增强版：&quot;sp_es_aisearch&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CosBucketStorageSize <p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -1064,6 +1097,9 @@ class InstanceInfo extends AbstractModel
      * @param boolean $RecycleLockEnabled <p>回收站内是否锁定</p><p>默认值：false</p>
      * @param string $MayDestroyPoint <p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      * @param integer $DelayDestroyInterval <p>延迟销毁的时间</p><p>单位：天</p>
+     * @param integer $EnableAutoReplace <p>开启异常节点自动替换，0关闭，1开启</p>
+     * @param integer $OpenMTLS <p>开启mtls，0关闭，1开启</p>
+     * @param string $ServerCertSource <p>证书类型</p>
      */
     function __construct()
     {
@@ -1225,6 +1261,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("RealLicenseType",$param) and $param["RealLicenseType"] !== null) {
+            $this->RealLicenseType = $param["RealLicenseType"];
         }
 
         if (array_key_exists("EnableHotWarmMode",$param) and $param["EnableHotWarmMode"] !== null) {
@@ -1519,6 +1559,18 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("DelayDestroyInterval",$param) and $param["DelayDestroyInterval"] !== null) {
             $this->DelayDestroyInterval = $param["DelayDestroyInterval"];
+        }
+
+        if (array_key_exists("EnableAutoReplace",$param) and $param["EnableAutoReplace"] !== null) {
+            $this->EnableAutoReplace = $param["EnableAutoReplace"];
+        }
+
+        if (array_key_exists("OpenMTLS",$param) and $param["OpenMTLS"] !== null) {
+            $this->OpenMTLS = $param["OpenMTLS"];
+        }
+
+        if (array_key_exists("ServerCertSource",$param) and $param["ServerCertSource"] !== null) {
+            $this->ServerCertSource = $param["ServerCertSource"];
         }
     }
 }

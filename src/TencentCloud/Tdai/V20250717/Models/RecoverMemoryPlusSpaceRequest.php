@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSpaceIds() 获取<p>指定需要恢复的 Memory 实例 ID 列表。</p>
  * @method void setSpaceIds(array $SpaceIds) 设置<p>指定需要恢复的 Memory 实例 ID 列表。</p>
+ * @method integer getPayPeriod() 获取<p>包年包月续费周期</p><p>单位：月</p>
+ * @method void setPayPeriod(integer $PayPeriod) 设置<p>包年包月续费周期</p><p>单位：月</p>
  */
 class RecoverMemoryPlusSpaceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class RecoverMemoryPlusSpaceRequest extends AbstractModel
     public $SpaceIds;
 
     /**
+     * @var integer <p>包年包月续费周期</p><p>单位：月</p>
+     */
+    public $PayPeriod;
+
+    /**
      * @param array $SpaceIds <p>指定需要恢复的 Memory 实例 ID 列表。</p>
+     * @param integer $PayPeriod <p>包年包月续费周期</p><p>单位：月</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class RecoverMemoryPlusSpaceRequest extends AbstractModel
         }
         if (array_key_exists("SpaceIds",$param) and $param["SpaceIds"] !== null) {
             $this->SpaceIds = $param["SpaceIds"];
+        }
+
+        if (array_key_exists("PayPeriod",$param) and $param["PayPeriod"] !== null) {
+            $this->PayPeriod = $param["PayPeriod"];
         }
     }
 }

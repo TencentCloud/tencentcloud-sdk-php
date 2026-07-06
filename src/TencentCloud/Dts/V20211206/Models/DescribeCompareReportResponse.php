@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCompareReport返回参数结构体
  *
- * @method CompareAbstractInfo getAbstract() 获取一致性校验摘要信息
- * @method void setAbstract(CompareAbstractInfo $Abstract) 设置一致性校验摘要信息
- * @method CompareDetailInfo getDetail() 获取一致性校验详细信息
- * @method void setDetail(CompareDetailInfo $Detail) 设置一致性校验详细信息
+ * @method CompareAbstractInfo getAbstract() 获取<p>一致性校验摘要信息</p>
+ * @method void setAbstract(CompareAbstractInfo $Abstract) 设置<p>一致性校验摘要信息</p>
+ * @method CompareDetailInfo getDetail() 获取<p>一致性校验详细信息</p>
+ * @method void setDetail(CompareDetailInfo $Detail) 设置<p>一致性校验详细信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCompareReportResponse extends AbstractModel
 {
     /**
-     * @var CompareAbstractInfo 一致性校验摘要信息
+     * @var CompareAbstractInfo <p>一致性校验摘要信息</p>
      */
     public $Abstract;
 
     /**
-     * @var CompareDetailInfo 一致性校验详细信息
+     * @var CompareDetailInfo <p>一致性校验详细信息</p>
      */
     public $Detail;
 
@@ -45,8 +45,8 @@ class DescribeCompareReportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CompareAbstractInfo $Abstract 一致性校验摘要信息
-     * @param CompareDetailInfo $Detail 一致性校验详细信息
+     * @param CompareAbstractInfo $Abstract <p>一致性校验摘要信息</p>
+     * @param CompareDetailInfo $Detail <p>一致性校验详细信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

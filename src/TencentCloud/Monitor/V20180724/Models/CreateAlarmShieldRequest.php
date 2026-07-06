@@ -20,166 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarmShield请求参数结构体
  *
- * @method string getModule() 获取模块名，这里填“monitor”
- * @method void setModule(string $Module) 设置模块名，这里填“monitor”
- * @method string getName() 获取屏蔽策略名称
- * @method void setName(string $Name) 设置屏蔽策略名称
- * @method string getMonitorType() 获取监控类型
- * @method void setMonitorType(string $MonitorType) 设置监控类型
- * @method string getNameSpace() 获取命名空间即策略类型
- * @method void setNameSpace(string $NameSpace) 设置命名空间即策略类型
- * @method string getShieldTimeType() 获取屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽
- * @method void setShieldTimeType(string $ShieldTimeType) 设置屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽
- * @method array getShieldObject() 获取屏蔽对象
- * @method void setShieldObject(array $ShieldObject) 设置屏蔽对象
- * @method array getShieldMetric() 获取屏蔽指标 为空则为全部指标
- * @method void setShieldMetric(array $ShieldMetric) 设置屏蔽指标 为空则为全部指标
- * @method integer getStartTime() 获取开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0
- * @method void setStartTime(integer $StartTime) 设置开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0
- * @method integer getEndTime() 获取结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0
- * @method void setEndTime(integer $EndTime) 设置结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0
- * @method integer getLoopStartDate() 获取循环开始日期 2022/04/01 缺省:0
- * @method void setLoopStartDate(integer $LoopStartDate) 设置循环开始日期 2022/04/01 缺省:0
- * @method integer getLoopEndDate() 获取循环结束日期 2022/04/05 缺省:0
- * @method void setLoopEndDate(integer $LoopEndDate) 设置循环结束日期 2022/04/05 缺省:0
- * @method string getShieldPolicyId() 获取需要屏蔽的策略ID
- * @method void setShieldPolicyId(string $ShieldPolicyId) 设置需要屏蔽的策略ID
- * @method array getShieldAlarmLevel() 获取需要屏蔽的告警等级，取值范围Warn,Remind,Serious
- * @method void setShieldAlarmLevel(array $ShieldAlarmLevel) 设置需要屏蔽的告警等级，取值范围Warn,Remind,Serious
- * @method string getVersionTag() 获取屏蔽类型，为OBJNAME是老版本实例名屏蔽，为POLICY是新版本维度匹配
- * @method void setVersionTag(string $VersionTag) 设置屏蔽类型，为OBJNAME是老版本实例名屏蔽，为POLICY是新版本维度匹配
- * @method string getDescription() 获取屏蔽规则的描述
- * @method void setDescription(string $Description) 设置屏蔽规则的描述
- * @method float getTimeZone() 获取 时区，东八区+8，西八区减8，以此类推
-
- * @method void setTimeZone(float $TimeZone) 设置 时区，东八区+8，西八区减8，以此类推
-
- * @method array getShieldEvent() 获取屏蔽事件 为空则为全部指标
- * @method void setShieldEvent(array $ShieldEvent) 设置屏蔽事件 为空则为全部指标
- * @method integer getShieldMetricFlag() 获取是否对指标屏蔽 1=是 0=否
- * @method void setShieldMetricFlag(integer $ShieldMetricFlag) 设置是否对指标屏蔽 1=是 0=否
- * @method integer getShieldEventFlag() 获取是否对事件屏蔽 1=是 0=否
- * @method void setShieldEventFlag(integer $ShieldEventFlag) 设置是否对事件屏蔽 1=是 0=否
+ * @method string getModule() 获取<p>模块名，这里填“monitor”</p>
+ * @method void setModule(string $Module) 设置<p>模块名，这里填“monitor”</p>
+ * @method string getName() 获取<p>屏蔽策略名称</p>
+ * @method void setName(string $Name) 设置<p>屏蔽策略名称</p>
+ * @method string getMonitorType() 获取<p>监控类型</p>
+ * @method void setMonitorType(string $MonitorType) 设置<p>监控类型</p>
+ * @method string getNameSpace() 获取<p>命名空间即策略类型</p>
+ * @method void setNameSpace(string $NameSpace) 设置<p>命名空间即策略类型</p>
+ * @method string getShieldTimeType() 获取<p>屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽</p>
+ * @method void setShieldTimeType(string $ShieldTimeType) 设置<p>屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽</p>
+ * @method array getShieldObject() 获取<p>屏蔽对象</p>
+ * @method void setShieldObject(array $ShieldObject) 设置<p>屏蔽对象</p>
+ * @method array getShieldMetric() 获取<p>屏蔽指标 为空则为全部指标</p>
+ * @method void setShieldMetric(array $ShieldMetric) 设置<p>屏蔽指标 为空则为全部指标</p>
+ * @method integer getStartTime() 获取<p>开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0</p>
+ * @method integer getEndTime() 获取<p>结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0</p>
+ * @method integer getLoopStartDate() 获取<p>循环开始日期 2022/04/01 缺省:0</p>
+ * @method void setLoopStartDate(integer $LoopStartDate) 设置<p>循环开始日期 2022/04/01 缺省:0</p>
+ * @method integer getLoopEndDate() 获取<p>循环结束日期 2022/04/05 缺省:0</p>
+ * @method void setLoopEndDate(integer $LoopEndDate) 设置<p>循环结束日期 2022/04/05 缺省:0</p>
+ * @method string getShieldPolicyId() 获取<p>需要屏蔽的策略ID</p>
+ * @method void setShieldPolicyId(string $ShieldPolicyId) 设置<p>需要屏蔽的策略ID</p>
+ * @method array getShieldAlarmLevel() 获取<p>需要屏蔽的告警等级，取值范围Warn,Remind,Serious</p>
+ * @method void setShieldAlarmLevel(array $ShieldAlarmLevel) 设置<p>需要屏蔽的告警等级，取值范围Warn,Remind,Serious</p>
+ * @method string getVersionTag() 获取<p>屏蔽类型，为OBJNAME是实例屏蔽，为POLICY是策略屏蔽</p>
+ * @method void setVersionTag(string $VersionTag) 设置<p>屏蔽类型，为OBJNAME是实例屏蔽，为POLICY是策略屏蔽</p>
+ * @method string getDescription() 获取<p>屏蔽规则的描述</p>
+ * @method void setDescription(string $Description) 设置<p>屏蔽规则的描述</p>
+ * @method float getTimeZone() 获取<p>时区，东八区+8，西八区减8，以此类推</p>
+ * @method void setTimeZone(float $TimeZone) 设置<p>时区，东八区+8，西八区减8，以此类推</p>
+ * @method array getShieldEvent() 获取<p>屏蔽事件 为空则为全部指标</p>
+ * @method void setShieldEvent(array $ShieldEvent) 设置<p>屏蔽事件 为空则为全部指标</p>
+ * @method integer getShieldMetricFlag() 获取<p>是否对指标屏蔽 1=是 0=否</p>
+ * @method void setShieldMetricFlag(integer $ShieldMetricFlag) 设置<p>是否对指标屏蔽 1=是 0=否</p>
+ * @method integer getShieldEventFlag() 获取<p>是否对事件屏蔽 1=是 0=否</p>
+ * @method void setShieldEventFlag(integer $ShieldEventFlag) 设置<p>是否对事件屏蔽 1=是 0=否</p>
  */
 class CreateAlarmShieldRequest extends AbstractModel
 {
     /**
-     * @var string 模块名，这里填“monitor”
+     * @var string <p>模块名，这里填“monitor”</p>
      */
     public $Module;
 
     /**
-     * @var string 屏蔽策略名称
+     * @var string <p>屏蔽策略名称</p>
      */
     public $Name;
 
     /**
-     * @var string 监控类型
+     * @var string <p>监控类型</p>
      */
     public $MonitorType;
 
     /**
-     * @var string 命名空间即策略类型
+     * @var string <p>命名空间即策略类型</p>
      */
     public $NameSpace;
 
     /**
-     * @var string 屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽
+     * @var string <p>屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽</p>
      */
     public $ShieldTimeType;
 
     /**
-     * @var array 屏蔽对象
+     * @var array <p>屏蔽对象</p>
      */
     public $ShieldObject;
 
     /**
-     * @var array 屏蔽指标 为空则为全部指标
+     * @var array <p>屏蔽指标 为空则为全部指标</p>
      */
     public $ShieldMetric;
 
     /**
-     * @var integer 开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0
+     * @var integer <p>开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0
+     * @var integer <p>结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 循环开始日期 2022/04/01 缺省:0
+     * @var integer <p>循环开始日期 2022/04/01 缺省:0</p>
      */
     public $LoopStartDate;
 
     /**
-     * @var integer 循环结束日期 2022/04/05 缺省:0
+     * @var integer <p>循环结束日期 2022/04/05 缺省:0</p>
      */
     public $LoopEndDate;
 
     /**
-     * @var string 需要屏蔽的策略ID
+     * @var string <p>需要屏蔽的策略ID</p>
      */
     public $ShieldPolicyId;
 
     /**
-     * @var array 需要屏蔽的告警等级，取值范围Warn,Remind,Serious
+     * @var array <p>需要屏蔽的告警等级，取值范围Warn,Remind,Serious</p>
      */
     public $ShieldAlarmLevel;
 
     /**
-     * @var string 屏蔽类型，为OBJNAME是老版本实例名屏蔽，为POLICY是新版本维度匹配
+     * @var string <p>屏蔽类型，为OBJNAME是实例屏蔽，为POLICY是策略屏蔽</p>
      */
     public $VersionTag;
 
     /**
-     * @var string 屏蔽规则的描述
+     * @var string <p>屏蔽规则的描述</p>
      */
     public $Description;
 
     /**
-     * @var float  时区，东八区+8，西八区减8，以此类推
-
+     * @var float <p>时区，东八区+8，西八区减8，以此类推</p>
      */
     public $TimeZone;
 
     /**
-     * @var array 屏蔽事件 为空则为全部指标
+     * @var array <p>屏蔽事件 为空则为全部指标</p>
      */
     public $ShieldEvent;
 
     /**
-     * @var integer 是否对指标屏蔽 1=是 0=否
+     * @var integer <p>是否对指标屏蔽 1=是 0=否</p>
      */
     public $ShieldMetricFlag;
 
     /**
-     * @var integer 是否对事件屏蔽 1=是 0=否
+     * @var integer <p>是否对事件屏蔽 1=是 0=否</p>
      */
     public $ShieldEventFlag;
 
     /**
-     * @param string $Module 模块名，这里填“monitor”
-     * @param string $Name 屏蔽策略名称
-     * @param string $MonitorType 监控类型
-     * @param string $NameSpace 命名空间即策略类型
-     * @param string $ShieldTimeType 屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽
-     * @param array $ShieldObject 屏蔽对象
-     * @param array $ShieldMetric 屏蔽指标 为空则为全部指标
-     * @param integer $StartTime 开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0
-     * @param integer $EndTime 结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0
-     * @param integer $LoopStartDate 循环开始日期 2022/04/01 缺省:0
-     * @param integer $LoopEndDate 循环结束日期 2022/04/05 缺省:0
-     * @param string $ShieldPolicyId 需要屏蔽的策略ID
-     * @param array $ShieldAlarmLevel 需要屏蔽的告警等级，取值范围Warn,Remind,Serious
-     * @param string $VersionTag 屏蔽类型，为OBJNAME是老版本实例名屏蔽，为POLICY是新版本维度匹配
-     * @param string $Description 屏蔽规则的描述
-     * @param float $TimeZone  时区，东八区+8，西八区减8，以此类推
-
-     * @param array $ShieldEvent 屏蔽事件 为空则为全部指标
-     * @param integer $ShieldMetricFlag 是否对指标屏蔽 1=是 0=否
-     * @param integer $ShieldEventFlag 是否对事件屏蔽 1=是 0=否
+     * @param string $Module <p>模块名，这里填“monitor”</p>
+     * @param string $Name <p>屏蔽策略名称</p>
+     * @param string $MonitorType <p>监控类型</p>
+     * @param string $NameSpace <p>命名空间即策略类型</p>
+     * @param string $ShieldTimeType <p>屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽</p>
+     * @param array $ShieldObject <p>屏蔽对象</p>
+     * @param array $ShieldMetric <p>屏蔽指标 为空则为全部指标</p>
+     * @param integer $StartTime <p>开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0</p>
+     * @param integer $EndTime <p>结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0</p>
+     * @param integer $LoopStartDate <p>循环开始日期 2022/04/01 缺省:0</p>
+     * @param integer $LoopEndDate <p>循环结束日期 2022/04/05 缺省:0</p>
+     * @param string $ShieldPolicyId <p>需要屏蔽的策略ID</p>
+     * @param array $ShieldAlarmLevel <p>需要屏蔽的告警等级，取值范围Warn,Remind,Serious</p>
+     * @param string $VersionTag <p>屏蔽类型，为OBJNAME是实例屏蔽，为POLICY是策略屏蔽</p>
+     * @param string $Description <p>屏蔽规则的描述</p>
+     * @param float $TimeZone <p>时区，东八区+8，西八区减8，以此类推</p>
+     * @param array $ShieldEvent <p>屏蔽事件 为空则为全部指标</p>
+     * @param integer $ShieldMetricFlag <p>是否对指标屏蔽 1=是 0=否</p>
+     * @param integer $ShieldEventFlag <p>是否对事件屏蔽 1=是 0=否</p>
      */
     function __construct()
     {

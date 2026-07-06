@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置<p>Memory 实例当前运行状态。</p><ul><li>1：运行中。</li><li>2：创建中。</li><li>3：销毁中。</li><li>4：已销毁。</li><li>5：隔离中。</li><li>6：已隔离。</li><li>7：恢复中。</li></ul>
  * @method integer getPayMode() 获取<p>Memory 实例计费模式。</p><ul><li>-1：免费体验。</li><li>0：包年包月。</li><li>1：按量计费。</li></ul>
  * @method void setPayMode(integer $PayMode) 设置<p>Memory 实例计费模式。</p><ul><li>-1：免费体验。</li><li>0：包年包月。</li><li>1：按量计费。</li></ul>
+ * @method integer getAutoRenew() 获取<p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+ * @method void setAutoRenew(integer $AutoRenew) 设置<p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
  * @method string getVersion() 获取<p>Memory 版本信息：v1。</p>
  * @method void setVersion(string $Version) 设置<p>Memory 版本信息：v1。</p>
  * @method integer getMemoryUsage() 获取<p>Memory 当前已写入的记忆条数。</p>
@@ -102,6 +104,11 @@ class DescribeMemoryPlusSpaceResponse extends AbstractModel
      * @var integer <p>Memory 实例计费模式。</p><ul><li>-1：免费体验。</li><li>0：包年包月。</li><li>1：按量计费。</li></ul>
      */
     public $PayMode;
+
+    /**
+     * @var integer <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+     */
+    public $AutoRenew;
 
     /**
      * @var string <p>Memory 版本信息：v1。</p>
@@ -172,6 +179,7 @@ class DescribeMemoryPlusSpaceResponse extends AbstractModel
      * @param array $ResourceTags <p>Memory 实例的标签信息。</p>
      * @param integer $Status <p>Memory 实例当前运行状态。</p><ul><li>1：运行中。</li><li>2：创建中。</li><li>3：销毁中。</li><li>4：已销毁。</li><li>5：隔离中。</li><li>6：已隔离。</li><li>7：恢复中。</li></ul>
      * @param integer $PayMode <p>Memory 实例计费模式。</p><ul><li>-1：免费体验。</li><li>0：包年包月。</li><li>1：按量计费。</li></ul>
+     * @param integer $AutoRenew <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
      * @param string $Version <p>Memory 版本信息：v1。</p>
      * @param integer $MemoryUsage <p>Memory 当前已写入的记忆条数。</p>
      * @param integer $MemoryLimit <p>Memory 实例记忆条数配额上限。</p>
@@ -233,6 +241,10 @@ class DescribeMemoryPlusSpaceResponse extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
         }
 
         if (array_key_exists("Version",$param) and $param["Version"] !== null) {

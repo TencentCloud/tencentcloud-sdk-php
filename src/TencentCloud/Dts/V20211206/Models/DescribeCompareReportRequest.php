@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCompareReport请求参数结构体
  *
- * @method string getJobId() 获取迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
- * @method void setJobId(string $JobId) 设置迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
- * @method string getCompareTaskId() 获取校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
- * @method void setCompareTaskId(string $CompareTaskId) 设置校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
- * @method integer getDifferenceLimit() 获取校验不一致结果的 limit
- * @method void setDifferenceLimit(integer $DifferenceLimit) 设置校验不一致结果的 limit
- * @method integer getDifferenceOffset() 获取不一致的 Offset
- * @method void setDifferenceOffset(integer $DifferenceOffset) 设置不一致的 Offset
- * @method string getDifferenceDB() 获取搜索条件，不一致的库名
- * @method void setDifferenceDB(string $DifferenceDB) 设置搜索条件，不一致的库名
- * @method string getDifferenceTable() 获取搜索条件，不一致的表名
- * @method void setDifferenceTable(string $DifferenceTable) 设置搜索条件，不一致的表名
- * @method integer getSkippedLimit() 获取未校验的 Limit
- * @method void setSkippedLimit(integer $SkippedLimit) 设置未校验的 Limit
- * @method integer getSkippedOffset() 获取未校验的 Offset
- * @method void setSkippedOffset(integer $SkippedOffset) 设置未校验的 Offset
- * @method string getSkippedDB() 获取搜索条件，未校验的库名
- * @method void setSkippedDB(string $SkippedDB) 设置搜索条件，未校验的库名
- * @method string getSkippedTable() 获取搜索条件，未校验的表名
- * @method void setSkippedTable(string $SkippedTable) 设置搜索条件，未校验的表名
+ * @method string getJobId() 获取<p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method void setJobId(string $JobId) 设置<p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method string getCompareTaskId() 获取<p>校验任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method void setCompareTaskId(string $CompareTaskId) 设置<p>校验任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method integer getDifferenceLimit() 获取<p>校验不一致结果的 limit</p>
+ * @method void setDifferenceLimit(integer $DifferenceLimit) 设置<p>校验不一致结果的 limit</p>
+ * @method integer getDifferenceOffset() 获取<p>不一致的 Offset</p>
+ * @method void setDifferenceOffset(integer $DifferenceOffset) 设置<p>不一致的 Offset</p>
+ * @method string getDifferenceDB() 获取<p>搜索条件，不一致的库名</p>
+ * @method void setDifferenceDB(string $DifferenceDB) 设置<p>搜索条件，不一致的库名</p>
+ * @method string getDifferenceTable() 获取<p>搜索条件，不一致的表名</p>
+ * @method void setDifferenceTable(string $DifferenceTable) 设置<p>搜索条件，不一致的表名</p>
+ * @method integer getSkippedLimit() 获取<p>未校验的 Limit</p>
+ * @method void setSkippedLimit(integer $SkippedLimit) 设置<p>未校验的 Limit</p>
+ * @method integer getSkippedOffset() 获取<p>未校验的 Offset</p>
+ * @method void setSkippedOffset(integer $SkippedOffset) 设置<p>未校验的 Offset</p>
+ * @method string getSkippedDB() 获取<p>搜索条件，未校验的库名</p>
+ * @method void setSkippedDB(string $SkippedDB) 设置<p>搜索条件，未校验的库名</p>
+ * @method string getSkippedTable() 获取<p>搜索条件，未校验的表名</p>
+ * @method void setSkippedTable(string $SkippedTable) 设置<p>搜索条件，未校验的表名</p>
  */
 class DescribeCompareReportRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * @var string <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public $JobId;
 
     /**
-     * @var string 校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * @var string <p>校验任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public $CompareTaskId;
 
     /**
-     * @var integer 校验不一致结果的 limit
+     * @var integer <p>校验不一致结果的 limit</p>
      */
     public $DifferenceLimit;
 
     /**
-     * @var integer 不一致的 Offset
+     * @var integer <p>不一致的 Offset</p>
      */
     public $DifferenceOffset;
 
     /**
-     * @var string 搜索条件，不一致的库名
+     * @var string <p>搜索条件，不一致的库名</p>
      */
     public $DifferenceDB;
 
     /**
-     * @var string 搜索条件，不一致的表名
+     * @var string <p>搜索条件，不一致的表名</p>
      */
     public $DifferenceTable;
 
     /**
-     * @var integer 未校验的 Limit
+     * @var integer <p>未校验的 Limit</p>
      */
     public $SkippedLimit;
 
     /**
-     * @var integer 未校验的 Offset
+     * @var integer <p>未校验的 Offset</p>
      */
     public $SkippedOffset;
 
     /**
-     * @var string 搜索条件，未校验的库名
+     * @var string <p>搜索条件，未校验的库名</p>
      */
     public $SkippedDB;
 
     /**
-     * @var string 搜索条件，未校验的表名
+     * @var string <p>搜索条件，未校验的表名</p>
      */
     public $SkippedTable;
 
     /**
-     * @param string $JobId 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-     * @param string $CompareTaskId 校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-     * @param integer $DifferenceLimit 校验不一致结果的 limit
-     * @param integer $DifferenceOffset 不一致的 Offset
-     * @param string $DifferenceDB 搜索条件，不一致的库名
-     * @param string $DifferenceTable 搜索条件，不一致的表名
-     * @param integer $SkippedLimit 未校验的 Limit
-     * @param integer $SkippedOffset 未校验的 Offset
-     * @param string $SkippedDB 搜索条件，未校验的库名
-     * @param string $SkippedTable 搜索条件，未校验的表名
+     * @param string $JobId <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+     * @param string $CompareTaskId <p>校验任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+     * @param integer $DifferenceLimit <p>校验不一致结果的 limit</p>
+     * @param integer $DifferenceOffset <p>不一致的 Offset</p>
+     * @param string $DifferenceDB <p>搜索条件，不一致的库名</p>
+     * @param string $DifferenceTable <p>搜索条件，不一致的表名</p>
+     * @param integer $SkippedLimit <p>未校验的 Limit</p>
+     * @param integer $SkippedOffset <p>未校验的 Offset</p>
+     * @param string $SkippedDB <p>搜索条件，未校验的库名</p>
+     * @param string $SkippedTable <p>搜索条件，未校验的表名</p>
      */
     function __construct()
     {

@@ -20,86 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 外挂字幕。
  *
- * @method string getType() 获取插入形式，可选值：
-<li>subtitle-stream：插入字幕轨道</li>
-<li>close-caption-708：CEA-708字幕编码到SEI帧</li>
-<li>close-caption-608：CEA-608字幕编码到SEI帧</li>
+ * @method string getType() 获取<p>插入形式，可选值：</p><li>subtitle-stream：插入字幕轨道</li><li>close-caption-708：CEA-708字幕编码到SEI帧</li><li>close-caption-608：CEA-608字幕编码到SEI帧</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置插入形式，可选值：
-<li>subtitle-stream：插入字幕轨道</li>
-<li>close-caption-708：CEA-708字幕编码到SEI帧</li>
-<li>close-caption-608：CEA-608字幕编码到SEI帧</li>
+ * @method void setType(string $Type) 设置<p>插入形式，可选值：</p><li>subtitle-stream：插入字幕轨道</li><li>close-caption-708：CEA-708字幕编码到SEI帧</li><li>close-caption-608：CEA-608字幕编码到SEI帧</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaInputInfo getSubtitle() 获取字幕文件。
+ * @method MediaInputInfo getSubtitle() 获取<p>字幕文件。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubtitle(MediaInputInfo $Subtitle) 设置字幕文件。
+ * @method void setSubtitle(MediaInputInfo $Subtitle) 设置<p>字幕文件。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubtitleName() 获取字幕名称	。
-注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
+ * @method string getSubtitleName() 获取<p>字幕名称    。<br>注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubtitleName(string $SubtitleName) 设置字幕名称	。
-注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
+ * @method void setSubtitleName(string $SubtitleName) 设置<p>字幕名称    。<br>注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutputFormat() 获取字幕输出格式。取值{"WebVTT","TTML"}。
-默认值："WebVTT"
- * @method void setOutputFormat(string $OutputFormat) 设置字幕输出格式。取值{"WebVTT","TTML"}。
-默认值："WebVTT"
- * @method boolean getDefaultTrack() 获取默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
-默认值：false
- * @method void setDefaultTrack(boolean $DefaultTrack) 设置默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
-默认值：false
+ * @method string getSubtitleLanguage() 获取<p>字幕语言，比如：eng</p>
+ * @method void setSubtitleLanguage(string $SubtitleLanguage) 设置<p>字幕语言，比如：eng</p>
+ * @method string getOutputFormat() 获取<p>字幕输出格式。取值{&quot;WebVTT&quot;,&quot;TTML&quot;}。<br>默认值：&quot;WebVTT&quot;</p>
+ * @method void setOutputFormat(string $OutputFormat) 设置<p>字幕输出格式。取值{&quot;WebVTT&quot;,&quot;TTML&quot;}。<br>默认值：&quot;WebVTT&quot;</p>
+ * @method boolean getDefaultTrack() 获取<p>默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。<br>默认值：false</p>
+ * @method void setDefaultTrack(boolean $DefaultTrack) 设置<p>默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。<br>默认值：false</p>
  */
 class AddOnSubtitle extends AbstractModel
 {
     /**
-     * @var string 插入形式，可选值：
-<li>subtitle-stream：插入字幕轨道</li>
-<li>close-caption-708：CEA-708字幕编码到SEI帧</li>
-<li>close-caption-608：CEA-608字幕编码到SEI帧</li>
+     * @var string <p>插入形式，可选值：</p><li>subtitle-stream：插入字幕轨道</li><li>close-caption-708：CEA-708字幕编码到SEI帧</li><li>close-caption-608：CEA-608字幕编码到SEI帧</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var MediaInputInfo 字幕文件。
+     * @var MediaInputInfo <p>字幕文件。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Subtitle;
 
     /**
-     * @var string 字幕名称	。
-注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
+     * @var string <p>字幕名称    。<br>注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubtitleName;
 
     /**
-     * @var string 字幕输出格式。取值{"WebVTT","TTML"}。
-默认值："WebVTT"
+     * @var string <p>字幕语言，比如：eng</p>
+     */
+    public $SubtitleLanguage;
+
+    /**
+     * @var string <p>字幕输出格式。取值{&quot;WebVTT&quot;,&quot;TTML&quot;}。<br>默认值：&quot;WebVTT&quot;</p>
      */
     public $OutputFormat;
 
     /**
-     * @var boolean 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
-默认值：false
+     * @var boolean <p>默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。<br>默认值：false</p>
      */
     public $DefaultTrack;
 
     /**
-     * @param string $Type 插入形式，可选值：
-<li>subtitle-stream：插入字幕轨道</li>
-<li>close-caption-708：CEA-708字幕编码到SEI帧</li>
-<li>close-caption-608：CEA-608字幕编码到SEI帧</li>
+     * @param string $Type <p>插入形式，可选值：</p><li>subtitle-stream：插入字幕轨道</li><li>close-caption-708：CEA-708字幕编码到SEI帧</li><li>close-caption-608：CEA-608字幕编码到SEI帧</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaInputInfo $Subtitle 字幕文件。
+     * @param MediaInputInfo $Subtitle <p>字幕文件。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubtitleName 字幕名称	。
-注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
+     * @param string $SubtitleName <p>字幕名称    。<br>注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutputFormat 字幕输出格式。取值{"WebVTT","TTML"}。
-默认值："WebVTT"
-     * @param boolean $DefaultTrack 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
-默认值：false
+     * @param string $SubtitleLanguage <p>字幕语言，比如：eng</p>
+     * @param string $OutputFormat <p>字幕输出格式。取值{&quot;WebVTT&quot;,&quot;TTML&quot;}。<br>默认值：&quot;WebVTT&quot;</p>
+     * @param boolean $DefaultTrack <p>默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。<br>默认值：false</p>
      */
     function __construct()
     {
@@ -125,6 +109,10 @@ class AddOnSubtitle extends AbstractModel
 
         if (array_key_exists("SubtitleName",$param) and $param["SubtitleName"] !== null) {
             $this->SubtitleName = $param["SubtitleName"];
+        }
+
+        if (array_key_exists("SubtitleLanguage",$param) and $param["SubtitleLanguage"] !== null) {
+            $this->SubtitleLanguage = $param["SubtitleLanguage"];
         }
 
         if (array_key_exists("OutputFormat",$param) and $param["OutputFormat"] !== null) {

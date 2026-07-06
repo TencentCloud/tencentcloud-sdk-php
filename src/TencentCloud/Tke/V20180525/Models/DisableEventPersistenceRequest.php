@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableEventPersistence请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method boolean getDeleteLogSetAndTopic() 获取取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
- * @method void setDeleteLogSetAndTopic(boolean $DeleteLogSetAndTopic) 设置取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method boolean getDeleteLogSetAndTopic() 获取<p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
+ * @method void setDeleteLogSetAndTopic(boolean $DeleteLogSetAndTopic) 设置<p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
+ * @method string getClusterType() 获取<p>集群类型 tke/eks</p><p>默认值：tke</p>
+ * @method void setClusterType(string $ClusterType) 设置<p>集群类型 tke/eks</p><p>默认值：tke</p>
  */
 class DisableEventPersistenceRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var boolean 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     * @var boolean <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
      */
     public $DeleteLogSetAndTopic;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param boolean $DeleteLogSetAndTopic 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     * @var string <p>集群类型 tke/eks</p><p>默认值：tke</p>
+     */
+    public $ClusterType;
+
+    /**
+     * @param string $ClusterId <p>集群ID</p>
+     * @param boolean $DeleteLogSetAndTopic <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
+     * @param string $ClusterType <p>集群类型 tke/eks</p><p>默认值：tke</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DisableEventPersistenceRequest extends AbstractModel
 
         if (array_key_exists("DeleteLogSetAndTopic",$param) and $param["DeleteLogSetAndTopic"] !== null) {
             $this->DeleteLogSetAndTopic = $param["DeleteLogSetAndTopic"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

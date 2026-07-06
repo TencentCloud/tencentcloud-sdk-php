@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * dspm资产数据识别详情
  *
- * @method integer getStatus() 获取识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
- * @method void setStatus(integer $Status) 设置识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
- * @method string getStatusInfo() 获取识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
- * @method void setStatusInfo(string $StatusInfo) 设置识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
- * @method float getProgress() 获取识别进度
- * @method void setProgress(float $Progress) 设置识别进度
- * @method string getLatestScanTime() 获取最近扫描时间
- * @method void setLatestScanTime(string $LatestScanTime) 设置最近扫描时间
- * @method string getErrorInfo() 获取识别失败信息
- * @method void setErrorInfo(string $ErrorInfo) 设置识别失败信息
- * @method integer getDbCount() 获取数据库数量
- * @method void setDbCount(integer $DbCount) 设置数据库数量
- * @method array getCategoryIds() 获取分类id集合
- * @method void setCategoryIds(array $CategoryIds) 设置分类id集合
- * @method array getCategoryNames() 获取分类名称集合
- * @method void setCategoryNames(array $CategoryNames) 设置分类名称集合
- * @method DspmSensitiveScanTaskConfig getTaskConfig() 获取扫描任务配置
- * @method void setTaskConfig(DspmSensitiveScanTaskConfig $TaskConfig) 设置扫描任务配置
- * @method array getCategoryDetails() 获取识别结果分类详情
- * @method void setCategoryDetails(array $CategoryDetails) 设置识别结果分类详情
+ * @method integer getStatus() 获取<p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
+ * @method void setStatus(integer $Status) 设置<p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
+ * @method string getStatusInfo() 获取<p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
+ * @method void setStatusInfo(string $StatusInfo) 设置<p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
+ * @method float getProgress() 获取<p>识别进度</p>
+ * @method void setProgress(float $Progress) 设置<p>识别进度</p>
+ * @method string getLatestScanTime() 获取<p>最近扫描时间</p>
+ * @method void setLatestScanTime(string $LatestScanTime) 设置<p>最近扫描时间</p>
+ * @method string getErrorInfo() 获取<p>识别失败信息</p>
+ * @method void setErrorInfo(string $ErrorInfo) 设置<p>识别失败信息</p>
+ * @method integer getDbCount() 获取<p>数据库数量</p>
+ * @method void setDbCount(integer $DbCount) 设置<p>数据库数量</p>
+ * @method array getCategoryIds() 获取<p>分类id集合</p>
+ * @method void setCategoryIds(array $CategoryIds) 设置<p>分类id集合</p>
+ * @method array getCategoryNames() 获取<p>分类名称集合</p>
+ * @method void setCategoryNames(array $CategoryNames) 设置<p>分类名称集合</p>
+ * @method DspmSensitiveScanTaskConfig getTaskConfig() 获取<p>扫描任务配置</p>
+ * @method void setTaskConfig(DspmSensitiveScanTaskConfig $TaskConfig) 设置<p>扫描任务配置</p>
+ * @method array getCategoryDetails() 获取<p>识别结果分类详情</p>
+ * @method void setCategoryDetails(array $CategoryDetails) 设置<p>识别结果分类详情</p>
+ * @method integer getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>任务ID</p>
  */
 class DspmAssetDataScanDetail extends AbstractModel
 {
     /**
-     * @var integer 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
+     * @var integer <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
      */
     public $Status;
 
     /**
-     * @var string 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
+     * @var string <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
      */
     public $StatusInfo;
 
     /**
-     * @var float 识别进度
+     * @var float <p>识别进度</p>
      */
     public $Progress;
 
     /**
-     * @var string 最近扫描时间
+     * @var string <p>最近扫描时间</p>
      */
     public $LatestScanTime;
 
     /**
-     * @var string 识别失败信息
+     * @var string <p>识别失败信息</p>
      */
     public $ErrorInfo;
 
     /**
-     * @var integer 数据库数量
+     * @var integer <p>数据库数量</p>
      */
     public $DbCount;
 
     /**
-     * @var array 分类id集合
+     * @var array <p>分类id集合</p>
      */
     public $CategoryIds;
 
     /**
-     * @var array 分类名称集合
+     * @var array <p>分类名称集合</p>
      */
     public $CategoryNames;
 
     /**
-     * @var DspmSensitiveScanTaskConfig 扫描任务配置
+     * @var DspmSensitiveScanTaskConfig <p>扫描任务配置</p>
      */
     public $TaskConfig;
 
     /**
-     * @var array 识别结果分类详情
+     * @var array <p>识别结果分类详情</p>
      */
     public $CategoryDetails;
 
     /**
-     * @param integer $Status 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
-     * @param string $StatusInfo 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
-     * @param float $Progress 识别进度
-     * @param string $LatestScanTime 最近扫描时间
-     * @param string $ErrorInfo 识别失败信息
-     * @param integer $DbCount 数据库数量
-     * @param array $CategoryIds 分类id集合
-     * @param array $CategoryNames 分类名称集合
-     * @param DspmSensitiveScanTaskConfig $TaskConfig 扫描任务配置
-     * @param array $CategoryDetails 识别结果分类详情
+     * @var integer <p>任务ID</p>
+     */
+    public $TaskId;
+
+    /**
+     * @param integer $Status <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
+     * @param string $StatusInfo <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
+     * @param float $Progress <p>识别进度</p>
+     * @param string $LatestScanTime <p>最近扫描时间</p>
+     * @param string $ErrorInfo <p>识别失败信息</p>
+     * @param integer $DbCount <p>数据库数量</p>
+     * @param array $CategoryIds <p>分类id集合</p>
+     * @param array $CategoryNames <p>分类名称集合</p>
+     * @param DspmSensitiveScanTaskConfig $TaskConfig <p>扫描任务配置</p>
+     * @param array $CategoryDetails <p>识别结果分类详情</p>
+     * @param integer $TaskId <p>任务ID</p>
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class DspmAssetDataScanDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CategoryDetails, $obj);
             }
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

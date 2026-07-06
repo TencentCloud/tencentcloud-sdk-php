@@ -20,50 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RollbackInstanceRefresh请求参数结构体
  *
- * @method string getAutoScalingGroupId() 获取伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
-<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
-<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
- * @method RefreshSettings getRefreshSettings() 获取刷新设置。
- * @method void setRefreshSettings(RefreshSettings $RefreshSettings) 设置刷新设置。
- * @method string getOriginRefreshActivityId() 获取原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
- * @method void setOriginRefreshActivityId(string $OriginRefreshActivityId) 设置原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
- * @method string getRefreshMode() 获取刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
- * @method void setRefreshMode(string $RefreshMode) 设置刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+ * @method string getAutoScalingGroupId() 获取<p>伸缩组ID。可以通过以下方式获取可用的伸缩组ID： </p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li><li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置<p>伸缩组ID。可以通过以下方式获取可用的伸缩组ID： </p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li><li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+ * @method RefreshSettings getRefreshSettings() 获取<p>刷新设置。</p>
+ * @method void setRefreshSettings(RefreshSettings $RefreshSettings) 设置<p>刷新设置。</p>
+ * @method string getOriginRefreshActivityId() 获取<p>原始刷新活动 ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/99175">DescribeRefreshActivities</a> ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。</p>
+ * @method void setOriginRefreshActivityId(string $OriginRefreshActivityId) 设置<p>原始刷新活动 ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/99175">DescribeRefreshActivities</a> ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。</p>
+ * @method string getRefreshMode() 获取<p>刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。</p>
+ * @method void setRefreshMode(string $RefreshMode) 设置<p>刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。</p>
  */
 class RollbackInstanceRefreshRequest extends AbstractModel
 {
     /**
-     * @var string 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
-<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+     * @var string <p>伸缩组ID。可以通过以下方式获取可用的伸缩组ID： </p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li><li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public $AutoScalingGroupId;
 
     /**
-     * @var RefreshSettings 刷新设置。
+     * @var RefreshSettings <p>刷新设置。</p>
      */
     public $RefreshSettings;
 
     /**
-     * @var string 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
+     * @var string <p>原始刷新活动 ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/99175">DescribeRefreshActivities</a> ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。</p>
      */
     public $OriginRefreshActivityId;
 
     /**
-     * @var string 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+     * @var string <p>刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。</p>
      */
     public $RefreshMode;
 
     /**
-     * @param string $AutoScalingGroupId 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
-<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
-     * @param RefreshSettings $RefreshSettings 刷新设置。
-     * @param string $OriginRefreshActivityId 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
-     * @param string $RefreshMode 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+     * @param string $AutoScalingGroupId <p>伸缩组ID。可以通过以下方式获取可用的伸缩组ID： </p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li><li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+     * @param RefreshSettings $RefreshSettings <p>刷新设置。</p>
+     * @param string $OriginRefreshActivityId <p>原始刷新活动 ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/99175">DescribeRefreshActivities</a> ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。</p>
+     * @param string $RefreshMode <p>刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。</p>
      */
     function __construct()
     {

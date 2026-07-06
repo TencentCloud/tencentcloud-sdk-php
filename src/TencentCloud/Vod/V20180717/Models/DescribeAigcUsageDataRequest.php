@@ -24,14 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置<p>起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#52">ISO 日期格式</a>。</p>
  * @method string getEndTime() 获取<p>结束日期，需大于等于起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#52">ISO 日期格式</a>。</p>
  * @method void setEndTime(string $EndTime) 设置<p>结束日期，需大于等于起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#52">ISO 日期格式</a>。</p>
- * @method string getAigcType() 获取<p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul>
- * @method void setAigcType(string $AigcType) 设置<p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul>
+ * @method string getAigcType() 获取<p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li><li>TextDetail： 文本详细记录</li></ul>
+ * @method void setAigcType(string $AigcType) 设置<p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li><li>TextDetail： 文本详细记录</li></ul>
  * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
  * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
  * @method string getAPIKey() 获取<p>API Key</p>
  * @method void setAPIKey(string $APIKey) 设置<p>API Key</p>
  * @method array getAPIKeys() 获取<p>API Key</p>
  * @method void setAPIKeys(array $APIKeys) 设置<p>API Key</p>
+ * @method string getScrollToken() 获取<p>查询游标</p>
+ * @method void setScrollToken(string $ScrollToken) 设置<p>查询游标</p>
+ * @method integer getPageSize() 获取<p>每页大小，最大 200，超出会被截断为 200</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页大小，最大 200，超出会被截断为 200</p>
+ * @method string getReqId() 获取<p>生文RequestId，当AigcType为TextDetail时有效。</p>
+ * @method void setReqId(string $ReqId) 设置<p>生文RequestId，当AigcType为TextDetail时有效。</p>
  */
 class DescribeAigcUsageDataRequest extends AbstractModel
 {
@@ -46,7 +52,7 @@ class DescribeAigcUsageDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul>
+     * @var string <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li><li>TextDetail： 文本详细记录</li></ul>
      */
     public $AigcType;
 
@@ -66,12 +72,30 @@ class DescribeAigcUsageDataRequest extends AbstractModel
     public $APIKeys;
 
     /**
+     * @var string <p>查询游标</p>
+     */
+    public $ScrollToken;
+
+    /**
+     * @var integer <p>每页大小，最大 200，超出会被截断为 200</p>
+     */
+    public $PageSize;
+
+    /**
+     * @var string <p>生文RequestId，当AigcType为TextDetail时有效。</p>
+     */
+    public $ReqId;
+
+    /**
      * @param string $StartTime <p>起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#52">ISO 日期格式</a>。</p>
      * @param string $EndTime <p>结束日期，需大于等于起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#52">ISO 日期格式</a>。</p>
-     * @param string $AigcType <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul>
+     * @param string $AigcType <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li><li>TextDetail： 文本详细记录</li></ul>
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      * @param string $APIKey <p>API Key</p>
      * @param array $APIKeys <p>API Key</p>
+     * @param string $ScrollToken <p>查询游标</p>
+     * @param integer $PageSize <p>每页大小，最大 200，超出会被截断为 200</p>
+     * @param string $ReqId <p>生文RequestId，当AigcType为TextDetail时有效。</p>
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class DescribeAigcUsageDataRequest extends AbstractModel
 
         if (array_key_exists("APIKeys",$param) and $param["APIKeys"] !== null) {
             $this->APIKeys = $param["APIKeys"];
+        }
+
+        if (array_key_exists("ScrollToken",$param) and $param["ScrollToken"] !== null) {
+            $this->ScrollToken = $param["ScrollToken"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("ReqId",$param) and $param["ReqId"] !== null) {
+            $this->ReqId = $param["ReqId"];
         }
     }
 }

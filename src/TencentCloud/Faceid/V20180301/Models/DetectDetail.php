@@ -20,213 +20,177 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 活体一比一详情
  *
- * @method string getReqTime() 获取请求时间戳。
+ * @method string getReqTime() 获取<p>请求时间戳。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReqTime(string $ReqTime) 设置请求时间戳。
+ * @method void setReqTime(string $ReqTime) 设置<p>请求时间戳。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSeq() 获取本次活体一比一请求的唯一标记。
+ * @method string getSeq() 获取<p>本次活体一比一请求的唯一标记。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSeq(string $Seq) 设置本次活体一比一请求的唯一标记。
+ * @method void setSeq(string $Seq) 设置<p>本次活体一比一请求的唯一标记。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdcard() 获取参与本次活体一比一的身份证号。
+ * @method string getIdcard() 获取<p>参与本次活体一比一的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdcard(string $Idcard) 设置参与本次活体一比一的身份证号。
+ * @method void setIdcard(string $Idcard) 设置<p>参与本次活体一比一的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取参与本次活体一比一的姓名。
+ * @method string getName() 获取<p>参与本次活体一比一的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置参与本次活体一比一的姓名。
+ * @method void setName(string $Name) 设置<p>参与本次活体一比一的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSim() 获取本次活体一比一的相似度。
+ * @method string getSim() 获取<p>本次活体一比一的相似度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSim(string $Sim) 设置本次活体一比一的相似度。
+ * @method void setSim(string $Sim) 设置<p>本次活体一比一的相似度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsNeedCharge() 获取本次活体一比一是否收费
+ * @method boolean getIsNeedCharge() 获取<p>本次活体一比一是否收费</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsNeedCharge(boolean $IsNeedCharge) 设置本次活体一比一是否收费
+ * @method void setIsNeedCharge(boolean $IsNeedCharge) 设置<p>本次活体一比一是否收费</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getErrcode() 获取本次活体一比一最终结果。0为成功
+ * @method integer getErrcode() 获取<p>本次活体一比一最终结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrcode(integer $Errcode) 设置本次活体一比一最终结果。0为成功
+ * @method void setErrcode(integer $Errcode) 设置<p>本次活体一比一最终结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrmsg() 获取本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
+ * @method string getErrmsg() 获取<p>本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrmsg(string $Errmsg) 设置本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
+ * @method void setErrmsg(string $Errmsg) 设置<p>本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLivestatus() 获取本次活体结果。0为成功
+ * @method integer getLivestatus() 获取<p>本次活体结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLivestatus(integer $Livestatus) 设置本次活体结果。0为成功
+ * @method void setLivestatus(integer $Livestatus) 设置<p>本次活体结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLivemsg() 获取本次活体结果描述。（仅描述用，文案更新时不会通知。）
+ * @method string getLivemsg() 获取<p>本次活体结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLivemsg(string $Livemsg) 设置本次活体结果描述。（仅描述用，文案更新时不会通知。）
+ * @method void setLivemsg(string $Livemsg) 设置<p>本次活体结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getComparestatus() 获取本次一比一结果。0为成功
+ * @method integer getComparestatus() 获取<p>本次一比一结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComparestatus(integer $Comparestatus) 设置本次一比一结果。0为成功
+ * @method void setComparestatus(integer $Comparestatus) 设置<p>本次一比一结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getComparemsg() 获取本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+ * @method string getComparemsg() 获取<p>本次一比一结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComparemsg(string $Comparemsg) 设置本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+ * @method void setComparemsg(string $Comparemsg) 设置<p>本次一比一结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCompareLibType() 获取比对库源类型。包括：
-公安商业库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+ * @method string getCompareLibType() 获取<p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompareLibType(string $CompareLibType) 设置比对库源类型。包括：
-公安商业库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+ * @method void setCompareLibType(string $CompareLibType) 设置<p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLivenessMode() 获取枚举活体检测类型：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+ * @method integer getLivenessMode() 获取<p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLivenessMode(integer $LivenessMode) 设置枚举活体检测类型：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+ * @method void setLivenessMode(integer $LivenessMode) 设置<p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectDetail extends AbstractModel
 {
     /**
-     * @var string 请求时间戳。
+     * @var string <p>请求时间戳。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReqTime;
 
     /**
-     * @var string 本次活体一比一请求的唯一标记。
+     * @var string <p>本次活体一比一请求的唯一标记。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Seq;
 
     /**
-     * @var string 参与本次活体一比一的身份证号。
+     * @var string <p>参与本次活体一比一的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Idcard;
 
     /**
-     * @var string 参与本次活体一比一的姓名。
+     * @var string <p>参与本次活体一比一的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 本次活体一比一的相似度。
+     * @var string <p>本次活体一比一的相似度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sim;
 
     /**
-     * @var boolean 本次活体一比一是否收费
+     * @var boolean <p>本次活体一比一是否收费</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNeedCharge;
 
     /**
-     * @var integer 本次活体一比一最终结果。0为成功
+     * @var integer <p>本次活体一比一最终结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errcode;
 
     /**
-     * @var string 本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
+     * @var string <p>本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errmsg;
 
     /**
-     * @var integer 本次活体结果。0为成功
+     * @var integer <p>本次活体结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Livestatus;
 
     /**
-     * @var string 本次活体结果描述。（仅描述用，文案更新时不会通知。）
+     * @var string <p>本次活体结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Livemsg;
 
     /**
-     * @var integer 本次一比一结果。0为成功
+     * @var integer <p>本次一比一结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comparestatus;
 
     /**
-     * @var string 本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+     * @var string <p>本次一比一结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comparemsg;
 
     /**
-     * @var string 比对库源类型。包括：
-公安商业库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+     * @var string <p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompareLibType;
 
     /**
-     * @var integer 枚举活体检测类型：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+     * @var integer <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivenessMode;
 
     /**
-     * @param string $ReqTime 请求时间戳。
+     * @param string $ReqTime <p>请求时间戳。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Seq 本次活体一比一请求的唯一标记。
+     * @param string $Seq <p>本次活体一比一请求的唯一标记。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Idcard 参与本次活体一比一的身份证号。
+     * @param string $Idcard <p>参与本次活体一比一的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 参与本次活体一比一的姓名。
+     * @param string $Name <p>参与本次活体一比一的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Sim 本次活体一比一的相似度。
+     * @param string $Sim <p>本次活体一比一的相似度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsNeedCharge 本次活体一比一是否收费
+     * @param boolean $IsNeedCharge <p>本次活体一比一是否收费</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Errcode 本次活体一比一最终结果。0为成功
+     * @param integer $Errcode <p>本次活体一比一最终结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Errmsg 本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
+     * @param string $Errmsg <p>本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Livestatus 本次活体结果。0为成功
+     * @param integer $Livestatus <p>本次活体结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Livemsg 本次活体结果描述。（仅描述用，文案更新时不会通知。）
+     * @param string $Livemsg <p>本次活体结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Comparestatus 本次一比一结果。0为成功
+     * @param integer $Comparestatus <p>本次一比一结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Comparemsg 本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+     * @param string $Comparemsg <p>本次一比一结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CompareLibType 比对库源类型。包括：
-公安商业库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+     * @param string $CompareLibType <p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LivenessMode 枚举活体检测类型：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+     * @param integer $LivenessMode <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

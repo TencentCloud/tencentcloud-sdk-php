@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 标签
+ * 云上原生标签键值对。
  *
- * @method string getName() 获取标签名称
- * @method void setName(string $Name) 设置标签名称
- * @method string getValue() 获取标签内容
- * @method void setValue(string $Value) 设置标签内容
+ * @method string getName() 获取标签键。
+ * @method void setName(string $Name) 设置标签键。
+ * @method string getValue() 获取标签值。
+ * @method void setValue(string $Value) 设置标签值。
  */
 class Tag extends AbstractModel
 {
     /**
-     * @var string 标签名称
+     * @var string 标签键。
      */
     public $Name;
 
     /**
-     * @var string 标签内容
+     * @var string 标签值。
      */
     public $Value;
 
     /**
-     * @param string $Name 标签名称
-     * @param string $Value 标签内容
+     * @param string $Name 标签键。
+     * @param string $Value 标签值。
      */
     function __construct()
     {

@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpan(integer $TimeSpan) 设置预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。预付费计费类型必传。
  * @method string getEgress() 获取网络出口，默认值：center_egress1，其它可选值：center_egress2、center_egress3。
  * @method void setEgress(string $Egress) 设置网络出口，默认值：center_egress1，其它可选值：center_egress2、center_egress3。
+ * @method string getDesignatedZone() 获取仅用于申请特殊可用区带宽包，如：TEZ/EZ边缘可用区，CDZ专属可用区。具体可选可用区信息，请参考[DescribeDesignatedZones](https://cloud.tencent.com/document/product/215/128830)接口查询结果。
+ * @method void setDesignatedZone(string $DesignatedZone) 设置仅用于申请特殊可用区带宽包，如：TEZ/EZ边缘可用区，CDZ专属可用区。具体可选可用区信息，请参考[DescribeDesignatedZones](https://cloud.tencent.com/document/product/215/128830)接口查询结果。
  */
 class CreateBandwidthPackageRequest extends AbstractModel
 {
@@ -126,6 +128,11 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $Egress;
 
     /**
+     * @var string 仅用于申请特殊可用区带宽包，如：TEZ/EZ边缘可用区，CDZ专属可用区。具体可选可用区信息，请参考[DescribeDesignatedZones](https://cloud.tencent.com/document/product/215/128830)接口查询结果。
+     */
+    public $DesignatedZone;
+
+    /**
      * @param string $NetworkType 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
@@ -148,6 +155,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
      * @param string $Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
      * @param integer $TimeSpan 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。预付费计费类型必传。
      * @param string $Egress 网络出口，默认值：center_egress1，其它可选值：center_egress2、center_egress3。
+     * @param string $DesignatedZone 仅用于申请特殊可用区带宽包，如：TEZ/EZ边缘可用区，CDZ专属可用区。具体可选可用区信息，请参考[DescribeDesignatedZones](https://cloud.tencent.com/document/product/215/128830)接口查询结果。
      */
     function __construct()
     {
@@ -201,6 +209,10 @@ class CreateBandwidthPackageRequest extends AbstractModel
 
         if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
             $this->Egress = $param["Egress"];
+        }
+
+        if (array_key_exists("DesignatedZone",$param) and $param["DesignatedZone"] !== null) {
+            $this->DesignatedZone = $param["DesignatedZone"];
         }
     }
 }

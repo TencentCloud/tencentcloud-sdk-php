@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePreparedPersonalEsign返回参数结构体
  *
- * @method string getSealId() 获取导入生成的印章ID，为32位字符串。
-建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。
- * @method void setSealId(string $SealId) 设置导入生成的印章ID，为32位字符串。
-建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。
+ * @method string getSealId() 获取<p>导入生成的印章ID，为32位字符串。<br>建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。</p>
+ * @method void setSealId(string $SealId) 设置<p>导入生成的印章ID，为32位字符串。<br>建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreatePreparedPersonalEsignResponse extends AbstractModel
 {
     /**
-     * @var string 导入生成的印章ID，为32位字符串。
-建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。
+     * @var string <p>导入生成的印章ID，为32位字符串。<br>建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。</p>
      */
     public $SealId;
 
@@ -41,8 +38,7 @@ class CreatePreparedPersonalEsignResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SealId 导入生成的印章ID，为32位字符串。
-建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。
+     * @param string $SealId <p>导入生成的印章ID，为32位字符串。<br>建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

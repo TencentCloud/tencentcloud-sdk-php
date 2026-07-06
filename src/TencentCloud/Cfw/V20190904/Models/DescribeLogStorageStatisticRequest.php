@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogStorageStatistic请求参数结构体
  *
-
+ * @method string getStartTime() 获取<p>开始时间</p><p>参数格式：2026-07-01 15:02:01</p>
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间</p><p>参数格式：2026-07-01 15:02:01</p>
+ * @method string getEndTime() 获取<p>结束时间</p><p>参数格式：2026-07-01 15:02:01</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p><p>参数格式：2026-07-01 15:02:01</p>
  */
 class DescribeLogStorageStatisticRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>开始时间</p><p>参数格式：2026-07-01 15:02:01</p>
+     */
+    public $StartTime;
 
     /**
+     * @var string <p>结束时间</p><p>参数格式：2026-07-01 15:02:01</p>
+     */
+    public $EndTime;
 
+    /**
+     * @param string $StartTime <p>开始时间</p><p>参数格式：2026-07-01 15:02:01</p>
+     * @param string $EndTime <p>结束时间</p><p>参数格式：2026-07-01 15:02:01</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeLogStorageStatisticRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
 
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
     }
 }

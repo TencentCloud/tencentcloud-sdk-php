@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDspmAssetDatabaseList请求参数结构体
  *
- * @method string getAssetId() 获取资产实例id
- * @method void setAssetId(string $AssetId) 设置资产实例id
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method Filter getFilter() 获取筛选项
- * @method void setFilter(Filter $Filter) 设置筛选项
+ * @method string getAssetId() 获取<p>资产实例id</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产实例id</p>
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method Filter getFilter() 获取<p>筛选项</p>
+ * @method void setFilter(Filter $Filter) 设置<p>筛选项</p>
  */
 class DescribeDspmAssetDatabaseListRequest extends AbstractModel
 {
     /**
-     * @var string 资产实例id
+     * @var string <p>资产实例id</p>
      */
     public $AssetId;
 
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
     /**
-     * @var Filter 筛选项
+     * @var Filter <p>筛选项</p>
      */
     public $Filter;
 
     /**
-     * @param string $AssetId 资产实例id
-     * @param array $MemberId 集团账号的成员id
-     * @param Filter $Filter 筛选项
+     * @param string $AssetId <p>资产实例id</p>
+     * @param array $MemberId <p>集团账号的成员id</p>
+     * @param Filter $Filter <p>筛选项</p>
      */
     function __construct()
     {

@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDspmDictionaryList请求参数结构体
  *
- * @method string getDictType() 获取字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）
- * @method void setDictType(string $DictType) 设置字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）
- * @method array getFilters() 获取筛选条件
- * @method void setFilters(array $Filters) 设置筛选条件
+ * @method string getDictType() 获取<p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
+ * @method void setDictType(string $DictType) 设置<p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method array getFilters() 获取<p>筛选条件</p>
+ * @method void setFilters(array $Filters) 设置<p>筛选条件</p>
  */
 class DescribeDspmDictionaryListRequest extends AbstractModel
 {
     /**
-     * @var string 字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）
+     * @var string <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
      */
     public $DictType;
 
     /**
-     * @var array 筛选条件
+     * @var array <p>集团账号的成员id</p>
+     */
+    public $MemberId;
+
+    /**
+     * @var array <p>筛选条件</p>
      */
     public $Filters;
 
     /**
-     * @param string $DictType 字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）
-     * @param array $Filters 筛选条件
+     * @param string $DictType <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
+     * @param array $MemberId <p>集团账号的成员id</p>
+     * @param array $Filters <p>筛选条件</p>
      */
     function __construct()
     {
@@ -56,6 +64,10 @@ class DescribeDspmDictionaryListRequest extends AbstractModel
         }
         if (array_key_exists("DictType",$param) and $param["DictType"] !== null) {
             $this->DictType = $param["DictType"];
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

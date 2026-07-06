@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeader(array $Header) 设置请求header
  * @method array getBody() 获取请求body
  * @method void setBody(array $Body) 设置请求body
+ * @method boolean getIncludingUserProperties() 获取连接UserProperty作为Header转发，默认false
+ * @method void setIncludingUserProperties(boolean $IncludingUserProperties) 设置连接UserProperty作为Header转发，默认false
  */
 class ModifyHttpAuthenticatorRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ModifyHttpAuthenticatorRequest extends AbstractModel
     public $Body;
 
     /**
+     * @var boolean 连接UserProperty作为Header转发，默认false
+     */
+    public $IncludingUserProperties;
+
+    /**
      * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param string $Endpoint 服务地址
      * @param string $Status 认证器状态：open-启用；close-关闭
@@ -104,6 +111,7 @@ class ModifyHttpAuthenticatorRequest extends AbstractModel
      * @param string $Method 请求方法，GET 或者 POST
      * @param array $Header 请求header
      * @param array $Body 请求body
+     * @param boolean $IncludingUserProperties 连接UserProperty作为Header转发，默认false
      */
     function __construct()
     {
@@ -166,6 +174,10 @@ class ModifyHttpAuthenticatorRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Body, $obj);
             }
+        }
+
+        if (array_key_exists("IncludingUserProperties",$param) and $param["IncludingUserProperties"] !== null) {
+            $this->IncludingUserProperties = $param["IncludingUserProperties"];
         }
     }
 }

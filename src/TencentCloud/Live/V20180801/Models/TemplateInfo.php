@@ -20,334 +20,246 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转码模板信息。
  *
- * @method string getVcodec() 获取视频编码：h264/h265/origin，默认h264。
-
-origin: 保持原始编码格式
- * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265/origin，默认h264。
-
-origin: 保持原始编码格式
- * @method integer getVideoBitrate() 获取视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
- * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
- * @method string getAcodec() 获取音频编码：aac，默认aac。
-注意：当前该参数未生效，待后续支持！
- * @method void setAcodec(string $Acodec) 设置音频编码：aac，默认aac。
-注意：当前该参数未生效，待后续支持！
- * @method integer getAudioBitrate() 获取音频码率。取值范围：0kbps - 500kbps。
-默认0。
- * @method void setAudioBitrate(integer $AudioBitrate) 设置音频码率。取值范围：0kbps - 500kbps。
-默认0。
- * @method integer getWidth() 获取宽，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
- * @method void setWidth(integer $Width) 设置宽，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
- * @method integer getHeight() 获取高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
- * @method void setHeight(integer $Height) 设置高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
- * @method integer getFps() 获取帧率，默认0。
-范围0-60fps
- * @method void setFps(integer $Fps) 设置帧率，默认0。
-范围0-60fps
- * @method integer getGop() 获取关键帧间隔，单位：秒。
-默认原始的间隔
-范围2-6
- * @method void setGop(integer $Gop) 设置关键帧间隔，单位：秒。
-默认原始的间隔
-范围2-6
- * @method integer getRotate() 获取旋转角度，默认0。
-可取值：0，90，180，270
- * @method void setRotate(integer $Rotate) 设置旋转角度，默认0。
-可取值：0，90，180，270
- * @method string getProfile() 获取编码质量：
-baseline/main/high。默认baseline
- * @method void setProfile(string $Profile) 设置编码质量：
-baseline/main/high。默认baseline
- * @method integer getBitrateToOrig() 获取当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
- * @method void setBitrateToOrig(integer $BitrateToOrig) 设置当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
- * @method integer getHeightToOrig() 获取当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
- * @method void setHeightToOrig(integer $HeightToOrig) 设置当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
- * @method integer getFpsToOrig() 获取当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
- * @method void setFpsToOrig(integer $FpsToOrig) 设置当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
- * @method integer getNeedVideo() 获取是否保留视频。0：否，1：是。
- * @method void setNeedVideo(integer $NeedVideo) 设置是否保留视频。0：否，1：是。
- * @method integer getNeedAudio() 获取是否保留音频。0：否，1：是。
- * @method void setNeedAudio(integer $NeedAudio) 设置是否保留音频。0：否，1：是。
- * @method integer getTemplateId() 获取模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
- * @method string getTemplateName() 获取模板名称。
- * @method void setTemplateName(string $TemplateName) 设置模板名称。
- * @method string getDescription() 获取模板描述。
- * @method void setDescription(string $Description) 设置模板描述。
- * @method integer getAiTransCode() 获取是否是极速高清模板，0：否，1：是。默认0。
- * @method void setAiTransCode(integer $AiTransCode) 设置是否是极速高清模板，0：否，1：是。默认0。
- * @method float getAdaptBitratePercent() 获取极速高清视频码率压缩比。
-极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
-
-取值范围：0.0到0.5
- * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置极速高清视频码率压缩比。
-极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
-
-取值范围：0.0到0.5
- * @method integer getShortEdgeAsHeight() 获取是否以短边作为高度，0：否，1：是。默认0。
+ * @method string getVcodec() 获取<p>视频编码：h264/h265/origin，默认h264。</p><p>origin: 保持原始编码格式</p>
+ * @method void setVcodec(string $Vcodec) 设置<p>视频编码：h264/h265/origin，默认h264。</p><p>origin: 保持原始编码格式</p>
+ * @method integer getVideoBitrate() 获取<p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
+ * @method void setVideoBitrate(integer $VideoBitrate) 设置<p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
+ * @method string getAcodec() 获取<p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+ * @method void setAcodec(string $Acodec) 设置<p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+ * @method integer getAudioBitrate() 获取<p>音频码率。取值范围：0kbps - 500kbps。<br>默认0。</p>
+ * @method void setAudioBitrate(integer $AudioBitrate) 设置<p>音频码率。取值范围：0kbps - 500kbps。<br>默认0。</p>
+ * @method integer getWidth() 获取<p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+ * @method void setWidth(integer $Width) 设置<p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+ * @method integer getHeight() 获取<p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+ * @method void setHeight(integer $Height) 设置<p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+ * @method integer getFps() 获取<p>帧率，默认0。<br>范围0-60fps</p>
+ * @method void setFps(integer $Fps) 设置<p>帧率，默认0。<br>范围0-60fps</p>
+ * @method integer getGop() 获取<p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围2-6</p>
+ * @method void setGop(integer $Gop) 设置<p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围2-6</p>
+ * @method integer getRotate() 获取<p>旋转角度，默认0。<br>可取值：0，90，180，270</p>
+ * @method void setRotate(integer $Rotate) 设置<p>旋转角度，默认0。<br>可取值：0，90，180，270</p>
+ * @method string getProfile() 获取<p>编码质量：<br>baseline/main/high。默认baseline</p>
+ * @method void setProfile(string $Profile) 设置<p>编码质量：<br>baseline/main/high。默认baseline</p>
+ * @method integer getBitrateToOrig() 获取<p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
+ * @method void setBitrateToOrig(integer $BitrateToOrig) 设置<p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
+ * @method integer getHeightToOrig() 获取<p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
+ * @method void setHeightToOrig(integer $HeightToOrig) 设置<p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
+ * @method integer getFpsToOrig() 获取<p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
+ * @method void setFpsToOrig(integer $FpsToOrig) 设置<p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
+ * @method integer getNeedVideo() 获取<p>是否保留视频。0：否，1：是。</p>
+ * @method void setNeedVideo(integer $NeedVideo) 设置<p>是否保留视频。0：否，1：是。</p>
+ * @method integer getNeedAudio() 获取<p>是否保留音频。0：否，1：是。</p>
+ * @method void setNeedAudio(integer $NeedAudio) 设置<p>是否保留音频。0：否，1：是。</p>
+ * @method integer getTemplateId() 获取<p>模板 ID。</p>
+ * @method void setTemplateId(integer $TemplateId) 设置<p>模板 ID。</p>
+ * @method string getTemplateName() 获取<p>模板名称。</p>
+ * @method void setTemplateName(string $TemplateName) 设置<p>模板名称。</p>
+ * @method string getDescription() 获取<p>模板描述。</p>
+ * @method void setDescription(string $Description) 设置<p>模板描述。</p>
+ * @method integer getAiTransCode() 获取<p>是否是极速高清模板，0：否，1：是。默认0。</p>
+ * @method void setAiTransCode(integer $AiTransCode) 设置<p>是否是极速高清模板，0：否，1：是。默认0。</p>
+ * @method float getAdaptBitratePercent() 获取<p>极速高清视频码率压缩比。<br>极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)</p><p>取值范围：0.0到0.5</p>
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置<p>极速高清视频码率压缩比。<br>极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)</p><p>取值范围：0.0到0.5</p>
+ * @method integer getShortEdgeAsHeight() 获取<p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) 设置是否以短边作为高度，0：否，1：是。默认0。
+ * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) 设置<p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDRMType() 获取DRM 加密类型，可选值：fairplay、normalaes、widevine。
+ * @method string getDRMType() 获取<p>DRM 加密类型，可选值：fairplay、normalaes、widevine。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDRMType(string $DRMType) 设置DRM 加密类型，可选值：fairplay、normalaes、widevine。
+ * @method void setDRMType(string $DRMType) 设置<p>DRM 加密类型，可选值：fairplay、normalaes、widevine。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDRMTracks() 获取DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+ * @method string getDRMTracks() 获取<p>DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDRMTracks(string $DRMTracks) 设置DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+ * @method void setDRMTracks(string $DRMTracks) 设置<p>DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsAdaptiveBitRate() 获取是否创建自适应码率，默认值 0。
-0：否。
-1：是。
+ * @method integer getIsAdaptiveBitRate() 获取<p>是否创建自适应码率，默认值 0。<br>0：否。<br>1：是。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsAdaptiveBitRate(integer $IsAdaptiveBitRate) 设置是否创建自适应码率，默认值 0。
-0：否。
-1：是。
+ * @method void setIsAdaptiveBitRate(integer $IsAdaptiveBitRate) 设置<p>是否创建自适应码率，默认值 0。<br>0：否。<br>1：是。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAdaptiveChildren() 获取自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+ * @method array getAdaptiveChildren() 获取<p>自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdaptiveChildren(array $AdaptiveChildren) 设置自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+ * @method void setAdaptiveChildren(array $AdaptiveChildren) 设置<p>自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAudienceDrivenTranscode() 获取<p>是否按需转码，0 否，1 是。</p>
+ * @method void setAudienceDrivenTranscode(integer $AudienceDrivenTranscode) 设置<p>是否按需转码，0 否，1 是。</p>
+ * @method integer getAudienceThreshold() 获取<p>按需转码人数阈值。</p>
+ * @method void setAudienceThreshold(integer $AudienceThreshold) 设置<p>按需转码人数阈值。</p>
  */
 class TemplateInfo extends AbstractModel
 {
     /**
-     * @var string 视频编码：h264/h265/origin，默认h264。
-
-origin: 保持原始编码格式
+     * @var string <p>视频编码：h264/h265/origin，默认h264。</p><p>origin: 保持原始编码格式</p>
      */
     public $Vcodec;
 
     /**
-     * @var integer 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * @var integer <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
      */
     public $VideoBitrate;
 
     /**
-     * @var string 音频编码：aac，默认aac。
-注意：当前该参数未生效，待后续支持！
+     * @var string <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
      */
     public $Acodec;
 
     /**
-     * @var integer 音频码率。取值范围：0kbps - 500kbps。
-默认0。
+     * @var integer <p>音频码率。取值范围：0kbps - 500kbps。<br>默认0。</p>
      */
     public $AudioBitrate;
 
     /**
-     * @var integer 宽，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+     * @var integer <p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
      */
     public $Width;
 
     /**
-     * @var integer 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+     * @var integer <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
      */
     public $Height;
 
     /**
-     * @var integer 帧率，默认0。
-范围0-60fps
+     * @var integer <p>帧率，默认0。<br>范围0-60fps</p>
      */
     public $Fps;
 
     /**
-     * @var integer 关键帧间隔，单位：秒。
-默认原始的间隔
-范围2-6
+     * @var integer <p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围2-6</p>
      */
     public $Gop;
 
     /**
-     * @var integer 旋转角度，默认0。
-可取值：0，90，180，270
+     * @var integer <p>旋转角度，默认0。<br>可取值：0，90，180，270</p>
      */
     public $Rotate;
 
     /**
-     * @var string 编码质量：
-baseline/main/high。默认baseline
+     * @var string <p>编码质量：<br>baseline/main/high。默认baseline</p>
      */
     public $Profile;
 
     /**
-     * @var integer 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+     * @var integer <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
      */
     public $BitrateToOrig;
 
     /**
-     * @var integer 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+     * @var integer <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
      */
     public $HeightToOrig;
 
     /**
-     * @var integer 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+     * @var integer <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
      */
     public $FpsToOrig;
 
     /**
-     * @var integer 是否保留视频。0：否，1：是。
+     * @var integer <p>是否保留视频。0：否，1：是。</p>
      */
     public $NeedVideo;
 
     /**
-     * @var integer 是否保留音频。0：否，1：是。
+     * @var integer <p>是否保留音频。0：否，1：是。</p>
      */
     public $NeedAudio;
 
     /**
-     * @var integer 模板 ID。
+     * @var integer <p>模板 ID。</p>
      */
     public $TemplateId;
 
     /**
-     * @var string 模板名称。
+     * @var string <p>模板名称。</p>
      */
     public $TemplateName;
 
     /**
-     * @var string 模板描述。
+     * @var string <p>模板描述。</p>
      */
     public $Description;
 
     /**
-     * @var integer 是否是极速高清模板，0：否，1：是。默认0。
+     * @var integer <p>是否是极速高清模板，0：否，1：是。默认0。</p>
      */
     public $AiTransCode;
 
     /**
-     * @var float 极速高清视频码率压缩比。
-极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
-
-取值范围：0.0到0.5
+     * @var float <p>极速高清视频码率压缩比。<br>极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)</p><p>取值范围：0.0到0.5</p>
      */
     public $AdaptBitratePercent;
 
     /**
-     * @var integer 是否以短边作为高度，0：否，1：是。默认0。
+     * @var integer <p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShortEdgeAsHeight;
 
     /**
-     * @var string DRM 加密类型，可选值：fairplay、normalaes、widevine。
+     * @var string <p>DRM 加密类型，可选值：fairplay、normalaes、widevine。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DRMType;
 
     /**
-     * @var string DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+     * @var string <p>DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DRMTracks;
 
     /**
-     * @var integer 是否创建自适应码率，默认值 0。
-0：否。
-1：是。
+     * @var integer <p>是否创建自适应码率，默认值 0。<br>0：否。<br>1：是。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAdaptiveBitRate;
 
     /**
-     * @var array 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+     * @var array <p>自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdaptiveChildren;
 
     /**
-     * @param string $Vcodec 视频编码：h264/h265/origin，默认h264。
+     * @var integer <p>是否按需转码，0 否，1 是。</p>
+     */
+    public $AudienceDrivenTranscode;
 
-origin: 保持原始编码格式
-     * @param integer $VideoBitrate 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
-     * @param string $Acodec 音频编码：aac，默认aac。
-注意：当前该参数未生效，待后续支持！
-     * @param integer $AudioBitrate 音频码率。取值范围：0kbps - 500kbps。
-默认0。
-     * @param integer $Width 宽，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
-     * @param integer $Height 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
-     * @param integer $Fps 帧率，默认0。
-范围0-60fps
-     * @param integer $Gop 关键帧间隔，单位：秒。
-默认原始的间隔
-范围2-6
-     * @param integer $Rotate 旋转角度，默认0。
-可取值：0，90，180，270
-     * @param string $Profile 编码质量：
-baseline/main/high。默认baseline
-     * @param integer $BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
-     * @param integer $HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
-     * @param integer $FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
-     * @param integer $NeedVideo 是否保留视频。0：否，1：是。
-     * @param integer $NeedAudio 是否保留音频。0：否，1：是。
-     * @param integer $TemplateId 模板 ID。
-     * @param string $TemplateName 模板名称。
-     * @param string $Description 模板描述。
-     * @param integer $AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
-     * @param float $AdaptBitratePercent 极速高清视频码率压缩比。
-极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+    /**
+     * @var integer <p>按需转码人数阈值。</p>
+     */
+    public $AudienceThreshold;
 
-取值范围：0.0到0.5
-     * @param integer $ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
+    /**
+     * @param string $Vcodec <p>视频编码：h264/h265/origin，默认h264。</p><p>origin: 保持原始编码格式</p>
+     * @param integer $VideoBitrate <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
+     * @param string $Acodec <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+     * @param integer $AudioBitrate <p>音频码率。取值范围：0kbps - 500kbps。<br>默认0。</p>
+     * @param integer $Width <p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+     * @param integer $Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+     * @param integer $Fps <p>帧率，默认0。<br>范围0-60fps</p>
+     * @param integer $Gop <p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围2-6</p>
+     * @param integer $Rotate <p>旋转角度，默认0。<br>可取值：0，90，180，270</p>
+     * @param string $Profile <p>编码质量：<br>baseline/main/high。默认baseline</p>
+     * @param integer $BitrateToOrig <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
+     * @param integer $HeightToOrig <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
+     * @param integer $FpsToOrig <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
+     * @param integer $NeedVideo <p>是否保留视频。0：否，1：是。</p>
+     * @param integer $NeedAudio <p>是否保留音频。0：否，1：是。</p>
+     * @param integer $TemplateId <p>模板 ID。</p>
+     * @param string $TemplateName <p>模板名称。</p>
+     * @param string $Description <p>模板描述。</p>
+     * @param integer $AiTransCode <p>是否是极速高清模板，0：否，1：是。默认0。</p>
+     * @param float $AdaptBitratePercent <p>极速高清视频码率压缩比。<br>极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)</p><p>取值范围：0.0到0.5</p>
+     * @param integer $ShortEdgeAsHeight <p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DRMType DRM 加密类型，可选值：fairplay、normalaes、widevine。
+     * @param string $DRMType <p>DRM 加密类型，可选值：fairplay、normalaes、widevine。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DRMTracks DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+     * @param string $DRMTracks <p>DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsAdaptiveBitRate 是否创建自适应码率，默认值 0。
-0：否。
-1：是。
+     * @param integer $IsAdaptiveBitRate <p>是否创建自适应码率，默认值 0。<br>0：否。<br>1：是。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AdaptiveChildren 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+     * @param array $AdaptiveChildren <p>自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AudienceDrivenTranscode <p>是否按需转码，0 否，1 是。</p>
+     * @param integer $AudienceThreshold <p>按需转码人数阈值。</p>
      */
     function __construct()
     {
@@ -465,6 +377,14 @@ baseline/main/high。默认baseline
                 $obj->deserialize($value);
                 array_push($this->AdaptiveChildren, $obj);
             }
+        }
+
+        if (array_key_exists("AudienceDrivenTranscode",$param) and $param["AudienceDrivenTranscode"] !== null) {
+            $this->AudienceDrivenTranscode = $param["AudienceDrivenTranscode"];
+        }
+
+        if (array_key_exists("AudienceThreshold",$param) and $param["AudienceThreshold"] !== null) {
+            $this->AudienceThreshold = $param["AudienceThreshold"];
         }
     }
 }

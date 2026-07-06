@@ -20,191 +20,187 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method integer getLimit() 获取每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。
- * @method void setLimit(integer $Limit) 设置每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。
- * @method integer getOffset() 获取分页偏移量，取Limit整数倍。
-计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。
- * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。
-计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。
- * @method string getInstanceId() 获取实例 ID，如：kee-6ubh****。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，如：kee-6ubh****。
- * @method string getOrderBy() 获取排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul>
- * @method void setOrderBy(string $OrderBy) 设置排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul>
- * @method integer getOrderType() 获取排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul>
- * @method void setOrderType(integer $OrderType) 设置排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul>
- * @method array getVpcIds() 获取私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525
- * @method void setVpcIds(array $VpcIds) 设置私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525
- * @method array getSubnetIds() 获取子网ID数组，数组下标从0开始，如：56854
- * @method void setSubnetIds(array $SubnetIds) 设置子网ID数组，数组下标从0开始，如：56854
- * @method array getProjectIds() 获取项目ID 组成的数组，数组下标从0开始
- * @method void setProjectIds(array $ProjectIds) 设置项目ID 组成的数组，数组下标从0开始
- * @method string getSearchKey() 获取查找关键字，可输入实例的ID或者实例名称。
- * @method void setSearchKey(string $SearchKey) 设置查找关键字，可输入实例的ID或者实例名称。
- * @method string getInstanceName() 获取实例名称。
- * @method void setInstanceName(string $InstanceName) 设置实例名称。
- * @method array getUniqVpcIds() 获取私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
- * @method void setUniqVpcIds(array $UniqVpcIds) 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
- * @method array getUniqSubnetIds() 获取子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
- * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
- * @method array getStatus() 获取实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
- * @method void setStatus(array $Status) 设置实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
- * @method array getAutoRenew() 获取续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
- * @method void setAutoRenew(array $AutoRenew) 设置续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
- * @method string getBillingMode() 获取计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
- * @method void setBillingMode(string $BillingMode) 设置计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
- * @method integer getType() 获取实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
- * @method void setType(integer $Type) 设置实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
- * @method array getSearchKeys() 获取搜索关键词：支持实例 ID、实例名称、私有网络IP地址。
- * @method void setSearchKeys(array $SearchKeys) 设置搜索关键词：支持实例 ID、实例名称、私有网络IP地址。
- * @method array getTypeList() 获取内部参数，用户可忽略。
- * @method void setTypeList(array $TypeList) 设置内部参数，用户可忽略。
- * @method string getMonitorVersion() 获取内部参数，用户可忽略。
- * @method void setMonitorVersion(string $MonitorVersion) 设置内部参数，用户可忽略。
- * @method InstanceTagInfo getInstanceTags() 获取废弃字段。请使用TagList传参。
- * @method void setInstanceTags(InstanceTagInfo $InstanceTags) 设置废弃字段。请使用TagList传参。
- * @method array getTagKeys() 获取根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
- * @method void setTagKeys(array $TagKeys) 设置根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
- * @method array getTagList() 获取根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
- * @method void setTagList(array $TagList) 设置根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+ * @method integer getLimit() 获取<p>每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。</p>
+ * @method integer getOffset() 获取<p>分页偏移量，取Limit整数倍。<br>计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，取Limit整数倍。<br>计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。</p>
+ * @method string getInstanceId() 获取<p>实例 ID，如：kee-6ubh****。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，如：kee-6ubh****。</p>
+ * @method string getOrderBy() 获取<p>排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul></p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul></p>
+ * @method integer getOrderType() 获取<p>排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul></p>
+ * @method void setOrderType(integer $OrderType) 设置<p>排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul></p>
+ * @method array getVpcIds() 获取<p>私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525</p>
+ * @method void setVpcIds(array $VpcIds) 设置<p>私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525</p>
+ * @method array getSubnetIds() 获取<p>子网ID数组，数组下标从0开始，如：56854</p>
+ * @method void setSubnetIds(array $SubnetIds) 设置<p>子网ID数组，数组下标从0开始，如：56854</p>
+ * @method array getProjectIds() 获取<p>项目ID 组成的数组，数组下标从0开始</p>
+ * @method void setProjectIds(array $ProjectIds) 设置<p>项目ID 组成的数组，数组下标从0开始</p>
+ * @method string getSearchKey() 获取<p>查找关键字，可输入实例的ID或者实例名称。</p>
+ * @method void setSearchKey(string $SearchKey) 设置<p>查找关键字，可输入实例的ID或者实例名称。</p>
+ * @method string getInstanceName() 获取<p>实例名称。</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称。</p>
+ * @method array getUniqVpcIds() 获取<p>私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk</p>
+ * @method void setUniqVpcIds(array $UniqVpcIds) 设置<p>私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk</p>
+ * @method array getUniqSubnetIds() 获取<p>子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2</p>
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置<p>子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2</p>
+ * @method array getStatus() 获取<p>实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul></p>
+ * @method void setStatus(array $Status) 设置<p>实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul></p>
+ * @method array getAutoRenew() 获取<p>续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。</p>
+ * @method void setAutoRenew(array $AutoRenew) 设置<p>续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。</p>
+ * @method string getBillingMode() 获取<p>计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul></p>
+ * @method void setBillingMode(string $BillingMode) 设置<p>计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul></p>
+ * @method integer getType() 获取<p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
+ * @method void setType(integer $Type) 设置<p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
+ * @method array getSearchKeys() 获取<p>搜索关键词：支持实例 ID、实例名称、私有网络IP地址。</p>
+ * @method void setSearchKeys(array $SearchKeys) 设置<p>搜索关键词：支持实例 ID、实例名称、私有网络IP地址。</p>
+ * @method array getTypeList() 获取<p>内部参数，用户可忽略。</p>
+ * @method void setTypeList(array $TypeList) 设置<p>内部参数，用户可忽略。</p>
+ * @method string getMonitorVersion() 获取<p>内部参数，用户可忽略。</p>
+ * @method void setMonitorVersion(string $MonitorVersion) 设置<p>内部参数，用户可忽略。</p>
+ * @method InstanceTagInfo getInstanceTags() 获取<p>废弃字段。请使用TagList传参。</p>
+ * @method void setInstanceTags(InstanceTagInfo $InstanceTags) 设置<p>废弃字段。请使用TagList传参。</p>
+ * @method array getTagKeys() 获取<p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
+ * @method void setTagKeys(array $TagKeys) 设置<p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
+ * @method array getTagList() 获取<p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
+ * @method void setTagList(array $TagList) 设置<p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。
+     * @var integer <p>每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，取Limit整数倍。
-计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。
+     * @var integer <p>分页偏移量，取Limit整数倍。<br>计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。</p>
      */
     public $Offset;
 
     /**
-     * @var string 实例 ID，如：kee-6ubh****。
+     * @var string <p>实例 ID，如：kee-6ubh****。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul>
+     * @var string <p>排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul></p>
      */
     public $OrderBy;
 
     /**
-     * @var integer 排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul>
+     * @var integer <p>排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul></p>
      */
     public $OrderType;
 
     /**
-     * @var array 私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525
+     * @var array <p>私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525</p>
      */
     public $VpcIds;
 
     /**
-     * @var array 子网ID数组，数组下标从0开始，如：56854
+     * @var array <p>子网ID数组，数组下标从0开始，如：56854</p>
      */
     public $SubnetIds;
 
     /**
-     * @var array 项目ID 组成的数组，数组下标从0开始
+     * @var array <p>项目ID 组成的数组，数组下标从0开始</p>
      */
     public $ProjectIds;
 
     /**
-     * @var string 查找关键字，可输入实例的ID或者实例名称。
+     * @var string <p>查找关键字，可输入实例的ID或者实例名称。</p>
      */
     public $SearchKey;
 
     /**
-     * @var string 实例名称。
+     * @var string <p>实例名称。</p>
      */
     public $InstanceName;
 
     /**
-     * @var array 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * @var array <p>私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk</p>
      */
     public $UniqVpcIds;
 
     /**
-     * @var array 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * @var array <p>子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2</p>
      */
     public $UniqSubnetIds;
 
     /**
-     * @var array 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+     * @var array <p>实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul></p>
      */
     public $Status;
 
     /**
-     * @var array 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
+     * @var array <p>续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。</p>
      */
     public $AutoRenew;
 
     /**
-     * @var string 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+     * @var string <p>计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul></p>
      */
     public $BillingMode;
 
     /**
-     * @var integer 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
+     * @var integer <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
      */
     public $Type;
 
     /**
-     * @var array 搜索关键词：支持实例 ID、实例名称、私有网络IP地址。
+     * @var array <p>搜索关键词：支持实例 ID、实例名称、私有网络IP地址。</p>
      */
     public $SearchKeys;
 
     /**
-     * @var array 内部参数，用户可忽略。
+     * @var array <p>内部参数，用户可忽略。</p>
      */
     public $TypeList;
 
     /**
-     * @var string 内部参数，用户可忽略。
+     * @var string <p>内部参数，用户可忽略。</p>
      */
     public $MonitorVersion;
 
     /**
-     * @var InstanceTagInfo 废弃字段。请使用TagList传参。
+     * @var InstanceTagInfo <p>废弃字段。请使用TagList传参。</p>
      * @deprecated
      */
     public $InstanceTags;
 
     /**
-     * @var array 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
+     * @var array <p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
      */
     public $TagKeys;
 
     /**
-     * @var array 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * @var array <p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
      */
     public $TagList;
 
     /**
-     * @param integer $Limit 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。
-     * @param integer $Offset 分页偏移量，取Limit整数倍。
-计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。
-     * @param string $InstanceId 实例 ID，如：kee-6ubh****。
-     * @param string $OrderBy 排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul>
-     * @param integer $OrderType 排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul>
-     * @param array $VpcIds 私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525
-     * @param array $SubnetIds 子网ID数组，数组下标从0开始，如：56854
-     * @param array $ProjectIds 项目ID 组成的数组，数组下标从0开始
-     * @param string $SearchKey 查找关键字，可输入实例的ID或者实例名称。
-     * @param string $InstanceName 实例名称。
-     * @param array $UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
-     * @param array $UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
-     * @param array $Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
-     * @param array $AutoRenew 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
-     * @param string $BillingMode 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
-     * @param integer $Type 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
-     * @param array $SearchKeys 搜索关键词：支持实例 ID、实例名称、私有网络IP地址。
-     * @param array $TypeList 内部参数，用户可忽略。
-     * @param string $MonitorVersion 内部参数，用户可忽略。
-     * @param InstanceTagInfo $InstanceTags 废弃字段。请使用TagList传参。
-     * @param array $TagKeys 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
-     * @param array $TagList 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * @param integer $Limit <p>每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。</p>
+     * @param integer $Offset <p>分页偏移量，取Limit整数倍。<br>计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。</p>
+     * @param string $InstanceId <p>实例 ID，如：kee-6ubh****。</p>
+     * @param string $OrderBy <p>排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul></p>
+     * @param integer $OrderType <p>排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul></p>
+     * @param array $VpcIds <p>私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525</p>
+     * @param array $SubnetIds <p>子网ID数组，数组下标从0开始，如：56854</p>
+     * @param array $ProjectIds <p>项目ID 组成的数组，数组下标从0开始</p>
+     * @param string $SearchKey <p>查找关键字，可输入实例的ID或者实例名称。</p>
+     * @param string $InstanceName <p>实例名称。</p>
+     * @param array $UniqVpcIds <p>私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk</p>
+     * @param array $UniqSubnetIds <p>子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2</p>
+     * @param array $Status <p>实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul></p>
+     * @param array $AutoRenew <p>续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。</p>
+     * @param string $BillingMode <p>计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul></p>
+     * @param integer $Type <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
+     * @param array $SearchKeys <p>搜索关键词：支持实例 ID、实例名称、私有网络IP地址。</p>
+     * @param array $TypeList <p>内部参数，用户可忽略。</p>
+     * @param string $MonitorVersion <p>内部参数，用户可忽略。</p>
+     * @param InstanceTagInfo $InstanceTags <p>废弃字段。请使用TagList传参。</p>
+     * @param array $TagKeys <p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
+     * @param array $TagList <p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
      */
     function __construct()
     {

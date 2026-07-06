@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModelName() 获取<p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
  * @method void setModelName(string $ModelName) 设置<p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
- * @method string getModelVersion() 获取<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：2.0、3.0-clip、3.0-pro。<br>模型MinimaxMusic支持的版本号：2.0、2.5、2.6。</p>
- * @method void setModelVersion(string $ModelVersion) 设置<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：2.0、3.0-clip、3.0-pro。<br>模型MinimaxMusic支持的版本号：2.0、2.5、2.6。</p>
+ * @method string getModelVersion() 获取<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MinimaxMusic支持的版本号：2.0、2.5、2.6。</p>
+ * @method void setModelVersion(string $ModelVersion) 设置<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MinimaxMusic支持的版本号：2.0、2.5、2.6。</p>
  * @method string getSceneType() 获取<p>指定场景生音频。音乐: music。</p>
  * @method void setSceneType(string $SceneType) 设置<p>指定场景生音频。音乐: music。</p>
  * @method string getPrompt() 获取<p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p>
@@ -51,7 +51,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：2.0、3.0-clip、3.0-pro。<br>模型MinimaxMusic支持的版本号：2.0、2.5、2.6。</p>
+     * @var string <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MinimaxMusic支持的版本号：2.0、2.5、2.6。</p>
      */
     public $ModelVersion;
 
@@ -102,7 +102,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
 
     /**
      * @param string $ModelName <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
-     * @param string $ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：2.0、3.0-clip、3.0-pro。<br>模型MinimaxMusic支持的版本号：2.0、2.5、2.6。</p>
+     * @param string $ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MinimaxMusic支持的版本号：2.0、2.5、2.6。</p>
      * @param string $SceneType <p>指定场景生音频。音乐: music。</p>
      * @param string $Prompt <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p>
      * @param array $VideoInfos <p>参考视频信息。仅部分模型支持。</p>

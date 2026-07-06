@@ -20,21 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateInstance返回参数结构体
  *
- * @method float getOriginalCost() 获取原价，单位为元。
- * @method void setOriginalCost(float $OriginalCost) 设置原价，单位为元。
- * @method float getDiscountCost() 获取折扣价，单位为元。
- * @method void setDiscountCost(float $DiscountCost) 设置折扣价，单位为元。
- * @method string getTimeUnit() 获取购买实例的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
- * @method void setTimeUnit(string $TimeUnit) 设置购买实例的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
- * @method integer getTimeSpan() 获取购买实例的时长。
- * @method void setTimeSpan(integer $TimeSpan) 设置购买实例的时长。
- * @method array getPriceList() 获取价格清单
+ * @method float getOriginalCost() 获取<p>原价，单位为元。</p>
+ * @method void setOriginalCost(float $OriginalCost) 设置<p>原价，单位为元。</p>
+ * @method float getDiscountCost() 获取<p>折扣价，单位为元。</p>
+ * @method void setDiscountCost(float $DiscountCost) 设置<p>折扣价，单位为元。</p>
+ * @method string getTimeUnit() 获取<p>购买实例的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
+ * @method void setTimeUnit(string $TimeUnit) 设置<p>购买实例的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
+ * @method integer getTimeSpan() 获取<p>购买实例的时长。</p>
+ * @method void setTimeSpan(integer $TimeSpan) 设置<p>购买实例的时长。</p>
+ * @method array getPriceList() 获取<p>价格清单</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPriceList(array $PriceList) 设置价格清单
+ * @method void setPriceList(array $PriceList) 设置<p>价格清单</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,29 +38,27 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceCreateInstanceResponse extends AbstractModel
 {
     /**
-     * @var float 原价，单位为元。
+     * @var float <p>原价，单位为元。</p>
      */
     public $OriginalCost;
 
     /**
-     * @var float 折扣价，单位为元。
+     * @var float <p>折扣价，单位为元。</p>
      */
     public $DiscountCost;
 
     /**
-     * @var string 购买实例的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+     * @var string <p>购买实例的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
      */
     public $TimeUnit;
 
     /**
-     * @var integer 购买实例的时长。
+     * @var integer <p>购买实例的时长。</p>
      */
     public $TimeSpan;
 
     /**
-     * @var array 价格清单
+     * @var array <p>价格清单</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PriceList;
@@ -75,13 +69,11 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $OriginalCost 原价，单位为元。
-     * @param float $DiscountCost 折扣价，单位为元。
-     * @param string $TimeUnit 购买实例的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
-     * @param integer $TimeSpan 购买实例的时长。
-     * @param array $PriceList 价格清单
+     * @param float $OriginalCost <p>原价，单位为元。</p>
+     * @param float $DiscountCost <p>折扣价，单位为元。</p>
+     * @param string $TimeUnit <p>购买实例的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
+     * @param integer $TimeSpan <p>购买实例的时长。</p>
+     * @param array $PriceList <p>价格清单</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

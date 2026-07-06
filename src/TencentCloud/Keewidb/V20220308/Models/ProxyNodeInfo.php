@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNodeId() 获取节点ID
  * @method void setNodeId(string $NodeId) 设置节点ID
+ * @method integer getZoneId() 获取可用区ID
+ * @method void setZoneId(integer $ZoneId) 设置可用区ID
  */
 class ProxyNodeInfo extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ProxyNodeInfo extends AbstractModel
     public $NodeId;
 
     /**
+     * @var integer 可用区ID
+     */
+    public $ZoneId;
+
+    /**
      * @param string $NodeId 节点ID
+     * @param integer $ZoneId 可用区ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ProxyNodeInfo extends AbstractModel
         }
         if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
             $this->NodeId = $param["NodeId"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

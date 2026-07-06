@@ -20,38 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节点池弹性伸缩配置
  *
- * @method integer getMinReplicas() 获取节点池最小副本数
- * @method void setMinReplicas(integer $MinReplicas) 设置节点池最小副本数
- * @method integer getMaxReplicas() 获取节点池最大副本数
- * @method void setMaxReplicas(integer $MaxReplicas) 设置节点池最大副本数
- * @method string getCreatePolicy() 获取节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
+ * @method integer getMinReplicas() 获取<p>节点池最小副本数</p>
+ * @method void setMinReplicas(integer $MinReplicas) 设置<p>节点池最小副本数</p>
+ * @method integer getMaxReplicas() 获取<p>节点池最大副本数</p>
+ * @method void setMaxReplicas(integer $MaxReplicas) 设置<p>节点池最大副本数</p>
+ * @method string getCreatePolicy() 获取<p>节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatePolicy(string $CreatePolicy) 设置节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
+ * @method void setCreatePolicy(string $CreatePolicy) 设置<p>节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScaleDownMode() 获取<p>扩缩容模式</p><p>枚举值：</p><ul><li>ShutdownAndDelete： 释放模式，默认</li><li>Shutdown： 停机模式，关机不计费</li></ul><p>默认值：ShutdownAndDelete</p>
+ * @method void setScaleDownMode(string $ScaleDownMode) 设置<p>扩缩容模式</p><p>枚举值：</p><ul><li>ShutdownAndDelete： 释放模式，默认</li><li>Shutdown： 停机模式，关机不计费</li></ul><p>默认值：ShutdownAndDelete</p>
  */
 class MachineSetScaling extends AbstractModel
 {
     /**
-     * @var integer 节点池最小副本数
+     * @var integer <p>节点池最小副本数</p>
      */
     public $MinReplicas;
 
     /**
-     * @var integer 节点池最大副本数
+     * @var integer <p>节点池最大副本数</p>
      */
     public $MaxReplicas;
 
     /**
-     * @var string 节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
+     * @var string <p>节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatePolicy;
 
     /**
-     * @param integer $MinReplicas 节点池最小副本数
-     * @param integer $MaxReplicas 节点池最大副本数
-     * @param string $CreatePolicy 节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
+     * @var string <p>扩缩容模式</p><p>枚举值：</p><ul><li>ShutdownAndDelete： 释放模式，默认</li><li>Shutdown： 停机模式，关机不计费</li></ul><p>默认值：ShutdownAndDelete</p>
+     */
+    public $ScaleDownMode;
+
+    /**
+     * @param integer $MinReplicas <p>节点池最小副本数</p>
+     * @param integer $MaxReplicas <p>节点池最大副本数</p>
+     * @param string $CreatePolicy <p>节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScaleDownMode <p>扩缩容模式</p><p>枚举值：</p><ul><li>ShutdownAndDelete： 释放模式，默认</li><li>Shutdown： 停机模式，关机不计费</li></ul><p>默认值：ShutdownAndDelete</p>
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class MachineSetScaling extends AbstractModel
 
         if (array_key_exists("CreatePolicy",$param) and $param["CreatePolicy"] !== null) {
             $this->CreatePolicy = $param["CreatePolicy"];
+        }
+
+        if (array_key_exists("ScaleDownMode",$param) and $param["ScaleDownMode"] !== null) {
+            $this->ScaleDownMode = $param["ScaleDownMode"];
         }
     }
 }

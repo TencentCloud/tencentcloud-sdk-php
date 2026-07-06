@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances返回参数结构体
  *
- * @method integer getTotalCount() 获取实例数
- * @method void setTotalCount(integer $TotalCount) 设置实例数
- * @method array getInstanceSet() 获取实例详细信息列表
- * @method void setInstanceSet(array $InstanceSet) 设置实例详细信息列表
+ * @method integer getTotalCount() 获取<p>实例数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>实例数</p>
+ * @method array getInstanceSet() 获取<p>实例详细信息列表</p>
+ * @method void setInstanceSet(array $InstanceSet) 设置<p>实例详细信息列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 实例数
+     * @var integer <p>实例数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 实例详细信息列表
+     * @var array <p>实例详细信息列表</p>
      */
     public $InstanceSet;
 
@@ -45,8 +45,8 @@ class DescribeInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 实例数
-     * @param array $InstanceSet 实例详细信息列表
+     * @param integer $TotalCount <p>实例数</p>
+     * @param array $InstanceSet <p>实例详细信息列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

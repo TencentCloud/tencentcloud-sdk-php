@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIDs(array $SecurityGroupIDs) 设置<p>安全组列表</p>
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取<p>节点预付费信息</p>
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置<p>节点预付费信息</p>
+ * @method string getInstanceChargeType() 获取<p>节点计费类型变更</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>节点计费类型变更</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+ * @method boolean getModifyPortableDataDisk() 获取<p>是否同时切换弹性数据云盘计费模式。取值范围：  true：表示切换弹性数据云盘计费模式 false：表示不切换弹性数据云盘计费模式 默认取值：true。</p><p>默认值：true</p>
+ * @method void setModifyPortableDataDisk(boolean $ModifyPortableDataDisk) 设置<p>是否同时切换弹性数据云盘计费模式。取值范围：  true：表示切换弹性数据云盘计费模式 false：表示不切换弹性数据云盘计费模式 默认取值：true。</p><p>默认值：true</p>
  */
 class ModifyClusterMachineRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class ModifyClusterMachineRequest extends AbstractModel
     public $InstanceChargePrepaid;
 
     /**
+     * @var string <p>节点计费类型变更</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+     */
+    public $InstanceChargeType;
+
+    /**
+     * @var boolean <p>是否同时切换弹性数据云盘计费模式。取值范围：  true：表示切换弹性数据云盘计费模式 false：表示不切换弹性数据云盘计费模式 默认取值：true。</p><p>默认值：true</p>
+     */
+    public $ModifyPortableDataDisk;
+
+    /**
      * @param string $ClusterId <p>集群 ID</p>
      * @param array $MachineNames <p>节点名列表</p>
      * @param string $DisplayName <p>machine的display name</p>
      * @param Disk $SystemDisk <p>系统盘的信息</p>
      * @param array $SecurityGroupIDs <p>安全组列表</p>
      * @param InstanceChargePrepaid $InstanceChargePrepaid <p>节点预付费信息</p>
+     * @param string $InstanceChargeType <p>节点计费类型变更</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+     * @param boolean $ModifyPortableDataDisk <p>是否同时切换弹性数据云盘计费模式。取值范围：  true：表示切换弹性数据云盘计费模式 false：表示不切换弹性数据云盘计费模式 默认取值：true。</p><p>默认值：true</p>
      */
     function __construct()
     {
@@ -110,6 +126,14 @@ class ModifyClusterMachineRequest extends AbstractModel
         if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
             $this->InstanceChargePrepaid = new InstanceChargePrepaid();
             $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("ModifyPortableDataDisk",$param) and $param["ModifyPortableDataDisk"] !== null) {
+            $this->ModifyPortableDataDisk = $param["ModifyPortableDataDisk"];
         }
     }
 }

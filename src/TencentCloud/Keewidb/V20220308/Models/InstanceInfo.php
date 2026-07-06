@@ -20,426 +20,426 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例详细信息
  *
- * @method string getInstanceName() 获取实例名称。
- * @method void setInstanceName(string $InstanceName) 设置实例名称。
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method integer getAppid() 获取用户的Appid。
- * @method void setAppid(integer $Appid) 设置用户的Appid。
- * @method integer getProjectId() 获取项目 ID。
- * @method void setProjectId(integer $ProjectId) 设置项目 ID。
- * @method integer getRegionId() 获取地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li>8：北京。</li></ul>
- * @method void setRegionId(integer $RegionId) 设置地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li>8：北京。</li></ul>
- * @method integer getZoneId() 获取可用区 ID。
- * @method void setZoneId(integer $ZoneId) 设置可用区 ID。
- * @method integer getVpcId() 获取VPC 网络 ID， 如：75101。该参数当前暂保留，可忽略。
- * @method void setVpcId(integer $VpcId) 设置VPC 网络 ID， 如：75101。该参数当前暂保留，可忽略。
- * @method integer getStatus() 获取实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
- * @method void setStatus(integer $Status) 设置实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
- * @method integer getSubnetId() 获取VPC 网络下子网 ID， 如：46315。该参数当前暂保留，可忽略。
- * @method void setSubnetId(integer $SubnetId) 设置VPC 网络下子网 ID， 如：46315。该参数当前暂保留，可忽略。
- * @method string getWanIp() 获取实例 VIP。
- * @method void setWanIp(string $WanIp) 设置实例 VIP。
- * @method integer getPort() 获取实例端口号。
- * @method void setPort(integer $Port) 设置实例端口号。
- * @method string getCreatetime() 获取实例创建时间。
- * @method void setCreatetime(string $Createtime) 设置实例创建时间。
- * @method float getSize() 获取实例持久内存总容量大小，单位：MB。
- * @method void setSize(float $Size) 设置实例持久内存总容量大小，单位：MB。
- * @method integer getType() 获取实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
- * @method void setType(integer $Type) 设置实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
- * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
- * @method string getDeadlineTime() 获取实例到期时间。
- * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间。
- * @method string getEngine() 获取存储引擎。
- * @method void setEngine(string $Engine) 设置存储引擎。
- * @method string getProductType() 获取产品类型。<ul><li>standalone ：标准版。</li><li>cluster ：集群版。</li></ul>
- * @method void setProductType(string $ProductType) 设置产品类型。<ul><li>standalone ：标准版。</li><li>cluster ：集群版。</li></ul>
- * @method string getUniqVpcId() 获取VPC 网络 ID， 如：vpc-fk33jsf4****。
- * @method void setUniqVpcId(string $UniqVpcId) 设置VPC 网络 ID， 如：vpc-fk33jsf4****。
- * @method string getUniqSubnetId() 获取VPC 网络下子网 ID，如：subnet-fd3j6l3****。
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置VPC 网络下子网 ID，如：subnet-fd3j6l3****。
- * @method integer getBillingMode() 获取计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
- * @method void setBillingMode(integer $BillingMode) 设置计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
- * @method string getInstanceTitle() 获取实例运行状态描述：如”实例运行中“。
- * @method void setInstanceTitle(string $InstanceTitle) 设置实例运行状态描述：如”实例运行中“。
- * @method string getOfflineTime() 获取计划下线时间。
- * @method void setOfflineTime(string $OfflineTime) 设置计划下线时间。
- * @method integer getSubStatus() 获取流程中的实例，返回子状态。
- * @method void setSubStatus(integer $SubStatus) 设置流程中的实例，返回子状态。
- * @method array getTags() 获取反亲和性标签
- * @method void setTags(array $Tags) 设置反亲和性标签
- * @method integer getRedisShardSize() 获取分片大小。
- * @method void setRedisShardSize(integer $RedisShardSize) 设置分片大小。
- * @method integer getRedisShardNum() 获取分片数量。
- * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量。
- * @method integer getRedisReplicasNum() 获取副本数量。
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量。
- * @method integer getPriceId() 获取计费 ID。
- * @method void setPriceId(integer $PriceId) 设置计费 ID。
- * @method string getCloseTime() 获取隔离时间。
- * @method void setCloseTime(string $CloseTime) 设置隔离时间。
- * @method integer getSlaveReadWeight() 获取从节点读取权重。
- * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置从节点读取权重。
- * @method array getInstanceTags() 获取实例关联的标签信息。
- * @method void setInstanceTags(array $InstanceTags) 设置实例关联的标签信息。
- * @method string getProjectName() 获取项目名称。
- * @method void setProjectName(string $ProjectName) 设置项目名称。
- * @method boolean getNoAuth() 获取是否为免密实例；<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
- * @method void setNoAuth(boolean $NoAuth) 设置是否为免密实例；<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
- * @method integer getClientLimit() 获取客户端连接数。
- * @method void setClientLimit(integer $ClientLimit) 设置客户端连接数。
- * @method integer getDtsStatus() 获取DTS状态（内部参数，用户可忽略）。
- * @method void setDtsStatus(integer $DtsStatus) 设置DTS状态（内部参数，用户可忽略）。
- * @method integer getNetLimit() 获取分片带宽上限，单位 MB。
- * @method void setNetLimit(integer $NetLimit) 设置分片带宽上限，单位 MB。
- * @method integer getPasswordFree() 获取免密实例标识（内部参数，用户可忽略）。
- * @method void setPasswordFree(integer $PasswordFree) 设置免密实例标识（内部参数，用户可忽略）。
- * @method integer getReadOnly() 获取实例只读标识（内部参数，用户可忽略）。
- * @method void setReadOnly(integer $ReadOnly) 设置实例只读标识（内部参数，用户可忽略）。
- * @method string getVip6() 获取内部参数，用户可忽略。
- * @method void setVip6(string $Vip6) 设置内部参数，用户可忽略。
- * @method string getRemainBandwidthDuration() 获取内部参数，用户可忽略。
- * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置内部参数，用户可忽略。
- * @method integer getDiskSize() 获取实例的磁盘容量大小。
- * @method void setDiskSize(integer $DiskSize) 设置实例的磁盘容量大小。
- * @method string getMonitorVersion() 获取监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
- * @method void setMonitorVersion(string $MonitorVersion) 设置监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
- * @method integer getClientLimitMin() 获取客户端最大连接数可设置的最小值。
- * @method void setClientLimitMin(integer $ClientLimitMin) 设置客户端最大连接数可设置的最小值。
- * @method integer getClientLimitMax() 获取客户端最大连接数可设置的最大值。
- * @method void setClientLimitMax(integer $ClientLimitMax) 设置客户端最大连接数可设置的最大值。
- * @method array getNodeSet() 获取实例的节点详细信息。
- * @method void setNodeSet(array $NodeSet) 设置实例的节点详细信息。
- * @method string getRegion() 获取实例所在的地域信息，比如ap-guangzhou。
- * @method void setRegion(string $Region) 设置实例所在的地域信息，比如ap-guangzhou。
- * @method integer getMachineMemory() 获取实例内存容量，单位：GB。KeeWiDB 内存容量
- * @method void setMachineMemory(integer $MachineMemory) 设置实例内存容量，单位：GB。KeeWiDB 内存容量
- * @method integer getDiskShardSize() 获取单分片磁盘大小，单位：MB
- * @method void setDiskShardSize(integer $DiskShardSize) 设置单分片磁盘大小，单位：MB
- * @method integer getDiskShardNum() 获取3
- * @method void setDiskShardNum(integer $DiskShardNum) 设置3
- * @method integer getDiskReplicasNum() 获取1
- * @method void setDiskReplicasNum(integer $DiskReplicasNum) 设置1
- * @method string getCompression() 获取数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
- * @method void setCompression(string $Compression) 设置数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+ * @method string getInstanceName() 获取<p>实例名称。</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称。</p>
+ * @method string getInstanceId() 获取<p>实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。</p>
+ * @method integer getAppid() 获取<p>用户的Appid。</p>
+ * @method void setAppid(integer $Appid) 设置<p>用户的Appid。</p>
+ * @method integer getProjectId() 获取<p>项目 ID。</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目 ID。</p>
+ * @method integer getRegionId() 获取<p>地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li>8：北京。</li></ul></p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li>8：北京。</li></ul></p>
+ * @method integer getZoneId() 获取<p>可用区 ID。</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>可用区 ID。</p>
+ * @method integer getVpcId() 获取<p>VPC 网络 ID， 如：75101。该参数当前暂保留，可忽略。</p>
+ * @method void setVpcId(integer $VpcId) 设置<p>VPC 网络 ID， 如：75101。该参数当前暂保留，可忽略。</p>
+ * @method integer getStatus() 获取<p>实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul></p>
+ * @method void setStatus(integer $Status) 设置<p>实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul></p>
+ * @method integer getSubnetId() 获取<p>VPC 网络下子网 ID， 如：46315。该参数当前暂保留，可忽略。</p>
+ * @method void setSubnetId(integer $SubnetId) 设置<p>VPC 网络下子网 ID， 如：46315。该参数当前暂保留，可忽略。</p>
+ * @method string getWanIp() 获取<p>实例 VIP。</p>
+ * @method void setWanIp(string $WanIp) 设置<p>实例 VIP。</p>
+ * @method integer getPort() 获取<p>实例端口号。</p>
+ * @method void setPort(integer $Port) 设置<p>实例端口号。</p>
+ * @method string getCreatetime() 获取<p>实例创建时间。</p>
+ * @method void setCreatetime(string $Createtime) 设置<p>实例创建时间。</p>
+ * @method float getSize() 获取<p>实例持久内存总容量大小，单位：MB。</p>
+ * @method void setSize(float $Size) 设置<p>实例持久内存总容量大小，单位：MB。</p>
+ * @method integer getType() 获取<p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
+ * @method void setType(integer $Type) 设置<p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
+ * @method integer getAutoRenewFlag() 获取<p>实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul></p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul></p>
+ * @method string getDeadlineTime() 获取<p>实例到期时间。</p>
+ * @method void setDeadlineTime(string $DeadlineTime) 设置<p>实例到期时间。</p>
+ * @method string getEngine() 获取<p>存储引擎。</p>
+ * @method void setEngine(string $Engine) 设置<p>存储引擎。</p>
+ * @method string getProductType() 获取<p>产品类型。<ul><li>standalone ：标准版。</li><li>cluster ：集群版。</li></ul></p>
+ * @method void setProductType(string $ProductType) 设置<p>产品类型。<ul><li>standalone ：标准版。</li><li>cluster ：集群版。</li></ul></p>
+ * @method string getUniqVpcId() 获取<p>VPC 网络 ID， 如：vpc-fk33jsf4****。</p>
+ * @method void setUniqVpcId(string $UniqVpcId) 设置<p>VPC 网络 ID， 如：vpc-fk33jsf4****。</p>
+ * @method string getUniqSubnetId() 获取<p>VPC 网络下子网 ID，如：subnet-fd3j6l3****。</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置<p>VPC 网络下子网 ID，如：subnet-fd3j6l3****。</p>
+ * @method integer getBillingMode() 获取<p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+ * @method void setBillingMode(integer $BillingMode) 设置<p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+ * @method string getInstanceTitle() 获取<p>实例运行状态描述：如”实例运行中“。</p>
+ * @method void setInstanceTitle(string $InstanceTitle) 设置<p>实例运行状态描述：如”实例运行中“。</p>
+ * @method string getOfflineTime() 获取<p>计划下线时间。</p>
+ * @method void setOfflineTime(string $OfflineTime) 设置<p>计划下线时间。</p>
+ * @method integer getSubStatus() 获取<p>流程中的实例，返回子状态。</p>
+ * @method void setSubStatus(integer $SubStatus) 设置<p>流程中的实例，返回子状态。</p>
+ * @method array getTags() 获取<p>反亲和性标签</p>
+ * @method void setTags(array $Tags) 设置<p>反亲和性标签</p>
+ * @method integer getRedisShardSize() 获取<p>分片大小。</p>
+ * @method void setRedisShardSize(integer $RedisShardSize) 设置<p>分片大小。</p>
+ * @method integer getRedisShardNum() 获取<p>分片数量。</p>
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置<p>分片数量。</p>
+ * @method integer getRedisReplicasNum() 获取<p>副本数量。</p>
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置<p>副本数量。</p>
+ * @method integer getPriceId() 获取<p>计费 ID。</p>
+ * @method void setPriceId(integer $PriceId) 设置<p>计费 ID。</p>
+ * @method string getCloseTime() 获取<p>隔离时间。</p>
+ * @method void setCloseTime(string $CloseTime) 设置<p>隔离时间。</p>
+ * @method integer getSlaveReadWeight() 获取<p>从节点读取权重。</p>
+ * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置<p>从节点读取权重。</p>
+ * @method array getInstanceTags() 获取<p>实例关联的标签信息。</p>
+ * @method void setInstanceTags(array $InstanceTags) 设置<p>实例关联的标签信息。</p>
+ * @method string getProjectName() 获取<p>项目名称。</p>
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名称。</p>
+ * @method boolean getNoAuth() 获取<p>是否为免密实例；<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul></p>
+ * @method void setNoAuth(boolean $NoAuth) 设置<p>是否为免密实例；<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul></p>
+ * @method integer getClientLimit() 获取<p>客户端连接数。</p>
+ * @method void setClientLimit(integer $ClientLimit) 设置<p>客户端连接数。</p>
+ * @method integer getDtsStatus() 获取<p>DTS状态（内部参数，用户可忽略）。</p>
+ * @method void setDtsStatus(integer $DtsStatus) 设置<p>DTS状态（内部参数，用户可忽略）。</p>
+ * @method integer getNetLimit() 获取<p>分片带宽上限，单位 MB。</p>
+ * @method void setNetLimit(integer $NetLimit) 设置<p>分片带宽上限，单位 MB。</p>
+ * @method integer getPasswordFree() 获取<p>免密实例标识（内部参数，用户可忽略）。</p>
+ * @method void setPasswordFree(integer $PasswordFree) 设置<p>免密实例标识（内部参数，用户可忽略）。</p>
+ * @method integer getReadOnly() 获取<p>实例只读标识（内部参数，用户可忽略）。</p>
+ * @method void setReadOnly(integer $ReadOnly) 设置<p>实例只读标识（内部参数，用户可忽略）。</p>
+ * @method string getVip6() 获取<p>内部参数，用户可忽略。</p>
+ * @method void setVip6(string $Vip6) 设置<p>内部参数，用户可忽略。</p>
+ * @method string getRemainBandwidthDuration() 获取<p>内部参数，用户可忽略。</p>
+ * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置<p>内部参数，用户可忽略。</p>
+ * @method integer getDiskSize() 获取<p>实例的磁盘容量大小。</p>
+ * @method void setDiskSize(integer $DiskSize) 设置<p>实例的磁盘容量大小。</p>
+ * @method string getMonitorVersion() 获取<p>监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul></p>
+ * @method void setMonitorVersion(string $MonitorVersion) 设置<p>监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul></p>
+ * @method integer getClientLimitMin() 获取<p>客户端最大连接数可设置的最小值。</p>
+ * @method void setClientLimitMin(integer $ClientLimitMin) 设置<p>客户端最大连接数可设置的最小值。</p>
+ * @method integer getClientLimitMax() 获取<p>客户端最大连接数可设置的最大值。</p>
+ * @method void setClientLimitMax(integer $ClientLimitMax) 设置<p>客户端最大连接数可设置的最大值。</p>
+ * @method array getNodeSet() 获取<p>实例的节点详细信息。</p>
+ * @method void setNodeSet(array $NodeSet) 设置<p>实例的节点详细信息。</p>
+ * @method string getRegion() 获取<p>实例所在的地域信息，比如ap-guangzhou。</p>
+ * @method void setRegion(string $Region) 设置<p>实例所在的地域信息，比如ap-guangzhou。</p>
+ * @method integer getMachineMemory() 获取<p>实例内存容量，单位：GB。KeeWiDB 内存容量</p>
+ * @method void setMachineMemory(integer $MachineMemory) 设置<p>实例内存容量，单位：GB。KeeWiDB 内存容量</p>
+ * @method integer getDiskShardSize() 获取<p>单分片磁盘大小，单位：MB</p>
+ * @method void setDiskShardSize(integer $DiskShardSize) 设置<p>单分片磁盘大小，单位：MB</p>
+ * @method integer getDiskShardNum() 获取<p>分片数量</p>
+ * @method void setDiskShardNum(integer $DiskShardNum) 设置<p>分片数量</p>
+ * @method integer getDiskReplicasNum() 获取<p>副本数量</p>
+ * @method void setDiskReplicasNum(integer $DiskReplicasNum) 设置<p>副本数量</p>
+ * @method string getCompression() 获取<p>数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul></p>
+ * @method void setCompression(string $Compression) 设置<p>数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul></p>
  */
 class InstanceInfo extends AbstractModel
 {
     /**
-     * @var string 实例名称。
+     * @var string <p>实例名称。</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例 ID。
+     * @var string <p>实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 用户的Appid。
+     * @var integer <p>用户的Appid。</p>
      */
     public $Appid;
 
     /**
-     * @var integer 项目 ID。
+     * @var integer <p>项目 ID。</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li>8：北京。</li></ul>
+     * @var integer <p>地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li>8：北京。</li></ul></p>
      */
     public $RegionId;
 
     /**
-     * @var integer 可用区 ID。
+     * @var integer <p>可用区 ID。</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer VPC 网络 ID， 如：75101。该参数当前暂保留，可忽略。
+     * @var integer <p>VPC 网络 ID， 如：75101。该参数当前暂保留，可忽略。</p>
      */
     public $VpcId;
 
     /**
-     * @var integer 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
+     * @var integer <p>实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul></p>
      */
     public $Status;
 
     /**
-     * @var integer VPC 网络下子网 ID， 如：46315。该参数当前暂保留，可忽略。
+     * @var integer <p>VPC 网络下子网 ID， 如：46315。该参数当前暂保留，可忽略。</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 实例 VIP。
+     * @var string <p>实例 VIP。</p>
      */
     public $WanIp;
 
     /**
-     * @var integer 实例端口号。
+     * @var integer <p>实例端口号。</p>
      */
     public $Port;
 
     /**
-     * @var string 实例创建时间。
+     * @var string <p>实例创建时间。</p>
      */
     public $Createtime;
 
     /**
-     * @var float 实例持久内存总容量大小，单位：MB。
+     * @var float <p>实例持久内存总容量大小，单位：MB。</p>
      */
     public $Size;
 
     /**
-     * @var integer 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
+     * @var integer <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
      */
     public $Type;
 
     /**
-     * @var integer 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
+     * @var integer <p>实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul></p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 实例到期时间。
+     * @var string <p>实例到期时间。</p>
      */
     public $DeadlineTime;
 
     /**
-     * @var string 存储引擎。
+     * @var string <p>存储引擎。</p>
      */
     public $Engine;
 
     /**
-     * @var string 产品类型。<ul><li>standalone ：标准版。</li><li>cluster ：集群版。</li></ul>
+     * @var string <p>产品类型。<ul><li>standalone ：标准版。</li><li>cluster ：集群版。</li></ul></p>
      */
     public $ProductType;
 
     /**
-     * @var string VPC 网络 ID， 如：vpc-fk33jsf4****。
+     * @var string <p>VPC 网络 ID， 如：vpc-fk33jsf4****。</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string VPC 网络下子网 ID，如：subnet-fd3j6l3****。
+     * @var string <p>VPC 网络下子网 ID，如：subnet-fd3j6l3****。</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var integer 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+     * @var integer <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
      */
     public $BillingMode;
 
     /**
-     * @var string 实例运行状态描述：如”实例运行中“。
+     * @var string <p>实例运行状态描述：如”实例运行中“。</p>
      */
     public $InstanceTitle;
 
     /**
-     * @var string 计划下线时间。
+     * @var string <p>计划下线时间。</p>
      */
     public $OfflineTime;
 
     /**
-     * @var integer 流程中的实例，返回子状态。
+     * @var integer <p>流程中的实例，返回子状态。</p>
      */
     public $SubStatus;
 
     /**
-     * @var array 反亲和性标签
+     * @var array <p>反亲和性标签</p>
      */
     public $Tags;
 
     /**
-     * @var integer 分片大小。
+     * @var integer <p>分片大小。</p>
      */
     public $RedisShardSize;
 
     /**
-     * @var integer 分片数量。
+     * @var integer <p>分片数量。</p>
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 副本数量。
+     * @var integer <p>副本数量。</p>
      */
     public $RedisReplicasNum;
 
     /**
-     * @var integer 计费 ID。
+     * @var integer <p>计费 ID。</p>
      */
     public $PriceId;
 
     /**
-     * @var string 隔离时间。
+     * @var string <p>隔离时间。</p>
      */
     public $CloseTime;
 
     /**
-     * @var integer 从节点读取权重。
+     * @var integer <p>从节点读取权重。</p>
      */
     public $SlaveReadWeight;
 
     /**
-     * @var array 实例关联的标签信息。
+     * @var array <p>实例关联的标签信息。</p>
      */
     public $InstanceTags;
 
     /**
-     * @var string 项目名称。
+     * @var string <p>项目名称。</p>
      */
     public $ProjectName;
 
     /**
-     * @var boolean 是否为免密实例；<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
+     * @var boolean <p>是否为免密实例；<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul></p>
      */
     public $NoAuth;
 
     /**
-     * @var integer 客户端连接数。
+     * @var integer <p>客户端连接数。</p>
      */
     public $ClientLimit;
 
     /**
-     * @var integer DTS状态（内部参数，用户可忽略）。
+     * @var integer <p>DTS状态（内部参数，用户可忽略）。</p>
      */
     public $DtsStatus;
 
     /**
-     * @var integer 分片带宽上限，单位 MB。
+     * @var integer <p>分片带宽上限，单位 MB。</p>
      */
     public $NetLimit;
 
     /**
-     * @var integer 免密实例标识（内部参数，用户可忽略）。
+     * @var integer <p>免密实例标识（内部参数，用户可忽略）。</p>
      */
     public $PasswordFree;
 
     /**
-     * @var integer 实例只读标识（内部参数，用户可忽略）。
+     * @var integer <p>实例只读标识（内部参数，用户可忽略）。</p>
      */
     public $ReadOnly;
 
     /**
-     * @var string 内部参数，用户可忽略。
+     * @var string <p>内部参数，用户可忽略。</p>
      */
     public $Vip6;
 
     /**
-     * @var string 内部参数，用户可忽略。
+     * @var string <p>内部参数，用户可忽略。</p>
      */
     public $RemainBandwidthDuration;
 
     /**
-     * @var integer 实例的磁盘容量大小。
+     * @var integer <p>实例的磁盘容量大小。</p>
      */
     public $DiskSize;
 
     /**
-     * @var string 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+     * @var string <p>监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul></p>
      */
     public $MonitorVersion;
 
     /**
-     * @var integer 客户端最大连接数可设置的最小值。
+     * @var integer <p>客户端最大连接数可设置的最小值。</p>
      */
     public $ClientLimitMin;
 
     /**
-     * @var integer 客户端最大连接数可设置的最大值。
+     * @var integer <p>客户端最大连接数可设置的最大值。</p>
      */
     public $ClientLimitMax;
 
     /**
-     * @var array 实例的节点详细信息。
+     * @var array <p>实例的节点详细信息。</p>
      */
     public $NodeSet;
 
     /**
-     * @var string 实例所在的地域信息，比如ap-guangzhou。
+     * @var string <p>实例所在的地域信息，比如ap-guangzhou。</p>
      */
     public $Region;
 
     /**
-     * @var integer 实例内存容量，单位：GB。KeeWiDB 内存容量
+     * @var integer <p>实例内存容量，单位：GB。KeeWiDB 内存容量</p>
      */
     public $MachineMemory;
 
     /**
-     * @var integer 单分片磁盘大小，单位：MB
+     * @var integer <p>单分片磁盘大小，单位：MB</p>
      */
     public $DiskShardSize;
 
     /**
-     * @var integer 3
+     * @var integer <p>分片数量</p>
      */
     public $DiskShardNum;
 
     /**
-     * @var integer 1
+     * @var integer <p>副本数量</p>
      */
     public $DiskReplicasNum;
 
     /**
-     * @var string 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+     * @var string <p>数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul></p>
      */
     public $Compression;
 
     /**
-     * @param string $InstanceName 实例名称。
-     * @param string $InstanceId 实例 ID。
-     * @param integer $Appid 用户的Appid。
-     * @param integer $ProjectId 项目 ID。
-     * @param integer $RegionId 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li>8：北京。</li></ul>
-     * @param integer $ZoneId 可用区 ID。
-     * @param integer $VpcId VPC 网络 ID， 如：75101。该参数当前暂保留，可忽略。
-     * @param integer $Status 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
-     * @param integer $SubnetId VPC 网络下子网 ID， 如：46315。该参数当前暂保留，可忽略。
-     * @param string $WanIp 实例 VIP。
-     * @param integer $Port 实例端口号。
-     * @param string $Createtime 实例创建时间。
-     * @param float $Size 实例持久内存总容量大小，单位：MB。
-     * @param integer $Type 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
-     * @param integer $AutoRenewFlag 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
-     * @param string $DeadlineTime 实例到期时间。
-     * @param string $Engine 存储引擎。
-     * @param string $ProductType 产品类型。<ul><li>standalone ：标准版。</li><li>cluster ：集群版。</li></ul>
-     * @param string $UniqVpcId VPC 网络 ID， 如：vpc-fk33jsf4****。
-     * @param string $UniqSubnetId VPC 网络下子网 ID，如：subnet-fd3j6l3****。
-     * @param integer $BillingMode 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
-     * @param string $InstanceTitle 实例运行状态描述：如”实例运行中“。
-     * @param string $OfflineTime 计划下线时间。
-     * @param integer $SubStatus 流程中的实例，返回子状态。
-     * @param array $Tags 反亲和性标签
-     * @param integer $RedisShardSize 分片大小。
-     * @param integer $RedisShardNum 分片数量。
-     * @param integer $RedisReplicasNum 副本数量。
-     * @param integer $PriceId 计费 ID。
-     * @param string $CloseTime 隔离时间。
-     * @param integer $SlaveReadWeight 从节点读取权重。
-     * @param array $InstanceTags 实例关联的标签信息。
-     * @param string $ProjectName 项目名称。
-     * @param boolean $NoAuth 是否为免密实例；<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-     * @param integer $ClientLimit 客户端连接数。
-     * @param integer $DtsStatus DTS状态（内部参数，用户可忽略）。
-     * @param integer $NetLimit 分片带宽上限，单位 MB。
-     * @param integer $PasswordFree 免密实例标识（内部参数，用户可忽略）。
-     * @param integer $ReadOnly 实例只读标识（内部参数，用户可忽略）。
-     * @param string $Vip6 内部参数，用户可忽略。
-     * @param string $RemainBandwidthDuration 内部参数，用户可忽略。
-     * @param integer $DiskSize 实例的磁盘容量大小。
-     * @param string $MonitorVersion 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
-     * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值。
-     * @param integer $ClientLimitMax 客户端最大连接数可设置的最大值。
-     * @param array $NodeSet 实例的节点详细信息。
-     * @param string $Region 实例所在的地域信息，比如ap-guangzhou。
-     * @param integer $MachineMemory 实例内存容量，单位：GB。KeeWiDB 内存容量
-     * @param integer $DiskShardSize 单分片磁盘大小，单位：MB
-     * @param integer $DiskShardNum 3
-     * @param integer $DiskReplicasNum 1
-     * @param string $Compression 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+     * @param string $InstanceName <p>实例名称。</p>
+     * @param string $InstanceId <p>实例 ID。</p>
+     * @param integer $Appid <p>用户的Appid。</p>
+     * @param integer $ProjectId <p>项目 ID。</p>
+     * @param integer $RegionId <p>地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li>8：北京。</li></ul></p>
+     * @param integer $ZoneId <p>可用区 ID。</p>
+     * @param integer $VpcId <p>VPC 网络 ID， 如：75101。该参数当前暂保留，可忽略。</p>
+     * @param integer $Status <p>实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul></p>
+     * @param integer $SubnetId <p>VPC 网络下子网 ID， 如：46315。该参数当前暂保留，可忽略。</p>
+     * @param string $WanIp <p>实例 VIP。</p>
+     * @param integer $Port <p>实例端口号。</p>
+     * @param string $Createtime <p>实例创建时间。</p>
+     * @param float $Size <p>实例持久内存总容量大小，单位：MB。</p>
+     * @param integer $Type <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
+     * @param integer $AutoRenewFlag <p>实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul></p>
+     * @param string $DeadlineTime <p>实例到期时间。</p>
+     * @param string $Engine <p>存储引擎。</p>
+     * @param string $ProductType <p>产品类型。<ul><li>standalone ：标准版。</li><li>cluster ：集群版。</li></ul></p>
+     * @param string $UniqVpcId <p>VPC 网络 ID， 如：vpc-fk33jsf4****。</p>
+     * @param string $UniqSubnetId <p>VPC 网络下子网 ID，如：subnet-fd3j6l3****。</p>
+     * @param integer $BillingMode <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+     * @param string $InstanceTitle <p>实例运行状态描述：如”实例运行中“。</p>
+     * @param string $OfflineTime <p>计划下线时间。</p>
+     * @param integer $SubStatus <p>流程中的实例，返回子状态。</p>
+     * @param array $Tags <p>反亲和性标签</p>
+     * @param integer $RedisShardSize <p>分片大小。</p>
+     * @param integer $RedisShardNum <p>分片数量。</p>
+     * @param integer $RedisReplicasNum <p>副本数量。</p>
+     * @param integer $PriceId <p>计费 ID。</p>
+     * @param string $CloseTime <p>隔离时间。</p>
+     * @param integer $SlaveReadWeight <p>从节点读取权重。</p>
+     * @param array $InstanceTags <p>实例关联的标签信息。</p>
+     * @param string $ProjectName <p>项目名称。</p>
+     * @param boolean $NoAuth <p>是否为免密实例；<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul></p>
+     * @param integer $ClientLimit <p>客户端连接数。</p>
+     * @param integer $DtsStatus <p>DTS状态（内部参数，用户可忽略）。</p>
+     * @param integer $NetLimit <p>分片带宽上限，单位 MB。</p>
+     * @param integer $PasswordFree <p>免密实例标识（内部参数，用户可忽略）。</p>
+     * @param integer $ReadOnly <p>实例只读标识（内部参数，用户可忽略）。</p>
+     * @param string $Vip6 <p>内部参数，用户可忽略。</p>
+     * @param string $RemainBandwidthDuration <p>内部参数，用户可忽略。</p>
+     * @param integer $DiskSize <p>实例的磁盘容量大小。</p>
+     * @param string $MonitorVersion <p>监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul></p>
+     * @param integer $ClientLimitMin <p>客户端最大连接数可设置的最小值。</p>
+     * @param integer $ClientLimitMax <p>客户端最大连接数可设置的最大值。</p>
+     * @param array $NodeSet <p>实例的节点详细信息。</p>
+     * @param string $Region <p>实例所在的地域信息，比如ap-guangzhou。</p>
+     * @param integer $MachineMemory <p>实例内存容量，单位：GB。KeeWiDB 内存容量</p>
+     * @param integer $DiskShardSize <p>单分片磁盘大小，单位：MB</p>
+     * @param integer $DiskShardNum <p>分片数量</p>
+     * @param integer $DiskReplicasNum <p>副本数量</p>
+     * @param string $Compression <p>数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul></p>
      */
     function __construct()
     {

@@ -20,130 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 弹性扩缩容记录
  *
- * @method string getStrategyName() 获取扩缩容规则名。
- * @method void setStrategyName(string $StrategyName) 设置扩缩容规则名。
- * @method string getScaleAction() 获取"SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。
- * @method void setScaleAction(string $ScaleAction) 设置"SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。
- * @method string getActionStatus() 获取取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。
- * @method void setActionStatus(string $ActionStatus) 设置取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。
- * @method string getActionTime() 获取流程触发时间。
- * @method void setActionTime(string $ActionTime) 设置流程触发时间。
- * @method string getScaleInfo() 获取扩缩容相关描述信息。
- * @method void setScaleInfo(string $ScaleInfo) 设置扩缩容相关描述信息。
- * @method integer getExpectScaleNum() 获取只在ScaleAction为SCALE_OUT时有效。
- * @method void setExpectScaleNum(integer $ExpectScaleNum) 设置只在ScaleAction为SCALE_OUT时有效。
- * @method string getEndTime() 获取流程结束时间。
- * @method void setEndTime(string $EndTime) 设置流程结束时间。
- * @method integer getStrategyType() 获取策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩
- * @method void setStrategyType(integer $StrategyType) 设置策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩
- * @method string getSpecInfo() 获取扩容时所使用规格信息。
- * @method void setSpecInfo(string $SpecInfo) 设置扩容时所使用规格信息。
- * @method integer getCompensateFlag() 获取补偿扩容，0表示不开启，1表示开启
- * @method void setCompensateFlag(integer $CompensateFlag) 设置补偿扩容，0表示不开启，1表示开启
- * @method integer getCompensateCount() 获取补偿次数
- * @method void setCompensateCount(integer $CompensateCount) 设置补偿次数
- * @method integer getRetryCount() 获取重试次数
- * @method void setRetryCount(integer $RetryCount) 设置重试次数
- * @method string getRetryInfo() 获取重试信息
- * @method void setRetryInfo(string $RetryInfo) 设置重试信息
- * @method string getRetryEnReason() 获取重试英文描述
- * @method void setRetryEnReason(string $RetryEnReason) 设置重试英文描述
- * @method string getRetryReason() 获取重试描述
- * @method void setRetryReason(string $RetryReason) 设置重试描述
+ * @method string getStrategyName() 获取<p>扩缩容规则名。</p>
+ * @method void setStrategyName(string $StrategyName) 设置<p>扩缩容规则名。</p>
+ * @method string getScaleAction() 获取<p>&quot;SCALE_OUT&quot;和&quot;SCALE_IN&quot;，分别表示扩容和缩容。</p>
+ * @method void setScaleAction(string $ScaleAction) 设置<p>&quot;SCALE_OUT&quot;和&quot;SCALE_IN&quot;，分别表示扩容和缩容。</p>
+ * @method string getActionStatus() 获取<p>取值为&quot;SUCCESS&quot;,&quot;FAILED&quot;,&quot;PART_SUCCESS&quot;,&quot;IN_PROCESS&quot;，分别表示成功、失败、部分成功和流程中。</p>
+ * @method void setActionStatus(string $ActionStatus) 设置<p>取值为&quot;SUCCESS&quot;,&quot;FAILED&quot;,&quot;PART_SUCCESS&quot;,&quot;IN_PROCESS&quot;，分别表示成功、失败、部分成功和流程中。</p>
+ * @method string getActionTime() 获取<p>流程触发时间。</p>
+ * @method void setActionTime(string $ActionTime) 设置<p>流程触发时间。</p>
+ * @method string getScaleInfo() 获取<p>扩缩容相关描述信息。</p>
+ * @method void setScaleInfo(string $ScaleInfo) 设置<p>扩缩容相关描述信息。</p>
+ * @method integer getExpectScaleNum() 获取<p>只在ScaleAction为SCALE_OUT时有效。</p>
+ * @method void setExpectScaleNum(integer $ExpectScaleNum) 设置<p>只在ScaleAction为SCALE_OUT时有效。</p>
+ * @method string getEndTime() 获取<p>流程结束时间。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>流程结束时间。</p>
+ * @method integer getStrategyType() 获取<p>策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩</p>
+ * @method void setStrategyType(integer $StrategyType) 设置<p>策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩</p>
+ * @method string getSpecInfo() 获取<p>扩容时所使用规格信息。</p>
+ * @method void setSpecInfo(string $SpecInfo) 设置<p>扩容时所使用规格信息。</p>
+ * @method integer getCompensateFlag() 获取<p>补偿扩容，0表示不开启，1表示开启</p>
+ * @method void setCompensateFlag(integer $CompensateFlag) 设置<p>补偿扩容，0表示不开启，1表示开启</p>
+ * @method integer getCompensateCount() 获取<p>补偿次数</p>
+ * @method void setCompensateCount(integer $CompensateCount) 设置<p>补偿次数</p>
+ * @method integer getRetryCount() 获取<p>重试次数</p>
+ * @method void setRetryCount(integer $RetryCount) 设置<p>重试次数</p>
+ * @method string getRetryInfo() 获取<p>重试信息</p>
+ * @method void setRetryInfo(string $RetryInfo) 设置<p>重试信息</p>
+ * @method string getRetryEnReason() 获取<p>重试英文描述</p>
+ * @method void setRetryEnReason(string $RetryEnReason) 设置<p>重试英文描述</p>
+ * @method string getRetryReason() 获取<p>重试描述</p>
+ * @method void setRetryReason(string $RetryReason) 设置<p>重试描述</p>
+ * @method integer getShortageClass() 获取<p>缺失分类</p>
+ * @method void setShortageClass(integer $ShortageClass) 设置<p>缺失分类</p>
  */
 class AutoScaleRecord extends AbstractModel
 {
     /**
-     * @var string 扩缩容规则名。
+     * @var string <p>扩缩容规则名。</p>
      */
     public $StrategyName;
 
     /**
-     * @var string "SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。
+     * @var string <p>&quot;SCALE_OUT&quot;和&quot;SCALE_IN&quot;，分别表示扩容和缩容。</p>
      */
     public $ScaleAction;
 
     /**
-     * @var string 取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。
+     * @var string <p>取值为&quot;SUCCESS&quot;,&quot;FAILED&quot;,&quot;PART_SUCCESS&quot;,&quot;IN_PROCESS&quot;，分别表示成功、失败、部分成功和流程中。</p>
      */
     public $ActionStatus;
 
     /**
-     * @var string 流程触发时间。
+     * @var string <p>流程触发时间。</p>
      */
     public $ActionTime;
 
     /**
-     * @var string 扩缩容相关描述信息。
+     * @var string <p>扩缩容相关描述信息。</p>
      */
     public $ScaleInfo;
 
     /**
-     * @var integer 只在ScaleAction为SCALE_OUT时有效。
+     * @var integer <p>只在ScaleAction为SCALE_OUT时有效。</p>
      */
     public $ExpectScaleNum;
 
     /**
-     * @var string 流程结束时间。
+     * @var string <p>流程结束时间。</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩
+     * @var integer <p>策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩</p>
      */
     public $StrategyType;
 
     /**
-     * @var string 扩容时所使用规格信息。
+     * @var string <p>扩容时所使用规格信息。</p>
      */
     public $SpecInfo;
 
     /**
-     * @var integer 补偿扩容，0表示不开启，1表示开启
+     * @var integer <p>补偿扩容，0表示不开启，1表示开启</p>
      */
     public $CompensateFlag;
 
     /**
-     * @var integer 补偿次数
+     * @var integer <p>补偿次数</p>
      */
     public $CompensateCount;
 
     /**
-     * @var integer 重试次数
+     * @var integer <p>重试次数</p>
      */
     public $RetryCount;
 
     /**
-     * @var string 重试信息
+     * @var string <p>重试信息</p>
      */
     public $RetryInfo;
 
     /**
-     * @var string 重试英文描述
+     * @var string <p>重试英文描述</p>
      */
     public $RetryEnReason;
 
     /**
-     * @var string 重试描述
+     * @var string <p>重试描述</p>
      */
     public $RetryReason;
 
     /**
-     * @param string $StrategyName 扩缩容规则名。
-     * @param string $ScaleAction "SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。
-     * @param string $ActionStatus 取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。
-     * @param string $ActionTime 流程触发时间。
-     * @param string $ScaleInfo 扩缩容相关描述信息。
-     * @param integer $ExpectScaleNum 只在ScaleAction为SCALE_OUT时有效。
-     * @param string $EndTime 流程结束时间。
-     * @param integer $StrategyType 策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩
-     * @param string $SpecInfo 扩容时所使用规格信息。
-     * @param integer $CompensateFlag 补偿扩容，0表示不开启，1表示开启
-     * @param integer $CompensateCount 补偿次数
-     * @param integer $RetryCount 重试次数
-     * @param string $RetryInfo 重试信息
-     * @param string $RetryEnReason 重试英文描述
-     * @param string $RetryReason 重试描述
+     * @var integer <p>缺失分类</p>
+     */
+    public $ShortageClass;
+
+    /**
+     * @param string $StrategyName <p>扩缩容规则名。</p>
+     * @param string $ScaleAction <p>&quot;SCALE_OUT&quot;和&quot;SCALE_IN&quot;，分别表示扩容和缩容。</p>
+     * @param string $ActionStatus <p>取值为&quot;SUCCESS&quot;,&quot;FAILED&quot;,&quot;PART_SUCCESS&quot;,&quot;IN_PROCESS&quot;，分别表示成功、失败、部分成功和流程中。</p>
+     * @param string $ActionTime <p>流程触发时间。</p>
+     * @param string $ScaleInfo <p>扩缩容相关描述信息。</p>
+     * @param integer $ExpectScaleNum <p>只在ScaleAction为SCALE_OUT时有效。</p>
+     * @param string $EndTime <p>流程结束时间。</p>
+     * @param integer $StrategyType <p>策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩</p>
+     * @param string $SpecInfo <p>扩容时所使用规格信息。</p>
+     * @param integer $CompensateFlag <p>补偿扩容，0表示不开启，1表示开启</p>
+     * @param integer $CompensateCount <p>补偿次数</p>
+     * @param integer $RetryCount <p>重试次数</p>
+     * @param string $RetryInfo <p>重试信息</p>
+     * @param string $RetryEnReason <p>重试英文描述</p>
+     * @param string $RetryReason <p>重试描述</p>
+     * @param integer $ShortageClass <p>缺失分类</p>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class AutoScaleRecord extends AbstractModel
 
         if (array_key_exists("RetryReason",$param) and $param["RetryReason"] !== null) {
             $this->RetryReason = $param["RetryReason"];
+        }
+
+        if (array_key_exists("ShortageClass",$param) and $param["ShortageClass"] !== null) {
+            $this->ShortageClass = $param["ShortageClass"];
         }
     }
 }

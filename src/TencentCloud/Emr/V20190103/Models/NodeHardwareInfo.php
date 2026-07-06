@@ -20,518 +20,514 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节点硬件信息
  *
- * @method integer getAppId() 获取用户APPID
- * @method void setAppId(integer $AppId) 设置用户APPID
- * @method string getSerialNo() 获取序列号
- * @method void setSerialNo(string $SerialNo) 设置序列号
- * @method string getOrderNo() 获取机器实例ID
- * @method void setOrderNo(string $OrderNo) 设置机器实例ID
- * @method string getWanIp() 获取master节点绑定外网IP
- * @method void setWanIp(string $WanIp) 设置master节点绑定外网IP
- * @method integer getFlag() 获取节点类型。0:common节点；1:master节点
-；2:core节点；3:task节点
- * @method void setFlag(integer $Flag) 设置节点类型。0:common节点；1:master节点
-；2:core节点；3:task节点
- * @method string getSpec() 获取节点规格
- * @method void setSpec(string $Spec) 设置节点规格
- * @method integer getCpuNum() 获取节点核数
- * @method void setCpuNum(integer $CpuNum) 设置节点核数
- * @method integer getMemSize() 获取节点内存,单位b
- * @method void setMemSize(integer $MemSize) 设置节点内存,单位b
- * @method string getMemDesc() 获取节点内存描述，单位GB
- * @method void setMemDesc(string $MemDesc) 设置节点内存描述，单位GB
- * @method integer getRegionId() 获取节点所在region
- * @method void setRegionId(integer $RegionId) 设置节点所在region
- * @method integer getZoneId() 获取节点所在Zone
- * @method void setZoneId(integer $ZoneId) 设置节点所在Zone
- * @method string getApplyTime() 获取申请时间
- * @method void setApplyTime(string $ApplyTime) 设置申请时间
- * @method string getFreeTime() 获取释放时间
- * @method void setFreeTime(string $FreeTime) 设置释放时间
- * @method string getDiskSize() 获取硬盘大小
- * @method void setDiskSize(string $DiskSize) 设置硬盘大小
- * @method string getNameTag() 获取节点描述
- * @method void setNameTag(string $NameTag) 设置节点描述
- * @method string getServices() 获取节点部署服务
- * @method void setServices(string $Services) 设置节点部署服务
- * @method integer getStorageType() 获取磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
-
- * @method void setStorageType(integer $StorageType) 设置磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
-
- * @method integer getRootSize() 获取系统盘大小，单位GB
- * @method void setRootSize(integer $RootSize) 设置系统盘大小，单位GB
- * @method integer getChargeType() 获取付费类型，0：按量计费；1：包年包月
- * @method void setChargeType(integer $ChargeType) 设置付费类型，0：按量计费；1：包年包月
- * @method string getCdbIp() 获取数据库IP
- * @method void setCdbIp(string $CdbIp) 设置数据库IP
- * @method integer getCdbPort() 获取数据库端口
- * @method void setCdbPort(integer $CdbPort) 设置数据库端口
- * @method integer getHwDiskSize() 获取硬盘容量,单位b
- * @method void setHwDiskSize(integer $HwDiskSize) 设置硬盘容量,单位b
- * @method string getHwDiskSizeDesc() 获取硬盘容量描述
- * @method void setHwDiskSizeDesc(string $HwDiskSizeDesc) 设置硬盘容量描述
- * @method integer getHwMemSize() 获取内存容量，单位b
- * @method void setHwMemSize(integer $HwMemSize) 设置内存容量，单位b
- * @method string getHwMemSizeDesc() 获取内存容量描述
- * @method void setHwMemSizeDesc(string $HwMemSizeDesc) 设置内存容量描述
- * @method string getExpireTime() 获取过期时间
- * @method void setExpireTime(string $ExpireTime) 设置过期时间
- * @method string getEmrResourceId() 获取节点资源ID
- * @method void setEmrResourceId(string $EmrResourceId) 设置节点资源ID
- * @method integer getIsAutoRenew() 获取续费标志
- * @method void setIsAutoRenew(integer $IsAutoRenew) 设置续费标志
- * @method string getDeviceClass() 获取设备标识
- * @method void setDeviceClass(string $DeviceClass) 设置设备标识
- * @method integer getMutable() 获取支持变配
- * @method void setMutable(integer $Mutable) 设置支持变配
- * @method array getMCMultiDisk() 获取多云盘
+ * @method integer getAppId() 获取<p>用户APPID</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户APPID</p>
+ * @method string getSerialNo() 获取<p>序列号</p>
+ * @method void setSerialNo(string $SerialNo) 设置<p>序列号</p>
+ * @method string getOrderNo() 获取<p>机器实例ID</p>
+ * @method void setOrderNo(string $OrderNo) 设置<p>机器实例ID</p>
+ * @method string getWanIp() 获取<p>master节点绑定外网IP</p>
+ * @method void setWanIp(string $WanIp) 设置<p>master节点绑定外网IP</p>
+ * @method integer getFlag() 获取<p>节点类型。0:common节点；1:master节点<br>；2:core节点；3:task节点</p>
+ * @method void setFlag(integer $Flag) 设置<p>节点类型。0:common节点；1:master节点<br>；2:core节点；3:task节点</p>
+ * @method string getSpec() 获取<p>节点规格</p>
+ * @method void setSpec(string $Spec) 设置<p>节点规格</p>
+ * @method integer getCpuNum() 获取<p>节点核数</p>
+ * @method void setCpuNum(integer $CpuNum) 设置<p>节点核数</p>
+ * @method integer getMemSize() 获取<p>节点内存,单位b</p>
+ * @method void setMemSize(integer $MemSize) 设置<p>节点内存,单位b</p>
+ * @method string getMemDesc() 获取<p>节点内存描述，单位GB</p>
+ * @method void setMemDesc(string $MemDesc) 设置<p>节点内存描述，单位GB</p>
+ * @method integer getRegionId() 获取<p>节点所在region</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>节点所在region</p>
+ * @method integer getZoneId() 获取<p>节点所在Zone</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>节点所在Zone</p>
+ * @method string getApplyTime() 获取<p>申请时间</p>
+ * @method void setApplyTime(string $ApplyTime) 设置<p>申请时间</p>
+ * @method string getFreeTime() 获取<p>释放时间</p>
+ * @method void setFreeTime(string $FreeTime) 设置<p>释放时间</p>
+ * @method string getDiskSize() 获取<p>硬盘大小</p>
+ * @method void setDiskSize(string $DiskSize) 设置<p>硬盘大小</p>
+ * @method string getNameTag() 获取<p>节点描述</p>
+ * @method void setNameTag(string $NameTag) 设置<p>节点描述</p>
+ * @method string getServices() 获取<p>节点部署服务</p>
+ * @method void setServices(string $Services) 设置<p>节点部署服务</p>
+ * @method integer getStorageType() 获取<p>磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘</p>
+ * @method void setStorageType(integer $StorageType) 设置<p>磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘</p>
+ * @method integer getRootSize() 获取<p>系统盘大小，单位GB</p>
+ * @method void setRootSize(integer $RootSize) 设置<p>系统盘大小，单位GB</p>
+ * @method integer getChargeType() 获取<p>付费类型，0：按量计费；1：包年包月</p>
+ * @method void setChargeType(integer $ChargeType) 设置<p>付费类型，0：按量计费；1：包年包月</p>
+ * @method string getCdbIp() 获取<p>数据库IP</p>
+ * @method void setCdbIp(string $CdbIp) 设置<p>数据库IP</p>
+ * @method integer getCdbPort() 获取<p>数据库端口</p>
+ * @method void setCdbPort(integer $CdbPort) 设置<p>数据库端口</p>
+ * @method integer getHwDiskSize() 获取<p>硬盘容量,单位b</p>
+ * @method void setHwDiskSize(integer $HwDiskSize) 设置<p>硬盘容量,单位b</p>
+ * @method string getHwDiskSizeDesc() 获取<p>硬盘容量描述</p>
+ * @method void setHwDiskSizeDesc(string $HwDiskSizeDesc) 设置<p>硬盘容量描述</p>
+ * @method integer getHwMemSize() 获取<p>内存容量，单位b</p>
+ * @method void setHwMemSize(integer $HwMemSize) 设置<p>内存容量，单位b</p>
+ * @method string getHwMemSizeDesc() 获取<p>内存容量描述</p>
+ * @method void setHwMemSizeDesc(string $HwMemSizeDesc) 设置<p>内存容量描述</p>
+ * @method string getExpireTime() 获取<p>过期时间</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>过期时间</p>
+ * @method string getEmrResourceId() 获取<p>节点资源ID</p>
+ * @method void setEmrResourceId(string $EmrResourceId) 设置<p>节点资源ID</p>
+ * @method integer getIsAutoRenew() 获取<p>续费标志</p>
+ * @method void setIsAutoRenew(integer $IsAutoRenew) 设置<p>续费标志</p>
+ * @method string getDeviceClass() 获取<p>设备标识</p>
+ * @method void setDeviceClass(string $DeviceClass) 设置<p>设备标识</p>
+ * @method integer getMutable() 获取<p>支持变配</p>
+ * @method void setMutable(integer $Mutable) 设置<p>支持变配</p>
+ * @method array getMCMultiDisk() 获取<p>多云盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMCMultiDisk(array $MCMultiDisk) 设置多云盘
+ * @method void setMCMultiDisk(array $MCMultiDisk) 设置<p>多云盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CdbInfo getCdbNodeInfo() 获取数据库信息
+ * @method CdbInfo getCdbNodeInfo() 获取<p>数据库信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCdbNodeInfo(CdbInfo $CdbNodeInfo) 设置数据库信息
+ * @method void setCdbNodeInfo(CdbInfo $CdbNodeInfo) 设置<p>数据库信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIp() 获取内网IP
- * @method void setIp(string $Ip) 设置内网IP
- * @method integer getDestroyable() 获取此节点是否可销毁，1可销毁，0不可销毁
- * @method void setDestroyable(integer $Destroyable) 设置此节点是否可销毁，1可销毁，0不可销毁
- * @method array getTags() 获取节点绑定的标签
+ * @method string getIp() 获取<p>内网IP</p>
+ * @method void setIp(string $Ip) 设置<p>内网IP</p>
+ * @method integer getDestroyable() 获取<p>此节点是否可销毁，1可销毁，0不可销毁</p>
+ * @method void setDestroyable(integer $Destroyable) 设置<p>此节点是否可销毁，1可销毁，0不可销毁</p>
+ * @method array getTags() 获取<p>节点绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置节点绑定的标签
+ * @method void setTags(array $Tags) 设置<p>节点绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAutoFlag() 获取是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
- * @method void setAutoFlag(integer $AutoFlag) 设置是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
- * @method string getHardwareResourceType() 获取资源类型, host/pod
- * @method void setHardwareResourceType(string $HardwareResourceType) 设置资源类型, host/pod
- * @method integer getIsDynamicSpec() 获取是否浮动规格，1是，0否
- * @method void setIsDynamicSpec(integer $IsDynamicSpec) 设置是否浮动规格，1是，0否
- * @method string getDynamicPodSpec() 获取浮动规格值json字符串
- * @method void setDynamicPodSpec(string $DynamicPodSpec) 设置浮动规格值json字符串
- * @method integer getSupportModifyPayMode() 获取是否支持变更计费类型 1是，0否
- * @method void setSupportModifyPayMode(integer $SupportModifyPayMode) 设置是否支持变更计费类型 1是，0否
- * @method integer getRootStorageType() 获取系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
-
- * @method void setRootStorageType(integer $RootStorageType) 设置系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
-
- * @method string getZone() 获取可用区信息
- * @method void setZone(string $Zone) 设置可用区信息
- * @method SubnetInfo getSubnetInfo() 获取子网
+ * @method integer getAutoFlag() 获取<p>是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。</p>
+ * @method void setAutoFlag(integer $AutoFlag) 设置<p>是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。</p>
+ * @method string getHardwareResourceType() 获取<p>资源类型, host/pod</p>
+ * @method void setHardwareResourceType(string $HardwareResourceType) 设置<p>资源类型, host/pod</p>
+ * @method integer getIsDynamicSpec() 获取<p>是否浮动规格，1是，0否</p>
+ * @method void setIsDynamicSpec(integer $IsDynamicSpec) 设置<p>是否浮动规格，1是，0否</p>
+ * @method string getDynamicPodSpec() 获取<p>浮动规格值json字符串</p>
+ * @method void setDynamicPodSpec(string $DynamicPodSpec) 设置<p>浮动规格值json字符串</p>
+ * @method integer getSupportModifyPayMode() 获取<p>是否支持变更计费类型 1是，0否</p>
+ * @method void setSupportModifyPayMode(integer $SupportModifyPayMode) 设置<p>是否支持变更计费类型 1是，0否</p>
+ * @method integer getRootStorageType() 获取<p>系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘</p>
+ * @method void setRootStorageType(integer $RootStorageType) 设置<p>系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘</p>
+ * @method string getZone() 获取<p>可用区信息</p>
+ * @method void setZone(string $Zone) 设置<p>可用区信息</p>
+ * @method SubnetInfo getSubnetInfo() 获取<p>子网</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnetInfo(SubnetInfo $SubnetInfo) 设置子网
+ * @method void setSubnetInfo(SubnetInfo $SubnetInfo) 设置<p>子网</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClients() 获取客户端
- * @method void setClients(string $Clients) 设置客户端
- * @method string getCurrentTime() 获取系统当前时间
- * @method void setCurrentTime(string $CurrentTime) 设置系统当前时间
- * @method integer getIsFederation() 获取是否用于联邦 ,1是，0否
- * @method void setIsFederation(integer $IsFederation) 设置是否用于联邦 ,1是，0否
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getServiceClient() 获取服务
- * @method void setServiceClient(string $ServiceClient) 设置服务
- * @method boolean getDisableApiTermination() 获取该实例是否开启实例保护，true为开启 false为关闭
- * @method void setDisableApiTermination(boolean $DisableApiTermination) 设置该实例是否开启实例保护，true为开启 false为关闭
- * @method integer getTradeVersion() 获取0表示老计费，1表示新计费
- * @method void setTradeVersion(integer $TradeVersion) 设置0表示老计费，1表示新计费
- * @method string getServicesStatus() 获取各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
- * @method void setServicesStatus(string $ServicesStatus) 设置各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method string getSharedClusterId() 获取共享集群id
- * @method void setSharedClusterId(string $SharedClusterId) 设置共享集群id
- * @method string getSharedClusterIdDesc() 获取共享集群id描述
- * @method void setSharedClusterIdDesc(string $SharedClusterIdDesc) 设置共享集群id描述
- * @method boolean getTimingResource() 获取是否是定时销毁资源
- * @method void setTimingResource(boolean $TimingResource) 设置是否是定时销毁资源
- * @method string getTkeClusterId() 获取资源类型（HardwareResourceType）为pod时，对应的TKE集群id
- * @method void setTkeClusterId(string $TkeClusterId) 设置资源类型（HardwareResourceType）为pod时，对应的TKE集群id
- * @method array getConfigurableServices() 获取新挂磁盘时可支持配置的服务名称列表
- * @method void setConfigurableServices(array $ConfigurableServices) 设置新挂磁盘时可支持配置的服务名称列表
- * @method string getNodeMark() 获取节点标注信息，目前只提供给tf平台使用
- * @method void setNodeMark(string $NodeMark) 设置节点标注信息，目前只提供给tf平台使用
- * @method boolean getUnderwriteSetAutoRenew() 获取包销资源是否支持设置自动续费
- * @method void setUnderwriteSetAutoRenew(boolean $UnderwriteSetAutoRenew) 设置包销资源是否支持设置自动续费
- * @method string getGpuDesc() 获取Gpu信息
- * @method void setGpuDesc(string $GpuDesc) 设置Gpu信息
+ * @method string getClients() 获取<p>客户端</p>
+ * @method void setClients(string $Clients) 设置<p>客户端</p>
+ * @method string getCurrentTime() 获取<p>系统当前时间</p>
+ * @method void setCurrentTime(string $CurrentTime) 设置<p>系统当前时间</p>
+ * @method integer getIsFederation() 获取<p>是否用于联邦 ,1是，0否</p>
+ * @method void setIsFederation(integer $IsFederation) 设置<p>是否用于联邦 ,1是，0否</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method string getServiceClient() 获取<p>服务</p>
+ * @method void setServiceClient(string $ServiceClient) 设置<p>服务</p>
+ * @method boolean getDisableApiTermination() 获取<p>该实例是否开启实例保护，true为开启 false为关闭</p>
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) 设置<p>该实例是否开启实例保护，true为开启 false为关闭</p>
+ * @method integer getTradeVersion() 获取<p>0表示老计费，1表示新计费</p>
+ * @method void setTradeVersion(integer $TradeVersion) 设置<p>0表示老计费，1表示新计费</p>
+ * @method string getServicesStatus() 获取<p>各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止</p>
+ * @method void setServicesStatus(string $ServicesStatus) 设置<p>各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getSharedClusterId() 获取<p>共享集群id</p>
+ * @method void setSharedClusterId(string $SharedClusterId) 设置<p>共享集群id</p>
+ * @method string getSharedClusterIdDesc() 获取<p>共享集群id描述</p>
+ * @method void setSharedClusterIdDesc(string $SharedClusterIdDesc) 设置<p>共享集群id描述</p>
+ * @method boolean getTimingResource() 获取<p>是否是定时销毁资源</p>
+ * @method void setTimingResource(boolean $TimingResource) 设置<p>是否是定时销毁资源</p>
+ * @method string getTkeClusterId() 获取<p>资源类型（HardwareResourceType）为pod时，对应的TKE集群id</p>
+ * @method void setTkeClusterId(string $TkeClusterId) 设置<p>资源类型（HardwareResourceType）为pod时，对应的TKE集群id</p>
+ * @method array getConfigurableServices() 获取<p>新挂磁盘时可支持配置的服务名称列表</p>
+ * @method void setConfigurableServices(array $ConfigurableServices) 设置<p>新挂磁盘时可支持配置的服务名称列表</p>
+ * @method string getNodeMark() 获取<p>节点标注信息，目前只提供给tf平台使用</p>
+ * @method void setNodeMark(string $NodeMark) 设置<p>节点标注信息，目前只提供给tf平台使用</p>
+ * @method boolean getUnderwriteSetAutoRenew() 获取<p>包销资源是否支持设置自动续费</p>
+ * @method void setUnderwriteSetAutoRenew(boolean $UnderwriteSetAutoRenew) 设置<p>包销资源是否支持设置自动续费</p>
+ * @method string getGpuDesc() 获取<p>Gpu信息</p>
+ * @method void setGpuDesc(string $GpuDesc) 设置<p>Gpu信息</p>
+ * @method array getDiskHealthIssues() 获取<p>磁盘问题描述</p>
+ * @method void setDiskHealthIssues(array $DiskHealthIssues) 设置<p>磁盘问题描述</p>
  */
 class NodeHardwareInfo extends AbstractModel
 {
     /**
-     * @var integer 用户APPID
+     * @var integer <p>用户APPID</p>
      */
     public $AppId;
 
     /**
-     * @var string 序列号
+     * @var string <p>序列号</p>
      */
     public $SerialNo;
 
     /**
-     * @var string 机器实例ID
+     * @var string <p>机器实例ID</p>
      */
     public $OrderNo;
 
     /**
-     * @var string master节点绑定外网IP
+     * @var string <p>master节点绑定外网IP</p>
      */
     public $WanIp;
 
     /**
-     * @var integer 节点类型。0:common节点；1:master节点
-；2:core节点；3:task节点
+     * @var integer <p>节点类型。0:common节点；1:master节点<br>；2:core节点；3:task节点</p>
      */
     public $Flag;
 
     /**
-     * @var string 节点规格
+     * @var string <p>节点规格</p>
      */
     public $Spec;
 
     /**
-     * @var integer 节点核数
+     * @var integer <p>节点核数</p>
      */
     public $CpuNum;
 
     /**
-     * @var integer 节点内存,单位b
+     * @var integer <p>节点内存,单位b</p>
      */
     public $MemSize;
 
     /**
-     * @var string 节点内存描述，单位GB
+     * @var string <p>节点内存描述，单位GB</p>
      */
     public $MemDesc;
 
     /**
-     * @var integer 节点所在region
+     * @var integer <p>节点所在region</p>
      */
     public $RegionId;
 
     /**
-     * @var integer 节点所在Zone
+     * @var integer <p>节点所在Zone</p>
      */
     public $ZoneId;
 
     /**
-     * @var string 申请时间
+     * @var string <p>申请时间</p>
      */
     public $ApplyTime;
 
     /**
-     * @var string 释放时间
+     * @var string <p>释放时间</p>
      */
     public $FreeTime;
 
     /**
-     * @var string 硬盘大小
+     * @var string <p>硬盘大小</p>
      */
     public $DiskSize;
 
     /**
-     * @var string 节点描述
+     * @var string <p>节点描述</p>
      */
     public $NameTag;
 
     /**
-     * @var string 节点部署服务
+     * @var string <p>节点部署服务</p>
      */
     public $Services;
 
     /**
-     * @var integer 磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
-
+     * @var integer <p>磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘</p>
      */
     public $StorageType;
 
     /**
-     * @var integer 系统盘大小，单位GB
+     * @var integer <p>系统盘大小，单位GB</p>
      */
     public $RootSize;
 
     /**
-     * @var integer 付费类型，0：按量计费；1：包年包月
+     * @var integer <p>付费类型，0：按量计费；1：包年包月</p>
      */
     public $ChargeType;
 
     /**
-     * @var string 数据库IP
+     * @var string <p>数据库IP</p>
      */
     public $CdbIp;
 
     /**
-     * @var integer 数据库端口
+     * @var integer <p>数据库端口</p>
      */
     public $CdbPort;
 
     /**
-     * @var integer 硬盘容量,单位b
+     * @var integer <p>硬盘容量,单位b</p>
      */
     public $HwDiskSize;
 
     /**
-     * @var string 硬盘容量描述
+     * @var string <p>硬盘容量描述</p>
      */
     public $HwDiskSizeDesc;
 
     /**
-     * @var integer 内存容量，单位b
+     * @var integer <p>内存容量，单位b</p>
      */
     public $HwMemSize;
 
     /**
-     * @var string 内存容量描述
+     * @var string <p>内存容量描述</p>
      */
     public $HwMemSizeDesc;
 
     /**
-     * @var string 过期时间
+     * @var string <p>过期时间</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 节点资源ID
+     * @var string <p>节点资源ID</p>
      */
     public $EmrResourceId;
 
     /**
-     * @var integer 续费标志
+     * @var integer <p>续费标志</p>
      */
     public $IsAutoRenew;
 
     /**
-     * @var string 设备标识
+     * @var string <p>设备标识</p>
      */
     public $DeviceClass;
 
     /**
-     * @var integer 支持变配
+     * @var integer <p>支持变配</p>
      */
     public $Mutable;
 
     /**
-     * @var array 多云盘
+     * @var array <p>多云盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MCMultiDisk;
 
     /**
-     * @var CdbInfo 数据库信息
+     * @var CdbInfo <p>数据库信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdbNodeInfo;
 
     /**
-     * @var string 内网IP
+     * @var string <p>内网IP</p>
      */
     public $Ip;
 
     /**
-     * @var integer 此节点是否可销毁，1可销毁，0不可销毁
+     * @var integer <p>此节点是否可销毁，1可销毁，0不可销毁</p>
      */
     public $Destroyable;
 
     /**
-     * @var array 节点绑定的标签
+     * @var array <p>节点绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var integer 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+     * @var integer <p>是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。</p>
      */
     public $AutoFlag;
 
     /**
-     * @var string 资源类型, host/pod
+     * @var string <p>资源类型, host/pod</p>
      */
     public $HardwareResourceType;
 
     /**
-     * @var integer 是否浮动规格，1是，0否
+     * @var integer <p>是否浮动规格，1是，0否</p>
      */
     public $IsDynamicSpec;
 
     /**
-     * @var string 浮动规格值json字符串
+     * @var string <p>浮动规格值json字符串</p>
      */
     public $DynamicPodSpec;
 
     /**
-     * @var integer 是否支持变更计费类型 1是，0否
+     * @var integer <p>是否支持变更计费类型 1是，0否</p>
      */
     public $SupportModifyPayMode;
 
     /**
-     * @var integer 系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
-
+     * @var integer <p>系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘</p>
      */
     public $RootStorageType;
 
     /**
-     * @var string 可用区信息
+     * @var string <p>可用区信息</p>
      */
     public $Zone;
 
     /**
-     * @var SubnetInfo 子网
+     * @var SubnetInfo <p>子网</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetInfo;
 
     /**
-     * @var string 客户端
+     * @var string <p>客户端</p>
      */
     public $Clients;
 
     /**
-     * @var string 系统当前时间
+     * @var string <p>系统当前时间</p>
      */
     public $CurrentTime;
 
     /**
-     * @var integer 是否用于联邦 ,1是，0否
+     * @var integer <p>是否用于联邦 ,1是，0否</p>
      */
     public $IsFederation;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 服务
+     * @var string <p>服务</p>
      */
     public $ServiceClient;
 
     /**
-     * @var boolean 该实例是否开启实例保护，true为开启 false为关闭
+     * @var boolean <p>该实例是否开启实例保护，true为开启 false为关闭</p>
      */
     public $DisableApiTermination;
 
     /**
-     * @var integer 0表示老计费，1表示新计费
+     * @var integer <p>0表示老计费，1表示新计费</p>
      */
     public $TradeVersion;
 
     /**
-     * @var string 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+     * @var string <p>各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止</p>
      */
     public $ServicesStatus;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var string 共享集群id
+     * @var string <p>共享集群id</p>
      */
     public $SharedClusterId;
 
     /**
-     * @var string 共享集群id描述
+     * @var string <p>共享集群id描述</p>
      */
     public $SharedClusterIdDesc;
 
     /**
-     * @var boolean 是否是定时销毁资源
+     * @var boolean <p>是否是定时销毁资源</p>
      */
     public $TimingResource;
 
     /**
-     * @var string 资源类型（HardwareResourceType）为pod时，对应的TKE集群id
+     * @var string <p>资源类型（HardwareResourceType）为pod时，对应的TKE集群id</p>
      */
     public $TkeClusterId;
 
     /**
-     * @var array 新挂磁盘时可支持配置的服务名称列表
+     * @var array <p>新挂磁盘时可支持配置的服务名称列表</p>
      */
     public $ConfigurableServices;
 
     /**
-     * @var string 节点标注信息，目前只提供给tf平台使用
+     * @var string <p>节点标注信息，目前只提供给tf平台使用</p>
      */
     public $NodeMark;
 
     /**
-     * @var boolean 包销资源是否支持设置自动续费
+     * @var boolean <p>包销资源是否支持设置自动续费</p>
      */
     public $UnderwriteSetAutoRenew;
 
     /**
-     * @var string Gpu信息
+     * @var string <p>Gpu信息</p>
      */
     public $GpuDesc;
 
     /**
-     * @param integer $AppId 用户APPID
-     * @param string $SerialNo 序列号
-     * @param string $OrderNo 机器实例ID
-     * @param string $WanIp master节点绑定外网IP
-     * @param integer $Flag 节点类型。0:common节点；1:master节点
-；2:core节点；3:task节点
-     * @param string $Spec 节点规格
-     * @param integer $CpuNum 节点核数
-     * @param integer $MemSize 节点内存,单位b
-     * @param string $MemDesc 节点内存描述，单位GB
-     * @param integer $RegionId 节点所在region
-     * @param integer $ZoneId 节点所在Zone
-     * @param string $ApplyTime 申请时间
-     * @param string $FreeTime 释放时间
-     * @param string $DiskSize 硬盘大小
-     * @param string $NameTag 节点描述
-     * @param string $Services 节点部署服务
-     * @param integer $StorageType 磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+     * @var array <p>磁盘问题描述</p>
+     */
+    public $DiskHealthIssues;
 
-     * @param integer $RootSize 系统盘大小，单位GB
-     * @param integer $ChargeType 付费类型，0：按量计费；1：包年包月
-     * @param string $CdbIp 数据库IP
-     * @param integer $CdbPort 数据库端口
-     * @param integer $HwDiskSize 硬盘容量,单位b
-     * @param string $HwDiskSizeDesc 硬盘容量描述
-     * @param integer $HwMemSize 内存容量，单位b
-     * @param string $HwMemSizeDesc 内存容量描述
-     * @param string $ExpireTime 过期时间
-     * @param string $EmrResourceId 节点资源ID
-     * @param integer $IsAutoRenew 续费标志
-     * @param string $DeviceClass 设备标识
-     * @param integer $Mutable 支持变配
-     * @param array $MCMultiDisk 多云盘
+    /**
+     * @param integer $AppId <p>用户APPID</p>
+     * @param string $SerialNo <p>序列号</p>
+     * @param string $OrderNo <p>机器实例ID</p>
+     * @param string $WanIp <p>master节点绑定外网IP</p>
+     * @param integer $Flag <p>节点类型。0:common节点；1:master节点<br>；2:core节点；3:task节点</p>
+     * @param string $Spec <p>节点规格</p>
+     * @param integer $CpuNum <p>节点核数</p>
+     * @param integer $MemSize <p>节点内存,单位b</p>
+     * @param string $MemDesc <p>节点内存描述，单位GB</p>
+     * @param integer $RegionId <p>节点所在region</p>
+     * @param integer $ZoneId <p>节点所在Zone</p>
+     * @param string $ApplyTime <p>申请时间</p>
+     * @param string $FreeTime <p>释放时间</p>
+     * @param string $DiskSize <p>硬盘大小</p>
+     * @param string $NameTag <p>节点描述</p>
+     * @param string $Services <p>节点部署服务</p>
+     * @param integer $StorageType <p>磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘</p>
+     * @param integer $RootSize <p>系统盘大小，单位GB</p>
+     * @param integer $ChargeType <p>付费类型，0：按量计费；1：包年包月</p>
+     * @param string $CdbIp <p>数据库IP</p>
+     * @param integer $CdbPort <p>数据库端口</p>
+     * @param integer $HwDiskSize <p>硬盘容量,单位b</p>
+     * @param string $HwDiskSizeDesc <p>硬盘容量描述</p>
+     * @param integer $HwMemSize <p>内存容量，单位b</p>
+     * @param string $HwMemSizeDesc <p>内存容量描述</p>
+     * @param string $ExpireTime <p>过期时间</p>
+     * @param string $EmrResourceId <p>节点资源ID</p>
+     * @param integer $IsAutoRenew <p>续费标志</p>
+     * @param string $DeviceClass <p>设备标识</p>
+     * @param integer $Mutable <p>支持变配</p>
+     * @param array $MCMultiDisk <p>多云盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CdbInfo $CdbNodeInfo 数据库信息
+     * @param CdbInfo $CdbNodeInfo <p>数据库信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ip 内网IP
-     * @param integer $Destroyable 此节点是否可销毁，1可销毁，0不可销毁
-     * @param array $Tags 节点绑定的标签
+     * @param string $Ip <p>内网IP</p>
+     * @param integer $Destroyable <p>此节点是否可销毁，1可销毁，0不可销毁</p>
+     * @param array $Tags <p>节点绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AutoFlag 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
-     * @param string $HardwareResourceType 资源类型, host/pod
-     * @param integer $IsDynamicSpec 是否浮动规格，1是，0否
-     * @param string $DynamicPodSpec 浮动规格值json字符串
-     * @param integer $SupportModifyPayMode 是否支持变更计费类型 1是，0否
-     * @param integer $RootStorageType 系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
-
-     * @param string $Zone 可用区信息
-     * @param SubnetInfo $SubnetInfo 子网
+     * @param integer $AutoFlag <p>是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。</p>
+     * @param string $HardwareResourceType <p>资源类型, host/pod</p>
+     * @param integer $IsDynamicSpec <p>是否浮动规格，1是，0否</p>
+     * @param string $DynamicPodSpec <p>浮动规格值json字符串</p>
+     * @param integer $SupportModifyPayMode <p>是否支持变更计费类型 1是，0否</p>
+     * @param integer $RootStorageType <p>系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘</p>
+     * @param string $Zone <p>可用区信息</p>
+     * @param SubnetInfo $SubnetInfo <p>子网</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Clients 客户端
-     * @param string $CurrentTime 系统当前时间
-     * @param integer $IsFederation 是否用于联邦 ,1是，0否
-     * @param string $DeviceName 设备名称
-     * @param string $ServiceClient 服务
-     * @param boolean $DisableApiTermination 该实例是否开启实例保护，true为开启 false为关闭
-     * @param integer $TradeVersion 0表示老计费，1表示新计费
-     * @param string $ServicesStatus 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
-     * @param string $Remark 备注
-     * @param string $SharedClusterId 共享集群id
-     * @param string $SharedClusterIdDesc 共享集群id描述
-     * @param boolean $TimingResource 是否是定时销毁资源
-     * @param string $TkeClusterId 资源类型（HardwareResourceType）为pod时，对应的TKE集群id
-     * @param array $ConfigurableServices 新挂磁盘时可支持配置的服务名称列表
-     * @param string $NodeMark 节点标注信息，目前只提供给tf平台使用
-     * @param boolean $UnderwriteSetAutoRenew 包销资源是否支持设置自动续费
-     * @param string $GpuDesc Gpu信息
+     * @param string $Clients <p>客户端</p>
+     * @param string $CurrentTime <p>系统当前时间</p>
+     * @param integer $IsFederation <p>是否用于联邦 ,1是，0否</p>
+     * @param string $DeviceName <p>设备名称</p>
+     * @param string $ServiceClient <p>服务</p>
+     * @param boolean $DisableApiTermination <p>该实例是否开启实例保护，true为开启 false为关闭</p>
+     * @param integer $TradeVersion <p>0表示老计费，1表示新计费</p>
+     * @param string $ServicesStatus <p>各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止</p>
+     * @param string $Remark <p>备注</p>
+     * @param string $SharedClusterId <p>共享集群id</p>
+     * @param string $SharedClusterIdDesc <p>共享集群id描述</p>
+     * @param boolean $TimingResource <p>是否是定时销毁资源</p>
+     * @param string $TkeClusterId <p>资源类型（HardwareResourceType）为pod时，对应的TKE集群id</p>
+     * @param array $ConfigurableServices <p>新挂磁盘时可支持配置的服务名称列表</p>
+     * @param string $NodeMark <p>节点标注信息，目前只提供给tf平台使用</p>
+     * @param boolean $UnderwriteSetAutoRenew <p>包销资源是否支持设置自动续费</p>
+     * @param string $GpuDesc <p>Gpu信息</p>
+     * @param array $DiskHealthIssues <p>磁盘问题描述</p>
      */
     function __construct()
     {
@@ -796,6 +792,15 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("GpuDesc",$param) and $param["GpuDesc"] !== null) {
             $this->GpuDesc = $param["GpuDesc"];
+        }
+
+        if (array_key_exists("DiskHealthIssues",$param) and $param["DiskHealthIssues"] !== null) {
+            $this->DiskHealthIssues = [];
+            foreach ($param["DiskHealthIssues"] as $key => $value){
+                $obj = new DiskHealthIssue();
+                $obj->deserialize($value);
+                array_push($this->DiskHealthIssues, $obj);
+            }
         }
     }
 }

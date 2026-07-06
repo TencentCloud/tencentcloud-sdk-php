@@ -20,138 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 投递DLC任务配置信息
  *
- * @method string getTaskId() 获取任务id。
- * @method void setTaskId(string $TaskId) 设置任务id。
- * @method integer getUin() 获取账号id。
- * @method void setUin(integer $Uin) 设置账号id。
- * @method string getTopicId() 获取日志主题id。
- * @method void setTopicId(string $TopicId) 设置日志主题id。
- * @method string getName() 获取任务名称。
- * @method void setName(string $Name) 设置任务名称。
- * @method integer getDeliverType() 获取投递类型，0：实时投递，1：历史投递
- * @method void setDeliverType(integer $DeliverType) 设置投递类型，0：实时投递，1：历史投递
- * @method integer getMaxSize() 获取投递文件大小，单位MB
- * @method void setMaxSize(integer $MaxSize) 设置投递文件大小，单位MB
- * @method integer getInterval() 获取投递间隔 单位秒
- * @method void setInterval(integer $Interval) 设置投递间隔 单位秒
- * @method integer getStartTime() 获取投递时间范围的开始时间
- * @method void setStartTime(integer $StartTime) 设置投递时间范围的开始时间
- * @method integer getEndTime() 获取投递时间范围的结束时间
- * @method void setEndTime(integer $EndTime) 设置投递时间范围的结束时间
- * @method DlcInfo getDlcInfo() 获取dlc配置信息
- * @method void setDlcInfo(DlcInfo $DlcInfo) 设置dlc配置信息
- * @method integer getHasServicesLog() 获取是否开启投递服务日志。1关闭，2开启
- * @method void setHasServicesLog(integer $HasServicesLog) 设置是否开启投递服务日志。1关闭，2开启
- * @method integer getStatus() 获取任务状态。
- * @method void setStatus(integer $Status) 设置任务状态。
- * @method integer getProgress() 获取任务进度。历史投递任务生效。
- * @method void setProgress(integer $Progress) 设置任务进度。历史投递任务生效。
- * @method integer getBizType() 获取日志主题类型。0:标准主题，1:指标主题
- * @method void setBizType(integer $BizType) 设置日志主题类型。0:标准主题，1:指标主题
- * @method integer getCreateTime() 获取任务创建时间。
- * @method void setCreateTime(integer $CreateTime) 设置任务创建时间。
- * @method integer getUpdateTime() 获取任务修改时间。
- * @method void setUpdateTime(integer $UpdateTime) 设置任务修改时间。
+ * @method string getTaskId() 获取<p>任务id。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务id。</p>
+ * @method integer getUin() 获取<p>账号id。</p>
+ * @method void setUin(integer $Uin) 设置<p>账号id。</p>
+ * @method string getTopicId() 获取<p>日志主题id。</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题id。</p>
+ * @method string getName() 获取<p>任务名称。</p>
+ * @method void setName(string $Name) 设置<p>任务名称。</p>
+ * @method integer getDeliverType() 获取<p>投递类型，0：实时投递，1：历史投递</p>
+ * @method void setDeliverType(integer $DeliverType) 设置<p>投递类型，0：实时投递，1：历史投递</p>
+ * @method integer getMaxSize() 获取<p>投递文件大小，单位MB</p>
+ * @method void setMaxSize(integer $MaxSize) 设置<p>投递文件大小，单位MB</p>
+ * @method integer getInterval() 获取<p>投递间隔 单位秒</p>
+ * @method void setInterval(integer $Interval) 设置<p>投递间隔 单位秒</p>
+ * @method integer getStartTime() 获取<p>投递时间范围的开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>投递时间范围的开始时间</p>
+ * @method integer getEndTime() 获取<p>投递时间范围的结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>投递时间范围的结束时间</p>
+ * @method DlcInfo getDlcInfo() 获取<p>dlc配置信息</p>
+ * @method void setDlcInfo(DlcInfo $DlcInfo) 设置<p>dlc配置信息</p>
+ * @method integer getHasServicesLog() 获取<p>是否开启投递服务日志。1关闭，2开启</p>
+ * @method void setHasServicesLog(integer $HasServicesLog) 设置<p>是否开启投递服务日志。1关闭，2开启</p>
+ * @method integer getStatus() 获取<p>任务状态。</p>
+ * @method void setStatus(integer $Status) 设置<p>任务状态。</p>
+ * @method integer getProgress() 获取<p>任务进度。历史投递任务生效。</p>
+ * @method void setProgress(integer $Progress) 设置<p>任务进度。历史投递任务生效。</p>
+ * @method integer getBizType() 获取<p>日志主题类型。0:标准主题，1:指标主题</p>
+ * @method void setBizType(integer $BizType) 设置<p>日志主题类型。0:标准主题，1:指标主题</p>
+ * @method integer getCreateTime() 获取<p>任务创建时间。</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>任务创建时间。</p>
+ * @method integer getUpdateTime() 获取<p>任务修改时间。</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>任务修改时间。</p>
+ * @method boolean getAutoCreateField() 获取<p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+ * @method void setAutoCreateField(boolean $AutoCreateField) 设置<p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+ * @method DlcFailHandle getDlcFailHandle() 获取<p>将投递失败的日志存储至DLC表</p>
+ * @method void setDlcFailHandle(DlcFailHandle $DlcFailHandle) 设置<p>将投递失败的日志存储至DLC表</p>
+ * @method string getDSLFilter() 获取<p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+ * @method void setDSLFilter(string $DSLFilter) 设置<p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
  */
 class DlcDeliverInfo extends AbstractModel
 {
     /**
-     * @var string 任务id。
+     * @var string <p>任务id。</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 账号id。
+     * @var integer <p>账号id。</p>
      */
     public $Uin;
 
     /**
-     * @var string 日志主题id。
+     * @var string <p>日志主题id。</p>
      */
     public $TopicId;
 
     /**
-     * @var string 任务名称。
+     * @var string <p>任务名称。</p>
      */
     public $Name;
 
     /**
-     * @var integer 投递类型，0：实时投递，1：历史投递
+     * @var integer <p>投递类型，0：实时投递，1：历史投递</p>
      */
     public $DeliverType;
 
     /**
-     * @var integer 投递文件大小，单位MB
+     * @var integer <p>投递文件大小，单位MB</p>
      */
     public $MaxSize;
 
     /**
-     * @var integer 投递间隔 单位秒
+     * @var integer <p>投递间隔 单位秒</p>
      */
     public $Interval;
 
     /**
-     * @var integer 投递时间范围的开始时间
+     * @var integer <p>投递时间范围的开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 投递时间范围的结束时间
+     * @var integer <p>投递时间范围的结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var DlcInfo dlc配置信息
+     * @var DlcInfo <p>dlc配置信息</p>
      */
     public $DlcInfo;
 
     /**
-     * @var integer 是否开启投递服务日志。1关闭，2开启
+     * @var integer <p>是否开启投递服务日志。1关闭，2开启</p>
      */
     public $HasServicesLog;
 
     /**
-     * @var integer 任务状态。
+     * @var integer <p>任务状态。</p>
      */
     public $Status;
 
     /**
-     * @var integer 任务进度。历史投递任务生效。
+     * @var integer <p>任务进度。历史投递任务生效。</p>
      */
     public $Progress;
 
     /**
-     * @var integer 日志主题类型。0:标准主题，1:指标主题
+     * @var integer <p>日志主题类型。0:标准主题，1:指标主题</p>
      */
     public $BizType;
 
     /**
-     * @var integer 任务创建时间。
+     * @var integer <p>任务创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 任务修改时间。
+     * @var integer <p>任务修改时间。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $TaskId 任务id。
-     * @param integer $Uin 账号id。
-     * @param string $TopicId 日志主题id。
-     * @param string $Name 任务名称。
-     * @param integer $DeliverType 投递类型，0：实时投递，1：历史投递
-     * @param integer $MaxSize 投递文件大小，单位MB
-     * @param integer $Interval 投递间隔 单位秒
-     * @param integer $StartTime 投递时间范围的开始时间
-     * @param integer $EndTime 投递时间范围的结束时间
-     * @param DlcInfo $DlcInfo dlc配置信息
-     * @param integer $HasServicesLog 是否开启投递服务日志。1关闭，2开启
-     * @param integer $Status 任务状态。
-     * @param integer $Progress 任务进度。历史投递任务生效。
-     * @param integer $BizType 日志主题类型。0:标准主题，1:指标主题
-     * @param integer $CreateTime 任务创建时间。
-     * @param integer $UpdateTime 任务修改时间。
+     * @var boolean <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+     */
+    public $AutoCreateField;
+
+    /**
+     * @var DlcFailHandle <p>将投递失败的日志存储至DLC表</p>
+     */
+    public $DlcFailHandle;
+
+    /**
+     * @var string <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+     */
+    public $DSLFilter;
+
+    /**
+     * @param string $TaskId <p>任务id。</p>
+     * @param integer $Uin <p>账号id。</p>
+     * @param string $TopicId <p>日志主题id。</p>
+     * @param string $Name <p>任务名称。</p>
+     * @param integer $DeliverType <p>投递类型，0：实时投递，1：历史投递</p>
+     * @param integer $MaxSize <p>投递文件大小，单位MB</p>
+     * @param integer $Interval <p>投递间隔 单位秒</p>
+     * @param integer $StartTime <p>投递时间范围的开始时间</p>
+     * @param integer $EndTime <p>投递时间范围的结束时间</p>
+     * @param DlcInfo $DlcInfo <p>dlc配置信息</p>
+     * @param integer $HasServicesLog <p>是否开启投递服务日志。1关闭，2开启</p>
+     * @param integer $Status <p>任务状态。</p>
+     * @param integer $Progress <p>任务进度。历史投递任务生效。</p>
+     * @param integer $BizType <p>日志主题类型。0:标准主题，1:指标主题</p>
+     * @param integer $CreateTime <p>任务创建时间。</p>
+     * @param integer $UpdateTime <p>任务修改时间。</p>
+     * @param boolean $AutoCreateField <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+     * @param DlcFailHandle $DlcFailHandle <p>将投递失败的日志存储至DLC表</p>
+     * @param string $DSLFilter <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
      */
     function __construct()
     {
@@ -229,6 +253,19 @@ class DlcDeliverInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("AutoCreateField",$param) and $param["AutoCreateField"] !== null) {
+            $this->AutoCreateField = $param["AutoCreateField"];
+        }
+
+        if (array_key_exists("DlcFailHandle",$param) and $param["DlcFailHandle"] !== null) {
+            $this->DlcFailHandle = new DlcFailHandle();
+            $this->DlcFailHandle->deserialize($param["DlcFailHandle"]);
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

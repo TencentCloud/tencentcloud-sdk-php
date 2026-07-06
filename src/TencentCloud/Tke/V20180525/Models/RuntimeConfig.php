@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 运行时配置
  *
- * @method string getRuntimeType() 获取运行时类型，支持的类型有 docker、containerd
- * @method void setRuntimeType(string $RuntimeType) 设置运行时类型，支持的类型有 docker、containerd
- * @method string getRuntimeVersion() 获取运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
- * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+ * @method string getRuntimeType() 获取<p>运行时类型，支持的类型有 docker、containerd</p>
+ * @method void setRuntimeType(string $RuntimeType) 设置<p>运行时类型，支持的类型有 docker、containerd</p>
+ * @method string getRuntimeVersion() 获取<p>运行时版本，参考：https://cloud.tencent.com/document/api/457/105241</p>
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置<p>运行时版本，参考：https://cloud.tencent.com/document/api/457/105241</p>
  */
 class RuntimeConfig extends AbstractModel
 {
     /**
-     * @var string 运行时类型，支持的类型有 docker、containerd
+     * @var string <p>运行时类型，支持的类型有 docker、containerd</p>
      */
     public $RuntimeType;
 
     /**
-     * @var string 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+     * @var string <p>运行时版本，参考：https://cloud.tencent.com/document/api/457/105241</p>
      */
     public $RuntimeVersion;
 
     /**
-     * @param string $RuntimeType 运行时类型，支持的类型有 docker、containerd
-     * @param string $RuntimeVersion 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+     * @param string $RuntimeType <p>运行时类型，支持的类型有 docker、containerd</p>
+     * @param string $RuntimeVersion <p>运行时版本，参考：https://cloud.tencent.com/document/api/457/105241</p>
      */
     function __construct()
     {

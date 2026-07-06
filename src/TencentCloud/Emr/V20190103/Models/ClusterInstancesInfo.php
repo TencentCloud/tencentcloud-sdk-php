@@ -20,524 +20,436 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群实例信息
  *
- * @method integer getId() 获取ID号
- * @method void setId(integer $Id) 设置ID号
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getFtitle() 获取标题
+ * @method integer getId() 获取<p>ID号</p>
+ * @method void setId(integer $Id) 设置<p>ID号</p>
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getFtitle() 获取<p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFtitle(string $Ftitle) 设置标题
+ * @method void setFtitle(string $Ftitle) 设置<p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterName() 获取集群名
- * @method void setClusterName(string $ClusterName) 设置集群名
- * @method integer getRegionId() 获取地域ID
- * @method void setRegionId(integer $RegionId) 设置地域ID
- * @method integer getZoneId() 获取地区ID
- * @method void setZoneId(integer $ZoneId) 设置地区ID
- * @method integer getAppId() 获取用户APPID
- * @method void setAppId(integer $AppId) 设置用户APPID
- * @method string getUin() 获取用户UIN
- * @method void setUin(string $Uin) 设置用户UIN
- * @method integer getProjectId() 获取项目Id
- * @method void setProjectId(integer $ProjectId) 设置项目Id
- * @method integer getVpcId() 获取集群VPCID
- * @method void setVpcId(integer $VpcId) 设置集群VPCID
- * @method integer getSubnetId() 获取子网ID
- * @method void setSubnetId(integer $SubnetId) 设置子网ID
- * @method integer getStatus() 获取实例的状态码。取值范围：
-<li>2：表示集群运行中。</li>
-<li>3：表示集群创建中。</li>
-<li>4：表示集群扩容中。</li>
-<li>5：表示集群增加router节点中。</li>
-<li>6：表示集群安装组件中。</li>
-<li>7：表示集群执行命令中。</li>
-<li>8：表示重启服务中。</li>
-<li>9：表示进入维护中。</li>
-<li>10：表示服务暂停中。</li>
-<li>11：表示退出维护中。</li>
-<li>12：表示退出暂停中。</li>
-<li>13：表示配置下发中。</li>
-<li>14：表示销毁集群中。</li>
-<li>15：表示销毁core节点中。</li>
-<li>16：销毁task节点中。</li>
-<li>17：表示销毁router节点中。</li>
-<li>18：表示更改webproxy密码中。</li>
-<li>19：表示集群隔离中。</li>
-<li>20：表示集群冲正中。</li>
-<li>21：表示集群回收中。</li>
-<li>22：表示变配等待中。</li>
-<li>23：表示集群已隔离。</li>
-<li>24：表示缩容节点中。</li>
-<li>33：表示集群等待退费中。</li>
-<li>34：表示集群已退费。</li>
-<li>301：表示创建失败。</li>
-<li>302：表示扩容失败。</li>
- * @method void setStatus(integer $Status) 设置实例的状态码。取值范围：
-<li>2：表示集群运行中。</li>
-<li>3：表示集群创建中。</li>
-<li>4：表示集群扩容中。</li>
-<li>5：表示集群增加router节点中。</li>
-<li>6：表示集群安装组件中。</li>
-<li>7：表示集群执行命令中。</li>
-<li>8：表示重启服务中。</li>
-<li>9：表示进入维护中。</li>
-<li>10：表示服务暂停中。</li>
-<li>11：表示退出维护中。</li>
-<li>12：表示退出暂停中。</li>
-<li>13：表示配置下发中。</li>
-<li>14：表示销毁集群中。</li>
-<li>15：表示销毁core节点中。</li>
-<li>16：销毁task节点中。</li>
-<li>17：表示销毁router节点中。</li>
-<li>18：表示更改webproxy密码中。</li>
-<li>19：表示集群隔离中。</li>
-<li>20：表示集群冲正中。</li>
-<li>21：表示集群回收中。</li>
-<li>22：表示变配等待中。</li>
-<li>23：表示集群已隔离。</li>
-<li>24：表示缩容节点中。</li>
-<li>33：表示集群等待退费中。</li>
-<li>34：表示集群已退费。</li>
-<li>301：表示创建失败。</li>
-<li>302：表示扩容失败。</li>
- * @method string getAddTime() 获取添加时间
- * @method void setAddTime(string $AddTime) 设置添加时间
- * @method string getRunTime() 获取已经运行时间
- * @method void setRunTime(string $RunTime) 设置已经运行时间
- * @method EmrProductConfigOutter getConfig() 获取集群产品配置信息
+ * @method string getClusterName() 获取<p>集群名</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名</p>
+ * @method integer getRegionId() 获取<p>地域ID</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域ID</p>
+ * @method integer getZoneId() 获取<p>地区ID</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>地区ID</p>
+ * @method integer getAppId() 获取<p>用户APPID</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户APPID</p>
+ * @method string getUin() 获取<p>用户UIN</p>
+ * @method void setUin(string $Uin) 设置<p>用户UIN</p>
+ * @method integer getProjectId() 获取<p>项目Id</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目Id</p>
+ * @method integer getVpcId() 获取<p>集群VPCID</p>
+ * @method void setVpcId(integer $VpcId) 设置<p>集群VPCID</p>
+ * @method integer getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(integer $SubnetId) 设置<p>子网ID</p>
+ * @method integer getStatus() 获取<p>实例的状态码。取值范围：</p><li>2：表示集群运行中。</li><li>3：表示集群创建中。</li><li>4：表示集群扩容中。</li><li>5：表示集群增加router节点中。</li><li>6：表示集群安装组件中。</li><li>7：表示集群执行命令中。</li><li>8：表示重启服务中。</li><li>9：表示进入维护中。</li><li>10：表示服务暂停中。</li><li>11：表示退出维护中。</li><li>12：表示退出暂停中。</li><li>13：表示配置下发中。</li><li>14：表示销毁集群中。</li><li>15：表示销毁core节点中。</li><li>16：销毁task节点中。</li><li>17：表示销毁router节点中。</li><li>18：表示更改webproxy密码中。</li><li>19：表示集群隔离中。</li><li>20：表示集群冲正中。</li><li>21：表示集群回收中。</li><li>22：表示变配等待中。</li><li>23：表示集群已隔离。</li><li>24：表示缩容节点中。</li><li>33：表示集群等待退费中。</li><li>34：表示集群已退费。</li><li>301：表示创建失败。</li><li>302：表示扩容失败。</li>
+ * @method void setStatus(integer $Status) 设置<p>实例的状态码。取值范围：</p><li>2：表示集群运行中。</li><li>3：表示集群创建中。</li><li>4：表示集群扩容中。</li><li>5：表示集群增加router节点中。</li><li>6：表示集群安装组件中。</li><li>7：表示集群执行命令中。</li><li>8：表示重启服务中。</li><li>9：表示进入维护中。</li><li>10：表示服务暂停中。</li><li>11：表示退出维护中。</li><li>12：表示退出暂停中。</li><li>13：表示配置下发中。</li><li>14：表示销毁集群中。</li><li>15：表示销毁core节点中。</li><li>16：销毁task节点中。</li><li>17：表示销毁router节点中。</li><li>18：表示更改webproxy密码中。</li><li>19：表示集群隔离中。</li><li>20：表示集群冲正中。</li><li>21：表示集群回收中。</li><li>22：表示变配等待中。</li><li>23：表示集群已隔离。</li><li>24：表示缩容节点中。</li><li>33：表示集群等待退费中。</li><li>34：表示集群已退费。</li><li>301：表示创建失败。</li><li>302：表示扩容失败。</li>
+ * @method string getAddTime() 获取<p>添加时间</p>
+ * @method void setAddTime(string $AddTime) 设置<p>添加时间</p>
+ * @method string getRunTime() 获取<p>已经运行时间</p>
+ * @method void setRunTime(string $RunTime) 设置<p>已经运行时间</p>
+ * @method EmrProductConfigOutter getConfig() 获取<p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfig(EmrProductConfigOutter $Config) 设置集群产品配置信息
+ * @method void setConfig(EmrProductConfigOutter $Config) 设置<p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMasterIp() 获取主节点外网IP
- * @method void setMasterIp(string $MasterIp) 设置主节点外网IP
- * @method string getEmrVersion() 获取EMR版本
- * @method void setEmrVersion(string $EmrVersion) 设置EMR版本
- * @method integer getChargeType() 获取收费类型
- * @method void setChargeType(integer $ChargeType) 设置收费类型
- * @method integer getTradeVersion() 获取交易版本
- * @method void setTradeVersion(integer $TradeVersion) 设置交易版本
- * @method integer getResourceOrderId() 获取资源订单ID
- * @method void setResourceOrderId(integer $ResourceOrderId) 设置资源订单ID
- * @method integer getIsTradeCluster() 获取是否计费集群
- * @method void setIsTradeCluster(integer $IsTradeCluster) 设置是否计费集群
- * @method string getAlarmInfo() 获取集群错误状态告警信息
- * @method void setAlarmInfo(string $AlarmInfo) 设置集群错误状态告警信息
- * @method integer getIsWoodpeckerCluster() 获取是否采用新架构
- * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) 设置是否采用新架构
- * @method string getMetaDb() 获取元数据库信息
- * @method void setMetaDb(string $MetaDb) 设置元数据库信息
- * @method array getTags() 获取标签信息
+ * @method string getMasterIp() 获取<p>主节点外网IP</p>
+ * @method void setMasterIp(string $MasterIp) 设置<p>主节点外网IP</p>
+ * @method string getEmrVersion() 获取<p>EMR版本</p>
+ * @method void setEmrVersion(string $EmrVersion) 设置<p>EMR版本</p>
+ * @method integer getChargeType() 获取<p>收费类型</p>
+ * @method void setChargeType(integer $ChargeType) 设置<p>收费类型</p>
+ * @method integer getTradeVersion() 获取<p>交易版本</p>
+ * @method void setTradeVersion(integer $TradeVersion) 设置<p>交易版本</p>
+ * @method integer getResourceOrderId() 获取<p>资源订单ID</p>
+ * @method void setResourceOrderId(integer $ResourceOrderId) 设置<p>资源订单ID</p>
+ * @method integer getIsTradeCluster() 获取<p>是否计费集群</p>
+ * @method void setIsTradeCluster(integer $IsTradeCluster) 设置<p>是否计费集群</p>
+ * @method string getAlarmInfo() 获取<p>集群错误状态告警信息</p>
+ * @method void setAlarmInfo(string $AlarmInfo) 设置<p>集群错误状态告警信息</p>
+ * @method integer getIsWoodpeckerCluster() 获取<p>是否采用新架构</p>
+ * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) 设置<p>是否采用新架构</p>
+ * @method string getMetaDb() 获取<p>元数据库信息</p>
+ * @method void setMetaDb(string $MetaDb) 设置<p>元数据库信息</p>
+ * @method array getTags() 获取<p>标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置标签信息
+ * @method void setTags(array $Tags) 设置<p>标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHiveMetaDb() 获取Hive元数据信息
- * @method void setHiveMetaDb(string $HiveMetaDb) 设置Hive元数据信息
- * @method string getServiceClass() 获取集群类型:EMR,CLICKHOUSE,DRUID
- * @method void setServiceClass(string $ServiceClass) 设置集群类型:EMR,CLICKHOUSE,DRUID
- * @method string getAliasInfo() 获取集群所有节点的别名序列化
- * @method void setAliasInfo(string $AliasInfo) 设置集群所有节点的别名序列化
- * @method integer getProductId() 获取集群版本Id
- * @method void setProductId(integer $ProductId) 设置集群版本Id
- * @method string getZone() 获取地区ID
- * @method void setZone(string $Zone) 设置地区ID
- * @method string getSceneName() 获取场景名称
- * @method void setSceneName(string $SceneName) 设置场景名称
- * @method string getSceneServiceClass() 获取场景化集群类型
- * @method void setSceneServiceClass(string $SceneServiceClass) 设置场景化集群类型
- * @method string getSceneEmrVersion() 获取场景化EMR版本
- * @method void setSceneEmrVersion(string $SceneEmrVersion) 设置场景化EMR版本
- * @method string getDisplayName() 获取场景化集群类型
- * @method void setDisplayName(string $DisplayName) 设置场景化集群类型
- * @method string getVpcName() 获取vpc name
- * @method void setVpcName(string $VpcName) 设置vpc name
- * @method string getSubnetName() 获取subnet name
- * @method void setSubnetName(string $SubnetName) 设置subnet name
- * @method array getClusterExternalServiceInfo() 获取集群依赖关系
+ * @method string getHiveMetaDb() 获取<p>Hive元数据信息</p>
+ * @method void setHiveMetaDb(string $HiveMetaDb) 设置<p>Hive元数据信息</p>
+ * @method string getServiceClass() 获取<p>集群类型:EMR,CLICKHOUSE,DRUID</p>
+ * @method void setServiceClass(string $ServiceClass) 设置<p>集群类型:EMR,CLICKHOUSE,DRUID</p>
+ * @method string getAliasInfo() 获取<p>集群所有节点的别名序列化</p>
+ * @method void setAliasInfo(string $AliasInfo) 设置<p>集群所有节点的别名序列化</p>
+ * @method integer getProductId() 获取<p>集群版本Id</p>
+ * @method void setProductId(integer $ProductId) 设置<p>集群版本Id</p>
+ * @method string getZone() 获取<p>地区ID</p>
+ * @method void setZone(string $Zone) 设置<p>地区ID</p>
+ * @method string getSceneName() 获取<p>场景名称</p>
+ * @method void setSceneName(string $SceneName) 设置<p>场景名称</p>
+ * @method string getSceneServiceClass() 获取<p>场景化集群类型</p>
+ * @method void setSceneServiceClass(string $SceneServiceClass) 设置<p>场景化集群类型</p>
+ * @method string getSceneEmrVersion() 获取<p>场景化EMR版本</p>
+ * @method void setSceneEmrVersion(string $SceneEmrVersion) 设置<p>场景化EMR版本</p>
+ * @method string getDisplayName() 获取<p>场景化集群类型</p>
+ * @method void setDisplayName(string $DisplayName) 设置<p>场景化集群类型</p>
+ * @method string getVpcName() 获取<p>vpc name</p>
+ * @method void setVpcName(string $VpcName) 设置<p>vpc name</p>
+ * @method string getSubnetName() 获取<p>subnet name</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>subnet name</p>
+ * @method array getClusterExternalServiceInfo() 获取<p>集群依赖关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterExternalServiceInfo(array $ClusterExternalServiceInfo) 设置集群依赖关系
+ * @method void setClusterExternalServiceInfo(array $ClusterExternalServiceInfo) 设置<p>集群依赖关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUniqVpcId() 获取集群vpcid 字符串类型
- * @method void setUniqVpcId(string $UniqVpcId) 设置集群vpcid 字符串类型
- * @method string getUniqSubnetId() 获取子网id 字符串类型
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网id 字符串类型
- * @method array getTopologyInfoList() 获取节点信息
+ * @method string getUniqVpcId() 获取<p>集群vpcid 字符串类型</p>
+ * @method void setUniqVpcId(string $UniqVpcId) 设置<p>集群vpcid 字符串类型</p>
+ * @method string getUniqSubnetId() 获取<p>子网id 字符串类型</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置<p>子网id 字符串类型</p>
+ * @method array getTopologyInfoList() 获取<p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopologyInfoList(array $TopologyInfoList) 设置节点信息
+ * @method void setTopologyInfoList(array $TopologyInfoList) 设置<p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsMultiZoneCluster() 获取是否是跨AZ集群
- * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) 设置是否是跨AZ集群
- * @method boolean getIsCvmReplace() 获取是否开通异常节点自动补偿
- * @method void setIsCvmReplace(boolean $IsCvmReplace) 设置是否开通异常节点自动补偿
- * @method string getClusterTitle() 获取标题
- * @method void setClusterTitle(string $ClusterTitle) 设置标题
- * @method EmrProductConfigDetail getConfigDetail() 获取集群产品配置信息
+ * @method boolean getIsMultiZoneCluster() 获取<p>是否是跨AZ集群</p>
+ * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) 设置<p>是否是跨AZ集群</p>
+ * @method boolean getIsCvmReplace() 获取<p>是否开通异常节点自动补偿</p>
+ * @method void setIsCvmReplace(boolean $IsCvmReplace) 设置<p>是否开通异常节点自动补偿</p>
+ * @method string getClusterTitle() 获取<p>标题</p>
+ * @method void setClusterTitle(string $ClusterTitle) 设置<p>标题</p>
+ * @method EmrProductConfigDetail getConfigDetail() 获取<p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfigDetail(EmrProductConfigDetail $ConfigDetail) 设置集群产品配置信息
+ * @method void setConfigDetail(EmrProductConfigDetail $ConfigDetail) 设置<p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBindFileSystemNum() 获取集群绑定的文件系统数
- * @method void setBindFileSystemNum(integer $BindFileSystemNum) 设置集群绑定的文件系统数
- * @method array getClusterRelationInfoList() 获取rss集群的绑定列表
+ * @method integer getBindFileSystemNum() 获取<p>集群绑定的文件系统数</p>
+ * @method void setBindFileSystemNum(integer $BindFileSystemNum) 设置<p>集群绑定的文件系统数</p>
+ * @method array getClusterRelationInfoList() 获取<p>rss集群的绑定列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterRelationInfoList(array $ClusterRelationInfoList) 设置rss集群的绑定列表
+ * @method void setClusterRelationInfoList(array $ClusterRelationInfoList) 设置<p>rss集群的绑定列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRedisId() 获取Redis信息
- * @method void setRedisId(string $RedisId) 设置Redis信息
+ * @method string getRedisId() 获取<p>Redis信息</p>
+ * @method void setRedisId(string $RedisId) 设置<p>Redis信息</p>
+ * @method boolean getIsIOHungSelfRecovery() 获取<p>是否开启IO故障自愈</p>
+ * @method void setIsIOHungSelfRecovery(boolean $IsIOHungSelfRecovery) 设置<p>是否开启IO故障自愈</p>
+ * @method array getMetaDBGroupInfo() 获取<p>元数据信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetaDBGroupInfo(array $MetaDBGroupInfo) 设置<p>元数据信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstancesInfo extends AbstractModel
 {
     /**
-     * @var integer ID号
+     * @var integer <p>ID号</p>
      */
     public $Id;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 标题
+     * @var string <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $Ftitle;
 
     /**
-     * @var string 集群名
+     * @var string <p>集群名</p>
      */
     public $ClusterName;
 
     /**
-     * @var integer 地域ID
+     * @var integer <p>地域ID</p>
      */
     public $RegionId;
 
     /**
-     * @var integer 地区ID
+     * @var integer <p>地区ID</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer 用户APPID
+     * @var integer <p>用户APPID</p>
      */
     public $AppId;
 
     /**
-     * @var string 用户UIN
+     * @var string <p>用户UIN</p>
      */
     public $Uin;
 
     /**
-     * @var integer 项目Id
+     * @var integer <p>项目Id</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 集群VPCID
+     * @var integer <p>集群VPCID</p>
      */
     public $VpcId;
 
     /**
-     * @var integer 子网ID
+     * @var integer <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 实例的状态码。取值范围：
-<li>2：表示集群运行中。</li>
-<li>3：表示集群创建中。</li>
-<li>4：表示集群扩容中。</li>
-<li>5：表示集群增加router节点中。</li>
-<li>6：表示集群安装组件中。</li>
-<li>7：表示集群执行命令中。</li>
-<li>8：表示重启服务中。</li>
-<li>9：表示进入维护中。</li>
-<li>10：表示服务暂停中。</li>
-<li>11：表示退出维护中。</li>
-<li>12：表示退出暂停中。</li>
-<li>13：表示配置下发中。</li>
-<li>14：表示销毁集群中。</li>
-<li>15：表示销毁core节点中。</li>
-<li>16：销毁task节点中。</li>
-<li>17：表示销毁router节点中。</li>
-<li>18：表示更改webproxy密码中。</li>
-<li>19：表示集群隔离中。</li>
-<li>20：表示集群冲正中。</li>
-<li>21：表示集群回收中。</li>
-<li>22：表示变配等待中。</li>
-<li>23：表示集群已隔离。</li>
-<li>24：表示缩容节点中。</li>
-<li>33：表示集群等待退费中。</li>
-<li>34：表示集群已退费。</li>
-<li>301：表示创建失败。</li>
-<li>302：表示扩容失败。</li>
+     * @var integer <p>实例的状态码。取值范围：</p><li>2：表示集群运行中。</li><li>3：表示集群创建中。</li><li>4：表示集群扩容中。</li><li>5：表示集群增加router节点中。</li><li>6：表示集群安装组件中。</li><li>7：表示集群执行命令中。</li><li>8：表示重启服务中。</li><li>9：表示进入维护中。</li><li>10：表示服务暂停中。</li><li>11：表示退出维护中。</li><li>12：表示退出暂停中。</li><li>13：表示配置下发中。</li><li>14：表示销毁集群中。</li><li>15：表示销毁core节点中。</li><li>16：销毁task节点中。</li><li>17：表示销毁router节点中。</li><li>18：表示更改webproxy密码中。</li><li>19：表示集群隔离中。</li><li>20：表示集群冲正中。</li><li>21：表示集群回收中。</li><li>22：表示变配等待中。</li><li>23：表示集群已隔离。</li><li>24：表示缩容节点中。</li><li>33：表示集群等待退费中。</li><li>34：表示集群已退费。</li><li>301：表示创建失败。</li><li>302：表示扩容失败。</li>
      */
     public $Status;
 
     /**
-     * @var string 添加时间
+     * @var string <p>添加时间</p>
      */
     public $AddTime;
 
     /**
-     * @var string 已经运行时间
+     * @var string <p>已经运行时间</p>
      */
     public $RunTime;
 
     /**
-     * @var EmrProductConfigOutter 集群产品配置信息
+     * @var EmrProductConfigOutter <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $Config;
 
     /**
-     * @var string 主节点外网IP
+     * @var string <p>主节点外网IP</p>
      */
     public $MasterIp;
 
     /**
-     * @var string EMR版本
+     * @var string <p>EMR版本</p>
      */
     public $EmrVersion;
 
     /**
-     * @var integer 收费类型
+     * @var integer <p>收费类型</p>
      */
     public $ChargeType;
 
     /**
-     * @var integer 交易版本
+     * @var integer <p>交易版本</p>
      */
     public $TradeVersion;
 
     /**
-     * @var integer 资源订单ID
+     * @var integer <p>资源订单ID</p>
      */
     public $ResourceOrderId;
 
     /**
-     * @var integer 是否计费集群
+     * @var integer <p>是否计费集群</p>
      */
     public $IsTradeCluster;
 
     /**
-     * @var string 集群错误状态告警信息
+     * @var string <p>集群错误状态告警信息</p>
      */
     public $AlarmInfo;
 
     /**
-     * @var integer 是否采用新架构
+     * @var integer <p>是否采用新架构</p>
      */
     public $IsWoodpeckerCluster;
 
     /**
-     * @var string 元数据库信息
+     * @var string <p>元数据库信息</p>
      */
     public $MetaDb;
 
     /**
-     * @var array 标签信息
+     * @var array <p>标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string Hive元数据信息
+     * @var string <p>Hive元数据信息</p>
      */
     public $HiveMetaDb;
 
     /**
-     * @var string 集群类型:EMR,CLICKHOUSE,DRUID
+     * @var string <p>集群类型:EMR,CLICKHOUSE,DRUID</p>
      */
     public $ServiceClass;
 
     /**
-     * @var string 集群所有节点的别名序列化
+     * @var string <p>集群所有节点的别名序列化</p>
      */
     public $AliasInfo;
 
     /**
-     * @var integer 集群版本Id
+     * @var integer <p>集群版本Id</p>
      */
     public $ProductId;
 
     /**
-     * @var string 地区ID
+     * @var string <p>地区ID</p>
      */
     public $Zone;
 
     /**
-     * @var string 场景名称
+     * @var string <p>场景名称</p>
      */
     public $SceneName;
 
     /**
-     * @var string 场景化集群类型
+     * @var string <p>场景化集群类型</p>
      */
     public $SceneServiceClass;
 
     /**
-     * @var string 场景化EMR版本
+     * @var string <p>场景化EMR版本</p>
      */
     public $SceneEmrVersion;
 
     /**
-     * @var string 场景化集群类型
+     * @var string <p>场景化集群类型</p>
      */
     public $DisplayName;
 
     /**
-     * @var string vpc name
+     * @var string <p>vpc name</p>
      */
     public $VpcName;
 
     /**
-     * @var string subnet name
+     * @var string <p>subnet name</p>
      */
     public $SubnetName;
 
     /**
-     * @var array 集群依赖关系
+     * @var array <p>集群依赖关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterExternalServiceInfo;
 
     /**
-     * @var string 集群vpcid 字符串类型
+     * @var string <p>集群vpcid 字符串类型</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string 子网id 字符串类型
+     * @var string <p>子网id 字符串类型</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var array 节点信息
+     * @var array <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopologyInfoList;
 
     /**
-     * @var boolean 是否是跨AZ集群
+     * @var boolean <p>是否是跨AZ集群</p>
      */
     public $IsMultiZoneCluster;
 
     /**
-     * @var boolean 是否开通异常节点自动补偿
+     * @var boolean <p>是否开通异常节点自动补偿</p>
      */
     public $IsCvmReplace;
 
     /**
-     * @var string 标题
+     * @var string <p>标题</p>
      */
     public $ClusterTitle;
 
     /**
-     * @var EmrProductConfigDetail 集群产品配置信息
+     * @var EmrProductConfigDetail <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigDetail;
 
     /**
-     * @var integer 集群绑定的文件系统数
+     * @var integer <p>集群绑定的文件系统数</p>
      */
     public $BindFileSystemNum;
 
     /**
-     * @var array rss集群的绑定列表
+     * @var array <p>rss集群的绑定列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterRelationInfoList;
 
     /**
-     * @var string Redis信息
+     * @var string <p>Redis信息</p>
      */
     public $RedisId;
 
     /**
-     * @param integer $Id ID号
-     * @param string $ClusterId 集群ID
-     * @param string $Ftitle 标题
+     * @var boolean <p>是否开启IO故障自愈</p>
+     */
+    public $IsIOHungSelfRecovery;
+
+    /**
+     * @var array <p>元数据信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterName 集群名
-     * @param integer $RegionId 地域ID
-     * @param integer $ZoneId 地区ID
-     * @param integer $AppId 用户APPID
-     * @param string $Uin 用户UIN
-     * @param integer $ProjectId 项目Id
-     * @param integer $VpcId 集群VPCID
-     * @param integer $SubnetId 子网ID
-     * @param integer $Status 实例的状态码。取值范围：
-<li>2：表示集群运行中。</li>
-<li>3：表示集群创建中。</li>
-<li>4：表示集群扩容中。</li>
-<li>5：表示集群增加router节点中。</li>
-<li>6：表示集群安装组件中。</li>
-<li>7：表示集群执行命令中。</li>
-<li>8：表示重启服务中。</li>
-<li>9：表示进入维护中。</li>
-<li>10：表示服务暂停中。</li>
-<li>11：表示退出维护中。</li>
-<li>12：表示退出暂停中。</li>
-<li>13：表示配置下发中。</li>
-<li>14：表示销毁集群中。</li>
-<li>15：表示销毁core节点中。</li>
-<li>16：销毁task节点中。</li>
-<li>17：表示销毁router节点中。</li>
-<li>18：表示更改webproxy密码中。</li>
-<li>19：表示集群隔离中。</li>
-<li>20：表示集群冲正中。</li>
-<li>21：表示集群回收中。</li>
-<li>22：表示变配等待中。</li>
-<li>23：表示集群已隔离。</li>
-<li>24：表示缩容节点中。</li>
-<li>33：表示集群等待退费中。</li>
-<li>34：表示集群已退费。</li>
-<li>301：表示创建失败。</li>
-<li>302：表示扩容失败。</li>
-     * @param string $AddTime 添加时间
-     * @param string $RunTime 已经运行时间
-     * @param EmrProductConfigOutter $Config 集群产品配置信息
+     */
+    public $MetaDBGroupInfo;
+
+    /**
+     * @param integer $Id <p>ID号</p>
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $Ftitle <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MasterIp 主节点外网IP
-     * @param string $EmrVersion EMR版本
-     * @param integer $ChargeType 收费类型
-     * @param integer $TradeVersion 交易版本
-     * @param integer $ResourceOrderId 资源订单ID
-     * @param integer $IsTradeCluster 是否计费集群
-     * @param string $AlarmInfo 集群错误状态告警信息
-     * @param integer $IsWoodpeckerCluster 是否采用新架构
-     * @param string $MetaDb 元数据库信息
-     * @param array $Tags 标签信息
+     * @param string $ClusterName <p>集群名</p>
+     * @param integer $RegionId <p>地域ID</p>
+     * @param integer $ZoneId <p>地区ID</p>
+     * @param integer $AppId <p>用户APPID</p>
+     * @param string $Uin <p>用户UIN</p>
+     * @param integer $ProjectId <p>项目Id</p>
+     * @param integer $VpcId <p>集群VPCID</p>
+     * @param integer $SubnetId <p>子网ID</p>
+     * @param integer $Status <p>实例的状态码。取值范围：</p><li>2：表示集群运行中。</li><li>3：表示集群创建中。</li><li>4：表示集群扩容中。</li><li>5：表示集群增加router节点中。</li><li>6：表示集群安装组件中。</li><li>7：表示集群执行命令中。</li><li>8：表示重启服务中。</li><li>9：表示进入维护中。</li><li>10：表示服务暂停中。</li><li>11：表示退出维护中。</li><li>12：表示退出暂停中。</li><li>13：表示配置下发中。</li><li>14：表示销毁集群中。</li><li>15：表示销毁core节点中。</li><li>16：销毁task节点中。</li><li>17：表示销毁router节点中。</li><li>18：表示更改webproxy密码中。</li><li>19：表示集群隔离中。</li><li>20：表示集群冲正中。</li><li>21：表示集群回收中。</li><li>22：表示变配等待中。</li><li>23：表示集群已隔离。</li><li>24：表示缩容节点中。</li><li>33：表示集群等待退费中。</li><li>34：表示集群已退费。</li><li>301：表示创建失败。</li><li>302：表示扩容失败。</li>
+     * @param string $AddTime <p>添加时间</p>
+     * @param string $RunTime <p>已经运行时间</p>
+     * @param EmrProductConfigOutter $Config <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HiveMetaDb Hive元数据信息
-     * @param string $ServiceClass 集群类型:EMR,CLICKHOUSE,DRUID
-     * @param string $AliasInfo 集群所有节点的别名序列化
-     * @param integer $ProductId 集群版本Id
-     * @param string $Zone 地区ID
-     * @param string $SceneName 场景名称
-     * @param string $SceneServiceClass 场景化集群类型
-     * @param string $SceneEmrVersion 场景化EMR版本
-     * @param string $DisplayName 场景化集群类型
-     * @param string $VpcName vpc name
-     * @param string $SubnetName subnet name
-     * @param array $ClusterExternalServiceInfo 集群依赖关系
+     * @param string $MasterIp <p>主节点外网IP</p>
+     * @param string $EmrVersion <p>EMR版本</p>
+     * @param integer $ChargeType <p>收费类型</p>
+     * @param integer $TradeVersion <p>交易版本</p>
+     * @param integer $ResourceOrderId <p>资源订单ID</p>
+     * @param integer $IsTradeCluster <p>是否计费集群</p>
+     * @param string $AlarmInfo <p>集群错误状态告警信息</p>
+     * @param integer $IsWoodpeckerCluster <p>是否采用新架构</p>
+     * @param string $MetaDb <p>元数据库信息</p>
+     * @param array $Tags <p>标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UniqVpcId 集群vpcid 字符串类型
-     * @param string $UniqSubnetId 子网id 字符串类型
-     * @param array $TopologyInfoList 节点信息
+     * @param string $HiveMetaDb <p>Hive元数据信息</p>
+     * @param string $ServiceClass <p>集群类型:EMR,CLICKHOUSE,DRUID</p>
+     * @param string $AliasInfo <p>集群所有节点的别名序列化</p>
+     * @param integer $ProductId <p>集群版本Id</p>
+     * @param string $Zone <p>地区ID</p>
+     * @param string $SceneName <p>场景名称</p>
+     * @param string $SceneServiceClass <p>场景化集群类型</p>
+     * @param string $SceneEmrVersion <p>场景化EMR版本</p>
+     * @param string $DisplayName <p>场景化集群类型</p>
+     * @param string $VpcName <p>vpc name</p>
+     * @param string $SubnetName <p>subnet name</p>
+     * @param array $ClusterExternalServiceInfo <p>集群依赖关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsMultiZoneCluster 是否是跨AZ集群
-     * @param boolean $IsCvmReplace 是否开通异常节点自动补偿
-     * @param string $ClusterTitle 标题
-     * @param EmrProductConfigDetail $ConfigDetail 集群产品配置信息
+     * @param string $UniqVpcId <p>集群vpcid 字符串类型</p>
+     * @param string $UniqSubnetId <p>子网id 字符串类型</p>
+     * @param array $TopologyInfoList <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BindFileSystemNum 集群绑定的文件系统数
-     * @param array $ClusterRelationInfoList rss集群的绑定列表
+     * @param boolean $IsMultiZoneCluster <p>是否是跨AZ集群</p>
+     * @param boolean $IsCvmReplace <p>是否开通异常节点自动补偿</p>
+     * @param string $ClusterTitle <p>标题</p>
+     * @param EmrProductConfigDetail $ConfigDetail <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RedisId Redis信息
+     * @param integer $BindFileSystemNum <p>集群绑定的文件系统数</p>
+     * @param array $ClusterRelationInfoList <p>rss集群的绑定列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RedisId <p>Redis信息</p>
+     * @param boolean $IsIOHungSelfRecovery <p>是否开启IO故障自愈</p>
+     * @param array $MetaDBGroupInfo <p>元数据信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -760,6 +672,19 @@ class ClusterInstancesInfo extends AbstractModel
 
         if (array_key_exists("RedisId",$param) and $param["RedisId"] !== null) {
             $this->RedisId = $param["RedisId"];
+        }
+
+        if (array_key_exists("IsIOHungSelfRecovery",$param) and $param["IsIOHungSelfRecovery"] !== null) {
+            $this->IsIOHungSelfRecovery = $param["IsIOHungSelfRecovery"];
+        }
+
+        if (array_key_exists("MetaDBGroupInfo",$param) and $param["MetaDBGroupInfo"] !== null) {
+            $this->MetaDBGroupInfo = [];
+            foreach ($param["MetaDBGroupInfo"] as $key => $value){
+                $obj = new CustomMetaDBInfo();
+                $obj->deserialize($value);
+                array_push($this->MetaDBGroupInfo, $obj);
+            }
         }
     }
 }

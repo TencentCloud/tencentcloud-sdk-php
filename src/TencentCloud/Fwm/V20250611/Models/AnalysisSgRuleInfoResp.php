@@ -1,0 +1,587 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Fwm\V20250611\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 企业安全组规则列表信息
+ *
+ * @method integer getId() 获取规则id  等同RuleUuid
+ * @method void setId(integer $Id) 设置规则id  等同RuleUuid
+ * @method string getRuleId() 获取规则Id
+ * @method void setRuleId(string $RuleId) 设置规则Id
+ * @method integer getOrderIndex() 获取排序
+ * @method void setOrderIndex(integer $OrderIndex) 设置排序
+ * @method integer getCfwOrderIndex() 获取云防排序
+ * @method void setCfwOrderIndex(integer $CfwOrderIndex) 设置云防排序
+ * @method string getSourceId() 获取源规则内容
+ * @method void setSourceId(string $SourceId) 设置源规则内容
+ * @method integer getSourceType() 获取源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(instance)
+2表示子网实例(instance)
+3表示CVM实例(instance)
+4表示CLB实例(instance)
+5表示ENI实例(instance)
+6表示数据库实例(instance)
+7表示模板(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
+ * @method void setSourceType(integer $SourceType) 设置源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(instance)
+2表示子网实例(instance)
+3表示CVM实例(instance)
+4表示CLB实例(instance)
+5表示ENI实例(instance)
+6表示数据库实例(instance)
+7表示模板(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
+ * @method string getTargetId() 获取目的规则内容
+ * @method void setTargetId(string $TargetId) 设置目的规则内容
+ * @method integer getTargetType() 获取目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(instance)
+2表示子网实例(instance)
+3表示CVM实例(instance)
+4表示CLB实例(instance)
+5表示ENI实例(instance)
+6表示数据库实例(instance)
+7表示模板(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
+ * @method void setTargetType(integer $TargetType) 设置目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(instance)
+2表示子网实例(instance)
+3表示CVM实例(instance)
+4表示CLB实例(instance)
+5表示ENI实例(instance)
+6表示数据库实例(instance)
+7表示模板(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
+ * @method string getProtocol() 获取协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
+ * @method void setProtocol(string $Protocol) 设置协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
+ * @method string getPort() 获取端口
+ * @method void setPort(string $Port) 设置端口
+ * @method integer getStrategy() 获取规则策略
+取值范围:1/2
+1:阻断
+2:放行
+ * @method void setStrategy(integer $Strategy) 设置规则策略
+取值范围:1/2
+1:阻断
+2:放行
+ * @method string getDetail() 获取描述
+ * @method void setDetail(string $Detail) 设置描述
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
+ * @method string getServiceTemplateId() 获取服务模板id
+ * @method void setServiceTemplateId(string $ServiceTemplateId) 设置服务模板id
+ * @method string getSouInstanceName() 获取源资产名称
+ * @method void setSouInstanceName(string $SouInstanceName) 设置源资产名称
+ * @method string getSouPublicIp() 获取源资产公网ip
+ * @method void setSouPublicIp(string $SouPublicIp) 设置源资产公网ip
+ * @method string getSouPrivateIp() 获取源资产内网ip
+ * @method void setSouPrivateIp(string $SouPrivateIp) 设置源资产内网ip
+ * @method string getSouCidr() 获取源资产网段信息
+ * @method void setSouCidr(string $SouCidr) 设置源资产网段信息
+ * @method string getSouParameterName() 获取源模板名称
+ * @method void setSouParameterName(string $SouParameterName) 设置源模板名称
+ * @method string getInstanceName() 获取目的资产名称
+ * @method void setInstanceName(string $InstanceName) 设置目的资产名称
+ * @method string getPublicIp() 获取目的资产公网ip
+ * @method void setPublicIp(string $PublicIp) 设置目的资产公网ip
+ * @method string getPrivateIp() 获取目的资产内网ip
+ * @method void setPrivateIp(string $PrivateIp) 设置目的资产内网ip
+ * @method string getCidr() 获取目的资产网段信息
+ * @method void setCidr(string $Cidr) 设置目的资产网段信息
+ * @method string getParameterName() 获取目的模板名称
+ * @method void setParameterName(string $ParameterName) 设置目的模板名称
+ * @method string getProtocolPortName() 获取端口模板名称
+ * @method void setProtocolPortName(string $ProtocolPortName) 设置端口模板名称
+ * @method SgDnsParseCount getDnsParseCount() 获取域名解析的IP统计
+ * @method void setDnsParseCount(SgDnsParseCount $DnsParseCount) 设置域名解析的IP统计
+ * @method string getScope() 获取规则生效范围
+ * @method void setScope(string $Scope) 设置规则生效范围
+ * @method integer getRulePartition() 获取分区：
+1防火墙管理最前分区
+2是云防规则
+3防火墙管理最后分区
+ * @method void setRulePartition(integer $RulePartition) 设置分区：
+1防火墙管理最前分区
+2是云防规则
+3防火墙管理最后分区
+ * @method string getGroupId() 获取规则组Id
+ * @method void setGroupId(string $GroupId) 设置规则组Id
+ * @method string getGroupName() 获取规则组名称
+ * @method void setGroupName(string $GroupName) 设置规则组名称
+ * @method string getGroupRuleId() 获取规则组内规则id
+ * @method void setGroupRuleId(string $GroupRuleId) 设置规则组内规则id
+ * @method string getStrategyId() 获取策略Id
+ * @method void setStrategyId(string $StrategyId) 设置策略Id
+ * @method string getIpVersion() 获取ip类型
+ * @method void setIpVersion(string $IpVersion) 设置ip类型
+ * @method MemberInfo getBelongMember() 获取成员信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBelongMember(MemberInfo $BelongMember) 设置成员信息
+注意：此字段可能返回 null，表示取不到有效值。
+ */
+class AnalysisSgRuleInfoResp extends AbstractModel
+{
+    /**
+     * @var integer 规则id  等同RuleUuid
+     */
+    public $Id;
+
+    /**
+     * @var string 规则Id
+     */
+    public $RuleId;
+
+    /**
+     * @var integer 排序
+     */
+    public $OrderIndex;
+
+    /**
+     * @var integer 云防排序
+     */
+    public $CfwOrderIndex;
+
+    /**
+     * @var string 源规则内容
+     */
+    public $SourceId;
+
+    /**
+     * @var integer 源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(instance)
+2表示子网实例(instance)
+3表示CVM实例(instance)
+4表示CLB实例(instance)
+5表示ENI实例(instance)
+6表示数据库实例(instance)
+7表示模板(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
+     */
+    public $SourceType;
+
+    /**
+     * @var string 目的规则内容
+     */
+    public $TargetId;
+
+    /**
+     * @var integer 目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(instance)
+2表示子网实例(instance)
+3表示CVM实例(instance)
+4表示CLB实例(instance)
+5表示ENI实例(instance)
+6表示数据库实例(instance)
+7表示模板(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
+     */
+    public $TargetType;
+
+    /**
+     * @var string 协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
+     */
+    public $Protocol;
+
+    /**
+     * @var string 端口
+     */
+    public $Port;
+
+    /**
+     * @var integer 规则策略
+取值范围:1/2
+1:阻断
+2:放行
+     */
+    public $Strategy;
+
+    /**
+     * @var string 描述
+     */
+    public $Detail;
+
+    /**
+     * @var string 地域
+     */
+    public $Region;
+
+    /**
+     * @var string 服务模板id
+     */
+    public $ServiceTemplateId;
+
+    /**
+     * @var string 源资产名称
+     */
+    public $SouInstanceName;
+
+    /**
+     * @var string 源资产公网ip
+     */
+    public $SouPublicIp;
+
+    /**
+     * @var string 源资产内网ip
+     */
+    public $SouPrivateIp;
+
+    /**
+     * @var string 源资产网段信息
+     */
+    public $SouCidr;
+
+    /**
+     * @var string 源模板名称
+     */
+    public $SouParameterName;
+
+    /**
+     * @var string 目的资产名称
+     */
+    public $InstanceName;
+
+    /**
+     * @var string 目的资产公网ip
+     */
+    public $PublicIp;
+
+    /**
+     * @var string 目的资产内网ip
+     */
+    public $PrivateIp;
+
+    /**
+     * @var string 目的资产网段信息
+     */
+    public $Cidr;
+
+    /**
+     * @var string 目的模板名称
+     */
+    public $ParameterName;
+
+    /**
+     * @var string 端口模板名称
+     */
+    public $ProtocolPortName;
+
+    /**
+     * @var SgDnsParseCount 域名解析的IP统计
+     */
+    public $DnsParseCount;
+
+    /**
+     * @var string 规则生效范围
+     */
+    public $Scope;
+
+    /**
+     * @var integer 分区：
+1防火墙管理最前分区
+2是云防规则
+3防火墙管理最后分区
+     */
+    public $RulePartition;
+
+    /**
+     * @var string 规则组Id
+     */
+    public $GroupId;
+
+    /**
+     * @var string 规则组名称
+     */
+    public $GroupName;
+
+    /**
+     * @var string 规则组内规则id
+     */
+    public $GroupRuleId;
+
+    /**
+     * @var string 策略Id
+     */
+    public $StrategyId;
+
+    /**
+     * @var string ip类型
+     */
+    public $IpVersion;
+
+    /**
+     * @var MemberInfo 成员信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BelongMember;
+
+    /**
+     * @param integer $Id 规则id  等同RuleUuid
+     * @param string $RuleId 规则Id
+     * @param integer $OrderIndex 排序
+     * @param integer $CfwOrderIndex 云防排序
+     * @param string $SourceId 源规则内容
+     * @param integer $SourceType 源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(instance)
+2表示子网实例(instance)
+3表示CVM实例(instance)
+4表示CLB实例(instance)
+5表示ENI实例(instance)
+6表示数据库实例(instance)
+7表示模板(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
+     * @param string $TargetId 目的规则内容
+     * @param integer $TargetType 目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(instance)
+2表示子网实例(instance)
+3表示CVM实例(instance)
+4表示CLB实例(instance)
+5表示ENI实例(instance)
+6表示数据库实例(instance)
+7表示模板(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
+     * @param string $Protocol 协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
+     * @param string $Port 端口
+     * @param integer $Strategy 规则策略
+取值范围:1/2
+1:阻断
+2:放行
+     * @param string $Detail 描述
+     * @param string $Region 地域
+     * @param string $ServiceTemplateId 服务模板id
+     * @param string $SouInstanceName 源资产名称
+     * @param string $SouPublicIp 源资产公网ip
+     * @param string $SouPrivateIp 源资产内网ip
+     * @param string $SouCidr 源资产网段信息
+     * @param string $SouParameterName 源模板名称
+     * @param string $InstanceName 目的资产名称
+     * @param string $PublicIp 目的资产公网ip
+     * @param string $PrivateIp 目的资产内网ip
+     * @param string $Cidr 目的资产网段信息
+     * @param string $ParameterName 目的模板名称
+     * @param string $ProtocolPortName 端口模板名称
+     * @param SgDnsParseCount $DnsParseCount 域名解析的IP统计
+     * @param string $Scope 规则生效范围
+     * @param integer $RulePartition 分区：
+1防火墙管理最前分区
+2是云防规则
+3防火墙管理最后分区
+     * @param string $GroupId 规则组Id
+     * @param string $GroupName 规则组名称
+     * @param string $GroupRuleId 规则组内规则id
+     * @param string $StrategyId 策略Id
+     * @param string $IpVersion ip类型
+     * @param MemberInfo $BelongMember 成员信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("OrderIndex",$param) and $param["OrderIndex"] !== null) {
+            $this->OrderIndex = $param["OrderIndex"];
+        }
+
+        if (array_key_exists("CfwOrderIndex",$param) and $param["CfwOrderIndex"] !== null) {
+            $this->CfwOrderIndex = $param["CfwOrderIndex"];
+        }
+
+        if (array_key_exists("SourceId",$param) and $param["SourceId"] !== null) {
+            $this->SourceId = $param["SourceId"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("TargetId",$param) and $param["TargetId"] !== null) {
+            $this->TargetId = $param["TargetId"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
+            $this->Strategy = $param["Strategy"];
+        }
+
+        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
+            $this->Detail = $param["Detail"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("ServiceTemplateId",$param) and $param["ServiceTemplateId"] !== null) {
+            $this->ServiceTemplateId = $param["ServiceTemplateId"];
+        }
+
+        if (array_key_exists("SouInstanceName",$param) and $param["SouInstanceName"] !== null) {
+            $this->SouInstanceName = $param["SouInstanceName"];
+        }
+
+        if (array_key_exists("SouPublicIp",$param) and $param["SouPublicIp"] !== null) {
+            $this->SouPublicIp = $param["SouPublicIp"];
+        }
+
+        if (array_key_exists("SouPrivateIp",$param) and $param["SouPrivateIp"] !== null) {
+            $this->SouPrivateIp = $param["SouPrivateIp"];
+        }
+
+        if (array_key_exists("SouCidr",$param) and $param["SouCidr"] !== null) {
+            $this->SouCidr = $param["SouCidr"];
+        }
+
+        if (array_key_exists("SouParameterName",$param) and $param["SouParameterName"] !== null) {
+            $this->SouParameterName = $param["SouParameterName"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
+            $this->PublicIp = $param["PublicIp"];
+        }
+
+        if (array_key_exists("PrivateIp",$param) and $param["PrivateIp"] !== null) {
+            $this->PrivateIp = $param["PrivateIp"];
+        }
+
+        if (array_key_exists("Cidr",$param) and $param["Cidr"] !== null) {
+            $this->Cidr = $param["Cidr"];
+        }
+
+        if (array_key_exists("ParameterName",$param) and $param["ParameterName"] !== null) {
+            $this->ParameterName = $param["ParameterName"];
+        }
+
+        if (array_key_exists("ProtocolPortName",$param) and $param["ProtocolPortName"] !== null) {
+            $this->ProtocolPortName = $param["ProtocolPortName"];
+        }
+
+        if (array_key_exists("DnsParseCount",$param) and $param["DnsParseCount"] !== null) {
+            $this->DnsParseCount = new SgDnsParseCount();
+            $this->DnsParseCount->deserialize($param["DnsParseCount"]);
+        }
+
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
+        }
+
+        if (array_key_exists("RulePartition",$param) and $param["RulePartition"] !== null) {
+            $this->RulePartition = $param["RulePartition"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("GroupRuleId",$param) and $param["GroupRuleId"] !== null) {
+            $this->GroupRuleId = $param["GroupRuleId"];
+        }
+
+        if (array_key_exists("StrategyId",$param) and $param["StrategyId"] !== null) {
+            $this->StrategyId = $param["StrategyId"];
+        }
+
+        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
+            $this->IpVersion = $param["IpVersion"];
+        }
+
+        if (array_key_exists("BelongMember",$param) and $param["BelongMember"] !== null) {
+            $this->BelongMember = new MemberInfo();
+            $this->BelongMember->deserialize($param["BelongMember"]);
+        }
+    }
+}

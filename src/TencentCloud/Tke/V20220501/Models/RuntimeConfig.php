@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 运行时配置
  *
- * @method string getRuntimeType() 获取运行时类型
+ * @method string getRuntimeType() 获取<p>运行时类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuntimeType(string $RuntimeType) 设置运行时类型
+ * @method void setRuntimeType(string $RuntimeType) 设置<p>运行时类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuntimeVersion() 获取运行时版本
+ * @method string getRuntimeVersion() 获取<p>运行时版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置<p>运行时版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuntimeRootDir() 获取运行时根目录
+ * @method string getRuntimeRootDir() 获取<p>运行时根目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuntimeRootDir(string $RuntimeRootDir) 设置运行时根目录
+ * @method void setRuntimeRootDir(string $RuntimeRootDir) 设置<p>运行时根目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuntimeConfig extends AbstractModel
 {
     /**
-     * @var string 运行时类型
+     * @var string <p>运行时类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeType;
 
     /**
-     * @var string 运行时版本
+     * @var string <p>运行时版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeVersion;
 
     /**
-     * @var string 运行时根目录
+     * @var string <p>运行时根目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeRootDir;
 
     /**
-     * @param string $RuntimeType 运行时类型
+     * @param string $RuntimeType <p>运行时类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuntimeVersion 运行时版本
+     * @param string $RuntimeVersion <p>运行时版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuntimeRootDir 运行时根目录
+     * @param string $RuntimeRootDir <p>运行时根目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

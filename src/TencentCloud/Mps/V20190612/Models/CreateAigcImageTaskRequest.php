@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnhancePrompt(boolean $EnhancePrompt) 设置<p>默认取值为False，模型会严格地遵循指令。<br>如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
  * @method array getImageInfos() 获取<p>用于传入参考的资源图片信息，默认支持传入一张图片。</p><p>支持多图输入的模型：</p><ol><li>Kling 2.1，可支持最多 4 张图片输入作为资源图。</li><li>Kling 3.0-Omni，可支持最多 10 张图片输入作为资源图。</li><li>Kling O1，可支持最多 10 张图片输入作为资源图。</li><li>Vidu q2，可支持最多 7 张图片输入作为资源图。</li><li>Hunyuan 3.0，可支持最多 3 张图片输入作为资源图。</li><li>MJ v7，可支持最多 3 张图片输入作为资源图。</li></ol><p>注意：</p><ol><li>推荐图片小于7M，各模型限制不同。</li><li>图片格式支持：jpeg, png, webp。</li></ol>
  * @method void setImageInfos(array $ImageInfos) 设置<p>用于传入参考的资源图片信息，默认支持传入一张图片。</p><p>支持多图输入的模型：</p><ol><li>Kling 2.1，可支持最多 4 张图片输入作为资源图。</li><li>Kling 3.0-Omni，可支持最多 10 张图片输入作为资源图。</li><li>Kling O1，可支持最多 10 张图片输入作为资源图。</li><li>Vidu q2，可支持最多 7 张图片输入作为资源图。</li><li>Hunyuan 3.0，可支持最多 3 张图片输入作为资源图。</li><li>MJ v7，可支持最多 3 张图片输入作为资源图。</li></ol><p>注意：</p><ol><li>推荐图片小于7M，各模型限制不同。</li><li>图片格式支持：jpeg, png, webp。</li></ol>
+ * @method integer getOutputImageCount() 获取<p>指定图片输出张数。目前默认支持输出 1 张。</p>
+ * @method void setOutputImageCount(integer $OutputImageCount) 设置<p>指定图片输出张数。目前默认支持输出 1 张。</p>
  * @method AigcImageExtraParam getExtraParameters() 获取<p>用于传入模型要求的额外参数。</p>
  * @method void setExtraParameters(AigcImageExtraParam $ExtraParameters) 设置<p>用于传入模型要求的额外参数。</p>
  * @method string getAdditionalParameters() 获取<p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 </p><ol><li>Hunyuan 3.0，支持自由设置分辨率宽高，宽、高均在 [512, 2048] 像素范围内，宽高乘积 ≤ 1024x1024 像素。</li><li>Qwen 0925，支持自由设置分辨率宽高，合法总像素范围 [512x512=261632, 2048x2048=4194304]。</li></ol><p>示例： {"size":"1024x1024"}。</p>
@@ -81,6 +83,11 @@ class CreateAigcImageTaskRequest extends AbstractModel
     public $ImageInfos;
 
     /**
+     * @var integer <p>指定图片输出张数。目前默认支持输出 1 张。</p>
+     */
+    public $OutputImageCount;
+
+    /**
      * @var AigcImageExtraParam <p>用于传入模型要求的额外参数。</p>
      */
     public $ExtraParameters;
@@ -108,6 +115,7 @@ class CreateAigcImageTaskRequest extends AbstractModel
      * @param string $NegativePrompt <p>用于描述您想要阻止模型生成的内容。 注意：部分模型支持。</p><p>例如：顶部照明、明亮的色彩、人物、动物、多辆汽车、风。</p>
      * @param boolean $EnhancePrompt <p>默认取值为False，模型会严格地遵循指令。<br>如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
      * @param array $ImageInfos <p>用于传入参考的资源图片信息，默认支持传入一张图片。</p><p>支持多图输入的模型：</p><ol><li>Kling 2.1，可支持最多 4 张图片输入作为资源图。</li><li>Kling 3.0-Omni，可支持最多 10 张图片输入作为资源图。</li><li>Kling O1，可支持最多 10 张图片输入作为资源图。</li><li>Vidu q2，可支持最多 7 张图片输入作为资源图。</li><li>Hunyuan 3.0，可支持最多 3 张图片输入作为资源图。</li><li>MJ v7，可支持最多 3 张图片输入作为资源图。</li></ol><p>注意：</p><ol><li>推荐图片小于7M，各模型限制不同。</li><li>图片格式支持：jpeg, png, webp。</li></ol>
+     * @param integer $OutputImageCount <p>指定图片输出张数。目前默认支持输出 1 张。</p>
      * @param AigcImageExtraParam $ExtraParameters <p>用于传入模型要求的额外参数。</p>
      * @param string $AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 </p><ol><li>Hunyuan 3.0，支持自由设置分辨率宽高，宽、高均在 [512, 2048] 像素范围内，宽高乘积 ≤ 1024x1024 像素。</li><li>Qwen 0925，支持自由设置分辨率宽高，合法总像素范围 [512x512=261632, 2048x2048=4194304]。</li></ol><p>示例： {"size":"1024x1024"}。</p>
      * @param AigcStoreCosParam $StoreCosParam <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
@@ -157,6 +165,10 @@ class CreateAigcImageTaskRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ImageInfos, $obj);
             }
+        }
+
+        if (array_key_exists("OutputImageCount",$param) and $param["OutputImageCount"] !== null) {
+            $this->OutputImageCount = $param["OutputImageCount"];
         }
 
         if (array_key_exists("ExtraParameters",$param) and $param["ExtraParameters"] !== null) {

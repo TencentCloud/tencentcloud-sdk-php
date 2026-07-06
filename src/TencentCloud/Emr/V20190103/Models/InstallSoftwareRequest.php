@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerExtraConf(ContainerExtraConf $ContainerExtraConf) 设置<p>额外容器相关配置</p>
  * @method boolean getCheckServiceDeployInfo() 获取<p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
  * @method void setCheckServiceDeployInfo(boolean $CheckServiceDeployInfo) 设置<p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
+ * @method array getMetaDBGroupInfo() 获取<p>自定义metadb信息</p>
+ * @method void setMetaDBGroupInfo(array $MetaDBGroupInfo) 设置<p>自定义metadb信息</p>
  */
 class InstallSoftwareRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class InstallSoftwareRequest extends AbstractModel
     public $CheckServiceDeployInfo;
 
     /**
+     * @var array <p>自定义metadb信息</p>
+     */
+    public $MetaDBGroupInfo;
+
+    /**
      * @param string $InstanceId <p>集群实例号</p>
      * @param array $SoftInfo <p>组件版本号，例如presto-0.161，可根据InstallSoftWareInfo查看当前集群可安装的组件</p>
      * @param string $CdbAutoRenew <p>如果需要购买CDB，如果是包年包月集群，是否为这个cdb自动续费，默认AUTO_RENEW,如不自动续费新增的CDB，则填入NOT_AUTO_RENEW</p>
@@ -136,6 +143,7 @@ class InstallSoftwareRequest extends AbstractModel
      * @param integer $NeedCdbAudit <p>是否开通审计</p>
      * @param ContainerExtraConf $ContainerExtraConf <p>额外容器相关配置</p>
      * @param boolean $CheckServiceDeployInfo <p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
+     * @param array $MetaDBGroupInfo <p>自定义metadb信息</p>
      */
     function __construct()
     {
@@ -226,6 +234,15 @@ class InstallSoftwareRequest extends AbstractModel
 
         if (array_key_exists("CheckServiceDeployInfo",$param) and $param["CheckServiceDeployInfo"] !== null) {
             $this->CheckServiceDeployInfo = $param["CheckServiceDeployInfo"];
+        }
+
+        if (array_key_exists("MetaDBGroupInfo",$param) and $param["MetaDBGroupInfo"] !== null) {
+            $this->MetaDBGroupInfo = [];
+            foreach ($param["MetaDBGroupInfo"] as $key => $value){
+                $obj = new CustomMetaDBInfo();
+                $obj->deserialize($value);
+                array_push($this->MetaDBGroupInfo, $obj);
+            }
         }
     }
 }

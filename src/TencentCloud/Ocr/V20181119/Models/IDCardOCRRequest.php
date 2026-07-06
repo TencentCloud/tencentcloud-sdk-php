@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableReflectDetail(boolean $EnableReflectDetail) 设置<p>默认值为false。</p><p>此开关需要在反光检测开关开启下才会生效（即此开关生效的前提是config入参里的&quot;ReflectWarn&quot;:true），若EnableReflectDetail设置为true，则会返回反光点覆盖区域详情。反光点覆盖区域详情分为四部分：人像照片位置、国徽位置、识别字段位置、其他位置。一个反光点允许覆盖多个区域，且一张图片可能存在多个反光点。</p>
  * @method boolean getEnableDateVerify() 获取<p>用于控制是否开启日期校验，默认值为true，打开会进行日期校验。</p>
  * @method void setEnableDateVerify(boolean $EnableDateVerify) 设置<p>用于控制是否开启日期校验，默认值为true，打开会进行日期校验。</p>
- * @method string getCardWarnType() 获取<p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p>
- * @method void setCardWarnType(string $CardWarnType) 设置<p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p>
+ * @method string getCardWarnType() 获取<p>告警类型</p><p>枚举值：</p><ul><li>Basic： 使用基础卡证告警能力（含基础PS告警）</li><li>Advanced： 开启进阶PS告警能力，PS告警效果更佳但需要更长耗时</li></ul><p>默认值：Basic</p>
+ * @method void setCardWarnType(string $CardWarnType) 设置<p>告警类型</p><p>枚举值：</p><ul><li>Basic： 使用基础卡证告警能力（含基础PS告警）</li><li>Advanced： 开启进阶PS告警能力，PS告警效果更佳但需要更长耗时</li></ul><p>默认值：Basic</p>
  */
 class IDCardOCRRequest extends AbstractModel
 {
@@ -76,7 +76,7 @@ class IDCardOCRRequest extends AbstractModel
     public $EnableDateVerify;
 
     /**
-     * @var string <p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p>
+     * @var string <p>告警类型</p><p>枚举值：</p><ul><li>Basic： 使用基础卡证告警能力（含基础PS告警）</li><li>Advanced： 开启进阶PS告警能力，PS告警效果更佳但需要更长耗时</li></ul><p>默认值：Basic</p>
      */
     public $CardWarnType;
 
@@ -88,7 +88,7 @@ class IDCardOCRRequest extends AbstractModel
      * @param boolean $EnableRecognitionRectify <p>默认值为true，打开识别结果纠正开关。开关开启后，身份证号、出生日期、性别，三个字段会进行矫正补齐，统一结果输出；若关闭此开关，以上三个字段不会进行矫正补齐，保持原始识别结果输出，若原图出现篡改情况，这三个字段的识别结果可能会不统一。</p>
      * @param boolean $EnableReflectDetail <p>默认值为false。</p><p>此开关需要在反光检测开关开启下才会生效（即此开关生效的前提是config入参里的&quot;ReflectWarn&quot;:true），若EnableReflectDetail设置为true，则会返回反光点覆盖区域详情。反光点覆盖区域详情分为四部分：人像照片位置、国徽位置、识别字段位置、其他位置。一个反光点允许覆盖多个区域，且一张图片可能存在多个反光点。</p>
      * @param boolean $EnableDateVerify <p>用于控制是否开启日期校验，默认值为true，打开会进行日期校验。</p>
-     * @param string $CardWarnType <p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p>
+     * @param string $CardWarnType <p>告警类型</p><p>枚举值：</p><ul><li>Basic： 使用基础卡证告警能力（含基础PS告警）</li><li>Advanced： 开启进阶PS告警能力，PS告警效果更佳但需要更长耗时</li></ul><p>默认值：Basic</p>
      */
     function __construct()
     {

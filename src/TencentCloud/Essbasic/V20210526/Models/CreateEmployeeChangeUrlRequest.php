@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置<p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
  * @method string getOpenId() 获取<p>待修改的员工OpenId</p>
  * @method void setOpenId(string $OpenId) 设置<p>待修改的员工OpenId</p>
- * @method string getNewMobile() 获取<p>待修改的员工手机号，支持海外格式</p>
- * @method void setNewMobile(string $NewMobile) 设置<p>待修改的员工手机号，支持海外格式</p>
+ * @method string getNewMobile() 获取<p>待修改的员工手机号，支持海外格式</p><p>参数格式：<br><br>国内：+86 1825195xxxx 或者 1825195xxxx <br><br>海外：+12 12345xxx</p>
+ * @method void setNewMobile(string $NewMobile) 设置<p>待修改的员工手机号，支持海外格式</p><p>参数格式：<br><br>国内：+86 1825195xxxx 或者 1825195xxxx <br><br>海外：+12 12345xxx</p>
  */
 class CreateEmployeeChangeUrlRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateEmployeeChangeUrlRequest extends AbstractModel
     public $OpenId;
 
     /**
-     * @var string <p>待修改的员工手机号，支持海外格式</p>
+     * @var string <p>待修改的员工手机号，支持海外格式</p><p>参数格式：<br><br>国内：+86 1825195xxxx 或者 1825195xxxx <br><br>海外：+12 12345xxx</p>
      */
     public $NewMobile;
 
     /**
      * @param Agent $Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
      * @param string $OpenId <p>待修改的员工OpenId</p>
-     * @param string $NewMobile <p>待修改的员工手机号，支持海外格式</p>
+     * @param string $NewMobile <p>待修改的员工手机号，支持海外格式</p><p>参数格式：<br><br>国内：+86 1825195xxxx 或者 1825195xxxx <br><br>海外：+12 12345xxx</p>
      */
     function __construct()
     {

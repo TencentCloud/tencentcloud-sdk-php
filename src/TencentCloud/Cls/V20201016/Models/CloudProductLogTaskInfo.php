@@ -20,66 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云产品日志投递任务信息
  *
- * @method string getClsRegion() 获取日志服务地域
- * @method void setClsRegion(string $ClsRegion) 设置日志服务地域
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getLogsetId() 获取日志集ID
- * @method void setLogsetId(string $LogsetId) 设置日志集ID
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getExtend() 获取日志配置拓展信息， 一般用于存储额外的日志投递配置
- * @method void setExtend(string $Extend) 设置日志配置拓展信息， 一般用于存储额外的日志投递配置
- * @method string getLogType() 获取日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
- * @method void setLogType(string $LogType) 设置日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
- * @method integer getStatus() 获取任务状态， 0创建中 1创建完成 2 删除中 
- * @method void setStatus(integer $Status) 设置任务状态， 0创建中 1创建完成 2 删除中 
+ * @method string getClsRegion() 获取<p>日志服务地域</p>
+ * @method void setClsRegion(string $ClsRegion) 设置<p>日志服务地域</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getLogsetId() 获取<p>日志集ID</p>
+ * @method void setLogsetId(string $LogsetId) 设置<p>日志集ID</p>
+ * @method string getTopicId() 获取<p>日志主题ID</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题ID</p>
+ * @method string getExtend() 获取<p>日志配置拓展信息， 一般用于存储额外的日志投递配置</p>
+ * @method void setExtend(string $Extend) 设置<p>日志配置拓展信息， 一般用于存储额外的日志投递配置</p>
+ * @method string getLogType() 获取<p>日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS</p>
+ * @method void setLogType(string $LogType) 设置<p>日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS</p>
+ * @method integer getStatus() 获取<p>任务状态， 0创建中 1创建完成 2 删除中</p>
+ * @method void setStatus(integer $Status) 设置<p>任务状态， 0创建中 1创建完成 2 删除中</p>
+ * @method array getTopicTags() 获取<p>投递任务关联topic的标签信息</p>
+ * @method void setTopicTags(array $TopicTags) 设置<p>投递任务关联topic的标签信息</p>
+ * @method array getLogsetTags() 获取<p>投递任务关联logset的标签信息</p>
+ * @method void setLogsetTags(array $LogsetTags) 设置<p>投递任务关联logset的标签信息</p>
  */
 class CloudProductLogTaskInfo extends AbstractModel
 {
     /**
-     * @var string 日志服务地域
+     * @var string <p>日志服务地域</p>
      */
     public $ClsRegion;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 日志集ID
+     * @var string <p>日志集ID</p>
      */
     public $LogsetId;
 
     /**
-     * @var string 日志主题ID
+     * @var string <p>日志主题ID</p>
      */
     public $TopicId;
 
     /**
-     * @var string 日志配置拓展信息， 一般用于存储额外的日志投递配置
+     * @var string <p>日志配置拓展信息， 一般用于存储额外的日志投递配置</p>
      */
     public $Extend;
 
     /**
-     * @var string 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
+     * @var string <p>日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS</p>
      */
     public $LogType;
 
     /**
-     * @var integer 任务状态， 0创建中 1创建完成 2 删除中 
+     * @var integer <p>任务状态， 0创建中 1创建完成 2 删除中</p>
      */
     public $Status;
 
     /**
-     * @param string $ClsRegion 日志服务地域
-     * @param string $InstanceId 实例ID
-     * @param string $LogsetId 日志集ID
-     * @param string $TopicId 日志主题ID
-     * @param string $Extend 日志配置拓展信息， 一般用于存储额外的日志投递配置
-     * @param string $LogType 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-     * @param integer $Status 任务状态， 0创建中 1创建完成 2 删除中 
+     * @var array <p>投递任务关联topic的标签信息</p>
+     */
+    public $TopicTags;
+
+    /**
+     * @var array <p>投递任务关联logset的标签信息</p>
+     */
+    public $LogsetTags;
+
+    /**
+     * @param string $ClsRegion <p>日志服务地域</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $LogsetId <p>日志集ID</p>
+     * @param string $TopicId <p>日志主题ID</p>
+     * @param string $Extend <p>日志配置拓展信息， 一般用于存储额外的日志投递配置</p>
+     * @param string $LogType <p>日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS</p>
+     * @param integer $Status <p>任务状态， 0创建中 1创建完成 2 删除中</p>
+     * @param array $TopicTags <p>投递任务关联topic的标签信息</p>
+     * @param array $LogsetTags <p>投递任务关联logset的标签信息</p>
      */
     function __construct()
     {
@@ -120,6 +136,24 @@ class CloudProductLogTaskInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("TopicTags",$param) and $param["TopicTags"] !== null) {
+            $this->TopicTags = [];
+            foreach ($param["TopicTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TopicTags, $obj);
+            }
+        }
+
+        if (array_key_exists("LogsetTags",$param) and $param["LogsetTags"] !== null) {
+            $this->LogsetTags = [];
+            foreach ($param["LogsetTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->LogsetTags, $obj);
+            }
         }
     }
 }

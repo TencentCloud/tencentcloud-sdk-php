@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUsersOfGroupSTD返回参数结构体
  *
- * @method boolean getData() 获取是否修改成功
- * @method void setData(boolean $Data) 设置是否修改成功
+ * @method boolean getData() 获取<p>是否修改成功</p>
+ * @method void setData(boolean $Data) 设置<p>是否修改成功</p>
+ * @method integer getFlowId() 获取<p>流程id</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>流程id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyUsersOfGroupSTDResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否修改成功
+     * @var boolean <p>是否修改成功</p>
      */
     public $Data;
+
+    /**
+     * @var integer <p>流程id</p>
+     */
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ModifyUsersOfGroupSTDResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Data 是否修改成功
+     * @param boolean $Data <p>是否修改成功</p>
+     * @param integer $FlowId <p>流程id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class ModifyUsersOfGroupSTDResponse extends AbstractModel
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBudgetId() 获取<p>Budget ID。</p>
  * @method void setBudgetId(string $BudgetId) 设置<p>Budget ID。</p>
- * @method array getBudgetConfigs() 获取<p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
- * @method void setBudgetConfigs(array $BudgetConfigs) 设置<p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
+ * @method array getBudgetConfigs() 获取<p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
+ * @method void setBudgetConfigs(array $BudgetConfigs) 设置<p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
  * @method string getBudgetName() 获取<p>Budget名称。</p>
  * @method void setBudgetName(string $BudgetName) 设置<p>Budget名称。</p>
  * @method RateLimitConfigForBudget getRateLimitConfig() 获取<p>Budget限速配置。</p>
@@ -37,7 +37,7 @@ class ModifyBudgetAttributesRequest extends AbstractModel
     public $BudgetId;
 
     /**
-     * @var array <p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
+     * @var array <p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
      */
     public $BudgetConfigs;
 
@@ -53,7 +53,7 @@ class ModifyBudgetAttributesRequest extends AbstractModel
 
     /**
      * @param string $BudgetId <p>Budget ID。</p>
-     * @param array $BudgetConfigs <p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
+     * @param array $BudgetConfigs <p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
      * @param string $BudgetName <p>Budget名称。</p>
      * @param RateLimitConfigForBudget $RateLimitConfig <p>Budget限速配置。</p>
      */

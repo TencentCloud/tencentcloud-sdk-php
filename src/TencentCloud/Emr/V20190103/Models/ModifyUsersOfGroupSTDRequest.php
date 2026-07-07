@@ -20,80 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUsersOfGroupSTD请求参数结构体
  *
- * @method string getInstanceId() 获取集群名称
- * @method void setInstanceId(string $InstanceId) 设置集群名称
- * @method string getGroup() 获取用户组名
- * @method void setGroup(string $Group) 设置用户组名
- * @method array getUsers() 获取用户列表
- * @method void setUsers(array $Users) 设置用户列表
- * @method string getDescription() 获取用户组描述
- * @method void setDescription(string $Description) 设置用户组描述
- * @method string getOperateAction() 获取枚举类, ADD, DELETE, SYNC
-
-
-枚举类说明:
-- ADD: 新增的批量用户, 多次新增相同的用户不会报错
-- DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错
-- SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组
-默认为SYNC
-
- * @method void setOperateAction(string $OperateAction) 设置枚举类, ADD, DELETE, SYNC
-
-
-枚举类说明:
-- ADD: 新增的批量用户, 多次新增相同的用户不会报错
-- DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错
-- SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组
-默认为SYNC
+ * @method string getInstanceId() 获取<p>集群名称</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群名称</p>
+ * @method string getGroup() 获取<p>用户组名</p>
+ * @method void setGroup(string $Group) 设置<p>用户组名</p>
+ * @method array getUsers() 获取<p>用户列表</p>
+ * @method void setUsers(array $Users) 设置<p>用户列表</p>
+ * @method string getDescription() 获取<p>用户组描述</p>
+ * @method void setDescription(string $Description) 设置<p>用户组描述</p>
+ * @method string getOperateAction() 获取<p>枚举类, ADD, DELETE, SYNC</p><p>枚举类说明:</p><ul><li>ADD: 新增的批量用户, 多次新增相同的用户不会报错</li><li>DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错</li><li>SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组<br>默认为SYNC</li></ul>
+ * @method void setOperateAction(string $OperateAction) 设置<p>枚举类, ADD, DELETE, SYNC</p><p>枚举类说明:</p><ul><li>ADD: 新增的批量用户, 多次新增相同的用户不会报错</li><li>DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错</li><li>SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组<br>默认为SYNC</li></ul>
  */
 class ModifyUsersOfGroupSTDRequest extends AbstractModel
 {
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 用户组名
+     * @var string <p>用户组名</p>
      */
     public $Group;
 
     /**
-     * @var array 用户列表
+     * @var array <p>用户列表</p>
      */
     public $Users;
 
     /**
-     * @var string 用户组描述
+     * @var string <p>用户组描述</p>
      */
     public $Description;
 
     /**
-     * @var string 枚举类, ADD, DELETE, SYNC
-
-
-枚举类说明:
-- ADD: 新增的批量用户, 多次新增相同的用户不会报错
-- DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错
-- SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组
-默认为SYNC
-
+     * @var string <p>枚举类, ADD, DELETE, SYNC</p><p>枚举类说明:</p><ul><li>ADD: 新增的批量用户, 多次新增相同的用户不会报错</li><li>DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错</li><li>SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组<br>默认为SYNC</li></ul>
      */
     public $OperateAction;
 
     /**
-     * @param string $InstanceId 集群名称
-     * @param string $Group 用户组名
-     * @param array $Users 用户列表
-     * @param string $Description 用户组描述
-     * @param string $OperateAction 枚举类, ADD, DELETE, SYNC
-
-
-枚举类说明:
-- ADD: 新增的批量用户, 多次新增相同的用户不会报错
-- DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错
-- SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组
-默认为SYNC
+     * @param string $InstanceId <p>集群名称</p>
+     * @param string $Group <p>用户组名</p>
+     * @param array $Users <p>用户列表</p>
+     * @param string $Description <p>用户组描述</p>
+     * @param string $OperateAction <p>枚举类, ADD, DELETE, SYNC</p><p>枚举类说明:</p><ul><li>ADD: 新增的批量用户, 多次新增相同的用户不会报错</li><li>DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错</li><li>SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组<br>默认为SYNC</li></ul>
      */
     function __construct()
     {

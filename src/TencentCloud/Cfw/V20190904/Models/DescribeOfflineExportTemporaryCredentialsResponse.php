@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnCode(integer $ReturnCode) 设置<p>返回状态码 0 成功 非0不成功</p>
  * @method string getReturnMsg() 获取<p>返回信息  success 成功 其他 不成功</p>
  * @method void setReturnMsg(string $ReturnMsg) 设置<p>返回信息  success 成功 其他 不成功</p>
+ * @method string getLink() 获取<p>临时下载链接</p>
+ * @method void setLink(string $Link) 设置<p>临时下载链接</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeOfflineExportTemporaryCredentialsResponse extends AbstractModel
     public $ReturnMsg;
 
     /**
+     * @var string <p>临时下载链接</p>
+     */
+    public $Link;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeOfflineExportTemporaryCredentialsResponse extends AbstractModel
     /**
      * @param integer $ReturnCode <p>返回状态码 0 成功 非0不成功</p>
      * @param string $ReturnMsg <p>返回信息  success 成功 其他 不成功</p>
+     * @param string $Link <p>临时下载链接</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class DescribeOfflineExportTemporaryCredentialsResponse extends AbstractModel
 
         if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
             $this->ReturnMsg = $param["ReturnMsg"];
+        }
+
+        if (array_key_exists("Link",$param) and $param["Link"] !== null) {
+            $this->Link = $param["Link"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

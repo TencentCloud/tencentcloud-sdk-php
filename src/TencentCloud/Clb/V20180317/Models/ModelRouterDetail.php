@@ -20,8 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询单个实例详细信息
  *
+ * @method string getBudgetId() 获取<p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBudgetId(string $BudgetId) 设置<p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBudgetName() 获取<p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBudgetName(string $BudgetName) 设置<p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ClusterInfo getClusterInfo() 获取<p>集群信息</p>
+ * @method void setClusterInfo(ClusterInfo $ClusterInfo) 设置<p>集群信息</p>
  * @method string getCreatedTime() 获取<p>创建时间</p>
  * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间</p>
+ * @method array getCreditUsageSet() 获取<p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
+ * @method void setCreditUsageSet(array $CreditUsageSet) 设置<p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
  * @method string getDomain() 获取<p>模型路由实例域名</p>
  * @method void setDomain(string $Domain) 设置<p>模型路由实例域名</p>
  * @method string getModelRouterId() 获取<p>模型路由ID</p>
@@ -40,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouterSetting(RouterSettingWithFallBack $RouterSetting) 设置<p>模型路由的路由配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecurityGroups() 获取<p>安全组ID列表</p>
+ * @method void setSecurityGroups(array $SecurityGroups) 设置<p>安全组ID列表</p>
  * @method string getSecurityStatus() 获取<p>模型路由实例的安全状态</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Banned： 已封禁</li><li>Frozen： 已冻结</li></ul>
  * @method void setSecurityStatus(string $SecurityStatus) 设置<p>模型路由实例的安全状态</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Banned： 已封禁</li><li>Frozen： 已冻结</li></ul>
  * @method array getServiceEndPoints() 获取<p>模型路由网络配置列表</p>
@@ -56,31 +70,35 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) 设置<p>模型路由实例VIP</p>
  * @method string getVpcId() 获取<p>模型路由实例所属VPC的ID</p>
  * @method void setVpcId(string $VpcId) 设置<p>模型路由实例所属VPC的ID</p>
- * @method string getBudgetId() 获取<p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBudgetId(string $BudgetId) 设置<p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBudgetName() 获取<p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBudgetName(string $BudgetName) 设置<p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method CreditUsage getCreditUsage() 获取<p>模型路由实例的Credit使用情况。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreditUsage(CreditUsage $CreditUsage) 设置<p>模型路由实例的Credit使用情况。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCreditUsageSet() 获取<p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
- * @method void setCreditUsageSet(array $CreditUsageSet) 设置<p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
- * @method array getSecurityGroups() 获取<p>安全组ID列表</p>
- * @method void setSecurityGroups(array $SecurityGroups) 设置<p>安全组ID列表</p>
- * @method ClusterInfo getClusterInfo() 获取<p>集群信息</p>
- * @method void setClusterInfo(ClusterInfo $ClusterInfo) 设置<p>集群信息</p>
  */
 class ModelRouterDetail extends AbstractModel
 {
     /**
+     * @var string <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BudgetId;
+
+    /**
+     * @var string <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BudgetName;
+
+    /**
+     * @var ClusterInfo <p>集群信息</p>
+     */
+    public $ClusterInfo;
+
+    /**
      * @var string <p>创建时间</p>
      */
     public $CreatedTime;
+
+    /**
+     * @var array <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
+     */
+    public $CreditUsageSet;
 
     /**
      * @var string <p>模型路由实例域名</p>
@@ -124,6 +142,11 @@ class ModelRouterDetail extends AbstractModel
     public $RouterSetting;
 
     /**
+     * @var array <p>安全组ID列表</p>
+     */
+    public $SecurityGroups;
+
+    /**
      * @var string <p>模型路由实例的安全状态</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Banned： 已封禁</li><li>Frozen： 已冻结</li></ul>
      */
     public $SecurityStatus;
@@ -164,40 +187,13 @@ class ModelRouterDetail extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
+     * @param string $BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $BudgetId;
-
-    /**
-     * @var string <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+     * @param string $BudgetName <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $BudgetName;
-
-    /**
-     * @var CreditUsage <p>模型路由实例的Credit使用情况。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CreditUsage;
-
-    /**
-     * @var array <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
-     */
-    public $CreditUsageSet;
-
-    /**
-     * @var array <p>安全组ID列表</p>
-     */
-    public $SecurityGroups;
-
-    /**
-     * @var ClusterInfo <p>集群信息</p>
-     */
-    public $ClusterInfo;
-
-    /**
+     * @param ClusterInfo $ClusterInfo <p>集群信息</p>
      * @param string $CreatedTime <p>创建时间</p>
+     * @param array $CreditUsageSet <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
      * @param string $Domain <p>模型路由实例域名</p>
      * @param string $ModelRouterId <p>模型路由ID</p>
      * @param string $ModelRouterName <p>模型路由名称</p><p>默认值：-</p>
@@ -207,6 +203,7 @@ class ModelRouterDetail extends AbstractModel
      * @param RateLimitConfigForModelRouter $RateLimitConfig <p>模型路由限速信息</p>
      * @param RouterSettingWithFallBack $RouterSetting <p>模型路由的路由配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecurityGroups <p>安全组ID列表</p>
      * @param string $SecurityStatus <p>模型路由实例的安全状态</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Banned： 已封禁</li><li>Frozen： 已冻结</li></ul>
      * @param array $ServiceEndPoints <p>模型路由网络配置列表</p>
      * @param string $Status <p>模型路由实例状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul>
@@ -215,15 +212,6 @@ class ModelRouterDetail extends AbstractModel
      * @param string $TradeStatus <p>模型路由实例的计费状态</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Isolated： 已隔离</li></ul>
      * @param string $Vip <p>模型路由实例VIP</p>
      * @param string $VpcId <p>模型路由实例所属VPC的ID</p>
-     * @param string $BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BudgetName <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreditUsage $CreditUsage <p>模型路由实例的Credit使用情况。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CreditUsageSet <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
-     * @param array $SecurityGroups <p>安全组ID列表</p>
-     * @param ClusterInfo $ClusterInfo <p>集群信息</p>
      */
     function __construct()
     {
@@ -238,8 +226,30 @@ class ModelRouterDetail extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("BudgetId",$param) and $param["BudgetId"] !== null) {
+            $this->BudgetId = $param["BudgetId"];
+        }
+
+        if (array_key_exists("BudgetName",$param) and $param["BudgetName"] !== null) {
+            $this->BudgetName = $param["BudgetName"];
+        }
+
+        if (array_key_exists("ClusterInfo",$param) and $param["ClusterInfo"] !== null) {
+            $this->ClusterInfo = new ClusterInfo();
+            $this->ClusterInfo->deserialize($param["ClusterInfo"]);
+        }
+
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("CreditUsageSet",$param) and $param["CreditUsageSet"] !== null) {
+            $this->CreditUsageSet = [];
+            foreach ($param["CreditUsageSet"] as $key => $value){
+                $obj = new CreditUsage();
+                $obj->deserialize($value);
+                array_push($this->CreditUsageSet, $obj);
+            }
         }
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
@@ -274,6 +284,10 @@ class ModelRouterDetail extends AbstractModel
         if (array_key_exists("RouterSetting",$param) and $param["RouterSetting"] !== null) {
             $this->RouterSetting = new RouterSettingWithFallBack();
             $this->RouterSetting->deserialize($param["RouterSetting"]);
+        }
+
+        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
+            $this->SecurityGroups = $param["SecurityGroups"];
         }
 
         if (array_key_exists("SecurityStatus",$param) and $param["SecurityStatus"] !== null) {
@@ -316,37 +330,6 @@ class ModelRouterDetail extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
-        }
-
-        if (array_key_exists("BudgetId",$param) and $param["BudgetId"] !== null) {
-            $this->BudgetId = $param["BudgetId"];
-        }
-
-        if (array_key_exists("BudgetName",$param) and $param["BudgetName"] !== null) {
-            $this->BudgetName = $param["BudgetName"];
-        }
-
-        if (array_key_exists("CreditUsage",$param) and $param["CreditUsage"] !== null) {
-            $this->CreditUsage = new CreditUsage();
-            $this->CreditUsage->deserialize($param["CreditUsage"]);
-        }
-
-        if (array_key_exists("CreditUsageSet",$param) and $param["CreditUsageSet"] !== null) {
-            $this->CreditUsageSet = [];
-            foreach ($param["CreditUsageSet"] as $key => $value){
-                $obj = new CreditUsage();
-                $obj->deserialize($value);
-                array_push($this->CreditUsageSet, $obj);
-            }
-        }
-
-        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
-            $this->SecurityGroups = $param["SecurityGroups"];
-        }
-
-        if (array_key_exists("ClusterInfo",$param) and $param["ClusterInfo"] !== null) {
-            $this->ClusterInfo = new ClusterInfo();
-            $this->ClusterInfo->deserialize($param["ClusterInfo"]);
         }
     }
 }

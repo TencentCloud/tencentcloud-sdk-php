@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 加速地域信息
  *
- * @method string getAccelerateRegion() 获取加速地域。
- * @method void setAccelerateRegion(string $AccelerateRegion) 设置加速地域。
- * @method integer getBandwidth() 获取带宽。
- * @method void setBandwidth(integer $Bandwidth) 设置带宽。
- * @method string getIspType() 获取支持'BGP', '三网', '精品'，默认BGP。
- * @method void setIspType(string $IspType) 设置支持'BGP', '三网', '精品'，默认BGP。
- * @method string getIpVersion() 获取仅支持IPv4，默认是IPv4。
- * @method void setIpVersion(string $IpVersion) 设置仅支持IPv4，默认是IPv4。
- * @method string getAcceleratorAreaId() 获取加速地域ID。
- * @method void setAcceleratorAreaId(string $AcceleratorAreaId) 设置加速地域ID。
- * @method array getIpAddress() 获取IP。
- * @method void setIpAddress(array $IpAddress) 设置IP。
- * @method array getIpAddressInfoSet() 获取IP信息。
+ * @method string getAccelerateRegion() 获取<p>加速地域。</p>
+ * @method void setAccelerateRegion(string $AccelerateRegion) 设置<p>加速地域。</p>
+ * @method integer getBandwidth() 获取<p>带宽。</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>带宽。</p>
+ * @method string getIspType() 获取<p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
+ * @method void setIspType(string $IspType) 设置<p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
+ * @method string getIpVersion() 获取<p>仅支持IPv4，默认是IPv4。</p>
+ * @method void setIpVersion(string $IpVersion) 设置<p>仅支持IPv4，默认是IPv4。</p>
+ * @method string getAcceleratorAreaId() 获取<p>加速地域ID。</p>
+ * @method void setAcceleratorAreaId(string $AcceleratorAreaId) 设置<p>加速地域ID。</p>
+ * @method array getIpAddress() 获取<p>IP。</p>
+ * @method void setIpAddress(array $IpAddress) 设置<p>IP。</p>
+ * @method array getIpAddressInfoSet() 获取<p>IP信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpAddressInfoSet(array $IpAddressInfoSet) 设置IP信息。
+ * @method void setIpAddressInfoSet(array $IpAddressInfoSet) 设置<p>IP信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AcceleratorAreas extends AbstractModel
 {
     /**
-     * @var string 加速地域。
+     * @var string <p>加速地域。</p>
      */
     public $AccelerateRegion;
 
     /**
-     * @var integer 带宽。
+     * @var integer <p>带宽。</p>
      */
     public $Bandwidth;
 
     /**
-     * @var string 支持'BGP', '三网', '精品'，默认BGP。
+     * @var string <p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
      */
     public $IspType;
 
     /**
-     * @var string 仅支持IPv4，默认是IPv4。
+     * @var string <p>仅支持IPv4，默认是IPv4。</p>
      */
     public $IpVersion;
 
     /**
-     * @var string 加速地域ID。
+     * @var string <p>加速地域ID。</p>
      */
     public $AcceleratorAreaId;
 
     /**
-     * @var array IP。
+     * @var array <p>IP。</p>
      */
     public $IpAddress;
 
     /**
-     * @var array IP信息。
+     * @var array <p>IP信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpAddressInfoSet;
 
     /**
-     * @param string $AccelerateRegion 加速地域。
-     * @param integer $Bandwidth 带宽。
-     * @param string $IspType 支持'BGP', '三网', '精品'，默认BGP。
-     * @param string $IpVersion 仅支持IPv4，默认是IPv4。
-     * @param string $AcceleratorAreaId 加速地域ID。
-     * @param array $IpAddress IP。
-     * @param array $IpAddressInfoSet IP信息。
+     * @param string $AccelerateRegion <p>加速地域。</p>
+     * @param integer $Bandwidth <p>带宽。</p>
+     * @param string $IspType <p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
+     * @param string $IpVersion <p>仅支持IPv4，默认是IPv4。</p>
+     * @param string $AcceleratorAreaId <p>加速地域ID。</p>
+     * @param array $IpAddress <p>IP。</p>
+     * @param array $IpAddressInfoSet <p>IP信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

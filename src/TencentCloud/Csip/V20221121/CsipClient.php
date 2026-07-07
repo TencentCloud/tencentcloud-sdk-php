@@ -36,9 +36,17 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreateDspmApplyOrderResponse CreateDspmApplyOrder(Models\CreateDspmApplyOrderRequest $req) 创建Dspm申请单
  * @method Models\CreateDspmApproveHistoryExportJobResponse CreateDspmApproveHistoryExportJob(Models\CreateDspmApproveHistoryExportJobRequest $req) 创建Dspm审批历史导出任务
  * @method Models\CreateDspmAssetAccessTopologyExportJobResponse CreateDspmAssetAccessTopologyExportJob(Models\CreateDspmAssetAccessTopologyExportJobRequest $req) 创建Dspm资产访问拓扑导出任务
+ * @method Models\CreateDspmAssetIdentifyInfoExportJobResponse CreateDspmAssetIdentifyInfoExportJob(Models\CreateDspmAssetIdentifyInfoExportJobRequest $req) 创建Dspm资产列表导出任务
  * @method Models\CreateDspmAssetsExportJobResponse CreateDspmAssetsExportJob(Models\CreateDspmAssetsExportJobRequest $req) 创建Dspm资产列表导出任务
  * @method Models\CreateDspmExportTaskResponse CreateDspmExportTask(Models\CreateDspmExportTaskRequest $req) 创建日志导出任务
+ * @method Models\CreateDspmIdentifyCategoryResponse CreateDspmIdentifyCategory(Models\CreateDspmIdentifyCategoryRequest $req) 创建dspm数据识别分类
+ * @method Models\CreateDspmIdentifyComplianceCategoryRelationResponse CreateDspmIdentifyComplianceCategoryRelation(Models\CreateDspmIdentifyComplianceCategoryRelationRequest $req) 创建dspm数据识别模板分类关联
+ * @method Models\CreateDspmIdentifyComplianceGroupResponse CreateDspmIdentifyComplianceGroup(Models\CreateDspmIdentifyComplianceGroupRequest $req) 创建dspm数据识别模板
+ * @method Models\CreateDspmIdentifyComplianceGroupCopyResponse CreateDspmIdentifyComplianceGroupCopy(Models\CreateDspmIdentifyComplianceGroupCopyRequest $req) 复制dspm数据识别模板
+ * @method Models\CreateDspmIdentifyComplianceRuleRelationResponse CreateDspmIdentifyComplianceRuleRelation(Models\CreateDspmIdentifyComplianceRuleRelationRequest $req) 创建dspm数据识别模板数据项关联
  * @method Models\CreateDspmIdentifyInfoListExportJobResponse CreateDspmIdentifyInfoListExportJob(Models\CreateDspmIdentifyInfoListExportJobRequest $req) 创建Dspm身份列表导出任务
+ * @method Models\CreateDspmIdentifyLevelGroupResponse CreateDspmIdentifyLevelGroup(Models\CreateDspmIdentifyLevelGroupRequest $req) 创建dspm数据识别分级组
+ * @method Models\CreateDspmIdentifyRuleResponse CreateDspmIdentifyRule(Models\CreateDspmIdentifyRuleRequest $req) 创建dspm数据识别数据项
  * @method Models\CreateDspmPersonalIdentifyResponse CreateDspmPersonalIdentify(Models\CreateDspmPersonalIdentifyRequest $req) 创建Dspm个人身份id
  * @method Models\CreateDspmRiskExportJobResponse CreateDspmRiskExportJob(Models\CreateDspmRiskExportJobRequest $req) 创建Dspm风险导出任务
  * @method Models\CreateDspmWhitelistStrategyResponse CreateDspmWhitelistStrategy(Models\CreateDspmWhitelistStrategyRequest $req) 创建Dspm白名单策略
@@ -54,6 +62,12 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DeleteDspmAssetAccountResponse DeleteDspmAssetAccount(Models\DeleteDspmAssetAccountRequest $req) 删除Dspm资产账号
  * @method Models\DeleteDspmBackupLogListResponse DeleteDspmBackupLogList(Models\DeleteDspmBackupLogListRequest $req) 删除备份日志
  * @method Models\DeleteDspmExportTaskResponse DeleteDspmExportTask(Models\DeleteDspmExportTaskRequest $req) 删除导出任务
+ * @method Models\DeleteDspmIdentifyCategoryResponse DeleteDspmIdentifyCategory(Models\DeleteDspmIdentifyCategoryRequest $req) 删除dspm数据识别分类
+ * @method Models\DeleteDspmIdentifyComplianceCategoryRelationResponse DeleteDspmIdentifyComplianceCategoryRelation(Models\DeleteDspmIdentifyComplianceCategoryRelationRequest $req) 删除dspm数据识别模板分类关联
+ * @method Models\DeleteDspmIdentifyComplianceGroupResponse DeleteDspmIdentifyComplianceGroup(Models\DeleteDspmIdentifyComplianceGroupRequest $req) 删除dspm数据识别模板
+ * @method Models\DeleteDspmIdentifyComplianceRuleRelationResponse DeleteDspmIdentifyComplianceRuleRelation(Models\DeleteDspmIdentifyComplianceRuleRelationRequest $req) 删除dspm数据识别模板数据项关联
+ * @method Models\DeleteDspmIdentifyLevelGroupResponse DeleteDspmIdentifyLevelGroup(Models\DeleteDspmIdentifyLevelGroupRequest $req) 删除dspm数据识别分级组
+ * @method Models\DeleteDspmIdentifyRuleResponse DeleteDspmIdentifyRule(Models\DeleteDspmIdentifyRuleRequest $req) 删除dspm数据识别数据项
  * @method Models\DeleteDspmPersonalIdentifyResponse DeleteDspmPersonalIdentify(Models\DeleteDspmPersonalIdentifyRequest $req) 删除Dspm个人身份id
  * @method Models\DeleteDspmRestoreLogListResponse DeleteDspmRestoreLogList(Models\DeleteDspmRestoreLogListRequest $req) 删除恢复日志
  * @method Models\DeleteDspmWhitelistStrategyResponse DeleteDspmWhitelistStrategy(Models\DeleteDspmWhitelistStrategyRequest $req) 删除Dspm白名单策略
@@ -109,6 +123,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeCosInvokeUaResponse DescribeCosInvokeUa(Models\DescribeCosInvokeUaRequest $req) 查看调用记录关联的文件信息
  * @method Models\DescribeCosIpInvokeLogResponse DescribeCosIpInvokeLog(Models\DescribeCosIpInvokeLogRequest $req) 查看cos调用日志
  * @method Models\DescribeCosIpInvokeRecordFileResponse DescribeCosIpInvokeRecordFile(Models\DescribeCosIpInvokeRecordFileRequest $req) 查看调用记录关联的文件信息
+ * @method Models\DescribeCosObjectScanTaskResponse DescribeCosObjectScanTask(Models\DescribeCosObjectScanTaskRequest $req) 查询cos风险文件扫描任务
  * @method Models\DescribeCosOverviewResponse DescribeCosOverview(Models\DescribeCosOverviewRequest $req) cos概览信息
  * @method Models\DescribeCosPolicyResponse DescribeCosPolicy(Models\DescribeCosPolicyRequest $req) 获取策略列表信息
  * @method Models\DescribeCosRiskActionListResponse DescribeCosRiskActionList(Models\DescribeCosRiskActionListRequest $req) 风险接口列表信息
@@ -136,6 +151,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeDspmAssetDatabaseListResponse DescribeDspmAssetDatabaseList(Models\DescribeDspmAssetDatabaseListRequest $req) 查询资产数据库信息
  * @method Models\DescribeDspmAssetDatabasesResponse DescribeDspmAssetDatabases(Models\DescribeDspmAssetDatabasesRequest $req) 查询Dspm资产数据库列表
  * @method Models\DescribeDspmAssetFieldListResponse DescribeDspmAssetFieldList(Models\DescribeDspmAssetFieldListRequest $req) 查询dspm资产字段信息
+ * @method Models\DescribeDspmAssetFieldSamplesResponse DescribeDspmAssetFieldSamples(Models\DescribeDspmAssetFieldSamplesRequest $req) 查询dspm资产字段样本值
+ * @method Models\DescribeDspmAssetIdentifyInfoListResponse DescribeDspmAssetIdentifyInfoList(Models\DescribeDspmAssetIdentifyInfoListRequest $req) 查询dspm资产数据识别信息列表
  * @method Models\DescribeDspmAssetIdsResponse DescribeDspmAssetIds(Models\DescribeDspmAssetIdsRequest $req) 查询Dspm资产id列表
  * @method Models\DescribeDspmAssetLoginCredentialResponse DescribeDspmAssetLoginCredential(Models\DescribeDspmAssetLoginCredentialRequest $req) 查询Dspm资产登录凭据
  * @method Models\DescribeDspmAssetSecurityAnalyseStatusResponse DescribeDspmAssetSecurityAnalyseStatus(Models\DescribeDspmAssetSecurityAnalyseStatusRequest $req) 查询Dspm资产安全分析状态
@@ -146,9 +163,18 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeDspmBackupSettingResponse DescribeDspmBackupSetting(Models\DescribeDspmBackupSettingRequest $req) 查询日志备份配置
  * @method Models\DescribeDspmDictionaryListResponse DescribeDspmDictionaryList(Models\DescribeDspmDictionaryListRequest $req) 查询dspm字典信息列表
  * @method Models\DescribeDspmExportTaskResponse DescribeDspmExportTask(Models\DescribeDspmExportTaskRequest $req) 查询导出任务
+ * @method Models\DescribeDspmIdentifyCategoryListResponse DescribeDspmIdentifyCategoryList(Models\DescribeDspmIdentifyCategoryListRequest $req) 查询dspm数据识别分类列表
+ * @method Models\DescribeDspmIdentifyComplianceCategoryRuleListResponse DescribeDspmIdentifyComplianceCategoryRuleList(Models\DescribeDspmIdentifyComplianceCategoryRuleListRequest $req) 查询dspm数据识别模板分类关联数据项列表
+ * @method Models\DescribeDspmIdentifyComplianceGroupDetailResponse DescribeDspmIdentifyComplianceGroupDetail(Models\DescribeDspmIdentifyComplianceGroupDetailRequest $req) 查询dspm识别模板详情
+ * @method Models\DescribeDspmIdentifyComplianceGroupListResponse DescribeDspmIdentifyComplianceGroupList(Models\DescribeDspmIdentifyComplianceGroupListRequest $req) 查询dspm数据识别模板列表
+ * @method Models\DescribeDspmIdentifyDistributionStatisticsResponse DescribeDspmIdentifyDistributionStatistics(Models\DescribeDspmIdentifyDistributionStatisticsRequest $req) 查询dspm数据识别分布统计
  * @method Models\DescribeDspmIdentifyIdListResponse DescribeDspmIdentifyIdList(Models\DescribeDspmIdentifyIdListRequest $req) 查询Dspm身份id列表
  * @method Models\DescribeDspmIdentifyInfoResponse DescribeDspmIdentifyInfo(Models\DescribeDspmIdentifyInfoRequest $req) 查询Dspm身份信息
  * @method Models\DescribeDspmIdentifyInfoListResponse DescribeDspmIdentifyInfoList(Models\DescribeDspmIdentifyInfoListRequest $req) 查询Dspm身份信息列表
+ * @method Models\DescribeDspmIdentifyLevelGroupListResponse DescribeDspmIdentifyLevelGroupList(Models\DescribeDspmIdentifyLevelGroupListRequest $req) 查询dspm数据识别分级组列表
+ * @method Models\DescribeDspmIdentifyRuleDetailResponse DescribeDspmIdentifyRuleDetail(Models\DescribeDspmIdentifyRuleDetailRequest $req) 查询dspm数据识别数据项详情
+ * @method Models\DescribeDspmIdentifyRuleListResponse DescribeDspmIdentifyRuleList(Models\DescribeDspmIdentifyRuleListRequest $req) 查询dspm数据识别数据项列表
+ * @method Models\DescribeDspmIdentifyRuleTestResultResponse DescribeDspmIdentifyRuleTestResult(Models\DescribeDspmIdentifyRuleTestResultRequest $req) 查询dspm数据识别数据项验证结果
  * @method Models\DescribeDspmLogListResponse DescribeDspmLogList(Models\DescribeDspmLogListRequest $req) 查询日志列表信息
  * @method Models\DescribeDspmPayInfoResponse DescribeDspmPayInfo(Models\DescribeDspmPayInfoRequest $req) 获取已购Dspm订单信息
  * @method Models\DescribeDspmPersonApplyHistoryResponse DescribeDspmPersonApplyHistory(Models\DescribeDspmPersonApplyHistoryRequest $req) 查询Dspm访客申请记录
@@ -231,16 +257,28 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\ModifyAILinkSettingResponse ModifyAILinkSetting(Models\ModifyAILinkSettingRequest $req) 修改AI-Link智链引擎配置
  * @method Models\ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatus(Models\ModifyAlarmRiskStatusRequest $req) 修改或者更改处置状态
  * @method Models\ModifyCosAuditMonitorAccountResponse ModifyCosAuditMonitorAccount(Models\ModifyCosAuditMonitorAccountRequest $req) 修改cos审计监测账号
+ * @method Models\ModifyCosAuditObjectIdentifyStatusResponse ModifyCosAuditObjectIdentifyStatus(Models\ModifyCosAuditObjectIdentifyStatusRequest $req) 修改对象存储识别开关
+ * @method Models\ModifyCosAuditObjectSampleRateResponse ModifyCosAuditObjectSampleRate(Models\ModifyCosAuditObjectSampleRateRequest $req) 设置对象存储扫描采样率
  * @method Models\ModifyCosMarkInfoResponse ModifyCosMarkInfo(Models\ModifyCosMarkInfoRequest $req) 修改对象存储备注
  * @method Models\ModifyDspmAccessRecordResponse ModifyDspmAccessRecord(Models\ModifyDspmAccessRecordRequest $req) 修改Dspm访问管理信息
+ * @method Models\ModifyDspmApplyingIdentifyComplianceGroupResponse ModifyDspmApplyingIdentifyComplianceGroup(Models\ModifyDspmApplyingIdentifyComplianceGroupRequest $req) 修改dspm当前应用的数据识别模板
  * @method Models\ModifyDspmApproveStatusResponse ModifyDspmApproveStatus(Models\ModifyDspmApproveStatusRequest $req) 修改Dspm审批单状态
  * @method Models\ModifyDspmAssetAccountResponse ModifyDspmAssetAccount(Models\ModifyDspmAssetAccountRequest $req) 修改Dspm资产账号信息
  * @method Models\ModifyDspmAssetAccountPrivilegesResponse ModifyDspmAssetAccountPrivileges(Models\ModifyDspmAssetAccountPrivilegesRequest $req) 修改Dspm资产账号权限
  * @method Models\ModifyDspmAssetDataScanTaskResponse ModifyDspmAssetDataScanTask(Models\ModifyDspmAssetDataScanTaskRequest $req) 修改Dspm资产数据扫描任务
+ * @method Models\ModifyDspmAssetDataScanTaskStatusResponse ModifyDspmAssetDataScanTaskStatus(Models\ModifyDspmAssetDataScanTaskStatusRequest $req) 修改Dspm资产数据扫描任务状态
  * @method Models\ModifyDspmAssetLogDeliverySwitchResponse ModifyDspmAssetLogDeliverySwitch(Models\ModifyDspmAssetLogDeliverySwitchRequest $req) 修改Dspm资产日志投递开关
  * @method Models\ModifyDspmAssetSecurityAnalysisSwitchResponse ModifyDspmAssetSecurityAnalysisSwitch(Models\ModifyDspmAssetSecurityAnalysisSwitchRequest $req) 修改Dspm资产日志投递开关
  * @method Models\ModifyDspmBackupSettingResponse ModifyDspmBackupSetting(Models\ModifyDspmBackupSettingRequest $req) 修改日志备份设置
+ * @method Models\ModifyDspmIdentifyCategoryResponse ModifyDspmIdentifyCategory(Models\ModifyDspmIdentifyCategoryRequest $req) 修改dspm数据识别分类
+ * @method Models\ModifyDspmIdentifyComplianceGroupResponse ModifyDspmIdentifyComplianceGroup(Models\ModifyDspmIdentifyComplianceGroupRequest $req) 修改dspm数据识别模板
+ * @method Models\ModifyDspmIdentifyComplianceGroupStatusResponse ModifyDspmIdentifyComplianceGroupStatus(Models\ModifyDspmIdentifyComplianceGroupStatusRequest $req) 修改dspm数据识别模板状态
+ * @method Models\ModifyDspmIdentifyComplianceRuleLevelInfoResponse ModifyDspmIdentifyComplianceRuleLevelInfo(Models\ModifyDspmIdentifyComplianceRuleLevelInfoRequest $req) 修改dspm数据识别模板数据项关联级别信息
  * @method Models\ModifyDspmIdentifyInfoResponse ModifyDspmIdentifyInfo(Models\ModifyDspmIdentifyInfoRequest $req) 修改Dspm身份信息
+ * @method Models\ModifyDspmIdentifyLevelGroupResponse ModifyDspmIdentifyLevelGroup(Models\ModifyDspmIdentifyLevelGroupRequest $req) 修改dspm数据识别分级组
+ * @method Models\ModifyDspmIdentifyLevelItemResponse ModifyDspmIdentifyLevelItem(Models\ModifyDspmIdentifyLevelItemRequest $req) 修改dspm数据识别分级信息
+ * @method Models\ModifyDspmIdentifyRuleResponse ModifyDspmIdentifyRule(Models\ModifyDspmIdentifyRuleRequest $req) 修改dspm数据识别数据项
+ * @method Models\ModifyDspmIdentifyRuleStatusResponse ModifyDspmIdentifyRuleStatus(Models\ModifyDspmIdentifyRuleStatusRequest $req) 修改dspm数据识别数据项状态
  * @method Models\ModifyDspmIpInfoResponse ModifyDspmIpInfo(Models\ModifyDspmIpInfoRequest $req) 修改DspmIp信息
  * @method Models\ModifyDspmPersonalIdentifyResponse ModifyDspmPersonalIdentify(Models\ModifyDspmPersonalIdentifyRequest $req) 修改Dspm个人身份id
  * @method Models\ModifyDspmRestoreLogTaskResponse ModifyDspmRestoreLogTask(Models\ModifyDspmRestoreLogTaskRequest $req) 恢复备份日志

@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 路由设置
  *
+ * @method string getCrossModelGroupRoutingStrategy() 获取<p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCrossModelGroupRoutingStrategy(string $CrossModelGroupRoutingStrategy) 设置<p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method FallBackItem getFallBack() 获取<p>回退策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFallBack(FallBackItem $FallBack) 设置<p>回退策略</p>
@@ -28,13 +32,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoutingStrategy(string $RoutingStrategy) 设置<p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCrossModelGroupRoutingStrategy() 获取<p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCrossModelGroupRoutingStrategy(string $CrossModelGroupRoutingStrategy) 设置<p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RouterSettingWithFallBack extends AbstractModel
 {
+    /**
+     * @var string <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CrossModelGroupRoutingStrategy;
+
     /**
      * @var FallBackItem <p>回退策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,17 +54,11 @@ class RouterSettingWithFallBack extends AbstractModel
     public $RoutingStrategy;
 
     /**
-     * @var string <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
+     * @param string $CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CrossModelGroupRoutingStrategy;
-
-    /**
      * @param FallBackItem $FallBack <p>回退策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoutingStrategy <p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,6 +74,10 @@ class RouterSettingWithFallBack extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CrossModelGroupRoutingStrategy",$param) and $param["CrossModelGroupRoutingStrategy"] !== null) {
+            $this->CrossModelGroupRoutingStrategy = $param["CrossModelGroupRoutingStrategy"];
+        }
+
         if (array_key_exists("FallBack",$param) and $param["FallBack"] !== null) {
             $this->FallBack = new FallBackItem();
             $this->FallBack->deserialize($param["FallBack"]);
@@ -81,10 +85,6 @@ class RouterSettingWithFallBack extends AbstractModel
 
         if (array_key_exists("RoutingStrategy",$param) and $param["RoutingStrategy"] !== null) {
             $this->RoutingStrategy = $param["RoutingStrategy"];
-        }
-
-        if (array_key_exists("CrossModelGroupRoutingStrategy",$param) and $param["CrossModelGroupRoutingStrategy"] !== null) {
-            $this->CrossModelGroupRoutingStrategy = $param["CrossModelGroupRoutingStrategy"];
         }
     }
 }

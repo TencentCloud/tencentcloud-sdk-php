@@ -14,44 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tmt\V20180321\Models;
+namespace TencentCloud\Alb\V20251030\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TextTranslate返回参数结构体
+ * CreateRules返回参数结构体
  *
- * @method string getTargetText() 获取<p>翻译后的文本</p>
- * @method void setTargetText(string $TargetText) 设置<p>翻译后的文本</p>
- * @method string getSource() 获取<p>源语言，详见入参Source</p>
- * @method void setSource(string $Source) 设置<p>源语言，详见入参Source</p>
- * @method string getTarget() 获取<p>目标语言，详见入参Target</p>
- * @method void setTarget(string $Target) 设置<p>目标语言，详见入参Target</p>
- * @method integer getUsedAmount() 获取<p>本次翻译消耗的字符数</p>
- * @method void setUsedAmount(integer $UsedAmount) 设置<p>本次翻译消耗的字符数</p>
+ * @method array getRuleIds() 获取转发规则 ID 列表，ID 格式为 rule- 后接 8 位字母数字。
+ * @method void setRuleIds(array $RuleIds) 设置转发规则 ID 列表，ID 格式为 rule- 后接 8 位字母数字。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class TextTranslateResponse extends AbstractModel
+class CreateRulesResponse extends AbstractModel
 {
     /**
-     * @var string <p>翻译后的文本</p>
+     * @var array 转发规则 ID 列表，ID 格式为 rule- 后接 8 位字母数字。
      */
-    public $TargetText;
-
-    /**
-     * @var string <p>源语言，详见入参Source</p>
-     */
-    public $Source;
-
-    /**
-     * @var string <p>目标语言，详见入参Target</p>
-     */
-    public $Target;
-
-    /**
-     * @var integer <p>本次翻译消耗的字符数</p>
-     */
-    public $UsedAmount;
+    public $RuleIds;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +38,7 @@ class TextTranslateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TargetText <p>翻译后的文本</p>
-     * @param string $Source <p>源语言，详见入参Source</p>
-     * @param string $Target <p>目标语言，详见入参Target</p>
-     * @param integer $UsedAmount <p>本次翻译消耗的字符数</p>
+     * @param array $RuleIds 转发规则 ID 列表，ID 格式为 rule- 后接 8 位字母数字。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,20 +54,8 @@ class TextTranslateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetText",$param) and $param["TargetText"] !== null) {
-            $this->TargetText = $param["TargetText"];
-        }
-
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
-        }
-
-        if (array_key_exists("Target",$param) and $param["Target"] !== null) {
-            $this->Target = $param["Target"];
-        }
-
-        if (array_key_exists("UsedAmount",$param) and $param["UsedAmount"] !== null) {
-            $this->UsedAmount = $param["UsedAmount"];
+        if (array_key_exists("RuleIds",$param) and $param["RuleIds"] !== null) {
+            $this->RuleIds = $param["RuleIds"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

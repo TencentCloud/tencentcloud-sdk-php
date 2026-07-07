@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 重新生成的Key信息
  *
- * @method string getKeyId() 获取<p>Key的ID</p>
- * @method void setKeyId(string $KeyId) 设置<p>Key的ID</p>
  * @method string getKey() 获取<p>重新生成的明文Key</p>
  * @method void setKey(string $Key) 设置<p>重新生成的明文Key</p>
+ * @method string getKeyId() 获取<p>Key的ID</p>
+ * @method void setKeyId(string $KeyId) 设置<p>Key的ID</p>
  */
 class RegeneratedKey extends AbstractModel
 {
-    /**
-     * @var string <p>Key的ID</p>
-     */
-    public $KeyId;
-
     /**
      * @var string <p>重新生成的明文Key</p>
      */
     public $Key;
 
     /**
-     * @param string $KeyId <p>Key的ID</p>
+     * @var string <p>Key的ID</p>
+     */
+    public $KeyId;
+
+    /**
      * @param string $Key <p>重新生成的明文Key</p>
+     * @param string $KeyId <p>Key的ID</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class RegeneratedKey extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
-        }
-
         if (array_key_exists("Key",$param) and $param["Key"] !== null) {
             $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
         }
     }
 }

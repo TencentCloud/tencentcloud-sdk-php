@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileUrls(string $FileUrls) 设置<p>不再使用，上传文件链接数组，最多支持20个URL</p>
  * @method Agent getAgent() 获取<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
  * @method void setAgent(Agent $Agent) 设置<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method integer getDeadline() 获取<p>文件过期时间的时间戳</p><p>取值范围：[1782835200, 4102329600]</p><p>单位：秒</p><p>设置上传文件的过期时间，此功能为付费能力，请联系电子签运营人员开通</p>
+ * @method void setDeadline(integer $Deadline) 设置<p>文件过期时间的时间戳</p><p>取值范围：[1782835200, 4102329600]</p><p>单位：秒</p><p>设置上传文件的过期时间，此功能为付费能力，请联系电子签运营人员开通</p>
  */
 class UploadFilesRequest extends AbstractModel
 {
@@ -81,6 +83,11 @@ class UploadFilesRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var integer <p>文件过期时间的时间戳</p><p>取值范围：[1782835200, 4102329600]</p><p>单位：秒</p><p>设置上传文件的过期时间，此功能为付费能力，请联系电子签运营人员开通</p>
+     */
+    public $Deadline;
+
+    /**
      * @param string $BusinessType <p>文件对应业务类型,可以选择的类型如下<ul><li> <strong>TEMPLATE</strong> : 此上传的文件用户生成合同模板，文件类型支持.pdf/.doc/.docx/.html格式，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li><li> <strong>DOCUMENT</strong> : 此文件用来发起合同流程，文件类型支持.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html。如果上传的是非pdf文件，用来发起流程，还需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后得到的pdf文件才能用于发起合同接口。如果上传的文件不是用来发起合同，直接上传后使用返回的文件资源Id即可</li><li> <strong>SEAL</strong> : 此文件用于印章的生成，文件类型支持.jpg/.jpeg/.png</li><li> <strong>ARCHIVE</strong> : 此文件用于归档文件夹，文件类型支持.pdf/.zip格式</li></ul>   [&quot;yDRSRUUgygj6rq2wUuO4zjEyBZ2NHiyT&quot;]</p><p>枚举值：</p><ul><li>TEMPLATE： 此上传的文件用户生成合同模板</li><li>DOCUMENT： 此文件用来发起合同流程</li><li>SEAL： 此文件用于印章的生成</li><li>ARCHIVE： 此文件用于归档文件夹</li></ul>
      * @param Caller $Caller <p>执行本接口操作的员工信息。其中OperatorId为必填字段，即用户的UserId。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      * @param array $FileInfos <p>请上传文件内容数组，最多可上传20个文件。</p><p><b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b></p>
@@ -89,6 +96,7 @@ class UploadFilesRequest extends AbstractModel
      * @param array $CustomIds <p>该字段已不再使用</p>
      * @param string $FileUrls <p>不再使用，上传文件链接数组，最多支持20个URL</p>
      * @param Agent $Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param integer $Deadline <p>文件过期时间的时间戳</p><p>取值范围：[1782835200, 4102329600]</p><p>单位：秒</p><p>设置上传文件的过期时间，此功能为付费能力，请联系电子签运营人员开通</p>
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ class UploadFilesRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
         }
     }
 }

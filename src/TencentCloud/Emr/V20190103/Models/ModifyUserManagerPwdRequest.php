@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserManagerPwd请求参数结构体
  *
- * @method string getInstanceId() 获取集群实例ID
- * @method void setInstanceId(string $InstanceId) 设置集群实例ID
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getPassWord() 获取密码
- * @method void setPassWord(string $PassWord) 设置密码
- * @method boolean getSyncPwd() 获取是否同步密码
- * @method void setSyncPwd(boolean $SyncPwd) 设置是否同步密码
+ * @method string getInstanceId() 获取<p>集群实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群实例ID</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getPassWord() 获取<p>密码</p>
+ * @method void setPassWord(string $PassWord) 设置<p>密码</p>
+ * @method boolean getSyncPwd() 获取<p>是否同步密码</p>
+ * @method void setSyncPwd(boolean $SyncPwd) 设置<p>是否同步密码</p>
  */
 class ModifyUserManagerPwdRequest extends AbstractModel
 {
     /**
-     * @var string 集群实例ID
+     * @var string <p>集群实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 密码
+     * @var string <p>密码</p>
      */
     public $PassWord;
 
     /**
-     * @var boolean 是否同步密码
+     * @var boolean <p>是否同步密码</p>
      */
     public $SyncPwd;
 
     /**
-     * @param string $InstanceId 集群实例ID
-     * @param string $UserName 用户名
-     * @param string $PassWord 密码
-     * @param boolean $SyncPwd 是否同步密码
+     * @param string $InstanceId <p>集群实例ID</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $PassWord <p>密码</p>
+     * @param boolean $SyncPwd <p>是否同步密码</p>
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserGroup请求参数结构体
  *
- * @method string getInstanceId() 获取集群字符串ID
- * @method void setInstanceId(string $InstanceId) 设置集群字符串ID
- * @method array getUsers() 获取用户信息列表
- * @method void setUsers(array $Users) 设置用户信息列表
- * @method string getUserGroup() 获取用户主组，cvm集群为必填参数，tke集群选填
- * @method void setUserGroup(string $UserGroup) 设置用户主组，cvm集群为必填参数，tke集群选填
- * @method array getGroups() 获取用户副组
- * @method void setGroups(array $Groups) 设置用户副组
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
+ * @method string getInstanceId() 获取<p>集群字符串ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群字符串ID</p>
+ * @method array getUsers() 获取<p>用户信息列表</p>
+ * @method void setUsers(array $Users) 设置<p>用户信息列表</p>
+ * @method string getUserGroup() 获取<p>用户主组，cvm集群为必填参数，tke集群选填</p>
+ * @method void setUserGroup(string $UserGroup) 设置<p>用户主组，cvm集群为必填参数，tke集群选填</p>
+ * @method array getGroups() 获取<p>用户副组</p>
+ * @method void setGroups(array $Groups) 设置<p>用户副组</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
  */
 class ModifyUserGroupRequest extends AbstractModel
 {
     /**
-     * @var string 集群字符串ID
+     * @var string <p>集群字符串ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 用户信息列表
+     * @var array <p>用户信息列表</p>
      */
     public $Users;
 
     /**
-     * @var string 用户主组，cvm集群为必填参数，tke集群选填
+     * @var string <p>用户主组，cvm集群为必填参数，tke集群选填</p>
      */
     public $UserGroup;
 
     /**
-     * @var array 用户副组
+     * @var array <p>用户副组</p>
      */
     public $Groups;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @param string $InstanceId 集群字符串ID
-     * @param array $Users 用户信息列表
-     * @param string $UserGroup 用户主组，cvm集群为必填参数，tke集群选填
-     * @param array $Groups 用户副组
-     * @param string $Remark 备注
+     * @param string $InstanceId <p>集群字符串ID</p>
+     * @param array $Users <p>用户信息列表</p>
+     * @param string $UserGroup <p>用户主组，cvm集群为必填参数，tke集群选填</p>
+     * @param array $Groups <p>用户副组</p>
+     * @param string $Remark <p>备注</p>
      */
     function __construct()
     {

@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能字幕识别结果。
  *
+ * @method array getSegmentSet() 获取<p>智能字幕识别片段列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSegmentSet(array $SegmentSet) 设置<p>智能字幕识别片段列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRecognizeSubtitleResult() 获取<p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecognizeSubtitleResult(array $RecognizeSubtitleResult) 设置<p>识别字幕结果</p>
@@ -35,6 +39,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class SmartSubtitleTaskTextResultOutput extends AbstractModel
 {
+    /**
+     * @var array <p>智能字幕识别片段列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SegmentSet;
+
     /**
      * @var array <p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +64,8 @@ class SmartSubtitleTaskTextResultOutput extends AbstractModel
     public $OutputStorage;
 
     /**
+     * @param array $SegmentSet <p>智能字幕识别片段列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RecognizeSubtitleResult <p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TransSubtitleResult <p>翻译字幕结果</p>
@@ -74,6 +86,15 @@ class SmartSubtitleTaskTextResultOutput extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SegmentSet",$param) and $param["SegmentSet"] !== null) {
+            $this->SegmentSet = [];
+            foreach ($param["SegmentSet"] as $key => $value){
+                $obj = new SmartSubtitleTaskFullTextSegmentItem();
+                $obj->deserialize($value);
+                array_push($this->SegmentSet, $obj);
+            }
+        }
+
         if (array_key_exists("RecognizeSubtitleResult",$param) and $param["RecognizeSubtitleResult"] !== null) {
             $this->RecognizeSubtitleResult = [];
             foreach ($param["RecognizeSubtitleResult"] as $key => $value){

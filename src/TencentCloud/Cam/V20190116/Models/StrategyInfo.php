@@ -20,174 +20,182 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 策略信息
  *
- * @method integer getPolicyId() 获取策略ID。
- * @method void setPolicyId(integer $PolicyId) 设置策略ID。
- * @method string getPolicyName() 获取策略名称。
- * @method void setPolicyName(string $PolicyName) 设置策略名称。
- * @method string getAddTime() 获取策略创建时间。
- * @method void setAddTime(string $AddTime) 设置策略创建时间。
- * @method integer getType() 获取策略类型。1 表示自定义策略，2 表示预设策略。
- * @method void setType(integer $Type) 设置策略类型。1 表示自定义策略，2 表示预设策略。
- * @method string getDescription() 获取策略描述。
+ * @method integer getPolicyId() 获取<p>策略ID。</p>
+ * @method void setPolicyId(integer $PolicyId) 设置<p>策略ID。</p>
+ * @method string getPolicyName() 获取<p>策略名称。</p>
+ * @method void setPolicyName(string $PolicyName) 设置<p>策略名称。</p>
+ * @method string getAddTime() 获取<p>策略创建时间。</p>
+ * @method void setAddTime(string $AddTime) 设置<p>策略创建时间。</p>
+ * @method integer getType() 获取<p>策略类型。1 表示自定义策略，2 表示预设策略。</p>
+ * @method void setType(integer $Type) 设置<p>策略类型。1 表示自定义策略，2 表示预设策略。</p>
+ * @method string getDescription() 获取<p>策略描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置策略描述。
+ * @method void setDescription(string $Description) 设置<p>策略描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateMode() 获取创建来源，1 通过控制台创建, 2 通过策略语法创建。
- * @method void setCreateMode(integer $CreateMode) 设置创建来源，1 通过控制台创建, 2 通过策略语法创建。
- * @method integer getAttachments() 获取关联的用户数
- * @method void setAttachments(integer $Attachments) 设置关联的用户数
- * @method string getServiceType() 获取策略关联的产品
+ * @method integer getCreateMode() 获取<p>创建来源，1 通过控制台创建, 2 通过策略语法创建。</p>
+ * @method void setCreateMode(integer $CreateMode) 设置<p>创建来源，1 通过控制台创建, 2 通过策略语法创建。</p>
+ * @method integer getAttachments() 获取<p>关联的用户数</p>
+ * @method void setAttachments(integer $Attachments) 设置<p>关联的用户数</p>
+ * @method string getServiceType() 获取<p>策略关联的产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceType(string $ServiceType) 设置策略关联的产品
+ * @method void setServiceType(string $ServiceType) 设置<p>策略关联的产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsAttached() 获取当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+ * @method integer getIsAttached() 获取<p>当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsAttached(integer $IsAttached) 设置当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+ * @method void setIsAttached(integer $IsAttached) 设置<p>当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeactived() 获取是否已下线
+ * @method integer getDeactived() 获取<p>是否已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeactived(integer $Deactived) 设置是否已下线
+ * @method void setDeactived(integer $Deactived) 设置<p>是否已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDeactivedDetail() 获取已下线产品列表
+ * @method array getDeactivedDetail() 获取<p>已下线产品列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeactivedDetail(array $DeactivedDetail) 设置已下线产品列表
+ * @method void setDeactivedDetail(array $DeactivedDetail) 设置<p>已下线产品列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsServiceLinkedPolicy() 获取是否是服务相关角色策略
+ * @method integer getIsServiceLinkedPolicy() 获取<p>是否是服务相关角色策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsServiceLinkedPolicy(integer $IsServiceLinkedPolicy) 设置是否是服务相关角色策略
+ * @method void setIsServiceLinkedPolicy(integer $IsServiceLinkedPolicy) 设置<p>是否是服务相关角色策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAttachEntityCount() 获取关联策略实体数
+ * @method integer getAttachEntityCount() 获取<p>关联策略实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttachEntityCount(integer $AttachEntityCount) 设置关联策略实体数
+ * @method void setAttachEntityCount(integer $AttachEntityCount) 设置<p>关联策略实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAttachEntityBoundaryCount() 获取关联权限边界实体数
+ * @method integer getAttachEntityBoundaryCount() 获取<p>关联权限边界实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttachEntityBoundaryCount(integer $AttachEntityBoundaryCount) 设置关联权限边界实体数
+ * @method void setAttachEntityBoundaryCount(integer $AttachEntityBoundaryCount) 设置<p>关联权限边界实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取最后编辑时间
+ * @method string getUpdateTime() 获取<p>最后编辑时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置最后编辑时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最后编辑时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
+ * @method string getPermissionLevel() 获取<p>权限级别</p><p>枚举值：</p><ul><li>Global： 全局权限</li><li>Finance： 财务权限</li><li>CloudProduct： 云产品权限</li></ul>
+ * @method void setPermissionLevel(string $PermissionLevel) 设置<p>权限级别</p><p>枚举值：</p><ul><li>Global： 全局权限</li><li>Finance： 财务权限</li><li>CloudProduct： 云产品权限</li></ul>
  */
 class StrategyInfo extends AbstractModel
 {
     /**
-     * @var integer 策略ID。
+     * @var integer <p>策略ID。</p>
      */
     public $PolicyId;
 
     /**
-     * @var string 策略名称。
+     * @var string <p>策略名称。</p>
      */
     public $PolicyName;
 
     /**
-     * @var string 策略创建时间。
+     * @var string <p>策略创建时间。</p>
      */
     public $AddTime;
 
     /**
-     * @var integer 策略类型。1 表示自定义策略，2 表示预设策略。
+     * @var integer <p>策略类型。1 表示自定义策略，2 表示预设策略。</p>
      */
     public $Type;
 
     /**
-     * @var string 策略描述。
+     * @var string <p>策略描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var integer 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * @var integer <p>创建来源，1 通过控制台创建, 2 通过策略语法创建。</p>
      */
     public $CreateMode;
 
     /**
-     * @var integer 关联的用户数
+     * @var integer <p>关联的用户数</p>
      */
     public $Attachments;
 
     /**
-     * @var string 策略关联的产品
+     * @var string <p>策略关联的产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceType;
 
     /**
-     * @var integer 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+     * @var integer <p>当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAttached;
 
     /**
-     * @var integer 是否已下线
+     * @var integer <p>是否已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deactived;
 
     /**
-     * @var array 已下线产品列表
+     * @var array <p>已下线产品列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeactivedDetail;
 
     /**
-     * @var integer 是否是服务相关角色策略
+     * @var integer <p>是否是服务相关角色策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsServiceLinkedPolicy;
 
     /**
-     * @var integer 关联策略实体数
+     * @var integer <p>关联策略实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachEntityCount;
 
     /**
-     * @var integer 关联权限边界实体数
+     * @var integer <p>关联权限边界实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachEntityBoundaryCount;
 
     /**
-     * @var string 最后编辑时间
+     * @var string <p>最后编辑时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @param integer $PolicyId 策略ID。
-     * @param string $PolicyName 策略名称。
-     * @param string $AddTime 策略创建时间。
-     * @param integer $Type 策略类型。1 表示自定义策略，2 表示预设策略。
-     * @param string $Description 策略描述。
+     * @var string <p>权限级别</p><p>枚举值：</p><ul><li>Global： 全局权限</li><li>Finance： 财务权限</li><li>CloudProduct： 云产品权限</li></ul>
+     */
+    public $PermissionLevel;
+
+    /**
+     * @param integer $PolicyId <p>策略ID。</p>
+     * @param string $PolicyName <p>策略名称。</p>
+     * @param string $AddTime <p>策略创建时间。</p>
+     * @param integer $Type <p>策略类型。1 表示自定义策略，2 表示预设策略。</p>
+     * @param string $Description <p>策略描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建。
-     * @param integer $Attachments 关联的用户数
-     * @param string $ServiceType 策略关联的产品
+     * @param integer $CreateMode <p>创建来源，1 通过控制台创建, 2 通过策略语法创建。</p>
+     * @param integer $Attachments <p>关联的用户数</p>
+     * @param string $ServiceType <p>策略关联的产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsAttached 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+     * @param integer $IsAttached <p>当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Deactived 是否已下线
+     * @param integer $Deactived <p>是否已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DeactivedDetail 已下线产品列表
+     * @param array $DeactivedDetail <p>已下线产品列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsServiceLinkedPolicy 是否是服务相关角色策略
+     * @param integer $IsServiceLinkedPolicy <p>是否是服务相关角色策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AttachEntityCount 关联策略实体数
+     * @param integer $AttachEntityCount <p>关联策略实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AttachEntityBoundaryCount 关联权限边界实体数
+     * @param integer $AttachEntityBoundaryCount <p>关联权限边界实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 最后编辑时间
+     * @param string $UpdateTime <p>最后编辑时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 标签列表
+     * @param array $Tags <p>标签列表</p>
+     * @param string $PermissionLevel <p>权限级别</p><p>枚举值：</p><ul><li>Global： 全局权限</li><li>Finance： 财务权限</li><li>CloudProduct： 云产品权限</li></ul>
      */
     function __construct()
     {
@@ -269,6 +277,10 @@ class StrategyInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PermissionLevel",$param) and $param["PermissionLevel"] !== null) {
+            $this->PermissionLevel = $param["PermissionLevel"];
         }
     }
 }

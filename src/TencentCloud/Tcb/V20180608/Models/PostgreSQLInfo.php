@@ -28,8 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置<p>实例状态</p>
  * @method string getRegion() 获取<p>地域</p>
  * @method void setRegion(string $Region) 设置<p>地域</p>
- * @method string getVersion() 获取<p>数据库引擎版本</p>
- * @method void setVersion(string $Version) 设置<p>数据库引擎版本</p>
  */
 class PostgreSQLInfo extends AbstractModel
 {
@@ -54,16 +52,10 @@ class PostgreSQLInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string <p>数据库引擎版本</p>
-     */
-    public $Version;
-
-    /**
      * @param string $Name <p>数据库名称</p>
      * @param string $InstanceName <p>实例id</p>
      * @param integer $Status <p>实例状态</p>
      * @param string $Region <p>地域</p>
-     * @param string $Version <p>数据库引擎版本</p>
      */
     function __construct()
     {
@@ -92,10 +84,6 @@ class PostgreSQLInfo extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
-        }
-
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
         }
     }
 }

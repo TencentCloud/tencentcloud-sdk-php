@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGroupsSTD请求参数结构体
  *
- * @method string getInstanceId() 获取集群名称
- * @method void setInstanceId(string $InstanceId) 设置集群名称
- * @method array getGroupNames() 获取用户组名称数组
- * @method void setGroupNames(array $GroupNames) 设置用户组名称数组
+ * @method string getInstanceId() 获取<p>集群名称</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群名称</p>
+ * @method array getGroupNames() 获取<p>用户组名称数组</p>
+ * @method void setGroupNames(array $GroupNames) 设置<p>用户组名称数组</p>
  */
 class DeleteGroupsSTDRequest extends AbstractModel
 {
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 用户组名称数组
+     * @var array <p>用户组名称数组</p>
      */
     public $GroupNames;
 
     /**
-     * @param string $InstanceId 集群名称
-     * @param array $GroupNames 用户组名称数组
+     * @param string $InstanceId <p>集群名称</p>
+     * @param array $GroupNames <p>用户组名称数组</p>
      */
     function __construct()
     {

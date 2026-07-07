@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteUserManagerUserList请求参数结构体
  *
- * @method string getInstanceId() 获取集群实例ID
- * @method void setInstanceId(string $InstanceId) 设置集群实例ID
- * @method array getUserNameList() 获取集群用户名列表
- * @method void setUserNameList(array $UserNameList) 设置集群用户名列表
- * @method string getTkeClusterId() 获取tke/eks集群id，容器集群传
- * @method void setTkeClusterId(string $TkeClusterId) 设置tke/eks集群id，容器集群传
- * @method string getDisplayStrategy() 获取默认空，容器版传"native"
- * @method void setDisplayStrategy(string $DisplayStrategy) 设置默认空，容器版传"native"
- * @method array getUserGroupList() 获取用户组
- * @method void setUserGroupList(array $UserGroupList) 设置用户组
- * @method boolean getDeleteHomeDir() 获取是否删除家目录，只针对cvm集群
- * @method void setDeleteHomeDir(boolean $DeleteHomeDir) 设置是否删除家目录，只针对cvm集群
+ * @method string getInstanceId() 获取<p>集群实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群实例ID</p>
+ * @method array getUserNameList() 获取<p>集群用户名列表</p>
+ * @method void setUserNameList(array $UserNameList) 设置<p>集群用户名列表</p>
+ * @method string getTkeClusterId() 获取<p>tke/eks集群id，容器集群传</p>
+ * @method void setTkeClusterId(string $TkeClusterId) 设置<p>tke/eks集群id，容器集群传</p>
+ * @method string getDisplayStrategy() 获取<p>默认空，容器版传&quot;native&quot;</p>
+ * @method void setDisplayStrategy(string $DisplayStrategy) 设置<p>默认空，容器版传&quot;native&quot;</p>
+ * @method array getUserGroupList() 获取<p>用户组</p>
+ * @method void setUserGroupList(array $UserGroupList) 设置<p>用户组</p>
+ * @method boolean getDeleteHomeDir() 获取<p>是否删除家目录，只针对cvm集群</p>
+ * @method void setDeleteHomeDir(boolean $DeleteHomeDir) 设置<p>是否删除家目录，只针对cvm集群</p>
  */
 class DeleteUserManagerUserListRequest extends AbstractModel
 {
     /**
-     * @var string 集群实例ID
+     * @var string <p>集群实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 集群用户名列表
+     * @var array <p>集群用户名列表</p>
      */
     public $UserNameList;
 
     /**
-     * @var string tke/eks集群id，容器集群传
+     * @var string <p>tke/eks集群id，容器集群传</p>
      */
     public $TkeClusterId;
 
     /**
-     * @var string 默认空，容器版传"native"
+     * @var string <p>默认空，容器版传&quot;native&quot;</p>
      */
     public $DisplayStrategy;
 
     /**
-     * @var array 用户组
+     * @var array <p>用户组</p>
      */
     public $UserGroupList;
 
     /**
-     * @var boolean 是否删除家目录，只针对cvm集群
+     * @var boolean <p>是否删除家目录，只针对cvm集群</p>
      */
     public $DeleteHomeDir;
 
     /**
-     * @param string $InstanceId 集群实例ID
-     * @param array $UserNameList 集群用户名列表
-     * @param string $TkeClusterId tke/eks集群id，容器集群传
-     * @param string $DisplayStrategy 默认空，容器版传"native"
-     * @param array $UserGroupList 用户组
-     * @param boolean $DeleteHomeDir 是否删除家目录，只针对cvm集群
+     * @param string $InstanceId <p>集群实例ID</p>
+     * @param array $UserNameList <p>集群用户名列表</p>
+     * @param string $TkeClusterId <p>tke/eks集群id，容器集群传</p>
+     * @param string $DisplayStrategy <p>默认空，容器版传&quot;native&quot;</p>
+     * @param array $UserGroupList <p>用户组</p>
+     * @param boolean $DeleteHomeDir <p>是否删除家目录，只针对cvm集群</p>
      */
     function __construct()
     {

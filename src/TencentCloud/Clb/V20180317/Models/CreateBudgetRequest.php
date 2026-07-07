@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBudget请求参数结构体
  *
- * @method array getBudgetConfigs() 获取<p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
- * @method void setBudgetConfigs(array $BudgetConfigs) 设置<p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
- * @method string getBudgetName() 获取<p>Budget名称。</p><p>不传默认为空字符串。</p>
- * @method void setBudgetName(string $BudgetName) 设置<p>Budget名称。</p><p>不传默认为空字符串。</p>
+ * @method array getBudgetConfigs() 获取<p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
+ * @method void setBudgetConfigs(array $BudgetConfigs) 设置<p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
+ * @method string getBudgetName() 获取<p>Budget名称。</p><p>不传默认为 '-'。</p>
+ * @method void setBudgetName(string $BudgetName) 设置<p>Budget名称。</p><p>不传默认为 '-'。</p>
  * @method RateLimitConfigForBudget getRateLimitConfig() 获取<p>Budget限速配置。</p>
  * @method void setRateLimitConfig(RateLimitConfigForBudget $RateLimitConfig) 设置<p>Budget限速配置。</p>
  * @method array getResources() 获取<p>创建Budget时同时关联的资源列表。</p><p>仅支持企业型模型路由实例和企业型实例下的Key。如果资源不存在或不可关联，创建请求失败；资源已关联其他Budget时将替换为新创建的Budget。</p>
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateBudgetRequest extends AbstractModel
 {
     /**
-     * @var array <p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
+     * @var array <p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
      */
     public $BudgetConfigs;
 
     /**
-     * @var string <p>Budget名称。</p><p>不传默认为空字符串。</p>
+     * @var string <p>Budget名称。</p><p>不传默认为 '-'。</p>
      */
     public $BudgetName;
 
@@ -52,8 +52,8 @@ class CreateBudgetRequest extends AbstractModel
     public $Resources;
 
     /**
-     * @param array $BudgetConfigs <p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
-     * @param string $BudgetName <p>Budget名称。</p><p>不传默认为空字符串。</p>
+     * @param array $BudgetConfigs <p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
+     * @param string $BudgetName <p>Budget名称。</p><p>不传默认为 '-'。</p>
      * @param RateLimitConfigForBudget $RateLimitConfig <p>Budget限速配置。</p>
      * @param array $Resources <p>创建Budget时同时关联的资源列表。</p><p>仅支持企业型模型路由实例和企业型实例下的Key。如果资源不存在或不可关联，创建请求失败；资源已关联其他Budget时将替换为新创建的Budget。</p>
      */

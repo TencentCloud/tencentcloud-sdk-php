@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileIds(array $FileIds) 设置<p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
  * @method array getFileUrls() 获取<p>对应上传文件的下载链接，过期时间5分钟</p>
  * @method void setFileUrls(array $FileUrls) 设置<p>对应上传文件的下载链接，过期时间5分钟</p>
+ * @method integer getDeadline() 获取<p>文件的截止有效期，如果超过截止有效期则文件Id会失效，无法再进行使用</p><p>默认过期时间是上传时间加10分钟</p>
+ * @method void setDeadline(integer $Deadline) 设置<p>文件的截止有效期，如果超过截止有效期则文件Id会失效，无法再进行使用</p><p>默认过期时间是上传时间加10分钟</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class UploadFilesResponse extends AbstractModel
     public $FileUrls;
 
     /**
+     * @var integer <p>文件的截止有效期，如果超过截止有效期则文件Id会失效，无法再进行使用</p><p>默认过期时间是上传时间加10分钟</p>
+     */
+    public $Deadline;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class UploadFilesResponse extends AbstractModel
      * @param integer $TotalCount <p>上传成功文件数量<br>注: <code>如果一个文件上传失败, 则全部文件皆上传失败</code></p>
      * @param array $FileIds <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
      * @param array $FileUrls <p>对应上传文件的下载链接，过期时间5分钟</p>
+     * @param integer $Deadline <p>文件的截止有效期，如果超过截止有效期则文件Id会失效，无法再进行使用</p><p>默认过期时间是上传时间加10分钟</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +88,10 @@ class UploadFilesResponse extends AbstractModel
 
         if (array_key_exists("FileUrls",$param) and $param["FileUrls"] !== null) {
             $this->FileUrls = $param["FileUrls"];
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

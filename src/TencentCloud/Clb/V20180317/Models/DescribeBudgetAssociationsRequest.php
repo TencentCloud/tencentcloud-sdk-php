@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBudgetId() 获取<p>Budget ID。</p><p>一次只允许查询一个Budget。</p>
  * @method void setBudgetId(string $BudgetId) 设置<p>Budget ID。</p><p>一次只允许查询一个Budget。</p>
- * @method string getType() 获取<p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
- * @method void setType(string $Type) 设置<p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
- * @method integer getOffset() 获取<p>本次查询偏移量</p>
- * @method void setOffset(integer $Offset) 设置<p>本次查询偏移量</p>
  * @method integer getLimit() 获取<p>本次查询限制的数量</p>
  * @method void setLimit(integer $Limit) 设置<p>本次查询限制的数量</p>
+ * @method integer getOffset() 获取<p>本次查询偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>本次查询偏移量</p>
+ * @method string getType() 获取<p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
+ * @method void setType(string $Type) 设置<p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
  */
 class DescribeBudgetAssociationsRequest extends AbstractModel
 {
@@ -37,9 +37,9 @@ class DescribeBudgetAssociationsRequest extends AbstractModel
     public $BudgetId;
 
     /**
-     * @var string <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
+     * @var integer <p>本次查询限制的数量</p>
      */
-    public $Type;
+    public $Limit;
 
     /**
      * @var integer <p>本次查询偏移量</p>
@@ -47,15 +47,15 @@ class DescribeBudgetAssociationsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer <p>本次查询限制的数量</p>
+     * @var string <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
      */
-    public $Limit;
+    public $Type;
 
     /**
      * @param string $BudgetId <p>Budget ID。</p><p>一次只允许查询一个Budget。</p>
-     * @param string $Type <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
-     * @param integer $Offset <p>本次查询偏移量</p>
      * @param integer $Limit <p>本次查询限制的数量</p>
+     * @param integer $Offset <p>本次查询偏移量</p>
+     * @param string $Type <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
      */
     function __construct()
     {
@@ -74,16 +74,16 @@ class DescribeBudgetAssociationsRequest extends AbstractModel
             $this->BudgetId = $param["BudgetId"];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

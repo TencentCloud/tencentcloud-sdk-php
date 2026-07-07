@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListPolicies请求参数结构体
  *
- * @method integer getRp() 获取每页数量，默认值是 20，必须大于 0 且小于或等于 200
- * @method void setRp(integer $Rp) 设置每页数量，默认值是 20，必须大于 0 且小于或等于 200
- * @method integer getPage() 获取页码，默认值是 1，从 1开始，不能大于 200
- * @method void setPage(integer $Page) 设置页码，默认值是 1，从 1开始，不能大于 200
- * @method string getScope() 获取可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
- * @method void setScope(string $Scope) 设置可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
- * @method string getKeyword() 获取按策略名匹配
- * @method void setKeyword(string $Keyword) 设置按策略名匹配
+ * @method integer getRp() 获取<p>每页数量，默认值是 20，必须大于 0 且小于或等于 200</p>
+ * @method void setRp(integer $Rp) 设置<p>每页数量，默认值是 20，必须大于 0 且小于或等于 200</p>
+ * @method integer getPage() 获取<p>页码，默认值是 1，从 1开始，不能大于 200</p>
+ * @method void setPage(integer $Page) 设置<p>页码，默认值是 1，从 1开始，不能大于 200</p>
+ * @method string getScope() 获取<p>可取值 &#39;All&#39;、&#39;QCS&#39; 和 &#39;Local&#39;，&#39;All&#39; 获取所有策略，&#39;QCS&#39; 只获取预设策略，&#39;Local&#39; 只获取自定义策略，默认取 &#39;All&#39;</p>
+ * @method void setScope(string $Scope) 设置<p>可取值 &#39;All&#39;、&#39;QCS&#39; 和 &#39;Local&#39;，&#39;All&#39; 获取所有策略，&#39;QCS&#39; 只获取预设策略，&#39;Local&#39; 只获取自定义策略，默认取 &#39;All&#39;</p>
+ * @method string getKeyword() 获取<p>按策略名匹配</p>
+ * @method void setKeyword(string $Keyword) 设置<p>按策略名匹配</p>
  */
 class ListPoliciesRequest extends AbstractModel
 {
     /**
-     * @var integer 每页数量，默认值是 20，必须大于 0 且小于或等于 200
+     * @var integer <p>每页数量，默认值是 20，必须大于 0 且小于或等于 200</p>
      */
     public $Rp;
 
     /**
-     * @var integer 页码，默认值是 1，从 1开始，不能大于 200
+     * @var integer <p>页码，默认值是 1，从 1开始，不能大于 200</p>
      */
     public $Page;
 
     /**
-     * @var string 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
+     * @var string <p>可取值 &#39;All&#39;、&#39;QCS&#39; 和 &#39;Local&#39;，&#39;All&#39; 获取所有策略，&#39;QCS&#39; 只获取预设策略，&#39;Local&#39; 只获取自定义策略，默认取 &#39;All&#39;</p>
      */
     public $Scope;
 
     /**
-     * @var string 按策略名匹配
+     * @var string <p>按策略名匹配</p>
      */
     public $Keyword;
 
     /**
-     * @param integer $Rp 每页数量，默认值是 20，必须大于 0 且小于或等于 200
-     * @param integer $Page 页码，默认值是 1，从 1开始，不能大于 200
-     * @param string $Scope 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
-     * @param string $Keyword 按策略名匹配
+     * @param integer $Rp <p>每页数量，默认值是 20，必须大于 0 且小于或等于 200</p>
+     * @param integer $Page <p>页码，默认值是 1，从 1开始，不能大于 200</p>
+     * @param string $Scope <p>可取值 &#39;All&#39;、&#39;QCS&#39; 和 &#39;Local&#39;，&#39;All&#39; 获取所有策略，&#39;QCS&#39; 只获取预设策略，&#39;Local&#39; 只获取自定义策略，默认取 &#39;All&#39;</p>
+     * @param string $Keyword <p>按策略名匹配</p>
      */
     function __construct()
     {

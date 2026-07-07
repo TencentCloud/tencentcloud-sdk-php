@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileIds(array $FileIds) 设置<p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
  * @method integer getTotalCount() 获取<p>上传成功文件数量</p>
  * @method void setTotalCount(integer $TotalCount) 设置<p>上传成功文件数量</p>
+ * @method integer getDeadline() 获取<p>文件过期时间的时间戳</p><p>单位：秒</p><p>默认值：当前上传时间的一小时内有效</p>
+ * @method void setDeadline(integer $Deadline) 设置<p>文件过期时间的时间戳</p><p>单位：秒</p><p>默认值：当前上传时间的一小时内有效</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class UploadFilesResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var integer <p>文件过期时间的时间戳</p><p>单位：秒</p><p>默认值：当前上传时间的一小时内有效</p>
+     */
+    public $Deadline;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class UploadFilesResponse extends AbstractModel
     /**
      * @param array $FileIds <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
      * @param integer $TotalCount <p>上传成功文件数量</p>
+     * @param integer $Deadline <p>文件过期时间的时间戳</p><p>单位：秒</p><p>默认值：当前上传时间的一小时内有效</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class UploadFilesResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

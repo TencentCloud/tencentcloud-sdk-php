@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 加速地域公网IP信息
  *
- * @method string getIpAddress() 获取IP地址。
- * @method void setIpAddress(string $IpAddress) 设置IP地址。
- * @method string getIspType() 获取IP类型。
- * @method void setIspType(string $IspType) 设置IP类型。
+ * @method string getIpAddress() 获取<p>IP地址。</p>
+ * @method void setIpAddress(string $IpAddress) 设置<p>IP地址。</p>
+ * @method string getIspType() 获取<p>IP类型。</p>
+ * @method void setIspType(string $IspType) 设置<p>IP类型。</p>
+ * @method string getDdosProtectionType() 获取<p>Ddos类型</p>
+ * @method void setDdosProtectionType(string $DdosProtectionType) 设置<p>Ddos类型</p>
  */
 class IpAddressInfoSet extends AbstractModel
 {
     /**
-     * @var string IP地址。
+     * @var string <p>IP地址。</p>
      */
     public $IpAddress;
 
     /**
-     * @var string IP类型。
+     * @var string <p>IP类型。</p>
      */
     public $IspType;
 
     /**
-     * @param string $IpAddress IP地址。
-     * @param string $IspType IP类型。
+     * @var string <p>Ddos类型</p>
+     */
+    public $DdosProtectionType;
+
+    /**
+     * @param string $IpAddress <p>IP地址。</p>
+     * @param string $IspType <p>IP类型。</p>
+     * @param string $DdosProtectionType <p>Ddos类型</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class IpAddressInfoSet extends AbstractModel
 
         if (array_key_exists("IspType",$param) and $param["IspType"] !== null) {
             $this->IspType = $param["IspType"];
+        }
+
+        if (array_key_exists("DdosProtectionType",$param) and $param["DdosProtectionType"] !== null) {
+            $this->DdosProtectionType = $param["DdosProtectionType"];
         }
     }
 }

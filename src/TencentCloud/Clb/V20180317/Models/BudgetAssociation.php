@@ -30,10 +30,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModelRouterId() 获取<p>模型路由实例ID。</p><p>当Type为ModelRouter时表示关联资源本身；当Type为Key时表示Key所属实例。</p>
  * @method void setModelRouterId(string $ModelRouterId) 设置<p>模型路由实例ID。</p><p>当Type为ModelRouter时表示关联资源本身；当Type为Key时表示Key所属实例。</p>
- * @method string getType() 获取<p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul>
- * @method void setType(string $Type) 设置<p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul>
+ * @method string getResourceName() 获取<p>资源对象的名称。</p>
+ * @method void setResourceName(string $ResourceName) 设置<p>资源对象的名称。</p>
  * @method string getStatus() 获取<p>关联关系的状态</p><p>枚举值：</p><ul><li>Active： 已生效</li><li>Configuring： 配置中</li><li>ConfigureFailed： 配置失败</li></ul>
  * @method void setStatus(string $Status) 设置<p>关联关系的状态</p><p>枚举值：</p><ul><li>Active： 已生效</li><li>Configuring： 配置中</li><li>ConfigureFailed： 配置失败</li></ul>
+ * @method string getType() 获取<p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li><li>UserGroup：用户组</li></ul>
+ * @method void setType(string $Type) 设置<p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li><li>UserGroup：用户组</li></ul>
+ * @method string getUserGroupId() 获取<p>关联的用户组id</p>
+ * @method void setUserGroupId(string $UserGroupId) 设置<p>关联的用户组id</p>
  */
 class BudgetAssociation extends AbstractModel
 {
@@ -59,9 +63,9 @@ class BudgetAssociation extends AbstractModel
     public $ModelRouterId;
 
     /**
-     * @var string <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul>
+     * @var string <p>资源对象的名称。</p>
      */
-    public $Type;
+    public $ResourceName;
 
     /**
      * @var string <p>关联关系的状态</p><p>枚举值：</p><ul><li>Active： 已生效</li><li>Configuring： 配置中</li><li>ConfigureFailed： 配置失败</li></ul>
@@ -69,13 +73,25 @@ class BudgetAssociation extends AbstractModel
     public $Status;
 
     /**
+     * @var string <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li><li>UserGroup：用户组</li></ul>
+     */
+    public $Type;
+
+    /**
+     * @var string <p>关联的用户组id</p>
+     */
+    public $UserGroupId;
+
+    /**
      * @param string $BudgetId <p>Budget ID。</p>
      * @param string $CreatedTime <p>关联创建时间。</p>
      * @param string $KeyId <p>Key ID。仅当Type为Key时返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelRouterId <p>模型路由实例ID。</p><p>当Type为ModelRouter时表示关联资源本身；当Type为Key时表示Key所属实例。</p>
-     * @param string $Type <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul>
+     * @param string $ResourceName <p>资源对象的名称。</p>
      * @param string $Status <p>关联关系的状态</p><p>枚举值：</p><ul><li>Active： 已生效</li><li>Configuring： 配置中</li><li>ConfigureFailed： 配置失败</li></ul>
+     * @param string $Type <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li><li>UserGroup：用户组</li></ul>
+     * @param string $UserGroupId <p>关联的用户组id</p>
      */
     function __construct()
     {
@@ -106,12 +122,20 @@ class BudgetAssociation extends AbstractModel
             $this->ModelRouterId = $param["ModelRouterId"];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
+            $this->ResourceName = $param["ResourceName"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("UserGroupId",$param) and $param["UserGroupId"] !== null) {
+            $this->UserGroupId = $param["UserGroupId"];
         }
     }
 }

@@ -87,6 +87,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeBackupDownloadUserRestrictionResponse DescribeBackupDownloadUserRestriction(Models\DescribeBackupDownloadUserRestrictionRequest $req) 该接口用户查询当前地域用户级别设置的默认备份下载来源限制
  * @method Models\DescribeBackupListResponse DescribeBackupList(Models\DescribeBackupListRequest $req) 本接口（DescribeBackupList）用于查询集群的备份文件列表。
  * @method Models\DescribeBackupListByVaultResponse DescribeBackupListByVault(Models\DescribeBackupListByVaultRequest $req) 根据保险箱ID查询备份文件列表
+ * @method Models\DescribeBackupOverviewResponse DescribeBackupOverview(Models\DescribeBackupOverviewRequest $req) 本接口（DescribeBackupOverview）用于查询备份用量总览。
  * @method Models\DescribeBinlogConfigResponse DescribeBinlogConfig(Models\DescribeBinlogConfigRequest $req) 该接口（DescribeBinlogConfig）用于查询binlog配置
  * @method Models\DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrl(Models\DescribeBinlogDownloadUrlRequest $req) 本接口（DescribeBinlogDownloadUrl）用于查询 Binlog 的下载地址。
  * @method Models\DescribeBinlogListByVaultResponse DescribeBinlogListByVault(Models\DescribeBinlogListByVaultRequest $req) 查询保险箱内binlog备份

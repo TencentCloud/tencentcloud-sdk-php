@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGroupsSTD返回参数结构体
  *
- * @method array getData() 获取删除返回结果
- * @method void setData(array $Data) 设置删除返回结果
+ * @method array getData() 获取<p>删除返回结果</p>
+ * @method void setData(array $Data) 设置<p>删除返回结果</p>
+ * @method integer getFlowId() 获取<p>流程id</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>流程id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteGroupsSTDResponse extends AbstractModel
 {
     /**
-     * @var array 删除返回结果
+     * @var array <p>删除返回结果</p>
      */
     public $Data;
+
+    /**
+     * @var integer <p>流程id</p>
+     */
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DeleteGroupsSTDResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 删除返回结果
+     * @param array $Data <p>删除返回结果</p>
+     * @param integer $FlowId <p>流程id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +69,10 @@ class DeleteGroupsSTDResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

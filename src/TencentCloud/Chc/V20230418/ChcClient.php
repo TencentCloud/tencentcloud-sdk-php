@@ -56,7 +56,10 @@ use TencentCloud\Chc\V20230418\Models as Models;
  * @method Models\DescribeRacksResponse DescribeRacks(Models\DescribeRacksRequest $req) 获取机架列表
  * @method Models\DescribeRacksDistributionResponse DescribeRacksDistribution(Models\DescribeRacksDistributionRequest $req) 获取机房管理单元的机位分布
  * @method Models\DescribeResourceUsageResponse DescribeResourceUsage(Models\DescribeResourceUsageRequest $req) 查询资源汇总
+ * @method Models\DescribeWorkOrderCarCollectListResponse DescribeWorkOrderCarCollectList(Models\DescribeWorkOrderCarCollectListRequest $req) 查询工单归集的车辆信息列表，支持按车牌号、驾驶员姓名模糊搜索
+ * @method Models\DescribeWorkOrderContactCollectListResponse DescribeWorkOrderContactCollectList(Models\DescribeWorkOrderContactCollectListRequest $req) 查询工单归集的业务联系人信息列表，支持按姓名、电话模糊搜索
  * @method Models\DescribeWorkOrderListResponse DescribeWorkOrderList(Models\DescribeWorkOrderListRequest $req) 查询工单列表
+ * @method Models\DescribeWorkOrderPersonnelCollectListResponse DescribeWorkOrderPersonnelCollectList(Models\DescribeWorkOrderPersonnelCollectListRequest $req) 查询工单归集的人员信息列表，支持按姓名、手机号模糊搜索
  * @method Models\DescribeWorkOrderStatisticsResponse DescribeWorkOrderStatistics(Models\DescribeWorkOrderStatisticsRequest $req) 工单统计数据查询
  * @method Models\DescribeWorkOrderTypesResponse DescribeWorkOrderTypes(Models\DescribeWorkOrderTypesRequest $req) 获取用户可用的工单类型
  * @method Models\ExportCustomerWorkOrderDetailResponse ExportCustomerWorkOrderDetail(Models\ExportCustomerWorkOrderDetailRequest $req) 导出工单详情

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVasList请求参数结构体
  *
- * @method integer getOffset() 获取偏移量，默认值为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
- * @method integer getLimit() 获取限制数量，默认值为20。
- * @method void setLimit(integer $Limit) 设置限制数量，默认值为20。
- * @method integer getDomainId() 获取域名ID
- * @method void setDomainId(integer $DomainId) 设置域名ID
- * @method array getResourceIdList() 获取使用资源 ID 列表查询
- * @method void setResourceIdList(array $ResourceIdList) 设置使用资源 ID 列表查询
- * @method string getLimitType() 获取增值服务类型
- * @method void setLimitType(string $LimitType) 设置增值服务类型
+ * @method integer getOffset() 获取<p>偏移量，默认值为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认值为0。</p>
+ * @method integer getLimit() 获取<p>限制数量，默认值为20。</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制数量，默认值为20。</p>
+ * @method integer getDomainId() 获取<p>域名ID</p>
+ * @method void setDomainId(integer $DomainId) 设置<p>域名ID</p>
+ * @method array getResourceIdList() 获取<p>使用资源 ID 列表查询</p>
+ * @method void setResourceIdList(array $ResourceIdList) 设置<p>使用资源 ID 列表查询</p>
+ * @method string getLimitType() 获取<p>增值服务类型</p>
+ * @method void setLimitType(string $LimitType) 设置<p>增值服务类型</p>
  */
 class DescribeVasListRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量，默认值为0。
+     * @var integer <p>偏移量，默认值为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 限制数量，默认值为20。
+     * @var integer <p>限制数量，默认值为20。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 域名ID
+     * @var integer <p>域名ID</p>
      */
     public $DomainId;
 
     /**
-     * @var array 使用资源 ID 列表查询
+     * @var array <p>使用资源 ID 列表查询</p>
      */
     public $ResourceIdList;
 
     /**
-     * @var string 增值服务类型
+     * @var string <p>增值服务类型</p>
      */
     public $LimitType;
 
     /**
-     * @param integer $Offset 偏移量，默认值为0。
-     * @param integer $Limit 限制数量，默认值为20。
-     * @param integer $DomainId 域名ID
-     * @param array $ResourceIdList 使用资源 ID 列表查询
-     * @param string $LimitType 增值服务类型
+     * @param integer $Offset <p>偏移量，默认值为0。</p>
+     * @param integer $Limit <p>限制数量，默认值为20。</p>
+     * @param integer $DomainId <p>域名ID</p>
+     * @param array $ResourceIdList <p>使用资源 ID 列表查询</p>
+     * @param string $LimitType <p>增值服务类型</p>
      */
     function __construct()
     {

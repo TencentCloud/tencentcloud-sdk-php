@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RunDataRetrievalTask请求参数结构体
  *
-
+ * @method string getDataRetrievalId() 获取<p>数据检索 ID。可通过 DescribeDataRetrieval 接口获取。</p>
+ * @method void setDataRetrievalId(string $DataRetrievalId) 设置<p>数据检索 ID。可通过 DescribeDataRetrieval 接口获取。</p>
  */
 class RunDataRetrievalTaskRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>数据检索 ID。可通过 DescribeDataRetrieval 接口获取。</p>
+     */
+    public $DataRetrievalId;
 
     /**
-
+     * @param string $DataRetrievalId <p>数据检索 ID。可通过 DescribeDataRetrieval 接口获取。</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class RunDataRetrievalTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("DataRetrievalId",$param) and $param["DataRetrievalId"] !== null) {
+            $this->DataRetrievalId = $param["DataRetrievalId"];
+        }
     }
 }

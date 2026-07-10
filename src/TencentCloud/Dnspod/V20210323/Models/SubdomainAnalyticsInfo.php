@@ -20,58 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 子域名解析量统计查询信息
  *
- * @method string getDnsFormat() 获取DATE:按天维度统计 HOUR:按小时维度统计
- * @method void setDnsFormat(string $DnsFormat) 设置DATE:按天维度统计 HOUR:按小时维度统计
- * @method integer getDnsTotal() 获取当前统计周期解析量总计
- * @method void setDnsTotal(integer $DnsTotal) 设置当前统计周期解析量总计
- * @method string getDomain() 获取当前查询的域名
- * @method void setDomain(string $Domain) 设置当前查询的域名
- * @method string getStartDate() 获取当前统计周期开始时间
- * @method void setStartDate(string $StartDate) 设置当前统计周期开始时间
- * @method string getEndDate() 获取当前统计周期结束时间
- * @method void setEndDate(string $EndDate) 设置当前统计周期结束时间
- * @method string getSubdomain() 获取当前统计的子域名
- * @method void setSubdomain(string $Subdomain) 设置当前统计的子域名
+ * @method string getDnsFormat() 获取<p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+ * @method void setDnsFormat(string $DnsFormat) 设置<p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+ * @method integer getDnsTotal() 获取<p>当前统计周期解析量总计</p>
+ * @method void setDnsTotal(integer $DnsTotal) 设置<p>当前统计周期解析量总计</p>
+ * @method string getDomain() 获取<p>当前查询的域名</p>
+ * @method void setDomain(string $Domain) 设置<p>当前查询的域名</p>
+ * @method string getStartDate() 获取<p>当前统计周期开始时间</p>
+ * @method void setStartDate(string $StartDate) 设置<p>当前统计周期开始时间</p>
+ * @method string getEndDate() 获取<p>当前统计周期结束时间</p>
+ * @method void setEndDate(string $EndDate) 设置<p>当前统计周期结束时间</p>
+ * @method string getSubdomain() 获取<p>当前统计的子域名</p>
+ * @method void setSubdomain(string $Subdomain) 设置<p>当前统计的子域名</p>
+ * @method string getDNSFormat() 获取<p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul>
+ * @method void setDNSFormat(string $DNSFormat) 设置<p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul>
+ * @method integer getDNSTotal() 获取<p>当前统计周期解析量总计</p>
+ * @method void setDNSTotal(integer $DNSTotal) 设置<p>当前统计周期解析量总计</p>
+ * @method string getSubDomain() 获取<p>当前统计的子域名</p>
+ * @method void setSubDomain(string $SubDomain) 设置<p>当前统计的子域名</p>
  */
 class SubdomainAnalyticsInfo extends AbstractModel
 {
     /**
-     * @var string DATE:按天维度统计 HOUR:按小时维度统计
+     * @var string <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+     * @deprecated
      */
     public $DnsFormat;
 
     /**
-     * @var integer 当前统计周期解析量总计
+     * @var integer <p>当前统计周期解析量总计</p>
+     * @deprecated
      */
     public $DnsTotal;
 
     /**
-     * @var string 当前查询的域名
+     * @var string <p>当前查询的域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 当前统计周期开始时间
+     * @var string <p>当前统计周期开始时间</p>
      */
     public $StartDate;
 
     /**
-     * @var string 当前统计周期结束时间
+     * @var string <p>当前统计周期结束时间</p>
      */
     public $EndDate;
 
     /**
-     * @var string 当前统计的子域名
+     * @var string <p>当前统计的子域名</p>
+     * @deprecated
      */
     public $Subdomain;
 
     /**
-     * @param string $DnsFormat DATE:按天维度统计 HOUR:按小时维度统计
-     * @param integer $DnsTotal 当前统计周期解析量总计
-     * @param string $Domain 当前查询的域名
-     * @param string $StartDate 当前统计周期开始时间
-     * @param string $EndDate 当前统计周期结束时间
-     * @param string $Subdomain 当前统计的子域名
+     * @var string <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul>
+     */
+    public $DNSFormat;
+
+    /**
+     * @var integer <p>当前统计周期解析量总计</p>
+     */
+    public $DNSTotal;
+
+    /**
+     * @var string <p>当前统计的子域名</p>
+     */
+    public $SubDomain;
+
+    /**
+     * @param string $DnsFormat <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+     * @param integer $DnsTotal <p>当前统计周期解析量总计</p>
+     * @param string $Domain <p>当前查询的域名</p>
+     * @param string $StartDate <p>当前统计周期开始时间</p>
+     * @param string $EndDate <p>当前统计周期结束时间</p>
+     * @param string $Subdomain <p>当前统计的子域名</p>
+     * @param string $DNSFormat <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul>
+     * @param integer $DNSTotal <p>当前统计周期解析量总计</p>
+     * @param string $SubDomain <p>当前统计的子域名</p>
      */
     function __construct()
     {
@@ -108,6 +135,18 @@ class SubdomainAnalyticsInfo extends AbstractModel
 
         if (array_key_exists("Subdomain",$param) and $param["Subdomain"] !== null) {
             $this->Subdomain = $param["Subdomain"];
+        }
+
+        if (array_key_exists("DNSFormat",$param) and $param["DNSFormat"] !== null) {
+            $this->DNSFormat = $param["DNSFormat"];
+        }
+
+        if (array_key_exists("DNSTotal",$param) and $param["DNSTotal"] !== null) {
+            $this->DNSTotal = $param["DNSTotal"];
+        }
+
+        if (array_key_exists("SubDomain",$param) and $param["SubDomain"] !== null) {
+            $this->SubDomain = $param["SubDomain"];
         }
     }
 }

@@ -32,6 +32,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\CreateAuditLogFileResponse CreateAuditLogFile(Models\CreateAuditLogFileRequest $req) 用于创建云数据库实例的审计日志文件，最多下载600w审计日志。
  * @method Models\CreateDBDiagReportTaskResponse CreateDBDiagReportTask(Models\CreateDBDiagReportTaskRequest $req) 创建健康报告，并可以选择是否发送邮件。
  * @method Models\CreateDBDiagReportUrlResponse CreateDBDiagReportUrl(Models\CreateDBDiagReportUrlRequest $req) 创建健康报告的浏览地址。
+ * @method Models\CreateIgnoreDiagRecordResponse CreateIgnoreDiagRecord(Models\CreateIgnoreDiagRecordRequest $req) 对实例的某个诊断项设置忽略或取消忽略状态。
  * @method Models\CreateKillTaskResponse CreateKillTask(Models\CreateKillTaskRequest $req) 创建中断会话的任务。
  * @method Models\CreateMailProfileResponse CreateMailProfile(Models\CreateMailProfileRequest $req) 创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成健康报告的邮件发送配置）。Region统一选择广州，和实例所属地域无关。
  * @method Models\CreateMongoDBKillTaskResponse CreateMongoDBKillTask(Models\CreateMongoDBKillTaskRequest $req) 创建中断会话的任务。

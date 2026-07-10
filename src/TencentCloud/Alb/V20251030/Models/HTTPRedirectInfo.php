@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP重定向信息
  *
- * @method integer getHttpCode() 获取重定向的HTTP码，支持301、302、303、307、 308。
- * @method void setHttpCode(integer $HttpCode) 设置重定向的HTTP码，支持301、302、303、307、 308。
- * @method string getHost() 获取重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
- * @method void setHost(string $Host) 设置重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
- * @method string getPath() 获取重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9  ? =  _  . - / : 。
- * @method void setPath(string $Path) 设置重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9  ? =  _  . - / : 。
- * @method string getPort() 获取重定向的端口，默认值 ${port}。取值1 ~ 65535。
- * @method void setPort(string $Port) 设置重定向的端口，默认值 ${port}。取值1 ~ 65535。
- * @method string getProtocol() 获取重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。
- * @method void setProtocol(string $Protocol) 设置重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。
- * @method string getQuery() 获取重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}\|<>& 和空格。
- * @method void setQuery(string $Query) 设置重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}\|<>& 和空格。
+ * @method integer getHttpCode() 获取<p>重定向的HTTP码，支持301、302、303、307、 308。</p>
+ * @method void setHttpCode(integer $HttpCode) 设置<p>重定向的HTTP码，支持301、302、303、307、 308。</p>
+ * @method string getHost() 获取<p>重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
+ * @method void setHost(string $Host) 设置<p>重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
+ * @method string getPath() 获取<p>重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9  ? =  _  . - / : 。</p>
+ * @method void setPath(string $Path) 设置<p>重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9  ? =  _  . - / : 。</p>
+ * @method string getPort() 获取<p>重定向的端口，默认值 ${port}。取值1 ~ 65535。</p>
+ * @method void setPort(string $Port) 设置<p>重定向的端口，默认值 ${port}。取值1 ~ 65535。</p>
+ * @method string getProtocol() 获取<p>重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。</p>
+ * @method string getQuery() 获取<p>重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
+ * @method void setQuery(string $Query) 设置<p>重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
  */
 class HTTPRedirectInfo extends AbstractModel
 {
     /**
-     * @var integer 重定向的HTTP码，支持301、302、303、307、 308。
+     * @var integer <p>重定向的HTTP码，支持301、302、303、307、 308。</p>
      */
     public $HttpCode;
 
     /**
-     * @var string 重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
+     * @var string <p>重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
      */
     public $Host;
 
     /**
-     * @var string 重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9  ? =  _  . - / : 。
+     * @var string <p>重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9  ? =  _  . - / : 。</p>
      */
     public $Path;
 
     /**
-     * @var string 重定向的端口，默认值 ${port}。取值1 ~ 65535。
+     * @var string <p>重定向的端口，默认值 ${port}。取值1 ~ 65535。</p>
      */
     public $Port;
 
     /**
-     * @var string 重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。
+     * @var string <p>重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。</p>
      */
     public $Protocol;
 
     /**
-     * @var string 重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}\|<>& 和空格。
+     * @var string <p>重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
      */
     public $Query;
 
     /**
-     * @param integer $HttpCode 重定向的HTTP码，支持301、302、303、307、 308。
-     * @param string $Host 重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
-     * @param string $Path 重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9  ? =  _  . - / : 。
-     * @param string $Port 重定向的端口，默认值 ${port}。取值1 ~ 65535。
-     * @param string $Protocol 重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。
-     * @param string $Query 重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}\|<>& 和空格。
+     * @param integer $HttpCode <p>重定向的HTTP码，支持301、302、303、307、 308。</p>
+     * @param string $Host <p>重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
+     * @param string $Path <p>重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9  ? =  _  . - / : 。</p>
+     * @param string $Port <p>重定向的端口，默认值 ${port}。取值1 ~ 65535。</p>
+     * @param string $Protocol <p>重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。</p>
+     * @param string $Query <p>重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
      */
     function __construct()
     {

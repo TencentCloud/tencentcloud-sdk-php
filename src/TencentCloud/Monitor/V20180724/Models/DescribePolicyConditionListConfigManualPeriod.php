@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyConditionList.ConfigManual.Period
  *
- * @method integer getDefault() 获取默认周期，单位：秒
+ * @method integer getDefault() 获取<p>默认周期，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefault(integer $Default) 设置默认周期，单位：秒
+ * @method void setDefault(integer $Default) 设置<p>默认周期，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getKeys() 获取可选周期，单位：秒
+ * @method array getKeys() 获取<p>可选周期，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeys(array $Keys) 设置可选周期，单位：秒
+ * @method void setKeys(array $Keys) 设置<p>可选周期，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getNeed() 获取是否必须
- * @method void setNeed(boolean $Need) 设置是否必须
+ * @method boolean getNeed() 获取<p>是否必须</p>
+ * @method void setNeed(boolean $Need) 设置<p>是否必须</p>
  */
 class DescribePolicyConditionListConfigManualPeriod extends AbstractModel
 {
     /**
-     * @var integer 默认周期，单位：秒
+     * @var integer <p>默认周期，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Default;
 
     /**
-     * @var array 可选周期，单位：秒
+     * @var array <p>可选周期，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keys;
 
     /**
-     * @var boolean 是否必须
+     * @var boolean <p>是否必须</p>
      */
     public $Need;
 
     /**
-     * @param integer $Default 默认周期，单位：秒
+     * @param integer $Default <p>默认周期，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Keys 可选周期，单位：秒
+     * @param array $Keys <p>可选周期，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Need 是否必须
+     * @param boolean $Need <p>是否必须</p>
      */
     function __construct()
     {

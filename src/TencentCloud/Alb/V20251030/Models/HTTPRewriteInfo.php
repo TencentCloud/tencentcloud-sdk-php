@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP重写信息
  *
- * @method string getHost() 获取重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
- * @method void setHost(string $Host) 设置重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
- * @method string getPath() 获取重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9 ? = _ . - / : 。
- * @method void setPath(string $Path) 设置重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9 ? = _ . - / : 。
- * @method string getQuery() 获取重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|<>& 和空格。
- * @method void setQuery(string $Query) 设置重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|<>& 和空格。
+ * @method string getHost() 获取<p>重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
+ * @method void setHost(string $Host) 设置<p>重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
+ * @method string getPath() 获取<p>重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9 ? = _ . - / : 。</p>
+ * @method void setPath(string $Path) 设置<p>重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9 ? = _ . - / : 。</p>
+ * @method string getQuery() 获取<p>重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
+ * @method void setQuery(string $Query) 设置<p>重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
  */
 class HTTPRewriteInfo extends AbstractModel
 {
     /**
-     * @var string 重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
+     * @var string <p>重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
      */
     public $Host;
 
     /**
-     * @var string 重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9 ? = _ . - / : 。
+     * @var string <p>重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9 ? = _ . - / : 。</p>
      */
     public $Path;
 
     /**
-     * @var string 重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|<>& 和空格。
+     * @var string <p>重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
      */
     public $Query;
 
     /**
-     * @param string $Host 重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
-     * @param string $Path 重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9 ? = _ . - / : 。
-     * @param string $Query 重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|<>& 和空格。
+     * @param string $Host <p>重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
+     * @param string $Path <p>重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9 ? = _ . - / : 。</p>
+     * @param string $Query <p>重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
      */
     function __construct()
     {

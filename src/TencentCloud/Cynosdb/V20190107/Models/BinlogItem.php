@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Binlog描述
  *
- * @method string getFileName() 获取Binlog文件名称
- * @method void setFileName(string $FileName) 设置Binlog文件名称
- * @method integer getFileSize() 获取文件大小，单位：字节
- * @method void setFileSize(integer $FileSize) 设置文件大小，单位：字节
- * @method string getStartTime() 获取事务最早时间
- * @method void setStartTime(string $StartTime) 设置事务最早时间
- * @method string getFinishTime() 获取事务最晚时间
- * @method void setFinishTime(string $FinishTime) 设置事务最晚时间
- * @method integer getBinlogId() 获取Binlog文件ID
- * @method void setBinlogId(integer $BinlogId) 设置Binlog文件ID
- * @method array getCrossRegions() 获取binlog所跨地域
- * @method void setCrossRegions(array $CrossRegions) 设置binlog所跨地域
- * @method string getCopyStatus() 获取备份投递状态
- * @method void setCopyStatus(string $CopyStatus) 设置备份投递状态
- * @method array getVaultInfos() 获取保险箱信息
- * @method void setVaultInfos(array $VaultInfos) 设置保险箱信息
- * @method string getEncryptKeyId() 获取加密秘钥key
- * @method void setEncryptKeyId(string $EncryptKeyId) 设置加密秘钥key
- * @method string getEncryptRegion() 获取加密秘钥地域
- * @method void setEncryptRegion(string $EncryptRegion) 设置加密秘钥地域
+ * @method string getFileName() 获取<p>Binlog文件名称</p>
+ * @method void setFileName(string $FileName) 设置<p>Binlog文件名称</p>
+ * @method integer getFileSize() 获取<p>文件大小，单位：字节</p>
+ * @method void setFileSize(integer $FileSize) 设置<p>文件大小，单位：字节</p>
+ * @method string getStartTime() 获取<p>事务最早时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>事务最早时间</p>
+ * @method string getFinishTime() 获取<p>事务最晚时间</p>
+ * @method void setFinishTime(string $FinishTime) 设置<p>事务最晚时间</p>
+ * @method integer getBinlogId() 获取<p>Binlog文件ID</p>
+ * @method void setBinlogId(integer $BinlogId) 设置<p>Binlog文件ID</p>
+ * @method array getCrossRegions() 获取<p>binlog所跨地域</p>
+ * @method void setCrossRegions(array $CrossRegions) 设置<p>binlog所跨地域</p>
+ * @method string getCopyStatus() 获取<p>备份投递状态</p>
+ * @method void setCopyStatus(string $CopyStatus) 设置<p>备份投递状态</p>
+ * @method array getVaultInfos() 获取<p>保险箱信息</p>
+ * @method void setVaultInfos(array $VaultInfos) 设置<p>保险箱信息</p>
+ * @method string getEncryptKeyId() 获取<p>加密秘钥key</p>
+ * @method void setEncryptKeyId(string $EncryptKeyId) 设置<p>加密秘钥key</p>
+ * @method string getEncryptRegion() 获取<p>加密秘钥地域</p>
+ * @method void setEncryptRegion(string $EncryptRegion) 设置<p>加密秘钥地域</p>
+ * @method array getExistRegions() 获取<p>备份的地域分布信息</p>
+ * @method void setExistRegions(array $ExistRegions) 设置<p>备份的地域分布信息</p>
  */
 class BinlogItem extends AbstractModel
 {
     /**
-     * @var string Binlog文件名称
+     * @var string <p>Binlog文件名称</p>
      */
     public $FileName;
 
     /**
-     * @var integer 文件大小，单位：字节
+     * @var integer <p>文件大小，单位：字节</p>
      */
     public $FileSize;
 
     /**
-     * @var string 事务最早时间
+     * @var string <p>事务最早时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 事务最晚时间
+     * @var string <p>事务最晚时间</p>
      */
     public $FinishTime;
 
     /**
-     * @var integer Binlog文件ID
+     * @var integer <p>Binlog文件ID</p>
      */
     public $BinlogId;
 
     /**
-     * @var array binlog所跨地域
+     * @var array <p>binlog所跨地域</p>
      */
     public $CrossRegions;
 
     /**
-     * @var string 备份投递状态
+     * @var string <p>备份投递状态</p>
      */
     public $CopyStatus;
 
     /**
-     * @var array 保险箱信息
+     * @var array <p>保险箱信息</p>
      */
     public $VaultInfos;
 
     /**
-     * @var string 加密秘钥key
+     * @var string <p>加密秘钥key</p>
      */
     public $EncryptKeyId;
 
     /**
-     * @var string 加密秘钥地域
+     * @var string <p>加密秘钥地域</p>
      */
     public $EncryptRegion;
 
     /**
-     * @param string $FileName Binlog文件名称
-     * @param integer $FileSize 文件大小，单位：字节
-     * @param string $StartTime 事务最早时间
-     * @param string $FinishTime 事务最晚时间
-     * @param integer $BinlogId Binlog文件ID
-     * @param array $CrossRegions binlog所跨地域
-     * @param string $CopyStatus 备份投递状态
-     * @param array $VaultInfos 保险箱信息
-     * @param string $EncryptKeyId 加密秘钥key
-     * @param string $EncryptRegion 加密秘钥地域
+     * @var array <p>备份的地域分布信息</p>
+     */
+    public $ExistRegions;
+
+    /**
+     * @param string $FileName <p>Binlog文件名称</p>
+     * @param integer $FileSize <p>文件大小，单位：字节</p>
+     * @param string $StartTime <p>事务最早时间</p>
+     * @param string $FinishTime <p>事务最晚时间</p>
+     * @param integer $BinlogId <p>Binlog文件ID</p>
+     * @param array $CrossRegions <p>binlog所跨地域</p>
+     * @param string $CopyStatus <p>备份投递状态</p>
+     * @param array $VaultInfos <p>保险箱信息</p>
+     * @param string $EncryptKeyId <p>加密秘钥key</p>
+     * @param string $EncryptRegion <p>加密秘钥地域</p>
+     * @param array $ExistRegions <p>备份的地域分布信息</p>
      */
     function __construct()
     {
@@ -161,6 +169,15 @@ class BinlogItem extends AbstractModel
 
         if (array_key_exists("EncryptRegion",$param) and $param["EncryptRegion"] !== null) {
             $this->EncryptRegion = $param["EncryptRegion"];
+        }
+
+        if (array_key_exists("ExistRegions",$param) and $param["ExistRegions"] !== null) {
+            $this->ExistRegions = [];
+            foreach ($param["ExistRegions"] as $key => $value){
+                $obj = new BinlogRegionInfo();
+                $obj->deserialize($value);
+                array_push($this->ExistRegions, $obj);
+            }
         }
     }
 }

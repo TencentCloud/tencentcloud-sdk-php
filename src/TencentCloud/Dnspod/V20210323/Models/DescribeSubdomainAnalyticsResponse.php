@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubdomainAnalytics返回参数结构体
  *
- * @method array getData() 获取当前统计维度解析量小计
- * @method void setData(array $Data) 设置当前统计维度解析量小计
- * @method SubdomainAnalyticsInfo getInfo() 获取子域名解析量统计查询信息
- * @method void setInfo(SubdomainAnalyticsInfo $Info) 设置子域名解析量统计查询信息
- * @method array getAliasData() 获取子域名别名解析量统计信息
- * @method void setAliasData(array $AliasData) 设置子域名别名解析量统计信息
+ * @method array getData() 获取<p>当前统计维度解析量小计</p>
+ * @method void setData(array $Data) 设置<p>当前统计维度解析量小计</p>
+ * @method SubdomainAnalyticsInfo getInfo() 获取<p>子域名解析量统计查询信息</p>
+ * @method void setInfo(SubdomainAnalyticsInfo $Info) 设置<p>子域名解析量统计查询信息</p>
+ * @method array getAliasData() 获取<p>子域名别名解析量统计信息</p>
+ * @method void setAliasData(array $AliasData) 设置<p>子域名别名解析量统计信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSubdomainAnalyticsResponse extends AbstractModel
 {
     /**
-     * @var array 当前统计维度解析量小计
+     * @var array <p>当前统计维度解析量小计</p>
      */
     public $Data;
 
     /**
-     * @var SubdomainAnalyticsInfo 子域名解析量统计查询信息
+     * @var SubdomainAnalyticsInfo <p>子域名解析量统计查询信息</p>
      */
     public $Info;
 
     /**
-     * @var array 子域名别名解析量统计信息
+     * @var array <p>子域名别名解析量统计信息</p>
      */
     public $AliasData;
 
@@ -52,9 +52,9 @@ class DescribeSubdomainAnalyticsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 当前统计维度解析量小计
-     * @param SubdomainAnalyticsInfo $Info 子域名解析量统计查询信息
-     * @param array $AliasData 子域名别名解析量统计信息
+     * @param array $Data <p>当前统计维度解析量小计</p>
+     * @param SubdomainAnalyticsInfo $Info <p>子域名解析量统计查询信息</p>
+     * @param array $AliasData <p>子域名别名解析量统计信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

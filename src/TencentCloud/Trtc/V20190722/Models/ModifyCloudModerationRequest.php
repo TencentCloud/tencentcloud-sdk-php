@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCloudModeration请求参数结构体
  *
- * @method integer getSdkAppId() 获取TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
- * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
- * @method string getTaskId() 获取审核任务的唯一Id，在启动切片任务成功后会返回。
- * @method void setTaskId(string $TaskId) 设置审核任务的唯一Id，在启动切片任务成功后会返回。
- * @method SubscribeStreamUserIds getSubscribeStreamUserIds() 获取指定订阅流白名单或者黑名单。
- * @method void setSubscribeStreamUserIds(SubscribeStreamUserIds $SubscribeStreamUserIds) 设置指定订阅流白名单或者黑名单。
+ * @method integer getSdkAppId() 获取<p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
+ * @method string getTaskId() 获取<p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+ * @method SubscribeStreamUserIds getSubscribeStreamUserIds() 获取<p>指定订阅流白名单或者黑名单。</p>
+ * @method void setSubscribeStreamUserIds(SubscribeStreamUserIds $SubscribeStreamUserIds) 设置<p>指定订阅流白名单或者黑名单。</p>
  */
 class ModifyCloudModerationRequest extends AbstractModel
 {
     /**
-     * @var integer TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
+     * @var integer <p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
      */
     public $SdkAppId;
 
     /**
-     * @var string 审核任务的唯一Id，在启动切片任务成功后会返回。
+     * @var string <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     public $TaskId;
 
     /**
-     * @var SubscribeStreamUserIds 指定订阅流白名单或者黑名单。
+     * @var SubscribeStreamUserIds <p>指定订阅流白名单或者黑名单。</p>
      */
     public $SubscribeStreamUserIds;
 
     /**
-     * @param integer $SdkAppId TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
-     * @param string $TaskId 审核任务的唯一Id，在启动切片任务成功后会返回。
-     * @param SubscribeStreamUserIds $SubscribeStreamUserIds 指定订阅流白名单或者黑名单。
+     * @param integer $SdkAppId <p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
+     * @param string $TaskId <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+     * @param SubscribeStreamUserIds $SubscribeStreamUserIds <p>指定订阅流白名单或者黑名单。</p>
      */
     function __construct()
     {

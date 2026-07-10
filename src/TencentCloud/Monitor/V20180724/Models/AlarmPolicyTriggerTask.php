@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警策略触发任务
  *
- * @method string getType() 获取触发任务类型 AS=弹性伸缩
+ * @method string getType() 获取<p>触发任务类型 AS=弹性伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置触发任务类型 AS=弹性伸缩
+ * @method void setType(string $Type) 设置<p>触发任务类型 AS=弹性伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskConfig() 获取用 json 表示配置信息 {"Key1":"Value1","Key2":"Value2"}
+ * @method string getTaskConfig() 获取<p>用 json 表示配置信息 {&quot;Key1&quot;:&quot;Value1&quot;,&quot;Key2&quot;:&quot;Value2&quot;}</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskConfig(string $TaskConfig) 设置用 json 表示配置信息 {"Key1":"Value1","Key2":"Value2"}
+ * @method void setTaskConfig(string $TaskConfig) 设置<p>用 json 表示配置信息 {&quot;Key1&quot;:&quot;Value1&quot;,&quot;Key2&quot;:&quot;Value2&quot;}</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicyTriggerTask extends AbstractModel
 {
     /**
-     * @var string 触发任务类型 AS=弹性伸缩
+     * @var string <p>触发任务类型 AS=弹性伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 用 json 表示配置信息 {"Key1":"Value1","Key2":"Value2"}
+     * @var string <p>用 json 表示配置信息 {&quot;Key1&quot;:&quot;Value1&quot;,&quot;Key2&quot;:&quot;Value2&quot;}</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskConfig;
 
     /**
-     * @param string $Type 触发任务类型 AS=弹性伸缩
+     * @param string $Type <p>触发任务类型 AS=弹性伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskConfig 用 json 表示配置信息 {"Key1":"Value1","Key2":"Value2"}
+     * @param string $TaskConfig <p>用 json 表示配置信息 {&quot;Key1&quot;:&quot;Value1&quot;,&quot;Key2&quot;:&quot;Value2&quot;}</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,17 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteHealthCheckTemplates请求参数结构体
  *
+ * @method array getHealthCheckTemplateIds() 获取健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
+ * @method void setHealthCheckTemplateIds(array $HealthCheckTemplateIds) 设置健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
  * @method boolean getDryRun() 获取是否预览此次请求。
 - **false**（默认）：发送普通请求，直接删除模板。
 - **true**：发送预览请求，检查删除模板的参数、格式、业务限制等是否符合要求。
  * @method void setDryRun(boolean $DryRun) 设置是否预览此次请求。
 - **false**（默认）：发送普通请求，直接删除模板。
 - **true**：发送预览请求，检查删除模板的参数、格式、业务限制等是否符合要求。
- * @method array getHealthCheckTemplateIds() 获取健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
- * @method void setHealthCheckTemplateIds(array $HealthCheckTemplateIds) 设置健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
  */
 class DeleteHealthCheckTemplatesRequest extends AbstractModel
 {
+    /**
+     * @var array 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
+     */
+    public $HealthCheckTemplateIds;
+
     /**
      * @var boolean 是否预览此次请求。
 - **false**（默认）：发送普通请求，直接删除模板。
@@ -39,15 +44,10 @@ class DeleteHealthCheckTemplatesRequest extends AbstractModel
     public $DryRun;
 
     /**
-     * @var array 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
-     */
-    public $HealthCheckTemplateIds;
-
-    /**
+     * @param array $HealthCheckTemplateIds 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
      * @param boolean $DryRun 是否预览此次请求。
 - **false**（默认）：发送普通请求，直接删除模板。
 - **true**：发送预览请求，检查删除模板的参数、格式、业务限制等是否符合要求。
-     * @param array $HealthCheckTemplateIds 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
      */
     function __construct()
     {
@@ -62,12 +62,12 @@ class DeleteHealthCheckTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
-            $this->DryRun = $param["DryRun"];
-        }
-
         if (array_key_exists("HealthCheckTemplateIds",$param) and $param["HealthCheckTemplateIds"] !== null) {
             $this->HealthCheckTemplateIds = $param["HealthCheckTemplateIds"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

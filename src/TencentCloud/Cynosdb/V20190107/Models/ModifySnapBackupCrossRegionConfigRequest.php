@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySnapBackupCrossRegionConfig请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getCrossRegionsEnable() 获取是否开启跨地域快照备份ON/OFF
- * @method void setCrossRegionsEnable(string $CrossRegionsEnable) 设置是否开启跨地域快照备份ON/OFF
- * @method array getCrossRegions() 获取快照备份所跨地域
- * @method void setCrossRegions(array $CrossRegions) 设置快照备份所跨地域
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getCrossRegionsEnable() 获取<p>是否开启跨地域快照备份ON/OFF</p>
+ * @method void setCrossRegionsEnable(string $CrossRegionsEnable) 设置<p>是否开启跨地域快照备份ON/OFF</p>
+ * @method array getCrossRegions() 获取<p>快照备份所跨地域</p>
+ * @method void setCrossRegions(array $CrossRegions) 设置<p>快照备份所跨地域</p>
+ * @method integer getCrossRegionSaveDays() 获取<p>跨地域备份保留时间</p><p>单位：天</p>
+ * @method void setCrossRegionSaveDays(integer $CrossRegionSaveDays) 设置<p>跨地域备份保留时间</p><p>单位：天</p>
  */
 class ModifySnapBackupCrossRegionConfigRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 是否开启跨地域快照备份ON/OFF
+     * @var string <p>是否开启跨地域快照备份ON/OFF</p>
      */
     public $CrossRegionsEnable;
 
     /**
-     * @var array 快照备份所跨地域
+     * @var array <p>快照备份所跨地域</p>
      */
     public $CrossRegions;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $CrossRegionsEnable 是否开启跨地域快照备份ON/OFF
-     * @param array $CrossRegions 快照备份所跨地域
+     * @var integer <p>跨地域备份保留时间</p><p>单位：天</p>
+     */
+    public $CrossRegionSaveDays;
+
+    /**
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $CrossRegionsEnable <p>是否开启跨地域快照备份ON/OFF</p>
+     * @param array $CrossRegions <p>快照备份所跨地域</p>
+     * @param integer $CrossRegionSaveDays <p>跨地域备份保留时间</p><p>单位：天</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifySnapBackupCrossRegionConfigRequest extends AbstractModel
 
         if (array_key_exists("CrossRegions",$param) and $param["CrossRegions"] !== null) {
             $this->CrossRegions = $param["CrossRegions"];
+        }
+
+        if (array_key_exists("CrossRegionSaveDays",$param) and $param["CrossRegionSaveDays"] !== null) {
+            $this->CrossRegionSaveDays = $param["CrossRegionSaveDays"];
         }
     }
 }

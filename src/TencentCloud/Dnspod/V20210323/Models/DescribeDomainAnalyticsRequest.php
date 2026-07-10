@@ -20,50 +20,59 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainAnalytics请求参数结构体
  *
- * @method string getDomain() 获取要查询解析量的域名
- * @method void setDomain(string $Domain) 设置要查询解析量的域名
- * @method string getStartDate() 获取查询的开始时间，格式：YYYY-MM-DD
- * @method void setStartDate(string $StartDate) 设置查询的开始时间，格式：YYYY-MM-DD
- * @method string getEndDate() 获取查询的结束时间，格式：YYYY-MM-DD
- * @method void setEndDate(string $EndDate) 设置查询的结束时间，格式：YYYY-MM-DD
- * @method string getDnsFormat() 获取DATE:按天维度统计 HOUR:按小时维度统计
- * @method void setDnsFormat(string $DnsFormat) 设置DATE:按天维度统计 HOUR:按小时维度统计
- * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
- * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+ * @method string getDomain() 获取<p>要查询解析量的域名</p>
+ * @method void setDomain(string $Domain) 设置<p>要查询解析量的域名</p>
+ * @method string getStartDate() 获取<p>查询的开始时间，格式：YYYY-MM-DD</p>
+ * @method void setStartDate(string $StartDate) 设置<p>查询的开始时间，格式：YYYY-MM-DD</p>
+ * @method string getEndDate() 获取<p>查询的结束时间，格式：YYYY-MM-DD</p>
+ * @method void setEndDate(string $EndDate) 设置<p>查询的结束时间，格式：YYYY-MM-DD</p>
+ * @method string getDnsFormat() 获取<p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+ * @method void setDnsFormat(string $DnsFormat) 设置<p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+ * @method integer getDomainId() 获取<p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
+ * @method void setDomainId(integer $DomainId) 设置<p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
+ * @method string getDNSFormat() 获取<p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+ * @method void setDNSFormat(string $DNSFormat) 设置<p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
  */
 class DescribeDomainAnalyticsRequest extends AbstractModel
 {
     /**
-     * @var string 要查询解析量的域名
+     * @var string <p>要查询解析量的域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 查询的开始时间，格式：YYYY-MM-DD
+     * @var string <p>查询的开始时间，格式：YYYY-MM-DD</p>
      */
     public $StartDate;
 
     /**
-     * @var string 查询的结束时间，格式：YYYY-MM-DD
+     * @var string <p>查询的结束时间，格式：YYYY-MM-DD</p>
      */
     public $EndDate;
 
     /**
-     * @var string DATE:按天维度统计 HOUR:按小时维度统计
+     * @var string <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+     * @deprecated
      */
     public $DnsFormat;
 
     /**
-     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @var integer <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
      */
     public $DomainId;
 
     /**
-     * @param string $Domain 要查询解析量的域名
-     * @param string $StartDate 查询的开始时间，格式：YYYY-MM-DD
-     * @param string $EndDate 查询的结束时间，格式：YYYY-MM-DD
-     * @param string $DnsFormat DATE:按天维度统计 HOUR:按小时维度统计
-     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @var string <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+     */
+    public $DNSFormat;
+
+    /**
+     * @param string $Domain <p>要查询解析量的域名</p>
+     * @param string $StartDate <p>查询的开始时间，格式：YYYY-MM-DD</p>
+     * @param string $EndDate <p>查询的结束时间，格式：YYYY-MM-DD</p>
+     * @param string $DnsFormat <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+     * @param integer $DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
+     * @param string $DNSFormat <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
      */
     function __construct()
     {
@@ -96,6 +105,10 @@ class DescribeDomainAnalyticsRequest extends AbstractModel
 
         if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
             $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("DNSFormat",$param) and $param["DNSFormat"] !== null) {
+            $this->DNSFormat = $param["DNSFormat"];
         }
     }
 }

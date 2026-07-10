@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyConditionList.ConfigManual.CalcValue
  *
- * @method string getDefault() 获取默认值
+ * @method string getDefault() 获取<p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefault(string $Default) 设置默认值
+ * @method void setDefault(string $Default) 设置<p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFixed() 获取固定值
+ * @method string getFixed() 获取<p>固定值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFixed(string $Fixed) 设置固定值
+ * @method void setFixed(string $Fixed) 设置<p>固定值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMax() 获取最大值
+ * @method string getMax() 获取<p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMax(string $Max) 设置最大值
+ * @method void setMax(string $Max) 设置<p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMin() 获取最小值
+ * @method string getMin() 获取<p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMin(string $Min) 设置最小值
+ * @method void setMin(string $Min) 设置<p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getNeed() 获取是否必须
- * @method void setNeed(boolean $Need) 设置是否必须
+ * @method boolean getNeed() 获取<p>是否必须</p>
+ * @method void setNeed(boolean $Need) 设置<p>是否必须</p>
  */
 class DescribePolicyConditionListConfigManualCalcValue extends AbstractModel
 {
     /**
-     * @var string 默认值
+     * @var string <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Default;
 
     /**
-     * @var string 固定值
+     * @var string <p>固定值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fixed;
 
     /**
-     * @var string 最大值
+     * @var string <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Max;
 
     /**
-     * @var string 最小值
+     * @var string <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Min;
 
     /**
-     * @var boolean 是否必须
+     * @var boolean <p>是否必须</p>
      */
     public $Need;
 
     /**
-     * @param string $Default 默认值
+     * @param string $Default <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Fixed 固定值
+     * @param string $Fixed <p>固定值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Max 最大值
+     * @param string $Max <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Min 最小值
+     * @param string $Min <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Need 是否必须
+     * @param boolean $Need <p>是否必须</p>
      */
     function __construct()
     {

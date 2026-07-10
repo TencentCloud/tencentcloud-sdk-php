@@ -170,6 +170,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DestroyPrometheusInstanceResponse DestroyPrometheusInstance(Models\DestroyPrometheusInstanceRequest $req) 彻底删除 Prometheus 实例相关数据，给定的实例必须先被 Terminate(该接口是异步接口，实例是否释放需要通过 DescribePrometheusInstances 接口返回的状态来判断)。
  * @method Models\EnableGrafanaInternetResponse EnableGrafanaInternet(Models\EnableGrafanaInternetRequest $req) 设置 Grafana 公网访问
  * @method Models\EnableGrafanaSSOResponse EnableGrafanaSSO(Models\EnableGrafanaSSORequest $req) 设置 Grafana 单点登录，使用腾讯云账号
+ * @method Models\EnablePredefinedPoliciesResponse EnablePredefinedPolicies(Models\EnablePredefinedPoliciesRequest $req) 一键启用（创建）某个云产品下的预设策略
  * @method Models\EnableSSOCamCheckResponse EnableSSOCamCheck(Models\EnableSSOCamCheckRequest $req) SSO单点登录时，设置是否cam鉴权
  * @method Models\ExportPrometheusReadOnlyDynamicAPIResponse ExportPrometheusReadOnlyDynamicAPI(Models\ExportPrometheusReadOnlyDynamicAPIRequest $req) Prometheus 内部只读动态 api 代理，支持以云api形式访问prometheus原生api
 支持以下api:

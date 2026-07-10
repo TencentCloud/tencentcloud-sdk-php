@@ -20,46 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 指标告警配置
  *
- * @method DescribePolicyConditionListConfigManual getConfigManual() 获取指标配置
+ * @method DescribePolicyConditionListConfigManual getConfigManual() 获取<p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfigManual(DescribePolicyConditionListConfigManual $ConfigManual) 设置指标配置
+ * @method void setConfigManual(DescribePolicyConditionListConfigManual $ConfigManual) 设置<p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMetricId() 获取指标id
- * @method void setMetricId(integer $MetricId) 设置指标id
- * @method string getMetricShowName() 获取指标名称
- * @method void setMetricShowName(string $MetricShowName) 设置指标名称
- * @method string getMetricUnit() 获取指标单位
- * @method void setMetricUnit(string $MetricUnit) 设置指标单位
+ * @method integer getMetricId() 获取<p>指标id</p>
+ * @method void setMetricId(integer $MetricId) 设置<p>指标id</p>
+ * @method string getMetricShowName() 获取<p>指标名称</p>
+ * @method void setMetricShowName(string $MetricShowName) 设置<p>指标名称</p>
+ * @method string getMetricUnit() 获取<p>指标单位</p>
+ * @method void setMetricUnit(string $MetricUnit) 设置<p>指标单位</p>
  */
 class DescribePolicyConditionListMetric extends AbstractModel
 {
     /**
-     * @var DescribePolicyConditionListConfigManual 指标配置
+     * @var DescribePolicyConditionListConfigManual <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigManual;
 
     /**
-     * @var integer 指标id
+     * @var integer <p>指标id</p>
      */
     public $MetricId;
 
     /**
-     * @var string 指标名称
+     * @var string <p>指标名称</p>
      */
     public $MetricShowName;
 
     /**
-     * @var string 指标单位
+     * @var string <p>指标单位</p>
      */
     public $MetricUnit;
 
     /**
-     * @param DescribePolicyConditionListConfigManual $ConfigManual 指标配置
+     * @param DescribePolicyConditionListConfigManual $ConfigManual <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MetricId 指标id
-     * @param string $MetricShowName 指标名称
-     * @param string $MetricUnit 指标单位
+     * @param integer $MetricId <p>指标id</p>
+     * @param string $MetricShowName <p>指标名称</p>
+     * @param string $MetricUnit <p>指标单位</p>
      */
     function __construct()
     {

@@ -20,50 +20,59 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResolveCount请求参数结构体
  *
- * @method string getDomain() 获取要查询解析量的域名
- * @method void setDomain(string $Domain) 设置要查询解析量的域名
- * @method string getStartDate() 获取查询的开始时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。
- * @method void setStartDate(string $StartDate) 设置查询的开始时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。
- * @method string getEndDate() 获取查询的结束时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。
- * @method void setEndDate(string $EndDate) 设置查询的结束时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。
- * @method string getDnsFormat() 获取数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
- * @method void setDnsFormat(string $DnsFormat) 设置数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
- * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
- * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method string getDomain() 获取<p>要查询解析量的域名</p>
+ * @method void setDomain(string $Domain) 设置<p>要查询解析量的域名</p>
+ * @method string getStartDate() 获取<p>查询的开始时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。</p>
+ * @method void setStartDate(string $StartDate) 设置<p>查询的开始时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。</p>
+ * @method string getEndDate() 获取<p>查询的结束时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。</p>
+ * @method void setEndDate(string $EndDate) 设置<p>查询的结束时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。</p>
+ * @method string getDnsFormat() 获取<p>数据统计格式</p><p>枚举值：</p><ul><li>minute： 按十分钟维度统计数据</li><li>hour： 按小时维度统计数据</li><li>day： 按天维度统计数据</li></ul>
+ * @method void setDnsFormat(string $DnsFormat) 设置<p>数据统计格式</p><p>枚举值：</p><ul><li>minute： 按十分钟维度统计数据</li><li>hour： 按小时维度统计数据</li><li>day： 按天维度统计数据</li></ul>
+ * @method integer getDomainId() 获取<p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+ * @method void setDomainId(integer $DomainId) 设置<p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+ * @method string getDNSFormat() 获取<p>数据统计格式</p><p>枚举值：</p><ul><li>minute： 按十分钟维度统计数据</li><li>hour： 按小时维度统计数据</li><li>day： 按天维度统计数据</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+ * @method void setDNSFormat(string $DNSFormat) 设置<p>数据统计格式</p><p>枚举值：</p><ul><li>minute： 按十分钟维度统计数据</li><li>hour： 按小时维度统计数据</li><li>day： 按天维度统计数据</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
  */
 class DescribeResolveCountRequest extends AbstractModel
 {
     /**
-     * @var string 要查询解析量的域名
+     * @var string <p>要查询解析量的域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 查询的开始时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。
+     * @var string <p>查询的开始时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。</p>
      */
     public $StartDate;
 
     /**
-     * @var string 查询的结束时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。
+     * @var string <p>查询的结束时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。</p>
      */
     public $EndDate;
 
     /**
-     * @var string 数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
+     * @var string <p>数据统计格式</p><p>枚举值：</p><ul><li>minute： 按十分钟维度统计数据</li><li>hour： 按小时维度统计数据</li><li>day： 按天维度统计数据</li></ul>
+     * @deprecated
      */
     public $DnsFormat;
 
     /**
-     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @var integer <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
      */
     public $DomainId;
 
     /**
-     * @param string $Domain 要查询解析量的域名
-     * @param string $StartDate 查询的开始时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。
-     * @param string $EndDate 查询的结束时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。
-     * @param string $DnsFormat 数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
-     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @var string <p>数据统计格式</p><p>枚举值：</p><ul><li>minute： 按十分钟维度统计数据</li><li>hour： 按小时维度统计数据</li><li>day： 按天维度统计数据</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+     */
+    public $DNSFormat;
+
+    /**
+     * @param string $Domain <p>要查询解析量的域名</p>
+     * @param string $StartDate <p>查询的开始时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。</p>
+     * @param string $EndDate <p>查询的结束时间，格式：YYYY-MM-DD，最多允许查询最近32天的数据。</p>
+     * @param string $DnsFormat <p>数据统计格式</p><p>枚举值：</p><ul><li>minute： 按十分钟维度统计数据</li><li>hour： 按小时维度统计数据</li><li>day： 按天维度统计数据</li></ul>
+     * @param integer $DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+     * @param string $DNSFormat <p>数据统计格式</p><p>枚举值：</p><ul><li>minute： 按十分钟维度统计数据</li><li>hour： 按小时维度统计数据</li><li>day： 按天维度统计数据</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
      */
     function __construct()
     {
@@ -96,6 +105,10 @@ class DescribeResolveCountRequest extends AbstractModel
 
         if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
             $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("DNSFormat",$param) and $param["DNSFormat"] !== null) {
+            $this->DNSFormat = $param["DNSFormat"];
         }
     }
 }

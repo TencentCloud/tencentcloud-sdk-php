@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyConditionsTemplateRequestCondition，Condition入参字段值
  *
- * @method string getCalcPeriod() 获取统计周期
- * @method void setCalcPeriod(string $CalcPeriod) 设置统计周期
- * @method string getCalcType() 获取统计方式
- * @method void setCalcType(string $CalcType) 设置统计方式
- * @method string getContinuePeriod() 获取持续周期
- * @method void setContinuePeriod(string $ContinuePeriod) 设置持续周期
- * @method integer getMetricID() 获取指标ID
- * @method void setMetricID(integer $MetricID) 设置指标ID
- * @method string getCalcValue() 获取统计值
- * @method void setCalcValue(string $CalcValue) 设置统计值
- * @method string getAlarmNotifyPeriod() 获取告警通知周期
- * @method void setAlarmNotifyPeriod(string $AlarmNotifyPeriod) 设置告警通知周期
- * @method integer getAlarmNotifyType() 获取告警通知方式
- * @method void setAlarmNotifyType(integer $AlarmNotifyType) 设置告警通知方式
- * @method integer getRuleID() 获取规则ID
- * @method void setRuleID(integer $RuleID) 设置规则ID
+ * @method string getCalcPeriod() 获取<p>统计周期</p>
+ * @method void setCalcPeriod(string $CalcPeriod) 设置<p>统计周期</p>
+ * @method string getCalcType() 获取<p>统计方式</p>
+ * @method void setCalcType(string $CalcType) 设置<p>统计方式</p>
+ * @method string getContinuePeriod() 获取<p>持续周期</p>
+ * @method void setContinuePeriod(string $ContinuePeriod) 设置<p>持续周期</p>
+ * @method integer getMetricID() 获取<p>指标ID</p>
+ * @method void setMetricID(integer $MetricID) 设置<p>指标ID</p>
+ * @method string getCalcValue() 获取<p>统计值</p>
+ * @method void setCalcValue(string $CalcValue) 设置<p>统计值</p>
+ * @method string getAlarmNotifyPeriod() 获取<p>告警通知周期</p>
+ * @method void setAlarmNotifyPeriod(string $AlarmNotifyPeriod) 设置<p>告警通知周期</p>
+ * @method integer getAlarmNotifyType() 获取<p>告警通知方式</p>
+ * @method void setAlarmNotifyType(integer $AlarmNotifyType) 设置<p>告警通知方式</p>
+ * @method integer getRuleID() 获取<p>规则ID</p>
+ * @method void setRuleID(integer $RuleID) 设置<p>规则ID</p>
  */
 class ModifyConditionsTemplateRequestCondition extends AbstractModel
 {
     /**
-     * @var string 统计周期
+     * @var string <p>统计周期</p>
      */
     public $CalcPeriod;
 
     /**
-     * @var string 统计方式
+     * @var string <p>统计方式</p>
      */
     public $CalcType;
 
     /**
-     * @var string 持续周期
+     * @var string <p>持续周期</p>
      */
     public $ContinuePeriod;
 
     /**
-     * @var integer 指标ID
+     * @var integer <p>指标ID</p>
      */
     public $MetricID;
 
     /**
-     * @var string 统计值
+     * @var string <p>统计值</p>
      */
     public $CalcValue;
 
     /**
-     * @var string 告警通知周期
+     * @var string <p>告警通知周期</p>
      */
     public $AlarmNotifyPeriod;
 
     /**
-     * @var integer 告警通知方式
+     * @var integer <p>告警通知方式</p>
      */
     public $AlarmNotifyType;
 
     /**
-     * @var integer 规则ID
+     * @var integer <p>规则ID</p>
      */
     public $RuleID;
 
     /**
-     * @param string $CalcPeriod 统计周期
-     * @param string $CalcType 统计方式
-     * @param string $ContinuePeriod 持续周期
-     * @param integer $MetricID 指标ID
-     * @param string $CalcValue 统计值
-     * @param string $AlarmNotifyPeriod 告警通知周期
-     * @param integer $AlarmNotifyType 告警通知方式
-     * @param integer $RuleID 规则ID
+     * @param string $CalcPeriod <p>统计周期</p>
+     * @param string $CalcType <p>统计方式</p>
+     * @param string $ContinuePeriod <p>持续周期</p>
+     * @param integer $MetricID <p>指标ID</p>
+     * @param string $CalcValue <p>统计值</p>
+     * @param string $AlarmNotifyPeriod <p>告警通知周期</p>
+     * @param integer $AlarmNotifyType <p>告警通知方式</p>
+     * @param integer $RuleID <p>规则ID</p>
      */
     function __construct()
     {

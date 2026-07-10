@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetGroupId() 获取目标组 ID，格式为 lbtg- 后接 8 位字母数字。
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组 ID，格式为 lbtg- 后接 8 位字母数字。
+ * @method array getTargets() 获取需要从目标组移除的后端服务列表。单次请求最多移除 **50** 个后端服务。
+ * @method void setTargets(array $Targets) 设置需要从目标组移除的后端服务列表。单次请求最多移除 **50** 个后端服务。
  * @method boolean getDryRun() 获取是否预览此次请求。 
 - **false**（默认）：发送普通请求，直接移除后端服务。 
 - **true**：发送预览请求，检查移除后端服务的参数、格式、业务限制等是否符合要求。
  * @method void setDryRun(boolean $DryRun) 设置是否预览此次请求。 
 - **false**（默认）：发送普通请求，直接移除后端服务。 
 - **true**：发送预览请求，检查移除后端服务的参数、格式、业务限制等是否符合要求。
- * @method array getTargets() 获取需要从目标组移除的后端服务列表。单次请求最多移除 **50** 个后端服务。
- * @method void setTargets(array $Targets) 设置需要从目标组移除的后端服务列表。单次请求最多移除 **50** 个后端服务。
  */
 class RemoveTargetsFromTargetGroupRequest extends AbstractModel
 {
@@ -39,6 +39,11 @@ class RemoveTargetsFromTargetGroupRequest extends AbstractModel
     public $TargetGroupId;
 
     /**
+     * @var array 需要从目标组移除的后端服务列表。单次请求最多移除 **50** 个后端服务。
+     */
+    public $Targets;
+
+    /**
      * @var boolean 是否预览此次请求。 
 - **false**（默认）：发送普通请求，直接移除后端服务。 
 - **true**：发送预览请求，检查移除后端服务的参数、格式、业务限制等是否符合要求。
@@ -46,16 +51,11 @@ class RemoveTargetsFromTargetGroupRequest extends AbstractModel
     public $DryRun;
 
     /**
-     * @var array 需要从目标组移除的后端服务列表。单次请求最多移除 **50** 个后端服务。
-     */
-    public $Targets;
-
-    /**
      * @param string $TargetGroupId 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
+     * @param array $Targets 需要从目标组移除的后端服务列表。单次请求最多移除 **50** 个后端服务。
      * @param boolean $DryRun 是否预览此次请求。 
 - **false**（默认）：发送普通请求，直接移除后端服务。 
 - **true**：发送预览请求，检查移除后端服务的参数、格式、业务限制等是否符合要求。
-     * @param array $Targets 需要从目标组移除的后端服务列表。单次请求最多移除 **50** 个后端服务。
      */
     function __construct()
     {
@@ -74,10 +74,6 @@ class RemoveTargetsFromTargetGroupRequest extends AbstractModel
             $this->TargetGroupId = $param["TargetGroupId"];
         }
 
-        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
-            $this->DryRun = $param["DryRun"];
-        }
-
         if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
             $this->Targets = [];
             foreach ($param["Targets"] as $key => $value){
@@ -85,6 +81,10 @@ class RemoveTargetsFromTargetGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);
             }
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

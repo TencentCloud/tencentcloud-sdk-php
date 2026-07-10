@@ -20,58 +20,76 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubdomainAnalytics请求参数结构体
  *
- * @method string getDomain() 获取要查询解析量的域名
- * @method void setDomain(string $Domain) 设置要查询解析量的域名
- * @method string getStartDate() 获取查询的开始时间，格式：YYYY-MM-DD
- * @method void setStartDate(string $StartDate) 设置查询的开始时间，格式：YYYY-MM-DD
- * @method string getEndDate() 获取查询的结束时间，格式：YYYY-MM-DD
- * @method void setEndDate(string $EndDate) 设置查询的结束时间，格式：YYYY-MM-DD
- * @method string getSubdomain() 获取要查询解析量的子域名
- * @method void setSubdomain(string $Subdomain) 设置要查询解析量的子域名
- * @method string getDnsFormat() 获取DATE:按天维度统计 HOUR:按小时维度统计
- * @method void setDnsFormat(string $DnsFormat) 设置DATE:按天维度统计 HOUR:按小时维度统计
- * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
- * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method string getDomain() 获取<p>要查询解析量的域名</p>
+ * @method void setDomain(string $Domain) 设置<p>要查询解析量的域名</p>
+ * @method string getStartDate() 获取<p>查询的开始时间，格式：YYYY-MM-DD</p>
+ * @method void setStartDate(string $StartDate) 设置<p>查询的开始时间，格式：YYYY-MM-DD</p>
+ * @method string getEndDate() 获取<p>查询的结束时间，格式：YYYY-MM-DD</p>
+ * @method void setEndDate(string $EndDate) 设置<p>查询的结束时间，格式：YYYY-MM-DD</p>
+ * @method string getDnsFormat() 获取<p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+ * @method void setDnsFormat(string $DnsFormat) 设置<p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+ * @method integer getDomainId() 获取<p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+ * @method void setDomainId(integer $DomainId) 设置<p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+ * @method string getSubdomain() 获取<p>要查询解析量的子域名</p>
+ * @method void setSubdomain(string $Subdomain) 设置<p>要查询解析量的子域名</p>
+ * @method string getSubDomain() 获取<p>要查询解析量的子域名</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+ * @method void setSubDomain(string $SubDomain) 设置<p>要查询解析量的子域名</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+ * @method string getDNSFormat() 获取<p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+ * @method void setDNSFormat(string $DNSFormat) 设置<p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
  */
 class DescribeSubdomainAnalyticsRequest extends AbstractModel
 {
     /**
-     * @var string 要查询解析量的域名
+     * @var string <p>要查询解析量的域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 查询的开始时间，格式：YYYY-MM-DD
+     * @var string <p>查询的开始时间，格式：YYYY-MM-DD</p>
      */
     public $StartDate;
 
     /**
-     * @var string 查询的结束时间，格式：YYYY-MM-DD
+     * @var string <p>查询的结束时间，格式：YYYY-MM-DD</p>
      */
     public $EndDate;
 
     /**
-     * @var string 要查询解析量的子域名
-     */
-    public $Subdomain;
-
-    /**
-     * @var string DATE:按天维度统计 HOUR:按小时维度统计
+     * @var string <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+     * @deprecated
      */
     public $DnsFormat;
 
     /**
-     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @var integer <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
      */
     public $DomainId;
 
     /**
-     * @param string $Domain 要查询解析量的域名
-     * @param string $StartDate 查询的开始时间，格式：YYYY-MM-DD
-     * @param string $EndDate 查询的结束时间，格式：YYYY-MM-DD
-     * @param string $Subdomain 要查询解析量的子域名
-     * @param string $DnsFormat DATE:按天维度统计 HOUR:按小时维度统计
-     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @var string <p>要查询解析量的子域名</p>
+     * @deprecated
+     */
+    public $Subdomain;
+
+    /**
+     * @var string <p>要查询解析量的子域名</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+     */
+    public $SubDomain;
+
+    /**
+     * @var string <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+     */
+    public $DNSFormat;
+
+    /**
+     * @param string $Domain <p>要查询解析量的域名</p>
+     * @param string $StartDate <p>查询的开始时间，格式：YYYY-MM-DD</p>
+     * @param string $EndDate <p>查询的结束时间，格式：YYYY-MM-DD</p>
+     * @param string $DnsFormat <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+     * @param integer $DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+     * @param string $Subdomain <p>要查询解析量的子域名</p>
+     * @param string $SubDomain <p>要查询解析量的子域名</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+     * @param string $DNSFormat <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
      */
     function __construct()
     {
@@ -98,16 +116,24 @@ class DescribeSubdomainAnalyticsRequest extends AbstractModel
             $this->EndDate = $param["EndDate"];
         }
 
-        if (array_key_exists("Subdomain",$param) and $param["Subdomain"] !== null) {
-            $this->Subdomain = $param["Subdomain"];
-        }
-
         if (array_key_exists("DnsFormat",$param) and $param["DnsFormat"] !== null) {
             $this->DnsFormat = $param["DnsFormat"];
         }
 
         if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
             $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("Subdomain",$param) and $param["Subdomain"] !== null) {
+            $this->Subdomain = $param["Subdomain"];
+        }
+
+        if (array_key_exists("SubDomain",$param) and $param["SubDomain"] !== null) {
+            $this->SubDomain = $param["SubDomain"];
+        }
+
+        if (array_key_exists("DNSFormat",$param) and $param["DNSFormat"] !== null) {
+            $this->DNSFormat = $param["DNSFormat"];
         }
     }
 }

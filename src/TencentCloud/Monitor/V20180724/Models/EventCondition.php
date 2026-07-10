@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 事件告警条件
  *
- * @method string getAlarmNotifyPeriod() 获取告警通知频率
+ * @method string getAlarmNotifyPeriod() 获取<p>告警通知频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmNotifyPeriod(string $AlarmNotifyPeriod) 设置告警通知频率
+ * @method void setAlarmNotifyPeriod(string $AlarmNotifyPeriod) 设置<p>告警通知频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlarmNotifyType() 获取重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+ * @method string getAlarmNotifyType() 获取<p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmNotifyType(string $AlarmNotifyType) 设置重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+ * @method void setAlarmNotifyType(string $AlarmNotifyType) 设置<p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEventID() 获取事件ID
- * @method void setEventID(string $EventID) 设置事件ID
- * @method string getEventDisplayName() 获取事件展示名称（对外）
- * @method void setEventDisplayName(string $EventDisplayName) 设置事件展示名称（对外）
- * @method string getRuleID() 获取规则ID
- * @method void setRuleID(string $RuleID) 设置规则ID
- * @method string getMetricName() 获取指标名
+ * @method string getEventID() 获取<p>事件ID</p>
+ * @method void setEventID(string $EventID) 设置<p>事件ID</p>
+ * @method string getEventDisplayName() 获取<p>事件展示名称（对外）</p>
+ * @method void setEventDisplayName(string $EventDisplayName) 设置<p>事件展示名称（对外）</p>
+ * @method string getRuleID() 获取<p>规则ID</p>
+ * @method void setRuleID(string $RuleID) 设置<p>规则ID</p>
+ * @method string getMetricName() 获取<p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetricName(string $MetricName) 设置指标名
+ * @method void setMetricName(string $MetricName) 设置<p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventCondition extends AbstractModel
 {
     /**
-     * @var string 告警通知频率
+     * @var string <p>告警通知频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmNotifyPeriod;
 
     /**
-     * @var string 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+     * @var string <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmNotifyType;
 
     /**
-     * @var string 事件ID
+     * @var string <p>事件ID</p>
      */
     public $EventID;
 
     /**
-     * @var string 事件展示名称（对外）
+     * @var string <p>事件展示名称（对外）</p>
      */
     public $EventDisplayName;
 
     /**
-     * @var string 规则ID
+     * @var string <p>规则ID</p>
      */
     public $RuleID;
 
     /**
-     * @var string 指标名
+     * @var string <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricName;
 
     /**
-     * @param string $AlarmNotifyPeriod 告警通知频率
+     * @param string $AlarmNotifyPeriod <p>告警通知频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AlarmNotifyType 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+     * @param string $AlarmNotifyType <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EventID 事件ID
-     * @param string $EventDisplayName 事件展示名称（对外）
-     * @param string $RuleID 规则ID
-     * @param string $MetricName 指标名
+     * @param string $EventID <p>事件ID</p>
+     * @param string $EventDisplayName <p>事件展示名称（对外）</p>
+     * @param string $RuleID <p>规则ID</p>
+     * @param string $MetricName <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

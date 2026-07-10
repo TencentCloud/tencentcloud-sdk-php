@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>标签列表</p>
  * @method string getPublicStreamAccessEndpoint() 获取<p>公有数据流Stream接入点</p>
  * @method void setPublicStreamAccessEndpoint(string $PublicStreamAccessEndpoint) 设置<p>公有数据流Stream接入点</p>
+ * @method string getClusterType() 获取<p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+ * @method void setClusterType(string $ClusterType) 设置<p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+ * @method string getCdcClusterId() 获取<p>CDC 集群 ID</p>
+ * @method void setCdcClusterId(string $CdcClusterId) 设置<p>CDC 集群 ID</p>
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -198,6 +202,16 @@ class RabbitMQVipInstance extends AbstractModel
     public $PublicStreamAccessEndpoint;
 
     /**
+     * @var string <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     */
+    public $ClusterType;
+
+    /**
+     * @var string <p>CDC 集群 ID</p>
+     */
+    public $CdcClusterId;
+
+    /**
      * @param string $InstanceId <p>实例 ID</p>
      * @param string $InstanceName <p>实例名称</p>
      * @param string $InstanceVersion <p>实例版本</p>
@@ -224,6 +238,8 @@ class RabbitMQVipInstance extends AbstractModel
      * @param boolean $EnableDeletionProtection <p>是否已开启删除保护</p>
      * @param array $Tags <p>标签列表</p>
      * @param string $PublicStreamAccessEndpoint <p>公有数据流Stream接入点</p>
+     * @param string $ClusterType <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     * @param string $CdcClusterId <p>CDC 集群 ID</p>
      */
     function __construct()
     {
@@ -342,6 +358,14 @@ class RabbitMQVipInstance extends AbstractModel
 
         if (array_key_exists("PublicStreamAccessEndpoint",$param) and $param["PublicStreamAccessEndpoint"] !== null) {
             $this->PublicStreamAccessEndpoint = $param["PublicStreamAccessEndpoint"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("CdcClusterId",$param) and $param["CdcClusterId"] !== null) {
+            $this->CdcClusterId = $param["CdcClusterId"];
         }
     }
 }

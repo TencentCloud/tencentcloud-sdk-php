@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudModeration请求参数结构体
  *
- * @method integer getSdkAppId() 获取TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
- * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
- * @method string getRoomId() 获取TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，为TRTC房间所对应的RoomId。
- * @method void setRoomId(string $RoomId) 设置TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，为TRTC房间所对应的RoomId。
- * @method string getUserId() 获取机器人的UserId，用于进房发起审核任务。【*注意】这个UserId不能与当前房间内的主播观众UserId重复。如果一个房间发起多个切片任务时，机器人的userid也不能相互重复，否则会中断前一个切片任务。建议可以把房间ID作为UserId的标识的一部分，即机器人UserId在房间内唯一。
- * @method void setUserId(string $UserId) 设置机器人的UserId，用于进房发起审核任务。【*注意】这个UserId不能与当前房间内的主播观众UserId重复。如果一个房间发起多个切片任务时，机器人的userid也不能相互重复，否则会中断前一个切片任务。建议可以把房间ID作为UserId的标识的一部分，即机器人UserId在房间内唯一。
- * @method ModerationParams getModerationParams() 获取云端审核控制参数。
- * @method void setModerationParams(ModerationParams $ModerationParams) 设置云端审核控制参数。
- * @method string getUserSig() 获取机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
- * @method void setUserSig(string $UserSig) 设置机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
- * @method ModerationStorageParams getModerationStorageParams() 获取云端审核文件上传到云存储的参数。
- * @method void setModerationStorageParams(ModerationStorageParams $ModerationStorageParams) 设置云端审核文件上传到云存储的参数。
- * @method integer getRoomIdType() 获取TRTC房间号的类型。 【*注意】必须和录制的房间所对应的RoomId类型相同: 0: 字符串类型的RoomId 1: 32位整型的RoomId（默认） 示例值：1
- * @method void setRoomIdType(integer $RoomIdType) 设置TRTC房间号的类型。 【*注意】必须和录制的房间所对应的RoomId类型相同: 0: 字符串类型的RoomId 1: 32位整型的RoomId（默认） 示例值：1
- * @method integer getResourceExpiredHour() 获取任务ID可以调用的时效性，从成功开启任务并获得TaskID后开始计算，超时后无法调用查询、更新和停止等接口，但是切片任务不会停止。 参数的单位是小时，默认24小时（1天），最大可设置72小时（3天），最小设置6小时。举例说明：如果不设置该参数，那么开始切片成功后，查询、更新和停止切片的调用时效为24个小时。
- * @method void setResourceExpiredHour(integer $ResourceExpiredHour) 设置任务ID可以调用的时效性，从成功开启任务并获得TaskID后开始计算，超时后无法调用查询、更新和停止等接口，但是切片任务不会停止。 参数的单位是小时，默认24小时（1天），最大可设置72小时（3天），最小设置6小时。举例说明：如果不设置该参数，那么开始切片成功后，查询、更新和停止切片的调用时效为24个小时。
+ * @method integer getSdkAppId() 获取<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和TRTC的房间所对应的SdkAppId相同。</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和TRTC的房间所对应的SdkAppId相同。</p>
+ * @method string getRoomId() 获取<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#roomid">RoomId</a>，为TRTC房间所对应的RoomId。</p>
+ * @method void setRoomId(string $RoomId) 设置<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#roomid">RoomId</a>，为TRTC房间所对应的RoomId。</p>
+ * @method string getUserId() 获取<p>机器人的UserId，用于进房发起AI 内容理解任务。【*注意】这个UserId不能与当前房间内的主播观众UserId重复。如果一个房间发起多个切片任务时，机器人的userid也不能相互重复，否则会中断前一个切片任务。建议可以把房间ID作为UserId的标识的一部分，即机器人UserId在房间内唯一。</p>
+ * @method void setUserId(string $UserId) 设置<p>机器人的UserId，用于进房发起AI 内容理解任务。【*注意】这个UserId不能与当前房间内的主播观众UserId重复。如果一个房间发起多个切片任务时，机器人的userid也不能相互重复，否则会中断前一个切片任务。建议可以把房间ID作为UserId的标识的一部分，即机器人UserId在房间内唯一。</p>
+ * @method ModerationParams getModerationParams() 获取<p>AI 内容理解控制参数。</p>
+ * @method void setModerationParams(ModerationParams $ModerationParams) 设置<p>AI 内容理解控制参数。</p>
+ * @method string getUserSig() 获取<p>机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。</p>
+ * @method void setUserSig(string $UserSig) 设置<p>机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。</p>
+ * @method ModerationStorageParams getModerationStorageParams() 获取<p>AI 内容理解文件上传到云存储的参数。</p>
+ * @method void setModerationStorageParams(ModerationStorageParams $ModerationStorageParams) 设置<p>AI 内容理解文件上传到云存储的参数。</p>
+ * @method integer getRoomIdType() 获取<p>TRTC房间号的类型。 【*注意】必须和录制的房间所对应的RoomId类型相同: 0: 字符串类型的RoomId 1: 32位整型的RoomId（默认） 示例值：1</p>
+ * @method void setRoomIdType(integer $RoomIdType) 设置<p>TRTC房间号的类型。 【*注意】必须和录制的房间所对应的RoomId类型相同: 0: 字符串类型的RoomId 1: 32位整型的RoomId（默认） 示例值：1</p>
+ * @method integer getResourceExpiredHour() 获取<p>任务ID可以调用的时效性，从成功开启任务并获得TaskID后开始计算，超时后无法调用查询、更新和停止等接口，但是切片任务不会停止。 参数的单位是小时，默认24小时（1天），最大可设置72小时（3天），最小设置6小时。举例说明：如果不设置该参数，那么开始切片成功后，查询、更新和停止切片的调用时效为24个小时。</p>
+ * @method void setResourceExpiredHour(integer $ResourceExpiredHour) 设置<p>任务ID可以调用的时效性，从成功开启任务并获得TaskID后开始计算，超时后无法调用查询、更新和停止等接口，但是切片任务不会停止。 参数的单位是小时，默认24小时（1天），最大可设置72小时（3天），最小设置6小时。举例说明：如果不设置该参数，那么开始切片成功后，查询、更新和停止切片的调用时效为24个小时。</p>
  */
 class CreateCloudModerationRequest extends AbstractModel
 {
     /**
-     * @var integer TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
+     * @var integer <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和TRTC的房间所对应的SdkAppId相同。</p>
      */
     public $SdkAppId;
 
     /**
-     * @var string TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，为TRTC房间所对应的RoomId。
+     * @var string <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#roomid">RoomId</a>，为TRTC房间所对应的RoomId。</p>
      */
     public $RoomId;
 
     /**
-     * @var string 机器人的UserId，用于进房发起审核任务。【*注意】这个UserId不能与当前房间内的主播观众UserId重复。如果一个房间发起多个切片任务时，机器人的userid也不能相互重复，否则会中断前一个切片任务。建议可以把房间ID作为UserId的标识的一部分，即机器人UserId在房间内唯一。
+     * @var string <p>机器人的UserId，用于进房发起AI 内容理解任务。【*注意】这个UserId不能与当前房间内的主播观众UserId重复。如果一个房间发起多个切片任务时，机器人的userid也不能相互重复，否则会中断前一个切片任务。建议可以把房间ID作为UserId的标识的一部分，即机器人UserId在房间内唯一。</p>
      */
     public $UserId;
 
     /**
-     * @var ModerationParams 云端审核控制参数。
+     * @var ModerationParams <p>AI 内容理解控制参数。</p>
      */
     public $ModerationParams;
 
     /**
-     * @var string 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
+     * @var string <p>机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。</p>
      */
     public $UserSig;
 
     /**
-     * @var ModerationStorageParams 云端审核文件上传到云存储的参数。
+     * @var ModerationStorageParams <p>AI 内容理解文件上传到云存储的参数。</p>
      */
     public $ModerationStorageParams;
 
     /**
-     * @var integer TRTC房间号的类型。 【*注意】必须和录制的房间所对应的RoomId类型相同: 0: 字符串类型的RoomId 1: 32位整型的RoomId（默认） 示例值：1
+     * @var integer <p>TRTC房间号的类型。 【*注意】必须和录制的房间所对应的RoomId类型相同: 0: 字符串类型的RoomId 1: 32位整型的RoomId（默认） 示例值：1</p>
      */
     public $RoomIdType;
 
     /**
-     * @var integer 任务ID可以调用的时效性，从成功开启任务并获得TaskID后开始计算，超时后无法调用查询、更新和停止等接口，但是切片任务不会停止。 参数的单位是小时，默认24小时（1天），最大可设置72小时（3天），最小设置6小时。举例说明：如果不设置该参数，那么开始切片成功后，查询、更新和停止切片的调用时效为24个小时。
+     * @var integer <p>任务ID可以调用的时效性，从成功开启任务并获得TaskID后开始计算，超时后无法调用查询、更新和停止等接口，但是切片任务不会停止。 参数的单位是小时，默认24小时（1天），最大可设置72小时（3天），最小设置6小时。举例说明：如果不设置该参数，那么开始切片成功后，查询、更新和停止切片的调用时效为24个小时。</p>
      */
     public $ResourceExpiredHour;
 
     /**
-     * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
-     * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，为TRTC房间所对应的RoomId。
-     * @param string $UserId 机器人的UserId，用于进房发起审核任务。【*注意】这个UserId不能与当前房间内的主播观众UserId重复。如果一个房间发起多个切片任务时，机器人的userid也不能相互重复，否则会中断前一个切片任务。建议可以把房间ID作为UserId的标识的一部分，即机器人UserId在房间内唯一。
-     * @param ModerationParams $ModerationParams 云端审核控制参数。
-     * @param string $UserSig 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
-     * @param ModerationStorageParams $ModerationStorageParams 云端审核文件上传到云存储的参数。
-     * @param integer $RoomIdType TRTC房间号的类型。 【*注意】必须和录制的房间所对应的RoomId类型相同: 0: 字符串类型的RoomId 1: 32位整型的RoomId（默认） 示例值：1
-     * @param integer $ResourceExpiredHour 任务ID可以调用的时效性，从成功开启任务并获得TaskID后开始计算，超时后无法调用查询、更新和停止等接口，但是切片任务不会停止。 参数的单位是小时，默认24小时（1天），最大可设置72小时（3天），最小设置6小时。举例说明：如果不设置该参数，那么开始切片成功后，查询、更新和停止切片的调用时效为24个小时。
+     * @param integer $SdkAppId <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和TRTC的房间所对应的SdkAppId相同。</p>
+     * @param string $RoomId <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#roomid">RoomId</a>，为TRTC房间所对应的RoomId。</p>
+     * @param string $UserId <p>机器人的UserId，用于进房发起AI 内容理解任务。【*注意】这个UserId不能与当前房间内的主播观众UserId重复。如果一个房间发起多个切片任务时，机器人的userid也不能相互重复，否则会中断前一个切片任务。建议可以把房间ID作为UserId的标识的一部分，即机器人UserId在房间内唯一。</p>
+     * @param ModerationParams $ModerationParams <p>AI 内容理解控制参数。</p>
+     * @param string $UserSig <p>机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。</p>
+     * @param ModerationStorageParams $ModerationStorageParams <p>AI 内容理解文件上传到云存储的参数。</p>
+     * @param integer $RoomIdType <p>TRTC房间号的类型。 【*注意】必须和录制的房间所对应的RoomId类型相同: 0: 字符串类型的RoomId 1: 32位整型的RoomId（默认） 示例值：1</p>
+     * @param integer $ResourceExpiredHour <p>任务ID可以调用的时效性，从成功开启任务并获得TaskID后开始计算，超时后无法调用查询、更新和停止等接口，但是切片任务不会停止。 参数的单位是小时，默认24小时（1天），最大可设置72小时（3天），最小设置6小时。举例说明：如果不设置该参数，那么开始切片成功后，查询、更新和停止切片的调用时效为24个小时。</p>
      */
     function __construct()
     {

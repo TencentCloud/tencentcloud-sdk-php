@@ -20,86 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTargetGroupAttributes请求参数结构体
  *
- * @method boolean getDryRun() 获取是否预览此次请求。
-- **false**（默认）：发送普通请求，直接修改目标组。
-- **true**：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。
- * @method void setDryRun(boolean $DryRun) 设置是否预览此次请求。
-- **false**（默认）：发送普通请求，直接修改目标组。
-- **true**：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。
- * @method HealthCheckConfig getHealthCheckConfig() 获取健康检查配置。
-
- * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置健康检查配置。
-
- * @method boolean getKeepaliveEnabled() 获取是否开启长连接。
- * @method void setKeepaliveEnabled(boolean $KeepaliveEnabled) 设置是否开启长连接。
- * @method string getSchedulerAlgorithm() 获取调度算法。取值：
-- **wrr**：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
- * @method void setSchedulerAlgorithm(string $SchedulerAlgorithm) 设置调度算法。取值：
-- **wrr**：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
- * @method StickySessionConfig getStickySessionConfig() 获取会话保持配置。
- * @method void setStickySessionConfig(StickySessionConfig $StickySessionConfig) 设置会话保持配置。
- * @method string getTargetGroupId() 获取目标组 ID，格式为 lbtg- 后接 8 位字母数字。
- * @method void setTargetGroupId(string $TargetGroupId) 设置目标组 ID，格式为 lbtg- 后接 8 位字母数字。
- * @method string getTargetGroupName() 获取目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。
- * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。
+ * @method boolean getDryRun() 获取<p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接修改目标组。</li><li><strong>true</strong>：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。</li></ul>
+ * @method void setDryRun(boolean $DryRun) 设置<p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接修改目标组。</li><li><strong>true</strong>：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。</li></ul>
+ * @method HealthCheckConfig getHealthCheckConfig() 获取<p>健康检查配置。</p>
+ * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置<p>健康检查配置。</p>
+ * @method boolean getKeepaliveEnabled() 获取<p>是否开启长连接。</p>
+ * @method void setKeepaliveEnabled(boolean $KeepaliveEnabled) 设置<p>是否开启长连接。</p>
+ * @method string getSchedulerAlgorithm() 获取<p>调度算法。取值：</p><ul><li><strong>wrr</strong>：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
+ * @method void setSchedulerAlgorithm(string $SchedulerAlgorithm) 设置<p>调度算法。取值：</p><ul><li><strong>wrr</strong>：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
+ * @method StickySessionConfig getStickySessionConfig() 获取<p>会话保持配置。</p>
+ * @method void setStickySessionConfig(StickySessionConfig $StickySessionConfig) 设置<p>会话保持配置。</p>
+ * @method string getTargetGroupId() 获取<p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
+ * @method void setTargetGroupId(string $TargetGroupId) 设置<p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
+ * @method string getTargetGroupName() 获取<p>目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。</p>
+ * @method void setTargetGroupName(string $TargetGroupName) 设置<p>目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。</p>
  */
 class ModifyTargetGroupAttributesRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否预览此次请求。
-- **false**（默认）：发送普通请求，直接修改目标组。
-- **true**：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。
+     * @var boolean <p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接修改目标组。</li><li><strong>true</strong>：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。</li></ul>
      */
     public $DryRun;
 
     /**
-     * @var HealthCheckConfig 健康检查配置。
-
+     * @var HealthCheckConfig <p>健康检查配置。</p>
      */
     public $HealthCheckConfig;
 
     /**
-     * @var boolean 是否开启长连接。
+     * @var boolean <p>是否开启长连接。</p>
      */
     public $KeepaliveEnabled;
 
     /**
-     * @var string 调度算法。取值：
-- **wrr**：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
+     * @var string <p>调度算法。取值：</p><ul><li><strong>wrr</strong>：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
      */
     public $SchedulerAlgorithm;
 
     /**
-     * @var StickySessionConfig 会话保持配置。
+     * @var StickySessionConfig <p>会话保持配置。</p>
      */
     public $StickySessionConfig;
 
     /**
-     * @var string 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
+     * @var string <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
      */
     public $TargetGroupId;
 
     /**
-     * @var string 目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。
+     * @var string <p>目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。</p>
      */
     public $TargetGroupName;
 
     /**
-     * @param boolean $DryRun 是否预览此次请求。
-- **false**（默认）：发送普通请求，直接修改目标组。
-- **true**：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。
-     * @param HealthCheckConfig $HealthCheckConfig 健康检查配置。
-
-     * @param boolean $KeepaliveEnabled 是否开启长连接。
-     * @param string $SchedulerAlgorithm 调度算法。取值：
-- **wrr**：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
-     * @param StickySessionConfig $StickySessionConfig 会话保持配置。
-     * @param string $TargetGroupId 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
-     * @param string $TargetGroupName 目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。
+     * @param boolean $DryRun <p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接修改目标组。</li><li><strong>true</strong>：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。</li></ul>
+     * @param HealthCheckConfig $HealthCheckConfig <p>健康检查配置。</p>
+     * @param boolean $KeepaliveEnabled <p>是否开启长连接。</p>
+     * @param string $SchedulerAlgorithm <p>调度算法。取值：</p><ul><li><strong>wrr</strong>：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
+     * @param StickySessionConfig $StickySessionConfig <p>会话保持配置。</p>
+     * @param string $TargetGroupId <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
+     * @param string $TargetGroupName <p>目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。</p>
      */
     function __construct()
     {

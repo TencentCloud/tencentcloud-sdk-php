@@ -20,149 +20,149 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 指标，可用于设置告警、查询数据
  *
- * @method string getNamespace() 获取告警策略类型
- * @method void setNamespace(string $Namespace) 设置告警策略类型
- * @method string getMetricName() 获取指标名
- * @method void setMetricName(string $MetricName) 设置指标名
- * @method string getDescription() 获取指标展示名
- * @method void setDescription(string $Description) 设置指标展示名
- * @method float getMin() 获取最小值
- * @method void setMin(float $Min) 设置最小值
- * @method float getMax() 获取最大值
- * @method void setMax(float $Max) 设置最大值
- * @method array getDimensions() 获取维度列表
- * @method void setDimensions(array $Dimensions) 设置维度列表
- * @method string getUnit() 获取单位
- * @method void setUnit(string $Unit) 设置单位
- * @method MetricConfig getMetricConfig() 获取指标配置
+ * @method string getNamespace() 获取<p>告警策略类型</p>
+ * @method void setNamespace(string $Namespace) 设置<p>告警策略类型</p>
+ * @method string getMetricName() 获取<p>指标名</p>
+ * @method void setMetricName(string $MetricName) 设置<p>指标名</p>
+ * @method string getDescription() 获取<p>指标展示名</p>
+ * @method void setDescription(string $Description) 设置<p>指标展示名</p>
+ * @method float getMin() 获取<p>最小值</p>
+ * @method void setMin(float $Min) 设置<p>最小值</p>
+ * @method float getMax() 获取<p>最大值</p>
+ * @method void setMax(float $Max) 设置<p>最大值</p>
+ * @method array getDimensions() 获取<p>维度列表</p>
+ * @method void setDimensions(array $Dimensions) 设置<p>维度列表</p>
+ * @method string getUnit() 获取<p>单位</p>
+ * @method void setUnit(string $Unit) 设置<p>单位</p>
+ * @method MetricConfig getMetricConfig() 获取<p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetricConfig(MetricConfig $MetricConfig) 设置指标配置
+ * @method void setMetricConfig(MetricConfig $MetricConfig) 设置<p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsAdvanced() 获取是否为高级指标。1是 0否
+ * @method integer getIsAdvanced() 获取<p>是否为高级指标。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsAdvanced(integer $IsAdvanced) 设置是否为高级指标。1是 0否
+ * @method void setIsAdvanced(integer $IsAdvanced) 设置<p>是否为高级指标。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsOpen() 获取高级指标是否开通。1是 0否
+ * @method integer getIsOpen() 获取<p>高级指标是否开通。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsOpen(integer $IsOpen) 设置高级指标是否开通。1是 0否
+ * @method void setIsOpen(integer $IsOpen) 设置<p>高级指标是否开通。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProductId() 获取集成中心产品ID
+ * @method integer getProductId() 获取<p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductId(integer $ProductId) 设置集成中心产品ID
+ * @method void setProductId(integer $ProductId) 设置<p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOperators() 获取匹配运算符
+ * @method array getOperators() 获取<p>匹配运算符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperators(array $Operators) 设置匹配运算符
+ * @method void setOperators(array $Operators) 设置<p>匹配运算符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPeriods() 获取指标触发
+ * @method array getPeriods() 获取<p>指标触发</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeriods(array $Periods) 设置指标触发
+ * @method void setPeriods(array $Periods) 设置<p>指标触发</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsLatenessMetric() 获取是否延迟指标
+ * @method integer getIsLatenessMetric() 获取<p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsLatenessMetric(integer $IsLatenessMetric) 设置是否延迟指标
+ * @method void setIsLatenessMetric(integer $IsLatenessMetric) 设置<p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Metric extends AbstractModel
 {
     /**
-     * @var string 告警策略类型
+     * @var string <p>告警策略类型</p>
      */
     public $Namespace;
 
     /**
-     * @var string 指标名
+     * @var string <p>指标名</p>
      */
     public $MetricName;
 
     /**
-     * @var string 指标展示名
+     * @var string <p>指标展示名</p>
      */
     public $Description;
 
     /**
-     * @var float 最小值
+     * @var float <p>最小值</p>
      */
     public $Min;
 
     /**
-     * @var float 最大值
+     * @var float <p>最大值</p>
      */
     public $Max;
 
     /**
-     * @var array 维度列表
+     * @var array <p>维度列表</p>
      */
     public $Dimensions;
 
     /**
-     * @var string 单位
+     * @var string <p>单位</p>
      */
     public $Unit;
 
     /**
-     * @var MetricConfig 指标配置
+     * @var MetricConfig <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricConfig;
 
     /**
-     * @var integer 是否为高级指标。1是 0否
+     * @var integer <p>是否为高级指标。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAdvanced;
 
     /**
-     * @var integer 高级指标是否开通。1是 0否
+     * @var integer <p>高级指标是否开通。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsOpen;
 
     /**
-     * @var integer 集成中心产品ID
+     * @var integer <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
 
     /**
-     * @var array 匹配运算符
+     * @var array <p>匹配运算符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operators;
 
     /**
-     * @var array 指标触发
+     * @var array <p>指标触发</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Periods;
 
     /**
-     * @var integer 是否延迟指标
+     * @var integer <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsLatenessMetric;
 
     /**
-     * @param string $Namespace 告警策略类型
-     * @param string $MetricName 指标名
-     * @param string $Description 指标展示名
-     * @param float $Min 最小值
-     * @param float $Max 最大值
-     * @param array $Dimensions 维度列表
-     * @param string $Unit 单位
-     * @param MetricConfig $MetricConfig 指标配置
+     * @param string $Namespace <p>告警策略类型</p>
+     * @param string $MetricName <p>指标名</p>
+     * @param string $Description <p>指标展示名</p>
+     * @param float $Min <p>最小值</p>
+     * @param float $Max <p>最大值</p>
+     * @param array $Dimensions <p>维度列表</p>
+     * @param string $Unit <p>单位</p>
+     * @param MetricConfig $MetricConfig <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsAdvanced 是否为高级指标。1是 0否
+     * @param integer $IsAdvanced <p>是否为高级指标。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsOpen 高级指标是否开通。1是 0否
+     * @param integer $IsOpen <p>高级指标是否开通。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProductId 集成中心产品ID
+     * @param integer $ProductId <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Operators 匹配运算符
+     * @param array $Operators <p>匹配运算符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Periods 指标触发
+     * @param array $Periods <p>指标触发</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsLatenessMetric 是否延迟指标
+     * @param integer $IsLatenessMetric <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

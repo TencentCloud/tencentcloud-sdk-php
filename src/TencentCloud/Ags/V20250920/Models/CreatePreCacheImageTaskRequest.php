@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePreCacheImageTask请求参数结构体
  *
- * @method string getImage() 获取镜像地址
- * @method void setImage(string $Image) 设置镜像地址
- * @method string getImageRegistryType() 获取镜像仓库类型：`enterprise`、`personal`。
- * @method void setImageRegistryType(string $ImageRegistryType) 设置镜像仓库类型：`enterprise`、`personal`。
+ * @method string getImage() 获取<p>镜像地址</p>
+ * @method void setImage(string $Image) 设置<p>镜像地址</p>
+ * @method string getImageRegistryType() 获取<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+ * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+ * @method integer getTimeoutMinutes() 获取<p>预热超时时长</p>
+ * @method void setTimeoutMinutes(integer $TimeoutMinutes) 设置<p>预热超时时长</p>
  */
 class CreatePreCacheImageTaskRequest extends AbstractModel
 {
     /**
-     * @var string 镜像地址
+     * @var string <p>镜像地址</p>
      */
     public $Image;
 
     /**
-     * @var string 镜像仓库类型：`enterprise`、`personal`。
+     * @var string <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      */
     public $ImageRegistryType;
 
     /**
-     * @param string $Image 镜像地址
-     * @param string $ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * @var integer <p>预热超时时长</p>
+     */
+    public $TimeoutMinutes;
+
+    /**
+     * @param string $Image <p>镜像地址</p>
+     * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+     * @param integer $TimeoutMinutes <p>预热超时时长</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreatePreCacheImageTaskRequest extends AbstractModel
 
         if (array_key_exists("ImageRegistryType",$param) and $param["ImageRegistryType"] !== null) {
             $this->ImageRegistryType = $param["ImageRegistryType"];
+        }
+
+        if (array_key_exists("TimeoutMinutes",$param) and $param["TimeoutMinutes"] !== null) {
+            $this->TimeoutMinutes = $param["TimeoutMinutes"];
         }
     }
 }

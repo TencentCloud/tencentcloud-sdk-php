@@ -20,269 +20,269 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBasicAlarmList返回的Alarms
  *
- * @method integer getId() 获取该条告警的ID
- * @method void setId(integer $Id) 设置该条告警的ID
- * @method integer getProjectId() 获取项目ID
+ * @method integer getId() 获取<p>该条告警的ID</p>
+ * @method void setId(integer $Id) 设置<p>该条告警的ID</p>
+ * @method integer getProjectId() 获取<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(integer $ProjectId) 设置项目ID
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectName() 获取项目名称
+ * @method string getProjectName() 获取<p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectName(string $ProjectName) 设置项目名称
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
+ * @method integer getStatus() 获取<p>告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
+ * @method void setStatus(integer $Status) 设置<p>告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlarmStatus() 获取告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
+ * @method string getAlarmStatus() 获取<p>告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmStatus(string $AlarmStatus) 设置告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
+ * @method void setAlarmStatus(string $AlarmStatus) 设置<p>告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGroupId() 获取策略组ID
+ * @method integer getGroupId() 获取<p>策略组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupId(integer $GroupId) 设置策略组ID
+ * @method void setGroupId(integer $GroupId) 设置<p>策略组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGroupName() 获取策略组名
+ * @method string getGroupName() 获取<p>策略组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupName(string $GroupName) 设置策略组名
+ * @method void setGroupName(string $GroupName) 设置<p>策略组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFirstOccurTime() 获取发生时间
+ * @method string getFirstOccurTime() 获取<p>发生时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFirstOccurTime(string $FirstOccurTime) 设置发生时间
+ * @method void setFirstOccurTime(string $FirstOccurTime) 设置<p>发生时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDuration() 获取持续时间，单位s
+ * @method integer getDuration() 获取<p>持续时间，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDuration(integer $Duration) 设置持续时间，单位s
+ * @method void setDuration(integer $Duration) 设置<p>持续时间，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastOccurTime() 获取结束时间
+ * @method string getLastOccurTime() 获取<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastOccurTime(string $LastOccurTime) 设置结束时间
+ * @method void setLastOccurTime(string $LastOccurTime) 设置<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContent() 获取告警内容
+ * @method string getContent() 获取<p>告警内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContent(string $Content) 设置告警内容
+ * @method void setContent(string $Content) 设置<p>告警内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getObjName() 获取告警对象
+ * @method string getObjName() 获取<p>告警对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setObjName(string $ObjName) 设置告警对象
+ * @method void setObjName(string $ObjName) 设置<p>告警对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getObjId() 获取告警对象ID
+ * @method string getObjId() 获取<p>告警对象ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setObjId(string $ObjId) 设置告警对象ID
+ * @method void setObjId(string $ObjId) 设置<p>告警对象ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getViewName() 获取策略类型
+ * @method string getViewName() 获取<p>策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setViewName(string $ViewName) 设置策略类型
+ * @method void setViewName(string $ViewName) 设置<p>策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpc() 获取VPC，只有CVM有
+ * @method string getVpc() 获取<p>VPC，只有CVM有</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpc(string $Vpc) 设置VPC，只有CVM有
+ * @method void setVpc(string $Vpc) 设置<p>VPC，只有CVM有</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMetricId() 获取指标ID
+ * @method integer getMetricId() 获取<p>指标ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetricId(integer $MetricId) 设置指标ID
+ * @method void setMetricId(integer $MetricId) 设置<p>指标ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMetricName() 获取指标名
+ * @method string getMetricName() 获取<p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetricName(string $MetricName) 设置指标名
+ * @method void setMetricName(string $MetricName) 设置<p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAlarmType() 获取告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
+ * @method integer getAlarmType() 获取<p>告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmType(integer $AlarmType) 设置告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
+ * @method void setAlarmType(integer $AlarmType) 设置<p>告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取地域
+ * @method string getRegion() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
+ * @method void setRegion(string $Region) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDimensions() 获取告警对象维度信息
+ * @method string getDimensions() 获取<p>告警对象维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDimensions(string $Dimensions) 设置告警对象维度信息
+ * @method void setDimensions(string $Dimensions) 设置<p>告警对象维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNotifyWay() 获取通知方式
+ * @method array getNotifyWay() 获取<p>通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNotifyWay(array $NotifyWay) 设置通知方式
+ * @method void setNotifyWay(array $NotifyWay) 设置<p>通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInstanceGroup() 获取所属实例组信息
+ * @method array getInstanceGroup() 获取<p>所属实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceGroup(array $InstanceGroup) 设置所属实例组信息
+ * @method void setInstanceGroup(array $InstanceGroup) 设置<p>所属实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeBasicAlarmListAlarms extends AbstractModel
 {
     /**
-     * @var integer 该条告警的ID
+     * @var integer <p>该条告警的ID</p>
      */
     public $Id;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 项目名称
+     * @var string <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
-     * @var integer 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
+     * @var integer <p>告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
+     * @var string <p>告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmStatus;
 
     /**
-     * @var integer 策略组ID
+     * @var integer <p>策略组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
-     * @var string 策略组名
+     * @var string <p>策略组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
-     * @var string 发生时间
+     * @var string <p>发生时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstOccurTime;
 
     /**
-     * @var integer 持续时间，单位s
+     * @var integer <p>持续时间，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastOccurTime;
 
     /**
-     * @var string 告警内容
+     * @var string <p>告警内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
-     * @var string 告警对象
+     * @var string <p>告警对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjName;
 
     /**
-     * @var string 告警对象ID
+     * @var string <p>告警对象ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjId;
 
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ViewName;
 
     /**
-     * @var string VPC，只有CVM有
+     * @var string <p>VPC，只有CVM有</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vpc;
 
     /**
-     * @var integer 指标ID
+     * @var integer <p>指标ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricId;
 
     /**
-     * @var string 指标名
+     * @var string <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricName;
 
     /**
-     * @var integer 告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
+     * @var integer <p>告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmType;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var string 告警对象维度信息
+     * @var string <p>告警对象维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Dimensions;
 
     /**
-     * @var array 通知方式
+     * @var array <p>通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotifyWay;
 
     /**
-     * @var array 所属实例组信息
+     * @var array <p>所属实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceGroup;
 
     /**
-     * @param integer $Id 该条告警的ID
-     * @param integer $ProjectId 项目ID
+     * @param integer $Id <p>该条告警的ID</p>
+     * @param integer $ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectName 项目名称
+     * @param string $ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
+     * @param integer $Status <p>告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AlarmStatus 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
+     * @param string $AlarmStatus <p>告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $GroupId 策略组ID
+     * @param integer $GroupId <p>策略组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GroupName 策略组名
+     * @param string $GroupName <p>策略组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FirstOccurTime 发生时间
+     * @param string $FirstOccurTime <p>发生时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Duration 持续时间，单位s
+     * @param integer $Duration <p>持续时间，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastOccurTime 结束时间
+     * @param string $LastOccurTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Content 告警内容
+     * @param string $Content <p>告警内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ObjName 告警对象
+     * @param string $ObjName <p>告警对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ObjId 告警对象ID
+     * @param string $ObjId <p>告警对象ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ViewName 策略类型
+     * @param string $ViewName <p>策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Vpc VPC，只有CVM有
+     * @param string $Vpc <p>VPC，只有CVM有</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MetricId 指标ID
+     * @param integer $MetricId <p>指标ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MetricName 指标名
+     * @param string $MetricName <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AlarmType 告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
+     * @param integer $AlarmType <p>告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 地域
+     * @param string $Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Dimensions 告警对象维度信息
+     * @param string $Dimensions <p>告警对象维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NotifyWay 通知方式
+     * @param array $NotifyWay <p>通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InstanceGroup 所属实例组信息
+     * @param array $InstanceGroup <p>所属实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

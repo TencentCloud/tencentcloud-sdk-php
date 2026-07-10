@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHasServicesLog(integer $HasServicesLog) 设置<p>是否开启投递服务日志。1关闭，2开启。默认开启</p>
  * @method integer getStatus() 获取<p>任务状态。</p><p>枚举值：</p><ul><li>1： 运行</li><li>2： 停止</li></ul>
  * @method void setStatus(integer $Status) 设置<p>任务状态。</p><p>枚举值：</p><ul><li>1： 运行</li><li>2： 停止</li></ul>
+ * @method boolean getAutoCreateField() 获取<p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+ * @method void setAutoCreateField(boolean $AutoCreateField) 设置<p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+ * @method DlcFailHandle getDlcFailHandle() 获取<p>将投递失败的日志存储至DLC表</p>
+ * @method void setDlcFailHandle(DlcFailHandle $DlcFailHandle) 设置<p>将投递失败的日志存储至DLC表</p>
+ * @method string getDSLFilter() 获取<p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+ * @method void setDSLFilter(string $DSLFilter) 设置<p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
  */
 class ModifyDlcDeliverRequest extends AbstractModel
 {
@@ -101,6 +107,21 @@ class ModifyDlcDeliverRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var boolean <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+     */
+    public $AutoCreateField;
+
+    /**
+     * @var DlcFailHandle <p>将投递失败的日志存储至DLC表</p>
+     */
+    public $DlcFailHandle;
+
+    /**
+     * @var string <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+     */
+    public $DSLFilter;
+
+    /**
      * @param string $TopicId <p>日志主题id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      * @param string $TaskId <p>任务id。</p>
      * @param string $Name <p>名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。</p>
@@ -112,6 +133,9 @@ class ModifyDlcDeliverRequest extends AbstractModel
      * @param DlcInfo $DlcInfo <p>dlc配置信息</p>
      * @param integer $HasServicesLog <p>是否开启投递服务日志。1关闭，2开启。默认开启</p>
      * @param integer $Status <p>任务状态。</p><p>枚举值：</p><ul><li>1： 运行</li><li>2： 停止</li></ul>
+     * @param boolean $AutoCreateField <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+     * @param DlcFailHandle $DlcFailHandle <p>将投递失败的日志存储至DLC表</p>
+     * @param string $DSLFilter <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
      */
     function __construct()
     {
@@ -169,6 +193,19 @@ class ModifyDlcDeliverRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("AutoCreateField",$param) and $param["AutoCreateField"] !== null) {
+            $this->AutoCreateField = $param["AutoCreateField"];
+        }
+
+        if (array_key_exists("DlcFailHandle",$param) and $param["DlcFailHandle"] !== null) {
+            $this->DlcFailHandle = new DlcFailHandle();
+            $this->DlcFailHandle->deserialize($param["DlcFailHandle"]);
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

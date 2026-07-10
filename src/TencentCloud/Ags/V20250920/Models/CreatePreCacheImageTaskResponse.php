@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePreCacheImageTask返回参数结构体
  *
- * @method string getImage() 获取镜像地址
- * @method void setImage(string $Image) 设置镜像地址
- * @method string getImageDigest() 获取镜像 Digest
- * @method void setImageDigest(string $ImageDigest) 设置镜像 Digest
- * @method string getImageRegistryType() 获取镜像仓库类型：`enterprise`、`personal`。
- * @method void setImageRegistryType(string $ImageRegistryType) 设置镜像仓库类型：`enterprise`、`personal`。
+ * @method string getImage() 获取<p>镜像地址</p>
+ * @method void setImage(string $Image) 设置<p>镜像地址</p>
+ * @method string getImageDigest() 获取<p>镜像 Digest</p>
+ * @method void setImageDigest(string $ImageDigest) 设置<p>镜像 Digest</p>
+ * @method string getImageRegistryType() 获取<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+ * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreatePreCacheImageTaskResponse extends AbstractModel
 {
     /**
-     * @var string 镜像地址
+     * @var string <p>镜像地址</p>
      */
     public $Image;
 
     /**
-     * @var string 镜像 Digest
+     * @var string <p>镜像 Digest</p>
      */
     public $ImageDigest;
 
     /**
-     * @var string 镜像仓库类型：`enterprise`、`personal`。
+     * @var string <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
      */
     public $ImageRegistryType;
 
@@ -52,9 +52,9 @@ class CreatePreCacheImageTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Image 镜像地址
-     * @param string $ImageDigest 镜像 Digest
-     * @param string $ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * @param string $Image <p>镜像地址</p>
+     * @param string $ImageDigest <p>镜像 Digest</p>
+     * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

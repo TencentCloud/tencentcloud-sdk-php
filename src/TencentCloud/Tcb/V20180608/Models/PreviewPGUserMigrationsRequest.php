@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置<p>云开发环境ID</p>
  * @method array getMigrations() 获取<p>预览要执行的migration 列表</p>
  * @method void setMigrations(array $Migrations) 设置<p>预览要执行的migration 列表</p>
- * @method string getSource() 获取<p>标记请求来源</p>
- * @method void setSource(string $Source) 设置<p>标记请求来源</p>
+ * @method string getSource() 获取<p>标记请求来源</p><p>deprecated</p>
+ * @method void setSource(string $Source) 设置<p>标记请求来源</p><p>deprecated</p>
+ * @method boolean getIncludeAll() 获取<p>是否允许 out-of-order local migrations</p><p>默认值：false</p>
+ * @method void setIncludeAll(boolean $IncludeAll) 设置<p>是否允许 out-of-order local migrations</p><p>默认值：false</p>
  */
 class PreviewPGUserMigrationsRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class PreviewPGUserMigrationsRequest extends AbstractModel
     public $Migrations;
 
     /**
-     * @var string <p>标记请求来源</p>
+     * @var string <p>标记请求来源</p><p>deprecated</p>
      */
     public $Source;
 
     /**
+     * @var boolean <p>是否允许 out-of-order local migrations</p><p>默认值：false</p>
+     */
+    public $IncludeAll;
+
+    /**
      * @param string $EnvId <p>云开发环境ID</p>
      * @param array $Migrations <p>预览要执行的migration 列表</p>
-     * @param string $Source <p>标记请求来源</p>
+     * @param string $Source <p>标记请求来源</p><p>deprecated</p>
+     * @param boolean $IncludeAll <p>是否允许 out-of-order local migrations</p><p>默认值：false</p>
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class PreviewPGUserMigrationsRequest extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("IncludeAll",$param) and $param["IncludeAll"] !== null) {
+            $this->IncludeAll = $param["IncludeAll"];
         }
     }
 }

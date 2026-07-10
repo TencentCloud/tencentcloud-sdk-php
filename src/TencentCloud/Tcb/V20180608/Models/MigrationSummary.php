@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) 设置<p>migration 版本号</p><p>参数格式：纯数字，14位时间格式</p>
  * @method string getName() 获取<p>migration 版本名</p><p>参数格式：仅允许小写字母和下划线</p>
  * @method void setName(string $Name) 设置<p>migration 版本名</p><p>参数格式：仅允许小写字母和下划线</p>
- * @method string getChecksum() 获取<p>migration query sql 语句checksum</p><p>服务端自动生成，同版本不同checksum会拒绝执行</p>
- * @method void setChecksum(string $Checksum) 设置<p>migration query sql 语句checksum</p><p>服务端自动生成，同版本不同checksum会拒绝执行</p>
- * @method string getAppliedAt() 获取<p>应用时间</p>
- * @method void setAppliedAt(string $AppliedAt) 设置<p>应用时间</p>
- * @method string getSource() 获取<p>请求来源</p>
- * @method void setSource(string $Source) 设置<p>请求来源</p>
- * @method string getCreatedBy() 获取<p>migration 创建时间</p>
- * @method void setCreatedBy(string $CreatedBy) 设置<p>migration 创建时间</p>
+ * @method string getChecksum() 获取<p>migration query sql 语句checksum，服务端自动生成，同版本不同checksum会拒绝执行</p><p>deprecated</p>
+ * @method void setChecksum(string $Checksum) 设置<p>migration query sql 语句checksum，服务端自动生成，同版本不同checksum会拒绝执行</p><p>deprecated</p>
+ * @method string getAppliedAt() 获取<p>应用时间</p><p>deprecated</p>
+ * @method void setAppliedAt(string $AppliedAt) 设置<p>应用时间</p><p>deprecated</p>
+ * @method string getSource() 获取<p>请求来源</p><p>deprecated</p>
+ * @method void setSource(string $Source) 设置<p>请求来源</p><p>deprecated</p>
+ * @method string getCreatedBy() 获取<p>migration 创建时间</p><p>deprecated</p>
+ * @method void setCreatedBy(string $CreatedBy) 设置<p>migration 创建时间</p><p>deprecated</p>
  */
 class MigrationSummary extends AbstractModel
 {
@@ -46,32 +46,32 @@ class MigrationSummary extends AbstractModel
     public $Name;
 
     /**
-     * @var string <p>migration query sql 语句checksum</p><p>服务端自动生成，同版本不同checksum会拒绝执行</p>
+     * @var string <p>migration query sql 语句checksum，服务端自动生成，同版本不同checksum会拒绝执行</p><p>deprecated</p>
      */
     public $Checksum;
 
     /**
-     * @var string <p>应用时间</p>
+     * @var string <p>应用时间</p><p>deprecated</p>
      */
     public $AppliedAt;
 
     /**
-     * @var string <p>请求来源</p>
+     * @var string <p>请求来源</p><p>deprecated</p>
      */
     public $Source;
 
     /**
-     * @var string <p>migration 创建时间</p>
+     * @var string <p>migration 创建时间</p><p>deprecated</p>
      */
     public $CreatedBy;
 
     /**
      * @param string $Version <p>migration 版本号</p><p>参数格式：纯数字，14位时间格式</p>
      * @param string $Name <p>migration 版本名</p><p>参数格式：仅允许小写字母和下划线</p>
-     * @param string $Checksum <p>migration query sql 语句checksum</p><p>服务端自动生成，同版本不同checksum会拒绝执行</p>
-     * @param string $AppliedAt <p>应用时间</p>
-     * @param string $Source <p>请求来源</p>
-     * @param string $CreatedBy <p>migration 创建时间</p>
+     * @param string $Checksum <p>migration query sql 语句checksum，服务端自动生成，同版本不同checksum会拒绝执行</p><p>deprecated</p>
+     * @param string $AppliedAt <p>应用时间</p><p>deprecated</p>
+     * @param string $Source <p>请求来源</p><p>deprecated</p>
+     * @param string $CreatedBy <p>migration 创建时间</p><p>deprecated</p>
      */
     function __construct()
     {

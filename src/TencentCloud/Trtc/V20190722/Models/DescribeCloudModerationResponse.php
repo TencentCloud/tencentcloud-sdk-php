@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudModeration返回参数结构体
  *
- * @method string getTaskId() 获取切片任务的唯一Id，在启动切片任务成功后会返回。
- * @method void setTaskId(string $TaskId) 设置切片任务的唯一Id，在启动切片任务成功后会返回。
- * @method string getStatus() 获取云端切片任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。
- * @method void setStatus(string $Status) 设置云端切片任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。
- * @method SubscribeModerationUserIds getSubscribeStreamUserIds() 获取订阅黑白名单
- * @method void setSubscribeStreamUserIds(SubscribeModerationUserIds $SubscribeStreamUserIds) 设置订阅黑白名单
+ * @method string getTaskId() 获取<p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+ * @method string getStatus() 获取<p>AI内容理解任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。</p><p>枚举值：</p><ul><li>InProgress： 进行中</li></ul>
+ * @method void setStatus(string $Status) 设置<p>AI内容理解任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。</p><p>枚举值：</p><ul><li>InProgress： 进行中</li></ul>
+ * @method SubscribeModerationUserIds getSubscribeStreamUserIds() 获取<p>订阅黑白名单</p>
+ * @method void setSubscribeStreamUserIds(SubscribeModerationUserIds $SubscribeStreamUserIds) 设置<p>订阅黑白名单</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudModerationResponse extends AbstractModel
 {
     /**
-     * @var string 切片任务的唯一Id，在启动切片任务成功后会返回。
+     * @var string <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     public $TaskId;
 
     /**
-     * @var string 云端切片任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。
+     * @var string <p>AI内容理解任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。</p><p>枚举值：</p><ul><li>InProgress： 进行中</li></ul>
      */
     public $Status;
 
     /**
-     * @var SubscribeModerationUserIds 订阅黑白名单
+     * @var SubscribeModerationUserIds <p>订阅黑白名单</p>
      */
     public $SubscribeStreamUserIds;
 
@@ -52,9 +52,9 @@ class DescribeCloudModerationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 切片任务的唯一Id，在启动切片任务成功后会返回。
-     * @param string $Status 云端切片任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。
-     * @param SubscribeModerationUserIds $SubscribeStreamUserIds 订阅黑白名单
+     * @param string $TaskId <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+     * @param string $Status <p>AI内容理解任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。</p><p>枚举值：</p><ul><li>InProgress： 进行中</li></ul>
+     * @param SubscribeModerationUserIds $SubscribeStreamUserIds <p>订阅黑白名单</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

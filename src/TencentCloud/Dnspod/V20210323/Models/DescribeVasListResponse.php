@@ -20,24 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVasList返回参数结构体
  *
- * @method integer getTotalCount() 获取符合筛选条件的套餐总数
- * @method void setTotalCount(integer $TotalCount) 设置符合筛选条件的套餐总数
- * @method array getVasList() 获取增值服务信息列表
- * @method void setVasList(array $VasList) 设置增值服务信息列表
+ * @method integer getTotalCount() 获取<p>符合筛选条件的套餐总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合筛选条件的套餐总数</p>
+ * @method array getVasList() 获取<p>增值服务信息列表</p>
+ * @method void setVasList(array $VasList) 设置<p>增值服务信息列表</p>
+ * @method array getVASList() 获取<p>增值服务信息列表</p>
+ * @method void setVASList(array $VASList) 设置<p>增值服务信息列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVasListResponse extends AbstractModel
 {
     /**
-     * @var integer 符合筛选条件的套餐总数
+     * @var integer <p>符合筛选条件的套餐总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 增值服务信息列表
+     * @var array <p>增值服务信息列表</p>
+     * @deprecated
      */
     public $VasList;
+
+    /**
+     * @var array <p>增值服务信息列表</p>
+     */
+    public $VASList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +53,9 @@ class DescribeVasListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合筛选条件的套餐总数
-     * @param array $VasList 增值服务信息列表
+     * @param integer $TotalCount <p>符合筛选条件的套餐总数</p>
+     * @param array $VasList <p>增值服务信息列表</p>
+     * @param array $VASList <p>增值服务信息列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +81,15 @@ class DescribeVasListResponse extends AbstractModel
                 $obj = new VasListItem();
                 $obj->deserialize($value);
                 array_push($this->VasList, $obj);
+            }
+        }
+
+        if (array_key_exists("VASList",$param) and $param["VASList"] !== null) {
+            $this->VASList = [];
+            foreach ($param["VASList"] as $key => $value){
+                $obj = new VasListItem();
+                $obj->deserialize($value);
+                array_push($this->VASList, $obj);
             }
         }
 

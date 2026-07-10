@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCloudModeration返回参数结构体
  *
- * @method string getTaskId() 获取审核任务的唯一Id，在启动切片任务成功后会返回。
- * @method void setTaskId(string $TaskId) 设置审核任务的唯一Id，在启动切片任务成功后会返回。
+ * @method string getTaskId() 获取<p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteCloudModerationResponse extends AbstractModel
 {
     /**
-     * @var string 审核任务的唯一Id，在启动切片任务成功后会返回。
+     * @var string <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class DeleteCloudModerationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 审核任务的唯一Id，在启动切片任务成功后会返回。
+     * @param string $TaskId <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

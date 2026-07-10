@@ -20,109 +20,109 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 策略类型的维度信息
  *
- * @method string getKey() 获取维度 key 标示，后台英文名
- * @method void setKey(string $Key) 设置维度 key 标示，后台英文名
- * @method string getName() 获取维度 key 名称，中英文前台展示名
- * @method void setName(string $Name) 设置维度 key 名称，中英文前台展示名
- * @method boolean getIsRequired() 获取是否必选
- * @method void setIsRequired(boolean $IsRequired) 设置是否必选
- * @method array getOperators() 获取支持的操作符列表
- * @method void setOperators(array $Operators) 设置支持的操作符列表
- * @method boolean getIsMultiple() 获取是否支持多选
- * @method void setIsMultiple(boolean $IsMultiple) 设置是否支持多选
- * @method boolean getIsMutable() 获取创建后是否可以修改
- * @method void setIsMutable(boolean $IsMutable) 设置创建后是否可以修改
- * @method boolean getIsVisible() 获取是否展示给用户
- * @method void setIsVisible(boolean $IsVisible) 设置是否展示给用户
- * @method boolean getCanFilterPolicy() 获取能否用来过滤策略列表
- * @method void setCanFilterPolicy(boolean $CanFilterPolicy) 设置能否用来过滤策略列表
- * @method boolean getCanFilterHistory() 获取能否用来过滤告警历史
- * @method void setCanFilterHistory(boolean $CanFilterHistory) 设置能否用来过滤告警历史
- * @method boolean getCanGroupBy() 获取能否作为聚合维度
- * @method void setCanGroupBy(boolean $CanGroupBy) 设置能否作为聚合维度
- * @method boolean getMustGroupBy() 获取是否必须作为聚合维度
- * @method void setMustGroupBy(boolean $MustGroupBy) 设置是否必须作为聚合维度
- * @method string getShowValueReplace() 获取前端翻译要替换的 key
+ * @method string getKey() 获取<p>维度 key 标示，后台英文名</p>
+ * @method void setKey(string $Key) 设置<p>维度 key 标示，后台英文名</p>
+ * @method string getName() 获取<p>维度 key 名称，中英文前台展示名</p>
+ * @method void setName(string $Name) 设置<p>维度 key 名称，中英文前台展示名</p>
+ * @method boolean getIsRequired() 获取<p>是否必选</p>
+ * @method void setIsRequired(boolean $IsRequired) 设置<p>是否必选</p>
+ * @method array getOperators() 获取<p>支持的操作符列表</p>
+ * @method void setOperators(array $Operators) 设置<p>支持的操作符列表</p>
+ * @method boolean getIsMultiple() 获取<p>是否支持多选</p>
+ * @method void setIsMultiple(boolean $IsMultiple) 设置<p>是否支持多选</p>
+ * @method boolean getIsMutable() 获取<p>创建后是否可以修改</p>
+ * @method void setIsMutable(boolean $IsMutable) 设置<p>创建后是否可以修改</p>
+ * @method boolean getIsVisible() 获取<p>是否展示给用户</p>
+ * @method void setIsVisible(boolean $IsVisible) 设置<p>是否展示给用户</p>
+ * @method boolean getCanFilterPolicy() 获取<p>能否用来过滤策略列表</p>
+ * @method void setCanFilterPolicy(boolean $CanFilterPolicy) 设置<p>能否用来过滤策略列表</p>
+ * @method boolean getCanFilterHistory() 获取<p>能否用来过滤告警历史</p>
+ * @method void setCanFilterHistory(boolean $CanFilterHistory) 设置<p>能否用来过滤告警历史</p>
+ * @method boolean getCanGroupBy() 获取<p>能否作为聚合维度</p>
+ * @method void setCanGroupBy(boolean $CanGroupBy) 设置<p>能否作为聚合维度</p>
+ * @method boolean getMustGroupBy() 获取<p>是否必须作为聚合维度</p>
+ * @method void setMustGroupBy(boolean $MustGroupBy) 设置<p>是否必须作为聚合维度</p>
+ * @method string getShowValueReplace() 获取<p>前端翻译要替换的 key</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShowValueReplace(string $ShowValueReplace) 设置前端翻译要替换的 key
+ * @method void setShowValueReplace(string $ShowValueReplace) 设置<p>前端翻译要替换的 key</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DimensionNew extends AbstractModel
 {
     /**
-     * @var string 维度 key 标示，后台英文名
+     * @var string <p>维度 key 标示，后台英文名</p>
      */
     public $Key;
 
     /**
-     * @var string 维度 key 名称，中英文前台展示名
+     * @var string <p>维度 key 名称，中英文前台展示名</p>
      */
     public $Name;
 
     /**
-     * @var boolean 是否必选
+     * @var boolean <p>是否必选</p>
      */
     public $IsRequired;
 
     /**
-     * @var array 支持的操作符列表
+     * @var array <p>支持的操作符列表</p>
      */
     public $Operators;
 
     /**
-     * @var boolean 是否支持多选
+     * @var boolean <p>是否支持多选</p>
      */
     public $IsMultiple;
 
     /**
-     * @var boolean 创建后是否可以修改
+     * @var boolean <p>创建后是否可以修改</p>
      */
     public $IsMutable;
 
     /**
-     * @var boolean 是否展示给用户
+     * @var boolean <p>是否展示给用户</p>
      */
     public $IsVisible;
 
     /**
-     * @var boolean 能否用来过滤策略列表
+     * @var boolean <p>能否用来过滤策略列表</p>
      */
     public $CanFilterPolicy;
 
     /**
-     * @var boolean 能否用来过滤告警历史
+     * @var boolean <p>能否用来过滤告警历史</p>
      */
     public $CanFilterHistory;
 
     /**
-     * @var boolean 能否作为聚合维度
+     * @var boolean <p>能否作为聚合维度</p>
      */
     public $CanGroupBy;
 
     /**
-     * @var boolean 是否必须作为聚合维度
+     * @var boolean <p>是否必须作为聚合维度</p>
      */
     public $MustGroupBy;
 
     /**
-     * @var string 前端翻译要替换的 key
+     * @var string <p>前端翻译要替换的 key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShowValueReplace;
 
     /**
-     * @param string $Key 维度 key 标示，后台英文名
-     * @param string $Name 维度 key 名称，中英文前台展示名
-     * @param boolean $IsRequired 是否必选
-     * @param array $Operators 支持的操作符列表
-     * @param boolean $IsMultiple 是否支持多选
-     * @param boolean $IsMutable 创建后是否可以修改
-     * @param boolean $IsVisible 是否展示给用户
-     * @param boolean $CanFilterPolicy 能否用来过滤策略列表
-     * @param boolean $CanFilterHistory 能否用来过滤告警历史
-     * @param boolean $CanGroupBy 能否作为聚合维度
-     * @param boolean $MustGroupBy 是否必须作为聚合维度
-     * @param string $ShowValueReplace 前端翻译要替换的 key
+     * @param string $Key <p>维度 key 标示，后台英文名</p>
+     * @param string $Name <p>维度 key 名称，中英文前台展示名</p>
+     * @param boolean $IsRequired <p>是否必选</p>
+     * @param array $Operators <p>支持的操作符列表</p>
+     * @param boolean $IsMultiple <p>是否支持多选</p>
+     * @param boolean $IsMutable <p>创建后是否可以修改</p>
+     * @param boolean $IsVisible <p>是否展示给用户</p>
+     * @param boolean $CanFilterPolicy <p>能否用来过滤策略列表</p>
+     * @param boolean $CanFilterHistory <p>能否用来过滤告警历史</p>
+     * @param boolean $CanGroupBy <p>能否作为聚合维度</p>
+     * @param boolean $MustGroupBy <p>是否必须作为聚合维度</p>
+     * @param string $ShowValueReplace <p>前端翻译要替换的 key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

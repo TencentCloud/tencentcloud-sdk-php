@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceCreate返回参数结构体
  *
- * @method TradePrice getInstancePrice() 获取实例价格
- * @method void setInstancePrice(TradePrice $InstancePrice) 设置实例价格
- * @method TradePrice getStoragePrice() 获取存储价格
- * @method void setStoragePrice(TradePrice $StoragePrice) 设置存储价格
+ * @method TradePrice getInstancePrice() 获取<p>实例价格</p>
+ * @method void setInstancePrice(TradePrice $InstancePrice) 设置<p>实例价格</p>
+ * @method TradePrice getStoragePrice() 获取<p>存储价格</p>
+ * @method void setStoragePrice(TradePrice $StoragePrice) 设置<p>存储价格</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class InquirePriceCreateResponse extends AbstractModel
 {
     /**
-     * @var TradePrice 实例价格
+     * @var TradePrice <p>实例价格</p>
      */
     public $InstancePrice;
 
     /**
-     * @var TradePrice 存储价格
+     * @var TradePrice <p>存储价格</p>
      */
     public $StoragePrice;
 
@@ -45,8 +45,8 @@ class InquirePriceCreateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TradePrice $InstancePrice 实例价格
-     * @param TradePrice $StoragePrice 存储价格
+     * @param TradePrice $InstancePrice <p>实例价格</p>
+     * @param TradePrice $StoragePrice <p>存储价格</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

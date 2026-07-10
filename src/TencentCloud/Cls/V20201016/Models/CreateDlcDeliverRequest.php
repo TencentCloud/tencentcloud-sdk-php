@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置<p>投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。</p>
  * @method integer getHasServicesLog() 获取<p>是否开启投递服务日志。1关闭，2开启。默认开启</p>
  * @method void setHasServicesLog(integer $HasServicesLog) 设置<p>是否开启投递服务日志。1关闭，2开启。默认开启</p>
+ * @method boolean getAutoCreateField() 获取<p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+ * @method void setAutoCreateField(boolean $AutoCreateField) 设置<p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+ * @method DlcFailHandle getDlcFailHandle() 获取<p>将投递失败的日志存储至DLC表</p>
+ * @method void setDlcFailHandle(DlcFailHandle $DlcFailHandle) 设置<p>将投递失败的日志存储至DLC表</p>
+ * @method string getDSLFilter() 获取<p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+ * @method void setDSLFilter(string $DSLFilter) 设置<p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
  */
 class CreateDlcDeliverRequest extends AbstractModel
 {
@@ -87,6 +93,21 @@ class CreateDlcDeliverRequest extends AbstractModel
     public $HasServicesLog;
 
     /**
+     * @var boolean <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+     */
+    public $AutoCreateField;
+
+    /**
+     * @var DlcFailHandle <p>将投递失败的日志存储至DLC表</p>
+     */
+    public $DlcFailHandle;
+
+    /**
+     * @var string <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+     */
+    public $DSLFilter;
+
+    /**
      * @param string $TopicId <p>日志主题id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      * @param string $Name <p>名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。</p>
      * @param integer $DeliverType <p>投递类型。0:批投递,1:实时投递</p>
@@ -96,6 +117,9 @@ class CreateDlcDeliverRequest extends AbstractModel
      * @param integer $Interval <p>投递间隔，单位秒。 DeliverType=0时必填，范围 300&lt;= Interval &lt;=900。</p>
      * @param integer $EndTime <p>投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。</p>
      * @param integer $HasServicesLog <p>是否开启投递服务日志。1关闭，2开启。默认开启</p>
+     * @param boolean $AutoCreateField <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+     * @param DlcFailHandle $DlcFailHandle <p>将投递失败的日志存储至DLC表</p>
+     * @param string $DSLFilter <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
      */
     function __construct()
     {
@@ -145,6 +169,19 @@ class CreateDlcDeliverRequest extends AbstractModel
 
         if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
             $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("AutoCreateField",$param) and $param["AutoCreateField"] !== null) {
+            $this->AutoCreateField = $param["AutoCreateField"];
+        }
+
+        if (array_key_exists("DlcFailHandle",$param) and $param["DlcFailHandle"] !== null) {
+            $this->DlcFailHandle = new DlcFailHandle();
+            $this->DlcFailHandle->deserialize($param["DlcFailHandle"]);
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFromEmailAddress() 获取<p>发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+&lt;邮箱地址&gt;，别名中不能带有冒号(:)。</p>
  * @method void setFromEmailAddress(string $FromEmailAddress) 设置<p>发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+&lt;邮箱地址&gt;，别名中不能带有冒号(:)。</p>
- * @method string getSubject() 获取<p>邮件主题</p>
- * @method void setSubject(string $Subject) 设置<p>邮件主题</p>
+ * @method string getSubject() 获取<p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
+ * @method void setSubject(string $Subject) 设置<p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
  * @method array getDestination() 获取<p>收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。<br>Destination/Cc/Bcc三个参数必须至少存在一个。</p>
  * @method void setDestination(array $Destination) 设置<p>收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。<br>Destination/Cc/Bcc三个参数必须至少存在一个。</p>
  * @method string getReplyToAddresses() 获取<p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
@@ -57,7 +57,7 @@ class SendEmailRequest extends AbstractModel
     public $FromEmailAddress;
 
     /**
-     * @var string <p>邮件主题</p>
+     * @var string <p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
      */
     public $Subject;
 
@@ -123,7 +123,7 @@ class SendEmailRequest extends AbstractModel
 
     /**
      * @param string $FromEmailAddress <p>发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+&lt;邮箱地址&gt;，别名中不能带有冒号(:)。</p>
-     * @param string $Subject <p>邮件主题</p>
+     * @param string $Subject <p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
      * @param array $Destination <p>收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。<br>Destination/Cc/Bcc三个参数必须至少存在一个。</p>
      * @param string $ReplyToAddresses <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
      * @param array $Cc <p>抄送人邮箱地址，最多支持抄送20人。</p>

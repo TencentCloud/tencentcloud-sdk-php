@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLockTimeoutMs(integer $LockTimeoutMs) 设置<p>等待获取数据库锁的最长时间</p><p>单位：毫秒</p><p>默认值：5000</p>
  * @method integer getStatementTimeoutMs() 获取<p>单条 SQL 执行最长时间，超过后由 PostgreSQL 取消该语句</p><p>单位：毫秒</p><p>默认值：300000</p>
  * @method void setStatementTimeoutMs(integer $StatementTimeoutMs) 设置<p>单条 SQL 执行最长时间，超过后由 PostgreSQL 取消该语句</p><p>单位：毫秒</p><p>默认值：300000</p>
- * @method string getSource() 获取<p>标记请求来源</p>
- * @method void setSource(string $Source) 设置<p>标记请求来源</p>
+ * @method string getSource() 获取<p>标记请求来源</p><p>deprecated</p>
+ * @method void setSource(string $Source) 设置<p>标记请求来源</p><p>deprecated</p>
+ * @method boolean getIncludeAll() 获取<p>为true时允许 out-of-order local migrations</p><p>默认值：false</p>
+ * @method void setIncludeAll(boolean $IncludeAll) 设置<p>为true时允许 out-of-order local migrations</p><p>默认值：false</p>
  */
 class PushPGUserMigrationsRequest extends AbstractModel
 {
@@ -54,16 +56,22 @@ class PushPGUserMigrationsRequest extends AbstractModel
     public $StatementTimeoutMs;
 
     /**
-     * @var string <p>标记请求来源</p>
+     * @var string <p>标记请求来源</p><p>deprecated</p>
      */
     public $Source;
+
+    /**
+     * @var boolean <p>为true时允许 out-of-order local migrations</p><p>默认值：false</p>
+     */
+    public $IncludeAll;
 
     /**
      * @param string $EnvId <p>云开发环境ID</p>
      * @param array $Migrations <p>结构化 SQL migration 列表；每项包含 Query SQL 内容</p>
      * @param integer $LockTimeoutMs <p>等待获取数据库锁的最长时间</p><p>单位：毫秒</p><p>默认值：5000</p>
      * @param integer $StatementTimeoutMs <p>单条 SQL 执行最长时间，超过后由 PostgreSQL 取消该语句</p><p>单位：毫秒</p><p>默认值：300000</p>
-     * @param string $Source <p>标记请求来源</p>
+     * @param string $Source <p>标记请求来源</p><p>deprecated</p>
+     * @param boolean $IncludeAll <p>为true时允许 out-of-order local migrations</p><p>默认值：false</p>
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class PushPGUserMigrationsRequest extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("IncludeAll",$param) and $param["IncludeAll"] !== null) {
+            $this->IncludeAll = $param["IncludeAll"];
         }
     }
 }

@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警策略过滤条件
  *
- * @method string getType() 获取过滤条件类型 DIMENSION=使用 Dimensions 做过滤
+ * @method string getType() 获取<p>过滤条件类型 DIMENSION=使用 Dimensions 做过滤</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置过滤条件类型 DIMENSION=使用 Dimensions 做过滤
+ * @method void setType(string $Type) 设置<p>过滤条件类型 DIMENSION=使用 Dimensions 做过滤</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDimensions() 获取AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系
+ * @method string getDimensions() 获取<p>AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDimensions(string $Dimensions) 设置AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系
+ * @method void setDimensions(string $Dimensions) 设置<p>AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicyFilter extends AbstractModel
 {
     /**
-     * @var string 过滤条件类型 DIMENSION=使用 Dimensions 做过滤
+     * @var string <p>过滤条件类型 DIMENSION=使用 Dimensions 做过滤</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系
+     * @var string <p>AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Dimensions;
 
     /**
-     * @param string $Type 过滤条件类型 DIMENSION=使用 Dimensions 做过滤
+     * @param string $Type <p>过滤条件类型 DIMENSION=使用 Dimensions 做过滤</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Dimensions AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系
+     * @param string $Dimensions <p>AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

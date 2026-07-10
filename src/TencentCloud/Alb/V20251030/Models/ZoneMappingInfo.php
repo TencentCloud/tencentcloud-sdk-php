@@ -20,74 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 可用区及子网映射结构体
  *
- * @method string getSubnetId() 获取子网 ID。
+ * @method string getSubnetId() 获取<p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnetId(string $SubnetId) 设置子网 ID。
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getZoneId() 获取可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。
-您可以通过调用[DescribeZones](~~36064~~)接口获取可用区ID对应的可用区的信息。
+ * @method string getZoneId() 获取<p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneId(string $ZoneId) 设置可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。
-您可以通过调用[DescribeZones](~~36064~~)接口获取可用区ID对应的可用区的信息。
+ * @method void setZoneId(string $ZoneId) 设置<p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method LoadBalancerAddress getLoadBalancerAddress() 获取负载均衡 VIP/EIP 信息
- * @method void setLoadBalancerAddress(LoadBalancerAddress $LoadBalancerAddress) 设置负载均衡 VIP/EIP 信息
- * @method string getStatus() 获取可用区状态。取值：
-- **Active**：运行中。
-- **Stopped**：已停止。
-- **Shifted**：已移除。
-- **Starting**：启动中。
-- **Stopping**：停止中。
- * @method void setStatus(string $Status) 设置可用区状态。取值：
-- **Active**：运行中。
-- **Stopped**：已停止。
-- **Shifted**：已移除。
-- **Starting**：启动中。
-- **Stopping**：停止中。
+ * @method LoadBalancerAddress getLoadBalancerAddress() 获取<p>负载均衡 VIP/EIP 信息</p>
+ * @method void setLoadBalancerAddress(LoadBalancerAddress $LoadBalancerAddress) 设置<p>负载均衡 VIP/EIP 信息</p>
+ * @method string getStatus() 获取<p>可用区状态。取值：</p><ul><li><strong>Active</strong>：运行中。</li><li><strong>Stopped</strong>：已停止。</li><li><strong>Shifted</strong>：已移除。</li><li><strong>Starting</strong>：启动中。</li><li><strong>Stopping</strong>：停止中。</li></ul>
+ * @method void setStatus(string $Status) 设置<p>可用区状态。取值：</p><ul><li><strong>Active</strong>：运行中。</li><li><strong>Stopped</strong>：已停止。</li><li><strong>Shifted</strong>：已移除。</li><li><strong>Starting</strong>：启动中。</li><li><strong>Stopping</strong>：停止中。</li></ul>
  */
 class ZoneMappingInfo extends AbstractModel
 {
     /**
-     * @var string 子网 ID。
+     * @var string <p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
-     * @var string 可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。
-您可以通过调用[DescribeZones](~~36064~~)接口获取可用区ID对应的可用区的信息。
+     * @var string <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
-     * @var LoadBalancerAddress 负载均衡 VIP/EIP 信息
+     * @var LoadBalancerAddress <p>负载均衡 VIP/EIP 信息</p>
      */
     public $LoadBalancerAddress;
 
     /**
-     * @var string 可用区状态。取值：
-- **Active**：运行中。
-- **Stopped**：已停止。
-- **Shifted**：已移除。
-- **Starting**：启动中。
-- **Stopping**：停止中。
+     * @var string <p>可用区状态。取值：</p><ul><li><strong>Active</strong>：运行中。</li><li><strong>Stopped</strong>：已停止。</li><li><strong>Shifted</strong>：已移除。</li><li><strong>Starting</strong>：启动中。</li><li><strong>Stopping</strong>：停止中。</li></ul>
      */
     public $Status;
 
     /**
-     * @param string $SubnetId 子网 ID。
+     * @param string $SubnetId <p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ZoneId 可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。
-您可以通过调用[DescribeZones](~~36064~~)接口获取可用区ID对应的可用区的信息。
+     * @param string $ZoneId <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoadBalancerAddress $LoadBalancerAddress 负载均衡 VIP/EIP 信息
-     * @param string $Status 可用区状态。取值：
-- **Active**：运行中。
-- **Stopped**：已停止。
-- **Shifted**：已移除。
-- **Starting**：启动中。
-- **Stopping**：停止中。
+     * @param LoadBalancerAddress $LoadBalancerAddress <p>负载均衡 VIP/EIP 信息</p>
+     * @param string $Status <p>可用区状态。取值：</p><ul><li><strong>Active</strong>：运行中。</li><li><strong>Stopped</strong>：已停止。</li><li><strong>Shifted</strong>：已移除。</li><li><strong>Starting</strong>：启动中。</li><li><strong>Stopping</strong>：停止中。</li></ul>
      */
     function __construct()
     {

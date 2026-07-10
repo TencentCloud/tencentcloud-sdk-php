@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBasicDeviceStatus请求参数结构体
  *
- * @method array getIpList() 获取IP 资源列表
- * @method void setIpList(array $IpList) 设置IP 资源列表
- * @method array getIdList() 获取域名化资源传id
- * @method void setIdList(array $IdList) 设置域名化资源传id
- * @method integer getFilterRegion() 获取地域名称
- * @method void setFilterRegion(integer $FilterRegion) 设置地域名称
- * @method array getCnameWafIdList() 获取cnameWaf资源
- * @method void setCnameWafIdList(array $CnameWafIdList) 设置cnameWaf资源
+ * @method array getIpList() 获取<p>IP 资源列表</p>
+ * @method void setIpList(array $IpList) 设置<p>IP 资源列表</p>
+ * @method array getIdList() 获取<p>域名化资源传id</p>
+ * @method void setIdList(array $IdList) 设置<p>域名化资源传id</p>
+ * @method integer getFilterRegion() 获取<p>地域名称</p>
+ * @method void setFilterRegion(integer $FilterRegion) 设置<p>地域名称</p>
+ * @method array getCnameWafIdList() 获取<p>cnameWaf资源</p>
+ * @method void setCnameWafIdList(array $CnameWafIdList) 设置<p>cnameWaf资源</p>
  */
 class DescribeBasicDeviceStatusRequest extends AbstractModel
 {
     /**
-     * @var array IP 资源列表
+     * @var array <p>IP 资源列表</p>
      */
     public $IpList;
 
     /**
-     * @var array 域名化资源传id
+     * @var array <p>域名化资源传id</p>
      */
     public $IdList;
 
     /**
-     * @var integer 地域名称
+     * @var integer <p>地域名称</p>
      */
     public $FilterRegion;
 
     /**
-     * @var array cnameWaf资源
+     * @var array <p>cnameWaf资源</p>
      */
     public $CnameWafIdList;
 
     /**
-     * @param array $IpList IP 资源列表
-     * @param array $IdList 域名化资源传id
-     * @param integer $FilterRegion 地域名称
-     * @param array $CnameWafIdList cnameWaf资源
+     * @param array $IpList <p>IP 资源列表</p>
+     * @param array $IdList <p>域名化资源传id</p>
+     * @param integer $FilterRegion <p>地域名称</p>
+     * @param array $CnameWafIdList <p>cnameWaf资源</p>
      */
     function __construct()
     {

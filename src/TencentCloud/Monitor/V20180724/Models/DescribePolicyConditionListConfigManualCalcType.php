@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyConditionList.ConfigManual.CalcType
  *
- * @method array getKeys() 获取CalcType 取值
+ * @method array getKeys() 获取<p>CalcType 取值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeys(array $Keys) 设置CalcType 取值
+ * @method void setKeys(array $Keys) 设置<p>CalcType 取值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getNeed() 获取是否必须
- * @method void setNeed(boolean $Need) 设置是否必须
+ * @method boolean getNeed() 获取<p>是否必须</p>
+ * @method void setNeed(boolean $Need) 设置<p>是否必须</p>
  */
 class DescribePolicyConditionListConfigManualCalcType extends AbstractModel
 {
     /**
-     * @var array CalcType 取值
+     * @var array <p>CalcType 取值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keys;
 
     /**
-     * @var boolean 是否必须
+     * @var boolean <p>是否必须</p>
      */
     public $Need;
 
     /**
-     * @param array $Keys CalcType 取值
+     * @param array $Keys <p>CalcType 取值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Need 是否必须
+     * @param boolean $Need <p>是否必须</p>
      */
     function __construct()
     {

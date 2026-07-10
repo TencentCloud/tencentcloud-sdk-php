@@ -20,110 +20,110 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模板列表
  *
- * @method array getConditions() 获取指标告警规则
+ * @method array getConditions() 获取<p>指标告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConditions(array $Conditions) 设置指标告警规则
+ * @method void setConditions(array $Conditions) 设置<p>指标告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getEventConditions() 获取事件告警规则
+ * @method array getEventConditions() 获取<p>事件告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventConditions(array $EventConditions) 设置事件告警规则
+ * @method void setEventConditions(array $EventConditions) 设置<p>事件告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPolicyGroups() 获取关联告警策略组
+ * @method array getPolicyGroups() 获取<p>关联告警策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyGroups(array $PolicyGroups) 设置关联告警策略组
+ * @method void setPolicyGroups(array $PolicyGroups) 设置<p>关联告警策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGroupID() 获取模板策略组ID
- * @method void setGroupID(integer $GroupID) 设置模板策略组ID
- * @method string getGroupName() 获取模板策略组名称
- * @method void setGroupName(string $GroupName) 设置模板策略组名称
- * @method integer getInsertTime() 获取创建时间
- * @method void setInsertTime(integer $InsertTime) 设置创建时间
- * @method integer getLastEditUin() 获取最后修改人UIN
- * @method void setLastEditUin(integer $LastEditUin) 设置最后修改人UIN
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method integer getUpdateTime() 获取更新时间
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
- * @method string getViewName() 获取视图
- * @method void setViewName(string $ViewName) 设置视图
- * @method integer getIsUnionRule() 获取是否为与关系
- * @method void setIsUnionRule(integer $IsUnionRule) 设置是否为与关系
+ * @method integer getGroupID() 获取<p>模板策略组ID</p>
+ * @method void setGroupID(integer $GroupID) 设置<p>模板策略组ID</p>
+ * @method string getGroupName() 获取<p>模板策略组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>模板策略组名称</p>
+ * @method integer getInsertTime() 获取<p>创建时间</p>
+ * @method void setInsertTime(integer $InsertTime) 设置<p>创建时间</p>
+ * @method integer getLastEditUin() 获取<p>最后修改人UIN</p>
+ * @method void setLastEditUin(integer $LastEditUin) 设置<p>最后修改人UIN</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method integer getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p>
+ * @method string getViewName() 获取<p>视图</p>
+ * @method void setViewName(string $ViewName) 设置<p>视图</p>
+ * @method integer getIsUnionRule() 获取<p>是否为与关系</p>
+ * @method void setIsUnionRule(integer $IsUnionRule) 设置<p>是否为与关系</p>
  */
 class TemplateGroup extends AbstractModel
 {
     /**
-     * @var array 指标告警规则
+     * @var array <p>指标告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Conditions;
 
     /**
-     * @var array 事件告警规则
+     * @var array <p>事件告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventConditions;
 
     /**
-     * @var array 关联告警策略组
+     * @var array <p>关联告警策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyGroups;
 
     /**
-     * @var integer 模板策略组ID
+     * @var integer <p>模板策略组ID</p>
      */
     public $GroupID;
 
     /**
-     * @var string 模板策略组名称
+     * @var string <p>模板策略组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
      */
     public $InsertTime;
 
     /**
-     * @var integer 最后修改人UIN
+     * @var integer <p>最后修改人UIN</p>
      */
     public $LastEditUin;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var integer 更新时间
+     * @var integer <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 视图
+     * @var string <p>视图</p>
      */
     public $ViewName;
 
     /**
-     * @var integer 是否为与关系
+     * @var integer <p>是否为与关系</p>
      */
     public $IsUnionRule;
 
     /**
-     * @param array $Conditions 指标告警规则
+     * @param array $Conditions <p>指标告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $EventConditions 事件告警规则
+     * @param array $EventConditions <p>事件告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PolicyGroups 关联告警策略组
+     * @param array $PolicyGroups <p>关联告警策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $GroupID 模板策略组ID
-     * @param string $GroupName 模板策略组名称
-     * @param integer $InsertTime 创建时间
-     * @param integer $LastEditUin 最后修改人UIN
-     * @param string $Remark 备注
-     * @param integer $UpdateTime 更新时间
-     * @param string $ViewName 视图
-     * @param integer $IsUnionRule 是否为与关系
+     * @param integer $GroupID <p>模板策略组ID</p>
+     * @param string $GroupName <p>模板策略组名称</p>
+     * @param integer $InsertTime <p>创建时间</p>
+     * @param integer $LastEditUin <p>最后修改人UIN</p>
+     * @param string $Remark <p>备注</p>
+     * @param integer $UpdateTime <p>更新时间</p>
+     * @param string $ViewName <p>视图</p>
+     * @param integer $IsUnionRule <p>是否为与关系</p>
      */
     function __construct()
     {

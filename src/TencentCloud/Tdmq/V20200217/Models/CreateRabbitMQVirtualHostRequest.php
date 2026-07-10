@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRabbitMQVirtualHost请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
- * @method string getVirtualHost() 获取vhost名
- * @method void setVirtualHost(string $VirtualHost) 设置vhost名
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method boolean getTraceFlag() 获取消息轨迹开关,true打开,false关闭,默认关闭
- * @method void setTraceFlag(boolean $TraceFlag) 设置消息轨迹开关,true打开,false关闭,默认关闭
- * @method boolean getMirrorQueuePolicyFlag() 获取是否创建镜像队列策略，默认值 true
- * @method void setMirrorQueuePolicyFlag(boolean $MirrorQueuePolicyFlag) 设置是否创建镜像队列策略，默认值 true
+ * @method string getInstanceId() 获取<p>实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
+ * @method string getVirtualHost() 获取<p>vhost名</p>
+ * @method void setVirtualHost(string $VirtualHost) 设置<p>vhost名</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method boolean getTraceFlag() 获取<p>消息轨迹开关,true打开,false关闭,默认关闭</p>
+ * @method void setTraceFlag(boolean $TraceFlag) 设置<p>消息轨迹开关,true打开,false关闭,默认关闭</p>
+ * @method boolean getMirrorQueuePolicyFlag() 获取<p>是否创建镜像队列策略，默认值 true。该参数对4.x集群不生效。</p>
+ * @method void setMirrorQueuePolicyFlag(boolean $MirrorQueuePolicyFlag) 设置<p>是否创建镜像队列策略，默认值 true。该参数对4.x集群不生效。</p>
  */
 class CreateRabbitMQVirtualHostRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @var string <p>实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string vhost名
+     * @var string <p>vhost名</p>
      */
     public $VirtualHost;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @var boolean 消息轨迹开关,true打开,false关闭,默认关闭
+     * @var boolean <p>消息轨迹开关,true打开,false关闭,默认关闭</p>
      */
     public $TraceFlag;
 
     /**
-     * @var boolean 是否创建镜像队列策略，默认值 true
+     * @var boolean <p>是否创建镜像队列策略，默认值 true。该参数对4.x集群不生效。</p>
      */
     public $MirrorQueuePolicyFlag;
 
     /**
-     * @param string $InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
-     * @param string $VirtualHost vhost名
-     * @param string $Description 描述
-     * @param boolean $TraceFlag 消息轨迹开关,true打开,false关闭,默认关闭
-     * @param boolean $MirrorQueuePolicyFlag 是否创建镜像队列策略，默认值 true
+     * @param string $InstanceId <p>实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
+     * @param string $VirtualHost <p>vhost名</p>
+     * @param string $Description <p>描述</p>
+     * @param boolean $TraceFlag <p>消息轨迹开关,true打开,false关闭,默认关闭</p>
+     * @param boolean $MirrorQueuePolicyFlag <p>是否创建镜像队列策略，默认值 true。该参数对4.x集群不生效。</p>
      */
     function __construct()
     {

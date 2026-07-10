@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCloudModeration请求参数结构体
  *
- * @method integer getSdkAppId() 获取TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
- * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
- * @method string getTaskId() 获取审核任务的唯一Id，在启动切片任务成功后会返回。
- * @method void setTaskId(string $TaskId) 设置审核任务的唯一Id，在启动切片任务成功后会返回。
+ * @method integer getSdkAppId() 获取<p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
+ * @method string getTaskId() 获取<p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
  */
 class DeleteCloudModerationRequest extends AbstractModel
 {
     /**
-     * @var integer TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
+     * @var integer <p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
      */
     public $SdkAppId;
 
     /**
-     * @var string 审核任务的唯一Id，在启动切片任务成功后会返回。
+     * @var string <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     public $TaskId;
 
     /**
-     * @param integer $SdkAppId TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
-     * @param string $TaskId 审核任务的唯一Id，在启动切片任务成功后会返回。
+     * @param integer $SdkAppId <p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
+     * @param string $TaskId <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     function __construct()
     {

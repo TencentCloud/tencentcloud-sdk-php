@@ -20,170 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实时日志投递任务。
  *
- * @method string getTaskId() 获取实时日志投递任务 ID。
- * @method void setTaskId(string $TaskId) 设置实时日志投递任务 ID。
- * @method string getTaskName() 获取实时日志投递任务的名称。
- * @method void setTaskName(string $TaskName) 设置实时日志投递任务的名称。
- * @method string getDeliveryStatus() 获取实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li>
- * @method void setDeliveryStatus(string $DeliveryStatus) 设置实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li>
- * @method string getTaskType() 获取实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li>
- * @method void setTaskType(string $TaskType) 设置实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li>
- * @method array getEntityList() 获取实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li>	
- * @method void setEntityList(array $EntityList) 设置实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li>	
- * @method string getLogType() 获取数据投递类型，取值有： <li>domain：站点加速日志；</li> <li>application：四层代理日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li> <li>web-attack：托管规则日志；</li> <li>web-rule：自定义规则日志；</li> <li>web-bot：Bot管理日志。</li>
- * @method void setLogType(string $LogType) 设置数据投递类型，取值有： <li>domain：站点加速日志；</li> <li>application：四层代理日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li> <li>web-attack：托管规则日志；</li> <li>web-rule：自定义规则日志；</li> <li>web-bot：Bot管理日志。</li>
- * @method string getArea() 获取数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li>
- * @method void setArea(string $Area) 设置数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li>
- * @method array getFields() 获取投递的预设字段列表。
- * @method void setFields(array $Fields) 设置投递的预设字段列表。
- * @method array getCustomFields() 获取投递的自定义字段列表。
- * @method void setCustomFields(array $CustomFields) 设置投递的自定义字段列表。
- * @method array getDeliveryConditions() 获取日志投递的过滤条件。
- * @method void setDeliveryConditions(array $DeliveryConditions) 设置日志投递的过滤条件。
- * @method integer getSample() 获取采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
- * @method void setSample(integer $Sample) 设置采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
- * @method LogFormat getLogFormat() 获取日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+ * @method string getTaskId() 获取<p>实时日志投递任务 ID。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>实时日志投递任务 ID。</p>
+ * @method string getTaskName() 获取<p>实时日志投递任务的名称。</p>
+ * @method void setTaskName(string $TaskName) 设置<p>实时日志投递任务的名称。</p>
+ * @method string getDeliveryStatus() 获取<p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
+ * @method void setDeliveryStatus(string $DeliveryStatus) 设置<p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
+ * @method string getTaskType() 获取<p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
+ * @method void setTaskType(string $TaskType) 设置<p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
+ * @method array getEntityList() 获取<p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
+ * @method void setEntityList(array $EntityList) 设置<p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
+ * @method string getLogType() 获取<p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p>
+ * @method void setLogType(string $LogType) 设置<p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p>
+ * @method string getArea() 获取<p>数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li></p>
+ * @method void setArea(string $Area) 设置<p>数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li></p>
+ * @method array getFields() 获取<p>投递的预设字段列表。</p>
+ * @method void setFields(array $Fields) 设置<p>投递的预设字段列表。</p>
+ * @method array getCustomFields() 获取<p>投递的自定义字段列表。</p>
+ * @method void setCustomFields(array $CustomFields) 设置<p>投递的自定义字段列表。</p>
+ * @method array getDeliveryConditions() 获取<p>日志投递的过滤条件。</p>
+ * @method void setDeliveryConditions(array $DeliveryConditions) 设置<p>日志投递的过滤条件。</p>
+ * @method integer getSample() 获取<p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p>
+ * @method void setSample(integer $Sample) 设置<p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p>
+ * @method LogFormat getLogFormat() 获取<p>日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：</p><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogFormat(LogFormat $LogFormat) 设置日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+ * @method void setLogFormat(LogFormat $LogFormat) 设置<p>日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：</p><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CLSTopic getCLS() 获取CLS 的配置信息。
+ * @method CLSTopic getCLS() 获取<p>CLS 的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCLS(CLSTopic $CLS) 设置CLS 的配置信息。
+ * @method void setCLS(CLSTopic $CLS) 设置<p>CLS 的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CustomEndpoint getCustomEndpoint() 获取自定义 HTTP 服务的配置信息。
+ * @method CustomEndpoint getCustomEndpoint() 获取<p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) 设置自定义 HTTP 服务的配置信息。
+ * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) 设置<p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method S3 getS3() 获取AWS S3 兼容存储桶的配置信息。
+ * @method S3 getS3() 获取<p>AWS S3 兼容存储桶的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setS3(S3 $S3) 设置AWS S3 兼容存储桶的配置信息。
+ * @method void setS3(S3 $S3) 设置<p>AWS S3 兼容存储桶的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method string getUpdateTime() 获取更新时间。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
+ * @method string getCreateTime() 获取<p>创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。</p>
+ * @method string getUpdateTime() 获取<p>更新时间。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间。</p>
  */
 class RealtimeLogDeliveryTask extends AbstractModel
 {
     /**
-     * @var string 实时日志投递任务 ID。
+     * @var string <p>实时日志投递任务 ID。</p>
      */
     public $TaskId;
 
     /**
-     * @var string 实时日志投递任务的名称。
+     * @var string <p>实时日志投递任务的名称。</p>
      */
     public $TaskName;
 
     /**
-     * @var string 实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li>
+     * @var string <p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
      */
     public $DeliveryStatus;
 
     /**
-     * @var string 实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li>
+     * @var string <p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
      */
     public $TaskType;
 
     /**
-     * @var array 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li>	
+     * @var array <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
      */
     public $EntityList;
 
     /**
-     * @var string 数据投递类型，取值有： <li>domain：站点加速日志；</li> <li>application：四层代理日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li> <li>web-attack：托管规则日志；</li> <li>web-rule：自定义规则日志；</li> <li>web-bot：Bot管理日志。</li>
+     * @var string <p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p>
      */
     public $LogType;
 
     /**
-     * @var string 数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li>
+     * @var string <p>数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li></p>
      */
     public $Area;
 
     /**
-     * @var array 投递的预设字段列表。
+     * @var array <p>投递的预设字段列表。</p>
      */
     public $Fields;
 
     /**
-     * @var array 投递的自定义字段列表。
+     * @var array <p>投递的自定义字段列表。</p>
      */
     public $CustomFields;
 
     /**
-     * @var array 日志投递的过滤条件。
+     * @var array <p>日志投递的过滤条件。</p>
      */
     public $DeliveryConditions;
 
     /**
-     * @var integer 采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
+     * @var integer <p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p>
      */
     public $Sample;
 
     /**
-     * @var LogFormat 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+     * @var LogFormat <p>日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：</p><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogFormat;
 
     /**
-     * @var CLSTopic CLS 的配置信息。
+     * @var CLSTopic <p>CLS 的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLS;
 
     /**
-     * @var CustomEndpoint 自定义 HTTP 服务的配置信息。
+     * @var CustomEndpoint <p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomEndpoint;
 
     /**
-     * @var S3 AWS S3 兼容存储桶的配置信息。
+     * @var S3 <p>AWS S3 兼容存储桶的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间。
+     * @var string <p>更新时间。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $TaskId 实时日志投递任务 ID。
-     * @param string $TaskName 实时日志投递任务的名称。
-     * @param string $DeliveryStatus 实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li>
-     * @param string $TaskType 实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li>
-     * @param array $EntityList 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li>	
-     * @param string $LogType 数据投递类型，取值有： <li>domain：站点加速日志；</li> <li>application：四层代理日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li> <li>web-attack：托管规则日志；</li> <li>web-rule：自定义规则日志；</li> <li>web-bot：Bot管理日志。</li>
-     * @param string $Area 数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li>
-     * @param array $Fields 投递的预设字段列表。
-     * @param array $CustomFields 投递的自定义字段列表。
-     * @param array $DeliveryConditions 日志投递的过滤条件。
-     * @param integer $Sample 采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
-     * @param LogFormat $LogFormat 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+     * @param string $TaskId <p>实时日志投递任务 ID。</p>
+     * @param string $TaskName <p>实时日志投递任务的名称。</p>
+     * @param string $DeliveryStatus <p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
+     * @param string $TaskType <p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
+     * @param array $EntityList <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
+     * @param string $LogType <p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p>
+     * @param string $Area <p>数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li></p>
+     * @param array $Fields <p>投递的预设字段列表。</p>
+     * @param array $CustomFields <p>投递的自定义字段列表。</p>
+     * @param array $DeliveryConditions <p>日志投递的过滤条件。</p>
+     * @param integer $Sample <p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p>
+     * @param LogFormat $LogFormat <p>日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：</p><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CLSTopic $CLS CLS 的配置信息。
+     * @param CLSTopic $CLS <p>CLS 的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomEndpoint $CustomEndpoint 自定义 HTTP 服务的配置信息。
+     * @param CustomEndpoint $CustomEndpoint <p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param S3 $S3 AWS S3 兼容存储桶的配置信息。
+     * @param S3 $S3 <p>AWS S3 兼容存储桶的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间。
-     * @param string $UpdateTime 更新时间。
+     * @param string $CreateTime <p>创建时间。</p>
+     * @param string $UpdateTime <p>更新时间。</p>
      */
     function __construct()
     {

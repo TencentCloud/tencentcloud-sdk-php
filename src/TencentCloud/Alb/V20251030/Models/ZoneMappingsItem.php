@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置<p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getZoneId() 获取<p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="~~36064~~">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
+ * @method string getZoneId() 获取<p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneId(string $ZoneId) 设置<p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="~~36064~~">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
+ * @method void setZoneId(string $ZoneId) 设置<p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method LoadBalancerAddress getLoadBalancerAddress() 获取<p>公网实例绑定的EIP实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,7 +42,7 @@ class ZoneMappingsItem extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="~~36064~~">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
+     * @var string <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
@@ -56,7 +56,7 @@ class ZoneMappingsItem extends AbstractModel
     /**
      * @param string $SubnetId <p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ZoneId <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="~~36064~~">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
+     * @param string $ZoneId <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerAddress $LoadBalancerAddress <p>公网实例绑定的EIP实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。

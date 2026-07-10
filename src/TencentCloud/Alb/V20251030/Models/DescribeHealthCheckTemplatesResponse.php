@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHealthCheckTemplates返回参数结构体
  *
- * @method array getHealthCheckTemplates() 获取健康检查模板列表。
- * @method void setHealthCheckTemplates(array $HealthCheckTemplates) 设置健康检查模板列表。
- * @method string getNextToken() 获取下一次查询的Token值，如果当前是最后一页，返回为空。
- * @method void setNextToken(string $NextToken) 设置下一次查询的Token值，如果当前是最后一页，返回为空。
- * @method integer getTotalCount() 获取经过筛选后查询到的健康检查模板总数。
- * @method void setTotalCount(integer $TotalCount) 设置经过筛选后查询到的健康检查模板总数。
+ * @method array getHealthCheckTemplates() 获取<p>健康检查模板列表。</p>
+ * @method void setHealthCheckTemplates(array $HealthCheckTemplates) 设置<p>健康检查模板列表。</p>
+ * @method string getNextToken() 获取<p>下一次查询的Token值，如果当前是最后一页，返回为空。</p>
+ * @method void setNextToken(string $NextToken) 设置<p>下一次查询的Token值，如果当前是最后一页，返回为空。</p>
+ * @method integer getTotalCount() 获取<p>经过筛选后查询到的健康检查模板总数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>经过筛选后查询到的健康检查模板总数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeHealthCheckTemplatesResponse extends AbstractModel
 {
     /**
-     * @var array 健康检查模板列表。
+     * @var array <p>健康检查模板列表。</p>
      */
     public $HealthCheckTemplates;
 
     /**
-     * @var string 下一次查询的Token值，如果当前是最后一页，返回为空。
+     * @var string <p>下一次查询的Token值，如果当前是最后一页，返回为空。</p>
      */
     public $NextToken;
 
     /**
-     * @var integer 经过筛选后查询到的健康检查模板总数。
+     * @var integer <p>经过筛选后查询到的健康检查模板总数。</p>
      */
     public $TotalCount;
 
@@ -52,9 +52,9 @@ class DescribeHealthCheckTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $HealthCheckTemplates 健康检查模板列表。
-     * @param string $NextToken 下一次查询的Token值，如果当前是最后一页，返回为空。
-     * @param integer $TotalCount 经过筛选后查询到的健康检查模板总数。
+     * @param array $HealthCheckTemplates <p>健康检查模板列表。</p>
+     * @param string $NextToken <p>下一次查询的Token值，如果当前是最后一页，返回为空。</p>
+     * @param integer $TotalCount <p>经过筛选后查询到的健康检查模板总数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

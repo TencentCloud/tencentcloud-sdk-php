@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyConditionListResponseDeprecatingInfo
  *
- * @method boolean getHidden() 获取是否隐藏
+ * @method boolean getHidden() 获取<p>是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHidden(boolean $Hidden) 设置是否隐藏
+ * @method void setHidden(boolean $Hidden) 设置<p>是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNewViewNames() 获取新视图名称
+ * @method array getNewViewNames() 获取<p>新视图名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNewViewNames(array $NewViewNames) 设置新视图名称
+ * @method void setNewViewNames(array $NewViewNames) 设置<p>新视图名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取描述
+ * @method string getDescription() 获取<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setDescription(string $Description) 设置<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePolicyConditionListResponseDeprecatingInfo extends AbstractModel
 {
     /**
-     * @var boolean 是否隐藏
+     * @var boolean <p>是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hidden;
 
     /**
-     * @var array 新视图名称
+     * @var array <p>新视图名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewViewNames;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @param boolean $Hidden 是否隐藏
+     * @param boolean $Hidden <p>是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NewViewNames 新视图名称
+     * @param array $NewViewNames <p>新视图名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 描述
+     * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

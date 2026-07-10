@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSubdomainValidateTXTValue请求参数结构体
  *
- * @method string getDomainZone() 获取要添加的子域名 Zone 域。
- * @method void setDomainZone(string $DomainZone) 设置要添加的子域名 Zone 域。
+ * @method string getDomainZone() 获取<p>要添加的子域名 Zone 域。</p>
+ * @method void setDomainZone(string $DomainZone) 设置<p>要添加的子域名 Zone 域。</p>
  */
 class CreateSubdomainValidateTXTValueRequest extends AbstractModel
 {
     /**
-     * @var string 要添加的子域名 Zone 域。
+     * @var string <p>要添加的子域名 Zone 域。</p>
      */
     public $DomainZone;
 
     /**
-     * @param string $DomainZone 要添加的子域名 Zone 域。
+     * @param string $DomainZone <p>要添加的子域名 Zone 域。</p>
      */
     function __construct()
     {

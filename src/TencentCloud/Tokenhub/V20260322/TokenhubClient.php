@@ -75,7 +75,7 @@ use TencentCloud\Tokenhub\V20260322\Models as Models;
 返回指定 APIKey 的明文密钥值，请妥善保管。
  * @method Models\DescribeTokenPlanApiKeyUsageDetailResponse DescribeTokenPlanApiKeyUsageDetail(Models\DescribeTokenPlanApiKeyUsageDetailRequest $req) 查询 TokenPlan APIKey 调用明细。
 
-从 CLS 日志服务查询套餐下的调用明细，按 pkg_id 过滤，支持游标分页。
+从 CLS 日志服务查询套餐下的调用明细，按 team_id 过滤，支持游标分页。
  * @method Models\DescribeTokenPlanListResponse DescribeTokenPlanList(Models\DescribeTokenPlanListRequest $req) 查询 TokenPlan 套餐列表。
 
 支持分页、过滤和排序。主账号可查看全部，子账号仅可查看自己创建的。返回结果包含每个套餐关联的额度中心主额度包详情。

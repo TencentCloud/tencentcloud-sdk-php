@@ -26,20 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>版本名</p><p>参数格式：只允许小写字母和下划线</p>
  * @method string getQuery() 获取<p>要执行的migration sql 语句</p>
  * @method void setQuery(string $Query) 设置<p>要执行的migration sql 语句</p>
- * @method string getRollback() 获取<p>回滚的sql 语句</p>
- * @method void setRollback(string $Rollback) 设置<p>回滚的sql 语句</p>
- * @method string getChecksum() 获取<p>migration query 语句的checksum值</p><p>由服务端自动生成，同版本 checksum 不一致会拒绝执行</p>
- * @method void setChecksum(string $Checksum) 设置<p>migration query 语句的checksum值</p><p>由服务端自动生成，同版本 checksum 不一致会拒绝执行</p>
- * @method string getSource() 获取<p>用于标记调用来源</p>
- * @method void setSource(string $Source) 设置<p>用于标记调用来源</p>
- * @method string getCreatedBy() 获取<p>用于标记该条migration由谁创建，目前默认调用的用户uin</p>
- * @method void setCreatedBy(string $CreatedBy) 设置<p>用于标记该条migration由谁创建，目前默认调用的用户uin</p>
- * @method string getCreatedAt() 获取<p>该migration创建时间</p>
- * @method void setCreatedAt(string $CreatedAt) 设置<p>该migration创建时间</p>
- * @method string getAppliedAt() 获取<p>该migration应用时间</p>
- * @method void setAppliedAt(string $AppliedAt) 设置<p>该migration应用时间</p>
- * @method integer getDurationMs() 获取<p>该migration执行耗时</p><p>单位：毫秒</p>
- * @method void setDurationMs(integer $DurationMs) 设置<p>该migration执行耗时</p><p>单位：毫秒</p>
+ * @method string getRollback() 获取<p>回滚的sql 语句</p><p>deprecated</p>
+ * @method void setRollback(string $Rollback) 设置<p>回滚的sql 语句</p><p>deprecated</p>
+ * @method string getChecksum() 获取<p>migration query 语句的checksum值,由服务端自动生成，同版本 checksum 不一致会拒绝执行</p><p>deprecated</p>
+ * @method void setChecksum(string $Checksum) 设置<p>migration query 语句的checksum值,由服务端自动生成，同版本 checksum 不一致会拒绝执行</p><p>deprecated</p>
+ * @method string getSource() 获取<p>用于标记调用来源</p><p>deprecated</p>
+ * @method void setSource(string $Source) 设置<p>用于标记调用来源</p><p>deprecated</p>
+ * @method string getCreatedBy() 获取<p>用于标记该条migration由谁创建，目前默认调用的用户uin</p><p>deprecated</p>
+ * @method void setCreatedBy(string $CreatedBy) 设置<p>用于标记该条migration由谁创建，目前默认调用的用户uin</p><p>deprecated</p>
+ * @method string getCreatedAt() 获取<p>该migration创建时间</p><p>deprecated</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>该migration创建时间</p><p>deprecated</p>
+ * @method string getAppliedAt() 获取<p>该migration应用时间</p><p>deprecated</p>
+ * @method void setAppliedAt(string $AppliedAt) 设置<p>该migration应用时间</p><p>deprecated</p>
+ * @method integer getDurationMs() 获取<p>该migration执行耗时</p><p>单位：毫秒</p><p>deprecated</p>
+ * @method void setDurationMs(integer $DurationMs) 设置<p>该migration执行耗时</p><p>单位：毫秒</p><p>deprecated</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,37 +61,37 @@ class DescribePGUserMigrationResponse extends AbstractModel
     public $Query;
 
     /**
-     * @var string <p>回滚的sql 语句</p>
+     * @var string <p>回滚的sql 语句</p><p>deprecated</p>
      */
     public $Rollback;
 
     /**
-     * @var string <p>migration query 语句的checksum值</p><p>由服务端自动生成，同版本 checksum 不一致会拒绝执行</p>
+     * @var string <p>migration query 语句的checksum值,由服务端自动生成，同版本 checksum 不一致会拒绝执行</p><p>deprecated</p>
      */
     public $Checksum;
 
     /**
-     * @var string <p>用于标记调用来源</p>
+     * @var string <p>用于标记调用来源</p><p>deprecated</p>
      */
     public $Source;
 
     /**
-     * @var string <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p>
+     * @var string <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p><p>deprecated</p>
      */
     public $CreatedBy;
 
     /**
-     * @var string <p>该migration创建时间</p>
+     * @var string <p>该migration创建时间</p><p>deprecated</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string <p>该migration应用时间</p>
+     * @var string <p>该migration应用时间</p><p>deprecated</p>
      */
     public $AppliedAt;
 
     /**
-     * @var integer <p>该migration执行耗时</p><p>单位：毫秒</p>
+     * @var integer <p>该migration执行耗时</p><p>单位：毫秒</p><p>deprecated</p>
      */
     public $DurationMs;
 
@@ -104,13 +104,13 @@ class DescribePGUserMigrationResponse extends AbstractModel
      * @param string $Version <p>版本号</p><p>参数格式：纯数字，14位时间格式</p>
      * @param string $Name <p>版本名</p><p>参数格式：只允许小写字母和下划线</p>
      * @param string $Query <p>要执行的migration sql 语句</p>
-     * @param string $Rollback <p>回滚的sql 语句</p>
-     * @param string $Checksum <p>migration query 语句的checksum值</p><p>由服务端自动生成，同版本 checksum 不一致会拒绝执行</p>
-     * @param string $Source <p>用于标记调用来源</p>
-     * @param string $CreatedBy <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p>
-     * @param string $CreatedAt <p>该migration创建时间</p>
-     * @param string $AppliedAt <p>该migration应用时间</p>
-     * @param integer $DurationMs <p>该migration执行耗时</p><p>单位：毫秒</p>
+     * @param string $Rollback <p>回滚的sql 语句</p><p>deprecated</p>
+     * @param string $Checksum <p>migration query 语句的checksum值,由服务端自动生成，同版本 checksum 不一致会拒绝执行</p><p>deprecated</p>
+     * @param string $Source <p>用于标记调用来源</p><p>deprecated</p>
+     * @param string $CreatedBy <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p><p>deprecated</p>
+     * @param string $CreatedAt <p>该migration创建时间</p><p>deprecated</p>
+     * @param string $AppliedAt <p>该migration应用时间</p><p>deprecated</p>
+     * @param integer $DurationMs <p>该migration执行耗时</p><p>单位：毫秒</p><p>deprecated</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHealthCheckTemplates请求参数结构体
  *
- * @method array getFilters() 获取过滤器。通过指定的过滤条件来查询健康检查模版，支持：
-- Name的值为**HealthCheckTemplateName**。通过名称来筛选健康检查模版。**Values**的值为模版名称列表。
-- Name的值为**HealthCheckProtocol**。通过健康检查协议来筛选健康检查模版。**Values**的值为协议列表。
-- 通过标签方式筛选。
- * @method void setFilters(array $Filters) 设置过滤器。通过指定的过滤条件来查询健康检查模版，支持：
-- Name的值为**HealthCheckTemplateName**。通过名称来筛选健康检查模版。**Values**的值为模版名称列表。
-- Name的值为**HealthCheckProtocol**。通过健康检查协议来筛选健康检查模版。**Values**的值为协议列表。
-- 通过标签方式筛选。
- * @method array getHealthCheckTemplateIds() 获取健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
- * @method void setHealthCheckTemplateIds(array $HealthCheckTemplateIds) 设置健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
- * @method string getMaxResults() 获取返回列表的数量，默认为20，最大值为100。
- * @method void setMaxResults(string $MaxResults) 设置返回列表的数量，默认为20，最大值为100。
- * @method string getNextToken() 获取下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。
-如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。
- * @method void setNextToken(string $NextToken) 设置下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。
-如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。
+ * @method array getFilters() 获取<p>过滤器。通过指定的过滤条件来查询健康检查模板，支持：</p><ul><li>Name的值为<strong>HealthCheckTemplateName</strong>。通过名称来筛选健康检查模板。<strong>Values</strong>的值为模板名称列表。</li><li>Name的值为<strong>HealthCheckProtocol</strong>。通过健康检查协议来筛选健康检查模板。<strong>Values</strong>的值为协议列表。</li><li>通过标签方式筛选。</li></ul>
+ * @method void setFilters(array $Filters) 设置<p>过滤器。通过指定的过滤条件来查询健康检查模板，支持：</p><ul><li>Name的值为<strong>HealthCheckTemplateName</strong>。通过名称来筛选健康检查模板。<strong>Values</strong>的值为模板名称列表。</li><li>Name的值为<strong>HealthCheckProtocol</strong>。通过健康检查协议来筛选健康检查模板。<strong>Values</strong>的值为协议列表。</li><li>通过标签方式筛选。</li></ul>
+ * @method array getHealthCheckTemplateIds() 获取<p>健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。</p>
+ * @method void setHealthCheckTemplateIds(array $HealthCheckTemplateIds) 设置<p>健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。</p>
+ * @method string getMaxResults() 获取<p>返回列表的数量，默认为20，最大值为100。</p>
+ * @method void setMaxResults(string $MaxResults) 设置<p>返回列表的数量，默认为20，最大值为100。</p>
+ * @method string getNextToken() 获取<p>下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。<br>如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。</p>
+ * @method void setNextToken(string $NextToken) 设置<p>下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。<br>如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。</p>
  */
 class DescribeHealthCheckTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 过滤器。通过指定的过滤条件来查询健康检查模版，支持：
-- Name的值为**HealthCheckTemplateName**。通过名称来筛选健康检查模版。**Values**的值为模版名称列表。
-- Name的值为**HealthCheckProtocol**。通过健康检查协议来筛选健康检查模版。**Values**的值为协议列表。
-- 通过标签方式筛选。
+     * @var array <p>过滤器。通过指定的过滤条件来查询健康检查模板，支持：</p><ul><li>Name的值为<strong>HealthCheckTemplateName</strong>。通过名称来筛选健康检查模板。<strong>Values</strong>的值为模板名称列表。</li><li>Name的值为<strong>HealthCheckProtocol</strong>。通过健康检查协议来筛选健康检查模板。<strong>Values</strong>的值为协议列表。</li><li>通过标签方式筛选。</li></ul>
      */
     public $Filters;
 
     /**
-     * @var array 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
+     * @var array <p>健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。</p>
      */
     public $HealthCheckTemplateIds;
 
     /**
-     * @var string 返回列表的数量，默认为20，最大值为100。
+     * @var string <p>返回列表的数量，默认为20，最大值为100。</p>
      */
     public $MaxResults;
 
     /**
-     * @var string 下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。
-如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。
+     * @var string <p>下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。<br>如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。</p>
      */
     public $NextToken;
 
     /**
-     * @param array $Filters 过滤器。通过指定的过滤条件来查询健康检查模版，支持：
-- Name的值为**HealthCheckTemplateName**。通过名称来筛选健康检查模版。**Values**的值为模版名称列表。
-- Name的值为**HealthCheckProtocol**。通过健康检查协议来筛选健康检查模版。**Values**的值为协议列表。
-- 通过标签方式筛选。
-     * @param array $HealthCheckTemplateIds 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
-     * @param string $MaxResults 返回列表的数量，默认为20，最大值为100。
-     * @param string $NextToken 下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。
-如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。
+     * @param array $Filters <p>过滤器。通过指定的过滤条件来查询健康检查模板，支持：</p><ul><li>Name的值为<strong>HealthCheckTemplateName</strong>。通过名称来筛选健康检查模板。<strong>Values</strong>的值为模板名称列表。</li><li>Name的值为<strong>HealthCheckProtocol</strong>。通过健康检查协议来筛选健康检查模板。<strong>Values</strong>的值为协议列表。</li><li>通过标签方式筛选。</li></ul>
+     * @param array $HealthCheckTemplateIds <p>健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。</p>
+     * @param string $MaxResults <p>返回列表的数量，默认为20，最大值为100。</p>
+     * @param string $NextToken <p>下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。<br>如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。</p>
      */
     function __construct()
     {

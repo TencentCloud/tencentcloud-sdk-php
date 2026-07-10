@@ -20,46 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 存储额外配置
  *
- * @method string getCFSStorageType() 获取cfs的存储类型
-  // HP:通用性能型
-  // SD:通用标准型
-  // TP:turbo性能型
-  // TB:turbo标准型
-  // THP:吞吐型
- * @method void setCFSStorageType(string $CFSStorageType) 设置cfs的存储类型
-  // HP:通用性能型
-  // SD:通用标准型
-  // TP:turbo性能型
-  // TB:turbo标准型
-  // THP:吞吐型
- * @method string getCFSProtocol() 获取cfs的协议
- * @method void setCFSProtocol(string $CFSProtocol) 设置cfs的协议
+ * @method string getCFSStorageType() 获取<p>cfs的存储类型<br>  // HP:通用性能型<br>  // SD:通用标准型<br>  // TP:turbo性能型<br>  // TB:turbo标准型<br>  // THP:吞吐型</p>
+ * @method void setCFSStorageType(string $CFSStorageType) 设置<p>cfs的存储类型<br>  // HP:通用性能型<br>  // SD:通用标准型<br>  // TP:turbo性能型<br>  // TB:turbo标准型<br>  // THP:吞吐型</p>
+ * @method string getCFSProtocol() 获取<p>cfs的协议</p>
+ * @method void setCFSProtocol(string $CFSProtocol) 设置<p>cfs的协议</p>
  */
 class StorageExtraConf extends AbstractModel
 {
     /**
-     * @var string cfs的存储类型
-  // HP:通用性能型
-  // SD:通用标准型
-  // TP:turbo性能型
-  // TB:turbo标准型
-  // THP:吞吐型
+     * @var string <p>cfs的存储类型<br>  // HP:通用性能型<br>  // SD:通用标准型<br>  // TP:turbo性能型<br>  // TB:turbo标准型<br>  // THP:吞吐型</p>
      */
     public $CFSStorageType;
 
     /**
-     * @var string cfs的协议
+     * @var string <p>cfs的协议</p>
      */
     public $CFSProtocol;
 
     /**
-     * @param string $CFSStorageType cfs的存储类型
-  // HP:通用性能型
-  // SD:通用标准型
-  // TP:turbo性能型
-  // TB:turbo标准型
-  // THP:吞吐型
-     * @param string $CFSProtocol cfs的协议
+     * @param string $CFSStorageType <p>cfs的存储类型<br>  // HP:通用性能型<br>  // SD:通用标准型<br>  // TP:turbo性能型<br>  // TB:turbo标准型<br>  // THP:吞吐型</p>
+     * @param string $CFSProtocol <p>cfs的协议</p>
      */
     function __construct()
     {

@@ -20,78 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 逻辑备份配置信息
  *
- * @method string getLogicBackupEnable() 获取是否开启自动逻辑备份
- * @method void setLogicBackupEnable(string $LogicBackupEnable) 设置是否开启自动逻辑备份
- * @method integer getLogicBackupTimeBeg() 获取自动逻辑备份开始时间
- * @method void setLogicBackupTimeBeg(integer $LogicBackupTimeBeg) 设置自动逻辑备份开始时间
- * @method integer getLogicBackupTimeEnd() 获取自动逻辑备份结束时间
- * @method void setLogicBackupTimeEnd(integer $LogicBackupTimeEnd) 设置自动逻辑备份结束时间
- * @method integer getLogicReserveDuration() 获取自动逻辑备份保留时间
-单位：秒
- * @method void setLogicReserveDuration(integer $LogicReserveDuration) 设置自动逻辑备份保留时间
-单位：秒
- * @method string getLogicCrossRegionsEnable() 获取是否开启跨地域逻辑备份
-可选值：ON/OFF
- * @method void setLogicCrossRegionsEnable(string $LogicCrossRegionsEnable) 设置是否开启跨地域逻辑备份
-可选值：ON/OFF
- * @method array getLogicCrossRegions() 获取逻辑备份所跨地域
+ * @method string getLogicBackupEnable() 获取<p>是否开启自动逻辑备份</p>
+ * @method void setLogicBackupEnable(string $LogicBackupEnable) 设置<p>是否开启自动逻辑备份</p>
+ * @method integer getLogicBackupTimeBeg() 获取<p>自动逻辑备份开始时间</p>
+ * @method void setLogicBackupTimeBeg(integer $LogicBackupTimeBeg) 设置<p>自动逻辑备份开始时间</p>
+ * @method integer getLogicBackupTimeEnd() 获取<p>自动逻辑备份结束时间</p>
+ * @method void setLogicBackupTimeEnd(integer $LogicBackupTimeEnd) 设置<p>自动逻辑备份结束时间</p>
+ * @method integer getLogicReserveDuration() 获取<p>自动逻辑备份保留时间<br>单位：秒</p>
+ * @method void setLogicReserveDuration(integer $LogicReserveDuration) 设置<p>自动逻辑备份保留时间<br>单位：秒</p>
+ * @method string getLogicCrossRegionsEnable() 获取<p>是否开启跨地域逻辑备份<br>可选值：ON/OFF</p>
+ * @method void setLogicCrossRegionsEnable(string $LogicCrossRegionsEnable) 设置<p>是否开启跨地域逻辑备份<br>可选值：ON/OFF</p>
+ * @method array getLogicCrossRegions() 获取<p>逻辑备份所跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogicCrossRegions(array $LogicCrossRegions) 设置逻辑备份所跨地域
+ * @method void setLogicCrossRegions(array $LogicCrossRegions) 设置<p>逻辑备份所跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAutoCopyVaults() 获取备份投递关系
- * @method void setAutoCopyVaults(array $AutoCopyVaults) 设置备份投递关系
+ * @method array getAutoCopyVaults() 获取<p>备份投递关系</p>
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) 设置<p>备份投递关系</p>
+ * @method integer getLogicCrossRegionSaveDays() 获取<p>天</p><p>单位：跨地域逻辑备份保留时间</p>
+ * @method void setLogicCrossRegionSaveDays(integer $LogicCrossRegionSaveDays) 设置<p>天</p><p>单位：跨地域逻辑备份保留时间</p>
  */
 class LogicBackupConfigInfo extends AbstractModel
 {
     /**
-     * @var string 是否开启自动逻辑备份
+     * @var string <p>是否开启自动逻辑备份</p>
      */
     public $LogicBackupEnable;
 
     /**
-     * @var integer 自动逻辑备份开始时间
+     * @var integer <p>自动逻辑备份开始时间</p>
      */
     public $LogicBackupTimeBeg;
 
     /**
-     * @var integer 自动逻辑备份结束时间
+     * @var integer <p>自动逻辑备份结束时间</p>
      */
     public $LogicBackupTimeEnd;
 
     /**
-     * @var integer 自动逻辑备份保留时间
-单位：秒
+     * @var integer <p>自动逻辑备份保留时间<br>单位：秒</p>
      */
     public $LogicReserveDuration;
 
     /**
-     * @var string 是否开启跨地域逻辑备份
-可选值：ON/OFF
+     * @var string <p>是否开启跨地域逻辑备份<br>可选值：ON/OFF</p>
      */
     public $LogicCrossRegionsEnable;
 
     /**
-     * @var array 逻辑备份所跨地域
+     * @var array <p>逻辑备份所跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogicCrossRegions;
 
     /**
-     * @var array 备份投递关系
+     * @var array <p>备份投递关系</p>
      */
     public $AutoCopyVaults;
 
     /**
-     * @param string $LogicBackupEnable 是否开启自动逻辑备份
-     * @param integer $LogicBackupTimeBeg 自动逻辑备份开始时间
-     * @param integer $LogicBackupTimeEnd 自动逻辑备份结束时间
-     * @param integer $LogicReserveDuration 自动逻辑备份保留时间
-单位：秒
-     * @param string $LogicCrossRegionsEnable 是否开启跨地域逻辑备份
-可选值：ON/OFF
-     * @param array $LogicCrossRegions 逻辑备份所跨地域
+     * @var integer <p>天</p><p>单位：跨地域逻辑备份保留时间</p>
+     */
+    public $LogicCrossRegionSaveDays;
+
+    /**
+     * @param string $LogicBackupEnable <p>是否开启自动逻辑备份</p>
+     * @param integer $LogicBackupTimeBeg <p>自动逻辑备份开始时间</p>
+     * @param integer $LogicBackupTimeEnd <p>自动逻辑备份结束时间</p>
+     * @param integer $LogicReserveDuration <p>自动逻辑备份保留时间<br>单位：秒</p>
+     * @param string $LogicCrossRegionsEnable <p>是否开启跨地域逻辑备份<br>可选值：ON/OFF</p>
+     * @param array $LogicCrossRegions <p>逻辑备份所跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AutoCopyVaults 备份投递关系
+     * @param array $AutoCopyVaults <p>备份投递关系</p>
+     * @param integer $LogicCrossRegionSaveDays <p>天</p><p>单位：跨地域逻辑备份保留时间</p>
      */
     function __construct()
     {
@@ -137,6 +137,10 @@ class LogicBackupConfigInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AutoCopyVaults, $obj);
             }
+        }
+
+        if (array_key_exists("LogicCrossRegionSaveDays",$param) and $param["LogicCrossRegionSaveDays"] !== null) {
+            $this->LogicCrossRegionSaveDays = $param["LogicCrossRegionSaveDays"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFromEmailAddress(string $FromEmailAddress) 设置<p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p>
  * @method integer getReceiverId() 获取<p>收件人列表ID</p>
  * @method void setReceiverId(integer $ReceiverId) 设置<p>收件人列表ID</p>
- * @method string getSubject() 获取<p>邮件主题</p>
- * @method void setSubject(string $Subject) 设置<p>邮件主题</p>
+ * @method string getSubject() 获取<p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
+ * @method void setSubject(string $Subject) 设置<p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
  * @method integer getTaskType() 获取<p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
  * @method void setTaskType(integer $TaskType) 设置<p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
  * @method string getReplyToAddresses() 获取<p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
@@ -58,7 +58,7 @@ class BatchSendEmailRequest extends AbstractModel
     public $ReceiverId;
 
     /**
-     * @var string <p>邮件主题</p>
+     * @var string <p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
      */
     public $Subject;
 
@@ -110,7 +110,7 @@ class BatchSendEmailRequest extends AbstractModel
     /**
      * @param string $FromEmailAddress <p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p>
      * @param integer $ReceiverId <p>收件人列表ID</p>
-     * @param string $Subject <p>邮件主题</p>
+     * @param string $Subject <p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
      * @param integer $TaskType <p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
      * @param string $ReplyToAddresses <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
      * @param Template $Template <p>使用模板发送时，填写的模板相关参数</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>

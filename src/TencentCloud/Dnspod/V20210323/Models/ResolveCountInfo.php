@@ -20,58 +20,76 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 域名解析量统计信息
  *
- * @method integer getDnsTotal() 获取当前统计周期解析量总计
- * @method void setDnsTotal(integer $DnsTotal) 设置当前统计周期解析量总计
- * @method string getDomain() 获取当前查询的域名
- * @method void setDomain(string $Domain) 设置当前查询的域名
- * @method string getStartDate() 获取当前统计周期开始时间
- * @method void setStartDate(string $StartDate) 设置当前统计周期开始时间
- * @method string getEndDate() 获取当前统计周期结束时间
- * @method void setEndDate(string $EndDate) 设置当前统计周期结束时间
- * @method string getSubDomain() 获取当前统计的子域名
- * @method void setSubDomain(string $SubDomain) 设置当前统计的子域名
- * @method string getDnsFormat() 获取数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
- * @method void setDnsFormat(string $DnsFormat) 设置数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
+ * @method integer getDnsTotal() 获取<p>当前统计周期解析量总计</p>
+ * @method void setDnsTotal(integer $DnsTotal) 设置<p>当前统计周期解析量总计</p>
+ * @method string getDomain() 获取<p>当前查询的域名</p>
+ * @method void setDomain(string $Domain) 设置<p>当前查询的域名</p>
+ * @method string getStartDate() 获取<p>当前统计周期开始时间</p>
+ * @method void setStartDate(string $StartDate) 设置<p>当前统计周期开始时间</p>
+ * @method string getEndDate() 获取<p>当前统计周期结束时间</p>
+ * @method void setEndDate(string $EndDate) 设置<p>当前统计周期结束时间</p>
+ * @method string getSubDomain() 获取<p>当前统计的子域名</p>
+ * @method void setSubDomain(string $SubDomain) 设置<p>当前统计的子域名</p>
+ * @method string getDnsFormat() 获取<p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+ * @method void setDnsFormat(string $DnsFormat) 设置<p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+ * @method integer getDNSTotal() 获取<p>当前统计周期解析量总计</p>
+ * @method void setDNSTotal(integer $DNSTotal) 设置<p>当前统计周期解析量总计</p>
+ * @method string getDNSFormat() 获取<p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+ * @method void setDNSFormat(string $DNSFormat) 设置<p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
  */
 class ResolveCountInfo extends AbstractModel
 {
     /**
-     * @var integer 当前统计周期解析量总计
+     * @var integer <p>当前统计周期解析量总计</p>
+     * @deprecated
      */
     public $DnsTotal;
 
     /**
-     * @var string 当前查询的域名
+     * @var string <p>当前查询的域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 当前统计周期开始时间
+     * @var string <p>当前统计周期开始时间</p>
      */
     public $StartDate;
 
     /**
-     * @var string 当前统计周期结束时间
+     * @var string <p>当前统计周期结束时间</p>
      */
     public $EndDate;
 
     /**
-     * @var string 当前统计的子域名
+     * @var string <p>当前统计的子域名</p>
      */
     public $SubDomain;
 
     /**
-     * @var string 数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
+     * @var string <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+     * @deprecated
      */
     public $DnsFormat;
 
     /**
-     * @param integer $DnsTotal 当前统计周期解析量总计
-     * @param string $Domain 当前查询的域名
-     * @param string $StartDate 当前统计周期开始时间
-     * @param string $EndDate 当前统计周期结束时间
-     * @param string $SubDomain 当前统计的子域名
-     * @param string $DnsFormat 数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
+     * @var integer <p>当前统计周期解析量总计</p>
+     */
+    public $DNSTotal;
+
+    /**
+     * @var string <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+     */
+    public $DNSFormat;
+
+    /**
+     * @param integer $DnsTotal <p>当前统计周期解析量总计</p>
+     * @param string $Domain <p>当前查询的域名</p>
+     * @param string $StartDate <p>当前统计周期开始时间</p>
+     * @param string $EndDate <p>当前统计周期结束时间</p>
+     * @param string $SubDomain <p>当前统计的子域名</p>
+     * @param string $DnsFormat <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+     * @param integer $DNSTotal <p>当前统计周期解析量总计</p>
+     * @param string $DNSFormat <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
      */
     function __construct()
     {
@@ -108,6 +126,14 @@ class ResolveCountInfo extends AbstractModel
 
         if (array_key_exists("DnsFormat",$param) and $param["DnsFormat"] !== null) {
             $this->DnsFormat = $param["DnsFormat"];
+        }
+
+        if (array_key_exists("DNSTotal",$param) and $param["DNSTotal"] !== null) {
+            $this->DNSTotal = $param["DNSTotal"];
+        }
+
+        if (array_key_exists("DNSFormat",$param) and $param["DNSFormat"] !== null) {
+            $this->DNSFormat = $param["DNSFormat"];
         }
     }
 }

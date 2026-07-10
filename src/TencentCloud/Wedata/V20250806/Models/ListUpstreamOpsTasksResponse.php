@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListUpstreamOpsTasks返回参数结构体
  *
- * @method ParentDependencyConfigPage getData() 获取上游任务详情
- * @method void setData(ParentDependencyConfigPage $Data) 设置上游任务详情
+ * @method ParentDependencyConfigPage getData() 获取<p>上游任务详情</p>
+ * @method void setData(ParentDependencyConfigPage $Data) 设置<p>上游任务详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListUpstreamOpsTasksResponse extends AbstractModel
 {
     /**
-     * @var ParentDependencyConfigPage 上游任务详情
+     * @var ParentDependencyConfigPage <p>上游任务详情</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class ListUpstreamOpsTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ParentDependencyConfigPage $Data 上游任务详情
+     * @param ParentDependencyConfigPage $Data <p>上游任务详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

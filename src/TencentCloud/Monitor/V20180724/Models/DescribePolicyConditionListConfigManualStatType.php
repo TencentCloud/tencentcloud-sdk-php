@@ -20,105 +20,105 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyConditionList.ConfigManual.StatType
  *
- * @method string getP5() 获取数据聚合方式，周期5秒
+ * @method string getP5() 获取<p>数据聚合方式，周期5秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setP5(string $P5) 设置数据聚合方式，周期5秒
+ * @method void setP5(string $P5) 设置<p>数据聚合方式，周期5秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getP10() 获取数据聚合方式，周期10秒
+ * @method string getP10() 获取<p>数据聚合方式，周期10秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setP10(string $P10) 设置数据聚合方式，周期10秒
+ * @method void setP10(string $P10) 设置<p>数据聚合方式，周期10秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getP60() 获取数据聚合方式，周期1分钟
+ * @method string getP60() 获取<p>数据聚合方式，周期1分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setP60(string $P60) 设置数据聚合方式，周期1分钟
+ * @method void setP60(string $P60) 设置<p>数据聚合方式，周期1分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getP300() 获取数据聚合方式，周期5分钟
+ * @method string getP300() 获取<p>数据聚合方式，周期5分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setP300(string $P300) 设置数据聚合方式，周期5分钟
+ * @method void setP300(string $P300) 设置<p>数据聚合方式，周期5分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getP600() 获取数据聚合方式，周期10分钟
+ * @method string getP600() 获取<p>数据聚合方式，周期10分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setP600(string $P600) 设置数据聚合方式，周期10分钟
+ * @method void setP600(string $P600) 设置<p>数据聚合方式，周期10分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getP1800() 获取数据聚合方式，周期30分钟
+ * @method string getP1800() 获取<p>数据聚合方式，周期30分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setP1800(string $P1800) 设置数据聚合方式，周期30分钟
+ * @method void setP1800(string $P1800) 设置<p>数据聚合方式，周期30分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getP3600() 获取数据聚合方式，周期1小时
+ * @method string getP3600() 获取<p>数据聚合方式，周期1小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setP3600(string $P3600) 设置数据聚合方式，周期1小时
+ * @method void setP3600(string $P3600) 设置<p>数据聚合方式，周期1小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getP86400() 获取数据聚合方式，周期1天
+ * @method string getP86400() 获取<p>数据聚合方式，周期1天</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setP86400(string $P86400) 设置数据聚合方式，周期1天
+ * @method void setP86400(string $P86400) 设置<p>数据聚合方式，周期1天</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePolicyConditionListConfigManualStatType extends AbstractModel
 {
     /**
-     * @var string 数据聚合方式，周期5秒
+     * @var string <p>数据聚合方式，周期5秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P5;
 
     /**
-     * @var string 数据聚合方式，周期10秒
+     * @var string <p>数据聚合方式，周期10秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P10;
 
     /**
-     * @var string 数据聚合方式，周期1分钟
+     * @var string <p>数据聚合方式，周期1分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P60;
 
     /**
-     * @var string 数据聚合方式，周期5分钟
+     * @var string <p>数据聚合方式，周期5分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P300;
 
     /**
-     * @var string 数据聚合方式，周期10分钟
+     * @var string <p>数据聚合方式，周期10分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P600;
 
     /**
-     * @var string 数据聚合方式，周期30分钟
+     * @var string <p>数据聚合方式，周期30分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P1800;
 
     /**
-     * @var string 数据聚合方式，周期1小时
+     * @var string <p>数据聚合方式，周期1小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P3600;
 
     /**
-     * @var string 数据聚合方式，周期1天
+     * @var string <p>数据聚合方式，周期1天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P86400;
 
     /**
-     * @param string $P5 数据聚合方式，周期5秒
+     * @param string $P5 <p>数据聚合方式，周期5秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $P10 数据聚合方式，周期10秒
+     * @param string $P10 <p>数据聚合方式，周期10秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $P60 数据聚合方式，周期1分钟
+     * @param string $P60 <p>数据聚合方式，周期1分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $P300 数据聚合方式，周期5分钟
+     * @param string $P300 <p>数据聚合方式，周期5分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $P600 数据聚合方式，周期10分钟
+     * @param string $P600 <p>数据聚合方式，周期10分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $P1800 数据聚合方式，周期30分钟
+     * @param string $P1800 <p>数据聚合方式，周期30分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $P3600 数据聚合方式，周期1小时
+     * @param string $P3600 <p>数据聚合方式，周期1小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $P86400 数据聚合方式，周期1天
+     * @param string $P86400 <p>数据聚合方式，周期1天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

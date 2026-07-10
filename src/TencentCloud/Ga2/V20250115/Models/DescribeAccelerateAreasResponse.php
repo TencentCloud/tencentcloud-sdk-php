@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccelerateAreas返回参数结构体
  *
- * @method array getAccelerateAreaSet() 获取加速地域信息。
- * @method void setAccelerateAreaSet(array $AccelerateAreaSet) 设置加速地域信息。
- * @method integer getTotalCount() 获取实例个数。
- * @method void setTotalCount(integer $TotalCount) 设置实例个数。
+ * @method array getAccelerateAreaSet() 获取<p>加速地域信息。</p>
+ * @method void setAccelerateAreaSet(array $AccelerateAreaSet) 设置<p>加速地域信息。</p>
+ * @method integer getTotalCount() 获取<p>实例个数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>实例个数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAccelerateAreasResponse extends AbstractModel
 {
     /**
-     * @var array 加速地域信息。
+     * @var array <p>加速地域信息。</p>
      */
     public $AccelerateAreaSet;
 
     /**
-     * @var integer 实例个数。
+     * @var integer <p>实例个数。</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeAccelerateAreasResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AccelerateAreaSet 加速地域信息。
-     * @param integer $TotalCount 实例个数。
+     * @param array $AccelerateAreaSet <p>加速地域信息。</p>
+     * @param integer $TotalCount <p>实例个数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

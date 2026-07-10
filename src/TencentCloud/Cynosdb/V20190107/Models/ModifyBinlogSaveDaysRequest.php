@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBinlogSaveDays请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getBinlogSaveDays() 获取Binlog保留天数
- * @method void setBinlogSaveDays(integer $BinlogSaveDays) 设置Binlog保留天数
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method integer getBinlogSaveDays() 获取<p>Binlog保留天数</p>
+ * @method void setBinlogSaveDays(integer $BinlogSaveDays) 设置<p>Binlog保留天数</p>
+ * @method integer getBinlogCrossRegionSaveDays() 获取<p>跨地域备份保留时间</p><p>单位：天</p>
+ * @method void setBinlogCrossRegionSaveDays(integer $BinlogCrossRegionSaveDays) 设置<p>跨地域备份保留时间</p><p>单位：天</p>
  */
 class ModifyBinlogSaveDaysRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer Binlog保留天数
+     * @var integer <p>Binlog保留天数</p>
      */
     public $BinlogSaveDays;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param integer $BinlogSaveDays Binlog保留天数
+     * @var integer <p>跨地域备份保留时间</p><p>单位：天</p>
+     */
+    public $BinlogCrossRegionSaveDays;
+
+    /**
+     * @param string $ClusterId <p>集群ID</p>
+     * @param integer $BinlogSaveDays <p>Binlog保留天数</p>
+     * @param integer $BinlogCrossRegionSaveDays <p>跨地域备份保留时间</p><p>单位：天</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyBinlogSaveDaysRequest extends AbstractModel
 
         if (array_key_exists("BinlogSaveDays",$param) and $param["BinlogSaveDays"] !== null) {
             $this->BinlogSaveDays = $param["BinlogSaveDays"];
+        }
+
+        if (array_key_exists("BinlogCrossRegionSaveDays",$param) and $param["BinlogCrossRegionSaveDays"] !== null) {
+            $this->BinlogCrossRegionSaveDays = $param["BinlogCrossRegionSaveDays"];
         }
     }
 }

@@ -44,8 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置<p>偏移量，默认值为0。</p>
  * @method integer getLimit() 获取<p>限制数量，当前Limit最大支持3000。默认值为100。</p>
  * @method void setLimit(integer $Limit) 设置<p>限制数量，当前Limit最大支持3000。默认值为100。</p>
- * @method string getErrorOnEmpty() 获取<p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
- * @method void setErrorOnEmpty(string $ErrorOnEmpty) 设置<p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+ * @method string getErrorOnEmpty() 获取<p>查询不到数据时是否报错</p><p>枚举值：</p><ul><li>yes： 报错</li><li>no： 不报错，返回空列表</li></ul><p>默认值：yes</p>
+ * @method void setErrorOnEmpty(string $ErrorOnEmpty) 设置<p>查询不到数据时是否报错</p><p>枚举值：</p><ul><li>yes： 报错</li><li>no： 不报错，返回空列表</li></ul><p>默认值：yes</p>
+ * @method string getSubDomain() 获取<p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+ * @method void setSubDomain(string $SubDomain) 设置<p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
  */
 class DescribeRecordListRequest extends AbstractModel
 {
@@ -61,6 +63,7 @@ class DescribeRecordListRequest extends AbstractModel
 
     /**
      * @var string <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p>
+     * @deprecated
      */
     public $Subdomain;
 
@@ -110,9 +113,14 @@ class DescribeRecordListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+     * @var string <p>查询不到数据时是否报错</p><p>枚举值：</p><ul><li>yes： 报错</li><li>no： 不报错，返回空列表</li></ul><p>默认值：yes</p>
      */
     public $ErrorOnEmpty;
+
+    /**
+     * @var string <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+     */
+    public $SubDomain;
 
     /**
      * @param string $Domain <p>域名</p>
@@ -127,7 +135,8 @@ class DescribeRecordListRequest extends AbstractModel
      * @param string $SortType <p>排序方式，正序：ASC，逆序：DESC。默认值为ASC。</p>
      * @param integer $Offset <p>偏移量，默认值为0。</p>
      * @param integer $Limit <p>限制数量，当前Limit最大支持3000。默认值为100。</p>
-     * @param string $ErrorOnEmpty <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+     * @param string $ErrorOnEmpty <p>查询不到数据时是否报错</p><p>枚举值：</p><ul><li>yes： 报错</li><li>no： 不报错，返回空列表</li></ul><p>默认值：yes</p>
+     * @param string $SubDomain <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
      */
     function __construct()
     {
@@ -192,6 +201,10 @@ class DescribeRecordListRequest extends AbstractModel
 
         if (array_key_exists("ErrorOnEmpty",$param) and $param["ErrorOnEmpty"] !== null) {
             $this->ErrorOnEmpty = $param["ErrorOnEmpty"];
+        }
+
+        if (array_key_exists("SubDomain",$param) and $param["SubDomain"] !== null) {
+            $this->SubDomain = $param["SubDomain"];
         }
     }
 }

@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGpuDesc(string $GpuDesc) 设置<p>GPU信息</p>
  * @method integer getPartitionNumber() 获取<p>分区置放群组分区数</p>
  * @method void setPartitionNumber(integer $PartitionNumber) 设置<p>分区置放群组分区数</p>
+ * @method string getHCCHpcClusterId() 获取<p>高性能集群ID</p>
+ * @method void setHCCHpcClusterId(string $HCCHpcClusterId) 设置<p>高性能集群ID</p>
  */
 class Resource extends AbstractModel
 {
@@ -128,6 +130,11 @@ class Resource extends AbstractModel
     public $PartitionNumber;
 
     /**
+     * @var string <p>高性能集群ID</p>
+     */
+    public $HCCHpcClusterId;
+
+    /**
      * @param string $Spec <p>节点规格描述，如CVM.SA2。</p>
      * @param integer $StorageType <p>取值范围:<br>&quot;LOCAL_SSD&quot;   3     //本地SSD<br>&quot;CLOUD_SSD&quot;   4     //云SSD<br>&quot;CLOUD_PREMIUM&quot;  5  //高效云盘<br>&quot;CLOUD_HSSD&quot;   6    //增强型SSD云硬盘<br>&quot;CLOUD_THROUGHPUT&quot; 11//吞吐型云硬盘<br>&quot;CLOUD_TSSD&quot;  12     //极速型SSD云硬盘<br>&quot;CLOUD_BSSD&quot;    13   //通用型SSD云硬盘<br>&quot;CLOUD_BIGDATA&quot; 14   //大数据型云硬盘<br>&quot;CLOUD_HIGHIO&quot;  15   //高IO型云硬盘 </p><p>该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口</p>
      * @param string $DiskType <p>数据盘类型 取值范围：</p><p>CLOUD_SSD：表示云SSD。</p><p>CLOUD_PREMIUM：表示高效云盘。</p><p>CLOUD_BASIC：表示云硬盘。</p><p>LOCAL_BASIC：表示本地盘。</p><p>LOCAL_SSD：表示本地SSD。</p><p>CLOUD_HSSD：表示增强型SSD云硬盘。</p><p>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</p><p>CLOUD_TSSD：表示极速型SSD云硬盘。</p><p>CLOUD_BIGDATA：表示大数据型云硬盘。</p><p>CLOUD_HIGHIO：表示高IO型云硬盘。</p><p>CLOUD_BSSD：表示通用型SSD云硬盘。</p><p>REMOTE_SSD：表示远端SSD盘。</p>
@@ -144,6 +151,7 @@ class Resource extends AbstractModel
      * @param integer $DiskNum <p>本地盘数量，如2</p>
      * @param string $GpuDesc <p>GPU信息</p>
      * @param integer $PartitionNumber <p>分区置放群组分区数</p>
+     * @param string $HCCHpcClusterId <p>高性能集群ID</p>
      */
     function __construct()
     {
@@ -222,6 +230,10 @@ class Resource extends AbstractModel
 
         if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
             $this->PartitionNumber = $param["PartitionNumber"];
+        }
+
+        if (array_key_exists("HCCHpcClusterId",$param) and $param["HCCHpcClusterId"] !== null) {
+            $this->HCCHpcClusterId = $param["HCCHpcClusterId"];
         }
     }
 }

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmSmsQuota接口的配额信息
  *
- * @method string getType() 获取配额类型
- * @method void setType(string $Type) 设置配额类型
- * @method string getName() 获取配额名称
- * @method void setName(string $Name) 设置配额名称
- * @method integer getFreeLeft() 获取免费配额剩余量
- * @method void setFreeLeft(integer $FreeLeft) 设置免费配额剩余量
- * @method integer getPurchaseLeft() 获取付费配额剩余量
- * @method void setPurchaseLeft(integer $PurchaseLeft) 设置付费配额剩余量
- * @method integer getUsed() 获取已使用量
- * @method void setUsed(integer $Used) 设置已使用量
+ * @method string getType() 获取<p>配额类型</p>
+ * @method void setType(string $Type) 设置<p>配额类型</p>
+ * @method string getName() 获取<p>配额名称</p>
+ * @method void setName(string $Name) 设置<p>配额名称</p>
+ * @method integer getFreeLeft() 获取<p>免费配额剩余量</p>
+ * @method void setFreeLeft(integer $FreeLeft) 设置<p>免费配额剩余量</p>
+ * @method integer getPurchaseLeft() 获取<p>付费配额剩余量</p>
+ * @method void setPurchaseLeft(integer $PurchaseLeft) 设置<p>付费配额剩余量</p>
+ * @method integer getUsed() 获取<p>已使用量</p>
+ * @method void setUsed(integer $Used) 设置<p>已使用量</p>
  */
 class DescribeAlarmSmsQuotaQuota extends AbstractModel
 {
     /**
-     * @var string 配额类型
+     * @var string <p>配额类型</p>
      */
     public $Type;
 
     /**
-     * @var string 配额名称
+     * @var string <p>配额名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 免费配额剩余量
+     * @var integer <p>免费配额剩余量</p>
      */
     public $FreeLeft;
 
     /**
-     * @var integer 付费配额剩余量
+     * @var integer <p>付费配额剩余量</p>
      */
     public $PurchaseLeft;
 
     /**
-     * @var integer 已使用量
+     * @var integer <p>已使用量</p>
      */
     public $Used;
 
     /**
-     * @param string $Type 配额类型
-     * @param string $Name 配额名称
-     * @param integer $FreeLeft 免费配额剩余量
-     * @param integer $PurchaseLeft 付费配额剩余量
-     * @param integer $Used 已使用量
+     * @param string $Type <p>配额类型</p>
+     * @param string $Name <p>配额名称</p>
+     * @param integer $FreeLeft <p>免费配额剩余量</p>
+     * @param integer $PurchaseLeft <p>付费配额剩余量</p>
+     * @param integer $Used <p>已使用量</p>
      */
     function __construct()
     {

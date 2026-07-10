@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlow请求参数结构体
  *
-
+ * @method integer getFlowId() 获取<p>流程ID</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>流程ID</p>
  */
 class DescribeFlowRequest extends AbstractModel
 {
-
+    /**
+     * @var integer <p>流程ID</p>
+     */
+    public $FlowId;
 
     /**
-
+     * @param integer $FlowId <p>流程ID</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeFlowRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
+        }
     }
 }

@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccelerateAreas请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取符合条件实例数量。
- * @method void setLimit(integer $Limit) 设置符合条件实例数量。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method integer getOffset() 获取<p>偏移量。默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量。默认为0。</p>
+ * @method integer getLimit() 获取<p>符合条件实例数量。默认为20，最大200。</p>
+ * @method void setLimit(integer $Limit) 设置<p>符合条件实例数量。默认为20，最大200。</p>
+ * @method array getFilters() 获取<p>过滤条件。 accelerate-region- String -（过滤条件）终端节点组地域。</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。 accelerate-region- String -（过滤条件）终端节点组地域。</p>
  */
 class DescribeAccelerateAreasRequest extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var integer 偏移量。
+     * @var integer <p>偏移量。默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 符合条件实例数量。
+     * @var integer <p>符合条件实例数量。默认为20，最大200。</p>
      */
     public $Limit;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 符合条件实例数量。
+     * @var array <p>过滤条件。 accelerate-region- String -（过滤条件）终端节点组地域。</p>
+     */
+    public $Filters;
+
+    /**
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param integer $Offset <p>偏移量。默认为0。</p>
+     * @param integer $Limit <p>符合条件实例数量。默认为20，最大200。</p>
+     * @param array $Filters <p>过滤条件。 accelerate-region- String -（过滤条件）终端节点组地域。</p>
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class DescribeAccelerateAreasRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

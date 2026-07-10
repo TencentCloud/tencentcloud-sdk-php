@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyConditionList.EventMetric
  *
- * @method integer getEventId() 获取事件id
- * @method void setEventId(integer $EventId) 设置事件id
- * @method string getEventShowName() 获取事件名称
- * @method void setEventShowName(string $EventShowName) 设置事件名称
- * @method boolean getNeedRecovered() 获取是否需要恢复
- * @method void setNeedRecovered(boolean $NeedRecovered) 设置是否需要恢复
- * @method integer getType() 获取事件类型，预留字段，当前固定取值为2
- * @method void setType(integer $Type) 设置事件类型，预留字段，当前固定取值为2
+ * @method integer getEventId() 获取<p>事件id</p>
+ * @method void setEventId(integer $EventId) 设置<p>事件id</p>
+ * @method string getEventShowName() 获取<p>事件名称</p>
+ * @method void setEventShowName(string $EventShowName) 设置<p>事件名称</p>
+ * @method boolean getNeedRecovered() 获取<p>是否需要恢复</p>
+ * @method void setNeedRecovered(boolean $NeedRecovered) 设置<p>是否需要恢复</p>
+ * @method integer getType() 获取<p>事件类型，预留字段，当前固定取值为2</p>
+ * @method void setType(integer $Type) 设置<p>事件类型，预留字段，当前固定取值为2</p>
  */
 class DescribePolicyConditionListEventMetric extends AbstractModel
 {
     /**
-     * @var integer 事件id
+     * @var integer <p>事件id</p>
      */
     public $EventId;
 
     /**
-     * @var string 事件名称
+     * @var string <p>事件名称</p>
      */
     public $EventShowName;
 
     /**
-     * @var boolean 是否需要恢复
+     * @var boolean <p>是否需要恢复</p>
      */
     public $NeedRecovered;
 
     /**
-     * @var integer 事件类型，预留字段，当前固定取值为2
+     * @var integer <p>事件类型，预留字段，当前固定取值为2</p>
      */
     public $Type;
 
     /**
-     * @param integer $EventId 事件id
-     * @param string $EventShowName 事件名称
-     * @param boolean $NeedRecovered 是否需要恢复
-     * @param integer $Type 事件类型，预留字段，当前固定取值为2
+     * @param integer $EventId <p>事件id</p>
+     * @param string $EventShowName <p>事件名称</p>
+     * @param boolean $NeedRecovered <p>是否需要恢复</p>
+     * @param integer $Type <p>事件类型，预留字段，当前固定取值为2</p>
      */
     function __construct()
     {

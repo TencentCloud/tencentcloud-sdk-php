@@ -20,126 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTargetGroup请求参数结构体
  *
- * @method string getTargetType() 获取目标组类型。取值：
-- **Instance**（默认）：Cvm服务器类型或者Eni网卡类型。
- * @method void setTargetType(string $TargetType) 设置目标组类型。取值：
-- **Instance**（默认）：Cvm服务器类型或者Eni网卡类型。
- * @method string getVpcId() 获取私有网络 ID。
- * @method void setVpcId(string $VpcId) 设置私有网络 ID。
- * @method boolean getDryRun() 获取是否预览此次请求。
-- **false**（默认）：发送普通请求，直接创建目标组。
-- **true**：发送预览请求，检查创建目标组的参数、格式、业务限制等是否符合要求。
- * @method void setDryRun(boolean $DryRun) 设置是否预览此次请求。
-- **false**（默认）：发送普通请求，直接创建目标组。
-- **true**：发送预览请求，检查创建目标组的参数、格式、业务限制等是否符合要求。
- * @method HealthCheckConfig getHealthCheckConfig() 获取健康检查配置。
- * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置健康检查配置。
- * @method boolean getKeepaliveEnabled() 获取是否开启长连接。
- * @method void setKeepaliveEnabled(boolean $KeepaliveEnabled) 设置是否开启长连接。
- * @method string getProtocol() 获取后端服务协议类型。取值：
-- **HTTP**（默认）：支持绑定HTTP、HTTPS的监听器
-- **HTTPS**：支持绑定HTTPS类型的监听器
-- **GRPC**：支持绑定HTTPS类型的监听器
-- **GRPCS**：支持绑定HTTPS类型的监听器
- * @method void setProtocol(string $Protocol) 设置后端服务协议类型。取值：
-- **HTTP**（默认）：支持绑定HTTP、HTTPS的监听器
-- **HTTPS**：支持绑定HTTPS类型的监听器
-- **GRPC**：支持绑定HTTPS类型的监听器
-- **GRPCS**：支持绑定HTTPS类型的监听器
- * @method string getSchedulerAlgorithm() 获取调度算法。取值：
-- **wrr**（默认）：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
- * @method void setSchedulerAlgorithm(string $SchedulerAlgorithm) 设置调度算法。取值：
-- **wrr**（默认）：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
- * @method StickySessionConfig getStickySessionConfig() 获取会话保持配置。
- * @method void setStickySessionConfig(StickySessionConfig $StickySessionConfig) 设置会话保持配置。
- * @method array getTags() 获取标签。
- * @method void setTags(array $Tags) 设置标签。
- * @method string getTargetGroupName() 获取目标组名称。默认为目标组ID。长度为 **1-255** 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。
- * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称。默认为目标组ID。长度为 **1-255** 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。
+ * @method string getTargetType() 获取<p>目标组类型。取值：</p><ul><li><strong>Instance</strong>（默认）：Cvm服务器类型或者Eni网卡类型。</li></ul>
+ * @method void setTargetType(string $TargetType) 设置<p>目标组类型。取值：</p><ul><li><strong>Instance</strong>（默认）：Cvm服务器类型或者Eni网卡类型。</li></ul>
+ * @method string getVpcId() 获取<p>私有网络 ID。</p>
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络 ID。</p>
+ * @method boolean getDryRun() 获取<p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接创建目标组。</li><li><strong>true</strong>：发送预览请求，检查创建目标组的参数、格式、业务限制等是否符合要求。</li></ul>
+ * @method void setDryRun(boolean $DryRun) 设置<p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接创建目标组。</li><li><strong>true</strong>：发送预览请求，检查创建目标组的参数、格式、业务限制等是否符合要求。</li></ul>
+ * @method HealthCheckConfig getHealthCheckConfig() 获取<p>健康检查配置。</p>
+ * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置<p>健康检查配置。</p>
+ * @method boolean getKeepaliveEnabled() 获取<p>是否开启长连接。</p>
+ * @method void setKeepaliveEnabled(boolean $KeepaliveEnabled) 设置<p>是否开启长连接。</p>
+ * @method string getProtocol() 获取<p>后端服务协议类型。取值：</p><ul><li><strong>HTTP</strong>（默认）：支持绑定HTTP、HTTPS的监听器</li><li><strong>HTTPS</strong>：支持绑定HTTPS类型的监听器</li><li><strong>GRPC</strong>：支持绑定HTTPS类型的监听器</li><li><strong>GRPCS</strong>：支持绑定HTTPS类型的监听器</li></ul>
+ * @method void setProtocol(string $Protocol) 设置<p>后端服务协议类型。取值：</p><ul><li><strong>HTTP</strong>（默认）：支持绑定HTTP、HTTPS的监听器</li><li><strong>HTTPS</strong>：支持绑定HTTPS类型的监听器</li><li><strong>GRPC</strong>：支持绑定HTTPS类型的监听器</li><li><strong>GRPCS</strong>：支持绑定HTTPS类型的监听器</li></ul>
+ * @method string getSchedulerAlgorithm() 获取<p>调度算法。取值：</p><ul><li><strong>wrr</strong>（默认）：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
+ * @method void setSchedulerAlgorithm(string $SchedulerAlgorithm) 设置<p>调度算法。取值：</p><ul><li><strong>wrr</strong>（默认）：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
+ * @method StickySessionConfig getStickySessionConfig() 获取<p>会话保持配置。</p>
+ * @method void setStickySessionConfig(StickySessionConfig $StickySessionConfig) 设置<p>会话保持配置。</p>
+ * @method array getTags() 获取<p>标签。</p>
+ * @method void setTags(array $Tags) 设置<p>标签。</p>
+ * @method string getTargetGroupName() 获取<p>目标组名称。默认为目标组ID。长度为 <strong>1-255</strong> 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。</p>
+ * @method void setTargetGroupName(string $TargetGroupName) 设置<p>目标组名称。默认为目标组ID。长度为 <strong>1-255</strong> 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。</p>
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
     /**
-     * @var string 目标组类型。取值：
-- **Instance**（默认）：Cvm服务器类型或者Eni网卡类型。
+     * @var string <p>目标组类型。取值：</p><ul><li><strong>Instance</strong>（默认）：Cvm服务器类型或者Eni网卡类型。</li></ul>
      */
     public $TargetType;
 
     /**
-     * @var string 私有网络 ID。
+     * @var string <p>私有网络 ID。</p>
      */
     public $VpcId;
 
     /**
-     * @var boolean 是否预览此次请求。
-- **false**（默认）：发送普通请求，直接创建目标组。
-- **true**：发送预览请求，检查创建目标组的参数、格式、业务限制等是否符合要求。
+     * @var boolean <p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接创建目标组。</li><li><strong>true</strong>：发送预览请求，检查创建目标组的参数、格式、业务限制等是否符合要求。</li></ul>
      */
     public $DryRun;
 
     /**
-     * @var HealthCheckConfig 健康检查配置。
+     * @var HealthCheckConfig <p>健康检查配置。</p>
      */
     public $HealthCheckConfig;
 
     /**
-     * @var boolean 是否开启长连接。
+     * @var boolean <p>是否开启长连接。</p>
      */
     public $KeepaliveEnabled;
 
     /**
-     * @var string 后端服务协议类型。取值：
-- **HTTP**（默认）：支持绑定HTTP、HTTPS的监听器
-- **HTTPS**：支持绑定HTTPS类型的监听器
-- **GRPC**：支持绑定HTTPS类型的监听器
-- **GRPCS**：支持绑定HTTPS类型的监听器
+     * @var string <p>后端服务协议类型。取值：</p><ul><li><strong>HTTP</strong>（默认）：支持绑定HTTP、HTTPS的监听器</li><li><strong>HTTPS</strong>：支持绑定HTTPS类型的监听器</li><li><strong>GRPC</strong>：支持绑定HTTPS类型的监听器</li><li><strong>GRPCS</strong>：支持绑定HTTPS类型的监听器</li></ul>
      */
     public $Protocol;
 
     /**
-     * @var string 调度算法。取值：
-- **wrr**（默认）：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
+     * @var string <p>调度算法。取值：</p><ul><li><strong>wrr</strong>（默认）：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
      */
     public $SchedulerAlgorithm;
 
     /**
-     * @var StickySessionConfig 会话保持配置。
+     * @var StickySessionConfig <p>会话保持配置。</p>
      */
     public $StickySessionConfig;
 
     /**
-     * @var array 标签。
+     * @var array <p>标签。</p>
      */
     public $Tags;
 
     /**
-     * @var string 目标组名称。默认为目标组ID。长度为 **1-255** 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。
+     * @var string <p>目标组名称。默认为目标组ID。长度为 <strong>1-255</strong> 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。</p>
      */
     public $TargetGroupName;
 
     /**
-     * @param string $TargetType 目标组类型。取值：
-- **Instance**（默认）：Cvm服务器类型或者Eni网卡类型。
-     * @param string $VpcId 私有网络 ID。
-     * @param boolean $DryRun 是否预览此次请求。
-- **false**（默认）：发送普通请求，直接创建目标组。
-- **true**：发送预览请求，检查创建目标组的参数、格式、业务限制等是否符合要求。
-     * @param HealthCheckConfig $HealthCheckConfig 健康检查配置。
-     * @param boolean $KeepaliveEnabled 是否开启长连接。
-     * @param string $Protocol 后端服务协议类型。取值：
-- **HTTP**（默认）：支持绑定HTTP、HTTPS的监听器
-- **HTTPS**：支持绑定HTTPS类型的监听器
-- **GRPC**：支持绑定HTTPS类型的监听器
-- **GRPCS**：支持绑定HTTPS类型的监听器
-     * @param string $SchedulerAlgorithm 调度算法。取值：
-- **wrr**（默认）：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
-     * @param StickySessionConfig $StickySessionConfig 会话保持配置。
-     * @param array $Tags 标签。
-     * @param string $TargetGroupName 目标组名称。默认为目标组ID。长度为 **1-255** 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。
+     * @param string $TargetType <p>目标组类型。取值：</p><ul><li><strong>Instance</strong>（默认）：Cvm服务器类型或者Eni网卡类型。</li></ul>
+     * @param string $VpcId <p>私有网络 ID。</p>
+     * @param boolean $DryRun <p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接创建目标组。</li><li><strong>true</strong>：发送预览请求，检查创建目标组的参数、格式、业务限制等是否符合要求。</li></ul>
+     * @param HealthCheckConfig $HealthCheckConfig <p>健康检查配置。</p>
+     * @param boolean $KeepaliveEnabled <p>是否开启长连接。</p>
+     * @param string $Protocol <p>后端服务协议类型。取值：</p><ul><li><strong>HTTP</strong>（默认）：支持绑定HTTP、HTTPS的监听器</li><li><strong>HTTPS</strong>：支持绑定HTTPS类型的监听器</li><li><strong>GRPC</strong>：支持绑定HTTPS类型的监听器</li><li><strong>GRPCS</strong>：支持绑定HTTPS类型的监听器</li></ul>
+     * @param string $SchedulerAlgorithm <p>调度算法。取值：</p><ul><li><strong>wrr</strong>（默认）：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
+     * @param StickySessionConfig $StickySessionConfig <p>会话保持配置。</p>
+     * @param array $Tags <p>标签。</p>
+     * @param string $TargetGroupName <p>目标组名称。默认为目标组ID。长度为 <strong>1-255</strong> 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。</p>
      */
     function __construct()
     {

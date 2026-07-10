@@ -20,97 +20,97 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyConditionList策略条件
  *
- * @method string getPolicyViewName() 获取策略视图名称
- * @method void setPolicyViewName(string $PolicyViewName) 设置策略视图名称
- * @method array getEventMetrics() 获取事件告警条件
+ * @method string getPolicyViewName() 获取<p>策略视图名称</p>
+ * @method void setPolicyViewName(string $PolicyViewName) 设置<p>策略视图名称</p>
+ * @method array getEventMetrics() 获取<p>事件告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventMetrics(array $EventMetrics) 设置事件告警条件
+ * @method void setEventMetrics(array $EventMetrics) 设置<p>事件告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsSupportMultiRegion() 获取是否支持多地域
- * @method void setIsSupportMultiRegion(boolean $IsSupportMultiRegion) 设置是否支持多地域
- * @method array getMetrics() 获取指标告警条件
+ * @method boolean getIsSupportMultiRegion() 获取<p>是否支持多地域</p>
+ * @method void setIsSupportMultiRegion(boolean $IsSupportMultiRegion) 设置<p>是否支持多地域</p>
+ * @method array getMetrics() 获取<p>指标告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetrics(array $Metrics) 设置指标告警条件
+ * @method void setMetrics(array $Metrics) 设置<p>指标告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取策略类型名称
- * @method void setName(string $Name) 设置策略类型名称
- * @method integer getSortId() 获取排序id
- * @method void setSortId(integer $SortId) 设置排序id
- * @method boolean getSupportDefault() 获取是否支持默认策略
- * @method void setSupportDefault(boolean $SupportDefault) 设置是否支持默认策略
- * @method array getSupportRegions() 获取支持该策略类型的地域列表
+ * @method string getName() 获取<p>策略类型名称</p>
+ * @method void setName(string $Name) 设置<p>策略类型名称</p>
+ * @method integer getSortId() 获取<p>排序id</p>
+ * @method void setSortId(integer $SortId) 设置<p>排序id</p>
+ * @method boolean getSupportDefault() 获取<p>是否支持默认策略</p>
+ * @method void setSupportDefault(boolean $SupportDefault) 设置<p>是否支持默认策略</p>
+ * @method array getSupportRegions() 获取<p>支持该策略类型的地域列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSupportRegions(array $SupportRegions) 设置支持该策略类型的地域列表
+ * @method void setSupportRegions(array $SupportRegions) 设置<p>支持该策略类型的地域列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribePolicyConditionListResponseDeprecatingInfo getDeprecatingInfo() 获取弃用信息
+ * @method DescribePolicyConditionListResponseDeprecatingInfo getDeprecatingInfo() 获取<p>弃用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeprecatingInfo(DescribePolicyConditionListResponseDeprecatingInfo $DeprecatingInfo) 设置弃用信息
+ * @method void setDeprecatingInfo(DescribePolicyConditionListResponseDeprecatingInfo $DeprecatingInfo) 设置<p>弃用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePolicyConditionListCondition extends AbstractModel
 {
     /**
-     * @var string 策略视图名称
+     * @var string <p>策略视图名称</p>
      */
     public $PolicyViewName;
 
     /**
-     * @var array 事件告警条件
+     * @var array <p>事件告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventMetrics;
 
     /**
-     * @var boolean 是否支持多地域
+     * @var boolean <p>是否支持多地域</p>
      */
     public $IsSupportMultiRegion;
 
     /**
-     * @var array 指标告警条件
+     * @var array <p>指标告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metrics;
 
     /**
-     * @var string 策略类型名称
+     * @var string <p>策略类型名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 排序id
+     * @var integer <p>排序id</p>
      */
     public $SortId;
 
     /**
-     * @var boolean 是否支持默认策略
+     * @var boolean <p>是否支持默认策略</p>
      */
     public $SupportDefault;
 
     /**
-     * @var array 支持该策略类型的地域列表
+     * @var array <p>支持该策略类型的地域列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportRegions;
 
     /**
-     * @var DescribePolicyConditionListResponseDeprecatingInfo 弃用信息
+     * @var DescribePolicyConditionListResponseDeprecatingInfo <p>弃用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeprecatingInfo;
 
     /**
-     * @param string $PolicyViewName 策略视图名称
-     * @param array $EventMetrics 事件告警条件
+     * @param string $PolicyViewName <p>策略视图名称</p>
+     * @param array $EventMetrics <p>事件告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsSupportMultiRegion 是否支持多地域
-     * @param array $Metrics 指标告警条件
+     * @param boolean $IsSupportMultiRegion <p>是否支持多地域</p>
+     * @param array $Metrics <p>指标告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 策略类型名称
-     * @param integer $SortId 排序id
-     * @param boolean $SupportDefault 是否支持默认策略
-     * @param array $SupportRegions 支持该策略类型的地域列表
+     * @param string $Name <p>策略类型名称</p>
+     * @param integer $SortId <p>排序id</p>
+     * @param boolean $SupportDefault <p>是否支持默认策略</p>
+     * @param array $SupportRegions <p>支持该策略类型的地域列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribePolicyConditionListResponseDeprecatingInfo $DeprecatingInfo 弃用信息
+     * @param DescribePolicyConditionListResponseDeprecatingInfo $DeprecatingInfo <p>弃用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

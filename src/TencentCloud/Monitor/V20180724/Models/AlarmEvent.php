@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警事件
  *
- * @method string getEventName() 获取事件名
- * @method void setEventName(string $EventName) 设置事件名
- * @method string getDescription() 获取展示的事件名
- * @method void setDescription(string $Description) 设置展示的事件名
- * @method string getNamespace() 获取告警策略类型
- * @method void setNamespace(string $Namespace) 设置告警策略类型
+ * @method string getEventName() 获取<p>事件名</p>
+ * @method void setEventName(string $EventName) 设置<p>事件名</p>
+ * @method string getDescription() 获取<p>展示的事件名</p>
+ * @method void setDescription(string $Description) 设置<p>展示的事件名</p>
+ * @method string getNamespace() 获取<p>告警策略类型</p>
+ * @method void setNamespace(string $Namespace) 设置<p>告警策略类型</p>
  */
 class AlarmEvent extends AbstractModel
 {
     /**
-     * @var string 事件名
+     * @var string <p>事件名</p>
      */
     public $EventName;
 
     /**
-     * @var string 展示的事件名
+     * @var string <p>展示的事件名</p>
      */
     public $Description;
 
     /**
-     * @var string 告警策略类型
+     * @var string <p>告警策略类型</p>
      */
     public $Namespace;
 
     /**
-     * @param string $EventName 事件名
-     * @param string $Description 展示的事件名
-     * @param string $Namespace 告警策略类型
+     * @param string $EventName <p>事件名</p>
+     * @param string $Description <p>展示的事件名</p>
+     * @param string $Namespace <p>告警策略类型</p>
      */
     function __construct()
     {

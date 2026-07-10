@@ -20,38 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBasicDeviceStatus返回参数结构体
  *
- * @method array getData() 获取返回资源及状态，状态码：
-1 - 封堵状态
-2 - 正常状态
-3 - 攻击状态
- * @method void setData(array $Data) 设置返回资源及状态，状态码：
-1 - 封堵状态
-2 - 正常状态
-3 - 攻击状态
- * @method array getCLBData() 获取域名化资产的名称
- * @method void setCLBData(array $CLBData) 设置域名化资产的名称
- * @method array getCnameWafData() 获取cnamewaf资源状态
- * @method void setCnameWafData(array $CnameWafData) 设置cnamewaf资源状态
+ * @method array getData() 获取<p>返回资源及状态，状态码：<br>1 - 封堵状态<br>2 - 正常状态<br>3 - 攻击状态</p>
+ * @method void setData(array $Data) 设置<p>返回资源及状态，状态码：<br>1 - 封堵状态<br>2 - 正常状态<br>3 - 攻击状态</p>
+ * @method array getCLBData() 获取<p>域名化资产的名称</p>
+ * @method void setCLBData(array $CLBData) 设置<p>域名化资产的名称</p>
+ * @method array getCnameWafData() 获取<p>cnamewaf资源状态</p>
+ * @method void setCnameWafData(array $CnameWafData) 设置<p>cnamewaf资源状态</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBasicDeviceStatusResponse extends AbstractModel
 {
     /**
-     * @var array 返回资源及状态，状态码：
-1 - 封堵状态
-2 - 正常状态
-3 - 攻击状态
+     * @var array <p>返回资源及状态，状态码：<br>1 - 封堵状态<br>2 - 正常状态<br>3 - 攻击状态</p>
      */
     public $Data;
 
     /**
-     * @var array 域名化资产的名称
+     * @var array <p>域名化资产的名称</p>
      */
     public $CLBData;
 
     /**
-     * @var array cnamewaf资源状态
+     * @var array <p>cnamewaf资源状态</p>
      */
     public $CnameWafData;
 
@@ -61,12 +52,9 @@ class DescribeBasicDeviceStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 返回资源及状态，状态码：
-1 - 封堵状态
-2 - 正常状态
-3 - 攻击状态
-     * @param array $CLBData 域名化资产的名称
-     * @param array $CnameWafData cnamewaf资源状态
+     * @param array $Data <p>返回资源及状态，状态码：<br>1 - 封堵状态<br>2 - 正常状态<br>3 - 攻击状态</p>
+     * @param array $CLBData <p>域名化资产的名称</p>
+     * @param array $CnameWafData <p>cnamewaf资源状态</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

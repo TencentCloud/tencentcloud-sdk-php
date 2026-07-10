@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) 设置监听器 ID，格式为 lst- 后接 8 位字母数字。
  * @method string getLoadBalancerId() 获取负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+ * @method array getRules() 获取转发规则列表。
+ * @method void setRules(array $Rules) 设置转发规则列表。
  * @method string getClientToken() 获取客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。  若您未指定，则系统自动使用API请求的RequestId作为ClientToken标识。每次API请求的RequestId不一样。
  * @method void setClientToken(string $ClientToken) 设置客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。  若您未指定，则系统自动使用API请求的RequestId作为ClientToken标识。每次API请求的RequestId不一样。
  * @method boolean getDryRun() 获取是否只预检查此次请求。
  * @method void setDryRun(boolean $DryRun) 设置是否只预检查此次请求。
- * @method array getRules() 获取转发规则列表。
- * @method void setRules(array $Rules) 设置转发规则列表。
  */
 class CreateRulesRequest extends AbstractModel
 {
@@ -44,6 +44,11 @@ class CreateRulesRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
+     * @var array 转发规则列表。
+     */
+    public $Rules;
+
+    /**
      * @var string 客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。  若您未指定，则系统自动使用API请求的RequestId作为ClientToken标识。每次API请求的RequestId不一样。
      */
     public $ClientToken;
@@ -54,16 +59,11 @@ class CreateRulesRequest extends AbstractModel
     public $DryRun;
 
     /**
-     * @var array 转发规则列表。
-     */
-    public $Rules;
-
-    /**
      * @param string $ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
      * @param string $LoadBalancerId 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * @param array $Rules 转发规则列表。
      * @param string $ClientToken 客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。  若您未指定，则系统自动使用API请求的RequestId作为ClientToken标识。每次API请求的RequestId不一样。
      * @param boolean $DryRun 是否只预检查此次请求。
-     * @param array $Rules 转发规则列表。
      */
     function __construct()
     {
@@ -86,14 +86,6 @@ class CreateRulesRequest extends AbstractModel
             $this->LoadBalancerId = $param["LoadBalancerId"];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
-        }
-
-        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
-            $this->DryRun = $param["DryRun"];
-        }
-
         if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
             $this->Rules = [];
             foreach ($param["Rules"] as $key => $value){
@@ -101,6 +93,14 @@ class CreateRulesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

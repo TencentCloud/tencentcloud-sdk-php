@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResolveCount返回参数结构体
  *
- * @method array getData() 获取解析量明细
- * @method void setData(array $Data) 设置解析量明细
- * @method ResolveCountInfo getInfo() 获取解析量统计信息
- * @method void setInfo(ResolveCountInfo $Info) 设置解析量统计信息
- * @method array getAliasData() 获取别名解析量明细
- * @method void setAliasData(array $AliasData) 设置别名解析量明细
+ * @method array getData() 获取<p>解析量明细</p>
+ * @method void setData(array $Data) 设置<p>解析量明细</p>
+ * @method ResolveCountInfo getInfo() 获取<p>解析量统计信息</p>
+ * @method void setInfo(ResolveCountInfo $Info) 设置<p>解析量统计信息</p>
+ * @method array getAliasData() 获取<p>别名解析量明细</p>
+ * @method void setAliasData(array $AliasData) 设置<p>别名解析量明细</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeResolveCountResponse extends AbstractModel
 {
     /**
-     * @var array 解析量明细
+     * @var array <p>解析量明细</p>
      */
     public $Data;
 
     /**
-     * @var ResolveCountInfo 解析量统计信息
+     * @var ResolveCountInfo <p>解析量统计信息</p>
      */
     public $Info;
 
     /**
-     * @var array 别名解析量明细
+     * @var array <p>别名解析量明细</p>
      */
     public $AliasData;
 
@@ -52,9 +52,9 @@ class DescribeResolveCountResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 解析量明细
-     * @param ResolveCountInfo $Info 解析量统计信息
-     * @param array $AliasData 别名解析量明细
+     * @param array $Data <p>解析量明细</p>
+     * @param ResolveCountInfo $Info <p>解析量统计信息</p>
+     * @param array $AliasData <p>别名解析量明细</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

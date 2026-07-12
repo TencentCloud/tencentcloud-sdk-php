@@ -20,82 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportContractComparisonTask请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行合同审查任务的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行合同审查任务的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method string getTaskId() 获取合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。
- * @method void setTaskId(string $TaskId) 设置合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。
- * @method integer getExportType() 获取导出对比结果文件类型。
-类型如下：
-<ul>
-<li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li>
-<li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li>
-</ul>
- * @method void setExportType(integer $ExportType) 设置导出对比结果文件类型。
-类型如下：
-<ul>
-<li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li>
-<li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li>
-</ul>
- * @method boolean getIgnore() 获取是否忽略，适用于PDF。
-<ul>
-<li> **true**：导出文件标注去掉忽略项。</li>
-<li> **false**：导出文件包含所有对比点。</li>
-</ul>
- * @method void setIgnore(boolean $Ignore) 设置是否忽略，适用于PDF。
-<ul>
-<li> **true**：导出文件标注去掉忽略项。</li>
-<li> **false**：导出文件包含所有对比点。</li>
-</ul>
+ * @method UserInfo getOperator() 获取<p>执行合同审查任务的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>执行合同审查任务的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method string getTaskId() 获取<p>合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。</p>
+ * @method integer getExportType() 获取<p>导出对比结果文件类型。<br>类型如下：</p><ul><li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li><li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li></ul>
+ * @method void setExportType(integer $ExportType) 设置<p>导出对比结果文件类型。<br>类型如下：</p><ul><li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li><li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li></ul>
+ * @method boolean getIgnore() 获取<p>是否忽略，适用于PDF。</p><ul><li> **true**：导出文件标注去掉忽略项。</li><li> **false**：导出文件包含所有对比点。</li></ul>
+ * @method void setIgnore(boolean $Ignore) 设置<p>是否忽略，适用于PDF。</p><ul><li> **true**：导出文件标注去掉忽略项。</li><li> **false**：导出文件包含所有对比点。</li></ul>
  */
 class ExportContractComparisonTaskRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行合同审查任务的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @var UserInfo <p>执行合同审查任务的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public $Operator;
 
     /**
-     * @var string 合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。
+     * @var string <p>合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 导出对比结果文件类型。
-类型如下：
-<ul>
-<li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li>
-<li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li>
-</ul>
+     * @var integer <p>导出对比结果文件类型。<br>类型如下：</p><ul><li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li><li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li></ul>
      */
     public $ExportType;
 
     /**
-     * @var boolean 是否忽略，适用于PDF。
-<ul>
-<li> **true**：导出文件标注去掉忽略项。</li>
-<li> **false**：导出文件包含所有对比点。</li>
-</ul>
+     * @var boolean <p>是否忽略，适用于PDF。</p><ul><li> **true**：导出文件标注去掉忽略项。</li><li> **false**：导出文件包含所有对比点。</li></ul>
      */
     public $Ignore;
 
     /**
-     * @param UserInfo $Operator 执行合同审查任务的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $TaskId 合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。
-     * @param integer $ExportType 导出对比结果文件类型。
-类型如下：
-<ul>
-<li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li>
-<li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li>
-</ul>
-     * @param boolean $Ignore 是否忽略，适用于PDF。
-<ul>
-<li> **true**：导出文件标注去掉忽略项。</li>
-<li> **false**：导出文件包含所有对比点。</li>
-</ul>
+     * @param UserInfo $Operator <p>执行合同审查任务的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param string $TaskId <p>合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。</p>
+     * @param integer $ExportType <p>导出对比结果文件类型。<br>类型如下：</p><ul><li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li><li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li></ul>
+     * @param boolean $Ignore <p>是否忽略，适用于PDF。</p><ul><li> **true**：导出文件标注去掉忽略项。</li><li> **false**：导出文件包含所有对比点。</li></ul>
      */
     function __construct()
     {

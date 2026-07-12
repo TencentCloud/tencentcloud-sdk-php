@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Hai\V20230812\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteService请求参数结构体
+ * 参考音频信息。
  *
- * @method string getServiceId() 获取<p>服务ID</p>
- * @method void setServiceId(string $ServiceId) 设置<p>服务ID</p>
+ * @method string getAudioUrl() 获取<p>参考音频URL信息。需外网可访问。</p>
+ * @method void setAudioUrl(string $AudioUrl) 设置<p>参考音频URL信息。需外网可访问。</p>
  */
-class DeleteServiceRequest extends AbstractModel
+class AigcVideoReferenceAudioInfo extends AbstractModel
 {
     /**
-     * @var string <p>服务ID</p>
+     * @var string <p>参考音频URL信息。需外网可访问。</p>
      */
-    public $ServiceId;
+    public $AudioUrl;
 
     /**
-     * @param string $ServiceId <p>服务ID</p>
+     * @param string $AudioUrl <p>参考音频URL信息。需外网可访问。</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteServiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
+            $this->AudioUrl = $param["AudioUrl"];
         }
     }
 }

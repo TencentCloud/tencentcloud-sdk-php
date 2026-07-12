@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteApiKey请求参数结构体
  *
-
+ * @method string getApiKeyId() 获取<p>API 密钥 ID。</p>
+ * @method void setApiKeyId(string $ApiKeyId) 设置<p>API 密钥 ID。</p>
+ * @method string getPlatform() 获取<p>平台类型。取值：maas。</p>
+ * @method void setPlatform(string $Platform) 设置<p>平台类型。取值：maas。</p>
  */
 class DeleteApiKeyRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>API 密钥 ID。</p>
+     */
+    public $ApiKeyId;
 
     /**
+     * @var string <p>平台类型。取值：maas。</p>
+     */
+    public $Platform;
 
+    /**
+     * @param string $ApiKeyId <p>API 密钥 ID。</p>
+     * @param string $Platform <p>平台类型。取值：maas。</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DeleteApiKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ApiKeyId",$param) and $param["ApiKeyId"] !== null) {
+            $this->ApiKeyId = $param["ApiKeyId"];
+        }
 
+        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
+            $this->Platform = $param["Platform"];
+        }
     }
 }

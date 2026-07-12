@@ -20,162 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 配置文件发布
  *
- * @method integer getId() 获取配置文件发布id
- * @method void setId(integer $Id) 设置配置文件发布id
- * @method string getName() 获取配置文件发布名称
- * @method void setName(string $Name) 设置配置文件发布名称
- * @method string getNamespace() 获取配置文件发布命名空间
- * @method void setNamespace(string $Namespace) 设置配置文件发布命名空间
- * @method string getGroup() 获取配置文件发布组
- * @method void setGroup(string $Group) 设置配置文件发布组
- * @method string getFileName() 获取配置文件发布文件名称
- * @method void setFileName(string $FileName) 设置配置文件发布文件名称
- * @method string getContent() 获取配置文件发布内容
- * @method void setContent(string $Content) 设置配置文件发布内容
- * @method string getComment() 获取配置文件发布注释
- * @method void setComment(string $Comment) 设置配置文件发布注释
- * @method string getMd5() 获取配置文件发布Md5
- * @method void setMd5(string $Md5) 设置配置文件发布Md5
- * @method integer getVersion() 获取配置文件发布版本
- * @method void setVersion(integer $Version) 设置配置文件发布版本
- * @method string getCreateTime() 获取配置文件发布创建时间
- * @method void setCreateTime(string $CreateTime) 设置配置文件发布创建时间
- * @method string getCreateBy() 获取配置文件发布创建者
- * @method void setCreateBy(string $CreateBy) 设置配置文件发布创建者
- * @method string getModifyTime() 获取配置文件发布修改时间
- * @method void setModifyTime(string $ModifyTime) 设置配置文件发布修改时间
- * @method string getModifyBy() 获取配置文件发布修改者
- * @method void setModifyBy(string $ModifyBy) 设置配置文件发布修改者
- * @method string getReleaseDescription() 获取发布描述
- * @method void setReleaseDescription(string $ReleaseDescription) 设置发布描述
- * @method boolean getActive() 获取是否生效
- * @method void setActive(boolean $Active) 设置是否生效
- * @method string getFormat() 获取格式
- * @method void setFormat(string $Format) 设置格式
- * @method string getConfigFileId() 获取配置文件ID
- * @method void setConfigFileId(string $ConfigFileId) 设置配置文件ID
- * @method integer getConfigFileSupportedClient() 获取配置文件类型
- * @method void setConfigFileSupportedClient(integer $ConfigFileSupportedClient) 设置配置文件类型
- * @method ConfigFilePersistent getConfigFilePersistent() 获取配置文件持久化
- * @method void setConfigFilePersistent(ConfigFilePersistent $ConfigFilePersistent) 设置配置文件持久化
+ * @method integer getId() 获取<p>配置文件发布id</p>
+ * @method void setId(integer $Id) 设置<p>配置文件发布id</p>
+ * @method string getName() 获取<p>配置文件发布名称</p>
+ * @method void setName(string $Name) 设置<p>配置文件发布名称</p>
+ * @method string getNamespace() 获取<p>配置文件发布命名空间</p>
+ * @method void setNamespace(string $Namespace) 设置<p>配置文件发布命名空间</p>
+ * @method string getGroup() 获取<p>配置文件发布组</p>
+ * @method void setGroup(string $Group) 设置<p>配置文件发布组</p>
+ * @method string getFileName() 获取<p>配置文件发布文件名称</p>
+ * @method void setFileName(string $FileName) 设置<p>配置文件发布文件名称</p>
+ * @method string getContent() 获取<p>配置文件发布内容</p>
+ * @method void setContent(string $Content) 设置<p>配置文件发布内容</p>
+ * @method string getComment() 获取<p>配置文件发布注释</p>
+ * @method void setComment(string $Comment) 设置<p>配置文件发布注释</p>
+ * @method string getMd5() 获取<p>配置文件发布Md5</p>
+ * @method void setMd5(string $Md5) 设置<p>配置文件发布Md5</p>
+ * @method integer getVersion() 获取<p>配置文件发布版本</p>
+ * @method void setVersion(integer $Version) 设置<p>配置文件发布版本</p>
+ * @method string getCreateTime() 获取<p>配置文件发布创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>配置文件发布创建时间</p>
+ * @method string getCreateBy() 获取<p>配置文件发布创建者</p>
+ * @method void setCreateBy(string $CreateBy) 设置<p>配置文件发布创建者</p>
+ * @method string getModifyTime() 获取<p>配置文件发布修改时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>配置文件发布修改时间</p>
+ * @method string getModifyBy() 获取<p>配置文件发布修改者</p>
+ * @method void setModifyBy(string $ModifyBy) 设置<p>配置文件发布修改者</p>
+ * @method string getReleaseDescription() 获取<p>发布描述</p>
+ * @method void setReleaseDescription(string $ReleaseDescription) 设置<p>发布描述</p>
+ * @method boolean getActive() 获取<p>是否生效</p>
+ * @method void setActive(boolean $Active) 设置<p>是否生效</p>
+ * @method string getFormat() 获取<p>格式</p>
+ * @method void setFormat(string $Format) 设置<p>格式</p>
+ * @method string getConfigFileId() 获取<p>配置文件ID</p>
+ * @method void setConfigFileId(string $ConfigFileId) 设置<p>配置文件ID</p>
+ * @method integer getConfigFileSupportedClient() 获取<p>配置文件类型</p>
+ * @method void setConfigFileSupportedClient(integer $ConfigFileSupportedClient) 设置<p>配置文件类型</p>
+ * @method ConfigFilePersistent getConfigFilePersistent() 获取<p>配置文件持久化</p>
+ * @method void setConfigFilePersistent(ConfigFilePersistent $ConfigFilePersistent) 设置<p>配置文件持久化</p>
+ * @method array getBetaLabels() 获取<p>灰度标签</p>
+ * @method void setBetaLabels(array $BetaLabels) 设置<p>灰度标签</p>
+ * @method string getReleaseType() 获取<p>发布类型</p><p>枚举值：</p><ul><li>gary： 灰度发布</li></ul>
+ * @method void setReleaseType(string $ReleaseType) 设置<p>发布类型</p><p>枚举值：</p><ul><li>gary： 灰度发布</li></ul>
  */
 class ConfigFileRelease extends AbstractModel
 {
     /**
-     * @var integer 配置文件发布id
+     * @var integer <p>配置文件发布id</p>
      */
     public $Id;
 
     /**
-     * @var string 配置文件发布名称
+     * @var string <p>配置文件发布名称</p>
      */
     public $Name;
 
     /**
-     * @var string 配置文件发布命名空间
+     * @var string <p>配置文件发布命名空间</p>
      */
     public $Namespace;
 
     /**
-     * @var string 配置文件发布组
+     * @var string <p>配置文件发布组</p>
      */
     public $Group;
 
     /**
-     * @var string 配置文件发布文件名称
+     * @var string <p>配置文件发布文件名称</p>
      */
     public $FileName;
 
     /**
-     * @var string 配置文件发布内容
+     * @var string <p>配置文件发布内容</p>
      */
     public $Content;
 
     /**
-     * @var string 配置文件发布注释
+     * @var string <p>配置文件发布注释</p>
      */
     public $Comment;
 
     /**
-     * @var string 配置文件发布Md5
+     * @var string <p>配置文件发布Md5</p>
      */
     public $Md5;
 
     /**
-     * @var integer 配置文件发布版本
+     * @var integer <p>配置文件发布版本</p>
      */
     public $Version;
 
     /**
-     * @var string 配置文件发布创建时间
+     * @var string <p>配置文件发布创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 配置文件发布创建者
+     * @var string <p>配置文件发布创建者</p>
      */
     public $CreateBy;
 
     /**
-     * @var string 配置文件发布修改时间
+     * @var string <p>配置文件发布修改时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 配置文件发布修改者
+     * @var string <p>配置文件发布修改者</p>
      */
     public $ModifyBy;
 
     /**
-     * @var string 发布描述
+     * @var string <p>发布描述</p>
      */
     public $ReleaseDescription;
 
     /**
-     * @var boolean 是否生效
+     * @var boolean <p>是否生效</p>
      */
     public $Active;
 
     /**
-     * @var string 格式
+     * @var string <p>格式</p>
      */
     public $Format;
 
     /**
-     * @var string 配置文件ID
+     * @var string <p>配置文件ID</p>
      */
     public $ConfigFileId;
 
     /**
-     * @var integer 配置文件类型
+     * @var integer <p>配置文件类型</p>
      */
     public $ConfigFileSupportedClient;
 
     /**
-     * @var ConfigFilePersistent 配置文件持久化
+     * @var ConfigFilePersistent <p>配置文件持久化</p>
      */
     public $ConfigFilePersistent;
 
     /**
-     * @param integer $Id 配置文件发布id
-     * @param string $Name 配置文件发布名称
-     * @param string $Namespace 配置文件发布命名空间
-     * @param string $Group 配置文件发布组
-     * @param string $FileName 配置文件发布文件名称
-     * @param string $Content 配置文件发布内容
-     * @param string $Comment 配置文件发布注释
-     * @param string $Md5 配置文件发布Md5
-     * @param integer $Version 配置文件发布版本
-     * @param string $CreateTime 配置文件发布创建时间
-     * @param string $CreateBy 配置文件发布创建者
-     * @param string $ModifyTime 配置文件发布修改时间
-     * @param string $ModifyBy 配置文件发布修改者
-     * @param string $ReleaseDescription 发布描述
-     * @param boolean $Active 是否生效
-     * @param string $Format 格式
-     * @param string $ConfigFileId 配置文件ID
-     * @param integer $ConfigFileSupportedClient 配置文件类型
-     * @param ConfigFilePersistent $ConfigFilePersistent 配置文件持久化
+     * @var array <p>灰度标签</p>
+     */
+    public $BetaLabels;
+
+    /**
+     * @var string <p>发布类型</p><p>枚举值：</p><ul><li>gary： 灰度发布</li></ul>
+     */
+    public $ReleaseType;
+
+    /**
+     * @param integer $Id <p>配置文件发布id</p>
+     * @param string $Name <p>配置文件发布名称</p>
+     * @param string $Namespace <p>配置文件发布命名空间</p>
+     * @param string $Group <p>配置文件发布组</p>
+     * @param string $FileName <p>配置文件发布文件名称</p>
+     * @param string $Content <p>配置文件发布内容</p>
+     * @param string $Comment <p>配置文件发布注释</p>
+     * @param string $Md5 <p>配置文件发布Md5</p>
+     * @param integer $Version <p>配置文件发布版本</p>
+     * @param string $CreateTime <p>配置文件发布创建时间</p>
+     * @param string $CreateBy <p>配置文件发布创建者</p>
+     * @param string $ModifyTime <p>配置文件发布修改时间</p>
+     * @param string $ModifyBy <p>配置文件发布修改者</p>
+     * @param string $ReleaseDescription <p>发布描述</p>
+     * @param boolean $Active <p>是否生效</p>
+     * @param string $Format <p>格式</p>
+     * @param string $ConfigFileId <p>配置文件ID</p>
+     * @param integer $ConfigFileSupportedClient <p>配置文件类型</p>
+     * @param ConfigFilePersistent $ConfigFilePersistent <p>配置文件持久化</p>
+     * @param array $BetaLabels <p>灰度标签</p>
+     * @param string $ReleaseType <p>发布类型</p><p>枚举值：</p><ul><li>gary： 灰度发布</li></ul>
      */
     function __construct()
     {
@@ -265,6 +281,19 @@ class ConfigFileRelease extends AbstractModel
         if (array_key_exists("ConfigFilePersistent",$param) and $param["ConfigFilePersistent"] !== null) {
             $this->ConfigFilePersistent = new ConfigFilePersistent();
             $this->ConfigFilePersistent->deserialize($param["ConfigFilePersistent"]);
+        }
+
+        if (array_key_exists("BetaLabels",$param) and $param["BetaLabels"] !== null) {
+            $this->BetaLabels = [];
+            foreach ($param["BetaLabels"] as $key => $value){
+                $obj = new BetaLabel();
+                $obj->deserialize($value);
+                array_push($this->BetaLabels, $obj);
+            }
+        }
+
+        if (array_key_exists("ReleaseType",$param) and $param["ReleaseType"] !== null) {
+            $this->ReleaseType = $param["ReleaseType"];
         }
     }
 }

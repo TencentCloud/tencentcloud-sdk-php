@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserInfo返回参数结构体
  *
- * @method UserDetailInfo getUserInfo() 获取用户详细信息
+ * @method UserDetailInfo getUserInfo() 获取<p>用户详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserInfo(UserDetailInfo $UserInfo) 设置用户详细信息
+ * @method void setUserInfo(UserDetailInfo $UserInfo) 设置<p>用户详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUserInfoResponse extends AbstractModel
 {
     /**
-     * @var UserDetailInfo 用户详细信息
+     * @var UserDetailInfo <p>用户详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserInfo;
@@ -41,7 +41,7 @@ class DescribeUserInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param UserDetailInfo $UserInfo 用户详细信息
+     * @param UserDetailInfo $UserInfo <p>用户详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachUserPolicy请求参数结构体
  *
- * @method string getUserId() 获取用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
- * @method void setUserId(string $UserId) 设置用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
- * @method array getPolicySet() 获取鉴权策略集合
- * @method void setPolicySet(array $PolicySet) 设置鉴权策略集合
- * @method string getAccountType() 获取用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
- * @method void setAccountType(string $AccountType) 设置用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+ * @method string getUserId() 获取<p>用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。</p>
+ * @method void setUserId(string $UserId) 设置<p>用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。</p>
+ * @method array getPolicySet() 获取<p>鉴权策略集合</p>
+ * @method void setPolicySet(array $PolicySet) 设置<p>鉴权策略集合</p>
+ * @method string getAccountType() 获取<p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
+ * @method void setAccountType(string $AccountType) 设置<p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
  */
 class AttachUserPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
+     * @var string <p>用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。</p>
      */
     public $UserId;
 
     /**
-     * @var array 鉴权策略集合
+     * @var array <p>鉴权策略集合</p>
      */
     public $PolicySet;
 
     /**
-     * @var string 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @var string <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
      */
     public $AccountType;
 
     /**
-     * @param string $UserId 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
-     * @param array $PolicySet 鉴权策略集合
-     * @param string $AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @param string $UserId <p>用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。</p>
+     * @param array $PolicySet <p>鉴权策略集合</p>
+     * @param string $AccountType <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
      */
     function __construct()
     {

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Hai\V20230812\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteService请求参数结构体
+ * DescribeClusterLevels请求参数结构体
  *
- * @method string getServiceId() 获取<p>服务ID</p>
- * @method void setServiceId(string $ServiceId) 设置<p>服务ID</p>
+ * @method string getZone() 获取可用区
+ * @method void setZone(string $Zone) 设置可用区
  */
-class DeleteServiceRequest extends AbstractModel
+class DescribeClusterLevelsRequest extends AbstractModel
 {
     /**
-     * @var string <p>服务ID</p>
+     * @var string 可用区
      */
-    public $ServiceId;
+    public $Zone;
 
     /**
-     * @param string $ServiceId <p>服务ID</p>
+     * @param string $Zone 可用区
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteServiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApiKeyStatus请求参数结构体
  *
-
+ * @method string getApiKeyId() 获取<p>API 密钥 ID。</p>
+ * @method void setApiKeyId(string $ApiKeyId) 设置<p>API 密钥 ID。</p>
+ * @method string getPlatform() 获取<p>平台类型。取值：maas。</p>
+ * @method void setPlatform(string $Platform) 设置<p>平台类型。取值：maas。</p>
+ * @method string getStatus() 获取<p>状态。取值：enable（启用）、disable（禁用）。</p>
+ * @method void setStatus(string $Status) 设置<p>状态。取值：enable（启用）、disable（禁用）。</p>
  */
 class ModifyApiKeyStatusRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>API 密钥 ID。</p>
+     */
+    public $ApiKeyId;
 
     /**
+     * @var string <p>平台类型。取值：maas。</p>
+     */
+    public $Platform;
 
+    /**
+     * @var string <p>状态。取值：enable（启用）、disable（禁用）。</p>
+     */
+    public $Status;
+
+    /**
+     * @param string $ApiKeyId <p>API 密钥 ID。</p>
+     * @param string $Platform <p>平台类型。取值：maas。</p>
+     * @param string $Status <p>状态。取值：enable（启用）、disable（禁用）。</p>
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class ModifyApiKeyStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ApiKeyId",$param) and $param["ApiKeyId"] !== null) {
+            $this->ApiKeyId = $param["ApiKeyId"];
+        }
 
+        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
+            $this->Platform = $param["Platform"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
     }
 }

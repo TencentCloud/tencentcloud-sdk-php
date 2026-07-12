@@ -46,6 +46,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleComputeSet(array $RoleComputeSet) 设置
  * @method integer getTargetReplicas() 获取
  * @method void setTargetReplicas(integer $TargetReplicas) 设置
+ * @method string getChargeType() 获取计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+ * @method void setChargeType(string $ChargeType) 设置计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+ * @method string getExpireTime() 获取到期时间(包月)，按量为空
+ * @method void setExpireTime(string $ExpireTime) 设置到期时间(包月)，按量为空
+ * @method string getRenewFlag() 获取自动续费标识(包月)
+ * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识(包月)
+ * @method string getRestrictState() 获取受限状态(如欠费隔离)
+ * @method void setRestrictState(string $RestrictState) 设置受限状态(如欠费隔离)
+ * @method integer getIsCustomDeploy() 获取是否自定义部署：1是 0否
+ * @method void setIsCustomDeploy(integer $IsCustomDeploy) 设置是否自定义部署：1是 0否
  */
 class ServiceDetail extends AbstractModel
 {
@@ -115,6 +125,31 @@ class ServiceDetail extends AbstractModel
     public $TargetReplicas;
 
     /**
+     * @var string 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+     */
+    public $ChargeType;
+
+    /**
+     * @var string 到期时间(包月)，按量为空
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string 自动续费标识(包月)
+     */
+    public $RenewFlag;
+
+    /**
+     * @var string 受限状态(如欠费隔离)
+     */
+    public $RestrictState;
+
+    /**
+     * @var integer 是否自定义部署：1是 0否
+     */
+    public $IsCustomDeploy;
+
+    /**
      * @param string $ServiceId 服务id
      * @param string $ServiceName 服务名称
      * @param string $ServiceState 服务状态
@@ -128,6 +163,11 @@ class ServiceDetail extends AbstractModel
      * @param string $SecurityType 
      * @param array $RoleComputeSet 
      * @param integer $TargetReplicas 
+     * @param string $ChargeType 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+     * @param string $ExpireTime 到期时间(包月)，按量为空
+     * @param string $RenewFlag 自动续费标识(包月)
+     * @param string $RestrictState 受限状态(如欠费隔离)
+     * @param integer $IsCustomDeploy 是否自定义部署：1是 0否
      */
     function __construct()
     {
@@ -208,6 +248,26 @@ class ServiceDetail extends AbstractModel
 
         if (array_key_exists("TargetReplicas",$param) and $param["TargetReplicas"] !== null) {
             $this->TargetReplicas = $param["TargetReplicas"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("RestrictState",$param) and $param["RestrictState"] !== null) {
+            $this->RestrictState = $param["RestrictState"];
+        }
+
+        if (array_key_exists("IsCustomDeploy",$param) and $param["IsCustomDeploy"] !== null) {
+            $this->IsCustomDeploy = $param["IsCustomDeploy"];
         }
     }
 }

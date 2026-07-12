@@ -18,35 +18,47 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 图片异步处理配置
+ * 图片异步处理配置。
  *
- * @method ImageEncodeConfig getEncodeConfig() 获取图片转码输出配置。
+ * @method ImageEncodeConfig getEncodeConfig() 获取<p>图片转码输出配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) 设置图片转码输出配置。
+ * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) 设置<p>图片转码输出配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageEnhanceConfig getEnhanceConfig() 获取图片增强配置。
+ * @method ImageEnhanceConfig getEnhanceConfig() 获取<p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) 设置图片增强配置。
+ * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) 设置<p>图片增强配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageBeautyConfig getBeautyConfig() 获取<p>图片美颜配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBeautyConfig(ImageBeautyConfig $BeautyConfig) 设置<p>图片美颜配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProcessImageAsyncTask extends AbstractModel
 {
     /**
-     * @var ImageEncodeConfig 图片转码输出配置。
+     * @var ImageEncodeConfig <p>图片转码输出配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncodeConfig;
 
     /**
-     * @var ImageEnhanceConfig 图片增强配置。
+     * @var ImageEnhanceConfig <p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnhanceConfig;
 
     /**
-     * @param ImageEncodeConfig $EncodeConfig 图片转码输出配置。
+     * @var ImageBeautyConfig <p>图片美颜配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageEnhanceConfig $EnhanceConfig 图片增强配置。
+     */
+    public $BeautyConfig;
+
+    /**
+     * @param ImageEncodeConfig $EncodeConfig <p>图片转码输出配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageEnhanceConfig $EnhanceConfig <p>图片增强配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageBeautyConfig $BeautyConfig <p>图片美颜配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,6 +82,11 @@ class ProcessImageAsyncTask extends AbstractModel
         if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
             $this->EnhanceConfig = new ImageEnhanceConfig();
             $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
+        }
+
+        if (array_key_exists("BeautyConfig",$param) and $param["BeautyConfig"] !== null) {
+            $this->BeautyConfig = new ImageBeautyConfig();
+            $this->BeautyConfig->deserialize($param["BeautyConfig"]);
         }
     }
 }

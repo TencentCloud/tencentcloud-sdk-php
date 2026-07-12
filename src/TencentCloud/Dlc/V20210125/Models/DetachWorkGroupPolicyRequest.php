@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetachWorkGroupPolicy请求参数结构体
  *
- * @method integer getWorkGroupId() 获取工作组Id
- * @method void setWorkGroupId(integer $WorkGroupId) 设置工作组Id
- * @method array getPolicySet() 获取解绑的权限集合
- * @method void setPolicySet(array $PolicySet) 设置解绑的权限集合
+ * @method integer getWorkGroupId() 获取<p>工作组Id</p>
+ * @method void setWorkGroupId(integer $WorkGroupId) 设置<p>工作组Id</p>
+ * @method array getPolicySet() 获取<p>解绑的权限集合</p>
+ * @method void setPolicySet(array $PolicySet) 设置<p>解绑的权限集合</p>
+ * @method array getPolicyIds() 获取<p>要授权的策略列表</p>
+ * @method void setPolicyIds(array $PolicyIds) 设置<p>要授权的策略列表</p>
  */
 class DetachWorkGroupPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 工作组Id
+     * @var integer <p>工作组Id</p>
      */
     public $WorkGroupId;
 
     /**
-     * @var array 解绑的权限集合
+     * @var array <p>解绑的权限集合</p>
      */
     public $PolicySet;
 
     /**
-     * @param integer $WorkGroupId 工作组Id
-     * @param array $PolicySet 解绑的权限集合
+     * @var array <p>要授权的策略列表</p>
+     */
+    public $PolicyIds;
+
+    /**
+     * @param integer $WorkGroupId <p>工作组Id</p>
+     * @param array $PolicySet <p>解绑的权限集合</p>
+     * @param array $PolicyIds <p>要授权的策略列表</p>
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class DetachWorkGroupPolicyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PolicySet, $obj);
             }
+        }
+
+        if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
+            $this->PolicyIds = $param["PolicyIds"];
         }
     }
 }

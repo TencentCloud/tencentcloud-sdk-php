@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Hai\V20230812\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteService请求参数结构体
+ * 灰度命中规则
  *
- * @method string getServiceId() 获取<p>服务ID</p>
- * @method void setServiceId(string $ServiceId) 设置<p>服务ID</p>
+ * @method string getKey() 获取<p>键</p>
+ * @method void setKey(string $Key) 设置<p>键</p>
+ * @method BetaLabelMatchString getValue() 获取<p>值</p>
+ * @method void setValue(BetaLabelMatchString $Value) 设置<p>值</p>
  */
-class DeleteServiceRequest extends AbstractModel
+class BetaLabel extends AbstractModel
 {
     /**
-     * @var string <p>服务ID</p>
+     * @var string <p>键</p>
      */
-    public $ServiceId;
+    public $Key;
 
     /**
-     * @param string $ServiceId <p>服务ID</p>
+     * @var BetaLabelMatchString <p>值</p>
+     */
+    public $Value;
+
+    /**
+     * @param string $Key <p>键</p>
+     * @param BetaLabelMatchString $Value <p>值</p>
      */
     function __construct()
     {
@@ -46,8 +54,13 @@ class DeleteServiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = new BetaLabelMatchString();
+            $this->Value->deserialize($param["Value"]);
         }
     }
 }

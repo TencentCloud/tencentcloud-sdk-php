@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkSetting(NetworkSetting $NetworkSetting) 设置<p>网络设置</p>
  * @method string getSecurityType() 获取<p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
  * @method void setSecurityType(string $SecurityType) 设置<p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
+ * @method ServiceChargePrepaid getServiceChargePrepaid() 获取<p>包年包月参数(包月时必填)</p>
+ * @method void setServiceChargePrepaid(ServiceChargePrepaid $ServiceChargePrepaid) 设置<p>包年包月参数(包月时必填)</p>
  */
 class DeployInferServiceRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DeployInferServiceRequest extends AbstractModel
     public $SecurityType;
 
     /**
+     * @var ServiceChargePrepaid <p>包年包月参数(包月时必填)</p>
+     */
+    public $ServiceChargePrepaid;
+
+    /**
      * @param ServiceMetaData $ServiceMetaData <p>服务元数据信息，如服务名</p>
      * @param ComputeInfo $ComputeInfo <p>资源相关信息</p>
      * @param array $DeploymentConfigs <p>服务部署信息</p>
      * @param HyperParam $HyperParam <p>服务超参数配置</p>
      * @param NetworkSetting $NetworkSetting <p>网络设置</p>
      * @param string $SecurityType <p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
+     * @param ServiceChargePrepaid $ServiceChargePrepaid <p>包年包月参数(包月时必填)</p>
      */
     function __construct()
     {
@@ -117,6 +125,11 @@ class DeployInferServiceRequest extends AbstractModel
 
         if (array_key_exists("SecurityType",$param) and $param["SecurityType"] !== null) {
             $this->SecurityType = $param["SecurityType"];
+        }
+
+        if (array_key_exists("ServiceChargePrepaid",$param) and $param["ServiceChargePrepaid"] !== null) {
+            $this->ServiceChargePrepaid = new ServiceChargePrepaid();
+            $this->ServiceChargePrepaid->deserialize($param["ServiceChargePrepaid"]);
         }
     }
 }

@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetachUserPolicy请求参数结构体
  *
- * @method string getUserId() 获取用户Id，和CAM侧Uin匹配
- * @method void setUserId(string $UserId) 设置用户Id，和CAM侧Uin匹配
- * @method array getPolicySet() 获取解绑的权限集合
- * @method void setPolicySet(array $PolicySet) 设置解绑的权限集合
- * @method string getAccountType() 获取用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
- * @method void setAccountType(string $AccountType) 设置用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+ * @method string getUserId() 获取<p>用户Id，和CAM侧Uin匹配</p>
+ * @method void setUserId(string $UserId) 设置<p>用户Id，和CAM侧Uin匹配</p>
+ * @method array getPolicySet() 获取<p>解绑的权限集合</p>
+ * @method void setPolicySet(array $PolicySet) 设置<p>解绑的权限集合</p>
+ * @method string getAccountType() 获取<p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
+ * @method void setAccountType(string $AccountType) 设置<p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
+ * @method array getPolicyIds() 获取<p>要授权的策略列表</p>
+ * @method void setPolicyIds(array $PolicyIds) 设置<p>要授权的策略列表</p>
  */
 class DetachUserPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 用户Id，和CAM侧Uin匹配
+     * @var string <p>用户Id，和CAM侧Uin匹配</p>
      */
     public $UserId;
 
     /**
-     * @var array 解绑的权限集合
+     * @var array <p>解绑的权限集合</p>
      */
     public $PolicySet;
 
     /**
-     * @var string 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @var string <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
      */
     public $AccountType;
 
     /**
-     * @param string $UserId 用户Id，和CAM侧Uin匹配
-     * @param array $PolicySet 解绑的权限集合
-     * @param string $AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @var array <p>要授权的策略列表</p>
+     */
+    public $PolicyIds;
+
+    /**
+     * @param string $UserId <p>用户Id，和CAM侧Uin匹配</p>
+     * @param array $PolicySet <p>解绑的权限集合</p>
+     * @param string $AccountType <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
+     * @param array $PolicyIds <p>要授权的策略列表</p>
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DetachUserPolicyRequest extends AbstractModel
 
         if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
             $this->AccountType = $param["AccountType"];
+        }
+
+        if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
+            $this->PolicyIds = $param["PolicyIds"];
         }
     }
 }

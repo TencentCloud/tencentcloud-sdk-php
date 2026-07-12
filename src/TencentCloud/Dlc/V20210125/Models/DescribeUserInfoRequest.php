@@ -20,170 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserInfo请求参数结构体
  *
- * @method string getUserId() 获取用户Id
- * @method void setUserId(string $UserId) 设置用户Id
- * @method string getType() 获取必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
- * @method void setType(string $Type) 设置必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
- * @method array getFilters() 获取查询的过滤条件。
-
-当Type为Group时，支持Key为workgroup-name的模糊搜索；
-
-当Type为DataAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-data-name：库表的模糊搜索。
-
-当Type为EngineAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-engine-name：库表的模糊搜索。
- * @method void setFilters(array $Filters) 设置查询的过滤条件。
-
-当Type为Group时，支持Key为workgroup-name的模糊搜索；
-
-当Type为DataAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-data-name：库表的模糊搜索。
-
-当Type为EngineAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-engine-name：库表的模糊搜索。
- * @method string getSortBy() 获取排序字段。
-
-当Type为Group时，支持create-time、group-name
-
-当Type为DataAuth时，支持create-time
-
-当Type为EngineAuth时，支持create-time
- * @method void setSortBy(string $SortBy) 设置排序字段。
-
-当Type为Group时，支持create-time、group-name
-
-当Type为DataAuth时，支持create-time
-
-当Type为EngineAuth时，支持create-time
- * @method string getSorting() 获取排序方式，desc表示正序，asc表示反序， 默认为asc
- * @method void setSorting(string $Sorting) 设置排序方式，desc表示正序，asc表示反序， 默认为asc
- * @method integer getLimit() 获取返回数量，默认20，最大值100
- * @method void setLimit(integer $Limit) 设置返回数量，默认20，最大值100
- * @method integer getOffset() 获取偏移量，默认为0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0
- * @method string getAccountType() 获取用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
- * @method void setAccountType(string $AccountType) 设置用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+ * @method string getUserId() 获取<p>用户Id</p>
+ * @method void setUserId(string $UserId) 设置<p>用户Id</p>
+ * @method string getType() 获取<p>必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限</p>
+ * @method void setType(string $Type) 设置<p>必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限</p>
+ * @method array getFilters() 获取<p>查询的过滤条件。</p><p>当Type为Group时，支持Key为workgroup-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p>
+ * @method void setFilters(array $Filters) 设置<p>查询的过滤条件。</p><p>当Type为Group时，支持Key为workgroup-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p>
+ * @method string getSortBy() 获取<p>排序字段。</p><p>当Type为Group时，支持create-time、group-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p>
+ * @method void setSortBy(string $SortBy) 设置<p>排序字段。</p><p>当Type为Group时，支持create-time、group-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p>
+ * @method string getSorting() 获取<p>排序方式，desc表示正序，asc表示反序， 默认为asc</p>
+ * @method void setSorting(string $Sorting) 设置<p>排序方式，desc表示正序，asc表示反序， 默认为asc</p>
+ * @method integer getLimit() 获取<p>返回数量，默认20，最大值100</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认20，最大值100</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0</p>
+ * @method string getAccountType() 获取<p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
+ * @method void setAccountType(string $AccountType) 设置<p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
+ * @method string getPolicyId() 获取<p>TF 资源 ID</p>
+ * @method void setPolicyId(string $PolicyId) 设置<p>TF 资源 ID</p>
  */
 class DescribeUserInfoRequest extends AbstractModel
 {
     /**
-     * @var string 用户Id
+     * @var string <p>用户Id</p>
      */
     public $UserId;
 
     /**
-     * @var string 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
+     * @var string <p>必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限</p>
      */
     public $Type;
 
     /**
-     * @var array 查询的过滤条件。
-
-当Type为Group时，支持Key为workgroup-name的模糊搜索；
-
-当Type为DataAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-data-name：库表的模糊搜索。
-
-当Type为EngineAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-engine-name：库表的模糊搜索。
+     * @var array <p>查询的过滤条件。</p><p>当Type为Group时，支持Key为workgroup-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p>
      */
     public $Filters;
 
     /**
-     * @var string 排序字段。
-
-当Type为Group时，支持create-time、group-name
-
-当Type为DataAuth时，支持create-time
-
-当Type为EngineAuth时，支持create-time
+     * @var string <p>排序字段。</p><p>当Type为Group时，支持create-time、group-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p>
      */
     public $SortBy;
 
     /**
-     * @var string 排序方式，desc表示正序，asc表示反序， 默认为asc
+     * @var string <p>排序方式，desc表示正序，asc表示反序， 默认为asc</p>
      */
     public $Sorting;
 
     /**
-     * @var integer 返回数量，默认20，最大值100
+     * @var integer <p>返回数量，默认20，最大值100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为0
+     * @var integer <p>偏移量，默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var string 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @var string <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
      */
     public $AccountType;
 
     /**
-     * @param string $UserId 用户Id
-     * @param string $Type 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
-     * @param array $Filters 查询的过滤条件。
+     * @var string <p>TF 资源 ID</p>
+     */
+    public $PolicyId;
 
-当Type为Group时，支持Key为workgroup-name的模糊搜索；
-
-当Type为DataAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-data-name：库表的模糊搜索。
-
-当Type为EngineAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-engine-name：库表的模糊搜索。
-     * @param string $SortBy 排序字段。
-
-当Type为Group时，支持create-time、group-name
-
-当Type为DataAuth时，支持create-time
-
-当Type为EngineAuth时，支持create-time
-     * @param string $Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc
-     * @param integer $Limit 返回数量，默认20，最大值100
-     * @param integer $Offset 偏移量，默认为0
-     * @param string $AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+    /**
+     * @param string $UserId <p>用户Id</p>
+     * @param string $Type <p>必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限</p>
+     * @param array $Filters <p>查询的过滤条件。</p><p>当Type为Group时，支持Key为workgroup-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p>
+     * @param string $SortBy <p>排序字段。</p><p>当Type为Group时，支持create-time、group-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p>
+     * @param string $Sorting <p>排序方式，desc表示正序，asc表示反序， 默认为asc</p>
+     * @param integer $Limit <p>返回数量，默认20，最大值100</p>
+     * @param integer $Offset <p>偏移量，默认为0</p>
+     * @param string $AccountType <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
+     * @param string $PolicyId <p>TF 资源 ID</p>
      */
     function __construct()
     {
@@ -233,6 +145,10 @@ engine-name：库表的模糊搜索。
 
         if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
             $this->AccountType = $param["AccountType"];
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkSetting(NetworkSetting $NetworkSetting) 设置<p>网络设置</p>
  * @method string getSecurityType() 获取<p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
  * @method void setSecurityType(string $SecurityType) 设置<p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
+ * @method ServiceChargePrepaid getServiceChargePrepaid() 获取<p>包年包月参数(ServiceChargeType为包月时必填)</p>
+ * @method void setServiceChargePrepaid(ServiceChargePrepaid $ServiceChargePrepaid) 设置<p>包年包月参数(ServiceChargeType为包月时必填)</p>
  */
 class CreateInferServiceByTemplateRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateInferServiceByTemplateRequest extends AbstractModel
     public $SecurityType;
 
     /**
+     * @var ServiceChargePrepaid <p>包年包月参数(ServiceChargeType为包月时必填)</p>
+     */
+    public $ServiceChargePrepaid;
+
+    /**
      * @param string $TemplateId <p>模版ID</p>
      * @param string $ServiceName <p>服务名称</p>
      * @param integer $Replicas <p>副本数</p>
@@ -80,6 +87,7 @@ class CreateInferServiceByTemplateRequest extends AbstractModel
      * @param HyperParam $HyperParam <p>描述了服务的超参数配置</p>
      * @param NetworkSetting $NetworkSetting <p>网络设置</p>
      * @param string $SecurityType <p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
+     * @param ServiceChargePrepaid $ServiceChargePrepaid <p>包年包月参数(ServiceChargeType为包月时必填)</p>
      */
     function __construct()
     {
@@ -122,6 +130,11 @@ class CreateInferServiceByTemplateRequest extends AbstractModel
 
         if (array_key_exists("SecurityType",$param) and $param["SecurityType"] !== null) {
             $this->SecurityType = $param["SecurityType"];
+        }
+
+        if (array_key_exists("ServiceChargePrepaid",$param) and $param["ServiceChargePrepaid"] !== null) {
+            $this->ServiceChargePrepaid = new ServiceChargePrepaid();
+            $this->ServiceChargePrepaid->deserialize($param["ServiceChargePrepaid"]);
         }
     }
 }

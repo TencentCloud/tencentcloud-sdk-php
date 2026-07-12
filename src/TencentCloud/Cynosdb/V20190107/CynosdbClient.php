@@ -100,6 +100,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeClusterDetailDatabasesResponse DescribeClusterDetailDatabases(Models\DescribeClusterDetailDatabasesRequest $req) 本接口（DescribeClusterDetailDatabases）用于查询数据库列表。
  * @method Models\DescribeClusterInstanceGroupsResponse DescribeClusterInstanceGroups(Models\DescribeClusterInstanceGroupsRequest $req) 本接口（DescribeClusterInstanceGrps）用于查询实例组信息。
  * @method Models\DescribeClusterInstanceGrpsResponse DescribeClusterInstanceGrps(Models\DescribeClusterInstanceGrpsRequest $req) 本接口（DescribeClusterInstanceGrps）用于查询实例组信息。 该接口已废弃，推荐使用DescribeClusterInstanceGroups
+ * @method Models\DescribeClusterLevelsResponse DescribeClusterLevels(Models\DescribeClusterLevelsRequest $req) 查询可支持的集群类型列表
  * @method Models\DescribeClusterParamLogsResponse DescribeClusterParamLogs(Models\DescribeClusterParamLogsRequest $req) 本接口（DescribeClusterParamLogs）用于查询参数修改记录。
  * @method Models\DescribeClusterParamsResponse DescribeClusterParams(Models\DescribeClusterParamsRequest $req) 本接口（DescribeClusterParams）用于查询集群参数。
  * @method Models\DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexity(Models\DescribeClusterPasswordComplexityRequest $req) 本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情。

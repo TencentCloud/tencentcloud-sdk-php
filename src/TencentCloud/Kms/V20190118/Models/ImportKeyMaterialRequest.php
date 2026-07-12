@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImportKeyMaterial请求参数结构体
  *
- * @method string getEncryptedKeyMaterial() 获取使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
- * @method void setEncryptedKeyMaterial(string $EncryptedKeyMaterial) 设置使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
- * @method string getImportToken() 获取通过调用GetParametersForImport获得的导入令牌。
- * @method void setImportToken(string $ImportToken) 设置通过调用GetParametersForImport获得的导入令牌。
- * @method string getKeyId() 获取指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
- * @method void setKeyId(string $KeyId) 设置指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
- * @method integer getValidTo() 获取密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
- * @method void setValidTo(integer $ValidTo) 设置密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
+ * @method string getEncryptedKeyMaterial() 获取<p>使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS 140-2版本region的KMS， 导入的密钥材料长度要求为 256 bit。</p>
+ * @method void setEncryptedKeyMaterial(string $EncryptedKeyMaterial) 设置<p>使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS 140-2版本region的KMS， 导入的密钥材料长度要求为 256 bit。</p>
+ * @method string getImportToken() 获取<p>通过调用GetParametersForImport获得的导入令牌。</p>
+ * @method void setImportToken(string $ImportToken) 设置<p>通过调用GetParametersForImport获得的导入令牌。</p>
+ * @method string getKeyId() 获取<p>指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。</p>
+ * @method void setKeyId(string $KeyId) 设置<p>指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。</p>
+ * @method integer getValidTo() 获取<p>密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。</p>
+ * @method void setValidTo(integer $ValidTo) 设置<p>密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。</p>
  */
 class ImportKeyMaterialRequest extends AbstractModel
 {
     /**
-     * @var string 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
+     * @var string <p>使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS 140-2版本region的KMS， 导入的密钥材料长度要求为 256 bit。</p>
      */
     public $EncryptedKeyMaterial;
 
     /**
-     * @var string 通过调用GetParametersForImport获得的导入令牌。
+     * @var string <p>通过调用GetParametersForImport获得的导入令牌。</p>
      */
     public $ImportToken;
 
     /**
-     * @var string 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
+     * @var string <p>指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。</p>
      */
     public $KeyId;
 
     /**
-     * @var integer 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
+     * @var integer <p>密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。</p>
      */
     public $ValidTo;
 
     /**
-     * @param string $EncryptedKeyMaterial 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
-     * @param string $ImportToken 通过调用GetParametersForImport获得的导入令牌。
-     * @param string $KeyId 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
-     * @param integer $ValidTo 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
+     * @param string $EncryptedKeyMaterial <p>使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS 140-2版本region的KMS， 导入的密钥材料长度要求为 256 bit。</p>
+     * @param string $ImportToken <p>通过调用GetParametersForImport获得的导入令牌。</p>
+     * @param string $KeyId <p>指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。</p>
+     * @param integer $ValidTo <p>密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。</p>
      */
     function __construct()
     {

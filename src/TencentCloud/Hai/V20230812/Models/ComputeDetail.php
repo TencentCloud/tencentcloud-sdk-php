@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPU(string $CPU) 设置CPU核数
  * @method string getMemory() 获取内存
  * @method void setMemory(string $Memory) 设置内存
+ * @method boolean getPrepaidEnable() 获取该套餐是否支持包年包月
+ * @method void setPrepaidEnable(boolean $PrepaidEnable) 设置该套餐是否支持包年包月
+ * @method boolean getPostpaidEnable() 获取该套餐是否支持按量计费
+ * @method void setPostpaidEnable(boolean $PostpaidEnable) 设置该套餐是否支持按量计费
  */
 class ComputeDetail extends AbstractModel
 {
@@ -73,6 +77,16 @@ class ComputeDetail extends AbstractModel
     public $Memory;
 
     /**
+     * @var boolean 该套餐是否支持包年包月
+     */
+    public $PrepaidEnable;
+
+    /**
+     * @var boolean 该套餐是否支持按量计费
+     */
+    public $PostpaidEnable;
+
+    /**
      * @param string $BundleType 算力套餐ID
      * @param integer $Count 节点数量
      * @param string $GPUCount 显卡数量
@@ -80,6 +94,8 @@ class ComputeDetail extends AbstractModel
      * @param string $GPUPerformance 算力
      * @param string $CPU CPU核数
      * @param string $Memory 内存
+     * @param boolean $PrepaidEnable 该套餐是否支持包年包月
+     * @param boolean $PostpaidEnable 该套餐是否支持按量计费
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class ComputeDetail extends AbstractModel
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
             $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("PrepaidEnable",$param) and $param["PrepaidEnable"] !== null) {
+            $this->PrepaidEnable = $param["PrepaidEnable"];
+        }
+
+        if (array_key_exists("PostpaidEnable",$param) and $param["PostpaidEnable"] !== null) {
+            $this->PostpaidEnable = $param["PostpaidEnable"];
         }
     }
 }

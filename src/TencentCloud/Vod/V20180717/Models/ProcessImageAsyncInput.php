@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片异步处理任务信息。
  *
- * @method string getFileId() 获取图片处理的FileId。
- * @method void setFileId(string $FileId) 设置图片处理的FileId。
- * @method ProcessImageAsyncTaskInput getImageTaskInput() 获取图片处理参数。
- * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) 设置图片处理参数。
- * @method ProcessImageAsyncOutputConfig getOutputConfig() 获取图片处理任务的输出媒体文件配置。
- * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) 设置图片处理任务的输出媒体文件配置。
+ * @method string getFileId() 获取<p>图片处理的FileId。</p>
+ * @method void setFileId(string $FileId) 设置<p>图片处理的FileId。</p>
+ * @method string getUrl() 获取<p>图片URL。</p>
+ * @method void setUrl(string $Url) 设置<p>图片URL。</p>
+ * @method ProcessImageAsyncTaskInput getImageTaskInput() 获取<p>图片处理参数。</p>
+ * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) 设置<p>图片处理参数。</p>
+ * @method ProcessImageAsyncOutputConfig getOutputConfig() 获取<p>图片处理任务的输出媒体文件配置。</p>
+ * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) 设置<p>图片处理任务的输出媒体文件配置。</p>
  */
 class ProcessImageAsyncInput extends AbstractModel
 {
     /**
-     * @var string 图片处理的FileId。
+     * @var string <p>图片处理的FileId。</p>
      */
     public $FileId;
 
     /**
-     * @var ProcessImageAsyncTaskInput 图片处理参数。
+     * @var string <p>图片URL。</p>
+     */
+    public $Url;
+
+    /**
+     * @var ProcessImageAsyncTaskInput <p>图片处理参数。</p>
      */
     public $ImageTaskInput;
 
     /**
-     * @var ProcessImageAsyncOutputConfig 图片处理任务的输出媒体文件配置。
+     * @var ProcessImageAsyncOutputConfig <p>图片处理任务的输出媒体文件配置。</p>
      */
     public $OutputConfig;
 
     /**
-     * @param string $FileId 图片处理的FileId。
-     * @param ProcessImageAsyncTaskInput $ImageTaskInput 图片处理参数。
-     * @param ProcessImageAsyncOutputConfig $OutputConfig 图片处理任务的输出媒体文件配置。
+     * @param string $FileId <p>图片处理的FileId。</p>
+     * @param string $Url <p>图片URL。</p>
+     * @param ProcessImageAsyncTaskInput $ImageTaskInput <p>图片处理参数。</p>
+     * @param ProcessImageAsyncOutputConfig $OutputConfig <p>图片处理任务的输出媒体文件配置。</p>
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class ProcessImageAsyncInput extends AbstractModel
         }
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
 
         if (array_key_exists("ImageTaskInput",$param) and $param["ImageTaskInput"] !== null) {

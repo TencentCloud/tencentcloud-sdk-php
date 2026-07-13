@@ -102,7 +102,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\ModifySRVConnectionUrlResponse ModifySRVConnectionUrl(Models\ModifySRVConnectionUrlRequest $req) 本接口（DisableSRVConnectionUrl）用于修改MongoDB数据库的SRV访问地址的TTL时长。
  * @method Models\OfflineIsolatedDBInstanceResponse OfflineIsolatedDBInstance(Models\OfflineIsolatedDBInstanceRequest $req) 本接口(OfflineIsolatedDBInstance)用于立即下线隔离状态的云数据库实例。进行操作的实例状态必须为隔离状态。
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) 本接口(OpenAuditService)用于开通云数据库实例的审计。
- * @method Models\PromoteDBInstanceToActiveResponse PromoteDBInstanceToActive(Models\PromoteDBInstanceToActiveRequest $req) 本接口（PromoteDBInstanceToActive）用于灾备实例转正
+ * @method Models\PromoteDBInstanceToActiveResponse PromoteDBInstanceToActive(Models\PromoteDBInstanceToActiveRequest $req) 本接口（PromoteDBInstanceToActive）用于将灾备实例或只读实例转为独立的主实例
  * @method Models\RenameInstanceResponse RenameInstance(Models\RenameInstanceRequest $req) 本接口(RenameInstance)用于修改云数据库实例的名称。
  * @method Models\RenewDBInstancesResponse RenewDBInstances(Models\RenewDBInstancesRequest $req) 本接口(RenewDBInstance)用于续费云数据库实例，仅支持付费模式为包年包月的实例。按量计费实例不需要续费。
  * @method Models\ResetDBInstancePasswordResponse ResetDBInstancePassword(Models\ResetDBInstancePasswordRequest $req) 本接口（ResetDBInstancePassword）用于重置实例访问密码。

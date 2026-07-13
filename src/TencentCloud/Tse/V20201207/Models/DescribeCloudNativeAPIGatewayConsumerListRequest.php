@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取<p>网关实例id</p>
  * @method void setGatewayId(string $GatewayId) 设置<p>网关实例id</p>
- * @method integer getLimit() 获取<p>每页条数，范围 [1, 100]，默认 20。</p>
- * @method void setLimit(integer $Limit) 设置<p>每页条数，范围 [1, 100]，默认 20。</p>
- * @method integer getOffset() 获取<p>起始位置，从 0 开始。</p>
- * @method void setOffset(integer $Offset) 设置<p>起始位置，从 0 开始。</p>
+ * @method integer getLimit() 获取<p>页显示条数，最大20</p>
+ * @method void setLimit(integer $Limit) 设置<p>页显示条数，最大20</p>
+ * @method integer getOffset() 获取<p>起始位置</p>
+ * @method void setOffset(integer $Offset) 设置<p>起始位置</p>
+ * @method string getResourceType() 获取<p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
+ * @method void setResourceType(string $ResourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
+ * @method string getResourceId() 获取<p>资源ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源ID</p>
  */
 class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractModel
 {
@@ -35,19 +39,31 @@ class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var integer <p>每页条数，范围 [1, 100]，默认 20。</p>
+     * @var integer <p>页显示条数，最大20</p>
      */
     public $Limit;
 
     /**
-     * @var integer <p>起始位置，从 0 开始。</p>
+     * @var integer <p>起始位置</p>
      */
     public $Offset;
 
     /**
+     * @var string <p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
+     */
+    public $ResourceType;
+
+    /**
+     * @var string <p>资源ID</p>
+     */
+    public $ResourceId;
+
+    /**
      * @param string $GatewayId <p>网关实例id</p>
-     * @param integer $Limit <p>每页条数，范围 [1, 100]，默认 20。</p>
-     * @param integer $Offset <p>起始位置，从 0 开始。</p>
+     * @param integer $Limit <p>页显示条数，最大20</p>
+     * @param integer $Offset <p>起始位置</p>
+     * @param string $ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
+     * @param string $ResourceId <p>资源ID</p>
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

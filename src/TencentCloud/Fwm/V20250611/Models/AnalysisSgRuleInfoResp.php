@@ -20,417 +20,285 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 企业安全组规则列表信息
  *
- * @method integer getId() 获取规则id  等同RuleUuid
- * @method void setId(integer $Id) 设置规则id  等同RuleUuid
- * @method string getRuleId() 获取规则Id
- * @method void setRuleId(string $RuleId) 设置规则Id
- * @method integer getOrderIndex() 获取排序
- * @method void setOrderIndex(integer $OrderIndex) 设置排序
- * @method integer getCfwOrderIndex() 获取云防排序
- * @method void setCfwOrderIndex(integer $CfwOrderIndex) 设置云防排序
- * @method string getSourceId() 获取源规则内容
- * @method void setSourceId(string $SourceId) 设置源规则内容
- * @method integer getSourceType() 获取源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
- * @method void setSourceType(integer $SourceType) 设置源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
- * @method string getTargetId() 获取目的规则内容
- * @method void setTargetId(string $TargetId) 设置目的规则内容
- * @method integer getTargetType() 获取目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
- * @method void setTargetType(integer $TargetType) 设置目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
- * @method string getProtocol() 获取协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
- * @method void setProtocol(string $Protocol) 设置协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
- * @method string getPort() 获取端口
- * @method void setPort(string $Port) 设置端口
- * @method integer getStrategy() 获取规则策略
-取值范围:1/2
-1:阻断
-2:放行
- * @method void setStrategy(integer $Strategy) 设置规则策略
-取值范围:1/2
-1:阻断
-2:放行
- * @method string getDetail() 获取描述
- * @method void setDetail(string $Detail) 设置描述
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getServiceTemplateId() 获取服务模板id
- * @method void setServiceTemplateId(string $ServiceTemplateId) 设置服务模板id
- * @method string getSouInstanceName() 获取源资产名称
- * @method void setSouInstanceName(string $SouInstanceName) 设置源资产名称
- * @method string getSouPublicIp() 获取源资产公网ip
- * @method void setSouPublicIp(string $SouPublicIp) 设置源资产公网ip
- * @method string getSouPrivateIp() 获取源资产内网ip
- * @method void setSouPrivateIp(string $SouPrivateIp) 设置源资产内网ip
- * @method string getSouCidr() 获取源资产网段信息
- * @method void setSouCidr(string $SouCidr) 设置源资产网段信息
- * @method string getSouParameterName() 获取源模板名称
- * @method void setSouParameterName(string $SouParameterName) 设置源模板名称
- * @method string getInstanceName() 获取目的资产名称
- * @method void setInstanceName(string $InstanceName) 设置目的资产名称
- * @method string getPublicIp() 获取目的资产公网ip
- * @method void setPublicIp(string $PublicIp) 设置目的资产公网ip
- * @method string getPrivateIp() 获取目的资产内网ip
- * @method void setPrivateIp(string $PrivateIp) 设置目的资产内网ip
- * @method string getCidr() 获取目的资产网段信息
- * @method void setCidr(string $Cidr) 设置目的资产网段信息
- * @method string getParameterName() 获取目的模板名称
- * @method void setParameterName(string $ParameterName) 设置目的模板名称
- * @method string getProtocolPortName() 获取端口模板名称
- * @method void setProtocolPortName(string $ProtocolPortName) 设置端口模板名称
- * @method SgDnsParseCount getDnsParseCount() 获取域名解析的IP统计
- * @method void setDnsParseCount(SgDnsParseCount $DnsParseCount) 设置域名解析的IP统计
- * @method string getScope() 获取规则生效范围
- * @method void setScope(string $Scope) 设置规则生效范围
- * @method integer getRulePartition() 获取分区：
-1防火墙管理最前分区
-2是云防规则
-3防火墙管理最后分区
- * @method void setRulePartition(integer $RulePartition) 设置分区：
-1防火墙管理最前分区
-2是云防规则
-3防火墙管理最后分区
- * @method string getGroupId() 获取规则组Id
- * @method void setGroupId(string $GroupId) 设置规则组Id
- * @method string getGroupName() 获取规则组名称
- * @method void setGroupName(string $GroupName) 设置规则组名称
- * @method string getGroupRuleId() 获取规则组内规则id
- * @method void setGroupRuleId(string $GroupRuleId) 设置规则组内规则id
- * @method string getStrategyId() 获取策略Id
- * @method void setStrategyId(string $StrategyId) 设置策略Id
- * @method string getIpVersion() 获取ip类型
- * @method void setIpVersion(string $IpVersion) 设置ip类型
- * @method MemberInfo getBelongMember() 获取成员信息
+ * @method integer getId() 获取<p>规则id  等同RuleUuid</p>
+ * @method void setId(integer $Id) 设置<p>规则id  等同RuleUuid</p>
+ * @method string getRuleId() 获取<p>规则Id</p>
+ * @method void setRuleId(string $RuleId) 设置<p>规则Id</p>
+ * @method integer getOrderIndex() 获取<p>排序</p>
+ * @method void setOrderIndex(integer $OrderIndex) 设置<p>排序</p>
+ * @method integer getCfwOrderIndex() 获取<p>云防排序</p>
+ * @method void setCfwOrderIndex(integer $CfwOrderIndex) 设置<p>云防排序</p>
+ * @method string getSourceId() 获取<p>源规则内容</p>
+ * @method void setSourceId(string $SourceId) 设置<p>源规则内容</p>
+ * @method integer getSourceType() 获取<p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)</p><p>枚举值：</p><ul><li>0： IP / CIDR</li><li>1： VPC 实例</li><li>2： 子网 </li><li>3： CVM 实例</li><li>4： CLB 实例</li><li>5： ENI（弹性网卡）实例</li><li>6： CDB（云数据库）实例</li><li>7： 参数模板</li><li>8： 标签</li><li>9： 地域</li></ul>
+ * @method void setSourceType(integer $SourceType) 设置<p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)</p><p>枚举值：</p><ul><li>0： IP / CIDR</li><li>1： VPC 实例</li><li>2： 子网 </li><li>3： CVM 实例</li><li>4： CLB 实例</li><li>5： ENI（弹性网卡）实例</li><li>6： CDB（云数据库）实例</li><li>7： 参数模板</li><li>8： 标签</li><li>9： 地域</li></ul>
+ * @method string getTargetId() 获取<p>目的规则内容</p>
+ * @method void setTargetId(string $TargetId) 设置<p>目的规则内容</p>
+ * @method integer getTargetType() 获取<p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p><p>枚举值：</p><ul><li>0： IP / CIDR</li><li>1： VPC 实例</li><li>2： 子网 </li><li>3： CVM 实例</li><li>4： CLB 实例</li><li>5： ENI（弹性网卡）实例</li><li>6： CDB（云数据库）实例</li><li>7： 参数模板</li><li>8： 标签</li><li>9： 地域</li></ul>
+ * @method void setTargetType(integer $TargetType) 设置<p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p><p>枚举值：</p><ul><li>0： IP / CIDR</li><li>1： VPC 实例</li><li>2： 子网 </li><li>3： CVM 实例</li><li>4： CLB 实例</li><li>5： ENI（弹性网卡）实例</li><li>6： CDB（云数据库）实例</li><li>7： 参数模板</li><li>8： 标签</li><li>9： 地域</li></ul>
+ * @method string getProtocol() 获取<p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
+ * @method string getPort() 获取<p>端口</p>
+ * @method void setPort(string $Port) 设置<p>端口</p>
+ * @method integer getStrategy() 获取<p>规则策略<br>取值范围:1/2<br>1:阻断<br>2:放行</p>
+ * @method void setStrategy(integer $Strategy) 设置<p>规则策略<br>取值范围:1/2<br>1:阻断<br>2:放行</p>
+ * @method string getDetail() 获取<p>描述</p>
+ * @method void setDetail(string $Detail) 设置<p>描述</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getServiceTemplateId() 获取<p>服务模板id</p>
+ * @method void setServiceTemplateId(string $ServiceTemplateId) 设置<p>服务模板id</p>
+ * @method string getSouInstanceName() 获取<p>源资产名称</p>
+ * @method void setSouInstanceName(string $SouInstanceName) 设置<p>源资产名称</p>
+ * @method string getSouPublicIp() 获取<p>源资产公网ip</p>
+ * @method void setSouPublicIp(string $SouPublicIp) 设置<p>源资产公网ip</p>
+ * @method string getSouPrivateIp() 获取<p>源资产内网ip</p>
+ * @method void setSouPrivateIp(string $SouPrivateIp) 设置<p>源资产内网ip</p>
+ * @method string getSouCidr() 获取<p>源资产网段信息</p>
+ * @method void setSouCidr(string $SouCidr) 设置<p>源资产网段信息</p>
+ * @method string getSouParameterName() 获取<p>源模板名称</p>
+ * @method void setSouParameterName(string $SouParameterName) 设置<p>源模板名称</p>
+ * @method string getInstanceName() 获取<p>目的资产名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>目的资产名称</p>
+ * @method string getPublicIp() 获取<p>目的资产公网ip</p>
+ * @method void setPublicIp(string $PublicIp) 设置<p>目的资产公网ip</p>
+ * @method string getPrivateIp() 获取<p>目的资产内网ip</p>
+ * @method void setPrivateIp(string $PrivateIp) 设置<p>目的资产内网ip</p>
+ * @method string getCidr() 获取<p>目的资产网段信息</p>
+ * @method void setCidr(string $Cidr) 设置<p>目的资产网段信息</p>
+ * @method string getParameterName() 获取<p>目的模板名称</p>
+ * @method void setParameterName(string $ParameterName) 设置<p>目的模板名称</p>
+ * @method string getProtocolPortName() 获取<p>端口模板名称</p>
+ * @method void setProtocolPortName(string $ProtocolPortName) 设置<p>端口模板名称</p>
+ * @method SgDnsParseCount getDnsParseCount() 获取<p>域名解析的IP统计</p>
+ * @method void setDnsParseCount(SgDnsParseCount $DnsParseCount) 设置<p>域名解析的IP统计</p>
+ * @method string getScope() 获取<p>规则生效范围</p>
+ * @method void setScope(string $Scope) 设置<p>规则生效范围</p>
+ * @method integer getRulePartition() 获取<p>分区：<br>1防火墙管理最前分区<br>2是云防规则<br>3防火墙管理最后分区</p>
+ * @method void setRulePartition(integer $RulePartition) 设置<p>分区：<br>1防火墙管理最前分区<br>2是云防规则<br>3防火墙管理最后分区</p>
+ * @method string getGroupId() 获取<p>规则组Id</p>
+ * @method void setGroupId(string $GroupId) 设置<p>规则组Id</p>
+ * @method string getGroupName() 获取<p>规则组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>规则组名称</p>
+ * @method string getGroupRuleId() 获取<p>规则组内规则id</p>
+ * @method void setGroupRuleId(string $GroupRuleId) 设置<p>规则组内规则id</p>
+ * @method string getStrategyId() 获取<p>策略Id</p>
+ * @method void setStrategyId(string $StrategyId) 设置<p>策略Id</p>
+ * @method string getIpVersion() 获取<p>ip类型</p>
+ * @method void setIpVersion(string $IpVersion) 设置<p>ip类型</p>
+ * @method MemberInfo getBelongMember() 获取<p>成员信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBelongMember(MemberInfo $BelongMember) 设置成员信息
+ * @method void setBelongMember(MemberInfo $BelongMember) 设置<p>成员信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalysisSgRuleInfoResp extends AbstractModel
 {
     /**
-     * @var integer 规则id  等同RuleUuid
+     * @var integer <p>规则id  等同RuleUuid</p>
      */
     public $Id;
 
     /**
-     * @var string 规则Id
+     * @var string <p>规则Id</p>
      */
     public $RuleId;
 
     /**
-     * @var integer 排序
+     * @var integer <p>排序</p>
      */
     public $OrderIndex;
 
     /**
-     * @var integer 云防排序
+     * @var integer <p>云防排序</p>
      */
     public $CfwOrderIndex;
 
     /**
-     * @var string 源规则内容
+     * @var string <p>源规则内容</p>
      */
     public $SourceId;
 
     /**
-     * @var integer 源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
+     * @var integer <p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)</p><p>枚举值：</p><ul><li>0： IP / CIDR</li><li>1： VPC 实例</li><li>2： 子网 </li><li>3： CVM 实例</li><li>4： CLB 实例</li><li>5： ENI（弹性网卡）实例</li><li>6： CDB（云数据库）实例</li><li>7： 参数模板</li><li>8： 标签</li><li>9： 地域</li></ul>
      */
     public $SourceType;
 
     /**
-     * @var string 目的规则内容
+     * @var string <p>目的规则内容</p>
      */
     public $TargetId;
 
     /**
-     * @var integer 目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
+     * @var integer <p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p><p>枚举值：</p><ul><li>0： IP / CIDR</li><li>1： VPC 实例</li><li>2： 子网 </li><li>3： CVM 实例</li><li>4： CLB 实例</li><li>5： ENI（弹性网卡）实例</li><li>6： CDB（云数据库）实例</li><li>7： 参数模板</li><li>8： 标签</li><li>9： 地域</li></ul>
      */
     public $TargetType;
 
     /**
-     * @var string 协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
+     * @var string <p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
      */
     public $Protocol;
 
     /**
-     * @var string 端口
+     * @var string <p>端口</p>
      */
     public $Port;
 
     /**
-     * @var integer 规则策略
-取值范围:1/2
-1:阻断
-2:放行
+     * @var integer <p>规则策略<br>取值范围:1/2<br>1:阻断<br>2:放行</p>
      */
     public $Strategy;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Detail;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 服务模板id
+     * @var string <p>服务模板id</p>
      */
     public $ServiceTemplateId;
 
     /**
-     * @var string 源资产名称
+     * @var string <p>源资产名称</p>
      */
     public $SouInstanceName;
 
     /**
-     * @var string 源资产公网ip
+     * @var string <p>源资产公网ip</p>
      */
     public $SouPublicIp;
 
     /**
-     * @var string 源资产内网ip
+     * @var string <p>源资产内网ip</p>
      */
     public $SouPrivateIp;
 
     /**
-     * @var string 源资产网段信息
+     * @var string <p>源资产网段信息</p>
      */
     public $SouCidr;
 
     /**
-     * @var string 源模板名称
+     * @var string <p>源模板名称</p>
      */
     public $SouParameterName;
 
     /**
-     * @var string 目的资产名称
+     * @var string <p>目的资产名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 目的资产公网ip
+     * @var string <p>目的资产公网ip</p>
      */
     public $PublicIp;
 
     /**
-     * @var string 目的资产内网ip
+     * @var string <p>目的资产内网ip</p>
      */
     public $PrivateIp;
 
     /**
-     * @var string 目的资产网段信息
+     * @var string <p>目的资产网段信息</p>
      */
     public $Cidr;
 
     /**
-     * @var string 目的模板名称
+     * @var string <p>目的模板名称</p>
      */
     public $ParameterName;
 
     /**
-     * @var string 端口模板名称
+     * @var string <p>端口模板名称</p>
      */
     public $ProtocolPortName;
 
     /**
-     * @var SgDnsParseCount 域名解析的IP统计
+     * @var SgDnsParseCount <p>域名解析的IP统计</p>
      */
     public $DnsParseCount;
 
     /**
-     * @var string 规则生效范围
+     * @var string <p>规则生效范围</p>
      */
     public $Scope;
 
     /**
-     * @var integer 分区：
-1防火墙管理最前分区
-2是云防规则
-3防火墙管理最后分区
+     * @var integer <p>分区：<br>1防火墙管理最前分区<br>2是云防规则<br>3防火墙管理最后分区</p>
      */
     public $RulePartition;
 
     /**
-     * @var string 规则组Id
+     * @var string <p>规则组Id</p>
      */
     public $GroupId;
 
     /**
-     * @var string 规则组名称
+     * @var string <p>规则组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var string 规则组内规则id
+     * @var string <p>规则组内规则id</p>
      */
     public $GroupRuleId;
 
     /**
-     * @var string 策略Id
+     * @var string <p>策略Id</p>
      */
     public $StrategyId;
 
     /**
-     * @var string ip类型
+     * @var string <p>ip类型</p>
      */
     public $IpVersion;
 
     /**
-     * @var MemberInfo 成员信息
+     * @var MemberInfo <p>成员信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BelongMember;
 
     /**
-     * @param integer $Id 规则id  等同RuleUuid
-     * @param string $RuleId 规则Id
-     * @param integer $OrderIndex 排序
-     * @param integer $CfwOrderIndex 云防排序
-     * @param string $SourceId 源规则内容
-     * @param integer $SourceType 源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
-     * @param string $TargetId 目的规则内容
-     * @param integer $TargetType 目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
-     * @param string $Protocol 协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
-     * @param string $Port 端口
-     * @param integer $Strategy 规则策略
-取值范围:1/2
-1:阻断
-2:放行
-     * @param string $Detail 描述
-     * @param string $Region 地域
-     * @param string $ServiceTemplateId 服务模板id
-     * @param string $SouInstanceName 源资产名称
-     * @param string $SouPublicIp 源资产公网ip
-     * @param string $SouPrivateIp 源资产内网ip
-     * @param string $SouCidr 源资产网段信息
-     * @param string $SouParameterName 源模板名称
-     * @param string $InstanceName 目的资产名称
-     * @param string $PublicIp 目的资产公网ip
-     * @param string $PrivateIp 目的资产内网ip
-     * @param string $Cidr 目的资产网段信息
-     * @param string $ParameterName 目的模板名称
-     * @param string $ProtocolPortName 端口模板名称
-     * @param SgDnsParseCount $DnsParseCount 域名解析的IP统计
-     * @param string $Scope 规则生效范围
-     * @param integer $RulePartition 分区：
-1防火墙管理最前分区
-2是云防规则
-3防火墙管理最后分区
-     * @param string $GroupId 规则组Id
-     * @param string $GroupName 规则组名称
-     * @param string $GroupRuleId 规则组内规则id
-     * @param string $StrategyId 策略Id
-     * @param string $IpVersion ip类型
-     * @param MemberInfo $BelongMember 成员信息
+     * @param integer $Id <p>规则id  等同RuleUuid</p>
+     * @param string $RuleId <p>规则Id</p>
+     * @param integer $OrderIndex <p>排序</p>
+     * @param integer $CfwOrderIndex <p>云防排序</p>
+     * @param string $SourceId <p>源规则内容</p>
+     * @param integer $SourceType <p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)</p><p>枚举值：</p><ul><li>0： IP / CIDR</li><li>1： VPC 实例</li><li>2： 子网 </li><li>3： CVM 实例</li><li>4： CLB 实例</li><li>5： ENI（弹性网卡）实例</li><li>6： CDB（云数据库）实例</li><li>7： 参数模板</li><li>8： 标签</li><li>9： 地域</li></ul>
+     * @param string $TargetId <p>目的规则内容</p>
+     * @param integer $TargetType <p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p><p>枚举值：</p><ul><li>0： IP / CIDR</li><li>1： VPC 实例</li><li>2： 子网 </li><li>3： CVM 实例</li><li>4： CLB 实例</li><li>5： ENI（弹性网卡）实例</li><li>6： CDB（云数据库）实例</li><li>7： 参数模板</li><li>8： 标签</li><li>9： 地域</li></ul>
+     * @param string $Protocol <p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
+     * @param string $Port <p>端口</p>
+     * @param integer $Strategy <p>规则策略<br>取值范围:1/2<br>1:阻断<br>2:放行</p>
+     * @param string $Detail <p>描述</p>
+     * @param string $Region <p>地域</p>
+     * @param string $ServiceTemplateId <p>服务模板id</p>
+     * @param string $SouInstanceName <p>源资产名称</p>
+     * @param string $SouPublicIp <p>源资产公网ip</p>
+     * @param string $SouPrivateIp <p>源资产内网ip</p>
+     * @param string $SouCidr <p>源资产网段信息</p>
+     * @param string $SouParameterName <p>源模板名称</p>
+     * @param string $InstanceName <p>目的资产名称</p>
+     * @param string $PublicIp <p>目的资产公网ip</p>
+     * @param string $PrivateIp <p>目的资产内网ip</p>
+     * @param string $Cidr <p>目的资产网段信息</p>
+     * @param string $ParameterName <p>目的模板名称</p>
+     * @param string $ProtocolPortName <p>端口模板名称</p>
+     * @param SgDnsParseCount $DnsParseCount <p>域名解析的IP统计</p>
+     * @param string $Scope <p>规则生效范围</p>
+     * @param integer $RulePartition <p>分区：<br>1防火墙管理最前分区<br>2是云防规则<br>3防火墙管理最后分区</p>
+     * @param string $GroupId <p>规则组Id</p>
+     * @param string $GroupName <p>规则组名称</p>
+     * @param string $GroupRuleId <p>规则组内规则id</p>
+     * @param string $StrategyId <p>策略Id</p>
+     * @param string $IpVersion <p>ip类型</p>
+     * @param MemberInfo $BelongMember <p>成员信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

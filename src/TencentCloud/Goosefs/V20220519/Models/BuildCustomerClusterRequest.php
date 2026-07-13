@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BuildCustomerCluster请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统id
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统id
- * @method string getVpcId() 获取vpc网络ID
- * @method void setVpcId(string $VpcId) 设置vpc网络ID
- * @method string getSubnetId() 获取子网id
- * @method void setSubnetId(string $SubnetId) 设置子网id
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getFileSystemId() 获取<p>文件系统id</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统id</p>
+ * @method string getVpcId() 获取<p>vpc网络ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>vpc网络ID</p>
+ * @method string getSubnetId() 获取<p>子网id</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网id</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
  */
 class BuildCustomerClusterRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统id
+     * @var string <p>文件系统id</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string vpc网络ID
+     * @var string <p>vpc网络ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网id
+     * @var string <p>子网id</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @param string $FileSystemId 文件系统id
-     * @param string $VpcId vpc网络ID
-     * @param string $SubnetId 子网id
-     * @param string $ClusterName 集群名称
+     * @var string <p>可用区</p>
+     */
+    public $Zone;
+
+    /**
+     * @param string $FileSystemId <p>文件系统id</p>
+     * @param string $VpcId <p>vpc网络ID</p>
+     * @param string $SubnetId <p>子网id</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $Zone <p>可用区</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class BuildCustomerClusterRequest extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

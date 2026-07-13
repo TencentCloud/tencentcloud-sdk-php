@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询策略输出的用户回调信息
  *
- * @method string getCallbackUrl() 获取用户回调接口地址
- * @method void setCallbackUrl(string $CallbackUrl) 设置用户回调接口地址
- * @method integer getValidFlag() 获取用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
- * @method void setValidFlag(integer $ValidFlag) 设置用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
- * @method string getVerifyCode() 获取用户回调接口验证码
- * @method void setVerifyCode(string $VerifyCode) 设置用户回调接口验证码
+ * @method string getCallbackUrl() 获取<p>用户回调接口地址</p>
+ * @method void setCallbackUrl(string $CallbackUrl) 设置<p>用户回调接口地址</p>
+ * @method integer getValidFlag() 获取<p>用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证</p>
+ * @method void setValidFlag(integer $ValidFlag) 设置<p>用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证</p>
+ * @method string getVerifyCode() 获取<p>用户回调接口验证码</p>
+ * @method void setVerifyCode(string $VerifyCode) 设置<p>用户回调接口验证码</p>
  */
 class DescribePolicyGroupInfoCallback extends AbstractModel
 {
     /**
-     * @var string 用户回调接口地址
+     * @var string <p>用户回调接口地址</p>
      */
     public $CallbackUrl;
 
     /**
-     * @var integer 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
+     * @var integer <p>用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证</p>
      */
     public $ValidFlag;
 
     /**
-     * @var string 用户回调接口验证码
+     * @var string <p>用户回调接口验证码</p>
      */
     public $VerifyCode;
 
     /**
-     * @param string $CallbackUrl 用户回调接口地址
-     * @param integer $ValidFlag 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
-     * @param string $VerifyCode 用户回调接口验证码
+     * @param string $CallbackUrl <p>用户回调接口地址</p>
+     * @param integer $ValidFlag <p>用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证</p>
+     * @param string $VerifyCode <p>用户回调接口验证码</p>
      */
     function __construct()
     {

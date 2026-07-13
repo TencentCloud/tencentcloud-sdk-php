@@ -20,354 +20,378 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApmInstance请求参数结构体
  *
- * @method string getInstanceId() 获取业务系统 ID
- * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
- * @method string getName() 获取业务系统名
- * @method void setName(string $Name) 设置业务系统名
- * @method array getTags() 获取Tag 列表
- * @method void setTags(array $Tags) 设置Tag 列表
- * @method string getDescription() 获取业务系统描述
- * @method void setDescription(string $Description) 设置业务系统描述
- * @method integer getTraceDuration() 获取Trace 数据保存时长（单位：天）
- * @method void setTraceDuration(integer $TraceDuration) 设置Trace 数据保存时长（单位：天）
- * @method boolean getOpenBilling() 获取是否开启计费
- * @method void setOpenBilling(boolean $OpenBilling) 设置是否开启计费
- * @method integer getSpanDailyCounters() 获取业务系统上报额度
- * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置业务系统上报额度
- * @method integer getErrRateThreshold() 获取错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
- * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
- * @method integer getSampleRate() 获取采样率（单位：%）
- * @method void setSampleRate(integer $SampleRate) 设置采样率（单位：%）
- * @method integer getErrorSample() 获取是否开启错误采样（0=关, 1=开）
- * @method void setErrorSample(integer $ErrorSample) 设置是否开启错误采样（0=关, 1=开）
- * @method integer getSlowRequestSavedThreshold() 获取采样慢调用保存阈值（单位：ms）
- * @method void setSlowRequestSavedThreshold(integer $SlowRequestSavedThreshold) 设置采样慢调用保存阈值（单位：ms）
- * @method integer getIsRelatedLog() 获取是否开启日志功能（0=关, 1=开）
- * @method void setIsRelatedLog(integer $IsRelatedLog) 设置是否开启日志功能（0=关, 1=开）
- * @method string getLogRegion() 获取日志地域，开启日志功能后才会生效
- * @method void setLogRegion(string $LogRegion) 设置日志地域，开启日志功能后才会生效
- * @method string getLogTopicID() 获取CLS 日志主题 ID，开启日志功能后才会生效
- * @method void setLogTopicID(string $LogTopicID) 设置CLS 日志主题 ID，开启日志功能后才会生效
- * @method string getLogSet() 获取日志集，开启日志功能后才会生效
- * @method void setLogSet(string $LogSet) 设置日志集，开启日志功能后才会生效
- * @method string getLogSource() 获取日志源，开启日志功能后才会生效
- * @method void setLogSource(string $LogSource) 设置日志源，开启日志功能后才会生效
- * @method array getCustomShowTags() 获取用户自定义展示标签列表
- * @method void setCustomShowTags(array $CustomShowTags) 设置用户自定义展示标签列表
- * @method integer getPayMode() 获取修改计费模式（1为预付费，0为按量付费）
- * @method void setPayMode(integer $PayMode) 设置修改计费模式（1为预付费，0为按量付费）
- * @method integer getResponseDurationWarningThreshold() 获取响应时间警示线
- * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置响应时间警示线
- * @method integer getFree() 获取是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
- * @method void setFree(integer $Free) 设置是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
- * @method integer getIsRelatedDashboard() 获取是否关联 Dashboard（0=关,1=开）
- * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) 设置是否关联 Dashboard（0=关,1=开）
- * @method string getDashboardTopicID() 获取关联的 Dashboard ID，开启关联 Dashboard 后才会生效
- * @method void setDashboardTopicID(string $DashboardTopicID) 设置关联的 Dashboard ID，开启关联 Dashboard 后才会生效
- * @method integer getIsSqlInjectionAnalysis() 获取是否开启 SQL 注入检测（0=关,1=开）
- * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置是否开启 SQL 注入检测（0=关,1=开）
- * @method integer getIsInstrumentationVulnerabilityScan() 获取是否开启组件漏洞检测（0=关,1=开）
- * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) 设置是否开启组件漏洞检测（0=关,1=开）
- * @method integer getIsRemoteCommandExecutionAnalysis() 获取是否开启远程命令攻击检测
- * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) 设置是否开启远程命令攻击检测
- * @method integer getIsMemoryHijackingAnalysis() 获取是否开启内存马检测
- * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) 设置是否开启内存马检测
- * @method integer getLogIndexType() 获取CLS索引类型(0=全文索引，1=键值索引)
- * @method void setLogIndexType(integer $LogIndexType) 设置CLS索引类型(0=全文索引，1=键值索引)
- * @method string getLogTraceIdKey() 获取traceId的索引key: 当CLS索引类型为键值索引时生效
- * @method void setLogTraceIdKey(string $LogTraceIdKey) 设置traceId的索引key: 当CLS索引类型为键值索引时生效
- * @method integer getIsDeleteAnyFileAnalysis() 获取是否开启删除任意文件检测（0-关闭，1-开启）
- * @method void setIsDeleteAnyFileAnalysis(integer $IsDeleteAnyFileAnalysis) 设置是否开启删除任意文件检测（0-关闭，1-开启）
- * @method integer getIsReadAnyFileAnalysis() 获取是否开启读取任意文件检测（0-关闭，1-开启）
- * @method void setIsReadAnyFileAnalysis(integer $IsReadAnyFileAnalysis) 设置是否开启读取任意文件检测（0-关闭，1-开启）
- * @method integer getIsUploadAnyFileAnalysis() 获取是否开启上传任意文件检测（0-关闭，1-开启）
- * @method void setIsUploadAnyFileAnalysis(integer $IsUploadAnyFileAnalysis) 设置是否开启上传任意文件检测（0-关闭，1-开启）
- * @method integer getIsIncludeAnyFileAnalysis() 获取是否开启包含任意文件检测（0-关闭，1-开启）
- * @method void setIsIncludeAnyFileAnalysis(integer $IsIncludeAnyFileAnalysis) 设置是否开启包含任意文件检测（0-关闭，1-开启）
- * @method integer getIsDirectoryTraversalAnalysis() 获取是否开启目录遍历检测（0-关闭，1-开启）
- * @method void setIsDirectoryTraversalAnalysis(integer $IsDirectoryTraversalAnalysis) 设置是否开启目录遍历检测（0-关闭，1-开启）
- * @method integer getIsTemplateEngineInjectionAnalysis() 获取是否开启模板引擎注入检测（0-关闭，1-开启）
- * @method void setIsTemplateEngineInjectionAnalysis(integer $IsTemplateEngineInjectionAnalysis) 设置是否开启模板引擎注入检测（0-关闭，1-开启）
- * @method integer getIsScriptEngineInjectionAnalysis() 获取是否开启脚本引擎注入检测（0-关闭，1-开启）
- * @method void setIsScriptEngineInjectionAnalysis(integer $IsScriptEngineInjectionAnalysis) 设置是否开启脚本引擎注入检测（0-关闭，1-开启）
- * @method integer getIsExpressionInjectionAnalysis() 获取是否开启表达式注入检测（0-关闭，1-开启）
- * @method void setIsExpressionInjectionAnalysis(integer $IsExpressionInjectionAnalysis) 设置是否开启表达式注入检测（0-关闭，1-开启）
- * @method integer getIsJNDIInjectionAnalysis() 获取是否开启JNDI注入检测（0-关闭，1-开启）
- * @method void setIsJNDIInjectionAnalysis(integer $IsJNDIInjectionAnalysis) 设置是否开启JNDI注入检测（0-关闭，1-开启）
- * @method integer getIsJNIInjectionAnalysis() 获取是否开启JNI注入检测（0-关闭，1-开启）
- * @method void setIsJNIInjectionAnalysis(integer $IsJNIInjectionAnalysis) 设置是否开启JNI注入检测（0-关闭，1-开启）
- * @method integer getIsWebshellBackdoorAnalysis() 获取是否开启Webshell后门检测（0-关闭，1-开启）
- * @method void setIsWebshellBackdoorAnalysis(integer $IsWebshellBackdoorAnalysis) 设置是否开启Webshell后门检测（0-关闭，1-开启）
- * @method integer getIsDeserializationAnalysis() 获取是否开启反序列化检测（0-关闭，1-开启）
- * @method void setIsDeserializationAnalysis(integer $IsDeserializationAnalysis) 设置是否开启反序列化检测（0-关闭，1-开启）
- * @method integer getUrlLongSegmentThreshold() 获取URL长分段收敛阈值
- * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) 设置URL长分段收敛阈值
- * @method integer getUrlNumberSegmentThreshold() 获取URL数字分段收敛阈值
- * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) 设置URL数字分段收敛阈值
- * @method string getLogSpanIdKey() 获取spanId的索引key: 当CLS索引类型为键值索引时生效
- * @method void setLogSpanIdKey(string $LogSpanIdKey) 设置spanId的索引key: 当CLS索引类型为键值索引时生效
+ * @method string getInstanceId() 获取<p>业务系统 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>业务系统 ID</p>
+ * @method string getName() 获取<p>业务系统名</p>
+ * @method void setName(string $Name) 设置<p>业务系统名</p>
+ * @method array getTags() 获取<p>Tag 列表</p>
+ * @method void setTags(array $Tags) 设置<p>Tag 列表</p>
+ * @method string getDescription() 获取<p>业务系统描述</p>
+ * @method void setDescription(string $Description) 设置<p>业务系统描述</p>
+ * @method integer getTraceDuration() 获取<p>Trace 数据保存时长（单位：天）</p>
+ * @method void setTraceDuration(integer $TraceDuration) 设置<p>Trace 数据保存时长（单位：天）</p>
+ * @method boolean getOpenBilling() 获取<p>是否开启计费</p>
+ * @method void setOpenBilling(boolean $OpenBilling) 设置<p>是否开启计费</p>
+ * @method integer getSpanDailyCounters() 获取<p>业务系统上报额度</p>
+ * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置<p>业务系统上报额度</p>
+ * @method integer getErrRateThreshold() 获取<p>错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。</p>
+ * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置<p>错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。</p>
+ * @method integer getSampleRate() 获取<p>采样率（单位：%）</p>
+ * @method void setSampleRate(integer $SampleRate) 设置<p>采样率（单位：%）</p>
+ * @method integer getErrorSample() 获取<p>是否开启错误采样（0=关, 1=开）</p>
+ * @method void setErrorSample(integer $ErrorSample) 设置<p>是否开启错误采样（0=关, 1=开）</p>
+ * @method integer getSlowRequestSavedThreshold() 获取<p>采样慢调用保存阈值（单位：ms）</p>
+ * @method void setSlowRequestSavedThreshold(integer $SlowRequestSavedThreshold) 设置<p>采样慢调用保存阈值（单位：ms）</p>
+ * @method integer getIsRelatedLog() 获取<p>是否开启日志功能（0=关, 1=开）</p>
+ * @method void setIsRelatedLog(integer $IsRelatedLog) 设置<p>是否开启日志功能（0=关, 1=开）</p>
+ * @method string getLogRegion() 获取<p>日志地域，开启日志功能后才会生效</p>
+ * @method void setLogRegion(string $LogRegion) 设置<p>日志地域，开启日志功能后才会生效</p>
+ * @method string getLogTopicID() 获取<p>CLS 日志主题 ID，开启日志功能后才会生效</p>
+ * @method void setLogTopicID(string $LogTopicID) 设置<p>CLS 日志主题 ID，开启日志功能后才会生效</p>
+ * @method string getLogSet() 获取<p>日志集，开启日志功能后才会生效</p>
+ * @method void setLogSet(string $LogSet) 设置<p>日志集，开启日志功能后才会生效</p>
+ * @method string getLogSource() 获取<p>日志源，开启日志功能后才会生效</p>
+ * @method void setLogSource(string $LogSource) 设置<p>日志源，开启日志功能后才会生效</p>
+ * @method array getCustomShowTags() 获取<p>用户自定义展示标签列表</p>
+ * @method void setCustomShowTags(array $CustomShowTags) 设置<p>用户自定义展示标签列表</p>
+ * @method integer getPayMode() 获取<p>修改计费模式（1为预付费，0为按量付费）</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>修改计费模式（1为预付费，0为按量付费）</p>
+ * @method integer getResponseDurationWarningThreshold() 获取<p>响应时间警示线</p>
+ * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置<p>响应时间警示线</p>
+ * @method integer getFree() 获取<p>是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0</p>
+ * @method void setFree(integer $Free) 设置<p>是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0</p>
+ * @method integer getIsRelatedDashboard() 获取<p>是否关联 Dashboard（0=关,1=开）</p>
+ * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) 设置<p>是否关联 Dashboard（0=关,1=开）</p>
+ * @method string getDashboardTopicID() 获取<p>关联的 Dashboard ID，开启关联 Dashboard 后才会生效</p>
+ * @method void setDashboardTopicID(string $DashboardTopicID) 设置<p>关联的 Dashboard ID，开启关联 Dashboard 后才会生效</p>
+ * @method integer getIsSqlInjectionAnalysis() 获取<p>是否开启 SQL 注入检测（0=关,1=开）</p>
+ * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置<p>是否开启 SQL 注入检测（0=关,1=开）</p>
+ * @method integer getIsInstrumentationVulnerabilityScan() 获取<p>是否开启组件漏洞检测（0=关,1=开）</p>
+ * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) 设置<p>是否开启组件漏洞检测（0=关,1=开）</p>
+ * @method integer getIsRemoteCommandExecutionAnalysis() 获取<p>是否开启远程命令攻击检测</p>
+ * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) 设置<p>是否开启远程命令攻击检测</p>
+ * @method integer getIsMemoryHijackingAnalysis() 获取<p>是否开启内存马检测</p>
+ * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) 设置<p>是否开启内存马检测</p>
+ * @method integer getLogIndexType() 获取<p>CLS索引类型(0=全文索引，1=键值索引)</p>
+ * @method void setLogIndexType(integer $LogIndexType) 设置<p>CLS索引类型(0=全文索引，1=键值索引)</p>
+ * @method string getLogTraceIdKey() 获取<p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
+ * @method void setLogTraceIdKey(string $LogTraceIdKey) 设置<p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
+ * @method integer getIsDeleteAnyFileAnalysis() 获取<p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
+ * @method void setIsDeleteAnyFileAnalysis(integer $IsDeleteAnyFileAnalysis) 设置<p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
+ * @method integer getIsReadAnyFileAnalysis() 获取<p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
+ * @method void setIsReadAnyFileAnalysis(integer $IsReadAnyFileAnalysis) 设置<p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
+ * @method integer getIsUploadAnyFileAnalysis() 获取<p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
+ * @method void setIsUploadAnyFileAnalysis(integer $IsUploadAnyFileAnalysis) 设置<p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
+ * @method integer getIsIncludeAnyFileAnalysis() 获取<p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
+ * @method void setIsIncludeAnyFileAnalysis(integer $IsIncludeAnyFileAnalysis) 设置<p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
+ * @method integer getIsDirectoryTraversalAnalysis() 获取<p>是否开启目录遍历检测（0-关闭，1-开启）</p>
+ * @method void setIsDirectoryTraversalAnalysis(integer $IsDirectoryTraversalAnalysis) 设置<p>是否开启目录遍历检测（0-关闭，1-开启）</p>
+ * @method integer getIsTemplateEngineInjectionAnalysis() 获取<p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
+ * @method void setIsTemplateEngineInjectionAnalysis(integer $IsTemplateEngineInjectionAnalysis) 设置<p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
+ * @method integer getIsScriptEngineInjectionAnalysis() 获取<p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
+ * @method void setIsScriptEngineInjectionAnalysis(integer $IsScriptEngineInjectionAnalysis) 设置<p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
+ * @method integer getIsExpressionInjectionAnalysis() 获取<p>是否开启表达式注入检测（0-关闭，1-开启）</p>
+ * @method void setIsExpressionInjectionAnalysis(integer $IsExpressionInjectionAnalysis) 设置<p>是否开启表达式注入检测（0-关闭，1-开启）</p>
+ * @method integer getIsJNDIInjectionAnalysis() 获取<p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
+ * @method void setIsJNDIInjectionAnalysis(integer $IsJNDIInjectionAnalysis) 设置<p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
+ * @method integer getIsJNIInjectionAnalysis() 获取<p>是否开启JNI注入检测（0-关闭，1-开启）</p>
+ * @method void setIsJNIInjectionAnalysis(integer $IsJNIInjectionAnalysis) 设置<p>是否开启JNI注入检测（0-关闭，1-开启）</p>
+ * @method integer getIsWebshellBackdoorAnalysis() 获取<p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
+ * @method void setIsWebshellBackdoorAnalysis(integer $IsWebshellBackdoorAnalysis) 设置<p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
+ * @method integer getIsDeserializationAnalysis() 获取<p>是否开启反序列化检测（0-关闭，1-开启）</p>
+ * @method void setIsDeserializationAnalysis(integer $IsDeserializationAnalysis) 设置<p>是否开启反序列化检测（0-关闭，1-开启）</p>
+ * @method integer getUrlLongSegmentThreshold() 获取<p>URL长分段收敛阈值</p>
+ * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) 设置<p>URL长分段收敛阈值</p>
+ * @method integer getUrlNumberSegmentThreshold() 获取<p>URL数字分段收敛阈值</p>
+ * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) 设置<p>URL数字分段收敛阈值</p>
+ * @method string getLogSpanIdKey() 获取<p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
+ * @method void setLogSpanIdKey(string $LogSpanIdKey) 设置<p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
+ * @method boolean getEnableHeadSampler() 获取<p>是否开启探针头采样</p>
+ * @method void setEnableHeadSampler(boolean $EnableHeadSampler) 设置<p>是否开启探针头采样</p>
+ * @method string getHeadSamplerType() 获取<p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
+ * @method void setHeadSamplerType(string $HeadSamplerType) 设置<p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
+ * @method integer getHeadSamplerArg() 获取<p>头采采样率</p><p>取值范围：[0, 100]</p>
+ * @method void setHeadSamplerArg(integer $HeadSamplerArg) 设置<p>头采采样率</p><p>取值范围：[0, 100]</p>
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 业务系统 ID
+     * @var string <p>业务系统 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 业务系统名
+     * @var string <p>业务系统名</p>
      */
     public $Name;
 
     /**
-     * @var array Tag 列表
+     * @var array <p>Tag 列表</p>
      */
     public $Tags;
 
     /**
-     * @var string 业务系统描述
+     * @var string <p>业务系统描述</p>
      */
     public $Description;
 
     /**
-     * @var integer Trace 数据保存时长（单位：天）
+     * @var integer <p>Trace 数据保存时长（单位：天）</p>
      */
     public $TraceDuration;
 
     /**
-     * @var boolean 是否开启计费
+     * @var boolean <p>是否开启计费</p>
      */
     public $OpenBilling;
 
     /**
-     * @var integer 业务系统上报额度
+     * @var integer <p>业务系统上报额度</p>
      */
     public $SpanDailyCounters;
 
     /**
-     * @var integer 错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
+     * @var integer <p>错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。</p>
      */
     public $ErrRateThreshold;
 
     /**
-     * @var integer 采样率（单位：%）
+     * @var integer <p>采样率（单位：%）</p>
      */
     public $SampleRate;
 
     /**
-     * @var integer 是否开启错误采样（0=关, 1=开）
+     * @var integer <p>是否开启错误采样（0=关, 1=开）</p>
      */
     public $ErrorSample;
 
     /**
-     * @var integer 采样慢调用保存阈值（单位：ms）
+     * @var integer <p>采样慢调用保存阈值（单位：ms）</p>
      */
     public $SlowRequestSavedThreshold;
 
     /**
-     * @var integer 是否开启日志功能（0=关, 1=开）
+     * @var integer <p>是否开启日志功能（0=关, 1=开）</p>
      */
     public $IsRelatedLog;
 
     /**
-     * @var string 日志地域，开启日志功能后才会生效
+     * @var string <p>日志地域，开启日志功能后才会生效</p>
      */
     public $LogRegion;
 
     /**
-     * @var string CLS 日志主题 ID，开启日志功能后才会生效
+     * @var string <p>CLS 日志主题 ID，开启日志功能后才会生效</p>
      */
     public $LogTopicID;
 
     /**
-     * @var string 日志集，开启日志功能后才会生效
+     * @var string <p>日志集，开启日志功能后才会生效</p>
      */
     public $LogSet;
 
     /**
-     * @var string 日志源，开启日志功能后才会生效
+     * @var string <p>日志源，开启日志功能后才会生效</p>
      */
     public $LogSource;
 
     /**
-     * @var array 用户自定义展示标签列表
+     * @var array <p>用户自定义展示标签列表</p>
      */
     public $CustomShowTags;
 
     /**
-     * @var integer 修改计费模式（1为预付费，0为按量付费）
+     * @var integer <p>修改计费模式（1为预付费，0为按量付费）</p>
      */
     public $PayMode;
 
     /**
-     * @var integer 响应时间警示线
+     * @var integer <p>响应时间警示线</p>
      */
     public $ResponseDurationWarningThreshold;
 
     /**
-     * @var integer 是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
+     * @var integer <p>是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0</p>
      */
     public $Free;
 
     /**
-     * @var integer 是否关联 Dashboard（0=关,1=开）
+     * @var integer <p>是否关联 Dashboard（0=关,1=开）</p>
      */
     public $IsRelatedDashboard;
 
     /**
-     * @var string 关联的 Dashboard ID，开启关联 Dashboard 后才会生效
+     * @var string <p>关联的 Dashboard ID，开启关联 Dashboard 后才会生效</p>
      */
     public $DashboardTopicID;
 
     /**
-     * @var integer 是否开启 SQL 注入检测（0=关,1=开）
+     * @var integer <p>是否开启 SQL 注入检测（0=关,1=开）</p>
      */
     public $IsSqlInjectionAnalysis;
 
     /**
-     * @var integer 是否开启组件漏洞检测（0=关,1=开）
+     * @var integer <p>是否开启组件漏洞检测（0=关,1=开）</p>
      */
     public $IsInstrumentationVulnerabilityScan;
 
     /**
-     * @var integer 是否开启远程命令攻击检测
+     * @var integer <p>是否开启远程命令攻击检测</p>
      */
     public $IsRemoteCommandExecutionAnalysis;
 
     /**
-     * @var integer 是否开启内存马检测
+     * @var integer <p>是否开启内存马检测</p>
      */
     public $IsMemoryHijackingAnalysis;
 
     /**
-     * @var integer CLS索引类型(0=全文索引，1=键值索引)
+     * @var integer <p>CLS索引类型(0=全文索引，1=键值索引)</p>
      */
     public $LogIndexType;
 
     /**
-     * @var string traceId的索引key: 当CLS索引类型为键值索引时生效
+     * @var string <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
      */
     public $LogTraceIdKey;
 
     /**
-     * @var integer 是否开启删除任意文件检测（0-关闭，1-开启）
+     * @var integer <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
      */
     public $IsDeleteAnyFileAnalysis;
 
     /**
-     * @var integer 是否开启读取任意文件检测（0-关闭，1-开启）
+     * @var integer <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
      */
     public $IsReadAnyFileAnalysis;
 
     /**
-     * @var integer 是否开启上传任意文件检测（0-关闭，1-开启）
+     * @var integer <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
      */
     public $IsUploadAnyFileAnalysis;
 
     /**
-     * @var integer 是否开启包含任意文件检测（0-关闭，1-开启）
+     * @var integer <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
      */
     public $IsIncludeAnyFileAnalysis;
 
     /**
-     * @var integer 是否开启目录遍历检测（0-关闭，1-开启）
+     * @var integer <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
      */
     public $IsDirectoryTraversalAnalysis;
 
     /**
-     * @var integer 是否开启模板引擎注入检测（0-关闭，1-开启）
+     * @var integer <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
      */
     public $IsTemplateEngineInjectionAnalysis;
 
     /**
-     * @var integer 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     * @var integer <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
      */
     public $IsScriptEngineInjectionAnalysis;
 
     /**
-     * @var integer 是否开启表达式注入检测（0-关闭，1-开启）
+     * @var integer <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
      */
     public $IsExpressionInjectionAnalysis;
 
     /**
-     * @var integer 是否开启JNDI注入检测（0-关闭，1-开启）
+     * @var integer <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
      */
     public $IsJNDIInjectionAnalysis;
 
     /**
-     * @var integer 是否开启JNI注入检测（0-关闭，1-开启）
+     * @var integer <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
      */
     public $IsJNIInjectionAnalysis;
 
     /**
-     * @var integer 是否开启Webshell后门检测（0-关闭，1-开启）
+     * @var integer <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
      */
     public $IsWebshellBackdoorAnalysis;
 
     /**
-     * @var integer 是否开启反序列化检测（0-关闭，1-开启）
+     * @var integer <p>是否开启反序列化检测（0-关闭，1-开启）</p>
      */
     public $IsDeserializationAnalysis;
 
     /**
-     * @var integer URL长分段收敛阈值
+     * @var integer <p>URL长分段收敛阈值</p>
      */
     public $UrlLongSegmentThreshold;
 
     /**
-     * @var integer URL数字分段收敛阈值
+     * @var integer <p>URL数字分段收敛阈值</p>
      */
     public $UrlNumberSegmentThreshold;
 
     /**
-     * @var string spanId的索引key: 当CLS索引类型为键值索引时生效
+     * @var string <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
      */
     public $LogSpanIdKey;
 
     /**
-     * @param string $InstanceId 业务系统 ID
-     * @param string $Name 业务系统名
-     * @param array $Tags Tag 列表
-     * @param string $Description 业务系统描述
-     * @param integer $TraceDuration Trace 数据保存时长（单位：天）
-     * @param boolean $OpenBilling 是否开启计费
-     * @param integer $SpanDailyCounters 业务系统上报额度
-     * @param integer $ErrRateThreshold 错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
-     * @param integer $SampleRate 采样率（单位：%）
-     * @param integer $ErrorSample 是否开启错误采样（0=关, 1=开）
-     * @param integer $SlowRequestSavedThreshold 采样慢调用保存阈值（单位：ms）
-     * @param integer $IsRelatedLog 是否开启日志功能（0=关, 1=开）
-     * @param string $LogRegion 日志地域，开启日志功能后才会生效
-     * @param string $LogTopicID CLS 日志主题 ID，开启日志功能后才会生效
-     * @param string $LogSet 日志集，开启日志功能后才会生效
-     * @param string $LogSource 日志源，开启日志功能后才会生效
-     * @param array $CustomShowTags 用户自定义展示标签列表
-     * @param integer $PayMode 修改计费模式（1为预付费，0为按量付费）
-     * @param integer $ResponseDurationWarningThreshold 响应时间警示线
-     * @param integer $Free 是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
-     * @param integer $IsRelatedDashboard 是否关联 Dashboard（0=关,1=开）
-     * @param string $DashboardTopicID 关联的 Dashboard ID，开启关联 Dashboard 后才会生效
-     * @param integer $IsSqlInjectionAnalysis 是否开启 SQL 注入检测（0=关,1=开）
-     * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关,1=开）
-     * @param integer $IsRemoteCommandExecutionAnalysis 是否开启远程命令攻击检测
-     * @param integer $IsMemoryHijackingAnalysis 是否开启内存马检测
-     * @param integer $LogIndexType CLS索引类型(0=全文索引，1=键值索引)
-     * @param string $LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
-     * @param integer $IsDeleteAnyFileAnalysis 是否开启删除任意文件检测（0-关闭，1-开启）
-     * @param integer $IsReadAnyFileAnalysis 是否开启读取任意文件检测（0-关闭，1-开启）
-     * @param integer $IsUploadAnyFileAnalysis 是否开启上传任意文件检测（0-关闭，1-开启）
-     * @param integer $IsIncludeAnyFileAnalysis 是否开启包含任意文件检测（0-关闭，1-开启）
-     * @param integer $IsDirectoryTraversalAnalysis 是否开启目录遍历检测（0-关闭，1-开启）
-     * @param integer $IsTemplateEngineInjectionAnalysis 是否开启模板引擎注入检测（0-关闭，1-开启）
-     * @param integer $IsScriptEngineInjectionAnalysis 是否开启脚本引擎注入检测（0-关闭，1-开启）
-     * @param integer $IsExpressionInjectionAnalysis 是否开启表达式注入检测（0-关闭，1-开启）
-     * @param integer $IsJNDIInjectionAnalysis 是否开启JNDI注入检测（0-关闭，1-开启）
-     * @param integer $IsJNIInjectionAnalysis 是否开启JNI注入检测（0-关闭，1-开启）
-     * @param integer $IsWebshellBackdoorAnalysis 是否开启Webshell后门检测（0-关闭，1-开启）
-     * @param integer $IsDeserializationAnalysis 是否开启反序列化检测（0-关闭，1-开启）
-     * @param integer $UrlLongSegmentThreshold URL长分段收敛阈值
-     * @param integer $UrlNumberSegmentThreshold URL数字分段收敛阈值
-     * @param string $LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
+     * @var boolean <p>是否开启探针头采样</p>
+     */
+    public $EnableHeadSampler;
+
+    /**
+     * @var string <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
+     */
+    public $HeadSamplerType;
+
+    /**
+     * @var integer <p>头采采样率</p><p>取值范围：[0, 100]</p>
+     */
+    public $HeadSamplerArg;
+
+    /**
+     * @param string $InstanceId <p>业务系统 ID</p>
+     * @param string $Name <p>业务系统名</p>
+     * @param array $Tags <p>Tag 列表</p>
+     * @param string $Description <p>业务系统描述</p>
+     * @param integer $TraceDuration <p>Trace 数据保存时长（单位：天）</p>
+     * @param boolean $OpenBilling <p>是否开启计费</p>
+     * @param integer $SpanDailyCounters <p>业务系统上报额度</p>
+     * @param integer $ErrRateThreshold <p>错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。</p>
+     * @param integer $SampleRate <p>采样率（单位：%）</p>
+     * @param integer $ErrorSample <p>是否开启错误采样（0=关, 1=开）</p>
+     * @param integer $SlowRequestSavedThreshold <p>采样慢调用保存阈值（单位：ms）</p>
+     * @param integer $IsRelatedLog <p>是否开启日志功能（0=关, 1=开）</p>
+     * @param string $LogRegion <p>日志地域，开启日志功能后才会生效</p>
+     * @param string $LogTopicID <p>CLS 日志主题 ID，开启日志功能后才会生效</p>
+     * @param string $LogSet <p>日志集，开启日志功能后才会生效</p>
+     * @param string $LogSource <p>日志源，开启日志功能后才会生效</p>
+     * @param array $CustomShowTags <p>用户自定义展示标签列表</p>
+     * @param integer $PayMode <p>修改计费模式（1为预付费，0为按量付费）</p>
+     * @param integer $ResponseDurationWarningThreshold <p>响应时间警示线</p>
+     * @param integer $Free <p>是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0</p>
+     * @param integer $IsRelatedDashboard <p>是否关联 Dashboard（0=关,1=开）</p>
+     * @param string $DashboardTopicID <p>关联的 Dashboard ID，开启关联 Dashboard 后才会生效</p>
+     * @param integer $IsSqlInjectionAnalysis <p>是否开启 SQL 注入检测（0=关,1=开）</p>
+     * @param integer $IsInstrumentationVulnerabilityScan <p>是否开启组件漏洞检测（0=关,1=开）</p>
+     * @param integer $IsRemoteCommandExecutionAnalysis <p>是否开启远程命令攻击检测</p>
+     * @param integer $IsMemoryHijackingAnalysis <p>是否开启内存马检测</p>
+     * @param integer $LogIndexType <p>CLS索引类型(0=全文索引，1=键值索引)</p>
+     * @param string $LogTraceIdKey <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
+     * @param integer $IsDeleteAnyFileAnalysis <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
+     * @param integer $IsReadAnyFileAnalysis <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
+     * @param integer $IsUploadAnyFileAnalysis <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
+     * @param integer $IsIncludeAnyFileAnalysis <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
+     * @param integer $IsDirectoryTraversalAnalysis <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
+     * @param integer $IsTemplateEngineInjectionAnalysis <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
+     * @param integer $IsScriptEngineInjectionAnalysis <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
+     * @param integer $IsExpressionInjectionAnalysis <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
+     * @param integer $IsJNDIInjectionAnalysis <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
+     * @param integer $IsJNIInjectionAnalysis <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
+     * @param integer $IsWebshellBackdoorAnalysis <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
+     * @param integer $IsDeserializationAnalysis <p>是否开启反序列化检测（0-关闭，1-开启）</p>
+     * @param integer $UrlLongSegmentThreshold <p>URL长分段收敛阈值</p>
+     * @param integer $UrlNumberSegmentThreshold <p>URL数字分段收敛阈值</p>
+     * @param string $LogSpanIdKey <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
+     * @param boolean $EnableHeadSampler <p>是否开启探针头采样</p>
+     * @param string $HeadSamplerType <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
+     * @param integer $HeadSamplerArg <p>头采采样率</p><p>取值范围：[0, 100]</p>
      */
     function __construct()
     {
@@ -557,6 +581,18 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("LogSpanIdKey",$param) and $param["LogSpanIdKey"] !== null) {
             $this->LogSpanIdKey = $param["LogSpanIdKey"];
+        }
+
+        if (array_key_exists("EnableHeadSampler",$param) and $param["EnableHeadSampler"] !== null) {
+            $this->EnableHeadSampler = $param["EnableHeadSampler"];
+        }
+
+        if (array_key_exists("HeadSamplerType",$param) and $param["HeadSamplerType"] !== null) {
+            $this->HeadSamplerType = $param["HeadSamplerType"];
+        }
+
+        if (array_key_exists("HeadSamplerArg",$param) and $param["HeadSamplerArg"] !== null) {
+            $this->HeadSamplerArg = $param["HeadSamplerArg"];
         }
     }
 }

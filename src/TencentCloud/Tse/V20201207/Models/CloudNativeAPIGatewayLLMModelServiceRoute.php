@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntentRouteConfig(AIGWIntentRoute $IntentRouteConfig) 设置<p>意图识别</p>
  * @method AIGWLatencyPriorityConfig getLatencyPriorityConfig() 获取<p>延迟路由</p>
  * @method void setLatencyPriorityConfig(AIGWLatencyPriorityConfig $LatencyPriorityConfig) 设置<p>延迟路由</p>
+ * @method AIGWCacheAwareRouteConfig getCacheAwareRouteConfig() 获取<p>缓存感知路由配置（前缀缓存）</p>
+ * @method void setCacheAwareRouteConfig(AIGWCacheAwareRouteConfig $CacheAwareRouteConfig) 设置<p>缓存感知路由配置（前缀缓存）</p>
+ * @method AIGWTokenLengthRoute getTokenLengthRouteConfig() 获取<p>token 长度路由</p>
+ * @method void setTokenLengthRouteConfig(AIGWTokenLengthRoute $TokenLengthRouteConfig) 设置<p>token 长度路由</p>
  */
 class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel
 {
@@ -59,11 +63,23 @@ class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel
     public $LatencyPriorityConfig;
 
     /**
+     * @var AIGWCacheAwareRouteConfig <p>缓存感知路由配置（前缀缓存）</p>
+     */
+    public $CacheAwareRouteConfig;
+
+    /**
+     * @var AIGWTokenLengthRoute <p>token 长度路由</p>
+     */
+    public $TokenLengthRouteConfig;
+
+    /**
      * @param array $SelectedTypes <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
      * @param array $WeightedConfig <p>权重路由配置，最多10个</p>
      * @param array $ModelNameConfig <p>模型名称路由配置，最多10个</p>
      * @param AIGWIntentRoute $IntentRouteConfig <p>意图识别</p>
      * @param AIGWLatencyPriorityConfig $LatencyPriorityConfig <p>延迟路由</p>
+     * @param AIGWCacheAwareRouteConfig $CacheAwareRouteConfig <p>缓存感知路由配置（前缀缓存）</p>
+     * @param AIGWTokenLengthRoute $TokenLengthRouteConfig <p>token 长度路由</p>
      */
     function __construct()
     {
@@ -108,6 +124,16 @@ class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel
         if (array_key_exists("LatencyPriorityConfig",$param) and $param["LatencyPriorityConfig"] !== null) {
             $this->LatencyPriorityConfig = new AIGWLatencyPriorityConfig();
             $this->LatencyPriorityConfig->deserialize($param["LatencyPriorityConfig"]);
+        }
+
+        if (array_key_exists("CacheAwareRouteConfig",$param) and $param["CacheAwareRouteConfig"] !== null) {
+            $this->CacheAwareRouteConfig = new AIGWCacheAwareRouteConfig();
+            $this->CacheAwareRouteConfig->deserialize($param["CacheAwareRouteConfig"]);
+        }
+
+        if (array_key_exists("TokenLengthRouteConfig",$param) and $param["TokenLengthRouteConfig"] !== null) {
+            $this->TokenLengthRouteConfig = new AIGWTokenLengthRoute();
+            $this->TokenLengthRouteConfig->deserialize($param["TokenLengthRouteConfig"]);
         }
     }
 }

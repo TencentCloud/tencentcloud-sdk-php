@@ -58,6 +58,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuotaLimit(AIGWLLMQuotaLimit $QuotaLimit) 设置<p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
  * @method array getTags() 获取<p>标签</p>
  * @method void setTags(array $Tags) 设置<p>标签</p>
+ * @method array getModelRewriteRules() 获取<p>模型改写规则</p>
+ * @method void setModelRewriteRules(array $ModelRewriteRules) 设置<p>模型改写规则</p>
+ * @method string getSourceId() 获取<p>来源 id</p>
+ * @method void setSourceId(string $SourceId) 设置<p>来源 id</p>
+ * @method string getNamespace() 获取<p>命名空间</p>
+ * @method void setNamespace(string $Namespace) 设置<p>命名空间</p>
+ * @method string getServiceName() 获取<p>服务名字</p>
+ * @method void setServiceName(string $ServiceName) 设置<p>服务名字</p>
+ * @method string getProtocol() 获取<p>协议</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议</p>
+ * @method array getExtParams() 获取<p>扩展参数</p>
+ * @method void setExtParams(array $ExtParams) 设置<p>扩展参数</p>
+ * @method boolean getKeyRotationEnabled() 获取<p>密钥轮转开关</p>
+ * @method void setKeyRotationEnabled(boolean $KeyRotationEnabled) 设置<p>密钥轮转开关</p>
+ * @method integer getKeyRotationPeriodDays() 获取<p>密钥轮转天数</p>
+ * @method void setKeyRotationPeriodDays(integer $KeyRotationPeriodDays) 设置<p>密钥轮转天数</p>
+ * @method string getExternalInstanceId() 获取<p>外部服务来源ID</p>
+ * @method void setExternalInstanceId(string $ExternalInstanceId) 设置<p>外部服务来源ID</p>
  */
 class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 {
@@ -157,6 +175,51 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var array <p>模型改写规则</p>
+     */
+    public $ModelRewriteRules;
+
+    /**
+     * @var string <p>来源 id</p>
+     */
+    public $SourceId;
+
+    /**
+     * @var string <p>命名空间</p>
+     */
+    public $Namespace;
+
+    /**
+     * @var string <p>服务名字</p>
+     */
+    public $ServiceName;
+
+    /**
+     * @var string <p>协议</p>
+     */
+    public $Protocol;
+
+    /**
+     * @var array <p>扩展参数</p>
+     */
+    public $ExtParams;
+
+    /**
+     * @var boolean <p>密钥轮转开关</p>
+     */
+    public $KeyRotationEnabled;
+
+    /**
+     * @var integer <p>密钥轮转天数</p>
+     */
+    public $KeyRotationPeriodDays;
+
+    /**
+     * @var string <p>外部服务来源ID</p>
+     */
+    public $ExternalInstanceId;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $ModelServiceId <p>模型服务 ID，全局唯一标识。</p>
      * @param string $Name <p>修改服务名称，长度2-50字符，支持中英文、数字、下划线。</p>
@@ -176,6 +239,15 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
      * @param string $SNI <p>SNI</p>
      * @param AIGWLLMQuotaLimit $QuotaLimit <p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
      * @param array $Tags <p>标签</p>
+     * @param array $ModelRewriteRules <p>模型改写规则</p>
+     * @param string $SourceId <p>来源 id</p>
+     * @param string $Namespace <p>命名空间</p>
+     * @param string $ServiceName <p>服务名字</p>
+     * @param string $Protocol <p>协议</p>
+     * @param array $ExtParams <p>扩展参数</p>
+     * @param boolean $KeyRotationEnabled <p>密钥轮转开关</p>
+     * @param integer $KeyRotationPeriodDays <p>密钥轮转天数</p>
+     * @param string $ExternalInstanceId <p>外部服务来源ID</p>
      */
     function __construct()
     {
@@ -267,6 +339,52 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = $param["Tags"];
+        }
+
+        if (array_key_exists("ModelRewriteRules",$param) and $param["ModelRewriteRules"] !== null) {
+            $this->ModelRewriteRules = [];
+            foreach ($param["ModelRewriteRules"] as $key => $value){
+                $obj = new AIGWModelRewriteRule();
+                $obj->deserialize($value);
+                array_push($this->ModelRewriteRules, $obj);
+            }
+        }
+
+        if (array_key_exists("SourceId",$param) and $param["SourceId"] !== null) {
+            $this->SourceId = $param["SourceId"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
+            $this->ServiceName = $param["ServiceName"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("ExtParams",$param) and $param["ExtParams"] !== null) {
+            $this->ExtParams = [];
+            foreach ($param["ExtParams"] as $key => $value){
+                $obj = new KeyValue();
+                $obj->deserialize($value);
+                array_push($this->ExtParams, $obj);
+            }
+        }
+
+        if (array_key_exists("KeyRotationEnabled",$param) and $param["KeyRotationEnabled"] !== null) {
+            $this->KeyRotationEnabled = $param["KeyRotationEnabled"];
+        }
+
+        if (array_key_exists("KeyRotationPeriodDays",$param) and $param["KeyRotationPeriodDays"] !== null) {
+            $this->KeyRotationPeriodDays = $param["KeyRotationPeriodDays"];
+        }
+
+        if (array_key_exists("ExternalInstanceId",$param) and $param["ExternalInstanceId"] !== null) {
+            $this->ExternalInstanceId = $param["ExternalInstanceId"];
         }
     }
 }

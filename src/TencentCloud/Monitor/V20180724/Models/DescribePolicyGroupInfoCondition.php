@@ -20,113 +20,113 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询策略输出的阈值告警条件
  *
- * @method string getMetricShowName() 获取指标名称
- * @method void setMetricShowName(string $MetricShowName) 设置指标名称
- * @method integer getPeriod() 获取数据聚合周期(单位秒)
- * @method void setPeriod(integer $Period) 设置数据聚合周期(单位秒)
- * @method integer getMetricId() 获取指标id
- * @method void setMetricId(integer $MetricId) 设置指标id
- * @method integer getRuleId() 获取阈值规则id
- * @method void setRuleId(integer $RuleId) 设置阈值规则id
- * @method string getUnit() 获取指标单位
- * @method void setUnit(string $Unit) 设置指标单位
- * @method integer getAlarmNotifyType() 获取告警发送收敛类型。0连续告警，1指数告警
- * @method void setAlarmNotifyType(integer $AlarmNotifyType) 设置告警发送收敛类型。0连续告警，1指数告警
- * @method integer getAlarmNotifyPeriod() 获取告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
- * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) 设置告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
- * @method integer getCalcType() 获取比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+ * @method string getMetricShowName() 获取<p>指标名称</p>
+ * @method void setMetricShowName(string $MetricShowName) 设置<p>指标名称</p>
+ * @method integer getPeriod() 获取<p>数据聚合周期(单位秒)</p>
+ * @method void setPeriod(integer $Period) 设置<p>数据聚合周期(单位秒)</p>
+ * @method integer getMetricId() 获取<p>指标id</p>
+ * @method void setMetricId(integer $MetricId) 设置<p>指标id</p>
+ * @method integer getRuleId() 获取<p>阈值规则id</p>
+ * @method void setRuleId(integer $RuleId) 设置<p>阈值规则id</p>
+ * @method string getUnit() 获取<p>指标单位</p>
+ * @method void setUnit(string $Unit) 设置<p>指标单位</p>
+ * @method integer getAlarmNotifyType() 获取<p>告警发送收敛类型。0连续告警，1指数告警</p>
+ * @method void setAlarmNotifyType(integer $AlarmNotifyType) 设置<p>告警发送收敛类型。0连续告警，1指数告警</p>
+ * @method integer getAlarmNotifyPeriod() 获取<p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+ * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) 设置<p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+ * @method integer getCalcType() 获取<p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCalcType(integer $CalcType) 设置比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+ * @method void setCalcType(integer $CalcType) 设置<p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCalcValue() 获取检测阈值
+ * @method string getCalcValue() 获取<p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCalcValue(string $CalcValue) 设置检测阈值
+ * @method void setCalcValue(string $CalcValue) 设置<p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getContinueTime() 获取持续多长时间触发规则会告警(单位秒)
+ * @method integer getContinueTime() 获取<p>持续多长时间触发规则会告警(单位秒)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContinueTime(integer $ContinueTime) 设置持续多长时间触发规则会告警(单位秒)
+ * @method void setContinueTime(integer $ContinueTime) 设置<p>持续多长时间触发规则会告警(单位秒)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMetricName() 获取告警指标名
+ * @method string getMetricName() 获取<p>告警指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetricName(string $MetricName) 设置告警指标名
+ * @method void setMetricName(string $MetricName) 设置<p>告警指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePolicyGroupInfoCondition extends AbstractModel
 {
     /**
-     * @var string 指标名称
+     * @var string <p>指标名称</p>
      */
     public $MetricShowName;
 
     /**
-     * @var integer 数据聚合周期(单位秒)
+     * @var integer <p>数据聚合周期(单位秒)</p>
      */
     public $Period;
 
     /**
-     * @var integer 指标id
+     * @var integer <p>指标id</p>
      */
     public $MetricId;
 
     /**
-     * @var integer 阈值规则id
+     * @var integer <p>阈值规则id</p>
      */
     public $RuleId;
 
     /**
-     * @var string 指标单位
+     * @var string <p>指标单位</p>
      */
     public $Unit;
 
     /**
-     * @var integer 告警发送收敛类型。0连续告警，1指数告警
+     * @var integer <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public $AlarmNotifyType;
 
     /**
-     * @var integer 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * @var integer <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public $AlarmNotifyPeriod;
 
     /**
-     * @var integer 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+     * @var integer <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalcType;
 
     /**
-     * @var string 检测阈值
+     * @var string <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalcValue;
 
     /**
-     * @var integer 持续多长时间触发规则会告警(单位秒)
+     * @var integer <p>持续多长时间触发规则会告警(单位秒)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContinueTime;
 
     /**
-     * @var string 告警指标名
+     * @var string <p>告警指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricName;
 
     /**
-     * @param string $MetricShowName 指标名称
-     * @param integer $Period 数据聚合周期(单位秒)
-     * @param integer $MetricId 指标id
-     * @param integer $RuleId 阈值规则id
-     * @param string $Unit 指标单位
-     * @param integer $AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
-     * @param integer $AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
-     * @param integer $CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+     * @param string $MetricShowName <p>指标名称</p>
+     * @param integer $Period <p>数据聚合周期(单位秒)</p>
+     * @param integer $MetricId <p>指标id</p>
+     * @param integer $RuleId <p>阈值规则id</p>
+     * @param string $Unit <p>指标单位</p>
+     * @param integer $AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
+     * @param integer $AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+     * @param integer $CalcType <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CalcValue 检测阈值
+     * @param string $CalcValue <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ContinueTime 持续多长时间触发规则会告警(单位秒)
+     * @param integer $ContinueTime <p>持续多长时间触发规则会告警(单位秒)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MetricName 告警指标名
+     * @param string $MetricName <p>告警指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

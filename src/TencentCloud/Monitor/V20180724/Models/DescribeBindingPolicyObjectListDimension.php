@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBindingPolicyObjectList接口的Dimension
  *
- * @method integer getRegionId() 获取地域id
- * @method void setRegionId(integer $RegionId) 设置地域id
- * @method string getRegion() 获取地域简称
- * @method void setRegion(string $Region) 设置地域简称
- * @method string getDimensions() 获取维度组合json字符串
- * @method void setDimensions(string $Dimensions) 设置维度组合json字符串
- * @method string getEventDimensions() 获取事件维度组合json字符串
- * @method void setEventDimensions(string $EventDimensions) 设置事件维度组合json字符串
+ * @method integer getRegionId() 获取<p>地域id</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域id</p>
+ * @method string getRegion() 获取<p>地域简称</p>
+ * @method void setRegion(string $Region) 设置<p>地域简称</p>
+ * @method string getDimensions() 获取<p>维度组合json字符串</p>
+ * @method void setDimensions(string $Dimensions) 设置<p>维度组合json字符串</p>
+ * @method string getEventDimensions() 获取<p>事件维度组合json字符串</p>
+ * @method void setEventDimensions(string $EventDimensions) 设置<p>事件维度组合json字符串</p>
  */
 class DescribeBindingPolicyObjectListDimension extends AbstractModel
 {
     /**
-     * @var integer 地域id
+     * @var integer <p>地域id</p>
      */
     public $RegionId;
 
     /**
-     * @var string 地域简称
+     * @var string <p>地域简称</p>
      */
     public $Region;
 
     /**
-     * @var string 维度组合json字符串
+     * @var string <p>维度组合json字符串</p>
      */
     public $Dimensions;
 
     /**
-     * @var string 事件维度组合json字符串
+     * @var string <p>事件维度组合json字符串</p>
      */
     public $EventDimensions;
 
     /**
-     * @param integer $RegionId 地域id
-     * @param string $Region 地域简称
-     * @param string $Dimensions 维度组合json字符串
-     * @param string $EventDimensions 事件维度组合json字符串
+     * @param integer $RegionId <p>地域id</p>
+     * @param string $Region <p>地域简称</p>
+     * @param string $Dimensions <p>维度组合json字符串</p>
+     * @param string $EventDimensions <p>事件维度组合json字符串</p>
      */
     function __construct()
     {

@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通用筛选条件
  *
- * @method string getName() 获取筛选字段名。支持：SecurityGroupId、FwGroupId、Ip（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）
+ * @method string getName() 获取<p>筛选字段名。支持：SecurityGroupId、FwGroupId、IP（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置筛选字段名。支持：SecurityGroupId、FwGroupId、Ip（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）
+ * @method void setName(string $Name) 设置<p>筛选字段名。支持：SecurityGroupId、FwGroupId、IP（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getValues() 获取筛选值列表
+ * @method array getValues() 获取<p>筛选值列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValues(array $Values) 设置筛选值列表
+ * @method void setValues(array $Values) 设置<p>筛选值列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperatorType() 获取操作类型。1=等于，7=in，9=模糊匹配
+ * @method integer getOperatorType() 获取<p>操作类型。1=等于，7=in，9=模糊匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperatorType(integer $OperatorType) 设置操作类型。1=等于，7=in，9=模糊匹配
+ * @method void setOperatorType(integer $OperatorType) 设置<p>操作类型。1=等于，7=in，9=模糊匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CommonFilter extends AbstractModel
 {
     /**
-     * @var string 筛选字段名。支持：SecurityGroupId、FwGroupId、Ip（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）
+     * @var string <p>筛选字段名。支持：SecurityGroupId、FwGroupId、IP（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var array 筛选值列表
+     * @var array <p>筛选值列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
-     * @var integer 操作类型。1=等于，7=in，9=模糊匹配
+     * @var integer <p>操作类型。1=等于，7=in，9=模糊匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorType;
 
     /**
-     * @param string $Name 筛选字段名。支持：SecurityGroupId、FwGroupId、Ip（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）
+     * @param string $Name <p>筛选字段名。支持：SecurityGroupId、FwGroupId、IP（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Values 筛选值列表
+     * @param array $Values <p>筛选值列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OperatorType 操作类型。1=等于，7=in，9=模糊匹配
+     * @param integer $OperatorType <p>操作类型。1=等于，7=in，9=模糊匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

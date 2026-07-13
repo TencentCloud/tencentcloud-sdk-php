@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudNativeAPIGatewaySecretKey请求参数结构体
  *
- * @method string getGatewayId() 获取实例 ID
- * @method void setGatewayId(string $GatewayId) 设置实例 ID
+ * @method string getGatewayId() 获取<p>实例 ID</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>实例 ID</p>
  * @method string getSecretType() 获取<p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
  * @method void setSecretType(string $SecretType) 设置<p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
  * @method string getName() 获取<p>密钥名称，2-60 字符。</p>
@@ -38,11 +38,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretValue(string $SecretValue) 设置<p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
  * @method string getDescription() 获取<p>密钥描述。最长 200 字符。</p>
  * @method void setDescription(string $Description) 设置<p>密钥描述。最长 200 字符。</p>
+ * @method AIGWJWTCredentialConfig getJWTCredentialConfig() 获取<p>JWT凭证配置</p>
+ * @method void setJWTCredentialConfig(AIGWJWTCredentialConfig $JWTCredentialConfig) 设置<p>JWT凭证配置</p>
+ * @method AIGWOAuthCredentialConfig getOAuthCredentialConfig() 获取<p>OAuth2.0凭证配置</p>
+ * @method void setOAuthCredentialConfig(AIGWOAuthCredentialConfig $OAuthCredentialConfig) 设置<p>OAuth2.0凭证配置</p>
+ * @method AIGWOIDCCredentialConfig getOIDCCredentialConfig() 获取<p>OIDC凭证配置</p>
+ * @method void setOIDCCredentialConfig(AIGWOIDCCredentialConfig $OIDCCredentialConfig) 设置<p>OIDC凭证配置</p>
+ * @method string getProvider() 获取<p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+ * @method void setProvider(string $Provider) 设置<p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
  */
 class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $GatewayId;
 
@@ -87,7 +95,27 @@ class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param string $GatewayId 实例 ID
+     * @var AIGWJWTCredentialConfig <p>JWT凭证配置</p>
+     */
+    public $JWTCredentialConfig;
+
+    /**
+     * @var AIGWOAuthCredentialConfig <p>OAuth2.0凭证配置</p>
+     */
+    public $OAuthCredentialConfig;
+
+    /**
+     * @var AIGWOIDCCredentialConfig <p>OIDC凭证配置</p>
+     */
+    public $OIDCCredentialConfig;
+
+    /**
+     * @var string <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+     */
+    public $Provider;
+
+    /**
+     * @param string $GatewayId <p>实例 ID</p>
      * @param string $SecretType <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
      * @param string $Name <p>密钥名称，2-60 字符。</p>
      * @param string $GenerateType <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
@@ -96,6 +124,10 @@ class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
      * @param string $KmsKeyVersion <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
      * @param string $SecretValue <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
      * @param string $Description <p>密钥描述。最长 200 字符。</p>
+     * @param AIGWJWTCredentialConfig $JWTCredentialConfig <p>JWT凭证配置</p>
+     * @param AIGWOAuthCredentialConfig $OAuthCredentialConfig <p>OAuth2.0凭证配置</p>
+     * @param AIGWOIDCCredentialConfig $OIDCCredentialConfig <p>OIDC凭证配置</p>
+     * @param string $Provider <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
      */
     function __construct()
     {
@@ -144,6 +176,25 @@ class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("JWTCredentialConfig",$param) and $param["JWTCredentialConfig"] !== null) {
+            $this->JWTCredentialConfig = new AIGWJWTCredentialConfig();
+            $this->JWTCredentialConfig->deserialize($param["JWTCredentialConfig"]);
+        }
+
+        if (array_key_exists("OAuthCredentialConfig",$param) and $param["OAuthCredentialConfig"] !== null) {
+            $this->OAuthCredentialConfig = new AIGWOAuthCredentialConfig();
+            $this->OAuthCredentialConfig->deserialize($param["OAuthCredentialConfig"]);
+        }
+
+        if (array_key_exists("OIDCCredentialConfig",$param) and $param["OIDCCredentialConfig"] !== null) {
+            $this->OIDCCredentialConfig = new AIGWOIDCCredentialConfig();
+            $this->OIDCCredentialConfig->deserialize($param["OIDCCredentialConfig"]);
+        }
+
+        if (array_key_exists("Provider",$param) and $param["Provider"] !== null) {
+            $this->Provider = $param["Provider"];
         }
     }
 }

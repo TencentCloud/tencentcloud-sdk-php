@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 矩形坐标
  *
- * @method integer getX() 获取左上角x
- * @method void setX(integer $X) 设置左上角x
- * @method integer getY() 获取左上角y
- * @method void setY(integer $Y) 设置左上角y
- * @method integer getWidth() 获取宽度
- * @method void setWidth(integer $Width) 设置宽度
- * @method integer getHeight() 获取高度
- * @method void setHeight(integer $Height) 设置高度
+ * @method integer getX() 获取<p>左上角x</p>
+ * @method void setX(integer $X) 设置<p>左上角x</p>
+ * @method integer getY() 获取<p>左上角y</p>
+ * @method void setY(integer $Y) 设置<p>左上角y</p>
+ * @method integer getWidth() 获取<p>宽度</p><p>单位：px</p>
+ * @method void setWidth(integer $Width) 设置<p>宽度</p><p>单位：px</p>
+ * @method integer getHeight() 获取<p>高度</p><p>单位：px</p>
+ * @method void setHeight(integer $Height) 设置<p>高度</p><p>单位：px</p>
  */
 class Rect extends AbstractModel
 {
     /**
-     * @var integer 左上角x
+     * @var integer <p>左上角x</p>
      */
     public $X;
 
     /**
-     * @var integer 左上角y
+     * @var integer <p>左上角y</p>
      */
     public $Y;
 
     /**
-     * @var integer 宽度
+     * @var integer <p>宽度</p><p>单位：px</p>
      */
     public $Width;
 
     /**
-     * @var integer 高度
+     * @var integer <p>高度</p><p>单位：px</p>
      */
     public $Height;
 
     /**
-     * @param integer $X 左上角x
-     * @param integer $Y 左上角y
-     * @param integer $Width 宽度
-     * @param integer $Height 高度
+     * @param integer $X <p>左上角x</p>
+     * @param integer $Y <p>左上角y</p>
+     * @param integer $Width <p>宽度</p><p>单位：px</p>
+     * @param integer $Height <p>高度</p><p>单位：px</p>
      */
     function __construct()
     {

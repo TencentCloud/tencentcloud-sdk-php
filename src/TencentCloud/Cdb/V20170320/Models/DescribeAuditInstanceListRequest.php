@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditInstanceList请求参数结构体
  *
- * @method integer getAuditSwitch() 获取实例审计开启的状态。1-已开启审计；0-未开启审计。
- * @method void setAuditSwitch(integer $AuditSwitch) 设置实例审计开启的状态。1-已开启审计；0-未开启审计。
- * @method array getFilters() 获取查询实例列表的过滤条件。
- * @method void setFilters(array $Filters) 设置查询实例列表的过滤条件。
- * @method integer getAuditMode() 获取实例的审计规则模式。1-规则审计；0-全审计。
- * @method void setAuditMode(integer $AuditMode) 设置实例的审计规则模式。1-规则审计；0-全审计。
- * @method integer getLimit() 获取单次请求返回的数量。默认值为30，最大值为 20000。
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量。默认值为30，最大值为 20000。
- * @method integer getOffset() 获取偏移量，默认值为 0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认值为 0。
+ * @method integer getAuditSwitch() 获取<p>实例审计开启的状态。1-已开启审计；0-未开启审计。</p>
+ * @method void setAuditSwitch(integer $AuditSwitch) 设置<p>实例审计开启的状态。1-已开启审计；0-未开启审计。</p>
+ * @method array getFilters() 获取<p>查询实例列表的过滤条件。</p>
+ * @method void setFilters(array $Filters) 设置<p>查询实例列表的过滤条件。</p>
+ * @method integer getAuditMode() 获取<p>实例的审计规则模式。1-规则审计；0-全审计。</p>
+ * @method void setAuditMode(integer $AuditMode) 设置<p>实例的审计规则模式。1-规则审计；0-全审计。</p>
+ * @method integer getLimit() 获取<p>单次请求返回的数量。默认值为30，最大值为 20000。</p>
+ * @method void setLimit(integer $Limit) 设置<p>单次请求返回的数量。默认值为30，最大值为 20000。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认值为 0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认值为 0。</p>
  */
 class DescribeAuditInstanceListRequest extends AbstractModel
 {
     /**
-     * @var integer 实例审计开启的状态。1-已开启审计；0-未开启审计。
+     * @var integer <p>实例审计开启的状态。1-已开启审计；0-未开启审计。</p>
      */
     public $AuditSwitch;
 
     /**
-     * @var array 查询实例列表的过滤条件。
+     * @var array <p>查询实例列表的过滤条件。</p>
      */
     public $Filters;
 
     /**
-     * @var integer 实例的审计规则模式。1-规则审计；0-全审计。
+     * @var integer <p>实例的审计规则模式。1-规则审计；0-全审计。</p>
      */
     public $AuditMode;
 
     /**
-     * @var integer 单次请求返回的数量。默认值为30，最大值为 20000。
+     * @var integer <p>单次请求返回的数量。默认值为30，最大值为 20000。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认值为 0。
+     * @var integer <p>偏移量，默认值为 0。</p>
      */
     public $Offset;
 
     /**
-     * @param integer $AuditSwitch 实例审计开启的状态。1-已开启审计；0-未开启审计。
-     * @param array $Filters 查询实例列表的过滤条件。
-     * @param integer $AuditMode 实例的审计规则模式。1-规则审计；0-全审计。
-     * @param integer $Limit 单次请求返回的数量。默认值为30，最大值为 20000。
-     * @param integer $Offset 偏移量，默认值为 0。
+     * @param integer $AuditSwitch <p>实例审计开启的状态。1-已开启审计；0-未开启审计。</p>
+     * @param array $Filters <p>查询实例列表的过滤条件。</p>
+     * @param integer $AuditMode <p>实例的审计规则模式。1-规则审计；0-全审计。</p>
+     * @param integer $Limit <p>单次请求返回的数量。默认值为30，最大值为 20000。</p>
+     * @param integer $Offset <p>偏移量，默认值为 0。</p>
      */
     function __construct()
     {

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAppId() 获取appid
  * @method void setAppId(string $AppId) 设置appid
+ * @method integer getIsAutoMonitor() 获取
+ * @method void setIsAutoMonitor(integer $IsAutoMonitor) 设置
  * @method array getBucketIdSet() 获取bucket id集合
  * @method void setBucketIdSet(array $BucketIdSet) 设置bucket id集合
  */
@@ -33,12 +35,18 @@ class CosBucketId extends AbstractModel
     public $AppId;
 
     /**
+     * @var integer 
+     */
+    public $IsAutoMonitor;
+
+    /**
      * @var array bucket id集合
      */
     public $BucketIdSet;
 
     /**
      * @param string $AppId appid
+     * @param integer $IsAutoMonitor 
      * @param array $BucketIdSet bucket id集合
      */
     function __construct()
@@ -56,6 +64,10 @@ class CosBucketId extends AbstractModel
         }
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("IsAutoMonitor",$param) and $param["IsAutoMonitor"] !== null) {
+            $this->IsAutoMonitor = $param["IsAutoMonitor"];
         }
 
         if (array_key_exists("BucketIdSet",$param) and $param["BucketIdSet"] !== null) {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PromoteDBInstanceToActive返回参数结构体
  *
- * @method integer getFlowId() 获取任务id
- * @method void setFlowId(integer $FlowId) 设置任务id
+ * @method integer getFlowId() 获取<p>任务 ID。</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>任务 ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class PromoteDBInstanceToActiveResponse extends AbstractModel
 {
     /**
-     * @var integer 任务id
+     * @var integer <p>任务 ID。</p>
      */
     public $FlowId;
 
@@ -38,7 +38,7 @@ class PromoteDBInstanceToActiveResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 任务id
+     * @param integer $FlowId <p>任务 ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,85 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询策略输出的模板策略组信息
  *
- * @method integer getGroupId() 获取策略组id
- * @method void setGroupId(integer $GroupId) 设置策略组id
- * @method string getGroupName() 获取策略组名称
- * @method void setGroupName(string $GroupName) 设置策略组名称
- * @method string getViewName() 获取策略类型
- * @method void setViewName(string $ViewName) 设置策略类型
- * @method string getRemark() 获取策略组说明
- * @method void setRemark(string $Remark) 设置策略组说明
- * @method string getLastEditUin() 获取最后编辑的用户uin
- * @method void setLastEditUin(string $LastEditUin) 设置最后编辑的用户uin
- * @method integer getUpdateTime() 获取更新时间
+ * @method integer getGroupId() 获取<p>策略组id</p>
+ * @method void setGroupId(integer $GroupId) 设置<p>策略组id</p>
+ * @method string getGroupName() 获取<p>策略组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>策略组名称</p>
+ * @method string getViewName() 获取<p>策略类型</p>
+ * @method void setViewName(string $ViewName) 设置<p>策略类型</p>
+ * @method string getRemark() 获取<p>策略组说明</p>
+ * @method void setRemark(string $Remark) 设置<p>策略组说明</p>
+ * @method string getLastEditUin() 获取<p>最后编辑的用户uin</p>
+ * @method void setLastEditUin(string $LastEditUin) 设置<p>最后编辑的用户uin</p>
+ * @method integer getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInsertTime() 获取创建时间
+ * @method integer getInsertTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInsertTime(integer $InsertTime) 设置创建时间
+ * @method void setInsertTime(integer $InsertTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsUnionRule() 获取是否且规则
+ * @method integer getIsUnionRule() 获取<p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsUnionRule(integer $IsUnionRule) 设置是否且规则
+ * @method void setIsUnionRule(integer $IsUnionRule) 设置<p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePolicyGroupInfoConditionTpl extends AbstractModel
 {
     /**
-     * @var integer 策略组id
+     * @var integer <p>策略组id</p>
      */
     public $GroupId;
 
     /**
-     * @var string 策略组名称
+     * @var string <p>策略组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
      */
     public $ViewName;
 
     /**
-     * @var string 策略组说明
+     * @var string <p>策略组说明</p>
      */
     public $Remark;
 
     /**
-     * @var string 最后编辑的用户uin
+     * @var string <p>最后编辑的用户uin</p>
      */
     public $LastEditUin;
 
     /**
-     * @var integer 更新时间
+     * @var integer <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InsertTime;
 
     /**
-     * @var integer 是否且规则
+     * @var integer <p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUnionRule;
 
     /**
-     * @param integer $GroupId 策略组id
-     * @param string $GroupName 策略组名称
-     * @param string $ViewName 策略类型
-     * @param string $Remark 策略组说明
-     * @param string $LastEditUin 最后编辑的用户uin
-     * @param integer $UpdateTime 更新时间
+     * @param integer $GroupId <p>策略组id</p>
+     * @param string $GroupName <p>策略组名称</p>
+     * @param string $ViewName <p>策略类型</p>
+     * @param string $Remark <p>策略组说明</p>
+     * @param string $LastEditUin <p>最后编辑的用户uin</p>
+     * @param integer $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InsertTime 创建时间
+     * @param integer $InsertTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsUnionRule 是否且规则
+     * @param integer $IsUnionRule <p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

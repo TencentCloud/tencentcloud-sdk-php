@@ -20,230 +20,186 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例审计详情信息
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getAuditStatus() 获取审计状态。ON-表示审计已开启，OFF-表示审计关闭
- * @method void setAuditStatus(string $AuditStatus) 设置审计状态。ON-表示审计已开启，OFF-表示审计关闭
- * @method integer getAuditTask() 获取任务状态。0-无任务；1-审计开启中，2-审计关闭中。
- * @method void setAuditTask(integer $AuditTask) 设置任务状态。0-无任务；1-审计开启中，2-审计关闭中。
- * @method integer getLogExpireDay() 获取日志保留时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
- * @method void setLogExpireDay(integer $LogExpireDay) 设置日志保留时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
- * @method integer getHighLogExpireDay() 获取高频存储时长。支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
- * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频存储时长。支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
- * @method integer getLowLogExpireDay() 获取低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
- * @method void setLowLogExpireDay(integer $LowLogExpireDay) 设置低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
- * @method float getBillingAmount() 获取日志存储量(单位：GB)。
- * @method void setBillingAmount(float $BillingAmount) 设置日志存储量(单位：GB)。
- * @method float getHighRealStorage() 获取高频存储量(单位：GB)。
- * @method void setHighRealStorage(float $HighRealStorage) 设置高频存储量(单位：GB)。
- * @method float getLowRealStorage() 获取低频存储量(单位：GB)。
- * @method void setLowRealStorage(float $LowRealStorage) 设置低频存储量(单位：GB)。
- * @method boolean getAuditAll() 获取是否为全审计。true-表示全审计。
- * @method void setAuditAll(boolean $AuditAll) 设置是否为全审计。true-表示全审计。
- * @method string getCreateAt() 获取审计开通时间。
- * @method void setCreateAt(string $CreateAt) 设置审计开通时间。
- * @method AuditInstanceInfo getInstanceInfo() 获取实例相关信息
- * @method void setInstanceInfo(AuditInstanceInfo $InstanceInfo) 设置实例相关信息
- * @method float getRealStorage() 获取总存储量(单位：GB)。
- * @method void setRealStorage(float $RealStorage) 设置总存储量(单位：GB)。
- * @method boolean getOldRule() 获取是否包含审计策略
- * @method void setOldRule(boolean $OldRule) 设置是否包含审计策略
- * @method array getRuleTemplateIds() 获取实例所应用的规则模板。
- * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置实例所应用的规则模板。
- * @method string getTrialStatus() 获取限免状态
- * @method void setTrialStatus(string $TrialStatus) 设置限免状态
- * @method integer getTrialStartTime() 获取限免开启时间
- * @method void setTrialStartTime(integer $TrialStartTime) 设置限免开启时间
- * @method integer getTrialDuration() 获取限免持续时间
- * @method void setTrialDuration(integer $TrialDuration) 设置限免持续时间
- * @method integer getTrialCloseTime() 获取限免关闭时间
- * @method void setTrialCloseTime(integer $TrialCloseTime) 设置限免关闭时间
- * @method integer getTrialDescribeLogHours() 获取限免期查询日志时长
- * @method void setTrialDescribeLogHours(integer $TrialDescribeLogHours) 设置限免期查询日志时长
+ * @method string getInstanceId() 获取<p>实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID。</p>
+ * @method string getAuditStatus() 获取<p>审计状态。ON-表示审计已开启，OFF-表示审计关闭</p>
+ * @method void setAuditStatus(string $AuditStatus) 设置<p>审计状态。ON-表示审计已开启，OFF-表示审计关闭</p>
+ * @method integer getAuditTask() 获取<p>任务状态。0-无任务；1-审计开启中，2-审计关闭中。</p>
+ * @method void setAuditTask(integer $AuditTask) 设置<p>任务状态。0-无任务；1-审计开启中，2-审计关闭中。</p>
+ * @method integer getLogExpireDay() 获取<p>日志保留时长。支持值包括：<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
+ * @method void setLogExpireDay(integer $LogExpireDay) 设置<p>日志保留时长。支持值包括：<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
+ * @method integer getHighLogExpireDay() 获取<p>高频存储时长。支持值包括：<br>3 - 3天；<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
+ * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置<p>高频存储时长。支持值包括：<br>3 - 3天；<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
+ * @method integer getLowLogExpireDay() 获取<p>低频存储时长。单位：天，等于日志保存时长减去高频存储时长。</p>
+ * @method void setLowLogExpireDay(integer $LowLogExpireDay) 设置<p>低频存储时长。单位：天，等于日志保存时长减去高频存储时长。</p>
+ * @method float getBillingAmount() 获取<p>日志存储量(单位：GB)。</p>
+ * @method void setBillingAmount(float $BillingAmount) 设置<p>日志存储量(单位：GB)。</p>
+ * @method float getHighRealStorage() 获取<p>高频存储量(单位：GB)。</p>
+ * @method void setHighRealStorage(float $HighRealStorage) 设置<p>高频存储量(单位：GB)。</p>
+ * @method float getLowRealStorage() 获取<p>低频存储量(单位：GB)。</p>
+ * @method void setLowRealStorage(float $LowRealStorage) 设置<p>低频存储量(单位：GB)。</p>
+ * @method boolean getAuditAll() 获取<p>是否为全审计（true-表示全审计）</p>
+ * @method void setAuditAll(boolean $AuditAll) 设置<p>是否为全审计（true-表示全审计）</p>
+ * @method string getCreateAt() 获取<p>审计开通时间。</p>
+ * @method void setCreateAt(string $CreateAt) 设置<p>审计开通时间。</p>
+ * @method AuditInstanceInfo getInstanceInfo() 获取<p>实例相关信息</p>
+ * @method void setInstanceInfo(AuditInstanceInfo $InstanceInfo) 设置<p>实例相关信息</p>
+ * @method float getRealStorage() 获取<p>总存储量(单位：GB)。</p>
+ * @method void setRealStorage(float $RealStorage) 设置<p>总存储量(单位：GB)。</p>
+ * @method boolean getOldRule() 获取<p>是否包含审计策略</p>
+ * @method void setOldRule(boolean $OldRule) 设置<p>是否包含审计策略</p>
+ * @method array getRuleTemplateIds() 获取<p>实例所应用的规则模板。</p>
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置<p>实例所应用的规则模板。</p>
+ * @method string getTrialStatus() 获取<p>限免状态</p>
+ * @method void setTrialStatus(string $TrialStatus) 设置<p>限免状态</p>
+ * @method integer getTrialStartTime() 获取<p>限免开启时间</p>
+ * @method void setTrialStartTime(integer $TrialStartTime) 设置<p>限免开启时间</p>
+ * @method integer getTrialDuration() 获取<p>限免持续时间</p>
+ * @method void setTrialDuration(integer $TrialDuration) 设置<p>限免持续时间</p>
+ * @method integer getTrialCloseTime() 获取<p>限免关闭时间</p>
+ * @method void setTrialCloseTime(integer $TrialCloseTime) 设置<p>限免关闭时间</p>
+ * @method integer getTrialDescribeLogHours() 获取<p>限免期查询日志时长</p>
+ * @method void setTrialDescribeLogHours(integer $TrialDescribeLogHours) 设置<p>限免期查询日志时长</p>
+ * @method array getDeliverSummary() 获取<p>投递信息</p>
+ * @method void setDeliverSummary(array $DeliverSummary) 设置<p>投递信息</p>
+ * @method string getDeliver() 获取<p>是否开启了投递，ON：开启，OFF：关闭</p>
+ * @method void setDeliver(string $Deliver) 设置<p>是否开启了投递，ON：开启，OFF：关闭</p>
  */
 class InstanceDbAuditStatus extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string <p>实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 审计状态。ON-表示审计已开启，OFF-表示审计关闭
+     * @var string <p>审计状态。ON-表示审计已开启，OFF-表示审计关闭</p>
      */
     public $AuditStatus;
 
     /**
-     * @var integer 任务状态。0-无任务；1-审计开启中，2-审计关闭中。
+     * @var integer <p>任务状态。0-无任务；1-审计开启中，2-审计关闭中。</p>
      */
     public $AuditTask;
 
     /**
-     * @var integer 日志保留时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+     * @var integer <p>日志保留时长。支持值包括：<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
      */
     public $LogExpireDay;
 
     /**
-     * @var integer 高频存储时长。支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+     * @var integer <p>高频存储时长。支持值包括：<br>3 - 3天；<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
      */
     public $HighLogExpireDay;
 
     /**
-     * @var integer 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
+     * @var integer <p>低频存储时长。单位：天，等于日志保存时长减去高频存储时长。</p>
      */
     public $LowLogExpireDay;
 
     /**
-     * @var float 日志存储量(单位：GB)。
+     * @var float <p>日志存储量(单位：GB)。</p>
      */
     public $BillingAmount;
 
     /**
-     * @var float 高频存储量(单位：GB)。
+     * @var float <p>高频存储量(单位：GB)。</p>
      */
     public $HighRealStorage;
 
     /**
-     * @var float 低频存储量(单位：GB)。
+     * @var float <p>低频存储量(单位：GB)。</p>
      */
     public $LowRealStorage;
 
     /**
-     * @var boolean 是否为全审计。true-表示全审计。
+     * @var boolean <p>是否为全审计（true-表示全审计）</p>
      */
     public $AuditAll;
 
     /**
-     * @var string 审计开通时间。
+     * @var string <p>审计开通时间。</p>
      */
     public $CreateAt;
 
     /**
-     * @var AuditInstanceInfo 实例相关信息
+     * @var AuditInstanceInfo <p>实例相关信息</p>
      */
     public $InstanceInfo;
 
     /**
-     * @var float 总存储量(单位：GB)。
+     * @var float <p>总存储量(单位：GB)。</p>
      */
     public $RealStorage;
 
     /**
-     * @var boolean 是否包含审计策略
+     * @var boolean <p>是否包含审计策略</p>
      */
     public $OldRule;
 
     /**
-     * @var array 实例所应用的规则模板。
+     * @var array <p>实例所应用的规则模板。</p>
      */
     public $RuleTemplateIds;
 
     /**
-     * @var string 限免状态
+     * @var string <p>限免状态</p>
      */
     public $TrialStatus;
 
     /**
-     * @var integer 限免开启时间
+     * @var integer <p>限免开启时间</p>
      */
     public $TrialStartTime;
 
     /**
-     * @var integer 限免持续时间
+     * @var integer <p>限免持续时间</p>
      */
     public $TrialDuration;
 
     /**
-     * @var integer 限免关闭时间
+     * @var integer <p>限免关闭时间</p>
      */
     public $TrialCloseTime;
 
     /**
-     * @var integer 限免期查询日志时长
+     * @var integer <p>限免期查询日志时长</p>
      */
     public $TrialDescribeLogHours;
 
     /**
-     * @param string $InstanceId 实例ID。
-     * @param string $AuditStatus 审计状态。ON-表示审计已开启，OFF-表示审计关闭
-     * @param integer $AuditTask 任务状态。0-无任务；1-审计开启中，2-审计关闭中。
-     * @param integer $LogExpireDay 日志保留时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
-     * @param integer $HighLogExpireDay 高频存储时长。支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
-     * @param integer $LowLogExpireDay 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
-     * @param float $BillingAmount 日志存储量(单位：GB)。
-     * @param float $HighRealStorage 高频存储量(单位：GB)。
-     * @param float $LowRealStorage 低频存储量(单位：GB)。
-     * @param boolean $AuditAll 是否为全审计。true-表示全审计。
-     * @param string $CreateAt 审计开通时间。
-     * @param AuditInstanceInfo $InstanceInfo 实例相关信息
-     * @param float $RealStorage 总存储量(单位：GB)。
-     * @param boolean $OldRule 是否包含审计策略
-     * @param array $RuleTemplateIds 实例所应用的规则模板。
-     * @param string $TrialStatus 限免状态
-     * @param integer $TrialStartTime 限免开启时间
-     * @param integer $TrialDuration 限免持续时间
-     * @param integer $TrialCloseTime 限免关闭时间
-     * @param integer $TrialDescribeLogHours 限免期查询日志时长
+     * @var array <p>投递信息</p>
+     */
+    public $DeliverSummary;
+
+    /**
+     * @var string <p>是否开启了投递，ON：开启，OFF：关闭</p>
+     */
+    public $Deliver;
+
+    /**
+     * @param string $InstanceId <p>实例ID。</p>
+     * @param string $AuditStatus <p>审计状态。ON-表示审计已开启，OFF-表示审计关闭</p>
+     * @param integer $AuditTask <p>任务状态。0-无任务；1-审计开启中，2-审计关闭中。</p>
+     * @param integer $LogExpireDay <p>日志保留时长。支持值包括：<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
+     * @param integer $HighLogExpireDay <p>高频存储时长。支持值包括：<br>3 - 3天；<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
+     * @param integer $LowLogExpireDay <p>低频存储时长。单位：天，等于日志保存时长减去高频存储时长。</p>
+     * @param float $BillingAmount <p>日志存储量(单位：GB)。</p>
+     * @param float $HighRealStorage <p>高频存储量(单位：GB)。</p>
+     * @param float $LowRealStorage <p>低频存储量(单位：GB)。</p>
+     * @param boolean $AuditAll <p>是否为全审计（true-表示全审计）</p>
+     * @param string $CreateAt <p>审计开通时间。</p>
+     * @param AuditInstanceInfo $InstanceInfo <p>实例相关信息</p>
+     * @param float $RealStorage <p>总存储量(单位：GB)。</p>
+     * @param boolean $OldRule <p>是否包含审计策略</p>
+     * @param array $RuleTemplateIds <p>实例所应用的规则模板。</p>
+     * @param string $TrialStatus <p>限免状态</p>
+     * @param integer $TrialStartTime <p>限免开启时间</p>
+     * @param integer $TrialDuration <p>限免持续时间</p>
+     * @param integer $TrialCloseTime <p>限免关闭时间</p>
+     * @param integer $TrialDescribeLogHours <p>限免期查询日志时长</p>
+     * @param array $DeliverSummary <p>投递信息</p>
+     * @param string $Deliver <p>是否开启了投递，ON：开启，OFF：关闭</p>
      */
     function __construct()
     {
@@ -337,6 +293,19 @@ class InstanceDbAuditStatus extends AbstractModel
 
         if (array_key_exists("TrialDescribeLogHours",$param) and $param["TrialDescribeLogHours"] !== null) {
             $this->TrialDescribeLogHours = $param["TrialDescribeLogHours"];
+        }
+
+        if (array_key_exists("DeliverSummary",$param) and $param["DeliverSummary"] !== null) {
+            $this->DeliverSummary = [];
+            foreach ($param["DeliverSummary"] as $key => $value){
+                $obj = new DeliverSummary();
+                $obj->deserialize($value);
+                array_push($this->DeliverSummary, $obj);
+            }
+        }
+
+        if (array_key_exists("Deliver",$param) and $param["Deliver"] !== null) {
+            $this->Deliver = $param["Deliver"];
         }
     }
 }

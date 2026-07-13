@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccelerateAreas请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method array getAcceleratorAreas() 获取加速地域信息。
- * @method void setAcceleratorAreas(array $AcceleratorAreas) 设置加速地域信息。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method array getAcceleratorAreas() 获取<p>加速地域信息。一次最多创建10组加速地域。</p>
+ * @method void setAcceleratorAreas(array $AcceleratorAreas) 设置<p>加速地域信息。一次最多创建10组加速地域。</p>
  */
 class CreateAccelerateAreasRequest extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var array 加速地域信息。
+     * @var array <p>加速地域信息。一次最多创建10组加速地域。</p>
      */
     public $AcceleratorAreas;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param array $AcceleratorAreas 加速地域信息。
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param array $AcceleratorAreas <p>加速地域信息。一次最多创建10组加速地域。</p>
      */
     function __construct()
     {

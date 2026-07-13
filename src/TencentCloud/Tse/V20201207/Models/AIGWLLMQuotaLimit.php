@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRPMLimit(integer $RPMLimit) 设置<p>该模型服务每分钟请求数上限，0 表示该维度不限</p>
  * @method integer getTPMLimit() 获取<p>该模型服务每分钟 Token 数上限，0 表示该维度不限</p>
  * @method void setTPMLimit(integer $TPMLimit) 设置<p>该模型服务每分钟 Token 数上限，0 表示该维度不限</p>
+ * @method integer getConcurrentCountLimit() 获取<p>并发限流数</p>
+ * @method void setConcurrentCountLimit(integer $ConcurrentCountLimit) 设置<p>并发限流数</p>
  */
 class AIGWLLMQuotaLimit extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AIGWLLMQuotaLimit extends AbstractModel
     public $TPMLimit;
 
     /**
+     * @var integer <p>并发限流数</p>
+     */
+    public $ConcurrentCountLimit;
+
+    /**
      * @param integer $RPMLimit <p>该模型服务每分钟请求数上限，0 表示该维度不限</p>
      * @param integer $TPMLimit <p>该模型服务每分钟 Token 数上限，0 表示该维度不限</p>
+     * @param integer $ConcurrentCountLimit <p>并发限流数</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AIGWLLMQuotaLimit extends AbstractModel
 
         if (array_key_exists("TPMLimit",$param) and $param["TPMLimit"] !== null) {
             $this->TPMLimit = $param["TPMLimit"];
+        }
+
+        if (array_key_exists("ConcurrentCountLimit",$param) and $param["ConcurrentCountLimit"] !== null) {
+            $this->ConcurrentCountLimit = $param["ConcurrentCountLimit"];
         }
     }
 }

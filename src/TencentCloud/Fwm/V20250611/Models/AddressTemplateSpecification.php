@@ -18,7 +18,7 @@ namespace TencentCloud\Fwm\V20250611\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 安全组地址模版
+ * 安全组地址模板
  *
  * @method string getAddressId() 获取IP地址ID，例如：ipm-2uw6ujo6。
  * @method void setAddressId(string $AddressId) 设置IP地址ID，例如：ipm-2uw6ujo6。

@@ -20,90 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceBackups请求参数结构体
  *
- * @method integer getLimit() 获取每页输出的备份列表大小。默认大小为20，最大值为 100。
- * @method void setLimit(integer $Limit) 设置每页输出的备份列表大小。默认大小为20，最大值为 100。
- * @method integer getOffset() 获取分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
- * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
- * @method string getInstanceId() 获取待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
- * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
- * @method string getBeginTime() 获取开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
- * @method void setBeginTime(string $BeginTime) 设置开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
- * @method string getEndTime() 获取结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
- * @method void setEndTime(string $EndTime) 设置结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
- * @method array getStatus() 获取备份任务的状态：
-1：备份在流程中。
-2：备份正常。
-3：备份转RDB文件处理中。
-4：已完成RDB转换。
--1：备份已过期。
--2：备份已删除。
- * @method void setStatus(array $Status) 设置备份任务的状态：
-1：备份在流程中。
-2：备份正常。
-3：备份转RDB文件处理中。
-4：已完成RDB转换。
--1：备份已过期。
--2：备份已删除。
- * @method string getInstanceName() 获取实例名称，支持根据实例名称模糊搜索。
- * @method void setInstanceName(string $InstanceName) 设置实例名称，支持根据实例名称模糊搜索。
+ * @method integer getLimit() 获取<p>每页输出的备份列表大小。默认大小为20，最大值为 100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页输出的备份列表大小。默认大小为20，最大值为 100。</p>
+ * @method integer getOffset() 获取<p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
+ * @method string getInstanceId() 获取<p>待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。</p>
+ * @method string getBeginTime() 获取<p>开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
+ * @method void setBeginTime(string $BeginTime) 设置<p>开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
+ * @method string getEndTime() 获取<p>结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
+ * @method array getStatus() 获取<p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
+ * @method void setStatus(array $Status) 设置<p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
+ * @method string getInstanceName() 获取<p>实例名称，支持根据实例名称模糊搜索。</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称，支持根据实例名称模糊搜索。</p>
  */
 class DescribeInstanceBackupsRequest extends AbstractModel
 {
     /**
-     * @var integer 每页输出的备份列表大小。默认大小为20，最大值为 100。
+     * @var integer <p>每页输出的备份列表大小。默认大小为20，最大值为 100。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @var integer <p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
      */
     public $Offset;
 
     /**
-     * @var string 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
+     * @var string <p>待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+     * @var string <p>开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
      */
     public $BeginTime;
 
     /**
-     * @var string 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+     * @var string <p>结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
      */
     public $EndTime;
 
     /**
-     * @var array 备份任务的状态：
-1：备份在流程中。
-2：备份正常。
-3：备份转RDB文件处理中。
-4：已完成RDB转换。
--1：备份已过期。
--2：备份已删除。
+     * @var array <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
      */
     public $Status;
 
     /**
-     * @var string 实例名称，支持根据实例名称模糊搜索。
+     * @var string <p>实例名称，支持根据实例名称模糊搜索。</p>
      */
     public $InstanceName;
 
     /**
-     * @param integer $Limit 每页输出的备份列表大小。默认大小为20，最大值为 100。
-     * @param integer $Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
-     * @param string $InstanceId 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
-     * @param string $BeginTime 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
-     * @param string $EndTime 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
-     * @param array $Status 备份任务的状态：
-1：备份在流程中。
-2：备份正常。
-3：备份转RDB文件处理中。
-4：已完成RDB转换。
--1：备份已过期。
--2：备份已删除。
-     * @param string $InstanceName 实例名称，支持根据实例名称模糊搜索。
+     * @param integer $Limit <p>每页输出的备份列表大小。默认大小为20，最大值为 100。</p>
+     * @param integer $Offset <p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
+     * @param string $InstanceId <p>待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。</p>
+     * @param string $BeginTime <p>开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
+     * @param string $EndTime <p>结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
+     * @param array $Status <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
+     * @param string $InstanceName <p>实例名称，支持根据实例名称模糊搜索。</p>
      */
     function __construct()
     {

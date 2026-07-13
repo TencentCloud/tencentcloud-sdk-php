@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询策略绑定对象列表接口返回的对象实例信息
  *
- * @method string getUniqueId() 获取对象唯一id
- * @method void setUniqueId(string $UniqueId) 设置对象唯一id
- * @method string getDimensions() 获取表示对象实例的维度集合，jsonObj字符串
- * @method void setDimensions(string $Dimensions) 设置表示对象实例的维度集合，jsonObj字符串
- * @method integer getIsShielded() 获取对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
- * @method void setIsShielded(integer $IsShielded) 设置对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
- * @method string getRegion() 获取对象所在的地域
- * @method void setRegion(string $Region) 设置对象所在的地域
+ * @method string getUniqueId() 获取<p>对象唯一id</p>
+ * @method void setUniqueId(string $UniqueId) 设置<p>对象唯一id</p>
+ * @method string getDimensions() 获取<p>表示对象实例的维度集合，jsonObj字符串</p>
+ * @method void setDimensions(string $Dimensions) 设置<p>表示对象实例的维度集合，jsonObj字符串</p>
+ * @method integer getIsShielded() 获取<p>对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽</p>
+ * @method void setIsShielded(integer $IsShielded) 设置<p>对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽</p>
+ * @method string getRegion() 获取<p>对象所在的地域</p>
+ * @method void setRegion(string $Region) 设置<p>对象所在的地域</p>
  */
 class DescribeBindingPolicyObjectListInstance extends AbstractModel
 {
     /**
-     * @var string 对象唯一id
+     * @var string <p>对象唯一id</p>
      */
     public $UniqueId;
 
     /**
-     * @var string 表示对象实例的维度集合，jsonObj字符串
+     * @var string <p>表示对象实例的维度集合，jsonObj字符串</p>
      */
     public $Dimensions;
 
     /**
-     * @var integer 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
+     * @var integer <p>对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽</p>
      */
     public $IsShielded;
 
     /**
-     * @var string 对象所在的地域
+     * @var string <p>对象所在的地域</p>
      */
     public $Region;
 
     /**
-     * @param string $UniqueId 对象唯一id
-     * @param string $Dimensions 表示对象实例的维度集合，jsonObj字符串
-     * @param integer $IsShielded 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
-     * @param string $Region 对象所在的地域
+     * @param string $UniqueId <p>对象唯一id</p>
+     * @param string $Dimensions <p>表示对象实例的维度集合，jsonObj字符串</p>
+     * @param integer $IsShielded <p>对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽</p>
+     * @param string $Region <p>对象所在的地域</p>
      */
     function __construct()
     {

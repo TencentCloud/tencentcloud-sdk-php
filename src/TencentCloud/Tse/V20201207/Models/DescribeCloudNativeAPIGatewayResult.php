@@ -20,266 +20,262 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 获取云原生API网关基础信息响应结果。
  *
- * @method string getGatewayId() 获取云原生API网关ID。
- * @method void setGatewayId(string $GatewayId) 设置云原生API网关ID。
- * @method string getStatus() 获取云原生API网关状态。
- * @method void setStatus(string $Status) 设置云原生API网关状态。
- * @method string getName() 获取云原生API网关名。
- * @method void setName(string $Name) 设置云原生API网关名。
- * @method string getType() 获取云原生API网关类型。
- * @method void setType(string $Type) 设置云原生API网关类型。
- * @method string getGatewayVersion() 获取实例版本：
-- 2.4.1
-- 2.5.1
- * @method void setGatewayVersion(string $GatewayVersion) 设置实例版本：
-- 2.4.1
-- 2.5.1
- * @method CloudNativeAPIGatewayNodeConfig getNodeConfig() 获取云原生API网关节点信息。
- * @method void setNodeConfig(CloudNativeAPIGatewayNodeConfig $NodeConfig) 设置云原生API网关节点信息。
- * @method CloudNativeAPIGatewayVpcConfig getVpcConfig() 获取云原生API网关vpc配置。
- * @method void setVpcConfig(CloudNativeAPIGatewayVpcConfig $VpcConfig) 设置云原生API网关vpc配置。
- * @method string getDescription() 获取云原生API网关描述。
- * @method void setDescription(string $Description) 设置云原生API网关描述。
- * @method string getCreateTime() 获取云原生API网关创建时间。
- * @method void setCreateTime(string $CreateTime) 设置云原生API网关创建时间。
- * @method array getTags() 获取实例的标签信息
- * @method void setTags(array $Tags) 设置实例的标签信息
- * @method boolean getEnableCls() 获取是否开启 cls 日志
- * @method void setEnableCls(boolean $EnableCls) 设置是否开启 cls 日志
- * @method integer getTradeType() 获取付费模式，0表示后付费，1预付费
- * @method void setTradeType(integer $TradeType) 设置付费模式，0表示后付费，1预付费
- * @method string getFeatureVersion() 获取实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
- * @method void setFeatureVersion(string $FeatureVersion) 设置实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
- * @method integer getInternetMaxBandwidthOut() 获取公网出流量带宽，[1,2048]Mbps
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网出流量带宽，[1,2048]Mbps
- * @method integer getAutoRenewFlag() 获取自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
- * @method string getCurDeadline() 获取到期时间，预付费时使用
- * @method void setCurDeadline(string $CurDeadline) 设置到期时间，预付费时使用
- * @method string getIsolateTime() 获取隔离时间，实例隔离时使用
- * @method void setIsolateTime(string $IsolateTime) 设置隔离时间，实例隔离时使用
- * @method boolean getEnableInternet() 获取是否开启客户端公网。
- * @method void setEnableInternet(boolean $EnableInternet) 设置是否开启客户端公网。
- * @method string getEngineRegion() 获取实例实际的地域信息
- * @method void setEngineRegion(string $EngineRegion) 设置实例实际的地域信息
- * @method string getIngressClassName() 获取Ingress class名称
- * @method void setIngressClassName(string $IngressClassName) 设置Ingress class名称
- * @method string getInternetPayMode() 获取公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
- * @method void setInternetPayMode(string $InternetPayMode) 设置公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
- * @method string getGatewayMinorVersion() 获取云原生API网关小版本号
- * @method void setGatewayMinorVersion(string $GatewayMinorVersion) 设置云原生API网关小版本号
- * @method InstancePort getInstancePort() 获取实例监听的端口信息
- * @method void setInstancePort(InstancePort $InstancePort) 设置实例监听的端口信息
- * @method string getLoadBalancerType() 获取公网CLB默认类型
- * @method void setLoadBalancerType(string $LoadBalancerType) 设置公网CLB默认类型
- * @method array getPublicIpAddresses() 获取公网IP地址列表
- * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置公网IP地址列表
- * @method boolean getDeleteProtect() 获取是否开启删除保护
- * @method void setDeleteProtect(boolean $DeleteProtect) 设置是否开启删除保护
- * @method array getAvailableVersions() 获取表示可以升级的版本号
+ * @method string getGatewayId() 获取<p>云原生API网关ID。</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>云原生API网关ID。</p>
+ * @method string getStatus() 获取<p>云原生API网关状态。</p>
+ * @method void setStatus(string $Status) 设置<p>云原生API网关状态。</p>
+ * @method string getName() 获取<p>云原生API网关名。</p>
+ * @method void setName(string $Name) 设置<p>云原生API网关名。</p>
+ * @method string getType() 获取<p>云原生API网关类型。</p>
+ * @method void setType(string $Type) 设置<p>云原生API网关类型。</p>
+ * @method string getGatewayVersion() 获取<p>实例版本：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
+ * @method void setGatewayVersion(string $GatewayVersion) 设置<p>实例版本：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
+ * @method CloudNativeAPIGatewayNodeConfig getNodeConfig() 获取<p>云原生API网关节点信息。</p>
+ * @method void setNodeConfig(CloudNativeAPIGatewayNodeConfig $NodeConfig) 设置<p>云原生API网关节点信息。</p>
+ * @method CloudNativeAPIGatewayVpcConfig getVpcConfig() 获取<p>云原生API网关vpc配置。</p>
+ * @method void setVpcConfig(CloudNativeAPIGatewayVpcConfig $VpcConfig) 设置<p>云原生API网关vpc配置。</p>
+ * @method string getDescription() 获取<p>云原生API网关描述。</p>
+ * @method void setDescription(string $Description) 设置<p>云原生API网关描述。</p>
+ * @method string getCreateTime() 获取<p>云原生API网关创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>云原生API网关创建时间。</p>
+ * @method array getTags() 获取<p>实例的标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>实例的标签信息</p>
+ * @method boolean getEnableCls() 获取<p>是否开启 cls 日志</p>
+ * @method void setEnableCls(boolean $EnableCls) 设置<p>是否开启 cls 日志</p>
+ * @method integer getTradeType() 获取<p>付费模式，0表示后付费，1预付费</p>
+ * @method void setTradeType(integer $TradeType) 设置<p>付费模式，0表示后付费，1预付费</p>
+ * @method string getFeatureVersion() 获取<p>实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】</p>
+ * @method void setFeatureVersion(string $FeatureVersion) 设置<p>实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】</p>
+ * @method integer getInternetMaxBandwidthOut() 获取<p>公网出流量带宽，[1,2048]Mbps</p>
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置<p>公网出流量带宽，[1,2048]Mbps</p>
+ * @method integer getAutoRenewFlag() 获取<p>自动续费标记，0表示默认状态(用户未设置，即初始状态)；<br>1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费标记，0表示默认状态(用户未设置，即初始状态)；<br>1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0</p>
+ * @method string getCurDeadline() 获取<p>到期时间，预付费时使用</p>
+ * @method void setCurDeadline(string $CurDeadline) 设置<p>到期时间，预付费时使用</p>
+ * @method string getIsolateTime() 获取<p>隔离时间，实例隔离时使用</p>
+ * @method void setIsolateTime(string $IsolateTime) 设置<p>隔离时间，实例隔离时使用</p>
+ * @method boolean getEnableInternet() 获取<p>是否开启客户端公网。</p>
+ * @method void setEnableInternet(boolean $EnableInternet) 设置<p>是否开启客户端公网。</p>
+ * @method string getEngineRegion() 获取<p>实例实际的地域信息</p>
+ * @method void setEngineRegion(string $EngineRegion) 设置<p>实例实际的地域信息</p>
+ * @method string getIngressClassName() 获取<p>Ingress class名称</p>
+ * @method void setIngressClassName(string $IngressClassName) 设置<p>Ingress class名称</p>
+ * @method string getInternetPayMode() 获取<p>公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。</p>
+ * @method void setInternetPayMode(string $InternetPayMode) 设置<p>公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。</p>
+ * @method string getGatewayMinorVersion() 获取<p>云原生API网关小版本号</p>
+ * @method void setGatewayMinorVersion(string $GatewayMinorVersion) 设置<p>云原生API网关小版本号</p>
+ * @method InstancePort getInstancePort() 获取<p>实例监听的端口信息</p>
+ * @method void setInstancePort(InstancePort $InstancePort) 设置<p>实例监听的端口信息</p>
+ * @method string getLoadBalancerType() 获取<p>公网CLB默认类型</p>
+ * @method void setLoadBalancerType(string $LoadBalancerType) 设置<p>公网CLB默认类型</p>
+ * @method array getPublicIpAddresses() 获取<p>公网IP地址列表</p>
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置<p>公网IP地址列表</p>
+ * @method boolean getDeleteProtect() 获取<p>是否开启删除保护</p>
+ * @method void setDeleteProtect(boolean $DeleteProtect) 设置<p>是否开启删除保护</p>
+ * @method array getAvailableVersions() 获取<p>表示可以升级的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAvailableVersions(array $AvailableVersions) 设置表示可以升级的版本号
+ * @method void setAvailableVersions(array $AvailableVersions) 设置<p>表示可以升级的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAvailableUpgradeVersions() 获取网关可以升级的版本号列表
- * @method void setAvailableUpgradeVersions(array $AvailableUpgradeVersions) 设置网关可以升级的版本号列表
- * @method boolean getAvailableUpgrade() 获取是否提示可升级
- * @method void setAvailableUpgrade(boolean $AvailableUpgrade) 设置是否提示可升级
- * @method string getAvailableRollbackVersion() 获取可回退的版本
- * @method void setAvailableRollbackVersion(string $AvailableRollbackVersion) 设置可回退的版本
+ * @method array getAvailableUpgradeVersions() 获取<p>网关可以升级的版本号列表</p>
+ * @method void setAvailableUpgradeVersions(array $AvailableUpgradeVersions) 设置<p>网关可以升级的版本号列表</p>
+ * @method boolean getAvailableUpgrade() 获取<p>是否提示可升级</p>
+ * @method void setAvailableUpgrade(boolean $AvailableUpgrade) 设置<p>是否提示可升级</p>
+ * @method string getAvailableRollbackVersion() 获取<p>可回退的版本</p>
+ * @method void setAvailableRollbackVersion(string $AvailableRollbackVersion) 设置<p>可回退的版本</p>
+ * @method boolean getForceHTTPSRedirect() 获取<p>强制跳转HTTPS开关</p>
+ * @method void setForceHTTPSRedirect(boolean $ForceHTTPSRedirect) 设置<p>强制跳转HTTPS开关</p>
  */
 class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 {
     /**
-     * @var string 云原生API网关ID。
+     * @var string <p>云原生API网关ID。</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 云原生API网关状态。
+     * @var string <p>云原生API网关状态。</p>
      */
     public $Status;
 
     /**
-     * @var string 云原生API网关名。
+     * @var string <p>云原生API网关名。</p>
      */
     public $Name;
 
     /**
-     * @var string 云原生API网关类型。
+     * @var string <p>云原生API网关类型。</p>
      */
     public $Type;
 
     /**
-     * @var string 实例版本：
-- 2.4.1
-- 2.5.1
+     * @var string <p>实例版本：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
      */
     public $GatewayVersion;
 
     /**
-     * @var CloudNativeAPIGatewayNodeConfig 云原生API网关节点信息。
+     * @var CloudNativeAPIGatewayNodeConfig <p>云原生API网关节点信息。</p>
      */
     public $NodeConfig;
 
     /**
-     * @var CloudNativeAPIGatewayVpcConfig 云原生API网关vpc配置。
+     * @var CloudNativeAPIGatewayVpcConfig <p>云原生API网关vpc配置。</p>
      */
     public $VpcConfig;
 
     /**
-     * @var string 云原生API网关描述。
+     * @var string <p>云原生API网关描述。</p>
      */
     public $Description;
 
     /**
-     * @var string 云原生API网关创建时间。
+     * @var string <p>云原生API网关创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var array 实例的标签信息
+     * @var array <p>实例的标签信息</p>
      */
     public $Tags;
 
     /**
-     * @var boolean 是否开启 cls 日志
+     * @var boolean <p>是否开启 cls 日志</p>
      */
     public $EnableCls;
 
     /**
-     * @var integer 付费模式，0表示后付费，1预付费
+     * @var integer <p>付费模式，0表示后付费，1预付费</p>
      */
     public $TradeType;
 
     /**
-     * @var string 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
+     * @var string <p>实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】</p>
      */
     public $FeatureVersion;
 
     /**
-     * @var integer 公网出流量带宽，[1,2048]Mbps
+     * @var integer <p>公网出流量带宽，[1,2048]Mbps</p>
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var integer 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+     * @var integer <p>自动续费标记，0表示默认状态(用户未设置，即初始状态)；<br>1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 到期时间，预付费时使用
+     * @var string <p>到期时间，预付费时使用</p>
      */
     public $CurDeadline;
 
     /**
-     * @var string 隔离时间，实例隔离时使用
+     * @var string <p>隔离时间，实例隔离时使用</p>
      */
     public $IsolateTime;
 
     /**
-     * @var boolean 是否开启客户端公网。
+     * @var boolean <p>是否开启客户端公网。</p>
      */
     public $EnableInternet;
 
     /**
-     * @var string 实例实际的地域信息
+     * @var string <p>实例实际的地域信息</p>
      */
     public $EngineRegion;
 
     /**
-     * @var string Ingress class名称
+     * @var string <p>Ingress class名称</p>
      */
     public $IngressClassName;
 
     /**
-     * @var string 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
+     * @var string <p>公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。</p>
      */
     public $InternetPayMode;
 
     /**
-     * @var string 云原生API网关小版本号
+     * @var string <p>云原生API网关小版本号</p>
      */
     public $GatewayMinorVersion;
 
     /**
-     * @var InstancePort 实例监听的端口信息
+     * @var InstancePort <p>实例监听的端口信息</p>
      */
     public $InstancePort;
 
     /**
-     * @var string 公网CLB默认类型
+     * @var string <p>公网CLB默认类型</p>
      */
     public $LoadBalancerType;
 
     /**
-     * @var array 公网IP地址列表
+     * @var array <p>公网IP地址列表</p>
      */
     public $PublicIpAddresses;
 
     /**
-     * @var boolean 是否开启删除保护
+     * @var boolean <p>是否开启删除保护</p>
      */
     public $DeleteProtect;
 
     /**
-     * @var array 表示可以升级的版本号
+     * @var array <p>表示可以升级的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailableVersions;
 
     /**
-     * @var array 网关可以升级的版本号列表
+     * @var array <p>网关可以升级的版本号列表</p>
      */
     public $AvailableUpgradeVersions;
 
     /**
-     * @var boolean 是否提示可升级
+     * @var boolean <p>是否提示可升级</p>
      */
     public $AvailableUpgrade;
 
     /**
-     * @var string 可回退的版本
+     * @var string <p>可回退的版本</p>
      */
     public $AvailableRollbackVersion;
 
     /**
-     * @param string $GatewayId 云原生API网关ID。
-     * @param string $Status 云原生API网关状态。
-     * @param string $Name 云原生API网关名。
-     * @param string $Type 云原生API网关类型。
-     * @param string $GatewayVersion 实例版本：
-- 2.4.1
-- 2.5.1
-     * @param CloudNativeAPIGatewayNodeConfig $NodeConfig 云原生API网关节点信息。
-     * @param CloudNativeAPIGatewayVpcConfig $VpcConfig 云原生API网关vpc配置。
-     * @param string $Description 云原生API网关描述。
-     * @param string $CreateTime 云原生API网关创建时间。
-     * @param array $Tags 实例的标签信息
-     * @param boolean $EnableCls 是否开启 cls 日志
-     * @param integer $TradeType 付费模式，0表示后付费，1预付费
-     * @param string $FeatureVersion 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-     * @param integer $InternetMaxBandwidthOut 公网出流量带宽，[1,2048]Mbps
-     * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-     * @param string $CurDeadline 到期时间，预付费时使用
-     * @param string $IsolateTime 隔离时间，实例隔离时使用
-     * @param boolean $EnableInternet 是否开启客户端公网。
-     * @param string $EngineRegion 实例实际的地域信息
-     * @param string $IngressClassName Ingress class名称
-     * @param string $InternetPayMode 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-     * @param string $GatewayMinorVersion 云原生API网关小版本号
-     * @param InstancePort $InstancePort 实例监听的端口信息
-     * @param string $LoadBalancerType 公网CLB默认类型
-     * @param array $PublicIpAddresses 公网IP地址列表
-     * @param boolean $DeleteProtect 是否开启删除保护
-     * @param array $AvailableVersions 表示可以升级的版本号
+     * @var boolean <p>强制跳转HTTPS开关</p>
+     */
+    public $ForceHTTPSRedirect;
+
+    /**
+     * @param string $GatewayId <p>云原生API网关ID。</p>
+     * @param string $Status <p>云原生API网关状态。</p>
+     * @param string $Name <p>云原生API网关名。</p>
+     * @param string $Type <p>云原生API网关类型。</p>
+     * @param string $GatewayVersion <p>实例版本：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
+     * @param CloudNativeAPIGatewayNodeConfig $NodeConfig <p>云原生API网关节点信息。</p>
+     * @param CloudNativeAPIGatewayVpcConfig $VpcConfig <p>云原生API网关vpc配置。</p>
+     * @param string $Description <p>云原生API网关描述。</p>
+     * @param string $CreateTime <p>云原生API网关创建时间。</p>
+     * @param array $Tags <p>实例的标签信息</p>
+     * @param boolean $EnableCls <p>是否开启 cls 日志</p>
+     * @param integer $TradeType <p>付费模式，0表示后付费，1预付费</p>
+     * @param string $FeatureVersion <p>实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】</p>
+     * @param integer $InternetMaxBandwidthOut <p>公网出流量带宽，[1,2048]Mbps</p>
+     * @param integer $AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态)；<br>1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0</p>
+     * @param string $CurDeadline <p>到期时间，预付费时使用</p>
+     * @param string $IsolateTime <p>隔离时间，实例隔离时使用</p>
+     * @param boolean $EnableInternet <p>是否开启客户端公网。</p>
+     * @param string $EngineRegion <p>实例实际的地域信息</p>
+     * @param string $IngressClassName <p>Ingress class名称</p>
+     * @param string $InternetPayMode <p>公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。</p>
+     * @param string $GatewayMinorVersion <p>云原生API网关小版本号</p>
+     * @param InstancePort $InstancePort <p>实例监听的端口信息</p>
+     * @param string $LoadBalancerType <p>公网CLB默认类型</p>
+     * @param array $PublicIpAddresses <p>公网IP地址列表</p>
+     * @param boolean $DeleteProtect <p>是否开启删除保护</p>
+     * @param array $AvailableVersions <p>表示可以升级的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AvailableUpgradeVersions 网关可以升级的版本号列表
-     * @param boolean $AvailableUpgrade 是否提示可升级
-     * @param string $AvailableRollbackVersion 可回退的版本
+     * @param array $AvailableUpgradeVersions <p>网关可以升级的版本号列表</p>
+     * @param boolean $AvailableUpgrade <p>是否提示可升级</p>
+     * @param string $AvailableRollbackVersion <p>可回退的版本</p>
+     * @param boolean $ForceHTTPSRedirect <p>强制跳转HTTPS开关</p>
      */
     function __construct()
     {
@@ -420,6 +416,10 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 
         if (array_key_exists("AvailableRollbackVersion",$param) and $param["AvailableRollbackVersion"] !== null) {
             $this->AvailableRollbackVersion = $param["AvailableRollbackVersion"];
+        }
+
+        if (array_key_exists("ForceHTTPSRedirect",$param) and $param["ForceHTTPSRedirect"] !== null) {
+            $this->ForceHTTPSRedirect = $param["ForceHTTPSRedirect"];
         }
     }
 }

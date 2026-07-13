@@ -20,353 +20,245 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 企业安全组规则列表信息
  *
- * @method integer getOrderIndex() 获取排序
- * @method void setOrderIndex(integer $OrderIndex) 设置排序
- * @method string getRuleId() 获取主键id
- * @method void setRuleId(string $RuleId) 设置主键id
- * @method string getIpVersion() 获取ip类型
- * @method void setIpVersion(string $IpVersion) 设置ip类型
- * @method string getSourceId() 获取源规则内容
- * @method void setSourceId(string $SourceId) 设置源规则内容
- * @method integer getSourceType() 获取源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
- * @method void setSourceType(integer $SourceType) 设置源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
- * @method string getTargetId() 获取目的规则内容
- * @method void setTargetId(string $TargetId) 设置目的规则内容
- * @method integer getTargetType() 获取目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
- * @method void setTargetType(integer $TargetType) 设置目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
- * @method string getProtocol() 获取协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
- * @method void setProtocol(string $Protocol) 设置协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
- * @method string getPort() 获取端口
- * @method void setPort(string $Port) 设置端口
- * @method integer getStrategy() 获取策略
- * @method void setStrategy(integer $Strategy) 设置策略
- * @method string getDetail() 获取描述
- * @method void setDetail(string $Detail) 设置描述
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getServiceTemplateId() 获取服务模板id
- * @method void setServiceTemplateId(string $ServiceTemplateId) 设置服务模板id
- * @method string getSouInstanceName() 获取源资产名称
- * @method void setSouInstanceName(string $SouInstanceName) 设置源资产名称
- * @method string getSouPublicIp() 获取源资产公网ip
- * @method void setSouPublicIp(string $SouPublicIp) 设置源资产公网ip
- * @method string getSouPrivateIp() 获取源资产内网ip
- * @method void setSouPrivateIp(string $SouPrivateIp) 设置源资产内网ip
- * @method string getSouCidr() 获取源资产网段信息
- * @method void setSouCidr(string $SouCidr) 设置源资产网段信息
- * @method string getSouParameterName() 获取源模板名称
- * @method void setSouParameterName(string $SouParameterName) 设置源模板名称
- * @method string getInstanceName() 获取目的资产名称
- * @method void setInstanceName(string $InstanceName) 设置目的资产名称
- * @method string getPublicIp() 获取目的资产公网ip
- * @method void setPublicIp(string $PublicIp) 设置目的资产公网ip
- * @method string getPrivateIp() 获取目的资产内网ip
- * @method void setPrivateIp(string $PrivateIp) 设置目的资产内网ip
- * @method string getCidr() 获取目的资产网段信息
- * @method void setCidr(string $Cidr) 设置目的资产网段信息
- * @method string getParameterName() 获取目的模板名称
- * @method void setParameterName(string $ParameterName) 设置目的模板名称
- * @method string getProtocolPortName() 获取端口模板名称
- * @method void setProtocolPortName(string $ProtocolPortName) 设置端口模板名称
- * @method integer getId() 获取规则id  等同RuleUuid
- * @method void setId(integer $Id) 设置规则id  等同RuleUuid
- * @method SgDnsParseCount getDnsParseCount() 获取域名解析的IP统计
- * @method void setDnsParseCount(SgDnsParseCount $DnsParseCount) 设置域名解析的IP统计
- * @method string getScope() 获取规则生效范围
- * @method void setScope(string $Scope) 设置规则生效范围
- * @method integer getIsNew() 获取规则最新一次是否有改动 取值范围：0/1 0:否 1:是
- * @method void setIsNew(integer $IsNew) 设置规则最新一次是否有改动 取值范围：0/1 0:否 1:是
- * @method MemberInfo getBelongMember() 获取规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)
+ * @method integer getOrderIndex() 获取<p>排序</p>
+ * @method void setOrderIndex(integer $OrderIndex) 设置<p>排序</p>
+ * @method string getRuleId() 获取<p>主键id</p>
+ * @method void setRuleId(string $RuleId) 设置<p>主键id</p>
+ * @method string getIpVersion() 获取<p>ip类型</p>
+ * @method void setIpVersion(string $IpVersion) 设置<p>ip类型</p>
+ * @method string getSourceId() 获取<p>源规则内容</p>
+ * @method void setSourceId(string $SourceId) 设置<p>源规则内容</p>
+ * @method integer getSourceType() 获取<p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
+ * @method void setSourceType(integer $SourceType) 设置<p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
+ * @method string getTargetId() 获取<p>目的规则内容</p>
+ * @method void setTargetId(string $TargetId) 设置<p>目的规则内容</p>
+ * @method integer getTargetType() 获取<p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
+ * @method void setTargetType(integer $TargetType) 设置<p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
+ * @method string getProtocol() 获取<p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
+ * @method string getPort() 获取<p>端口</p>
+ * @method void setPort(string $Port) 设置<p>端口</p>
+ * @method integer getStrategy() 获取<p>策略</p>
+ * @method void setStrategy(integer $Strategy) 设置<p>策略</p>
+ * @method string getDetail() 获取<p>描述</p>
+ * @method void setDetail(string $Detail) 设置<p>描述</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getServiceTemplateId() 获取<p>服务模板id</p>
+ * @method void setServiceTemplateId(string $ServiceTemplateId) 设置<p>服务模板id</p>
+ * @method string getSouInstanceName() 获取<p>源资产名称</p>
+ * @method void setSouInstanceName(string $SouInstanceName) 设置<p>源资产名称</p>
+ * @method string getSouPublicIp() 获取<p>源资产公网ip</p>
+ * @method void setSouPublicIp(string $SouPublicIp) 设置<p>源资产公网ip</p>
+ * @method string getSouPrivateIp() 获取<p>源资产内网ip</p>
+ * @method void setSouPrivateIp(string $SouPrivateIp) 设置<p>源资产内网ip</p>
+ * @method string getSouCidr() 获取<p>源资产网段信息</p>
+ * @method void setSouCidr(string $SouCidr) 设置<p>源资产网段信息</p>
+ * @method string getSouParameterName() 获取<p>源模板名称</p>
+ * @method void setSouParameterName(string $SouParameterName) 设置<p>源模板名称</p>
+ * @method string getInstanceName() 获取<p>目的资产名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>目的资产名称</p>
+ * @method string getPublicIp() 获取<p>目的资产公网ip</p>
+ * @method void setPublicIp(string $PublicIp) 设置<p>目的资产公网ip</p>
+ * @method string getPrivateIp() 获取<p>目的资产内网ip</p>
+ * @method void setPrivateIp(string $PrivateIp) 设置<p>目的资产内网ip</p>
+ * @method string getCidr() 获取<p>目的资产网段信息</p>
+ * @method void setCidr(string $Cidr) 设置<p>目的资产网段信息</p>
+ * @method string getParameterName() 获取<p>目的模板名称</p>
+ * @method void setParameterName(string $ParameterName) 设置<p>目的模板名称</p>
+ * @method string getProtocolPortName() 获取<p>端口模板名称</p>
+ * @method void setProtocolPortName(string $ProtocolPortName) 设置<p>端口模板名称</p>
+ * @method integer getId() 获取<p>规则id  等同RuleUuid</p>
+ * @method void setId(integer $Id) 设置<p>规则id  等同RuleUuid</p>
+ * @method SgDnsParseCount getDnsParseCount() 获取<p>域名解析的IP统计</p>
+ * @method void setDnsParseCount(SgDnsParseCount $DnsParseCount) 设置<p>域名解析的IP统计</p>
+ * @method string getScope() 获取<p>规则生效范围</p>
+ * @method void setScope(string $Scope) 设置<p>规则生效范围</p>
+ * @method integer getIsNew() 获取<p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p>
+ * @method void setIsNew(integer $IsNew) 设置<p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p>
+ * @method MemberInfo getBelongMember() 获取<p>规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBelongMember(MemberInfo $BelongMember) 设置规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)
+ * @method void setBelongMember(MemberInfo $BelongMember) 设置<p>规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecGroupRuleResp extends AbstractModel
 {
     /**
-     * @var integer 排序
+     * @var integer <p>排序</p>
      */
     public $OrderIndex;
 
     /**
-     * @var string 主键id
+     * @var string <p>主键id</p>
      */
     public $RuleId;
 
     /**
-     * @var string ip类型
+     * @var string <p>ip类型</p>
      */
     public $IpVersion;
 
     /**
-     * @var string 源规则内容
+     * @var string <p>源规则内容</p>
      */
     public $SourceId;
 
     /**
-     * @var integer 源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
+     * @var integer <p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
      */
     public $SourceType;
 
     /**
-     * @var string 目的规则内容
+     * @var string <p>目的规则内容</p>
      */
     public $TargetId;
 
     /**
-     * @var integer 目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
+     * @var integer <p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
      */
     public $TargetType;
 
     /**
-     * @var string 协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
+     * @var string <p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
      */
     public $Protocol;
 
     /**
-     * @var string 端口
+     * @var string <p>端口</p>
      */
     public $Port;
 
     /**
-     * @var integer 策略
+     * @var integer <p>策略</p>
      */
     public $Strategy;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Detail;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 服务模板id
+     * @var string <p>服务模板id</p>
      */
     public $ServiceTemplateId;
 
     /**
-     * @var string 源资产名称
+     * @var string <p>源资产名称</p>
      */
     public $SouInstanceName;
 
     /**
-     * @var string 源资产公网ip
+     * @var string <p>源资产公网ip</p>
      */
     public $SouPublicIp;
 
     /**
-     * @var string 源资产内网ip
+     * @var string <p>源资产内网ip</p>
      */
     public $SouPrivateIp;
 
     /**
-     * @var string 源资产网段信息
+     * @var string <p>源资产网段信息</p>
      */
     public $SouCidr;
 
     /**
-     * @var string 源模板名称
+     * @var string <p>源模板名称</p>
      */
     public $SouParameterName;
 
     /**
-     * @var string 目的资产名称
+     * @var string <p>目的资产名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 目的资产公网ip
+     * @var string <p>目的资产公网ip</p>
      */
     public $PublicIp;
 
     /**
-     * @var string 目的资产内网ip
+     * @var string <p>目的资产内网ip</p>
      */
     public $PrivateIp;
 
     /**
-     * @var string 目的资产网段信息
+     * @var string <p>目的资产网段信息</p>
      */
     public $Cidr;
 
     /**
-     * @var string 目的模板名称
+     * @var string <p>目的模板名称</p>
      */
     public $ParameterName;
 
     /**
-     * @var string 端口模板名称
+     * @var string <p>端口模板名称</p>
      */
     public $ProtocolPortName;
 
     /**
-     * @var integer 规则id  等同RuleUuid
+     * @var integer <p>规则id  等同RuleUuid</p>
      */
     public $Id;
 
     /**
-     * @var SgDnsParseCount 域名解析的IP统计
+     * @var SgDnsParseCount <p>域名解析的IP统计</p>
      */
     public $DnsParseCount;
 
     /**
-     * @var string 规则生效范围
+     * @var string <p>规则生效范围</p>
      */
     public $Scope;
 
     /**
-     * @var integer 规则最新一次是否有改动 取值范围：0/1 0:否 1:是
+     * @var integer <p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p>
      */
     public $IsNew;
 
     /**
-     * @var MemberInfo 规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)
+     * @var MemberInfo <p>规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BelongMember;
 
     /**
-     * @param integer $OrderIndex 排序
-     * @param string $RuleId 主键id
-     * @param string $IpVersion ip类型
-     * @param string $SourceId 源规则内容
-     * @param integer $SourceType 源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
-     * @param string $TargetId 目的规则内容
-     * @param integer $TargetType 目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
-     * @param string $Protocol 协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
-     * @param string $Port 端口
-     * @param integer $Strategy 策略
-     * @param string $Detail 描述
-     * @param string $Region 地域
-     * @param string $ServiceTemplateId 服务模板id
-     * @param string $SouInstanceName 源资产名称
-     * @param string $SouPublicIp 源资产公网ip
-     * @param string $SouPrivateIp 源资产内网ip
-     * @param string $SouCidr 源资产网段信息
-     * @param string $SouParameterName 源模板名称
-     * @param string $InstanceName 目的资产名称
-     * @param string $PublicIp 目的资产公网ip
-     * @param string $PrivateIp 目的资产内网ip
-     * @param string $Cidr 目的资产网段信息
-     * @param string $ParameterName 目的模板名称
-     * @param string $ProtocolPortName 端口模板名称
-     * @param integer $Id 规则id  等同RuleUuid
-     * @param SgDnsParseCount $DnsParseCount 域名解析的IP统计
-     * @param string $Scope 规则生效范围
-     * @param integer $IsNew 规则最新一次是否有改动 取值范围：0/1 0:否 1:是
-     * @param MemberInfo $BelongMember 规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)
+     * @param integer $OrderIndex <p>排序</p>
+     * @param string $RuleId <p>主键id</p>
+     * @param string $IpVersion <p>ip类型</p>
+     * @param string $SourceId <p>源规则内容</p>
+     * @param integer $SourceType <p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
+     * @param string $TargetId <p>目的规则内容</p>
+     * @param integer $TargetType <p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
+     * @param string $Protocol <p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
+     * @param string $Port <p>端口</p>
+     * @param integer $Strategy <p>策略</p>
+     * @param string $Detail <p>描述</p>
+     * @param string $Region <p>地域</p>
+     * @param string $ServiceTemplateId <p>服务模板id</p>
+     * @param string $SouInstanceName <p>源资产名称</p>
+     * @param string $SouPublicIp <p>源资产公网ip</p>
+     * @param string $SouPrivateIp <p>源资产内网ip</p>
+     * @param string $SouCidr <p>源资产网段信息</p>
+     * @param string $SouParameterName <p>源模板名称</p>
+     * @param string $InstanceName <p>目的资产名称</p>
+     * @param string $PublicIp <p>目的资产公网ip</p>
+     * @param string $PrivateIp <p>目的资产内网ip</p>
+     * @param string $Cidr <p>目的资产网段信息</p>
+     * @param string $ParameterName <p>目的模板名称</p>
+     * @param string $ProtocolPortName <p>端口模板名称</p>
+     * @param integer $Id <p>规则id  等同RuleUuid</p>
+     * @param SgDnsParseCount $DnsParseCount <p>域名解析的IP统计</p>
+     * @param string $Scope <p>规则生效范围</p>
+     * @param integer $IsNew <p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p>
+     * @param MemberInfo $BelongMember <p>规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

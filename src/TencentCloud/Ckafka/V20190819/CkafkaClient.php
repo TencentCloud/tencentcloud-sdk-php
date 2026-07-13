@@ -104,6 +104,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\FetchMessageListByTimestampResponse FetchMessageListByTimestamp(Models\FetchMessageListByTimestampRequest $req) 根据时间戳查询消息列表
  * @method Models\InquireCkafkaPriceResponse InquireCkafkaPrice(Models\InquireCkafkaPriceRequest $req) Ckafka实例购买/续费询价
  * @method Models\InstanceScalingDownResponse InstanceScalingDown(Models\InstanceScalingDownRequest $req) 按量实例缩容
+ * @method Models\IsolatedInstancePreResponse IsolatedInstancePre(Models\IsolatedInstancePreRequest $req) 隔离预付费实例，该接口会对实例执行隔离的动作，执行成功后实例会被隔离
  * @method Models\ModifyAccessPolicyResponse ModifyAccessPolicy(Models\ModifyAccessPolicyRequest $req) 修改实例公网IP白名单列表接口
  * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) 修改ACL策略，目前只支持预设规则的是否应用到新增topic这一项的修改
  * @method Models\ModifyConnectResourceResponse ModifyConnectResource(Models\ModifyConnectResourceRequest $req) 编辑连接器连接

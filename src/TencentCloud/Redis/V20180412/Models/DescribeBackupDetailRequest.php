@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupDetail请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
- * @method string getBackupId() 获取备份 ID，可通过接口 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 返回的参数 **RedisBackupSet** 获取。
- * @method void setBackupId(string $BackupId) 设置备份 ID，可通过接口 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 返回的参数 **RedisBackupSet** 获取。
+ * @method string getInstanceId() 获取<p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
+ * @method string getBackupId() 获取<p>备份 ID，可通过接口 <a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a> 返回的参数 <strong>RedisBackupSet</strong> 获取。</p>
+ * @method void setBackupId(string $BackupId) 设置<p>备份 ID，可通过接口 <a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a> 返回的参数 <strong>RedisBackupSet</strong> 获取。</p>
  */
 class DescribeBackupDetailRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @var string <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 备份 ID，可通过接口 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 返回的参数 **RedisBackupSet** 获取。
+     * @var string <p>备份 ID，可通过接口 <a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a> 返回的参数 <strong>RedisBackupSet</strong> 获取。</p>
      */
     public $BackupId;
 
     /**
-     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
-     * @param string $BackupId 备份 ID，可通过接口 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 返回的参数 **RedisBackupSet** 获取。
+     * @param string $InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
+     * @param string $BackupId <p>备份 ID，可通过接口 <a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a> 返回的参数 <strong>RedisBackupSet</strong> 获取。</p>
      */
     function __construct()
     {

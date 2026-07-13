@@ -18,7 +18,7 @@ namespace TencentCloud\Fwm\V20250611\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 安全组服务模版
+ * 安全组服务模板
  *
  * @method string getServiceId() 获取 协议端口ID，例如：ppm-f5n1f8da。
  * @method void setServiceId(string $ServiceId) 设置 协议端口ID，例如：ppm-f5n1f8da。

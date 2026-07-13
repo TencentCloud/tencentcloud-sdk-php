@@ -20,77 +20,77 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBindingPolicyObjectList返回的是实例分组信息
  *
- * @method integer getInstanceGroupId() 获取实例分组id
- * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组id
- * @method string getViewName() 获取告警策略类型名称
- * @method void setViewName(string $ViewName) 设置告警策略类型名称
- * @method string getLastEditUin() 获取最后编辑uin
- * @method void setLastEditUin(string $LastEditUin) 设置最后编辑uin
- * @method string getGroupName() 获取实例分组名称
- * @method void setGroupName(string $GroupName) 设置实例分组名称
- * @method integer getInstanceSum() 获取实例数量
- * @method void setInstanceSum(integer $InstanceSum) 设置实例数量
- * @method integer getUpdateTime() 获取更新时间
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
- * @method integer getInsertTime() 获取创建时间
- * @method void setInsertTime(integer $InsertTime) 设置创建时间
- * @method array getRegions() 获取实例所在的地域集合
+ * @method integer getInstanceGroupId() 获取<p>实例分组id</p>
+ * @method void setInstanceGroupId(integer $InstanceGroupId) 设置<p>实例分组id</p>
+ * @method string getViewName() 获取<p>告警策略类型名称</p>
+ * @method void setViewName(string $ViewName) 设置<p>告警策略类型名称</p>
+ * @method string getLastEditUin() 获取<p>最后编辑uin</p>
+ * @method void setLastEditUin(string $LastEditUin) 设置<p>最后编辑uin</p>
+ * @method string getGroupName() 获取<p>实例分组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>实例分组名称</p>
+ * @method integer getInstanceSum() 获取<p>实例数量</p>
+ * @method void setInstanceSum(integer $InstanceSum) 设置<p>实例数量</p>
+ * @method integer getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p>
+ * @method integer getInsertTime() 获取<p>创建时间</p>
+ * @method void setInsertTime(integer $InsertTime) 设置<p>创建时间</p>
+ * @method array getRegions() 获取<p>实例所在的地域集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegions(array $Regions) 设置实例所在的地域集合
+ * @method void setRegions(array $Regions) 设置<p>实例所在的地域集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeBindingPolicyObjectListInstanceGroup extends AbstractModel
 {
     /**
-     * @var integer 实例分组id
+     * @var integer <p>实例分组id</p>
      */
     public $InstanceGroupId;
 
     /**
-     * @var string 告警策略类型名称
+     * @var string <p>告警策略类型名称</p>
      */
     public $ViewName;
 
     /**
-     * @var string 最后编辑uin
+     * @var string <p>最后编辑uin</p>
      */
     public $LastEditUin;
 
     /**
-     * @var string 实例分组名称
+     * @var string <p>实例分组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var integer 实例数量
+     * @var integer <p>实例数量</p>
      */
     public $InstanceSum;
 
     /**
-     * @var integer 更新时间
+     * @var integer <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
      */
     public $InsertTime;
 
     /**
-     * @var array 实例所在的地域集合
+     * @var array <p>实例所在的地域集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Regions;
 
     /**
-     * @param integer $InstanceGroupId 实例分组id
-     * @param string $ViewName 告警策略类型名称
-     * @param string $LastEditUin 最后编辑uin
-     * @param string $GroupName 实例分组名称
-     * @param integer $InstanceSum 实例数量
-     * @param integer $UpdateTime 更新时间
-     * @param integer $InsertTime 创建时间
-     * @param array $Regions 实例所在的地域集合
+     * @param integer $InstanceGroupId <p>实例分组id</p>
+     * @param string $ViewName <p>告警策略类型名称</p>
+     * @param string $LastEditUin <p>最后编辑uin</p>
+     * @param string $GroupName <p>实例分组名称</p>
+     * @param integer $InstanceSum <p>实例数量</p>
+     * @param integer $UpdateTime <p>更新时间</p>
+     * @param integer $InsertTime <p>创建时间</p>
+     * @param array $Regions <p>实例所在的地域集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

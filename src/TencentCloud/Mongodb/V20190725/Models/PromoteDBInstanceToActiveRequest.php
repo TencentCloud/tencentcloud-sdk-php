@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PromoteDBInstanceToActive请求参数结构体
  *
- * @method string getInstanceId() 获取灾备实例id
- * @method void setInstanceId(string $InstanceId) 设置灾备实例id
- * @method string getMasterId() 获取主实例id
- * @method void setMasterId(string $MasterId) 设置主实例id
+ * @method string getInstanceId() 获取<p>指定需转为普通实例的灾备或只读实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制灾备或只读实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>指定需转为普通实例的灾备或只读实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制灾备或只读实例 ID。</p>
+ * @method string getMasterId() 获取<p>指定灾备或只读实例所属的主实例。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+ * @method void setMasterId(string $MasterId) 设置<p>指定灾备或只读实例所属的主实例。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
  */
 class PromoteDBInstanceToActiveRequest extends AbstractModel
 {
     /**
-     * @var string 灾备实例id
+     * @var string <p>指定需转为普通实例的灾备或只读实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制灾备或只读实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 主实例id
+     * @var string <p>指定灾备或只读实例所属的主实例。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public $MasterId;
 
     /**
-     * @param string $InstanceId 灾备实例id
-     * @param string $MasterId 主实例id
+     * @param string $InstanceId <p>指定需转为普通实例的灾备或只读实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制灾备或只读实例 ID。</p>
+     * @param string $MasterId <p>指定灾备或只读实例所属的主实例。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     function __construct()
     {

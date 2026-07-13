@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateSandboxTool请求参数结构体
  *
- * @method string getToolId() 获取沙箱工具ID
- * @method void setToolId(string $ToolId) 设置沙箱工具ID
- * @method string getDescription() 获取沙箱工具描述，最大长度200字符
- * @method void setDescription(string $Description) 设置沙箱工具描述，最大长度200字符
- * @method NetworkConfiguration getNetworkConfiguration() 获取网络配置
- * @method void setNetworkConfiguration(NetworkConfiguration $NetworkConfiguration) 设置网络配置
- * @method array getTags() 获取标签
- * @method void setTags(array $Tags) 设置标签
- * @method CustomConfiguration getCustomConfiguration() 获取沙箱工具自定义配置
- * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置沙箱工具自定义配置
+ * @method string getToolId() 获取<p>沙箱工具ID</p>
+ * @method void setToolId(string $ToolId) 设置<p>沙箱工具ID</p>
+ * @method string getDescription() 获取<p>沙箱工具描述，最大长度200字符</p>
+ * @method void setDescription(string $Description) 设置<p>沙箱工具描述，最大长度200字符</p>
+ * @method NetworkConfiguration getNetworkConfiguration() 获取<p>网络配置</p>
+ * @method void setNetworkConfiguration(NetworkConfiguration $NetworkConfiguration) 设置<p>网络配置</p>
+ * @method array getTags() 获取<p>标签</p>
+ * @method void setTags(array $Tags) 设置<p>标签</p>
+ * @method CustomConfiguration getCustomConfiguration() 获取<p>沙箱工具自定义配置</p>
+ * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置<p>沙箱工具自定义配置</p>
  */
 class UpdateSandboxToolRequest extends AbstractModel
 {
     /**
-     * @var string 沙箱工具ID
+     * @var string <p>沙箱工具ID</p>
      */
     public $ToolId;
 
     /**
-     * @var string 沙箱工具描述，最大长度200字符
+     * @var string <p>沙箱工具描述，最大长度200字符</p>
      */
     public $Description;
 
     /**
-     * @var NetworkConfiguration 网络配置
+     * @var NetworkConfiguration <p>网络配置</p>
      */
     public $NetworkConfiguration;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
      */
     public $Tags;
 
     /**
-     * @var CustomConfiguration 沙箱工具自定义配置
+     * @var CustomConfiguration <p>沙箱工具自定义配置</p>
      */
     public $CustomConfiguration;
 
     /**
-     * @param string $ToolId 沙箱工具ID
-     * @param string $Description 沙箱工具描述，最大长度200字符
-     * @param NetworkConfiguration $NetworkConfiguration 网络配置
-     * @param array $Tags 标签
-     * @param CustomConfiguration $CustomConfiguration 沙箱工具自定义配置
+     * @param string $ToolId <p>沙箱工具ID</p>
+     * @param string $Description <p>沙箱工具描述，最大长度200字符</p>
+     * @param NetworkConfiguration $NetworkConfiguration <p>网络配置</p>
+     * @param array $Tags <p>标签</p>
+     * @param CustomConfiguration $CustomConfiguration <p>沙箱工具自定义配置</p>
      */
     function __construct()
     {

@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditInstanceList返回参数结构体
  *
- * @method integer getTotalCount() 获取符合查询条件的实例总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的实例总数。
- * @method array getItems() 获取审计实例详细信息列表。
+ * @method integer getTotalCount() 获取<p>符合查询条件的实例总数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合查询条件的实例总数。</p>
+ * @method array getItems() 获取<p>审计实例详细信息列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItems(array $Items) 设置审计实例详细信息列表。
+ * @method void setItems(array $Items) 设置<p>审计实例详细信息列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAuditInstanceListResponse extends AbstractModel
 {
     /**
-     * @var integer 符合查询条件的实例总数。
+     * @var integer <p>符合查询条件的实例总数。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 审计实例详细信息列表。
+     * @var array <p>审计实例详细信息列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
@@ -48,8 +48,8 @@ class DescribeAuditInstanceListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合查询条件的实例总数。
-     * @param array $Items 审计实例详细信息列表。
+     * @param integer $TotalCount <p>符合查询条件的实例总数。</p>
+     * @param array $Items <p>审计实例详细信息列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 头像位置坐标
  *
- * @method integer getX() 获取头像左上角横坐标
+ * @method integer getX() 获取<p>头像左上角横坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setX(integer $X) 设置头像左上角横坐标
+ * @method void setX(integer $X) 设置<p>头像左上角横坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getY() 获取头像左上角纵坐标
+ * @method integer getY() 获取<p>头像左上角纵坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setY(integer $Y) 设置头像左上角纵坐标
+ * @method void setY(integer $Y) 设置<p>头像左上角纵坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWidth() 获取头像框宽度
+ * @method integer getWidth() 获取<p>头像框宽度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidth(integer $Width) 设置头像框宽度
+ * @method void setWidth(integer $Width) 设置<p>头像框宽度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHeight() 获取头像框高度
+ * @method integer getHeight() 获取<p>头像框高度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeight(integer $Height) 设置头像框高度
+ * @method void setHeight(integer $Height) 设置<p>头像框高度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageCoordinates extends AbstractModel
 {
     /**
-     * @var integer 头像左上角横坐标
+     * @var integer <p>头像左上角横坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
-     * @var integer 头像左上角纵坐标
+     * @var integer <p>头像左上角纵坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
-     * @var integer 头像框宽度
+     * @var integer <p>头像框宽度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
-     * @var integer 头像框高度
+     * @var integer <p>头像框高度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
-     * @param integer $X 头像左上角横坐标
+     * @param integer $X <p>头像左上角横坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Y 头像左上角纵坐标
+     * @param integer $Y <p>头像左上角纵坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Width 头像框宽度
+     * @param integer $Width <p>头像框宽度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Height 头像框高度
+     * @param integer $Height <p>头像框高度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

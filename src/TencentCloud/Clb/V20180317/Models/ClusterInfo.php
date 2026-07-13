@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置<p>独占集群ID</p>
  * @method string getType() 获取<p>集群类型</p><p>枚举值：</p><ul><li>Public： 公有云集群</li><li>Exclusive： 独占集群</li></ul><p>默认值：Public</p>
  * @method void setType(string $Type) 设置<p>集群类型</p><p>枚举值：</p><ul><li>Public： 公有云集群</li><li>Exclusive： 独占集群</li></ul><p>默认值：Public</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
  */
 class ClusterInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ClusterInfo extends AbstractModel
     public $Type;
 
     /**
+     * @var string <p>集群名称</p>
+     */
+    public $ClusterName;
+
+    /**
      * @param string $ClusterId <p>独占集群ID</p>
      * @param string $Type <p>集群类型</p><p>枚举值：</p><ul><li>Public： 公有云集群</li><li>Exclusive： 独占集群</li></ul><p>默认值：Public</p>
+     * @param string $ClusterName <p>集群名称</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ClusterInfo extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

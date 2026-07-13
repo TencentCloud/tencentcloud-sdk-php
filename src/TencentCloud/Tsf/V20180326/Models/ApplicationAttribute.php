@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用列表其它字段
  *
- * @method integer getInstanceCount() 获取总实例个数
- * @method void setInstanceCount(integer $InstanceCount) 设置总实例个数
- * @method integer getRunInstanceCount() 获取运行实例个数
- * @method void setRunInstanceCount(integer $RunInstanceCount) 设置运行实例个数
- * @method integer getGroupCount() 获取应用下部署组个数
- * @method void setGroupCount(integer $GroupCount) 设置应用下部署组个数
- * @method string getRunningGroupCount() 获取运行中部署组个数
- * @method void setRunningGroupCount(string $RunningGroupCount) 设置运行中部署组个数
- * @method string getAbnormalCount() 获取异常部署组个数
- * @method void setAbnormalCount(string $AbnormalCount) 设置异常部署组个数
+ * @method integer getInstanceCount() 获取<p>总实例个数</p>
+ * @method void setInstanceCount(integer $InstanceCount) 设置<p>总实例个数</p>
+ * @method integer getRunInstanceCount() 获取<p>运行实例个数</p>
+ * @method void setRunInstanceCount(integer $RunInstanceCount) 设置<p>运行实例个数</p>
+ * @method integer getGroupCount() 获取<p>应用下部署组个数</p>
+ * @method void setGroupCount(integer $GroupCount) 设置<p>应用下部署组个数</p>
+ * @method string getRunningGroupCount() 获取<p>运行中部署组个数</p>
+ * @method void setRunningGroupCount(string $RunningGroupCount) 设置<p>运行中部署组个数</p>
+ * @method string getAbnormalCount() 获取<p>异常部署组个数</p>
+ * @method void setAbnormalCount(string $AbnormalCount) 设置<p>异常部署组个数</p>
+ * @method integer getImageTagCount() 获取<p>镜像tag数量</p>
+ * @method void setImageTagCount(integer $ImageTagCount) 设置<p>镜像tag数量</p>
  */
 class ApplicationAttribute extends AbstractModel
 {
     /**
-     * @var integer 总实例个数
+     * @var integer <p>总实例个数</p>
      */
     public $InstanceCount;
 
     /**
-     * @var integer 运行实例个数
+     * @var integer <p>运行实例个数</p>
      */
     public $RunInstanceCount;
 
     /**
-     * @var integer 应用下部署组个数
+     * @var integer <p>应用下部署组个数</p>
      */
     public $GroupCount;
 
     /**
-     * @var string 运行中部署组个数
+     * @var string <p>运行中部署组个数</p>
      */
     public $RunningGroupCount;
 
     /**
-     * @var string 异常部署组个数
+     * @var string <p>异常部署组个数</p>
      */
     public $AbnormalCount;
 
     /**
-     * @param integer $InstanceCount 总实例个数
-     * @param integer $RunInstanceCount 运行实例个数
-     * @param integer $GroupCount 应用下部署组个数
-     * @param string $RunningGroupCount 运行中部署组个数
-     * @param string $AbnormalCount 异常部署组个数
+     * @var integer <p>镜像tag数量</p>
+     */
+    public $ImageTagCount;
+
+    /**
+     * @param integer $InstanceCount <p>总实例个数</p>
+     * @param integer $RunInstanceCount <p>运行实例个数</p>
+     * @param integer $GroupCount <p>应用下部署组个数</p>
+     * @param string $RunningGroupCount <p>运行中部署组个数</p>
+     * @param string $AbnormalCount <p>异常部署组个数</p>
+     * @param integer $ImageTagCount <p>镜像tag数量</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ApplicationAttribute extends AbstractModel
 
         if (array_key_exists("AbnormalCount",$param) and $param["AbnormalCount"] !== null) {
             $this->AbnormalCount = $param["AbnormalCount"];
+        }
+
+        if (array_key_exists("ImageTagCount",$param) and $param["ImageTagCount"] !== null) {
+            $this->ImageTagCount = $param["ImageTagCount"];
         }
     }
 }

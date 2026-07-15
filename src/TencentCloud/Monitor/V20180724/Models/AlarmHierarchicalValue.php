@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警分级阈值配置
  *
- * @method string getRemind() 获取提醒等级阈值
+ * @method string getRemind() 获取<p>提醒等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemind(string $Remind) 设置提醒等级阈值
+ * @method void setRemind(string $Remind) 设置<p>提醒等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWarn() 获取警告等级阈值
+ * @method string getWarn() 获取<p>警告等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarn(string $Warn) 设置警告等级阈值
+ * @method void setWarn(string $Warn) 设置<p>警告等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSerious() 获取严重等级阈值
+ * @method string getSerious() 获取<p>严重等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSerious(string $Serious) 设置严重等级阈值
+ * @method void setSerious(string $Serious) 设置<p>严重等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmHierarchicalValue extends AbstractModel
 {
     /**
-     * @var string 提醒等级阈值
+     * @var string <p>提醒等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remind;
 
     /**
-     * @var string 警告等级阈值
+     * @var string <p>警告等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Warn;
 
     /**
-     * @var string 严重等级阈值
+     * @var string <p>严重等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Serious;
 
     /**
-     * @param string $Remind 提醒等级阈值
+     * @param string $Remind <p>提醒等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Warn 警告等级阈值
+     * @param string $Warn <p>警告等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Serious 严重等级阈值
+     * @param string $Serious <p>严重等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

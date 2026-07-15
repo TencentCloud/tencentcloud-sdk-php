@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessDelay(integer $ProcessDelay) 设置<p>执行延迟(秒)，0~120秒，默认60秒</p>
  * @method string getSrcTopicRegion() 获取<p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
  * @method void setSrcTopicRegion(string $SrcTopicRegion) 设置<p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
+ * @method integer getProcessPeriodUnit() 获取<p>调度时间单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值为1（分钟），其他值2（秒）</p>
+ * @method void setProcessPeriodUnit(integer $ProcessPeriodUnit) 设置<p>调度时间单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值为1（分钟），其他值2（秒）</p>
  * @method integer getProcessEndTime() 获取<p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
  * @method void setProcessEndTime(integer $ProcessEndTime) 设置<p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
  * @method integer getSyntaxRule() 获取<p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
@@ -109,6 +111,11 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $SrcTopicRegion;
 
     /**
+     * @var integer <p>调度时间单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值为1（分钟），其他值2（秒）</p>
+     */
+    public $ProcessPeriodUnit;
+
+    /**
      * @var integer <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
      */
     public $ProcessEndTime;
@@ -140,6 +147,7 @@ class CreateScheduledSqlRequest extends AbstractModel
      * @param string $ProcessTimeWindow <p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p>
      * @param integer $ProcessDelay <p>执行延迟(秒)，0~120秒，默认60秒</p>
      * @param string $SrcTopicRegion <p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
+     * @param integer $ProcessPeriodUnit <p>调度时间单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值为1（分钟），其他值2（秒）</p>
      * @param integer $ProcessEndTime <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
      * @param integer $SyntaxRule <p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
      * @param integer $HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
@@ -201,6 +209,10 @@ class CreateScheduledSqlRequest extends AbstractModel
 
         if (array_key_exists("SrcTopicRegion",$param) and $param["SrcTopicRegion"] !== null) {
             $this->SrcTopicRegion = $param["SrcTopicRegion"];
+        }
+
+        if (array_key_exists("ProcessPeriodUnit",$param) and $param["ProcessPeriodUnit"] !== null) {
+            $this->ProcessPeriodUnit = $param["ProcessPeriodUnit"];
         }
 
         if (array_key_exists("ProcessEndTime",$param) and $param["ProcessEndTime"] !== null) {

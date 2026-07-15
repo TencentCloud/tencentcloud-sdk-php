@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Skill 能力标签
  *
- * @method string getID() 获取能力标签标识，适合程序判定、过滤或聚合使用
- * @method void setID(string $ID) 设置能力标签标识，适合程序判定、过滤或聚合使用
+ * @method string getID() 获取能力标签标识
+ * @method void setID(string $ID) 设置能力标签标识
  * @method string getName() 获取能力标签展示名称
  * @method void setName(string $Name) 设置能力标签展示名称
  */
 class SkillCapabilityTag extends AbstractModel
 {
     /**
-     * @var string 能力标签标识，适合程序判定、过滤或聚合使用
+     * @var string 能力标签标识
      */
     public $ID;
 
@@ -38,7 +38,7 @@ class SkillCapabilityTag extends AbstractModel
     public $Name;
 
     /**
-     * @param string $ID 能力标签标识，适合程序判定、过滤或聚合使用
+     * @param string $ID 能力标签标识
      * @param string $Name 能力标签展示名称
      */
     function __construct()

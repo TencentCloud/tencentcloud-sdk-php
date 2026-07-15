@@ -28,8 +28,8 @@ STATIC：静态分析引擎
 枚举值：
 AI：AI 引擎
 STATIC：静态分析引擎
- * @method array getRuleList() 获取该引擎命中的规则列表
- * @method void setRuleList(array $RuleList) 设置该引擎命中的规则列表
+ * @method array getRuleList() 获取命中规则列表
+ * @method void setRuleList(array $RuleList) 设置命中规则列表
  */
 class SkillScanEngineResult extends AbstractModel
 {
@@ -42,7 +42,7 @@ STATIC：静态分析引擎
     public $ScanType;
 
     /**
-     * @var array 该引擎命中的规则列表
+     * @var array 命中规则列表
      */
     public $RuleList;
 
@@ -51,7 +51,7 @@ STATIC：静态分析引擎
 枚举值：
 AI：AI 引擎
 STATIC：静态分析引擎
-     * @param array $RuleList 该引擎命中的规则列表
+     * @param array $RuleList 命中规则列表
      */
     function __construct()
     {

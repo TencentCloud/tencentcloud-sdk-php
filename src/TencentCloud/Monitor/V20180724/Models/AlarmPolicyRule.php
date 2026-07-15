@@ -20,297 +20,225 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警策略触发条件
  *
- * @method string getMetricName() 获取指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
+ * @method string getMetricName() 获取<p>指标名或事件名，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetricName(string $MetricName) 设置指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
+ * @method void setMetricName(string $MetricName) 设置<p>指标名或事件名，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPeriod() 获取秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+ * @method integer getPeriod() 获取<p>秒数 统计周期，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeriod(integer $Period) 设置秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+ * @method void setPeriod(integer $Period) 设置<p>秒数 统计周期，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperator() 获取英文运算符
-intelligent=无阈值智能检测
-eq=等于
-ge=大于等于
-gt=大于
-le=小于等于
-lt=小于
-ne=不等于
-day_increase=天同比增长
-day_decrease=天同比下降
-day_wave=天同比波动
-week_increase=周同比增长
-week_decrease=周同比下降
-week_wave=周同比波动
-cycle_increase=环比增长
-cycle_decrease=环比下降
-cycle_wave=环比波动
-re=正则匹配
-支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+ * @method string getOperator() 获取<p>英文运算符<br>intelligent=无阈值智能检测<br>eq=等于<br>ge=大于等于<br>gt=大于<br>le=小于等于<br>lt=小于<br>ne=不等于<br>day_increase=天同比增长<br>day_decrease=天同比下降<br>day_wave=天同比波动<br>week_increase=周同比增长<br>week_decrease=周同比下降<br>week_wave=周同比波动<br>cycle_increase=环比增长<br>cycle_decrease=环比下降<br>cycle_wave=环比波动<br>re=正则匹配<br>支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperator(string $Operator) 设置英文运算符
-intelligent=无阈值智能检测
-eq=等于
-ge=大于等于
-gt=大于
-le=小于等于
-lt=小于
-ne=不等于
-day_increase=天同比增长
-day_decrease=天同比下降
-day_wave=天同比波动
-week_increase=周同比增长
-week_decrease=周同比下降
-week_wave=周同比波动
-cycle_increase=环比增长
-cycle_decrease=环比下降
-cycle_wave=环比波动
-re=正则匹配
-支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+ * @method void setOperator(string $Operator) 设置<p>英文运算符<br>intelligent=无阈值智能检测<br>eq=等于<br>ge=大于等于<br>gt=大于<br>le=小于等于<br>lt=小于<br>ne=不等于<br>day_increase=天同比增长<br>day_decrease=天同比下降<br>day_wave=天同比波动<br>week_increase=周同比增长<br>week_decrease=周同比下降<br>week_wave=周同比波动<br>cycle_increase=环比增长<br>cycle_decrease=环比下降<br>cycle_wave=环比波动<br>re=正则匹配<br>支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+ * @method string getValue() 获取<p>阈值，支持的范围可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+ * @method void setValue(string $Value) 设置<p>阈值，支持的范围可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getContinuePeriod() 获取周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
+ * @method integer getContinuePeriod() 获取<p>周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContinuePeriod(integer $ContinuePeriod) 设置周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
+ * @method void setContinuePeriod(integer $ContinuePeriod) 设置<p>周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNoticeFrequency() 获取秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
+ * @method integer getNoticeFrequency() 获取<p>秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeFrequency(integer $NoticeFrequency) 设置秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
+ * @method void setNoticeFrequency(integer $NoticeFrequency) 设置<p>秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsPowerNotice() 获取告警频率是否指数增长 0=否 1=是
+ * @method integer getIsPowerNotice() 获取<p>告警频率是否指数增长 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsPowerNotice(integer $IsPowerNotice) 设置告警频率是否指数增长 0=否 1=是
+ * @method void setIsPowerNotice(integer $IsPowerNotice) 设置<p>告警频率是否指数增长 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AlarmPolicyFilter getFilter() 获取对于单个触发规则的过滤条件
+ * @method AlarmPolicyFilter getFilter() 获取<p>对于单个触发规则的过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFilter(AlarmPolicyFilter $Filter) 设置对于单个触发规则的过滤条件
+ * @method void setFilter(AlarmPolicyFilter $Filter) 设置<p>对于单个触发规则的过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取指标展示名，用于出参
+ * @method string getDescription() 获取<p>指标展示名，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置指标展示名，用于出参
+ * @method void setDescription(string $Description) 设置<p>指标展示名，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUnit() 获取单位，用于出参
+ * @method string getUnit() 获取<p>单位，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnit(string $Unit) 设置单位，用于出参
+ * @method void setUnit(string $Unit) 设置<p>单位，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleType() 获取触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+ * @method string getRuleType() 获取<p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleType(string $RuleType) 设置触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+ * @method void setRuleType(string $RuleType) 设置<p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsAdvanced() 获取是否为高级指标，0否，1是
+ * @method integer getIsAdvanced() 获取<p>是否为高级指标，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsAdvanced(integer $IsAdvanced) 设置是否为高级指标，0否，1是
+ * @method void setIsAdvanced(integer $IsAdvanced) 设置<p>是否为高级指标，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsOpen() 获取高级指标是否开通，0否，1是
+ * @method integer getIsOpen() 获取<p>高级指标是否开通，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsOpen(integer $IsOpen) 设置高级指标是否开通，0否，1是
+ * @method void setIsOpen(integer $IsOpen) 设置<p>高级指标是否开通，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProductId() 获取集成中心产品ID
+ * @method string getProductId() 获取<p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductId(string $ProductId) 设置集成中心产品ID
+ * @method void setProductId(string $ProductId) 设置<p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getValueMax() 获取最大值
+ * @method float getValueMax() 获取<p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValueMax(float $ValueMax) 设置最大值
+ * @method void setValueMax(float $ValueMax) 设置<p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getValueMin() 获取最小值
+ * @method float getValueMin() 获取<p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValueMin(float $ValueMin) 设置最小值
+ * @method void setValueMin(float $ValueMin) 设置<p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AlarmHierarchicalValue getHierarchicalValue() 获取告警分级阈值配置
+ * @method AlarmHierarchicalValue getHierarchicalValue() 获取<p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHierarchicalValue(AlarmHierarchicalValue $HierarchicalValue) 设置告警分级阈值配置
+ * @method void setHierarchicalValue(AlarmHierarchicalValue $HierarchicalValue) 设置<p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsLatenessMetric() 获取是否延迟指标
+ * @method integer getIsLatenessMetric() 获取<p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsLatenessMetric(integer $IsLatenessMetric) 设置是否延迟指标
+ * @method void setIsLatenessMetric(integer $IsLatenessMetric) 设置<p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicyRule extends AbstractModel
 {
     /**
-     * @var string 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
+     * @var string <p>指标名或事件名，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricName;
 
     /**
-     * @var integer 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @var integer <p>秒数 统计周期，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
 
     /**
-     * @var string 英文运算符
-intelligent=无阈值智能检测
-eq=等于
-ge=大于等于
-gt=大于
-le=小于等于
-lt=小于
-ne=不等于
-day_increase=天同比增长
-day_decrease=天同比下降
-day_wave=天同比波动
-week_increase=周同比增长
-week_decrease=周同比下降
-week_wave=周同比波动
-cycle_increase=环比增长
-cycle_decrease=环比下降
-cycle_wave=环比波动
-re=正则匹配
-支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @var string <p>英文运算符<br>intelligent=无阈值智能检测<br>eq=等于<br>ge=大于等于<br>gt=大于<br>le=小于等于<br>lt=小于<br>ne=不等于<br>day_increase=天同比增长<br>day_decrease=天同比下降<br>day_wave=天同比波动<br>week_increase=周同比增长<br>week_decrease=周同比下降<br>week_wave=周同比波动<br>cycle_increase=环比增长<br>cycle_decrease=环比下降<br>cycle_wave=环比波动<br>re=正则匹配<br>支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
 
     /**
-     * @var string 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @var string <p>阈值，支持的范围可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @var integer 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
+     * @var integer <p>周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContinuePeriod;
 
     /**
-     * @var integer 秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
+     * @var integer <p>秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeFrequency;
 
     /**
-     * @var integer 告警频率是否指数增长 0=否 1=是
+     * @var integer <p>告警频率是否指数增长 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPowerNotice;
 
     /**
-     * @var AlarmPolicyFilter 对于单个触发规则的过滤条件
+     * @var AlarmPolicyFilter <p>对于单个触发规则的过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Filter;
 
     /**
-     * @var string 指标展示名，用于出参
+     * @var string <p>指标展示名，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 单位，用于出参
+     * @var string <p>单位，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
-     * @var string 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+     * @var string <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleType;
 
     /**
-     * @var integer 是否为高级指标，0否，1是
+     * @var integer <p>是否为高级指标，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAdvanced;
 
     /**
-     * @var integer 高级指标是否开通，0否，1是
+     * @var integer <p>高级指标是否开通，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsOpen;
 
     /**
-     * @var string 集成中心产品ID
+     * @var string <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
 
     /**
-     * @var float 最大值
+     * @var float <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValueMax;
 
     /**
-     * @var float 最小值
+     * @var float <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValueMin;
 
     /**
-     * @var AlarmHierarchicalValue 告警分级阈值配置
+     * @var AlarmHierarchicalValue <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HierarchicalValue;
 
     /**
-     * @var integer 是否延迟指标
+     * @var integer <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsLatenessMetric;
 
     /**
-     * @param string $MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
+     * @param string $MetricName <p>指标名或事件名，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Period 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @param integer $Period <p>秒数 统计周期，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Operator 英文运算符
-intelligent=无阈值智能检测
-eq=等于
-ge=大于等于
-gt=大于
-le=小于等于
-lt=小于
-ne=不等于
-day_increase=天同比增长
-day_decrease=天同比下降
-day_wave=天同比波动
-week_increase=周同比增长
-week_decrease=周同比下降
-week_wave=周同比波动
-cycle_increase=环比增长
-cycle_decrease=环比下降
-cycle_wave=环比波动
-re=正则匹配
-支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @param string $Operator <p>英文运算符<br>intelligent=无阈值智能检测<br>eq=等于<br>ge=大于等于<br>gt=大于<br>le=小于等于<br>lt=小于<br>ne=不等于<br>day_increase=天同比增长<br>day_decrease=天同比下降<br>day_wave=天同比波动<br>week_increase=周同比增长<br>week_decrease=周同比下降<br>week_wave=周同比波动<br>cycle_increase=环比增长<br>cycle_decrease=环比下降<br>cycle_wave=环比波动<br>re=正则匹配<br>支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @param string $Value <p>阈值，支持的范围可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ContinuePeriod 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
+     * @param integer $ContinuePeriod <p>周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NoticeFrequency 秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
+     * @param integer $NoticeFrequency <p>秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsPowerNotice 告警频率是否指数增长 0=否 1=是
+     * @param integer $IsPowerNotice <p>告警频率是否指数增长 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmPolicyFilter $Filter 对于单个触发规则的过滤条件
+     * @param AlarmPolicyFilter $Filter <p>对于单个触发规则的过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 指标展示名，用于出参
+     * @param string $Description <p>指标展示名，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Unit 单位，用于出参
+     * @param string $Unit <p>单位，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+     * @param string $RuleType <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsAdvanced 是否为高级指标，0否，1是
+     * @param integer $IsAdvanced <p>是否为高级指标，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsOpen 高级指标是否开通，0否，1是
+     * @param integer $IsOpen <p>高级指标是否开通，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProductId 集成中心产品ID
+     * @param string $ProductId <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $ValueMax 最大值
+     * @param float $ValueMax <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $ValueMin 最小值
+     * @param float $ValueMin <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmHierarchicalValue $HierarchicalValue 告警分级阈值配置
+     * @param AlarmHierarchicalValue $HierarchicalValue <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsLatenessMetric 是否延迟指标
+     * @param integer $IsLatenessMetric <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

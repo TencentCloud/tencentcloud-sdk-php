@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHasServicesLog(integer $HasServicesLog) 设置<p>是否开启投递服务日志。1：关闭，2：开启。</p>
  * @method integer getFullQuery() 获取<p>全文检索查询标记。1：关闭，2：打开。</p>
  * @method void setFullQuery(integer $FullQuery) 设置<p>全文检索查询标记。1：关闭，2：打开。</p>
+ * @method integer getProcessPeriodUnit() 获取<p>调度周期单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值1（分钟），其他值2（秒）</p>
+ * @method void setProcessPeriodUnit(integer $ProcessPeriodUnit) 设置<p>调度周期单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值1（分钟），其他值2（秒）</p>
  */
 class ModifyScheduledSqlRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class ModifyScheduledSqlRequest extends AbstractModel
     public $FullQuery;
 
     /**
+     * @var integer <p>调度周期单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值1（分钟），其他值2（秒）</p>
+     */
+    public $ProcessPeriodUnit;
+
+    /**
      * @param string $TaskId <p>任务ID，通过<a href="https://cloud.tencent.com/document/product/614/95519">获取定时SQL分析任务列表</a>获取</p>
      * @param string $SrcTopicId <p>源日志主题，通过<a href="https://cloud.tencent.com/document/product/614/95519">获取定时SQL分析任务列表</a>获取</p>
      * @param integer $EnableFlag <p>任务启动状态.   1开启,  2关闭</p>
@@ -128,6 +135,7 @@ class ModifyScheduledSqlRequest extends AbstractModel
      * @param integer $SyntaxRule <p>语法规则。 默认值为0。 0：Lucene语法，1：CQL语法</p>
      * @param integer $HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
      * @param integer $FullQuery <p>全文检索查询标记。1：关闭，2：打开。</p>
+     * @param integer $ProcessPeriodUnit <p>调度周期单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值1（分钟），其他值2（秒）</p>
      */
     function __construct()
     {
@@ -193,6 +201,10 @@ class ModifyScheduledSqlRequest extends AbstractModel
 
         if (array_key_exists("FullQuery",$param) and $param["FullQuery"] !== null) {
             $this->FullQuery = $param["FullQuery"];
+        }
+
+        if (array_key_exists("ProcessPeriodUnit",$param) and $param["ProcessPeriodUnit"] !== null) {
+            $this->ProcessPeriodUnit = $param["ProcessPeriodUnit"];
         }
     }
 }

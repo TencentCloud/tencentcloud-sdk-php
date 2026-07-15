@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建策略传入的事件告警条件
  *
- * @method integer getEventId() 获取告警事件的Id
- * @method void setEventId(integer $EventId) 设置告警事件的Id
- * @method integer getAlarmNotifyType() 获取告警发送收敛类型。0连续告警，1指数告警
- * @method void setAlarmNotifyType(integer $AlarmNotifyType) 设置告警发送收敛类型。0连续告警，1指数告警
- * @method integer getAlarmNotifyPeriod() 获取告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
- * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) 设置告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
- * @method integer getRuleId() 获取如果通过模板创建，需要传入模板中该指标的对应RuleId
- * @method void setRuleId(integer $RuleId) 设置如果通过模板创建，需要传入模板中该指标的对应RuleId
+ * @method integer getEventId() 获取<p>告警事件的Id</p>
+ * @method void setEventId(integer $EventId) 设置<p>告警事件的Id</p>
+ * @method integer getAlarmNotifyType() 获取<p>告警发送收敛类型。0连续告警，1指数告警</p>
+ * @method void setAlarmNotifyType(integer $AlarmNotifyType) 设置<p>告警发送收敛类型。0连续告警，1指数告警</p>
+ * @method integer getAlarmNotifyPeriod() 获取<p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+ * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) 设置<p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+ * @method integer getRuleId() 获取<p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
+ * @method void setRuleId(integer $RuleId) 设置<p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
  */
 class CreatePolicyGroupEventCondition extends AbstractModel
 {
     /**
-     * @var integer 告警事件的Id
+     * @var integer <p>告警事件的Id</p>
      */
     public $EventId;
 
     /**
-     * @var integer 告警发送收敛类型。0连续告警，1指数告警
+     * @var integer <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public $AlarmNotifyType;
 
     /**
-     * @var integer 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * @var integer <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public $AlarmNotifyPeriod;
 
     /**
-     * @var integer 如果通过模板创建，需要传入模板中该指标的对应RuleId
+     * @var integer <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
      */
     public $RuleId;
 
     /**
-     * @param integer $EventId 告警事件的Id
-     * @param integer $AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
-     * @param integer $AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
-     * @param integer $RuleId 如果通过模板创建，需要传入模板中该指标的对应RuleId
+     * @param integer $EventId <p>告警事件的Id</p>
+     * @param integer $AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
+     * @param integer $AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+     * @param integer $RuleId <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
      */
     function __construct()
     {

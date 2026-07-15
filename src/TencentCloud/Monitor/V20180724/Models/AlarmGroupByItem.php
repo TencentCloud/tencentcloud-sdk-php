@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 聚合条件
  *
- * @method string getId() 获取Item Id
+ * @method string getId() 获取<p>Item Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置Item Id
+ * @method void setId(string $Id) 设置<p>Item Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取名称
+ * @method string getName() 获取<p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置名称
+ * @method void setName(string $Name) 设置<p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmGroupByItem extends AbstractModel
 {
     /**
-     * @var string Item Id
+     * @var string <p>Item Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @param string $Id Item Id
+     * @param string $Id <p>Item Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 名称
+     * @param string $Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

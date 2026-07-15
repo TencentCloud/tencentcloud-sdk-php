@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAsyncRequestInfo请求参数结构体
  *
- * @method string getAsyncRequestId() 获取异步任务的请求 ID。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求 ID。
+ * @method string getAsyncRequestId() 获取<p>异步任务的请求 ID。</p>
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置<p>异步任务的请求 ID。</p>
  */
 class DescribeAsyncRequestInfoRequest extends AbstractModel
 {
     /**
-     * @var string 异步任务的请求 ID。
+     * @var string <p>异步任务的请求 ID。</p>
      */
     public $AsyncRequestId;
 
     /**
-     * @param string $AsyncRequestId 异步任务的请求 ID。
+     * @param string $AsyncRequestId <p>异步任务的请求 ID。</p>
      */
     function __construct()
     {

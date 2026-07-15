@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyAllocation(array $ProxyAllocation) 设置<p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p>
  * @method boolean getAutoLoadBalance() 获取<p>是否开启自适应负载均衡。默认关闭。</p>
  * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置<p>是否开启自适应负载均衡。默认关闭。</p>
- * @method string getAccessMode() 获取<p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
- * @method void setAccessMode(string $AccessMode) 设置<p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
+ * @method string getAccessMode() 获取<p>访问模式。</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul>
+ * @method void setAccessMode(string $AccessMode) 设置<p>访问模式。</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul>
  * @method boolean getApNodeAsRoNode() 获取<p>是否将libra节点当作普通RO节点</p>
  * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) 设置<p>是否将libra节点当作普通RO节点</p>
  * @method boolean getApQueryToOtherNode() 获取<p>libra节点故障，是否转发给其他节点</p>
@@ -121,7 +121,7 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
     public $AutoLoadBalance;
 
     /**
-     * @var string <p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
+     * @var string <p>访问模式。</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul>
      */
     public $AccessMode;
 
@@ -149,7 +149,7 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
      * @param boolean $ConnectionPool <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
      * @param array $ProxyAllocation <p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p>
      * @param boolean $AutoLoadBalance <p>是否开启自适应负载均衡。默认关闭。</p>
-     * @param string $AccessMode <p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
+     * @param string $AccessMode <p>访问模式。</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul>
      * @param boolean $ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
      * @param boolean $ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */

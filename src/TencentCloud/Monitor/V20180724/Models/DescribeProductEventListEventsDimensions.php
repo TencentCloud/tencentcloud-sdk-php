@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProductEventList返回的Events的Dimensions
  *
- * @method string getKey() 获取维度名（英文）
+ * @method string getKey() 获取<p>维度名（英文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置维度名（英文）
+ * @method void setKey(string $Key) 设置<p>维度名（英文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取维度名（中文）
+ * @method string getName() 获取<p>维度名（中文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置维度名（中文）
+ * @method void setName(string $Name) 设置<p>维度名（中文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取维度值
+ * @method string getValue() 获取<p>维度值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置维度值
+ * @method void setValue(string $Value) 设置<p>维度值</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeProductEventListEventsDimensions extends AbstractModel
 {
     /**
-     * @var string 维度名（英文）
+     * @var string <p>维度名（英文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
-     * @var string 维度名（中文）
+     * @var string <p>维度名（中文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 维度值
+     * @var string <p>维度值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @param string $Key 维度名（英文）
+     * @param string $Key <p>维度名（英文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 维度名（中文）
+     * @param string $Name <p>维度名（中文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 维度值
+     * @param string $Value <p>维度值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

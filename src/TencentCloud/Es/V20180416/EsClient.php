@@ -42,8 +42,15 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DeleteServerlessInstanceResponse DeleteServerlessInstance(Models\DeleteServerlessInstanceRequest $req) 删除Serverless索引
  * @method Models\DeleteServerlessSpaceUserResponse DeleteServerlessSpaceUser(Models\DeleteServerlessSpaceUserRequest $req) 删除Serverless空间子用户
  * @method Models\DescribeAutoBackUpStrategyResponse DescribeAutoBackUpStrategy(Models\DescribeAutoBackUpStrategyRequest $req) 获取自动备份快照策略信息
+ * @method Models\DescribeAutoScaleDiskInfoResponse DescribeAutoScaleDiskInfo(Models\DescribeAutoScaleDiskInfoRequest $req) 获取自动扩盘参数
+ * @method Models\DescribeClusterDiskRangeResponse DescribeClusterDiskRange(Models\DescribeClusterDiskRangeRequest $req) 获取集群节点磁盘大小上下限
  * @method Models\DescribeClusterSnapshotResponse DescribeClusterSnapshot(Models\DescribeClusterSnapshotRequest $req) 获取快照备份列表
+ * @method Models\DescribeCosBackupStrategyViewsResponse DescribeCosBackupStrategyViews(Models\DescribeCosBackupStrategyViewsRequest $req) 获取集群自动备份策略概览
  * @method Models\DescribeDiagnoseResponse DescribeDiagnose(Models\DescribeDiagnoseRequest $req) 查询智能运维诊断结果报告
+ * @method Models\DescribeEsInstanceEventListsResponse DescribeEsInstanceEventLists(Models\DescribeEsInstanceEventListsRequest $req) 查询事件中心列表
+ * @method Models\DescribeEventDataDetailResponse DescribeEventDataDetail(Models\DescribeEventDataDetailRequest $req) 查询事件详情
+ * @method Models\DescribeEventInfoListResponse DescribeEventInfoList(Models\DescribeEventInfoListRequest $req) 查询事件类型列表
+ * @method Models\DescribeForceMergeTaskResponse DescribeForceMergeTask(Models\DescribeForceMergeTaskRequest $req) 查询新增的forcemerge任务列表
  * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
  * @method Models\DescribeIndexMetaResponse DescribeIndexMeta(Models\DescribeIndexMetaRequest $req) 获取索引元数据
  * @method Models\DescribeInstanceLogsResponse DescribeInstanceLogs(Models\DescribeInstanceLogsRequest $req) 查询用户该地域下符合条件的ES集群的日志
@@ -54,12 +61,17 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DescribeLogstashInstanceOperationsResponse DescribeLogstashInstanceOperations(Models\DescribeLogstashInstanceOperationsRequest $req) 查询实例指定条件下的操作记录
  * @method Models\DescribeLogstashInstancesResponse DescribeLogstashInstances(Models\DescribeLogstashInstancesRequest $req) 查询用户该地域下符合条件的所有Logstash实例
  * @method Models\DescribeLogstashPipelinesResponse DescribeLogstashPipelines(Models\DescribeLogstashPipelinesRequest $req) 用于获取Logstash实例管道列表
+ * @method Models\DescribeLogstashViewsResponse DescribeLogstashViews(Models\DescribeLogstashViewsRequest $req) 查询Logstash集群视图
+ * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 查询ES支持的地域列表
+ * @method Models\DescribeRequestInstancePolicyResponse DescribeRequestInstancePolicy(Models\DescribeRequestInstancePolicyRequest $req) 集群可访问API展示
  * @method Models\DescribeServerlessInstancesResponse DescribeServerlessInstances(Models\DescribeServerlessInstancesRequest $req) Serverless获取索引列表
  * @method Models\DescribeServerlessMetricsResponse DescribeServerlessMetrics(Models\DescribeServerlessMetricsRequest $req) 获取serverless实例对应指标，获取space维度时不需要传入indexid，获取index时不需要传入spaceid
 获取一段时间时间范围内的指标数据
  * @method Models\DescribeServerlessSpaceUserResponse DescribeServerlessSpaceUser(Models\DescribeServerlessSpaceUserRequest $req) 查看Serverless空间子用户
  * @method Models\DescribeServerlessSpacesResponse DescribeServerlessSpaces(Models\DescribeServerlessSpacesRequest $req) 获取Serverless索引空间列表
+ * @method Models\DescribeSnapshotViewsResponse DescribeSnapshotViews(Models\DescribeSnapshotViewsRequest $req) 获取集群快照列表概览
  * @method Models\DescribeSpaceKibanaToolsResponse DescribeSpaceKibanaTools(Models\DescribeSpaceKibanaToolsRequest $req) space维度的kibana获取登录token
+ * @method Models\DescribeUpgradeResponse DescribeUpgrade(Models\DescribeUpgradeRequest $req) 获取实例可升级列表，包括可升级的大版本、商业特性
  * @method Models\DescribeUserCosSnapshotListResponse DescribeUserCosSnapshotList(Models\DescribeUserCosSnapshotListRequest $req) 查询快照信息接口
  * @method Models\DescribeViewsResponse DescribeViews(Models\DescribeViewsRequest $req) 查询集群各视图数据，包括集群维度、节点维度、Kibana维度
  * @method Models\DiagnoseInstanceResponse DiagnoseInstance(Models\DiagnoseInstanceRequest $req) 智能运维诊断集群
@@ -73,6 +85,8 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\ModifyAutoBackUpStrategyResponse ModifyAutoBackUpStrategy(Models\ModifyAutoBackUpStrategyRequest $req) 修改自动备份快照策略
  * @method Models\ModifyEsVipSecurityGroupResponse ModifyEsVipSecurityGroup(Models\ModifyEsVipSecurityGroupRequest $req) 修改绑定VIP的安全组，传安全组id列表
  * @method Models\QueryIpTraceLogResponse QueryIpTraceLog(Models\QueryIpTraceLogRequest $req) 查询IP溯源日志
+ * @method Models\QueryZoneResourceResponse QueryZoneResource(Models\QueryZoneResourceRequest $req) 获取指定region下指定zone列表的资源情况
+ * @method Models\QueryZoneResourceForLogstashResponse QueryZoneResourceForLogstash(Models\QueryZoneResourceForLogstashRequest $req) 获取Logstash指定region下指定zone列表的资源情况
  * @method Models\RequestInstancesResponse RequestInstances(Models\RequestInstancesRequest $req) 请求集群实例
  * @method Models\RequestInstancesByGetResponse RequestInstancesByGet(Models\RequestInstancesByGetRequest $req) GET请求集群实例
  * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) 重启ES集群实例(用于系统版本更新等操作)

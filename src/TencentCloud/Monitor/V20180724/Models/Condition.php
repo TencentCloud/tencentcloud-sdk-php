@@ -20,153 +20,153 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警条件
  *
- * @method integer getAlarmNotifyPeriod() 获取告警通知频率
- * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) 设置告警通知频率
- * @method integer getAlarmNotifyType() 获取重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
- * @method void setAlarmNotifyType(integer $AlarmNotifyType) 设置重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
- * @method string getCalcType() 获取检测方式
+ * @method integer getAlarmNotifyPeriod() 获取<p>告警通知频率</p>
+ * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) 设置<p>告警通知频率</p>
+ * @method integer getAlarmNotifyType() 获取<p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
+ * @method void setAlarmNotifyType(integer $AlarmNotifyType) 设置<p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
+ * @method string getCalcType() 获取<p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCalcType(string $CalcType) 设置检测方式
+ * @method void setCalcType(string $CalcType) 设置<p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCalcValue() 获取检测值
+ * @method string getCalcValue() 获取<p>检测值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCalcValue(string $CalcValue) 设置检测值
+ * @method void setCalcValue(string $CalcValue) 设置<p>检测值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContinueTime() 获取持续时间，单位秒
+ * @method string getContinueTime() 获取<p>持续时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContinueTime(string $ContinueTime) 设置持续时间，单位秒
+ * @method void setContinueTime(string $ContinueTime) 设置<p>持续时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMetricID() 获取指标ID
- * @method void setMetricID(integer $MetricID) 设置指标ID
- * @method string getMetricDisplayName() 获取指标展示名称（对外）
- * @method void setMetricDisplayName(string $MetricDisplayName) 设置指标展示名称（对外）
- * @method integer getPeriod() 获取周期
- * @method void setPeriod(integer $Period) 设置周期
- * @method integer getRuleID() 获取规则ID
- * @method void setRuleID(integer $RuleID) 设置规则ID
- * @method string getUnit() 获取指标单位
- * @method void setUnit(string $Unit) 设置指标单位
- * @method integer getIsAdvanced() 获取是否为高级指标，0：否；1：是
- * @method void setIsAdvanced(integer $IsAdvanced) 设置是否为高级指标，0：否；1：是
- * @method integer getIsOpen() 获取是否开通高级指标，0：否；1：是
- * @method void setIsOpen(integer $IsOpen) 设置是否开通高级指标，0：否；1：是
- * @method string getProductId() 获取产品ID
+ * @method integer getMetricID() 获取<p>指标ID</p>
+ * @method void setMetricID(integer $MetricID) 设置<p>指标ID</p>
+ * @method string getMetricDisplayName() 获取<p>指标展示名称（对外）</p>
+ * @method void setMetricDisplayName(string $MetricDisplayName) 设置<p>指标展示名称（对外）</p>
+ * @method integer getPeriod() 获取<p>周期</p>
+ * @method void setPeriod(integer $Period) 设置<p>周期</p>
+ * @method integer getRuleID() 获取<p>规则ID</p>
+ * @method void setRuleID(integer $RuleID) 设置<p>规则ID</p>
+ * @method string getUnit() 获取<p>指标单位</p>
+ * @method void setUnit(string $Unit) 设置<p>指标单位</p>
+ * @method integer getIsAdvanced() 获取<p>是否为高级指标，0：否；1：是</p>
+ * @method void setIsAdvanced(integer $IsAdvanced) 设置<p>是否为高级指标，0：否；1：是</p>
+ * @method integer getIsOpen() 获取<p>是否开通高级指标，0：否；1：是</p>
+ * @method void setIsOpen(integer $IsOpen) 设置<p>是否开通高级指标，0：否；1：是</p>
+ * @method string getProductId() 获取<p>产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductId(string $ProductId) 设置产品ID
+ * @method void setProductId(string $ProductId) 设置<p>产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AlarmHierarchicalValue getHierarchicalValue() 获取告警分级阈值配置
+ * @method AlarmHierarchicalValue getHierarchicalValue() 获取<p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHierarchicalValue(AlarmHierarchicalValue $HierarchicalValue) 设置告警分级阈值配置
+ * @method void setHierarchicalValue(AlarmHierarchicalValue $HierarchicalValue) 设置<p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleType() 获取指标类型，用于区分动态指标
+ * @method string getRuleType() 获取<p>指标类型，用于区分动态指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleType(string $RuleType) 设置指标类型，用于区分动态指标
+ * @method void setRuleType(string $RuleType) 设置<p>指标类型，用于区分动态指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Condition extends AbstractModel
 {
     /**
-     * @var integer 告警通知频率
+     * @var integer <p>告警通知频率</p>
      */
     public $AlarmNotifyPeriod;
 
     /**
-     * @var integer 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+     * @var integer <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
      */
     public $AlarmNotifyType;
 
     /**
-     * @var string 检测方式
+     * @var string <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalcType;
 
     /**
-     * @var string 检测值
+     * @var string <p>检测值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalcValue;
 
     /**
-     * @var string 持续时间，单位秒
+     * @var string <p>持续时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContinueTime;
 
     /**
-     * @var integer 指标ID
+     * @var integer <p>指标ID</p>
      */
     public $MetricID;
 
     /**
-     * @var string 指标展示名称（对外）
+     * @var string <p>指标展示名称（对外）</p>
      */
     public $MetricDisplayName;
 
     /**
-     * @var integer 周期
+     * @var integer <p>周期</p>
      */
     public $Period;
 
     /**
-     * @var integer 规则ID
+     * @var integer <p>规则ID</p>
      */
     public $RuleID;
 
     /**
-     * @var string 指标单位
+     * @var string <p>指标单位</p>
      */
     public $Unit;
 
     /**
-     * @var integer 是否为高级指标，0：否；1：是
+     * @var integer <p>是否为高级指标，0：否；1：是</p>
      */
     public $IsAdvanced;
 
     /**
-     * @var integer 是否开通高级指标，0：否；1：是
+     * @var integer <p>是否开通高级指标，0：否；1：是</p>
      */
     public $IsOpen;
 
     /**
-     * @var string 产品ID
+     * @var string <p>产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
 
     /**
-     * @var AlarmHierarchicalValue 告警分级阈值配置
+     * @var AlarmHierarchicalValue <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HierarchicalValue;
 
     /**
-     * @var string 指标类型，用于区分动态指标
+     * @var string <p>指标类型，用于区分动态指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleType;
 
     /**
-     * @param integer $AlarmNotifyPeriod 告警通知频率
-     * @param integer $AlarmNotifyType 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
-     * @param string $CalcType 检测方式
+     * @param integer $AlarmNotifyPeriod <p>告警通知频率</p>
+     * @param integer $AlarmNotifyType <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
+     * @param string $CalcType <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CalcValue 检测值
+     * @param string $CalcValue <p>检测值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ContinueTime 持续时间，单位秒
+     * @param string $ContinueTime <p>持续时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MetricID 指标ID
-     * @param string $MetricDisplayName 指标展示名称（对外）
-     * @param integer $Period 周期
-     * @param integer $RuleID 规则ID
-     * @param string $Unit 指标单位
-     * @param integer $IsAdvanced 是否为高级指标，0：否；1：是
-     * @param integer $IsOpen 是否开通高级指标，0：否；1：是
-     * @param string $ProductId 产品ID
+     * @param integer $MetricID <p>指标ID</p>
+     * @param string $MetricDisplayName <p>指标展示名称（对外）</p>
+     * @param integer $Period <p>周期</p>
+     * @param integer $RuleID <p>规则ID</p>
+     * @param string $Unit <p>指标单位</p>
+     * @param integer $IsAdvanced <p>是否为高级指标，0：否；1：是</p>
+     * @param integer $IsOpen <p>是否开通高级指标，0：否；1：是</p>
+     * @param string $ProductId <p>产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmHierarchicalValue $HierarchicalValue 告警分级阈值配置
+     * @param AlarmHierarchicalValue $HierarchicalValue <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleType 指标类型，用于区分动态指标
+     * @param string $RuleType <p>指标类型，用于区分动态指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

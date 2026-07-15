@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectionPoolType(string $ConnectionPoolType) 设置<p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
  * @method boolean getAutoLoadBalance() 获取<p>是否开启自适应负载均衡。默认关闭。</p>
  * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置<p>是否开启自适应负载均衡。默认关闭。</p>
- * @method string getAccessMode() 获取<p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
- * @method void setAccessMode(string $AccessMode) 设置<p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
+ * @method string getAccessMode() 获取<p>接入模式。</p><p>枚举值：</p><ul><li>nearBy： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul><p>默认值：nearBy</p>
+ * @method void setAccessMode(string $AccessMode) 设置<p>接入模式。</p><p>枚举值：</p><ul><li>nearBy： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul><p>默认值：nearBy</p>
  */
 class CreateCdbProxyAddressRequest extends AbstractModel
 {
@@ -159,7 +159,7 @@ class CreateCdbProxyAddressRequest extends AbstractModel
     public $AutoLoadBalance;
 
     /**
-     * @var string <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
+     * @var string <p>接入模式。</p><p>枚举值：</p><ul><li>nearBy： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul><p>默认值：nearBy</p>
      */
     public $AccessMode;
 
@@ -183,7 +183,7 @@ class CreateCdbProxyAddressRequest extends AbstractModel
      * @param array $SecurityGroup <p>安全组</p>
      * @param string $ConnectionPoolType <p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
      * @param boolean $AutoLoadBalance <p>是否开启自适应负载均衡。默认关闭。</p>
-     * @param string $AccessMode <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
+     * @param string $AccessMode <p>接入模式。</p><p>枚举值：</p><ul><li>nearBy： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul><p>默认值：nearBy</p>
      */
     function __construct()
     {

@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 统一的命名空间信息
  *
- * @method string getId() 获取命名空间标示
- * @method void setId(string $Id) 设置命名空间标示
- * @method string getName() 获取命名空间名称
- * @method void setName(string $Name) 设置命名空间名称
- * @method string getValue() 获取命名空间值
- * @method void setValue(string $Value) 设置命名空间值
- * @method string getProductName() 获取产品名称
- * @method void setProductName(string $ProductName) 设置产品名称
- * @method string getConfig() 获取配置信息
- * @method void setConfig(string $Config) 设置配置信息
- * @method array getAvailableRegions() 获取支持地域列表
- * @method void setAvailableRegions(array $AvailableRegions) 设置支持地域列表
- * @method integer getSortId() 获取排序Id
- * @method void setSortId(integer $SortId) 设置排序Id
- * @method string getDashboardId() 获取Dashboard中的唯一表示
- * @method void setDashboardId(string $DashboardId) 设置Dashboard中的唯一表示
+ * @method string getId() 获取<p>命名空间标示</p>
+ * @method void setId(string $Id) 设置<p>命名空间标示</p>
+ * @method string getName() 获取<p>命名空间名称</p>
+ * @method void setName(string $Name) 设置<p>命名空间名称</p>
+ * @method string getValue() 获取<p>命名空间值</p>
+ * @method void setValue(string $Value) 设置<p>命名空间值</p>
+ * @method string getProductName() 获取<p>产品名称</p>
+ * @method void setProductName(string $ProductName) 设置<p>产品名称</p>
+ * @method string getConfig() 获取<p>配置信息</p>
+ * @method void setConfig(string $Config) 设置<p>配置信息</p>
+ * @method array getAvailableRegions() 获取<p>支持地域列表</p>
+ * @method void setAvailableRegions(array $AvailableRegions) 设置<p>支持地域列表</p>
+ * @method integer getSortId() 获取<p>排序Id</p>
+ * @method void setSortId(integer $SortId) 设置<p>排序Id</p>
+ * @method string getDashboardId() 获取<p>Dashboard中的唯一表示</p>
+ * @method void setDashboardId(string $DashboardId) 设置<p>Dashboard中的唯一表示</p>
  */
 class CommonNamespace extends AbstractModel
 {
     /**
-     * @var string 命名空间标示
+     * @var string <p>命名空间标示</p>
      */
     public $Id;
 
     /**
-     * @var string 命名空间名称
+     * @var string <p>命名空间名称</p>
      */
     public $Name;
 
     /**
-     * @var string 命名空间值
+     * @var string <p>命名空间值</p>
      */
     public $Value;
 
     /**
-     * @var string 产品名称
+     * @var string <p>产品名称</p>
      */
     public $ProductName;
 
     /**
-     * @var string 配置信息
+     * @var string <p>配置信息</p>
      */
     public $Config;
 
     /**
-     * @var array 支持地域列表
+     * @var array <p>支持地域列表</p>
      */
     public $AvailableRegions;
 
     /**
-     * @var integer 排序Id
+     * @var integer <p>排序Id</p>
      */
     public $SortId;
 
     /**
-     * @var string Dashboard中的唯一表示
+     * @var string <p>Dashboard中的唯一表示</p>
      */
     public $DashboardId;
 
     /**
-     * @param string $Id 命名空间标示
-     * @param string $Name 命名空间名称
-     * @param string $Value 命名空间值
-     * @param string $ProductName 产品名称
-     * @param string $Config 配置信息
-     * @param array $AvailableRegions 支持地域列表
-     * @param integer $SortId 排序Id
-     * @param string $DashboardId Dashboard中的唯一表示
+     * @param string $Id <p>命名空间标示</p>
+     * @param string $Name <p>命名空间名称</p>
+     * @param string $Value <p>命名空间值</p>
+     * @param string $ProductName <p>产品名称</p>
+     * @param string $Config <p>配置信息</p>
+     * @param array $AvailableRegions <p>支持地域列表</p>
+     * @param integer $SortId <p>排序Id</p>
+     * @param string $DashboardId <p>Dashboard中的唯一表示</p>
      */
     function __construct()
     {

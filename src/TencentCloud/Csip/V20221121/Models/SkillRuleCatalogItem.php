@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 融合规则目录项
  *
- * @method string getRuleID() 获取融合规则 ID（9xxxx）
- * @method void setRuleID(string $RuleID) 设置融合规则 ID（9xxxx）
+ * @method string getRuleID() 获取融合规则 ID
+参数格式：形如 9xxxx
+ * @method void setRuleID(string $RuleID) 设置融合规则 ID
+参数格式：形如 9xxxx
  * @method string getRuleName() 获取风险类别名称
  * @method void setRuleName(string $RuleName) 设置风险类别名称
  */
 class SkillRuleCatalogItem extends AbstractModel
 {
     /**
-     * @var string 融合规则 ID（9xxxx）
+     * @var string 融合规则 ID
+参数格式：形如 9xxxx
      */
     public $RuleID;
 
@@ -38,7 +41,8 @@ class SkillRuleCatalogItem extends AbstractModel
     public $RuleName;
 
     /**
-     * @param string $RuleID 融合规则 ID（9xxxx）
+     * @param string $RuleID 融合规则 ID
+参数格式：形如 9xxxx
      * @param string $RuleName 风险类别名称
      */
     function __construct()

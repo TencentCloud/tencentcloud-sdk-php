@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProductEventList返回的OverView对象
  *
- * @method integer getStatusChangeAmount() 获取状态变更的事件数量
+ * @method integer getStatusChangeAmount() 获取<p>状态变更的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusChangeAmount(integer $StatusChangeAmount) 设置状态变更的事件数量
+ * @method void setStatusChangeAmount(integer $StatusChangeAmount) 设置<p>状态变更的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUnConfigAlarmAmount() 获取告警状态未配置的事件数量
+ * @method integer getUnConfigAlarmAmount() 获取<p>告警状态未配置的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnConfigAlarmAmount(integer $UnConfigAlarmAmount) 设置告警状态未配置的事件数量
+ * @method void setUnConfigAlarmAmount(integer $UnConfigAlarmAmount) 设置<p>告警状态未配置的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUnNormalEventAmount() 获取异常事件数量
+ * @method integer getUnNormalEventAmount() 获取<p>异常事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnNormalEventAmount(integer $UnNormalEventAmount) 设置异常事件数量
+ * @method void setUnNormalEventAmount(integer $UnNormalEventAmount) 设置<p>异常事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUnRecoverAmount() 获取未恢复的事件数量
+ * @method integer getUnRecoverAmount() 获取<p>未恢复的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnRecoverAmount(integer $UnRecoverAmount) 设置未恢复的事件数量
+ * @method void setUnRecoverAmount(integer $UnRecoverAmount) 设置<p>未恢复的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeProductEventListOverView extends AbstractModel
 {
     /**
-     * @var integer 状态变更的事件数量
+     * @var integer <p>状态变更的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusChangeAmount;
 
     /**
-     * @var integer 告警状态未配置的事件数量
+     * @var integer <p>告警状态未配置的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnConfigAlarmAmount;
 
     /**
-     * @var integer 异常事件数量
+     * @var integer <p>异常事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnNormalEventAmount;
 
     /**
-     * @var integer 未恢复的事件数量
+     * @var integer <p>未恢复的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnRecoverAmount;
 
     /**
-     * @param integer $StatusChangeAmount 状态变更的事件数量
+     * @param integer $StatusChangeAmount <p>状态变更的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UnConfigAlarmAmount 告警状态未配置的事件数量
+     * @param integer $UnConfigAlarmAmount <p>告警状态未配置的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UnNormalEventAmount 异常事件数量
+     * @param integer $UnNormalEventAmount <p>异常事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UnRecoverAmount 未恢复的事件数量
+     * @param integer $UnRecoverAmount <p>未恢复的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

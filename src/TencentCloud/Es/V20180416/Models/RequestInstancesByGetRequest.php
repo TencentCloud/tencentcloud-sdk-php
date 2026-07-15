@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RequestInstancesByGet请求参数结构体
  *
-
+ * @method string getInstanceId() 获取<p>集群id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群id</p>
+ * @method string getUri() 获取<p>请求路径</p>
+ * @method void setUri(string $Uri) 设置<p>请求路径</p>
+ * @method string getCaller() 获取<p>调用方</p>
+ * @method void setCaller(string $Caller) 设置<p>调用方</p>
  */
 class RequestInstancesByGetRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>集群id</p>
+     */
+    public $InstanceId;
 
     /**
+     * @var string <p>请求路径</p>
+     */
+    public $Uri;
 
+    /**
+     * @var string <p>调用方</p>
+     */
+    public $Caller;
+
+    /**
+     * @param string $InstanceId <p>集群id</p>
+     * @param string $Uri <p>请求路径</p>
+     * @param string $Caller <p>调用方</p>
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class RequestInstancesByGetRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("Uri",$param) and $param["Uri"] !== null) {
+            $this->Uri = $param["Uri"];
+        }
+
+        if (array_key_exists("Caller",$param) and $param["Caller"] !== null) {
+            $this->Caller = $param["Caller"];
+        }
     }
 }

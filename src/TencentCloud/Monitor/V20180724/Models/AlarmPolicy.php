@@ -20,533 +20,521 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警策略详情
  *
- * @method string getPolicyId() 获取告警策略 ID
+ * @method string getPolicyId() 获取<p>告警策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyId(string $PolicyId) 设置告警策略 ID
+ * @method void setPolicyId(string $PolicyId) 设置<p>告警策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPolicyName() 获取告警策略名称
+ * @method string getPolicyName() 获取<p>告警策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyName(string $PolicyName) 设置告警策略名称
+ * @method void setPolicyName(string $PolicyName) 设置<p>告警策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemark() 获取备注信息
+ * @method string getRemark() 获取<p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemark(string $Remark) 设置备注信息
+ * @method void setRemark(string $Remark) 设置<p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMonitorType() 获取监控类型 MT_QCE=云产品监控
+ * @method string getMonitorType() 获取<p>监控类型 MT_QCE=云产品监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMonitorType(string $MonitorType) 设置监控类型 MT_QCE=云产品监控
+ * @method void setMonitorType(string $MonitorType) 设置<p>监控类型 MT_QCE=云产品监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEnable() 获取启停状态 0=停用 1=启用
+ * @method integer getEnable() 获取<p>启停状态 0=停用 1=启用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnable(integer $Enable) 设置启停状态 0=停用 1=启用
+ * @method void setEnable(integer $Enable) 设置<p>启停状态 0=停用 1=启用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUseSum() 获取策略组绑定的实例数
+ * @method integer getUseSum() 获取<p>策略组绑定的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUseSum(integer $UseSum) 设置策略组绑定的实例数
+ * @method void setUseSum(integer $UseSum) 设置<p>策略组绑定的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProjectId() 获取项目 Id -1=无项目 0=默认项目
+ * @method integer getProjectId() 获取<p>项目 Id -1=无项目 0=默认项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(integer $ProjectId) 设置项目 Id -1=无项目 0=默认项目
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目 Id -1=无项目 0=默认项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectName() 获取项目名
+ * @method string getProjectName() 获取<p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectName(string $ProjectName) 设置项目名
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNamespace() 获取告警策略类型
+ * @method string getNamespace() 获取<p>告警策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNamespace(string $Namespace) 设置告警策略类型
+ * @method void setNamespace(string $Namespace) 设置<p>告警策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getConditionTemplateId() 获取触发条件模板 Id
+ * @method string getConditionTemplateId() 获取<p>触发条件模板 Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConditionTemplateId(string $ConditionTemplateId) 设置触发条件模板 Id
+ * @method void setConditionTemplateId(string $ConditionTemplateId) 设置<p>触发条件模板 Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AlarmPolicyCondition getCondition() 获取指标触发条件
+ * @method AlarmPolicyCondition getCondition() 获取<p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCondition(AlarmPolicyCondition $Condition) 设置指标触发条件
+ * @method void setCondition(AlarmPolicyCondition $Condition) 设置<p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AlarmPolicyEventCondition getEventCondition() 获取事件触发条件
+ * @method AlarmPolicyEventCondition getEventCondition() 获取<p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) 设置事件触发条件
+ * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) 设置<p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNoticeIds() 获取通知规则 id 列表
+ * @method array getNoticeIds() 获取<p>通知规则 id 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeIds(array $NoticeIds) 设置通知规则 id 列表
+ * @method void setNoticeIds(array $NoticeIds) 设置<p>通知规则 id 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNotices() 获取通知规则 列表
+ * @method array getNotices() 获取<p>通知规则 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNotices(array $Notices) 设置通知规则 列表
+ * @method void setNotices(array $Notices) 设置<p>通知规则 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTriggerTasks() 获取触发任务列表
+ * @method array getTriggerTasks() 获取<p>触发任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerTasks(array $TriggerTasks) 设置触发任务列表
+ * @method void setTriggerTasks(array $TriggerTasks) 设置<p>触发任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ConditionsTemp getConditionsTemp() 获取模板策略组
+ * @method ConditionsTemp getConditionsTemp() 获取<p>模板策略组<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConditionsTemp(ConditionsTemp $ConditionsTemp) 设置<p>模板策略组<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConditionsTemp(ConditionsTemp $ConditionsTemp) 设置模板策略组
+ * @method string getLastEditUin() 获取<p>最后编辑的用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastEditUin(string $LastEditUin) 设置<p>最后编辑的用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastEditUin() 获取最后编辑的用户uin
+ * @method integer getUpdateTime() 获取<p>更新时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastEditUin(string $LastEditUin) 设置最后编辑的用户uin
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpdateTime() 获取更新时间
+ * @method integer getInsertTime() 获取<p>创建时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInsertTime(integer $InsertTime) 设置<p>创建时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
+ * @method array getRegion() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(array $Region) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInsertTime() 获取创建时间
+ * @method string getNamespaceShowName() 获取<p>namespace显示名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceShowName(string $NamespaceShowName) 设置<p>namespace显示名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInsertTime(integer $InsertTime) 设置创建时间
+ * @method integer getIsDefault() 获取<p>是否默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDefault(integer $IsDefault) 设置<p>是否默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRegion() 获取地域
+ * @method integer getCanSetDefault() 获取<p>能否设置默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(array $Region) 设置地域
+ * @method void setCanSetDefault(integer $CanSetDefault) 设置<p>能否设置默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNamespaceShowName() 获取namespace显示名字
+ * @method integer getInstanceGroupId() 获取<p>实例分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNamespaceShowName(string $NamespaceShowName) 设置namespace显示名字
+ * @method void setInstanceGroupId(integer $InstanceGroupId) 设置<p>实例分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsDefault() 获取是否默认策略，1是，0否
+ * @method integer getInstanceSum() 获取<p>实例分组总实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsDefault(integer $IsDefault) 设置是否默认策略，1是，0否
+ * @method void setInstanceSum(integer $InstanceSum) 设置<p>实例分组总实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCanSetDefault() 获取能否设置默认策略，1是，0否
+ * @method string getInstanceGroupName() 获取<p>实例分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCanSetDefault(integer $CanSetDefault) 设置能否设置默认策略，1是，0否
+ * @method void setInstanceGroupName(string $InstanceGroupName) 设置<p>实例分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInstanceGroupId() 获取实例分组ID
+ * @method string getRuleType() 获取<p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组ID
+ * @method void setRuleType(string $RuleType) 设置<p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInstanceSum() 获取实例分组总实例数
+ * @method string getOriginId() 获取<p>用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceSum(integer $InstanceSum) 设置实例分组总实例数
+ * @method void setOriginId(string $OriginId) 设置<p>用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceGroupName() 获取实例分组名称
+ * @method array getTagInstances() 获取<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceGroupName(string $InstanceGroupName) 设置实例分组名称
+ * @method void setTagInstances(array $TagInstances) 设置<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleType() 获取触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
+ * @method AlarmConditionFilter getFilter() 获取<p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleType(string $RuleType) 设置触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
+ * @method void setFilter(AlarmConditionFilter $Filter) 设置<p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOriginId() 获取用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+ * @method array getGroupBy() 获取<p>聚合条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginId(string $OriginId) 设置用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+ * @method void setGroupBy(array $GroupBy) 设置<p>聚合条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTagInstances() 获取标签
+ * @method string getFilterDimensionsParam() 获取<p>策略关联的过滤维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagInstances(array $TagInstances) 设置标签
+ * @method void setFilterDimensionsParam(string $FilterDimensionsParam) 设置<p>策略关联的过滤维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AlarmConditionFilter getFilter() 获取过滤条件
+ * @method integer getIsOneClick() 获取<p>是否为一键告警策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFilter(AlarmConditionFilter $Filter) 设置过滤条件
+ * @method void setIsOneClick(integer $IsOneClick) 设置<p>是否为一键告警策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getGroupBy() 获取聚合条件
+ * @method integer getOneClickStatus() 获取<p>一键告警策略是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupBy(array $GroupBy) 设置聚合条件
+ * @method void setOneClickStatus(integer $OneClickStatus) 设置<p>一键告警策略是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFilterDimensionsParam() 获取策略关联的过滤维度信息
+ * @method integer getAdvancedMetricNumber() 获取<p>高级指标数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFilterDimensionsParam(string $FilterDimensionsParam) 设置策略关联的过滤维度信息
+ * @method void setAdvancedMetricNumber(integer $AdvancedMetricNumber) 设置<p>高级指标数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsOneClick() 获取是否为一键告警策略
+ * @method integer getIsBindAll() 获取<p>策略是否是全部对象策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsOneClick(integer $IsOneClick) 设置是否为一键告警策略
+ * @method void setIsBindAll(integer $IsBindAll) 设置<p>策略是否是全部对象策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOneClickStatus() 获取一键告警策略是否开启
+ * @method array getTags() 获取<p>策略标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOneClickStatus(integer $OneClickStatus) 设置一键告警策略是否开启
+ * @method void setTags(array $Tags) 设置<p>策略标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAdvancedMetricNumber() 获取高级指标数量
+ * @method integer getIsSupportAlarmTag() 获取<p>是否支持告警标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdvancedMetricNumber(integer $AdvancedMetricNumber) 设置高级指标数量
+ * @method void setIsSupportAlarmTag(integer $IsSupportAlarmTag) 设置<p>是否支持告警标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsBindAll() 获取策略是否是全部对象策略
+ * @method string getTagOperation() 获取<p>多标签交/并集关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsBindAll(integer $IsBindAll) 设置策略是否是全部对象策略
+ * @method void setTagOperation(string $TagOperation) 设置<p>多标签交/并集关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取策略标签
+ * @method array getNoticeTmplBindInfos() 获取<p>通知模板绑定内容模板信息</p>
+ * @method void setNoticeTmplBindInfos(array $NoticeTmplBindInfos) 设置<p>通知模板绑定内容模板信息</p>
+ * @method array getHierarchicalNotices() 获取<p>模板通知的等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置策略标签
+ * @method void setHierarchicalNotices(array $HierarchicalNotices) 设置<p>模板通知的等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsSupportAlarmTag() 获取是否支持告警标签
+ * @method array getNoticeContentTmplBindInfos() 获取<p>通知模板绑定内容模板信息，同NoticeTmplBindInfos</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsSupportAlarmTag(integer $IsSupportAlarmTag) 设置是否支持告警标签
+ * @method void setNoticeContentTmplBindInfos(array $NoticeContentTmplBindInfos) 设置<p>通知模板绑定内容模板信息，同NoticeTmplBindInfos</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTagOperation() 获取多标签交/并集关系
+ * @method string getPredefinedConfigID() 获取<p>预设配置id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagOperation(string $TagOperation) 设置多标签交/并集关系
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNoticeTmplBindInfos() 获取通知模板绑定内容模板信息
- * @method void setNoticeTmplBindInfos(array $NoticeTmplBindInfos) 设置通知模板绑定内容模板信息
- * @method array getHierarchicalNotices() 获取模板通知的等级
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHierarchicalNotices(array $HierarchicalNotices) 设置模板通知的等级
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNoticeContentTmplBindInfos() 获取通知模板绑定内容模板信息，同NoticeTmplBindInfos
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeContentTmplBindInfos(array $NoticeContentTmplBindInfos) 设置通知模板绑定内容模板信息，同NoticeTmplBindInfos
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPredefinedConfigID() 获取预设配置id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPredefinedConfigID(string $PredefinedConfigID) 设置预设配置id
+ * @method void setPredefinedConfigID(string $PredefinedConfigID) 设置<p>预设配置id</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicy extends AbstractModel
 {
     /**
-     * @var string 告警策略 ID
+     * @var string <p>告警策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyId;
 
     /**
-     * @var string 告警策略名称
+     * @var string <p>告警策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyName;
 
     /**
-     * @var string 备注信息
+     * @var string <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
-     * @var string 监控类型 MT_QCE=云产品监控
+     * @var string <p>监控类型 MT_QCE=云产品监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorType;
 
     /**
-     * @var integer 启停状态 0=停用 1=启用
+     * @var integer <p>启停状态 0=停用 1=启用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enable;
 
     /**
-     * @var integer 策略组绑定的实例数
+     * @var integer <p>策略组绑定的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseSum;
 
     /**
-     * @var integer 项目 Id -1=无项目 0=默认项目
+     * @var integer <p>项目 Id -1=无项目 0=默认项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 项目名
+     * @var string <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
-     * @var string 告警策略类型
+     * @var string <p>告警策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
-     * @var string 触发条件模板 Id
+     * @var string <p>触发条件模板 Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionTemplateId;
 
     /**
-     * @var AlarmPolicyCondition 指标触发条件
+     * @var AlarmPolicyCondition <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Condition;
 
     /**
-     * @var AlarmPolicyEventCondition 事件触发条件
+     * @var AlarmPolicyEventCondition <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventCondition;
 
     /**
-     * @var array 通知规则 id 列表
+     * @var array <p>通知规则 id 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeIds;
 
     /**
-     * @var array 通知规则 列表
+     * @var array <p>通知规则 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Notices;
 
     /**
-     * @var array 触发任务列表
+     * @var array <p>触发任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerTasks;
 
     /**
-     * @var ConditionsTemp 模板策略组
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var ConditionsTemp <p>模板策略组<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionsTemp;
 
     /**
-     * @var string 最后编辑的用户uin
+     * @var string <p>最后编辑的用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastEditUin;
 
     /**
-     * @var integer 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer <p>更新时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer <p>创建时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InsertTime;
 
     /**
-     * @var array 地域
+     * @var array <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var string namespace显示名字
+     * @var string <p>namespace显示名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceShowName;
 
     /**
-     * @var integer 是否默认策略，1是，0否
+     * @var integer <p>是否默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefault;
 
     /**
-     * @var integer 能否设置默认策略，1是，0否
+     * @var integer <p>能否设置默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanSetDefault;
 
     /**
-     * @var integer 实例分组ID
+     * @var integer <p>实例分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceGroupId;
 
     /**
-     * @var integer 实例分组总实例数
+     * @var integer <p>实例分组总实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceSum;
 
     /**
-     * @var string 实例分组名称
+     * @var string <p>实例分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceGroupName;
 
     /**
-     * @var string 触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
+     * @var string <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleType;
 
     /**
-     * @var string 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+     * @var string <p>用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginId;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagInstances;
 
     /**
-     * @var AlarmConditionFilter 过滤条件
+     * @var AlarmConditionFilter <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Filter;
 
     /**
-     * @var array 聚合条件
+     * @var array <p>聚合条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupBy;
 
     /**
-     * @var string 策略关联的过滤维度信息
+     * @var string <p>策略关联的过滤维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterDimensionsParam;
 
     /**
-     * @var integer 是否为一键告警策略
+     * @var integer <p>是否为一键告警策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsOneClick;
 
     /**
-     * @var integer 一键告警策略是否开启
+     * @var integer <p>一键告警策略是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OneClickStatus;
 
     /**
-     * @var integer 高级指标数量
+     * @var integer <p>高级指标数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdvancedMetricNumber;
 
     /**
-     * @var integer 策略是否是全部对象策略
+     * @var integer <p>策略是否是全部对象策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsBindAll;
 
     /**
-     * @var array 策略标签
+     * @var array <p>策略标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var integer 是否支持告警标签
+     * @var integer <p>是否支持告警标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportAlarmTag;
 
     /**
-     * @var string 多标签交/并集关系
+     * @var string <p>多标签交/并集关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagOperation;
 
     /**
-     * @var array 通知模板绑定内容模板信息
+     * @var array <p>通知模板绑定内容模板信息</p>
      */
     public $NoticeTmplBindInfos;
 
     /**
-     * @var array 模板通知的等级
+     * @var array <p>模板通知的等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HierarchicalNotices;
 
     /**
-     * @var array 通知模板绑定内容模板信息，同NoticeTmplBindInfos
+     * @var array <p>通知模板绑定内容模板信息，同NoticeTmplBindInfos</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeContentTmplBindInfos;
 
     /**
-     * @var string 预设配置id
+     * @var string <p>预设配置id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PredefinedConfigID;
 
     /**
-     * @param string $PolicyId 告警策略 ID
+     * @param string $PolicyId <p>告警策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PolicyName 告警策略名称
+     * @param string $PolicyName <p>告警策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Remark 备注信息
+     * @param string $Remark <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MonitorType 监控类型 MT_QCE=云产品监控
+     * @param string $MonitorType <p>监控类型 MT_QCE=云产品监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Enable 启停状态 0=停用 1=启用
+     * @param integer $Enable <p>启停状态 0=停用 1=启用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UseSum 策略组绑定的实例数
+     * @param integer $UseSum <p>策略组绑定的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProjectId 项目 Id -1=无项目 0=默认项目
+     * @param integer $ProjectId <p>项目 Id -1=无项目 0=默认项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectName 项目名
+     * @param string $ProjectName <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Namespace 告警策略类型
+     * @param string $Namespace <p>告警策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ConditionTemplateId 触发条件模板 Id
+     * @param string $ConditionTemplateId <p>触发条件模板 Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmPolicyCondition $Condition 指标触发条件
+     * @param AlarmPolicyCondition $Condition <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmPolicyEventCondition $EventCondition 事件触发条件
+     * @param AlarmPolicyEventCondition $EventCondition <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NoticeIds 通知规则 id 列表
+     * @param array $NoticeIds <p>通知规则 id 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Notices 通知规则 列表
+     * @param array $Notices <p>通知规则 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TriggerTasks 触发任务列表
+     * @param array $TriggerTasks <p>触发任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConditionsTemp $ConditionsTemp 模板策略组
+     * @param ConditionsTemp $ConditionsTemp <p>模板策略组<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastEditUin <p>最后编辑的用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastEditUin 最后编辑的用户uin
+     * @param integer $UpdateTime <p>更新时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpdateTime 更新时间
+     * @param integer $InsertTime <p>创建时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InsertTime 创建时间
+     * @param string $NamespaceShowName <p>namespace显示名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsDefault <p>是否默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Region 地域
+     * @param integer $CanSetDefault <p>能否设置默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NamespaceShowName namespace显示名字
+     * @param integer $InstanceGroupId <p>实例分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsDefault 是否默认策略，1是，0否
+     * @param integer $InstanceSum <p>实例分组总实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CanSetDefault 能否设置默认策略，1是，0否
+     * @param string $InstanceGroupName <p>实例分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InstanceGroupId 实例分组ID
+     * @param string $RuleType <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InstanceSum 实例分组总实例数
+     * @param string $OriginId <p>用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceGroupName 实例分组名称
+     * @param array $TagInstances <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
+     * @param AlarmConditionFilter $Filter <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OriginId 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+     * @param array $GroupBy <p>聚合条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TagInstances 标签
+     * @param string $FilterDimensionsParam <p>策略关联的过滤维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmConditionFilter $Filter 过滤条件
+     * @param integer $IsOneClick <p>是否为一键告警策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $GroupBy 聚合条件
+     * @param integer $OneClickStatus <p>一键告警策略是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FilterDimensionsParam 策略关联的过滤维度信息
+     * @param integer $AdvancedMetricNumber <p>高级指标数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsOneClick 是否为一键告警策略
+     * @param integer $IsBindAll <p>策略是否是全部对象策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OneClickStatus 一键告警策略是否开启
+     * @param array $Tags <p>策略标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AdvancedMetricNumber 高级指标数量
+     * @param integer $IsSupportAlarmTag <p>是否支持告警标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsBindAll 策略是否是全部对象策略
+     * @param string $TagOperation <p>多标签交/并集关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 策略标签
+     * @param array $NoticeTmplBindInfos <p>通知模板绑定内容模板信息</p>
+     * @param array $HierarchicalNotices <p>模板通知的等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsSupportAlarmTag 是否支持告警标签
+     * @param array $NoticeContentTmplBindInfos <p>通知模板绑定内容模板信息，同NoticeTmplBindInfos</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TagOperation 多标签交/并集关系
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NoticeTmplBindInfos 通知模板绑定内容模板信息
-     * @param array $HierarchicalNotices 模板通知的等级
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NoticeContentTmplBindInfos 通知模板绑定内容模板信息，同NoticeTmplBindInfos
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PredefinedConfigID 预设配置id
+     * @param string $PredefinedConfigID <p>预设配置id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

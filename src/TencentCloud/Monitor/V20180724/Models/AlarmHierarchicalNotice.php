@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通知模板ID及通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
  *
- * @method string getNoticeId() 获取通知模板ID
+ * @method string getNoticeId() 获取<p>通知模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeId(string $NoticeId) 设置通知模板ID
+ * @method void setNoticeId(string $NoticeId) 设置<p>通知模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getClassification() 获取通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+ * @method array getClassification() 获取<p>通知等级列表，[&quot;Remind&quot;,&quot;Serious&quot;]表示该通知模板仅接收提醒和严重类别的告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClassification(array $Classification) 设置通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+ * @method void setClassification(array $Classification) 设置<p>通知等级列表，[&quot;Remind&quot;,&quot;Serious&quot;]表示该通知模板仅接收提醒和严重类别的告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPolicyId() 获取模板对应的策略id
+ * @method string getPolicyId() 获取<p>模板对应的策略id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyId(string $PolicyId) 设置模板对应的策略id
+ * @method void setPolicyId(string $PolicyId) 设置<p>模板对应的策略id</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmHierarchicalNotice extends AbstractModel
 {
     /**
-     * @var string 通知模板ID
+     * @var string <p>通知模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeId;
 
     /**
-     * @var array 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+     * @var array <p>通知等级列表，[&quot;Remind&quot;,&quot;Serious&quot;]表示该通知模板仅接收提醒和严重类别的告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Classification;
 
     /**
-     * @var string 模板对应的策略id
+     * @var string <p>模板对应的策略id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyId;
 
     /**
-     * @param string $NoticeId 通知模板ID
+     * @param string $NoticeId <p>通知模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Classification 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+     * @param array $Classification <p>通知等级列表，[&quot;Remind&quot;,&quot;Serious&quot;]表示该通知模板仅接收提醒和严重类别的告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PolicyId 模板对应的策略id
+     * @param string $PolicyId <p>模板对应的策略id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

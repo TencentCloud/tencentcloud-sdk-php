@@ -152,6 +152,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeGroupAttachFlowsByIdResponse DescribeGroupAttachFlowsById(Models\DescribeGroupAttachFlowsByIdRequest $req) 根据安全组反差关联的Flow信息。
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) 查询雪碧图模板，支持根据条件，分页查询。
  * @method Models\DescribeImageTaskDetailResponse DescribeImageTaskDetail(Models\DescribeImageTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
+ * @method Models\DescribeImageTasksResponse DescribeImageTasks(Models\DescribeImageTasksRequest $req) 图片处理任务查询接口。
  * @method Models\DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(Models\DescribeLiveRecordTemplatesRequest $req) 获取直播录制模板
  * @method Models\DescribeMDPMPSUserInfoResponse DescribeMDPMPSUserInfo(Models\DescribeMDPMPSUserInfoRequest $req) 查询用户开通mps信息，是否开通/授权。
  * @method Models\DescribeMediaMetaDataResponse DescribeMediaMetaData(Models\DescribeMediaMetaDataRequest $req) 获取媒体的元信息，包括视频画面宽、高、编码格式、时长、帧率等。

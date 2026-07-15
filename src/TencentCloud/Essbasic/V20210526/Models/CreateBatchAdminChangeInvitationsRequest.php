@@ -1,0 +1,71 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Essbasic\V20210526\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * CreateBatchAdminChangeInvitations请求参数结构体
+ *
+ * @method Agent getAgent() 获取<p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li></ul>
+ * @method void setAgent(Agent $Agent) 设置<p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li></ul>
+ * @method array getAdminChangeInvitationInfos() 获取<p>组织机构超管变更信息。 一次最多支持10条超管变更信息。</p>
+ * @method void setAdminChangeInvitationInfos(array $AdminChangeInvitationInfos) 设置<p>组织机构超管变更信息。 一次最多支持10条超管变更信息。</p>
+ */
+class CreateBatchAdminChangeInvitationsRequest extends AbstractModel
+{
+    /**
+     * @var Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li></ul>
+     */
+    public $Agent;
+
+    /**
+     * @var array <p>组织机构超管变更信息。 一次最多支持10条超管变更信息。</p>
+     */
+    public $AdminChangeInvitationInfos;
+
+    /**
+     * @param Agent $Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li></ul>
+     * @param array $AdminChangeInvitationInfos <p>组织机构超管变更信息。 一次最多支持10条超管变更信息。</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("AdminChangeInvitationInfos",$param) and $param["AdminChangeInvitationInfos"] !== null) {
+            $this->AdminChangeInvitationInfos = [];
+            foreach ($param["AdminChangeInvitationInfos"] as $key => $value){
+                $obj = new AdminChangeInvitationInfo();
+                $obj->deserialize($value);
+                array_push($this->AdminChangeInvitationInfos, $obj);
+            }
+        }
+    }
+}

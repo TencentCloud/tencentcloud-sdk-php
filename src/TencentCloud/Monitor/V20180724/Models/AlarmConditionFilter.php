@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 策略过滤条件
  *
- * @method string getType() 获取类型
+ * @method string getType() 获取<p>类型</p><p>枚举值：</p><ul><li>EXPRESSION： 用表达式过滤</li><li>DIMENSION： 用维度条件过滤</li><li>BIND_ALL： 绑定全部实例</li><li>LOG_ALARM： 日志告警专用过滤</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置类型
+ * @method void setType(string $Type) 设置<p>类型</p><p>枚举值：</p><ul><li>EXPRESSION： 用表达式过滤</li><li>DIMENSION： 用维度条件过滤</li><li>BIND_ALL： 绑定全部实例</li><li>LOG_ALARM： 日志告警专用过滤</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExpression() 获取表达式
+ * @method string getExpression() 获取<p>表达式</p><p>Type为Expression有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpression(string $Expression) 设置表达式
+ * @method void setExpression(string $Expression) 设置<p>表达式</p><p>Type为Expression有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDimensions() 获取过滤条件
+ * @method string getDimensions() 获取<p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDimensions(string $Dimensions) 设置过滤条件
+ * @method void setDimensions(string $Dimensions) 设置<p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmConditionFilter extends AbstractModel
 {
     /**
-     * @var string 类型
+     * @var string <p>类型</p><p>枚举值：</p><ul><li>EXPRESSION： 用表达式过滤</li><li>DIMENSION： 用维度条件过滤</li><li>BIND_ALL： 绑定全部实例</li><li>LOG_ALARM： 日志告警专用过滤</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 表达式
+     * @var string <p>表达式</p><p>Type为Expression有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expression;
 
     /**
-     * @var string 过滤条件
+     * @var string <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Dimensions;
 
     /**
-     * @param string $Type 类型
+     * @param string $Type <p>类型</p><p>枚举值：</p><ul><li>EXPRESSION： 用表达式过滤</li><li>DIMENSION： 用维度条件过滤</li><li>BIND_ALL： 绑定全部实例</li><li>LOG_ALARM： 日志告警专用过滤</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Expression 表达式
+     * @param string $Expression <p>表达式</p><p>Type为Expression有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Dimensions 过滤条件
+     * @param string $Dimensions <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

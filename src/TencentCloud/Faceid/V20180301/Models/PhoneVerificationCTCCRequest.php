@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PhoneVerificationCTCC请求参数结构体
  *
- * @method string getIdCard() 获取身份证号。
- * @method void setIdCard(string $IdCard) 设置身份证号。
- * @method string getName() 获取姓名。
- * @method void setName(string $Name) 设置姓名。
- * @method string getPhone() 获取手机号。
- * @method void setPhone(string $Phone) 设置手机号。
- * @method Encryption getEncryption() 获取敏感数据加密信息。
-- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。
-- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method string getIdCard() 获取<p>身份证号。</p>
+ * @method void setIdCard(string $IdCard) 设置<p>身份证号。</p>
+ * @method string getName() 获取<p>姓名。</p>
+ * @method void setName(string $Name) 设置<p>姓名。</p>
+ * @method string getPhone() 获取<p>手机号。</p>
+ * @method void setPhone(string $Phone) 设置<p>手机号。</p>
+ * @method Encryption getEncryption() 获取<p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
+ * @method void setEncryption(Encryption $Encryption) 设置<p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
  */
 class PhoneVerificationCTCCRequest extends AbstractModel
 {
     /**
-     * @var string 身份证号。
+     * @var string <p>身份证号。</p>
      */
     public $IdCard;
 
     /**
-     * @var string 姓名。
+     * @var string <p>姓名。</p>
      */
     public $Name;
 
     /**
-     * @var string 手机号。
+     * @var string <p>手机号。</p>
      */
     public $Phone;
 
     /**
-     * @var Encryption 敏感数据加密信息。
-- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @var Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     public $Encryption;
 
     /**
-     * @param string $IdCard 身份证号。
-     * @param string $Name 姓名。
-     * @param string $Phone 手机号。
-     * @param Encryption $Encryption 敏感数据加密信息。
-- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param string $IdCard <p>身份证号。</p>
+     * @param string $Name <p>姓名。</p>
+     * @param string $Phone <p>手机号。</p>
+     * @param Encryption $Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     function __construct()
     {

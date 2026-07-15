@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRumLogExportsV2请求参数结构体
  *
- * @method integer getPageSize() 获取Page size
- * @method void setPageSize(integer $PageSize) 设置Page size
- * @method integer getPageNum() 获取Page number
- * @method void setPageNum(integer $PageNum) 设置Page number
- * @method integer getID() 获取Project ID
- * @method void setID(integer $ID) 设置Project ID
+ * @method integer getPageSize() 获取<p>Page size</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>Page size</p>
+ * @method integer getPageNum() 获取<p>Page number</p>
+ * @method void setPageNum(integer $PageNum) 设置<p>Page number</p>
+ * @method integer getID() 获取<p>Project ID</p>
+ * @method void setID(integer $ID) 设置<p>Project ID</p>
  */
 class DescribeRumLogExportsV2Request extends AbstractModel
 {
     /**
-     * @var integer Page size
+     * @var integer <p>Page size</p>
      */
     public $PageSize;
 
     /**
-     * @var integer Page number
+     * @var integer <p>Page number</p>
      */
     public $PageNum;
 
     /**
-     * @var integer Project ID
+     * @var integer <p>Project ID</p>
      */
     public $ID;
 
     /**
-     * @param integer $PageSize Page size
-     * @param integer $PageNum Page number
-     * @param integer $ID Project ID
+     * @param integer $PageSize <p>Page size</p>
+     * @param integer $PageNum <p>Page number</p>
+     * @param integer $ID <p>Project ID</p>
      */
     function __construct()
     {

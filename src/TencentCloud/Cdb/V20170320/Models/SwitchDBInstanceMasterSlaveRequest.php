@@ -45,6 +45,7 @@ class SwitchDBInstanceMasterSlaveRequest extends AbstractModel
 
     /**
      * @var boolean 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
+     * @deprecated
      */
     public $ForceSwitch;
 

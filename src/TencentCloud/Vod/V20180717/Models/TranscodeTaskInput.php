@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置<p>转码后的视频的起始时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li><li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li><li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
  * @method float getEndTimeOffset() 获取<p>转码后视频的终止时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li><li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li><li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置<p>转码后视频的终止时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li><li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li><li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+ * @method OverrideTranscodeParameter getOverrideParameter() 获取<p>自定义视频转码参数。</p>
+ * @method void setOverrideParameter(OverrideTranscodeParameter $OverrideParameter) 设置<p>自定义视频转码参数。</p>
  * @method array getSubtitleInfoSet() 获取<p>字幕压制信息列表。最大可支持 2 个。</p>
  * @method void setSubtitleInfoSet(array $SubtitleInfoSet) 设置<p>字幕压制信息列表。最大可支持 2 个。</p>
  */
@@ -89,6 +91,11 @@ class TranscodeTaskInput extends AbstractModel
     public $EndTimeOffset;
 
     /**
+     * @var OverrideTranscodeParameter <p>自定义视频转码参数。</p>
+     */
+    public $OverrideParameter;
+
+    /**
      * @var array <p>字幕压制信息列表。最大可支持 2 个。</p>
      */
     public $SubtitleInfoSet;
@@ -103,6 +110,7 @@ class TranscodeTaskInput extends AbstractModel
      * @param array $HeadTailSet <p>片头片尾列表，支持多片头片尾，最大可支持 10 个。</p>
      * @param float $StartTimeOffset <p>转码后的视频的起始时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li><li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li><li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
      * @param float $EndTimeOffset <p>转码后视频的终止时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li><li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li><li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+     * @param OverrideTranscodeParameter $OverrideParameter <p>自定义视频转码参数。</p>
      * @param array $SubtitleInfoSet <p>字幕压制信息列表。最大可支持 2 个。</p>
      */
     function __construct()
@@ -170,6 +178,11 @@ class TranscodeTaskInput extends AbstractModel
 
         if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
             $this->EndTimeOffset = $param["EndTimeOffset"];
+        }
+
+        if (array_key_exists("OverrideParameter",$param) and $param["OverrideParameter"] !== null) {
+            $this->OverrideParameter = new OverrideTranscodeParameter();
+            $this->OverrideParameter->deserialize($param["OverrideParameter"]);
         }
 
         if (array_key_exists("SubtitleInfoSet",$param) and $param["SubtitleInfoSet"] !== null) {

@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警条件模板
  *
- * @method string getTemplateName() 获取模板名称
+ * @method string getTemplateName() 获取<p>模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateName(string $TemplateName) 设置模板名称
+ * @method void setTemplateName(string $TemplateName) 设置<p>模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AlarmPolicyCondition getCondition() 获取指标触发条件
+ * @method AlarmPolicyCondition getCondition() 获取<p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCondition(AlarmPolicyCondition $Condition) 设置指标触发条件
+ * @method void setCondition(AlarmPolicyCondition $Condition) 设置<p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AlarmPolicyEventCondition getEventCondition() 获取事件触发条件
+ * @method AlarmPolicyEventCondition getEventCondition() 获取<p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) 设置事件触发条件
+ * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) 设置<p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConditionsTemp extends AbstractModel
 {
     /**
-     * @var string 模板名称
+     * @var string <p>模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateName;
 
     /**
-     * @var AlarmPolicyCondition 指标触发条件
+     * @var AlarmPolicyCondition <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Condition;
 
     /**
-     * @var AlarmPolicyEventCondition 事件触发条件
+     * @var AlarmPolicyEventCondition <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventCondition;
 
     /**
-     * @param string $TemplateName 模板名称
+     * @param string $TemplateName <p>模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmPolicyCondition $Condition 指标触发条件
+     * @param AlarmPolicyCondition $Condition <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmPolicyEventCondition $EventCondition 事件触发条件
+     * @param AlarmPolicyEventCondition $EventCondition <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

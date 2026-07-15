@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 命中规则项
  *
- * @method string getRuleID() 获取融合规则编号（9xxxx），可与 RuleCatalog 交叉引用
- * @method void setRuleID(string $RuleID) 设置融合规则编号（9xxxx），可与 RuleCatalog 交叉引用
- * @method string getDescription() 获取当前命中规则的具体发现描述，包含文件位置、行为特征、风险点等信息
- * @method void setDescription(string $Description) 设置当前命中规则的具体发现描述，包含文件位置、行为特征、风险点等信息
+ * @method string getRuleID() 获取融合规则编号
+参数格式：形如 9xxxx
+ * @method void setRuleID(string $RuleID) 设置融合规则编号
+参数格式：形如 9xxxx
+ * @method string getDescription() 获取风险发现描述
+ * @method void setDescription(string $Description) 设置风险发现描述
  */
 class SkillScanRuleHit extends AbstractModel
 {
     /**
-     * @var string 融合规则编号（9xxxx），可与 RuleCatalog 交叉引用
+     * @var string 融合规则编号
+参数格式：形如 9xxxx
      */
     public $RuleID;
 
     /**
-     * @var string 当前命中规则的具体发现描述，包含文件位置、行为特征、风险点等信息
+     * @var string 风险发现描述
      */
     public $Description;
 
     /**
-     * @param string $RuleID 融合规则编号（9xxxx），可与 RuleCatalog 交叉引用
-     * @param string $Description 当前命中规则的具体发现描述，包含文件位置、行为特征、风险点等信息
+     * @param string $RuleID 融合规则编号
+参数格式：形如 9xxxx
+     * @param string $Description 风险发现描述
      */
     function __construct()
     {

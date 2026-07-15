@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNodePool返回参数结构体
  *
- * @method string getNodePoolId() 获取节点池 ID
- * @method void setNodePoolId(string $NodePoolId) 设置节点池 ID
+ * @method string getNodePoolId() 获取<p>节点池 ID</p>
+ * @method void setNodePoolId(string $NodePoolId) 设置<p>节点池 ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateNodePoolResponse extends AbstractModel
 {
     /**
-     * @var string 节点池 ID
+     * @var string <p>节点池 ID</p>
      */
     public $NodePoolId;
 
@@ -38,7 +38,7 @@ class CreateNodePoolResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $NodePoolId 节点池 ID
+     * @param string $NodePoolId <p>节点池 ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

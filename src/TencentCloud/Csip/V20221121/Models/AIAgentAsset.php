@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExposureStatus(string $ExposureStatus) 设置<p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
  * @method string getMetadataRiskURL() 获取<p>metadata 有风险时对应路径</p>
  * @method void setMetadataRiskURL(string $MetadataRiskURL) 设置<p>metadata 有风险时对应路径</p>
- * @method SkillState getSkillState() 获取<p>无</p>
- * @method void setSkillState(SkillState $SkillState) 设置<p>无</p>
+ * @method SkillState getSkillState() 获取<p>凭据 Skill 安装状态</p>
+ * @method void setSkillState(SkillState $SkillState) 设置<p>凭据 Skill 安装状态</p>
  * @method TrafficPluginState getTrafficPluginState() 获取<p>流量沙箱插件状态</p>
  * @method void setTrafficPluginState(TrafficPluginState $TrafficPluginState) 设置<p>流量沙箱插件状态</p>
  * @method array getTrafficRuleState() 获取<p>流量沙箱规则状态</p>
@@ -109,7 +109,7 @@ class AIAgentAsset extends AbstractModel
     public $MetadataRiskURL;
 
     /**
-     * @var SkillState <p>无</p>
+     * @var SkillState <p>凭据 Skill 安装状态</p>
      */
     public $SkillState;
 
@@ -140,7 +140,7 @@ class AIAgentAsset extends AbstractModel
      * @param string $IdentityMethod <p>检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出</p>
      * @param string $ExposureStatus <p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
      * @param string $MetadataRiskURL <p>metadata 有风险时对应路径</p>
-     * @param SkillState $SkillState <p>无</p>
+     * @param SkillState $SkillState <p>凭据 Skill 安装状态</p>
      * @param TrafficPluginState $TrafficPluginState <p>流量沙箱插件状态</p>
      * @param array $TrafficRuleState <p>流量沙箱规则状态</p>
      * @param CommandPluginState $CommandPluginState <p>命令沙箱插件状态</p>

@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerId(string $ServerId) 设置<p>MCP服务ID</p>
  * @method string getAuthType() 获取<p>认证类型</p><p>枚举值：</p><ul><li>None： 无认证</li><li>ApiKey： API Key认证</li></ul>
  * @method void setAuthType(string $AuthType) 设置<p>认证类型</p><p>枚举值：</p><ul><li>None： 无认证</li><li>ApiKey： API Key认证</li></ul>
+ * @method AIGWJWTAuthPluginConfig getJWTAuthConfig() 获取<p>JWT认证配置</p>
+ * @method void setJWTAuthConfig(AIGWJWTAuthPluginConfig $JWTAuthConfig) 设置<p>JWT认证配置</p>
+ * @method AIGWOAuthAuthPluginConfig getOAuthAuthConfig() 获取<p>OAuth认证配置</p>
+ * @method void setOAuthAuthConfig(AIGWOAuthAuthPluginConfig $OAuthAuthConfig) 设置<p>OAuth认证配置</p>
+ * @method AIGWOIDCAuthPluginConfig getOIDCAuthConfig() 获取<p>OIDC认证配置</p>
+ * @method void setOIDCAuthConfig(AIGWOIDCAuthPluginConfig $OIDCAuthConfig) 设置<p>OIDC认证配置</p>
  */
 class ModifyCloudNativeAPIGatewayMCPServerAuthRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class ModifyCloudNativeAPIGatewayMCPServerAuthRequest extends AbstractModel
     public $AuthType;
 
     /**
+     * @var AIGWJWTAuthPluginConfig <p>JWT认证配置</p>
+     */
+    public $JWTAuthConfig;
+
+    /**
+     * @var AIGWOAuthAuthPluginConfig <p>OAuth认证配置</p>
+     */
+    public $OAuthAuthConfig;
+
+    /**
+     * @var AIGWOIDCAuthPluginConfig <p>OIDC认证配置</p>
+     */
+    public $OIDCAuthConfig;
+
+    /**
      * @param string $GatewayId <p>网关实例ID</p>
      * @param string $ServerId <p>MCP服务ID</p>
      * @param string $AuthType <p>认证类型</p><p>枚举值：</p><ul><li>None： 无认证</li><li>ApiKey： API Key认证</li></ul>
+     * @param AIGWJWTAuthPluginConfig $JWTAuthConfig <p>JWT认证配置</p>
+     * @param AIGWOAuthAuthPluginConfig $OAuthAuthConfig <p>OAuth认证配置</p>
+     * @param AIGWOIDCAuthPluginConfig $OIDCAuthConfig <p>OIDC认证配置</p>
      */
     function __construct()
     {
@@ -72,6 +96,21 @@ class ModifyCloudNativeAPIGatewayMCPServerAuthRequest extends AbstractModel
 
         if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
             $this->AuthType = $param["AuthType"];
+        }
+
+        if (array_key_exists("JWTAuthConfig",$param) and $param["JWTAuthConfig"] !== null) {
+            $this->JWTAuthConfig = new AIGWJWTAuthPluginConfig();
+            $this->JWTAuthConfig->deserialize($param["JWTAuthConfig"]);
+        }
+
+        if (array_key_exists("OAuthAuthConfig",$param) and $param["OAuthAuthConfig"] !== null) {
+            $this->OAuthAuthConfig = new AIGWOAuthAuthPluginConfig();
+            $this->OAuthAuthConfig->deserialize($param["OAuthAuthConfig"]);
+        }
+
+        if (array_key_exists("OIDCAuthConfig",$param) and $param["OIDCAuthConfig"] !== null) {
+            $this->OIDCAuthConfig = new AIGWOIDCAuthPluginConfig();
+            $this->OIDCAuthConfig->deserialize($param["OIDCAuthConfig"]);
         }
     }
 }

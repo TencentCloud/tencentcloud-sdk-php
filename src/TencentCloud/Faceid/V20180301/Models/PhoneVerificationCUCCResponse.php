@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PhoneVerificationCUCC返回参数结构体
  *
- * @method string getResult() 获取<p>认证结果码，收费情况如下。- 收费结果码：0: 认证通过。-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。- 不收费结果码：-6: 手机号码不合法。-7: 身份证号码有误。-8: 姓名校验不通过。-9: 没有记录。-11: 验证中心服务繁忙。-13：该号段不支持验证</p>
- * @method void setResult(string $Result) 设置<p>认证结果码，收费情况如下。- 收费结果码：0: 认证通过。-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。- 不收费结果码：-6: 手机号码不合法。-7: 身份证号码有误。-8: 姓名校验不通过。-9: 没有记录。-11: 验证中心服务繁忙。-13：该号段不支持验证</p>
+ * @method string getResult() 获取<p>认证结果码，收费情况如下。</p><ul><li>收费结果码：</li><li>0: 认证通过。</li><li>-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。</li><li>-不收费结果码：</li><li>-6: 手机号码不合法。</li><li>-7: 身份证号码有误。</li><li>-8: 姓名校验不通过。</li><li>-9: 没有记录。</li><li>-11: 验证中心服务繁忙。</li><li>-13：该号段不支持验证</li></ul>
+ * @method void setResult(string $Result) 设置<p>认证结果码，收费情况如下。</p><ul><li>收费结果码：</li><li>0: 认证通过。</li><li>-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。</li><li>-不收费结果码：</li><li>-6: 手机号码不合法。</li><li>-7: 身份证号码有误。</li><li>-8: 姓名校验不通过。</li><li>-9: 没有记录。</li><li>-11: 验证中心服务繁忙。</li><li>-13：该号段不支持验证</li></ul>
  * @method string getIsp() 获取<p>运营商名称。</p><ul><li>取值范围为[&quot;移动&quot;,&quot;联通&quot;,&quot;电信&quot;,&quot;&quot;]。</li></ul>
  * @method void setIsp(string $Isp) 设置<p>运营商名称。</p><ul><li>取值范围为[&quot;移动&quot;,&quot;联通&quot;,&quot;电信&quot;,&quot;&quot;]。</li></ul>
  * @method string getDescription() 获取<p>业务结果描述。</p>
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class PhoneVerificationCUCCResponse extends AbstractModel
 {
     /**
-     * @var string <p>认证结果码，收费情况如下。- 收费结果码：0: 认证通过。-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。- 不收费结果码：-6: 手机号码不合法。-7: 身份证号码有误。-8: 姓名校验不通过。-9: 没有记录。-11: 验证中心服务繁忙。-13：该号段不支持验证</p>
+     * @var string <p>认证结果码，收费情况如下。</p><ul><li>收费结果码：</li><li>0: 认证通过。</li><li>-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。</li><li>-不收费结果码：</li><li>-6: 手机号码不合法。</li><li>-7: 身份证号码有误。</li><li>-8: 姓名校验不通过。</li><li>-9: 没有记录。</li><li>-11: 验证中心服务繁忙。</li><li>-13：该号段不支持验证</li></ul>
      */
     public $Result;
 
@@ -52,7 +52,7 @@ class PhoneVerificationCUCCResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result <p>认证结果码，收费情况如下。- 收费结果码：0: 认证通过。-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。- 不收费结果码：-6: 手机号码不合法。-7: 身份证号码有误。-8: 姓名校验不通过。-9: 没有记录。-11: 验证中心服务繁忙。-13：该号段不支持验证</p>
+     * @param string $Result <p>认证结果码，收费情况如下。</p><ul><li>收费结果码：</li><li>0: 认证通过。</li><li>-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。</li><li>-不收费结果码：</li><li>-6: 手机号码不合法。</li><li>-7: 身份证号码有误。</li><li>-8: 姓名校验不通过。</li><li>-9: 没有记录。</li><li>-11: 验证中心服务繁忙。</li><li>-13：该号段不支持验证</li></ul>
      * @param string $Isp <p>运营商名称。</p><ul><li>取值范围为[&quot;移动&quot;,&quot;联通&quot;,&quot;电信&quot;,&quot;&quot;]。</li></ul>
      * @param string $Description <p>业务结果描述。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

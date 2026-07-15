@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置<p>类型</p><p>枚举值：</p><ul><li>0： 内置</li><li>1： 自定义</li></ul>
  * @method string getUpdateTime() 获取<p>更新时间</p>
  * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
- * @method array getComplianceRelations() 获取<p>无</p>
- * @method void setComplianceRelations(array $ComplianceRelations) 设置<p>无</p>
+ * @method array getComplianceRelations() 获取<p>关联的识别模板信息</p>
+ * @method void setComplianceRelations(array $ComplianceRelations) 设置<p>关联的识别模板信息</p>
  */
 class DspmIdentifyCategoryItem extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DspmIdentifyCategoryItem extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var array <p>无</p>
+     * @var array <p>关联的识别模板信息</p>
      */
     public $ComplianceRelations;
 
@@ -63,7 +63,7 @@ class DspmIdentifyCategoryItem extends AbstractModel
      * @param string $Name <p>分类名称</p>
      * @param integer $Type <p>类型</p><p>枚举值：</p><ul><li>0： 内置</li><li>1： 自定义</li></ul>
      * @param string $UpdateTime <p>更新时间</p>
-     * @param array $ComplianceRelations <p>无</p>
+     * @param array $ComplianceRelations <p>关联的识别模板信息</p>
      */
     function __construct()
     {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLevelItems(array $LevelItems) 设置<p>级别信息</p>
  * @method string getUpdateTime() 获取<p>更新时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
  * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
- * @method array getComplianceRelations() 获取<p>无</p>
- * @method void setComplianceRelations(array $ComplianceRelations) 设置<p>无</p>
+ * @method array getComplianceRelations() 获取<p>关联的识别模板信息</p>
+ * @method void setComplianceRelations(array $ComplianceRelations) 设置<p>关联的识别模板信息</p>
  */
 class DspmIdentifyLevelGroupItem extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DspmIdentifyLevelGroupItem extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var array <p>无</p>
+     * @var array <p>关联的识别模板信息</p>
      */
     public $ComplianceRelations;
 
@@ -79,7 +79,7 @@ class DspmIdentifyLevelGroupItem extends AbstractModel
      * @param integer $Type <p>级别组类型</p><p>枚举值：</p><ul><li>0： 内置</li><li>1： 自定义</li></ul>
      * @param array $LevelItems <p>级别信息</p>
      * @param string $UpdateTime <p>更新时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
-     * @param array $ComplianceRelations <p>无</p>
+     * @param array $ComplianceRelations <p>关联的识别模板信息</p>
      */
     function __construct()
     {

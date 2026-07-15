@@ -33,6 +33,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) 创建用户自定义内容分析模板，数量上限：50。
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) 创建用户自定义内容识别模板，数量上限：50。
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) 创建转自适应码流模板，数量上限：100。
+ * @method Models\CreateAiDramaTaskResponse CreateAiDramaTask(Models\CreateAiDramaTaskRequest $req) Ai漫剧工作流，输入剧本，自动拆分分镜，生成Ai漫剧
  * @method Models\CreateAigcAudioTaskResponse CreateAigcAudioTask(Models\CreateAigcAudioTaskRequest $req) 调用该接口，用于创建AI生音频任务。
  * @method Models\CreateAigcImageTaskResponse CreateAigcImageTask(Models\CreateAigcImageTaskRequest $req) 调用该接口用于创建AIGC生图片任务。
  * @method Models\CreateAigcVideoTaskResponse CreateAigcVideoTask(Models\CreateAigcVideoTaskRequest $req) 调用该接口，用于创建AI生视频任务。
@@ -83,6 +84,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateTranscodeTemplateResponse CreateTranscodeTemplate(Models\CreateTranscodeTemplateRequest $req) 创建用户自定义转码模板，数量上限：1000
  * @method Models\CreateVideoDatabaseEntryTaskResponse CreateVideoDatabaseEntryTask(Models\CreateVideoDatabaseEntryTaskRequest $req) 对URL链接或COS中的视频发起入库任务。
 可选在任务完成后向回调方发送任务完成状态信息。
+ * @method Models\CreateVideoRedrawTaskResponse CreateVideoRedrawTask(Models\CreateVideoRedrawTaskRequest $req) 创建AIGC转绘任务
  * @method Models\CreateVideoSearchTaskResponse CreateVideoSearchTask(Models\CreateVideoSearchTaskRequest $req) 使用检索值检索库中最接近检索值的若干视频。
  * @method Models\CreateWatermarkTemplateResponse CreateWatermarkTemplate(Models\CreateWatermarkTemplateRequest $req) 创建用户自定义水印模板，数量上限：1000。
  * @method Models\CreateWordSamplesResponse CreateWordSamples(Models\CreateWordSamplesRequest $req) 该接口用于批量创建关键词样本，样本用于通过OCR、ASR技术，进行不适宜内容识别、内容识别等视频处理。

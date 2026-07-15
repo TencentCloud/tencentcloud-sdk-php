@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCategoryType(integer $CategoryType) 设置<p>分类类型</p><p>枚举值：</p><ul><li>0： 内置</li><li>1： 自定义</li></ul>
  * @method integer getCategoryGrade() 获取<p>分类层级</p><p>单位：层</p>
  * @method void setCategoryGrade(integer $CategoryGrade) 设置<p>分类层级</p><p>单位：层</p>
- * @method array getRuleRelations() 获取<p>无</p>
- * @method void setRuleRelations(array $RuleRelations) 设置<p>无</p>
- * @method array getChildren() 获取<p>无</p>
- * @method void setChildren(array $Children) 设置<p>无</p>
+ * @method array getRuleRelations() 获取<p>关联的数据项信息</p>
+ * @method void setRuleRelations(array $RuleRelations) 设置<p>关联的数据项信息</p>
+ * @method array getChildren() 获取<p>子节点信息</p>
+ * @method void setChildren(array $Children) 设置<p>子节点信息</p>
  */
 class DspmIdentifyComplianceCategoryRelation extends AbstractModel
 {
@@ -70,12 +70,12 @@ class DspmIdentifyComplianceCategoryRelation extends AbstractModel
     public $CategoryGrade;
 
     /**
-     * @var array <p>无</p>
+     * @var array <p>关联的数据项信息</p>
      */
     public $RuleRelations;
 
     /**
-     * @var array <p>无</p>
+     * @var array <p>子节点信息</p>
      */
     public $Children;
 
@@ -86,8 +86,8 @@ class DspmIdentifyComplianceCategoryRelation extends AbstractModel
      * @param boolean $IsLeaf <p>是否叶子节点</p>
      * @param integer $CategoryType <p>分类类型</p><p>枚举值：</p><ul><li>0： 内置</li><li>1： 自定义</li></ul>
      * @param integer $CategoryGrade <p>分类层级</p><p>单位：层</p>
-     * @param array $RuleRelations <p>无</p>
-     * @param array $Children <p>无</p>
+     * @param array $RuleRelations <p>关联的数据项信息</p>
+     * @param array $Children <p>子节点信息</p>
      */
     function __construct()
     {

@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAddOnAudios() 获取<p>外挂音频功能，指定要插入的音频文件。</p>
  * @method void setAddOnAudios(array $AddOnAudios) 设置<p>外挂音频功能，指定要插入的音频文件。</p>
+ * @method array getStdExtStreamInfos() 获取<p>非空时直接替换模板的 StreamInfos 字段，字段格式与创建自适应模板时的 StreamInfos 完全一致</p>
+ * @method void setStdExtStreamInfos(array $StdExtStreamInfos) 设置<p>非空时直接替换模板的 StreamInfos 字段，字段格式与创建自适应模板时的 StreamInfos 完全一致</p>
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -140,6 +142,11 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $AddOnAudios;
 
     /**
+     * @var array <p>非空时直接替换模板的 StreamInfos 字段，字段格式与创建自适应模板时的 StreamInfos 完全一致</p>
+     */
+    public $StdExtStreamInfos;
+
+    /**
      * @param integer $Definition <p>转自适应码流模板 ID。</p>
      * @param array $WatermarkSet <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
      * @param BlindWatermarkInput $BlindWatermark <p>数字水印参数</p>
@@ -160,6 +167,7 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
      * @param array $KeyPTSList <p>指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差&lt;=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AddOnAudios <p>外挂音频功能，指定要插入的音频文件。</p>
+     * @param array $StdExtStreamInfos <p>非空时直接替换模板的 StreamInfos 字段，字段格式与创建自适应模板时的 StreamInfos 完全一致</p>
      */
     function __construct()
     {
@@ -246,6 +254,15 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
                 $obj = new AddOnAudio();
                 $obj->deserialize($value);
                 array_push($this->AddOnAudios, $obj);
+            }
+        }
+
+        if (array_key_exists("StdExtStreamInfos",$param) and $param["StdExtStreamInfos"] !== null) {
+            $this->StdExtStreamInfos = [];
+            foreach ($param["StdExtStreamInfos"] as $key => $value){
+                $obj = new AdaptiveStreamTemplate();
+                $obj->deserialize($value);
+                array_push($this->StdExtStreamInfos, $obj);
             }
         }
     }

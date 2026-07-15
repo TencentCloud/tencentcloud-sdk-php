@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 存储桶id
  *
- * @method string getAppId() 获取appid
- * @method void setAppId(string $AppId) 设置appid
- * @method integer getIsAutoMonitor() 获取
- * @method void setIsAutoMonitor(integer $IsAutoMonitor) 设置
- * @method array getBucketIdSet() 获取bucket id集合
- * @method void setBucketIdSet(array $BucketIdSet) 设置bucket id集合
+ * @method string getAppId() 获取<p>appid</p>
+ * @method void setAppId(string $AppId) 设置<p>appid</p>
+ * @method integer getIsAutoMonitor() 获取<p>是否自动监测</p>
+ * @method void setIsAutoMonitor(integer $IsAutoMonitor) 设置<p>是否自动监测</p>
+ * @method array getBucketIdSet() 获取<p>bucket id集合</p>
+ * @method void setBucketIdSet(array $BucketIdSet) 设置<p>bucket id集合</p>
  */
 class CosBucketId extends AbstractModel
 {
     /**
-     * @var string appid
+     * @var string <p>appid</p>
      */
     public $AppId;
 
     /**
-     * @var integer 
+     * @var integer <p>是否自动监测</p>
      */
     public $IsAutoMonitor;
 
     /**
-     * @var array bucket id集合
+     * @var array <p>bucket id集合</p>
      */
     public $BucketIdSet;
 
     /**
-     * @param string $AppId appid
-     * @param integer $IsAutoMonitor 
-     * @param array $BucketIdSet bucket id集合
+     * @param string $AppId <p>appid</p>
+     * @param integer $IsAutoMonitor <p>是否自动监测</p>
+     * @param array $BucketIdSet <p>bucket id集合</p>
      */
     function __construct()
     {

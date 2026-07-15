@@ -20,15 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * kubernetes Taint
  *
+ * @method string getEffect() 获取Taint的Effect
+ * @method void setEffect(string $Effect) 设置Taint的Effect
  * @method string getKey() 获取Taint的Key
  * @method void setKey(string $Key) 设置Taint的Key
  * @method string getValue() 获取Taint的Value
  * @method void setValue(string $Value) 设置Taint的Value
- * @method string getEffect() 获取Taint的Effect
- * @method void setEffect(string $Effect) 设置Taint的Effect
  */
 class Taint extends AbstractModel
 {
+    /**
+     * @var string Taint的Effect
+     */
+    public $Effect;
+
     /**
      * @var string Taint的Key
      */
@@ -40,14 +45,9 @@ class Taint extends AbstractModel
     public $Value;
 
     /**
-     * @var string Taint的Effect
-     */
-    public $Effect;
-
-    /**
+     * @param string $Effect Taint的Effect
      * @param string $Key Taint的Key
      * @param string $Value Taint的Value
-     * @param string $Effect Taint的Effect
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class Taint extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Effect",$param) and $param["Effect"] !== null) {
+            $this->Effect = $param["Effect"];
+        }
+
         if (array_key_exists("Key",$param) and $param["Key"] !== null) {
             $this->Key = $param["Key"];
         }
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
-        }
-
-        if (array_key_exists("Effect",$param) and $param["Effect"] !== null) {
-            $this->Effect = $param["Effect"];
         }
     }
 }

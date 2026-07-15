@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDataReportCountV2请求参数结构体
  *
- * @method integer getStartTime() 获取开始时间
- * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
- * @method integer getID() 获取项目ID
- * @method void setID(integer $ID) 设置项目ID
- * @method string getReportType() 获取上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
- * @method void setReportType(string $ReportType) 设置上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
- * @method string getInstanceID() 获取实例ID
- * @method void setInstanceID(string $InstanceID) 设置实例ID
+ * @method integer getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间</p>
+ * @method integer getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间</p>
+ * @method integer getID() 获取<p>项目ID</p>
+ * @method void setID(integer $ID) 设置<p>项目ID</p>
+ * @method string getReportType() 获取<p>上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）</p>
+ * @method void setReportType(string $ReportType) 设置<p>上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）</p>
+ * @method string getInstanceID() 获取<p>实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
  */
 class DescribeDataReportCountV2Request extends AbstractModel
 {
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间
+     * @var integer <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ID;
 
     /**
-     * @var string 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
+     * @var string <p>上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）</p>
      */
     public $ReportType;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceID;
 
     /**
-     * @param integer $StartTime 开始时间
-     * @param integer $EndTime 结束时间
-     * @param integer $ID 项目ID
-     * @param string $ReportType 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
-     * @param string $InstanceID 实例ID
+     * @param integer $StartTime <p>开始时间</p>
+     * @param integer $EndTime <p>结束时间</p>
+     * @param integer $ID <p>项目ID</p>
+     * @param string $ReportType <p>上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）</p>
+     * @param string $InstanceID <p>实例ID</p>
      */
     function __construct()
     {

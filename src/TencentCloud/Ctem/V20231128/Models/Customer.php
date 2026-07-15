@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSingleIPTaskLimit(integer $SingleIPTaskLimit) 设置<p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p>
  * @method integer getPortScanQps() 获取<p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p>
  * @method void setPortScanQps(integer $PortScanQps) 设置<p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p>
+ * @method ScanPriorityDisplay getScanPriority() 获取<p>扫描优先级配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScanPriority(ScanPriorityDisplay $ScanPriority) 设置<p>扫描优先级配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Customer extends AbstractModel
 {
@@ -202,6 +206,12 @@ class Customer extends AbstractModel
     public $PortScanQps;
 
     /**
+     * @var ScanPriorityDisplay <p>扫描优先级配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScanPriority;
+
+    /**
      * @param integer $Id <p>企业ID</p>
      * @param string $Name <p>企业名称</p>
      * @param integer $Percent <p>股权占比</p>
@@ -228,6 +238,8 @@ class Customer extends AbstractModel
      * @param boolean $EnableGroupMemberDiscovered <p>是否识别集团成员</p>
      * @param integer $SingleIPTaskLimit <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p>
      * @param integer $PortScanQps <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p>
+     * @param ScanPriorityDisplay $ScanPriority <p>扫描优先级配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -340,6 +352,11 @@ class Customer extends AbstractModel
 
         if (array_key_exists("PortScanQps",$param) and $param["PortScanQps"] !== null) {
             $this->PortScanQps = $param["PortScanQps"];
+        }
+
+        if (array_key_exists("ScanPriority",$param) and $param["ScanPriority"] !== null) {
+            $this->ScanPriority = new ScanPriorityDisplay();
+            $this->ScanPriority->deserialize($param["ScanPriority"]);
         }
     }
 }

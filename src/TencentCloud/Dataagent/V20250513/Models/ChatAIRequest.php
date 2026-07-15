@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldRecordId(string $OldRecordId) 设置<p>需要重新生成答案的记录ID</p>
  * @method array getKnowledgeBaseIds() 获取<p>知识库id列表</p>
  * @method void setKnowledgeBaseIds(array $KnowledgeBaseIds) 设置<p>知识库id列表</p>
+ * @method string getArchVersion() 获取<p>版本信息</p>
+ * @method void setArchVersion(string $ArchVersion) 设置<p>版本信息</p>
  */
 class ChatAIRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ChatAIRequest extends AbstractModel
     public $KnowledgeBaseIds;
 
     /**
+     * @var string <p>版本信息</p>
+     */
+    public $ArchVersion;
+
+    /**
      * @param string $SessionId <p>会话ID</p>
      * @param string $InstanceId <p>实例ID</p>
      * @param string $Question <p>问题内容</p>
@@ -104,6 +111,7 @@ class ChatAIRequest extends AbstractModel
      * @param string $AgentType <p>agent类型</p>
      * @param string $OldRecordId <p>需要重新生成答案的记录ID</p>
      * @param array $KnowledgeBaseIds <p>知识库id列表</p>
+     * @param string $ArchVersion <p>版本信息</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ChatAIRequest extends AbstractModel
 
         if (array_key_exists("KnowledgeBaseIds",$param) and $param["KnowledgeBaseIds"] !== null) {
             $this->KnowledgeBaseIds = $param["KnowledgeBaseIds"];
+        }
+
+        if (array_key_exists("ArchVersion",$param) and $param["ArchVersion"] !== null) {
+            $this->ArchVersion = $param["ArchVersion"];
         }
     }
 }

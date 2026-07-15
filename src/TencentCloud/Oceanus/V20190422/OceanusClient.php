@@ -30,6 +30,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\CreateFolderResponse CreateFolder(Models\CreateFolderRequest $req) 作业列表页面新建文件夹请求
  * @method Models\CreateJobResponse CreateJob(Models\CreateJobRequest $req) 新建作业接口，一个 AppId 最多允许创建1000个作业
  * @method Models\CreateJobConfigResponse CreateJobConfig(Models\CreateJobConfigRequest $req) 创建作业配置，一个作业最多有100个配置版本
+ * @method Models\CreateOceanusClusterResponse CreateOceanusCluster(Models\CreateOceanusClusterRequest $req) 创建Oceanus集群
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建资源接口
  * @method Models\CreateResourceConfigResponse CreateResourceConfig(Models\CreateResourceConfigRequest $req) 创建资源配置接口
  * @method Models\CreateVariableResponse CreateVariable(Models\CreateVariableRequest $req) 创建变量
@@ -37,6 +38,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DeleteFoldersResponse DeleteFolders(Models\DeleteFoldersRequest $req) 作业列表删除文件夹
  * @method Models\DeleteJobConfigsResponse DeleteJobConfigs(Models\DeleteJobConfigsRequest $req) 删除作业配置
  * @method Models\DeleteJobsResponse DeleteJobs(Models\DeleteJobsRequest $req) 批量删除作业接口，批量操作数量上限20
+ * @method Models\DeleteOceanusClusterResponse DeleteOceanusCluster(Models\DeleteOceanusClusterRequest $req) 销毁Oceanus集群
  * @method Models\DeleteResourceConfigsResponse DeleteResourceConfigs(Models\DeleteResourceConfigsRequest $req) 删除资源版本
  * @method Models\DeleteResourcesResponse DeleteResources(Models\DeleteResourcesRequest $req) 删除资源接口
  * @method Models\DeleteTableConfigResponse DeleteTableConfig(Models\DeleteTableConfigRequest $req) 删除作业表配置
@@ -73,8 +75,10 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
 假设作业暂停状态，则将作业更改为停止状态，中间状态丢失
  * @method Models\ModifyWorkSpaceResponse ModifyWorkSpace(Models\ModifyWorkSpaceRequest $req) 修改工作空间
  * @method Models\ParseConnectorResponse ParseConnector(Models\ParseConnectorRequest $req) 解析用户上传connector
+ * @method Models\RenewOceanusClusterResponse RenewOceanusCluster(Models\RenewOceanusClusterRequest $req) 续费Oceanus集群
  * @method Models\RunJobsResponse RunJobs(Models\RunJobsRequest $req) 批量启动或者恢复作业，批量操作数量上限20
  * @method Models\RunSqlGatewayStatementResponse RunSqlGatewayStatement(Models\RunSqlGatewayStatementRequest $req) 通过Sql gateway执行satement
+ * @method Models\ScaleOceanusClusterResponse ScaleOceanusCluster(Models\ScaleOceanusClusterRequest $req) 扩缩容Oceanus集群
  * @method Models\StopJobsResponse StopJobs(Models\StopJobsRequest $req) 批量停止作业，批量操作数量上限为20
  * @method Models\TriggerJobSavepointResponse TriggerJobSavepoint(Models\TriggerJobSavepointRequest $req) 触发Savepoint
  */

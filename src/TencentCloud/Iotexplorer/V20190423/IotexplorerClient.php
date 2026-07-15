@@ -32,6 +32,9 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\BindDevicesResponse BindDevices(Models\BindDevicesRequest $req) 批量绑定子设备
  * @method Models\BindProductsResponse BindProducts(Models\BindProductsRequest $req) 批量绑定子产品。
  * @method Models\BindTWeTalkAIBotResponse BindTWeTalkAIBot(Models\BindTWeTalkAIBotRequest $req) 用于绑定一个产品和智能体。
+ * @method Models\BindTWeTalkAgentResponse BindTWeTalkAgent(Models\BindTWeTalkAgentRequest $req) 绑定智能体到产品或设备
+- `BindingScope=product` 时，`DeviceName` 必须为空。
+- `BindingScope=device` 时，`DeviceName` 必填。
  * @method Models\CallDeviceActionAsyncResponse CallDeviceActionAsync(Models\CallDeviceActionAsyncRequest $req) 提供给用户异步调用设备行为的能力
  * @method Models\CallDeviceActionSyncResponse CallDeviceActionSync(Models\CallDeviceActionSyncRequest $req) 为用户提供同步调用设备行为的能力。
  * @method Models\ChangeP2PRouteResponse ChangeP2PRoute(Models\ChangeP2PRouteRequest $req) p2p路线切换（此接口目前处于内测接口，可以联系申请加白 ）
@@ -65,6 +68,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateTWeSeeServiceResponse CreateTWeSeeService(Models\CreateTWeSeeServiceRequest $req) 开通 TWeSee 后付费服务
  * @method Models\CreateTWeSeeSubscriptionResponse CreateTWeSeeSubscription(Models\CreateTWeSeeSubscriptionRequest $req) 开通 TWeSee 预付费订阅
  * @method Models\CreateTWeTalkAIBotResponse CreateTWeTalkAIBot(Models\CreateTWeTalkAIBotRequest $req) 用于新增TWeTalk智能体。
+ * @method Models\CreateTWeTalkAgentResponse CreateTWeTalkAgent(Models\CreateTWeTalkAgentRequest $req) 新增TWeTalk智能体。
  * @method Models\CreateTWeTalkProductConfigResponse CreateTWeTalkProductConfig(Models\CreateTWeTalkProductConfigRequest $req) 用于配置TWeTalk服务连接产品配置信息。
  * @method Models\CreateTWeTalkProductConfigV2Response CreateTWeTalkProductConfigV2(Models\CreateTWeTalkProductConfigV2Request $req) 用于配置TWeTalk服务连接产品配置信息。
  * @method Models\CreateTopicPolicyResponse CreateTopicPolicy(Models\CreateTopicPolicyRequest $req) 本接口（CreateTopicPolicy）用于创建一个Topic
@@ -83,6 +87,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeleteStudioProductResponse DeleteStudioProduct(Models\DeleteStudioProductRequest $req) 提供删除某个项目下产品的能力
  * @method Models\DeleteTWeSeeCallbackResponse DeleteTWeSeeCallback(Models\DeleteTWeSeeCallbackRequest $req) 删除 TWeSee 回调目标
  * @method Models\DeleteTWeTalkAIBotResponse DeleteTWeTalkAIBot(Models\DeleteTWeTalkAIBotRequest $req) 用于删除TWeTalk智能体。
+ * @method Models\DeleteTWeTalkAgentResponse DeleteTWeTalkAgent(Models\DeleteTWeTalkAgentRequest $req) 用于删除TWeTalk智能体
  * @method Models\DeleteTWeTalkProductConfigV2Response DeleteTWeTalkProductConfigV2(Models\DeleteTWeTalkProductConfigV2Request $req) 用于删除配置TWeTalk服务连接产品配置信息。
  * @method Models\DeleteTopicPolicyResponse DeleteTopicPolicy(Models\DeleteTopicPolicyRequest $req) 本接口（DeleteTopicPolicy）用于删除Topic
  * @method Models\DeleteTopicRuleResponse DeleteTopicRule(Models\DeleteTopicRuleRequest $req) 删除规则。
@@ -150,6 +155,9 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeTWeSeeTaskResponse DescribeTWeSeeTask(Models\DescribeTWeSeeTaskRequest $req) 查询 TWeSee 任务详情
  * @method Models\DescribeTWeSeeTaskStatisticsResponse DescribeTWeSeeTaskStatistics(Models\DescribeTWeSeeTaskStatisticsRequest $req) 获取 TWeSee 任务统计数据
  * @method Models\DescribeTWeTalkAIBotResponse DescribeTWeTalkAIBot(Models\DescribeTWeTalkAIBotRequest $req) 用于查询TWeTalk智能体详情。
+ * @method Models\DescribeTWeTalkAgentResponse DescribeTWeTalkAgent(Models\DescribeTWeTalkAgentRequest $req) 用户查询TWeTalk智能体详情
+ * @method Models\DescribeTWeTalkAgentBindingResponse DescribeTWeTalkAgentBinding(Models\DescribeTWeTalkAgentBindingRequest $req) 查询智能体绑定关系
+ * @method Models\DescribeTWeTalkAgentListResponse DescribeTWeTalkAgentList(Models\DescribeTWeTalkAgentListRequest $req) 分页查询智能体列表
  * @method Models\DescribeTWeTalkProductConfigResponse DescribeTWeTalkProductConfig(Models\DescribeTWeTalkProductConfigRequest $req) 用于获取TWeTalk服务连接产品配置信息。
  * @method Models\DescribeTWeTalkProductConfigV2Response DescribeTWeTalkProductConfigV2(Models\DescribeTWeTalkProductConfigV2Request $req) 用于查询TWeTalk服务连接产品配置信息。
  * @method Models\DescribeTopicPolicyResponse DescribeTopicPolicy(Models\DescribeTopicPolicyRequest $req) 本接口（DescribeTopicPolicy）用于查看Topic详细信息
@@ -222,6 +230,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ModifyTWeSeeSubscriptionResponse ModifyTWeSeeSubscription(Models\ModifyTWeSeeSubscriptionRequest $req) 修改 TWeSee 预付费订阅
  * @method Models\ModifyTWeSeeSubscriptionRenewFlagResponse ModifyTWeSeeSubscriptionRenewFlag(Models\ModifyTWeSeeSubscriptionRenewFlagRequest $req) 修改 TWeSee 预付费订阅续费标识
  * @method Models\ModifyTWeTalkAIBotResponse ModifyTWeTalkAIBot(Models\ModifyTWeTalkAIBotRequest $req) 用于修改TWeTalk智能体。
+ * @method Models\ModifyTWeTalkAgentResponse ModifyTWeTalkAgent(Models\ModifyTWeTalkAgentRequest $req) 修改TWeTalk智能体
  * @method Models\ModifyTWeTalkProductConfigResponse ModifyTWeTalkProductConfig(Models\ModifyTWeTalkProductConfigRequest $req) 用于修改TWeTalk服务连接产品配置信息。
  * @method Models\ModifyTWeTalkProductConfigV2Response ModifyTWeTalkProductConfigV2(Models\ModifyTWeTalkProductConfigV2Request $req) 用于修改配置TWeTalk服务连接产品配置信息。
  * @method Models\ModifyTopicPolicyResponse ModifyTopicPolicy(Models\ModifyTopicPolicyRequest $req) 本接口（UpdateTopicPolicy）用于更新Topic信息
@@ -252,6 +261,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\UnbindDevicesResponse UnbindDevices(Models\UnbindDevicesRequest $req) 批量解绑子设备
  * @method Models\UnbindProductsResponse UnbindProducts(Models\UnbindProductsRequest $req) 批量解绑子产品。
  * @method Models\UnbindTWeTalkAIBotResponse UnbindTWeTalkAIBot(Models\UnbindTWeTalkAIBotRequest $req) 用于解除一个产品和智能体的绑定。
+ * @method Models\UnbindTWeTalkAgentResponse UnbindTWeTalkAgent(Models\UnbindTWeTalkAgentRequest $req) 解绑产品或设备上的智能体
  * @method Models\UpdateDeviceTWeCallAuthorizeStatusResponse UpdateDeviceTWeCallAuthorizeStatus(Models\UpdateDeviceTWeCallAuthorizeStatusRequest $req) 更新用户对设备的TweCall授权状态
  * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) 批量禁用启用设备
  * @method Models\UpdateFirmwareResponse UpdateFirmware(Models\UpdateFirmwareRequest $req) 本接口（UpdateFirmware）用于对指定设备发起固件升级请求

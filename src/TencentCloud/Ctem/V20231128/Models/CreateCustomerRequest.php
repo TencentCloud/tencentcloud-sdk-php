@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighRiskAck(boolean $HighRiskAck) 设置<p>任一速率超过保守值时必须为 true，否则参数错误</p>
  * @method array getScanRateAckChecklist() 获取<p>知情同意勾选清单，用于审计回放</p>
  * @method void setScanRateAckChecklist(array $ScanRateAckChecklist) 设置<p>知情同意勾选清单，用于审计回放</p>
+ * @method ScanPriorityReq getScanPriority() 获取<p>扫描优先级配置</p>
+ * @method void setScanPriority(ScanPriorityReq $ScanPriority) 设置<p>扫描优先级配置</p>
  */
 class CreateCustomerRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class CreateCustomerRequest extends AbstractModel
     public $ScanRateAckChecklist;
 
     /**
+     * @var ScanPriorityReq <p>扫描优先级配置</p>
+     */
+    public $ScanPriority;
+
+    /**
      * @param string $Name <p>企业名称</p>
      * @param string $ScanType <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
      * @param integer $Percent <p>百分比取值范围为30-100</p>
@@ -192,6 +199,7 @@ class CreateCustomerRequest extends AbstractModel
      * @param integer $SingleIPTaskLimit <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p><p>默认值：1</p>
      * @param boolean $HighRiskAck <p>任一速率超过保守值时必须为 true，否则参数错误</p>
      * @param array $ScanRateAckChecklist <p>知情同意勾选清单，用于审计回放</p>
+     * @param ScanPriorityReq $ScanPriority <p>扫描优先级配置</p>
      */
     function __construct()
     {
@@ -288,6 +296,11 @@ class CreateCustomerRequest extends AbstractModel
 
         if (array_key_exists("ScanRateAckChecklist",$param) and $param["ScanRateAckChecklist"] !== null) {
             $this->ScanRateAckChecklist = $param["ScanRateAckChecklist"];
+        }
+
+        if (array_key_exists("ScanPriority",$param) and $param["ScanPriority"] !== null) {
+            $this->ScanPriority = new ScanPriorityReq();
+            $this->ScanPriority->deserialize($param["ScanPriority"]);
         }
     }
 }

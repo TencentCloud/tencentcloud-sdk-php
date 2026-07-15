@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移
  * @method array getFilters() 获取查询数组
  * @method void setFilters(array $Filters) 设置查询数组
- * @method string getKeyword() 获取企业名称模糊搜索
- * @method void setKeyword(string $Keyword) 设置企业名称模糊搜索
+ * @method string getKeyword() 获取<p>企业名称模糊搜索</p>
+ * @method void setKeyword(string $Keyword) 设置<p>企业名称模糊搜索</p>
  */
 class DescribeCustomersRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeCustomersRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 企业名称模糊搜索
+     * @var string <p>企业名称模糊搜索</p>
      */
     public $Keyword;
 
@@ -55,7 +55,7 @@ class DescribeCustomersRequest extends AbstractModel
      * @param integer $Limit 分页大小
      * @param integer $Offset 分页偏移
      * @param array $Filters 查询数组
-     * @param string $Keyword 企业名称模糊搜索
+     * @param string $Keyword <p>企业名称模糊搜索</p>
      */
     function __construct()
     {

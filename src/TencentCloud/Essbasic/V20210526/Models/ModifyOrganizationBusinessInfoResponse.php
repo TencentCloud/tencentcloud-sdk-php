@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMessage(string $ErrorMessage) 设置<p>提示文案。<br>例如企业名称变更且存在未完结合同时返回「存在 X 份未完结的合同，请先撤销或者完成合同」。</p>
  * @method integer getUnfinishedCount() 获取<p>未完结合同总数。<br>仅当企业名称变更且存在未完结合同时有值。</p>
  * @method void setUnfinishedCount(integer $UnfinishedCount) 设置<p>未完结合同总数。<br>仅当企业名称变更且存在未完结合同时有值。</p>
- * @method array getFlowIds() 获取<p>SaaS 企业下未完结合同的 flowId 列表。</p>
- * @method void setFlowIds(array $FlowIds) 设置<p>SaaS 企业下未完结合同的 flowId 列表。</p>
- * @method array getChannelFlowIds() 获取<p>渠道子客企业下未完结合同的 flowId 列表。</p>
- * @method void setChannelFlowIds(array $ChannelFlowIds) 设置<p>渠道子客企业下未完结合同的 flowId 列表。</p>
+ * @method array getFlowIds() 获取<p>SaaS 企业下未完结合同的 flowId 列表。注:<code>SaaS企业下的合同ID可能无法查询，可通知子客企业去处理相应的合同</code></p>
+ * @method void setFlowIds(array $FlowIds) 设置<p>SaaS 企业下未完结合同的 flowId 列表。注:<code>SaaS企业下的合同ID可能无法查询，可通知子客企业去处理相应的合同</code></p>
+ * @method array getChannelFlowIds() 获取<p>渠道子客企业下未完结合同的 flowId 列表。注：<code>子客企业在其他渠道下的合同ID可能无法查询，可通知子客企业去处理其他渠道下相应的合同</code></p>
+ * @method void setChannelFlowIds(array $ChannelFlowIds) 设置<p>渠道子客企业下未完结合同的 flowId 列表。注：<code>子客企业在其他渠道下的合同ID可能无法查询，可通知子客企业去处理其他渠道下相应的合同</code></p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -51,12 +51,12 @@ class ModifyOrganizationBusinessInfoResponse extends AbstractModel
     public $UnfinishedCount;
 
     /**
-     * @var array <p>SaaS 企业下未完结合同的 flowId 列表。</p>
+     * @var array <p>SaaS 企业下未完结合同的 flowId 列表。注:<code>SaaS企业下的合同ID可能无法查询，可通知子客企业去处理相应的合同</code></p>
      */
     public $FlowIds;
 
     /**
-     * @var array <p>渠道子客企业下未完结合同的 flowId 列表。</p>
+     * @var array <p>渠道子客企业下未完结合同的 flowId 列表。注：<code>子客企业在其他渠道下的合同ID可能无法查询，可通知子客企业去处理其他渠道下相应的合同</code></p>
      */
     public $ChannelFlowIds;
 
@@ -69,8 +69,8 @@ class ModifyOrganizationBusinessInfoResponse extends AbstractModel
      * @param integer $ErrorCode <p>业务状态码。<br>0 表示正常（无阻断）；非 0 表示存在阻断，例如企业名称变更且存在未完结合同时返回 1。</p><p>枚举值：</p><ul><li>0： 正常（无阻断）</li><li>1： 存在未完结合同</li></ul>
      * @param string $ErrorMessage <p>提示文案。<br>例如企业名称变更且存在未完结合同时返回「存在 X 份未完结的合同，请先撤销或者完成合同」。</p>
      * @param integer $UnfinishedCount <p>未完结合同总数。<br>仅当企业名称变更且存在未完结合同时有值。</p>
-     * @param array $FlowIds <p>SaaS 企业下未完结合同的 flowId 列表。</p>
-     * @param array $ChannelFlowIds <p>渠道子客企业下未完结合同的 flowId 列表。</p>
+     * @param array $FlowIds <p>SaaS 企业下未完结合同的 flowId 列表。注:<code>SaaS企业下的合同ID可能无法查询，可通知子客企业去处理相应的合同</code></p>
+     * @param array $ChannelFlowIds <p>渠道子客企业下未完结合同的 flowId 列表。注：<code>子客企业在其他渠道下的合同ID可能无法查询，可通知子客企业去处理其他渠道下相应的合同</code></p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

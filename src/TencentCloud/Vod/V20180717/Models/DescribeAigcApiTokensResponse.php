@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAigcApiTokens返回参数结构体
  *
- * @method array getApiTokens() 获取API Token 列表
- * @method void setApiTokens(array $ApiTokens) 设置API Token 列表
+ * @method array getApiTokens() 获取<p>API Token 列表</p>
+ * @method void setApiTokens(array $ApiTokens) 设置<p>API Token 列表</p>
+ * @method array getExtInfos() 获取<p>ExtInfo信息，和API Token列表一一对应</p>
+ * @method void setExtInfos(array $ExtInfos) 设置<p>ExtInfo信息，和API Token列表一一对应</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAigcApiTokensResponse extends AbstractModel
 {
     /**
-     * @var array API Token 列表
+     * @var array <p>API Token 列表</p>
      */
     public $ApiTokens;
+
+    /**
+     * @var array <p>ExtInfo信息，和API Token列表一一对应</p>
+     */
+    public $ExtInfos;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeAigcApiTokensResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ApiTokens API Token 列表
+     * @param array $ApiTokens <p>API Token 列表</p>
+     * @param array $ExtInfos <p>ExtInfo信息，和API Token列表一一对应</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class DescribeAigcApiTokensResponse extends AbstractModel
         }
         if (array_key_exists("ApiTokens",$param) and $param["ApiTokens"] !== null) {
             $this->ApiTokens = $param["ApiTokens"];
+        }
+
+        if (array_key_exists("ExtInfos",$param) and $param["ExtInfos"] !== null) {
+            $this->ExtInfos = $param["ExtInfos"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

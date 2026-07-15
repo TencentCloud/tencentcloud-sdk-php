@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindCount(integer $BindCount) 设置<p>绑定数</p>
  * @method string getResourceType() 获取<p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
  * @method void setResourceType(string $ResourceType) 设置<p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
+ * @method AIGWJWTCredentialConfig getJWTCredentialConfig() 获取<p>JWT凭证配置</p>
+ * @method void setJWTCredentialConfig(AIGWJWTCredentialConfig $JWTCredentialConfig) 设置<p>JWT凭证配置</p>
+ * @method AIGWOAuthCredentialConfig getOAuthCredentialConfig() 获取<p>OAuth2凭证配置</p>
+ * @method void setOAuthCredentialConfig(AIGWOAuthCredentialConfig $OAuthCredentialConfig) 设置<p>OAuth2凭证配置</p>
+ * @method AIGWOIDCCredentialConfig getOIDCCredentialConfig() 获取<p>OIDC凭证配置</p>
+ * @method void setOIDCCredentialConfig(AIGWOIDCCredentialConfig $OIDCCredentialConfig) 设置<p>OIDC凭证配置</p>
+ * @method string getProvider() 获取<p>Agent 密钥类型</p>
+ * @method void setProvider(string $Provider) 设置<p>Agent 密钥类型</p>
  */
 class CNAPIGwSecretKey extends AbstractModel
 {
@@ -134,6 +142,26 @@ class CNAPIGwSecretKey extends AbstractModel
     public $ResourceType;
 
     /**
+     * @var AIGWJWTCredentialConfig <p>JWT凭证配置</p>
+     */
+    public $JWTCredentialConfig;
+
+    /**
+     * @var AIGWOAuthCredentialConfig <p>OAuth2凭证配置</p>
+     */
+    public $OAuthCredentialConfig;
+
+    /**
+     * @var AIGWOIDCCredentialConfig <p>OIDC凭证配置</p>
+     */
+    public $OIDCCredentialConfig;
+
+    /**
+     * @var string <p>Agent 密钥类型</p>
+     */
+    public $Provider;
+
+    /**
      * @param string $SecretKeyId <p>密钥id</p>
      * @param string $Name <p>密钥名字</p>
      * @param string $SecretType <p>密钥协议类型。</p>
@@ -152,6 +180,10 @@ class CNAPIGwSecretKey extends AbstractModel
      * @param string $ModifyTime <p>修改时间</p>
      * @param integer $BindCount <p>绑定数</p>
      * @param string $ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
+     * @param AIGWJWTCredentialConfig $JWTCredentialConfig <p>JWT凭证配置</p>
+     * @param AIGWOAuthCredentialConfig $OAuthCredentialConfig <p>OAuth2凭证配置</p>
+     * @param AIGWOIDCCredentialConfig $OIDCCredentialConfig <p>OIDC凭证配置</p>
+     * @param string $Provider <p>Agent 密钥类型</p>
      */
     function __construct()
     {
@@ -220,6 +252,25 @@ class CNAPIGwSecretKey extends AbstractModel
 
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("JWTCredentialConfig",$param) and $param["JWTCredentialConfig"] !== null) {
+            $this->JWTCredentialConfig = new AIGWJWTCredentialConfig();
+            $this->JWTCredentialConfig->deserialize($param["JWTCredentialConfig"]);
+        }
+
+        if (array_key_exists("OAuthCredentialConfig",$param) and $param["OAuthCredentialConfig"] !== null) {
+            $this->OAuthCredentialConfig = new AIGWOAuthCredentialConfig();
+            $this->OAuthCredentialConfig->deserialize($param["OAuthCredentialConfig"]);
+        }
+
+        if (array_key_exists("OIDCCredentialConfig",$param) and $param["OIDCCredentialConfig"] !== null) {
+            $this->OIDCCredentialConfig = new AIGWOIDCCredentialConfig();
+            $this->OIDCCredentialConfig->deserialize($param["OIDCCredentialConfig"]);
+        }
+
+        if (array_key_exists("Provider",$param) and $param["Provider"] !== null) {
+            $this->Provider = $param["Provider"];
         }
     }
 }

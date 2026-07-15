@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStructuredStatus(boolean $StructuredStatus) 设置<p>结构化规则配置状态</p>
  * @method boolean getUnStructuredStatus() 获取<p>非结构化规则配置状态</p>
  * @method void setUnStructuredStatus(boolean $UnStructuredStatus) 设置<p>非结构化规则配置状态</p>
- * @method array getComplianceRelations() 获取<p>无</p>
- * @method void setComplianceRelations(array $ComplianceRelations) 设置<p>无</p>
+ * @method array getComplianceRelations() 获取<p>关联的识别模板信息</p>
+ * @method void setComplianceRelations(array $ComplianceRelations) 设置<p>关联的识别模板信息</p>
  */
 class DspmIdentifyRuleItem extends AbstractModel
 {
@@ -82,7 +82,7 @@ class DspmIdentifyRuleItem extends AbstractModel
     public $UnStructuredStatus;
 
     /**
-     * @var array <p>无</p>
+     * @var array <p>关联的识别模板信息</p>
      */
     public $ComplianceRelations;
 
@@ -95,7 +95,7 @@ class DspmIdentifyRuleItem extends AbstractModel
      * @param string $UpdateTime <p>更新时间</p>
      * @param boolean $StructuredStatus <p>结构化规则配置状态</p>
      * @param boolean $UnStructuredStatus <p>非结构化规则配置状态</p>
-     * @param array $ComplianceRelations <p>无</p>
+     * @param array $ComplianceRelations <p>关联的识别模板信息</p>
      */
     function __construct()
     {

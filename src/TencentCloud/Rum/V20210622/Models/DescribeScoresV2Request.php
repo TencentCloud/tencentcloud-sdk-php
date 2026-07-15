@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScoresV2请求参数结构体
  *
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method array getIDList() 获取项目 ID 列表
- * @method void setIDList(array $IDList) 设置项目 ID 列表
- * @method string getType() 获取查询粒度，hour 或 day
- * @method void setType(string $Type) 设置查询粒度，hour 或 day
- * @method string getEnv() 获取环境
- * @method void setEnv(string $Env) 设置环境
+ * @method string getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间</p>
+ * @method string getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
+ * @method array getIDList() 获取<p>项目 ID 列表</p>
+ * @method void setIDList(array $IDList) 设置<p>项目 ID 列表</p>
+ * @method string getType() 获取<p>查询粒度，hour 或 day</p>
+ * @method void setType(string $Type) 设置<p>查询粒度，hour 或 day</p>
+ * @method string getEnv() 获取<p>环境</p>
+ * @method void setEnv(string $Env) 设置<p>环境</p>
  */
 class DescribeScoresV2Request extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var array 项目 ID 列表
+     * @var array <p>项目 ID 列表</p>
      */
     public $IDList;
 
     /**
-     * @var string 查询粒度，hour 或 day
+     * @var string <p>查询粒度，hour 或 day</p>
      */
     public $Type;
 
     /**
-     * @var string 环境
+     * @var string <p>环境</p>
      */
     public $Env;
 
     /**
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param array $IDList 项目 ID 列表
-     * @param string $Type 查询粒度，hour 或 day
-     * @param string $Env 环境
+     * @param string $StartTime <p>开始时间</p>
+     * @param string $EndTime <p>结束时间</p>
+     * @param array $IDList <p>项目 ID 列表</p>
+     * @param string $Type <p>查询粒度，hour 或 day</p>
+     * @param string $Env <p>环境</p>
      */
     function __construct()
     {

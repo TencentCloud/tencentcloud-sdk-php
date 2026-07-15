@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNodePool请求参数结构体
  *
- * @method string getClusterId() 获取集群 ID
- * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method string getName() 获取节点池名称
- * @method void setName(string $Name) 设置节点池名称
- * @method string getType() 获取节点池类型
- * @method void setType(string $Type) 设置节点池类型
- * @method array getLabels() 获取节点  Labels
- * @method void setLabels(array $Labels) 设置节点  Labels
- * @method array getTaints() 获取节点污点
- * @method void setTaints(array $Taints) 设置节点污点
- * @method array getTags() 获取节点标签
- * @method void setTags(array $Tags) 设置节点标签
- * @method boolean getDeletionProtection() 获取是否开启删除保护
- * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否开启删除保护
- * @method boolean getUnschedulable() 获取节点是否默认不可调度
- * @method void setUnschedulable(boolean $Unschedulable) 设置节点是否默认不可调度
- * @method CreateNativeNodePoolParam getNative() 获取原生节点池创建参数（Type字段设置为Native时需填写）
- * @method void setNative(CreateNativeNodePoolParam $Native) 设置原生节点池创建参数（Type字段设置为Native时需填写）
- * @method array getAnnotations() 获取节点 Annotation 列表
- * @method void setAnnotations(array $Annotations) 设置节点 Annotation 列表
+ * @method string getClusterId() 获取<p>集群 ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群 ID</p>
+ * @method string getName() 获取<p>节点池名称</p>
+ * @method void setName(string $Name) 设置<p>节点池名称</p>
+ * @method string getType() 获取<p>节点池类型</p>
+ * @method void setType(string $Type) 设置<p>节点池类型</p>
+ * @method array getLabels() 获取<p>节点  Labels</p>
+ * @method void setLabels(array $Labels) 设置<p>节点  Labels</p>
+ * @method array getTaints() 获取<p>节点污点</p>
+ * @method void setTaints(array $Taints) 设置<p>节点污点</p>
+ * @method array getTags() 获取<p>节点标签</p>
+ * @method void setTags(array $Tags) 设置<p>节点标签</p>
+ * @method boolean getDeletionProtection() 获取<p>是否开启删除保护</p>
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>是否开启删除保护</p>
+ * @method boolean getUnschedulable() 获取<p>节点是否默认不可调度</p>
+ * @method void setUnschedulable(boolean $Unschedulable) 设置<p>节点是否默认不可调度</p>
+ * @method CreateNativeNodePoolParam getNative() 获取<p>原生节点池创建参数（Type字段设置为Native时需填写）</p>
+ * @method void setNative(CreateNativeNodePoolParam $Native) 设置<p>原生节点池创建参数（Type字段设置为Native时需填写）</p>
+ * @method array getAnnotations() 获取<p>节点 Annotation 列表</p>
+ * @method void setAnnotations(array $Annotations) 设置<p>节点 Annotation 列表</p>
  */
 class CreateNodePoolRequest extends AbstractModel
 {
     /**
-     * @var string 集群 ID
+     * @var string <p>集群 ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 节点池名称
+     * @var string <p>节点池名称</p>
      */
     public $Name;
 
     /**
-     * @var string 节点池类型
+     * @var string <p>节点池类型</p>
      */
     public $Type;
 
     /**
-     * @var array 节点  Labels
+     * @var array <p>节点  Labels</p>
      */
     public $Labels;
 
     /**
-     * @var array 节点污点
+     * @var array <p>节点污点</p>
      */
     public $Taints;
 
     /**
-     * @var array 节点标签
+     * @var array <p>节点标签</p>
      */
     public $Tags;
 
     /**
-     * @var boolean 是否开启删除保护
+     * @var boolean <p>是否开启删除保护</p>
      */
     public $DeletionProtection;
 
     /**
-     * @var boolean 节点是否默认不可调度
+     * @var boolean <p>节点是否默认不可调度</p>
      */
     public $Unschedulable;
 
     /**
-     * @var CreateNativeNodePoolParam 原生节点池创建参数（Type字段设置为Native时需填写）
+     * @var CreateNativeNodePoolParam <p>原生节点池创建参数（Type字段设置为Native时需填写）</p>
      */
     public $Native;
 
     /**
-     * @var array 节点 Annotation 列表
+     * @var array <p>节点 Annotation 列表</p>
      */
     public $Annotations;
 
     /**
-     * @param string $ClusterId 集群 ID
-     * @param string $Name 节点池名称
-     * @param string $Type 节点池类型
-     * @param array $Labels 节点  Labels
-     * @param array $Taints 节点污点
-     * @param array $Tags 节点标签
-     * @param boolean $DeletionProtection 是否开启删除保护
-     * @param boolean $Unschedulable 节点是否默认不可调度
-     * @param CreateNativeNodePoolParam $Native 原生节点池创建参数（Type字段设置为Native时需填写）
-     * @param array $Annotations 节点 Annotation 列表
+     * @param string $ClusterId <p>集群 ID</p>
+     * @param string $Name <p>节点池名称</p>
+     * @param string $Type <p>节点池类型</p>
+     * @param array $Labels <p>节点  Labels</p>
+     * @param array $Taints <p>节点污点</p>
+     * @param array $Tags <p>节点标签</p>
+     * @param boolean $DeletionProtection <p>是否开启删除保护</p>
+     * @param boolean $Unschedulable <p>节点是否默认不可调度</p>
+     * @param CreateNativeNodePoolParam $Native <p>原生节点池创建参数（Type字段设置为Native时需填写）</p>
+     * @param array $Annotations <p>节点 Annotation 列表</p>
      */
     function __construct()
     {

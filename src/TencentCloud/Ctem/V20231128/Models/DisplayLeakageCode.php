@@ -20,114 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 代码泄露详情
  *
- * @method integer getId() 获取主键ID
- * @method void setId(integer $Id) 设置主键ID
- * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
- * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
- * @method string getName() 获取事件名称
- * @method void setName(string $Name) 设置事件名称
- * @method string getDescription() 获取事件描述
- * @method void setDescription(string $Description) 设置事件描述
- * @method string getSource() 获取数据源
- * @method void setSource(string $Source) 设置数据源
- * @method integer getRiskLevel() 获取风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
- * @method void setRiskLevel(integer $RiskLevel) 设置风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
- * @method string getHubName() 获取仓库名称
- * @method void setHubName(string $HubName) 设置仓库名称
- * @method string getUrl() 获取链接
- * @method void setUrl(string $Url) 设置链接
- * @method string getScreenshot() 获取截图
- * @method void setScreenshot(string $Screenshot) 设置截图
- * @method string getSuggestion() 获取建议
- * @method void setSuggestion(string $Suggestion) 设置建议
- * @method string getKeyword() 获取关键词
- * @method void setKeyword(string $Keyword) 设置关键词
- * @method integer getHandlingStatus() 获取处置状态：0-待处理 1-处理中 2-已处理
- * @method void setHandlingStatus(integer $HandlingStatus) 设置处置状态：0-待处理 1-处理中 2-已处理
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
+ * @method integer getId() 获取<p>主键ID</p>
+ * @method void setId(integer $Id) 设置<p>主键ID</p>
+ * @method DisplayToolCommon getDisplayToolCommon() 获取<p>公共字段</p>
+ * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置<p>公共字段</p>
+ * @method string getName() 获取<p>事件名称</p>
+ * @method void setName(string $Name) 设置<p>事件名称</p>
+ * @method string getDescription() 获取<p>事件描述</p>
+ * @method void setDescription(string $Description) 设置<p>事件描述</p>
+ * @method string getSource() 获取<p>数据源</p>
+ * @method void setSource(string $Source) 设置<p>数据源</p>
+ * @method integer getRiskLevel() 获取<p>风险等级：1-低危 2-中危 3-高危 4-严重 5-误报</p>
+ * @method void setRiskLevel(integer $RiskLevel) 设置<p>风险等级：1-低危 2-中危 3-高危 4-严重 5-误报</p>
+ * @method string getHubName() 获取<p>仓库名称</p>
+ * @method void setHubName(string $HubName) 设置<p>仓库名称</p>
+ * @method string getUrl() 获取<p>链接</p>
+ * @method void setUrl(string $Url) 设置<p>链接</p>
+ * @method string getScreenshot() 获取<p>截图</p>
+ * @method void setScreenshot(string $Screenshot) 设置<p>截图</p>
+ * @method string getSuggestion() 获取<p>建议</p>
+ * @method void setSuggestion(string $Suggestion) 设置<p>建议</p>
+ * @method string getKeyword() 获取<p>关键词</p>
+ * @method void setKeyword(string $Keyword) 设置<p>关键词</p>
+ * @method integer getHandlingStatus() 获取<p>处置状态</p><p>枚举值：</p><ul><li>0： 待处理</li><li>1： 处理中</li><li>2： 已处理</li><li>3： 误报</li></ul>
+ * @method void setHandlingStatus(integer $HandlingStatus) 设置<p>处置状态</p><p>枚举值：</p><ul><li>0： 待处理</li><li>1： 处理中</li><li>2： 已处理</li><li>3： 误报</li></ul>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getRepoNamespace() 获取<p>仓库命名空间</p>
+ * @method void setRepoNamespace(string $RepoNamespace) 设置<p>仓库命名空间</p>
+ * @method string getRepoName() 获取<p>仓库名称</p>
+ * @method void setRepoName(string $RepoName) 设置<p>仓库名称</p>
+ * @method string getAuthorName() 获取<p>作者名称</p>
+ * @method void setAuthorName(string $AuthorName) 设置<p>作者名称</p>
  */
 class DisplayLeakageCode extends AbstractModel
 {
     /**
-     * @var integer 主键ID
+     * @var integer <p>主键ID</p>
      */
     public $Id;
 
     /**
-     * @var DisplayToolCommon 公共字段
+     * @var DisplayToolCommon <p>公共字段</p>
      */
     public $DisplayToolCommon;
 
     /**
-     * @var string 事件名称
+     * @var string <p>事件名称</p>
      */
     public $Name;
 
     /**
-     * @var string 事件描述
+     * @var string <p>事件描述</p>
      */
     public $Description;
 
     /**
-     * @var string 数据源
+     * @var string <p>数据源</p>
      */
     public $Source;
 
     /**
-     * @var integer 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
+     * @var integer <p>风险等级：1-低危 2-中危 3-高危 4-严重 5-误报</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 仓库名称
+     * @var string <p>仓库名称</p>
      */
     public $HubName;
 
     /**
-     * @var string 链接
+     * @var string <p>链接</p>
      */
     public $Url;
 
     /**
-     * @var string 截图
+     * @var string <p>截图</p>
      */
     public $Screenshot;
 
     /**
-     * @var string 建议
+     * @var string <p>建议</p>
      */
     public $Suggestion;
 
     /**
-     * @var string 关键词
+     * @var string <p>关键词</p>
      */
     public $Keyword;
 
     /**
-     * @var integer 处置状态：0-待处理 1-处理中 2-已处理
+     * @var integer <p>处置状态</p><p>枚举值：</p><ul><li>0： 待处理</li><li>1： 处理中</li><li>2： 已处理</li><li>3： 误报</li></ul>
      */
     public $HandlingStatus;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @param integer $Id 主键ID
-     * @param DisplayToolCommon $DisplayToolCommon 公共字段
-     * @param string $Name 事件名称
-     * @param string $Description 事件描述
-     * @param string $Source 数据源
-     * @param integer $RiskLevel 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
-     * @param string $HubName 仓库名称
-     * @param string $Url 链接
-     * @param string $Screenshot 截图
-     * @param string $Suggestion 建议
-     * @param string $Keyword 关键词
-     * @param integer $HandlingStatus 处置状态：0-待处理 1-处理中 2-已处理
-     * @param string $Remark 备注
+     * @var string <p>仓库命名空间</p>
+     */
+    public $RepoNamespace;
+
+    /**
+     * @var string <p>仓库名称</p>
+     */
+    public $RepoName;
+
+    /**
+     * @var string <p>作者名称</p>
+     */
+    public $AuthorName;
+
+    /**
+     * @param integer $Id <p>主键ID</p>
+     * @param DisplayToolCommon $DisplayToolCommon <p>公共字段</p>
+     * @param string $Name <p>事件名称</p>
+     * @param string $Description <p>事件描述</p>
+     * @param string $Source <p>数据源</p>
+     * @param integer $RiskLevel <p>风险等级：1-低危 2-中危 3-高危 4-严重 5-误报</p>
+     * @param string $HubName <p>仓库名称</p>
+     * @param string $Url <p>链接</p>
+     * @param string $Screenshot <p>截图</p>
+     * @param string $Suggestion <p>建议</p>
+     * @param string $Keyword <p>关键词</p>
+     * @param integer $HandlingStatus <p>处置状态</p><p>枚举值：</p><ul><li>0： 待处理</li><li>1： 处理中</li><li>2： 已处理</li><li>3： 误报</li></ul>
+     * @param string $Remark <p>备注</p>
+     * @param string $RepoNamespace <p>仓库命名空间</p>
+     * @param string $RepoName <p>仓库名称</p>
+     * @param string $AuthorName <p>作者名称</p>
      */
     function __construct()
     {
@@ -193,6 +217,18 @@ class DisplayLeakageCode extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("RepoNamespace",$param) and $param["RepoNamespace"] !== null) {
+            $this->RepoNamespace = $param["RepoNamespace"];
+        }
+
+        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
+            $this->RepoName = $param["RepoName"];
+        }
+
+        if (array_key_exists("AuthorName",$param) and $param["AuthorName"] !== null) {
+            $this->AuthorName = $param["AuthorName"];
         }
     }
 }

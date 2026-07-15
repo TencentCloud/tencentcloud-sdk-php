@@ -20,90 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSealPolicy请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method array getUsers() 获取用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用
- * @method void setUsers(array $Users) 设置用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用
- * @method string getSealId() 获取电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
- * @method void setSealId(string $SealId) 设置电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
- * @method integer getExpired() 获取授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
- * @method void setExpired(integer $Expired) 设置授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
- * @method array getUserIds() 获取需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
- * @method void setUserIds(array $UserIds) 设置需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
- * @method string getPolicy() 获取印章授权内容
- * @method void setPolicy(string $Policy) 设置印章授权内容
- * @method Agent getAgent() 获取代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method array getOptions() 获取个性化配置字段，默认不传。
- * @method void setOptions(array $Options) 设置个性化配置字段，默认不传。
+ * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method array getUsers() 获取<p>用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用,<br>同时也支持使用主企业的User进行授权， 当使用主企业的User时， 需要有集团角色。</p>
+ * @method void setUsers(array $Users) 设置<p>用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用,<br>同时也支持使用主企业的User进行授权， 当使用主企业的User时， 需要有集团角色。</p>
+ * @method string getSealId() 获取<p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。<br>可登录腾讯电子签控制台，在 &quot;印章&quot;-&gt;&quot;印章中心&quot;选择查看的印章，在&quot;印章详情&quot; 中查看某个印章的SealId(在页面中展示为印章ID)。</p>
+ * @method void setSealId(string $SealId) 设置<p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。<br>可登录腾讯电子签控制台，在 &quot;印章&quot;-&gt;&quot;印章中心&quot;选择查看的印章，在&quot;印章详情&quot; 中查看某个印章的SealId(在页面中展示为印章ID)。</p>
+ * @method integer getExpired() 获取<p>授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。</p>
+ * @method void setExpired(integer $Expired) 设置<p>授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。</p>
+ * @method array getUserIds() 获取<p>需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用。<br>支持使用主企业的UserId进行授权， 当使用主企业的UserId时，该UserId 需要有集团角色。</p>
+ * @method void setUserIds(array $UserIds) 设置<p>需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用。<br>支持使用主企业的UserId进行授权， 当使用主企业的UserId时，该UserId 需要有集团角色。</p>
+ * @method string getPolicy() 获取<p>印章授权内容，最多300 个字符。</p>
+ * @method void setPolicy(string $Policy) 设置<p>印章授权内容，最多300 个字符。</p>
+ * @method Agent getAgent() 获取<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method void setAgent(Agent $Agent) 设置<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method array getOptions() 获取<p>个性化配置字段，默认不传。</p>
+ * @method void setOptions(array $Options) 设置<p>个性化配置字段，默认不传。</p>
+ * @method SealPolicyAuthorizationFlows getAuthorizationFlows() 获取<p>针对用印的合同/合同组授权。<br>当单次用印授权时，可以仅在指定合同获得印章授权。<br>此场景下不会触发印章授权回调。</p>
+ * @method void setAuthorizationFlows(SealPolicyAuthorizationFlows $AuthorizationFlows) 设置<p>针对用印的合同/合同组授权。<br>当单次用印授权时，可以仅在指定合同获得印章授权。<br>此场景下不会触发印章授权回调。</p>
  */
 class CreateSealPolicyRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @var UserInfo <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public $Operator;
 
     /**
-     * @var array 用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用
+     * @var array <p>用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用,<br>同时也支持使用主企业的User进行授权， 当使用主企业的User时， 需要有集团角色。</p>
      */
     public $Users;
 
     /**
-     * @var string 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
+     * @var string <p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。<br>可登录腾讯电子签控制台，在 &quot;印章&quot;-&gt;&quot;印章中心&quot;选择查看的印章，在&quot;印章详情&quot; 中查看某个印章的SealId(在页面中展示为印章ID)。</p>
      */
     public $SealId;
 
     /**
-     * @var integer 授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
+     * @var integer <p>授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。</p>
      */
     public $Expired;
 
     /**
-     * @var array 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
+     * @var array <p>需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用。<br>支持使用主企业的UserId进行授权， 当使用主企业的UserId时，该UserId 需要有集团角色。</p>
      */
     public $UserIds;
 
     /**
-     * @var string 印章授权内容
+     * @var string <p>印章授权内容，最多300 个字符。</p>
      */
     public $Policy;
 
     /**
-     * @var Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public $Agent;
 
     /**
-     * @var array 个性化配置字段，默认不传。
+     * @var array <p>个性化配置字段，默认不传。</p>
      */
     public $Options;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param array $Users 用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用
-     * @param string $SealId 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
-     * @param integer $Expired 授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
-     * @param array $UserIds 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
-     * @param string $Policy 印章授权内容
-     * @param Agent $Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param array $Options 个性化配置字段，默认不传。
+     * @var SealPolicyAuthorizationFlows <p>针对用印的合同/合同组授权。<br>当单次用印授权时，可以仅在指定合同获得印章授权。<br>此场景下不会触发印章授权回调。</p>
+     */
+    public $AuthorizationFlows;
+
+    /**
+     * @param UserInfo $Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param array $Users <p>用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用,<br>同时也支持使用主企业的User进行授权， 当使用主企业的User时， 需要有集团角色。</p>
+     * @param string $SealId <p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。<br>可登录腾讯电子签控制台，在 &quot;印章&quot;-&gt;&quot;印章中心&quot;选择查看的印章，在&quot;印章详情&quot; 中查看某个印章的SealId(在页面中展示为印章ID)。</p>
+     * @param integer $Expired <p>授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。</p>
+     * @param array $UserIds <p>需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用。<br>支持使用主企业的UserId进行授权， 当使用主企业的UserId时，该UserId 需要有集团角色。</p>
+     * @param string $Policy <p>印章授权内容，最多300 个字符。</p>
+     * @param Agent $Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param array $Options <p>个性化配置字段，默认不传。</p>
+     * @param SealPolicyAuthorizationFlows $AuthorizationFlows <p>针对用印的合同/合同组授权。<br>当单次用印授权时，可以仅在指定合同获得印章授权。<br>此场景下不会触发印章授权回调。</p>
      */
     function __construct()
     {
@@ -160,6 +152,11 @@ class CreateSealPolicyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Options, $obj);
             }
+        }
+
+        if (array_key_exists("AuthorizationFlows",$param) and $param["AuthorizationFlows"] !== null) {
+            $this->AuthorizationFlows = new SealPolicyAuthorizationFlows();
+            $this->AuthorizationFlows->deserialize($param["AuthorizationFlows"]);
         }
     }
 }

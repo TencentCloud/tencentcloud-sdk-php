@@ -20,32 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSealPolicy返回参数结构体
  *
- * @method array getUserIds() 获取最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
- * @method void setUserIds(array $UserIds) 设置最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
- * @method string getSealOperatorVerifyPath() 获取人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
- * @method void setSealOperatorVerifyPath(string $SealOperatorVerifyPath) 设置人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
- * @method string getSealOperatorVerifyQrcodeUrl() 获取人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
- * @method void setSealOperatorVerifyQrcodeUrl(string $SealOperatorVerifyQrcodeUrl) 设置人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+ * @method array getUserIds() 获取<p>最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;更多能力&quot;-&gt;&quot;组织管理&quot; 中查看某位员工的UserId(在页面中展示为用户ID)。</p>
+ * @method void setUserIds(array $UserIds) 设置<p>最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;更多能力&quot;-&gt;&quot;组织管理&quot; 中查看某位员工的UserId(在页面中展示为用户ID)。</p>
+ * @method string getSealOperatorVerifyPath() 获取<p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
+ * @method void setSealOperatorVerifyPath(string $SealOperatorVerifyPath) 设置<p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
+ * @method string getSealOperatorVerifyQrcodeUrl() 获取<p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
+ * @method void setSealOperatorVerifyQrcodeUrl(string $SealOperatorVerifyQrcodeUrl) 设置<p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateSealPolicyResponse extends AbstractModel
 {
     /**
-     * @var array 最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+     * @var array <p>最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;更多能力&quot;-&gt;&quot;组织管理&quot; 中查看某位员工的UserId(在页面中展示为用户ID)。</p>
      */
     public $UserIds;
 
     /**
-     * @var string 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     * @var string <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
      */
     public $SealOperatorVerifyPath;
 
     /**
-     * @var string 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     * @var string <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
      */
     public $SealOperatorVerifyQrcodeUrl;
 
@@ -55,10 +52,9 @@ class CreateSealPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $UserIds 最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
-     * @param string $SealOperatorVerifyPath 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
-     * @param string $SealOperatorVerifyQrcodeUrl 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     * @param array $UserIds <p>最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;更多能力&quot;-&gt;&quot;组织管理&quot; 中查看某位员工的UserId(在页面中展示为用户ID)。</p>
+     * @param string $SealOperatorVerifyPath <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
+     * @param string $SealOperatorVerifyQrcodeUrl <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

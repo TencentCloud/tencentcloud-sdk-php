@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRumGroupLogV2请求参数结构体
  *
- * @method string getOrderBy() 获取排序方式 desc asc（必填）
- * @method void setOrderBy(string $OrderBy) 设置排序方式 desc asc（必填）
- * @method integer getStartTime() 获取开始时间（必填）
- * @method void setStartTime(integer $StartTime) 设置开始时间（必填）
- * @method integer getLimit() 获取单次查询返回的原始日志条数，最大值为100（必填）
- * @method void setLimit(integer $Limit) 设置单次查询返回的原始日志条数，最大值为100（必填）
- * @method string getFilter() 获取过滤条件
- * @method void setFilter(string $Filter) 设置过滤条件
- * @method integer getEndTime() 获取结束时间（必填）
- * @method void setEndTime(integer $EndTime) 设置结束时间（必填）
- * @method integer getID() 获取项目ID（必填）
- * @method void setID(integer $ID) 设置项目ID（必填）
- * @method string getLabel() 获取聚合字段
- * @method void setLabel(string $Label) 设置聚合字段
- * @method integer getLast() 获取页数，第几页
- * @method void setLast(integer $Last) 设置页数，第几页
+ * @method string getOrderBy() 获取<p>排序方式 desc asc（必填）</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序方式 desc asc（必填）</p>
+ * @method integer getStartTime() 获取<p>开始时间（必填）</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间（必填）</p>
+ * @method integer getLimit() 获取<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+ * @method void setLimit(integer $Limit) 设置<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+ * @method string getFilter() 获取<p>过滤条件</p>
+ * @method void setFilter(string $Filter) 设置<p>过滤条件</p>
+ * @method integer getEndTime() 获取<p>结束时间（必填）</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间（必填）</p>
+ * @method integer getID() 获取<p>项目ID（必填）</p>
+ * @method void setID(integer $ID) 设置<p>项目ID（必填）</p>
+ * @method string getLabel() 获取<p>聚合字段</p>
+ * @method void setLabel(string $Label) 设置<p>聚合字段</p>
+ * @method integer getLast() 获取<p>页数，第几页（注意：该字段已废弃！）</p>
+ * @method void setLast(integer $Last) 设置<p>页数，第几页（注意：该字段已废弃！）</p>
  */
 class DescribeRumGroupLogV2Request extends AbstractModel
 {
     /**
-     * @var string 排序方式 desc asc（必填）
+     * @var string <p>排序方式 desc asc（必填）</p>
      */
     public $OrderBy;
 
     /**
-     * @var integer 开始时间（必填）
+     * @var integer <p>开始时间（必填）</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 单次查询返回的原始日志条数，最大值为100（必填）
+     * @var integer <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public $Limit;
 
     /**
-     * @var string 过滤条件
+     * @var string <p>过滤条件</p>
      */
     public $Filter;
 
     /**
-     * @var integer 结束时间（必填）
+     * @var integer <p>结束时间（必填）</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 项目ID（必填）
+     * @var integer <p>项目ID（必填）</p>
      */
     public $ID;
 
     /**
-     * @var string 聚合字段
+     * @var string <p>聚合字段</p>
      */
     public $Label;
 
     /**
-     * @var integer 页数，第几页
+     * @var integer <p>页数，第几页（注意：该字段已废弃！）</p>
      */
     public $Last;
 
     /**
-     * @param string $OrderBy 排序方式 desc asc（必填）
-     * @param integer $StartTime 开始时间（必填）
-     * @param integer $Limit 单次查询返回的原始日志条数，最大值为100（必填）
-     * @param string $Filter 过滤条件
-     * @param integer $EndTime 结束时间（必填）
-     * @param integer $ID 项目ID（必填）
-     * @param string $Label 聚合字段
-     * @param integer $Last 页数，第几页
+     * @param string $OrderBy <p>排序方式 desc asc（必填）</p>
+     * @param integer $StartTime <p>开始时间（必填）</p>
+     * @param integer $Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * @param string $Filter <p>过滤条件</p>
+     * @param integer $EndTime <p>结束时间（必填）</p>
+     * @param integer $ID <p>项目ID（必填）</p>
+     * @param string $Label <p>聚合字段</p>
+     * @param integer $Last <p>页数，第几页（注意：该字段已废弃！）</p>
      */
     function __construct()
     {

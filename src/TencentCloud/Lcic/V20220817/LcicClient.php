@@ -79,6 +79,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
 
 批量获取文档信息（已废弃，替代接口BatchDescribeDocument）
  * @method Models\DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(Models\DescribeDocumentsByRoomRequest $req) 此接口获取指定房间下课件列表
+ * @method Models\DescribeEditVersionsResponse DescribeEditVersions(Models\DescribeEditVersionsRequest $req) 获取课堂的所有编辑版本（含源版本）
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 此接口用于获取群组详情
  * @method Models\DescribeGroupListResponse DescribeGroupList(Models\DescribeGroupListRequest $req) 获取群组列表
  * @method Models\DescribeGroupLiveCodesResponse DescribeGroupLiveCodes(Models\DescribeGroupLiveCodesRequest $req) 获取分组直播参加码
@@ -106,6 +107,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\ForbidSendMsgResponse ForbidSendMsg(Models\ForbidSendMsgRequest $req) 禁止指定房间中某些用户在一段时间内发言。
 取消对某些用户的禁言。
 被禁言用户退出房间之后再进入同一房间，禁言仍然有效。
+ * @method Models\GetEditVersionTokenResponse GetEditVersionToken(Models\GetEditVersionTokenRequest $req) 获取剪辑信令回放token
  * @method Models\GetPlaybackTokenResponse GetPlaybackToken(Models\GetPlaybackTokenRequest $req) 获取信令录制回放token，用于回放指定课堂时鉴权
  * @method Models\GetRoomEventResponse GetRoomEvent(Models\GetRoomEventRequest $req) 获取房间事件,仅在课堂结束1小时内有效。
  * @method Models\GetRoomMessageResponse GetRoomMessage(Models\GetRoomMessageRequest $req) 获取房间历史消息(房间历史消息保存7天)
@@ -125,6 +127,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\SendRoomNormalMessageResponse SendRoomNormalMessage(Models\SendRoomNormalMessageRequest $req) 1、按照指定身份发送消息，目前支持表情消息、图片消息、文本消息。
  * @method Models\SendRoomNotificationMessageResponse SendRoomNotificationMessage(Models\SendRoomNotificationMessageRequest $req) App 管理员可以通过该接口在群组中发送通知、公告等。目前仅支持文本消息。
  * @method Models\SetAppCustomContentResponse SetAppCustomContent(Models\SetAppCustomContentRequest $req) 设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
+ * @method Models\SetMainEditVersionResponse SetMainEditVersion(Models\SetMainEditVersionRequest $req) 切换课堂的主编辑版本
  * @method Models\SetMarqueeResponse SetMarquee(Models\SetMarqueeRequest $req) 设置跑马灯参数设置
  * @method Models\SetWatermarkResponse SetWatermark(Models\SetWatermarkRequest $req) 设置水印
  * @method Models\StartRecordResponse StartRecord(Models\StartRecordRequest $req) 开始录制

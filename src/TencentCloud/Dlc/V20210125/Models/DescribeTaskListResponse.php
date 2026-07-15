@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskList返回参数结构体
  *
- * @method array getTaskList() 获取任务对象列表。
- * @method void setTaskList(array $TaskList) 设置任务对象列表。
- * @method integer getTotalCount() 获取实例总数。
- * @method void setTotalCount(integer $TotalCount) 设置实例总数。
+ * @method array getTaskList() 获取<p>任务对象列表。</p>
+ * @method void setTaskList(array $TaskList) 设置<p>任务对象列表。</p>
+ * @method integer getTotalCount() 获取<p>实例总数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>实例总数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTaskListResponse extends AbstractModel
 {
     /**
-     * @var array 任务对象列表。
+     * @var array <p>任务对象列表。</p>
      */
     public $TaskList;
 
     /**
-     * @var integer 实例总数。
+     * @var integer <p>实例总数。</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeTaskListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TaskList 任务对象列表。
-     * @param integer $TotalCount 实例总数。
+     * @param array $TaskList <p>任务对象列表。</p>
+     * @param integer $TotalCount <p>实例总数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

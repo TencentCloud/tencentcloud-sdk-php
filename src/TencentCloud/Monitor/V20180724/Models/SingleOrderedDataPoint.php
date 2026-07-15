@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 单个有序数据点
  *
- * @method array getDimensions() 获取实例对象维度组合	
+ * @method array getDimensions() 获取<p>实例对象维度组合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDimensions(array $Dimensions) 设置实例对象维度组合	
+ * @method void setDimensions(array $Dimensions) 设置<p>实例对象维度组合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getValue() 获取监控数据值
+ * @method float getValue() 获取<p>监控数据值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(float $Value) 设置监控数据值
+ * @method void setValue(float $Value) 设置<p>监控数据值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimestamp() 获取监控数据时间戳
+ * @method integer getTimestamp() 获取<p>监控数据时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimestamp(integer $Timestamp) 设置监控数据时间戳
+ * @method void setTimestamp(integer $Timestamp) 设置<p>监控数据时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOrder() 获取排序序号
+ * @method integer getOrder() 获取<p>排序序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrder(integer $Order) 设置排序序号
+ * @method void setOrder(integer $Order) 设置<p>排序序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SingleOrderedDataPoint extends AbstractModel
 {
     /**
-     * @var array 实例对象维度组合	
+     * @var array <p>实例对象维度组合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Dimensions;
 
     /**
-     * @var float 监控数据值
+     * @var float <p>监控数据值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @var integer 监控数据时间戳
+     * @var integer <p>监控数据时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
-     * @var integer 排序序号
+     * @var integer <p>排序序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Order;
 
     /**
-     * @param array $Dimensions 实例对象维度组合	
+     * @param array $Dimensions <p>实例对象维度组合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Value 监控数据值
+     * @param float $Value <p>监控数据值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Timestamp 监控数据时间戳
+     * @param integer $Timestamp <p>监控数据时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Order 排序序号
+     * @param integer $Order <p>排序序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

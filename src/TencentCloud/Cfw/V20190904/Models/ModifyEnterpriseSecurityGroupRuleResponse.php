@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyEnterpriseSecurityGroupRule返回参数结构体
  *
- * @method integer getStatus() 获取状态值，0：编辑成功，非0：编辑失败
- * @method void setStatus(integer $Status) 设置状态值，0：编辑成功，非0：编辑失败
- * @method integer getNewRuleUuid() 获取编辑后新生成规则的Id
- * @method void setNewRuleUuid(integer $NewRuleUuid) 设置编辑后新生成规则的Id
+ * @method integer getStatus() 获取<p>状态值，0：编辑成功，非0：编辑失败</p>
+ * @method void setStatus(integer $Status) 设置<p>状态值，0：编辑成功，非0：编辑失败</p>
+ * @method integer getNewRuleUuid() 获取<p>编辑后新生成规则的Id</p>
+ * @method void setNewRuleUuid(integer $NewRuleUuid) 设置<p>编辑后新生成规则的Id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel
 {
     /**
-     * @var integer 状态值，0：编辑成功，非0：编辑失败
+     * @var integer <p>状态值，0：编辑成功，非0：编辑失败</p>
      */
     public $Status;
 
     /**
-     * @var integer 编辑后新生成规则的Id
+     * @var integer <p>编辑后新生成规则的Id</p>
      */
     public $NewRuleUuid;
 
@@ -45,8 +45,8 @@ class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 状态值，0：编辑成功，非0：编辑失败
-     * @param integer $NewRuleUuid 编辑后新生成规则的Id
+     * @param integer $Status <p>状态值，0：编辑成功，非0：编辑失败</p>
+     * @param integer $NewRuleUuid <p>编辑后新生成规则的Id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

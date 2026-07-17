@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyExternalNodePool请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNodePoolId() 获取节点池ID
- * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
- * @method string getName() 获取节点池名称
- * @method void setName(string $Name) 设置节点池名称
- * @method array getLabels() 获取注册节点标签
- * @method void setLabels(array $Labels) 设置注册节点标签
- * @method array getTaints() 获取注册节点污点
- * @method void setTaints(array $Taints) 设置注册节点污点
- * @method boolean getDeletionProtection() 获取删除保护开关
- * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
- * @method string getUserScript() 获取base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
- * @method void setUserScript(string $UserScript) 设置base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getNodePoolId() 获取<p>节点池ID</p>
+ * @method void setNodePoolId(string $NodePoolId) 设置<p>节点池ID</p>
+ * @method string getName() 获取<p>节点池名称</p>
+ * @method void setName(string $Name) 设置<p>节点池名称</p>
+ * @method array getLabels() 获取<p>注册节点标签</p>
+ * @method void setLabels(array $Labels) 设置<p>注册节点标签</p>
+ * @method array getTaints() 获取<p>注册节点污点</p>
+ * @method void setTaints(array $Taints) 设置<p>注册节点污点</p>
+ * @method boolean getDeletionProtection() 获取<p>删除保护开关</p>
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>删除保护开关</p>
+ * @method string getUserScript() 获取<p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
+ * @method void setUserScript(string $UserScript) 设置<p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
  */
 class ModifyExternalNodePoolRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 节点池ID
+     * @var string <p>节点池ID</p>
      */
     public $NodePoolId;
 
     /**
-     * @var string 节点池名称
+     * @var string <p>节点池名称</p>
      */
     public $Name;
 
     /**
-     * @var array 注册节点标签
+     * @var array <p>注册节点标签</p>
      */
     public $Labels;
 
     /**
-     * @var array 注册节点污点
+     * @var array <p>注册节点污点</p>
      */
     public $Taints;
 
     /**
-     * @var boolean 删除保护开关
+     * @var boolean <p>删除保护开关</p>
      */
     public $DeletionProtection;
 
     /**
-     * @var string base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+     * @var string <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
      */
     public $UserScript;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $NodePoolId 节点池ID
-     * @param string $Name 节点池名称
-     * @param array $Labels 注册节点标签
-     * @param array $Taints 注册节点污点
-     * @param boolean $DeletionProtection 删除保护开关
-     * @param string $UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $NodePoolId <p>节点池ID</p>
+     * @param string $Name <p>节点池名称</p>
+     * @param array $Labels <p>注册节点标签</p>
+     * @param array $Taints <p>注册节点污点</p>
+     * @param boolean $DeletionProtection <p>删除保护开关</p>
+     * @param string $UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
      */
     function __construct()
     {

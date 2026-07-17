@@ -20,110 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeClusterInstances请求参数结构体
  *
- * @method string getClusterId() 获取集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
- * @method void setClusterId(string $ClusterId) 设置集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
- * @method string getOperation() 获取create 表示开始一次升级任务
-pause 表示停止任务
-resume表示继续任务
-abort表示终止任务
- * @method void setOperation(string $Operation) 设置create 表示开始一次升级任务
-pause 表示停止任务
-resume表示继续任务
-abort表示终止任务
- * @method string getUpgradeType() 获取升级类型，只有Operation是create需要设置
-reset 大版本重装升级
-hot 小版本热升级
-major 大版本原地升级
- * @method void setUpgradeType(string $UpgradeType) 设置升级类型，只有Operation是create需要设置
-reset 大版本重装升级
-hot 小版本热升级
-major 大版本原地升级
- * @method array getInstanceIds() 获取需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
-](https://cloud.tencent.com/document/api/457/50366) 获取
- * @method void setInstanceIds(array $InstanceIds) 设置需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
-](https://cloud.tencent.com/document/api/457/50366) 获取
- * @method UpgradeNodeResetParam getResetParam() 获取当节点重新加入集群时候所使用的参数，参考添加已有节点接口
- * @method void setResetParam(UpgradeNodeResetParam $ResetParam) 设置当节点重新加入集群时候所使用的参数，参考添加已有节点接口
- * @method boolean getSkipPreCheck() 获取是否忽略节点升级前检查，默认值 false
- * @method void setSkipPreCheck(boolean $SkipPreCheck) 设置是否忽略节点升级前检查，默认值 false
- * @method float getMaxNotReadyPercent() 获取最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
- * @method void setMaxNotReadyPercent(float $MaxNotReadyPercent) 设置最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
- * @method boolean getUpgradeRunTime() 获取是否升级节点运行时，默认false不升级
- * @method void setUpgradeRunTime(boolean $UpgradeRunTime) 设置是否升级节点运行时，默认false不升级
- * @method integer getConcurrent() 获取支持多个节点并行升级，默认值为 1，最大并行数为15
- * @method void setConcurrent(integer $Concurrent) 设置支持多个节点并行升级，默认值为 1，最大并行数为15
+ * @method string getClusterId() 获取<p>集群ID（请登录 <a href="https://console.cloud.tencent.com/tke2">TKE 控制台</a> 获取集群 ID ）</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID（请登录 <a href="https://console.cloud.tencent.com/tke2">TKE 控制台</a> 获取集群 ID ）</p>
+ * @method string getOperation() 获取<p>create 表示开始一次升级任务<br>pause 表示停止任务<br>resume表示继续任务<br>abort表示终止任务</p>
+ * @method void setOperation(string $Operation) 设置<p>create 表示开始一次升级任务<br>pause 表示停止任务<br>resume表示继续任务<br>abort表示终止任务</p>
+ * @method string getUpgradeType() 获取<p>升级类型，只有Operation是create需要设置<br>reset 大版本重装升级<br>hot 小版本热升级<br>major 大版本原地升级</p>
+ * @method void setUpgradeType(string $UpgradeType) 设置<p>升级类型，只有Operation是create需要设置<br>reset 大版本重装升级<br>hot 小版本热升级<br>major 大版本原地升级</p>
+ * @method array getInstanceIds() 获取<p>需要升级的节点列表，可以通过控制台或 <a href="https://cloud.tencent.com/document/api/457/50366">查询待升级节点接口</a> 获取</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>需要升级的节点列表，可以通过控制台或 <a href="https://cloud.tencent.com/document/api/457/50366">查询待升级节点接口</a> 获取</p>
+ * @method UpgradeNodeResetParam getResetParam() 获取<p>当节点重新加入集群时候所使用的参数，参考添加已有节点接口</p>
+ * @method void setResetParam(UpgradeNodeResetParam $ResetParam) 设置<p>当节点重新加入集群时候所使用的参数，参考添加已有节点接口</p>
+ * @method boolean getSkipPreCheck() 获取<p>是否忽略节点升级前检查，默认值 false</p>
+ * @method void setSkipPreCheck(boolean $SkipPreCheck) 设置<p>是否忽略节点升级前检查，默认值 false</p>
+ * @method float getMaxNotReadyPercent() 获取<p>最大可容忍的不可用Pod百分比，如果设置 0 表示不做校验</p><p>取值范围：[0, 100]</p><p>默认值：20</p>
+ * @method void setMaxNotReadyPercent(float $MaxNotReadyPercent) 设置<p>最大可容忍的不可用Pod百分比，如果设置 0 表示不做校验</p><p>取值范围：[0, 100]</p><p>默认值：20</p>
+ * @method boolean getUpgradeRunTime() 获取<p>是否升级节点运行时，默认false不升级</p>
+ * @method void setUpgradeRunTime(boolean $UpgradeRunTime) 设置<p>是否升级节点运行时，默认false不升级</p>
+ * @method integer getConcurrent() 获取<p>支持多个节点并行升级，默认值为 1，最大并行数为15</p>
+ * @method void setConcurrent(integer $Concurrent) 设置<p>支持多个节点并行升级，默认值为 1，最大并行数为15</p>
  */
 class UpgradeClusterInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+     * @var string <p>集群ID（请登录 <a href="https://console.cloud.tencent.com/tke2">TKE 控制台</a> 获取集群 ID ）</p>
      */
     public $ClusterId;
 
     /**
-     * @var string create 表示开始一次升级任务
-pause 表示停止任务
-resume表示继续任务
-abort表示终止任务
+     * @var string <p>create 表示开始一次升级任务<br>pause 表示停止任务<br>resume表示继续任务<br>abort表示终止任务</p>
      */
     public $Operation;
 
     /**
-     * @var string 升级类型，只有Operation是create需要设置
-reset 大版本重装升级
-hot 小版本热升级
-major 大版本原地升级
+     * @var string <p>升级类型，只有Operation是create需要设置<br>reset 大版本重装升级<br>hot 小版本热升级<br>major 大版本原地升级</p>
      */
     public $UpgradeType;
 
     /**
-     * @var array 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
-](https://cloud.tencent.com/document/api/457/50366) 获取
+     * @var array <p>需要升级的节点列表，可以通过控制台或 <a href="https://cloud.tencent.com/document/api/457/50366">查询待升级节点接口</a> 获取</p>
      */
     public $InstanceIds;
 
     /**
-     * @var UpgradeNodeResetParam 当节点重新加入集群时候所使用的参数，参考添加已有节点接口
+     * @var UpgradeNodeResetParam <p>当节点重新加入集群时候所使用的参数，参考添加已有节点接口</p>
      */
     public $ResetParam;
 
     /**
-     * @var boolean 是否忽略节点升级前检查，默认值 false
+     * @var boolean <p>是否忽略节点升级前检查，默认值 false</p>
      */
     public $SkipPreCheck;
 
     /**
-     * @var float 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
+     * @var float <p>最大可容忍的不可用Pod百分比，如果设置 0 表示不做校验</p><p>取值范围：[0, 100]</p><p>默认值：20</p>
      */
     public $MaxNotReadyPercent;
 
     /**
-     * @var boolean 是否升级节点运行时，默认false不升级
+     * @var boolean <p>是否升级节点运行时，默认false不升级</p>
      */
     public $UpgradeRunTime;
 
     /**
-     * @var integer 支持多个节点并行升级，默认值为 1，最大并行数为15
+     * @var integer <p>支持多个节点并行升级，默认值为 1，最大并行数为15</p>
      */
     public $Concurrent;
 
     /**
-     * @param string $ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
-     * @param string $Operation create 表示开始一次升级任务
-pause 表示停止任务
-resume表示继续任务
-abort表示终止任务
-     * @param string $UpgradeType 升级类型，只有Operation是create需要设置
-reset 大版本重装升级
-hot 小版本热升级
-major 大版本原地升级
-     * @param array $InstanceIds 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
-](https://cloud.tencent.com/document/api/457/50366) 获取
-     * @param UpgradeNodeResetParam $ResetParam 当节点重新加入集群时候所使用的参数，参考添加已有节点接口
-     * @param boolean $SkipPreCheck 是否忽略节点升级前检查，默认值 false
-     * @param float $MaxNotReadyPercent 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
-     * @param boolean $UpgradeRunTime 是否升级节点运行时，默认false不升级
-     * @param integer $Concurrent 支持多个节点并行升级，默认值为 1，最大并行数为15
+     * @param string $ClusterId <p>集群ID（请登录 <a href="https://console.cloud.tencent.com/tke2">TKE 控制台</a> 获取集群 ID ）</p>
+     * @param string $Operation <p>create 表示开始一次升级任务<br>pause 表示停止任务<br>resume表示继续任务<br>abort表示终止任务</p>
+     * @param string $UpgradeType <p>升级类型，只有Operation是create需要设置<br>reset 大版本重装升级<br>hot 小版本热升级<br>major 大版本原地升级</p>
+     * @param array $InstanceIds <p>需要升级的节点列表，可以通过控制台或 <a href="https://cloud.tencent.com/document/api/457/50366">查询待升级节点接口</a> 获取</p>
+     * @param UpgradeNodeResetParam $ResetParam <p>当节点重新加入集群时候所使用的参数，参考添加已有节点接口</p>
+     * @param boolean $SkipPreCheck <p>是否忽略节点升级前检查，默认值 false</p>
+     * @param float $MaxNotReadyPercent <p>最大可容忍的不可用Pod百分比，如果设置 0 表示不做校验</p><p>取值范围：[0, 100]</p><p>默认值：20</p>
+     * @param boolean $UpgradeRunTime <p>是否升级节点运行时，默认false不升级</p>
+     * @param integer $Concurrent <p>支持多个节点并行升级，默认值为 1，最大并行数为15</p>
      */
     function __construct()
     {

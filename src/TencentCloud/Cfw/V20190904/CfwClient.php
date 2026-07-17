@@ -66,8 +66,17 @@ use TencentCloud\Cfw\V20190904\Models as Models;
 2.如果传入实例ID列表为空，则返回CCN关联的所有实例的地域防火墙引流网络部署状态
  * @method Models\DescribeCcnVpcFwPolicyLimitResponse DescribeCcnVpcFwPolicyLimit(Models\DescribeCcnVpcFwPolicyLimitRequest $req) 查询CCN中VPC防火墙接入策略配置时的规则数量限制
  * @method Models\DescribeCcnVpcFwSwitchResponse DescribeCcnVpcFwSwitch(Models\DescribeCcnVpcFwSwitchRequest $req) 查询CCN VPC防火墙开关配置
+ * @method Models\DescribeCfwAlertsResponse DescribeCfwAlerts(Models\DescribeCfwAlertsRequest $req) 查询当前租户防火墙聚合告警事件。Response.Data 内 total 表示聚合告警事件数；alerts[].occurrence_count 表示单个聚合告警事件的告警发生次数/命中次数。
+ * @method Models\DescribeCfwAnalysisDataResponse DescribeCfwAnalysisData(Models\DescribeCfwAnalysisDataRequest $req) 查询当前租户防火墙分析报告数据。按分析场景返回整组分析结果，结果在 Response.Data 的 JSON 字符串中。
+ * @method Models\DescribeCfwAssetsResponse DescribeCfwAssets(Models\DescribeCfwAssetsRequest $req) 查询当前租户防火墙纳管资产。默认查询主机资产；仅明确需要 VPC 或子网时传 AssetType。结果在 Response.Data 的 JSON 字符串中。
  * @method Models\DescribeCfwEipsResponse DescribeCfwEips(Models\DescribeCfwEipsRequest $req) 查询防火墙弹性公网IP
  * @method Models\DescribeCfwInsStatusResponse DescribeCfwInsStatus(Models\DescribeCfwInsStatusRequest $req) cfw实例运行状态查询
+ * @method Models\DescribeCfwLogsResponse DescribeCfwLogs(Models\DescribeCfwLogsRequest $req) 查询当前租户防火墙日志。分页只使用 Response.Data 内的 HasMore / NextToken。
+ * @method Models\DescribeCfwRiskOverviewResponse DescribeCfwRiskOverview(Models\DescribeCfwRiskOverviewRequest $req) 查询当前租户风险中心未处理风险概览。默认查询最近 7 天；自定义时间范围需同时传 StartTime 和 EndTime。结果在 Response.Data 的 JSON 字符串中。
+ * @method Models\DescribeCfwRuleOptimizationResponse DescribeCfwRuleOptimization(Models\DescribeCfwRuleOptimizationRequest $req) 查询当前租户防火墙规则优化建议。只读分析，不修改规则；Action 名保持单数 RuleOptimization。结果在 Response.Data 的 JSON 字符串中。
+ * @method Models\DescribeCfwRulesResponse DescribeCfwRules(Models\DescribeCfwRulesRequest $req) 查询当前租户防火墙规则配置。覆盖互联网边界、NAT、VPC、企业安全组，以及入侵防御 intrusion_prevention 的 blocklist、whitelist、isolate 三类有效列表。结果在 Response.Data 的 JSON 字符串中。
+ * @method Models\DescribeCfwStatusMonitorResponse DescribeCfwStatusMonitor(Models\DescribeCfwStatusMonitorRequest $req) 查询状态监控场景。Op=describe_scene 用于发现可用场景、指标、视角和二级下拉 available_options；Op=fetch_scene 用于拉取具体场景快照，结果在 Response.Data 的 JSON 字符串中。
+ * @method Models\DescribeCfwSwitchesResponse DescribeCfwSwitches(Models\DescribeCfwSwitchesRequest $req) 查询当前租户防火墙防护开关总览。结果在 Response.Data 的 JSON 字符串中。本接口没有自定义业务入参，不支持过滤、排序或分页。
  * @method Models\DescribeClusterNatCcnFwSwitchListResponse DescribeClusterNatCcnFwSwitchList(Models\DescribeClusterNatCcnFwSwitchListRequest $req) 查询NAT CCN集群模式防火墙开关列表
  * @method Models\DescribeClusterVpcFwSwitchsResponse DescribeClusterVpcFwSwitchs(Models\DescribeClusterVpcFwSwitchsRequest $req) 查询集群模式Vpc间防火墙开关
  * @method Models\DescribeDefenseSwitchResponse DescribeDefenseSwitch(Models\DescribeDefenseSwitchRequest $req) 获取入侵防御按钮列表

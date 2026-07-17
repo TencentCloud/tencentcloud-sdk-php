@@ -20,170 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyClusterNodePool请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNodePoolId() 获取节点池ID
- * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
- * @method string getName() 获取名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
- * @method void setName(string $Name) 设置名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
- * @method integer getMaxNodesNum() 获取最大节点数
- * @method void setMaxNodesNum(integer $MaxNodesNum) 设置最大节点数
- * @method integer getMinNodesNum() 获取最小节点数
- * @method void setMinNodesNum(integer $MinNodesNum) 设置最小节点数
- * @method array getLabels() 获取标签
- * @method void setLabels(array $Labels) 设置标签
- * @method array getTaints() 获取污点
- * @method void setTaints(array $Taints) 设置污点
- * @method array getAnnotations() 获取节点 Annotation 列表
- * @method void setAnnotations(array $Annotations) 设置节点 Annotation 列表
- * @method boolean getEnableAutoscale() 获取是否开启伸缩
- * @method void setEnableAutoscale(boolean $EnableAutoscale) 设置是否开启伸缩
- * @method string getOsName() 获取操作系统名称
- * @method void setOsName(string $OsName) 设置操作系统名称
- * @method string getOsCustomizeType() 获取镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
- * @method void setOsCustomizeType(string $OsCustomizeType) 设置镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
- * @method GPUArgs getGPUArgs() 获取GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
- * @method void setGPUArgs(GPUArgs $GPUArgs) 设置GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
- * @method string getUserScript() 获取base64编码后的自定义脚本
- * @method void setUserScript(string $UserScript) 设置base64编码后的自定义脚本
- * @method boolean getIgnoreExistedNode() 获取更新label和taint时忽略存量节点
- * @method void setIgnoreExistedNode(boolean $IgnoreExistedNode) 设置更新label和taint时忽略存量节点
- * @method InstanceExtraArgs getExtraArgs() 获取节点自定义参数
- * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置节点自定义参数
- * @method array getTags() 获取资源标签
- * @method void setTags(array $Tags) 设置资源标签
- * @method integer getUnschedulable() 获取设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
- * @method void setUnschedulable(integer $Unschedulable) 设置设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
- * @method boolean getDeletionProtection() 获取删除保护开关
- * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
- * @method string getDockerGraphPath() 获取dockerd --graph 指定值, 默认为 /var/lib/docker
- * @method void setDockerGraphPath(string $DockerGraphPath) 设置dockerd --graph 指定值, 默认为 /var/lib/docker
- * @method string getPreStartUserScript() 获取base64编码后的自定义脚本
- * @method void setPreStartUserScript(string $PreStartUserScript) 设置base64编码后的自定义脚本
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getNodePoolId() 获取<p>节点池ID</p>
+ * @method void setNodePoolId(string $NodePoolId) 设置<p>节点池ID</p>
+ * @method string getName() 获取<p>名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾</p>
+ * @method void setName(string $Name) 设置<p>名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾</p>
+ * @method integer getMaxNodesNum() 获取<p>最大节点数</p>
+ * @method void setMaxNodesNum(integer $MaxNodesNum) 设置<p>最大节点数</p>
+ * @method integer getMinNodesNum() 获取<p>最小节点数</p>
+ * @method void setMinNodesNum(integer $MinNodesNum) 设置<p>最小节点数</p>
+ * @method array getLabels() 获取<p>标签</p>
+ * @method void setLabels(array $Labels) 设置<p>标签</p>
+ * @method array getTaints() 获取<p>污点</p>
+ * @method void setTaints(array $Taints) 设置<p>污点</p>
+ * @method array getAnnotations() 获取<p>节点 Annotation 列表</p>
+ * @method void setAnnotations(array $Annotations) 设置<p>节点 Annotation 列表</p>
+ * @method boolean getEnableAutoscale() 获取<p>是否开启伸缩</p>
+ * @method void setEnableAutoscale(boolean $EnableAutoscale) 设置<p>是否开启伸缩</p>
+ * @method string getOsName() 获取<p>操作系统名称</p>
+ * @method void setOsName(string $OsName) 设置<p>操作系统名称</p>
+ * @method string getOsCustomizeType() 获取<p>镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
+ * @method void setOsCustomizeType(string $OsCustomizeType) 设置<p>镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
+ * @method GPUArgs getGPUArgs() 获取<p>GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性</p>
+ * @method void setGPUArgs(GPUArgs $GPUArgs) 设置<p>GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性</p>
+ * @method string getUserScript() 获取<p>base64编码后的自定义脚本</p>
+ * @method void setUserScript(string $UserScript) 设置<p>base64编码后的自定义脚本</p>
+ * @method boolean getIgnoreExistedNode() 获取<p>更新label和taint时忽略存量节点</p>
+ * @method void setIgnoreExistedNode(boolean $IgnoreExistedNode) 设置<p>更新label和taint时忽略存量节点</p>
+ * @method InstanceExtraArgs getExtraArgs() 获取<p>节点自定义参数</p>
+ * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置<p>节点自定义参数</p>
+ * @method array getTags() 获取<p>资源标签</p>
+ * @method void setTags(array $Tags) 设置<p>资源标签</p>
+ * @method integer getUnschedulable() 获取<p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
+ * @method void setUnschedulable(integer $Unschedulable) 设置<p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
+ * @method boolean getDeletionProtection() 获取<p>删除保护开关</p>
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>删除保护开关</p>
+ * @method string getDockerGraphPath() 获取<p>dockerd --graph 指定值, 默认为 /var/lib/docker</p>
+ * @method void setDockerGraphPath(string $DockerGraphPath) 设置<p>dockerd --graph 指定值, 默认为 /var/lib/docker</p>
+ * @method string getPreStartUserScript() 获取<p>base64编码后的自定义脚本</p>
+ * @method void setPreStartUserScript(string $PreStartUserScript) 设置<p>base64编码后的自定义脚本</p>
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 节点池ID
+     * @var string <p>节点池ID</p>
      */
     public $NodePoolId;
 
     /**
-     * @var string 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
+     * @var string <p>名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾</p>
      */
     public $Name;
 
     /**
-     * @var integer 最大节点数
+     * @var integer <p>最大节点数</p>
      */
     public $MaxNodesNum;
 
     /**
-     * @var integer 最小节点数
+     * @var integer <p>最小节点数</p>
      */
     public $MinNodesNum;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
      */
     public $Labels;
 
     /**
-     * @var array 污点
+     * @var array <p>污点</p>
      */
     public $Taints;
 
     /**
-     * @var array 节点 Annotation 列表
+     * @var array <p>节点 Annotation 列表</p>
      */
     public $Annotations;
 
     /**
-     * @var boolean 是否开启伸缩
+     * @var boolean <p>是否开启伸缩</p>
      */
     public $EnableAutoscale;
 
     /**
-     * @var string 操作系统名称
+     * @var string <p>操作系统名称</p>
      */
     public $OsName;
 
     /**
-     * @var string 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * @var string <p>镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
      */
     public $OsCustomizeType;
 
     /**
-     * @var GPUArgs GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+     * @var GPUArgs <p>GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性</p>
      */
     public $GPUArgs;
 
     /**
-     * @var string base64编码后的自定义脚本
+     * @var string <p>base64编码后的自定义脚本</p>
      */
     public $UserScript;
 
     /**
-     * @var boolean 更新label和taint时忽略存量节点
+     * @var boolean <p>更新label和taint时忽略存量节点</p>
      */
     public $IgnoreExistedNode;
 
     /**
-     * @var InstanceExtraArgs 节点自定义参数
+     * @var InstanceExtraArgs <p>节点自定义参数</p>
      */
     public $ExtraArgs;
 
     /**
-     * @var array 资源标签
+     * @var array <p>资源标签</p>
      */
     public $Tags;
 
     /**
-     * @var integer 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     * @var integer <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
      */
     public $Unschedulable;
 
     /**
-     * @var boolean 删除保护开关
+     * @var boolean <p>删除保护开关</p>
      */
     public $DeletionProtection;
 
     /**
-     * @var string dockerd --graph 指定值, 默认为 /var/lib/docker
+     * @var string <p>dockerd --graph 指定值, 默认为 /var/lib/docker</p>
      */
     public $DockerGraphPath;
 
     /**
-     * @var string base64编码后的自定义脚本
+     * @var string <p>base64编码后的自定义脚本</p>
      */
     public $PreStartUserScript;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $NodePoolId 节点池ID
-     * @param string $Name 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
-     * @param integer $MaxNodesNum 最大节点数
-     * @param integer $MinNodesNum 最小节点数
-     * @param array $Labels 标签
-     * @param array $Taints 污点
-     * @param array $Annotations 节点 Annotation 列表
-     * @param boolean $EnableAutoscale 是否开启伸缩
-     * @param string $OsName 操作系统名称
-     * @param string $OsCustomizeType 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-     * @param GPUArgs $GPUArgs GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
-     * @param string $UserScript base64编码后的自定义脚本
-     * @param boolean $IgnoreExistedNode 更新label和taint时忽略存量节点
-     * @param InstanceExtraArgs $ExtraArgs 节点自定义参数
-     * @param array $Tags 资源标签
-     * @param integer $Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
-     * @param boolean $DeletionProtection 删除保护开关
-     * @param string $DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
-     * @param string $PreStartUserScript base64编码后的自定义脚本
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $NodePoolId <p>节点池ID</p>
+     * @param string $Name <p>名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾</p>
+     * @param integer $MaxNodesNum <p>最大节点数</p>
+     * @param integer $MinNodesNum <p>最小节点数</p>
+     * @param array $Labels <p>标签</p>
+     * @param array $Taints <p>污点</p>
+     * @param array $Annotations <p>节点 Annotation 列表</p>
+     * @param boolean $EnableAutoscale <p>是否开启伸缩</p>
+     * @param string $OsName <p>操作系统名称</p>
+     * @param string $OsCustomizeType <p>镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
+     * @param GPUArgs $GPUArgs <p>GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性</p>
+     * @param string $UserScript <p>base64编码后的自定义脚本</p>
+     * @param boolean $IgnoreExistedNode <p>更新label和taint时忽略存量节点</p>
+     * @param InstanceExtraArgs $ExtraArgs <p>节点自定义参数</p>
+     * @param array $Tags <p>资源标签</p>
+     * @param integer $Unschedulable <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
+     * @param boolean $DeletionProtection <p>删除保护开关</p>
+     * @param string $DockerGraphPath <p>dockerd --graph 指定值, 默认为 /var/lib/docker</p>
+     * @param string $PreStartUserScript <p>base64编码后的自定义脚本</p>
      */
     function __construct()
     {

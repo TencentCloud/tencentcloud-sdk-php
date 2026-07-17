@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBlockIgnoreRuleNew请求参数结构体
  *
- * @method array getRules() 获取非自定义类型规则列表
- * @method void setRules(array $Rules) 设置非自定义类型规则列表
- * @method integer getRuleType() 获取RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
- * @method void setRuleType(integer $RuleType) 设置RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
- * @method integer getCoverDuplicate() 获取删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
- * @method void setCoverDuplicate(integer $CoverDuplicate) 设置删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
+ * @method array getRules() 获取<p>非自定义类型规则列表</p>
+ * @method void setRules(array $Rules) 设置<p>非自定义类型规则列表</p>
+ * @method integer getRuleType() 获取<p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+ * @method void setRuleType(integer $RuleType) 设置<p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+ * @method string getCfwAiAgentOperationSource() 获取<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method void setCfwAiAgentOperationSource(string $CfwAiAgentOperationSource) 设置<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method integer getCoverDuplicate() 获取<p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
+ * @method void setCoverDuplicate(integer $CoverDuplicate) 设置<p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
  */
 class CreateBlockIgnoreRuleNewRequest extends AbstractModel
 {
     /**
-     * @var array 非自定义类型规则列表
+     * @var array <p>非自定义类型规则列表</p>
      */
     public $Rules;
 
     /**
-     * @var integer RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * @var integer <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
      */
     public $RuleType;
 
     /**
-     * @var integer 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
+     * @var string <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public $CfwAiAgentOperationSource;
+
+    /**
+     * @var integer <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
      */
     public $CoverDuplicate;
 
     /**
-     * @param array $Rules 非自定义类型规则列表
-     * @param integer $RuleType RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
-     * @param integer $CoverDuplicate 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
+     * @param array $Rules <p>非自定义类型规则列表</p>
+     * @param integer $RuleType <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+     * @param string $CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param integer $CoverDuplicate <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class CreateBlockIgnoreRuleNewRequest extends AbstractModel
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("CfwAiAgentOperationSource",$param) and $param["CfwAiAgentOperationSource"] !== null) {
+            $this->CfwAiAgentOperationSource = $param["CfwAiAgentOperationSource"];
         }
 
         if (array_key_exists("CoverDuplicate",$param) and $param["CoverDuplicate"] !== null) {

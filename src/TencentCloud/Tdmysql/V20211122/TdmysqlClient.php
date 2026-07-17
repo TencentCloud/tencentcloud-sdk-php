@@ -30,6 +30,7 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\CreateUsersResponse CreateUsers(Models\CreateUsersRequest $req) 本接口（CreateUsers）用于批量创建用户
  * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) 删除实例手工备份 DeleteDBSBackupSets
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 本接口（DeleteUsers）用于批量删除用户
+ * @method Models\DescribeDBEnginesResponse DescribeDBEngines(Models\DescribeDBEnginesRequest $req) 本接口（DescribeDBEngines）用于获取DB引擎版本列表
  * @method Models\DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(Models\DescribeDBInstanceDetailRequest $req) 本接口（DescribeDBInstanceDetail）提供查询实例详情功能
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口（DescribeDBInstances）提供查询实例列表功能
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) 本接口（DescribeDBParameters）用于获取实例的当前参数设置。

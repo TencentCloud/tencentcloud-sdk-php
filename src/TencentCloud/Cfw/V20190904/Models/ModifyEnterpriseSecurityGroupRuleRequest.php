@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyEnterpriseSecurityGroupRule请求参数结构体
  *
- * @method integer getRuleUuid() 获取规则的uuid，可通过查询规则列表获取
- * @method void setRuleUuid(integer $RuleUuid) 设置规则的uuid，可通过查询规则列表获取
- * @method integer getModifyType() 获取修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态
- * @method void setModifyType(integer $ModifyType) 设置修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态
- * @method SecurityGroupRule getData() 获取编辑后的企业安全组规则数据；修改规则状态不用填该字段
- * @method void setData(SecurityGroupRule $Data) 设置编辑后的企业安全组规则数据；修改规则状态不用填该字段
- * @method integer getEnable() 获取0是关闭,1是开启
- * @method void setEnable(integer $Enable) 设置0是关闭,1是开启
+ * @method integer getRuleUuid() 获取<p>规则的uuid，可通过查询规则列表获取</p>
+ * @method void setRuleUuid(integer $RuleUuid) 设置<p>规则的uuid，可通过查询规则列表获取</p>
+ * @method integer getModifyType() 获取<p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p>
+ * @method void setModifyType(integer $ModifyType) 设置<p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p>
+ * @method string getCfwAiAgentOperationSource() 获取<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method void setCfwAiAgentOperationSource(string $CfwAiAgentOperationSource) 设置<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method SecurityGroupRule getData() 获取<p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p>
+ * @method void setData(SecurityGroupRule $Data) 设置<p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p>
+ * @method integer getEnable() 获取<p>0是关闭,1是开启</p>
+ * @method void setEnable(integer $Enable) 设置<p>0是关闭,1是开启</p>
  */
 class ModifyEnterpriseSecurityGroupRuleRequest extends AbstractModel
 {
     /**
-     * @var integer 规则的uuid，可通过查询规则列表获取
+     * @var integer <p>规则的uuid，可通过查询规则列表获取</p>
      */
     public $RuleUuid;
 
     /**
-     * @var integer 修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态
+     * @var integer <p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p>
      */
     public $ModifyType;
 
     /**
-     * @var SecurityGroupRule 编辑后的企业安全组规则数据；修改规则状态不用填该字段
+     * @var string <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public $CfwAiAgentOperationSource;
+
+    /**
+     * @var SecurityGroupRule <p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p>
      */
     public $Data;
 
     /**
-     * @var integer 0是关闭,1是开启
+     * @var integer <p>0是关闭,1是开启</p>
      */
     public $Enable;
 
     /**
-     * @param integer $RuleUuid 规则的uuid，可通过查询规则列表获取
-     * @param integer $ModifyType 修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态
-     * @param SecurityGroupRule $Data 编辑后的企业安全组规则数据；修改规则状态不用填该字段
-     * @param integer $Enable 0是关闭,1是开启
+     * @param integer $RuleUuid <p>规则的uuid，可通过查询规则列表获取</p>
+     * @param integer $ModifyType <p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p>
+     * @param string $CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param SecurityGroupRule $Data <p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p>
+     * @param integer $Enable <p>0是关闭,1是开启</p>
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class ModifyEnterpriseSecurityGroupRuleRequest extends AbstractModel
 
         if (array_key_exists("ModifyType",$param) and $param["ModifyType"] !== null) {
             $this->ModifyType = $param["ModifyType"];
+        }
+
+        if (array_key_exists("CfwAiAgentOperationSource",$param) and $param["CfwAiAgentOperationSource"] !== null) {
+            $this->CfwAiAgentOperationSource = $param["CfwAiAgentOperationSource"];
         }
 
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {

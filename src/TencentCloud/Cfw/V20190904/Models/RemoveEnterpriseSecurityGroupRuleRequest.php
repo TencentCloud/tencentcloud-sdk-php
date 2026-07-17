@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveEnterpriseSecurityGroupRule请求参数结构体
  *
- * @method integer getRuleUuid() 获取规则的uuid，可通过查询规则列表获取
- * @method void setRuleUuid(integer $RuleUuid) 设置规则的uuid，可通过查询规则列表获取
- * @method integer getRemoveType() 获取删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可
- * @method void setRemoveType(integer $RemoveType) 设置删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可
+ * @method integer getRuleUuid() 获取<p>规则的uuid，可通过查询规则列表获取</p>
+ * @method void setRuleUuid(integer $RuleUuid) 设置<p>规则的uuid，可通过查询规则列表获取</p>
+ * @method integer getRemoveType() 获取<p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p>
+ * @method void setRemoveType(integer $RemoveType) 设置<p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p>
+ * @method string getCfwAiAgentOperationSource() 获取<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method void setCfwAiAgentOperationSource(string $CfwAiAgentOperationSource) 设置<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
  */
 class RemoveEnterpriseSecurityGroupRuleRequest extends AbstractModel
 {
     /**
-     * @var integer 规则的uuid，可通过查询规则列表获取
+     * @var integer <p>规则的uuid，可通过查询规则列表获取</p>
      */
     public $RuleUuid;
 
     /**
-     * @var integer 删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可
+     * @var integer <p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p>
      */
     public $RemoveType;
 
     /**
-     * @param integer $RuleUuid 规则的uuid，可通过查询规则列表获取
-     * @param integer $RemoveType 删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可
+     * @var string <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public $CfwAiAgentOperationSource;
+
+    /**
+     * @param integer $RuleUuid <p>规则的uuid，可通过查询规则列表获取</p>
+     * @param integer $RemoveType <p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p>
+     * @param string $CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class RemoveEnterpriseSecurityGroupRuleRequest extends AbstractModel
 
         if (array_key_exists("RemoveType",$param) and $param["RemoveType"] !== null) {
             $this->RemoveType = $param["RemoveType"];
+        }
+
+        if (array_key_exists("CfwAiAgentOperationSource",$param) and $param["CfwAiAgentOperationSource"] !== null) {
+            $this->CfwAiAgentOperationSource = $param["CfwAiAgentOperationSource"];
         }
     }
 }

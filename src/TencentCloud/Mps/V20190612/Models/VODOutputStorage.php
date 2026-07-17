@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒体处理 VOD（点播专业版） 输出对象信息。
  *
- * @method string getBucket() 获取媒体处理生成的文件输出的目标 *Bucket ID*
- * @method void setBucket(string $Bucket) 设置媒体处理生成的文件输出的目标 *Bucket ID*
- * @method string getRegion() 获取媒体处理生成的文件输出的目标 Bucket 的园区
- * @method void setRegion(string $Region) 设置媒体处理生成的文件输出的目标 Bucket 的园区
- * @method integer getSubAppId() 获取点播专业版应用Id
- * @method void setSubAppId(integer $SubAppId) 设置点播专业版应用Id
+ * @method string getBucket() 获取<p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
+ * @method void setBucket(string $Bucket) 设置<p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
+ * @method string getRegion() 获取<p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
+ * @method void setRegion(string $Region) 设置<p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
+ * @method integer getSubAppId() 获取<p>点播专业版应用Id</p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p>点播专业版应用Id</p>
  */
 class VODOutputStorage extends AbstractModel
 {
     /**
-     * @var string 媒体处理生成的文件输出的目标 *Bucket ID*
+     * @var string <p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
      */
     public $Bucket;
 
     /**
-     * @var string 媒体处理生成的文件输出的目标 Bucket 的园区
+     * @var string <p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
      */
     public $Region;
 
     /**
-     * @var integer 点播专业版应用Id
+     * @var integer <p>点播专业版应用Id</p>
      */
     public $SubAppId;
 
     /**
-     * @param string $Bucket 媒体处理生成的文件输出的目标 *Bucket ID*
-     * @param string $Region 媒体处理生成的文件输出的目标 Bucket 的园区
-     * @param integer $SubAppId 点播专业版应用Id
+     * @param string $Bucket <p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
+     * @param string $Region <p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
+     * @param integer $SubAppId <p>点播专业版应用Id</p>
      */
     function __construct()
     {

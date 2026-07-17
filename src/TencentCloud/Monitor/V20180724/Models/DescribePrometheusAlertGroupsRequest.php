@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusAlertGroups请求参数结构体
  *
- * @method string getInstanceId() 获取Prometheus 实例 ID
- * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
- * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100
- * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100
- * @method integer getOffset() 获取偏移量，默认为 0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为 0
- * @method string getGroupId() 获取告警分组ID，形如alert-xxxx。
-查询给定ID的告警分组
- * @method void setGroupId(string $GroupId) 设置告警分组ID，形如alert-xxxx。
-查询给定ID的告警分组
- * @method string getGroupName() 获取告警分组名称。
-查询名称中包含给定字符串的告警分组
- * @method void setGroupName(string $GroupName) 设置告警分组名称。
-查询名称中包含给定字符串的告警分组
+ * @method string getInstanceId() 获取<p>Prometheus 实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>Prometheus 实例 ID</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为 20，最大值为 100</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为 20，最大值为 100</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为 0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为 0</p>
+ * @method string getGroupId() 获取<p>告警分组ID，形如alert-xxxx。<br>查询给定ID的告警分组</p>
+ * @method void setGroupId(string $GroupId) 设置<p>告警分组ID，形如alert-xxxx。<br>查询给定ID的告警分组</p>
+ * @method string getGroupName() 获取<p>告警分组名称。<br>查询名称中包含给定字符串的告警分组</p>
+ * @method void setGroupName(string $GroupName) 设置<p>告警分组名称。<br>查询名称中包含给定字符串的告警分组</p>
+ * @method array getLabels() 获取<p>通过自定义label查询告警规则：<br>返回包含符合过滤条件告警规则的整个分组</p><p>多个label过滤条件取交集</p>
+ * @method void setLabels(array $Labels) 设置<p>通过自定义label查询告警规则：<br>返回包含符合过滤条件告警规则的整个分组</p><p>多个label过滤条件取交集</p>
  */
 class DescribePrometheusAlertGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Prometheus 实例 ID
+     * @var string <p>Prometheus 实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 返回数量，默认为 20，最大值为 100
+     * @var integer <p>返回数量，默认为 20，最大值为 100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为 0
+     * @var integer <p>偏移量，默认为 0</p>
      */
     public $Offset;
 
     /**
-     * @var string 告警分组ID，形如alert-xxxx。
-查询给定ID的告警分组
+     * @var string <p>告警分组ID，形如alert-xxxx。<br>查询给定ID的告警分组</p>
      */
     public $GroupId;
 
     /**
-     * @var string 告警分组名称。
-查询名称中包含给定字符串的告警分组
+     * @var string <p>告警分组名称。<br>查询名称中包含给定字符串的告警分组</p>
      */
     public $GroupName;
 
     /**
-     * @param string $InstanceId Prometheus 实例 ID
-     * @param integer $Limit 返回数量，默认为 20，最大值为 100
-     * @param integer $Offset 偏移量，默认为 0
-     * @param string $GroupId 告警分组ID，形如alert-xxxx。
-查询给定ID的告警分组
-     * @param string $GroupName 告警分组名称。
-查询名称中包含给定字符串的告警分组
+     * @var array <p>通过自定义label查询告警规则：<br>返回包含符合过滤条件告警规则的整个分组</p><p>多个label过滤条件取交集</p>
+     */
+    public $Labels;
+
+    /**
+     * @param string $InstanceId <p>Prometheus 实例 ID</p>
+     * @param integer $Limit <p>返回数量，默认为 20，最大值为 100</p>
+     * @param integer $Offset <p>偏移量，默认为 0</p>
+     * @param string $GroupId <p>告警分组ID，形如alert-xxxx。<br>查询给定ID的告警分组</p>
+     * @param string $GroupName <p>告警分组名称。<br>查询名称中包含给定字符串的告警分组</p>
+     * @param array $Labels <p>通过自定义label查询告警规则：<br>返回包含符合过滤条件告警规则的整个分组</p><p>多个label过滤条件取交集</p>
      */
     function __construct()
     {
@@ -104,6 +104,15 @@ class DescribePrometheusAlertGroupsRequest extends AbstractModel
 
         if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
             $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = [];
+            foreach ($param["Labels"] as $key => $value){
+                $obj = new PrometheusRuleKV();
+                $obj->deserialize($value);
+                array_push($this->Labels, $obj);
+            }
         }
     }
 }

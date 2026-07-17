@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveVpcAcRule返回参数结构体
  *
- * @method array getRuleUuids() 获取删除成功后返回被删除策略的uuid列表
- * @method void setRuleUuids(array $RuleUuids) 设置删除成功后返回被删除策略的uuid列表
+ * @method array getRuleUuids() 获取<p>删除成功后返回被删除策略的uuid列表</p>
+ * @method void setRuleUuids(array $RuleUuids) 设置<p>删除成功后返回被删除策略的uuid列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RemoveVpcAcRuleResponse extends AbstractModel
 {
     /**
-     * @var array 删除成功后返回被删除策略的uuid列表
+     * @var array <p>删除成功后返回被删除策略的uuid列表</p>
      */
     public $RuleUuids;
 
@@ -38,7 +38,7 @@ class RemoveVpcAcRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RuleUuids 删除成功后返回被删除策略的uuid列表
+     * @param array $RuleUuids <p>删除成功后返回被删除策略的uuid列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

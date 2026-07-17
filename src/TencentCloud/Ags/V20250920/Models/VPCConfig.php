@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 沙箱工具VPC相关配置
  *
- * @method array getSubnetIds() 获取VPC子网ID列表
- * @method void setSubnetIds(array $SubnetIds) 设置VPC子网ID列表
- * @method array getSecurityGroupIds() 获取安全组ID列表
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表
+ * @method array getSubnetIds() 获取<p>VPC子网ID列表</p>
+ * @method void setSubnetIds(array $SubnetIds) 设置<p>VPC子网ID列表</p>
+ * @method array getSecurityGroupIds() 获取<p>安全组ID列表</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组ID列表</p>
  */
 class VPCConfig extends AbstractModel
 {
     /**
-     * @var array VPC子网ID列表
+     * @var array <p>VPC子网ID列表</p>
      */
     public $SubnetIds;
 
     /**
-     * @var array 安全组ID列表
+     * @var array <p>安全组ID列表</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @param array $SubnetIds VPC子网ID列表
-     * @param array $SecurityGroupIds 安全组ID列表
+     * @param array $SubnetIds <p>VPC子网ID列表</p>
+     * @param array $SecurityGroupIds <p>安全组ID列表</p>
      */
     function __construct()
     {

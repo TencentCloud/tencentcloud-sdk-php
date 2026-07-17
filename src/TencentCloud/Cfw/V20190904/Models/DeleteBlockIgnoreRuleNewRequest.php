@@ -20,46 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteBlockIgnoreRuleNew请求参数结构体
  *
- * @method integer getDeleteAll() 获取是否删除全部
- * @method void setDeleteAll(integer $DeleteAll) 设置是否删除全部
- * @method string getShowType() 获取blocklist 封禁列表 whitelist 白名单列表
- * @method void setShowType(string $ShowType) 设置blocklist 封禁列表 whitelist 白名单列表
- * @method array getRules() 获取规则列表
- * @method void setRules(array $Rules) 设置规则列表
- * @method integer getRuleType() 获取封禁：1，放通：100，
-主要用于全部删除时区分列表类型
- * @method void setRuleType(integer $RuleType) 设置封禁：1，放通：100，
-主要用于全部删除时区分列表类型
+ * @method integer getDeleteAll() 获取<p>是否删除全部</p>
+ * @method void setDeleteAll(integer $DeleteAll) 设置<p>是否删除全部</p>
+ * @method string getShowType() 获取<p>blocklist 封禁列表 whitelist 白名单列表</p>
+ * @method void setShowType(string $ShowType) 设置<p>blocklist 封禁列表 whitelist 白名单列表</p>
+ * @method string getCfwAiAgentOperationSource() 获取<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method void setCfwAiAgentOperationSource(string $CfwAiAgentOperationSource) 设置<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method array getRules() 获取<p>规则列表</p>
+ * @method void setRules(array $Rules) 设置<p>规则列表</p>
+ * @method integer getRuleType() 获取<p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
+ * @method void setRuleType(integer $RuleType) 设置<p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
  */
 class DeleteBlockIgnoreRuleNewRequest extends AbstractModel
 {
     /**
-     * @var integer 是否删除全部
+     * @var integer <p>是否删除全部</p>
      */
     public $DeleteAll;
 
     /**
-     * @var string blocklist 封禁列表 whitelist 白名单列表
+     * @var string <p>blocklist 封禁列表 whitelist 白名单列表</p>
      */
     public $ShowType;
 
     /**
-     * @var array 规则列表
+     * @var string <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public $CfwAiAgentOperationSource;
+
+    /**
+     * @var array <p>规则列表</p>
      */
     public $Rules;
 
     /**
-     * @var integer 封禁：1，放通：100，
-主要用于全部删除时区分列表类型
+     * @var integer <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
      */
     public $RuleType;
 
     /**
-     * @param integer $DeleteAll 是否删除全部
-     * @param string $ShowType blocklist 封禁列表 whitelist 白名单列表
-     * @param array $Rules 规则列表
-     * @param integer $RuleType 封禁：1，放通：100，
-主要用于全部删除时区分列表类型
+     * @param integer $DeleteAll <p>是否删除全部</p>
+     * @param string $ShowType <p>blocklist 封禁列表 whitelist 白名单列表</p>
+     * @param string $CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param array $Rules <p>规则列表</p>
+     * @param integer $RuleType <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
      */
     function __construct()
     {
@@ -80,6 +84,10 @@ class DeleteBlockIgnoreRuleNewRequest extends AbstractModel
 
         if (array_key_exists("ShowType",$param) and $param["ShowType"] !== null) {
             $this->ShowType = $param["ShowType"];
+        }
+
+        if (array_key_exists("CfwAiAgentOperationSource",$param) and $param["CfwAiAgentOperationSource"] !== null) {
+            $this->CfwAiAgentOperationSource = $param["CfwAiAgentOperationSource"];
         }
 
         if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {

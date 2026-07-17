@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApmService请求参数结构体
  *
- * @method string getServiceID() 获取应用ID
- * @method void setServiceID(string $ServiceID) 设置应用ID
- * @method string getServiceDescription() 获取应用描述
- * @method void setServiceDescription(string $ServiceDescription) 设置应用描述
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
+ * @method string getServiceID() 获取<p>应用ID</p>
+ * @method void setServiceID(string $ServiceID) 设置<p>应用ID</p>
+ * @method string getServiceDescription() 获取<p>应用描述</p>
+ * @method void setServiceDescription(string $ServiceDescription) 设置<p>应用描述</p>
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
  */
 class ModifyApmServiceRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
      */
     public $ServiceID;
 
     /**
-     * @var string 应用描述
+     * @var string <p>应用描述</p>
      */
     public $ServiceDescription;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @param string $ServiceID 应用ID
-     * @param string $ServiceDescription 应用描述
-     * @param array $Tags 标签列表
+     * @param string $ServiceID <p>应用ID</p>
+     * @param string $ServiceDescription <p>应用描述</p>
+     * @param array $Tags <p>标签列表</p>
      */
     function __construct()
     {

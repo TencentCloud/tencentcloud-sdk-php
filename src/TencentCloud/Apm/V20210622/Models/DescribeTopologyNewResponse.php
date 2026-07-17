@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEdges() 获取<p>边集合</p>
  * @method void setEdges(array $Edges) 设置<p>边集合</p>
- * @method integer getTopologyModifyFlag() 获取<p>拓扑图是否有修改</p>
+ * @method integer getTopologyModifyFlag() 获取<p>拓扑图是否有修改</p><p>枚举值：</p><ul><li>0： 拓扑图未修改</li><li>1： 拓扑图已修改</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopologyModifyFlag(integer $TopologyModifyFlag) 设置<p>拓扑图是否有修改</p>
+ * @method void setTopologyModifyFlag(integer $TopologyModifyFlag) 设置<p>拓扑图是否有修改</p><p>枚举值：</p><ul><li>0： 拓扑图未修改</li><li>1： 拓扑图已修改</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method SelectorView getSelectors() 获取<p>节点数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,7 +55,7 @@ class DescribeTopologyNewResponse extends AbstractModel
     public $Edges;
 
     /**
-     * @var integer <p>拓扑图是否有修改</p>
+     * @var integer <p>拓扑图是否有修改</p><p>枚举值：</p><ul><li>0： 拓扑图未修改</li><li>1： 拓扑图已修改</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopologyModifyFlag;
@@ -81,7 +81,7 @@ class DescribeTopologyNewResponse extends AbstractModel
      * @param array $Nodes <p>节点集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Edges <p>边集合</p>
-     * @param integer $TopologyModifyFlag <p>拓扑图是否有修改</p>
+     * @param integer $TopologyModifyFlag <p>拓扑图是否有修改</p><p>枚举值：</p><ul><li>0： 拓扑图未修改</li><li>1： 拓扑图已修改</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SelectorView $Selectors <p>节点数量</p>
 注意：此字段可能返回 null，表示取不到有效值。

@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvailableWorkTimeConfig(array $AvailableWorkTimeConfig) 设置<p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
  * @method array getTriggerStrategy() 获取<p>触发策略</p>
  * @method void setTriggerStrategy(array $TriggerStrategy) 设置<p>触发策略</p>
+ * @method integer getConcurrencyLimit() 获取<p>智能体并发限制</p>
+ * @method void setConcurrencyLimit(integer $ConcurrencyLimit) 设置<p>智能体并发限制</p>
  */
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $TriggerStrategy;
 
     /**
+     * @var integer <p>智能体并发限制</p>
+     */
+    public $ConcurrencyLimit;
+
+    /**
      * @param integer $SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      * @param integer $NotBefore <p>任务起始时间戳，Unix 秒级时间戳</p>
      * @param array $Callees <p>被叫号码列表</p>
@@ -192,6 +199,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param array $RetryTags <p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p>
      * @param array $AvailableWorkTimeConfig <p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
      * @param array $TriggerStrategy <p>触发策略</p>
+     * @param integer $ConcurrencyLimit <p>智能体并发限制</p>
      */
     function __construct()
     {
@@ -318,6 +326,10 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TriggerStrategy, $obj);
             }
+        }
+
+        if (array_key_exists("ConcurrencyLimit",$param) and $param["ConcurrencyLimit"] !== null) {
+            $this->ConcurrencyLimit = $param["ConcurrencyLimit"];
         }
     }
 }

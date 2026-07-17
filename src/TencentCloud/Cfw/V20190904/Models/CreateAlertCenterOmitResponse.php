@@ -20,53 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlertCenterOmit返回参数结构体
  *
- * @method integer getReturnCode() 获取返回状态码：
-0 成功
-非0 失败
- * @method void setReturnCode(integer $ReturnCode) 设置返回状态码：
-0 成功
-非0 失败
- * @method string getReturnMsg() 获取返回信息：
-success 成功
-其他
- * @method void setReturnMsg(string $ReturnMsg) 设置返回信息：
-success 成功
-其他
- * @method integer getStatus() 获取处置状态码：
-0  处置成功
--1 通用错误，不用处理
--3 表示重复，需重新刷新列表
-其他
- * @method void setStatus(integer $Status) 设置处置状态码：
-0  处置成功
--1 通用错误，不用处理
--3 表示重复，需重新刷新列表
-其他
+ * @method integer getReturnCode() 获取<p>返回状态码：<br>0 成功<br>非0 失败</p>
+ * @method void setReturnCode(integer $ReturnCode) 设置<p>返回状态码：<br>0 成功<br>非0 失败</p>
+ * @method string getReturnMsg() 获取<p>返回信息：<br>success 成功<br>其他</p>
+ * @method void setReturnMsg(string $ReturnMsg) 设置<p>返回信息：<br>success 成功<br>其他</p>
+ * @method integer getStatus() 获取<p>处置状态码：<br>0  处置成功<br>-1 通用错误，不用处理<br>-3 表示重复，需重新刷新列表<br>其他</p>
+ * @method void setStatus(integer $Status) 设置<p>处置状态码：<br>0  处置成功<br>-1 通用错误，不用处理<br>-3 表示重复，需重新刷新列表<br>其他</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAlertCenterOmitResponse extends AbstractModel
 {
     /**
-     * @var integer 返回状态码：
-0 成功
-非0 失败
+     * @var integer <p>返回状态码：<br>0 成功<br>非0 失败</p>
      */
     public $ReturnCode;
 
     /**
-     * @var string 返回信息：
-success 成功
-其他
+     * @var string <p>返回信息：<br>success 成功<br>其他</p>
      */
     public $ReturnMsg;
 
     /**
-     * @var integer 处置状态码：
-0  处置成功
--1 通用错误，不用处理
--3 表示重复，需重新刷新列表
-其他
+     * @var integer <p>处置状态码：<br>0  处置成功<br>-1 通用错误，不用处理<br>-3 表示重复，需重新刷新列表<br>其他</p>
      */
     public $Status;
 
@@ -76,17 +52,9 @@ success 成功
     public $RequestId;
 
     /**
-     * @param integer $ReturnCode 返回状态码：
-0 成功
-非0 失败
-     * @param string $ReturnMsg 返回信息：
-success 成功
-其他
-     * @param integer $Status 处置状态码：
-0  处置成功
--1 通用错误，不用处理
--3 表示重复，需重新刷新列表
-其他
+     * @param integer $ReturnCode <p>返回状态码：<br>0 成功<br>非0 失败</p>
+     * @param string $ReturnMsg <p>返回信息：<br>success 成功<br>其他</p>
+     * @param integer $Status <p>处置状态码：<br>0  处置成功<br>-1 通用错误，不用处理<br>-3 表示重复，需重新刷新列表<br>其他</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

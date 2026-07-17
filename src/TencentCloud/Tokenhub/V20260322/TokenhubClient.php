@@ -29,16 +29,17 @@ use TencentCloud\Tokenhub\V20260322\Models as Models;
  * @method Models\CreateEndpointResponse CreateEndpoint(Models\CreateEndpointRequest $req) 创建推理服务。
 
 创建一个在线推理服务，创建成功后返回推理服务 ID。
- * @method Models\CreateGlossaryResponse CreateGlossary(Models\CreateGlossaryRequest $req) 创建术语库。
+ * @method Models\CreateGlossaryResponse CreateGlossary(Models\CreateGlossaryRequest $req) 创建术语库。(单个用户默认最多可以创建50个术语库，支持加白)
 
 在当前应用下创建一个新的翻译术语库，用于自定义源语言到目标语言的术语映射。创建成功后返回术语库 ID，可通过该 ID 进一步管理术语条目。
  * @method Models\CreateGlossaryEntriesResponse CreateGlossaryEntries(Models\CreateGlossaryEntriesRequest $req) 批量创建术语条目。
 
 在指定术语库下批量创建术语条目。单次最多创建 100 条。
+单个术语库默认最多总共可以创建10000个术语对
  * @method Models\CreateTokenPlanApiKeysResponse CreateTokenPlanApiKeys(Models\CreateTokenPlanApiKeysRequest $req) 批量创建 TokenPlan APIKey。
 
 传入名称前缀和数量，自动按 {ApiKeyName}-{序号} 格式生成名称（如 aaa-1, aaa-2）。允许同名。支持部分成功，最多 100 条。
- * @method Models\CreateTokenPlanTeamOrderAndBuyResponse CreateTokenPlanTeamOrderAndBuy(Models\CreateTokenPlanTeamOrderAndBuyRequest $req) 购买套餐。
+ * @method Models\CreateTokenPlanTeamOrderAndBuyResponse CreateTokenPlanTeamOrderAndBuy(Models\CreateTokenPlanTeamOrderAndBuyRequest $req) 购买套餐（重新开通过期的套餐续费也通过该接口实现，需要额外传已过期套餐teamId。注：续费成功后套餐包总周期数（TotalCycles）会包含历史周期数，实际套餐包生效周期以生效时间（StartTime）和到期时间（ExpireTime）为准）。
 
 发起 TokenPlan 套餐下单并完成支付，成功后返回大订单 ID 及关联的子订单、资源信息。
  * @method Models\DeleteApiKeyResponse DeleteApiKey(Models\DeleteApiKeyRequest $req) 删除指定的 API 密钥，同时清理关联的模型绑定关系。

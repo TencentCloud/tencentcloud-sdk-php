@@ -59,7 +59,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 
 由于AGC内客生成为异步任务，无法获取实时用量数据，因此配额限制存在一定误差，无法实现与设置额度完全精准的控制。
  * @method Models\CreateAigcSubjectResponse CreateAigcSubject(Models\CreateAigcSubjectRequest $req) 该接口用于创建 AIGC 自定义主体（Vidu）。注意，调用本接口会产生费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
- * @method Models\CreateAigcVideoRedrawTaskResponse CreateAigcVideoRedrawTask(Models\CreateAigcVideoRedrawTaskRequest $req) 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用</b>，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
+ * @method Models\CreateAigcVideoRedrawTaskResponse CreateAigcVideoRedrawTask(Models\CreateAigcVideoRedrawTaskRequest $req) 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。接口调用会产生实际费用，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
  * @method Models\CreateAigcVideoTaskResponse CreateAigcVideoTask(Models\CreateAigcVideoTaskRequest $req) 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。默认限制1个并发处理，接口调用会产生实际费用，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
  * @method Models\CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(Models\CreateAnimatedGraphicsTemplateRequest $req) 创建用户自定义转动图模板，数量上限：16。
  * @method Models\CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(Models\CreateBlindWatermarkTemplateRequest $req) 创建用户自定义数字水印模板。
@@ -113,7 +113,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 轮播播单的每个文件可以指定源文件，也可以指定某个转码文件。
 指定的文件必须是hls格式，所有的播单文件最好保持相同的码率和分辨率。
  * @method Models\CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(Models\CreateSampleSnapshotTemplateRequest $req) 创建用户自定义采样截图模板，数量上限：16。
- * @method Models\CreateSceneAigcImageTaskResponse CreateSceneAigcImageTask(Models\CreateSceneAigcImageTaskRequest $req) 该接口用于生成场景化 AIGC 图片。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用。</b>
+ * @method Models\CreateSceneAigcImageTaskResponse CreateSceneAigcImageTask(Models\CreateSceneAigcImageTaskRequest $req) 该接口用于生成场景化 AIGC 图片。接口调用会产生实际费用，请参考点播 [AIGC 生图计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
  * @method Models\CreateSceneAigcVideoTaskResponse CreateSceneAigcVideoTask(Models\CreateSceneAigcVideoTaskRequest $req) 该接口用于生成场景化 AIGC 图片。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用。</b>
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) 创建用户自定义指定时间点截图模板，数量上限：16。
  * @method Models\CreateStorageRegionResponse CreateStorageRegion(Models\CreateStorageRegionRequest $req) 该接口用于开通某地域的存储。

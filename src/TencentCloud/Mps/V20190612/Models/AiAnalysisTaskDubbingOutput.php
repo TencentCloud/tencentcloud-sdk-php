@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceId(string $VoiceId) 设置<p>音色id</p>
  * @method TaskOutputStorage getOutputStorage() 获取<p>译制视频存储位置。</p>
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>译制视频存储位置。</p>
+ * @method string getExtraOutput() 获取<p>额外结果，目前包含字幕文件结果 Url</p>
+ * @method void setExtraOutput(string $ExtraOutput) 设置<p>额外结果，目前包含字幕文件结果 Url</p>
  */
 class AiAnalysisTaskDubbingOutput extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
     public $OutputStorage;
 
     /**
+     * @var string <p>额外结果，目前包含字幕文件结果 Url</p>
+     */
+    public $ExtraOutput;
+
+    /**
      * @param string $VideoPath <p>译制视频路径。</p>
      * @param string $SpeakerPath <p>标记文件路径</p>
      * @param string $VoiceId <p>音色id</p>
      * @param TaskOutputStorage $OutputStorage <p>译制视频存储位置。</p>
+     * @param string $ExtraOutput <p>额外结果，目前包含字幕文件结果 Url</p>
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
             $this->OutputStorage->deserialize($param["OutputStorage"]);
+        }
+
+        if (array_key_exists("ExtraOutput",$param) and $param["ExtraOutput"] !== null) {
+            $this->ExtraOutput = $param["ExtraOutput"];
         }
     }
 }

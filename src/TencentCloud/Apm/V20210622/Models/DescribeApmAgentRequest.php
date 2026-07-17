@@ -55,6 +55,7 @@ class DescribeApmAgentRequest extends AbstractModel
 
     /**
      * @var string 上报方式，已弃用
+     * @deprecated
      */
     public $ReportMethod;
 

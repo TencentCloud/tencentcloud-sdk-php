@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveVpcAcRule请求参数结构体
  *
- * @method array getRuleUuids() 获取规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
- * @method void setRuleUuids(array $RuleUuids) 设置规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
- * @method integer getIpVersion() 获取仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
- * @method void setIpVersion(integer $IpVersion) 设置仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+ * @method array getRuleUuids() 获取<p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
+ * @method void setRuleUuids(array $RuleUuids) 设置<p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
+ * @method string getCfwAiAgentOperationSource() 获取<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method void setCfwAiAgentOperationSource(string $CfwAiAgentOperationSource) 设置<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method integer getIpVersion() 获取<p>仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则</p>
+ * @method void setIpVersion(integer $IpVersion) 设置<p>仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则</p>
  */
 class RemoveVpcAcRuleRequest extends AbstractModel
 {
     /**
-     * @var array 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+     * @var array <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
      */
     public $RuleUuids;
 
     /**
-     * @var integer 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+     * @var string <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public $CfwAiAgentOperationSource;
+
+    /**
+     * @var integer <p>仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则</p>
      */
     public $IpVersion;
 
     /**
-     * @param array $RuleUuids 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
-     * @param integer $IpVersion 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+     * @param array $RuleUuids <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
+     * @param string $CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param integer $IpVersion <p>仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则</p>
      */
     function __construct()
     {
@@ -56,6 +64,10 @@ class RemoveVpcAcRuleRequest extends AbstractModel
         }
         if (array_key_exists("RuleUuids",$param) and $param["RuleUuids"] !== null) {
             $this->RuleUuids = $param["RuleUuids"];
+        }
+
+        if (array_key_exists("CfwAiAgentOperationSource",$param) and $param["CfwAiAgentOperationSource"] !== null) {
+            $this->CfwAiAgentOperationSource = $param["CfwAiAgentOperationSource"];
         }
 
         if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {

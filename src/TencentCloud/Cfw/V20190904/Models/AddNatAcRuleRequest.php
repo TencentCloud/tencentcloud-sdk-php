@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddNatAcRule请求参数结构体
  *
- * @method array getRules() 获取需要添加的nat访问控制规则列表
- * @method void setRules(array $Rules) 设置需要添加的nat访问控制规则列表
- * @method string getFrom() 获取添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则
- * @method void setFrom(string $From) 设置添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则
+ * @method array getRules() 获取<p>需要添加的nat访问控制规则列表</p>
+ * @method void setRules(array $Rules) 设置<p>需要添加的nat访问控制规则列表</p>
+ * @method string getCfwAiAgentOperationSource() 获取<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method void setCfwAiAgentOperationSource(string $CfwAiAgentOperationSource) 设置<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method string getFrom() 获取<p>添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则</p>
+ * @method void setFrom(string $From) 设置<p>添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则</p>
  */
 class AddNatAcRuleRequest extends AbstractModel
 {
     /**
-     * @var array 需要添加的nat访问控制规则列表
+     * @var array <p>需要添加的nat访问控制规则列表</p>
      */
     public $Rules;
 
     /**
-     * @var string 添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则
+     * @var string <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public $CfwAiAgentOperationSource;
+
+    /**
+     * @var string <p>添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则</p>
      */
     public $From;
 
     /**
-     * @param array $Rules 需要添加的nat访问控制规则列表
-     * @param string $From 添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则
+     * @param array $Rules <p>需要添加的nat访问控制规则列表</p>
+     * @param string $CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param string $From <p>添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则</p>
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class AddNatAcRuleRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
+        }
+
+        if (array_key_exists("CfwAiAgentOperationSource",$param) and $param["CfwAiAgentOperationSource"] !== null) {
+            $this->CfwAiAgentOperationSource = $param["CfwAiAgentOperationSource"];
         }
 
         if (array_key_exists("From",$param) and $param["From"] !== null) {

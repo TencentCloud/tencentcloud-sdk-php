@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExceptionFilter(string $ExceptionFilter) 设置<p>错误类型过滤</p>
  * @method string getErrorCodeFilter() 获取<p>HTTP 状态码过滤</p>
  * @method void setErrorCodeFilter(string $ErrorCodeFilter) 设置<p>HTTP 状态码过滤</p>
- * @method boolean getEventEnable() 获取<p>应用诊断开关（已废弃）</p>
- * @method void setEventEnable(boolean $EventEnable) 设置<p>应用诊断开关（已废弃）</p>
+ * @method boolean getEventEnable() 获取<p>应用诊断开关</p>
+ * @method void setEventEnable(boolean $EventEnable) 设置<p>应用诊断开关</p>
  * @method integer getUrlConvergenceSwitch() 获取<p>URL 收敛开关 0 关 1 开</p>
  * @method void setUrlConvergenceSwitch(integer $UrlConvergenceSwitch) 设置<p>URL 收敛开关 0 关 1 开</p>
  * @method integer getUrlConvergenceThreshold() 获取<p>URL 收敛阈值</p>
@@ -54,10 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotTimeout(integer $SnapshotTimeout) 设置<p>慢调用监听触发阈值</p>
  * @method boolean getAgentEnable() 获取<p>探针总开关</p>
  * @method void setAgentEnable(boolean $AgentEnable) 设置<p>探针总开关</p>
- * @method array getInstrumentList() 获取<p>组件列表开关（已废弃）</p>
- * @method void setInstrumentList(array $InstrumentList) 设置<p>组件列表开关（已废弃）</p>
- * @method boolean getTraceSquash() 获取<p>链路压缩开关（已废弃）</p>
- * @method void setTraceSquash(boolean $TraceSquash) 设置<p>链路压缩开关（已废弃）</p>
+ * @method array getInstrumentList() 获取<p>组件列表开关</p>
+ * @method void setInstrumentList(array $InstrumentList) 设置<p>组件列表开关</p>
+ * @method boolean getTraceSquash() 获取<p>链路压缩开关</p>
+ * @method void setTraceSquash(boolean $TraceSquash) 设置<p>链路压缩开关</p>
  * @method string getAgentIgnoreOperation() 获取<p>链路过滤配置</p>
  * @method void setAgentIgnoreOperation(string $AgentIgnoreOperation) 设置<p>链路过滤配置</p>
  * @method boolean getEnableSecurityConfig() 获取<p>开启应用安全开关</p>
@@ -151,7 +151,7 @@ class ApmApplicationConfigView extends AbstractModel
     public $ErrorCodeFilter;
 
     /**
-     * @var boolean <p>应用诊断开关（已废弃）</p>
+     * @var boolean <p>应用诊断开关</p>
      */
     public $EventEnable;
 
@@ -211,12 +211,12 @@ class ApmApplicationConfigView extends AbstractModel
     public $AgentEnable;
 
     /**
-     * @var array <p>组件列表开关（已废弃）</p>
+     * @var array <p>组件列表开关</p>
      */
     public $InstrumentList;
 
     /**
-     * @var boolean <p>链路压缩开关（已废弃）</p>
+     * @var boolean <p>链路压缩开关</p>
      */
     public $TraceSquash;
 
@@ -386,7 +386,7 @@ class ApmApplicationConfigView extends AbstractModel
      * @param string $OperationNameFilter <p>接口过滤</p>
      * @param string $ExceptionFilter <p>错误类型过滤</p>
      * @param string $ErrorCodeFilter <p>HTTP 状态码过滤</p>
-     * @param boolean $EventEnable <p>应用诊断开关（已废弃）</p>
+     * @param boolean $EventEnable <p>应用诊断开关</p>
      * @param integer $UrlConvergenceSwitch <p>URL 收敛开关 0 关 1 开</p>
      * @param integer $UrlConvergenceThreshold <p>URL 收敛阈值</p>
      * @param string $UrlConvergence <p>URL 收敛规则正则</p>
@@ -398,8 +398,8 @@ class ApmApplicationConfigView extends AbstractModel
      * @param boolean $SnapshotEnable <p>方法栈快照开关 true 开启 false 关闭</p>
      * @param integer $SnapshotTimeout <p>慢调用监听触发阈值</p>
      * @param boolean $AgentEnable <p>探针总开关</p>
-     * @param array $InstrumentList <p>组件列表开关（已废弃）</p>
-     * @param boolean $TraceSquash <p>链路压缩开关（已废弃）</p>
+     * @param array $InstrumentList <p>组件列表开关</p>
+     * @param boolean $TraceSquash <p>链路压缩开关</p>
      * @param string $AgentIgnoreOperation <p>链路过滤配置</p>
      * @param boolean $EnableSecurityConfig <p>开启应用安全开关</p>
      * @param integer $IsSqlInjectionAnalysis <p>是否开启SQL注入检测</p>

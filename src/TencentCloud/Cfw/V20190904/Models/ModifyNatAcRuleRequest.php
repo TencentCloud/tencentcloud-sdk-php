@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNatAcRule请求参数结构体
  *
- * @method array getRules() 获取需要编辑的规则数组,基于Uuid唯一id来修改该规则
- * @method void setRules(array $Rules) 设置需要编辑的规则数组,基于Uuid唯一id来修改该规则
+ * @method array getRules() 获取<p>需要编辑的规则数组,基于Uuid唯一id来修改该规则</p>
+ * @method void setRules(array $Rules) 设置<p>需要编辑的规则数组,基于Uuid唯一id来修改该规则</p>
+ * @method string getCfwAiAgentOperationSource() 获取<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method void setCfwAiAgentOperationSource(string $CfwAiAgentOperationSource) 设置<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
  */
 class ModifyNatAcRuleRequest extends AbstractModel
 {
     /**
-     * @var array 需要编辑的规则数组,基于Uuid唯一id来修改该规则
+     * @var array <p>需要编辑的规则数组,基于Uuid唯一id来修改该规则</p>
      */
     public $Rules;
 
     /**
-     * @param array $Rules 需要编辑的规则数组,基于Uuid唯一id来修改该规则
+     * @var string <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public $CfwAiAgentOperationSource;
+
+    /**
+     * @param array $Rules <p>需要编辑的规则数组,基于Uuid唯一id来修改该规则</p>
+     * @param string $CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class ModifyNatAcRuleRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
+        }
+
+        if (array_key_exists("CfwAiAgentOperationSource",$param) and $param["CfwAiAgentOperationSource"] !== null) {
+            $this->CfwAiAgentOperationSource = $param["CfwAiAgentOperationSource"];
         }
     }
 }

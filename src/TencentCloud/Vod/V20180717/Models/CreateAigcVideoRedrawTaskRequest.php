@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() 获取<p><b>点播<a href="https://cloud.tencent.com/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
  * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="https://cloud.tencent.com/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
- * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() 获取<p>AIGC 视频转绘任务的输入视频的文件信息。</p>
- * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) 设置<p>AIGC 视频转绘任务的输入视频的文件信息。</p>
+ * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() 获取<p>AIGC 视频转绘任务的输入视频的文件信息。输入视频时长需短于 90 秒，大小在2GB内。</p>
+ * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) 设置<p>AIGC 视频转绘任务的输入视频的文件信息。输入视频时长需短于 90 秒，大小在2GB内。</p>
  * @method AigcVideoRedrawOutputConfig getOutputConfig() 获取<p>AIGC 视频转绘任务的输出媒体文件配置。</p>
  * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) 设置<p>AIGC 视频转绘任务的输出媒体文件配置。</p>
  * @method string getSessionId() 获取<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
@@ -43,7 +43,7 @@ class CreateAigcVideoRedrawTaskRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var AigcVideoRedrawTaskInputFileInfo <p>AIGC 视频转绘任务的输入视频的文件信息。</p>
+     * @var AigcVideoRedrawTaskInputFileInfo <p>AIGC 视频转绘任务的输入视频的文件信息。输入视频时长需短于 90 秒，大小在2GB内。</p>
      */
     public $FileInfo;
 
@@ -74,7 +74,7 @@ class CreateAigcVideoRedrawTaskRequest extends AbstractModel
 
     /**
      * @param integer $SubAppId <p><b>点播<a href="https://cloud.tencent.com/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
-     * @param AigcVideoRedrawTaskInputFileInfo $FileInfo <p>AIGC 视频转绘任务的输入视频的文件信息。</p>
+     * @param AigcVideoRedrawTaskInputFileInfo $FileInfo <p>AIGC 视频转绘任务的输入视频的文件信息。输入视频时长需短于 90 秒，大小在2GB内。</p>
      * @param AigcVideoRedrawOutputConfig $OutputConfig <p>AIGC 视频转绘任务的输出媒体文件配置。</p>
      * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      * @param string $SessionContext <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTokenPlanTeamOrderAndBuy返回参数结构体
  *
- * @method string getBigOrderId() 获取腾讯云订单 ID。用于关联一次购买操作下的所有子订单。
- * @method void setBigOrderId(string $BigOrderId) 设置腾讯云订单 ID。用于关联一次购买操作下的所有子订单。
+ * @method string getBigOrderId() 获取<p>腾讯云订单 ID。用于关联一次购买操作下的所有子订单。</p>
+ * @method void setBigOrderId(string $BigOrderId) 设置<p>腾讯云订单 ID。用于关联一次购买操作下的所有子订单。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateTokenPlanTeamOrderAndBuyResponse extends AbstractModel
 {
     /**
-     * @var string 腾讯云订单 ID。用于关联一次购买操作下的所有子订单。
+     * @var string <p>腾讯云订单 ID。用于关联一次购买操作下的所有子订单。</p>
      */
     public $BigOrderId;
 
@@ -38,7 +38,7 @@ class CreateTokenPlanTeamOrderAndBuyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BigOrderId 腾讯云订单 ID。用于关联一次购买操作下的所有子订单。
+     * @param string $BigOrderId <p>腾讯云订单 ID。用于关联一次购买操作下的所有子订单。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

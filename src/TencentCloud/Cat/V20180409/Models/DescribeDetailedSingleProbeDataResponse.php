@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDetailedSingleProbeData返回参数结构体
  *
- * @method array getDataSet() 获取单次详情数据
- * @method void setDataSet(array $DataSet) 设置单次详情数据
- * @method integer getTotalNumber() 获取符合条件的数据总数
- * @method void setTotalNumber(integer $TotalNumber) 设置符合条件的数据总数
- * @method string getScrollID() 获取es scroll查询的id
- * @method void setScrollID(string $ScrollID) 设置es scroll查询的id
+ * @method array getDataSet() 获取<p>单次详情数据</p>
+ * @method void setDataSet(array $DataSet) 设置<p>单次详情数据</p>
+ * @method integer getTotalNumber() 获取<p>符合条件的数据总数</p>
+ * @method void setTotalNumber(integer $TotalNumber) 设置<p>符合条件的数据总数</p>
+ * @method string getScrollID() 获取<p>es scroll查询的id</p>
+ * @method void setScrollID(string $ScrollID) 设置<p>es scroll查询的id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDetailedSingleProbeDataResponse extends AbstractModel
 {
     /**
-     * @var array 单次详情数据
+     * @var array <p>单次详情数据</p>
      */
     public $DataSet;
 
     /**
-     * @var integer 符合条件的数据总数
+     * @var integer <p>符合条件的数据总数</p>
      */
     public $TotalNumber;
 
     /**
-     * @var string es scroll查询的id
+     * @var string <p>es scroll查询的id</p>
      */
     public $ScrollID;
 
@@ -52,9 +52,9 @@ class DescribeDetailedSingleProbeDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataSet 单次详情数据
-     * @param integer $TotalNumber 符合条件的数据总数
-     * @param string $ScrollID es scroll查询的id
+     * @param array $DataSet <p>单次详情数据</p>
+     * @param integer $TotalNumber <p>符合条件的数据总数</p>
+     * @param string $ScrollID <p>es scroll查询的id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

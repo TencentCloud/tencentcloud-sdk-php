@@ -20,38 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlertCenterOmit请求参数结构体
  *
- * @method array getHandleIdList() 获取处置对象,ID列表，  IdLists和IpList二选一
- * @method void setHandleIdList(array $HandleIdList) 设置处置对象,ID列表，  IdLists和IpList二选一
- * @method string getTableType() 获取忽略数据来源：
-AlertTable 告警中心  InterceptionTable拦截列表
- * @method void setTableType(string $TableType) 设置忽略数据来源：
-AlertTable 告警中心  InterceptionTable拦截列表
- * @method array getHandleEventIdList() 获取处置对象,事件ID列表
- * @method void setHandleEventIdList(array $HandleEventIdList) 设置处置对象,事件ID列表
+ * @method array getHandleIdList() 获取<p>处置对象,ID列表，  IdLists和IpList二选一</p>
+ * @method void setHandleIdList(array $HandleIdList) 设置<p>处置对象,ID列表，  IdLists和IpList二选一</p>
+ * @method string getTableType() 获取<p>忽略数据来源：<br>AlertTable 告警中心  InterceptionTable拦截列表</p>
+ * @method void setTableType(string $TableType) 设置<p>忽略数据来源：<br>AlertTable 告警中心  InterceptionTable拦截列表</p>
+ * @method string getCfwAiAgentOperationSource() 获取<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method void setCfwAiAgentOperationSource(string $CfwAiAgentOperationSource) 设置<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method array getHandleEventIdList() 获取<p>处置对象,事件ID列表</p>
+ * @method void setHandleEventIdList(array $HandleEventIdList) 设置<p>处置对象,事件ID列表</p>
  */
 class CreateAlertCenterOmitRequest extends AbstractModel
 {
     /**
-     * @var array 处置对象,ID列表，  IdLists和IpList二选一
+     * @var array <p>处置对象,ID列表，  IdLists和IpList二选一</p>
      */
     public $HandleIdList;
 
     /**
-     * @var string 忽略数据来源：
-AlertTable 告警中心  InterceptionTable拦截列表
+     * @var string <p>忽略数据来源：<br>AlertTable 告警中心  InterceptionTable拦截列表</p>
      */
     public $TableType;
 
     /**
-     * @var array 处置对象,事件ID列表
+     * @var string <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public $CfwAiAgentOperationSource;
+
+    /**
+     * @var array <p>处置对象,事件ID列表</p>
      */
     public $HandleEventIdList;
 
     /**
-     * @param array $HandleIdList 处置对象,ID列表，  IdLists和IpList二选一
-     * @param string $TableType 忽略数据来源：
-AlertTable 告警中心  InterceptionTable拦截列表
-     * @param array $HandleEventIdList 处置对象,事件ID列表
+     * @param array $HandleIdList <p>处置对象,ID列表，  IdLists和IpList二选一</p>
+     * @param string $TableType <p>忽略数据来源：<br>AlertTable 告警中心  InterceptionTable拦截列表</p>
+     * @param string $CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param array $HandleEventIdList <p>处置对象,事件ID列表</p>
      */
     function __construct()
     {
@@ -72,6 +76,10 @@ AlertTable 告警中心  InterceptionTable拦截列表
 
         if (array_key_exists("TableType",$param) and $param["TableType"] !== null) {
             $this->TableType = $param["TableType"];
+        }
+
+        if (array_key_exists("CfwAiAgentOperationSource",$param) and $param["CfwAiAgentOperationSource"] !== null) {
+            $this->CfwAiAgentOperationSource = $param["CfwAiAgentOperationSource"];
         }
 
         if (array_key_exists("HandleEventIdList",$param) and $param["HandleEventIdList"] !== null) {

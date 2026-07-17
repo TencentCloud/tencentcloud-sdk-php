@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTokenPlanTeamOrderAndBuy请求参数结构体
  *
- * @method string getProductType() 获取套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
- * @method void setProductType(string $ProductType) 设置套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
- * @method string getTeamName() 获取套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符
- * @method void setTeamName(string $TeamName) 设置套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符
- * @method integer getTimeSpan() 获取购买时长。单位：月。必须大于 0。
- * @method void setTimeSpan(integer $TimeSpan) 设置购买时长。单位：月。必须大于 0。
- * @method integer getCreditOrToken() 获取购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。
- * @method void setCreditOrToken(integer $CreditOrToken) 设置购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。
- * @method boolean getEnableAutoRenew() 获取是否开启自动续费。默认不开启。
- * @method void setEnableAutoRenew(boolean $EnableAutoRenew) 设置是否开启自动续费。默认不开启。
+ * @method string getProductType() 获取<p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
+ * @method void setProductType(string $ProductType) 设置<p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
+ * @method string getTeamName() 获取<p>套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符</p>
+ * @method void setTeamName(string $TeamName) 设置<p>套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符</p>
+ * @method integer getTimeSpan() 获取<p>购买时长。单位：月。必须大于 0，支持1个月～12个月。</p>
+ * @method void setTimeSpan(integer $TimeSpan) 设置<p>购买时长。单位：月。必须大于 0，支持1个月～12个月。</p>
+ * @method integer getCreditOrToken() 获取<p>购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。</p>
+ * @method void setCreditOrToken(integer $CreditOrToken) 设置<p>购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。</p>
+ * @method boolean getEnableAutoRenew() 获取<p>是否开启自动续费。默认不开启。</p>
+ * @method void setEnableAutoRenew(boolean $EnableAutoRenew) 设置<p>是否开启自动续费。默认不开启。</p>
+ * @method string getTeamId() 获取<p>已有套餐 ID（非空时走过期续费，空时走新购）</p>
+ * @method void setTeamId(string $TeamId) 设置<p>已有套餐 ID（非空时走过期续费，空时走新购）</p>
  */
 class CreateTokenPlanTeamOrderAndBuyRequest extends AbstractModel
 {
     /**
-     * @var string 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+     * @var string <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
      */
     public $ProductType;
 
     /**
-     * @var string 套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符
+     * @var string <p>套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符</p>
      */
     public $TeamName;
 
     /**
-     * @var integer 购买时长。单位：月。必须大于 0。
+     * @var integer <p>购买时长。单位：月。必须大于 0，支持1个月～12个月。</p>
      */
     public $TimeSpan;
 
     /**
-     * @var integer 购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。
+     * @var integer <p>购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。</p>
      */
     public $CreditOrToken;
 
     /**
-     * @var boolean 是否开启自动续费。默认不开启。
+     * @var boolean <p>是否开启自动续费。默认不开启。</p>
      */
     public $EnableAutoRenew;
 
     /**
-     * @param string $ProductType 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
-     * @param string $TeamName 套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符
-     * @param integer $TimeSpan 购买时长。单位：月。必须大于 0。
-     * @param integer $CreditOrToken 购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。
-     * @param boolean $EnableAutoRenew 是否开启自动续费。默认不开启。
+     * @var string <p>已有套餐 ID（非空时走过期续费，空时走新购）</p>
+     */
+    public $TeamId;
+
+    /**
+     * @param string $ProductType <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
+     * @param string $TeamName <p>套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符</p>
+     * @param integer $TimeSpan <p>购买时长。单位：月。必须大于 0，支持1个月～12个月。</p>
+     * @param integer $CreditOrToken <p>购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。</p>
+     * @param boolean $EnableAutoRenew <p>是否开启自动续费。默认不开启。</p>
+     * @param string $TeamId <p>已有套餐 ID（非空时走过期续费，空时走新购）</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateTokenPlanTeamOrderAndBuyRequest extends AbstractModel
 
         if (array_key_exists("EnableAutoRenew",$param) and $param["EnableAutoRenew"] !== null) {
             $this->EnableAutoRenew = $param["EnableAutoRenew"];
+        }
+
+        if (array_key_exists("TeamId",$param) and $param["TeamId"] !== null) {
+            $this->TeamId = $param["TeamId"];
         }
     }
 }

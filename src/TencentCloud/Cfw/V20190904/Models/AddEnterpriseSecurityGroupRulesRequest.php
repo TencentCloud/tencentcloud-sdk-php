@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getData() 获取<p>创建规则数据</p>
  * @method void setData(array $Data) 设置<p>创建规则数据</p>
+ * @method string getCfwAiAgentOperationSource() 获取<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method void setCfwAiAgentOperationSource(string $CfwAiAgentOperationSource) 设置<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
  * @method integer getType() 获取<p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
  * @method void setType(integer $Type) 设置<p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
  * @method string getClientToken() 获取<p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
@@ -39,6 +41,11 @@ class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
      * @var array <p>创建规则数据</p>
      */
     public $Data;
+
+    /**
+     * @var string <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public $CfwAiAgentOperationSource;
 
     /**
      * @var integer <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
@@ -67,6 +74,7 @@ class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
 
     /**
      * @param array $Data <p>创建规则数据</p>
+     * @param string $CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
      * @param integer $Type <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
      * @param string $ClientToken <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
      * @param integer $IsDelay <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
@@ -93,6 +101,10 @@ class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
+        }
+
+        if (array_key_exists("CfwAiAgentOperationSource",$param) and $param["CfwAiAgentOperationSource"] !== null) {
+            $this->CfwAiAgentOperationSource = $param["CfwAiAgentOperationSource"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {

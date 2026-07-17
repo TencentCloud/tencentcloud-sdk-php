@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCycleParam(CycleEmailParam $CycleParam) 设置<p>周期发送任务的必要参数</p>
  * @method TimedEmailParam getTimedParam() 获取<p>定时发送任务的必要参数</p>
  * @method void setTimedParam(TimedEmailParam $TimedParam) 设置<p>定时发送任务的必要参数</p>
- * @method string getUnsubscribe() 获取<p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
- * @method void setUnsubscribe(string $Unsubscribe) 设置<p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
+ * @method string getUnsubscribe() 获取<p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li><li>12： 越南语</li></ul>
+ * @method void setUnsubscribe(string $Unsubscribe) 设置<p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li><li>12： 越南语</li></ul>
  * @method integer getADLocation() 获取<p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
  * @method void setADLocation(integer $ADLocation) 设置<p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
  */
@@ -98,7 +98,7 @@ class BatchSendEmailRequest extends AbstractModel
     public $TimedParam;
 
     /**
-     * @var string <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
+     * @var string <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li><li>12： 越南语</li></ul>
      */
     public $Unsubscribe;
 
@@ -118,7 +118,7 @@ class BatchSendEmailRequest extends AbstractModel
      * @param array $Attachments <p>需要发送附件时，填写附件相关参数（暂未支持）</p>
      * @param CycleEmailParam $CycleParam <p>周期发送任务的必要参数</p>
      * @param TimedEmailParam $TimedParam <p>定时发送任务的必要参数</p>
-     * @param string $Unsubscribe <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
+     * @param string $Unsubscribe <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li><li>12： 越南语</li></ul>
      * @param integer $ADLocation <p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
      */
     function __construct()

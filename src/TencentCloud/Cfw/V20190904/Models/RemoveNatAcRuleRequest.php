@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveNatAcRule请求参数结构体
  *
- * @method array getRuleUuid() 获取规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
- * @method void setRuleUuid(array $RuleUuid) 设置规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
- * @method integer getDirection() 获取规则方向：1，入站；0，出站
- * @method void setDirection(integer $Direction) 设置规则方向：1，入站；0，出站
+ * @method array getRuleUuid() 获取<p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
+ * @method void setRuleUuid(array $RuleUuid) 设置<p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
+ * @method string getCfwAiAgentOperationSource() 获取<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method void setCfwAiAgentOperationSource(string $CfwAiAgentOperationSource) 设置<p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+ * @method integer getDirection() 获取<p>规则方向：1，入站；0，出站</p>
+ * @method void setDirection(integer $Direction) 设置<p>规则方向：1，入站；0，出站</p>
  */
 class RemoveNatAcRuleRequest extends AbstractModel
 {
     /**
-     * @var array 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+     * @var array <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
      */
     public $RuleUuid;
 
     /**
-     * @var integer 规则方向：1，入站；0，出站
+     * @var string <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public $CfwAiAgentOperationSource;
+
+    /**
+     * @var integer <p>规则方向：1，入站；0，出站</p>
      */
     public $Direction;
 
     /**
-     * @param array $RuleUuid 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
-     * @param integer $Direction 规则方向：1，入站；0，出站
+     * @param array $RuleUuid <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
+     * @param string $CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param integer $Direction <p>规则方向：1，入站；0，出站</p>
      */
     function __construct()
     {
@@ -56,6 +64,10 @@ class RemoveNatAcRuleRequest extends AbstractModel
         }
         if (array_key_exists("RuleUuid",$param) and $param["RuleUuid"] !== null) {
             $this->RuleUuid = $param["RuleUuid"];
+        }
+
+        if (array_key_exists("CfwAiAgentOperationSource",$param) and $param["CfwAiAgentOperationSource"] !== null) {
+            $this->CfwAiAgentOperationSource = $param["CfwAiAgentOperationSource"];
         }
 
         if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {

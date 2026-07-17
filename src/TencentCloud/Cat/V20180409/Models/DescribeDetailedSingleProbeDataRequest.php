@@ -20,238 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDetailedSingleProbeData请求参数结构体
  *
- * @method integer getBeginTime() 获取开始时间戳（毫秒级）
- * @method void setBeginTime(integer $BeginTime) 设置开始时间戳（毫秒级）
- * @method integer getEndTime() 获取结束时间戳（毫秒级）
- * @method void setEndTime(integer $EndTime) 设置结束时间戳（毫秒级）
- * @method string getTaskType() 获取任务类型
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_MediaStream：音视频体验
- * @method void setTaskType(string $TaskType) 设置任务类型
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_MediaStream：音视频体验
- * @method string getSortField() 获取待排序字段
-可以填写 ProbeTime 拨测时间排序
-也可填写SelectedFields 中的选中字段
- * @method void setSortField(string $SortField) 设置待排序字段
-可以填写 ProbeTime 拨测时间排序
-也可填写SelectedFields 中的选中字段
- * @method boolean getAscending() 获取true表示升序
- * @method void setAscending(boolean $Ascending) 设置true表示升序
- * @method array getSelectedFields() 获取选中字段，如ProbeTime、TransferTime、TransferSize等。
- * @method void setSelectedFields(array $SelectedFields) 设置选中字段，如ProbeTime、TransferTime、TransferSize等。
- * @method integer getOffset() 获取起始取数位置
- * @method void setOffset(integer $Offset) 设置起始取数位置
- * @method integer getLimit() 获取取数数量
- * @method void setLimit(integer $Limit) 设置取数数量
- * @method array getTaskID() 获取任务ID
- * @method void setTaskID(array $TaskID) 设置任务ID
- * @method array getOperators() 获取拨测点运营商
-	
-这里实际按拨测结果中的运营商来填写即可
-
-电信：中国电信
-移动：中国移动
-联通：中国联通
- * @method void setOperators(array $Operators) 设置拨测点运营商
-	
-这里实际按拨测结果中的运营商来填写即可
-
-电信：中国电信
-移动：中国移动
-联通：中国联通
- * @method array getDistricts() 获取拨测点地区
-	
-这里实际按拨测结果中的地区来填写即可
-
-国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海
-
-境外一般是国家名，如澳大利亚、新加坡
- * @method void setDistricts(array $Districts) 设置拨测点地区
-	
-这里实际按拨测结果中的地区来填写即可
-
-国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海
-
-境外一般是国家名，如澳大利亚、新加坡
- * @method array getErrorTypes() 获取错误类型
- * @method void setErrorTypes(array $ErrorTypes) 设置错误类型
- * @method array getCity() 获取城市
-这里实际按拨测结果中的城市来填写即可
-
-示例：
-
-深圳市
-武汉市
-首尔
-多伦多
- * @method void setCity(array $City) 设置城市
-这里实际按拨测结果中的城市来填写即可
-
-示例：
-
-深圳市
-武汉市
-首尔
-多伦多
- * @method string getScrollID() 获取es scroll查询id
- * @method void setScrollID(string $ScrollID) 设置es scroll查询id
- * @method string getQueryFlag() 获取详情数据下载
- * @method void setQueryFlag(string $QueryFlag) 设置详情数据下载
+ * @method integer getBeginTime() 获取<p>开始时间戳（毫秒级）</p>
+ * @method void setBeginTime(integer $BeginTime) 设置<p>开始时间戳（毫秒级）</p>
+ * @method integer getEndTime() 获取<p>结束时间戳（毫秒级）</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间戳（毫秒级）</p>
+ * @method string getTaskType() 获取<p>任务类型<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_MediaStream：音视频体验</p>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_MediaStream：音视频体验</p>
+ * @method string getSortField() 获取<p>待排序字段<br>可以填写 ProbeTime 拨测时间排序<br>也可填写SelectedFields 中的选中字段</p>
+ * @method void setSortField(string $SortField) 设置<p>待排序字段<br>可以填写 ProbeTime 拨测时间排序<br>也可填写SelectedFields 中的选中字段</p>
+ * @method boolean getAscending() 获取<p>true表示升序</p>
+ * @method void setAscending(boolean $Ascending) 设置<p>true表示升序</p>
+ * @method array getSelectedFields() 获取<p>选中字段，如ProbeTime、TransferTime、TransferSize等。</p>
+ * @method void setSelectedFields(array $SelectedFields) 设置<p>选中字段，如ProbeTime、TransferTime、TransferSize等。</p>
+ * @method integer getOffset() 获取<p>起始取数位置</p>
+ * @method void setOffset(integer $Offset) 设置<p>起始取数位置</p>
+ * @method integer getLimit() 获取<p>取数数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>取数数量</p>
+ * @method array getTaskID() 获取<p>任务ID</p>
+ * @method void setTaskID(array $TaskID) 设置<p>任务ID</p>
+ * @method array getOperators() 获取<p>拨测点运营商</p><p>这里实际按拨测结果中的运营商来填写即可</p><p>电信：中国电信<br>移动：中国移动<br>联通：中国联通</p>
+ * @method void setOperators(array $Operators) 设置<p>拨测点运营商</p><p>这里实际按拨测结果中的运营商来填写即可</p><p>电信：中国电信<br>移动：中国移动<br>联通：中国联通</p>
+ * @method array getDistricts() 获取<p>拨测点地区</p><p>这里实际按拨测结果中的地区来填写即可</p><p>国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海</p><p>境外一般是国家名，如澳大利亚、新加坡</p>
+ * @method void setDistricts(array $Districts) 设置<p>拨测点地区</p><p>这里实际按拨测结果中的地区来填写即可</p><p>国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海</p><p>境外一般是国家名，如澳大利亚、新加坡</p>
+ * @method array getErrorTypes() 获取<p>错误类型</p>
+ * @method void setErrorTypes(array $ErrorTypes) 设置<p>错误类型</p>
+ * @method array getCity() 获取<p>城市<br>这里实际按拨测结果中的城市来填写即可</p><p>示例：</p><p>深圳市<br>武汉市<br>首尔<br>多伦多</p>
+ * @method void setCity(array $City) 设置<p>城市<br>这里实际按拨测结果中的城市来填写即可</p><p>示例：</p><p>深圳市<br>武汉市<br>首尔<br>多伦多</p>
+ * @method string getScrollID() 获取<p>es scroll查询id</p>
+ * @method void setScrollID(string $ScrollID) 设置<p>es scroll查询id</p>
+ * @method string getQueryFlag() 获取<p>详情数据下载</p>
+ * @method void setQueryFlag(string $QueryFlag) 设置<p>详情数据下载</p>
  */
 class DescribeDetailedSingleProbeDataRequest extends AbstractModel
 {
     /**
-     * @var integer 开始时间戳（毫秒级）
+     * @var integer <p>开始时间戳（毫秒级）</p>
      */
     public $BeginTime;
 
     /**
-     * @var integer 结束时间戳（毫秒级）
+     * @var integer <p>结束时间戳（毫秒级）</p>
      */
     public $EndTime;
 
     /**
-     * @var string 任务类型
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_MediaStream：音视频体验
+     * @var string <p>任务类型<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_MediaStream：音视频体验</p>
      */
     public $TaskType;
 
     /**
-     * @var string 待排序字段
-可以填写 ProbeTime 拨测时间排序
-也可填写SelectedFields 中的选中字段
+     * @var string <p>待排序字段<br>可以填写 ProbeTime 拨测时间排序<br>也可填写SelectedFields 中的选中字段</p>
      */
     public $SortField;
 
     /**
-     * @var boolean true表示升序
+     * @var boolean <p>true表示升序</p>
      */
     public $Ascending;
 
     /**
-     * @var array 选中字段，如ProbeTime、TransferTime、TransferSize等。
+     * @var array <p>选中字段，如ProbeTime、TransferTime、TransferSize等。</p>
      */
     public $SelectedFields;
 
     /**
-     * @var integer 起始取数位置
+     * @var integer <p>起始取数位置</p>
      */
     public $Offset;
 
     /**
-     * @var integer 取数数量
+     * @var integer <p>取数数量</p>
      */
     public $Limit;
 
     /**
-     * @var array 任务ID
+     * @var array <p>任务ID</p>
      */
     public $TaskID;
 
     /**
-     * @var array 拨测点运营商
-	
-这里实际按拨测结果中的运营商来填写即可
-
-电信：中国电信
-移动：中国移动
-联通：中国联通
+     * @var array <p>拨测点运营商</p><p>这里实际按拨测结果中的运营商来填写即可</p><p>电信：中国电信<br>移动：中国移动<br>联通：中国联通</p>
      */
     public $Operators;
 
     /**
-     * @var array 拨测点地区
-	
-这里实际按拨测结果中的地区来填写即可
-
-国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海
-
-境外一般是国家名，如澳大利亚、新加坡
+     * @var array <p>拨测点地区</p><p>这里实际按拨测结果中的地区来填写即可</p><p>国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海</p><p>境外一般是国家名，如澳大利亚、新加坡</p>
      */
     public $Districts;
 
     /**
-     * @var array 错误类型
+     * @var array <p>错误类型</p>
      */
     public $ErrorTypes;
 
     /**
-     * @var array 城市
-这里实际按拨测结果中的城市来填写即可
-
-示例：
-
-深圳市
-武汉市
-首尔
-多伦多
+     * @var array <p>城市<br>这里实际按拨测结果中的城市来填写即可</p><p>示例：</p><p>深圳市<br>武汉市<br>首尔<br>多伦多</p>
      */
     public $City;
 
     /**
-     * @var string es scroll查询id
+     * @var string <p>es scroll查询id</p>
      */
     public $ScrollID;
 
     /**
-     * @var string 详情数据下载
+     * @var string <p>详情数据下载</p>
      */
     public $QueryFlag;
 
     /**
-     * @param integer $BeginTime 开始时间戳（毫秒级）
-     * @param integer $EndTime 结束时间戳（毫秒级）
-     * @param string $TaskType 任务类型
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_MediaStream：音视频体验
-     * @param string $SortField 待排序字段
-可以填写 ProbeTime 拨测时间排序
-也可填写SelectedFields 中的选中字段
-     * @param boolean $Ascending true表示升序
-     * @param array $SelectedFields 选中字段，如ProbeTime、TransferTime、TransferSize等。
-     * @param integer $Offset 起始取数位置
-     * @param integer $Limit 取数数量
-     * @param array $TaskID 任务ID
-     * @param array $Operators 拨测点运营商
-	
-这里实际按拨测结果中的运营商来填写即可
-
-电信：中国电信
-移动：中国移动
-联通：中国联通
-     * @param array $Districts 拨测点地区
-	
-这里实际按拨测结果中的地区来填写即可
-
-国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海
-
-境外一般是国家名，如澳大利亚、新加坡
-     * @param array $ErrorTypes 错误类型
-     * @param array $City 城市
-这里实际按拨测结果中的城市来填写即可
-
-示例：
-
-深圳市
-武汉市
-首尔
-多伦多
-     * @param string $ScrollID es scroll查询id
-     * @param string $QueryFlag 详情数据下载
+     * @param integer $BeginTime <p>开始时间戳（毫秒级）</p>
+     * @param integer $EndTime <p>结束时间戳（毫秒级）</p>
+     * @param string $TaskType <p>任务类型<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_MediaStream：音视频体验</p>
+     * @param string $SortField <p>待排序字段<br>可以填写 ProbeTime 拨测时间排序<br>也可填写SelectedFields 中的选中字段</p>
+     * @param boolean $Ascending <p>true表示升序</p>
+     * @param array $SelectedFields <p>选中字段，如ProbeTime、TransferTime、TransferSize等。</p>
+     * @param integer $Offset <p>起始取数位置</p>
+     * @param integer $Limit <p>取数数量</p>
+     * @param array $TaskID <p>任务ID</p>
+     * @param array $Operators <p>拨测点运营商</p><p>这里实际按拨测结果中的运营商来填写即可</p><p>电信：中国电信<br>移动：中国移动<br>联通：中国联通</p>
+     * @param array $Districts <p>拨测点地区</p><p>这里实际按拨测结果中的地区来填写即可</p><p>国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海</p><p>境外一般是国家名，如澳大利亚、新加坡</p>
+     * @param array $ErrorTypes <p>错误类型</p>
+     * @param array $City <p>城市<br>这里实际按拨测结果中的城市来填写即可</p><p>示例：</p><p>深圳市<br>武汉市<br>首尔<br>多伦多</p>
+     * @param string $ScrollID <p>es scroll查询id</p>
+     * @param string $QueryFlag <p>详情数据下载</p>
      */
     function __construct()
     {

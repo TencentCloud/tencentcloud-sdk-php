@@ -136,6 +136,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableConfigKeyValue(string $EnableConfigKeyValue) 设置<p>keyvalue视图</p>
  * @method boolean getHttpsEnabled() 获取<p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
  * @method void setHttpsEnabled(boolean $HttpsEnabled) 设置<p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
+ * @method DiskEncryptInfo getDiskEncryptInfo() 获取<p>集群磁盘加密配置</p>
+ * @method void setDiskEncryptInfo(DiskEncryptInfo $DiskEncryptInfo) 设置<p>集群磁盘加密配置</p>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -430,6 +432,11 @@ class InstanceInfo extends AbstractModel
     public $HttpsEnabled;
 
     /**
+     * @var DiskEncryptInfo <p>集群磁盘加密配置</p>
+     */
+    public $DiskEncryptInfo;
+
+    /**
      * @param string $InstanceId <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p>
      * @param string $InstanceName <p>集群实例名称</p>
      * @param string $Status <p>状态,<br>Init 创建中; Serving 运行中；<br>Deleted已销毁；Deleting 销毁中；<br>Modify 集群变更中；</p>
@@ -488,6 +495,7 @@ class InstanceInfo extends AbstractModel
      * @param string $InstanceType <p>实例类型：标准型 standard，无keeper节点类型noKeeper；</p>
      * @param string $EnableConfigKeyValue <p>keyvalue视图</p>
      * @param boolean $HttpsEnabled <p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
+     * @param DiskEncryptInfo $DiskEncryptInfo <p>集群磁盘加密配置</p>
      */
     function __construct()
     {
@@ -746,6 +754,11 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("HttpsEnabled",$param) and $param["HttpsEnabled"] !== null) {
             $this->HttpsEnabled = $param["HttpsEnabled"];
+        }
+
+        if (array_key_exists("DiskEncryptInfo",$param) and $param["DiskEncryptInfo"] !== null) {
+            $this->DiskEncryptInfo = new DiskEncryptInfo();
+            $this->DiskEncryptInfo->deserialize($param["DiskEncryptInfo"]);
         }
     }
 }

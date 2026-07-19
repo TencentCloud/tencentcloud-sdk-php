@@ -293,9 +293,19 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\RevokeBindUserDeviceResponse RevokeBindUserDevice(Models\RevokeBindUserDeviceRequest $req) 1. 按 `(IotAppID, OpenID)` 只读定位用户（不存在视为已解绑，幂等成功）；
 2. 按 `(用户, FamilyName)` 只读定位家庭（不存在视为已解绑，幂等成功）；
 3. 解除设备与该家庭的绑定关系，异步下发 `delete_device` 消息；解绑路径不校验设备存在性，允许设备已删除时清理残留绑定关系。
+ * @method Models\RevokeShareDeviceFromUserResponse RevokeShareDeviceFromUser(Models\RevokeShareDeviceFromUserRequest $req) Owner 取消对指定用户的设备分享：
+1. 校验产品 ACL / 子产品禁止 / 设备真实存在；
+2. 只读定位 Owner（必须已存在），并校验 Owner 持有该设备；
+3. 只读定位被取消分享用户（不存在视为已取消，幂等成功）；
+4. 删除分享关系记录（不存在视为已取消，幂等成功）。
  * @method Models\SearchPositionSpaceResponse SearchPositionSpace(Models\SearchPositionSpaceRequest $req) 搜索位置空间
  * @method Models\SearchStudioProductResponse SearchStudioProduct(Models\SearchStudioProductRequest $req) 提供根据产品名称查找产品的能力
  * @method Models\SearchTopicRuleResponse SearchTopicRule(Models\SearchTopicRuleRequest $req) 搜索规则
+ * @method Models\ShareDeviceToUserResponse ShareDeviceToUser(Models\ShareDeviceToUserRequest $req) Owner 将其名下的设备分享给指定 App 用户：
+1. 校验产品 ACL / 子产品禁止 / 设备真实存在；
+2. 只读定位 Owner（必须已存在），并校验 Owner 确实持有该设备；
+3. 兜底创建被分享用户（已存在则复用，昵称不覆盖）；
+4. 写入分享关系（重复分享幂等成功，不修改原 CreateTime）。
  * @method Models\TerminateTWeSeeSubscriptionResponse TerminateTWeSeeSubscription(Models\TerminateTWeSeeSubscriptionRequest $req) 退订 TWeSee 预付费订阅
  * @method Models\TransferCloudStorageResponse TransferCloudStorage(Models\TransferCloudStorageRequest $req) 转移云存服务
  * @method Models\TransferTWeCallDeviceResponse TransferTWeCallDevice(Models\TransferTWeCallDeviceRequest $req) 转移设备

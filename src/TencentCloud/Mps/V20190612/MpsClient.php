@@ -41,6 +41,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateAsrHotwordsResponse CreateAsrHotwords(Models\CreateAsrHotwordsRequest $req) 智能字幕新建热词库接口
  * @method Models\CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(Models\CreateBlindWatermarkTemplateRequest $req) 创建用户自定义数字水印模板。
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) 创建用户自定义内容审核模板，数量上限：50。
+ * @method Models\CreateDocToVideoTaskResponse CreateDocToVideoTask(Models\CreateDocToVideoTaskRequest $req) 创建 AiGC 文档生成视频任务
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) 创建用户自定义雪碧图模板，数量上限：16。
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) 创建直播录制模板
  * @method Models\CreateMediaEvaluationResponse CreateMediaEvaluation(Models\CreateMediaEvaluationRequest $req) 发起视频评测任务，功能包括：
@@ -231,6 +232,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 2. 图像级别：贴图、缩放、任意角度旋转、镜像等
 3. 音频级别：音量控制、淡入淡出、混音等
 4. 视频级别：转场、倍数播放、拼接、剪切、字幕、画中画、音画分离、出入场动效等
+ * @method Models\EmbeddingDataResponse EmbeddingData(Models\EmbeddingDataRequest $req) 模型embedding 接口
  * @method Models\EnableScheduleResponse EnableSchedule(Models\EnableScheduleRequest $req) 启用自动化触发编排任务。
  * @method Models\EnableWorkflowResponse EnableWorkflow(Models\EnableWorkflowRequest $req) 启用工作流。
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) 本接口仅用于定制开发的特殊场景，除非云媒体处理客服人员主动告知您需要使用本接口，其它情况请勿调用。

@@ -20,42 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteVpcFwGroup请求参数结构体
  *
- * @method string getFwGroupId() 获取防火墙(组)Id
- * @method void setFwGroupId(string $FwGroupId) 设置防火墙(组)Id
- * @method integer getDeleteFwGroup() 获取是否删除整个防火墙(组)
-0：不删除防火墙(组)，只删除单独实例
-1：删除整个防火墙(组)
- * @method void setDeleteFwGroup(integer $DeleteFwGroup) 设置是否删除整个防火墙(组)
-0：不删除防火墙(组)，只删除单独实例
-1：删除整个防火墙(组)
- * @method array getVpcFwInsList() 获取待删除的防火墙实例数组
- * @method void setVpcFwInsList(array $VpcFwInsList) 设置待删除的防火墙实例数组
+ * @method string getFwGroupId() 获取<p>防火墙(组)Id</p>
+ * @method void setFwGroupId(string $FwGroupId) 设置<p>防火墙(组)Id</p>
+ * @method integer getDeleteFwGroup() 获取<p>是否删除整个防火墙(组)<br>0：不删除防火墙(组)，只删除单独实例<br>1：删除整个防火墙(组)</p>
+ * @method void setDeleteFwGroup(integer $DeleteFwGroup) 设置<p>是否删除整个防火墙(组)<br>0：不删除防火墙(组)，只删除单独实例<br>1：删除整个防火墙(组)</p>
+ * @method array getVpcFwInsList() 获取<p>待删除的防火墙实例数组</p>
+ * @method void setVpcFwInsList(array $VpcFwInsList) 设置<p>待删除的防火墙实例数组</p>
  */
 class DeleteVpcFwGroupRequest extends AbstractModel
 {
     /**
-     * @var string 防火墙(组)Id
+     * @var string <p>防火墙(组)Id</p>
      */
     public $FwGroupId;
 
     /**
-     * @var integer 是否删除整个防火墙(组)
-0：不删除防火墙(组)，只删除单独实例
-1：删除整个防火墙(组)
+     * @var integer <p>是否删除整个防火墙(组)<br>0：不删除防火墙(组)，只删除单独实例<br>1：删除整个防火墙(组)</p>
      */
     public $DeleteFwGroup;
 
     /**
-     * @var array 待删除的防火墙实例数组
+     * @var array <p>待删除的防火墙实例数组</p>
      */
     public $VpcFwInsList;
 
     /**
-     * @param string $FwGroupId 防火墙(组)Id
-     * @param integer $DeleteFwGroup 是否删除整个防火墙(组)
-0：不删除防火墙(组)，只删除单独实例
-1：删除整个防火墙(组)
-     * @param array $VpcFwInsList 待删除的防火墙实例数组
+     * @param string $FwGroupId <p>防火墙(组)Id</p>
+     * @param integer $DeleteFwGroup <p>是否删除整个防火墙(组)<br>0：不删除防火墙(组)，只删除单独实例<br>1：删除整个防火墙(组)</p>
+     * @param array $VpcFwInsList <p>待删除的防火墙实例数组</p>
      */
     function __construct()
     {

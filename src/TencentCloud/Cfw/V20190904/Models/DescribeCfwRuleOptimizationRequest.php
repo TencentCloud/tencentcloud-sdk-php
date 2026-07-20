@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfwRuleOptimization请求参数结构体
  *
- * @method integer getIdleDays() 获取长期零命中规则阈值天数。可选，必须为正整数，默认 180。
- * @method void setIdleDays(integer $IdleDays) 设置长期零命中规则阈值天数。可选，必须为正整数，默认 180。
- * @method integer getIpAggMin() 获取单 IP 离散过多聚合建议的最小数量。可选，最小为 2，默认 10。
- * @method void setIpAggMin(integer $IpAggMin) 设置单 IP 离散过多聚合建议的最小数量。可选，最小为 2，默认 10。
- * @method integer getIocSample() 获取可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，必须为正整数，默认 50。
- * @method void setIocSample(integer $IocSample) 设置可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，必须为正整数，默认 50。
+ * @method string getRuleType() 获取<p>防火墙规则类型。必填。枚举：border 互联网边界；nat NAT 边界；vpc VPC 间；enterprise_sg 企业安全组。</p>
+ * @method void setRuleType(string $RuleType) 设置<p>防火墙规则类型。必填。枚举：border 互联网边界；nat NAT 边界；vpc VPC 间；enterprise_sg 企业安全组。</p>
+ * @method array getDimensions() 获取<p>要执行的优化维度白名单。可选，例如 D1、D2、D8；不传默认执行全部支持维度。</p>
+ * @method void setDimensions(array $Dimensions) 设置<p>要执行的优化维度白名单。可选，例如 D1、D2、D8；不传默认执行全部支持维度。</p>
+ * @method integer getIdleDays() 获取<p>长期零命中规则阈值天数。可选，默认 180。</p>
+ * @method void setIdleDays(integer $IdleDays) 设置<p>长期零命中规则阈值天数。可选，默认 180。</p>
+ * @method integer getIpAggMin() 获取<p>单 IP 离散过多聚合建议的最小数量。可选，默认 10。</p>
+ * @method void setIpAggMin(integer $IpAggMin) 设置<p>单 IP 离散过多聚合建议的最小数量。可选，默认 10。</p>
+ * @method integer getIocSample() 获取<p>可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，默认 50。</p>
+ * @method void setIocSample(integer $IocSample) 设置<p>可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，默认 50。</p>
  */
 class DescribeCfwRuleOptimizationRequest extends AbstractModel
 {
     /**
-     * @var integer 长期零命中规则阈值天数。可选，必须为正整数，默认 180。
+     * @var string <p>防火墙规则类型。必填。枚举：border 互联网边界；nat NAT 边界；vpc VPC 间；enterprise_sg 企业安全组。</p>
+     */
+    public $RuleType;
+
+    /**
+     * @var array <p>要执行的优化维度白名单。可选，例如 D1、D2、D8；不传默认执行全部支持维度。</p>
+     */
+    public $Dimensions;
+
+    /**
+     * @var integer <p>长期零命中规则阈值天数。可选，默认 180。</p>
      */
     public $IdleDays;
 
     /**
-     * @var integer 单 IP 离散过多聚合建议的最小数量。可选，最小为 2，默认 10。
+     * @var integer <p>单 IP 离散过多聚合建议的最小数量。可选，默认 10。</p>
      */
     public $IpAggMin;
 
     /**
-     * @var integer 可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，必须为正整数，默认 50。
+     * @var integer <p>可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，默认 50。</p>
      */
     public $IocSample;
 
     /**
-     * @param integer $IdleDays 长期零命中规则阈值天数。可选，必须为正整数，默认 180。
-     * @param integer $IpAggMin 单 IP 离散过多聚合建议的最小数量。可选，最小为 2，默认 10。
-     * @param integer $IocSample 可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，必须为正整数，默认 50。
+     * @param string $RuleType <p>防火墙规则类型。必填。枚举：border 互联网边界；nat NAT 边界；vpc VPC 间；enterprise_sg 企业安全组。</p>
+     * @param array $Dimensions <p>要执行的优化维度白名单。可选，例如 D1、D2、D8；不传默认执行全部支持维度。</p>
+     * @param integer $IdleDays <p>长期零命中规则阈值天数。可选，默认 180。</p>
+     * @param integer $IpAggMin <p>单 IP 离散过多聚合建议的最小数量。可选，默认 10。</p>
+     * @param integer $IocSample <p>可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，默认 50。</p>
      */
     function __construct()
     {
@@ -62,6 +78,14 @@ class DescribeCfwRuleOptimizationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
+            $this->Dimensions = $param["Dimensions"];
+        }
+
         if (array_key_exists("IdleDays",$param) and $param["IdleDays"] !== null) {
             $this->IdleDays = $param["IdleDays"];
         }

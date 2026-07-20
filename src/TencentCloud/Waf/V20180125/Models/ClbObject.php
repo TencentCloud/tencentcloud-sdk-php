@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreciseDomainDetails(array $PreciseDomainDetails) 设置<p>精准域名信息</p>
  * @method integer getWafAccessStatus() 获取<p>waf接入状态</p>
  * @method void setWafAccessStatus(integer $WafAccessStatus) 设置<p>waf接入状态</p>
+ * @method string getNote() 获取<p>备注</p>
+ * @method void setNote(string $Note) 设置<p>备注</p>
  */
 class ClbObject extends AbstractModel
 {
@@ -241,6 +243,11 @@ class ClbObject extends AbstractModel
     public $WafAccessStatus;
 
     /**
+     * @var string <p>备注</p>
+     */
+    public $Note;
+
+    /**
      * @param string $ObjectId <p>对象ID</p>
      * @param string $InstanceId <p>实例ID</p>
      * @param string $InstanceName <p>实例名称</p>
@@ -272,6 +279,7 @@ class ClbObject extends AbstractModel
      * @param array $TagInfos <p>标签信息</p>
      * @param array $PreciseDomainDetails <p>精准域名信息</p>
      * @param integer $WafAccessStatus <p>waf接入状态</p>
+     * @param string $Note <p>备注</p>
      */
     function __construct()
     {
@@ -418,6 +426,10 @@ class ClbObject extends AbstractModel
 
         if (array_key_exists("WafAccessStatus",$param) and $param["WafAccessStatus"] !== null) {
             $this->WafAccessStatus = $param["WafAccessStatus"];
+        }
+
+        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
+            $this->Note = $param["Note"];
         }
     }
 }

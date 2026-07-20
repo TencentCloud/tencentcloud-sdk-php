@@ -18,10 +18,10 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 过滤条件。同一 Name 下多个 Values 为或关系；不同 Name 之间为且关系
+ * 过滤条件。同一 Name 下多个 Values 为或关系；不同 Name 之间为且关系。支持的 Name：TaskID（任务ID精确）、TaskStatus（任务状态）、TaskType（任务类型）
  *
- * @method string getName() 获取过滤条件名称
- * @method void setName(string $Name) 设置过滤条件名称
+ * @method string getName() 获取过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
+ * @method void setName(string $Name) 设置过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
  * @method array getValues() 获取过滤条件值列表
  * @method void setValues(array $Values) 设置过滤条件值列表
  * @method string getExactMatch() 获取是否精确匹配：1 精确匹配；默认模糊匹配
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class Filters extends AbstractModel
 {
     /**
-     * @var string 过滤条件名称
+     * @var string 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
      */
     public $Name;
 
@@ -45,7 +45,7 @@ class Filters extends AbstractModel
     public $ExactMatch;
 
     /**
-     * @param string $Name 过滤条件名称
+     * @param string $Name 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
      * @param array $Values 过滤条件值列表
      * @param string $ExactMatch 是否精确匹配：1 精确匹配；默认模糊匹配
      */

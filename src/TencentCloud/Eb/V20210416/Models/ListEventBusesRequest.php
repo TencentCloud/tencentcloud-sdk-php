@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListEventBuses请求参数结构体
  *
- * @method string getOrderBy() 获取根据哪个字段进行返回结果排序,支持以下字段：created_at（创建时间）, updated_at（修改时间）
- * @method void setOrderBy(string $OrderBy) 设置根据哪个字段进行返回结果排序,支持以下字段：created_at（创建时间）, updated_at（修改时间）
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- * @method string getOrder() 获取以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
- * @method void setOrder(string $Order) 设置以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
- * @method array getFilters() 获取过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{"Name":"Type","Values":["Cloud","Platform"]}]
- * @method void setFilters(array $Filters) 设置过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{"Name":"Type","Values":["Cloud","Platform"]}]
- * @method integer getOffset() 获取分页偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置分页偏移量，默认为0。
+ * @method string getOrderBy() 获取<p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 修改时间</li><li>name： 事件集名称</li></ul><p>默认值：updated_at</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 修改时间</li><li>name： 事件集名称</li></ul><p>默认值：updated_at</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100。</p>
+ * @method string getOrder() 获取<p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
+ * @method void setOrder(string $Order) 设置<p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
+ * @method array getFilters() 获取<p>过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{&quot;Name&quot;:&quot;Type&quot;,&quot;Values&quot;:[&quot;Cloud&quot;,&quot;Platform&quot;]}]</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{&quot;Name&quot;:&quot;Type&quot;,&quot;Values&quot;:[&quot;Cloud&quot;,&quot;Platform&quot;]}]</p>
+ * @method integer getOffset() 获取<p>分页偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认为0。</p>
  */
 class ListEventBusesRequest extends AbstractModel
 {
     /**
-     * @var string 根据哪个字段进行返回结果排序,支持以下字段：created_at（创建时间）, updated_at（修改时间）
+     * @var string <p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 修改时间</li><li>name： 事件集名称</li></ul><p>默认值：updated_at</p>
      */
     public $OrderBy;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer <p>返回数量，默认为20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var string 以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
+     * @var string <p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
      */
     public $Order;
 
     /**
-     * @var array 过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{"Name":"Type","Values":["Cloud","Platform"]}]
+     * @var array <p>过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{&quot;Name&quot;:&quot;Type&quot;,&quot;Values&quot;:[&quot;Cloud&quot;,&quot;Platform&quot;]}]</p>
      */
     public $Filters;
 
     /**
-     * @var integer 分页偏移量，默认为0。
+     * @var integer <p>分页偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @param string $OrderBy 根据哪个字段进行返回结果排序,支持以下字段：created_at（创建时间）, updated_at（修改时间）
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
-     * @param string $Order 以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
-     * @param array $Filters 过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{"Name":"Type","Values":["Cloud","Platform"]}]
-     * @param integer $Offset 分页偏移量，默认为0。
+     * @param string $OrderBy <p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 修改时间</li><li>name： 事件集名称</li></ul><p>默认值：updated_at</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100。</p>
+     * @param string $Order <p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
+     * @param array $Filters <p>过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{&quot;Name&quot;:&quot;Type&quot;,&quot;Values&quot;:[&quot;Cloud&quot;,&quot;Platform&quot;]}]</p>
+     * @param integer $Offset <p>分页偏移量，默认为0。</p>
      */
     function __construct()
     {

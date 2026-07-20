@@ -30,14 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHistory(integer $History) 设置<p>上下文历史轮数，建议范围0-50</p>
  * @method integer getTimeout() 获取<p>超时时间，秒</p>
  * @method void setTimeout(integer $Timeout) 设置<p>超时时间，秒</p>
- * @method string getBaseUrl() 获取<p>OpenAI兼容模型Base URL，仅支持 80 和 443 端口，Type=openai时必填</p>
- * @method void setBaseUrl(string $BaseUrl) 设置<p>OpenAI兼容模型Base URL，仅支持 80 和 443 端口，Type=openai时必填</p>
+ * @method string getBaseUrl() 获取<p>OpenAI兼容模型的Base URL，Type=openai时必填</p>
+ * @method void setBaseUrl(string $BaseUrl) 设置<p>OpenAI兼容模型的Base URL，Type=openai时必填</p>
  * @method string getModel() 获取<p>模型名称，Type=openai时必填</p>
  * @method void setModel(string $Model) 设置<p>模型名称，Type=openai时必填</p>
  * @method string getApiKey() 获取<p>模型API Key，Type=openai时必填</p>
  * @method void setApiKey(string $ApiKey) 设置<p>模型API Key，Type=openai时必填</p>
  * @method string getExtraBody() 获取<p>额外模型请求体参数，JSON对象字符串，只允许JSON object，不允许普通字符串</p>
  * @method void setExtraBody(string $ExtraBody) 设置<p>额外模型请求体参数，JSON对象字符串，只允许JSON object，不允许普通字符串</p>
+ * @method ADPConfig getADP() 获取<p>ADP 平台配置</p>
+ * @method void setADP(ADPConfig $ADP) 设置<p>ADP 平台配置</p>
  */
 class TalkLLMConfig extends AbstractModel
 {
@@ -67,7 +69,7 @@ class TalkLLMConfig extends AbstractModel
     public $Timeout;
 
     /**
-     * @var string <p>OpenAI兼容模型Base URL，仅支持 80 和 443 端口，Type=openai时必填</p>
+     * @var string <p>OpenAI兼容模型的Base URL，Type=openai时必填</p>
      */
     public $BaseUrl;
 
@@ -87,15 +89,21 @@ class TalkLLMConfig extends AbstractModel
     public $ExtraBody;
 
     /**
+     * @var ADPConfig <p>ADP 平台配置</p>
+     */
+    public $ADP;
+
+    /**
      * @param string $Type <p>LLM类型：default-平台默认；openai-OpenAI兼容模型</p>
      * @param string $SystemPrompt <p>系统提示词</p>
      * @param float $Temperature <p>采样温度，建议范围0-2</p>
      * @param integer $History <p>上下文历史轮数，建议范围0-50</p>
      * @param integer $Timeout <p>超时时间，秒</p>
-     * @param string $BaseUrl <p>OpenAI兼容模型Base URL，仅支持 80 和 443 端口，Type=openai时必填</p>
+     * @param string $BaseUrl <p>OpenAI兼容模型的Base URL，Type=openai时必填</p>
      * @param string $Model <p>模型名称，Type=openai时必填</p>
      * @param string $ApiKey <p>模型API Key，Type=openai时必填</p>
      * @param string $ExtraBody <p>额外模型请求体参数，JSON对象字符串，只允许JSON object，不允许普通字符串</p>
+     * @param ADPConfig $ADP <p>ADP 平台配置</p>
      */
     function __construct()
     {
@@ -144,6 +152,11 @@ class TalkLLMConfig extends AbstractModel
 
         if (array_key_exists("ExtraBody",$param) and $param["ExtraBody"] !== null) {
             $this->ExtraBody = $param["ExtraBody"];
+        }
+
+        if (array_key_exists("ADP",$param) and $param["ADP"] !== null) {
+            $this->ADP = new ADPConfig();
+            $this->ADP->deserialize($param["ADP"]);
         }
     }
 }

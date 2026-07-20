@@ -20,98 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * api安全攻击源详情
  *
- * @method string getSrcIp() 获取攻击来源ip
- * @method void setSrcIp(string $SrcIp) 设置攻击来源ip
- * @method string getEventLevel() 获取威胁等级
- * @method void setEventLevel(string $EventLevel) 设置威胁等级
- * @method string getBotLabel() 获取BOT标签
- * @method void setBotLabel(string $BotLabel) 设置BOT标签
- * @method integer getTimestamp() 获取变更时间
- * @method void setTimestamp(integer $Timestamp) 设置变更时间
- * @method string getCity() 获取地理位置
- * @method void setCity(string $City) 设置地理位置
- * @method integer getStartTime() 获取开始时间
- * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method integer getEventCount() 获取关联事件数量
- * @method void setEventCount(integer $EventCount) 设置关联事件数量
- * @method integer getAttackCount() 获取攻击数量
- * @method void setAttackCount(integer $AttackCount) 设置攻击数量
- * @method string getMissUserName() 获取缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
- * @method void setMissUserName(string $MissUserName) 设置缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
- * @method array getAttackDetail() 获取当是水平越权和垂直越权时，返回此字段
- * @method void setAttackDetail(array $AttackDetail) 设置当是水平越权和垂直越权时，返回此字段
- * @method string getMissPassword() 获取缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
- * @method void setMissPassword(string $MissPassword) 设置缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+ * @method string getSrcIp() 获取<p>攻击来源ip</p>
+ * @method void setSrcIp(string $SrcIp) 设置<p>攻击来源ip</p>
+ * @method string getEventLevel() 获取<p>威胁等级</p>
+ * @method void setEventLevel(string $EventLevel) 设置<p>威胁等级</p>
+ * @method string getBotLabel() 获取<p>BOT标签</p>
+ * @method void setBotLabel(string $BotLabel) 设置<p>BOT标签</p>
+ * @method integer getTimestamp() 获取<p>变更时间</p>
+ * @method void setTimestamp(integer $Timestamp) 设置<p>变更时间</p>
+ * @method string getCity() 获取<p>地理位置</p>
+ * @method void setCity(string $City) 设置<p>地理位置</p>
+ * @method integer getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间</p>
+ * @method integer getEventCount() 获取<p>关联事件数量</p>
+ * @method void setEventCount(integer $EventCount) 设置<p>关联事件数量</p>
+ * @method integer getAttackCount() 获取<p>攻击数量</p>
+ * @method void setAttackCount(integer $AttackCount) 设置<p>攻击数量</p>
+ * @method string getMissUserName() 获取<p>缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
+ * @method void setMissUserName(string $MissUserName) 设置<p>缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
+ * @method array getAttackDetail() 获取<p>当是水平越权和垂直越权时，返回此字段</p>
+ * @method void setAttackDetail(array $AttackDetail) 设置<p>当是水平越权和垂直越权时，返回此字段</p>
+ * @method string getMissPassword() 获取<p>缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
+ * @method void setMissPassword(string $MissPassword) 设置<p>缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
+ * @method string getEventDescription() 获取<p>事件描述</p>
+ * @method void setEventDescription(string $EventDescription) 设置<p>事件描述</p>
+ * @method string getEventDescriptionEng() 获取<p>事件描述(英文)</p>
+ * @method void setEventDescriptionEng(string $EventDescriptionEng) 设置<p>事件描述(英文)</p>
+ * @method ApiEventSample getSample() 获取<p>攻击样本</p>
+ * @method void setSample(ApiEventSample $Sample) 设置<p>攻击样本</p>
  */
 class ApiSecAttackSource extends AbstractModel
 {
     /**
-     * @var string 攻击来源ip
+     * @var string <p>攻击来源ip</p>
      */
     public $SrcIp;
 
     /**
-     * @var string 威胁等级
+     * @var string <p>威胁等级</p>
      */
     public $EventLevel;
 
     /**
-     * @var string BOT标签
+     * @var string <p>BOT标签</p>
      */
     public $BotLabel;
 
     /**
-     * @var integer 变更时间
+     * @var integer <p>变更时间</p>
      */
     public $Timestamp;
 
     /**
-     * @var string 地理位置
+     * @var string <p>地理位置</p>
      */
     public $City;
 
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 关联事件数量
+     * @var integer <p>关联事件数量</p>
      */
     public $EventCount;
 
     /**
-     * @var integer 攻击数量
+     * @var integer <p>攻击数量</p>
      */
     public $AttackCount;
 
     /**
-     * @var string 缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+     * @var string <p>缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
      */
     public $MissUserName;
 
     /**
-     * @var array 当是水平越权和垂直越权时，返回此字段
+     * @var array <p>当是水平越权和垂直越权时，返回此字段</p>
      */
     public $AttackDetail;
 
     /**
-     * @var string 缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+     * @var string <p>缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
      */
     public $MissPassword;
 
     /**
-     * @param string $SrcIp 攻击来源ip
-     * @param string $EventLevel 威胁等级
-     * @param string $BotLabel BOT标签
-     * @param integer $Timestamp 变更时间
-     * @param string $City 地理位置
-     * @param integer $StartTime 开始时间
-     * @param integer $EventCount 关联事件数量
-     * @param integer $AttackCount 攻击数量
-     * @param string $MissUserName 缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
-     * @param array $AttackDetail 当是水平越权和垂直越权时，返回此字段
-     * @param string $MissPassword 缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+     * @var string <p>事件描述</p>
+     */
+    public $EventDescription;
+
+    /**
+     * @var string <p>事件描述(英文)</p>
+     */
+    public $EventDescriptionEng;
+
+    /**
+     * @var ApiEventSample <p>攻击样本</p>
+     */
+    public $Sample;
+
+    /**
+     * @param string $SrcIp <p>攻击来源ip</p>
+     * @param string $EventLevel <p>威胁等级</p>
+     * @param string $BotLabel <p>BOT标签</p>
+     * @param integer $Timestamp <p>变更时间</p>
+     * @param string $City <p>地理位置</p>
+     * @param integer $StartTime <p>开始时间</p>
+     * @param integer $EventCount <p>关联事件数量</p>
+     * @param integer $AttackCount <p>攻击数量</p>
+     * @param string $MissUserName <p>缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
+     * @param array $AttackDetail <p>当是水平越权和垂直越权时，返回此字段</p>
+     * @param string $MissPassword <p>缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
+     * @param string $EventDescription <p>事件描述</p>
+     * @param string $EventDescriptionEng <p>事件描述(英文)</p>
+     * @param ApiEventSample $Sample <p>攻击样本</p>
      */
     function __construct()
     {
@@ -168,6 +192,19 @@ class ApiSecAttackSource extends AbstractModel
 
         if (array_key_exists("MissPassword",$param) and $param["MissPassword"] !== null) {
             $this->MissPassword = $param["MissPassword"];
+        }
+
+        if (array_key_exists("EventDescription",$param) and $param["EventDescription"] !== null) {
+            $this->EventDescription = $param["EventDescription"];
+        }
+
+        if (array_key_exists("EventDescriptionEng",$param) and $param["EventDescriptionEng"] !== null) {
+            $this->EventDescriptionEng = $param["EventDescriptionEng"];
+        }
+
+        if (array_key_exists("Sample",$param) and $param["Sample"] !== null) {
+            $this->Sample = new ApiEventSample();
+            $this->Sample->deserialize($param["Sample"]);
         }
     }
 }

@@ -84,6 +84,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerCount(integer $ContainerCount) 设置<p>容器数量</p>
  * @method integer getCpuCoreCount() 获取<p>核数</p>
  * @method void setCpuCoreCount(integer $CpuCoreCount) 设置<p>核数</p>
+ * @method boolean getMigrationRequired() 获取<p>是否支持迁移</p>
+ * @method void setMigrationRequired(boolean $MigrationRequired) 设置<p>是否支持迁移</p>
+ * @method boolean getIsSupportXSPM() 获取<p>是否支持暴露面扫描</p>
+ * @method void setIsSupportXSPM(boolean $IsSupportXSPM) 设置<p>是否支持暴露面扫描</p>
+ * @method boolean getCanUnbind() 获取<p>是否能解绑</p>
+ * @method void setCanUnbind(boolean $CanUnbind) 设置<p>是否能解绑</p>
  */
 class Machine extends AbstractModel
 {
@@ -248,6 +254,21 @@ class Machine extends AbstractModel
     public $CpuCoreCount;
 
     /**
+     * @var boolean <p>是否支持迁移</p>
+     */
+    public $MigrationRequired;
+
+    /**
+     * @var boolean <p>是否支持暴露面扫描</p>
+     */
+    public $IsSupportXSPM;
+
+    /**
+     * @var boolean <p>是否能解绑</p>
+     */
+    public $CanUnbind;
+
+    /**
      * @param string $AgentStatus <p>Agent状态，取值：ONLINE-在线，OFFLINE-离线，UNINSTALL-未安装</p>
      * @param string $AgentVersion <p>Agent版本</p>
      * @param integer $AppId <p>账号AppId</p>
@@ -280,6 +301,9 @@ class Machine extends AbstractModel
      * @param string $ContainerDefendStatus <p>容器防护状态</p><p>枚举值：</p><ul><li>Enabled： 开启防护</li><li>Disabled： 关闭防护</li><li>Unknown： 未知</li></ul>
      * @param integer $ContainerCount <p>容器数量</p>
      * @param integer $CpuCoreCount <p>核数</p>
+     * @param boolean $MigrationRequired <p>是否支持迁移</p>
+     * @param boolean $IsSupportXSPM <p>是否支持暴露面扫描</p>
+     * @param boolean $CanUnbind <p>是否能解绑</p>
      */
     function __construct()
     {
@@ -432,6 +456,18 @@ class Machine extends AbstractModel
 
         if (array_key_exists("CpuCoreCount",$param) and $param["CpuCoreCount"] !== null) {
             $this->CpuCoreCount = $param["CpuCoreCount"];
+        }
+
+        if (array_key_exists("MigrationRequired",$param) and $param["MigrationRequired"] !== null) {
+            $this->MigrationRequired = $param["MigrationRequired"];
+        }
+
+        if (array_key_exists("IsSupportXSPM",$param) and $param["IsSupportXSPM"] !== null) {
+            $this->IsSupportXSPM = $param["IsSupportXSPM"];
+        }
+
+        if (array_key_exists("CanUnbind",$param) and $param["CanUnbind"] !== null) {
+            $this->CanUnbind = $param["CanUnbind"];
         }
     }
 }

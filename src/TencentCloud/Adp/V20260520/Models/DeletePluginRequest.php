@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPluginId() 获取<p>插件id</p>
  * @method void setPluginId(string $PluginId) 设置<p>插件id</p>
+ * @method string getLoginUin() 获取<p>登录用户主账号(集成商模式必填)</p>
+ * @method void setLoginUin(string $LoginUin) 设置<p>登录用户主账号(集成商模式必填)</p>
+ * @method string getLoginSubAccountUin() 获取<p>登录用户子账号(集成商模式必填)</p>
+ * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置<p>登录用户子账号(集成商模式必填)</p>
  */
 class DeletePluginRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DeletePluginRequest extends AbstractModel
     public $PluginId;
 
     /**
+     * @var string <p>登录用户主账号(集成商模式必填)</p>
+     */
+    public $LoginUin;
+
+    /**
+     * @var string <p>登录用户子账号(集成商模式必填)</p>
+     */
+    public $LoginSubAccountUin;
+
+    /**
      * @param string $PluginId <p>插件id</p>
+     * @param string $LoginUin <p>登录用户主账号(集成商模式必填)</p>
+     * @param string $LoginSubAccountUin <p>登录用户子账号(集成商模式必填)</p>
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DeletePluginRequest extends AbstractModel
         }
         if (array_key_exists("PluginId",$param) and $param["PluginId"] !== null) {
             $this->PluginId = $param["PluginId"];
+        }
+
+        if (array_key_exists("LoginUin",$param) and $param["LoginUin"] !== null) {
+            $this->LoginUin = $param["LoginUin"];
+        }
+
+        if (array_key_exists("LoginSubAccountUin",$param) and $param["LoginSubAccountUin"] !== null) {
+            $this->LoginSubAccountUin = $param["LoginSubAccountUin"];
         }
     }
 }

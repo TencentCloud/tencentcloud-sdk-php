@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatFwVpcDnsLst返回参数结构体
  *
- * @method array getVpcDnsSwitchLst() 获取nat防火墙vpc dns 信息数组
- * @method void setVpcDnsSwitchLst(array $VpcDnsSwitchLst) 设置nat防火墙vpc dns 信息数组
- * @method string getReturnMsg() 获取返回参数 success成功 failed 失败
- * @method void setReturnMsg(string $ReturnMsg) 设置返回参数 success成功 failed 失败
- * @method integer getTotal() 获取开关总条数
- * @method void setTotal(integer $Total) 设置开关总条数
+ * @method array getVpcDnsSwitchLst() 获取<p>nat防火墙vpc dns 信息数组</p>
+ * @method void setVpcDnsSwitchLst(array $VpcDnsSwitchLst) 设置<p>nat防火墙vpc dns 信息数组</p>
+ * @method string getReturnMsg() 获取<p>返回参数 success成功 failed 失败</p>
+ * @method void setReturnMsg(string $ReturnMsg) 设置<p>返回参数 success成功 failed 失败</p>
+ * @method integer getTotal() 获取<p>开关总条数</p>
+ * @method void setTotal(integer $Total) 设置<p>开关总条数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeNatFwVpcDnsLstResponse extends AbstractModel
 {
     /**
-     * @var array nat防火墙vpc dns 信息数组
+     * @var array <p>nat防火墙vpc dns 信息数组</p>
      */
     public $VpcDnsSwitchLst;
 
     /**
-     * @var string 返回参数 success成功 failed 失败
+     * @var string <p>返回参数 success成功 failed 失败</p>
      */
     public $ReturnMsg;
 
     /**
-     * @var integer 开关总条数
+     * @var integer <p>开关总条数</p>
      */
     public $Total;
 
@@ -52,9 +52,9 @@ class DescribeNatFwVpcDnsLstResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $VpcDnsSwitchLst nat防火墙vpc dns 信息数组
-     * @param string $ReturnMsg 返回参数 success成功 failed 失败
-     * @param integer $Total 开关总条数
+     * @param array $VpcDnsSwitchLst <p>nat防火墙vpc dns 信息数组</p>
+     * @param string $ReturnMsg <p>返回参数 success成功 failed 失败</p>
+     * @param integer $Total <p>开关总条数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

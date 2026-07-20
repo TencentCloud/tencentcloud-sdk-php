@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfwEips请求参数结构体
  *
- * @method integer getMode() 获取1：cfw接入模式，目前仅支持接入模式实例
- * @method void setMode(integer $Mode) 设置1：cfw接入模式，目前仅支持接入模式实例
- * @method string getNatGatewayId() 获取ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip
- * @method void setNatGatewayId(string $NatGatewayId) 设置ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip
- * @method string getCfwInstance() 获取防火墙实例id，当前仅支持接入模式的实例，该字段必填
- * @method void setCfwInstance(string $CfwInstance) 设置防火墙实例id，当前仅支持接入模式的实例，该字段必填
+ * @method integer getMode() 获取<p>1：cfw接入模式，目前仅支持接入模式实例</p>
+ * @method void setMode(integer $Mode) 设置<p>1：cfw接入模式，目前仅支持接入模式实例</p>
+ * @method string getNatGatewayId() 获取<p>ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip</p>
+ * @method void setNatGatewayId(string $NatGatewayId) 设置<p>ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip</p>
+ * @method string getCfwInstance() 获取<p>防火墙实例id，当前仅支持接入模式的实例，该字段必填</p>
+ * @method void setCfwInstance(string $CfwInstance) 设置<p>防火墙实例id，当前仅支持接入模式的实例，该字段必填</p>
  */
 class DescribeCfwEipsRequest extends AbstractModel
 {
     /**
-     * @var integer 1：cfw接入模式，目前仅支持接入模式实例
+     * @var integer <p>1：cfw接入模式，目前仅支持接入模式实例</p>
      */
     public $Mode;
 
     /**
-     * @var string ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip
+     * @var string <p>ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip</p>
      */
     public $NatGatewayId;
 
     /**
-     * @var string 防火墙实例id，当前仅支持接入模式的实例，该字段必填
+     * @var string <p>防火墙实例id，当前仅支持接入模式的实例，该字段必填</p>
      */
     public $CfwInstance;
 
     /**
-     * @param integer $Mode 1：cfw接入模式，目前仅支持接入模式实例
-     * @param string $NatGatewayId ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip
-     * @param string $CfwInstance 防火墙实例id，当前仅支持接入模式的实例，该字段必填
+     * @param integer $Mode <p>1：cfw接入模式，目前仅支持接入模式实例</p>
+     * @param string $NatGatewayId <p>ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip</p>
+     * @param string $CfwInstance <p>防火墙实例id，当前仅支持接入模式的实例，该字段必填</p>
      */
     function __construct()
     {

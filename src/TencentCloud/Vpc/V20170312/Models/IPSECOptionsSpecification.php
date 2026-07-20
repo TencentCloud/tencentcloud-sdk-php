@@ -20,63 +20,63 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IPSec配置，腾讯云提供IPSec安全会话设置
  *
- * @method string getEncryptAlgorithm() 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
- * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
- * @method string getIntegrityAlgorith() 获取认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+ * @method string getEncryptAlgorithm() 获取<p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置<p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
+ * @method string getIntegrityAlgorith() 获取<p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntegrityAlgorith(string $IntegrityAlgorith) 设置认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+ * @method void setIntegrityAlgorith(string $IntegrityAlgorith) 设置<p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIPSECSaLifetimeSeconds() 获取IPsec SA lifetime(s)：单位秒，取值范围：180-604800
- * @method void setIPSECSaLifetimeSeconds(integer $IPSECSaLifetimeSeconds) 设置IPsec SA lifetime(s)：单位秒，取值范围：180-604800
- * @method string getPfsDhGroup() 获取PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
- * @method void setPfsDhGroup(string $PfsDhGroup) 设置PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
- * @method integer getIPSECSaLifetimeTraffic() 获取IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
- * @method void setIPSECSaLifetimeTraffic(integer $IPSECSaLifetimeTraffic) 设置IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
- * @method string getIntegrityAlgorithm() 获取认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
- * @method void setIntegrityAlgorithm(string $IntegrityAlgorithm) 设置认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+ * @method integer getIPSECSaLifetimeSeconds() 获取<p>IPsec SA lifetime(s)</p><p>取值范围：[180, 604800]</p><p>单位：秒</p><p>默认值：14400</p>
+ * @method void setIPSECSaLifetimeSeconds(integer $IPSECSaLifetimeSeconds) 设置<p>IPsec SA lifetime(s)</p><p>取值范围：[180, 604800]</p><p>单位：秒</p><p>默认值：14400</p>
+ * @method string getPfsDhGroup() 获取<p>PFS：可选值：&#39;NULL&#39;, &#39;DH-GROUP1&#39;, &#39;DH-GROUP2&#39;, &#39;DH-GROUP5&#39;, &#39;DH-GROUP14&#39;, &#39;DH-GROUP15&#39;,&#39;DH-GROUP16&#39;,&#39;DH-GROUP19&#39;,&#39;DH-GROUP20&#39;,&#39;DH-GROUP21&#39;,&#39;DH-GROUP24&#39;，默认为NULL</p>
+ * @method void setPfsDhGroup(string $PfsDhGroup) 设置<p>PFS：可选值：&#39;NULL&#39;, &#39;DH-GROUP1&#39;, &#39;DH-GROUP2&#39;, &#39;DH-GROUP5&#39;, &#39;DH-GROUP14&#39;, &#39;DH-GROUP15&#39;,&#39;DH-GROUP16&#39;,&#39;DH-GROUP19&#39;,&#39;DH-GROUP20&#39;,&#39;DH-GROUP21&#39;,&#39;DH-GROUP24&#39;，默认为NULL</p>
+ * @method integer getIPSECSaLifetimeTraffic() 获取<p>IPsec SA lifetime(KB)</p><p>取值范围：[2560, 4294967295]</p><p>单位：KB</p><p>默认值：4096000000</p>
+ * @method void setIPSECSaLifetimeTraffic(integer $IPSECSaLifetimeTraffic) 设置<p>IPsec SA lifetime(KB)</p><p>取值范围：[2560, 4294967295]</p><p>单位：KB</p><p>默认值：4096000000</p>
+ * @method string getIntegrityAlgorithm() 获取<p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
+ * @method void setIntegrityAlgorithm(string $IntegrityAlgorithm) 设置<p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
  */
 class IPSECOptionsSpecification extends AbstractModel
 {
     /**
-     * @var string 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
+     * @var string <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
      */
     public $EncryptAlgorithm;
 
     /**
-     * @var string 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+     * @var string <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $IntegrityAlgorith;
 
     /**
-     * @var integer IPsec SA lifetime(s)：单位秒，取值范围：180-604800
+     * @var integer <p>IPsec SA lifetime(s)</p><p>取值范围：[180, 604800]</p><p>单位：秒</p><p>默认值：14400</p>
      */
     public $IPSECSaLifetimeSeconds;
 
     /**
-     * @var string PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
+     * @var string <p>PFS：可选值：&#39;NULL&#39;, &#39;DH-GROUP1&#39;, &#39;DH-GROUP2&#39;, &#39;DH-GROUP5&#39;, &#39;DH-GROUP14&#39;, &#39;DH-GROUP15&#39;,&#39;DH-GROUP16&#39;,&#39;DH-GROUP19&#39;,&#39;DH-GROUP20&#39;,&#39;DH-GROUP21&#39;,&#39;DH-GROUP24&#39;，默认为NULL</p>
      */
     public $PfsDhGroup;
 
     /**
-     * @var integer IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
+     * @var integer <p>IPsec SA lifetime(KB)</p><p>取值范围：[2560, 4294967295]</p><p>单位：KB</p><p>默认值：4096000000</p>
      */
     public $IPSECSaLifetimeTraffic;
 
     /**
-     * @var string 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+     * @var string <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
      */
     public $IntegrityAlgorithm;
 
     /**
-     * @param string $EncryptAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
-     * @param string $IntegrityAlgorith 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+     * @param string $EncryptAlgorithm <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
+     * @param string $IntegrityAlgorith <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IPSECSaLifetimeSeconds IPsec SA lifetime(s)：单位秒，取值范围：180-604800
-     * @param string $PfsDhGroup PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
-     * @param integer $IPSECSaLifetimeTraffic IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
-     * @param string $IntegrityAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+     * @param integer $IPSECSaLifetimeSeconds <p>IPsec SA lifetime(s)</p><p>取值范围：[180, 604800]</p><p>单位：秒</p><p>默认值：14400</p>
+     * @param string $PfsDhGroup <p>PFS：可选值：&#39;NULL&#39;, &#39;DH-GROUP1&#39;, &#39;DH-GROUP2&#39;, &#39;DH-GROUP5&#39;, &#39;DH-GROUP14&#39;, &#39;DH-GROUP15&#39;,&#39;DH-GROUP16&#39;,&#39;DH-GROUP19&#39;,&#39;DH-GROUP20&#39;,&#39;DH-GROUP21&#39;,&#39;DH-GROUP24&#39;，默认为NULL</p>
+     * @param integer $IPSECSaLifetimeTraffic <p>IPsec SA lifetime(KB)</p><p>取值范围：[2560, 4294967295]</p><p>单位：KB</p><p>默认值：4096000000</p>
+     * @param string $IntegrityAlgorithm <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
      */
     function __construct()
     {

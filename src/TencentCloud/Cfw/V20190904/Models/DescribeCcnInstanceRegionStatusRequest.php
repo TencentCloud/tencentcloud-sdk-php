@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCcnInstanceRegionStatus请求参数结构体
  *
- * @method string getCcnId() 获取云联网ID
- * @method void setCcnId(string $CcnId) 设置云联网ID
- * @method array getInstanceIds() 获取要查询引流网络部署状态的云联网关联的实例ID列表
- * @method void setInstanceIds(array $InstanceIds) 设置要查询引流网络部署状态的云联网关联的实例ID列表
- * @method integer getRoutingMode() 获取引流路由方法 0:多路由表, 1:策略路由
- * @method void setRoutingMode(integer $RoutingMode) 设置引流路由方法 0:多路由表, 1:策略路由
+ * @method string getCcnId() 获取<p>云联网ID</p>
+ * @method void setCcnId(string $CcnId) 设置<p>云联网ID</p>
+ * @method array getInstanceIds() 获取<p>要查询引流网络部署状态的云联网关联的实例ID列表</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>要查询引流网络部署状态的云联网关联的实例ID列表</p>
+ * @method integer getRoutingMode() 获取<p>引流路由方法 0:多路由表, 1:策略路由</p>
+ * @method void setRoutingMode(integer $RoutingMode) 设置<p>引流路由方法 0:多路由表, 1:策略路由</p>
  */
 class DescribeCcnInstanceRegionStatusRequest extends AbstractModel
 {
     /**
-     * @var string 云联网ID
+     * @var string <p>云联网ID</p>
      */
     public $CcnId;
 
     /**
-     * @var array 要查询引流网络部署状态的云联网关联的实例ID列表
+     * @var array <p>要查询引流网络部署状态的云联网关联的实例ID列表</p>
      */
     public $InstanceIds;
 
     /**
-     * @var integer 引流路由方法 0:多路由表, 1:策略路由
+     * @var integer <p>引流路由方法 0:多路由表, 1:策略路由</p>
      */
     public $RoutingMode;
 
     /**
-     * @param string $CcnId 云联网ID
-     * @param array $InstanceIds 要查询引流网络部署状态的云联网关联的实例ID列表
-     * @param integer $RoutingMode 引流路由方法 0:多路由表, 1:策略路由
+     * @param string $CcnId <p>云联网ID</p>
+     * @param array $InstanceIds <p>要查询引流网络部署状态的云联网关联的实例ID列表</p>
+     * @param integer $RoutingMode <p>引流路由方法 0:多路由表, 1:策略路由</p>
      */
     function __construct()
     {

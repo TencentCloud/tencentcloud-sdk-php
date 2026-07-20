@@ -20,154 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfwStatusMonitor请求参数结构体
  *
- * @method string getOp() 获取<p>操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。</p>
- * @method void setOp(string $Op) 设置<p>操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。</p>
- * @method string getFirewallType() 获取<p>防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。</p>
- * @method void setFirewallType(string $FirewallType) 设置<p>防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。</p>
- * @method string getSelectionId() 获取<p>二级下拉选项 ID。fetch_scene 按需传入；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。</p>
- * @method void setSelectionId(string $SelectionId) 设置<p>二级下拉选项 ID。fetch_scene 按需传入；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。</p>
- * @method string getSelectionName() 获取<p>二级下拉显示名称。可替代 SelectionId 按名称匹配。</p>
- * @method void setSelectionName(string $SelectionName) 设置<p>二级下拉显示名称。可替代 SelectionId 按名称匹配。</p>
- * @method string getSelectionInstanceId() 获取<p>引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景。</p>
- * @method void setSelectionInstanceId(string $SelectionInstanceId) 设置<p>引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景。</p>
- * @method string getMetric() 获取<p>指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。</p>
- * @method void setMetric(string $Metric) 设置<p>指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。</p>
- * @method string getPerspective() 获取<p>指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。</p>
- * @method void setPerspective(string $Perspective) 设置<p>指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。</p>
- * @method string getIpScope() 获取<p>NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用。</p>
- * @method void setIpScope(string $IpScope) 设置<p>NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用。</p>
- * @method string getTimePreset() 获取<p>预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。</p>
- * @method void setTimePreset(string $TimePreset) 设置<p>预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。</p>
- * @method string getStartTime() 获取<p>自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。</p>
- * @method void setStartTime(string $StartTime) 设置<p>自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。</p>
- * @method string getEndTime() 获取<p>自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。</p>
- * @method void setEndTime(string $EndTime) 设置<p>自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。</p>
- * @method integer getPage() 获取<p>页码，从 1 开始。默认 1；fetch_scene 列表视角使用。</p>
- * @method void setPage(integer $Page) 设置<p>页码，从 1 开始。默认 1；fetch_scene 列表视角使用。</p>
- * @method integer getLimit() 获取<p>每页条数。默认 10，最大 100；fetch_scene 列表视角使用。</p>
- * @method void setLimit(integer $Limit) 设置<p>每页条数。默认 10，最大 100；fetch_scene 列表视角使用。</p>
- * @method boolean getOverviewOnly() 获取<p>是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。</p>
- * @method void setOverviewOnly(boolean $OverviewOnly) 设置<p>是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。</p>
- * @method integer getOffset() 获取<p>原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；必须大于等于 0 且不超过安全上限。</p>
- * @method void setOffset(integer $Offset) 设置<p>原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；必须大于等于 0 且不超过安全上限。</p>
- * @method string getSortBy() 获取<p>排序字段。可选，只接受当前场景后端允许的安全字段。</p>
- * @method void setSortBy(string $SortBy) 设置<p>排序字段。可选，只接受当前场景后端允许的安全字段。</p>
- * @method string getSortOrder() 获取<p>排序方向。默认 desc；支持 asc、desc。</p>
- * @method void setSortOrder(string $SortOrder) 设置<p>排序方向。默认 desc；支持 asc、desc。</p>
- * @method array getFilters() 获取<p>过滤条件列表。可选，最多 5 个；是否支持以及字段名以具体 fetch_scene 场景为准。</p>
- * @method void setFilters(array $Filters) 设置<p>过滤条件列表。可选，最多 5 个；是否支持以及字段名以具体 fetch_scene 场景为准。</p>
+ * @method string getOp() 获取操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。
+ * @method void setOp(string $Op) 设置操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。
+ * @method string getFirewallType() 获取防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。
+ * @method void setFirewallType(string $FirewallType) 设置防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。
+ * @method string getSelectionId() 获取二级下拉选项 ID。fetch_scene 按需传入，值来自 describe_scene 返回的 selection.available_options[].id；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。
+ * @method void setSelectionId(string $SelectionId) 设置二级下拉选项 ID。fetch_scene 按需传入，值来自 describe_scene 返回的 selection.available_options[].id；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。
+ * @method string getSelectionName() 获取二级下拉显示名称。可替代 SelectionId 按名称匹配，值来自 describe_scene 返回的 selection.available_options[].name。
+ * @method void setSelectionName(string $SelectionName) 设置二级下拉显示名称。可替代 SelectionId 按名称匹配，值来自 describe_scene 返回的 selection.available_options[].name。
+ * @method string getSelectionInstanceId() 获取引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景，优先使用 describe_scene 返回的 selection.available_options[].instance_id；如只有 instance_ids，则从数组中选择一个字符串值。
+ * @method void setSelectionInstanceId(string $SelectionInstanceId) 设置引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景，优先使用 describe_scene 返回的 selection.available_options[].instance_id；如只有 instance_ids，则从数组中选择一个字符串值。
+ * @method string getMetric() 获取指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。
+ * @method void setMetric(string $Metric) 设置指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。
+ * @method string getPerspective() 获取指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。
+ * @method void setPerspective(string $Perspective) 设置指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。
+ * @method string getIpScope() 获取NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用，其他组合传入将返回 InvalidParameter。
+ * @method void setIpScope(string $IpScope) 设置NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用，其他组合传入将返回 InvalidParameter。
+ * @method string getTimePreset() 获取预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。
+ * @method void setTimePreset(string $TimePreset) 设置预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。
+ * @method string getStartTime() 获取自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。
+ * @method void setStartTime(string $StartTime) 设置自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。
+ * @method string getEndTime() 获取自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。
+ * @method void setEndTime(string $EndTime) 设置自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。
+ * @method integer getPage() 获取页码，从 1 开始。默认 1；fetch_scene 列表视角使用。
+ * @method void setPage(integer $Page) 设置页码，从 1 开始。默认 1；fetch_scene 列表视角使用。
+ * @method integer getLimit() 获取每页条数。默认 10，取值 1 至 100；fetch_scene 列表视角使用。
+ * @method void setLimit(integer $Limit) 设置每页条数。默认 10，取值 1 至 100；fetch_scene 列表视角使用。
+ * @method boolean getOverviewOnly() 获取是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。
+ * @method void setOverviewOnly(boolean $OverviewOnly) 设置是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。
+ * @method integer getOffset() 获取原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；取值 0 至 10000。
+ * @method void setOffset(integer $Offset) 设置原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；取值 0 至 10000。
+ * @method string getSortBy() 获取排序字段。可选。互联网边界 IP、NAT IP/子网视角支持 InputMax、OutputMax；VPC switch 视角支持 SwitchName；VPC ip/vpc 视角支持 FlowMax；其他组合不要传。
+ * @method void setSortBy(string $SortBy) 设置排序字段。可选。互联网边界 IP、NAT IP/子网视角支持 InputMax、OutputMax；VPC switch 视角支持 SwitchName；VPC ip/vpc 视角支持 FlowMax；其他组合不要传。
+ * @method string getSortOrder() 获取排序方向。默认 desc；支持 asc、desc。
+ * @method void setSortOrder(string $SortOrder) 设置排序方向。默认 desc；支持 asc、desc。
+ * @method array getFilters() 获取过滤条件列表。保留字段；当前公开 fetch_scene 场景均不支持，调用方不要传。
+ * @method void setFilters(array $Filters) 设置过滤条件列表。保留字段；当前公开 fetch_scene 场景均不支持，调用方不要传。
  */
 class DescribeCfwStatusMonitorRequest extends AbstractModel
 {
     /**
-     * @var string <p>操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。</p>
+     * @var string 操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。
      */
     public $Op;
 
     /**
-     * @var string <p>防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。</p>
+     * @var string 防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。
      */
     public $FirewallType;
 
     /**
-     * @var string <p>二级下拉选项 ID。fetch_scene 按需传入；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。</p>
+     * @var string 二级下拉选项 ID。fetch_scene 按需传入，值来自 describe_scene 返回的 selection.available_options[].id；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。
      */
     public $SelectionId;
 
     /**
-     * @var string <p>二级下拉显示名称。可替代 SelectionId 按名称匹配。</p>
+     * @var string 二级下拉显示名称。可替代 SelectionId 按名称匹配，值来自 describe_scene 返回的 selection.available_options[].name。
      */
     public $SelectionName;
 
     /**
-     * @var string <p>引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景。</p>
+     * @var string 引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景，优先使用 describe_scene 返回的 selection.available_options[].instance_id；如只有 instance_ids，则从数组中选择一个字符串值。
      */
     public $SelectionInstanceId;
 
     /**
-     * @var string <p>指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。</p>
+     * @var string 指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。
      */
     public $Metric;
 
     /**
-     * @var string <p>指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。</p>
+     * @var string 指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。
      */
     public $Perspective;
 
     /**
-     * @var string <p>NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用。</p>
+     * @var string NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用，其他组合传入将返回 InvalidParameter。
      */
     public $IpScope;
 
     /**
-     * @var string <p>预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。</p>
+     * @var string 预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。
      */
     public $TimePreset;
 
     /**
-     * @var string <p>自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。</p>
+     * @var string 自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。
      */
     public $StartTime;
 
     /**
-     * @var string <p>自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。</p>
+     * @var string 自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。
      */
     public $EndTime;
 
     /**
-     * @var integer <p>页码，从 1 开始。默认 1；fetch_scene 列表视角使用。</p>
+     * @var integer 页码，从 1 开始。默认 1；fetch_scene 列表视角使用。
      */
     public $Page;
 
     /**
-     * @var integer <p>每页条数。默认 10，最大 100；fetch_scene 列表视角使用。</p>
+     * @var integer 每页条数。默认 10，取值 1 至 100；fetch_scene 列表视角使用。
      */
     public $Limit;
 
     /**
-     * @var boolean <p>是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。</p>
+     * @var boolean 是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。
      */
     public $OverviewOnly;
 
     /**
-     * @var integer <p>原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；必须大于等于 0 且不超过安全上限。</p>
+     * @var integer 原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；取值 0 至 10000。
      */
     public $Offset;
 
     /**
-     * @var string <p>排序字段。可选，只接受当前场景后端允许的安全字段。</p>
+     * @var string 排序字段。可选。互联网边界 IP、NAT IP/子网视角支持 InputMax、OutputMax；VPC switch 视角支持 SwitchName；VPC ip/vpc 视角支持 FlowMax；其他组合不要传。
      */
     public $SortBy;
 
     /**
-     * @var string <p>排序方向。默认 desc；支持 asc、desc。</p>
+     * @var string 排序方向。默认 desc；支持 asc、desc。
      */
     public $SortOrder;
 
     /**
-     * @var array <p>过滤条件列表。可选，最多 5 个；是否支持以及字段名以具体 fetch_scene 场景为准。</p>
+     * @var array 过滤条件列表。保留字段；当前公开 fetch_scene 场景均不支持，调用方不要传。
      */
     public $Filters;
 
     /**
-     * @param string $Op <p>操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。</p>
-     * @param string $FirewallType <p>防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。</p>
-     * @param string $SelectionId <p>二级下拉选项 ID。fetch_scene 按需传入；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。</p>
-     * @param string $SelectionName <p>二级下拉显示名称。可替代 SelectionId 按名称匹配。</p>
-     * @param string $SelectionInstanceId <p>引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景。</p>
-     * @param string $Metric <p>指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。</p>
-     * @param string $Perspective <p>指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。</p>
-     * @param string $IpScope <p>NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用。</p>
-     * @param string $TimePreset <p>预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。</p>
-     * @param string $StartTime <p>自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。</p>
-     * @param string $EndTime <p>自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。</p>
-     * @param integer $Page <p>页码，从 1 开始。默认 1；fetch_scene 列表视角使用。</p>
-     * @param integer $Limit <p>每页条数。默认 10，最大 100；fetch_scene 列表视角使用。</p>
-     * @param boolean $OverviewOnly <p>是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。</p>
-     * @param integer $Offset <p>原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；必须大于等于 0 且不超过安全上限。</p>
-     * @param string $SortBy <p>排序字段。可选，只接受当前场景后端允许的安全字段。</p>
-     * @param string $SortOrder <p>排序方向。默认 desc；支持 asc、desc。</p>
-     * @param array $Filters <p>过滤条件列表。可选，最多 5 个；是否支持以及字段名以具体 fetch_scene 场景为准。</p>
+     * @param string $Op 操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。
+     * @param string $FirewallType 防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。
+     * @param string $SelectionId 二级下拉选项 ID。fetch_scene 按需传入，值来自 describe_scene 返回的 selection.available_options[].id；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。
+     * @param string $SelectionName 二级下拉显示名称。可替代 SelectionId 按名称匹配，值来自 describe_scene 返回的 selection.available_options[].name。
+     * @param string $SelectionInstanceId 引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景，优先使用 describe_scene 返回的 selection.available_options[].instance_id；如只有 instance_ids，则从数组中选择一个字符串值。
+     * @param string $Metric 指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。
+     * @param string $Perspective 指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。
+     * @param string $IpScope NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用，其他组合传入将返回 InvalidParameter。
+     * @param string $TimePreset 预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。
+     * @param string $StartTime 自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。
+     * @param string $EndTime 自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。
+     * @param integer $Page 页码，从 1 开始。默认 1；fetch_scene 列表视角使用。
+     * @param integer $Limit 每页条数。默认 10，取值 1 至 100；fetch_scene 列表视角使用。
+     * @param boolean $OverviewOnly 是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。
+     * @param integer $Offset 原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；取值 0 至 10000。
+     * @param string $SortBy 排序字段。可选。互联网边界 IP、NAT IP/子网视角支持 InputMax、OutputMax；VPC switch 视角支持 SwitchName；VPC ip/vpc 视角支持 FlowMax；其他组合不要传。
+     * @param string $SortOrder 排序方向。默认 desc；支持 asc、desc。
+     * @param array $Filters 过滤条件列表。保留字段；当前公开 fetch_scene 场景均不支持，调用方不要传。
      */
     function __construct()
     {

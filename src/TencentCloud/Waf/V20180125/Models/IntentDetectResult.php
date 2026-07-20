@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getIsUnSafe() 获取<p>是否恶意意图</p><p>枚举值：</p><ul><li>1： 恶意</li><li>0： 正常</li></ul>
  * @method void setIsUnSafe(integer $IsUnSafe) 设置<p>是否恶意意图</p><p>枚举值：</p><ul><li>1： 恶意</li><li>0： 正常</li></ul>
+ * @method string getCategory() 获取<p>检出分类</p>
+ * @method void setCategory(string $Category) 设置<p>检出分类</p>
  */
 class IntentDetectResult extends AbstractModel
 {
@@ -31,7 +33,13 @@ class IntentDetectResult extends AbstractModel
     public $IsUnSafe;
 
     /**
+     * @var string <p>检出分类</p>
+     */
+    public $Category;
+
+    /**
      * @param integer $IsUnSafe <p>是否恶意意图</p><p>枚举值：</p><ul><li>1： 恶意</li><li>0： 正常</li></ul>
+     * @param string $Category <p>检出分类</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class IntentDetectResult extends AbstractModel
         }
         if (array_key_exists("IsUnSafe",$param) and $param["IsUnSafe"] !== null) {
             $this->IsUnSafe = $param["IsUnSafe"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

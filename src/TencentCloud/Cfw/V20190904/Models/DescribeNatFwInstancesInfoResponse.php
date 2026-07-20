@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatFwInstancesInfo返回参数结构体
  *
- * @method array getNatinsLst() 获取实例卡片信息数组
- * @method void setNatinsLst(array $NatinsLst) 设置实例卡片信息数组
- * @method integer getTotal() 获取nat 防火墙个数
- * @method void setTotal(integer $Total) 设置nat 防火墙个数
+ * @method array getNatinsLst() 获取<p>实例卡片信息数组</p>
+ * @method void setNatinsLst(array $NatinsLst) 设置<p>实例卡片信息数组</p>
+ * @method integer getTotal() 获取<p>nat 防火墙个数</p>
+ * @method void setTotal(integer $Total) 设置<p>nat 防火墙个数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeNatFwInstancesInfoResponse extends AbstractModel
 {
     /**
-     * @var array 实例卡片信息数组
+     * @var array <p>实例卡片信息数组</p>
      */
     public $NatinsLst;
 
     /**
-     * @var integer nat 防火墙个数
+     * @var integer <p>nat 防火墙个数</p>
      */
     public $Total;
 
@@ -45,8 +45,8 @@ class DescribeNatFwInstancesInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $NatinsLst 实例卡片信息数组
-     * @param integer $Total nat 防火墙个数
+     * @param array $NatinsLst <p>实例卡片信息数组</p>
+     * @param integer $Total <p>nat 防火墙个数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

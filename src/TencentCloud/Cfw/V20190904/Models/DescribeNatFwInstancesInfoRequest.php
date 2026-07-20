@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatFwInstancesInfo请求参数结构体
  *
- * @method array getFilter() 获取获取实例列表过滤字段
- * @method void setFilter(array $Filter) 设置获取实例列表过滤字段
- * @method integer getOffset() 获取第几页
- * @method void setOffset(integer $Offset) 设置第几页
- * @method integer getLimit() 获取每页长度
- * @method void setLimit(integer $Limit) 设置每页长度
+ * @method array getFilter() 获取<p>获取实例列表过滤字段</p>
+ * @method void setFilter(array $Filter) 设置<p>获取实例列表过滤字段</p>
+ * @method integer getOffset() 获取<p>第几页</p>
+ * @method void setOffset(integer $Offset) 设置<p>第几页</p>
+ * @method integer getLimit() 获取<p>每页长度</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页长度</p>
  */
 class DescribeNatFwInstancesInfoRequest extends AbstractModel
 {
     /**
-     * @var array 获取实例列表过滤字段
+     * @var array <p>获取实例列表过滤字段</p>
      */
     public $Filter;
 
     /**
-     * @var integer 第几页
+     * @var integer <p>第几页</p>
      */
     public $Offset;
 
     /**
-     * @var integer 每页长度
+     * @var integer <p>每页长度</p>
      */
     public $Limit;
 
     /**
-     * @param array $Filter 获取实例列表过滤字段
-     * @param integer $Offset 第几页
-     * @param integer $Limit 每页长度
+     * @param array $Filter <p>获取实例列表过滤字段</p>
+     * @param integer $Offset <p>第几页</p>
+     * @param integer $Limit <p>每页长度</p>
      */
     function __construct()
     {

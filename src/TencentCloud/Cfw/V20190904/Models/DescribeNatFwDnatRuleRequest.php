@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatFwDnatRule请求参数结构体
  *
- * @method string getIndex() 获取需要查询的索引，特定场景使用，可不填
- * @method void setIndex(string $Index) 设置需要查询的索引，特定场景使用，可不填
- * @method array getFilters() 获取过滤条件组合
- * @method void setFilters(array $Filters) 设置过滤条件组合
- * @method integer getLimit() 获取每页条数
- * @method void setLimit(integer $Limit) 设置每页条数
- * @method integer getOffset() 获取偏移值
- * @method void setOffset(integer $Offset) 设置偏移值
- * @method string getStartTime() 获取检索的起始时间，可不传
- * @method void setStartTime(string $StartTime) 设置检索的起始时间，可不传
- * @method string getEndTime() 获取检索的截止时间，可不传
- * @method void setEndTime(string $EndTime) 设置检索的截止时间，可不传
- * @method string getOrder() 获取desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传
- * @method void setOrder(string $Order) 设置desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传
- * @method string getBy() 获取排序所用到的字段，可不传
- * @method void setBy(string $By) 设置排序所用到的字段，可不传
+ * @method string getIndex() 获取<p>需要查询的索引，特定场景使用，可不填</p>
+ * @method void setIndex(string $Index) 设置<p>需要查询的索引，特定场景使用，可不填</p>
+ * @method array getFilters() 获取<p>过滤条件组合</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件组合</p>
+ * @method integer getLimit() 获取<p>每页条数</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页条数</p>
+ * @method integer getOffset() 获取<p>偏移值</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移值</p>
+ * @method string getStartTime() 获取<p>检索的起始时间，可不传</p>
+ * @method void setStartTime(string $StartTime) 设置<p>检索的起始时间，可不传</p>
+ * @method string getEndTime() 获取<p>检索的截止时间，可不传</p>
+ * @method void setEndTime(string $EndTime) 设置<p>检索的截止时间，可不传</p>
+ * @method string getOrder() 获取<p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传</p>
+ * @method void setOrder(string $Order) 设置<p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传</p>
+ * @method string getBy() 获取<p>排序所用到的字段，可不传</p>
+ * @method void setBy(string $By) 设置<p>排序所用到的字段，可不传</p>
  */
 class DescribeNatFwDnatRuleRequest extends AbstractModel
 {
     /**
-     * @var string 需要查询的索引，特定场景使用，可不填
+     * @var string <p>需要查询的索引，特定场景使用，可不填</p>
      */
     public $Index;
 
     /**
-     * @var array 过滤条件组合
+     * @var array <p>过滤条件组合</p>
      */
     public $Filters;
 
     /**
-     * @var integer 每页条数
+     * @var integer <p>每页条数</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移值
+     * @var integer <p>偏移值</p>
      */
     public $Offset;
 
     /**
-     * @var string 检索的起始时间，可不传
+     * @var string <p>检索的起始时间，可不传</p>
      */
     public $StartTime;
 
     /**
-     * @var string 检索的截止时间，可不传
+     * @var string <p>检索的截止时间，可不传</p>
      */
     public $EndTime;
 
     /**
-     * @var string desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传
+     * @var string <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传</p>
      */
     public $Order;
 
     /**
-     * @var string 排序所用到的字段，可不传
+     * @var string <p>排序所用到的字段，可不传</p>
      */
     public $By;
 
     /**
-     * @param string $Index 需要查询的索引，特定场景使用，可不填
-     * @param array $Filters 过滤条件组合
-     * @param integer $Limit 每页条数
-     * @param integer $Offset 偏移值
-     * @param string $StartTime 检索的起始时间，可不传
-     * @param string $EndTime 检索的截止时间，可不传
-     * @param string $Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传
-     * @param string $By 排序所用到的字段，可不传
+     * @param string $Index <p>需要查询的索引，特定场景使用，可不填</p>
+     * @param array $Filters <p>过滤条件组合</p>
+     * @param integer $Limit <p>每页条数</p>
+     * @param integer $Offset <p>偏移值</p>
+     * @param string $StartTime <p>检索的起始时间，可不传</p>
+     * @param string $EndTime <p>检索的截止时间，可不传</p>
+     * @param string $Order <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传</p>
+     * @param string $By <p>排序所用到的字段，可不传</p>
      */
     function __construct()
     {

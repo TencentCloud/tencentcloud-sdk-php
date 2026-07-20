@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFwSyncStatus返回参数结构体
  *
- * @method integer getSyncStatus() 获取同步状态：1，同步中；0，同步完成
- * @method void setSyncStatus(integer $SyncStatus) 设置同步状态：1，同步中；0，同步完成
+ * @method integer getSyncStatus() 获取<p>同步状态：1，同步中；0，同步完成</p>
+ * @method void setSyncStatus(integer $SyncStatus) 设置<p>同步状态：1，同步中；0，同步完成</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFwSyncStatusResponse extends AbstractModel
 {
     /**
-     * @var integer 同步状态：1，同步中；0，同步完成
+     * @var integer <p>同步状态：1，同步中；0，同步完成</p>
      */
     public $SyncStatus;
 
@@ -38,7 +38,7 @@ class DescribeFwSyncStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $SyncStatus 同步状态：1，同步中；0，同步完成
+     * @param integer $SyncStatus <p>同步状态：1，同步中；0，同步完成</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

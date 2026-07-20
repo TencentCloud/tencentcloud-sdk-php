@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
  * @method integer getPage() 获取<p>页码</p>
  * @method void setPage(integer $Page) 设置<p>页码</p>
- * @method integer getLimit() 获取<p>每页数据大小</p>
- * @method void setLimit(integer $Limit) 设置<p>每页数据大小</p>
+ * @method integer getLimit() 获取<p>每页数据大小</p><p>取值范围：[1, 1000]</p><p>默认值：10</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页数据大小</p><p>取值范围：[1, 1000]</p><p>默认值：10</p>
  * @method array getFilter() 获取<p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
  * @method void setFilter(array $Filter) 设置<p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
- * @method array getOrderFields() 获取<p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
- * @method void setOrderFields(array $OrderFields) 设置<p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
- * @method string getOrderBy() 获取<p>排序方式，asc 从旧到新，desc 从新到旧</p>
- * @method void setOrderBy(string $OrderBy) 设置<p>排序方式，asc 从旧到新，desc 从新到旧</p>
+ * @method array getOrderFields() 获取<p>事件查询结果排序</p><p>枚举值：</p><ul><li>Timestamp： 事件触发时间</li><li>Source： 事件源</li><li>Type： 事件类型</li><li>RuleIds： 事件规则</li><li>Subject： 事件对象</li><li>Region： 事件地域</li><li>Status： 事件状态</li></ul>
+ * @method void setOrderFields(array $OrderFields) 设置<p>事件查询结果排序</p><p>枚举值：</p><ul><li>Timestamp： 事件触发时间</li><li>Source： 事件源</li><li>Type： 事件类型</li><li>RuleIds： 事件规则</li><li>Subject： 事件对象</li><li>Region： 事件地域</li><li>Status： 事件状态</li></ul>
+ * @method string getOrderBy() 获取<p>排序方式，asc 从旧到新，desc 从新到旧</p><p>枚举值：</p><ul><li>asc： 从旧到新</li><li>desc： 从新到旧</li></ul><p>默认值：desc</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序方式，asc 从旧到新，desc 从新到旧</p><p>枚举值：</p><ul><li>asc： 从旧到新</li><li>desc： 从新到旧</li></ul><p>默认值：desc</p>
  */
 class SearchLogRequest extends AbstractModel
 {
@@ -60,7 +60,7 @@ class SearchLogRequest extends AbstractModel
     public $Page;
 
     /**
-     * @var integer <p>每页数据大小</p>
+     * @var integer <p>每页数据大小</p><p>取值范围：[1, 1000]</p><p>默认值：10</p>
      */
     public $Limit;
 
@@ -70,12 +70,12 @@ class SearchLogRequest extends AbstractModel
     public $Filter;
 
     /**
-     * @var array <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
+     * @var array <p>事件查询结果排序</p><p>枚举值：</p><ul><li>Timestamp： 事件触发时间</li><li>Source： 事件源</li><li>Type： 事件类型</li><li>RuleIds： 事件规则</li><li>Subject： 事件对象</li><li>Region： 事件地域</li><li>Status： 事件状态</li></ul>
      */
     public $OrderFields;
 
     /**
-     * @var string <p>排序方式，asc 从旧到新，desc 从新到旧</p>
+     * @var string <p>排序方式，asc 从旧到新，desc 从新到旧</p><p>枚举值：</p><ul><li>asc： 从旧到新</li><li>desc： 从新到旧</li></ul><p>默认值：desc</p>
      */
     public $OrderBy;
 
@@ -84,10 +84,10 @@ class SearchLogRequest extends AbstractModel
      * @param integer $EndTime <p>结束时间unix 毫秒时间戳</p>
      * @param string $EventBusId <p>事件集ID</p>
      * @param integer $Page <p>页码</p>
-     * @param integer $Limit <p>每页数据大小</p>
+     * @param integer $Limit <p>每页数据大小</p><p>取值范围：[1, 1000]</p><p>默认值：10</p>
      * @param array $Filter <p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
-     * @param array $OrderFields <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
-     * @param string $OrderBy <p>排序方式，asc 从旧到新，desc 从新到旧</p>
+     * @param array $OrderFields <p>事件查询结果排序</p><p>枚举值：</p><ul><li>Timestamp： 事件触发时间</li><li>Source： 事件源</li><li>Type： 事件类型</li><li>RuleIds： 事件规则</li><li>Subject： 事件对象</li><li>Region： 事件地域</li><li>Status： 事件状态</li></ul>
+     * @param string $OrderBy <p>排序方式，asc 从旧到新，desc 从新到旧</p><p>枚举值：</p><ul><li>asc： 从旧到新</li><li>desc： 从新到旧</li></ul><p>默认值：desc</p>
      */
     function __construct()
     {

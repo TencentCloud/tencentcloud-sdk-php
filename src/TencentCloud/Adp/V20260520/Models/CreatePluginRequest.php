@@ -26,8 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfig(PluginConfig $Config) 设置<p>插件类型配置</p>
  * @method string getSpaceId() 获取<p>当前空间id</p>
  * @method void setSpaceId(string $SpaceId) 设置<p>当前空间id</p>
- * @method Tool getToolList() 获取<p>插件的工具列表</p>
- * @method void setToolList(Tool $ToolList) 设置<p>插件的工具列表</p>
+ * @method array getToolList() 获取<p>插件的工具列表</p>
+ * @method void setToolList(array $ToolList) 设置<p>插件的工具列表</p>
+ * @method string getLoginUin() 获取<p>登录用户主账号(集成商模式必填)</p>
+ * @method void setLoginUin(string $LoginUin) 设置<p>登录用户主账号(集成商模式必填)</p>
+ * @method string getLoginSubAccountUin() 获取<p>登录用户子账号(集成商模式必填)</p>
+ * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置<p>登录用户子账号(集成商模式必填)</p>
  */
 class CreatePluginRequest extends AbstractModel
 {
@@ -47,15 +51,27 @@ class CreatePluginRequest extends AbstractModel
     public $SpaceId;
 
     /**
-     * @var Tool <p>插件的工具列表</p>
+     * @var array <p>插件的工具列表</p>
      */
     public $ToolList;
+
+    /**
+     * @var string <p>登录用户主账号(集成商模式必填)</p>
+     */
+    public $LoginUin;
+
+    /**
+     * @var string <p>登录用户子账号(集成商模式必填)</p>
+     */
+    public $LoginSubAccountUin;
 
     /**
      * @param PluginProfile $Profile <p>插件基础资料</p>
      * @param PluginConfig $Config <p>插件类型配置</p>
      * @param string $SpaceId <p>当前空间id</p>
-     * @param Tool $ToolList <p>插件的工具列表</p>
+     * @param array $ToolList <p>插件的工具列表</p>
+     * @param string $LoginUin <p>登录用户主账号(集成商模式必填)</p>
+     * @param string $LoginSubAccountUin <p>登录用户子账号(集成商模式必填)</p>
      */
     function __construct()
     {
@@ -85,8 +101,20 @@ class CreatePluginRequest extends AbstractModel
         }
 
         if (array_key_exists("ToolList",$param) and $param["ToolList"] !== null) {
-            $this->ToolList = new Tool();
-            $this->ToolList->deserialize($param["ToolList"]);
+            $this->ToolList = [];
+            foreach ($param["ToolList"] as $key => $value){
+                $obj = new Tool();
+                $obj->deserialize($value);
+                array_push($this->ToolList, $obj);
+            }
+        }
+
+        if (array_key_exists("LoginUin",$param) and $param["LoginUin"] !== null) {
+            $this->LoginUin = $param["LoginUin"];
+        }
+
+        if (array_key_exists("LoginSubAccountUin",$param) and $param["LoginSubAccountUin"] !== null) {
+            $this->LoginSubAccountUin = $param["LoginSubAccountUin"];
         }
     }
 }

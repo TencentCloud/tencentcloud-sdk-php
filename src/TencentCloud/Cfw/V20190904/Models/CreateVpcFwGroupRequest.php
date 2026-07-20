@@ -20,94 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpcFwGroup请求参数结构体
  *
- * @method string getName() 获取VPC防火墙(组)名称
- * @method void setName(string $Name) 设置VPC防火墙(组)名称
- * @method integer getMode() 获取模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
- * @method void setMode(integer $Mode) 设置模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
- * @method array getVpcFwInstances() 获取防火墙(组)下的防火墙实例列表
- * @method void setVpcFwInstances(array $VpcFwInstances) 设置防火墙(组)下的防火墙实例列表
- * @method integer getSwitchMode() 获取防火墙实例的开关模式
-1: 单点互通
-2: 多点互通
-3: 全互通
-4: 自定义路由
- * @method void setSwitchMode(integer $SwitchMode) 设置防火墙实例的开关模式
-1: 单点互通
-2: 多点互通
-3: 全互通
-4: 自定义路由
- * @method string getFwVpcCidr() 获取auto 自动选择防火墙网段
-10.10.10.0/24 用户输入的防火墙网段
- * @method void setFwVpcCidr(string $FwVpcCidr) 设置auto 自动选择防火墙网段
-10.10.10.0/24 用户输入的防火墙网段
- * @method string getCcnId() 获取云联网id ，适用于云联网模式
- * @method void setCcnId(string $CcnId) 设置云联网id ，适用于云联网模式
- * @method FwCidrInfo getFwCidrInfo() 获取指定防火墙使用网段信息
- * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置指定防火墙使用网段信息
- * @method string getCrossUserMode() 获取跨租户管理员模式  1管理员 2多账号
- * @method void setCrossUserMode(string $CrossUserMode) 设置跨租户管理员模式  1管理员 2多账号
+ * @method string getName() 获取<p>VPC防火墙(组)名称</p>
+ * @method void setName(string $Name) 设置<p>VPC防火墙(组)名称</p>
+ * @method integer getMode() 获取<p>模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)</p>
+ * @method void setMode(integer $Mode) 设置<p>模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)</p>
+ * @method array getVpcFwInstances() 获取<p>防火墙(组)下的防火墙实例列表</p>
+ * @method void setVpcFwInstances(array $VpcFwInstances) 设置<p>防火墙(组)下的防火墙实例列表</p>
+ * @method integer getSwitchMode() 获取<p>防火墙实例的开关模式<br>1: 单点互通<br>2: 多点互通<br>3: 全互通<br>4: 自定义路由</p>
+ * @method void setSwitchMode(integer $SwitchMode) 设置<p>防火墙实例的开关模式<br>1: 单点互通<br>2: 多点互通<br>3: 全互通<br>4: 自定义路由</p>
+ * @method string getFwVpcCidr() 获取<p>auto 自动选择防火墙网段<br>10.10.10.0/24 用户输入的防火墙网段</p>
+ * @method void setFwVpcCidr(string $FwVpcCidr) 设置<p>auto 自动选择防火墙网段<br>10.10.10.0/24 用户输入的防火墙网段</p>
+ * @method string getCcnId() 获取<p>云联网id ，适用于云联网模式</p>
+ * @method void setCcnId(string $CcnId) 设置<p>云联网id ，适用于云联网模式</p>
+ * @method FwCidrInfo getFwCidrInfo() 获取<p>指定防火墙使用网段信息</p>
+ * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置<p>指定防火墙使用网段信息</p>
+ * @method string getCrossUserMode() 获取<p>跨租户管理员模式  1管理员 2多账号</p>
+ * @method void setCrossUserMode(string $CrossUserMode) 设置<p>跨租户管理员模式  1管理员 2多账号</p>
  */
 class CreateVpcFwGroupRequest extends AbstractModel
 {
     /**
-     * @var string VPC防火墙(组)名称
+     * @var string <p>VPC防火墙(组)名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
+     * @var integer <p>模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)</p>
      */
     public $Mode;
 
     /**
-     * @var array 防火墙(组)下的防火墙实例列表
+     * @var array <p>防火墙(组)下的防火墙实例列表</p>
      */
     public $VpcFwInstances;
 
     /**
-     * @var integer 防火墙实例的开关模式
-1: 单点互通
-2: 多点互通
-3: 全互通
-4: 自定义路由
+     * @var integer <p>防火墙实例的开关模式<br>1: 单点互通<br>2: 多点互通<br>3: 全互通<br>4: 自定义路由</p>
      */
     public $SwitchMode;
 
     /**
-     * @var string auto 自动选择防火墙网段
-10.10.10.0/24 用户输入的防火墙网段
+     * @var string <p>auto 自动选择防火墙网段<br>10.10.10.0/24 用户输入的防火墙网段</p>
      */
     public $FwVpcCidr;
 
     /**
-     * @var string 云联网id ，适用于云联网模式
+     * @var string <p>云联网id ，适用于云联网模式</p>
      */
     public $CcnId;
 
     /**
-     * @var FwCidrInfo 指定防火墙使用网段信息
+     * @var FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public $FwCidrInfo;
 
     /**
-     * @var string 跨租户管理员模式  1管理员 2多账号
+     * @var string <p>跨租户管理员模式  1管理员 2多账号</p>
      */
     public $CrossUserMode;
 
     /**
-     * @param string $Name VPC防火墙(组)名称
-     * @param integer $Mode 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-     * @param array $VpcFwInstances 防火墙(组)下的防火墙实例列表
-     * @param integer $SwitchMode 防火墙实例的开关模式
-1: 单点互通
-2: 多点互通
-3: 全互通
-4: 自定义路由
-     * @param string $FwVpcCidr auto 自动选择防火墙网段
-10.10.10.0/24 用户输入的防火墙网段
-     * @param string $CcnId 云联网id ，适用于云联网模式
-     * @param FwCidrInfo $FwCidrInfo 指定防火墙使用网段信息
-     * @param string $CrossUserMode 跨租户管理员模式  1管理员 2多账号
+     * @param string $Name <p>VPC防火墙(组)名称</p>
+     * @param integer $Mode <p>模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)</p>
+     * @param array $VpcFwInstances <p>防火墙(组)下的防火墙实例列表</p>
+     * @param integer $SwitchMode <p>防火墙实例的开关模式<br>1: 单点互通<br>2: 多点互通<br>3: 全互通<br>4: 自定义路由</p>
+     * @param string $FwVpcCidr <p>auto 自动选择防火墙网段<br>10.10.10.0/24 用户输入的防火墙网段</p>
+     * @param string $CcnId <p>云联网id ，适用于云联网模式</p>
+     * @param FwCidrInfo $FwCidrInfo <p>指定防火墙使用网段信息</p>
+     * @param string $CrossUserMode <p>跨租户管理员模式  1管理员 2多账号</p>
      */
     function __construct()
     {

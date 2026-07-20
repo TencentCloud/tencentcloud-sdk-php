@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableCamRoleAuth(boolean $EnableCamRoleAuth) 设置<p>是否使用CAM一键授权，仅 auth_type=2时生效</p>
  * @method integer getAuthType() 获取<p>授权类型</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： API Key</li><li>2： CAM授权</li><li>3： OAuth2.0授权</li></ul>
  * @method void setAuthType(integer $AuthType) 设置<p>授权类型</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： API Key</li><li>2： CAM授权</li><li>3： OAuth2.0授权</li></ul>
- * @method integer getOAuthConsent() 获取OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）
- * @method void setOAuthConsent(integer $OAuthConsent) 设置OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）
+ * @method integer getOAuthConsent() 获取<p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
+ * @method void setOAuthConsent(integer $OAuthConsent) 设置<p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
  */
 class AgentPluginConfig extends AbstractModel
 {
@@ -61,7 +61,7 @@ class AgentPluginConfig extends AbstractModel
     public $AuthType;
 
     /**
-     * @var integer OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）
+     * @var integer <p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
      */
     public $OAuthConsent;
 
@@ -71,7 +71,7 @@ class AgentPluginConfig extends AbstractModel
      * @param array $QueryParameterList <p>插件 Query 参数</p>
      * @param boolean $EnableCamRoleAuth <p>是否使用CAM一键授权，仅 auth_type=2时生效</p>
      * @param integer $AuthType <p>授权类型</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： API Key</li><li>2： CAM授权</li><li>3： OAuth2.0授权</li></ul>
-     * @param integer $OAuthConsent OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）
+     * @param integer $OAuthConsent <p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
      */
     function __construct()
     {

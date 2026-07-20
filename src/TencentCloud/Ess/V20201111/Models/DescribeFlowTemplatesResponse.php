@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowTemplates返回参数结构体
  *
- * @method array getTemplates() 获取模板详情列表数据
- * @method void setTemplates(array $Templates) 设置模板详情列表数据
- * @method integer getTotalCount() 获取查询到的模板总数
- * @method void setTotalCount(integer $TotalCount) 设置查询到的模板总数
+ * @method array getTemplates() 获取<p>模板详情列表数据</p>
+ * @method void setTemplates(array $Templates) 设置<p>模板详情列表数据</p>
+ * @method integer getTotalCount() 获取<p>查询到的模板总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>查询到的模板总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFlowTemplatesResponse extends AbstractModel
 {
     /**
-     * @var array 模板详情列表数据
+     * @var array <p>模板详情列表数据</p>
      */
     public $Templates;
 
     /**
-     * @var integer 查询到的模板总数
+     * @var integer <p>查询到的模板总数</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeFlowTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Templates 模板详情列表数据
-     * @param integer $TotalCount 查询到的模板总数
+     * @param array $Templates <p>模板详情列表数据</p>
+     * @param integer $TotalCount <p>查询到的模板总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

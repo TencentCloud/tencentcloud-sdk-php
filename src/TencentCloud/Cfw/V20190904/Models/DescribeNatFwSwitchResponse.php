@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatFwSwitch返回参数结构体
  *
- * @method integer getTotal() 获取总数
+ * @method integer getTotal() 获取<p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置总数
+ * @method void setTotal(integer $Total) 设置<p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getData() 获取NAT边界防火墙开关列表数据
+ * @method array getData() 获取<p>NAT边界防火墙开关列表数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置NAT边界防火墙开关列表数据
+ * @method void setData(array $Data) 设置<p>NAT边界防火墙开关列表数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getVpcList() 获取开关相关VPC列表
+ * @method array getVpcList() 获取<p>开关相关VPC列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcList(array $VpcList) 设置开关相关VPC列表
+ * @method void setVpcList(array $VpcList) 设置<p>开关相关VPC列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNatList() 获取开关相关NAT列表
+ * @method array getNatList() 获取<p>开关相关NAT列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNatList(array $NatList) 设置开关相关NAT列表
+ * @method void setNatList(array $NatList) 设置<p>开关相关NAT列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRouteList() 获取开关相关ROUTE列表
+ * @method array getRouteList() 获取<p>开关相关ROUTE列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRouteList(array $RouteList) 设置开关相关ROUTE列表
+ * @method void setRouteList(array $RouteList) 设置<p>开关相关ROUTE列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOnNum() 获取开启开关个数
+ * @method integer getOnNum() 获取<p>开启开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOnNum(integer $OnNum) 设置开启开关个数
+ * @method void setOnNum(integer $OnNum) 设置<p>开启开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOffNum() 获取关闭开关个数
+ * @method integer getOffNum() 获取<p>关闭开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOffNum(integer $OffNum) 设置关闭开关个数
+ * @method void setOffNum(integer $OffNum) 设置<p>关闭开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFailData() 获取失败开关状态
+ * @method array getFailData() 获取<p>失败开关状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailData(array $FailData) 设置失败开关状态
+ * @method void setFailData(array $FailData) 设置<p>失败开关状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -58,49 +58,49 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNatFwSwitchResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var integer <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var array NAT边界防火墙开关列表数据
+     * @var array <p>NAT边界防火墙开关列表数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
-     * @var array 开关相关VPC列表
+     * @var array <p>开关相关VPC列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcList;
 
     /**
-     * @var array 开关相关NAT列表
+     * @var array <p>开关相关NAT列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatList;
 
     /**
-     * @var array 开关相关ROUTE列表
+     * @var array <p>开关相关ROUTE列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteList;
 
     /**
-     * @var integer 开启开关个数
+     * @var integer <p>开启开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OnNum;
 
     /**
-     * @var integer 关闭开关个数
+     * @var integer <p>关闭开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffNum;
 
     /**
-     * @var array 失败开关状态
+     * @var array <p>失败开关状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailData;
@@ -111,21 +111,21 @@ class DescribeNatFwSwitchResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总数
+     * @param integer $Total <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Data NAT边界防火墙开关列表数据
+     * @param array $Data <p>NAT边界防火墙开关列表数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $VpcList 开关相关VPC列表
+     * @param array $VpcList <p>开关相关VPC列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NatList 开关相关NAT列表
+     * @param array $NatList <p>开关相关NAT列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RouteList 开关相关ROUTE列表
+     * @param array $RouteList <p>开关相关ROUTE列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OnNum 开启开关个数
+     * @param integer $OnNum <p>开启开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OffNum 关闭开关个数
+     * @param integer $OffNum <p>关闭开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FailData 失败开关状态
+     * @param array $FailData <p>失败开关状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

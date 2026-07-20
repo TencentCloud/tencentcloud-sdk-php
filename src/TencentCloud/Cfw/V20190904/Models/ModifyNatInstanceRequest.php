@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNatInstance请求参数结构体
  *
- * @method string getInstanceName() 获取NAT防火墙实例名称
- * @method void setInstanceName(string $InstanceName) 设置NAT防火墙实例名称
- * @method string getNatInstanceId() 获取NAT防火墙实例ID
- * @method void setNatInstanceId(string $NatInstanceId) 设置NAT防火墙实例ID
+ * @method string getInstanceName() 获取<p>NAT防火墙实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>NAT防火墙实例名称</p>
+ * @method string getNatInstanceId() 获取<p>NAT防火墙实例ID</p>
+ * @method void setNatInstanceId(string $NatInstanceId) 设置<p>NAT防火墙实例ID</p>
  */
 class ModifyNatInstanceRequest extends AbstractModel
 {
     /**
-     * @var string NAT防火墙实例名称
+     * @var string <p>NAT防火墙实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string NAT防火墙实例ID
+     * @var string <p>NAT防火墙实例ID</p>
      */
     public $NatInstanceId;
 
     /**
-     * @param string $InstanceName NAT防火墙实例名称
-     * @param string $NatInstanceId NAT防火墙实例ID
+     * @param string $InstanceName <p>NAT防火墙实例名称</p>
+     * @param string $NatInstanceId <p>NAT防火墙实例ID</p>
      */
     function __construct()
     {

@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 状态监控过滤条件。
  *
- * @method string getName() 获取<p>过滤字段名。</p>
+ * @method string getName() 获取过滤字段名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置<p>过滤字段名。</p>
+ * @method void setName(string $Name) 设置过滤字段名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getValues() 获取<p>过滤值列表，最多 10 个。</p>
+ * @method array getValues() 获取过滤值列表，最多 10 个。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValues(array $Values) 设置<p>过滤值列表，最多 10 个。</p>
+ * @method void setValues(array $Values) 设置过滤值列表，最多 10 个。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperatorType() 获取<p>操作符类型，可选；仅支持后端允许的类型。</p>
+ * @method integer getOperatorType() 获取操作符类型，可选；仅支持后端允许的类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperatorType(integer $OperatorType) 设置<p>操作符类型，可选；仅支持后端允许的类型。</p>
+ * @method void setOperatorType(integer $OperatorType) 设置操作符类型，可选；仅支持后端允许的类型。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CfwStatusMonitorFilter extends AbstractModel
 {
     /**
-     * @var string <p>过滤字段名。</p>
+     * @var string 过滤字段名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var array <p>过滤值列表，最多 10 个。</p>
+     * @var array 过滤值列表，最多 10 个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
-     * @var integer <p>操作符类型，可选；仅支持后端允许的类型。</p>
+     * @var integer 操作符类型，可选；仅支持后端允许的类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorType;
 
     /**
-     * @param string $Name <p>过滤字段名。</p>
+     * @param string $Name 过滤字段名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Values <p>过滤值列表，最多 10 个。</p>
+     * @param array $Values 过滤值列表，最多 10 个。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OperatorType <p>操作符类型，可选；仅支持后端允许的类型。</p>
+     * @param integer $OperatorType 操作符类型，可选；仅支持后端允许的类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

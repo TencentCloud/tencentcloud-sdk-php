@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfwAssets返回参数结构体
  *
- * @method string getData() 获取查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
- * @method void setData(string $Data) 设置查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+ * @method string getData() 获取<p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
+ * @method void setData(string $Data) 设置<p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCfwAssetsResponse extends AbstractModel
 {
     /**
-     * @var string 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+     * @var string <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeCfwAssetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Data 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+     * @param string $Data <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

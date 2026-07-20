@@ -1,0 +1,89 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cfw\V20190904\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * CreateAlertCenterRuleAsync返回参数结构体
+ *
+ * @method integer getReturnCode() 获取<p>返回状态码：<br>0 成功<br>非0 失败</p>
+ * @method void setReturnCode(integer $ReturnCode) 设置<p>返回状态码：<br>0 成功<br>非0 失败</p>
+ * @method string getReturnMsg() 获取<p>返回信息：<br>success 成功<br>其他</p>
+ * @method void setReturnMsg(string $ReturnMsg) 设置<p>返回信息：<br>success 成功<br>其他</p>
+ * @method integer getStatus() 获取<p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
+ * @method void setStatus(integer $Status) 设置<p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ */
+class CreateAlertCenterRuleAsyncResponse extends AbstractModel
+{
+    /**
+     * @var integer <p>返回状态码：<br>0 成功<br>非0 失败</p>
+     */
+    public $ReturnCode;
+
+    /**
+     * @var string <p>返回信息：<br>success 成功<br>其他</p>
+     */
+    public $ReturnMsg;
+
+    /**
+     * @var integer <p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
+     */
+    public $Status;
+
+    /**
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public $RequestId;
+
+    /**
+     * @param integer $ReturnCode <p>返回状态码：<br>0 成功<br>非0 失败</p>
+     * @param string $ReturnMsg <p>返回信息：<br>success 成功<br>其他</p>
+     * @param integer $Status <p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
+            $this->ReturnCode = $param["ReturnCode"];
+        }
+
+        if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
+            $this->ReturnMsg = $param["ReturnMsg"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
+        }
+    }
+}

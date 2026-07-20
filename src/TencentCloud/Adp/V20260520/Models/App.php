@@ -20,90 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * App 应用完整信息
  *
- * @method AppAuxiliaryInfo getAuxiliaryInfo() 获取辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
+ * @method AppAuxiliaryInfo getAuxiliaryInfo() 获取<p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAuxiliaryInfo(AppAuxiliaryInfo $AuxiliaryInfo) 设置辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
+ * @method void setAuxiliaryInfo(AppAuxiliaryInfo $AuxiliaryInfo) 设置<p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AppConfig getConfig() 获取配置
+ * @method AppConfig getConfig() 获取<p>配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfig(AppConfig $Config) 设置配置
+ * @method void setConfig(AppConfig $Config) 设置<p>配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AppMetadata getMetadata() 获取元数据
+ * @method AppMetadata getMetadata() 获取<p>元数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetadata(AppMetadata $Metadata) 设置元数据
+ * @method void setMetadata(AppMetadata $Metadata) 设置<p>元数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AppSecretInfo getSecretInfo() 获取应用密钥信息
+ * @method AppSecretInfo getSecretInfo() 获取<p>应用密钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecretInfo(AppSecretInfo $SecretInfo) 设置应用密钥信息
+ * @method void setSecretInfo(AppSecretInfo $SecretInfo) 设置<p>应用密钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AppShareURLInfo getShareUrlInfo() 获取分享链接信息(含访问控制)
+ * @method AppShareURLInfo getShareUrlInfo() 获取<p>分享链接信息(含访问控制)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShareUrlInfo(AppShareURLInfo $ShareUrlInfo) 设置分享链接信息(含访问控制)
+ * @method void setShareUrlInfo(AppShareURLInfo $ShareUrlInfo) 设置<p>分享链接信息(含访问控制)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AppStatusInfo getStatus() 获取状态
+ * @method AppStatusInfo getStatus() 获取<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(AppStatusInfo $Status) 设置状态
+ * @method void setStatus(AppStatusInfo $Status) 设置<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSharedKbList() 获取应用引用的共享知识库列表
- * @method void setSharedKbList(array $SharedKbList) 设置应用引用的共享知识库列表
+ * @method array getSharedKbList() 获取<p>应用引用的共享知识库列表</p>
+ * @method void setSharedKbList(array $SharedKbList) 设置<p>应用引用的共享知识库列表</p>
+ * @method CorpShareConfig getCorpShareConfig() 获取<p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCorpShareConfig(CorpShareConfig $CorpShareConfig) 设置<p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class App extends AbstractModel
 {
     /**
-     * @var AppAuxiliaryInfo 辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
+     * @var AppAuxiliaryInfo <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuxiliaryInfo;
 
     /**
-     * @var AppConfig 配置
+     * @var AppConfig <p>配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Config;
 
     /**
-     * @var AppMetadata 元数据
+     * @var AppMetadata <p>元数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadata;
 
     /**
-     * @var AppSecretInfo 应用密钥信息
+     * @var AppSecretInfo <p>应用密钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretInfo;
 
     /**
-     * @var AppShareURLInfo 分享链接信息(含访问控制)
+     * @var AppShareURLInfo <p>分享链接信息(含访问控制)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShareUrlInfo;
 
     /**
-     * @var AppStatusInfo 状态
+     * @var AppStatusInfo <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var array 应用引用的共享知识库列表
+     * @var array <p>应用引用的共享知识库列表</p>
      */
     public $SharedKbList;
 
     /**
-     * @param AppAuxiliaryInfo $AuxiliaryInfo 辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
+     * @var CorpShareConfig <p>企业共享配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppConfig $Config 配置
+     */
+    public $CorpShareConfig;
+
+    /**
+     * @param AppAuxiliaryInfo $AuxiliaryInfo <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppMetadata $Metadata 元数据
+     * @param AppConfig $Config <p>配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppSecretInfo $SecretInfo 应用密钥信息
+     * @param AppMetadata $Metadata <p>元数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppShareURLInfo $ShareUrlInfo 分享链接信息(含访问控制)
+     * @param AppSecretInfo $SecretInfo <p>应用密钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppStatusInfo $Status 状态
+     * @param AppShareURLInfo $ShareUrlInfo <p>分享链接信息(含访问控制)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SharedKbList 应用引用的共享知识库列表
+     * @param AppStatusInfo $Status <p>状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SharedKbList <p>应用引用的共享知识库列表</p>
+     * @param CorpShareConfig $CorpShareConfig <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -155,6 +167,11 @@ class App extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SharedKbList, $obj);
             }
+        }
+
+        if (array_key_exists("CorpShareConfig",$param) and $param["CorpShareConfig"] !== null) {
+            $this->CorpShareConfig = new CorpShareConfig();
+            $this->CorpShareConfig->deserialize($param["CorpShareConfig"]);
         }
     }
 }

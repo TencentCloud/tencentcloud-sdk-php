@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNatFwVpcDnsSwitch请求参数结构体
  *
- * @method string getNatFwInsId() 获取nat 防火墙 id
- * @method void setNatFwInsId(string $NatFwInsId) 设置nat 防火墙 id
- * @method array getDnsVpcSwitchLst() 获取DNS 开关切换列表
- * @method void setDnsVpcSwitchLst(array $DnsVpcSwitchLst) 设置DNS 开关切换列表
+ * @method string getNatFwInsId() 获取<p>nat 防火墙 id</p>
+ * @method void setNatFwInsId(string $NatFwInsId) 设置<p>nat 防火墙 id</p>
+ * @method array getDnsVpcSwitchLst() 获取<p>DNS 开关切换列表</p>
+ * @method void setDnsVpcSwitchLst(array $DnsVpcSwitchLst) 设置<p>DNS 开关切换列表</p>
  */
 class ModifyNatFwVpcDnsSwitchRequest extends AbstractModel
 {
     /**
-     * @var string nat 防火墙 id
+     * @var string <p>nat 防火墙 id</p>
      */
     public $NatFwInsId;
 
     /**
-     * @var array DNS 开关切换列表
+     * @var array <p>DNS 开关切换列表</p>
      */
     public $DnsVpcSwitchLst;
 
     /**
-     * @param string $NatFwInsId nat 防火墙 id
-     * @param array $DnsVpcSwitchLst DNS 开关切换列表
+     * @param string $NatFwInsId <p>nat 防火墙 id</p>
+     * @param array $DnsVpcSwitchLst <p>DNS 开关切换列表</p>
      */
     function __construct()
     {

@@ -20,97 +20,97 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规则信息
  *
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method string getModTime() 获取修改时间
- * @method void setModTime(string $ModTime) 设置修改时间
- * @method boolean getEnable() 获取使能开关
- * @method void setEnable(boolean $Enable) 设置使能开关
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method string getRuleId() 获取规则ID
- * @method void setRuleId(string $RuleId) 设置规则ID
- * @method string getAddTime() 获取创建时间
- * @method void setAddTime(string $AddTime) 设置创建时间
- * @method string getEventBusId() 获取事件集ID
- * @method void setEventBusId(string $EventBusId) 设置事件集ID
- * @method string getRuleName() 获取规则名称
- * @method void setRuleName(string $RuleName) 设置规则名称
- * @method array getTargets() 获取Target 简要信息
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method string getModTime() 获取<p>修改时间</p>
+ * @method void setModTime(string $ModTime) 设置<p>修改时间</p>
+ * @method boolean getEnable() 获取<p>使能开关</p>
+ * @method void setEnable(boolean $Enable) 设置<p>使能开关</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method string getRuleId() 获取<p>规则ID</p>
+ * @method void setRuleId(string $RuleId) 设置<p>规则ID</p>
+ * @method string getAddTime() 获取<p>创建时间</p>
+ * @method void setAddTime(string $AddTime) 设置<p>创建时间</p>
+ * @method string getEventBusId() 获取<p>事件集ID</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
+ * @method string getRuleName() 获取<p>规则名称</p>
+ * @method void setRuleName(string $RuleName) 设置<p>规则名称</p>
+ * @method array getTargets() 获取<p>Target 简要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargets(array $Targets) 设置Target 简要信息
+ * @method void setTargets(array $Targets) 设置<p>Target 简要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DeadLetterConfig getDeadLetterConfig() 获取rule设置的dlq规则. 可能为null
+ * @method DeadLetterConfig getDeadLetterConfig() 获取<p>rule设置的dlq规则. 可能为null</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) 设置rule设置的dlq规则. 可能为null
+ * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) 设置<p>rule设置的dlq规则. 可能为null</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
      */
     public $Status;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $ModTime;
 
     /**
-     * @var boolean 使能开关
+     * @var boolean <p>使能开关</p>
      */
     public $Enable;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @var string 规则ID
+     * @var string <p>规则ID</p>
      */
     public $RuleId;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $AddTime;
 
     /**
-     * @var string 事件集ID
+     * @var string <p>事件集ID</p>
      */
     public $EventBusId;
 
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
      */
     public $RuleName;
 
     /**
-     * @var array Target 简要信息
+     * @var array <p>Target 简要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Targets;
 
     /**
-     * @var DeadLetterConfig rule设置的dlq规则. 可能为null
+     * @var DeadLetterConfig <p>rule设置的dlq规则. 可能为null</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadLetterConfig;
 
     /**
-     * @param string $Status 状态
-     * @param string $ModTime 修改时间
-     * @param boolean $Enable 使能开关
-     * @param string $Description 描述
-     * @param string $RuleId 规则ID
-     * @param string $AddTime 创建时间
-     * @param string $EventBusId 事件集ID
-     * @param string $RuleName 规则名称
-     * @param array $Targets Target 简要信息
+     * @param string $Status <p>状态</p>
+     * @param string $ModTime <p>修改时间</p>
+     * @param boolean $Enable <p>使能开关</p>
+     * @param string $Description <p>描述</p>
+     * @param string $RuleId <p>规则ID</p>
+     * @param string $AddTime <p>创建时间</p>
+     * @param string $EventBusId <p>事件集ID</p>
+     * @param string $RuleName <p>规则名称</p>
+     * @param array $Targets <p>Target 简要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeadLetterConfig $DeadLetterConfig rule设置的dlq规则. 可能为null
+     * @param DeadLetterConfig $DeadLetterConfig <p>rule设置的dlq规则. 可能为null</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

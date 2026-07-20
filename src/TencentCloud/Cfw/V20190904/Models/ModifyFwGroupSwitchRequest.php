@@ -20,42 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFwGroupSwitch请求参数结构体
  *
- * @method integer getEnable() 获取打开或关闭开关
-0：关闭开关
-1：打开开关
- * @method void setEnable(integer $Enable) 设置打开或关闭开关
-0：关闭开关
-1：打开开关
- * @method integer getAllSwitch() 获取是否操作全部开关 0 不操作全部开关，1 操作全部开关
- * @method void setAllSwitch(integer $AllSwitch) 设置是否操作全部开关 0 不操作全部开关，1 操作全部开关
- * @method array getSwitchList() 获取开关列表
- * @method void setSwitchList(array $SwitchList) 设置开关列表
+ * @method integer getEnable() 获取<p>打开或关闭开关<br>0：关闭开关<br>1：打开开关</p>
+ * @method void setEnable(integer $Enable) 设置<p>打开或关闭开关<br>0：关闭开关<br>1：打开开关</p>
+ * @method integer getAllSwitch() 获取<p>是否操作全部开关 0 不操作全部开关，1 操作全部开关</p>
+ * @method void setAllSwitch(integer $AllSwitch) 设置<p>是否操作全部开关 0 不操作全部开关，1 操作全部开关</p>
+ * @method array getSwitchList() 获取<p>开关列表</p>
+ * @method void setSwitchList(array $SwitchList) 设置<p>开关列表</p>
  */
 class ModifyFwGroupSwitchRequest extends AbstractModel
 {
     /**
-     * @var integer 打开或关闭开关
-0：关闭开关
-1：打开开关
+     * @var integer <p>打开或关闭开关<br>0：关闭开关<br>1：打开开关</p>
      */
     public $Enable;
 
     /**
-     * @var integer 是否操作全部开关 0 不操作全部开关，1 操作全部开关
+     * @var integer <p>是否操作全部开关 0 不操作全部开关，1 操作全部开关</p>
      */
     public $AllSwitch;
 
     /**
-     * @var array 开关列表
+     * @var array <p>开关列表</p>
      */
     public $SwitchList;
 
     /**
-     * @param integer $Enable 打开或关闭开关
-0：关闭开关
-1：打开开关
-     * @param integer $AllSwitch 是否操作全部开关 0 不操作全部开关，1 操作全部开关
-     * @param array $SwitchList 开关列表
+     * @param integer $Enable <p>打开或关闭开关<br>0：关闭开关<br>1：打开开关</p>
+     * @param integer $AllSwitch <p>是否操作全部开关 0 不操作全部开关，1 操作全部开关</p>
+     * @param array $SwitchList <p>开关列表</p>
      */
     function __construct()
     {

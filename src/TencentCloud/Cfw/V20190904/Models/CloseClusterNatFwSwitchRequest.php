@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseClusterNatFwSwitch请求参数结构体
  *
- * @method string getNatInsId() 获取NAT防火墙实例ID
- * @method void setNatInsId(string $NatInsId) 设置NAT防火墙实例ID
- * @method string getCcnId() 获取云联网实例ID
- * @method void setCcnId(string $CcnId) 设置云联网实例ID
+ * @method string getNatInsId() 获取<p>NAT防火墙实例ID</p>
+ * @method void setNatInsId(string $NatInsId) 设置<p>NAT防火墙实例ID</p>
+ * @method string getCcnId() 获取<p>云联网实例ID</p>
+ * @method void setCcnId(string $CcnId) 设置<p>云联网实例ID</p>
  */
 class CloseClusterNatFwSwitchRequest extends AbstractModel
 {
     /**
-     * @var string NAT防火墙实例ID
+     * @var string <p>NAT防火墙实例ID</p>
      */
     public $NatInsId;
 
     /**
-     * @var string 云联网实例ID
+     * @var string <p>云联网实例ID</p>
      */
     public $CcnId;
 
     /**
-     * @param string $NatInsId NAT防火墙实例ID
-     * @param string $CcnId 云联网实例ID
+     * @param string $NatInsId <p>NAT防火墙实例ID</p>
+     * @param string $CcnId <p>云联网实例ID</p>
      */
     function __construct()
     {

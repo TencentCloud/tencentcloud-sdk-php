@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDefenseSwitch返回参数结构体
  *
- * @method integer getBasicRuleSwitch() 获取基础防御开关
- * @method void setBasicRuleSwitch(integer $BasicRuleSwitch) 设置基础防御开关
- * @method integer getBaselineAllSwitch() 获取安全基线开关
- * @method void setBaselineAllSwitch(integer $BaselineAllSwitch) 设置安全基线开关
- * @method integer getTiSwitch() 获取威胁情报开关
- * @method void setTiSwitch(integer $TiSwitch) 设置威胁情报开关
- * @method integer getVirtualPatchSwitch() 获取虚拟补丁开关
- * @method void setVirtualPatchSwitch(integer $VirtualPatchSwitch) 设置虚拟补丁开关
- * @method integer getHistoryOpen() 获取是否历史开启
- * @method void setHistoryOpen(integer $HistoryOpen) 设置是否历史开启
- * @method integer getReturnCode() 获取状态值，0：查询成功，非0：查询失败
- * @method void setReturnCode(integer $ReturnCode) 设置状态值，0：查询成功，非0：查询失败
- * @method string getReturnMsg() 获取状态信息，success：查询成功，fail：查询失败
- * @method void setReturnMsg(string $ReturnMsg) 设置状态信息，success：查询成功，fail：查询失败
+ * @method integer getBasicRuleSwitch() 获取<p>基础防御开关</p>
+ * @method void setBasicRuleSwitch(integer $BasicRuleSwitch) 设置<p>基础防御开关</p>
+ * @method integer getBaselineAllSwitch() 获取<p>安全基线开关</p>
+ * @method void setBaselineAllSwitch(integer $BaselineAllSwitch) 设置<p>安全基线开关</p>
+ * @method integer getTiSwitch() 获取<p>威胁情报开关</p>
+ * @method void setTiSwitch(integer $TiSwitch) 设置<p>威胁情报开关</p>
+ * @method integer getVirtualPatchSwitch() 获取<p>虚拟补丁开关</p>
+ * @method void setVirtualPatchSwitch(integer $VirtualPatchSwitch) 设置<p>虚拟补丁开关</p>
+ * @method integer getHistoryOpen() 获取<p>是否历史开启</p>
+ * @method void setHistoryOpen(integer $HistoryOpen) 设置<p>是否历史开启</p>
+ * @method integer getReturnCode() 获取<p>状态值，0：查询成功，非0：查询失败</p>
+ * @method void setReturnCode(integer $ReturnCode) 设置<p>状态值，0：查询成功，非0：查询失败</p>
+ * @method string getReturnMsg() 获取<p>状态信息，success：查询成功，fail：查询失败</p>
+ * @method void setReturnMsg(string $ReturnMsg) 设置<p>状态信息，success：查询成功，fail：查询失败</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDefenseSwitchResponse extends AbstractModel
 {
     /**
-     * @var integer 基础防御开关
+     * @var integer <p>基础防御开关</p>
      */
     public $BasicRuleSwitch;
 
     /**
-     * @var integer 安全基线开关
+     * @var integer <p>安全基线开关</p>
      */
     public $BaselineAllSwitch;
 
     /**
-     * @var integer 威胁情报开关
+     * @var integer <p>威胁情报开关</p>
      */
     public $TiSwitch;
 
     /**
-     * @var integer 虚拟补丁开关
+     * @var integer <p>虚拟补丁开关</p>
      */
     public $VirtualPatchSwitch;
 
     /**
-     * @var integer 是否历史开启
+     * @var integer <p>是否历史开启</p>
      */
     public $HistoryOpen;
 
     /**
-     * @var integer 状态值，0：查询成功，非0：查询失败
+     * @var integer <p>状态值，0：查询成功，非0：查询失败</p>
      */
     public $ReturnCode;
 
     /**
-     * @var string 状态信息，success：查询成功，fail：查询失败
+     * @var string <p>状态信息，success：查询成功，fail：查询失败</p>
      */
     public $ReturnMsg;
 
@@ -80,13 +80,13 @@ class DescribeDefenseSwitchResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $BasicRuleSwitch 基础防御开关
-     * @param integer $BaselineAllSwitch 安全基线开关
-     * @param integer $TiSwitch 威胁情报开关
-     * @param integer $VirtualPatchSwitch 虚拟补丁开关
-     * @param integer $HistoryOpen 是否历史开启
-     * @param integer $ReturnCode 状态值，0：查询成功，非0：查询失败
-     * @param string $ReturnMsg 状态信息，success：查询成功，fail：查询失败
+     * @param integer $BasicRuleSwitch <p>基础防御开关</p>
+     * @param integer $BaselineAllSwitch <p>安全基线开关</p>
+     * @param integer $TiSwitch <p>威胁情报开关</p>
+     * @param integer $VirtualPatchSwitch <p>虚拟补丁开关</p>
+     * @param integer $HistoryOpen <p>是否历史开启</p>
+     * @param integer $ReturnCode <p>状态值，0：查询成功，非0：查询失败</p>
+     * @param string $ReturnMsg <p>状态信息，success：查询成功，fail：查询失败</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

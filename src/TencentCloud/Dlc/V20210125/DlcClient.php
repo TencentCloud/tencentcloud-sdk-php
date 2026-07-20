@@ -114,6 +114,8 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeLakeFsDirSummaryResponse DescribeLakeFsDirSummary(Models\DescribeLakeFsDirSummaryRequest $req) 查询托管存储指定目录的Summary
  * @method Models\DescribeLakeFsInfoResponse DescribeLakeFsInfo(Models\DescribeLakeFsInfoRequest $req) 查询用户的托管存储信息
  * @method Models\DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResult(Models\DescribeLakeFsTaskResultRequest $req) 获取LakeFs上task执行结果访问信息
+ * @method Models\DescribeMCPTaskResponse DescribeMCPTask(Models\DescribeMCPTaskRequest $req) 该接口（DescribeTasks）用于查询任务列表
+ * @method Models\DescribeMCPTaskResultResponse DescribeMCPTaskResult(Models\DescribeMCPTaskResultRequest $req) 获取任务结果查询
  * @method Models\DescribeNativeSparkSessionsResponse DescribeNativeSparkSessions(Models\DescribeNativeSparkSessionsRequest $req) 根据资源组获取spark session列表
  * @method Models\DescribeNetworkConnectionsResponse DescribeNetworkConnections(Models\DescribeNetworkConnectionsRequest $req) 查询网络配置列表
  * @method Models\DescribeNotebookSessionResponse DescribeNotebookSession(Models\DescribeNotebookSessionRequest $req) 本接口（DescribeNotebookSession）用于查询交互式 session详情信息

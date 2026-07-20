@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置<p>云盘版实例的节点拓扑配置。</p><p>若购买的是云盘版实例，此参数为必填，需设置云盘版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。</p>
  * @method string getDiskType() 获取<p>磁盘类型，单节点（云盘版）或者云盘版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘，CLOUD_PREMIUM 表示高性能云硬盘。<br>说明：单节点（云盘版）、云盘版实例硬盘类型所支持的地域略有不同，具体支持情况请参考 <a href="https://cloud.tencent.com/document/product/236/8458">地域和可用区</a>。</p>
  * @method void setDiskType(string $DiskType) 设置<p>磁盘类型，单节点（云盘版）或者云盘版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘，CLOUD_PREMIUM 表示高性能云硬盘。<br>说明：单节点（云盘版）、云盘版实例硬盘类型所支持的地域略有不同，具体支持情况请参考 <a href="https://cloud.tencent.com/document/product/236/8458">地域和可用区</a>。</p>
+ * @method string getDiskEncryption() 获取<p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p>
+ * @method void setDiskEncryption(string $DiskEncryption) 设置<p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p>
  * @method string getDestroyProtect() 获取<p>开启或关闭实例销毁保护。on-开启，off-关闭</p>
  * @method void setDestroyProtect(string $DestroyProtect) 设置<p>开启或关闭实例销毁保护。on-开启，off-关闭</p>
  * @method string getFourthZone() 获取<p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
@@ -315,6 +317,11 @@ class CreateDBInstanceRequest extends AbstractModel
     public $DiskType;
 
     /**
+     * @var string <p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p>
+     */
+    public $DiskEncryption;
+
+    /**
      * @var string <p>开启或关闭实例销毁保护。on-开启，off-关闭</p>
      */
     public $DestroyProtect;
@@ -366,6 +373,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $DataProtectVolume <p>云盘版实例的数据保护空间大小，单位 GB，设置范围1 - 10。</p>
      * @param ClusterTopology $ClusterTopology <p>云盘版实例的节点拓扑配置。</p><p>若购买的是云盘版实例，此参数为必填，需设置云盘版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。</p>
      * @param string $DiskType <p>磁盘类型，单节点（云盘版）或者云盘版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘，CLOUD_PREMIUM 表示高性能云硬盘。<br>说明：单节点（云盘版）、云盘版实例硬盘类型所支持的地域略有不同，具体支持情况请参考 <a href="https://cloud.tencent.com/document/product/236/8458">地域和可用区</a>。</p>
+     * @param string $DiskEncryption <p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p>
      * @param string $DestroyProtect <p>开启或关闭实例销毁保护。on-开启，off-关闭</p>
      * @param string $FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
      */
@@ -556,6 +564,10 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
             $this->DiskType = $param["DiskType"];
+        }
+
+        if (array_key_exists("DiskEncryption",$param) and $param["DiskEncryption"] !== null) {
+            $this->DiskEncryption = $param["DiskEncryption"];
         }
 
         if (array_key_exists("DestroyProtect",$param) and $param["DestroyProtect"] !== null) {

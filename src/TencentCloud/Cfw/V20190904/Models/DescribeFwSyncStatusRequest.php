@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFwSyncStatus请求参数结构体
  *
- * @method string getSyncType() 获取查询的同步状态类型：Route,同步路由状态
- * @method void setSyncType(string $SyncType) 设置查询的同步状态类型：Route,同步路由状态
+ * @method string getSyncType() 获取<p>查询的同步状态类型：Route,同步路由状态</p>
+ * @method void setSyncType(string $SyncType) 设置<p>查询的同步状态类型：Route,同步路由状态</p>
  */
 class DescribeFwSyncStatusRequest extends AbstractModel
 {
     /**
-     * @var string 查询的同步状态类型：Route,同步路由状态
+     * @var string <p>查询的同步状态类型：Route,同步路由状态</p>
      */
     public $SyncType;
 
     /**
-     * @param string $SyncType 查询的同步状态类型：Route,同步路由状态
+     * @param string $SyncType <p>查询的同步状态类型：Route,同步路由状态</p>
      */
     function __construct()
     {

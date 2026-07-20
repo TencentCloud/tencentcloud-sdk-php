@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCcnVpcFwPolicyLimit返回参数结构体
  *
- * @method integer getCcnPolicyInterconnectPairLenLimit() 获取支持的引流策略数量（最外层总条数）
- * @method void setCcnPolicyInterconnectPairLenLimit(integer $CcnPolicyInterconnectPairLenLimit) 设置支持的引流策略数量（最外层总条数）
- * @method integer getCcnPolicyGroupLenLimit() 获取单条引流策略中单组的最大配置数量（内层单组总条数）
- * @method void setCcnPolicyGroupLenLimit(integer $CcnPolicyGroupLenLimit) 设置单条引流策略中单组的最大配置数量（内层单组总条数）
- * @method integer getCcnPolicyCidrLenLimit() 获取接入的实例网段长度（网段数量）限制
- * @method void setCcnPolicyCidrLenLimit(integer $CcnPolicyCidrLenLimit) 设置接入的实例网段长度（网段数量）限制
+ * @method integer getCcnPolicyInterconnectPairLenLimit() 获取<p>支持的引流策略数量（最外层总条数）</p>
+ * @method void setCcnPolicyInterconnectPairLenLimit(integer $CcnPolicyInterconnectPairLenLimit) 设置<p>支持的引流策略数量（最外层总条数）</p>
+ * @method integer getCcnPolicyGroupLenLimit() 获取<p>单条引流策略中单组的最大配置数量（内层单组总条数）</p>
+ * @method void setCcnPolicyGroupLenLimit(integer $CcnPolicyGroupLenLimit) 设置<p>单条引流策略中单组的最大配置数量（内层单组总条数）</p>
+ * @method integer getCcnPolicyCidrLenLimit() 获取<p>接入的实例网段长度（网段数量）限制</p>
+ * @method void setCcnPolicyCidrLenLimit(integer $CcnPolicyCidrLenLimit) 设置<p>接入的实例网段长度（网段数量）限制</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCcnVpcFwPolicyLimitResponse extends AbstractModel
 {
     /**
-     * @var integer 支持的引流策略数量（最外层总条数）
+     * @var integer <p>支持的引流策略数量（最外层总条数）</p>
      */
     public $CcnPolicyInterconnectPairLenLimit;
 
     /**
-     * @var integer 单条引流策略中单组的最大配置数量（内层单组总条数）
+     * @var integer <p>单条引流策略中单组的最大配置数量（内层单组总条数）</p>
      */
     public $CcnPolicyGroupLenLimit;
 
     /**
-     * @var integer 接入的实例网段长度（网段数量）限制
+     * @var integer <p>接入的实例网段长度（网段数量）限制</p>
      */
     public $CcnPolicyCidrLenLimit;
 
@@ -52,9 +52,9 @@ class DescribeCcnVpcFwPolicyLimitResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $CcnPolicyInterconnectPairLenLimit 支持的引流策略数量（最外层总条数）
-     * @param integer $CcnPolicyGroupLenLimit 单条引流策略中单组的最大配置数量（内层单组总条数）
-     * @param integer $CcnPolicyCidrLenLimit 接入的实例网段长度（网段数量）限制
+     * @param integer $CcnPolicyInterconnectPairLenLimit <p>支持的引流策略数量（最外层总条数）</p>
+     * @param integer $CcnPolicyGroupLenLimit <p>单条引流策略中单组的最大配置数量（内层单组总条数）</p>
+     * @param integer $CcnPolicyCidrLenLimit <p>接入的实例网段长度（网段数量）限制</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

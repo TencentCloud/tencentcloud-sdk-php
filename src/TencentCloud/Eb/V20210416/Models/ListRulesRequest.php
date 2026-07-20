@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListRules请求参数结构体
  *
- * @method string getEventBusId() 获取事件集ID
- * @method void setEventBusId(string $EventBusId) 设置事件集ID
- * @method string getOrderBy() 获取根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）,name（规则名称）
- * @method void setOrderBy(string $OrderBy) 设置根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）,name（规则名称）
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- * @method integer getOffset() 获取分页偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置分页偏移量，默认为0。
- * @method string getOrder() 获取以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
- * @method void setOrder(string $Order) 设置以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
+ * @method string getEventBusId() 获取<p>事件集ID</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
+ * @method string getOrderBy() 获取<p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 修改时间</li><li>name： 规则名称</li></ul><p>默认值：updated_at</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 修改时间</li><li>name： 规则名称</li></ul><p>默认值：updated_at</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100。</p>
+ * @method integer getOffset() 获取<p>分页偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认为0。</p>
+ * @method string getOrder() 获取<p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
+ * @method void setOrder(string $Order) 设置<p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
  */
 class ListRulesRequest extends AbstractModel
 {
     /**
-     * @var string 事件集ID
+     * @var string <p>事件集ID</p>
      */
     public $EventBusId;
 
     /**
-     * @var string 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）,name（规则名称）
+     * @var string <p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 修改时间</li><li>name： 规则名称</li></ul><p>默认值：updated_at</p>
      */
     public $OrderBy;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer <p>返回数量，默认为20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，默认为0。
+     * @var integer <p>分页偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var string 以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
+     * @var string <p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
      */
     public $Order;
 
     /**
-     * @param string $EventBusId 事件集ID
-     * @param string $OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）,name（规则名称）
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
-     * @param integer $Offset 分页偏移量，默认为0。
-     * @param string $Order 以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
+     * @param string $EventBusId <p>事件集ID</p>
+     * @param string $OrderBy <p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 修改时间</li><li>name： 规则名称</li></ul><p>默认值：updated_at</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100。</p>
+     * @param integer $Offset <p>分页偏移量，默认为0。</p>
+     * @param string $Order <p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
      */
     function __construct()
     {

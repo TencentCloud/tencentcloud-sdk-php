@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCcnAssociatedInstances请求参数结构体
  *
- * @method string getCcnId() 获取云联网ID
- * @method void setCcnId(string $CcnId) 设置云联网ID
+ * @method string getCcnId() 获取<p>云联网ID</p>
+ * @method void setCcnId(string $CcnId) 设置<p>云联网ID</p>
  */
 class DescribeCcnAssociatedInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 云联网ID
+     * @var string <p>云联网ID</p>
      */
     public $CcnId;
 
     /**
-     * @param string $CcnId 云联网ID
+     * @param string $CcnId <p>云联网ID</p>
      */
     function __construct()
     {

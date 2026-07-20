@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApp返回参数结构体
  *
- * @method string getAppId() 获取app_id
- * @method void setAppId(string $AppId) 设置app_id
- * @method string getUpdateTime() 获取更新时间 (Unix时间戳,秒级)
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间 (Unix时间戳,秒级)
+ * @method string getAppId() 获取<p>app_id</p>
+ * @method void setAppId(string $AppId) 设置<p>app_id</p>
+ * @method string getUpdateTime() 获取<p>更新时间 (Unix时间戳,秒级)</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间 (Unix时间戳,秒级)</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyAppResponse extends AbstractModel
 {
     /**
-     * @var string app_id
+     * @var string <p>app_id</p>
      */
     public $AppId;
 
     /**
-     * @var string 更新时间 (Unix时间戳,秒级)
+     * @var string <p>更新时间 (Unix时间戳,秒级)</p>
      */
     public $UpdateTime;
 
@@ -45,8 +45,8 @@ class ModifyAppResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AppId app_id
-     * @param string $UpdateTime 更新时间 (Unix时间戳,秒级)
+     * @param string $AppId <p>app_id</p>
+     * @param string $UpdateTime <p>更新时间 (Unix时间戳,秒级)</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListConnections请求参数结构体
  *
- * @method string getEventBusId() 获取事件集ID
- * @method void setEventBusId(string $EventBusId) 设置事件集ID
- * @method string getOrderBy() 获取根据哪个字段进行返回结果排序，目前支持如下以下字段：AddTime, ModTime
- * @method void setOrderBy(string $OrderBy) 设置根据哪个字段进行返回结果排序，目前支持如下以下字段：AddTime, ModTime
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- * @method string getOrder() 获取以升序还是降序的方式返回结果，可选值 ASC 和 DESC
- * @method void setOrder(string $Order) 设置以升序还是降序的方式返回结果，可选值 ASC 和 DESC
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method string getEventBusId() 获取<p>事件集ID</p>
+ * @method void setEventBusId(string $EventBusId) 设置<p>事件集ID</p>
+ * @method string getOrderBy() 获取<p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 更新时间</li><li>name： 连接器名称</li></ul><p>默认值：updated_at</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 更新时间</li><li>name： 连接器名称</li></ul><p>默认值：updated_at</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100。</p>
+ * @method string getOrder() 获取<p>以升序还是降序的方式返回结果，可选值 ASC 和 DESC</p>
+ * @method void setOrder(string $Order) 设置<p>以升序还是降序的方式返回结果，可选值 ASC 和 DESC</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
  */
 class ListConnectionsRequest extends AbstractModel
 {
     /**
-     * @var string 事件集ID
+     * @var string <p>事件集ID</p>
      */
     public $EventBusId;
 
     /**
-     * @var string 根据哪个字段进行返回结果排序，目前支持如下以下字段：AddTime, ModTime
+     * @var string <p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 更新时间</li><li>name： 连接器名称</li></ul><p>默认值：updated_at</p>
      */
     public $OrderBy;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer <p>返回数量，默认为20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var string 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+     * @var string <p>以升序还是降序的方式返回结果，可选值 ASC 和 DESC</p>
      */
     public $Order;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @param string $EventBusId 事件集ID
-     * @param string $OrderBy 根据哪个字段进行返回结果排序，目前支持如下以下字段：AddTime, ModTime
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
-     * @param string $Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
-     * @param integer $Offset 偏移量，默认为0。
+     * @param string $EventBusId <p>事件集ID</p>
+     * @param string $OrderBy <p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 更新时间</li><li>name： 连接器名称</li></ul><p>默认值：updated_at</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100。</p>
+     * @param string $Order <p>以升序还是降序的方式返回结果，可选值 ASC 和 DESC</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
      */
     function __construct()
     {

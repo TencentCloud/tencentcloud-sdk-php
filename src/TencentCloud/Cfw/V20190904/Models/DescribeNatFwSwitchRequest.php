@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatFwSwitch请求参数结构体
  *
- * @method integer getOffset() 获取偏移量，分页用
- * @method void setOffset(integer $Offset) 设置偏移量，分页用
- * @method integer getLimit() 获取条数，分页用
- * @method void setLimit(integer $Limit) 设置条数，分页用
- * @method array getFilters() 获取过滤条件组合
- * @method void setFilters(array $Filters) 设置过滤条件组合
- * @method string getOrder() 获取desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
- * @method void setOrder(string $Order) 设置desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
- * @method string getBy() 获取排序所用到的字段
- * @method void setBy(string $By) 设置排序所用到的字段
+ * @method integer getOffset() 获取<p>偏移量，分页用</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，分页用</p>
+ * @method integer getLimit() 获取<p>条数，分页用</p>
+ * @method void setLimit(integer $Limit) 设置<p>条数，分页用</p>
+ * @method array getFilters() 获取<p>过滤条件组合</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件组合</p>
+ * @method string getOrder() 获取<p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
+ * @method void setOrder(string $Order) 设置<p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
+ * @method string getBy() 获取<p>排序所用到的字段</p>
+ * @method void setBy(string $By) 设置<p>排序所用到的字段</p>
  */
 class DescribeNatFwSwitchRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量，分页用
+     * @var integer <p>偏移量，分页用</p>
      */
     public $Offset;
 
     /**
-     * @var integer 条数，分页用
+     * @var integer <p>条数，分页用</p>
      */
     public $Limit;
 
     /**
-     * @var array 过滤条件组合
+     * @var array <p>过滤条件组合</p>
      */
     public $Filters;
 
     /**
-     * @var string desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+     * @var string <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
      */
     public $Order;
 
     /**
-     * @var string 排序所用到的字段
+     * @var string <p>排序所用到的字段</p>
      */
     public $By;
 
     /**
-     * @param integer $Offset 偏移量，分页用
-     * @param integer $Limit 条数，分页用
-     * @param array $Filters 过滤条件组合
-     * @param string $Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
-     * @param string $By 排序所用到的字段
+     * @param integer $Offset <p>偏移量，分页用</p>
+     * @param integer $Limit <p>条数，分页用</p>
+     * @param array $Filters <p>过滤条件组合</p>
+     * @param string $Order <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
+     * @param string $By <p>排序所用到的字段</p>
      */
     function __construct()
     {

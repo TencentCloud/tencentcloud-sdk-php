@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatFwVpcDnsLst请求参数结构体
  *
- * @method string getNatFwInsId() 获取natfw 防火墙实例id
- * @method void setNatFwInsId(string $NatFwInsId) 设置natfw 防火墙实例id
- * @method string getNatInsIdFilter() 获取natfw 过滤，以','分隔
- * @method void setNatInsIdFilter(string $NatInsIdFilter) 设置natfw 过滤，以','分隔
- * @method integer getOffset() 获取分页页数
- * @method void setOffset(integer $Offset) 设置分页页数
- * @method integer getLimit() 获取每页最多个数
- * @method void setLimit(integer $Limit) 设置每页最多个数
+ * @method string getNatFwInsId() 获取<p>natfw 防火墙实例id</p>
+ * @method void setNatFwInsId(string $NatFwInsId) 设置<p>natfw 防火墙实例id</p>
+ * @method string getNatInsIdFilter() 获取<p>natfw 过滤，以&#39;,&#39;分隔</p>
+ * @method void setNatInsIdFilter(string $NatInsIdFilter) 设置<p>natfw 过滤，以&#39;,&#39;分隔</p>
+ * @method integer getOffset() 获取<p>分页页数</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页页数</p>
+ * @method integer getLimit() 获取<p>每页最多个数</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页最多个数</p>
  */
 class DescribeNatFwVpcDnsLstRequest extends AbstractModel
 {
     /**
-     * @var string natfw 防火墙实例id
+     * @var string <p>natfw 防火墙实例id</p>
      */
     public $NatFwInsId;
 
     /**
-     * @var string natfw 过滤，以','分隔
+     * @var string <p>natfw 过滤，以&#39;,&#39;分隔</p>
      */
     public $NatInsIdFilter;
 
     /**
-     * @var integer 分页页数
+     * @var integer <p>分页页数</p>
      */
     public $Offset;
 
     /**
-     * @var integer 每页最多个数
+     * @var integer <p>每页最多个数</p>
      */
     public $Limit;
 
     /**
-     * @param string $NatFwInsId natfw 防火墙实例id
-     * @param string $NatInsIdFilter natfw 过滤，以','分隔
-     * @param integer $Offset 分页页数
-     * @param integer $Limit 每页最多个数
+     * @param string $NatFwInsId <p>natfw 防火墙实例id</p>
+     * @param string $NatInsIdFilter <p>natfw 过滤，以&#39;,&#39;分隔</p>
+     * @param integer $Offset <p>分页页数</p>
+     * @param integer $Limit <p>每页最多个数</p>
      */
     function __construct()
     {

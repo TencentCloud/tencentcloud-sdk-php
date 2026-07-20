@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRelease请求参数结构体
  *
- * @method string getAppId() 获取应用ID
- * @method void setAppId(string $AppId) 设置应用ID
- * @method array getChannelIdList() 获取渠道ID列表
- * @method void setChannelIdList(array $ChannelIdList) 设置渠道ID列表
- * @method string getDescription() 获取发布描述
- * @method void setDescription(string $Description) 设置发布描述
- * @method boolean getIsDevToRelease() 获取将默认知识库中，仅调试生效的知识批量变更为"调试/发布都生效"
- * @method void setIsDevToRelease(boolean $IsDevToRelease) 设置将默认知识库中，仅调试生效的知识批量变更为"调试/发布都生效"
- * @method boolean getIsPublishAsTemplate() 获取是否同步发布为应用模板
- * @method void setIsPublishAsTemplate(boolean $IsPublishAsTemplate) 设置是否同步发布为应用模板
+ * @method string getAppId() 获取<p>应用ID</p>
+ * @method void setAppId(string $AppId) 设置<p>应用ID</p>
+ * @method AppShareAccessControl getAppShareAccessControl() 获取<p>应用分享访问控制配置</p>
+ * @method void setAppShareAccessControl(AppShareAccessControl $AppShareAccessControl) 设置<p>应用分享访问控制配置</p>
+ * @method array getChannelIdList() 获取<p>渠道ID列表</p>
+ * @method void setChannelIdList(array $ChannelIdList) 设置<p>渠道ID列表</p>
+ * @method CorpShareConfig getCorpShareConfig() 获取<p>企业共享配置</p>
+ * @method void setCorpShareConfig(CorpShareConfig $CorpShareConfig) 设置<p>企业共享配置</p>
+ * @method string getDescription() 获取<p>发布描述</p>
+ * @method void setDescription(string $Description) 设置<p>发布描述</p>
+ * @method boolean getIsDevToRelease() 获取<p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
+ * @method void setIsDevToRelease(boolean $IsDevToRelease) 设置<p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
+ * @method boolean getIsPublishAsTemplate() 获取<p>是否同步发布为应用模板</p>
+ * @method void setIsPublishAsTemplate(boolean $IsPublishAsTemplate) 设置<p>是否同步发布为应用模板</p>
  */
 class CreateReleaseRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
      */
     public $AppId;
 
     /**
-     * @var array 渠道ID列表
+     * @var AppShareAccessControl <p>应用分享访问控制配置</p>
+     */
+    public $AppShareAccessControl;
+
+    /**
+     * @var array <p>渠道ID列表</p>
      */
     public $ChannelIdList;
 
     /**
-     * @var string 发布描述
+     * @var CorpShareConfig <p>企业共享配置</p>
+     */
+    public $CorpShareConfig;
+
+    /**
+     * @var string <p>发布描述</p>
      */
     public $Description;
 
     /**
-     * @var boolean 将默认知识库中，仅调试生效的知识批量变更为"调试/发布都生效"
+     * @var boolean <p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
      */
     public $IsDevToRelease;
 
     /**
-     * @var boolean 是否同步发布为应用模板
+     * @var boolean <p>是否同步发布为应用模板</p>
      */
     public $IsPublishAsTemplate;
 
     /**
-     * @param string $AppId 应用ID
-     * @param array $ChannelIdList 渠道ID列表
-     * @param string $Description 发布描述
-     * @param boolean $IsDevToRelease 将默认知识库中，仅调试生效的知识批量变更为"调试/发布都生效"
-     * @param boolean $IsPublishAsTemplate 是否同步发布为应用模板
+     * @param string $AppId <p>应用ID</p>
+     * @param AppShareAccessControl $AppShareAccessControl <p>应用分享访问控制配置</p>
+     * @param array $ChannelIdList <p>渠道ID列表</p>
+     * @param CorpShareConfig $CorpShareConfig <p>企业共享配置</p>
+     * @param string $Description <p>发布描述</p>
+     * @param boolean $IsDevToRelease <p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
+     * @param boolean $IsPublishAsTemplate <p>是否同步发布为应用模板</p>
      */
     function __construct()
     {
@@ -82,8 +98,18 @@ class CreateReleaseRequest extends AbstractModel
             $this->AppId = $param["AppId"];
         }
 
+        if (array_key_exists("AppShareAccessControl",$param) and $param["AppShareAccessControl"] !== null) {
+            $this->AppShareAccessControl = new AppShareAccessControl();
+            $this->AppShareAccessControl->deserialize($param["AppShareAccessControl"]);
+        }
+
         if (array_key_exists("ChannelIdList",$param) and $param["ChannelIdList"] !== null) {
             $this->ChannelIdList = $param["ChannelIdList"];
+        }
+
+        if (array_key_exists("CorpShareConfig",$param) and $param["CorpShareConfig"] !== null) {
+            $this->CorpShareConfig = new CorpShareConfig();
+            $this->CorpShareConfig->deserialize($param["CorpShareConfig"]);
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

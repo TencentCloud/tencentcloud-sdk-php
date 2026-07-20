@@ -20,130 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddBatchCustomRule请求参数结构体
  *
- * @method string getName() 获取规则名称
- * @method void setName(string $Name) 设置规则名称
- * @method integer getExpireTime() 获取如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
- * @method void setExpireTime(integer $ExpireTime) 设置如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
- * @method integer getSortId() 获取优先级
- * @method void setSortId(integer $SortId) 设置优先级
- * @method integer getActionType() 获取动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
- * @method void setActionType(integer $ActionType) 设置动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
- * @method string getRedirect() 获取重定向地址
- * @method void setRedirect(string $Redirect) 设置重定向地址
- * @method string getBypass() 获取加白模块
- * @method void setBypass(string $Bypass) 设置加白模块
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method string getEventId() 获取事件Id
- * @method void setEventId(string $EventId) 设置事件Id
- * @method array getDomains() 获取域名列表
- * @method void setDomains(array $Domains) 设置域名列表
- * @method array getStrategies() 获取策略详情列表
- * @method void setStrategies(array $Strategies) 设置策略详情列表
- * @method string getJobType() 获取规则执行的方式，TimedJob为定时执行，CronJob为周期执行
- * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
- * @method JobDateTime getJobDateTime() 获取定时任务配置
- * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
- * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
- * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
- * @method string getPageId() 获取页面ID
- * @method void setPageId(string $PageId) 设置页面ID
- * @method integer getActionRatio() 获取动作灰度比例
- * @method void setActionRatio(integer $ActionRatio) 设置动作灰度比例
+ * @method string getName() 获取<p>规则名称</p>
+ * @method void setName(string $Name) 设置<p>规则名称</p>
+ * @method integer getExpireTime() 获取<p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p>
+ * @method integer getSortId() 获取<p>优先级</p>
+ * @method void setSortId(integer $SortId) 设置<p>优先级</p>
+ * @method integer getActionType() 获取<p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向</p>
+ * @method void setActionType(integer $ActionType) 设置<p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向</p>
+ * @method string getRedirect() 获取<p>重定向地址</p>
+ * @method void setRedirect(string $Redirect) 设置<p>重定向地址</p>
+ * @method string getBypass() 获取<p>加白模块</p>
+ * @method void setBypass(string $Bypass) 设置<p>加白模块</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getEventId() 获取<p>事件Id</p>
+ * @method void setEventId(string $EventId) 设置<p>事件Id</p>
+ * @method array getDomains() 获取<p>域名列表</p>
+ * @method void setDomains(array $Domains) 设置<p>域名列表</p>
+ * @method array getStrategies() 获取<p>策略详情列表</p>
+ * @method void setStrategies(array $Strategies) 设置<p>策略详情列表</p>
+ * @method string getJobType() 获取<p>规则执行的方式，TimedJob为定时执行，CronJob为周期执行</p>
+ * @method void setJobType(string $JobType) 设置<p>规则执行的方式，TimedJob为定时执行，CronJob为周期执行</p>
+ * @method JobDateTime getJobDateTime() 获取<p>定时任务配置</p>
+ * @method void setJobDateTime(JobDateTime $JobDateTime) 设置<p>定时任务配置</p>
+ * @method string getLogicalOp() 获取<p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p>
+ * @method void setLogicalOp(string $LogicalOp) 设置<p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p>
+ * @method string getPageId() 获取<p>页面ID</p>
+ * @method void setPageId(string $PageId) 设置<p>页面ID</p>
+ * @method integer getActionRatio() 获取<p>动作灰度比例</p>
+ * @method void setActionRatio(integer $ActionRatio) 设置<p>动作灰度比例</p>
+ * @method array getGroupIds() 获取<p>绑定的防护组ID</p>
+ * @method void setGroupIds(array $GroupIds) 设置<p>绑定的防护组ID</p>
  */
 class AddBatchCustomRuleRequest extends AbstractModel
 {
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
+     * @var integer <p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer 优先级
+     * @var integer <p>优先级</p>
      */
     public $SortId;
 
     /**
-     * @var integer 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+     * @var integer <p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向</p>
      */
     public $ActionType;
 
     /**
-     * @var string 重定向地址
+     * @var string <p>重定向地址</p>
      */
     public $Redirect;
 
     /**
-     * @var string 加白模块
+     * @var string <p>加白模块</p>
      */
     public $Bypass;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var string 事件Id
+     * @var string <p>事件Id</p>
      */
     public $EventId;
 
     /**
-     * @var array 域名列表
+     * @var array <p>域名列表</p>
      */
     public $Domains;
 
     /**
-     * @var array 策略详情列表
+     * @var array <p>策略详情列表</p>
      */
     public $Strategies;
 
     /**
-     * @var string 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     * @var string <p>规则执行的方式，TimedJob为定时执行，CronJob为周期执行</p>
      */
     public $JobType;
 
     /**
-     * @var JobDateTime 定时任务配置
+     * @var JobDateTime <p>定时任务配置</p>
      */
     public $JobDateTime;
 
     /**
-     * @var string 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     * @var string <p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p>
      */
     public $LogicalOp;
 
     /**
-     * @var string 页面ID
+     * @var string <p>页面ID</p>
      */
     public $PageId;
 
     /**
-     * @var integer 动作灰度比例
+     * @var integer <p>动作灰度比例</p>
      */
     public $ActionRatio;
 
     /**
-     * @param string $Name 规则名称
-     * @param integer $ExpireTime 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
-     * @param integer $SortId 优先级
-     * @param integer $ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
-     * @param string $Redirect 重定向地址
-     * @param string $Bypass 加白模块
-     * @param string $Remark 备注
-     * @param string $EventId 事件Id
-     * @param array $Domains 域名列表
-     * @param array $Strategies 策略详情列表
-     * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
-     * @param JobDateTime $JobDateTime 定时任务配置
-     * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
-     * @param string $PageId 页面ID
-     * @param integer $ActionRatio 动作灰度比例
+     * @var array <p>绑定的防护组ID</p>
+     */
+    public $GroupIds;
+
+    /**
+     * @param string $Name <p>规则名称</p>
+     * @param integer $ExpireTime <p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p>
+     * @param integer $SortId <p>优先级</p>
+     * @param integer $ActionType <p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向</p>
+     * @param string $Redirect <p>重定向地址</p>
+     * @param string $Bypass <p>加白模块</p>
+     * @param string $Remark <p>备注</p>
+     * @param string $EventId <p>事件Id</p>
+     * @param array $Domains <p>域名列表</p>
+     * @param array $Strategies <p>策略详情列表</p>
+     * @param string $JobType <p>规则执行的方式，TimedJob为定时执行，CronJob为周期执行</p>
+     * @param JobDateTime $JobDateTime <p>定时任务配置</p>
+     * @param string $LogicalOp <p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p>
+     * @param string $PageId <p>页面ID</p>
+     * @param integer $ActionRatio <p>动作灰度比例</p>
+     * @param array $GroupIds <p>绑定的防护组ID</p>
      */
     function __construct()
     {
@@ -222,6 +230,10 @@ class AddBatchCustomRuleRequest extends AbstractModel
 
         if (array_key_exists("ActionRatio",$param) and $param["ActionRatio"] !== null) {
             $this->ActionRatio = $param["ActionRatio"];
+        }
+
+        if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
+            $this->GroupIds = $param["GroupIds"];
         }
     }
 }

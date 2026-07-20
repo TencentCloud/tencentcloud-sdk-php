@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNatFwInstanceWithDomain请求参数结构体
  *
- * @method string getName() 获取防火墙实例名称
- * @method void setName(string $Name) 设置防火墙实例名称
- * @method integer getWidth() 获取带宽
- * @method void setWidth(integer $Width) 设置带宽
- * @method integer getMode() 获取模式 1：接入模式；0：新增模式
- * @method void setMode(integer $Mode) 设置模式 1：接入模式；0：新增模式
- * @method NewModeItems getNewModeItems() 获取新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。
- * @method void setNewModeItems(NewModeItems $NewModeItems) 设置新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。
- * @method array getNatGwList() 获取接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。
- * @method void setNatGwList(array $NatGwList) 设置接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。
- * @method string getZone() 获取主可用区，为空则选择默认可用区
- * @method void setZone(string $Zone) 设置主可用区，为空则选择默认可用区
- * @method string getZoneBak() 获取备可用区，为空则选择默认可用区
- * @method void setZoneBak(string $ZoneBak) 设置备可用区，为空则选择默认可用区
- * @method integer getCrossAZone() 获取异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
- * @method void setCrossAZone(integer $CrossAZone) 设置异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
- * @method integer getIsCreateDomain() 获取0不创建域名,1创建域名
- * @method void setIsCreateDomain(integer $IsCreateDomain) 设置0不创建域名,1创建域名
- * @method string getDomain() 获取如果要创建域名则必填
- * @method void setDomain(string $Domain) 设置如果要创建域名则必填
- * @method FwCidrInfo getFwCidrInfo() 获取指定防火墙使用网段信息
- * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置指定防火墙使用网段信息
+ * @method string getName() 获取<p>防火墙实例名称</p>
+ * @method void setName(string $Name) 设置<p>防火墙实例名称</p>
+ * @method integer getWidth() 获取<p>带宽</p>
+ * @method void setWidth(integer $Width) 设置<p>带宽</p>
+ * @method integer getMode() 获取<p>模式 1：接入模式；0：新增模式</p>
+ * @method void setMode(integer $Mode) 设置<p>模式 1：接入模式；0：新增模式</p>
+ * @method NewModeItems getNewModeItems() 获取<p>新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。</p>
+ * @method void setNewModeItems(NewModeItems $NewModeItems) 设置<p>新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。</p>
+ * @method array getNatGwList() 获取<p>接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。</p>
+ * @method void setNatGwList(array $NatGwList) 设置<p>接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。</p>
+ * @method string getZone() 获取<p>主可用区，为空则选择默认可用区</p>
+ * @method void setZone(string $Zone) 设置<p>主可用区，为空则选择默认可用区</p>
+ * @method string getZoneBak() 获取<p>备可用区，为空则选择默认可用区</p>
+ * @method void setZoneBak(string $ZoneBak) 设置<p>备可用区，为空则选择默认可用区</p>
+ * @method integer getCrossAZone() 获取<p>异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备</p>
+ * @method void setCrossAZone(integer $CrossAZone) 设置<p>异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备</p>
+ * @method integer getIsCreateDomain() 获取<p>0不创建域名,1创建域名</p>
+ * @method void setIsCreateDomain(integer $IsCreateDomain) 设置<p>0不创建域名,1创建域名</p>
+ * @method string getDomain() 获取<p>如果要创建域名则必填</p>
+ * @method void setDomain(string $Domain) 设置<p>如果要创建域名则必填</p>
+ * @method FwCidrInfo getFwCidrInfo() 获取<p>指定防火墙使用网段信息</p>
+ * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置<p>指定防火墙使用网段信息</p>
  */
 class CreateNatFwInstanceWithDomainRequest extends AbstractModel
 {
     /**
-     * @var string 防火墙实例名称
+     * @var string <p>防火墙实例名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 带宽
+     * @var integer <p>带宽</p>
      */
     public $Width;
 
     /**
-     * @var integer 模式 1：接入模式；0：新增模式
+     * @var integer <p>模式 1：接入模式；0：新增模式</p>
      */
     public $Mode;
 
     /**
-     * @var NewModeItems 新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。
+     * @var NewModeItems <p>新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。</p>
      */
     public $NewModeItems;
 
     /**
-     * @var array 接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。
+     * @var array <p>接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。</p>
      */
     public $NatGwList;
 
     /**
-     * @var string 主可用区，为空则选择默认可用区
+     * @var string <p>主可用区，为空则选择默认可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 备可用区，为空则选择默认可用区
+     * @var string <p>备可用区，为空则选择默认可用区</p>
      */
     public $ZoneBak;
 
     /**
-     * @var integer 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
+     * @var integer <p>异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备</p>
      */
     public $CrossAZone;
 
     /**
-     * @var integer 0不创建域名,1创建域名
+     * @var integer <p>0不创建域名,1创建域名</p>
      */
     public $IsCreateDomain;
 
     /**
-     * @var string 如果要创建域名则必填
+     * @var string <p>如果要创建域名则必填</p>
      */
     public $Domain;
 
     /**
-     * @var FwCidrInfo 指定防火墙使用网段信息
+     * @var FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public $FwCidrInfo;
 
     /**
-     * @param string $Name 防火墙实例名称
-     * @param integer $Width 带宽
-     * @param integer $Mode 模式 1：接入模式；0：新增模式
-     * @param NewModeItems $NewModeItems 新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。
-     * @param array $NatGwList 接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。
-     * @param string $Zone 主可用区，为空则选择默认可用区
-     * @param string $ZoneBak 备可用区，为空则选择默认可用区
-     * @param integer $CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
-     * @param integer $IsCreateDomain 0不创建域名,1创建域名
-     * @param string $Domain 如果要创建域名则必填
-     * @param FwCidrInfo $FwCidrInfo 指定防火墙使用网段信息
+     * @param string $Name <p>防火墙实例名称</p>
+     * @param integer $Width <p>带宽</p>
+     * @param integer $Mode <p>模式 1：接入模式；0：新增模式</p>
+     * @param NewModeItems $NewModeItems <p>新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。</p>
+     * @param array $NatGwList <p>接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。</p>
+     * @param string $Zone <p>主可用区，为空则选择默认可用区</p>
+     * @param string $ZoneBak <p>备可用区，为空则选择默认可用区</p>
+     * @param integer $CrossAZone <p>异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备</p>
+     * @param integer $IsCreateDomain <p>0不创建域名,1创建域名</p>
+     * @param string $Domain <p>如果要创建域名则必填</p>
+     * @param FwCidrInfo $FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     function __construct()
     {

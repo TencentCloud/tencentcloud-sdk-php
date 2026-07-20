@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGuideScanInfo返回参数结构体
  *
- * @method ScanInfo getData() 获取扫描信息
- * @method void setData(ScanInfo $Data) 设置扫描信息
+ * @method ScanInfo getData() 获取<p>扫描信息</p>
+ * @method void setData(ScanInfo $Data) 设置<p>扫描信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGuideScanInfoResponse extends AbstractModel
 {
     /**
-     * @var ScanInfo 扫描信息
+     * @var ScanInfo <p>扫描信息</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeGuideScanInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ScanInfo $Data 扫描信息
+     * @param ScanInfo $Data <p>扫描信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

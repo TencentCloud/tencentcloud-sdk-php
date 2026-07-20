@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVpcFwGroup请求参数结构体
  *
- * @method string getFwGroupId() 获取编辑的防火墙(组)ID
- * @method void setFwGroupId(string $FwGroupId) 设置编辑的防火墙(组)ID
- * @method string getName() 获取修改防火墙(组)名称
- * @method void setName(string $Name) 设置修改防火墙(组)名称
- * @method array getVpcFwInstances() 获取编辑的防火墙实例列表
- * @method void setVpcFwInstances(array $VpcFwInstances) 设置编辑的防火墙实例列表
- * @method FwCidrInfo getFwCidrInfo() 获取指定防火墙使用网段信息
- * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置指定防火墙使用网段信息
+ * @method string getFwGroupId() 获取<p>编辑的防火墙(组)ID</p>
+ * @method void setFwGroupId(string $FwGroupId) 设置<p>编辑的防火墙(组)ID</p>
+ * @method string getName() 获取<p>修改防火墙(组)名称</p>
+ * @method void setName(string $Name) 设置<p>修改防火墙(组)名称</p>
+ * @method array getVpcFwInstances() 获取<p>编辑的防火墙实例列表</p>
+ * @method void setVpcFwInstances(array $VpcFwInstances) 设置<p>编辑的防火墙实例列表</p>
+ * @method FwCidrInfo getFwCidrInfo() 获取<p>指定防火墙使用网段信息</p>
+ * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置<p>指定防火墙使用网段信息</p>
  */
 class ModifyVpcFwGroupRequest extends AbstractModel
 {
     /**
-     * @var string 编辑的防火墙(组)ID
+     * @var string <p>编辑的防火墙(组)ID</p>
      */
     public $FwGroupId;
 
     /**
-     * @var string 修改防火墙(组)名称
+     * @var string <p>修改防火墙(组)名称</p>
      */
     public $Name;
 
     /**
-     * @var array 编辑的防火墙实例列表
+     * @var array <p>编辑的防火墙实例列表</p>
      */
     public $VpcFwInstances;
 
     /**
-     * @var FwCidrInfo 指定防火墙使用网段信息
+     * @var FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public $FwCidrInfo;
 
     /**
-     * @param string $FwGroupId 编辑的防火墙(组)ID
-     * @param string $Name 修改防火墙(组)名称
-     * @param array $VpcFwInstances 编辑的防火墙实例列表
-     * @param FwCidrInfo $FwCidrInfo 指定防火墙使用网段信息
+     * @param string $FwGroupId <p>编辑的防火墙(组)ID</p>
+     * @param string $Name <p>修改防火墙(组)名称</p>
+     * @param array $VpcFwInstances <p>编辑的防火墙实例列表</p>
+     * @param FwCidrInfo $FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     function __construct()
     {

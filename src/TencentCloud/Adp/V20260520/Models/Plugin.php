@@ -27,23 +27,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取创建时间，unix时间戳
  * @method void setCreateTime(string $CreateTime) 设置创建时间，unix时间戳
  * @method PluginOperation getOperation() 获取插件运营管理信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperation(PluginOperation $Operation) 设置插件运营管理信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPluginId() 获取插件id
  * @method void setPluginId(string $PluginId) 设置插件id
  * @method integer getPluginVersion() 获取插件版本号
  * @method void setPluginVersion(integer $PluginVersion) 设置插件版本号
  * @method PluginProfile getProfile() 获取插件基础信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProfile(PluginProfile $Profile) 设置插件基础信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method PluginStatistics getStatistics() 获取插件统计信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatistics(PluginStatistics $Statistics) 设置插件统计信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取<p>插件状态，1:可用，2:不可用 </p><p>枚举值：</p><ul><li>1： 可用</li><li>2： 不可用</li></ul>
  * @method void setStatus(integer $Status) 设置<p>插件状态，1:可用，2:不可用 </p><p>枚举值：</p><ul><li>1： 可用</li><li>2： 不可用</li></ul>
  * @method array getToolList() 获取工具列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setToolList(array $ToolList) 设置工具列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间，Unix时间戳
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间，Unix时间戳
  * @method PluginUserState getUserState() 获取用户维度的插件状态信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserState(PluginUserState $UserState) 设置用户维度的插件状态信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Plugin extends AbstractModel
 {
@@ -60,6 +70,7 @@ class Plugin extends AbstractModel
 
     /**
      * @var PluginOperation 插件运营管理信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operation;
 
@@ -75,11 +86,13 @@ class Plugin extends AbstractModel
 
     /**
      * @var PluginProfile 插件基础信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Profile;
 
     /**
      * @var PluginStatistics 插件统计信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Statistics;
 
@@ -90,6 +103,7 @@ class Plugin extends AbstractModel
 
     /**
      * @var array 工具列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ToolList;
 
@@ -100,6 +114,7 @@ class Plugin extends AbstractModel
 
     /**
      * @var PluginUserState 用户维度的插件状态信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserState;
 
@@ -108,14 +123,19 @@ class Plugin extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间，unix时间戳
      * @param PluginOperation $Operation 插件运营管理信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PluginId 插件id
      * @param integer $PluginVersion 插件版本号
      * @param PluginProfile $Profile 插件基础信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PluginStatistics $Statistics 插件统计信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status <p>插件状态，1:可用，2:不可用 </p><p>枚举值：</p><ul><li>1： 可用</li><li>2： 不可用</li></ul>
      * @param array $ToolList 工具列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间，Unix时间戳
      * @param PluginUserState $UserState 用户维度的插件状态信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

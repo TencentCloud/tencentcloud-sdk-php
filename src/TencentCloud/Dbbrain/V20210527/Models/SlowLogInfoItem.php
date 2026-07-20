@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 慢日志详细信息
  *
- * @method string getTimestamp() 获取慢日志开始时间
- * @method void setTimestamp(string $Timestamp) 设置慢日志开始时间
+ * @method string getTimestamp() 获取慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
+ * @method void setTimestamp(string $Timestamp) 设置慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
  * @method string getSqlText() 获取sql语句
  * @method void setSqlText(string $SqlText) 设置sql语句
  * @method string getDatabase() 获取数据库
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class SlowLogInfoItem extends AbstractModel
 {
     /**
-     * @var string 慢日志开始时间
+     * @var string 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
      */
     public $Timestamp;
 
@@ -87,7 +87,7 @@ class SlowLogInfoItem extends AbstractModel
     public $RowsSent;
 
     /**
-     * @param string $Timestamp 慢日志开始时间
+     * @param string $Timestamp 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
      * @param string $SqlText sql语句
      * @param string $Database 数据库
      * @param string $UserName User来源

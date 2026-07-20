@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetNatFwEip请求参数结构体
  *
- * @method string getOperationType() 获取bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip
- * @method void setOperationType(string $OperationType) 设置bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip
- * @method string getCfwInstance() 获取防火墙实例id
- * @method void setCfwInstance(string $CfwInstance) 设置防火墙实例id
- * @method array getEipList() 获取当OperationType 为bind或unbind操作时，使用该字段。
- * @method void setEipList(array $EipList) 设置当OperationType 为bind或unbind操作时，使用该字段。
+ * @method string getOperationType() 获取<p>bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip</p>
+ * @method void setOperationType(string $OperationType) 设置<p>bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip</p>
+ * @method string getCfwInstance() 获取<p>防火墙实例id</p>
+ * @method void setCfwInstance(string $CfwInstance) 设置<p>防火墙实例id</p>
+ * @method array getEipList() 获取<p>当OperationType 为bind或unbind操作时，使用该字段。</p>
+ * @method void setEipList(array $EipList) 设置<p>当OperationType 为bind或unbind操作时，使用该字段。</p>
  */
 class SetNatFwEipRequest extends AbstractModel
 {
     /**
-     * @var string bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip
+     * @var string <p>bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip</p>
      */
     public $OperationType;
 
     /**
-     * @var string 防火墙实例id
+     * @var string <p>防火墙实例id</p>
      */
     public $CfwInstance;
 
     /**
-     * @var array 当OperationType 为bind或unbind操作时，使用该字段。
+     * @var array <p>当OperationType 为bind或unbind操作时，使用该字段。</p>
      */
     public $EipList;
 
     /**
-     * @param string $OperationType bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip
-     * @param string $CfwInstance 防火墙实例id
-     * @param array $EipList 当OperationType 为bind或unbind操作时，使用该字段。
+     * @param string $OperationType <p>bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip</p>
+     * @param string $CfwInstance <p>防火墙实例id</p>
+     * @param array $EipList <p>当OperationType 为bind或unbind操作时，使用该字段。</p>
      */
     function __construct()
     {

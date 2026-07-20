@@ -44,11 +44,14 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DeleteSkillShareResponse DeleteSkillShare(Models\DeleteSkillShareRequest $req) 提交共享 Skill 下架审批（v2，两段式：提交→审批→回调下架共享 Skill） 鉴权：删除权 拒绝场景：未共享 / 上架审批中 / 下架审批中
  * @method Models\DeleteSpaceResponse DeleteSpace(Models\DeleteSpaceRequest $req) 删除空间
  * @method Models\DeleteVariableResponse DeleteVariable(Models\DeleteVariableRequest $req) 删除参数变量
+ * @method Models\DescribeAccountListResponse DescribeAccountList(Models\DescribeAccountListRequest $req) 查看企业下的员工列表
  * @method Models\DescribeAgentDetailResponse DescribeAgentDetail(Models\DescribeAgentDetailRequest $req) 查询 Agent 详情
  * @method Models\DescribeAgentReleasePreviewListResponse DescribeAgentReleasePreviewList(Models\DescribeAgentReleasePreviewListRequest $req) 获取应用下 Agent 的发布预览列表
  * @method Models\DescribeAgentSummaryListResponse DescribeAgentSummaryList(Models\DescribeAgentSummaryListRequest $req) 查询 Agent 摘要信息列表
  * @method Models\DescribeAppResponse DescribeApp(Models\DescribeAppRequest $req) 获取应用信息
  * @method Models\DescribeAppSummaryListResponse DescribeAppSummaryList(Models\DescribeAppSummaryListRequest $req) 获取应用摘要列表
+ * @method Models\DescribeAuditLogListResponse DescribeAuditLogList(Models\DescribeAuditLogListRequest $req) 查看操作日志列表
+ * @method Models\DescribeAuditLogMetaResponse DescribeAuditLogMeta(Models\DescribeAuditLogMetaRequest $req) 获取审计日志元信息
  * @method Models\DescribeConversationResponse DescribeConversation(Models\DescribeConversationRequest $req) 查看会话信息
  * @method Models\DescribeConversationListResponse DescribeConversationList(Models\DescribeConversationListRequest $req) 获取会话列表
  * @method Models\DescribeConversationMessageListResponse DescribeConversationMessageList(Models\DescribeConversationMessageListRequest $req) 获取会话历史消息

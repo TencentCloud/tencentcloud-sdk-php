@@ -44,6 +44,7 @@ use TencentCloud\Dataagent\V20250513\Models as Models;
  * @method Models\ModifyUserAuthorityResponse ModifyUserAuthority(Models\ModifyUserAuthorityRequest $req) 修改对象权限
  * @method Models\QueryChunkListResponse QueryChunkList(Models\QueryChunkListRequest $req) 文档切片查询
  * @method Models\QueryKnowledgeTaskResponse QueryKnowledgeTask(Models\QueryKnowledgeTaskRequest $req) 查询文件任务状态
+ * @method Models\QueryModelsResponse QueryModels(Models\QueryModelsRequest $req) 查询聊天支持模型信息
  * @method Models\QuerySceneListResponse QuerySceneList(Models\QuerySceneListRequest $req) 查询场景列表
  * @method Models\QueryUserAuthorityResponse QueryUserAuthority(Models\QueryUserAuthorityRequest $req) 查询对象权限
  * @method Models\StopChatAIResponse StopChatAI(Models\StopChatAIRequest $req) 中断DataAgent的回答输出

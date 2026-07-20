@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyClusterVpcFwSwitch请求参数结构体
  *
- * @method integer getEnable() 获取开关，0：关闭，1：开启
- * @method void setEnable(integer $Enable) 设置开关，0：关闭，1：开启
- * @method array getCcnSwitch() 获取集群模式vpc间防火墙ccn开关信息
- * @method void setCcnSwitch(array $CcnSwitch) 设置集群模式vpc间防火墙ccn开关信息
+ * @method integer getEnable() 获取<p>开关，0：关闭，1：开启</p>
+ * @method void setEnable(integer $Enable) 设置<p>开关，0：关闭，1：开启</p>
+ * @method array getCcnSwitch() 获取<p>集群模式vpc间防火墙ccn开关信息</p>
+ * @method void setCcnSwitch(array $CcnSwitch) 设置<p>集群模式vpc间防火墙ccn开关信息</p>
  */
 class ModifyClusterVpcFwSwitchRequest extends AbstractModel
 {
     /**
-     * @var integer 开关，0：关闭，1：开启
+     * @var integer <p>开关，0：关闭，1：开启</p>
      */
     public $Enable;
 
     /**
-     * @var array 集群模式vpc间防火墙ccn开关信息
+     * @var array <p>集群模式vpc间防火墙ccn开关信息</p>
      */
     public $CcnSwitch;
 
     /**
-     * @param integer $Enable 开关，0：关闭，1：开启
-     * @param array $CcnSwitch 集群模式vpc间防火墙ccn开关信息
+     * @param integer $Enable <p>开关，0：关闭，1：开启</p>
+     * @param array $CcnSwitch <p>集群模式vpc间防火墙ccn开关信息</p>
      */
     function __construct()
     {

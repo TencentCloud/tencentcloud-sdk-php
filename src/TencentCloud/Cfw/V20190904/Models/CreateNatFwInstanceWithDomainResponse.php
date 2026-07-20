@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNatFwInstanceWithDomain返回参数结构体
  *
- * @method string getCfwInsId() 获取nat实例信息
- * @method void setCfwInsId(string $CfwInsId) 设置nat实例信息
+ * @method string getCfwInsId() 获取<p>nat实例信息</p>
+ * @method void setCfwInsId(string $CfwInsId) 设置<p>nat实例信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateNatFwInstanceWithDomainResponse extends AbstractModel
 {
     /**
-     * @var string nat实例信息
+     * @var string <p>nat实例信息</p>
      */
     public $CfwInsId;
 
@@ -38,7 +38,7 @@ class CreateNatFwInstanceWithDomainResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CfwInsId nat实例信息
+     * @param string $CfwInsId <p>nat实例信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

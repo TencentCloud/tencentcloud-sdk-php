@@ -20,49 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetSync返回参数结构体
  *
- * @method integer getStatus() 获取返回状态
-1 更新中
-2 更新完成
-3 更新失败
-4 更新失败
- * @method void setStatus(integer $Status) 设置返回状态
-1 更新中
-2 更新完成
-3 更新失败
-4 更新失败
- * @method string getReturnMsg() 获取success 成功
-其他失败
- * @method void setReturnMsg(string $ReturnMsg) 设置success 成功
-其他失败
- * @method integer getReturnCode() 获取0 成功
-非0 失败
- * @method void setReturnCode(integer $ReturnCode) 设置0 成功
-非0 失败
+ * @method integer getStatus() 获取<p>返回状态<br>1 更新中<br>2 更新完成<br>3 更新失败<br>4 更新失败</p>
+ * @method void setStatus(integer $Status) 设置<p>返回状态<br>1 更新中<br>2 更新完成<br>3 更新失败<br>4 更新失败</p>
+ * @method string getReturnMsg() 获取<p>success 成功<br>其他失败</p>
+ * @method void setReturnMsg(string $ReturnMsg) 设置<p>success 成功<br>其他失败</p>
+ * @method integer getReturnCode() 获取<p>0 成功<br>非0 失败</p>
+ * @method void setReturnCode(integer $ReturnCode) 设置<p>0 成功<br>非0 失败</p>
+ * @method integer getCVMCount() 获取<p>已有CVM数量</p>
+ * @method void setCVMCount(integer $CVMCount) 设置<p>已有CVM数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAssetSyncResponse extends AbstractModel
 {
     /**
-     * @var integer 返回状态
-1 更新中
-2 更新完成
-3 更新失败
-4 更新失败
+     * @var integer <p>返回状态<br>1 更新中<br>2 更新完成<br>3 更新失败<br>4 更新失败</p>
      */
     public $Status;
 
     /**
-     * @var string success 成功
-其他失败
+     * @var string <p>success 成功<br>其他失败</p>
      */
     public $ReturnMsg;
 
     /**
-     * @var integer 0 成功
-非0 失败
+     * @var integer <p>0 成功<br>非0 失败</p>
      */
     public $ReturnCode;
+
+    /**
+     * @var integer <p>已有CVM数量</p>
+     */
+    public $CVMCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -70,15 +59,10 @@ class DescribeAssetSyncResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 返回状态
-1 更新中
-2 更新完成
-3 更新失败
-4 更新失败
-     * @param string $ReturnMsg success 成功
-其他失败
-     * @param integer $ReturnCode 0 成功
-非0 失败
+     * @param integer $Status <p>返回状态<br>1 更新中<br>2 更新完成<br>3 更新失败<br>4 更新失败</p>
+     * @param string $ReturnMsg <p>success 成功<br>其他失败</p>
+     * @param integer $ReturnCode <p>0 成功<br>非0 失败</p>
+     * @param integer $CVMCount <p>已有CVM数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +88,10 @@ class DescribeAssetSyncResponse extends AbstractModel
 
         if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
             $this->ReturnCode = $param["ReturnCode"];
+        }
+
+        if (array_key_exists("CVMCount",$param) and $param["CVMCount"] !== null) {
+            $this->CVMCount = $param["CVMCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

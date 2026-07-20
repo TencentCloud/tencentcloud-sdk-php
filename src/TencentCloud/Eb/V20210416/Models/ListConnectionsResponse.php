@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListConnections返回参数结构体
  *
- * @method array getConnections() 获取连接器信息
- * @method void setConnections(array $Connections) 设置连接器信息
- * @method integer getTotalCount() 获取连接器总数
- * @method void setTotalCount(integer $TotalCount) 设置连接器总数
+ * @method array getConnections() 获取<p>连接器信息</p>
+ * @method void setConnections(array $Connections) 设置<p>连接器信息</p>
+ * @method integer getTotalCount() 获取<p>连接器总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>连接器总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListConnectionsResponse extends AbstractModel
 {
     /**
-     * @var array 连接器信息
+     * @var array <p>连接器信息</p>
      */
     public $Connections;
 
     /**
-     * @var integer 连接器总数
+     * @var integer <p>连接器总数</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class ListConnectionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Connections 连接器信息
-     * @param integer $TotalCount 连接器总数
+     * @param array $Connections <p>连接器信息</p>
+     * @param integer $TotalCount <p>连接器总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

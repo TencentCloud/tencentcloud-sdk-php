@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncFwOperate请求参数结构体
  *
- * @method string getSyncType() 获取同步操作类型：Route，同步防火墙路由
- * @method void setSyncType(string $SyncType) 设置同步操作类型：Route，同步防火墙路由
- * @method string getFwType() 获取防火墙类型；nat,nat防火墙;ew,vpc间防火墙
- * @method void setFwType(string $FwType) 设置防火墙类型；nat,nat防火墙;ew,vpc间防火墙
+ * @method string getSyncType() 获取<p>同步操作类型：Route，同步防火墙路由</p>
+ * @method void setSyncType(string $SyncType) 设置<p>同步操作类型：Route，同步防火墙路由</p>
+ * @method string getFwType() 获取<p>防火墙类型；nat,nat防火墙;ew,vpc间防火墙</p>
+ * @method void setFwType(string $FwType) 设置<p>防火墙类型；nat,nat防火墙;ew,vpc间防火墙</p>
  */
 class SyncFwOperateRequest extends AbstractModel
 {
     /**
-     * @var string 同步操作类型：Route，同步防火墙路由
+     * @var string <p>同步操作类型：Route，同步防火墙路由</p>
      */
     public $SyncType;
 
     /**
-     * @var string 防火墙类型；nat,nat防火墙;ew,vpc间防火墙
+     * @var string <p>防火墙类型；nat,nat防火墙;ew,vpc间防火墙</p>
      */
     public $FwType;
 
     /**
-     * @param string $SyncType 同步操作类型：Route，同步防火墙路由
-     * @param string $FwType 防火墙类型；nat,nat防火墙;ew,vpc间防火墙
+     * @param string $SyncType <p>同步操作类型：Route，同步防火墙路由</p>
+     * @param string $FwType <p>防火墙类型；nat,nat防火墙;ew,vpc间防火墙</p>
      */
     function __construct()
     {

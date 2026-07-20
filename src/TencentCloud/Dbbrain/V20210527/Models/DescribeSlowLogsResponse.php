@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowLogs返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的记录总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录总数。
- * @method array getRows() 获取慢日志明细
- * @method void setRows(array $Rows) 设置慢日志明细
+ * @method integer getTotalCount() 获取<p>符合条件的记录总数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的记录总数。</p>
+ * @method array getRows() 获取<p>慢日志明细</p>
+ * @method void setRows(array $Rows) 设置<p>慢日志明细</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSlowLogsResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的记录总数。
+     * @var integer <p>符合条件的记录总数。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 慢日志明细
+     * @var array <p>慢日志明细</p>
      */
     public $Rows;
 
@@ -45,8 +45,8 @@ class DescribeSlowLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的记录总数。
-     * @param array $Rows 慢日志明细
+     * @param integer $TotalCount <p>符合条件的记录总数。</p>
+     * @param array $Rows <p>慢日志明细</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

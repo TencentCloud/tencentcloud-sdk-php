@@ -78,8 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthorizationMethod(array $AuthorizationMethod) 设置<p>指定企业认证的授权方式 支持多选:</p><ul><li><strong>1</strong>: 上传营业执照</li><li><strong>2</strong>: 腾讯云快速认证</li><li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li></ul><p>注意：<br>1.如果没有指定，则默认是1,仅有上传营业执照。<br>2.H5 仅支持上传营业执照。</p>
  * @method boolean getHideBizLicense() 获取<p>企业认证页面隐藏上传营业执照<br><img src="https://qcloudimg.tencent-cloud.cn/raw/cf827ce0e2043d8cc85e0735c9cfa3fc.png" alt="image"><br><img src="https://qcloudimg.tencent-cloud.cn/raw/f908cabe71238c78ee8fafc70888a344.png" alt="image"></p>
  * @method void setHideBizLicense(boolean $HideBizLicense) 设置<p>企业认证页面隐藏上传营业执照<br><img src="https://qcloudimg.tencent-cloud.cn/raw/cf827ce0e2043d8cc85e0735c9cfa3fc.png" alt="image"><br><img src="https://qcloudimg.tencent-cloud.cn/raw/f908cabe71238c78ee8fafc70888a344.png" alt="image"></p>
- * @method boolean getAddressSame() 获取<p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul><p></p><p>p.s. 仅在公司地址（OrganizationAddress）不为空时有效</p>
- * @method void setAddressSame(boolean $AddressSame) 设置<p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul><p></p><p>p.s. 仅在公司地址（OrganizationAddress）不为空时有效</p>
+ * @method boolean getAddressSame() 获取<p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时会回显接口传递的值，且不可更改</li></ul>p.s. 仅在公司地址（OrganizationAddress）不为空时有效<p>如下图所示：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/4aa67a434cdf522c04e32f2e1de0382b.png" alt="示例"><p></p></p>
+ * @method void setAddressSame(boolean $AddressSame) 设置<p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时会回显接口传递的值，且不可更改</li></ul>p.s. 仅在公司地址（OrganizationAddress）不为空时有效<p>如下图所示：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/4aa67a434cdf522c04e32f2e1de0382b.png" alt="示例"><p></p></p>
+ * @method boolean getBizLicenseSame() 获取<p>对方打开链接认证时，公司营业执照是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致，用户可以进行修改</li><li><b>true</b>：启用状态，实际认证时回填的信息就是用户传递的值，并且不能修改</li></ul><p></p><p>p.s. 仅在公司营业执照（BusinessLicense）不为空时有效</p>如下图<img src="https://qcloudimg.tencent-cloud.cn/raw/7159637d5a8ac3d92b35813b1fc9660a.png" alt="示例">
+ * @method void setBizLicenseSame(boolean $BizLicenseSame) 设置<p>对方打开链接认证时，公司营业执照是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致，用户可以进行修改</li><li><b>true</b>：启用状态，实际认证时回填的信息就是用户传递的值，并且不能修改</li></ul><p></p><p>p.s. 仅在公司营业执照（BusinessLicense）不为空时有效</p>如下图<img src="https://qcloudimg.tencent-cloud.cn/raw/7159637d5a8ac3d92b35813b1fc9660a.png" alt="示例">
  */
 class CreateOrganizationAuthUrlRequest extends AbstractModel
 {
@@ -229,9 +231,14 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
     public $HideBizLicense;
 
     /**
-     * @var boolean <p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul><p></p><p>p.s. 仅在公司地址（OrganizationAddress）不为空时有效</p>
+     * @var boolean <p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时会回显接口传递的值，且不可更改</li></ul>p.s. 仅在公司地址（OrganizationAddress）不为空时有效<p>如下图所示：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/4aa67a434cdf522c04e32f2e1de0382b.png" alt="示例"><p></p></p>
      */
     public $AddressSame;
+
+    /**
+     * @var boolean <p>对方打开链接认证时，公司营业执照是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致，用户可以进行修改</li><li><b>true</b>：启用状态，实际认证时回填的信息就是用户传递的值，并且不能修改</li></ul><p></p><p>p.s. 仅在公司营业执照（BusinessLicense）不为空时有效</p>如下图<img src="https://qcloudimg.tencent-cloud.cn/raw/7159637d5a8ac3d92b35813b1fc9660a.png" alt="示例">
+     */
+    public $BizLicenseSame;
 
     /**
      * @param UserInfo $Operator <p>操作人信息</p>
@@ -263,7 +270,8 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
      * @param boolean $OrganizationIdCardTypeSame <p>是否允许编辑企业注册时的证照类型</p><p>true:不允许编辑。</p><p>false:允许编辑（默认值）。</p><p>注意：<br>入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。</p>
      * @param array $AuthorizationMethod <p>指定企业认证的授权方式 支持多选:</p><ul><li><strong>1</strong>: 上传营业执照</li><li><strong>2</strong>: 腾讯云快速认证</li><li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li></ul><p>注意：<br>1.如果没有指定，则默认是1,仅有上传营业执照。<br>2.H5 仅支持上传营业执照。</p>
      * @param boolean $HideBizLicense <p>企业认证页面隐藏上传营业执照<br><img src="https://qcloudimg.tencent-cloud.cn/raw/cf827ce0e2043d8cc85e0735c9cfa3fc.png" alt="image"><br><img src="https://qcloudimg.tencent-cloud.cn/raw/f908cabe71238c78ee8fafc70888a344.png" alt="image"></p>
-     * @param boolean $AddressSame <p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul><p></p><p>p.s. 仅在公司地址（OrganizationAddress）不为空时有效</p>
+     * @param boolean $AddressSame <p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时会回显接口传递的值，且不可更改</li></ul>p.s. 仅在公司地址（OrganizationAddress）不为空时有效<p>如下图所示：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/4aa67a434cdf522c04e32f2e1de0382b.png" alt="示例"><p></p></p>
+     * @param boolean $BizLicenseSame <p>对方打开链接认证时，公司营业执照是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致，用户可以进行修改</li><li><b>true</b>：启用状态，实际认证时回填的信息就是用户传递的值，并且不能修改</li></ul><p></p><p>p.s. 仅在公司营业执照（BusinessLicense）不为空时有效</p>如下图<img src="https://qcloudimg.tencent-cloud.cn/raw/7159637d5a8ac3d92b35813b1fc9660a.png" alt="示例">
      */
     function __construct()
     {
@@ -402,6 +410,10 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
 
         if (array_key_exists("AddressSame",$param) and $param["AddressSame"] !== null) {
             $this->AddressSame = $param["AddressSame"];
+        }
+
+        if (array_key_exists("BizLicenseSame",$param) and $param["BizLicenseSame"] !== null) {
+            $this->BizLicenseSame = $param["BizLicenseSame"];
         }
     }
 }

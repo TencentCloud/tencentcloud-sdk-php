@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNatFwSwitch请求参数结构体
  *
- * @method integer getEnable() 获取开关，0：关闭，1：开启
- * @method void setEnable(integer $Enable) 设置开关，0：关闭，1：开启
- * @method array getCfwInsIdList() 获取防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
- * @method void setCfwInsIdList(array $CfwInsIdList) 设置防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
- * @method array getSubnetIdList() 获取子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
- * @method void setSubnetIdList(array $SubnetIdList) 设置子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
- * @method array getRouteTableIdList() 获取路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
- * @method void setRouteTableIdList(array $RouteTableIdList) 设置路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+ * @method integer getEnable() 获取<p>开关，0：关闭，1：开启</p>
+ * @method void setEnable(integer $Enable) 设置<p>开关，0：关闭，1：开启</p>
+ * @method array getCfwInsIdList() 获取<p>防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
+ * @method void setCfwInsIdList(array $CfwInsIdList) 设置<p>防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
+ * @method array getSubnetIdList() 获取<p>子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
+ * @method void setSubnetIdList(array $SubnetIdList) 设置<p>子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
+ * @method array getRouteTableIdList() 获取<p>路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
+ * @method void setRouteTableIdList(array $RouteTableIdList) 设置<p>路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
  */
 class ModifyNatFwSwitchRequest extends AbstractModel
 {
     /**
-     * @var integer 开关，0：关闭，1：开启
+     * @var integer <p>开关，0：关闭，1：开启</p>
      */
     public $Enable;
 
     /**
-     * @var array 防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+     * @var array <p>防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
      */
     public $CfwInsIdList;
 
     /**
-     * @var array 子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+     * @var array <p>子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
      */
     public $SubnetIdList;
 
     /**
-     * @var array 路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+     * @var array <p>路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
      */
     public $RouteTableIdList;
 
     /**
-     * @param integer $Enable 开关，0：关闭，1：开启
-     * @param array $CfwInsIdList 防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
-     * @param array $SubnetIdList 子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
-     * @param array $RouteTableIdList 路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+     * @param integer $Enable <p>开关，0：关闭，1：开启</p>
+     * @param array $CfwInsIdList <p>防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
+     * @param array $SubnetIdList <p>子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
+     * @param array $RouteTableIdList <p>路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
      */
     function __construct()
     {

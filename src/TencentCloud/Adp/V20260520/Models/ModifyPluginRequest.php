@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateMask(FieldMask $UpdateMask) 设置<p>指定需要更新的字段，避免全量覆盖</p>
  * @method array getToolList() 获取<p>插件的工具列表，mcp插件不传</p>
  * @method void setToolList(array $ToolList) 设置<p>插件的工具列表，mcp插件不传</p>
+ * @method string getLoginUin() 获取<p>登录用户主账号(集成商模式必填)</p>
+ * @method void setLoginUin(string $LoginUin) 设置<p>登录用户主账号(集成商模式必填)</p>
+ * @method string getLoginSubAccountUin() 获取<p>登录用户子账号(集成商模式必填)</p>
+ * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置<p>登录用户子账号(集成商模式必填)</p>
  */
 class ModifyPluginRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class ModifyPluginRequest extends AbstractModel
     public $ToolList;
 
     /**
+     * @var string <p>登录用户主账号(集成商模式必填)</p>
+     */
+    public $LoginUin;
+
+    /**
+     * @var string <p>登录用户子账号(集成商模式必填)</p>
+     */
+    public $LoginSubAccountUin;
+
+    /**
      * @param string $PluginId <p>插件id</p>
      * @param integer $PluginVersion <p>插件版本号</p>
      * @param PluginProfile $Profile <p>插件基础资料</p>
      * @param PluginConfig $Config <p>插件类型配置</p>
      * @param FieldMask $UpdateMask <p>指定需要更新的字段，避免全量覆盖</p>
      * @param array $ToolList <p>插件的工具列表，mcp插件不传</p>
+     * @param string $LoginUin <p>登录用户主账号(集成商模式必填)</p>
+     * @param string $LoginSubAccountUin <p>登录用户子账号(集成商模式必填)</p>
      */
     function __construct()
     {
@@ -116,6 +132,14 @@ class ModifyPluginRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ToolList, $obj);
             }
+        }
+
+        if (array_key_exists("LoginUin",$param) and $param["LoginUin"] !== null) {
+            $this->LoginUin = $param["LoginUin"];
+        }
+
+        if (array_key_exists("LoginSubAccountUin",$param) and $param["LoginSubAccountUin"] !== null) {
+            $this->LoginSubAccountUin = $param["LoginSubAccountUin"];
         }
     }
 }

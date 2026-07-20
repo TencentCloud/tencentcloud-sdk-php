@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterVpcFwSwitchs返回参数结构体
  *
- * @method integer getTotal() 获取总条数
- * @method void setTotal(integer $Total) 设置总条数
- * @method array getData() 获取防火墙开关列表
+ * @method integer getTotal() 获取<p>总条数</p>
+ * @method void setTotal(integer $Total) 设置<p>总条数</p>
+ * @method array getData() 获取<p>防火墙开关列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置防火墙开关列表
+ * @method void setData(array $Data) 设置<p>防火墙开关列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFailData() 获取开关开启失败列表
- * @method void setFailData(array $FailData) 设置开关开启失败列表
+ * @method array getFailData() 获取<p>开关开启失败列表</p>
+ * @method void setFailData(array $FailData) 设置<p>开关开启失败列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeClusterVpcFwSwitchsResponse extends AbstractModel
 {
     /**
-     * @var integer 总条数
+     * @var integer <p>总条数</p>
      */
     public $Total;
 
     /**
-     * @var array 防火墙开关列表
+     * @var array <p>防火墙开关列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
-     * @var array 开关开启失败列表
+     * @var array <p>开关开启失败列表</p>
      */
     public $FailData;
 
@@ -55,10 +55,10 @@ class DescribeClusterVpcFwSwitchsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总条数
-     * @param array $Data 防火墙开关列表
+     * @param integer $Total <p>总条数</p>
+     * @param array $Data <p>防火墙开关列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FailData 开关开启失败列表
+     * @param array $FailData <p>开关开启失败列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

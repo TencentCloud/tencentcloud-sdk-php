@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRelease返回参数结构体
  *
- * @method boolean getNeedApproval() 获取need_approval
- * @method void setNeedApproval(boolean $NeedApproval) 设置need_approval
- * @method string getReleaseId() 获取release_id
- * @method void setReleaseId(string $ReleaseId) 设置release_id
+ * @method boolean getNeedApproval() 获取<p>need_approval</p>
+ * @method void setNeedApproval(boolean $NeedApproval) 设置<p>need_approval</p>
+ * @method string getReleaseId() 获取<p>release_id</p>
+ * @method void setReleaseId(string $ReleaseId) 设置<p>release_id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateReleaseResponse extends AbstractModel
 {
     /**
-     * @var boolean need_approval
+     * @var boolean <p>need_approval</p>
      */
     public $NeedApproval;
 
     /**
-     * @var string release_id
+     * @var string <p>release_id</p>
      */
     public $ReleaseId;
 
@@ -45,8 +45,8 @@ class CreateReleaseResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $NeedApproval need_approval
-     * @param string $ReleaseId release_id
+     * @param boolean $NeedApproval <p>need_approval</p>
+     * @param string $ReleaseId <p>release_id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

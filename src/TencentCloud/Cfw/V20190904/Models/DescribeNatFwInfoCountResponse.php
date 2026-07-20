@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatFwInfoCount返回参数结构体
  *
- * @method string getReturnMsg() 获取返回参数 success 成功 failed 失败
- * @method void setReturnMsg(string $ReturnMsg) 设置返回参数 success 成功 failed 失败
- * @method integer getNatFwInsCount() 获取当前租户的nat防火墙实例个数
- * @method void setNatFwInsCount(integer $NatFwInsCount) 设置当前租户的nat防火墙实例个数
- * @method integer getSubnetCount() 获取当前租户接入防火墙的子网个数
- * @method void setSubnetCount(integer $SubnetCount) 设置当前租户接入防火墙的子网个数
- * @method integer getOpenSwitchCount() 获取打开NAT防火墙开关个数
- * @method void setOpenSwitchCount(integer $OpenSwitchCount) 设置打开NAT防火墙开关个数
+ * @method string getReturnMsg() 获取<p>返回参数 success 成功 failed 失败</p>
+ * @method void setReturnMsg(string $ReturnMsg) 设置<p>返回参数 success 成功 failed 失败</p>
+ * @method integer getNatFwInsCount() 获取<p>当前租户的nat防火墙实例个数</p>
+ * @method void setNatFwInsCount(integer $NatFwInsCount) 设置<p>当前租户的nat防火墙实例个数</p>
+ * @method integer getSubnetCount() 获取<p>当前租户接入防火墙的子网个数</p>
+ * @method void setSubnetCount(integer $SubnetCount) 设置<p>当前租户接入防火墙的子网个数</p>
+ * @method integer getOpenSwitchCount() 获取<p>打开NAT防火墙开关个数</p>
+ * @method void setOpenSwitchCount(integer $OpenSwitchCount) 设置<p>打开NAT防火墙开关个数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeNatFwInfoCountResponse extends AbstractModel
 {
     /**
-     * @var string 返回参数 success 成功 failed 失败
+     * @var string <p>返回参数 success 成功 failed 失败</p>
      */
     public $ReturnMsg;
 
     /**
-     * @var integer 当前租户的nat防火墙实例个数
+     * @var integer <p>当前租户的nat防火墙实例个数</p>
      */
     public $NatFwInsCount;
 
     /**
-     * @var integer 当前租户接入防火墙的子网个数
+     * @var integer <p>当前租户接入防火墙的子网个数</p>
      */
     public $SubnetCount;
 
     /**
-     * @var integer 打开NAT防火墙开关个数
+     * @var integer <p>打开NAT防火墙开关个数</p>
      */
     public $OpenSwitchCount;
 
@@ -59,10 +59,10 @@ class DescribeNatFwInfoCountResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ReturnMsg 返回参数 success 成功 failed 失败
-     * @param integer $NatFwInsCount 当前租户的nat防火墙实例个数
-     * @param integer $SubnetCount 当前租户接入防火墙的子网个数
-     * @param integer $OpenSwitchCount 打开NAT防火墙开关个数
+     * @param string $ReturnMsg <p>返回参数 success 成功 failed 失败</p>
+     * @param integer $NatFwInsCount <p>当前租户的nat防火墙实例个数</p>
+     * @param integer $SubnetCount <p>当前租户接入防火墙的子网个数</p>
+     * @param integer $OpenSwitchCount <p>打开NAT防火墙开关个数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

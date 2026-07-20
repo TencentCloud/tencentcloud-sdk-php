@@ -20,62 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyEdgeIpSwitch请求参数结构体
  *
- * @method integer getEnable() 获取0 关闭开关
-1 打开开关
-2 不操作开关，此次切换模式
- * @method void setEnable(integer $Enable) 设置0 关闭开关
-1 打开开关
-2 不操作开关，此次切换模式
- * @method array getEdgeIpSwitchLst() 获取操作开关详情
- * @method void setEdgeIpSwitchLst(array $EdgeIpSwitchLst) 设置操作开关详情
- * @method integer getAutoChooseSubnet() 获取0 不自动选择子网
-1 自动选择子网创建私有连接
- * @method void setAutoChooseSubnet(integer $AutoChooseSubnet) 设置0 不自动选择子网
-1 自动选择子网创建私有连接
- * @method integer getSwitchMode() 获取0 切换为旁路
-1 切换为串行
-2 不切换模式，此次操作开关
- * @method void setSwitchMode(integer $SwitchMode) 设置0 切换为旁路
-1 切换为串行
-2 不切换模式，此次操作开关
+ * @method integer getEnable() 获取<p>0 关闭开关<br>1 打开开关<br>2 不操作开关，此次切换模式</p>
+ * @method void setEnable(integer $Enable) 设置<p>0 关闭开关<br>1 打开开关<br>2 不操作开关，此次切换模式</p>
+ * @method array getEdgeIpSwitchLst() 获取<p>操作开关详情</p>
+ * @method void setEdgeIpSwitchLst(array $EdgeIpSwitchLst) 设置<p>操作开关详情</p>
+ * @method integer getAutoChooseSubnet() 获取<p>0 不自动选择子网<br>1 自动选择子网创建私有连接</p>
+ * @method void setAutoChooseSubnet(integer $AutoChooseSubnet) 设置<p>0 不自动选择子网<br>1 自动选择子网创建私有连接</p>
+ * @method integer getSwitchMode() 获取<p>0 切换为旁路<br>1 切换为串行<br>2 不切换模式，此次操作开关</p>
+ * @method void setSwitchMode(integer $SwitchMode) 设置<p>0 切换为旁路<br>1 切换为串行<br>2 不切换模式，此次操作开关</p>
  */
 class ModifyEdgeIpSwitchRequest extends AbstractModel
 {
     /**
-     * @var integer 0 关闭开关
-1 打开开关
-2 不操作开关，此次切换模式
+     * @var integer <p>0 关闭开关<br>1 打开开关<br>2 不操作开关，此次切换模式</p>
      */
     public $Enable;
 
     /**
-     * @var array 操作开关详情
+     * @var array <p>操作开关详情</p>
      */
     public $EdgeIpSwitchLst;
 
     /**
-     * @var integer 0 不自动选择子网
-1 自动选择子网创建私有连接
+     * @var integer <p>0 不自动选择子网<br>1 自动选择子网创建私有连接</p>
      */
     public $AutoChooseSubnet;
 
     /**
-     * @var integer 0 切换为旁路
-1 切换为串行
-2 不切换模式，此次操作开关
+     * @var integer <p>0 切换为旁路<br>1 切换为串行<br>2 不切换模式，此次操作开关</p>
      */
     public $SwitchMode;
 
     /**
-     * @param integer $Enable 0 关闭开关
-1 打开开关
-2 不操作开关，此次切换模式
-     * @param array $EdgeIpSwitchLst 操作开关详情
-     * @param integer $AutoChooseSubnet 0 不自动选择子网
-1 自动选择子网创建私有连接
-     * @param integer $SwitchMode 0 切换为旁路
-1 切换为串行
-2 不切换模式，此次操作开关
+     * @param integer $Enable <p>0 关闭开关<br>1 打开开关<br>2 不操作开关，此次切换模式</p>
+     * @param array $EdgeIpSwitchLst <p>操作开关详情</p>
+     * @param integer $AutoChooseSubnet <p>0 不自动选择子网<br>1 自动选择子网创建私有连接</p>
+     * @param integer $SwitchMode <p>0 切换为旁路<br>1 切换为串行<br>2 不切换模式，此次操作开关</p>
      */
     function __construct()
     {

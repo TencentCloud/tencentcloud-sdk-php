@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyClusterFwBypass请求参数结构体
  *
- * @method string getFwType() 获取防火墙类型，"VPC_FW"-VPC防火墙，"NAT_FW"-NAT防火墙
- * @method void setFwType(string $FwType) 设置防火墙类型，"VPC_FW"-VPC防火墙，"NAT_FW"-NAT防火墙
- * @method string getCcnId() 获取云联网实例ID
- * @method void setCcnId(string $CcnId) 设置云联网实例ID
- * @method boolean getEnable() 获取Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）
- * @method void setEnable(boolean $Enable) 设置Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）
- * @method string getNatInsId() 获取NAT防火墙实例ID，FwType为nat时必填
- * @method void setNatInsId(string $NatInsId) 设置NAT防火墙实例ID，FwType为nat时必填
+ * @method string getFwType() 获取<p>防火墙类型，&quot;VPC_FW&quot;-VPC防火墙，&quot;NAT_FW&quot;-NAT防火墙</p>
+ * @method void setFwType(string $FwType) 设置<p>防火墙类型，&quot;VPC_FW&quot;-VPC防火墙，&quot;NAT_FW&quot;-NAT防火墙</p>
+ * @method string getCcnId() 获取<p>云联网实例ID</p>
+ * @method void setCcnId(string $CcnId) 设置<p>云联网实例ID</p>
+ * @method boolean getEnable() 获取<p>Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）</p>
+ * @method void setEnable(boolean $Enable) 设置<p>Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）</p>
+ * @method string getNatInsId() 获取<p>NAT防火墙实例ID，FwType为nat时必填</p>
+ * @method void setNatInsId(string $NatInsId) 设置<p>NAT防火墙实例ID，FwType为nat时必填</p>
  */
 class ModifyClusterFwBypassRequest extends AbstractModel
 {
     /**
-     * @var string 防火墙类型，"VPC_FW"-VPC防火墙，"NAT_FW"-NAT防火墙
+     * @var string <p>防火墙类型，&quot;VPC_FW&quot;-VPC防火墙，&quot;NAT_FW&quot;-NAT防火墙</p>
      */
     public $FwType;
 
     /**
-     * @var string 云联网实例ID
+     * @var string <p>云联网实例ID</p>
      */
     public $CcnId;
 
     /**
-     * @var boolean Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）
+     * @var boolean <p>Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）</p>
      */
     public $Enable;
 
     /**
-     * @var string NAT防火墙实例ID，FwType为nat时必填
+     * @var string <p>NAT防火墙实例ID，FwType为nat时必填</p>
      */
     public $NatInsId;
 
     /**
-     * @param string $FwType 防火墙类型，"VPC_FW"-VPC防火墙，"NAT_FW"-NAT防火墙
-     * @param string $CcnId 云联网实例ID
-     * @param boolean $Enable Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）
-     * @param string $NatInsId NAT防火墙实例ID，FwType为nat时必填
+     * @param string $FwType <p>防火墙类型，&quot;VPC_FW&quot;-VPC防火墙，&quot;NAT_FW&quot;-NAT防火墙</p>
+     * @param string $CcnId <p>云联网实例ID</p>
+     * @param boolean $Enable <p>Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）</p>
+     * @param string $NatInsId <p>NAT防火墙实例ID，FwType为nat时必填</p>
      */
     function __construct()
     {

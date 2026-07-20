@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteNatFwInstance请求参数结构体
  *
- * @method string getCfwInstance() 获取防火墙实例id
- * @method void setCfwInstance(string $CfwInstance) 设置防火墙实例id
+ * @method string getCfwInstance() 获取<p>防火墙实例id</p>
+ * @method void setCfwInstance(string $CfwInstance) 设置<p>防火墙实例id</p>
  */
 class DeleteNatFwInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 防火墙实例id
+     * @var string <p>防火墙实例id</p>
      */
     public $CfwInstance;
 
     /**
-     * @param string $CfwInstance 防火墙实例id
+     * @param string $CfwInstance <p>防火墙实例id</p>
      */
     function __construct()
     {

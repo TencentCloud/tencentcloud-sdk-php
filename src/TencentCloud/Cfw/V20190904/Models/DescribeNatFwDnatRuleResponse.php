@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatFwDnatRule返回参数结构体
  *
- * @method array getData() 获取Dnat规则列表
- * @method void setData(array $Data) 设置Dnat规则列表
- * @method integer getTotal() 获取列表总数
- * @method void setTotal(integer $Total) 设置列表总数
+ * @method array getData() 获取<p>Dnat规则列表</p>
+ * @method void setData(array $Data) 设置<p>Dnat规则列表</p>
+ * @method integer getTotal() 获取<p>列表总数</p>
+ * @method void setTotal(integer $Total) 设置<p>列表总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeNatFwDnatRuleResponse extends AbstractModel
 {
     /**
-     * @var array Dnat规则列表
+     * @var array <p>Dnat规则列表</p>
      */
     public $Data;
 
     /**
-     * @var integer 列表总数
+     * @var integer <p>列表总数</p>
      */
     public $Total;
 
@@ -45,8 +45,8 @@ class DescribeNatFwDnatRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Dnat规则列表
-     * @param integer $Total 列表总数
+     * @param array $Data <p>Dnat规则列表</p>
+     * @param integer $Total <p>列表总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

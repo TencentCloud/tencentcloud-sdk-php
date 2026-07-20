@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNatFwReSelect请求参数结构体
  *
- * @method integer getMode() 获取模式 1：接入模式；0：新增模式
- * @method void setMode(integer $Mode) 设置模式 1：接入模式；0：新增模式
- * @method string getCfwInstance() 获取防火墙实例id
- * @method void setCfwInstance(string $CfwInstance) 设置防火墙实例id
- * @method array getNatGwList() 获取接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
- * @method void setNatGwList(array $NatGwList) 设置接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
- * @method array getVpcList() 获取新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
- * @method void setVpcList(array $VpcList) 设置新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
- * @method FwCidrInfo getFwCidrInfo() 获取指定防火墙使用网段信息
- * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置指定防火墙使用网段信息
+ * @method integer getMode() 获取<p>模式 1：接入模式；0：新增模式</p>
+ * @method void setMode(integer $Mode) 设置<p>模式 1：接入模式；0：新增模式</p>
+ * @method string getCfwInstance() 获取<p>防火墙实例id</p>
+ * @method void setCfwInstance(string $CfwInstance) 设置<p>防火墙实例id</p>
+ * @method array getNatGwList() 获取<p>接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。</p>
+ * @method void setNatGwList(array $NatGwList) 设置<p>接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。</p>
+ * @method array getVpcList() 获取<p>新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。</p>
+ * @method void setVpcList(array $VpcList) 设置<p>新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。</p>
+ * @method FwCidrInfo getFwCidrInfo() 获取<p>指定防火墙使用网段信息</p>
+ * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置<p>指定防火墙使用网段信息</p>
  */
 class ModifyNatFwReSelectRequest extends AbstractModel
 {
     /**
-     * @var integer 模式 1：接入模式；0：新增模式
+     * @var integer <p>模式 1：接入模式；0：新增模式</p>
      */
     public $Mode;
 
     /**
-     * @var string 防火墙实例id
+     * @var string <p>防火墙实例id</p>
      */
     public $CfwInstance;
 
     /**
-     * @var array 接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
+     * @var array <p>接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。</p>
      */
     public $NatGwList;
 
     /**
-     * @var array 新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
+     * @var array <p>新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。</p>
      */
     public $VpcList;
 
     /**
-     * @var FwCidrInfo 指定防火墙使用网段信息
+     * @var FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public $FwCidrInfo;
 
     /**
-     * @param integer $Mode 模式 1：接入模式；0：新增模式
-     * @param string $CfwInstance 防火墙实例id
-     * @param array $NatGwList 接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
-     * @param array $VpcList 新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
-     * @param FwCidrInfo $FwCidrInfo 指定防火墙使用网段信息
+     * @param integer $Mode <p>模式 1：接入模式；0：新增模式</p>
+     * @param string $CfwInstance <p>防火墙实例id</p>
+     * @param array $NatGwList <p>接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。</p>
+     * @param array $VpcList <p>新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。</p>
+     * @param FwCidrInfo $FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     function __construct()
     {

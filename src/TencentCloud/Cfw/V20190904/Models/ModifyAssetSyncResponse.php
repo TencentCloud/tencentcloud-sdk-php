@@ -20,44 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAssetSync返回参数结构体
  *
- * @method integer getStatus() 获取返回状态
-0 请求成功
-2 请求失败
-3 请求失败-频率限制
- * @method void setStatus(integer $Status) 设置返回状态
-0 请求成功
-2 请求失败
-3 请求失败-频率限制
- * @method string getReturnMsg() 获取success 成功
-其他失败
- * @method void setReturnMsg(string $ReturnMsg) 设置success 成功
-其他失败
- * @method integer getReturnCode() 获取0 成功
-非0 失败
- * @method void setReturnCode(integer $ReturnCode) 设置0 成功
-非0 失败
+ * @method integer getStatus() 获取<p>返回状态<br>0 请求成功<br>2 请求失败<br>3 请求失败-频率限制</p>
+ * @method void setStatus(integer $Status) 设置<p>返回状态<br>0 请求成功<br>2 请求失败<br>3 请求失败-频率限制</p>
+ * @method string getReturnMsg() 获取<p>success 成功<br>其他失败</p>
+ * @method void setReturnMsg(string $ReturnMsg) 设置<p>success 成功<br>其他失败</p>
+ * @method integer getReturnCode() 获取<p>0 成功<br>非0 失败</p>
+ * @method void setReturnCode(integer $ReturnCode) 设置<p>0 成功<br>非0 失败</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyAssetSyncResponse extends AbstractModel
 {
     /**
-     * @var integer 返回状态
-0 请求成功
-2 请求失败
-3 请求失败-频率限制
+     * @var integer <p>返回状态<br>0 请求成功<br>2 请求失败<br>3 请求失败-频率限制</p>
      */
     public $Status;
 
     /**
-     * @var string success 成功
-其他失败
+     * @var string <p>success 成功<br>其他失败</p>
      */
     public $ReturnMsg;
 
     /**
-     * @var integer 0 成功
-非0 失败
+     * @var integer <p>0 成功<br>非0 失败</p>
      */
     public $ReturnCode;
 
@@ -67,14 +52,9 @@ class ModifyAssetSyncResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 返回状态
-0 请求成功
-2 请求失败
-3 请求失败-频率限制
-     * @param string $ReturnMsg success 成功
-其他失败
-     * @param integer $ReturnCode 0 成功
-非0 失败
+     * @param integer $Status <p>返回状态<br>0 请求成功<br>2 请求失败<br>3 请求失败-频率限制</p>
+     * @param string $ReturnMsg <p>success 成功<br>其他失败</p>
+     * @param integer $ReturnCode <p>0 成功<br>非0 失败</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

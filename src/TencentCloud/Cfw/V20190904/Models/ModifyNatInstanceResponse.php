@@ -20,25 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNatInstance返回参数结构体
  *
- * @method integer getStatus() 获取0 正常
--1 异常
- * @method void setStatus(integer $Status) 设置0 正常
--1 异常
- * @method string getNatInstanceId() 获取nat实例唯一ID
- * @method void setNatInstanceId(string $NatInstanceId) 设置nat实例唯一ID
+ * @method integer getStatus() 获取<p>0 正常<br>-1 异常</p>
+ * @method void setStatus(integer $Status) 设置<p>0 正常<br>-1 异常</p>
+ * @method string getNatInstanceId() 获取<p>nat实例唯一ID</p>
+ * @method void setNatInstanceId(string $NatInstanceId) 设置<p>nat实例唯一ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyNatInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 0 正常
--1 异常
+     * @var integer <p>0 正常<br>-1 异常</p>
      */
     public $Status;
 
     /**
-     * @var string nat实例唯一ID
+     * @var string <p>nat实例唯一ID</p>
      */
     public $NatInstanceId;
 
@@ -48,9 +45,8 @@ class ModifyNatInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 0 正常
--1 异常
-     * @param string $NatInstanceId nat实例唯一ID
+     * @param integer $Status <p>0 正常<br>-1 异常</p>
+     * @param string $NatInstanceId <p>nat实例唯一ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

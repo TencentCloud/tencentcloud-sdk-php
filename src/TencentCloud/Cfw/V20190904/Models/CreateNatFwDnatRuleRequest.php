@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNatFwDnatRule请求参数结构体
  *
- * @method integer getMode() 获取0：cfw新增模式，1：cfw接入模式。
- * @method void setMode(integer $Mode) 设置0：cfw新增模式，1：cfw接入模式。
- * @method string getCfwInstance() 获取防火墙实例id，该字段必须传递。
- * @method void setCfwInstance(string $CfwInstance) 设置防火墙实例id，该字段必须传递。
- * @method array getDnatRules() 获取添加或删除操作的Dnat规则列表。
- * @method void setDnatRules(array $DnatRules) 设置添加或删除操作的Dnat规则列表。
+ * @method integer getMode() 获取<p>0：cfw新增模式，1：cfw接入模式。</p>
+ * @method void setMode(integer $Mode) 设置<p>0：cfw新增模式，1：cfw接入模式。</p>
+ * @method string getCfwInstance() 获取<p>防火墙实例id，该字段必须传递。</p>
+ * @method void setCfwInstance(string $CfwInstance) 设置<p>防火墙实例id，该字段必须传递。</p>
+ * @method array getDnatRules() 获取<p>添加或删除操作的Dnat规则列表。</p>
+ * @method void setDnatRules(array $DnatRules) 设置<p>添加或删除操作的Dnat规则列表。</p>
  */
 class CreateNatFwDnatRuleRequest extends AbstractModel
 {
     /**
-     * @var integer 0：cfw新增模式，1：cfw接入模式。
+     * @var integer <p>0：cfw新增模式，1：cfw接入模式。</p>
      */
     public $Mode;
 
     /**
-     * @var string 防火墙实例id，该字段必须传递。
+     * @var string <p>防火墙实例id，该字段必须传递。</p>
      */
     public $CfwInstance;
 
     /**
-     * @var array 添加或删除操作的Dnat规则列表。
+     * @var array <p>添加或删除操作的Dnat规则列表。</p>
      */
     public $DnatRules;
 
     /**
-     * @param integer $Mode 0：cfw新增模式，1：cfw接入模式。
-     * @param string $CfwInstance 防火墙实例id，该字段必须传递。
-     * @param array $DnatRules 添加或删除操作的Dnat规则列表。
+     * @param integer $Mode <p>0：cfw新增模式，1：cfw接入模式。</p>
+     * @param string $CfwInstance <p>防火墙实例id，该字段必须传递。</p>
+     * @param array $DnatRules <p>添加或删除操作的Dnat规则列表。</p>
      */
     function __construct()
     {

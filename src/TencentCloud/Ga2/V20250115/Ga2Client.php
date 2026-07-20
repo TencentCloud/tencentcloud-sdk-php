@@ -28,6 +28,8 @@ use TencentCloud\Ga2\V20250115\Models as Models;
  * @method Models\CreateForwardingPolicyResponse CreateForwardingPolicy(Models\CreateForwardingPolicyRequest $req) 创建七层转发策略
  * @method Models\CreateForwardingRuleResponse CreateForwardingRule(Models\CreateForwardingRuleRequest $req) 创建七层转发规则
  * @method Models\CreateGlobalAcceleratorResponse CreateGlobalAccelerator(Models\CreateGlobalAcceleratorRequest $req) 创建全球加速实例
+ * @method Models\CreateGlobalAcceleratorAclPolicyResponse CreateGlobalAcceleratorAclPolicy(Models\CreateGlobalAcceleratorAclPolicyRequest $req) 创建访问控制策略
+ * @method Models\CreateGlobalAcceleratorAclRuleResponse CreateGlobalAcceleratorAclRule(Models\CreateGlobalAcceleratorAclRuleRequest $req) 创建ACL规则
  * @method Models\CreateListenerResponse CreateListener(Models\CreateListenerRequest $req) 创建监听器
  * @method Models\CreateListenerAdditionalCertResponse CreateListenerAdditionalCert(Models\CreateListenerAdditionalCertRequest $req) 添加扩展证书
  * @method Models\DeleteAccelerateAreasResponse DeleteAccelerateAreas(Models\DeleteAccelerateAreasRequest $req) 删除加速地域
@@ -35,6 +37,8 @@ use TencentCloud\Ga2\V20250115\Models as Models;
  * @method Models\DeleteForwardingPolicyResponse DeleteForwardingPolicy(Models\DeleteForwardingPolicyRequest $req) 删除七层转发策略
  * @method Models\DeleteForwardingRuleResponse DeleteForwardingRule(Models\DeleteForwardingRuleRequest $req) 删除七层转发规则
  * @method Models\DeleteGlobalAcceleratorResponse DeleteGlobalAccelerator(Models\DeleteGlobalAcceleratorRequest $req) 删除全球加速实例
+ * @method Models\DeleteGlobalAcceleratorAclPolicyResponse DeleteGlobalAcceleratorAclPolicy(Models\DeleteGlobalAcceleratorAclPolicyRequest $req) 删除访问控制策略
+ * @method Models\DeleteGlobalAcceleratorAclRuleResponse DeleteGlobalAcceleratorAclRule(Models\DeleteGlobalAcceleratorAclRuleRequest $req) 删除ACL规则
  * @method Models\DeleteListenerResponse DeleteListener(Models\DeleteListenerRequest $req) 删除监听器
  * @method Models\DeleteListenerAdditionalCertResponse DeleteListenerAdditionalCert(Models\DeleteListenerAdditionalCertRequest $req) 删除扩展证书
  * @method Models\DescribeAccelerateAreasResponse DescribeAccelerateAreas(Models\DescribeAccelerateAreasRequest $req) 查询加速地域
@@ -51,6 +55,8 @@ use TencentCloud\Ga2\V20250115\Models as Models;
  * @method Models\ModifyForwardingPolicyResponse ModifyForwardingPolicy(Models\ModifyForwardingPolicyRequest $req) 修改七层转发策略
  * @method Models\ModifyForwardingRuleResponse ModifyForwardingRule(Models\ModifyForwardingRuleRequest $req) 修改七层转发规则
  * @method Models\ModifyGlobalAcceleratorResponse ModifyGlobalAccelerator(Models\ModifyGlobalAcceleratorRequest $req) 修改全球加速实例
+ * @method Models\ModifyGlobalAcceleratorAclPolicyResponse ModifyGlobalAcceleratorAclPolicy(Models\ModifyGlobalAcceleratorAclPolicyRequest $req) 修改访问控制策略状态
+ * @method Models\ModifyGlobalAcceleratorAclRuleResponse ModifyGlobalAcceleratorAclRule(Models\ModifyGlobalAcceleratorAclRuleRequest $req) 修改ACL规则
  * @method Models\ModifyListenerResponse ModifyListener(Models\ModifyListenerRequest $req) 修改监听器
  * @method Models\ReplaceListenerAdditionalCertResponse ReplaceListenerAdditionalCert(Models\ReplaceListenerAdditionalCertRequest $req) 替换扩展证书
  */

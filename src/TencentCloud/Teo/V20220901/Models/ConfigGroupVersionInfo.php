@@ -20,78 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 配置组版本信息。
  *
- * @method string getVersionId() 获取版本 ID。
- * @method void setVersionId(string $VersionId) 设置版本 ID。
- * @method string getVersionNumber() 获取版本号。
- * @method void setVersionNumber(string $VersionNumber) 设置版本号。
- * @method string getGroupId() 获取配置组 ID。
- * @method void setGroupId(string $GroupId) 设置配置组 ID。
- * @method string getGroupType() 获取配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
- * @method void setGroupType(string $GroupType) 设置配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
- * @method string getDescription() 获取版本描述。
- * @method void setDescription(string $Description) 设置版本描述。
- * @method string getStatus() 获取版本状态，取值有：
-<li>creating：创建中；</li>
-<li>inactive：未生效；</li>
-<li>active：已生效。</li>
- * @method void setStatus(string $Status) 设置版本状态，取值有：
-<li>creating：创建中；</li>
-<li>inactive：未生效；</li>
-<li>active：已生效。</li>
- * @method string getCreateTime() 获取版本创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
- * @method void setCreateTime(string $CreateTime) 设置版本创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+ * @method string getVersionId() 获取<p>配置组版本 ID，创建配置组版本时 EdgeOne 分配的唯一资源 ID。</p><p>参数格式：ver-2kplomhisdcb</p><p>取值参考：</p><ul><li><a href="https://cloud.tencent.com/document/api/1552/101867">CreateConfigGroupVersion</a> 返回值 <code>VersionId</code></li><li><a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></li></ul>
+ * @method void setVersionId(string $VersionId) 设置<p>配置组版本 ID，创建配置组版本时 EdgeOne 分配的唯一资源 ID。</p><p>参数格式：ver-2kplomhisdcb</p><p>取值参考：</p><ul><li><a href="https://cloud.tencent.com/document/api/1552/101867">CreateConfigGroupVersion</a> 返回值 <code>VersionId</code></li><li><a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></li></ul>
+ * @method string getVersionNumber() 获取<p>配置组版本号。该参数仅作展示使用，配置组每创建一次新版本，该版本号自增加一，初始版本的版本号为 &quot;0&quot;。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></p>
+ * @method void setVersionNumber(string $VersionNumber) 设置<p>配置组版本号。该参数仅作展示使用，配置组每创建一次新版本，该版本号自增加一，初始版本的版本号为 &quot;0&quot;。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></p>
+ * @method string getSourceVersion() 获取<p>配置组版本所基于的来源版本 ID，在创建配置组版本时进行指定来源版本 ID，新版本将在该来源版本的配置基础上派生创建。</p><p>参数格式：ver-2kplomhisdcb</p><p>取值参考：</p><ul><li><a href="https://cloud.tencent.com/document/api/1552/101867">CreateConfigGroupVersion</a> 返回值 <code>VersionId</code></li><li><a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></li></ul>
+ * @method void setSourceVersion(string $SourceVersion) 设置<p>配置组版本所基于的来源版本 ID，在创建配置组版本时进行指定来源版本 ID，新版本将在该来源版本的配置基础上派生创建。</p><p>参数格式：ver-2kplomhisdcb</p><p>取值参考：</p><ul><li><a href="https://cloud.tencent.com/document/api/1552/101867">CreateConfigGroupVersion</a> 返回值 <code>VersionId</code></li><li><a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></li></ul>
+ * @method string getGroupType() 获取<p>版本归属的配置组类型。</p><p>枚举值：</p><ul><li>l7_acceleration： 七层加速配置组</li><li>edge_functions： 边缘函数配置组</li><li>web_security： Web 防护配置组</li></ul>
+ * @method void setGroupType(string $GroupType) 设置<p>版本归属的配置组类型。</p><p>枚举值：</p><ul><li>l7_acceleration： 七层加速配置组</li><li>edge_functions： 边缘函数配置组</li><li>web_security： Web 防护配置组</li></ul>
+ * @method string getGroupId() 获取<p>版本归属的配置组 ID。</p><p>参数格式：cg-2kplomhisdcb</p>
+ * @method void setGroupId(string $GroupId) 设置<p>版本归属的配置组 ID。</p><p>参数格式：cg-2kplomhisdcb</p>
+ * @method string getDescription() 获取<p>版本描述。</p>
+ * @method void setDescription(string $Description) 设置<p>版本描述。</p>
+ * @method string getStatus() 获取<p>版本生效状态。</p><p>枚举值：</p><ul><li>creating： 版本创建中</li><li>inactive： 版本未生效</li><li>active： 版本已生效</li></ul>
+ * @method void setStatus(string $Status) 设置<p>版本生效状态。</p><p>枚举值：</p><ul><li>creating： 版本创建中</li><li>inactive： 版本未生效</li><li>active： 版本已生效</li></ul>
+ * @method string getCreateTime() 获取<p>版本创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>版本创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
  */
 class ConfigGroupVersionInfo extends AbstractModel
 {
     /**
-     * @var string 版本 ID。
+     * @var string <p>配置组版本 ID，创建配置组版本时 EdgeOne 分配的唯一资源 ID。</p><p>参数格式：ver-2kplomhisdcb</p><p>取值参考：</p><ul><li><a href="https://cloud.tencent.com/document/api/1552/101867">CreateConfigGroupVersion</a> 返回值 <code>VersionId</code></li><li><a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></li></ul>
      */
     public $VersionId;
 
     /**
-     * @var string 版本号。
+     * @var string <p>配置组版本号。该参数仅作展示使用，配置组每创建一次新版本，该版本号自增加一，初始版本的版本号为 &quot;0&quot;。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></p>
      */
     public $VersionNumber;
 
     /**
-     * @var string 配置组 ID。
+     * @var string <p>配置组版本所基于的来源版本 ID，在创建配置组版本时进行指定来源版本 ID，新版本将在该来源版本的配置基础上派生创建。</p><p>参数格式：ver-2kplomhisdcb</p><p>取值参考：</p><ul><li><a href="https://cloud.tencent.com/document/api/1552/101867">CreateConfigGroupVersion</a> 返回值 <code>VersionId</code></li><li><a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></li></ul>
      */
-    public $GroupId;
+    public $SourceVersion;
 
     /**
-     * @var string 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
+     * @var string <p>版本归属的配置组类型。</p><p>枚举值：</p><ul><li>l7_acceleration： 七层加速配置组</li><li>edge_functions： 边缘函数配置组</li><li>web_security： Web 防护配置组</li></ul>
      */
     public $GroupType;
 
     /**
-     * @var string 版本描述。
+     * @var string <p>版本归属的配置组 ID。</p><p>参数格式：cg-2kplomhisdcb</p>
+     */
+    public $GroupId;
+
+    /**
+     * @var string <p>版本描述。</p>
      */
     public $Description;
 
     /**
-     * @var string 版本状态，取值有：
-<li>creating：创建中；</li>
-<li>inactive：未生效；</li>
-<li>active：已生效。</li>
+     * @var string <p>版本生效状态。</p><p>枚举值：</p><ul><li>creating： 版本创建中</li><li>inactive： 版本未生效</li><li>active： 版本已生效</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 版本创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+     * @var string <p>版本创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $VersionId 版本 ID。
-     * @param string $VersionNumber 版本号。
-     * @param string $GroupId 配置组 ID。
-     * @param string $GroupType 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
-     * @param string $Description 版本描述。
-     * @param string $Status 版本状态，取值有：
-<li>creating：创建中；</li>
-<li>inactive：未生效；</li>
-<li>active：已生效。</li>
-     * @param string $CreateTime 版本创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+     * @param string $VersionId <p>配置组版本 ID，创建配置组版本时 EdgeOne 分配的唯一资源 ID。</p><p>参数格式：ver-2kplomhisdcb</p><p>取值参考：</p><ul><li><a href="https://cloud.tencent.com/document/api/1552/101867">CreateConfigGroupVersion</a> 返回值 <code>VersionId</code></li><li><a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></li></ul>
+     * @param string $VersionNumber <p>配置组版本号。该参数仅作展示使用，配置组每创建一次新版本，该版本号自增加一，初始版本的版本号为 &quot;0&quot;。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></p>
+     * @param string $SourceVersion <p>配置组版本所基于的来源版本 ID，在创建配置组版本时进行指定来源版本 ID，新版本将在该来源版本的配置基础上派生创建。</p><p>参数格式：ver-2kplomhisdcb</p><p>取值参考：</p><ul><li><a href="https://cloud.tencent.com/document/api/1552/101867">CreateConfigGroupVersion</a> 返回值 <code>VersionId</code></li><li><a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></li></ul>
+     * @param string $GroupType <p>版本归属的配置组类型。</p><p>枚举值：</p><ul><li>l7_acceleration： 七层加速配置组</li><li>edge_functions： 边缘函数配置组</li><li>web_security： Web 防护配置组</li></ul>
+     * @param string $GroupId <p>版本归属的配置组 ID。</p><p>参数格式：cg-2kplomhisdcb</p>
+     * @param string $Description <p>版本描述。</p>
+     * @param string $Status <p>版本生效状态。</p><p>枚举值：</p><ul><li>creating： 版本创建中</li><li>inactive： 版本未生效</li><li>active： 版本已生效</li></ul>
+     * @param string $CreateTime <p>版本创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     function __construct()
     {
@@ -114,12 +110,16 @@ class ConfigGroupVersionInfo extends AbstractModel
             $this->VersionNumber = $param["VersionNumber"];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("SourceVersion",$param) and $param["SourceVersion"] !== null) {
+            $this->SourceVersion = $param["SourceVersion"];
         }
 
         if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
             $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

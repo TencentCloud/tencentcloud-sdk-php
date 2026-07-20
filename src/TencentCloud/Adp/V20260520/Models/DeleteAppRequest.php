@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteApp请求参数结构体
  *
- * @method string getAppId() 获取app_id
- * @method void setAppId(string $AppId) 设置app_id
+ * @method string getAppId() 获取<p>app_id</p>
+ * @method void setAppId(string $AppId) 设置<p>app_id</p>
+ * @method string getReason() 获取<p>删除原因(非必填,审批时展示)</p>
+ * @method void setReason(string $Reason) 设置<p>删除原因(非必填,审批时展示)</p>
  */
 class DeleteAppRequest extends AbstractModel
 {
     /**
-     * @var string app_id
+     * @var string <p>app_id</p>
      */
     public $AppId;
 
     /**
-     * @param string $AppId app_id
+     * @var string <p>删除原因(非必填,审批时展示)</p>
+     */
+    public $Reason;
+
+    /**
+     * @param string $AppId <p>app_id</p>
+     * @param string $Reason <p>删除原因(非必填,审批时展示)</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteAppRequest extends AbstractModel
         }
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

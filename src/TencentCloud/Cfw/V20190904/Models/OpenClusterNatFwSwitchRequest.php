@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenClusterNatFwSwitch请求参数结构体
  *
- * @method NatCcnSwitchConfig getNatCcnSwitch() 获取NAT CCN防火墙开关配置
- * @method void setNatCcnSwitch(NatCcnSwitchConfig $NatCcnSwitch) 设置NAT CCN防火墙开关配置
+ * @method NatCcnSwitchConfig getNatCcnSwitch() 获取<p>NAT CCN防火墙开关配置</p>
+ * @method void setNatCcnSwitch(NatCcnSwitchConfig $NatCcnSwitch) 设置<p>NAT CCN防火墙开关配置</p>
  */
 class OpenClusterNatFwSwitchRequest extends AbstractModel
 {
     /**
-     * @var NatCcnSwitchConfig NAT CCN防火墙开关配置
+     * @var NatCcnSwitchConfig <p>NAT CCN防火墙开关配置</p>
      */
     public $NatCcnSwitch;
 
     /**
-     * @param NatCcnSwitchConfig $NatCcnSwitch NAT CCN防火墙开关配置
+     * @param NatCcnSwitchConfig $NatCcnSwitch <p>NAT CCN防火墙开关配置</p>
      */
     function __construct()
     {

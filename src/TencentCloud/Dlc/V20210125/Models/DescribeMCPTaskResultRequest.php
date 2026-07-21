@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMCPTaskResult请求参数结构体
  *
-
+ * @method string getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
  */
 class DescribeMCPTaskResultRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>任务ID</p>
+     */
+    public $TaskId;
 
     /**
-
+     * @param string $TaskId <p>任务ID</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeMCPTaskResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
     }
 }

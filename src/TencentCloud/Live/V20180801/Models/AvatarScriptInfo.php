@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置<p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
  * @method string getUpdateTime() 获取<p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
  * @method void setUpdateTime(string $UpdateTime) 设置<p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+ * @method string getMediaUrl() 获取<p>已完成状态的视频URL</p>
+ * @method void setMediaUrl(string $MediaUrl) 设置<p>已完成状态的视频URL</p>
  */
 class AvatarScriptInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class AvatarScriptInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string <p>已完成状态的视频URL</p>
+     */
+    public $MediaUrl;
+
+    /**
      * @param string $ScriptId <p>数字人直播间话术 ID。</p>
      * @param string $ProductId <p>数字人直播间产品 ID。</p>
      * @param string $Title <p>话术标题。</p>
@@ -96,6 +103,7 @@ class AvatarScriptInfo extends AbstractModel
      * @param integer $Position <p>话术位置。</p>
      * @param string $CreateTime <p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      * @param string $UpdateTime <p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+     * @param string $MediaUrl <p>已完成状态的视频URL</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class AvatarScriptInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("MediaUrl",$param) and $param["MediaUrl"] !== null) {
+            $this->MediaUrl = $param["MediaUrl"];
         }
     }
 }

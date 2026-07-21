@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskName(string $DiskName) 设置<p>新的单副本SSD硬盘名称</p>
  * @method integer getProjectId() 获取<p>新的单副本SSD硬盘项目ID。</p>
  * @method void setProjectId(integer $ProjectId) 设置<p>新的单副本SSD硬盘项目ID。</p>
+ * @method string getAutoRenewFlag() 获取<p>云硬盘的自动续费标识</p><p>枚举值：</p><ul><li>NOTIFY_AND_AUTO_RENEW： 通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW： 通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW： 不通知过期不自动续费</li></ul>
+ * @method void setAutoRenewFlag(string $AutoRenewFlag) 设置<p>云硬盘的自动续费标识</p><p>枚举值：</p><ul><li>NOTIFY_AND_AUTO_RENEW： 通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW： 通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW： 不通知过期不自动续费</li></ul>
  */
 class ModifyRemoteDiskAttributesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyRemoteDiskAttributesRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string <p>云硬盘的自动续费标识</p><p>枚举值：</p><ul><li>NOTIFY_AND_AUTO_RENEW： 通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW： 通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW： 不通知过期不自动续费</li></ul>
+     */
+    public $AutoRenewFlag;
+
+    /**
      * @param array $RemoteDiskIds <p>一个或多个待操作的单副本SSD硬盘ID。如果传入多个单副本SSD硬盘ID，只支持所有硬盘修改为同一属性。</p>
      * @param string $DiskName <p>新的单副本SSD硬盘名称</p>
      * @param integer $ProjectId <p>新的单副本SSD硬盘项目ID。</p>
+     * @param string $AutoRenewFlag <p>云硬盘的自动续费标识</p><p>枚举值：</p><ul><li>NOTIFY_AND_AUTO_RENEW： 通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW： 通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW： 不通知过期不自动续费</li></ul>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyRemoteDiskAttributesRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }

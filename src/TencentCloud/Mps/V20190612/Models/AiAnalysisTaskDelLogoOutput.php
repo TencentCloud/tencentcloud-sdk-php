@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoiceClonedMarkFile(string $VoiceClonedMarkFile) 设置<p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileId() 获取<p>擦除后文件的FileId。</p>
+ * @method void setFileId(string $FileId) 设置<p>擦除后文件的FileId。</p>
+ * @method string getOriginSubtitleFileId() 获取<p>基于画面提取的字幕文件FileId。</p>
+ * @method void setOriginSubtitleFileId(string $OriginSubtitleFileId) 设置<p>基于画面提取的字幕文件FileId。</p>
+ * @method string getTranslateSubtitleFileId() 获取<p>基于画面提取的字幕翻译文件FileId    。</p>
+ * @method void setTranslateSubtitleFileId(string $TranslateSubtitleFileId) 设置<p>基于画面提取的字幕翻译文件FileId    。</p>
  */
 class AiAnalysisTaskDelLogoOutput extends AbstractModel
 {
@@ -82,6 +88,21 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
     public $VoiceClonedMarkFile;
 
     /**
+     * @var string <p>擦除后文件的FileId。</p>
+     */
+    public $FileId;
+
+    /**
+     * @var string <p>基于画面提取的字幕文件FileId。</p>
+     */
+    public $OriginSubtitleFileId;
+
+    /**
+     * @var string <p>基于画面提取的字幕翻译文件FileId    。</p>
+     */
+    public $TranslateSubtitleFileId;
+
+    /**
      * @param string $Path <p>擦除后文件的路径。</p>
      * @param TaskOutputStorage $OutputStorage <p>擦除后文件的存储位置。</p>
      * @param string $OriginSubtitlePath <p>基于画面提取的字幕文件路径。</p>
@@ -92,6 +113,9 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VoiceClonedMarkFile <p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileId <p>擦除后文件的FileId。</p>
+     * @param string $OriginSubtitleFileId <p>基于画面提取的字幕文件FileId。</p>
+     * @param string $TranslateSubtitleFileId <p>基于画面提取的字幕翻译文件FileId    。</p>
      */
     function __construct()
     {
@@ -134,6 +158,18 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
 
         if (array_key_exists("VoiceClonedMarkFile",$param) and $param["VoiceClonedMarkFile"] !== null) {
             $this->VoiceClonedMarkFile = $param["VoiceClonedMarkFile"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("OriginSubtitleFileId",$param) and $param["OriginSubtitleFileId"] !== null) {
+            $this->OriginSubtitleFileId = $param["OriginSubtitleFileId"];
+        }
+
+        if (array_key_exists("TranslateSubtitleFileId",$param) and $param["TranslateSubtitleFileId"] !== null) {
+            $this->TranslateSubtitleFileId = $param["TranslateSubtitleFileId"];
         }
     }
 }

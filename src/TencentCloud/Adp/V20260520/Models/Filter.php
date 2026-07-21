@@ -18,12 +18,12 @@ namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 列表通用过滤条件（多个Filter之间为AND关系，同一Filter的多个value_list为OR关系）
+ * 列表通用过滤条件（多个 Filter 之间为 AND 关系，同一 Filter 的多个 value_list 为 OR 关系）
  *
  * @method string getName() 获取过滤字段名
  * @method void setName(string $Name) 设置过滤字段名
- * @method integer getOperator() 获取操作符：0-属于，1-不属于
- * @method void setOperator(integer $Operator) 设置操作符：0-属于，1-不属于
+ * @method integer getOperator() 获取操作符，默认 IN（向后兼容）<table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>FILTER_OPERATOR_IN</td><td>0</td><td>属于 value_list（默认值，向后兼容；value_list 不可为空）</td></tr><tr><td>FILTER_OPERATOR_NOT_IN</td><td>1</td><td>不属于 value_list（value_list 不可为空）</td></tr></table>
+ * @method void setOperator(integer $Operator) 设置操作符，默认 IN（向后兼容）<table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>FILTER_OPERATOR_IN</td><td>0</td><td>属于 value_list（默认值，向后兼容；value_list 不可为空）</td></tr><tr><td>FILTER_OPERATOR_NOT_IN</td><td>1</td><td>不属于 value_list（value_list 不可为空）</td></tr></table>
  * @method array getValueList() 获取过滤值数组
  * @method void setValueList(array $ValueList) 设置过滤值数组
  */
@@ -35,7 +35,7 @@ class Filter extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 操作符：0-属于，1-不属于
+     * @var integer 操作符，默认 IN（向后兼容）<table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>FILTER_OPERATOR_IN</td><td>0</td><td>属于 value_list（默认值，向后兼容；value_list 不可为空）</td></tr><tr><td>FILTER_OPERATOR_NOT_IN</td><td>1</td><td>不属于 value_list（value_list 不可为空）</td></tr></table>
      */
     public $Operator;
 
@@ -46,7 +46,7 @@ class Filter extends AbstractModel
 
     /**
      * @param string $Name 过滤字段名
-     * @param integer $Operator 操作符：0-属于，1-不属于
+     * @param integer $Operator 操作符，默认 IN（向后兼容）<table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>FILTER_OPERATOR_IN</td><td>0</td><td>属于 value_list（默认值，向后兼容；value_list 不可为空）</td></tr><tr><td>FILTER_OPERATOR_NOT_IN</td><td>1</td><td>不属于 value_list（value_list 不可为空）</td></tr></table>
      * @param array $ValueList 过滤值数组
      */
     function __construct()

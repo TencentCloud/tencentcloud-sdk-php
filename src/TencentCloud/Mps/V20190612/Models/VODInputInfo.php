@@ -18,44 +18,60 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 媒体处理 VOD （点播专业版）对象信息。
+ * 媒体处理 VOD 对象信息。
  *
- * @method string getBucket() 获取媒体处理对象文件所在的 *Bucket ID*
- * @method void setBucket(string $Bucket) 设置媒体处理对象文件所在的 *Bucket ID*
- * @method string getRegion() 获取媒体处理对象文件所在的 Bucket 所属园区
- * @method void setRegion(string $Region) 设置媒体处理对象文件所在的 Bucket 所属园区
- * @method string getObject() 获取媒体处理对象文件的输入路径
- * @method void setObject(string $Object) 设置媒体处理对象文件的输入路径
- * @method integer getSubAppId() 获取点播专业版应用Id
- * @method void setSubAppId(integer $SubAppId) 设置点播专业版应用Id
+ * @method string getBucket() 获取<p>媒体处理对象文件所在的 <em>Bucket ID</em></p>
+ * @method void setBucket(string $Bucket) 设置<p>媒体处理对象文件所在的 <em>Bucket ID</em></p>
+ * @method string getRegion() 获取<p>媒体处理对象文件所在的 Bucket 所属园区</p>
+ * @method void setRegion(string $Region) 设置<p>媒体处理对象文件所在的 Bucket 所属园区</p>
+ * @method string getObject() 获取<p>媒体处理对象文件的输入路径</p>
+ * @method void setObject(string $Object) 设置<p>媒体处理对象文件的输入路径</p>
+ * @method integer getSubAppId() 获取<p>点播应用Id。</p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p>点播应用Id。</p>
+ * @method integer getVodBasic() 获取<p>是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 使用VOD专业版</li><li>1： 使用VOD标准版，可使用FileId发起任务</li></ul><p>默认值：0</p>
+ * @method void setVodBasic(integer $VodBasic) 设置<p>是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 使用VOD专业版</li><li>1： 使用VOD标准版，可使用FileId发起任务</li></ul><p>默认值：0</p>
+ * @method string getFileId() 获取<p>VOD标准版FileId</p>
+ * @method void setFileId(string $FileId) 设置<p>VOD标准版FileId</p>
  */
 class VODInputInfo extends AbstractModel
 {
     /**
-     * @var string 媒体处理对象文件所在的 *Bucket ID*
+     * @var string <p>媒体处理对象文件所在的 <em>Bucket ID</em></p>
      */
     public $Bucket;
 
     /**
-     * @var string 媒体处理对象文件所在的 Bucket 所属园区
+     * @var string <p>媒体处理对象文件所在的 Bucket 所属园区</p>
      */
     public $Region;
 
     /**
-     * @var string 媒体处理对象文件的输入路径
+     * @var string <p>媒体处理对象文件的输入路径</p>
      */
     public $Object;
 
     /**
-     * @var integer 点播专业版应用Id
+     * @var integer <p>点播应用Id。</p>
      */
     public $SubAppId;
 
     /**
-     * @param string $Bucket 媒体处理对象文件所在的 *Bucket ID*
-     * @param string $Region 媒体处理对象文件所在的 Bucket 所属园区
-     * @param string $Object 媒体处理对象文件的输入路径
-     * @param integer $SubAppId 点播专业版应用Id
+     * @var integer <p>是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 使用VOD专业版</li><li>1： 使用VOD标准版，可使用FileId发起任务</li></ul><p>默认值：0</p>
+     */
+    public $VodBasic;
+
+    /**
+     * @var string <p>VOD标准版FileId</p>
+     */
+    public $FileId;
+
+    /**
+     * @param string $Bucket <p>媒体处理对象文件所在的 <em>Bucket ID</em></p>
+     * @param string $Region <p>媒体处理对象文件所在的 Bucket 所属园区</p>
+     * @param string $Object <p>媒体处理对象文件的输入路径</p>
+     * @param integer $SubAppId <p>点播应用Id。</p>
+     * @param integer $VodBasic <p>是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 使用VOD专业版</li><li>1： 使用VOD标准版，可使用FileId发起任务</li></ul><p>默认值：0</p>
+     * @param string $FileId <p>VOD标准版FileId</p>
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class VODInputInfo extends AbstractModel
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("VodBasic",$param) and $param["VodBasic"] !== null) {
+            $this->VodBasic = $param["VodBasic"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

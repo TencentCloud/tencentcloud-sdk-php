@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>译制视频存储位置。</p>
  * @method string getExtraOutput() 获取<p>额外结果，目前包含字幕文件结果 Url</p>
  * @method void setExtraOutput(string $ExtraOutput) 设置<p>额外结果，目前包含字幕文件结果 Url</p>
+ * @method string getVideoFileId() 获取<p>译制视频FileId。</p>
+ * @method void setVideoFileId(string $VideoFileId) 设置<p>译制视频FileId。</p>
+ * @method string getSpeakerFileId() 获取<p>标记文件FileId。</p>
+ * @method void setSpeakerFileId(string $SpeakerFileId) 设置<p>标记文件FileId。</p>
  */
 class AiAnalysisTaskDubbingOutput extends AbstractModel
 {
@@ -59,11 +63,23 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
     public $ExtraOutput;
 
     /**
+     * @var string <p>译制视频FileId。</p>
+     */
+    public $VideoFileId;
+
+    /**
+     * @var string <p>标记文件FileId。</p>
+     */
+    public $SpeakerFileId;
+
+    /**
      * @param string $VideoPath <p>译制视频路径。</p>
      * @param string $SpeakerPath <p>标记文件路径</p>
      * @param string $VoiceId <p>音色id</p>
      * @param TaskOutputStorage $OutputStorage <p>译制视频存储位置。</p>
      * @param string $ExtraOutput <p>额外结果，目前包含字幕文件结果 Url</p>
+     * @param string $VideoFileId <p>译制视频FileId。</p>
+     * @param string $SpeakerFileId <p>标记文件FileId。</p>
      */
     function __construct()
     {
@@ -97,6 +113,14 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
 
         if (array_key_exists("ExtraOutput",$param) and $param["ExtraOutput"] !== null) {
             $this->ExtraOutput = $param["ExtraOutput"];
+        }
+
+        if (array_key_exists("VideoFileId",$param) and $param["VideoFileId"] !== null) {
+            $this->VideoFileId = $param["VideoFileId"];
+        }
+
+        if (array_key_exists("SpeakerFileId",$param) and $param["SpeakerFileId"] !== null) {
+            $this->SpeakerFileId = $param["SpeakerFileId"];
         }
     }
 }

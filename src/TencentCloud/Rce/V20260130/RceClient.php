@@ -23,6 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Rce\V20260130\Models as Models;
 
 /**
+ * @method Models\AssessDeviceRiskPremiumProResponse AssessDeviceRiskPremiumPro(Models\AssessDeviceRiskPremiumProRequest $req) 设备风险评估-高级版
+ * @method Models\AssessDeviceRiskProResponse AssessDeviceRiskPro(Models\AssessDeviceRiskProRequest $req) 设备风险评估-基础版
  * @method Models\AssessEnvironmentRiskResponse AssessEnvironmentRisk(Models\AssessEnvironmentRiskRequest $req) 环境风险评估
  */
 

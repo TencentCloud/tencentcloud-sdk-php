@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片处理结果信息
  *
- * @method string getPath() 获取输出文件的路径。
+ * @method string getPath() 获取<p>输出文件的路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPath(string $Path) 设置输出文件的路径。
+ * @method void setPath(string $Path) 设置<p>输出文件的路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TaskOutputStorage getOutputStorage() 获取输出文件的存储位置。
+ * @method TaskOutputStorage getOutputStorage() 获取<p>输出文件的存储位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置输出文件的存储位置。
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>输出文件的存储位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSignedUrl() 获取输出文件的URL。
- * @method void setSignedUrl(string $SignedUrl) 设置输出文件的URL。
- * @method string getContent() 获取图生文任务的处理结果。
- * @method void setContent(string $Content) 设置图生文任务的处理结果。
+ * @method string getSignedUrl() 获取<p>输出文件的URL。</p>
+ * @method void setSignedUrl(string $SignedUrl) 设置<p>输出文件的URL。</p>
+ * @method string getContent() 获取<p>图生文任务的处理结果。</p>
+ * @method void setContent(string $Content) 设置<p>图生文任务的处理结果。</p>
+ * @method string getFileId() 获取<p>VOD标准版FileId</p>
+ * @method void setFileId(string $FileId) 设置<p>VOD标准版FileId</p>
  */
 class ImageProcessTaskOutput extends AbstractModel
 {
     /**
-     * @var string 输出文件的路径。
+     * @var string <p>输出文件的路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
-     * @var TaskOutputStorage 输出文件的存储位置。
+     * @var TaskOutputStorage <p>输出文件的存储位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputStorage;
 
     /**
-     * @var string 输出文件的URL。
+     * @var string <p>输出文件的URL。</p>
      */
     public $SignedUrl;
 
     /**
-     * @var string 图生文任务的处理结果。
+     * @var string <p>图生文任务的处理结果。</p>
      */
     public $Content;
 
     /**
-     * @param string $Path 输出文件的路径。
+     * @var string <p>VOD标准版FileId</p>
+     */
+    public $FileId;
+
+    /**
+     * @param string $Path <p>输出文件的路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskOutputStorage $OutputStorage 输出文件的存储位置。
+     * @param TaskOutputStorage $OutputStorage <p>输出文件的存储位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SignedUrl 输出文件的URL。
-     * @param string $Content 图生文任务的处理结果。
+     * @param string $SignedUrl <p>输出文件的URL。</p>
+     * @param string $Content <p>图生文任务的处理结果。</p>
+     * @param string $FileId <p>VOD标准版FileId</p>
      */
     function __construct()
     {
@@ -93,6 +101,10 @@ class ImageProcessTaskOutput extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

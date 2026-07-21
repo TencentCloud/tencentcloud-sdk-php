@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpaceId(string $SpaceId) 设置<p>当前空间id</p>
  * @method FieldMask getFieldMask() 获取<p>获取指定字段</p>
  * @method void setFieldMask(FieldMask $FieldMask) 设置<p>获取指定字段</p>
+ * @method integer getModule() 获取<p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
+ * @method void setModule(integer $Module) 设置<p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
  */
 class DescribePluginRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribePluginRequest extends AbstractModel
     public $FieldMask;
 
     /**
+     * @var integer <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
+     */
+    public $Module;
+
+    /**
      * @param string $PluginId <p>插件id</p>
      * @param string $SpaceId <p>当前空间id</p>
      * @param FieldMask $FieldMask <p>获取指定字段</p>
+     * @param integer $Module <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class DescribePluginRequest extends AbstractModel
         if (array_key_exists("FieldMask",$param) and $param["FieldMask"] !== null) {
             $this->FieldMask = new FieldMask();
             $this->FieldMask->deserialize($param["FieldMask"]);
+        }
+
+        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
+            $this->Module = $param["Module"];
         }
     }
 }

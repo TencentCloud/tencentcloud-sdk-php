@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserState(PluginUserState $UserState) 设置<p>用户维度的插件状态信息</p>
  * @method PluginConfig getConfig() 获取<p>插件配置信息</p>
  * @method void setConfig(PluginConfig $Config) 设置<p>插件配置信息</p>
+ * @method array getToolList() 获取<p>工具信息</p>
+ * @method void setToolList(array $ToolList) 设置<p>工具信息</p>
  */
 class PluginSummary extends AbstractModel
 {
@@ -73,6 +75,11 @@ class PluginSummary extends AbstractModel
     public $Config;
 
     /**
+     * @var array <p>工具信息</p>
+     */
+    public $ToolList;
+
+    /**
      * @param PluginOperation $Operation <p>插件运营管理信息</p>
      * @param string $PluginId <p>插件id</p>
      * @param PluginProfile $Profile <p>插件基础信息</p>
@@ -80,6 +87,7 @@ class PluginSummary extends AbstractModel
      * @param integer $Status <p>插件状态，1:可用，2:不可用 </p><p>枚举值：</p><ul><li>1： 可用</li><li>2： 不可用</li></ul>
      * @param PluginUserState $UserState <p>用户维度的插件状态信息</p>
      * @param PluginConfig $Config <p>插件配置信息</p>
+     * @param array $ToolList <p>工具信息</p>
      */
     function __construct()
     {
@@ -125,6 +133,15 @@ class PluginSummary extends AbstractModel
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = new PluginConfig();
             $this->Config->deserialize($param["Config"]);
+        }
+
+        if (array_key_exists("ToolList",$param) and $param["ToolList"] !== null) {
+            $this->ToolList = [];
+            foreach ($param["ToolList"] as $key => $value){
+                $obj = new ToolSummary();
+                $obj->deserialize($value);
+                array_push($this->ToolList, $obj);
+            }
         }
     }
 }

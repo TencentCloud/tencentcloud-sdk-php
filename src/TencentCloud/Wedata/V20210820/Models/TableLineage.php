@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 表血缘节点
  *
- * @method string getDatasourceId() 获取数据源id
- * @method void setDatasourceId(string $DatasourceId) 设置数据源id
- * @method string getDatabaseName() 获取库名称
- * @method void setDatabaseName(string $DatabaseName) 设置库名称
- * @method string getTableName() 获取表名称
- * @method void setTableName(string $TableName) 设置表名称
- * @method string getCatalogName() 获取catalog值
- * @method void setCatalogName(string $CatalogName) 设置catalog值
- * @method string getSchemaName() 获取schema名称
- * @method void setSchemaName(string $SchemaName) 设置schema名称
- * @method array getExtParams() 获取扩展参数
- * @method void setExtParams(array $ExtParams) 设置扩展参数
- * @method string getTableType() 获取table类型 TABLE｜VIEW
- * @method void setTableType(string $TableType) 设置table类型 TABLE｜VIEW
+ * @method string getDatasourceId() 获取<p>数据源id</p>
+ * @method void setDatasourceId(string $DatasourceId) 设置<p>数据源id</p>
+ * @method string getDatabaseName() 获取<p>库名称</p>
+ * @method void setDatabaseName(string $DatabaseName) 设置<p>库名称</p>
+ * @method string getTableName() 获取<p>表名称</p>
+ * @method void setTableName(string $TableName) 设置<p>表名称</p>
+ * @method string getCatalogName() 获取<p>catalog值,仅使用DLC且开启TcLake的支持,其他类型传空即可</p>
+ * @method void setCatalogName(string $CatalogName) 设置<p>catalog值,仅使用DLC且开启TcLake的支持,其他类型传空即可</p>
+ * @method string getSchemaName() 获取<p>schema名称</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>schema名称</p>
+ * @method array getExtParams() 获取<p>扩展参数</p>
+ * @method void setExtParams(array $ExtParams) 设置<p>扩展参数</p>
+ * @method string getTableType() 获取<p>table类型 TABLE｜VIEW</p>
+ * @method void setTableType(string $TableType) 设置<p>table类型 TABLE｜VIEW</p>
  */
 class TableLineage extends AbstractModel
 {
     /**
-     * @var string 数据源id
+     * @var string <p>数据源id</p>
      */
     public $DatasourceId;
 
     /**
-     * @var string 库名称
+     * @var string <p>库名称</p>
      */
     public $DatabaseName;
 
     /**
-     * @var string 表名称
+     * @var string <p>表名称</p>
      */
     public $TableName;
 
     /**
-     * @var string catalog值
+     * @var string <p>catalog值,仅使用DLC且开启TcLake的支持,其他类型传空即可</p>
      */
     public $CatalogName;
 
     /**
-     * @var string schema名称
+     * @var string <p>schema名称</p>
      */
     public $SchemaName;
 
     /**
-     * @var array 扩展参数
+     * @var array <p>扩展参数</p>
      */
     public $ExtParams;
 
     /**
-     * @var string table类型 TABLE｜VIEW
+     * @var string <p>table类型 TABLE｜VIEW</p>
      */
     public $TableType;
 
     /**
-     * @param string $DatasourceId 数据源id
-     * @param string $DatabaseName 库名称
-     * @param string $TableName 表名称
-     * @param string $CatalogName catalog值
-     * @param string $SchemaName schema名称
-     * @param array $ExtParams 扩展参数
-     * @param string $TableType table类型 TABLE｜VIEW
+     * @param string $DatasourceId <p>数据源id</p>
+     * @param string $DatabaseName <p>库名称</p>
+     * @param string $TableName <p>表名称</p>
+     * @param string $CatalogName <p>catalog值,仅使用DLC且开启TcLake的支持,其他类型传空即可</p>
+     * @param string $SchemaName <p>schema名称</p>
+     * @param array $ExtParams <p>扩展参数</p>
+     * @param string $TableType <p>table类型 TABLE｜VIEW</p>
      */
     function __construct()
     {

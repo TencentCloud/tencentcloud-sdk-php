@@ -20,390 +20,306 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyModelService请求参数结构体
  *
- * @method string getServiceId() 获取服务id
- * @method void setServiceId(string $ServiceId) 设置服务id
- * @method ModelInfo getModelInfo() 获取模型信息，需要挂载模型时填写
- * @method void setModelInfo(ModelInfo $ModelInfo) 设置模型信息，需要挂载模型时填写
- * @method ImageInfo getImageInfo() 获取镜像信息，配置服务运行所需的镜像地址等信息
- * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息，配置服务运行所需的镜像地址等信息
- * @method array getEnv() 获取环境变量，可选参数，用于配置容器中的环境变量
- * @method void setEnv(array $Env) 设置环境变量，可选参数，用于配置容器中的环境变量
- * @method ResourceInfo getResources() 获取资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写
- * @method void setResources(ResourceInfo $Resources) 设置资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写
- * @method string getInstanceType() 获取使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
-TI.S.MEDIUM.POST	2C4G
-TI.S.LARGE.POST	4C8G
-TI.S.2XLARGE16.POST	8C16G
-TI.S.2XLARGE32.POST	8C32G
-TI.S.4XLARGE32.POST	16C32G
-TI.S.4XLARGE64.POST	16C64G
-TI.S.6XLARGE48.POST	24C48G
-TI.S.6XLARGE96.POST	24C96G
-TI.S.8XLARGE64.POST	32C64G
-TI.S.8XLARGE128.POST 32C128G
-TI.GN7.LARGE20.POST	4C20G T4*1/4
-TI.GN7.2XLARGE40.POST	10C40G T4*1/2
-TI.GN7.2XLARGE32.POST	8C32G T4*1
-TI.GN7.5XLARGE80.POST	20C80G T4*1
-TI.GN7.8XLARGE128.POST	32C128G T4*1
-TI.GN7.10XLARGE160.POST	40C160G T4*2
-TI.GN7.20XLARGE320.POST	80C320G T4*4
- * @method void setInstanceType(string $InstanceType) 设置使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
-TI.S.MEDIUM.POST	2C4G
-TI.S.LARGE.POST	4C8G
-TI.S.2XLARGE16.POST	8C16G
-TI.S.2XLARGE32.POST	8C32G
-TI.S.4XLARGE32.POST	16C32G
-TI.S.4XLARGE64.POST	16C64G
-TI.S.6XLARGE48.POST	24C48G
-TI.S.6XLARGE96.POST	24C96G
-TI.S.8XLARGE64.POST	32C64G
-TI.S.8XLARGE128.POST 32C128G
-TI.GN7.LARGE20.POST	4C20G T4*1/4
-TI.GN7.2XLARGE40.POST	10C40G T4*1/2
-TI.GN7.2XLARGE32.POST	8C32G T4*1
-TI.GN7.5XLARGE80.POST	20C80G T4*1
-TI.GN7.8XLARGE128.POST	32C128G T4*1
-TI.GN7.10XLARGE160.POST	40C160G T4*2
-TI.GN7.20XLARGE320.POST	80C320G T4*4
- * @method string getScaleMode() 获取扩缩容类型 支持：自动 - "AUTO", 手动 - "MANUAL"
- * @method void setScaleMode(string $ScaleMode) 设置扩缩容类型 支持：自动 - "AUTO", 手动 - "MANUAL"
- * @method integer getReplicas() 获取实例数量, 不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
- * @method void setReplicas(integer $Replicas) 设置实例数量, 不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
- * @method HorizontalPodAutoscaler getHorizontalPodAutoscaler() 获取自动伸缩信息
- * @method void setHorizontalPodAutoscaler(HorizontalPodAutoscaler $HorizontalPodAutoscaler) 设置自动伸缩信息
- * @method boolean getLogEnable() 获取是否开启日志投递，开启后需填写配置投递到指定cls
- * @method void setLogEnable(boolean $LogEnable) 设置是否开启日志投递，开启后需填写配置投递到指定cls
- * @method LogConfig getLogConfig() 获取日志配置，需要投递服务日志到指定cls时填写
- * @method void setLogConfig(LogConfig $LogConfig) 设置日志配置，需要投递服务日志到指定cls时填写
- * @method string getServiceAction() 获取特殊更新行为： "STOP": 停止, "RESUME": 重启, "SCALE": 扩缩容, 存在这些特殊更新行为时，会忽略其他更新字段
- * @method void setServiceAction(string $ServiceAction) 设置特殊更新行为： "STOP": 停止, "RESUME": 重启, "SCALE": 扩缩容, 存在这些特殊更新行为时，会忽略其他更新字段
- * @method string getServiceDescription() 获取服务的描述
- * @method void setServiceDescription(string $ServiceDescription) 设置服务的描述
- * @method string getScaleStrategy() 获取自动伸缩策略
- * @method void setScaleStrategy(string $ScaleStrategy) 设置自动伸缩策略
- * @method array getCronScaleJobs() 获取自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩
- * @method void setCronScaleJobs(array $CronScaleJobs) 设置自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩
- * @method integer getHybridBillingPrepaidReplicas() 获取计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
- * @method void setHybridBillingPrepaidReplicas(integer $HybridBillingPrepaidReplicas) 设置计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
- * @method boolean getModelHotUpdateEnable() 获取是否开启模型的热更新。默认不开启
- * @method void setModelHotUpdateEnable(boolean $ModelHotUpdateEnable) 设置是否开启模型的热更新。默认不开启
- * @method ScheduledAction getScheduledAction() 获取定时停止配置
- * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置定时停止配置
- * @method ServiceLimit getServiceLimit() 获取服务限速限流相关配置
- * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置服务限速限流相关配置
- * @method VolumeMount getVolumeMount() 获取挂载配置，目前只支持CFS
- * @method void setVolumeMount(VolumeMount $VolumeMount) 设置挂载配置，目前只支持CFS
- * @method boolean getModelTurboEnable() 获取是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
- * @method void setModelTurboEnable(boolean $ModelTurboEnable) 设置是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
- * @method string getCommand() 获取服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
- * @method void setCommand(string $Command) 设置服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
- * @method ServiceEIP getServiceEIP() 获取是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
- * @method void setServiceEIP(ServiceEIP $ServiceEIP) 设置是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
- * @method string getCommandBase64() 获取服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
- * @method void setCommandBase64(string $CommandBase64) 设置服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
- * @method integer getServicePort() 获取服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
- * @method void setServicePort(integer $ServicePort) 设置服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
- * @method integer getInstancePerReplicas() 获取单副本下的实例数，仅在部署类型为DIST时生效，默认1
- * @method void setInstancePerReplicas(integer $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST时生效，默认1
- * @method integer getTerminationGracePeriodSeconds() 获取服务的优雅退出时限。单位为秒，默认值为30，最小为1
- * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置服务的优雅退出时限。单位为秒，默认值为30，最小为1
- * @method array getPreStopCommand() 获取服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
- * @method void setPreStopCommand(array $PreStopCommand) 设置服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
- * @method boolean getGrpcEnable() 获取是否启动grpc端口
- * @method void setGrpcEnable(boolean $GrpcEnable) 设置是否启动grpc端口
- * @method HealthProbe getHealthProbe() 获取健康探针
- * @method void setHealthProbe(HealthProbe $HealthProbe) 设置健康探针
- * @method RollingUpdate getRollingUpdate() 获取滚动更新策略
- * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置滚动更新策略
- * @method SidecarSpec getSidecar() 获取sidecar配置
- * @method void setSidecar(SidecarSpec $Sidecar) 设置sidecar配置
- * @method string getResourceGroupId() 获取资源组 id
- * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组 id
- * @method array getVolumeMounts() 获取数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
- * @method void setVolumeMounts(array $VolumeMounts) 设置数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
- * @method string getSchedulingStrategy() 获取调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
- * @method void setSchedulingStrategy(string $SchedulingStrategy) 设置调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
- * @method integer getTargetProjectId() 获取目标工作空间，不为0则进行迁移，源服务只允许在默认空间
- * @method void setTargetProjectId(integer $TargetProjectId) 设置目标工作空间，不为0则进行迁移，源服务只允许在默认空间
+ * @method string getServiceId() 获取<p>服务id</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>服务id</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method ModelInfo getModelInfo() 获取<p>模型信息，需要挂载模型时填写</p>
+ * @method void setModelInfo(ModelInfo $ModelInfo) 设置<p>模型信息，需要挂载模型时填写</p>
+ * @method ImageInfo getImageInfo() 获取<p>镜像信息，配置服务运行所需的镜像地址等信息</p>
+ * @method void setImageInfo(ImageInfo $ImageInfo) 设置<p>镜像信息，配置服务运行所需的镜像地址等信息</p>
+ * @method array getEnv() 获取<p>环境变量，可选参数，用于配置容器中的环境变量</p>
+ * @method void setEnv(array $Env) 设置<p>环境变量，可选参数，用于配置容器中的环境变量</p>
+ * @method ResourceInfo getResources() 获取<p>资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写</p>
+ * @method void setResources(ResourceInfo $Resources) 设置<p>资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写</p>
+ * @method string getInstanceType() 获取<p>使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:<br>TI.S.MEDIUM.POST    2C4G<br>TI.S.LARGE.POST    4C8G<br>TI.S.2XLARGE16.POST    8C16G<br>TI.S.2XLARGE32.POST    8C32G<br>TI.S.4XLARGE32.POST    16C32G<br>TI.S.4XLARGE64.POST    16C64G<br>TI.S.6XLARGE48.POST    24C48G<br>TI.S.6XLARGE96.POST    24C96G<br>TI.S.8XLARGE64.POST    32C64G<br>TI.S.8XLARGE128.POST 32C128G<br>TI.GN7.LARGE20.POST    4C20G T4<em>1/4<br>TI.GN7.2XLARGE40.POST    10C40G T4</em>1/2<br>TI.GN7.2XLARGE32.POST    8C32G T4<em>1<br>TI.GN7.5XLARGE80.POST    20C80G T4</em>1<br>TI.GN7.8XLARGE128.POST    32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST    40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST    80C320G T4*4</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:<br>TI.S.MEDIUM.POST    2C4G<br>TI.S.LARGE.POST    4C8G<br>TI.S.2XLARGE16.POST    8C16G<br>TI.S.2XLARGE32.POST    8C32G<br>TI.S.4XLARGE32.POST    16C32G<br>TI.S.4XLARGE64.POST    16C64G<br>TI.S.6XLARGE48.POST    24C48G<br>TI.S.6XLARGE96.POST    24C96G<br>TI.S.8XLARGE64.POST    32C64G<br>TI.S.8XLARGE128.POST 32C128G<br>TI.GN7.LARGE20.POST    4C20G T4<em>1/4<br>TI.GN7.2XLARGE40.POST    10C40G T4</em>1/2<br>TI.GN7.2XLARGE32.POST    8C32G T4<em>1<br>TI.GN7.5XLARGE80.POST    20C80G T4</em>1<br>TI.GN7.8XLARGE128.POST    32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST    40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST    80C320G T4*4</p>
+ * @method string getScaleMode() 获取<p>扩缩容类型 支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
+ * @method void setScaleMode(string $ScaleMode) 设置<p>扩缩容类型 支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
+ * @method integer getReplicas() 获取<p>实例数量, 不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
+ * @method void setReplicas(integer $Replicas) 设置<p>实例数量, 不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
+ * @method HorizontalPodAutoscaler getHorizontalPodAutoscaler() 获取<p>自动伸缩信息</p>
+ * @method void setHorizontalPodAutoscaler(HorizontalPodAutoscaler $HorizontalPodAutoscaler) 设置<p>自动伸缩信息</p>
+ * @method boolean getLogEnable() 获取<p>是否开启日志投递，开启后需填写配置投递到指定cls</p>
+ * @method void setLogEnable(boolean $LogEnable) 设置<p>是否开启日志投递，开启后需填写配置投递到指定cls</p>
+ * @method LogConfig getLogConfig() 获取<p>日志配置，需要投递服务日志到指定cls时填写</p>
+ * @method void setLogConfig(LogConfig $LogConfig) 设置<p>日志配置，需要投递服务日志到指定cls时填写</p>
+ * @method string getServiceAction() 获取<p>特殊更新行为： &quot;STOP&quot;: 停止, &quot;RESUME&quot;: 重启, &quot;SCALE&quot;: 扩缩容, 存在这些特殊更新行为时，会忽略其他更新字段</p>
+ * @method void setServiceAction(string $ServiceAction) 设置<p>特殊更新行为： &quot;STOP&quot;: 停止, &quot;RESUME&quot;: 重启, &quot;SCALE&quot;: 扩缩容, 存在这些特殊更新行为时，会忽略其他更新字段</p>
+ * @method string getServiceDescription() 获取<p>服务的描述</p>
+ * @method void setServiceDescription(string $ServiceDescription) 设置<p>服务的描述</p>
+ * @method string getScaleStrategy() 获取<p>自动伸缩策略</p>
+ * @method void setScaleStrategy(string $ScaleStrategy) 设置<p>自动伸缩策略</p>
+ * @method array getCronScaleJobs() 获取<p>自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩</p>
+ * @method void setCronScaleJobs(array $CronScaleJobs) 设置<p>自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩</p>
+ * @method integer getHybridBillingPrepaidReplicas() 获取<p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
+ * @method void setHybridBillingPrepaidReplicas(integer $HybridBillingPrepaidReplicas) 设置<p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
+ * @method boolean getModelHotUpdateEnable() 获取<p>是否开启模型的热更新。默认不开启</p>
+ * @method void setModelHotUpdateEnable(boolean $ModelHotUpdateEnable) 设置<p>是否开启模型的热更新。默认不开启</p>
+ * @method ScheduledAction getScheduledAction() 获取<p>定时停止配置</p>
+ * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置<p>定时停止配置</p>
+ * @method ServiceLimit getServiceLimit() 获取<p>服务限速限流相关配置</p>
+ * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置<p>服务限速限流相关配置</p>
+ * @method VolumeMount getVolumeMount() 获取<p>挂载配置，目前只支持CFS</p>
+ * @method void setVolumeMount(VolumeMount $VolumeMount) 设置<p>挂载配置，目前只支持CFS</p>
+ * @method boolean getModelTurboEnable() 获取<p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启</p>
+ * @method void setModelTurboEnable(boolean $ModelTurboEnable) 设置<p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启</p>
+ * @method string getCommand() 获取<p>服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数</p>
+ * @method void setCommand(string $Command) 设置<p>服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数</p>
+ * @method ServiceEIP getServiceEIP() 获取<p>是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。</p>
+ * @method void setServiceEIP(ServiceEIP $ServiceEIP) 设置<p>是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。</p>
+ * @method string getCommandBase64() 获取<p>服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效</p>
+ * @method void setCommandBase64(string $CommandBase64) 设置<p>服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效</p>
+ * @method integer getServicePort() 获取<p>服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092</p>
+ * @method void setServicePort(integer $ServicePort) 设置<p>服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092</p>
+ * @method integer getInstancePerReplicas() 获取<p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
+ * @method void setInstancePerReplicas(integer $InstancePerReplicas) 设置<p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
+ * @method integer getTerminationGracePeriodSeconds() 获取<p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
+ * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置<p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
+ * @method array getPreStopCommand() 获取<p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
+ * @method void setPreStopCommand(array $PreStopCommand) 设置<p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
+ * @method boolean getGrpcEnable() 获取<p>是否启动grpc端口</p>
+ * @method void setGrpcEnable(boolean $GrpcEnable) 设置<p>是否启动grpc端口</p>
+ * @method HealthProbe getHealthProbe() 获取<p>健康探针</p>
+ * @method void setHealthProbe(HealthProbe $HealthProbe) 设置<p>健康探针</p>
+ * @method RollingUpdate getRollingUpdate() 获取<p>滚动更新策略</p>
+ * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置<p>滚动更新策略</p>
+ * @method SidecarSpec getSidecar() 获取<p>sidecar配置</p>
+ * @method void setSidecar(SidecarSpec $Sidecar) 设置<p>sidecar配置</p>
+ * @method string getResourceGroupId() 获取<p>资源组 id</p>
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>资源组 id</p>
+ * @method array getVolumeMounts() 获取<p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p>
+ * @method void setVolumeMounts(array $VolumeMounts) 设置<p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p>
+ * @method string getSchedulingStrategy() 获取<p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
+ * @method void setSchedulingStrategy(string $SchedulingStrategy) 设置<p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
+ * @method integer getTargetProjectId() 获取<p>目标工作空间，不为0则进行迁移，源服务只允许在默认空间</p>
+ * @method void setTargetProjectId(integer $TargetProjectId) 设置<p>目标工作空间，不为0则进行迁移，源服务只允许在默认空间</p>
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
     /**
-     * @var string 服务id
+     * @var string <p>服务id</p>
      */
     public $ServiceId;
 
     /**
-     * @var ModelInfo 模型信息，需要挂载模型时填写
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
+     * @var ModelInfo <p>模型信息，需要挂载模型时填写</p>
      */
     public $ModelInfo;
 
     /**
-     * @var ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
+     * @var ImageInfo <p>镜像信息，配置服务运行所需的镜像地址等信息</p>
      */
     public $ImageInfo;
 
     /**
-     * @var array 环境变量，可选参数，用于配置容器中的环境变量
+     * @var array <p>环境变量，可选参数，用于配置容器中的环境变量</p>
      */
     public $Env;
 
     /**
-     * @var ResourceInfo 资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写
+     * @var ResourceInfo <p>资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写</p>
      */
     public $Resources;
 
     /**
-     * @var string 使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
-TI.S.MEDIUM.POST	2C4G
-TI.S.LARGE.POST	4C8G
-TI.S.2XLARGE16.POST	8C16G
-TI.S.2XLARGE32.POST	8C32G
-TI.S.4XLARGE32.POST	16C32G
-TI.S.4XLARGE64.POST	16C64G
-TI.S.6XLARGE48.POST	24C48G
-TI.S.6XLARGE96.POST	24C96G
-TI.S.8XLARGE64.POST	32C64G
-TI.S.8XLARGE128.POST 32C128G
-TI.GN7.LARGE20.POST	4C20G T4*1/4
-TI.GN7.2XLARGE40.POST	10C40G T4*1/2
-TI.GN7.2XLARGE32.POST	8C32G T4*1
-TI.GN7.5XLARGE80.POST	20C80G T4*1
-TI.GN7.8XLARGE128.POST	32C128G T4*1
-TI.GN7.10XLARGE160.POST	40C160G T4*2
-TI.GN7.20XLARGE320.POST	80C320G T4*4
+     * @var string <p>使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:<br>TI.S.MEDIUM.POST    2C4G<br>TI.S.LARGE.POST    4C8G<br>TI.S.2XLARGE16.POST    8C16G<br>TI.S.2XLARGE32.POST    8C32G<br>TI.S.4XLARGE32.POST    16C32G<br>TI.S.4XLARGE64.POST    16C64G<br>TI.S.6XLARGE48.POST    24C48G<br>TI.S.6XLARGE96.POST    24C96G<br>TI.S.8XLARGE64.POST    32C64G<br>TI.S.8XLARGE128.POST 32C128G<br>TI.GN7.LARGE20.POST    4C20G T4<em>1/4<br>TI.GN7.2XLARGE40.POST    10C40G T4</em>1/2<br>TI.GN7.2XLARGE32.POST    8C32G T4<em>1<br>TI.GN7.5XLARGE80.POST    20C80G T4</em>1<br>TI.GN7.8XLARGE128.POST    32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST    40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST    80C320G T4*4</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 扩缩容类型 支持：自动 - "AUTO", 手动 - "MANUAL"
+     * @var string <p>扩缩容类型 支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
      */
     public $ScaleMode;
 
     /**
-     * @var integer 实例数量, 不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+     * @var integer <p>实例数量, 不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
      */
     public $Replicas;
 
     /**
-     * @var HorizontalPodAutoscaler 自动伸缩信息
+     * @var HorizontalPodAutoscaler <p>自动伸缩信息</p>
      */
     public $HorizontalPodAutoscaler;
 
     /**
-     * @var boolean 是否开启日志投递，开启后需填写配置投递到指定cls
+     * @var boolean <p>是否开启日志投递，开启后需填写配置投递到指定cls</p>
      */
     public $LogEnable;
 
     /**
-     * @var LogConfig 日志配置，需要投递服务日志到指定cls时填写
+     * @var LogConfig <p>日志配置，需要投递服务日志到指定cls时填写</p>
      */
     public $LogConfig;
 
     /**
-     * @var string 特殊更新行为： "STOP": 停止, "RESUME": 重启, "SCALE": 扩缩容, 存在这些特殊更新行为时，会忽略其他更新字段
+     * @var string <p>特殊更新行为： &quot;STOP&quot;: 停止, &quot;RESUME&quot;: 重启, &quot;SCALE&quot;: 扩缩容, 存在这些特殊更新行为时，会忽略其他更新字段</p>
      */
     public $ServiceAction;
 
     /**
-     * @var string 服务的描述
+     * @var string <p>服务的描述</p>
      */
     public $ServiceDescription;
 
     /**
-     * @var string 自动伸缩策略
+     * @var string <p>自动伸缩策略</p>
      */
     public $ScaleStrategy;
 
     /**
-     * @var array 自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩
+     * @var array <p>自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩</p>
      */
     public $CronScaleJobs;
 
     /**
-     * @var integer 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+     * @var integer <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
      */
     public $HybridBillingPrepaidReplicas;
 
     /**
-     * @var boolean 是否开启模型的热更新。默认不开启
+     * @var boolean <p>是否开启模型的热更新。默认不开启</p>
      */
     public $ModelHotUpdateEnable;
 
     /**
-     * @var ScheduledAction 定时停止配置
+     * @var ScheduledAction <p>定时停止配置</p>
      */
     public $ScheduledAction;
 
     /**
-     * @var ServiceLimit 服务限速限流相关配置
+     * @var ServiceLimit <p>服务限速限流相关配置</p>
      */
     public $ServiceLimit;
 
     /**
-     * @var VolumeMount 挂载配置，目前只支持CFS
+     * @var VolumeMount <p>挂载配置，目前只支持CFS</p>
      */
     public $VolumeMount;
 
     /**
-     * @var boolean 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
+     * @var boolean <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启</p>
      */
     public $ModelTurboEnable;
 
     /**
-     * @var string 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
+     * @var string <p>服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数</p>
      */
     public $Command;
 
     /**
-     * @var ServiceEIP 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
+     * @var ServiceEIP <p>是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。</p>
      */
     public $ServiceEIP;
 
     /**
-     * @var string 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
+     * @var string <p>服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效</p>
      */
     public $CommandBase64;
 
     /**
-     * @var integer 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+     * @var integer <p>服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092</p>
      */
     public $ServicePort;
 
     /**
-     * @var integer 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * @var integer <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
      */
     public $InstancePerReplicas;
 
     /**
-     * @var integer 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * @var integer <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
      */
     public $TerminationGracePeriodSeconds;
 
     /**
-     * @var array 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     * @var array <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
      */
     public $PreStopCommand;
 
     /**
-     * @var boolean 是否启动grpc端口
+     * @var boolean <p>是否启动grpc端口</p>
      */
     public $GrpcEnable;
 
     /**
-     * @var HealthProbe 健康探针
+     * @var HealthProbe <p>健康探针</p>
      */
     public $HealthProbe;
 
     /**
-     * @var RollingUpdate 滚动更新策略
+     * @var RollingUpdate <p>滚动更新策略</p>
      */
     public $RollingUpdate;
 
     /**
-     * @var SidecarSpec sidecar配置
+     * @var SidecarSpec <p>sidecar配置</p>
      */
     public $Sidecar;
 
     /**
-     * @var string 资源组 id
+     * @var string <p>资源组 id</p>
      */
     public $ResourceGroupId;
 
     /**
-     * @var array 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
+     * @var array <p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p>
      */
     public $VolumeMounts;
 
     /**
-     * @var string 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     * @var string <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
      */
     public $SchedulingStrategy;
 
     /**
-     * @var integer 目标工作空间，不为0则进行迁移，源服务只允许在默认空间
+     * @var integer <p>目标工作空间，不为0则进行迁移，源服务只允许在默认空间</p>
      */
     public $TargetProjectId;
 
     /**
-     * @param string $ServiceId 服务id
-     * @param ModelInfo $ModelInfo 模型信息，需要挂载模型时填写
-     * @param ImageInfo $ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
-     * @param array $Env 环境变量，可选参数，用于配置容器中的环境变量
-     * @param ResourceInfo $Resources 资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写
-     * @param string $InstanceType 使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
-TI.S.MEDIUM.POST	2C4G
-TI.S.LARGE.POST	4C8G
-TI.S.2XLARGE16.POST	8C16G
-TI.S.2XLARGE32.POST	8C32G
-TI.S.4XLARGE32.POST	16C32G
-TI.S.4XLARGE64.POST	16C64G
-TI.S.6XLARGE48.POST	24C48G
-TI.S.6XLARGE96.POST	24C96G
-TI.S.8XLARGE64.POST	32C64G
-TI.S.8XLARGE128.POST 32C128G
-TI.GN7.LARGE20.POST	4C20G T4*1/4
-TI.GN7.2XLARGE40.POST	10C40G T4*1/2
-TI.GN7.2XLARGE32.POST	8C32G T4*1
-TI.GN7.5XLARGE80.POST	20C80G T4*1
-TI.GN7.8XLARGE128.POST	32C128G T4*1
-TI.GN7.10XLARGE160.POST	40C160G T4*2
-TI.GN7.20XLARGE320.POST	80C320G T4*4
-     * @param string $ScaleMode 扩缩容类型 支持：自动 - "AUTO", 手动 - "MANUAL"
-     * @param integer $Replicas 实例数量, 不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
-     * @param HorizontalPodAutoscaler $HorizontalPodAutoscaler 自动伸缩信息
-     * @param boolean $LogEnable 是否开启日志投递，开启后需填写配置投递到指定cls
-     * @param LogConfig $LogConfig 日志配置，需要投递服务日志到指定cls时填写
-     * @param string $ServiceAction 特殊更新行为： "STOP": 停止, "RESUME": 重启, "SCALE": 扩缩容, 存在这些特殊更新行为时，会忽略其他更新字段
-     * @param string $ServiceDescription 服务的描述
-     * @param string $ScaleStrategy 自动伸缩策略
-     * @param array $CronScaleJobs 自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩
-     * @param integer $HybridBillingPrepaidReplicas 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
-     * @param boolean $ModelHotUpdateEnable 是否开启模型的热更新。默认不开启
-     * @param ScheduledAction $ScheduledAction 定时停止配置
-     * @param ServiceLimit $ServiceLimit 服务限速限流相关配置
-     * @param VolumeMount $VolumeMount 挂载配置，目前只支持CFS
-     * @param boolean $ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
-     * @param string $Command 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
-     * @param ServiceEIP $ServiceEIP 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
-     * @param string $CommandBase64 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
-     * @param integer $ServicePort 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
-     * @param integer $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
-     * @param integer $TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
-     * @param array $PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
-     * @param boolean $GrpcEnable 是否启动grpc端口
-     * @param HealthProbe $HealthProbe 健康探针
-     * @param RollingUpdate $RollingUpdate 滚动更新策略
-     * @param SidecarSpec $Sidecar sidecar配置
-     * @param string $ResourceGroupId 资源组 id
-     * @param array $VolumeMounts 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
-     * @param string $SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
-     * @param integer $TargetProjectId 目标工作空间，不为0则进行迁移，源服务只允许在默认空间
+     * @param string $ServiceId <p>服务id</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param ModelInfo $ModelInfo <p>模型信息，需要挂载模型时填写</p>
+     * @param ImageInfo $ImageInfo <p>镜像信息，配置服务运行所需的镜像地址等信息</p>
+     * @param array $Env <p>环境变量，可选参数，用于配置容器中的环境变量</p>
+     * @param ResourceInfo $Resources <p>资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写</p>
+     * @param string $InstanceType <p>使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:<br>TI.S.MEDIUM.POST    2C4G<br>TI.S.LARGE.POST    4C8G<br>TI.S.2XLARGE16.POST    8C16G<br>TI.S.2XLARGE32.POST    8C32G<br>TI.S.4XLARGE32.POST    16C32G<br>TI.S.4XLARGE64.POST    16C64G<br>TI.S.6XLARGE48.POST    24C48G<br>TI.S.6XLARGE96.POST    24C96G<br>TI.S.8XLARGE64.POST    32C64G<br>TI.S.8XLARGE128.POST 32C128G<br>TI.GN7.LARGE20.POST    4C20G T4<em>1/4<br>TI.GN7.2XLARGE40.POST    10C40G T4</em>1/2<br>TI.GN7.2XLARGE32.POST    8C32G T4<em>1<br>TI.GN7.5XLARGE80.POST    20C80G T4</em>1<br>TI.GN7.8XLARGE128.POST    32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST    40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST    80C320G T4*4</p>
+     * @param string $ScaleMode <p>扩缩容类型 支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
+     * @param integer $Replicas <p>实例数量, 不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
+     * @param HorizontalPodAutoscaler $HorizontalPodAutoscaler <p>自动伸缩信息</p>
+     * @param boolean $LogEnable <p>是否开启日志投递，开启后需填写配置投递到指定cls</p>
+     * @param LogConfig $LogConfig <p>日志配置，需要投递服务日志到指定cls时填写</p>
+     * @param string $ServiceAction <p>特殊更新行为： &quot;STOP&quot;: 停止, &quot;RESUME&quot;: 重启, &quot;SCALE&quot;: 扩缩容, 存在这些特殊更新行为时，会忽略其他更新字段</p>
+     * @param string $ServiceDescription <p>服务的描述</p>
+     * @param string $ScaleStrategy <p>自动伸缩策略</p>
+     * @param array $CronScaleJobs <p>自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩</p>
+     * @param integer $HybridBillingPrepaidReplicas <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
+     * @param boolean $ModelHotUpdateEnable <p>是否开启模型的热更新。默认不开启</p>
+     * @param ScheduledAction $ScheduledAction <p>定时停止配置</p>
+     * @param ServiceLimit $ServiceLimit <p>服务限速限流相关配置</p>
+     * @param VolumeMount $VolumeMount <p>挂载配置，目前只支持CFS</p>
+     * @param boolean $ModelTurboEnable <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启</p>
+     * @param string $Command <p>服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数</p>
+     * @param ServiceEIP $ServiceEIP <p>是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。</p>
+     * @param string $CommandBase64 <p>服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效</p>
+     * @param integer $ServicePort <p>服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092</p>
+     * @param integer $InstancePerReplicas <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
+     * @param integer $TerminationGracePeriodSeconds <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
+     * @param array $PreStopCommand <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
+     * @param boolean $GrpcEnable <p>是否启动grpc端口</p>
+     * @param HealthProbe $HealthProbe <p>健康探针</p>
+     * @param RollingUpdate $RollingUpdate <p>滚动更新策略</p>
+     * @param SidecarSpec $Sidecar <p>sidecar配置</p>
+     * @param string $ResourceGroupId <p>资源组 id</p>
+     * @param array $VolumeMounts <p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p>
+     * @param string $SchedulingStrategy <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
+     * @param integer $TargetProjectId <p>目标工作空间，不为0则进行迁移，源服务只允许在默认空间</p>
      */
     function __construct()
     {
@@ -420,6 +336,10 @@ HYBRID_PAID:
         }
         if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
             $this->ServiceId = $param["ServiceId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("ModelInfo",$param) and $param["ModelInfo"] !== null) {

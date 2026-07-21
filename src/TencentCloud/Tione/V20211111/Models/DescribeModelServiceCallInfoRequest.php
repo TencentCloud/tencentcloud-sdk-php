@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceGroupId() 获取服务组id
  * @method void setServiceGroupId(string $ServiceGroupId) 设置服务组id
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method string getServiceCategory() 获取服务分类
  * @method void setServiceCategory(string $ServiceCategory) 设置服务分类
  */
@@ -33,6 +35,11 @@ class DescribeModelServiceCallInfoRequest extends AbstractModel
     public $ServiceGroupId;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @var string 服务分类
      * @deprecated
      */
@@ -40,6 +47,7 @@ class DescribeModelServiceCallInfoRequest extends AbstractModel
 
     /**
      * @param string $ServiceGroupId 服务组id
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param string $ServiceCategory 服务分类
      */
     function __construct()
@@ -57,6 +65,10 @@ class DescribeModelServiceCallInfoRequest extends AbstractModel
         }
         if (array_key_exists("ServiceGroupId",$param) and $param["ServiceGroupId"] !== null) {
             $this->ServiceGroupId = $param["ServiceGroupId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("ServiceCategory",$param) and $param["ServiceCategory"] !== null) {

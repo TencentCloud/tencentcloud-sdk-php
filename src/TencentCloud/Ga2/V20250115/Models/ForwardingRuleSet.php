@@ -20,90 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 七层转发规则信息
  *
- * @method array getRuleCondition() 获取七层转发规则条件信息。
- * @method void setRuleCondition(array $RuleCondition) 设置七层转发规则条件信息。
- * @method array getRuleAction() 获取七层转发规则行为信息。
- * @method void setRuleAction(array $RuleAction) 设置七层转发规则行为信息。
- * @method boolean getEnableOriginSni() 获取是否开启回源Sni。
- * @method void setEnableOriginSni(boolean $EnableOriginSni) 设置是否开启回源Sni。
- * @method string getOriginSni() 获取回源Sni。
- * @method void setOriginSni(string $OriginSni) 设置回源Sni。
- * @method array getOriginHeaders() 获取回源Herder信息。
- * @method void setOriginHeaders(array $OriginHeaders) 设置回源Herder信息。
- * @method string getOriginHost() 获取回源Host。
- * @method void setOriginHost(string $OriginHost) 设置回源Host。
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method string getListenerId() 获取监听器ID。
- * @method void setListenerId(string $ListenerId) 设置监听器ID。
- * @method string getForwardingPolicyId() 获取七层转发策略ID。
- * @method void setForwardingPolicyId(string $ForwardingPolicyId) 设置七层转发策略ID。
- * @method string getForwardingRuleId() 获取七层转发规则ID。
- * @method void setForwardingRuleId(string $ForwardingRuleId) 设置七层转发规则ID。
+ * @method array getRuleCondition() 获取<p>七层转发规则条件信息。</p>
+ * @method void setRuleCondition(array $RuleCondition) 设置<p>七层转发规则条件信息。</p>
+ * @method array getRuleAction() 获取<p>七层转发规则行为信息。</p>
+ * @method void setRuleAction(array $RuleAction) 设置<p>七层转发规则行为信息。</p>
+ * @method boolean getEnableOriginSni() 获取<p>是否开启回源Sni。</p>
+ * @method void setEnableOriginSni(boolean $EnableOriginSni) 设置<p>是否开启回源Sni。</p>
+ * @method string getOriginSni() 获取<p>回源Sni。</p>
+ * @method void setOriginSni(string $OriginSni) 设置<p>回源Sni。</p>
+ * @method array getOriginHeaders() 获取<p>回源Herder信息。</p>
+ * @method void setOriginHeaders(array $OriginHeaders) 设置<p>回源Herder信息。</p>
+ * @method string getOriginHost() 获取<p>回源Host。</p>
+ * @method void setOriginHost(string $OriginHost) 设置<p>回源Host。</p>
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method string getListenerId() 获取<p>监听器ID。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器ID。</p>
+ * @method string getForwardingPolicyId() 获取<p>七层转发策略ID。</p>
+ * @method void setForwardingPolicyId(string $ForwardingPolicyId) 设置<p>七层转发策略ID。</p>
+ * @method string getForwardingRuleId() 获取<p>七层转发规则ID。</p>
+ * @method void setForwardingRuleId(string $ForwardingRuleId) 设置<p>七层转发规则ID。</p>
+ * @method array getHideResponseHeaders() 获取<p>源站响应头</p>
+ * @method void setHideResponseHeaders(array $HideResponseHeaders) 设置<p>源站响应头</p>
+ * @method array getResponseHeaders() 获取<p>删除源站响应头</p>
+ * @method void setResponseHeaders(array $ResponseHeaders) 设置<p>删除源站响应头</p>
  */
 class ForwardingRuleSet extends AbstractModel
 {
     /**
-     * @var array 七层转发规则条件信息。
+     * @var array <p>七层转发规则条件信息。</p>
      */
     public $RuleCondition;
 
     /**
-     * @var array 七层转发规则行为信息。
+     * @var array <p>七层转发规则行为信息。</p>
      */
     public $RuleAction;
 
     /**
-     * @var boolean 是否开启回源Sni。
+     * @var boolean <p>是否开启回源Sni。</p>
      */
     public $EnableOriginSni;
 
     /**
-     * @var string 回源Sni。
+     * @var string <p>回源Sni。</p>
      */
     public $OriginSni;
 
     /**
-     * @var array 回源Herder信息。
+     * @var array <p>回源Herder信息。</p>
      */
     public $OriginHeaders;
 
     /**
-     * @var string 回源Host。
+     * @var string <p>回源Host。</p>
      */
     public $OriginHost;
 
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var string 监听器ID。
+     * @var string <p>监听器ID。</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 七层转发策略ID。
+     * @var string <p>七层转发策略ID。</p>
      */
     public $ForwardingPolicyId;
 
     /**
-     * @var string 七层转发规则ID。
+     * @var string <p>七层转发规则ID。</p>
      */
     public $ForwardingRuleId;
 
     /**
-     * @param array $RuleCondition 七层转发规则条件信息。
-     * @param array $RuleAction 七层转发规则行为信息。
-     * @param boolean $EnableOriginSni 是否开启回源Sni。
-     * @param string $OriginSni 回源Sni。
-     * @param array $OriginHeaders 回源Herder信息。
-     * @param string $OriginHost 回源Host。
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param string $ListenerId 监听器ID。
-     * @param string $ForwardingPolicyId 七层转发策略ID。
-     * @param string $ForwardingRuleId 七层转发规则ID。
+     * @var array <p>源站响应头</p>
+     */
+    public $HideResponseHeaders;
+
+    /**
+     * @var array <p>删除源站响应头</p>
+     */
+    public $ResponseHeaders;
+
+    /**
+     * @param array $RuleCondition <p>七层转发规则条件信息。</p>
+     * @param array $RuleAction <p>七层转发规则行为信息。</p>
+     * @param boolean $EnableOriginSni <p>是否开启回源Sni。</p>
+     * @param string $OriginSni <p>回源Sni。</p>
+     * @param array $OriginHeaders <p>回源Herder信息。</p>
+     * @param string $OriginHost <p>回源Host。</p>
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param string $ListenerId <p>监听器ID。</p>
+     * @param string $ForwardingPolicyId <p>七层转发策略ID。</p>
+     * @param string $ForwardingRuleId <p>七层转发规则ID。</p>
+     * @param array $HideResponseHeaders <p>源站响应头</p>
+     * @param array $ResponseHeaders <p>删除源站响应头</p>
      */
     function __construct()
     {
@@ -171,6 +187,24 @@ class ForwardingRuleSet extends AbstractModel
 
         if (array_key_exists("ForwardingRuleId",$param) and $param["ForwardingRuleId"] !== null) {
             $this->ForwardingRuleId = $param["ForwardingRuleId"];
+        }
+
+        if (array_key_exists("HideResponseHeaders",$param) and $param["HideResponseHeaders"] !== null) {
+            $this->HideResponseHeaders = [];
+            foreach ($param["HideResponseHeaders"] as $key => $value){
+                $obj = new HideResponseHeaders();
+                $obj->deserialize($value);
+                array_push($this->HideResponseHeaders, $obj);
+            }
+        }
+
+        if (array_key_exists("ResponseHeaders",$param) and $param["ResponseHeaders"] !== null) {
+            $this->ResponseHeaders = [];
+            foreach ($param["ResponseHeaders"] as $key => $value){
+                $obj = new ResponseHeaders();
+                $obj->deserialize($value);
+                array_push($this->ResponseHeaders, $obj);
+            }
         }
     }
 }

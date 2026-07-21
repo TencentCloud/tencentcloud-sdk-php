@@ -150,6 +150,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchedulingPolicy(SchedulingPolicy $SchedulingPolicy) 设置<p>服务的调度策略</p>
  * @method array getExternalResourceGroups() 获取<p>外部的资源组信息，表示借调了哪些资源组的资源</p>
  * @method void setExternalResourceGroups(array $ExternalResourceGroups) 设置<p>外部的资源组信息，表示借调了哪些资源组的资源</p>
+ * @method string getProjectId() 获取<p>服务所属的项目 id,0表示默认空间</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>服务所属的项目 id,0表示默认空间</p>
  * @method string getChanger() 获取<p>变更服务的子账户</p>
  * @method void setChanger(string $Changer) 设置<p>变更服务的子账户</p>
  * @method string getChangerName() 获取<p>变更服务的子账户名称</p>
@@ -373,6 +375,11 @@ class Service extends AbstractModel
     public $ExternalResourceGroups;
 
     /**
+     * @var string <p>服务所属的项目 id,0表示默认空间</p>
+     */
+    public $ProjectId;
+
+    /**
      * @var string <p>变更服务的子账户</p>
      */
     public $Changer;
@@ -448,6 +455,7 @@ class Service extends AbstractModel
      * @param string $SubUinName <p>服务创建者的子账号名称</p>
      * @param SchedulingPolicy $SchedulingPolicy <p>服务的调度策略</p>
      * @param array $ExternalResourceGroups <p>外部的资源组信息，表示借调了哪些资源组的资源</p>
+     * @param string $ProjectId <p>服务所属的项目 id,0表示默认空间</p>
      * @param string $Changer <p>变更服务的子账户</p>
      * @param string $ChangerName <p>变更服务的子账户名称</p>
      */
@@ -624,6 +632,10 @@ class Service extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExternalResourceGroups, $obj);
             }
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
 
         if (array_key_exists("Changer",$param) and $param["Changer"] !== null) {

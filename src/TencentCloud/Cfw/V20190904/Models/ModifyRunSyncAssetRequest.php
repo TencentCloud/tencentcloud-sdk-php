@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRunSyncAsset请求参数结构体
  *
- * @method integer getType() 获取0: 互联网防火墙开关，1：vpc 防火墙开关
- * @method void setType(integer $Type) 设置0: 互联网防火墙开关，1：vpc 防火墙开关
+ * @method integer getType() 获取<p>0: 互联网防火墙开关，1：vpc 防火墙开关</p>
+ * @method void setType(integer $Type) 设置<p>0: 互联网防火墙开关，1：vpc 防火墙开关</p>
  */
 class ModifyRunSyncAssetRequest extends AbstractModel
 {
     /**
-     * @var integer 0: 互联网防火墙开关，1：vpc 防火墙开关
+     * @var integer <p>0: 互联网防火墙开关，1：vpc 防火墙开关</p>
      */
     public $Type;
 
     /**
-     * @param integer $Type 0: 互联网防火墙开关，1：vpc 防火墙开关
+     * @param integer $Type <p>0: 互联网防火墙开关，1：vpc 防火墙开关</p>
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNatFwInstance返回参数结构体
  *
- * @method string getCfwInsId() 获取防火墙实例id
- * @method void setCfwInsId(string $CfwInsId) 设置防火墙实例id
+ * @method string getCfwInsId() 获取<p>防火墙实例id</p>
+ * @method void setCfwInsId(string $CfwInsId) 设置<p>防火墙实例id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateNatFwInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 防火墙实例id
+     * @var string <p>防火墙实例id</p>
      */
     public $CfwInsId;
 
@@ -38,7 +38,7 @@ class CreateNatFwInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CfwInsId 防火墙实例id
+     * @param string $CfwInsId <p>防火墙实例id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

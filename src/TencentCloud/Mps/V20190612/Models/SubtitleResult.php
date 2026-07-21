@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置<p>字幕文件路径。</p>
  * @method string getSubtitleEmbedPath() 获取<p>字幕压制视频路径。</p>
  * @method void setSubtitleEmbedPath(string $SubtitleEmbedPath) 设置<p>字幕压制视频路径。</p>
+ * @method string getSubtitleFileId() 获取<p>字幕文件FileId。</p>
+ * @method void setSubtitleFileId(string $SubtitleFileId) 设置<p>字幕文件FileId。</p>
  */
 class SubtitleResult extends AbstractModel
 {
@@ -52,10 +54,16 @@ class SubtitleResult extends AbstractModel
     public $SubtitleEmbedPath;
 
     /**
+     * @var string <p>字幕文件FileId。</p>
+     */
+    public $SubtitleFileId;
+
+    /**
      * @param string $Language <p>字幕文件语言</p>
      * @param string $Status <p>处理是否成功</p>
      * @param string $Path <p>字幕文件路径。</p>
      * @param string $SubtitleEmbedPath <p>字幕压制视频路径。</p>
+     * @param string $SubtitleFileId <p>字幕文件FileId。</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class SubtitleResult extends AbstractModel
 
         if (array_key_exists("SubtitleEmbedPath",$param) and $param["SubtitleEmbedPath"] !== null) {
             $this->SubtitleEmbedPath = $param["SubtitleEmbedPath"];
+        }
+
+        if (array_key_exists("SubtitleFileId",$param) and $param["SubtitleFileId"] !== null) {
+            $this->SubtitleFileId = $param["SubtitleFileId"];
         }
     }
 }

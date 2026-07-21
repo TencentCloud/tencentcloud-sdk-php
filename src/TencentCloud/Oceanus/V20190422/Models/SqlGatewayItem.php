@@ -20,142 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SqlGateway配置信息
  *
- * @method string getSerialId() 获取唯一标识
+ * @method string getSerialId() 获取<p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSerialId(string $SerialId) 设置唯一标识
+ * @method void setSerialId(string $SerialId) 设置<p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFlinkVersion() 获取Flink内核版本
+ * @method string getFlinkVersion() 获取<p>Flink内核版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlinkVersion(string $FlinkVersion) 设置Flink内核版本
+ * @method void setFlinkVersion(string $FlinkVersion) 设置<p>Flink内核版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中
+ * @method integer getStatus() 获取<p>状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中
+ * @method void setStatus(integer $Status) 设置<p>状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatorUin() 获取创建人
+ * @method string getCreatorUin() 获取<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatorUin(string $CreatorUin) 设置创建人
+ * @method void setCreatorUin(string $CreatorUin) 设置<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResourceRefs() 获取引用资源
+ * @method array getResourceRefs() 获取<p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceRefs(array $ResourceRefs) 设置引用资源
+ * @method void setResourceRefs(array $ResourceRefs) 设置<p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getCuSpec() 获取Cu规格
+ * @method float getCuSpec() 获取<p>Cu规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCuSpec(float $CuSpec) 设置Cu规格
+ * @method void setCuSpec(float $CuSpec) 设置<p>Cu规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getProperties() 获取配置参数
+ * @method array getProperties() 获取<p>配置参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProperties(array $Properties) 设置配置参数
+ * @method void setProperties(array $Properties) 设置<p>配置参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getCpu() 获取Cpu
- * @method void setCpu(float $Cpu) 设置Cpu
- * @method float getMem() 获取Mem
- * @method void setMem(float $Mem) 设置Mem
- * @method string getJdkVersion() 获取jdk版本
- * @method void setJdkVersion(string $JdkVersion) 设置jdk版本
+ * @method float getCpu() 获取<p>Cpu</p>
+ * @method void setCpu(float $Cpu) 设置<p>Cpu</p>
+ * @method float getMem() 获取<p>Mem</p>
+ * @method void setMem(float $Mem) 设置<p>Mem</p>
+ * @method string getJdkVersion() 获取<p>jdk版本</p>
+ * @method void setJdkVersion(string $JdkVersion) 设置<p>jdk版本</p>
+ * @method string getSessionClusterId() 获取<p>session id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionClusterId(string $SessionClusterId) 设置<p>session id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPgUser() 获取<p>pg用户名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPgUser(string $PgUser) 设置<p>pg用户名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEndpoints() 获取<p>协议</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndpoints(array $Endpoints) 设置<p>协议</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SqlGatewayItem extends AbstractModel
 {
     /**
-     * @var string 唯一标识
+     * @var string <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SerialId;
 
     /**
-     * @var string Flink内核版本
+     * @var string <p>Flink内核版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlinkVersion;
 
     /**
-     * @var integer 状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中
+     * @var integer <p>状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 创建人
+     * @var string <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorUin;
 
     /**
-     * @var array 引用资源
+     * @var array <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRefs;
 
     /**
-     * @var float Cu规格
+     * @var float <p>Cu规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CuSpec;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var array 配置参数
+     * @var array <p>配置参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Properties;
 
     /**
-     * @var float Cpu
+     * @var float <p>Cpu</p>
      */
     public $Cpu;
 
     /**
-     * @var float Mem
+     * @var float <p>Mem</p>
      */
     public $Mem;
 
     /**
-     * @var string jdk版本
+     * @var string <p>jdk版本</p>
      */
     public $JdkVersion;
 
     /**
-     * @param string $SerialId 唯一标识
+     * @var string <p>session id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FlinkVersion Flink内核版本
+     */
+    public $SessionClusterId;
+
+    /**
+     * @var string <p>pg用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中
+     */
+    public $PgUser;
+
+    /**
+     * @var array <p>协议</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatorUin 创建人
+     */
+    public $Endpoints;
+
+    /**
+     * @param string $SerialId <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ResourceRefs 引用资源
+     * @param string $FlinkVersion <p>Flink内核版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $CuSpec Cu规格
+     * @param integer $Status <p>状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param string $CreatorUin <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param array $ResourceRefs <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Properties 配置参数
+     * @param float $CuSpec <p>Cu规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Cpu Cpu
-     * @param float $Mem Mem
-     * @param string $JdkVersion jdk版本
+     * @param string $CreateTime <p>创建时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateTime <p>更新时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Properties <p>配置参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Cpu <p>Cpu</p>
+     * @param float $Mem <p>Mem</p>
+     * @param string $JdkVersion <p>jdk版本</p>
+     * @param string $SessionClusterId <p>session id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PgUser <p>pg用户名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Endpoints <p>协议</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -226,6 +262,23 @@ class SqlGatewayItem extends AbstractModel
 
         if (array_key_exists("JdkVersion",$param) and $param["JdkVersion"] !== null) {
             $this->JdkVersion = $param["JdkVersion"];
+        }
+
+        if (array_key_exists("SessionClusterId",$param) and $param["SessionClusterId"] !== null) {
+            $this->SessionClusterId = $param["SessionClusterId"];
+        }
+
+        if (array_key_exists("PgUser",$param) and $param["PgUser"] !== null) {
+            $this->PgUser = $param["PgUser"];
+        }
+
+        if (array_key_exists("Endpoints",$param) and $param["Endpoints"] !== null) {
+            $this->Endpoints = [];
+            foreach ($param["Endpoints"] as $key => $value){
+                $obj = new SqlGatewayEndpoint();
+                $obj->deserialize($value);
+                array_push($this->Endpoints, $obj);
+            }
         }
     }
 }

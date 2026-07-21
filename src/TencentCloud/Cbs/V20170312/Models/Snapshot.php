@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestModifyTime(string $LatestModifyTime) 设置<p>快照记录的最新修改时间</p>
  * @method string getAutoSnapshotPolicyId() 获取<p>自动快照策略ID，仅当该快照由自动快照策略方式创建时才会返回。</p>
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置<p>自动快照策略ID，仅当该快照由自动快照策略方式创建时才会返回。</p>
+ * @method string getSnapshotMode() 获取<p>快照模式。取值为 INSTANT_SNAPSHOT 表示极速快照，STANDARD_SNAPSHOT 表示普通快照。</p><p>枚举值：</p><ul><li>INSTANT_SNAPSHOT： 极速快照</li><li>STANDARD_SNAPSHOT： 普通快照</li></ul>
+ * @method void setSnapshotMode(string $SnapshotMode) 设置<p>快照模式。取值为 INSTANT_SNAPSHOT 表示极速快照，STANDARD_SNAPSHOT 表示普通快照。</p><p>枚举值：</p><ul><li>INSTANT_SNAPSHOT： 极速快照</li><li>STANDARD_SNAPSHOT： 普通快照</li></ul>
  */
 class Snapshot extends AbstractModel
 {
@@ -185,6 +187,11 @@ class Snapshot extends AbstractModel
     public $AutoSnapshotPolicyId;
 
     /**
+     * @var string <p>快照模式。取值为 INSTANT_SNAPSHOT 表示极速快照，STANDARD_SNAPSHOT 表示普通快照。</p><p>枚举值：</p><ul><li>INSTANT_SNAPSHOT： 极速快照</li><li>STANDARD_SNAPSHOT： 普通快照</li></ul>
+     */
+    public $SnapshotMode;
+
+    /**
      * @param Placement $Placement <p>快照所在的位置。</p>
      * @param boolean $CopyFromRemote <p>是否为跨地域复制的快照。取值范围：</p><ul>    <li>true：表示为跨地域复制的快照。</li>    <li>false：本地域的快照。</li></ul>
      * @param string $SnapshotState <p>快照的状态。取值范围：</p><ul>    <li>NORMAL：正常</li>    <li>CREATING：创建中</li>    <li>ROLLBACKING：回滚中</li>    <li>COPYING_FROM_REMOTE：跨地域复制中</li>    <li>CHECKING_COPIED：复制校验中</li>    <li>TORECYCLE：待回收</li></ul>
@@ -208,6 +215,7 @@ class Snapshot extends AbstractModel
      * @param boolean $IsLocked <p>快照是否锁定。取值范围：</p><ul>    <li>true：已锁定</li>    <li>false：未锁定</li></ul>
      * @param string $LatestModifyTime <p>快照记录的最新修改时间</p>
      * @param string $AutoSnapshotPolicyId <p>自动快照策略ID，仅当该快照由自动快照策略方式创建时才会返回。</p>
+     * @param string $SnapshotMode <p>快照模式。取值为 INSTANT_SNAPSHOT 表示极速快照，STANDARD_SNAPSHOT 表示普通快照。</p><p>枚举值：</p><ul><li>INSTANT_SNAPSHOT： 极速快照</li><li>STANDARD_SNAPSHOT： 普通快照</li></ul>
      */
     function __construct()
     {
@@ -323,6 +331,10 @@ class Snapshot extends AbstractModel
 
         if (array_key_exists("AutoSnapshotPolicyId",$param) and $param["AutoSnapshotPolicyId"] !== null) {
             $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
+        }
+
+        if (array_key_exists("SnapshotMode",$param) and $param["SnapshotMode"] !== null) {
+            $this->SnapshotMode = $param["SnapshotMode"];
         }
     }
 }

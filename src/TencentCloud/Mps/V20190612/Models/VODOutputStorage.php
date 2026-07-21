@@ -18,14 +18,16 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 媒体处理 VOD（点播专业版） 输出对象信息。
+ * 媒体处理 VOD输出对象信息。
  *
  * @method string getBucket() 获取<p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
  * @method void setBucket(string $Bucket) 设置<p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
  * @method string getRegion() 获取<p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
  * @method void setRegion(string $Region) 设置<p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
- * @method integer getSubAppId() 获取<p>点播专业版应用Id</p>
- * @method void setSubAppId(integer $SubAppId) 设置<p>点播专业版应用Id</p>
+ * @method integer getSubAppId() 获取<p>点播应用Id</p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p>点播应用Id</p>
+ * @method integer getVodBasic() 获取<p>任务输出是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 不使用VOD标准版</li><li>1： 使用VOD标准版</li></ul>
+ * @method void setVodBasic(integer $VodBasic) 设置<p>任务输出是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 不使用VOD标准版</li><li>1： 使用VOD标准版</li></ul>
  */
 class VODOutputStorage extends AbstractModel
 {
@@ -40,14 +42,20 @@ class VODOutputStorage extends AbstractModel
     public $Region;
 
     /**
-     * @var integer <p>点播专业版应用Id</p>
+     * @var integer <p>点播应用Id</p>
      */
     public $SubAppId;
 
     /**
+     * @var integer <p>任务输出是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 不使用VOD标准版</li><li>1： 使用VOD标准版</li></ul>
+     */
+    public $VodBasic;
+
+    /**
      * @param string $Bucket <p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
      * @param string $Region <p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
-     * @param integer $SubAppId <p>点播专业版应用Id</p>
+     * @param integer $SubAppId <p>点播应用Id</p>
+     * @param integer $VodBasic <p>任务输出是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 不使用VOD标准版</li><li>1： 使用VOD标准版</li></ul>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class VODOutputStorage extends AbstractModel
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("VodBasic",$param) and $param["VodBasic"] !== null) {
+            $this->VodBasic = $param["VodBasic"];
         }
     }
 }

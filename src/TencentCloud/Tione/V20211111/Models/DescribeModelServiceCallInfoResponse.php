@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeModelServiceCallInfo返回参数结构体
  *
  * @method ServiceCallInfo getServiceCallInfo() 获取服务调用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceCallInfo(ServiceCallInfo $ServiceCallInfo) 设置服务调用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InferGatewayCallInfo getInferGatewayCallInfo() 获取升级网关调用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInferGatewayCallInfo(InferGatewayCallInfo $InferGatewayCallInfo) 设置升级网关调用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DefaultNginxGatewayCallInfo getDefaultNginxGatewayCallInfo() 获取默认nginx网关的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultNginxGatewayCallInfo(DefaultNginxGatewayCallInfo $DefaultNginxGatewayCallInfo) 设置默认nginx网关的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TJCallInfo getTJCallInfo() 获取太极服务的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTJCallInfo(TJCallInfo $TJCallInfo) 设置太极服务的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method IntranetCallInfo getIntranetCallInfo() 获取内网调用信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntranetCallInfo(IntranetCallInfo $IntranetCallInfo) 设置内网调用信息
@@ -51,25 +43,21 @@ class DescribeModelServiceCallInfoResponse extends AbstractModel
 {
     /**
      * @var ServiceCallInfo 服务调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceCallInfo;
 
     /**
      * @var InferGatewayCallInfo 升级网关调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InferGatewayCallInfo;
 
     /**
      * @var DefaultNginxGatewayCallInfo 默认nginx网关的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultNginxGatewayCallInfo;
 
     /**
      * @var TJCallInfo 太极服务的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TJCallInfo;
 
@@ -92,13 +80,9 @@ class DescribeModelServiceCallInfoResponse extends AbstractModel
 
     /**
      * @param ServiceCallInfo $ServiceCallInfo 服务调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InferGatewayCallInfo $InferGatewayCallInfo 升级网关调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultNginxGatewayCallInfo $DefaultNginxGatewayCallInfo 默认nginx网关的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TJCallInfo $TJCallInfo 太极服务的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntranetCallInfo $IntranetCallInfo 内网调用信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceCallInfoV2 $ServiceCallInfoV2 基于新网关的服务调用信息

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssm\V20190923\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRotationHistory请求参数结构体
+ * AIGC 视频转绘人物参数信息。
  *
- * @method string getSecretName() 获取<p>指定需要获取凭据轮转历史的凭据名称。</p>
- * @method void setSecretName(string $SecretName) 设置<p>指定需要获取凭据轮转历史的凭据名称。</p>
+ * @method string getStyle() 获取<p>用于描述转绘风格。限制50字符。</p>
+ * @method void setStyle(string $Style) 设置<p>用于描述转绘风格。限制50字符。</p>
  */
-class DescribeRotationHistoryRequest extends AbstractModel
+class AigcVideoRedrawTaskInfo extends AbstractModel
 {
     /**
-     * @var string <p>指定需要获取凭据轮转历史的凭据名称。</p>
+     * @var string <p>用于描述转绘风格。限制50字符。</p>
      */
-    public $SecretName;
+    public $Style;
 
     /**
-     * @param string $SecretName <p>指定需要获取凭据轮转历史的凭据名称。</p>
+     * @param string $Style <p>用于描述转绘风格。限制50字符。</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeRotationHistoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists("Style",$param) and $param["Style"] !== null) {
+            $this->Style = $param["Style"];
         }
     }
 }

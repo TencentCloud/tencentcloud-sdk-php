@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InstanceEnableSSL请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method boolean getEnable() 获取配置是否要开启SSL访问。
-- true：开启。
-- false：关闭。
- * @method void setEnable(boolean $Enable) 设置配置是否要开启SSL访问。
-- true：开启。
-- false：关闭。
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method boolean getEnable() 获取<p>配置是否要开启SSL访问。</p><ul><li>true：开启。</li><li>false：关闭。</li></ul>
+ * @method void setEnable(boolean $Enable) 设置<p>配置是否要开启SSL访问。</p><ul><li>true：开启。</li><li>false：关闭。</li></ul>
  */
 class InstanceEnableSSLRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var boolean 配置是否要开启SSL访问。
-- true：开启。
-- false：关闭。
+     * @var boolean <p>配置是否要开启SSL访问。</p><ul><li>true：开启。</li><li>false：关闭。</li></ul>
      */
     public $Enable;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param boolean $Enable 配置是否要开启SSL访问。
-- true：开启。
-- false：关闭。
+     * @param string $InstanceId <p>实例ID</p>
+     * @param boolean $Enable <p>配置是否要开启SSL访问。</p><ul><li>true：开启。</li><li>false：关闭。</li></ul>
      */
     function __construct()
     {

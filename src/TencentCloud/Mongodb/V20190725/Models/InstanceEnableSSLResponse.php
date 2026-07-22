@@ -20,51 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InstanceEnableSSL返回参数结构体
  *
- * @method integer getStatus() 获取SSL开启状态。
-- 0：关闭。
-- 1：开启。
+ * @method integer getStatus() 获取<p>SSL开启状态。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置SSL开启状态。
-- 0：关闭。
-- 1：开启。
+ * @method void setStatus(integer $Status) 设置<p>SSL开启状态。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExpiredTime() 获取证书文件过期时间，格式为：2023-05-01 12:00:00。
+ * @method string getExpiredTime() 获取<p>证书文件过期时间，格式为：2023-05-01 12:00:00。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpiredTime(string $ExpiredTime) 设置证书文件过期时间，格式为：2023-05-01 12:00:00。
+ * @method void setExpiredTime(string $ExpiredTime) 设置<p>证书文件过期时间，格式为：2023-05-01 12:00:00。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCertUrl() 获取证书文件的下载链接。
+ * @method string getCertUrl() 获取<p>证书文件的下载链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertUrl(string $CertUrl) 设置证书文件的下载链接。
+ * @method void setCertUrl(string $CertUrl) 设置<p>证书文件的下载链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFlowId() 获取流程id
- * @method void setFlowId(integer $FlowId) 设置流程id
+ * @method integer getFlowId() 获取<p>流程id</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>流程id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class InstanceEnableSSLResponse extends AbstractModel
 {
     /**
-     * @var integer SSL开启状态。
-- 0：关闭。
-- 1：开启。
+     * @var integer <p>SSL开启状态。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 证书文件过期时间，格式为：2023-05-01 12:00:00。
+     * @var string <p>证书文件过期时间，格式为：2023-05-01 12:00:00。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiredTime;
 
     /**
-     * @var string 证书文件的下载链接。
+     * @var string <p>证书文件的下载链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertUrl;
 
     /**
-     * @var integer 流程id
+     * @var integer <p>流程id</p>
      */
     public $FlowId;
 
@@ -74,15 +68,13 @@ class InstanceEnableSSLResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status SSL开启状态。
-- 0：关闭。
-- 1：开启。
+     * @param integer $Status <p>SSL开启状态。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExpiredTime 证书文件过期时间，格式为：2023-05-01 12:00:00。
+     * @param string $ExpiredTime <p>证书文件过期时间，格式为：2023-05-01 12:00:00。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CertUrl 证书文件的下载链接。
+     * @param string $CertUrl <p>证书文件的下载链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FlowId 流程id
+     * @param integer $FlowId <p>流程id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

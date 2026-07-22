@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssm\V20190923\Models;
+namespace TencentCloud\Chdfs\V20201112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRotationHistory请求参数结构体
+ * DeletePathProtectionRule请求参数结构体
  *
- * @method string getSecretName() 获取<p>指定需要获取凭据轮转历史的凭据名称。</p>
- * @method void setSecretName(string $SecretName) 设置<p>指定需要获取凭据轮转历史的凭据名称。</p>
+ * @method integer getPathProtectionRuleId() 获取路径保护规则ID
+ * @method void setPathProtectionRuleId(integer $PathProtectionRuleId) 设置路径保护规则ID
  */
-class DescribeRotationHistoryRequest extends AbstractModel
+class DeletePathProtectionRuleRequest extends AbstractModel
 {
     /**
-     * @var string <p>指定需要获取凭据轮转历史的凭据名称。</p>
+     * @var integer 路径保护规则ID
      */
-    public $SecretName;
+    public $PathProtectionRuleId;
 
     /**
-     * @param string $SecretName <p>指定需要获取凭据轮转历史的凭据名称。</p>
+     * @param integer $PathProtectionRuleId 路径保护规则ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeRotationHistoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists("PathProtectionRuleId",$param) and $param["PathProtectionRuleId"] !== null) {
+            $this->PathProtectionRuleId = $param["PathProtectionRuleId"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubnetResourceDashboard请求参数结构体
  *
- * @method array getSubnetIds() 获取Subnet实例ID，例如：subnet-f1xjkw1b。
- * @method void setSubnetIds(array $SubnetIds) 设置Subnet实例ID，例如：subnet-f1xjkw1b。
+ * @method array getSubnetIds() 获取<p>Subnet实例ID，例如：subnet-f1xjkw1b。</p>
+ * @method void setSubnetIds(array $SubnetIds) 设置<p>Subnet实例ID，例如：subnet-f1xjkw1b。</p>
  */
 class DescribeSubnetResourceDashboardRequest extends AbstractModel
 {
     /**
-     * @var array Subnet实例ID，例如：subnet-f1xjkw1b。
+     * @var array <p>Subnet实例ID，例如：subnet-f1xjkw1b。</p>
      */
     public $SubnetIds;
 
     /**
-     * @param array $SubnetIds Subnet实例ID，例如：subnet-f1xjkw1b。
+     * @param array $SubnetIds <p>Subnet实例ID，例如：subnet-f1xjkw1b。</p>
      */
     function __construct()
     {

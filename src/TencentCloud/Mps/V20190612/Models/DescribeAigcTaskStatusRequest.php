@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssm\V20190923\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRotationHistory请求参数结构体
+ * DescribeAigcTaskStatus请求参数结构体
  *
- * @method string getSecretName() 获取<p>指定需要获取凭据轮转历史的凭据名称。</p>
- * @method void setSecretName(string $SecretName) 设置<p>指定需要获取凭据轮转历史的凭据名称。</p>
+ * @method string getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
  */
-class DescribeRotationHistoryRequest extends AbstractModel
+class DescribeAigcTaskStatusRequest extends AbstractModel
 {
     /**
-     * @var string <p>指定需要获取凭据轮转历史的凭据名称。</p>
+     * @var string <p>任务ID</p>
      */
-    public $SecretName;
+    public $TaskId;
 
     /**
-     * @param string $SecretName <p>指定需要获取凭据轮转历史的凭据名称。</p>
+     * @param string $TaskId <p>任务ID</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeRotationHistoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

@@ -29,6 +29,7 @@ use TencentCloud\Chdfs\V20201112\Models as Models;
  * @method Models\CreateFileSystemResponse CreateFileSystem(Models\CreateFileSystemRequest $req) 创建文件系统（异步）。
  * @method Models\CreateLifeCycleRulesResponse CreateLifeCycleRules(Models\CreateLifeCycleRulesRequest $req) 批量创建生命周期规则，生命周期规则ID和创建时间无需填写。
  * @method Models\CreateMountPointResponse CreateMountPoint(Models\CreateMountPointRequest $req) 创建文件系统挂载点，仅限于创建成功的文件系统。
+ * @method Models\CreatePathProtectionRuleResponse CreatePathProtectionRule(Models\CreatePathProtectionRuleRequest $req) 创建路径保护规则。
  * @method Models\CreateRestoreTasksResponse CreateRestoreTasks(Models\CreateRestoreTasksRequest $req) 批量创建回热任务，回热任务ID、状态和创建时间无需填写。
  * @method Models\CreateTrashConfigResponse CreateTrashConfig(Models\CreateTrashConfigRequest $req) 创建回收站配置。
  * @method Models\DeleteAccessGroupResponse DeleteAccessGroup(Models\DeleteAccessGroupRequest $req) 删除权限组。
@@ -36,6 +37,7 @@ use TencentCloud\Chdfs\V20201112\Models as Models;
  * @method Models\DeleteFileSystemResponse DeleteFileSystem(Models\DeleteFileSystemRequest $req) 删除文件系统，不允许删除非空文件系统。
  * @method Models\DeleteLifeCycleRulesResponse DeleteLifeCycleRules(Models\DeleteLifeCycleRulesRequest $req) 批量删除生命周期规则。
  * @method Models\DeleteMountPointResponse DeleteMountPoint(Models\DeleteMountPointRequest $req) 删除挂载点。
+ * @method Models\DeletePathProtectionRuleResponse DeletePathProtectionRule(Models\DeletePathProtectionRuleRequest $req) 删除路径保护规则。
  * @method Models\DeleteTrashConfigResponse DeleteTrashConfig(Models\DeleteTrashConfigRequest $req) 删除回收站配置。
  * @method Models\DescribeAccessGroupResponse DescribeAccessGroup(Models\DescribeAccessGroupRequest $req) 查看权限组详细信息。
  * @method Models\DescribeAccessGroupsResponse DescribeAccessGroups(Models\DescribeAccessGroupsRequest $req) 查看权限组列表。
@@ -45,6 +47,7 @@ use TencentCloud\Chdfs\V20201112\Models as Models;
  * @method Models\DescribeLifeCycleRulesResponse DescribeLifeCycleRules(Models\DescribeLifeCycleRulesRequest $req) 通过文件系统ID查看生命周期规则列表。
  * @method Models\DescribeMountPointResponse DescribeMountPoint(Models\DescribeMountPointRequest $req) 查看挂载点详细信息。
  * @method Models\DescribeMountPointsResponse DescribeMountPoints(Models\DescribeMountPointsRequest $req) 查看挂载点列表。
+ * @method Models\DescribePathProtectionRulesResponse DescribePathProtectionRules(Models\DescribePathProtectionRulesRequest $req) 通过文件系统ID查看路径保护规则列表。
  * @method Models\DescribeResourceTagsResponse DescribeResourceTags(Models\DescribeResourceTagsRequest $req) 通过文件系统ID查看资源标签列表。
  * @method Models\DescribeRestoreTasksResponse DescribeRestoreTasks(Models\DescribeRestoreTasksRequest $req) 通过文件系统ID查看回热任务列表。
  * @method Models\DescribeTrashConfigResponse DescribeTrashConfig(Models\DescribeTrashConfigRequest $req) 通过文件系统ID查看回收站配置。
@@ -54,6 +57,7 @@ use TencentCloud\Chdfs\V20201112\Models as Models;
  * @method Models\ModifyFileSystemResponse ModifyFileSystem(Models\ModifyFileSystemRequest $req) 修改文件系统属性，仅限于创建成功的文件系统。
  * @method Models\ModifyLifeCycleRulesResponse ModifyLifeCycleRules(Models\ModifyLifeCycleRulesRequest $req) 批量修改生命周期规则属性，需要指定生命周期规则ID，支持修改生命周期规则名称、路径、转换列表和状态。
  * @method Models\ModifyMountPointResponse ModifyMountPoint(Models\ModifyMountPointRequest $req) 修改挂载点属性。
+ * @method Models\ModifyPathProtectionRuleResponse ModifyPathProtectionRule(Models\ModifyPathProtectionRuleRequest $req) 修改路径保护规则属性，需要指定路径保护规则ID，支持修改规则名称、路径和状态。
  * @method Models\ModifyResourceTagsResponse ModifyResourceTags(Models\ModifyResourceTagsRequest $req) 修改资源标签列表，全量覆盖。
  * @method Models\ModifyTrashConfigResponse ModifyTrashConfig(Models\ModifyTrashConfigRequest $req) 修改回收站配置，需要指定回收站路径，数据保留时间、和状态。
  */

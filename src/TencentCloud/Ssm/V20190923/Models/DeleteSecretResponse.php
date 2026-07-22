@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSecret返回参数结构体
  *
- * @method string getSecretName() 获取指定删除的凭据名称。
- * @method void setSecretName(string $SecretName) 设置指定删除的凭据名称。
- * @method integer getDeleteTime() 获取凭据删除的日期，unix时间戳。
- * @method void setDeleteTime(integer $DeleteTime) 设置凭据删除的日期，unix时间戳。
+ * @method string getSecretName() 获取<p>指定删除的凭据名称。</p>
+ * @method void setSecretName(string $SecretName) 设置<p>指定删除的凭据名称。</p>
+ * @method integer getDeleteTime() 获取<p>凭据删除的日期，unix时间戳。</p>
+ * @method void setDeleteTime(integer $DeleteTime) 设置<p>凭据删除的日期，unix时间戳。</p>
+ * @method integer getFlowID() 获取<p>异步删除任务 ID</p>
+ * @method void setFlowID(integer $FlowID) 设置<p>异步删除任务 ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteSecretResponse extends AbstractModel
 {
     /**
-     * @var string 指定删除的凭据名称。
+     * @var string <p>指定删除的凭据名称。</p>
      */
     public $SecretName;
 
     /**
-     * @var integer 凭据删除的日期，unix时间戳。
+     * @var integer <p>凭据删除的日期，unix时间戳。</p>
      */
     public $DeleteTime;
+
+    /**
+     * @var integer <p>异步删除任务 ID</p>
+     */
+    public $FlowID;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DeleteSecretResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SecretName 指定删除的凭据名称。
-     * @param integer $DeleteTime 凭据删除的日期，unix时间戳。
+     * @param string $SecretName <p>指定删除的凭据名称。</p>
+     * @param integer $DeleteTime <p>凭据删除的日期，unix时间戳。</p>
+     * @param integer $FlowID <p>异步删除任务 ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class DeleteSecretResponse extends AbstractModel
 
         if (array_key_exists("DeleteTime",$param) and $param["DeleteTime"] !== null) {
             $this->DeleteTime = $param["DeleteTime"];
+        }
+
+        if (array_key_exists("FlowID",$param) and $param["FlowID"] !== null) {
+            $this->FlowID = $param["FlowID"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

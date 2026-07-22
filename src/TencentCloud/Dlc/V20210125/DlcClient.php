@@ -29,6 +29,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\AlterDMSDatabaseResponse AlterDMSDatabase(Models\AlterDMSDatabaseRequest $req) DMS元数据更新库
  * @method Models\AlterDMSPartitionResponse AlterDMSPartition(Models\AlterDMSPartitionRequest $req) DMS元数据更新分区
  * @method Models\AlterDMSTableResponse AlterDMSTable(Models\AlterDMSTableRequest $req) DMS元数据更新表
+ * @method Models\AlterTableCommentResponse AlterTableComment(Models\AlterTableCommentRequest $req) 修改表备注
  * @method Models\AssignMangedTablePropertiesResponse AssignMangedTableProperties(Models\AssignMangedTablePropertiesRequest $req) 分配原生表表属性
  * @method Models\AssociateDatasourceHouseResponse AssociateDatasourceHouse(Models\AssociateDatasourceHouseRequest $req) 绑定数据源和队列
  * @method Models\AttachDataMaskPolicyResponse AttachDataMaskPolicy(Models\AttachDataMaskPolicyRequest $req) 绑定数据脱敏策略
@@ -54,6 +55,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateExportTaskResponse CreateExportTask(Models\CreateExportTaskRequest $req) 该接口（CreateExportTask）用于创建导出任务
  * @method Models\CreateImportTaskResponse CreateImportTask(Models\CreateImportTaskRequest $req) 该接口（CreateImportTask）用于创建导入任务
  * @method Models\CreateInternalTableResponse CreateInternalTable(Models\CreateInternalTableRequest $req) 创建托管存储内表（该接口已废弃）
+ * @method Models\CreateMetaDatabaseResponse CreateMetaDatabase(Models\CreateMetaDatabaseRequest $req) 本接口（CreateMetaDatabase）用于创建元数据库
  * @method Models\CreateNotebookSessionResponse CreateNotebookSession(Models\CreateNotebookSessionRequest $req) 本接口（CreateNotebookSession）用于创建交互式session（notebook）
  * @method Models\CreateNotebookSessionStatementResponse CreateNotebookSessionStatement(Models\CreateNotebookSessionStatementRequest $req) 本接口（CreateNotebookSessionStatement）用于在session中执行代码片段
  * @method Models\CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQL(Models\CreateNotebookSessionStatementSupportBatchSQLRequest $req) 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建交互式session并执行SQL任务
@@ -79,6 +81,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProduct(Models\DeleteCHDFSBindingProductRequest $req) 此接口（DeleteCHDFSBindingProduct）用于删除元数据加速桶和产品绑定关系
  * @method Models\DeleteDataEngineResponse DeleteDataEngine(Models\DeleteDataEngineRequest $req) 删除数据引擎
  * @method Models\DeleteDataMaskStrategyResponse DeleteDataMaskStrategy(Models\DeleteDataMaskStrategyRequest $req) 删除数据脱敏策略
+ * @method Models\DeleteMetaDatabaseResponse DeleteMetaDatabase(Models\DeleteMetaDatabaseRequest $req) 本接口（DeleteMetaDatabase）用于一键删除元数据库
  * @method Models\DeleteNativeSparkSessionResponse DeleteNativeSparkSession(Models\DeleteNativeSparkSessionRequest $req) 根据spark session名称销毁eg spark session
  * @method Models\DeleteNotebookSessionResponse DeleteNotebookSession(Models\DeleteNotebookSessionRequest $req) 本接口（DeleteNotebookSession）用于删除交互式session（notebook）
  * @method Models\DeleteScriptResponse DeleteScript(Models\DeleteScriptRequest $req) 该接口（DeleteScript）用于删除sql脚本。
@@ -105,6 +108,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeDataEnginesResponse DescribeDataEngines(Models\DescribeDataEnginesRequest $req) 本接口（DescribeDataEngines）用于查询DataEngines信息列表.
  * @method Models\DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetail(Models\DescribeDataEnginesScaleDetailRequest $req) 查询引擎规格详情
  * @method Models\DescribeDataMaskStrategiesResponse DescribeDataMaskStrategies(Models\DescribeDataMaskStrategiesRequest $req) 查询数据脱敏列表接口
+ * @method Models\DescribeDatabaseResponse DescribeDatabase(Models\DescribeDatabaseRequest $req) 本接口（DescribeDatabase）,查询数据库详细信息
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询数据库列表。
  * @method Models\DescribeDatasourceConnectionResponse DescribeDatasourceConnection(Models\DescribeDatasourceConnectionRequest $req) 本接口（DescribeDatasourceConnection）用于查询数据源信息
  * @method Models\DescribeEngineNetworksResponse DescribeEngineNetworks(Models\DescribeEngineNetworksRequest $req) 查询引擎网络信息
@@ -173,6 +177,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DropDMSPartitionsResponse DropDMSPartitions(Models\DropDMSPartitionsRequest $req) DMS元数据删除分区
  * @method Models\DropDMSTableResponse DropDMSTable(Models\DropDMSTableRequest $req) DMS元数据删除表
  * @method Models\GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(Models\GenerateCreateMangedTableSqlRequest $req) 生成创建托管表语句
+ * @method Models\GenerateInternalTableResponse GenerateInternalTable(Models\GenerateInternalTableRequest $req) 建表
  * @method Models\GetOptimizerPolicyResponse GetOptimizerPolicy(Models\GetOptimizerPolicyRequest $req) GetOptimizerPolicy
  * @method Models\GrantDLCCatalogAccessResponse GrantDLCCatalogAccess(Models\GrantDLCCatalogAccessRequest $req) 授权访问DLC Catalog
  * @method Models\InitializeTCLakeResponse InitializeTCLake(Models\InitializeTCLakeRequest $req) 开通TCLake

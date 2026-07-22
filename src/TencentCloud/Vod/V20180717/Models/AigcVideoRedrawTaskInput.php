@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() 获取<p>AIGC 视频转绘任务输入文件信息。</p>
  * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) 设置<p>AIGC 视频转绘任务输入文件信息。</p>
+ * @method AigcVideoRedrawTaskInfo getTaskInfo() 获取<p>AIGC 视频转绘任务参数信息。</p>
+ * @method void setTaskInfo(AigcVideoRedrawTaskInfo $TaskInfo) 设置<p>AIGC 视频转绘任务参数信息。</p>
  * @method AigcVideoRedrawOutputConfig getOutputConfig() 获取<p>AIGC 视频转绘输出配置。</p>
  * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) 设置<p>AIGC 视频转绘输出配置。</p>
  */
@@ -33,12 +35,18 @@ class AigcVideoRedrawTaskInput extends AbstractModel
     public $FileInfo;
 
     /**
+     * @var AigcVideoRedrawTaskInfo <p>AIGC 视频转绘任务参数信息。</p>
+     */
+    public $TaskInfo;
+
+    /**
      * @var AigcVideoRedrawOutputConfig <p>AIGC 视频转绘输出配置。</p>
      */
     public $OutputConfig;
 
     /**
      * @param AigcVideoRedrawTaskInputFileInfo $FileInfo <p>AIGC 视频转绘任务输入文件信息。</p>
+     * @param AigcVideoRedrawTaskInfo $TaskInfo <p>AIGC 视频转绘任务参数信息。</p>
      * @param AigcVideoRedrawOutputConfig $OutputConfig <p>AIGC 视频转绘输出配置。</p>
      */
     function __construct()
@@ -57,6 +65,11 @@ class AigcVideoRedrawTaskInput extends AbstractModel
         if (array_key_exists("FileInfo",$param) and $param["FileInfo"] !== null) {
             $this->FileInfo = new AigcVideoRedrawTaskInputFileInfo();
             $this->FileInfo->deserialize($param["FileInfo"]);
+        }
+
+        if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
+            $this->TaskInfo = new AigcVideoRedrawTaskInfo();
+            $this->TaskInfo->deserialize($param["TaskInfo"]);
         }
 
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {

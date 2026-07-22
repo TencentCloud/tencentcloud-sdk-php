@@ -18,40 +18,36 @@ namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 封禁列表和放通列表结构体
+ * 封禁或放通规则项，包含对象、适用方向和规则类型。
  *
- * @method string getIoc() 获取封禁和放通对象
- * @method void setIoc(string $Ioc) 设置封禁和放通对象
- * @method string getDirectionList() 获取0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
- * @method void setDirectionList(string $DirectionList) 设置0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
- * @method integer getRuleType() 获取规则类型
-RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
- * @method void setRuleType(integer $RuleType) 设置规则类型
-RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+ * @method string getDirectionList() 获取规则适用方向，0 表示互联网出站，1 表示互联网入站，2 表示双向，3 表示东西向，4 表示情报误报反馈，5 表示内网访问源，6 表示内网访问目的；多个值以逗号分隔。
+ * @method void setDirectionList(string $DirectionList) 设置规则适用方向，0 表示互联网出站，1 表示互联网入站，2 表示双向，3 表示东西向，4 表示情报误报反馈，5 表示内网访问源，6 表示内网访问目的；多个值以逗号分隔。
+ * @method string getIoc() 获取封禁或放通对象值。
+ * @method void setIoc(string $Ioc) 设置封禁或放通对象值。
+ * @method integer getRuleType() 获取规则类型标识。服务端定义的常用值为：1 封禁 IP，2 放通 IP，3 放通域名，4 威胁情报地址，5 资产实例，6 自定义策略，7 入侵防御规则，8 扩展 IP 规则，9 扩展自定义规则。
+ * @method void setRuleType(integer $RuleType) 设置规则类型标识。服务端定义的常用值为：1 封禁 IP，2 放通 IP，3 放通域名，4 威胁情报地址，5 资产实例，6 自定义策略，7 入侵防御规则，8 扩展 IP 规则，9 扩展自定义规则。
  */
 class BanAndAllowRuleDel extends AbstractModel
 {
     /**
-     * @var string 封禁和放通对象
-     */
-    public $Ioc;
-
-    /**
-     * @var string 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
+     * @var string 规则适用方向，0 表示互联网出站，1 表示互联网入站，2 表示双向，3 表示东西向，4 表示情报误报反馈，5 表示内网访问源，6 表示内网访问目的；多个值以逗号分隔。
      */
     public $DirectionList;
 
     /**
-     * @var integer 规则类型
-RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * @var string 封禁或放通对象值。
+     */
+    public $Ioc;
+
+    /**
+     * @var integer 规则类型标识。服务端定义的常用值为：1 封禁 IP，2 放通 IP，3 放通域名，4 威胁情报地址，5 资产实例，6 自定义策略，7 入侵防御规则，8 扩展 IP 规则，9 扩展自定义规则。
      */
     public $RuleType;
 
     /**
-     * @param string $Ioc 封禁和放通对象
-     * @param string $DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-     * @param integer $RuleType 规则类型
-RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * @param string $DirectionList 规则适用方向，0 表示互联网出站，1 表示互联网入站，2 表示双向，3 表示东西向，4 表示情报误报反馈，5 表示内网访问源，6 表示内网访问目的；多个值以逗号分隔。
+     * @param string $Ioc 封禁或放通对象值。
+     * @param integer $RuleType 规则类型标识。服务端定义的常用值为：1 封禁 IP，2 放通 IP，3 放通域名，4 威胁情报地址，5 资产实例，6 自定义策略，7 入侵防御规则，8 扩展 IP 规则，9 扩展自定义规则。
      */
     function __construct()
     {
@@ -66,12 +62,12 @@ RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ioc",$param) and $param["Ioc"] !== null) {
-            $this->Ioc = $param["Ioc"];
-        }
-
         if (array_key_exists("DirectionList",$param) and $param["DirectionList"] !== null) {
             $this->DirectionList = $param["DirectionList"];
+        }
+
+        if (array_key_exists("Ioc",$param) and $param["Ioc"] !== null) {
+            $this->Ioc = $param["Ioc"];
         }
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {

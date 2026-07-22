@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRotationHistory返回参数结构体
  *
- * @method array getVersionIDs() 获取版本号列表
- * @method void setVersionIDs(array $VersionIDs) 设置版本号列表
- * @method integer getTotalCount() 获取版本号个数，可以给用户展示的版本号个数上限为10个。
- * @method void setTotalCount(integer $TotalCount) 设置版本号个数，可以给用户展示的版本号个数上限为10个。
+ * @method array getVersionIDs() 获取<p>版本号列表</p>
+ * @method void setVersionIDs(array $VersionIDs) 设置<p>版本号列表</p>
+ * @method integer getTotalCount() 获取<p>版本号个数，可以给用户展示的版本号个数上限为10个。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>版本号个数，可以给用户展示的版本号个数上限为10个。</p>
+ * @method array getAccountInfoList() 获取<p>凭据对应账号相关信息</p>
+ * @method void setAccountInfoList(array $AccountInfoList) 设置<p>凭据对应账号相关信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRotationHistoryResponse extends AbstractModel
 {
     /**
-     * @var array 版本号列表
+     * @var array <p>版本号列表</p>
      */
     public $VersionIDs;
 
     /**
-     * @var integer 版本号个数，可以给用户展示的版本号个数上限为10个。
+     * @var integer <p>版本号个数，可以给用户展示的版本号个数上限为10个。</p>
      */
     public $TotalCount;
+
+    /**
+     * @var array <p>凭据对应账号相关信息</p>
+     */
+    public $AccountInfoList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeRotationHistoryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $VersionIDs 版本号列表
-     * @param integer $TotalCount 版本号个数，可以给用户展示的版本号个数上限为10个。
+     * @param array $VersionIDs <p>版本号列表</p>
+     * @param integer $TotalCount <p>版本号个数，可以给用户展示的版本号个数上限为10个。</p>
+     * @param array $AccountInfoList <p>凭据对应账号相关信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,15 @@ class DescribeRotationHistoryResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("AccountInfoList",$param) and $param["AccountInfoList"] !== null) {
+            $this->AccountInfoList = [];
+            foreach ($param["AccountInfoList"] as $key => $value){
+                $obj = new SecretAccountInfo();
+                $obj->deserialize($value);
+                array_push($this->AccountInfoList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

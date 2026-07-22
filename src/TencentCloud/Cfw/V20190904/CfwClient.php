@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cfw\V20190904\Models as Models;
 
 /**
- * @method Models\AddAclRuleResponse AddAclRule(Models\AddAclRuleRequest $req) 添加互联网边界访问控制规则
+ * @method Models\AddAclRuleResponse AddAclRule(Models\AddAclRuleRequest $req) 添加一条或多条互联网边界访问控制规则。规则写入当前账号的可操作分区；本批 Rules 在一次插入事务中写入。From=batch_import_cover 会先以独立事务删除首条规则 Direction 对应的旧规则，再插入本批 Rules；删除一旦提交，后续插入失败不会恢复旧规则。公有云环境在数据库事务提交后异步触发规则下发，因此成功返回只表示规则已写入并已发起下发，不表示数据面已经生效。
  * @method Models\AddEnterpriseSecurityGroupRulesResponse AddEnterpriseSecurityGroupRules(Models\AddEnterpriseSecurityGroupRulesRequest $req) 创建新企业安全组规则
  * @method Models\AddNatAcRuleResponse AddNatAcRule(Models\AddNatAcRuleRequest $req) 添加nat访问控制规则
  * @method Models\AddVpcAcRuleResponse AddVpcAcRule(Models\AddVpcAcRuleRequest $req) 添加VPC内网间规则
@@ -31,7 +31,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\CreateAcRulesResponse CreateAcRules(Models\CreateAcRulesRequest $req) 创建访问控制规则
  * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) 创建地址模板规则
  * @method Models\CreateAlertCenterIsolateResponse CreateAlertCenterIsolate(Models\CreateAlertCenterIsolateRequest $req) 用户告警中心-封隔离处置按钮
- * @method Models\CreateAlertCenterOmitResponse CreateAlertCenterOmit(Models\CreateAlertCenterOmitRequest $req) 用户告警中心-忽略处置按钮
+ * @method Models\CreateAlertCenterOmitResponse CreateAlertCenterOmit(Models\CreateAlertCenterOmitRequest $req) 忽略告警中心或拦截列表中的记录。接口将目标记录的 bhide 标记设为 1，使其不再进入未忽略列表和相关统计，但不删除日志，也不创建持续匹配后续记录的忽略规则；本接口没有恢复 bhide 的参数。TableType 决定目标表及 ID 类型：AlertTable 按告警日志 logid 更新，InterceptionTable 按拦截记录 unique_id 更新。HandleEventIdList 中的聚合事件 ID 会先解析为告警日志 ID，再与 HandleIdList 合并；合并后会删除空字符串并去重。
  * @method Models\CreateAlertCenterRuleResponse CreateAlertCenterRule(Models\CreateAlertCenterRuleRequest $req) 用户告警中心-封禁、放通处置按钮
  * @method Models\CreateAlertCenterRuleAsyncResponse CreateAlertCenterRuleAsync(Models\CreateAlertCenterRuleAsyncRequest $req) 用户告警中心-封禁、放通处置按钮
  * @method Models\CreateBlockIgnoreRuleListResponse CreateBlockIgnoreRuleList(Models\CreateBlockIgnoreRuleListRequest $req) 批量添加入侵防御封禁列表、放通列表规则

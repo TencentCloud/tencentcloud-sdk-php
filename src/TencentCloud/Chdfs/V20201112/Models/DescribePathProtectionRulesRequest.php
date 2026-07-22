@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssm\V20190923\Models;
+namespace TencentCloud\Chdfs\V20201112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRotationHistory请求参数结构体
+ * DescribePathProtectionRules请求参数结构体
  *
- * @method string getSecretName() 获取<p>指定需要获取凭据轮转历史的凭据名称。</p>
- * @method void setSecretName(string $SecretName) 设置<p>指定需要获取凭据轮转历史的凭据名称。</p>
+ * @method string getFileSystemId() 获取文件系统ID
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
  */
-class DescribeRotationHistoryRequest extends AbstractModel
+class DescribePathProtectionRulesRequest extends AbstractModel
 {
     /**
-     * @var string <p>指定需要获取凭据轮转历史的凭据名称。</p>
+     * @var string 文件系统ID
      */
-    public $SecretName;
+    public $FileSystemId;
 
     /**
-     * @param string $SecretName <p>指定需要获取凭据轮转历史的凭据名称。</p>
+     * @param string $FileSystemId 文件系统ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeRotationHistoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
+            $this->FileSystemId = $param["FileSystemId"];
         }
     }
 }

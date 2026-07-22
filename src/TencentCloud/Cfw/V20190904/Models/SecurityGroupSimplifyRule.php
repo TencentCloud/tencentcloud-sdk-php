@@ -18,22 +18,10 @@ namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 安全组规则
+ * 创建请求写入成功后返回的企业安全组规则摘要。
  *
- * @method string getSourceContent() 获取访问源示例：
-net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
-region：地域(ap-gaungzhou)
- * @method void setSourceContent(string $SourceContent) 设置访问源示例：
-net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
-region：地域(ap-gaungzhou)
+ * @method string getDescription() 获取写入规则的描述。
+ * @method void setDescription(string $Description) 设置写入规则的描述。
  * @method string getDestContent() 获取访问目的示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -48,29 +36,35 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
- * @method string getProtocol() 获取协议；TCP/UDP/ICMP/ANY
- * @method void setProtocol(string $Protocol) 设置协议；TCP/UDP/ICMP/ANY
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method integer getRuleUuid() 获取规则对应的唯一id
- * @method void setRuleUuid(integer $RuleUuid) 设置规则对应的唯一id
- * @method integer getSequence() 获取规则序号
- * @method void setSequence(integer $Sequence) 设置规则序号
- * @method string getScope() 获取规则生效范围，SG安全组，LH轻量服务器
- * @method void setScope(string $Scope) 设置规则生效范围，SG安全组，LH轻量服务器
- */
-class SecurityGroupSimplifyRule extends AbstractModel
-{
-    /**
-     * @var string 访问源示例：
+ * @method string getProtocol() 获取写入规则的协议。普通 IPv4 规则返回 ANY、TCP、UDP 或 ICMP；使用服务模板时，Protocol 可省略或留空，此时返回空字符串；若仍显式填写 Protocol，则只接受 ANY 并返回 ANY。
+ * @method void setProtocol(string $Protocol) 设置写入规则的协议。普通 IPv4 规则返回 ANY、TCP、UDP 或 ICMP；使用服务模板时，Protocol 可省略或留空，此时返回空字符串；若仍显式填写 Protocol，则只接受 ANY 并返回 ANY。
+ * @method integer getRuleUuid() 获取服务端写入后生成或采用的规则数据库 ID。
+ * @method void setRuleUuid(integer $RuleUuid) 设置服务端写入后生成或采用的规则数据库 ID。
+ * @method string getScope() 获取写入后的规则生效范围；SG 表示安全组，LH 表示轻量应用服务器，组合范围以逗号分隔。
+ * @method void setScope(string $Scope) 设置写入后的规则生效范围；SG 表示安全组，LH 表示轻量应用服务器，组合范围以逗号分隔。
+ * @method integer getSequence() 获取服务端写入后的实际规则顺序。
+ * @method void setSequence(integer $Sequence) 设置服务端写入后的实际规则顺序。
+ * @method string getSourceContent() 获取访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
 instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
+ * @method void setSourceContent(string $SourceContent) 设置访问源示例：
+net：IP/CIDR(192.168.0.2)
+template：参数模板(ipm-dyodhpby)
+instance：资产实例(ins-123456)
+resourcegroup：资产分组(/全部分组/分组1/子分组1)
+tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+region：地域(ap-gaungzhou)
+ */
+class SecurityGroupSimplifyRule extends AbstractModel
+{
+    /**
+     * @var string 写入规则的描述。
      */
-    public $SourceContent;
+    public $Description;
 
     /**
      * @var string 访问目的示例：
@@ -84,38 +78,38 @@ region：地域(ap-gaungzhou)
     public $DestContent;
 
     /**
-     * @var string 协议；TCP/UDP/ICMP/ANY
+     * @var string 写入规则的协议。普通 IPv4 规则返回 ANY、TCP、UDP 或 ICMP；使用服务模板时，Protocol 可省略或留空，此时返回空字符串；若仍显式填写 Protocol，则只接受 ANY 并返回 ANY。
      */
     public $Protocol;
 
     /**
-     * @var string 描述
-     */
-    public $Description;
-
-    /**
-     * @var integer 规则对应的唯一id
+     * @var integer 服务端写入后生成或采用的规则数据库 ID。
      */
     public $RuleUuid;
 
     /**
-     * @var integer 规则序号
-     */
-    public $Sequence;
-
-    /**
-     * @var string 规则生效范围，SG安全组，LH轻量服务器
+     * @var string 写入后的规则生效范围；SG 表示安全组，LH 表示轻量应用服务器，组合范围以逗号分隔。
      */
     public $Scope;
 
     /**
-     * @param string $SourceContent 访问源示例：
+     * @var integer 服务端写入后的实际规则顺序。
+     */
+    public $Sequence;
+
+    /**
+     * @var string 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
 instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
+     */
+    public $SourceContent;
+
+    /**
+     * @param string $Description 写入规则的描述。
      * @param string $DestContent 访问目的示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -123,11 +117,17 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-     * @param string $Protocol 协议；TCP/UDP/ICMP/ANY
-     * @param string $Description 描述
-     * @param integer $RuleUuid 规则对应的唯一id
-     * @param integer $Sequence 规则序号
-     * @param string $Scope 规则生效范围，SG安全组，LH轻量服务器
+     * @param string $Protocol 写入规则的协议。普通 IPv4 规则返回 ANY、TCP、UDP 或 ICMP；使用服务模板时，Protocol 可省略或留空，此时返回空字符串；若仍显式填写 Protocol，则只接受 ANY 并返回 ANY。
+     * @param integer $RuleUuid 服务端写入后生成或采用的规则数据库 ID。
+     * @param string $Scope 写入后的规则生效范围；SG 表示安全组，LH 表示轻量应用服务器，组合范围以逗号分隔。
+     * @param integer $Sequence 服务端写入后的实际规则顺序。
+     * @param string $SourceContent 访问源示例：
+net：IP/CIDR(192.168.0.2)
+template：参数模板(ipm-dyodhpby)
+instance：资产实例(ins-123456)
+resourcegroup：资产分组(/全部分组/分组1/子分组1)
+tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+region：地域(ap-gaungzhou)
      */
     function __construct()
     {
@@ -142,8 +142,8 @@ region：地域(ap-gaungzhou)
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceContent",$param) and $param["SourceContent"] !== null) {
-            $this->SourceContent = $param["SourceContent"];
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
 
         if (array_key_exists("DestContent",$param) and $param["DestContent"] !== null) {
@@ -154,20 +154,20 @@ region：地域(ap-gaungzhou)
             $this->Protocol = $param["Protocol"];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
-        }
-
         if (array_key_exists("RuleUuid",$param) and $param["RuleUuid"] !== null) {
             $this->RuleUuid = $param["RuleUuid"];
+        }
+
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
         }
 
         if (array_key_exists("Sequence",$param) and $param["Sequence"] !== null) {
             $this->Sequence = $param["Sequence"];
         }
 
-        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
-            $this->Scope = $param["Scope"];
+        if (array_key_exists("SourceContent",$param) and $param["SourceContent"] !== null) {
+            $this->SourceContent = $param["SourceContent"];
         }
     }
 }

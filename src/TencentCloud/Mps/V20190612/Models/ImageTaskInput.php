@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiTryOnConfig(AiTryOnConfig $AiTryOnConfig) 设置<p>Ai 换装配置。</p>
  * @method AiPosterSuiteConfig getAiPosterSuiteConfig() 获取<p>Ai套图配置。</p>
  * @method void setAiPosterSuiteConfig(AiPosterSuiteConfig $AiPosterSuiteConfig) 设置<p>Ai套图配置。</p>
+ * @method CreateImageConfig getCreateImageConfig() 获取<p>生图任务配置</p>
+ * @method void setCreateImageConfig(CreateImageConfig $CreateImageConfig) 设置<p>生图任务配置</p>
  */
 class ImageTaskInput extends AbstractModel
 {
@@ -92,6 +94,11 @@ class ImageTaskInput extends AbstractModel
     public $AiPosterSuiteConfig;
 
     /**
+     * @var CreateImageConfig <p>生图任务配置</p>
+     */
+    public $CreateImageConfig;
+
+    /**
      * @param ImageEncodeConfig $EncodeConfig <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageEnhanceConfig $EnhanceConfig <p>图片增强配置。</p>
@@ -104,6 +111,7 @@ class ImageTaskInput extends AbstractModel
      * @param ImageTransformConfig $TransformConfig <p>图片基础转换能力。</p>
      * @param AiTryOnConfig $AiTryOnConfig <p>Ai 换装配置。</p>
      * @param AiPosterSuiteConfig $AiPosterSuiteConfig <p>Ai套图配置。</p>
+     * @param CreateImageConfig $CreateImageConfig <p>生图任务配置</p>
      */
     function __construct()
     {
@@ -156,6 +164,11 @@ class ImageTaskInput extends AbstractModel
         if (array_key_exists("AiPosterSuiteConfig",$param) and $param["AiPosterSuiteConfig"] !== null) {
             $this->AiPosterSuiteConfig = new AiPosterSuiteConfig();
             $this->AiPosterSuiteConfig->deserialize($param["AiPosterSuiteConfig"]);
+        }
+
+        if (array_key_exists("CreateImageConfig",$param) and $param["CreateImageConfig"] !== null) {
+            $this->CreateImageConfig = new CreateImageConfig();
+            $this->CreateImageConfig->deserialize($param["CreateImageConfig"]);
         }
     }
 }

@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSubnetResourceDashboard返回参数结构体
+ * GenerateInternalTable返回参数结构体
  *
- * @method array getResourceStatisticsSet() 获取<p>资源统计结果。</p>
- * @method void setResourceStatisticsSet(array $ResourceStatisticsSet) 设置<p>资源统计结果。</p>
+ * @method Execution getExecution() 获取返回sql
+ * @method void setExecution(Execution $Execution) 设置返回sql
+ * @method boolean getIsTIcebergSql() 获取是否tciceberg
+ * @method void setIsTIcebergSql(boolean $IsTIcebergSql) 设置是否tciceberg
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSubnetResourceDashboardResponse extends AbstractModel
+class GenerateInternalTableResponse extends AbstractModel
 {
     /**
-     * @var array <p>资源统计结果。</p>
+     * @var Execution 返回sql
      */
-    public $ResourceStatisticsSet;
+    public $Execution;
+
+    /**
+     * @var boolean 是否tciceberg
+     */
+    public $IsTIcebergSql;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeSubnetResourceDashboardResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ResourceStatisticsSet <p>资源统计结果。</p>
+     * @param Execution $Execution 返回sql
+     * @param boolean $IsTIcebergSql 是否tciceberg
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +62,13 @@ class DescribeSubnetResourceDashboardResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceStatisticsSet",$param) and $param["ResourceStatisticsSet"] !== null) {
-            $this->ResourceStatisticsSet = [];
-            foreach ($param["ResourceStatisticsSet"] as $key => $value){
-                $obj = new ResourceStatistics();
-                $obj->deserialize($value);
-                array_push($this->ResourceStatisticsSet, $obj);
-            }
+        if (array_key_exists("Execution",$param) and $param["Execution"] !== null) {
+            $this->Execution = new Execution();
+            $this->Execution->deserialize($param["Execution"]);
+        }
+
+        if (array_key_exists("IsTIcebergSql",$param) and $param["IsTIcebergSql"] !== null) {
+            $this->IsTIcebergSql = $param["IsTIcebergSql"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

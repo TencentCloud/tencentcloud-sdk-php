@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssm\V20190923\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRotationHistory请求参数结构体
+ * AlterTableComment请求参数结构体
  *
- * @method string getSecretName() 获取<p>指定需要获取凭据轮转历史的凭据名称。</p>
- * @method void setSecretName(string $SecretName) 设置<p>指定需要获取凭据轮转历史的凭据名称。</p>
+ * @method TableBaseInfo getTableBaseInfo() 获取修改表的基本信息
+ * @method void setTableBaseInfo(TableBaseInfo $TableBaseInfo) 设置修改表的基本信息
  */
-class DescribeRotationHistoryRequest extends AbstractModel
+class AlterTableCommentRequest extends AbstractModel
 {
     /**
-     * @var string <p>指定需要获取凭据轮转历史的凭据名称。</p>
+     * @var TableBaseInfo 修改表的基本信息
      */
-    public $SecretName;
+    public $TableBaseInfo;
 
     /**
-     * @param string $SecretName <p>指定需要获取凭据轮转历史的凭据名称。</p>
+     * @param TableBaseInfo $TableBaseInfo 修改表的基本信息
      */
     function __construct()
     {
@@ -46,8 +46,9 @@ class DescribeRotationHistoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists("TableBaseInfo",$param) and $param["TableBaseInfo"] !== null) {
+            $this->TableBaseInfo = new TableBaseInfo();
+            $this->TableBaseInfo->deserialize($param["TableBaseInfo"]);
         }
     }
 }

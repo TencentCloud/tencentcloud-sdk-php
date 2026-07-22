@@ -20,15 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规则关联的beta任务
  *
+ * @method string getLastTime() 获取上次执行时间
+ * @method void setLastTime(string $LastTime) 设置上次执行时间
  * @method integer getTaskId() 获取任务id
  * @method void setTaskId(integer $TaskId) 设置任务id
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
- * @method string getLastTime() 获取上次执行时间
- * @method void setLastTime(string $LastTime) 设置上次执行时间
  */
 class BetaInfoByACL extends AbstractModel
 {
+    /**
+     * @var string 上次执行时间
+     */
+    public $LastTime;
+
     /**
      * @var integer 任务id
      */
@@ -40,14 +45,9 @@ class BetaInfoByACL extends AbstractModel
     public $TaskName;
 
     /**
-     * @var string 上次执行时间
-     */
-    public $LastTime;
-
-    /**
+     * @param string $LastTime 上次执行时间
      * @param integer $TaskId 任务id
      * @param string $TaskName 任务名称
-     * @param string $LastTime 上次执行时间
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class BetaInfoByACL extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("LastTime",$param) and $param["LastTime"] !== null) {
+            $this->LastTime = $param["LastTime"];
+        }
+
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
             $this->TaskName = $param["TaskName"];
-        }
-
-        if (array_key_exists("LastTime",$param) and $param["LastTime"] !== null) {
-            $this->LastTime = $param["LastTime"];
         }
     }
 }

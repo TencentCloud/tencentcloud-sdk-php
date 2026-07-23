@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHotPeriod(integer $HotPeriod) 设置<p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
  * @method integer getEncryption() 获取<p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>0或者不传： 不加密<br>1：kms-cls 云产品密钥加密</p><p>支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo</p>
  * @method void setEncryption(integer $Encryption) 设置<p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>0或者不传： 不加密<br>1：kms-cls 云产品密钥加密</p><p>支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo</p>
+ * @method CustomKmsInfo getCustomKmsInfo() 获取<p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时有效。</p>
+ * @method void setCustomKmsInfo(CustomKmsInfo $CustomKmsInfo) 设置<p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时有效。</p>
  * @method integer getBizType() 获取<p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
  * @method void setBizType(integer $BizType) 设置<p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
  * @method string getTopicId() 获取<p>主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
@@ -113,6 +115,11 @@ class CreateTopicRequest extends AbstractModel
     public $Encryption;
 
     /**
+     * @var CustomKmsInfo <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时有效。</p>
+     */
+    public $CustomKmsInfo;
+
+    /**
      * @var integer <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
      */
     public $BizType;
@@ -154,6 +161,7 @@ class CreateTopicRequest extends AbstractModel
      * @param string $Describes <p>主题描述</p>
      * @param integer $HotPeriod <p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
      * @param integer $Encryption <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>0或者不传： 不加密<br>1：kms-cls 云产品密钥加密</p><p>支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo</p>
+     * @param CustomKmsInfo $CustomKmsInfo <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时有效。</p>
      * @param integer $BizType <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
      * @param string $TopicId <p>主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
      * @param boolean $IsWebTracking <p>免鉴权开关。 false：关闭； true：开启。默认为false。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。指标主题不支持该配置。</p>
@@ -221,6 +229,11 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
             $this->Encryption = $param["Encryption"];
+        }
+
+        if (array_key_exists("CustomKmsInfo",$param) and $param["CustomKmsInfo"] !== null) {
+            $this->CustomKmsInfo = new CustomKmsInfo();
+            $this->CustomKmsInfo->deserialize($param["CustomKmsInfo"]);
         }
 
         if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssessEnvironmentRisk请求参数结构体
  *
- * @method string getUserIp() 获取<p>客户端 IP 地址</p>
- * @method void setUserIp(string $UserIp) 设置<p>客户端 IP 地址</p>
+ * @method string getUserIp() 获取<p>客户端 IP 地址（IPv4或IPv6）</p>
+ * @method void setUserIp(string $UserIp) 设置<p>客户端 IP 地址（IPv4或IPv6）</p>
  */
 class AssessEnvironmentRiskRequest extends AbstractModel
 {
     /**
-     * @var string <p>客户端 IP 地址</p>
+     * @var string <p>客户端 IP 地址（IPv4或IPv6）</p>
      */
     public $UserIp;
 
     /**
-     * @param string $UserIp <p>客户端 IP 地址</p>
+     * @param string $UserIp <p>客户端 IP 地址（IPv4或IPv6）</p>
      */
     function __construct()
     {

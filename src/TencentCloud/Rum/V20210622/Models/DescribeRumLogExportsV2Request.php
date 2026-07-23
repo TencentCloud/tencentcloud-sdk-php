@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRumLogExportsV2请求参数结构体
  *
- * @method integer getPageSize() 获取<p>Page size</p>
- * @method void setPageSize(integer $PageSize) 设置<p>Page size</p>
- * @method integer getPageNum() 获取<p>Page number</p>
- * @method void setPageNum(integer $PageNum) 设置<p>Page number</p>
- * @method integer getID() 获取<p>Project ID</p>
- * @method void setID(integer $ID) 设置<p>Project ID</p>
+ * @method integer getPageSize() 获取<p>每页返回任务数</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页返回任务数</p>
+ * @method integer getPageNum() 获取<p>当前页码</p>
+ * @method void setPageNum(integer $PageNum) 设置<p>当前页码</p>
+ * @method integer getID() 获取<p>项目ID</p>
+ * @method void setID(integer $ID) 设置<p>项目ID</p>
  */
 class DescribeRumLogExportsV2Request extends AbstractModel
 {
     /**
-     * @var integer <p>Page size</p>
+     * @var integer <p>每页返回任务数</p>
      */
     public $PageSize;
 
     /**
-     * @var integer <p>Page number</p>
+     * @var integer <p>当前页码</p>
      */
     public $PageNum;
 
     /**
-     * @var integer <p>Project ID</p>
+     * @var integer <p>项目ID</p>
      */
     public $ID;
 
     /**
-     * @param integer $PageSize <p>Page size</p>
-     * @param integer $PageNum <p>Page number</p>
-     * @param integer $ID <p>Project ID</p>
+     * @param integer $PageSize <p>每页返回任务数</p>
+     * @param integer $PageNum <p>当前页码</p>
+     * @param integer $ID <p>项目ID</p>
      */
     function __construct()
     {

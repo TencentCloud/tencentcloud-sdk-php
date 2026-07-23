@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeviceToken() 获取<p>用户设备指纹token标识，在您的网站或者应用程序中集成设备指纹的SDK后获取</p>
  * @method void setDeviceToken(string $DeviceToken) 设置<p>用户设备指纹token标识，在您的网站或者应用程序中集成设备指纹的SDK后获取</p>
- * @method string getUserIp() 获取<p>客户端 IP 地址</p>
- * @method void setUserIp(string $UserIp) 设置<p>客户端 IP 地址</p>
+ * @method string getUserIp() 获取<p>客户端 IP 地址（IPv4或IPv6）</p>
+ * @method void setUserIp(string $UserIp) 设置<p>客户端 IP 地址（IPv4或IPv6）</p>
  */
 class AssessDeviceRiskPremiumProRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AssessDeviceRiskPremiumProRequest extends AbstractModel
     public $DeviceToken;
 
     /**
-     * @var string <p>客户端 IP 地址</p>
+     * @var string <p>客户端 IP 地址（IPv4或IPv6）</p>
      */
     public $UserIp;
 
     /**
      * @param string $DeviceToken <p>用户设备指纹token标识，在您的网站或者应用程序中集成设备指纹的SDK后获取</p>
-     * @param string $UserIp <p>客户端 IP 地址</p>
+     * @param string $UserIp <p>客户端 IP 地址（IPv4或IPv6）</p>
      */
     function __construct()
     {

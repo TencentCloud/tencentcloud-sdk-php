@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 路由表对象
  *
- * @method string getVpcId() 获取VPC实例ID。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。
- * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
- * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
- * @method string getRouteTableName() 获取路由表名称。
- * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
- * @method array getAssociationSet() 获取路由表关联关系。
- * @method void setAssociationSet(array $AssociationSet) 设置路由表关联关系。
- * @method array getRouteSet() 获取IPv4路由策略集合。
- * @method void setRouteSet(array $RouteSet) 设置IPv4路由策略集合。
- * @method boolean getMain() 获取是否默认路由表。
- * @method void setMain(boolean $Main) 设置是否默认路由表。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method array getTagSet() 获取标签键值对。
- * @method void setTagSet(array $TagSet) 设置标签键值对。
- * @method array getLocalCidrForCcn() 获取local路由是否发布云联网。
- * @method void setLocalCidrForCcn(array $LocalCidrForCcn) 设置local路由是否发布云联网。
+ * @method string getVpcId() 获取<p>VPC实例ID。</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC实例ID。</p>
+ * @method string getRouteTableId() 获取<p>路由表实例ID，例如：rtb-azd4dt1c。</p>
+ * @method void setRouteTableId(string $RouteTableId) 设置<p>路由表实例ID，例如：rtb-azd4dt1c。</p>
+ * @method string getRouteTableName() 获取<p>路由表名称。</p>
+ * @method void setRouteTableName(string $RouteTableName) 设置<p>路由表名称。</p>
+ * @method array getAssociationSet() 获取<p>路由表关联关系。</p>
+ * @method void setAssociationSet(array $AssociationSet) 设置<p>路由表关联关系。</p>
+ * @method array getRouteSet() 获取<p>IPv4路由策略集合。</p>
+ * @method void setRouteSet(array $RouteSet) 设置<p>IPv4路由策略集合。</p>
+ * @method boolean getMain() 获取<p>是否默认路由表。</p>
+ * @method void setMain(boolean $Main) 设置<p>是否默认路由表。</p>
+ * @method string getCreatedTime() 获取<p>创建时间。</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间。</p>
+ * @method array getTagSet() 获取<p>标签键值对。</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签键值对。</p>
+ * @method array getLocalCidrForCcn() 获取<p>local路由是否发布云联网。</p>
+ * @method void setLocalCidrForCcn(array $LocalCidrForCcn) 设置<p>local路由是否发布云联网。</p>
  */
 class RouteTable extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。
+     * @var string <p>VPC实例ID。</p>
      */
     public $VpcId;
 
     /**
-     * @var string 路由表实例ID，例如：rtb-azd4dt1c。
+     * @var string <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
      */
     public $RouteTableId;
 
     /**
-     * @var string 路由表名称。
+     * @var string <p>路由表名称。</p>
      */
     public $RouteTableName;
 
     /**
-     * @var array 路由表关联关系。
+     * @var array <p>路由表关联关系。</p>
      */
     public $AssociationSet;
 
     /**
-     * @var array IPv4路由策略集合。
+     * @var array <p>IPv4路由策略集合。</p>
      */
     public $RouteSet;
 
     /**
-     * @var boolean 是否默认路由表。
+     * @var boolean <p>是否默认路由表。</p>
      */
     public $Main;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreatedTime;
 
     /**
-     * @var array 标签键值对。
+     * @var array <p>标签键值对。</p>
      */
     public $TagSet;
 
     /**
-     * @var array local路由是否发布云联网。
+     * @var array <p>local路由是否发布云联网。</p>
      */
     public $LocalCidrForCcn;
 
     /**
-     * @param string $VpcId VPC实例ID。
-     * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param string $RouteTableName 路由表名称。
-     * @param array $AssociationSet 路由表关联关系。
-     * @param array $RouteSet IPv4路由策略集合。
-     * @param boolean $Main 是否默认路由表。
-     * @param string $CreatedTime 创建时间。
-     * @param array $TagSet 标签键值对。
-     * @param array $LocalCidrForCcn local路由是否发布云联网。
+     * @param string $VpcId <p>VPC实例ID。</p>
+     * @param string $RouteTableId <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
+     * @param string $RouteTableName <p>路由表名称。</p>
+     * @param array $AssociationSet <p>路由表关联关系。</p>
+     * @param array $RouteSet <p>IPv4路由策略集合。</p>
+     * @param boolean $Main <p>是否默认路由表。</p>
+     * @param string $CreatedTime <p>创建时间。</p>
+     * @param array $TagSet <p>标签键值对。</p>
+     * @param array $LocalCidrForCcn <p>local路由是否发布云联网。</p>
      */
     function __construct()
     {

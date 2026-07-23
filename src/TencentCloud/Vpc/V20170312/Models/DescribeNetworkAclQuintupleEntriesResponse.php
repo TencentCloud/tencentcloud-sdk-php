@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNetworkAclQuintupleEntries返回参数结构体
  *
- * @method array getNetworkAclQuintupleSet() 获取网络ACL条目列表（NetworkAclTuple5Entry）
- * @method void setNetworkAclQuintupleSet(array $NetworkAclQuintupleSet) 设置网络ACL条目列表（NetworkAclTuple5Entry）
- * @method integer getTotalCount() 获取符合条件的实例数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
+ * @method array getNetworkAclQuintupleSet() 获取<p>网络ACL条目列表（NetworkAclTuple5Entry）</p>
+ * @method void setNetworkAclQuintupleSet(array $NetworkAclQuintupleSet) 设置<p>网络ACL条目列表（NetworkAclTuple5Entry）</p>
+ * @method integer getTotalCount() 获取<p>符合条件的实例数量。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的实例数量。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeNetworkAclQuintupleEntriesResponse extends AbstractModel
 {
     /**
-     * @var array 网络ACL条目列表（NetworkAclTuple5Entry）
+     * @var array <p>网络ACL条目列表（NetworkAclTuple5Entry）</p>
      */
     public $NetworkAclQuintupleSet;
 
     /**
-     * @var integer 符合条件的实例数量。
+     * @var integer <p>符合条件的实例数量。</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeNetworkAclQuintupleEntriesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $NetworkAclQuintupleSet 网络ACL条目列表（NetworkAclTuple5Entry）
-     * @param integer $TotalCount 符合条件的实例数量。
+     * @param array $NetworkAclQuintupleSet <p>网络ACL条目列表（NetworkAclTuple5Entry）</p>
+     * @param integer $TotalCount <p>符合条件的实例数量。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

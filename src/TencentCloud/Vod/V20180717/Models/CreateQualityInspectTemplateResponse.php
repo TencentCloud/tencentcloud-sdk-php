@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateQualityInspectTemplate返回参数结构体
  *
- * @method integer getDefinition() 获取音画质检测模板 ID。
- * @method void setDefinition(integer $Definition) 设置音画质检测模板 ID。
+ * @method integer getDefinition() 获取<p>音画质检测模板 ID。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>音画质检测模板 ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateQualityInspectTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer 音画质检测模板 ID。
+     * @var integer <p>音画质检测模板 ID。</p>
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class CreateQualityInspectTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Definition 音画质检测模板 ID。
+     * @param integer $Definition <p>音画质检测模板 ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

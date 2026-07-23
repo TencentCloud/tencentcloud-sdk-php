@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorCode(integer $ErrorCode) 设置<p>错误码，成功时返回0</p>
  * @method string getMsg() 获取<p>错误信息，成功时返回success</p>
  * @method void setMsg(string $Msg) 设置<p>错误信息，成功时返回success</p>
+ * @method integer getTotalCount() 获取<p>符合查询条件的音色总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合查询条件的音色总数</p>
  * @method array getVoices() 获取<p>可用音色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoices(array $Voices) 设置<p>可用音色列表</p>
@@ -44,6 +46,11 @@ class DescribeVoicesResponse extends AbstractModel
     public $Msg;
 
     /**
+     * @var integer <p>符合查询条件的音色总数</p>
+     */
+    public $TotalCount;
+
+    /**
      * @var array <p>可用音色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -57,6 +64,7 @@ class DescribeVoicesResponse extends AbstractModel
     /**
      * @param integer $ErrorCode <p>错误码，成功时返回0</p>
      * @param string $Msg <p>错误信息，成功时返回success</p>
+     * @param integer $TotalCount <p>符合查询条件的音色总数</p>
      * @param array $Voices <p>可用音色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -80,6 +88,10 @@ class DescribeVoicesResponse extends AbstractModel
 
         if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
             $this->Msg = $param["Msg"];
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("Voices",$param) and $param["Voices"] !== null) {

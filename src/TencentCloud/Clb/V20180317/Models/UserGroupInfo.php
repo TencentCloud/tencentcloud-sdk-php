@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBudgetName(string $BudgetName) 设置<p>关联的Budget名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPromptId() 获取<p>关联的提示词 ID。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p><p>参数格式：pmt-1a2b3c4d</p>
+ * @method void setPromptId(string $PromptId) 设置<p>关联的提示词 ID。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p><p>参数格式：pmt-1a2b3c4d</p>
+ * @method string getPromptVersion() 获取<p>关联的提示词版本。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+ * @method void setPromptVersion(string $PromptVersion) 设置<p>关联的提示词版本。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+ * @method string getPromptName() 获取<p>关联的提示词名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+ * @method void setPromptName(string $PromptName) 设置<p>关联的提示词名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
  * @method array getCreditUsageSet() 获取<p>用户组多刷新周期 Credit 使用情况。</p><p>无多周期预算时为空数组。</p>
  * @method void setCreditUsageSet(array $CreditUsageSet) 设置<p>用户组多刷新周期 Credit 使用情况。</p><p>无多周期预算时为空数组。</p>
  * @method integer getKeyCount() 获取<p>用户组当前包含的 Key 数量。「未分组」虚拟分组（ugrp-ungrouped）返回该模型路由实例下未归属任何用户组的 Key 数量。</p>
@@ -96,6 +102,21 @@ class UserGroupInfo extends AbstractModel
     public $BudgetName;
 
     /**
+     * @var string <p>关联的提示词 ID。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p><p>参数格式：pmt-1a2b3c4d</p>
+     */
+    public $PromptId;
+
+    /**
+     * @var string <p>关联的提示词版本。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+     */
+    public $PromptVersion;
+
+    /**
+     * @var string <p>关联的提示词名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+     */
+    public $PromptName;
+
+    /**
      * @var array <p>用户组多刷新周期 Credit 使用情况。</p><p>无多周期预算时为空数组。</p>
      */
     public $CreditUsageSet;
@@ -131,6 +152,9 @@ class UserGroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BudgetName <p>关联的Budget名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PromptId <p>关联的提示词 ID。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p><p>参数格式：pmt-1a2b3c4d</p>
+     * @param string $PromptVersion <p>关联的提示词版本。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+     * @param string $PromptName <p>关联的提示词名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
      * @param array $CreditUsageSet <p>用户组多刷新周期 Credit 使用情况。</p><p>无多周期预算时为空数组。</p>
      * @param integer $KeyCount <p>用户组当前包含的 Key 数量。「未分组」虚拟分组（ugrp-ungrouped）返回该模型路由实例下未归属任何用户组的 Key 数量。</p>
      * @param array $Tags <p>标签列表。「未分组」虚拟分组为空数组。</p>
@@ -180,6 +204,18 @@ class UserGroupInfo extends AbstractModel
 
         if (array_key_exists("BudgetName",$param) and $param["BudgetName"] !== null) {
             $this->BudgetName = $param["BudgetName"];
+        }
+
+        if (array_key_exists("PromptId",$param) and $param["PromptId"] !== null) {
+            $this->PromptId = $param["PromptId"];
+        }
+
+        if (array_key_exists("PromptVersion",$param) and $param["PromptVersion"] !== null) {
+            $this->PromptVersion = $param["PromptVersion"];
+        }
+
+        if (array_key_exists("PromptName",$param) and $param["PromptName"] !== null) {
+            $this->PromptName = $param["PromptName"];
         }
 
         if (array_key_exists("CreditUsageSet",$param) and $param["CreditUsageSet"] !== null) {

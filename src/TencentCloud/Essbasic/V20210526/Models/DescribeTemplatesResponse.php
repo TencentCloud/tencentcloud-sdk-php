@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTemplates返回参数结构体
  *
- * @method array getTemplates() 获取模板详情列表数据
- * @method void setTemplates(array $Templates) 设置模板详情列表数据
- * @method integer getTotalCount() 获取查询到的模板总数
- * @method void setTotalCount(integer $TotalCount) 设置查询到的模板总数
- * @method integer getLimit() 获取每页返回的数据条数
- * @method void setLimit(integer $Limit) 设置每页返回的数据条数
- * @method integer getOffset() 获取查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
- * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
+ * @method array getTemplates() 获取<p>模板详情列表数据</p>
+ * @method void setTemplates(array $Templates) 设置<p>模板详情列表数据</p>
+ * @method integer getTotalCount() 获取<p>查询到的模板总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>查询到的模板总数</p>
+ * @method integer getLimit() 获取<p>每页返回的数据条数</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页返回的数据条数</p>
+ * @method integer getOffset() 获取<p>偏移量:从 0 开始，最大20000。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量:从 0 开始，最大20000。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTemplatesResponse extends AbstractModel
 {
     /**
-     * @var array 模板详情列表数据
+     * @var array <p>模板详情列表数据</p>
      */
     public $Templates;
 
     /**
-     * @var integer 查询到的模板总数
+     * @var integer <p>查询到的模板总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var integer 每页返回的数据条数
+     * @var integer <p>每页返回的数据条数</p>
      */
     public $Limit;
 
     /**
-     * @var integer 查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
+     * @var integer <p>偏移量:从 0 开始，最大20000。</p>
      */
     public $Offset;
 
@@ -59,10 +59,10 @@ class DescribeTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Templates 模板详情列表数据
-     * @param integer $TotalCount 查询到的模板总数
-     * @param integer $Limit 每页返回的数据条数
-     * @param integer $Offset 查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
+     * @param array $Templates <p>模板详情列表数据</p>
+     * @param integer $TotalCount <p>查询到的模板总数</p>
+     * @param integer $Limit <p>每页返回的数据条数</p>
+     * @param integer $Offset <p>偏移量:从 0 开始，最大20000。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

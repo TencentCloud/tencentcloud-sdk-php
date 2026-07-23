@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
  * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
- * @method string getName() 获取<p>名称，最大长度不能超过60个字节。</p>
- * @method void setName(string $Name) 设置<p>名称，最大长度不能超过60个字节。</p>
+ * @method string getName() 获取<p>名称，最大长度不能超过128个字符。</p>
+ * @method void setName(string $Name) 设置<p>名称，最大长度不能超过128个字符。</p>
  * @method PortRanges getPortRanges() 获取<p>端口范围。</p>
  * @method void setPortRanges(PortRanges $PortRanges) 设置<p>端口范围。</p>
- * @method string getDescription() 获取<p>描述信息，最大长度不能超过100个字节。</p>
- * @method void setDescription(string $Description) 设置<p>描述信息，最大长度不能超过100个字节。</p>
+ * @method string getDescription() 获取<p>描述信息，最大长度不能超过100个字符。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息，最大长度不能超过100个字符。</p>
  * @method string getListenerType() 获取<p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
  * @method void setListenerType(string $ListenerType) 设置<p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
  * @method string getProtocol() 获取<p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
@@ -61,7 +61,7 @@ class CreateListenerRequest extends AbstractModel
     public $GlobalAcceleratorId;
 
     /**
-     * @var string <p>名称，最大长度不能超过60个字节。</p>
+     * @var string <p>名称，最大长度不能超过128个字符。</p>
      */
     public $Name;
 
@@ -71,7 +71,7 @@ class CreateListenerRequest extends AbstractModel
     public $PortRanges;
 
     /**
-     * @var string <p>描述信息，最大长度不能超过100个字节。</p>
+     * @var string <p>描述信息，最大长度不能超过100个字符。</p>
      */
     public $Description;
 
@@ -137,9 +137,9 @@ class CreateListenerRequest extends AbstractModel
 
     /**
      * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
-     * @param string $Name <p>名称，最大长度不能超过60个字节。</p>
+     * @param string $Name <p>名称，最大长度不能超过128个字符。</p>
      * @param PortRanges $PortRanges <p>端口范围。</p>
-     * @param string $Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * @param string $Description <p>描述信息，最大长度不能超过100个字符。</p>
      * @param string $ListenerType <p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
      * @param string $Protocol <p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
      * @param integer $IdleTimeout <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p>

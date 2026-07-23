@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubnets返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的实例数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
- * @method array getSubnetSet() 获取子网对象。
- * @method void setSubnetSet(array $SubnetSet) 设置子网对象。
- * @method string getNextToken() 获取如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
- * @method void setNextToken(string $NextToken) 设置如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+ * @method integer getTotalCount() 获取<p>符合条件的实例数量。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的实例数量。</p>
+ * @method array getSubnetSet() 获取<p>子网对象。</p>
+ * @method void setSubnetSet(array $SubnetSet) 设置<p>子网对象。</p>
+ * @method string getNextToken() 获取<p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+ * @method void setNextToken(string $NextToken) 设置<p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSubnetsResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的实例数量。
+     * @var integer <p>符合条件的实例数量。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 子网对象。
+     * @var array <p>子网对象。</p>
      */
     public $SubnetSet;
 
     /**
-     * @var string 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     * @var string <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
      */
     public $NextToken;
 
@@ -52,9 +52,9 @@ class DescribeSubnetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的实例数量。
-     * @param array $SubnetSet 子网对象。
-     * @param string $NextToken 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     * @param integer $TotalCount <p>符合条件的实例数量。</p>
+     * @param array $SubnetSet <p>子网对象。</p>
+     * @param string $NextToken <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

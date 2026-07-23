@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSparkAppTask请求参数结构体
  *
- * @method string getJobName() 获取spark作业名
- * @method void setJobName(string $JobName) 设置spark作业名
- * @method string getCmdArgs() 获取spark作业程序入参，以空格分隔；一般用于周期性调用使用
- * @method void setCmdArgs(string $CmdArgs) 设置spark作业程序入参，以空格分隔；一般用于周期性调用使用
- * @method array getSourceInfo() 获取任务来源信息
- * @method void setSourceInfo(array $SourceInfo) 设置任务来源信息
+ * @method string getJobName() 获取<p>spark作业名</p>
+ * @method void setJobName(string $JobName) 设置<p>spark作业名</p>
+ * @method string getCmdArgs() 获取<p>spark作业程序入参，以空格分隔；一般用于周期性调用使用</p>
+ * @method void setCmdArgs(string $CmdArgs) 设置<p>spark作业程序入参，以空格分隔；一般用于周期性调用使用</p>
+ * @method array getSourceInfo() 获取<p>任务来源信息</p>
+ * @method void setSourceInfo(array $SourceInfo) 设置<p>任务来源信息</p>
  */
 class CreateSparkAppTaskRequest extends AbstractModel
 {
     /**
-     * @var string spark作业名
+     * @var string <p>spark作业名</p>
      */
     public $JobName;
 
     /**
-     * @var string spark作业程序入参，以空格分隔；一般用于周期性调用使用
+     * @var string <p>spark作业程序入参，以空格分隔；一般用于周期性调用使用</p>
      */
     public $CmdArgs;
 
     /**
-     * @var array 任务来源信息
+     * @var array <p>任务来源信息</p>
      */
     public $SourceInfo;
 
     /**
-     * @param string $JobName spark作业名
-     * @param string $CmdArgs spark作业程序入参，以空格分隔；一般用于周期性调用使用
-     * @param array $SourceInfo 任务来源信息
+     * @param string $JobName <p>spark作业名</p>
+     * @param string $CmdArgs <p>spark作业程序入参，以空格分隔；一般用于周期性调用使用</p>
+     * @param array $SourceInfo <p>任务来源信息</p>
      */
     function __construct()
     {

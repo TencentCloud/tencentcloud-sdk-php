@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 私有网络(VPC)对象。
  *
- * @method string getVpcName() 获取`VPC`名称。
- * @method void setVpcName(string $VpcName) 设置`VPC`名称。
- * @method string getVpcId() 获取`VPC`实例`ID`，例如：vpc-azd4dt1c。
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，例如：vpc-azd4dt1c。
- * @method string getCidrBlock() 获取`VPC`的`IPv4` `CIDR`。
- * @method void setCidrBlock(string $CidrBlock) 设置`VPC`的`IPv4` `CIDR`。
- * @method boolean getIsDefault() 获取是否默认`VPC`。
- * @method void setIsDefault(boolean $IsDefault) 设置是否默认`VPC`。
- * @method boolean getEnableMulticast() 获取是否开启组播。
- * @method void setEnableMulticast(boolean $EnableMulticast) 设置是否开启组播。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method array getDnsServerSet() 获取`DNS`列表。
- * @method void setDnsServerSet(array $DnsServerSet) 设置`DNS`列表。
- * @method string getDomainName() 获取`DHCP`域名选项值。
- * @method void setDomainName(string $DomainName) 设置`DHCP`域名选项值。
- * @method string getDhcpOptionsId() 获取`DHCP`选项集`ID`。
- * @method void setDhcpOptionsId(string $DhcpOptionsId) 设置`DHCP`选项集`ID`。
- * @method boolean getEnableDhcp() 获取是否开启`DHCP`。
- * @method void setEnableDhcp(boolean $EnableDhcp) 设置是否开启`DHCP`。
- * @method string getIpv6CidrBlock() 获取`VPC`的`IPv6` `CIDR`。
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置`VPC`的`IPv6` `CIDR`。
- * @method array getTagSet() 获取标签键值对
- * @method void setTagSet(array $TagSet) 设置标签键值对
- * @method array getAssistantCidrSet() 获取辅助CIDR
- * @method void setAssistantCidrSet(array $AssistantCidrSet) 设置辅助CIDR
- * @method boolean getEnableRouteVpcPublish() 获取vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
- * @method void setEnableRouteVpcPublish(boolean $EnableRouteVpcPublish) 设置vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
- * @method array getIpv6CidrBlockSet() 获取返回多运营商IPv6 Cidr Block
- * @method void setIpv6CidrBlockSet(array $Ipv6CidrBlockSet) 设置返回多运营商IPv6 Cidr Block
- * @method boolean getEnableRouteVpcPublishIpv6() 获取vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
- * @method void setEnableRouteVpcPublishIpv6(boolean $EnableRouteVpcPublishIpv6) 设置vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+ * @method string getVpcName() 获取<p><code>VPC</code>名称。</p>
+ * @method void setVpcName(string $VpcName) 设置<p><code>VPC</code>名称。</p>
+ * @method string getVpcId() 获取<p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p>
+ * @method void setVpcId(string $VpcId) 设置<p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p>
+ * @method string getCidrBlock() 获取<p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p>
+ * @method void setCidrBlock(string $CidrBlock) 设置<p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p>
+ * @method boolean getIsDefault() 获取<p>是否默认<code>VPC</code>。</p>
+ * @method void setIsDefault(boolean $IsDefault) 设置<p>是否默认<code>VPC</code>。</p>
+ * @method boolean getEnableMulticast() 获取<p>是否开启组播。</p>
+ * @method void setEnableMulticast(boolean $EnableMulticast) 设置<p>是否开启组播。</p>
+ * @method string getCreatedTime() 获取<p>创建时间。</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间。</p>
+ * @method array getDnsServerSet() 获取<p><code>DNS</code>列表。</p>
+ * @method void setDnsServerSet(array $DnsServerSet) 设置<p><code>DNS</code>列表。</p>
+ * @method string getDomainName() 获取<p><code>DHCP</code>域名选项值。</p>
+ * @method void setDomainName(string $DomainName) 设置<p><code>DHCP</code>域名选项值。</p>
+ * @method string getDhcpOptionsId() 获取<p><code>DHCP</code>选项集<code>ID</code>。</p>
+ * @method void setDhcpOptionsId(string $DhcpOptionsId) 设置<p><code>DHCP</code>选项集<code>ID</code>。</p>
+ * @method boolean getEnableDhcp() 获取<p>是否开启<code>DHCP</code>。</p>
+ * @method void setEnableDhcp(boolean $EnableDhcp) 设置<p>是否开启<code>DHCP</code>。</p>
+ * @method string getIpv6CidrBlock() 获取<p><code>VPC</code>的<code>IPv6</code> <code>CIDR</code>。</p>
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置<p><code>VPC</code>的<code>IPv6</code> <code>CIDR</code>。</p>
+ * @method array getTagSet() 获取<p>标签键值对</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签键值对</p>
+ * @method array getAssistantCidrSet() 获取<p>辅助CIDR</p>
+ * @method void setAssistantCidrSet(array $AssistantCidrSet) 设置<p>辅助CIDR</p>
+ * @method boolean getEnableRouteVpcPublish() 获取<p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p>
+ * @method void setEnableRouteVpcPublish(boolean $EnableRouteVpcPublish) 设置<p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p>
+ * @method array getIpv6CidrBlockSet() 获取<p>返回多运营商IPv6 Cidr Block</p>
+ * @method void setIpv6CidrBlockSet(array $Ipv6CidrBlockSet) 设置<p>返回多运营商IPv6 Cidr Block</p>
+ * @method boolean getEnableRouteVpcPublishIpv6() 获取<p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
+ * @method void setEnableRouteVpcPublishIpv6(boolean $EnableRouteVpcPublishIpv6) 设置<p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
  */
 class Vpc extends AbstractModel
 {
     /**
-     * @var string `VPC`名称。
+     * @var string <p><code>VPC</code>名称。</p>
      */
     public $VpcName;
 
     /**
-     * @var string `VPC`实例`ID`，例如：vpc-azd4dt1c。
+     * @var string <p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p>
      */
     public $VpcId;
 
     /**
-     * @var string `VPC`的`IPv4` `CIDR`。
+     * @var string <p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p>
      */
     public $CidrBlock;
 
     /**
-     * @var boolean 是否默认`VPC`。
+     * @var boolean <p>是否默认<code>VPC</code>。</p>
      */
     public $IsDefault;
 
     /**
-     * @var boolean 是否开启组播。
+     * @var boolean <p>是否开启组播。</p>
      */
     public $EnableMulticast;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreatedTime;
 
     /**
-     * @var array `DNS`列表。
+     * @var array <p><code>DNS</code>列表。</p>
      */
     public $DnsServerSet;
 
     /**
-     * @var string `DHCP`域名选项值。
+     * @var string <p><code>DHCP</code>域名选项值。</p>
      */
     public $DomainName;
 
     /**
-     * @var string `DHCP`选项集`ID`。
+     * @var string <p><code>DHCP</code>选项集<code>ID</code>。</p>
      */
     public $DhcpOptionsId;
 
     /**
-     * @var boolean 是否开启`DHCP`。
+     * @var boolean <p>是否开启<code>DHCP</code>。</p>
      */
     public $EnableDhcp;
 
     /**
-     * @var string `VPC`的`IPv6` `CIDR`。
+     * @var string <p><code>VPC</code>的<code>IPv6</code> <code>CIDR</code>。</p>
      */
     public $Ipv6CidrBlock;
 
     /**
-     * @var array 标签键值对
+     * @var array <p>标签键值对</p>
      */
     public $TagSet;
 
     /**
-     * @var array 辅助CIDR
+     * @var array <p>辅助CIDR</p>
      */
     public $AssistantCidrSet;
 
     /**
-     * @var boolean vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     * @var boolean <p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p>
      */
     public $EnableRouteVpcPublish;
 
     /**
-     * @var array 返回多运营商IPv6 Cidr Block
+     * @var array <p>返回多运营商IPv6 Cidr Block</p>
      */
     public $Ipv6CidrBlockSet;
 
     /**
-     * @var boolean vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     * @var boolean <p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
      */
     public $EnableRouteVpcPublishIpv6;
 
     /**
-     * @param string $VpcName `VPC`名称。
-     * @param string $VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
-     * @param string $CidrBlock `VPC`的`IPv4` `CIDR`。
-     * @param boolean $IsDefault 是否默认`VPC`。
-     * @param boolean $EnableMulticast 是否开启组播。
-     * @param string $CreatedTime 创建时间。
-     * @param array $DnsServerSet `DNS`列表。
-     * @param string $DomainName `DHCP`域名选项值。
-     * @param string $DhcpOptionsId `DHCP`选项集`ID`。
-     * @param boolean $EnableDhcp 是否开启`DHCP`。
-     * @param string $Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
-     * @param array $TagSet 标签键值对
-     * @param array $AssistantCidrSet 辅助CIDR
-     * @param boolean $EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
-     * @param array $Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
-     * @param boolean $EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     * @param string $VpcName <p><code>VPC</code>名称。</p>
+     * @param string $VpcId <p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p>
+     * @param string $CidrBlock <p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p>
+     * @param boolean $IsDefault <p>是否默认<code>VPC</code>。</p>
+     * @param boolean $EnableMulticast <p>是否开启组播。</p>
+     * @param string $CreatedTime <p>创建时间。</p>
+     * @param array $DnsServerSet <p><code>DNS</code>列表。</p>
+     * @param string $DomainName <p><code>DHCP</code>域名选项值。</p>
+     * @param string $DhcpOptionsId <p><code>DHCP</code>选项集<code>ID</code>。</p>
+     * @param boolean $EnableDhcp <p>是否开启<code>DHCP</code>。</p>
+     * @param string $Ipv6CidrBlock <p><code>VPC</code>的<code>IPv6</code> <code>CIDR</code>。</p>
+     * @param array $TagSet <p>标签键值对</p>
+     * @param array $AssistantCidrSet <p>辅助CIDR</p>
+     * @param boolean $EnableRouteVpcPublish <p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p>
+     * @param array $Ipv6CidrBlockSet <p>返回多运营商IPv6 Cidr Block</p>
+     * @param boolean $EnableRouteVpcPublishIpv6 <p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
      */
     function __construct()
     {

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCancelTopicAsyncTaskID(string $CancelTopicAsyncTaskID) 设置<p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul>
  * @method integer getEncryption() 获取<p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
  * @method void setEncryption(integer $Encryption) 设置<p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
+ * @method CustomKmsInfo getCustomKmsInfo() 获取<p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时生效</p>
+ * @method void setCustomKmsInfo(CustomKmsInfo $CustomKmsInfo) 设置<p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时生效</p>
  * @method boolean getIsSourceFrom() 获取<p>开启记录公网来源ip和服务端接收时间</p>
  * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置<p>开启记录公网来源ip和服务端接收时间</p>
  * @method integer getBillingMode() 获取<p>计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul><p>默认值：0</p>
@@ -133,6 +135,11 @@ class ModifyTopicRequest extends AbstractModel
     public $Encryption;
 
     /**
+     * @var CustomKmsInfo <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时生效</p>
+     */
+    public $CustomKmsInfo;
+
+    /**
      * @var boolean <p>开启记录公网来源ip和服务端接收时间</p>
      */
     public $IsSourceFrom;
@@ -158,6 +165,7 @@ class ModifyTopicRequest extends AbstractModel
      * @param integer $PartitionCount <p>主题分区数量。<br>默认为1；<br>取值范围及约束：</p><ul><li>当输入值&lt;=0，系统自动调整为1。</li><li>如果未传MaxSplitPartitions，需要PartitionCount&lt;=50；</li><li>如果传递了MaxSplitPartitions，需要PartitionCount&lt;=MaxSplitPartitions；</li></ul>
      * @param string $CancelTopicAsyncTaskID <p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul>
      * @param integer $Encryption <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
+     * @param CustomKmsInfo $CustomKmsInfo <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时生效</p>
      * @param boolean $IsSourceFrom <p>开启记录公网来源ip和服务端接收时间</p>
      * @param integer $BillingMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul><p>默认值：0</p>
      */
@@ -238,6 +246,11 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
             $this->Encryption = $param["Encryption"];
+        }
+
+        if (array_key_exists("CustomKmsInfo",$param) and $param["CustomKmsInfo"] !== null) {
+            $this->CustomKmsInfo = new CustomKmsInfo();
+            $this->CustomKmsInfo->deserialize($param["CustomKmsInfo"]);
         }
 
         if (array_key_exists("IsSourceFrom",$param) and $param["IsSourceFrom"] !== null) {

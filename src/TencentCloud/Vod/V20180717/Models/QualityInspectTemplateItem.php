@@ -20,154 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音画质检测模板详情。
  *
- * @method integer getDefinition() 获取模板 ID。
- * @method void setDefinition(integer $Definition) 设置模板 ID。
- * @method string getType() 获取模板类型，可选值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
- * @method void setType(string $Type) 设置模板类型，可选值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
- * @method string getName() 获取模板名称。
- * @method void setName(string $Name) 设置模板名称。
- * @method string getComment() 获取模板描述。
- * @method void setComment(string $Comment) 设置模板描述。
- * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。
- * @method void setScreenshotInterval(float $ScreenshotInterval) 设置截帧间隔，单位为秒。
- * @method JitterConfigureInfo getJitterConfigure() 获取视频画面抖动重影检测的控制参数。
- * @method void setJitterConfigure(JitterConfigureInfo $JitterConfigure) 设置视频画面抖动重影检测的控制参数。
- * @method BlurConfigureInfo getBlurConfigure() 获取视频画面模糊检测的控制参数。
- * @method void setBlurConfigure(BlurConfigureInfo $BlurConfigure) 设置视频画面模糊检测的控制参数。
- * @method AbnormalLightingConfigureInfo getAbnormalLightingConfigure() 获取视频画面低光、过曝检测的控制参数。
- * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo $AbnormalLightingConfigure) 设置视频画面低光、过曝检测的控制参数。
- * @method CrashScreenConfigureInfo getCrashScreenConfigure() 获取视频画面花屏检测的控制参数。
- * @method void setCrashScreenConfigure(CrashScreenConfigureInfo $CrashScreenConfigure) 设置视频画面花屏检测的控制参数。
- * @method BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() 获取视频画面黑边、白边、黑屏、白屏检测的控制参数。
- * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure) 设置视频画面黑边、白边、黑屏、白屏检测的控制参数。
- * @method NoiseConfigureInfo getNoiseConfigure() 获取视频画面噪点检测的控制参数。
- * @method void setNoiseConfigure(NoiseConfigureInfo $NoiseConfigure) 设置视频画面噪点检测的控制参数。
- * @method MosaicConfigureInfo getMosaicConfigure() 获取视频画面马赛克检测的控制参数。
- * @method void setMosaicConfigure(MosaicConfigureInfo $MosaicConfigure) 设置视频画面马赛克检测的控制参数。
- * @method QRCodeConfigureInfo getQRCodeConfigure() 获取视频画面二维码检测的控制参数。
- * @method void setQRCodeConfigure(QRCodeConfigureInfo $QRCodeConfigure) 设置视频画面二维码检测的控制参数。
- * @method QualityEvaluationConfigureInfo getQualityEvaluationConfigure() 获取视频画面质量评价的控制参数。
- * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo $QualityEvaluationConfigure) 设置视频画面质量评价的控制参数。
- * @method VoiceConfigureInfo getVoiceConfigure() 获取音频（静音、低音、爆音）检测的控制参数。
- * @method void setVoiceConfigure(VoiceConfigureInfo $VoiceConfigure) 设置音频（静音、低音、爆音）检测的控制参数。
- * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method integer getDefinition() 获取<p>模板 ID。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>模板 ID。</p>
+ * @method string getType() 获取<p>模板类型，可选值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+ * @method void setType(string $Type) 设置<p>模板类型，可选值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+ * @method string getName() 获取<p>模板名称。</p>
+ * @method void setName(string $Name) 设置<p>模板名称。</p>
+ * @method string getComment() 获取<p>模板描述。</p>
+ * @method void setComment(string $Comment) 设置<p>模板描述。</p>
+ * @method array getConfigs() 获取<p>音画质检测的配置参数。</p>
+ * @method void setConfigs(array $Configs) 设置<p>音画质检测的配置参数。</p>
+ * @method QualityInspectStrategy getStrategy() 获取<p>音画质检测的抽检策略。</p>
+ * @method void setStrategy(QualityInspectStrategy $Strategy) 设置<p>音画质检测的抽检策略。</p>
+ * @method string getCreateTime() 获取<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getUpdateTime() 获取<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method float getScreenshotInterval() 获取<p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒。</p>
+ * @method void setScreenshotInterval(float $ScreenshotInterval) 设置<p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒。</p>
+ * @method JitterConfigureInfo getJitterConfigure() 获取<p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p>
+ * @method void setJitterConfigure(JitterConfigureInfo $JitterConfigure) 设置<p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p>
+ * @method BlurConfigureInfo getBlurConfigure() 获取<p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p>
+ * @method void setBlurConfigure(BlurConfigureInfo $BlurConfigure) 设置<p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p>
+ * @method AbnormalLightingConfigureInfo getAbnormalLightingConfigure() 获取<p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p>
+ * @method void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo $AbnormalLightingConfigure) 设置<p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p>
+ * @method CrashScreenConfigureInfo getCrashScreenConfigure() 获取<p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p>
+ * @method void setCrashScreenConfigure(CrashScreenConfigureInfo $CrashScreenConfigure) 设置<p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p>
+ * @method BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() 获取<p>视频画面黑边、白边、黑屏、白屏检测的控制参数。</p>
+ * @method void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure) 设置<p>视频画面黑边、白边、黑屏、白屏检测的控制参数。</p>
+ * @method NoiseConfigureInfo getNoiseConfigure() 获取<p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p>
+ * @method void setNoiseConfigure(NoiseConfigureInfo $NoiseConfigure) 设置<p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p>
+ * @method MosaicConfigureInfo getMosaicConfigure() 获取<p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p>
+ * @method void setMosaicConfigure(MosaicConfigureInfo $MosaicConfigure) 设置<p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p>
+ * @method QRCodeConfigureInfo getQRCodeConfigure() 获取<p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p>
+ * @method void setQRCodeConfigure(QRCodeConfigureInfo $QRCodeConfigure) 设置<p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p>
+ * @method QualityEvaluationConfigureInfo getQualityEvaluationConfigure() 获取<p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p>
+ * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo $QualityEvaluationConfigure) 设置<p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p>
+ * @method VoiceConfigureInfo getVoiceConfigure() 获取<p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p>
+ * @method void setVoiceConfigure(VoiceConfigureInfo $VoiceConfigure) 设置<p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p>
  */
 class QualityInspectTemplateItem extends AbstractModel
 {
     /**
-     * @var integer 模板 ID。
+     * @var integer <p>模板 ID。</p>
      */
     public $Definition;
 
     /**
-     * @var string 模板类型，可选值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * @var string <p>模板类型，可选值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
      */
     public $Type;
 
     /**
-     * @var string 模板名称。
+     * @var string <p>模板名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 模板描述。
+     * @var string <p>模板描述。</p>
      */
     public $Comment;
 
     /**
-     * @var float 截帧间隔，单位为秒。
+     * @var array <p>音画质检测的配置参数。</p>
      */
-    public $ScreenshotInterval;
+    public $Configs;
 
     /**
-     * @var JitterConfigureInfo 视频画面抖动重影检测的控制参数。
+     * @var QualityInspectStrategy <p>音画质检测的抽检策略。</p>
      */
-    public $JitterConfigure;
+    public $Strategy;
 
     /**
-     * @var BlurConfigureInfo 视频画面模糊检测的控制参数。
-     */
-    public $BlurConfigure;
-
-    /**
-     * @var AbnormalLightingConfigureInfo 视频画面低光、过曝检测的控制参数。
-     */
-    public $AbnormalLightingConfigure;
-
-    /**
-     * @var CrashScreenConfigureInfo 视频画面花屏检测的控制参数。
-     */
-    public $CrashScreenConfigure;
-
-    /**
-     * @var BlackWhiteEdgeConfigureInfo 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-     */
-    public $BlackWhiteEdgeConfigure;
-
-    /**
-     * @var NoiseConfigureInfo 视频画面噪点检测的控制参数。
-     */
-    public $NoiseConfigure;
-
-    /**
-     * @var MosaicConfigureInfo 视频画面马赛克检测的控制参数。
-     */
-    public $MosaicConfigure;
-
-    /**
-     * @var QRCodeConfigureInfo 视频画面二维码检测的控制参数。
-     */
-    public $QRCodeConfigure;
-
-    /**
-     * @var QualityEvaluationConfigureInfo 视频画面质量评价的控制参数。
-     */
-    public $QualityEvaluationConfigure;
-
-    /**
-     * @var VoiceConfigureInfo 音频（静音、低音、爆音）检测的控制参数。
-     */
-    public $VoiceConfigure;
-
-    /**
-     * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 模板 ID。
-     * @param string $Type 模板类型，可选值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
-     * @param string $Name 模板名称。
-     * @param string $Comment 模板描述。
-     * @param float $ScreenshotInterval 截帧间隔，单位为秒。
-     * @param JitterConfigureInfo $JitterConfigure 视频画面抖动重影检测的控制参数。
-     * @param BlurConfigureInfo $BlurConfigure 视频画面模糊检测的控制参数。
-     * @param AbnormalLightingConfigureInfo $AbnormalLightingConfigure 视频画面低光、过曝检测的控制参数。
-     * @param CrashScreenConfigureInfo $CrashScreenConfigure 视频画面花屏检测的控制参数。
-     * @param BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-     * @param NoiseConfigureInfo $NoiseConfigure 视频画面噪点检测的控制参数。
-     * @param MosaicConfigureInfo $MosaicConfigure 视频画面马赛克检测的控制参数。
-     * @param QRCodeConfigureInfo $QRCodeConfigure 视频画面二维码检测的控制参数。
-     * @param QualityEvaluationConfigureInfo $QualityEvaluationConfigure 视频画面质量评价的控制参数。
-     * @param VoiceConfigureInfo $VoiceConfigure 音频（静音、低音、爆音）检测的控制参数。
-     * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var float <p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒。</p>
+     */
+    public $ScreenshotInterval;
+
+    /**
+     * @var JitterConfigureInfo <p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p>
+     */
+    public $JitterConfigure;
+
+    /**
+     * @var BlurConfigureInfo <p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p>
+     */
+    public $BlurConfigure;
+
+    /**
+     * @var AbnormalLightingConfigureInfo <p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p>
+     */
+    public $AbnormalLightingConfigure;
+
+    /**
+     * @var CrashScreenConfigureInfo <p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p>
+     */
+    public $CrashScreenConfigure;
+
+    /**
+     * @var BlackWhiteEdgeConfigureInfo <p>视频画面黑边、白边、黑屏、白屏检测的控制参数。</p>
+     */
+    public $BlackWhiteEdgeConfigure;
+
+    /**
+     * @var NoiseConfigureInfo <p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p>
+     */
+    public $NoiseConfigure;
+
+    /**
+     * @var MosaicConfigureInfo <p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p>
+     */
+    public $MosaicConfigure;
+
+    /**
+     * @var QRCodeConfigureInfo <p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p>
+     */
+    public $QRCodeConfigure;
+
+    /**
+     * @var QualityEvaluationConfigureInfo <p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p>
+     */
+    public $QualityEvaluationConfigure;
+
+    /**
+     * @var VoiceConfigureInfo <p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p>
+     */
+    public $VoiceConfigure;
+
+    /**
+     * @param integer $Definition <p>模板 ID。</p>
+     * @param string $Type <p>模板类型，可选值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+     * @param string $Name <p>模板名称。</p>
+     * @param string $Comment <p>模板描述。</p>
+     * @param array $Configs <p>音画质检测的配置参数。</p>
+     * @param QualityInspectStrategy $Strategy <p>音画质检测的抽检策略。</p>
+     * @param string $CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param float $ScreenshotInterval <p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒。</p>
+     * @param JitterConfigureInfo $JitterConfigure <p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p>
+     * @param BlurConfigureInfo $BlurConfigure <p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p>
+     * @param AbnormalLightingConfigureInfo $AbnormalLightingConfigure <p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p>
+     * @param CrashScreenConfigureInfo $CrashScreenConfigure <p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p>
+     * @param BlackWhiteEdgeConfigureInfo $BlackWhiteEdgeConfigure <p>视频画面黑边、白边、黑屏、白屏检测的控制参数。</p>
+     * @param NoiseConfigureInfo $NoiseConfigure <p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p>
+     * @param MosaicConfigureInfo $MosaicConfigure <p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p>
+     * @param QRCodeConfigureInfo $QRCodeConfigure <p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p>
+     * @param QualityEvaluationConfigureInfo $QualityEvaluationConfigure <p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p>
+     * @param VoiceConfigureInfo $VoiceConfigure <p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p>
      */
     function __construct()
     {
@@ -196,6 +204,28 @@ class QualityInspectTemplateItem extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Configs",$param) and $param["Configs"] !== null) {
+            $this->Configs = [];
+            foreach ($param["Configs"] as $key => $value){
+                $obj = new QualityInspectConfig();
+                $obj->deserialize($value);
+                array_push($this->Configs, $obj);
+            }
+        }
+
+        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
+            $this->Strategy = new QualityInspectStrategy();
+            $this->Strategy->deserialize($param["Strategy"]);
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
 
         if (array_key_exists("ScreenshotInterval",$param) and $param["ScreenshotInterval"] !== null) {
@@ -250,14 +280,6 @@ class QualityInspectTemplateItem extends AbstractModel
         if (array_key_exists("VoiceConfigure",$param) and $param["VoiceConfigure"] !== null) {
             $this->VoiceConfigure = new VoiceConfigureInfo();
             $this->VoiceConfigure->deserialize($param["VoiceConfigure"]);
-        }
-
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
-        }
-
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

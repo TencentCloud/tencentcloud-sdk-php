@@ -52,6 +52,7 @@ use TencentCloud\Goosefs\V20220519\Models as Models;
  * @method Models\ExpandCapacityResponse ExpandCapacity(Models\ExpandCapacityRequest $req) 扩展文件系统容量
  * @method Models\ListLoadTasksResponse ListLoadTasks(Models\ListLoadTasksRequest $req) 列出该集群下所有预热任务。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
  * @method Models\ModifyDataRepositoryBandwidthResponse ModifyDataRepositoryBandwidth(Models\ModifyDataRepositoryBandwidthRequest $req) 修改数据流动带宽
+ * @method Models\ModifyDataRepositoryTaskStatusResponse ModifyDataRepositoryTaskStatus(Models\ModifyDataRepositoryTaskStatusRequest $req) 修改数据流动任务状态，目前支持任务暂停/恢复
  * @method Models\MountMultipleStorageFileSystemResponse MountMultipleStorageFileSystem(Models\MountMultipleStorageFileSystemRequest $req) 客户端集群挂载存储集群
  * @method Models\QueryClientNodeMountCommandResponse QueryClientNodeMountCommand(Models\QueryClientNodeMountCommandRequest $req) 生成客户端的挂载命令
  * @method Models\QueryCrossVpcSubnetSupportForClientNodeResponse QueryCrossVpcSubnetSupportForClientNode(Models\QueryCrossVpcSubnetSupportForClientNodeRequest $req) 查询客户端节点跨vpc子网访问能力

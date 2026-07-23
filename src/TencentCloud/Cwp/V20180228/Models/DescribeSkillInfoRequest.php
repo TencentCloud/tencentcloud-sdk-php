@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSkillInfo请求参数结构体
  *
- * @method array getIds() 获取事件id
- * @method void setIds(array $Ids) 设置事件id
+ * @method array getIds() 获取<p>事件id</p>
+ * @method void setIds(array $Ids) 设置<p>事件id</p>
  */
 class DescribeSkillInfoRequest extends AbstractModel
 {
     /**
-     * @var array 事件id
+     * @var array <p>事件id</p>
      */
     public $Ids;
 
     /**
-     * @param array $Ids 事件id
+     * @param array $Ids <p>事件id</p>
      */
     function __construct()
     {

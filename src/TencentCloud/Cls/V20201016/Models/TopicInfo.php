@@ -56,8 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescribes(string $Describes) 设置<p>主题描述</p>
  * @method integer getHotPeriod() 获取<p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
  * @method void setHotPeriod(integer $HotPeriod) 设置<p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
- * @method string getKeyId() 获取<p>kms-cls服务秘钥id</p>
- * @method void setKeyId(string $KeyId) 设置<p>kms-cls服务秘钥id</p>
+ * @method string getKeyId() 获取<p>kms-cls服务秘钥id</p><p>CustomKmsInfo为空时为系统默认密钥，CustomKmsInfo不为空时为用户自定义密钥</p>
+ * @method void setKeyId(string $KeyId) 设置<p>kms-cls服务秘钥id</p><p>CustomKmsInfo为空时为系统默认密钥，CustomKmsInfo不为空时为用户自定义密钥</p>
+ * @method CustomKmsInfo getCustomKmsInfo() 获取<p>用户自定义 KMS 密钥信息</p>
+ * @method void setCustomKmsInfo(CustomKmsInfo $CustomKmsInfo) 设置<p>用户自定义 KMS 密钥信息</p>
  * @method integer getBizType() 获取<p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
  * @method void setBizType(integer $BizType) 设置<p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
  * @method boolean getIsWebTracking() 获取<p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
@@ -170,9 +172,14 @@ class TopicInfo extends AbstractModel
     public $HotPeriod;
 
     /**
-     * @var string <p>kms-cls服务秘钥id</p>
+     * @var string <p>kms-cls服务秘钥id</p><p>CustomKmsInfo为空时为系统默认密钥，CustomKmsInfo不为空时为用户自定义密钥</p>
      */
     public $KeyId;
+
+    /**
+     * @var CustomKmsInfo <p>用户自定义 KMS 密钥信息</p>
+     */
+    public $CustomKmsInfo;
 
     /**
      * @var integer <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
@@ -238,7 +245,8 @@ class TopicInfo extends AbstractModel
      * @param string $SubAssumerName <p>云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。</p>
      * @param string $Describes <p>主题描述</p>
      * @param integer $HotPeriod <p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
-     * @param string $KeyId <p>kms-cls服务秘钥id</p>
+     * @param string $KeyId <p>kms-cls服务秘钥id</p><p>CustomKmsInfo为空时为系统默认密钥，CustomKmsInfo不为空时为用户自定义密钥</p>
+     * @param CustomKmsInfo $CustomKmsInfo <p>用户自定义 KMS 密钥信息</p>
      * @param integer $BizType <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
      * @param boolean $IsWebTracking <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
      * @param TopicExtendInfo $Extends <p>日志主题扩展信息</p>
@@ -341,6 +349,11 @@ class TopicInfo extends AbstractModel
 
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("CustomKmsInfo",$param) and $param["CustomKmsInfo"] !== null) {
+            $this->CustomKmsInfo = new CustomKmsInfo();
+            $this->CustomKmsInfo->deserialize($param["CustomKmsInfo"]);
         }
 
         if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {

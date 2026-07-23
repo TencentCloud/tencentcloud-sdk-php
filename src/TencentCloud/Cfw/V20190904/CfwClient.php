@@ -27,6 +27,8 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\AddEnterpriseSecurityGroupRulesResponse AddEnterpriseSecurityGroupRules(Models\AddEnterpriseSecurityGroupRulesRequest $req) 创建新企业安全组规则
  * @method Models\AddNatAcRuleResponse AddNatAcRule(Models\AddNatAcRuleRequest $req) 添加nat访问控制规则
  * @method Models\AddVpcAcRuleResponse AddVpcAcRule(Models\AddVpcAcRuleRequest $req) 添加VPC内网间规则
+ * @method Models\CheckClusterNatFwPreAccessResponse CheckClusterNatFwPreAccess(Models\CheckClusterNatFwPreAccessRequest $req) 发起 NAT CCN 集群模式防火墙预接入检查（仅支持自动接入模式）。入参与 OpenClusterNatFwSwitch 完全相同，传入相同的 NatCcnSwitch 配置 JSON 即可发起检查。检查为异步执行：接口立即返回 CheckItems 检查项清单，前端轮询 DescribeClusterNatCcnFwSwitchList 接口读取 CheckResult 获取各阶段的通过/失败状态。
+ * @method Models\CheckClusterVpcFwPreAccessResponse CheckClusterVpcFwPreAccess(Models\CheckClusterVpcFwPreAccessRequest $req) 发起 VPC 集群防火墙预接入检查（仅支持自动接入模式）。入参与 ModifyClusterVpcFwSwitch 完全相同，传入相同的 CcnSwitch 配置 JSON 即可发起检查。检查为异步执行：接口立即返回 CheckItems 检查项清单，前端轮询 DescribeClusterVpcFwSwitchs 接口读取 CheckResult 获取各阶段的通过/失败状态。
  * @method Models\CloseClusterNatFwSwitchResponse CloseClusterNatFwSwitch(Models\CloseClusterNatFwSwitchRequest $req) 关闭NAT CCN集群模式防火墙开关
  * @method Models\CreateAcRulesResponse CreateAcRules(Models\CreateAcRulesRequest $req) 创建访问控制规则
  * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) 创建地址模板规则
@@ -61,6 +63,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeAssociatedInstanceListResponse DescribeAssociatedInstanceList(Models\DescribeAssociatedInstanceListRequest $req) 获取安全组关联实例列表
  * @method Models\DescribeBlockByIpTimesListResponse DescribeBlockByIpTimesList(Models\DescribeBlockByIpTimesListRequest $req) DescribeBlockByIpTimesList 告警中心阻断IP折线图
  * @method Models\DescribeBlockIgnoreListResponse DescribeBlockIgnoreList(Models\DescribeBlockIgnoreListRequest $req) 查询入侵防御放通封禁列表
+ * @method Models\DescribeBlockListResponse DescribeBlockList(Models\DescribeBlockListRequest $req) DescribeBlockList 告警中心阻断资产视图列表
  * @method Models\DescribeBlockStaticListResponse DescribeBlockStaticList(Models\DescribeBlockStaticListRequest $req) DescribeBlockStaticList 告警中心柱形图
  * @method Models\DescribeCcnAssociatedInstancesResponse DescribeCcnAssociatedInstances(Models\DescribeCcnAssociatedInstancesRequest $req) 查询云联网关联的实例信息
  * @method Models\DescribeCcnInstanceRegionStatusResponse DescribeCcnInstanceRegionStatus(Models\DescribeCcnInstanceRegionStatusRequest $req) 查询CCN关联实例的地域防火墙引流网络部署状态
@@ -87,11 +90,13 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeEnterpriseSecurityGroupRuleResponse DescribeEnterpriseSecurityGroupRule(Models\DescribeEnterpriseSecurityGroupRuleRequest $req) 查询新企业安全组规则
  * @method Models\DescribeEnterpriseSecurityGroupRuleListResponse DescribeEnterpriseSecurityGroupRuleList(Models\DescribeEnterpriseSecurityGroupRuleListRequest $req) 查询新企业安全组规则  从node接口迁移   原接口DescribeSecurityGroupNewList
  * @method Models\DescribeFwEdgeIpsResponse DescribeFwEdgeIps(Models\DescribeFwEdgeIpsRequest $req) 串行防火墙IP开关列表
+ * @method Models\DescribeFwGroupIdNamesResponse DescribeFwGroupIdNames(Models\DescribeFwGroupIdNamesRequest $req) 获取用户防火墙(组)的ID名称列表
  * @method Models\DescribeFwGroupInstanceInfoResponse DescribeFwGroupInstanceInfo(Models\DescribeFwGroupInstanceInfoRequest $req) 获取租户所有VPC防火墙(组)及VPC防火墙实例卡片信息
  * @method Models\DescribeFwSyncStatusResponse DescribeFwSyncStatus(Models\DescribeFwSyncStatusRequest $req) 获取防火墙同步状态，一般在执行同步操作后查询
  * @method Models\DescribeGuideScanInfoResponse DescribeGuideScanInfo(Models\DescribeGuideScanInfoRequest $req) DescribeGuideScanInfo新手引导扫描接口信息
  * @method Models\DescribeIPStatusListResponse DescribeIPStatusList(Models\DescribeIPStatusListRequest $req) IP防护状态查询
  * @method Models\DescribeIpsModeSwitchResponse DescribeIpsModeSwitch(Models\DescribeIpsModeSwitchRequest $req) 获取入侵防御防护模式
+ * @method Models\DescribeIpsRuleListNewResponse DescribeIpsRuleListNew(Models\DescribeIpsRuleListNewRequest $req) IPS规则查询接口新
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 租户日志存储统计
  * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 请使用 [日志分析SearchLog接口](https://cloud.tencent.com/document/product/1132/118363)
  * @method Models\DescribeNDRAssetIdentificationCursorListResponse DescribeNDRAssetIdentificationCursorList(Models\DescribeNDRAssetIdentificationCursorListRequest $req) DescribeNDRAssetIdentificationCursorList - 游标获取NDR资产识别结果列表
@@ -106,12 +111,14 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeNatFwInstancesInfoResponse DescribeNatFwInstancesInfo(Models\DescribeNatFwInstancesInfoRequest $req) GetNatInstance 获取租户所有NAT实例及实例卡片信息
  * @method Models\DescribeNatFwSwitchResponse DescribeNatFwSwitch(Models\DescribeNatFwSwitchRequest $req) 查询NAT边界防火墙开关列表
  * @method Models\DescribeNatFwVpcDnsLstResponse DescribeNatFwVpcDnsLst(Models\DescribeNatFwVpcDnsLstRequest $req) 展示当前natfw 实例对应的vpc dns开关
+ * @method Models\DescribeNatRuleScopesResponse DescribeNatRuleScopes(Models\DescribeNatRuleScopesRequest $req) 查询nat规则的配额和使用情况
  * @method Models\DescribeOfflineExportTaskResponse DescribeOfflineExportTask(Models\DescribeOfflineExportTaskRequest $req) 获取日志离线导出任务列表
  * @method Models\DescribeOfflineExportTemporaryCredentialsResponse DescribeOfflineExportTemporaryCredentials(Models\DescribeOfflineExportTemporaryCredentialsRequest $req) 获取日志离线导出任务文件下载临时凭证
  * @method Models\DescribeResourceGroupResponse DescribeResourceGroup(Models\DescribeResourceGroupRequest $req) DescribeResourceGroup资产中心资产树信息
  * @method Models\DescribeResourceGroupNewResponse DescribeResourceGroupNew(Models\DescribeResourceGroupNewRequest $req) 资产中心资产组数数据信息查询
  * @method Models\DescribeRuleOverviewResponse DescribeRuleOverview(Models\DescribeRuleOverviewRequest $req) 查询规则列表概况
  * @method Models\DescribeSecurityGroupListResponse DescribeSecurityGroupList(Models\DescribeSecurityGroupListRequest $req) 查询安全组规则列表
+ * @method Models\DescribeSecurityGroupRegionListResponse DescribeSecurityGroupRegionList(Models\DescribeSecurityGroupRegionListRequest $req) 查询地域配置信息-DescribeAllRegionList
  * @method Models\DescribeSerialRegionResponse DescribeSerialRegion(Models\DescribeSerialRegionRequest $req) 查询串行防火墙地域带宽分配信息
  * @method Models\DescribeSourceAssetResponse DescribeSourceAsset(Models\DescribeSourceAssetRequest $req) DescribeSourceAsset-查询全部资产信息
  * @method Models\DescribeSwitchErrorResponse DescribeSwitchError(Models\DescribeSwitchErrorRequest $req) 互联网边界防火墙开关横幅错误信息
@@ -121,6 +128,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeTableStatusResponse DescribeTableStatus(Models\DescribeTableStatusRequest $req) 查询规则表状态
  * @method Models\DescribeUnHandleEventTabListResponse DescribeUnHandleEventTabList(Models\DescribeUnHandleEventTabListRequest $req) DescribeUnHandleEventTabList 告警中心伪攻击链事件未处置接口
  * @method Models\DescribeVpcAcRuleResponse DescribeVpcAcRule(Models\DescribeVpcAcRuleRequest $req) 查询内网间访问控制列表
+ * @method Models\DescribeVpcAclEdgeRangeResponse DescribeVpcAclEdgeRange(Models\DescribeVpcAclEdgeRangeRequest $req) 查询内网间访问控制规则的生效范围
  * @method Models\DescribeVpcFwCcnPolicyWhiteListResponse DescribeVpcFwCcnPolicyWhiteList(Models\DescribeVpcFwCcnPolicyWhiteListRequest $req) 查询VPC防火墙策略路由功能开白的CCN列表
  * @method Models\DescribeVpcFwGroupSwitchResponse DescribeVpcFwGroupSwitch(Models\DescribeVpcFwGroupSwitchRequest $req) VPC防火墙(组)开关列表
  * @method Models\ExpandCfwVerticalResponse ExpandCfwVertical(Models\ExpandCfwVerticalRequest $req) 防火墙垂直扩容

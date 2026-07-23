@@ -20,70 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNetworkAcls请求参数结构体
  *
- * @method array getFilters() 获取过滤条件，参数不支持同时指定NetworkAclIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
-<li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
-<li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定NetworkAclIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
-<li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
-<li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
- * @method array getNetworkAclIds() 获取网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
- * @method void setNetworkAclIds(array $NetworkAclIds) 设置网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取返回数量，默认为20，最小值为1，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最小值为1，最大值为100。
- * @method string getOrderField() 获取排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
- * @method void setOrderField(string $OrderField) 设置排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
- * @method string getOrderDirection() 获取排序方法。顺序：ASC，倒序：DESC。
- * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：ASC，倒序：DESC。
+ * @method array getFilters() 获取<p>过滤条件，参数不支持同时指定NetworkAclIds和Filters。</p><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li><li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li><li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件，参数不支持同时指定NetworkAclIds和Filters。</p><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li><li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li><li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+ * @method array getNetworkAclIds() 获取<p>网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。</p>
+ * @method void setNetworkAclIds(array $NetworkAclIds) 设置<p>网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最小值为1，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最小值为1，最大值为100。</p>
+ * @method string getOrderField() 获取<p>排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime,ModifyTime</p>
+ * @method void setOrderField(string $OrderField) 设置<p>排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime,ModifyTime</p>
+ * @method string getOrderDirection() 获取<p>排序方法。顺序：ASC，倒序：DESC。</p>
+ * @method void setOrderDirection(string $OrderDirection) 设置<p>排序方法。顺序：ASC，倒序：DESC。</p>
  */
 class DescribeNetworkAclsRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
-<li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
-<li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+     * @var array <p>过滤条件，参数不支持同时指定NetworkAclIds和Filters。</p><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li><li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li><li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
      */
     public $Filters;
 
     /**
-     * @var array 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
+     * @var array <p>网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。</p>
      */
     public $NetworkAclIds;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最小值为1，最大值为100。
+     * @var integer <p>返回数量，默认为20，最小值为1，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var string 排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
+     * @var string <p>排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime,ModifyTime</p>
      */
     public $OrderField;
 
     /**
-     * @var string 排序方法。顺序：ASC，倒序：DESC。
+     * @var string <p>排序方法。顺序：ASC，倒序：DESC。</p>
      */
     public $OrderDirection;
 
     /**
-     * @param array $Filters 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
-<li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
-<li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
-     * @param array $NetworkAclIds 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
-     * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 返回数量，默认为20，最小值为1，最大值为100。
-     * @param string $OrderField 排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
-     * @param string $OrderDirection 排序方法。顺序：ASC，倒序：DESC。
+     * @param array $Filters <p>过滤条件，参数不支持同时指定NetworkAclIds和Filters。</p><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li><li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li><li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+     * @param array $NetworkAclIds <p>网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param integer $Limit <p>返回数量，默认为20，最小值为1，最大值为100。</p>
+     * @param string $OrderField <p>排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime,ModifyTime</p>
+     * @param string $OrderDirection <p>排序方法。顺序：ASC，倒序：DESC。</p>
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSparkAppTask返回参数结构体
  *
- * @method string getBatchId() 获取批Id
- * @method void setBatchId(string $BatchId) 设置批Id
- * @method string getTaskId() 获取任务Id
- * @method void setTaskId(string $TaskId) 设置任务Id
+ * @method string getBatchId() 获取<p>批Id</p>
+ * @method void setBatchId(string $BatchId) 设置<p>批Id</p>
+ * @method string getTaskId() 获取<p>任务Id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务Id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateSparkAppTaskResponse extends AbstractModel
 {
     /**
-     * @var string 批Id
+     * @var string <p>批Id</p>
      */
     public $BatchId;
 
     /**
-     * @var string 任务Id
+     * @var string <p>任务Id</p>
      */
     public $TaskId;
 
@@ -45,8 +45,8 @@ class CreateSparkAppTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BatchId 批Id
-     * @param string $TaskId 任务Id
+     * @param string $BatchId <p>批Id</p>
+     * @param string $TaskId <p>任务Id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

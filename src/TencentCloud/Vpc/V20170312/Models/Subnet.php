@@ -20,146 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 子网对象
  *
- * @method string getVpcId() 获取`VPC`实例`ID`。
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。
- * @method string getSubnetId() 获取子网实例`ID`，例如：subnet-bthucmmy。
- * @method void setSubnetId(string $SubnetId) 设置子网实例`ID`，例如：subnet-bthucmmy。
- * @method string getSubnetName() 获取子网名称。
- * @method void setSubnetName(string $SubnetName) 设置子网名称。
- * @method string getCidrBlock() 获取子网的 `IPv4` `CIDR`。
- * @method void setCidrBlock(string $CidrBlock) 设置子网的 `IPv4` `CIDR`。
- * @method boolean getIsDefault() 获取是否默认子网。
- * @method void setIsDefault(boolean $IsDefault) 设置是否默认子网。
- * @method boolean getEnableBroadcast() 获取是否开启广播。
- * @method void setEnableBroadcast(boolean $EnableBroadcast) 设置是否开启广播。
- * @method string getZone() 获取可用区。
- * @method void setZone(string $Zone) 设置可用区。
- * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-l2h8d7c2。
- * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-l2h8d7c2。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method integer getAvailableIpAddressCount() 获取可用`IPv4`数。
- * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) 设置可用`IPv4`数。
- * @method string getIpv6CidrBlock() 获取子网的 `IPv6` `CIDR`。
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置子网的 `IPv6` `CIDR`。
- * @method string getNetworkAclId() 获取关联`ACL`ID
- * @method void setNetworkAclId(string $NetworkAclId) 设置关联`ACL`ID
- * @method boolean getIsRemoteVpcSnat() 获取是否为 `SNAT` 地址池子网。
- * @method void setIsRemoteVpcSnat(boolean $IsRemoteVpcSnat) 设置是否为 `SNAT` 地址池子网。
- * @method integer getTotalIpAddressCount() 获取子网`IPv4`总数。
- * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) 设置子网`IPv4`总数。
- * @method array getTagSet() 获取标签键值对。
- * @method void setTagSet(array $TagSet) 设置标签键值对。
- * @method string getCdcId() 获取CDC实例ID。
- * @method void setCdcId(string $CdcId) 设置CDC实例ID。
- * @method integer getIsCdcSubnet() 获取是否是CDC所属子网。0:否 1:是
- * @method void setIsCdcSubnet(integer $IsCdcSubnet) 设置是否是CDC所属子网。0:否 1:是
+ * @method string getVpcId() 获取<p><code>VPC</code>实例<code>ID</code>。</p>
+ * @method void setVpcId(string $VpcId) 设置<p><code>VPC</code>实例<code>ID</code>。</p>
+ * @method string getSubnetId() 获取<p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p>
+ * @method string getSubnetName() 获取<p>子网名称。</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>子网名称。</p>
+ * @method string getCidrBlock() 获取<p>子网的 <code>IPv4</code> <code>CIDR</code>。</p>
+ * @method void setCidrBlock(string $CidrBlock) 设置<p>子网的 <code>IPv4</code> <code>CIDR</code>。</p>
+ * @method boolean getIsDefault() 获取<p>是否默认子网。</p>
+ * @method void setIsDefault(boolean $IsDefault) 设置<p>是否默认子网。</p>
+ * @method boolean getEnableBroadcast() 获取<p>是否开启广播。</p>
+ * @method void setEnableBroadcast(boolean $EnableBroadcast) 设置<p>是否开启广播。</p>
+ * @method string getZone() 获取<p>可用区。</p>
+ * @method void setZone(string $Zone) 设置<p>可用区。</p>
+ * @method string getRouteTableId() 获取<p>路由表实例ID，例如：rtb-l2h8d7c2。</p>
+ * @method void setRouteTableId(string $RouteTableId) 设置<p>路由表实例ID，例如：rtb-l2h8d7c2。</p>
+ * @method string getCreatedTime() 获取<p>创建时间。</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间。</p>
+ * @method integer getAvailableIpAddressCount() 获取<p>可用<code>IPv4</code>数。</p>
+ * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) 设置<p>可用<code>IPv4</code>数。</p>
+ * @method string getIpv6CidrBlock() 获取<p>子网的 <code>IPv6</code> <code>CIDR</code>。</p>
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置<p>子网的 <code>IPv6</code> <code>CIDR</code>。</p>
+ * @method string getNetworkAclId() 获取<p>关联<code>ACL</code>ID</p>
+ * @method void setNetworkAclId(string $NetworkAclId) 设置<p>关联<code>ACL</code>ID</p>
+ * @method boolean getIsRemoteVpcSnat() 获取<p>是否为 <code>SNAT</code> 地址池子网。</p>
+ * @method void setIsRemoteVpcSnat(boolean $IsRemoteVpcSnat) 设置<p>是否为 <code>SNAT</code> 地址池子网。</p>
+ * @method integer getTotalIpAddressCount() 获取<p>子网<code>IPv4</code>总数。</p>
+ * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) 设置<p>子网<code>IPv4</code>总数。</p>
+ * @method array getTagSet() 获取<p>标签键值对。</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签键值对。</p>
+ * @method string getCdcId() 获取<p>CDC实例ID。</p>
+ * @method void setCdcId(string $CdcId) 设置<p>CDC实例ID。</p>
+ * @method integer getIsCdcSubnet() 获取<p>是否是CDC所属子网。0:否 1:是</p>
+ * @method void setIsCdcSubnet(integer $IsCdcSubnet) 设置<p>是否是CDC所属子网。0:否 1:是</p>
  */
 class Subnet extends AbstractModel
 {
     /**
-     * @var string `VPC`实例`ID`。
+     * @var string <p><code>VPC</code>实例<code>ID</code>。</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网实例`ID`，例如：subnet-bthucmmy。
+     * @var string <p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 子网名称。
+     * @var string <p>子网名称。</p>
      */
     public $SubnetName;
 
     /**
-     * @var string 子网的 `IPv4` `CIDR`。
+     * @var string <p>子网的 <code>IPv4</code> <code>CIDR</code>。</p>
      */
     public $CidrBlock;
 
     /**
-     * @var boolean 是否默认子网。
+     * @var boolean <p>是否默认子网。</p>
      */
     public $IsDefault;
 
     /**
-     * @var boolean 是否开启广播。
+     * @var boolean <p>是否开启广播。</p>
      */
     public $EnableBroadcast;
 
     /**
-     * @var string 可用区。
+     * @var string <p>可用区。</p>
      */
     public $Zone;
 
     /**
-     * @var string 路由表实例ID，例如：rtb-l2h8d7c2。
+     * @var string <p>路由表实例ID，例如：rtb-l2h8d7c2。</p>
      */
     public $RouteTableId;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreatedTime;
 
     /**
-     * @var integer 可用`IPv4`数。
+     * @var integer <p>可用<code>IPv4</code>数。</p>
      */
     public $AvailableIpAddressCount;
 
     /**
-     * @var string 子网的 `IPv6` `CIDR`。
+     * @var string <p>子网的 <code>IPv6</code> <code>CIDR</code>。</p>
      */
     public $Ipv6CidrBlock;
 
     /**
-     * @var string 关联`ACL`ID
+     * @var string <p>关联<code>ACL</code>ID</p>
      */
     public $NetworkAclId;
 
     /**
-     * @var boolean 是否为 `SNAT` 地址池子网。
+     * @var boolean <p>是否为 <code>SNAT</code> 地址池子网。</p>
      */
     public $IsRemoteVpcSnat;
 
     /**
-     * @var integer 子网`IPv4`总数。
+     * @var integer <p>子网<code>IPv4</code>总数。</p>
      */
     public $TotalIpAddressCount;
 
     /**
-     * @var array 标签键值对。
+     * @var array <p>标签键值对。</p>
      */
     public $TagSet;
 
     /**
-     * @var string CDC实例ID。
+     * @var string <p>CDC实例ID。</p>
      */
     public $CdcId;
 
     /**
-     * @var integer 是否是CDC所属子网。0:否 1:是
+     * @var integer <p>是否是CDC所属子网。0:否 1:是</p>
      */
     public $IsCdcSubnet;
 
     /**
-     * @param string $VpcId `VPC`实例`ID`。
-     * @param string $SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
-     * @param string $SubnetName 子网名称。
-     * @param string $CidrBlock 子网的 `IPv4` `CIDR`。
-     * @param boolean $IsDefault 是否默认子网。
-     * @param boolean $EnableBroadcast 是否开启广播。
-     * @param string $Zone 可用区。
-     * @param string $RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
-     * @param string $CreatedTime 创建时间。
-     * @param integer $AvailableIpAddressCount 可用`IPv4`数。
-     * @param string $Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
-     * @param string $NetworkAclId 关联`ACL`ID
-     * @param boolean $IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
-     * @param integer $TotalIpAddressCount 子网`IPv4`总数。
-     * @param array $TagSet 标签键值对。
-     * @param string $CdcId CDC实例ID。
-     * @param integer $IsCdcSubnet 是否是CDC所属子网。0:否 1:是
+     * @param string $VpcId <p><code>VPC</code>实例<code>ID</code>。</p>
+     * @param string $SubnetId <p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p>
+     * @param string $SubnetName <p>子网名称。</p>
+     * @param string $CidrBlock <p>子网的 <code>IPv4</code> <code>CIDR</code>。</p>
+     * @param boolean $IsDefault <p>是否默认子网。</p>
+     * @param boolean $EnableBroadcast <p>是否开启广播。</p>
+     * @param string $Zone <p>可用区。</p>
+     * @param string $RouteTableId <p>路由表实例ID，例如：rtb-l2h8d7c2。</p>
+     * @param string $CreatedTime <p>创建时间。</p>
+     * @param integer $AvailableIpAddressCount <p>可用<code>IPv4</code>数。</p>
+     * @param string $Ipv6CidrBlock <p>子网的 <code>IPv6</code> <code>CIDR</code>。</p>
+     * @param string $NetworkAclId <p>关联<code>ACL</code>ID</p>
+     * @param boolean $IsRemoteVpcSnat <p>是否为 <code>SNAT</code> 地址池子网。</p>
+     * @param integer $TotalIpAddressCount <p>子网<code>IPv4</code>总数。</p>
+     * @param array $TagSet <p>标签键值对。</p>
+     * @param string $CdcId <p>CDC实例ID。</p>
+     * @param integer $IsCdcSubnet <p>是否是CDC所属子网。0:否 1:是</p>
      */
     function __construct()
     {

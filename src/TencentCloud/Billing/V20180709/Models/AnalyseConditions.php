@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionTypes(string $ActionTypes) 设置<p>交易类型，查询交易类型（请使用交易类型code入参）</p>
  * @method string getTags() 获取<p>分账标签</p>
  * @method void setTags(string $Tags) 设置<p>分账标签</p>
- * @method string getFeeType() 获取<p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
- * @method void setFeeType(string $FeeType) 设置<p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
+ * @method string getFeeType() 获取<p>费用类型，查询费用类型（请使用费用类型code入参）入参枚举如下</p><p>枚举值：</p><ul><li>cashPayAmount： 现金</li><li>incentivePayAmount： 赠送金</li><li>voucherPayAmount： 优惠券</li><li>transferPayAmount： 分成金</li></ul>
+ * @method void setFeeType(string $FeeType) 设置<p>费用类型，查询费用类型（请使用费用类型code入参）入参枚举如下</p><p>枚举值：</p><ul><li>cashPayAmount： 现金</li><li>incentivePayAmount： 赠送金</li><li>voucherPayAmount： 优惠券</li><li>transferPayAmount： 分成金</li></ul>
  * @method string getPayerUins() 获取<p>查询成本分析数据的用户UIN</p>
  * @method void setPayerUins(string $PayerUins) 设置<p>查询成本分析数据的用户UIN</p>
  * @method string getOwnerUins() 获取<p>使用资源的用户UIN</p>
@@ -95,7 +95,7 @@ class AnalyseConditions extends AbstractModel
     public $Tags;
 
     /**
-     * @var string <p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
+     * @var string <p>费用类型，查询费用类型（请使用费用类型code入参）入参枚举如下</p><p>枚举值：</p><ul><li>cashPayAmount： 现金</li><li>incentivePayAmount： 赠送金</li><li>voucherPayAmount： 优惠券</li><li>transferPayAmount： 分成金</li></ul>
      */
     public $FeeType;
 
@@ -124,7 +124,7 @@ class AnalyseConditions extends AbstractModel
      * @param string $PayModes <p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p>
      * @param string $ActionTypes <p>交易类型，查询交易类型（请使用交易类型code入参）</p>
      * @param string $Tags <p>分账标签</p>
-     * @param string $FeeType <p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
+     * @param string $FeeType <p>费用类型，查询费用类型（请使用费用类型code入参）入参枚举如下</p><p>枚举值：</p><ul><li>cashPayAmount： 现金</li><li>incentivePayAmount： 赠送金</li><li>voucherPayAmount： 优惠券</li><li>transferPayAmount： 分成金</li></ul>
      * @param string $PayerUins <p>查询成本分析数据的用户UIN</p>
      * @param string $OwnerUins <p>使用资源的用户UIN</p>
      * @param string $ConsumptionTypes <p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p>

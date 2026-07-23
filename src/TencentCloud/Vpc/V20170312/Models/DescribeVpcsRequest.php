@@ -20,86 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpcs请求参数结构体
  *
- * @method array getVpcIds() 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
- * @method void setVpcIds(array $VpcIds) 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
- * @method array getFilters() 获取过滤条件，不支持同时指定VpcIds和Filters参数。
-支持的过滤条件如下：
-<li>vpc-name：VPC实例名称，支持模糊查询。</li>
-<li>is-default ：是否默认VPC。</li>
-<li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
-<li>cidr-block：VPC的CIDR。</li>
-<li>tag-key ：按照标签键进行过滤，非必填参数。</li>
-<li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>
-  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。
-<li>ipv6-cidr-block - String - （过滤条件）IPv6子网网段，形如: 2402:4e00:1717:8700::/64 。</li>
-<li>isp-type  - String - （过滤条件）运营商类型，形如: BGP 取值范围：'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联通。</li>
-<li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，不支持同时指定VpcIds和Filters参数。
-支持的过滤条件如下：
-<li>vpc-name：VPC实例名称，支持模糊查询。</li>
-<li>is-default ：是否默认VPC。</li>
-<li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
-<li>cidr-block：VPC的CIDR。</li>
-<li>tag-key ：按照标签键进行过滤，非必填参数。</li>
-<li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>
-  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。
-<li>ipv6-cidr-block - String - （过滤条件）IPv6子网网段，形如: 2402:4e00:1717:8700::/64 。</li>
-<li>isp-type  - String - （过滤条件）运营商类型，形如: BGP 取值范围：'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联通。</li>
-<li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li>
- * @method string getOffset() 获取偏移量，默认为0。
- * @method void setOffset(string $Offset) 设置偏移量，默认为0。
- * @method string getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method array getVpcIds() 获取<p>VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。</p>
+ * @method void setVpcIds(array $VpcIds) 设置<p>VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。</p>
+ * @method array getFilters() 获取<p>过滤条件，不支持同时指定VpcIds和Filters参数。<br>支持的过滤条件如下：</p><li>vpc-name：VPC实例名称，支持模糊查询。</li><li>is-default ：是否默认VPC。</li><li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li><li>cidr-block：VPC的CIDR。</li><li>tag-key ：按照标签键进行过滤，非必填参数。</li><li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。<li>ipv6-cidr-block - String - （过滤条件）IPv6子网网段，形如: 2402:4e00:1717:8700::/64 。</li><li>isp-type  - String - （过滤条件）运营商类型，形如: BGP 取值范围：'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联通。</li><li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。<code>GUA</code>(全球单播地址), <code>ULA</code>(唯一本地地址)。</li>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件，不支持同时指定VpcIds和Filters参数。<br>支持的过滤条件如下：</p><li>vpc-name：VPC实例名称，支持模糊查询。</li><li>is-default ：是否默认VPC。</li><li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li><li>cidr-block：VPC的CIDR。</li><li>tag-key ：按照标签键进行过滤，非必填参数。</li><li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。<li>ipv6-cidr-block - String - （过滤条件）IPv6子网网段，形如: 2402:4e00:1717:8700::/64 。</li><li>isp-type  - String - （过滤条件）运营商类型，形如: BGP 取值范围：'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联通。</li><li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。<code>GUA</code>(全球单播地址), <code>ULA</code>(唯一本地地址)。</li>
+ * @method string getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(string $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method string getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
+ * @method void setLimit(string $Limit) 设置<p>返回数量，默认为20，最大值为100。</p>
  */
 class DescribeVpcsRequest extends AbstractModel
 {
     /**
-     * @var array VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * @var array <p>VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。</p>
      */
     public $VpcIds;
 
     /**
-     * @var array 过滤条件，不支持同时指定VpcIds和Filters参数。
-支持的过滤条件如下：
-<li>vpc-name：VPC实例名称，支持模糊查询。</li>
-<li>is-default ：是否默认VPC。</li>
-<li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
-<li>cidr-block：VPC的CIDR。</li>
-<li>tag-key ：按照标签键进行过滤，非必填参数。</li>
-<li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>
-  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。
-<li>ipv6-cidr-block - String - （过滤条件）IPv6子网网段，形如: 2402:4e00:1717:8700::/64 。</li>
-<li>isp-type  - String - （过滤条件）运营商类型，形如: BGP 取值范围：'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联通。</li>
-<li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li>
+     * @var array <p>过滤条件，不支持同时指定VpcIds和Filters参数。<br>支持的过滤条件如下：</p><li>vpc-name：VPC实例名称，支持模糊查询。</li><li>is-default ：是否默认VPC。</li><li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li><li>cidr-block：VPC的CIDR。</li><li>tag-key ：按照标签键进行过滤，非必填参数。</li><li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。<li>ipv6-cidr-block - String - （过滤条件）IPv6子网网段，形如: 2402:4e00:1717:8700::/64 。</li><li>isp-type  - String - （过滤条件）运营商类型，形如: BGP 取值范围：'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联通。</li><li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。<code>GUA</code>(全球单播地址), <code>ULA</code>(唯一本地地址)。</li>
      */
     public $Filters;
 
     /**
-     * @var string 偏移量，默认为0。
+     * @var string <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var string 返回数量，默认为20，最大值为100。
+     * @var string <p>返回数量，默认为20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @param array $VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
-     * @param array $Filters 过滤条件，不支持同时指定VpcIds和Filters参数。
-支持的过滤条件如下：
-<li>vpc-name：VPC实例名称，支持模糊查询。</li>
-<li>is-default ：是否默认VPC。</li>
-<li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
-<li>cidr-block：VPC的CIDR。</li>
-<li>tag-key ：按照标签键进行过滤，非必填参数。</li>
-<li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>
-  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。
-<li>ipv6-cidr-block - String - （过滤条件）IPv6子网网段，形如: 2402:4e00:1717:8700::/64 。</li>
-<li>isp-type  - String - （过滤条件）运营商类型，形如: BGP 取值范围：'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联通。</li>
-<li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li>
-     * @param string $Offset 偏移量，默认为0。
-     * @param string $Limit 返回数量，默认为20，最大值为100。
+     * @param array $VpcIds <p>VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。</p>
+     * @param array $Filters <p>过滤条件，不支持同时指定VpcIds和Filters参数。<br>支持的过滤条件如下：</p><li>vpc-name：VPC实例名称，支持模糊查询。</li><li>is-default ：是否默认VPC。</li><li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li><li>cidr-block：VPC的CIDR。</li><li>tag-key ：按照标签键进行过滤，非必填参数。</li><li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。<li>ipv6-cidr-block - String - （过滤条件）IPv6子网网段，形如: 2402:4e00:1717:8700::/64 。</li><li>isp-type  - String - （过滤条件）运营商类型，形如: BGP 取值范围：'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联通。</li><li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。<code>GUA</code>(全球单播地址), <code>ULA</code>(唯一本地地址)。</li>
+     * @param string $Offset <p>偏移量，默认为0。</p>
+     * @param string $Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     function __construct()
     {

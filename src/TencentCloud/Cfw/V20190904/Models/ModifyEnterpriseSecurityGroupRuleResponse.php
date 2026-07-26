@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyEnterpriseSecurityGroupRule返回参数结构体
  *
- * @method integer getStatus() 获取<p>状态值，0：编辑成功，非0：编辑失败</p>
- * @method void setStatus(integer $Status) 设置<p>状态值，0：编辑成功，非0：编辑失败</p>
- * @method integer getNewRuleUuid() 获取<p>编辑后新生成规则的Id</p>
- * @method void setNewRuleUuid(integer $NewRuleUuid) 设置<p>编辑后新生成规则的Id</p>
+ * @method integer getNewRuleUuid() 获取ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
+ * @method void setNewRuleUuid(integer $NewRuleUuid) 设置ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
+ * @method integer getStatus() 获取处理状态：0 表示成功。
+ * @method void setStatus(integer $Status) 设置处理状态：0 表示成功。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel
 {
     /**
-     * @var integer <p>状态值，0：编辑成功，非0：编辑失败</p>
-     */
-    public $Status;
-
-    /**
-     * @var integer <p>编辑后新生成规则的Id</p>
+     * @var integer ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
      */
     public $NewRuleUuid;
+
+    /**
+     * @var integer 处理状态：0 表示成功。
+     */
+    public $Status;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status <p>状态值，0：编辑成功，非0：编辑失败</p>
-     * @param integer $NewRuleUuid <p>编辑后新生成规则的Id</p>
+     * @param integer $NewRuleUuid ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
+     * @param integer $Status 处理状态：0 表示成功。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,12 @@ class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
         if (array_key_exists("NewRuleUuid",$param) and $param["NewRuleUuid"] !== null) {
             $this->NewRuleUuid = $param["NewRuleUuid"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

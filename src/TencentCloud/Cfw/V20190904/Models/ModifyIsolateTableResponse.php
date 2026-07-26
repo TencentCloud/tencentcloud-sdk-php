@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyIsolateTable返回参数结构体
  *
- * @method integer getReturnCode() 获取<p>0 成功  非0失败</p>
- * @method void setReturnCode(integer $ReturnCode) 设置<p>0 成功  非0失败</p>
- * @method string getReturnMsg() 获取<p>success 成功 其他失败</p>
- * @method void setReturnMsg(string $ReturnMsg) 设置<p>success 成功 其他失败</p>
+ * @method integer getReturnCode() 获取处理返回码：0 表示成功。
+ * @method void setReturnCode(integer $ReturnCode) 设置处理返回码：0 表示成功。
+ * @method string getReturnMsg() 获取处理结果信息，成功时为 success。
+ * @method void setReturnMsg(string $ReturnMsg) 设置处理结果信息，成功时为 success。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyIsolateTableResponse extends AbstractModel
 {
     /**
-     * @var integer <p>0 成功  非0失败</p>
+     * @var integer 处理返回码：0 表示成功。
      */
     public $ReturnCode;
 
     /**
-     * @var string <p>success 成功 其他失败</p>
+     * @var string 处理结果信息，成功时为 success。
      */
     public $ReturnMsg;
 
@@ -45,8 +45,8 @@ class ModifyIsolateTableResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ReturnCode <p>0 成功  非0失败</p>
-     * @param string $ReturnMsg <p>success 成功 其他失败</p>
+     * @param integer $ReturnCode 处理返回码：0 表示成功。
+     * @param string $ReturnMsg 处理结果信息，成功时为 success。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

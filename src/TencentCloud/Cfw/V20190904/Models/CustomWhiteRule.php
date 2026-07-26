@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDstIP() 获取自定义规则的目的地址。SrcIP、DstIP 至少一项必须是具体 IP；本字段仅在 SrcIP 为具体 IP 时可省略或使用与 SrcIP 同版本的通配网段。两项均为具体 IP 时，源 IPv6、目的 IPv4 会被拒绝，源 IPv4、目的 IPv6 当前不受该版本检查限制。私网 IPv4 和任意 IPv6 直接通过资产判定，公网 IPv4 必须存在于当前账号 cfw_public_ip；是否要求通过资产判定由两侧地址与实际 FwType 联动决定。
  * @method void setDstIP(string $DstIP) 设置自定义规则的目的地址。SrcIP、DstIP 至少一项必须是具体 IP；本字段仅在 SrcIP 为具体 IP 时可省略或使用与 SrcIP 同版本的通配网段。两项均为具体 IP 时，源 IPv6、目的 IPv4 会被拒绝，源 IPv4、目的 IPv6 当前不受该版本检查限制。私网 IPv4 和任意 IPv6 直接通过资产判定，公网 IPv4 必须存在于当前账号 cfw_public_ip；是否要求通过资产判定由两侧地址与实际 FwType 联动决定。
- * @method string getIdsRuleId() 获取自定义规则关联的入侵防御规则 ID；必须是可转换为整数且在入侵防御规则模板中存在的 ID。
- * @method void setIdsRuleId(string $IdsRuleId) 设置自定义规则关联的入侵防御规则 ID；必须是可转换为整数且在入侵防御规则模板中存在的 ID。
+ * @method string getIdsRuleId() 获取自定义规则关联的入侵防御规则 ID。调用 DescribeIpsRuleListNew，传目标规则的查询条件，仅使用 Data[].RuleID；该值必须可转换为整数且对应现有入侵防御规则。
+ * @method void setIdsRuleId(string $IdsRuleId) 设置自定义规则关联的入侵防御规则 ID。调用 DescribeIpsRuleListNew，传目标规则的查询条件，仅使用 Data[].RuleID；该值必须可转换为整数且对应现有入侵防御规则。
  * @method string getIdsRuleName() 获取自定义规则名称；处理器不对内容做额外校验。
  * @method void setIdsRuleName(string $IdsRuleName) 设置自定义规则名称；处理器不对内容做额外校验。
  * @method string getSrcIP() 获取自定义规则的源地址。SrcIP、DstIP 至少一项必须是具体 IP；本字段仅在 DstIP 为具体 IP 时可省略或使用与 DstIP 同版本的通配网段。两项均为具体 IP 时，源 IPv6、目的 IPv4 会被拒绝，源 IPv4、目的 IPv6 当前不受该版本检查限制。私网 IPv4 和任意 IPv6 直接通过资产判定，公网 IPv4 必须存在于当前账号 cfw_public_ip；是否要求通过资产判定由两侧地址与实际 FwType 联动决定。
@@ -37,7 +37,7 @@ class CustomWhiteRule extends AbstractModel
     public $DstIP;
 
     /**
-     * @var string 自定义规则关联的入侵防御规则 ID；必须是可转换为整数且在入侵防御规则模板中存在的 ID。
+     * @var string 自定义规则关联的入侵防御规则 ID。调用 DescribeIpsRuleListNew，传目标规则的查询条件，仅使用 Data[].RuleID；该值必须可转换为整数且对应现有入侵防御规则。
      */
     public $IdsRuleId;
 
@@ -53,7 +53,7 @@ class CustomWhiteRule extends AbstractModel
 
     /**
      * @param string $DstIP 自定义规则的目的地址。SrcIP、DstIP 至少一项必须是具体 IP；本字段仅在 SrcIP 为具体 IP 时可省略或使用与 SrcIP 同版本的通配网段。两项均为具体 IP 时，源 IPv6、目的 IPv4 会被拒绝，源 IPv4、目的 IPv6 当前不受该版本检查限制。私网 IPv4 和任意 IPv6 直接通过资产判定，公网 IPv4 必须存在于当前账号 cfw_public_ip；是否要求通过资产判定由两侧地址与实际 FwType 联动决定。
-     * @param string $IdsRuleId 自定义规则关联的入侵防御规则 ID；必须是可转换为整数且在入侵防御规则模板中存在的 ID。
+     * @param string $IdsRuleId 自定义规则关联的入侵防御规则 ID。调用 DescribeIpsRuleListNew，传目标规则的查询条件，仅使用 Data[].RuleID；该值必须可转换为整数且对应现有入侵防御规则。
      * @param string $IdsRuleName 自定义规则名称；处理器不对内容做额外校验。
      * @param string $SrcIP 自定义规则的源地址。SrcIP、DstIP 至少一项必须是具体 IP；本字段仅在 DstIP 为具体 IP 时可省略或使用与 DstIP 同版本的通配网段。两项均为具体 IP 时，源 IPv6、目的 IPv4 会被拒绝，源 IPv4、目的 IPv6 当前不受该版本检查限制。私网 IPv4 和任意 IPv6 直接通过资产判定，公网 IPv4 必须存在于当前账号 cfw_public_ip；是否要求通过资产判定由两侧地址与实际 FwType 联动决定。
      */

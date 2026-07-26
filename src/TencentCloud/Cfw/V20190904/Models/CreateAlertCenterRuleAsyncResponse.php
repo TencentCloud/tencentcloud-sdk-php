@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlertCenterRuleAsync返回参数结构体
  *
- * @method integer getReturnCode() 获取<p>返回状态码：<br>0 成功<br>非0 失败</p>
- * @method void setReturnCode(integer $ReturnCode) 设置<p>返回状态码：<br>0 成功<br>非0 失败</p>
- * @method string getReturnMsg() 获取<p>返回信息：<br>success 成功<br>其他</p>
- * @method void setReturnMsg(string $ReturnMsg) 设置<p>返回信息：<br>success 成功<br>其他</p>
- * @method integer getStatus() 获取<p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
- * @method void setStatus(integer $Status) 设置<p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
+ * @method integer getReturnCode() 获取请求返回码，0 表示已进入异步处理；处理进度见 Status。
+ * @method void setReturnCode(integer $ReturnCode) 设置请求返回码，0 表示已进入异步处理；处理进度见 Status。
+ * @method string getReturnMsg() 获取与 ReturnCode 对应的结果信息，成功时为 success。
+ * @method void setReturnMsg(string $ReturnMsg) 设置与 ReturnCode 对应的结果信息，成功时为 success。
+ * @method integer getStatus() 获取异步处理状态：1 表示处理中，使用完全相同的请求参数继续查询；修改参数会发起新的操作。0 表示处理结束，处置结果通过对应查询接口获取。
+ * @method void setStatus(integer $Status) 设置异步处理状态：1 表示处理中，使用完全相同的请求参数继续查询；修改参数会发起新的操作。0 表示处理结束，处置结果通过对应查询接口获取。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAlertCenterRuleAsyncResponse extends AbstractModel
 {
     /**
-     * @var integer <p>返回状态码：<br>0 成功<br>非0 失败</p>
+     * @var integer 请求返回码，0 表示已进入异步处理；处理进度见 Status。
      */
     public $ReturnCode;
 
     /**
-     * @var string <p>返回信息：<br>success 成功<br>其他</p>
+     * @var string 与 ReturnCode 对应的结果信息，成功时为 success。
      */
     public $ReturnMsg;
 
     /**
-     * @var integer <p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
+     * @var integer 异步处理状态：1 表示处理中，使用完全相同的请求参数继续查询；修改参数会发起新的操作。0 表示处理结束，处置结果通过对应查询接口获取。
      */
     public $Status;
 
@@ -52,9 +52,9 @@ class CreateAlertCenterRuleAsyncResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ReturnCode <p>返回状态码：<br>0 成功<br>非0 失败</p>
-     * @param string $ReturnMsg <p>返回信息：<br>success 成功<br>其他</p>
-     * @param integer $Status <p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
+     * @param integer $ReturnCode 请求返回码，0 表示已进入异步处理；处理进度见 Status。
+     * @param string $ReturnMsg 与 ReturnCode 对应的结果信息，成功时为 success。
+     * @param integer $Status 异步处理状态：1 表示处理中，使用完全相同的请求参数继续查询；修改参数会发起新的操作。0 表示处理结束，处置结果通过对应查询接口获取。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

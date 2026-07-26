@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveNatAcRule返回参数结构体
  *
- * @method array getRuleUuid() 获取<p>删除成功后返回被删除策略的uuid列表</p>
- * @method void setRuleUuid(array $RuleUuid) 设置<p>删除成功后返回被删除策略的uuid列表</p>
+ * @method array getRuleUuid() 获取回显请求中的规则 ID 列表；全量删除返回 [-1]。
+ * @method void setRuleUuid(array $RuleUuid) 设置回显请求中的规则 ID 列表；全量删除返回 [-1]。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RemoveNatAcRuleResponse extends AbstractModel
 {
     /**
-     * @var array <p>删除成功后返回被删除策略的uuid列表</p>
+     * @var array 回显请求中的规则 ID 列表；全量删除返回 [-1]。
      */
     public $RuleUuid;
 
@@ -38,7 +38,7 @@ class RemoveNatAcRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RuleUuid <p>删除成功后返回被删除策略的uuid列表</p>
+     * @param array $RuleUuid 回显请求中的规则 ID 列表；全量删除返回 [-1]。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

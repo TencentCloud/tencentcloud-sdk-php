@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddAclRule返回参数结构体
  *
- * @method array getRuleUuid() 获取数据库插入成功后返回的新规则数值 ID 列表，顺序与已插入的 Rules 顺序一致；不表示异步规则下发已经完成。
- * @method void setRuleUuid(array $RuleUuid) 设置数据库插入成功后返回的新规则数值 ID 列表，顺序与已插入的 Rules 顺序一致；不表示异步规则下发已经完成。
+ * @method array getRuleUuid() 获取新增规则的 ID 列表，顺序与 Rules 一致。
+ * @method void setRuleUuid(array $RuleUuid) 设置新增规则的 ID 列表，顺序与 Rules 一致。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AddAclRuleResponse extends AbstractModel
 {
     /**
-     * @var array 数据库插入成功后返回的新规则数值 ID 列表，顺序与已插入的 Rules 顺序一致；不表示异步规则下发已经完成。
+     * @var array 新增规则的 ID 列表，顺序与 Rules 一致。
      */
     public $RuleUuid;
 
@@ -38,7 +38,7 @@ class AddAclRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RuleUuid 数据库插入成功后返回的新规则数值 ID 列表，顺序与已插入的 Rules 顺序一致；不表示异步规则下发已经完成。
+     * @param array $RuleUuid 新增规则的 ID 列表，顺序与 Rules 一致。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

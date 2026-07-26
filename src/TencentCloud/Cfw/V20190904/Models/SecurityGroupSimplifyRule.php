@@ -18,10 +18,10 @@ namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 创建请求写入成功后返回的企业安全组规则摘要。
+ * 企业安全组规则摘要。
  *
- * @method string getDescription() 获取写入规则的描述。
- * @method void setDescription(string $Description) 设置写入规则的描述。
+ * @method string getDescription() 获取规则描述。
+ * @method void setDescription(string $Description) 设置规则描述。
  * @method string getDestContent() 获取访问目的示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -38,12 +38,12 @@ tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
  * @method string getProtocol() 获取写入规则的协议。普通 IPv4 规则返回 ANY、TCP、UDP 或 ICMP；使用服务模板时，Protocol 可省略或留空，此时返回空字符串；若仍显式填写 Protocol，则只接受 ANY 并返回 ANY。
  * @method void setProtocol(string $Protocol) 设置写入规则的协议。普通 IPv4 规则返回 ANY、TCP、UDP 或 ICMP；使用服务模板时，Protocol 可省略或留空，此时返回空字符串；若仍显式填写 Protocol，则只接受 ANY 并返回 ANY。
- * @method integer getRuleUuid() 获取服务端写入后生成或采用的规则数据库 ID。
- * @method void setRuleUuid(integer $RuleUuid) 设置服务端写入后生成或采用的规则数据库 ID。
+ * @method integer getRuleUuid() 获取规则 ID。
+ * @method void setRuleUuid(integer $RuleUuid) 设置规则 ID。
  * @method string getScope() 获取写入后的规则生效范围；SG 表示安全组，LH 表示轻量应用服务器，组合范围以逗号分隔。
  * @method void setScope(string $Scope) 设置写入后的规则生效范围；SG 表示安全组，LH 表示轻量应用服务器，组合范围以逗号分隔。
- * @method integer getSequence() 获取服务端写入后的实际规则顺序。
- * @method void setSequence(integer $Sequence) 设置服务端写入后的实际规则顺序。
+ * @method integer getSequence() 获取写入后的实际规则顺序。
+ * @method void setSequence(integer $Sequence) 设置写入后的实际规则顺序。
  * @method string getSourceContent() 获取访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -62,7 +62,7 @@ region：地域(ap-gaungzhou)
 class SecurityGroupSimplifyRule extends AbstractModel
 {
     /**
-     * @var string 写入规则的描述。
+     * @var string 规则描述。
      */
     public $Description;
 
@@ -83,7 +83,7 @@ region：地域(ap-gaungzhou)
     public $Protocol;
 
     /**
-     * @var integer 服务端写入后生成或采用的规则数据库 ID。
+     * @var integer 规则 ID。
      */
     public $RuleUuid;
 
@@ -93,7 +93,7 @@ region：地域(ap-gaungzhou)
     public $Scope;
 
     /**
-     * @var integer 服务端写入后的实际规则顺序。
+     * @var integer 写入后的实际规则顺序。
      */
     public $Sequence;
 
@@ -109,7 +109,7 @@ region：地域(ap-gaungzhou)
     public $SourceContent;
 
     /**
-     * @param string $Description 写入规则的描述。
+     * @param string $Description 规则描述。
      * @param string $DestContent 访问目的示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -118,9 +118,9 @@ resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
      * @param string $Protocol 写入规则的协议。普通 IPv4 规则返回 ANY、TCP、UDP 或 ICMP；使用服务模板时，Protocol 可省略或留空，此时返回空字符串；若仍显式填写 Protocol，则只接受 ANY 并返回 ANY。
-     * @param integer $RuleUuid 服务端写入后生成或采用的规则数据库 ID。
+     * @param integer $RuleUuid 规则 ID。
      * @param string $Scope 写入后的规则生效范围；SG 表示安全组，LH 表示轻量应用服务器，组合范围以逗号分隔。
-     * @param integer $Sequence 服务端写入后的实际规则顺序。
+     * @param integer $Sequence 写入后的实际规则顺序。
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)

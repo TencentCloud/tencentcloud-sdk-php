@@ -23,21 +23,21 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cfw\V20190904\Models as Models;
 
 /**
- * @method Models\AddAclRuleResponse AddAclRule(Models\AddAclRuleRequest $req) 添加一条或多条互联网边界访问控制规则。规则写入当前账号的可操作分区；本批 Rules 在一次插入事务中写入。From=batch_import_cover 会先以独立事务删除首条规则 Direction 对应的旧规则，再插入本批 Rules；删除一旦提交，后续插入失败不会恢复旧规则。公有云环境在数据库事务提交后异步触发规则下发，因此成功返回只表示规则已写入并已发起下发，不表示数据面已经生效。
- * @method Models\AddEnterpriseSecurityGroupRulesResponse AddEnterpriseSecurityGroupRules(Models\AddEnterpriseSecurityGroupRulesRequest $req) 创建新企业安全组规则
- * @method Models\AddNatAcRuleResponse AddNatAcRule(Models\AddNatAcRuleRequest $req) 添加nat访问控制规则
- * @method Models\AddVpcAcRuleResponse AddVpcAcRule(Models\AddVpcAcRuleRequest $req) 添加VPC内网间规则
+ * @method Models\AddAclRuleResponse AddAclRule(Models\AddAclRuleRequest $req) 新增一条或多条互联网边界访问控制规则。
+ * @method Models\AddEnterpriseSecurityGroupRulesResponse AddEnterpriseSecurityGroupRules(Models\AddEnterpriseSecurityGroupRulesRequest $req) 新增一条或多条企业安全组规则。
+ * @method Models\AddNatAcRuleResponse AddNatAcRule(Models\AddNatAcRuleRequest $req) 新增一条或多条 NAT边界访问控制规则。
+ * @method Models\AddVpcAcRuleResponse AddVpcAcRule(Models\AddVpcAcRuleRequest $req) 新增一条或多条 VPC 边界访问控制规则。
  * @method Models\CheckClusterNatFwPreAccessResponse CheckClusterNatFwPreAccess(Models\CheckClusterNatFwPreAccessRequest $req) 发起 NAT CCN 集群模式防火墙预接入检查（仅支持自动接入模式）。入参与 OpenClusterNatFwSwitch 完全相同，传入相同的 NatCcnSwitch 配置 JSON 即可发起检查。检查为异步执行：接口立即返回 CheckItems 检查项清单，前端轮询 DescribeClusterNatCcnFwSwitchList 接口读取 CheckResult 获取各阶段的通过/失败状态。
  * @method Models\CheckClusterVpcFwPreAccessResponse CheckClusterVpcFwPreAccess(Models\CheckClusterVpcFwPreAccessRequest $req) 发起 VPC 集群防火墙预接入检查（仅支持自动接入模式）。入参与 ModifyClusterVpcFwSwitch 完全相同，传入相同的 CcnSwitch 配置 JSON 即可发起检查。检查为异步执行：接口立即返回 CheckItems 检查项清单，前端轮询 DescribeClusterVpcFwSwitchs 接口读取 CheckResult 获取各阶段的通过/失败状态。
  * @method Models\CloseClusterNatFwSwitchResponse CloseClusterNatFwSwitch(Models\CloseClusterNatFwSwitchRequest $req) 关闭NAT CCN集群模式防火墙开关
  * @method Models\CreateAcRulesResponse CreateAcRules(Models\CreateAcRulesRequest $req) 创建访问控制规则
  * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) 创建地址模板规则
  * @method Models\CreateAlertCenterIsolateResponse CreateAlertCenterIsolate(Models\CreateAlertCenterIsolateRequest $req) 用户告警中心-封隔离处置按钮
- * @method Models\CreateAlertCenterOmitResponse CreateAlertCenterOmit(Models\CreateAlertCenterOmitRequest $req) 忽略告警中心或拦截列表中的记录。接口将目标记录的 bhide 标记设为 1，使其不再进入未忽略列表和相关统计，但不删除日志，也不创建持续匹配后续记录的忽略规则；本接口没有恢复 bhide 的参数。TableType 决定目标表及 ID 类型：AlertTable 按告警日志 logid 更新，InterceptionTable 按拦截记录 unique_id 更新。HandleEventIdList 中的聚合事件 ID 会先解析为告警日志 ID，再与 HandleIdList 合并；合并后会删除空字符串并去重。
+ * @method Models\CreateAlertCenterOmitResponse CreateAlertCenterOmit(Models\CreateAlertCenterOmitRequest $req) 忽略告警中心或拦截列表中的记录。忽略操作不支持撤销。
  * @method Models\CreateAlertCenterRuleResponse CreateAlertCenterRule(Models\CreateAlertCenterRuleRequest $req) 用户告警中心-封禁、放通处置按钮
- * @method Models\CreateAlertCenterRuleAsyncResponse CreateAlertCenterRuleAsync(Models\CreateAlertCenterRuleAsyncRequest $req) 用户告警中心-封禁、放通处置按钮
+ * @method Models\CreateAlertCenterRuleAsyncResponse CreateAlertCenterRuleAsync(Models\CreateAlertCenterRuleAsyncRequest $req) 异步处置新告警中心的告警。支持告警封禁、告警加白、IP 封禁、IP 加白、域名加白、加入安全基线和资产隔离。
  * @method Models\CreateBlockIgnoreRuleListResponse CreateBlockIgnoreRuleList(Models\CreateBlockIgnoreRuleListRequest $req) 批量添加入侵防御封禁列表、放通列表规则
- * @method Models\CreateBlockIgnoreRuleNewResponse CreateBlockIgnoreRuleNew(Models\CreateBlockIgnoreRuleNewRequest $req) 批量添加入侵防御封禁列表、放通列表规则
+ * @method Models\CreateBlockIgnoreRuleNewResponse CreateBlockIgnoreRuleNew(Models\CreateBlockIgnoreRuleNewRequest $req) 批量新增封禁或放通规则。
  * @method Models\CreateChooseVpcsResponse CreateChooseVpcs(Models\CreateChooseVpcsRequest $req) 创建、选择vpc
  * @method Models\CreateDatabaseWhiteListRulesResponse CreateDatabaseWhiteListRules(Models\CreateDatabaseWhiteListRulesRequest $req) 创建暴露数据库白名单规则
  * @method Models\CreateNatFwDnatRuleResponse CreateNatFwDnatRule(Models\CreateNatFwDnatRuleRequest $req) 创建Nat防火墙Dnat规则
@@ -48,7 +48,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DeleteAcRuleResponse DeleteAcRule(Models\DeleteAcRuleRequest $req) 删除规则
  * @method Models\DeleteAddressTemplateResponse DeleteAddressTemplate(Models\DeleteAddressTemplateRequest $req) 删除地址模板规则
  * @method Models\DeleteBlockIgnoreRuleListResponse DeleteBlockIgnoreRuleList(Models\DeleteBlockIgnoreRuleListRequest $req) 批量删除入侵防御封禁列表、放通列表规则
- * @method Models\DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNew(Models\DeleteBlockIgnoreRuleNewRequest $req) 批量删除入侵防御封禁列表、放通列表规则（新）
+ * @method Models\DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNew(Models\DeleteBlockIgnoreRuleNewRequest $req) 删除 IP 封禁规则，或清空封禁列表。
  * @method Models\DeleteNatFwDnatRuleResponse DeleteNatFwDnatRule(Models\DeleteNatFwDnatRuleRequest $req) 删除Nat防火墙Dnat规则
  * @method Models\DeleteNatFwInstanceResponse DeleteNatFwInstance(Models\DeleteNatFwInstanceRequest $req) 销毁防火墙实例
  * @method Models\DeleteRemoteAccessDomainResponse DeleteRemoteAccessDomain(Models\DeleteRemoteAccessDomainRequest $req) 删除远程运维域名
@@ -134,7 +134,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\ExpandCfwVerticalResponse ExpandCfwVertical(Models\ExpandCfwVerticalRequest $req) 防火墙垂直扩容
  * @method Models\ExportLogsOfflineResponse ExportLogsOffline(Models\ExportLogsOfflineRequest $req) 日志审计日志离线导出
  * @method Models\ModifyAcRuleResponse ModifyAcRule(Models\ModifyAcRuleRequest $req) 修改规则
- * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) 修改互联网边界访问控制规则
+ * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) 修改一条互联网边界访问控制规则。
  * @method Models\ModifyAddressTemplateResponse ModifyAddressTemplate(Models\ModifyAddressTemplateRequest $req) 修改地址模板
  * @method Models\ModifyAllPublicIPSwitchStatusResponse ModifyAllPublicIPSwitchStatus(Models\ModifyAllPublicIPSwitchStatusRequest $req) 互联网边界防火墙一键开关
  * @method Models\ModifyAllRuleStatusResponse ModifyAllRuleStatus(Models\ModifyAllRuleStatusRequest $req) 启用停用全部规则
@@ -154,11 +154,11 @@ use TencentCloud\Cfw\V20190904\Models as Models;
 VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction。
  * @method Models\ModifyEdgeIpSwitchResponse ModifyEdgeIpSwitch(Models\ModifyEdgeIpSwitchRequest $req) 修改边界防火墙开关(旁路、串行)
  * @method Models\ModifyEnterpriseSecurityDispatchStatusResponse ModifyEnterpriseSecurityDispatchStatus(Models\ModifyEnterpriseSecurityDispatchStatusRequest $req) 修改企业安全组下发状态
- * @method Models\ModifyEnterpriseSecurityGroupRuleResponse ModifyEnterpriseSecurityGroupRule(Models\ModifyEnterpriseSecurityGroupRuleRequest $req) 编辑新企业安全组规则
+ * @method Models\ModifyEnterpriseSecurityGroupRuleResponse ModifyEnterpriseSecurityGroupRule(Models\ModifyEnterpriseSecurityGroupRuleRequest $req) 修改企业安全组规则，包括编辑内容或启停规则。
  * @method Models\ModifyFwGroupSwitchResponse ModifyFwGroupSwitch(Models\ModifyFwGroupSwitchRequest $req) 修改防火墙(组)开关(支持单点模式、多点模式、全互通模式)
  * @method Models\ModifyIpsModeSwitchResponse ModifyIpsModeSwitch(Models\ModifyIpsModeSwitchRequest $req) 修改入侵防御防护模式
- * @method Models\ModifyIsolateTableResponse ModifyIsolateTable(Models\ModifyIsolateTableRequest $req) ModifyIsolateTable 隔离列表编辑和删除操作
- * @method Models\ModifyNatAcRuleResponse ModifyNatAcRule(Models\ModifyNatAcRuleRequest $req) 修改NAT访问控制规则
+ * @method Models\ModifyIsolateTableResponse ModifyIsolateTable(Models\ModifyIsolateTableRequest $req) 修改或解除已有入侵防御隔离记录，不用于新增隔离。
+ * @method Models\ModifyNatAcRuleResponse ModifyNatAcRule(Models\ModifyNatAcRuleRequest $req) 修改一条 NAT边界访问控制规则。
  * @method Models\ModifyNatFwReSelectResponse ModifyNatFwReSelect(Models\ModifyNatFwReSelectRequest $req) 防火墙实例重新选择vpc或nat
  * @method Models\ModifyNatFwSwitchResponse ModifyNatFwSwitch(Models\ModifyNatFwSwitchRequest $req) 修改NAT防火墙开关
  * @method Models\ModifyNatFwVpcDnsSwitchResponse ModifyNatFwVpcDnsSwitch(Models\ModifyNatFwVpcDnsSwitchRequest $req) nat 防火墙VPC DNS 开关切换
@@ -173,16 +173,16 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
  * @method Models\ModifySequenceRulesResponse ModifySequenceRules(Models\ModifySequenceRulesRequest $req) 修改规则执行顺序
  * @method Models\ModifyStorageSettingResponse ModifyStorageSetting(Models\ModifyStorageSettingRequest $req) 日志存储设置，可以修改存储时间和清空日志
  * @method Models\ModifyTableStatusResponse ModifyTableStatus(Models\ModifyTableStatusRequest $req) 修改规则表状态
- * @method Models\ModifyVpcAcRuleResponse ModifyVpcAcRule(Models\ModifyVpcAcRuleRequest $req) 修改内网间访问控制规则
+ * @method Models\ModifyVpcAcRuleResponse ModifyVpcAcRule(Models\ModifyVpcAcRuleRequest $req) 修改一条 VPC边界访问控制规则。
  * @method Models\ModifyVpcFwGroupResponse ModifyVpcFwGroup(Models\ModifyVpcFwGroupRequest $req) 编辑VPC间防火墙(防火墙组)
  * @method Models\ModifyVpcFwSequenceRulesResponse ModifyVpcFwSequenceRules(Models\ModifyVpcFwSequenceRulesRequest $req) vpc间规则快速排序
  * @method Models\OpenClusterNatFwSwitchResponse OpenClusterNatFwSwitch(Models\OpenClusterNatFwSwitchRequest $req) 开启NAT CCN集群模式防火墙开关
  * @method Models\RemoveAcRuleResponse RemoveAcRule(Models\RemoveAcRuleRequest $req) 删除互联网边界规则
- * @method Models\RemoveAclRuleResponse RemoveAclRule(Models\RemoveAclRuleRequest $req) 删除互联网边界访问控制规则
- * @method Models\RemoveEnterpriseSecurityGroupRuleResponse RemoveEnterpriseSecurityGroupRule(Models\RemoveEnterpriseSecurityGroupRuleRequest $req) 删除新企业安全组规则
- * @method Models\RemoveNatAcRuleResponse RemoveNatAcRule(Models\RemoveNatAcRuleRequest $req) 删除NAT访问控制规则
+ * @method Models\RemoveAclRuleResponse RemoveAclRule(Models\RemoveAclRuleRequest $req) 删除互联网边界访问控制规则。
+ * @method Models\RemoveEnterpriseSecurityGroupRuleResponse RemoveEnterpriseSecurityGroupRule(Models\RemoveEnterpriseSecurityGroupRuleRequest $req) 删除企业安全组规则。
+ * @method Models\RemoveNatAcRuleResponse RemoveNatAcRule(Models\RemoveNatAcRuleRequest $req) 删除 NAT 边界访问控制规则。
  * @method Models\RemoveOfflineExportTaskResponse RemoveOfflineExportTask(Models\RemoveOfflineExportTaskRequest $req) 删除日志离线导出任务
- * @method Models\RemoveVpcAcRuleResponse RemoveVpcAcRule(Models\RemoveVpcAcRuleRequest $req) 删除VPC间规则
+ * @method Models\RemoveVpcAcRuleResponse RemoveVpcAcRule(Models\RemoveVpcAcRuleRequest $req) 删除 VPC 边界访问控制规则。
  * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 本接口用于检索分析日志，使用该接口时请注意如下事项：
 1. 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
 2. 检索语法建议使用日志服务专用检索语法CQL，请使用SyntaxRule参数，将值设置为1，控制台默认也使用该语法规则。

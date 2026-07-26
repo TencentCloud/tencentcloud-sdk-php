@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveEnterpriseSecurityGroupRule返回参数结构体
  *
- * @method integer getRuleUuid() 获取<p>删除成功后返回被删除策略的uuid</p>
- * @method void setRuleUuid(integer $RuleUuid) 设置<p>删除成功后返回被删除策略的uuid</p>
- * @method integer getStatus() 获取<p>0代表成功，-1代表失败</p>
- * @method void setStatus(integer $Status) 设置<p>0代表成功，-1代表失败</p>
+ * @method integer getRuleUuid() 获取回显请求中的 RuleUuid。
+ * @method void setRuleUuid(integer $RuleUuid) 设置回显请求中的 RuleUuid。
+ * @method integer getStatus() 获取处理状态：0 表示成功。
+ * @method void setStatus(integer $Status) 设置处理状态：0 表示成功。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RemoveEnterpriseSecurityGroupRuleResponse extends AbstractModel
 {
     /**
-     * @var integer <p>删除成功后返回被删除策略的uuid</p>
+     * @var integer 回显请求中的 RuleUuid。
      */
     public $RuleUuid;
 
     /**
-     * @var integer <p>0代表成功，-1代表失败</p>
+     * @var integer 处理状态：0 表示成功。
      */
     public $Status;
 
@@ -45,8 +45,8 @@ class RemoveEnterpriseSecurityGroupRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $RuleUuid <p>删除成功后返回被删除策略的uuid</p>
-     * @param integer $Status <p>0代表成功，-1代表失败</p>
+     * @param integer $RuleUuid 回显请求中的 RuleUuid。
+     * @param integer $Status 处理状态：0 表示成功。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

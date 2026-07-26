@@ -30,6 +30,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 智能字幕（语音全文、语音热词、语音翻译）
  * @method Models\BatchStartStreamLinkFlowResponse BatchStartStreamLinkFlow(Models\BatchStartStreamLinkFlowRequest $req) 批量启动媒体传输流。
  * @method Models\BatchStopStreamLinkFlowResponse BatchStopStreamLinkFlow(Models\BatchStopStreamLinkFlowRequest $req) 批量停止媒体传输流。
+ * @method Models\CloneViralResponse CloneViral(Models\CloneViralRequest $req) 爆款复刻。输入爆款参考视频+商品图，生成风格/节奏对齐的视频
  * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) 创建用户自定义内容分析模板，数量上限：50。
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) 创建用户自定义内容识别模板，数量上限：50。
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) 创建转自适应码流模板，数量上限：100。
@@ -151,6 +152,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeAsrHotwordsListResponse DescribeAsrHotwordsList(Models\DescribeAsrHotwordsListRequest $req) 获取热词库列表
  * @method Models\DescribeBatchTaskDetailResponse DescribeBatchTaskDetail(Models\DescribeBatchTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
  * @method Models\DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(Models\DescribeBlindWatermarkTemplatesRequest $req) 查询用户自定义数字水印模板，支持根据条件，分页查询。
+ * @method Models\DescribeCloneViralTaskResponse DescribeCloneViralTask(Models\DescribeCloneViralTaskRequest $req) 查询爆款复刻任务结果
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) 根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
  * @method Models\DescribeDesignTaskResponse DescribeDesignTask(Models\DescribeDesignTaskRequest $req) 查询音色设计任务（异步）结果
  * @method Models\DescribeGroupAttachFlowsByIdResponse DescribeGroupAttachFlowsById(Models\DescribeGroupAttachFlowsByIdRequest $req) 根据安全组反差关联的Flow信息。

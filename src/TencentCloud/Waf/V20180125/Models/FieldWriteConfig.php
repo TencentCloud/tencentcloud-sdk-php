@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 设置哪些字段是否存储或转发
  *
- * @method integer getEnableHeaders() 获取1:开启 0:不开启
- * @method void setEnableHeaders(integer $EnableHeaders) 设置1:开启 0:不开启
- * @method integer getEnableBody() 获取1:开启 0:不开启
- * @method void setEnableBody(integer $EnableBody) 设置1:开启 0:不开启
- * @method integer getEnableBot() 获取1:开启 0:不开启
- * @method void setEnableBot(integer $EnableBot) 设置1:开启 0:不开启
- * @method integer getEnableResponse() 获取响应方向body
-1:开启 0:不开启
- * @method void setEnableResponse(integer $EnableResponse) 设置响应方向body
-1:开启 0:不开启
+ * @method integer getEnableHeaders() 获取<p>1:开启 0:不开启</p>
+ * @method void setEnableHeaders(integer $EnableHeaders) 设置<p>1:开启 0:不开启</p>
+ * @method integer getEnableBody() 获取<p>1:开启 0:不开启</p>
+ * @method void setEnableBody(integer $EnableBody) 设置<p>1:开启 0:不开启</p>
+ * @method integer getEnableBot() 获取<p>1:开启 0:不开启</p>
+ * @method void setEnableBot(integer $EnableBot) 设置<p>1:开启 0:不开启</p>
+ * @method integer getEnableResponse() 获取<p>响应方向body<br>1:开启 0:不开启</p>
+ * @method void setEnableResponse(integer $EnableResponse) 设置<p>响应方向body<br>1:开启 0:不开启</p>
  */
 class FieldWriteConfig extends AbstractModel
 {
     /**
-     * @var integer 1:开启 0:不开启
+     * @var integer <p>1:开启 0:不开启</p>
      */
     public $EnableHeaders;
 
     /**
-     * @var integer 1:开启 0:不开启
+     * @var integer <p>1:开启 0:不开启</p>
      */
     public $EnableBody;
 
     /**
-     * @var integer 1:开启 0:不开启
+     * @var integer <p>1:开启 0:不开启</p>
      */
     public $EnableBot;
 
     /**
-     * @var integer 响应方向body
-1:开启 0:不开启
+     * @var integer <p>响应方向body<br>1:开启 0:不开启</p>
      */
     public $EnableResponse;
 
     /**
-     * @param integer $EnableHeaders 1:开启 0:不开启
-     * @param integer $EnableBody 1:开启 0:不开启
-     * @param integer $EnableBot 1:开启 0:不开启
-     * @param integer $EnableResponse 响应方向body
-1:开启 0:不开启
+     * @param integer $EnableHeaders <p>1:开启 0:不开启</p>
+     * @param integer $EnableBody <p>1:开启 0:不开启</p>
+     * @param integer $EnableBot <p>1:开启 0:不开启</p>
+     * @param integer $EnableResponse <p>响应方向body<br>1:开启 0:不开启</p>
      */
     function __construct()
     {

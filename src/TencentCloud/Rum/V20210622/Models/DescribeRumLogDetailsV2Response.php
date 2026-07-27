@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRumLogDetailsV2返回参数结构体
  *
- * @method string getResult() 获取日志明细
- * @method void setResult(string $Result) 设置日志明细
+ * @method string getResult() 获取<p>日志明细</p>
+ * @method void setResult(string $Result) 设置<p>日志明细</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRumLogDetailsV2Response extends AbstractModel
 {
     /**
-     * @var string 日志明细
+     * @var string <p>日志明细</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeRumLogDetailsV2Response extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 日志明细
+     * @param string $Result <p>日志明细</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateMigrationTask返回参数结构体
+ * DescribeMCPSubUin返回参数结构体
  *
- * @method string getTaskId() 获取<p>迁移任务 ID</p>
- * @method void setTaskId(string $TaskId) 设置<p>迁移任务 ID</p>
+ * @method string getSubuin() 获取<p>子 Uin</p>
+ * @method void setSubuin(string $Subuin) 设置<p>子 Uin</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateMigrationTaskResponse extends AbstractModel
+class DescribeMCPSubUinResponse extends AbstractModel
 {
     /**
-     * @var string <p>迁移任务 ID</p>
+     * @var string <p>子 Uin</p>
      */
-    public $TaskId;
+    public $Subuin;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateMigrationTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId <p>迁移任务 ID</p>
+     * @param string $Subuin <p>子 Uin</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateMigrationTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Subuin",$param) and $param["Subuin"] !== null) {
+            $this->Subuin = $param["Subuin"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

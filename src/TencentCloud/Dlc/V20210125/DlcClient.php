@@ -62,6 +62,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateResultDownloadResponse CreateResultDownload(Models\CreateResultDownloadRequest $req) 创建查询结果下载任务
  * @method Models\CreateScriptResponse CreateScript(Models\CreateScriptRequest $req) 该接口（CreateScript）用于创建sql脚本。
  * @method Models\CreateSparkAppResponse CreateSparkApp(Models\CreateSparkAppRequest $req) 创建spark作业
+ * @method Models\CreateSparkAppForTDLCResponse CreateSparkAppForTDLC(Models\CreateSparkAppForTDLCRequest $req) 创建tdlc spark作业
  * @method Models\CreateSparkAppTaskResponse CreateSparkAppTask(Models\CreateSparkAppTaskRequest $req) 启动Spark作业
  * @method Models\CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQL(Models\CreateSparkSessionBatchSQLRequest $req) 本接口（CreateSparkSessionBatchSQL）用于向Spark作业引擎提交Spark SQL批任务。
  * @method Models\CreateSparkSubmitTaskResponse CreateSparkSubmitTask(Models\CreateSparkSubmitTaskRequest $req) 本接口（CreateSparkSubmitTask）用于提交SparkSbumit批流任务。
@@ -118,6 +119,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeLakeFsDirSummaryResponse DescribeLakeFsDirSummary(Models\DescribeLakeFsDirSummaryRequest $req) 查询托管存储指定目录的Summary
  * @method Models\DescribeLakeFsInfoResponse DescribeLakeFsInfo(Models\DescribeLakeFsInfoRequest $req) 查询用户的托管存储信息
  * @method Models\DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResult(Models\DescribeLakeFsTaskResultRequest $req) 获取LakeFs上task执行结果访问信息
+ * @method Models\DescribeMCPSubUinResponse DescribeMCPSubUin(Models\DescribeMCPSubUinRequest $req) 获取账户子账户信息
  * @method Models\DescribeMCPTaskResponse DescribeMCPTask(Models\DescribeMCPTaskRequest $req) 该接口（DescribeTasks）用于查询任务列表
  * @method Models\DescribeMCPTaskResultResponse DescribeMCPTaskResult(Models\DescribeMCPTaskResultRequest $req) 获取任务结果查询
  * @method Models\DescribeNativeSparkSessionsResponse DescribeNativeSparkSessions(Models\DescribeNativeSparkSessionsRequest $req) 根据资源组获取spark session列表
@@ -190,6 +192,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ModifyGovernEventRuleResponse ModifyGovernEventRule(Models\ModifyGovernEventRuleRequest $req) 修改数据治理事件阈值
  * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) 更新spark作业
  * @method Models\ModifySparkAppBatchResponse ModifySparkAppBatch(Models\ModifySparkAppBatchRequest $req) 本接口（ModifySparkAppBatch）用于批量修改Spark作业参数配置
+ * @method Models\ModifySparkAppForTDLCResponse ModifySparkAppForTDLC(Models\ModifySparkAppForTDLCRequest $req) 更新tdlc spark作业
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyUserTypeResponse ModifyUserType(Models\ModifyUserTypeRequest $req) 修改用户类型。只有管理员用户能够调用该接口进行操作
  * @method Models\ModifyWorkGroupResponse ModifyWorkGroup(Models\ModifyWorkGroupRequest $req) 修改工作组信息

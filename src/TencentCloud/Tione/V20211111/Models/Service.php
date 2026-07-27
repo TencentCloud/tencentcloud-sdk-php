@@ -156,6 +156,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChanger(string $Changer) 设置<p>变更服务的子账户</p>
  * @method string getChangerName() 获取<p>变更服务的子账户名称</p>
  * @method void setChangerName(string $ChangerName) 设置<p>变更服务的子账户名称</p>
+ * @method ResourceSupplyAttribute getResourceSupplyAttribute() 获取<p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceSupplyAttribute(ResourceSupplyAttribute $ResourceSupplyAttribute) 设置<p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Service extends AbstractModel
 {
@@ -390,6 +394,12 @@ class Service extends AbstractModel
     public $ChangerName;
 
     /**
+     * @var ResourceSupplyAttribute <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceSupplyAttribute;
+
+    /**
      * @param string $ServiceGroupId <p>服务组id</p>
      * @param string $ServiceId <p>服务id</p>
      * @param string $ServiceGroupName <p>服务组名</p>
@@ -458,6 +468,8 @@ class Service extends AbstractModel
      * @param string $ProjectId <p>服务所属的项目 id,0表示默认空间</p>
      * @param string $Changer <p>变更服务的子账户</p>
      * @param string $ChangerName <p>变更服务的子账户名称</p>
+     * @param ResourceSupplyAttribute $ResourceSupplyAttribute <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -644,6 +656,11 @@ class Service extends AbstractModel
 
         if (array_key_exists("ChangerName",$param) and $param["ChangerName"] !== null) {
             $this->ChangerName = $param["ChangerName"];
+        }
+
+        if (array_key_exists("ResourceSupplyAttribute",$param) and $param["ResourceSupplyAttribute"] !== null) {
+            $this->ResourceSupplyAttribute = new ResourceSupplyAttribute();
+            $this->ResourceSupplyAttribute->deserialize($param["ResourceSupplyAttribute"]);
         }
     }
 }

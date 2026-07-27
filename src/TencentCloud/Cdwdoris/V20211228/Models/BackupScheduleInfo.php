@@ -20,150 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份、迁移任务信息
  *
- * @method integer getBackupType() 获取迁移类型：
-1-远端集群迁移；2-COS迁移
- * @method void setBackupType(integer $BackupType) 设置迁移类型：
-1-远端集群迁移；2-COS迁移
- * @method integer getExistCount() 获取当前任务现存实例数
- * @method void setExistCount(integer $ExistCount) 设置当前任务现存实例数
- * @method string getCosSourceInfo() 获取cos信息
- * @method void setCosSourceInfo(string $CosSourceInfo) 设置cos信息
- * @method string getDorisSourceInfo() 获取doris信息
- * @method void setDorisSourceInfo(string $DorisSourceInfo) 设置doris信息
- * @method integer getRestoreType() 获取恢复类型
- * @method void setRestoreType(integer $RestoreType) 设置恢复类型
- * @method SnapshotRemainPolicy getSnapshotRemainPolicy() 获取快照保留策略
- * @method void setSnapshotRemainPolicy(SnapshotRemainPolicy $SnapshotRemainPolicy) 设置快照保留策略
- * @method string getDataRemoteRegion() 获取远程备份地域
- * @method void setDataRemoteRegion(string $DataRemoteRegion) 设置远程备份地域
- * @method boolean getIsWithinGracePeriod() 获取是否在宽限期内
- * @method void setIsWithinGracePeriod(boolean $IsWithinGracePeriod) 设置是否在宽限期内
- * @method integer getGracePeriod() 获取宽限期（天数）
- * @method void setGracePeriod(integer $GracePeriod) 设置宽限期（天数）
- * @method string getGraceStartTime() 获取宽限开始时间
- * @method void setGraceStartTime(string $GraceStartTime) 设置宽限开始时间
- * @method string getBucketType() 获取托管桶类型：standard-标准，多可用区-MAZ
- * @method void setBucketType(string $BucketType) 设置托管桶类型：standard-标准，多可用区-MAZ
- * @method integer getEnableSecurityLock() 获取是否开启安全锁：0-未开启，1-已开启
- * @method void setEnableSecurityLock(integer $EnableSecurityLock) 设置是否开启安全锁：0-未开启，1-已开启
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名
- * @method void setInstanceName(string $InstanceName) 设置实例名
- * @method string getInstanceStatus() 获取实例状态
- * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态
- * @method string getInstanceStatusDesc() 获取实例状态描述
- * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置实例状态描述
- * @method BucketEncryptionInfo getBucketEncryption() 获取桶加密状态信息
- * @method void setBucketEncryption(BucketEncryptionInfo $BucketEncryption) 设置桶加密状态信息
+ * @method integer getBackupType() 获取<p>迁移类型：<br>1-远端集群迁移；2-COS迁移</p>
+ * @method void setBackupType(integer $BackupType) 设置<p>迁移类型：<br>1-远端集群迁移；2-COS迁移</p>
+ * @method integer getExistCount() 获取<p>当前任务现存实例数</p>
+ * @method void setExistCount(integer $ExistCount) 设置<p>当前任务现存实例数</p>
+ * @method string getCosSourceInfo() 获取<p>cos信息</p>
+ * @method void setCosSourceInfo(string $CosSourceInfo) 设置<p>cos信息</p>
+ * @method string getDorisSourceInfo() 获取<p>doris信息</p>
+ * @method void setDorisSourceInfo(string $DorisSourceInfo) 设置<p>doris信息</p>
+ * @method integer getRestoreType() 获取<p>恢复类型</p>
+ * @method void setRestoreType(integer $RestoreType) 设置<p>恢复类型</p>
+ * @method SnapshotRemainPolicy getSnapshotRemainPolicy() 获取<p>快照保留策略</p>
+ * @method void setSnapshotRemainPolicy(SnapshotRemainPolicy $SnapshotRemainPolicy) 设置<p>快照保留策略</p>
+ * @method string getDataRemoteRegion() 获取<p>远程备份地域</p>
+ * @method void setDataRemoteRegion(string $DataRemoteRegion) 设置<p>远程备份地域</p>
+ * @method boolean getIsWithinGracePeriod() 获取<p>是否在宽限期内</p>
+ * @method void setIsWithinGracePeriod(boolean $IsWithinGracePeriod) 设置<p>是否在宽限期内</p>
+ * @method integer getGracePeriod() 获取<p>宽限期（天数）</p>
+ * @method void setGracePeriod(integer $GracePeriod) 设置<p>宽限期（天数）</p>
+ * @method string getGraceStartTime() 获取<p>宽限开始时间</p>
+ * @method void setGraceStartTime(string $GraceStartTime) 设置<p>宽限开始时间</p>
+ * @method string getBucketType() 获取<p>托管桶类型：standard-标准，多可用区-MAZ</p>
+ * @method void setBucketType(string $BucketType) 设置<p>托管桶类型：standard-标准，多可用区-MAZ</p>
+ * @method integer getEnableSecurityLock() 获取<p>是否开启安全锁：0-未开启，1-已开启</p>
+ * @method void setEnableSecurityLock(integer $EnableSecurityLock) 设置<p>是否开启安全锁：0-未开启，1-已开启</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名</p>
+ * @method string getInstanceStatus() 获取<p>实例状态</p>
+ * @method void setInstanceStatus(string $InstanceStatus) 设置<p>实例状态</p>
+ * @method string getInstanceStatusDesc() 获取<p>实例状态描述</p>
+ * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置<p>实例状态描述</p>
+ * @method BucketEncryptionInfo getBucketEncryption() 获取<p>桶加密状态信息</p>
+ * @method void setBucketEncryption(BucketEncryptionInfo $BucketEncryption) 设置<p>桶加密状态信息</p>
  */
 class BackupScheduleInfo extends AbstractModel
 {
     /**
-     * @var integer 迁移类型：
-1-远端集群迁移；2-COS迁移
+     * @var integer <p>迁移类型：<br>1-远端集群迁移；2-COS迁移</p>
      */
     public $BackupType;
 
     /**
-     * @var integer 当前任务现存实例数
+     * @var integer <p>当前任务现存实例数</p>
      */
     public $ExistCount;
 
     /**
-     * @var string cos信息
+     * @var string <p>cos信息</p>
      */
     public $CosSourceInfo;
 
     /**
-     * @var string doris信息
+     * @var string <p>doris信息</p>
      */
     public $DorisSourceInfo;
 
     /**
-     * @var integer 恢复类型
+     * @var integer <p>恢复类型</p>
      */
     public $RestoreType;
 
     /**
-     * @var SnapshotRemainPolicy 快照保留策略
+     * @var SnapshotRemainPolicy <p>快照保留策略</p>
      */
     public $SnapshotRemainPolicy;
 
     /**
-     * @var string 远程备份地域
+     * @var string <p>远程备份地域</p>
      */
     public $DataRemoteRegion;
 
     /**
-     * @var boolean 是否在宽限期内
+     * @var boolean <p>是否在宽限期内</p>
      */
     public $IsWithinGracePeriod;
 
     /**
-     * @var integer 宽限期（天数）
+     * @var integer <p>宽限期（天数）</p>
      */
     public $GracePeriod;
 
     /**
-     * @var string 宽限开始时间
+     * @var string <p>宽限开始时间</p>
      */
     public $GraceStartTime;
 
     /**
-     * @var string 托管桶类型：standard-标准，多可用区-MAZ
+     * @var string <p>托管桶类型：standard-标准，多可用区-MAZ</p>
      */
     public $BucketType;
 
     /**
-     * @var integer 是否开启安全锁：0-未开启，1-已开启
+     * @var integer <p>是否开启安全锁：0-未开启，1-已开启</p>
      */
     public $EnableSecurityLock;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名
+     * @var string <p>实例名</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例状态
+     * @var string <p>实例状态</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string 实例状态描述
+     * @var string <p>实例状态描述</p>
      */
     public $InstanceStatusDesc;
 
     /**
-     * @var BucketEncryptionInfo 桶加密状态信息
+     * @var BucketEncryptionInfo <p>桶加密状态信息</p>
      */
     public $BucketEncryption;
 
     /**
-     * @param integer $BackupType 迁移类型：
-1-远端集群迁移；2-COS迁移
-     * @param integer $ExistCount 当前任务现存实例数
-     * @param string $CosSourceInfo cos信息
-     * @param string $DorisSourceInfo doris信息
-     * @param integer $RestoreType 恢复类型
-     * @param SnapshotRemainPolicy $SnapshotRemainPolicy 快照保留策略
-     * @param string $DataRemoteRegion 远程备份地域
-     * @param boolean $IsWithinGracePeriod 是否在宽限期内
-     * @param integer $GracePeriod 宽限期（天数）
-     * @param string $GraceStartTime 宽限开始时间
-     * @param string $BucketType 托管桶类型：standard-标准，多可用区-MAZ
-     * @param integer $EnableSecurityLock 是否开启安全锁：0-未开启，1-已开启
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名
-     * @param string $InstanceStatus 实例状态
-     * @param string $InstanceStatusDesc 实例状态描述
-     * @param BucketEncryptionInfo $BucketEncryption 桶加密状态信息
+     * @param integer $BackupType <p>迁移类型：<br>1-远端集群迁移；2-COS迁移</p>
+     * @param integer $ExistCount <p>当前任务现存实例数</p>
+     * @param string $CosSourceInfo <p>cos信息</p>
+     * @param string $DorisSourceInfo <p>doris信息</p>
+     * @param integer $RestoreType <p>恢复类型</p>
+     * @param SnapshotRemainPolicy $SnapshotRemainPolicy <p>快照保留策略</p>
+     * @param string $DataRemoteRegion <p>远程备份地域</p>
+     * @param boolean $IsWithinGracePeriod <p>是否在宽限期内</p>
+     * @param integer $GracePeriod <p>宽限期（天数）</p>
+     * @param string $GraceStartTime <p>宽限开始时间</p>
+     * @param string $BucketType <p>托管桶类型：standard-标准，多可用区-MAZ</p>
+     * @param integer $EnableSecurityLock <p>是否开启安全锁：0-未开启，1-已开启</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名</p>
+     * @param string $InstanceStatus <p>实例状态</p>
+     * @param string $InstanceStatusDesc <p>实例状态描述</p>
+     * @param BucketEncryptionInfo $BucketEncryption <p>桶加密状态信息</p>
      */
     function __construct()
     {

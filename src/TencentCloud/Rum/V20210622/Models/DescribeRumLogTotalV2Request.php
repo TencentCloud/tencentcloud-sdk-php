@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRumLogTotalV2请求参数结构体
  *
- * @method string getOrderBy() 获取排序方式 desc asc
- * @method void setOrderBy(string $OrderBy) 设置排序方式 desc asc
- * @method integer getStartTime() 获取开始时间（必填）格式为时间戳 毫秒
- * @method void setStartTime(integer $StartTime) 设置开始时间（必填）格式为时间戳 毫秒
- * @method integer getLimit() 获取单次查询返回的原始日志条数，最大值为100（必填）
- * @method void setLimit(integer $Limit) 设置单次查询返回的原始日志条数，最大值为100（必填）
- * @method string getFilter() 获取查询的相关参数
- * @method void setFilter(string $Filter) 设置查询的相关参数
- * @method integer getEndTime() 获取结束时间（必填）格式为时间戳 毫秒
- * @method void setEndTime(integer $EndTime) 设置结束时间（必填）格式为时间戳 毫秒
- * @method integer getID() 获取项目ID（必填）
- * @method void setID(integer $ID) 设置项目ID（必填）
- * @method integer getLastTime() 获取上次查询的最后一个日志的时间戳
- * @method void setLastTime(integer $LastTime) 设置上次查询的最后一个日志的时间戳
- * @method integer getLastRowId() 获取上次查询的最后一个日志的rowId
- * @method void setLastRowId(integer $LastRowId) 设置上次查询的最后一个日志的rowId
+ * @method string getOrderBy() 获取<p>排序方式 desc asc</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序方式 desc asc</p>
+ * @method integer getStartTime() 获取<p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+ * @method integer getLimit() 获取<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+ * @method void setLimit(integer $Limit) 设置<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+ * @method string getFilter() 获取<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+ * @method void setFilter(string $Filter) 设置<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+ * @method integer getEndTime() 获取<p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+ * @method integer getID() 获取<p>项目ID（必填）</p>
+ * @method void setID(integer $ID) 设置<p>项目ID（必填）</p>
+ * @method integer getLastTime() 获取<p>上次查询的最后一个日志的时间戳</p>
+ * @method void setLastTime(integer $LastTime) 设置<p>上次查询的最后一个日志的时间戳</p>
+ * @method integer getLastRowId() 获取<p>上次查询的最后一个日志的rowId</p>
+ * @method void setLastRowId(integer $LastRowId) 设置<p>上次查询的最后一个日志的rowId</p>
  */
 class DescribeRumLogTotalV2Request extends AbstractModel
 {
     /**
-     * @var string 排序方式 desc asc
+     * @var string <p>排序方式 desc asc</p>
      */
     public $OrderBy;
 
     /**
-     * @var integer 开始时间（必填）格式为时间戳 毫秒
+     * @var integer <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 单次查询返回的原始日志条数，最大值为100（必填）
+     * @var integer <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public $Limit;
 
     /**
-     * @var string 查询的相关参数
+     * @var string <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public $Filter;
 
     /**
-     * @var integer 结束时间（必填）格式为时间戳 毫秒
+     * @var integer <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 项目ID（必填）
+     * @var integer <p>项目ID（必填）</p>
      */
     public $ID;
 
     /**
-     * @var integer 上次查询的最后一个日志的时间戳
+     * @var integer <p>上次查询的最后一个日志的时间戳</p>
      */
     public $LastTime;
 
     /**
-     * @var integer 上次查询的最后一个日志的rowId
+     * @var integer <p>上次查询的最后一个日志的rowId</p>
      */
     public $LastRowId;
 
     /**
-     * @param string $OrderBy 排序方式 desc asc
-     * @param integer $StartTime 开始时间（必填）格式为时间戳 毫秒
-     * @param integer $Limit 单次查询返回的原始日志条数，最大值为100（必填）
-     * @param string $Filter 查询的相关参数
-     * @param integer $EndTime 结束时间（必填）格式为时间戳 毫秒
-     * @param integer $ID 项目ID（必填）
-     * @param integer $LastTime 上次查询的最后一个日志的时间戳
-     * @param integer $LastRowId 上次查询的最后一个日志的rowId
+     * @param string $OrderBy <p>排序方式 desc asc</p>
+     * @param integer $StartTime <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+     * @param integer $Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * @param string $Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+     * @param integer $EndTime <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+     * @param integer $ID <p>项目ID（必填）</p>
+     * @param integer $LastTime <p>上次查询的最后一个日志的时间戳</p>
+     * @param integer $LastRowId <p>上次查询的最后一个日志的rowId</p>
      */
     function __construct()
     {

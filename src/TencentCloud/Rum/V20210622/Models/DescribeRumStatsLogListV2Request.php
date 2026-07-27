@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRumStatsLogListV2请求参数结构体
  *
- * @method integer getStartTime() 获取开始时间（必填）
- * @method void setStartTime(integer $StartTime) 设置开始时间（必填）
- * @method integer getLimit() 获取单次查询返回的原始日志条数，最大值为100（必填）
- * @method void setLimit(integer $Limit) 设置单次查询返回的原始日志条数，最大值为100（必填）
- * @method string getFilter() 获取过滤条件
- * @method void setFilter(string $Filter) 设置过滤条件
- * @method integer getEndTime() 获取结束时间（必填）
- * @method void setEndTime(integer $EndTime) 设置结束时间（必填）
- * @method integer getID() 获取项目ID（必填）
- * @method void setID(integer $ID) 设置项目ID（必填）
+ * @method integer getStartTime() 获取<p>查询日志开始时间（必填）</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>查询日志开始时间（必填）</p>
+ * @method integer getLimit() 获取<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+ * @method void setLimit(integer $Limit) 设置<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+ * @method string getFilter() 获取<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+ * @method void setFilter(string $Filter) 设置<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+ * @method integer getEndTime() 获取<p>查询日志结束时间（必填）</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>查询日志结束时间（必填）</p>
+ * @method integer getID() 获取<p>项目ID（必填）</p>
+ * @method void setID(integer $ID) 设置<p>项目ID（必填）</p>
  */
 class DescribeRumStatsLogListV2Request extends AbstractModel
 {
     /**
-     * @var integer 开始时间（必填）
+     * @var integer <p>查询日志开始时间（必填）</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 单次查询返回的原始日志条数，最大值为100（必填）
+     * @var integer <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public $Limit;
 
     /**
-     * @var string 过滤条件
+     * @var string <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public $Filter;
 
     /**
-     * @var integer 结束时间（必填）
+     * @var integer <p>查询日志结束时间（必填）</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 项目ID（必填）
+     * @var integer <p>项目ID（必填）</p>
      */
     public $ID;
 
     /**
-     * @param integer $StartTime 开始时间（必填）
-     * @param integer $Limit 单次查询返回的原始日志条数，最大值为100（必填）
-     * @param string $Filter 过滤条件
-     * @param integer $EndTime 结束时间（必填）
-     * @param integer $ID 项目ID（必填）
+     * @param integer $StartTime <p>查询日志开始时间（必填）</p>
+     * @param integer $Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * @param string $Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+     * @param integer $EndTime <p>查询日志结束时间（必填）</p>
+     * @param integer $ID <p>项目ID（必填）</p>
      */
     function __construct()
     {

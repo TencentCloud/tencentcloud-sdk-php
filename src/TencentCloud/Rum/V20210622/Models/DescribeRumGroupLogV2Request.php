@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOrderBy() 获取<p>排序方式 desc asc（必填）</p>
  * @method void setOrderBy(string $OrderBy) 设置<p>排序方式 desc asc（必填）</p>
- * @method integer getStartTime() 获取<p>开始时间（必填）</p>
- * @method void setStartTime(integer $StartTime) 设置<p>开始时间（必填）</p>
+ * @method integer getStartTime() 获取<p>查询日志开始时间（必填）</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>查询日志开始时间（必填）</p>
  * @method integer getLimit() 获取<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
  * @method void setLimit(integer $Limit) 设置<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
- * @method string getFilter() 获取<p>过滤条件</p>
- * @method void setFilter(string $Filter) 设置<p>过滤条件</p>
- * @method integer getEndTime() 获取<p>结束时间（必填）</p>
- * @method void setEndTime(integer $EndTime) 设置<p>结束时间（必填）</p>
+ * @method string getFilter() 获取<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+ * @method void setFilter(string $Filter) 设置<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+ * @method integer getEndTime() 获取<p>查询日志结束时间（必填）</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>查询日志结束时间（必填）</p>
  * @method integer getID() 获取<p>项目ID（必填）</p>
  * @method void setID(integer $ID) 设置<p>项目ID（必填）</p>
  * @method string getLabel() 获取<p>聚合字段</p>
@@ -45,7 +45,7 @@ class DescribeRumGroupLogV2Request extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var integer <p>开始时间（必填）</p>
+     * @var integer <p>查询日志开始时间（必填）</p>
      */
     public $StartTime;
 
@@ -55,12 +55,12 @@ class DescribeRumGroupLogV2Request extends AbstractModel
     public $Limit;
 
     /**
-     * @var string <p>过滤条件</p>
+     * @var string <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public $Filter;
 
     /**
-     * @var integer <p>结束时间（必填）</p>
+     * @var integer <p>查询日志结束时间（必填）</p>
      */
     public $EndTime;
 
@@ -81,10 +81,10 @@ class DescribeRumGroupLogV2Request extends AbstractModel
 
     /**
      * @param string $OrderBy <p>排序方式 desc asc（必填）</p>
-     * @param integer $StartTime <p>开始时间（必填）</p>
+     * @param integer $StartTime <p>查询日志开始时间（必填）</p>
      * @param integer $Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
-     * @param string $Filter <p>过滤条件</p>
-     * @param integer $EndTime <p>结束时间（必填）</p>
+     * @param string $Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+     * @param integer $EndTime <p>查询日志结束时间（必填）</p>
      * @param integer $ID <p>项目ID（必填）</p>
      * @param string $Label <p>聚合字段</p>
      * @param integer $Last <p>页数，第几页（注意：该字段已废弃！）</p>

@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMigrationTask请求参数结构体
  *
- * @method string getTaskName() 获取迁移任务名称
- * @method void setTaskName(string $TaskName) 设置迁移任务名称
- * @method integer getMigrationType() 获取迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
- * @method void setMigrationType(integer $MigrationType) 设置迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
- * @method integer getMigrationMode() 获取迁移模式，默认为0。0: 全量迁移
- * @method void setMigrationMode(integer $MigrationMode) 设置迁移模式，默认为0。0: 全量迁移
- * @method string getSrcSecretId() 获取数据源账号的 SecretId
- * @method void setSrcSecretId(string $SrcSecretId) 设置数据源账号的 SecretId
- * @method string getSrcSecretKey() 获取数据源账号的 SecretKey
- * @method void setSrcSecretKey(string $SrcSecretKey) 设置数据源账号的 SecretKey
- * @method string getFileSystemId() 获取文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
- * @method string getFsPath() 获取文件系统路径
- * @method void setFsPath(string $FsPath) 设置文件系统路径
- * @method integer getCoverType() 获取同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
- * @method void setCoverType(integer $CoverType) 设置同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
- * @method string getSrcService() 获取数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
- * @method void setSrcService(string $SrcService) 设置数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
- * @method string getBucketName() 获取数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
- * @method void setBucketName(string $BucketName) 设置数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
- * @method string getBucketRegion() 获取数据源桶地域
- * @method void setBucketRegion(string $BucketRegion) 设置数据源桶地域
- * @method string getBucketAddress() 获取数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
- * @method void setBucketAddress(string $BucketAddress) 设置数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
- * @method string getListAddress() 获取清单地址，迁移方式为清单迁移时必填
- * @method void setListAddress(string $ListAddress) 设置清单地址，迁移方式为清单迁移时必填
- * @method string getFsName() 获取目标文件系统名称
- * @method void setFsName(string $FsName) 设置目标文件系统名称
- * @method string getBucketPath() 获取源桶路径，默认为 /
- * @method void setBucketPath(string $BucketPath) 设置源桶路径，默认为 /
- * @method integer getDirection() 获取迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
- * @method void setDirection(integer $Direction) 设置迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
+ * @method string getTaskName() 获取<p>迁移任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>迁移任务名称</p>
+ * @method integer getMigrationType() 获取<p>迁移方式标志位，默认为0。0：桶迁移；1：清单迁移</p>
+ * @method void setMigrationType(integer $MigrationType) 设置<p>迁移方式标志位，默认为0。0：桶迁移；1：清单迁移</p>
+ * @method integer getMigrationMode() 获取<p>迁移模式，默认为0。0: 全量迁移</p>
+ * @method void setMigrationMode(integer $MigrationMode) 设置<p>迁移模式，默认为0。0: 全量迁移</p>
+ * @method string getSrcSecretId() 获取<p>数据源账号的 SecretId</p>
+ * @method void setSrcSecretId(string $SrcSecretId) 设置<p>数据源账号的 SecretId</p>
+ * @method string getSrcSecretKey() 获取<p>数据源账号的 SecretKey</p>
+ * @method void setSrcSecretKey(string $SrcSecretKey) 设置<p>数据源账号的 SecretKey</p>
+ * @method string getFileSystemId() 获取<p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
+ * @method string getFsPath() 获取<p>文件系统路径</p>
+ * @method void setFsPath(string $FsPath) 设置<p>文件系统路径</p>
+ * @method integer getCoverType() 获取<p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
+ * @method void setCoverType(integer $CoverType) 设置<p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
+ * @method string getSrcService() 获取<p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
+ * @method void setSrcService(string $SrcService) 设置<p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
+ * @method string getBucketName() 获取<p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
+ * @method void setBucketName(string $BucketName) 设置<p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
+ * @method string getBucketRegion() 获取<p>数据源桶地域</p>
+ * @method void setBucketRegion(string $BucketRegion) 设置<p>数据源桶地域</p>
+ * @method string getBucketAddress() 获取<p>数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
+ * @method void setBucketAddress(string $BucketAddress) 设置<p>数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
+ * @method string getListAddress() 获取<p>清单地址，迁移方式为清单迁移时必填</p>
+ * @method void setListAddress(string $ListAddress) 设置<p>清单地址，迁移方式为清单迁移时必填</p>
+ * @method string getFsName() 获取<p>目标文件系统名称</p>
+ * @method void setFsName(string $FsName) 设置<p>目标文件系统名称</p>
+ * @method string getBucketPath() 获取<p>源桶路径，默认为 /</p>
+ * @method void setBucketPath(string $BucketPath) 设置<p>源桶路径，默认为 /</p>
+ * @method integer getDirection() 获取<p>迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0</p>
+ * @method void setDirection(integer $Direction) 设置<p>迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0</p>
  */
 class CreateMigrationTaskRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务名称
+     * @var string <p>迁移任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var integer 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
+     * @var integer <p>迁移方式标志位，默认为0。0：桶迁移；1：清单迁移</p>
      */
     public $MigrationType;
 
     /**
-     * @var integer 迁移模式，默认为0。0: 全量迁移
+     * @var integer <p>迁移模式，默认为0。0: 全量迁移</p>
      */
     public $MigrationMode;
 
     /**
-     * @var string 数据源账号的 SecretId
+     * @var string <p>数据源账号的 SecretId</p>
      */
     public $SrcSecretId;
 
     /**
-     * @var string 数据源账号的 SecretKey
+     * @var string <p>数据源账号的 SecretKey</p>
      */
     public $SrcSecretKey;
 
     /**
-     * @var string 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+     * @var string <p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string 文件系统路径
+     * @var string <p>文件系统路径</p>
      */
     public $FsPath;
 
     /**
-     * @var integer 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
+     * @var integer <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
      */
     public $CoverType;
 
     /**
-     * @var string 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
+     * @var string <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
      */
     public $SrcService;
 
     /**
-     * @var string 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+     * @var string <p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
      */
     public $BucketName;
 
     /**
-     * @var string 数据源桶地域
+     * @var string <p>数据源桶地域</p>
      */
     public $BucketRegion;
 
     /**
-     * @var string 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+     * @var string <p>数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
      */
     public $BucketAddress;
 
     /**
-     * @var string 清单地址，迁移方式为清单迁移时必填
+     * @var string <p>清单地址，迁移方式为清单迁移时必填</p>
      */
     public $ListAddress;
 
     /**
-     * @var string 目标文件系统名称
+     * @var string <p>目标文件系统名称</p>
      */
     public $FsName;
 
     /**
-     * @var string 源桶路径，默认为 /
+     * @var string <p>源桶路径，默认为 /</p>
      */
     public $BucketPath;
 
     /**
-     * @var integer 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
+     * @var integer <p>迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0</p>
      */
     public $Direction;
 
     /**
-     * @param string $TaskName 迁移任务名称
-     * @param integer $MigrationType 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
-     * @param integer $MigrationMode 迁移模式，默认为0。0: 全量迁移
-     * @param string $SrcSecretId 数据源账号的 SecretId
-     * @param string $SrcSecretKey 数据源账号的 SecretKey
-     * @param string $FileSystemId 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
-     * @param string $FsPath 文件系统路径
-     * @param integer $CoverType 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
-     * @param string $SrcService 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
-     * @param string $BucketName 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
-     * @param string $BucketRegion 数据源桶地域
-     * @param string $BucketAddress 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
-     * @param string $ListAddress 清单地址，迁移方式为清单迁移时必填
-     * @param string $FsName 目标文件系统名称
-     * @param string $BucketPath 源桶路径，默认为 /
-     * @param integer $Direction 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
+     * @param string $TaskName <p>迁移任务名称</p>
+     * @param integer $MigrationType <p>迁移方式标志位，默认为0。0：桶迁移；1：清单迁移</p>
+     * @param integer $MigrationMode <p>迁移模式，默认为0。0: 全量迁移</p>
+     * @param string $SrcSecretId <p>数据源账号的 SecretId</p>
+     * @param string $SrcSecretKey <p>数据源账号的 SecretKey</p>
+     * @param string $FileSystemId <p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
+     * @param string $FsPath <p>文件系统路径</p>
+     * @param integer $CoverType <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
+     * @param string $SrcService <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
+     * @param string $BucketName <p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
+     * @param string $BucketRegion <p>数据源桶地域</p>
+     * @param string $BucketAddress <p>数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
+     * @param string $ListAddress <p>清单地址，迁移方式为清单迁移时必填</p>
+     * @param string $FsName <p>目标文件系统名称</p>
+     * @param string $BucketPath <p>源桶路径，默认为 /</p>
+     * @param integer $Direction <p>迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0</p>
      */
     function __construct()
     {

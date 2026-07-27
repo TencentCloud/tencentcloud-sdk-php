@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRumLogExportV2请求参数结构体
  *
- * @method string getName() 获取Export name
- * @method void setName(string $Name) 设置Export name
- * @method integer getStartTime() 获取Start time
- * @method void setStartTime(integer $StartTime) 设置Start time
- * @method string getFilter() 获取Query statement
- * @method void setFilter(string $Filter) 设置Query statement
- * @method integer getEndTime() 获取End time
- * @method void setEndTime(integer $EndTime) 设置End time
- * @method integer getID() 获取Project ID
- * @method void setID(integer $ID) 设置Project ID
- * @method array getFields() 获取c字段
- * @method void setFields(array $Fields) 设置c字段
+ * @method string getName() 获取<p>Name（string，必填）：导出任务名称标识，需要在使用API创建导出任务时填写。此字段为后续能力扩展预留，不在查询结果中返回。</p>
+ * @method void setName(string $Name) 设置<p>Name（string，必填）：导出任务名称标识，需要在使用API创建导出任务时填写。此字段为后续能力扩展预留，不在查询结果中返回。</p>
+ * @method integer getStartTime() 获取<p>查询日志开始时间(必填)</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>查询日志开始时间(必填)</p>
+ * @method string getFilter() 获取<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+ * @method void setFilter(string $Filter) 设置<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+ * @method integer getEndTime() 获取<p>查询日志结束时间(必填)</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>查询日志结束时间(必填)</p>
+ * @method integer getID() 获取<p>项目ID</p>
+ * @method void setID(integer $ID) 设置<p>项目ID</p>
+ * @method array getFields() 获取<p>注意：这个字段必选，不能为空！选择要导出哪些字段的参数，对应日志的列，可查看文档：https://cloud.tencent.com/document/product/248/87223</p><p>枚举值：</p><ul><li>level： 日志类型</li><li>url： URL</li><li>ip： 用户终端IP</li><li>version： 版本</li></ul>
+ * @method void setFields(array $Fields) 设置<p>注意：这个字段必选，不能为空！选择要导出哪些字段的参数，对应日志的列，可查看文档：https://cloud.tencent.com/document/product/248/87223</p><p>枚举值：</p><ul><li>level： 日志类型</li><li>url： URL</li><li>ip： 用户终端IP</li><li>version： 版本</li></ul>
  */
 class DescribeRumLogExportV2Request extends AbstractModel
 {
     /**
-     * @var string Export name
+     * @var string <p>Name（string，必填）：导出任务名称标识，需要在使用API创建导出任务时填写。此字段为后续能力扩展预留，不在查询结果中返回。</p>
      */
     public $Name;
 
     /**
-     * @var integer Start time
+     * @var integer <p>查询日志开始时间(必填)</p>
      */
     public $StartTime;
 
     /**
-     * @var string Query statement
+     * @var string <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public $Filter;
 
     /**
-     * @var integer End time
+     * @var integer <p>查询日志结束时间(必填)</p>
      */
     public $EndTime;
 
     /**
-     * @var integer Project ID
+     * @var integer <p>项目ID</p>
      */
     public $ID;
 
     /**
-     * @var array c字段
+     * @var array <p>注意：这个字段必选，不能为空！选择要导出哪些字段的参数，对应日志的列，可查看文档：https://cloud.tencent.com/document/product/248/87223</p><p>枚举值：</p><ul><li>level： 日志类型</li><li>url： URL</li><li>ip： 用户终端IP</li><li>version： 版本</li></ul>
      */
     public $Fields;
 
     /**
-     * @param string $Name Export name
-     * @param integer $StartTime Start time
-     * @param string $Filter Query statement
-     * @param integer $EndTime End time
-     * @param integer $ID Project ID
-     * @param array $Fields c字段
+     * @param string $Name <p>Name（string，必填）：导出任务名称标识，需要在使用API创建导出任务时填写。此字段为后续能力扩展预留，不在查询结果中返回。</p>
+     * @param integer $StartTime <p>查询日志开始时间(必填)</p>
+     * @param string $Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+     * @param integer $EndTime <p>查询日志结束时间(必填)</p>
+     * @param integer $ID <p>项目ID</p>
+     * @param array $Fields <p>注意：这个字段必选，不能为空！选择要导出哪些字段的参数，对应日志的列，可查看文档：https://cloud.tencent.com/document/product/248/87223</p><p>枚举值：</p><ul><li>level： 日志类型</li><li>url： URL</li><li>ip： 用户终端IP</li><li>version： 版本</li></ul>
      */
     function __construct()
     {

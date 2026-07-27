@@ -18,28 +18,28 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateHTTPServiceRoute请求参数结构体
+ * 域名归属权验证指引文件验证信息
  *
- * @method string getEnvId() 获取<p>环境ID</p>
- * @method void setEnvId(string $EnvId) 设置<p>环境ID</p>
- * @method HTTPServiceDomainParam getDomain() 获取<p>域名路由信息</p>
- * @method void setDomain(HTTPServiceDomainParam $Domain) 设置<p>域名路由信息</p>
+ * @method string getPath() 获取<p>归属权校验文件路径</p>
+ * @method void setPath(string $Path) 设置<p>归属权校验文件路径</p>
+ * @method string getContent() 获取<p>归属权校验文件内容</p>
+ * @method void setContent(string $Content) 设置<p>归属权校验文件内容</p>
  */
-class CreateHTTPServiceRouteRequest extends AbstractModel
+class OwnershipVerificationFileInfo extends AbstractModel
 {
     /**
-     * @var string <p>环境ID</p>
+     * @var string <p>归属权校验文件路径</p>
      */
-    public $EnvId;
+    public $Path;
 
     /**
-     * @var HTTPServiceDomainParam <p>域名路由信息</p>
+     * @var string <p>归属权校验文件内容</p>
      */
-    public $Domain;
+    public $Content;
 
     /**
-     * @param string $EnvId <p>环境ID</p>
-     * @param HTTPServiceDomainParam $Domain <p>域名路由信息</p>
+     * @param string $Path <p>归属权校验文件路径</p>
+     * @param string $Content <p>归属权校验文件内容</p>
      */
     function __construct()
     {
@@ -54,13 +54,12 @@ class CreateHTTPServiceRouteRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = new HTTPServiceDomainParam();
-            $this->Domain->deserialize($param["Domain"]);
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
         }
     }
 }

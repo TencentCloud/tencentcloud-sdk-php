@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取<p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
  * @method void setDomain(string $Domain) 设置<p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
- * @method string getAccessType() 获取<p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li></ul><p>默认值：DIRECT</p>
- * @method void setAccessType(string $AccessType) 设置<p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li></ul><p>默认值：DIRECT</p>
+ * @method string getAccessType() 获取<p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN（即将下线）</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li><li>EO： 接入云开发EdgeOne</li></ul><p>默认值：DIRECT</p>
+ * @method void setAccessType(string $AccessType) 设置<p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN（即将下线）</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li><li>EO： 接入云开发EdgeOne</li></ul><p>默认值：DIRECT</p>
  * @method string getCertId() 获取<p>证书ID。当前账户下SSL平台的证书ID，无证书无法使用https访问</p>
  * @method void setCertId(string $CertId) 设置<p>证书ID。当前账户下SSL平台的证书ID，无证书无法使用https访问</p>
  * @method string getProtocol() 获取<p>协议类型</p><p>枚举值：</p><ul><li>HTTP： 仅开启http</li><li>HTTPS： 仅开启https</li><li>HTTP_AND_HTTPS： 同时开启http和https，默认</li><li>HTTP_TO_HTTPS： http重定向成https，需配置证书</li><li>HTTPS_TO_HTTP： https重定向成http，需配置证书</li></ul><p>默认值：HTTP_AND_HTTPS</p>
@@ -45,7 +45,7 @@ class HTTPServiceDomainParam extends AbstractModel
     public $Domain;
 
     /**
-     * @var string <p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li></ul><p>默认值：DIRECT</p>
+     * @var string <p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN（即将下线）</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li><li>EO： 接入云开发EdgeOne</li></ul><p>默认值：DIRECT</p>
      */
     public $AccessType;
 
@@ -81,7 +81,7 @@ class HTTPServiceDomainParam extends AbstractModel
 
     /**
      * @param string $Domain <p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
-     * @param string $AccessType <p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li></ul><p>默认值：DIRECT</p>
+     * @param string $AccessType <p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN（即将下线）</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li><li>EO： 接入云开发EdgeOne</li></ul><p>默认值：DIRECT</p>
      * @param string $CertId <p>证书ID。当前账户下SSL平台的证书ID，无证书无法使用https访问</p>
      * @param string $Protocol <p>协议类型</p><p>枚举值：</p><ul><li>HTTP： 仅开启http</li><li>HTTPS： 仅开启https</li><li>HTTP_AND_HTTPS： 同时开启http和https，默认</li><li>HTTP_TO_HTTPS： http重定向成https，需配置证书</li><li>HTTPS_TO_HTTP： https重定向成http，需配置证书</li></ul><p>默认值：HTTP_AND_HTTPS</p>
      * @param string $CustomCname <p>自定义CNAME。对应AccessType: Custom</p>

@@ -21,118 +21,66 @@ use TencentCloud\Common\AbstractModel;
  * 签署人配置信息。
 此参数对子客和自动签无效，不允许进行修改。
  *
- * @method boolean getCanEditApprover() 获取是否允许修改签署人信息
- * @method void setCanEditApprover(boolean $CanEditApprover) 设置是否允许修改签署人信息
- * @method boolean getNoRefuse() 获取是否可以拒签 默认false-可以拒签 true-不可以拒签
- * @method void setNoRefuse(boolean $NoRefuse) 设置是否可以拒签 默认false-可以拒签 true-不可以拒签
- * @method boolean getNoTransfer() 获取是否可以转发 默认false-可以转发 true-不可以转发
- * @method void setNoTransfer(boolean $NoTransfer) 设置是否可以转发 默认false-可以转发 true-不可以转发
- * @method boolean getHideOneKeySign() 获取当签署方有多个签署区时候，是否隐藏一键所有的签署区
-
-false：（默认）不隐藏
-true：隐藏，每个签署区要单独选择印章或者签名
- * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置当签署方有多个签署区时候，是否隐藏一键所有的签署区
-
-false：（默认）不隐藏
-true：隐藏，每个签署区要单独选择印章或者签名
- * @method string getFlowReadLimit() 获取签署人阅读合同限制参数
- <br/>取值：
-<ul>
-<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
-<li> LimitReadTime，阅读合同仅限制阅读时长</li>
-<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
-<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
-</ul>
- * @method void setFlowReadLimit(string $FlowReadLimit) 设置签署人阅读合同限制参数
- <br/>取值：
-<ul>
-<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
-<li> LimitReadTime，阅读合同仅限制阅读时长</li>
-<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
-<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
-</ul>
- * @method boolean getForbidAddSignDate() 获取禁止在签署过程中添加签署日期控件
- <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
-<ul>
-<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
-<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
-</ul>
- * @method void setForbidAddSignDate(boolean $ForbidAddSignDate) 设置禁止在签署过程中添加签署日期控件
- <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
-<ul>
-<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
-<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
-</ul>
+ * @method boolean getCanEditApprover() 获取<p>是否允许修改签署人信息</p>
+ * @method void setCanEditApprover(boolean $CanEditApprover) 设置<p>是否允许修改签署人信息</p>
+ * @method boolean getNoRefuse() 获取<p>是否可以拒签 默认false-可以拒签 true-不可以拒签</p>
+ * @method void setNoRefuse(boolean $NoRefuse) 设置<p>是否可以拒签 默认false-可以拒签 true-不可以拒签</p>
+ * @method boolean getNoTransfer() 获取<p>是否可以转发 默认false-可以转发 true-不可以转发</p>
+ * @method void setNoTransfer(boolean $NoTransfer) 设置<p>是否可以转发 默认false-可以转发 true-不可以转发</p>
+ * @method boolean getHideOneKeySign() 获取<p>当签署方有多个签署区时候，是否隐藏一键所有的签署区</p><p>false：（默认）不隐藏<br>true：隐藏，每个签署区要单独选择印章或者签名</p>
+ * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置<p>当签署方有多个签署区时候，是否隐藏一键所有的签署区</p><p>false：（默认）不隐藏<br>true：隐藏，每个签署区要单独选择印章或者签名</p>
+ * @method string getFlowReadLimit() 获取<p>签署人阅读合同限制参数<br> <br>取值：</p><ul><li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li><li> LimitReadTime，阅读合同仅限制阅读时长</li><li> LimitBottom，阅读合同仅限制必须阅读到底</li><li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li></ul>
+ * @method void setFlowReadLimit(string $FlowReadLimit) 设置<p>签署人阅读合同限制参数<br> <br>取值：</p><ul><li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li><li> LimitReadTime，阅读合同仅限制阅读时长</li><li> LimitBottom，阅读合同仅限制必须阅读到底</li><li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li></ul>
+ * @method boolean getForbidAddSignDate() 获取<p>禁止在签署过程中添加签署日期控件<br> <br>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：</p><ul><li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li><li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li></ul>
+ * @method void setForbidAddSignDate(boolean $ForbidAddSignDate) 设置<p>禁止在签署过程中添加签署日期控件<br> <br>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：</p><ul><li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li><li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li></ul>
+ * @method boolean getForbidModifySealInfos() 获取<p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
+ * @method void setForbidModifySealInfos(boolean $ForbidModifySealInfos) 设置<p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
  */
 class CommonApproverOption extends AbstractModel
 {
     /**
-     * @var boolean 是否允许修改签署人信息
+     * @var boolean <p>是否允许修改签署人信息</p>
      */
     public $CanEditApprover;
 
     /**
-     * @var boolean 是否可以拒签 默认false-可以拒签 true-不可以拒签
+     * @var boolean <p>是否可以拒签 默认false-可以拒签 true-不可以拒签</p>
      */
     public $NoRefuse;
 
     /**
-     * @var boolean 是否可以转发 默认false-可以转发 true-不可以转发
+     * @var boolean <p>是否可以转发 默认false-可以转发 true-不可以转发</p>
      */
     public $NoTransfer;
 
     /**
-     * @var boolean 当签署方有多个签署区时候，是否隐藏一键所有的签署区
-
-false：（默认）不隐藏
-true：隐藏，每个签署区要单独选择印章或者签名
+     * @var boolean <p>当签署方有多个签署区时候，是否隐藏一键所有的签署区</p><p>false：（默认）不隐藏<br>true：隐藏，每个签署区要单独选择印章或者签名</p>
      */
     public $HideOneKeySign;
 
     /**
-     * @var string 签署人阅读合同限制参数
- <br/>取值：
-<ul>
-<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
-<li> LimitReadTime，阅读合同仅限制阅读时长</li>
-<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
-<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
-</ul>
+     * @var string <p>签署人阅读合同限制参数<br> <br>取值：</p><ul><li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li><li> LimitReadTime，阅读合同仅限制阅读时长</li><li> LimitBottom，阅读合同仅限制必须阅读到底</li><li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li></ul>
      */
     public $FlowReadLimit;
 
     /**
-     * @var boolean 禁止在签署过程中添加签署日期控件
- <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
-<ul>
-<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
-<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
-</ul>
+     * @var boolean <p>禁止在签署过程中添加签署日期控件<br> <br>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：</p><ul><li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li><li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li></ul>
      */
     public $ForbidAddSignDate;
 
     /**
-     * @param boolean $CanEditApprover 是否允许修改签署人信息
-     * @param boolean $NoRefuse 是否可以拒签 默认false-可以拒签 true-不可以拒签
-     * @param boolean $NoTransfer 是否可以转发 默认false-可以转发 true-不可以转发
-     * @param boolean $HideOneKeySign 当签署方有多个签署区时候，是否隐藏一键所有的签署区
+     * @var boolean <p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
+     */
+    public $ForbidModifySealInfos;
 
-false：（默认）不隐藏
-true：隐藏，每个签署区要单独选择印章或者签名
-     * @param string $FlowReadLimit 签署人阅读合同限制参数
- <br/>取值：
-<ul>
-<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
-<li> LimitReadTime，阅读合同仅限制阅读时长</li>
-<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
-<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
-</ul>
-     * @param boolean $ForbidAddSignDate 禁止在签署过程中添加签署日期控件
- <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
-<ul>
-<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
-<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
-</ul>
+    /**
+     * @param boolean $CanEditApprover <p>是否允许修改签署人信息</p>
+     * @param boolean $NoRefuse <p>是否可以拒签 默认false-可以拒签 true-不可以拒签</p>
+     * @param boolean $NoTransfer <p>是否可以转发 默认false-可以转发 true-不可以转发</p>
+     * @param boolean $HideOneKeySign <p>当签署方有多个签署区时候，是否隐藏一键所有的签署区</p><p>false：（默认）不隐藏<br>true：隐藏，每个签署区要单独选择印章或者签名</p>
+     * @param string $FlowReadLimit <p>签署人阅读合同限制参数<br> <br>取值：</p><ul><li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li><li> LimitReadTime，阅读合同仅限制阅读时长</li><li> LimitBottom，阅读合同仅限制必须阅读到底</li><li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li></ul>
+     * @param boolean $ForbidAddSignDate <p>禁止在签署过程中添加签署日期控件<br> <br>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：</p><ul><li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li><li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li></ul>
+     * @param boolean $ForbidModifySealInfos <p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
      */
     function __construct()
     {
@@ -169,6 +117,10 @@ true：隐藏，每个签署区要单独选择印章或者签名
 
         if (array_key_exists("ForbidAddSignDate",$param) and $param["ForbidAddSignDate"] !== null) {
             $this->ForbidAddSignDate = $param["ForbidAddSignDate"];
+        }
+
+        if (array_key_exists("ForbidModifySealInfos",$param) and $param["ForbidModifySealInfos"] !== null) {
+            $this->ForbidModifySealInfos = $param["ForbidModifySealInfos"];
         }
     }
 }

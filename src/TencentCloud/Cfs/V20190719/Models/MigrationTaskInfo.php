@@ -20,218 +20,226 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CFS数据迁移任务信息
  *
- * @method string getTaskName() 获取迁移任务名称
- * @method void setTaskName(string $TaskName) 设置迁移任务名称
- * @method string getTaskId() 获取迁移任务id
- * @method void setTaskId(string $TaskId) 设置迁移任务id
- * @method integer getMigrationType() 获取迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
- * @method void setMigrationType(integer $MigrationType) 设置迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
- * @method integer getMigrationMode() 获取迁移模式，默认为0。0: 全量迁移
- * @method void setMigrationMode(integer $MigrationMode) 设置迁移模式，默认为0。0: 全量迁移
- * @method string getBucketName() 获取数据源桶名称
- * @method void setBucketName(string $BucketName) 设置数据源桶名称
- * @method string getBucketRegion() 获取数据源桶地域
- * @method void setBucketRegion(string $BucketRegion) 设置数据源桶地域
- * @method string getBucketAddress() 获取数据源桶地址
- * @method void setBucketAddress(string $BucketAddress) 设置数据源桶地址
- * @method string getListAddress() 获取清单地址
- * @method void setListAddress(string $ListAddress) 设置清单地址
- * @method string getFsName() 获取文件系统实例名称
- * @method void setFsName(string $FsName) 设置文件系统实例名称
- * @method string getFileSystemId() 获取文件系统实例Id
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统实例Id
- * @method string getFsPath() 获取文件系统路径
- * @method void setFsPath(string $FsPath) 设置文件系统路径
- * @method integer getCoverType() 获取同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
- * @method void setCoverType(integer $CoverType) 设置同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
- * @method integer getCreateTime() 获取创建时间
- * @method void setCreateTime(integer $CreateTime) 设置创建时间
- * @method integer getEndTime() 获取完成/终止时间
- * @method void setEndTime(integer $EndTime) 设置完成/终止时间
- * @method integer getStatus() 获取迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
- * @method void setStatus(integer $Status) 设置迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
- * @method integer getFileTotalCount() 获取文件数量
- * @method void setFileTotalCount(integer $FileTotalCount) 设置文件数量
- * @method integer getFileMigratedCount() 获取已迁移文件数量
- * @method void setFileMigratedCount(integer $FileMigratedCount) 设置已迁移文件数量
- * @method integer getFileFailedCount() 获取迁移失败文件数量
- * @method void setFileFailedCount(integer $FileFailedCount) 设置迁移失败文件数量
- * @method integer getFileTotalSize() 获取文件容量，单位Byte
- * @method void setFileTotalSize(integer $FileTotalSize) 设置文件容量，单位Byte
- * @method integer getFileMigratedSize() 获取已迁移文件容量，单位Byte
- * @method void setFileMigratedSize(integer $FileMigratedSize) 设置已迁移文件容量，单位Byte
- * @method integer getFileFailedSize() 获取迁移失败文件容量，单位Byte
- * @method void setFileFailedSize(integer $FileFailedSize) 设置迁移失败文件容量，单位Byte
- * @method string getFileTotalList() 获取全部清单
- * @method void setFileTotalList(string $FileTotalList) 设置全部清单
- * @method string getFileCompletedList() 获取已完成文件清单
- * @method void setFileCompletedList(string $FileCompletedList) 设置已完成文件清单
- * @method string getFileFailedList() 获取失败文件清单
- * @method void setFileFailedList(string $FileFailedList) 设置失败文件清单
- * @method string getBucketPath() 获取源桶路径
- * @method void setBucketPath(string $BucketPath) 设置源桶路径
- * @method integer getDirection() 获取迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
- * @method void setDirection(integer $Direction) 设置迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+ * @method string getTaskName() 获取<p>迁移任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>迁移任务名称</p>
+ * @method string getTaskId() 获取<p>迁移任务id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>迁移任务id</p>
+ * @method integer getMigrationType() 获取<p>迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移</p>
+ * @method void setMigrationType(integer $MigrationType) 设置<p>迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移</p>
+ * @method integer getMigrationMode() 获取<p>迁移模式，默认为0。0: 全量迁移</p>
+ * @method void setMigrationMode(integer $MigrationMode) 设置<p>迁移模式，默认为0。0: 全量迁移</p>
+ * @method string getBucketName() 获取<p>数据源桶名称</p>
+ * @method void setBucketName(string $BucketName) 设置<p>数据源桶名称</p>
+ * @method string getBucketRegion() 获取<p>数据源桶地域</p>
+ * @method void setBucketRegion(string $BucketRegion) 设置<p>数据源桶地域</p>
+ * @method string getBucketAddress() 获取<p>数据源桶地址</p>
+ * @method void setBucketAddress(string $BucketAddress) 设置<p>数据源桶地址</p>
+ * @method string getListAddress() 获取<p>清单地址</p>
+ * @method void setListAddress(string $ListAddress) 设置<p>清单地址</p>
+ * @method string getFsName() 获取<p>文件系统实例名称</p>
+ * @method void setFsName(string $FsName) 设置<p>文件系统实例名称</p>
+ * @method string getFileSystemId() 获取<p>文件系统实例Id</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统实例Id</p>
+ * @method string getFsPath() 获取<p>文件系统路径</p>
+ * @method void setFsPath(string $FsPath) 设置<p>文件系统路径</p>
+ * @method integer getCoverType() 获取<p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
+ * @method void setCoverType(integer $CoverType) 设置<p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
+ * @method integer getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
+ * @method integer getEndTime() 获取<p>完成/终止时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>完成/终止时间</p>
+ * @method integer getStatus() 获取<p>迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中</p>
+ * @method void setStatus(integer $Status) 设置<p>迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中</p>
+ * @method integer getFileTotalCount() 获取<p>文件数量</p>
+ * @method void setFileTotalCount(integer $FileTotalCount) 设置<p>文件数量</p>
+ * @method integer getFileMigratedCount() 获取<p>已迁移文件数量</p>
+ * @method void setFileMigratedCount(integer $FileMigratedCount) 设置<p>已迁移文件数量</p>
+ * @method integer getFileFailedCount() 获取<p>迁移失败文件数量</p>
+ * @method void setFileFailedCount(integer $FileFailedCount) 设置<p>迁移失败文件数量</p>
+ * @method integer getFileTotalSize() 获取<p>文件容量，单位Byte</p>
+ * @method void setFileTotalSize(integer $FileTotalSize) 设置<p>文件容量，单位Byte</p>
+ * @method integer getFileMigratedSize() 获取<p>已迁移文件容量，单位Byte</p>
+ * @method void setFileMigratedSize(integer $FileMigratedSize) 设置<p>已迁移文件容量，单位Byte</p>
+ * @method integer getFileFailedSize() 获取<p>迁移失败文件容量，单位Byte</p>
+ * @method void setFileFailedSize(integer $FileFailedSize) 设置<p>迁移失败文件容量，单位Byte</p>
+ * @method string getFileTotalList() 获取<p>全部清单</p>
+ * @method void setFileTotalList(string $FileTotalList) 设置<p>全部清单</p>
+ * @method string getFileCompletedList() 获取<p>已完成文件清单</p>
+ * @method void setFileCompletedList(string $FileCompletedList) 设置<p>已完成文件清单</p>
+ * @method string getFileFailedList() 获取<p>失败文件清单</p>
+ * @method void setFileFailedList(string $FileFailedList) 设置<p>失败文件清单</p>
+ * @method string getBucketPath() 获取<p>源桶路径</p>
+ * @method void setBucketPath(string $BucketPath) 设置<p>源桶路径</p>
+ * @method integer getDirection() 获取<p>迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0</p>
+ * @method void setDirection(integer $Direction) 设置<p>迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0</p>
+ * @method string getSrcService() 获取<p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
+ * @method void setSrcService(string $SrcService) 设置<p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
  */
 class MigrationTaskInfo extends AbstractModel
 {
     /**
-     * @var string 迁移任务名称
+     * @var string <p>迁移任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var string 迁移任务id
+     * @var string <p>迁移任务id</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+     * @var integer <p>迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移</p>
      */
     public $MigrationType;
 
     /**
-     * @var integer 迁移模式，默认为0。0: 全量迁移
+     * @var integer <p>迁移模式，默认为0。0: 全量迁移</p>
      */
     public $MigrationMode;
 
     /**
-     * @var string 数据源桶名称
+     * @var string <p>数据源桶名称</p>
      */
     public $BucketName;
 
     /**
-     * @var string 数据源桶地域
+     * @var string <p>数据源桶地域</p>
      */
     public $BucketRegion;
 
     /**
-     * @var string 数据源桶地址
+     * @var string <p>数据源桶地址</p>
      */
     public $BucketAddress;
 
     /**
-     * @var string 清单地址
+     * @var string <p>清单地址</p>
      */
     public $ListAddress;
 
     /**
-     * @var string 文件系统实例名称
+     * @var string <p>文件系统实例名称</p>
      */
     public $FsName;
 
     /**
-     * @var string 文件系统实例Id
+     * @var string <p>文件系统实例Id</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string 文件系统路径
+     * @var string <p>文件系统路径</p>
      */
     public $FsPath;
 
     /**
-     * @var integer 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
+     * @var integer <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
      */
     public $CoverType;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 完成/终止时间
+     * @var integer <p>完成/终止时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
+     * @var integer <p>迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中</p>
      */
     public $Status;
 
     /**
-     * @var integer 文件数量
+     * @var integer <p>文件数量</p>
      */
     public $FileTotalCount;
 
     /**
-     * @var integer 已迁移文件数量
+     * @var integer <p>已迁移文件数量</p>
      */
     public $FileMigratedCount;
 
     /**
-     * @var integer 迁移失败文件数量
+     * @var integer <p>迁移失败文件数量</p>
      */
     public $FileFailedCount;
 
     /**
-     * @var integer 文件容量，单位Byte
+     * @var integer <p>文件容量，单位Byte</p>
      */
     public $FileTotalSize;
 
     /**
-     * @var integer 已迁移文件容量，单位Byte
+     * @var integer <p>已迁移文件容量，单位Byte</p>
      */
     public $FileMigratedSize;
 
     /**
-     * @var integer 迁移失败文件容量，单位Byte
+     * @var integer <p>迁移失败文件容量，单位Byte</p>
      */
     public $FileFailedSize;
 
     /**
-     * @var string 全部清单
+     * @var string <p>全部清单</p>
      */
     public $FileTotalList;
 
     /**
-     * @var string 已完成文件清单
+     * @var string <p>已完成文件清单</p>
      */
     public $FileCompletedList;
 
     /**
-     * @var string 失败文件清单
+     * @var string <p>失败文件清单</p>
      */
     public $FileFailedList;
 
     /**
-     * @var string 源桶路径
+     * @var string <p>源桶路径</p>
      */
     public $BucketPath;
 
     /**
-     * @var integer 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     * @var integer <p>迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0</p>
      */
     public $Direction;
 
     /**
-     * @param string $TaskName 迁移任务名称
-     * @param string $TaskId 迁移任务id
-     * @param integer $MigrationType 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
-     * @param integer $MigrationMode 迁移模式，默认为0。0: 全量迁移
-     * @param string $BucketName 数据源桶名称
-     * @param string $BucketRegion 数据源桶地域
-     * @param string $BucketAddress 数据源桶地址
-     * @param string $ListAddress 清单地址
-     * @param string $FsName 文件系统实例名称
-     * @param string $FileSystemId 文件系统实例Id
-     * @param string $FsPath 文件系统路径
-     * @param integer $CoverType 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
-     * @param integer $CreateTime 创建时间
-     * @param integer $EndTime 完成/终止时间
-     * @param integer $Status 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
-     * @param integer $FileTotalCount 文件数量
-     * @param integer $FileMigratedCount 已迁移文件数量
-     * @param integer $FileFailedCount 迁移失败文件数量
-     * @param integer $FileTotalSize 文件容量，单位Byte
-     * @param integer $FileMigratedSize 已迁移文件容量，单位Byte
-     * @param integer $FileFailedSize 迁移失败文件容量，单位Byte
-     * @param string $FileTotalList 全部清单
-     * @param string $FileCompletedList 已完成文件清单
-     * @param string $FileFailedList 失败文件清单
-     * @param string $BucketPath 源桶路径
-     * @param integer $Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     * @var string <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
+     */
+    public $SrcService;
+
+    /**
+     * @param string $TaskName <p>迁移任务名称</p>
+     * @param string $TaskId <p>迁移任务id</p>
+     * @param integer $MigrationType <p>迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移</p>
+     * @param integer $MigrationMode <p>迁移模式，默认为0。0: 全量迁移</p>
+     * @param string $BucketName <p>数据源桶名称</p>
+     * @param string $BucketRegion <p>数据源桶地域</p>
+     * @param string $BucketAddress <p>数据源桶地址</p>
+     * @param string $ListAddress <p>清单地址</p>
+     * @param string $FsName <p>文件系统实例名称</p>
+     * @param string $FileSystemId <p>文件系统实例Id</p>
+     * @param string $FsPath <p>文件系统路径</p>
+     * @param integer $CoverType <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
+     * @param integer $CreateTime <p>创建时间</p>
+     * @param integer $EndTime <p>完成/终止时间</p>
+     * @param integer $Status <p>迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中</p>
+     * @param integer $FileTotalCount <p>文件数量</p>
+     * @param integer $FileMigratedCount <p>已迁移文件数量</p>
+     * @param integer $FileFailedCount <p>迁移失败文件数量</p>
+     * @param integer $FileTotalSize <p>文件容量，单位Byte</p>
+     * @param integer $FileMigratedSize <p>已迁移文件容量，单位Byte</p>
+     * @param integer $FileFailedSize <p>迁移失败文件容量，单位Byte</p>
+     * @param string $FileTotalList <p>全部清单</p>
+     * @param string $FileCompletedList <p>已完成文件清单</p>
+     * @param string $FileFailedList <p>失败文件清单</p>
+     * @param string $BucketPath <p>源桶路径</p>
+     * @param integer $Direction <p>迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0</p>
+     * @param string $SrcService <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
      */
     function __construct()
     {
@@ -348,6 +356,10 @@ class MigrationTaskInfo extends AbstractModel
 
         if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
             $this->Direction = $param["Direction"];
+        }
+
+        if (array_key_exists("SrcService",$param) and $param["SrcService"] !== null) {
+            $this->SrcService = $param["SrcService"];
         }
     }
 }

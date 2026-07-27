@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPath() 获取<p>路径</p>
  * @method void setPath(string $Path) 设置<p>路径</p>
- * @method string getUpstreamResourceType() 获取<p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
- * @method void setUpstreamResourceType(string $UpstreamResourceType) 设置<p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
- * @method string getUpstreamResourceName() 获取<p>上游服务名。创建时必填，修改时可选填</p>
- * @method void setUpstreamResourceName(string $UpstreamResourceName) 设置<p>上游服务名。创建时必填，修改时可选填</p>
+ * @method string getUpstreamResourceType() 获取<p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
+ * @method void setUpstreamResourceType(string $UpstreamResourceType) 设置<p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
+ * @method string getUpstreamResourceName() 获取<p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+ * @method void setUpstreamResourceName(string $UpstreamResourceName) 设置<p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
  * @method HTTPServicePathRewrite getPathRewrite() 获取<p>路径重写</p>
  * @method void setPathRewrite(HTTPServicePathRewrite $PathRewrite) 设置<p>路径重写</p>
  * @method boolean getEnableSafeDomain() 获取<p>是否开启安全域名。默认开启</p>
@@ -49,12 +49,12 @@ class HTTPServiceRouteParam extends AbstractModel
     public $Path;
 
     /**
-     * @var string <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
+     * @var string <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
      */
     public $UpstreamResourceType;
 
     /**
-     * @var string <p>上游服务名。创建时必填，修改时可选填</p>
+     * @var string <p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
      */
     public $UpstreamResourceName;
 
@@ -95,8 +95,8 @@ class HTTPServiceRouteParam extends AbstractModel
 
     /**
      * @param string $Path <p>路径</p>
-     * @param string $UpstreamResourceType <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
-     * @param string $UpstreamResourceName <p>上游服务名。创建时必填，修改时可选填</p>
+     * @param string $UpstreamResourceType <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
+     * @param string $UpstreamResourceName <p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
      * @param HTTPServicePathRewrite $PathRewrite <p>路径重写</p>
      * @param boolean $EnableSafeDomain <p>是否开启安全域名。默认开启</p>
      * @param boolean $EnableAuth <p>是否开启身份认证。默认关闭</p>

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAccounts请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getAccounts() 获取账号数组，包含account和host
- * @method void setAccounts(array $Accounts) 设置账号数组，包含account和host
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method array getAccounts() 获取<p>账号数组，包含account和host</p>
+ * @method void setAccounts(array $Accounts) 设置<p>账号数组，包含account和host</p>
  */
 class DeleteAccountsRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var array 账号数组，包含account和host
+     * @var array <p>账号数组，包含account和host</p>
      */
     public $Accounts;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param array $Accounts 账号数组，包含account和host
+     * @param string $ClusterId <p>集群ID</p>
+     * @param array $Accounts <p>账号数组，包含account和host</p>
      */
     function __construct()
     {

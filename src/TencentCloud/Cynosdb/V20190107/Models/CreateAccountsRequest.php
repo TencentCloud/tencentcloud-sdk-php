@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccounts请求参数结构体
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method array getAccounts() 获取新账户列表
- * @method void setAccounts(array $Accounts) 设置新账户列表
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method array getAccounts() 获取<p>新账户列表</p>
+ * @method void setAccounts(array $Accounts) 设置<p>新账户列表</p>
  */
 class CreateAccountsRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var array 新账户列表
+     * @var array <p>新账户列表</p>
      */
     public $Accounts;
 
     /**
-     * @param string $ClusterId 集群id
-     * @param array $Accounts 新账户列表
+     * @param string $ClusterId <p>集群id</p>
+     * @param array $Accounts <p>新账户列表</p>
      */
     function __construct()
     {

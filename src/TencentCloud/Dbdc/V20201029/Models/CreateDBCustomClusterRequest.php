@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method ContainerNetwork getContainerNetwork() 获取<p>容器网络，在此集群的所有 POD 与此网络连通</p>
  * @method void setContainerNetwork(ContainerNetwork $ContainerNetwork) 设置<p>容器网络，在此集群的所有 POD 与此网络连通</p>
- * @method string getClusterName() 获取<p>集群名称</p><p>入参限制：最长128个字符，只能为中文，英文，下划线。</p>
- * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p><p>入参限制：最长128个字符，只能为中文，英文，下划线。</p>
+ * @method string getClusterName() 获取<p>集群名称</p><p>入参限制：最长128个字符。</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p><p>入参限制：最长128个字符。</p>
  * @method ApiServerNetwork getApiServerNetwork() 获取<p>集群的API Server的网络信息</p><p>入参限制：必须为此账号下拥有的网络地址，可以与容器网络保持一致。</p>
  * @method void setApiServerNetwork(ApiServerNetwork $ApiServerNetwork) 设置<p>集群的API Server的网络信息</p><p>入参限制：必须为此账号下拥有的网络地址，可以与容器网络保持一致。</p>
  * @method string getClusterDescription() 获取<p>集群描述</p>
@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>集群标签</p>
  * @method string getClientToken() 获取<p>客户端Token</p>
  * @method void setClientToken(string $ClientToken) 设置<p>客户端Token</p>
+ * @method boolean getDryRun() 获取<p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
+ * @method void setDryRun(boolean $DryRun) 设置<p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
  */
 class CreateDBCustomClusterRequest extends AbstractModel
 {
@@ -41,7 +43,7 @@ class CreateDBCustomClusterRequest extends AbstractModel
     public $ContainerNetwork;
 
     /**
-     * @var string <p>集群名称</p><p>入参限制：最长128个字符，只能为中文，英文，下划线。</p>
+     * @var string <p>集群名称</p><p>入参限制：最长128个字符。</p>
      */
     public $ClusterName;
 
@@ -66,12 +68,18 @@ class CreateDBCustomClusterRequest extends AbstractModel
     public $ClientToken;
 
     /**
+     * @var boolean <p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
+     */
+    public $DryRun;
+
+    /**
      * @param ContainerNetwork $ContainerNetwork <p>容器网络，在此集群的所有 POD 与此网络连通</p>
-     * @param string $ClusterName <p>集群名称</p><p>入参限制：最长128个字符，只能为中文，英文，下划线。</p>
+     * @param string $ClusterName <p>集群名称</p><p>入参限制：最长128个字符。</p>
      * @param ApiServerNetwork $ApiServerNetwork <p>集群的API Server的网络信息</p><p>入参限制：必须为此账号下拥有的网络地址，可以与容器网络保持一致。</p>
      * @param string $ClusterDescription <p>集群描述</p>
      * @param array $Tags <p>集群标签</p>
      * @param string $ClientToken <p>客户端Token</p>
+     * @param boolean $DryRun <p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
      */
     function __construct()
     {
@@ -115,6 +123,10 @@ class CreateDBCustomClusterRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

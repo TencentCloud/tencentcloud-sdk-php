@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRackId(string $RackId) 设置<p>机架ID（已加密）</p>
  * @method string getHostIp() 获取<p>底层物理机IP（已加密）</p>
  * @method void setHostIp(string $HostIp) 设置<p>底层物理机IP（已加密）</p>
+ * @method string getNetworkMode() 获取<p>网络模式</p><p>枚举值：</p><ul><li>NetworkModePrivateLink： 四层 SSH 服务联通模式</li><li>NetworkModeCrossTenantENI：  三层双网卡访问方式</li></ul>
+ * @method void setNetworkMode(string $NetworkMode) 设置<p>网络模式</p><p>枚举值：</p><ul><li>NetworkModePrivateLink： 四层 SSH 服务联通模式</li><li>NetworkModeCrossTenantENI：  三层双网卡访问方式</li></ul>
+ * @method string getEniIP() 获取<p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
+ * @method void setEniIP(string $EniIP) 设置<p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
  */
 class DBCustomNode extends AbstractModel
 {
@@ -208,6 +212,16 @@ class DBCustomNode extends AbstractModel
     public $HostIp;
 
     /**
+     * @var string <p>网络模式</p><p>枚举值：</p><ul><li>NetworkModePrivateLink： 四层 SSH 服务联通模式</li><li>NetworkModeCrossTenantENI：  三层双网卡访问方式</li></ul>
+     */
+    public $NetworkMode;
+
+    /**
+     * @var string <p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
+     */
+    public $EniIP;
+
+    /**
      * @param string $NodeId <p>节点ID</p>
      * @param string $NodeName <p>节点名称</p>
      * @param string $SSHEndpoint <p>访问此节点的SSH Endpoint，格式为IP:Port</p>
@@ -236,6 +250,8 @@ class DBCustomNode extends AbstractModel
      * @param string $SwitchId <p>交换机ID（已加密）</p>
      * @param string $RackId <p>机架ID（已加密）</p>
      * @param string $HostIp <p>底层物理机IP（已加密）</p>
+     * @param string $NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>NetworkModePrivateLink： 四层 SSH 服务联通模式</li><li>NetworkModeCrossTenantENI：  三层双网卡访问方式</li></ul>
+     * @param string $EniIP <p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
      */
     function __construct()
     {
@@ -359,6 +375,14 @@ class DBCustomNode extends AbstractModel
 
         if (array_key_exists("HostIp",$param) and $param["HostIp"] !== null) {
             $this->HostIp = $param["HostIp"];
+        }
+
+        if (array_key_exists("NetworkMode",$param) and $param["NetworkMode"] !== null) {
+            $this->NetworkMode = $param["NetworkMode"];
+        }
+
+        if (array_key_exists("EniIP",$param) and $param["EniIP"] !== null) {
+            $this->EniIP = $param["EniIP"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) 设置<p>磁盘类型</p><p>枚举值：</p><ul><li>CLOUD_HSSD： 增强型云硬盘</li><li>LOCAL_NVME： 本地硬盘</li></ul>
  * @method integer getDiskSize() 获取<p>磁盘大小</p><p>单位：GiB</p>
  * @method void setDiskSize(integer $DiskSize) 设置<p>磁盘大小</p><p>单位：GiB</p>
- * @method string getDiskName() 获取<p>磁盘名称</p>
- * @method void setDiskName(string $DiskName) 设置<p>磁盘名称</p>
+ * @method string getDiskName() 获取<p>磁盘名称</p><p>DataDisk 作为输入参数时，DiskName 无效。</p>
+ * @method void setDiskName(string $DiskName) 设置<p>磁盘名称</p><p>DataDisk 作为输入参数时，DiskName 无效。</p>
  */
 class DataDisk extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DataDisk extends AbstractModel
     public $DiskSize;
 
     /**
-     * @var string <p>磁盘名称</p>
+     * @var string <p>磁盘名称</p><p>DataDisk 作为输入参数时，DiskName 无效。</p>
      */
     public $DiskName;
 
     /**
      * @param string $DiskType <p>磁盘类型</p><p>枚举值：</p><ul><li>CLOUD_HSSD： 增强型云硬盘</li><li>LOCAL_NVME： 本地硬盘</li></ul>
      * @param integer $DiskSize <p>磁盘大小</p><p>单位：GiB</p>
-     * @param string $DiskName <p>磁盘名称</p>
+     * @param string $DiskName <p>磁盘名称</p><p>DataDisk 作为输入参数时，DiskName 无效。</p>
      */
     function __construct()
     {

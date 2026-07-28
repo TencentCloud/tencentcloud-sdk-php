@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置<p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前只支持Key（也就是按关键字过滤日志）</li><li>Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol>
  * @method integer getOffset() 获取<p>使用OFFSET分页查询时，指定返回的数据偏移量，默认为0</p>
  * @method void setOffset(integer $Offset) 设置<p>使用OFFSET分页查询时，指定返回的数据偏移量，默认为0</p>
+ * @method string getLogStream() 获取<p>日志类别</p><p>枚举值：</p><ul><li>stdout： stdout</li><li>stderr： stderr</li></ul><p>默认值：&quot;&quot;</p>
+ * @method void setLogStream(string $LogStream) 设置<p>日志类别</p><p>枚举值：</p><ul><li>stdout： stdout</li><li>stderr： stderr</li></ul><p>默认值：&quot;&quot;</p>
  */
 class DescribeLogsRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class DescribeLogsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string <p>日志类别</p><p>枚举值：</p><ul><li>stdout： stdout</li><li>stderr： stderr</li></ul><p>默认值：&quot;&quot;</p>
+     */
+    public $LogStream;
+
+    /**
      * @param string $Service <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
      * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param string $StartTime <p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
@@ -120,6 +127,7 @@ class DescribeLogsRequest extends AbstractModel
      * @param string $Context <p>日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回</p>
      * @param array $Filters <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前只支持Key（也就是按关键字过滤日志）</li><li>Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol>
      * @param integer $Offset <p>使用OFFSET分页查询时，指定返回的数据偏移量，默认为0</p>
+     * @param string $LogStream <p>日志类别</p><p>枚举值：</p><ul><li>stdout： stdout</li><li>stderr： stderr</li></ul><p>默认值：&quot;&quot;</p>
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ class DescribeLogsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("LogStream",$param) and $param["LogStream"] !== null) {
+            $this->LogStream = $param["LogStream"];
         }
     }
 }

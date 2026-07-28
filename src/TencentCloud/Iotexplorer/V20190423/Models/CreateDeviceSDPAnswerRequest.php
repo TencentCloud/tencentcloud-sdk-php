@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDeviceSDPAnswer请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getSDPOffer() 获取SDP提议
- * @method void setSDPOffer(string $SDPOffer) 设置SDP提议
- * @method string getRequesterTag() 获取客户自定义拉流标识
- * @method void setRequesterTag(string $RequesterTag) 设置客户自定义拉流标识
+ * @method string getProductId() 获取<p>产品ID</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品ID</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method string getSDPOffer() 获取<p>SDP提议</p>
+ * @method void setSDPOffer(string $SDPOffer) 设置<p>SDP提议</p>
+ * @method string getRequesterTag() 获取<p>客户自定义拉流标识</p>
+ * @method void setRequesterTag(string $RequesterTag) 设置<p>客户自定义拉流标识</p>
+ * @method integer getEnableSubPub() 获取<p>默认值：0，如果需要webrtc推流拉流在同一个SDP中，需要值为1，常用于单PC模式</p><p>枚举值：</p><ul><li>0： 默认值，传统多pc推流模式</li><li>1： 单pc模式，如果需要webrtc单pc推拉流，采用此模式，此模式下注意SDP需要包含推拉流全部信息</li></ul><p>默认值：0</p>
+ * @method void setEnableSubPub(integer $EnableSubPub) 设置<p>默认值：0，如果需要webrtc推流拉流在同一个SDP中，需要值为1，常用于单PC模式</p><p>枚举值：</p><ul><li>0： 默认值，传统多pc推流模式</li><li>1： 单pc模式，如果需要webrtc单pc推拉流，采用此模式，此模式下注意SDP需要包含推拉流全部信息</li></ul><p>默认值：0</p>
  */
 class CreateDeviceSDPAnswerRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string <p>产品ID</p>
      */
     public $ProductId;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string SDP提议
+     * @var string <p>SDP提议</p>
      */
     public $SDPOffer;
 
     /**
-     * @var string 客户自定义拉流标识
+     * @var string <p>客户自定义拉流标识</p>
      */
     public $RequesterTag;
 
     /**
-     * @param string $ProductId 产品ID
-     * @param string $DeviceName 设备名称
-     * @param string $SDPOffer SDP提议
-     * @param string $RequesterTag 客户自定义拉流标识
+     * @var integer <p>默认值：0，如果需要webrtc推流拉流在同一个SDP中，需要值为1，常用于单PC模式</p><p>枚举值：</p><ul><li>0： 默认值，传统多pc推流模式</li><li>1： 单pc模式，如果需要webrtc单pc推拉流，采用此模式，此模式下注意SDP需要包含推拉流全部信息</li></ul><p>默认值：0</p>
+     */
+    public $EnableSubPub;
+
+    /**
+     * @param string $ProductId <p>产品ID</p>
+     * @param string $DeviceName <p>设备名称</p>
+     * @param string $SDPOffer <p>SDP提议</p>
+     * @param string $RequesterTag <p>客户自定义拉流标识</p>
+     * @param integer $EnableSubPub <p>默认值：0，如果需要webrtc推流拉流在同一个SDP中，需要值为1，常用于单PC模式</p><p>枚举值：</p><ul><li>0： 默认值，传统多pc推流模式</li><li>1： 单pc模式，如果需要webrtc单pc推拉流，采用此模式，此模式下注意SDP需要包含推拉流全部信息</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateDeviceSDPAnswerRequest extends AbstractModel
 
         if (array_key_exists("RequesterTag",$param) and $param["RequesterTag"] !== null) {
             $this->RequesterTag = $param["RequesterTag"];
+        }
+
+        if (array_key_exists("EnableSubPub",$param) and $param["EnableSubPub"] !== null) {
+            $this->EnableSubPub = $param["EnableSubPub"];
         }
     }
 }

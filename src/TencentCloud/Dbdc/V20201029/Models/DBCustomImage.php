@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageType(string $ImageType) 设置<p>镜像类型</p><p>枚举值：</p><ul><li>PUBLIC_IMAGE： 公共镜像 (腾讯云官方镜像)</li><li>PRIVATE_IMAGE： 私有镜像 (客户专属镜像)</li></ul>
  * @method string getArchitecture() 获取<p>操作系统架构</p><p>枚举值：</p><ul><li>x86_64： X86 64位架构</li><li>arm64： ARM 64位机构</li></ul>
  * @method void setArchitecture(string $Architecture) 设置<p>操作系统架构</p><p>枚举值：</p><ul><li>x86_64： X86 64位架构</li><li>arm64： ARM 64位机构</li></ul>
+ * @method string getOsType() 获取<p>操作系统类型</p><p>枚举值：</p><ul><li>windows： windows</li><li>linux： linux</li></ul>
+ * @method void setOsType(string $OsType) 设置<p>操作系统类型</p><p>枚举值：</p><ul><li>windows： windows</li><li>linux： linux</li></ul>
  */
 class DBCustomImage extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DBCustomImage extends AbstractModel
     public $Architecture;
 
     /**
+     * @var string <p>操作系统类型</p><p>枚举值：</p><ul><li>windows： windows</li><li>linux： linux</li></ul>
+     */
+    public $OsType;
+
+    /**
      * @param string $ImageId <p>镜像ID</p>
      * @param string $OsName <p>操作系统名称</p>
      * @param string $ImageType <p>镜像类型</p><p>枚举值：</p><ul><li>PUBLIC_IMAGE： 公共镜像 (腾讯云官方镜像)</li><li>PRIVATE_IMAGE： 私有镜像 (客户专属镜像)</li></ul>
      * @param string $Architecture <p>操作系统架构</p><p>枚举值：</p><ul><li>x86_64： X86 64位架构</li><li>arm64： ARM 64位机构</li></ul>
+     * @param string $OsType <p>操作系统类型</p><p>枚举值：</p><ul><li>windows： windows</li><li>linux： linux</li></ul>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DBCustomImage extends AbstractModel
 
         if (array_key_exists("Architecture",$param) and $param["Architecture"] !== null) {
             $this->Architecture = $param["Architecture"];
+        }
+
+        if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
+            $this->OsType = $param["OsType"];
         }
     }
 }

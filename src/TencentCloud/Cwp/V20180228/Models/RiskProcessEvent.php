@@ -20,170 +20,186 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 异常进程事件
  *
- * @method integer getEventId() 获取事件ID
- * @method void setEventId(integer $EventId) 设置事件ID
- * @method string getHostName() 获取主机名称
- * @method void setHostName(string $HostName) 设置主机名称
- * @method string getHostIp() 获取主机IP
- * @method void setHostIp(string $HostIp) 设置主机IP
- * @method string getWanIp() 获取外网IP
- * @method void setWanIp(string $WanIp) 设置外网IP
- * @method integer getProcessId() 获取进程ID
- * @method void setProcessId(integer $ProcessId) 设置进程ID
- * @method string getFilePath() 获取文件路径
- * @method void setFilePath(string $FilePath) 设置文件路径
- * @method string getCmdLine() 获取执行命令
- * @method void setCmdLine(string $CmdLine) 设置执行命令
- * @method string getStartTime() 获取进程启动时间
- * @method void setStartTime(string $StartTime) 设置进程启动时间
- * @method string getDetectTime() 获取最近检测时间
- * @method void setDetectTime(string $DetectTime) 设置最近检测时间
- * @method string getVirusName() 获取病毒名称
- * @method void setVirusName(string $VirusName) 设置病毒名称
- * @method array getCheckPlatform() 获取木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]
- * @method void setCheckPlatform(array $CheckPlatform) 设置木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]
- * @method array getVirusTags() 获取病毒标签
- * @method void setVirusTags(array $VirusTags) 设置病毒标签
- * @method string getThreatDesc() 获取威胁描述
- * @method void setThreatDesc(string $ThreatDesc) 设置威胁描述
- * @method string getSuggestSolution() 获取建议方案
- * @method void setSuggestSolution(string $SuggestSolution) 设置建议方案
- * @method string getReferenceLink() 获取参考链接
- * @method void setReferenceLink(string $ReferenceLink) 设置参考链接
- * @method integer getHandleStatus() 获取处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]
- * @method void setHandleStatus(integer $HandleStatus) 设置处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]
- * @method integer getOnlineStatus() 获取主机在线状态
- * @method void setOnlineStatus(integer $OnlineStatus) 设置主机在线状态
- * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
- * @method string getUuid() 获取主机uuid
- * @method void setUuid(string $Uuid) 设置主机uuid
- * @method integer getFirstDetectionMethod() 获取首次检出方式 0扫描;1实时监控
- * @method void setFirstDetectionMethod(integer $FirstDetectionMethod) 设置首次检出方式 0扫描;1实时监控
+ * @method integer getEventId() 获取<p>事件ID</p>
+ * @method void setEventId(integer $EventId) 设置<p>事件ID</p>
+ * @method string getHostName() 获取<p>主机名称</p>
+ * @method void setHostName(string $HostName) 设置<p>主机名称</p>
+ * @method string getHostIp() 获取<p>主机IP</p>
+ * @method void setHostIp(string $HostIp) 设置<p>主机IP</p>
+ * @method string getWanIp() 获取<p>外网IP</p>
+ * @method void setWanIp(string $WanIp) 设置<p>外网IP</p>
+ * @method integer getProcessId() 获取<p>进程ID</p>
+ * @method void setProcessId(integer $ProcessId) 设置<p>进程ID</p>
+ * @method string getFilePath() 获取<p>文件路径</p>
+ * @method void setFilePath(string $FilePath) 设置<p>文件路径</p>
+ * @method string getCmdLine() 获取<p>执行命令</p>
+ * @method void setCmdLine(string $CmdLine) 设置<p>执行命令</p>
+ * @method string getStartTime() 获取<p>进程启动时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>进程启动时间</p>
+ * @method string getDetectTime() 获取<p>最近检测时间</p>
+ * @method void setDetectTime(string $DetectTime) 设置<p>最近检测时间</p>
+ * @method string getVirusName() 获取<p>病毒名称</p>
+ * @method void setVirusName(string $VirusName) 设置<p>病毒名称</p>
+ * @method array getCheckPlatform() 获取<p>木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]</p>
+ * @method void setCheckPlatform(array $CheckPlatform) 设置<p>木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]</p>
+ * @method array getVirusTags() 获取<p>病毒标签</p>
+ * @method void setVirusTags(array $VirusTags) 设置<p>病毒标签</p>
+ * @method string getThreatDesc() 获取<p>威胁描述</p>
+ * @method void setThreatDesc(string $ThreatDesc) 设置<p>威胁描述</p>
+ * @method string getSuggestSolution() 获取<p>建议方案</p>
+ * @method void setSuggestSolution(string $SuggestSolution) 设置<p>建议方案</p>
+ * @method string getReferenceLink() 获取<p>参考链接</p>
+ * @method void setReferenceLink(string $ReferenceLink) 设置<p>参考链接</p>
+ * @method integer getHandleStatus() 获取<p>处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]</p>
+ * @method void setHandleStatus(integer $HandleStatus) 设置<p>处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]</p>
+ * @method integer getOnlineStatus() 获取<p>主机在线状态</p>
+ * @method void setOnlineStatus(integer $OnlineStatus) 设置<p>主机在线状态</p>
+ * @method MachineExtraInfo getMachineExtraInfo() 获取<p>附加信息</p>
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置<p>附加信息</p>
+ * @method string getUuid() 获取<p>主机uuid</p>
+ * @method void setUuid(string $Uuid) 设置<p>主机uuid</p>
+ * @method integer getFirstDetectionMethod() 获取<p>首次检出方式 0扫描;1实时监控</p>
+ * @method void setFirstDetectionMethod(integer $FirstDetectionMethod) 设置<p>首次检出方式 0扫描;1实时监控</p>
+ * @method string getQUUID() 获取<p>quuid</p>
+ * @method void setQUUID(string $QUUID) 设置<p>quuid</p>
+ * @method string getExeMd5() 获取<p>进程md5</p>
+ * @method void setExeMd5(string $ExeMd5) 设置<p>进程md5</p>
  */
 class RiskProcessEvent extends AbstractModel
 {
     /**
-     * @var integer 事件ID
+     * @var integer <p>事件ID</p>
      */
     public $EventId;
 
     /**
-     * @var string 主机名称
+     * @var string <p>主机名称</p>
      */
     public $HostName;
 
     /**
-     * @var string 主机IP
+     * @var string <p>主机IP</p>
      */
     public $HostIp;
 
     /**
-     * @var string 外网IP
+     * @var string <p>外网IP</p>
      */
     public $WanIp;
 
     /**
-     * @var integer 进程ID
+     * @var integer <p>进程ID</p>
      */
     public $ProcessId;
 
     /**
-     * @var string 文件路径
+     * @var string <p>文件路径</p>
      */
     public $FilePath;
 
     /**
-     * @var string 执行命令
+     * @var string <p>执行命令</p>
      */
     public $CmdLine;
 
     /**
-     * @var string 进程启动时间
+     * @var string <p>进程启动时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 最近检测时间
+     * @var string <p>最近检测时间</p>
      */
     public $DetectTime;
 
     /**
-     * @var string 病毒名称
+     * @var string <p>病毒名称</p>
      */
     public $VirusName;
 
     /**
-     * @var array 木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]
+     * @var array <p>木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]</p>
      */
     public $CheckPlatform;
 
     /**
-     * @var array 病毒标签
+     * @var array <p>病毒标签</p>
      */
     public $VirusTags;
 
     /**
-     * @var string 威胁描述
+     * @var string <p>威胁描述</p>
      */
     public $ThreatDesc;
 
     /**
-     * @var string 建议方案
+     * @var string <p>建议方案</p>
      */
     public $SuggestSolution;
 
     /**
-     * @var string 参考链接
+     * @var string <p>参考链接</p>
      */
     public $ReferenceLink;
 
     /**
-     * @var integer 处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]
+     * @var integer <p>处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]</p>
      */
     public $HandleStatus;
 
     /**
-     * @var integer 主机在线状态
+     * @var integer <p>主机在线状态</p>
      */
     public $OnlineStatus;
 
     /**
-     * @var MachineExtraInfo 附加信息
+     * @var MachineExtraInfo <p>附加信息</p>
      */
     public $MachineExtraInfo;
 
     /**
-     * @var string 主机uuid
+     * @var string <p>主机uuid</p>
      */
     public $Uuid;
 
     /**
-     * @var integer 首次检出方式 0扫描;1实时监控
+     * @var integer <p>首次检出方式 0扫描;1实时监控</p>
      */
     public $FirstDetectionMethod;
 
     /**
-     * @param integer $EventId 事件ID
-     * @param string $HostName 主机名称
-     * @param string $HostIp 主机IP
-     * @param string $WanIp 外网IP
-     * @param integer $ProcessId 进程ID
-     * @param string $FilePath 文件路径
-     * @param string $CmdLine 执行命令
-     * @param string $StartTime 进程启动时间
-     * @param string $DetectTime 最近检测时间
-     * @param string $VirusName 病毒名称
-     * @param array $CheckPlatform 木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]
-     * @param array $VirusTags 病毒标签
-     * @param string $ThreatDesc 威胁描述
-     * @param string $SuggestSolution 建议方案
-     * @param string $ReferenceLink 参考链接
-     * @param integer $HandleStatus 处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]
-     * @param integer $OnlineStatus 主机在线状态
-     * @param MachineExtraInfo $MachineExtraInfo 附加信息
-     * @param string $Uuid 主机uuid
-     * @param integer $FirstDetectionMethod 首次检出方式 0扫描;1实时监控
+     * @var string <p>quuid</p>
+     */
+    public $QUUID;
+
+    /**
+     * @var string <p>进程md5</p>
+     */
+    public $ExeMd5;
+
+    /**
+     * @param integer $EventId <p>事件ID</p>
+     * @param string $HostName <p>主机名称</p>
+     * @param string $HostIp <p>主机IP</p>
+     * @param string $WanIp <p>外网IP</p>
+     * @param integer $ProcessId <p>进程ID</p>
+     * @param string $FilePath <p>文件路径</p>
+     * @param string $CmdLine <p>执行命令</p>
+     * @param string $StartTime <p>进程启动时间</p>
+     * @param string $DetectTime <p>最近检测时间</p>
+     * @param string $VirusName <p>病毒名称</p>
+     * @param array $CheckPlatform <p>木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]</p>
+     * @param array $VirusTags <p>病毒标签</p>
+     * @param string $ThreatDesc <p>威胁描述</p>
+     * @param string $SuggestSolution <p>建议方案</p>
+     * @param string $ReferenceLink <p>参考链接</p>
+     * @param integer $HandleStatus <p>处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]</p>
+     * @param integer $OnlineStatus <p>主机在线状态</p>
+     * @param MachineExtraInfo $MachineExtraInfo <p>附加信息</p>
+     * @param string $Uuid <p>主机uuid</p>
+     * @param integer $FirstDetectionMethod <p>首次检出方式 0扫描;1实时监控</p>
+     * @param string $QUUID <p>quuid</p>
+     * @param string $ExeMd5 <p>进程md5</p>
      */
     function __construct()
     {
@@ -277,6 +293,14 @@ class RiskProcessEvent extends AbstractModel
 
         if (array_key_exists("FirstDetectionMethod",$param) and $param["FirstDetectionMethod"] !== null) {
             $this->FirstDetectionMethod = $param["FirstDetectionMethod"];
+        }
+
+        if (array_key_exists("QUUID",$param) and $param["QUUID"] !== null) {
+            $this->QUUID = $param["QUUID"];
+        }
+
+        if (array_key_exists("ExeMd5",$param) and $param["ExeMd5"] !== null) {
+            $this->ExeMd5 = $param["ExeMd5"];
         }
     }
 }

@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群支持的功能
  *
- * @method string getIsSupportSlaveZone() 获取是否支持从可用区
- * @method void setIsSupportSlaveZone(string $IsSupportSlaveZone) 设置是否支持从可用区
- * @method string getNonsupportSlaveZoneReason() 获取不支持从可用区的原因
- * @method void setNonsupportSlaveZoneReason(string $NonsupportSlaveZoneReason) 设置不支持从可用区的原因
- * @method string getIsSupportRo() 获取是否支持RO实例
- * @method void setIsSupportRo(string $IsSupportRo) 设置是否支持RO实例
- * @method string getNonsupportRoReason() 获取不支持RO实例的原因
- * @method void setNonsupportRoReason(string $NonsupportRoReason) 设置不支持RO实例的原因
- * @method string getIsSupportManualSnapshot() 获取是否支持手动发起快照备份
- * @method void setIsSupportManualSnapshot(string $IsSupportManualSnapshot) 设置是否支持手动发起快照备份
- * @method string getIsSupportTransparentDataEncryption() 获取是否支持透明数据加密
- * @method void setIsSupportTransparentDataEncryption(string $IsSupportTransparentDataEncryption) 设置是否支持透明数据加密
- * @method string getNoSupportTransparentDataEncryptionReason() 获取不支持透明数据加密原因
- * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) 设置不支持透明数据加密原因
- * @method string getIsSupportManualLogic() 获取是否支持手动发起逻辑备份
- * @method void setIsSupportManualLogic(string $IsSupportManualLogic) 设置是否支持手动发起逻辑备份
- * @method string getIsSupportGlobalEncryption() 获取是否支持开启全局加密
- * @method void setIsSupportGlobalEncryption(string $IsSupportGlobalEncryption) 设置是否支持开启全局加密
- * @method string getNoSupportGlobalEncryptionReason() 获取不支持全局加密的原因
- * @method void setNoSupportGlobalEncryptionReason(string $NoSupportGlobalEncryptionReason) 设置不支持全局加密的原因
- * @method string getNoSupportTransparentDataEncryptionReasonCode() 获取不支持透明加密原因状态码
- * @method void setNoSupportTransparentDataEncryptionReasonCode(string $NoSupportTransparentDataEncryptionReasonCode) 设置不支持透明加密原因状态码
- * @method string getNoSupportGlobalEncryptionReasonCode() 获取不支持全局加密原因状态码
- * @method void setNoSupportGlobalEncryptionReasonCode(string $NoSupportGlobalEncryptionReasonCode) 设置不支持全局加密原因状态码
+ * @method string getIsSupportSlaveZone() 获取<p>是否支持从可用区</p>
+ * @method void setIsSupportSlaveZone(string $IsSupportSlaveZone) 设置<p>是否支持从可用区</p>
+ * @method string getNonsupportSlaveZoneReason() 获取<p>不支持从可用区的原因</p>
+ * @method void setNonsupportSlaveZoneReason(string $NonsupportSlaveZoneReason) 设置<p>不支持从可用区的原因</p>
+ * @method string getIsSupportRo() 获取<p>是否支持RO实例</p>
+ * @method void setIsSupportRo(string $IsSupportRo) 设置<p>是否支持RO实例</p>
+ * @method string getNonsupportRoReason() 获取<p>不支持RO实例的原因</p>
+ * @method void setNonsupportRoReason(string $NonsupportRoReason) 设置<p>不支持RO实例的原因</p>
+ * @method string getIsSupportManualSnapshot() 获取<p>是否支持手动发起快照备份</p>
+ * @method void setIsSupportManualSnapshot(string $IsSupportManualSnapshot) 设置<p>是否支持手动发起快照备份</p>
+ * @method string getIsSupportTransparentDataEncryption() 获取<p>是否支持透明数据加密</p>
+ * @method void setIsSupportTransparentDataEncryption(string $IsSupportTransparentDataEncryption) 设置<p>是否支持透明数据加密</p>
+ * @method string getNoSupportTransparentDataEncryptionReason() 获取<p>不支持透明数据加密原因</p>
+ * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) 设置<p>不支持透明数据加密原因</p>
+ * @method string getIsSupportManualLogic() 获取<p>是否支持手动发起逻辑备份</p>
+ * @method void setIsSupportManualLogic(string $IsSupportManualLogic) 设置<p>是否支持手动发起逻辑备份</p>
+ * @method string getIsSupportGlobalEncryption() 获取<p>是否支持开启全局加密</p>
+ * @method void setIsSupportGlobalEncryption(string $IsSupportGlobalEncryption) 设置<p>是否支持开启全局加密</p>
+ * @method string getNoSupportGlobalEncryptionReason() 获取<p>不支持全局加密的原因</p>
+ * @method void setNoSupportGlobalEncryptionReason(string $NoSupportGlobalEncryptionReason) 设置<p>不支持全局加密的原因</p>
+ * @method string getNoSupportTransparentDataEncryptionReasonCode() 获取<p>不支持透明加密原因状态码</p>
+ * @method void setNoSupportTransparentDataEncryptionReasonCode(string $NoSupportTransparentDataEncryptionReasonCode) 设置<p>不支持透明加密原因状态码</p>
+ * @method string getNoSupportGlobalEncryptionReasonCode() 获取<p>不支持全局加密原因状态码</p>
+ * @method void setNoSupportGlobalEncryptionReasonCode(string $NoSupportGlobalEncryptionReasonCode) 设置<p>不支持全局加密原因状态码</p>
  */
 class Ability extends AbstractModel
 {
     /**
-     * @var string 是否支持从可用区
+     * @var string <p>是否支持从可用区</p>
      */
     public $IsSupportSlaveZone;
 
     /**
-     * @var string 不支持从可用区的原因
+     * @var string <p>不支持从可用区的原因</p>
      */
     public $NonsupportSlaveZoneReason;
 
     /**
-     * @var string 是否支持RO实例
+     * @var string <p>是否支持RO实例</p>
      */
     public $IsSupportRo;
 
     /**
-     * @var string 不支持RO实例的原因
+     * @var string <p>不支持RO实例的原因</p>
      */
     public $NonsupportRoReason;
 
     /**
-     * @var string 是否支持手动发起快照备份
+     * @var string <p>是否支持手动发起快照备份</p>
      */
     public $IsSupportManualSnapshot;
 
     /**
-     * @var string 是否支持透明数据加密
+     * @var string <p>是否支持透明数据加密</p>
      */
     public $IsSupportTransparentDataEncryption;
 
     /**
-     * @var string 不支持透明数据加密原因
+     * @var string <p>不支持透明数据加密原因</p>
      */
     public $NoSupportTransparentDataEncryptionReason;
 
     /**
-     * @var string 是否支持手动发起逻辑备份
+     * @var string <p>是否支持手动发起逻辑备份</p>
      */
     public $IsSupportManualLogic;
 
     /**
-     * @var string 是否支持开启全局加密
+     * @var string <p>是否支持开启全局加密</p>
      */
     public $IsSupportGlobalEncryption;
 
     /**
-     * @var string 不支持全局加密的原因
+     * @var string <p>不支持全局加密的原因</p>
      */
     public $NoSupportGlobalEncryptionReason;
 
     /**
-     * @var string 不支持透明加密原因状态码
+     * @var string <p>不支持透明加密原因状态码</p>
      */
     public $NoSupportTransparentDataEncryptionReasonCode;
 
     /**
-     * @var string 不支持全局加密原因状态码
+     * @var string <p>不支持全局加密原因状态码</p>
      */
     public $NoSupportGlobalEncryptionReasonCode;
 
     /**
-     * @param string $IsSupportSlaveZone 是否支持从可用区
-     * @param string $NonsupportSlaveZoneReason 不支持从可用区的原因
-     * @param string $IsSupportRo 是否支持RO实例
-     * @param string $NonsupportRoReason 不支持RO实例的原因
-     * @param string $IsSupportManualSnapshot 是否支持手动发起快照备份
-     * @param string $IsSupportTransparentDataEncryption 是否支持透明数据加密
-     * @param string $NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
-     * @param string $IsSupportManualLogic 是否支持手动发起逻辑备份
-     * @param string $IsSupportGlobalEncryption 是否支持开启全局加密
-     * @param string $NoSupportGlobalEncryptionReason 不支持全局加密的原因
-     * @param string $NoSupportTransparentDataEncryptionReasonCode 不支持透明加密原因状态码
-     * @param string $NoSupportGlobalEncryptionReasonCode 不支持全局加密原因状态码
+     * @param string $IsSupportSlaveZone <p>是否支持从可用区</p>
+     * @param string $NonsupportSlaveZoneReason <p>不支持从可用区的原因</p>
+     * @param string $IsSupportRo <p>是否支持RO实例</p>
+     * @param string $NonsupportRoReason <p>不支持RO实例的原因</p>
+     * @param string $IsSupportManualSnapshot <p>是否支持手动发起快照备份</p>
+     * @param string $IsSupportTransparentDataEncryption <p>是否支持透明数据加密</p>
+     * @param string $NoSupportTransparentDataEncryptionReason <p>不支持透明数据加密原因</p>
+     * @param string $IsSupportManualLogic <p>是否支持手动发起逻辑备份</p>
+     * @param string $IsSupportGlobalEncryption <p>是否支持开启全局加密</p>
+     * @param string $NoSupportGlobalEncryptionReason <p>不支持全局加密的原因</p>
+     * @param string $NoSupportTransparentDataEncryptionReasonCode <p>不支持透明加密原因状态码</p>
+     * @param string $NoSupportGlobalEncryptionReasonCode <p>不支持全局加密原因状态码</p>
      */
     function __construct()
     {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置<p>DB Custom 集群ID</p>
  * @method array getNodeIds() 获取<p>要下架的 DB Custom 节点ID列表</p>
  * @method void setNodeIds(array $NodeIds) 设置<p>要下架的 DB Custom 节点ID列表</p>
+ * @method LoginSettings getLoginSettings() 获取<p>节点的登录参数</p>
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置<p>节点的登录参数</p>
  */
 class RemoveNodesFromDBCustomClusterRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class RemoveNodesFromDBCustomClusterRequest extends AbstractModel
     public $NodeIds;
 
     /**
+     * @var LoginSettings <p>节点的登录参数</p>
+     */
+    public $LoginSettings;
+
+    /**
      * @param string $ClusterId <p>DB Custom 集群ID</p>
      * @param array $NodeIds <p>要下架的 DB Custom 节点ID列表</p>
+     * @param LoginSettings $LoginSettings <p>节点的登录参数</p>
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class RemoveNodesFromDBCustomClusterRequest extends AbstractModel
 
         if (array_key_exists("NodeIds",$param) and $param["NodeIds"] !== null) {
             $this->NodeIds = $param["NodeIds"];
+        }
+
+        if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
+            $this->LoginSettings = new LoginSettings();
+            $this->LoginSettings->deserialize($param["LoginSettings"]);
         }
     }
 }

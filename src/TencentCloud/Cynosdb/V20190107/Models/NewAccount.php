@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 新建账号
  *
- * @method string getAccountName() 获取账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
- * @method void setAccountName(string $AccountName) 设置账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
- * @method string getHost() 获取主机(%或ipv4地址)
- * @method void setHost(string $Host) 设置主机(%或ipv4地址)
- * @method string getAccountPassword() 获取密码，密码长度范围为8到64个字符
- * @method void setAccountPassword(string $AccountPassword) 设置密码，密码长度范围为8到64个字符
- * @method integer getPasswordRotation() 获取是否开启密码轮转(0:关闭;1:开启)
- * @method void setPasswordRotation(integer $PasswordRotation) 设置是否开启密码轮转(0:关闭;1:开启)
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method integer getMaxUserConnections() 获取用户最大连接数，不能大于10240
- * @method void setMaxUserConnections(integer $MaxUserConnections) 设置用户最大连接数，不能大于10240
+ * @method string getAccountName() 获取<p>账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30</p>
+ * @method void setAccountName(string $AccountName) 设置<p>账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30</p>
+ * @method string getHost() 获取<p>主机(%或ipv4地址)</p>
+ * @method void setHost(string $Host) 设置<p>主机(%或ipv4地址)</p>
+ * @method string getAccountPassword() 获取<p>密码，密码长度范围为8到64个字符</p>
+ * @method void setAccountPassword(string $AccountPassword) 设置<p>密码，密码长度范围为8到64个字符</p>
+ * @method integer getPasswordRotation() 获取<p>是否开启密码轮转(0:关闭;1:开启)</p>
+ * @method void setPasswordRotation(integer $PasswordRotation) 设置<p>是否开启密码轮转(0:关闭;1:开启)</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method integer getMaxUserConnections() 获取<p>用户最大连接数，不能大于10240</p>
+ * @method void setMaxUserConnections(integer $MaxUserConnections) 设置<p>用户最大连接数，不能大于10240</p>
  */
 class NewAccount extends AbstractModel
 {
     /**
-     * @var string 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
+     * @var string <p>账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30</p>
      */
     public $AccountName;
 
     /**
-     * @var string 主机(%或ipv4地址)
+     * @var string <p>主机(%或ipv4地址)</p>
      */
     public $Host;
 
     /**
-     * @var string 密码，密码长度范围为8到64个字符
+     * @var string <p>密码，密码长度范围为8到64个字符</p>
      */
     public $AccountPassword;
 
     /**
-     * @var integer 是否开启密码轮转(0:关闭;1:开启)
+     * @var integer <p>是否开启密码轮转(0:关闭;1:开启)</p>
      */
     public $PasswordRotation;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @var integer 用户最大连接数，不能大于10240
+     * @var integer <p>用户最大连接数，不能大于10240</p>
      */
     public $MaxUserConnections;
 
     /**
-     * @param string $AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
-     * @param string $Host 主机(%或ipv4地址)
-     * @param string $AccountPassword 密码，密码长度范围为8到64个字符
-     * @param integer $PasswordRotation 是否开启密码轮转(0:关闭;1:开启)
-     * @param string $Description 描述
-     * @param integer $MaxUserConnections 用户最大连接数，不能大于10240
+     * @param string $AccountName <p>账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30</p>
+     * @param string $Host <p>主机(%或ipv4地址)</p>
+     * @param string $AccountPassword <p>密码，密码长度范围为8到64个字符</p>
+     * @param integer $PasswordRotation <p>是否开启密码轮转(0:关闭;1:开启)</p>
+     * @param string $Description <p>描述</p>
+     * @param integer $MaxUserConnections <p>用户最大连接数，不能大于10240</p>
      */
     function __construct()
     {

@@ -20,191 +20,147 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 签署人详情信息
  *
- * @method string getApproveMessage() 获取签署时的相关信息
- * @method void setApproveMessage(string $ApproveMessage) 设置签署时的相关信息
- * @method string getApproveName() 获取签署方姓名
- * @method void setApproveName(string $ApproveName) 设置签署方姓名
- * @method integer getApproveStatus() 获取签署方的签署状态
-0：还没有发起
-1：流程中 没有开始处理
-2：待签署
-3：已签署
-4：已拒绝
-5：已过期
-6：已撤销
-7：还没有预发起
-8：待填写
-9：因为各种原因而终止
-10：填写完成
-15：已解除
-19：转他人处理
- * @method void setApproveStatus(integer $ApproveStatus) 设置签署方的签署状态
-0：还没有发起
-1：流程中 没有开始处理
-2：待签署
-3：已签署
-4：已拒绝
-5：已过期
-6：已撤销
-7：还没有预发起
-8：待填写
-9：因为各种原因而终止
-10：填写完成
-15：已解除
-19：转他人处理
- * @method string getReceiptId() 获取模板配置中的参与方ID,与控件绑定
- * @method void setReceiptId(string $ReceiptId) 设置模板配置中的参与方ID,与控件绑定
- * @method string getCustomUserId() 获取客户自定义的用户ID
- * @method void setCustomUserId(string $CustomUserId) 设置客户自定义的用户ID
- * @method string getMobile() 获取签署人手机号
- * @method void setMobile(string $Mobile) 设置签署人手机号
- * @method integer getSignOrder() 获取签署顺序，如果是有序签署，签署顺序从小到大
- * @method void setSignOrder(integer $SignOrder) 设置签署顺序，如果是有序签署，签署顺序从小到大
- * @method integer getApproveTime() 获取签署人签署时间，时间戳，单位秒
- * @method void setApproveTime(integer $ApproveTime) 设置签署人签署时间，时间戳，单位秒
- * @method string getApproveType() 获取签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
- * @method void setApproveType(string $ApproveType) 设置签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
- * @method string getApproverSource() 获取签署方侧用户来源，如WEWORKAPP-企业微信等
- * @method void setApproverSource(string $ApproverSource) 设置签署方侧用户来源，如WEWORKAPP-企业微信等
- * @method string getCustomApproverTag() 获取客户自定义签署方标识
- * @method void setCustomApproverTag(string $CustomApproverTag) 设置客户自定义签署方标识
- * @method string getOrganizationId() 获取签署方企业Id
- * @method void setOrganizationId(string $OrganizationId) 设置签署方企业Id
- * @method string getOrganizationName() 获取签署方企业名称
- * @method void setOrganizationName(string $OrganizationName) 设置签署方企业名称
- * @method string getSignId() 获取签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
- * @method void setSignId(string $SignId) 设置签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
- * @method string getApproverRoleName() 获取自定义签署人角色
- * @method void setApproverRoleName(string $ApproverRoleName) 设置自定义签署人角色
- * @method string getRecipientId() 获取模板配置中的参与方ID,与控件绑定
- * @method void setRecipientId(string $RecipientId) 设置模板配置中的参与方ID,与控件绑定
+ * @method string getApproveMessage() 获取<p>签署时的相关信息</p>
+ * @method void setApproveMessage(string $ApproveMessage) 设置<p>签署时的相关信息</p>
+ * @method string getApproveName() 获取<p>签署方姓名</p>
+ * @method void setApproveName(string $ApproveName) 设置<p>签署方姓名</p>
+ * @method integer getApproveStatus() 获取<p>签署方的签署状态<br>0：还没有发起<br>1：流程中 没有开始处理<br>2：待签署<br>3：已签署<br>4：已拒绝<br>5：已过期<br>6：已撤销<br>7：还没有预发起<br>8：待填写<br>9：因为各种原因而终止<br>10：填写完成<br>15：已解除<br>19：转他人处理</p>
+ * @method void setApproveStatus(integer $ApproveStatus) 设置<p>签署方的签署状态<br>0：还没有发起<br>1：流程中 没有开始处理<br>2：待签署<br>3：已签署<br>4：已拒绝<br>5：已过期<br>6：已撤销<br>7：还没有预发起<br>8：待填写<br>9：因为各种原因而终止<br>10：填写完成<br>15：已解除<br>19：转他人处理</p>
+ * @method string getReceiptId() 获取<p>模板配置中的参与方ID,与控件绑定</p>
+ * @method void setReceiptId(string $ReceiptId) 设置<p>模板配置中的参与方ID,与控件绑定</p>
+ * @method string getCustomUserId() 获取<p>客户自定义的用户ID</p>
+ * @method void setCustomUserId(string $CustomUserId) 设置<p>客户自定义的用户ID</p>
+ * @method string getMobile() 获取<p>签署人手机号</p>
+ * @method void setMobile(string $Mobile) 设置<p>签署人手机号</p>
+ * @method integer getSignOrder() 获取<p>签署顺序，如果是有序签署，签署顺序从小到大</p>
+ * @method void setSignOrder(integer $SignOrder) 设置<p>签署顺序，如果是有序签署，签署顺序从小到大</p>
+ * @method integer getApproveTime() 获取<p>签署人签署时间，时间戳，单位秒</p>
+ * @method void setApproveTime(integer $ApproveTime) 设置<p>签署人签署时间，时间戳，单位秒</p>
+ * @method string getApproveType() 获取<p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
+ * @method void setApproveType(string $ApproveType) 设置<p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
+ * @method string getApproverSource() 获取<p>签署方侧用户来源，如WEWORKAPP-企业微信等</p>
+ * @method void setApproverSource(string $ApproverSource) 设置<p>签署方侧用户来源，如WEWORKAPP-企业微信等</p>
+ * @method string getCustomApproverTag() 获取<p>客户自定义签署方标识</p>
+ * @method void setCustomApproverTag(string $CustomApproverTag) 设置<p>客户自定义签署方标识</p>
+ * @method string getOrganizationId() 获取<p>签署方企业Id</p>
+ * @method void setOrganizationId(string $OrganizationId) 设置<p>签署方企业Id</p>
+ * @method string getOrganizationName() 获取<p>签署方企业名称</p>
+ * @method void setOrganizationName(string $OrganizationName) 设置<p>签署方企业名称</p>
+ * @method string getSignId() 获取<p>签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。</p>
+ * @method void setSignId(string $SignId) 设置<p>签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。</p>
+ * @method string getApproverRoleName() 获取<p>自定义签署人角色</p>
+ * @method void setApproverRoleName(string $ApproverRoleName) 设置<p>自定义签署人角色</p>
+ * @method string getRecipientId() 获取<p>模板配置中的参与方ID,与控件绑定</p>
+ * @method void setRecipientId(string $RecipientId) 设置<p>模板配置中的参与方ID,与控件绑定</p>
+ * @method array getForwardRecords() 获取<p>签署方转交记录列表，标识该签署方是由谁转交而来，按转交时间由远到近进行排序</p>
+ * @method void setForwardRecords(array $ForwardRecords) 设置<p>签署方转交记录列表，标识该签署方是由谁转交而来，按转交时间由远到近进行排序</p>
  */
 class FlowApproverDetail extends AbstractModel
 {
     /**
-     * @var string 签署时的相关信息
+     * @var string <p>签署时的相关信息</p>
      */
     public $ApproveMessage;
 
     /**
-     * @var string 签署方姓名
+     * @var string <p>签署方姓名</p>
      */
     public $ApproveName;
 
     /**
-     * @var integer 签署方的签署状态
-0：还没有发起
-1：流程中 没有开始处理
-2：待签署
-3：已签署
-4：已拒绝
-5：已过期
-6：已撤销
-7：还没有预发起
-8：待填写
-9：因为各种原因而终止
-10：填写完成
-15：已解除
-19：转他人处理
+     * @var integer <p>签署方的签署状态<br>0：还没有发起<br>1：流程中 没有开始处理<br>2：待签署<br>3：已签署<br>4：已拒绝<br>5：已过期<br>6：已撤销<br>7：还没有预发起<br>8：待填写<br>9：因为各种原因而终止<br>10：填写完成<br>15：已解除<br>19：转他人处理</p>
      */
     public $ApproveStatus;
 
     /**
-     * @var string 模板配置中的参与方ID,与控件绑定
+     * @var string <p>模板配置中的参与方ID,与控件绑定</p>
      * @deprecated
      */
     public $ReceiptId;
 
     /**
-     * @var string 客户自定义的用户ID
+     * @var string <p>客户自定义的用户ID</p>
      */
     public $CustomUserId;
 
     /**
-     * @var string 签署人手机号
+     * @var string <p>签署人手机号</p>
      */
     public $Mobile;
 
     /**
-     * @var integer 签署顺序，如果是有序签署，签署顺序从小到大
+     * @var integer <p>签署顺序，如果是有序签署，签署顺序从小到大</p>
      */
     public $SignOrder;
 
     /**
-     * @var integer 签署人签署时间，时间戳，单位秒
+     * @var integer <p>签署人签署时间，时间戳，单位秒</p>
      */
     public $ApproveTime;
 
     /**
-     * @var string 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
+     * @var string <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
      */
     public $ApproveType;
 
     /**
-     * @var string 签署方侧用户来源，如WEWORKAPP-企业微信等
+     * @var string <p>签署方侧用户来源，如WEWORKAPP-企业微信等</p>
      */
     public $ApproverSource;
 
     /**
-     * @var string 客户自定义签署方标识
+     * @var string <p>客户自定义签署方标识</p>
      */
     public $CustomApproverTag;
 
     /**
-     * @var string 签署方企业Id
+     * @var string <p>签署方企业Id</p>
      */
     public $OrganizationId;
 
     /**
-     * @var string 签署方企业名称
+     * @var string <p>签署方企业名称</p>
      */
     public $OrganizationName;
 
     /**
-     * @var string 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+     * @var string <p>签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。</p>
      */
     public $SignId;
 
     /**
-     * @var string 自定义签署人角色
+     * @var string <p>自定义签署人角色</p>
      */
     public $ApproverRoleName;
 
     /**
-     * @var string 模板配置中的参与方ID,与控件绑定
+     * @var string <p>模板配置中的参与方ID,与控件绑定</p>
      */
     public $RecipientId;
 
     /**
-     * @param string $ApproveMessage 签署时的相关信息
-     * @param string $ApproveName 签署方姓名
-     * @param integer $ApproveStatus 签署方的签署状态
-0：还没有发起
-1：流程中 没有开始处理
-2：待签署
-3：已签署
-4：已拒绝
-5：已过期
-6：已撤销
-7：还没有预发起
-8：待填写
-9：因为各种原因而终止
-10：填写完成
-15：已解除
-19：转他人处理
-     * @param string $ReceiptId 模板配置中的参与方ID,与控件绑定
-     * @param string $CustomUserId 客户自定义的用户ID
-     * @param string $Mobile 签署人手机号
-     * @param integer $SignOrder 签署顺序，如果是有序签署，签署顺序从小到大
-     * @param integer $ApproveTime 签署人签署时间，时间戳，单位秒
-     * @param string $ApproveType 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
-     * @param string $ApproverSource 签署方侧用户来源，如WEWORKAPP-企业微信等
-     * @param string $CustomApproverTag 客户自定义签署方标识
-     * @param string $OrganizationId 签署方企业Id
-     * @param string $OrganizationName 签署方企业名称
-     * @param string $SignId 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
-     * @param string $ApproverRoleName 自定义签署人角色
-     * @param string $RecipientId 模板配置中的参与方ID,与控件绑定
+     * @var array <p>签署方转交记录列表，标识该签署方是由谁转交而来，按转交时间由远到近进行排序</p>
+     */
+    public $ForwardRecords;
+
+    /**
+     * @param string $ApproveMessage <p>签署时的相关信息</p>
+     * @param string $ApproveName <p>签署方姓名</p>
+     * @param integer $ApproveStatus <p>签署方的签署状态<br>0：还没有发起<br>1：流程中 没有开始处理<br>2：待签署<br>3：已签署<br>4：已拒绝<br>5：已过期<br>6：已撤销<br>7：还没有预发起<br>8：待填写<br>9：因为各种原因而终止<br>10：填写完成<br>15：已解除<br>19：转他人处理</p>
+     * @param string $ReceiptId <p>模板配置中的参与方ID,与控件绑定</p>
+     * @param string $CustomUserId <p>客户自定义的用户ID</p>
+     * @param string $Mobile <p>签署人手机号</p>
+     * @param integer $SignOrder <p>签署顺序，如果是有序签署，签署顺序从小到大</p>
+     * @param integer $ApproveTime <p>签署人签署时间，时间戳，单位秒</p>
+     * @param string $ApproveType <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
+     * @param string $ApproverSource <p>签署方侧用户来源，如WEWORKAPP-企业微信等</p>
+     * @param string $CustomApproverTag <p>客户自定义签署方标识</p>
+     * @param string $OrganizationId <p>签署方企业Id</p>
+     * @param string $OrganizationName <p>签署方企业名称</p>
+     * @param string $SignId <p>签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。</p>
+     * @param string $ApproverRoleName <p>自定义签署人角色</p>
+     * @param string $RecipientId <p>模板配置中的参与方ID,与控件绑定</p>
+     * @param array $ForwardRecords <p>签署方转交记录列表，标识该签署方是由谁转交而来，按转交时间由远到近进行排序</p>
      */
     function __construct()
     {
@@ -281,6 +237,15 @@ class FlowApproverDetail extends AbstractModel
 
         if (array_key_exists("RecipientId",$param) and $param["RecipientId"] !== null) {
             $this->RecipientId = $param["RecipientId"];
+        }
+
+        if (array_key_exists("ForwardRecords",$param) and $param["ForwardRecords"] !== null) {
+            $this->ForwardRecords = [];
+            foreach ($param["ForwardRecords"] as $key => $value){
+                $obj = new ForwardRecord();
+                $obj->deserialize($value);
+                array_push($this->ForwardRecords, $obj);
+            }
         }
     }
 }

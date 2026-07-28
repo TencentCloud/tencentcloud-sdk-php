@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrivateDNSAccount请求参数结构体
  *
- * @method PrivateDNSAccount getAccount() 获取私有域解析账号，该账号不能与主账号一致且需要子账号授权
- * @method void setAccount(PrivateDNSAccount $Account) 设置私有域解析账号，该账号不能与主账号一致且需要子账号授权
+ * @method PrivateDNSAccount getAccount() 获取<p>被绑定的主账号，不能与本账号一致，且需要完成授权</p>
+ * @method void setAccount(PrivateDNSAccount $Account) 设置<p>被绑定的主账号，不能与本账号一致，且需要完成授权</p>
  */
 class CreatePrivateDNSAccountRequest extends AbstractModel
 {
     /**
-     * @var PrivateDNSAccount 私有域解析账号，该账号不能与主账号一致且需要子账号授权
+     * @var PrivateDNSAccount <p>被绑定的主账号，不能与本账号一致，且需要完成授权</p>
      */
     public $Account;
 
     /**
-     * @param PrivateDNSAccount $Account 私有域解析账号，该账号不能与主账号一致且需要子账号授权
+     * @param PrivateDNSAccount $Account <p>被绑定的主账号，不能与本账号一致，且需要完成授权</p>
      */
     function __construct()
     {

@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置<p>节点所属的地域</p>
  * @method string getNodeType() 获取<p>节点类型</p><p>枚举值：</p><ul><li>DB.AT5.32XLARGE512： 高IO型服务器：128核心512GB内存，8*7180GB本地NvME SSDB。</li><li>DB.AT5.64XLARGE1152： 高IO型服务器：256核心1152GB内存，12*7180GB本地NvME SSDB。</li><li>DB.AT5.128XLARGE2304： 高IO型服务器：512核心2304GB内存，24*7180GB本地NvME SSDB。</li><li>DB.AT5.16XLARGE256： 高IO型服务器：64核心256GB内存，4*7180GB本地NvME SSDB。</li><li>DB.AT5.8XLARGE128： 高IO型服务器：32核心128GB内存，2*7180GB本地NvME SSDB。</li></ul>
  * @method void setNodeType(string $NodeType) 设置<p>节点类型</p><p>枚举值：</p><ul><li>DB.AT5.32XLARGE512： 高IO型服务器：128核心512GB内存，8*7180GB本地NvME SSDB。</li><li>DB.AT5.64XLARGE1152： 高IO型服务器：256核心1152GB内存，12*7180GB本地NvME SSDB。</li><li>DB.AT5.128XLARGE2304： 高IO型服务器：512核心2304GB内存，24*7180GB本地NvME SSDB。</li><li>DB.AT5.16XLARGE256： 高IO型服务器：64核心256GB内存，4*7180GB本地NvME SSDB。</li><li>DB.AT5.8XLARGE128： 高IO型服务器：32核心128GB内存，2*7180GB本地NvME SSDB。</li></ul>
+ * @method string getNetworkMode() 获取<p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkMode(string $NetworkMode) 设置<p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEniIP() 获取<p>当选择网络模式为三层网络联通模式时，此处的IP地址则为用户可访问的地址。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEniIP(string $EniIP) 设置<p>当选择网络模式为三层网络联通模式时，此处的IP地址则为用户可访问的地址。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBCustomClusterNode extends AbstractModel
 {
@@ -73,6 +81,18 @@ class DBCustomClusterNode extends AbstractModel
     public $NodeType;
 
     /**
+     * @var string <p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkMode;
+
+    /**
+     * @var string <p>当选择网络模式为三层网络联通模式时，此处的IP地址则为用户可访问的地址。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EniIP;
+
+    /**
      * @param string $NodeId <p>节点ID</p>
      * @param string $NodeName <p>节点名称</p>
      * @param string $LanIP <p>节点内网IP地址</p>
@@ -80,6 +100,10 @@ class DBCustomClusterNode extends AbstractModel
      * @param string $Status <p>节点在集群中的实例状态</p>
      * @param string $Zone <p>节点所属的地域</p>
      * @param string $NodeType <p>节点类型</p><p>枚举值：</p><ul><li>DB.AT5.32XLARGE512： 高IO型服务器：128核心512GB内存，8*7180GB本地NvME SSDB。</li><li>DB.AT5.64XLARGE1152： 高IO型服务器：256核心1152GB内存，12*7180GB本地NvME SSDB。</li><li>DB.AT5.128XLARGE2304： 高IO型服务器：512核心2304GB内存，24*7180GB本地NvME SSDB。</li><li>DB.AT5.16XLARGE256： 高IO型服务器：64核心256GB内存，4*7180GB本地NvME SSDB。</li><li>DB.AT5.8XLARGE128： 高IO型服务器：32核心128GB内存，2*7180GB本地NvME SSDB。</li></ul>
+     * @param string $NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EniIP <p>当选择网络模式为三层网络联通模式时，此处的IP地址则为用户可访问的地址。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +144,14 @@ class DBCustomClusterNode extends AbstractModel
 
         if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
             $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NetworkMode",$param) and $param["NetworkMode"] !== null) {
+            $this->NetworkMode = $param["NetworkMode"];
+        }
+
+        if (array_key_exists("EniIP",$param) and $param["EniIP"] !== null) {
+            $this->EniIP = $param["EniIP"];
         }
     }
 }

@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 登录安全设置
  *
- * @method integer getTimeOut() 获取登录会话超时，10分钟，20分钟，30分钟，默认20分钟
- * @method void setTimeOut(integer $TimeOut) 设置登录会话超时，10分钟，20分钟，30分钟，默认20分钟
- * @method integer getLockThreshold() 获取连续密码错误次数，超过锁定账号，3-5
- * @method void setLockThreshold(integer $LockThreshold) 设置连续密码错误次数，超过锁定账号，3-5
- * @method integer getLockTime() 获取账号锁定时长，10分钟，20分钟，30分钟
- * @method void setLockTime(integer $LockTime) 设置账号锁定时长，10分钟，20分钟，30分钟
- * @method integer getInactiveUserLock() 获取用户多少天不活跃，账号自动锁定
- * @method void setInactiveUserLock(integer $InactiveUserLock) 设置用户多少天不活跃，账号自动锁定
+ * @method integer getTimeOut() 获取<p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
+ * @method void setTimeOut(integer $TimeOut) 设置<p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
+ * @method integer getLockThreshold() 获取<p>连续密码错误次数，超过锁定账号，3-5</p>
+ * @method void setLockThreshold(integer $LockThreshold) 设置<p>连续密码错误次数，超过锁定账号，3-5</p>
+ * @method integer getLockTime() 获取<p>账号锁定时长，10分钟，20分钟，30分钟</p>
+ * @method void setLockTime(integer $LockTime) 设置<p>账号锁定时长，10分钟，20分钟，30分钟</p>
+ * @method integer getInactiveUserLock() 获取<p>用户多少天不活跃，账号自动锁定</p>
+ * @method void setInactiveUserLock(integer $InactiveUserLock) 设置<p>用户多少天不活跃，账号自动锁定</p>
+ * @method integer getEnableSingleLogin() 获取<p>运维账号单点登录开关：0-关闭，1-开启</p>
+ * @method void setEnableSingleLogin(integer $EnableSingleLogin) 设置<p>运维账号单点登录开关：0-关闭，1-开启</p>
  */
 class LoginSetting extends AbstractModel
 {
     /**
-     * @var integer 登录会话超时，10分钟，20分钟，30分钟，默认20分钟
+     * @var integer <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
      */
     public $TimeOut;
 
     /**
-     * @var integer 连续密码错误次数，超过锁定账号，3-5
+     * @var integer <p>连续密码错误次数，超过锁定账号，3-5</p>
      */
     public $LockThreshold;
 
     /**
-     * @var integer 账号锁定时长，10分钟，20分钟，30分钟
+     * @var integer <p>账号锁定时长，10分钟，20分钟，30分钟</p>
      */
     public $LockTime;
 
     /**
-     * @var integer 用户多少天不活跃，账号自动锁定
+     * @var integer <p>用户多少天不活跃，账号自动锁定</p>
      */
     public $InactiveUserLock;
 
     /**
-     * @param integer $TimeOut 登录会话超时，10分钟，20分钟，30分钟，默认20分钟
-     * @param integer $LockThreshold 连续密码错误次数，超过锁定账号，3-5
-     * @param integer $LockTime 账号锁定时长，10分钟，20分钟，30分钟
-     * @param integer $InactiveUserLock 用户多少天不活跃，账号自动锁定
+     * @var integer <p>运维账号单点登录开关：0-关闭，1-开启</p>
+     */
+    public $EnableSingleLogin;
+
+    /**
+     * @param integer $TimeOut <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
+     * @param integer $LockThreshold <p>连续密码错误次数，超过锁定账号，3-5</p>
+     * @param integer $LockTime <p>账号锁定时长，10分钟，20分钟，30分钟</p>
+     * @param integer $InactiveUserLock <p>用户多少天不活跃，账号自动锁定</p>
+     * @param integer $EnableSingleLogin <p>运维账号单点登录开关：0-关闭，1-开启</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class LoginSetting extends AbstractModel
 
         if (array_key_exists("InactiveUserLock",$param) and $param["InactiveUserLock"] !== null) {
             $this->InactiveUserLock = $param["InactiveUserLock"];
+        }
+
+        if (array_key_exists("EnableSingleLogin",$param) and $param["EnableSingleLogin"] !== null) {
+            $this->EnableSingleLogin = $param["EnableSingleLogin"];
         }
     }
 }

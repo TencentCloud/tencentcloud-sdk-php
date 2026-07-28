@@ -56,9 +56,11 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DescribeCaCertificatesResponse DescribeCaCertificates(Models\DescribeCaCertificatesRequest $req) 查询集群下的ca证书信息
  * @method Models\DescribeClientListResponse DescribeClientList(Models\DescribeClientListRequest $req) 查询 MQTT 客户端详情
  * @method Models\DescribeDeviceCertificateResponse DescribeDeviceCertificate(Models\DescribeDeviceCertificateRequest $req) 查询设备证书详情接口
+ * @method Models\DescribeDeviceCertificateBackupHistoryResponse DescribeDeviceCertificateBackupHistory(Models\DescribeDeviceCertificateBackupHistoryRequest $req) 跨集群灾备场景下查询设备证书同步记录
  * @method Models\DescribeDeviceCertificatesResponse DescribeDeviceCertificates(Models\DescribeDeviceCertificatesRequest $req) 分页查询设备证书
  * @method Models\DescribeDeviceIdentitiesResponse DescribeDeviceIdentities(Models\DescribeDeviceIdentitiesRequest $req) 查询集群下设备标识列表
  * @method Models\DescribeDeviceIdentityResponse DescribeDeviceIdentity(Models\DescribeDeviceIdentityRequest $req) 查询设备一机一密标识
+ * @method Models\DescribeDeviceIdentityBackupHistoryResponse DescribeDeviceIdentityBackupHistory(Models\DescribeDeviceIdentityBackupHistoryRequest $req) 跨集群容灾场景下查询设备标识同步记录
  * @method Models\DescribeInsPublicEndpointsResponse DescribeInsPublicEndpoints(Models\DescribeInsPublicEndpointsRequest $req) 查询MQTT实例公网接入点
  * @method Models\DescribeInsVPCEndpointsResponse DescribeInsVPCEndpoints(Models\DescribeInsVPCEndpointsRequest $req) 查询MQTT实例公网接入点
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
@@ -86,6 +88,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DescribeUserListResponse DescribeUserList(Models\DescribeUserListRequest $req) 查询用户列表，Filter参数使用说明如下：
 
 1. Username，用户名称模糊搜索
+ * @method Models\DescribeWillMessageResponse DescribeWillMessage(Models\DescribeWillMessageRequest $req) 遗嘱消息查询
  * @method Models\KickOutClientResponse KickOutClient(Models\KickOutClientRequest $req) 踢出客户端
  * @method Models\ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(Models\ModifyAuthorizationPolicyRequest $req) 修改策略规则，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)
  * @method Models\ModifyDeviceIdentityResponse ModifyDeviceIdentity(Models\ModifyDeviceIdentityRequest $req) 修改一机一密设备签名

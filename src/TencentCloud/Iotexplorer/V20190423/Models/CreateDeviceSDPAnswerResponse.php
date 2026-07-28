@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDeviceSDPAnswer返回参数结构体
  *
- * @method string getSDPAnswer() 获取SDP应答
- * @method void setSDPAnswer(string $SDPAnswer) 设置SDP应答
+ * @method string getSDPAnswer() 获取<p>SDP应答</p>
+ * @method void setSDPAnswer(string $SDPAnswer) 设置<p>SDP应答</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateDeviceSDPAnswerResponse extends AbstractModel
 {
     /**
-     * @var string SDP应答
+     * @var string <p>SDP应答</p>
      */
     public $SDPAnswer;
 
@@ -38,7 +38,7 @@ class CreateDeviceSDPAnswerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SDPAnswer SDP应答
+     * @param string $SDPAnswer <p>SDP应答</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

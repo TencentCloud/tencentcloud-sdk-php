@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 线性组装频道配置。
  *
- * @method integer getWindows() 获取单位秒。
- * @method void setWindows(integer $Windows) 设置单位秒。
- * @method string getAdMarkupType() 获取打到output广告标签的格式，可选Date Range和Enhanced SCTE-35。
- * @method void setAdMarkupType(string $AdMarkupType) 设置打到output广告标签的格式，可选Date Range和Enhanced SCTE-35。
+ * @method integer getWindows() 获取<p>单位秒。</p>
+ * @method void setWindows(integer $Windows) 设置<p>单位秒。</p>
+ * @method string getAdMarkupType() 获取<p>打到output广告标签的格式，可选Date Range、Enhanced SCTE-35和Standard SCTE-35。</p>
+ * @method void setAdMarkupType(string $AdMarkupType) 设置<p>打到output广告标签的格式，可选Date Range、Enhanced SCTE-35和Standard SCTE-35。</p>
  */
 class ManifestInfo extends AbstractModel
 {
     /**
-     * @var integer 单位秒。
+     * @var integer <p>单位秒。</p>
      */
     public $Windows;
 
     /**
-     * @var string 打到output广告标签的格式，可选Date Range和Enhanced SCTE-35。
+     * @var string <p>打到output广告标签的格式，可选Date Range、Enhanced SCTE-35和Standard SCTE-35。</p>
      */
     public $AdMarkupType;
 
     /**
-     * @param integer $Windows 单位秒。
-     * @param string $AdMarkupType 打到output广告标签的格式，可选Date Range和Enhanced SCTE-35。
+     * @param integer $Windows <p>单位秒。</p>
+     * @param string $AdMarkupType <p>打到output广告标签的格式，可选Date Range、Enhanced SCTE-35和Standard SCTE-35。</p>
      */
     function __construct()
     {

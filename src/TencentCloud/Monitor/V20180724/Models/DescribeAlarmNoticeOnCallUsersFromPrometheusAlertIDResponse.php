@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteBasicModeration返回参数结构体
+ * DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID返回参数结构体
  *
- * @method string getTaskId() 获取审核任务的唯一Id。
- * @method void setTaskId(string $TaskId) 设置审核任务的唯一Id。
+ * @method array getNotices() 获取<p>告警通知模板列表</p>
+ * @method void setNotices(array $Notices) 设置<p>告警通知模板列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteBasicModerationResponse extends AbstractModel
+class DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse extends AbstractModel
 {
     /**
-     * @var string 审核任务的唯一Id。
+     * @var array <p>告警通知模板列表</p>
      */
-    public $TaskId;
+    public $Notices;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DeleteBasicModerationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 审核任务的唯一Id。
+     * @param array $Notices <p>告警通知模板列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,13 @@ class DeleteBasicModerationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Notices",$param) and $param["Notices"] !== null) {
+            $this->Notices = [];
+            foreach ($param["Notices"] as $key => $value){
+                $obj = new NoticeOnCallUsersInfo();
+                $obj->deserialize($value);
+                array_push($this->Notices, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

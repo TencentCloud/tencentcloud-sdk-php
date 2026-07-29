@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQpsTotalLimit(integer $QpsTotalLimit) 设置<p>总的QPS值</p>
  * @method array getRegionsQps() 获取<p>地域下的QPS</p>
  * @method void setRegionsQps(array $RegionsQps) 设置<p>地域下的QPS</p>
+ * @method integer getResourceZone() 获取<p>资源的地域信息</p>
+ * @method void setResourceZone(integer $ResourceZone) 设置<p>资源的地域信息</p>
+ * @method integer getResourceRegion() 获取<p>资源的地域可用区信息</p>
+ * @method void setResourceRegion(integer $ResourceRegion) 设置<p>资源的地域可用区信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -173,6 +177,16 @@ class GetServiceStatusResponse extends AbstractModel
     public $RegionsQps;
 
     /**
+     * @var integer <p>资源的地域信息</p>
+     */
+    public $ResourceZone;
+
+    /**
+     * @var integer <p>资源的地域可用区信息</p>
+     */
+    public $ResourceRegion;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -199,6 +213,8 @@ class GetServiceStatusResponse extends AbstractModel
      * @param integer $QpsLimit <p>地域下的QPS</p>
      * @param integer $QpsTotalLimit <p>总的QPS值</p>
      * @param array $RegionsQps <p>地域下的QPS</p>
+     * @param integer $ResourceZone <p>资源的地域信息</p>
+     * @param integer $ResourceRegion <p>资源的地域可用区信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -311,6 +327,14 @@ class GetServiceStatusResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RegionsQps, $obj);
             }
+        }
+
+        if (array_key_exists("ResourceZone",$param) and $param["ResourceZone"] !== null) {
+            $this->ResourceZone = $param["ResourceZone"];
+        }
+
+        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
+            $this->ResourceRegion = $param["ResourceRegion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

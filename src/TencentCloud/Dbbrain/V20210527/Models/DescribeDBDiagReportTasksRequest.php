@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBDiagReportTasks请求参数结构体
  *
- * @method string getStartTime() 获取第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
- * @method void setStartTime(string $StartTime) 设置第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
- * @method string getEndTime() 获取最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
- * @method void setEndTime(string $EndTime) 设置最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
- * @method array getInstanceIds() 获取实例ID数组，用于筛选指定实例的任务列表。
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID数组，用于筛选指定实例的任务列表。
- * @method array getSources() 获取任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
- * @method void setSources(array $Sources) 设置任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
- * @method string getHealthLevels() 获取报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
- * @method void setHealthLevels(string $HealthLevels) 设置报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
- * @method string getTaskStatuses() 获取任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。
- * @method void setTaskStatuses(string $TaskStatuses) 设置任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。
- * @method integer getOffset() 获取偏移量，默认0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认0。
- * @method integer getLimit() 获取返回数量，默认20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认20，最大值为100。
- * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+ * @method string getStartTime() 获取<p>第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
+ * @method string getEndTime() 获取<p>最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
+ * @method array getInstanceIds() 获取<p>实例ID数组，用于筛选指定实例的任务列表。。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>实例ID数组，用于筛选指定实例的任务列表。。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+ * @method array getSources() 获取<p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 计划任务；&quot;MANUAL&quot; - 手动触发。</p>
+ * @method void setSources(array $Sources) 设置<p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 计划任务；&quot;MANUAL&quot; - 手动触发。</p>
+ * @method string getHealthLevels() 获取<p>报告的健康等级，支持的取值包括：&quot;HEALTH&quot; - 健康；&quot;SUB_HEALTH&quot; - 亚健康；&quot;RISK&quot; - 危险；&quot;HIGH_RISK&quot; - 高危。</p>
+ * @method void setHealthLevels(string $HealthLevels) 设置<p>报告的健康等级，支持的取值包括：&quot;HEALTH&quot; - 健康；&quot;SUB_HEALTH&quot; - 亚健康；&quot;RISK&quot; - 危险；&quot;HIGH_RISK&quot; - 高危。</p>
+ * @method string getTaskStatuses() 获取<p>任务的状态，支持的取值包括：&quot;created&quot; - 新建；&quot;chosen&quot; - 待执行； &quot;running&quot; - 执行中；&quot;failed&quot; - 失败；&quot;finished&quot; - 已完成。</p>
+ * @method void setTaskStatuses(string $TaskStatuses) 设置<p>任务的状态，支持的取值包括：&quot;created&quot; - 新建；&quot;chosen&quot; - 待执行； &quot;running&quot; - 执行中；&quot;failed&quot; - 失败；&quot;finished&quot; - 已完成。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认0。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认20，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认20，最大值为100。</p>
+ * @method string getProduct() 获取<p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+ * @method void setProduct(string $Product) 设置<p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+ * @method array getTagFilters() 获取<p>根据任务所属实例的标签信息进行过滤</p>
+ * @method void setTagFilters(array $TagFilters) 设置<p>根据任务所属实例的标签信息进行过滤</p>
  */
 class DescribeDBDiagReportTasksRequest extends AbstractModel
 {
     /**
-     * @var string 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * @var string <p>第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * @var string <p>最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
      */
     public $EndTime;
 
     /**
-     * @var array 实例ID数组，用于筛选指定实例的任务列表。
+     * @var array <p>实例ID数组，用于筛选指定实例的任务列表。。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public $InstanceIds;
 
     /**
-     * @var array 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
+     * @var array <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 计划任务；&quot;MANUAL&quot; - 手动触发。</p>
      */
     public $Sources;
 
     /**
-     * @var string 报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
+     * @var string <p>报告的健康等级，支持的取值包括：&quot;HEALTH&quot; - 健康；&quot;SUB_HEALTH&quot; - 亚健康；&quot;RISK&quot; - 危险；&quot;HIGH_RISK&quot; - 高危。</p>
      */
     public $HealthLevels;
 
     /**
-     * @var string 任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。
+     * @var string <p>任务的状态，支持的取值包括：&quot;created&quot; - 新建；&quot;chosen&quot; - 待执行； &quot;running&quot; - 执行中；&quot;failed&quot; - 失败；&quot;finished&quot; - 已完成。</p>
      */
     public $TaskStatuses;
 
     /**
-     * @var integer 偏移量，默认0。
+     * @var integer <p>偏移量，默认0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认20，最大值为100。
+     * @var integer <p>返回数量，默认20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * @var string <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
      */
     public $Product;
 
     /**
-     * @param string $StartTime 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
-     * @param string $EndTime 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
-     * @param array $InstanceIds 实例ID数组，用于筛选指定实例的任务列表。
-     * @param array $Sources 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
-     * @param string $HealthLevels 报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
-     * @param string $TaskStatuses 任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。
-     * @param integer $Offset 偏移量，默认0。
-     * @param integer $Limit 返回数量，默认20，最大值为100。
-     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * @var array <p>根据任务所属实例的标签信息进行过滤</p>
+     */
+    public $TagFilters;
+
+    /**
+     * @param string $StartTime <p>第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
+     * @param string $EndTime <p>最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
+     * @param array $InstanceIds <p>实例ID数组，用于筛选指定实例的任务列表。。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param array $Sources <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 计划任务；&quot;MANUAL&quot; - 手动触发。</p>
+     * @param string $HealthLevels <p>报告的健康等级，支持的取值包括：&quot;HEALTH&quot; - 健康；&quot;SUB_HEALTH&quot; - 亚健康；&quot;RISK&quot; - 危险；&quot;HIGH_RISK&quot; - 高危。</p>
+     * @param string $TaskStatuses <p>任务的状态，支持的取值包括：&quot;created&quot; - 新建；&quot;chosen&quot; - 待执行； &quot;running&quot; - 执行中；&quot;failed&quot; - 失败；&quot;finished&quot; - 已完成。</p>
+     * @param integer $Offset <p>偏移量，默认0。</p>
+     * @param integer $Limit <p>返回数量，默认20，最大值为100。</p>
+     * @param string $Product <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+     * @param array $TagFilters <p>根据任务所属实例的标签信息进行过滤</p>
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class DescribeDBDiagReportTasksRequest extends AbstractModel
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilterGroup();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

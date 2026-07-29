@@ -122,6 +122,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskAccessPermission(integer $DiskAccessPermission) 设置<p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
  * @method string getRemarkName() 获取<p>终端备注名</p>
  * @method void setRemarkName(string $RemarkName) 设置<p>终端备注名</p>
+ * @method string getBiosUuid() 获取<p>BiosUUID（启动盘标识符）</p>
+ * @method void setBiosUuid(string $BiosUuid) 设置<p>BiosUUID（启动盘标识符）</p>
  */
 class DeviceDetail extends AbstractModel
 {
@@ -381,6 +383,11 @@ class DeviceDetail extends AbstractModel
     public $RemarkName;
 
     /**
+     * @var string <p>BiosUUID（启动盘标识符）</p>
+     */
+    public $BiosUuid;
+
+    /**
      * @param integer $Id <p>设备ID</p>
      * @param string $Mid <p>设备唯一标识码，在ioa中每个设备有唯一标识码</p>
      * @param string $Name <p>终端名（设备名）</p>
@@ -432,6 +439,7 @@ class DeviceDetail extends AbstractModel
      * @param integer $ScreenRecordingPermission <p>是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启</p>
      * @param integer $DiskAccessPermission <p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
      * @param string $RemarkName <p>终端备注名</p>
+     * @param string $BiosUuid <p>BiosUUID（启动盘标识符）</p>
      */
     function __construct()
     {
@@ -648,6 +656,10 @@ class DeviceDetail extends AbstractModel
 
         if (array_key_exists("RemarkName",$param) and $param["RemarkName"] !== null) {
             $this->RemarkName = $param["RemarkName"];
+        }
+
+        if (array_key_exists("BiosUuid",$param) and $param["BiosUuid"] !== null) {
+            $this->BiosUuid = $param["BiosUuid"];
         }
     }
 }

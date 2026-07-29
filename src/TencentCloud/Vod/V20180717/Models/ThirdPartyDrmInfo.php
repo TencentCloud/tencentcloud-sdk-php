@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 第三方Drm 加密信息。
  *
- * @method array getDrmTypes() 获取<p>加密类型：</p><ul><li>FairPlay：只能用于HLS，切片格式只能是mp4</li><li>Widevine：可以用于HLS和DASH，切片格式只能是mp4</li><li>PlayReady：可以用于HLS和DASH，切片格式只能是mp4</li><li>Widevine+FairPlay，PlayReady+FairPlay，Widevine PlayReady FairPlay组合: 只能用于HLS，切片格式只能是mp4</li><li>Widevine PlayReady组合: 可用于HLS、MPEG-DASH，切片格式只能是mp4</li></ul>
- * @method void setDrmTypes(array $DrmTypes) 设置<p>加密类型：</p><ul><li>FairPlay：只能用于HLS，切片格式只能是mp4</li><li>Widevine：可以用于HLS和DASH，切片格式只能是mp4</li><li>PlayReady：可以用于HLS和DASH，切片格式只能是mp4</li><li>Widevine+FairPlay，PlayReady+FairPlay，Widevine PlayReady FairPlay组合: 只能用于HLS，切片格式只能是mp4</li><li>Widevine PlayReady组合: 可用于HLS、MPEG-DASH，切片格式只能是mp4</li></ul>
+ * @method array getDrmTypes() 获取<p>加密类型：</p><ul><li>FairPlay：只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</li><li>Widevine：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li><li>PlayReady：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li><li>Widevine+FairPlay，PlayReady+FairPlay，Widevine PlayReady FairPlay组合: 只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</li><li>Widevine PlayReady组合: 可用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li></ul>
+ * @method void setDrmTypes(array $DrmTypes) 设置<p>加密类型：</p><ul><li>FairPlay：只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</li><li>Widevine：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li><li>PlayReady：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li><li>Widevine+FairPlay，PlayReady+FairPlay，Widevine PlayReady FairPlay组合: 只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</li><li>Widevine PlayReady组合: 可用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li></ul>
  * @method SPEKEDrm getSPEKEDrm() 获取<p>第三方DRM厂商信息。</p>
  * @method void setSPEKEDrm(SPEKEDrm $SPEKEDrm) 设置<p>第三方DRM厂商信息。</p>
  */
 class ThirdPartyDrmInfo extends AbstractModel
 {
     /**
-     * @var array <p>加密类型：</p><ul><li>FairPlay：只能用于HLS，切片格式只能是mp4</li><li>Widevine：可以用于HLS和DASH，切片格式只能是mp4</li><li>PlayReady：可以用于HLS和DASH，切片格式只能是mp4</li><li>Widevine+FairPlay，PlayReady+FairPlay，Widevine PlayReady FairPlay组合: 只能用于HLS，切片格式只能是mp4</li><li>Widevine PlayReady组合: 可用于HLS、MPEG-DASH，切片格式只能是mp4</li></ul>
+     * @var array <p>加密类型：</p><ul><li>FairPlay：只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</li><li>Widevine：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li><li>PlayReady：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li><li>Widevine+FairPlay，PlayReady+FairPlay，Widevine PlayReady FairPlay组合: 只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</li><li>Widevine PlayReady组合: 可用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li></ul>
      */
     public $DrmTypes;
 
@@ -38,7 +38,7 @@ class ThirdPartyDrmInfo extends AbstractModel
     public $SPEKEDrm;
 
     /**
-     * @param array $DrmTypes <p>加密类型：</p><ul><li>FairPlay：只能用于HLS，切片格式只能是mp4</li><li>Widevine：可以用于HLS和DASH，切片格式只能是mp4</li><li>PlayReady：可以用于HLS和DASH，切片格式只能是mp4</li><li>Widevine+FairPlay，PlayReady+FairPlay，Widevine PlayReady FairPlay组合: 只能用于HLS，切片格式只能是mp4</li><li>Widevine PlayReady组合: 可用于HLS、MPEG-DASH，切片格式只能是mp4</li></ul>
+     * @param array $DrmTypes <p>加密类型：</p><ul><li>FairPlay：只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</li><li>Widevine：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li><li>PlayReady：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li><li>Widevine+FairPlay，PlayReady+FairPlay，Widevine PlayReady FairPlay组合: 只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</li><li>Widevine PlayReady组合: 可用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange</li></ul>
      * @param SPEKEDrm $SPEKEDrm <p>第三方DRM厂商信息。</p>
      */
     function __construct()

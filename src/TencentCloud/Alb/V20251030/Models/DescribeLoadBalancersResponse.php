@@ -20,48 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoadBalancers返回参数结构体
  *
- * @method array getLoadBalancers() 获取应用型负载均衡实例列表。
- * @method void setLoadBalancers(array $LoadBalancers) 设置应用型负载均衡实例列表。
- * @method integer getMaxResults() 获取分批次查询时每次显示的条目数。
-
-
- * @method void setMaxResults(integer $MaxResults) 设置分批次查询时每次显示的条目数。
-
-
- * @method string getNextToken() 获取是否拥有下一次查询的令牌（Token）。取值：
-- 如果**NextToken**为空表示没有下一次查询。
-- 如果**NextToken**有返回值，该取值表示下一次查询开始的令牌。
- * @method void setNextToken(string $NextToken) 设置是否拥有下一次查询的令牌（Token）。取值：
-- 如果**NextToken**为空表示没有下一次查询。
-- 如果**NextToken**有返回值，该取值表示下一次查询开始的令牌。
- * @method integer getTotalCount() 获取列表条目数。
- * @method void setTotalCount(integer $TotalCount) 设置列表条目数。
+ * @method array getLoadBalancers() 获取<p>应用型负载均衡实例列表。</p>
+ * @method void setLoadBalancers(array $LoadBalancers) 设置<p>应用型负载均衡实例列表。</p>
+ * @method integer getMaxResults() 获取<p>分批次查询时每次显示的条目数。</p>
+ * @method void setMaxResults(integer $MaxResults) 设置<p>分批次查询时每次显示的条目数。</p>
+ * @method string getNextToken() 获取<p>是否拥有下一次查询的令牌（Token）。取值：</p><ul><li>如果<strong>NextToken</strong>为空表示没有下一次查询。</li><li>如果<strong>NextToken</strong>有返回值，该取值表示下一次查询开始的令牌。</li></ul>
+ * @method void setNextToken(string $NextToken) 设置<p>是否拥有下一次查询的令牌（Token）。取值：</p><ul><li>如果<strong>NextToken</strong>为空表示没有下一次查询。</li><li>如果<strong>NextToken</strong>有返回值，该取值表示下一次查询开始的令牌。</li></ul>
+ * @method integer getTotalCount() 获取<p>列表条目数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>列表条目数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLoadBalancersResponse extends AbstractModel
 {
     /**
-     * @var array 应用型负载均衡实例列表。
+     * @var array <p>应用型负载均衡实例列表。</p>
      */
     public $LoadBalancers;
 
     /**
-     * @var integer 分批次查询时每次显示的条目数。
-
-
+     * @var integer <p>分批次查询时每次显示的条目数。</p>
      */
     public $MaxResults;
 
     /**
-     * @var string 是否拥有下一次查询的令牌（Token）。取值：
-- 如果**NextToken**为空表示没有下一次查询。
-- 如果**NextToken**有返回值，该取值表示下一次查询开始的令牌。
+     * @var string <p>是否拥有下一次查询的令牌（Token）。取值：</p><ul><li>如果<strong>NextToken</strong>为空表示没有下一次查询。</li><li>如果<strong>NextToken</strong>有返回值，该取值表示下一次查询开始的令牌。</li></ul>
      */
     public $NextToken;
 
     /**
-     * @var integer 列表条目数。
+     * @var integer <p>列表条目数。</p>
      */
     public $TotalCount;
 
@@ -71,14 +59,10 @@ class DescribeLoadBalancersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $LoadBalancers 应用型负载均衡实例列表。
-     * @param integer $MaxResults 分批次查询时每次显示的条目数。
-
-
-     * @param string $NextToken 是否拥有下一次查询的令牌（Token）。取值：
-- 如果**NextToken**为空表示没有下一次查询。
-- 如果**NextToken**有返回值，该取值表示下一次查询开始的令牌。
-     * @param integer $TotalCount 列表条目数。
+     * @param array $LoadBalancers <p>应用型负载均衡实例列表。</p>
+     * @param integer $MaxResults <p>分批次查询时每次显示的条目数。</p>
+     * @param string $NextToken <p>是否拥有下一次查询的令牌（Token）。取值：</p><ul><li>如果<strong>NextToken</strong>为空表示没有下一次查询。</li><li>如果<strong>NextToken</strong>有返回值，该取值表示下一次查询开始的令牌。</li></ul>
+     * @param integer $TotalCount <p>列表条目数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

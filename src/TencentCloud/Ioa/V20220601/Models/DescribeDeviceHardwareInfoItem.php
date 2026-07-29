@@ -20,146 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 终端硬件信息列表Item数据
  *
- * @method integer getId() 获取设备ID
- * @method void setId(integer $Id) 设置设备ID
- * @method string getMid() 获取设备唯一标识符
- * @method void setMid(string $Mid) 设置设备唯一标识符
- * @method integer getOsType() 获取OS平台 0 Windows 1 Linux 2 macOS 4 Android 5 iOS
- * @method void setOsType(integer $OsType) 设置OS平台 0 Windows 1 Linux 2 macOS 4 Android 5 iOS
- * @method string getName() 获取终端名
- * @method void setName(string $Name) 设置终端名
- * @method string getUserName() 获取终端用户名
- * @method void setUserName(string $UserName) 设置终端用户名
- * @method integer getStatus() 获取授权状态（ 4未授权 5已授权）
- * @method void setStatus(integer $Status) 设置授权状态（ 4未授权 5已授权）
- * @method integer getGroupId() 获取设备所属分组ID
- * @method void setGroupId(integer $GroupId) 设置设备所属分组ID
- * @method string getGroupName() 获取设备所属分组名
- * @method void setGroupName(string $GroupName) 设置设备所属分组名
- * @method string getGroupNamePath() 获取设备所属分组路径
- * @method void setGroupNamePath(string $GroupNamePath) 设置设备所属分组路径
- * @method string getAccountName() 获取最近登录账户的姓名
- * @method void setAccountName(string $AccountName) 设置最近登录账户的姓名
- * @method string getIp() 获取出口IP
- * @method void setIp(string $Ip) 设置出口IP
- * @method string getMacAddr() 获取MAC地址
- * @method void setMacAddr(string $MacAddr) 设置MAC地址
- * @method string getCpu() 获取CPU品牌型号
- * @method void setCpu(string $Cpu) 设置CPU品牌型号
- * @method string getMemory() 获取内存信息
- * @method void setMemory(string $Memory) 设置内存信息
- * @method string getHardDiskSize() 获取硬盘信息
- * @method void setHardDiskSize(string $HardDiskSize) 设置硬盘信息
- * @method string getMonitor() 获取显示器品牌型号
- * @method void setMonitor(string $Monitor) 设置显示器品牌型号
- * @method string getRemarkName() 获取终端备注名
- * @method void setRemarkName(string $RemarkName) 设置终端备注名
+ * @method integer getId() 获取<p>设备ID</p>
+ * @method void setId(integer $Id) 设置<p>设备ID</p>
+ * @method string getMid() 获取<p>设备唯一标识符</p>
+ * @method void setMid(string $Mid) 设置<p>设备唯一标识符</p>
+ * @method integer getOsType() 获取<p>OS平台 0 Windows 1 Linux 2 macOS 4 Android 5 iOS</p>
+ * @method void setOsType(integer $OsType) 设置<p>OS平台 0 Windows 1 Linux 2 macOS 4 Android 5 iOS</p>
+ * @method string getName() 获取<p>终端名</p>
+ * @method void setName(string $Name) 设置<p>终端名</p>
+ * @method string getUserName() 获取<p>终端用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>终端用户名</p>
+ * @method integer getStatus() 获取<p>授权状态（ 4未授权 5已授权）</p>
+ * @method void setStatus(integer $Status) 设置<p>授权状态（ 4未授权 5已授权）</p>
+ * @method integer getGroupId() 获取<p>设备所属分组ID</p>
+ * @method void setGroupId(integer $GroupId) 设置<p>设备所属分组ID</p>
+ * @method string getGroupName() 获取<p>设备所属分组名</p>
+ * @method void setGroupName(string $GroupName) 设置<p>设备所属分组名</p>
+ * @method string getGroupNamePath() 获取<p>设备所属分组路径</p>
+ * @method void setGroupNamePath(string $GroupNamePath) 设置<p>设备所属分组路径</p>
+ * @method string getAccountName() 获取<p>最近登录账户的姓名</p>
+ * @method void setAccountName(string $AccountName) 设置<p>最近登录账户的姓名</p>
+ * @method string getIp() 获取<p>出口IP</p>
+ * @method void setIp(string $Ip) 设置<p>出口IP</p>
+ * @method string getMacAddr() 获取<p>MAC地址</p>
+ * @method void setMacAddr(string $MacAddr) 设置<p>MAC地址</p>
+ * @method string getCpu() 获取<p>CPU品牌型号</p>
+ * @method void setCpu(string $Cpu) 设置<p>CPU品牌型号</p>
+ * @method string getMemory() 获取<p>内存信息</p>
+ * @method void setMemory(string $Memory) 设置<p>内存信息</p>
+ * @method string getHardDiskSize() 获取<p>硬盘信息</p>
+ * @method void setHardDiskSize(string $HardDiskSize) 设置<p>硬盘信息</p>
+ * @method string getMonitor() 获取<p>显示器品牌型号</p>
+ * @method void setMonitor(string $Monitor) 设置<p>显示器品牌型号</p>
+ * @method string getRemarkName() 获取<p>终端备注名</p>
+ * @method void setRemarkName(string $RemarkName) 设置<p>终端备注名</p>
+ * @method string getBiosUuid() 获取<p>BiosUUID（启动盘标识符）</p>
+ * @method void setBiosUuid(string $BiosUuid) 设置<p>BiosUUID（启动盘标识符）</p>
  */
 class DescribeDeviceHardwareInfoItem extends AbstractModel
 {
     /**
-     * @var integer 设备ID
+     * @var integer <p>设备ID</p>
      */
     public $Id;
 
     /**
-     * @var string 设备唯一标识符
+     * @var string <p>设备唯一标识符</p>
      */
     public $Mid;
 
     /**
-     * @var integer OS平台 0 Windows 1 Linux 2 macOS 4 Android 5 iOS
+     * @var integer <p>OS平台 0 Windows 1 Linux 2 macOS 4 Android 5 iOS</p>
      */
     public $OsType;
 
     /**
-     * @var string 终端名
+     * @var string <p>终端名</p>
      */
     public $Name;
 
     /**
-     * @var string 终端用户名
+     * @var string <p>终端用户名</p>
      */
     public $UserName;
 
     /**
-     * @var integer 授权状态（ 4未授权 5已授权）
+     * @var integer <p>授权状态（ 4未授权 5已授权）</p>
      */
     public $Status;
 
     /**
-     * @var integer 设备所属分组ID
+     * @var integer <p>设备所属分组ID</p>
      */
     public $GroupId;
 
     /**
-     * @var string 设备所属分组名
+     * @var string <p>设备所属分组名</p>
      */
     public $GroupName;
 
     /**
-     * @var string 设备所属分组路径
+     * @var string <p>设备所属分组路径</p>
      */
     public $GroupNamePath;
 
     /**
-     * @var string 最近登录账户的姓名
+     * @var string <p>最近登录账户的姓名</p>
      */
     public $AccountName;
 
     /**
-     * @var string 出口IP
+     * @var string <p>出口IP</p>
      */
     public $Ip;
 
     /**
-     * @var string MAC地址
+     * @var string <p>MAC地址</p>
      */
     public $MacAddr;
 
     /**
-     * @var string CPU品牌型号
+     * @var string <p>CPU品牌型号</p>
      */
     public $Cpu;
 
     /**
-     * @var string 内存信息
+     * @var string <p>内存信息</p>
      */
     public $Memory;
 
     /**
-     * @var string 硬盘信息
+     * @var string <p>硬盘信息</p>
      */
     public $HardDiskSize;
 
     /**
-     * @var string 显示器品牌型号
+     * @var string <p>显示器品牌型号</p>
      */
     public $Monitor;
 
     /**
-     * @var string 终端备注名
+     * @var string <p>终端备注名</p>
      */
     public $RemarkName;
 
     /**
-     * @param integer $Id 设备ID
-     * @param string $Mid 设备唯一标识符
-     * @param integer $OsType OS平台 0 Windows 1 Linux 2 macOS 4 Android 5 iOS
-     * @param string $Name 终端名
-     * @param string $UserName 终端用户名
-     * @param integer $Status 授权状态（ 4未授权 5已授权）
-     * @param integer $GroupId 设备所属分组ID
-     * @param string $GroupName 设备所属分组名
-     * @param string $GroupNamePath 设备所属分组路径
-     * @param string $AccountName 最近登录账户的姓名
-     * @param string $Ip 出口IP
-     * @param string $MacAddr MAC地址
-     * @param string $Cpu CPU品牌型号
-     * @param string $Memory 内存信息
-     * @param string $HardDiskSize 硬盘信息
-     * @param string $Monitor 显示器品牌型号
-     * @param string $RemarkName 终端备注名
+     * @var string <p>BiosUUID（启动盘标识符）</p>
+     */
+    public $BiosUuid;
+
+    /**
+     * @param integer $Id <p>设备ID</p>
+     * @param string $Mid <p>设备唯一标识符</p>
+     * @param integer $OsType <p>OS平台 0 Windows 1 Linux 2 macOS 4 Android 5 iOS</p>
+     * @param string $Name <p>终端名</p>
+     * @param string $UserName <p>终端用户名</p>
+     * @param integer $Status <p>授权状态（ 4未授权 5已授权）</p>
+     * @param integer $GroupId <p>设备所属分组ID</p>
+     * @param string $GroupName <p>设备所属分组名</p>
+     * @param string $GroupNamePath <p>设备所属分组路径</p>
+     * @param string $AccountName <p>最近登录账户的姓名</p>
+     * @param string $Ip <p>出口IP</p>
+     * @param string $MacAddr <p>MAC地址</p>
+     * @param string $Cpu <p>CPU品牌型号</p>
+     * @param string $Memory <p>内存信息</p>
+     * @param string $HardDiskSize <p>硬盘信息</p>
+     * @param string $Monitor <p>显示器品牌型号</p>
+     * @param string $RemarkName <p>终端备注名</p>
+     * @param string $BiosUuid <p>BiosUUID（启动盘标识符）</p>
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class DescribeDeviceHardwareInfoItem extends AbstractModel
 
         if (array_key_exists("RemarkName",$param) and $param["RemarkName"] !== null) {
             $this->RemarkName = $param["RemarkName"];
+        }
+
+        if (array_key_exists("BiosUuid",$param) and $param["BiosUuid"] !== null) {
+            $this->BiosUuid = $param["BiosUuid"];
         }
     }
 }

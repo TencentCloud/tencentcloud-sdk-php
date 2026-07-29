@@ -29,11 +29,18 @@ use TencentCloud\Dbdc\V20201029\Models as Models;
  * @method Models\CreateDBCustomNodesResponse CreateDBCustomNodes(Models\CreateDBCustomNodesRequest $req) 该接口（CreateDBCustomNodes）用于创建 DB Custom 节点(需支付)。
  * @method Models\DescribeDBCustomClusterDetailResponse DescribeDBCustomClusterDetail(Models\DescribeDBCustomClusterDetailRequest $req) 该接口(DescribeDBCustomClusterDetail) 用于查询 DB Custom 集群的详情信息。
  * @method Models\DescribeDBCustomClusterKubeconfigResponse DescribeDBCustomClusterKubeconfig(Models\DescribeDBCustomClusterKubeconfigRequest $req) 该接口（DescribeDBCustomClusterKubeconfig）用于查询 DB Custom 集群 Kubeconfig。
+ * @method Models\DescribeDBCustomClusterNodeConfigResponse DescribeDBCustomClusterNodeConfig(Models\DescribeDBCustomClusterNodeConfigRequest $req) 该接口（DescribeDBCustomClusterNodeConfig）用于查询 DB Custom 集群内节点的配置信息。
+ * @method Models\DescribeDBCustomClusterNodeResourcesResponse DescribeDBCustomClusterNodeResources(Models\DescribeDBCustomClusterNodeResourcesRequest $req) 该接口（DescribeDBCustomClusterNodeResources）用于查询 DB Custom 集群内节点的资源信息。
  * @method Models\DescribeDBCustomClusterNodesResponse DescribeDBCustomClusterNodes(Models\DescribeDBCustomClusterNodesRequest $req) 该接口（DescribeDBCustomClusterNodes）用于查询 DB Custom 集群中的节点列表。
+ * @method Models\DescribeDBCustomClusterResourcesResponse DescribeDBCustomClusterResources(Models\DescribeDBCustomClusterResourcesRequest $req) 该接口（DescribeDBCustomClusterResources）用于查询 DB Custom 集群的资源信息。
  * @method Models\DescribeDBCustomClustersResponse DescribeDBCustomClusters(Models\DescribeDBCustomClustersRequest $req) 该接口（DescribeDBCustomClusters）为 DB Custom 集群列表查询接口。
  * @method Models\DescribeDBCustomImagesResponse DescribeDBCustomImages(Models\DescribeDBCustomImagesRequest $req) 该接口（DescribeDBCustomImages）用于查询 DB Custom 可用的操作系统镜像列表。
+ * @method Models\DescribeDBCustomNodeSecurityGroupsResponse DescribeDBCustomNodeSecurityGroups(Models\DescribeDBCustomNodeSecurityGroupsRequest $req) 该接口（DescribeDBCustomNodeSecurityGroups）用于查询 DB Custom 节点安全组信息。
+ * @method Models\DescribeDBCustomNodeTypesResponse DescribeDBCustomNodeTypes(Models\DescribeDBCustomNodeTypesRequest $req) 该接口(DescribeDBCustomNodeTypes) 用于查询 DB Custom 节点支持的机型信息。
  * @method Models\DescribeDBCustomNodesResponse DescribeDBCustomNodes(Models\DescribeDBCustomNodesRequest $req) 该接口（DescribeDBCustomNodes）用于查询 DB Custom 节点列表。
+ * @method Models\DescribeDBCustomRegionsResponse DescribeDBCustomRegions(Models\DescribeDBCustomRegionsRequest $req) 该接口(DescribeDBCustomRegions) 用于查询 DB Custom 支持的地域列表。
  * @method Models\DescribeDBCustomTaskStatusResponse DescribeDBCustomTaskStatus(Models\DescribeDBCustomTaskStatusRequest $req) 该接口（DescribeDBCustomTaskStatus）用于查询 DB Custom 任务的状态。
+ * @method Models\DescribeDBCustomZonesResponse DescribeDBCustomZones(Models\DescribeDBCustomZonesRequest $req) 该接口(DescribeDBCustomZones) 用于查询指定地域的 DB Custom 可用区列表。
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口用于查询独享集群内的DB实例列表
  * @method Models\DescribeHostListResponse DescribeHostList(Models\DescribeHostListRequest $req) 本接口用于查询主机列表
  * @method Models\DescribeInstanceDetailResponse DescribeInstanceDetail(Models\DescribeInstanceDetailRequest $req) 本接口用于查询独享集群详情
@@ -42,7 +49,9 @@ use TencentCloud\Dbdc\V20201029\Models as Models;
  * @method Models\DestroyDBCustomClusterResponse DestroyDBCustomCluster(Models\DestroyDBCustomClusterRequest $req) 该接口（DestroyDBCustomCluster）用于销毁 DB Custom 集群。
  * @method Models\DestroyDBCustomNodeResponse DestroyDBCustomNode(Models\DestroyDBCustomNodeRequest $req) 该接口（DestroyDBCustomNode）用于销毁 DB Custom 节点。
  * @method Models\IsolateDBCustomNodeResponse IsolateDBCustomNode(Models\IsolateDBCustomNodeRequest $req) 该接口 (IsolateDBCustomNode) 用于隔离 DB Custom 节点。
+ * @method Models\ModifyDBCustomClusterNodeConfigResponse ModifyDBCustomClusterNodeConfig(Models\ModifyDBCustomClusterNodeConfigRequest $req) 该接口（ModifyDBCustomClusterNodeConfig）用于修改 DB Custom 集群中节点的配置。
  * @method Models\ModifyDBCustomClusterTagsResponse ModifyDBCustomClusterTags(Models\ModifyDBCustomClusterTagsRequest $req) 该接口（ModifyDBCustomClusterTags）用于修改 DB Custom 集群绑定的标签。
+ * @method Models\ModifyDBCustomNodeSecurityGroupsResponse ModifyDBCustomNodeSecurityGroups(Models\ModifyDBCustomNodeSecurityGroupsRequest $req) 该接口（ModifyDBCustomNodeSecurityGroups）用于修改 DB Custom 节点安全组。
  * @method Models\ModifyDBCustomNodeTagsResponse ModifyDBCustomNodeTags(Models\ModifyDBCustomNodeTagsRequest $req) 该接口（ModifyDBCustomNodeTags）用于修改 DB Custom 节点绑定的标签。
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 本接口用于修改集群名称
  * @method Models\RemoveNodesFromDBCustomClusterResponse RemoveNodesFromDBCustomCluster(Models\RemoveNodesFromDBCustomClusterRequest $req) 该接口（RemoveNodesFromDBCustomCluster）用于从 DB Custom 集群移出节点。

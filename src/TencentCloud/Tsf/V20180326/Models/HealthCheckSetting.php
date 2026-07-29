@@ -20,141 +20,141 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 健康检查配置信息，若不指定该参数，则默认不设置健康检查。
  *
- * @method string getActionType() 获取健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
+ * @method string getActionType() 获取<p>健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setActionType(string $ActionType) 设置健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
+ * @method void setActionType(string $ActionType) 设置<p>健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInitialDelaySeconds() 获取容器延时启动健康检查的时间，单位秒。
+ * @method integer getInitialDelaySeconds() 获取<p>容器延时启动健康检查的时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInitialDelaySeconds(integer $InitialDelaySeconds) 设置容器延时启动健康检查的时间，单位秒。
+ * @method void setInitialDelaySeconds(integer $InitialDelaySeconds) 设置<p>容器延时启动健康检查的时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimeoutSeconds() 获取每次健康检查响应的最大超时时间，单位秒。
+ * @method integer getTimeoutSeconds() 获取<p>每次健康检查响应的最大超时时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeoutSeconds(integer $TimeoutSeconds) 设置每次健康检查响应的最大超时时间，单位秒。
+ * @method void setTimeoutSeconds(integer $TimeoutSeconds) 设置<p>每次健康检查响应的最大超时时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPeriodSeconds() 获取进行健康检查的时间间隔，单位秒。
+ * @method integer getPeriodSeconds() 获取<p>进行健康检查的时间间隔，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeriodSeconds(integer $PeriodSeconds) 设置进行健康检查的时间间隔，单位秒。
+ * @method void setPeriodSeconds(integer $PeriodSeconds) 设置<p>进行健康检查的时间间隔，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSuccessThreshold() 获取表示后端容器从失败到成功的连续健康检查成功次数。
+ * @method integer getSuccessThreshold() 获取<p>表示后端容器从失败到成功的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuccessThreshold(integer $SuccessThreshold) 设置表示后端容器从失败到成功的连续健康检查成功次数。
+ * @method void setSuccessThreshold(integer $SuccessThreshold) 设置<p>表示后端容器从失败到成功的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFailureThreshold() 获取表示后端容器从成功到失败的连续健康检查成功次数。
+ * @method integer getFailureThreshold() 获取<p>表示后端容器从成功到失败的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailureThreshold(integer $FailureThreshold) 设置表示后端容器从成功到失败的连续健康检查成功次数。
+ * @method void setFailureThreshold(integer $FailureThreshold) 设置<p>表示后端容器从成功到失败的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheme() 获取HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。
+ * @method string getScheme() 获取<p>HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheme(string $Scheme) 设置HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。
+ * @method void setScheme(string $Scheme) 设置<p>HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPort() 获取健康检查端口，范围 1~65535 。
+ * @method integer getPort() 获取<p>健康检查端口，范围 1~65535 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPort(integer $Port) 设置健康检查端口，范围 1~65535 。
+ * @method void setPort(integer $Port) 设置<p>健康检查端口，范围 1~65535 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPath() 获取HTTP 健康检查接口的请求路径。
+ * @method string getPath() 获取<p>HTTP 健康检查接口的请求路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPath(string $Path) 设置HTTP 健康检查接口的请求路径。
+ * @method void setPath(string $Path) 设置<p>HTTP 健康检查接口的请求路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCommand() 获取执行命令检查方式，执行的命令。
+ * @method array getCommand() 获取<p>执行命令检查方式，执行的命令。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCommand(array $Command) 设置执行命令检查方式，执行的命令。
+ * @method void setCommand(array $Command) 设置<p>执行命令检查方式，执行的命令。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+ * @method string getType() 获取<p>TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+ * @method void setType(string $Type) 设置<p>TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class HealthCheckSetting extends AbstractModel
 {
     /**
-     * @var string 健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
+     * @var string <p>健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
 
     /**
-     * @var integer 容器延时启动健康检查的时间，单位秒。
+     * @var integer <p>容器延时启动健康检查的时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InitialDelaySeconds;
 
     /**
-     * @var integer 每次健康检查响应的最大超时时间，单位秒。
+     * @var integer <p>每次健康检查响应的最大超时时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeoutSeconds;
 
     /**
-     * @var integer 进行健康检查的时间间隔，单位秒。
+     * @var integer <p>进行健康检查的时间间隔，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeriodSeconds;
 
     /**
-     * @var integer 表示后端容器从失败到成功的连续健康检查成功次数。
+     * @var integer <p>表示后端容器从失败到成功的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccessThreshold;
 
     /**
-     * @var integer 表示后端容器从成功到失败的连续健康检查成功次数。
+     * @var integer <p>表示后端容器从成功到失败的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailureThreshold;
 
     /**
-     * @var string HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。
+     * @var string <p>HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scheme;
 
     /**
-     * @var integer 健康检查端口，范围 1~65535 。
+     * @var integer <p>健康检查端口，范围 1~65535 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
-     * @var string HTTP 健康检查接口的请求路径。
+     * @var string <p>HTTP 健康检查接口的请求路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
-     * @var array 执行命令检查方式，执行的命令。
+     * @var array <p>执行命令检查方式，执行的命令。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Command;
 
     /**
-     * @var string TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+     * @var string <p>TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @param string $ActionType 健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
+     * @param string $ActionType <p>健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InitialDelaySeconds 容器延时启动健康检查的时间，单位秒。
+     * @param integer $InitialDelaySeconds <p>容器延时启动健康检查的时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TimeoutSeconds 每次健康检查响应的最大超时时间，单位秒。
+     * @param integer $TimeoutSeconds <p>每次健康检查响应的最大超时时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PeriodSeconds 进行健康检查的时间间隔，单位秒。
+     * @param integer $PeriodSeconds <p>进行健康检查的时间间隔，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SuccessThreshold 表示后端容器从失败到成功的连续健康检查成功次数。
+     * @param integer $SuccessThreshold <p>表示后端容器从失败到成功的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FailureThreshold 表示后端容器从成功到失败的连续健康检查成功次数。
+     * @param integer $FailureThreshold <p>表示后端容器从成功到失败的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Scheme HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。
+     * @param string $Scheme <p>HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Port 健康检查端口，范围 1~65535 。
+     * @param integer $Port <p>健康检查端口，范围 1~65535 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Path HTTP 健康检查接口的请求路径。
+     * @param string $Path <p>HTTP 健康检查接口的请求路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Command 执行命令检查方式，执行的命令。
+     * @param array $Command <p>执行命令检查方式，执行的命令。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+     * @param string $Type <p>TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

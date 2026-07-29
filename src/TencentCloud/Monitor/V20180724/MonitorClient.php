@@ -92,6 +92,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribeAlarmMetricsResponse DescribeAlarmMetrics(Models\DescribeAlarmMetricsRequest $req) 查询告警指标列表
  * @method Models\DescribeAlarmNoticeResponse DescribeAlarmNotice(Models\DescribeAlarmNoticeRequest $req) 查询单个通知模板的详情
  * @method Models\DescribeAlarmNoticeCallbacksResponse DescribeAlarmNoticeCallbacks(Models\DescribeAlarmNoticeCallbacksRequest $req) 获取告警通知模板所有回调URL
+ * @method Models\DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID(Models\DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest $req) 查询通知模板中配置的发送用户信息
  * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) 查询通知模板列表
  * @method Models\DescribeAlarmPoliciesResponse DescribeAlarmPolicies(Models\DescribeAlarmPoliciesRequest $req) 查询告警策略列表
  * @method Models\DescribeAlarmPolicyResponse DescribeAlarmPolicy(Models\DescribeAlarmPolicyRequest $req) 获取单个告警策略详情

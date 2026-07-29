@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineVersion(string $EngineVersion) 设置实例引擎版本。
  * @method integer getCpu() 获取CPU数量，对于Redis为0。
  * @method void setCpu(integer $Cpu) 设置CPU数量，对于Redis为0。
- * @method string getDeployMode() 获取实例部署模式。
- * @method void setDeployMode(string $DeployMode) 设置实例部署模式。
+ * @method string getDeployMode() 获取实例部署模式。MySQL 实例类型取值包括"STANDARD"-标准类型,"CUSTOM"-普通类型, "EXCLUSIVE"-独占类型, "CUSTOMER_AGENT"-用户代理类型, "CUSTOMER_DIRECT"-用户直连类型,
+"CLOUD_NATIVE_CLUSTER_EXCLUSIVE"-云原生独占集群, "CLOUD_NATIVE_CLUSTER"-云原生集群。
+ * @method void setDeployMode(string $DeployMode) 设置实例部署模式。MySQL 实例类型取值包括"STANDARD"-标准类型,"CUSTOM"-普通类型, "EXCLUSIVE"-独占类型, "CUSTOMER_AGENT"-用户代理类型, "CUSTOMER_DIRECT"-用户直连类型,
+"CLOUD_NATIVE_CLUSTER_EXCLUSIVE"-云原生独占集群, "CLOUD_NATIVE_CLUSTER"-云原生集群。
  * @method RedisInstanceConf getInstanceConf() 获取实例内存配置。
  * @method void setInstanceConf(RedisInstanceConf $InstanceConf) 设置实例内存配置。
  * @method boolean getIsSupported() 获取DBbrain是否支持该实例。
@@ -89,7 +91,8 @@ class InstanceBasicInfo extends AbstractModel
     public $Cpu;
 
     /**
-     * @var string 实例部署模式。
+     * @var string 实例部署模式。MySQL 实例类型取值包括"STANDARD"-标准类型,"CUSTOM"-普通类型, "EXCLUSIVE"-独占类型, "CUSTOMER_AGENT"-用户代理类型, "CUSTOMER_DIRECT"-用户直连类型,
+"CLOUD_NATIVE_CLUSTER_EXCLUSIVE"-云原生独占集群, "CLOUD_NATIVE_CLUSTER"-云原生集群。
      */
     public $DeployMode;
 
@@ -136,7 +139,8 @@ class InstanceBasicInfo extends AbstractModel
      * @param string $Product 实例产品。
      * @param string $EngineVersion 实例引擎版本。
      * @param integer $Cpu CPU数量，对于Redis为0。
-     * @param string $DeployMode 实例部署模式。
+     * @param string $DeployMode 实例部署模式。MySQL 实例类型取值包括"STANDARD"-标准类型,"CUSTOM"-普通类型, "EXCLUSIVE"-独占类型, "CUSTOMER_AGENT"-用户代理类型, "CUSTOMER_DIRECT"-用户直连类型,
+"CLOUD_NATIVE_CLUSTER_EXCLUSIVE"-云原生独占集群, "CLOUD_NATIVE_CLUSTER"-云原生集群。
      * @param RedisInstanceConf $InstanceConf 实例内存配置。
      * @param boolean $IsSupported DBbrain是否支持该实例。
      * @param integer $Memory 实例内存，单位MB。

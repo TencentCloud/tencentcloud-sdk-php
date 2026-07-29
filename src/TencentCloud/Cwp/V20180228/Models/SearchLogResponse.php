@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog返回参数结构体
  *
- * @method integer getCount() 获取匹配检索条件的原始日志的数量
- * @method void setCount(integer $Count) 设置匹配检索条件的原始日志的数量
- * @method string getContext() 获取透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
- * @method void setContext(string $Context) 设置透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
- * @method boolean getListOver() 获取符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
- * @method void setListOver(boolean $ListOver) 设置符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
- * @method boolean getAnalysis() 获取返回的是否为统计分析（即SQL）结果
- * @method void setAnalysis(boolean $Analysis) 设置返回的是否为统计分析（即SQL）结果
- * @method array getData() 获取匹配检索条件的原始日志
- * @method void setData(array $Data) 设置匹配检索条件的原始日志
+ * @method integer getCount() 获取<p>匹配检索条件的原始日志的数量</p>
+ * @method void setCount(integer $Count) 设置<p>匹配检索条件的原始日志的数量</p>
+ * @method string getContext() 获取<p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时</p>
+ * @method void setContext(string $Context) 设置<p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时</p>
+ * @method boolean getListOver() 获取<p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志</p>
+ * @method void setListOver(boolean $ListOver) 设置<p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志</p>
+ * @method boolean getAnalysis() 获取<p>返回的是否为统计分析（即SQL）结果</p>
+ * @method void setAnalysis(boolean $Analysis) 设置<p>返回的是否为统计分析（即SQL）结果</p>
+ * @method array getData() 获取<p>匹配检索条件的原始日志</p>
+ * @method void setData(array $Data) 设置<p>匹配检索条件的原始日志</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SearchLogResponse extends AbstractModel
 {
     /**
-     * @var integer 匹配检索条件的原始日志的数量
+     * @var integer <p>匹配检索条件的原始日志的数量</p>
      */
     public $Count;
 
     /**
-     * @var string 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+     * @var string <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时</p>
      */
     public $Context;
 
     /**
-     * @var boolean 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+     * @var boolean <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志</p>
      */
     public $ListOver;
 
     /**
-     * @var boolean 返回的是否为统计分析（即SQL）结果
+     * @var boolean <p>返回的是否为统计分析（即SQL）结果</p>
      */
     public $Analysis;
 
     /**
-     * @var array 匹配检索条件的原始日志
+     * @var array <p>匹配检索条件的原始日志</p>
      */
     public $Data;
 
@@ -66,11 +66,11 @@ class SearchLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Count 匹配检索条件的原始日志的数量
-     * @param string $Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
-     * @param boolean $ListOver 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-     * @param boolean $Analysis 返回的是否为统计分析（即SQL）结果
-     * @param array $Data 匹配检索条件的原始日志
+     * @param integer $Count <p>匹配检索条件的原始日志的数量</p>
+     * @param string $Context <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时</p>
+     * @param boolean $ListOver <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志</p>
+     * @param boolean $Analysis <p>返回的是否为统计分析（即SQL）结果</p>
+     * @param array $Data <p>匹配检索条件的原始日志</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

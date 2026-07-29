@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 健康报告任务详情。
  *
- * @method integer getAsyncRequestId() 获取异步任务请求 ID。
- * @method void setAsyncRequestId(integer $AsyncRequestId) 设置异步任务请求 ID。
- * @method string getSource() 获取任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
- * @method void setSource(string $Source) 设置任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
- * @method integer getProgress() 获取任务完成进度，单位%。
- * @method void setProgress(integer $Progress) 设置任务完成进度，单位%。
- * @method string getCreateTime() 获取任务创建时间。
- * @method void setCreateTime(string $CreateTime) 设置任务创建时间。
- * @method string getStartTime() 获取任务开始执行时间。
- * @method void setStartTime(string $StartTime) 设置任务开始执行时间。
- * @method string getEndTime() 获取任务完成执行时间。
- * @method void setEndTime(string $EndTime) 设置任务完成执行时间。
- * @method InstanceBasicInfo getInstanceInfo() 获取任务所属实例的基础信息。
- * @method void setInstanceInfo(InstanceBasicInfo $InstanceInfo) 设置任务所属实例的基础信息。
- * @method HealthStatus getHealthStatus() 获取健康报告中的健康信息。
- * @method void setHealthStatus(HealthStatus $HealthStatus) 设置健康报告中的健康信息。
+ * @method integer getAsyncRequestId() 获取<p>异步任务请求 ID。</p>
+ * @method void setAsyncRequestId(integer $AsyncRequestId) 设置<p>异步任务请求 ID。</p>
+ * @method string getSource() 获取<p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 定时生成；&quot;MANUAL&quot; - 手动触发。</p>
+ * @method void setSource(string $Source) 设置<p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 定时生成；&quot;MANUAL&quot; - 手动触发。</p>
+ * @method integer getProgress() 获取<p>任务完成进度，单位%。</p>
+ * @method void setProgress(integer $Progress) 设置<p>任务完成进度，单位%。</p>
+ * @method string getCreateTime() 获取<p>任务创建时间，如“2025-09-30 12:13:14”。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>任务创建时间，如“2025-09-30 12:13:14”。</p>
+ * @method string getStartTime() 获取<p>任务开始执行时间，如“2025-09-30 13:13:14”。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>任务开始执行时间，如“2025-09-30 13:13:14”。</p>
+ * @method string getEndTime() 获取<p>任务完成执行时间，如“2025-09-30 14:13:14”。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>任务完成执行时间，如“2025-09-30 14:13:14”。</p>
+ * @method InstanceBasicInfo getInstanceInfo() 获取<p>任务所属实例的基础信息。</p>
+ * @method void setInstanceInfo(InstanceBasicInfo $InstanceInfo) 设置<p>任务所属实例的基础信息。</p>
+ * @method HealthStatus getHealthStatus() 获取<p>健康报告中的健康信息。</p>
+ * @method void setHealthStatus(HealthStatus $HealthStatus) 设置<p>健康报告中的健康信息。</p>
+ * @method array getTags() 获取<p>任务所属实例的标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>任务所属实例的标签信息</p>
  */
 class HealthReportTask extends AbstractModel
 {
     /**
-     * @var integer 异步任务请求 ID。
+     * @var integer <p>异步任务请求 ID。</p>
      */
     public $AsyncRequestId;
 
     /**
-     * @var string 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
+     * @var string <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 定时生成；&quot;MANUAL&quot; - 手动触发。</p>
      */
     public $Source;
 
     /**
-     * @var integer 任务完成进度，单位%。
+     * @var integer <p>任务完成进度，单位%。</p>
      */
     public $Progress;
 
     /**
-     * @var string 任务创建时间。
+     * @var string <p>任务创建时间，如“2025-09-30 12:13:14”。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 任务开始执行时间。
+     * @var string <p>任务开始执行时间，如“2025-09-30 13:13:14”。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 任务完成执行时间。
+     * @var string <p>任务完成执行时间，如“2025-09-30 14:13:14”。</p>
      */
     public $EndTime;
 
     /**
-     * @var InstanceBasicInfo 任务所属实例的基础信息。
+     * @var InstanceBasicInfo <p>任务所属实例的基础信息。</p>
      */
     public $InstanceInfo;
 
     /**
-     * @var HealthStatus 健康报告中的健康信息。
+     * @var HealthStatus <p>健康报告中的健康信息。</p>
      */
     public $HealthStatus;
 
     /**
-     * @param integer $AsyncRequestId 异步任务请求 ID。
-     * @param string $Source 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
-     * @param integer $Progress 任务完成进度，单位%。
-     * @param string $CreateTime 任务创建时间。
-     * @param string $StartTime 任务开始执行时间。
-     * @param string $EndTime 任务完成执行时间。
-     * @param InstanceBasicInfo $InstanceInfo 任务所属实例的基础信息。
-     * @param HealthStatus $HealthStatus 健康报告中的健康信息。
+     * @var array <p>任务所属实例的标签信息</p>
+     */
+    public $Tags;
+
+    /**
+     * @param integer $AsyncRequestId <p>异步任务请求 ID。</p>
+     * @param string $Source <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 定时生成；&quot;MANUAL&quot; - 手动触发。</p>
+     * @param integer $Progress <p>任务完成进度，单位%。</p>
+     * @param string $CreateTime <p>任务创建时间，如“2025-09-30 12:13:14”。</p>
+     * @param string $StartTime <p>任务开始执行时间，如“2025-09-30 13:13:14”。</p>
+     * @param string $EndTime <p>任务完成执行时间，如“2025-09-30 14:13:14”。</p>
+     * @param InstanceBasicInfo $InstanceInfo <p>任务所属实例的基础信息。</p>
+     * @param HealthStatus $HealthStatus <p>健康报告中的健康信息。</p>
+     * @param array $Tags <p>任务所属实例的标签信息</p>
      */
     function __construct()
     {
@@ -134,6 +142,15 @@ class HealthReportTask extends AbstractModel
         if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
             $this->HealthStatus = new HealthStatus();
             $this->HealthStatus->deserialize($param["HealthStatus"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

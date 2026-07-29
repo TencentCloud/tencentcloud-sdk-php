@@ -25,8 +25,6 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 /**
  * @method Models\AsyncTextToSpeechResponse AsyncTextToSpeech(Models\AsyncTextToSpeechRequest $req) 异步语音合成
  * @method Models\ControlAIConversationResponse ControlAIConversation(Models\ControlAIConversationRequest $req) 提供服务端控制机器人的功能
- * @method Models\CreateBasicModerationResponse CreateBasicModeration(Models\CreateBasicModerationRequest $req) 接口说明：
-启动终端审核功能，完成房间内的音频审核。
  * @method Models\CreateCloudModerationResponse CreateCloudModeration(Models\CreateCloudModerationRequest $req) 启动AI 内容理解功能，完成房间内的音视频切片，视频截帧，或者录制音频流，投递到AI内容理解，完成内容识别。您可以通过此接口实现如下目标：
 ●指定内容参数（ModerationParams）来指定内容理解需要的详细参数。
 ●指定存储参数（ModerationStorageParams）将命中的切片文件指定上传到您希望的云存储，目前支持腾讯云（对象存储COS）以及第三方AWS（S3）和阿里云（OSS）
@@ -55,7 +53,6 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 ●指定内容参数（LiveModerationParams）来指定内容理解需要的详细参数。
 ●指定存储参数（LiveModerationStorageParams）将命中的切片文件指定上传到您希望的云存储，目前支持腾讯云（对象存储COS）以及第三方AWS（S3）和阿里云（OSS）
  * @method Models\CreatePictureResponse CreatePicture(Models\CreatePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
- * @method Models\DeleteBasicModerationResponse DeleteBasicModeration(Models\DeleteBasicModerationRequest $req) 成功开启审核任务后，可以使用此接口来停止任务。
  * @method Models\DeleteCloudModerationResponse DeleteCloudModeration(Models\DeleteCloudModerationRequest $req) 成功开启AI 内容理解任务后，可以使用此接口来停止进行内容识别。
  * @method Models\DeleteCloudRecordingResponse DeleteCloudRecording(Models\DeleteCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
  * @method Models\DeleteCloudSliceTaskResponse DeleteCloudSliceTask(Models\DeleteCloudSliceTaskRequest $req) 成功开启切片任务后，可以使用此接口来停止任务。停止切片成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。

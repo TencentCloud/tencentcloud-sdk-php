@@ -14,23 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBasicModeration返回参数结构体
+ * CreateDBDiagReportUrls返回参数结构体
  *
- * @method string getTaskId() 获取审核服务分配的任务ID。任务ID是对一次审核任务生命周期过程的唯一标识，结束任务时会失去意义。任务ID需要业务保存下来，作为下次针对这个任务操作的参数
- * @method void setTaskId(string $TaskId) 设置审核服务分配的任务ID。任务ID是对一次审核任务生命周期过程的唯一标识，结束任务时会失去意义。任务ID需要业务保存下来，作为下次针对这个任务操作的参数
+ * @method integer getTotalCount() 获取<p>URL条目总数。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置<p>URL条目总数。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getItems() 获取<p>报告URL信息列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setItems(array $Items) 设置<p>报告URL信息列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateBasicModerationResponse extends AbstractModel
+class CreateDBDiagReportUrlsResponse extends AbstractModel
 {
     /**
-     * @var string 审核服务分配的任务ID。任务ID是对一次审核任务生命周期过程的唯一标识，结束任务时会失去意义。任务ID需要业务保存下来，作为下次针对这个任务操作的参数
+     * @var integer <p>URL条目总数。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TaskId;
+    public $TotalCount;
+
+    /**
+     * @var array <p>报告URL信息列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Items;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +51,10 @@ class CreateBasicModerationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 审核服务分配的任务ID。任务ID是对一次审核任务生命周期过程的唯一标识，结束任务时会失去意义。任务ID需要业务保存下来，作为下次针对这个任务操作的参数
+     * @param integer $TotalCount <p>URL条目总数。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Items <p>报告URL信息列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +70,17 @@ class CreateBasicModerationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new DiagReportUrlItem();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterLevels返回参数结构体
  *
- * @method array getLevelList() 获取集群类型列表
- * @method void setLevelList(array $LevelList) 设置集群类型列表
+ * @method array getLevelList() 获取<p>集群类型列表</p>
+ * @method void setLevelList(array $LevelList) 设置<p>集群类型列表</p>
+ * @method array getZones() 获取<p>专区列表</p>
+ * @method void setZones(array $Zones) 设置<p>专区列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeClusterLevelsResponse extends AbstractModel
 {
     /**
-     * @var array 集群类型列表
+     * @var array <p>集群类型列表</p>
      */
     public $LevelList;
+
+    /**
+     * @var array <p>专区列表</p>
+     */
+    public $Zones;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeClusterLevelsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $LevelList 集群类型列表
+     * @param array $LevelList <p>集群类型列表</p>
+     * @param array $Zones <p>专区列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class DescribeClusterLevelsResponse extends AbstractModel
         }
         if (array_key_exists("LevelList",$param) and $param["LevelList"] !== null) {
             $this->LevelList = $param["LevelList"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

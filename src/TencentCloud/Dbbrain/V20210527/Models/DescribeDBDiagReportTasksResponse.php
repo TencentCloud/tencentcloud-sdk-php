@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBDiagReportTasks返回参数结构体
  *
- * @method integer getTotalCount() 获取任务总数目。
- * @method void setTotalCount(integer $TotalCount) 设置任务总数目。
- * @method array getTasks() 获取任务列表。
- * @method void setTasks(array $Tasks) 设置任务列表。
+ * @method integer getTotalCount() 获取<p>任务总数目。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>任务总数目。</p>
+ * @method array getTasks() 获取<p>任务列表。</p>
+ * @method void setTasks(array $Tasks) 设置<p>任务列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBDiagReportTasksResponse extends AbstractModel
 {
     /**
-     * @var integer 任务总数目。
+     * @var integer <p>任务总数目。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 任务列表。
+     * @var array <p>任务列表。</p>
      */
     public $Tasks;
 
@@ -45,8 +45,8 @@ class DescribeDBDiagReportTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 任务总数目。
-     * @param array $Tasks 任务列表。
+     * @param integer $TotalCount <p>任务总数目。</p>
+     * @param array $Tasks <p>任务列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

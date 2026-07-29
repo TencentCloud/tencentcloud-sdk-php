@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 审核存储参数
+ * DescribeCloudAppInfo请求参数结构体
  *
- * @method CloudAuditStorage getCloudAuditStorage() 获取腾讯云对象存储COS以及第三方云存储的账号信息
- * @method void setCloudAuditStorage(CloudAuditStorage $CloudAuditStorage) 设置腾讯云对象存储COS以及第三方云存储的账号信息
+
  */
-class AuditStorageParams extends AbstractModel
+class DescribeCloudAppInfoRequest extends AbstractModel
 {
-    /**
-     * @var CloudAuditStorage 腾讯云对象存储COS以及第三方云存储的账号信息
-     */
-    public $CloudAuditStorage;
+
 
     /**
-     * @param CloudAuditStorage $CloudAuditStorage 腾讯云对象存储COS以及第三方云存储的账号信息
+
      */
     function __construct()
     {
@@ -46,9 +42,6 @@ class AuditStorageParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CloudAuditStorage",$param) and $param["CloudAuditStorage"] !== null) {
-            $this->CloudAuditStorage = new CloudAuditStorage();
-            $this->CloudAuditStorage->deserialize($param["CloudAuditStorage"]);
-        }
+
     }
 }

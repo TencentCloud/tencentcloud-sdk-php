@@ -20,66 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP 网段组
  *
- * @method integer getGroupId() 获取组 Id，创建时填 0 即可。
- * @method void setGroupId(integer $GroupId) 设置组 Id，创建时填 0 即可。
- * @method string getName() 获取组名称。
- * @method void setName(string $Name) 设置组名称。
- * @method array getContent() 获取IP 组内容，仅支持 IP 及 IP 网段。
- * @method void setContent(array $Content) 设置IP 组内容，仅支持 IP 及 IP 网段。
- * @method integer getIPTotalCount() 获取IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
- * @method void setIPTotalCount(integer $IPTotalCount) 设置IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
- * @method array getIPExpireInfo() 获取IP 定时过期信息。
-作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
-作为出参，包含以下两类信息：
-<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
-<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
- * @method void setIPExpireInfo(array $IPExpireInfo) 设置IP 定时过期信息。
-作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
-作为出参，包含以下两类信息：
-<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
-<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+ * @method integer getGroupId() 获取<p>IP 组 Id，创建时填 0 即可。</p>
+ * @method void setGroupId(integer $GroupId) 设置<p>IP 组 Id，创建时填 0 即可。</p>
+ * @method string getName() 获取<p>IP 组名称。</p>
+ * @method void setName(string $Name) 设置<p>IP 组名称。</p>
+ * @method array getContent() 获取<p>IP 组内容，仅支持 IP 及 IP 网段。</p>
+ * @method void setContent(array $Content) 设置<p>IP 组内容，仅支持 IP 及 IP 网段。</p>
+ * @method integer getIPTotalCount() 获取<p>IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。</p>
+ * @method void setIPTotalCount(integer $IPTotalCount) 设置<p>IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。</p>
+ * @method array getIPExpireInfo() 获取<p>IP 定时过期信息。<br>作为入参，用于为指定的 IP 地址或网段配置定时过期时间。<br>作为出参，包含以下两类信息：</p><li>当前未到期的定时过期信息：尚未触发的过期配置。</li><li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+ * @method void setIPExpireInfo(array $IPExpireInfo) 设置<p>IP 定时过期信息。<br>作为入参，用于为指定的 IP 地址或网段配置定时过期时间。<br>作为出参，包含以下两类信息：</p><li>当前未到期的定时过期信息：尚未触发的过期配置。</li><li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+ * @method integer getRefCount() 获取<p>IP 组被引用的数量。</p>
+ * @method void setRefCount(integer $RefCount) 设置<p>IP 组被引用的数量。</p>
  */
 class IPGroup extends AbstractModel
 {
     /**
-     * @var integer 组 Id，创建时填 0 即可。
+     * @var integer <p>IP 组 Id，创建时填 0 即可。</p>
      */
     public $GroupId;
 
     /**
-     * @var string 组名称。
+     * @var string <p>IP 组名称。</p>
      */
     public $Name;
 
     /**
-     * @var array IP 组内容，仅支持 IP 及 IP 网段。
+     * @var array <p>IP 组内容，仅支持 IP 及 IP 网段。</p>
      */
     public $Content;
 
     /**
-     * @var integer IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
+     * @var integer <p>IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。</p>
      */
     public $IPTotalCount;
 
     /**
-     * @var array IP 定时过期信息。
-作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
-作为出参，包含以下两类信息：
-<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
-<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+     * @var array <p>IP 定时过期信息。<br>作为入参，用于为指定的 IP 地址或网段配置定时过期时间。<br>作为出参，包含以下两类信息：</p><li>当前未到期的定时过期信息：尚未触发的过期配置。</li><li>一周内已到期的定时过期信息：已触发的过期配置。</li>
      */
     public $IPExpireInfo;
 
     /**
-     * @param integer $GroupId 组 Id，创建时填 0 即可。
-     * @param string $Name 组名称。
-     * @param array $Content IP 组内容，仅支持 IP 及 IP 网段。
-     * @param integer $IPTotalCount IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
-     * @param array $IPExpireInfo IP 定时过期信息。
-作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
-作为出参，包含以下两类信息：
-<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
-<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+     * @var integer <p>IP 组被引用的数量。</p>
+     */
+    public $RefCount;
+
+    /**
+     * @param integer $GroupId <p>IP 组 Id，创建时填 0 即可。</p>
+     * @param string $Name <p>IP 组名称。</p>
+     * @param array $Content <p>IP 组内容，仅支持 IP 及 IP 网段。</p>
+     * @param integer $IPTotalCount <p>IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。</p>
+     * @param array $IPExpireInfo <p>IP 定时过期信息。<br>作为入参，用于为指定的 IP 地址或网段配置定时过期时间。<br>作为出参，包含以下两类信息：</p><li>当前未到期的定时过期信息：尚未触发的过期配置。</li><li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+     * @param integer $RefCount <p>IP 组被引用的数量。</p>
      */
     function __construct()
     {
@@ -117,6 +109,10 @@ class IPGroup extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->IPExpireInfo, $obj);
             }
+        }
+
+        if (array_key_exists("RefCount",$param) and $param["RefCount"] !== null) {
+            $this->RefCount = $param["RefCount"];
         }
     }
 }

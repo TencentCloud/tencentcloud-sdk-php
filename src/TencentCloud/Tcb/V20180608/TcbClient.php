@@ -58,6 +58,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 该接口支持下单并支付(CreateAndPay=true时)，此时会自动在腾讯云账户中扣除余额（余额不足会下单失败）。
 该接口支持自动扣除代金券（AutoVoucher=true时），符合条件的代金券会被自动扣除。
+ * @method Models\CreateCloudAppResponse CreateCloudApp(Models\CreateCloudAppRequest $req) 创建云应用
  * @method Models\CreateCustomLoginKeyResponse CreateCustomLoginKey(Models\CreateCustomLoginKeyRequest $req) 创建自定义登录密钥。在指定云开发环境下生成一对 RSA 1024 位非对称密钥对，系统仅存储公钥，私钥仅在创建时返回一次且不可恢复，请妥善保存。创建新密钥后，该环境下原有未设置过期时间的旧密钥将被自动标记为 2 小时后过期，请确保客户端及时更新密钥配置。
 返回的 KeyID 和 PrivateKey 需与环境 ID 一起组装为 JSON 配置文件，供客户端 Admin SDK 初始化时使用，文件格式如下：
 {
@@ -105,6 +106,8 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 注意⚠️
 安全域名被删除之后，可能会引起跨域问题，请谨慎操作。
+ * @method Models\DeleteCloudAppResponse DeleteCloudApp(Models\DeleteCloudAppRequest $req) 删除云应用服务
+ * @method Models\DeleteCloudAppVersionResponse DeleteCloudAppVersion(Models\DeleteCloudAppVersionRequest $req) 删除云应用服务版本
  * @method Models\DeleteHTTPServiceRouteResponse DeleteHTTPServiceRoute(Models\DeleteHTTPServiceRouteRequest $req) 本接口DeleteHTTPServiceRoute用于删除HTTP访问服务域名或者路由。可批量删除多条path路由、删除域名及所有path路由，如果Paths字段为空则删除域名及所有path路由，如果Paths不为空则仅删除path路由。
  * @method Models\DeleteProviderResponse DeleteProvider(Models\DeleteProviderRequest $req) 删除认证源
  * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 本接口(DeleteTable)用于删除文档型数据库表，删除表后表中数据将会被删除且无法恢复，请谨慎操作。
@@ -129,7 +132,11 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeBillingInfoResponse DescribeBillingInfo(Models\DescribeBillingInfoRequest $req) 获取云开发环境的计费相关信息。
 包括环境的 状态、当前套餐、购买时间、到期时间 等。
  * @method Models\DescribeClientResponse DescribeClient(Models\DescribeClientRequest $req) 查询客户端详情。获取指定云开发环境下某个客户端的配置信息，包括客户端基本信息（名称、图标、描述）、OAuth 凭证（ClientId、ClientSecret）、安全域名、允许的 Scope 列表、Token 有效期、会话控制策略等。当客户端 ID 等于环境 ID 时，返回该环境的默认客户端配置。
+ * @method Models\DescribeCloudAppCosInfoResponse DescribeCloudAppCosInfo(Models\DescribeCloudAppCosInfoRequest $req) 获取云应用cos信息
+ * @method Models\DescribeCloudAppInfoResponse DescribeCloudAppInfo(Models\DescribeCloudAppInfoRequest $req) 查询应用服务信息
  * @method Models\DescribeCloudAppListResponse DescribeCloudAppList(Models\DescribeCloudAppListRequest $req) 查询云应用服务列表信息
+ * @method Models\DescribeCloudAppVersionResponse DescribeCloudAppVersion(Models\DescribeCloudAppVersionRequest $req) 查询云应用服务版本信息
+ * @method Models\DescribeCloudAppVersionListResponse DescribeCloudAppVersionList(Models\DescribeCloudAppVersionListRequest $req) 查询云应用服务版本列表信息
  * @method Models\DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildService(Models\DescribeCloudBaseBuildServiceRequest $req) 获取云托管代码上传url
  * @method Models\DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersion(Models\DescribeCloudBaseRunServerVersionRequest $req) 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
  * @method Models\DescribeCreateMySQLResultResponse DescribeCreateMySQLResult(Models\DescribeCreateMySQLResultRequest $req) 本接口（DescribeCreateMySQLResult）用于查询开通Mysql结果。

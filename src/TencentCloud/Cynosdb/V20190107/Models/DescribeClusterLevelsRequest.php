@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterLevels请求参数结构体
  *
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
  */
 class DescribeClusterLevelsRequest extends AbstractModel
 {
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @param string $Zone 可用区
+     * @param string $Zone <p>可用区</p>
      */
     function __construct()
     {

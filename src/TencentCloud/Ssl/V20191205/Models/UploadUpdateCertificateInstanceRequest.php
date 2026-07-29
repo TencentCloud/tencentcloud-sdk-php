@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadUpdateCertificateInstance请求参数结构体
  *
- * @method string getOldCertificateId() 获取一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
- * @method void setOldCertificateId(string $OldCertificateId) 设置一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
- * @method array getResourceTypes() 获取需要部署的资源类型，参数值可选（小写）：clb
- * @method void setResourceTypes(array $ResourceTypes) 设置需要部署的资源类型，参数值可选（小写）：clb
- * @method string getCertificatePublicKey() 获取公钥证书
- * @method void setCertificatePublicKey(string $CertificatePublicKey) 设置公钥证书
- * @method string getCertificatePrivateKey() 获取私钥证书
- * @method void setCertificatePrivateKey(string $CertificatePrivateKey) 设置私钥证书
- * @method array getResourceTypesRegions() 获取云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb
- * @method void setResourceTypesRegions(array $ResourceTypesRegions) 设置云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb
+ * @method string getOldCertificateId() 获取<p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
+ * @method void setOldCertificateId(string $OldCertificateId) 设置<p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
+ * @method array getResourceTypes() 获取<p>需要部署的资源类型，参数值可选（小写）：clb</p>
+ * @method void setResourceTypes(array $ResourceTypes) 设置<p>需要部署的资源类型，参数值可选（小写）：clb</p>
+ * @method string getCertificatePublicKey() 获取<p>公钥证书</p>
+ * @method void setCertificatePublicKey(string $CertificatePublicKey) 设置<p>公钥证书</p>
+ * @method string getCertificatePrivateKey() 获取<p>私钥证书</p>
+ * @method void setCertificatePrivateKey(string $CertificatePrivateKey) 设置<p>私钥证书</p>
+ * @method array getResourceTypesRegions() 获取<p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb</p>
+ * @method void setResourceTypesRegions(array $ResourceTypesRegions) 设置<p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb</p>
+ * @method string getCertificateId() 获取<p>证书ID</p>
+ * @method void setCertificateId(string $CertificateId) 设置<p>证书ID</p>
  */
 class UploadUpdateCertificateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
+     * @var string <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
      */
     public $OldCertificateId;
 
     /**
-     * @var array 需要部署的资源类型，参数值可选（小写）：clb
+     * @var array <p>需要部署的资源类型，参数值可选（小写）：clb</p>
      */
     public $ResourceTypes;
 
     /**
-     * @var string 公钥证书
+     * @var string <p>公钥证书</p>
      */
     public $CertificatePublicKey;
 
     /**
-     * @var string 私钥证书
+     * @var string <p>私钥证书</p>
      */
     public $CertificatePrivateKey;
 
     /**
-     * @var array 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb
+     * @var array <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb</p>
      */
     public $ResourceTypesRegions;
 
     /**
-     * @param string $OldCertificateId 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
-     * @param array $ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb
-     * @param string $CertificatePublicKey 公钥证书
-     * @param string $CertificatePrivateKey 私钥证书
-     * @param array $ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb
+     * @var string <p>证书ID</p>
+     */
+    public $CertificateId;
+
+    /**
+     * @param string $OldCertificateId <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
+     * @param array $ResourceTypes <p>需要部署的资源类型，参数值可选（小写）：clb</p>
+     * @param string $CertificatePublicKey <p>公钥证书</p>
+     * @param string $CertificatePrivateKey <p>私钥证书</p>
+     * @param array $ResourceTypesRegions <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb</p>
+     * @param string $CertificateId <p>证书ID</p>
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class UploadUpdateCertificateInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTypesRegions, $obj);
             }
+        }
+
+        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
+            $this->CertificateId = $param["CertificateId"];
         }
     }
 }

@@ -165,6 +165,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeFunctionRuntimeEnvironmentResponse DescribeFunctionRuntimeEnvironment(Models\DescribeFunctionRuntimeEnvironmentRequest $req) 查询边缘函数运行环境，包括环境变量。
  * @method Models\DescribeFunctionsResponse DescribeFunctions(Models\DescribeFunctionsRequest $req) 查询边缘函数列表，支持函数 ID、函数名称、描述等条件的过滤。
  * @method Models\DescribeHostsSettingResponse DescribeHostsSetting(Models\DescribeHostsSettingRequest $req) 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，可通过 [DescribeL7AccSetting](https://cloud.tencent.com/document/product/1552/115819) 和 [DescribeL7AccRules](https://cloud.tencent.com/document/product/1552/115820) 来获取域名的详细配置。
+ * @method Models\DescribeIPGroupReferencesResponse DescribeIPGroupReferences(Models\DescribeIPGroupReferencesRequest $req) 获取使用 IP 分组的策略配置。
  * @method Models\DescribeIPRegionResponse DescribeIPRegion(Models\DescribeIPRegionRequest $req) 该接口可用于查询 IP 是否为 EdgeOne IP。
  * @method Models\DescribeIdentificationsResponse DescribeIdentifications(Models\DescribeIdentificationsRequest $req) 查询站点的验证信息。
  * @method Models\DescribeInferenceAPITokensResponse DescribeInferenceAPITokens(Models\DescribeInferenceAPITokensRequest $req) 查询推理 API Token 列表，返回 Token 的 ID、名称、内容和创建时间，支持分页查询。

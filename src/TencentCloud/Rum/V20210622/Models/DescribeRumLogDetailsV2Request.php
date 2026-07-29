@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置<p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
  * @method integer getLimit() 获取<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
  * @method void setLimit(integer $Limit) 设置<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
- * @method string getFilter() 获取<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
- * @method void setFilter(string $Filter) 设置<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+ * @method string getFilter() 获取<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：<a href="https://cloud.tencent.com/document/product/248/87223">日志查询相关</a></p>
+ * @method void setFilter(string $Filter) 设置<p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：<a href="https://cloud.tencent.com/document/product/248/87223">日志查询相关</a></p>
  * @method integer getEndTime() 获取<p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
  * @method void setEndTime(integer $EndTime) 设置<p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
  * @method integer getID() 获取<p>项目ID（必填）</p>
@@ -55,7 +55,7 @@ class DescribeRumLogDetailsV2Request extends AbstractModel
     public $Limit;
 
     /**
-     * @var string <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+     * @var string <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：<a href="https://cloud.tencent.com/document/product/248/87223">日志查询相关</a></p>
      */
     public $Filter;
 
@@ -83,7 +83,7 @@ class DescribeRumLogDetailsV2Request extends AbstractModel
      * @param string $OrderBy <p>排序方式 desc asc</p>
      * @param integer $StartTime <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
      * @param integer $Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
-     * @param string $Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+     * @param string $Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：<a href="https://cloud.tencent.com/document/product/248/87223">日志查询相关</a></p>
      * @param integer $EndTime <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
      * @param integer $ID <p>项目ID（必填）</p>
      * @param integer $LastTime <p>上次查询的最后一个日志的时间戳</p>

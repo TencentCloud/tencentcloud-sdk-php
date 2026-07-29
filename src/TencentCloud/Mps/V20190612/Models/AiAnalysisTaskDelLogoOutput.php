@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoiceClonedMarkFile(string $VoiceClonedMarkFile) 设置<p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErasedVideoPath() 获取<p>仅做擦除的视频结果路径</p>
+ * @method void setErasedVideoPath(string $ErasedVideoPath) 设置<p>仅做擦除的视频结果路径</p>
+ * @method string getDubbingEditInfoUrl() 获取<p>音色克隆编辑信息</p><p>用于音色克隆二次修改的编辑信息</p>
+ * @method void setDubbingEditInfoUrl(string $DubbingEditInfoUrl) 设置<p>音色克隆编辑信息</p><p>用于音色克隆二次修改的编辑信息</p>
  * @method string getFileId() 获取<p>擦除后文件的FileId。</p>
  * @method void setFileId(string $FileId) 设置<p>擦除后文件的FileId。</p>
  * @method string getOriginSubtitleFileId() 获取<p>基于画面提取的字幕文件FileId。</p>
@@ -88,6 +92,16 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
     public $VoiceClonedMarkFile;
 
     /**
+     * @var string <p>仅做擦除的视频结果路径</p>
+     */
+    public $ErasedVideoPath;
+
+    /**
+     * @var string <p>音色克隆编辑信息</p><p>用于音色克隆二次修改的编辑信息</p>
+     */
+    public $DubbingEditInfoUrl;
+
+    /**
      * @var string <p>擦除后文件的FileId。</p>
      */
     public $FileId;
@@ -113,6 +127,8 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VoiceClonedMarkFile <p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErasedVideoPath <p>仅做擦除的视频结果路径</p>
+     * @param string $DubbingEditInfoUrl <p>音色克隆编辑信息</p><p>用于音色克隆二次修改的编辑信息</p>
      * @param string $FileId <p>擦除后文件的FileId。</p>
      * @param string $OriginSubtitleFileId <p>基于画面提取的字幕文件FileId。</p>
      * @param string $TranslateSubtitleFileId <p>基于画面提取的字幕翻译文件FileId    。</p>
@@ -158,6 +174,14 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
 
         if (array_key_exists("VoiceClonedMarkFile",$param) and $param["VoiceClonedMarkFile"] !== null) {
             $this->VoiceClonedMarkFile = $param["VoiceClonedMarkFile"];
+        }
+
+        if (array_key_exists("ErasedVideoPath",$param) and $param["ErasedVideoPath"] !== null) {
+            $this->ErasedVideoPath = $param["ErasedVideoPath"];
+        }
+
+        if (array_key_exists("DubbingEditInfoUrl",$param) and $param["DubbingEditInfoUrl"] !== null) {
+            $this->DubbingEditInfoUrl = $param["DubbingEditInfoUrl"];
         }
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {

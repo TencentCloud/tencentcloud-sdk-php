@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckPhoneAndName请求参数结构体
  *
- * @method string getMobile() 获取⼿机号。
- * @method void setMobile(string $Mobile) 设置⼿机号。
- * @method string getName() 获取姓名。
- * @method void setName(string $Name) 设置姓名。
- * @method Encryption getEncryption() 获取敏感数据加密信息。
-- 对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。
-- 对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method string getMobile() 获取<p>⼿机号。</p>
+ * @method void setMobile(string $Mobile) 设置<p>⼿机号。</p>
+ * @method string getName() 获取<p>姓名。</p>
+ * @method void setName(string $Name) 设置<p>姓名。</p>
+ * @method Encryption getEncryption() 获取<p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
+ * @method void setEncryption(Encryption $Encryption) 设置<p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
  */
 class CheckPhoneAndNameRequest extends AbstractModel
 {
     /**
-     * @var string ⼿机号。
+     * @var string <p>⼿机号。</p>
      */
     public $Mobile;
 
     /**
-     * @var string 姓名。
+     * @var string <p>姓名。</p>
      */
     public $Name;
 
     /**
-     * @var Encryption 敏感数据加密信息。
-- 对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @var Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     public $Encryption;
 
     /**
-     * @param string $Mobile ⼿机号。
-     * @param string $Name 姓名。
-     * @param Encryption $Encryption 敏感数据加密信息。
-- 对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param string $Mobile <p>⼿机号。</p>
+     * @param string $Name <p>姓名。</p>
+     * @param Encryption $Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     function __construct()
     {

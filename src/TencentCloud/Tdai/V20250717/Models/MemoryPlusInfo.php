@@ -30,12 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置<p>实例状态</p>
  * @method string getRegion() 获取<p>地域</p>
  * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method integer getPayMode() 获取<p>计费模式</p><p>枚举值：</p><ul><li>-1： 免费版</li><li>0： 按量付费</li><li>1： 包年包月</li></ul>
+ * @method void setPayMode(integer $PayMode) 设置<p>计费模式</p><p>枚举值：</p><ul><li>-1： 免费版</li><li>0： 按量付费</li><li>1： 包年包月</li></ul>
+ * @method integer getAutoRenew() 获取<p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+ * @method void setAutoRenew(integer $AutoRenew) 设置<p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
  * @method integer getMemoryUsage() 获取<p>记忆条数</p>
  * @method void setMemoryUsage(integer $MemoryUsage) 设置<p>记忆条数</p>
  * @method float getCreditUsage() 获取<p>当月积分数</p>
  * @method void setCreditUsage(float $CreditUsage) 设置<p>当月积分数</p>
  * @method array getResourceTags() 获取<p>资源标签</p>
  * @method void setResourceTags(array $ResourceTags) 设置<p>资源标签</p>
+ * @method string getVersion() 获取<p>版本号</p>
+ * @method void setVersion(string $Version) 设置<p>版本号</p>
  * @method string getCreatedAt() 获取<p>创建时间</p>
  * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间</p>
  * @method string getIsolatedAt() 获取<p>隔离时间</p>
@@ -73,6 +79,16 @@ class MemoryPlusInfo extends AbstractModel
     public $Region;
 
     /**
+     * @var integer <p>计费模式</p><p>枚举值：</p><ul><li>-1： 免费版</li><li>0： 按量付费</li><li>1： 包年包月</li></ul>
+     */
+    public $PayMode;
+
+    /**
+     * @var integer <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+     */
+    public $AutoRenew;
+
+    /**
      * @var integer <p>记忆条数</p>
      */
     public $MemoryUsage;
@@ -86,6 +102,11 @@ class MemoryPlusInfo extends AbstractModel
      * @var array <p>资源标签</p>
      */
     public $ResourceTags;
+
+    /**
+     * @var string <p>版本号</p>
+     */
+    public $Version;
 
     /**
      * @var string <p>创建时间</p>
@@ -113,9 +134,12 @@ class MemoryPlusInfo extends AbstractModel
      * @param string $Description <p>描述</p>
      * @param integer $Status <p>实例状态</p>
      * @param string $Region <p>地域</p>
+     * @param integer $PayMode <p>计费模式</p><p>枚举值：</p><ul><li>-1： 免费版</li><li>0： 按量付费</li><li>1： 包年包月</li></ul>
+     * @param integer $AutoRenew <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
      * @param integer $MemoryUsage <p>记忆条数</p>
      * @param float $CreditUsage <p>当月积分数</p>
      * @param array $ResourceTags <p>资源标签</p>
+     * @param string $Version <p>版本号</p>
      * @param string $CreatedAt <p>创建时间</p>
      * @param string $IsolatedAt <p>隔离时间</p>
      * @param string $ExpiredAt <p>到期时间</p>
@@ -154,6 +178,14 @@ class MemoryPlusInfo extends AbstractModel
             $this->Region = $param["Region"];
         }
 
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
+        }
+
         if (array_key_exists("MemoryUsage",$param) and $param["MemoryUsage"] !== null) {
             $this->MemoryUsage = $param["MemoryUsage"];
         }
@@ -169,6 +201,10 @@ class MemoryPlusInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
 
         if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {

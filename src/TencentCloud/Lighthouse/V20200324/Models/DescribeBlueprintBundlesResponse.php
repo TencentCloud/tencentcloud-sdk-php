@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AddLiveWatermark返回参数结构体
+ * DescribeBlueprintBundles返回参数结构体
  *
- * @method integer getWatermarkId() 获取<p>水印ID。</p>
- * @method void setWatermarkId(integer $WatermarkId) 设置<p>水印ID。</p>
+ * @method array getBlueprintBundleSet() 获取镜像套餐详细信息列表。 
+ * @method void setBlueprintBundleSet(array $BlueprintBundleSet) 设置镜像套餐详细信息列表。 
+ * @method integer getTotalCount() 获取符合要求的套餐总数，用于分页展示。
+ * @method void setTotalCount(integer $TotalCount) 设置符合要求的套餐总数，用于分页展示。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class AddLiveWatermarkResponse extends AbstractModel
+class DescribeBlueprintBundlesResponse extends AbstractModel
 {
     /**
-     * @var integer <p>水印ID。</p>
+     * @var array 镜像套餐详细信息列表。 
      */
-    public $WatermarkId;
+    public $BlueprintBundleSet;
+
+    /**
+     * @var integer 符合要求的套餐总数，用于分页展示。
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class AddLiveWatermarkResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $WatermarkId <p>水印ID。</p>
+     * @param array $BlueprintBundleSet 镜像套餐详细信息列表。 
+     * @param integer $TotalCount 符合要求的套餐总数，用于分页展示。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class AddLiveWatermarkResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
-            $this->WatermarkId = $param["WatermarkId"];
+        if (array_key_exists("BlueprintBundleSet",$param) and $param["BlueprintBundleSet"] !== null) {
+            $this->BlueprintBundleSet = [];
+            foreach ($param["BlueprintBundleSet"] as $key => $value){
+                $obj = new BlueprintBundle();
+                $obj->deserialize($value);
+                array_push($this->BlueprintBundleSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

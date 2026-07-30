@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IPSec配置，腾讯云提供IPSec安全会话设置
  *
- * @method string getEncryptAlgorithm() 获取<p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
- * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置<p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
- * @method string getIntegrityAlgorith() 获取<p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
+ * @method string getEncryptAlgorithm() 获取<p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;</p><p>默认值：AES-CBC-128</p>
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置<p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;</p><p>默认值：AES-CBC-128</p>
+ * @method string getIntegrityAlgorith() 获取<p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;, &#39;SHA-256&#39;, &#39;SHA-512&#39;, &#39;SHA-384&#39;, &#39;SM3&#39;</p><p>默认值：SHA1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntegrityAlgorith(string $IntegrityAlgorith) 设置<p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
+ * @method void setIntegrityAlgorith(string $IntegrityAlgorith) 设置<p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;, &#39;SHA-256&#39;, &#39;SHA-512&#39;, &#39;SHA-384&#39;, &#39;SM3&#39;</p><p>默认值：SHA1</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIPSECSaLifetimeSeconds() 获取<p>IPsec SA lifetime(s)</p><p>取值范围：[180, 604800]</p><p>单位：秒</p><p>默认值：14400</p>
  * @method void setIPSECSaLifetimeSeconds(integer $IPSECSaLifetimeSeconds) 设置<p>IPsec SA lifetime(s)</p><p>取值范围：[180, 604800]</p><p>单位：秒</p><p>默认值：14400</p>
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class IPSECOptionsSpecification extends AbstractModel
 {
     /**
-     * @var string <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
+     * @var string <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;</p><p>默认值：AES-CBC-128</p>
      */
     public $EncryptAlgorithm;
 
     /**
-     * @var string <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
+     * @var string <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;, &#39;SHA-256&#39;, &#39;SHA-512&#39;, &#39;SHA-384&#39;, &#39;SM3&#39;</p><p>默认值：SHA1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -70,8 +70,8 @@ class IPSECOptionsSpecification extends AbstractModel
     public $IntegrityAlgorithm;
 
     /**
-     * @param string $EncryptAlgorithm <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
-     * @param string $IntegrityAlgorith <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
+     * @param string $EncryptAlgorithm <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;</p><p>默认值：AES-CBC-128</p>
+     * @param string $IntegrityAlgorith <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;, &#39;SHA-256&#39;, &#39;SHA-512&#39;, &#39;SHA-384&#39;, &#39;SM3&#39;</p><p>默认值：SHA1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IPSECSaLifetimeSeconds <p>IPsec SA lifetime(s)</p><p>取值范围：[180, 604800]</p><p>单位：秒</p><p>默认值：14400</p>
      * @param string $PfsDhGroup <p>PFS：可选值：&#39;NULL&#39;, &#39;DH-GROUP1&#39;, &#39;DH-GROUP2&#39;, &#39;DH-GROUP5&#39;, &#39;DH-GROUP14&#39;, &#39;DH-GROUP15&#39;,&#39;DH-GROUP16&#39;,&#39;DH-GROUP19&#39;,&#39;DH-GROUP20&#39;,&#39;DH-GROUP21&#39;,&#39;DH-GROUP24&#39;，默认为NULL</p>

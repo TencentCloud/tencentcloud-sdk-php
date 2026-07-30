@@ -20,122 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Token Plan 套餐列表项
  *
- * @method string getTeamId() 获取套餐 ID。
- * @method void setTeamId(string $TeamId) 设置套餐 ID。
- * @method string getProductType() 获取套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）
- * @method void setProductType(string $ProductType) 设置套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）
- * @method string getName() 获取套餐名称。最大 128 字符。
- * @method void setName(string $Name) 设置套餐名称。最大 128 字符。
- * @method string getAppId() 获取账号 APP ID。
- * @method void setAppId(string $AppId) 设置账号 APP ID。
- * @method string getUin() 获取主账号 UIN。
- * @method void setUin(string $Uin) 设置主账号 UIN。
- * @method string getStatus() 获取套餐状态。取值：enable（启用）、disable（停用）。
- * @method void setStatus(string $Status) 设置套餐状态。取值：enable（启用）、disable（停用）。
- * @method string getStopReason() 获取套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）
- * @method void setStopReason(string $StopReason) 设置套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）
- * @method integer getApiKeyMax() 获取可创建 API Key 上限。
- * @method void setApiKeyMax(integer $ApiKeyMax) 设置可创建 API Key 上限。
- * @method string getPrepayResourceID() 获取云计费预付费资源包 ID。
- * @method void setPrepayResourceID(string $PrepayResourceID) 设置云计费预付费资源包 ID。
- * @method string getCreator() 获取创建人。若为子账号创建的套餐，则该值为子账号UIN。
- * @method void setCreator(string $Creator) 设置创建人。若为子账号创建的套餐，则该值为子账号UIN。
- * @method string getCreatedAt() 获取创建时间。
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间。
- * @method string getUpdatedAt() 获取更新时间。
- * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间。
- * @method TokenPlanPackageInfo getPackageInfo() 获取套餐包基本信息。
- * @method void setPackageInfo(TokenPlanPackageInfo $PackageInfo) 设置套餐包基本信息。
- * @method integer getAutoRenewFlag() 获取是否开启自动续费。取值：0（未开启），1（开启）
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置是否开启自动续费。取值：0（未开启），1（开启）
+ * @method string getTeamId() 获取<p>套餐 ID。</p>
+ * @method void setTeamId(string $TeamId) 设置<p>套餐 ID。</p>
+ * @method string getProductType() 获取<p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）</p>
+ * @method void setProductType(string $ProductType) 设置<p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）</p>
+ * @method string getName() 获取<p>套餐名称。最大 128 字符。</p>
+ * @method void setName(string $Name) 设置<p>套餐名称。最大 128 字符。</p>
+ * @method string getAppId() 获取<p>账号 APP ID。</p>
+ * @method void setAppId(string $AppId) 设置<p>账号 APP ID。</p>
+ * @method string getUin() 获取<p>主账号 UIN。</p>
+ * @method void setUin(string $Uin) 设置<p>主账号 UIN。</p>
+ * @method string getStatus() 获取<p>套餐状态。取值：enable（启用）、disable（停用）。</p>
+ * @method void setStatus(string $Status) 设置<p>套餐状态。取值：enable（启用）、disable（停用）。</p>
+ * @method string getStopReason() 获取<p>套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）</p>
+ * @method void setStopReason(string $StopReason) 设置<p>套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）</p>
+ * @method integer getApiKeyMax() 获取<p>可创建 API Key 上限。</p>
+ * @method void setApiKeyMax(integer $ApiKeyMax) 设置<p>可创建 API Key 上限。</p>
+ * @method integer getApiKeyCount() 获取<p>当前已创建的 APIKey 数量</p>
+ * @method void setApiKeyCount(integer $ApiKeyCount) 设置<p>当前已创建的 APIKey 数量</p>
+ * @method string getPrepayResourceID() 获取<p>云计费预付费资源包 ID。</p>
+ * @method void setPrepayResourceID(string $PrepayResourceID) 设置<p>云计费预付费资源包 ID。</p>
+ * @method string getCreator() 获取<p>创建人。若为子账号创建的套餐，则该值为子账号UIN。</p>
+ * @method void setCreator(string $Creator) 设置<p>创建人。若为子账号创建的套餐，则该值为子账号UIN。</p>
+ * @method string getCreatedAt() 获取<p>创建时间。</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间。</p>
+ * @method string getUpdatedAt() 获取<p>更新时间。</p>
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>更新时间。</p>
+ * @method TokenPlanPackageInfo getPackageInfo() 获取<p>套餐包基本信息。</p>
+ * @method void setPackageInfo(TokenPlanPackageInfo $PackageInfo) 设置<p>套餐包基本信息。</p>
+ * @method integer getAutoRenewFlag() 获取<p>是否开启自动续费。取值：0（未开启），1（开启）</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>是否开启自动续费。取值：0（未开启），1（开启）</p>
  */
 class TokenPlanListItem extends AbstractModel
 {
     /**
-     * @var string 套餐 ID。
+     * @var string <p>套餐 ID。</p>
      */
     public $TeamId;
 
     /**
-     * @var string 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）
+     * @var string <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）</p>
      */
     public $ProductType;
 
     /**
-     * @var string 套餐名称。最大 128 字符。
+     * @var string <p>套餐名称。最大 128 字符。</p>
      */
     public $Name;
 
     /**
-     * @var string 账号 APP ID。
+     * @var string <p>账号 APP ID。</p>
      */
     public $AppId;
 
     /**
-     * @var string 主账号 UIN。
+     * @var string <p>主账号 UIN。</p>
      */
     public $Uin;
 
     /**
-     * @var string 套餐状态。取值：enable（启用）、disable（停用）。
+     * @var string <p>套餐状态。取值：enable（启用）、disable（停用）。</p>
      */
     public $Status;
 
     /**
-     * @var string 套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）
+     * @var string <p>套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）</p>
      */
     public $StopReason;
 
     /**
-     * @var integer 可创建 API Key 上限。
+     * @var integer <p>可创建 API Key 上限。</p>
      */
     public $ApiKeyMax;
 
     /**
-     * @var string 云计费预付费资源包 ID。
+     * @var integer <p>当前已创建的 APIKey 数量</p>
+     */
+    public $ApiKeyCount;
+
+    /**
+     * @var string <p>云计费预付费资源包 ID。</p>
      */
     public $PrepayResourceID;
 
     /**
-     * @var string 创建人。若为子账号创建的套餐，则该值为子账号UIN。
+     * @var string <p>创建人。若为子账号创建的套餐，则该值为子账号UIN。</p>
      */
     public $Creator;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string 更新时间。
+     * @var string <p>更新时间。</p>
      */
     public $UpdatedAt;
 
     /**
-     * @var TokenPlanPackageInfo 套餐包基本信息。
+     * @var TokenPlanPackageInfo <p>套餐包基本信息。</p>
      */
     public $PackageInfo;
 
     /**
-     * @var integer 是否开启自动续费。取值：0（未开启），1（开启）
+     * @var integer <p>是否开启自动续费。取值：0（未开启），1（开启）</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @param string $TeamId 套餐 ID。
-     * @param string $ProductType 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）
-     * @param string $Name 套餐名称。最大 128 字符。
-     * @param string $AppId 账号 APP ID。
-     * @param string $Uin 主账号 UIN。
-     * @param string $Status 套餐状态。取值：enable（启用）、disable（停用）。
-     * @param string $StopReason 套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）
-     * @param integer $ApiKeyMax 可创建 API Key 上限。
-     * @param string $PrepayResourceID 云计费预付费资源包 ID。
-     * @param string $Creator 创建人。若为子账号创建的套餐，则该值为子账号UIN。
-     * @param string $CreatedAt 创建时间。
-     * @param string $UpdatedAt 更新时间。
-     * @param TokenPlanPackageInfo $PackageInfo 套餐包基本信息。
-     * @param integer $AutoRenewFlag 是否开启自动续费。取值：0（未开启），1（开启）
+     * @param string $TeamId <p>套餐 ID。</p>
+     * @param string $ProductType <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）</p>
+     * @param string $Name <p>套餐名称。最大 128 字符。</p>
+     * @param string $AppId <p>账号 APP ID。</p>
+     * @param string $Uin <p>主账号 UIN。</p>
+     * @param string $Status <p>套餐状态。取值：enable（启用）、disable（停用）。</p>
+     * @param string $StopReason <p>套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）</p>
+     * @param integer $ApiKeyMax <p>可创建 API Key 上限。</p>
+     * @param integer $ApiKeyCount <p>当前已创建的 APIKey 数量</p>
+     * @param string $PrepayResourceID <p>云计费预付费资源包 ID。</p>
+     * @param string $Creator <p>创建人。若为子账号创建的套餐，则该值为子账号UIN。</p>
+     * @param string $CreatedAt <p>创建时间。</p>
+     * @param string $UpdatedAt <p>更新时间。</p>
+     * @param TokenPlanPackageInfo $PackageInfo <p>套餐包基本信息。</p>
+     * @param integer $AutoRenewFlag <p>是否开启自动续费。取值：0（未开启），1（开启）</p>
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class TokenPlanListItem extends AbstractModel
 
         if (array_key_exists("ApiKeyMax",$param) and $param["ApiKeyMax"] !== null) {
             $this->ApiKeyMax = $param["ApiKeyMax"];
+        }
+
+        if (array_key_exists("ApiKeyCount",$param) and $param["ApiKeyCount"] !== null) {
+            $this->ApiKeyCount = $param["ApiKeyCount"];
         }
 
         if (array_key_exists("PrepayResourceID",$param) and $param["PrepayResourceID"] !== null) {

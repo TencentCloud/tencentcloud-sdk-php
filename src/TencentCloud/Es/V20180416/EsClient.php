@@ -108,6 +108,7 @@ use TencentCloud\Es\V20180416\Models as Models;
 - EsAcl：修改访问控制列表
 - CosBackUp: 设置集群COS自动备份信息
 以上参数组合只能传递一种，多传或少传均会导致请求失败
+ * @method Models\UpdateInstancePublicAccessResponse UpdateInstancePublicAccess(Models\UpdateInstancePublicAccessRequest $req) 更新ES集群实例的Kibana、cerebro公网开关
  * @method Models\UpdateIpTraceStatusResponse UpdateIpTraceStatus(Models\UpdateIpTraceStatusRequest $req) 更新ES集群IP溯源状态
  * @method Models\UpdateJdkResponse UpdateJdk(Models\UpdateJdkRequest $req) 更新实例Jdk配置
  * @method Models\UpdateLogstashInstanceResponse UpdateLogstashInstance(Models\UpdateLogstashInstanceRequest $req) 对集群进行节点规格变更，修改实例名称，修改配置，等操作。参数中InstanceId为必传参数，参数传递组合及含义如下：

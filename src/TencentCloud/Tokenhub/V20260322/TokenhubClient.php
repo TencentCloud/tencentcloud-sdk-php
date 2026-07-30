@@ -29,7 +29,7 @@ use TencentCloud\Tokenhub\V20260322\Models as Models;
  * @method Models\CreateEndpointResponse CreateEndpoint(Models\CreateEndpointRequest $req) 创建推理服务。
 
 创建一个在线推理服务，创建成功后返回推理服务 ID。
- * @method Models\CreateGlossaryResponse CreateGlossary(Models\CreateGlossaryRequest $req) 创建术语库。(单个用户默认最多可以创建50个术语库，支持加白)
+ * @method Models\CreateGlossaryResponse CreateGlossary(Models\CreateGlossaryRequest $req) 创建术语库。(单个用户默认最多可以创建50个术语库)
 
 在当前应用下创建一个新的翻译术语库，用于自定义源语言到目标语言的术语映射。创建成功后返回术语库 ID，可通过该 ID 进一步管理术语条目。
  * @method Models\CreateGlossaryEntriesResponse CreateGlossaryEntries(Models\CreateGlossaryEntriesRequest $req) 批量创建术语条目。

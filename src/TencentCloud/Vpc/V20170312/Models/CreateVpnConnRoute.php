@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建路由添加的指向此通道的路由
  *
- * @method string getDestinationCidrBlock() 获取目的端IDC网段
- * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的端IDC网段
- * @method integer getPriority() 获取优先级；可选值0，100。
- * @method void setPriority(integer $Priority) 设置优先级；可选值0，100。
+ * @method string getDestinationCidrBlock() 获取<p>目的端IDC网段</p>
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置<p>目的端IDC网段</p>
+ * @method integer getPriority() 获取<p>优先级；可选值0，100。</p>
+ * @method void setPriority(integer $Priority) 设置<p>优先级；可选值0，100。</p>
+ * @method string getDescription() 获取<p>路由备注；可选值</p>
+ * @method void setDescription(string $Description) 设置<p>路由备注；可选值</p>
  */
 class CreateVpnConnRoute extends AbstractModel
 {
     /**
-     * @var string 目的端IDC网段
+     * @var string <p>目的端IDC网段</p>
      */
     public $DestinationCidrBlock;
 
     /**
-     * @var integer 优先级；可选值0，100。
+     * @var integer <p>优先级；可选值0，100。</p>
      */
     public $Priority;
 
     /**
-     * @param string $DestinationCidrBlock 目的端IDC网段
-     * @param integer $Priority 优先级；可选值0，100。
+     * @var string <p>路由备注；可选值</p>
+     */
+    public $Description;
+
+    /**
+     * @param string $DestinationCidrBlock <p>目的端IDC网段</p>
+     * @param integer $Priority <p>优先级；可选值0，100。</p>
+     * @param string $Description <p>路由备注；可选值</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateVpnConnRoute extends AbstractModel
 
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
             $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

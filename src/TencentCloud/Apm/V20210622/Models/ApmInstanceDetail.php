@@ -134,6 +134,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) 设置<p>URL数字分段收敛阈值</p>
  * @method string getLogSpanIdKey() 获取<p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
  * @method void setLogSpanIdKey(string $LogSpanIdKey) 设置<p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
+ * @method integer getDisableAiAbility() 获取<p>是否禁用 AI 能力</p><p>单位：无</p>
+ * @method void setDisableAiAbility(integer $DisableAiAbility) 设置<p>是否禁用 AI 能力</p><p>单位：无</p>
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -423,6 +425,11 @@ class ApmInstanceDetail extends AbstractModel
     public $LogSpanIdKey;
 
     /**
+     * @var integer <p>是否禁用 AI 能力</p><p>单位：无</p>
+     */
+    public $DisableAiAbility;
+
+    /**
      * @param string $InstanceId <p>业务系统 ID</p>
      * @param string $Name <p>业务系统名</p>
      * @param string $Description <p>业务系统描述信息</p>
@@ -480,6 +487,7 @@ class ApmInstanceDetail extends AbstractModel
      * @param integer $UrlLongSegmentThreshold <p>URL长分段收敛阈值</p>
      * @param integer $UrlNumberSegmentThreshold <p>URL数字分段收敛阈值</p>
      * @param string $LogSpanIdKey <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
+     * @param integer $DisableAiAbility <p>是否禁用 AI 能力</p><p>单位：无</p>
      */
     function __construct()
     {
@@ -725,6 +733,10 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("LogSpanIdKey",$param) and $param["LogSpanIdKey"] !== null) {
             $this->LogSpanIdKey = $param["LogSpanIdKey"];
+        }
+
+        if (array_key_exists("DisableAiAbility",$param) and $param["DisableAiAbility"] !== null) {
+            $this->DisableAiAbility = $param["DisableAiAbility"];
         }
     }
 }

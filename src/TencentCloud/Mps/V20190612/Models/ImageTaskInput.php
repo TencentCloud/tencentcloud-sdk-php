@@ -46,6 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiPosterSuiteConfig(AiPosterSuiteConfig $AiPosterSuiteConfig) 设置<p>Ai套图配置。</p>
  * @method CreateImageConfig getCreateImageConfig() 获取<p>生图任务配置</p>
  * @method void setCreateImageConfig(CreateImageConfig $CreateImageConfig) 设置<p>生图任务配置</p>
+ * @method AiCutoutConfig getAiCutoutConfig() 获取<p>Ai抠图配置</p>
+ * @method void setAiCutoutConfig(AiCutoutConfig $AiCutoutConfig) 设置<p>Ai抠图配置</p>
+ * @method AiExpansionConfig getAiExpansionConfig() 获取<p>Ai扩图配置</p>
+ * @method void setAiExpansionConfig(AiExpansionConfig $AiExpansionConfig) 设置<p>Ai扩图配置</p>
+ * @method AiStoryboardConfig getAiStoryboardConfig() 获取<p>Ai分镜拆解配置</p>
+ * @method void setAiStoryboardConfig(AiStoryboardConfig $AiStoryboardConfig) 设置<p>Ai分镜拆解配置</p>
  */
 class ImageTaskInput extends AbstractModel
 {
@@ -99,6 +105,21 @@ class ImageTaskInput extends AbstractModel
     public $CreateImageConfig;
 
     /**
+     * @var AiCutoutConfig <p>Ai抠图配置</p>
+     */
+    public $AiCutoutConfig;
+
+    /**
+     * @var AiExpansionConfig <p>Ai扩图配置</p>
+     */
+    public $AiExpansionConfig;
+
+    /**
+     * @var AiStoryboardConfig <p>Ai分镜拆解配置</p>
+     */
+    public $AiStoryboardConfig;
+
+    /**
      * @param ImageEncodeConfig $EncodeConfig <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageEnhanceConfig $EnhanceConfig <p>图片增强配置。</p>
@@ -112,6 +133,9 @@ class ImageTaskInput extends AbstractModel
      * @param AiTryOnConfig $AiTryOnConfig <p>Ai 换装配置。</p>
      * @param AiPosterSuiteConfig $AiPosterSuiteConfig <p>Ai套图配置。</p>
      * @param CreateImageConfig $CreateImageConfig <p>生图任务配置</p>
+     * @param AiCutoutConfig $AiCutoutConfig <p>Ai抠图配置</p>
+     * @param AiExpansionConfig $AiExpansionConfig <p>Ai扩图配置</p>
+     * @param AiStoryboardConfig $AiStoryboardConfig <p>Ai分镜拆解配置</p>
      */
     function __construct()
     {
@@ -169,6 +193,21 @@ class ImageTaskInput extends AbstractModel
         if (array_key_exists("CreateImageConfig",$param) and $param["CreateImageConfig"] !== null) {
             $this->CreateImageConfig = new CreateImageConfig();
             $this->CreateImageConfig->deserialize($param["CreateImageConfig"]);
+        }
+
+        if (array_key_exists("AiCutoutConfig",$param) and $param["AiCutoutConfig"] !== null) {
+            $this->AiCutoutConfig = new AiCutoutConfig();
+            $this->AiCutoutConfig->deserialize($param["AiCutoutConfig"]);
+        }
+
+        if (array_key_exists("AiExpansionConfig",$param) and $param["AiExpansionConfig"] !== null) {
+            $this->AiExpansionConfig = new AiExpansionConfig();
+            $this->AiExpansionConfig->deserialize($param["AiExpansionConfig"]);
+        }
+
+        if (array_key_exists("AiStoryboardConfig",$param) and $param["AiStoryboardConfig"] !== null) {
+            $this->AiStoryboardConfig = new AiStoryboardConfig();
+            $this->AiStoryboardConfig->deserialize($param["AiStoryboardConfig"]);
         }
     }
 }

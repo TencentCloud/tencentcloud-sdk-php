@@ -102,6 +102,7 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CreateLiveTranscodeTemplateResponse CreateLiveTranscodeTemplate(Models\CreateLiveTranscodeTemplateRequest $req) 创建转码模板，数量上限：50，成功返回模板id后，需要调用[CreateLiveTranscodeRule](/document/product/267/32647)接口，将返回的模板id绑定到流使用。
 <br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
  * @method Models\CreateLiveWatermarkRuleResponse CreateLiveWatermarkRule(Models\CreateLiveWatermarkRuleRequest $req) 创建水印规则，需要先调用[AddLiveWatermark](/document/product/267/30154)接口添加水印，将返回的水印id绑定到流使用。
+创建规则后生效时间为10分钟，规则仅对推流时间晚于配置生效时间的流有效，对正在直播的流不生效。
  * @method Models\CreatePullStreamConfigResponse CreatePullStreamConfig(Models\CreatePullStreamConfigRequest $req) 创建临时拉流转推任务，目前限制添加10条任务。
 该接口已下线,请使用新接口 CreateLivePullStreamTask。
 
@@ -317,6 +318,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 查询某段时间top n客户端ip汇总信息（暂支持top 1000）
  * @method Models\DescribeTranscodeTaskNumResponse DescribeTranscodeTaskNum(Models\DescribeTranscodeTaskNumRequest $req) 查询转码任务数。
  * @method Models\DescribeUploadStreamNumsResponse DescribeUploadStreamNums(Models\DescribeUploadStreamNumsRequest $req) 直播上行路数查询。
+数据延迟3小时左右。
  * @method Models\DescribeVisitTopSumInfoListResponse DescribeVisitTopSumInfoList(Models\DescribeVisitTopSumInfoListRequest $req) 查询某时间段top n的域名或流id信息（暂支持top 1000）。
  * @method Models\DropLiveStreamResponse DropLiveStream(Models\DropLiveStreamRequest $req) 断开推流连接，但可以重新推流。
 注：对已经不活跃的流，调用该断流接口时，接口返回成功。

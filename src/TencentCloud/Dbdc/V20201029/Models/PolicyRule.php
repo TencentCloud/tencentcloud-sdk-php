@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceModule(string $ServiceModule) 设置<p>协议端口模板 ID</p>
  * @method string getAddressModule() 获取<p>IP 地址模板 ID</p>
  * @method void setAddressModule(string $AddressModule) 设置<p>IP 地址模板 ID</p>
- * @method string getId() 获取<p>规则 ID</p>
- * @method void setId(string $Id) 设置<p>规则 ID</p>
+ * @method string getId() 获取<p>安全组 ID</p>
+ * @method void setId(string $Id) 设置<p>安全组 ID</p>
  * @method string getDesc() 获取<p>规则备注描述</p>
  * @method void setDesc(string $Desc) 设置<p>规则备注描述</p>
  */
@@ -70,7 +70,7 @@ class PolicyRule extends AbstractModel
     public $AddressModule;
 
     /**
-     * @var string <p>规则 ID</p>
+     * @var string <p>安全组 ID</p>
      */
     public $Id;
 
@@ -86,7 +86,7 @@ class PolicyRule extends AbstractModel
      * @param string $IpProtocol <p>协议类型，如 tcp、udp、icmp、ALL</p>
      * @param string $ServiceModule <p>协议端口模板 ID</p>
      * @param string $AddressModule <p>IP 地址模板 ID</p>
-     * @param string $Id <p>规则 ID</p>
+     * @param string $Id <p>安全组 ID</p>
      * @param string $Desc <p>规则备注描述</p>
      */
     function __construct()

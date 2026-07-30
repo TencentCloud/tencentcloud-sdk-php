@@ -91,6 +91,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) 本接口（DeleteSnapshots）用于删除快照。
 快照必须处于 NORMAL 状态，快照状态可以通过 <a href="https://cloud.tencent.com/document/product/1207/54388" target="_blank">DescribeSnapshots</a> 接口查询，见输出参数中 SnapshotState 字段解释。
  * @method Models\DescribeAllScenesResponse DescribeAllScenes(Models\DescribeAllScenesRequest $req) 本接口(DescribeAllScenes)用于查询全地域使用场景列表。
+ * @method Models\DescribeBlueprintBundlesResponse DescribeBlueprintBundles(Models\DescribeBlueprintBundlesRequest $req) 本接口(DescribeBlueprintBundles)用于查询镜像所对应的套餐。当前仅支持查询镜像类型为游戏专区的镜像ID。
  * @method Models\DescribeBlueprintInstancesResponse DescribeBlueprintInstances(Models\DescribeBlueprintInstancesRequest $req) 本接口（DescribeBlueprintInstances）用于查询镜像实例信息。
  * @method Models\DescribeBlueprintsResponse DescribeBlueprints(Models\DescribeBlueprintsRequest $req) 本接口（DescribeBlueprints）用于查询镜像信息。该接口返回的镜像类型有：自定义镜像、共享镜像、公共镜像。
  * @method Models\DescribeBlueprintsShareAcrossAccountInfosResponse DescribeBlueprintsShareAcrossAccountInfos(Models\DescribeBlueprintsShareAcrossAccountInfosRequest $req) 本接口（DescribeBlueprintsShareAcrossAccountInfos）用于查询一个或多个镜像的跨账号共享信息。

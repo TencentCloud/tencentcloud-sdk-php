@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoteFqdnName(string $RemoteFqdnName) 设置<p>对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填</p>
  * @method string getDhGroupName() 获取<p>DH group，指定IKE交换密钥时使用的DH组，可选值：&#39;GROUP1&#39;, &#39;GROUP2&#39;, &#39;GROUP5&#39;, &#39;GROUP14&#39;, &#39;GROUP15&#39;, &#39;GROUP16&#39;, &#39;GROUP19&#39;, &#39;GROUP20&#39;, &#39;GROUP21&#39;, &#39;GROUP24&#39;，默认是GROUP1。</p>
  * @method void setDhGroupName(string $DhGroupName) 设置<p>DH group，指定IKE交换密钥时使用的DH组，可选值：&#39;GROUP1&#39;, &#39;GROUP2&#39;, &#39;GROUP5&#39;, &#39;GROUP14&#39;, &#39;GROUP15&#39;, &#39;GROUP16&#39;, &#39;GROUP19&#39;, &#39;GROUP20&#39;, &#39;GROUP21&#39;, &#39;GROUP24&#39;，默认是GROUP1。</p>
- * @method integer getIKESaLifetimeSeconds() 获取<p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800</p>
- * @method void setIKESaLifetimeSeconds(integer $IKESaLifetimeSeconds) 设置<p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800</p>
- * @method string getIKEVersion() 获取<p>IKE版本</p>
- * @method void setIKEVersion(string $IKEVersion) 设置<p>IKE版本</p>
+ * @method integer getIKESaLifetimeSeconds() 获取<p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期</p><p>取值范围：[60, 604800]</p><p>默认值：86400</p>
+ * @method void setIKESaLifetimeSeconds(integer $IKESaLifetimeSeconds) 设置<p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期</p><p>取值范围：[60, 604800]</p><p>默认值：86400</p>
+ * @method string getIKEVersion() 获取<p>IKE版本</p><p>枚举值：</p><ul><li>IKEV1： IKEV1版本</li><li>IKEV2： IKEV2版本</li></ul><p>默认值：IKEV1</p>
+ * @method void setIKEVersion(string $IKEVersion) 设置<p>IKE版本</p><p>枚举值：</p><ul><li>IKEV1： IKEV1版本</li><li>IKEV2： IKEV2版本</li></ul><p>默认值：IKEV1</p>
  */
 class IKEOptionsSpecification extends AbstractModel
 {
@@ -98,12 +98,12 @@ class IKEOptionsSpecification extends AbstractModel
     public $DhGroupName;
 
     /**
-     * @var integer <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800</p>
+     * @var integer <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期</p><p>取值范围：[60, 604800]</p><p>默认值：86400</p>
      */
     public $IKESaLifetimeSeconds;
 
     /**
-     * @var string <p>IKE版本</p>
+     * @var string <p>IKE版本</p><p>枚举值：</p><ul><li>IKEV1： IKEV1版本</li><li>IKEV2： IKEV2版本</li></ul><p>默认值：IKEV1</p>
      */
     public $IKEVersion;
 
@@ -118,8 +118,8 @@ class IKEOptionsSpecification extends AbstractModel
      * @param string $LocalFqdnName <p>本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填</p>
      * @param string $RemoteFqdnName <p>对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填</p>
      * @param string $DhGroupName <p>DH group，指定IKE交换密钥时使用的DH组，可选值：&#39;GROUP1&#39;, &#39;GROUP2&#39;, &#39;GROUP5&#39;, &#39;GROUP14&#39;, &#39;GROUP15&#39;, &#39;GROUP16&#39;, &#39;GROUP19&#39;, &#39;GROUP20&#39;, &#39;GROUP21&#39;, &#39;GROUP24&#39;，默认是GROUP1。</p>
-     * @param integer $IKESaLifetimeSeconds <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800</p>
-     * @param string $IKEVersion <p>IKE版本</p>
+     * @param integer $IKESaLifetimeSeconds <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期</p><p>取值范围：[60, 604800]</p><p>默认值：86400</p>
+     * @param string $IKEVersion <p>IKE版本</p><p>枚举值：</p><ul><li>IKEV1： IKEV1版本</li><li>IKEV2： IKEV2版本</li></ul><p>默认值：IKEV1</p>
      */
     function __construct()
     {

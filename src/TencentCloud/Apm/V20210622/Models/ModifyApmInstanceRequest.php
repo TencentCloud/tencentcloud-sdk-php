@@ -106,12 +106,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) 设置<p>URL数字分段收敛阈值</p>
  * @method string getLogSpanIdKey() 获取<p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
  * @method void setLogSpanIdKey(string $LogSpanIdKey) 设置<p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
- * @method boolean getEnableHeadSampler() 获取<p>是否开启探针头采样</p>
- * @method void setEnableHeadSampler(boolean $EnableHeadSampler) 设置<p>是否开启探针头采样</p>
- * @method string getHeadSamplerType() 获取<p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
- * @method void setHeadSamplerType(string $HeadSamplerType) 设置<p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
- * @method integer getHeadSamplerArg() 获取<p>头采采样率</p><p>取值范围：[0, 100]</p>
- * @method void setHeadSamplerArg(integer $HeadSamplerArg) 设置<p>头采采样率</p><p>取值范围：[0, 100]</p>
+ * @method boolean getEnableHeadSampler() 获取<p>是否开启探针头采样</p><p>（受限）</p>
+ * @method void setEnableHeadSampler(boolean $EnableHeadSampler) 设置<p>是否开启探针头采样</p><p>（受限）</p>
+ * @method string getHeadSamplerType() 获取<p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul><p>（受限）</p>
+ * @method void setHeadSamplerType(string $HeadSamplerType) 设置<p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul><p>（受限）</p>
+ * @method integer getHeadSamplerArg() 获取<p>头采采样率</p><p>取值范围：[0, 100]</p><p>（受限）</p>
+ * @method void setHeadSamplerArg(integer $HeadSamplerArg) 设置<p>头采采样率</p><p>取值范围：[0, 100]</p><p>（受限）</p>
+ * @method integer getDisableAiAbility() 获取<p>是否禁用 AI 能力</p><p>单位：无</p>
+ * @method void setDisableAiAbility(integer $DisableAiAbility) 设置<p>是否禁用 AI 能力</p><p>单位：无</p>
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -331,19 +333,24 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $LogSpanIdKey;
 
     /**
-     * @var boolean <p>是否开启探针头采样</p>
+     * @var boolean <p>是否开启探针头采样</p><p>（受限）</p>
      */
     public $EnableHeadSampler;
 
     /**
-     * @var string <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
+     * @var string <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul><p>（受限）</p>
      */
     public $HeadSamplerType;
 
     /**
-     * @var integer <p>头采采样率</p><p>取值范围：[0, 100]</p>
+     * @var integer <p>头采采样率</p><p>取值范围：[0, 100]</p><p>（受限）</p>
      */
     public $HeadSamplerArg;
+
+    /**
+     * @var integer <p>是否禁用 AI 能力</p><p>单位：无</p>
+     */
+    public $DisableAiAbility;
 
     /**
      * @param string $InstanceId <p>业务系统 ID</p>
@@ -389,9 +396,10 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param integer $UrlLongSegmentThreshold <p>URL长分段收敛阈值</p>
      * @param integer $UrlNumberSegmentThreshold <p>URL数字分段收敛阈值</p>
      * @param string $LogSpanIdKey <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
-     * @param boolean $EnableHeadSampler <p>是否开启探针头采样</p>
-     * @param string $HeadSamplerType <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
-     * @param integer $HeadSamplerArg <p>头采采样率</p><p>取值范围：[0, 100]</p>
+     * @param boolean $EnableHeadSampler <p>是否开启探针头采样</p><p>（受限）</p>
+     * @param string $HeadSamplerType <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul><p>（受限）</p>
+     * @param integer $HeadSamplerArg <p>头采采样率</p><p>取值范围：[0, 100]</p><p>（受限）</p>
+     * @param integer $DisableAiAbility <p>是否禁用 AI 能力</p><p>单位：无</p>
      */
     function __construct()
     {
@@ -593,6 +601,10 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("HeadSamplerArg",$param) and $param["HeadSamplerArg"] !== null) {
             $this->HeadSamplerArg = $param["HeadSamplerArg"];
+        }
+
+        if (array_key_exists("DisableAiAbility",$param) and $param["DisableAiAbility"] !== null) {
+            $this->DisableAiAbility = $param["DisableAiAbility"];
         }
     }
 }

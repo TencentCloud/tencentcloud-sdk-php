@@ -78,6 +78,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoArchive(string $AutoArchive) 设置<p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
  * @method boolean getFromSaveBackup() 获取<p>是否从保存备份中恢复</p>
  * @method void setFromSaveBackup(boolean $FromSaveBackup) 设置<p>是否从保存备份中恢复</p>
+ * @method string getSyncWay() 获取<p>同步方式。可选值：async、semisync、sync，默认异步。</p>
+ * @method void setSyncWay(string $SyncWay) 设置<p>同步方式。可选值：async、semisync、sync，默认异步。</p>
+ * @method integer getSemiSyncTimeout() 获取<p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) 设置<p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+ * @method string getSlaveZone() 获取<p>备可用区</p>
+ * @method void setSlaveZone(string $SlaveZone) 设置<p>备可用区</p>
  */
 class RollbackToNewClusterRequest extends AbstractModel
 {
@@ -227,6 +233,21 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $FromSaveBackup;
 
     /**
+     * @var string <p>同步方式。可选值：async、semisync、sync，默认异步。</p>
+     */
+    public $SyncWay;
+
+    /**
+     * @var integer <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+     */
+    public $SemiSyncTimeout;
+
+    /**
+     * @var string <p>备可用区</p>
+     */
+    public $SlaveZone;
+
+    /**
      * @param string $Zone <p>可用区</p>
      * @param string $OriginalClusterId <p>回档时，传入源集群ID，用于查找源poolId</p>
      * @param string $UniqVpcId <p>所属VPC网络ID</p>
@@ -256,6 +277,9 @@ class RollbackToNewClusterRequest extends AbstractModel
      * @param integer $ProjectId <p>项目id</p>
      * @param string $AutoArchive <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
      * @param boolean $FromSaveBackup <p>是否从保存备份中恢复</p>
+     * @param string $SyncWay <p>同步方式。可选值：async、semisync、sync，默认异步。</p>
+     * @param integer $SemiSyncTimeout <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+     * @param string $SlaveZone <p>备可用区</p>
      */
     function __construct()
     {
@@ -409,6 +433,18 @@ class RollbackToNewClusterRequest extends AbstractModel
 
         if (array_key_exists("FromSaveBackup",$param) and $param["FromSaveBackup"] !== null) {
             $this->FromSaveBackup = $param["FromSaveBackup"];
+        }
+
+        if (array_key_exists("SyncWay",$param) and $param["SyncWay"] !== null) {
+            $this->SyncWay = $param["SyncWay"];
+        }
+
+        if (array_key_exists("SemiSyncTimeout",$param) and $param["SemiSyncTimeout"] !== null) {
+            $this->SemiSyncTimeout = $param["SemiSyncTimeout"];
+        }
+
+        if (array_key_exists("SlaveZone",$param) and $param["SlaveZone"] !== null) {
+            $this->SlaveZone = $param["SlaveZone"];
         }
     }
 }

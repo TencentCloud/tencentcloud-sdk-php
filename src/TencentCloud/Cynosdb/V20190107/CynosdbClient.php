@@ -255,7 +255,9 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\SwitchClusterVpcResponse SwitchClusterVpc(Models\SwitchClusterVpcRequest $req) 本接口（SwitchClusterVpc）用于更换集群vpc。
  * @method Models\SwitchClusterZoneResponse SwitchClusterZone(Models\SwitchClusterZoneRequest $req) 本接口（SwitchClusterZone）用于切换集群的主备可用区。
  * @method Models\SwitchProxyVpcResponse SwitchProxyVpc(Models\SwitchProxyVpcRequest $req) 本接口（SwitchProxyVpc）用于更换数据库代理vpc。
+ * @method Models\TransferClusterPrepayToPostpayResponse TransferClusterPrepayToPostpay(Models\TransferClusterPrepayToPostpayRequest $req) 本接口（TransferClusterPrepayToPostpay）用于将预付费集群转为后付费集群
  * @method Models\TransferClusterZoneResponse TransferClusterZone(Models\TransferClusterZoneRequest $req) 本接口（TransferClusterZone）用于发起跨可用区迁移。
+ * @method Models\TransferStoragePrepayToPostpayResponse TransferStoragePrepayToPostpay(Models\TransferStoragePrepayToPostpayRequest $req) 本接口（TransferStoragePrepayToPostpay）用于将预付费存储转为后付费存储
  * @method Models\UnbindClusterResourcePackagesResponse UnbindClusterResourcePackages(Models\UnbindClusterResourcePackagesRequest $req) 本接口（UnbindClusterResourcePackages）用于解除资源包与集群之间的绑定关系。
  * @method Models\UpgradeClusterVersionResponse UpgradeClusterVersion(Models\UpgradeClusterVersionRequest $req) 本接口（UpgradeClusterVersion）用于更新内核小版本。
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 本接口（UpgradeInstance）用于实例变配。

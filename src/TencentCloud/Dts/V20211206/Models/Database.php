@@ -20,146 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 需要同步的库表对象
  *
- * @method string getDbName() 获取需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
- * @method void setDbName(string $DbName) 设置需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
- * @method string getNewDbName() 获取迁移或同步后的库名，默认与源库相同
- * @method void setNewDbName(string $NewDbName) 设置迁移或同步后的库名，默认与源库相同
- * @method string getDbMode() 获取DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。
- * @method void setDbMode(string $DbMode) 设置DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。
- * @method string getSchemaName() 获取迁移或同步的 schema
- * @method void setSchemaName(string $SchemaName) 设置迁移或同步的 schema
- * @method string getNewSchemaName() 获取迁移或同步后的 schema name
- * @method void setNewSchemaName(string $NewSchemaName) 设置迁移或同步后的 schema name
- * @method string getTableMode() 获取表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。
- * @method void setTableMode(string $TableMode) 设置表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。
- * @method array getTables() 获取表图对象集合，当 TableMode 为 Partial 时，此项需要填写
- * @method void setTables(array $Tables) 设置表图对象集合，当 TableMode 为 Partial 时，此项需要填写
- * @method string getViewMode() 获取视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。
- * @method void setViewMode(string $ViewMode) 设置视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。
- * @method array getViews() 获取视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写
- * @method void setViews(array $Views) 设置视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写
- * @method string getFunctionMode() 获取选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
- * @method void setFunctionMode(string $FunctionMode) 设置选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
- * @method array getFunctions() 获取FunctionMode取值为Partial时需要填写
- * @method void setFunctions(array $Functions) 设置FunctionMode取值为Partial时需要填写
- * @method string getProcedureMode() 获取选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
- * @method void setProcedureMode(string $ProcedureMode) 设置选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
- * @method array getProcedures() 获取ProcedureMode取值为Partial时需要填写
- * @method void setProcedures(array $Procedures) 设置ProcedureMode取值为Partial时需要填写
- * @method string getTriggerMode() 获取触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
- * @method void setTriggerMode(string $TriggerMode) 设置触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
- * @method array getTriggers() 获取当TriggerMode为partial，指定要迁移的触发器名称
- * @method void setTriggers(array $Triggers) 设置当TriggerMode为partial，指定要迁移的触发器名称
- * @method string getEventMode() 获取事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
- * @method void setEventMode(string $EventMode) 设置事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
- * @method array getEvents() 获取当EventMode为partial，指定要迁移的事件名称
- * @method void setEvents(array $Events) 设置当EventMode为partial，指定要迁移的事件名称
+ * @method string getDbName() 获取<p>需要迁移或同步的库名，当ObjectMode为Partial时，此项必填</p>
+ * @method void setDbName(string $DbName) 设置<p>需要迁移或同步的库名，当ObjectMode为Partial时，此项必填</p>
+ * @method string getNewDbName() 获取<p>迁移或同步后的库名，默认与源库相同</p>
+ * @method void setNewDbName(string $NewDbName) 设置<p>迁移或同步后的库名，默认与源库相同</p>
+ * @method string getDbMode() 获取<p>DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。</p>
+ * @method void setDbMode(string $DbMode) 设置<p>DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。</p>
+ * @method string getSchemaName() 获取<p>迁移或同步的 schema</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>迁移或同步的 schema</p>
+ * @method string getNewSchemaName() 获取<p>迁移或同步后的 schema name</p>
+ * @method void setNewSchemaName(string $NewSchemaName) 设置<p>迁移或同步后的 schema name</p>
+ * @method string getSchemaMode() 获取<p>schema选择模式，pg和sqlserver需要使用</p><p>枚举值：</p><ul><li>All： 当前对象下的所有对象</li><li>Partial： 部分对象</li></ul>
+ * @method void setSchemaMode(string $SchemaMode) 设置<p>schema选择模式，pg和sqlserver需要使用</p><p>枚举值：</p><ul><li>All： 当前对象下的所有对象</li><li>Partial： 部分对象</li></ul>
+ * @method string getTableMode() 获取<p>表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。</p>
+ * @method void setTableMode(string $TableMode) 设置<p>表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。</p>
+ * @method array getTables() 获取<p>表图对象集合，当 TableMode 为 Partial 时，此项需要填写</p>
+ * @method void setTables(array $Tables) 设置<p>表图对象集合，当 TableMode 为 Partial 时，此项需要填写</p>
+ * @method string getViewMode() 获取<p>视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。</p>
+ * @method void setViewMode(string $ViewMode) 设置<p>视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。</p>
+ * @method array getViews() 获取<p>视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写</p>
+ * @method void setViews(array $Views) 设置<p>视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写</p>
+ * @method string getFunctionMode() 获取<p>选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。</p>
+ * @method void setFunctionMode(string $FunctionMode) 设置<p>选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。</p>
+ * @method array getFunctions() 获取<p>FunctionMode取值为Partial时需要填写</p>
+ * @method void setFunctions(array $Functions) 设置<p>FunctionMode取值为Partial时需要填写</p>
+ * @method string getProcedureMode() 获取<p>选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。</p>
+ * @method void setProcedureMode(string $ProcedureMode) 设置<p>选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。</p>
+ * @method array getProcedures() 获取<p>ProcedureMode取值为Partial时需要填写</p>
+ * @method void setProcedures(array $Procedures) 设置<p>ProcedureMode取值为Partial时需要填写</p>
+ * @method string getTriggerMode() 获取<p>触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。</p>
+ * @method void setTriggerMode(string $TriggerMode) 设置<p>触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。</p>
+ * @method array getTriggers() 获取<p>当TriggerMode为partial，指定要迁移的触发器名称</p>
+ * @method void setTriggers(array $Triggers) 设置<p>当TriggerMode为partial，指定要迁移的触发器名称</p>
+ * @method string getEventMode() 获取<p>事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。</p>
+ * @method void setEventMode(string $EventMode) 设置<p>事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。</p>
+ * @method array getEvents() 获取<p>当EventMode为partial，指定要迁移的事件名称</p>
+ * @method void setEvents(array $Events) 设置<p>当EventMode为partial，指定要迁移的事件名称</p>
  */
 class Database extends AbstractModel
 {
     /**
-     * @var string 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
+     * @var string <p>需要迁移或同步的库名，当ObjectMode为Partial时，此项必填</p>
      */
     public $DbName;
 
     /**
-     * @var string 迁移或同步后的库名，默认与源库相同
+     * @var string <p>迁移或同步后的库名，默认与源库相同</p>
      */
     public $NewDbName;
 
     /**
-     * @var string DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。
+     * @var string <p>DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。</p>
      */
     public $DbMode;
 
     /**
-     * @var string 迁移或同步的 schema
+     * @var string <p>迁移或同步的 schema</p>
      */
     public $SchemaName;
 
     /**
-     * @var string 迁移或同步后的 schema name
+     * @var string <p>迁移或同步后的 schema name</p>
      */
     public $NewSchemaName;
 
     /**
-     * @var string 表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。
+     * @var string <p>schema选择模式，pg和sqlserver需要使用</p><p>枚举值：</p><ul><li>All： 当前对象下的所有对象</li><li>Partial： 部分对象</li></ul>
+     */
+    public $SchemaMode;
+
+    /**
+     * @var string <p>表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。</p>
      */
     public $TableMode;
 
     /**
-     * @var array 表图对象集合，当 TableMode 为 Partial 时，此项需要填写
+     * @var array <p>表图对象集合，当 TableMode 为 Partial 时，此项需要填写</p>
      */
     public $Tables;
 
     /**
-     * @var string 视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。
+     * @var string <p>视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。</p>
      */
     public $ViewMode;
 
     /**
-     * @var array 视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写
+     * @var array <p>视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写</p>
      */
     public $Views;
 
     /**
-     * @var string 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
+     * @var string <p>选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。</p>
      */
     public $FunctionMode;
 
     /**
-     * @var array FunctionMode取值为Partial时需要填写
+     * @var array <p>FunctionMode取值为Partial时需要填写</p>
      */
     public $Functions;
 
     /**
-     * @var string 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
+     * @var string <p>选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。</p>
      */
     public $ProcedureMode;
 
     /**
-     * @var array ProcedureMode取值为Partial时需要填写
+     * @var array <p>ProcedureMode取值为Partial时需要填写</p>
      */
     public $Procedures;
 
     /**
-     * @var string 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
+     * @var string <p>触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。</p>
      */
     public $TriggerMode;
 
     /**
-     * @var array 当TriggerMode为partial，指定要迁移的触发器名称
+     * @var array <p>当TriggerMode为partial，指定要迁移的触发器名称</p>
      */
     public $Triggers;
 
     /**
-     * @var string 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
+     * @var string <p>事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。</p>
      */
     public $EventMode;
 
     /**
-     * @var array 当EventMode为partial，指定要迁移的事件名称
+     * @var array <p>当EventMode为partial，指定要迁移的事件名称</p>
      */
     public $Events;
 
     /**
-     * @param string $DbName 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
-     * @param string $NewDbName 迁移或同步后的库名，默认与源库相同
-     * @param string $DbMode DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。
-     * @param string $SchemaName 迁移或同步的 schema
-     * @param string $NewSchemaName 迁移或同步后的 schema name
-     * @param string $TableMode 表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。
-     * @param array $Tables 表图对象集合，当 TableMode 为 Partial 时，此项需要填写
-     * @param string $ViewMode 视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。
-     * @param array $Views 视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写
-     * @param string $FunctionMode 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-     * @param array $Functions FunctionMode取值为Partial时需要填写
-     * @param string $ProcedureMode 选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。
-     * @param array $Procedures ProcedureMode取值为Partial时需要填写
-     * @param string $TriggerMode 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-     * @param array $Triggers 当TriggerMode为partial，指定要迁移的触发器名称
-     * @param string $EventMode 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
-     * @param array $Events 当EventMode为partial，指定要迁移的事件名称
+     * @param string $DbName <p>需要迁移或同步的库名，当ObjectMode为Partial时，此项必填</p>
+     * @param string $NewDbName <p>迁移或同步后的库名，默认与源库相同</p>
+     * @param string $DbMode <p>DB选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当Mode为Partial时，此项必填。注意，高级对象的同步不依赖此值，如果整库同步此处应该为All。</p>
+     * @param string $SchemaName <p>迁移或同步的 schema</p>
+     * @param string $NewSchemaName <p>迁移或同步后的 schema name</p>
+     * @param string $SchemaMode <p>schema选择模式，pg和sqlserver需要使用</p><p>枚举值：</p><ul><li>All： 当前对象下的所有对象</li><li>Partial： 部分对象</li></ul>
+     * @param string $TableMode <p>表选择模式: All(为当前对象下的所有对象)，Partial(部分对象)，当DBMode为Partial时此项必填，如果整库同步此处应该为All。</p>
+     * @param array $Tables <p>表图对象集合，当 TableMode 为 Partial 时，此项需要填写</p>
+     * @param string $ViewMode <p>视图选择模式: All 为当前对象下的所有视图对象,Partial 为部分视图对象，如果整库同步此处应该为All。</p>
+     * @param array $Views <p>视图对象集合，当 ViewMode 为 Partial 时， 此项需要填写</p>
+     * @param string $FunctionMode <p>选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。</p>
+     * @param array $Functions <p>FunctionMode取值为Partial时需要填写</p>
+     * @param string $ProcedureMode <p>选择要同步的模式，Partial为部分，All为整选，如果整库同步此处应该为All。</p>
+     * @param array $Procedures <p>ProcedureMode取值为Partial时需要填写</p>
+     * @param string $TriggerMode <p>触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。</p>
+     * @param array $Triggers <p>当TriggerMode为partial，指定要迁移的触发器名称</p>
+     * @param string $EventMode <p>事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。</p>
+     * @param array $Events <p>当EventMode为partial，指定要迁移的事件名称</p>
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class Database extends AbstractModel
 
         if (array_key_exists("NewSchemaName",$param) and $param["NewSchemaName"] !== null) {
             $this->NewSchemaName = $param["NewSchemaName"];
+        }
+
+        if (array_key_exists("SchemaMode",$param) and $param["SchemaMode"] !== null) {
+            $this->SchemaMode = $param["SchemaMode"];
         }
 
         if (array_key_exists("TableMode",$param) and $param["TableMode"] !== null) {

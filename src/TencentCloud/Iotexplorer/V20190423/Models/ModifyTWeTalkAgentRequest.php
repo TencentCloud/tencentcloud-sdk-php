@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebhookTools(array $WebhookTools) 设置<p>Webhook工具配置列表</p>
  * @method string getMetadata() 获取<p>元信息扩展JSON对象字符串</p>
  * @method void setMetadata(string $Metadata) 设置<p>元信息扩展JSON对象字符串</p>
+ * @method TalkEventCallbackConfig getEventCallbackConfig() 获取<p>回调配置</p>
+ * @method void setEventCallbackConfig(TalkEventCallbackConfig $EventCallbackConfig) 设置<p>回调配置</p>
  */
 class ModifyTWeTalkAgentRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ModifyTWeTalkAgentRequest extends AbstractModel
     public $Metadata;
 
     /**
+     * @var TalkEventCallbackConfig <p>回调配置</p>
+     */
+    public $EventCallbackConfig;
+
+    /**
      * @param string $AgentId <p>智能体ID</p>
      * @param string $Name <p>智能体名称</p>
      * @param string $Description <p>智能体描述</p>
@@ -112,6 +119,7 @@ class ModifyTWeTalkAgentRequest extends AbstractModel
      * @param array $IOTTools <p>IoT工具配置列表</p>
      * @param array $WebhookTools <p>Webhook工具配置列表</p>
      * @param string $Metadata <p>元信息扩展JSON对象字符串</p>
+     * @param TalkEventCallbackConfig $EventCallbackConfig <p>回调配置</p>
      */
     function __construct()
     {
@@ -183,6 +191,11 @@ class ModifyTWeTalkAgentRequest extends AbstractModel
 
         if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
             $this->Metadata = $param["Metadata"];
+        }
+
+        if (array_key_exists("EventCallbackConfig",$param) and $param["EventCallbackConfig"] !== null) {
+            $this->EventCallbackConfig = new TalkEventCallbackConfig();
+            $this->EventCallbackConfig->deserialize($param["EventCallbackConfig"]);
         }
     }
 }

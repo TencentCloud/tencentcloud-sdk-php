@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsValue(string $DnsValue) 设置<p>DNS解析值</p>
  * @method integer getAggregationCount() 获取<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
  * @method void setAggregationCount(integer $AggregationCount) 设置<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+ * @method string getAvailabilityTag() 获取<p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
+ * @method void setAvailabilityTag(string $AvailabilityTag) 设置<p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
  */
 class DisplaySubDomain extends AbstractModel
 {
@@ -150,6 +152,11 @@ class DisplaySubDomain extends AbstractModel
     public $AggregationCount;
 
     /**
+     * @var string <p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
+     */
+    public $AvailabilityTag;
+
+    /**
      * @param integer $Id <p>主键ID</p>
      * @param string $SubDomain <p>子域名</p>
      * @param string $Ip <p>Ip</p>
@@ -168,6 +175,7 @@ class DisplaySubDomain extends AbstractModel
      * @param string $DnsType <p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
      * @param string $DnsValue <p>DNS解析值</p>
      * @param integer $AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param string $AvailabilityTag <p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
      */
     function __construct()
     {
@@ -253,6 +261,10 @@ class DisplaySubDomain extends AbstractModel
 
         if (array_key_exists("AggregationCount",$param) and $param["AggregationCount"] !== null) {
             $this->AggregationCount = $param["AggregationCount"];
+        }
+
+        if (array_key_exists("AvailabilityTag",$param) and $param["AvailabilityTag"] !== null) {
+            $this->AvailabilityTag = $param["AvailabilityTag"];
         }
     }
 }

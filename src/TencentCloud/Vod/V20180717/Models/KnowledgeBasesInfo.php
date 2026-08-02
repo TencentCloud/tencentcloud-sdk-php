@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBases(array $Bases) 设置<p>当前媒资当导入的知识库列表</p>
  * @method array getKnowledgeAnalysisInfos() 获取<p>知识库中媒体分析信息</p>
  * @method void setKnowledgeAnalysisInfos(array $KnowledgeAnalysisInfos) 设置<p>知识库中媒体分析信息</p>
+ * @method array getKnowledgeBaseDetails() 获取<p>当前媒资当导入的知识库列表，以及使用的解析模板等详细信息</p>
+ * @method void setKnowledgeBaseDetails(array $KnowledgeBaseDetails) 设置<p>当前媒资当导入的知识库列表，以及使用的解析模板等详细信息</p>
  */
 class KnowledgeBasesInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class KnowledgeBasesInfo extends AbstractModel
     public $KnowledgeAnalysisInfos;
 
     /**
+     * @var array <p>当前媒资当导入的知识库列表，以及使用的解析模板等详细信息</p>
+     */
+    public $KnowledgeBaseDetails;
+
+    /**
      * @param array $Bases <p>当前媒资当导入的知识库列表</p>
      * @param array $KnowledgeAnalysisInfos <p>知识库中媒体分析信息</p>
+     * @param array $KnowledgeBaseDetails <p>当前媒资当导入的知识库列表，以及使用的解析模板等详细信息</p>
      */
     function __construct()
     {
@@ -64,6 +72,15 @@ class KnowledgeBasesInfo extends AbstractModel
                 $obj = new KnowledgeAnalysisInfo();
                 $obj->deserialize($value);
                 array_push($this->KnowledgeAnalysisInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("KnowledgeBaseDetails",$param) and $param["KnowledgeBaseDetails"] !== null) {
+            $this->KnowledgeBaseDetails = [];
+            foreach ($param["KnowledgeBaseDetails"] as $key => $value){
+                $obj = new KnowledgeBaseDetail();
+                $obj->deserialize($value);
+                array_push($this->KnowledgeBaseDetails, $obj);
             }
         }
     }

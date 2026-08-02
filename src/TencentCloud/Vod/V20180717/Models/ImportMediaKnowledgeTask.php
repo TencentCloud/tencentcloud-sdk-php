@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒体导入知识库任务
  *
- * @method string getTaskId() 获取任务 ID。
- * @method void setTaskId(string $TaskId) 设置任务 ID。
- * @method string getStatus() 获取任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
- * @method void setStatus(string $Status) 设置任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
- * @method integer getErrCode() 获取错误码，0 表示成功，其他值表示失败
- * @method void setErrCode(integer $ErrCode) 设置错误码，0 表示成功，其他值表示失败
- * @method string getMessage() 获取错误信息。
- * @method void setMessage(string $Message) 设置错误信息。
+ * @method string getTaskId() 获取<p>任务 ID。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务 ID。</p>
+ * @method string getFileId() 获取<p>媒体文件 ID</p>
+ * @method void setFileId(string $FileId) 设置<p>媒体文件 ID</p>
+ * @method ImportMediaKnowledgeTaskInput getInput() 获取<p>导入知识库任务的输入。</p>
+ * @method void setInput(ImportMediaKnowledgeTaskInput $Input) 设置<p>导入知识库任务的输入。</p>
+ * @method string getStatus() 获取<p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
+ * @method void setStatus(string $Status) 设置<p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
+ * @method integer getErrCode() 获取<p>错误码，0 表示成功，其他值表示失败</p>
+ * @method void setErrCode(integer $ErrCode) 设置<p>错误码，0 表示成功，其他值表示失败</p>
+ * @method string getMessage() 获取<p>错误信息。</p>
+ * @method void setMessage(string $Message) 设置<p>错误信息。</p>
  */
 class ImportMediaKnowledgeTask extends AbstractModel
 {
     /**
-     * @var string 任务 ID。
+     * @var string <p>任务 ID。</p>
      */
     public $TaskId;
 
     /**
-     * @var string 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+     * @var string <p>媒体文件 ID</p>
+     */
+    public $FileId;
+
+    /**
+     * @var ImportMediaKnowledgeTaskInput <p>导入知识库任务的输入。</p>
+     */
+    public $Input;
+
+    /**
+     * @var string <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
      */
     public $Status;
 
     /**
-     * @var integer 错误码，0 表示成功，其他值表示失败
+     * @var integer <p>错误码，0 表示成功，其他值表示失败</p>
      */
     public $ErrCode;
 
     /**
-     * @var string 错误信息。
+     * @var string <p>错误信息。</p>
      */
     public $Message;
 
     /**
-     * @param string $TaskId 任务 ID。
-     * @param string $Status 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
-     * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败
-     * @param string $Message 错误信息。
+     * @param string $TaskId <p>任务 ID。</p>
+     * @param string $FileId <p>媒体文件 ID</p>
+     * @param ImportMediaKnowledgeTaskInput $Input <p>导入知识库任务的输入。</p>
+     * @param string $Status <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
+     * @param integer $ErrCode <p>错误码，0 表示成功，其他值表示失败</p>
+     * @param string $Message <p>错误信息。</p>
      */
     function __construct()
     {
@@ -72,6 +88,15 @@ class ImportMediaKnowledgeTask extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Input",$param) and $param["Input"] !== null) {
+            $this->Input = new ImportMediaKnowledgeTaskInput();
+            $this->Input->deserialize($param["Input"]);
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

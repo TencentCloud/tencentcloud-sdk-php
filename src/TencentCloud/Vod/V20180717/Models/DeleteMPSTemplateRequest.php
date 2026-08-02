@@ -20,50 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteMPSTemplate请求参数结构体
  *
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。</b>
- * @method string getTemplateType() 获取需要删除的 MPS 模板的类型。取值：
-<li>Transcode: 删除转码模板。</li>
-<li>AIAnalysis: 创建智能分析模板。</li>
-<li>SmartSubtitle: 创建智能字幕模板。</li>
-<li>SmartErase: 创建智能擦除模板。</li>
- * @method void setTemplateType(string $TemplateType) 设置需要删除的 MPS 模板的类型。取值：
-<li>Transcode: 删除转码模板。</li>
-<li>AIAnalysis: 创建智能分析模板。</li>
-<li>SmartSubtitle: 创建智能字幕模板。</li>
-<li>SmartErase: 创建智能擦除模板。</li>
- * @method integer getDefinition() 获取MPS 任务模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置MPS 任务模板唯一标识。
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
+ * @method string getTemplateType() 获取<p>需要删除的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 字幕压制模板。</li>
+ * @method void setTemplateType(string $TemplateType) 设置<p>需要删除的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 字幕压制模板。</li>
+ * @method integer getDefinition() 获取<p>MPS 任务模板唯一标识。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>MPS 任务模板唯一标识。</p>
  */
 class DeleteMPSTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 需要删除的 MPS 模板的类型。取值：
-<li>Transcode: 删除转码模板。</li>
-<li>AIAnalysis: 创建智能分析模板。</li>
-<li>SmartSubtitle: 创建智能字幕模板。</li>
-<li>SmartErase: 创建智能擦除模板。</li>
+     * @var string <p>需要删除的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 字幕压制模板。</li>
      */
     public $TemplateType;
 
     /**
-     * @var integer MPS 任务模板唯一标识。
+     * @var integer <p>MPS 任务模板唯一标识。</p>
      */
     public $Definition;
 
     /**
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
-     * @param string $TemplateType 需要删除的 MPS 模板的类型。取值：
-<li>Transcode: 删除转码模板。</li>
-<li>AIAnalysis: 创建智能分析模板。</li>
-<li>SmartSubtitle: 创建智能字幕模板。</li>
-<li>SmartErase: 创建智能擦除模板。</li>
-     * @param integer $Definition MPS 任务模板唯一标识。
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
+     * @param string $TemplateType <p>需要删除的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 字幕压制模板。</li>
+     * @param integer $Definition <p>MPS 任务模板唯一标识。</p>
      */
     function __construct()
     {

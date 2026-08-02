@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAnalysisState(integer $AnalysisState) 设置<p>域名解析状态 1:异常 0:正常</p>
  * @method integer getAggregationCount() 获取<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
  * @method void setAggregationCount(integer $AggregationCount) 设置<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+ * @method string getAvailabilityTag() 获取<p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
+ * @method void setAvailabilityTag(string $AvailabilityTag) 设置<p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
  */
 class DisplayHttp extends AbstractModel
 {
@@ -174,6 +176,11 @@ class DisplayHttp extends AbstractModel
     public $AggregationCount;
 
     /**
+     * @var string <p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
+     */
+    public $AvailabilityTag;
+
+    /**
      * @param integer $Id <p>主键ID</p>
      * @param DisplayToolCommon $DisplayToolCommon <p>公共字段</p>
      * @param string $Url <p>Url</p>
@@ -196,6 +203,7 @@ class DisplayHttp extends AbstractModel
      * @param integer $ResponseTime <p>平均响应时间：单位ms</p>
      * @param integer $AnalysisState <p>域名解析状态 1:异常 0:正常</p>
      * @param integer $AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param string $AvailabilityTag <p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class DisplayHttp extends AbstractModel
 
         if (array_key_exists("AggregationCount",$param) and $param["AggregationCount"] !== null) {
             $this->AggregationCount = $param["AggregationCount"];
+        }
+
+        if (array_key_exists("AvailabilityTag",$param) and $param["AvailabilityTag"] !== null) {
+            $this->AvailabilityTag = $param["AvailabilityTag"];
         }
     }
 }

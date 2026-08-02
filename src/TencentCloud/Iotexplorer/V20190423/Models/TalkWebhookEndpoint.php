@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Webhook工具配置列表
  *
- * @method string getUrl() 获取<p>Webhook地址，仅支持 80 和 443 端口</p>
- * @method void setUrl(string $Url) 设置<p>Webhook地址，仅支持 80 和 443 端口</p>
+ * @method string getUrl() 获取<p>Webhook地址</p>
+ * @method void setUrl(string $Url) 设置<p>Webhook地址</p>
  * @method integer getTimeout() 获取<p>超时时间，0~30 秒</p><p>取值范围：[0, 30]</p>
  * @method void setTimeout(integer $Timeout) 设置<p>超时时间，0~30 秒</p><p>取值范围：[0, 30]</p>
  */
 class TalkWebhookEndpoint extends AbstractModel
 {
     /**
-     * @var string <p>Webhook地址，仅支持 80 和 443 端口</p>
+     * @var string <p>Webhook地址</p>
      */
     public $Url;
 
@@ -38,7 +38,7 @@ class TalkWebhookEndpoint extends AbstractModel
     public $Timeout;
 
     /**
-     * @param string $Url <p>Webhook地址，仅支持 80 和 443 端口</p>
+     * @param string $Url <p>Webhook地址</p>
      * @param integer $Timeout <p>超时时间，0~30 秒</p><p>取值范围：[0, 30]</p>
      */
     function __construct()

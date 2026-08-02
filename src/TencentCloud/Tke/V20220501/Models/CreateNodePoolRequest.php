@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNative(CreateNativeNodePoolParam $Native) 设置<p>原生节点池创建参数（Type字段设置为Native时需填写）</p>
  * @method array getAnnotations() 获取<p>节点 Annotation 列表</p>
  * @method void setAnnotations(array $Annotations) 设置<p>节点 Annotation 列表</p>
+ * @method array getSkipValidateOptions() 获取<p>跳过校验选项，支持 &quot;VpcDnsCheck&quot;</p>
+ * @method void setSkipValidateOptions(array $SkipValidateOptions) 设置<p>跳过校验选项，支持 &quot;VpcDnsCheck&quot;</p>
  */
 class CreateNodePoolRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateNodePoolRequest extends AbstractModel
     public $Annotations;
 
     /**
+     * @var array <p>跳过校验选项，支持 &quot;VpcDnsCheck&quot;</p>
+     */
+    public $SkipValidateOptions;
+
+    /**
      * @param string $ClusterId <p>集群 ID</p>
      * @param string $Name <p>节点池名称</p>
      * @param string $Type <p>节点池类型</p>
@@ -104,6 +111,7 @@ class CreateNodePoolRequest extends AbstractModel
      * @param boolean $Unschedulable <p>节点是否默认不可调度</p>
      * @param CreateNativeNodePoolParam $Native <p>原生节点池创建参数（Type字段设置为Native时需填写）</p>
      * @param array $Annotations <p>节点 Annotation 列表</p>
+     * @param array $SkipValidateOptions <p>跳过校验选项，支持 &quot;VpcDnsCheck&quot;</p>
      */
     function __construct()
     {
@@ -177,6 +185,10 @@ class CreateNodePoolRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Annotations, $obj);
             }
+        }
+
+        if (array_key_exists("SkipValidateOptions",$param) and $param["SkipValidateOptions"] !== null) {
+            $this->SkipValidateOptions = $param["SkipValidateOptions"];
         }
     }
 }

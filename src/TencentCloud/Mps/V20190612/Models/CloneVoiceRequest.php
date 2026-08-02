@@ -1,0 +1,139 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Mps\V20190612\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * CloneVoice请求参数结构体
+ *
+ * @method string getAudioData() 获取<p>克隆音频base64编码</p>
+ * @method void setAudioData(string $AudioData) 设置<p>克隆音频base64编码</p>
+ * @method string getAudioUrl() 获取<p>克隆音频Url，AudioData为空时有效</p>
+ * @method void setAudioUrl(string $AudioUrl) 设置<p>克隆音频Url，AudioData为空时有效</p>
+ * @method string getAudioLang() 获取<p>克隆音频语言，默认中文。 当前支持语言同语音合成TextLang</p>
+ * @method void setAudioLang(string $AudioLang) 设置<p>克隆音频语言，默认中文。 当前支持语言同语音合成TextLang</p>
+ * @method VoiceProfile getVoiceProfile() 获取<p>音色属性。音色查询和匹配使用</p>
+ * @method void setVoiceProfile(VoiceProfile $VoiceProfile) 设置<p>音色属性。音色查询和匹配使用</p>
+ * @method string getText() 获取<p>试听文本</p>
+ * @method void setText(string $Text) 设置<p>试听文本</p>
+ * @method string getTextLang() 获取<p>试听文本语言，不填默认自动检测。当前支持语言同语音合成</p>
+ * @method void setTextLang(string $TextLang) 设置<p>试听文本语言，不填默认自动检测。当前支持语言同语音合成</p>
+ * @method SyncDubbingOutputOption getOutput() 获取<p>输出相关参数，可以指定输出音频形式等。默认输出音频base64。</p>
+ * @method void setOutput(SyncDubbingOutputOption $Output) 设置<p>输出相关参数，可以指定输出音频形式等。默认输出音频base64。</p>
+ * @method string getExtParam() 获取<p>扩展参数，json字符串</p>
+ * @method void setExtParam(string $ExtParam) 设置<p>扩展参数，json字符串</p>
+ */
+class CloneVoiceRequest extends AbstractModel
+{
+    /**
+     * @var string <p>克隆音频base64编码</p>
+     */
+    public $AudioData;
+
+    /**
+     * @var string <p>克隆音频Url，AudioData为空时有效</p>
+     */
+    public $AudioUrl;
+
+    /**
+     * @var string <p>克隆音频语言，默认中文。 当前支持语言同语音合成TextLang</p>
+     */
+    public $AudioLang;
+
+    /**
+     * @var VoiceProfile <p>音色属性。音色查询和匹配使用</p>
+     */
+    public $VoiceProfile;
+
+    /**
+     * @var string <p>试听文本</p>
+     */
+    public $Text;
+
+    /**
+     * @var string <p>试听文本语言，不填默认自动检测。当前支持语言同语音合成</p>
+     */
+    public $TextLang;
+
+    /**
+     * @var SyncDubbingOutputOption <p>输出相关参数，可以指定输出音频形式等。默认输出音频base64。</p>
+     */
+    public $Output;
+
+    /**
+     * @var string <p>扩展参数，json字符串</p>
+     */
+    public $ExtParam;
+
+    /**
+     * @param string $AudioData <p>克隆音频base64编码</p>
+     * @param string $AudioUrl <p>克隆音频Url，AudioData为空时有效</p>
+     * @param string $AudioLang <p>克隆音频语言，默认中文。 当前支持语言同语音合成TextLang</p>
+     * @param VoiceProfile $VoiceProfile <p>音色属性。音色查询和匹配使用</p>
+     * @param string $Text <p>试听文本</p>
+     * @param string $TextLang <p>试听文本语言，不填默认自动检测。当前支持语言同语音合成</p>
+     * @param SyncDubbingOutputOption $Output <p>输出相关参数，可以指定输出音频形式等。默认输出音频base64。</p>
+     * @param string $ExtParam <p>扩展参数，json字符串</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("AudioData",$param) and $param["AudioData"] !== null) {
+            $this->AudioData = $param["AudioData"];
+        }
+
+        if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
+            $this->AudioUrl = $param["AudioUrl"];
+        }
+
+        if (array_key_exists("AudioLang",$param) and $param["AudioLang"] !== null) {
+            $this->AudioLang = $param["AudioLang"];
+        }
+
+        if (array_key_exists("VoiceProfile",$param) and $param["VoiceProfile"] !== null) {
+            $this->VoiceProfile = new VoiceProfile();
+            $this->VoiceProfile->deserialize($param["VoiceProfile"]);
+        }
+
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("TextLang",$param) and $param["TextLang"] !== null) {
+            $this->TextLang = $param["TextLang"];
+        }
+
+        if (array_key_exists("Output",$param) and $param["Output"] !== null) {
+            $this->Output = new SyncDubbingOutputOption();
+            $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("ExtParam",$param) and $param["ExtParam"] !== null) {
+            $this->ExtParam = $param["ExtParam"];
+        }
+    }
+}

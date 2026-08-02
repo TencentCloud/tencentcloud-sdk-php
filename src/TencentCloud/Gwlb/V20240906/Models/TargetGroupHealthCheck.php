@@ -20,82 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 目标组健康检查详情
  *
- * @method boolean getHealthSwitch() 获取是否开启健康检查。
- * @method void setHealthSwitch(boolean $HealthSwitch) 设置是否开启健康检查。
- * @method string getProtocol() 获取健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
-
-- icmp: 使用PING的方式进行健康检查
-- tcp: 使用TCP连接的方式进行健康检查
- * @method void setProtocol(string $Protocol) 设置健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
-
-- icmp: 使用PING的方式进行健康检查
-- tcp: 使用TCP连接的方式进行健康检查
- * @method integer getPort() 获取健康检查端口，探测协议为tcp时，该参数必填。
-
- * @method void setPort(integer $Port) 设置健康检查端口，探测协议为tcp时，该参数必填。
-
- * @method integer getTimeout() 获取健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
- * @method void setTimeout(integer $Timeout) 设置健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
- * @method integer getIntervalTime() 获取检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
- * @method void setIntervalTime(integer $IntervalTime) 设置检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
- * @method integer getHealthNum() 获取检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
- * @method void setHealthNum(integer $HealthNum) 设置检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
- * @method integer getUnHealthNum() 获取检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
- * @method void setUnHealthNum(integer $UnHealthNum) 设置检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
+ * @method boolean getHealthSwitch() 获取<p>是否开启健康检查。</p>
+ * @method void setHealthSwitch(boolean $HealthSwitch) 设置<p>是否开启健康检查。</p>
+ * @method string getProtocol() 获取<p>健康检查使用的协议。支持PING和TCP两种方式，默认为PING。</p><ul><li>icmp: 使用PING的方式进行健康检查</li><li>tcp: 使用TCP连接的方式进行健康检查</li></ul>
+ * @method void setProtocol(string $Protocol) 设置<p>健康检查使用的协议。支持PING和TCP两种方式，默认为PING。</p><ul><li>icmp: 使用PING的方式进行健康检查</li><li>tcp: 使用TCP连接的方式进行健康检查</li></ul>
+ * @method integer getPort() 获取<p>健康检查端口，探测协议为tcp时，该参数必填。</p>
+ * @method void setPort(integer $Port) 设置<p>健康检查端口，探测协议为tcp时，该参数必填。</p>
+ * @method integer getTimeout() 获取<p>健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。</p>
+ * @method void setTimeout(integer $Timeout) 设置<p>健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。</p>
+ * @method integer getIntervalTime() 获取<p>检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。</p>
+ * @method void setIntervalTime(integer $IntervalTime) 设置<p>检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。</p>
+ * @method integer getHealthNum() 获取<p>检测健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
+ * @method void setHealthNum(integer $HealthNum) 设置<p>检测健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
+ * @method integer getUnHealthNum() 获取<p>检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
+ * @method void setUnHealthNum(integer $UnHealthNum) 设置<p>检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
  */
 class TargetGroupHealthCheck extends AbstractModel
 {
     /**
-     * @var boolean 是否开启健康检查。
+     * @var boolean <p>是否开启健康检查。</p>
      */
     public $HealthSwitch;
 
     /**
-     * @var string 健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
-
-- icmp: 使用PING的方式进行健康检查
-- tcp: 使用TCP连接的方式进行健康检查
+     * @var string <p>健康检查使用的协议。支持PING和TCP两种方式，默认为PING。</p><ul><li>icmp: 使用PING的方式进行健康检查</li><li>tcp: 使用TCP连接的方式进行健康检查</li></ul>
      */
     public $Protocol;
 
     /**
-     * @var integer 健康检查端口，探测协议为tcp时，该参数必填。
-
+     * @var integer <p>健康检查端口，探测协议为tcp时，该参数必填。</p>
      */
     public $Port;
 
     /**
-     * @var integer 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
+     * @var integer <p>健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。</p>
      */
     public $Timeout;
 
     /**
-     * @var integer 检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
+     * @var integer <p>检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。</p>
      */
     public $IntervalTime;
 
     /**
-     * @var integer 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
+     * @var integer <p>检测健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
      */
     public $HealthNum;
 
     /**
-     * @var integer 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
+     * @var integer <p>检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
      */
     public $UnHealthNum;
 
     /**
-     * @param boolean $HealthSwitch 是否开启健康检查。
-     * @param string $Protocol 健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
-
-- icmp: 使用PING的方式进行健康检查
-- tcp: 使用TCP连接的方式进行健康检查
-     * @param integer $Port 健康检查端口，探测协议为tcp时，该参数必填。
-
-     * @param integer $Timeout 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
-     * @param integer $IntervalTime 检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
-     * @param integer $HealthNum 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
-     * @param integer $UnHealthNum 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
+     * @param boolean $HealthSwitch <p>是否开启健康检查。</p>
+     * @param string $Protocol <p>健康检查使用的协议。支持PING和TCP两种方式，默认为PING。</p><ul><li>icmp: 使用PING的方式进行健康检查</li><li>tcp: 使用TCP连接的方式进行健康检查</li></ul>
+     * @param integer $Port <p>健康检查端口，探测协议为tcp时，该参数必填。</p>
+     * @param integer $Timeout <p>健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。</p>
+     * @param integer $IntervalTime <p>检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。</p>
+     * @param integer $HealthNum <p>检测健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
+     * @param integer $UnHealthNum <p>检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
      */
     function __construct()
     {

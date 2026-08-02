@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessType(integer $ProcessType) 设置<p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2：OCR识别字幕</li></ul><p><strong>注意</strong>：不传的情况下默认类型为 ASR识别字幕</p>
  * @method MPSSelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() 获取<p>字幕OCR提取框选区域配置</p>
  * @method void setSelectingSubtitleAreasConfig(MPSSelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) 设置<p>字幕OCR提取框选区域配置</p>
+ * @method integer getSubtitleEmbedId() 获取<p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
+ * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) 设置<p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
  * @method integer getSpeakerMode() 获取<p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认不开启说话人识别。</p>
  * @method void setSpeakerMode(integer $SpeakerMode) 设置<p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认不开启说话人识别。</p>
  * @method integer getSpeakerLabel() 获取<p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认不输出到字幕文件。</p>
@@ -91,6 +93,11 @@ class MPSSmartSubtitleTemplate extends AbstractModel
     public $SelectingSubtitleAreasConfig;
 
     /**
+     * @var integer <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
+     */
+    public $SubtitleEmbedId;
+
+    /**
      * @var integer <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认不开启说话人识别。</p>
      */
     public $SpeakerMode;
@@ -110,6 +117,7 @@ class MPSSmartSubtitleTemplate extends AbstractModel
      * @param string $TranslateDstLanguage <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效，翻译语言列表：<br><code>ab</code>：阿布哈兹语<br><code>ace</code>：亚齐语<br><code>ach</code>：阿乔利语<br><code>af</code>：南非荷兰语<br><code>ak</code>：契维语（阿坎语）<br><code>am</code>：Amharic<br><code>ar</code>：阿拉伯语<br><code>as</code>：阿萨姆语<br><code>ay</code>：艾马拉语<br><code>az</code>：阿塞拜疆语<br><code>ba</code>：巴什基尔语<br><code>ban</code>：巴厘语<br><code>bbc</code>：巴塔克托巴语<br><code>bem</code>：Bemba<br><code>bew</code>：Betawi<br><code>bg</code>：保加利亚语<br><code>bho</code>：博杰普尔语<br><code>bik</code>：Bikol<br><code>bm</code>：班巴拉语<br><code>bn</code>：孟加拉语<br><code>br</code>：布列塔尼语<br><code>bs</code>：波斯尼亚语<br><code>btx</code>：巴塔克卡罗语<br><code>bts</code>：巴塔克西马隆贡语<br><code>bua</code>：布里亚特语<br><code>ca</code>：加泰罗尼亚语<br><code>ceb</code>：宿务语<br><code>cgg</code>：Kiga<br><code>chm</code>：草原马里语<br><code>ckb</code>：库尔德语（索拉尼语）<br><code>cnh</code>：哈卡钦语<br><code>co</code>：科西嘉语<br><code>crh</code>：克里米亚鞑靼语<br><code>crs</code>：塞舌尔克里奥尔语<br><code>cs</code>：捷克语<br><code>cv</code>：楚瓦什语<br><code>cy</code>：威尔士语<br><code>da</code>：丹麦语<br><code>de</code>：德语<br><code>din</code>：Dinka<br><code>doi</code>：多格来语<br><code>dov</code>：敦贝语<br><code>dv</code>：第维埃语<br><code>dz</code>：宗卡语<br><code>ee</code>：Ewe<br><code>el</code>：希腊语<br><code>en</code>：英语<br><code>eo</code>：世界语<br><code>es</code>：西班牙语<br><code>et</code>：爱沙尼亚语<br><code>eu</code>：巴斯克语<br><code>fa</code>：波斯语<br><code>ff</code>：富拉语<br><code>fi</code>：芬兰语<br><code>fil</code>：菲律宾语（塔加拉语）<br><code>fj</code>：斐济语<br><code>fr</code>：法语<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fy</code>：弗里斯兰语<br><code>ga</code>：爱尔兰语<br><code>gaa</code>：加 (Ga) 语<br><code>gd</code>：苏格兰盖尔语<br><code>gl</code>：加利西亚语<br><code>gn</code>：瓜拉尼语<br><code>gom</code>：贡根语<br><code>gu</code>：古吉拉特语<br><code>gv</code>：马恩岛语<br><code>ha</code>：Hausa<br><code>haw</code>：夏威夷语<br><code>he</code>：希伯来语<br><code>hi</code>：印地语<br><code>hil</code>：希利盖农语<br><code>hmn</code>：苗语<br><code>hr</code>：克罗地亚语<br><code>hrx</code>：洪斯吕克语<br><code>ht</code>：海地克里奥尔语<br><code>hu</code>：匈牙利语<br><code>hy</code>：亚美尼亚语<br><code>id</code>：印度尼西亚语<br><code>ig</code>：Igbo<br><code>ilo</code>：伊洛果语<br><code>is</code>：冰岛语<br><code>it</code>：意大利语<br><code>iw</code>：希伯来语<br><code>ja</code>：日语<br><code>jv</code>：爪哇语<br><code>ka</code>：格鲁吉亚语<br><code>kk</code>：哈萨克语<br><code>km</code>：高棉语<br><code>kn</code>：卡纳达语<br><code>ko</code>：韩语<br><code>kri</code>：Krio<br><code>ku</code>：库尔德语（库尔曼吉语）<br><code>ktu</code>：吉土巴语<br><code>ky</code>：吉尔吉斯语<br><code>la</code>：拉丁语<br><code>lb</code>：卢森堡语<br><code>lg</code>：干达语（卢干达语）<br><code>li</code>：林堡语<br><code>lij</code>：利古里亚语<br><code>lmo</code>：伦巴第语<br><code>ln</code>：林加拉语<br><code>lo</code>：老挝语<br><code>lt</code>：立陶宛语<br><code>ltg</code>：拉特加莱语<br><code>luo</code>：Luo<br><code>lus</code>：米佐语<br><code>lv</code>：拉脱维亚语<br><code>mai</code>：迈蒂利语<br><code>mak</code>：马卡萨<br><code>mg</code>：马尔加什语<br><code>mi</code>：毛利语<br><code>min</code>：米南语<br><code>mk</code>：马其顿语<br><code>ml</code>：马拉雅拉姆语<br><code>mn</code>：蒙古语<br><code>mr</code>：马拉地语<br><code>ms</code>：马来语<br><code>mt</code>：马耳他语<br><code>my</code>：缅甸语<br><code>ne</code>：尼泊尔语<br><code>new</code>：尼瓦尔语<br><code>nl</code>：荷兰语<br><code>no</code>：挪威语<br><code>nr</code>：恩德贝莱语（南部）<br><code>nso</code>：北索托语（塞佩蒂语）<br><code>nus</code>：努尔语<br><code>ny</code>：齐切瓦语（尼扬贾语）<br><code>oc</code>：奥克斯坦语<br><code>om</code>：Oromo<br><code>or</code>：奥里亚语<br><code>pa</code>：旁遮普语<br><code>pag</code>：邦阿西楠语<br><code>pam</code>：邦板牙语<br><code>pap</code>：Papiamento<br><code>pl</code>：波兰语<br><code>ps</code>：Pashto<br><code>pt</code>：葡萄牙语<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>qu</code>：克丘亚语<br><code>ro</code>：罗马尼亚语<br><code>rom</code>：罗姆语<br><code>rn</code>：Rundi<br><code>ru</code>：俄语<br><code>rw</code>：卢旺达语<br><code>sa</code>：梵语<br><code>scn</code>：西西里语<br><code>sd</code>：信德语<br><code>sg</code>：Sango<br><code>shn</code>：掸语<br><code>si</code>：僧伽罗语<br><code>sk</code>：斯洛伐克语<br><code>sl</code>：斯洛文尼亚语<br><code>sm</code>：萨摩亚语<br><code>sn</code>：修纳语<br><code>so</code>：索马里语<br><code>sq</code>：阿尔巴尼亚语<br><code>sr</code>：塞尔维亚语<br><code>ss</code>：斯瓦特语<br><code>st</code>：塞索托语<br><code>su</code>：巽他语<br><code>sv</code>：瑞典语<br><code>sw</code>：斯瓦希里语<br><code>szl</code>：西里西亚语<br><code>ta</code>：泰米尔语<br><code>te</code>：泰卢固语<br><code>tet</code>：德顿语<br><code>tg</code>：塔吉克语<br><code>th</code>：泰语<br><code>ti</code>：提格里尼亚语<br><code>tk</code>：土库曼语<br><code>tn</code>：茨瓦纳语<br><code>tr</code>：土耳其语<br><code>ts</code>：聪加语<br><code>tt</code>：鞑靼语<br><code>ug</code>：维吾尔语<br><code>uk</code>：乌克兰语<br><code>ur</code>：乌尔都语<br><code>uz</code>：乌兹别克语<br><code>vi</code>：越南语<br><code>xh</code>：科萨语<br><code>yi</code>：意第绪语<br><code>yo</code>：约鲁巴语<br><code>yua</code>：尤卡坦玛雅语<br><code>yue</code>：粤语<br><code>zh</code>：简体中文<br><code>zh-TW</code>：中文（繁体）<br><code>zu</code>：祖鲁语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
      * @param integer $ProcessType <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2：OCR识别字幕</li></ul><p><strong>注意</strong>：不传的情况下默认类型为 ASR识别字幕</p>
      * @param MPSSelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig <p>字幕OCR提取框选区域配置</p>
+     * @param integer $SubtitleEmbedId <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
      * @param integer $SpeakerMode <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认不开启说话人识别。</p>
      * @param integer $SpeakerLabel <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认不输出到字幕文件。</p>
      */
@@ -161,6 +169,10 @@ class MPSSmartSubtitleTemplate extends AbstractModel
         if (array_key_exists("SelectingSubtitleAreasConfig",$param) and $param["SelectingSubtitleAreasConfig"] !== null) {
             $this->SelectingSubtitleAreasConfig = new MPSSelectingSubtitleAreasConfig();
             $this->SelectingSubtitleAreasConfig->deserialize($param["SelectingSubtitleAreasConfig"]);
+        }
+
+        if (array_key_exists("SubtitleEmbedId",$param) and $param["SubtitleEmbedId"] !== null) {
+            $this->SubtitleEmbedId = $param["SubtitleEmbedId"];
         }
 
         if (array_key_exists("SpeakerMode",$param) and $param["SpeakerMode"] !== null) {

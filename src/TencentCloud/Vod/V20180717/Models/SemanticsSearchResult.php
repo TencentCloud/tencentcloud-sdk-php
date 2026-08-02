@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 语义搜索结果。
  *
- * @method string getFileId() 获取媒体文件唯一标识 ID。
- * @method void setFileId(string $FileId) 设置媒体文件唯一标识 ID。
- * @method float getScore() 获取视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
- * @method void setScore(float $Score) 设置视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
- * @method float getStartTimeOffset() 获取视频片段的开始时间，单位：秒
- * @method void setStartTimeOffset(float $StartTimeOffset) 设置视频片段的开始时间，单位：秒
- * @method float getEndTimeOffset() 获取视频片段的结束时间，单位：秒
- * @method void setEndTimeOffset(float $EndTimeOffset) 设置视频片段的结束时间，单位：秒
+ * @method string getFileId() 获取<p>媒体文件唯一标识 ID。</p>
+ * @method void setFileId(string $FileId) 设置<p>媒体文件唯一标识 ID。</p>
+ * @method string getTitle() 获取<p>智能媒资为当前片段生成的标题</p>
+ * @method void setTitle(string $Title) 设置<p>智能媒资为当前片段生成的标题</p>
+ * @method float getScore() 获取<p>视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]</p>
+ * @method void setScore(float $Score) 设置<p>视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]</p>
+ * @method float getStartTimeOffset() 获取<p>视频片段的开始时间，单位：秒</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) 设置<p>视频片段的开始时间，单位：秒</p>
+ * @method float getEndTimeOffset() 获取<p>视频片段的结束时间，单位：秒</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) 设置<p>视频片段的结束时间，单位：秒</p>
  */
 class SemanticsSearchResult extends AbstractModel
 {
     /**
-     * @var string 媒体文件唯一标识 ID。
+     * @var string <p>媒体文件唯一标识 ID。</p>
      */
     public $FileId;
 
     /**
-     * @var float 视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
+     * @var string <p>智能媒资为当前片段生成的标题</p>
+     */
+    public $Title;
+
+    /**
+     * @var float <p>视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]</p>
      */
     public $Score;
 
     /**
-     * @var float 视频片段的开始时间，单位：秒
+     * @var float <p>视频片段的开始时间，单位：秒</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 视频片段的结束时间，单位：秒
+     * @var float <p>视频片段的结束时间，单位：秒</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @param string $FileId 媒体文件唯一标识 ID。
-     * @param float $Score 视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
-     * @param float $StartTimeOffset 视频片段的开始时间，单位：秒
-     * @param float $EndTimeOffset 视频片段的结束时间，单位：秒
+     * @param string $FileId <p>媒体文件唯一标识 ID。</p>
+     * @param string $Title <p>智能媒资为当前片段生成的标题</p>
+     * @param float $Score <p>视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]</p>
+     * @param float $StartTimeOffset <p>视频片段的开始时间，单位：秒</p>
+     * @param float $EndTimeOffset <p>视频片段的结束时间，单位：秒</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class SemanticsSearchResult extends AbstractModel
         }
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
         }
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {

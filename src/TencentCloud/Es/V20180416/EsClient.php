@@ -24,6 +24,7 @@ use TencentCloud\Es\V20180416\Models as Models;
 
 /**
  * @method Models\CheckMigrateIndexMetaDataResponse CheckMigrateIndexMetaData(Models\CheckMigrateIndexMetaDataRequest $req) 检查cos迁移索引元数据
+ * @method Models\CheckUpdateInstanceResponse CheckUpdateInstance(Models\CheckUpdateInstanceRequest $req) 检查实例变配操作是否可以发起
  * @method Models\CreateAutoBackUpStrategyResponse CreateAutoBackUpStrategy(Models\CreateAutoBackUpStrategyRequest $req) 新建自动备份快照策略
  * @method Models\CreateClusterSnapshotResponse CreateClusterSnapshot(Models\CreateClusterSnapshotRequest $req) 集群快照手动创建
  * @method Models\CreateCollectorResponse CreateCollector(Models\CreateCollectorRequest $req) 用于创建Beats采集器
@@ -83,6 +84,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\InstallInstanceModelResponse InstallInstanceModel(Models\InstallInstanceModelRequest $req) ES集群安装模型接口
  * @method Models\ModifyAutoBackUpCommonInfoResponse ModifyAutoBackUpCommonInfo(Models\ModifyAutoBackUpCommonInfoRequest $req) 修改自动备份快照策略公共信息
  * @method Models\ModifyAutoBackUpStrategyResponse ModifyAutoBackUpStrategy(Models\ModifyAutoBackUpStrategyRequest $req) 修改自动备份快照策略
+ * @method Models\ModifyAutoScaleDiskInfoResponse ModifyAutoScaleDiskInfo(Models\ModifyAutoScaleDiskInfoRequest $req) 修改自动扩盘参数
  * @method Models\ModifyEsVipSecurityGroupResponse ModifyEsVipSecurityGroup(Models\ModifyEsVipSecurityGroupRequest $req) 修改绑定VIP的安全组，传安全组id列表
  * @method Models\QueryIpTraceLogResponse QueryIpTraceLog(Models\QueryIpTraceLogRequest $req) 查询IP溯源日志
  * @method Models\QueryZoneResourceResponse QueryZoneResource(Models\QueryZoneResourceRequest $req) 获取指定region下指定zone列表的资源情况

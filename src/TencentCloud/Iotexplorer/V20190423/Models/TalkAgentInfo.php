@@ -20,146 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TWeTalk智能体配置信息描述
  *
- * @method integer getUin() 获取主账号UIN
- * @method void setUin(integer $Uin) 设置主账号UIN
- * @method integer getAppId() 获取账号AppId
- * @method void setAppId(integer $AppId) 设置账号AppId
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getAgentId() 获取智能体ID
- * @method void setAgentId(string $AgentId) 设置智能体ID
- * @method string getName() 获取智能体名称
- * @method void setName(string $Name) 设置智能体名称
- * @method string getDescription() 获取智能体描述
- * @method void setDescription(string $Description) 设置智能体描述
- * @method TalkSTTConfig getSTTConfig() 获取语音识别配置
- * @method void setSTTConfig(TalkSTTConfig $STTConfig) 设置语音识别配置
- * @method TalkLLMConfig getLLMConfig() 获取大模型配置
- * @method void setLLMConfig(TalkLLMConfig $LLMConfig) 设置大模型配置
- * @method TalkTTSConfig getTTSConfig() 获取语音合成配置
- * @method void setTTSConfig(TalkTTSConfig $TTSConfig) 设置语音合成配置
- * @method TalkConversationConfig getConversationConfig() 获取对话行为配置
- * @method void setConversationConfig(TalkConversationConfig $ConversationConfig) 设置对话行为配置
- * @method TalkMemoryConfig getMemoryConfig() 获取长期记忆配置
- * @method void setMemoryConfig(TalkMemoryConfig $MemoryConfig) 设置长期记忆配置
- * @method array getIOTTools() 获取IoT 工具列表
- * @method void setIOTTools(array $IOTTools) 设置IoT 工具列表
- * @method array getWebhookTools() 获取Webhook 工具列表
- * @method void setWebhookTools(array $WebhookTools) 设置Webhook 工具列表
- * @method string getMetadata() 获取元信息JSON object 字符串
- * @method void setMetadata(string $Metadata) 设置元信息JSON object 字符串
- * @method array getBindings() 获取绑定关系列表
- * @method void setBindings(array $Bindings) 设置绑定关系列表
- * @method integer getCreateTime() 获取创建时间，Unix 秒
- * @method void setCreateTime(integer $CreateTime) 设置创建时间，Unix 秒
- * @method integer getUpdateTime() 获取更新时间，Unix 秒
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间，Unix 秒
+ * @method integer getUin() 获取<p>主账号UIN</p>
+ * @method void setUin(integer $Uin) 设置<p>主账号UIN</p>
+ * @method integer getAppId() 获取<p>账号AppId</p>
+ * @method void setAppId(integer $AppId) 设置<p>账号AppId</p>
+ * @method string getInstanceId() 获取<p>实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID</p>
+ * @method string getAgentId() 获取<p>智能体ID</p>
+ * @method void setAgentId(string $AgentId) 设置<p>智能体ID</p>
+ * @method string getName() 获取<p>智能体名称</p>
+ * @method void setName(string $Name) 设置<p>智能体名称</p>
+ * @method string getDescription() 获取<p>智能体描述</p>
+ * @method void setDescription(string $Description) 设置<p>智能体描述</p>
+ * @method TalkSTTConfig getSTTConfig() 获取<p>语音识别配置</p>
+ * @method void setSTTConfig(TalkSTTConfig $STTConfig) 设置<p>语音识别配置</p>
+ * @method TalkLLMConfig getLLMConfig() 获取<p>大模型配置</p>
+ * @method void setLLMConfig(TalkLLMConfig $LLMConfig) 设置<p>大模型配置</p>
+ * @method TalkTTSConfig getTTSConfig() 获取<p>语音合成配置</p>
+ * @method void setTTSConfig(TalkTTSConfig $TTSConfig) 设置<p>语音合成配置</p>
+ * @method TalkConversationConfig getConversationConfig() 获取<p>对话行为配置</p>
+ * @method void setConversationConfig(TalkConversationConfig $ConversationConfig) 设置<p>对话行为配置</p>
+ * @method TalkMemoryConfig getMemoryConfig() 获取<p>长期记忆配置</p>
+ * @method void setMemoryConfig(TalkMemoryConfig $MemoryConfig) 设置<p>长期记忆配置</p>
+ * @method array getIOTTools() 获取<p>IoT 工具列表</p>
+ * @method void setIOTTools(array $IOTTools) 设置<p>IoT 工具列表</p>
+ * @method array getWebhookTools() 获取<p>Webhook 工具列表</p>
+ * @method void setWebhookTools(array $WebhookTools) 设置<p>Webhook 工具列表</p>
+ * @method string getMetadata() 获取<p>元信息JSON object 字符串</p>
+ * @method void setMetadata(string $Metadata) 设置<p>元信息JSON object 字符串</p>
+ * @method array getBindings() 获取<p>绑定关系列表</p>
+ * @method void setBindings(array $Bindings) 设置<p>绑定关系列表</p>
+ * @method integer getCreateTime() 获取<p>创建时间，Unix 秒</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间，Unix 秒</p>
+ * @method integer getUpdateTime() 获取<p>更新时间，Unix 秒</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间，Unix 秒</p>
+ * @method TalkEventCallbackConfig getEventCallbackConfig() 获取<p>事件回调配置</p>
+ * @method void setEventCallbackConfig(TalkEventCallbackConfig $EventCallbackConfig) 设置<p>事件回调配置</p>
  */
 class TalkAgentInfo extends AbstractModel
 {
     /**
-     * @var integer 主账号UIN
+     * @var integer <p>主账号UIN</p>
      */
     public $Uin;
 
     /**
-     * @var integer 账号AppId
+     * @var integer <p>账号AppId</p>
      */
     public $AppId;
 
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 智能体ID
+     * @var string <p>智能体ID</p>
      */
     public $AgentId;
 
     /**
-     * @var string 智能体名称
+     * @var string <p>智能体名称</p>
      */
     public $Name;
 
     /**
-     * @var string 智能体描述
+     * @var string <p>智能体描述</p>
      */
     public $Description;
 
     /**
-     * @var TalkSTTConfig 语音识别配置
+     * @var TalkSTTConfig <p>语音识别配置</p>
      */
     public $STTConfig;
 
     /**
-     * @var TalkLLMConfig 大模型配置
+     * @var TalkLLMConfig <p>大模型配置</p>
      */
     public $LLMConfig;
 
     /**
-     * @var TalkTTSConfig 语音合成配置
+     * @var TalkTTSConfig <p>语音合成配置</p>
      */
     public $TTSConfig;
 
     /**
-     * @var TalkConversationConfig 对话行为配置
+     * @var TalkConversationConfig <p>对话行为配置</p>
      */
     public $ConversationConfig;
 
     /**
-     * @var TalkMemoryConfig 长期记忆配置
+     * @var TalkMemoryConfig <p>长期记忆配置</p>
      */
     public $MemoryConfig;
 
     /**
-     * @var array IoT 工具列表
+     * @var array <p>IoT 工具列表</p>
      */
     public $IOTTools;
 
     /**
-     * @var array Webhook 工具列表
+     * @var array <p>Webhook 工具列表</p>
      */
     public $WebhookTools;
 
     /**
-     * @var string 元信息JSON object 字符串
+     * @var string <p>元信息JSON object 字符串</p>
      */
     public $Metadata;
 
     /**
-     * @var array 绑定关系列表
+     * @var array <p>绑定关系列表</p>
      */
     public $Bindings;
 
     /**
-     * @var integer 创建时间，Unix 秒
+     * @var integer <p>创建时间，Unix 秒</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 更新时间，Unix 秒
+     * @var integer <p>更新时间，Unix 秒</p>
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Uin 主账号UIN
-     * @param integer $AppId 账号AppId
-     * @param string $InstanceId 实例 ID
-     * @param string $AgentId 智能体ID
-     * @param string $Name 智能体名称
-     * @param string $Description 智能体描述
-     * @param TalkSTTConfig $STTConfig 语音识别配置
-     * @param TalkLLMConfig $LLMConfig 大模型配置
-     * @param TalkTTSConfig $TTSConfig 语音合成配置
-     * @param TalkConversationConfig $ConversationConfig 对话行为配置
-     * @param TalkMemoryConfig $MemoryConfig 长期记忆配置
-     * @param array $IOTTools IoT 工具列表
-     * @param array $WebhookTools Webhook 工具列表
-     * @param string $Metadata 元信息JSON object 字符串
-     * @param array $Bindings 绑定关系列表
-     * @param integer $CreateTime 创建时间，Unix 秒
-     * @param integer $UpdateTime 更新时间，Unix 秒
+     * @var TalkEventCallbackConfig <p>事件回调配置</p>
+     */
+    public $EventCallbackConfig;
+
+    /**
+     * @param integer $Uin <p>主账号UIN</p>
+     * @param integer $AppId <p>账号AppId</p>
+     * @param string $InstanceId <p>实例 ID</p>
+     * @param string $AgentId <p>智能体ID</p>
+     * @param string $Name <p>智能体名称</p>
+     * @param string $Description <p>智能体描述</p>
+     * @param TalkSTTConfig $STTConfig <p>语音识别配置</p>
+     * @param TalkLLMConfig $LLMConfig <p>大模型配置</p>
+     * @param TalkTTSConfig $TTSConfig <p>语音合成配置</p>
+     * @param TalkConversationConfig $ConversationConfig <p>对话行为配置</p>
+     * @param TalkMemoryConfig $MemoryConfig <p>长期记忆配置</p>
+     * @param array $IOTTools <p>IoT 工具列表</p>
+     * @param array $WebhookTools <p>Webhook 工具列表</p>
+     * @param string $Metadata <p>元信息JSON object 字符串</p>
+     * @param array $Bindings <p>绑定关系列表</p>
+     * @param integer $CreateTime <p>创建时间，Unix 秒</p>
+     * @param integer $UpdateTime <p>更新时间，Unix 秒</p>
+     * @param TalkEventCallbackConfig $EventCallbackConfig <p>事件回调配置</p>
      */
     function __construct()
     {
@@ -260,6 +268,11 @@ class TalkAgentInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("EventCallbackConfig",$param) and $param["EventCallbackConfig"] !== null) {
+            $this->EventCallbackConfig = new TalkEventCallbackConfig();
+            $this->EventCallbackConfig->deserialize($param["EventCallbackConfig"]);
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>图片异步处理模板名称。</p>
  * @method string getComment() 获取<p>图片异步处理模板描述信息。</p>
  * @method void setComment(string $Comment) 设置<p>图片异步处理模板描述信息。</p>
+ * @method string getType() 获取<p>模板类型</p><p>枚举值：</p><ul><li>Preset： 系统预置模板</li><li>Custom： 用户自定义模板</li></ul>
+ * @method void setType(string $Type) 设置<p>模板类型</p><p>枚举值：</p><ul><li>Preset： 系统预置模板</li><li>Custom： 用户自定义模板</li></ul>
  * @method string getLevel() 获取<p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
  * @method void setLevel(string $Level) 设置<p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
  * @method LLMComprehendSummary getSummary() 获取<p>分段摘要解析配置</p>
@@ -55,6 +57,11 @@ class LLMComprehendTemplateItem extends AbstractModel
      * @var string <p>图片异步处理模板描述信息。</p>
      */
     public $Comment;
+
+    /**
+     * @var string <p>模板类型</p><p>枚举值：</p><ul><li>Preset： 系统预置模板</li><li>Custom： 用户自定义模板</li></ul>
+     */
+    public $Type;
 
     /**
      * @var string <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
@@ -90,6 +97,7 @@ class LLMComprehendTemplateItem extends AbstractModel
      * @param integer $Definition <p>图片异步处理模板唯一标识。</p>
      * @param string $Name <p>图片异步处理模板名称。</p>
      * @param string $Comment <p>图片异步处理模板描述信息。</p>
+     * @param string $Type <p>模板类型</p><p>枚举值：</p><ul><li>Preset： 系统预置模板</li><li>Custom： 用户自定义模板</li></ul>
      * @param string $Level <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
      * @param LLMComprehendSummary $Summary <p>分段摘要解析配置</p>
      * @param LLMComprehendAsr $Asr <p>文本转录解析配置</p>
@@ -120,6 +128,10 @@ class LLMComprehendTemplateItem extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {

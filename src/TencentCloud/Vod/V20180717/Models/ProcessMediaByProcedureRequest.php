@@ -20,94 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMediaByProcedure请求参数结构体
  *
- * @method string getProcedureName() 获取[任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。
- * @method void setProcedureName(string $ProcedureName) 设置[任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。
- * @method string getFileId() 获取媒体文件 ID。
-FileId和MediaStoragePath必须提供其中一个。
- * @method void setFileId(string $FileId) 设置媒体文件 ID。
-FileId和MediaStoragePath必须提供其中一个。
- * @method string getMediaStoragePath() 获取媒体的存储路径。
-只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
-FileId和MediaStoragePath必须提供其中一个。
- * @method void setMediaStoragePath(string $MediaStoragePath) 设置媒体的存储路径。
-只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
-FileId和MediaStoragePath必须提供其中一个。
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method integer getTasksPriority() 获取任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
- * @method void setTasksPriority(integer $TasksPriority) 设置任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
- * @method string getTasksNotifyMode() 获取任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
- * @method void setTasksNotifyMode(string $TasksNotifyMode) 设置任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
- * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- * @method string getSessionId() 获取用于去重的识别码，如果 7 天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果 7 天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method string getExtInfo() 获取保留字段，特殊用途时使用。
- * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
+ * @method string getProcedureName() 获取<p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流</a>名称。</p>
+ * @method void setProcedureName(string $ProcedureName) 设置<p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流</a>名称。</p>
+ * @method string getFileId() 获取<p>媒体文件 ID。<br>FileId和MediaStoragePath必须提供其中一个。</p>
+ * @method void setFileId(string $FileId) 设置<p>媒体文件 ID。<br>FileId和MediaStoragePath必须提供其中一个。</p>
+ * @method string getMediaStoragePath() 获取<p>媒体的存储路径。<br>只有<a href="https://cloud.tencent.com/document/product/266/126825">FileID + Path 模式</a>的子应用可以通过MediaStoragePath发起任务。<br>FileId和MediaStoragePath必须提供其中一个。</p>
+ * @method void setMediaStoragePath(string $MediaStoragePath) 设置<p>媒体的存储路径。<br>只有<a href="https://cloud.tencent.com/document/product/266/126825">FileID + Path 模式</a>的子应用可以通过MediaStoragePath发起任务。<br>FileId和MediaStoragePath必须提供其中一个。</p>
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method integer getTasksPriority() 获取<p>任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。</p>
+ * @method void setTasksPriority(integer $TasksPriority) 设置<p>任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。</p>
+ * @method string getTasksNotifyMode() 获取<p>任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。</p>
+ * @method void setTasksNotifyMode(string $TasksNotifyMode) 设置<p>任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。</p>
+ * @method string getSessionContext() 获取<p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+ * @method void setSessionContext(string $SessionContext) 设置<p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+ * @method string getSessionId() 获取<p>用于去重的识别码，如果 7 天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+ * @method void setSessionId(string $SessionId) 设置<p>用于去重的识别码，如果 7 天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+ * @method string getExtInfo() 获取<p>保留字段，特殊用途时使用。</p>
+ * @method void setExtInfo(string $ExtInfo) 设置<p>保留字段，特殊用途时使用。</p>
  */
 class ProcessMediaByProcedureRequest extends AbstractModel
 {
     /**
-     * @var string [任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。
+     * @var string <p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流</a>名称。</p>
      */
     public $ProcedureName;
 
     /**
-     * @var string 媒体文件 ID。
-FileId和MediaStoragePath必须提供其中一个。
+     * @var string <p>媒体文件 ID。<br>FileId和MediaStoragePath必须提供其中一个。</p>
      */
     public $FileId;
 
     /**
-     * @var string 媒体的存储路径。
-只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
-FileId和MediaStoragePath必须提供其中一个。
+     * @var string <p>媒体的存储路径。<br>只有<a href="https://cloud.tencent.com/document/product/266/126825">FileID + Path 模式</a>的子应用可以通过MediaStoragePath发起任务。<br>FileId和MediaStoragePath必须提供其中一个。</p>
      */
     public $MediaStoragePath;
 
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var integer 任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
+     * @var integer <p>任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。</p>
      */
     public $TasksPriority;
 
     /**
-     * @var string 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
+     * @var string <p>任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。</p>
      */
     public $TasksNotifyMode;
 
     /**
-     * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * @var string <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public $SessionContext;
 
     /**
-     * @var string 用于去重的识别码，如果 7 天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @var string <p>用于去重的识别码，如果 7 天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public $SessionId;
 
     /**
-     * @var string 保留字段，特殊用途时使用。
+     * @var string <p>保留字段，特殊用途时使用。</p>
      */
     public $ExtInfo;
 
     /**
-     * @param string $ProcedureName [任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。
-     * @param string $FileId 媒体文件 ID。
-FileId和MediaStoragePath必须提供其中一个。
-     * @param string $MediaStoragePath 媒体的存储路径。
-只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
-FileId和MediaStoragePath必须提供其中一个。
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param integer $TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
-     * @param string $TasksNotifyMode 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
-     * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param string $SessionId 用于去重的识别码，如果 7 天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-     * @param string $ExtInfo 保留字段，特殊用途时使用。
+     * @param string $ProcedureName <p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流</a>名称。</p>
+     * @param string $FileId <p>媒体文件 ID。<br>FileId和MediaStoragePath必须提供其中一个。</p>
+     * @param string $MediaStoragePath <p>媒体的存储路径。<br>只有<a href="https://cloud.tencent.com/document/product/266/126825">FileID + Path 模式</a>的子应用可以通过MediaStoragePath发起任务。<br>FileId和MediaStoragePath必须提供其中一个。</p>
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param integer $TasksPriority <p>任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。</p>
+     * @param string $TasksNotifyMode <p>任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。</p>
+     * @param string $SessionContext <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+     * @param string $SessionId <p>用于去重的识别码，如果 7 天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+     * @param string $ExtInfo <p>保留字段，特殊用途时使用。</p>
      */
     function __construct()
     {

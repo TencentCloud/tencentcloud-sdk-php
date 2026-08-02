@@ -20,87 +20,91 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProcedureTemplate请求参数结构体
  *
- * @method string getName() 获取任务流名字（支持中文，不超过20个字）。
- * @method void setName(string $Name) 设置任务流名字（支持中文，不超过20个字）。
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- * @method MediaProcessTaskInput getMediaProcessTask() 获取视频处理类型任务参数。
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置视频处理类型任务参数。
- * @method AiContentReviewTaskInput getAiContentReviewTask() 获取AI 内容审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置AI 内容审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
- * @method AiAnalysisTaskInput getAiAnalysisTask() 获取AI 内容分析类型任务参数。
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置AI 内容分析类型任务参数。
- * @method array getAiRecognitionTaskSet() 获取AI 内容识别类型任务参数。
- * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) 设置AI 内容识别类型任务参数。
- * @method AiRecognitionTaskInput getAiRecognitionTask() 获取该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
- * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() 获取音视频审核类型任务参数。
- * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) 设置音视频审核类型任务参数。
+ * @method string getName() 获取<p>任务流名字（支持中文，不超过20个字）。</p>
+ * @method void setName(string $Name) 设置<p>任务流名字（支持中文，不超过20个字）。</p>
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method string getComment() 获取<p>模板描述信息，长度限制：256 个字符。</p>
+ * @method void setComment(string $Comment) 设置<p>模板描述信息，长度限制：256 个字符。</p>
+ * @method MediaProcessTaskInput getMediaProcessTask() 获取<p>视频处理类型任务参数。</p>
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置<p>视频处理类型任务参数。</p>
+ * @method AiContentReviewTaskInput getAiContentReviewTask() 获取<p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置<p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+ * @method AiAnalysisTaskInput getAiAnalysisTask() 获取<p>AI 内容分析类型任务参数。</p>
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置<p>AI 内容分析类型任务参数。</p>
+ * @method array getAiRecognitionTaskSet() 获取<p>AI 内容识别类型任务参数。</p>
+ * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) 设置<p>AI 内容识别类型任务参数。</p>
+ * @method AiRecognitionTaskInput getAiRecognitionTask() 获取<p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置<p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
+ * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() 获取<p>音视频审核类型任务参数。</p>
+ * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) 设置<p>音视频审核类型任务参数。</p>
+ * @method array getImportMediaKnowledgeTaskSet() 获取<p>导入智能媒资知识库任务参数。</p>
+ * @method void setImportMediaKnowledgeTaskSet(array $ImportMediaKnowledgeTaskSet) 设置<p>导入智能媒资知识库任务参数。</p>
  */
 class CreateProcedureTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 任务流名字（支持中文，不超过20个字）。
+     * @var string <p>任务流名字（支持中文，不超过20个字）。</p>
      */
     public $Name;
 
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 模板描述信息，长度限制：256 个字符。
+     * @var string <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public $Comment;
 
     /**
-     * @var MediaProcessTaskInput 视频处理类型任务参数。
+     * @var MediaProcessTaskInput <p>视频处理类型任务参数。</p>
      */
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput AI 内容审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+     * @var AiContentReviewTaskInput <p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput AI 内容分析类型任务参数。
+     * @var AiAnalysisTaskInput <p>AI 内容分析类型任务参数。</p>
      */
     public $AiAnalysisTask;
 
     /**
-     * @var array AI 内容识别类型任务参数。
+     * @var array <p>AI 内容识别类型任务参数。</p>
      */
     public $AiRecognitionTaskSet;
 
     /**
-     * @var AiRecognitionTaskInput 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+     * @var AiRecognitionTaskInput <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
      * @deprecated
      */
     public $AiRecognitionTask;
 
     /**
-     * @var ProcedureReviewAudioVideoTaskInput 音视频审核类型任务参数。
+     * @var ProcedureReviewAudioVideoTaskInput <p>音视频审核类型任务参数。</p>
      */
     public $ReviewAudioVideoTask;
 
     /**
-     * @param string $Name 任务流名字（支持中文，不超过20个字）。
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param string $Comment 模板描述信息，长度限制：256 个字符。
-     * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
-     * @param AiContentReviewTaskInput $AiContentReviewTask AI 内容审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
-     * @param AiAnalysisTaskInput $AiAnalysisTask AI 内容分析类型任务参数。
-     * @param array $AiRecognitionTaskSet AI 内容识别类型任务参数。
-     * @param AiRecognitionTaskInput $AiRecognitionTask 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
-     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask 音视频审核类型任务参数。
+     * @var array <p>导入智能媒资知识库任务参数。</p>
+     */
+    public $ImportMediaKnowledgeTaskSet;
+
+    /**
+     * @param string $Name <p>任务流名字（支持中文，不超过20个字）。</p>
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param string $Comment <p>模板描述信息，长度限制：256 个字符。</p>
+     * @param MediaProcessTaskInput $MediaProcessTask <p>视频处理类型任务参数。</p>
+     * @param AiContentReviewTaskInput $AiContentReviewTask <p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+     * @param AiAnalysisTaskInput $AiAnalysisTask <p>AI 内容分析类型任务参数。</p>
+     * @param array $AiRecognitionTaskSet <p>AI 内容识别类型任务参数。</p>
+     * @param AiRecognitionTaskInput $AiRecognitionTask <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
+     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask <p>音视频审核类型任务参数。</p>
+     * @param array $ImportMediaKnowledgeTaskSet <p>导入智能媒资知识库任务参数。</p>
      */
     function __construct()
     {
@@ -159,6 +163,15 @@ class CreateProcedureTemplateRequest extends AbstractModel
         if (array_key_exists("ReviewAudioVideoTask",$param) and $param["ReviewAudioVideoTask"] !== null) {
             $this->ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput();
             $this->ReviewAudioVideoTask->deserialize($param["ReviewAudioVideoTask"]);
+        }
+
+        if (array_key_exists("ImportMediaKnowledgeTaskSet",$param) and $param["ImportMediaKnowledgeTaskSet"] !== null) {
+            $this->ImportMediaKnowledgeTaskSet = [];
+            foreach ($param["ImportMediaKnowledgeTaskSet"] as $key => $value){
+                $obj = new ImportMediaKnowledgeTaskInput();
+                $obj->deserialize($value);
+                array_push($this->ImportMediaKnowledgeTaskSet, $obj);
+            }
         }
     }
 }

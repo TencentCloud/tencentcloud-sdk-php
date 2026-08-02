@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMPSTemplates返回参数结构体
  *
- * @method integer getTotalCount() 获取符合过滤条件的记录总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的记录总数。
- * @method array getMPSTemplateSet() 获取MPS 任务模板详情列表。
- * @method void setMPSTemplateSet(array $MPSTemplateSet) 设置MPS 任务模板详情列表。
+ * @method integer getTotalCount() 获取<p>符合过滤条件的记录总数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合过滤条件的记录总数。</p>
+ * @method array getMPSTemplateSet() 获取<p>MPS 任务模板详情列表。</p>
+ * @method void setMPSTemplateSet(array $MPSTemplateSet) 设置<p>MPS 任务模板详情列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeMPSTemplatesResponse extends AbstractModel
 {
     /**
-     * @var integer 符合过滤条件的记录总数。
+     * @var integer <p>符合过滤条件的记录总数。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array MPS 任务模板详情列表。
+     * @var array <p>MPS 任务模板详情列表。</p>
      */
     public $MPSTemplateSet;
 
@@ -45,8 +45,8 @@ class DescribeMPSTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合过滤条件的记录总数。
-     * @param array $MPSTemplateSet MPS 任务模板详情列表。
+     * @param integer $TotalCount <p>符合过滤条件的记录总数。</p>
+     * @param array $MPSTemplateSet <p>MPS 任务模板详情列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

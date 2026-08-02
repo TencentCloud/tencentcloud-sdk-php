@@ -26,8 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProvider(string $Provider) 设置<p>所属厂商</p>
  * @method string getType() 获取<p>模型类型。</p><p>枚举值：</p><ul><li>BYOK： BYOK类型</li><li>Platform： 平台类型</li></ul>
  * @method void setType(string $Type) 设置<p>模型类型。</p><p>枚举值：</p><ul><li>BYOK： BYOK类型</li><li>Platform： 平台类型</li></ul>
- * @method string getServiceProviderId() 获取<p>服务商/模型 ID（byok_model.model_id，形如 model-xxxxxxxx；Platform 类型不传）</p>
- * @method void setServiceProviderId(string $ServiceProviderId) 设置<p>服务商/模型 ID（byok_model.model_id，形如 model-xxxxxxxx；Platform 类型不传）</p>
+ * @method string getServiceProviderId() 获取<p>BYOK实例ID</p>
+ * @method void setServiceProviderId(string $ServiceProviderId) 设置<p>BYOK实例ID</p>
+ * @method integer getOrder() 获取<p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
+ * @method void setOrder(integer $Order) 设置<p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
+ * @method integer getWeight() 获取<p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
+ * @method void setWeight(integer $Weight) 设置<p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
  */
 class ModelRouterModel extends AbstractModel
 {
@@ -47,15 +51,27 @@ class ModelRouterModel extends AbstractModel
     public $Type;
 
     /**
-     * @var string <p>服务商/模型 ID（byok_model.model_id，形如 model-xxxxxxxx；Platform 类型不传）</p>
+     * @var string <p>BYOK实例ID</p>
      */
     public $ServiceProviderId;
+
+    /**
+     * @var integer <p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
+     */
+    public $Order;
+
+    /**
+     * @var integer <p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
+     */
+    public $Weight;
 
     /**
      * @param string $ModelName <p>模型名称</p>
      * @param string $Provider <p>所属厂商</p>
      * @param string $Type <p>模型类型。</p><p>枚举值：</p><ul><li>BYOK： BYOK类型</li><li>Platform： 平台类型</li></ul>
-     * @param string $ServiceProviderId <p>服务商/模型 ID（byok_model.model_id，形如 model-xxxxxxxx；Platform 类型不传）</p>
+     * @param string $ServiceProviderId <p>BYOK实例ID</p>
+     * @param integer $Order <p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
+     * @param integer $Weight <p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class ModelRouterModel extends AbstractModel
 
         if (array_key_exists("ServiceProviderId",$param) and $param["ServiceProviderId"] !== null) {
             $this->ServiceProviderId = $param["ServiceProviderId"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
         }
     }
 }

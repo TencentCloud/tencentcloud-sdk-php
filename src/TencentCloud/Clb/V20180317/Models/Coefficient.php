@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method float getInputCachedCoefficient() 获取<p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p>
  * @method void setInputCachedCoefficient(float $InputCachedCoefficient) 设置<p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p>
+ * @method float getInputCacheCreationCoefficient() 获取<p>缓存创建积分系数</p>
+ * @method void setInputCacheCreationCoefficient(float $InputCacheCreationCoefficient) 设置<p>缓存创建积分系数</p>
  * @method float getInputCoefficient() 获取<p>输入积分系数。</p><p>取值范围：[1, 5000]</p><p>默认值：25</p>
  * @method void setInputCoefficient(float $InputCoefficient) 设置<p>输入积分系数。</p><p>取值范围：[1, 5000]</p><p>默认值：25</p>
  * @method float getOutputCoefficient() 获取<p>输出积分系数。</p><p>取值范围：[1, 5000]</p><p>默认值：100</p>
@@ -35,6 +37,11 @@ class Coefficient extends AbstractModel
     public $InputCachedCoefficient;
 
     /**
+     * @var float <p>缓存创建积分系数</p>
+     */
+    public $InputCacheCreationCoefficient;
+
+    /**
      * @var float <p>输入积分系数。</p><p>取值范围：[1, 5000]</p><p>默认值：25</p>
      */
     public $InputCoefficient;
@@ -46,6 +53,7 @@ class Coefficient extends AbstractModel
 
     /**
      * @param float $InputCachedCoefficient <p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p>
+     * @param float $InputCacheCreationCoefficient <p>缓存创建积分系数</p>
      * @param float $InputCoefficient <p>输入积分系数。</p><p>取值范围：[1, 5000]</p><p>默认值：25</p>
      * @param float $OutputCoefficient <p>输出积分系数。</p><p>取值范围：[1, 5000]</p><p>默认值：100</p>
      */
@@ -64,6 +72,10 @@ class Coefficient extends AbstractModel
         }
         if (array_key_exists("InputCachedCoefficient",$param) and $param["InputCachedCoefficient"] !== null) {
             $this->InputCachedCoefficient = $param["InputCachedCoefficient"];
+        }
+
+        if (array_key_exists("InputCacheCreationCoefficient",$param) and $param["InputCacheCreationCoefficient"] !== null) {
+            $this->InputCacheCreationCoefficient = $param["InputCacheCreationCoefficient"];
         }
 
         if (array_key_exists("InputCoefficient",$param) and $param["InputCoefficient"] !== null) {

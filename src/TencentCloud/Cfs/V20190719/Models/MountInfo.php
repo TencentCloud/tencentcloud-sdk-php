@@ -20,114 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 挂载点信息
  *
- * @method string getFileSystemId() 获取文件系统 ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- * @method string getMountTargetId() 获取挂载点 ID
- * @method void setMountTargetId(string $MountTargetId) 设置挂载点 ID
- * @method string getIpAddress() 获取挂载点 IP
- * @method void setIpAddress(string $IpAddress) 设置挂载点 IP
- * @method string getFSID() 获取挂载根目录
- * @method void setFSID(string $FSID) 设置挂载根目录
- * @method string getLifeCycleState() 获取挂载点状态，包括creating：创建中；available：运行中；
-deleting：删除中；
-create_failed： 创建失败
- * @method void setLifeCycleState(string $LifeCycleState) 设置挂载点状态，包括creating：创建中；available：运行中；
-deleting：删除中；
-create_failed： 创建失败
- * @method string getNetworkInterface() 获取网络类型，包括VPC,CCN
- * @method void setNetworkInterface(string $NetworkInterface) 设置网络类型，包括VPC,CCN
- * @method string getVpcId() 获取私有网络 ID
- * @method void setVpcId(string $VpcId) 设置私有网络 ID
- * @method string getVpcName() 获取私有网络名称
- * @method void setVpcName(string $VpcName) 设置私有网络名称
- * @method string getSubnetId() 获取子网 Id
- * @method void setSubnetId(string $SubnetId) 设置子网 Id
- * @method string getSubnetName() 获取子网名称
- * @method void setSubnetName(string $SubnetName) 设置子网名称
- * @method string getCcnID() 获取CFS Turbo使用的云联网ID
- * @method void setCcnID(string $CcnID) 设置CFS Turbo使用的云联网ID
- * @method string getCidrBlock() 获取云联网中CFS Turbo使用的网段
- * @method void setCidrBlock(string $CidrBlock) 设置云联网中CFS Turbo使用的网段
+ * @method string getFileSystemId() 获取<p>文件系统 ID</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统 ID</p>
+ * @method string getMountTargetId() 获取<p>挂载点 ID</p>
+ * @method void setMountTargetId(string $MountTargetId) 设置<p>挂载点 ID</p>
+ * @method string getIpAddress() 获取<p>挂载点 IP</p>
+ * @method void setIpAddress(string $IpAddress) 设置<p>挂载点 IP</p>
+ * @method string getFSID() 获取<p>挂载根目录</p>
+ * @method void setFSID(string $FSID) 设置<p>挂载根目录</p>
+ * @method string getLifeCycleState() 获取<p>挂载点状态，包括creating：创建中；available：运行中；<br>deleting：删除中；<br>create_failed： 创建失败</p>
+ * @method void setLifeCycleState(string $LifeCycleState) 设置<p>挂载点状态，包括creating：创建中；available：运行中；<br>deleting：删除中；<br>create_failed： 创建失败</p>
+ * @method string getNetworkInterface() 获取<p>网络类型，包括VPC,CCN</p>
+ * @method void setNetworkInterface(string $NetworkInterface) 设置<p>网络类型，包括VPC,CCN</p>
+ * @method string getVpcId() 获取<p>私有网络 ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络 ID</p>
+ * @method string getVpcName() 获取<p>私有网络名称</p>
+ * @method void setVpcName(string $VpcName) 设置<p>私有网络名称</p>
+ * @method string getSubnetId() 获取<p>子网 Id</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网 Id</p>
+ * @method string getSubnetName() 获取<p>子网名称</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>子网名称</p>
+ * @method string getCcnID() 获取<p>CFS Turbo使用的云联网ID</p>
+ * @method void setCcnID(string $CcnID) 设置<p>CFS Turbo使用的云联网ID</p>
+ * @method string getCidrBlock() 获取<p>云联网中CFS Turbo使用的网段</p>
+ * @method void setCidrBlock(string $CidrBlock) 设置<p>云联网中CFS Turbo使用的网段</p>
+ * @method array getServerList() 获取<p>占用用户ip列表</p>
+ * @method void setServerList(array $ServerList) 设置<p>占用用户ip列表</p>
+ * @method boolean getServerListTruncated() 获取<p>是否占用超过200个ip</p>
+ * @method void setServerListTruncated(boolean $ServerListTruncated) 设置<p>是否占用超过200个ip</p>
  */
 class MountInfo extends AbstractModel
 {
     /**
-     * @var string 文件系统 ID
+     * @var string <p>文件系统 ID</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string 挂载点 ID
+     * @var string <p>挂载点 ID</p>
      */
     public $MountTargetId;
 
     /**
-     * @var string 挂载点 IP
+     * @var string <p>挂载点 IP</p>
      */
     public $IpAddress;
 
     /**
-     * @var string 挂载根目录
+     * @var string <p>挂载根目录</p>
      */
     public $FSID;
 
     /**
-     * @var string 挂载点状态，包括creating：创建中；available：运行中；
-deleting：删除中；
-create_failed： 创建失败
+     * @var string <p>挂载点状态，包括creating：创建中；available：运行中；<br>deleting：删除中；<br>create_failed： 创建失败</p>
      */
     public $LifeCycleState;
 
     /**
-     * @var string 网络类型，包括VPC,CCN
+     * @var string <p>网络类型，包括VPC,CCN</p>
      */
     public $NetworkInterface;
 
     /**
-     * @var string 私有网络 ID
+     * @var string <p>私有网络 ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 私有网络名称
+     * @var string <p>私有网络名称</p>
      */
     public $VpcName;
 
     /**
-     * @var string 子网 Id
+     * @var string <p>子网 Id</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 子网名称
+     * @var string <p>子网名称</p>
      */
     public $SubnetName;
 
     /**
-     * @var string CFS Turbo使用的云联网ID
+     * @var string <p>CFS Turbo使用的云联网ID</p>
      */
     public $CcnID;
 
     /**
-     * @var string 云联网中CFS Turbo使用的网段
+     * @var string <p>云联网中CFS Turbo使用的网段</p>
      */
     public $CidrBlock;
 
     /**
-     * @param string $FileSystemId 文件系统 ID
-     * @param string $MountTargetId 挂载点 ID
-     * @param string $IpAddress 挂载点 IP
-     * @param string $FSID 挂载根目录
-     * @param string $LifeCycleState 挂载点状态，包括creating：创建中；available：运行中；
-deleting：删除中；
-create_failed： 创建失败
-     * @param string $NetworkInterface 网络类型，包括VPC,CCN
-     * @param string $VpcId 私有网络 ID
-     * @param string $VpcName 私有网络名称
-     * @param string $SubnetId 子网 Id
-     * @param string $SubnetName 子网名称
-     * @param string $CcnID CFS Turbo使用的云联网ID
-     * @param string $CidrBlock 云联网中CFS Turbo使用的网段
+     * @var array <p>占用用户ip列表</p>
+     */
+    public $ServerList;
+
+    /**
+     * @var boolean <p>是否占用超过200个ip</p>
+     */
+    public $ServerListTruncated;
+
+    /**
+     * @param string $FileSystemId <p>文件系统 ID</p>
+     * @param string $MountTargetId <p>挂载点 ID</p>
+     * @param string $IpAddress <p>挂载点 IP</p>
+     * @param string $FSID <p>挂载根目录</p>
+     * @param string $LifeCycleState <p>挂载点状态，包括creating：创建中；available：运行中；<br>deleting：删除中；<br>create_failed： 创建失败</p>
+     * @param string $NetworkInterface <p>网络类型，包括VPC,CCN</p>
+     * @param string $VpcId <p>私有网络 ID</p>
+     * @param string $VpcName <p>私有网络名称</p>
+     * @param string $SubnetId <p>子网 Id</p>
+     * @param string $SubnetName <p>子网名称</p>
+     * @param string $CcnID <p>CFS Turbo使用的云联网ID</p>
+     * @param string $CidrBlock <p>云联网中CFS Turbo使用的网段</p>
+     * @param array $ServerList <p>占用用户ip列表</p>
+     * @param boolean $ServerListTruncated <p>是否占用超过200个ip</p>
      */
     function __construct()
     {
@@ -188,6 +196,14 @@ create_failed： 创建失败
 
         if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
             $this->CidrBlock = $param["CidrBlock"];
+        }
+
+        if (array_key_exists("ServerList",$param) and $param["ServerList"] !== null) {
+            $this->ServerList = $param["ServerList"];
+        }
+
+        if (array_key_exists("ServerListTruncated",$param) and $param["ServerListTruncated"] !== null) {
+            $this->ServerListTruncated = $param["ServerListTruncated"];
         }
     }
 }

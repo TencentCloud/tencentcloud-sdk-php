@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceProviderId(string $ServiceProviderId) 设置<p>BYOK实例ID</p>
  * @method string getServiceProviderName() 获取<p>BYOK名称</p>
  * @method void setServiceProviderName(string $ServiceProviderName) 设置<p>BYOK名称</p>
+ * @method integer getOrder() 获取<p>绑定的指定模型组内BYOK实例的调度优先级</p><p>取值范围[0,2]，优先级随数值增大而降低。</p>
+ * @method void setOrder(integer $Order) 设置<p>绑定的指定模型组内BYOK实例的调度优先级</p><p>取值范围[0,2]，优先级随数值增大而降低。</p>
+ * @method integer getWeight() 获取<p>绑定的指定模型组Order相同层级内BYOK实例的调度权重</p>
+ * @method void setWeight(integer $Weight) 设置<p>绑定的指定模型组Order相同层级内BYOK实例的调度权重</p>
+ * @method string getAssociationStatus() 获取<p>CMR实例-BYOK实例的模型调度绑定关系状态</p><p>枚举值：</p><ul><li>Configuring： 变配中</li><li>ConfigureFailed： 变配失败</li><li>Deleting： 删除中</li><li>Provisioning： 创建中</li><li>Active： 正常可用</li><li>ProvisionFailed： 创建失败</li><li>DeletionFailed： 删除失败</li></ul>
+ * @method void setAssociationStatus(string $AssociationStatus) 设置<p>CMR实例-BYOK实例的模型调度绑定关系状态</p><p>枚举值：</p><ul><li>Configuring： 变配中</li><li>ConfigureFailed： 变配失败</li><li>Deleting： 删除中</li><li>Provisioning： 创建中</li><li>Active： 正常可用</li><li>ProvisionFailed： 创建失败</li><li>DeletionFailed： 删除失败</li></ul>
  */
 class ServiceProvider extends AbstractModel
 {
@@ -66,12 +72,30 @@ class ServiceProvider extends AbstractModel
     public $ServiceProviderName;
 
     /**
+     * @var integer <p>绑定的指定模型组内BYOK实例的调度优先级</p><p>取值范围[0,2]，优先级随数值增大而降低。</p>
+     */
+    public $Order;
+
+    /**
+     * @var integer <p>绑定的指定模型组Order相同层级内BYOK实例的调度权重</p>
+     */
+    public $Weight;
+
+    /**
+     * @var string <p>CMR实例-BYOK实例的模型调度绑定关系状态</p><p>枚举值：</p><ul><li>Configuring： 变配中</li><li>ConfigureFailed： 变配失败</li><li>Deleting： 删除中</li><li>Provisioning： 创建中</li><li>Active： 正常可用</li><li>ProvisionFailed： 创建失败</li><li>DeletionFailed： 删除失败</li></ul>
+     */
+    public $AssociationStatus;
+
+    /**
      * @param string $AccessType <p>BYOK类型</p>
      * @param array $InputModalities <p>单个byok实例下该模型可支持的输入多模态能力列表。</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>image： 支持图像输入</li></ul>
      * @param string $Protocol <p>模型协议</p>
      * @param string $Provider <p>BYOK的所属厂商</p>
      * @param string $ServiceProviderId <p>BYOK实例ID</p>
      * @param string $ServiceProviderName <p>BYOK名称</p>
+     * @param integer $Order <p>绑定的指定模型组内BYOK实例的调度优先级</p><p>取值范围[0,2]，优先级随数值增大而降低。</p>
+     * @param integer $Weight <p>绑定的指定模型组Order相同层级内BYOK实例的调度权重</p>
+     * @param string $AssociationStatus <p>CMR实例-BYOK实例的模型调度绑定关系状态</p><p>枚举值：</p><ul><li>Configuring： 变配中</li><li>ConfigureFailed： 变配失败</li><li>Deleting： 删除中</li><li>Provisioning： 创建中</li><li>Active： 正常可用</li><li>ProvisionFailed： 创建失败</li><li>DeletionFailed： 删除失败</li></ul>
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class ServiceProvider extends AbstractModel
 
         if (array_key_exists("ServiceProviderName",$param) and $param["ServiceProviderName"] !== null) {
             $this->ServiceProviderName = $param["ServiceProviderName"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("AssociationStatus",$param) and $param["AssociationStatus"] !== null) {
+            $this->AssociationStatus = $param["AssociationStatus"];
         }
     }
 }

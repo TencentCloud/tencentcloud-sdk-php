@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
  * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
- * @method string getTemplateType() 获取<p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul>
- * @method void setTemplateType(string $TemplateType) 设置<p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul>
+ * @method string getTemplateType() 获取<p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li><li>EmbedSubtitle： 字幕压制模板</li></ul>
+ * @method void setTemplateType(string $TemplateType) 设置<p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li><li>EmbedSubtitle： 字幕压制模板</li></ul>
  * @method string getMPSModifyTemplateParams() 获取<p>MPS 修改模板参数。该参数用于透传至媒体处理服务（MPS），从云点播侧修改用户自定义的 MPS 任务模板。<br> 目前仅支持通过此方式修改以下任务类型的模板：</p><ol><li>音视频增强：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/37578">修改转码模板</a>”接口中的 Name、Comment、RemoveVideo、RemoveAudio、VideoTemplate、AudioTemplate 和 EnhanceConfig 几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li><li>智能分析：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/40246">修改内容分析模板</a>”接口中的Name、Comment、ClassificationConfigure、TagConfigure、CoverConfigure、FrameTagConfigure几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li><li>智能字幕：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/117001">修改智能字幕模板</a>”接口中的Name、Comment、TranslateSwitch、VideoSrcLanguage、SubtitleFormat、SubtitleType、AsrHotWordsConfigure、TranslateDstLanguage、ProcessType几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li><li>智能擦除：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/123732">修改智能擦除模板</a>”接口中的Name、Comment、EraseType、EraseSubtitleConfig、EraseWatermarkConfig、ErasePrivacyConfig几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li></ol>
  * @method void setMPSModifyTemplateParams(string $MPSModifyTemplateParams) 设置<p>MPS 修改模板参数。该参数用于透传至媒体处理服务（MPS），从云点播侧修改用户自定义的 MPS 任务模板。<br> 目前仅支持通过此方式修改以下任务类型的模板：</p><ol><li>音视频增强：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/37578">修改转码模板</a>”接口中的 Name、Comment、RemoveVideo、RemoveAudio、VideoTemplate、AudioTemplate 和 EnhanceConfig 几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li><li>智能分析：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/40246">修改内容分析模板</a>”接口中的Name、Comment、ClassificationConfigure、TagConfigure、CoverConfigure、FrameTagConfigure几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li><li>智能字幕：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/117001">修改智能字幕模板</a>”接口中的Name、Comment、TranslateSwitch、VideoSrcLanguage、SubtitleFormat、SubtitleType、AsrHotWordsConfigure、TranslateDstLanguage、ProcessType几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li><li>智能擦除：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/123732">修改智能擦除模板</a>”接口中的Name、Comment、EraseType、EraseSubtitleConfig、EraseWatermarkConfig、ErasePrivacyConfig几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li></ol>
  * @method MPSAIAnalysisTemplateForUpdate getAIAnalysisTemplate() 获取<p>智能分析模板参数，MPSModifyTemplateParams为空时有效。</p>
@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSmartSubtitleTemplate(MPSSmartSubtitleTemplateForUpdate $SmartSubtitleTemplate) 设置<p>智能字幕模板参数，MPSModifyTemplateParams为空时有效。</p>
  * @method MPSSmartEraseTemplateForUpdate getSmartEraseTemplate() 获取<p>智能擦除模板参数，MPSModifyTemplateParams为空时有效。</p>
  * @method void setSmartEraseTemplate(MPSSmartEraseTemplateForUpdate $SmartEraseTemplate) 设置<p>智能擦除模板参数，MPSModifyTemplateParams为空时有效。</p>
+ * @method MPSEmbedSubtitleTemplateForUpdate getEmbedSubtitleTemplate() 获取<p>字幕压制模板参数，MPSModifyTemplateParams为空时有效。</p>
+ * @method void setEmbedSubtitleTemplate(MPSEmbedSubtitleTemplateForUpdate $EmbedSubtitleTemplate) 设置<p>字幕压制模板参数，MPSModifyTemplateParams为空时有效。</p>
  */
 class ModifyMPSTemplateRequest extends AbstractModel
 {
@@ -41,7 +43,7 @@ class ModifyMPSTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul>
+     * @var string <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li><li>EmbedSubtitle： 字幕压制模板</li></ul>
      */
     public $TemplateType;
 
@@ -66,12 +68,18 @@ class ModifyMPSTemplateRequest extends AbstractModel
     public $SmartEraseTemplate;
 
     /**
+     * @var MPSEmbedSubtitleTemplateForUpdate <p>字幕压制模板参数，MPSModifyTemplateParams为空时有效。</p>
+     */
+    public $EmbedSubtitleTemplate;
+
+    /**
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
-     * @param string $TemplateType <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul>
+     * @param string $TemplateType <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li><li>EmbedSubtitle： 字幕压制模板</li></ul>
      * @param string $MPSModifyTemplateParams <p>MPS 修改模板参数。该参数用于透传至媒体处理服务（MPS），从云点播侧修改用户自定义的 MPS 任务模板。<br> 目前仅支持通过此方式修改以下任务类型的模板：</p><ol><li>音视频增强：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/37578">修改转码模板</a>”接口中的 Name、Comment、RemoveVideo、RemoveAudio、VideoTemplate、AudioTemplate 和 EnhanceConfig 几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li><li>智能分析：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/40246">修改内容分析模板</a>”接口中的Name、Comment、ClassificationConfigure、TagConfigure、CoverConfigure、FrameTagConfigure几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li><li>智能字幕：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/117001">修改智能字幕模板</a>”接口中的Name、Comment、TranslateSwitch、VideoSrcLanguage、SubtitleFormat、SubtitleType、AsrHotWordsConfigure、TranslateDstLanguage、ProcessType几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li><li>智能擦除：仅支持填写“<a href="https://cloud.tencent.com/document/api/862/123732">修改智能擦除模板</a>”接口中的Name、Comment、EraseType、EraseSubtitleConfig、EraseWatermarkConfig、ErasePrivacyConfig几个参数的内容。目前仅支持在模板中配置以上参数，其他参数无需填写，若包含其它参数，系统将自动忽略。</li></ol>
      * @param MPSAIAnalysisTemplateForUpdate $AIAnalysisTemplate <p>智能分析模板参数，MPSModifyTemplateParams为空时有效。</p>
      * @param MPSSmartSubtitleTemplateForUpdate $SmartSubtitleTemplate <p>智能字幕模板参数，MPSModifyTemplateParams为空时有效。</p>
      * @param MPSSmartEraseTemplateForUpdate $SmartEraseTemplate <p>智能擦除模板参数，MPSModifyTemplateParams为空时有效。</p>
+     * @param MPSEmbedSubtitleTemplateForUpdate $EmbedSubtitleTemplate <p>字幕压制模板参数，MPSModifyTemplateParams为空时有效。</p>
      */
     function __construct()
     {
@@ -111,6 +119,11 @@ class ModifyMPSTemplateRequest extends AbstractModel
         if (array_key_exists("SmartEraseTemplate",$param) and $param["SmartEraseTemplate"] !== null) {
             $this->SmartEraseTemplate = new MPSSmartEraseTemplateForUpdate();
             $this->SmartEraseTemplate->deserialize($param["SmartEraseTemplate"]);
+        }
+
+        if (array_key_exists("EmbedSubtitleTemplate",$param) and $param["EmbedSubtitleTemplate"] !== null) {
+            $this->EmbedSubtitleTemplate = new MPSEmbedSubtitleTemplateForUpdate();
+            $this->EmbedSubtitleTemplate->deserialize($param["EmbedSubtitleTemplate"]);
         }
     }
 }

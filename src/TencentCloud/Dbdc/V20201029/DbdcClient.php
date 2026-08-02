@@ -51,6 +51,7 @@ use TencentCloud\Dbdc\V20201029\Models as Models;
  * @method Models\IsolateDBCustomNodeResponse IsolateDBCustomNode(Models\IsolateDBCustomNodeRequest $req) 该接口 (IsolateDBCustomNode) 用于隔离 DB Custom 节点。
  * @method Models\ModifyDBCustomClusterNodeConfigResponse ModifyDBCustomClusterNodeConfig(Models\ModifyDBCustomClusterNodeConfigRequest $req) 该接口（ModifyDBCustomClusterNodeConfig）用于修改 DB Custom 集群中节点的配置。
  * @method Models\ModifyDBCustomClusterTagsResponse ModifyDBCustomClusterTags(Models\ModifyDBCustomClusterTagsRequest $req) 该接口（ModifyDBCustomClusterTags）用于修改 DB Custom 集群绑定的标签。
+ * @method Models\ModifyDBCustomNodeAttributesResponse ModifyDBCustomNodeAttributes(Models\ModifyDBCustomNodeAttributesRequest $req) 该接口（ModifyDBCustomNodeAttributes）用于修改 DB Custom 节点的属性。
  * @method Models\ModifyDBCustomNodeSecurityGroupsResponse ModifyDBCustomNodeSecurityGroups(Models\ModifyDBCustomNodeSecurityGroupsRequest $req) 该接口（ModifyDBCustomNodeSecurityGroups）用于修改 DB Custom 节点安全组。
  * @method Models\ModifyDBCustomNodeTagsResponse ModifyDBCustomNodeTags(Models\ModifyDBCustomNodeTagsRequest $req) 该接口（ModifyDBCustomNodeTags）用于修改 DB Custom 节点绑定的标签。
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 本接口用于修改集群名称

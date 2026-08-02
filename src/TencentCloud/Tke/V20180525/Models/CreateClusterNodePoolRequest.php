@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>资源标签</p>
  * @method boolean getDeletionProtection() 获取<p>删除保护开关</p>
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>删除保护开关</p>
+ * @method array getSkipValidateOptions() 获取<p>跳过校验选项，目前支持 &quot;VpcDnsCheck&quot;</p>
+ * @method void setSkipValidateOptions(array $SkipValidateOptions) 设置<p>跳过校验选项，目前支持 &quot;VpcDnsCheck&quot;</p>
  */
 class CreateClusterNodePoolRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $DeletionProtection;
 
     /**
+     * @var array <p>跳过校验选项，目前支持 &quot;VpcDnsCheck&quot;</p>
+     */
+    public $SkipValidateOptions;
+
+    /**
      * @param string $ClusterId <p>cluster id</p>
      * @param string $AutoScalingGroupPara <p>AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440</p>
      * @param string $LaunchConfigurePara <p>LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447</p>
@@ -144,6 +151,7 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param string $OsCustomizeType <p>容器的镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
      * @param array $Tags <p>资源标签</p>
      * @param boolean $DeletionProtection <p>删除保护开关</p>
+     * @param array $SkipValidateOptions <p>跳过校验选项，目前支持 &quot;VpcDnsCheck&quot;</p>
      */
     function __construct()
     {
@@ -237,6 +245,10 @@ class CreateClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("SkipValidateOptions",$param) and $param["SkipValidateOptions"] !== null) {
+            $this->SkipValidateOptions = $param["SkipValidateOptions"];
         }
     }
 }

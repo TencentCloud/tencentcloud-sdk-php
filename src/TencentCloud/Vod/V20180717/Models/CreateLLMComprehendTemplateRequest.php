@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>大模型解析模板名称，长度限制：64 个字符。</p>
  * @method string getComment() 获取<p>大模型解析模板描述信息，长度限制：256 个字符。</p>
  * @method void setComment(string $Comment) 设置<p>大模型解析模板描述信息，长度限制：256 个字符。</p>
- * @method LLMComprehendSummary getSummary() 获取<p>分段摘要解析配置</p>
- * @method void setSummary(LLMComprehendSummary $Summary) 设置<p>分段摘要解析配置</p>
+ * @method LLMComprehendSummary getSummary() 获取<p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p>
+ * @method void setSummary(LLMComprehendSummary $Summary) 设置<p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p>
  * @method LLMComprehendAsr getAsr() 获取<p>文本转录解析配置</p>
  * @method void setAsr(LLMComprehendAsr $Asr) 设置<p>文本转录解析配置</p>
  * @method LLMComprehendFaceRecognition getFaceRecognition() 获取<p>人脸识别配置</p>
@@ -58,7 +58,7 @@ class CreateLLMComprehendTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var LLMComprehendSummary <p>分段摘要解析配置</p>
+     * @var LLMComprehendSummary <p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p>
      */
     public $Summary;
 
@@ -77,7 +77,7 @@ class CreateLLMComprehendTemplateRequest extends AbstractModel
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      * @param string $Name <p>大模型解析模板名称，长度限制：64 个字符。</p>
      * @param string $Comment <p>大模型解析模板描述信息，长度限制：256 个字符。</p>
-     * @param LLMComprehendSummary $Summary <p>分段摘要解析配置</p>
+     * @param LLMComprehendSummary $Summary <p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p>
      * @param LLMComprehendAsr $Asr <p>文本转录解析配置</p>
      * @param LLMComprehendFaceRecognition $FaceRecognition <p>人脸识别配置</p>
      */

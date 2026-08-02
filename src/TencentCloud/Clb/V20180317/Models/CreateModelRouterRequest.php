@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelRouterType(string $ModelRouterType) 设置<p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul>
  * @method string getBudgetId() 获取<p>关联的积分预算ID</p>
  * @method void setBudgetId(string $BudgetId) 设置<p>关联的积分预算ID</p>
- * @method string getCertId() 获取<p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p>
- * @method void setCertId(string $CertId) 设置<p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p>
- * @method ClusterInfo getClusterInfo() 获取<p>集群信息</p>
- * @method void setClusterInfo(ClusterInfo $ClusterInfo) 设置<p>集群信息</p>
+ * @method string getCertId() 获取<p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
+ * @method void setCertId(string $CertId) 设置<p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
+ * @method ClusterInfoInput getClusterInfo() 获取<p>集群信息</p>
+ * @method void setClusterInfo(ClusterInfoInput $ClusterInfo) 设置<p>集群信息</p>
  * @method string getModelRouterName() 获取<p>模型路由实例名称</p><p>默认值：-</p>
  * @method void setModelRouterName(string $ModelRouterName) 设置<p>模型路由实例名称</p><p>默认值：-</p>
  * @method string getNetworkType() 获取<p>网络类型</p><p>枚举值：</p><ul><li>Internet： 公网</li><li>Intranet： 内网</li></ul>
@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>标签</p>
  * @method string getVpcId() 获取<p>模型路由实例所属VPC的ID</p>
  * @method void setVpcId(string $VpcId) 设置<p>模型路由实例所属VPC的ID</p>
+ * @method ModelRouterBillingConfigInput getModelRouterBillingConfig() 获取<p>模型路由实例计费信息</p>
+ * @method void setModelRouterBillingConfig(ModelRouterBillingConfigInput $ModelRouterBillingConfig) 设置<p>模型路由实例计费信息</p>
+ * @method string getClientToken() 获取<p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
  */
 class CreateModelRouterRequest extends AbstractModel
 {
@@ -60,12 +64,12 @@ class CreateModelRouterRequest extends AbstractModel
     public $BudgetId;
 
     /**
-     * @var string <p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p>
+     * @var string <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
      */
     public $CertId;
 
     /**
-     * @var ClusterInfo <p>集群信息</p>
+     * @var ClusterInfoInput <p>集群信息</p>
      */
     public $ClusterInfo;
 
@@ -115,10 +119,20 @@ class CreateModelRouterRequest extends AbstractModel
     public $VpcId;
 
     /**
+     * @var ModelRouterBillingConfigInput <p>模型路由实例计费信息</p>
+     */
+    public $ModelRouterBillingConfig;
+
+    /**
+     * @var string <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+     */
+    public $ClientToken;
+
+    /**
      * @param string $ModelRouterType <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul>
      * @param string $BudgetId <p>关联的积分预算ID</p>
-     * @param string $CertId <p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p>
-     * @param ClusterInfo $ClusterInfo <p>集群信息</p>
+     * @param string $CertId <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
+     * @param ClusterInfoInput $ClusterInfo <p>集群信息</p>
      * @param string $ModelRouterName <p>模型路由实例名称</p><p>默认值：-</p>
      * @param string $NetworkType <p>网络类型</p><p>枚举值：</p><ul><li>Internet： 公网</li><li>Intranet： 内网</li></ul>
      * @param integer $Port <p>模型路由的监听端口</p><p>取值范围：[1, 65535]</p>
@@ -128,6 +142,8 @@ class CreateModelRouterRequest extends AbstractModel
      * @param string $SubnetId <p>模型路由实例所属子网的ID</p>
      * @param array $Tags <p>标签</p>
      * @param string $VpcId <p>模型路由实例所属VPC的ID</p>
+     * @param ModelRouterBillingConfigInput $ModelRouterBillingConfig <p>模型路由实例计费信息</p>
+     * @param string $ClientToken <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
      */
     function __construct()
     {
@@ -155,7 +171,7 @@ class CreateModelRouterRequest extends AbstractModel
         }
 
         if (array_key_exists("ClusterInfo",$param) and $param["ClusterInfo"] !== null) {
-            $this->ClusterInfo = new ClusterInfo();
+            $this->ClusterInfo = new ClusterInfoInput();
             $this->ClusterInfo->deserialize($param["ClusterInfo"]);
         }
 
@@ -200,6 +216,15 @@ class CreateModelRouterRequest extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("ModelRouterBillingConfig",$param) and $param["ModelRouterBillingConfig"] !== null) {
+            $this->ModelRouterBillingConfig = new ModelRouterBillingConfigInput();
+            $this->ModelRouterBillingConfig->deserialize($param["ModelRouterBillingConfig"]);
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

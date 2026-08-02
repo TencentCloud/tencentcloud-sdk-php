@@ -31,10 +31,12 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\BatchStartStreamLinkFlowResponse BatchStartStreamLinkFlow(Models\BatchStartStreamLinkFlowRequest $req) 批量启动媒体传输流。
  * @method Models\BatchStopStreamLinkFlowResponse BatchStopStreamLinkFlow(Models\BatchStopStreamLinkFlowRequest $req) 批量停止媒体传输流。
  * @method Models\CloneViralResponse CloneViral(Models\CloneViralRequest $req) 爆款复刻。输入爆款参考视频+商品图，生成风格/节奏对齐的视频
+ * @method Models\CloneVoiceResponse CloneVoice(Models\CloneVoiceRequest $req) 同步接口，使用该接口从参考音频克隆一个音色
  * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) 创建用户自定义内容分析模板，数量上限：50。
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) 创建用户自定义内容识别模板，数量上限：50。
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) 创建转自适应码流模板，数量上限：100。
  * @method Models\CreateAiDramaTaskResponse CreateAiDramaTask(Models\CreateAiDramaTaskRequest $req) Ai漫剧工作流，输入剧本，自动拆分分镜，生成Ai漫剧
+ * @method Models\CreateAiFissionTaskResponse CreateAiFissionTask(Models\CreateAiFissionTaskRequest $req) 创建ai视频裂变任务
  * @method Models\CreateAigcAudioTaskResponse CreateAigcAudioTask(Models\CreateAigcAudioTaskRequest $req) 调用该接口，用于创建AI生音频任务。
  * @method Models\CreateAigcImageTaskResponse CreateAigcImageTask(Models\CreateAigcImageTaskRequest $req) 调用该接口用于创建AIGC生图片任务。
  * @method Models\CreateAigcVideoTaskResponse CreateAigcVideoTask(Models\CreateAigcVideoTaskRequest $req) 调用该接口，用于创建AI生视频任务。
@@ -315,6 +317,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\StopStreamLinkFlowResponse StopStreamLinkFlow(Models\StopStreamLinkFlowRequest $req) 停止媒体传输流。
  * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) 停止线性组装频道。
  * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) 同步接口，返回克隆音色ID或合成音频结果。克隆/设计音色数量上限默认100
+ * @method Models\TextToSpeechResponse TextToSpeech(Models\TextToSpeechRequest $req) 同步语音合成，根据输入文本和指定音色生成语音
  * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) 异步语音合成接口，支持长文本转语音
  * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) 文本翻译，使用 翻译字幕（附加语种）计费项，按1100字符（按照 Unicode 码点数 统计，hello 算5个字符，你好 算2个字符）/分钟折算到时长计费
  * @method Models\UpdateProjectResponse UpdateProject(Models\UpdateProjectRequest $req) 剧集项目更新

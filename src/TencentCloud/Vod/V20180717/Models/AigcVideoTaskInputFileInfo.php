@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取<p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> <li>Base64：图片或视频转换的Base64字符串；</li></p>
  * @method void setType(string $Type) 设置<p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> <li>Base64：图片或视频转换的Base64字符串；</li></p>
- * @method string getCategory() 获取<p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul>
- * @method void setCategory(string $Category) 设置<p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul>
+ * @method string getCategory() 获取<p>文件分类。取值为：</p><ul><li>Image: 图片；</li><li>Video: 视频；</li><li>Audio: 音频；</li></ul>
+ * @method void setCategory(string $Category) 设置<p>文件分类。取值为：</p><ul><li>Image: 图片；</li><li>Video: 视频；</li><li>Audio: 音频；</li></ul>
  * @method string getFileId() 获取<p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。当 Type 取值为 File 时，本参数有效。说明：</p><ol><li>推荐使用小于10M的图片；</li><li>图片格式的取值为：jpeg，jpg, png。</li></ol>
  * @method void setFileId(string $FileId) 设置<p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。当 Type 取值为 File 时，本参数有效。说明：</p><ol><li>推荐使用小于10M的图片；</li><li>图片格式的取值为：jpeg，jpg, png。</li></ol>
  * @method string getUrl() 获取<p>可访问的文件 URL。当 Type 取值为 Url 时，本参数有效。<br>说明：</p><ol><li>推荐使用小于10M的图片；</li><li>图片格式的取值为：jpeg，jpg, png。</li></ol>
@@ -51,7 +51,7 @@ class AigcVideoTaskInputFileInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string <p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul>
+     * @var string <p>文件分类。取值为：</p><ul><li>Image: 图片；</li><li>Video: 视频；</li><li>Audio: 音频；</li></ul>
      */
     public $Category;
 
@@ -102,7 +102,7 @@ class AigcVideoTaskInputFileInfo extends AbstractModel
 
     /**
      * @param string $Type <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> <li>Base64：图片或视频转换的Base64字符串；</li></p>
-     * @param string $Category <p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul>
+     * @param string $Category <p>文件分类。取值为：</p><ul><li>Image: 图片；</li><li>Video: 视频；</li><li>Audio: 音频；</li></ul>
      * @param string $FileId <p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。当 Type 取值为 File 时，本参数有效。说明：</p><ol><li>推荐使用小于10M的图片；</li><li>图片格式的取值为：jpeg，jpg, png。</li></ol>
      * @param string $Url <p>可访问的文件 URL。当 Type 取值为 Url 时，本参数有效。<br>说明：</p><ol><li>推荐使用小于10M的图片；</li><li>图片格式的取值为：jpeg，jpg, png。</li></ol>
      * @param string $Base64 <p>可访问的文件 Base64。当 Type 取值为 Base64 时，本参数有效。说明：</p><ol><li>所有文件的文件大小总和不能超过7MB，避免转为 Base64 后超出云API的10MB包大小上限；</li><li>图片格式应为：jpeg，jpg, png, webp。</li><li>视频格式应为：mp4, mov, avi。</li><li>不要有data:image/jpeg;base64,之类的前缀。</li></ol>

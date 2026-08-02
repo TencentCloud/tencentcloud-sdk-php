@@ -61,7 +61,7 @@ class DisassociateModelsFromModelRouterRequest extends AbstractModel
         if (array_key_exists("Models",$param) and $param["Models"] !== null) {
             $this->Models = [];
             foreach ($param["Models"] as $key => $value){
-                $obj = new ModelRouterModel();
+                $obj = new ModelRouterModelToDisassociate();
                 $obj->deserialize($value);
                 array_push($this->Models, $obj);
             }

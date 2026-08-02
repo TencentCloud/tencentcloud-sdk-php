@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoAreas(array $AutoAreas) 设置<p>自动擦除自定义区域。<br>对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。<br>注意：当擦除方式选择custom时，此参数将不会生效；修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。</p>
  * @method array getCustomAreas() 获取<p>指定擦除自定义区域。<br>对选定区域，在选定时间段内不进行检测识别直接进行擦除。<br>注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。</p>
  * @method void setCustomAreas(array $CustomAreas) 设置<p>指定擦除自定义区域。<br>对选定区域，在选定时间段内不进行检测识别直接进行擦除。<br>注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。</p>
+ * @method integer getSubtitleEmbedId() 获取<p>字幕压制模板id，只有开启OCR翻译时可以填写</p>
+ * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) 设置<p>字幕压制模板id，只有开启OCR翻译时可以填写</p>
  * @method integer getUseOriginalPos() 获取<p>压制配置，默认开启1, 把字幕压制回原字幕位置。只有开启OCR翻译时可以填写，取0时表示不开启压回原位</p>
  * @method void setUseOriginalPos(integer $UseOriginalPos) 设置<p>压制配置，默认开启1, 把字幕压制回原字幕位置。只有开启OCR翻译时可以填写，取0时表示不开启压回原位</p>
  * @method integer getUseOriginalSize() 获取<p>压制配置，默认开启1, 开启后使用原字幕字号。只有开启OCR翻译时可以填写，取0时表示不使用原字号</p>
@@ -91,6 +93,11 @@ class MPSSmartEraseSubtitleConfig extends AbstractModel
     public $CustomAreas;
 
     /**
+     * @var integer <p>字幕压制模板id，只有开启OCR翻译时可以填写</p>
+     */
+    public $SubtitleEmbedId;
+
+    /**
      * @var integer <p>压制配置，默认开启1, 把字幕压制回原字幕位置。只有开启OCR翻译时可以填写，取0时表示不开启压回原位</p>
      */
     public $UseOriginalPos;
@@ -110,6 +117,7 @@ class MPSSmartEraseSubtitleConfig extends AbstractModel
      * @param string $TransDstLang <p>字幕翻译目标语言，默认取en；仅当TransSwitch取"ON"时生效。<br>当前支持以下语言：<br>zh：简体中文<br>en：英语<br>ja：日语<br>ko：韩语<br>fr：法语<br>es：西班牙语<br>it：意大利语<br>de：德语<br>tr：土耳其语<br>ru：俄语<br>pt：葡萄牙语<br>vi：越南语<br>id：印度尼西亚语<br>ms：马来语<br>th：泰语<br>ar：阿拉伯语<br>hi：印地语</p>
      * @param array $AutoAreas <p>自动擦除自定义区域。<br>对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。<br>注意：当擦除方式选择custom时，此参数将不会生效；修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。</p>
      * @param array $CustomAreas <p>指定擦除自定义区域。<br>对选定区域，在选定时间段内不进行检测识别直接进行擦除。<br>注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。</p>
+     * @param integer $SubtitleEmbedId <p>字幕压制模板id，只有开启OCR翻译时可以填写</p>
      * @param integer $UseOriginalPos <p>压制配置，默认开启1, 把字幕压制回原字幕位置。只有开启OCR翻译时可以填写，取0时表示不开启压回原位</p>
      * @param integer $UseOriginalSize <p>压制配置，默认开启1, 开启后使用原字幕字号。只有开启OCR翻译时可以填写，取0时表示不使用原字号</p>
      */
@@ -170,6 +178,10 @@ class MPSSmartEraseSubtitleConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CustomAreas, $obj);
             }
+        }
+
+        if (array_key_exists("SubtitleEmbedId",$param) and $param["SubtitleEmbedId"] !== null) {
+            $this->SubtitleEmbedId = $param["SubtitleEmbedId"];
         }
 
         if (array_key_exists("UseOriginalPos",$param) and $param["UseOriginalPos"] !== null) {

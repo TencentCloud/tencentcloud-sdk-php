@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
  * @method array getDefinitions() 获取<p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
  * @method void setDefinitions(array $Definitions) 设置<p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
+ * @method SortBy getSort() 获取<p>排序方式。<br>Sort.Field 可选 Definition、CreateTime、UpdateTime。</p>
+ * @method void setSort(SortBy $Sort) 设置<p>排序方式。<br>Sort.Field 可选 Definition、CreateTime、UpdateTime。</p>
  * @method integer getOffset() 获取<p>分页偏移量，默认值：0。</p>
  * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认值：0。</p>
  * @method integer getLimit() 获取<p>返回记录条数，默认值：10，最大值：100。</p>
@@ -42,6 +44,11 @@ class DescribeLLMComprehendTemplatesRequest extends AbstractModel
     public $Definitions;
 
     /**
+     * @var SortBy <p>排序方式。<br>Sort.Field 可选 Definition、CreateTime、UpdateTime。</p>
+     */
+    public $Sort;
+
+    /**
      * @var integer <p>分页偏移量，默认值：0。</p>
      */
     public $Offset;
@@ -54,6 +61,7 @@ class DescribeLLMComprehendTemplatesRequest extends AbstractModel
     /**
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      * @param array $Definitions <p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
+     * @param SortBy $Sort <p>排序方式。<br>Sort.Field 可选 Definition、CreateTime、UpdateTime。</p>
      * @param integer $Offset <p>分页偏移量，默认值：0。</p>
      * @param integer $Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
@@ -76,6 +84,11 @@ class DescribeLLMComprehendTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
             $this->Definitions = $param["Definitions"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = new SortBy();
+            $this->Sort->deserialize($param["Sort"]);
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

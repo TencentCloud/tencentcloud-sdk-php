@@ -20,86 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 灾备实例信息
  *
- * @method integer getStatus() 获取灾备实例状态
- * @method void setStatus(integer $Status) 设置灾备实例状态
- * @method string getZone() 获取可用区信息
- * @method void setZone(string $Zone) 设置可用区信息
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getRegion() 获取地域信息
- * @method void setRegion(string $Region) 设置地域信息
- * @method integer getSyncStatus() 获取实例同步状态。可能的返回值为：
-0 - 灾备未同步；
-1 - 灾备同步中；
-2 - 灾备同步成功；
-3 - 灾备同步失败；
-4 - 灾备同步修复中。
- * @method void setSyncStatus(integer $SyncStatus) 设置实例同步状态。可能的返回值为：
-0 - 灾备未同步；
-1 - 灾备同步中；
-2 - 灾备同步成功；
-3 - 灾备同步失败；
-4 - 灾备同步修复中。
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getInstanceType() 获取实例类型
- * @method void setInstanceType(integer $InstanceType) 设置实例类型
+ * @method integer getStatus() 获取<p>灾备实例状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 运行中</li><li>4： 正在进行隔离操作</li><li>5： 已隔离</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>灾备实例状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 运行中</li><li>4： 正在进行隔离操作</li><li>5： 已隔离</li></ul>
+ * @method string getZone() 获取<p>可用区信息</p>
+ * @method void setZone(string $Zone) 设置<p>可用区信息</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getRegion() 获取<p>地域信息</p>
+ * @method void setRegion(string $Region) 设置<p>地域信息</p>
+ * @method integer getSyncStatus() 获取<p>实例同步状态。可能的返回值为：<br>0 - 灾备未同步；<br>1 - 灾备同步中；<br>2 - 灾备同步成功；<br>3 - 灾备同步失败；<br>4 - 灾备同步修复中。</p>
+ * @method void setSyncStatus(integer $SyncStatus) 设置<p>实例同步状态。可能的返回值为：<br>0 - 灾备未同步；<br>1 - 灾备同步中；<br>2 - 灾备同步成功；<br>3 - 灾备同步失败；<br>4 - 灾备同步修复中。</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method integer getInstanceType() 获取<p>实例类型</p>
+ * @method void setInstanceType(integer $InstanceType) 设置<p>实例类型</p>
  */
 class DrInfo extends AbstractModel
 {
     /**
-     * @var integer 灾备实例状态
+     * @var integer <p>灾备实例状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 运行中</li><li>4： 正在进行隔离操作</li><li>5： 已隔离</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 可用区信息
+     * @var string <p>可用区信息</p>
      */
     public $Zone;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 地域信息
+     * @var string <p>地域信息</p>
      */
     public $Region;
 
     /**
-     * @var integer 实例同步状态。可能的返回值为：
-0 - 灾备未同步；
-1 - 灾备同步中；
-2 - 灾备同步成功；
-3 - 灾备同步失败；
-4 - 灾备同步修复中。
+     * @var integer <p>实例同步状态。可能的返回值为：<br>0 - 灾备未同步；<br>1 - 灾备同步中；<br>2 - 灾备同步成功；<br>3 - 灾备同步失败；<br>4 - 灾备同步修复中。</p>
      */
     public $SyncStatus;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 实例类型
+     * @var integer <p>实例类型</p>
      */
     public $InstanceType;
 
     /**
-     * @param integer $Status 灾备实例状态
-     * @param string $Zone 可用区信息
-     * @param string $InstanceId 实例ID
-     * @param string $Region 地域信息
-     * @param integer $SyncStatus 实例同步状态。可能的返回值为：
-0 - 灾备未同步；
-1 - 灾备同步中；
-2 - 灾备同步成功；
-3 - 灾备同步失败；
-4 - 灾备同步修复中。
-     * @param string $InstanceName 实例名称
-     * @param integer $InstanceType 实例类型
+     * @param integer $Status <p>灾备实例状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 运行中</li><li>4： 正在进行隔离操作</li><li>5： 已隔离</li></ul>
+     * @param string $Zone <p>可用区信息</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $Region <p>地域信息</p>
+     * @param integer $SyncStatus <p>实例同步状态。可能的返回值为：<br>0 - 灾备未同步；<br>1 - 灾备同步中；<br>2 - 灾备同步成功；<br>3 - 灾备同步失败；<br>4 - 灾备同步修复中。</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param integer $InstanceType <p>实例类型</p>
      */
     function __construct()
     {

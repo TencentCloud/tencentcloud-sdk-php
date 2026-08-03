@@ -40,14 +40,18 @@ use TencentCloud\Common\AbstractModel;
 <li>当 OriginType = IP_DOMAIN 时，该参数为 IPv4、IPv6 地址或域名；</li>
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
-<li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
+<li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；如果引用了其它站点的源站组，格式为{源站组 ID}@{ZoneID}。例如：og-testorigin@zone-38moq1z10wwwy</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
+<li>当 OriginType = LB 时，该参数请填写负载均衡实例 ID，该功能当前仅白名单开放；如果引用了其它站点的负载均衡，格式为{负载均衡 ID}@{ZoneID}。例如：lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>当 OriginType = SPACE 时，该参数请填写源站卸载空间 ID，该功能当前仅白名单开放。</li>
  * @method void setOrigin(string $Origin) 设置源站地址，根据 OriginType 的取值分为以下情况：
 <li>当 OriginType = IP_DOMAIN 时，该参数为 IPv4、IPv6 地址或域名；</li>
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
-<li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
+<li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；如果引用了其它站点的源站组，格式为{源站组 ID}@{ZoneID}。例如：og-testorigin@zone-38moq1z10wwwy</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
+<li>当 OriginType = LB 时，该参数请填写负载均衡实例 ID，该功能当前仅白名单开放；如果引用了其它站点的负载均衡，格式为{负载均衡 ID}@{ZoneID}。例如：lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>当 OriginType = SPACE 时，该参数请填写源站卸载空间 ID，该功能当前仅白名单开放。</li>
  * @method string getBackupOrigin() 获取备用源站组 ID，该参数仅在 OriginType = ORIGIN_GROUP 且配置了备源站组时会生效。
  * @method void setBackupOrigin(string $BackupOrigin) 设置备用源站组 ID，该参数仅在 OriginType = ORIGIN_GROUP 且配置了备源站组时会生效。
  * @method string getOriginGroupName() 获取主源源站组名称，当 OriginType = ORIGIN_GROUP 时该参数会返回值。
@@ -100,8 +104,10 @@ class OriginDetail extends AbstractModel
 <li>当 OriginType = IP_DOMAIN 时，该参数为 IPv4、IPv6 地址或域名；</li>
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
-<li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
+<li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；如果引用了其它站点的源站组，格式为{源站组 ID}@{ZoneID}。例如：og-testorigin@zone-38moq1z10wwwy</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
+<li>当 OriginType = LB 时，该参数请填写负载均衡实例 ID，该功能当前仅白名单开放；如果引用了其它站点的负载均衡，格式为{负载均衡 ID}@{ZoneID}。例如：lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>当 OriginType = SPACE 时，该参数请填写源站卸载空间 ID，该功能当前仅白名单开放。</li>
      */
     public $Origin;
 
@@ -181,8 +187,10 @@ class OriginDetail extends AbstractModel
 <li>当 OriginType = IP_DOMAIN 时，该参数为 IPv4、IPv6 地址或域名；</li>
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
-<li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
+<li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；如果引用了其它站点的源站组，格式为{源站组 ID}@{ZoneID}。例如：og-testorigin@zone-38moq1z10wwwy</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
+<li>当 OriginType = LB 时，该参数请填写负载均衡实例 ID，该功能当前仅白名单开放；如果引用了其它站点的负载均衡，格式为{负载均衡 ID}@{ZoneID}。例如：lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>当 OriginType = SPACE 时，该参数请填写源站卸载空间 ID，该功能当前仅白名单开放。</li>
      * @param string $BackupOrigin 备用源站组 ID，该参数仅在 OriginType = ORIGIN_GROUP 且配置了备源站组时会生效。
      * @param string $OriginGroupName 主源源站组名称，当 OriginType = ORIGIN_GROUP 时该参数会返回值。
      * @param string $BackOriginGroupName 备用源站组名称，该参数仅当 OriginType = ORIGIN_GROUP 且配置了备用源站组时会生效。

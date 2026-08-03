@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateL3Switch请求参数结构体
  *
- * @method string getL3ConnId() 获取互通规则ID
- * @method void setL3ConnId(string $L3ConnId) 设置互通规则ID
- * @method boolean getEnable() 获取互通规则开关
- * @method void setEnable(boolean $Enable) 设置互通规则开关
+ * @method string getL3ConnId() 获取<p>互通规则ID</p>
+ * @method void setL3ConnId(string $L3ConnId) 设置<p>互通规则ID</p>
+ * @method boolean getEnable() 获取<p>互通规则开关</p>
+ * @method void setEnable(boolean $Enable) 设置<p>互通规则开关</p>
  */
 class UpdateL3SwitchRequest extends AbstractModel
 {
     /**
-     * @var string 互通规则ID
+     * @var string <p>互通规则ID</p>
      */
     public $L3ConnId;
 
     /**
-     * @var boolean 互通规则开关
+     * @var boolean <p>互通规则开关</p>
      */
     public $Enable;
 
     /**
-     * @param string $L3ConnId 互通规则ID
-     * @param boolean $Enable 互通规则开关
+     * @param string $L3ConnId <p>互通规则ID</p>
+     * @param boolean $Enable <p>互通规则开关</p>
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AppTriggerParamBindingConfig
  *
- * @method array getParamList() 获取
- * @method void setParamList(array $ParamList) 设置
+ * @method array getParamList() 获取<p>绑定参数列表</p>
+ * @method void setParamList(array $ParamList) 设置<p>绑定参数列表</p>
  */
 class AppTriggerParamBindingConfig extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>绑定参数列表</p>
      */
     public $ParamList;
 
     /**
-     * @param array $ParamList 
+     * @param array $ParamList <p>绑定参数列表</p>
      */
     function __construct()
     {

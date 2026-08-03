@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunction(ToolCallFunction $Function) 设置<p>具体的function调用</p>
  * @method integer getIndex() 获取<p>索引值</p>
  * @method void setIndex(integer $Index) 设置<p>索引值</p>
+ * @method string getThoughtSignature() 获取<p>模型返回的思考签名，执行工具后需在后续请求中原样回传</p>
+ * @method void setThoughtSignature(string $ThoughtSignature) 设置<p>模型返回的思考签名，执行工具后需在后续请求中原样回传</p>
  */
 class ToolCall extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ToolCall extends AbstractModel
     public $Index;
 
     /**
+     * @var string <p>模型返回的思考签名，执行工具后需在后续请求中原样回传</p>
+     */
+    public $ThoughtSignature;
+
+    /**
      * @param string $Id <p>工具调用id</p>
      * @param string $Type <p>工具调用类型，当前只支持function</p>
      * @param ToolCallFunction $Function <p>具体的function调用</p>
      * @param integer $Index <p>索引值</p>
+     * @param string $ThoughtSignature <p>模型返回的思考签名，执行工具后需在后续请求中原样回传</p>
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class ToolCall extends AbstractModel
 
         if (array_key_exists("Index",$param) and $param["Index"] !== null) {
             $this->Index = $param["Index"];
+        }
+
+        if (array_key_exists("ThoughtSignature",$param) and $param["ThoughtSignature"] !== null) {
+            $this->ThoughtSignature = $param["ThoughtSignature"];
         }
     }
 }

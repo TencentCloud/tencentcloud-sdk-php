@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回推房间参数。
  *
- * @method string getRoomId() 获取回推房间的RoomId。
- * @method void setRoomId(string $RoomId) 设置回推房间的RoomId。
- * @method integer getRoomIdType() 获取房间类型，必须和回推房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
- * @method void setRoomIdType(integer $RoomIdType) 设置房间类型，必须和回推房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
- * @method string getUserId() 获取回推房间使用的UserId(https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转推服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
- * @method void setUserId(string $UserId) 设置回推房间使用的UserId(https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转推服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
- * @method string getUserSig() 获取回推房间UserId对应的用户签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
- * @method void setUserSig(string $UserSig) 设置回推房间UserId对应的用户签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+ * @method string getRoomId() 获取<p>回推房间的RoomId。</p>
+ * @method void setRoomId(string $RoomId) 设置<p>回推房间的RoomId。</p>
+ * @method integer getRoomIdType() 获取<p>房间类型，必须和回推房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。</p>
+ * @method void setRoomIdType(integer $RoomIdType) 设置<p>房间类型，必须和回推房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。</p>
+ * @method string getUserId() 获取<p>回推房间使用的UserId(https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转推服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。</p>
+ * @method void setUserId(string $UserId) 设置<p>回推房间使用的UserId(https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转推服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。</p>
+ * @method string getUserSig() 获取<p>回推房间UserId对应的用户签名，相当于登录密码，具体计算方法请参考TRTC计算<a href="https://cloud.tencent.com/document/product/647/45910#UserSig">UserSig</a>的方案。</p>
+ * @method void setUserSig(string $UserSig) 设置<p>回推房间UserId对应的用户签名，相当于登录密码，具体计算方法请参考TRTC计算<a href="https://cloud.tencent.com/document/product/647/45910#UserSig">UserSig</a>的方案。</p>
  */
 class McuFeedBackRoomParams extends AbstractModel
 {
     /**
-     * @var string 回推房间的RoomId。
+     * @var string <p>回推房间的RoomId。</p>
      */
     public $RoomId;
 
     /**
-     * @var integer 房间类型，必须和回推房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
+     * @var integer <p>房间类型，必须和回推房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。</p>
      */
     public $RoomIdType;
 
     /**
-     * @var string 回推房间使用的UserId(https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转推服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
+     * @var string <p>回推房间使用的UserId(https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转推服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。</p>
      */
     public $UserId;
 
     /**
-     * @var string 回推房间UserId对应的用户签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+     * @var string <p>回推房间UserId对应的用户签名，相当于登录密码，具体计算方法请参考TRTC计算<a href="https://cloud.tencent.com/document/product/647/45910#UserSig">UserSig</a>的方案。</p>
      */
     public $UserSig;
 
     /**
-     * @param string $RoomId 回推房间的RoomId。
-     * @param integer $RoomIdType 房间类型，必须和回推房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
-     * @param string $UserId 回推房间使用的UserId(https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转推服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
-     * @param string $UserSig 回推房间UserId对应的用户签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+     * @param string $RoomId <p>回推房间的RoomId。</p>
+     * @param integer $RoomIdType <p>房间类型，必须和回推房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。</p>
+     * @param string $UserId <p>回推房间使用的UserId(https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转推服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。</p>
+     * @param string $UserSig <p>回推房间UserId对应的用户签名，相当于登录密码，具体计算方法请参考TRTC计算<a href="https://cloud.tencent.com/document/product/647/45910#UserSig">UserSig</a>的方案。</p>
      */
     function __construct()
     {

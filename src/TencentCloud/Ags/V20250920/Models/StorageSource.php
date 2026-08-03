@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImage(ImageStorageSource $Image) 设置<p>镜像卷配置</p>
  * @method CfsStorageSource getCfs() 获取<p>文件存储配置</p>
  * @method void setCfs(CfsStorageSource $Cfs) 设置<p>文件存储配置</p>
+ * @method AgentBucketStorageSource getAgentBucket() 获取<p>AgentBucket 存储配置</p>
+ * @method void setAgentBucket(AgentBucketStorageSource $AgentBucket) 设置<p>AgentBucket 存储配置</p>
  */
 class StorageSource extends AbstractModel
 {
@@ -45,9 +47,15 @@ class StorageSource extends AbstractModel
     public $Cfs;
 
     /**
+     * @var AgentBucketStorageSource <p>AgentBucket 存储配置</p>
+     */
+    public $AgentBucket;
+
+    /**
      * @param CosStorageSource $Cos <p>对象存储桶配置</p>
      * @param ImageStorageSource $Image <p>镜像卷配置</p>
      * @param CfsStorageSource $Cfs <p>文件存储配置</p>
+     * @param AgentBucketStorageSource $AgentBucket <p>AgentBucket 存储配置</p>
      */
     function __construct()
     {
@@ -75,6 +83,11 @@ class StorageSource extends AbstractModel
         if (array_key_exists("Cfs",$param) and $param["Cfs"] !== null) {
             $this->Cfs = new CfsStorageSource();
             $this->Cfs->deserialize($param["Cfs"]);
+        }
+
+        if (array_key_exists("AgentBucket",$param) and $param["AgentBucket"] !== null) {
+            $this->AgentBucket = new AgentBucketStorageSource();
+            $this->AgentBucket->deserialize($param["AgentBucket"]);
         }
     }
 }

@@ -28,12 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecuteType(integer $ExecuteType) 设置<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_PROMPT</td><td>1</td><td>指令执行</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_WORKFLOW</td><td>2</td><td>工作流执行</td></tr></tbody></table>
  * @method TimerPushConfig getPushConfig() 获取<p>第三方推送配置</p>
  * @method void setPushConfig(TimerPushConfig $PushConfig) 设置<p>第三方推送配置</p>
+ * @method integer getScope() 获取<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+ * @method void setScope(integer $Scope) 设置<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
  * @method TriggerConfig getTriggerConfig() 获取<p>触发器配置</p>
  * @method void setTriggerConfig(TriggerConfig $TriggerConfig) 设置<p>触发器配置</p>
  * @method string getTriggerName() 获取<p>触发器名字</p>
  * @method void setTriggerName(string $TriggerName) 设置<p>触发器名字</p>
  * @method integer getTriggerType() 获取<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_TYPE_SCHEDULED</td><td>1</td><td>定时触发</td></tr><tr><td>APP_TRIGGER_TYPE_WEBHOOK</td><td>2</td><td>Webhook 触发</td></tr></tbody></table>
  * @method void setTriggerType(integer $TriggerType) 设置<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_TYPE_SCHEDULED</td><td>1</td><td>定时触发</td></tr><tr><td>APP_TRIGGER_TYPE_WEBHOOK</td><td>2</td><td>Webhook 触发</td></tr></tbody></table>
+ * @method string getUserId() 获取<p>访客ID</p>
+ * @method void setUserId(string $UserId) 设置<p>访客ID</p>
  */
 class CreateAppTriggerRequest extends AbstractModel
 {
@@ -58,6 +62,11 @@ class CreateAppTriggerRequest extends AbstractModel
     public $PushConfig;
 
     /**
+     * @var integer <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     */
+    public $Scope;
+
+    /**
      * @var TriggerConfig <p>触发器配置</p>
      */
     public $TriggerConfig;
@@ -73,13 +82,20 @@ class CreateAppTriggerRequest extends AbstractModel
     public $TriggerType;
 
     /**
+     * @var string <p>访客ID</p>
+     */
+    public $UserId;
+
+    /**
      * @param string $AppId <p>应用ID</p>
      * @param ExecuteConfig $ExecuteConfig <p>应用触发器执行配置</p>
      * @param integer $ExecuteType <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_PROMPT</td><td>1</td><td>指令执行</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_WORKFLOW</td><td>2</td><td>工作流执行</td></tr></tbody></table>
      * @param TimerPushConfig $PushConfig <p>第三方推送配置</p>
+     * @param integer $Scope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
      * @param TriggerConfig $TriggerConfig <p>触发器配置</p>
      * @param string $TriggerName <p>触发器名字</p>
      * @param integer $TriggerType <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_TYPE_SCHEDULED</td><td>1</td><td>定时触发</td></tr><tr><td>APP_TRIGGER_TYPE_WEBHOOK</td><td>2</td><td>Webhook 触发</td></tr></tbody></table>
+     * @param string $UserId <p>访客ID</p>
      */
     function __construct()
     {
@@ -112,6 +128,10 @@ class CreateAppTriggerRequest extends AbstractModel
             $this->PushConfig->deserialize($param["PushConfig"]);
         }
 
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
+        }
+
         if (array_key_exists("TriggerConfig",$param) and $param["TriggerConfig"] !== null) {
             $this->TriggerConfig = new TriggerConfig();
             $this->TriggerConfig->deserialize($param["TriggerConfig"]);
@@ -123,6 +143,10 @@ class CreateAppTriggerRequest extends AbstractModel
 
         if (array_key_exists("TriggerType",$param) and $param["TriggerType"] !== null) {
             $this->TriggerType = $param["TriggerType"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

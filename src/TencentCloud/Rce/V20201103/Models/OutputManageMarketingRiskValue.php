@@ -20,174 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全栈式风控引擎出参值
  *
- * @method string getUserId() 获取账号ID：对应输入参数。
-当AccountType为1时，对应QQ的OpenId；
-当AccountType为2时，对应微信的OpenId/UnionId；
-当AccountType为10004时，对应手机号的MD5值；
-当AccountType为10005时，对应手机号的SHA256值。
- * @method void setUserId(string $UserId) 设置账号ID：对应输入参数。
-当AccountType为1时，对应QQ的OpenId；
-当AccountType为2时，对应微信的OpenId/UnionId；
-当AccountType为10004时，对应手机号的MD5值；
-当AccountType为10005时，对应手机号的SHA256值。
- * @method integer getPostTime() 获取操作时间戳，单位秒（对应输入参数）。
- * @method void setPostTime(integer $PostTime) 设置操作时间戳，单位秒（对应输入参数）。
- * @method string getAssociateAccount() 获取业务预留参数（暂无实际业务含义， 无需关注返回值）
- * @method void setAssociateAccount(string $AssociateAccount) 设置业务预留参数（暂无实际业务含义， 无需关注返回值）
- * @method string getUserIp() 获取操作来源的外网IP（对应输入参数）。
- * @method void setUserIp(string $UserIp) 设置操作来源的外网IP（对应输入参数）。
- * @method string getRiskLevel() 获取风险等级
-pass：无恶意
-review：低风险，需要人工审核
-reject：高风险，建议拦截
- * @method void setRiskLevel(string $RiskLevel) 设置风险等级
-pass：无恶意
-review：低风险，需要人工审核
-reject：高风险，建议拦截
- * @method array getRiskType() 获取风险类型，可能同时命中多个风险类型
-1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。
-11: 疑似低活跃账号，账号活跃度与正常用户有差异。
-2: 垃圾账号，疑似批量注册小号，近期存在严重违规或大量举报。
-21: 疑似小号，账号有疑似线上养号，小号等行为。
-22: 疑似违规账号，账号曾有违规行为、曾被举报过、曾因违规被处罚过等。
-3: 无效账号，送检账号参数无法成功解析，请检查微信 OpenId 是否有误/AppId 与 QQ OpenId 无法关联/微信 OpenId 权限是否开通/手机号是否为中国大陆手机号；
-4: 黑名单，该账号在业务侧有过拉黑记录。
-5: 白名单，业务自行有添加过白名单记录。
-101: 批量操作，存在 IP/设备/环境等因素的聚集性异常。
-1011: 疑似 IP 属性聚集，出现 IP 聚集。
-1012: 疑似设备属性聚集，出现设备聚集。
-102: 自动机，疑似自动机批量请求。
-103: 恶意行为-网赚，疑似网赚。
-104: 微信登录态无效，检查 WeChatAccessToken 参数，是否已经失效。
-201: 环境风险，环境异常操作 IP/设备/环境存在异常。当前 IP 为非常用 IP 或恶意 IP 段。
-2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
-2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
-205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
- * @method void setRiskType(array $RiskType) 设置风险类型，可能同时命中多个风险类型
-1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。
-11: 疑似低活跃账号，账号活跃度与正常用户有差异。
-2: 垃圾账号，疑似批量注册小号，近期存在严重违规或大量举报。
-21: 疑似小号，账号有疑似线上养号，小号等行为。
-22: 疑似违规账号，账号曾有违规行为、曾被举报过、曾因违规被处罚过等。
-3: 无效账号，送检账号参数无法成功解析，请检查微信 OpenId 是否有误/AppId 与 QQ OpenId 无法关联/微信 OpenId 权限是否开通/手机号是否为中国大陆手机号；
-4: 黑名单，该账号在业务侧有过拉黑记录。
-5: 白名单，业务自行有添加过白名单记录。
-101: 批量操作，存在 IP/设备/环境等因素的聚集性异常。
-1011: 疑似 IP 属性聚集，出现 IP 聚集。
-1012: 疑似设备属性聚集，出现设备聚集。
-102: 自动机，疑似自动机批量请求。
-103: 恶意行为-网赚，疑似网赚。
-104: 微信登录态无效，检查 WeChatAccessToken 参数，是否已经失效。
-201: 环境风险，环境异常操作 IP/设备/环境存在异常。当前 IP 为非常用 IP 或恶意 IP 段。
-2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
-2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
-205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
- * @method string getConstId() 获取设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
- * @method void setConstId(string $ConstId) 设置设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
- * @method string getRiskInformation() 获取风险扩展数据。
- * @method void setRiskInformation(string $RiskInformation) 设置风险扩展数据。
+ * @method string getUserId() 获取<p>账号ID：对应输入参数。<br>当AccountType为1时，对应QQ的OpenId；<br>当AccountType为2时，对应微信的OpenId/UnionId；<br>当AccountType为10004时，对应手机号的MD5值；<br>当AccountType为10005时，对应手机号的SHA256值。</p>
+ * @method void setUserId(string $UserId) 设置<p>账号ID：对应输入参数。<br>当AccountType为1时，对应QQ的OpenId；<br>当AccountType为2时，对应微信的OpenId/UnionId；<br>当AccountType为10004时，对应手机号的MD5值；<br>当AccountType为10005时，对应手机号的SHA256值。</p>
+ * @method integer getPostTime() 获取<p>操作时间戳，单位秒（对应输入参数）。</p>
+ * @method void setPostTime(integer $PostTime) 设置<p>操作时间戳，单位秒（对应输入参数）。</p>
+ * @method string getAssociateAccount() 获取<p>业务预留参数（暂无实际业务含义， 无需关注返回值）</p>
+ * @method void setAssociateAccount(string $AssociateAccount) 设置<p>业务预留参数（暂无实际业务含义， 无需关注返回值）</p>
+ * @method string getUserIp() 获取<p>操作来源的外网IP（对应输入参数）。</p>
+ * @method void setUserIp(string $UserIp) 设置<p>操作来源的外网IP（对应输入参数）。</p>
+ * @method string getRiskLevel() 获取<p>风险等级<br>pass：无恶意<br>review：低风险，需要人工审核<br>reject：高风险，建议拦截</p>
+ * @method void setRiskLevel(string $RiskLevel) 设置<p>风险等级<br>pass：无恶意<br>review：低风险，需要人工审核<br>reject：高风险，建议拦截</p>
+ * @method array getRiskType() 获取<p>风险类型，可能同时命中多个风险类型<br>1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。<br>11: 疑似低活跃账号，账号活跃度与正常用户有差异。<br>2: 垃圾账号，疑似批量注册小号，近期存在严重违规或大量举报。<br>21: 疑似小号，账号有疑似线上养号，小号等行为。<br>22: 疑似违规账号，账号曾有违规行为、曾被举报过、曾因违规被处罚过等。<br>3: 无效账号，账号参数无法成功解析。<br>4: 黑名单，该账号在业务侧有过拉黑记录。<br>5: 白名单，业务自行有添加过白名单记录。<br>101: 批量操作，存在 IP/设备/环境等因素的聚集性异常。<br>1011: 疑似 IP 属性聚集，出现 IP 聚集。<br>1012: 疑似设备属性聚集，出现设备聚集。<br>102: 自动机，疑似自动机批量请求。<br>103: 恶意行为-网赚，疑似网赚。<br>104: 登录态无效。<br>201: 环境风险，环境异常操作 IP/设备/环境存在异常。当前 IP 为非常用 IP 或恶意 IP 段。<br>2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。<br>2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。<br>205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。</p>
+ * @method void setRiskType(array $RiskType) 设置<p>风险类型，可能同时命中多个风险类型<br>1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。<br>11: 疑似低活跃账号，账号活跃度与正常用户有差异。<br>2: 垃圾账号，疑似批量注册小号，近期存在严重违规或大量举报。<br>21: 疑似小号，账号有疑似线上养号，小号等行为。<br>22: 疑似违规账号，账号曾有违规行为、曾被举报过、曾因违规被处罚过等。<br>3: 无效账号，账号参数无法成功解析。<br>4: 黑名单，该账号在业务侧有过拉黑记录。<br>5: 白名单，业务自行有添加过白名单记录。<br>101: 批量操作，存在 IP/设备/环境等因素的聚集性异常。<br>1011: 疑似 IP 属性聚集，出现 IP 聚集。<br>1012: 疑似设备属性聚集，出现设备聚集。<br>102: 自动机，疑似自动机批量请求。<br>103: 恶意行为-网赚，疑似网赚。<br>104: 登录态无效。<br>201: 环境风险，环境异常操作 IP/设备/环境存在异常。当前 IP 为非常用 IP 或恶意 IP 段。<br>2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。<br>2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。<br>205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。</p>
+ * @method string getConstId() 获取<p>设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回&quot;-1&quot;标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。</p>
+ * @method void setConstId(string $ConstId) 设置<p>设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回&quot;-1&quot;标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。</p>
+ * @method string getRiskInformation() 获取<p>风险扩展数据。</p>
+ * @method void setRiskInformation(string $RiskInformation) 设置<p>风险扩展数据。</p>
  */
 class OutputManageMarketingRiskValue extends AbstractModel
 {
     /**
-     * @var string 账号ID：对应输入参数。
-当AccountType为1时，对应QQ的OpenId；
-当AccountType为2时，对应微信的OpenId/UnionId；
-当AccountType为10004时，对应手机号的MD5值；
-当AccountType为10005时，对应手机号的SHA256值。
+     * @var string <p>账号ID：对应输入参数。<br>当AccountType为1时，对应QQ的OpenId；<br>当AccountType为2时，对应微信的OpenId/UnionId；<br>当AccountType为10004时，对应手机号的MD5值；<br>当AccountType为10005时，对应手机号的SHA256值。</p>
      */
     public $UserId;
 
     /**
-     * @var integer 操作时间戳，单位秒（对应输入参数）。
+     * @var integer <p>操作时间戳，单位秒（对应输入参数）。</p>
      */
     public $PostTime;
 
     /**
-     * @var string 业务预留参数（暂无实际业务含义， 无需关注返回值）
+     * @var string <p>业务预留参数（暂无实际业务含义， 无需关注返回值）</p>
      */
     public $AssociateAccount;
 
     /**
-     * @var string 操作来源的外网IP（对应输入参数）。
+     * @var string <p>操作来源的外网IP（对应输入参数）。</p>
      */
     public $UserIp;
 
     /**
-     * @var string 风险等级
-pass：无恶意
-review：低风险，需要人工审核
-reject：高风险，建议拦截
+     * @var string <p>风险等级<br>pass：无恶意<br>review：低风险，需要人工审核<br>reject：高风险，建议拦截</p>
      */
     public $RiskLevel;
 
     /**
-     * @var array 风险类型，可能同时命中多个风险类型
-1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。
-11: 疑似低活跃账号，账号活跃度与正常用户有差异。
-2: 垃圾账号，疑似批量注册小号，近期存在严重违规或大量举报。
-21: 疑似小号，账号有疑似线上养号，小号等行为。
-22: 疑似违规账号，账号曾有违规行为、曾被举报过、曾因违规被处罚过等。
-3: 无效账号，送检账号参数无法成功解析，请检查微信 OpenId 是否有误/AppId 与 QQ OpenId 无法关联/微信 OpenId 权限是否开通/手机号是否为中国大陆手机号；
-4: 黑名单，该账号在业务侧有过拉黑记录。
-5: 白名单，业务自行有添加过白名单记录。
-101: 批量操作，存在 IP/设备/环境等因素的聚集性异常。
-1011: 疑似 IP 属性聚集，出现 IP 聚集。
-1012: 疑似设备属性聚集，出现设备聚集。
-102: 自动机，疑似自动机批量请求。
-103: 恶意行为-网赚，疑似网赚。
-104: 微信登录态无效，检查 WeChatAccessToken 参数，是否已经失效。
-201: 环境风险，环境异常操作 IP/设备/环境存在异常。当前 IP 为非常用 IP 或恶意 IP 段。
-2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
-2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
-205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
+     * @var array <p>风险类型，可能同时命中多个风险类型<br>1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。<br>11: 疑似低活跃账号，账号活跃度与正常用户有差异。<br>2: 垃圾账号，疑似批量注册小号，近期存在严重违规或大量举报。<br>21: 疑似小号，账号有疑似线上养号，小号等行为。<br>22: 疑似违规账号，账号曾有违规行为、曾被举报过、曾因违规被处罚过等。<br>3: 无效账号，账号参数无法成功解析。<br>4: 黑名单，该账号在业务侧有过拉黑记录。<br>5: 白名单，业务自行有添加过白名单记录。<br>101: 批量操作，存在 IP/设备/环境等因素的聚集性异常。<br>1011: 疑似 IP 属性聚集，出现 IP 聚集。<br>1012: 疑似设备属性聚集，出现设备聚集。<br>102: 自动机，疑似自动机批量请求。<br>103: 恶意行为-网赚，疑似网赚。<br>104: 登录态无效。<br>201: 环境风险，环境异常操作 IP/设备/环境存在异常。当前 IP 为非常用 IP 或恶意 IP 段。<br>2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。<br>2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。<br>205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。</p>
      */
     public $RiskType;
 
     /**
-     * @var string 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
+     * @var string <p>设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回&quot;-1&quot;标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。</p>
      */
     public $ConstId;
 
     /**
-     * @var string 风险扩展数据。
+     * @var string <p>风险扩展数据。</p>
      */
     public $RiskInformation;
 
     /**
-     * @param string $UserId 账号ID：对应输入参数。
-当AccountType为1时，对应QQ的OpenId；
-当AccountType为2时，对应微信的OpenId/UnionId；
-当AccountType为10004时，对应手机号的MD5值；
-当AccountType为10005时，对应手机号的SHA256值。
-     * @param integer $PostTime 操作时间戳，单位秒（对应输入参数）。
-     * @param string $AssociateAccount 业务预留参数（暂无实际业务含义， 无需关注返回值）
-     * @param string $UserIp 操作来源的外网IP（对应输入参数）。
-     * @param string $RiskLevel 风险等级
-pass：无恶意
-review：低风险，需要人工审核
-reject：高风险，建议拦截
-     * @param array $RiskType 风险类型，可能同时命中多个风险类型
-1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。
-11: 疑似低活跃账号，账号活跃度与正常用户有差异。
-2: 垃圾账号，疑似批量注册小号，近期存在严重违规或大量举报。
-21: 疑似小号，账号有疑似线上养号，小号等行为。
-22: 疑似违规账号，账号曾有违规行为、曾被举报过、曾因违规被处罚过等。
-3: 无效账号，送检账号参数无法成功解析，请检查微信 OpenId 是否有误/AppId 与 QQ OpenId 无法关联/微信 OpenId 权限是否开通/手机号是否为中国大陆手机号；
-4: 黑名单，该账号在业务侧有过拉黑记录。
-5: 白名单，业务自行有添加过白名单记录。
-101: 批量操作，存在 IP/设备/环境等因素的聚集性异常。
-1011: 疑似 IP 属性聚集，出现 IP 聚集。
-1012: 疑似设备属性聚集，出现设备聚集。
-102: 自动机，疑似自动机批量请求。
-103: 恶意行为-网赚，疑似网赚。
-104: 微信登录态无效，检查 WeChatAccessToken 参数，是否已经失效。
-201: 环境风险，环境异常操作 IP/设备/环境存在异常。当前 IP 为非常用 IP 或恶意 IP 段。
-2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
-2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
-205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-     * @param string $ConstId 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-     * @param string $RiskInformation 风险扩展数据。
+     * @param string $UserId <p>账号ID：对应输入参数。<br>当AccountType为1时，对应QQ的OpenId；<br>当AccountType为2时，对应微信的OpenId/UnionId；<br>当AccountType为10004时，对应手机号的MD5值；<br>当AccountType为10005时，对应手机号的SHA256值。</p>
+     * @param integer $PostTime <p>操作时间戳，单位秒（对应输入参数）。</p>
+     * @param string $AssociateAccount <p>业务预留参数（暂无实际业务含义， 无需关注返回值）</p>
+     * @param string $UserIp <p>操作来源的外网IP（对应输入参数）。</p>
+     * @param string $RiskLevel <p>风险等级<br>pass：无恶意<br>review：低风险，需要人工审核<br>reject：高风险，建议拦截</p>
+     * @param array $RiskType <p>风险类型，可能同时命中多个风险类型<br>1: 账号信用低，账号近期存在因恶意被处罚历史，网络低活跃，被举报等因素。<br>11: 疑似低活跃账号，账号活跃度与正常用户有差异。<br>2: 垃圾账号，疑似批量注册小号，近期存在严重违规或大量举报。<br>21: 疑似小号，账号有疑似线上养号，小号等行为。<br>22: 疑似违规账号，账号曾有违规行为、曾被举报过、曾因违规被处罚过等。<br>3: 无效账号，账号参数无法成功解析。<br>4: 黑名单，该账号在业务侧有过拉黑记录。<br>5: 白名单，业务自行有添加过白名单记录。<br>101: 批量操作，存在 IP/设备/环境等因素的聚集性异常。<br>1011: 疑似 IP 属性聚集，出现 IP 聚集。<br>1012: 疑似设备属性聚集，出现设备聚集。<br>102: 自动机，疑似自动机批量请求。<br>103: 恶意行为-网赚，疑似网赚。<br>104: 登录态无效。<br>201: 环境风险，环境异常操作 IP/设备/环境存在异常。当前 IP 为非常用 IP 或恶意 IP 段。<br>2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。<br>2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。<br>205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。</p>
+     * @param string $ConstId <p>设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回&quot;-1&quot;标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。</p>
+     * @param string $RiskInformation <p>风险扩展数据。</p>
      */
     function __construct()
     {

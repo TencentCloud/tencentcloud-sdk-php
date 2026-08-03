@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AppTriggerPromptExecuteConfig
  *
- * @method string getExecutePrompt() 获取
- * @method void setExecutePrompt(string $ExecutePrompt) 设置
- * @method AppTriggerParamBindingConfig getParamBindingsApi() 获取
- * @method void setParamBindingsApi(AppTriggerParamBindingConfig $ParamBindingsApi) 设置
+ * @method string getExecutePrompt() 获取<p>触发器执行提示词</p>
+ * @method void setExecutePrompt(string $ExecutePrompt) 设置<p>触发器执行提示词</p>
+ * @method AppTriggerParamBindingConfig getParamBindingsApi() 获取<p>api参数绑定</p>
+ * @method void setParamBindingsApi(AppTriggerParamBindingConfig $ParamBindingsApi) 设置<p>api参数绑定</p>
  */
 class AppTriggerPromptExecuteConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>触发器执行提示词</p>
      */
     public $ExecutePrompt;
 
     /**
-     * @var AppTriggerParamBindingConfig 
+     * @var AppTriggerParamBindingConfig <p>api参数绑定</p>
      */
     public $ParamBindingsApi;
 
     /**
-     * @param string $ExecutePrompt 
-     * @param AppTriggerParamBindingConfig $ParamBindingsApi 
+     * @param string $ExecutePrompt <p>触发器执行提示词</p>
+     * @param AppTriggerParamBindingConfig $ParamBindingsApi <p>api参数绑定</p>
      */
     function __construct()
     {

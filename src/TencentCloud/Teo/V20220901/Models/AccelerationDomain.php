@@ -20,206 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 加速域名
  *
- * @method string getZoneId() 获取站点 ID。
- * @method void setZoneId(string $ZoneId) 设置站点 ID。
- * @method string getDomainName() 获取加速域名名称。
- * @method void setDomainName(string $DomainName) 设置加速域名名称。
- * @method string getDomainStatus() 获取加速域名状态，取值有：
-<li>online：已生效；</li>
-<li>process：部署中；</li>
-<li>offline：已停用；</li>
-<li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点。</li>
- * @method void setDomainStatus(string $DomainStatus) 设置加速域名状态，取值有：
-<li>online：已生效；</li>
-<li>process：部署中；</li>
-<li>offline：已停用；</li>
-<li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点。</li>
- * @method string getCname() 获取CNAME 地址。
- * @method void setCname(string $Cname) 设置CNAME 地址。
- * @method string getIPv6Status() 获取IPv6 状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+ * @method string getZoneId() 获取<p>站点 ID。</p>
+ * @method void setZoneId(string $ZoneId) 设置<p>站点 ID。</p>
+ * @method string getDomainName() 获取<p>加速域名名称。</p>
+ * @method void setDomainName(string $DomainName) 设置<p>加速域名名称。</p>
+ * @method string getDomainStatus() 获取<p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul>
+ * @method void setDomainStatus(string $DomainStatus) 设置<p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul>
+ * @method string getCname() 获取<p>CNAME 地址。</p>
+ * @method void setCname(string $Cname) 设置<p>CNAME 地址。</p>
+ * @method string getIPv6Status() 获取<p>IPv6 状态，取值有：</p><li>follow：遵循站点IPv6配置；</li><li>on：开启状态；</li><li>off：关闭状态。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIPv6Status(string $IPv6Status) 设置IPv6 状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+ * @method void setIPv6Status(string $IPv6Status) 设置<p>IPv6 状态，取值有：</p><li>follow：遵循站点IPv6配置；</li><li>on：开启状态；</li><li>off：关闭状态。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdentificationStatus() 获取加速域名归属权验证状态，取值有： 
-<li>pending：待验证；</li>
-<li>finished：已完成验证。</li>	
+ * @method string getIdentificationStatus() 获取<p>加速域名归属权验证状态，取值有： </p><li>pending：待验证；</li><li>finished：已完成验证。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdentificationStatus(string $IdentificationStatus) 设置加速域名归属权验证状态，取值有： 
-<li>pending：待验证；</li>
-<li>finished：已完成验证。</li>	
+ * @method void setIdentificationStatus(string $IdentificationStatus) 设置<p>加速域名归属权验证状态，取值有： </p><li>pending：待验证；</li><li>finished：已完成验证。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OwnershipVerification getOwnershipVerification() 获取加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+ * @method OwnershipVerification getOwnershipVerification() 获取<p>加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) 设置加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) 设置<p>加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OriginDetail getOriginDetail() 获取源站信息。
+ * @method OriginDetail getOriginDetail() 获取<p>源站信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginDetail(OriginDetail $OriginDetail) 设置源站信息。
+ * @method void setOriginDetail(OriginDetail $OriginDetail) 设置<p>源站信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOriginProtocol() 获取回源协议，取值有：
-<li>FOLLOW：协议跟随；</li>
-<li>HTTP：HTTP协议回源；</li>
-<li>HTTPS：HTTPS协议回源。</li>
+ * @method string getOriginProtocol() 获取<p>回源协议，取值有：</p><li>FOLLOW：协议跟随；</li><li>HTTP：HTTP协议回源；</li><li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginProtocol(string $OriginProtocol) 设置回源协议，取值有：
-<li>FOLLOW：协议跟随；</li>
-<li>HTTP：HTTP协议回源；</li>
-<li>HTTPS：HTTPS协议回源。</li>
+ * @method void setOriginProtocol(string $OriginProtocol) 设置<p>回源协议，取值有：</p><li>FOLLOW：协议跟随；</li><li>HTTP：HTTP协议回源；</li><li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHttpOriginPort() 获取HTTP 回源端口。
+ * @method integer getHttpOriginPort() 获取<p>HTTP 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttpOriginPort(integer $HttpOriginPort) 设置HTTP 回源端口。
+ * @method void setHttpOriginPort(integer $HttpOriginPort) 设置<p>HTTP 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHttpsOriginPort() 获取HTTPS 回源端口。
+ * @method integer getHttpsOriginPort() 获取<p>HTTPS 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttpsOriginPort(integer $HttpsOriginPort) 设置HTTPS 回源端口。
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) 设置<p>HTTPS 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AccelerationDomainCertificate getCertificate() 获取加速域名证书信息。
+ * @method AccelerationDomainCertificate getCertificate() 获取<p>加速域名证书信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertificate(AccelerationDomainCertificate $Certificate) 设置加速域名证书信息。
+ * @method void setCertificate(AccelerationDomainCertificate $Certificate) 设置<p>加速域名证书信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedOn() 获取创建时间。
- * @method void setCreatedOn(string $CreatedOn) 设置创建时间。
- * @method string getModifiedOn() 获取修改时间。
- * @method void setModifiedOn(string $ModifiedOn) 设置修改时间。
+ * @method string getCreatedOn() 获取<p>创建时间。</p>
+ * @method void setCreatedOn(string $CreatedOn) 设置<p>创建时间。</p>
+ * @method string getModifiedOn() 获取<p>修改时间。</p>
+ * @method void setModifiedOn(string $ModifiedOn) 设置<p>修改时间。</p>
  */
 class AccelerationDomain extends AbstractModel
 {
     /**
-     * @var string 站点 ID。
+     * @var string <p>站点 ID。</p>
      */
     public $ZoneId;
 
     /**
-     * @var string 加速域名名称。
+     * @var string <p>加速域名名称。</p>
      */
     public $DomainName;
 
     /**
-     * @var string 加速域名状态，取值有：
-<li>online：已生效；</li>
-<li>process：部署中；</li>
-<li>offline：已停用；</li>
-<li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点。</li>
+     * @var string <p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul>
      */
     public $DomainStatus;
 
     /**
-     * @var string CNAME 地址。
+     * @var string <p>CNAME 地址。</p>
      */
     public $Cname;
 
     /**
-     * @var string IPv6 状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+     * @var string <p>IPv6 状态，取值有：</p><li>follow：遵循站点IPv6配置；</li><li>on：开启状态；</li><li>off：关闭状态。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPv6Status;
 
     /**
-     * @var string 加速域名归属权验证状态，取值有： 
-<li>pending：待验证；</li>
-<li>finished：已完成验证。</li>	
+     * @var string <p>加速域名归属权验证状态，取值有： </p><li>pending：待验证；</li><li>finished：已完成验证。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentificationStatus;
 
     /**
-     * @var OwnershipVerification 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+     * @var OwnershipVerification <p>加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnershipVerification;
 
     /**
-     * @var OriginDetail 源站信息。
+     * @var OriginDetail <p>源站信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginDetail;
 
     /**
-     * @var string 回源协议，取值有：
-<li>FOLLOW：协议跟随；</li>
-<li>HTTP：HTTP协议回源；</li>
-<li>HTTPS：HTTPS协议回源。</li>
+     * @var string <p>回源协议，取值有：</p><li>FOLLOW：协议跟随；</li><li>HTTP：HTTP协议回源；</li><li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginProtocol;
 
     /**
-     * @var integer HTTP 回源端口。
+     * @var integer <p>HTTP 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpOriginPort;
 
     /**
-     * @var integer HTTPS 回源端口。
+     * @var integer <p>HTTPS 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpsOriginPort;
 
     /**
-     * @var AccelerationDomainCertificate 加速域名证书信息。
+     * @var AccelerationDomainCertificate <p>加速域名证书信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Certificate;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreatedOn;
 
     /**
-     * @var string 修改时间。
+     * @var string <p>修改时间。</p>
      */
     public $ModifiedOn;
 
     /**
-     * @param string $ZoneId 站点 ID。
-     * @param string $DomainName 加速域名名称。
-     * @param string $DomainStatus 加速域名状态，取值有：
-<li>online：已生效；</li>
-<li>process：部署中；</li>
-<li>offline：已停用；</li>
-<li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点。</li>
-     * @param string $Cname CNAME 地址。
-     * @param string $IPv6Status IPv6 状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+     * @param string $ZoneId <p>站点 ID。</p>
+     * @param string $DomainName <p>加速域名名称。</p>
+     * @param string $DomainStatus <p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul>
+     * @param string $Cname <p>CNAME 地址。</p>
+     * @param string $IPv6Status <p>IPv6 状态，取值有：</p><li>follow：遵循站点IPv6配置；</li><li>on：开启状态；</li><li>off：关闭状态。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdentificationStatus 加速域名归属权验证状态，取值有： 
-<li>pending：待验证；</li>
-<li>finished：已完成验证。</li>	
+     * @param string $IdentificationStatus <p>加速域名归属权验证状态，取值有： </p><li>pending：待验证；</li><li>finished：已完成验证。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnershipVerification $OwnershipVerification 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+     * @param OwnershipVerification $OwnershipVerification <p>加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginDetail $OriginDetail 源站信息。
+     * @param OriginDetail $OriginDetail <p>源站信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OriginProtocol 回源协议，取值有：
-<li>FOLLOW：协议跟随；</li>
-<li>HTTP：HTTP协议回源；</li>
-<li>HTTPS：HTTPS协议回源。</li>
+     * @param string $OriginProtocol <p>回源协议，取值有：</p><li>FOLLOW：协议跟随；</li><li>HTTP：HTTP协议回源；</li><li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HttpOriginPort HTTP 回源端口。
+     * @param integer $HttpOriginPort <p>HTTP 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HttpsOriginPort HTTPS 回源端口。
+     * @param integer $HttpsOriginPort <p>HTTPS 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccelerationDomainCertificate $Certificate 加速域名证书信息。
+     * @param AccelerationDomainCertificate $Certificate <p>加速域名证书信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedOn 创建时间。
-     * @param string $ModifiedOn 修改时间。
+     * @param string $CreatedOn <p>创建时间。</p>
+     * @param string $ModifiedOn <p>修改时间。</p>
      */
     function __construct()
     {

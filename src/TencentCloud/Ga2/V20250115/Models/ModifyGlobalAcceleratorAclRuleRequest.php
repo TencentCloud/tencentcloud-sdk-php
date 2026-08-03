@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGlobalAcceleratorAclPolicyId(string $GlobalAcceleratorAclPolicyId) 设置<p>安全策略ID</p>
  * @method string getGlobalAcceleratorAclRuleId() 获取<p>Acl规则ID。</p>
  * @method void setGlobalAcceleratorAclRuleId(string $GlobalAcceleratorAclRuleId) 设置<p>Acl规则ID。</p>
- * @method string getProtocol() 获取<p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;, &#39;ALL&#39;。</p>
- * @method void setProtocol(string $Protocol) 设置<p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;, &#39;ALL&#39;。</p>
+ * @method string getProtocol() 获取<p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;。</p>
  * @method string getPort() 获取<p>端口。</p>
  * @method void setPort(string $Port) 设置<p>端口。</p>
  * @method string getSourceCidrBlock() 获取<p>网段。</p>
@@ -55,7 +55,7 @@ class ModifyGlobalAcceleratorAclRuleRequest extends AbstractModel
     public $GlobalAcceleratorAclRuleId;
 
     /**
-     * @var string <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;, &#39;ALL&#39;。</p>
+     * @var string <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;。</p>
      */
     public $Protocol;
 
@@ -83,7 +83,7 @@ class ModifyGlobalAcceleratorAclRuleRequest extends AbstractModel
      * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
      * @param string $GlobalAcceleratorAclPolicyId <p>安全策略ID</p>
      * @param string $GlobalAcceleratorAclRuleId <p>Acl规则ID。</p>
-     * @param string $Protocol <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;, &#39;ALL&#39;。</p>
+     * @param string $Protocol <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;。</p>
      * @param string $Port <p>端口。</p>
      * @param string $SourceCidrBlock <p>网段。</p>
      * @param string $Policy <p>动作。</p><p>入参限制：支持选择&#39;ACCEPT&#39;, &#39;DROP&#39;。</p><p>枚举值：</p><ul><li>ACCEPT： 允许。</li><li>DROP： 拒绝。</li></ul>

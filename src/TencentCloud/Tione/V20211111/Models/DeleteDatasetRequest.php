@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDataset请求参数结构体
  *
- * @method string getDatasetId() 获取数据集id
- * @method void setDatasetId(string $DatasetId) 设置数据集id
- * @method boolean getDeleteLabelEnable() 获取是否删除cos标签文件
- * @method void setDeleteLabelEnable(boolean $DeleteLabelEnable) 设置是否删除cos标签文件
+ * @method string getDatasetId() 获取<p>数据集id</p>
+ * @method void setDatasetId(string $DatasetId) 设置<p>数据集id</p>
+ * @method boolean getDeleteLabelEnable() 获取<p>是否删除cos标签文件</p>
+ * @method void setDeleteLabelEnable(boolean $DeleteLabelEnable) 设置<p>是否删除cos标签文件</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  */
 class DeleteDatasetRequest extends AbstractModel
 {
     /**
-     * @var string 数据集id
+     * @var string <p>数据集id</p>
      */
     public $DatasetId;
 
     /**
-     * @var boolean 是否删除cos标签文件
+     * @var boolean <p>是否删除cos标签文件</p>
      */
     public $DeleteLabelEnable;
 
     /**
-     * @param string $DatasetId 数据集id
-     * @param boolean $DeleteLabelEnable 是否删除cos标签文件
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
+     * @param string $DatasetId <p>数据集id</p>
+     * @param boolean $DeleteLabelEnable <p>是否删除cos标签文件</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteDatasetRequest extends AbstractModel
 
         if (array_key_exists("DeleteLabelEnable",$param) and $param["DeleteLabelEnable"] !== null) {
             $this->DeleteLabelEnable = $param["DeleteLabelEnable"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
     }
 }

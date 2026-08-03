@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) 设置<p>用户名</p>
  * @method string getPassword() 获取<p>密码</p>
  * @method void setPassword(string $Password) 设置<p>密码</p>
+ * @method string getRedisConfigId() 获取<p>Redis配置ID</p>
+ * @method void setRedisConfigId(string $RedisConfigId) 设置<p>Redis配置ID</p>
+ * @method string getType() 获取<p>Redis部署类型，如standalone（单机）、cluster（集群）</p>
+ * @method void setType(string $Type) 设置<p>Redis部署类型，如standalone（单机）、cluster（集群）</p>
  */
 class AIGWRedisConfig extends AbstractModel
 {
@@ -52,10 +56,22 @@ class AIGWRedisConfig extends AbstractModel
     public $Password;
 
     /**
+     * @var string <p>Redis配置ID</p>
+     */
+    public $RedisConfigId;
+
+    /**
+     * @var string <p>Redis部署类型，如standalone（单机）、cluster（集群）</p>
+     */
+    public $Type;
+
+    /**
      * @param string $Host <p>Host</p>
      * @param integer $Port <p>端口</p>
      * @param string $Username <p>用户名</p>
      * @param string $Password <p>密码</p>
+     * @param string $RedisConfigId <p>Redis配置ID</p>
+     * @param string $Type <p>Redis部署类型，如standalone（单机）、cluster（集群）</p>
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class AIGWRedisConfig extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("RedisConfigId",$param) and $param["RedisConfigId"] !== null) {
+            $this->RedisConfigId = $param["RedisConfigId"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

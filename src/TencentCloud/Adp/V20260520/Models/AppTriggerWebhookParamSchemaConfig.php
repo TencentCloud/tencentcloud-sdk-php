@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AppTriggerWebhookParamSchemaConfig
  *
- * @method array getSchemaList() 获取
- * @method void setSchemaList(array $SchemaList) 设置
+ * @method array getSchemaList() 获取<p>触发器API参数列表</p>
+ * @method void setSchemaList(array $SchemaList) 设置<p>触发器API参数列表</p>
  */
 class AppTriggerWebhookParamSchemaConfig extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>触发器API参数列表</p>
      */
     public $SchemaList;
 
     /**
-     * @param array $SchemaList 
+     * @param array $SchemaList <p>触发器API参数列表</p>
      */
     function __construct()
     {

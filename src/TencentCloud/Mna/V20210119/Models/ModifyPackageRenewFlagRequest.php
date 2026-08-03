@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPackageRenewFlag请求参数结构体
  *
- * @method string getResourceId() 获取流量包的唯一资源ID
- * @method void setResourceId(string $ResourceId) 设置流量包的唯一资源ID
- * @method boolean getRenewFlag() 获取自动续费标识。true代表自动续费，false代表不自动续费
- * @method void setRenewFlag(boolean $RenewFlag) 设置自动续费标识。true代表自动续费，false代表不自动续费
+ * @method string getResourceId() 获取<p>流量包的唯一资源ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>流量包的唯一资源ID</p>
+ * @method boolean getRenewFlag() 获取<p>自动续费标识。true代表自动续费，false代表不自动续费</p>
+ * @method void setRenewFlag(boolean $RenewFlag) 设置<p>自动续费标识。true代表自动续费，false代表不自动续费</p>
  */
 class ModifyPackageRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var string 流量包的唯一资源ID
+     * @var string <p>流量包的唯一资源ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var boolean 自动续费标识。true代表自动续费，false代表不自动续费
+     * @var boolean <p>自动续费标识。true代表自动续费，false代表不自动续费</p>
      */
     public $RenewFlag;
 
     /**
-     * @param string $ResourceId 流量包的唯一资源ID
-     * @param boolean $RenewFlag 自动续费标识。true代表自动续费，false代表不自动续费
+     * @param string $ResourceId <p>流量包的唯一资源ID</p>
+     * @param boolean $RenewFlag <p>自动续费标识。true代表自动续费，false代表不自动续费</p>
      */
     function __construct()
     {

@@ -805,9 +805,8 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 注意：
 1. 转交的目标经办人需要已经加入企业，且完成实名。
 2. 仅企业拥有`超管`或`法人角色`的员工才有调用本接口的权限。
-3. 仅支持当前经办人为待签署或待填写状态时进行转交操作。
-4. 若原合同有填写控件，且当前经办人已经完成填写，则不支持进行转交。
-5. 若当前经办人已签署完成，或者处于签署流程中，则不支持进行转交。
+3. 若原合同有填写控件，且当前经办人已经完成填写，则不支持进行转交。
+4. 若当前经办人已签署完成，或者处于签署流程中，或合同处于完成态（例如：签署完成，拒签，撤销，过期等），则不支持进行转交。
  * @method Models\CreateFlowGroupSignReviewResponse CreateFlowGroupSignReview(Models\CreateFlowGroupSignReviewRequest $req) 1. 在使用[通过多文件创建合同组签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByFiles)或[通过多模板创建合同组签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByTemplates)创建合同组签署流程时，若指定了参数以下参数为true,则可以调用此接口提交企业内部签署审批结果,即使是自动签署也需要进行审核通过才会进行签署。
   - [FlowInfo.NeedSignReview](https://qian.tencent.com/developers/partnerApis/dataTypes/#flowinfo)
   - [FlowFileInfo.NeedSignReview](https://qian.tencent.com/developers/partnerApis/dataTypes/#flowfileinfo)

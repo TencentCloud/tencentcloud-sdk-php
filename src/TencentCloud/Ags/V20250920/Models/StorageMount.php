@@ -20,42 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 沙箱工具中实例存储挂载配置
  *
- * @method string getName() 获取存储挂载配置名称
- * @method void setName(string $Name) 设置存储挂载配置名称
- * @method StorageSource getStorageSource() 获取存储配置
- * @method void setStorageSource(StorageSource $StorageSource) 设置存储配置
- * @method string getMountPath() 获取沙箱实例本地挂载路径
- * @method void setMountPath(string $MountPath) 设置沙箱实例本地挂载路径
- * @method boolean getReadOnly() 获取存储挂载读写权限配置，默认为false
- * @method void setReadOnly(boolean $ReadOnly) 设置存储挂载读写权限配置，默认为false
+ * @method string getName() 获取<p>存储挂载配置名称</p>
+ * @method void setName(string $Name) 设置<p>存储挂载配置名称</p>
+ * @method StorageSource getStorageSource() 获取<p>存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorageSource(StorageSource $StorageSource) 设置<p>存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMountPath() 获取<p>沙箱实例本地挂载路径</p>
+ * @method void setMountPath(string $MountPath) 设置<p>沙箱实例本地挂载路径</p>
+ * @method boolean getReadOnly() 获取<p>存储挂载读写权限配置，默认为false</p>
+ * @method void setReadOnly(boolean $ReadOnly) 设置<p>存储挂载读写权限配置，默认为false</p>
  */
 class StorageMount extends AbstractModel
 {
     /**
-     * @var string 存储挂载配置名称
+     * @var string <p>存储挂载配置名称</p>
      */
     public $Name;
 
     /**
-     * @var StorageSource 存储配置
+     * @var StorageSource <p>存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageSource;
 
     /**
-     * @var string 沙箱实例本地挂载路径
+     * @var string <p>沙箱实例本地挂载路径</p>
      */
     public $MountPath;
 
     /**
-     * @var boolean 存储挂载读写权限配置，默认为false
+     * @var boolean <p>存储挂载读写权限配置，默认为false</p>
      */
     public $ReadOnly;
 
     /**
-     * @param string $Name 存储挂载配置名称
-     * @param StorageSource $StorageSource 存储配置
-     * @param string $MountPath 沙箱实例本地挂载路径
-     * @param boolean $ReadOnly 存储挂载读写权限配置，默认为false
+     * @param string $Name <p>存储挂载配置名称</p>
+     * @param StorageSource $StorageSource <p>存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MountPath <p>沙箱实例本地挂载路径</p>
+     * @param boolean $ReadOnly <p>存储挂载读写权限配置，默认为false</p>
      */
     function __construct()
     {

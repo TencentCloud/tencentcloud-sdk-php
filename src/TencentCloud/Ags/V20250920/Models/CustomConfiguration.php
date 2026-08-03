@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImage() 获取<p>镜像地址</p>
  * @method void setImage(string $Image) 设置<p>镜像地址</p>
- * @method string getImageRegistryType() 获取<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
- * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+ * @method string getImageRegistryType() 获取<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+ * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
  * @method array getCommand() 获取<p>启动命令</p>
  * @method void setCommand(array $Command) 设置<p>启动命令</p>
  * @method array getArgs() 获取<p>启动参数</p>
@@ -47,7 +47,7 @@ class CustomConfiguration extends AbstractModel
     public $Image;
 
     /**
-     * @var string <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+     * @var string <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      */
     public $ImageRegistryType;
 
@@ -88,7 +88,7 @@ class CustomConfiguration extends AbstractModel
 
     /**
      * @param string $Image <p>镜像地址</p>
-     * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+     * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      * @param array $Command <p>启动命令</p>
      * @param array $Args <p>启动参数</p>
      * @param array $Env <p>环境变量</p>

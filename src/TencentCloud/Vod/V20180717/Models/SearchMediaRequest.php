@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamDomains(array $StreamDomains) 设置<p>直播推流Domain，当媒资来源是直播录制时有效。</p>
  * @method array getStreamPaths() 获取<p>直播推流Path，当媒资来源是直播录制时有效。</p>
  * @method void setStreamPaths(array $StreamPaths) 设置<p>直播推流Path，当媒资来源是直播录制时有效。</p>
+ * @method array getKnowledgeBases() 获取<p>知识库ID，匹配集合中任意元素。</p>
+ * @method void setKnowledgeBases(array $KnowledgeBases) 设置<p>知识库ID，匹配集合中任意元素。</p>
  */
 class SearchMediaRequest extends AbstractModel
 {
@@ -248,6 +250,11 @@ class SearchMediaRequest extends AbstractModel
     public $StreamPaths;
 
     /**
+     * @var array <p>知识库ID，匹配集合中任意元素。</p>
+     */
+    public $KnowledgeBases;
+
+    /**
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      * @param array $FileIds <p>文件 ID 集合，匹配集合中的任意元素。</p><li>数组长度限制：10。</li><li>单个 ID 长度限制：40个字符。</li>
      * @param array $Names <p>文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。</p><li>单个文件名长度限制：100个字符。</li><li>数组长度限制：10。</li>
@@ -280,6 +287,7 @@ class SearchMediaRequest extends AbstractModel
      * @param string $Vid <p>该字段已无效。</p>
      * @param array $StreamDomains <p>直播推流Domain，当媒资来源是直播录制时有效。</p>
      * @param array $StreamPaths <p>直播推流Path，当媒资来源是直播录制时有效。</p>
+     * @param array $KnowledgeBases <p>知识库ID，匹配集合中任意元素。</p>
      */
     function __construct()
     {
@@ -423,6 +431,10 @@ class SearchMediaRequest extends AbstractModel
 
         if (array_key_exists("StreamPaths",$param) and $param["StreamPaths"] !== null) {
             $this->StreamPaths = $param["StreamPaths"];
+        }
+
+        if (array_key_exists("KnowledgeBases",$param) and $param["KnowledgeBases"] !== null) {
+            $this->KnowledgeBases = $param["KnowledgeBases"];
         }
     }
 }

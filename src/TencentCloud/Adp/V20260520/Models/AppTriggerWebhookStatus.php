@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AppTriggerWebhookStatus
  *
- * @method string getWebhookUrl() 获取
- * @method void setWebhookUrl(string $WebhookUrl) 设置
+ * @method string getWebhookUrl() 获取<p>推送Webbook地址</p>
+ * @method void setWebhookUrl(string $WebhookUrl) 设置<p>推送Webbook地址</p>
  */
 class AppTriggerWebhookStatus extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>推送Webbook地址</p>
      */
     public $WebhookUrl;
 
     /**
-     * @param string $WebhookUrl 
+     * @param string $WebhookUrl <p>推送Webbook地址</p>
      */
     function __construct()
     {

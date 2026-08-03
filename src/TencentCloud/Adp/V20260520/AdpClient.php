@@ -34,7 +34,6 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\CreateSkillResponse CreateSkill(Models\CreateSkillRequest $req) 创建skill
  * @method Models\CreateSkillShareResponse CreateSkillShare(Models\CreateSkillShareRequest $req) 提交自定义Skill至企业级共享审批（两段式：提交→审批→回调创建共享任务）
  * @method Models\CreateSpaceResponse CreateSpace(Models\CreateSpaceRequest $req) 创建空间
- * @method Models\CreateTimerTaskResponse CreateTimerTask(Models\CreateTimerTaskRequest $req) CreateTimerTask
  * @method Models\CreateVariableResponse CreateVariable(Models\CreateVariableRequest $req) 创建参数变量
  * @method Models\CreateWebSocketTokenResponse CreateWebSocketToken(Models\CreateWebSocketTokenRequest $req) 创建 WebSocket Token
  * @method Models\CreateWorkspaceCredentialResponse CreateWorkspaceCredential(Models\CreateWorkspaceCredentialRequest $req) 创建工作空间凭证
@@ -46,7 +45,6 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DeleteSkillResponse DeleteSkill(Models\DeleteSkillRequest $req) 删除自定义 Skill  鉴权：创建者 ∨ (编辑权限 ∧ 删除权限） 拒绝场景：非 Custom 类型 / 已共享 / 安全检测中 / 上架审批中 / 下架审批中
  * @method Models\DeleteSkillShareResponse DeleteSkillShare(Models\DeleteSkillShareRequest $req) 提交共享 Skill 下架审批（v2，两段式：提交→审批→回调下架共享 Skill） 鉴权：删除权 拒绝场景：未共享 / 上架审批中 / 下架审批中
  * @method Models\DeleteSpaceResponse DeleteSpace(Models\DeleteSpaceRequest $req) 删除空间
- * @method Models\DeleteTimerTaskResponse DeleteTimerTask(Models\DeleteTimerTaskRequest $req) DeleteTimerTask
  * @method Models\DeleteVariableResponse DeleteVariable(Models\DeleteVariableRequest $req) 删除参数变量
  * @method Models\DescribeAccountListResponse DescribeAccountList(Models\DescribeAccountListRequest $req) 查看企业下的员工列表
  * @method Models\DescribeAgentDetailResponse DescribeAgentDetail(Models\DescribeAgentDetailRequest $req) 查询 Agent 详情
@@ -75,15 +73,10 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeSkillSummaryListResponse DescribeSkillSummaryList(Models\DescribeSkillSummaryListRequest $req) 查询 Skill 列表
  * @method Models\DescribeSpaceListResponse DescribeSpaceList(Models\DescribeSpaceListRequest $req) 获取空间列表
  * @method Models\DescribeSystemVariableListResponse DescribeSystemVariableList(Models\DescribeSystemVariableListRequest $req) 获取系统变量
- * @method Models\DescribeTimerTaskResponse DescribeTimerTask(Models\DescribeTimerTaskRequest $req) DescribeTimerTask
- * @method Models\DescribeTimerTaskRunLogListResponse DescribeTimerTaskRunLogList(Models\DescribeTimerTaskRunLogListRequest $req) 查询定时任务执行记录列表
- * @method Models\DescribeTimerTaskSummaryListResponse DescribeTimerTaskSummaryList(Models\DescribeTimerTaskSummaryListRequest $req) 查询定时任务列表
  * @method Models\DescribeVariableResponse DescribeVariable(Models\DescribeVariableRequest $req) 获取参数变量
  * @method Models\DescribeVariableListResponse DescribeVariableList(Models\DescribeVariableListRequest $req) 获取参数变量列表
  * @method Models\FavoritePluginResponse FavoritePlugin(Models\FavoritePluginRequest $req) 收藏插件
  * @method Models\FavoriteSkillResponse FavoriteSkill(Models\FavoriteSkillRequest $req) 收藏skill
- * @method Models\MarkAppTriggerRunLogReadResponse MarkAppTriggerRunLogRead(Models\MarkAppTriggerRunLogReadRequest $req) MarkAppTriggerRunLogRead
- * @method Models\MarkTimerTaskRunLogReadResponse MarkTimerTaskRunLogRead(Models\MarkTimerTaskRunLogReadRequest $req) MarkTimerTaskRunLogRead
  * @method Models\ModifyAgentResponse ModifyAgent(Models\ModifyAgentRequest $req) 修改Agent配置信息
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用
  * @method Models\ModifyAppTriggerResponse ModifyAppTrigger(Models\ModifyAppTriggerRequest $req) ModifyAppTrigger
@@ -91,18 +84,15 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\ModifyPluginResponse ModifyPlugin(Models\ModifyPluginRequest $req) 修改插件
  * @method Models\ModifySkillResponse ModifySkill(Models\ModifySkillRequest $req) Skill修改
  * @method Models\ModifySpaceResponse ModifySpace(Models\ModifySpaceRequest $req) 编辑空间
- * @method Models\ModifyTimerTaskResponse ModifyTimerTask(Models\ModifyTimerTaskRequest $req) ModifyTimerTask
  * @method Models\ModifyVariableResponse ModifyVariable(Models\ModifyVariableRequest $req) 更新参数变量
  * @method Models\PauseAppTriggerResponse PauseAppTrigger(Models\PauseAppTriggerRequest $req) PauseAppTrigger
- * @method Models\PauseTimerTaskResponse PauseTimerTask(Models\PauseTimerTaskRequest $req) PauseTimerTask
  * @method Models\ReleaseSkillResponse ReleaseSkill(Models\ReleaseSkillRequest $req) 上架skill
  * @method Models\ResetConversationResponse ResetConversation(Models\ResetConversationRequest $req) 重置会话
+注意：当前Claw模式应用会话不支持重置
  * @method Models\ResumeAppTriggerResponse ResumeAppTrigger(Models\ResumeAppTriggerRequest $req) ResumeAppTrigger
- * @method Models\ResumeTimerTaskResponse ResumeTimerTask(Models\ResumeTimerTaskRequest $req) ResumeTimerTask
  * @method Models\RetryReleaseResponse RetryRelease(Models\RetryReleaseRequest $req) 重试发布(发布暂停之后再次重新发布)
  * @method Models\RollbackReleaseResponse RollbackRelease(Models\RollbackReleaseRequest $req) 回滚发布
  * @method Models\RunAppTriggerNowResponse RunAppTriggerNow(Models\RunAppTriggerNowRequest $req) RunAppTriggerNow
- * @method Models\RunTimerTaskNowResponse RunTimerTaskNow(Models\RunTimerTaskNowRequest $req) RunTimerTaskNow
  * @method Models\UnfavoritePluginResponse UnfavoritePlugin(Models\UnfavoritePluginRequest $req) 取消收藏插件
  * @method Models\UnfavoriteSkillResponse UnfavoriteSkill(Models\UnfavoriteSkillRequest $req) 取消收藏skill
  */

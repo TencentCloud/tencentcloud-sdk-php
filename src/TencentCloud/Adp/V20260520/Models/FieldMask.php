@@ -18,20 +18,20 @@ namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 字段掩码
+ * FieldMask
  *
- * @method array getPaths() 获取字段路径列表
- * @method void setPaths(array $Paths) 设置字段路径列表
+ * @method array getPaths() 获取<p>参数名称</p><p>参数格式：需要获取的指定字段路径</p>
+ * @method void setPaths(array $Paths) 设置<p>参数名称</p><p>参数格式：需要获取的指定字段路径</p>
  */
 class FieldMask extends AbstractModel
 {
     /**
-     * @var array 字段路径列表
+     * @var array <p>参数名称</p><p>参数格式：需要获取的指定字段路径</p>
      */
     public $Paths;
 
     /**
-     * @param array $Paths 字段路径列表
+     * @param array $Paths <p>参数名称</p><p>参数格式：需要获取的指定字段路径</p>
      */
     function __construct()
     {

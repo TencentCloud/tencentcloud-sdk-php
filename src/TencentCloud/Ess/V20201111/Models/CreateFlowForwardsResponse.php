@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowForwards返回参数结构体
  *
- * @method array getFailedFlows() 获取失败的合同id以及错误详情
- * @method void setFailedFlows(array $FailedFlows) 设置失败的合同id以及错误详情
- * @method array getSuccessFlows() 获取成功的合同id
- * @method void setSuccessFlows(array $SuccessFlows) 设置成功的合同id
+ * @method array getFailedFlows() 获取<p>失败的合同id以及错误详情</p>
+ * @method void setFailedFlows(array $FailedFlows) 设置<p>失败的合同id以及错误详情</p>
+ * @method array getSuccessFlows() 获取<p>成功的合同id</p>
+ * @method void setSuccessFlows(array $SuccessFlows) 设置<p>成功的合同id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateFlowForwardsResponse extends AbstractModel
 {
     /**
-     * @var array 失败的合同id以及错误详情
+     * @var array <p>失败的合同id以及错误详情</p>
      */
     public $FailedFlows;
 
     /**
-     * @var array 成功的合同id
+     * @var array <p>成功的合同id</p>
      */
     public $SuccessFlows;
 
@@ -45,8 +45,8 @@ class CreateFlowForwardsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FailedFlows 失败的合同id以及错误详情
-     * @param array $SuccessFlows 成功的合同id
+     * @param array $FailedFlows <p>失败的合同id以及错误详情</p>
+     * @param array $SuccessFlows <p>成功的合同id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

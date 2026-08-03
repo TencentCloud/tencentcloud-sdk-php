@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取页面大小，默认为10
  * @method void setLimit(integer $Limit) 设置页面大小，默认为10
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method array getFilters() 获取过滤条件数组，支持数据集ID，标注场景、任务状态、数据集名称、人物名称的过滤，后面两个支持模糊查询
  * @method void setFilters(array $Filters) 设置过滤条件数组，支持数据集ID，标注场景、任务状态、数据集名称、人物名称的过滤，后面两个支持模糊查询
  * @method array getTagFilters() 获取标签过滤条件
@@ -44,6 +46,11 @@ class DescribeAnnotatedTaskListRequest extends AbstractModel
      * @var integer 页面大小，默认为10
      */
     public $Limit;
+
+    /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
 
     /**
      * @var array 过滤条件数组，支持数据集ID，标注场景、任务状态、数据集名称、人物名称的过滤，后面两个支持模糊查询
@@ -68,6 +75,7 @@ class DescribeAnnotatedTaskListRequest extends AbstractModel
     /**
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 页面大小，默认为10
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param array $Filters 过滤条件数组，支持数据集ID，标注场景、任务状态、数据集名称、人物名称的过滤，后面两个支持模糊查询
      * @param array $TagFilters 标签过滤条件
      * @param string $Order 排序方向：Asc Desc
@@ -92,6 +100,10 @@ class DescribeAnnotatedTaskListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

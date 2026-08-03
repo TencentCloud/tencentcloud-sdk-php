@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateL3Cidr请求参数结构体
  *
- * @method string getL3ConnId() 获取互通规则ID
- * @method void setL3ConnId(string $L3ConnId) 设置互通规则ID
- * @method string getCidr1() 获取互通规则CIDR
- * @method void setCidr1(string $Cidr1) 设置互通规则CIDR
- * @method string getDeviceId1() 获取互通设备ID
- * @method void setDeviceId1(string $DeviceId1) 设置互通设备ID
- * @method string getDeviceId2() 获取互通设备ID
- * @method void setDeviceId2(string $DeviceId2) 设置互通设备ID
- * @method string getCidr2() 获取互通规则CIDR
- * @method void setCidr2(string $Cidr2) 设置互通规则CIDR
+ * @method string getL3ConnId() 获取<p>互通规则ID</p>
+ * @method void setL3ConnId(string $L3ConnId) 设置<p>互通规则ID</p>
+ * @method string getCidr1() 获取<p>互通规则CIDR</p>
+ * @method void setCidr1(string $Cidr1) 设置<p>互通规则CIDR</p>
+ * @method string getDeviceId1() 获取<p>互通设备ID</p>
+ * @method void setDeviceId1(string $DeviceId1) 设置<p>互通设备ID</p>
+ * @method string getDeviceId2() 获取<p>互通设备ID</p>
+ * @method void setDeviceId2(string $DeviceId2) 设置<p>互通设备ID</p>
+ * @method string getCidr2() 获取<p>互通规则CIDR</p>
+ * @method void setCidr2(string $Cidr2) 设置<p>互通规则CIDR</p>
  */
 class UpdateL3CidrRequest extends AbstractModel
 {
     /**
-     * @var string 互通规则ID
+     * @var string <p>互通规则ID</p>
      */
     public $L3ConnId;
 
     /**
-     * @var string 互通规则CIDR
+     * @var string <p>互通规则CIDR</p>
      */
     public $Cidr1;
 
     /**
-     * @var string 互通设备ID
+     * @var string <p>互通设备ID</p>
      */
     public $DeviceId1;
 
     /**
-     * @var string 互通设备ID
+     * @var string <p>互通设备ID</p>
      */
     public $DeviceId2;
 
     /**
-     * @var string 互通规则CIDR
+     * @var string <p>互通规则CIDR</p>
      */
     public $Cidr2;
 
     /**
-     * @param string $L3ConnId 互通规则ID
-     * @param string $Cidr1 互通规则CIDR
-     * @param string $DeviceId1 互通设备ID
-     * @param string $DeviceId2 互通设备ID
-     * @param string $Cidr2 互通规则CIDR
+     * @param string $L3ConnId <p>互通规则ID</p>
+     * @param string $Cidr1 <p>互通规则CIDR</p>
+     * @param string $DeviceId1 <p>互通设备ID</p>
+     * @param string $DeviceId2 <p>互通设备ID</p>
+     * @param string $Cidr2 <p>互通规则CIDR</p>
      */
     function __construct()
     {

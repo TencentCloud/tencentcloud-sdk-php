@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 镜像卷挂载源配置
  *
- * @method string getReference() 获取镜像地址
- * @method void setReference(string $Reference) 设置镜像地址
- * @method string getImageRegistryType() 获取镜像仓库类型：`enterprise`、`personal`。
- * @method void setImageRegistryType(string $ImageRegistryType) 设置镜像仓库类型：`enterprise`、`personal`。
- * @method string getSubPath() 获取镜像内部的路径
- * @method void setSubPath(string $SubPath) 设置镜像内部的路径
- * @method string getDigest() 获取镜像 Digest，请求时无需传入
- * @method void setDigest(string $Digest) 设置镜像 Digest，请求时无需传入
+ * @method string getReference() 获取<p>镜像地址</p>
+ * @method void setReference(string $Reference) 设置<p>镜像地址</p>
+ * @method string getImageRegistryType() 获取<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+ * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+ * @method string getSubPath() 获取<p>镜像内部的路径</p>
+ * @method void setSubPath(string $SubPath) 设置<p>镜像内部的路径</p>
+ * @method string getDigest() 获取<p>镜像 Digest，请求时无需传入</p>
+ * @method void setDigest(string $Digest) 设置<p>镜像 Digest，请求时无需传入</p>
  */
 class ImageStorageSource extends AbstractModel
 {
     /**
-     * @var string 镜像地址
+     * @var string <p>镜像地址</p>
      */
     public $Reference;
 
     /**
-     * @var string 镜像仓库类型：`enterprise`、`personal`。
+     * @var string <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
      */
     public $ImageRegistryType;
 
     /**
-     * @var string 镜像内部的路径
+     * @var string <p>镜像内部的路径</p>
      */
     public $SubPath;
 
     /**
-     * @var string 镜像 Digest，请求时无需传入
+     * @var string <p>镜像 Digest，请求时无需传入</p>
      */
     public $Digest;
 
     /**
-     * @param string $Reference 镜像地址
-     * @param string $ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
-     * @param string $SubPath 镜像内部的路径
-     * @param string $Digest 镜像 Digest，请求时无需传入
+     * @param string $Reference <p>镜像地址</p>
+     * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+     * @param string $SubPath <p>镜像内部的路径</p>
+     * @param string $Digest <p>镜像 Digest，请求时无需传入</p>
      */
     function __construct()
     {

@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAppId() 获取<p>应用ID</p>
  * @method void setAppId(string $AppId) 设置<p>应用ID</p>
+ * @method integer getScope() 获取<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+ * @method void setScope(integer $Scope) 设置<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
  * @method string getTriggerId() 获取<p>应用触发器ID</p>
  * @method void setTriggerId(string $TriggerId) 设置<p>应用触发器ID</p>
+ * @method string getUserId() 获取<p>访客ID</p>
+ * @method void setUserId(string $UserId) 设置<p>访客ID</p>
  */
 class ResumeAppTriggerRequest extends AbstractModel
 {
@@ -33,13 +37,25 @@ class ResumeAppTriggerRequest extends AbstractModel
     public $AppId;
 
     /**
+     * @var integer <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     */
+    public $Scope;
+
+    /**
      * @var string <p>应用触发器ID</p>
      */
     public $TriggerId;
 
     /**
+     * @var string <p>访客ID</p>
+     */
+    public $UserId;
+
+    /**
      * @param string $AppId <p>应用ID</p>
+     * @param integer $Scope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
      * @param string $TriggerId <p>应用触发器ID</p>
+     * @param string $UserId <p>访客ID</p>
      */
     function __construct()
     {
@@ -58,8 +74,16 @@ class ResumeAppTriggerRequest extends AbstractModel
             $this->AppId = $param["AppId"];
         }
 
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
+        }
+
         if (array_key_exists("TriggerId",$param) and $param["TriggerId"] !== null) {
             $this->TriggerId = $param["TriggerId"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

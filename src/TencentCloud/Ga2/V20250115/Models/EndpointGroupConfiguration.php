@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 终端节点组配置
  *
- * @method string getName() 获取<p>终端节点组名称。</p><p>最大长度不能超过128个字节。必须以字母（a-z, A-Z）或中文字符开头。</p>
- * @method void setName(string $Name) 设置<p>终端节点组名称。</p><p>最大长度不能超过128个字节。必须以字母（a-z, A-Z）或中文字符开头。</p>
+ * @method string getName() 获取<p>终端节点组名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
+ * @method void setName(string $Name) 设置<p>终端节点组名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
  * @method string getEndpointGroupRegion() 获取<p>终端节点组所在地域。</p>
  * @method void setEndpointGroupRegion(string $EndpointGroupRegion) 设置<p>终端节点组所在地域。</p>
  * @method array getEndpointConfigurations() 获取<p>终端节点配置。</p>
@@ -70,7 +70,7 @@ use TencentCloud\Common\AbstractModel;
 class EndpointGroupConfiguration extends AbstractModel
 {
     /**
-     * @var string <p>终端节点组名称。</p><p>最大长度不能超过128个字节。必须以字母（a-z, A-Z）或中文字符开头。</p>
+     * @var string <p>终端节点组名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public $Name;
 
@@ -185,7 +185,7 @@ class EndpointGroupConfiguration extends AbstractModel
     public $HttpVersion;
 
     /**
-     * @param string $Name <p>终端节点组名称。</p><p>最大长度不能超过128个字节。必须以字母（a-z, A-Z）或中文字符开头。</p>
+     * @param string $Name <p>终端节点组名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      * @param string $EndpointGroupRegion <p>终端节点组所在地域。</p>
      * @param array $EndpointConfigurations <p>终端节点配置。</p>
      * @param string $CheckType <p>检查协议。支持配置&#39;TCP&#39;, &#39;HTTP&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p><p>枚举值：</p><ul><li>TCP： 当终端节点组所在监听器协议是TCP时，可以选择检查协议为TCP。</li><li>HTTP： 当终端节点组所在监听器协议是HTTP或HTTPS时，可以选择检查协议为HTTP。</li><li>PING： 当终端节点组所在监听器协议是UDP时，可以选择检查协议为PING。</li><li>CUSTOM： 当终端节点组所在监听器协议是UDP或TCP时，可以选择检查协议为CUSTOM。</li></ul><p>当开启健康检查时此字段必传。</p>

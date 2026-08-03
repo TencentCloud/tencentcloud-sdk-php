@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取<p>沙箱实例ID</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例ID</p>
+ * @method boolean getMemory() 获取<p>可选。带内存暂停，恢复后保留进程和内存状态。true=带内存；false=仅磁盘；不传=系统默认（当前默认 true，带内存）。</p>
+ * @method void setMemory(boolean $Memory) 设置<p>可选。带内存暂停，恢复后保留进程和内存状态。true=带内存；false=仅磁盘；不传=系统默认（当前默认 true，带内存）。</p>
  */
 class PauseSandboxInstanceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class PauseSandboxInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean <p>可选。带内存暂停，恢复后保留进程和内存状态。true=带内存；false=仅磁盘；不传=系统默认（当前默认 true，带内存）。</p>
+     */
+    public $Memory;
+
+    /**
      * @param string $InstanceId <p>沙箱实例ID</p>
+     * @param boolean $Memory <p>可选。带内存暂停，恢复后保留进程和内存状态。true=带内存；false=仅磁盘；不传=系统默认（当前默认 true，带内存）。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class PauseSandboxInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
+            $this->Memory = $param["Memory"];
         }
     }
 }

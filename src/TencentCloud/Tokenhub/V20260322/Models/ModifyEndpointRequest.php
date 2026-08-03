@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyEndpoint请求参数结构体
  *
- * @method integer getAutoAdjustQuota() 获取自动调整配额
- * @method void setAutoAdjustQuota(integer $AutoAdjustQuota) 设置自动调整配额
+ * @method integer getAutoAdjustQuota() 获取<p>自动调整配额</p>
+ * @method void setAutoAdjustQuota(integer $AutoAdjustQuota) 设置<p>自动调整配额</p>
  */
 class ModifyEndpointRequest extends AbstractModel
 {
     /**
-     * @var integer 自动调整配额
+     * @var integer <p>自动调整配额</p>
      */
     public $AutoAdjustQuota;
 
     /**
-     * @param integer $AutoAdjustQuota 自动调整配额
+     * @param integer $AutoAdjustQuota <p>自动调整配额</p>
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndpointGroupId(string $EndpointGroupId) 设置<p>终端节点组ID。</p>
  * @method array getEndpointConfigurations() 获取<p>终端节点配置。</p>
  * @method void setEndpointConfigurations(array $EndpointConfigurations) 设置<p>终端节点配置。</p>
- * @method string getName() 获取<p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
- * @method void setName(string $Name) 设置<p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
+ * @method string getName() 获取<p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
+ * @method void setName(string $Name) 设置<p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
  * @method string getDescription() 获取<p>描述信息。</p><p>入参限制：最大长度不能超过100个字节。</p>
  * @method void setDescription(string $Description) 设置<p>描述信息。</p><p>入参限制：最大长度不能超过100个字节。</p>
  * @method boolean getEnableHealthCheck() 获取<p>是否开启健康检查。</p>
@@ -92,7 +92,7 @@ class ModifyEndpointGroupRequest extends AbstractModel
     public $EndpointConfigurations;
 
     /**
-     * @var string <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
+     * @var string <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public $Name;
 
@@ -196,7 +196,7 @@ class ModifyEndpointGroupRequest extends AbstractModel
      * @param string $ListenerId <p>监听器ID。</p>
      * @param string $EndpointGroupId <p>终端节点组ID。</p>
      * @param array $EndpointConfigurations <p>终端节点配置。</p>
-     * @param string $Name <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
+     * @param string $Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      * @param string $Description <p>描述信息。</p><p>入参限制：最大长度不能超过100个字节。</p>
      * @param boolean $EnableHealthCheck <p>是否开启健康检查。</p>
      * @param integer $ConnectTimeout <p>响应超时时间。</p><p>取值范围：[1, 100]</p><p>当开启健康检查时候，此参数必传。</p>

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
  * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
- * @method string getName() 获取<p>名称，最大长度不能超过60个字节。</p>
- * @method void setName(string $Name) 设置<p>名称，最大长度不能超过60个字节。</p>
- * @method string getDescription() 获取<p>描述信息，最大长度不能超过100个字节。</p>
- * @method void setDescription(string $Description) 设置<p>描述信息，最大长度不能超过100个字节。</p>
+ * @method string getName() 获取<p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
+ * @method void setName(string $Name) 设置<p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
+ * @method string getDescription() 获取<p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
  * @method string getCrossBorderType() 获取<p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
  * @method void setCrossBorderType(string $CrossBorderType) 设置<p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
  * @method boolean getCrossBorderPromiseFlag() 获取<p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
@@ -39,12 +39,12 @@ class ModifyGlobalAcceleratorRequest extends AbstractModel
     public $GlobalAcceleratorId;
 
     /**
-     * @var string <p>名称，最大长度不能超过60个字节。</p>
+     * @var string <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public $Name;
 
     /**
-     * @var string <p>描述信息，最大长度不能超过100个字节。</p>
+     * @var string <p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
      */
     public $Description;
 
@@ -60,8 +60,8 @@ class ModifyGlobalAcceleratorRequest extends AbstractModel
 
     /**
      * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
-     * @param string $Name <p>名称，最大长度不能超过60个字节。</p>
-     * @param string $Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * @param string $Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
+     * @param string $Description <p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
      * @param string $CrossBorderType <p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
      * @param boolean $CrossBorderPromiseFlag <p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
      */

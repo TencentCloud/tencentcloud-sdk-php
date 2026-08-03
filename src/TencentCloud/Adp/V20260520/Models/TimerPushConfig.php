@@ -20,94 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TimerPushConfig
  *
- * @method integer getPushChannel() 获取
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 不推送 |
-| 2 | 微信公众号 |
-| 3 | 企业微信 AI 机器人 |
- * @method void setPushChannel(integer $PushChannel) 设置
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 不推送 |
-| 2 | 微信公众号 |
-| 3 | 企业微信 AI 机器人 |
- * @method string getPushTargetId() 获取推送会话ID
- * @method void setPushTargetId(string $PushTargetId) 设置推送会话ID
- * @method integer getPushTargetType() 获取
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 用户 (微信公众号 openid) |
-| 2 | 群聊 (企微机器人 chat_id) |
- * @method void setPushTargetType(integer $PushTargetType) 设置
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 用户 (微信公众号 openid) |
-| 2 | 群聊 (企微机器人 chat_id) |
- * @method string getPushWebhookUrl() 获取
- * @method void setPushWebhookUrl(string $PushWebhookUrl) 设置
+ * @method integer getPushChannel() 获取<p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 不推送 |<br>| 2 | 微信公众号 |<br>| 3 | 企业微信 AI 机器人 |</p>
+ * @method void setPushChannel(integer $PushChannel) 设置<p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 不推送 |<br>| 2 | 微信公众号 |<br>| 3 | 企业微信 AI 机器人 |</p>
+ * @method string getPushTargetId() 获取<p>推送会话ID</p>
+ * @method void setPushTargetId(string $PushTargetId) 设置<p>推送会话ID</p>
+ * @method integer getPushTargetType() 获取<p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 用户 (微信公众号 openid) |<br>| 2 | 群聊 (企微机器人 chat_id) |</p>
+ * @method void setPushTargetType(integer $PushTargetType) 设置<p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 用户 (微信公众号 openid) |<br>| 2 | 群聊 (企微机器人 chat_id) |</p>
+ * @method string getPushWebhookUrl() 获取<p>推送webhook的url</p>
+ * @method void setPushWebhookUrl(string $PushWebhookUrl) 设置<p>推送webhook的url</p>
  */
 class TimerPushConfig extends AbstractModel
 {
     /**
-     * @var integer 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 不推送 |
-| 2 | 微信公众号 |
-| 3 | 企业微信 AI 机器人 |
+     * @var integer <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 不推送 |<br>| 2 | 微信公众号 |<br>| 3 | 企业微信 AI 机器人 |</p>
      */
     public $PushChannel;
 
     /**
-     * @var string 推送会话ID
+     * @var string <p>推送会话ID</p>
      */
     public $PushTargetId;
 
     /**
-     * @var integer 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 用户 (微信公众号 openid) |
-| 2 | 群聊 (企微机器人 chat_id) |
+     * @var integer <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 用户 (微信公众号 openid) |<br>| 2 | 群聊 (企微机器人 chat_id) |</p>
      */
     public $PushTargetType;
 
     /**
-     * @var string 
+     * @var string <p>推送webhook的url</p>
      */
     public $PushWebhookUrl;
 
     /**
-     * @param integer $PushChannel 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 不推送 |
-| 2 | 微信公众号 |
-| 3 | 企业微信 AI 机器人 |
-     * @param string $PushTargetId 推送会话ID
-     * @param integer $PushTargetType 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 用户 (微信公众号 openid) |
-| 2 | 群聊 (企微机器人 chat_id) |
-     * @param string $PushWebhookUrl 
+     * @param integer $PushChannel <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 不推送 |<br>| 2 | 微信公众号 |<br>| 3 | 企业微信 AI 机器人 |</p>
+     * @param string $PushTargetId <p>推送会话ID</p>
+     * @param integer $PushTargetType <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 用户 (微信公众号 openid) |<br>| 2 | 群聊 (企微机器人 chat_id) |</p>
+     * @param string $PushWebhookUrl <p>推送webhook的url</p>
      */
     function __construct()
     {

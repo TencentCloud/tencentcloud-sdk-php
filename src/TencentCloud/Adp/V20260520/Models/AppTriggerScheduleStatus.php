@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AppTriggerScheduleStatus
  *
- * @method string getLastFireTime() 获取
- * @method void setLastFireTime(string $LastFireTime) 设置
- * @method string getNextFireTime() 获取
- * @method void setNextFireTime(string $NextFireTime) 设置
- * @method string getPolicySummary() 获取
- * @method void setPolicySummary(string $PolicySummary) 设置
+ * @method string getLastFireTime() 获取<p>最近一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
+ * @method void setLastFireTime(string $LastFireTime) 设置<p>最近一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
+ * @method string getNextFireTime() 获取<p>下一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
+ * @method void setNextFireTime(string $NextFireTime) 设置<p>下一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
+ * @method string getPolicySummary() 获取<p>触发方式</p>
+ * @method void setPolicySummary(string $PolicySummary) 设置<p>触发方式</p>
  */
 class AppTriggerScheduleStatus extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>最近一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
      */
     public $LastFireTime;
 
     /**
-     * @var string 
+     * @var string <p>下一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
      */
     public $NextFireTime;
 
     /**
-     * @var string 
+     * @var string <p>触发方式</p>
      */
     public $PolicySummary;
 
     /**
-     * @param string $LastFireTime 
-     * @param string $NextFireTime 
-     * @param string $PolicySummary 
+     * @param string $LastFireTime <p>最近一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
+     * @param string $NextFireTime <p>下一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
+     * @param string $PolicySummary <p>触发方式</p>
      */
     function __construct()
     {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumerGroupId(string $ConsumerGroupId) 设置<p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
  * @method boolean getUseToBind() 获取<p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
  * @method void setUseToBind(boolean $UseToBind) 设置<p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
+ * @method string getConsumerId() 获取<p>消费者 ID（以 consumer- 开头）。</p>
+ * @method void setConsumerId(string $ConsumerId) 设置<p>消费者 ID（以 consumer- 开头）。</p>
  */
 class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
     public $UseToBind;
 
     /**
+     * @var string <p>消费者 ID（以 consumer- 开头）。</p>
+     */
+    public $ConsumerId;
+
+    /**
      * @param string $GatewayId 网关 id。
      * @param integer $Limit <p>每页条数，范围 [1, 1000]，默认 10。</p>
      * @param integer $Offset <p>起始位置，从 0 开始。</p>
@@ -80,6 +87,7 @@ class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
      * @param string $Keyword <p>模糊匹配模型 API 名称。</p>
      * @param string $ConsumerGroupId <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
      * @param boolean $UseToBind <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
+     * @param string $ConsumerId <p>消费者 ID（以 consumer- 开头）。</p>
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
 
         if (array_key_exists("UseToBind",$param) and $param["UseToBind"] !== null) {
             $this->UseToBind = $param["UseToBind"];
+        }
+
+        if (array_key_exists("ConsumerId",$param) and $param["ConsumerId"] !== null) {
+            $this->ConsumerId = $param["ConsumerId"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClientId() 获取<p>IdP 注册的 client_id</p>
  * @method void setClientId(string $ClientId) 设置<p>IdP 注册的 client_id</p>
- * @method string getClientSecret() 获取<p>客户端密钥</p><p>参数格式：IdP 注册的 client_secret</p>
- * @method void setClientSecret(string $ClientSecret) 设置<p>客户端密钥</p><p>参数格式：IdP 注册的 client_secret</p>
+ * @method string getClientSecret() 获取<p>IdP 注册的 client_secret</p>
+ * @method void setClientSecret(string $ClientSecret) 设置<p>IdP 注册的 client_secret</p>
  * @method string getIssuerURL() 获取<p>IdP Issuer URL</p>
  * @method void setIssuerURL(string $IssuerURL) 设置<p>IdP Issuer URL</p>
  * @method string getConsumerClaimValue() 获取<p>IdP 中该用户的 claim 值</p>
@@ -37,7 +37,7 @@ class AIGWOIDCCredentialConfig extends AbstractModel
     public $ClientId;
 
     /**
-     * @var string <p>客户端密钥</p><p>参数格式：IdP 注册的 client_secret</p>
+     * @var string <p>IdP 注册的 client_secret</p>
      */
     public $ClientSecret;
 
@@ -53,7 +53,7 @@ class AIGWOIDCCredentialConfig extends AbstractModel
 
     /**
      * @param string $ClientId <p>IdP 注册的 client_id</p>
-     * @param string $ClientSecret <p>客户端密钥</p><p>参数格式：IdP 注册的 client_secret</p>
+     * @param string $ClientSecret <p>IdP 注册的 client_secret</p>
      * @param string $IssuerURL <p>IdP Issuer URL</p>
      * @param string $ConsumerClaimValue <p>IdP 中该用户的 claim 值</p>
      */

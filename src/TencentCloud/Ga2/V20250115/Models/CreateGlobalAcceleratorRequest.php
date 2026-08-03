@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGlobalAccelerator请求参数结构体
  *
- * @method string getName() 获取<p>名称，最大长度不能超过128个字节，不能为空。</p><p>参数格式：满足正则 ^[a-zA-Z\u4e00-\u9fa5]（首字符是英文字母或汉字），并且不满足正则 ^[\d._-]*$（整串不能只由数字/./_/-组成）。</p>
- * @method void setName(string $Name) 设置<p>名称，最大长度不能超过128个字节，不能为空。</p><p>参数格式：满足正则 ^[a-zA-Z\u4e00-\u9fa5]（首字符是英文字母或汉字），并且不满足正则 ^[\d._-]*$（整串不能只由数字/./_/-组成）。</p>
+ * @method string getName() 获取<p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
+ * @method void setName(string $Name) 设置<p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
  * @method string getInstanceChargeType() 获取<p>计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。当前仅支持后付费。</p>
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。当前仅支持后付费。</p>
- * @method string getDescription() 获取<p>描述信息，最大长度不能超过100个字节。</p>
- * @method void setDescription(string $Description) 设置<p>描述信息，最大长度不能超过100个字节。</p>
+ * @method string getDescription() 获取<p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
  * @method string getCrossBorderType() 获取<p>跨境类型；HighQuality：精品BGP-IP跨境；Unicom：联通专线跨境。</p>
  * @method void setCrossBorderType(string $CrossBorderType) 设置<p>跨境类型；HighQuality：精品BGP-IP跨境；Unicom：联通专线跨境。</p>
  * @method boolean getCrossBorderPromiseFlag() 获取<p>此Flag代表签署跨境服务承诺书。当使用跨境服务时候，此字段必传。True：代表签署。</p>
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateGlobalAcceleratorRequest extends AbstractModel
 {
     /**
-     * @var string <p>名称，最大长度不能超过128个字节，不能为空。</p><p>参数格式：满足正则 ^[a-zA-Z\u4e00-\u9fa5]（首字符是英文字母或汉字），并且不满足正则 ^[\d._-]*$（整串不能只由数字/./_/-组成）。</p>
+     * @var string <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public $Name;
 
@@ -46,7 +46,7 @@ class CreateGlobalAcceleratorRequest extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @var string <p>描述信息，最大长度不能超过100个字节。</p>
+     * @var string <p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
      */
     public $Description;
 
@@ -66,9 +66,9 @@ class CreateGlobalAcceleratorRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $Name <p>名称，最大长度不能超过128个字节，不能为空。</p><p>参数格式：满足正则 ^[a-zA-Z\u4e00-\u9fa5]（首字符是英文字母或汉字），并且不满足正则 ^[\d._-]*$（整串不能只由数字/./_/-组成）。</p>
+     * @param string $Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      * @param string $InstanceChargeType <p>计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。当前仅支持后付费。</p>
-     * @param string $Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * @param string $Description <p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
      * @param string $CrossBorderType <p>跨境类型；HighQuality：精品BGP-IP跨境；Unicom：联通专线跨境。</p>
      * @param boolean $CrossBorderPromiseFlag <p>此Flag代表签署跨境服务承诺书。当使用跨境服务时候，此字段必传。True：代表签署。</p>
      * @param array $Tags <p>标签信息</p>

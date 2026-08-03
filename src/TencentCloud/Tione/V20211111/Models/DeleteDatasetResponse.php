@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDataset返回参数结构体
  *
- * @method string getDatasetId() 获取删除的datasetId
- * @method void setDatasetId(string $DatasetId) 设置删除的datasetId
+ * @method string getDatasetId() 获取<p>删除的datasetId</p>
+ * @method void setDatasetId(string $DatasetId) 设置<p>删除的datasetId</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteDatasetResponse extends AbstractModel
 {
     /**
-     * @var string 删除的datasetId
+     * @var string <p>删除的datasetId</p>
      */
     public $DatasetId;
 
@@ -38,7 +38,7 @@ class DeleteDatasetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DatasetId 删除的datasetId
+     * @param string $DatasetId <p>删除的datasetId</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

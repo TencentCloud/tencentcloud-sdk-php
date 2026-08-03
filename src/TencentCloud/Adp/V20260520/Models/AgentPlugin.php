@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Agent 的插件信息
  *
- * @method AgentPluginConfig getConfig() 获取插件基本配置
- * @method void setConfig(AgentPluginConfig $Config) 设置插件基本配置
- * @method string getName() 获取插件名称
- * @method void setName(string $Name) 设置插件名称
- * @method string getIconUrl() 获取插件图标url
- * @method void setIconUrl(string $IconUrl) 设置插件图标url
- * @method string getDescription() 获取插件描述
- * @method void setDescription(string $Description) 设置插件描述
+ * @method AgentPluginConfig getConfig() 获取<p>插件基本配置</p>
+ * @method void setConfig(AgentPluginConfig $Config) 设置<p>插件基本配置</p>
+ * @method string getName() 获取<p>插件名称</p>
+ * @method void setName(string $Name) 设置<p>插件名称</p>
+ * @method string getIconUrl() 获取<p>插件图标url</p>
+ * @method void setIconUrl(string $IconUrl) 设置<p>插件图标url</p>
+ * @method string getDescription() 获取<p>插件描述</p>
+ * @method void setDescription(string $Description) 设置<p>插件描述</p>
  * @method integer getPluginClass() 获取<p>插件产品分类</p><p>枚举值：</p><ul><li>0： 普通插件</li><li>1： 连接器类插件</li></ul>
  * @method void setPluginClass(integer $PluginClass) 设置<p>插件产品分类</p><p>枚举值：</p><ul><li>0： 普通插件</li><li>1： 连接器类插件</li></ul>
  * @method integer getStatus() 获取<p>插件状态</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 可用</li><li>2： 不可用</li></ul>
@@ -38,22 +38,22 @@ use TencentCloud\Common\AbstractModel;
 class AgentPlugin extends AbstractModel
 {
     /**
-     * @var AgentPluginConfig 插件基本配置
+     * @var AgentPluginConfig <p>插件基本配置</p>
      */
     public $Config;
 
     /**
-     * @var string 插件名称
+     * @var string <p>插件名称</p>
      */
     public $Name;
 
     /**
-     * @var string 插件图标url
+     * @var string <p>插件图标url</p>
      */
     public $IconUrl;
 
     /**
-     * @var string 插件描述
+     * @var string <p>插件描述</p>
      */
     public $Description;
 
@@ -73,10 +73,10 @@ class AgentPlugin extends AbstractModel
     public $AuthConfigStatus;
 
     /**
-     * @param AgentPluginConfig $Config 插件基本配置
-     * @param string $Name 插件名称
-     * @param string $IconUrl 插件图标url
-     * @param string $Description 插件描述
+     * @param AgentPluginConfig $Config <p>插件基本配置</p>
+     * @param string $Name <p>插件名称</p>
+     * @param string $IconUrl <p>插件图标url</p>
+     * @param string $Description <p>插件描述</p>
      * @param integer $PluginClass <p>插件产品分类</p><p>枚举值：</p><ul><li>0： 普通插件</li><li>1： 连接器类插件</li></ul>
      * @param integer $Status <p>插件状态</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 可用</li><li>2： 不可用</li></ul>
      * @param integer $AuthConfigStatus <p>插件鉴权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul>

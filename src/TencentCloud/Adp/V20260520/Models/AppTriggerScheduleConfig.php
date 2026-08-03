@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AppTriggerScheduleConfig
  *
- * @method TimerScheduleConfig getSchedule() 获取
- * @method void setSchedule(TimerScheduleConfig $Schedule) 设置
+ * @method TimerScheduleConfig getSchedule() 获取<p>触发器定时配置</p>
+ * @method void setSchedule(TimerScheduleConfig $Schedule) 设置<p>触发器定时配置</p>
  */
 class AppTriggerScheduleConfig extends AbstractModel
 {
     /**
-     * @var TimerScheduleConfig 
+     * @var TimerScheduleConfig <p>触发器定时配置</p>
      */
     public $Schedule;
 
     /**
-     * @param TimerScheduleConfig $Schedule 
+     * @param TimerScheduleConfig $Schedule <p>触发器定时配置</p>
      */
     function __construct()
     {

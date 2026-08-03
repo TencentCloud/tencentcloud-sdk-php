@@ -76,6 +76,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyRotationEnabled(boolean $KeyRotationEnabled) 设置<p>密钥轮转开关</p>
  * @method integer getKeyRotationPeriodDays() 获取<p>密钥轮转周期</p><p>单位：天数</p>
  * @method void setKeyRotationPeriodDays(integer $KeyRotationPeriodDays) 设置<p>密钥轮转周期</p><p>单位：天数</p>
+ * @method string getSourceId() 获取<p>来源服务 ID。</p>
+ * @method void setSourceId(string $SourceId) 设置<p>来源服务 ID。</p>
+ * @method string getNamespace() 获取<p>命名空间。</p>
+ * @method void setNamespace(string $Namespace) 设置<p>命名空间。</p>
+ * @method string getServiceName() 获取<p>服务名称。</p>
+ * @method void setServiceName(string $ServiceName) 设置<p>服务名称。</p>
+ * @method string getProtocol() 获取<p>协议类型，如 OpenAI、Custom。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议类型，如 OpenAI、Custom。</p>
  */
 class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 {
@@ -220,6 +228,26 @@ class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
     public $KeyRotationPeriodDays;
 
     /**
+     * @var string <p>来源服务 ID。</p>
+     */
+    public $SourceId;
+
+    /**
+     * @var string <p>命名空间。</p>
+     */
+    public $Namespace;
+
+    /**
+     * @var string <p>服务名称。</p>
+     */
+    public $ServiceName;
+
+    /**
+     * @var string <p>协议类型，如 OpenAI、Custom。</p>
+     */
+    public $Protocol;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $Name <p>服务名称，最长60个字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
      * @param string $ServiceType <p>服务类型。目前仅支持 LLMService。</p><p>枚举值：</p><ul><li>LLMService： 大语言模型服务</li></ul>
@@ -248,6 +276,10 @@ class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
      * @param array $ExtParams <p>其他参数</p>
      * @param boolean $KeyRotationEnabled <p>密钥轮转开关</p>
      * @param integer $KeyRotationPeriodDays <p>密钥轮转周期</p><p>单位：天数</p>
+     * @param string $SourceId <p>来源服务 ID。</p>
+     * @param string $Namespace <p>命名空间。</p>
+     * @param string $ServiceName <p>服务名称。</p>
+     * @param string $Protocol <p>协议类型，如 OpenAI、Custom。</p>
      */
     function __construct()
     {
@@ -385,6 +417,22 @@ class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 
         if (array_key_exists("KeyRotationPeriodDays",$param) and $param["KeyRotationPeriodDays"] !== null) {
             $this->KeyRotationPeriodDays = $param["KeyRotationPeriodDays"];
+        }
+
+        if (array_key_exists("SourceId",$param) and $param["SourceId"] !== null) {
+            $this->SourceId = $param["SourceId"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
+            $this->ServiceName = $param["ServiceName"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

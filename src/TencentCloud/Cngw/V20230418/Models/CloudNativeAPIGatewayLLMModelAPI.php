@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelServiceName(string $ModelServiceName) 设置<p>模型服务名称</p>
  * @method CloudNativeAPIGatewayLLMModelServiceRoute getModelServiceRoute() 获取<p>模型服务路由策略（是指如何路由到模型服务）</p>
  * @method void setModelServiceRoute(CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute) 设置<p>模型服务路由策略（是指如何路由到模型服务）</p>
- * @method array getMatchHeaders() 获取<p>无</p>
- * @method void setMatchHeaders(array $MatchHeaders) 设置<p>无</p>
+ * @method array getMatchHeaders() 获取<p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
+ * @method void setMatchHeaders(array $MatchHeaders) 设置<p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
  * @method boolean getEnableCrossServiceFallback() 获取<p>是否开启跨服务fallback</p>
  * @method void setEnableCrossServiceFallback(boolean $EnableCrossServiceFallback) 设置<p>是否开启跨服务fallback</p>
  * @method AIGWCrossServiceFallbackConfig getCrossServiceFallbackConfig() 获取<p>跨服务fallback配置详情</p>
@@ -131,7 +131,7 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
     public $ModelServiceRoute;
 
     /**
-     * @var array <p>无</p>
+     * @var array <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
      */
     public $MatchHeaders;
 
@@ -184,7 +184,7 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
      * @param string $ModelServiceId <p>模型服务Id</p>
      * @param string $ModelServiceName <p>模型服务名称</p>
      * @param CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
-     * @param array $MatchHeaders <p>无</p>
+     * @param array $MatchHeaders <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
      * @param boolean $EnableCrossServiceFallback <p>是否开启跨服务fallback</p>
      * @param AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig <p>跨服务fallback配置详情</p>
      * @param boolean $DescribeCloudNativeAPIGatewayLLMModelAPI <p>是否展示模型API</p>

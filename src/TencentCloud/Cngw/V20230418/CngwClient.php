@@ -43,7 +43,7 @@ use TencentCloud\Cngw\V20230418\Models as Models;
  * @method Models\DescribeCloudNativeAPIGatewayConsumerResponse DescribeCloudNativeAPIGatewayConsumer(Models\DescribeCloudNativeAPIGatewayConsumerRequest $req) 查询云原生消费者详情
  * @method Models\DescribeCloudNativeAPIGatewayConsumerGroupResponse DescribeCloudNativeAPIGatewayConsumerGroup(Models\DescribeCloudNativeAPIGatewayConsumerGroupRequest $req) 查询消费者组详情。
  * @method Models\DescribeCloudNativeAPIGatewayLLMModelAPIResponse DescribeCloudNativeAPIGatewayLLMModelAPI(Models\DescribeCloudNativeAPIGatewayLLMModelAPIRequest $req) 查询单个 LLM 模型 API 详情。
- * @method Models\DescribeCloudNativeAPIGatewayLLMModelAPIsResponse DescribeCloudNativeAPIGatewayLLMModelAPIs(Models\DescribeCloudNativeAPIGatewayLLMModelAPIsRequest $req) 查询 LLM 模型 API 列表。
+ * @method Models\DescribeCloudNativeAPIGatewayLLMModelAPIsResponse DescribeCloudNativeAPIGatewayLLMModelAPIs(Models\DescribeCloudNativeAPIGatewayLLMModelAPIsRequest $req) 查询指定网关实例下的所有 LLM 模型 API 列表。支持按名称关键词模糊搜索、按过滤器筛选，以及分页查询。用于绑定场景时，可通过 ConsumerGroupId 和 UseToBind 参数筛选可绑定的模型 API。
  * @method Models\DescribeCloudNativeAPIGatewayLLMModelServiceResponse DescribeCloudNativeAPIGatewayLLMModelService(Models\DescribeCloudNativeAPIGatewayLLMModelServiceRequest $req) 查询单个 LLM 模型服务详情。
  * @method Models\DescribeCloudNativeAPIGatewayLLMModelServicesResponse DescribeCloudNativeAPIGatewayLLMModelServices(Models\DescribeCloudNativeAPIGatewayLLMModelServicesRequest $req) 查询 LLM 模型服务列表。
  * @method Models\DescribeCloudNativeAPIGatewayLLMTokenUsageListResponse DescribeCloudNativeAPIGatewayLLMTokenUsageList(Models\DescribeCloudNativeAPIGatewayLLMTokenUsageListRequest $req) 查询 AI 网关Token 消耗统计
@@ -55,6 +55,7 @@ use TencentCloud\Cngw\V20230418\Models as Models;
  * @method Models\DescribeCloudNativeAPIGatewayMCPToolResponse DescribeCloudNativeAPIGatewayMCPTool(Models\DescribeCloudNativeAPIGatewayMCPToolRequest $req) 查看AI网关MCP Tool
  * @method Models\DescribeCloudNativeAPIGatewayMCPToolACLListResponse DescribeCloudNativeAPIGatewayMCPToolACLList(Models\DescribeCloudNativeAPIGatewayMCPToolACLListRequest $req) 查询云原生网关 MCP Server 下所有 Tool 的 ACL 状态一览（含 Server ACLType 回显）。
  * @method Models\DescribeCloudNativeAPIGatewayMCPToolListResponse DescribeCloudNativeAPIGatewayMCPToolList(Models\DescribeCloudNativeAPIGatewayMCPToolListRequest $req) 查询 AI 网关MCP Tool 列表
+ * @method Models\DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse DescribeCloudNativeAPIGatewayMCPToolsFromFile(Models\DescribeCloudNativeAPIGatewayMCPToolsFromFileRequest $req) 从OpenAPI文件中解析出可导入的MCP tools
  * @method Models\DescribeCloudNativeAPIGatewaySecretKeyResponse DescribeCloudNativeAPIGatewaySecretKey(Models\DescribeCloudNativeAPIGatewaySecretKeyRequest $req) 查询密钥详情（SecretValue 字段会被掩码）。
  * @method Models\DescribeCloudNativeAPIGatewaySecretKeyValueResponse DescribeCloudNativeAPIGatewaySecretKeyValue(Models\DescribeCloudNativeAPIGatewaySecretKeyValueRequest $req) 查询密钥明文值（KMS 类型密钥不可获取）。
  * @method Models\ModifyCloudNativeAPIGatewayConsumerResponse ModifyCloudNativeAPIGatewayConsumer(Models\ModifyCloudNativeAPIGatewayConsumerRequest $req) 修改AI网关消费者
@@ -72,6 +73,7 @@ use TencentCloud\Cngw\V20230418\Models as Models;
  * @method Models\RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse RemoveCloudNativeAPIGatewayConsumerGroupAuth(Models\RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest $req) 从资源（模型 API / MCP Server）移除消费者组授权。
  * @method Models\RemoveCloudNativeAPIGatewayConsumerInGroupResponse RemoveCloudNativeAPIGatewayConsumerInGroup(Models\RemoveCloudNativeAPIGatewayConsumerInGroupRequest $req) 将消费者从消费者组移除。
  * @method Models\UnbindCloudNativeAPIGatewaySecretKeyResponse UnbindCloudNativeAPIGatewaySecretKey(Models\UnbindCloudNativeAPIGatewaySecretKeyRequest $req) 解绑密钥
+ * @method Models\UpdateCloudNativeAPIGatewayMCPToolsResponse UpdateCloudNativeAPIGatewayMCPTools(Models\UpdateCloudNativeAPIGatewayMCPToolsRequest $req) 批量导入从OpenAPI文件中解析的MCP Tools
  */
 
 class CngwClient extends AbstractClient

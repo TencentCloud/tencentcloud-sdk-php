@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResumeSandboxInstance请求参数结构体
  *
- * @method string getInstanceId() 获取沙箱实例ID
- * @method void setInstanceId(string $InstanceId) 设置沙箱实例ID
+ * @method string getInstanceId() 获取<p>沙箱实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例ID</p>
+ * @method string getTimeout() 获取<p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+ * @method void setTimeout(string $Timeout) 设置<p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
  */
 class ResumeSandboxInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 沙箱实例ID
+     * @var string <p>沙箱实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 沙箱实例ID
+     * @var string <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+     */
+    public $Timeout;
+
+    /**
+     * @param string $InstanceId <p>沙箱实例ID</p>
+     * @param string $Timeout <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ResumeSandboxInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
         }
     }
 }

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AppTriggerWebhookConfig
  *
- * @method AppTriggerWebhookParamSchemaConfig getParamSchemaConfig() 获取
- * @method void setParamSchemaConfig(AppTriggerWebhookParamSchemaConfig $ParamSchemaConfig) 设置
- * @method string getWebhookKey() 获取
- * @method void setWebhookKey(string $WebhookKey) 设置
- * @method string getWebhookToken() 获取
- * @method void setWebhookToken(string $WebhookToken) 设置
- * @method string getWebhookUrl() 获取
- * @method void setWebhookUrl(string $WebhookUrl) 设置
+ * @method AppTriggerWebhookParamSchemaConfig getParamSchemaConfig() 获取<p>触发器webhook参数配置</p>
+ * @method void setParamSchemaConfig(AppTriggerWebhookParamSchemaConfig $ParamSchemaConfig) 设置<p>触发器webhook参数配置</p>
+ * @method string getWebhookKey() 获取<p>webhook的key</p>
+ * @method void setWebhookKey(string $WebhookKey) 设置<p>webhook的key</p>
+ * @method string getWebhookToken() 获取<p>webhook的密钥</p>
+ * @method void setWebhookToken(string $WebhookToken) 设置<p>webhook的密钥</p>
+ * @method string getWebhookUrl() 获取<p>webhook的地址</p>
+ * @method void setWebhookUrl(string $WebhookUrl) 设置<p>webhook的地址</p>
  */
 class AppTriggerWebhookConfig extends AbstractModel
 {
     /**
-     * @var AppTriggerWebhookParamSchemaConfig 
+     * @var AppTriggerWebhookParamSchemaConfig <p>触发器webhook参数配置</p>
      */
     public $ParamSchemaConfig;
 
     /**
-     * @var string 
+     * @var string <p>webhook的key</p>
      */
     public $WebhookKey;
 
     /**
-     * @var string 
+     * @var string <p>webhook的密钥</p>
      */
     public $WebhookToken;
 
     /**
-     * @var string 
+     * @var string <p>webhook的地址</p>
      */
     public $WebhookUrl;
 
     /**
-     * @param AppTriggerWebhookParamSchemaConfig $ParamSchemaConfig 
-     * @param string $WebhookKey 
-     * @param string $WebhookToken 
-     * @param string $WebhookUrl 
+     * @param AppTriggerWebhookParamSchemaConfig $ParamSchemaConfig <p>触发器webhook参数配置</p>
+     * @param string $WebhookKey <p>webhook的key</p>
+     * @param string $WebhookToken <p>webhook的密钥</p>
+     * @param string $WebhookUrl <p>webhook的地址</p>
      */
     function __construct()
     {

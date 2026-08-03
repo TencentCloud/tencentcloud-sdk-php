@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePreCacheImageTask请求参数结构体
  *
- * @method string getImage() 获取镜像地址
- * @method void setImage(string $Image) 设置镜像地址
- * @method string getImageDigest() 获取镜像 Digest
- * @method void setImageDigest(string $ImageDigest) 设置镜像 Digest
- * @method string getImageRegistryType() 获取镜像仓库类型：`enterprise`、`personal`。
- * @method void setImageRegistryType(string $ImageRegistryType) 设置镜像仓库类型：`enterprise`、`personal`。
+ * @method string getImage() 获取<p>镜像地址</p>
+ * @method void setImage(string $Image) 设置<p>镜像地址</p>
+ * @method string getImageDigest() 获取<p>镜像 Digest</p>
+ * @method void setImageDigest(string $ImageDigest) 设置<p>镜像 Digest</p>
+ * @method string getImageRegistryType() 获取<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+ * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
  */
 class DescribePreCacheImageTaskRequest extends AbstractModel
 {
     /**
-     * @var string 镜像地址
+     * @var string <p>镜像地址</p>
      */
     public $Image;
 
     /**
-     * @var string 镜像 Digest
+     * @var string <p>镜像 Digest</p>
      */
     public $ImageDigest;
 
     /**
-     * @var string 镜像仓库类型：`enterprise`、`personal`。
+     * @var string <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      */
     public $ImageRegistryType;
 
     /**
-     * @param string $Image 镜像地址
-     * @param string $ImageDigest 镜像 Digest
-     * @param string $ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * @param string $Image <p>镜像地址</p>
+     * @param string $ImageDigest <p>镜像 Digest</p>
+     * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      */
     function __construct()
     {

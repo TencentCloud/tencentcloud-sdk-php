@@ -20,25 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreatePrepareFlowGroup返回参数结构体
  *
- * @method string getFlowGroupId() 获取合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
- * @method string getPrepareUrl() 获取嵌入式发起链接
- * @method void setPrepareUrl(string $PrepareUrl) 设置嵌入式发起链接
+ * @method string getFlowGroupId() 获取<p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
+ * @method void setFlowGroupId(string $FlowGroupId) 设置<p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
+ * @method string getPrepareUrl() 获取<p>嵌入式发起链接</p>
+ * @method void setPrepareUrl(string $PrepareUrl) 设置<p>嵌入式发起链接</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelCreatePrepareFlowGroupResponse extends AbstractModel
 {
     /**
-     * @var string 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+     * @var string <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
      */
     public $FlowGroupId;
 
     /**
-     * @var string 嵌入式发起链接
+     * @var string <p>嵌入式发起链接</p>
      */
     public $PrepareUrl;
 
@@ -48,9 +45,8 @@ class ChannelCreatePrepareFlowGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowGroupId 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
-     * @param string $PrepareUrl 嵌入式发起链接
+     * @param string $FlowGroupId <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
+     * @param string $PrepareUrl <p>嵌入式发起链接</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

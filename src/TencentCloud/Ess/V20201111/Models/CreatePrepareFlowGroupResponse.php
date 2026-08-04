@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrepareFlowGroup返回参数结构体
  *
- * @method string getFlowGroupId() 获取合同(流程)组的合同组Id
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同(流程)组的合同组Id
- * @method string getPrepareUrl() 获取嵌入式合同组发起链接
- * @method void setPrepareUrl(string $PrepareUrl) 设置嵌入式合同组发起链接
+ * @method string getFlowGroupId() 获取<p>合同(流程)组的合同组Id</p>
+ * @method void setFlowGroupId(string $FlowGroupId) 设置<p>合同(流程)组的合同组Id</p>
+ * @method string getPrepareUrl() 获取<p>嵌入式合同组发起链接</p>
+ * @method void setPrepareUrl(string $PrepareUrl) 设置<p>嵌入式合同组发起链接</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreatePrepareFlowGroupResponse extends AbstractModel
 {
     /**
-     * @var string 合同(流程)组的合同组Id
+     * @var string <p>合同(流程)组的合同组Id</p>
      */
     public $FlowGroupId;
 
     /**
-     * @var string 嵌入式合同组发起链接
+     * @var string <p>嵌入式合同组发起链接</p>
      */
     public $PrepareUrl;
 
@@ -45,8 +45,8 @@ class CreatePrepareFlowGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowGroupId 合同(流程)组的合同组Id
-     * @param string $PrepareUrl 嵌入式合同组发起链接
+     * @param string $FlowGroupId <p>合同(流程)组的合同组Id</p>
+     * @param string $PrepareUrl <p>嵌入式合同组发起链接</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

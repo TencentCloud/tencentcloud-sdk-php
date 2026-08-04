@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置<p>集群的标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeletionProtection() 获取<p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
  */
 class DBCustomCluster extends AbstractModel
 {
@@ -97,6 +99,11 @@ class DBCustomCluster extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $ClusterId <p>集群ID</p>
      * @param string $ClusterName <p>集群名称</p>
      * @param string $Region <p>集群支持的地域</p>
@@ -108,6 +115,7 @@ class DBCustomCluster extends AbstractModel
      * @param string $CreatedTime <p>创建时间</p>
      * @param array $Tags <p>集群的标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeletionProtection <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
      */
     function __construct()
     {
@@ -165,6 +173,10 @@ class DBCustomCluster extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

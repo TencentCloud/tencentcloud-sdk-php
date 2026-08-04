@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDspmWhitelistStrategy请求参数结构体
  *
- * @method string getStrategyType() 获取策略类型
- * @method void setStrategyType(string $StrategyType) 设置策略类型
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method string getName() 获取白名单
- * @method void setName(string $Name) 设置白名单
- * @method string getRule() 获取规则
- * @method void setRule(string $Rule) 设置规则
- * @method string getAssetId() 获取资产id
- * @method void setAssetId(string $AssetId) 设置资产id
- * @method string getAccount() 获取账号
- * @method void setAccount(string $Account) 设置账号
- * @method string getHost() 获取主机
- * @method void setHost(string $Host) 设置主机
- * @method string getRiskId() 获取风险id
- * @method void setRiskId(string $RiskId) 设置风险id
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
+ * @method string getStrategyType() 获取<p>策略类型</p>
+ * @method void setStrategyType(string $StrategyType) 设置<p>策略类型</p>
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method string getName() 获取<p>白名单</p>
+ * @method void setName(string $Name) 设置<p>白名单</p>
+ * @method string getRule() 获取<p>规则</p>
+ * @method void setRule(string $Rule) 设置<p>规则</p>
+ * @method string getAssetId() 获取<p>资产id</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产id</p>
+ * @method string getAccount() 获取<p>账号</p>
+ * @method void setAccount(string $Account) 设置<p>账号</p>
+ * @method string getHost() 获取<p>主机</p>
+ * @method void setHost(string $Host) 设置<p>主机</p>
+ * @method string getRiskId() 获取<p>风险id</p>
+ * @method void setRiskId(string $RiskId) 设置<p>风险id</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getWhitelistType() 获取<p>白名单的类型</p><p>枚举值：</p><ul><li>static_risk： 静态配置扫描的白名单规则</li><li>audit： 审计白名单规则</li><li>ueba： ueba相关的白名单规则</li></ul>
+ * @method void setWhitelistType(string $WhitelistType) 设置<p>白名单的类型</p><p>枚举值：</p><ul><li>static_risk： 静态配置扫描的白名单规则</li><li>audit： 审计白名单规则</li><li>ueba： ueba相关的白名单规则</li></ul>
  */
 class CreateDspmWhitelistStrategyRequest extends AbstractModel
 {
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
      */
     public $StrategyType;
 
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
     /**
-     * @var string 白名单
+     * @var string <p>白名单</p>
      */
     public $Name;
 
     /**
-     * @var string 规则
+     * @var string <p>规则</p>
      */
     public $Rule;
 
     /**
-     * @var string 资产id
+     * @var string <p>资产id</p>
      */
     public $AssetId;
 
     /**
-     * @var string 账号
+     * @var string <p>账号</p>
      */
     public $Account;
 
     /**
-     * @var string 主机
+     * @var string <p>主机</p>
      */
     public $Host;
 
     /**
-     * @var string 风险id
+     * @var string <p>风险id</p>
      */
     public $RiskId;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @param string $StrategyType 策略类型
-     * @param array $MemberId 集团账号的成员id
-     * @param string $Name 白名单
-     * @param string $Rule 规则
-     * @param string $AssetId 资产id
-     * @param string $Account 账号
-     * @param string $Host 主机
-     * @param string $RiskId 风险id
-     * @param string $Remark 备注
+     * @var string <p>白名单的类型</p><p>枚举值：</p><ul><li>static_risk： 静态配置扫描的白名单规则</li><li>audit： 审计白名单规则</li><li>ueba： ueba相关的白名单规则</li></ul>
+     */
+    public $WhitelistType;
+
+    /**
+     * @param string $StrategyType <p>策略类型</p>
+     * @param array $MemberId <p>集团账号的成员id</p>
+     * @param string $Name <p>白名单</p>
+     * @param string $Rule <p>规则</p>
+     * @param string $AssetId <p>资产id</p>
+     * @param string $Account <p>账号</p>
+     * @param string $Host <p>主机</p>
+     * @param string $RiskId <p>风险id</p>
+     * @param string $Remark <p>备注</p>
+     * @param string $WhitelistType <p>白名单的类型</p><p>枚举值：</p><ul><li>static_risk： 静态配置扫描的白名单规则</li><li>audit： 审计白名单规则</li><li>ueba： ueba相关的白名单规则</li></ul>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateDspmWhitelistStrategyRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("WhitelistType",$param) and $param["WhitelistType"] !== null) {
+            $this->WhitelistType = $param["WhitelistType"];
         }
     }
 }

@@ -20,46 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 同步的数据库对对象描述
  *
- * @method string getMode() 获取同步对象类型 Partial(部分对象)
- * @method void setMode(string $Mode) 设置同步对象类型 Partial(部分对象)
- * @method array getDatabases() 获取同步对象，当 Mode 为 Partial 时，不为空
+ * @method string getMode() 获取<p>同步对象类型 Partial(部分对象)</p>
+ * @method void setMode(string $Mode) 设置<p>同步对象类型 Partial(部分对象)</p>
+ * @method array getDatabases() 获取<p>同步对象，当 Mode 为 Partial 时，不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatabases(array $Databases) 设置同步对象，当 Mode 为 Partial 时，不为空
+ * @method void setDatabases(array $Databases) 设置<p>同步对象，当 Mode 为 Partial 时，不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAdvancedObjects() 获取高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
- * @method void setAdvancedObjects(array $AdvancedObjects) 设置高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
- * @method array getDatabasesOpFilter() 获取库/表/视图级 DML/DDL 白名单
- * @method void setDatabasesOpFilter(array $DatabasesOpFilter) 设置库/表/视图级 DML/DDL 白名单
+ * @method array getAdvancedObjects() 获取<p>高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full</p>
+ * @method void setAdvancedObjects(array $AdvancedObjects) 设置<p>高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full</p>
+ * @method OnlineDDL getOnlineDDL() 获取<p>此字段已废弃。对于临时表的同步应该使用Objects.Databases[n].Tables[n].TmpTables传入。</p>
+ * @method void setOnlineDDL(OnlineDDL $OnlineDDL) 设置<p>此字段已废弃。对于临时表的同步应该使用Objects.Databases[n].Tables[n].TmpTables传入。</p>
+ * @method array getDatabasesOpFilter() 获取<p>库/表/视图级 DML/DDL 白名单</p>
+ * @method void setDatabasesOpFilter(array $DatabasesOpFilter) 设置<p>库/表/视图级 DML/DDL 白名单</p>
  */
 class Objects extends AbstractModel
 {
     /**
-     * @var string 同步对象类型 Partial(部分对象)
+     * @var string <p>同步对象类型 Partial(部分对象)</p>
      */
     public $Mode;
 
     /**
-     * @var array 同步对象，当 Mode 为 Partial 时，不为空
+     * @var array <p>同步对象，当 Mode 为 Partial 时，不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Databases;
 
     /**
-     * @var array 高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
+     * @var array <p>高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full</p>
      */
     public $AdvancedObjects;
 
     /**
-     * @var array 库/表/视图级 DML/DDL 白名单
+     * @var OnlineDDL <p>此字段已废弃。对于临时表的同步应该使用Objects.Databases[n].Tables[n].TmpTables传入。</p>
+     */
+    public $OnlineDDL;
+
+    /**
+     * @var array <p>库/表/视图级 DML/DDL 白名单</p>
      */
     public $DatabasesOpFilter;
 
     /**
-     * @param string $Mode 同步对象类型 Partial(部分对象)
-     * @param array $Databases 同步对象，当 Mode 为 Partial 时，不为空
+     * @param string $Mode <p>同步对象类型 Partial(部分对象)</p>
+     * @param array $Databases <p>同步对象，当 Mode 为 Partial 时，不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AdvancedObjects 高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
-     * @param array $DatabasesOpFilter 库/表/视图级 DML/DDL 白名单
+     * @param array $AdvancedObjects <p>高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full</p>
+     * @param OnlineDDL $OnlineDDL <p>此字段已废弃。对于临时表的同步应该使用Objects.Databases[n].Tables[n].TmpTables传入。</p>
+     * @param array $DatabasesOpFilter <p>库/表/视图级 DML/DDL 白名单</p>
      */
     function __construct()
     {
@@ -89,6 +97,11 @@ class Objects extends AbstractModel
 
         if (array_key_exists("AdvancedObjects",$param) and $param["AdvancedObjects"] !== null) {
             $this->AdvancedObjects = $param["AdvancedObjects"];
+        }
+
+        if (array_key_exists("OnlineDDL",$param) and $param["OnlineDDL"] !== null) {
+            $this->OnlineDDL = new OnlineDDL();
+            $this->OnlineDDL->deserialize($param["OnlineDDL"]);
         }
 
         if (array_key_exists("DatabasesOpFilter",$param) and $param["DatabasesOpFilter"] !== null) {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceWorkOrderDetail请求参数结构体
  *
- * @method string getOrderId() 获取工单ID
- * @method void setOrderId(string $OrderId) 设置工单ID
+ * @method string getOrderId() 获取<p>工单ID</p>
+ * @method void setOrderId(string $OrderId) 设置<p>工单ID</p>
  */
 class DescribeDeviceWorkOrderDetailRequest extends AbstractModel
 {
     /**
-     * @var string 工单ID
+     * @var string <p>工单ID</p>
      */
     public $OrderId;
 
     /**
-     * @param string $OrderId 工单ID
+     * @param string $OrderId <p>工单ID</p>
      */
     function __construct()
     {

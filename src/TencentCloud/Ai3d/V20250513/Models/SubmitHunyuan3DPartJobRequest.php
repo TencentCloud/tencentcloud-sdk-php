@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModel(string $Model) 设置<p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
  * @method string getPartSegmentationInfo() 获取<p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
  * @method void setPartSegmentationInfo(string $PartSegmentationInfo) 设置<p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
- * @method boolean getEnableStagedGeneration() 获取<p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
- * @method void setEnableStagedGeneration(boolean $EnableStagedGeneration) 设置<p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+ * @method boolean getEnableStagedGeneration() 获取<p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+ * @method void setEnableStagedGeneration(boolean $EnableStagedGeneration) 设置<p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+ * @method boolean getEnablePostProcess() 获取<p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+ * @method void setEnablePostProcess(boolean $EnablePostProcess) 设置<p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
  */
 class SubmitHunyuan3DPartJobRequest extends AbstractModel
 {
@@ -47,15 +49,21 @@ class SubmitHunyuan3DPartJobRequest extends AbstractModel
     public $PartSegmentationInfo;
 
     /**
-     * @var boolean <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     * @var boolean <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
      */
     public $EnableStagedGeneration;
+
+    /**
+     * @var boolean <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     */
+    public $EnablePostProcess;
 
     /**
      * @param InputFile3D $File <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
      * @param string $Model <p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
      * @param string $PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
-     * @param boolean $EnableStagedGeneration <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     * @param boolean $EnableStagedGeneration <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     * @param boolean $EnablePostProcess <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class SubmitHunyuan3DPartJobRequest extends AbstractModel
 
         if (array_key_exists("EnableStagedGeneration",$param) and $param["EnableStagedGeneration"] !== null) {
             $this->EnableStagedGeneration = $param["EnableStagedGeneration"];
+        }
+
+        if (array_key_exists("EnablePostProcess",$param) and $param["EnablePostProcess"] !== null) {
+            $this->EnablePostProcess = $param["EnablePostProcess"];
         }
     }
 }

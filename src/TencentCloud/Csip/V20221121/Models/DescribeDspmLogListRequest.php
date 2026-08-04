@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDspmLogList请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
  * @method integer getOffset() 获取偏移量
@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowNumMin(integer $RowNumMin) 设置影响行数最小值 
  * @method integer getRowNumMax() 获取影响行数最大值
  * @method void setRowNumMax(integer $RowNumMax) 设置影响行数最大值
- * @method array getDbTypes() 获取数据库类型
- * @method void setDbTypes(array $DbTypes) 设置数据库类型
+ * @method array getDbTypes() 获取数据库类型, 支持的值：cdb，mariadb
+ * @method void setDbTypes(array $DbTypes) 设置数据库类型, 支持的值：cdb，mariadb
  * @method integer getRetNo() 获取返回码
  * @method void setRetNo(integer $RetNo) 设置返回码
  * @method string getClientDriverName() 获取客户端工具
@@ -94,7 +94,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDspmLogListRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -224,7 +224,7 @@ class DescribeDspmLogListRequest extends AbstractModel
     public $RowNumMax;
 
     /**
-     * @var array 数据库类型
+     * @var array 数据库类型, 支持的值：cdb，mariadb
      */
     public $DbTypes;
 
@@ -269,7 +269,7 @@ class DescribeDspmLogListRequest extends AbstractModel
     public $ClientMac;
 
     /**
-     * @param array $MemberId 集团账号的成员id
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param integer $Limit 限制数目
      * @param integer $Offset 偏移量
      * @param string $Sort 排序方式(desc=倒叙,asc=升序)
@@ -295,7 +295,7 @@ class DescribeDspmLogListRequest extends AbstractModel
      * @param string $SqlType 操作类型
      * @param integer $RowNumMin 影响行数最小值 
      * @param integer $RowNumMax 影响行数最大值
-     * @param array $DbTypes 数据库类型
+     * @param array $DbTypes 数据库类型, 支持的值：cdb，mariadb
      * @param integer $RetNo 返回码
      * @param string $ClientDriverName 客户端工具
      * @param integer $ClientPort 客户端端口

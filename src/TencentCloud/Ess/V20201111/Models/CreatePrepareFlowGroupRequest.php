@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrepareFlowGroup请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method string getFlowGroupName() 获取合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
- * @method void setFlowGroupName(string $FlowGroupName) 设置合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
- * @method array getFlowGroupInfos() 获取合同（流程）组的子合同信息，支持2-50个子合同
- * @method void setFlowGroupInfos(array $FlowGroupInfos) 设置合同（流程）组的子合同信息，支持2-50个子合同
- * @method integer getResourceType() 获取资源类型，取值有： <ul><li> **1**：模板</li> <li> **2**：文件</li></ul>
- * @method void setResourceType(integer $ResourceType) 设置资源类型，取值有： <ul><li> **1**：模板</li> <li> **2**：文件</li></ul>
- * @method Agent getAgent() 获取代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method FlowGroupOptions getFlowGroupOptions() 获取合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
- * @method void setFlowGroupOptions(FlowGroupOptions $FlowGroupOptions) 设置合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+ * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method string getFlowGroupName() 获取<p>合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p>
+ * @method void setFlowGroupName(string $FlowGroupName) 设置<p>合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p>
+ * @method array getFlowGroupInfos() 获取<p>合同（流程）组的子合同信息，支持2-50个子合同</p>
+ * @method void setFlowGroupInfos(array $FlowGroupInfos) 设置<p>合同（流程）组的子合同信息，支持2-50个子合同</p>
+ * @method integer getResourceType() 获取<p>资源类型，取值有： <ul><li> <strong>1</strong>：模板</li> <li> <strong>2</strong>：文件</li></ul></p>
+ * @method void setResourceType(integer $ResourceType) 设置<p>资源类型，取值有： <ul><li> <strong>1</strong>：模板</li> <li> <strong>2</strong>：文件</li></ul></p>
+ * @method Agent getAgent() 获取<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method void setAgent(Agent $Agent) 设置<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method FlowGroupOptions getFlowGroupOptions() 获取<p>合同组发起控制参数，例如FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批</p>
+ * @method void setFlowGroupOptions(FlowGroupOptions $FlowGroupOptions) 设置<p>合同组发起控制参数，例如FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批</p>
+ * @method string getFlowGroupType() 获取<p>合同组类型，发起合同组后会应用到所有子合同</p>
+ * @method void setFlowGroupType(string $FlowGroupType) 设置<p>合同组类型，发起合同组后会应用到所有子合同</p>
+ * @method integer getFlowGroupDeadline() 获取<p>合同组过期时间，发起合同组后会应用到所有子合同</p>
+ * @method void setFlowGroupDeadline(integer $FlowGroupDeadline) 设置<p>合同组过期时间，发起合同组后会应用到所有子合同</p>
  */
 class CreatePrepareFlowGroupRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @var UserInfo <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public $Operator;
 
     /**
-     * @var string 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @var string <p>合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p>
      */
     public $FlowGroupName;
 
     /**
-     * @var array 合同（流程）组的子合同信息，支持2-50个子合同
+     * @var array <p>合同（流程）组的子合同信息，支持2-50个子合同</p>
      */
     public $FlowGroupInfos;
 
     /**
-     * @var integer 资源类型，取值有： <ul><li> **1**：模板</li> <li> **2**：文件</li></ul>
+     * @var integer <p>资源类型，取值有： <ul><li> <strong>1</strong>：模板</li> <li> <strong>2</strong>：文件</li></ul></p>
      */
     public $ResourceType;
 
     /**
-     * @var Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public $Agent;
 
     /**
-     * @var FlowGroupOptions 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+     * @var FlowGroupOptions <p>合同组发起控制参数，例如FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批</p>
      */
     public $FlowGroupOptions;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $FlowGroupName 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-     * @param array $FlowGroupInfos 合同（流程）组的子合同信息，支持2-50个子合同
-     * @param integer $ResourceType 资源类型，取值有： <ul><li> **1**：模板</li> <li> **2**：文件</li></ul>
-     * @param Agent $Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param FlowGroupOptions $FlowGroupOptions 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+     * @var string <p>合同组类型，发起合同组后会应用到所有子合同</p>
+     */
+    public $FlowGroupType;
+
+    /**
+     * @var integer <p>合同组过期时间，发起合同组后会应用到所有子合同</p>
+     */
+    public $FlowGroupDeadline;
+
+    /**
+     * @param UserInfo $Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param string $FlowGroupName <p>合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p>
+     * @param array $FlowGroupInfos <p>合同（流程）组的子合同信息，支持2-50个子合同</p>
+     * @param integer $ResourceType <p>资源类型，取值有： <ul><li> <strong>1</strong>：模板</li> <li> <strong>2</strong>：文件</li></ul></p>
+     * @param Agent $Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param FlowGroupOptions $FlowGroupOptions <p>合同组发起控制参数，例如FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批</p>
+     * @param string $FlowGroupType <p>合同组类型，发起合同组后会应用到所有子合同</p>
+     * @param integer $FlowGroupDeadline <p>合同组过期时间，发起合同组后会应用到所有子合同</p>
      */
     function __construct()
     {
@@ -124,6 +132,14 @@ class CreatePrepareFlowGroupRequest extends AbstractModel
         if (array_key_exists("FlowGroupOptions",$param) and $param["FlowGroupOptions"] !== null) {
             $this->FlowGroupOptions = new FlowGroupOptions();
             $this->FlowGroupOptions->deserialize($param["FlowGroupOptions"]);
+        }
+
+        if (array_key_exists("FlowGroupType",$param) and $param["FlowGroupType"] !== null) {
+            $this->FlowGroupType = $param["FlowGroupType"];
+        }
+
+        if (array_key_exists("FlowGroupDeadline",$param) and $param["FlowGroupDeadline"] !== null) {
+            $this->FlowGroupDeadline = $param["FlowGroupDeadline"];
         }
     }
 }

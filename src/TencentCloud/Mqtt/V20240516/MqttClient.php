@@ -28,6 +28,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\AddClientSubscriptionResponse AddClientSubscription(Models\AddClientSubscriptionRequest $req) 为MQTT客户端增加一条订阅
  * @method Models\ApplyRegistrationCodeResponse ApplyRegistrationCode(Models\ApplyRegistrationCodeRequest $req) 申请ca注册码
  * @method Models\CreateAuthorizationPolicyResponse CreateAuthorizationPolicy(Models\CreateAuthorizationPolicyRequest $req) 创建MQTT实例的性能测试任务
+ * @method Models\CreateBlockRuleResponse CreateBlockRule(Models\CreateBlockRuleRequest $req) 创建封禁规则
  * @method Models\CreateDeviceIdentityResponse CreateDeviceIdentity(Models\CreateDeviceIdentityRequest $req) 创建一机一密设备签名
  * @method Models\CreateHttpAuthenticatorResponse CreateHttpAuthenticator(Models\CreateHttpAuthenticatorRequest $req) 创建一个HTTP的认证器
  * @method Models\CreateInsPublicEndpointResponse CreateInsPublicEndpoint(Models\CreateInsPublicEndpointRequest $req) 为MQTT实例创建公网接入点，未开启公网的集群可调用。
@@ -41,6 +42,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DeactivateDeviceCertificateResponse DeactivateDeviceCertificate(Models\DeactivateDeviceCertificateRequest $req) 失效Ca证书
  * @method Models\DeleteAuthenticatorResponse DeleteAuthenticator(Models\DeleteAuthenticatorRequest $req) 根据认证器类型删除一个MQTT认证器
  * @method Models\DeleteAuthorizationPolicyResponse DeleteAuthorizationPolicy(Models\DeleteAuthorizationPolicyRequest $req) 删除策略规则
+ * @method Models\DeleteBlockRuleResponse DeleteBlockRule(Models\DeleteBlockRuleRequest $req) 删除封禁规则
  * @method Models\DeleteCaCertificateResponse DeleteCaCertificate(Models\DeleteCaCertificateRequest $req) 删除Ca证书
  * @method Models\DeleteClientSubscriptionResponse DeleteClientSubscription(Models\DeleteClientSubscriptionRequest $req) 删除MQTT客户端下的一条订阅
  * @method Models\DeleteDeviceCertificateResponse DeleteDeviceCertificate(Models\DeleteDeviceCertificateRequest $req) 删除设备证书
@@ -52,6 +54,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除MQTT访问用户
  * @method Models\DescribeAuthenticatorResponse DescribeAuthenticator(Models\DescribeAuthenticatorRequest $req) 查询MQTT认证器
  * @method Models\DescribeAuthorizationPoliciesResponse DescribeAuthorizationPolicies(Models\DescribeAuthorizationPoliciesRequest $req) 查询授权规则
+ * @method Models\DescribeBlockRuleListResponse DescribeBlockRuleList(Models\DescribeBlockRuleListRequest $req) 封禁规则列表
  * @method Models\DescribeCaCertificateResponse DescribeCaCertificate(Models\DescribeCaCertificateRequest $req) 查询Ca证书详情接口
  * @method Models\DescribeCaCertificatesResponse DescribeCaCertificates(Models\DescribeCaCertificatesRequest $req) 查询集群下的ca证书信息
  * @method Models\DescribeClientListResponse DescribeClientList(Models\DescribeClientListRequest $req) 查询 MQTT 客户端详情
@@ -91,6 +94,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DescribeWillMessageResponse DescribeWillMessage(Models\DescribeWillMessageRequest $req) 遗嘱消息查询
  * @method Models\KickOutClientResponse KickOutClient(Models\KickOutClientRequest $req) 踢出客户端
  * @method Models\ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(Models\ModifyAuthorizationPolicyRequest $req) 修改策略规则，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)
+ * @method Models\ModifyBlockRuleResponse ModifyBlockRule(Models\ModifyBlockRuleRequest $req) 修改封禁规则
  * @method Models\ModifyDeviceIdentityResponse ModifyDeviceIdentity(Models\ModifyDeviceIdentityRequest $req) 修改一机一密设备签名
  * @method Models\ModifyHttpAuthenticatorResponse ModifyHttpAuthenticator(Models\ModifyHttpAuthenticatorRequest $req) 修改MQTT HTTP 认证器
  * @method Models\ModifyInsPublicEndpointResponse ModifyInsPublicEndpoint(Models\ModifyInsPublicEndpointRequest $req) 更新MQTT实例公网接入点

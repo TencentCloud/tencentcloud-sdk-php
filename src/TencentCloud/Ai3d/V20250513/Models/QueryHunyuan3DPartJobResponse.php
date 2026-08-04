@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMessage(string $ErrorMessage) 设置<p>错误信息。</p>
  * @method array getResultFile3Ds() 获取<p>生成文件的URL地址，有效期1天。</p>
  * @method void setResultFile3Ds(array $ResultFile3Ds) 设置<p>生成文件的URL地址，有效期1天。</p>
- * @method string getPartSegmentationInfo() 获取<p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
- * @method void setPartSegmentationInfo(string $PartSegmentationInfo) 设置<p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+ * @method string getPartSegmentationInfo() 获取<p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p><p>该参数废弃， 超过 9MB 不返回， 请使用 PartSegmentationInfoUrl 下载</p>
+ * @method void setPartSegmentationInfo(string $PartSegmentationInfo) 设置<p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p><p>该参数废弃， 超过 9MB 不返回， 请使用 PartSegmentationInfoUrl 下载</p>
+ * @method string getPartSegmentationInfoUrl() 获取<p>PartSegmentationInfo 下载地址</p>
+ * @method void setPartSegmentationInfoUrl(string $PartSegmentationInfoUrl) 设置<p>PartSegmentationInfo 下载地址</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,9 +58,14 @@ class QueryHunyuan3DPartJobResponse extends AbstractModel
     public $ResultFile3Ds;
 
     /**
-     * @var string <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     * @var string <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p><p>该参数废弃， 超过 9MB 不返回， 请使用 PartSegmentationInfoUrl 下载</p>
      */
     public $PartSegmentationInfo;
+
+    /**
+     * @var string <p>PartSegmentationInfo 下载地址</p>
+     */
+    public $PartSegmentationInfoUrl;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -70,7 +77,8 @@ class QueryHunyuan3DPartJobResponse extends AbstractModel
      * @param string $ErrorCode <p>错误码。</p>
      * @param string $ErrorMessage <p>错误信息。</p>
      * @param array $ResultFile3Ds <p>生成文件的URL地址，有效期1天。</p>
-     * @param string $PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     * @param string $PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p><p>该参数废弃， 超过 9MB 不返回， 请使用 PartSegmentationInfoUrl 下载</p>
+     * @param string $PartSegmentationInfoUrl <p>PartSegmentationInfo 下载地址</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +117,10 @@ class QueryHunyuan3DPartJobResponse extends AbstractModel
 
         if (array_key_exists("PartSegmentationInfo",$param) and $param["PartSegmentationInfo"] !== null) {
             $this->PartSegmentationInfo = $param["PartSegmentationInfo"];
+        }
+
+        if (array_key_exists("PartSegmentationInfoUrl",$param) and $param["PartSegmentationInfoUrl"] !== null) {
+            $this->PartSegmentationInfoUrl = $param["PartSegmentationInfoUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

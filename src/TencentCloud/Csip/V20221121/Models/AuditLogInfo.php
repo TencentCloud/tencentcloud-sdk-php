@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbUser(string $DbUser) 设置数据库用户
  * @method integer getEffectRow() 获取影响行数
  * @method void setEffectRow(integer $EffectRow) 设置影响行数
- * @method integer getExecTime() 获取执行时间
- * @method void setExecTime(integer $ExecTime) 设置执行时间
+ * @method integer getExecTime() 获取执行时间,单位：毫秒
+ * @method void setExecTime(integer $ExecTime) 设置执行时间,单位：毫秒
  * @method string getHitRule() 获取命中规则
  * @method void setHitRule(string $HitRule) 设置命中规则
  * @method integer getId() 获取日志 ID
@@ -176,7 +176,7 @@ class AuditLogInfo extends AbstractModel
     public $EffectRow;
 
     /**
-     * @var integer 执行时间
+     * @var integer 执行时间,单位：毫秒
      */
     public $ExecTime;
 
@@ -325,7 +325,7 @@ class AuditLogInfo extends AbstractModel
      * @param integer $DbPort 数据库端口
      * @param string $DbUser 数据库用户
      * @param integer $EffectRow 影响行数
-     * @param integer $ExecTime 执行时间
+     * @param integer $ExecTime 执行时间,单位：毫秒
      * @param string $HitRule 命中规则
      * @param integer $Id 日志 ID
      * @param integer $InstanceId 数据资产名称

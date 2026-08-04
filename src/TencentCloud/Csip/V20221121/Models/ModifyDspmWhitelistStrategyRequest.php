@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDspmWhitelistStrategy请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method string getWhitelistStrategyId() 获取白名单id
  * @method void setWhitelistStrategyId(string $WhitelistStrategyId) 设置白名单id
  * @method string getName() 获取白名单名
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDspmWhitelistStrategyRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -59,7 +59,7 @@ class ModifyDspmWhitelistStrategyRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param array $MemberId 集团账号的成员id
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param string $WhitelistStrategyId 白名单id
      * @param string $Name 白名单名
      * @param string $Rule 规则

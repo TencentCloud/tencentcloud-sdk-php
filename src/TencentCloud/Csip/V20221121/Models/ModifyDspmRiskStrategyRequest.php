@@ -20,58 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDspmRiskStrategy请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method string getStrategyType() 获取风险策略类型
- * @method void setStrategyType(string $StrategyType) 设置风险策略类型
- * @method integer getIsEnabled() 获取是否启用
- * @method void setIsEnabled(integer $IsEnabled) 设置是否启用
- * @method string getRule() 获取策略内容，如：{     ThresholdValue: "100" }
- * @method void setRule(string $Rule) 设置策略内容，如：{     ThresholdValue: "100" }
- * @method string getRiskLevel() 获取可选值：Info/Low/Medium/High
- * @method void setRiskLevel(string $RiskLevel) 设置可选值：Info/Low/Medium/High
- * @method array getStrategyId() 获取策略id
- * @method void setStrategyId(array $StrategyId) 设置策略id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method string getStrategyType() 获取<p>风险策略类型</p>
+ * @method void setStrategyType(string $StrategyType) 设置<p>风险策略类型</p>
+ * @method integer getIsEnabled() 获取<p>是否启用</p>
+ * @method void setIsEnabled(integer $IsEnabled) 设置<p>是否启用</p>
+ * @method string getRule() 获取<p>策略内容，如：{     ThresholdValue: &quot;100&quot; }</p>
+ * @method void setRule(string $Rule) 设置<p>策略内容，如：{     ThresholdValue: &quot;100&quot; }</p>
+ * @method string getRiskLevel() 获取<p>可选值：Info/Low/Medium/High</p>
+ * @method void setRiskLevel(string $RiskLevel) 设置<p>可选值：Info/Low/Medium/High</p>
+ * @method array getStrategyId() 获取<p>策略id</p>
+ * @method void setStrategyId(array $StrategyId) 设置<p>策略id</p>
+ * @method string getName() 获取<p>策略名</p>
+ * @method void setName(string $Name) 设置<p>策略名</p>
+ * @method string getDescription() 获取<p>策略描述</p>
+ * @method void setDescription(string $Description) 设置<p>策略描述</p>
+ * @method string getDbTypes() 获取<p>支持的数据库类型</p>
+ * @method void setDbTypes(string $DbTypes) 设置<p>支持的数据库类型</p>
  */
 class ModifyDspmRiskStrategyRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
     /**
-     * @var string 风险策略类型
+     * @var string <p>风险策略类型</p>
      */
     public $StrategyType;
 
     /**
-     * @var integer 是否启用
+     * @var integer <p>是否启用</p>
      */
     public $IsEnabled;
 
     /**
-     * @var string 策略内容，如：{     ThresholdValue: "100" }
+     * @var string <p>策略内容，如：{     ThresholdValue: &quot;100&quot; }</p>
      */
     public $Rule;
 
     /**
-     * @var string 可选值：Info/Low/Medium/High
+     * @var string <p>可选值：Info/Low/Medium/High</p>
      */
     public $RiskLevel;
 
     /**
-     * @var array 策略id
+     * @var array <p>策略id</p>
      */
     public $StrategyId;
 
     /**
-     * @param array $MemberId 集团账号的成员id
-     * @param string $StrategyType 风险策略类型
-     * @param integer $IsEnabled 是否启用
-     * @param string $Rule 策略内容，如：{     ThresholdValue: "100" }
-     * @param string $RiskLevel 可选值：Info/Low/Medium/High
-     * @param array $StrategyId 策略id
+     * @var string <p>策略名</p>
+     */
+    public $Name;
+
+    /**
+     * @var string <p>策略描述</p>
+     */
+    public $Description;
+
+    /**
+     * @var string <p>支持的数据库类型</p>
+     */
+    public $DbTypes;
+
+    /**
+     * @param array $MemberId <p>集团账号的成员id</p>
+     * @param string $StrategyType <p>风险策略类型</p>
+     * @param integer $IsEnabled <p>是否启用</p>
+     * @param string $Rule <p>策略内容，如：{     ThresholdValue: &quot;100&quot; }</p>
+     * @param string $RiskLevel <p>可选值：Info/Low/Medium/High</p>
+     * @param array $StrategyId <p>策略id</p>
+     * @param string $Name <p>策略名</p>
+     * @param string $Description <p>策略描述</p>
+     * @param string $DbTypes <p>支持的数据库类型</p>
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class ModifyDspmRiskStrategyRequest extends AbstractModel
 
         if (array_key_exists("StrategyId",$param) and $param["StrategyId"] !== null) {
             $this->StrategyId = $param["StrategyId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("DbTypes",$param) and $param["DbTypes"] !== null) {
+            $this->DbTypes = $param["DbTypes"];
         }
     }
 }

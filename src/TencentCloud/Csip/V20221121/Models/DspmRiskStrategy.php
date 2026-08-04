@@ -20,122 +20,150 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Dspm 风险策略
  *
- * @method string getStrategyType() 获取策略类型
- * @method void setStrategyType(string $StrategyType) 设置策略类型
- * @method string getName() 获取策略名
- * @method void setName(string $Name) 设置策略名
- * @method string getStrategyCategory() 获取策略类型
- * @method void setStrategyCategory(string $StrategyCategory) 设置策略类型
- * @method integer getIsEnabled() 获取是否启用。0-禁用 1-启用
- * @method void setIsEnabled(integer $IsEnabled) 设置是否启用。0-禁用 1-启用
- * @method string getRiskLevel() 获取风险等级。
- * @method void setRiskLevel(string $RiskLevel) 设置风险等级。
- * @method string getRule() 获取策略规则
- * @method void setRule(string $Rule) 设置策略规则
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method string getDescription() 获取策略内容
- * @method void setDescription(string $Description) 设置策略内容
- * @method integer getHitCount() 获取命中次数
- * @method void setHitCount(integer $HitCount) 设置命中次数
- * @method string getRiskType() 获取风险类型。risk-风险；alarm-告警。
- * @method void setRiskType(string $RiskType) 设置风险类型。risk-风险；alarm-告警。
- * @method integer getAppId() 获取资产所属账号app id
- * @method void setAppId(integer $AppId) 设置资产所属账号app id
- * @method string getNickName() 获取账号昵称
- * @method void setNickName(string $NickName) 设置账号昵称
- * @method string getUin() 获取资产所属账号uin
- * @method void setUin(string $Uin) 设置资产所属账号uin
- * @method integer getStrategyId() 获取策略id
- * @method void setStrategyId(integer $StrategyId) 设置策略id
+ * @method string getStrategyType() 获取<p>策略类型</p>
+ * @method void setStrategyType(string $StrategyType) 设置<p>策略类型</p>
+ * @method string getName() 获取<p>策略名</p>
+ * @method void setName(string $Name) 设置<p>策略名</p>
+ * @method string getStrategyCategory() 获取<p>策略类型</p>
+ * @method void setStrategyCategory(string $StrategyCategory) 设置<p>策略类型</p>
+ * @method integer getIsEnabled() 获取<p>是否启用。0-禁用 1-启用</p>
+ * @method void setIsEnabled(integer $IsEnabled) 设置<p>是否启用。0-禁用 1-启用</p>
+ * @method string getRiskLevel() 获取<p>风险等级。</p>
+ * @method void setRiskLevel(string $RiskLevel) 设置<p>风险等级。</p>
+ * @method string getRule() 获取<p>策略规则</p>
+ * @method void setRule(string $Rule) 设置<p>策略规则</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getDescription() 获取<p>策略内容</p>
+ * @method void setDescription(string $Description) 设置<p>策略内容</p>
+ * @method integer getHitCount() 获取<p>命中次数</p>
+ * @method void setHitCount(integer $HitCount) 设置<p>命中次数</p>
+ * @method string getRiskType() 获取<p>风险类型。risk-风险；alarm-告警。</p>
+ * @method void setRiskType(string $RiskType) 设置<p>风险类型。risk-风险；alarm-告警。</p>
+ * @method integer getAppId() 获取<p>资产所属账号app id</p>
+ * @method void setAppId(integer $AppId) 设置<p>资产所属账号app id</p>
+ * @method string getNickName() 获取<p>账号昵称</p>
+ * @method void setNickName(string $NickName) 设置<p>账号昵称</p>
+ * @method string getUin() 获取<p>资产所属账号uin</p>
+ * @method void setUin(string $Uin) 设置<p>资产所属账号uin</p>
+ * @method integer getStrategyId() 获取<p>策略id</p>
+ * @method void setStrategyId(integer $StrategyId) 设置<p>策略id</p>
+ * @method string getRuleSource() 获取<p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleSource(string $RuleSource) 设置<p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAssetTypes() 获取<p>支持的资产类型</p>
+ * @method void setAssetTypes(array $AssetTypes) 设置<p>支持的资产类型</p>
+ * @method string getRiskDescription() 获取<p>风险描述</p>
+ * @method void setRiskDescription(string $RiskDescription) 设置<p>风险描述</p>
  */
 class DspmRiskStrategy extends AbstractModel
 {
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
      */
     public $StrategyType;
 
     /**
-     * @var string 策略名
+     * @var string <p>策略名</p>
      */
     public $Name;
 
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
      */
     public $StrategyCategory;
 
     /**
-     * @var integer 是否启用。0-禁用 1-启用
+     * @var integer <p>是否启用。0-禁用 1-启用</p>
      */
     public $IsEnabled;
 
     /**
-     * @var string 风险等级。
+     * @var string <p>风险等级。</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 策略规则
+     * @var string <p>策略规则</p>
      */
     public $Rule;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var string 策略内容
+     * @var string <p>策略内容</p>
      */
     public $Description;
 
     /**
-     * @var integer 命中次数
+     * @var integer <p>命中次数</p>
      */
     public $HitCount;
 
     /**
-     * @var string 风险类型。risk-风险；alarm-告警。
+     * @var string <p>风险类型。risk-风险；alarm-告警。</p>
      */
     public $RiskType;
 
     /**
-     * @var integer 资产所属账号app id
+     * @var integer <p>资产所属账号app id</p>
      */
     public $AppId;
 
     /**
-     * @var string 账号昵称
+     * @var string <p>账号昵称</p>
      */
     public $NickName;
 
     /**
-     * @var string 资产所属账号uin
+     * @var string <p>资产所属账号uin</p>
      */
     public $Uin;
 
     /**
-     * @var integer 策略id
+     * @var integer <p>策略id</p>
      */
     public $StrategyId;
 
     /**
-     * @param string $StrategyType 策略类型
-     * @param string $Name 策略名
-     * @param string $StrategyCategory 策略类型
-     * @param integer $IsEnabled 是否启用。0-禁用 1-启用
-     * @param string $RiskLevel 风险等级。
-     * @param string $Rule 策略规则
-     * @param string $Remark 备注
-     * @param string $Description 策略内容
-     * @param integer $HitCount 命中次数
-     * @param string $RiskType 风险类型。risk-风险；alarm-告警。
-     * @param integer $AppId 资产所属账号app id
-     * @param string $NickName 账号昵称
-     * @param string $Uin 资产所属账号uin
-     * @param integer $StrategyId 策略id
+     * @var string <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleSource;
+
+    /**
+     * @var array <p>支持的资产类型</p>
+     */
+    public $AssetTypes;
+
+    /**
+     * @var string <p>风险描述</p>
+     */
+    public $RiskDescription;
+
+    /**
+     * @param string $StrategyType <p>策略类型</p>
+     * @param string $Name <p>策略名</p>
+     * @param string $StrategyCategory <p>策略类型</p>
+     * @param integer $IsEnabled <p>是否启用。0-禁用 1-启用</p>
+     * @param string $RiskLevel <p>风险等级。</p>
+     * @param string $Rule <p>策略规则</p>
+     * @param string $Remark <p>备注</p>
+     * @param string $Description <p>策略内容</p>
+     * @param integer $HitCount <p>命中次数</p>
+     * @param string $RiskType <p>风险类型。risk-风险；alarm-告警。</p>
+     * @param integer $AppId <p>资产所属账号app id</p>
+     * @param string $NickName <p>账号昵称</p>
+     * @param string $Uin <p>资产所属账号uin</p>
+     * @param integer $StrategyId <p>策略id</p>
+     * @param string $RuleSource <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AssetTypes <p>支持的资产类型</p>
+     * @param string $RiskDescription <p>风险描述</p>
      */
     function __construct()
     {
@@ -204,6 +232,18 @@ class DspmRiskStrategy extends AbstractModel
 
         if (array_key_exists("StrategyId",$param) and $param["StrategyId"] !== null) {
             $this->StrategyId = $param["StrategyId"];
+        }
+
+        if (array_key_exists("RuleSource",$param) and $param["RuleSource"] !== null) {
+            $this->RuleSource = $param["RuleSource"];
+        }
+
+        if (array_key_exists("AssetTypes",$param) and $param["AssetTypes"] !== null) {
+            $this->AssetTypes = $param["AssetTypes"];
+        }
+
+        if (array_key_exists("RiskDescription",$param) and $param["RiskDescription"] !== null) {
+            $this->RiskDescription = $param["RiskDescription"];
         }
     }
 }

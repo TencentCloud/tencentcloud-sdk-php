@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工单的常用信息返回
  *
- * @method string getWorkOrderId() 获取工单号
- * @method void setWorkOrderId(string $WorkOrderId) 设置工单号
- * @method string getServiceType() 获取服务类型，一个服务可能会产生多个工单
- * @method void setServiceType(string $ServiceType) 设置服务类型，一个服务可能会产生多个工单
- * @method string getOrderType() 获取工单类型
- * @method void setOrderType(string $OrderType) 设置工单类型
- * @method string getOrderStatus() 获取工单状态
- * @method void setOrderStatus(string $OrderStatus) 设置工单状态
- * @method string getCreator() 获取工单创建人
- * @method void setCreator(string $Creator) 设置工单创建人
- * @method string getCreateTime() 获取工单创建时间
- * @method void setCreateTime(string $CreateTime) 设置工单创建时间
- * @method string getFinishTime() 获取工单完成时间
- * @method void setFinishTime(string $FinishTime) 设置工单完成时间
- * @method string getTicketId() 获取工单关联的dcops单号
- * @method void setTicketId(string $TicketId) 设置工单关联的dcops单号
+ * @method string getWorkOrderId() 获取<p>工单号</p>
+ * @method void setWorkOrderId(string $WorkOrderId) 设置<p>工单号</p>
+ * @method string getServiceType() 获取<p>服务类型，一个服务可能会产生多个工单</p>
+ * @method void setServiceType(string $ServiceType) 设置<p>服务类型，一个服务可能会产生多个工单</p>
+ * @method string getOrderType() 获取<p>工单类型</p>
+ * @method void setOrderType(string $OrderType) 设置<p>工单类型</p>
+ * @method string getOrderStatus() 获取<p>工单状态</p>
+ * @method void setOrderStatus(string $OrderStatus) 设置<p>工单状态</p>
+ * @method string getCreator() 获取<p>工单创建人</p>
+ * @method void setCreator(string $Creator) 设置<p>工单创建人</p>
+ * @method string getCreateTime() 获取<p>工单创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>工单创建时间</p>
+ * @method string getFinishTime() 获取<p>工单完成时间</p>
+ * @method void setFinishTime(string $FinishTime) 设置<p>工单完成时间</p>
+ * @method string getTicketId() 获取<p>工单关联的dcops单号</p>
+ * @method void setTicketId(string $TicketId) 设置<p>工单关联的dcops单号</p>
+ * @method SLAInfo getSLAInfo() 获取<p>SLA</p>
+ * @method void setSLAInfo(SLAInfo $SLAInfo) 设置<p>SLA</p>
  */
 class WorkOrderData extends AbstractModel
 {
     /**
-     * @var string 工单号
+     * @var string <p>工单号</p>
      */
     public $WorkOrderId;
 
     /**
-     * @var string 服务类型，一个服务可能会产生多个工单
+     * @var string <p>服务类型，一个服务可能会产生多个工单</p>
      */
     public $ServiceType;
 
     /**
-     * @var string 工单类型
+     * @var string <p>工单类型</p>
      */
     public $OrderType;
 
     /**
-     * @var string 工单状态
+     * @var string <p>工单状态</p>
      */
     public $OrderStatus;
 
     /**
-     * @var string 工单创建人
+     * @var string <p>工单创建人</p>
      */
     public $Creator;
 
     /**
-     * @var string 工单创建时间
+     * @var string <p>工单创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 工单完成时间
+     * @var string <p>工单完成时间</p>
      */
     public $FinishTime;
 
     /**
-     * @var string 工单关联的dcops单号
+     * @var string <p>工单关联的dcops单号</p>
      */
     public $TicketId;
 
     /**
-     * @param string $WorkOrderId 工单号
-     * @param string $ServiceType 服务类型，一个服务可能会产生多个工单
-     * @param string $OrderType 工单类型
-     * @param string $OrderStatus 工单状态
-     * @param string $Creator 工单创建人
-     * @param string $CreateTime 工单创建时间
-     * @param string $FinishTime 工单完成时间
-     * @param string $TicketId 工单关联的dcops单号
+     * @var SLAInfo <p>SLA</p>
+     */
+    public $SLAInfo;
+
+    /**
+     * @param string $WorkOrderId <p>工单号</p>
+     * @param string $ServiceType <p>服务类型，一个服务可能会产生多个工单</p>
+     * @param string $OrderType <p>工单类型</p>
+     * @param string $OrderStatus <p>工单状态</p>
+     * @param string $Creator <p>工单创建人</p>
+     * @param string $CreateTime <p>工单创建时间</p>
+     * @param string $FinishTime <p>工单完成时间</p>
+     * @param string $TicketId <p>工单关联的dcops单号</p>
+     * @param SLAInfo $SLAInfo <p>SLA</p>
      */
     function __construct()
     {
@@ -132,6 +140,11 @@ class WorkOrderData extends AbstractModel
 
         if (array_key_exists("TicketId",$param) and $param["TicketId"] !== null) {
             $this->TicketId = $param["TicketId"];
+        }
+
+        if (array_key_exists("SLAInfo",$param) and $param["SLAInfo"] !== null) {
+            $this->SLAInfo = new SLAInfo();
+            $this->SLAInfo->deserialize($param["SLAInfo"]);
         }
     }
 }

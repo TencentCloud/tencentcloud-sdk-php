@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpnConnection返回参数结构体
  *
- * @method VpnConnection getVpnConnection() 获取通道实例对象。
- * @method void setVpnConnection(VpnConnection $VpnConnection) 设置通道实例对象。
+ * @method VpnConnection getVpnConnection() 获取<p>通道实例对象。</p>
+ * @method void setVpnConnection(VpnConnection $VpnConnection) 设置<p>通道实例对象。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateVpnConnectionResponse extends AbstractModel
 {
     /**
-     * @var VpnConnection 通道实例对象。
+     * @var VpnConnection <p>通道实例对象。</p>
      */
     public $VpnConnection;
 
@@ -38,7 +38,7 @@ class CreateVpnConnectionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param VpnConnection $VpnConnection 通道实例对象。
+     * @param VpnConnection $VpnConnection <p>通道实例对象。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

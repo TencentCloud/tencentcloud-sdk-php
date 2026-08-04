@@ -20,130 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Dspm 白名单策略
  *
- * @method string getWhitelistStrategyId() 获取白名单策略id
- * @method void setWhitelistStrategyId(string $WhitelistStrategyId) 设置白名单策略id
- * @method string getStrategyType() 获取策略类型
- * @method void setStrategyType(string $StrategyType) 设置策略类型
- * @method string getName() 获取白名单策略名
- * @method void setName(string $Name) 设置白名单策略名
- * @method string getStrategyCategory() 获取策略类型
- * @method void setStrategyCategory(string $StrategyCategory) 设置策略类型
- * @method string getRule() 获取策略规则
- * @method void setRule(string $Rule) 设置策略规则
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method string getModifyTime() 获取修改时间
- * @method void setModifyTime(string $ModifyTime) 设置修改时间
- * @method string getAssetId() 获取资产id
- * @method void setAssetId(string $AssetId) 设置资产id
- * @method string getAccount() 获取账号
- * @method void setAccount(string $Account) 设置账号
- * @method string getHost() 获取主机
- * @method void setHost(string $Host) 设置主机
- * @method string getDescription() 获取策略规则内容描述
- * @method void setDescription(string $Description) 设置策略规则内容描述
- * @method string getRiskType() 获取白名单类型。risk-风险白名单；alarm-告警白名单。
- * @method void setRiskType(string $RiskType) 设置白名单类型。risk-风险白名单；alarm-告警白名单。
- * @method integer getAppId() 获取资产所属账号app id
- * @method void setAppId(integer $AppId) 设置资产所属账号app id
- * @method string getNickName() 获取账号昵称
- * @method void setNickName(string $NickName) 设置账号昵称
- * @method string getUin() 获取资产所属账号uin
- * @method void setUin(string $Uin) 设置资产所属账号uin
+ * @method string getWhitelistStrategyId() 获取<p>白名单策略id</p>
+ * @method void setWhitelistStrategyId(string $WhitelistStrategyId) 设置<p>白名单策略id</p>
+ * @method string getStrategyType() 获取<p>策略类型</p>
+ * @method void setStrategyType(string $StrategyType) 设置<p>策略类型</p>
+ * @method string getName() 获取<p>白名单策略名</p>
+ * @method void setName(string $Name) 设置<p>白名单策略名</p>
+ * @method string getStrategyCategory() 获取<p>策略类型</p>
+ * @method void setStrategyCategory(string $StrategyCategory) 设置<p>策略类型</p>
+ * @method string getRule() 获取<p>策略规则</p>
+ * @method void setRule(string $Rule) 设置<p>策略规则</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getModifyTime() 获取<p>修改时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间</p>
+ * @method string getAssetId() 获取<p>资产id</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产id</p>
+ * @method string getAccount() 获取<p>账号</p>
+ * @method void setAccount(string $Account) 设置<p>账号</p>
+ * @method string getHost() 获取<p>主机</p>
+ * @method void setHost(string $Host) 设置<p>主机</p>
+ * @method string getDescription() 获取<p>策略规则内容描述</p>
+ * @method void setDescription(string $Description) 设置<p>策略规则内容描述</p>
+ * @method string getRiskType() 获取<p>白名单类型。risk-风险白名单；alarm-告警白名单。</p>
+ * @method void setRiskType(string $RiskType) 设置<p>白名单类型。risk-风险白名单；alarm-告警白名单。</p>
+ * @method integer getAppId() 获取<p>资产所属账号app id</p>
+ * @method void setAppId(integer $AppId) 设置<p>资产所属账号app id</p>
+ * @method string getNickName() 获取<p>账号昵称</p>
+ * @method void setNickName(string $NickName) 设置<p>账号昵称</p>
+ * @method string getUin() 获取<p>资产所属账号uin</p>
+ * @method void setUin(string $Uin) 设置<p>资产所属账号uin</p>
+ * @method string getWhitelistType() 获取<p>白名单类型</p>
+ * @method void setWhitelistType(string $WhitelistType) 设置<p>白名单类型</p>
  */
 class DspmWhitelistStrategy extends AbstractModel
 {
     /**
-     * @var string 白名单策略id
+     * @var string <p>白名单策略id</p>
      */
     public $WhitelistStrategyId;
 
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
      */
     public $StrategyType;
 
     /**
-     * @var string 白名单策略名
+     * @var string <p>白名单策略名</p>
      */
     public $Name;
 
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
      */
     public $StrategyCategory;
 
     /**
-     * @var string 策略规则
+     * @var string <p>策略规则</p>
      */
     public $Rule;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 资产id
+     * @var string <p>资产id</p>
      */
     public $AssetId;
 
     /**
-     * @var string 账号
+     * @var string <p>账号</p>
      */
     public $Account;
 
     /**
-     * @var string 主机
+     * @var string <p>主机</p>
      */
     public $Host;
 
     /**
-     * @var string 策略规则内容描述
+     * @var string <p>策略规则内容描述</p>
      */
     public $Description;
 
     /**
-     * @var string 白名单类型。risk-风险白名单；alarm-告警白名单。
+     * @var string <p>白名单类型。risk-风险白名单；alarm-告警白名单。</p>
      */
     public $RiskType;
 
     /**
-     * @var integer 资产所属账号app id
+     * @var integer <p>资产所属账号app id</p>
      */
     public $AppId;
 
     /**
-     * @var string 账号昵称
+     * @var string <p>账号昵称</p>
      */
     public $NickName;
 
     /**
-     * @var string 资产所属账号uin
+     * @var string <p>资产所属账号uin</p>
      */
     public $Uin;
 
     /**
-     * @param string $WhitelistStrategyId 白名单策略id
-     * @param string $StrategyType 策略类型
-     * @param string $Name 白名单策略名
-     * @param string $StrategyCategory 策略类型
-     * @param string $Rule 策略规则
-     * @param string $Remark 备注
-     * @param string $ModifyTime 修改时间
-     * @param string $AssetId 资产id
-     * @param string $Account 账号
-     * @param string $Host 主机
-     * @param string $Description 策略规则内容描述
-     * @param string $RiskType 白名单类型。risk-风险白名单；alarm-告警白名单。
-     * @param integer $AppId 资产所属账号app id
-     * @param string $NickName 账号昵称
-     * @param string $Uin 资产所属账号uin
+     * @var string <p>白名单类型</p>
+     */
+    public $WhitelistType;
+
+    /**
+     * @param string $WhitelistStrategyId <p>白名单策略id</p>
+     * @param string $StrategyType <p>策略类型</p>
+     * @param string $Name <p>白名单策略名</p>
+     * @param string $StrategyCategory <p>策略类型</p>
+     * @param string $Rule <p>策略规则</p>
+     * @param string $Remark <p>备注</p>
+     * @param string $ModifyTime <p>修改时间</p>
+     * @param string $AssetId <p>资产id</p>
+     * @param string $Account <p>账号</p>
+     * @param string $Host <p>主机</p>
+     * @param string $Description <p>策略规则内容描述</p>
+     * @param string $RiskType <p>白名单类型。risk-风险白名单；alarm-告警白名单。</p>
+     * @param integer $AppId <p>资产所属账号app id</p>
+     * @param string $NickName <p>账号昵称</p>
+     * @param string $Uin <p>资产所属账号uin</p>
+     * @param string $WhitelistType <p>白名单类型</p>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class DspmWhitelistStrategy extends AbstractModel
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("WhitelistType",$param) and $param["WhitelistType"] !== null) {
+            $this->WhitelistType = $param["WhitelistType"];
         }
     }
 }

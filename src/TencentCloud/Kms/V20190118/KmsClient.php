@@ -83,6 +83,7 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\PostQuantumCryptoSignResponse PostQuantumCryptoSign(Models\PostQuantumCryptoSignRequest $req) 使用后量子密码算法签名验签密钥进行签名。
  * @method Models\PostQuantumCryptoVerifyResponse PostQuantumCryptoVerify(Models\PostQuantumCryptoVerifyRequest $req) 使用后量子密码算法密钥对签名进行验证。
  * @method Models\ReEncryptResponse ReEncrypt(Models\ReEncryptRequest $req) 使用指定CMK对密文重新加密。
+ * @method Models\RotateKeyResponse RotateKey(Models\RotateKeyRequest $req) 对指定的CMK（用户主密钥）执行立即轮转操作。可以通过调用DescribeKey，返回上次轮转时间和下次轮转时间，判断是否轮转成功。
  * @method Models\ScheduleDataKeyDeletionResponse ScheduleDataKeyDeletion(Models\ScheduleDataKeyDeletionRequest $req) 计划删除数据密钥
  * @method Models\ScheduleKeyDeletionResponse ScheduleKeyDeletion(Models\ScheduleKeyDeletionRequest $req) CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
  * @method Models\SignByAsymmetricKeyResponse SignByAsymmetricKey(Models\SignByAsymmetricKeyRequest $req) 非对称密钥签名。

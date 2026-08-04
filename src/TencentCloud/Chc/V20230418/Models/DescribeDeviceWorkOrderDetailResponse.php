@@ -20,66 +20,80 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceWorkOrderDetail返回参数结构体
  *
- * @method string getOrderId() 获取工单ID
- * @method void setOrderId(string $OrderId) 设置工单ID
- * @method string getServiceType() 获取服务类型
- * @method void setServiceType(string $ServiceType) 设置服务类型
- * @method string getOrderType() 获取工单类型
- * @method void setOrderType(string $OrderType) 设置工单类型
- * @method string getOrderStatus() 获取工单状态
- * @method void setOrderStatus(string $OrderStatus) 设置工单状态
- * @method array getStepSet() 获取工单流程状态
- * @method void setStepSet(array $StepSet) 设置工单流程状态
- * @method array getDeviceSet() 获取工单设备信息
- * @method void setDeviceSet(array $DeviceSet) 设置工单设备信息
- * @method DeviceOrderBaseInfo getBaseInfo() 获取工单的入参信息
- * @method void setBaseInfo(DeviceOrderBaseInfo $BaseInfo) 设置工单的入参信息
- * @method string getRejectReason() 获取工单的拒绝原因，工单状态为reject的时候返回
- * @method void setRejectReason(string $RejectReason) 设置工单的拒绝原因，工单状态为reject的时候返回
+ * @method string getOrderId() 获取<p>工单ID</p>
+ * @method void setOrderId(string $OrderId) 设置<p>工单ID</p>
+ * @method string getServiceType() 获取<p>服务类型</p>
+ * @method void setServiceType(string $ServiceType) 设置<p>服务类型</p>
+ * @method string getOrderType() 获取<p>工单类型</p>
+ * @method void setOrderType(string $OrderType) 设置<p>工单类型</p>
+ * @method string getOrderStatus() 获取<p>工单状态</p>
+ * @method void setOrderStatus(string $OrderStatus) 设置<p>工单状态</p>
+ * @method array getStepSet() 获取<p>工单流程状态</p>
+ * @method void setStepSet(array $StepSet) 设置<p>工单流程状态</p>
+ * @method array getDeviceSet() 获取<p>工单设备信息</p>
+ * @method void setDeviceSet(array $DeviceSet) 设置<p>工单设备信息</p>
+ * @method DeviceOrderBaseInfo getBaseInfo() 获取<p>工单的入参信息</p>
+ * @method void setBaseInfo(DeviceOrderBaseInfo $BaseInfo) 设置<p>工单的入参信息</p>
+ * @method string getRejectReason() 获取<p>工单的拒绝原因，工单状态为reject的时候返回</p>
+ * @method void setRejectReason(string $RejectReason) 设置<p>工单的拒绝原因，工单状态为reject的时候返回</p>
+ * @method SLAInfo getSLAInfo() 获取<p>工单 SLA 信息</p>
+ * @method void setSLAInfo(SLAInfo $SLAInfo) 设置<p>工单 SLA 信息</p>
+ * @method array getPreOrderSet() 获取<p>前序未完成的工单号</p>
+ * @method void setPreOrderSet(array $PreOrderSet) 设置<p>前序未完成的工单号</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDeviceWorkOrderDetailResponse extends AbstractModel
 {
     /**
-     * @var string 工单ID
+     * @var string <p>工单ID</p>
      */
     public $OrderId;
 
     /**
-     * @var string 服务类型
+     * @var string <p>服务类型</p>
      */
     public $ServiceType;
 
     /**
-     * @var string 工单类型
+     * @var string <p>工单类型</p>
      */
     public $OrderType;
 
     /**
-     * @var string 工单状态
+     * @var string <p>工单状态</p>
      */
     public $OrderStatus;
 
     /**
-     * @var array 工单流程状态
+     * @var array <p>工单流程状态</p>
      */
     public $StepSet;
 
     /**
-     * @var array 工单设备信息
+     * @var array <p>工单设备信息</p>
      */
     public $DeviceSet;
 
     /**
-     * @var DeviceOrderBaseInfo 工单的入参信息
+     * @var DeviceOrderBaseInfo <p>工单的入参信息</p>
      */
     public $BaseInfo;
 
     /**
-     * @var string 工单的拒绝原因，工单状态为reject的时候返回
+     * @var string <p>工单的拒绝原因，工单状态为reject的时候返回</p>
      */
     public $RejectReason;
+
+    /**
+     * @var SLAInfo <p>工单 SLA 信息</p>
+     */
+    public $SLAInfo;
+
+    /**
+     * @var array <p>前序未完成的工单号</p>
+     */
+    public $PreOrderSet;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -87,14 +101,16 @@ class DescribeDeviceWorkOrderDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $OrderId 工单ID
-     * @param string $ServiceType 服务类型
-     * @param string $OrderType 工单类型
-     * @param string $OrderStatus 工单状态
-     * @param array $StepSet 工单流程状态
-     * @param array $DeviceSet 工单设备信息
-     * @param DeviceOrderBaseInfo $BaseInfo 工单的入参信息
-     * @param string $RejectReason 工单的拒绝原因，工单状态为reject的时候返回
+     * @param string $OrderId <p>工单ID</p>
+     * @param string $ServiceType <p>服务类型</p>
+     * @param string $OrderType <p>工单类型</p>
+     * @param string $OrderStatus <p>工单状态</p>
+     * @param array $StepSet <p>工单流程状态</p>
+     * @param array $DeviceSet <p>工单设备信息</p>
+     * @param DeviceOrderBaseInfo $BaseInfo <p>工单的入参信息</p>
+     * @param string $RejectReason <p>工单的拒绝原因，工单状态为reject的时候返回</p>
+     * @param SLAInfo $SLAInfo <p>工单 SLA 信息</p>
+     * @param array $PreOrderSet <p>前序未完成的工单号</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -151,6 +167,15 @@ class DescribeDeviceWorkOrderDetailResponse extends AbstractModel
 
         if (array_key_exists("RejectReason",$param) and $param["RejectReason"] !== null) {
             $this->RejectReason = $param["RejectReason"];
+        }
+
+        if (array_key_exists("SLAInfo",$param) and $param["SLAInfo"] !== null) {
+            $this->SLAInfo = new SLAInfo();
+            $this->SLAInfo->deserialize($param["SLAInfo"]);
+        }
+
+        if (array_key_exists("PreOrderSet",$param) and $param["PreOrderSet"] !== null) {
+            $this->PreOrderSet = $param["PreOrderSet"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

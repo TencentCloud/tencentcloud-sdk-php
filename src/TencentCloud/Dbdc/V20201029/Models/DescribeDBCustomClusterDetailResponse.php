@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetwork(ContainerNetwork $ContainerNetwork) 设置<p>容器网络，在此集群中的所有Pod将与此网络连通</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeletionProtection() 获取<p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -119,6 +121,11 @@ class DescribeDBCustomClusterDetailResponse extends AbstractModel
     public $ContainerNetwork;
 
     /**
+     * @var boolean <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+     */
+    public $DeletionProtection;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -139,6 +146,7 @@ class DescribeDBCustomClusterDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerNetwork $ContainerNetwork <p>容器网络，在此集群中的所有Pod将与此网络连通</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeletionProtection <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -207,6 +215,10 @@ class DescribeDBCustomClusterDetailResponse extends AbstractModel
         if (array_key_exists("ContainerNetwork",$param) and $param["ContainerNetwork"] !== null) {
             $this->ContainerNetwork = new ContainerNetwork();
             $this->ContainerNetwork->deserialize($param["ContainerNetwork"]);
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

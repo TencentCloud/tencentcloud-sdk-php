@@ -26,6 +26,7 @@ use TencentCloud\Omics\V20221128\Models as Models;
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 创建组学平台计算环境。
  * @method Models\CreateVolumeResponse CreateVolume(Models\CreateVolumeRequest $req) 创建缓存卷。
  * @method Models\DeleteEnvironmentResponse DeleteEnvironment(Models\DeleteEnvironmentRequest $req) 删除环境。
+ * @method Models\DeleteEnvironmentCacheResponse DeleteEnvironmentCache(Models\DeleteEnvironmentCacheRequest $req) 删除环境缓存。
  * @method Models\DeleteVolumeResponse DeleteVolume(Models\DeleteVolumeRequest $req) 删除缓存卷。
  * @method Models\DeleteVolumeDataResponse DeleteVolumeData(Models\DeleteVolumeDataRequest $req) 删除缓存卷数据。
  * @method Models\DescribeApplicationVersionsResponse DescribeApplicationVersions(Models\DescribeApplicationVersionsRequest $req) 查询应用版本列表

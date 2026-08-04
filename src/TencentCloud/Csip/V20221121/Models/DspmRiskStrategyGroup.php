@@ -20,66 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Dspm 风险分组策略
  *
- * @method string getStrategyType() 获取策略类型
- * @method void setStrategyType(string $StrategyType) 设置策略类型
- * @method string getName() 获取策略名
- * @method void setName(string $Name) 设置策略名
- * @method string getStrategyCategory() 获取策略类型
- * @method void setStrategyCategory(string $StrategyCategory) 设置策略类型
- * @method integer getIsEnabled() 获取是否启用。0-禁用 1-启用
- * @method void setIsEnabled(integer $IsEnabled) 设置是否启用。0-禁用 1-启用
- * @method integer getHitCount() 获取命中次数
- * @method void setHitCount(integer $HitCount) 设置命中次数
- * @method string getRiskType() 获取风险类型。risk-风险；alarm-告警。
- * @method void setRiskType(string $RiskType) 设置风险类型。risk-风险；alarm-告警。
- * @method array getStrategyList() 获取策略列表
- * @method void setStrategyList(array $StrategyList) 设置策略列表
+ * @method string getStrategyType() 获取<p>策略类型</p>
+ * @method void setStrategyType(string $StrategyType) 设置<p>策略类型</p>
+ * @method string getName() 获取<p>策略名</p>
+ * @method void setName(string $Name) 设置<p>策略名</p>
+ * @method string getStrategyCategory() 获取<p>策略类型</p>
+ * @method void setStrategyCategory(string $StrategyCategory) 设置<p>策略类型</p>
+ * @method integer getIsEnabled() 获取<p>是否启用。0-禁用 1-启用</p>
+ * @method void setIsEnabled(integer $IsEnabled) 设置<p>是否启用。0-禁用 1-启用</p>
+ * @method integer getHitCount() 获取<p>命中次数</p>
+ * @method void setHitCount(integer $HitCount) 设置<p>命中次数</p>
+ * @method string getRiskType() 获取<p>风险类型。risk-风险；alarm-告警。</p>
+ * @method void setRiskType(string $RiskType) 设置<p>风险类型。risk-风险；alarm-告警。</p>
+ * @method array getStrategyList() 获取<p>策略列表</p>
+ * @method void setStrategyList(array $StrategyList) 设置<p>策略列表</p>
+ * @method string getRuleSource() 获取<p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleSource(string $RuleSource) 设置<p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspmRiskStrategyGroup extends AbstractModel
 {
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
      */
     public $StrategyType;
 
     /**
-     * @var string 策略名
+     * @var string <p>策略名</p>
      */
     public $Name;
 
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
      */
     public $StrategyCategory;
 
     /**
-     * @var integer 是否启用。0-禁用 1-启用
+     * @var integer <p>是否启用。0-禁用 1-启用</p>
      */
     public $IsEnabled;
 
     /**
-     * @var integer 命中次数
+     * @var integer <p>命中次数</p>
      */
     public $HitCount;
 
     /**
-     * @var string 风险类型。risk-风险；alarm-告警。
+     * @var string <p>风险类型。risk-风险；alarm-告警。</p>
      */
     public $RiskType;
 
     /**
-     * @var array 策略列表
+     * @var array <p>策略列表</p>
      */
     public $StrategyList;
 
     /**
-     * @param string $StrategyType 策略类型
-     * @param string $Name 策略名
-     * @param string $StrategyCategory 策略类型
-     * @param integer $IsEnabled 是否启用。0-禁用 1-启用
-     * @param integer $HitCount 命中次数
-     * @param string $RiskType 风险类型。risk-风险；alarm-告警。
-     * @param array $StrategyList 策略列表
+     * @var string <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleSource;
+
+    /**
+     * @param string $StrategyType <p>策略类型</p>
+     * @param string $Name <p>策略名</p>
+     * @param string $StrategyCategory <p>策略类型</p>
+     * @param integer $IsEnabled <p>是否启用。0-禁用 1-启用</p>
+     * @param integer $HitCount <p>命中次数</p>
+     * @param string $RiskType <p>风险类型。risk-风险；alarm-告警。</p>
+     * @param array $StrategyList <p>策略列表</p>
+     * @param string $RuleSource <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -125,6 +137,10 @@ class DspmRiskStrategyGroup extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StrategyList, $obj);
             }
+        }
+
+        if (array_key_exists("RuleSource",$param) and $param["RuleSource"] !== null) {
+            $this->RuleSource = $param["RuleSource"];
         }
     }
 }

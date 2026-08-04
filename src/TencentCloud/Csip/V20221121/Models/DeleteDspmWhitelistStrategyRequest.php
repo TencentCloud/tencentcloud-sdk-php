@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDspmWhitelistStrategy请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method array getWhitelistStrategyId() 获取白名单id
  * @method void setWhitelistStrategyId(array $WhitelistStrategyId) 设置白名单id
  */
 class DeleteDspmWhitelistStrategyRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -38,7 +38,7 @@ class DeleteDspmWhitelistStrategyRequest extends AbstractModel
     public $WhitelistStrategyId;
 
     /**
-     * @param array $MemberId 集团账号的成员id
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param array $WhitelistStrategyId 白名单id
      */
     function __construct()

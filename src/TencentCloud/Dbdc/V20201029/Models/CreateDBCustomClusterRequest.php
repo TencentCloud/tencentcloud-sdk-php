@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientToken(string $ClientToken) 设置<p>客户端Token</p>
  * @method boolean getDryRun() 获取<p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
  * @method void setDryRun(boolean $DryRun) 设置<p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
+ * @method boolean getDeletionProtection() 获取<p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul><p>默认值：true</p>
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul><p>默认值：true</p>
  */
 class CreateDBCustomClusterRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateDBCustomClusterRequest extends AbstractModel
     public $DryRun;
 
     /**
+     * @var boolean <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul><p>默认值：true</p>
+     */
+    public $DeletionProtection;
+
+    /**
      * @param ContainerNetwork $ContainerNetwork <p>容器网络，在此集群的所有 POD 与此网络连通</p>
      * @param string $ClusterName <p>集群名称</p><p>入参限制：最长128个字符。</p>
      * @param ApiServerNetwork $ApiServerNetwork <p>集群的API Server的网络信息</p><p>入参限制：必须为此账号下拥有的网络地址，可以与容器网络保持一致。</p>
@@ -80,6 +87,7 @@ class CreateDBCustomClusterRequest extends AbstractModel
      * @param array $Tags <p>集群标签</p>
      * @param string $ClientToken <p>客户端Token</p>
      * @param boolean $DryRun <p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
+     * @param boolean $DeletionProtection <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul><p>默认值：true</p>
      */
     function __construct()
     {
@@ -127,6 +135,10 @@ class CreateDBCustomClusterRequest extends AbstractModel
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

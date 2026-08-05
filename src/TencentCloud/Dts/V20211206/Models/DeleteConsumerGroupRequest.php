@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 请务必保证账户名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
  * @method void setAccountName(string $AccountName) 设置账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。
 请务必保证账户名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
+ * @method string getBackendJobId() 获取
+ * @method void setBackendJobId(string $BackendJobId) 设置
  */
 class DeleteConsumerGroupRequest extends AbstractModel
 {
@@ -54,12 +56,18 @@ class DeleteConsumerGroupRequest extends AbstractModel
     public $AccountName;
 
     /**
+     * @var string 
+     */
+    public $BackendJobId;
+
+    /**
      * @param string $SubscribeId 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
 
      * @param string $ConsumerGroupName 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。
 请务必保证消费组名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
      * @param string $AccountName 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。
 请务必保证账户名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
+     * @param string $BackendJobId 
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DeleteConsumerGroupRequest extends AbstractModel
 
         if (array_key_exists("AccountName",$param) and $param["AccountName"] !== null) {
             $this->AccountName = $param["AccountName"];
+        }
+
+        if (array_key_exists("BackendJobId",$param) and $param["BackendJobId"] !== null) {
+            $this->BackendJobId = $param["BackendJobId"];
         }
     }
 }

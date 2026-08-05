@@ -20,93 +20,93 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据库实例基本信息
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getProduct() 获取数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。
- * @method void setProduct(string $Product) 设置数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。
- * @method string getRegion() 获取地域英文ID。
- * @method void setRegion(string $Region) 设置地域英文ID。
- * @method string getClusterId() 获取集群ID，仅集群类产品返回。
+ * @method string getInstanceId() 获取<p>实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID。</p>
+ * @method string getProduct() 获取<p>数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。</p>
+ * @method void setProduct(string $Product) 设置<p>数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。</p>
+ * @method string getRegion() 获取<p>地域英文ID。</p>
+ * @method void setRegion(string $Region) 设置<p>地域英文ID。</p>
+ * @method string getClusterId() 获取<p>集群ID，仅集群类产品返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterId(string $ClusterId) 设置集群ID，仅集群类产品返回。
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID，仅集群类产品返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineVersion() 获取引擎版本。
+ * @method string getEngineVersion() 获取<p>引擎版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineVersion(string $EngineVersion) 设置引擎版本。
+ * @method void setEngineVersion(string $EngineVersion) 设置<p>引擎版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取实例状态，1表示运行中。
+ * @method integer getStatus() 获取<p>实例状态，1表示运行中。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置实例状态，1表示运行中。
+ * @method void setStatus(integer $Status) 设置<p>实例状态，1表示运行中。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取实例创建时间。
+ * @method string getCreateTime() 获取<p>实例创建时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置实例创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置<p>实例创建时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeadlineTime() 获取实例到期时间。
+ * @method string getDeadlineTime() 获取<p>实例到期时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间。
+ * @method void setDeadlineTime(string $DeadlineTime) 设置<p>实例到期时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceItem extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string <p>实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。
+     * @var string <p>数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。</p>
      */
     public $Product;
 
     /**
-     * @var string 地域英文ID。
+     * @var string <p>地域英文ID。</p>
      */
     public $Region;
 
     /**
-     * @var string 集群ID，仅集群类产品返回。
+     * @var string <p>集群ID，仅集群类产品返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
-     * @var string 引擎版本。
+     * @var string <p>引擎版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineVersion;
 
     /**
-     * @var integer 实例状态，1表示运行中。
+     * @var integer <p>实例状态，1表示运行中。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 实例创建时间。
+     * @var string <p>实例创建时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 实例到期时间。
+     * @var string <p>实例到期时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadlineTime;
 
     /**
-     * @param string $InstanceId 实例ID。
-     * @param string $Product 数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。
-     * @param string $Region 地域英文ID。
-     * @param string $ClusterId 集群ID，仅集群类产品返回。
+     * @param string $InstanceId <p>实例ID。</p>
+     * @param string $Product <p>数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。</p>
+     * @param string $Region <p>地域英文ID。</p>
+     * @param string $ClusterId <p>集群ID，仅集群类产品返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineVersion 引擎版本。
+     * @param string $EngineVersion <p>引擎版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 实例状态，1表示运行中。
+     * @param integer $Status <p>实例状态，1表示运行中。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 实例创建时间。
+     * @param string $CreateTime <p>实例创建时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeadlineTime 实例到期时间。
+     * @param string $DeadlineTime <p>实例到期时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

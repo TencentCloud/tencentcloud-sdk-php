@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkMode(string $NetworkMode) 设置<p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层 SSH 服务联通模式</li><li>cross_tenant_eni：  三层双网卡访问方式</li></ul>
  * @method string getEniIP() 获取<p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
  * @method void setEniIP(string $EniIP) 设置<p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
+ * @method array getSecurityGroupIds() 获取<p>节点绑定的安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>节点绑定的安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBCustomNode extends AbstractModel
 {
@@ -222,6 +226,12 @@ class DBCustomNode extends AbstractModel
     public $EniIP;
 
     /**
+     * @var array <p>节点绑定的安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $NodeId <p>节点ID</p>
      * @param string $NodeName <p>节点名称</p>
      * @param string $SSHEndpoint <p>访问此节点的SSH Endpoint，格式为IP:Port</p>
@@ -252,6 +262,8 @@ class DBCustomNode extends AbstractModel
      * @param string $HostIp <p>底层物理机IP（已加密）</p>
      * @param string $NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层 SSH 服务联通模式</li><li>cross_tenant_eni：  三层双网卡访问方式</li></ul>
      * @param string $EniIP <p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
+     * @param array $SecurityGroupIds <p>节点绑定的安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -383,6 +395,10 @@ class DBCustomNode extends AbstractModel
 
         if (array_key_exists("EniIP",$param) and $param["EniIP"] !== null) {
             $this->EniIP = $param["EniIP"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

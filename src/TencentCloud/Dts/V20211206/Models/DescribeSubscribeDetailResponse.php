@@ -20,241 +20,235 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubscribeDetail返回参数结构体
  *
- * @method string getSubscribeId() 获取数据订阅的ID，形如subs-b6x64o31tm
- * @method void setSubscribeId(string $SubscribeId) 设置数据订阅的ID，形如subs-b6x64o31tm
- * @method string getSubscribeName() 获取数据订阅实例的名称
- * @method void setSubscribeName(string $SubscribeName) 设置数据订阅实例的名称
- * @method string getProduct() 获取订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
- * @method void setProduct(string $Product) 设置订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
- * @method string getInstanceId() 获取订阅的云数据库实例ID，只有订阅云数据库该值才有意义
- * @method void setInstanceId(string $InstanceId) 设置订阅的云数据库实例ID，只有订阅云数据库该值才有意义
- * @method string getInstanceStatus() 获取订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
- * @method void setInstanceStatus(string $InstanceStatus) 设置订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
- * @method string getStatus() 获取订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng
- * @method void setStatus(string $Status) 设置订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng
- * @method string getSubsStatus() 获取订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error
- * @method void setSubsStatus(string $SubsStatus) 设置订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error
- * @method string getModifyTime() 获取修改时间，时间格式如：Y-m-d h:m:s
- * @method void setModifyTime(string $ModifyTime) 设置修改时间，时间格式如：Y-m-d h:m:s
- * @method string getCreateTime() 获取创建时间，时间格式如：Y-m-d h:m:s
- * @method void setCreateTime(string $CreateTime) 设置创建时间，时间格式如：Y-m-d h:m:s
- * @method string getIsolateTime() 获取隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method void setIsolateTime(string $IsolateTime) 设置隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method string getExpireTime() 获取包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method void setExpireTime(string $ExpireTime) 设置包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method string getOfflineTime() 获取下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method void setOfflineTime(string $OfflineTime) 设置下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method integer getPayType() 获取付费方式，可能值为：0-包年包月，1-按量计费
- * @method void setPayType(integer $PayType) 设置付费方式，可能值为：0-包年包月，1-按量计费
- * @method integer getAutoRenewFlag() 获取自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
- * @method string getRegion() 获取任务所在地域
- * @method void setRegion(string $Region) 设置任务所在地域
- * @method string getTopic() 获取Kafka topic
- * @method void setTopic(string $Topic) 设置Kafka topic
- * @method string getBroker() 获取Kafka服务Broker地址
- * @method void setBroker(string $Broker) 设置Kafka服务Broker地址
- * @method string getSubscribeMode() 获取数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
- * @method void setSubscribeMode(string $SubscribeMode) 设置数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
- * @method string getProtocol() 获取订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
- * @method void setProtocol(string $Protocol) 设置订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
- * @method array getSubscribeObjects() 获取订阅的数据库表信息
- * @method void setSubscribeObjects(array $SubscribeObjects) 设置订阅的数据库表信息
- * @method SubscribeKafkaConfig getKafkaConfig() 获取kafka配置信息
- * @method void setKafkaConfig(SubscribeKafkaConfig $KafkaConfig) 设置kafka配置信息
- * @method string getKafkaVersion() 获取订阅内置kafka的版本信息
- * @method void setKafkaVersion(string $KafkaVersion) 设置订阅内置kafka的版本信息
- * @method string getAccessType() 获取源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
- * @method void setAccessType(string $AccessType) 设置源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
- * @method array getEndpoints() 获取接入类型信息
- * @method void setEndpoints(array $Endpoints) 设置接入类型信息
- * @method array getPipelineInfo() 获取mongo输出聚合设置
- * @method void setPipelineInfo(array $PipelineInfo) 设置mongo输出聚合设置
- * @method array getTags() 获取标签
- * @method void setTags(array $Tags) 设置标签
- * @method array getErrors() 获取订阅任务报错信息
+ * @method string getSubscribeId() 获取<p>数据订阅的ID，形如subs-b6x64o31tm</p>
+ * @method void setSubscribeId(string $SubscribeId) 设置<p>数据订阅的ID，形如subs-b6x64o31tm</p>
+ * @method string getSubscribeName() 获取<p>数据订阅实例的名称</p>
+ * @method void setSubscribeName(string $SubscribeName) 设置<p>数据订阅实例的名称</p>
+ * @method string getProduct() 获取<p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
+ * @method void setProduct(string $Product) 设置<p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
+ * @method string getInstanceId() 获取<p>订阅的云数据库实例ID，只有订阅云数据库该值才有意义</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>订阅的云数据库实例ID，只有订阅云数据库该值才有意义</p>
+ * @method string getInstanceStatus() 获取<p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p>
+ * @method void setInstanceStatus(string $InstanceStatus) 设置<p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p>
+ * @method string getStatus() 获取<p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
+ * @method void setStatus(string $Status) 设置<p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
+ * @method string getSubsStatus() 获取<p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
+ * @method void setSubsStatus(string $SubsStatus) 设置<p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
+ * @method string getModifyTime() 获取<p>修改时间。</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间。</p>
+ * @method string getCreateTime() 获取<p>创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。</p>
+ * @method string getIsolateTime() 获取<p>隔离时间。</p>
+ * @method void setIsolateTime(string $IsolateTime) 设置<p>隔离时间。</p>
+ * @method string getExpireTime() 获取<p>包年包月任务的到期时间。</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>包年包月任务的到期时间。</p>
+ * @method string getOfflineTime() 获取<p>下线时间。</p>
+ * @method void setOfflineTime(string $OfflineTime) 设置<p>下线时间。</p>
+ * @method integer getPayType() 获取<p>付费方式，可能值为：0-包年包月，1-按量计费</p>
+ * @method void setPayType(integer $PayType) 设置<p>付费方式，可能值为：0-包年包月，1-按量计费</p>
+ * @method integer getAutoRenewFlag() 获取<p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
+ * @method string getRegion() 获取<p>任务所在地域</p>
+ * @method void setRegion(string $Region) 设置<p>任务所在地域</p>
+ * @method string getTopic() 获取<p>Kafka topic</p>
+ * @method void setTopic(string $Topic) 设置<p>Kafka topic</p>
+ * @method string getBroker() 获取<p>Kafka服务Broker地址</p>
+ * @method void setBroker(string $Broker) 设置<p>Kafka服务Broker地址</p>
+ * @method string getSubscribeMode() 获取<p>数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
+ * @method void setSubscribeMode(string $SubscribeMode) 设置<p>数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
+ * @method string getProtocol() 获取<p>订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档</p>
+ * @method void setProtocol(string $Protocol) 设置<p>订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档</p>
+ * @method array getSubscribeObjects() 获取<p>订阅的数据库表信息</p>
+ * @method void setSubscribeObjects(array $SubscribeObjects) 设置<p>订阅的数据库表信息</p>
+ * @method SubscribeKafkaConfig getKafkaConfig() 获取<p>kafka配置信息</p>
+ * @method void setKafkaConfig(SubscribeKafkaConfig $KafkaConfig) 设置<p>kafka配置信息</p>
+ * @method string getKafkaVersion() 获取<p>订阅内置kafka的版本信息</p>
+ * @method void setKafkaVersion(string $KafkaVersion) 设置<p>订阅内置kafka的版本信息</p>
+ * @method string getAccessType() 获取<p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
+ * @method void setAccessType(string $AccessType) 设置<p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
+ * @method array getEndpoints() 获取<p>接入类型信息</p>
+ * @method void setEndpoints(array $Endpoints) 设置<p>接入类型信息</p>
+ * @method array getPipelineInfo() 获取<p>mongo输出聚合设置</p>
+ * @method void setPipelineInfo(array $PipelineInfo) 设置<p>mongo输出聚合设置</p>
+ * @method array getTags() 获取<p>标签</p>
+ * @method void setTags(array $Tags) 设置<p>标签</p>
+ * @method array getErrors() 获取<p>订阅任务报错信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrors(array $Errors) 设置订阅任务报错信息
+ * @method void setErrors(array $Errors) 设置<p>订阅任务报错信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getExtraAttr() 获取为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
- * @method void setExtraAttr(array $ExtraAttr) 设置为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
- * @method string getSubscribeVersion() 获取数据订阅版本, 当前支持kafka和kafkaPro（专业版）
- * @method void setSubscribeVersion(string $SubscribeVersion) 设置数据订阅版本, 当前支持kafka和kafkaPro（专业版）
- * @method string getConsumerVpcId() 获取消费端地址所在vpc
- * @method void setConsumerVpcId(string $ConsumerVpcId) 设置消费端地址所在vpc
- * @method string getConsumerSubnetId() 获取消费端地址所在子网
- * @method void setConsumerSubnetId(string $ConsumerSubnetId) 设置消费端地址所在子网
- * @method string getInstanceClass() 获取订阅实例规格
- * @method void setInstanceClass(string $InstanceClass) 设置订阅实例规格
+ * @method array getExtraAttr() 获取<p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。</p>
+ * @method void setExtraAttr(array $ExtraAttr) 设置<p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。</p>
+ * @method string getSubscribeVersion() 获取<p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
+ * @method void setSubscribeVersion(string $SubscribeVersion) 设置<p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
+ * @method string getConsumerVpcId() 获取<p>消费端地址所在vpc</p>
+ * @method void setConsumerVpcId(string $ConsumerVpcId) 设置<p>消费端地址所在vpc</p>
+ * @method string getConsumerSubnetId() 获取<p>消费端地址所在子网</p>
+ * @method void setConsumerSubnetId(string $ConsumerSubnetId) 设置<p>消费端地址所在子网</p>
+ * @method string getInstanceClass() 获取<p>订阅实例规格</p>
+ * @method void setInstanceClass(string $InstanceClass) 设置<p>订阅实例规格</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSubscribeDetailResponse extends AbstractModel
 {
     /**
-     * @var string 数据订阅的ID，形如subs-b6x64o31tm
+     * @var string <p>数据订阅的ID，形如subs-b6x64o31tm</p>
      */
     public $SubscribeId;
 
     /**
-     * @var string 数据订阅实例的名称
+     * @var string <p>数据订阅实例的名称</p>
      */
     public $SubscribeName;
 
     /**
-     * @var string 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
+     * @var string <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
      */
     public $Product;
 
     /**
-     * @var string 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
+     * @var string <p>订阅的云数据库实例ID，只有订阅云数据库该值才有意义</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
+     * @var string <p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string 订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng
+     * @var string <p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
      */
     public $Status;
 
     /**
-     * @var string 订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error
+     * @var string <p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
      */
     public $SubsStatus;
 
     /**
-     * @var string 修改时间，时间格式如：Y-m-d h:m:s
+     * @var string <p>修改时间。</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 创建时间，时间格式如：Y-m-d h:m:s
+     * @var string <p>创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * @var string <p>隔离时间。</p>
      */
     public $IsolateTime;
 
     /**
-     * @var string 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * @var string <p>包年包月任务的到期时间。</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * @var string <p>下线时间。</p>
      */
     public $OfflineTime;
 
     /**
-     * @var integer 付费方式，可能值为：0-包年包月，1-按量计费
+     * @var integer <p>付费方式，可能值为：0-包年包月，1-按量计费</p>
      */
     public $PayType;
 
     /**
-     * @var integer 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
+     * @var integer <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 任务所在地域
+     * @var string <p>任务所在地域</p>
      */
     public $Region;
 
     /**
-     * @var string Kafka topic
+     * @var string <p>Kafka topic</p>
      */
     public $Topic;
 
     /**
-     * @var string Kafka服务Broker地址
+     * @var string <p>Kafka服务Broker地址</p>
      */
     public $Broker;
 
     /**
-     * @var string 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
+     * @var string <p>数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
      */
     public $SubscribeMode;
 
     /**
-     * @var string 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
+     * @var string <p>订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档</p>
      */
     public $Protocol;
 
     /**
-     * @var array 订阅的数据库表信息
+     * @var array <p>订阅的数据库表信息</p>
      */
     public $SubscribeObjects;
 
     /**
-     * @var SubscribeKafkaConfig kafka配置信息
+     * @var SubscribeKafkaConfig <p>kafka配置信息</p>
      */
     public $KafkaConfig;
 
     /**
-     * @var string 订阅内置kafka的版本信息
+     * @var string <p>订阅内置kafka的版本信息</p>
      */
     public $KafkaVersion;
 
     /**
-     * @var string 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
+     * @var string <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
      */
     public $AccessType;
 
     /**
-     * @var array 接入类型信息
+     * @var array <p>接入类型信息</p>
      */
     public $Endpoints;
 
     /**
-     * @var array mongo输出聚合设置
+     * @var array <p>mongo输出聚合设置</p>
      */
     public $PipelineInfo;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
      */
     public $Tags;
 
     /**
-     * @var array 订阅任务报错信息
+     * @var array <p>订阅任务报错信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errors;
 
     /**
-     * @var array 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
+     * @var array <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。</p>
      */
     public $ExtraAttr;
 
     /**
-     * @var string 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     * @var string <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
      */
     public $SubscribeVersion;
 
     /**
-     * @var string 消费端地址所在vpc
+     * @var string <p>消费端地址所在vpc</p>
      */
     public $ConsumerVpcId;
 
     /**
-     * @var string 消费端地址所在子网
+     * @var string <p>消费端地址所在子网</p>
      */
     public $ConsumerSubnetId;
 
     /**
-     * @var string 订阅实例规格
+     * @var string <p>订阅实例规格</p>
      */
     public $InstanceClass;
 
@@ -264,41 +258,39 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     public $RequestId;
 
     /**
-     * @param string $SubscribeId 数据订阅的ID，形如subs-b6x64o31tm
-     * @param string $SubscribeName 数据订阅实例的名称
-     * @param string $Product 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
-     * @param string $InstanceId 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
-     * @param string $InstanceStatus 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
-     * @param string $Status 订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng
-     * @param string $SubsStatus 订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error
-     * @param string $ModifyTime 修改时间，时间格式如：Y-m-d h:m:s
-     * @param string $CreateTime 创建时间，时间格式如：Y-m-d h:m:s
-     * @param string $IsolateTime 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param string $ExpireTime 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param string $OfflineTime 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param integer $PayType 付费方式，可能值为：0-包年包月，1-按量计费
-     * @param integer $AutoRenewFlag 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
-     * @param string $Region 任务所在地域
-     * @param string $Topic Kafka topic
-     * @param string $Broker Kafka服务Broker地址
-     * @param string $SubscribeMode 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
-     * @param string $Protocol 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
-     * @param array $SubscribeObjects 订阅的数据库表信息
-     * @param SubscribeKafkaConfig $KafkaConfig kafka配置信息
-     * @param string $KafkaVersion 订阅内置kafka的版本信息
-     * @param string $AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
-     * @param array $Endpoints 接入类型信息
-     * @param array $PipelineInfo mongo输出聚合设置
-     * @param array $Tags 标签
-     * @param array $Errors 订阅任务报错信息
+     * @param string $SubscribeId <p>数据订阅的ID，形如subs-b6x64o31tm</p>
+     * @param string $SubscribeName <p>数据订阅实例的名称</p>
+     * @param string $Product <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
+     * @param string $InstanceId <p>订阅的云数据库实例ID，只有订阅云数据库该值才有意义</p>
+     * @param string $InstanceStatus <p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p>
+     * @param string $Status <p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
+     * @param string $SubsStatus <p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
+     * @param string $ModifyTime <p>修改时间。</p>
+     * @param string $CreateTime <p>创建时间。</p>
+     * @param string $IsolateTime <p>隔离时间。</p>
+     * @param string $ExpireTime <p>包年包月任务的到期时间。</p>
+     * @param string $OfflineTime <p>下线时间。</p>
+     * @param integer $PayType <p>付费方式，可能值为：0-包年包月，1-按量计费</p>
+     * @param integer $AutoRenewFlag <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
+     * @param string $Region <p>任务所在地域</p>
+     * @param string $Topic <p>Kafka topic</p>
+     * @param string $Broker <p>Kafka服务Broker地址</p>
+     * @param string $SubscribeMode <p>数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
+     * @param string $Protocol <p>订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档</p>
+     * @param array $SubscribeObjects <p>订阅的数据库表信息</p>
+     * @param SubscribeKafkaConfig $KafkaConfig <p>kafka配置信息</p>
+     * @param string $KafkaVersion <p>订阅内置kafka的版本信息</p>
+     * @param string $AccessType <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
+     * @param array $Endpoints <p>接入类型信息</p>
+     * @param array $PipelineInfo <p>mongo输出聚合设置</p>
+     * @param array $Tags <p>标签</p>
+     * @param array $Errors <p>订阅任务报错信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
-     * @param string $SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
-     * @param string $ConsumerVpcId 消费端地址所在vpc
-     * @param string $ConsumerSubnetId 消费端地址所在子网
-     * @param string $InstanceClass 订阅实例规格
+     * @param array $ExtraAttr <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。</p>
+     * @param string $SubscribeVersion <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
+     * @param string $ConsumerVpcId <p>消费端地址所在vpc</p>
+     * @param string $ConsumerSubnetId <p>消费端地址所在子网</p>
+     * @param string $InstanceClass <p>订阅实例规格</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

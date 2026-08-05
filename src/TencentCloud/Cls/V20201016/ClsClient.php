@@ -107,6 +107,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteHostMetricConfigResponse DeleteHostMetricConfig(Models\DeleteHostMetricConfigRequest $req) 删除主机指标采集配置
  * @method Models\DeleteIndexResponse DeleteIndex(Models\DeleteIndexRequest $req) 本接口用于删除日志主题的索引配置，删除索引配置后将无法检索和查询采集到的日志。
  * @method Models\DeleteKafkaRechargeResponse DeleteKafkaRecharge(Models\DeleteKafkaRechargeRequest $req) 本接口用于删除Kafka数据订阅任务
+ * @method Models\DeleteLogResponse DeleteLog(Models\DeleteLogRequest $req) 修改日志信息
  * @method Models\DeleteLogsetResponse DeleteLogset(Models\DeleteLogsetRequest $req) 本接口用于删除日志集。
  * @method Models\DeleteMachineGroupResponse DeleteMachineGroup(Models\DeleteMachineGroupRequest $req) 删除机器组
  * @method Models\DeleteMachineGroupInfoResponse DeleteMachineGroupInfo(Models\DeleteMachineGroupInfoRequest $req) 用于删除机器组信息
@@ -216,6 +217,7 @@ API 中 Region 填写任意一个地域均可，建议使用广州(ap-guangzhou)
  * @method Models\ModifyKafkaConsumerResponse ModifyKafkaConsumer(Models\ModifyKafkaConsumerRequest $req) 修改Kafka协议消费信息
  * @method Models\ModifyKafkaConsumerGroupOffsetResponse ModifyKafkaConsumerGroupOffset(Models\ModifyKafkaConsumerGroupOffsetRequest $req) 修改Kafka协议消费组点位
  * @method Models\ModifyKafkaRechargeResponse ModifyKafkaRecharge(Models\ModifyKafkaRechargeRequest $req) 本接口用于修改Kafka数据订阅任务
+ * @method Models\ModifyLogResponse ModifyLog(Models\ModifyLogRequest $req) 修改日志信息
  * @method Models\ModifyLogsetResponse ModifyLogset(Models\ModifyLogsetRequest $req) 本接口用于修改日志集信息
  * @method Models\ModifyMachineGroupResponse ModifyMachineGroup(Models\ModifyMachineGroupRequest $req) 修改机器组。
 注意：修改接口直接覆盖历史数据，改为本次合法入参数据，请谨慎调用此接口。

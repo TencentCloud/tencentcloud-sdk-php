@@ -44,7 +44,8 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateAsrHotwordsResponse CreateAsrHotwords(Models\CreateAsrHotwordsRequest $req) 智能字幕新建热词库接口
  * @method Models\CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(Models\CreateBlindWatermarkTemplateRequest $req) 创建用户自定义数字水印模板。
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) 创建用户自定义内容审核模板，数量上限：50。
- * @method Models\CreateDocToVideoTaskResponse CreateDocToVideoTask(Models\CreateDocToVideoTaskRequest $req) 创建 AiGC 文档生成视频任务
+ * @method Models\CreateDocToVideoTaskResponse CreateDocToVideoTask(Models\CreateDocToVideoTaskRequest $req) 创建 AIGC 文档生成视频任务
+（使用 DescribeAigcTaskStatus 接口进行任务查询）
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) 创建用户自定义雪碧图模板，数量上限：16。
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) 创建直播录制模板
  * @method Models\CreateMediaEvaluationResponse CreateMediaEvaluation(Models\CreateMediaEvaluationRequest $req) 发起视频评测任务，功能包括：

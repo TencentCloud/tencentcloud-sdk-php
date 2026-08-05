@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelImage(ModelImage $ModelImage) 设置<p>模型图标。</p>
  * @method string getProvider() 获取<p>模型供应商。</p>
  * @method void setProvider(string $Provider) 设置<p>模型供应商。</p>
- * @method string getStatus() 获取<p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li></ul>
- * @method void setStatus(string $Status) 设置<p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li></ul>
+ * @method string getStatus() 获取<p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
+ * @method void setStatus(string $Status) 设置<p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
  * @method array getTags() 获取<p>标签列表。</p>
  * @method void setTags(array $Tags) 设置<p>标签列表。</p>
  * @method array getModelChargingInfo() 获取<p>计费信息列表。</p>
@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFreeTrialInfo(ModelFreeTrialInfo $FreeTrialInfo) 设置<p>体验包信息。</p>
  * @method string getOfflineAt() 获取<p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
  * @method void setOfflineAt(string $OfflineAt) 设置<p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+ * @method string getDiscontinuedAt() 获取<p>停止新购时间</p>
+ * @method void setDiscontinuedAt(string $DiscontinuedAt) 设置<p>停止新购时间</p>
  */
 class Model extends AbstractModel
 {
@@ -105,7 +107,7 @@ class Model extends AbstractModel
     public $Provider;
 
     /**
-     * @var string <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li></ul>
+     * @var string <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
      */
     public $Status;
 
@@ -150,6 +152,11 @@ class Model extends AbstractModel
     public $OfflineAt;
 
     /**
+     * @var string <p>停止新购时间</p>
+     */
+    public $DiscontinuedAt;
+
+    /**
      * @param string $ModelName <p>模型名称</p>
      * @param string $ModelId <p>模型 ID。</p>
      * @param string $DisplayName <p>模型显示名称。</p>
@@ -159,7 +166,7 @@ class Model extends AbstractModel
      * @param string $Brand <p>模型品牌。</p>
      * @param ModelImage $ModelImage <p>模型图标。</p>
      * @param string $Provider <p>模型供应商。</p>
-     * @param string $Status <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li></ul>
+     * @param string $Status <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
      * @param array $Tags <p>标签列表。</p>
      * @param array $ModelChargingInfo <p>计费信息列表。</p>
      * @param ModelSpec $ModelSpec <p>模型规格。</p>
@@ -168,6 +175,7 @@ class Model extends AbstractModel
      * @param ModelAccessInfo $ModelAccessInfo <p>模型访问信息。包含模型在各站点和地域的可用性配置。为空时表示未配置地域信息，模型不可用。</p>
      * @param ModelFreeTrialInfo $FreeTrialInfo <p>体验包信息。</p>
      * @param string $OfflineAt <p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+     * @param string $DiscontinuedAt <p>停止新购时间</p>
      */
     function __construct()
     {
@@ -261,6 +269,10 @@ class Model extends AbstractModel
 
         if (array_key_exists("OfflineAt",$param) and $param["OfflineAt"] !== null) {
             $this->OfflineAt = $param["OfflineAt"];
+        }
+
+        if (array_key_exists("DiscontinuedAt",$param) and $param["DiscontinuedAt"] !== null) {
+            $this->DiscontinuedAt = $param["DiscontinuedAt"];
         }
     }
 }

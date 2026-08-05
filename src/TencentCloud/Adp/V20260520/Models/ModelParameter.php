@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型超参
  *
- * @method string getDefaultValue() 获取默认值
- * @method void setDefaultValue(string $DefaultValue) 设置默认值
- * @method array getEnumValueList() 获取可选值列表
- * @method void setEnumValueList(array $EnumValueList) 设置可选值列表
- * @method float getMaxValue() 获取最大值（仅数值类型有效）
- * @method void setMaxValue(float $MaxValue) 设置最大值（仅数值类型有效）
- * @method float getMinValue() 获取最小值（仅数值类型有效）
- * @method void setMinValue(float $MinValue) 设置最小值（仅数值类型有效）
- * @method string getName() 获取超参名称
- * @method void setName(string $Name) 设置超参名称
- * @method integer getType() 获取超参类型。1-浮点数, 2-整数, 3-字符串
- * @method void setType(integer $Type) 设置超参类型。1-浮点数, 2-整数, 3-字符串
+ * @method string getDefaultValue() 获取<p>默认值</p>
+ * @method void setDefaultValue(string $DefaultValue) 设置<p>默认值</p>
+ * @method array getEnumValueList() 获取<p>可选值列表</p>
+ * @method void setEnumValueList(array $EnumValueList) 设置<p>可选值列表</p>
+ * @method float getMaxValue() 获取<p>最大值（仅数值类型有效）</p>
+ * @method void setMaxValue(float $MaxValue) 设置<p>最大值（仅数值类型有效）</p>
+ * @method float getMinValue() 获取<p>最小值（仅数值类型有效）</p>
+ * @method void setMinValue(float $MinValue) 设置<p>最小值（仅数值类型有效）</p>
+ * @method string getName() 获取<p>超参名称</p>
+ * @method void setName(string $Name) 设置<p>超参名称</p>
+ * @method integer getType() 获取<p>超参类型。1-浮点数, 2-整数, 3-字符串</p>
+ * @method void setType(integer $Type) 设置<p>超参类型。1-浮点数, 2-整数, 3-字符串</p>
  */
 class ModelParameter extends AbstractModel
 {
     /**
-     * @var string 默认值
+     * @var string <p>默认值</p>
      */
     public $DefaultValue;
 
     /**
-     * @var array 可选值列表
+     * @var array <p>可选值列表</p>
      */
     public $EnumValueList;
 
     /**
-     * @var float 最大值（仅数值类型有效）
+     * @var float <p>最大值（仅数值类型有效）</p>
      */
     public $MaxValue;
 
     /**
-     * @var float 最小值（仅数值类型有效）
+     * @var float <p>最小值（仅数值类型有效）</p>
      */
     public $MinValue;
 
     /**
-     * @var string 超参名称
+     * @var string <p>超参名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 超参类型。1-浮点数, 2-整数, 3-字符串
+     * @var integer <p>超参类型。1-浮点数, 2-整数, 3-字符串</p>
      */
     public $Type;
 
     /**
-     * @param string $DefaultValue 默认值
-     * @param array $EnumValueList 可选值列表
-     * @param float $MaxValue 最大值（仅数值类型有效）
-     * @param float $MinValue 最小值（仅数值类型有效）
-     * @param string $Name 超参名称
-     * @param integer $Type 超参类型。1-浮点数, 2-整数, 3-字符串
+     * @param string $DefaultValue <p>默认值</p>
+     * @param array $EnumValueList <p>可选值列表</p>
+     * @param float $MaxValue <p>最大值（仅数值类型有效）</p>
+     * @param float $MinValue <p>最小值（仅数值类型有效）</p>
+     * @param string $Name <p>超参名称</p>
+     * @param integer $Type <p>超参类型。1-浮点数, 2-整数, 3-字符串</p>
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDescribeOrganizationSeals返回参数结构体
  *
- * @method integer getTotalCount() 获取在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量
- * @method void setTotalCount(integer $TotalCount) 设置在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量
- * @method array getSeals() 获取查询到的印章结果数组
- * @method void setSeals(array $Seals) 设置查询到的印章结果数组
+ * @method integer getTotalCount() 获取<p>在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量</p>
+ * @method array getSeals() 获取<p>查询到的印章结果数组</p>
+ * @method void setSeals(array $Seals) 设置<p>查询到的印章结果数组</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelDescribeOrganizationSealsResponse extends AbstractModel
 {
     /**
-     * @var integer 在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量
+     * @var integer <p>在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 查询到的印章结果数组
+     * @var array <p>查询到的印章结果数组</p>
      */
     public $Seals;
 
@@ -45,8 +45,8 @@ class ChannelDescribeOrganizationSealsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量
-     * @param array $Seals 查询到的印章结果数组
+     * @param integer $TotalCount <p>在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量</p>
+     * @param array $Seals <p>查询到的印章结果数组</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

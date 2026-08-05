@@ -20,47 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDocument返回参数结构体
  *
- * @method string getDocumentId() 获取合同流程的底层电子文档ID，为32位字符串。
-
-注:
-后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
- * @method void setDocumentId(string $DocumentId) 设置合同流程的底层电子文档ID，为32位字符串。
-
-注:
-后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
- * @method string getPreviewFileUrl() 获取合同预览链接URL。
-
-注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
-`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取。
- * @method void setPreviewFileUrl(string $PreviewFileUrl) 设置合同预览链接URL。
-
-注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
-`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取。
- * @method array getApprovers() 获取签署方信息，如角色ID、角色名称等
- * @method void setApprovers(array $Approvers) 设置签署方信息，如角色ID、角色名称等
+ * @method string getDocumentId() 获取<p>合同流程的底层电子文档ID，为32位字符串。</p><p>注:<br>后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow">发起签署流程</a>，合同才能进入签署环节</p>
+ * @method void setDocumentId(string $DocumentId) 设置<p>合同流程的底层电子文档ID，为32位字符串。</p><p>注:<br>后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow">发起签署流程</a>，合同才能进入签署环节</p>
+ * @method string getPreviewFileUrl() 获取<p>合同预览链接URL。</p><p>注: <code>1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</code><br>`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取。</p>
+ * @method void setPreviewFileUrl(string $PreviewFileUrl) 设置<p>合同预览链接URL。</p><p>注: <code>1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</code><br>`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取。</p>
+ * @method array getApprovers() 获取<p>签署方信息，如角色ID、角色名称等</p>
+ * @method void setApprovers(array $Approvers) 设置<p>签署方信息，如角色ID、角色名称等</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateDocumentResponse extends AbstractModel
 {
     /**
-     * @var string 合同流程的底层电子文档ID，为32位字符串。
-
-注:
-后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
+     * @var string <p>合同流程的底层电子文档ID，为32位字符串。</p><p>注:<br>后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow">发起签署流程</a>，合同才能进入签署环节</p>
      */
     public $DocumentId;
 
     /**
-     * @var string 合同预览链接URL。
-
-注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
-`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取。
+     * @var string <p>合同预览链接URL。</p><p>注: <code>1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</code><br>`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取。</p>
      */
     public $PreviewFileUrl;
 
     /**
-     * @var array 签署方信息，如角色ID、角色名称等
+     * @var array <p>签署方信息，如角色ID、角色名称等</p>
      */
     public $Approvers;
 
@@ -70,15 +52,9 @@ class CreateDocumentResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DocumentId 合同流程的底层电子文档ID，为32位字符串。
-
-注:
-后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
-     * @param string $PreviewFileUrl 合同预览链接URL。
-
-注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
-`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取。
-     * @param array $Approvers 签署方信息，如角色ID、角色名称等
+     * @param string $DocumentId <p>合同流程的底层电子文档ID，为32位字符串。</p><p>注:<br>后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow">发起签署流程</a>，合同才能进入签署环节</p>
+     * @param string $PreviewFileUrl <p>合同预览链接URL。</p><p>注: <code>1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</code><br>`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取。</p>
+     * @param array $Approvers <p>签署方信息，如角色ID、角色名称等</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

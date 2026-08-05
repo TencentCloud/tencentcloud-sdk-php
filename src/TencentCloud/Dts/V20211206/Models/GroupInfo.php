@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * kafka消费者组详情
  *
- * @method string getAccount() 获取消费者组账号
- * @method void setAccount(string $Account) 设置消费者组账号
- * @method string getConsumerGroupName() 获取消费者组名称
- * @method void setConsumerGroupName(string $ConsumerGroupName) 设置消费者组名称
- * @method string getDescription() 获取消费者组备注
- * @method void setDescription(string $Description) 设置消费者组备注
- * @method integer getConsumerGroupOffset() 获取消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段
- * @method void setConsumerGroupOffset(integer $ConsumerGroupOffset) 设置消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段
- * @method integer getConsumerGroupLag() 获取消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段
- * @method void setConsumerGroupLag(integer $ConsumerGroupLag) 设置消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段
- * @method integer getLatency() 获取消费延迟(单位为秒)
- * @method void setLatency(integer $Latency) 设置消费延迟(单位为秒)
- * @method array getStateOfPartition() 获取各分区的消费状态
- * @method void setStateOfPartition(array $StateOfPartition) 设置各分区的消费状态
- * @method string getCreatedAt() 获取消费者组创建时间，格式为YYYY-MM-DD hh:mm:ss
- * @method void setCreatedAt(string $CreatedAt) 设置消费者组创建时间，格式为YYYY-MM-DD hh:mm:ss
- * @method string getUpdatedAt() 获取消费者组修改时间，格式为YYYY-MM-DD hh:mm:ss
- * @method void setUpdatedAt(string $UpdatedAt) 设置消费者组修改时间，格式为YYYY-MM-DD hh:mm:ss
- * @method string getConsumerGroupState() 获取消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作
- * @method void setConsumerGroupState(string $ConsumerGroupState) 设置消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作
- * @method array getPartitionAssignment() 获取每个消费者正在消费的分区
- * @method void setPartitionAssignment(array $PartitionAssignment) 设置每个消费者正在消费的分区
+ * @method string getAccount() 获取<p>消费者组账号</p>
+ * @method void setAccount(string $Account) 设置<p>消费者组账号</p>
+ * @method string getConsumerGroupName() 获取<p>消费者组名称</p>
+ * @method void setConsumerGroupName(string $ConsumerGroupName) 设置<p>消费者组名称</p>
+ * @method string getDescription() 获取<p>消费者组备注</p>
+ * @method void setDescription(string $Description) 设置<p>消费者组备注</p>
+ * @method integer getConsumerGroupOffset() 获取<p>消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段</p>
+ * @method void setConsumerGroupOffset(integer $ConsumerGroupOffset) 设置<p>消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段</p>
+ * @method integer getConsumerGroupLag() 获取<p>消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段</p>
+ * @method void setConsumerGroupLag(integer $ConsumerGroupLag) 设置<p>消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段</p>
+ * @method integer getLatency() 获取<p>消费延迟(单位为秒)</p>
+ * @method void setLatency(integer $Latency) 设置<p>消费延迟(单位为秒)</p>
+ * @method array getStateOfPartition() 获取<p>各分区的消费状态</p>
+ * @method void setStateOfPartition(array $StateOfPartition) 设置<p>各分区的消费状态</p>
+ * @method string getCreatedAt() 获取<p>消费者组创建时间。</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>消费者组创建时间。</p>
+ * @method string getUpdatedAt() 获取<p>消费者组修改时间。</p>
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>消费者组修改时间。</p>
+ * @method string getConsumerGroupState() 获取<p>消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作</p>
+ * @method void setConsumerGroupState(string $ConsumerGroupState) 设置<p>消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作</p>
+ * @method array getPartitionAssignment() 获取<p>每个消费者正在消费的分区</p>
+ * @method void setPartitionAssignment(array $PartitionAssignment) 设置<p>每个消费者正在消费的分区</p>
  */
 class GroupInfo extends AbstractModel
 {
     /**
-     * @var string 消费者组账号
+     * @var string <p>消费者组账号</p>
      */
     public $Account;
 
     /**
-     * @var string 消费者组名称
+     * @var string <p>消费者组名称</p>
      */
     public $ConsumerGroupName;
 
     /**
-     * @var string 消费者组备注
+     * @var string <p>消费者组备注</p>
      */
     public $Description;
 
     /**
-     * @var integer 消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段
+     * @var integer <p>消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段</p>
      */
     public $ConsumerGroupOffset;
 
     /**
-     * @var integer 消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段
+     * @var integer <p>消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段</p>
      */
     public $ConsumerGroupLag;
 
     /**
-     * @var integer 消费延迟(单位为秒)
+     * @var integer <p>消费延迟(单位为秒)</p>
      */
     public $Latency;
 
     /**
-     * @var array 各分区的消费状态
+     * @var array <p>各分区的消费状态</p>
      */
     public $StateOfPartition;
 
     /**
-     * @var string 消费者组创建时间，格式为YYYY-MM-DD hh:mm:ss
+     * @var string <p>消费者组创建时间。</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string 消费者组修改时间，格式为YYYY-MM-DD hh:mm:ss
+     * @var string <p>消费者组修改时间。</p>
      */
     public $UpdatedAt;
 
     /**
-     * @var string 消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作
+     * @var string <p>消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作</p>
      */
     public $ConsumerGroupState;
 
     /**
-     * @var array 每个消费者正在消费的分区
+     * @var array <p>每个消费者正在消费的分区</p>
      */
     public $PartitionAssignment;
 
     /**
-     * @param string $Account 消费者组账号
-     * @param string $ConsumerGroupName 消费者组名称
-     * @param string $Description 消费者组备注
-     * @param integer $ConsumerGroupOffset 消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段
-     * @param integer $ConsumerGroupLag 消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段
-     * @param integer $Latency 消费延迟(单位为秒)
-     * @param array $StateOfPartition 各分区的消费状态
-     * @param string $CreatedAt 消费者组创建时间，格式为YYYY-MM-DD hh:mm:ss
-     * @param string $UpdatedAt 消费者组修改时间，格式为YYYY-MM-DD hh:mm:ss
-     * @param string $ConsumerGroupState 消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作
-     * @param array $PartitionAssignment 每个消费者正在消费的分区
+     * @param string $Account <p>消费者组账号</p>
+     * @param string $ConsumerGroupName <p>消费者组名称</p>
+     * @param string $Description <p>消费者组备注</p>
+     * @param integer $ConsumerGroupOffset <p>消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段</p>
+     * @param integer $ConsumerGroupLag <p>消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段</p>
+     * @param integer $Latency <p>消费延迟(单位为秒)</p>
+     * @param array $StateOfPartition <p>各分区的消费状态</p>
+     * @param string $CreatedAt <p>消费者组创建时间。</p>
+     * @param string $UpdatedAt <p>消费者组修改时间。</p>
+     * @param string $ConsumerGroupState <p>消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作</p>
+     * @param array $PartitionAssignment <p>每个消费者正在消费的分区</p>
      */
     function __construct()
     {

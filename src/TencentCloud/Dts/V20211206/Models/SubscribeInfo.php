@@ -20,194 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 订阅实例信息
  *
- * @method string getSubscribeId() 获取数据订阅的实例ID
- * @method void setSubscribeId(string $SubscribeId) 设置数据订阅的实例ID
- * @method string getSubscribeName() 获取数据订阅实例的名称
- * @method void setSubscribeName(string $SubscribeName) 设置数据订阅实例的名称
- * @method string getTopic() 获取订阅实例发送数据的kafka topic
- * @method void setTopic(string $Topic) 设置订阅实例发送数据的kafka topic
- * @method string getProduct() 获取订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
- * @method void setProduct(string $Product) 设置订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
- * @method string getInstanceId() 获取订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
- * @method void setInstanceId(string $InstanceId) 设置订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
- * @method string getInstanceStatus() 获取云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
- * @method void setInstanceStatus(string $InstanceStatus) 设置云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
- * @method string getStatus() 获取数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng
- * @method void setStatus(string $Status) 设置数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng
- * @method string getSubsStatus() 获取数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
- * @method void setSubsStatus(string $SubsStatus) 设置数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
- * @method string getModifyTime() 获取上次修改时间，时间格式如：Y-m-d h:m:s
- * @method void setModifyTime(string $ModifyTime) 设置上次修改时间，时间格式如：Y-m-d h:m:s
- * @method string getCreateTime() 获取创建时间，时间格式如：Y-m-d h:m:s
- * @method void setCreateTime(string $CreateTime) 设置创建时间，时间格式如：Y-m-d h:m:s
- * @method string getIsolateTime() 获取隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method void setIsolateTime(string $IsolateTime) 设置隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method string getExpireTime() 获取包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method void setExpireTime(string $ExpireTime) 设置包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method string getOfflineTime() 获取下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method void setOfflineTime(string $OfflineTime) 设置下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
- * @method integer getPayType() 获取计费方式，0 - 包年包月，1 - 按量计费
- * @method void setPayType(integer $PayType) 设置计费方式，0 - 包年包月，1 - 按量计费
- * @method integer getAutoRenewFlag() 获取自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
- * @method string getRegion() 获取数据订阅实例所属地域
- * @method void setRegion(string $Region) 设置数据订阅实例所属地域
- * @method string getAccessType() 获取接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
- * @method void setAccessType(string $AccessType) 设置接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
- * @method array getEndpoints() 获取数据库节点信息
- * @method void setEndpoints(array $Endpoints) 设置数据库节点信息
- * @method string getSubscribeVersion() 获取数据订阅版本, 当前支持kafka和kafkaPro（专业版）
- * @method void setSubscribeVersion(string $SubscribeVersion) 设置数据订阅版本, 当前支持kafka和kafkaPro（专业版）
- * @method array getTags() 获取标签
+ * @method string getSubscribeId() 获取<p>数据订阅的实例ID</p>
+ * @method void setSubscribeId(string $SubscribeId) 设置<p>数据订阅的实例ID</p>
+ * @method string getSubscribeName() 获取<p>数据订阅实例的名称</p>
+ * @method void setSubscribeName(string $SubscribeName) 设置<p>数据订阅实例的名称</p>
+ * @method string getTopic() 获取<p>订阅实例发送数据的kafka topic</p>
+ * @method void setTopic(string $Topic) 设置<p>订阅实例发送数据的kafka topic</p>
+ * @method string getProduct() 获取<p>订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
+ * @method void setProduct(string $Product) 设置<p>订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
+ * @method string getInstanceId() 获取<p>订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。</p>
+ * @method string getInstanceStatus() 获取<p>云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空</p>
+ * @method void setInstanceStatus(string $InstanceStatus) 设置<p>云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空</p>
+ * @method string getStatus() 获取<p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng</p>
+ * @method void setStatus(string $Status) 设置<p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng</p>
+ * @method string getSubsStatus() 获取<p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
+ * @method void setSubsStatus(string $SubsStatus) 设置<p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
+ * @method string getModifyTime() 获取<p>上次修改时间，时间格式如：Y-m-d h:m:s</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>上次修改时间，时间格式如：Y-m-d h:m:s</p>
+ * @method string getCreateTime() 获取<p>创建时间，时间格式如：Y-m-d h:m:s</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，时间格式如：Y-m-d h:m:s</p>
+ * @method string getIsolateTime() 获取<p>隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+ * @method void setIsolateTime(string $IsolateTime) 设置<p>隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+ * @method string getExpireTime() 获取<p>包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+ * @method string getOfflineTime() 获取<p>下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+ * @method void setOfflineTime(string $OfflineTime) 设置<p>下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+ * @method integer getPayType() 获取<p>计费方式，0 - 包年包月，1 - 按量计费</p>
+ * @method void setPayType(integer $PayType) 设置<p>计费方式，0 - 包年包月，1 - 按量计费</p>
+ * @method integer getAutoRenewFlag() 获取<p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
+ * @method string getRegion() 获取<p>数据订阅实例所属地域</p>
+ * @method void setRegion(string $Region) 设置<p>数据订阅实例所属地域</p>
+ * @method string getAccessType() 获取<p>接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)</p>
+ * @method void setAccessType(string $AccessType) 设置<p>接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)</p>
+ * @method array getEndpoints() 获取<p>数据库节点信息</p>
+ * @method void setEndpoints(array $Endpoints) 设置<p>数据库节点信息</p>
+ * @method string getSubscribeVersion() 获取<p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
+ * @method void setSubscribeVersion(string $SubscribeVersion) 设置<p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
+ * @method array getTags() 获取<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置标签
+ * @method void setTags(array $Tags) 设置<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getErrors() 获取任务报错信息，如果有的话。
+ * @method array getErrors() 获取<p>任务报错信息，如果有的话。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrors(array $Errors) 设置任务报错信息，如果有的话。
+ * @method void setErrors(array $Errors) 设置<p>任务报错信息，如果有的话。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceClass() 获取订阅实例规格
- * @method void setInstanceClass(string $InstanceClass) 设置订阅实例规格
+ * @method string getInstanceClass() 获取<p>订阅实例规格</p>
+ * @method void setInstanceClass(string $InstanceClass) 设置<p>订阅实例规格</p>
+ * @method string getConsumerRoutePhase() 获取<p>新版订阅消费端路由阶段</p>
+ * @method void setConsumerRoutePhase(string $ConsumerRoutePhase) 设置<p>新版订阅消费端路由阶段</p>
  */
 class SubscribeInfo extends AbstractModel
 {
     /**
-     * @var string 数据订阅的实例ID
+     * @var string <p>数据订阅的实例ID</p>
      */
     public $SubscribeId;
 
     /**
-     * @var string 数据订阅实例的名称
+     * @var string <p>数据订阅实例的名称</p>
      */
     public $SubscribeName;
 
     /**
-     * @var string 订阅实例发送数据的kafka topic
+     * @var string <p>订阅实例发送数据的kafka topic</p>
      */
     public $Topic;
 
     /**
-     * @var string 订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
+     * @var string <p>订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
      */
     public $Product;
 
     /**
-     * @var string 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
+     * @var string <p>订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
+     * @var string <p>云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng
+     * @var string <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng</p>
      */
     public $Status;
 
     /**
-     * @var string 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
+     * @var string <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
      */
     public $SubsStatus;
 
     /**
-     * @var string 上次修改时间，时间格式如：Y-m-d h:m:s
+     * @var string <p>上次修改时间，时间格式如：Y-m-d h:m:s</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 创建时间，时间格式如：Y-m-d h:m:s
+     * @var string <p>创建时间，时间格式如：Y-m-d h:m:s</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * @var string <p>隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
      */
     public $IsolateTime;
 
     /**
-     * @var string 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * @var string <p>包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * @var string <p>下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
      */
     public $OfflineTime;
 
     /**
-     * @var integer 计费方式，0 - 包年包月，1 - 按量计费
+     * @var integer <p>计费方式，0 - 包年包月，1 - 按量计费</p>
      */
     public $PayType;
 
     /**
-     * @var integer 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
+     * @var integer <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 数据订阅实例所属地域
+     * @var string <p>数据订阅实例所属地域</p>
      */
     public $Region;
 
     /**
-     * @var string 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
+     * @var string <p>接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)</p>
      */
     public $AccessType;
 
     /**
-     * @var array 数据库节点信息
+     * @var array <p>数据库节点信息</p>
      */
     public $Endpoints;
 
     /**
-     * @var string 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     * @var string <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
      */
     public $SubscribeVersion;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var array 任务报错信息，如果有的话。
+     * @var array <p>任务报错信息，如果有的话。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errors;
 
     /**
-     * @var string 订阅实例规格
+     * @var string <p>订阅实例规格</p>
      */
     public $InstanceClass;
 
     /**
-     * @param string $SubscribeId 数据订阅的实例ID
-     * @param string $SubscribeName 数据订阅实例的名称
-     * @param string $Topic 订阅实例发送数据的kafka topic
-     * @param string $Product 订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
-     * @param string $InstanceId 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
-     * @param string $InstanceStatus 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
-     * @param string $Status 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng
-     * @param string $SubsStatus 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
-     * @param string $ModifyTime 上次修改时间，时间格式如：Y-m-d h:m:s
-     * @param string $CreateTime 创建时间，时间格式如：Y-m-d h:m:s
-     * @param string $IsolateTime 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param string $ExpireTime 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param string $OfflineTime 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param integer $PayType 计费方式，0 - 包年包月，1 - 按量计费
-     * @param integer $AutoRenewFlag 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
-     * @param string $Region 数据订阅实例所属地域
-     * @param string $AccessType 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
-     * @param array $Endpoints 数据库节点信息
-     * @param string $SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
-     * @param array $Tags 标签
+     * @var string <p>新版订阅消费端路由阶段</p>
+     */
+    public $ConsumerRoutePhase;
+
+    /**
+     * @param string $SubscribeId <p>数据订阅的实例ID</p>
+     * @param string $SubscribeName <p>数据订阅实例的名称</p>
+     * @param string $Topic <p>订阅实例发送数据的kafka topic</p>
+     * @param string $Product <p>订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
+     * @param string $InstanceId <p>订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。</p>
+     * @param string $InstanceStatus <p>云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空</p>
+     * @param string $Status <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng</p>
+     * @param string $SubsStatus <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
+     * @param string $ModifyTime <p>上次修改时间，时间格式如：Y-m-d h:m:s</p>
+     * @param string $CreateTime <p>创建时间，时间格式如：Y-m-d h:m:s</p>
+     * @param string $IsolateTime <p>隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+     * @param string $ExpireTime <p>包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+     * @param string $OfflineTime <p>下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+     * @param integer $PayType <p>计费方式，0 - 包年包月，1 - 按量计费</p>
+     * @param integer $AutoRenewFlag <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
+     * @param string $Region <p>数据订阅实例所属地域</p>
+     * @param string $AccessType <p>接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)</p>
+     * @param array $Endpoints <p>数据库节点信息</p>
+     * @param string $SubscribeVersion <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
+     * @param array $Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Errors 任务报错信息，如果有的话。
+     * @param array $Errors <p>任务报错信息，如果有的话。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceClass 订阅实例规格
+     * @param string $InstanceClass <p>订阅实例规格</p>
+     * @param string $ConsumerRoutePhase <p>新版订阅消费端路由阶段</p>
      */
     function __construct()
     {
@@ -323,6 +331,10 @@ class SubscribeInfo extends AbstractModel
 
         if (array_key_exists("InstanceClass",$param) and $param["InstanceClass"] !== null) {
             $this->InstanceClass = $param["InstanceClass"];
+        }
+
+        if (array_key_exists("ConsumerRoutePhase",$param) and $param["ConsumerRoutePhase"] !== null) {
+            $this->ConsumerRoutePhase = $param["ConsumerRoutePhase"];
         }
     }
 }

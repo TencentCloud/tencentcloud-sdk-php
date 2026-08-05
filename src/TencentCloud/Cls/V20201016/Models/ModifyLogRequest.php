@@ -1,0 +1,113 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cls\V20201016\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * ModifyLog请求参数结构体
+ *
+ * @method string getTopicId() 获取<p>日志主题id</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题id</p>
+ * @method integer getFrom() 获取<p>检索时间范围-开始时间</p><p>单位：ms</p>
+ * @method void setFrom(integer $From) 设置<p>检索时间范围-开始时间</p><p>单位：ms</p>
+ * @method integer getTo() 获取<p>检索时间范围-结束时间</p><p>单位：ms</p>
+ * @method void setTo(integer $To) 设置<p>检索时间范围-结束时间</p><p>单位：ms</p>
+ * @method string getQueryString() 获取<p>日志检索条件，仅支持 CQL 语法，不支持 Lucene 语法</p><p>对符合检索条件的日志进行修改</p>
+ * @method void setQueryString(string $QueryString) 设置<p>日志检索条件，仅支持 CQL 语法，不支持 Lucene 语法</p><p>对符合检索条件的日志进行修改</p>
+ * @method string getModifyMode() 获取<p>修改模式</p><p>枚举值：</p><ul><li>PARTIAL： 只修改指定的日志字段</li><li>REPLACE： 整体替换原有日志（不包含预置字段及元数据字段）</li></ul>
+ * @method void setModifyMode(string $ModifyMode) 设置<p>修改模式</p><p>枚举值：</p><ul><li>PARTIAL： 只修改指定的日志字段</li><li>REPLACE： 整体替换原有日志（不包含预置字段及元数据字段）</li></ul>
+ * @method string getModifyContent() 获取<p>修改内容</p><p>不支持修改预置字段(__FILENAME__、__SOURCE__等，但不包括__CONTENT__)及元数据字段(__TAG__开头的字段)</p>
+ * @method void setModifyContent(string $ModifyContent) 设置<p>修改内容</p><p>不支持修改预置字段(__FILENAME__、__SOURCE__等，但不包括__CONTENT__)及元数据字段(__TAG__开头的字段)</p>
+ */
+class ModifyLogRequest extends AbstractModel
+{
+    /**
+     * @var string <p>日志主题id</p>
+     */
+    public $TopicId;
+
+    /**
+     * @var integer <p>检索时间范围-开始时间</p><p>单位：ms</p>
+     */
+    public $From;
+
+    /**
+     * @var integer <p>检索时间范围-结束时间</p><p>单位：ms</p>
+     */
+    public $To;
+
+    /**
+     * @var string <p>日志检索条件，仅支持 CQL 语法，不支持 Lucene 语法</p><p>对符合检索条件的日志进行修改</p>
+     */
+    public $QueryString;
+
+    /**
+     * @var string <p>修改模式</p><p>枚举值：</p><ul><li>PARTIAL： 只修改指定的日志字段</li><li>REPLACE： 整体替换原有日志（不包含预置字段及元数据字段）</li></ul>
+     */
+    public $ModifyMode;
+
+    /**
+     * @var string <p>修改内容</p><p>不支持修改预置字段(__FILENAME__、__SOURCE__等，但不包括__CONTENT__)及元数据字段(__TAG__开头的字段)</p>
+     */
+    public $ModifyContent;
+
+    /**
+     * @param string $TopicId <p>日志主题id</p>
+     * @param integer $From <p>检索时间范围-开始时间</p><p>单位：ms</p>
+     * @param integer $To <p>检索时间范围-结束时间</p><p>单位：ms</p>
+     * @param string $QueryString <p>日志检索条件，仅支持 CQL 语法，不支持 Lucene 语法</p><p>对符合检索条件的日志进行修改</p>
+     * @param string $ModifyMode <p>修改模式</p><p>枚举值：</p><ul><li>PARTIAL： 只修改指定的日志字段</li><li>REPLACE： 整体替换原有日志（不包含预置字段及元数据字段）</li></ul>
+     * @param string $ModifyContent <p>修改内容</p><p>不支持修改预置字段(__FILENAME__、__SOURCE__等，但不包括__CONTENT__)及元数据字段(__TAG__开头的字段)</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
+        }
+
+        if (array_key_exists("From",$param) and $param["From"] !== null) {
+            $this->From = $param["From"];
+        }
+
+        if (array_key_exists("To",$param) and $param["To"] !== null) {
+            $this->To = $param["To"];
+        }
+
+        if (array_key_exists("QueryString",$param) and $param["QueryString"] !== null) {
+            $this->QueryString = $param["QueryString"];
+        }
+
+        if (array_key_exists("ModifyMode",$param) and $param["ModifyMode"] !== null) {
+            $this->ModifyMode = $param["ModifyMode"];
+        }
+
+        if (array_key_exists("ModifyContent",$param) and $param["ModifyContent"] !== null) {
+            $this->ModifyContent = $param["ModifyContent"];
+        }
+    }
+}

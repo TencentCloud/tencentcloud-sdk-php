@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method ResourceSpec getResourceSpec() 获取<p>可售卖资源规格</p>
  * @method void setResourceSpec(ResourceSpec $ResourceSpec) 设置<p>可售卖资源规格</p>
- * @method integer getQuota() 获取<p>配额数量</p>
- * @method void setQuota(integer $Quota) 设置<p>配额数量</p>
+ * @method integer getQuota() 获取<p>配额数量</p><p>请注意，CPU类型计费项为32的整数倍，GPU类型计费项为1的整数倍。</p>
+ * @method void setQuota(integer $Quota) 设置<p>配额数量</p><p>请注意，CPU类型计费项为32的整数倍，GPU类型计费项为1的整数倍。</p>
  */
 class ResourceQuota extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ResourceQuota extends AbstractModel
     public $ResourceSpec;
 
     /**
-     * @var integer <p>配额数量</p>
+     * @var integer <p>配额数量</p><p>请注意，CPU类型计费项为32的整数倍，GPU类型计费项为1的整数倍。</p>
      */
     public $Quota;
 
     /**
      * @param ResourceSpec $ResourceSpec <p>可售卖资源规格</p>
-     * @param integer $Quota <p>配额数量</p>
+     * @param integer $Quota <p>配额数量</p><p>请注意，CPU类型计费项为32的整数倍，GPU类型计费项为1的整数倍。</p>
      */
     function __construct()
     {

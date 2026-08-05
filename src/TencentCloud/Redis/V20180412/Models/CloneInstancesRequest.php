@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableSSL(boolean $EnableSSL) 设置<p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p>
  * @method boolean getSSLBindPrivateIPv4() 获取<p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
  * @method void setSSLBindPrivateIPv4(boolean $SSLBindPrivateIPv4) 设置<p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
+ * @method string getProductVersion() 获取<p>指实例类型</p><p>枚举值：</p><ul><li>local： 通用 I 型</li><li>localv2： 通用 II 型</li></ul><p>不传则默认和原实例类型保持一致</p>
+ * @method void setProductVersion(string $ProductVersion) 设置<p>指实例类型</p><p>枚举值：</p><ul><li>local： 通用 I 型</li><li>localv2： 通用 II 型</li></ul><p>不传则默认和原实例类型保持一致</p>
  */
 class CloneInstancesRequest extends AbstractModel
 {
@@ -192,6 +194,11 @@ class CloneInstancesRequest extends AbstractModel
     public $SSLBindPrivateIPv4;
 
     /**
+     * @var string <p>指实例类型</p><p>枚举值：</p><ul><li>local： 通用 I 型</li><li>localv2： 通用 II 型</li></ul><p>不传则默认和原实例类型保持一致</p>
+     */
+    public $ProductVersion;
+
+    /**
      * @param string $InstanceId <p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
      * @param integer $GoodsNum <p>单次克隆实例的数量。</p><ul><li>包年包月每次购买最大数量为100。</li><li>按量计费每次购买最大数量为30。</li></ul>
      * @param integer $ZoneId <p>克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a> 。</p>
@@ -216,6 +223,7 @@ class CloneInstancesRequest extends AbstractModel
      * @param PasswordPolicy $PasswordPolicy <p>实例密码复杂度策略</p><p>入参限制：未传或 Enabled=false 视为不启用，按默认规则校验</p>
      * @param boolean $EnableSSL <p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p>
      * @param boolean $SSLBindPrivateIPv4 <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
+     * @param string $ProductVersion <p>指实例类型</p><p>枚举值：</p><ul><li>local： 通用 I 型</li><li>localv2： 通用 II 型</li></ul><p>不传则默认和原实例类型保持一致</p>
      */
     function __construct()
     {
@@ -335,6 +343,10 @@ class CloneInstancesRequest extends AbstractModel
 
         if (array_key_exists("SSLBindPrivateIPv4",$param) and $param["SSLBindPrivateIPv4"] !== null) {
             $this->SSLBindPrivateIPv4 = $param["SSLBindPrivateIPv4"];
+        }
+
+        if (array_key_exists("ProductVersion",$param) and $param["ProductVersion"] !== null) {
+            $this->ProductVersion = $param["ProductVersion"];
         }
     }
 }

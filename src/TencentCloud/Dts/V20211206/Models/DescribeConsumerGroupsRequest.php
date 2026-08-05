@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerGroups请求参数结构体
  *
- * @method string getSubscribeId() 获取订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
- * @method void setSubscribeId(string $SubscribeId) 设置订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
- * @method integer getOffset() 获取返回记录的起始偏移量。默认0
- * @method void setOffset(integer $Offset) 设置返回记录的起始偏移量。默认0
- * @method integer getLimit() 获取单次返回的记录数量。默认10
- * @method void setLimit(integer $Limit) 设置单次返回的记录数量。默认10
+ * @method string getSubscribeId() 获取<p>订阅实例id，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
+ * @method void setSubscribeId(string $SubscribeId) 设置<p>订阅实例id，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
+ * @method integer getOffset() 获取<p>返回记录的起始偏移量。默认0</p>
+ * @method void setOffset(integer $Offset) 设置<p>返回记录的起始偏移量。默认0</p>
+ * @method integer getLimit() 获取<p>单次返回的记录数量。默认10</p>
+ * @method void setLimit(integer $Limit) 设置<p>单次返回的记录数量。默认10</p>
  */
 class DescribeConsumerGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+     * @var string <p>订阅实例id，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
      */
     public $SubscribeId;
 
     /**
-     * @var integer 返回记录的起始偏移量。默认0
+     * @var integer <p>返回记录的起始偏移量。默认0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 单次返回的记录数量。默认10
+     * @var integer <p>单次返回的记录数量。默认10</p>
      */
     public $Limit;
 
     /**
-     * @param string $SubscribeId 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
-     * @param integer $Offset 返回记录的起始偏移量。默认0
-     * @param integer $Limit 单次返回的记录数量。默认10
+     * @param string $SubscribeId <p>订阅实例id，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
+     * @param integer $Offset <p>返回记录的起始偏移量。默认0</p>
+     * @param integer $Limit <p>单次返回的记录数量。默认10</p>
      */
     function __construct()
     {

@@ -202,6 +202,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewStateCOSBucketType(integer $NewStateCOSBucketType) 设置<p>新的桶类型</p><p>枚举值：</p><ul><li>0： 普通桶</li><li>1： 加速桶</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHealthScore() 获取<p>健康分数</p>
+ * @method void setHealthScore(integer $HealthScore) 设置<p>健康分数</p>
+ * @method string getLastDiagnoseTime() 获取<p>最新诊断时间</p><p>参数格式：RFC3339</p>
+ * @method void setLastDiagnoseTime(string $LastDiagnoseTime) 设置<p>最新诊断时间</p><p>参数格式：RFC3339</p>
+ * @method string getManagerUin() 获取<p>负责人Uin</p>
+ * @method void setManagerUin(string $ManagerUin) 设置<p>负责人Uin</p>
  */
 class JobV1 extends AbstractModel
 {
@@ -489,6 +495,21 @@ class JobV1 extends AbstractModel
     public $NewStateCOSBucketType;
 
     /**
+     * @var integer <p>健康分数</p>
+     */
+    public $HealthScore;
+
+    /**
+     * @var string <p>最新诊断时间</p><p>参数格式：RFC3339</p>
+     */
+    public $LastDiagnoseTime;
+
+    /**
+     * @var string <p>负责人Uin</p>
+     */
+    public $ManagerUin;
+
+    /**
      * @param string $JobId <p>作业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region <p>地域</p>
@@ -580,6 +601,9 @@ class JobV1 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NewStateCOSBucketType <p>新的桶类型</p><p>枚举值：</p><ul><li>0： 普通桶</li><li>1： 加速桶</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HealthScore <p>健康分数</p>
+     * @param string $LastDiagnoseTime <p>最新诊断时间</p><p>参数格式：RFC3339</p>
+     * @param string $ManagerUin <p>负责人Uin</p>
      */
     function __construct()
     {
@@ -790,6 +814,18 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("NewStateCOSBucketType",$param) and $param["NewStateCOSBucketType"] !== null) {
             $this->NewStateCOSBucketType = $param["NewStateCOSBucketType"];
+        }
+
+        if (array_key_exists("HealthScore",$param) and $param["HealthScore"] !== null) {
+            $this->HealthScore = $param["HealthScore"];
+        }
+
+        if (array_key_exists("LastDiagnoseTime",$param) and $param["LastDiagnoseTime"] !== null) {
+            $this->LastDiagnoseTime = $param["LastDiagnoseTime"];
+        }
+
+        if (array_key_exists("ManagerUin",$param) and $param["ManagerUin"] !== null) {
+            $this->ManagerUin = $param["ManagerUin"];
         }
     }
 }

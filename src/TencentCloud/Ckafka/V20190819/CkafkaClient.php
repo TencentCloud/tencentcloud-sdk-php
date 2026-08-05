@@ -44,6 +44,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreatePostPaidInstanceResponse CreatePostPaidInstance(Models\CreatePostPaidInstanceRequest $req) 当前接口用来替代 CreateInstancePost 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
  * @method Models\CreatePrometheusResponse CreatePrometheus(Models\CreatePrometheusRequest $req) 添加普罗米修斯监控
  * @method Models\CreateRouteResponse CreateRoute(Models\CreateRouteRequest $req) 添加实例路由
+ * @method Models\CreateThrottleRuleResponse CreateThrottleRule(Models\CreateThrottleRuleRequest $req) 实例限流规则相关接口
  * @method Models\CreateTokenResponse CreateToken(Models\CreateTokenRequest $req) 创建最高权限的token
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建ckafka主题
  * @method Models\CreateTopicIpWhiteListResponse CreateTopicIpWhiteList(Models\CreateTopicIpWhiteListRequest $req) 创建主题ip白名单
@@ -59,6 +60,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteInstancePreResponse DeleteInstancePre(Models\DeleteInstancePreRequest $req) 删除预付费实例，该接口会对实例执行隔离并删除的动作，执行成功后实例会被直接删除销毁。通过调用API删除不会对连接器和任务进行关联预检查，直接进行实例销毁。
  * @method Models\DeleteRouteResponse DeleteRoute(Models\DeleteRouteRequest $req) 删除路由
  * @method Models\DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(Models\DeleteRouteTriggerTimeRequest $req) 修改删除路由延迟触发时间
+ * @method Models\DeleteThrottleRuleResponse DeleteThrottleRule(Models\DeleteThrottleRuleRequest $req) 删除实例限流规则
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除ckafka主题
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DescribeACLResponse DescribeACL(Models\DescribeACLRequest $req) 枚举ACL
@@ -87,6 +89,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeRouteResponse DescribeRoute(Models\DescribeRouteRequest $req) 查看路由信息
  * @method Models\DescribeSecurityGroupRoutesResponse DescribeSecurityGroupRoutes(Models\DescribeSecurityGroupRoutesRequest $req) 获取安全组路由信息列表
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 查询任务状态
+ * @method Models\DescribeThrottleRulesResponse DescribeThrottleRules(Models\DescribeThrottleRulesRequest $req) 获取实例限流规则列表
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 接口请求域名：https://ckafka.tencentcloudapi.com
 本接口（DescribeTopic）用于在用户获取消息队列 CKafka 实例的主题列表
  * @method Models\DescribeTopicAttributesResponse DescribeTopicAttributes(Models\DescribeTopicAttributesRequest $req) 获取主题属性
@@ -115,6 +118,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\ModifyInstancePreResponse ModifyInstancePre(Models\ModifyInstancePreRequest $req) 预付费实例变配接口，调整磁盘，带宽,  分区
  * @method Models\ModifyPasswordResponse ModifyPassword(Models\ModifyPasswordRequest $req) 修改密码
  * @method Models\ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTask(Models\ModifyRoutineMaintenanceTaskRequest $req) 设置自动化运维属性
+ * @method Models\ModifyThrottleRuleResponse ModifyThrottleRule(Models\ModifyThrottleRuleRequest $req) 修改限流规则接口
  * @method Models\ModifyTopicAttributesResponse ModifyTopicAttributes(Models\ModifyTopicAttributesRequest $req) 本接口用于修改主题属性。
  * @method Models\PauseDatahubTaskResponse PauseDatahubTask(Models\PauseDatahubTaskRequest $req) 暂停连接器任务
  * @method Models\RenewCkafkaInstanceResponse RenewCkafkaInstance(Models\RenewCkafkaInstanceRequest $req) 续费Ckafka实例, 目前只支持国内站包年包月实例续费

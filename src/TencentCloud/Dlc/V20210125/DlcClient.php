@@ -61,10 +61,12 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateExportTaskResponse CreateExportTask(Models\CreateExportTaskRequest $req) 该接口（CreateExportTask）用于创建导出任务
  * @method Models\CreateImportTaskResponse CreateImportTask(Models\CreateImportTaskRequest $req) 该接口（CreateImportTask）用于创建导入任务
  * @method Models\CreateInferenceModelResponse CreateInferenceModel(Models\CreateInferenceModelRequest $req) 创建推理模型（模型上传）
+ * @method Models\CreateInferenceServiceResponse CreateInferenceService(Models\CreateInferenceServiceRequest $req) 创建推理服务（含默认部署）
  * @method Models\CreateInternalTableResponse CreateInternalTable(Models\CreateInternalTableRequest $req) 创建托管存储内表（该接口已废弃）
  * @method Models\CreateJobSpecResponse CreateJobSpec(Models\CreateJobSpecRequest $req) 创建作业配置
  * @method Models\CreateLabResponse CreateLab(Models\CreateLabRequest $req) 创建实验室
  * @method Models\CreateMetaDatabaseResponse CreateMetaDatabase(Models\CreateMetaDatabaseRequest $req) 本接口（CreateMetaDatabase）用于创建元数据库
+ * @method Models\CreateModelVersionResponse CreateModelVersion(Models\CreateModelVersionRequest $req) 创建模型新版本
  * @method Models\CreateNotebookSessionResponse CreateNotebookSession(Models\CreateNotebookSessionRequest $req) 本接口（CreateNotebookSession）用于创建交互式session（notebook）
  * @method Models\CreateNotebookSessionStatementResponse CreateNotebookSessionStatement(Models\CreateNotebookSessionStatementRequest $req) 本接口（CreateNotebookSessionStatement）用于在session中执行代码片段
  * @method Models\CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQL(Models\CreateNotebookSessionStatementSupportBatchSQLRequest $req) 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建交互式session并执行SQL任务
@@ -211,6 +213,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\GenerateInternalTableResponse GenerateInternalTable(Models\GenerateInternalTableRequest $req) 建表
  * @method Models\GetExampleDetailResponse GetExampleDetail(Models\GetExampleDetailRequest $req) 根据 exampleId 获取单个案例详情
  * @method Models\GetInferenceModelResponse GetInferenceModel(Models\GetInferenceModelRequest $req) 获取单个模型详情
+ * @method Models\GetInferenceServiceResponse GetInferenceService(Models\GetInferenceServiceRequest $req) 获取单个推理服务详情
  * @method Models\GetJobSpecResponse GetJobSpec(Models\GetJobSpecRequest $req) 根据配置ID获取作业配置详情
  * @method Models\GetLabDetailResponse GetLabDetail(Models\GetLabDetailRequest $req) 获取实验室详情
  * @method Models\GetLabEventResponse GetLabEvent(Models\GetLabEventRequest $req) 获取实验室的事件流（基于 K8s Event + CLS 日志）
@@ -219,6 +222,9 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\GetLabPodsResponse GetLabPods(Models\GetLabPodsRequest $req) 获取数据实验室的Pod列表
  * @method Models\GetLabServiceUrlsResponse GetLabServiceUrls(Models\GetLabServiceUrlsRequest $req) 获取实验室ide访问地址
  * @method Models\GetLabYamlResponse GetLabYaml(Models\GetLabYamlRequest $req) 获取数据实验室对应的RayCluster YAML内容
+ * @method Models\GetModelConfigResponse GetModelConfig(Models\GetModelConfigRequest $req) 获取模型 config.json 配置（默认最新版本）
+ * @method Models\GetModelFilesResponse GetModelFiles(Models\GetModelFilesRequest $req) 获取模型文件树（默认最新版本）
+ * @method Models\GetModelReadmeResponse GetModelReadme(Models\GetModelReadmeRequest $req) 获取模型 README 信息（默认最新版本）
  * @method Models\GetOptimizerPolicyResponse GetOptimizerPolicy(Models\GetOptimizerPolicyRequest $req) GetOptimizerPolicy
  * @method Models\GetRayClusterResponse GetRayCluster(Models\GetRayClusterRequest $req) 获取Ray集群详情请求
  * @method Models\GetRayClusterEventResponse GetRayClusterEvent(Models\GetRayClusterEventRequest $req) 获取Ray集群的事件流（基于 K8s Event + CLS 日志）
@@ -242,10 +248,13 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ListExampleDifficultiesResponse ListExampleDifficulties(Models\ListExampleDifficultiesRequest $req) 获取所有案例分类
  * @method Models\ListExampleTagsResponse ListExampleTags(Models\ListExampleTagsRequest $req) 返回标签去重列表，按出现频次从高到低排序。
  * @method Models\ListExamplesResponse ListExamples(Models\ListExamplesRequest $req) 案例列表
+ * @method Models\ListInferenceEnginesResponse ListInferenceEngines(Models\ListInferenceEnginesRequest $req) 列出推理引擎
  * @method Models\ListInferenceModelsResponse ListInferenceModels(Models\ListInferenceModelsRequest $req) 列出推理模型（支持关键词过滤 + 分页）
+ * @method Models\ListInferenceServicesResponse ListInferenceServices(Models\ListInferenceServicesRequest $req) 列出推理服务（支持关键词和状态过滤 + 分页）
  * @method Models\ListJobSpecsResponse ListJobSpecs(Models\ListJobSpecsRequest $req) 分页查询作业配置列表
  * @method Models\ListJobsBySpecResponse ListJobsBySpec(Models\ListJobsBySpecRequest $req) 分页查询某作业配置下产生的所有作业实例
  * @method Models\ListLabsResponse ListLabs(Models\ListLabsRequest $req) 列出实验室列表
+ * @method Models\ListModelVersionsResponse ListModelVersions(Models\ListModelVersionsRequest $req) 列出模型所有版本
  * @method Models\ListRayClusterJobsResponse ListRayClusterJobs(Models\ListRayClusterJobsRequest $req) 查询指定 Ray 集群下提交的所有作业，分页返回。底层委托给 ListRayJobs，强制注入 ClusterId 作为过滤条件。
  * @method Models\ListRayClustersResponse ListRayClusters(Models\ListRayClustersRequest $req) 列出所有集群
  * @method Models\ListRayJobsResponse ListRayJobs(Models\ListRayJobsRequest $req) 根据集群ID列出所有Ray任务
@@ -267,19 +276,24 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ModifyUserTypeResponse ModifyUserType(Models\ModifyUserTypeRequest $req) 修改用户类型。只有管理员用户能够调用该接口进行操作
  * @method Models\ModifyWorkGroupResponse ModifyWorkGroup(Models\ModifyWorkGroupRequest $req) 修改工作组信息
  * @method Models\PauseStandardEngineResourceGroupsResponse PauseStandardEngineResourceGroups(Models\PauseStandardEngineResourceGroupsRequest $req) 暂停标准引擎session
+ * @method Models\QueryDashboardOverviewResponse QueryDashboardOverview(Models\QueryDashboardOverviewRequest $req) 返回指定时间范围内所有推理服务的聚合 KPI 值。
+ * @method Models\QueryDashboardServiceListResponse QueryDashboardServiceList(Models\QueryDashboardServiceListRequest $req) 查询监控大盘服务列表
  * @method Models\QueryInternalTableWarehouseResponse QueryInternalTableWarehouse(Models\QueryInternalTableWarehouseRequest $req) 本接口（QueryInternalTableWarehouse）用于获取原生表warehouse路径
+ * @method Models\QueryMonitorOverviewResponse QueryMonitorOverview(Models\QueryMonitorOverviewRequest $req) 查询监控概览数据（瞬时值）
  * @method Models\QueryResultResponse QueryResult(Models\QueryResultRequest $req) 获取任务结果查询
  * @method Models\QueryTaskCostDetailResponse QueryTaskCostDetail(Models\QueryTaskCostDetailRequest $req) 该接口（QueryTaskCostDetail）用于查询任务消耗明细
  * @method Models\RegisterThirdPartyAccessUserResponse RegisterThirdPartyAccessUser(Models\RegisterThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）用于开通第三方平台访问
  * @method Models\RenewDataEngineResponse RenewDataEngine(Models\RenewDataEngineRequest $req) 续费数据引擎
  * @method Models\ReportHeartbeatMetaDataResponse ReportHeartbeatMetaData(Models\ReportHeartbeatMetaDataRequest $req) 上报元数据心跳
  * @method Models\RestartDataEngineResponse RestartDataEngine(Models\RestartDataEngineRequest $req) 重启引擎
+ * @method Models\RestartInferenceServiceResponse RestartInferenceService(Models\RestartInferenceServiceRequest $req) 重启推理服务（操作所有部署）。
  * @method Models\RevokeDLCCatalogAccessResponse RevokeDLCCatalogAccess(Models\RevokeDLCCatalogAccessRequest $req) 撤销DLC Catalog访问权限
  * @method Models\RollbackDataEngineImageResponse RollbackDataEngineImage(Models\RollbackDataEngineImageRequest $req) 回滚引擎镜像版本
  * @method Models\RunJobSpecResponse RunJobSpec(Models\RunJobSpecRequest $req) 基于指定作业配置提交一次作业实例
  * @method Models\SetOptimizerPolicyResponse SetOptimizerPolicy(Models\SetOptimizerPolicyRequest $req) 设置优化策略的接口
  * @method Models\StartLabResponse StartLab(Models\StartLabRequest $req) 启动实验室
  * @method Models\StartRayClusterResponse StartRayCluster(Models\StartRayClusterRequest $req) 启动集群
+ * @method Models\StopInferenceServiceResponse StopInferenceService(Models\StopInferenceServiceRequest $req) 停止推理服务（操作所有部署）。
  * @method Models\StopLabResponse StopLab(Models\StopLabRequest $req) 停止实验室
  * @method Models\StopRayClusterResponse StopRayCluster(Models\StopRayClusterRequest $req) 停止集群
  * @method Models\SuspendResumeDataEngineResponse SuspendResumeDataEngine(Models\SuspendResumeDataEngineRequest $req) 本接口用于控制挂起或启动数据引擎

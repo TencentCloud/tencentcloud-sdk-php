@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置<p>抠图目标类型指定：&quot;foreground&quot;（默认）/ &quot;pattern&quot;</p>
  * @method PatternConfig getPatternConfig() 获取<p>图案抠图配置。仅在Type为pattern时生效。</p>
  * @method void setPatternConfig(PatternConfig $PatternConfig) 设置<p>图案抠图配置。仅在Type为pattern时生效。</p>
+ * @method string getModel() 获取<p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度最快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li></ul>
+ * @method void setModel(string $Model) 设置<p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度最快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li></ul>
  */
 class AiCutoutConfig extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AiCutoutConfig extends AbstractModel
     public $PatternConfig;
 
     /**
+     * @var string <p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度最快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li></ul>
+     */
+    public $Model;
+
+    /**
      * @param string $Switch <p>能力配置开关，可选值：  ON：开启； OFF：关闭。 默认值：ON。</p>
      * @param string $Type <p>抠图目标类型指定：&quot;foreground&quot;（默认）/ &quot;pattern&quot;</p>
      * @param PatternConfig $PatternConfig <p>图案抠图配置。仅在Type为pattern时生效。</p>
+     * @param string $Model <p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度最快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li></ul>
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class AiCutoutConfig extends AbstractModel
         if (array_key_exists("PatternConfig",$param) and $param["PatternConfig"] !== null) {
             $this->PatternConfig = new PatternConfig();
             $this->PatternConfig->deserialize($param["PatternConfig"]);
+        }
+
+        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
+            $this->Model = $param["Model"];
         }
     }
 }

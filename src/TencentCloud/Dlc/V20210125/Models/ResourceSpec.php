@@ -26,15 +26,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置<p>机型，例如X40/T20，仅GU有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingItem() 获取<p>四层计费项</p>
- * @method void setBillingItem(string $BillingItem) 设置<p>四层计费项</p>
+ * @method string getBillingItem() 获取<p>四层计费项</p><p>枚举值：</p><ul><li>sv_dlc_standard_cu_standard_cu： 标准型cpu，最小单位32</li><li>sv_dlc_high_memory_cu_high_memory_cu： 高内存型cpu，最小单位32</li><li>sv_dlc_gn7_gn75xlarge80： T4，最小单位1</li><li>sv_dlc_gn10xp_gn10xp2xlarge40： V100，最小单位1</li></ul><p>若您想要了解更多的计费规格和产品细节，欢迎联系我们。</p>
+ * @method void setBillingItem(string $BillingItem) 设置<p>四层计费项</p><p>枚举值：</p><ul><li>sv_dlc_standard_cu_standard_cu： 标准型cpu，最小单位32</li><li>sv_dlc_high_memory_cu_high_memory_cu： 高内存型cpu，最小单位32</li><li>sv_dlc_gn7_gn75xlarge80： T4，最小单位1</li><li>sv_dlc_gn10xp_gn10xp2xlarge40： V100，最小单位1</li></ul><p>若您想要了解更多的计费规格和产品细节，欢迎联系我们。</p>
  * @method string getSpecDesc() 获取<p>规格描述</p>
  * @method void setSpecDesc(string $SpecDesc) 设置<p>规格描述</p>
  * @method string getSpec() 获取<p>规格，格式为 {gpu}:{cpu}:{mem}:{vram}</p>
  * @method void setSpec(string $Spec) 设置<p>规格，格式为 {gpu}:{cpu}:{mem}:{vram}</p>
- * @method string getGpuType() 获取<p>GPU类型，仅GU有值</p>
+ * @method string getGpuType() 获取<p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGpuType(string $GpuType) 设置<p>GPU类型，仅GU有值</p>
+ * @method void setGpuType(string $GpuType) 设置<p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxCardPerNode() 获取<p>单个物理节点上该计费项对应的最大 GPU 卡数，CPU / HM_CPU 恒为 0</p>
  * @method void setMaxCardPerNode(integer $MaxCardPerNode) 设置<p>单个物理节点上该计费项对应的最大 GPU 卡数，CPU / HM_CPU 恒为 0</p>
@@ -53,7 +53,7 @@ class ResourceSpec extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string <p>四层计费项</p>
+     * @var string <p>四层计费项</p><p>枚举值：</p><ul><li>sv_dlc_standard_cu_standard_cu： 标准型cpu，最小单位32</li><li>sv_dlc_high_memory_cu_high_memory_cu： 高内存型cpu，最小单位32</li><li>sv_dlc_gn7_gn75xlarge80： T4，最小单位1</li><li>sv_dlc_gn10xp_gn10xp2xlarge40： V100，最小单位1</li></ul><p>若您想要了解更多的计费规格和产品细节，欢迎联系我们。</p>
      */
     public $BillingItem;
 
@@ -68,7 +68,7 @@ class ResourceSpec extends AbstractModel
     public $Spec;
 
     /**
-     * @var string <p>GPU类型，仅GU有值</p>
+     * @var string <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GpuType;
@@ -82,10 +82,10 @@ class ResourceSpec extends AbstractModel
      * @param string $ResourceType <p>资源包类型</p>
      * @param string $InstanceType <p>机型，例如X40/T20，仅GU有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingItem <p>四层计费项</p>
+     * @param string $BillingItem <p>四层计费项</p><p>枚举值：</p><ul><li>sv_dlc_standard_cu_standard_cu： 标准型cpu，最小单位32</li><li>sv_dlc_high_memory_cu_high_memory_cu： 高内存型cpu，最小单位32</li><li>sv_dlc_gn7_gn75xlarge80： T4，最小单位1</li><li>sv_dlc_gn10xp_gn10xp2xlarge40： V100，最小单位1</li></ul><p>若您想要了解更多的计费规格和产品细节，欢迎联系我们。</p>
      * @param string $SpecDesc <p>规格描述</p>
      * @param string $Spec <p>规格，格式为 {gpu}:{cpu}:{mem}:{vram}</p>
-     * @param string $GpuType <p>GPU类型，仅GU有值</p>
+     * @param string $GpuType <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxCardPerNode <p>单个物理节点上该计费项对应的最大 GPU 卡数，CPU / HM_CPU 恒为 0</p>
      */

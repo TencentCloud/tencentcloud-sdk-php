@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置<p>直播拉流地址</p><p>入参限制：字符长度小于2048</p>
  * @method string getFormat() 获取<p>显式协议</p><p>枚举值：</p><ul><li>rtmp： rtmp协议</li></ul>
  * @method void setFormat(string $Format) 设置<p>显式协议</p><p>枚举值：</p><ul><li>rtmp： rtmp协议</li></ul>
+ * @method AgoraParam getAgoraParam() 获取<p>声网拉流进房参数</p>
+ * @method void setAgoraParam(AgoraParam $AgoraParam) 设置<p>声网拉流进房参数</p>
  */
 class Input extends AbstractModel
 {
@@ -38,8 +40,14 @@ class Input extends AbstractModel
     public $Format;
 
     /**
+     * @var AgoraParam <p>声网拉流进房参数</p>
+     */
+    public $AgoraParam;
+
+    /**
      * @param string $Url <p>直播拉流地址</p><p>入参限制：字符长度小于2048</p>
      * @param string $Format <p>显式协议</p><p>枚举值：</p><ul><li>rtmp： rtmp协议</li></ul>
+     * @param AgoraParam $AgoraParam <p>声网拉流进房参数</p>
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class Input extends AbstractModel
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("AgoraParam",$param) and $param["AgoraParam"] !== null) {
+            $this->AgoraParam = new AgoraParam();
+            $this->AgoraParam->deserialize($param["AgoraParam"]);
         }
     }
 }

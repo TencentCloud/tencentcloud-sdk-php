@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(DocToVideoInput $Input) 设置<p>AIGC文档生成视频的输入信息</p>
  * @method DocToVideoCosInfo getCosInfo() 获取<p>用户cos信息，用于保存生成结果</p>
  * @method void setCosInfo(DocToVideoCosInfo $CosInfo) 设置<p>用户cos信息，用于保存生成结果</p>
+ * @method string getResourceId() 获取<p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
  */
 class CreateDocToVideoTaskRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateDocToVideoTaskRequest extends AbstractModel
     public $CosInfo;
 
     /**
+     * @var string <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+     */
+    public $ResourceId;
+
+    /**
      * @param DocToVideoInput $Input <p>AIGC文档生成视频的输入信息</p>
      * @param DocToVideoCosInfo $CosInfo <p>用户cos信息，用于保存生成结果</p>
+     * @param string $ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
      */
     function __construct()
     {
@@ -62,6 +70,10 @@ class CreateDocToVideoTaskRequest extends AbstractModel
         if (array_key_exists("CosInfo",$param) and $param["CosInfo"] !== null) {
             $this->CosInfo = new DocToVideoCosInfo();
             $this->CosInfo->deserialize($param["CosInfo"]);
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

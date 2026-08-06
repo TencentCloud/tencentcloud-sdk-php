@@ -20,179 +20,187 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云原生网关路由信息
  *
- * @method string getID() 获取服务ID
- * @method void setID(string $ID) 设置服务ID
- * @method string getName() 获取服务名字
- * @method void setName(string $Name) 设置服务名字
- * @method array getMethods() 获取无
+ * @method string getID() 获取<p>服务ID</p>
+ * @method void setID(string $ID) 设置<p>服务ID</p>
+ * @method string getName() 获取<p>服务名字</p>
+ * @method void setName(string $Name) 设置<p>服务名字</p>
+ * @method array getMethods() 获取<p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMethods(array $Methods) 设置无
+ * @method void setMethods(array $Methods) 设置<p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPaths() 获取无
+ * @method array getPaths() 获取<p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPaths(array $Paths) 设置无
+ * @method void setPaths(array $Paths) 设置<p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getHosts() 获取无
+ * @method array getHosts() 获取<p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHosts(array $Hosts) 设置无
+ * @method void setHosts(array $Hosts) 设置<p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getProtocols() 获取无
- * @method void setProtocols(array $Protocols) 设置无
- * @method boolean getPreserveHost() 获取无
- * @method void setPreserveHost(boolean $PreserveHost) 设置无
- * @method integer getHttpsRedirectStatusCode() 获取无
- * @method void setHttpsRedirectStatusCode(integer $HttpsRedirectStatusCode) 设置无
- * @method boolean getStripPath() 获取无
- * @method void setStripPath(boolean $StripPath) 设置无
- * @method string getCreatedTime() 获取无
- * @method void setCreatedTime(string $CreatedTime) 设置无
- * @method boolean getForceHttps() 获取是否开启了强制HTTPS
+ * @method array getProtocols() 获取<p>无</p>
+ * @method void setProtocols(array $Protocols) 设置<p>无</p>
+ * @method boolean getPreserveHost() 获取<p>无</p>
+ * @method void setPreserveHost(boolean $PreserveHost) 设置<p>无</p>
+ * @method integer getHttpsRedirectStatusCode() 获取<p>无</p>
+ * @method void setHttpsRedirectStatusCode(integer $HttpsRedirectStatusCode) 设置<p>无</p>
+ * @method boolean getStripPath() 获取<p>无</p>
+ * @method void setStripPath(boolean $StripPath) 设置<p>无</p>
+ * @method string getCreatedTime() 获取<p>无</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>无</p>
+ * @method boolean getForceHttps() 获取<p>是否开启了强制HTTPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setForceHttps(boolean $ForceHttps) 设置是否开启了强制HTTPS
+ * @method void setForceHttps(boolean $ForceHttps) 设置<p>是否开启了强制HTTPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServiceName() 获取服务名
- * @method void setServiceName(string $ServiceName) 设置服务名
- * @method string getServiceID() 获取服务ID
- * @method void setServiceID(string $ServiceID) 设置服务ID
- * @method array getDestinationPorts() 获取目的端口
- * @method void setDestinationPorts(array $DestinationPorts) 设置目的端口
- * @method array getHeaders() 获取路由的Headers
- * @method void setHeaders(array $Headers) 设置路由的Headers
- * @method boolean getRequestBuffering() 获取是否缓存请求body，默认true
- * @method void setRequestBuffering(boolean $RequestBuffering) 设置是否缓存请求body，默认true
- * @method boolean getResponseBuffering() 获取是否缓存响应body，默认true
- * @method void setResponseBuffering(boolean $ResponseBuffering) 设置是否缓存响应body，默认true
- * @method integer getRegexPriority() 获取正则优先级
- * @method void setRegexPriority(integer $RegexPriority) 设置正则优先级
- * @method array getQueryStringParameters() 获取querystring参数
- * @method void setQueryStringParameters(array $QueryStringParameters) 设置querystring参数
+ * @method string getServiceName() 获取<p>服务名</p>
+ * @method void setServiceName(string $ServiceName) 设置<p>服务名</p>
+ * @method string getServiceID() 获取<p>服务ID</p>
+ * @method void setServiceID(string $ServiceID) 设置<p>服务ID</p>
+ * @method array getDestinationPorts() 获取<p>目的端口</p>
+ * @method void setDestinationPorts(array $DestinationPorts) 设置<p>目的端口</p>
+ * @method array getHeaders() 获取<p>路由的Headers</p>
+ * @method void setHeaders(array $Headers) 设置<p>路由的Headers</p>
+ * @method boolean getRequestBuffering() 获取<p>是否缓存请求body，默认true</p>
+ * @method void setRequestBuffering(boolean $RequestBuffering) 设置<p>是否缓存请求body，默认true</p>
+ * @method boolean getResponseBuffering() 获取<p>是否缓存响应body，默认true</p>
+ * @method void setResponseBuffering(boolean $ResponseBuffering) 设置<p>是否缓存响应body，默认true</p>
+ * @method integer getRegexPriority() 获取<p>正则优先级</p>
+ * @method void setRegexPriority(integer $RegexPriority) 设置<p>正则优先级</p>
+ * @method array getQueryStringParameters() 获取<p>querystring参数</p>
+ * @method void setQueryStringParameters(array $QueryStringParameters) 设置<p>querystring参数</p>
+ * @method string getRouteSource() 获取<p>路由来源</p>
+ * @method void setRouteSource(string $RouteSource) 设置<p>路由来源</p>
  */
 class KongRoutePreview extends AbstractModel
 {
     /**
-     * @var string 服务ID
+     * @var string <p>服务ID</p>
      */
     public $ID;
 
     /**
-     * @var string 服务名字
+     * @var string <p>服务名字</p>
      */
     public $Name;
 
     /**
-     * @var array 无
+     * @var array <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Methods;
 
     /**
-     * @var array 无
+     * @var array <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Paths;
 
     /**
-     * @var array 无
+     * @var array <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hosts;
 
     /**
-     * @var array 无
+     * @var array <p>无</p>
      */
     public $Protocols;
 
     /**
-     * @var boolean 无
+     * @var boolean <p>无</p>
      */
     public $PreserveHost;
 
     /**
-     * @var integer 无
+     * @var integer <p>无</p>
      */
     public $HttpsRedirectStatusCode;
 
     /**
-     * @var boolean 无
+     * @var boolean <p>无</p>
      */
     public $StripPath;
 
     /**
-     * @var string 无
+     * @var string <p>无</p>
      */
     public $CreatedTime;
 
     /**
-     * @var boolean 是否开启了强制HTTPS
+     * @var boolean <p>是否开启了强制HTTPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $ForceHttps;
 
     /**
-     * @var string 服务名
+     * @var string <p>服务名</p>
      */
     public $ServiceName;
 
     /**
-     * @var string 服务ID
+     * @var string <p>服务ID</p>
      */
     public $ServiceID;
 
     /**
-     * @var array 目的端口
+     * @var array <p>目的端口</p>
      */
     public $DestinationPorts;
 
     /**
-     * @var array 路由的Headers
+     * @var array <p>路由的Headers</p>
      */
     public $Headers;
 
     /**
-     * @var boolean 是否缓存请求body，默认true
+     * @var boolean <p>是否缓存请求body，默认true</p>
      */
     public $RequestBuffering;
 
     /**
-     * @var boolean 是否缓存响应body，默认true
+     * @var boolean <p>是否缓存响应body，默认true</p>
      */
     public $ResponseBuffering;
 
     /**
-     * @var integer 正则优先级
+     * @var integer <p>正则优先级</p>
      */
     public $RegexPriority;
 
     /**
-     * @var array querystring参数
+     * @var array <p>querystring参数</p>
      */
     public $QueryStringParameters;
 
     /**
-     * @param string $ID 服务ID
-     * @param string $Name 服务名字
-     * @param array $Methods 无
+     * @var string <p>路由来源</p>
+     */
+    public $RouteSource;
+
+    /**
+     * @param string $ID <p>服务ID</p>
+     * @param string $Name <p>服务名字</p>
+     * @param array $Methods <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Paths 无
+     * @param array $Paths <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Hosts 无
+     * @param array $Hosts <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Protocols 无
-     * @param boolean $PreserveHost 无
-     * @param integer $HttpsRedirectStatusCode 无
-     * @param boolean $StripPath 无
-     * @param string $CreatedTime 无
-     * @param boolean $ForceHttps 是否开启了强制HTTPS
+     * @param array $Protocols <p>无</p>
+     * @param boolean $PreserveHost <p>无</p>
+     * @param integer $HttpsRedirectStatusCode <p>无</p>
+     * @param boolean $StripPath <p>无</p>
+     * @param string $CreatedTime <p>无</p>
+     * @param boolean $ForceHttps <p>是否开启了强制HTTPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServiceName 服务名
-     * @param string $ServiceID 服务ID
-     * @param array $DestinationPorts 目的端口
-     * @param array $Headers 路由的Headers
-     * @param boolean $RequestBuffering 是否缓存请求body，默认true
-     * @param boolean $ResponseBuffering 是否缓存响应body，默认true
-     * @param integer $RegexPriority 正则优先级
-     * @param array $QueryStringParameters querystring参数
+     * @param string $ServiceName <p>服务名</p>
+     * @param string $ServiceID <p>服务ID</p>
+     * @param array $DestinationPorts <p>目的端口</p>
+     * @param array $Headers <p>路由的Headers</p>
+     * @param boolean $RequestBuffering <p>是否缓存请求body，默认true</p>
+     * @param boolean $ResponseBuffering <p>是否缓存响应body，默认true</p>
+     * @param integer $RegexPriority <p>正则优先级</p>
+     * @param array $QueryStringParameters <p>querystring参数</p>
+     * @param string $RouteSource <p>路由来源</p>
      */
     function __construct()
     {
@@ -291,6 +299,10 @@ class KongRoutePreview extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->QueryStringParameters, $obj);
             }
+        }
+
+        if (array_key_exists("RouteSource",$param) and $param["RouteSource"] !== null) {
+            $this->RouteSource = $param["RouteSource"];
         }
     }
 }

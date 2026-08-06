@@ -49,6 +49,7 @@ use TencentCloud\Dbdc\V20201029\Models as Models;
  * @method Models\DestroyDBCustomClusterResponse DestroyDBCustomCluster(Models\DestroyDBCustomClusterRequest $req) 该接口（DestroyDBCustomCluster）用于销毁 DB Custom 集群。
  * @method Models\DestroyDBCustomNodeResponse DestroyDBCustomNode(Models\DestroyDBCustomNodeRequest $req) 该接口（DestroyDBCustomNode）用于销毁 DB Custom 节点。
  * @method Models\IsolateDBCustomNodeResponse IsolateDBCustomNode(Models\IsolateDBCustomNodeRequest $req) 该接口 (IsolateDBCustomNode) 用于隔离 DB Custom 节点。
+ * @method Models\ModifyDBCustomClusterAttributesResponse ModifyDBCustomClusterAttributes(Models\ModifyDBCustomClusterAttributesRequest $req) 该接口（ModifyDBCustomClusterAttributes）用于修改 DB Custom 集群的属性。
  * @method Models\ModifyDBCustomClusterNodeConfigResponse ModifyDBCustomClusterNodeConfig(Models\ModifyDBCustomClusterNodeConfigRequest $req) 该接口（ModifyDBCustomClusterNodeConfig）用于修改 DB Custom 集群中节点的配置。
  * @method Models\ModifyDBCustomClusterTagsResponse ModifyDBCustomClusterTags(Models\ModifyDBCustomClusterTagsRequest $req) 该接口（ModifyDBCustomClusterTags）用于修改 DB Custom 集群绑定的标签。
  * @method Models\ModifyDBCustomNodeAttributesResponse ModifyDBCustomNodeAttributes(Models\ModifyDBCustomNodeAttributesRequest $req) 该接口（ModifyDBCustomNodeAttributes）用于修改 DB Custom 节点的属性。

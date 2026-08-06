@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstances请求参数结构体
  *
- * @method integer getTypeId() 获取<p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
- * @method void setTypeId(integer $TypeId) 设置<p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
+ * @method integer getTypeId() 获取<p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>21：Valkey 9.0 内存版（标准架构）。</li><li>22：Valkey 9.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
+ * @method void setTypeId(integer $TypeId) 设置<p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>21：Valkey 9.0 内存版（标准架构）。</li><li>22：Valkey 9.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
  * @method integer getMemSize() 获取<p>内存容量，单位为MB， 数值需为1024的整数倍。具体规格，请通过 <a href="https://cloud.tencent.com/document/api/239/30600">DescribeProductInfo</a> 接口查询全地域的售卖规格。</p><ul><li><strong>TypeId</strong>为标准架构时，<strong>MemSize</strong>是实例总内存容量；</li><li><strong>TypeId</strong>为集群架构时，<strong>MemSize</strong>是单分片内存容量。</li></ul>
  * @method void setMemSize(integer $MemSize) 设置<p>内存容量，单位为MB， 数值需为1024的整数倍。具体规格，请通过 <a href="https://cloud.tencent.com/document/api/239/30600">DescribeProductInfo</a> 接口查询全地域的售卖规格。</p><ul><li><strong>TypeId</strong>为标准架构时，<strong>MemSize</strong>是实例总内存容量；</li><li><strong>TypeId</strong>为集群架构时，<strong>MemSize</strong>是单分片内存容量。</li></ul>
  * @method integer getGoodsNum() 获取<p>实例数量，单次购买实例数量。具体信息，请通过 <a href="https://cloud.tencent.com/document/api/239/30600">DescribeProductInfo</a> 接口查询全地域的售卖规格。</p>
@@ -74,11 +74,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置<p>告警策略 ID 数组。</p><ul><li>请登录<a href="https://console.cloud.tencent.com/monitor/alarm/policy">腾讯云可观测平台-告警管理-策略管理</a>获取告警策略 ID。</li><li>若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录<a href="https://console.cloud.tencent.com/monitor/alarm/policy">腾讯云可观测平台-告警管理-策略管理</a>查看。</li></ul>
  * @method boolean getEncryptPassword() 获取<p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
  * @method void setEncryptPassword(boolean $EncryptPassword) 设置<p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
+ * @method PasswordPolicy getPasswordPolicy() 获取<p>实例级密码复杂度策略。未传入或 Enabled=false 时，视为不启用策略，按系统默认规则校验。</p>
+ * @method void setPasswordPolicy(PasswordPolicy $PasswordPolicy) 设置<p>实例级密码复杂度策略。未传入或 Enabled=false 时，视为不启用策略，按系统默认规则校验。</p>
+ * @method boolean getEnableSSL() 获取<p>是否开启 SSL 加密传输。</p><ul><li>true：开启。</li><li>false：关闭（默认值）。</li></ul>
+ * @method void setEnableSSL(boolean $EnableSSL) 设置<p>是否开启 SSL 加密传输。</p><ul><li>true：开启。</li><li>false：关闭（默认值）。</li></ul>
+ * @method boolean getSSLBindPrivateIPv4() 获取<p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><ul><li>true：允许使用内网 IP 进行 SSL 证书校验。</li><li>false：不添加证书的 SAN 扩展信息。</li></ul>
+ * @method void setSSLBindPrivateIPv4(boolean $SSLBindPrivateIPv4) 设置<p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><ul><li>true：允许使用内网 IP 进行 SSL 证书校验。</li><li>false：不添加证书的 SAN 扩展信息。</li></ul>
+ * @method integer getConnectionMode() 获取<p>实例连接访问模式。</p><ul><li>0：代理模式（Proxy Mode，默认值）。</li><li>1：直连模式（Direct Connect Mode）。</li></ul>
+ * @method void setConnectionMode(integer $ConnectionMode) 设置<p>实例连接访问模式。</p><ul><li>0：代理模式（Proxy Mode，默认值）。</li><li>1：直连模式（Direct Connect Mode）。</li></ul>
  */
 class CreateInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
+     * @var integer <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>21：Valkey 9.0 内存版（标准架构）。</li><li>22：Valkey 9.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
      */
     public $TypeId;
 
@@ -213,7 +221,27 @@ class CreateInstancesRequest extends AbstractModel
     public $EncryptPassword;
 
     /**
-     * @param integer $TypeId <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
+     * @var PasswordPolicy <p>实例级密码复杂度策略。未传入或 Enabled=false 时，视为不启用策略，按系统默认规则校验。</p>
+     */
+    public $PasswordPolicy;
+
+    /**
+     * @var boolean <p>是否开启 SSL 加密传输。</p><ul><li>true：开启。</li><li>false：关闭（默认值）。</li></ul>
+     */
+    public $EnableSSL;
+
+    /**
+     * @var boolean <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><ul><li>true：允许使用内网 IP 进行 SSL 证书校验。</li><li>false：不添加证书的 SAN 扩展信息。</li></ul>
+     */
+    public $SSLBindPrivateIPv4;
+
+    /**
+     * @var integer <p>实例连接访问模式。</p><ul><li>0：代理模式（Proxy Mode，默认值）。</li><li>1：直连模式（Direct Connect Mode）。</li></ul>
+     */
+    public $ConnectionMode;
+
+    /**
+     * @param integer $TypeId <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>21：Valkey 9.0 内存版（标准架构）。</li><li>22：Valkey 9.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
      * @param integer $MemSize <p>内存容量，单位为MB， 数值需为1024的整数倍。具体规格，请通过 <a href="https://cloud.tencent.com/document/api/239/30600">DescribeProductInfo</a> 接口查询全地域的售卖规格。</p><ul><li><strong>TypeId</strong>为标准架构时，<strong>MemSize</strong>是实例总内存容量；</li><li><strong>TypeId</strong>为集群架构时，<strong>MemSize</strong>是单分片内存容量。</li></ul>
      * @param integer $GoodsNum <p>实例数量，单次购买实例数量。具体信息，请通过 <a href="https://cloud.tencent.com/document/api/239/30600">DescribeProductInfo</a> 接口查询全地域的售卖规格。</p>
      * @param integer $Period <p>购买实例的时长。</p><ul><li>若 <strong>BillingMode</strong>为<strong>1</strong>，即计费方式为包年包月时，需设置该参数，指定所购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</li><li>若 <strong>BillingMode</strong>为<strong>0</strong>，即计费方式为按量计费时，该参数配置为1。</li></ul>
@@ -240,6 +268,10 @@ class CreateInstancesRequest extends AbstractModel
      * @param string $RedisClusterId <p>独享集群 ID。</p><ul><li>当 <strong>ProductVersion</strong> 设置为 <strong>cdc</strong> 时，该参数必须设置。</li><li>请通过接口<a href="https://cloud.tencent.com/document/product/239/109628"> DescribeRedisClusters</a> 获取集群 ID。</li></ul>
      * @param array $AlarmPolicyList <p>告警策略 ID 数组。</p><ul><li>请登录<a href="https://console.cloud.tencent.com/monitor/alarm/policy">腾讯云可观测平台-告警管理-策略管理</a>获取告警策略 ID。</li><li>若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录<a href="https://console.cloud.tencent.com/monitor/alarm/policy">腾讯云可观测平台-告警管理-策略管理</a>查看。</li></ul>
      * @param boolean $EncryptPassword <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
+     * @param PasswordPolicy $PasswordPolicy <p>实例级密码复杂度策略。未传入或 Enabled=false 时，视为不启用策略，按系统默认规则校验。</p>
+     * @param boolean $EnableSSL <p>是否开启 SSL 加密传输。</p><ul><li>true：开启。</li><li>false：关闭（默认值）。</li></ul>
+     * @param boolean $SSLBindPrivateIPv4 <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><ul><li>true：允许使用内网 IP 进行 SSL 证书校验。</li><li>false：不添加证书的 SAN 扩展信息。</li></ul>
+     * @param integer $ConnectionMode <p>实例连接访问模式。</p><ul><li>0：代理模式（Proxy Mode，默认值）。</li><li>1：直连模式（Direct Connect Mode）。</li></ul>
      */
     function __construct()
     {
@@ -370,6 +402,23 @@ class CreateInstancesRequest extends AbstractModel
 
         if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
             $this->EncryptPassword = $param["EncryptPassword"];
+        }
+
+        if (array_key_exists("PasswordPolicy",$param) and $param["PasswordPolicy"] !== null) {
+            $this->PasswordPolicy = new PasswordPolicy();
+            $this->PasswordPolicy->deserialize($param["PasswordPolicy"]);
+        }
+
+        if (array_key_exists("EnableSSL",$param) and $param["EnableSSL"] !== null) {
+            $this->EnableSSL = $param["EnableSSL"];
+        }
+
+        if (array_key_exists("SSLBindPrivateIPv4",$param) and $param["SSLBindPrivateIPv4"] !== null) {
+            $this->SSLBindPrivateIPv4 = $param["SSLBindPrivateIPv4"];
+        }
+
+        if (array_key_exists("ConnectionMode",$param) and $param["ConnectionMode"] !== null) {
+            $this->ConnectionMode = $param["ConnectionMode"];
         }
     }
 }

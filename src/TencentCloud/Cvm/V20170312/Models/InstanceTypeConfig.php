@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述实例机型配置信息
  *
- * @method string getZone() 获取可用区。
- * @method void setZone(string $Zone) 设置可用区。
- * @method string getInstanceType() 获取实例机型。
- * @method void setInstanceType(string $InstanceType) 设置实例机型。
- * @method string getInstanceFamily() 获取实例机型系列。
- * @method void setInstanceFamily(string $InstanceFamily) 设置实例机型系列。
- * @method integer getGPU() 获取GPU核数，单位：核。
- * @method void setGPU(integer $GPU) 设置GPU核数，单位：核。
- * @method integer getCPU() 获取CPU核数，单位：核。
- * @method void setCPU(integer $CPU) 设置CPU核数，单位：核。
- * @method integer getMemory() 获取内存容量，单位：`GiB`。
- * @method void setMemory(integer $Memory) 设置内存容量，单位：`GiB`。
- * @method integer getFPGA() 获取FPGA核数，单位：核。
- * @method void setFPGA(integer $FPGA) 设置FPGA核数，单位：核。
- * @method float getGpuCount() 获取实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
- * @method void setGpuCount(float $GpuCount) 设置实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+ * @method string getZone() 获取<p>可用区。</p>
+ * @method void setZone(string $Zone) 设置<p>可用区。</p>
+ * @method string getInstanceType() 获取<p>实例机型。</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例机型。</p>
+ * @method string getInstanceFamily() 获取<p>实例机型系列。</p>
+ * @method void setInstanceFamily(string $InstanceFamily) 设置<p>实例机型系列。</p>
+ * @method integer getGPU() 获取<p>GPU核数，单位：核。</p>
+ * @method void setGPU(integer $GPU) 设置<p>GPU核数，单位：核。</p>
+ * @method integer getCPU() 获取<p>CPU核数，单位：核。</p>
+ * @method void setCPU(integer $CPU) 设置<p>CPU核数，单位：核。</p>
+ * @method integer getMemory() 获取<p>内存容量，单位：<code>GiB</code>。</p>
+ * @method void setMemory(integer $Memory) 设置<p>内存容量，单位：<code>GiB</code>。</p>
+ * @method integer getFPGA() 获取<p>FPGA核数，单位：核。</p>
+ * @method void setFPGA(integer $FPGA) 设置<p>FPGA核数，单位：核。</p>
+ * @method float getGpuCount() 获取<p>实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。</p>
+ * @method void setGpuCount(float $GpuCount) 设置<p>实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。</p>
+ * @method string getGpuType() 获取<p>实例GPU类型</p>
+ * @method void setGpuType(string $GpuType) 设置<p>实例GPU类型</p>
+ * @method float getGpuMemory() 获取<p>实例GPU单块显存,单位：GiB。</p>
+ * @method void setGpuMemory(float $GpuMemory) 设置<p>实例GPU单块显存,单位：GiB。</p>
  */
 class InstanceTypeConfig extends AbstractModel
 {
     /**
-     * @var string 可用区。
+     * @var string <p>可用区。</p>
      */
     public $Zone;
 
     /**
-     * @var string 实例机型。
+     * @var string <p>实例机型。</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 实例机型系列。
+     * @var string <p>实例机型系列。</p>
      */
     public $InstanceFamily;
 
     /**
-     * @var integer GPU核数，单位：核。
+     * @var integer <p>GPU核数，单位：核。</p>
      */
     public $GPU;
 
     /**
-     * @var integer CPU核数，单位：核。
+     * @var integer <p>CPU核数，单位：核。</p>
      */
     public $CPU;
 
     /**
-     * @var integer 内存容量，单位：`GiB`。
+     * @var integer <p>内存容量，单位：<code>GiB</code>。</p>
      */
     public $Memory;
 
     /**
-     * @var integer FPGA核数，单位：核。
+     * @var integer <p>FPGA核数，单位：核。</p>
      */
     public $FPGA;
 
     /**
-     * @var float 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     * @var float <p>实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。</p>
      */
     public $GpuCount;
 
     /**
-     * @param string $Zone 可用区。
-     * @param string $InstanceType 实例机型。
-     * @param string $InstanceFamily 实例机型系列。
-     * @param integer $GPU GPU核数，单位：核。
-     * @param integer $CPU CPU核数，单位：核。
-     * @param integer $Memory 内存容量，单位：`GiB`。
-     * @param integer $FPGA FPGA核数，单位：核。
-     * @param float $GpuCount 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     * @var string <p>实例GPU类型</p>
+     */
+    public $GpuType;
+
+    /**
+     * @var float <p>实例GPU单块显存,单位：GiB。</p>
+     */
+    public $GpuMemory;
+
+    /**
+     * @param string $Zone <p>可用区。</p>
+     * @param string $InstanceType <p>实例机型。</p>
+     * @param string $InstanceFamily <p>实例机型系列。</p>
+     * @param integer $GPU <p>GPU核数，单位：核。</p>
+     * @param integer $CPU <p>CPU核数，单位：核。</p>
+     * @param integer $Memory <p>内存容量，单位：<code>GiB</code>。</p>
+     * @param integer $FPGA <p>FPGA核数，单位：核。</p>
+     * @param float $GpuCount <p>实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。</p>
+     * @param string $GpuType <p>实例GPU类型</p>
+     * @param float $GpuMemory <p>实例GPU单块显存,单位：GiB。</p>
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class InstanceTypeConfig extends AbstractModel
 
         if (array_key_exists("GpuCount",$param) and $param["GpuCount"] !== null) {
             $this->GpuCount = $param["GpuCount"];
+        }
+
+        if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
+            $this->GpuType = $param["GpuType"];
+        }
+
+        if (array_key_exists("GpuMemory",$param) and $param["GpuMemory"] !== null) {
+            $this->GpuMemory = $param["GpuMemory"];
         }
     }
 }

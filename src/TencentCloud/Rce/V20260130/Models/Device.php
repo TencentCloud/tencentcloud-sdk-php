@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSystemVersion(string $SystemVersion) 设置<p>系统版本</p>
  * @method string getSdkBuildVersion() 获取<p>SDK版本</p>
  * @method void setSdkBuildVersion(string $SdkBuildVersion) 设置<p>SDK版本</p>
+ * @method string getSignToken() 获取<p>验签token，验签功能启用请联系我们。</p>
+ * @method void setSignToken(string $SignToken) 设置<p>验签token，验签功能启用请联系我们。</p>
+ * @method string getTokenTime() 获取<p>token生成时间戳，毫秒级。</p>
+ * @method void setTokenTime(string $TokenTime) 设置<p>token生成时间戳，毫秒级。</p>
  */
 class Device extends AbstractModel
 {
@@ -94,6 +98,16 @@ class Device extends AbstractModel
     public $SdkBuildVersion;
 
     /**
+     * @var string <p>验签token，验签功能启用请联系我们。</p>
+     */
+    public $SignToken;
+
+    /**
+     * @var string <p>token生成时间戳，毫秒级。</p>
+     */
+    public $TokenTime;
+
+    /**
      * @param string $DeviceId <p>设备ID</p>
      * @param string $AppVersion <p>App版本信息</p>
      * @param string $Brand <p>品牌</p>
@@ -104,6 +118,8 @@ class Device extends AbstractModel
      * @param string $Platform <p>平台</p><p>枚举值：</p><ul><li>2： Android</li><li>3： IOS</li><li>4： H5</li><li>5： 微信小程序</li></ul>
      * @param string $SystemVersion <p>系统版本</p>
      * @param string $SdkBuildVersion <p>SDK版本</p>
+     * @param string $SignToken <p>验签token，验签功能启用请联系我们。</p>
+     * @param string $TokenTime <p>token生成时间戳，毫秒级。</p>
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class Device extends AbstractModel
 
         if (array_key_exists("SdkBuildVersion",$param) and $param["SdkBuildVersion"] !== null) {
             $this->SdkBuildVersion = $param["SdkBuildVersion"];
+        }
+
+        if (array_key_exists("SignToken",$param) and $param["SignToken"] !== null) {
+            $this->SignToken = $param["SignToken"];
+        }
+
+        if (array_key_exists("TokenTime",$param) and $param["TokenTime"] !== null) {
+            $this->TokenTime = $param["TokenTime"];
         }
     }
 }

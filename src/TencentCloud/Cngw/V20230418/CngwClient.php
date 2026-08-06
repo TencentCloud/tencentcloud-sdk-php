@@ -40,6 +40,7 @@ use TencentCloud\Cngw\V20230418\Models as Models;
  * @method Models\DeleteCloudNativeAPIGatewayMCPServerResponse DeleteCloudNativeAPIGatewayMCPServer(Models\DeleteCloudNativeAPIGatewayMCPServerRequest $req) 删除AI网关MCP服务
  * @method Models\DeleteCloudNativeAPIGatewayMCPToolResponse DeleteCloudNativeAPIGatewayMCPTool(Models\DeleteCloudNativeAPIGatewayMCPToolRequest $req) 删除AI网关MCP Tool
  * @method Models\DeleteCloudNativeAPIGatewaySecretKeyResponse DeleteCloudNativeAPIGatewaySecretKey(Models\DeleteCloudNativeAPIGatewaySecretKeyRequest $req) 删除消费者密钥（被绑定时需先解绑）。
+ * @method Models\DescribeCNGWServicesWithRoutesResponse DescribeCNGWServicesWithRoutes(Models\DescribeCNGWServicesWithRoutesRequest $req) 查询云原生网关服务和路由列表
  * @method Models\DescribeCloudNativeAPIGatewayConsumerResponse DescribeCloudNativeAPIGatewayConsumer(Models\DescribeCloudNativeAPIGatewayConsumerRequest $req) 查询云原生消费者详情
  * @method Models\DescribeCloudNativeAPIGatewayConsumerGroupResponse DescribeCloudNativeAPIGatewayConsumerGroup(Models\DescribeCloudNativeAPIGatewayConsumerGroupRequest $req) 查询消费者组详情。
  * @method Models\DescribeCloudNativeAPIGatewayLLMModelAPIResponse DescribeCloudNativeAPIGatewayLLMModelAPI(Models\DescribeCloudNativeAPIGatewayLLMModelAPIRequest $req) 查询单个 LLM 模型 API 详情。

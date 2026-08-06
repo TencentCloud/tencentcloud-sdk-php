@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kong网关主动健康检查配置
  *
- * @method integer getHealthyInterval() 获取主动健康检查健康探测间隔，单位：秒，0表示不开启
- * @method void setHealthyInterval(integer $HealthyInterval) 设置主动健康检查健康探测间隔，单位：秒，0表示不开启
- * @method integer getUnHealthyInterval() 获取主动健康检查异常探测间隔，单位：秒，0表示不开启
- * @method void setUnHealthyInterval(integer $UnHealthyInterval) 设置主动健康检查异常探测间隔，单位：秒，0表示不开启
- * @method string getHttpPath() 获取在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
- * @method void setHttpPath(string $HttpPath) 设置在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
- * @method float getTimeout() 获取GET HTTP 请求的超时时间，单位：秒。默认 60。
- * @method void setTimeout(float $Timeout) 设置GET HTTP 请求的超时时间，单位：秒。默认 60。
+ * @method integer getHealthyInterval() 获取<p>主动健康检查健康探测间隔，单位：秒，0表示不开启</p>
+ * @method void setHealthyInterval(integer $HealthyInterval) 设置<p>主动健康检查健康探测间隔，单位：秒，0表示不开启</p>
+ * @method integer getUnHealthyInterval() 获取<p>主动健康检查异常探测间隔，单位：秒，0表示不开启</p>
+ * @method void setUnHealthyInterval(integer $UnHealthyInterval) 设置<p>主动健康检查异常探测间隔，单位：秒，0表示不开启</p>
+ * @method string getHttpPath() 获取<p>在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。</p>
+ * @method void setHttpPath(string $HttpPath) 设置<p>在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。</p>
+ * @method float getTimeout() 获取<p>GET HTTP 请求的超时时间，单位：秒。默认 60。</p>
+ * @method void setTimeout(float $Timeout) 设置<p>GET HTTP 请求的超时时间，单位：秒。默认 60。</p>
+ * @method string getHostHeader() 获取<p>Host头</p>
+ * @method void setHostHeader(string $HostHeader) 设置<p>Host头</p>
  */
 class KongActiveHealthCheck extends AbstractModel
 {
     /**
-     * @var integer 主动健康检查健康探测间隔，单位：秒，0表示不开启
+     * @var integer <p>主动健康检查健康探测间隔，单位：秒，0表示不开启</p>
      */
     public $HealthyInterval;
 
     /**
-     * @var integer 主动健康检查异常探测间隔，单位：秒，0表示不开启
+     * @var integer <p>主动健康检查异常探测间隔，单位：秒，0表示不开启</p>
      */
     public $UnHealthyInterval;
 
     /**
-     * @var string 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
+     * @var string <p>在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。</p>
      */
     public $HttpPath;
 
     /**
-     * @var float GET HTTP 请求的超时时间，单位：秒。默认 60。
+     * @var float <p>GET HTTP 请求的超时时间，单位：秒。默认 60。</p>
      */
     public $Timeout;
 
     /**
-     * @param integer $HealthyInterval 主动健康检查健康探测间隔，单位：秒，0表示不开启
-     * @param integer $UnHealthyInterval 主动健康检查异常探测间隔，单位：秒，0表示不开启
-     * @param string $HttpPath 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-     * @param float $Timeout GET HTTP 请求的超时时间，单位：秒。默认 60。
+     * @var string <p>Host头</p>
+     */
+    public $HostHeader;
+
+    /**
+     * @param integer $HealthyInterval <p>主动健康检查健康探测间隔，单位：秒，0表示不开启</p>
+     * @param integer $UnHealthyInterval <p>主动健康检查异常探测间隔，单位：秒，0表示不开启</p>
+     * @param string $HttpPath <p>在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。</p>
+     * @param float $Timeout <p>GET HTTP 请求的超时时间，单位：秒。默认 60。</p>
+     * @param string $HostHeader <p>Host头</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class KongActiveHealthCheck extends AbstractModel
 
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
             $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("HostHeader",$param) and $param["HostHeader"] !== null) {
+            $this->HostHeader = $param["HostHeader"];
         }
     }
 }

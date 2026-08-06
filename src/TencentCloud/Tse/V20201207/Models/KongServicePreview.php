@@ -20,77 +20,77 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云原生网关服务预览信息
  *
- * @method string getID() 获取服务ID
- * @method void setID(string $ID) 设置服务ID
- * @method string getName() 获取服务名字
- * @method void setName(string $Name) 设置服务名字
- * @method array getTags() 获取标签
- * @method void setTags(array $Tags) 设置标签
- * @method KongUpstreamInfo getUpstreamInfo() 获取后端配置
- * @method void setUpstreamInfo(KongUpstreamInfo $UpstreamInfo) 设置后端配置
- * @method string getUpstreamType() 获取后端类型
- * @method void setUpstreamType(string $UpstreamType) 设置后端类型
- * @method string getCreatedTime() 获取创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method boolean getEditable() 获取是否可编辑
- * @method void setEditable(boolean $Editable) 设置是否可编辑
- * @method string getPath() 获取请求路径
+ * @method string getID() 获取<p>服务ID</p>
+ * @method void setID(string $ID) 设置<p>服务ID</p>
+ * @method string getName() 获取<p>服务名字</p>
+ * @method void setName(string $Name) 设置<p>服务名字</p>
+ * @method array getTags() 获取<p>标签</p>
+ * @method void setTags(array $Tags) 设置<p>标签</p>
+ * @method KongUpstreamInfo getUpstreamInfo() 获取<p>后端配置</p>
+ * @method void setUpstreamInfo(KongUpstreamInfo $UpstreamInfo) 设置<p>后端配置</p>
+ * @method string getUpstreamType() 获取<p>后端类型</p>
+ * @method void setUpstreamType(string $UpstreamType) 设置<p>后端类型</p>
+ * @method string getCreatedTime() 获取<p>创建时间</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间</p>
+ * @method boolean getEditable() 获取<p>是否可编辑</p>
+ * @method void setEditable(boolean $Editable) 设置<p>是否可编辑</p>
+ * @method string getPath() 获取<p>请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPath(string $Path) 设置请求路径
+ * @method void setPath(string $Path) 设置<p>请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongServicePreview extends AbstractModel
 {
     /**
-     * @var string 服务ID
+     * @var string <p>服务ID</p>
      */
     public $ID;
 
     /**
-     * @var string 服务名字
+     * @var string <p>服务名字</p>
      */
     public $Name;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
      */
     public $Tags;
 
     /**
-     * @var KongUpstreamInfo 后端配置
+     * @var KongUpstreamInfo <p>后端配置</p>
      */
     public $UpstreamInfo;
 
     /**
-     * @var string 后端类型
+     * @var string <p>后端类型</p>
      */
     public $UpstreamType;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreatedTime;
 
     /**
-     * @var boolean 是否可编辑
+     * @var boolean <p>是否可编辑</p>
      */
     public $Editable;
 
     /**
-     * @var string 请求路径
+     * @var string <p>请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
-     * @param string $ID 服务ID
-     * @param string $Name 服务名字
-     * @param array $Tags 标签
-     * @param KongUpstreamInfo $UpstreamInfo 后端配置
-     * @param string $UpstreamType 后端类型
-     * @param string $CreatedTime 创建时间
-     * @param boolean $Editable 是否可编辑
-     * @param string $Path 请求路径
+     * @param string $ID <p>服务ID</p>
+     * @param string $Name <p>服务名字</p>
+     * @param array $Tags <p>标签</p>
+     * @param KongUpstreamInfo $UpstreamInfo <p>后端配置</p>
+     * @param string $UpstreamType <p>后端类型</p>
+     * @param string $CreatedTime <p>创建时间</p>
+     * @param boolean $Editable <p>是否可编辑</p>
+     * @param string $Path <p>请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

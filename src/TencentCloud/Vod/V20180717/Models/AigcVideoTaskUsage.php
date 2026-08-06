@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputTokens(integer $InputTokens) 设置<p>输入 Token 数目。</p>
  * @method integer getThoughtTokens() 获取<p>思考产生的 Token 数目。</p>
  * @method void setThoughtTokens(integer $ThoughtTokens) 设置<p>思考产生的 Token 数目。</p>
+ * @method integer getInputImageCount() 获取<p>输入图片数目。</p>
+ * @method void setInputImageCount(integer $InputImageCount) 设置<p>输入图片数目。</p>
+ * @method integer getInputSeconds() 获取<p>输入视频的时长。</p><p>单位：秒。</p>
+ * @method void setInputSeconds(integer $InputSeconds) 设置<p>输入视频的时长。</p><p>单位：秒。</p>
+ * @method integer getOutputSeconds() 获取<p>输出视频时长。</p><p>单位：秒。</p>
+ * @method void setOutputSeconds(integer $OutputSeconds) 设置<p>输出视频时长。</p><p>单位：秒。</p>
+ * @method integer getTotalSeconds() 获取<p>输入输出总时长。</p><p>默认值：秒。</p>
+ * @method void setTotalSeconds(integer $TotalSeconds) 设置<p>输入输出总时长。</p><p>默认值：秒。</p>
  */
 class AigcVideoTaskUsage extends AbstractModel
 {
@@ -38,8 +46,32 @@ class AigcVideoTaskUsage extends AbstractModel
     public $ThoughtTokens;
 
     /**
+     * @var integer <p>输入图片数目。</p>
+     */
+    public $InputImageCount;
+
+    /**
+     * @var integer <p>输入视频的时长。</p><p>单位：秒。</p>
+     */
+    public $InputSeconds;
+
+    /**
+     * @var integer <p>输出视频时长。</p><p>单位：秒。</p>
+     */
+    public $OutputSeconds;
+
+    /**
+     * @var integer <p>输入输出总时长。</p><p>默认值：秒。</p>
+     */
+    public $TotalSeconds;
+
+    /**
      * @param integer $InputTokens <p>输入 Token 数目。</p>
      * @param integer $ThoughtTokens <p>思考产生的 Token 数目。</p>
+     * @param integer $InputImageCount <p>输入图片数目。</p>
+     * @param integer $InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p>
+     * @param integer $OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p>
+     * @param integer $TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p>
      */
     function __construct()
     {
@@ -60,6 +92,22 @@ class AigcVideoTaskUsage extends AbstractModel
 
         if (array_key_exists("ThoughtTokens",$param) and $param["ThoughtTokens"] !== null) {
             $this->ThoughtTokens = $param["ThoughtTokens"];
+        }
+
+        if (array_key_exists("InputImageCount",$param) and $param["InputImageCount"] !== null) {
+            $this->InputImageCount = $param["InputImageCount"];
+        }
+
+        if (array_key_exists("InputSeconds",$param) and $param["InputSeconds"] !== null) {
+            $this->InputSeconds = $param["InputSeconds"];
+        }
+
+        if (array_key_exists("OutputSeconds",$param) and $param["OutputSeconds"] !== null) {
+            $this->OutputSeconds = $param["OutputSeconds"];
+        }
+
+        if (array_key_exists("TotalSeconds",$param) and $param["TotalSeconds"] !== null) {
+            $this->TotalSeconds = $param["TotalSeconds"];
         }
     }
 }

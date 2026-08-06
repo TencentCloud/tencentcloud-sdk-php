@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableSubImg(boolean $EnableSubImg) 设置<p>是否支持子图解析。</p><p></p><p>默认值：false</p>
  * @method string getPageRange() 获取<p>需要识别的页码范围，单次调用最多支持300页。</p><p>参数格式：1-10</p>
  * @method void setPageRange(string $PageRange) 设置<p>需要识别的页码范围，单次调用最多支持300页。</p><p>参数格式：1-10</p>
+ * @method integer getTaskType() 获取<p>任务类型</p><p>枚举值：</p><ul><li>0： 文档解析</li><li>1： 图片OCR识别</li><li>2： 切片文字识别</li><li>3： 切片表格识别</li><li>4： 切片代码识别</li></ul><p>默认值：0</p>
+ * @method void setTaskType(integer $TaskType) 设置<p>任务类型</p><p>枚举值：</p><ul><li>0： 文档解析</li><li>1： 图片OCR识别</li><li>2： 切片文字识别</li><li>3： 切片表格识别</li><li>4： 切片代码识别</li></ul><p>默认值：0</p>
  */
 class MultimodalDocParseRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class MultimodalDocParseRequest extends AbstractModel
     public $PageRange;
 
     /**
+     * @var integer <p>任务类型</p><p>枚举值：</p><ul><li>0： 文档解析</li><li>1： 图片OCR识别</li><li>2： 切片文字识别</li><li>3： 切片表格识别</li><li>4： 切片代码识别</li></ul><p>默认值：0</p>
+     */
+    public $TaskType;
+
+    /**
      * @param string $FileUrl <p>文件的 Url 地址，支持FileType参数对应的文件格式及大小。文件下载时间不超过3秒。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      * @param integer $FileType <p>支持解析的文件类型。</p><p>1：PDF 文档；</p><p>2：Word 文档（.doc / .docx）；</p><p>3：PPT 演示文稿（.ppt / .pptx）；</p><p>4：Excel 表格（.xls / .xlsx）；</p><p>5：Markdown 文档（.md）；</p><p>6：纯文本文件（.txt）；</p><p>7：图片文件（.png / .jpg / .jpeg 等）；</p><p>8：WPS 文档；</p><p>0：未知文件类型。</p><p></p><p>支持的文件大小：</p><p>PDF/WORD/PPT支持150M且300页以内、EXCEL支持10M以内、TXT支持10M以内、图片文件支持70M以内。</p><p></p><p>默认值：1</p>
      * @param integer $ResultType <p>输出格式。</p><p>1：json格式</p><p>2：markdown格式</p><p>3：xml格式</p><p>9：json+markdown+xml格式</p><p></p><p>默认值：9</p>
      * @param boolean $EnableSubImg <p>是否支持子图解析。</p><p></p><p>默认值：false</p>
      * @param string $PageRange <p>需要识别的页码范围，单次调用最多支持300页。</p><p>参数格式：1-10</p>
+     * @param integer $TaskType <p>任务类型</p><p>枚举值：</p><ul><li>0： 文档解析</li><li>1： 图片OCR识别</li><li>2： 切片文字识别</li><li>3： 切片表格识别</li><li>4： 切片代码识别</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class MultimodalDocParseRequest extends AbstractModel
 
         if (array_key_exists("PageRange",$param) and $param["PageRange"] !== null) {
             $this->PageRange = $param["PageRange"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
     }
 }

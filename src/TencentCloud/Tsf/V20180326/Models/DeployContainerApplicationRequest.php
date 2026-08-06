@@ -148,6 +148,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDoNotStart(boolean $DoNotStart) 设置<p>是否不立即启动</p>
  * @method array getImagePullSecretList() 获取<p>镜像Secret列表</p>
  * @method void setImagePullSecretList(array $ImagePullSecretList) 设置<p>镜像Secret列表</p>
+ * @method string getMeshSidecarVersion() 获取<p>用于区分使用sidecar的版本是稳定版还是发行版</p><p>枚举值：</p><ul><li>stable： sidecar稳定版</li><li>release： sidecar发行版</li></ul>
+ * @method void setMeshSidecarVersion(string $MeshSidecarVersion) 设置<p>用于区分使用sidecar的版本是稳定版还是发行版</p><p>枚举值：</p><ul><li>stable： sidecar稳定版</li><li>release： sidecar发行版</li></ul>
  */
 class DeployContainerApplicationRequest extends AbstractModel
 {
@@ -472,6 +474,11 @@ class DeployContainerApplicationRequest extends AbstractModel
     public $ImagePullSecretList;
 
     /**
+     * @var string <p>用于区分使用sidecar的版本是稳定版还是发行版</p><p>枚举值：</p><ul><li>stable： sidecar稳定版</li><li>release： sidecar发行版</li></ul>
+     */
+    public $MeshSidecarVersion;
+
+    /**
      * @param string $ApplicationId <p>应用ID</p>
      * @param ContainerGroupObservabilityConfig $ObservabilityConfig <p>可观测配置</p>
      * @param string $ClusterId <p>集群ID</p>
@@ -536,6 +543,7 @@ class DeployContainerApplicationRequest extends AbstractModel
      * @param boolean $IncrementalDeployment <p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
      * @param boolean $DoNotStart <p>是否不立即启动</p>
      * @param array $ImagePullSecretList <p>镜像Secret列表</p>
+     * @param string $MeshSidecarVersion <p>用于区分使用sidecar的版本是稳定版还是发行版</p><p>枚举值：</p><ul><li>stable： sidecar稳定版</li><li>release： sidecar发行版</li></ul>
      */
     function __construct()
     {
@@ -850,6 +858,10 @@ class DeployContainerApplicationRequest extends AbstractModel
 
         if (array_key_exists("ImagePullSecretList",$param) and $param["ImagePullSecretList"] !== null) {
             $this->ImagePullSecretList = $param["ImagePullSecretList"];
+        }
+
+        if (array_key_exists("MeshSidecarVersion",$param) and $param["MeshSidecarVersion"] !== null) {
+            $this->MeshSidecarVersion = $param["MeshSidecarVersion"];
         }
     }
 }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayServices返回参数结构体
  *
- * @method KongServices getResult() 获取无
- * @method void setResult(KongServices $Result) 设置无
+ * @method KongServices getResult() 获取<p>无</p>
+ * @method void setResult(KongServices $Result) 设置<p>无</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudNativeAPIGatewayServicesResponse extends AbstractModel
 {
     /**
-     * @var KongServices 无
+     * @var KongServices <p>无</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeCloudNativeAPIGatewayServicesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param KongServices $Result 无
+     * @param KongServices $Result <p>无</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

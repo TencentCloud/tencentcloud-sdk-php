@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Cngw\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数学公式识别结果
+ * 键值对
  *
- * @method string getDetectedText() 获取识别出的文本行内容
- * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容
+ * @method string getKey() 获取键值映射的键
+ * @method void setKey(string $Key) 设置键值映射的键
+ * @method string getValue() 获取键值映射的值
+ * @method void setValue(string $Value) 设置键值映射的值
  */
-class TextFormula extends AbstractModel
+class KVMapping extends AbstractModel
 {
     /**
-     * @var string 识别出的文本行内容
+     * @var string 键值映射的键
      */
-    public $DetectedText;
+    public $Key;
 
     /**
-     * @param string $DetectedText 识别出的文本行内容
+     * @var string 键值映射的值
+     */
+    public $Value;
+
+    /**
+     * @param string $Key 键值映射的键
+     * @param string $Value 键值映射的值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class TextFormula extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DetectedText",$param) and $param["DetectedText"] !== null) {
-            $this->DetectedText = $param["DetectedText"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

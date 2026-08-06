@@ -138,6 +138,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeCloudAppVersionResponse DescribeCloudAppVersion(Models\DescribeCloudAppVersionRequest $req) 查询云应用服务版本信息
  * @method Models\DescribeCloudAppVersionListResponse DescribeCloudAppVersionList(Models\DescribeCloudAppVersionListRequest $req) 查询云应用服务版本列表信息
  * @method Models\DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildService(Models\DescribeCloudBaseBuildServiceRequest $req) 获取云托管代码上传url
+ * @method Models\DescribeCloudBaseRunBuildLogResponse DescribeCloudBaseRunBuildLog(Models\DescribeCloudBaseRunBuildLogRequest $req) 查询构建日志
  * @method Models\DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersion(Models\DescribeCloudBaseRunServerVersionRequest $req) 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
  * @method Models\DescribeCreateMySQLResultResponse DescribeCreateMySQLResult(Models\DescribeCreateMySQLResultRequest $req) 本接口（DescribeCreateMySQLResult）用于查询开通Mysql结果。
 

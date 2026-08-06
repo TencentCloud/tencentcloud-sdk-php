@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityId(integer $ActivityId) 设置<p>优惠活动ID</p>
  * @method string getReadOnlyGroupId() 获取<p>只读组ID。</p>
  * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置<p>只读组ID。</p>
- * @method Tag getTagList() 获取<p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
- * @method void setTagList(Tag $TagList) 设置<p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+ * @method Tag getTagList() 获取<p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p><p>当前字段未完整支持多个tag形式，不推荐使用，建议使用新字段Tags</p>
+ * @method void setTagList(Tag $TagList) 设置<p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p><p>当前字段未完整支持多个tag形式，不推荐使用，建议使用新字段Tags</p>
  * @method array getSecurityGroupIds() 获取<p>实例所属安全组，该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>实例所属安全组，该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
  * @method integer getNeedSupportIpv6() 获取<p>是否需要支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置<p>专属集群ID</p>
  * @method boolean getDeletionProtection() 获取<p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
+ * @method array getTags() 获取<p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+ * @method void setTags(array $Tags) 设置<p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
  */
 class CreateReadOnlyDBInstanceRequest extends AbstractModel
 {
@@ -143,7 +145,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $ReadOnlyGroupId;
 
     /**
-     * @var Tag <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+     * @var Tag <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p><p>当前字段未完整支持多个tag形式，不推荐使用，建议使用新字段Tags</p>
      */
     public $TagList;
 
@@ -179,6 +181,11 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $DeletionProtection;
 
     /**
+     * @var array <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+     */
+    public $Tags;
+
+    /**
      * @param string $Zone <p>实例所属主可用区， 如：ap-guangzhou-3；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
      * @param string $MasterDBInstanceId <p>只读实例的主实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      * @param string $SpecCode <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
@@ -194,13 +201,14 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @param integer $ProjectId <p>项目ID。默认值为0，表示归属默认项目。</p>
      * @param integer $ActivityId <p>优惠活动ID</p>
      * @param string $ReadOnlyGroupId <p>只读组ID。</p>
-     * @param Tag $TagList <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+     * @param Tag $TagList <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p><p>当前字段未完整支持多个tag形式，不推荐使用，建议使用新字段Tags</p>
      * @param array $SecurityGroupIds <p>实例所属安全组，该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
      * @param integer $NeedSupportIpv6 <p>是否需要支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
      * @param string $Name <p>实例名。仅支持长度小于60的中文/英文/数字/&quot;_&quot;/&quot;-&quot;</p>
      * @param string $DBVersion <p>不再需要指定，内核版本号与主实例保持一致</p>
      * @param string $DedicatedClusterId <p>专属集群ID</p>
      * @param boolean $DeletionProtection <p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
+     * @param array $Tags <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
      */
     function __construct()
     {
@@ -302,6 +310,15 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

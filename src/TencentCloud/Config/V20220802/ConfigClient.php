@@ -55,12 +55,14 @@ use TencentCloud\Config\V20220802\Models as Models;
  * @method Models\DetachConfigRuleToCompliancePackResponse DetachConfigRuleToCompliancePack(Models\DetachConfigRuleToCompliancePackRequest $req) 合规包移除规则
  * @method Models\ListAggregateCompliancePacksResponse ListAggregateCompliancePacks(Models\ListAggregateCompliancePacksRequest $req) 账号组获取合规包列表
  * @method Models\ListAggregateConfigRuleEvaluationResultsResponse ListAggregateConfigRuleEvaluationResults(Models\ListAggregateConfigRuleEvaluationResultsRequest $req) 账号组获取评估结果--规则维度（某个规则下资源的评估结果列表）
+ * @method Models\ListAggregateConfigRuleResourceEvaluationResultsResponse ListAggregateConfigRuleResourceEvaluationResults(Models\ListAggregateConfigRuleResourceEvaluationResultsRequest $req) 账号组查询配置规则资源评估结果列表
  * @method Models\ListAggregateConfigRulesResponse ListAggregateConfigRules(Models\ListAggregateConfigRulesRequest $req) 账号组获取规则列表
  * @method Models\ListAggregateDiscoveredResourcesResponse ListAggregateDiscoveredResources(Models\ListAggregateDiscoveredResourcesRequest $req) 账号组获取资源列表
  * @method Models\ListAggregatorsResponse ListAggregators(Models\ListAggregatorsRequest $req) 账号组列表
  * @method Models\ListAlarmPolicyResponse ListAlarmPolicy(Models\ListAlarmPolicyRequest $req) 告警规则列表
  * @method Models\ListCompliancePacksResponse ListCompliancePacks(Models\ListCompliancePacksRequest $req) 获取合规包列表
  * @method Models\ListConfigRuleEvaluationResultsResponse ListConfigRuleEvaluationResults(Models\ListConfigRuleEvaluationResultsRequest $req)  获取评估结果--规则维度（某个规则下资源的评估结果列表）
+ * @method Models\ListConfigRuleResourceEvaluationResultsResponse ListConfigRuleResourceEvaluationResults(Models\ListConfigRuleResourceEvaluationResultsRequest $req) 查询配置规则资源评估结果列表
  * @method Models\ListConfigRulesResponse ListConfigRules(Models\ListConfigRulesRequest $req) 获取规则列表
  * @method Models\ListDiscoveredResourcesResponse ListDiscoveredResources(Models\ListDiscoveredResourcesRequest $req) 获取资源列表
  * @method Models\ListRemediationExecutionsResponse ListRemediationExecutions(Models\ListRemediationExecutionsRequest $req) 修正记录

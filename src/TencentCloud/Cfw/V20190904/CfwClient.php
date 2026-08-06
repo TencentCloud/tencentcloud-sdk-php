@@ -45,6 +45,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\CreateNatFwInstanceWithDomainResponse CreateNatFwInstanceWithDomain(Models\CreateNatFwInstanceWithDomainRequest $req) 创建防火墙实例和接入域名（Region参数必填）
  * @method Models\CreateSecurityGroupRulesResponse CreateSecurityGroupRules(Models\CreateSecurityGroupRulesRequest $req) 创建企业安全组规则
  * @method Models\CreateVpcFwGroupResponse CreateVpcFwGroup(Models\CreateVpcFwGroupRequest $req) 创建VPC间防火墙(防火墙组)
+ * @method Models\CreateWhiteRuleResponse CreateWhiteRule(Models\CreateWhiteRuleRequest $req) 创建入侵防御白名单。先选择 RuleType，再按该类型填写 Rules[].Info；每条策略使用唯一 RuleName。创建成功后调用 DescribeWhiteRule，使用 RuleName+OperatorType 9 查询并精确核对 RuleName，取得 WhiteId。
  * @method Models\DeleteAcRuleResponse DeleteAcRule(Models\DeleteAcRuleRequest $req) 删除规则
  * @method Models\DeleteAddressTemplateResponse DeleteAddressTemplate(Models\DeleteAddressTemplateRequest $req) 删除地址模板规则
  * @method Models\DeleteBlockIgnoreRuleListResponse DeleteBlockIgnoreRuleList(Models\DeleteBlockIgnoreRuleListRequest $req) 批量删除入侵防御封禁列表、放通列表规则
@@ -55,6 +56,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DeleteResourceGroupResponse DeleteResourceGroup(Models\DeleteResourceGroupRequest $req) DeleteResourceGroup-资产中心资产组删除
  * @method Models\DeleteSecurityGroupRuleResponse DeleteSecurityGroupRule(Models\DeleteSecurityGroupRuleRequest $req) 删除规则
  * @method Models\DeleteVpcFwGroupResponse DeleteVpcFwGroup(Models\DeleteVpcFwGroupRequest $req) 删除防火墙(组)，或者删除其中实例
+ * @method Models\DeleteWhiteRuleResponse DeleteWhiteRule(Models\DeleteWhiteRuleRequest $req) 按 WhiteId 删除入侵防御白名单。先从 DescribeWhiteRule.Data[].WhiteId 读取目标 ID；提交删除后调用 DescribeWhiteRule，Filters 使用 Name=WD、OperatorType=1 和目标 WhiteId，Data 为空表示删除完成。
  * @method Models\DescribeAcListsResponse DescribeAcLists(Models\DescribeAcListsRequest $req) 访问控制列表
  * @method Models\DescribeAclRegInfoResponse DescribeAclRegInfo(Models\DescribeAclRegInfoRequest $req) 查询ACL规则支持配置的地区
  * @method Models\DescribeAclRuleResponse DescribeAclRule(Models\DescribeAclRuleRequest $req) 查询互联网边界访问控制列表
@@ -176,6 +178,7 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
  * @method Models\ModifyVpcAcRuleResponse ModifyVpcAcRule(Models\ModifyVpcAcRuleRequest $req) 修改一条 VPC边界访问控制规则。
  * @method Models\ModifyVpcFwGroupResponse ModifyVpcFwGroup(Models\ModifyVpcFwGroupRequest $req) 编辑VPC间防火墙(防火墙组)
  * @method Models\ModifyVpcFwSequenceRulesResponse ModifyVpcFwSequenceRules(Models\ModifyVpcFwSequenceRulesRequest $req) vpc间规则快速排序
+ * @method Models\ModifyWhiteRuleResponse ModifyWhiteRule(Models\ModifyWhiteRuleRequest $req) 修改入侵防御白名单采用整条替换。先调用 DescribeWhiteRule，选择 BanEdit=0 的策略并沿用其 WhiteId 和 RuleType；Rule 提交修改后的全部可写字段。Info 多值字段按笛卡尔积展开，第一项更新原 WhiteId，其余组合创建新 WhiteId，展开后最多 100 条且新增组合消耗配额。成功后调用 DescribeWhiteRule：原策略使用 Name=WD、OperatorType=1 精确查询，新组合使用 Name=RuleName、OperatorType=9 查询并逐项核对。
  * @method Models\OpenClusterNatFwSwitchResponse OpenClusterNatFwSwitch(Models\OpenClusterNatFwSwitchRequest $req) 开启NAT CCN集群模式防火墙开关
  * @method Models\RemoveAcRuleResponse RemoveAcRule(Models\RemoveAcRuleRequest $req) 删除互联网边界规则
  * @method Models\RemoveAclRuleResponse RemoveAclRule(Models\RemoveAclRuleRequest $req) 删除互联网边界访问控制规则。

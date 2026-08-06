@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExtractDocMulti返回参数结构体
  *
- * @method float getAngle() 获取图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
- * @method void setAngle(float $Angle) 设置图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
- * @method array getStructuralList() 获取配置结构化文本信息
- * @method void setStructuralList(array $StructuralList) 设置配置结构化文本信息
- * @method array getWordList() 获取还原文本信息
- * @method void setWordList(array $WordList) 设置还原文本信息
- * @method integer getTokenNum() 获取样本识别字段数
- * @method void setTokenNum(integer $TokenNum) 设置样本识别字段数
+ * @method float getAngle() 获取<p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负</p>
+ * @method void setAngle(float $Angle) 设置<p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负</p>
+ * @method array getStructuralList() 获取<p>配置结构化文本信息</p>
+ * @method void setStructuralList(array $StructuralList) 设置<p>配置结构化文本信息</p>
+ * @method array getWordList() 获取<p>还原文本信息</p>
+ * @method void setWordList(array $WordList) 设置<p>还原文本信息</p>
+ * @method integer getTokenNum() 获取<p>样本识别字段数</p>
+ * @method void setTokenNum(integer $TokenNum) 设置<p>样本识别字段数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ExtractDocMultiResponse extends AbstractModel
 {
     /**
-     * @var float 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
+     * @var float <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负</p>
      */
     public $Angle;
 
     /**
-     * @var array 配置结构化文本信息
+     * @var array <p>配置结构化文本信息</p>
      */
     public $StructuralList;
 
     /**
-     * @var array 还原文本信息
+     * @var array <p>还原文本信息</p>
      */
     public $WordList;
 
     /**
-     * @var integer 样本识别字段数
+     * @var integer <p>样本识别字段数</p>
      */
     public $TokenNum;
 
@@ -59,10 +59,10 @@ class ExtractDocMultiResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
-     * @param array $StructuralList 配置结构化文本信息
-     * @param array $WordList 还原文本信息
-     * @param integer $TokenNum 样本识别字段数
+     * @param float $Angle <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负</p>
+     * @param array $StructuralList <p>配置结构化文本信息</p>
+     * @param array $WordList <p>还原文本信息</p>
+     * @param integer $TokenNum <p>样本识别字段数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

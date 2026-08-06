@@ -87,6 +87,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeAllConfigFileTemplatesResponse DescribeAllConfigFileTemplates(Models\DescribeAllConfigFileTemplatesRequest $req) 获取全量配置文件模板列表
  * @method Models\DescribeAutoScalerResourceStrategiesResponse DescribeAutoScalerResourceStrategies(Models\DescribeAutoScalerResourceStrategiesRequest $req) 查看弹性伸缩策略列表
  * @method Models\DescribeAutoScalerResourceStrategyBindingGroupsResponse DescribeAutoScalerResourceStrategyBindingGroups(Models\DescribeAutoScalerResourceStrategyBindingGroupsRequest $req) 查看弹性伸缩策略绑定的网关分组
+ * @method Models\DescribeCNGWServicesWithRoutesResponse DescribeCNGWServicesWithRoutes(Models\DescribeCNGWServicesWithRoutesRequest $req) 查询云原生网关服务和路由列表
  * @method Models\DescribeCloudNativeAPIGatewayResponse DescribeCloudNativeAPIGateway(Models\DescribeCloudNativeAPIGatewayRequest $req) 获取云原生API网关实例信息
  * @method Models\DescribeCloudNativeAPIGatewayCORSResponse DescribeCloudNativeAPIGatewayCORS(Models\DescribeCloudNativeAPIGatewayCORSRequest $req) 查询云原生网关跨域配置
  * @method Models\DescribeCloudNativeAPIGatewayCanaryRulesResponse DescribeCloudNativeAPIGatewayCanaryRules(Models\DescribeCloudNativeAPIGatewayCanaryRulesRequest $req) 查询云原生网关灰度规则列表

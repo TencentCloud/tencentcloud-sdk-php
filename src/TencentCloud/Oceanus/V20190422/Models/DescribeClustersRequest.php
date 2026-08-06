@@ -20,82 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusters请求参数结构体
  *
- * @method array getClusterIds() 获取按照一个或者多个集群 ID 查询，每次请求的集群上限为 100
- * @method void setClusterIds(array $ClusterIds) 设置按照一个或者多个集群 ID 查询，每次请求的集群上限为 100
- * @method integer getOffset() 获取偏移量，默认 0
- * @method void setOffset(integer $Offset) 设置偏移量，默认 0
- * @method integer getLimit() 获取请求的集群数量，默认 20，最大值 100
- * @method void setLimit(integer $Limit) 设置请求的集群数量，默认 20，最大值 100
- * @method integer getOrderType() 获取集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
- * @method void setOrderType(integer $OrderType) 设置集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
- * @method array getFilters() 获取过滤规则
-    
-- Name
-    按照集群的名字进行模糊查询。例如：测试
-    类型： String
-    必选： 否
-    
- * @method void setFilters(array $Filters) 设置过滤规则
-    
-- Name
-    按照集群的名字进行模糊查询。例如：测试
-    类型： String
-    必选： 否
-    
- * @method string getWorkSpaceId() 获取工作空间 SerialId
- * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
+ * @method array getClusterIds() 获取<p>按照一个或者多个集群 ID 查询，每次请求的集群上限为 100</p>
+ * @method void setClusterIds(array $ClusterIds) 设置<p>按照一个或者多个集群 ID 查询，每次请求的集群上限为 100</p>
+ * @method integer getOffset() 获取<p>偏移量，默认 0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认 0</p>
+ * @method integer getLimit() 获取<p>请求的集群数量，默认 20，最大值 100</p>
+ * @method void setLimit(integer $Limit) 设置<p>请求的集群数量，默认 20，最大值 100</p>
+ * @method integer getOrderType() 获取<p>集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序</p>
+ * @method void setOrderType(integer $OrderType) 设置<p>集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序</p>
+ * @method array getFilters() 获取<p>过滤规则</p><ul><li>Name<br>  按照集群的名字进行模糊查询。例如：测试<br>  类型： String<br>  必选： 否</li></ul>
+ * @method void setFilters(array $Filters) 设置<p>过滤规则</p><ul><li>Name<br>  按照集群的名字进行模糊查询。例如：测试<br>  类型： String<br>  必选： 否</li></ul>
+ * @method string getWorkSpaceId() 获取<p>工作空间 SerialId</p>
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置<p>工作空间 SerialId</p>
  */
 class DescribeClustersRequest extends AbstractModel
 {
     /**
-     * @var array 按照一个或者多个集群 ID 查询，每次请求的集群上限为 100
+     * @var array <p>按照一个或者多个集群 ID 查询，每次请求的集群上限为 100</p>
      */
     public $ClusterIds;
 
     /**
-     * @var integer 偏移量，默认 0
+     * @var integer <p>偏移量，默认 0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 请求的集群数量，默认 20，最大值 100
+     * @var integer <p>请求的集群数量，默认 20，最大值 100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
+     * @var integer <p>集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序</p>
      */
     public $OrderType;
 
     /**
-     * @var array 过滤规则
-    
-- Name
-    按照集群的名字进行模糊查询。例如：测试
-    类型： String
-    必选： 否
-    
+     * @var array <p>过滤规则</p><ul><li>Name<br>  按照集群的名字进行模糊查询。例如：测试<br>  类型： String<br>  必选： 否</li></ul>
      */
     public $Filters;
 
     /**
-     * @var string 工作空间 SerialId
+     * @var string <p>工作空间 SerialId</p>
      */
     public $WorkSpaceId;
 
     /**
-     * @param array $ClusterIds 按照一个或者多个集群 ID 查询，每次请求的集群上限为 100
-     * @param integer $Offset 偏移量，默认 0
-     * @param integer $Limit 请求的集群数量，默认 20，最大值 100
-     * @param integer $OrderType 集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
-     * @param array $Filters 过滤规则
-    
-- Name
-    按照集群的名字进行模糊查询。例如：测试
-    类型： String
-    必选： 否
-    
-     * @param string $WorkSpaceId 工作空间 SerialId
+     * @param array $ClusterIds <p>按照一个或者多个集群 ID 查询，每次请求的集群上限为 100</p>
+     * @param integer $Offset <p>偏移量，默认 0</p>
+     * @param integer $Limit <p>请求的集群数量，默认 20，最大值 100</p>
+     * @param integer $OrderType <p>集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序</p>
+     * @param array $Filters <p>过滤规则</p><ul><li>Name<br>  按照集群的名字进行模糊查询。例如：测试<br>  类型： String<br>  必选： 否</li></ul>
+     * @param string $WorkSpaceId <p>工作空间 SerialId</p>
      */
     function __construct()
     {

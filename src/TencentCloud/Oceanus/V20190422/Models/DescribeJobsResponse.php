@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJobs返回参数结构体
  *
- * @method integer getTotalCount() 获取作业总数
- * @method void setTotalCount(integer $TotalCount) 设置作业总数
- * @method array getJobSet() 获取作业列表
- * @method void setJobSet(array $JobSet) 设置作业列表
+ * @method integer getTotalCount() 获取<p>作业总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>作业总数</p>
+ * @method array getJobSet() 获取<p>作业列表</p>
+ * @method void setJobSet(array $JobSet) 设置<p>作业列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeJobsResponse extends AbstractModel
 {
     /**
-     * @var integer 作业总数
+     * @var integer <p>作业总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 作业列表
+     * @var array <p>作业列表</p>
      */
     public $JobSet;
 
@@ -45,8 +45,8 @@ class DescribeJobsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 作业总数
-     * @param array $JobSet 作业列表
+     * @param integer $TotalCount <p>作业总数</p>
+     * @param array $JobSet <p>作业列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

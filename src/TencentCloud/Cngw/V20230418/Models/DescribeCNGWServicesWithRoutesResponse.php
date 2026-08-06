@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Cngw\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * FormulaOCR返回参数结构体
+ * DescribeCNGWServicesWithRoutes返回参数结构体
  *
- * @method integer getAngle() 获取图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
- * @method void setAngle(integer $Angle) 设置图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
- * @method array getFormulaInfos() 获取检测到的文本信息，具体内容请点击左侧链接。
- * @method void setFormulaInfos(array $FormulaInfos) 设置检测到的文本信息，具体内容请点击左侧链接。
+ * @method KongServiceWithRoutes getResult() 获取<p>服务及路由查询结果</p>
+ * @method void setResult(KongServiceWithRoutes $Result) 设置<p>服务及路由查询结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class FormulaOCRResponse extends AbstractModel
+class DescribeCNGWServicesWithRoutesResponse extends AbstractModel
 {
     /**
-     * @var integer 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     * @var KongServiceWithRoutes <p>服务及路由查询结果</p>
      */
-    public $Angle;
-
-    /**
-     * @var array 检测到的文本信息，具体内容请点击左侧链接。
-     */
-    public $FormulaInfos;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class FormulaOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
-     * @param array $FormulaInfos 检测到的文本信息，具体内容请点击左侧链接。
+     * @param KongServiceWithRoutes $Result <p>服务及路由查询结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,9 @@ class FormulaOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
-        }
-
-        if (array_key_exists("FormulaInfos",$param) and $param["FormulaInfos"] !== null) {
-            $this->FormulaInfos = [];
-            foreach ($param["FormulaInfos"] as $key => $value){
-                $obj = new TextFormula();
-                $obj->deserialize($value);
-                array_push($this->FormulaInfos, $obj);
-            }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new KongServiceWithRoutes();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

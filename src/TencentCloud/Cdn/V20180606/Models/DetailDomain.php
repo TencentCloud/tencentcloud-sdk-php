@@ -20,906 +20,794 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 加速域名全量配置信息
  *
- * @method string getResourceId() 获取域名 ID
- * @method void setResourceId(string $ResourceId) 设置域名 ID
- * @method integer getAppId() 获取腾讯云账号ID
- * @method void setAppId(integer $AppId) 设置腾讯云账号ID
- * @method string getDomain() 获取加速域名
- * @method void setDomain(string $Domain) 设置加速域名
- * @method string getCname() 获取域名对应的 CNAME 地址
+ * @method string getResourceId() 获取<p>域名 ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>域名 ID</p>
+ * @method integer getAppId() 获取<p>腾讯云账号ID</p>
+ * @method void setAppId(integer $AppId) 设置<p>腾讯云账号ID</p>
+ * @method string getDomain() 获取<p>加速域名</p>
+ * @method void setDomain(string $Domain) 设置<p>加速域名</p>
+ * @method string getCname() 获取<p>域名对应的 CNAME 地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCname(string $Cname) 设置域名对应的 CNAME 地址
+ * @method void setCname(string $Cname) 设置<p>域名对应的 CNAME 地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
-processing：部署中
-closing：关闭中
-online：已启动
-offline：已关闭
- * @method void setStatus(string $Status) 设置加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
-processing：部署中
-closing：关闭中
-online：已启动
-offline：已关闭
- * @method integer getProjectId() 获取项目 ID，可前往腾讯云项目管理页面查看
- * @method void setProjectId(integer $ProjectId) 设置项目 ID，可前往腾讯云项目管理页面查看
- * @method string getServiceType() 获取加速域名业务类型
-web：网页小文件
-download：下载大文件
-media：音视频点播
-hybrid:  动静加速
-dynamic:  动态加速
- * @method void setServiceType(string $ServiceType) 设置加速域名业务类型
-web：网页小文件
-download：下载大文件
-media：音视频点播
-hybrid:  动静加速
-dynamic:  动态加速
- * @method string getCreateTime() 获取域名创建时间
- * @method void setCreateTime(string $CreateTime) 设置域名创建时间
- * @method string getUpdateTime() 获取域名更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置域名更新时间
- * @method Origin getOrigin() 获取源站配置
- * @method void setOrigin(Origin $Origin) 设置源站配置
- * @method IpFilter getIpFilter() 获取IP 黑白名单配置
+ * @method string getStatus() 获取<p>加速服务状态<br>rejected：域名审核未通过，域名备案过期/被注销导致<br>processing：部署中<br>closing：关闭中<br>online：已启动<br>offline：已关闭</p>
+ * @method void setStatus(string $Status) 设置<p>加速服务状态<br>rejected：域名审核未通过，域名备案过期/被注销导致<br>processing：部署中<br>closing：关闭中<br>online：已启动<br>offline：已关闭</p>
+ * @method integer getProjectId() 获取<p>项目 ID，可前往腾讯云项目管理页面查看</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目 ID，可前往腾讯云项目管理页面查看</p>
+ * @method string getServiceType() 获取<p>加速域名业务类型<br>web：网页小文件<br>download：下载大文件<br>media：音视频点播<br>hybrid:  动静加速<br>dynamic:  动态加速</p>
+ * @method void setServiceType(string $ServiceType) 设置<p>加速域名业务类型<br>web：网页小文件<br>download：下载大文件<br>media：音视频点播<br>hybrid:  动静加速<br>dynamic:  动态加速</p>
+ * @method string getCreateTime() 获取<p>域名创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>域名创建时间</p>
+ * @method string getUpdateTime() 获取<p>域名更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>域名更新时间</p>
+ * @method Origin getOrigin() 获取<p>源站配置</p>
+ * @method void setOrigin(Origin $Origin) 设置<p>源站配置</p>
+ * @method IpFilter getIpFilter() 获取<p>IP 黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpFilter(IpFilter $IpFilter) 设置IP 黑白名单配置
+ * @method void setIpFilter(IpFilter $IpFilter) 设置<p>IP 黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method IpFreqLimit getIpFreqLimit() 获取IP 访问限频配置
+ * @method IpFreqLimit getIpFreqLimit() 获取<p>IP 访问限频配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpFreqLimit(IpFreqLimit $IpFreqLimit) 设置IP 访问限频配置
+ * @method void setIpFreqLimit(IpFreqLimit $IpFreqLimit) 设置<p>IP 访问限频配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method StatusCodeCache getStatusCodeCache() 获取状态码缓存配置
+ * @method StatusCodeCache getStatusCodeCache() 获取<p>状态码缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusCodeCache(StatusCodeCache $StatusCodeCache) 设置状态码缓存配置
+ * @method void setStatusCodeCache(StatusCodeCache $StatusCodeCache) 设置<p>状态码缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Compression getCompression() 获取智能压缩配置
+ * @method Compression getCompression() 获取<p>智能压缩配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompression(Compression $Compression) 设置智能压缩配置
+ * @method void setCompression(Compression $Compression) 设置<p>智能压缩配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BandwidthAlert getBandwidthAlert() 获取带宽封顶配置
+ * @method BandwidthAlert getBandwidthAlert() 获取<p>带宽封顶配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBandwidthAlert(BandwidthAlert $BandwidthAlert) 设置带宽封顶配置
+ * @method void setBandwidthAlert(BandwidthAlert $BandwidthAlert) 设置<p>带宽封顶配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RangeOriginPull getRangeOriginPull() 获取Range 回源配置
+ * @method RangeOriginPull getRangeOriginPull() 获取<p>Range 回源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRangeOriginPull(RangeOriginPull $RangeOriginPull) 设置Range 回源配置
+ * @method void setRangeOriginPull(RangeOriginPull $RangeOriginPull) 设置<p>Range 回源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method FollowRedirect getFollowRedirect() 获取301/302 回源自动跟随配置
+ * @method FollowRedirect getFollowRedirect() 获取<p>301/302 回源自动跟随配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFollowRedirect(FollowRedirect $FollowRedirect) 设置301/302 回源自动跟随配置
+ * @method void setFollowRedirect(FollowRedirect $FollowRedirect) 设置<p>301/302 回源自动跟随配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ErrorPage getErrorPage() 获取自定义错误页面配置
+ * @method ErrorPage getErrorPage() 获取<p>自定义错误页面配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorPage(ErrorPage $ErrorPage) 设置自定义错误页面配置
+ * @method void setErrorPage(ErrorPage $ErrorPage) 设置<p>自定义错误页面配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RequestHeader getRequestHeader() 获取自定义请求头部配置
+ * @method RequestHeader getRequestHeader() 获取<p>自定义请求头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestHeader(RequestHeader $RequestHeader) 设置自定义请求头部配置
+ * @method void setRequestHeader(RequestHeader $RequestHeader) 设置<p>自定义请求头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ResponseHeader getResponseHeader() 获取自定义响应头部配置
+ * @method ResponseHeader getResponseHeader() 获取<p>自定义响应头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResponseHeader(ResponseHeader $ResponseHeader) 设置自定义响应头部配置
+ * @method void setResponseHeader(ResponseHeader $ResponseHeader) 设置<p>自定义响应头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DownstreamCapping getDownstreamCapping() 获取单链接下行限速配置
+ * @method DownstreamCapping getDownstreamCapping() 获取<p>单链接下行限速配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDownstreamCapping(DownstreamCapping $DownstreamCapping) 设置单链接下行限速配置
+ * @method void setDownstreamCapping(DownstreamCapping $DownstreamCapping) 设置<p>单链接下行限速配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CacheKey getCacheKey() 获取带参/不带参缓存配置
+ * @method CacheKey getCacheKey() 获取<p>带参/不带参缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCacheKey(CacheKey $CacheKey) 设置带参/不带参缓存配置
+ * @method void setCacheKey(CacheKey $CacheKey) 设置<p>带参/不带参缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ResponseHeaderCache getResponseHeaderCache() 获取源站头部缓存配置
+ * @method ResponseHeaderCache getResponseHeaderCache() 获取<p>源站头部缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResponseHeaderCache(ResponseHeaderCache $ResponseHeaderCache) 设置源站头部缓存配置
+ * @method void setResponseHeaderCache(ResponseHeaderCache $ResponseHeaderCache) 设置<p>源站头部缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method VideoSeek getVideoSeek() 获取视频拖拽配置
+ * @method VideoSeek getVideoSeek() 获取<p>视频拖拽配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVideoSeek(VideoSeek $VideoSeek) 设置视频拖拽配置
+ * @method void setVideoSeek(VideoSeek $VideoSeek) 设置<p>视频拖拽配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Cache getCache() 获取节点缓存过期规则配置
+ * @method Cache getCache() 获取<p>节点缓存过期规则配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCache(Cache $Cache) 设置节点缓存过期规则配置
+ * @method void setCache(Cache $Cache) 设置<p>节点缓存过期规则配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OriginPullOptimization getOriginPullOptimization() 获取跨国链路优化配置（功能灰度中，敬请期待）
+ * @method OriginPullOptimization getOriginPullOptimization() 获取<p>跨国链路优化配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginPullOptimization(OriginPullOptimization $OriginPullOptimization) 设置跨国链路优化配置（功能灰度中，敬请期待）
+ * @method void setOriginPullOptimization(OriginPullOptimization $OriginPullOptimization) 设置<p>跨国链路优化配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Https getHttps() 获取Https 加速相关配置
+ * @method Https getHttps() 获取<p>Https 加速相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttps(Https $Https) 设置Https 加速相关配置
+ * @method void setHttps(Https $Https) 设置<p>Https 加速相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Authentication getAuthentication() 获取时间戳防盗链配置
+ * @method Authentication getAuthentication() 获取<p>时间戳防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAuthentication(Authentication $Authentication) 设置时间戳防盗链配置
+ * @method void setAuthentication(Authentication $Authentication) 设置<p>时间戳防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Seo getSeo() 获取SEO 优化配置
+ * @method Seo getSeo() 获取<p>SEO 优化配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSeo(Seo $Seo) 设置SEO 优化配置
+ * @method void setSeo(Seo $Seo) 设置<p>SEO 优化配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDisable() 获取域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-ddos_risk: 域名存在ddos攻击风险
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
+ * @method string getDisable() 获取<p>域名封禁状态<br>normal：正常状态<br>overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务<br>malicious：域名出现恶意行为，强制关闭加速服务<br>ddos：域名被大规模 DDoS 攻击，关闭加速服务<br>ddos_risk: 域名存在ddos攻击风险<br>idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务<br>unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务<br>capping：触发配置的带宽阈值上限<br>readonly：域名存在特殊配置，被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisable(string $Disable) 设置域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-ddos_risk: 域名存在ddos攻击风险
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
+ * @method void setDisable(string $Disable) 设置<p>域名封禁状态<br>normal：正常状态<br>overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务<br>malicious：域名出现恶意行为，强制关闭加速服务<br>ddos：域名被大规模 DDoS 攻击，关闭加速服务<br>ddos_risk: 域名存在ddos攻击风险<br>idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务<br>unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务<br>capping：触发配置的带宽阈值上限<br>readonly：域名存在特殊配置，被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ForceRedirect getForceRedirect() 获取访问协议强制跳转配置
+ * @method ForceRedirect getForceRedirect() 获取<p>访问协议强制跳转配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setForceRedirect(ForceRedirect $ForceRedirect) 设置访问协议强制跳转配置
+ * @method void setForceRedirect(ForceRedirect $ForceRedirect) 设置<p>访问协议强制跳转配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Referer getReferer() 获取Referer 防盗链配置
+ * @method Referer getReferer() 获取<p>Referer 防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReferer(Referer $Referer) 设置Referer 防盗链配置
+ * @method void setReferer(Referer $Referer) 设置<p>Referer 防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MaxAge getMaxAge() 获取浏览器缓存过期规则配置（功能灰度中，敬请期待）
+ * @method MaxAge getMaxAge() 获取<p>浏览器缓存过期规则配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxAge(MaxAge $MaxAge) 设置浏览器缓存过期规则配置（功能灰度中，敬请期待）
+ * @method void setMaxAge(MaxAge $MaxAge) 设置<p>浏览器缓存过期规则配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Ipv6 getIpv6() 获取Ipv6 回源配置（功能灰度中，敬请期待）
+ * @method Ipv6 getIpv6() 获取<p>Ipv6 回源配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6 回源配置（功能灰度中，敬请期待）
+ * @method void setIpv6(Ipv6 $Ipv6) 设置<p>Ipv6 回源配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Compatibility getCompatibility() 获取是否兼容旧版本配置（内部兼容性字段）
+ * @method Compatibility getCompatibility() 获取<p>是否兼容旧版本配置（内部兼容性字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompatibility(Compatibility $Compatibility) 设置是否兼容旧版本配置（内部兼容性字段）
+ * @method void setCompatibility(Compatibility $Compatibility) 设置<p>是否兼容旧版本配置（内部兼容性字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SpecificConfig getSpecificConfig() 获取区域特殊配置
+ * @method SpecificConfig getSpecificConfig() 获取<p>区域特殊配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSpecificConfig(SpecificConfig $SpecificConfig) 设置区域特殊配置
+ * @method void setSpecificConfig(SpecificConfig $SpecificConfig) 设置<p>区域特殊配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getArea() 获取加速区域
-mainland：中国境内加速
-overseas：中国境外加速
-global：全球加速
+ * @method string getArea() 获取<p>加速区域<br>mainland：中国境内加速<br>overseas：中国境外加速<br>global：全球加速</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArea(string $Area) 设置加速区域
-mainland：中国境内加速
-overseas：中国境外加速
-global：全球加速
+ * @method void setArea(string $Area) 设置<p>加速区域<br>mainland：中国境内加速<br>overseas：中国境外加速<br>global：全球加速</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReadonly() 获取域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
+ * @method string getReadonly() 获取<p>域名锁定状态<br>normal：未锁定<br>mainland：中国境内锁定<br>overseas：中国境外锁定<br>global：全球锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReadonly(string $Readonly) 设置域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
+ * @method void setReadonly(string $Readonly) 设置<p>域名锁定状态<br>normal：未锁定<br>mainland：中国境内锁定<br>overseas：中国境外锁定<br>global：全球锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OriginPullTimeout getOriginPullTimeout() 获取回源超时配置
+ * @method OriginPullTimeout getOriginPullTimeout() 获取<p>回源超时配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) 设置回源超时配置
+ * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) 设置<p>回源超时配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AwsPrivateAccess getAwsPrivateAccess() 获取回源S3鉴权配置
+ * @method AwsPrivateAccess getAwsPrivateAccess() 获取<p>回源S3鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3鉴权配置
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置<p>回源S3鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SecurityConfig getSecurityConfig() 获取Scdn配置
+ * @method SecurityConfig getSecurityConfig() 获取<p>Scdn配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityConfig(SecurityConfig $SecurityConfig) 设置Scdn配置
+ * @method void setSecurityConfig(SecurityConfig $SecurityConfig) 设置<p>Scdn配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageOptimization getImageOptimization() 获取ImageOptimization配置
+ * @method ImageOptimization getImageOptimization() 获取<p>ImageOptimization配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageOptimization(ImageOptimization $ImageOptimization) 设置ImageOptimization配置
+ * @method void setImageOptimization(ImageOptimization $ImageOptimization) 设置<p>ImageOptimization配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method UserAgentFilter getUserAgentFilter() 获取UA黑白名单配置
+ * @method UserAgentFilter getUserAgentFilter() 获取<p>UA黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) 设置UA黑白名单配置
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) 设置<p>UA黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AccessControl getAccessControl() 获取访问控制
+ * @method AccessControl getAccessControl() 获取<p>访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessControl(AccessControl $AccessControl) 设置访问控制
+ * @method void setAccessControl(AccessControl $AccessControl) 设置<p>访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAdvance() 获取是否支持高级配置项
-on：支持
-off：不支持
+ * @method string getAdvance() 获取<p>是否支持高级配置项<br>on：支持<br>off：不支持</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdvance(string $Advance) 设置是否支持高级配置项
-on：支持
-off：不支持
+ * @method void setAdvance(string $Advance) 设置<p>是否支持高级配置项<br>on：支持<br>off：不支持</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method UrlRedirect getUrlRedirect() 获取URL重定向配置
+ * @method UrlRedirect getUrlRedirect() 获取<p>URL重定向配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUrlRedirect(UrlRedirect $UrlRedirect) 设置URL重定向配置
+ * @method void setUrlRedirect(UrlRedirect $UrlRedirect) 设置<p>URL重定向配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAccessPort() 获取访问端口配置
+ * @method array getAccessPort() 获取<p>访问端口配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessPort(array $AccessPort) 设置访问端口配置
+ * @method void setAccessPort(array $AccessPort) 设置<p>访问端口配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTag() 获取标签配置
+ * @method array getTag() 获取<p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTag(array $Tag) 设置标签配置
+ * @method void setTag(array $Tag) 设置<p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AdvancedAuthentication getAdvancedAuthentication() 获取时间戳防盗链高级配置，白名单功能
+ * @method AdvancedAuthentication getAdvancedAuthentication() 获取<p>时间戳防盗链高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdvancedAuthentication(AdvancedAuthentication $AdvancedAuthentication) 设置时间戳防盗链高级配置，白名单功能
+ * @method void setAdvancedAuthentication(AdvancedAuthentication $AdvancedAuthentication) 设置<p>时间戳防盗链高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OriginAuthentication getOriginAuthentication() 获取回源鉴权高级配置，白名单功能
+ * @method OriginAuthentication getOriginAuthentication() 获取<p>回源鉴权高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) 设置回源鉴权高级配置，白名单功能
+ * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) 设置<p>回源鉴权高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Ipv6Access getIpv6Access() 获取Ipv6访问配置
+ * @method Ipv6Access getIpv6Access() 获取<p>Ipv6访问配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpv6Access(Ipv6Access $Ipv6Access) 设置Ipv6访问配置
+ * @method void setIpv6Access(Ipv6Access $Ipv6Access) 设置<p>Ipv6访问配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAdvanceSet() 获取高级配置集合
+ * @method array getAdvanceSet() 获取<p>高级配置集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdvanceSet(array $AdvanceSet) 设置高级配置集合
+ * @method void setAdvanceSet(array $AdvanceSet) 设置<p>高级配置集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OfflineCache getOfflineCache() 获取离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
+ * @method OfflineCache getOfflineCache() 获取<p>离线缓存（功能灰度中，尚未全量，请等待后续全量发布）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
+ * @method void setOfflineCache(OfflineCache $OfflineCache) 设置<p>离线缓存（功能灰度中，尚未全量，请等待后续全量发布）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OriginCombine getOriginCombine() 获取合并回源（白名单功能）
+ * @method OriginCombine getOriginCombine() 获取<p>合并回源（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源（白名单功能）
+ * @method void setOriginCombine(OriginCombine $OriginCombine) 设置<p>合并回源（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PostSize getPostMaxSize() 获取POST上传配置项
+ * @method PostSize getPostMaxSize() 获取<p>POST上传配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPostMaxSize(PostSize $PostMaxSize) 设置POST上传配置项
+ * @method void setPostMaxSize(PostSize $PostMaxSize) 设置<p>POST上传配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Quic getQuic() 获取Quic配置
+ * @method Quic getQuic() 获取<p>Quic配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuic(Quic $Quic) 设置Quic配置
+ * @method void setQuic(Quic $Quic) 设置<p>Quic配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OssPrivateAccess getOssPrivateAccess() 获取回源OSS私有鉴权
+ * @method OssPrivateAccess getOssPrivateAccess() 获取<p>回源OSS私有鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置回源OSS私有鉴权
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置<p>回源OSS私有鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WebSocket getWebSocket() 获取WebSocket配置
+ * @method WebSocket getWebSocket() 获取<p>WebSocket配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置
+ * @method void setWebSocket(WebSocket $WebSocket) 设置<p>WebSocket配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RemoteAuthentication getRemoteAuthentication() 获取远程鉴权配置
+ * @method RemoteAuthentication getRemoteAuthentication() 获取<p>远程鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) 设置远程鉴权配置
+ * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) 设置<p>远程鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ShareCname getShareCname() 获取共享CNAME配置（白名单功能）
+ * @method ShareCname getShareCname() 获取<p>共享CNAME配置（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShareCname(ShareCname $ShareCname) 设置共享CNAME配置（白名单功能）
+ * @method void setShareCname(ShareCname $ShareCname) 设置<p>共享CNAME配置（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RuleEngine getRuleEngine() 获取规则引擎
+ * @method RuleEngine getRuleEngine() 获取<p>规则引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleEngine(RuleEngine $RuleEngine) 设置规则引擎
+ * @method void setRuleEngine(RuleEngine $RuleEngine) 设置<p>规则引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParentHost() 获取主域名
+ * @method string getParentHost() 获取<p>主域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParentHost(string $ParentHost) 设置主域名
+ * @method void setParentHost(string $ParentHost) 设置<p>主域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method HwPrivateAccess getHwPrivateAccess() 获取华为云对象存储回源鉴权
+ * @method HwPrivateAccess getHwPrivateAccess() 获取<p>华为云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) 设置华为云对象存储回源鉴权
+ * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) 设置<p>华为云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method QnPrivateAccess getQnPrivateAccess() 获取七牛云对象存储回源鉴权
+ * @method QnPrivateAccess getQnPrivateAccess() 获取<p>七牛云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQnPrivateAccess(QnPrivateAccess $QnPrivateAccess) 设置七牛云对象存储回源鉴权
+ * @method void setQnPrivateAccess(QnPrivateAccess $QnPrivateAccess) 设置<p>七牛云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method HttpsBilling getHttpsBilling() 获取HTTPS服务，缺省时默认开启
+ * @method HttpsBilling getHttpsBilling() 获取<p>HTTPS服务，缺省时默认开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttpsBilling(HttpsBilling $HttpsBilling) 设置HTTPS服务，缺省时默认开启
+ * @method void setHttpsBilling(HttpsBilling $HttpsBilling) 设置<p>HTTPS服务，缺省时默认开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OthersPrivateAccess getOthersPrivateAccess() 获取其他厂商对象存储回源鉴权
+ * @method OthersPrivateAccess getOthersPrivateAccess() 获取<p>其他厂商对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) 设置其他厂商对象存储回源鉴权
+ * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) 设置<p>其他厂商对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ParamFilter getParamFilter() 获取参数黑名单
+ * @method ParamFilter getParamFilter() 获取<p>参数黑名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamFilter(ParamFilter $ParamFilter) 设置参数黑名单
+ * @method void setParamFilter(ParamFilter $ParamFilter) 设置<p>参数黑名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AutoGuard getAutoGuard() 获取流量一键防盗刷配置
- * @method void setAutoGuard(AutoGuard $AutoGuard) 设置流量一键防盗刷配置
- * @method GeoBlocker getGeoBlocker() 获取区域访问控制配置
- * @method void setGeoBlocker(GeoBlocker $GeoBlocker) 设置区域访问控制配置
+ * @method AutoGuard getAutoGuard() 获取<p>流量一键防盗刷配置</p>
+ * @method void setAutoGuard(AutoGuard $AutoGuard) 设置<p>流量一键防盗刷配置</p>
+ * @method GeoBlocker getGeoBlocker() 获取<p>区域访问控制配置</p>
+ * @method void setGeoBlocker(GeoBlocker $GeoBlocker) 设置<p>区域访问控制配置</p>
  */
 class DetailDomain extends AbstractModel
 {
     /**
-     * @var string 域名 ID
+     * @var string <p>域名 ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var integer 腾讯云账号ID
+     * @var integer <p>腾讯云账号ID</p>
      */
     public $AppId;
 
     /**
-     * @var string 加速域名
+     * @var string <p>加速域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 域名对应的 CNAME 地址
+     * @var string <p>域名对应的 CNAME 地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cname;
 
     /**
-     * @var string 加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
-processing：部署中
-closing：关闭中
-online：已启动
-offline：已关闭
+     * @var string <p>加速服务状态<br>rejected：域名审核未通过，域名备案过期/被注销导致<br>processing：部署中<br>closing：关闭中<br>online：已启动<br>offline：已关闭</p>
      */
     public $Status;
 
     /**
-     * @var integer 项目 ID，可前往腾讯云项目管理页面查看
+     * @var integer <p>项目 ID，可前往腾讯云项目管理页面查看</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 加速域名业务类型
-web：网页小文件
-download：下载大文件
-media：音视频点播
-hybrid:  动静加速
-dynamic:  动态加速
+     * @var string <p>加速域名业务类型<br>web：网页小文件<br>download：下载大文件<br>media：音视频点播<br>hybrid:  动静加速<br>dynamic:  动态加速</p>
      */
     public $ServiceType;
 
     /**
-     * @var string 域名创建时间
+     * @var string <p>域名创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 域名更新时间
+     * @var string <p>域名更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var Origin 源站配置
+     * @var Origin <p>源站配置</p>
      */
     public $Origin;
 
     /**
-     * @var IpFilter IP 黑白名单配置
+     * @var IpFilter <p>IP 黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpFilter;
 
     /**
-     * @var IpFreqLimit IP 访问限频配置
+     * @var IpFreqLimit <p>IP 访问限频配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpFreqLimit;
 
     /**
-     * @var StatusCodeCache 状态码缓存配置
+     * @var StatusCodeCache <p>状态码缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusCodeCache;
 
     /**
-     * @var Compression 智能压缩配置
+     * @var Compression <p>智能压缩配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Compression;
 
     /**
-     * @var BandwidthAlert 带宽封顶配置
+     * @var BandwidthAlert <p>带宽封顶配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BandwidthAlert;
 
     /**
-     * @var RangeOriginPull Range 回源配置
+     * @var RangeOriginPull <p>Range 回源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RangeOriginPull;
 
     /**
-     * @var FollowRedirect 301/302 回源自动跟随配置
+     * @var FollowRedirect <p>301/302 回源自动跟随配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FollowRedirect;
 
     /**
-     * @var ErrorPage 自定义错误页面配置
+     * @var ErrorPage <p>自定义错误页面配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorPage;
 
     /**
-     * @var RequestHeader 自定义请求头部配置
+     * @var RequestHeader <p>自定义请求头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestHeader;
 
     /**
-     * @var ResponseHeader 自定义响应头部配置
+     * @var ResponseHeader <p>自定义响应头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResponseHeader;
 
     /**
-     * @var DownstreamCapping 单链接下行限速配置
+     * @var DownstreamCapping <p>单链接下行限速配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownstreamCapping;
 
     /**
-     * @var CacheKey 带参/不带参缓存配置
+     * @var CacheKey <p>带参/不带参缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CacheKey;
 
     /**
-     * @var ResponseHeaderCache 源站头部缓存配置
+     * @var ResponseHeaderCache <p>源站头部缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResponseHeaderCache;
 
     /**
-     * @var VideoSeek 视频拖拽配置
+     * @var VideoSeek <p>视频拖拽配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoSeek;
 
     /**
-     * @var Cache 节点缓存过期规则配置
+     * @var Cache <p>节点缓存过期规则配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cache;
 
     /**
-     * @var OriginPullOptimization 跨国链路优化配置（功能灰度中，敬请期待）
+     * @var OriginPullOptimization <p>跨国链路优化配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginPullOptimization;
 
     /**
-     * @var Https Https 加速相关配置
+     * @var Https <p>Https 加速相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Https;
 
     /**
-     * @var Authentication 时间戳防盗链配置
+     * @var Authentication <p>时间戳防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Authentication;
 
     /**
-     * @var Seo SEO 优化配置
+     * @var Seo <p>SEO 优化配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Seo;
 
     /**
-     * @var string 域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-ddos_risk: 域名存在ddos攻击风险
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
+     * @var string <p>域名封禁状态<br>normal：正常状态<br>overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务<br>malicious：域名出现恶意行为，强制关闭加速服务<br>ddos：域名被大规模 DDoS 攻击，关闭加速服务<br>ddos_risk: 域名存在ddos攻击风险<br>idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务<br>unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务<br>capping：触发配置的带宽阈值上限<br>readonly：域名存在特殊配置，被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Disable;
 
     /**
-     * @var ForceRedirect 访问协议强制跳转配置
+     * @var ForceRedirect <p>访问协议强制跳转配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForceRedirect;
 
     /**
-     * @var Referer Referer 防盗链配置
+     * @var Referer <p>Referer 防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Referer;
 
     /**
-     * @var MaxAge 浏览器缓存过期规则配置（功能灰度中，敬请期待）
+     * @var MaxAge <p>浏览器缓存过期规则配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxAge;
 
     /**
-     * @var Ipv6 Ipv6 回源配置（功能灰度中，敬请期待）
+     * @var Ipv6 <p>Ipv6 回源配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6;
 
     /**
-     * @var Compatibility 是否兼容旧版本配置（内部兼容性字段）
+     * @var Compatibility <p>是否兼容旧版本配置（内部兼容性字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Compatibility;
 
     /**
-     * @var SpecificConfig 区域特殊配置
+     * @var SpecificConfig <p>区域特殊配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecificConfig;
 
     /**
-     * @var string 加速区域
-mainland：中国境内加速
-overseas：中国境外加速
-global：全球加速
+     * @var string <p>加速区域<br>mainland：中国境内加速<br>overseas：中国境外加速<br>global：全球加速</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Area;
 
     /**
-     * @var string 域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
+     * @var string <p>域名锁定状态<br>normal：未锁定<br>mainland：中国境内锁定<br>overseas：中国境外锁定<br>global：全球锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Readonly;
 
     /**
-     * @var OriginPullTimeout 回源超时配置
+     * @var OriginPullTimeout <p>回源超时配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginPullTimeout;
 
     /**
-     * @var AwsPrivateAccess 回源S3鉴权配置
+     * @var AwsPrivateAccess <p>回源S3鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AwsPrivateAccess;
 
     /**
-     * @var SecurityConfig Scdn配置
+     * @var SecurityConfig <p>Scdn配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityConfig;
 
     /**
-     * @var ImageOptimization ImageOptimization配置
+     * @var ImageOptimization <p>ImageOptimization配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageOptimization;
 
     /**
-     * @var UserAgentFilter UA黑白名单配置
+     * @var UserAgentFilter <p>UA黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAgentFilter;
 
     /**
-     * @var AccessControl 访问控制
+     * @var AccessControl <p>访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessControl;
 
     /**
-     * @var string 是否支持高级配置项
-on：支持
-off：不支持
+     * @var string <p>是否支持高级配置项<br>on：支持<br>off：不支持</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Advance;
 
     /**
-     * @var UrlRedirect URL重定向配置
+     * @var UrlRedirect <p>URL重定向配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UrlRedirect;
 
     /**
-     * @var array 访问端口配置
+     * @var array <p>访问端口配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessPort;
 
     /**
-     * @var array 标签配置
+     * @var array <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
-     * @var AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
+     * @var AdvancedAuthentication <p>时间戳防盗链高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdvancedAuthentication;
 
     /**
-     * @var OriginAuthentication 回源鉴权高级配置，白名单功能
+     * @var OriginAuthentication <p>回源鉴权高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginAuthentication;
 
     /**
-     * @var Ipv6Access Ipv6访问配置
+     * @var Ipv6Access <p>Ipv6访问配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6Access;
 
     /**
-     * @var array 高级配置集合
+     * @var array <p>高级配置集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdvanceSet;
 
     /**
-     * @var OfflineCache 离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
+     * @var OfflineCache <p>离线缓存（功能灰度中，尚未全量，请等待后续全量发布）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfflineCache;
 
     /**
-     * @var OriginCombine 合并回源（白名单功能）
+     * @var OriginCombine <p>合并回源（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginCombine;
 
     /**
-     * @var PostSize POST上传配置项
+     * @var PostSize <p>POST上传配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostMaxSize;
 
     /**
-     * @var Quic Quic配置
+     * @var Quic <p>Quic配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quic;
 
     /**
-     * @var OssPrivateAccess 回源OSS私有鉴权
+     * @var OssPrivateAccess <p>回源OSS私有鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OssPrivateAccess;
 
     /**
-     * @var WebSocket WebSocket配置
+     * @var WebSocket <p>WebSocket配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebSocket;
 
     /**
-     * @var RemoteAuthentication 远程鉴权配置
+     * @var RemoteAuthentication <p>远程鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteAuthentication;
 
     /**
-     * @var ShareCname 共享CNAME配置（白名单功能）
+     * @var ShareCname <p>共享CNAME配置（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShareCname;
 
     /**
-     * @var RuleEngine 规则引擎
+     * @var RuleEngine <p>规则引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleEngine;
 
     /**
-     * @var string 主域名
+     * @var string <p>主域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentHost;
 
     /**
-     * @var HwPrivateAccess 华为云对象存储回源鉴权
+     * @var HwPrivateAccess <p>华为云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HwPrivateAccess;
 
     /**
-     * @var QnPrivateAccess 七牛云对象存储回源鉴权
+     * @var QnPrivateAccess <p>七牛云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QnPrivateAccess;
 
     /**
-     * @var HttpsBilling HTTPS服务，缺省时默认开启
+     * @var HttpsBilling <p>HTTPS服务，缺省时默认开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpsBilling;
 
     /**
-     * @var OthersPrivateAccess 其他厂商对象存储回源鉴权
+     * @var OthersPrivateAccess <p>其他厂商对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OthersPrivateAccess;
 
     /**
-     * @var ParamFilter 参数黑名单
+     * @var ParamFilter <p>参数黑名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamFilter;
 
     /**
-     * @var AutoGuard 流量一键防盗刷配置
+     * @var AutoGuard <p>流量一键防盗刷配置</p>
      */
     public $AutoGuard;
 
     /**
-     * @var GeoBlocker 区域访问控制配置
+     * @var GeoBlocker <p>区域访问控制配置</p>
      */
     public $GeoBlocker;
 
     /**
-     * @param string $ResourceId 域名 ID
-     * @param integer $AppId 腾讯云账号ID
-     * @param string $Domain 加速域名
-     * @param string $Cname 域名对应的 CNAME 地址
+     * @param string $ResourceId <p>域名 ID</p>
+     * @param integer $AppId <p>腾讯云账号ID</p>
+     * @param string $Domain <p>加速域名</p>
+     * @param string $Cname <p>域名对应的 CNAME 地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
-processing：部署中
-closing：关闭中
-online：已启动
-offline：已关闭
-     * @param integer $ProjectId 项目 ID，可前往腾讯云项目管理页面查看
-     * @param string $ServiceType 加速域名业务类型
-web：网页小文件
-download：下载大文件
-media：音视频点播
-hybrid:  动静加速
-dynamic:  动态加速
-     * @param string $CreateTime 域名创建时间
-     * @param string $UpdateTime 域名更新时间
-     * @param Origin $Origin 源站配置
-     * @param IpFilter $IpFilter IP 黑白名单配置
+     * @param string $Status <p>加速服务状态<br>rejected：域名审核未通过，域名备案过期/被注销导致<br>processing：部署中<br>closing：关闭中<br>online：已启动<br>offline：已关闭</p>
+     * @param integer $ProjectId <p>项目 ID，可前往腾讯云项目管理页面查看</p>
+     * @param string $ServiceType <p>加速域名业务类型<br>web：网页小文件<br>download：下载大文件<br>media：音视频点播<br>hybrid:  动静加速<br>dynamic:  动态加速</p>
+     * @param string $CreateTime <p>域名创建时间</p>
+     * @param string $UpdateTime <p>域名更新时间</p>
+     * @param Origin $Origin <p>源站配置</p>
+     * @param IpFilter $IpFilter <p>IP 黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpFreqLimit $IpFreqLimit IP 访问限频配置
+     * @param IpFreqLimit $IpFreqLimit <p>IP 访问限频配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusCodeCache $StatusCodeCache 状态码缓存配置
+     * @param StatusCodeCache $StatusCodeCache <p>状态码缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Compression $Compression 智能压缩配置
+     * @param Compression $Compression <p>智能压缩配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BandwidthAlert $BandwidthAlert 带宽封顶配置
+     * @param BandwidthAlert $BandwidthAlert <p>带宽封顶配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RangeOriginPull $RangeOriginPull Range 回源配置
+     * @param RangeOriginPull $RangeOriginPull <p>Range 回源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FollowRedirect $FollowRedirect 301/302 回源自动跟随配置
+     * @param FollowRedirect $FollowRedirect <p>301/302 回源自动跟随配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorPage $ErrorPage 自定义错误页面配置
+     * @param ErrorPage $ErrorPage <p>自定义错误页面配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestHeader $RequestHeader 自定义请求头部配置
+     * @param RequestHeader $RequestHeader <p>自定义请求头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseHeader $ResponseHeader 自定义响应头部配置
+     * @param ResponseHeader $ResponseHeader <p>自定义响应头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DownstreamCapping $DownstreamCapping 单链接下行限速配置
+     * @param DownstreamCapping $DownstreamCapping <p>单链接下行限速配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheKey $CacheKey 带参/不带参缓存配置
+     * @param CacheKey $CacheKey <p>带参/不带参缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseHeaderCache $ResponseHeaderCache 源站头部缓存配置
+     * @param ResponseHeaderCache $ResponseHeaderCache <p>源站头部缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoSeek $VideoSeek 视频拖拽配置
+     * @param VideoSeek $VideoSeek <p>视频拖拽配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cache $Cache 节点缓存过期规则配置
+     * @param Cache $Cache <p>节点缓存过期规则配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginPullOptimization $OriginPullOptimization 跨国链路优化配置（功能灰度中，敬请期待）
+     * @param OriginPullOptimization $OriginPullOptimization <p>跨国链路优化配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Https $Https Https 加速相关配置
+     * @param Https $Https <p>Https 加速相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Authentication $Authentication 时间戳防盗链配置
+     * @param Authentication $Authentication <p>时间戳防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Seo $Seo SEO 优化配置
+     * @param Seo $Seo <p>SEO 优化配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Disable 域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-ddos_risk: 域名存在ddos攻击风险
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
+     * @param string $Disable <p>域名封禁状态<br>normal：正常状态<br>overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务<br>malicious：域名出现恶意行为，强制关闭加速服务<br>ddos：域名被大规模 DDoS 攻击，关闭加速服务<br>ddos_risk: 域名存在ddos攻击风险<br>idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务<br>unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务<br>capping：触发配置的带宽阈值上限<br>readonly：域名存在特殊配置，被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ForceRedirect $ForceRedirect 访问协议强制跳转配置
+     * @param ForceRedirect $ForceRedirect <p>访问协议强制跳转配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Referer $Referer Referer 防盗链配置
+     * @param Referer $Referer <p>Referer 防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxAge $MaxAge 浏览器缓存过期规则配置（功能灰度中，敬请期待）
+     * @param MaxAge $MaxAge <p>浏览器缓存过期规则配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ipv6 $Ipv6 Ipv6 回源配置（功能灰度中，敬请期待）
+     * @param Ipv6 $Ipv6 <p>Ipv6 回源配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Compatibility $Compatibility 是否兼容旧版本配置（内部兼容性字段）
+     * @param Compatibility $Compatibility <p>是否兼容旧版本配置（内部兼容性字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecificConfig $SpecificConfig 区域特殊配置
+     * @param SpecificConfig $SpecificConfig <p>区域特殊配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Area 加速区域
-mainland：中国境内加速
-overseas：中国境外加速
-global：全球加速
+     * @param string $Area <p>加速区域<br>mainland：中国境内加速<br>overseas：中国境外加速<br>global：全球加速</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Readonly 域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
+     * @param string $Readonly <p>域名锁定状态<br>normal：未锁定<br>mainland：中国境内锁定<br>overseas：中国境外锁定<br>global：全球锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginPullTimeout $OriginPullTimeout 回源超时配置
+     * @param OriginPullTimeout $OriginPullTimeout <p>回源超时配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AwsPrivateAccess $AwsPrivateAccess 回源S3鉴权配置
+     * @param AwsPrivateAccess $AwsPrivateAccess <p>回源S3鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityConfig $SecurityConfig Scdn配置
+     * @param SecurityConfig $SecurityConfig <p>Scdn配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageOptimization $ImageOptimization ImageOptimization配置
+     * @param ImageOptimization $ImageOptimization <p>ImageOptimization配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserAgentFilter $UserAgentFilter UA黑白名单配置
+     * @param UserAgentFilter $UserAgentFilter <p>UA黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessControl $AccessControl 访问控制
+     * @param AccessControl $AccessControl <p>访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Advance 是否支持高级配置项
-on：支持
-off：不支持
+     * @param string $Advance <p>是否支持高级配置项<br>on：支持<br>off：不支持</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UrlRedirect $UrlRedirect URL重定向配置
+     * @param UrlRedirect $UrlRedirect <p>URL重定向配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AccessPort 访问端口配置
+     * @param array $AccessPort <p>访问端口配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tag 标签配置
+     * @param array $Tag <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedAuthentication $AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
+     * @param AdvancedAuthentication $AdvancedAuthentication <p>时间戳防盗链高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginAuthentication $OriginAuthentication 回源鉴权高级配置，白名单功能
+     * @param OriginAuthentication $OriginAuthentication <p>回源鉴权高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ipv6Access $Ipv6Access Ipv6访问配置
+     * @param Ipv6Access $Ipv6Access <p>Ipv6访问配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AdvanceSet 高级配置集合
+     * @param array $AdvanceSet <p>高级配置集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OfflineCache $OfflineCache 离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
+     * @param OfflineCache $OfflineCache <p>离线缓存（功能灰度中，尚未全量，请等待后续全量发布）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginCombine $OriginCombine 合并回源（白名单功能）
+     * @param OriginCombine $OriginCombine <p>合并回源（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostSize $PostMaxSize POST上传配置项
+     * @param PostSize $PostMaxSize <p>POST上传配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Quic $Quic Quic配置
+     * @param Quic $Quic <p>Quic配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
+     * @param OssPrivateAccess $OssPrivateAccess <p>回源OSS私有鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebSocket $WebSocket WebSocket配置
+     * @param WebSocket $WebSocket <p>WebSocket配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoteAuthentication $RemoteAuthentication 远程鉴权配置
+     * @param RemoteAuthentication $RemoteAuthentication <p>远程鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShareCname $ShareCname 共享CNAME配置（白名单功能）
+     * @param ShareCname $ShareCname <p>共享CNAME配置（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleEngine $RuleEngine 规则引擎
+     * @param RuleEngine $RuleEngine <p>规则引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParentHost 主域名
+     * @param string $ParentHost <p>主域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HwPrivateAccess $HwPrivateAccess 华为云对象存储回源鉴权
+     * @param HwPrivateAccess $HwPrivateAccess <p>华为云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QnPrivateAccess $QnPrivateAccess 七牛云对象存储回源鉴权
+     * @param QnPrivateAccess $QnPrivateAccess <p>七牛云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpsBilling $HttpsBilling HTTPS服务，缺省时默认开启
+     * @param HttpsBilling $HttpsBilling <p>HTTPS服务，缺省时默认开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OthersPrivateAccess $OthersPrivateAccess 其他厂商对象存储回源鉴权
+     * @param OthersPrivateAccess $OthersPrivateAccess <p>其他厂商对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamFilter $ParamFilter 参数黑名单
+     * @param ParamFilter $ParamFilter <p>参数黑名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoGuard $AutoGuard 流量一键防盗刷配置
-     * @param GeoBlocker $GeoBlocker 区域访问控制配置
+     * @param AutoGuard $AutoGuard <p>流量一键防盗刷配置</p>
+     * @param GeoBlocker $GeoBlocker <p>区域访问控制配置</p>
      */
     function __construct()
     {

@@ -20,142 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP/HTTPS转发规则（输入）
  *
- * @method string getUrl() 获取转发规则的路径。长度限制为：1~200。
- * @method void setUrl(string $Url) 设置转发规则的路径。长度限制为：1~200。
- * @method string getDomain() 获取转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
- * @method void setDomain(string $Domain) 设置转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
- * @method integer getSessionExpireTime() 获取会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
- * @method HealthCheck getHealthCheck() 获取健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
- * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
- * @method CertificateInput getCertificate() 获取证书信息；此参数和MultiCertInfo不能同时传入。
- * @method void setCertificate(CertificateInput $Certificate) 设置证书信息；此参数和MultiCertInfo不能同时传入。
- * @method string getScheduler() 获取规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
- * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
- * @method string getForwardType() 获取负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。
- * @method void setForwardType(string $ForwardType) 设置负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。
- * @method boolean getDefaultServer() 获取是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
- * @method void setDefaultServer(boolean $DefaultServer) 设置是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
- * @method boolean getHttp2() 获取是否开启Http2，注意，只有HTTPS域名才能开启Http2。
- * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
- * @method string getTargetType() 获取后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
- * @method void setTargetType(string $TargetType) 设置后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
- * @method string getTrpcCallee() 获取TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
- * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
- * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
- * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
- * @method boolean getQuic() 获取是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
- * @method void setQuic(boolean $Quic) 设置是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
- * @method array getDomains() 获取转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
- * @method void setDomains(array $Domains) 设置转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
- * @method MultiCertInfo getMultiCertInfo() 获取证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
- * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) 设置证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
- * @method string getCookieName() 获取自定义cookie名
- * @method void setCookieName(string $CookieName) 设置自定义cookie名
+ * @method string getUrl() 获取<p>转发规则的路径。长度限制为：1~200。</p>
+ * @method void setUrl(string $Url) 设置<p>转发规则的路径。长度限制为：1~200。</p>
+ * @method string getDomain() 获取<p>转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
+ * @method void setDomain(string $Domain) 设置<p>转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
+ * @method integer getSessionExpireTime() 获取<p>会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。</p>
+ * @method void setSessionExpireTime(integer $SessionExpireTime) 设置<p>会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。</p>
+ * @method HealthCheck getHealthCheck() 获取<p>健康检查信息。详情请参见：<a href="https://cloud.tencent.com/document/product/214/6097">健康检查</a></p>
+ * @method void setHealthCheck(HealthCheck $HealthCheck) 设置<p>健康检查信息。详情请参见：<a href="https://cloud.tencent.com/document/product/214/6097">健康检查</a></p>
+ * @method CertificateInput getCertificate() 获取<p>证书信息；此参数和MultiCertInfo不能同时传入。</p>
+ * @method void setCertificate(CertificateInput $Certificate) 设置<p>证书信息；此参数和MultiCertInfo不能同时传入。</p>
+ * @method string getScheduler() 获取<p>规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH<br>分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。</p>
+ * @method void setScheduler(string $Scheduler) 设置<p>规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH<br>分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。</p>
+ * @method string getForwardType() 获取<p>负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。</p>
+ * @method void setForwardType(string $ForwardType) 设置<p>负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。</p>
+ * @method boolean getDefaultServer() 获取<p>是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。</p>
+ * @method void setDefaultServer(boolean $DefaultServer) 设置<p>是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。</p>
+ * @method boolean getHttp2() 获取<p>是否开启Http2，注意，只有HTTPS域名才能开启Http2。</p>
+ * @method void setHttp2(boolean $Http2) 设置<p>是否开启Http2，注意，只有HTTPS域名才能开启Http2。</p>
+ * @method string getTargetType() 获取<p>后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组</p><p>枚举值：</p><ul><li>NODE： 绑定普通节点</li><li>TARGETGROUP： 绑定目标组 v1</li><li>TARGETGROUP-V2： 绑定目标组 v2</li></ul>
+ * @method void setTargetType(string $TargetType) 设置<p>后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组</p><p>枚举值：</p><ul><li>NODE： 绑定普通节点</li><li>TARGETGROUP： 绑定目标组 v1</li><li>TARGETGROUP-V2： 绑定目标组 v2</li></ul>
+ * @method string getTrpcCallee() 获取<p>TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。</p>
+ * @method void setTrpcCallee(string $TrpcCallee) 设置<p>TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。</p>
+ * @method string getTrpcFunc() 获取<p>TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放</p>
+ * @method void setTrpcFunc(string $TrpcFunc) 设置<p>TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放</p>
+ * @method boolean getQuic() 获取<p>是否开启QUIC，注意，只有HTTPS域名才能开启QUIC</p>
+ * @method void setQuic(boolean $Quic) 设置<p>是否开启QUIC，注意，只有HTTPS域名才能开启QUIC</p>
+ * @method array getDomains() 获取<p>转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
+ * @method void setDomains(array $Domains) 设置<p>转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
+ * @method MultiCertInfo getMultiCertInfo() 获取<p>证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。</p>
+ * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) 设置<p>证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。</p>
+ * @method string getCookieName() 获取<p>自定义cookie名</p>
+ * @method void setCookieName(string $CookieName) 设置<p>自定义cookie名</p>
  */
 class RuleInput extends AbstractModel
 {
     /**
-     * @var string 转发规则的路径。长度限制为：1~200。
+     * @var string <p>转发规则的路径。长度限制为：1~200。</p>
      */
     public $Url;
 
     /**
-     * @var string 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     * @var string <p>转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
      */
     public $Domain;
 
     /**
-     * @var integer 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
+     * @var integer <p>会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。</p>
      */
     public $SessionExpireTime;
 
     /**
-     * @var HealthCheck 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
+     * @var HealthCheck <p>健康检查信息。详情请参见：<a href="https://cloud.tencent.com/document/product/214/6097">健康检查</a></p>
      */
     public $HealthCheck;
 
     /**
-     * @var CertificateInput 证书信息；此参数和MultiCertInfo不能同时传入。
+     * @var CertificateInput <p>证书信息；此参数和MultiCertInfo不能同时传入。</p>
      */
     public $Certificate;
 
     /**
-     * @var string 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+     * @var string <p>规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH<br>分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。</p>
      */
     public $Scheduler;
 
     /**
-     * @var string 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。
+     * @var string <p>负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。</p>
      */
     public $ForwardType;
 
     /**
-     * @var boolean 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * @var boolean <p>是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。</p>
      */
     public $DefaultServer;
 
     /**
-     * @var boolean 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * @var boolean <p>是否开启Http2，注意，只有HTTPS域名才能开启Http2。</p>
      */
     public $Http2;
 
     /**
-     * @var string 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     * @var string <p>后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组</p><p>枚举值：</p><ul><li>NODE： 绑定普通节点</li><li>TARGETGROUP： 绑定目标组 v1</li><li>TARGETGROUP-V2： 绑定目标组 v2</li></ul>
      */
     public $TargetType;
 
     /**
-     * @var string TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
+     * @var string <p>TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。</p>
      */
     public $TrpcCallee;
 
     /**
-     * @var string TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
+     * @var string <p>TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放</p>
      */
     public $TrpcFunc;
 
     /**
-     * @var boolean 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+     * @var boolean <p>是否开启QUIC，注意，只有HTTPS域名才能开启QUIC</p>
      */
     public $Quic;
 
     /**
-     * @var array 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     * @var array <p>转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
      */
     public $Domains;
 
     /**
-     * @var MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+     * @var MultiCertInfo <p>证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。</p>
      */
     public $MultiCertInfo;
 
     /**
-     * @var string 自定义cookie名
+     * @var string <p>自定义cookie名</p>
      */
     public $CookieName;
 
     /**
-     * @param string $Url 转发规则的路径。长度限制为：1~200。
-     * @param string $Domain 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
-     * @param integer $SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
-     * @param HealthCheck $HealthCheck 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
-     * @param CertificateInput $Certificate 证书信息；此参数和MultiCertInfo不能同时传入。
-     * @param string $Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
-     * @param string $ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。
-     * @param boolean $DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
-     * @param boolean $Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
-     * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
-     * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
-     * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
-     * @param boolean $Quic 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
-     * @param array $Domains 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
-     * @param MultiCertInfo $MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
-     * @param string $CookieName 自定义cookie名
+     * @param string $Url <p>转发规则的路径。长度限制为：1~200。</p>
+     * @param string $Domain <p>转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
+     * @param integer $SessionExpireTime <p>会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。</p>
+     * @param HealthCheck $HealthCheck <p>健康检查信息。详情请参见：<a href="https://cloud.tencent.com/document/product/214/6097">健康检查</a></p>
+     * @param CertificateInput $Certificate <p>证书信息；此参数和MultiCertInfo不能同时传入。</p>
+     * @param string $Scheduler <p>规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH<br>分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。</p>
+     * @param string $ForwardType <p>负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。</p>
+     * @param boolean $DefaultServer <p>是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。</p>
+     * @param boolean $Http2 <p>是否开启Http2，注意，只有HTTPS域名才能开启Http2。</p>
+     * @param string $TargetType <p>后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组</p><p>枚举值：</p><ul><li>NODE： 绑定普通节点</li><li>TARGETGROUP： 绑定目标组 v1</li><li>TARGETGROUP-V2： 绑定目标组 v2</li></ul>
+     * @param string $TrpcCallee <p>TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。</p>
+     * @param string $TrpcFunc <p>TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放</p>
+     * @param boolean $Quic <p>是否开启QUIC，注意，只有HTTPS域名才能开启QUIC</p>
+     * @param array $Domains <p>转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
+     * @param MultiCertInfo $MultiCertInfo <p>证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。</p>
+     * @param string $CookieName <p>自定义cookie名</p>
      */
     function __construct()
     {

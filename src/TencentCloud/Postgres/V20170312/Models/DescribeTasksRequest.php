@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks请求参数结构体
  *
- * @method integer getTaskId() 获取按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。
- * @method void setTaskId(integer $TaskId) 设置按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。
- * @method string getDBInstanceId() 获取按照数据库实例ID进行查询。
- * @method void setDBInstanceId(string $DBInstanceId) 设置按照数据库实例ID进行查询。
- * @method string getMinStartTime() 获取任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。
- * @method void setMinStartTime(string $MinStartTime) 设置任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。
- * @method string getMaxStartTime() 获取任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。
- * @method void setMaxStartTime(string $MaxStartTime) 设置任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。
- * @method integer getLimit() 获取每页显示数量，取值范围为1-100，默认为返回20条。
- * @method void setLimit(integer $Limit) 设置每页显示数量，取值范围为1-100，默认为返回20条。
- * @method integer getOffset() 获取数据偏移量，从0开始。
- * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始。
- * @method string getOrderBy() 获取排序字段，支持StartTime,EndTime，默认为StartTime。
- * @method void setOrderBy(string $OrderBy) 设置排序字段，支持StartTime,EndTime，默认为StartTime。
- * @method string getOrderByType() 获取排序方式，包括升序：asc，降序：desc，默认为desc。
- * @method void setOrderByType(string $OrderByType) 设置排序方式，包括升序：asc，降序：desc，默认为desc。
+ * @method integer getTaskId() 获取<p>按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。</p>
+ * @method string getDBInstanceId() 获取<p>按照数据库实例ID进行查询。</p>
+ * @method void setDBInstanceId(string $DBInstanceId) 设置<p>按照数据库实例ID进行查询。</p>
+ * @method string getMinStartTime() 获取<p>任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。</p>
+ * @method void setMinStartTime(string $MinStartTime) 设置<p>任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。</p>
+ * @method string getMaxStartTime() 获取<p>任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。</p>
+ * @method void setMaxStartTime(string $MaxStartTime) 设置<p>任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。</p>
+ * @method integer getLimit() 获取<p>每页显示数量，取值范围为1-100，默认为返回20条。</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页显示数量，取值范围为1-100，默认为返回20条。</p>
+ * @method integer getOffset() 获取<p>数据偏移量，从0开始。</p>
+ * @method void setOffset(integer $Offset) 设置<p>数据偏移量，从0开始。</p>
+ * @method string getOrderBy() 获取<p>排序字段，支持StartTime,EndTime，默认为StartTime。</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序字段，支持StartTime,EndTime，默认为StartTime。</p>
+ * @method string getOrderByType() 获取<p>排序方式，包括升序：asc，降序：desc，默认为desc。</p>
+ * @method void setOrderByType(string $OrderByType) 设置<p>排序方式，包括升序：asc，降序：desc，默认为desc。</p>
  */
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var integer 按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。
+     * @var integer <p>按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。</p>
      */
     public $TaskId;
 
     /**
-     * @var string 按照数据库实例ID进行查询。
+     * @var string <p>按照数据库实例ID进行查询。</p>
      */
     public $DBInstanceId;
 
     /**
-     * @var string 任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。
+     * @var string <p>任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。</p>
      */
     public $MinStartTime;
 
     /**
-     * @var string 任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。
+     * @var string <p>任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。</p>
      */
     public $MaxStartTime;
 
     /**
-     * @var integer 每页显示数量，取值范围为1-100，默认为返回20条。
+     * @var integer <p>每页显示数量，取值范围为1-100，默认为返回20条。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 数据偏移量，从0开始。
+     * @var integer <p>数据偏移量，从0开始。</p>
      */
     public $Offset;
 
     /**
-     * @var string 排序字段，支持StartTime,EndTime，默认为StartTime。
+     * @var string <p>排序字段，支持StartTime,EndTime，默认为StartTime。</p>
      */
     public $OrderBy;
 
     /**
-     * @var string 排序方式，包括升序：asc，降序：desc，默认为desc。
+     * @var string <p>排序方式，包括升序：asc，降序：desc，默认为desc。</p>
      */
     public $OrderByType;
 
     /**
-     * @param integer $TaskId 按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。
-     * @param string $DBInstanceId 按照数据库实例ID进行查询。
-     * @param string $MinStartTime 任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。
-     * @param string $MaxStartTime 任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。
-     * @param integer $Limit 每页显示数量，取值范围为1-100，默认为返回20条。
-     * @param integer $Offset 数据偏移量，从0开始。
-     * @param string $OrderBy 排序字段，支持StartTime,EndTime，默认为StartTime。
-     * @param string $OrderByType 排序方式，包括升序：asc，降序：desc，默认为desc。
+     * @param integer $TaskId <p>按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。</p>
+     * @param string $DBInstanceId <p>按照数据库实例ID进行查询。</p>
+     * @param string $MinStartTime <p>任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。</p>
+     * @param string $MaxStartTime <p>任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。</p>
+     * @param integer $Limit <p>每页显示数量，取值范围为1-100，默认为返回20条。</p>
+     * @param integer $Offset <p>数据偏移量，从0开始。</p>
+     * @param string $OrderBy <p>排序字段，支持StartTime,EndTime，默认为StartTime。</p>
+     * @param string $OrderByType <p>排序方式，包括升序：asc，降序：desc，默认为desc。</p>
      */
     function __construct()
     {

@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayServices请求参数结构体
  *
- * @method string getGatewayId() 获取网关ID
- * @method void setGatewayId(string $GatewayId) 设置网关ID
- * @method integer getLimit() 获取列表数量
- * @method void setLimit(integer $Limit) 设置列表数量
- * @method integer getOffset() 获取列表 offset
- * @method void setOffset(integer $Offset) 设置列表 offset
- * @method array getFilters() 获取过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType
- * @method void setFilters(array $Filters) 设置过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType
+ * @method string getGatewayId() 获取<p>网关ID</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关ID</p>
+ * @method integer getLimit() 获取<p>列表数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>列表数量</p>
+ * @method integer getOffset() 获取<p>列表 offset</p>
+ * @method void setOffset(integer $Offset) 设置<p>列表 offset</p>
+ * @method array getFilters() 获取<p>过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType</p>
+ * @method string getOrderField() 获取<p>排序字段</p>
+ * @method void setOrderField(string $OrderField) 设置<p>排序字段</p>
+ * @method string getOrderType() 获取<p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+ * @method void setOrderType(string $OrderType) 设置<p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
  */
 class DescribeCloudNativeAPIGatewayServicesRequest extends AbstractModel
 {
     /**
-     * @var string 网关ID
+     * @var string <p>网关ID</p>
      */
     public $GatewayId;
 
     /**
-     * @var integer 列表数量
+     * @var integer <p>列表数量</p>
      */
     public $Limit;
 
     /**
-     * @var integer 列表 offset
+     * @var integer <p>列表 offset</p>
      */
     public $Offset;
 
     /**
-     * @var array 过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType
+     * @var array <p>过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType</p>
      */
     public $Filters;
 
     /**
-     * @param string $GatewayId 网关ID
-     * @param integer $Limit 列表数量
-     * @param integer $Offset 列表 offset
-     * @param array $Filters 过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType
+     * @var string <p>排序字段</p>
+     */
+    public $OrderField;
+
+    /**
+     * @var string <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     */
+    public $OrderType;
+
+    /**
+     * @param string $GatewayId <p>网关ID</p>
+     * @param integer $Limit <p>列表数量</p>
+     * @param integer $Offset <p>列表 offset</p>
+     * @param array $Filters <p>过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType</p>
+     * @param string $OrderField <p>排序字段</p>
+     * @param string $OrderType <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class DescribeCloudNativeAPIGatewayServicesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
+            $this->OrderType = $param["OrderType"];
         }
     }
 }

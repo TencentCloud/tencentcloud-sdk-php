@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全部车牌信息
  *
- * @method string getNumber() 获取识别出的车牌号码。
- * @method void setNumber(string $Number) 设置识别出的车牌号码。
- * @method integer getConfidence() 获取置信度，0 - 100 之间。
- * @method void setConfidence(integer $Confidence) 设置置信度，0 - 100 之间。
- * @method Rect getRect() 获取文本行在原图片中的像素坐标框。
- * @method void setRect(Rect $Rect) 设置文本行在原图片中的像素坐标框。
- * @method string getColor() 获取识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
- * @method void setColor(string $Color) 设置识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
- * @method string getLicensePlateCategory() 获取车牌类别， 如： 实体车牌、非实体车牌
- * @method void setLicensePlateCategory(string $LicensePlateCategory) 设置车牌类别， 如： 实体车牌、非实体车牌
+ * @method string getNumber() 获取<p>识别出的车牌号码。</p>
+ * @method void setNumber(string $Number) 设置<p>识别出的车牌号码。</p>
+ * @method integer getConfidence() 获取<p>置信度，0 - 100 之间。</p>
+ * @method void setConfidence(integer $Confidence) 设置<p>置信度，0 - 100 之间。</p>
+ * @method Rect getRect() 获取<p>文本行在原图片中的像素坐标框。</p>
+ * @method void setRect(Rect $Rect) 设置<p>文本行在原图片中的像素坐标框。</p>
+ * @method string getColor() 获取<p>识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。</p>
+ * @method void setColor(string $Color) 设置<p>识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。</p>
+ * @method string getLicensePlateCategory() 获取<p>车牌类别， 如： 标准实体车牌、非标准实体车牌、临牌、喷漆车牌</p>
+ * @method void setLicensePlateCategory(string $LicensePlateCategory) 设置<p>车牌类别， 如： 标准实体车牌、非标准实体车牌、临牌、喷漆车牌</p>
  */
 class LicensePlateInfo extends AbstractModel
 {
     /**
-     * @var string 识别出的车牌号码。
+     * @var string <p>识别出的车牌号码。</p>
      */
     public $Number;
 
     /**
-     * @var integer 置信度，0 - 100 之间。
+     * @var integer <p>置信度，0 - 100 之间。</p>
      */
     public $Confidence;
 
     /**
-     * @var Rect 文本行在原图片中的像素坐标框。
+     * @var Rect <p>文本行在原图片中的像素坐标框。</p>
      */
     public $Rect;
 
     /**
-     * @var string 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+     * @var string <p>识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。</p>
      */
     public $Color;
 
     /**
-     * @var string 车牌类别， 如： 实体车牌、非实体车牌
+     * @var string <p>车牌类别， 如： 标准实体车牌、非标准实体车牌、临牌、喷漆车牌</p>
      */
     public $LicensePlateCategory;
 
     /**
-     * @param string $Number 识别出的车牌号码。
-     * @param integer $Confidence 置信度，0 - 100 之间。
-     * @param Rect $Rect 文本行在原图片中的像素坐标框。
-     * @param string $Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
-     * @param string $LicensePlateCategory 车牌类别， 如： 实体车牌、非实体车牌
+     * @param string $Number <p>识别出的车牌号码。</p>
+     * @param integer $Confidence <p>置信度，0 - 100 之间。</p>
+     * @param Rect $Rect <p>文本行在原图片中的像素坐标框。</p>
+     * @param string $Color <p>识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。</p>
+     * @param string $LicensePlateCategory <p>车牌类别， 如： 标准实体车牌、非标准实体车牌、临牌、喷漆车牌</p>
      */
     function __construct()
     {

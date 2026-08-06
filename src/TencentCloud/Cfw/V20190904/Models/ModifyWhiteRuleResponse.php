@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InsuranceBillOCR返回参数结构体
+ * ModifyWhiteRule返回参数结构体
  *
- * @method array getInsuranceBillInfos() 获取保险单据识别结果，具体内容请点击左侧链接。
- * @method void setInsuranceBillInfos(array $InsuranceBillInfos) 设置保险单据识别结果，具体内容请点击左侧链接。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class InsuranceBillOCRResponse extends AbstractModel
+class ModifyWhiteRuleResponse extends AbstractModel
 {
-    /**
-     * @var array 保险单据识别结果，具体内容请点击左侧链接。
-     */
-    public $InsuranceBillInfos;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $InsuranceBillInfos 保险单据识别结果，具体内容请点击左侧链接。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class InsuranceBillOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InsuranceBillInfos",$param) and $param["InsuranceBillInfos"] !== null) {
-            $this->InsuranceBillInfos = [];
-            foreach ($param["InsuranceBillInfos"] as $key => $value){
-                $obj = new InsuranceBillInfo();
-                $obj->deserialize($value);
-                array_push($this->InsuranceBillInfos, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskLevel(integer $RiskLevel) 设置<p>风险等级</p>
  * @method array getRiskLabels() 获取<p>风险标签</p>
  * @method void setRiskLabels(array $RiskLabels) 设置<p>风险标签</p>
+ * @method integer getRiskScore() 获取<p>综合风险分数。</p><p>取值范围：[1, 1000]</p><p>数值越大，风险越大。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskScore(integer $RiskScore) 设置<p>综合风险分数。</p><p>取值范围：[1, 1000]</p><p>数值越大，风险越大。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataScore extends AbstractModel
 {
@@ -38,8 +42,16 @@ class DataScore extends AbstractModel
     public $RiskLabels;
 
     /**
+     * @var integer <p>综合风险分数。</p><p>取值范围：[1, 1000]</p><p>数值越大，风险越大。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskScore;
+
+    /**
      * @param integer $RiskLevel <p>风险等级</p>
      * @param array $RiskLabels <p>风险标签</p>
+     * @param integer $RiskScore <p>综合风险分数。</p><p>取值范围：[1, 1000]</p><p>数值越大，风险越大。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -65,6 +77,10 @@ class DataScore extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RiskLabels, $obj);
             }
+        }
+
+        if (array_key_exists("RiskScore",$param) and $param["RiskScore"] !== null) {
+            $this->RiskScore = $param["RiskScore"];
         }
     }
 }

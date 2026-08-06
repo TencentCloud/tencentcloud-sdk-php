@@ -20,70 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 试题识别结果
  *
- * @method float getAngle() 获取旋转角度
- * @method void setAngle(float $Angle) 设置旋转角度
- * @method integer getHeight() 获取预处理后图片高度
- * @method void setHeight(integer $Height) 设置预处理后图片高度
- * @method integer getWidth() 获取预处理后图片宽度
- * @method void setWidth(integer $Width) 设置预处理后图片宽度
- * @method array getResultList() 获取文档元素
+ * @method float getAngle() 获取<p>旋转角度</p>
+ * @method void setAngle(float $Angle) 设置<p>旋转角度</p>
+ * @method integer getHeight() 获取<p>预处理后图片高度</p><p>单位：px</p>
+ * @method void setHeight(integer $Height) 设置<p>预处理后图片高度</p><p>单位：px</p>
+ * @method integer getWidth() 获取<p>预处理后图片宽度</p><p>单位：px</p>
+ * @method void setWidth(integer $Width) 设置<p>预处理后图片宽度</p><p>单位：px</p>
+ * @method array getResultList() 获取<p>文档元素</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultList(array $ResultList) 设置文档元素
+ * @method void setResultList(array $ResultList) 设置<p>文档元素</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOrgHeight() 获取输入图片高度
- * @method void setOrgHeight(integer $OrgHeight) 设置输入图片高度
- * @method integer getOrgWidth() 获取输入图片宽度
- * @method void setOrgWidth(integer $OrgWidth) 设置输入图片宽度
- * @method string getImageBase64() 获取预处理后的图片base64编码
- * @method void setImageBase64(string $ImageBase64) 设置预处理后的图片base64编码
+ * @method integer getOrgHeight() 获取<p>输入图片高度</p><p>单位：px</p>
+ * @method void setOrgHeight(integer $OrgHeight) 设置<p>输入图片高度</p><p>单位：px</p>
+ * @method integer getOrgWidth() 获取<p>输入图片宽度</p><p>单位：px</p>
+ * @method void setOrgWidth(integer $OrgWidth) 设置<p>输入图片宽度</p><p>单位：px</p>
+ * @method string getImageBase64() 获取<p>预处理后的图片base64编码</p>
+ * @method void setImageBase64(string $ImageBase64) 设置<p>预处理后的图片base64编码</p>
  */
 class QuestionInfo extends AbstractModel
 {
     /**
-     * @var float 旋转角度
+     * @var float <p>旋转角度</p>
      */
     public $Angle;
 
     /**
-     * @var integer 预处理后图片高度
+     * @var integer <p>预处理后图片高度</p><p>单位：px</p>
      */
     public $Height;
 
     /**
-     * @var integer 预处理后图片宽度
+     * @var integer <p>预处理后图片宽度</p><p>单位：px</p>
      */
     public $Width;
 
     /**
-     * @var array 文档元素
+     * @var array <p>文档元素</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultList;
 
     /**
-     * @var integer 输入图片高度
+     * @var integer <p>输入图片高度</p><p>单位：px</p>
      */
     public $OrgHeight;
 
     /**
-     * @var integer 输入图片宽度
+     * @var integer <p>输入图片宽度</p><p>单位：px</p>
      */
     public $OrgWidth;
 
     /**
-     * @var string 预处理后的图片base64编码
+     * @var string <p>预处理后的图片base64编码</p>
      */
     public $ImageBase64;
 
     /**
-     * @param float $Angle 旋转角度
-     * @param integer $Height 预处理后图片高度
-     * @param integer $Width 预处理后图片宽度
-     * @param array $ResultList 文档元素
+     * @param float $Angle <p>旋转角度</p>
+     * @param integer $Height <p>预处理后图片高度</p><p>单位：px</p>
+     * @param integer $Width <p>预处理后图片宽度</p><p>单位：px</p>
+     * @param array $ResultList <p>文档元素</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OrgHeight 输入图片高度
-     * @param integer $OrgWidth 输入图片宽度
-     * @param string $ImageBase64 预处理后的图片base64编码
+     * @param integer $OrgHeight <p>输入图片高度</p><p>单位：px</p>
+     * @param integer $OrgWidth <p>输入图片宽度</p><p>单位：px</p>
+     * @param string $ImageBase64 <p>预处理后的图片base64编码</p>
      */
     function __construct()
     {

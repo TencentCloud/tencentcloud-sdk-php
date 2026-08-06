@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMonth(string $Month) 设置<p>账单月份，格式为2024-02，不传默认当前月</p>
  * @method string getTreeNodeUniqKey() 获取<p>分账单元唯一标识，用作筛选</p>
  * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置<p>分账单元唯一标识，用作筛选</p>
- * @method string getGatherType() 获取<p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p>
- * @method void setGatherType(string $GatherType) 设置<p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p>
+ * @method string getGatherType() 获取<p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p><p>枚举值：</p><ul><li>all： 全部</li><li>none： 未归集</li><li>allocation： 已公摊资源</li><li>gather： 已归集资源</li></ul>
+ * @method void setGatherType(string $GatherType) 设置<p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p><p>枚举值：</p><ul><li>all： 全部</li><li>none： 未归集</li><li>allocation： 已公摊资源</li><li>gather： 已归集资源</li></ul>
  * @method string getSort() 获取<p>排序字段，枚举值如下：<br>realCost  - 折后总价<br>cashPayAmount - 现金金额<br>voucherPayAmount - 代金券金额<br>incentivePayAmount  - 赠送金金额<br>transferPayAmount -分成金金额</p>
  * @method void setSort(string $Sort) 设置<p>排序字段，枚举值如下：<br>realCost  - 折后总价<br>cashPayAmount - 现金金额<br>voucherPayAmount - 代金券金额<br>incentivePayAmount  - 赠送金金额<br>transferPayAmount -分成金金额</p>
  * @method string getSortType() 获取<p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
@@ -82,7 +82,7 @@ class DescribeGatherResourceRequest extends AbstractModel
     public $TreeNodeUniqKey;
 
     /**
-     * @var string <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p>
+     * @var string <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p><p>枚举值：</p><ul><li>all： 全部</li><li>none： 未归集</li><li>allocation： 已公摊资源</li><li>gather： 已归集资源</li></ul>
      */
     public $GatherType;
 
@@ -161,7 +161,7 @@ class DescribeGatherResourceRequest extends AbstractModel
      * @param integer $Offset <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
      * @param string $Month <p>账单月份，格式为2024-02，不传默认当前月</p>
      * @param string $TreeNodeUniqKey <p>分账单元唯一标识，用作筛选</p>
-     * @param string $GatherType <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p>
+     * @param string $GatherType <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p><p>枚举值：</p><ul><li>all： 全部</li><li>none： 未归集</li><li>allocation： 已公摊资源</li><li>gather： 已归集资源</li></ul>
      * @param string $Sort <p>排序字段，枚举值如下：<br>realCost  - 折后总价<br>cashPayAmount - 现金金额<br>voucherPayAmount - 代金券金额<br>incentivePayAmount  - 赠送金金额<br>transferPayAmount -分成金金额</p>
      * @param string $SortType <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
      * @param array $BusinessCodes <p>产品编码，用作筛选</p>

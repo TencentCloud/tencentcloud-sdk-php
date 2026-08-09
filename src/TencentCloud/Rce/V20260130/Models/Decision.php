@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDecisionResult() 获取<p>决策结果</p><ul><li>pass：通过</li><li>review：复审</li><li>reject：拒绝</li></ul>
  * @method void setDecisionResult(string $DecisionResult) 设置<p>决策结果</p><ul><li>pass：通过</li><li>review：复审</li><li>reject：拒绝</li></ul>
+ * @method string getDisposition() 获取<p>命中策略后的决策动作，可在控制台配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisposition(string $Disposition) 设置<p>命中策略后的决策动作，可在控制台配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Decision extends AbstractModel
 {
@@ -31,7 +35,15 @@ class Decision extends AbstractModel
     public $DecisionResult;
 
     /**
+     * @var string <p>命中策略后的决策动作，可在控制台配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Disposition;
+
+    /**
      * @param string $DecisionResult <p>决策结果</p><ul><li>pass：通过</li><li>review：复审</li><li>reject：拒绝</li></ul>
+     * @param string $Disposition <p>命中策略后的决策动作，可在控制台配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -48,6 +60,10 @@ class Decision extends AbstractModel
         }
         if (array_key_exists("DecisionResult",$param) and $param["DecisionResult"] !== null) {
             $this->DecisionResult = $param["DecisionResult"];
+        }
+
+        if (array_key_exists("Disposition",$param) and $param["Disposition"] !== null) {
+            $this->Disposition = $param["Disposition"];
         }
     }
 }

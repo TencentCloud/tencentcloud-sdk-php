@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDealsByCond返回参数结构体
  *
- * @method array getDeals() 获取订单列表
- * @method void setDeals(array $Deals) 设置订单列表
- * @method integer getTotalCount() 获取订单总数
- * @method void setTotalCount(integer $TotalCount) 设置订单总数
+ * @method array getDeals() 获取<p>订单列表</p>
+ * @method void setDeals(array $Deals) 设置<p>订单列表</p>
+ * @method integer getTotalCount() 获取<p>订单总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>订单总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDealsByCondResponse extends AbstractModel
 {
     /**
-     * @var array 订单列表
+     * @var array <p>订单列表</p>
      */
     public $Deals;
 
     /**
-     * @var integer 订单总数
+     * @var integer <p>订单总数</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeDealsByCondResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Deals 订单列表
-     * @param integer $TotalCount 订单总数
+     * @param array $Deals <p>订单列表</p>
+     * @param integer $TotalCount <p>订单总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

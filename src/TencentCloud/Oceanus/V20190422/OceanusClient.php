@@ -30,6 +30,8 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\CreateFolderResponse CreateFolder(Models\CreateFolderRequest $req) 作业列表页面新建文件夹请求
  * @method Models\CreateJobResponse CreateJob(Models\CreateJobRequest $req) 新建作业接口，一个 AppId 最多允许创建1000个作业
  * @method Models\CreateJobConfigResponse CreateJobConfig(Models\CreateJobConfigRequest $req) 创建作业配置，一个作业最多有100个配置版本
+ * @method Models\CreateMetaDatabaseResponse CreateMetaDatabase(Models\CreateMetaDatabaseRequest $req) 创建元数据库
+ * @method Models\CreateMetaTableResponse CreateMetaTable(Models\CreateMetaTableRequest $req) 创建元数据表
  * @method Models\CreateOceanusClusterResponse CreateOceanusCluster(Models\CreateOceanusClusterRequest $req) 创建Oceanus集群
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建资源接口
  * @method Models\CreateResourceConfigResponse CreateResourceConfig(Models\CreateResourceConfigRequest $req) 创建资源配置接口
@@ -73,6 +75,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
 如果MaxParallelism变大，则要求入参RestartAllowed必须为True
 假设作业运行状态，则先停止作业，再启动作业，中间状态丢失
 假设作业暂停状态，则将作业更改为停止状态，中间状态丢失
+ * @method Models\ModifyMetaTableResponse ModifyMetaTable(Models\ModifyMetaTableRequest $req) 修改元数据表
  * @method Models\ModifyWorkSpaceResponse ModifyWorkSpace(Models\ModifyWorkSpaceRequest $req) 修改工作空间
  * @method Models\ParseConnectorResponse ParseConnector(Models\ParseConnectorRequest $req) 解析用户上传connector
  * @method Models\RenewOceanusClusterResponse RenewOceanusCluster(Models\RenewOceanusClusterRequest $req) 续费Oceanus集群

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RunSqlGatewayStatement请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getSql() 获取需要执行的sql，该sql会被Sql Gateway执行，当前支持的是paimon修改需求，因此主要是DDL语句
- * @method void setSql(string $Sql) 设置需要执行的sql，该sql会被Sql Gateway执行，当前支持的是paimon修改需求，因此主要是DDL语句
- * @method string getSessionId() 获取Sql Gateway会话ID，可不填，如果不填则会自动创建一个会话ID，每个会话ID都有一个存活时间，测试环境为10分钟，线上默认是30分钟
- * @method void setSessionId(string $SessionId) 设置Sql Gateway会话ID，可不填，如果不填则会自动创建一个会话ID，每个会话ID都有一个存活时间，测试环境为10分钟，线上默认是30分钟
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getSql() 获取<p>需要执行的sql，需要对其进行base64编译后传入</p>
+ * @method void setSql(string $Sql) 设置<p>需要执行的sql，需要对其进行base64编译后传入</p>
+ * @method string getSessionId() 获取<p>Sql Gateway会话ID，可不填，如果不填则会自动创建一个会话ID，每个会话ID都有一个存活时间，测试环境为10分钟，线上默认是30分钟</p>
+ * @method void setSessionId(string $SessionId) 设置<p>Sql Gateway会话ID，可不填，如果不填则会自动创建一个会话ID，每个会话ID都有一个存活时间，测试环境为10分钟，线上默认是30分钟</p>
  */
 class RunSqlGatewayStatementRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 需要执行的sql，该sql会被Sql Gateway执行，当前支持的是paimon修改需求，因此主要是DDL语句
+     * @var string <p>需要执行的sql，需要对其进行base64编译后传入</p>
      */
     public $Sql;
 
     /**
-     * @var string Sql Gateway会话ID，可不填，如果不填则会自动创建一个会话ID，每个会话ID都有一个存活时间，测试环境为10分钟，线上默认是30分钟
+     * @var string <p>Sql Gateway会话ID，可不填，如果不填则会自动创建一个会话ID，每个会话ID都有一个存活时间，测试环境为10分钟，线上默认是30分钟</p>
      */
     public $SessionId;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $Sql 需要执行的sql，该sql会被Sql Gateway执行，当前支持的是paimon修改需求，因此主要是DDL语句
-     * @param string $SessionId Sql Gateway会话ID，可不填，如果不填则会自动创建一个会话ID，每个会话ID都有一个存活时间，测试环境为10分钟，线上默认是30分钟
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $Sql <p>需要执行的sql，需要对其进行base64编译后传入</p>
+     * @param string $SessionId <p>Sql Gateway会话ID，可不填，如果不填则会自动创建一个会话ID，每个会话ID都有一个存活时间，测试环境为10分钟，线上默认是30分钟</p>
      */
     function __construct()
     {

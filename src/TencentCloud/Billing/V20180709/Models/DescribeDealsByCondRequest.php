@@ -20,130 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDealsByCond请求参数结构体
  *
- * @method string getStartTime() 获取开始时间 2016-01-01 00:00:00
- * @method void setStartTime(string $StartTime) 设置开始时间 2016-01-01 00:00:00
- * @method string getEndTime() 获取结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
- * @method void setEndTime(string $EndTime) 设置结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
- * @method integer getLimit() 获取一页多少条数据，默认是20条，最大不超过1000
- * @method void setLimit(integer $Limit) 设置一页多少条数据，默认是20条，最大不超过1000
- * @method integer getOffset() 获取第多少页，从0开始，默认是0
- * @method void setOffset(integer $Offset) 设置第多少页，从0开始，默认是0
- * @method integer getStatus() 获取订单状态,默认为4（成功的订单）
-订单的状态
-1：未支付
-2：已支付3：发货中
-4：已发货
-5：发货失败
-6：已退款
-7：已关单
-8：订单过期
-9：订单已失效
-10：产品已失效
-11：代付拒绝
-12：支付中
- * @method void setStatus(integer $Status) 设置订单状态,默认为4（成功的订单）
-订单的状态
-1：未支付
-2：已支付3：发货中
-4：已发货
-5：发货失败
-6：已退款
-7：已关单
-8：订单过期
-9：订单已失效
-10：产品已失效
-11：代付拒绝
-12：支付中
- * @method string getOrderId() 获取子订单号
- * @method void setOrderId(string $OrderId) 设置子订单号
- * @method string getBigDealId() 获取大订单号
- * @method void setBigDealId(string $BigDealId) 设置大订单号
- * @method string getResourceId() 获取资源id
- * @method void setResourceId(string $ResourceId) 设置资源id
- * @method array getStatusSet() 获取订单状态
- * @method void setStatusSet(array $StatusSet) 设置订单状态
+ * @method string getStartTime() 获取<p>开始时间 2016-01-01 00:00:00</p>
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间 2016-01-01 00:00:00</p>
+ * @method string getEndTime() 获取<p>结束时间 2016-02-01 00:00:00 建议跨度不超过3个月</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间 2016-02-01 00:00:00 建议跨度不超过3个月</p>
+ * @method integer getLimit() 获取<p>一页多少条数据，默认是20条，最大不超过1000</p>
+ * @method void setLimit(integer $Limit) 设置<p>一页多少条数据，默认是20条，最大不超过1000</p>
+ * @method integer getOffset() 获取<p>第多少页，从0开始，默认是0</p>
+ * @method void setOffset(integer $Offset) 设置<p>第多少页，从0开始，默认是0</p>
+ * @method integer getStatus() 获取<p>订单状态</p><p>枚举值：</p><ul><li>1：  待支付</li><li>2：  已支付</li><li>3：  发货中</li><li>4：  已发货</li><li>5：  发货失败</li><li>6：  已退款</li><li>7：  已取消</li><li>8：  订单过期</li><li>9 ：  订单已失效</li><li>10：  产品已失效</li><li>11：  代付拒绝</li><li>12：  支付中</li><li>13：  退款中</li><li>30：  服务市场订单待用户确认完成</li></ul><p>默认值：4（已发货，成功的订单）</p><p>其中，状态2、3、5、12、13、30 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>统一显示“处理中”；<br>状态4 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>中显示交易成功；<br>状态9、10 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>中无对应状态</p>
+ * @method void setStatus(integer $Status) 设置<p>订单状态</p><p>枚举值：</p><ul><li>1：  待支付</li><li>2：  已支付</li><li>3：  发货中</li><li>4：  已发货</li><li>5：  发货失败</li><li>6：  已退款</li><li>7：  已取消</li><li>8：  订单过期</li><li>9 ：  订单已失效</li><li>10：  产品已失效</li><li>11：  代付拒绝</li><li>12：  支付中</li><li>13：  退款中</li><li>30：  服务市场订单待用户确认完成</li></ul><p>默认值：4（已发货，成功的订单）</p><p>其中，状态2、3、5、12、13、30 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>统一显示“处理中”；<br>状态4 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>中显示交易成功；<br>状态9、10 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>中无对应状态</p>
+ * @method string getOrderId() 获取<p>子订单号</p>
+ * @method void setOrderId(string $OrderId) 设置<p>子订单号</p>
+ * @method string getBigDealId() 获取<p>大订单号</p>
+ * @method void setBigDealId(string $BigDealId) 设置<p>大订单号</p>
+ * @method string getResourceId() 获取<p>资源id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源id</p>
+ * @method array getStatusSet() 获取<p>订单状态</p>
+ * @method void setStatusSet(array $StatusSet) 设置<p>订单状态</p>
  */
 class DescribeDealsByCondRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间 2016-01-01 00:00:00
+     * @var string <p>开始时间 2016-01-01 00:00:00</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
+     * @var string <p>结束时间 2016-02-01 00:00:00 建议跨度不超过3个月</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 一页多少条数据，默认是20条，最大不超过1000
+     * @var integer <p>一页多少条数据，默认是20条，最大不超过1000</p>
      */
     public $Limit;
 
     /**
-     * @var integer 第多少页，从0开始，默认是0
+     * @var integer <p>第多少页，从0开始，默认是0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 订单状态,默认为4（成功的订单）
-订单的状态
-1：未支付
-2：已支付3：发货中
-4：已发货
-5：发货失败
-6：已退款
-7：已关单
-8：订单过期
-9：订单已失效
-10：产品已失效
-11：代付拒绝
-12：支付中
+     * @var integer <p>订单状态</p><p>枚举值：</p><ul><li>1：  待支付</li><li>2：  已支付</li><li>3：  发货中</li><li>4：  已发货</li><li>5：  发货失败</li><li>6：  已退款</li><li>7：  已取消</li><li>8：  订单过期</li><li>9 ：  订单已失效</li><li>10：  产品已失效</li><li>11：  代付拒绝</li><li>12：  支付中</li><li>13：  退款中</li><li>30：  服务市场订单待用户确认完成</li></ul><p>默认值：4（已发货，成功的订单）</p><p>其中，状态2、3、5、12、13、30 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>统一显示“处理中”；<br>状态4 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>中显示交易成功；<br>状态9、10 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>中无对应状态</p>
      */
     public $Status;
 
     /**
-     * @var string 子订单号
+     * @var string <p>子订单号</p>
      */
     public $OrderId;
 
     /**
-     * @var string 大订单号
+     * @var string <p>大订单号</p>
      */
     public $BigDealId;
 
     /**
-     * @var string 资源id
+     * @var string <p>资源id</p>
      */
     public $ResourceId;
 
     /**
-     * @var array 订单状态
+     * @var array <p>订单状态</p>
      */
     public $StatusSet;
 
     /**
-     * @param string $StartTime 开始时间 2016-01-01 00:00:00
-     * @param string $EndTime 结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
-     * @param integer $Limit 一页多少条数据，默认是20条，最大不超过1000
-     * @param integer $Offset 第多少页，从0开始，默认是0
-     * @param integer $Status 订单状态,默认为4（成功的订单）
-订单的状态
-1：未支付
-2：已支付3：发货中
-4：已发货
-5：发货失败
-6：已退款
-7：已关单
-8：订单过期
-9：订单已失效
-10：产品已失效
-11：代付拒绝
-12：支付中
-     * @param string $OrderId 子订单号
-     * @param string $BigDealId 大订单号
-     * @param string $ResourceId 资源id
-     * @param array $StatusSet 订单状态
+     * @param string $StartTime <p>开始时间 2016-01-01 00:00:00</p>
+     * @param string $EndTime <p>结束时间 2016-02-01 00:00:00 建议跨度不超过3个月</p>
+     * @param integer $Limit <p>一页多少条数据，默认是20条，最大不超过1000</p>
+     * @param integer $Offset <p>第多少页，从0开始，默认是0</p>
+     * @param integer $Status <p>订单状态</p><p>枚举值：</p><ul><li>1：  待支付</li><li>2：  已支付</li><li>3：  发货中</li><li>4：  已发货</li><li>5：  发货失败</li><li>6：  已退款</li><li>7：  已取消</li><li>8：  订单过期</li><li>9 ：  订单已失效</li><li>10：  产品已失效</li><li>11：  代付拒绝</li><li>12：  支付中</li><li>13：  退款中</li><li>30：  服务市场订单待用户确认完成</li></ul><p>默认值：4（已发货，成功的订单）</p><p>其中，状态2、3、5、12、13、30 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>统一显示“处理中”；<br>状态4 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>中显示交易成功；<br>状态9、10 在<a href="https://console.cloud.tencent.com/expense/deal">控制台</a>中无对应状态</p>
+     * @param string $OrderId <p>子订单号</p>
+     * @param string $BigDealId <p>大订单号</p>
+     * @param string $ResourceId <p>资源id</p>
+     * @param array $StatusSet <p>订单状态</p>
      */
     function __construct()
     {

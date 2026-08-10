@@ -20,675 +20,361 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 电话话单信息
  *
- * @method string getCaller() 获取主叫号码
- * @method void setCaller(string $Caller) 设置主叫号码
- * @method string getCallee() 获取被叫号码
- * @method void setCallee(string $Callee) 设置被叫号码
- * @method integer getTime() 获取呼叫发起时间戳，Unix 时间戳
- * @method void setTime(integer $Time) 设置呼叫发起时间戳，Unix 时间戳
- * @method integer getDirection() 获取呼入呼出方向 0 呼入 1 呼出
- * @method void setDirection(integer $Direction) 设置呼入呼出方向 0 呼入 1 呼出
- * @method integer getCallType() 获取通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫
- * @method void setCallType(integer $CallType) 设置通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫
- * @method integer getDuration() 获取通话时长
- * @method void setDuration(integer $Duration) 设置通话时长
- * @method string getRecordURL() 获取录音信息
- * @method void setRecordURL(string $RecordURL) 设置录音信息
- * @method string getRecordId() 获取录音 ID
- * @method void setRecordId(string $RecordId) 设置录音 ID
- * @method SeatUserInfo getSeatUser() 获取座席信息
- * @method void setSeatUser(SeatUserInfo $SeatUser) 设置座席信息
- * @method integer getEndStatus() 获取EndStatus与EndStatusString一一对应，具体枚举如下：
-
-**场景	         EndStatus	EndStatusString	状态说明**
-
-电话呼入&呼出	1	        ok	                        **正常通话**
-
-电话呼入	             102	        ivrGiveUp	        **IVR期间用户放弃**
-
-电话呼入	             103	        waitingGiveUp	       **排队时用户放弃**
-
-电话呼入	             104	        ringingGiveUp	       **振铃时用户放弃**
-
-电话呼入	             105	        noSeatOnline	       **无座席在线**
-
-电话呼入              106	       notWorkTime	       **非工作时间**   
-
-电话呼入	            107	       ivrEnd	               **IVR全自动结束(无人工介入)**
-
-电话呼入	            100	      blackList **黑名单(系统侧)**
-
-电话呼出             108	        restrictedCallee	**全局外呼风险号码拦截(系统侧)**
-
-电话呼出             109	        tooManyRequest	    **外呼频控拦截(系统侧)**
-
-电话呼出             110	        restrictedArea	    **外呼地域拦截(系统侧)**
-
-电话呼出             111	        restrictedTime	**外呼时段拦截(系统侧)**
-                         
-电话呼出             202            notAnswer	 **被叫未接听**
-
-电话呼出            203	    userReject	**被叫拒接挂断**
-
-电话呼出	          204	    powerOff	**被叫关机**
-
-电话呼出           205            numberNotExist	**被叫空号**
-
-电话呼出	         206	           busy	**被叫忙**
-
-电话呼出   	        207	           outOfCredit	**被叫欠费**
-
-电话呼出	         208	           operatorError	**运营商线路异常**
-
-电话呼出         	209	           callerCancel	**主叫取消**
-
-电话呼出	        210	           notInService	**被叫不在服务区**
-
-电话呼入&呼出	211    clientError    **座席客户端错误**
-
-电话呼出        212     carrierBlocked      **运营商拦截**
-
-电话呼出        213     callReminder      **提示来电提醒**
-
-电话呼出        215     numberInvalid      **被叫号码无效**
-
-电话呼出        216     callRestricted      **提示呼叫受限**
-
-电话呼出        217     calleeRestricted      **被叫黑名单受限**
-
-电话呼出        218     areaRestricted      **被叫区域受限**
-
-电话呼出        219     promptCallForwarding      **提示呼叫转移**
-
-电话呼出        220     callerCancelWhileRing      **振铃中主叫取消**
-
-电话呼出        221     callerCancelWithoutRing      **未振铃被叫号码异常**
-
-电话呼出        222     voiceMailReached      **语音信箱挂断**
-
-音频呼入        501     callConflict      **VoIP用户呼叫冲突终止**
-
-音频呼入        502     clientTimeout      **VoIP用户客户端超时**
-
-音频呼入        503     voipClientError      **VoIP用户客户端错误**
-
-中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
-
-英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
- * @method void setEndStatus(integer $EndStatus) 设置EndStatus与EndStatusString一一对应，具体枚举如下：
-
-**场景	         EndStatus	EndStatusString	状态说明**
-
-电话呼入&呼出	1	        ok	                        **正常通话**
-
-电话呼入	             102	        ivrGiveUp	        **IVR期间用户放弃**
-
-电话呼入	             103	        waitingGiveUp	       **排队时用户放弃**
-
-电话呼入	             104	        ringingGiveUp	       **振铃时用户放弃**
-
-电话呼入	             105	        noSeatOnline	       **无座席在线**
-
-电话呼入              106	       notWorkTime	       **非工作时间**   
-
-电话呼入	            107	       ivrEnd	               **IVR全自动结束(无人工介入)**
-
-电话呼入	            100	      blackList **黑名单(系统侧)**
-
-电话呼出             108	        restrictedCallee	**全局外呼风险号码拦截(系统侧)**
-
-电话呼出             109	        tooManyRequest	    **外呼频控拦截(系统侧)**
-
-电话呼出             110	        restrictedArea	    **外呼地域拦截(系统侧)**
-
-电话呼出             111	        restrictedTime	**外呼时段拦截(系统侧)**
-                         
-电话呼出             202            notAnswer	 **被叫未接听**
-
-电话呼出            203	    userReject	**被叫拒接挂断**
-
-电话呼出	          204	    powerOff	**被叫关机**
-
-电话呼出           205            numberNotExist	**被叫空号**
-
-电话呼出	         206	           busy	**被叫忙**
-
-电话呼出   	        207	           outOfCredit	**被叫欠费**
-
-电话呼出	         208	           operatorError	**运营商线路异常**
-
-电话呼出         	209	           callerCancel	**主叫取消**
-
-电话呼出	        210	           notInService	**被叫不在服务区**
-
-电话呼入&呼出	211    clientError    **座席客户端错误**
-
-电话呼出        212     carrierBlocked      **运营商拦截**
-
-电话呼出        213     callReminder      **提示来电提醒**
-
-电话呼出        215     numberInvalid      **被叫号码无效**
-
-电话呼出        216     callRestricted      **提示呼叫受限**
-
-电话呼出        217     calleeRestricted      **被叫黑名单受限**
-
-电话呼出        218     areaRestricted      **被叫区域受限**
-
-电话呼出        219     promptCallForwarding      **提示呼叫转移**
-
-电话呼出        220     callerCancelWhileRing      **振铃中主叫取消**
-
-电话呼出        221     callerCancelWithoutRing      **未振铃被叫号码异常**
-
-电话呼出        222     voiceMailReached      **语音信箱挂断**
-
-音频呼入        501     callConflict      **VoIP用户呼叫冲突终止**
-
-音频呼入        502     clientTimeout      **VoIP用户客户端超时**
-
-音频呼入        503     voipClientError      **VoIP用户客户端错误**
-
-中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
-
-英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
- * @method string getSkillGroup() 获取技能组名称
- * @method void setSkillGroup(string $SkillGroup) 设置技能组名称
- * @method string getCallerLocation() 获取主叫归属地
- * @method void setCallerLocation(string $CallerLocation) 设置主叫归属地
- * @method integer getIVRDuration() 获取IVR 阶段耗时
- * @method void setIVRDuration(integer $IVRDuration) 设置IVR 阶段耗时
- * @method integer getRingTimestamp() 获取振铃时间戳，UNIX 秒级时间戳
- * @method void setRingTimestamp(integer $RingTimestamp) 设置振铃时间戳，UNIX 秒级时间戳
- * @method integer getAcceptTimestamp() 获取接听时间戳，UNIX 秒级时间戳
- * @method void setAcceptTimestamp(integer $AcceptTimestamp) 设置接听时间戳，UNIX 秒级时间戳
- * @method integer getEndedTimestamp() 获取结束时间戳，UNIX 秒级时间戳
- * @method void setEndedTimestamp(integer $EndedTimestamp) 设置结束时间戳，UNIX 秒级时间戳
- * @method array getIVRKeyPressed() 获取IVR 按键信息 ，e.g. ["1","2","3"]
- * @method void setIVRKeyPressed(array $IVRKeyPressed) 设置IVR 按键信息 ，e.g. ["1","2","3"]
- * @method string getHungUpSide() 获取挂机方 seat 座席 user 用户 system 系统
- * @method void setHungUpSide(string $HungUpSide) 设置挂机方 seat 座席 user 用户 system 系统
- * @method array getServeParticipants() 获取服务参与者列表
- * @method void setServeParticipants(array $ServeParticipants) 设置服务参与者列表
- * @method integer getSkillGroupId() 获取技能组ID
- * @method void setSkillGroupId(integer $SkillGroupId) 设置技能组ID
- * @method string getEndStatusString() 获取参考 EndStatus 字段
- * @method void setEndStatusString(string $EndStatusString) 设置参考 EndStatus 字段
- * @method integer getStartTimestamp() 获取会话开始时间戳，UNIX 秒级时间戳
- * @method void setStartTimestamp(integer $StartTimestamp) 设置会话开始时间戳，UNIX 秒级时间戳
- * @method integer getQueuedTimestamp() 获取进入排队时间，Unix 秒级时间戳
- * @method void setQueuedTimestamp(integer $QueuedTimestamp) 设置进入排队时间，Unix 秒级时间戳
- * @method array getPostIVRKeyPressed() 获取后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
- * @method void setPostIVRKeyPressed(array $PostIVRKeyPressed) 设置后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
- * @method integer getQueuedSkillGroupId() 获取排队技能组Id
- * @method void setQueuedSkillGroupId(integer $QueuedSkillGroupId) 设置排队技能组Id
- * @method string getSessionId() 获取会话 ID
- * @method void setSessionId(string $SessionId) 设置会话 ID
- * @method string getProtectedCaller() 获取主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
- * @method void setProtectedCaller(string $ProtectedCaller) 设置主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
- * @method string getProtectedCallee() 获取被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
- * @method void setProtectedCallee(string $ProtectedCallee) 设置被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
- * @method string getUui() 获取客户自定义数据（User-to-User Interface）
+ * @method string getCaller() 获取<p>主叫号码</p>
+ * @method void setCaller(string $Caller) 设置<p>主叫号码</p>
+ * @method string getCallee() 获取<p>被叫号码</p>
+ * @method void setCallee(string $Callee) 设置<p>被叫号码</p>
+ * @method integer getTime() 获取<p>呼叫发起时间戳，Unix 时间戳</p>
+ * @method void setTime(integer $Time) 设置<p>呼叫发起时间戳，Unix 时间戳</p>
+ * @method integer getDirection() 获取<p>呼入呼出方向 0 呼入 1 呼出</p>
+ * @method void setDirection(integer $Direction) 设置<p>呼入呼出方向 0 呼入 1 呼出</p>
+ * @method integer getCallType() 获取<p>通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫</p>
+ * @method void setCallType(integer $CallType) 设置<p>通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫</p>
+ * @method integer getDuration() 获取<p>通话时长</p>
+ * @method void setDuration(integer $Duration) 设置<p>通话时长</p>
+ * @method string getRecordURL() 获取<p>录音信息</p>
+ * @method void setRecordURL(string $RecordURL) 设置<p>录音信息</p>
+ * @method string getRecordId() 获取<p>录音 ID</p>
+ * @method void setRecordId(string $RecordId) 设置<p>录音 ID</p>
+ * @method SeatUserInfo getSeatUser() 获取<p>座席信息</p>
+ * @method void setSeatUser(SeatUserInfo $SeatUser) 设置<p>座席信息</p>
+ * @method integer getEndStatus() 获取<p>EndStatus与EndStatusString一一对应，具体枚举如下：</p><p><strong>场景             EndStatus    EndStatusString    状态说明</strong></p><p>电话呼入&amp;呼出    1            ok                            <strong>正常通话</strong></p><p>电话呼入                 102            ivrGiveUp            <strong>IVR期间用户放弃</strong></p><p>电话呼入                 103            waitingGiveUp           <strong>排队时用户放弃</strong></p><p>电话呼入                 104            ringingGiveUp           <strong>振铃时用户放弃</strong></p><p>电话呼入                 105            noSeatOnline           <strong>无座席在线</strong></p><p>电话呼入              106           notWorkTime           <strong>非工作时间</strong>   </p><p>电话呼入                107           ivrEnd                   <strong>IVR全自动结束(无人工介入)</strong></p><p>电话呼入                100          blackList <strong>黑名单(系统侧)</strong></p><p>电话呼出             108            restrictedCallee    <strong>全局外呼风险号码拦截(系统侧)</strong></p><p>电话呼出             109            tooManyRequest        <strong>外呼频控拦截(系统侧)</strong></p><p>电话呼出             110            restrictedArea        <strong>外呼地域拦截(系统侧)</strong></p><p>电话呼出             111            restrictedTime    <strong>外呼时段拦截(系统侧)</strong></p><p>电话呼出             202            notAnswer     <strong>被叫未接听</strong></p><p>电话呼出            203        userReject    <strong>被叫拒接挂断</strong></p><p>电话呼出              204        powerOff    <strong>被叫关机</strong></p><p>电话呼出           205            numberNotExist    <strong>被叫空号</strong></p><p>电话呼出             206               busy    <strong>被叫忙</strong></p><p>电话呼出               207               outOfCredit    <strong>被叫欠费</strong></p><p>电话呼出             208               operatorError    <strong>运营商线路异常</strong></p><p>电话呼出             209               callerCancel    <strong>主叫取消</strong></p><p>电话呼出            210               notInService    <strong>被叫不在服务区</strong></p><p>电话呼入&amp;呼出    211    clientError    <strong>座席客户端错误</strong></p><p>电话呼出        212     carrierBlocked      <strong>运营商拦截</strong></p><p>电话呼出        213     callReminder      <strong>提示来电提醒</strong></p><p>电话呼出        215     numberInvalid      <strong>被叫号码无效</strong></p><p>电话呼出        216     callRestricted      <strong>提示呼叫受限</strong></p><p>电话呼出        217     calleeRestricted      <strong>被叫黑名单受限</strong></p><p>电话呼出        218     areaRestricted      <strong>被叫区域受限</strong></p><p>电话呼出        219     promptCallForwarding      <strong>提示呼叫转移</strong></p><p>电话呼出        220     callerCancelWhileRing      <strong>振铃中主叫取消</strong></p><p>电话呼出        221     callerCancelWithoutRing      <strong>未振铃被叫号码异常</strong></p><p>电话呼出        222     voiceMailReached      <strong>语音信箱挂断</strong></p><p>音频呼入        501     callConflict      <strong>VoIP用户呼叫冲突终止</strong></p><p>音频呼入        502     clientTimeout      <strong>VoIP用户客户端超时</strong></p><p>音频呼入        503     voipClientError      <strong>VoIP用户客户端错误</strong></p><p>中文详情<a href="https://www.tencentcloud.com/zh/document/product/1229/71847">参考</a></p><p>英文详情<a href="https://www.tencentcloud.com/document/product/1229/71847?lang=en">参考</a></p>
+ * @method void setEndStatus(integer $EndStatus) 设置<p>EndStatus与EndStatusString一一对应，具体枚举如下：</p><p><strong>场景             EndStatus    EndStatusString    状态说明</strong></p><p>电话呼入&amp;呼出    1            ok                            <strong>正常通话</strong></p><p>电话呼入                 102            ivrGiveUp            <strong>IVR期间用户放弃</strong></p><p>电话呼入                 103            waitingGiveUp           <strong>排队时用户放弃</strong></p><p>电话呼入                 104            ringingGiveUp           <strong>振铃时用户放弃</strong></p><p>电话呼入                 105            noSeatOnline           <strong>无座席在线</strong></p><p>电话呼入              106           notWorkTime           <strong>非工作时间</strong>   </p><p>电话呼入                107           ivrEnd                   <strong>IVR全自动结束(无人工介入)</strong></p><p>电话呼入                100          blackList <strong>黑名单(系统侧)</strong></p><p>电话呼出             108            restrictedCallee    <strong>全局外呼风险号码拦截(系统侧)</strong></p><p>电话呼出             109            tooManyRequest        <strong>外呼频控拦截(系统侧)</strong></p><p>电话呼出             110            restrictedArea        <strong>外呼地域拦截(系统侧)</strong></p><p>电话呼出             111            restrictedTime    <strong>外呼时段拦截(系统侧)</strong></p><p>电话呼出             202            notAnswer     <strong>被叫未接听</strong></p><p>电话呼出            203        userReject    <strong>被叫拒接挂断</strong></p><p>电话呼出              204        powerOff    <strong>被叫关机</strong></p><p>电话呼出           205            numberNotExist    <strong>被叫空号</strong></p><p>电话呼出             206               busy    <strong>被叫忙</strong></p><p>电话呼出               207               outOfCredit    <strong>被叫欠费</strong></p><p>电话呼出             208               operatorError    <strong>运营商线路异常</strong></p><p>电话呼出             209               callerCancel    <strong>主叫取消</strong></p><p>电话呼出            210               notInService    <strong>被叫不在服务区</strong></p><p>电话呼入&amp;呼出    211    clientError    <strong>座席客户端错误</strong></p><p>电话呼出        212     carrierBlocked      <strong>运营商拦截</strong></p><p>电话呼出        213     callReminder      <strong>提示来电提醒</strong></p><p>电话呼出        215     numberInvalid      <strong>被叫号码无效</strong></p><p>电话呼出        216     callRestricted      <strong>提示呼叫受限</strong></p><p>电话呼出        217     calleeRestricted      <strong>被叫黑名单受限</strong></p><p>电话呼出        218     areaRestricted      <strong>被叫区域受限</strong></p><p>电话呼出        219     promptCallForwarding      <strong>提示呼叫转移</strong></p><p>电话呼出        220     callerCancelWhileRing      <strong>振铃中主叫取消</strong></p><p>电话呼出        221     callerCancelWithoutRing      <strong>未振铃被叫号码异常</strong></p><p>电话呼出        222     voiceMailReached      <strong>语音信箱挂断</strong></p><p>音频呼入        501     callConflict      <strong>VoIP用户呼叫冲突终止</strong></p><p>音频呼入        502     clientTimeout      <strong>VoIP用户客户端超时</strong></p><p>音频呼入        503     voipClientError      <strong>VoIP用户客户端错误</strong></p><p>中文详情<a href="https://www.tencentcloud.com/zh/document/product/1229/71847">参考</a></p><p>英文详情<a href="https://www.tencentcloud.com/document/product/1229/71847?lang=en">参考</a></p>
+ * @method string getSkillGroup() 获取<p>技能组名称</p>
+ * @method void setSkillGroup(string $SkillGroup) 设置<p>技能组名称</p>
+ * @method string getCallerLocation() 获取<p>主叫归属地</p>
+ * @method void setCallerLocation(string $CallerLocation) 设置<p>主叫归属地</p>
+ * @method integer getIVRDuration() 获取<p>IVR 阶段耗时</p>
+ * @method void setIVRDuration(integer $IVRDuration) 设置<p>IVR 阶段耗时</p>
+ * @method integer getRingTimestamp() 获取<p>振铃时间戳，UNIX 秒级时间戳</p>
+ * @method void setRingTimestamp(integer $RingTimestamp) 设置<p>振铃时间戳，UNIX 秒级时间戳</p>
+ * @method integer getAcceptTimestamp() 获取<p>接听时间戳，UNIX 秒级时间戳</p>
+ * @method void setAcceptTimestamp(integer $AcceptTimestamp) 设置<p>接听时间戳，UNIX 秒级时间戳</p>
+ * @method integer getEndedTimestamp() 获取<p>结束时间戳，UNIX 秒级时间戳</p>
+ * @method void setEndedTimestamp(integer $EndedTimestamp) 设置<p>结束时间戳，UNIX 秒级时间戳</p>
+ * @method array getIVRKeyPressed() 获取<p>IVR 按键信息 ，e.g. [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]</p>
+ * @method void setIVRKeyPressed(array $IVRKeyPressed) 设置<p>IVR 按键信息 ，e.g. [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]</p>
+ * @method array getIVRKeyPressedEx() 获取<p>IVR按键信息（e.g.xa0[{&quot;Key&quot;:&quot;1&quot;,&quot;Label&quot;:&quot;非常满意&quot;}]）</p>
+ * @method void setIVRKeyPressedEx(array $IVRKeyPressedEx) 设置<p>IVR按键信息（e.g.xa0[{&quot;Key&quot;:&quot;1&quot;,&quot;Label&quot;:&quot;非常满意&quot;}]）</p>
+ * @method string getHungUpSide() 获取<p>挂机方 seat 座席 user 用户 system 系统</p>
+ * @method void setHungUpSide(string $HungUpSide) 设置<p>挂机方 seat 座席 user 用户 system 系统</p>
+ * @method array getServeParticipants() 获取<p>服务参与者列表</p>
+ * @method void setServeParticipants(array $ServeParticipants) 设置<p>服务参与者列表</p>
+ * @method integer getSkillGroupId() 获取<p>技能组ID</p>
+ * @method void setSkillGroupId(integer $SkillGroupId) 设置<p>技能组ID</p>
+ * @method string getEndStatusString() 获取<p>参考 EndStatus 字段</p>
+ * @method void setEndStatusString(string $EndStatusString) 设置<p>参考 EndStatus 字段</p>
+ * @method integer getStartTimestamp() 获取<p>会话开始时间戳，UNIX 秒级时间戳</p>
+ * @method void setStartTimestamp(integer $StartTimestamp) 设置<p>会话开始时间戳，UNIX 秒级时间戳</p>
+ * @method integer getQueuedTimestamp() 获取<p>进入排队时间，Unix 秒级时间戳</p>
+ * @method void setQueuedTimestamp(integer $QueuedTimestamp) 设置<p>进入排队时间，Unix 秒级时间戳</p>
+ * @method array getPostIVRKeyPressed() 获取<p>后置IVR按键信息（e.g.xa0[{&quot;Key&quot;:&quot;1&quot;,&quot;Label&quot;:&quot;非常满意&quot;}]）</p>
+ * @method void setPostIVRKeyPressed(array $PostIVRKeyPressed) 设置<p>后置IVR按键信息（e.g.xa0[{&quot;Key&quot;:&quot;1&quot;,&quot;Label&quot;:&quot;非常满意&quot;}]）</p>
+ * @method array getPostIVRKeyPressedEx() 获取<p>满意度按键信息 Key 为 noInput 表示进入满意度但无按键</p>
+ * @method void setPostIVRKeyPressedEx(array $PostIVRKeyPressedEx) 设置<p>满意度按键信息 Key 为 noInput 表示进入满意度但无按键</p>
+ * @method integer getQueuedSkillGroupId() 获取<p>排队技能组Id</p>
+ * @method void setQueuedSkillGroupId(integer $QueuedSkillGroupId) 设置<p>排队技能组Id</p>
+ * @method string getSessionId() 获取<p>会话 ID</p>
+ * @method void setSessionId(string $SessionId) 设置<p>会话 ID</p>
+ * @method string getProtectedCaller() 获取<p>主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空</p>
+ * @method void setProtectedCaller(string $ProtectedCaller) 设置<p>主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空</p>
+ * @method string getProtectedCallee() 获取<p>被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空</p>
+ * @method void setProtectedCallee(string $ProtectedCallee) 设置<p>被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空</p>
+ * @method string getUui() 获取<p>客户自定义数据（User-to-User Interface）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUui(string $Uui) 设置客户自定义数据（User-to-User Interface）
+ * @method void setUui(string $Uui) 设置<p>客户自定义数据（User-to-User Interface）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUUI() 获取客户自定义数据（User-to-User Interface）
- * @method void setUUI(string $UUI) 设置客户自定义数据（User-to-User Interface）
- * @method array getIVRKeyPressedEx() 获取IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
- * @method void setIVRKeyPressedEx(array $IVRKeyPressedEx) 设置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
- * @method string getAsrUrl() 获取获取录音ASR文本信息地址
- * @method void setAsrUrl(string $AsrUrl) 设置获取录音ASR文本信息地址
- * @method string getAsrStatus() 获取AsrUrl的状态：Complete
-已完成;
-Processing
-正在生成中;
-NotExists
-无记录(未开启生成离线asr或者无套餐包)
- * @method void setAsrStatus(string $AsrStatus) 设置AsrUrl的状态：Complete
-已完成;
-Processing
-正在生成中;
-NotExists
-无记录(未开启生成离线asr或者无套餐包)
- * @method string getCustomRecordURL() 获取录音转存第三方COS地址
- * @method void setCustomRecordURL(string $CustomRecordURL) 设置录音转存第三方COS地址
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method string getQueuedSkillGroupName() 获取排队技能组名称
- * @method void setQueuedSkillGroupName(string $QueuedSkillGroupName) 设置排队技能组名称
- * @method array getVoicemailRecordURL() 获取通话中语音留言录音URL
- * @method void setVoicemailRecordURL(array $VoicemailRecordURL) 设置通话中语音留言录音URL
- * @method array getVoicemailAsrURL() 获取通话中语音留言ASR文本信息地址
- * @method void setVoicemailAsrURL(array $VoicemailAsrURL) 设置通话中语音留言ASR文本信息地址
- * @method integer getAIAgentId() 获取如果是智能体相关通话，这里是智能体 ID
- * @method void setAIAgentId(integer $AIAgentId) 设置如果是智能体相关通话，这里是智能体 ID
- * @method string getAIAgentName() 获取如果是智能体相关通话，这里是智能体名称
- * @method void setAIAgentName(string $AIAgentName) 设置如果是智能体相关通话，这里是智能体名称
- * @method integer getSysHangupReason() 获取接通后系统挂断原因，枚举类似
- * @method void setSysHangupReason(integer $SysHangupReason) 设置接通后系统挂断原因，枚举类似
- * @method string getSysHangupReasonString() 获取接通后系统挂断原因，文字描述信息
- * @method void setSysHangupReasonString(string $SysHangupReasonString) 设置接通后系统挂断原因，文字描述信息
+ * @method string getUUI() 获取<p>客户自定义数据（User-to-User Interface）</p>
+ * @method void setUUI(string $UUI) 设置<p>客户自定义数据（User-to-User Interface）</p>
+ * @method string getAsrUrl() 获取<p>获取录音ASR文本信息地址</p>
+ * @method void setAsrUrl(string $AsrUrl) 设置<p>获取录音ASR文本信息地址</p>
+ * @method string getAsrStatus() 获取<p>AsrUrl的状态：Complete<br>已完成;<br>Processing<br>正在生成中;<br>NotExists<br>无记录(未开启生成离线asr或者无套餐包)</p>
+ * @method void setAsrStatus(string $AsrStatus) 设置<p>AsrUrl的状态：Complete<br>已完成;<br>Processing<br>正在生成中;<br>NotExists<br>无记录(未开启生成离线asr或者无套餐包)</p>
+ * @method string getCustomRecordURL() 获取<p>录音转存第三方COS地址</p>
+ * @method void setCustomRecordURL(string $CustomRecordURL) 设置<p>录音转存第三方COS地址</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getQueuedSkillGroupName() 获取<p>排队技能组名称</p>
+ * @method void setQueuedSkillGroupName(string $QueuedSkillGroupName) 设置<p>排队技能组名称</p>
+ * @method array getVoicemailRecordURL() 获取<p>通话中语音留言录音URL</p>
+ * @method void setVoicemailRecordURL(array $VoicemailRecordURL) 设置<p>通话中语音留言录音URL</p>
+ * @method array getVoicemailAsrURL() 获取<p>通话中语音留言ASR文本信息地址</p>
+ * @method void setVoicemailAsrURL(array $VoicemailAsrURL) 设置<p>通话中语音留言ASR文本信息地址</p>
+ * @method integer getAIAgentId() 获取<p>如果是智能体相关通话，这里是智能体 ID</p>
+ * @method void setAIAgentId(integer $AIAgentId) 设置<p>如果是智能体相关通话，这里是智能体 ID</p>
+ * @method string getAIAgentName() 获取<p>如果是智能体相关通话，这里是智能体名称</p>
+ * @method void setAIAgentName(string $AIAgentName) 设置<p>如果是智能体相关通话，这里是智能体名称</p>
+ * @method integer getSysHangupReason() 获取<p>接通后系统挂断原因，枚举类似</p>
+ * @method void setSysHangupReason(integer $SysHangupReason) 设置<p>接通后系统挂断原因，枚举类似</p>
+ * @method string getSysHangupReasonString() 获取<p>接通后系统挂断原因，文字描述信息</p>
+ * @method void setSysHangupReasonString(string $SysHangupReasonString) 设置<p>接通后系统挂断原因，文字描述信息</p>
  */
 class TelCdrInfo extends AbstractModel
 {
     /**
-     * @var string 主叫号码
+     * @var string <p>主叫号码</p>
      */
     public $Caller;
 
     /**
-     * @var string 被叫号码
+     * @var string <p>被叫号码</p>
      */
     public $Callee;
 
     /**
-     * @var integer 呼叫发起时间戳，Unix 时间戳
+     * @var integer <p>呼叫发起时间戳，Unix 时间戳</p>
      */
     public $Time;
 
     /**
-     * @var integer 呼入呼出方向 0 呼入 1 呼出
+     * @var integer <p>呼入呼出方向 0 呼入 1 呼出</p>
      */
     public $Direction;
 
     /**
-     * @var integer 通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫
+     * @var integer <p>通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫</p>
      */
     public $CallType;
 
     /**
-     * @var integer 通话时长
+     * @var integer <p>通话时长</p>
      */
     public $Duration;
 
     /**
-     * @var string 录音信息
+     * @var string <p>录音信息</p>
      */
     public $RecordURL;
 
     /**
-     * @var string 录音 ID
+     * @var string <p>录音 ID</p>
      */
     public $RecordId;
 
     /**
-     * @var SeatUserInfo 座席信息
+     * @var SeatUserInfo <p>座席信息</p>
      */
     public $SeatUser;
 
     /**
-     * @var integer EndStatus与EndStatusString一一对应，具体枚举如下：
-
-**场景	         EndStatus	EndStatusString	状态说明**
-
-电话呼入&呼出	1	        ok	                        **正常通话**
-
-电话呼入	             102	        ivrGiveUp	        **IVR期间用户放弃**
-
-电话呼入	             103	        waitingGiveUp	       **排队时用户放弃**
-
-电话呼入	             104	        ringingGiveUp	       **振铃时用户放弃**
-
-电话呼入	             105	        noSeatOnline	       **无座席在线**
-
-电话呼入              106	       notWorkTime	       **非工作时间**   
-
-电话呼入	            107	       ivrEnd	               **IVR全自动结束(无人工介入)**
-
-电话呼入	            100	      blackList **黑名单(系统侧)**
-
-电话呼出             108	        restrictedCallee	**全局外呼风险号码拦截(系统侧)**
-
-电话呼出             109	        tooManyRequest	    **外呼频控拦截(系统侧)**
-
-电话呼出             110	        restrictedArea	    **外呼地域拦截(系统侧)**
-
-电话呼出             111	        restrictedTime	**外呼时段拦截(系统侧)**
-                         
-电话呼出             202            notAnswer	 **被叫未接听**
-
-电话呼出            203	    userReject	**被叫拒接挂断**
-
-电话呼出	          204	    powerOff	**被叫关机**
-
-电话呼出           205            numberNotExist	**被叫空号**
-
-电话呼出	         206	           busy	**被叫忙**
-
-电话呼出   	        207	           outOfCredit	**被叫欠费**
-
-电话呼出	         208	           operatorError	**运营商线路异常**
-
-电话呼出         	209	           callerCancel	**主叫取消**
-
-电话呼出	        210	           notInService	**被叫不在服务区**
-
-电话呼入&呼出	211    clientError    **座席客户端错误**
-
-电话呼出        212     carrierBlocked      **运营商拦截**
-
-电话呼出        213     callReminder      **提示来电提醒**
-
-电话呼出        215     numberInvalid      **被叫号码无效**
-
-电话呼出        216     callRestricted      **提示呼叫受限**
-
-电话呼出        217     calleeRestricted      **被叫黑名单受限**
-
-电话呼出        218     areaRestricted      **被叫区域受限**
-
-电话呼出        219     promptCallForwarding      **提示呼叫转移**
-
-电话呼出        220     callerCancelWhileRing      **振铃中主叫取消**
-
-电话呼出        221     callerCancelWithoutRing      **未振铃被叫号码异常**
-
-电话呼出        222     voiceMailReached      **语音信箱挂断**
-
-音频呼入        501     callConflict      **VoIP用户呼叫冲突终止**
-
-音频呼入        502     clientTimeout      **VoIP用户客户端超时**
-
-音频呼入        503     voipClientError      **VoIP用户客户端错误**
-
-中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
-
-英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
+     * @var integer <p>EndStatus与EndStatusString一一对应，具体枚举如下：</p><p><strong>场景             EndStatus    EndStatusString    状态说明</strong></p><p>电话呼入&amp;呼出    1            ok                            <strong>正常通话</strong></p><p>电话呼入                 102            ivrGiveUp            <strong>IVR期间用户放弃</strong></p><p>电话呼入                 103            waitingGiveUp           <strong>排队时用户放弃</strong></p><p>电话呼入                 104            ringingGiveUp           <strong>振铃时用户放弃</strong></p><p>电话呼入                 105            noSeatOnline           <strong>无座席在线</strong></p><p>电话呼入              106           notWorkTime           <strong>非工作时间</strong>   </p><p>电话呼入                107           ivrEnd                   <strong>IVR全自动结束(无人工介入)</strong></p><p>电话呼入                100          blackList <strong>黑名单(系统侧)</strong></p><p>电话呼出             108            restrictedCallee    <strong>全局外呼风险号码拦截(系统侧)</strong></p><p>电话呼出             109            tooManyRequest        <strong>外呼频控拦截(系统侧)</strong></p><p>电话呼出             110            restrictedArea        <strong>外呼地域拦截(系统侧)</strong></p><p>电话呼出             111            restrictedTime    <strong>外呼时段拦截(系统侧)</strong></p><p>电话呼出             202            notAnswer     <strong>被叫未接听</strong></p><p>电话呼出            203        userReject    <strong>被叫拒接挂断</strong></p><p>电话呼出              204        powerOff    <strong>被叫关机</strong></p><p>电话呼出           205            numberNotExist    <strong>被叫空号</strong></p><p>电话呼出             206               busy    <strong>被叫忙</strong></p><p>电话呼出               207               outOfCredit    <strong>被叫欠费</strong></p><p>电话呼出             208               operatorError    <strong>运营商线路异常</strong></p><p>电话呼出             209               callerCancel    <strong>主叫取消</strong></p><p>电话呼出            210               notInService    <strong>被叫不在服务区</strong></p><p>电话呼入&amp;呼出    211    clientError    <strong>座席客户端错误</strong></p><p>电话呼出        212     carrierBlocked      <strong>运营商拦截</strong></p><p>电话呼出        213     callReminder      <strong>提示来电提醒</strong></p><p>电话呼出        215     numberInvalid      <strong>被叫号码无效</strong></p><p>电话呼出        216     callRestricted      <strong>提示呼叫受限</strong></p><p>电话呼出        217     calleeRestricted      <strong>被叫黑名单受限</strong></p><p>电话呼出        218     areaRestricted      <strong>被叫区域受限</strong></p><p>电话呼出        219     promptCallForwarding      <strong>提示呼叫转移</strong></p><p>电话呼出        220     callerCancelWhileRing      <strong>振铃中主叫取消</strong></p><p>电话呼出        221     callerCancelWithoutRing      <strong>未振铃被叫号码异常</strong></p><p>电话呼出        222     voiceMailReached      <strong>语音信箱挂断</strong></p><p>音频呼入        501     callConflict      <strong>VoIP用户呼叫冲突终止</strong></p><p>音频呼入        502     clientTimeout      <strong>VoIP用户客户端超时</strong></p><p>音频呼入        503     voipClientError      <strong>VoIP用户客户端错误</strong></p><p>中文详情<a href="https://www.tencentcloud.com/zh/document/product/1229/71847">参考</a></p><p>英文详情<a href="https://www.tencentcloud.com/document/product/1229/71847?lang=en">参考</a></p>
      */
     public $EndStatus;
 
     /**
-     * @var string 技能组名称
+     * @var string <p>技能组名称</p>
      */
     public $SkillGroup;
 
     /**
-     * @var string 主叫归属地
+     * @var string <p>主叫归属地</p>
      */
     public $CallerLocation;
 
     /**
-     * @var integer IVR 阶段耗时
+     * @var integer <p>IVR 阶段耗时</p>
      */
     public $IVRDuration;
 
     /**
-     * @var integer 振铃时间戳，UNIX 秒级时间戳
+     * @var integer <p>振铃时间戳，UNIX 秒级时间戳</p>
      */
     public $RingTimestamp;
 
     /**
-     * @var integer 接听时间戳，UNIX 秒级时间戳
+     * @var integer <p>接听时间戳，UNIX 秒级时间戳</p>
      */
     public $AcceptTimestamp;
 
     /**
-     * @var integer 结束时间戳，UNIX 秒级时间戳
+     * @var integer <p>结束时间戳，UNIX 秒级时间戳</p>
      */
     public $EndedTimestamp;
 
     /**
-     * @var array IVR 按键信息 ，e.g. ["1","2","3"]
+     * @var array <p>IVR 按键信息 ，e.g. [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]</p>
+     * @deprecated
      */
     public $IVRKeyPressed;
 
     /**
-     * @var string 挂机方 seat 座席 user 用户 system 系统
+     * @var array <p>IVR按键信息（e.g.xa0[{&quot;Key&quot;:&quot;1&quot;,&quot;Label&quot;:&quot;非常满意&quot;}]）</p>
+     */
+    public $IVRKeyPressedEx;
+
+    /**
+     * @var string <p>挂机方 seat 座席 user 用户 system 系统</p>
      */
     public $HungUpSide;
 
     /**
-     * @var array 服务参与者列表
+     * @var array <p>服务参与者列表</p>
      */
     public $ServeParticipants;
 
     /**
-     * @var integer 技能组ID
+     * @var integer <p>技能组ID</p>
      */
     public $SkillGroupId;
 
     /**
-     * @var string 参考 EndStatus 字段
+     * @var string <p>参考 EndStatus 字段</p>
      */
     public $EndStatusString;
 
     /**
-     * @var integer 会话开始时间戳，UNIX 秒级时间戳
+     * @var integer <p>会话开始时间戳，UNIX 秒级时间戳</p>
      */
     public $StartTimestamp;
 
     /**
-     * @var integer 进入排队时间，Unix 秒级时间戳
+     * @var integer <p>进入排队时间，Unix 秒级时间戳</p>
      */
     public $QueuedTimestamp;
 
     /**
-     * @var array 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+     * @var array <p>后置IVR按键信息（e.g.xa0[{&quot;Key&quot;:&quot;1&quot;,&quot;Label&quot;:&quot;非常满意&quot;}]）</p>
+     * @deprecated
      */
     public $PostIVRKeyPressed;
 
     /**
-     * @var integer 排队技能组Id
+     * @var array <p>满意度按键信息 Key 为 noInput 表示进入满意度但无按键</p>
+     */
+    public $PostIVRKeyPressedEx;
+
+    /**
+     * @var integer <p>排队技能组Id</p>
      */
     public $QueuedSkillGroupId;
 
     /**
-     * @var string 会话 ID
+     * @var string <p>会话 ID</p>
      */
     public $SessionId;
 
     /**
-     * @var string 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+     * @var string <p>主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空</p>
      */
     public $ProtectedCaller;
 
     /**
-     * @var string 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+     * @var string <p>被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空</p>
      */
     public $ProtectedCallee;
 
     /**
-     * @var string 客户自定义数据（User-to-User Interface）
+     * @var string <p>客户自定义数据（User-to-User Interface）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $Uui;
 
     /**
-     * @var string 客户自定义数据（User-to-User Interface）
+     * @var string <p>客户自定义数据（User-to-User Interface）</p>
      */
     public $UUI;
 
     /**
-     * @var array IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-     */
-    public $IVRKeyPressedEx;
-
-    /**
-     * @var string 获取录音ASR文本信息地址
+     * @var string <p>获取录音ASR文本信息地址</p>
      */
     public $AsrUrl;
 
     /**
-     * @var string AsrUrl的状态：Complete
-已完成;
-Processing
-正在生成中;
-NotExists
-无记录(未开启生成离线asr或者无套餐包)
+     * @var string <p>AsrUrl的状态：Complete<br>已完成;<br>Processing<br>正在生成中;<br>NotExists<br>无记录(未开启生成离线asr或者无套餐包)</p>
      */
     public $AsrStatus;
 
     /**
-     * @var string 录音转存第三方COS地址
+     * @var string <p>录音转存第三方COS地址</p>
      */
     public $CustomRecordURL;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var string 排队技能组名称
+     * @var string <p>排队技能组名称</p>
      */
     public $QueuedSkillGroupName;
 
     /**
-     * @var array 通话中语音留言录音URL
+     * @var array <p>通话中语音留言录音URL</p>
      */
     public $VoicemailRecordURL;
 
     /**
-     * @var array 通话中语音留言ASR文本信息地址
+     * @var array <p>通话中语音留言ASR文本信息地址</p>
      */
     public $VoicemailAsrURL;
 
     /**
-     * @var integer 如果是智能体相关通话，这里是智能体 ID
+     * @var integer <p>如果是智能体相关通话，这里是智能体 ID</p>
      */
     public $AIAgentId;
 
     /**
-     * @var string 如果是智能体相关通话，这里是智能体名称
+     * @var string <p>如果是智能体相关通话，这里是智能体名称</p>
      */
     public $AIAgentName;
 
     /**
-     * @var integer 接通后系统挂断原因，枚举类似
+     * @var integer <p>接通后系统挂断原因，枚举类似</p>
      */
     public $SysHangupReason;
 
     /**
-     * @var string 接通后系统挂断原因，文字描述信息
+     * @var string <p>接通后系统挂断原因，文字描述信息</p>
      */
     public $SysHangupReasonString;
 
     /**
-     * @param string $Caller 主叫号码
-     * @param string $Callee 被叫号码
-     * @param integer $Time 呼叫发起时间戳，Unix 时间戳
-     * @param integer $Direction 呼入呼出方向 0 呼入 1 呼出
-     * @param integer $CallType 通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫
-     * @param integer $Duration 通话时长
-     * @param string $RecordURL 录音信息
-     * @param string $RecordId 录音 ID
-     * @param SeatUserInfo $SeatUser 座席信息
-     * @param integer $EndStatus EndStatus与EndStatusString一一对应，具体枚举如下：
-
-**场景	         EndStatus	EndStatusString	状态说明**
-
-电话呼入&呼出	1	        ok	                        **正常通话**
-
-电话呼入	             102	        ivrGiveUp	        **IVR期间用户放弃**
-
-电话呼入	             103	        waitingGiveUp	       **排队时用户放弃**
-
-电话呼入	             104	        ringingGiveUp	       **振铃时用户放弃**
-
-电话呼入	             105	        noSeatOnline	       **无座席在线**
-
-电话呼入              106	       notWorkTime	       **非工作时间**   
-
-电话呼入	            107	       ivrEnd	               **IVR全自动结束(无人工介入)**
-
-电话呼入	            100	      blackList **黑名单(系统侧)**
-
-电话呼出             108	        restrictedCallee	**全局外呼风险号码拦截(系统侧)**
-
-电话呼出             109	        tooManyRequest	    **外呼频控拦截(系统侧)**
-
-电话呼出             110	        restrictedArea	    **外呼地域拦截(系统侧)**
-
-电话呼出             111	        restrictedTime	**外呼时段拦截(系统侧)**
-                         
-电话呼出             202            notAnswer	 **被叫未接听**
-
-电话呼出            203	    userReject	**被叫拒接挂断**
-
-电话呼出	          204	    powerOff	**被叫关机**
-
-电话呼出           205            numberNotExist	**被叫空号**
-
-电话呼出	         206	           busy	**被叫忙**
-
-电话呼出   	        207	           outOfCredit	**被叫欠费**
-
-电话呼出	         208	           operatorError	**运营商线路异常**
-
-电话呼出         	209	           callerCancel	**主叫取消**
-
-电话呼出	        210	           notInService	**被叫不在服务区**
-
-电话呼入&呼出	211    clientError    **座席客户端错误**
-
-电话呼出        212     carrierBlocked      **运营商拦截**
-
-电话呼出        213     callReminder      **提示来电提醒**
-
-电话呼出        215     numberInvalid      **被叫号码无效**
-
-电话呼出        216     callRestricted      **提示呼叫受限**
-
-电话呼出        217     calleeRestricted      **被叫黑名单受限**
-
-电话呼出        218     areaRestricted      **被叫区域受限**
-
-电话呼出        219     promptCallForwarding      **提示呼叫转移**
-
-电话呼出        220     callerCancelWhileRing      **振铃中主叫取消**
-
-电话呼出        221     callerCancelWithoutRing      **未振铃被叫号码异常**
-
-电话呼出        222     voiceMailReached      **语音信箱挂断**
-
-音频呼入        501     callConflict      **VoIP用户呼叫冲突终止**
-
-音频呼入        502     clientTimeout      **VoIP用户客户端超时**
-
-音频呼入        503     voipClientError      **VoIP用户客户端错误**
-
-中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
-
-英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
-     * @param string $SkillGroup 技能组名称
-     * @param string $CallerLocation 主叫归属地
-     * @param integer $IVRDuration IVR 阶段耗时
-     * @param integer $RingTimestamp 振铃时间戳，UNIX 秒级时间戳
-     * @param integer $AcceptTimestamp 接听时间戳，UNIX 秒级时间戳
-     * @param integer $EndedTimestamp 结束时间戳，UNIX 秒级时间戳
-     * @param array $IVRKeyPressed IVR 按键信息 ，e.g. ["1","2","3"]
-     * @param string $HungUpSide 挂机方 seat 座席 user 用户 system 系统
-     * @param array $ServeParticipants 服务参与者列表
-     * @param integer $SkillGroupId 技能组ID
-     * @param string $EndStatusString 参考 EndStatus 字段
-     * @param integer $StartTimestamp 会话开始时间戳，UNIX 秒级时间戳
-     * @param integer $QueuedTimestamp 进入排队时间，Unix 秒级时间戳
-     * @param array $PostIVRKeyPressed 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-     * @param integer $QueuedSkillGroupId 排队技能组Id
-     * @param string $SessionId 会话 ID
-     * @param string $ProtectedCaller 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
-     * @param string $ProtectedCallee 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
-     * @param string $Uui 客户自定义数据（User-to-User Interface）
+     * @param string $Caller <p>主叫号码</p>
+     * @param string $Callee <p>被叫号码</p>
+     * @param integer $Time <p>呼叫发起时间戳，Unix 时间戳</p>
+     * @param integer $Direction <p>呼入呼出方向 0 呼入 1 呼出</p>
+     * @param integer $CallType <p>通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫</p>
+     * @param integer $Duration <p>通话时长</p>
+     * @param string $RecordURL <p>录音信息</p>
+     * @param string $RecordId <p>录音 ID</p>
+     * @param SeatUserInfo $SeatUser <p>座席信息</p>
+     * @param integer $EndStatus <p>EndStatus与EndStatusString一一对应，具体枚举如下：</p><p><strong>场景             EndStatus    EndStatusString    状态说明</strong></p><p>电话呼入&amp;呼出    1            ok                            <strong>正常通话</strong></p><p>电话呼入                 102            ivrGiveUp            <strong>IVR期间用户放弃</strong></p><p>电话呼入                 103            waitingGiveUp           <strong>排队时用户放弃</strong></p><p>电话呼入                 104            ringingGiveUp           <strong>振铃时用户放弃</strong></p><p>电话呼入                 105            noSeatOnline           <strong>无座席在线</strong></p><p>电话呼入              106           notWorkTime           <strong>非工作时间</strong>   </p><p>电话呼入                107           ivrEnd                   <strong>IVR全自动结束(无人工介入)</strong></p><p>电话呼入                100          blackList <strong>黑名单(系统侧)</strong></p><p>电话呼出             108            restrictedCallee    <strong>全局外呼风险号码拦截(系统侧)</strong></p><p>电话呼出             109            tooManyRequest        <strong>外呼频控拦截(系统侧)</strong></p><p>电话呼出             110            restrictedArea        <strong>外呼地域拦截(系统侧)</strong></p><p>电话呼出             111            restrictedTime    <strong>外呼时段拦截(系统侧)</strong></p><p>电话呼出             202            notAnswer     <strong>被叫未接听</strong></p><p>电话呼出            203        userReject    <strong>被叫拒接挂断</strong></p><p>电话呼出              204        powerOff    <strong>被叫关机</strong></p><p>电话呼出           205            numberNotExist    <strong>被叫空号</strong></p><p>电话呼出             206               busy    <strong>被叫忙</strong></p><p>电话呼出               207               outOfCredit    <strong>被叫欠费</strong></p><p>电话呼出             208               operatorError    <strong>运营商线路异常</strong></p><p>电话呼出             209               callerCancel    <strong>主叫取消</strong></p><p>电话呼出            210               notInService    <strong>被叫不在服务区</strong></p><p>电话呼入&amp;呼出    211    clientError    <strong>座席客户端错误</strong></p><p>电话呼出        212     carrierBlocked      <strong>运营商拦截</strong></p><p>电话呼出        213     callReminder      <strong>提示来电提醒</strong></p><p>电话呼出        215     numberInvalid      <strong>被叫号码无效</strong></p><p>电话呼出        216     callRestricted      <strong>提示呼叫受限</strong></p><p>电话呼出        217     calleeRestricted      <strong>被叫黑名单受限</strong></p><p>电话呼出        218     areaRestricted      <strong>被叫区域受限</strong></p><p>电话呼出        219     promptCallForwarding      <strong>提示呼叫转移</strong></p><p>电话呼出        220     callerCancelWhileRing      <strong>振铃中主叫取消</strong></p><p>电话呼出        221     callerCancelWithoutRing      <strong>未振铃被叫号码异常</strong></p><p>电话呼出        222     voiceMailReached      <strong>语音信箱挂断</strong></p><p>音频呼入        501     callConflict      <strong>VoIP用户呼叫冲突终止</strong></p><p>音频呼入        502     clientTimeout      <strong>VoIP用户客户端超时</strong></p><p>音频呼入        503     voipClientError      <strong>VoIP用户客户端错误</strong></p><p>中文详情<a href="https://www.tencentcloud.com/zh/document/product/1229/71847">参考</a></p><p>英文详情<a href="https://www.tencentcloud.com/document/product/1229/71847?lang=en">参考</a></p>
+     * @param string $SkillGroup <p>技能组名称</p>
+     * @param string $CallerLocation <p>主叫归属地</p>
+     * @param integer $IVRDuration <p>IVR 阶段耗时</p>
+     * @param integer $RingTimestamp <p>振铃时间戳，UNIX 秒级时间戳</p>
+     * @param integer $AcceptTimestamp <p>接听时间戳，UNIX 秒级时间戳</p>
+     * @param integer $EndedTimestamp <p>结束时间戳，UNIX 秒级时间戳</p>
+     * @param array $IVRKeyPressed <p>IVR 按键信息 ，e.g. [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]</p>
+     * @param array $IVRKeyPressedEx <p>IVR按键信息（e.g.xa0[{&quot;Key&quot;:&quot;1&quot;,&quot;Label&quot;:&quot;非常满意&quot;}]）</p>
+     * @param string $HungUpSide <p>挂机方 seat 座席 user 用户 system 系统</p>
+     * @param array $ServeParticipants <p>服务参与者列表</p>
+     * @param integer $SkillGroupId <p>技能组ID</p>
+     * @param string $EndStatusString <p>参考 EndStatus 字段</p>
+     * @param integer $StartTimestamp <p>会话开始时间戳，UNIX 秒级时间戳</p>
+     * @param integer $QueuedTimestamp <p>进入排队时间，Unix 秒级时间戳</p>
+     * @param array $PostIVRKeyPressed <p>后置IVR按键信息（e.g.xa0[{&quot;Key&quot;:&quot;1&quot;,&quot;Label&quot;:&quot;非常满意&quot;}]）</p>
+     * @param array $PostIVRKeyPressedEx <p>满意度按键信息 Key 为 noInput 表示进入满意度但无按键</p>
+     * @param integer $QueuedSkillGroupId <p>排队技能组Id</p>
+     * @param string $SessionId <p>会话 ID</p>
+     * @param string $ProtectedCaller <p>主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空</p>
+     * @param string $ProtectedCallee <p>被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空</p>
+     * @param string $Uui <p>客户自定义数据（User-to-User Interface）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UUI 客户自定义数据（User-to-User Interface）
-     * @param array $IVRKeyPressedEx IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-     * @param string $AsrUrl 获取录音ASR文本信息地址
-     * @param string $AsrStatus AsrUrl的状态：Complete
-已完成;
-Processing
-正在生成中;
-NotExists
-无记录(未开启生成离线asr或者无套餐包)
-     * @param string $CustomRecordURL 录音转存第三方COS地址
-     * @param string $Remark 备注
-     * @param string $QueuedSkillGroupName 排队技能组名称
-     * @param array $VoicemailRecordURL 通话中语音留言录音URL
-     * @param array $VoicemailAsrURL 通话中语音留言ASR文本信息地址
-     * @param integer $AIAgentId 如果是智能体相关通话，这里是智能体 ID
-     * @param string $AIAgentName 如果是智能体相关通话，这里是智能体名称
-     * @param integer $SysHangupReason 接通后系统挂断原因，枚举类似
-     * @param string $SysHangupReasonString 接通后系统挂断原因，文字描述信息
+     * @param string $UUI <p>客户自定义数据（User-to-User Interface）</p>
+     * @param string $AsrUrl <p>获取录音ASR文本信息地址</p>
+     * @param string $AsrStatus <p>AsrUrl的状态：Complete<br>已完成;<br>Processing<br>正在生成中;<br>NotExists<br>无记录(未开启生成离线asr或者无套餐包)</p>
+     * @param string $CustomRecordURL <p>录音转存第三方COS地址</p>
+     * @param string $Remark <p>备注</p>
+     * @param string $QueuedSkillGroupName <p>排队技能组名称</p>
+     * @param array $VoicemailRecordURL <p>通话中语音留言录音URL</p>
+     * @param array $VoicemailAsrURL <p>通话中语音留言ASR文本信息地址</p>
+     * @param integer $AIAgentId <p>如果是智能体相关通话，这里是智能体 ID</p>
+     * @param string $AIAgentName <p>如果是智能体相关通话，这里是智能体名称</p>
+     * @param integer $SysHangupReason <p>接通后系统挂断原因，枚举类似</p>
+     * @param string $SysHangupReasonString <p>接通后系统挂断原因，文字描述信息</p>
      */
     function __construct()
     {
@@ -772,6 +458,15 @@ NotExists
             $this->IVRKeyPressed = $param["IVRKeyPressed"];
         }
 
+        if (array_key_exists("IVRKeyPressedEx",$param) and $param["IVRKeyPressedEx"] !== null) {
+            $this->IVRKeyPressedEx = [];
+            foreach ($param["IVRKeyPressedEx"] as $key => $value){
+                $obj = new IVRKeyPressedElement();
+                $obj->deserialize($value);
+                array_push($this->IVRKeyPressedEx, $obj);
+            }
+        }
+
         if (array_key_exists("HungUpSide",$param) and $param["HungUpSide"] !== null) {
             $this->HungUpSide = $param["HungUpSide"];
         }
@@ -810,6 +505,15 @@ NotExists
             }
         }
 
+        if (array_key_exists("PostIVRKeyPressedEx",$param) and $param["PostIVRKeyPressedEx"] !== null) {
+            $this->PostIVRKeyPressedEx = [];
+            foreach ($param["PostIVRKeyPressedEx"] as $key => $value){
+                $obj = new IVRKeyPressedElement();
+                $obj->deserialize($value);
+                array_push($this->PostIVRKeyPressedEx, $obj);
+            }
+        }
+
         if (array_key_exists("QueuedSkillGroupId",$param) and $param["QueuedSkillGroupId"] !== null) {
             $this->QueuedSkillGroupId = $param["QueuedSkillGroupId"];
         }
@@ -832,15 +536,6 @@ NotExists
 
         if (array_key_exists("UUI",$param) and $param["UUI"] !== null) {
             $this->UUI = $param["UUI"];
-        }
-
-        if (array_key_exists("IVRKeyPressedEx",$param) and $param["IVRKeyPressedEx"] !== null) {
-            $this->IVRKeyPressedEx = [];
-            foreach ($param["IVRKeyPressedEx"] as $key => $value){
-                $obj = new IVRKeyPressedElement();
-                $obj->deserialize($value);
-                array_push($this->IVRKeyPressedEx, $obj);
-            }
         }
 
         if (array_key_exists("AsrUrl",$param) and $param["AsrUrl"] !== null) {

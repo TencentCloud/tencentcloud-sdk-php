@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthorizedOrganizationIds(array $AuthorizedOrganizationIds) 设置<p>被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationNames二选一传入，最大支持50个，注：<code>被授权企业必须和当前企业在同一应用号下</code></p>
  * @method array getAuthorizedOrganizationNames() 获取<p>被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationIds二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。注: 1. 如果名称中包含英文括号()，请使用中文括号（）代替。2. 被授权企业必须和当前企业在同一应用号下 3. 数组最大长度50</p>
  * @method void setAuthorizedOrganizationNames(array $AuthorizedOrganizationNames) 设置<p>被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationIds二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。注: 1. 如果名称中包含英文括号()，请使用中文括号（）代替。2. 被授权企业必须和当前企业在同一应用号下 3. 数组最大长度50</p>
+ * @method integer getLimitAuthType() 获取<p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式</li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul><p>默认值：0</p>
+ * @method void setLimitAuthType(integer $LimitAuthType) 设置<p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式</li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul><p>默认值：0</p>
  */
 class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel
 {
@@ -82,6 +84,11 @@ class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel
     public $AuthorizedOrganizationNames;
 
     /**
+     * @var integer <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式</li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul><p>默认值：0</p>
+     */
+    public $LimitAuthType;
+
+    /**
      * @param Agent $Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
      * @param string $AuthorizedOrganizationId <p>被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationName二选一传入。</p><p>注：<code>被授权企业必须和当前企业在同一应用号下</code></p>
      * @param string $AuthorizedOrganizationName <p>被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationId二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。</p><p>注: </p><ol><li>如果名称中包含英文括号()，请使用中文括号（）代替。</li><li>被授权企业必须和当前企业在同一应用号下</li></ol>
@@ -90,6 +97,7 @@ class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel
      * @param boolean $AuthToMe <p>在处理授权关系时，授权的方向</p><ul><li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li><li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【授权方】的企业名称，即提供授权的企业。此场景下不支持批量</li></ul>
      * @param array $AuthorizedOrganizationIds <p>被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationNames二选一传入，最大支持50个，注：<code>被授权企业必须和当前企业在同一应用号下</code></p>
      * @param array $AuthorizedOrganizationNames <p>被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationIds二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。注: 1. 如果名称中包含英文括号()，请使用中文括号（）代替。2. 被授权企业必须和当前企业在同一应用号下 3. 数组最大长度50</p>
+     * @param integer $LimitAuthType <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式</li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -135,6 +143,10 @@ class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel
 
         if (array_key_exists("AuthorizedOrganizationNames",$param) and $param["AuthorizedOrganizationNames"] !== null) {
             $this->AuthorizedOrganizationNames = $param["AuthorizedOrganizationNames"];
+        }
+
+        if (array_key_exists("LimitAuthType",$param) and $param["LimitAuthType"] !== null) {
+            $this->LimitAuthType = $param["LimitAuthType"];
         }
     }
 }

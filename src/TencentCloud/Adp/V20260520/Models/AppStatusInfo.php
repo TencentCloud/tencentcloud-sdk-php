@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用状态信息 - 运行时状态信息(用户不可修改)
  *
- * @method integer getStatus() 获取应用状态 (OFFLINE:未上线, RUNNING:运行中, DISABLED:停用)。枚举值: 1:未上线, 2:运行中, 3:停用
- * @method void setStatus(integer $Status) 设置应用状态 (OFFLINE:未上线, RUNNING:运行中, DISABLED:停用)。枚举值: 1:未上线, 2:运行中, 3:停用
- * @method string getStatusDescription() 获取状态描述
- * @method void setStatusDescription(string $StatusDescription) 设置状态描述
+ * @method integer getStatus() 获取<p>应用状态</p><p>枚举值：</p><ul><li>1： 未上线</li><li>2： 运行中</li><li>3： 停用</li><li>4： 导入中</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>应用状态</p><p>枚举值：</p><ul><li>1： 未上线</li><li>2： 运行中</li><li>3： 停用</li><li>4： 导入中</li></ul>
+ * @method string getStatusDescription() 获取<p>状态描述</p>
+ * @method void setStatusDescription(string $StatusDescription) 设置<p>状态描述</p>
  */
 class AppStatusInfo extends AbstractModel
 {
     /**
-     * @var integer 应用状态 (OFFLINE:未上线, RUNNING:运行中, DISABLED:停用)。枚举值: 1:未上线, 2:运行中, 3:停用
+     * @var integer <p>应用状态</p><p>枚举值：</p><ul><li>1： 未上线</li><li>2： 运行中</li><li>3： 停用</li><li>4： 导入中</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 状态描述
+     * @var string <p>状态描述</p>
      */
     public $StatusDescription;
 
     /**
-     * @param integer $Status 应用状态 (OFFLINE:未上线, RUNNING:运行中, DISABLED:停用)。枚举值: 1:未上线, 2:运行中, 3:停用
-     * @param string $StatusDescription 状态描述
+     * @param integer $Status <p>应用状态</p><p>枚举值：</p><ul><li>1： 未上线</li><li>2： 运行中</li><li>3： 停用</li><li>4： 导入中</li></ul>
+     * @param string $StatusDescription <p>状态描述</p>
      */
     function __construct()
     {

@@ -23,9 +23,14 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cds\V20180420\Models as Models;
 
 /**
+ * @method Models\CreateReportPdfResponse CreateReportPdf(Models\CreateReportPdfRequest $req) 下载报表PDF
+ * @method Models\CreateTimerReportResponse CreateTimerReport(Models\CreateTimerReportRequest $req) 新建报表任务
+ * @method Models\DescribeAssetsListResponse DescribeAssetsList(Models\DescribeAssetsListRequest $req) 查询资产列表
  * @method Models\DescribeDbauditInstanceTypeResponse DescribeDbauditInstanceType(Models\DescribeDbauditInstanceTypeRequest $req) 本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
  * @method Models\DescribeDbauditInstancesResponse DescribeDbauditInstances(Models\DescribeDbauditInstancesRequest $req) 本接口 (DescribeDbauditInstances) 用于查询数据安全审计实例列表
  * @method Models\DescribeDbauditUsedRegionsResponse DescribeDbauditUsedRegions(Models\DescribeDbauditUsedRegionsRequest $req) 本接口 (DescribeDbauditUsedRegions) 用于查询可售卖地域列表。
+ * @method Models\DescribeReportListResponse DescribeReportList(Models\DescribeReportListRequest $req) 查询报表列表
+ * @method Models\DescribeReportMissionListResponse DescribeReportMissionList(Models\DescribeReportMissionListRequest $req) 查询报表任务列表
  * @method Models\InquiryPriceDbauditInstanceResponse InquiryPriceDbauditInstance(Models\InquiryPriceDbauditInstanceRequest $req) 用于查询数据安全审计产品实例价格
  * @method Models\ModifyDbauditInstancesRenewFlagResponse ModifyDbauditInstancesRenewFlag(Models\ModifyDbauditInstancesRenewFlagRequest $req) 本接口 (ModifyDbauditInstancesRenewFlag) 用于修改数据安全审计产品实例续费标识
  */

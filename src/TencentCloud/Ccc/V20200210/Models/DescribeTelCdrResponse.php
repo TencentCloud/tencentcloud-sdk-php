@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTelCdr返回参数结构体
  *
- * @method integer getTotalCount() 获取话单记录总数
- * @method void setTotalCount(integer $TotalCount) 设置话单记录总数
- * @method array getTelCdrs() 获取话单记录
- * @method void setTelCdrs(array $TelCdrs) 设置话单记录
- * @method array getTelCdrList() 获取话单记录
- * @method void setTelCdrList(array $TelCdrList) 设置话单记录
+ * @method integer getTotalCount() 获取<p>话单记录总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>话单记录总数</p>
+ * @method array getTelCdrs() 获取<p>话单记录</p>
+ * @method void setTelCdrs(array $TelCdrs) 设置<p>话单记录</p>
+ * @method array getTelCdrList() 获取<p>话单记录</p>
+ * @method void setTelCdrList(array $TelCdrList) 设置<p>话单记录</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTelCdrResponse extends AbstractModel
 {
     /**
-     * @var integer 话单记录总数
+     * @var integer <p>话单记录总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 话单记录
+     * @var array <p>话单记录</p>
      * @deprecated
      */
     public $TelCdrs;
 
     /**
-     * @var array 话单记录
+     * @var array <p>话单记录</p>
      */
     public $TelCdrList;
 
@@ -53,9 +53,9 @@ class DescribeTelCdrResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 话单记录总数
-     * @param array $TelCdrs 话单记录
-     * @param array $TelCdrList 话单记录
+     * @param integer $TotalCount <p>话单记录总数</p>
+     * @param array $TelCdrs <p>话单记录</p>
+     * @param array $TelCdrList <p>话单记录</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

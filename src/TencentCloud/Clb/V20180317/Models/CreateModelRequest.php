@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>标签信息</p>
  * @method boolean getVerifySSL() 获取<p>是否校验服务提供商的SSL证书</p>
  * @method void setVerifySSL(boolean $VerifySSL) 设置<p>是否校验服务提供商的SSL证书</p>
+ * @method ServiceProviderHealthCheckConfigInput getHealthCheckConfig() 获取<p>健康检查配置</p>
+ * @method void setHealthCheckConfig(ServiceProviderHealthCheckConfigInput $HealthCheckConfig) 设置<p>健康检查配置</p>
  */
 class CreateModelRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CreateModelRequest extends AbstractModel
     public $VerifySSL;
 
     /**
+     * @var ServiceProviderHealthCheckConfigInput <p>健康检查配置</p>
+     */
+    public $HealthCheckConfig;
+
+    /**
      * @param string $AccessType <p>接入类型：PublicBYOK/PublicCustom/PrivateCustom</p>
      * @param string $ModelProvider <p>模型提供商</p>
      * @param array $ModelIds <p>通用模型标识列表</p>
@@ -128,6 +135,7 @@ class CreateModelRequest extends AbstractModel
      * @param string $HostHeader <p>转发请求时添加的Host请求头</p>
      * @param array $Tags <p>标签信息</p>
      * @param boolean $VerifySSL <p>是否校验服务提供商的SSL证书</p>
+     * @param ServiceProviderHealthCheckConfigInput $HealthCheckConfig <p>健康检查配置</p>
      */
     function __construct()
     {
@@ -207,6 +215,11 @@ class CreateModelRequest extends AbstractModel
 
         if (array_key_exists("VerifySSL",$param) and $param["VerifySSL"] !== null) {
             $this->VerifySSL = $param["VerifySSL"];
+        }
+
+        if (array_key_exists("HealthCheckConfig",$param) and $param["HealthCheckConfig"] !== null) {
+            $this->HealthCheckConfig = new ServiceProviderHealthCheckConfigInput();
+            $this->HealthCheckConfig->deserialize($param["HealthCheckConfig"]);
         }
     }
 }

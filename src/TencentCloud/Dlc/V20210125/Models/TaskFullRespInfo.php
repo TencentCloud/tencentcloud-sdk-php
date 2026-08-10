@@ -218,6 +218,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActiveCore(integer $ActiveCore) 设置<p>活跃core</p>
  * @method integer getQueueTime() 获取<p>排队时间</p><p>单位：毫秒</p>
  * @method void setQueueTime(integer $QueueTime) 设置<p>排队时间</p><p>单位：毫秒</p>
+ * @method string getResourceGroupType() 获取<p>资源组类型</p>
+ * @method void setResourceGroupType(string $ResourceGroupType) 设置<p>资源组类型</p>
  */
 class TaskFullRespInfo extends AbstractModel
 {
@@ -605,6 +607,11 @@ class TaskFullRespInfo extends AbstractModel
     public $QueueTime;
 
     /**
+     * @var string <p>资源组类型</p>
+     */
+    public $ResourceGroupType;
+
+    /**
      * @param string $DatabaseName <p>任务所属Database的名称。</p>
      * @param integer $DataAmount <p>任务数据量。</p>
      * @param string $Id <p>任务Id。</p>
@@ -704,6 +711,7 @@ class TaskFullRespInfo extends AbstractModel
      * @param integer $ShuffleWriteBytesSum <p>ShuffleWrite数据量</p>
      * @param integer $ActiveCore <p>活跃core</p>
      * @param integer $QueueTime <p>排队时间</p><p>单位：毫秒</p>
+     * @param string $ResourceGroupType <p>资源组类型</p>
      */
     function __construct()
     {
@@ -1003,6 +1011,10 @@ class TaskFullRespInfo extends AbstractModel
 
         if (array_key_exists("QueueTime",$param) and $param["QueueTime"] !== null) {
             $this->QueueTime = $param["QueueTime"];
+        }
+
+        if (array_key_exists("ResourceGroupType",$param) and $param["ResourceGroupType"] !== null) {
+            $this->ResourceGroupType = $param["ResourceGroupType"];
         }
     }
 }

@@ -25,6 +25,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
 /**
  * @method Models\AddDspmAssetManagerResponse AddDspmAssetManager(Models\AddDspmAssetManagerRequest $req) 添加资产管理员
  * @method Models\AddNewBindRoleUserResponse AddNewBindRoleUser(Models\AddNewBindRoleUserRequest $req) csip角色授权绑定接口
+ * @method Models\AddVulWhitelistResponse AddVulWhitelist(Models\AddVulWhitelistRequest $req) 添加漏洞白名单
  * @method Models\CreateAccessKeyCheckTaskResponse CreateAccessKeyCheckTask(Models\CreateAccessKeyCheckTaskRequest $req) 检测AK 异步任务
  * @method Models\CreateAccessKeySyncTaskResponse CreateAccessKeySyncTask(Models\CreateAccessKeySyncTaskRequest $req) 发起AK资产同步任务
  * @method Models\CreateCosAssetSyncTaskResponse CreateCosAssetSyncTask(Models\CreateCosAssetSyncTaskRequest $req) 创建资产同步任务
@@ -50,11 +51,17 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreateDspmPersonalIdentifyResponse CreateDspmPersonalIdentify(Models\CreateDspmPersonalIdentifyRequest $req) 创建Dspm个人身份id
  * @method Models\CreateDspmRiskExportJobResponse CreateDspmRiskExportJob(Models\CreateDspmRiskExportJobRequest $req) 创建Dspm风险导出任务
  * @method Models\CreateDspmWhitelistStrategyResponse CreateDspmWhitelistStrategy(Models\CreateDspmWhitelistStrategyRequest $req) 创建Dspm白名单策略
+ * @method Models\CreateHostVulExportJobResponse CreateHostVulExportJob(Models\CreateHostVulExportJobRequest $req) 创建主机列漏洞表导出任务
  * @method Models\CreateIaCAccessTokenResponse CreateIaCAccessToken(Models\CreateIaCAccessTokenRequest $req) 创建IaC检测接入Token
  * @method Models\CreateIaCFileExportJobResponse CreateIaCFileExportJob(Models\CreateIaCFileExportJobRequest $req) 创建IaC检测文件导出任务
  * @method Models\CreateIaCFileReScanTaskResponse CreateIaCFileReScanTask(Models\CreateIaCFileReScanTaskRequest $req) 创建IaC检测文件重新扫描任务
  * @method Models\CreateRiskCenterScanTaskResponse CreateRiskCenterScanTask(Models\CreateRiskCenterScanTaskRequest $req) 创建风险中心扫描任务
  * @method Models\CreateSkillScanResponse CreateSkillScan(Models\CreateSkillScanRequest $req) 上传 Skill ZIP 文件，触发异步安全检测。上传成功后应使用返回的 ContentHash + EngineVersion 轮询 DescribeSkillScanResult 接口获取结果。上传接口具备幂等性，同一 Hash 的文件重复上传不会创建重复任务。检测结果保留90天，超期后需重新上传检测。
+ * @method Models\CreateVulFixRetryTaskResponse CreateVulFixRetryTask(Models\CreateVulFixRetryTaskRequest $req) 对修复失败的漏洞修复任务进行重试，仅针对原任务中修复失败的主机重新下发修复指令。仅当任务状态为部分修复失败或全部修复失败时允许重试。
+ * @method Models\CreateVulFixTaskResponse CreateVulFixTask(Models\CreateVulFixTaskRequest $req) 用户手动提交漏洞修复任务，指定需要修复的漏洞和目标主机，系统创建修复任务并下发执行。支持指定修复超时时间、是否创建快照等选项。通过FixItems数组精确控制每个漏洞/KB补丁修复哪些主机。
+ * @method Models\CreateVulFixedExportJobResponse CreateVulFixedExportJob(Models\CreateVulFixedExportJobRequest $req) 创建已修复漏洞列表的导出任务。支持与 DescribeVulFixedList 相同的过滤条件，导出通过异步任务实现，返回 JobID 后前端轮询查询导出任务状态。导出字段包含漏洞ID、漏洞名称、漏洞等级、VPR评级、漏洞类型、CVE编号、主机名称、实例ID、关联组件&路径、修复时间。
+ * @method Models\CreateVulReScanResponse CreateVulReScan(Models\CreateVulReScanRequest $req) 创建漏洞重新扫描
+ * @method Models\CreateVulScanManualResponse CreateVulScanManual(Models\CreateVulScanManualRequest $req) 创建漏洞扫描（一键扫描）
  * @method Models\DeleteCosAkAssetResponse DeleteCosAkAsset(Models\DeleteCosAkAssetRequest $req) 删除已删除的cos ak资产
  * @method Models\DeleteCosPolicyResponse DeleteCosPolicy(Models\DeleteCosPolicyRequest $req) 删除策略
  * @method Models\DeleteDomainAndIpResponse DeleteDomainAndIp(Models\DeleteDomainAndIpRequest $req) 删除域名和ip请求
@@ -74,6 +81,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DeleteIaCAccessTokenResponse DeleteIaCAccessToken(Models\DeleteIaCAccessTokenRequest $req) 删除IaC检测接入Token
  * @method Models\DeleteIaCFileResponse DeleteIaCFile(Models\DeleteIaCFileRequest $req) 删除IaC检测文件
  * @method Models\DeleteRiskScanTaskResponse DeleteRiskScanTask(Models\DeleteRiskScanTaskRequest $req) 删除风险中心扫描任务
+ * @method Models\DeleteVulWhitelistResponse DeleteVulWhitelist(Models\DeleteVulWhitelistRequest $req) 删除漏洞白名单
  * @method Models\DescribeAIAgentAssetListResponse DescribeAIAgentAssetList(Models\DescribeAIAgentAssetListRequest $req) 获取 AI agent 资产列表
  * @method Models\DescribeAILinkSettingResponse DescribeAILinkSetting(Models\DescribeAILinkSettingRequest $req) 查询AI-Link智链引擎配置
  * @method Models\DescribeAKAnalysisDetailResponse DescribeAKAnalysisDetail(Models\DescribeAKAnalysisDetailRequest $req) 访问密钥告警记录AI分析结果详情
@@ -197,12 +205,18 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeExposuresResponse DescribeExposures(Models\DescribeExposuresRequest $req) 云边界分析资产列表
  * @method Models\DescribeGatewayAssetsResponse DescribeGatewayAssets(Models\DescribeGatewayAssetsRequest $req) 获取网关列表
  * @method Models\DescribeHighBaseLineRiskListResponse DescribeHighBaseLineRiskList(Models\DescribeHighBaseLineRiskListRequest $req) 查询云边界分析-暴露路径下主机节点的高危基线风险列表
+ * @method Models\DescribeHostKBRiskListResponse DescribeHostKBRiskList(Models\DescribeHostKBRiskListRequest $req) 获取主机kb风险列表
+ * @method Models\DescribeHostVulItemVPRInfoResponse DescribeHostVulItemVPRInfo(Models\DescribeHostVulItemVPRInfoRequest $req) 获取主机漏洞VPR信息
+ * @method Models\DescribeHostVulOverviewResponse DescribeHostVulOverview(Models\DescribeHostVulOverviewRequest $req) 获取主机漏洞概览
+ * @method Models\DescribeHostVulRiskListResponse DescribeHostVulRiskList(Models\DescribeHostVulRiskListRequest $req) 获取主机漏洞风险列表
  * @method Models\DescribeIaCFileListResponse DescribeIaCFileList(Models\DescribeIaCFileListRequest $req) 获取IaC检测文件列表
  * @method Models\DescribeIaCFileOverviewResponse DescribeIaCFileOverview(Models\DescribeIaCFileOverviewRequest $req) 获取IaC检测文件概览
  * @method Models\DescribeIaCFileReportResponse DescribeIaCFileReport(Models\DescribeIaCFileReportRequest $req) 获取IaC检测文件报告
  * @method Models\DescribeIaCTokenListResponse DescribeIaCTokenList(Models\DescribeIaCTokenListRequest $req) 获取IaC检测接入Token列表
  * @method Models\DescribeIpInvokeRecordResponse DescribeIpInvokeRecord(Models\DescribeIpInvokeRecordRequest $req) 对象存储异常检测调用记录信息
  * @method Models\DescribeIpInvokeRecordDetailResponse DescribeIpInvokeRecordDetail(Models\DescribeIpInvokeRecordDetailRequest $req) ip访问列表详情信息
+ * @method Models\DescribeKBDetailResponse DescribeKBDetail(Models\DescribeKBDetailRequest $req) 根据用户输入的 KB 内部 ID 查询单个 Windows KB 补丁的详情信息，返回 KB 基本信息、发布时间、是否需要重启，以及该 KB 关联的漏洞列表。
+ * @method Models\DescribeKBUpdatableMachineListResponse DescribeKBUpdatableMachineList(Models\DescribeKBUpdatableMachineListRequest $req) 查询指定KB补丁可以更新的主机列表。用于Windows系统补丁修复场景，在用户提交KB补丁更新任务前，查询哪些主机缺少该补丁且支持自动更新。
  * @method Models\DescribeKeySandboxCredentialResponse DescribeKeySandboxCredential(Models\DescribeKeySandboxCredentialRequest $req) 查询凭证详情，返回凭证元数据和打码后的凭据数据。access类型返回Access数组（Key原文、Value打码），sts类型返回STS对象（System原文、SecretID和SecretKey打码）
  * @method Models\DescribeKeySandboxCredentialListResponse DescribeKeySandboxCredentialList(Models\DescribeKeySandboxCredentialListRequest $req) 查询凭证列表
  * @method Models\DescribeListenerListResponse DescribeListenerList(Models\DescribeListenerListRequest $req) 查询clb监听器列表
@@ -251,7 +265,22 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeVULRiskAdvanceCFGListResponse DescribeVULRiskAdvanceCFGList(Models\DescribeVULRiskAdvanceCFGListRequest $req) 查询漏洞风险高级配置
  * @method Models\DescribeVULRiskDetailResponse DescribeVULRiskDetail(Models\DescribeVULRiskDetailRequest $req) 获取漏洞展开详情
  * @method Models\DescribeVpcAssetsResponse DescribeVpcAssets(Models\DescribeVpcAssetsRequest $req) 获取vpc列表
+ * @method Models\DescribeVulComponentRelateHostResponse DescribeVulComponentRelateHost(Models\DescribeVulComponentRelateHostRequest $req) 获取漏洞组件关联主机
+ * @method Models\DescribeVulFixTaskDetailResponse DescribeVulFixTaskDetail(Models\DescribeVulFixTaskDetailRequest $req) 查询指定漏洞修复任务的详情信息，包含每台主机的修复状态、快照状态等明细数据，支持分页和筛选。
+ * @method Models\DescribeVulFixTaskListResponse DescribeVulFixTaskList(Models\DescribeVulFixTaskListRequest $req) 分页查询漏洞修复任务记录列表，支持按修复状态、时间范围等条件筛选，展示每个修复任务的概要信息。
+ * @method Models\DescribeVulFixableMachineListResponse DescribeVulFixableMachineList(Models\DescribeVulFixableMachineListRequest $req) 查询指定漏洞可以被修复的主机列表。在用户提交修复任务前，需要先查询哪些主机支持自动修复，为用户选择修复目标提供数据支持。
+ * @method Models\DescribeVulFixedHostDetailResponse DescribeVulFixedHostDetail(Models\DescribeVulFixedHostDetailRequest $req) 查询某个已修复漏洞在指定主机上的修复详情，包含漏洞基本信息、修复主机信息以及关联组件&路径的详细列表（组件名称、命中版本、关联路径、修复命令）。
+ * @method Models\DescribeVulFixedListResponse DescribeVulFixedList(Models\DescribeVulFixedListRequest $req) 查询已被修复的漏洞列表，展示修复成功的漏洞信息及修复情况统计，帮助用户了解修复成效。
+ * @method Models\DescribeVulHostRelateComponentResponse DescribeVulHostRelateComponent(Models\DescribeVulHostRelateComponentRequest $req) 获取漏洞主机关联组件
+ * @method Models\DescribeVulIgnoreRuleListResponse DescribeVulIgnoreRuleList(Models\DescribeVulIgnoreRuleListRequest $req) 获取漏洞忽略列表
+ * @method Models\DescribeVulItemListResponse DescribeVulItemList(Models\DescribeVulItemListRequest $req) 获取漏洞列表
+ * @method Models\DescribeVulLabelListResponse DescribeVulLabelList(Models\DescribeVulLabelListRequest $req) 获取漏洞标签列表
  * @method Models\DescribeVulRiskListResponse DescribeVulRiskList(Models\DescribeVulRiskListRequest $req) 查询云边界分析-暴露路径下主机节点的漏洞列表
+ * @method Models\DescribeVulRiskRelateComponentResponse DescribeVulRiskRelateComponent(Models\DescribeVulRiskRelateComponentRequest $req) 获取漏洞关联组件
+ * @method Models\DescribeVulRiskRelateHostResponse DescribeVulRiskRelateHost(Models\DescribeVulRiskRelateHostRequest $req) 获取漏洞或KB关联的主机
+ * @method Models\DescribeVulScanPeriodicResponse DescribeVulScanPeriodic(Models\DescribeVulScanPeriodicRequest $req) 获取漏洞扫描（周期扫描）
+ * @method Models\DescribeVulScanTaskDetailResponse DescribeVulScanTaskDetail(Models\DescribeVulScanTaskDetailRequest $req) 获取扫描漏洞任务详情
+ * @method Models\DescribeVulScanTaskListResponse DescribeVulScanTaskList(Models\DescribeVulScanTaskListRequest $req) 获取漏洞扫描任务记录
  * @method Models\DescribeVulViewVulRiskListResponse DescribeVulViewVulRiskList(Models\DescribeVulViewVulRiskListRequest $req) 获取漏洞视角的漏洞风险列表
  * @method Models\DownloadDspmExportLogResponse DownloadDspmExportLog(Models\DownloadDspmExportLogRequest $req) 下载导出日志
  * @method Models\ModifyAILinkSettingResponse ModifyAILinkSetting(Models\ModifyAILinkSettingRequest $req) 修改AI-Link智链引擎配置
@@ -298,11 +327,15 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\ModifyRiskCenterRiskStatusResponse ModifyRiskCenterRiskStatus(Models\ModifyRiskCenterRiskStatusRequest $req) 修改风险中心风险状态
  * @method Models\ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTask(Models\ModifyRiskCenterScanTaskRequest $req) 修改风险中心扫描任务
  * @method Models\ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitch(Models\ModifyUebaRuleSwitchRequest $req) 更新自定义策略的开关
+ * @method Models\ModifyVulScanPeriodicResponse ModifyVulScanPeriodic(Models\ModifyVulScanPeriodicRequest $req) 修改漏洞扫描（周期扫描）
+ * @method Models\ModifyVulWhitelistConfigResponse ModifyVulWhitelistConfig(Models\ModifyVulWhitelistConfigRequest $req) 修改漏洞白名单配置
+ * @method Models\ModifyVulWhitelistSwitchResponse ModifyVulWhitelistSwitch(Models\ModifyVulWhitelistSwitchRequest $req) 修改漏洞白名单开关
  * @method Models\ResetDspmAssetAccountPasswordResponse ResetDspmAssetAccountPassword(Models\ResetDspmAssetAccountPasswordRequest $req) 重置Dspm资产账号密码
  * @method Models\RetryDspmExportLogResponse RetryDspmExportLog(Models\RetryDspmExportLogRequest $req) RetryExportLog
  * @method Models\RevertDspmAssetAccountResponse RevertDspmAssetAccount(Models\RevertDspmAssetAccountRequest $req) 恢复Dspm资产账号
  * @method Models\SendDspmAssetLoginSmsCodeResponse SendDspmAssetLoginSmsCode(Models\SendDspmAssetLoginSmsCodeRequest $req) 发送Dspm资产访问验证码
  * @method Models\StopRiskCenterTaskResponse StopRiskCenterTask(Models\StopRiskCenterTaskRequest $req) 停止扫风险中心扫描任务
+ * @method Models\StopVulScanTaskResponse StopVulScanTask(Models\StopVulScanTaskRequest $req) 停止漏洞扫描（任务扫描）
  * @method Models\SyncDspmAssetsResponse SyncDspmAssets(Models\SyncDspmAssetsRequest $req) 同步dspm支持的资产
  * @method Models\SyncDspmUsersResponse SyncDspmUsers(Models\SyncDspmUsersRequest $req) 同步dspm用户列表
  * @method Models\UpdateAccessKeyAlarmStatusResponse UpdateAccessKeyAlarmStatus(Models\UpdateAccessKeyAlarmStatusRequest $req) 标记风险或者告警为 已处置/已忽略

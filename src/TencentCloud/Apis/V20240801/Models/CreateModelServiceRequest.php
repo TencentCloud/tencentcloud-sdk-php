@@ -76,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelProtocol(string $ModelProtocol) 设置<p>模型协议</p>
  * @method string getRawCustomModelProtocolConfig() 获取<p>自定义模型协议配置</p>
  * @method void setRawCustomModelProtocolConfig(string $RawCustomModelProtocolConfig) 设置<p>自定义模型协议配置</p>
+ * @method string getRouteStrategy() 获取<p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul>
+ * @method void setRouteStrategy(string $RouteStrategy) 设置<p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul>
+ * @method array getTokenLengthRoute() 获取<p>token长度路由策略</p>
+ * @method void setTokenLengthRoute(array $TokenLengthRoute) 设置<p>token长度路由策略</p>
+ * @method TaskComplexityRouteDTO getTaskComplexityRoute() 获取<p>任务复杂度路由策略</p>
+ * @method void setTaskComplexityRoute(TaskComplexityRouteDTO $TaskComplexityRoute) 设置<p>任务复杂度路由策略</p>
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -220,6 +226,21 @@ class CreateModelServiceRequest extends AbstractModel
     public $RawCustomModelProtocolConfig;
 
     /**
+     * @var string <p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul>
+     */
+    public $RouteStrategy;
+
+    /**
+     * @var array <p>token长度路由策略</p>
+     */
+    public $TokenLengthRoute;
+
+    /**
+     * @var TaskComplexityRouteDTO <p>任务复杂度路由策略</p>
+     */
+    public $TaskComplexityRoute;
+
+    /**
      * @param string $InstanceID <p>实例</p>
      * @param string $Name <p>模型服务名称</p>
      * @param string $Description <p>描述</p>
@@ -248,6 +269,9 @@ class CreateModelServiceRequest extends AbstractModel
      * @param array $FallbackModels <p>Fallback模型配置</p>
      * @param string $ModelProtocol <p>模型协议</p>
      * @param string $RawCustomModelProtocolConfig <p>自定义模型协议配置</p>
+     * @param string $RouteStrategy <p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul>
+     * @param array $TokenLengthRoute <p>token长度路由策略</p>
+     * @param TaskComplexityRouteDTO $TaskComplexityRoute <p>任务复杂度路由策略</p>
      */
     function __construct()
     {
@@ -392,6 +416,24 @@ class CreateModelServiceRequest extends AbstractModel
 
         if (array_key_exists("RawCustomModelProtocolConfig",$param) and $param["RawCustomModelProtocolConfig"] !== null) {
             $this->RawCustomModelProtocolConfig = $param["RawCustomModelProtocolConfig"];
+        }
+
+        if (array_key_exists("RouteStrategy",$param) and $param["RouteStrategy"] !== null) {
+            $this->RouteStrategy = $param["RouteStrategy"];
+        }
+
+        if (array_key_exists("TokenLengthRoute",$param) and $param["TokenLengthRoute"] !== null) {
+            $this->TokenLengthRoute = [];
+            foreach ($param["TokenLengthRoute"] as $key => $value){
+                $obj = new TokenLengthRouteDTO();
+                $obj->deserialize($value);
+                array_push($this->TokenLengthRoute, $obj);
+            }
+        }
+
+        if (array_key_exists("TaskComplexityRoute",$param) and $param["TaskComplexityRoute"] !== null) {
+            $this->TaskComplexityRoute = new TaskComplexityRouteDTO();
+            $this->TaskComplexityRoute->deserialize($param["TaskComplexityRoute"]);
         }
     }
 }

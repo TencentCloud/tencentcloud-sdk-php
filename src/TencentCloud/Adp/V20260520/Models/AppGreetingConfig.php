@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 欢迎语配置
  *
- * @method string getGreeting() 获取欢迎语内容
- * @method void setGreeting(string $Greeting) 设置欢迎语内容
- * @method array getOpeningQuestionList() 获取开场问题列表
- * @method void setOpeningQuestionList(array $OpeningQuestionList) 设置开场问题列表
+ * @method string getGreeting() 获取<p>欢迎语内容</p>
+ * @method void setGreeting(string $Greeting) 设置<p>欢迎语内容</p>
+ * @method array getOpeningQuestionList() 获取<p>开场问题列表</p>
+ * @method void setOpeningQuestionList(array $OpeningQuestionList) 设置<p>开场问题列表</p>
  */
 class AppGreetingConfig extends AbstractModel
 {
     /**
-     * @var string 欢迎语内容
+     * @var string <p>欢迎语内容</p>
      */
     public $Greeting;
 
     /**
-     * @var array 开场问题列表
+     * @var array <p>开场问题列表</p>
      */
     public $OpeningQuestionList;
 
     /**
-     * @param string $Greeting 欢迎语内容
-     * @param array $OpeningQuestionList 开场问题列表
+     * @param string $Greeting <p>欢迎语内容</p>
+     * @param array $OpeningQuestionList <p>开场问题列表</p>
      */
     function __construct()
     {

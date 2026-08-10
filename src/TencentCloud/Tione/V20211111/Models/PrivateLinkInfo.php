@@ -20,78 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 私有连接信息
  *
- * @method string getVpcId() 获取私有连接所在的VPCID
+ * @method string getVpcId() 获取<p>私有连接所在的VPCID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcId(string $VpcId) 设置私有连接所在的VPCID
+ * @method void setVpcId(string $VpcId) 设置<p>私有连接所在的VPCID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubnetId() 获取私有连接所在的子网ID
+ * @method string getSubnetId() 获取<p>私有连接所在的子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnetId(string $SubnetId) 设置私有连接所在的子网ID
+ * @method void setSubnetId(string $SubnetId) 设置<p>私有连接所在的子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInnerHttpAddr() 获取HTTP内网调用地址
+ * @method array getInnerHttpAddr() 获取<p>HTTP内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInnerHttpAddr(array $InnerHttpAddr) 设置HTTP内网调用地址
+ * @method void setInnerHttpAddr(array $InnerHttpAddr) 设置<p>HTTP内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInnerHttpsAddr() 获取HTTPS内网调用地址
+ * @method array getInnerHttpsAddr() 获取<p>HTTPS内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInnerHttpsAddr(array $InnerHttpsAddr) 设置HTTPS内网调用地址
+ * @method void setInnerHttpsAddr(array $InnerHttpsAddr) 设置<p>HTTPS内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getState() 获取私有连接状态
+ * @method string getState() 获取<p>私有连接状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setState(string $State) 设置私有连接状态
+ * @method void setState(string $State) 设置<p>私有连接状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInnerGrpcAddr() 获取grpc内网调用地址
- * @method void setInnerGrpcAddr(array $InnerGrpcAddr) 设置grpc内网调用地址
+ * @method array getInnerGrpcAddr() 获取<p>grpc内网调用地址</p>
+ * @method void setInnerGrpcAddr(array $InnerGrpcAddr) 设置<p>grpc内网调用地址</p>
+ * @method string getCreatedBy() 获取<p>创建者 UIN</p>
+ * @method void setCreatedBy(string $CreatedBy) 设置<p>创建者 UIN</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getSubUinName() 获取<p>子用户名称</p>
+ * @method void setSubUinName(string $SubUinName) 设置<p>子用户名称</p>
  */
 class PrivateLinkInfo extends AbstractModel
 {
     /**
-     * @var string 私有连接所在的VPCID
+     * @var string <p>私有连接所在的VPCID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
-     * @var string 私有连接所在的子网ID
+     * @var string <p>私有连接所在的子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
-     * @var array HTTP内网调用地址
+     * @var array <p>HTTP内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InnerHttpAddr;
 
     /**
-     * @var array HTTPS内网调用地址
+     * @var array <p>HTTPS内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InnerHttpsAddr;
 
     /**
-     * @var string 私有连接状态
+     * @var string <p>私有连接状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
-     * @var array grpc内网调用地址
+     * @var array <p>grpc内网调用地址</p>
      */
     public $InnerGrpcAddr;
 
     /**
-     * @param string $VpcId 私有连接所在的VPCID
+     * @var string <p>创建者 UIN</p>
+     */
+    public $CreatedBy;
+
+    /**
+     * @var string <p>创建时间</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @var string <p>子用户名称</p>
+     */
+    public $SubUinName;
+
+    /**
+     * @param string $VpcId <p>私有连接所在的VPCID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubnetId 私有连接所在的子网ID
+     * @param string $SubnetId <p>私有连接所在的子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InnerHttpAddr HTTP内网调用地址
+     * @param array $InnerHttpAddr <p>HTTP内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InnerHttpsAddr HTTPS内网调用地址
+     * @param array $InnerHttpsAddr <p>HTTPS内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $State 私有连接状态
+     * @param string $State <p>私有连接状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InnerGrpcAddr grpc内网调用地址
+     * @param array $InnerGrpcAddr <p>grpc内网调用地址</p>
+     * @param string $CreatedBy <p>创建者 UIN</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $SubUinName <p>子用户名称</p>
      */
     function __construct()
     {
@@ -128,6 +152,18 @@ class PrivateLinkInfo extends AbstractModel
 
         if (array_key_exists("InnerGrpcAddr",$param) and $param["InnerGrpcAddr"] !== null) {
             $this->InnerGrpcAddr = $param["InnerGrpcAddr"];
+        }
+
+        if (array_key_exists("CreatedBy",$param) and $param["CreatedBy"] !== null) {
+            $this->CreatedBy = $param["CreatedBy"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("SubUinName",$param) and $param["SubUinName"] !== null) {
+            $this->SubUinName = $param["SubUinName"];
         }
     }
 }

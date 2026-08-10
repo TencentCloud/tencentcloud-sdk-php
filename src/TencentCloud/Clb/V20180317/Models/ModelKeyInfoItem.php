@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceProviderName(string $ServiceProviderName) 设置<p>服务提供商自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取<p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li><li>Deleting： 删除中</li><li>ProvisionFailed： 创建失败</li><li>ConfigureFailed： 变配失败</li><li>DeletionFailed： 删除失败</li><li>Disabled： 已禁用</li></ul>
- * @method void setStatus(string $Status) 设置<p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li><li>Deleting： 删除中</li><li>ProvisionFailed： 创建失败</li><li>ConfigureFailed： 变配失败</li><li>DeletionFailed： 删除失败</li><li>Disabled： 已禁用</li></ul>
+ * @method string getStatus() 获取<p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul>
+ * @method void setStatus(string $Status) 设置<p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul>
  * @method string getSubnetId() 获取<p>子网 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置<p>子网 ID</p>
@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置<p>VPC 实例 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ServiceProviderHealthCheckConfigOutput getHealthCheckConfig() 获取<p>健康检查配置</p>
+ * @method void setHealthCheckConfig(ServiceProviderHealthCheckConfigOutput $HealthCheckConfig) 设置<p>健康检查配置</p>
  */
 class ModelKeyInfoItem extends AbstractModel
 {
@@ -134,7 +136,7 @@ class ModelKeyInfoItem extends AbstractModel
     public $ServiceProviderName;
 
     /**
-     * @var string <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li><li>Deleting： 删除中</li><li>ProvisionFailed： 创建失败</li><li>ConfigureFailed： 变配失败</li><li>DeletionFailed： 删除失败</li><li>Disabled： 已禁用</li></ul>
+     * @var string <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul>
      */
     public $Status;
 
@@ -161,6 +163,11 @@ class ModelKeyInfoItem extends AbstractModel
     public $VpcId;
 
     /**
+     * @var ServiceProviderHealthCheckConfigOutput <p>健康检查配置</p>
+     */
+    public $HealthCheckConfig;
+
+    /**
      * @param string $AccessType <p>接入类型</p>
      * @param string $ApiBase <p>API Base URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -177,13 +184,14 @@ class ModelKeyInfoItem extends AbstractModel
      * @param string $ServiceProviderId <p>服务提供商ID</p>
      * @param string $ServiceProviderName <p>服务提供商自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li><li>Deleting： 删除中</li><li>ProvisionFailed： 创建失败</li><li>ConfigureFailed： 变配失败</li><li>DeletionFailed： 删除失败</li><li>Disabled： 已禁用</li></ul>
+     * @param string $Status <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul>
      * @param string $SubnetId <p>子网 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags <p>标签信息</p>
      * @param boolean $VerifySSL <p>是否校验上游SSL</p>
      * @param string $VpcId <p>VPC 实例 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceProviderHealthCheckConfigOutput $HealthCheckConfig <p>健康检查配置</p>
      */
     function __construct()
     {
@@ -279,6 +287,11 @@ class ModelKeyInfoItem extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("HealthCheckConfig",$param) and $param["HealthCheckConfig"] !== null) {
+            $this->HealthCheckConfig = new ServiceProviderHealthCheckConfigOutput();
+            $this->HealthCheckConfig->deserialize($param["HealthCheckConfig"]);
         }
     }
 }

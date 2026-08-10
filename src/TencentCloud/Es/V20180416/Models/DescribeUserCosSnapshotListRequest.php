@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserCosSnapshotList请求参数结构体
  *
- * @method string getCosBucket() 获取cos桶名
- * @method void setCosBucket(string $CosBucket) 设置cos桶名
- * @method string getBasePath() 获取bucket 桶下的备份路径
- * @method void setBasePath(string $BasePath) 设置bucket 桶下的备份路径
- * @method string getClusterInstanceId() 获取云上集群迁移集群名
- * @method void setClusterInstanceId(string $ClusterInstanceId) 设置云上集群迁移集群名
+ * @method string getCosBucket() 获取<p>cos桶名</p>
+ * @method void setCosBucket(string $CosBucket) 设置<p>cos桶名</p>
+ * @method string getBasePath() 获取<p>bucket 桶下的备份路径</p>
+ * @method void setBasePath(string $BasePath) 设置<p>bucket 桶下的备份路径</p>
+ * @method string getClusterInstanceId() 获取<p>云上集群迁移集群名</p>
+ * @method void setClusterInstanceId(string $ClusterInstanceId) 设置<p>云上集群迁移集群名</p>
+ * @method string getPaasEsRepository() 获取<p>es 集群仓库</p>
+ * @method void setPaasEsRepository(string $PaasEsRepository) 设置<p>es 集群仓库</p>
  */
 class DescribeUserCosSnapshotListRequest extends AbstractModel
 {
     /**
-     * @var string cos桶名
+     * @var string <p>cos桶名</p>
      */
     public $CosBucket;
 
     /**
-     * @var string bucket 桶下的备份路径
+     * @var string <p>bucket 桶下的备份路径</p>
      */
     public $BasePath;
 
     /**
-     * @var string 云上集群迁移集群名
+     * @var string <p>云上集群迁移集群名</p>
      */
     public $ClusterInstanceId;
 
     /**
-     * @param string $CosBucket cos桶名
-     * @param string $BasePath bucket 桶下的备份路径
-     * @param string $ClusterInstanceId 云上集群迁移集群名
+     * @var string <p>es 集群仓库</p>
+     */
+    public $PaasEsRepository;
+
+    /**
+     * @param string $CosBucket <p>cos桶名</p>
+     * @param string $BasePath <p>bucket 桶下的备份路径</p>
+     * @param string $ClusterInstanceId <p>云上集群迁移集群名</p>
+     * @param string $PaasEsRepository <p>es 集群仓库</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeUserCosSnapshotListRequest extends AbstractModel
 
         if (array_key_exists("ClusterInstanceId",$param) and $param["ClusterInstanceId"] !== null) {
             $this->ClusterInstanceId = $param["ClusterInstanceId"];
+        }
+
+        if (array_key_exists("PaasEsRepository",$param) and $param["PaasEsRepository"] !== null) {
+            $this->PaasEsRepository = $param["PaasEsRepository"];
         }
     }
 }

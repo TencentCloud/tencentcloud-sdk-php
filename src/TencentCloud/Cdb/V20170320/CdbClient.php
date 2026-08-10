@@ -197,6 +197,8 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\ModifyDBInstanceReadOnlyStatusResponse ModifyDBInstanceReadOnlyStatus(Models\ModifyDBInstanceReadOnlyStatusRequest $req) 本接口（ModifyDBInstanceReadOnlyStatus）用户设置MySQL云数据库实例为只读
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
  * @method Models\ModifyDBInstanceVipVportResponse ModifyDBInstanceVipVport(Models\ModifyDBInstanceVipVportRequest $req) 本接口（ModifyDBInstanceVipVport）用于修改云数据库实例的IP和端口号，也可进行基础网络转 VPC 网络和 VPC 网络下的子网变更。
+ * @method Models\ModifyInstanceChargeTypeResponse ModifyInstanceChargeType(Models\ModifyInstanceChargeTypeRequest $req) 本接口(ModifyInstanceChargeType)用于将实例的计费模式从包年包月改为按量计费。
+ * @method Models\ModifyInstanceDestroyProtectResponse ModifyInstanceDestroyProtect(Models\ModifyInstanceDestroyProtectRequest $req) 该接口（ModifyInstanceDestroyProtect）用于修改实例销毁保护状态。
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口(ModifyInstanceParam)用于修改云数据库实例的参数。
  * @method Models\ModifyInstancePasswordComplexityResponse ModifyInstancePasswordComplexity(Models\ModifyInstancePasswordComplexityRequest $req) 本接口（ModifyInstancePasswordComplexity）用于修改云数据库实例的密码复杂度。
  * @method Models\ModifyInstanceTagResponse ModifyInstanceTag(Models\ModifyInstanceTagRequest $req) 本接口(ModifyInstanceTag)用于对实例标签进行添加、修改或者删除。

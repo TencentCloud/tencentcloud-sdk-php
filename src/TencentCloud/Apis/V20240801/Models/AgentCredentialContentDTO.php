@@ -20,34 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 凭证内容
  *
- * @method string getSTSSystem() 获取如果认证类型为sts时，该项必填
- * @method void setSTSSystem(string $STSSystem) 设置如果认证类型为sts时，该项必填
- * @method string getSTSService() 获取如果认证类型为sts时，该项必填
- * @method void setSTSService(string $STSService) 设置如果认证类型为sts时，该项必填
- * @method array getHeaders() 获取如果认证类型为reqKey时，该项必填
- * @method void setHeaders(array $Headers) 设置如果认证类型为reqKey时，该项必填
+ * @method string getSTSSystem() 获取<p>如果认证类型为sts时，该项必填</p>
+ * @method void setSTSSystem(string $STSSystem) 设置<p>如果认证类型为sts时，该项必填</p>
+ * @method string getSTSService() 获取<p>如果认证类型为sts时，该项必填</p>
+ * @method void setSTSService(string $STSService) 设置<p>如果认证类型为sts时，该项必填</p>
+ * @method array getHeaders() 获取<p>如果认证类型为reqKey时，该项必填</p>
+ * @method void setHeaders(array $Headers) 设置<p>如果认证类型为reqKey时，该项必填</p>
+ * @method array getApiKeys() 获取<p>如果认证类型为apiKey时，该项必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiKeys(array $ApiKeys) 设置<p>如果认证类型为apiKey时，该项必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method FaultToleranceDTO getFaultTolerance() 获取<p>容错策略，仅Type为apiKey时支持</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFaultTolerance(FaultToleranceDTO $FaultTolerance) 设置<p>容错策略，仅Type为apiKey时支持</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentCredentialContentDTO extends AbstractModel
 {
     /**
-     * @var string 如果认证类型为sts时，该项必填
+     * @var string <p>如果认证类型为sts时，该项必填</p>
      */
     public $STSSystem;
 
     /**
-     * @var string 如果认证类型为sts时，该项必填
+     * @var string <p>如果认证类型为sts时，该项必填</p>
      */
     public $STSService;
 
     /**
-     * @var array 如果认证类型为reqKey时，该项必填
+     * @var array <p>如果认证类型为reqKey时，该项必填</p>
      */
     public $Headers;
 
     /**
-     * @param string $STSSystem 如果认证类型为sts时，该项必填
-     * @param string $STSService 如果认证类型为sts时，该项必填
-     * @param array $Headers 如果认证类型为reqKey时，该项必填
+     * @var array <p>如果认证类型为apiKey时，该项必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiKeys;
+
+    /**
+     * @var FaultToleranceDTO <p>容错策略，仅Type为apiKey时支持</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FaultTolerance;
+
+    /**
+     * @param string $STSSystem <p>如果认证类型为sts时，该项必填</p>
+     * @param string $STSService <p>如果认证类型为sts时，该项必填</p>
+     * @param array $Headers <p>如果认证类型为reqKey时，该项必填</p>
+     * @param array $ApiKeys <p>如果认证类型为apiKey时，该项必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FaultToleranceDTO $FaultTolerance <p>容错策略，仅Type为apiKey时支持</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -77,6 +101,20 @@ class AgentCredentialContentDTO extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Headers, $obj);
             }
+        }
+
+        if (array_key_exists("ApiKeys",$param) and $param["ApiKeys"] !== null) {
+            $this->ApiKeys = [];
+            foreach ($param["ApiKeys"] as $key => $value){
+                $obj = new AgentCredentialApiKeyDTO();
+                $obj->deserialize($value);
+                array_push($this->ApiKeys, $obj);
+            }
+        }
+
+        if (array_key_exists("FaultTolerance",$param) and $param["FaultTolerance"] !== null) {
+            $this->FaultTolerance = new FaultToleranceDTO();
+            $this->FaultTolerance->deserialize($param["FaultTolerance"]);
         }
     }
 }

@@ -20,130 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeployResource请求参数结构体
  *
- * @method string getResourceId() 获取需要开通服务的资源ID
- * @method void setResourceId(string $ResourceId) 设置需要开通服务的资源ID
- * @method string getApCode() 获取需要开通服务的地域
- * @method void setApCode(string $ApCode) 设置需要开通服务的地域
- * @method string getZone() 获取子网所在可用区
- * @method void setZone(string $Zone) 设置子网所在可用区
- * @method string getVpcId() 获取需要开通服务的VPC
- * @method void setVpcId(string $VpcId) 设置需要开通服务的VPC
- * @method string getSubnetId() 获取需要开通服务的子网ID
- * @method void setSubnetId(string $SubnetId) 设置需要开通服务的子网ID
- * @method string getCidrBlock() 获取需要开通服务的子网网段
- * @method void setCidrBlock(string $CidrBlock) 设置需要开通服务的子网网段
- * @method string getVpcName() 获取需要开通服务的VPC名称
- * @method void setVpcName(string $VpcName) 设置需要开通服务的VPC名称
- * @method string getVpcCidrBlock() 获取需要开通服务的VPC对应的网段
- * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置需要开通服务的VPC对应的网段
- * @method string getSubnetName() 获取需要开通服务的子网名称
- * @method void setSubnetName(string $SubnetName) 设置需要开通服务的子网名称
- * @method string getCdcClusterId() 获取需要开通实例所属的CDC集群ID
- * @method void setCdcClusterId(string $CdcClusterId) 设置需要开通实例所属的CDC集群ID
- * @method string getShareClbId() 获取开通堡垒机指定共享的clbId
- * @method void setShareClbId(string $ShareClbId) 设置开通堡垒机指定共享的clbId
- * @method integer getWebAccess() 获取0-关闭web访问堡垒机，1-开启web访问堡垒机
- * @method void setWebAccess(integer $WebAccess) 设置0-关闭web访问堡垒机，1-开启web访问堡垒机
- * @method integer getClientAccess() 获取0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
- * @method void setClientAccess(integer $ClientAccess) 设置0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
- * @method integer getIntranetAccess() 获取0-关闭内网访问堡垒机，1-开启内网访问堡垒机
- * @method void setIntranetAccess(integer $IntranetAccess) 设置0-关闭内网访问堡垒机，1-开启内网访问堡垒机
- * @method integer getExternalAccess() 获取0-关闭公网访问堡垒机，1-开启公网访问堡垒机
- * @method void setExternalAccess(integer $ExternalAccess) 设置0-关闭公网访问堡垒机，1-开启公网访问堡垒机
+ * @method string getResourceId() 获取<p>需要开通服务的资源ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>需要开通服务的资源ID</p>
+ * @method string getApCode() 获取<p>需要开通服务的地域</p>
+ * @method void setApCode(string $ApCode) 设置<p>需要开通服务的地域</p>
+ * @method string getZone() 获取<p>子网所在可用区</p>
+ * @method void setZone(string $Zone) 设置<p>子网所在可用区</p>
+ * @method string getVpcId() 获取<p>需要开通服务的VPC</p>
+ * @method void setVpcId(string $VpcId) 设置<p>需要开通服务的VPC</p>
+ * @method string getSubnetId() 获取<p>需要开通服务的子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>需要开通服务的子网ID</p>
+ * @method string getCidrBlock() 获取<p>需要开通服务的子网网段</p>
+ * @method void setCidrBlock(string $CidrBlock) 设置<p>需要开通服务的子网网段</p>
+ * @method string getVpcName() 获取<p>需要开通服务的VPC名称</p>
+ * @method void setVpcName(string $VpcName) 设置<p>需要开通服务的VPC名称</p>
+ * @method string getVpcCidrBlock() 获取<p>需要开通服务的VPC对应的网段</p>
+ * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置<p>需要开通服务的VPC对应的网段</p>
+ * @method string getSubnetName() 获取<p>需要开通服务的子网名称</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>需要开通服务的子网名称</p>
+ * @method string getCdcClusterId() 获取<p>需要开通实例所属的CDC集群ID</p>
+ * @method void setCdcClusterId(string $CdcClusterId) 设置<p>需要开通实例所属的CDC集群ID</p>
+ * @method string getShareClbId() 获取<p>开通堡垒机指定共享的clbId</p>
+ * @method void setShareClbId(string $ShareClbId) 设置<p>开通堡垒机指定共享的clbId</p>
+ * @method integer getWebAccess() 获取<p>0-关闭web访问堡垒机，1-开启web访问堡垒机</p>
+ * @method void setWebAccess(integer $WebAccess) 设置<p>0-关闭web访问堡垒机，1-开启web访问堡垒机</p>
+ * @method integer getClientAccess() 获取<p>0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机</p>
+ * @method void setClientAccess(integer $ClientAccess) 设置<p>0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机</p>
+ * @method integer getIntranetAccess() 获取<p>0-关闭内网访问堡垒机，1-开启内网访问堡垒机</p>
+ * @method void setIntranetAccess(integer $IntranetAccess) 设置<p>0-关闭内网访问堡垒机，1-开启内网访问堡垒机</p>
+ * @method integer getExternalAccess() 获取<p>0-关闭公网访问堡垒机，1-开启公网访问堡垒机</p>
+ * @method void setExternalAccess(integer $ExternalAccess) 设置<p>0-关闭公网访问堡垒机，1-开启公网访问堡垒机</p>
+ * @method array getDeploySubnets() 获取<p>开通堡垒机的子网信息</p>
+ * @method void setDeploySubnets(array $DeploySubnets) 设置<p>开通堡垒机的子网信息</p>
+ * @method string getIntranetVpcId() 获取<p>开通内网访问的VPC ID</p>
+ * @method void setIntranetVpcId(string $IntranetVpcId) 设置<p>开通内网访问的VPC ID</p>
+ * @method string getIntranetVpcCidrBlock() 获取<p>开通内网访问的VPC 网段</p>
+ * @method void setIntranetVpcCidrBlock(string $IntranetVpcCidrBlock) 设置<p>开通内网访问的VPC 网段</p>
+ * @method string getIntranetVpcName() 获取<p>开通内网访问的VPC名称</p>
+ * @method void setIntranetVpcName(string $IntranetVpcName) 设置<p>开通内网访问的VPC名称</p>
+ * @method array getIntranetSubnets() 获取<p>开通内网访问的子网信息</p>
+ * @method void setIntranetSubnets(array $IntranetSubnets) 设置<p>开通内网访问的子网信息</p>
  */
 class DeployResourceRequest extends AbstractModel
 {
     /**
-     * @var string 需要开通服务的资源ID
+     * @var string <p>需要开通服务的资源ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 需要开通服务的地域
+     * @var string <p>需要开通服务的地域</p>
      */
     public $ApCode;
 
     /**
-     * @var string 子网所在可用区
+     * @var string <p>子网所在可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 需要开通服务的VPC
+     * @var string <p>需要开通服务的VPC</p>
      */
     public $VpcId;
 
     /**
-     * @var string 需要开通服务的子网ID
+     * @var string <p>需要开通服务的子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 需要开通服务的子网网段
+     * @var string <p>需要开通服务的子网网段</p>
      */
     public $CidrBlock;
 
     /**
-     * @var string 需要开通服务的VPC名称
+     * @var string <p>需要开通服务的VPC名称</p>
      */
     public $VpcName;
 
     /**
-     * @var string 需要开通服务的VPC对应的网段
+     * @var string <p>需要开通服务的VPC对应的网段</p>
      */
     public $VpcCidrBlock;
 
     /**
-     * @var string 需要开通服务的子网名称
+     * @var string <p>需要开通服务的子网名称</p>
      */
     public $SubnetName;
 
     /**
-     * @var string 需要开通实例所属的CDC集群ID
+     * @var string <p>需要开通实例所属的CDC集群ID</p>
      */
     public $CdcClusterId;
 
     /**
-     * @var string 开通堡垒机指定共享的clbId
+     * @var string <p>开通堡垒机指定共享的clbId</p>
      */
     public $ShareClbId;
 
     /**
-     * @var integer 0-关闭web访问堡垒机，1-开启web访问堡垒机
+     * @var integer <p>0-关闭web访问堡垒机，1-开启web访问堡垒机</p>
      */
     public $WebAccess;
 
     /**
-     * @var integer 0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
+     * @var integer <p>0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机</p>
      */
     public $ClientAccess;
 
     /**
-     * @var integer 0-关闭内网访问堡垒机，1-开启内网访问堡垒机
+     * @var integer <p>0-关闭内网访问堡垒机，1-开启内网访问堡垒机</p>
      */
     public $IntranetAccess;
 
     /**
-     * @var integer 0-关闭公网访问堡垒机，1-开启公网访问堡垒机
+     * @var integer <p>0-关闭公网访问堡垒机，1-开启公网访问堡垒机</p>
      */
     public $ExternalAccess;
 
     /**
-     * @param string $ResourceId 需要开通服务的资源ID
-     * @param string $ApCode 需要开通服务的地域
-     * @param string $Zone 子网所在可用区
-     * @param string $VpcId 需要开通服务的VPC
-     * @param string $SubnetId 需要开通服务的子网ID
-     * @param string $CidrBlock 需要开通服务的子网网段
-     * @param string $VpcName 需要开通服务的VPC名称
-     * @param string $VpcCidrBlock 需要开通服务的VPC对应的网段
-     * @param string $SubnetName 需要开通服务的子网名称
-     * @param string $CdcClusterId 需要开通实例所属的CDC集群ID
-     * @param string $ShareClbId 开通堡垒机指定共享的clbId
-     * @param integer $WebAccess 0-关闭web访问堡垒机，1-开启web访问堡垒机
-     * @param integer $ClientAccess 0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
-     * @param integer $IntranetAccess 0-关闭内网访问堡垒机，1-开启内网访问堡垒机
-     * @param integer $ExternalAccess 0-关闭公网访问堡垒机，1-开启公网访问堡垒机
+     * @var array <p>开通堡垒机的子网信息</p>
+     */
+    public $DeploySubnets;
+
+    /**
+     * @var string <p>开通内网访问的VPC ID</p>
+     */
+    public $IntranetVpcId;
+
+    /**
+     * @var string <p>开通内网访问的VPC 网段</p>
+     */
+    public $IntranetVpcCidrBlock;
+
+    /**
+     * @var string <p>开通内网访问的VPC名称</p>
+     */
+    public $IntranetVpcName;
+
+    /**
+     * @var array <p>开通内网访问的子网信息</p>
+     */
+    public $IntranetSubnets;
+
+    /**
+     * @param string $ResourceId <p>需要开通服务的资源ID</p>
+     * @param string $ApCode <p>需要开通服务的地域</p>
+     * @param string $Zone <p>子网所在可用区</p>
+     * @param string $VpcId <p>需要开通服务的VPC</p>
+     * @param string $SubnetId <p>需要开通服务的子网ID</p>
+     * @param string $CidrBlock <p>需要开通服务的子网网段</p>
+     * @param string $VpcName <p>需要开通服务的VPC名称</p>
+     * @param string $VpcCidrBlock <p>需要开通服务的VPC对应的网段</p>
+     * @param string $SubnetName <p>需要开通服务的子网名称</p>
+     * @param string $CdcClusterId <p>需要开通实例所属的CDC集群ID</p>
+     * @param string $ShareClbId <p>开通堡垒机指定共享的clbId</p>
+     * @param integer $WebAccess <p>0-关闭web访问堡垒机，1-开启web访问堡垒机</p>
+     * @param integer $ClientAccess <p>0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机</p>
+     * @param integer $IntranetAccess <p>0-关闭内网访问堡垒机，1-开启内网访问堡垒机</p>
+     * @param integer $ExternalAccess <p>0-关闭公网访问堡垒机，1-开启公网访问堡垒机</p>
+     * @param array $DeploySubnets <p>开通堡垒机的子网信息</p>
+     * @param string $IntranetVpcId <p>开通内网访问的VPC ID</p>
+     * @param string $IntranetVpcCidrBlock <p>开通内网访问的VPC 网段</p>
+     * @param string $IntranetVpcName <p>开通内网访问的VPC名称</p>
+     * @param array $IntranetSubnets <p>开通内网访问的子网信息</p>
      */
     function __construct()
     {
@@ -216,6 +256,36 @@ class DeployResourceRequest extends AbstractModel
 
         if (array_key_exists("ExternalAccess",$param) and $param["ExternalAccess"] !== null) {
             $this->ExternalAccess = $param["ExternalAccess"];
+        }
+
+        if (array_key_exists("DeploySubnets",$param) and $param["DeploySubnets"] !== null) {
+            $this->DeploySubnets = [];
+            foreach ($param["DeploySubnets"] as $key => $value){
+                $obj = new ParamInitResourceSubnet();
+                $obj->deserialize($value);
+                array_push($this->DeploySubnets, $obj);
+            }
+        }
+
+        if (array_key_exists("IntranetVpcId",$param) and $param["IntranetVpcId"] !== null) {
+            $this->IntranetVpcId = $param["IntranetVpcId"];
+        }
+
+        if (array_key_exists("IntranetVpcCidrBlock",$param) and $param["IntranetVpcCidrBlock"] !== null) {
+            $this->IntranetVpcCidrBlock = $param["IntranetVpcCidrBlock"];
+        }
+
+        if (array_key_exists("IntranetVpcName",$param) and $param["IntranetVpcName"] !== null) {
+            $this->IntranetVpcName = $param["IntranetVpcName"];
+        }
+
+        if (array_key_exists("IntranetSubnets",$param) and $param["IntranetSubnets"] !== null) {
+            $this->IntranetSubnets = [];
+            foreach ($param["IntranetSubnets"] as $key => $value){
+                $obj = new ParamInitResourceSubnet();
+                $obj->deserialize($value);
+                array_push($this->IntranetSubnets, $obj);
+            }
         }
     }
 }

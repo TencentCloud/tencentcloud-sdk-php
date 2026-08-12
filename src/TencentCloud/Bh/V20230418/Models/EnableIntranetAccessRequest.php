@@ -20,50 +20,75 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableIntranetAccess请求参数结构体
  *
- * @method string getResourceId() 获取堡垒机实例id
- * @method void setResourceId(string $ResourceId) 设置堡垒机实例id
- * @method string getVpcId() 获取开通内网访问的vpc id
- * @method void setVpcId(string $VpcId) 设置开通内网访问的vpc id
- * @method string getVpcCidrBlock() 获取vpc的网段
- * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置vpc的网段
- * @method string getSubnetId() 获取开通内网访问的subnet id
- * @method void setSubnetId(string $SubnetId) 设置开通内网访问的subnet id
- * @method string getDomainName() 获取内网ip的自定义域名，可为空
- * @method void setDomainName(string $DomainName) 设置内网ip的自定义域名，可为空
+ * @method string getResourceId() 获取<p>堡垒机实例id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>堡垒机实例id</p>
+ * @method string getVpcId() 获取<p>开通内网访问的vpc id</p>
+ * @method void setVpcId(string $VpcId) 设置<p>开通内网访问的vpc id</p>
+ * @method string getVpcName() 获取<p>vpc名称</p>
+ * @method void setVpcName(string $VpcName) 设置<p>vpc名称</p>
+ * @method string getVpcRegion() 获取<p>vpc地域</p>
+ * @method void setVpcRegion(string $VpcRegion) 设置<p>vpc地域</p>
+ * @method string getVpcCidrBlock() 获取<p>vpc的网段</p>
+ * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置<p>vpc的网段</p>
+ * @method string getSubnetId() 获取<p>开通内网访问的subnet id</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>开通内网访问的subnet id</p>
+ * @method string getDomainName() 获取<p>内网ip的自定义域名，可为空</p>
+ * @method void setDomainName(string $DomainName) 设置<p>内网ip的自定义域名，可为空</p>
+ * @method array getIntranetSubnets() 获取<p>开通内网的子网信息</p>
+ * @method void setIntranetSubnets(array $IntranetSubnets) 设置<p>开通内网的子网信息</p>
  */
 class EnableIntranetAccessRequest extends AbstractModel
 {
     /**
-     * @var string 堡垒机实例id
+     * @var string <p>堡垒机实例id</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 开通内网访问的vpc id
+     * @var string <p>开通内网访问的vpc id</p>
      */
     public $VpcId;
 
     /**
-     * @var string vpc的网段
+     * @var string <p>vpc名称</p>
+     */
+    public $VpcName;
+
+    /**
+     * @var string <p>vpc地域</p>
+     */
+    public $VpcRegion;
+
+    /**
+     * @var string <p>vpc的网段</p>
      */
     public $VpcCidrBlock;
 
     /**
-     * @var string 开通内网访问的subnet id
+     * @var string <p>开通内网访问的subnet id</p>
+     * @deprecated
      */
     public $SubnetId;
 
     /**
-     * @var string 内网ip的自定义域名，可为空
+     * @var string <p>内网ip的自定义域名，可为空</p>
      */
     public $DomainName;
 
     /**
-     * @param string $ResourceId 堡垒机实例id
-     * @param string $VpcId 开通内网访问的vpc id
-     * @param string $VpcCidrBlock vpc的网段
-     * @param string $SubnetId 开通内网访问的subnet id
-     * @param string $DomainName 内网ip的自定义域名，可为空
+     * @var array <p>开通内网的子网信息</p>
+     */
+    public $IntranetSubnets;
+
+    /**
+     * @param string $ResourceId <p>堡垒机实例id</p>
+     * @param string $VpcId <p>开通内网访问的vpc id</p>
+     * @param string $VpcName <p>vpc名称</p>
+     * @param string $VpcRegion <p>vpc地域</p>
+     * @param string $VpcCidrBlock <p>vpc的网段</p>
+     * @param string $SubnetId <p>开通内网访问的subnet id</p>
+     * @param string $DomainName <p>内网ip的自定义域名，可为空</p>
+     * @param array $IntranetSubnets <p>开通内网的子网信息</p>
      */
     function __construct()
     {
@@ -86,6 +111,14 @@ class EnableIntranetAccessRequest extends AbstractModel
             $this->VpcId = $param["VpcId"];
         }
 
+        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
+            $this->VpcName = $param["VpcName"];
+        }
+
+        if (array_key_exists("VpcRegion",$param) and $param["VpcRegion"] !== null) {
+            $this->VpcRegion = $param["VpcRegion"];
+        }
+
         if (array_key_exists("VpcCidrBlock",$param) and $param["VpcCidrBlock"] !== null) {
             $this->VpcCidrBlock = $param["VpcCidrBlock"];
         }
@@ -96,6 +129,15 @@ class EnableIntranetAccessRequest extends AbstractModel
 
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("IntranetSubnets",$param) and $param["IntranetSubnets"] !== null) {
+            $this->IntranetSubnets = [];
+            foreach ($param["IntranetSubnets"] as $key => $value){
+                $obj = new ParamInitResourceSubnet();
+                $obj->deserialize($value);
+                array_push($this->IntranetSubnets, $obj);
+            }
         }
     }
 }

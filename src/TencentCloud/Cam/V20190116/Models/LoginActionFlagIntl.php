@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 登录和敏感操作flag
  *
- * @method integer getPhone() 获取手机
- * @method void setPhone(integer $Phone) 设置手机
- * @method integer getToken() 获取硬token
- * @method void setToken(integer $Token) 设置硬token
- * @method integer getStoken() 获取软token
- * @method void setStoken(integer $Stoken) 设置软token
- * @method integer getWechat() 获取微信
- * @method void setWechat(integer $Wechat) 设置微信
- * @method integer getCustom() 获取自定义
- * @method void setCustom(integer $Custom) 设置自定义
- * @method integer getMail() 获取邮件
- * @method void setMail(integer $Mail) 设置邮件
- * @method integer getU2FToken() 获取u2f硬件token
- * @method void setU2FToken(integer $U2FToken) 设置u2f硬件token
+ * @method integer getPhone() 获取<p>手机</p>
+ * @method void setPhone(integer $Phone) 设置<p>手机</p>
+ * @method integer getToken() 获取<p>硬token</p>
+ * @method void setToken(integer $Token) 设置<p>硬token</p>
+ * @method integer getStoken() 获取<p>软token</p>
+ * @method void setStoken(integer $Stoken) 设置<p>软token</p>
+ * @method integer getWechat() 获取<p>微信</p>
+ * @method void setWechat(integer $Wechat) 设置<p>微信</p>
+ * @method integer getCustom() 获取<p>自定义</p>
+ * @method void setCustom(integer $Custom) 设置<p>自定义</p>
+ * @method integer getMail() 获取<p>邮件</p>
+ * @method void setMail(integer $Mail) 设置<p>邮件</p>
+ * @method integer getU2FToken() 获取<p>u2f硬件token</p>
+ * @method void setU2FToken(integer $U2FToken) 设置<p>u2f硬件token</p>
+ * @method integer getPasskey() 获取<p>passkey通行密钥</p>
+ * @method void setPasskey(integer $Passkey) 设置<p>passkey通行密钥</p>
  */
 class LoginActionFlagIntl extends AbstractModel
 {
     /**
-     * @var integer 手机
+     * @var integer <p>手机</p>
      */
     public $Phone;
 
     /**
-     * @var integer 硬token
+     * @var integer <p>硬token</p>
      */
     public $Token;
 
     /**
-     * @var integer 软token
+     * @var integer <p>软token</p>
      */
     public $Stoken;
 
     /**
-     * @var integer 微信
+     * @var integer <p>微信</p>
      */
     public $Wechat;
 
     /**
-     * @var integer 自定义
+     * @var integer <p>自定义</p>
      */
     public $Custom;
 
     /**
-     * @var integer 邮件
+     * @var integer <p>邮件</p>
      */
     public $Mail;
 
     /**
-     * @var integer u2f硬件token
+     * @var integer <p>u2f硬件token</p>
      */
     public $U2FToken;
 
     /**
-     * @param integer $Phone 手机
-     * @param integer $Token 硬token
-     * @param integer $Stoken 软token
-     * @param integer $Wechat 微信
-     * @param integer $Custom 自定义
-     * @param integer $Mail 邮件
-     * @param integer $U2FToken u2f硬件token
+     * @var integer <p>passkey通行密钥</p>
+     */
+    public $Passkey;
+
+    /**
+     * @param integer $Phone <p>手机</p>
+     * @param integer $Token <p>硬token</p>
+     * @param integer $Stoken <p>软token</p>
+     * @param integer $Wechat <p>微信</p>
+     * @param integer $Custom <p>自定义</p>
+     * @param integer $Mail <p>邮件</p>
+     * @param integer $U2FToken <p>u2f硬件token</p>
+     * @param integer $Passkey <p>passkey通行密钥</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class LoginActionFlagIntl extends AbstractModel
 
         if (array_key_exists("U2FToken",$param) and $param["U2FToken"] !== null) {
             $this->U2FToken = $param["U2FToken"];
+        }
+
+        if (array_key_exists("Passkey",$param) and $param["Passkey"] !== null) {
+            $this->Passkey = $param["Passkey"];
         }
     }
 }

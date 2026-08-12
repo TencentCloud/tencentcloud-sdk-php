@@ -116,6 +116,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetResponsePayload(string $NetResponsePayload) 设置<p>NetResponsePayload 响应数据包（base64 编码后的字符串）</p>
  * @method string getNetSvcPs() 获取<p>服务进程信息（base64 编码后的 JSON 字符串）</p>
  * @method void setNetSvcPs(string $NetSvcPs) 设置<p>服务进程信息（base64 编码后的 JSON 字符串）</p>
+ * @method string getContainerName() 获取<p>容器名称</p>
+ * @method void setContainerName(string $ContainerName) 设置<p>容器名称</p>
+ * @method string getImageName() 获取<p>容器镜像名称</p>
+ * @method void setImageName(string $ImageName) 设置<p>容器镜像名称</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getRunStatus() 获取<p>容器运行状态（原始枚举 RUNNING/PAUSED/STOPPED…，前端自行映射）</p><p>枚举值：</p><ul><li>RUNNING： 运行</li><li>PAUSED： 暂停</li><li>STOPPED： 停止</li><li>CREATED： 已经创建</li><li>DESTROYED： 已销毁</li><li>RESTARTING： 重启中</li><li>REMOVING： 迁移中</li><li>DEAD： DEAD</li><li>UNKNOWN： 未知</li></ul>
+ * @method void setRunStatus(string $RunStatus) 设置<p>容器运行状态（原始枚举 RUNNING/PAUSED/STOPPED…，前端自行映射）</p><p>枚举值：</p><ul><li>RUNNING： 运行</li><li>PAUSED： 暂停</li><li>STOPPED： 停止</li><li>CREATED： 已经创建</li><li>DESTROYED： 已销毁</li><li>RESTARTING： 重启中</li><li>REMOVING： 迁移中</li><li>DEAD： DEAD</li><li>UNKNOWN： 未知</li></ul>
+ * @method string getPodName() 获取<p>POD 名称</p>
+ * @method void setPodName(string $PodName) 设置<p>POD 名称</p>
+ * @method string getPodIp() 获取<p>POD IP</p>
+ * @method void setPodIp(string $PodIp) 设置<p>POD IP</p>
+ * @method string getNamespace() 获取<p>命名空间</p>
+ * @method void setNamespace(string $Namespace) 设置<p>命名空间</p>
+ * @method string getPodWorkloadType() 获取<p>POD 负载类型</p>
+ * @method void setPodWorkloadType(string $PodWorkloadType) 设置<p>POD 负载类型</p>
+ * @method string getClusterCaMD5() 获取<p>集群 ca 证书 md5</p>
+ * @method void setClusterCaMD5(string $ClusterCaMD5) 设置<p>集群 ca 证书 md5</p>
+ * @method string getPodUniqueId() 获取<p>POD 唯一 id</p>
+ * @method void setPodUniqueId(string $PodUniqueId) 设置<p>POD 唯一 id</p>
  */
 class EdrAlertDetail extends AbstractModel
 {
@@ -360,6 +380,56 @@ class EdrAlertDetail extends AbstractModel
     public $NetSvcPs;
 
     /**
+     * @var string <p>容器名称</p>
+     */
+    public $ContainerName;
+
+    /**
+     * @var string <p>容器镜像名称</p>
+     */
+    public $ImageName;
+
+    /**
+     * @var string <p>集群名称</p>
+     */
+    public $ClusterName;
+
+    /**
+     * @var string <p>容器运行状态（原始枚举 RUNNING/PAUSED/STOPPED…，前端自行映射）</p><p>枚举值：</p><ul><li>RUNNING： 运行</li><li>PAUSED： 暂停</li><li>STOPPED： 停止</li><li>CREATED： 已经创建</li><li>DESTROYED： 已销毁</li><li>RESTARTING： 重启中</li><li>REMOVING： 迁移中</li><li>DEAD： DEAD</li><li>UNKNOWN： 未知</li></ul>
+     */
+    public $RunStatus;
+
+    /**
+     * @var string <p>POD 名称</p>
+     */
+    public $PodName;
+
+    /**
+     * @var string <p>POD IP</p>
+     */
+    public $PodIp;
+
+    /**
+     * @var string <p>命名空间</p>
+     */
+    public $Namespace;
+
+    /**
+     * @var string <p>POD 负载类型</p>
+     */
+    public $PodWorkloadType;
+
+    /**
+     * @var string <p>集群 ca 证书 md5</p>
+     */
+    public $ClusterCaMD5;
+
+    /**
+     * @var string <p>POD 唯一 id</p>
+     */
+    public $PodUniqueId;
+
+    /**
      * @param integer $Id <p>主键ID</p>
      * @param integer $AppId <p>租户ID</p>
      * @param string $AlertId <p>告警唯一标识</p>
@@ -408,6 +478,16 @@ class EdrAlertDetail extends AbstractModel
      * @param string $VirusFamily <p>病毒家族</p>
      * @param string $NetResponsePayload <p>NetResponsePayload 响应数据包（base64 编码后的字符串）</p>
      * @param string $NetSvcPs <p>服务进程信息（base64 编码后的 JSON 字符串）</p>
+     * @param string $ContainerName <p>容器名称</p>
+     * @param string $ImageName <p>容器镜像名称</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $RunStatus <p>容器运行状态（原始枚举 RUNNING/PAUSED/STOPPED…，前端自行映射）</p><p>枚举值：</p><ul><li>RUNNING： 运行</li><li>PAUSED： 暂停</li><li>STOPPED： 停止</li><li>CREATED： 已经创建</li><li>DESTROYED： 已销毁</li><li>RESTARTING： 重启中</li><li>REMOVING： 迁移中</li><li>DEAD： DEAD</li><li>UNKNOWN： 未知</li></ul>
+     * @param string $PodName <p>POD 名称</p>
+     * @param string $PodIp <p>POD IP</p>
+     * @param string $Namespace <p>命名空间</p>
+     * @param string $PodWorkloadType <p>POD 负载类型</p>
+     * @param string $ClusterCaMD5 <p>集群 ca 证书 md5</p>
+     * @param string $PodUniqueId <p>POD 唯一 id</p>
      */
     function __construct()
     {
@@ -618,6 +698,46 @@ class EdrAlertDetail extends AbstractModel
 
         if (array_key_exists("NetSvcPs",$param) and $param["NetSvcPs"] !== null) {
             $this->NetSvcPs = $param["NetSvcPs"];
+        }
+
+        if (array_key_exists("ContainerName",$param) and $param["ContainerName"] !== null) {
+            $this->ContainerName = $param["ContainerName"];
+        }
+
+        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
+            $this->ImageName = $param["ImageName"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("RunStatus",$param) and $param["RunStatus"] !== null) {
+            $this->RunStatus = $param["RunStatus"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIp",$param) and $param["PodIp"] !== null) {
+            $this->PodIp = $param["PodIp"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("PodWorkloadType",$param) and $param["PodWorkloadType"] !== null) {
+            $this->PodWorkloadType = $param["PodWorkloadType"];
+        }
+
+        if (array_key_exists("ClusterCaMD5",$param) and $param["ClusterCaMD5"] !== null) {
+            $this->ClusterCaMD5 = $param["ClusterCaMD5"];
+        }
+
+        if (array_key_exists("PodUniqueId",$param) and $param["PodUniqueId"] !== null) {
+            $this->PodUniqueId = $param["PodUniqueId"];
         }
     }
 }

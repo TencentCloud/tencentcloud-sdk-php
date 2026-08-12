@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 推理服务容器配置的修改参数。
  *
- * @method string getImageType() 获取镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li>
- * @method void setImageType(string $ImageType) 设置镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li>
- * @method InferenceTCRRepositoryConfig getTcrRepositoryConfig() 获取TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。
- * @method void setTcrRepositoryConfig(InferenceTCRRepositoryConfig $TcrRepositoryConfig) 设置TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。
- * @method string getStartupCommand() 获取容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。
- * @method void setStartupCommand(string $StartupCommand) 设置容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。
- * @method array getEnvironmentVariables() 获取容器运行时的环境变量。最多支持 10 个变量。
- * @method void setEnvironmentVariables(array $EnvironmentVariables) 设置容器运行时的环境变量。最多支持 10 个变量。
+ * @method string getImageType() 获取<p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p>
+ * @method void setImageType(string $ImageType) 设置<p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p>
+ * @method InferenceTCRRepositoryConfig getTcrRepositoryConfig() 获取<p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
+ * @method void setTcrRepositoryConfig(InferenceTCRRepositoryConfig $TcrRepositoryConfig) 设置<p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
+ * @method string getStartupCommand() 获取<p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
+ * @method void setStartupCommand(string $StartupCommand) 设置<p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
+ * @method array getEnvironmentVariables() 获取<p>容器运行时的环境变量。最多支持 10 个变量。</p>
+ * @method void setEnvironmentVariables(array $EnvironmentVariables) 设置<p>容器运行时的环境变量。最多支持 10 个变量。</p>
  */
 class InferenceContainerConfigForModify extends AbstractModel
 {
     /**
-     * @var string 镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li>
+     * @var string <p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p>
      */
     public $ImageType;
 
     /**
-     * @var InferenceTCRRepositoryConfig TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。
+     * @var InferenceTCRRepositoryConfig <p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
      */
     public $TcrRepositoryConfig;
 
     /**
-     * @var string 容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。
+     * @var string <p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
      */
     public $StartupCommand;
 
     /**
-     * @var array 容器运行时的环境变量。最多支持 10 个变量。
+     * @var array <p>容器运行时的环境变量。最多支持 10 个变量。</p>
      */
     public $EnvironmentVariables;
 
     /**
-     * @param string $ImageType 镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li>
-     * @param InferenceTCRRepositoryConfig $TcrRepositoryConfig TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。
-     * @param string $StartupCommand 容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。
-     * @param array $EnvironmentVariables 容器运行时的环境变量。最多支持 10 个变量。
+     * @param string $ImageType <p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p>
+     * @param InferenceTCRRepositoryConfig $TcrRepositoryConfig <p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
+     * @param string $StartupCommand <p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
+     * @param array $EnvironmentVariables <p>容器运行时的环境变量。最多支持 10 个变量。</p>
      */
     function __construct()
     {

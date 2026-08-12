@@ -18,52 +18,52 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EDR告警定位信息，用于永久忽略
+ * EDR告警定位信息，用于永久忽略/取消忽略
  *
- * @method integer getId() 获取<p>告警主键ID</p>
- * @method void setId(integer $Id) 设置<p>告警主键ID</p>
- * @method integer getAppId() 获取<p>告警所属账号ID（跨账号，前端必传）</p>
- * @method void setAppId(integer $AppId) 设置<p>告警所属账号ID（跨账号，前端必传）</p>
- * @method string getAlertId() 获取<p>告警唯一标识</p>
- * @method void setAlertId(string $AlertId) 设置<p>告警唯一标识</p>
- * @method string getQuuid() 获取<p>主机UUID（可选）</p>
- * @method void setQuuid(string $Quuid) 设置<p>主机UUID（可选）</p>
- * @method string getInstanceId() 获取<p>实例ID（可选，用于白名单写入）</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>实例ID（可选，用于白名单写入）</p>
+ * @method integer getId() 获取告警主键ID
+ * @method void setId(integer $Id) 设置告警主键ID
+ * @method integer getAppId() 获取告警所属账号ID（跨账号，前端必传）
+ * @method void setAppId(integer $AppId) 设置告警所属账号ID（跨账号，前端必传）
+ * @method string getAlertId() 获取告警唯一标识
+ * @method void setAlertId(string $AlertId) 设置告警唯一标识
+ * @method string getQuuid() 获取主机UUID（可选）
+ * @method void setQuuid(string $Quuid) 设置主机UUID（可选）
+ * @method string getInstanceId() 获取实例ID（可选，用于白名单删除）
+ * @method void setInstanceId(string $InstanceId) 设置实例ID（可选，用于白名单删除）
  */
 class EdrAlertTargetForIgnore extends AbstractModel
 {
     /**
-     * @var integer <p>告警主键ID</p>
+     * @var integer 告警主键ID
      */
     public $Id;
 
     /**
-     * @var integer <p>告警所属账号ID（跨账号，前端必传）</p>
+     * @var integer 告警所属账号ID（跨账号，前端必传）
      */
     public $AppId;
 
     /**
-     * @var string <p>告警唯一标识</p>
+     * @var string 告警唯一标识
      */
     public $AlertId;
 
     /**
-     * @var string <p>主机UUID（可选）</p>
+     * @var string 主机UUID（可选）
      */
     public $Quuid;
 
     /**
-     * @var string <p>实例ID（可选，用于白名单写入）</p>
+     * @var string 实例ID（可选，用于白名单删除）
      */
     public $InstanceId;
 
     /**
-     * @param integer $Id <p>告警主键ID</p>
-     * @param integer $AppId <p>告警所属账号ID（跨账号，前端必传）</p>
-     * @param string $AlertId <p>告警唯一标识</p>
-     * @param string $Quuid <p>主机UUID（可选）</p>
-     * @param string $InstanceId <p>实例ID（可选，用于白名单写入）</p>
+     * @param integer $Id 告警主键ID
+     * @param integer $AppId 告警所属账号ID（跨账号，前端必传）
+     * @param string $AlertId 告警唯一标识
+     * @param string $Quuid 主机UUID（可选）
+     * @param string $InstanceId 实例ID（可选，用于白名单删除）
      */
     function __construct()
     {

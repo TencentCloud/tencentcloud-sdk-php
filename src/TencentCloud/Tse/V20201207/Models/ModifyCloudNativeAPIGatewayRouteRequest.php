@@ -20,227 +20,155 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCloudNativeAPIGatewayRoute请求参数结构体
  *
- * @method string getGatewayId() 获取网关ID
- * @method void setGatewayId(string $GatewayId) 设置网关ID
- * @method string getServiceID() 获取所属服务的ID
- * @method void setServiceID(string $ServiceID) 设置所属服务的ID
- * @method string getRouteID() 获取路由的ID，实例级别唯一
- * @method void setRouteID(string $RouteID) 设置路由的ID，实例级别唯一
- * @method string getRouteName() 获取路由的名字，实例级别唯一，可以不提供
- * @method void setRouteName(string $RouteName) 设置路由的名字，实例级别唯一，可以不提供
- * @method array getMethods() 获取路由的方法，其中方法可选值：
-- GET
-- POST
-- DELETE
-- PUT
-- OPTIONS
-- PATCH
-- HEAD
-- ANY
-- TRACE
-- COPY
-- MOVE
-- PROPFIND
-- PROPPATCH
-- MKCOL
-- LOCK
-- UNLOCK
- * @method void setMethods(array $Methods) 设置路由的方法，其中方法可选值：
-- GET
-- POST
-- DELETE
-- PUT
-- OPTIONS
-- PATCH
-- HEAD
-- ANY
-- TRACE
-- COPY
-- MOVE
-- PROPFIND
-- PROPPATCH
-- MKCOL
-- LOCK
-- UNLOCK
- * @method array getHosts() 获取路由的域名
- * @method void setHosts(array $Hosts) 设置路由的域名
- * @method array getPaths() 获取路由的路径
- * @method void setPaths(array $Paths) 设置路由的路径
- * @method array getProtocols() 获取路由的协议，可选
-- https
-- http
- * @method void setProtocols(array $Protocols) 设置路由的协议，可选
-- https
-- http
- * @method boolean getPreserveHost() 获取转发到后端时是否保留Host
- * @method void setPreserveHost(boolean $PreserveHost) 设置转发到后端时是否保留Host
- * @method integer getHttpsRedirectStatusCode() 获取https重定向状态码
- * @method void setHttpsRedirectStatusCode(integer $HttpsRedirectStatusCode) 设置https重定向状态码
- * @method boolean getStripPath() 获取转发到后端时是否StripPath
- * @method void setStripPath(boolean $StripPath) 设置转发到后端时是否StripPath
- * @method boolean getForceHttps() 获取是否开启强制HTTPS
- * @method void setForceHttps(boolean $ForceHttps) 设置是否开启强制HTTPS
- * @method array getDestinationPorts() 获取四层匹配的目的端口	
- * @method void setDestinationPorts(array $DestinationPorts) 设置四层匹配的目的端口	
- * @method array getHeaders() 获取路由的Headers
- * @method void setHeaders(array $Headers) 设置路由的Headers
- * @method boolean getRequestBuffering() 获取是否缓存请求body，默认true
- * @method void setRequestBuffering(boolean $RequestBuffering) 设置是否缓存请求body，默认true
- * @method boolean getResponseBuffering() 获取是否缓存响应body，默认true
- * @method void setResponseBuffering(boolean $ResponseBuffering) 设置是否缓存响应body，默认true
- * @method integer getRegexPriority() 获取增加优先级
- * @method void setRegexPriority(integer $RegexPriority) 设置增加优先级
- * @method array getQueryStringParameters() 获取querysring参数
- * @method void setQueryStringParameters(array $QueryStringParameters) 设置querysring参数
+ * @method string getGatewayId() 获取<p>网关ID</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关ID</p>
+ * @method string getServiceID() 获取<p>所属服务的ID</p>
+ * @method void setServiceID(string $ServiceID) 设置<p>所属服务的ID</p>
+ * @method string getRouteID() 获取<p>路由的ID，实例级别唯一</p>
+ * @method void setRouteID(string $RouteID) 设置<p>路由的ID，实例级别唯一</p>
+ * @method string getRouteName() 获取<p>路由的名字，实例级别唯一，可以不提供</p>
+ * @method void setRouteName(string $RouteName) 设置<p>路由的名字，实例级别唯一，可以不提供</p>
+ * @method array getMethods() 获取<p>路由的方法，其中方法可选值：</p><ul><li>GET</li><li>POST</li><li>DELETE</li><li>PUT</li><li>OPTIONS</li><li>PATCH</li><li>HEAD</li><li>ANY</li><li>TRACE</li><li>COPY</li><li>MOVE</li><li>PROPFIND</li><li>PROPPATCH</li><li>MKCOL</li><li>LOCK</li><li>UNLOCK</li></ul>
+ * @method void setMethods(array $Methods) 设置<p>路由的方法，其中方法可选值：</p><ul><li>GET</li><li>POST</li><li>DELETE</li><li>PUT</li><li>OPTIONS</li><li>PATCH</li><li>HEAD</li><li>ANY</li><li>TRACE</li><li>COPY</li><li>MOVE</li><li>PROPFIND</li><li>PROPPATCH</li><li>MKCOL</li><li>LOCK</li><li>UNLOCK</li></ul>
+ * @method array getHosts() 获取<p>路由的域名</p>
+ * @method void setHosts(array $Hosts) 设置<p>路由的域名</p>
+ * @method array getPaths() 获取<p>路由的路径</p>
+ * @method void setPaths(array $Paths) 设置<p>路由的路径</p>
+ * @method array getProtocols() 获取<p>路由的协议，可选</p><ul><li>https</li><li>http</li></ul>
+ * @method void setProtocols(array $Protocols) 设置<p>路由的协议，可选</p><ul><li>https</li><li>http</li></ul>
+ * @method boolean getPreserveHost() 获取<p>转发到后端时是否保留Host</p>
+ * @method void setPreserveHost(boolean $PreserveHost) 设置<p>转发到后端时是否保留Host</p>
+ * @method integer getHttpsRedirectStatusCode() 获取<p>https重定向状态码</p>
+ * @method void setHttpsRedirectStatusCode(integer $HttpsRedirectStatusCode) 设置<p>https重定向状态码</p>
+ * @method boolean getStripPath() 获取<p>转发到后端时是否StripPath</p>
+ * @method void setStripPath(boolean $StripPath) 设置<p>转发到后端时是否StripPath</p>
+ * @method boolean getForceHttps() 获取<p>是否开启强制HTTPS</p>
+ * @method void setForceHttps(boolean $ForceHttps) 设置<p>是否开启强制HTTPS</p>
+ * @method array getDestinationPorts() 获取<p>四层匹配的目的端口</p>
+ * @method void setDestinationPorts(array $DestinationPorts) 设置<p>四层匹配的目的端口</p>
+ * @method array getHeaders() 获取<p>路由的Headers</p>
+ * @method void setHeaders(array $Headers) 设置<p>路由的Headers</p>
+ * @method boolean getRequestBuffering() 获取<p>是否缓存请求body，默认true</p>
+ * @method void setRequestBuffering(boolean $RequestBuffering) 设置<p>是否缓存请求body，默认true</p>
+ * @method boolean getResponseBuffering() 获取<p>是否缓存响应body，默认true</p>
+ * @method void setResponseBuffering(boolean $ResponseBuffering) 设置<p>是否缓存响应body，默认true</p>
+ * @method integer getRegexPriority() 获取<p>增加优先级</p>
+ * @method void setRegexPriority(integer $RegexPriority) 设置<p>增加优先级</p>
+ * @method array getQueryStringParameters() 获取<p>querysring参数</p>
+ * @method void setQueryStringParameters(array $QueryStringParameters) 设置<p>querysring参数</p>
  */
 class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
 {
     /**
-     * @var string 网关ID
+     * @var string <p>网关ID</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 所属服务的ID
+     * @var string <p>所属服务的ID</p>
      */
     public $ServiceID;
 
     /**
-     * @var string 路由的ID，实例级别唯一
+     * @var string <p>路由的ID，实例级别唯一</p>
      */
     public $RouteID;
 
     /**
-     * @var string 路由的名字，实例级别唯一，可以不提供
+     * @var string <p>路由的名字，实例级别唯一，可以不提供</p>
      */
     public $RouteName;
 
     /**
-     * @var array 路由的方法，其中方法可选值：
-- GET
-- POST
-- DELETE
-- PUT
-- OPTIONS
-- PATCH
-- HEAD
-- ANY
-- TRACE
-- COPY
-- MOVE
-- PROPFIND
-- PROPPATCH
-- MKCOL
-- LOCK
-- UNLOCK
+     * @var array <p>路由的方法，其中方法可选值：</p><ul><li>GET</li><li>POST</li><li>DELETE</li><li>PUT</li><li>OPTIONS</li><li>PATCH</li><li>HEAD</li><li>ANY</li><li>TRACE</li><li>COPY</li><li>MOVE</li><li>PROPFIND</li><li>PROPPATCH</li><li>MKCOL</li><li>LOCK</li><li>UNLOCK</li></ul>
      */
     public $Methods;
 
     /**
-     * @var array 路由的域名
+     * @var array <p>路由的域名</p>
      */
     public $Hosts;
 
     /**
-     * @var array 路由的路径
+     * @var array <p>路由的路径</p>
      */
     public $Paths;
 
     /**
-     * @var array 路由的协议，可选
-- https
-- http
+     * @var array <p>路由的协议，可选</p><ul><li>https</li><li>http</li></ul>
      */
     public $Protocols;
 
     /**
-     * @var boolean 转发到后端时是否保留Host
+     * @var boolean <p>转发到后端时是否保留Host</p>
      */
     public $PreserveHost;
 
     /**
-     * @var integer https重定向状态码
+     * @var integer <p>https重定向状态码</p>
      */
     public $HttpsRedirectStatusCode;
 
     /**
-     * @var boolean 转发到后端时是否StripPath
+     * @var boolean <p>转发到后端时是否StripPath</p>
      */
     public $StripPath;
 
     /**
-     * @var boolean 是否开启强制HTTPS
+     * @var boolean <p>是否开启强制HTTPS</p>
      * @deprecated
      */
     public $ForceHttps;
 
     /**
-     * @var array 四层匹配的目的端口	
+     * @var array <p>四层匹配的目的端口</p>
      */
     public $DestinationPorts;
 
     /**
-     * @var array 路由的Headers
+     * @var array <p>路由的Headers</p>
      */
     public $Headers;
 
     /**
-     * @var boolean 是否缓存请求body，默认true
+     * @var boolean <p>是否缓存请求body，默认true</p>
      */
     public $RequestBuffering;
 
     /**
-     * @var boolean 是否缓存响应body，默认true
+     * @var boolean <p>是否缓存响应body，默认true</p>
      */
     public $ResponseBuffering;
 
     /**
-     * @var integer 增加优先级
+     * @var integer <p>增加优先级</p>
      */
     public $RegexPriority;
 
     /**
-     * @var array querysring参数
+     * @var array <p>querysring参数</p>
      */
     public $QueryStringParameters;
 
     /**
-     * @param string $GatewayId 网关ID
-     * @param string $ServiceID 所属服务的ID
-     * @param string $RouteID 路由的ID，实例级别唯一
-     * @param string $RouteName 路由的名字，实例级别唯一，可以不提供
-     * @param array $Methods 路由的方法，其中方法可选值：
-- GET
-- POST
-- DELETE
-- PUT
-- OPTIONS
-- PATCH
-- HEAD
-- ANY
-- TRACE
-- COPY
-- MOVE
-- PROPFIND
-- PROPPATCH
-- MKCOL
-- LOCK
-- UNLOCK
-     * @param array $Hosts 路由的域名
-     * @param array $Paths 路由的路径
-     * @param array $Protocols 路由的协议，可选
-- https
-- http
-     * @param boolean $PreserveHost 转发到后端时是否保留Host
-     * @param integer $HttpsRedirectStatusCode https重定向状态码
-     * @param boolean $StripPath 转发到后端时是否StripPath
-     * @param boolean $ForceHttps 是否开启强制HTTPS
-     * @param array $DestinationPorts 四层匹配的目的端口	
-     * @param array $Headers 路由的Headers
-     * @param boolean $RequestBuffering 是否缓存请求body，默认true
-     * @param boolean $ResponseBuffering 是否缓存响应body，默认true
-     * @param integer $RegexPriority 增加优先级
-     * @param array $QueryStringParameters querysring参数
+     * @param string $GatewayId <p>网关ID</p>
+     * @param string $ServiceID <p>所属服务的ID</p>
+     * @param string $RouteID <p>路由的ID，实例级别唯一</p>
+     * @param string $RouteName <p>路由的名字，实例级别唯一，可以不提供</p>
+     * @param array $Methods <p>路由的方法，其中方法可选值：</p><ul><li>GET</li><li>POST</li><li>DELETE</li><li>PUT</li><li>OPTIONS</li><li>PATCH</li><li>HEAD</li><li>ANY</li><li>TRACE</li><li>COPY</li><li>MOVE</li><li>PROPFIND</li><li>PROPPATCH</li><li>MKCOL</li><li>LOCK</li><li>UNLOCK</li></ul>
+     * @param array $Hosts <p>路由的域名</p>
+     * @param array $Paths <p>路由的路径</p>
+     * @param array $Protocols <p>路由的协议，可选</p><ul><li>https</li><li>http</li></ul>
+     * @param boolean $PreserveHost <p>转发到后端时是否保留Host</p>
+     * @param integer $HttpsRedirectStatusCode <p>https重定向状态码</p>
+     * @param boolean $StripPath <p>转发到后端时是否StripPath</p>
+     * @param boolean $ForceHttps <p>是否开启强制HTTPS</p>
+     * @param array $DestinationPorts <p>四层匹配的目的端口</p>
+     * @param array $Headers <p>路由的Headers</p>
+     * @param boolean $RequestBuffering <p>是否缓存请求body，默认true</p>
+     * @param boolean $ResponseBuffering <p>是否缓存响应body，默认true</p>
+     * @param integer $RegexPriority <p>增加优先级</p>
+     * @param array $QueryStringParameters <p>querysring参数</p>
      */
     function __construct()
     {

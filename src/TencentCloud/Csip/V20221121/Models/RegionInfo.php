@@ -18,52 +18,52 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 地域信息
+ * 云资产所在地域信息。
  *
- * @method string getRegion() 获取<p>地域</p>
- * @method void setRegion(string $Region) 设置<p>地域</p>
- * @method string getRegionCode() 获取<p>地域编码</p>
- * @method void setRegionCode(string $RegionCode) 设置<p>地域编码</p>
- * @method integer getRegionId() 获取<p>地域ID</p>
- * @method void setRegionId(integer $RegionId) 设置<p>地域ID</p>
- * @method string getRegionName() 获取<p>地域名称</p>
- * @method void setRegionName(string $RegionName) 设置<p>地域名称</p>
- * @method string getRegionNameEn() 获取<p>地域英文名称</p>
- * @method void setRegionNameEn(string $RegionNameEn) 设置<p>地域英文名称</p>
+ * @method string getRegion() 获取地域标志，如 ap-guangzhou、ap-shanghai、ap-beijing。
+ * @method void setRegion(string $Region) 设置地域标志，如 ap-guangzhou、ap-shanghai、ap-beijing。
+ * @method string getRegionName() 获取地域中文名，如华南地区（广州）、华东地区（上海）、华北地区（北京）。
+ * @method void setRegionName(string $RegionName) 设置地域中文名，如华南地区（广州）、华东地区（上海）、华北地区（北京）。
+ * @method integer getRegionId() 获取地域数字 ID。
+ * @method void setRegionId(integer $RegionId) 设置地域数字 ID。
+ * @method string getRegionCode() 获取地域简码，如 gz、sh、bj。
+ * @method void setRegionCode(string $RegionCode) 设置地域简码，如 gz、sh、bj。
+ * @method string getRegionNameEn() 获取地域英文名。
+ * @method void setRegionNameEn(string $RegionNameEn) 设置地域英文名。
  */
 class RegionInfo extends AbstractModel
 {
     /**
-     * @var string <p>地域</p>
+     * @var string 地域标志，如 ap-guangzhou、ap-shanghai、ap-beijing。
      */
     public $Region;
 
     /**
-     * @var string <p>地域编码</p>
-     */
-    public $RegionCode;
-
-    /**
-     * @var integer <p>地域ID</p>
-     */
-    public $RegionId;
-
-    /**
-     * @var string <p>地域名称</p>
+     * @var string 地域中文名，如华南地区（广州）、华东地区（上海）、华北地区（北京）。
      */
     public $RegionName;
 
     /**
-     * @var string <p>地域英文名称</p>
+     * @var integer 地域数字 ID。
+     */
+    public $RegionId;
+
+    /**
+     * @var string 地域简码，如 gz、sh、bj。
+     */
+    public $RegionCode;
+
+    /**
+     * @var string 地域英文名。
      */
     public $RegionNameEn;
 
     /**
-     * @param string $Region <p>地域</p>
-     * @param string $RegionCode <p>地域编码</p>
-     * @param integer $RegionId <p>地域ID</p>
-     * @param string $RegionName <p>地域名称</p>
-     * @param string $RegionNameEn <p>地域英文名称</p>
+     * @param string $Region 地域标志，如 ap-guangzhou、ap-shanghai、ap-beijing。
+     * @param string $RegionName 地域中文名，如华南地区（广州）、华东地区（上海）、华北地区（北京）。
+     * @param integer $RegionId 地域数字 ID。
+     * @param string $RegionCode 地域简码，如 gz、sh、bj。
+     * @param string $RegionNameEn 地域英文名。
      */
     function __construct()
     {
@@ -82,16 +82,16 @@ class RegionInfo extends AbstractModel
             $this->Region = $param["Region"];
         }
 
-        if (array_key_exists("RegionCode",$param) and $param["RegionCode"] !== null) {
-            $this->RegionCode = $param["RegionCode"];
+        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
+            $this->RegionName = $param["RegionName"];
         }
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
         }
 
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists("RegionCode",$param) and $param["RegionCode"] !== null) {
+            $this->RegionCode = $param["RegionCode"];
         }
 
         if (array_key_exists("RegionNameEn",$param) and $param["RegionNameEn"] !== null) {

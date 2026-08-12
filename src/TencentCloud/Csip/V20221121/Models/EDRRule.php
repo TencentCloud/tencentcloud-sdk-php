@@ -86,6 +86,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIDs(array $InstanceIDs) 设置<p>自选实例ID范围</p>
  * @method array getExcludeInstanceIDs() 获取<p>排除实例ID</p>
  * @method void setExcludeInstanceIDs(array $ExcludeInstanceIDs) 设置<p>排除实例ID</p>
+ * @method array getClusterIDs() 获取<p>生效集群ID列表（TCSSScope=0 时有值；空返回 []）</p>
+ * @method void setClusterIDs(array $ClusterIDs) 设置<p>生效集群ID列表（TCSSScope=0 时有值；空返回 []）</p>
+ * @method array getExcludeClusterIDs() 获取<p>排除集群ID列表（空返回 []）</p>
+ * @method void setExcludeClusterIDs(array $ExcludeClusterIDs) 设置<p>排除集群ID列表（空返回 []）</p>
+ * @method array getConditionMatches() 获取<p>容器条件匹配</p>
+ * @method void setConditionMatches(array $ConditionMatches) 设置<p>容器条件匹配</p>
+ * @method array getTagItems() 获取<p>安全中心标签</p>
+ * @method void setTagItems(array $TagItems) 设置<p>安全中心标签</p>
  */
 class EDRRule extends AbstractModel
 {
@@ -255,6 +263,26 @@ class EDRRule extends AbstractModel
     public $ExcludeInstanceIDs;
 
     /**
+     * @var array <p>生效集群ID列表（TCSSScope=0 时有值；空返回 []）</p>
+     */
+    public $ClusterIDs;
+
+    /**
+     * @var array <p>排除集群ID列表（空返回 []）</p>
+     */
+    public $ExcludeClusterIDs;
+
+    /**
+     * @var array <p>容器条件匹配</p>
+     */
+    public $ConditionMatches;
+
+    /**
+     * @var array <p>安全中心标签</p>
+     */
+    public $TagItems;
+
+    /**
      * @param string $RuleID <p>策略ID</p>
      * @param integer $RuleType <p>策略类型，0-系统策略/System Rule, 1-自定义策略/Custom Rule</p>
      * @param string $Name <p>策略名称</p>
@@ -288,6 +316,10 @@ class EDRRule extends AbstractModel
      * @param integer $AppID <p>策略对应APPID</p>
      * @param array $InstanceIDs <p>自选实例ID范围</p>
      * @param array $ExcludeInstanceIDs <p>排除实例ID</p>
+     * @param array $ClusterIDs <p>生效集群ID列表（TCSSScope=0 时有值；空返回 []）</p>
+     * @param array $ExcludeClusterIDs <p>排除集群ID列表（空返回 []）</p>
+     * @param array $ConditionMatches <p>容器条件匹配</p>
+     * @param array $TagItems <p>安全中心标签</p>
      */
     function __construct()
     {
@@ -434,6 +466,32 @@ class EDRRule extends AbstractModel
 
         if (array_key_exists("ExcludeInstanceIDs",$param) and $param["ExcludeInstanceIDs"] !== null) {
             $this->ExcludeInstanceIDs = $param["ExcludeInstanceIDs"];
+        }
+
+        if (array_key_exists("ClusterIDs",$param) and $param["ClusterIDs"] !== null) {
+            $this->ClusterIDs = $param["ClusterIDs"];
+        }
+
+        if (array_key_exists("ExcludeClusterIDs",$param) and $param["ExcludeClusterIDs"] !== null) {
+            $this->ExcludeClusterIDs = $param["ExcludeClusterIDs"];
+        }
+
+        if (array_key_exists("ConditionMatches",$param) and $param["ConditionMatches"] !== null) {
+            $this->ConditionMatches = [];
+            foreach ($param["ConditionMatches"] as $key => $value){
+                $obj = new ConditionMatch();
+                $obj->deserialize($value);
+                array_push($this->ConditionMatches, $obj);
+            }
+        }
+
+        if (array_key_exists("TagItems",$param) and $param["TagItems"] !== null) {
+            $this->TagItems = [];
+            foreach ($param["TagItems"] as $key => $value){
+                $obj = new EDRRuleTagItem();
+                $obj->deserialize($value);
+                array_push($this->TagItems, $obj);
+            }
         }
     }
 }

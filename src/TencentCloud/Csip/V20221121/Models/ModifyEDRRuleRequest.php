@@ -74,6 +74,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIDsWithAppId(array $InstanceIDsWithAppId) 设置<p>自选资产对应的实例ID和APPID</p>
  * @method array getExcludeInstanceIDsWithAppId() 获取<p>全选资产排除的实例ID和APPID</p>
  * @method void setExcludeInstanceIDsWithAppId(array $ExcludeInstanceIDsWithAppId) 设置<p>全选资产排除的实例ID和APPID</p>
+ * @method array getTagIDs() 获取<p>安全中心标签ID列表（主机资产范围「按标签选择」，仅对主机生效）；上限 100（超限截断）。标签来源接口 DescribeAssetTagTree</p>
+ * @method void setTagIDs(array $TagIDs) 设置<p>安全中心标签ID列表（主机资产范围「按标签选择」，仅对主机生效）；上限 100（超限截断）。标签来源接口 DescribeAssetTagTree</p>
+ * @method array getClusterIDsWithAppId() 获取<p>指定生效集群列表（每项含 AppId + ClusterID，TCSSScope=0 时使用）。入参数组上限 3000（超限截断保留前 3000 项）</p>
+ * @method void setClusterIDsWithAppId(array $ClusterIDsWithAppId) 设置<p>指定生效集群列表（每项含 AppId + ClusterID，TCSSScope=0 时使用）。入参数组上限 3000（超限截断保留前 3000 项）</p>
+ * @method array getExcludeClusterIDsWithAppId() 获取<p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p>
+ * @method void setExcludeClusterIDsWithAppId(array $ExcludeClusterIDsWithAppId) 设置<p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p>
+ * @method array getImageIDsWithAppId() 获取<p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
+ * @method void setImageIDsWithAppId(array $ImageIDsWithAppId) 设置<p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
+ * @method array getConditionMatches() 获取<p>容器条件匹配</p>
+ * @method void setConditionMatches(array $ConditionMatches) 设置<p>容器条件匹配</p>
  */
 class ModifyEDRRuleRequest extends AbstractModel
 {
@@ -213,6 +223,31 @@ class ModifyEDRRuleRequest extends AbstractModel
     public $ExcludeInstanceIDsWithAppId;
 
     /**
+     * @var array <p>安全中心标签ID列表（主机资产范围「按标签选择」，仅对主机生效）；上限 100（超限截断）。标签来源接口 DescribeAssetTagTree</p>
+     */
+    public $TagIDs;
+
+    /**
+     * @var array <p>指定生效集群列表（每项含 AppId + ClusterID，TCSSScope=0 时使用）。入参数组上限 3000（超限截断保留前 3000 项）</p>
+     */
+    public $ClusterIDsWithAppId;
+
+    /**
+     * @var array <p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p>
+     */
+    public $ExcludeClusterIDsWithAppId;
+
+    /**
+     * @var array <p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
+     */
+    public $ImageIDsWithAppId;
+
+    /**
+     * @var array <p>容器条件匹配</p>
+     */
+    public $ConditionMatches;
+
+    /**
      * @param integer $RuleType <p>策略类型 / Rule Type: 0-系统策略/System Rule, 1-自定义策略/Custom Rule</p>
      * @param integer $AlertAction <p>执行动作 / Action: 0-告警/Alert, 1-放行/Allow, 2-告警并拦截/Alert and Block</p>
      * @param integer $CWPScope <p>生效资产 / Effective Scope: 0-指定主机/Specified Hosts, 1-全部主机/All Hosts, 2-专业版/Professional, 3-旗舰版/Flagship, 4-专业版+旗舰版/Professional+Flagship     QUUIDS        []string json:&quot;QUUIDS&quot;                                      // 主机列表 / Host QUUIDS (when Scope=0)</p>
@@ -240,6 +275,11 @@ class ModifyEDRRuleRequest extends AbstractModel
      * @param EdrAlertTarget $Target <p>告警的加白目标机器信息</p>
      * @param array $InstanceIDsWithAppId <p>自选资产对应的实例ID和APPID</p>
      * @param array $ExcludeInstanceIDsWithAppId <p>全选资产排除的实例ID和APPID</p>
+     * @param array $TagIDs <p>安全中心标签ID列表（主机资产范围「按标签选择」，仅对主机生效）；上限 100（超限截断）。标签来源接口 DescribeAssetTagTree</p>
+     * @param array $ClusterIDsWithAppId <p>指定生效集群列表（每项含 AppId + ClusterID，TCSSScope=0 时使用）。入参数组上限 3000（超限截断保留前 3000 项）</p>
+     * @param array $ExcludeClusterIDsWithAppId <p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p>
+     * @param array $ImageIDsWithAppId <p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
+     * @param array $ConditionMatches <p>容器条件匹配</p>
      */
     function __construct()
     {
@@ -372,6 +412,46 @@ class ModifyEDRRuleRequest extends AbstractModel
                 $obj = new InstanceIDWithAppIdItem();
                 $obj->deserialize($value);
                 array_push($this->ExcludeInstanceIDsWithAppId, $obj);
+            }
+        }
+
+        if (array_key_exists("TagIDs",$param) and $param["TagIDs"] !== null) {
+            $this->TagIDs = $param["TagIDs"];
+        }
+
+        if (array_key_exists("ClusterIDsWithAppId",$param) and $param["ClusterIDsWithAppId"] !== null) {
+            $this->ClusterIDsWithAppId = [];
+            foreach ($param["ClusterIDsWithAppId"] as $key => $value){
+                $obj = new ClusterIDWithAppIdItem();
+                $obj->deserialize($value);
+                array_push($this->ClusterIDsWithAppId, $obj);
+            }
+        }
+
+        if (array_key_exists("ExcludeClusterIDsWithAppId",$param) and $param["ExcludeClusterIDsWithAppId"] !== null) {
+            $this->ExcludeClusterIDsWithAppId = [];
+            foreach ($param["ExcludeClusterIDsWithAppId"] as $key => $value){
+                $obj = new ClusterIDWithAppIdItem();
+                $obj->deserialize($value);
+                array_push($this->ExcludeClusterIDsWithAppId, $obj);
+            }
+        }
+
+        if (array_key_exists("ImageIDsWithAppId",$param) and $param["ImageIDsWithAppId"] !== null) {
+            $this->ImageIDsWithAppId = [];
+            foreach ($param["ImageIDsWithAppId"] as $key => $value){
+                $obj = new ImageIDWithAppIdItem();
+                $obj->deserialize($value);
+                array_push($this->ImageIDsWithAppId, $obj);
+            }
+        }
+
+        if (array_key_exists("ConditionMatches",$param) and $param["ConditionMatches"] !== null) {
+            $this->ConditionMatches = [];
+            foreach ($param["ConditionMatches"] as $key => $value){
+                $obj = new ConditionMatch();
+                $obj->deserialize($value);
+                array_push($this->ConditionMatches, $obj);
             }
         }
     }

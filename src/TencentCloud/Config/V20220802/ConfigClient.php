@@ -35,6 +35,7 @@ use TencentCloud\Config\V20220802\Models as Models;
  * @method Models\CreateRemediationResponse CreateRemediation(Models\CreateRemediationRequest $req) 新增规则修正设置
  * @method Models\DeleteAggregateCompliancePackResponse DeleteAggregateCompliancePack(Models\DeleteAggregateCompliancePackRequest $req) 账号组删除合规包
  * @method Models\DeleteAggregateConfigRuleResponse DeleteAggregateConfigRule(Models\DeleteAggregateConfigRuleRequest $req) 账号组删除规则
+ * @method Models\DeleteAggregatorsResponse DeleteAggregators(Models\DeleteAggregatorsRequest $req) 删除账号组
  * @method Models\DeleteAlarmPolicyResponse DeleteAlarmPolicy(Models\DeleteAlarmPolicyRequest $req) 删除告警规则
  * @method Models\DeleteCompliancePackResponse DeleteCompliancePack(Models\DeleteCompliancePackRequest $req) 删除合规包
  * @method Models\DeleteConfigRuleResponse DeleteConfigRule(Models\DeleteConfigRuleRequest $req) 删除规则
@@ -81,6 +82,7 @@ use TencentCloud\Config\V20220802\Models as Models;
  * @method Models\UpdateAggregateCompliancePackStatusResponse UpdateAggregateCompliancePackStatus(Models\UpdateAggregateCompliancePackStatusRequest $req) 账号组开启、关闭合规包
  * @method Models\UpdateAggregateConfigDeliverResponse UpdateAggregateConfigDeliver(Models\UpdateAggregateConfigDeliverRequest $req) 账号组编辑投递设置
  * @method Models\UpdateAggregateConfigRuleResponse UpdateAggregateConfigRule(Models\UpdateAggregateConfigRuleRequest $req) 账号组编辑规则
+ * @method Models\UpdateAggregatorResponse UpdateAggregator(Models\UpdateAggregatorRequest $req) 编辑账号组
  * @method Models\UpdateAlarmPolicyResponse UpdateAlarmPolicy(Models\UpdateAlarmPolicyRequest $req) 更新告警规则
  * @method Models\UpdateCompliancePackResponse UpdateCompliancePack(Models\UpdateCompliancePackRequest $req) 编辑合规包
  * @method Models\UpdateCompliancePackStatusResponse UpdateCompliancePackStatus(Models\UpdateCompliancePackStatusRequest $req) 开启、关闭合规包

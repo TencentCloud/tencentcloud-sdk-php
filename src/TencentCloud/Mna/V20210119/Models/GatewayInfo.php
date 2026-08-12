@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置<p>网关状态。0：正常，1：异常</p>
  * @method integer getInstanceSize() 获取<p>网关实例数</p>
  * @method void setInstanceSize(integer $InstanceSize) 设置<p>网关实例数</p>
+ * @method string getGatewayIp() 获取<p>网关内网IP。</p>
+ * @method void setGatewayIp(string $GatewayIp) 设置<p>网关内网IP。</p>
+ * @method string getUsername() 获取<p>用户名。</p>
+ * @method void setUsername(string $Username) 设置<p>用户名。</p>
+ * @method string getToken() 获取<p>网关接入token。</p>
+ * @method void setToken(string $Token) 设置<p>网关接入token。</p>
+ * @method string getRegisterCenterUrl() 获取<p>网关注册URL。</p>
+ * @method void setRegisterCenterUrl(string $RegisterCenterUrl) 设置<p>网关注册URL。</p>
+ * @method string getTelemetryUrl() 获取<p>网关上报URL。</p>
+ * @method void setTelemetryUrl(string $TelemetryUrl) 设置<p>网关上报URL。</p>
  */
 class GatewayInfo extends AbstractModel
 {
@@ -59,11 +69,41 @@ class GatewayInfo extends AbstractModel
     public $InstanceSize;
 
     /**
+     * @var string <p>网关内网IP。</p>
+     */
+    public $GatewayIp;
+
+    /**
+     * @var string <p>用户名。</p>
+     */
+    public $Username;
+
+    /**
+     * @var string <p>网关接入token。</p>
+     */
+    public $Token;
+
+    /**
+     * @var string <p>网关注册URL。</p>
+     */
+    public $RegisterCenterUrl;
+
+    /**
+     * @var string <p>网关上报URL。</p>
+     */
+    public $TelemetryUrl;
+
+    /**
      * @param string $GatewayId <p>网关ID</p>
      * @param string $GatewayName <p>网关名称</p>
      * @param integer $CreateTime <p>创建时间，单位：秒</p>
      * @param integer $Status <p>网关状态。0：正常，1：异常</p>
      * @param integer $InstanceSize <p>网关实例数</p>
+     * @param string $GatewayIp <p>网关内网IP。</p>
+     * @param string $Username <p>用户名。</p>
+     * @param string $Token <p>网关接入token。</p>
+     * @param string $RegisterCenterUrl <p>网关注册URL。</p>
+     * @param string $TelemetryUrl <p>网关上报URL。</p>
      */
     function __construct()
     {
@@ -96,6 +136,26 @@ class GatewayInfo extends AbstractModel
 
         if (array_key_exists("InstanceSize",$param) and $param["InstanceSize"] !== null) {
             $this->InstanceSize = $param["InstanceSize"];
+        }
+
+        if (array_key_exists("GatewayIp",$param) and $param["GatewayIp"] !== null) {
+            $this->GatewayIp = $param["GatewayIp"];
+        }
+
+        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
+            $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
+            $this->Token = $param["Token"];
+        }
+
+        if (array_key_exists("RegisterCenterUrl",$param) and $param["RegisterCenterUrl"] !== null) {
+            $this->RegisterCenterUrl = $param["RegisterCenterUrl"];
+        }
+
+        if (array_key_exists("TelemetryUrl",$param) and $param["TelemetryUrl"] !== null) {
+            $this->TelemetryUrl = $param["TelemetryUrl"];
         }
     }
 }

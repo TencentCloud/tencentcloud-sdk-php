@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsProVersion(integer $IsProVersion) 设置<p>是否付费</p>
  * @method string getAlertSource() 获取<p>告警来源</p>
  * @method void setAlertSource(string $AlertSource) 设置<p>告警来源</p>
+ * @method string getMachineType() 获取<p>机器类型（列表接口专有；不限于容器告警，主机告警同样返回）。按 Quuid 富化自 machines.machine_type，原始枚举值原样透传、不做 i18n 翻译，前端自行映射展示。取值如 CVM / LH / Other / EKS-NATIVE 等；查不到对应机器信息时降级为空串 ""（与 InstanceName / PublicIp / PrivateIp 等资产富化字段降级行为一致）。告警详情接口（DescribeEdrAlertInfo）不返回此字段</p>
+ * @method void setMachineType(string $MachineType) 设置<p>机器类型（列表接口专有；不限于容器告警，主机告警同样返回）。按 Quuid 富化自 machines.machine_type，原始枚举值原样透传、不做 i18n 翻译，前端自行映射展示。取值如 CVM / LH / Other / EKS-NATIVE 等；查不到对应机器信息时降级为空串 ""（与 InstanceName / PublicIp / PrivateIp 等资产富化字段降级行为一致）。告警详情接口（DescribeEdrAlertInfo）不返回此字段</p>
  * @method string getImageId() 获取<p>镜像ID</p>
  * @method void setImageId(string $ImageId) 设置<p>镜像ID</p>
  * @method string getContainerId() 获取<p>容器id</p>
@@ -74,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIp(string $PrivateIp) 设置<p>内网IP</p>
  * @method boolean getRaspOpen() 获取<p>该机器是否开启应用防护</p>
  * @method void setRaspOpen(boolean $RaspOpen) 设置<p>该机器是否开启应用防护</p>
+ * @method string getContainerName() 获取<p>容器名称</p>
+ * @method void setContainerName(string $ContainerName) 设置<p>容器名称</p>
+ * @method string getImageName() 获取<p>容器镜像名称</p>
+ * @method void setImageName(string $ImageName) 设置<p>容器镜像名称</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
  */
 class EdrAlertItem extends AbstractModel
 {
@@ -153,6 +161,11 @@ class EdrAlertItem extends AbstractModel
     public $AlertSource;
 
     /**
+     * @var string <p>机器类型（列表接口专有；不限于容器告警，主机告警同样返回）。按 Quuid 富化自 machines.machine_type，原始枚举值原样透传、不做 i18n 翻译，前端自行映射展示。取值如 CVM / LH / Other / EKS-NATIVE 等；查不到对应机器信息时降级为空串 ""（与 InstanceName / PublicIp / PrivateIp 等资产富化字段降级行为一致）。告警详情接口（DescribeEdrAlertInfo）不返回此字段</p>
+     */
+    public $MachineType;
+
+    /**
      * @var string <p>镜像ID</p>
      */
     public $ImageId;
@@ -213,6 +226,21 @@ class EdrAlertItem extends AbstractModel
     public $RaspOpen;
 
     /**
+     * @var string <p>容器名称</p>
+     */
+    public $ContainerName;
+
+    /**
+     * @var string <p>容器镜像名称</p>
+     */
+    public $ImageName;
+
+    /**
+     * @var string <p>集群名称</p>
+     */
+    public $ClusterName;
+
+    /**
      * @param integer $Id <p>告警表id</p>
      * @param integer $AppId <p>APPID</p>
      * @param string $AlertId <p>告警ID</p>
@@ -228,6 +256,7 @@ class EdrAlertItem extends AbstractModel
      * @param string $Quuid <p>QUUID</p>
      * @param integer $IsProVersion <p>是否付费</p>
      * @param string $AlertSource <p>告警来源</p>
+     * @param string $MachineType <p>机器类型（列表接口专有；不限于容器告警，主机告警同样返回）。按 Quuid 富化自 machines.machine_type，原始枚举值原样透传、不做 i18n 翻译，前端自行映射展示。取值如 CVM / LH / Other / EKS-NATIVE 等；查不到对应机器信息时降级为空串 ""（与 InstanceName / PublicIp / PrivateIp 等资产富化字段降级行为一致）。告警详情接口（DescribeEdrAlertInfo）不返回此字段</p>
      * @param string $ImageId <p>镜像ID</p>
      * @param string $ContainerId <p>容器id</p>
      * @param string $ClusterId <p>集群ID</p>
@@ -240,6 +269,9 @@ class EdrAlertItem extends AbstractModel
      * @param string $PublicIp <p>公共IP</p>
      * @param string $PrivateIp <p>内网IP</p>
      * @param boolean $RaspOpen <p>该机器是否开启应用防护</p>
+     * @param string $ContainerName <p>容器名称</p>
+     * @param string $ImageName <p>容器镜像名称</p>
+     * @param string $ClusterName <p>集群名称</p>
      */
     function __construct()
     {
@@ -314,6 +346,10 @@ class EdrAlertItem extends AbstractModel
             $this->AlertSource = $param["AlertSource"];
         }
 
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
+
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
             $this->ImageId = $param["ImageId"];
         }
@@ -360,6 +396,18 @@ class EdrAlertItem extends AbstractModel
 
         if (array_key_exists("RaspOpen",$param) and $param["RaspOpen"] !== null) {
             $this->RaspOpen = $param["RaspOpen"];
+        }
+
+        if (array_key_exists("ContainerName",$param) and $param["ContainerName"] !== null) {
+            $this->ContainerName = $param["ContainerName"];
+        }
+
+        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
+            $this->ImageName = $param["ImageName"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

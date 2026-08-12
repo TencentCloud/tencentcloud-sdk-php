@@ -42,6 +42,7 @@ use TencentCloud\Tcbr\V20220217\Models as Models;
  * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) 查询日志信息
  * @method Models\StartVersionInstanceResponse StartVersionInstance(Models\StartVersionInstanceRequest $req) 启动版本实例
  * @method Models\StopVersionInstanceResponse StopVersionInstance(Models\StopVersionInstanceRequest $req) 停止版本实例
+ * @method Models\SubmitServerConfigChangeDiffResponse SubmitServerConfigChangeDiff(Models\SubmitServerConfigChangeDiffRequest $req) 更新配置并使用最新镜像发布
  * @method Models\SubmitServerRollbackResponse SubmitServerRollback(Models\SubmitServerRollbackRequest $req) 回滚版本
  * @method Models\UpdateCloudRunServerResponse UpdateCloudRunServer(Models\UpdateCloudRunServerRequest $req) 更新云托管服务
  */

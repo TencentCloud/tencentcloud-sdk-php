@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSupplyType() 获取<p>资源供应类型。TIDE:潮汐;SPOT:竞价;空:常规按量后付费</p>
  * @method void setSupplyType(string $SupplyType) 设置<p>资源供应类型。TIDE:潮汐;SPOT:竞价;空:常规按量后付费</p>
+ * @method string getClusterType() 获取<p>集群类型</p><p>枚举值：</p><ul><li>DEFAULT： 默认集群</li><li>THIRD： 第三方集群</li></ul><p>默认值：DEFAULT</p>
+ * @method void setClusterType(string $ClusterType) 设置<p>集群类型</p><p>枚举值：</p><ul><li>DEFAULT： 默认集群</li><li>THIRD： 第三方集群</li></ul><p>默认值：DEFAULT</p>
  */
 class ResourceSupplyAttribute extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ResourceSupplyAttribute extends AbstractModel
     public $SupplyType;
 
     /**
+     * @var string <p>集群类型</p><p>枚举值：</p><ul><li>DEFAULT： 默认集群</li><li>THIRD： 第三方集群</li></ul><p>默认值：DEFAULT</p>
+     */
+    public $ClusterType;
+
+    /**
      * @param string $SupplyType <p>资源供应类型。TIDE:潮汐;SPOT:竞价;空:常规按量后付费</p>
+     * @param string $ClusterType <p>集群类型</p><p>枚举值：</p><ul><li>DEFAULT： 默认集群</li><li>THIRD： 第三方集群</li></ul><p>默认值：DEFAULT</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ResourceSupplyAttribute extends AbstractModel
         }
         if (array_key_exists("SupplyType",$param) and $param["SupplyType"] !== null) {
             $this->SupplyType = $param["SupplyType"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

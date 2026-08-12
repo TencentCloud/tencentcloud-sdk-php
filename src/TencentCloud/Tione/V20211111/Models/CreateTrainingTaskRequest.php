@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrainToolConfig(TrainToolConfig $TrainToolConfig) 设置<p>训练诊断工具配置</p>
  * @method ResourceSupplyAttribute getResourceSupplyAttribute() 获取<p>资源供应属性</p>
  * @method void setResourceSupplyAttribute(ResourceSupplyAttribute $ResourceSupplyAttribute) 设置<p>资源供应属性</p>
+ * @method array getQueues() 获取<p>队列ID</p>
+ * @method void setQueues(array $Queues) 设置<p>队列ID</p>
  */
 class CreateTrainingTaskRequest extends AbstractModel
 {
@@ -227,6 +229,11 @@ class CreateTrainingTaskRequest extends AbstractModel
     public $ResourceSupplyAttribute;
 
     /**
+     * @var array <p>队列ID</p>
+     */
+    public $Queues;
+
+    /**
      * @param string $Name <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      * @param string $ChargeType <p>计费模式，eg：PREPAID 包年包月（资源组）;<br>POSTPAID_BY_HOUR 按量计费</p>
      * @param array $ResourceConfigInfos <p>资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{&quot;Role&quot;:&quot;WORKER&quot;, &quot;InstanceType&quot;: &quot;TI.S.MEDIUM.POST&quot;, &quot;InstanceNum&quot;: 1}]</p>
@@ -256,6 +263,7 @@ class CreateTrainingTaskRequest extends AbstractModel
      * @param array $Envs <p>环境变量</p>
      * @param TrainToolConfig $TrainToolConfig <p>训练诊断工具配置</p>
      * @param ResourceSupplyAttribute $ResourceSupplyAttribute <p>资源供应属性</p>
+     * @param array $Queues <p>队列ID</p>
      */
     function __construct()
     {
@@ -418,6 +426,10 @@ class CreateTrainingTaskRequest extends AbstractModel
         if (array_key_exists("ResourceSupplyAttribute",$param) and $param["ResourceSupplyAttribute"] !== null) {
             $this->ResourceSupplyAttribute = new ResourceSupplyAttribute();
             $this->ResourceSupplyAttribute->deserialize($param["ResourceSupplyAttribute"]);
+        }
+
+        if (array_key_exists("Queues",$param) and $param["Queues"] !== null) {
+            $this->Queues = $param["Queues"];
         }
     }
 }

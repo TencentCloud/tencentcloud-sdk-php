@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CFS存储的配置
  *
- * @method string getId() 获取cfs的实例的ID
- * @method void setId(string $Id) 设置cfs的实例的ID
- * @method string getPath() 获取存储的路径
- * @method void setPath(string $Path) 设置存储的路径
- * @method string getMountType() 获取cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+ * @method string getId() 获取<p>cfs的实例的ID</p>
+ * @method void setId(string $Id) 设置<p>cfs的实例的ID</p>
+ * @method string getPath() 获取<p>存储的路径</p>
+ * @method void setPath(string $Path) 设置<p>存储的路径</p>
+ * @method string getMountType() 获取<p>cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMountType(string $MountType) 设置cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+ * @method void setMountType(string $MountType) 设置<p>cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocol() 获取协议 1: NFS, 2: TURBO
+ * @method string getProtocol() 获取<p>协议 1: NFS, 2: TURBO</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocol(string $Protocol) 设置协议 1: NFS, 2: TURBO
+ * @method void setProtocol(string $Protocol) 设置<p>协议 1: NFS, 2: TURBO</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsPresetStorage() 获取<p>是否平台预置存储</p>
+ * @method void setIsPresetStorage(boolean $IsPresetStorage) 设置<p>是否平台预置存储</p>
  */
 class CFSConfig extends AbstractModel
 {
     /**
-     * @var string cfs的实例的ID
+     * @var string <p>cfs的实例的ID</p>
      */
     public $Id;
 
     /**
-     * @var string 存储的路径
+     * @var string <p>存储的路径</p>
      */
     public $Path;
 
     /**
-     * @var string cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+     * @var string <p>cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountType;
 
     /**
-     * @var string 协议 1: NFS, 2: TURBO
+     * @var string <p>协议 1: NFS, 2: TURBO</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
-     * @param string $Id cfs的实例的ID
-     * @param string $Path 存储的路径
-     * @param string $MountType cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+     * @var boolean <p>是否平台预置存储</p>
+     */
+    public $IsPresetStorage;
+
+    /**
+     * @param string $Id <p>cfs的实例的ID</p>
+     * @param string $Path <p>存储的路径</p>
+     * @param string $MountType <p>cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Protocol 协议 1: NFS, 2: TURBO
+     * @param string $Protocol <p>协议 1: NFS, 2: TURBO</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsPresetStorage <p>是否平台预置存储</p>
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class CFSConfig extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("IsPresetStorage",$param) and $param["IsPresetStorage"] !== null) {
+            $this->IsPresetStorage = $param["IsPresetStorage"];
         }
     }
 }

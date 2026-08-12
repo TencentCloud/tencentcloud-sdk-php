@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 推理服务单次部署配置。
  *
- * @method integer getListenPort() 获取模型服务需要监听的端口。
- * @method void setListenPort(integer $ListenPort) 设置模型服务需要监听的端口。
- * @method array getRequestPaths() 获取推理服务的请求路径列表。
- * @method void setRequestPaths(array $RequestPaths) 设置推理服务的请求路径列表。
- * @method array getContainers() 获取推理服务的容器配置。
- * @method void setContainers(array $Containers) 设置推理服务的容器配置。
- * @method InferenceResourceConfig getResourceConfig() 获取推理服务的资源配置。
- * @method void setResourceConfig(InferenceResourceConfig $ResourceConfig) 设置推理服务的资源配置。
+ * @method integer getListenPort() 获取<p>模型服务需要监听的端口。</p>
+ * @method void setListenPort(integer $ListenPort) 设置<p>模型服务需要监听的端口。</p>
+ * @method array getRequestPaths() 获取<p>推理服务的请求路径列表。</p>
+ * @method void setRequestPaths(array $RequestPaths) 设置<p>推理服务的请求路径列表。</p>
+ * @method array getContainers() 获取<p>推理服务的容器配置。</p>
+ * @method void setContainers(array $Containers) 设置<p>推理服务的容器配置。</p>
+ * @method InferenceResourceConfig getResourceConfig() 获取<p>推理服务的资源配置。</p>
+ * @method void setResourceConfig(InferenceResourceConfig $ResourceConfig) 设置<p>推理服务的资源配置。</p>
+ * @method InferenceAffinityConfig getAffinityConfig() 获取<p>推理服务亲和性配置。</p>
+ * @method void setAffinityConfig(InferenceAffinityConfig $AffinityConfig) 设置<p>推理服务亲和性配置。</p>
  */
 class InferenceServiceConfig extends AbstractModel
 {
     /**
-     * @var integer 模型服务需要监听的端口。
+     * @var integer <p>模型服务需要监听的端口。</p>
      */
     public $ListenPort;
 
     /**
-     * @var array 推理服务的请求路径列表。
+     * @var array <p>推理服务的请求路径列表。</p>
      */
     public $RequestPaths;
 
     /**
-     * @var array 推理服务的容器配置。
+     * @var array <p>推理服务的容器配置。</p>
      */
     public $Containers;
 
     /**
-     * @var InferenceResourceConfig 推理服务的资源配置。
+     * @var InferenceResourceConfig <p>推理服务的资源配置。</p>
      */
     public $ResourceConfig;
 
     /**
-     * @param integer $ListenPort 模型服务需要监听的端口。
-     * @param array $RequestPaths 推理服务的请求路径列表。
-     * @param array $Containers 推理服务的容器配置。
-     * @param InferenceResourceConfig $ResourceConfig 推理服务的资源配置。
+     * @var InferenceAffinityConfig <p>推理服务亲和性配置。</p>
+     */
+    public $AffinityConfig;
+
+    /**
+     * @param integer $ListenPort <p>模型服务需要监听的端口。</p>
+     * @param array $RequestPaths <p>推理服务的请求路径列表。</p>
+     * @param array $Containers <p>推理服务的容器配置。</p>
+     * @param InferenceResourceConfig $ResourceConfig <p>推理服务的资源配置。</p>
+     * @param InferenceAffinityConfig $AffinityConfig <p>推理服务亲和性配置。</p>
      */
     function __construct()
     {
@@ -90,6 +98,11 @@ class InferenceServiceConfig extends AbstractModel
         if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
             $this->ResourceConfig = new InferenceResourceConfig();
             $this->ResourceConfig->deserialize($param["ResourceConfig"]);
+        }
+
+        if (array_key_exists("AffinityConfig",$param) and $param["AffinityConfig"] !== null) {
+            $this->AffinityConfig = new InferenceAffinityConfig();
+            $this->AffinityConfig->deserialize($param["AffinityConfig"]);
         }
     }
 }

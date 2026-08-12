@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainers(array $Containers) 设置<p>推理服务的容器配置。当前仅支持设置 1 个容器。</p>
  * @method InferenceResourceConfig getResourceConfig() 获取<p>推理服务的资源配置。</p>
  * @method void setResourceConfig(InferenceResourceConfig $ResourceConfig) 设置<p>推理服务的资源配置。</p>
+ * @method InferenceAffinityConfig getAffinityConfig() 获取<p>推理服务亲和性配置。</p>
+ * @method void setAffinityConfig(InferenceAffinityConfig $AffinityConfig) 设置<p>推理服务亲和性配置。</p>
  * @method array getRequestPaths() 获取<p>推理服务的请求路径列表。最多支持 20 个路径。</p>
  * @method void setRequestPaths(array $RequestPaths) 设置<p>推理服务的请求路径列表。最多支持 20 个路径。</p>
  * @method string getDescription() 获取<p>描述信息。长度限制不超过 60 个字符。</p>
@@ -63,6 +65,11 @@ class CreateInferenceServiceRequest extends AbstractModel
     public $ResourceConfig;
 
     /**
+     * @var InferenceAffinityConfig <p>推理服务亲和性配置。</p>
+     */
+    public $AffinityConfig;
+
+    /**
      * @var array <p>推理服务的请求路径列表。最多支持 20 个路径。</p>
      */
     public $RequestPaths;
@@ -78,6 +85,7 @@ class CreateInferenceServiceRequest extends AbstractModel
      * @param integer $ListenPort <p>模型服务需要监听的端口。仅支持 1-65535 之间的整数。</p>
      * @param array $Containers <p>推理服务的容器配置。当前仅支持设置 1 个容器。</p>
      * @param InferenceResourceConfig $ResourceConfig <p>推理服务的资源配置。</p>
+     * @param InferenceAffinityConfig $AffinityConfig <p>推理服务亲和性配置。</p>
      * @param array $RequestPaths <p>推理服务的请求路径列表。最多支持 20 个路径。</p>
      * @param string $Description <p>描述信息。长度限制不超过 60 个字符。</p>
      */
@@ -118,6 +126,11 @@ class CreateInferenceServiceRequest extends AbstractModel
         if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
             $this->ResourceConfig = new InferenceResourceConfig();
             $this->ResourceConfig->deserialize($param["ResourceConfig"]);
+        }
+
+        if (array_key_exists("AffinityConfig",$param) and $param["AffinityConfig"] !== null) {
+            $this->AffinityConfig = new InferenceAffinityConfig();
+            $this->AffinityConfig->deserialize($param["AffinityConfig"]);
         }
 
         if (array_key_exists("RequestPaths",$param) and $param["RequestPaths"] !== null) {

@@ -20,74 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云联网（CCN）关联实例（Instance）对象。
  *
- * @method string getInstanceId() 获取关联实例ID。
- * @method void setInstanceId(string $InstanceId) 设置关联实例ID。
- * @method string getInstanceRegion() 获取关联实例ID所属大区，例如：ap-guangzhou。
- * @method void setInstanceRegion(string $InstanceRegion) 设置关联实例ID所属大区，例如：ap-guangzhou。
- * @method string getInstanceType() 获取关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-<li>`VPNGW`：VPNGW类型</li>
- * @method void setInstanceType(string $InstanceType) 设置关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-<li>`VPNGW`：VPNGW类型</li>
- * @method string getDescription() 获取备注
- * @method void setDescription(string $Description) 设置备注
- * @method string getRouteTableId() 获取实例关联的路由表ID。
- * @method void setRouteTableId(string $RouteTableId) 设置实例关联的路由表ID。
- * @method string getOrderType() 获取实例付费方式
- * @method void setOrderType(string $OrderType) 设置实例付费方式
+ * @method string getInstanceId() 获取<p>关联实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>关联实例ID。</p>
+ * @method string getInstanceRegion() 获取<p>关联实例ID所属大区，例如：ap-guangzhou。</p>
+ * @method void setInstanceRegion(string $InstanceRegion) 设置<p>关联实例ID所属大区，例如：ap-guangzhou。</p>
+ * @method string getInstanceType() 获取<p>关联实例类型，可选值：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li><li><code>VPNGW</code>：VPNGW类型</li>
+ * @method void setInstanceType(string $InstanceType) 设置<p>关联实例类型，可选值：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li><li><code>VPNGW</code>：VPNGW类型</li>
+ * @method string getDescription() 获取<p>备注</p>
+ * @method void setDescription(string $Description) 设置<p>备注</p>
+ * @method string getRouteTableId() 获取<p>实例关联的路由表ID。</p>
+ * @method void setRouteTableId(string $RouteTableId) 设置<p>实例关联的路由表ID。</p>
+ * @method string getOrderType() 获取<p>实例付费方式</p><p>枚举值：</p><ul><li>PayByCcnOwner： CCN所在账号付费</li><li>PayByInstanceOwner： 关联实例所在账号付费</li></ul>
+ * @method void setOrderType(string $OrderType) 设置<p>实例付费方式</p><p>枚举值：</p><ul><li>PayByCcnOwner： CCN所在账号付费</li><li>PayByInstanceOwner： 关联实例所在账号付费</li></ul>
  */
 class CcnInstance extends AbstractModel
 {
     /**
-     * @var string 关联实例ID。
+     * @var string <p>关联实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 关联实例ID所属大区，例如：ap-guangzhou。
+     * @var string <p>关联实例ID所属大区，例如：ap-guangzhou。</p>
      */
     public $InstanceRegion;
 
     /**
-     * @var string 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-<li>`VPNGW`：VPNGW类型</li>
+     * @var string <p>关联实例类型，可选值：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li><li><code>VPNGW</code>：VPNGW类型</li>
      */
     public $InstanceType;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Description;
 
     /**
-     * @var string 实例关联的路由表ID。
+     * @var string <p>实例关联的路由表ID。</p>
      */
     public $RouteTableId;
 
     /**
-     * @var string 实例付费方式
+     * @var string <p>实例付费方式</p><p>枚举值：</p><ul><li>PayByCcnOwner： CCN所在账号付费</li><li>PayByInstanceOwner： 关联实例所在账号付费</li></ul>
      */
     public $OrderType;
 
     /**
-     * @param string $InstanceId 关联实例ID。
-     * @param string $InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
-     * @param string $InstanceType 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-<li>`VPNGW`：VPNGW类型</li>
-     * @param string $Description 备注
-     * @param string $RouteTableId 实例关联的路由表ID。
-     * @param string $OrderType 实例付费方式
+     * @param string $InstanceId <p>关联实例ID。</p>
+     * @param string $InstanceRegion <p>关联实例ID所属大区，例如：ap-guangzhou。</p>
+     * @param string $InstanceType <p>关联实例类型，可选值：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li><li><code>VPNGW</code>：VPNGW类型</li>
+     * @param string $Description <p>备注</p>
+     * @param string $RouteTableId <p>实例关联的路由表ID。</p>
+     * @param string $OrderType <p>实例付费方式</p><p>枚举值：</p><ul><li>PayByCcnOwner： CCN所在账号付费</li><li>PayByInstanceOwner： 关联实例所在账号付费</li></ul>
      */
     function __construct()
     {

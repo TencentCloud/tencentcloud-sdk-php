@@ -20,146 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据源属性
  *
- * @method MysqlInfo getMysql() 获取Mysql数据源连接的属性
+ * @method MysqlInfo getMysql() 获取<p>Mysql数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMysql(MysqlInfo $Mysql) 设置Mysql数据源连接的属性
+ * @method void setMysql(MysqlInfo $Mysql) 设置<p>Mysql数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method HiveInfo getHive() 获取Hive数据源连接的属性
+ * @method HiveInfo getHive() 获取<p>Hive数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHive(HiveInfo $Hive) 设置Hive数据源连接的属性
+ * @method void setHive(HiveInfo $Hive) 设置<p>Hive数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method KafkaInfo getKafka() 获取Kafka数据源连接的属性
+ * @method KafkaInfo getKafka() 获取<p>Kafka数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKafka(KafkaInfo $Kafka) 设置Kafka数据源连接的属性
+ * @method void setKafka(KafkaInfo $Kafka) 设置<p>Kafka数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OtherDatasourceConnection getOtherDatasourceConnection() 获取其他数据源连接的属性
+ * @method OtherDatasourceConnection getOtherDatasourceConnection() 获取<p>其他数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOtherDatasourceConnection(OtherDatasourceConnection $OtherDatasourceConnection) 设置其他数据源连接的属性
+ * @method void setOtherDatasourceConnection(OtherDatasourceConnection $OtherDatasourceConnection) 设置<p>其他数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DataSourceInfo getPostgreSql() 获取PostgreSQL数据源连接的属性
+ * @method DataSourceInfo getPostgreSql() 获取<p>PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPostgreSql(DataSourceInfo $PostgreSql) 设置PostgreSQL数据源连接的属性
+ * @method void setPostgreSql(DataSourceInfo $PostgreSql) 设置<p>PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DataSourceInfo getSqlServer() 获取SQLServer数据源连接的属性
+ * @method DataSourceInfo getSqlServer() 获取<p>SQLServer数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSqlServer(DataSourceInfo $SqlServer) 设置SQLServer数据源连接的属性
+ * @method void setSqlServer(DataSourceInfo $SqlServer) 设置<p>SQLServer数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DataSourceInfo getClickHouse() 获取ClickHouse数据源连接的属性
+ * @method DataSourceInfo getClickHouse() 获取<p>ClickHouse数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClickHouse(DataSourceInfo $ClickHouse) 设置ClickHouse数据源连接的属性
+ * @method void setClickHouse(DataSourceInfo $ClickHouse) 设置<p>ClickHouse数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ElasticsearchInfo getElasticsearch() 获取Elasticsearch数据源连接的属性
+ * @method ElasticsearchInfo getElasticsearch() 获取<p>Elasticsearch数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setElasticsearch(ElasticsearchInfo $Elasticsearch) 设置Elasticsearch数据源连接的属性
+ * @method void setElasticsearch(ElasticsearchInfo $Elasticsearch) 设置<p>Elasticsearch数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DataSourceInfo getTDSQLPostgreSql() 获取TDSQL-PostgreSQL数据源连接的属性
+ * @method DataSourceInfo getTDSQLPostgreSql() 获取<p>TDSQL-PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTDSQLPostgreSql(DataSourceInfo $TDSQLPostgreSql) 设置TDSQL-PostgreSQL数据源连接的属性
+ * @method void setTDSQLPostgreSql(DataSourceInfo $TDSQLPostgreSql) 设置<p>TDSQL-PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TCHouseD getTCHouseD() 获取Doris数据源连接的属性
+ * @method TCHouseD getTCHouseD() 获取<p>Doris数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTCHouseD(TCHouseD $TCHouseD) 设置Doris数据源连接的属性
+ * @method void setTCHouseD(TCHouseD $TCHouseD) 设置<p>Doris数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TccHive getTccHive() 获取TccHive数据目录连接信息
- * @method void setTccHive(TccHive $TccHive) 设置TccHive数据目录连接信息
- * @method DataSourceInfo getMongoDB() 获取MongoDB 数据源
- * @method void setMongoDB(DataSourceInfo $MongoDB) 设置MongoDB 数据源
+ * @method TccHive getTccHive() 获取<p>TccHive数据目录连接信息</p>
+ * @method void setTccHive(TccHive $TccHive) 设置<p>TccHive数据目录连接信息</p>
+ * @method DataSourceInfo getMongoDB() 获取<p>MongoDB 数据源</p>
+ * @method void setMongoDB(DataSourceInfo $MongoDB) 设置<p>MongoDB 数据源</p>
+ * @method TCHousePInfo getTCHouseP() 获取<p>TCHouseP数据源</p>
+ * @method void setTCHouseP(TCHousePInfo $TCHouseP) 设置<p>TCHouseP数据源</p>
  */
 class DatasourceConnectionConfig extends AbstractModel
 {
     /**
-     * @var MysqlInfo Mysql数据源连接的属性
+     * @var MysqlInfo <p>Mysql数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mysql;
 
     /**
-     * @var HiveInfo Hive数据源连接的属性
+     * @var HiveInfo <p>Hive数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hive;
 
     /**
-     * @var KafkaInfo Kafka数据源连接的属性
+     * @var KafkaInfo <p>Kafka数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kafka;
 
     /**
-     * @var OtherDatasourceConnection 其他数据源连接的属性
+     * @var OtherDatasourceConnection <p>其他数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OtherDatasourceConnection;
 
     /**
-     * @var DataSourceInfo PostgreSQL数据源连接的属性
+     * @var DataSourceInfo <p>PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostgreSql;
 
     /**
-     * @var DataSourceInfo SQLServer数据源连接的属性
+     * @var DataSourceInfo <p>SQLServer数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SqlServer;
 
     /**
-     * @var DataSourceInfo ClickHouse数据源连接的属性
+     * @var DataSourceInfo <p>ClickHouse数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClickHouse;
 
     /**
-     * @var ElasticsearchInfo Elasticsearch数据源连接的属性
+     * @var ElasticsearchInfo <p>Elasticsearch数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Elasticsearch;
 
     /**
-     * @var DataSourceInfo TDSQL-PostgreSQL数据源连接的属性
+     * @var DataSourceInfo <p>TDSQL-PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TDSQLPostgreSql;
 
     /**
-     * @var TCHouseD Doris数据源连接的属性
+     * @var TCHouseD <p>Doris数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TCHouseD;
 
     /**
-     * @var TccHive TccHive数据目录连接信息
+     * @var TccHive <p>TccHive数据目录连接信息</p>
      */
     public $TccHive;
 
     /**
-     * @var DataSourceInfo MongoDB 数据源
+     * @var DataSourceInfo <p>MongoDB 数据源</p>
      */
     public $MongoDB;
 
     /**
-     * @param MysqlInfo $Mysql Mysql数据源连接的属性
+     * @var TCHousePInfo <p>TCHouseP数据源</p>
+     */
+    public $TCHouseP;
+
+    /**
+     * @param MysqlInfo $Mysql <p>Mysql数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HiveInfo $Hive Hive数据源连接的属性
+     * @param HiveInfo $Hive <p>Hive数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KafkaInfo $Kafka Kafka数据源连接的属性
+     * @param KafkaInfo $Kafka <p>Kafka数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OtherDatasourceConnection $OtherDatasourceConnection 其他数据源连接的属性
+     * @param OtherDatasourceConnection $OtherDatasourceConnection <p>其他数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSourceInfo $PostgreSql PostgreSQL数据源连接的属性
+     * @param DataSourceInfo $PostgreSql <p>PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSourceInfo $SqlServer SQLServer数据源连接的属性
+     * @param DataSourceInfo $SqlServer <p>SQLServer数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSourceInfo $ClickHouse ClickHouse数据源连接的属性
+     * @param DataSourceInfo $ClickHouse <p>ClickHouse数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ElasticsearchInfo $Elasticsearch Elasticsearch数据源连接的属性
+     * @param ElasticsearchInfo $Elasticsearch <p>Elasticsearch数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSourceInfo $TDSQLPostgreSql TDSQL-PostgreSQL数据源连接的属性
+     * @param DataSourceInfo $TDSQLPostgreSql <p>TDSQL-PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TCHouseD $TCHouseD Doris数据源连接的属性
+     * @param TCHouseD $TCHouseD <p>Doris数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TccHive $TccHive TccHive数据目录连接信息
-     * @param DataSourceInfo $MongoDB MongoDB 数据源
+     * @param TccHive $TccHive <p>TccHive数据目录连接信息</p>
+     * @param DataSourceInfo $MongoDB <p>MongoDB 数据源</p>
+     * @param TCHousePInfo $TCHouseP <p>TCHouseP数据源</p>
      */
     function __construct()
     {
@@ -232,6 +240,11 @@ class DatasourceConnectionConfig extends AbstractModel
         if (array_key_exists("MongoDB",$param) and $param["MongoDB"] !== null) {
             $this->MongoDB = new DataSourceInfo();
             $this->MongoDB->deserialize($param["MongoDB"]);
+        }
+
+        if (array_key_exists("TCHouseP",$param) and $param["TCHouseP"] !== null) {
+            $this->TCHouseP = new TCHousePInfo();
+            $this->TCHouseP->deserialize($param["TCHouseP"]);
         }
     }
 }

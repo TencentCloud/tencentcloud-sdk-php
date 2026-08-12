@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * instance_id和对应的appid账号信息
+ * 主机实例定位信息
  *
- * @method integer getAppId() 获取<p>APPID</p>
- * @method void setAppId(integer $AppId) 设置<p>APPID</p>
- * @method string getInstanceID() 获取<p>实例ID</p>
- * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
+ * @method integer getAppId() 获取机器所属AppId
+ * @method void setAppId(integer $AppId) 设置机器所属AppId
+ * @method string getInstanceID() 获取机器实例ID
+ * @method void setInstanceID(string $InstanceID) 设置机器实例ID
  */
 class InstanceIDWithAppIdItem extends AbstractModel
 {
     /**
-     * @var integer <p>APPID</p>
+     * @var integer 机器所属AppId
      */
     public $AppId;
 
     /**
-     * @var string <p>实例ID</p>
+     * @var string 机器实例ID
      */
     public $InstanceID;
 
     /**
-     * @param integer $AppId <p>APPID</p>
-     * @param string $InstanceID <p>实例ID</p>
+     * @param integer $AppId 机器所属AppId
+     * @param string $InstanceID 机器实例ID
      */
     function __construct()
     {

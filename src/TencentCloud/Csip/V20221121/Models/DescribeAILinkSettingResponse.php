@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExcludeQuuids(array $ExcludeQuuids) 设置<p>排除主机Quuid列表</p>
  * @method integer getAutoInclude() 获取<p>新增资产自动包含 0 不包含 1包含</p>
  * @method void setAutoInclude(integer $AutoInclude) 设置<p>新增资产自动包含 0 不包含 1包含</p>
+ * @method array getTagIDs() 获取<p>标签</p>
+ * @method void setTagIDs(array $TagIDs) 设置<p>标签</p>
+ * @method integer getTCSSScope() 获取<p>0，1</p><p>枚举值：</p><ul><li>0： 部分</li><li>1： 全部</li></ul>
+ * @method void setTCSSScope(integer $TCSSScope) 设置<p>0，1</p><p>枚举值：</p><ul><li>0： 部分</li><li>1： 全部</li></ul>
+ * @method array getClusterIDs() 获取<p>集群ID</p>
+ * @method void setClusterIDs(array $ClusterIDs) 设置<p>集群ID</p>
+ * @method array getExcludeClusterIDs() 获取<p>排除集群ID</p>
+ * @method void setExcludeClusterIDs(array $ExcludeClusterIDs) 设置<p>排除集群ID</p>
+ * @method array getInstanceIds() 获取<p>实例ID</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>实例ID</p>
+ * @method array getExcludeInstanceIds() 获取<p>排除实例ID</p>
+ * @method void setExcludeInstanceIds(array $ExcludeInstanceIds) 设置<p>排除实例ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,11 +80,13 @@ class DescribeAILinkSettingResponse extends AbstractModel
 
     /**
      * @var array <p>自选主机Quuid列表</p>
+     * @deprecated
      */
     public $Quuids;
 
     /**
      * @var array <p>排除主机Quuid列表</p>
+     * @deprecated
      */
     public $ExcludeQuuids;
 
@@ -80,6 +94,36 @@ class DescribeAILinkSettingResponse extends AbstractModel
      * @var integer <p>新增资产自动包含 0 不包含 1包含</p>
      */
     public $AutoInclude;
+
+    /**
+     * @var array <p>标签</p>
+     */
+    public $TagIDs;
+
+    /**
+     * @var integer <p>0，1</p><p>枚举值：</p><ul><li>0： 部分</li><li>1： 全部</li></ul>
+     */
+    public $TCSSScope;
+
+    /**
+     * @var array <p>集群ID</p>
+     */
+    public $ClusterIDs;
+
+    /**
+     * @var array <p>排除集群ID</p>
+     */
+    public $ExcludeClusterIDs;
+
+    /**
+     * @var array <p>实例ID</p>
+     */
+    public $InstanceIds;
+
+    /**
+     * @var array <p>排除实例ID</p>
+     */
+    public $ExcludeInstanceIds;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -95,6 +139,12 @@ class DescribeAILinkSettingResponse extends AbstractModel
      * @param array $Quuids <p>自选主机Quuid列表</p>
      * @param array $ExcludeQuuids <p>排除主机Quuid列表</p>
      * @param integer $AutoInclude <p>新增资产自动包含 0 不包含 1包含</p>
+     * @param array $TagIDs <p>标签</p>
+     * @param integer $TCSSScope <p>0，1</p><p>枚举值：</p><ul><li>0： 部分</li><li>1： 全部</li></ul>
+     * @param array $ClusterIDs <p>集群ID</p>
+     * @param array $ExcludeClusterIDs <p>排除集群ID</p>
+     * @param array $InstanceIds <p>实例ID</p>
+     * @param array $ExcludeInstanceIds <p>排除实例ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +190,30 @@ class DescribeAILinkSettingResponse extends AbstractModel
 
         if (array_key_exists("AutoInclude",$param) and $param["AutoInclude"] !== null) {
             $this->AutoInclude = $param["AutoInclude"];
+        }
+
+        if (array_key_exists("TagIDs",$param) and $param["TagIDs"] !== null) {
+            $this->TagIDs = $param["TagIDs"];
+        }
+
+        if (array_key_exists("TCSSScope",$param) and $param["TCSSScope"] !== null) {
+            $this->TCSSScope = $param["TCSSScope"];
+        }
+
+        if (array_key_exists("ClusterIDs",$param) and $param["ClusterIDs"] !== null) {
+            $this->ClusterIDs = $param["ClusterIDs"];
+        }
+
+        if (array_key_exists("ExcludeClusterIDs",$param) and $param["ExcludeClusterIDs"] !== null) {
+            $this->ExcludeClusterIDs = $param["ExcludeClusterIDs"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("ExcludeInstanceIds",$param) and $param["ExcludeInstanceIds"] !== null) {
+            $this->ExcludeInstanceIds = $param["ExcludeInstanceIds"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

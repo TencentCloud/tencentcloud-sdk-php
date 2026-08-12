@@ -20,490 +20,523 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 堡垒机服务信息
  *
- * @method string getResourceId() 获取服务实例ID，如bh-saas-s3ed4r5e
- * @method void setResourceId(string $ResourceId) 设置服务实例ID，如bh-saas-s3ed4r5e
- * @method string getApCode() 获取地域编码
- * @method void setApCode(string $ApCode) 设置地域编码
- * @method string getSvArgs() 获取服务实例规格信息
- * @method void setSvArgs(string $SvArgs) 设置服务实例规格信息
- * @method string getVpcId() 获取VPC ID
- * @method void setVpcId(string $VpcId) 设置VPC ID
- * @method integer getNodes() 获取服务规格对应的资产数
- * @method void setNodes(integer $Nodes) 设置服务规格对应的资产数
- * @method integer getRenewFlag() 获取自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
- * @method void setRenewFlag(integer $RenewFlag) 设置自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
- * @method string getExpireTime() 获取过期时间
- * @method void setExpireTime(string $ExpireTime) 设置过期时间
- * @method integer getStatus() 获取资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
- * @method void setStatus(integer $Status) 设置资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
- * @method string getResourceName() 获取服务实例名，如T-Sec-堡垒机（SaaS型）
- * @method void setResourceName(string $ResourceName) 设置服务实例名，如T-Sec-堡垒机（SaaS型）
- * @method integer getPid() 获取定价模型ID
- * @method void setPid(integer $Pid) 设置定价模型ID
- * @method string getCreateTime() 获取资源创建时间
- * @method void setCreateTime(string $CreateTime) 设置资源创建时间
- * @method string getProductCode() 获取商品码, p_cds_dasb
- * @method void setProductCode(string $ProductCode) 设置商品码, p_cds_dasb
- * @method string getSubProductCode() 获取子商品码, sp_cds_dasb_bh_saas
- * @method void setSubProductCode(string $SubProductCode) 设置子商品码, sp_cds_dasb_bh_saas
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method boolean getExpired() 获取是否过期，true-过期，false-未过期
- * @method void setExpired(boolean $Expired) 设置是否过期，true-过期，false-未过期
- * @method boolean getDeployed() 获取是否开通，true-开通，false-未开通
- * @method void setDeployed(boolean $Deployed) 设置是否开通，true-开通，false-未开通
- * @method string getVpcName() 获取开通服务的 VPC 名称
- * @method void setVpcName(string $VpcName) 设置开通服务的 VPC 名称
- * @method string getVpcCidrBlock() 获取开通服务的 VPC 对应的网段
- * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置开通服务的 VPC 对应的网段
- * @method string getSubnetId() 获取开通服务的子网ID
- * @method void setSubnetId(string $SubnetId) 设置开通服务的子网ID
- * @method string getSubnetName() 获取开通服务的子网名称
- * @method void setSubnetName(string $SubnetName) 设置开通服务的子网名称
- * @method string getCidrBlock() 获取开通服务的子网网段
- * @method void setCidrBlock(string $CidrBlock) 设置开通服务的子网网段
- * @method array getPublicIpSet() 获取外部IP
- * @method void setPublicIpSet(array $PublicIpSet) 设置外部IP
- * @method array getPrivateIpSet() 获取内部IP
- * @method void setPrivateIpSet(array $PrivateIpSet) 设置内部IP
- * @method array getModuleSet() 获取服务开通的高级功能列表，如:[DB]
- * @method void setModuleSet(array $ModuleSet) 设置服务开通的高级功能列表，如:[DB]
- * @method integer getUsedNodes() 获取已使用的授权点数
- * @method void setUsedNodes(integer $UsedNodes) 设置已使用的授权点数
- * @method integer getExtendPoints() 获取扩展点数
- * @method void setExtendPoints(integer $ExtendPoints) 设置扩展点数
- * @method integer getPackageBandwidth() 获取带宽扩展包个数(4M)
- * @method void setPackageBandwidth(integer $PackageBandwidth) 设置带宽扩展包个数(4M)
- * @method integer getPackageNode() 获取授权点数扩展包个数(50点)
- * @method void setPackageNode(integer $PackageNode) 设置授权点数扩展包个数(50点)
- * @method string getLogDeliveryArgs() 获取日志投递规格信息
- * @method void setLogDeliveryArgs(string $LogDeliveryArgs) 设置日志投递规格信息
- * @method array getClbSet() 获取堡垒机资源LB	
- * @method void setClbSet(array $ClbSet) 设置堡垒机资源LB	
- * @method integer getDomainCount() 获取网络域个数
- * @method void setDomainCount(integer $DomainCount) 设置网络域个数
- * @method integer getUsedDomainCount() 获取已经使用的网络域个数
- * @method void setUsedDomainCount(integer $UsedDomainCount) 设置已经使用的网络域个数
- * @method integer getTrial() 获取0 非试用版，1 试用版
- * @method void setTrial(integer $Trial) 设置0 非试用版，1 试用版
- * @method string getLogDelivery() 获取日志投递规格信息
- * @method void setLogDelivery(string $LogDelivery) 设置日志投递规格信息
- * @method string getCdcClusterId() 获取cdc集群id
- * @method void setCdcClusterId(string $CdcClusterId) 设置cdc集群id
- * @method integer getDeployModel() 获取部署模式 默认0 0-cvm 1-tke
- * @method void setDeployModel(integer $DeployModel) 设置部署模式 默认0 0-cvm 1-tke
- * @method integer getIntranetAccess() 获取0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
- * @method void setIntranetAccess(integer $IntranetAccess) 设置0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
- * @method array getIntranetPrivateIpSet() 获取内网访问的ip
- * @method void setIntranetPrivateIpSet(array $IntranetPrivateIpSet) 设置内网访问的ip
- * @method string getIntranetVpcId() 获取开通内网访问的vpc
- * @method void setIntranetVpcId(string $IntranetVpcId) 设置开通内网访问的vpc
- * @method string getIntranetSubnetId() 获取开通内网访问的subnetId
- * @method void setIntranetSubnetId(string $IntranetSubnetId) 设置开通内网访问的subnetId
- * @method string getIntranetVpcCidr() 获取开通内网访问vpc的网段
- * @method void setIntranetVpcCidr(string $IntranetVpcCidr) 设置开通内网访问vpc的网段
- * @method string getDomainName() 获取堡垒机内网ip自定义域名
- * @method void setDomainName(string $DomainName) 设置堡垒机内网ip自定义域名
- * @method boolean getShareClb() 获取是否共享clb，true-共享clb，false-独享clb
- * @method void setShareClb(boolean $ShareClb) 设置是否共享clb，true-共享clb，false-独享clb
- * @method string getOpenClbId() 获取共享clb id
- * @method void setOpenClbId(string $OpenClbId) 设置共享clb id
- * @method string getLbVipIsp() 获取运营商信息
- * @method void setLbVipIsp(string $LbVipIsp) 设置运营商信息
- * @method integer getTUICmdPort() 获取linux资产命令行运维端口
- * @method void setTUICmdPort(integer $TUICmdPort) 设置linux资产命令行运维端口
- * @method integer getTUIDirectPort() 获取linux资产直连端口
- * @method void setTUIDirectPort(integer $TUIDirectPort) 设置linux资产直连端口
- * @method integer getWebAccess() 获取1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
- * @method void setWebAccess(integer $WebAccess) 设置1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
- * @method integer getClientAccess() 获取1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
- * @method void setClientAccess(integer $ClientAccess) 设置1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
- * @method integer getExternalAccess() 获取1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
- * @method void setExternalAccess(integer $ExternalAccess) 设置1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
- * @method integer getIOAResource() 获取0默认值。0-免费版（试用版）ioa，1-付费版ioa
- * @method void setIOAResource(integer $IOAResource) 设置0默认值。0-免费版（试用版）ioa，1-付费版ioa
- * @method integer getPackageIOAUserCount() 获取零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
- * @method void setPackageIOAUserCount(integer $PackageIOAUserCount) 设置零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
- * @method integer getPackageIOABandwidth() 获取 零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
- * @method void setPackageIOABandwidth(integer $PackageIOABandwidth) 设置 零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
- * @method string getIOAResourceId() 获取堡垒机实例对应的零信任实例id
- * @method void setIOAResourceId(string $IOAResourceId) 设置堡垒机实例对应的零信任实例id
- * @method string getResourceEdition() 获取资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
- * @method void setResourceEdition(string $ResourceEdition) 设置资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
- * @method string getTimeUnit() 获取计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
- * @method void setTimeUnit(string $TimeUnit) 设置计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
- * @method integer getTimeSpan() 获取计费时长
- * @method void setTimeSpan(integer $TimeSpan) 设置计费时长
- * @method integer getPayMode() 获取计费模式 0后付费，1预付费
- * @method void setPayMode(integer $PayMode) 设置计费模式 0后付费，1预付费
- * @method string getBillingRegion() 获取计费侧地域
- * @method void setBillingRegion(string $BillingRegion) 设置计费侧地域
- * @method string getBillingZone() 获取计费侧可用区
- * @method void setBillingZone(string $BillingZone) 设置计费侧可用区
+ * @method string getResourceId() 获取<p>服务实例ID，如bh-saas-s3ed4r5e</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>服务实例ID，如bh-saas-s3ed4r5e</p>
+ * @method string getApCode() 获取<p>地域编码</p>
+ * @method void setApCode(string $ApCode) 设置<p>地域编码</p>
+ * @method string getSvArgs() 获取<p>服务实例规格信息</p>
+ * @method void setSvArgs(string $SvArgs) 设置<p>服务实例规格信息</p>
+ * @method string getVpcId() 获取<p>VPC ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC ID</p>
+ * @method integer getNodes() 获取<p>服务规格对应的资产数</p>
+ * @method void setNodes(integer $Nodes) 设置<p>服务规格对应的资产数</p>
+ * @method integer getRenewFlag() 获取<p>自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费</p>
+ * @method string getExpireTime() 获取<p>过期时间</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>过期时间</p>
+ * @method integer getStatus() 获取<p>资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中</p>
+ * @method void setStatus(integer $Status) 设置<p>资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中</p>
+ * @method string getResourceName() 获取<p>服务实例名，如T-Sec-堡垒机（SaaS型）</p>
+ * @method void setResourceName(string $ResourceName) 设置<p>服务实例名，如T-Sec-堡垒机（SaaS型）</p>
+ * @method integer getPid() 获取<p>定价模型ID</p>
+ * @method void setPid(integer $Pid) 设置<p>定价模型ID</p>
+ * @method string getCreateTime() 获取<p>资源创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>资源创建时间</p>
+ * @method string getProductCode() 获取<p>商品码, p_cds_dasb</p>
+ * @method void setProductCode(string $ProductCode) 设置<p>商品码, p_cds_dasb</p>
+ * @method string getSubProductCode() 获取<p>子商品码, sp_cds_dasb_bh_saas</p>
+ * @method void setSubProductCode(string $SubProductCode) 设置<p>子商品码, sp_cds_dasb_bh_saas</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method boolean getExpired() 获取<p>是否过期，true-过期，false-未过期</p>
+ * @method void setExpired(boolean $Expired) 设置<p>是否过期，true-过期，false-未过期</p>
+ * @method boolean getDeployed() 获取<p>是否开通，true-开通，false-未开通</p>
+ * @method void setDeployed(boolean $Deployed) 设置<p>是否开通，true-开通，false-未开通</p>
+ * @method string getVpcName() 获取<p>开通服务的 VPC 名称</p>
+ * @method void setVpcName(string $VpcName) 设置<p>开通服务的 VPC 名称</p>
+ * @method string getVpcCidrBlock() 获取<p>开通服务的 VPC 对应的网段</p>
+ * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置<p>开通服务的 VPC 对应的网段</p>
+ * @method string getSubnetId() 获取<p>开通服务的子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>开通服务的子网ID</p>
+ * @method string getSubnetName() 获取<p>开通服务的子网名称</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>开通服务的子网名称</p>
+ * @method string getCidrBlock() 获取<p>开通服务的子网网段</p>
+ * @method void setCidrBlock(string $CidrBlock) 设置<p>开通服务的子网网段</p>
+ * @method array getPublicIpSet() 获取<p>外部IP</p>
+ * @method void setPublicIpSet(array $PublicIpSet) 设置<p>外部IP</p>
+ * @method array getPrivateIpSet() 获取<p>内部IP</p>
+ * @method void setPrivateIpSet(array $PrivateIpSet) 设置<p>内部IP</p>
+ * @method array getModuleSet() 获取<p>服务开通的高级功能列表，如:[DB]</p>
+ * @method void setModuleSet(array $ModuleSet) 设置<p>服务开通的高级功能列表，如:[DB]</p>
+ * @method integer getUsedNodes() 获取<p>已使用的授权点数</p>
+ * @method void setUsedNodes(integer $UsedNodes) 设置<p>已使用的授权点数</p>
+ * @method integer getExtendPoints() 获取<p>扩展点数</p>
+ * @method void setExtendPoints(integer $ExtendPoints) 设置<p>扩展点数</p>
+ * @method integer getPackageBandwidth() 获取<p>带宽扩展包个数(4M)</p>
+ * @method void setPackageBandwidth(integer $PackageBandwidth) 设置<p>带宽扩展包个数(4M)</p>
+ * @method integer getPackageNode() 获取<p>授权点数扩展包个数(50点)</p>
+ * @method void setPackageNode(integer $PackageNode) 设置<p>授权点数扩展包个数(50点)</p>
+ * @method string getLogDeliveryArgs() 获取<p>日志投递规格信息</p>
+ * @method void setLogDeliveryArgs(string $LogDeliveryArgs) 设置<p>日志投递规格信息</p>
+ * @method array getClbSet() 获取<p>堡垒机资源LB</p>
+ * @method void setClbSet(array $ClbSet) 设置<p>堡垒机资源LB</p>
+ * @method integer getDomainCount() 获取<p>网络域个数</p>
+ * @method void setDomainCount(integer $DomainCount) 设置<p>网络域个数</p>
+ * @method integer getUsedDomainCount() 获取<p>已经使用的网络域个数</p>
+ * @method void setUsedDomainCount(integer $UsedDomainCount) 设置<p>已经使用的网络域个数</p>
+ * @method integer getEnabledDomainCount() 获取<p>开启的网络域个数（不包含默认网络域）</p>
+ * @method void setEnabledDomainCount(integer $EnabledDomainCount) 设置<p>开启的网络域个数（不包含默认网络域）</p>
+ * @method integer getTrial() 获取<p>0 非试用版，1 试用版</p>
+ * @method void setTrial(integer $Trial) 设置<p>0 非试用版，1 试用版</p>
+ * @method string getLogDelivery() 获取<p>日志投递规格信息</p>
+ * @method void setLogDelivery(string $LogDelivery) 设置<p>日志投递规格信息</p>
+ * @method string getCdcClusterId() 获取<p>cdc集群id</p>
+ * @method void setCdcClusterId(string $CdcClusterId) 设置<p>cdc集群id</p>
+ * @method integer getDeployModel() 获取<p>部署模式 默认0 0-cvm 1-tke</p>
+ * @method void setDeployModel(integer $DeployModel) 设置<p>部署模式 默认0 0-cvm 1-tke</p>
+ * @method integer getIntranetAccess() 获取<p>0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中</p>
+ * @method void setIntranetAccess(integer $IntranetAccess) 设置<p>0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中</p>
+ * @method array getIntranetPrivateIpSet() 获取<p>内网访问的ip</p>
+ * @method void setIntranetPrivateIpSet(array $IntranetPrivateIpSet) 设置<p>内网访问的ip</p>
+ * @method string getIntranetVpcId() 获取<p>开通内网访问的vpc</p>
+ * @method void setIntranetVpcId(string $IntranetVpcId) 设置<p>开通内网访问的vpc</p>
+ * @method string getIntranetSubnetId() 获取<p>开通内网访问的subnetId</p>
+ * @method void setIntranetSubnetId(string $IntranetSubnetId) 设置<p>开通内网访问的subnetId</p>
+ * @method array getIntranetSubnetIdSet() 获取<p>开通内网访问的子网集合</p>
+ * @method void setIntranetSubnetIdSet(array $IntranetSubnetIdSet) 设置<p>开通内网访问的子网集合</p>
+ * @method string getIntranetVpcCidr() 获取<p>开通内网访问vpc的网段</p>
+ * @method void setIntranetVpcCidr(string $IntranetVpcCidr) 设置<p>开通内网访问vpc的网段</p>
+ * @method string getDomainName() 获取<p>堡垒机内网ip自定义域名</p>
+ * @method void setDomainName(string $DomainName) 设置<p>堡垒机内网ip自定义域名</p>
+ * @method boolean getShareClb() 获取<p>是否共享clb，true-共享clb，false-独享clb</p>
+ * @method void setShareClb(boolean $ShareClb) 设置<p>是否共享clb，true-共享clb，false-独享clb</p>
+ * @method string getOpenClbId() 获取<p>共享clb id</p>
+ * @method void setOpenClbId(string $OpenClbId) 设置<p>共享clb id</p>
+ * @method string getLbVipIsp() 获取<p>运营商信息</p>
+ * @method void setLbVipIsp(string $LbVipIsp) 设置<p>运营商信息</p>
+ * @method integer getTUICmdPort() 获取<p>linux资产命令行运维端口</p>
+ * @method void setTUICmdPort(integer $TUICmdPort) 设置<p>linux资产命令行运维端口</p>
+ * @method integer getTUIDirectPort() 获取<p>linux资产直连端口</p>
+ * @method void setTUIDirectPort(integer $TUIDirectPort) 设置<p>linux资产直连端口</p>
+ * @method integer getWebAccess() 获取<p>1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中</p>
+ * @method void setWebAccess(integer $WebAccess) 设置<p>1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中</p>
+ * @method integer getClientAccess() 获取<p>1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中</p>
+ * @method void setClientAccess(integer $ClientAccess) 设置<p>1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中</p>
+ * @method integer getExternalAccess() 获取<p>1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中</p>
+ * @method void setExternalAccess(integer $ExternalAccess) 设置<p>1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中</p>
+ * @method integer getIOAResource() 获取<p>0默认值。0-免费版（试用版）ioa，1-付费版ioa</p>
+ * @method void setIOAResource(integer $IOAResource) 设置<p>0默认值。0-免费版（试用版）ioa，1-付费版ioa</p>
+ * @method integer getPackageIOAUserCount() 获取<p>零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数</p>
+ * @method void setPackageIOAUserCount(integer $PackageIOAUserCount) 设置<p>零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数</p>
+ * @method integer getPackageIOABandwidth() 获取<p>零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽</p>
+ * @method void setPackageIOABandwidth(integer $PackageIOABandwidth) 设置<p>零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽</p>
+ * @method string getIOAResourceId() 获取<p>堡垒机实例对应的零信任实例id</p>
+ * @method void setIOAResourceId(string $IOAResourceId) 设置<p>堡垒机实例对应的零信任实例id</p>
+ * @method string getResourceEdition() 获取<p>资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm</p>
+ * @method void setResourceEdition(string $ResourceEdition) 设置<p>资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm</p>
+ * @method string getTimeUnit() 获取<p>计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p</p>
+ * @method void setTimeUnit(string $TimeUnit) 设置<p>计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p</p>
+ * @method integer getTimeSpan() 获取<p>计费时长</p>
+ * @method void setTimeSpan(integer $TimeSpan) 设置<p>计费时长</p>
+ * @method integer getPayMode() 获取<p>计费模式 0后付费，1预付费</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>计费模式 0后付费，1预付费</p>
+ * @method string getBillingRegion() 获取<p>计费侧地域</p>
+ * @method void setBillingRegion(string $BillingRegion) 设置<p>计费侧地域</p>
+ * @method string getBillingZone() 获取<p>计费侧可用区</p>
+ * @method void setBillingZone(string $BillingZone) 设置<p>计费侧可用区</p>
+ * @method integer getDeployCvmCount() 获取<p>部署的cvm个数</p>
+ * @method void setDeployCvmCount(integer $DeployCvmCount) 设置<p>部署的cvm个数</p>
+ * @method array getResourceZoneSet() 获取<p>堡垒机实例的可用区信息</p>
+ * @method void setResourceZoneSet(array $ResourceZoneSet) 设置<p>堡垒机实例的可用区信息</p>
  */
 class Resource extends AbstractModel
 {
     /**
-     * @var string 服务实例ID，如bh-saas-s3ed4r5e
+     * @var string <p>服务实例ID，如bh-saas-s3ed4r5e</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 地域编码
+     * @var string <p>地域编码</p>
      */
     public $ApCode;
 
     /**
-     * @var string 服务实例规格信息
+     * @var string <p>服务实例规格信息</p>
      */
     public $SvArgs;
 
     /**
-     * @var string VPC ID
+     * @var string <p>VPC ID</p>
      */
     public $VpcId;
 
     /**
-     * @var integer 服务规格对应的资产数
+     * @var integer <p>服务规格对应的资产数</p>
      */
     public $Nodes;
 
     /**
-     * @var integer 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
+     * @var integer <p>自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string 过期时间
+     * @var string <p>过期时间</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
+     * @var integer <p>资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中</p>
      */
     public $Status;
 
     /**
-     * @var string 服务实例名，如T-Sec-堡垒机（SaaS型）
+     * @var string <p>服务实例名，如T-Sec-堡垒机（SaaS型）</p>
      */
     public $ResourceName;
 
     /**
-     * @var integer 定价模型ID
+     * @var integer <p>定价模型ID</p>
      */
     public $Pid;
 
     /**
-     * @var string 资源创建时间
+     * @var string <p>资源创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 商品码, p_cds_dasb
+     * @var string <p>商品码, p_cds_dasb</p>
      */
     public $ProductCode;
 
     /**
-     * @var string 子商品码, sp_cds_dasb_bh_saas
+     * @var string <p>子商品码, sp_cds_dasb_bh_saas</p>
      */
     public $SubProductCode;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var boolean 是否过期，true-过期，false-未过期
+     * @var boolean <p>是否过期，true-过期，false-未过期</p>
      */
     public $Expired;
 
     /**
-     * @var boolean 是否开通，true-开通，false-未开通
+     * @var boolean <p>是否开通，true-开通，false-未开通</p>
      */
     public $Deployed;
 
     /**
-     * @var string 开通服务的 VPC 名称
+     * @var string <p>开通服务的 VPC 名称</p>
      */
     public $VpcName;
 
     /**
-     * @var string 开通服务的 VPC 对应的网段
+     * @var string <p>开通服务的 VPC 对应的网段</p>
      */
     public $VpcCidrBlock;
 
     /**
-     * @var string 开通服务的子网ID
+     * @var string <p>开通服务的子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 开通服务的子网名称
+     * @var string <p>开通服务的子网名称</p>
      */
     public $SubnetName;
 
     /**
-     * @var string 开通服务的子网网段
+     * @var string <p>开通服务的子网网段</p>
      */
     public $CidrBlock;
 
     /**
-     * @var array 外部IP
+     * @var array <p>外部IP</p>
      */
     public $PublicIpSet;
 
     /**
-     * @var array 内部IP
+     * @var array <p>内部IP</p>
      */
     public $PrivateIpSet;
 
     /**
-     * @var array 服务开通的高级功能列表，如:[DB]
+     * @var array <p>服务开通的高级功能列表，如:[DB]</p>
      */
     public $ModuleSet;
 
     /**
-     * @var integer 已使用的授权点数
+     * @var integer <p>已使用的授权点数</p>
      */
     public $UsedNodes;
 
     /**
-     * @var integer 扩展点数
+     * @var integer <p>扩展点数</p>
      */
     public $ExtendPoints;
 
     /**
-     * @var integer 带宽扩展包个数(4M)
+     * @var integer <p>带宽扩展包个数(4M)</p>
      */
     public $PackageBandwidth;
 
     /**
-     * @var integer 授权点数扩展包个数(50点)
+     * @var integer <p>授权点数扩展包个数(50点)</p>
      */
     public $PackageNode;
 
     /**
-     * @var string 日志投递规格信息
+     * @var string <p>日志投递规格信息</p>
      */
     public $LogDeliveryArgs;
 
     /**
-     * @var array 堡垒机资源LB	
+     * @var array <p>堡垒机资源LB</p>
      */
     public $ClbSet;
 
     /**
-     * @var integer 网络域个数
+     * @var integer <p>网络域个数</p>
      */
     public $DomainCount;
 
     /**
-     * @var integer 已经使用的网络域个数
+     * @var integer <p>已经使用的网络域个数</p>
      */
     public $UsedDomainCount;
 
     /**
-     * @var integer 0 非试用版，1 试用版
+     * @var integer <p>开启的网络域个数（不包含默认网络域）</p>
+     */
+    public $EnabledDomainCount;
+
+    /**
+     * @var integer <p>0 非试用版，1 试用版</p>
      */
     public $Trial;
 
     /**
-     * @var string 日志投递规格信息
+     * @var string <p>日志投递规格信息</p>
      */
     public $LogDelivery;
 
     /**
-     * @var string cdc集群id
+     * @var string <p>cdc集群id</p>
      */
     public $CdcClusterId;
 
     /**
-     * @var integer 部署模式 默认0 0-cvm 1-tke
+     * @var integer <p>部署模式 默认0 0-cvm 1-tke</p>
      */
     public $DeployModel;
 
     /**
-     * @var integer 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+     * @var integer <p>0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中</p>
      */
     public $IntranetAccess;
 
     /**
-     * @var array 内网访问的ip
+     * @var array <p>内网访问的ip</p>
      */
     public $IntranetPrivateIpSet;
 
     /**
-     * @var string 开通内网访问的vpc
+     * @var string <p>开通内网访问的vpc</p>
      */
     public $IntranetVpcId;
 
     /**
-     * @var string 开通内网访问的subnetId
+     * @var string <p>开通内网访问的subnetId</p>
+     * @deprecated
      */
     public $IntranetSubnetId;
 
     /**
-     * @var string 开通内网访问vpc的网段
+     * @var array <p>开通内网访问的子网集合</p>
+     */
+    public $IntranetSubnetIdSet;
+
+    /**
+     * @var string <p>开通内网访问vpc的网段</p>
      */
     public $IntranetVpcCidr;
 
     /**
-     * @var string 堡垒机内网ip自定义域名
+     * @var string <p>堡垒机内网ip自定义域名</p>
      */
     public $DomainName;
 
     /**
-     * @var boolean 是否共享clb，true-共享clb，false-独享clb
+     * @var boolean <p>是否共享clb，true-共享clb，false-独享clb</p>
      */
     public $ShareClb;
 
     /**
-     * @var string 共享clb id
+     * @var string <p>共享clb id</p>
      */
     public $OpenClbId;
 
     /**
-     * @var string 运营商信息
+     * @var string <p>运营商信息</p>
      */
     public $LbVipIsp;
 
     /**
-     * @var integer linux资产命令行运维端口
+     * @var integer <p>linux资产命令行运维端口</p>
      */
     public $TUICmdPort;
 
     /**
-     * @var integer linux资产直连端口
+     * @var integer <p>linux资产直连端口</p>
      */
     public $TUIDirectPort;
 
     /**
-     * @var integer 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+     * @var integer <p>1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中</p>
      */
     public $WebAccess;
 
     /**
-     * @var integer 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+     * @var integer <p>1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中</p>
      */
     public $ClientAccess;
 
     /**
-     * @var integer 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+     * @var integer <p>1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中</p>
      */
     public $ExternalAccess;
 
     /**
-     * @var integer 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+     * @var integer <p>0默认值。0-免费版（试用版）ioa，1-付费版ioa</p>
      */
     public $IOAResource;
 
     /**
-     * @var integer 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+     * @var integer <p>零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数</p>
      */
     public $PackageIOAUserCount;
 
     /**
-     * @var integer  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+     * @var integer <p>零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽</p>
      */
     public $PackageIOABandwidth;
 
     /**
-     * @var string 堡垒机实例对应的零信任实例id
+     * @var string <p>堡垒机实例对应的零信任实例id</p>
      */
     public $IOAResourceId;
 
     /**
-     * @var string 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+     * @var string <p>资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm</p>
      */
     public $ResourceEdition;
 
     /**
-     * @var string 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+     * @var string <p>计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p</p>
      */
     public $TimeUnit;
 
     /**
-     * @var integer 计费时长
+     * @var integer <p>计费时长</p>
      */
     public $TimeSpan;
 
     /**
-     * @var integer 计费模式 0后付费，1预付费
+     * @var integer <p>计费模式 0后付费，1预付费</p>
      */
     public $PayMode;
 
     /**
-     * @var string 计费侧地域
+     * @var string <p>计费侧地域</p>
      */
     public $BillingRegion;
 
     /**
-     * @var string 计费侧可用区
+     * @var string <p>计费侧可用区</p>
      */
     public $BillingZone;
 
     /**
-     * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
-     * @param string $ApCode 地域编码
-     * @param string $SvArgs 服务实例规格信息
-     * @param string $VpcId VPC ID
-     * @param integer $Nodes 服务规格对应的资产数
-     * @param integer $RenewFlag 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
-     * @param string $ExpireTime 过期时间
-     * @param integer $Status 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
-     * @param string $ResourceName 服务实例名，如T-Sec-堡垒机（SaaS型）
-     * @param integer $Pid 定价模型ID
-     * @param string $CreateTime 资源创建时间
-     * @param string $ProductCode 商品码, p_cds_dasb
-     * @param string $SubProductCode 子商品码, sp_cds_dasb_bh_saas
-     * @param string $Zone 可用区
-     * @param boolean $Expired 是否过期，true-过期，false-未过期
-     * @param boolean $Deployed 是否开通，true-开通，false-未开通
-     * @param string $VpcName 开通服务的 VPC 名称
-     * @param string $VpcCidrBlock 开通服务的 VPC 对应的网段
-     * @param string $SubnetId 开通服务的子网ID
-     * @param string $SubnetName 开通服务的子网名称
-     * @param string $CidrBlock 开通服务的子网网段
-     * @param array $PublicIpSet 外部IP
-     * @param array $PrivateIpSet 内部IP
-     * @param array $ModuleSet 服务开通的高级功能列表，如:[DB]
-     * @param integer $UsedNodes 已使用的授权点数
-     * @param integer $ExtendPoints 扩展点数
-     * @param integer $PackageBandwidth 带宽扩展包个数(4M)
-     * @param integer $PackageNode 授权点数扩展包个数(50点)
-     * @param string $LogDeliveryArgs 日志投递规格信息
-     * @param array $ClbSet 堡垒机资源LB	
-     * @param integer $DomainCount 网络域个数
-     * @param integer $UsedDomainCount 已经使用的网络域个数
-     * @param integer $Trial 0 非试用版，1 试用版
-     * @param string $LogDelivery 日志投递规格信息
-     * @param string $CdcClusterId cdc集群id
-     * @param integer $DeployModel 部署模式 默认0 0-cvm 1-tke
-     * @param integer $IntranetAccess 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
-     * @param array $IntranetPrivateIpSet 内网访问的ip
-     * @param string $IntranetVpcId 开通内网访问的vpc
-     * @param string $IntranetSubnetId 开通内网访问的subnetId
-     * @param string $IntranetVpcCidr 开通内网访问vpc的网段
-     * @param string $DomainName 堡垒机内网ip自定义域名
-     * @param boolean $ShareClb 是否共享clb，true-共享clb，false-独享clb
-     * @param string $OpenClbId 共享clb id
-     * @param string $LbVipIsp 运营商信息
-     * @param integer $TUICmdPort linux资产命令行运维端口
-     * @param integer $TUIDirectPort linux资产直连端口
-     * @param integer $WebAccess 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
-     * @param integer $ClientAccess 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
-     * @param integer $ExternalAccess 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
-     * @param integer $IOAResource 0默认值。0-免费版（试用版）ioa，1-付费版ioa
-     * @param integer $PackageIOAUserCount 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
-     * @param integer $PackageIOABandwidth  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
-     * @param string $IOAResourceId 堡垒机实例对应的零信任实例id
-     * @param string $ResourceEdition 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
-     * @param string $TimeUnit 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
-     * @param integer $TimeSpan 计费时长
-     * @param integer $PayMode 计费模式 0后付费，1预付费
-     * @param string $BillingRegion 计费侧地域
-     * @param string $BillingZone 计费侧可用区
+     * @var integer <p>部署的cvm个数</p>
+     */
+    public $DeployCvmCount;
+
+    /**
+     * @var array <p>堡垒机实例的可用区信息</p>
+     */
+    public $ResourceZoneSet;
+
+    /**
+     * @param string $ResourceId <p>服务实例ID，如bh-saas-s3ed4r5e</p>
+     * @param string $ApCode <p>地域编码</p>
+     * @param string $SvArgs <p>服务实例规格信息</p>
+     * @param string $VpcId <p>VPC ID</p>
+     * @param integer $Nodes <p>服务规格对应的资产数</p>
+     * @param integer $RenewFlag <p>自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费</p>
+     * @param string $ExpireTime <p>过期时间</p>
+     * @param integer $Status <p>资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中</p>
+     * @param string $ResourceName <p>服务实例名，如T-Sec-堡垒机（SaaS型）</p>
+     * @param integer $Pid <p>定价模型ID</p>
+     * @param string $CreateTime <p>资源创建时间</p>
+     * @param string $ProductCode <p>商品码, p_cds_dasb</p>
+     * @param string $SubProductCode <p>子商品码, sp_cds_dasb_bh_saas</p>
+     * @param string $Zone <p>可用区</p>
+     * @param boolean $Expired <p>是否过期，true-过期，false-未过期</p>
+     * @param boolean $Deployed <p>是否开通，true-开通，false-未开通</p>
+     * @param string $VpcName <p>开通服务的 VPC 名称</p>
+     * @param string $VpcCidrBlock <p>开通服务的 VPC 对应的网段</p>
+     * @param string $SubnetId <p>开通服务的子网ID</p>
+     * @param string $SubnetName <p>开通服务的子网名称</p>
+     * @param string $CidrBlock <p>开通服务的子网网段</p>
+     * @param array $PublicIpSet <p>外部IP</p>
+     * @param array $PrivateIpSet <p>内部IP</p>
+     * @param array $ModuleSet <p>服务开通的高级功能列表，如:[DB]</p>
+     * @param integer $UsedNodes <p>已使用的授权点数</p>
+     * @param integer $ExtendPoints <p>扩展点数</p>
+     * @param integer $PackageBandwidth <p>带宽扩展包个数(4M)</p>
+     * @param integer $PackageNode <p>授权点数扩展包个数(50点)</p>
+     * @param string $LogDeliveryArgs <p>日志投递规格信息</p>
+     * @param array $ClbSet <p>堡垒机资源LB</p>
+     * @param integer $DomainCount <p>网络域个数</p>
+     * @param integer $UsedDomainCount <p>已经使用的网络域个数</p>
+     * @param integer $EnabledDomainCount <p>开启的网络域个数（不包含默认网络域）</p>
+     * @param integer $Trial <p>0 非试用版，1 试用版</p>
+     * @param string $LogDelivery <p>日志投递规格信息</p>
+     * @param string $CdcClusterId <p>cdc集群id</p>
+     * @param integer $DeployModel <p>部署模式 默认0 0-cvm 1-tke</p>
+     * @param integer $IntranetAccess <p>0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中</p>
+     * @param array $IntranetPrivateIpSet <p>内网访问的ip</p>
+     * @param string $IntranetVpcId <p>开通内网访问的vpc</p>
+     * @param string $IntranetSubnetId <p>开通内网访问的subnetId</p>
+     * @param array $IntranetSubnetIdSet <p>开通内网访问的子网集合</p>
+     * @param string $IntranetVpcCidr <p>开通内网访问vpc的网段</p>
+     * @param string $DomainName <p>堡垒机内网ip自定义域名</p>
+     * @param boolean $ShareClb <p>是否共享clb，true-共享clb，false-独享clb</p>
+     * @param string $OpenClbId <p>共享clb id</p>
+     * @param string $LbVipIsp <p>运营商信息</p>
+     * @param integer $TUICmdPort <p>linux资产命令行运维端口</p>
+     * @param integer $TUIDirectPort <p>linux资产直连端口</p>
+     * @param integer $WebAccess <p>1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中</p>
+     * @param integer $ClientAccess <p>1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中</p>
+     * @param integer $ExternalAccess <p>1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中</p>
+     * @param integer $IOAResource <p>0默认值。0-免费版（试用版）ioa，1-付费版ioa</p>
+     * @param integer $PackageIOAUserCount <p>零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数</p>
+     * @param integer $PackageIOABandwidth <p>零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽</p>
+     * @param string $IOAResourceId <p>堡垒机实例对应的零信任实例id</p>
+     * @param string $ResourceEdition <p>资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm</p>
+     * @param string $TimeUnit <p>计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p</p>
+     * @param integer $TimeSpan <p>计费时长</p>
+     * @param integer $PayMode <p>计费模式 0后付费，1预付费</p>
+     * @param string $BillingRegion <p>计费侧地域</p>
+     * @param string $BillingZone <p>计费侧可用区</p>
+     * @param integer $DeployCvmCount <p>部署的cvm个数</p>
+     * @param array $ResourceZoneSet <p>堡垒机实例的可用区信息</p>
      */
     function __construct()
     {
@@ -651,6 +684,10 @@ class Resource extends AbstractModel
             $this->UsedDomainCount = $param["UsedDomainCount"];
         }
 
+        if (array_key_exists("EnabledDomainCount",$param) and $param["EnabledDomainCount"] !== null) {
+            $this->EnabledDomainCount = $param["EnabledDomainCount"];
+        }
+
         if (array_key_exists("Trial",$param) and $param["Trial"] !== null) {
             $this->Trial = $param["Trial"];
         }
@@ -681,6 +718,10 @@ class Resource extends AbstractModel
 
         if (array_key_exists("IntranetSubnetId",$param) and $param["IntranetSubnetId"] !== null) {
             $this->IntranetSubnetId = $param["IntranetSubnetId"];
+        }
+
+        if (array_key_exists("IntranetSubnetIdSet",$param) and $param["IntranetSubnetIdSet"] !== null) {
+            $this->IntranetSubnetIdSet = $param["IntranetSubnetIdSet"];
         }
 
         if (array_key_exists("IntranetVpcCidr",$param) and $param["IntranetVpcCidr"] !== null) {
@@ -761,6 +802,19 @@ class Resource extends AbstractModel
 
         if (array_key_exists("BillingZone",$param) and $param["BillingZone"] !== null) {
             $this->BillingZone = $param["BillingZone"];
+        }
+
+        if (array_key_exists("DeployCvmCount",$param) and $param["DeployCvmCount"] !== null) {
+            $this->DeployCvmCount = $param["DeployCvmCount"];
+        }
+
+        if (array_key_exists("ResourceZoneSet",$param) and $param["ResourceZoneSet"] !== null) {
+            $this->ResourceZoneSet = [];
+            foreach ($param["ResourceZoneSet"] as $key => $value){
+                $obj = new ResourceDeployZone();
+                $obj->deserialize($value);
+                array_push($this->ResourceZoneSet, $obj);
+            }
         }
     }
 }

@@ -53,9 +53,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\DescribeConsumerGroupsResponse DescribeConsumerGroups(Models\DescribeConsumerGroupsRequest $req) 本接口(DescribeConsumerGroups)用于获取订阅实例配置的消费者组详情。
  * @method Models\DescribeMigrateDBInstancesResponse DescribeMigrateDBInstances(Models\DescribeMigrateDBInstancesRequest $req) 本接口用于查询支持迁移的云数据库实例
  * @method Models\DescribeMigrateGtidCompareReportResponse DescribeMigrateGtidCompareReport(Models\DescribeMigrateGtidCompareReportRequest $req) gtid校验
- * @method Models\DescribeMigrationCheckJobResponse DescribeMigrationCheckJob(Models\DescribeMigrationCheckJobRequest $req) 本接口用于创建校验后,获取校验的结果. 能查询到当前校验的状态和进度. 
-若通过校验, 则可调用'StartMigrateJob' 开始迁移.
-若未通过校验, 则能查询到校验失败的原因. 请按照报错, 通过'ModifyMigrationJob'修改迁移配置或是调整源/目标实例的相关参数.
+ * @method Models\DescribeMigrationCheckJobResponse DescribeMigrationCheckJob(Models\DescribeMigrationCheckJobRequest $req) 本接口用于创建校验后，获取校验的结果，能查询到当前校验的状态和进度。
  * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) 查询某个迁移任务详情
  * @method Models\DescribeMigrationJobsResponse DescribeMigrationJobs(Models\DescribeMigrationJobsRequest $req) 查询数据迁移任务列表
  * @method Models\DescribeModifyCheckSyncJobResultResponse DescribeModifyCheckSyncJobResult(Models\DescribeModifyCheckSyncJobResultRequest $req) 在创建修改对象的校验任务后、通过该接口查看校验任务的结果

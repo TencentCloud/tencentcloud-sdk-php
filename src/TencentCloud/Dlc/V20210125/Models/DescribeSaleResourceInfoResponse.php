@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSaleResourceInfo返回参数结构体
  *
- * @method array getSaleResourceInfoList() 获取可售卖资源规格列表
- * @method void setSaleResourceInfoList(array $SaleResourceInfoList) 设置可售卖资源规格列表
+ * @method array getSaleResourceInfoList() 获取可售卖资源规格列表，包含规格、步长、单账户上限、以及库存情况
+ * @method void setSaleResourceInfoList(array $SaleResourceInfoList) 设置可售卖资源规格列表，包含规格、步长、单账户上限、以及库存情况
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSaleResourceInfoResponse extends AbstractModel
 {
     /**
-     * @var array 可售卖资源规格列表
+     * @var array 可售卖资源规格列表，包含规格、步长、单账户上限、以及库存情况
      */
     public $SaleResourceInfoList;
 
@@ -38,7 +38,7 @@ class DescribeSaleResourceInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SaleResourceInfoList 可售卖资源规格列表
+     * @param array $SaleResourceInfoList 可售卖资源规格列表，包含规格、步长、单账户上限、以及库存情况
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

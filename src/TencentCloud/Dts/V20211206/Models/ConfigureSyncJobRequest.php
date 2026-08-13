@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobMode(string $JobMode) 设置<p>配置任务模式，默认值为fullMode</p><p>枚举值：</p><ul><li>fullMode： 正常模式</li></ul>
  * @method string getRunMode() 获取<p>运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)</p>
  * @method void setRunMode(string $RunMode) 设置<p>运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)</p>
- * @method string getExpectRunTime() 获取<p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
- * @method void setExpectRunTime(string $ExpectRunTime) 设置<p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+ * @method string getExpectRunTime() 获取<p>期待启动时间，当 <code>RunMode</code> 取值为 <code>Timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
+ * @method void setExpectRunTime(string $ExpectRunTime) 设置<p>期待启动时间，当 <code>RunMode</code> 取值为 <code>Timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
  * @method string getSrcConnectType() 获取<p>源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。</p>
  * @method void setSrcConnectType(string $SrcConnectType) 设置<p>源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。</p>
  * @method Endpoint getSrcInfo() 获取<p>源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置<p>目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
  * @method string getDstNodeType() 获取<p>枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster</p>
  * @method void setDstNodeType(string $DstNodeType) 设置<p>枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster</p>
- * @method Options getOptions() 获取<p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
- * @method void setOptions(Options $Options) 设置<p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
+ * @method Options getOptions() 获取<p>同步任务选项</p>
+ * @method void setOptions(Options $Options) 设置<p>同步任务选项</p>
  * @method integer getAutoRetryTimeRangeMinutes() 获取<p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置<p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
  */
@@ -93,7 +93,7 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $RunMode;
 
     /**
-     * @var string <p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+     * @var string <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>Timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
      */
     public $ExpectRunTime;
 
@@ -133,7 +133,7 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $DstNodeType;
 
     /**
-     * @var Options <p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
+     * @var Options <p>同步任务选项</p>
      */
     public $Options;
 
@@ -150,7 +150,7 @@ class ConfigureSyncJobRequest extends AbstractModel
      * @param string $JobName <p>同步任务名称</p>
      * @param string $JobMode <p>配置任务模式，默认值为fullMode</p><p>枚举值：</p><ul><li>fullMode： 正常模式</li></ul>
      * @param string $RunMode <p>运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)</p>
-     * @param string $ExpectRunTime <p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+     * @param string $ExpectRunTime <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>Timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
      * @param string $SrcConnectType <p>源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。</p>
      * @param Endpoint $SrcInfo <p>源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
      * @param SyncDBEndpointInfos $SrcInfos <p>源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
@@ -158,7 +158,7 @@ class ConfigureSyncJobRequest extends AbstractModel
      * @param Endpoint $DstInfo <p>目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
      * @param SyncDBEndpointInfos $DstInfos <p>目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
      * @param string $DstNodeType <p>枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster</p>
-     * @param Options $Options <p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
+     * @param Options $Options <p>同步任务选项</p>
      * @param integer $AutoRetryTimeRangeMinutes <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
      */
     function __construct()

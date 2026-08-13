@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
  * @method string getRegion() 获取<p>地域</p>
  * @method void setRegion(string $Region) 设置<p>地域</p>
- * @method string getZone() 获取<p>可用区</p>
- * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getZone() 获取<p>集群主可用区</p>
+ * @method void setZone(string $Zone) 设置<p>集群主可用区</p>
  * @method string getStatus() 获取<p>实例状态</p>
  * @method void setStatus(string $Status) 设置<p>实例状态</p>
  * @method string getStatusDesc() 获取<p>实例状态中文描述</p>
@@ -118,8 +118,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceTags(array $ResourceTags) 设置<p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMasterZone() 获取<p>主可用区</p>
- * @method void setMasterZone(string $MasterZone) 设置<p>主可用区</p>
+ * @method string getMasterZone() 获取<p>读写实例当前所在可用区</p>
+ * @method void setMasterZone(string $MasterZone) 设置<p>读写实例当前所在可用区</p>
  * @method array getSlaveZones() 获取<p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveZones(array $SlaveZones) 设置<p>备可用区</p>
@@ -144,6 +144,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeList(array $NodeList) 设置<p>libradb 节点信息</p>
  * @method string getGdnId() 获取<p>全球数据库唯一标识</p>
  * @method void setGdnId(string $GdnId) 设置<p>全球数据库唯一标识</p>
+ * @method string getRealZone() 获取<p>实例当前所在可用区</p>
+ * @method void setRealZone(string $RealZone) 设置<p>实例当前所在可用区</p>
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -188,7 +190,7 @@ class CynosdbInstance extends AbstractModel
     public $Region;
 
     /**
-     * @var string <p>可用区</p>
+     * @var string <p>集群主可用区</p>
      */
     public $Zone;
 
@@ -389,7 +391,7 @@ class CynosdbInstance extends AbstractModel
     public $ResourceTags;
 
     /**
-     * @var string <p>主可用区</p>
+     * @var string <p>读写实例当前所在可用区</p>
      */
     public $MasterZone;
 
@@ -446,6 +448,11 @@ class CynosdbInstance extends AbstractModel
     public $GdnId;
 
     /**
+     * @var string <p>实例当前所在可用区</p>
+     */
+    public $RealZone;
+
+    /**
      * @param string $Uin <p>用户Uin</p>
      * @param integer $AppId <p>用户AppId</p>
      * @param string $ClusterId <p>集群ID</p>
@@ -454,7 +461,7 @@ class CynosdbInstance extends AbstractModel
      * @param string $InstanceName <p>实例名称</p>
      * @param integer $ProjectId <p>项目ID</p>
      * @param string $Region <p>地域</p>
-     * @param string $Zone <p>可用区</p>
+     * @param string $Zone <p>集群主可用区</p>
      * @param string $Status <p>实例状态</p>
      * @param string $StatusDesc <p>实例状态中文描述</p>
      * @param string $DbMode <p>实例形态，是否为serverless实例</p>
@@ -495,7 +502,7 @@ class CynosdbInstance extends AbstractModel
      * @param string $IsFreeze <p>是否冻结</p>
      * @param array $ResourceTags <p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MasterZone <p>主可用区</p>
+     * @param string $MasterZone <p>读写实例当前所在可用区</p>
      * @param array $SlaveZones <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceNetInfo <p>实例网络信息</p>
@@ -508,6 +515,7 @@ class CynosdbInstance extends AbstractModel
      * @param string $CynosVersionTag <p>未知字段</p>
      * @param array $NodeList <p>libradb 节点信息</p>
      * @param string $GdnId <p>全球数据库唯一标识</p>
+     * @param string $RealZone <p>实例当前所在可用区</p>
      */
     function __construct()
     {
@@ -777,6 +785,10 @@ class CynosdbInstance extends AbstractModel
 
         if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {
             $this->GdnId = $param["GdnId"];
+        }
+
+        if (array_key_exists("RealZone",$param) and $param["RealZone"] !== null) {
+            $this->RealZone = $param["RealZone"];
         }
     }
 }

@@ -20,49 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCostSummaryByResource返回参数结构体
  *
- * @method integer getReady() 获取数据是否准备好，0未准备好，1准备好
- * @method void setReady(integer $Ready) 设置数据是否准备好，0未准备好，1准备好
- * @method ConsumptionSummaryTotal getTotal() 获取消耗详情
- * @method void setTotal(ConsumptionSummaryTotal $Total) 设置消耗详情
- * @method ConsumptionResourceSummaryConditionValue getConditionValue() 获取过滤条件
+ * @method integer getReady() 获取<p>数据是否准备好，0未准备好，1准备好</p>
+ * @method void setReady(integer $Ready) 设置<p>数据是否准备好，0未准备好，1准备好</p>
+ * @method ConsumptionSummaryTotal getTotal() 获取<p>消耗详情</p>
+ * @method void setTotal(ConsumptionSummaryTotal $Total) 设置<p>消耗详情</p>
+ * @method ConsumptionResourceSummaryConditionValue getConditionValue() 获取<p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConditionValue(ConsumptionResourceSummaryConditionValue $ConditionValue) 设置过滤条件
+ * @method void setConditionValue(ConsumptionResourceSummaryConditionValue $ConditionValue) 设置<p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRecordNum() 获取记录数量
+ * @method integer getRecordNum() 获取<p>记录数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordNum(integer $RecordNum) 设置记录数量
+ * @method void setRecordNum(integer $RecordNum) 设置<p>记录数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getData() 获取资源消耗详情
- * @method void setData(array $Data) 设置资源消耗详情
+ * @method array getData() 获取<p>资源消耗详情</p>
+ * @method void setData(array $Data) 设置<p>资源消耗详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCostSummaryByResourceResponse extends AbstractModel
 {
     /**
-     * @var integer 数据是否准备好，0未准备好，1准备好
+     * @var integer <p>数据是否准备好，0未准备好，1准备好</p>
      */
     public $Ready;
 
     /**
-     * @var ConsumptionSummaryTotal 消耗详情
+     * @var ConsumptionSummaryTotal <p>消耗详情</p>
      */
     public $Total;
 
     /**
-     * @var ConsumptionResourceSummaryConditionValue 过滤条件
+     * @var ConsumptionResourceSummaryConditionValue <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionValue;
 
     /**
-     * @var integer 记录数量
+     * @var integer <p>记录数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordNum;
 
     /**
-     * @var array 资源消耗详情
+     * @var array <p>资源消耗详情</p>
      */
     public $Data;
 
@@ -72,13 +72,13 @@ class DescribeCostSummaryByResourceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Ready 数据是否准备好，0未准备好，1准备好
-     * @param ConsumptionSummaryTotal $Total 消耗详情
-     * @param ConsumptionResourceSummaryConditionValue $ConditionValue 过滤条件
+     * @param integer $Ready <p>数据是否准备好，0未准备好，1准备好</p>
+     * @param ConsumptionSummaryTotal $Total <p>消耗详情</p>
+     * @param ConsumptionResourceSummaryConditionValue $ConditionValue <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RecordNum 记录数量
+     * @param integer $RecordNum <p>记录数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Data 资源消耗详情
+     * @param array $Data <p>资源消耗详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

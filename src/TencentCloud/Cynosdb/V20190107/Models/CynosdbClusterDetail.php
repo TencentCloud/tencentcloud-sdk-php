@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
  * @method string getRegion() 获取<p>地域</p>
  * @method void setRegion(string $Region) 设置<p>地域</p>
- * @method string getZone() 获取<p>可用区</p>
- * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getZone() 获取<p>集群主可用区</p>
+ * @method void setZone(string $Zone) 设置<p>集群主可用区</p>
  * @method string getPhysicalZone() 获取<p>物理可用区</p>
  * @method void setPhysicalZone(string $PhysicalZone) 设置<p>物理可用区</p>
  * @method string getStatus() 获取<p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul>
@@ -86,8 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsFreeze(string $IsFreeze) 设置<p>是否冻结</p>
  * @method array getTasks() 获取<p>任务列表</p>
  * @method void setTasks(array $Tasks) 设置<p>任务列表</p>
- * @method string getMasterZone() 获取<p>主可用区</p>
- * @method void setMasterZone(string $MasterZone) 设置<p>主可用区</p>
+ * @method string getMasterZone() 获取<p>读写实例当前所在可用区</p>
+ * @method void setMasterZone(string $MasterZone) 设置<p>读写实例当前所在可用区</p>
  * @method array getSlaveZones() 获取<p>从可用区列表</p>
  * @method void setSlaveZones(array $SlaveZones) 设置<p>从可用区列表</p>
  * @method array getInstanceSet() 获取<p>实例信息</p>
@@ -136,6 +136,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterLevel(string $ClusterLevel) 设置<p>集群级别。例如 P0, P1</p>
  * @method boolean getIsOpenTDE() 获取<p>是否开启透明加密</p>
  * @method void setIsOpenTDE(boolean $IsOpenTDE) 设置<p>是否开启透明加密</p>
+ * @method string getRealZone() 获取<p>实例当前所在可用区</p>
+ * @method void setRealZone(string $RealZone) 设置<p>实例当前所在可用区</p>
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -155,7 +157,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $Region;
 
     /**
-     * @var string <p>可用区</p>
+     * @var string <p>集群主可用区</p>
      */
     public $Zone;
 
@@ -305,7 +307,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $Tasks;
 
     /**
-     * @var string <p>主可用区</p>
+     * @var string <p>读写实例当前所在可用区</p>
      */
     public $MasterZone;
 
@@ -430,10 +432,15 @@ class CynosdbClusterDetail extends AbstractModel
     public $IsOpenTDE;
 
     /**
+     * @var string <p>实例当前所在可用区</p>
+     */
+    public $RealZone;
+
+    /**
      * @param string $ClusterId <p>集群ID</p>
      * @param string $ClusterName <p>集群名称</p>
      * @param string $Region <p>地域</p>
-     * @param string $Zone <p>可用区</p>
+     * @param string $Zone <p>集群主可用区</p>
      * @param string $PhysicalZone <p>物理可用区</p>
      * @param string $Status <p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul>
      * @param string $StatusDesc <p>状态描述</p>
@@ -463,7 +470,7 @@ class CynosdbClusterDetail extends AbstractModel
      * @param string $HasSlaveZone <p>是否有从可用区</p>
      * @param string $IsFreeze <p>是否冻结</p>
      * @param array $Tasks <p>任务列表</p>
-     * @param string $MasterZone <p>主可用区</p>
+     * @param string $MasterZone <p>读写实例当前所在可用区</p>
      * @param array $SlaveZones <p>从可用区列表</p>
      * @param array $InstanceSet <p>实例信息</p>
      * @param integer $PayMode <p>付费模式</p>
@@ -488,6 +495,7 @@ class CynosdbClusterDetail extends AbstractModel
      * @param integer $ArchiveProgress <p>归档进度，百分比。</p>
      * @param string $ClusterLevel <p>集群级别。例如 P0, P1</p>
      * @param boolean $IsOpenTDE <p>是否开启透明加密</p>
+     * @param string $RealZone <p>实例当前所在可用区</p>
      */
     function __construct()
     {
@@ -763,6 +771,10 @@ class CynosdbClusterDetail extends AbstractModel
 
         if (array_key_exists("IsOpenTDE",$param) and $param["IsOpenTDE"] !== null) {
             $this->IsOpenTDE = $param["IsOpenTDE"];
+        }
+
+        if (array_key_exists("RealZone",$param) and $param["RealZone"] !== null) {
+            $this->RealZone = $param["RealZone"];
         }
     }
 }

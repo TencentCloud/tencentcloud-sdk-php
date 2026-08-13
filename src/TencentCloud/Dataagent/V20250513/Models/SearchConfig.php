@@ -20,66 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 检索配置
  *
- * @method integer getType() 获取检索类型：0:混合搜索 1：向量搜索 2：全文搜索
- * @method void setType(integer $Type) 设置检索类型：0:混合搜索 1：向量搜索 2：全文搜索
- * @method integer getNum() 获取召回数量最大值
- * @method void setNum(integer $Num) 设置召回数量最大值
- * @method float getEmbeddingWeight() 获取权重配置
- * @method void setEmbeddingWeight(float $EmbeddingWeight) 设置权重配置
- * @method integer getRerank() 获取0:关闭 1:开启，默认1
- * @method void setRerank(integer $Rerank) 设置0:关闭 1:开启，默认1
- * @method integer getAutoRag() 获取0:关闭 1:开启，默认0
- * @method void setAutoRag(integer $AutoRag) 设置0:关闭 1:开启，默认0
- * @method array getKnowledgeBaseIds() 获取AutoRag关联的知识库ID列表
- * @method void setKnowledgeBaseIds(array $KnowledgeBaseIds) 设置AutoRag关联的知识库ID列表
- * @method integer getSearchStatus() 获取AutoRag搜索状态：0-未完成，1-已完成。仅当AutoRag=1时，该字段有效
- * @method void setSearchStatus(integer $SearchStatus) 设置AutoRag搜索状态：0-未完成，1-已完成。仅当AutoRag=1时，该字段有效
+ * @method integer getType() 获取<p>检索类型：0:混合搜索 1：向量搜索 2：全文搜索</p>
+ * @method void setType(integer $Type) 设置<p>检索类型：0:混合搜索 1：向量搜索 2：全文搜索</p>
+ * @method integer getNum() 获取<p>召回数量最大值</p>
+ * @method void setNum(integer $Num) 设置<p>召回数量最大值</p>
+ * @method float getEmbeddingWeight() 获取<p>权重配置</p>
+ * @method void setEmbeddingWeight(float $EmbeddingWeight) 设置<p>权重配置</p>
+ * @method integer getRerank() 获取<p>0:关闭 1:开启，默认1</p>
+ * @method void setRerank(integer $Rerank) 设置<p>0:关闭 1:开启，默认1</p>
+ * @method integer getAutoRag() 获取<p>0:关闭 1:开启，默认0</p>
+ * @method void setAutoRag(integer $AutoRag) 设置<p>0:关闭 1:开启，默认0</p>
+ * @method array getKnowledgeBaseIds() 获取<p>AutoRag关联的知识库ID列表</p>
+ * @method void setKnowledgeBaseIds(array $KnowledgeBaseIds) 设置<p>AutoRag关联的知识库ID列表</p>
+ * @method integer getSearchStatus() 获取<p>AutoRag搜索状态：0-未完成，1-已完成。仅当AutoRag=1时，该字段有效</p>
+ * @method void setSearchStatus(integer $SearchStatus) 设置<p>AutoRag搜索状态：0-未完成，1-已完成。仅当AutoRag=1时，该字段有效</p>
+ * @method integer getEnableGraphSearch() 获取<p>0:关闭 1:开启图谱检索，默认0</p>
+ * @method void setEnableGraphSearch(integer $EnableGraphSearch) 设置<p>0:关闭 1:开启图谱检索，默认0</p>
+ * @method integer getEnableTreeSearch() 获取<p>0:关闭 1:开启树检索，默认0</p>
+ * @method void setEnableTreeSearch(integer $EnableTreeSearch) 设置<p>0:关闭 1:开启树检索，默认0</p>
  */
 class SearchConfig extends AbstractModel
 {
     /**
-     * @var integer 检索类型：0:混合搜索 1：向量搜索 2：全文搜索
+     * @var integer <p>检索类型：0:混合搜索 1：向量搜索 2：全文搜索</p>
      */
     public $Type;
 
     /**
-     * @var integer 召回数量最大值
+     * @var integer <p>召回数量最大值</p>
      */
     public $Num;
 
     /**
-     * @var float 权重配置
+     * @var float <p>权重配置</p>
      */
     public $EmbeddingWeight;
 
     /**
-     * @var integer 0:关闭 1:开启，默认1
+     * @var integer <p>0:关闭 1:开启，默认1</p>
      */
     public $Rerank;
 
     /**
-     * @var integer 0:关闭 1:开启，默认0
+     * @var integer <p>0:关闭 1:开启，默认0</p>
      */
     public $AutoRag;
 
     /**
-     * @var array AutoRag关联的知识库ID列表
+     * @var array <p>AutoRag关联的知识库ID列表</p>
      */
     public $KnowledgeBaseIds;
 
     /**
-     * @var integer AutoRag搜索状态：0-未完成，1-已完成。仅当AutoRag=1时，该字段有效
+     * @var integer <p>AutoRag搜索状态：0-未完成，1-已完成。仅当AutoRag=1时，该字段有效</p>
      */
     public $SearchStatus;
 
     /**
-     * @param integer $Type 检索类型：0:混合搜索 1：向量搜索 2：全文搜索
-     * @param integer $Num 召回数量最大值
-     * @param float $EmbeddingWeight 权重配置
-     * @param integer $Rerank 0:关闭 1:开启，默认1
-     * @param integer $AutoRag 0:关闭 1:开启，默认0
-     * @param array $KnowledgeBaseIds AutoRag关联的知识库ID列表
-     * @param integer $SearchStatus AutoRag搜索状态：0-未完成，1-已完成。仅当AutoRag=1时，该字段有效
+     * @var integer <p>0:关闭 1:开启图谱检索，默认0</p>
+     */
+    public $EnableGraphSearch;
+
+    /**
+     * @var integer <p>0:关闭 1:开启树检索，默认0</p>
+     */
+    public $EnableTreeSearch;
+
+    /**
+     * @param integer $Type <p>检索类型：0:混合搜索 1：向量搜索 2：全文搜索</p>
+     * @param integer $Num <p>召回数量最大值</p>
+     * @param float $EmbeddingWeight <p>权重配置</p>
+     * @param integer $Rerank <p>0:关闭 1:开启，默认1</p>
+     * @param integer $AutoRag <p>0:关闭 1:开启，默认0</p>
+     * @param array $KnowledgeBaseIds <p>AutoRag关联的知识库ID列表</p>
+     * @param integer $SearchStatus <p>AutoRag搜索状态：0-未完成，1-已完成。仅当AutoRag=1时，该字段有效</p>
+     * @param integer $EnableGraphSearch <p>0:关闭 1:开启图谱检索，默认0</p>
+     * @param integer $EnableTreeSearch <p>0:关闭 1:开启树检索，默认0</p>
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class SearchConfig extends AbstractModel
 
         if (array_key_exists("SearchStatus",$param) and $param["SearchStatus"] !== null) {
             $this->SearchStatus = $param["SearchStatus"];
+        }
+
+        if (array_key_exists("EnableGraphSearch",$param) and $param["EnableGraphSearch"] !== null) {
+            $this->EnableGraphSearch = $param["EnableGraphSearch"];
+        }
+
+        if (array_key_exists("EnableTreeSearch",$param) and $param["EnableTreeSearch"] !== null) {
+            $this->EnableTreeSearch = $param["EnableTreeSearch"];
         }
     }
 }

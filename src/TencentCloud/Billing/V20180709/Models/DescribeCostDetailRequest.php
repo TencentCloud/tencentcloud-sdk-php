@@ -20,86 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCostDetail请求参数结构体
  *
- * @method integer getLimit() 获取数量，最大值为100
- * @method void setLimit(integer $Limit) 设置数量，最大值为100
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method string getBeginTime() 获取周期开始时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。
- * @method void setBeginTime(string $BeginTime) 设置周期开始时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。
- * @method string getEndTime() 获取周期结束时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。
- * @method void setEndTime(string $EndTime) 设置周期结束时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。
- * @method integer getNeedRecordNum() 获取是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
- * @method void setNeedRecordNum(integer $NeedRecordNum) 设置是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
- * @method string getMonth() 获取月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通消耗账单的月份，最多可拉取18个月内的数据。
- * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通消耗账单的月份，最多可拉取18个月内的数据。
- * @method string getProductCode() 获取查询指定产品信息
- * @method void setProductCode(string $ProductCode) 设置查询指定产品信息
- * @method string getPayMode() 获取付费模式 prePay/postPay
- * @method void setPayMode(string $PayMode) 设置付费模式 prePay/postPay
- * @method string getResourceId() 获取查询指定资源信息
- * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
+ * @method integer getLimit() 获取<p>数量，最大值为100</p>
+ * @method void setLimit(integer $Limit) 设置<p>数量，最大值为100</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method string getBeginTime() 获取<p>周期开始时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。</p>
+ * @method void setBeginTime(string $BeginTime) 设置<p>周期开始时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。</p>
+ * @method string getEndTime() 获取<p>周期结束时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>周期结束时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。</p>
+ * @method integer getNeedRecordNum() 获取<p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
+ * @method void setNeedRecordNum(integer $NeedRecordNum) 设置<p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
+ * @method string getMonth() 获取<p>月份，格式为yyyy-mm，Month和BeginTime&amp;EndTime必传一个，如果有传BeginTime&amp;EndTime则Month字段无效。不能早于开通消耗账单的月份，最多可拉取18个月内的数据。</p>
+ * @method void setMonth(string $Month) 设置<p>月份，格式为yyyy-mm，Month和BeginTime&amp;EndTime必传一个，如果有传BeginTime&amp;EndTime则Month字段无效。不能早于开通消耗账单的月份，最多可拉取18个月内的数据。</p>
+ * @method string getProductCode() 获取<p>查询指定产品信息</p>
+ * @method void setProductCode(string $ProductCode) 设置<p>查询指定产品信息</p>
+ * @method string getPayMode() 获取<p>付费模式 prePay/postPay</p>
+ * @method void setPayMode(string $PayMode) 设置<p>付费模式 prePay/postPay</p>
+ * @method string getResourceId() 获取<p>查询指定资源信息</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>查询指定资源信息</p>
+ * @method string getBusinessCode() 获取<p>产品名称代码</p>
+ * @method void setBusinessCode(string $BusinessCode) 设置<p>产品名称代码</p>
+ * @method string getProjectId() 获取<p>项目ID:资源所属项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID:资源所属项目ID</p>
+ * @method string getRegionId() 获取<p>地域ID</p>
+ * @method void setRegionId(string $RegionId) 设置<p>地域ID</p>
  */
 class DescribeCostDetailRequest extends AbstractModel
 {
     /**
-     * @var integer 数量，最大值为100
+     * @var integer <p>数量，最大值为100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var string 周期开始时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。
+     * @var string <p>周期开始时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。</p>
      */
     public $BeginTime;
 
     /**
-     * @var string 周期结束时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。
+     * @var string <p>周期结束时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
+     * @var integer <p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
      */
     public $NeedRecordNum;
 
     /**
-     * @var string 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通消耗账单的月份，最多可拉取18个月内的数据。
+     * @var string <p>月份，格式为yyyy-mm，Month和BeginTime&amp;EndTime必传一个，如果有传BeginTime&amp;EndTime则Month字段无效。不能早于开通消耗账单的月份，最多可拉取18个月内的数据。</p>
      */
     public $Month;
 
     /**
-     * @var string 查询指定产品信息
+     * @var string <p>查询指定产品信息</p>
      */
     public $ProductCode;
 
     /**
-     * @var string 付费模式 prePay/postPay
+     * @var string <p>付费模式 prePay/postPay</p>
      */
     public $PayMode;
 
     /**
-     * @var string 查询指定资源信息
+     * @var string <p>查询指定资源信息</p>
      */
     public $ResourceId;
 
     /**
-     * @param integer $Limit 数量，最大值为100
-     * @param integer $Offset 偏移量
-     * @param string $BeginTime 周期开始时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。
-     * @param string $EndTime 周期结束时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。
-     * @param integer $NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
-     * @param string $Month 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通消耗账单的月份，最多可拉取18个月内的数据。
-     * @param string $ProductCode 查询指定产品信息
-     * @param string $PayMode 付费模式 prePay/postPay
-     * @param string $ResourceId 查询指定资源信息
+     * @var string <p>产品名称代码</p>
+     */
+    public $BusinessCode;
+
+    /**
+     * @var string <p>项目ID:资源所属项目ID</p>
+     */
+    public $ProjectId;
+
+    /**
+     * @var string <p>地域ID</p>
+     */
+    public $RegionId;
+
+    /**
+     * @param integer $Limit <p>数量，最大值为100</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param string $BeginTime <p>周期开始时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。</p>
+     * @param string $EndTime <p>周期结束时间，查询粒度为天级别，需传入时分秒参数，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为同一月份，暂不支持跨月拉取。可拉取的数据是开通消耗账单后，且距今 18 个月内的数据。</p>
+     * @param integer $NeedRecordNum <p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
+     * @param string $Month <p>月份，格式为yyyy-mm，Month和BeginTime&amp;EndTime必传一个，如果有传BeginTime&amp;EndTime则Month字段无效。不能早于开通消耗账单的月份，最多可拉取18个月内的数据。</p>
+     * @param string $ProductCode <p>查询指定产品信息</p>
+     * @param string $PayMode <p>付费模式 prePay/postPay</p>
+     * @param string $ResourceId <p>查询指定资源信息</p>
+     * @param string $BusinessCode <p>产品名称代码</p>
+     * @param string $ProjectId <p>项目ID:资源所属项目ID</p>
+     * @param string $RegionId <p>地域ID</p>
      */
     function __construct()
     {
@@ -148,6 +168,18 @@ class DescribeCostDetailRequest extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

@@ -20,170 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 迁移对象信息，在配置库表视图等对象信息时大小写敏感
  *
- * @method string getDbName() 获取需要迁移或同步的库名，当ObjectMode为partial时，此项必填
- * @method void setDbName(string $DbName) 设置需要迁移或同步的库名，当ObjectMode为partial时，此项必填
- * @method string getNewDbName() 获取迁移或同步后的库名，默认与源库相同
- * @method void setNewDbName(string $NewDbName) 设置迁移或同步后的库名，默认与源库相同
- * @method string getSchemaName() 获取迁移或同步的 schema
- * @method void setSchemaName(string $SchemaName) 设置迁移或同步的 schema
- * @method string getNewSchemaName() 获取迁移或同步后的 schema name
- * @method void setNewSchemaName(string $NewSchemaName) 设置迁移或同步后的 schema name
- * @method string getDBMode() 获取DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
- * @method void setDBMode(string $DBMode) 设置DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
- * @method string getSchemaMode() 获取schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
- * @method void setSchemaMode(string $SchemaMode) 设置schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
- * @method string getTableMode() 获取表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
- * @method void setTableMode(string $TableMode) 设置表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
- * @method array getTables() 获取表图对象集合，当 TableMode 为 partial 时，此项需要填写
- * @method void setTables(array $Tables) 设置表图对象集合，当 TableMode 为 partial 时，此项需要填写
- * @method string getViewMode() 获取视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
- * @method void setViewMode(string $ViewMode) 设置视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
- * @method array getViews() 获取视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
- * @method void setViews(array $Views) 设置视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
- * @method string getRoleMode() 获取postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
- * @method void setRoleMode(string $RoleMode) 设置postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
- * @method array getRoles() 获取postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
- * @method void setRoles(array $Roles) 设置postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
- * @method string getFunctionMode() 获取选择要同步的模式，partial为部分，all为整选
- * @method void setFunctionMode(string $FunctionMode) 设置选择要同步的模式，partial为部分，all为整选
- * @method string getTriggerMode() 获取选择要同步的模式，partial为部分，all为整选
- * @method void setTriggerMode(string $TriggerMode) 设置选择要同步的模式，partial为部分，all为整选
- * @method string getEventMode() 获取选择要同步的模式，partial为部分，all为整选
- * @method void setEventMode(string $EventMode) 设置选择要同步的模式，partial为部分，all为整选
- * @method string getProcedureMode() 获取选择要同步的模式，partial为部分，all为整选
- * @method void setProcedureMode(string $ProcedureMode) 设置选择要同步的模式，partial为部分，all为整选
- * @method array getFunctions() 获取FunctionMode取值为partial时需要填写
- * @method void setFunctions(array $Functions) 设置FunctionMode取值为partial时需要填写
- * @method array getProcedures() 获取ProcedureMode取值为partial时需要填写
- * @method void setProcedures(array $Procedures) 设置ProcedureMode取值为partial时需要填写
- * @method array getEvents() 获取EventMode取值为partial时需要填写
- * @method void setEvents(array $Events) 设置EventMode取值为partial时需要填写
- * @method array getTriggers() 获取TriggerMode取值为partial时需要填写
- * @method void setTriggers(array $Triggers) 设置TriggerMode取值为partial时需要填写
+ * @method string getDbName() 获取<p>需要迁移或同步的库名，当ObjectMode为partial时，此项必填</p>
+ * @method void setDbName(string $DbName) 设置<p>需要迁移或同步的库名，当ObjectMode为partial时，此项必填</p>
+ * @method string getNewDbName() 获取<p>迁移或同步后的库名，默认与源库相同</p>
+ * @method void setNewDbName(string $NewDbName) 设置<p>迁移或同步后的库名，默认与源库相同</p>
+ * @method string getSchemaName() 获取<p>迁移或同步的 schema</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>迁移或同步的 schema</p>
+ * @method string getNewSchemaName() 获取<p>迁移或同步后的 schema name</p>
+ * @method void setNewSchemaName(string $NewSchemaName) 设置<p>迁移或同步后的 schema name</p>
+ * @method string getDBMode() 获取<p>DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填</p>
+ * @method void setDBMode(string $DBMode) 设置<p>DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填</p>
+ * @method string getSchemaMode() 获取<p>schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)</p>
+ * @method void setSchemaMode(string $SchemaMode) 设置<p>schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)</p>
+ * @method string getTableMode() 获取<p>表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填</p>
+ * @method void setTableMode(string $TableMode) 设置<p>表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填</p>
+ * @method array getTables() 获取<p>表图对象集合，当 TableMode 为 partial 时，此项需要填写</p>
+ * @method void setTables(array $Tables) 设置<p>表图对象集合，当 TableMode 为 partial 时，此项需要填写</p>
+ * @method string getViewMode() 获取<p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象</p>
+ * @method void setViewMode(string $ViewMode) 设置<p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象</p>
+ * @method array getViews() 获取<p>视图对象集合，当 ViewMode 为 partial 时， 此项需要填写</p>
+ * @method void setViews(array $Views) 设置<p>视图对象集合，当 ViewMode 为 partial 时， 此项需要填写</p>
+ * @method string getRoleMode() 获取<p>postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象</p>
+ * @method void setRoleMode(string $RoleMode) 设置<p>postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象</p>
+ * @method array getRoles() 获取<p>postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写</p>
+ * @method void setRoles(array $Roles) 设置<p>postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写</p>
+ * @method string getFunctionMode() 获取<p>选择要同步的模式，partial为部分，all为整选</p>
+ * @method void setFunctionMode(string $FunctionMode) 设置<p>选择要同步的模式，partial为部分，all为整选</p>
+ * @method string getTriggerMode() 获取<p>选择要同步的模式，partial为部分，all为整选</p>
+ * @method void setTriggerMode(string $TriggerMode) 设置<p>选择要同步的模式，partial为部分，all为整选</p>
+ * @method string getEventMode() 获取<p>选择要同步的模式，partial为部分，all为整选</p>
+ * @method void setEventMode(string $EventMode) 设置<p>选择要同步的模式，partial为部分，all为整选</p>
+ * @method string getProcedureMode() 获取<p>选择要同步的模式，partial为部分，all为整选</p>
+ * @method void setProcedureMode(string $ProcedureMode) 设置<p>选择要同步的模式，partial为部分，all为整选</p>
+ * @method array getFunctions() 获取<p>FunctionMode取值为partial时需要填写</p>
+ * @method void setFunctions(array $Functions) 设置<p>FunctionMode取值为partial时需要填写</p>
+ * @method array getProcedures() 获取<p>ProcedureMode取值为partial时需要填写</p>
+ * @method void setProcedures(array $Procedures) 设置<p>ProcedureMode取值为partial时需要填写</p>
+ * @method array getEvents() 获取<p>EventMode取值为partial时需要填写</p>
+ * @method void setEvents(array $Events) 设置<p>EventMode取值为partial时需要填写</p>
+ * @method array getTriggers() 获取<p>TriggerMode取值为partial时需要填写</p>
+ * @method void setTriggers(array $Triggers) 设置<p>TriggerMode取值为partial时需要填写</p>
  */
 class DBItem extends AbstractModel
 {
     /**
-     * @var string 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
+     * @var string <p>需要迁移或同步的库名，当ObjectMode为partial时，此项必填</p>
      */
     public $DbName;
 
     /**
-     * @var string 迁移或同步后的库名，默认与源库相同
+     * @var string <p>迁移或同步后的库名，默认与源库相同</p>
      */
     public $NewDbName;
 
     /**
-     * @var string 迁移或同步的 schema
+     * @var string <p>迁移或同步的 schema</p>
      */
     public $SchemaName;
 
     /**
-     * @var string 迁移或同步后的 schema name
+     * @var string <p>迁移或同步后的 schema name</p>
      */
     public $NewSchemaName;
 
     /**
-     * @var string DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
+     * @var string <p>DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填</p>
      */
     public $DBMode;
 
     /**
-     * @var string schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
+     * @var string <p>schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)</p>
      */
     public $SchemaMode;
 
     /**
-     * @var string 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
+     * @var string <p>表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填</p>
      */
     public $TableMode;
 
     /**
-     * @var array 表图对象集合，当 TableMode 为 partial 时，此项需要填写
+     * @var array <p>表图对象集合，当 TableMode 为 partial 时，此项需要填写</p>
      */
     public $Tables;
 
     /**
-     * @var string 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+     * @var string <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象</p>
      */
     public $ViewMode;
 
     /**
-     * @var array 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
+     * @var array <p>视图对象集合，当 ViewMode 为 partial 时， 此项需要填写</p>
      */
     public $Views;
 
     /**
-     * @var string postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
+     * @var string <p>postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象</p>
      */
     public $RoleMode;
 
     /**
-     * @var array postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
+     * @var array <p>postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写</p>
      */
     public $Roles;
 
     /**
-     * @var string 选择要同步的模式，partial为部分，all为整选
+     * @var string <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public $FunctionMode;
 
     /**
-     * @var string 选择要同步的模式，partial为部分，all为整选
+     * @var string <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public $TriggerMode;
 
     /**
-     * @var string 选择要同步的模式，partial为部分，all为整选
+     * @var string <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public $EventMode;
 
     /**
-     * @var string 选择要同步的模式，partial为部分，all为整选
+     * @var string <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public $ProcedureMode;
 
     /**
-     * @var array FunctionMode取值为partial时需要填写
+     * @var array <p>FunctionMode取值为partial时需要填写</p>
      */
     public $Functions;
 
     /**
-     * @var array ProcedureMode取值为partial时需要填写
+     * @var array <p>ProcedureMode取值为partial时需要填写</p>
      */
     public $Procedures;
 
     /**
-     * @var array EventMode取值为partial时需要填写
+     * @var array <p>EventMode取值为partial时需要填写</p>
      */
     public $Events;
 
     /**
-     * @var array TriggerMode取值为partial时需要填写
+     * @var array <p>TriggerMode取值为partial时需要填写</p>
      */
     public $Triggers;
 
     /**
-     * @param string $DbName 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
-     * @param string $NewDbName 迁移或同步后的库名，默认与源库相同
-     * @param string $SchemaName 迁移或同步的 schema
-     * @param string $NewSchemaName 迁移或同步后的 schema name
-     * @param string $DBMode DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
-     * @param string $SchemaMode schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
-     * @param string $TableMode 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
-     * @param array $Tables 表图对象集合，当 TableMode 为 partial 时，此项需要填写
-     * @param string $ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
-     * @param array $Views 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
-     * @param string $RoleMode postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
-     * @param array $Roles postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
-     * @param string $FunctionMode 选择要同步的模式，partial为部分，all为整选
-     * @param string $TriggerMode 选择要同步的模式，partial为部分，all为整选
-     * @param string $EventMode 选择要同步的模式，partial为部分，all为整选
-     * @param string $ProcedureMode 选择要同步的模式，partial为部分，all为整选
-     * @param array $Functions FunctionMode取值为partial时需要填写
-     * @param array $Procedures ProcedureMode取值为partial时需要填写
-     * @param array $Events EventMode取值为partial时需要填写
-     * @param array $Triggers TriggerMode取值为partial时需要填写
+     * @param string $DbName <p>需要迁移或同步的库名，当ObjectMode为partial时，此项必填</p>
+     * @param string $NewDbName <p>迁移或同步后的库名，默认与源库相同</p>
+     * @param string $SchemaName <p>迁移或同步的 schema</p>
+     * @param string $NewSchemaName <p>迁移或同步后的 schema name</p>
+     * @param string $DBMode <p>DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填</p>
+     * @param string $SchemaMode <p>schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)</p>
+     * @param string $TableMode <p>表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填</p>
+     * @param array $Tables <p>表图对象集合，当 TableMode 为 partial 时，此项需要填写</p>
+     * @param string $ViewMode <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象</p>
+     * @param array $Views <p>视图对象集合，当 ViewMode 为 partial 时， 此项需要填写</p>
+     * @param string $RoleMode <p>postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象</p>
+     * @param array $Roles <p>postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写</p>
+     * @param string $FunctionMode <p>选择要同步的模式，partial为部分，all为整选</p>
+     * @param string $TriggerMode <p>选择要同步的模式，partial为部分，all为整选</p>
+     * @param string $EventMode <p>选择要同步的模式，partial为部分，all为整选</p>
+     * @param string $ProcedureMode <p>选择要同步的模式，partial为部分，all为整选</p>
+     * @param array $Functions <p>FunctionMode取值为partial时需要填写</p>
+     * @param array $Procedures <p>ProcedureMode取值为partial时需要填写</p>
+     * @param array $Events <p>EventMode取值为partial时需要填写</p>
+     * @param array $Triggers <p>TriggerMode取值为partial时需要填写</p>
      */
     function __construct()
     {

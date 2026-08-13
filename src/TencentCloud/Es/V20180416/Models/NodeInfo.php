@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeNum(integer $NodeNum) 设置<p>节点数量</p>
  * @method string getNodeType() 获取<p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
  * @method void setNodeType(string $NodeType) 设置<p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
- * @method string getType() 获取<p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData
- * @method void setType(string $Type) 设置<p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData
+ * @method string getType() 获取<p>节点类型</p><p>枚举值：</p><ul><li>hotData： 热数据节点</li><li>warmData： 冷数据节点</li><li>dedicatedMaster： 专用主节点</li><li>dedicatedCoordinating： 专用协调节点</li><li>dedicatedMl： 专用机器学习节点</li></ul>
+ * @method void setType(string $Type) 设置<p>节点类型</p><p>枚举值：</p><ul><li>hotData： 热数据节点</li><li>warmData： 冷数据节点</li><li>dedicatedMaster： 专用主节点</li><li>dedicatedCoordinating： 专用协调节点</li><li>dedicatedMl： 专用机器学习节点</li></ul>
  * @method string getDiskType() 获取<p>节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD</p>
  * @method void setDiskType(string $DiskType) 设置<p>节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD</p>
  * @method integer getDiskSize() 获取<p>节点磁盘容量（单位GB）</p>
@@ -76,7 +76,7 @@ class NodeInfo extends AbstractModel
     public $NodeType;
 
     /**
-     * @var string <p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData
+     * @var string <p>节点类型</p><p>枚举值：</p><ul><li>hotData： 热数据节点</li><li>warmData： 冷数据节点</li><li>dedicatedMaster： 专用主节点</li><li>dedicatedCoordinating： 专用协调节点</li><li>dedicatedMl： 专用机器学习节点</li></ul>
      */
     public $Type;
 
@@ -145,7 +145,7 @@ class NodeInfo extends AbstractModel
     /**
      * @param integer $NodeNum <p>节点数量</p>
      * @param string $NodeType <p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
-     * @param string $Type <p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData
+     * @param string $Type <p>节点类型</p><p>枚举值：</p><ul><li>hotData： 热数据节点</li><li>warmData： 冷数据节点</li><li>dedicatedMaster： 专用主节点</li><li>dedicatedCoordinating： 专用协调节点</li><li>dedicatedMl： 专用机器学习节点</li></ul>
      * @param string $DiskType <p>节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD</p>
      * @param integer $DiskSize <p>节点磁盘容量（单位GB）</p>
      * @param LocalDiskInfo $LocalDiskInfo <p>节点本地盘信息</p>

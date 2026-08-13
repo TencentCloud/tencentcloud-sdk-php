@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 不一致的表的校验结果详情。增量和全量都是这个结构，某些字段对增量没有意义，可以忽略。
  *
- * @method string getDb() 获取库名
- * @method void setDb(string $Db) 设置库名
- * @method string getSchema() 获取schema名
- * @method void setSchema(string $Schema) 设置schema名
- * @method string getTable() 获取表名
- * @method void setTable(string $Table) 设置表名
- * @method string getConclusion() 获取校验结果
- * @method void setConclusion(string $Conclusion) 设置校验结果
- * @method string getStatus() 获取校验状态。仅全量阶段有意义
- * @method void setStatus(string $Status) 设置校验状态。仅全量阶段有意义
- * @method integer getProgress() 获取校验进度。仅全量阶段有意义
- * @method void setProgress(integer $Progress) 设置校验进度。仅全量阶段有意义
- * @method integer getRowCount() 获取不一致行数
- * @method void setRowCount(integer $RowCount) 设置不一致行数
- * @method string getStartedAt() 获取该表开始校验的时间
- * @method void setStartedAt(string $StartedAt) 设置该表开始校验的时间
- * @method string getFinishedAt() 获取该表校验结束的时间
- * @method void setFinishedAt(string $FinishedAt) 设置该表校验结束的时间
- * @method string getExpectedAt() 获取预计该表校验结束的时间
- * @method void setExpectedAt(string $ExpectedAt) 设置预计该表校验结束的时间
- * @method string getSrcItem() 获取源端行数，如果是行数校验此值有意义
- * @method void setSrcItem(string $SrcItem) 设置源端行数，如果是行数校验此值有意义
- * @method string getDstItem() 获取目标端行数，如果是行数校验此值有意义
- * @method void setDstItem(string $DstItem) 设置目标端行数，如果是行数校验此值有意义
+ * @method string getDb() 获取<p>库名</p>
+ * @method void setDb(string $Db) 设置<p>库名</p>
+ * @method string getSchema() 获取<p>schema名</p>
+ * @method void setSchema(string $Schema) 设置<p>schema名</p>
+ * @method string getTable() 获取<p>表名</p>
+ * @method void setTable(string $Table) 设置<p>表名</p>
+ * @method string getConclusion() 获取<p>校验结果</p>
+ * @method void setConclusion(string $Conclusion) 设置<p>校验结果</p>
+ * @method string getStatus() 获取<p>校验状态。仅全量阶段有意义</p>
+ * @method void setStatus(string $Status) 设置<p>校验状态。仅全量阶段有意义</p>
+ * @method integer getProgress() 获取<p>校验进度。仅全量阶段有意义</p>
+ * @method void setProgress(integer $Progress) 设置<p>校验进度。仅全量阶段有意义</p>
+ * @method integer getRowCount() 获取<p>不一致行数</p>
+ * @method void setRowCount(integer $RowCount) 设置<p>不一致行数</p>
+ * @method string getStartedAt() 获取<p>该表开始校验的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setStartedAt(string $StartedAt) 设置<p>该表开始校验的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getFinishedAt() 获取<p>该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setFinishedAt(string $FinishedAt) 设置<p>该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getExpectedAt() 获取<p>预计该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setExpectedAt(string $ExpectedAt) 设置<p>预计该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getSrcItem() 获取<p>源端行数，如果是行数校验此值有意义</p>
+ * @method void setSrcItem(string $SrcItem) 设置<p>源端行数，如果是行数校验此值有意义</p>
+ * @method string getDstItem() 获取<p>目标端行数，如果是行数校验此值有意义</p>
+ * @method void setDstItem(string $DstItem) 设置<p>目标端行数，如果是行数校验此值有意义</p>
  */
 class CompareTableResult extends AbstractModel
 {
     /**
-     * @var string 库名
+     * @var string <p>库名</p>
      */
     public $Db;
 
     /**
-     * @var string schema名
+     * @var string <p>schema名</p>
      */
     public $Schema;
 
     /**
-     * @var string 表名
+     * @var string <p>表名</p>
      */
     public $Table;
 
     /**
-     * @var string 校验结果
+     * @var string <p>校验结果</p>
      */
     public $Conclusion;
 
     /**
-     * @var string 校验状态。仅全量阶段有意义
+     * @var string <p>校验状态。仅全量阶段有意义</p>
      */
     public $Status;
 
     /**
-     * @var integer 校验进度。仅全量阶段有意义
+     * @var integer <p>校验进度。仅全量阶段有意义</p>
      */
     public $Progress;
 
     /**
-     * @var integer 不一致行数
+     * @var integer <p>不一致行数</p>
      */
     public $RowCount;
 
     /**
-     * @var string 该表开始校验的时间
+     * @var string <p>该表开始校验的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $StartedAt;
 
     /**
-     * @var string 该表校验结束的时间
+     * @var string <p>该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $FinishedAt;
 
     /**
-     * @var string 预计该表校验结束的时间
+     * @var string <p>预计该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $ExpectedAt;
 
     /**
-     * @var string 源端行数，如果是行数校验此值有意义
+     * @var string <p>源端行数，如果是行数校验此值有意义</p>
      */
     public $SrcItem;
 
     /**
-     * @var string 目标端行数，如果是行数校验此值有意义
+     * @var string <p>目标端行数，如果是行数校验此值有意义</p>
      */
     public $DstItem;
 
     /**
-     * @param string $Db 库名
-     * @param string $Schema schema名
-     * @param string $Table 表名
-     * @param string $Conclusion 校验结果
-     * @param string $Status 校验状态。仅全量阶段有意义
-     * @param integer $Progress 校验进度。仅全量阶段有意义
-     * @param integer $RowCount 不一致行数
-     * @param string $StartedAt 该表开始校验的时间
-     * @param string $FinishedAt 该表校验结束的时间
-     * @param string $ExpectedAt 预计该表校验结束的时间
-     * @param string $SrcItem 源端行数，如果是行数校验此值有意义
-     * @param string $DstItem 目标端行数，如果是行数校验此值有意义
+     * @param string $Db <p>库名</p>
+     * @param string $Schema <p>schema名</p>
+     * @param string $Table <p>表名</p>
+     * @param string $Conclusion <p>校验结果</p>
+     * @param string $Status <p>校验状态。仅全量阶段有意义</p>
+     * @param integer $Progress <p>校验进度。仅全量阶段有意义</p>
+     * @param integer $RowCount <p>不一致行数</p>
+     * @param string $StartedAt <p>该表开始校验的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $FinishedAt <p>该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $ExpectedAt <p>预计该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $SrcItem <p>源端行数，如果是行数校验此值有意义</p>
+     * @param string $DstItem <p>目标端行数，如果是行数校验此值有意义</p>
      */
     function __construct()
     {

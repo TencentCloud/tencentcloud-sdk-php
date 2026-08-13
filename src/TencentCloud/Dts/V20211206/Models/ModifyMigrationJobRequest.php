@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstInfo(DBEndpointInfo $DstInfo) 设置<p>目标实例信息</p>
  * @method string getJobName() 获取<p>迁移任务名称，最大长度128</p>
  * @method void setJobName(string $JobName) 设置<p>迁移任务名称，最大长度128</p>
- * @method string getExpectRunTime() 获取<p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
- * @method void setExpectRunTime(string $ExpectRunTime) 设置<p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+ * @method string getExpectRunTime() 获取<p>期待启动时间，当RunMode取值为timed时，此值必填。</p><p>参数格式：当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
+ * @method void setExpectRunTime(string $ExpectRunTime) 设置<p>期待启动时间，当RunMode取值为timed时，此值必填。</p><p>参数格式：当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
  * @method array getTags() 获取<p>标签信息</p>
  * @method void setTags(array $Tags) 设置<p>标签信息</p>
  * @method integer getAutoRetryTimeRangeMinutes() 获取<p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
@@ -72,7 +72,7 @@ class ModifyMigrationJobRequest extends AbstractModel
     public $JobName;
 
     /**
-     * @var string <p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+     * @var string <p>期待启动时间，当RunMode取值为timed时，此值必填。</p><p>参数格式：当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
      */
     public $ExpectRunTime;
 
@@ -93,7 +93,7 @@ class ModifyMigrationJobRequest extends AbstractModel
      * @param DBEndpointInfo $SrcInfo <p>源实例信息</p>
      * @param DBEndpointInfo $DstInfo <p>目标实例信息</p>
      * @param string $JobName <p>迁移任务名称，最大长度128</p>
-     * @param string $ExpectRunTime <p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+     * @param string $ExpectRunTime <p>期待启动时间，当RunMode取值为timed时，此值必填。</p><p>参数格式：当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
      * @param array $Tags <p>标签信息</p>
      * @param integer $AutoRetryTimeRangeMinutes <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
      */

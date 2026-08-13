@@ -20,122 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 一致性校验对象信息
  *
- * @method string getJobId() 获取任务id
- * @method void setJobId(string $JobId) 设置任务id
- * @method string getCompareTaskId() 获取对比任务 Id
- * @method void setCompareTaskId(string $CompareTaskId) 设置对比任务 Id
- * @method string getTaskName() 获取对比任务名称
- * @method void setTaskName(string $TaskName) 设置对比任务名称
- * @method string getStatus() 获取对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
- * @method void setStatus(string $Status) 设置对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
- * @method CompareObject getConfig() 获取对比任务配置
- * @method void setConfig(CompareObject $Config) 设置对比任务配置
- * @method ProcessProgress getCheckProcess() 获取对比任务校验详情
- * @method void setCheckProcess(ProcessProgress $CheckProcess) 设置对比任务校验详情
- * @method ProcessProgress getCompareProcess() 获取对比任务运行详情
- * @method void setCompareProcess(ProcessProgress $CompareProcess) 设置对比任务运行详情
- * @method string getConclusion() 获取对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
- * @method void setConclusion(string $Conclusion) 设置对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
- * @method string getCreatedAt() 获取任务创建时间
- * @method void setCreatedAt(string $CreatedAt) 设置任务创建时间
- * @method string getStartedAt() 获取任务启动时间
- * @method void setStartedAt(string $StartedAt) 设置任务启动时间
- * @method string getFinishedAt() 获取对比结束时间
- * @method void setFinishedAt(string $FinishedAt) 设置对比结束时间
- * @method string getMethod() 获取对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
- * @method void setMethod(string $Method) 设置对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
- * @method CompareOptions getOptions() 获取对比配置信息
- * @method void setOptions(CompareOptions $Options) 设置对比配置信息
- * @method string getMessage() 获取一致性校验提示信息
- * @method void setMessage(string $Message) 设置一致性校验提示信息
+ * @method string getJobId() 获取<p>任务id</p>
+ * @method void setJobId(string $JobId) 设置<p>任务id</p>
+ * @method string getCompareTaskId() 获取<p>对比任务 Id</p>
+ * @method void setCompareTaskId(string $CompareTaskId) 设置<p>对比任务 Id</p>
+ * @method string getTaskName() 获取<p>对比任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>对比任务名称</p>
+ * @method string getStatus() 获取<p>对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
+ * @method void setStatus(string $Status) 设置<p>对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
+ * @method CompareObject getConfig() 获取<p>对比任务配置</p>
+ * @method void setConfig(CompareObject $Config) 设置<p>对比任务配置</p>
+ * @method ProcessProgress getCheckProcess() 获取<p>对比任务校验详情</p>
+ * @method void setCheckProcess(ProcessProgress $CheckProcess) 设置<p>对比任务校验详情</p>
+ * @method ProcessProgress getCompareProcess() 获取<p>对比任务运行详情</p>
+ * @method void setCompareProcess(ProcessProgress $CompareProcess) 设置<p>对比任务运行详情</p>
+ * @method string getConclusion() 获取<p>对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过</p>
+ * @method void setConclusion(string $Conclusion) 设置<p>对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过</p>
+ * @method string getCreatedAt() 获取<p>任务创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>任务创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getStartedAt() 获取<p>任务启动时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setStartedAt(string $StartedAt) 设置<p>任务启动时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getFinishedAt() 获取<p>对比结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setFinishedAt(string $FinishedAt) 设置<p>对比结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getMethod() 获取<p>对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)</p>
+ * @method void setMethod(string $Method) 设置<p>对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)</p>
+ * @method CompareOptions getOptions() 获取<p>对比配置信息</p>
+ * @method void setOptions(CompareOptions $Options) 设置<p>对比配置信息</p>
+ * @method string getMessage() 获取<p>一致性校验提示信息</p>
+ * @method void setMessage(string $Message) 设置<p>一致性校验提示信息</p>
  */
 class CompareTaskItem extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
      */
     public $JobId;
 
     /**
-     * @var string 对比任务 Id
+     * @var string <p>对比任务 Id</p>
      */
     public $CompareTaskId;
 
     /**
-     * @var string 对比任务名称
+     * @var string <p>对比任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var string 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+     * @var string <p>对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
      */
     public $Status;
 
     /**
-     * @var CompareObject 对比任务配置
+     * @var CompareObject <p>对比任务配置</p>
      */
     public $Config;
 
     /**
-     * @var ProcessProgress 对比任务校验详情
+     * @var ProcessProgress <p>对比任务校验详情</p>
      */
     public $CheckProcess;
 
     /**
-     * @var ProcessProgress 对比任务运行详情
+     * @var ProcessProgress <p>对比任务运行详情</p>
      */
     public $CompareProcess;
 
     /**
-     * @var string 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
+     * @var string <p>对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过</p>
      */
     public $Conclusion;
 
     /**
-     * @var string 任务创建时间
+     * @var string <p>任务创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string 任务启动时间
+     * @var string <p>任务启动时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $StartedAt;
 
     /**
-     * @var string 对比结束时间
+     * @var string <p>对比结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $FinishedAt;
 
     /**
-     * @var string 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * @var string <p>对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)</p>
      */
     public $Method;
 
     /**
-     * @var CompareOptions 对比配置信息
+     * @var CompareOptions <p>对比配置信息</p>
      */
     public $Options;
 
     /**
-     * @var string 一致性校验提示信息
+     * @var string <p>一致性校验提示信息</p>
      */
     public $Message;
 
     /**
-     * @param string $JobId 任务id
-     * @param string $CompareTaskId 对比任务 Id
-     * @param string $TaskName 对比任务名称
-     * @param string $Status 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
-     * @param CompareObject $Config 对比任务配置
-     * @param ProcessProgress $CheckProcess 对比任务校验详情
-     * @param ProcessProgress $CompareProcess 对比任务运行详情
-     * @param string $Conclusion 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
-     * @param string $CreatedAt 任务创建时间
-     * @param string $StartedAt 任务启动时间
-     * @param string $FinishedAt 对比结束时间
-     * @param string $Method 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
-     * @param CompareOptions $Options 对比配置信息
-     * @param string $Message 一致性校验提示信息
+     * @param string $JobId <p>任务id</p>
+     * @param string $CompareTaskId <p>对比任务 Id</p>
+     * @param string $TaskName <p>对比任务名称</p>
+     * @param string $Status <p>对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
+     * @param CompareObject $Config <p>对比任务配置</p>
+     * @param ProcessProgress $CheckProcess <p>对比任务校验详情</p>
+     * @param ProcessProgress $CompareProcess <p>对比任务运行详情</p>
+     * @param string $Conclusion <p>对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过</p>
+     * @param string $CreatedAt <p>任务创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $StartedAt <p>任务启动时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $FinishedAt <p>对比结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $Method <p>对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)</p>
+     * @param CompareOptions $Options <p>对比配置信息</p>
+     * @param string $Message <p>一致性校验提示信息</p>
      */
     function __construct()
     {

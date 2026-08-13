@@ -20,122 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询HTTP访问服务输出的域名信息，每个域名内包含所有路由信息
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
- * @method string getDomainType() 获取域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调
- * @method void setDomainType(string $DomainType) 设置域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调
- * @method string getAccessType() 获取绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
- * @method void setAccessType(string $AccessType) 设置绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
- * @method string getCertId() 获取证书ID。当前账户下SSL平台的证书ID
- * @method void setCertId(string $CertId) 设置证书ID。当前账户下SSL平台的证书ID
- * @method string getProtocol() 获取协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
- * @method void setProtocol(string $Protocol) 设置协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
- * @method string getCname() 获取配置DNS解析的CNAME。根据AccessType返回不同的CNAME值。
- * @method void setCname(string $Cname) 设置配置DNS解析的CNAME。根据AccessType返回不同的CNAME值。
- * @method boolean getIsDefault() 获取是否是默认域名
- * @method void setIsDefault(boolean $IsDefault) 设置是否是默认域名
- * @method boolean getEnable() 获取域名开启状态
- * @method void setEnable(boolean $Enable) 设置域名开启状态
- * @method string getStatus() 获取状态。PROCESSING、FAIL，SUCCESS。
- * @method void setStatus(string $Status) 设置状态。PROCESSING、FAIL，SUCCESS。
- * @method string getDNSStatus() 获取DNS解析状态。OK： 解析正常，INVALID：解析不正确，域名未解析到当前Cname域名。
- * @method void setDNSStatus(string $DNSStatus) 设置DNS解析状态。OK： 解析正常，INVALID：解析不正确，域名未解析到当前Cname域名。
- * @method array getRoutes() 获取HTTP访问服务路由信息
- * @method void setRoutes(array $Routes) 设置HTTP访问服务路由信息
- * @method HTTPServiceExtension getExtension() 获取扩展字段，内部包含headers处理等
- * @method void setExtension(HTTPServiceExtension $Extension) 设置扩展字段，内部包含headers处理等
- * @method string getCreateTime() 获取域名创建时间
- * @method void setCreateTime(string $CreateTime) 设置域名创建时间
- * @method string getUpdateTime() 获取域名更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置域名更新时间
+ * @method string getDomain() 获取<p>域名</p>
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
+ * @method string getDomainType() 获取<p>域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调</p>
+ * @method void setDomainType(string $DomainType) 设置<p>域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调</p>
+ * @method string getAccessType() 获取<p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+ * @method void setAccessType(string $AccessType) 设置<p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+ * @method string getCertId() 获取<p>证书ID。当前账户下SSL平台的证书ID</p>
+ * @method void setCertId(string $CertId) 设置<p>证书ID。当前账户下SSL平台的证书ID</p>
+ * @method string getProtocol() 获取<p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
+ * @method string getCname() 获取<p>配置DNS解析的CNAME。根据AccessType返回不同的CNAME值。</p>
+ * @method void setCname(string $Cname) 设置<p>配置DNS解析的CNAME。根据AccessType返回不同的CNAME值。</p>
+ * @method boolean getIsDefault() 获取<p>是否是默认域名</p>
+ * @method void setIsDefault(boolean $IsDefault) 设置<p>是否是默认域名</p>
+ * @method boolean getEnable() 获取<p>域名开启状态</p>
+ * @method void setEnable(boolean $Enable) 设置<p>域名开启状态</p>
+ * @method string getStatus() 获取<p>状态。</p><p>枚举值：</p><ul><li>PROCESSING： 处理中</li><li>FAIL： 失败</li><li>EO_PENDING_VERIFICATION： 待验证edgeone归属权</li><li>SUCCESS： 成功</li></ul>
+ * @method void setStatus(string $Status) 设置<p>状态。</p><p>枚举值：</p><ul><li>PROCESSING： 处理中</li><li>FAIL： 失败</li><li>EO_PENDING_VERIFICATION： 待验证edgeone归属权</li><li>SUCCESS： 成功</li></ul>
+ * @method string getDNSStatus() 获取<p>DNS解析状态</p><p>枚举值：</p><ul><li>OK： 正常，命中目标 cname</li><li>EMPTY： 解析为空，域名尚未配置 CNAME 或未生效</li><li>INVALID： 异常，解析到其他非目标地址</li></ul>
+ * @method void setDNSStatus(string $DNSStatus) 设置<p>DNS解析状态</p><p>枚举值：</p><ul><li>OK： 正常，命中目标 cname</li><li>EMPTY： 解析为空，域名尚未配置 CNAME 或未生效</li><li>INVALID： 异常，解析到其他非目标地址</li></ul>
+ * @method array getRoutes() 获取<p>HTTP访问服务路由信息</p>
+ * @method void setRoutes(array $Routes) 设置<p>HTTP访问服务路由信息</p>
+ * @method HTTPServiceExtension getExtension() 获取<p>扩展字段，内部包含headers处理等</p>
+ * @method void setExtension(HTTPServiceExtension $Extension) 设置<p>扩展字段，内部包含headers处理等</p>
+ * @method string getCreateTime() 获取<p>域名创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>域名创建时间</p>
+ * @method string getUpdateTime() 获取<p>域名更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>域名更新时间</p>
  */
 class HTTPServiceDomain extends AbstractModel
 {
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调
+     * @var string <p>域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调</p>
      */
     public $DomainType;
 
     /**
-     * @var string 绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
+     * @var string <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
      */
     public $AccessType;
 
     /**
-     * @var string 证书ID。当前账户下SSL平台的证书ID
+     * @var string <p>证书ID。当前账户下SSL平台的证书ID</p>
      */
     public $CertId;
 
     /**
-     * @var string 协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
+     * @var string <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
      */
     public $Protocol;
 
     /**
-     * @var string 配置DNS解析的CNAME。根据AccessType返回不同的CNAME值。
+     * @var string <p>配置DNS解析的CNAME。根据AccessType返回不同的CNAME值。</p>
      */
     public $Cname;
 
     /**
-     * @var boolean 是否是默认域名
+     * @var boolean <p>是否是默认域名</p>
      */
     public $IsDefault;
 
     /**
-     * @var boolean 域名开启状态
+     * @var boolean <p>域名开启状态</p>
      */
     public $Enable;
 
     /**
-     * @var string 状态。PROCESSING、FAIL，SUCCESS。
+     * @var string <p>状态。</p><p>枚举值：</p><ul><li>PROCESSING： 处理中</li><li>FAIL： 失败</li><li>EO_PENDING_VERIFICATION： 待验证edgeone归属权</li><li>SUCCESS： 成功</li></ul>
      */
     public $Status;
 
     /**
-     * @var string DNS解析状态。OK： 解析正常，INVALID：解析不正确，域名未解析到当前Cname域名。
+     * @var string <p>DNS解析状态</p><p>枚举值：</p><ul><li>OK： 正常，命中目标 cname</li><li>EMPTY： 解析为空，域名尚未配置 CNAME 或未生效</li><li>INVALID： 异常，解析到其他非目标地址</li></ul>
      */
     public $DNSStatus;
 
     /**
-     * @var array HTTP访问服务路由信息
+     * @var array <p>HTTP访问服务路由信息</p>
      */
     public $Routes;
 
     /**
-     * @var HTTPServiceExtension 扩展字段，内部包含headers处理等
+     * @var HTTPServiceExtension <p>扩展字段，内部包含headers处理等</p>
      */
     public $Extension;
 
     /**
-     * @var string 域名创建时间
+     * @var string <p>域名创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 域名更新时间
+     * @var string <p>域名更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $Domain 域名
-     * @param string $DomainType 域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调
-     * @param string $AccessType 绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
-     * @param string $CertId 证书ID。当前账户下SSL平台的证书ID
-     * @param string $Protocol 协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
-     * @param string $Cname 配置DNS解析的CNAME。根据AccessType返回不同的CNAME值。
-     * @param boolean $IsDefault 是否是默认域名
-     * @param boolean $Enable 域名开启状态
-     * @param string $Status 状态。PROCESSING、FAIL，SUCCESS。
-     * @param string $DNSStatus DNS解析状态。OK： 解析正常，INVALID：解析不正确，域名未解析到当前Cname域名。
-     * @param array $Routes HTTP访问服务路由信息
-     * @param HTTPServiceExtension $Extension 扩展字段，内部包含headers处理等
-     * @param string $CreateTime 域名创建时间
-     * @param string $UpdateTime 域名更新时间
+     * @param string $Domain <p>域名</p>
+     * @param string $DomainType <p>域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调</p>
+     * @param string $AccessType <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+     * @param string $CertId <p>证书ID。当前账户下SSL平台的证书ID</p>
+     * @param string $Protocol <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
+     * @param string $Cname <p>配置DNS解析的CNAME。根据AccessType返回不同的CNAME值。</p>
+     * @param boolean $IsDefault <p>是否是默认域名</p>
+     * @param boolean $Enable <p>域名开启状态</p>
+     * @param string $Status <p>状态。</p><p>枚举值：</p><ul><li>PROCESSING： 处理中</li><li>FAIL： 失败</li><li>EO_PENDING_VERIFICATION： 待验证edgeone归属权</li><li>SUCCESS： 成功</li></ul>
+     * @param string $DNSStatus <p>DNS解析状态</p><p>枚举值：</p><ul><li>OK： 正常，命中目标 cname</li><li>EMPTY： 解析为空，域名尚未配置 CNAME 或未生效</li><li>INVALID： 异常，解析到其他非目标地址</li></ul>
+     * @param array $Routes <p>HTTP访问服务路由信息</p>
+     * @param HTTPServiceExtension $Extension <p>扩展字段，内部包含headers处理等</p>
+     * @param string $CreateTime <p>域名创建时间</p>
+     * @param string $UpdateTime <p>域名更新时间</p>
      */
     function __construct()
     {

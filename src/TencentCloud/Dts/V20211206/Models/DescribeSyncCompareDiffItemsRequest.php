@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSyncCompareDiffItems请求参数结构体
  *
- * @method string getJobId() 获取迁移任务 Id
- * @method void setJobId(string $JobId) 设置迁移任务 Id
- * @method string getCompareTaskId() 获取校验任务 Id
- * @method void setCompareTaskId(string $CompareTaskId) 设置校验任务 Id
- * @method string getDBName() 获取数据库名
- * @method void setDBName(string $DBName) 设置数据库名
- * @method string getSchemaName() 获取schema名
- * @method void setSchemaName(string $SchemaName) 设置schema名
- * @method string getTableName() 获取数据表名
- * @method void setTableName(string $TableName) 设置数据表名
- * @method integer getChunkId() 获取数据分块号
- * @method void setChunkId(integer $ChunkId) 设置数据分块号
- * @method integer getLimit() 获取分页条件，查询结果返回条数
- * @method void setLimit(integer $Limit) 设置分页条件，查询结果返回条数
- * @method integer getOffset() 获取分页条件，查询的起始位置
- * @method void setOffset(integer $Offset) 设置分页条件，查询的起始位置
+ * @method string getJobId() 获取<p>迁移任务 Id</p>
+ * @method void setJobId(string $JobId) 设置<p>迁移任务 Id</p>
+ * @method string getCompareTaskId() 获取<p>校验任务 Id</p>
+ * @method void setCompareTaskId(string $CompareTaskId) 设置<p>校验任务 Id</p>
+ * @method string getDBName() 获取<p>数据库名</p>
+ * @method void setDBName(string $DBName) 设置<p>数据库名</p>
+ * @method string getSchemaName() 获取<p>schema名</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>schema名</p>
+ * @method string getTableName() 获取<p>数据表名</p>
+ * @method void setTableName(string $TableName) 设置<p>数据表名</p>
+ * @method integer getChunkId() 获取<p>数据分块号</p>
+ * @method void setChunkId(integer $ChunkId) 设置<p>数据分块号</p>
+ * @method integer getLimit() 获取<p>分页条件，查询结果返回条数</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页条件，查询结果返回条数</p>
+ * @method integer getOffset() 获取<p>分页条件，查询的起始位置</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页条件，查询的起始位置</p>
  */
 class DescribeSyncCompareDiffItemsRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务 Id
+     * @var string <p>迁移任务 Id</p>
      */
     public $JobId;
 
     /**
-     * @var string 校验任务 Id
+     * @var string <p>校验任务 Id</p>
      */
     public $CompareTaskId;
 
     /**
-     * @var string 数据库名
+     * @var string <p>数据库名</p>
      */
     public $DBName;
 
     /**
-     * @var string schema名
+     * @var string <p>schema名</p>
      */
     public $SchemaName;
 
     /**
-     * @var string 数据表名
+     * @var string <p>数据表名</p>
      */
     public $TableName;
 
     /**
-     * @var integer 数据分块号
+     * @var integer <p>数据分块号</p>
      */
     public $ChunkId;
 
     /**
-     * @var integer 分页条件，查询结果返回条数
+     * @var integer <p>分页条件，查询结果返回条数</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页条件，查询的起始位置
+     * @var integer <p>分页条件，查询的起始位置</p>
      */
     public $Offset;
 
     /**
-     * @param string $JobId 迁移任务 Id
-     * @param string $CompareTaskId 校验任务 Id
-     * @param string $DBName 数据库名
-     * @param string $SchemaName schema名
-     * @param string $TableName 数据表名
-     * @param integer $ChunkId 数据分块号
-     * @param integer $Limit 分页条件，查询结果返回条数
-     * @param integer $Offset 分页条件，查询的起始位置
+     * @param string $JobId <p>迁移任务 Id</p>
+     * @param string $CompareTaskId <p>校验任务 Id</p>
+     * @param string $DBName <p>数据库名</p>
+     * @param string $SchemaName <p>schema名</p>
+     * @param string $TableName <p>数据表名</p>
+     * @param integer $ChunkId <p>数据分块号</p>
+     * @param integer $Limit <p>分页条件，查询结果返回条数</p>
+     * @param integer $Offset <p>分页条件，查询的起始位置</p>
      */
     function __construct()
     {

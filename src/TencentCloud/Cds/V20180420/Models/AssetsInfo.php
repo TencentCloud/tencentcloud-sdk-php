@@ -102,14 +102,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetGroupId(integer $AssetGroupId) 设置<p>资产组Id</p>
  * @method boolean getIsNewCloudAudit() 获取<p>是否是新云原生审计流程</p>
  * @method void setIsNewCloudAudit(boolean $IsNewCloudAudit) 设置<p>是否是新云原生审计流程</p>
- * @method array getAuditCapability() 获取<p>审计功能支持说明</p>
- * @method void setAuditCapability(array $AuditCapability) 设置<p>审计功能支持说明</p>
  * @method integer getTrafficMirrorOn() 获取<p>1</p><p>取值范围：[0, 1]</p>
  * @method void setTrafficMirrorOn(integer $TrafficMirrorOn) 设置<p>1</p><p>取值范围：[0, 1]</p>
  * @method string getAuditScope() 获取<p>流量镜像审计范围</p><p>枚举值：</p><ul><li>ALL： 全地域</li><li>REGION： 资产所在地域</li><li>VPC： 资产所在VPC</li></ul><p>默认值：REGION</p>
  * @method void setAuditScope(string $AuditScope) 设置<p>流量镜像审计范围</p><p>枚举值：</p><ul><li>ALL： 全地域</li><li>REGION： 资产所在地域</li><li>VPC： 资产所在VPC</li></ul><p>默认值：REGION</p>
  * @method string getInstanceGroupId() 获取<p>实例集群ID</p>
  * @method void setInstanceGroupId(string $InstanceGroupId) 设置<p>实例集群ID</p>
+ * @method array getAssetGroups() 获取<p>该资产所在的资产组</p>
+ * @method void setAssetGroups(array $AssetGroups) 设置<p>该资产所在的资产组</p>
  */
 class AssetsInfo extends AbstractModel
 {
@@ -319,11 +319,6 @@ class AssetsInfo extends AbstractModel
     public $IsNewCloudAudit;
 
     /**
-     * @var array <p>审计功能支持说明</p>
-     */
-    public $AuditCapability;
-
-    /**
      * @var integer <p>1</p><p>取值范围：[0, 1]</p>
      */
     public $TrafficMirrorOn;
@@ -337,6 +332,11 @@ class AssetsInfo extends AbstractModel
      * @var string <p>实例集群ID</p>
      */
     public $InstanceGroupId;
+
+    /**
+     * @var array <p>该资产所在的资产组</p>
+     */
+    public $AssetGroups;
 
     /**
      * @param integer $AddTime <p>创建时间</p>
@@ -380,10 +380,10 @@ class AssetsInfo extends AbstractModel
      * @param string $GroupName <p>所属组名</p>
      * @param integer $AssetGroupId <p>资产组Id</p>
      * @param boolean $IsNewCloudAudit <p>是否是新云原生审计流程</p>
-     * @param array $AuditCapability <p>审计功能支持说明</p>
      * @param integer $TrafficMirrorOn <p>1</p><p>取值范围：[0, 1]</p>
      * @param string $AuditScope <p>流量镜像审计范围</p><p>枚举值：</p><ul><li>ALL： 全地域</li><li>REGION： 资产所在地域</li><li>VPC： 资产所在VPC</li></ul><p>默认值：REGION</p>
      * @param string $InstanceGroupId <p>实例集群ID</p>
+     * @param array $AssetGroups <p>该资产所在的资产组</p>
      */
     function __construct()
     {
@@ -573,15 +573,6 @@ class AssetsInfo extends AbstractModel
             $this->IsNewCloudAudit = $param["IsNewCloudAudit"];
         }
 
-        if (array_key_exists("AuditCapability",$param) and $param["AuditCapability"] !== null) {
-            $this->AuditCapability = [];
-            foreach ($param["AuditCapability"] as $key => $value){
-                $obj = new AuditCapability();
-                $obj->deserialize($value);
-                array_push($this->AuditCapability, $obj);
-            }
-        }
-
         if (array_key_exists("TrafficMirrorOn",$param) and $param["TrafficMirrorOn"] !== null) {
             $this->TrafficMirrorOn = $param["TrafficMirrorOn"];
         }
@@ -592,6 +583,15 @@ class AssetsInfo extends AbstractModel
 
         if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
             $this->InstanceGroupId = $param["InstanceGroupId"];
+        }
+
+        if (array_key_exists("AssetGroups",$param) and $param["AssetGroups"] !== null) {
+            $this->AssetGroups = [];
+            foreach ($param["AssetGroups"] as $key => $value){
+                $obj = new IdWithName();
+                $obj->deserialize($value);
+                array_push($this->AssetGroups, $obj);
+            }
         }
     }
 }

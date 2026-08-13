@@ -34,16 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置<p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
  * @method string getSubsStatus() 获取<p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
  * @method void setSubsStatus(string $SubsStatus) 设置<p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
- * @method string getModifyTime() 获取<p>修改时间。</p>
- * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间。</p>
- * @method string getCreateTime() 获取<p>创建时间。</p>
- * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。</p>
- * @method string getIsolateTime() 获取<p>隔离时间。</p>
- * @method void setIsolateTime(string $IsolateTime) 设置<p>隔离时间。</p>
- * @method string getExpireTime() 获取<p>包年包月任务的到期时间。</p>
- * @method void setExpireTime(string $ExpireTime) 设置<p>包年包月任务的到期时间。</p>
- * @method string getOfflineTime() 获取<p>下线时间。</p>
- * @method void setOfflineTime(string $OfflineTime) 设置<p>下线时间。</p>
+ * @method string getModifyTime() 获取<p>修改时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+ * @method string getCreateTime() 获取<p>创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+ * @method string getIsolateTime() 获取<p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+ * @method void setIsolateTime(string $IsolateTime) 设置<p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+ * @method string getExpireTime() 获取<p>包年包月任务的到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>包年包月任务的到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+ * @method string getOfflineTime() 获取<p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+ * @method void setOfflineTime(string $OfflineTime) 设置<p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
  * @method integer getPayType() 获取<p>付费方式，可能值为：0-包年包月，1-按量计费</p>
  * @method void setPayType(integer $PayType) 设置<p>付费方式，可能值为：0-包年包月，1-按量计费</p>
  * @method integer getAutoRenewFlag() 获取<p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
@@ -127,27 +127,27 @@ class DescribeSubscribeDetailResponse extends AbstractModel
     public $SubsStatus;
 
     /**
-     * @var string <p>修改时间。</p>
+     * @var string <p>修改时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string <p>创建时间。</p>
+     * @var string <p>创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string <p>隔离时间。</p>
+     * @var string <p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
      */
     public $IsolateTime;
 
     /**
-     * @var string <p>包年包月任务的到期时间。</p>
+     * @var string <p>包年包月任务的到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string <p>下线时间。</p>
+     * @var string <p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
      */
     public $OfflineTime;
 
@@ -265,11 +265,11 @@ class DescribeSubscribeDetailResponse extends AbstractModel
      * @param string $InstanceStatus <p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p>
      * @param string $Status <p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
      * @param string $SubsStatus <p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
-     * @param string $ModifyTime <p>修改时间。</p>
-     * @param string $CreateTime <p>创建时间。</p>
-     * @param string $IsolateTime <p>隔离时间。</p>
-     * @param string $ExpireTime <p>包年包月任务的到期时间。</p>
-     * @param string $OfflineTime <p>下线时间。</p>
+     * @param string $ModifyTime <p>修改时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+     * @param string $CreateTime <p>创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+     * @param string $IsolateTime <p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+     * @param string $ExpireTime <p>包年包月任务的到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
+     * @param string $OfflineTime <p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>Y-m-d h:m:s</code>（北京时间）。</p>
      * @param integer $PayType <p>付费方式，可能值为：0-包年包月，1-按量计费</p>
      * @param integer $AutoRenewFlag <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
      * @param string $Region <p>任务所在地域</p>

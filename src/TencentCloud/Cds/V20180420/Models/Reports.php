@@ -51,17 +51,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTitle() 获取报告名称
  * @method void setTitle(string $Title) 设置报告名称
  * @method integer getTemplateId() 获取报表模板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(integer $TemplateId) 设置报表模板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAssetsList() 获取包含资产
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetsList(array $AssetsList) 设置包含资产
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCntDay() 获取时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCntDay(integer $CntDay) 设置时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Reports extends AbstractModel
 {
@@ -142,19 +136,16 @@ class Reports extends AbstractModel
 
     /**
      * @var integer 报表模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
     /**
      * @var array 包含资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetsList;
 
     /**
      * @var integer 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CntDay;
 
@@ -175,11 +166,8 @@ class Reports extends AbstractModel
      * @param integer $StartTime 开始时间
      * @param string $Title 报告名称
      * @param integer $TemplateId 报表模板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssetsList 包含资产
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CntDay 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOffsetByTime请求参数结构体
  *
- * @method string getSubscribeId() 获取数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
- * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
- * @method string getTime() 获取时间点，格式为：Y-m-d h:m:s。如果输入时间比当前时间晚的多，相当于查询最新offset；如果输入时间比当前时间早的多，相当于查询最老offset；如果输入空，默认0时间，等价于查询最老offset。
- * @method void setTime(string $Time) 设置时间点，格式为：Y-m-d h:m:s。如果输入时间比当前时间晚的多，相当于查询最新offset；如果输入时间比当前时间早的多，相当于查询最老offset；如果输入空，默认0时间，等价于查询最老offset。
+ * @method string getSubscribeId() 获取<p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
+ * @method void setSubscribeId(string $SubscribeId) 设置<p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
+ * @method string getTime() 获取<p>时间。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>Y-m-d h:m:s</code>（北京时间）传入。如果输入时间比当前时间晚的多，相当于查询最新 offset；如果输入时间比当前时间早的多，相当于查询最老 offset；如果输入空，默认 0 时间，等价于查询最老 offset。</p><p>参数格式：2026-04-23T20:21:35+08:00</p>
+ * @method void setTime(string $Time) 设置<p>时间。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>Y-m-d h:m:s</code>（北京时间）传入。如果输入时间比当前时间晚的多，相当于查询最新 offset；如果输入时间比当前时间早的多，相当于查询最老 offset；如果输入空，默认 0 时间，等价于查询最老 offset。</p><p>参数格式：2026-04-23T20:21:35+08:00</p>
  */
 class DescribeOffsetByTimeRequest extends AbstractModel
 {
     /**
-     * @var string 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+     * @var string <p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
      */
     public $SubscribeId;
 
     /**
-     * @var string 时间点，格式为：Y-m-d h:m:s。如果输入时间比当前时间晚的多，相当于查询最新offset；如果输入时间比当前时间早的多，相当于查询最老offset；如果输入空，默认0时间，等价于查询最老offset。
+     * @var string <p>时间。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>Y-m-d h:m:s</code>（北京时间）传入。如果输入时间比当前时间晚的多，相当于查询最新 offset；如果输入时间比当前时间早的多，相当于查询最老 offset；如果输入空，默认 0 时间，等价于查询最老 offset。</p><p>参数格式：2026-04-23T20:21:35+08:00</p>
      */
     public $Time;
 
     /**
-     * @param string $SubscribeId 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
-     * @param string $Time 时间点，格式为：Y-m-d h:m:s。如果输入时间比当前时间晚的多，相当于查询最新offset；如果输入时间比当前时间早的多，相当于查询最老offset；如果输入空，默认0时间，等价于查询最老offset。
+     * @param string $SubscribeId <p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
+     * @param string $Time <p>时间。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>Y-m-d h:m:s</code>（北京时间）传入。如果输入时间比当前时间晚的多，相当于查询最新 offset；如果输入时间比当前时间早的多，相当于查询最老 offset；如果输入空，默认 0 时间，等价于查询最老 offset。</p><p>参数格式：2026-04-23T20:21:35+08:00</p>
      */
     function __construct()
     {

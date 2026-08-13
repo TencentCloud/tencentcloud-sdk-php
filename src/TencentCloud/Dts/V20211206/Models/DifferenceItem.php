@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 校验不一致的表详情
  *
- * @method string getDb() 获取数据库名
- * @method void setDb(string $Db) 设置数据库名
- * @method string getSchema() 获取schema
- * @method void setSchema(string $Schema) 设置schema
- * @method string getTable() 获取表名
- * @method void setTable(string $Table) 设置表名
- * @method integer getChunk() 获取分块号
- * @method void setChunk(integer $Chunk) 设置分块号
- * @method string getSrcItem() 获取源库数值
- * @method void setSrcItem(string $SrcItem) 设置源库数值
- * @method string getDstItem() 获取目标库数值
- * @method void setDstItem(string $DstItem) 设置目标库数值
- * @method string getIndexName() 获取索引名称
- * @method void setIndexName(string $IndexName) 设置索引名称
- * @method string getLowerBoundary() 获取索引下边界
- * @method void setLowerBoundary(string $LowerBoundary) 设置索引下边界
- * @method string getUpperBoundary() 获取索引上边界
- * @method void setUpperBoundary(string $UpperBoundary) 设置索引上边界
- * @method float getCostTime() 获取对比消耗时间,单位为 ms
- * @method void setCostTime(float $CostTime) 设置对比消耗时间,单位为 ms
- * @method string getFinishedAt() 获取完成时间
- * @method void setFinishedAt(string $FinishedAt) 设置完成时间
+ * @method string getDb() 获取<p>数据库名</p>
+ * @method void setDb(string $Db) 设置<p>数据库名</p>
+ * @method string getSchema() 获取<p>schema</p>
+ * @method void setSchema(string $Schema) 设置<p>schema</p>
+ * @method string getTable() 获取<p>表名</p>
+ * @method void setTable(string $Table) 设置<p>表名</p>
+ * @method integer getChunk() 获取<p>分块号</p>
+ * @method void setChunk(integer $Chunk) 设置<p>分块号</p>
+ * @method string getSrcItem() 获取<p>源库数值</p>
+ * @method void setSrcItem(string $SrcItem) 设置<p>源库数值</p>
+ * @method string getDstItem() 获取<p>目标库数值</p>
+ * @method void setDstItem(string $DstItem) 设置<p>目标库数值</p>
+ * @method string getIndexName() 获取<p>索引名称</p>
+ * @method void setIndexName(string $IndexName) 设置<p>索引名称</p>
+ * @method string getLowerBoundary() 获取<p>索引下边界</p>
+ * @method void setLowerBoundary(string $LowerBoundary) 设置<p>索引下边界</p>
+ * @method string getUpperBoundary() 获取<p>索引上边界</p>
+ * @method void setUpperBoundary(string $UpperBoundary) 设置<p>索引上边界</p>
+ * @method float getCostTime() 获取<p>对比消耗时间,单位为 ms</p>
+ * @method void setCostTime(float $CostTime) 设置<p>对比消耗时间,单位为 ms</p>
+ * @method string getFinishedAt() 获取<p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setFinishedAt(string $FinishedAt) 设置<p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
  */
 class DifferenceItem extends AbstractModel
 {
     /**
-     * @var string 数据库名
+     * @var string <p>数据库名</p>
      */
     public $Db;
 
     /**
-     * @var string schema
+     * @var string <p>schema</p>
      */
     public $Schema;
 
     /**
-     * @var string 表名
+     * @var string <p>表名</p>
      */
     public $Table;
 
     /**
-     * @var integer 分块号
+     * @var integer <p>分块号</p>
      */
     public $Chunk;
 
     /**
-     * @var string 源库数值
+     * @var string <p>源库数值</p>
      */
     public $SrcItem;
 
     /**
-     * @var string 目标库数值
+     * @var string <p>目标库数值</p>
      */
     public $DstItem;
 
     /**
-     * @var string 索引名称
+     * @var string <p>索引名称</p>
      */
     public $IndexName;
 
     /**
-     * @var string 索引下边界
+     * @var string <p>索引下边界</p>
      */
     public $LowerBoundary;
 
     /**
-     * @var string 索引上边界
+     * @var string <p>索引上边界</p>
      */
     public $UpperBoundary;
 
     /**
-     * @var float 对比消耗时间,单位为 ms
+     * @var float <p>对比消耗时间,单位为 ms</p>
      */
     public $CostTime;
 
     /**
-     * @var string 完成时间
+     * @var string <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $FinishedAt;
 
     /**
-     * @param string $Db 数据库名
-     * @param string $Schema schema
-     * @param string $Table 表名
-     * @param integer $Chunk 分块号
-     * @param string $SrcItem 源库数值
-     * @param string $DstItem 目标库数值
-     * @param string $IndexName 索引名称
-     * @param string $LowerBoundary 索引下边界
-     * @param string $UpperBoundary 索引上边界
-     * @param float $CostTime 对比消耗时间,单位为 ms
-     * @param string $FinishedAt 完成时间
+     * @param string $Db <p>数据库名</p>
+     * @param string $Schema <p>schema</p>
+     * @param string $Table <p>表名</p>
+     * @param integer $Chunk <p>分块号</p>
+     * @param string $SrcItem <p>源库数值</p>
+     * @param string $DstItem <p>目标库数值</p>
+     * @param string $IndexName <p>索引名称</p>
+     * @param string $LowerBoundary <p>索引下边界</p>
+     * @param string $UpperBoundary <p>索引上边界</p>
+     * @param float $CostTime <p>对比消耗时间,单位为 ms</p>
+     * @param string $FinishedAt <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     function __construct()
     {

@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setX(integer $X) 设置<p>左上角x。</p>
  * @method integer getY() 获取<p>左上角y。</p>
  * @method void setY(integer $Y) 设置<p>左上角y。</p>
- * @method integer getWidth() 获取<p>宽width。</p>
- * @method void setWidth(integer $Width) 设置<p>宽width。</p>
- * @method integer getHeight() 获取<p>高height。</p>
- * @method void setHeight(integer $Height) 设置<p>高height。</p>
+ * @method integer getWidth() 获取<p>宽width。</p><p>单位：px</p>
+ * @method void setWidth(integer $Width) 设置<p>宽width。</p><p>单位：px</p>
+ * @method integer getHeight() 获取<p>高height。</p><p>单位：px</p>
+ * @method void setHeight(integer $Height) 设置<p>高height。</p><p>单位：px</p>
  */
 class ItemCoord extends AbstractModel
 {
@@ -42,20 +42,20 @@ class ItemCoord extends AbstractModel
     public $Y;
 
     /**
-     * @var integer <p>宽width。</p>
+     * @var integer <p>宽width。</p><p>单位：px</p>
      */
     public $Width;
 
     /**
-     * @var integer <p>高height。</p>
+     * @var integer <p>高height。</p><p>单位：px</p>
      */
     public $Height;
 
     /**
      * @param integer $X <p>左上角x。</p>
      * @param integer $Y <p>左上角y。</p>
-     * @param integer $Width <p>宽width。</p>
-     * @param integer $Height <p>高height。</p>
+     * @param integer $Width <p>宽width。</p><p>单位：px</p>
+     * @param integer $Height <p>高height。</p><p>单位：px</p>
      */
     function __construct()
     {

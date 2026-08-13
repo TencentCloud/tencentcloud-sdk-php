@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置<p>服务类型，枚举值包括 TEXT 和 TEXT_AIGC：<br>TEXT：内容安全<br>TEXT_AIGC：AI生成识别</p>
  * @method string getSessionId() 获取<p>适用于上下文关联审核场景，若多条文本内容需要联合审核，通过该字段关联会话。</p>
  * @method void setSessionId(string $SessionId) 设置<p>适用于上下文关联审核场景，若多条文本内容需要联合审核，通过该字段关联会话。</p>
+ * @method string getBizTag() 获取<p>该参数是送审客户的自定义参数，可用于标记客户的一些内部信息方便做审核明细取数筛选，没有特殊需求客户可不填写</p>
+ * @method void setBizTag(string $BizTag) 设置<p>该参数是送审客户的自定义参数，可用于标记客户的一些内部信息方便做审核明细取数筛选，没有特殊需求客户可不填写</p>
  */
 class TextModerationRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class TextModerationRequest extends AbstractModel
     public $SessionId;
 
     /**
+     * @var string <p>该参数是送审客户的自定义参数，可用于标记客户的一些内部信息方便做审核明细取数筛选，没有特殊需求客户可不填写</p>
+     */
+    public $BizTag;
+
+    /**
      * @param string $Content <p>待检测的文本内容，需为UTF-8编码并以Base64格式传入。</p>
      * @param string $BizType <p>接口使用的识别策略编号，需在<a href="https://console.cloud.tencent.com/cms/clouds/manage">控制台</a>获取。详细获取方式请参考以下链接：</p><ul><li><strong>内容安全</strong>（详见步骤四：策略配置）：<a href="https://cloud.tencent.com/document/product/1124/37119">点击这里</a></li><li><strong>AI生成识别</strong>（详见服务对接-&gt;方式二）：<a href="https://cloud.tencent.com/document/product/1124/118694">点击这里</a></li></ul>
      * @param string $DataId <p>该字段表示您为待检测文本分配的数据ID，作用是方便您对数据进行标识和管理。<br>取值：可由英文字母、数字、四种特殊符号（_，-，@，#）组成，<strong>长度不超过64个字符</strong>。</p>
@@ -88,6 +95,7 @@ class TextModerationRequest extends AbstractModel
      * @param string $SourceLanguage <p>Content字段的原始语种，枚举值包括 zh 和 en：</p><ul><li>推荐使用 zh</li><li>en 适用于纯英文内容，耗时较高。若需使用 en，请先通过<a href="https://console.cloud.tencent.com/workorder/category?level1_id=141&amp;level2_id=1287&amp;source=14&amp;data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&amp;step=1">反馈工单</a>确认</li></ul>
      * @param string $Type <p>服务类型，枚举值包括 TEXT 和 TEXT_AIGC：<br>TEXT：内容安全<br>TEXT_AIGC：AI生成识别</p>
      * @param string $SessionId <p>适用于上下文关联审核场景，若多条文本内容需要联合审核，通过该字段关联会话。</p>
+     * @param string $BizTag <p>该参数是送审客户的自定义参数，可用于标记客户的一些内部信息方便做审核明细取数筛选，没有特殊需求客户可不填写</p>
      */
     function __construct()
     {
@@ -134,6 +142,10 @@ class TextModerationRequest extends AbstractModel
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("BizTag",$param) and $param["BizTag"] !== null) {
+            $this->BizTag = $param["BizTag"];
         }
     }
 }

@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExport请求参数结构体
  *
- * @method string getExportId() 获取日志下载任务的ID
- * @method void setExportId(string $ExportId) 设置日志下载任务的ID
+ * @method string getExportId() 获取<p>日志下载任务的ID</p>
+ * @method void setExportId(string $ExportId) 设置<p>日志下载任务的ID</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  */
 class DescribeExportRequest extends AbstractModel
 {
     /**
-     * @var string 日志下载任务的ID
+     * @var string <p>日志下载任务的ID</p>
      */
     public $ExportId;
 
     /**
-     * @param string $ExportId 日志下载任务的ID
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
+     * @param string $ExportId <p>日志下载任务的ID</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeExportRequest extends AbstractModel
         }
         if (array_key_exists("ExportId",$param) and $param["ExportId"] !== null) {
             $this->ExportId = $param["ExportId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
     }
 }

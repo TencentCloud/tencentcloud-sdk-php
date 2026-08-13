@@ -20,122 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 一致性校验摘要信息
  *
- * @method CompareOptions getOptions() 获取校验配置参数
- * @method void setOptions(CompareOptions $Options) 设置校验配置参数
- * @method CompareObject getObjects() 获取一致性校验对比对象
- * @method void setObjects(CompareObject $Objects) 设置一致性校验对比对象
- * @method string getConclusion() 获取对比结论: same,different
- * @method void setConclusion(string $Conclusion) 设置对比结论: same,different
- * @method string getStatus() 获取任务状态: success,failed
- * @method void setStatus(string $Status) 设置任务状态: success,failed
- * @method integer getTotalTables() 获取总的表数量
- * @method void setTotalTables(integer $TotalTables) 设置总的表数量
- * @method integer getCheckedTables() 获取已校验的表数量
- * @method void setCheckedTables(integer $CheckedTables) 设置已校验的表数量
- * @method integer getDifferentTables() 获取不一致的表数量
- * @method void setDifferentTables(integer $DifferentTables) 设置不一致的表数量
- * @method integer getSkippedTables() 获取跳过校验的表数量
- * @method void setSkippedTables(integer $SkippedTables) 设置跳过校验的表数量
- * @method integer getNearlyTableCount() 获取预估表总数
- * @method void setNearlyTableCount(integer $NearlyTableCount) 设置预估表总数
- * @method integer getDifferentRows() 获取不一致的数据行数量
- * @method void setDifferentRows(integer $DifferentRows) 设置不一致的数据行数量
- * @method integer getSrcSampleRows() 获取源库行数，当对比类型为**行数对比**时此项有意义
- * @method void setSrcSampleRows(integer $SrcSampleRows) 设置源库行数，当对比类型为**行数对比**时此项有意义
- * @method integer getDstSampleRows() 获取目标库行数，当对比类型为**行数对比**时此项有意义
- * @method void setDstSampleRows(integer $DstSampleRows) 设置目标库行数，当对比类型为**行数对比**时此项有意义
- * @method string getStartedAt() 获取开始时间
- * @method void setStartedAt(string $StartedAt) 设置开始时间
- * @method string getFinishedAt() 获取结束时间
- * @method void setFinishedAt(string $FinishedAt) 设置结束时间
+ * @method CompareOptions getOptions() 获取<p>校验配置参数</p>
+ * @method void setOptions(CompareOptions $Options) 设置<p>校验配置参数</p>
+ * @method CompareObject getObjects() 获取<p>一致性校验对比对象</p>
+ * @method void setObjects(CompareObject $Objects) 设置<p>一致性校验对比对象</p>
+ * @method string getConclusion() 获取<p>对比结论: same,different</p>
+ * @method void setConclusion(string $Conclusion) 设置<p>对比结论: same,different</p>
+ * @method string getStatus() 获取<p>任务状态: success,failed</p>
+ * @method void setStatus(string $Status) 设置<p>任务状态: success,failed</p>
+ * @method integer getTotalTables() 获取<p>总的表数量</p>
+ * @method void setTotalTables(integer $TotalTables) 设置<p>总的表数量</p>
+ * @method integer getCheckedTables() 获取<p>已校验的表数量</p>
+ * @method void setCheckedTables(integer $CheckedTables) 设置<p>已校验的表数量</p>
+ * @method integer getDifferentTables() 获取<p>不一致的表数量</p>
+ * @method void setDifferentTables(integer $DifferentTables) 设置<p>不一致的表数量</p>
+ * @method integer getSkippedTables() 获取<p>跳过校验的表数量</p>
+ * @method void setSkippedTables(integer $SkippedTables) 设置<p>跳过校验的表数量</p>
+ * @method integer getNearlyTableCount() 获取<p>预估表总数</p>
+ * @method void setNearlyTableCount(integer $NearlyTableCount) 设置<p>预估表总数</p>
+ * @method integer getDifferentRows() 获取<p>不一致的数据行数量</p>
+ * @method void setDifferentRows(integer $DifferentRows) 设置<p>不一致的数据行数量</p>
+ * @method integer getSrcSampleRows() 获取<p>源库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
+ * @method void setSrcSampleRows(integer $SrcSampleRows) 设置<p>源库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
+ * @method integer getDstSampleRows() 获取<p>目标库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
+ * @method void setDstSampleRows(integer $DstSampleRows) 设置<p>目标库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
+ * @method string getStartedAt() 获取<p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setStartedAt(string $StartedAt) 设置<p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getFinishedAt() 获取<p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setFinishedAt(string $FinishedAt) 设置<p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
  */
 class CompareAbstractInfo extends AbstractModel
 {
     /**
-     * @var CompareOptions 校验配置参数
+     * @var CompareOptions <p>校验配置参数</p>
      */
     public $Options;
 
     /**
-     * @var CompareObject 一致性校验对比对象
+     * @var CompareObject <p>一致性校验对比对象</p>
      */
     public $Objects;
 
     /**
-     * @var string 对比结论: same,different
+     * @var string <p>对比结论: same,different</p>
      */
     public $Conclusion;
 
     /**
-     * @var string 任务状态: success,failed
+     * @var string <p>任务状态: success,failed</p>
      */
     public $Status;
 
     /**
-     * @var integer 总的表数量
+     * @var integer <p>总的表数量</p>
      */
     public $TotalTables;
 
     /**
-     * @var integer 已校验的表数量
+     * @var integer <p>已校验的表数量</p>
      */
     public $CheckedTables;
 
     /**
-     * @var integer 不一致的表数量
+     * @var integer <p>不一致的表数量</p>
      */
     public $DifferentTables;
 
     /**
-     * @var integer 跳过校验的表数量
+     * @var integer <p>跳过校验的表数量</p>
      */
     public $SkippedTables;
 
     /**
-     * @var integer 预估表总数
+     * @var integer <p>预估表总数</p>
      */
     public $NearlyTableCount;
 
     /**
-     * @var integer 不一致的数据行数量
+     * @var integer <p>不一致的数据行数量</p>
      */
     public $DifferentRows;
 
     /**
-     * @var integer 源库行数，当对比类型为**行数对比**时此项有意义
+     * @var integer <p>源库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
      */
     public $SrcSampleRows;
 
     /**
-     * @var integer 目标库行数，当对比类型为**行数对比**时此项有意义
+     * @var integer <p>目标库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
      */
     public $DstSampleRows;
 
     /**
-     * @var string 开始时间
+     * @var string <p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $StartedAt;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $FinishedAt;
 
     /**
-     * @param CompareOptions $Options 校验配置参数
-     * @param CompareObject $Objects 一致性校验对比对象
-     * @param string $Conclusion 对比结论: same,different
-     * @param string $Status 任务状态: success,failed
-     * @param integer $TotalTables 总的表数量
-     * @param integer $CheckedTables 已校验的表数量
-     * @param integer $DifferentTables 不一致的表数量
-     * @param integer $SkippedTables 跳过校验的表数量
-     * @param integer $NearlyTableCount 预估表总数
-     * @param integer $DifferentRows 不一致的数据行数量
-     * @param integer $SrcSampleRows 源库行数，当对比类型为**行数对比**时此项有意义
-     * @param integer $DstSampleRows 目标库行数，当对比类型为**行数对比**时此项有意义
-     * @param string $StartedAt 开始时间
-     * @param string $FinishedAt 结束时间
+     * @param CompareOptions $Options <p>校验配置参数</p>
+     * @param CompareObject $Objects <p>一致性校验对比对象</p>
+     * @param string $Conclusion <p>对比结论: same,different</p>
+     * @param string $Status <p>任务状态: success,failed</p>
+     * @param integer $TotalTables <p>总的表数量</p>
+     * @param integer $CheckedTables <p>已校验的表数量</p>
+     * @param integer $DifferentTables <p>不一致的表数量</p>
+     * @param integer $SkippedTables <p>跳过校验的表数量</p>
+     * @param integer $NearlyTableCount <p>预估表总数</p>
+     * @param integer $DifferentRows <p>不一致的数据行数量</p>
+     * @param integer $SrcSampleRows <p>源库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
+     * @param integer $DstSampleRows <p>目标库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
+     * @param string $StartedAt <p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $FinishedAt <p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     function __construct()
     {

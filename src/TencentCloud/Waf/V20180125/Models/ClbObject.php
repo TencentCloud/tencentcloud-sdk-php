@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotStatus(integer $BotStatus) 设置<p>bot防护开关</p>
  * @method integer getApiStatus() 获取<p>api防护开关</p>
  * @method void setApiStatus(integer $ApiStatus) 设置<p>api防护开关</p>
+ * @method integer getLLMStatus() 获取<p>LLMWAF开关</p>
+ * @method void setLLMStatus(integer $LLMStatus) 设置<p>LLMWAF开关</p>
  * @method integer getObjectFlowMode() 获取<p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
  * @method void setObjectFlowMode(integer $ObjectFlowMode) 设置<p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
  * @method integer getNumericalVpcId() 获取<p>数值形式的私有网络 ID</p>
@@ -193,6 +195,11 @@ class ClbObject extends AbstractModel
     public $ApiStatus;
 
     /**
+     * @var integer <p>LLMWAF开关</p>
+     */
+    public $LLMStatus;
+
+    /**
      * @var integer <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
      */
     public $ObjectFlowMode;
@@ -269,6 +276,7 @@ class ClbObject extends AbstractModel
      * @param array $IpHeaders <p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p>
      * @param integer $BotStatus <p>bot防护开关</p>
      * @param integer $ApiStatus <p>api防护开关</p>
+     * @param integer $LLMStatus <p>LLMWAF开关</p>
      * @param integer $ObjectFlowMode <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
      * @param integer $NumericalVpcId <p>数值形式的私有网络 ID</p>
      * @param string $ModifyTime <p>修改时间</p>
@@ -376,6 +384,10 @@ class ClbObject extends AbstractModel
 
         if (array_key_exists("ApiStatus",$param) and $param["ApiStatus"] !== null) {
             $this->ApiStatus = $param["ApiStatus"];
+        }
+
+        if (array_key_exists("LLMStatus",$param) and $param["LLMStatus"] !== null) {
+            $this->LLMStatus = $param["LLMStatus"];
         }
 
         if (array_key_exists("ObjectFlowMode",$param) and $param["ObjectFlowMode"] !== null) {

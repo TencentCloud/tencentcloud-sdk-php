@@ -20,20 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMigrationDetail请求参数结构体
  *
- * @method string getJobId() 获取数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
- * @method void setJobId(string $JobId) 设置数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ * @method string getJobId() 获取<p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method void setJobId(string $JobId) 设置<p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
  */
 class DescribeMigrationDetailRequest extends AbstractModel
 {
     /**
-     * @var string 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+     * @var string <p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public $JobId;
 
     /**
-     * @param string $JobId 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * @param string $JobId <p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     function __construct()
     {

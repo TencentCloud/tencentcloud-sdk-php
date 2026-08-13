@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableImageUnderstanding(integer $EnableImageUnderstanding) 设置<p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
  * @method integer getEnableExtractDb() 获取<p>是否开启表格结构化提取</p><p>枚举值：</p><ul><li>0： 不开启表格提取</li><li>1： 开启表格提取</li></ul><p>默认值：1</p>
  * @method void setEnableExtractDb(integer $EnableExtractDb) 设置<p>是否开启表格结构化提取</p><p>枚举值：</p><ul><li>0： 不开启表格提取</li><li>1： 开启表格提取</li></ul><p>默认值：1</p>
+ * @method integer getEnableGraphBuild() 获取<p>0:关闭 1:开启图谱构建（入库时），默认0</p>
+ * @method void setEnableGraphBuild(integer $EnableGraphBuild) 设置<p>0:关闭 1:开启图谱构建（入库时），默认0</p>
+ * @method integer getEnableTreeBuild() 获取<p>0:关闭 1:开启树构建（入库时），默认0</p>
+ * @method void setEnableTreeBuild(integer $EnableTreeBuild) 设置<p>0:关闭 1:开启树构建（入库时），默认0</p>
  */
 class KnowledgeTaskConfig extends AbstractModel
 {
@@ -97,6 +101,16 @@ class KnowledgeTaskConfig extends AbstractModel
     public $EnableExtractDb;
 
     /**
+     * @var integer <p>0:关闭 1:开启图谱构建（入库时），默认0</p>
+     */
+    public $EnableGraphBuild;
+
+    /**
+     * @var integer <p>0:关闭 1:开启树构建（入库时），默认0</p>
+     */
+    public $EnableTreeBuild;
+
+    /**
      * @param integer $ChunkType <p>切片类型  0:自定义切片，1：智能切片</p>
      * @param integer $MaxChunkSize <p>/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000</p>
      * @param array $Delimiters <p>切片分隔符,自定义切片使用：默认值为：[&quot;\n\n&quot;, &quot;\n&quot;, &quot;。&quot;, &quot;！&quot;, &quot;？&quot;, &quot;，&quot;, &quot;&quot;]</p>
@@ -108,6 +122,8 @@ class KnowledgeTaskConfig extends AbstractModel
      * @param integer $GenParaSummary <p>0：不生成段落摘要，1：生成段落概要。默认0</p>
      * @param integer $EnableImageUnderstanding <p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
      * @param integer $EnableExtractDb <p>是否开启表格结构化提取</p><p>枚举值：</p><ul><li>0： 不开启表格提取</li><li>1： 开启表格提取</li></ul><p>默认值：1</p>
+     * @param integer $EnableGraphBuild <p>0:关闭 1:开启图谱构建（入库时），默认0</p>
+     * @param integer $EnableTreeBuild <p>0:关闭 1:开启树构建（入库时），默认0</p>
      */
     function __construct()
     {
@@ -165,6 +181,14 @@ class KnowledgeTaskConfig extends AbstractModel
 
         if (array_key_exists("EnableExtractDb",$param) and $param["EnableExtractDb"] !== null) {
             $this->EnableExtractDb = $param["EnableExtractDb"];
+        }
+
+        if (array_key_exists("EnableGraphBuild",$param) and $param["EnableGraphBuild"] !== null) {
+            $this->EnableGraphBuild = $param["EnableGraphBuild"];
+        }
+
+        if (array_key_exists("EnableTreeBuild",$param) and $param["EnableTreeBuild"] !== null) {
+            $this->EnableTreeBuild = $param["EnableTreeBuild"];
         }
     }
 }

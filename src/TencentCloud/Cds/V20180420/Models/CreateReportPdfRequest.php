@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReportPdf请求参数结构体
  *
- * @method integer getId() 获取报表 Id
- * @method void setId(integer $Id) 设置报表 Id
+ * @method integer getId() 获取<p>报表 Id</p>
+ * @method void setId(integer $Id) 设置<p>报表 Id</p>
  */
 class CreateReportPdfRequest extends AbstractModel
 {
     /**
-     * @var integer 报表 Id
+     * @var integer <p>报表 Id</p>
      */
     public $Id;
 
     /**
-     * @param integer $Id 报表 Id
+     * @param integer $Id <p>报表 Id</p>
      */
     function __construct()
     {

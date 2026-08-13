@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 计费状态信息
  *
- * @method string getDealName() 获取交易订单号
- * @method void setDealName(string $DealName) 设置交易订单号
- * @method string getLastDealName() 获取上一次交易订单号
- * @method void setLastDealName(string $LastDealName) 设置上一次交易订单号
- * @method string getInstanceClass() 获取实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
- * @method void setInstanceClass(string $InstanceClass) 设置实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
- * @method string getTradeStatus() 获取计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
- * @method void setTradeStatus(string $TradeStatus) 设置计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
- * @method string getExpireTime() 获取到期时间，格式为"yyyy-mm-dd hh:mm:ss"
- * @method void setExpireTime(string $ExpireTime) 设置到期时间，格式为"yyyy-mm-dd hh:mm:ss"
- * @method string getOfflineTime() 获取下线时间，格式为"yyyy-mm-dd hh:mm:ss"
- * @method void setOfflineTime(string $OfflineTime) 设置下线时间，格式为"yyyy-mm-dd hh:mm:ss"
- * @method string getIsolateTime() 获取隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
- * @method void setIsolateTime(string $IsolateTime) 设置隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
- * @method string getOfflineReason() 获取下线原因
- * @method void setOfflineReason(string $OfflineReason) 设置下线原因
- * @method string getIsolateReason() 获取隔离原因
- * @method void setIsolateReason(string $IsolateReason) 设置隔离原因
- * @method string getPayType() 获取付费类型，包括：postpay(后付费)、prepay(预付费)
- * @method void setPayType(string $PayType) 设置付费类型，包括：postpay(后付费)、prepay(预付费)
- * @method string getBillingType() 获取任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
- * @method void setBillingType(string $BillingType) 设置任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
+ * @method string getDealName() 获取<p>交易订单号</p>
+ * @method void setDealName(string $DealName) 设置<p>交易订单号</p>
+ * @method string getLastDealName() 获取<p>上一次交易订单号</p>
+ * @method void setLastDealName(string $LastDealName) 设置<p>上一次交易订单号</p>
+ * @method string getInstanceClass() 获取<p>实例规格，包括：micro、small、medium、large、xlarge、2xlarge等</p>
+ * @method void setInstanceClass(string $InstanceClass) 设置<p>实例规格，包括：micro、small、medium、large、xlarge、2xlarge等</p>
+ * @method string getTradeStatus() 获取<p>计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)</p>
+ * @method void setTradeStatus(string $TradeStatus) 设置<p>计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)</p>
+ * @method string getExpireTime() 获取<p>到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getOfflineTime() 获取<p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setOfflineTime(string $OfflineTime) 设置<p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getIsolateTime() 获取<p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setIsolateTime(string $IsolateTime) 设置<p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getOfflineReason() 获取<p>下线原因</p>
+ * @method void setOfflineReason(string $OfflineReason) 设置<p>下线原因</p>
+ * @method string getIsolateReason() 获取<p>隔离原因</p>
+ * @method void setIsolateReason(string $IsolateReason) 设置<p>隔离原因</p>
+ * @method string getPayType() 获取<p>付费类型，包括：postpay(后付费)、prepay(预付费)</p>
+ * @method void setPayType(string $PayType) 设置<p>付费类型，包括：postpay(后付费)、prepay(预付费)</p>
+ * @method string getBillingType() 获取<p>任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)</p>
+ * @method void setBillingType(string $BillingType) 设置<p>任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)</p>
  */
 class TradeInfo extends AbstractModel
 {
     /**
-     * @var string 交易订单号
+     * @var string <p>交易订单号</p>
      */
     public $DealName;
 
     /**
-     * @var string 上一次交易订单号
+     * @var string <p>上一次交易订单号</p>
      */
     public $LastDealName;
 
     /**
-     * @var string 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
+     * @var string <p>实例规格，包括：micro、small、medium、large、xlarge、2xlarge等</p>
      */
     public $InstanceClass;
 
     /**
-     * @var string 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
+     * @var string <p>计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)</p>
      */
     public $TradeStatus;
 
     /**
-     * @var string 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
+     * @var string <p>到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
+     * @var string <p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $OfflineTime;
 
     /**
-     * @var string 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
+     * @var string <p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $IsolateTime;
 
     /**
-     * @var string 下线原因
+     * @var string <p>下线原因</p>
      */
     public $OfflineReason;
 
     /**
-     * @var string 隔离原因
+     * @var string <p>隔离原因</p>
      */
     public $IsolateReason;
 
     /**
-     * @var string 付费类型，包括：postpay(后付费)、prepay(预付费)
+     * @var string <p>付费类型，包括：postpay(后付费)、prepay(预付费)</p>
      */
     public $PayType;
 
     /**
-     * @var string 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
+     * @var string <p>任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)</p>
      */
     public $BillingType;
 
     /**
-     * @param string $DealName 交易订单号
-     * @param string $LastDealName 上一次交易订单号
-     * @param string $InstanceClass 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-     * @param string $TradeStatus 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-     * @param string $ExpireTime 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-     * @param string $OfflineTime 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-     * @param string $IsolateTime 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-     * @param string $OfflineReason 下线原因
-     * @param string $IsolateReason 隔离原因
-     * @param string $PayType 付费类型，包括：postpay(后付费)、prepay(预付费)
-     * @param string $BillingType 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
+     * @param string $DealName <p>交易订单号</p>
+     * @param string $LastDealName <p>上一次交易订单号</p>
+     * @param string $InstanceClass <p>实例规格，包括：micro、small、medium、large、xlarge、2xlarge等</p>
+     * @param string $TradeStatus <p>计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)</p>
+     * @param string $ExpireTime <p>到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $OfflineTime <p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $IsolateTime <p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $OfflineReason <p>下线原因</p>
+     * @param string $IsolateReason <p>隔离原因</p>
+     * @param string $PayType <p>付费类型，包括：postpay(后付费)、prepay(预付费)</p>
+     * @param string $BillingType <p>任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)</p>
      */
     function __construct()
     {

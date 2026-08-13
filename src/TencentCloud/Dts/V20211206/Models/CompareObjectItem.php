@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 一致性校验库表对象
  *
- * @method string getDbName() 获取数据库名
- * @method void setDbName(string $DbName) 设置数据库名
- * @method string getDbMode() 获取数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
- * @method void setDbMode(string $DbMode) 设置数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
- * @method string getSchemaName() 获取schema名称
- * @method void setSchemaName(string $SchemaName) 设置schema名称
- * @method string getTableMode() 获取表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
- * @method void setTableMode(string $TableMode) 设置表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
- * @method array getTables() 获取用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
- * @method void setTables(array $Tables) 设置用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
- * @method string getViewMode() 获取视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
- * @method void setViewMode(string $ViewMode) 设置视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
- * @method array getViews() 获取用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
+ * @method string getDbName() 获取<p>数据库名</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名</p>
+ * @method string getDbMode() 获取<p>数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象</p>
+ * @method void setDbMode(string $DbMode) 设置<p>数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象</p>
+ * @method string getSchemaName() 获取<p>schema名称</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>schema名称</p>
+ * @method string getTableMode() 获取<p>表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象</p>
+ * @method void setTableMode(string $TableMode) 设置<p>表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象</p>
+ * @method array getTables() 获取<p>用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写</p>
+ * @method void setTables(array $Tables) 设置<p>用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写</p>
+ * @method string getViewMode() 获取<p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)</p>
+ * @method void setViewMode(string $ViewMode) 设置<p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)</p>
+ * @method array getViews() 获取<p>用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setViews(array $Views) 设置用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
+ * @method void setViews(array $Views) 设置<p>用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareObjectItem extends AbstractModel
 {
     /**
-     * @var string 数据库名
+     * @var string <p>数据库名</p>
      */
     public $DbName;
 
     /**
-     * @var string 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
+     * @var string <p>数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象</p>
      */
     public $DbMode;
 
     /**
-     * @var string schema名称
+     * @var string <p>schema名称</p>
      */
     public $SchemaName;
 
     /**
-     * @var string 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
+     * @var string <p>表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象</p>
      */
     public $TableMode;
 
     /**
-     * @var array 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
+     * @var array <p>用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写</p>
      */
     public $Tables;
 
     /**
-     * @var string 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
+     * @var string <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)</p>
      */
     public $ViewMode;
 
     /**
-     * @var array 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
+     * @var array <p>用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Views;
 
     /**
-     * @param string $DbName 数据库名
-     * @param string $DbMode 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
-     * @param string $SchemaName schema名称
-     * @param string $TableMode 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
-     * @param array $Tables 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
-     * @param string $ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
-     * @param array $Views 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
+     * @param string $DbName <p>数据库名</p>
+     * @param string $DbMode <p>数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象</p>
+     * @param string $SchemaName <p>schema名称</p>
+     * @param string $TableMode <p>表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象</p>
+     * @param array $Tables <p>用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写</p>
+     * @param string $ViewMode <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)</p>
+     * @param array $Views <p>用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

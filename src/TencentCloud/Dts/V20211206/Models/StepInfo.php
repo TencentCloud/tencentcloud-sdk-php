@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStepId(string $StepId) 设置<p>步骤标号</p>
  * @method string getStatus() 获取<p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
  * @method void setStatus(string $Status) 设置<p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
- * @method string getStartTime() 获取<p>步骤开始时间，可能为空</p>
- * @method void setStartTime(string $StartTime) 设置<p>步骤开始时间，可能为空</p>
- * @method string getFinishTime() 获取<p>完成时间</p>
- * @method void setFinishTime(string $FinishTime) 设置<p>完成时间</p>
+ * @method string getStartTime() 获取<p>步骤开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setStartTime(string $StartTime) 设置<p>步骤开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method string getFinishTime() 获取<p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+ * @method void setFinishTime(string $FinishTime) 设置<p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
  * @method array getErrors() 获取<p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrors(array $Errors) 设置<p>错误信息</p>
@@ -66,12 +66,12 @@ class StepInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string <p>步骤开始时间，可能为空</p>
+     * @var string <p>步骤开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $StartTime;
 
     /**
-     * @var string <p>完成时间</p>
+     * @var string <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public $FinishTime;
 
@@ -97,8 +97,8 @@ class StepInfo extends AbstractModel
      * @param string $StepName <p>步骤名</p>
      * @param string $StepId <p>步骤标号</p>
      * @param string $Status <p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
-     * @param string $StartTime <p>步骤开始时间，可能为空</p>
-     * @param string $FinishTime <p>完成时间</p>
+     * @param string $StartTime <p>步骤开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param string $FinishTime <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      * @param array $Errors <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Warnings <p>警告信息</p>

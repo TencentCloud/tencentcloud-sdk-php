@@ -20,154 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarmNotice请求参数结构体
  *
- * @method string getName() 获取通知渠道组名称。最大支持255个字节。 不支持 '|'。
- * @method void setName(string $Name) 设置通知渠道组名称。最大支持255个字节。 不支持 '|'。
- * @method array getTags() 获取标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
- * @method void setTags(array $Tags) 设置标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
- * @method string getType() 获取【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-需要发送通知的告警类型。可选值：
-- Trigger - 告警触发
-- Recovery - 告警恢复
-- All - 告警触发和告警恢复
- * @method void setType(string $Type) 设置【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-需要发送通知的告警类型。可选值：
-- Trigger - 告警触发
-- Recovery - 告警恢复
-- All - 告警触发和告警恢复
- * @method array getNoticeReceivers() 获取【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知接收对象。
- * @method void setNoticeReceivers(array $NoticeReceivers) 设置【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知接收对象。
- * @method array getWebCallbacks() 获取【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-接口回调信息（包括企业微信、钉钉、飞书）。
- * @method void setWebCallbacks(array $WebCallbacks) 设置【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-接口回调信息（包括企业微信、钉钉、飞书）。
- * @method array getNoticeRules() 获取【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知规则。
- * @method void setNoticeRules(array $NoticeRules) 设置【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知规则。
- * @method string getJumpDomain() 获取查询数据链接。http:// 或者 https:// 开头，不能/结尾
- * @method void setJumpDomain(string $JumpDomain) 设置查询数据链接。http:// 或者 https:// 开头，不能/结尾
- * @method integer getDeliverStatus() 获取投递日志开关。可取值如下：
-1：关闭（默认值）；
-2：开启 
-投递日志开关开启时， DeliverConfig参数必填。
- * @method void setDeliverStatus(integer $DeliverStatus) 设置投递日志开关。可取值如下：
-1：关闭（默认值）；
-2：开启 
-投递日志开关开启时， DeliverConfig参数必填。
- * @method DeliverConfig getDeliverConfig() 获取投递日志配置参数。当DeliverStatus开启时，必填。
- * @method void setDeliverConfig(DeliverConfig $DeliverConfig) 设置投递日志配置参数。当DeliverStatus开启时，必填。
- * @method integer getAlarmShieldStatus() 获取免登录操作告警开关。可取值如下：
--      1：关闭
--      2：开启（默认值）
- * @method void setAlarmShieldStatus(integer $AlarmShieldStatus) 设置免登录操作告警开关。可取值如下：
--      1：关闭
--      2：开启（默认值）
- * @method boolean getCallbackPrioritize() 获取统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
- * @method void setCallbackPrioritize(boolean $CallbackPrioritize) 设置统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+ * @method string getName() 获取<p>通知渠道组名称。最大支持255个字节。 不支持 &#39;|&#39;。</p>
+ * @method void setName(string $Name) 设置<p>通知渠道组名称。最大支持255个字节。 不支持 &#39;|&#39;。</p>
+ * @method array getTags() 获取<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。</p>
+ * @method void setTags(array $Tags) 设置<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。</p>
+ * @method string getType() 获取<p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>需要发送通知的告警类型。可选值：</p><ul><li>Trigger - 告警触发</li><li>Recovery - 告警恢复</li><li>All - 告警触发和告警恢复</li></ul>
+ * @method void setType(string $Type) 设置<p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>需要发送通知的告警类型。可选值：</p><ul><li>Trigger - 告警触发</li><li>Recovery - 告警恢复</li><li>All - 告警触发和告警恢复</li></ul>
+ * @method array getNoticeReceivers() 获取<p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知接收对象。</p>
+ * @method void setNoticeReceivers(array $NoticeReceivers) 设置<p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知接收对象。</p>
+ * @method array getWebCallbacks() 获取<p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>接口回调信息（包括企业微信、钉钉、飞书）。</p>
+ * @method void setWebCallbacks(array $WebCallbacks) 设置<p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>接口回调信息（包括企业微信、钉钉、飞书）。</p>
+ * @method array getNoticeRules() 获取<p>【高级模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知规则。</p>
+ * @method void setNoticeRules(array $NoticeRules) 设置<p>【高级模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知规则。</p>
+ * @method string getJumpDomain() 获取<p>查询数据链接。http:// 或者 https:// 开头，不能/结尾</p>
+ * @method void setJumpDomain(string $JumpDomain) 设置<p>查询数据链接。http:// 或者 https:// 开头，不能/结尾</p>
+ * @method integer getDeliverStatus() 获取<p>投递日志开关。可取值如下：<br>1：关闭（默认值）；<br>2：开启<br>投递日志开关开启时， DeliverConfig参数必填。</p>
+ * @method void setDeliverStatus(integer $DeliverStatus) 设置<p>投递日志开关。可取值如下：<br>1：关闭（默认值）；<br>2：开启<br>投递日志开关开启时， DeliverConfig参数必填。</p>
+ * @method DeliverConfig getDeliverConfig() 获取<p>投递日志配置参数。当DeliverStatus开启时，必填。</p>
+ * @method void setDeliverConfig(DeliverConfig $DeliverConfig) 设置<p>投递日志配置参数。当DeliverStatus开启时，必填。</p>
+ * @method integer getAlarmShieldStatus() 获取<p>免登录操作告警开关。可取值如下：</p><ul><li>1：关闭</li><li>2：开启（默认值）</li></ul>
+ * @method void setAlarmShieldStatus(integer $AlarmShieldStatus) 设置<p>免登录操作告警开关。可取值如下：</p><ul><li>1：关闭</li><li>2：开启（默认值）</li></ul>
+ * @method integer getSecureDetailStatus() 获取<p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+ * @method void setSecureDetailStatus(integer $SecureDetailStatus) 设置<p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+ * @method boolean getCallbackPrioritize() 获取<p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
+ * @method void setCallbackPrioritize(boolean $CallbackPrioritize) 设置<p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string 通知渠道组名称。最大支持255个字节。 不支持 '|'。
+     * @var string <p>通知渠道组名称。最大支持255个字节。 不支持 &#39;|&#39;。</p>
      */
     public $Name;
 
     /**
-     * @var array 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
+     * @var array <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。</p>
      */
     public $Tags;
 
     /**
-     * @var string 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-需要发送通知的告警类型。可选值：
-- Trigger - 告警触发
-- Recovery - 告警恢复
-- All - 告警触发和告警恢复
+     * @var string <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>需要发送通知的告警类型。可选值：</p><ul><li>Trigger - 告警触发</li><li>Recovery - 告警恢复</li><li>All - 告警触发和告警恢复</li></ul>
      */
     public $Type;
 
     /**
-     * @var array 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知接收对象。
+     * @var array <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知接收对象。</p>
      */
     public $NoticeReceivers;
 
     /**
-     * @var array 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-接口回调信息（包括企业微信、钉钉、飞书）。
+     * @var array <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>接口回调信息（包括企业微信、钉钉、飞书）。</p>
      */
     public $WebCallbacks;
 
     /**
-     * @var array 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知规则。
+     * @var array <p>【高级模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知规则。</p>
      */
     public $NoticeRules;
 
     /**
-     * @var string 查询数据链接。http:// 或者 https:// 开头，不能/结尾
+     * @var string <p>查询数据链接。http:// 或者 https:// 开头，不能/结尾</p>
      */
     public $JumpDomain;
 
     /**
-     * @var integer 投递日志开关。可取值如下：
-1：关闭（默认值）；
-2：开启 
-投递日志开关开启时， DeliverConfig参数必填。
+     * @var integer <p>投递日志开关。可取值如下：<br>1：关闭（默认值）；<br>2：开启<br>投递日志开关开启时， DeliverConfig参数必填。</p>
      */
     public $DeliverStatus;
 
     /**
-     * @var DeliverConfig 投递日志配置参数。当DeliverStatus开启时，必填。
+     * @var DeliverConfig <p>投递日志配置参数。当DeliverStatus开启时，必填。</p>
      */
     public $DeliverConfig;
 
     /**
-     * @var integer 免登录操作告警开关。可取值如下：
--      1：关闭
--      2：开启（默认值）
+     * @var integer <p>免登录操作告警开关。可取值如下：</p><ul><li>1：关闭</li><li>2：开启（默认值）</li></ul>
      */
     public $AlarmShieldStatus;
 
     /**
-     * @var boolean 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * @var integer <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     */
+    public $SecureDetailStatus;
+
+    /**
+     * @var boolean <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
      */
     public $CallbackPrioritize;
 
     /**
-     * @param string $Name 通知渠道组名称。最大支持255个字节。 不支持 '|'。
-     * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
-     * @param string $Type 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-需要发送通知的告警类型。可选值：
-- Trigger - 告警触发
-- Recovery - 告警恢复
-- All - 告警触发和告警恢复
-     * @param array $NoticeReceivers 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知接收对象。
-     * @param array $WebCallbacks 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-接口回调信息（包括企业微信、钉钉、飞书）。
-     * @param array $NoticeRules 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知规则。
-     * @param string $JumpDomain 查询数据链接。http:// 或者 https:// 开头，不能/结尾
-     * @param integer $DeliverStatus 投递日志开关。可取值如下：
-1：关闭（默认值）；
-2：开启 
-投递日志开关开启时， DeliverConfig参数必填。
-     * @param DeliverConfig $DeliverConfig 投递日志配置参数。当DeliverStatus开启时，必填。
-     * @param integer $AlarmShieldStatus 免登录操作告警开关。可取值如下：
--      1：关闭
--      2：开启（默认值）
-     * @param boolean $CallbackPrioritize 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * @param string $Name <p>通知渠道组名称。最大支持255个字节。 不支持 &#39;|&#39;。</p>
+     * @param array $Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。</p>
+     * @param string $Type <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>需要发送通知的告警类型。可选值：</p><ul><li>Trigger - 告警触发</li><li>Recovery - 告警恢复</li><li>All - 告警触发和告警恢复</li></ul>
+     * @param array $NoticeReceivers <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知接收对象。</p>
+     * @param array $WebCallbacks <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>接口回调信息（包括企业微信、钉钉、飞书）。</p>
+     * @param array $NoticeRules <p>【高级模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知规则。</p>
+     * @param string $JumpDomain <p>查询数据链接。http:// 或者 https:// 开头，不能/结尾</p>
+     * @param integer $DeliverStatus <p>投递日志开关。可取值如下：<br>1：关闭（默认值）；<br>2：开启<br>投递日志开关开启时， DeliverConfig参数必填。</p>
+     * @param DeliverConfig $DeliverConfig <p>投递日志配置参数。当DeliverStatus开启时，必填。</p>
+     * @param integer $AlarmShieldStatus <p>免登录操作告警开关。可取值如下：</p><ul><li>1：关闭</li><li>2：开启（默认值）</li></ul>
+     * @param integer $SecureDetailStatus <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     * @param boolean $CallbackPrioritize <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
      */
     function __construct()
     {
@@ -241,6 +193,10 @@ class CreateAlarmNoticeRequest extends AbstractModel
 
         if (array_key_exists("AlarmShieldStatus",$param) and $param["AlarmShieldStatus"] !== null) {
             $this->AlarmShieldStatus = $param["AlarmShieldStatus"];
+        }
+
+        if (array_key_exists("SecureDetailStatus",$param) and $param["SecureDetailStatus"] !== null) {
+            $this->SecureDetailStatus = $param["SecureDetailStatus"];
         }
 
         if (array_key_exists("CallbackPrioritize",$param) and $param["CallbackPrioritize"] !== null) {

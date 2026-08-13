@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySyncRateLimit请求参数结构体
  *
- * @method string getJobId() 获取同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
- * @method void setJobId(string $JobId) 设置同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
- * @method integer getDumpThread() 获取同步任务全量导出线程数、有效值为 1-16
- * @method void setDumpThread(integer $DumpThread) 设置同步任务全量导出线程数、有效值为 1-16
- * @method integer getDumpRps() 获取同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
- * @method void setDumpRps(integer $DumpRps) 设置同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
- * @method integer getLoadThread() 获取同步任务全量导入线程数、有效值为 1-16
- * @method void setLoadThread(integer $LoadThread) 设置同步任务全量导入线程数、有效值为 1-16
- * @method integer getSinkerThread() 获取同步任务增量导入线程数、有效值为 1-128
- * @method void setSinkerThread(integer $SinkerThread) 设置同步任务增量导入线程数、有效值为 1-128
- * @method integer getLoadRps() 获取同步任务全量导入的Rps
- * @method void setLoadRps(integer $LoadRps) 设置同步任务全量导入的Rps
+ * @method string getJobId() 获取<p>同步任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+ * @method void setJobId(string $JobId) 设置<p>同步任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+ * @method integer getDumpThread() 获取<p>同步任务全量导出线程数、有效值为 1-16</p>
+ * @method void setDumpThread(integer $DumpThread) 设置<p>同步任务全量导出线程数、有效值为 1-16</p>
+ * @method integer getDumpRps() 获取<p>同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000</p>
+ * @method void setDumpRps(integer $DumpRps) 设置<p>同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000</p>
+ * @method integer getLoadThread() 获取<p>同步任务全量导入线程数、有效值为 1-16</p>
+ * @method void setLoadThread(integer $LoadThread) 设置<p>同步任务全量导入线程数、有效值为 1-16</p>
+ * @method integer getSinkerThread() 获取<p>同步任务增量导入线程数、有效值为 1-128</p>
+ * @method void setSinkerThread(integer $SinkerThread) 设置<p>同步任务增量导入线程数、有效值为 1-128</p>
+ * @method integer getLoadRps() 获取<p>同步任务全量导入的Rps</p>
+ * @method void setLoadRps(integer $LoadRps) 设置<p>同步任务全量导入的Rps</p>
  */
 class ModifySyncRateLimitRequest extends AbstractModel
 {
     /**
-     * @var string 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+     * @var string <p>同步任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
      */
     public $JobId;
 
     /**
-     * @var integer 同步任务全量导出线程数、有效值为 1-16
+     * @var integer <p>同步任务全量导出线程数、有效值为 1-16</p>
      */
     public $DumpThread;
 
     /**
-     * @var integer 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
+     * @var integer <p>同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000</p>
      */
     public $DumpRps;
 
     /**
-     * @var integer 同步任务全量导入线程数、有效值为 1-16
+     * @var integer <p>同步任务全量导入线程数、有效值为 1-16</p>
      */
     public $LoadThread;
 
     /**
-     * @var integer 同步任务增量导入线程数、有效值为 1-128
+     * @var integer <p>同步任务增量导入线程数、有效值为 1-128</p>
      */
     public $SinkerThread;
 
     /**
-     * @var integer 同步任务全量导入的Rps
+     * @var integer <p>同步任务全量导入的Rps</p>
      */
     public $LoadRps;
 
     /**
-     * @param string $JobId 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
-     * @param integer $DumpThread 同步任务全量导出线程数、有效值为 1-16
-     * @param integer $DumpRps 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
-     * @param integer $LoadThread 同步任务全量导入线程数、有效值为 1-16
-     * @param integer $SinkerThread 同步任务增量导入线程数、有效值为 1-128
-     * @param integer $LoadRps 同步任务全量导入的Rps
+     * @param string $JobId <p>同步任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+     * @param integer $DumpThread <p>同步任务全量导出线程数、有效值为 1-16</p>
+     * @param integer $DumpRps <p>同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000</p>
+     * @param integer $LoadThread <p>同步任务全量导入线程数、有效值为 1-16</p>
+     * @param integer $SinkerThread <p>同步任务增量导入线程数、有效值为 1-128</p>
+     * @param integer $LoadRps <p>同步任务全量导入的Rps</p>
      */
     function __construct()
     {

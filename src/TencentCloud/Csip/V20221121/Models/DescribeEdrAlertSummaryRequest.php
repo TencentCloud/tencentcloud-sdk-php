@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cds\V20180420\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 资产支持的审计能力
+ * DescribeEdrAlertSummary请求参数结构体
  *
-
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  */
-class AuditCapability extends AbstractModel
+class DescribeEdrAlertSummaryRequest extends AbstractModel
 {
-
+    /**
+     * @var array <p>集团账号的成员id</p>
+     */
+    public $MemberId;
 
     /**
-
+     * @param array $MemberId <p>集团账号的成员id</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class AuditCapability extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
     }
 }

@@ -163,7 +163,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeResourceGroupUsageInfoResponse DescribeResourceGroupUsageInfo(Models\DescribeResourceGroupUsageInfoRequest $req) 本接口根据资源组ID查询资源组CU使用情况
  * @method Models\DescribeResultDownloadResponse DescribeResultDownload(Models\DescribeResultDownloadRequest $req) 查询结果下载任务
  * @method Models\DescribeSaleRegionsResponse DescribeSaleRegions(Models\DescribeSaleRegionsRequest $req) 查询可售卖的地域列表，仅返回状态为AVAILABLE的地域
- * @method Models\DescribeSaleResourceInfoResponse DescribeSaleResourceInfo(Models\DescribeSaleResourceInfoRequest $req) 查询当前地域可售卖的资源规格和最大配额
+ * @method Models\DescribeSaleResourceInfoResponse DescribeSaleResourceInfo(Models\DescribeSaleResourceInfoRequest $req) 查询当前地域可售卖的资源规格、最大配额，以及库存情况。StatusCategory 与 DescribePartitionAvailableQuota 数据同源，将实时可新增数量映射为库存分级；当请求 Region 与资源池实际部署地域不一致，或服务 cold-start 快照尚未就绪时，StatusCategory 为 null。
  * @method Models\DescribeScriptsResponse DescribeScripts(Models\DescribeScriptsRequest $req) 该接口（DescribeScripts）用于查询SQL脚本列表
  * @method Models\DescribeSessionImageVersionResponse DescribeSessionImageVersion(Models\DescribeSessionImageVersionRequest $req) 获取指定大版本下所有小版本的所有内置镜像
  * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) 查询spark作业信息
@@ -248,6 +248,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ListExampleDifficultiesResponse ListExampleDifficulties(Models\ListExampleDifficultiesRequest $req) 获取所有案例分类
  * @method Models\ListExampleTagsResponse ListExampleTags(Models\ListExampleTagsRequest $req) 返回标签去重列表，按出现频次从高到低排序。
  * @method Models\ListExamplesResponse ListExamples(Models\ListExamplesRequest $req) 案例列表
+ * @method Models\ListImagesResponse ListImages(Models\ListImagesRequest $req) 列出所有镜像
  * @method Models\ListInferenceEnginesResponse ListInferenceEngines(Models\ListInferenceEnginesRequest $req) 列出推理引擎
  * @method Models\ListInferenceModelsResponse ListInferenceModels(Models\ListInferenceModelsRequest $req) 列出推理模型（支持关键词过滤 + 分页）
  * @method Models\ListInferenceServicesResponse ListInferenceServices(Models\ListInferenceServicesRequest $req) 列出推理服务（支持关键词和状态过滤 + 分页）

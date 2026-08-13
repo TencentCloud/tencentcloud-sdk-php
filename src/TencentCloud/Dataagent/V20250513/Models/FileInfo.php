@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebUrl(string $WebUrl) 设置<p>网页地址</p>
  * @method array getCapabilities() 获取<p>文件能力标识列表</p>
  * @method void setCapabilities(array $Capabilities) 设置<p>文件能力标识列表</p>
+ * @method integer getEnableGraphBuild() 获取<p>0:关闭 1:开启图谱构建（入库时构建图谱），默认0</p>
+ * @method void setEnableGraphBuild(integer $EnableGraphBuild) 设置<p>0:关闭 1:开启图谱构建（入库时构建图谱），默认0</p>
+ * @method integer getEnableTreeBuild() 获取<p>0:关闭 1:开启树构建（入库时构建树），默认0</p>
+ * @method void setEnableTreeBuild(integer $EnableTreeBuild) 设置<p>0:关闭 1:开启树构建（入库时构建树），默认0</p>
+ * @method integer getGraphBuildStatus() 获取<p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+ * @method void setGraphBuildStatus(integer $GraphBuildStatus) 设置<p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+ * @method integer getTreeBuildStatus() 获取<p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+ * @method void setTreeBuildStatus(integer $TreeBuildStatus) 设置<p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
  */
 class FileInfo extends AbstractModel
 {
@@ -129,6 +137,26 @@ class FileInfo extends AbstractModel
     public $Capabilities;
 
     /**
+     * @var integer <p>0:关闭 1:开启图谱构建（入库时构建图谱），默认0</p>
+     */
+    public $EnableGraphBuild;
+
+    /**
+     * @var integer <p>0:关闭 1:开启树构建（入库时构建树），默认0</p>
+     */
+    public $EnableTreeBuild;
+
+    /**
+     * @var integer <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+     */
+    public $GraphBuildStatus;
+
+    /**
+     * @var integer <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+     */
+    public $TreeBuildStatus;
+
+    /**
      * @param string $FileName <p>文件名称</p>
      * @param float $FileSize <p>文件大小，字节</p>
      * @param integer $Type <p>文件类型,0=文本,1=表格，默认0</p>
@@ -144,6 +172,10 @@ class FileInfo extends AbstractModel
      * @param string $DocumentSummary <p>文档摘要</p>
      * @param string $WebUrl <p>网页地址</p>
      * @param array $Capabilities <p>文件能力标识列表</p>
+     * @param integer $EnableGraphBuild <p>0:关闭 1:开启图谱构建（入库时构建图谱），默认0</p>
+     * @param integer $EnableTreeBuild <p>0:关闭 1:开启树构建（入库时构建树），默认0</p>
+     * @param integer $GraphBuildStatus <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+     * @param integer $TreeBuildStatus <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
      */
     function __construct()
     {
@@ -217,6 +249,22 @@ class FileInfo extends AbstractModel
 
         if (array_key_exists("Capabilities",$param) and $param["Capabilities"] !== null) {
             $this->Capabilities = $param["Capabilities"];
+        }
+
+        if (array_key_exists("EnableGraphBuild",$param) and $param["EnableGraphBuild"] !== null) {
+            $this->EnableGraphBuild = $param["EnableGraphBuild"];
+        }
+
+        if (array_key_exists("EnableTreeBuild",$param) and $param["EnableTreeBuild"] !== null) {
+            $this->EnableTreeBuild = $param["EnableTreeBuild"];
+        }
+
+        if (array_key_exists("GraphBuildStatus",$param) and $param["GraphBuildStatus"] !== null) {
+            $this->GraphBuildStatus = $param["GraphBuildStatus"];
+        }
+
+        if (array_key_exists("TreeBuildStatus",$param) and $param["TreeBuildStatus"] !== null) {
+            $this->TreeBuildStatus = $param["TreeBuildStatus"];
         }
     }
 }

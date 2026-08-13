@@ -26,8 +26,10 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\AddDspmAssetManagerResponse AddDspmAssetManager(Models\AddDspmAssetManagerRequest $req) 添加资产管理员
  * @method Models\AddNewBindRoleUserResponse AddNewBindRoleUser(Models\AddNewBindRoleUserRequest $req) csip角色授权绑定接口
  * @method Models\AddVulWhitelistResponse AddVulWhitelist(Models\AddVulWhitelistRequest $req) 添加漏洞白名单
+ * @method Models\CancelEdrAlertIgnoreResponse CancelEdrAlertIgnore(Models\CancelEdrAlertIgnoreRequest $req) 取消已永久忽略的EDR多行为告警，从AI-Link永久忽略白名单移除对应主机+规则记录，并将告警状态恢复为待处理（PENDING）
  * @method Models\CreateAccessKeyCheckTaskResponse CreateAccessKeyCheckTask(Models\CreateAccessKeyCheckTaskRequest $req) 检测AK 异步任务
  * @method Models\CreateAccessKeySyncTaskResponse CreateAccessKeySyncTask(Models\CreateAccessKeySyncTaskRequest $req) 发起AK资产同步任务
+ * @method Models\CreateCSIPManualMalwareScanResponse CreateCSIPManualMalwareScan(Models\CreateCSIPManualMalwareScanRequest $req) CSIP 手动扫描创建接口
  * @method Models\CreateCosAssetSyncTaskResponse CreateCosAssetSyncTask(Models\CreateCosAssetSyncTaskRequest $req) 创建资产同步任务
  * @method Models\CreateCosObjectScanTaskResponse CreateCosObjectScanTask(Models\CreateCosObjectScanTaskRequest $req) 创建cos病毒扫描、敏感数据识别任务
  * @method Models\CreateCosPolicyResponse CreateCosPolicy(Models\CreateCosPolicyRequest $req) 添加cos告警策略
@@ -51,6 +53,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreateDspmPersonalIdentifyResponse CreateDspmPersonalIdentify(Models\CreateDspmPersonalIdentifyRequest $req) 创建Dspm个人身份id
  * @method Models\CreateDspmRiskExportJobResponse CreateDspmRiskExportJob(Models\CreateDspmRiskExportJobRequest $req) 创建Dspm风险导出任务
  * @method Models\CreateDspmWhitelistStrategyResponse CreateDspmWhitelistStrategy(Models\CreateDspmWhitelistStrategyRequest $req) 创建Dspm白名单策略
+ * @method Models\CreateEDRManualScanResponse CreateEDRManualScan(Models\CreateEDRManualScanRequest $req) 点击开始扫描后触发，支持多账号、多资产类型。同时选主机和容器集群时拆分为两个独立任务（主机+容器）。
+ * @method Models\CreateEdrAlertExportJobResponse CreateEdrAlertExportJob(Models\CreateEdrAlertExportJobRequest $req) 创建EDR告警导出任务
  * @method Models\CreateHostVulExportJobResponse CreateHostVulExportJob(Models\CreateHostVulExportJobRequest $req) 创建主机列漏洞表导出任务
  * @method Models\CreateIaCAccessTokenResponse CreateIaCAccessToken(Models\CreateIaCAccessTokenRequest $req) 创建IaC检测接入Token
  * @method Models\CreateIaCFileExportJobResponse CreateIaCFileExportJob(Models\CreateIaCFileExportJobRequest $req) 创建IaC检测文件导出任务
@@ -62,6 +66,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreateVulFixedExportJobResponse CreateVulFixedExportJob(Models\CreateVulFixedExportJobRequest $req) 创建已修复漏洞列表的导出任务。支持与 DescribeVulFixedList 相同的过滤条件，导出通过异步任务实现，返回 JobID 后前端轮询查询导出任务状态。导出字段包含漏洞ID、漏洞名称、漏洞等级、VPR评级、漏洞类型、CVE编号、主机名称、实例ID、关联组件&路径、修复时间。
  * @method Models\CreateVulReScanResponse CreateVulReScan(Models\CreateVulReScanRequest $req) 创建漏洞重新扫描
  * @method Models\CreateVulScanManualResponse CreateVulScanManual(Models\CreateVulScanManualRequest $req) 创建漏洞扫描（一键扫描）
+ * @method Models\DeleteCSIPMalwareScanTaskResponse DeleteCSIPMalwareScanTask(Models\DeleteCSIPMalwareScanTaskRequest $req) CSIP 手动扫描任务删除接口
  * @method Models\DeleteCosAkAssetResponse DeleteCosAkAsset(Models\DeleteCosAkAssetRequest $req) 删除已删除的cos ak资产
  * @method Models\DeleteCosPolicyResponse DeleteCosPolicy(Models\DeleteCosPolicyRequest $req) 删除策略
  * @method Models\DeleteDomainAndIpResponse DeleteDomainAndIp(Models\DeleteDomainAndIpRequest $req) 删除域名和ip请求
@@ -78,6 +83,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DeleteDspmPersonalIdentifyResponse DeleteDspmPersonalIdentify(Models\DeleteDspmPersonalIdentifyRequest $req) 删除Dspm个人身份id
  * @method Models\DeleteDspmRestoreLogListResponse DeleteDspmRestoreLogList(Models\DeleteDspmRestoreLogListRequest $req) 删除恢复日志
  * @method Models\DeleteDspmWhitelistStrategyResponse DeleteDspmWhitelistStrategy(Models\DeleteDspmWhitelistStrategyRequest $req) 删除Dspm白名单策略
+ * @method Models\DeleteEDRRulesResponse DeleteEDRRules(Models\DeleteEDRRulesRequest $req) 删除EDR策略
+ * @method Models\DeleteEDRScanTaskResponse DeleteEDRScanTask(Models\DeleteEDRScanTaskRequest $req) 删除已终止的扫描任务（物理删除主表及明细表）。只允许删除终态任务，只有创建者可操作。
  * @method Models\DeleteIaCAccessTokenResponse DeleteIaCAccessToken(Models\DeleteIaCAccessTokenRequest $req) 删除IaC检测接入Token
  * @method Models\DeleteIaCFileResponse DeleteIaCFile(Models\DeleteIaCFileRequest $req) 删除IaC检测文件
  * @method Models\DeleteRiskScanTaskResponse DeleteRiskScanTask(Models\DeleteRiskScanTaskRequest $req) 删除风险中心扫描任务
@@ -102,6 +109,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeCFWAssetStatisticsResponse DescribeCFWAssetStatistics(Models\DescribeCFWAssetStatisticsRequest $req) 云防资产中心统计数据
  * @method Models\DescribeCLSLogIndexV3Response DescribeCLSLogIndexV3(Models\DescribeCLSLogIndexV3Request $req) 获取日志索引信息
  * @method Models\DescribeCLSLogListV3Response DescribeCLSLogListV3(Models\DescribeCLSLogListV3Request $req) 日志分析检索接口v3
+ * @method Models\DescribeCSIPMalwareScanTaskDetailResponse DescribeCSIPMalwareScanTaskDetail(Models\DescribeCSIPMalwareScanTaskDetailRequest $req) CSIP 扫描任务主机详情接口
+ * @method Models\DescribeCSIPMalwareScanTaskProgressResponse DescribeCSIPMalwareScanTaskProgress(Models\DescribeCSIPMalwareScanTaskProgressRequest $req) CSIP 手动扫描进度查询接口
  * @method Models\DescribeCSIPRiskStatisticsResponse DescribeCSIPRiskStatistics(Models\DescribeCSIPRiskStatisticsRequest $req) 获取风险中心风险概况示例
  * @method Models\DescribeCVMAssetInfoResponse DescribeCVMAssetInfo(Models\DescribeCVMAssetInfoRequest $req) cvm详情
  * @method Models\DescribeCVMAssetsResponse DescribeCVMAssets(Models\DescribeCVMAssetsRequest $req) 获取cvm列表
@@ -198,8 +207,16 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeDspmSyncUsersStatusResponse DescribeDspmSyncUsersStatus(Models\DescribeDspmSyncUsersStatusRequest $req) 查询Dspm同步用户状态
  * @method Models\DescribeDspmWhitelistStrategyResponse DescribeDspmWhitelistStrategy(Models\DescribeDspmWhitelistStrategyRequest $req) 查询Dspm白名单策略
  * @method Models\DescribeEDRRuleListResponse DescribeEDRRuleList(Models\DescribeEDRRuleListRequest $req) 获取EDR策略列表
+ * @method Models\DescribeEDRScanRecordListResponse DescribeEDRScanRecordList(Models\DescribeEDRScanRecordListRequest $req) 查询扫描任务列表。Filter.Filters支持Name：Keyword(模糊OperatorType=9)、ScanType(MANUAL/CYCLE)、TaskType(HOST/CONTAINER)、Status(WAIT/SCANNING/FINISHED/FAILED/CANCELED)、AppId(账号)。
+ * @method Models\DescribeEDRScanTaskDetailResponse DescribeEDRScanTaskDetail(Models\DescribeEDRScanTaskDetailRequest $req) 查询扫描任务详情。Filter.Filters支持Name：Status（资产扫描状态，OperatorType=7 IN匹配，取值WAIT/SCANNING/FINISHED/FAILED）。
+ * @method Models\DescribeEdrAlertCountForAssetResponse DescribeEdrAlertCountForAsset(Models\DescribeEdrAlertCountForAssetRequest $req) 获取EDR告警数量统计，供资产模块调用。根据传入的MemberId和InstanceIDs，查询EDR告警表并返回告警记录条数信息。当InstanceIDs为空时返回汇总统计，非空时按InstanceIDs粒度分别返回统计。
+ * @method Models\DescribeEdrAlertCountForContainerResponse DescribeEdrAlertCountForContainer(Models\DescribeEdrAlertCountForContainerRequest $req) 容器场景告警数量统计
  * @method Models\DescribeEdrAlertInfoResponse DescribeEdrAlertInfo(Models\DescribeEdrAlertInfoRequest $req) 获取EDR告警详情，包含告警内容JSON、资产富化、情报富化等完整信息
  * @method Models\DescribeEdrAlertListResponse DescribeEdrAlertList(Models\DescribeEdrAlertListRequest $req) 获取EDR告警列表
+ * @method Models\DescribeEdrAlertMultiAttackStagesResponse DescribeEdrAlertMultiAttackStages(Models\DescribeEdrAlertMultiAttackStagesRequest $req) EDR告警多攻击阶段查询
+ * @method Models\DescribeEdrAlertSummaryResponse DescribeEdrAlertSummary(Models\DescribeEdrAlertSummaryRequest $req) 获取EDR告警统计
+ * @method Models\DescribeEdrExportJobDownloadURLResponse DescribeEdrExportJobDownloadURL(Models\DescribeEdrExportJobDownloadURLRequest $req) 获取EDR导出下载链接
+ * @method Models\DescribeEdrExportJobListResponse DescribeEdrExportJobList(Models\DescribeEdrExportJobListRequest $req) 导出EDR任务列表
  * @method Models\DescribeExposeAssetCategoryResponse DescribeExposeAssetCategory(Models\DescribeExposeAssetCategoryRequest $req) 云边界分析资产分类
  * @method Models\DescribeExposePathResponse DescribeExposePath(Models\DescribeExposePathRequest $req) 查询云边界分析路径节点
  * @method Models\DescribeExposuresResponse DescribeExposures(Models\DescribeExposuresRequest $req) 云边界分析资产列表
@@ -221,6 +238,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeKeySandboxCredentialListResponse DescribeKeySandboxCredentialList(Models\DescribeKeySandboxCredentialListRequest $req) 查询凭证列表
  * @method Models\DescribeListenerListResponse DescribeListenerList(Models\DescribeListenerListRequest $req) 查询clb监听器列表
  * @method Models\DescribeNICAssetsResponse DescribeNICAssets(Models\DescribeNICAssetsRequest $req) 获取网卡列表
+ * @method Models\DescribeNetAttackSettingResponse DescribeNetAttackSetting(Models\DescribeNetAttackSettingRequest $req) 查询网络攻击检测开关及资产范围配置
  * @method Models\DescribeNotifyAssetConfigResponse DescribeNotifyAssetConfig(Models\DescribeNotifyAssetConfigRequest $req) 获取通知资产范围配置
  * @method Models\DescribeNotifySettingResponse DescribeNotifySetting(Models\DescribeNotifySettingRequest $req) 获取通知设置
  * @method Models\DescribeNotifySettingAlertResponse DescribeNotifySettingAlert(Models\DescribeNotifySettingAlertRequest $req) 获取告警中心通知高级配置
@@ -230,6 +248,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribePolicyHitDataResponse DescribePolicyHitData(Models\DescribePolicyHitDataRequest $req) 按日期查看策略命中详情
  * @method Models\DescribePublicIpAssetsResponse DescribePublicIpAssets(Models\DescribePublicIpAssetsRequest $req) ip公网列表
  * @method Models\DescribeRepositoryImageAssetsResponse DescribeRepositoryImageAssets(Models\DescribeRepositoryImageAssetsRequest $req) 仓库镜像列表
+ * @method Models\DescribeReverseShellSystemPolicyConfigResponse DescribeReverseShellSystemPolicyConfig(Models\DescribeReverseShellSystemPolicyConfigRequest $req) 查询反弹Shell内网告警与资产范围配置
  * @method Models\DescribeRiskBucketListResponse DescribeRiskBucketList(Models\DescribeRiskBucketListRequest $req) 查看风险关联的存储桶信息
  * @method Models\DescribeRiskCallRecordResponse DescribeRiskCallRecord(Models\DescribeRiskCallRecordRequest $req) 获取风险调用记录列表
  * @method Models\DescribeRiskCenterAssetViewCFGRiskListResponse DescribeRiskCenterAssetViewCFGRiskList(Models\DescribeRiskCenterAssetViewCFGRiskListRequest $req) 获取资产视角的配置风险列表
@@ -283,6 +302,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeVulScanTaskListResponse DescribeVulScanTaskList(Models\DescribeVulScanTaskListRequest $req) 获取漏洞扫描任务记录
  * @method Models\DescribeVulViewVulRiskListResponse DescribeVulViewVulRiskList(Models\DescribeVulViewVulRiskListRequest $req) 获取漏洞视角的漏洞风险列表
  * @method Models\DownloadDspmExportLogResponse DownloadDspmExportLog(Models\DownloadDspmExportLogRequest $req) 下载导出日志
+ * @method Models\ExportCSIPMalwareScanTaskDetailResponse ExportCSIPMalwareScanTaskDetail(Models\ExportCSIPMalwareScanTaskDetailRequest $req) 导出CSIP扫描任务主机详情为Excel文件，异步生成后通过DescribeExportMachines查询下载地址
+ * @method Models\ExportEDRRulesResponse ExportEDRRules(Models\ExportEDRRulesRequest $req) 导出EDR策略列表
  * @method Models\ModifyAILinkSettingResponse ModifyAILinkSetting(Models\ModifyAILinkSettingRequest $req) 修改AI-Link智链引擎配置
  * @method Models\ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatus(Models\ModifyAlarmRiskStatusRequest $req) 修改或者更改处置状态
  * @method Models\ModifyCosAuditBucketMonitorStatusResponse ModifyCosAuditBucketMonitorStatus(Models\ModifyCosAuditBucketMonitorStatusRequest $req) 修改存储桶监测状态
@@ -316,14 +337,20 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\ModifyDspmRiskStrategyResponse ModifyDspmRiskStrategy(Models\ModifyDspmRiskStrategyRequest $req) 修改Dspm风险策略
  * @method Models\ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategy(Models\ModifyDspmWhitelistStrategyRequest $req) 修改Dspm白名单策略
  * @method Models\ModifyEDRRuleResponse ModifyEDRRule(Models\ModifyEDRRuleRequest $req) 编辑或者创建EDR策略
+ * @method Models\ModifyEDRRuleStatusResponse ModifyEDRRuleStatus(Models\ModifyEDRRuleStatusRequest $req) 修改EDR策略开关状态
+ * @method Models\ModifyEDRRulesActionResponse ModifyEDRRulesAction(Models\ModifyEDRRulesActionRequest $req) 批量修改EDR策略动作
+ * @method Models\ModifyEdrAlertIsolationResponse ModifyEdrAlertIsolation(Models\ModifyEdrAlertIsolationRequest $req) EDR告警隔离和恢复
  * @method Models\ModifyEdrAlertPermanentIgnoreResponse ModifyEdrAlertPermanentIgnore(Models\ModifyEdrAlertPermanentIgnoreRequest $req) 永久忽略EDR多行为告警，将告警对应的主机+规则加入AI-Link永久忽略白名单，后续同类告警将自动丢弃
+ * @method Models\ModifyEdrAlertStatusResponse ModifyEdrAlertStatus(Models\ModifyEdrAlertStatusRequest $req) EDR告警状态处置
  * @method Models\ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriod(Models\ModifyIaCTokenPeriodRequest $req) 修改IaC检测接入Token存储周期
  * @method Models\ModifyMachineRemarkResponse ModifyMachineRemark(Models\ModifyMachineRemarkRequest $req) 修改主机资产备注信息
+ * @method Models\ModifyNetAttackSettingResponse ModifyNetAttackSetting(Models\ModifyNetAttackSettingRequest $req) 修改网络攻击检测开关及资产范围配置
  * @method Models\ModifyNotifyAssetConfigResponse ModifyNotifyAssetConfig(Models\ModifyNotifyAssetConfigRequest $req) 修改通知资产范围配置
  * @method Models\ModifyNotifySettingResponse ModifyNotifySetting(Models\ModifyNotifySettingRequest $req) 修改通知设置
  * @method Models\ModifyNotifySettingAlertResponse ModifyNotifySettingAlert(Models\ModifyNotifySettingAlertRequest $req) 修改告警中心通知高级配置
  * @method Models\ModifyOrganizationAccountStatusResponse ModifyOrganizationAccountStatus(Models\ModifyOrganizationAccountStatusRequest $req) 修改集团账号状态
  * @method Models\ModifyPolicyStatusResponse ModifyPolicyStatus(Models\ModifyPolicyStatusRequest $req) 修改策略状态
+ * @method Models\ModifyReverseShellSystemPolicyConfigResponse ModifyReverseShellSystemPolicyConfig(Models\ModifyReverseShellSystemPolicyConfigRequest $req) 修改反弹Shell内网告警与资产范围配置
  * @method Models\ModifyRiskCenterRiskStatusResponse ModifyRiskCenterRiskStatus(Models\ModifyRiskCenterRiskStatusRequest $req) 修改风险中心风险状态
  * @method Models\ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTask(Models\ModifyRiskCenterScanTaskRequest $req) 修改风险中心扫描任务
  * @method Models\ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitch(Models\ModifyUebaRuleSwitchRequest $req) 更新自定义策略的开关
@@ -333,7 +360,11 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\ResetDspmAssetAccountPasswordResponse ResetDspmAssetAccountPassword(Models\ResetDspmAssetAccountPasswordRequest $req) 重置Dspm资产账号密码
  * @method Models\RetryDspmExportLogResponse RetryDspmExportLog(Models\RetryDspmExportLogRequest $req) RetryExportLog
  * @method Models\RevertDspmAssetAccountResponse RevertDspmAssetAccount(Models\RevertDspmAssetAccountRequest $req) 恢复Dspm资产账号
+ * @method Models\ScanCSIPTaskAgainResponse ScanCSIPTaskAgain(Models\ScanCSIPTaskAgainRequest $req) CSIP 手动扫描任务删除接口
+ * @method Models\ScanEDRTaskAgainResponse ScanEDRTaskAgain(Models\ScanEDRTaskAgainRequest $req) 基于原任务配置新建扫描任务。AssetId为空时从TaskId获取全部资产信息；AssetId非空时仅含该单资产。
  * @method Models\SendDspmAssetLoginSmsCodeResponse SendDspmAssetLoginSmsCode(Models\SendDspmAssetLoginSmsCodeRequest $req) 发送Dspm资产访问验证码
+ * @method Models\StopCSIPManualMalwareScanResponse StopCSIPManualMalwareScan(Models\StopCSIPManualMalwareScanRequest $req) CSIP 手动扫描停止接口
+ * @method Models\StopEDRScanTaskResponse StopEDRScanTask(Models\StopEDRScanTaskRequest $req) 停止或取消扫描任务。SCANNING状态调RPC停止，WAIT状态直接改库取消。只有任务创建者可操作。
  * @method Models\StopRiskCenterTaskResponse StopRiskCenterTask(Models\StopRiskCenterTaskRequest $req) 停止扫风险中心扫描任务
  * @method Models\StopVulScanTaskResponse StopVulScanTask(Models\StopVulScanTaskRequest $req) 停止漏洞扫描（任务扫描）
  * @method Models\SyncDspmAssetsResponse SyncDspmAssets(Models\SyncDspmAssetsRequest $req) 同步dspm支持的资产

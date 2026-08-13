@@ -20,230 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警通知渠道组详细配置
  *
- * @method string getName() 获取告警通知渠道组名称。
- * @method void setName(string $Name) 设置告警通知渠道组名称。
- * @method array getTags() 获取告警通知渠道组绑定的标签信息。
- * @method void setTags(array $Tags) 设置告警通知渠道组绑定的标签信息。
- * @method string getType() 获取告警模板的类型。可选值：
-<br><li> Trigger - 告警触发</li>
-<br><li> Recovery - 告警恢复</li>
-<br><li> All - 告警触发和告警恢复</li>
- * @method void setType(string $Type) 设置告警模板的类型。可选值：
-<br><li> Trigger - 告警触发</li>
-<br><li> Recovery - 告警恢复</li>
-<br><li> All - 告警触发和告警恢复</li>
- * @method array getNoticeReceivers() 获取告警通知模板接收者信息。
- * @method void setNoticeReceivers(array $NoticeReceivers) 设置告警通知模板接收者信息。
- * @method array getWebCallbacks() 获取告警通知模板回调信息。
- * @method void setWebCallbacks(array $WebCallbacks) 设置告警通知模板回调信息。
- * @method string getAlarmNoticeId() 获取告警通知模板ID。
- * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置告警通知模板ID。
- * @method array getNoticeRules() 获取通知规则。
- * @method void setNoticeRules(array $NoticeRules) 设置通知规则。
- * @method integer getAlarmShieldStatus() 获取免登录操作告警开关。
-参数值： 1：关闭 2：开启（默认开启）
- * @method void setAlarmShieldStatus(integer $AlarmShieldStatus) 设置免登录操作告警开关。
-参数值： 1：关闭 2：开启（默认开启）
- * @method string getJumpDomain() 获取调用链接域名。http:// 或者 https:// 开头，不能/结尾
- * @method void setJumpDomain(string $JumpDomain) 设置调用链接域名。http:// 或者 https:// 开头，不能/结尾
- * @method AlarmNoticeDeliverConfig getAlarmNoticeDeliverConfig() 获取投递相关信息。
+ * @method string getName() 获取<p>告警通知渠道组名称。</p>
+ * @method void setName(string $Name) 设置<p>告警通知渠道组名称。</p>
+ * @method array getTags() 获取<p>告警通知渠道组绑定的标签信息。</p>
+ * @method void setTags(array $Tags) 设置<p>告警通知渠道组绑定的标签信息。</p>
+ * @method string getType() 获取<p>告警模板的类型。可选值：<br><br><li> Trigger - 告警触发</li><br><br><li> Recovery - 告警恢复</li><br><br><li> All - 告警触发和告警恢复</li></p>
+ * @method void setType(string $Type) 设置<p>告警模板的类型。可选值：<br><br><li> Trigger - 告警触发</li><br><br><li> Recovery - 告警恢复</li><br><br><li> All - 告警触发和告警恢复</li></p>
+ * @method array getNoticeReceivers() 获取<p>告警通知模板接收者信息。</p>
+ * @method void setNoticeReceivers(array $NoticeReceivers) 设置<p>告警通知模板接收者信息。</p>
+ * @method array getWebCallbacks() 获取<p>告警通知模板回调信息。</p>
+ * @method void setWebCallbacks(array $WebCallbacks) 设置<p>告警通知模板回调信息。</p>
+ * @method string getAlarmNoticeId() 获取<p>告警通知模板ID。</p>
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置<p>告警通知模板ID。</p>
+ * @method array getNoticeRules() 获取<p>通知规则。</p>
+ * @method void setNoticeRules(array $NoticeRules) 设置<p>通知规则。</p>
+ * @method integer getAlarmShieldStatus() 获取<p>免登录操作告警开关。<br>参数值： 1：关闭 2：开启（默认开启）</p>
+ * @method void setAlarmShieldStatus(integer $AlarmShieldStatus) 设置<p>免登录操作告警开关。<br>参数值： 1：关闭 2：开启（默认开启）</p>
+ * @method integer getSecureDetailStatus() 获取<p>告警详情需要安全认证登录开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+ * @method void setSecureDetailStatus(integer $SecureDetailStatus) 设置<p>告警详情需要安全认证登录开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+ * @method string getJumpDomain() 获取<p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
+ * @method void setJumpDomain(string $JumpDomain) 设置<p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
+ * @method AlarmNoticeDeliverConfig getAlarmNoticeDeliverConfig() 获取<p>投递相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmNoticeDeliverConfig(AlarmNoticeDeliverConfig $AlarmNoticeDeliverConfig) 设置投递相关信息。
+ * @method void setAlarmNoticeDeliverConfig(AlarmNoticeDeliverConfig $AlarmNoticeDeliverConfig) 设置<p>投递相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间。格式： YYYY-MM-DD HH:MM:SS
- * @method void setCreateTime(string $CreateTime) 设置创建时间。格式： YYYY-MM-DD HH:MM:SS
- * @method string getUpdateTime() 获取最近更新时间。格式： YYYY-MM-DD HH:MM:SS
- * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间。格式： YYYY-MM-DD HH:MM:SS
- * @method integer getDeliverStatus() 获取投递日志开关。
-
-参数值：
-
-1：关闭
-
-2：开启 
-
- * @method void setDeliverStatus(integer $DeliverStatus) 设置投递日志开关。
-
-参数值：
-
-1：关闭
-
-2：开启 
-
- * @method integer getDeliverFlag() 获取投递日志标识。
-
-参数值：
-
-1：未启用
-
-2：已启用
-
-3：投递异常
- * @method void setDeliverFlag(integer $DeliverFlag) 设置投递日志标识。
-
-参数值：
-
-1：未启用
-
-2：已启用
-
-3：投递异常
- * @method AlarmShieldCount getAlarmShieldCount() 获取通知渠道组配置的告警屏蔽统计状态数量信息。
+ * @method string getCreateTime() 获取<p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
+ * @method string getUpdateTime() 获取<p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
+ * @method integer getDeliverStatus() 获取<p>投递日志开关。</p><p>参数值：</p><p>1：关闭</p><p>2：开启</p>
+ * @method void setDeliverStatus(integer $DeliverStatus) 设置<p>投递日志开关。</p><p>参数值：</p><p>1：关闭</p><p>2：开启</p>
+ * @method integer getDeliverFlag() 获取<p>投递日志标识。</p><p>参数值：</p><p>1：未启用</p><p>2：已启用</p><p>3：投递异常</p>
+ * @method void setDeliverFlag(integer $DeliverFlag) 设置<p>投递日志标识。</p><p>参数值：</p><p>1：未启用</p><p>2：已启用</p><p>3：投递异常</p>
+ * @method AlarmShieldCount getAlarmShieldCount() 获取<p>通知渠道组配置的告警屏蔽统计状态数量信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmShieldCount(AlarmShieldCount $AlarmShieldCount) 设置通知渠道组配置的告警屏蔽统计状态数量信息。
+ * @method void setAlarmShieldCount(AlarmShieldCount $AlarmShieldCount) 设置<p>通知渠道组配置的告警屏蔽统计状态数量信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getCallbackPrioritize() 获取统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
- * @method void setCallbackPrioritize(boolean $CallbackPrioritize) 设置统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+ * @method boolean getCallbackPrioritize() 获取<p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
+ * @method void setCallbackPrioritize(boolean $CallbackPrioritize) 设置<p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
  */
 class AlarmNotice extends AbstractModel
 {
     /**
-     * @var string 告警通知渠道组名称。
+     * @var string <p>告警通知渠道组名称。</p>
      */
     public $Name;
 
     /**
-     * @var array 告警通知渠道组绑定的标签信息。
+     * @var array <p>告警通知渠道组绑定的标签信息。</p>
      */
     public $Tags;
 
     /**
-     * @var string 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发</li>
-<br><li> Recovery - 告警恢复</li>
-<br><li> All - 告警触发和告警恢复</li>
+     * @var string <p>告警模板的类型。可选值：<br><br><li> Trigger - 告警触发</li><br><br><li> Recovery - 告警恢复</li><br><br><li> All - 告警触发和告警恢复</li></p>
      */
     public $Type;
 
     /**
-     * @var array 告警通知模板接收者信息。
+     * @var array <p>告警通知模板接收者信息。</p>
      */
     public $NoticeReceivers;
 
     /**
-     * @var array 告警通知模板回调信息。
+     * @var array <p>告警通知模板回调信息。</p>
      */
     public $WebCallbacks;
 
     /**
-     * @var string 告警通知模板ID。
+     * @var string <p>告警通知模板ID。</p>
      */
     public $AlarmNoticeId;
 
     /**
-     * @var array 通知规则。
+     * @var array <p>通知规则。</p>
      */
     public $NoticeRules;
 
     /**
-     * @var integer 免登录操作告警开关。
-参数值： 1：关闭 2：开启（默认开启）
+     * @var integer <p>免登录操作告警开关。<br>参数值： 1：关闭 2：开启（默认开启）</p>
      */
     public $AlarmShieldStatus;
 
     /**
-     * @var string 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+     * @var integer <p>告警详情需要安全认证登录开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     */
+    public $SecureDetailStatus;
+
+    /**
+     * @var string <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
      */
     public $JumpDomain;
 
     /**
-     * @var AlarmNoticeDeliverConfig 投递相关信息。
+     * @var AlarmNoticeDeliverConfig <p>投递相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmNoticeDeliverConfig;
 
     /**
-     * @var string 创建时间。格式： YYYY-MM-DD HH:MM:SS
+     * @var string <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+     * @var string <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer 投递日志开关。
-
-参数值：
-
-1：关闭
-
-2：开启 
-
+     * @var integer <p>投递日志开关。</p><p>参数值：</p><p>1：关闭</p><p>2：开启</p>
      */
     public $DeliverStatus;
 
     /**
-     * @var integer 投递日志标识。
-
-参数值：
-
-1：未启用
-
-2：已启用
-
-3：投递异常
+     * @var integer <p>投递日志标识。</p><p>参数值：</p><p>1：未启用</p><p>2：已启用</p><p>3：投递异常</p>
      */
     public $DeliverFlag;
 
     /**
-     * @var AlarmShieldCount 通知渠道组配置的告警屏蔽统计状态数量信息。
+     * @var AlarmShieldCount <p>通知渠道组配置的告警屏蔽统计状态数量信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmShieldCount;
 
     /**
-     * @var boolean 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * @var boolean <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
      */
     public $CallbackPrioritize;
 
     /**
-     * @param string $Name 告警通知渠道组名称。
-     * @param array $Tags 告警通知渠道组绑定的标签信息。
-     * @param string $Type 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发</li>
-<br><li> Recovery - 告警恢复</li>
-<br><li> All - 告警触发和告警恢复</li>
-     * @param array $NoticeReceivers 告警通知模板接收者信息。
-     * @param array $WebCallbacks 告警通知模板回调信息。
-     * @param string $AlarmNoticeId 告警通知模板ID。
-     * @param array $NoticeRules 通知规则。
-     * @param integer $AlarmShieldStatus 免登录操作告警开关。
-参数值： 1：关闭 2：开启（默认开启）
-     * @param string $JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-     * @param AlarmNoticeDeliverConfig $AlarmNoticeDeliverConfig 投递相关信息。
+     * @param string $Name <p>告警通知渠道组名称。</p>
+     * @param array $Tags <p>告警通知渠道组绑定的标签信息。</p>
+     * @param string $Type <p>告警模板的类型。可选值：<br><br><li> Trigger - 告警触发</li><br><br><li> Recovery - 告警恢复</li><br><br><li> All - 告警触发和告警恢复</li></p>
+     * @param array $NoticeReceivers <p>告警通知模板接收者信息。</p>
+     * @param array $WebCallbacks <p>告警通知模板回调信息。</p>
+     * @param string $AlarmNoticeId <p>告警通知模板ID。</p>
+     * @param array $NoticeRules <p>通知规则。</p>
+     * @param integer $AlarmShieldStatus <p>免登录操作告警开关。<br>参数值： 1：关闭 2：开启（默认开启）</p>
+     * @param integer $SecureDetailStatus <p>告警详情需要安全认证登录开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     * @param string $JumpDomain <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
+     * @param AlarmNoticeDeliverConfig $AlarmNoticeDeliverConfig <p>投递相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
-     * @param string $UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
-     * @param integer $DeliverStatus 投递日志开关。
-
-参数值：
-
-1：关闭
-
-2：开启 
-
-     * @param integer $DeliverFlag 投递日志标识。
-
-参数值：
-
-1：未启用
-
-2：已启用
-
-3：投递异常
-     * @param AlarmShieldCount $AlarmShieldCount 通知渠道组配置的告警屏蔽统计状态数量信息。
+     * @param string $CreateTime <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
+     * @param string $UpdateTime <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
+     * @param integer $DeliverStatus <p>投递日志开关。</p><p>参数值：</p><p>1：关闭</p><p>2：开启</p>
+     * @param integer $DeliverFlag <p>投递日志标识。</p><p>参数值：</p><p>1：未启用</p><p>2：已启用</p><p>3：投递异常</p>
+     * @param AlarmShieldCount $AlarmShieldCount <p>通知渠道组配置的告警屏蔽统计状态数量信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $CallbackPrioritize 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * @param boolean $CallbackPrioritize <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
      */
     function __construct()
     {
@@ -308,6 +232,10 @@ class AlarmNotice extends AbstractModel
 
         if (array_key_exists("AlarmShieldStatus",$param) and $param["AlarmShieldStatus"] !== null) {
             $this->AlarmShieldStatus = $param["AlarmShieldStatus"];
+        }
+
+        if (array_key_exists("SecureDetailStatus",$param) and $param["SecureDetailStatus"] !== null) {
+            $this->SecureDetailStatus = $param["SecureDetailStatus"];
         }
 
         if (array_key_exists("JumpDomain",$param) and $param["JumpDomain"] !== null) {

@@ -20,125 +20,125 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据块内不一致数据的详情信息
  *
- * @method string getDBName() 获取数据库名
+ * @method string getDBName() 获取<p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDBName(string $DBName) 设置数据库名
+ * @method void setDBName(string $DBName) 设置<p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchemaName() 获取schema名
- * @method void setSchemaName(string $SchemaName) 设置schema名
- * @method string getTableName() 获取数据表名
+ * @method string getSchemaName() 获取<p>schema名</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>schema名</p>
+ * @method string getTableName() 获取<p>数据表名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableName(string $TableName) 设置数据表名
+ * @method void setTableName(string $TableName) 设置<p>数据表名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getChunkId() 获取分块号
+ * @method integer getChunkId() 获取<p>分块号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChunkId(integer $ChunkId) 设置分块号
+ * @method void setChunkId(integer $ChunkId) 设置<p>分块号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdentifier() 获取数据标识符，比如主键信息等
+ * @method string getIdentifier() 获取<p>数据标识符，比如主键信息等</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdentifier(string $Identifier) 设置数据标识符，比如主键信息等
+ * @method void setIdentifier(string $Identifier) 设置<p>数据标识符，比如主键信息等</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiffType() 获取不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失
+ * @method string getDiffType() 获取<p>不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiffType(string $DiffType) 设置不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失
+ * @method void setDiffType(string $DiffType) 设置<p>不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSchemaInfo() 获取表结构信息
+ * @method array getSchemaInfo() 获取<p>表结构信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchemaInfo(array $SchemaInfo) 设置表结构信息
+ * @method void setSchemaInfo(array $SchemaInfo) 设置<p>表结构信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSrcItem() 获取源端数据
+ * @method array getSrcItem() 获取<p>源端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSrcItem(array $SrcItem) 设置源端数据
+ * @method void setSrcItem(array $SrcItem) 设置<p>源端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDstItem() 获取目标端数据
+ * @method array getDstItem() 获取<p>目标端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDstItem(array $DstItem) 设置目标端数据
+ * @method void setDstItem(array $DstItem) 设置<p>目标端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFinishedAt() 获取完成时间
+ * @method string getFinishedAt() 获取<p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFinishedAt(string $FinishedAt) 设置完成时间
+ * @method void setFinishedAt(string $FinishedAt) 设置<p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiffChunkItem extends AbstractModel
 {
     /**
-     * @var string 数据库名
+     * @var string <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBName;
 
     /**
-     * @var string schema名
+     * @var string <p>schema名</p>
      */
     public $SchemaName;
 
     /**
-     * @var string 数据表名
+     * @var string <p>数据表名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
-     * @var integer 分块号
+     * @var integer <p>分块号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChunkId;
 
     /**
-     * @var string 数据标识符，比如主键信息等
+     * @var string <p>数据标识符，比如主键信息等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Identifier;
 
     /**
-     * @var string 不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失
+     * @var string <p>不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiffType;
 
     /**
-     * @var array 表结构信息
+     * @var array <p>表结构信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchemaInfo;
 
     /**
-     * @var array 源端数据
+     * @var array <p>源端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcItem;
 
     /**
-     * @var array 目标端数据
+     * @var array <p>目标端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstItem;
 
     /**
-     * @var string 完成时间
+     * @var string <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinishedAt;
 
     /**
-     * @param string $DBName 数据库名
+     * @param string $DBName <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchemaName schema名
-     * @param string $TableName 数据表名
+     * @param string $SchemaName <p>schema名</p>
+     * @param string $TableName <p>数据表名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ChunkId 分块号
+     * @param integer $ChunkId <p>分块号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Identifier 数据标识符，比如主键信息等
+     * @param string $Identifier <p>数据标识符，比如主键信息等</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiffType 不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失
+     * @param string $DiffType <p>不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SchemaInfo 表结构信息
+     * @param array $SchemaInfo <p>表结构信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SrcItem 源端数据
+     * @param array $SrcItem <p>源端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DstItem 目标端数据
+     * @param array $DstItem <p>目标端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FinishedAt 完成时间
+     * @param string $FinishedAt <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

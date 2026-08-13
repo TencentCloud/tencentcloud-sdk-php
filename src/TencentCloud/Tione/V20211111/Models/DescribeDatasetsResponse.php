@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatasets返回参数结构体
  *
- * @method integer getTotalCount() 获取数据集总量（名称维度）
+ * @method integer getTotalCount() 获取<p>数据集总量（名称维度）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置数据集总量（名称维度）
+ * @method void setTotalCount(integer $TotalCount) 设置<p>数据集总量（名称维度）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDatasetGroups() 获取数据集按照数据集名称聚合的分组
+ * @method array getDatasetGroups() 获取<p>数据集按照数据集名称聚合的分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatasetGroups(array $DatasetGroups) 设置数据集按照数据集名称聚合的分组
+ * @method void setDatasetGroups(array $DatasetGroups) 设置<p>数据集按照数据集名称聚合的分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDatasetIdNums() 获取数据集ID总量
+ * @method integer getDatasetIdNums() 获取<p>数据集ID总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatasetIdNums(integer $DatasetIdNums) 设置数据集ID总量
+ * @method void setDatasetIdNums(integer $DatasetIdNums) 设置<p>数据集ID总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getCFSNotReady() 获取若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
- * @method void setCFSNotReady(boolean $CFSNotReady) 设置若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+ * @method boolean getCFSNotReady() 获取<p>若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。</p>
+ * @method void setCFSNotReady(boolean $CFSNotReady) 设置<p>若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDatasetsResponse extends AbstractModel
 {
     /**
-     * @var integer 数据集总量（名称维度）
+     * @var integer <p>数据集总量（名称维度）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
-     * @var array 数据集按照数据集名称聚合的分组
+     * @var array <p>数据集按照数据集名称聚合的分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasetGroups;
 
     /**
-     * @var integer 数据集ID总量
+     * @var integer <p>数据集ID总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasetIdNums;
 
     /**
-     * @var boolean 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+     * @var boolean <p>若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。</p>
      */
     public $CFSNotReady;
 
@@ -68,13 +68,13 @@ class DescribeDatasetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 数据集总量（名称维度）
+     * @param integer $TotalCount <p>数据集总量（名称维度）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DatasetGroups 数据集按照数据集名称聚合的分组
+     * @param array $DatasetGroups <p>数据集按照数据集名称聚合的分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DatasetIdNums 数据集ID总量
+     * @param integer $DatasetIdNums <p>数据集ID总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $CFSNotReady 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+     * @param boolean $CFSNotReady <p>若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

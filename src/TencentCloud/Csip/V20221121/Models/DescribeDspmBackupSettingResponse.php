@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDspmBackupSetting返回参数结构体
  *
- * @method integer getBackupLogSaveTime() 获取备份日志保留时长
- * @method void setBackupLogSaveTime(integer $BackupLogSaveTime) 设置备份日志保留时长
- * @method integer getRestoreLogSaveTime() 获取恢复日志保留时长
- * @method void setRestoreLogSaveTime(integer $RestoreLogSaveTime) 设置恢复日志保留时长
- * @method integer getLogMaxSaveTime() 获取日志最大生命周期限制
- * @method void setLogMaxSaveTime(integer $LogMaxSaveTime) 设置日志最大生命周期限制
- * @method integer getOnlineLogMaxSaveTime() 获取在线日志最大天数限制
- * @method void setOnlineLogMaxSaveTime(integer $OnlineLogMaxSaveTime) 设置在线日志最大天数限制
- * @method integer getMaxOnlineLogCount() 获取最大在线日志条数，单位是：个
- * @method void setMaxOnlineLogCount(integer $MaxOnlineLogCount) 设置最大在线日志条数，单位是：个
+ * @method integer getBackupLogSaveTime() 获取<p>备份日志保留时长</p>
+ * @method void setBackupLogSaveTime(integer $BackupLogSaveTime) 设置<p>备份日志保留时长</p>
+ * @method integer getRestoreLogSaveTime() 获取<p>恢复日志保留时长</p>
+ * @method void setRestoreLogSaveTime(integer $RestoreLogSaveTime) 设置<p>恢复日志保留时长</p>
+ * @method integer getLogMaxSaveTime() 获取<p>日志最大生命周期限制</p>
+ * @method void setLogMaxSaveTime(integer $LogMaxSaveTime) 设置<p>日志最大生命周期限制</p>
+ * @method integer getOnlineLogMaxSaveTime() 获取<p>在线日志最大天数限制</p>
+ * @method void setOnlineLogMaxSaveTime(integer $OnlineLogMaxSaveTime) 设置<p>在线日志最大天数限制</p>
+ * @method integer getMaxOnlineLogCount() 获取<p>最大在线日志条数，单位是：个</p>
+ * @method void setMaxOnlineLogCount(integer $MaxOnlineLogCount) 设置<p>最大在线日志条数，单位是：个</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDspmBackupSettingResponse extends AbstractModel
 {
     /**
-     * @var integer 备份日志保留时长
+     * @var integer <p>备份日志保留时长</p>
      */
     public $BackupLogSaveTime;
 
     /**
-     * @var integer 恢复日志保留时长
+     * @var integer <p>恢复日志保留时长</p>
      */
     public $RestoreLogSaveTime;
 
     /**
-     * @var integer 日志最大生命周期限制
+     * @var integer <p>日志最大生命周期限制</p>
      */
     public $LogMaxSaveTime;
 
     /**
-     * @var integer 在线日志最大天数限制
+     * @var integer <p>在线日志最大天数限制</p>
      */
     public $OnlineLogMaxSaveTime;
 
     /**
-     * @var integer 最大在线日志条数，单位是：个
+     * @var integer <p>最大在线日志条数，单位是：个</p>
      */
     public $MaxOnlineLogCount;
 
@@ -66,11 +66,11 @@ class DescribeDspmBackupSettingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $BackupLogSaveTime 备份日志保留时长
-     * @param integer $RestoreLogSaveTime 恢复日志保留时长
-     * @param integer $LogMaxSaveTime 日志最大生命周期限制
-     * @param integer $OnlineLogMaxSaveTime 在线日志最大天数限制
-     * @param integer $MaxOnlineLogCount 最大在线日志条数，单位是：个
+     * @param integer $BackupLogSaveTime <p>备份日志保留时长</p>
+     * @param integer $RestoreLogSaveTime <p>恢复日志保留时长</p>
+     * @param integer $LogMaxSaveTime <p>日志最大生命周期限制</p>
+     * @param integer $OnlineLogMaxSaveTime <p>在线日志最大天数限制</p>
+     * @param integer $MaxOnlineLogCount <p>最大在线日志条数，单位是：个</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetadata(Metadata $Metadata) 设置<p>自定义metadata，支持创建 CVM 时添加自定义元数据键值对。<br><strong>注：内测中</strong>。</p>
  * @method string getTemplateDataModifyAction() 获取<p>只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。</p><ul><li>Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] </li><li>Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3]<br><strong>注：内测中</strong>。</li></ul>
  * @method void setTemplateDataModifyAction(string $TemplateDataModifyAction) 设置<p>只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。</p><ul><li>Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] </li><li>Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3]<br><strong>注：内测中</strong>。</li></ul>
+ * @method array getNetworkInterfaces() 获取<p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+ * @method void setNetworkInterfaces(array $NetworkInterfaces) 设置<p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
  */
 class CreateLaunchTemplateRequest extends AbstractModel
 {
@@ -241,6 +243,11 @@ class CreateLaunchTemplateRequest extends AbstractModel
     public $TemplateDataModifyAction;
 
     /**
+     * @var array <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     */
+    public $NetworkInterfaces;
+
+    /**
      * @param string $LaunchTemplateName <p>实例启动模板名称。长度为2~128个英文或中文字符。</p>
      * @param Placement $Placement <p>实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。</p>
      * @param string $ImageId <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。镜像类型分为四种：<br><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br>可通过以下方式获取可用的镜像ID：<br><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，传入InstanceType获取当前机型支持的镜像列表，取返回信息中的<code>ImageId</code>字段。</li></p>
@@ -272,6 +279,7 @@ class CreateLaunchTemplateRequest extends AbstractModel
      * @param array $LaunchTemplateTagSpecification <p>标签描述列表。通过指定该参数可以绑定标签到实例启动模板。</p>
      * @param Metadata $Metadata <p>自定义metadata，支持创建 CVM 时添加自定义元数据键值对。<br><strong>注：内测中</strong>。</p>
      * @param string $TemplateDataModifyAction <p>只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。</p><ul><li>Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] </li><li>Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3]<br><strong>注：内测中</strong>。</li></ul>
+     * @param array $NetworkInterfaces <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
      */
     function __construct()
     {
@@ -433,6 +441,15 @@ class CreateLaunchTemplateRequest extends AbstractModel
 
         if (array_key_exists("TemplateDataModifyAction",$param) and $param["TemplateDataModifyAction"] !== null) {
             $this->TemplateDataModifyAction = $param["TemplateDataModifyAction"];
+        }
+
+        if (array_key_exists("NetworkInterfaces",$param) and $param["NetworkInterfaces"] !== null) {
+            $this->NetworkInterfaces = [];
+            foreach ($param["NetworkInterfaces"] as $key => $value){
+                $obj = new NetworkInterfaces();
+                $obj->deserialize($value);
+                array_push($this->NetworkInterfaces, $obj);
+            }
         }
     }
 }

@@ -20,24 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchCasterToEmergency返回参数结构体
  *
- * @method integer getEmergencyStatus() 获取备播状态，范围[0,1,2]
-0. 正常直播状态
-1. 备播状态
-2. 备播切换正常直播中，在配置了延播时长时出现
- * @method void setEmergencyStatus(integer $EmergencyStatus) 设置备播状态，范围[0,1,2]
-0. 正常直播状态
-1. 备播状态
-2. 备播切换正常直播中，在配置了延播时长时出现
+ * @method integer getEmergencyStatus() 获取<p>备播状态，范围[0,1,2]</p><ol start="0"><li>正常直播状态</li><li>备播状态</li><li>备播切换正常直播中，在配置了延播时长时出现</li></ol>
+ * @method void setEmergencyStatus(integer $EmergencyStatus) 设置<p>备播状态，范围[0,1,2]</p><ol start="0"><li>正常直播状态</li><li>备播状态</li><li>备播切换正常直播中，在配置了延播时长时出现</li></ol>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SwitchCasterToEmergencyResponse extends AbstractModel
 {
     /**
-     * @var integer 备播状态，范围[0,1,2]
-0. 正常直播状态
-1. 备播状态
-2. 备播切换正常直播中，在配置了延播时长时出现
+     * @var integer <p>备播状态，范围[0,1,2]</p><ol start="0"><li>正常直播状态</li><li>备播状态</li><li>备播切换正常直播中，在配置了延播时长时出现</li></ol>
      */
     public $EmergencyStatus;
 
@@ -47,10 +38,7 @@ class SwitchCasterToEmergencyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $EmergencyStatus 备播状态，范围[0,1,2]
-0. 正常直播状态
-1. 备播状态
-2. 备播切换正常直播中，在配置了延播时长时出现
+     * @param integer $EmergencyStatus <p>备播状态，范围[0,1,2]</p><ol start="0"><li>正常直播状态</li><li>备播状态</li><li>备播切换正常直播中，在配置了延播时长时出现</li></ol>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RetryDspmExportLog请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method integer getTaskId() 获取任务ID
- * @method void setTaskId(integer $TaskId) 设置任务ID
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method integer getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>任务ID</p>
  */
 class RetryDspmExportLogRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
     /**
-     * @var integer 任务ID
+     * @var integer <p>任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @param array $MemberId 集团账号的成员id
-     * @param integer $TaskId 任务ID
+     * @param array $MemberId <p>集团账号的成员id</p>
+     * @param integer $TaskId <p>任务ID</p>
      */
     function __construct()
     {

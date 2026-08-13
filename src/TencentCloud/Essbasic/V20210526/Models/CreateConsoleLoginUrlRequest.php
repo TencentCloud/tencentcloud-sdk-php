@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopNavigationStatus(string $TopNavigationStatus) 设置<p>是否展示头顶导航栏  <ul><li> <strong>ENABLE</strong> : (默认)进入web控制台展示头顶导航栏</li> <li> <strong>DISABLE</strong> : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数<strong>仅在企业和员工激活完成，登录控制台场景才生效</strong>。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a></p>
  * @method boolean getAutoActive() 获取<p>是否自动激活子客企业，有下面两种选项：</p><p><strong>false（默认设置）</strong>：不自动激活子客户。您需要通过控制台或调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive">激活或者续期子企业</a>接口手动完成激活过程。</p><p><strong>true</strong>：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。</p><p><b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png" alt="image"></p>
  * @method void setAutoActive(boolean $AutoActive) 设置<p>是否自动激活子客企业，有下面两种选项：</p><p><strong>false（默认设置）</strong>：不自动激活子客户。您需要通过控制台或调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive">激活或者续期子企业</a>接口手动完成激活过程。</p><p><strong>true</strong>：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。</p><p><b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png" alt="image"></p>
- * @method string getBusinessLicense() 获取<p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。</p>
- * @method void setBusinessLicense(string $BusinessLicense) 设置<p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。</p>
+ * @method string getBusinessLicense() 获取<p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
+ * @method void setBusinessLicense(string $BusinessLicense) 设置<p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
  * @method string getProxyAddress() 获取<p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
  * @method void setProxyAddress(string $ProxyAddress) 设置<p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
  * @method string getProxyLegalName() 获取<p>组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJumpEvents(array $JumpEvents) 设置<p>跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。<br>p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">&quot;true&quot; </font><br>如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。</p>
  * @method string getProxyOrganizationIdCardType() 获取<p>企业证照类型：</p><ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li><li> **CLINICFILLINGCERTIFICATE* :诊所备案证</li></ul><p>枚举值：</p><ul><li>USCC： 工商组织营业执照</li><li>PRACTICELICENSEOFMEDICALINSTITUTION： 医疗机构执业许可证</li><li>CLINICFILLINGCERTIFICATE： 诊所备案证</li></ul>
  * @method void setProxyOrganizationIdCardType(string $ProxyOrganizationIdCardType) 设置<p>企业证照类型：</p><ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li><li> **CLINICFILLINGCERTIFICATE* :诊所备案证</li></ul><p>枚举值：</p><ul><li>USCC： 工商组织营业执照</li><li>PRACTICELICENSEOFMEDICALINSTITUTION： 医疗机构执业许可证</li><li>CLINICFILLINGCERTIFICATE： 诊所备案证</li></ul>
+ * @method string getBusinessLicenseId() 获取<p>营业执照正面照（支持PNG或JPG格式）的FileId（通过UploadFiles获取），且文件大小不得超过8MB。<br>和BusinessLicense二选一即可</p>
+ * @method void setBusinessLicenseId(string $BusinessLicenseId) 设置<p>营业执照正面照（支持PNG或JPG格式）的FileId（通过UploadFiles获取），且文件大小不得超过8MB。<br>和BusinessLicense二选一即可</p>
  */
 class CreateConsoleLoginUrlRequest extends AbstractModel
 {
@@ -147,7 +149,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $AutoActive;
 
     /**
-     * @var string <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。</p>
+     * @var string <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
      */
     public $BusinessLicense;
 
@@ -193,6 +195,11 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $ProxyOrganizationIdCardType;
 
     /**
+     * @var string <p>营业执照正面照（支持PNG或JPG格式）的FileId（通过UploadFiles获取），且文件大小不得超过8MB。<br>和BusinessLicense二选一即可</p>
+     */
+    public $BusinessLicenseId;
+
+    /**
      * @param Agent $Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容<br>此接口下面信息必填。</p><ul><li>渠道应用标识:  <a href="https://qcloudimg.tencent-cloud.cn/raw/a71872de3d540d55451e3e73a2ad1a6e.png" target="_blank">Agent.AppId</a></li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li></ul>注:<code>1. 企业激活时， 此时的Agent.ProxyOrganizationOpenId将会是企业激活后企业的唯一标识，建议开发者保存企业ProxyOrganizationOpenId，后续各项接口调用皆需要此参数。</code><code>2. 员工认证时， 此时的Agent.ProxyOperator.OpenId将会是员工认证加入企业后的唯一标识，建议开发者保存此员工的OpenId，后续各项接口调用皆需要此参数。</code><code>3. 同渠道应用(Agent.AppId)下，企业唯一标识ProxyOrganizationOpenId需要保持唯一，员工唯一标识OpenId也要保持唯一 (而不是企业下唯一)。</code>
      * @param string $ProxyOrganizationName <p>第三方平台子客的企业名称，请确认该企业名称与企业营业执照中注册的名称完全一致。<br><font color="red"><br>在测试环境联调的过程中，企业名称请统一加上“测试”二字，如：典子谦示例企业测试，否则将无法审核通过。<br>企业名称请使用以下名称, 以下名称可以不用走收录。<br><strong>子客测试专用企业1 - 子客测试专用企业9</strong></font></p><p>注:<br> <code>1. 如果名称中包含英文括号()，请使用中文括号（）代替。</code><br> <code>2、该名称需要与Agent.ProxyOrganizationOpenId相匹配,  企业激活后Agent.ProxyOrganizationOpenId会跟此企业名称一一绑定; 如果您的企业已经在认证授权中或者激活完成，这里修改子客企业名字将不会生效。</code></p>
      * @param string $UniformSocialCreditCode <p>子客企业统一社会信用代码，最大长度200个字符<br>注意：<code>如果您的企业已经在认证授权中或者激活完成，这里修改子客企业名字将不会生效</code>。</p>
@@ -208,7 +215,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $AutoJumpUrl <p><font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。<br>认证完成跳转链接。<br>注意：<code>此功能仅在Endpoint参数设置成 H5 或 PC时才有效</code>。</p>
      * @param string $TopNavigationStatus <p>是否展示头顶导航栏  <ul><li> <strong>ENABLE</strong> : (默认)进入web控制台展示头顶导航栏</li> <li> <strong>DISABLE</strong> : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数<strong>仅在企业和员工激活完成，登录控制台场景才生效</strong>。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a></p>
      * @param boolean $AutoActive <p>是否自动激活子客企业，有下面两种选项：</p><p><strong>false（默认设置）</strong>：不自动激活子客户。您需要通过控制台或调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive">激活或者续期子企业</a>接口手动完成激活过程。</p><p><strong>true</strong>：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。</p><p><b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png" alt="image"></p>
-     * @param string $BusinessLicense <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。</p>
+     * @param string $BusinessLicense <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
      * @param string $ProxyAddress <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
      * @param string $ProxyLegalName <p>组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
      * @param array $PowerOfAttorneys <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。<br> p.s. 如果上传授权书 ，需遵循以下条件 </p><ol><li>超管的信息（超管姓名，超管手机号）必须为必填参数。 </li><li>认证方式AuthorizationTypes必须只能是上传授权书方式</li></ol>
@@ -217,6 +224,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param UserInfo $Operator <p>无</p>
      * @param array $JumpEvents <p>跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。<br>p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">&quot;true&quot; </font><br>如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。</p>
      * @param string $ProxyOrganizationIdCardType <p>企业证照类型：</p><ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li><li> **CLINICFILLINGCERTIFICATE* :诊所备案证</li></ul><p>枚举值：</p><ul><li>USCC： 工商组织营业执照</li><li>PRACTICELICENSEOFMEDICALINSTITUTION： 医疗机构执业许可证</li><li>CLINICFILLINGCERTIFICATE： 诊所备案证</li></ul>
+     * @param string $BusinessLicenseId <p>营业执照正面照（支持PNG或JPG格式）的FileId（通过UploadFiles获取），且文件大小不得超过8MB。<br>和BusinessLicense二选一即可</p>
      */
     function __construct()
     {
@@ -333,6 +341,10 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
         if (array_key_exists("ProxyOrganizationIdCardType",$param) and $param["ProxyOrganizationIdCardType"] !== null) {
             $this->ProxyOrganizationIdCardType = $param["ProxyOrganizationIdCardType"];
+        }
+
+        if (array_key_exists("BusinessLicenseId",$param) and $param["BusinessLicenseId"] !== null) {
+            $this->BusinessLicenseId = $param["BusinessLicenseId"];
         }
     }
 }

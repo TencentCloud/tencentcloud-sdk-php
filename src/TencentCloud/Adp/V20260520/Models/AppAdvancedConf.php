@@ -20,42 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用高级配置
  *
- * @method boolean getEnableContextRewrite() 获取是否开启上下文改写
- * @method void setEnableContextRewrite(boolean $EnableContextRewrite) 设置是否开启上下文改写
- * @method boolean getEnableImageTextRetrieval() 获取是否开启图文检索
- * @method void setEnableImageTextRetrieval(boolean $EnableImageTextRetrieval) 设置是否开启图文检索
- * @method integer getReplyFlexibility() 获取回复灵活度
- * @method void setReplyFlexibility(integer $ReplyFlexibility) 设置回复灵活度
- * @method array getIntentAchievement() 获取意图达成优先级
- * @method void setIntentAchievement(array $IntentAchievement) 设置意图达成优先级
+ * @method boolean getEnableContextRewrite() 获取<p>是否开启上下文改写</p>
+ * @method void setEnableContextRewrite(boolean $EnableContextRewrite) 设置<p>是否开启上下文改写</p>
+ * @method boolean getEnableImageTextRetrieval() 获取<p>是否开启图文检索</p>
+ * @method void setEnableImageTextRetrieval(boolean $EnableImageTextRetrieval) 设置<p>是否开启图文检索</p>
+ * @method integer getReplyFlexibility() 获取<p>回复灵活度</p>
+ * @method void setReplyFlexibility(integer $ReplyFlexibility) 设置<p>回复灵活度</p>
+ * @method DialogCustomConfig getDialogCustomConfig() 获取<p>对话端自定义配置(所有模式共用,允许对话中动态修改配置)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDialogCustomConfig(DialogCustomConfig $DialogCustomConfig) 设置<p>对话端自定义配置(所有模式共用,允许对话中动态修改配置)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIntentAchievement() 获取<p>意图达成优先级</p>
+ * @method void setIntentAchievement(array $IntentAchievement) 设置<p>意图达成优先级</p>
  */
 class AppAdvancedConf extends AbstractModel
 {
     /**
-     * @var boolean 是否开启上下文改写
+     * @var boolean <p>是否开启上下文改写</p>
      */
     public $EnableContextRewrite;
 
     /**
-     * @var boolean 是否开启图文检索
+     * @var boolean <p>是否开启图文检索</p>
      */
     public $EnableImageTextRetrieval;
 
     /**
-     * @var integer 回复灵活度
+     * @var integer <p>回复灵活度</p>
      */
     public $ReplyFlexibility;
 
     /**
-     * @var array 意图达成优先级
+     * @var DialogCustomConfig <p>对话端自定义配置(所有模式共用,允许对话中动态修改配置)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DialogCustomConfig;
+
+    /**
+     * @var array <p>意图达成优先级</p>
      */
     public $IntentAchievement;
 
     /**
-     * @param boolean $EnableContextRewrite 是否开启上下文改写
-     * @param boolean $EnableImageTextRetrieval 是否开启图文检索
-     * @param integer $ReplyFlexibility 回复灵活度
-     * @param array $IntentAchievement 意图达成优先级
+     * @param boolean $EnableContextRewrite <p>是否开启上下文改写</p>
+     * @param boolean $EnableImageTextRetrieval <p>是否开启图文检索</p>
+     * @param integer $ReplyFlexibility <p>回复灵活度</p>
+     * @param DialogCustomConfig $DialogCustomConfig <p>对话端自定义配置(所有模式共用,允许对话中动态修改配置)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IntentAchievement <p>意图达成优先级</p>
      */
     function __construct()
     {
@@ -80,6 +92,11 @@ class AppAdvancedConf extends AbstractModel
 
         if (array_key_exists("ReplyFlexibility",$param) and $param["ReplyFlexibility"] !== null) {
             $this->ReplyFlexibility = $param["ReplyFlexibility"];
+        }
+
+        if (array_key_exists("DialogCustomConfig",$param) and $param["DialogCustomConfig"] !== null) {
+            $this->DialogCustomConfig = new DialogCustomConfig();
+            $this->DialogCustomConfig->deserialize($param["DialogCustomConfig"]);
         }
 
         if (array_key_exists("IntentAchievement",$param) and $param["IntentAchievement"] !== null) {

@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGoogleChatRobot(array $GoogleChatRobot) 设置<p>GoogleChat</p>
  * @method array getSlackRobot() 获取<p>Slack</p>
  * @method void setSlackRobot(array $SlackRobot) 设置<p>Slack</p>
+ * @method array getTeamsWorkflowRobot() 获取<p>Teams 工作流渠道</p>
+ * @method void setTeamsWorkflowRobot(array $TeamsWorkflowRobot) 设置<p>Teams 工作流渠道</p>
  */
 class NoticeContentTmplItem extends AbstractModel
 {
@@ -108,6 +110,11 @@ class NoticeContentTmplItem extends AbstractModel
     public $SlackRobot;
 
     /**
+     * @var array <p>Teams 工作流渠道</p>
+     */
+    public $TeamsWorkflowRobot;
+
+    /**
      * @param array $QCloudYehe <p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WeWorkRobot <p>企业微信机器人通知渠道配置</p>
@@ -124,6 +131,7 @@ class NoticeContentTmplItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GoogleChatRobot <p>GoogleChat</p>
      * @param array $SlackRobot <p>Slack</p>
+     * @param array $TeamsWorkflowRobot <p>Teams 工作流渠道</p>
      */
     function __construct()
     {
@@ -216,6 +224,15 @@ class NoticeContentTmplItem extends AbstractModel
                 $obj = new SlackRobotNoticeTmplMatcher();
                 $obj->deserialize($value);
                 array_push($this->SlackRobot, $obj);
+            }
+        }
+
+        if (array_key_exists("TeamsWorkflowRobot",$param) and $param["TeamsWorkflowRobot"] !== null) {
+            $this->TeamsWorkflowRobot = [];
+            foreach ($param["TeamsWorkflowRobot"] as $key => $value){
+                $obj = new TeamsWorkflowRobotNoticeTmplMatcher();
+                $obj->deserialize($value);
+                array_push($this->TeamsWorkflowRobot, $obj);
             }
         }
     }

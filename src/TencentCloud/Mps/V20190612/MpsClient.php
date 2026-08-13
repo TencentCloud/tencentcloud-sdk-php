@@ -148,6 +148,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(Models\DescribeAdaptiveDynamicStreamingTemplatesRequest $req) 查询转自适应码流模板，支持根据条件，分页查询。
  * @method Models\DescribeAigcAudioTaskResponse DescribeAigcAudioTask(Models\DescribeAigcAudioTaskRequest $req) 调用该接口，用于查询AIGC生视频任务的进度以及获取生成结果。
  * @method Models\DescribeAigcImageTaskResponse DescribeAigcImageTask(Models\DescribeAigcImageTaskRequest $req) 调用该接口，查询AIGC生图片任务进度以及获取生成结果。
+ * @method Models\DescribeAigcTaskListResponse DescribeAigcTaskList(Models\DescribeAigcTaskListRequest $req) 查询AIGC任务列表详细信息
  * @method Models\DescribeAigcTaskStatusResponse DescribeAigcTaskStatus(Models\DescribeAigcTaskStatusRequest $req) 查询AIGC场景任务接口
  * @method Models\DescribeAigcVideoTaskResponse DescribeAigcVideoTask(Models\DescribeAigcVideoTaskRequest $req) 调用该接口，用于查询AIGC生视频任务的进度以及获取生成结果。
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) 查询转动图模板列表，支持根据条件，分页查询。

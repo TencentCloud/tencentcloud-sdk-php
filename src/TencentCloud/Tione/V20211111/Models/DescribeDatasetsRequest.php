@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatasets请求参数结构体
  *
- * @method array getDatasetIds() 获取数据集id列表
- * @method void setDatasetIds(array $DatasetIds) 设置数据集id列表
- * @method array getFilters() 获取数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
-DatasetName，数据集名称
-DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
- * @method void setFilters(array $Filters) 设置数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
-DatasetName，数据集名称
-DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
- * @method array getTagFilters() 获取标签过滤条件
- * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
- * @method string getOrder() 获取排序值，支持Asc或Desc，默认Desc
- * @method void setOrder(string $Order) 设置排序值，支持Asc或Desc，默认Desc
- * @method string getOrderField() 获取排序字段，支持CreateTime或UpdateTime，默认CreateTime
- * @method void setOrderField(string $OrderField) 设置排序字段，支持CreateTime或UpdateTime，默认CreateTime
- * @method integer getOffset() 获取偏移值
- * @method void setOffset(integer $Offset) 设置偏移值
- * @method integer getLimit() 获取返回数据个数，默认20，最大支持200
- * @method void setLimit(integer $Limit) 设置返回数据个数，默认20，最大支持200
- * @method boolean getCFSChecking() 获取是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
- * @method void setCFSChecking(boolean $CFSChecking) 设置是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
- * @method boolean getCFSDetail() 获取是否返回CFS详情。
- * @method void setCFSDetail(boolean $CFSDetail) 设置是否返回CFS详情。
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method array getDatasetIds() 获取<p>数据集id列表</p>
+ * @method void setDatasetIds(array $DatasetIds) 设置<p>数据集id列表</p>
+ * @method array getFilters() 获取<p>数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String<br>DatasetName，数据集名称<br>DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC</p>
+ * @method void setFilters(array $Filters) 设置<p>数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String<br>DatasetName，数据集名称<br>DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC</p>
+ * @method array getTagFilters() 获取<p>标签过滤条件</p>
+ * @method void setTagFilters(array $TagFilters) 设置<p>标签过滤条件</p>
+ * @method string getOrder() 获取<p>排序值，支持Asc或Desc，默认Desc</p>
+ * @method void setOrder(string $Order) 设置<p>排序值，支持Asc或Desc，默认Desc</p>
+ * @method string getOrderField() 获取<p>排序字段，支持CreateTime或UpdateTime，默认CreateTime</p>
+ * @method void setOrderField(string $OrderField) 设置<p>排序字段，支持CreateTime或UpdateTime，默认CreateTime</p>
+ * @method integer getOffset() 获取<p>偏移值</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移值</p>
+ * @method integer getLimit() 获取<p>返回数据个数，默认20，最大支持200</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数据个数，默认20，最大支持200</p>
+ * @method boolean getCFSChecking() 获取<p>是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。</p>
+ * @method void setCFSChecking(boolean $CFSChecking) 设置<p>是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。</p>
+ * @method boolean getCFSDetail() 获取<p>是否返回CFS详情。</p>
+ * @method void setCFSDetail(boolean $CFSDetail) 设置<p>是否返回CFS详情。</p>
  */
 class DescribeDatasetsRequest extends AbstractModel
 {
     /**
-     * @var array 数据集id列表
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
+     * @var array <p>数据集id列表</p>
      */
     public $DatasetIds;
 
     /**
-     * @var array 数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
-DatasetName，数据集名称
-DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
+     * @var array <p>数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String<br>DatasetName，数据集名称<br>DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC</p>
      */
     public $Filters;
 
     /**
-     * @var array 标签过滤条件
+     * @var array <p>标签过滤条件</p>
      */
     public $TagFilters;
 
     /**
-     * @var string 排序值，支持Asc或Desc，默认Desc
+     * @var string <p>排序值，支持Asc或Desc，默认Desc</p>
      */
     public $Order;
 
     /**
-     * @var string 排序字段，支持CreateTime或UpdateTime，默认CreateTime
+     * @var string <p>排序字段，支持CreateTime或UpdateTime，默认CreateTime</p>
      */
     public $OrderField;
 
     /**
-     * @var integer 偏移值
+     * @var integer <p>偏移值</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数据个数，默认20，最大支持200
+     * @var integer <p>返回数据个数，默认20，最大支持200</p>
      */
     public $Limit;
 
     /**
-     * @var boolean 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+     * @var boolean <p>是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。</p>
      */
     public $CFSChecking;
 
     /**
-     * @var boolean 是否返回CFS详情。
+     * @var boolean <p>是否返回CFS详情。</p>
      */
     public $CFSDetail;
 
     /**
-     * @param array $DatasetIds 数据集id列表
-     * @param array $Filters 数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
-DatasetName，数据集名称
-DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
-     * @param array $TagFilters 标签过滤条件
-     * @param string $Order 排序值，支持Asc或Desc，默认Desc
-     * @param string $OrderField 排序字段，支持CreateTime或UpdateTime，默认CreateTime
-     * @param integer $Offset 偏移值
-     * @param integer $Limit 返回数据个数，默认20，最大支持200
-     * @param boolean $CFSChecking 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
-     * @param boolean $CFSDetail 是否返回CFS详情。
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param array $DatasetIds <p>数据集id列表</p>
+     * @param array $Filters <p>数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String<br>DatasetName，数据集名称<br>DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC</p>
+     * @param array $TagFilters <p>标签过滤条件</p>
+     * @param string $Order <p>排序值，支持Asc或Desc，默认Desc</p>
+     * @param string $OrderField <p>排序字段，支持CreateTime或UpdateTime，默认CreateTime</p>
+     * @param integer $Offset <p>偏移值</p>
+     * @param integer $Limit <p>返回数据个数，默认20，最大支持200</p>
+     * @param boolean $CFSChecking <p>是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。</p>
+     * @param boolean $CFSDetail <p>是否返回CFS详情。</p>
      */
     function __construct()
     {
@@ -118,6 +118,10 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
+        }
+
         if (array_key_exists("DatasetIds",$param) and $param["DatasetIds"] !== null) {
             $this->DatasetIds = $param["DatasetIds"];
         }

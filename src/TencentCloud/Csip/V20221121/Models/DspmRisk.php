@@ -20,218 +20,250 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Dspm风险
  *
- * @method string getRiskId() 获取风险id
- * @method void setRiskId(string $RiskId) 设置风险id
- * @method string getRiskName() 获取风险名称
- * @method void setRiskName(string $RiskName) 设置风险名称
- * @method string getRiskNameEn() 获取风险英文名称
- * @method void setRiskNameEn(string $RiskNameEn) 设置风险英文名称
- * @method string getStrategyType() 获取策略类型
- * @method void setStrategyType(string $StrategyType) 设置策略类型
- * @method string getStrategyCategory() 获取策略类别
- * @method void setStrategyCategory(string $StrategyCategory) 设置策略类别
- * @method string getRiskLevel() 获取风险等级
- * @method void setRiskLevel(string $RiskLevel) 设置风险等级
- * @method string getAssetId() 获取资产实例Id
- * @method void setAssetId(string $AssetId) 设置资产实例Id
- * @method string getAssetType() 获取资产类型
- * @method void setAssetType(string $AssetType) 设置资产类型
- * @method string getAssetName() 获取资产名
- * @method void setAssetName(string $AssetName) 设置资产名
- * @method string getAssetRegion() 获取地域
- * @method void setAssetRegion(string $AssetRegion) 设置地域
- * @method string getAccount() 获取资产账号
- * @method void setAccount(string $Account) 设置资产账号
- * @method string getHost() 获取主机地址
- * @method void setHost(string $Host) 设置主机地址
- * @method integer getAccountType() 获取账号类型
- * @method void setAccountType(integer $AccountType) 设置账号类型
- * @method string getDetectTime() 获取风险检出时间
- * @method void setDetectTime(string $DetectTime) 设置风险检出时间
- * @method integer getStatus() 获取处理状态 0-未处理 1-已处置 2-已忽略
- * @method void setStatus(integer $Status) 设置处理状态 0-未处理 1-已处置 2-已忽略
- * @method string getIdentifyId() 获取身份id
- * @method void setIdentifyId(string $IdentifyId) 设置身份id
- * @method DspmUinUser getOwnerUin() 获取所属云账号uin用户
- * @method void setOwnerUin(DspmUinUser $OwnerUin) 设置所属云账号uin用户
- * @method DspmPersonUser getPerson() 获取所属个人用户信息
- * @method void setPerson(DspmPersonUser $Person) 设置所属个人用户信息
- * @method string getRiskData() 获取风险数据。
- * @method void setRiskData(string $RiskData) 设置风险数据。
- * @method integer getIsAssetManager() 获取是否资产管理员
- * @method void setIsAssetManager(integer $IsAssetManager) 设置是否资产管理员
- * @method string getDataBeginTime() 获取数据起始时间
- * @method void setDataBeginTime(string $DataBeginTime) 设置数据起始时间
- * @method string getDataEndTime() 获取数据结束时间
- * @method void setDataEndTime(string $DataEndTime) 设置数据结束时间
- * @method string getRiskType() 获取风险类型。risk-风险；alarm-告警。
- * @method void setRiskType(string $RiskType) 设置风险类型。risk-风险；alarm-告警。
- * @method integer getAppId() 获取资产所属账号app id
- * @method void setAppId(integer $AppId) 设置资产所属账号app id
- * @method string getNickName() 获取账号昵称
- * @method void setNickName(string $NickName) 设置账号昵称
- * @method string getUin() 获取资产所属账号uin
- * @method void setUin(string $Uin) 设置资产所属账号uin
+ * @method string getRiskId() 获取<p>风险id</p>
+ * @method void setRiskId(string $RiskId) 设置<p>风险id</p>
+ * @method string getRiskName() 获取<p>风险名称</p>
+ * @method void setRiskName(string $RiskName) 设置<p>风险名称</p>
+ * @method string getRiskNameEn() 获取<p>风险英文名称</p>
+ * @method void setRiskNameEn(string $RiskNameEn) 设置<p>风险英文名称</p>
+ * @method string getStrategyType() 获取<p>策略类型</p>
+ * @method void setStrategyType(string $StrategyType) 设置<p>策略类型</p>
+ * @method string getStrategyCategory() 获取<p>策略类别</p>
+ * @method void setStrategyCategory(string $StrategyCategory) 设置<p>策略类别</p>
+ * @method string getRiskLevel() 获取<p>风险等级</p>
+ * @method void setRiskLevel(string $RiskLevel) 设置<p>风险等级</p>
+ * @method string getAssetId() 获取<p>资产实例Id</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产实例Id</p>
+ * @method string getAssetType() 获取<p>资产类型</p>
+ * @method void setAssetType(string $AssetType) 设置<p>资产类型</p>
+ * @method string getAssetName() 获取<p>资产名</p>
+ * @method void setAssetName(string $AssetName) 设置<p>资产名</p>
+ * @method string getAssetRegion() 获取<p>地域</p>
+ * @method void setAssetRegion(string $AssetRegion) 设置<p>地域</p>
+ * @method string getAccount() 获取<p>资产账号</p>
+ * @method void setAccount(string $Account) 设置<p>资产账号</p>
+ * @method string getHost() 获取<p>主机地址</p>
+ * @method void setHost(string $Host) 设置<p>主机地址</p>
+ * @method integer getAccountType() 获取<p>账号类型</p>
+ * @method void setAccountType(integer $AccountType) 设置<p>账号类型</p>
+ * @method string getDetectTime() 获取<p>风险检出时间</p>
+ * @method void setDetectTime(string $DetectTime) 设置<p>风险检出时间</p>
+ * @method integer getStatus() 获取<p>处理状态 0-未处理 1-已处置 2-已忽略</p>
+ * @method void setStatus(integer $Status) 设置<p>处理状态 0-未处理 1-已处置 2-已忽略</p>
+ * @method string getIdentifyId() 获取<p>身份id</p>
+ * @method void setIdentifyId(string $IdentifyId) 设置<p>身份id</p>
+ * @method DspmUinUser getOwnerUin() 获取<p>所属云账号uin用户</p>
+ * @method void setOwnerUin(DspmUinUser $OwnerUin) 设置<p>所属云账号uin用户</p>
+ * @method DspmPersonUser getPerson() 获取<p>所属个人用户信息</p>
+ * @method void setPerson(DspmPersonUser $Person) 设置<p>所属个人用户信息</p>
+ * @method string getRiskData() 获取<p>风险数据。</p>
+ * @method void setRiskData(string $RiskData) 设置<p>风险数据。</p>
+ * @method integer getIsAssetManager() 获取<p>是否资产管理员</p>
+ * @method void setIsAssetManager(integer $IsAssetManager) 设置<p>是否资产管理员</p>
+ * @method string getDataBeginTime() 获取<p>数据起始时间</p>
+ * @method void setDataBeginTime(string $DataBeginTime) 设置<p>数据起始时间</p>
+ * @method string getDataEndTime() 获取<p>数据结束时间</p>
+ * @method void setDataEndTime(string $DataEndTime) 设置<p>数据结束时间</p>
+ * @method string getRiskType() 获取<p>风险类型。risk-风险；alarm-告警。</p>
+ * @method void setRiskType(string $RiskType) 设置<p>风险类型。risk-风险；alarm-告警。</p>
+ * @method integer getAppId() 获取<p>资产所属账号app id</p>
+ * @method void setAppId(integer $AppId) 设置<p>资产所属账号app id</p>
+ * @method string getNickName() 获取<p>账号昵称</p>
+ * @method void setNickName(string $NickName) 设置<p>账号昵称</p>
+ * @method string getUin() 获取<p>资产所属账号uin</p>
+ * @method void setUin(string $Uin) 设置<p>资产所属账号uin</p>
+ * @method integer getClusterType() 获取<p>MongoDb的集群类型，非 MongoDB 资产固定 0</p><p>枚举值：</p><ul><li>0： 副本集</li><li>1： 分片</li></ul><p>默认值：0</p>
+ * @method void setClusterType(integer $ClusterType) 设置<p>MongoDb的集群类型，非 MongoDB 资产固定 0</p><p>枚举值：</p><ul><li>0： 副本集</li><li>1： 分片</li></ul><p>默认值：0</p>
+ * @method string getClusterId() 获取<p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterName() 获取<p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspmRisk extends AbstractModel
 {
     /**
-     * @var string 风险id
+     * @var string <p>风险id</p>
      */
     public $RiskId;
 
     /**
-     * @var string 风险名称
+     * @var string <p>风险名称</p>
      */
     public $RiskName;
 
     /**
-     * @var string 风险英文名称
+     * @var string <p>风险英文名称</p>
      */
     public $RiskNameEn;
 
     /**
-     * @var string 策略类型
+     * @var string <p>策略类型</p>
      */
     public $StrategyType;
 
     /**
-     * @var string 策略类别
+     * @var string <p>策略类别</p>
      */
     public $StrategyCategory;
 
     /**
-     * @var string 风险等级
+     * @var string <p>风险等级</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 资产实例Id
+     * @var string <p>资产实例Id</p>
      */
     public $AssetId;
 
     /**
-     * @var string 资产类型
+     * @var string <p>资产类型</p>
      */
     public $AssetType;
 
     /**
-     * @var string 资产名
+     * @var string <p>资产名</p>
      */
     public $AssetName;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $AssetRegion;
 
     /**
-     * @var string 资产账号
+     * @var string <p>资产账号</p>
      */
     public $Account;
 
     /**
-     * @var string 主机地址
+     * @var string <p>主机地址</p>
      */
     public $Host;
 
     /**
-     * @var integer 账号类型
+     * @var integer <p>账号类型</p>
      */
     public $AccountType;
 
     /**
-     * @var string 风险检出时间
+     * @var string <p>风险检出时间</p>
      */
     public $DetectTime;
 
     /**
-     * @var integer 处理状态 0-未处理 1-已处置 2-已忽略
+     * @var integer <p>处理状态 0-未处理 1-已处置 2-已忽略</p>
      */
     public $Status;
 
     /**
-     * @var string 身份id
+     * @var string <p>身份id</p>
      */
     public $IdentifyId;
 
     /**
-     * @var DspmUinUser 所属云账号uin用户
+     * @var DspmUinUser <p>所属云账号uin用户</p>
      */
     public $OwnerUin;
 
     /**
-     * @var DspmPersonUser 所属个人用户信息
+     * @var DspmPersonUser <p>所属个人用户信息</p>
      */
     public $Person;
 
     /**
-     * @var string 风险数据。
+     * @var string <p>风险数据。</p>
      */
     public $RiskData;
 
     /**
-     * @var integer 是否资产管理员
+     * @var integer <p>是否资产管理员</p>
      */
     public $IsAssetManager;
 
     /**
-     * @var string 数据起始时间
+     * @var string <p>数据起始时间</p>
      */
     public $DataBeginTime;
 
     /**
-     * @var string 数据结束时间
+     * @var string <p>数据结束时间</p>
      */
     public $DataEndTime;
 
     /**
-     * @var string 风险类型。risk-风险；alarm-告警。
+     * @var string <p>风险类型。risk-风险；alarm-告警。</p>
      */
     public $RiskType;
 
     /**
-     * @var integer 资产所属账号app id
+     * @var integer <p>资产所属账号app id</p>
      */
     public $AppId;
 
     /**
-     * @var string 账号昵称
+     * @var string <p>账号昵称</p>
      */
     public $NickName;
 
     /**
-     * @var string 资产所属账号uin
+     * @var string <p>资产所属账号uin</p>
      */
     public $Uin;
 
     /**
-     * @param string $RiskId 风险id
-     * @param string $RiskName 风险名称
-     * @param string $RiskNameEn 风险英文名称
-     * @param string $StrategyType 策略类型
-     * @param string $StrategyCategory 策略类别
-     * @param string $RiskLevel 风险等级
-     * @param string $AssetId 资产实例Id
-     * @param string $AssetType 资产类型
-     * @param string $AssetName 资产名
-     * @param string $AssetRegion 地域
-     * @param string $Account 资产账号
-     * @param string $Host 主机地址
-     * @param integer $AccountType 账号类型
-     * @param string $DetectTime 风险检出时间
-     * @param integer $Status 处理状态 0-未处理 1-已处置 2-已忽略
-     * @param string $IdentifyId 身份id
-     * @param DspmUinUser $OwnerUin 所属云账号uin用户
-     * @param DspmPersonUser $Person 所属个人用户信息
-     * @param string $RiskData 风险数据。
-     * @param integer $IsAssetManager 是否资产管理员
-     * @param string $DataBeginTime 数据起始时间
-     * @param string $DataEndTime 数据结束时间
-     * @param string $RiskType 风险类型。risk-风险；alarm-告警。
-     * @param integer $AppId 资产所属账号app id
-     * @param string $NickName 账号昵称
-     * @param string $Uin 资产所属账号uin
+     * @var integer <p>MongoDb的集群类型，非 MongoDB 资产固定 0</p><p>枚举值：</p><ul><li>0： 副本集</li><li>1： 分片</li></ul><p>默认值：0</p>
+     */
+    public $ClusterType;
+
+    /**
+     * @var string <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterId;
+
+    /**
+     * @var string <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterName;
+
+    /**
+     * @param string $RiskId <p>风险id</p>
+     * @param string $RiskName <p>风险名称</p>
+     * @param string $RiskNameEn <p>风险英文名称</p>
+     * @param string $StrategyType <p>策略类型</p>
+     * @param string $StrategyCategory <p>策略类别</p>
+     * @param string $RiskLevel <p>风险等级</p>
+     * @param string $AssetId <p>资产实例Id</p>
+     * @param string $AssetType <p>资产类型</p>
+     * @param string $AssetName <p>资产名</p>
+     * @param string $AssetRegion <p>地域</p>
+     * @param string $Account <p>资产账号</p>
+     * @param string $Host <p>主机地址</p>
+     * @param integer $AccountType <p>账号类型</p>
+     * @param string $DetectTime <p>风险检出时间</p>
+     * @param integer $Status <p>处理状态 0-未处理 1-已处置 2-已忽略</p>
+     * @param string $IdentifyId <p>身份id</p>
+     * @param DspmUinUser $OwnerUin <p>所属云账号uin用户</p>
+     * @param DspmPersonUser $Person <p>所属个人用户信息</p>
+     * @param string $RiskData <p>风险数据。</p>
+     * @param integer $IsAssetManager <p>是否资产管理员</p>
+     * @param string $DataBeginTime <p>数据起始时间</p>
+     * @param string $DataEndTime <p>数据结束时间</p>
+     * @param string $RiskType <p>风险类型。risk-风险；alarm-告警。</p>
+     * @param integer $AppId <p>资产所属账号app id</p>
+     * @param string $NickName <p>账号昵称</p>
+     * @param string $Uin <p>资产所属账号uin</p>
+     * @param integer $ClusterType <p>MongoDb的集群类型，非 MongoDB 资产固定 0</p><p>枚举值：</p><ul><li>0： 副本集</li><li>1： 分片</li></ul><p>默认值：0</p>
+     * @param string $ClusterId <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterName <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -350,6 +382,18 @@ class DspmRisk extends AbstractModel
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

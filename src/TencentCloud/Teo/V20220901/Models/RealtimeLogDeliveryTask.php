@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置<p>实时日志投递任务的名称。</p>
  * @method string getDeliveryStatus() 获取<p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
  * @method void setDeliveryStatus(string $DeliveryStatus) 设置<p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
- * @method string getTaskType() 获取<p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
- * @method void setTaskType(string $TaskType) 设置<p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
+ * @method string getTaskType() 获取<p>实时日志投递任务类型，取值有： <ul><li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 S3 兼容（兼容 SigV4 鉴权算法）的对象存储的地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></ul></p>
+ * @method void setTaskType(string $TaskType) 设置<p>实时日志投递任务类型，取值有： <ul><li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 S3 兼容（兼容 SigV4 鉴权算法）的对象存储的地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></ul></p>
  * @method array getEntityList() 获取<p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
  * @method void setEntityList(array $EntityList) 设置<p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
  * @method string getLogType() 获取<p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p>
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFields(array $Fields) 设置<p>投递的预设字段列表。</p>
  * @method array getCustomFields() 获取<p>投递的自定义字段列表。</p>
  * @method void setCustomFields(array $CustomFields) 设置<p>投递的自定义字段列表。</p>
+ * @method array getCustomExpressionFields() 获取<p>投递的自定义表达式字段列表。</p>
+ * @method void setCustomExpressionFields(array $CustomExpressionFields) 设置<p>投递的自定义表达式字段列表。</p>
  * @method array getDeliveryConditions() 获取<p>日志投递的过滤条件。</p>
  * @method void setDeliveryConditions(array $DeliveryConditions) 设置<p>日志投递的过滤条件。</p>
  * @method integer getSample() 获取<p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p>
@@ -54,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) 设置<p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method S3 getS3() 获取<p>AWS S3 兼容存储桶的配置信息。</p>
+ * @method S3 getS3() 获取<p>S3 兼容（兼容 SigV4 鉴权算法）的对象存储的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setS3(S3 $S3) 设置<p>AWS S3 兼容存储桶的配置信息。</p>
+ * @method void setS3(S3 $S3) 设置<p>S3 兼容（兼容 SigV4 鉴权算法）的对象存储的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取<p>创建时间。</p>
  * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。</p>
@@ -81,7 +83,7 @@ class RealtimeLogDeliveryTask extends AbstractModel
     public $DeliveryStatus;
 
     /**
-     * @var string <p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
+     * @var string <p>实时日志投递任务类型，取值有： <ul><li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 S3 兼容（兼容 SigV4 鉴权算法）的对象存储的地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></ul></p>
      */
     public $TaskType;
 
@@ -109,6 +111,11 @@ class RealtimeLogDeliveryTask extends AbstractModel
      * @var array <p>投递的自定义字段列表。</p>
      */
     public $CustomFields;
+
+    /**
+     * @var array <p>投递的自定义表达式字段列表。</p>
+     */
+    public $CustomExpressionFields;
 
     /**
      * @var array <p>日志投递的过滤条件。</p>
@@ -139,7 +146,7 @@ class RealtimeLogDeliveryTask extends AbstractModel
     public $CustomEndpoint;
 
     /**
-     * @var S3 <p>AWS S3 兼容存储桶的配置信息。</p>
+     * @var S3 <p>S3 兼容（兼容 SigV4 鉴权算法）的对象存储的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3;
@@ -158,12 +165,13 @@ class RealtimeLogDeliveryTask extends AbstractModel
      * @param string $TaskId <p>实时日志投递任务 ID。</p>
      * @param string $TaskName <p>实时日志投递任务的名称。</p>
      * @param string $DeliveryStatus <p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
-     * @param string $TaskType <p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
+     * @param string $TaskType <p>实时日志投递任务类型，取值有： <ul><li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 S3 兼容（兼容 SigV4 鉴权算法）的对象存储的地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></ul></p>
      * @param array $EntityList <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
      * @param string $LogType <p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p>
      * @param string $Area <p>数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li></p>
      * @param array $Fields <p>投递的预设字段列表。</p>
      * @param array $CustomFields <p>投递的自定义字段列表。</p>
+     * @param array $CustomExpressionFields <p>投递的自定义表达式字段列表。</p>
      * @param array $DeliveryConditions <p>日志投递的过滤条件。</p>
      * @param integer $Sample <p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p>
      * @param LogFormat $LogFormat <p>日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：</p><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
@@ -172,7 +180,7 @@ class RealtimeLogDeliveryTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomEndpoint $CustomEndpoint <p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param S3 $S3 <p>AWS S3 兼容存储桶的配置信息。</p>
+     * @param S3 $S3 <p>S3 兼容（兼容 SigV4 鉴权算法）的对象存储的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime <p>创建时间。</p>
      * @param string $UpdateTime <p>更新时间。</p>
@@ -228,6 +236,15 @@ class RealtimeLogDeliveryTask extends AbstractModel
                 $obj = new CustomField();
                 $obj->deserialize($value);
                 array_push($this->CustomFields, $obj);
+            }
+        }
+
+        if (array_key_exists("CustomExpressionFields",$param) and $param["CustomExpressionFields"] !== null) {
+            $this->CustomExpressionFields = [];
+            foreach ($param["CustomExpressionFields"] as $key => $value){
+                $obj = new CustomExpressionField();
+                $obj->deserialize($value);
+                array_push($this->CustomExpressionFields, $obj);
             }
         }
 

@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuTopology(CpuTopology $CpuTopology) 设置<p>描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。</p>
  * @method LaunchTemplate getLaunchTemplate() 获取<p>实例启动模板。</p>
  * @method void setLaunchTemplate(LaunchTemplate $LaunchTemplate) 设置<p>实例启动模板。</p>
+ * @method array getNetworkInterfaces() 获取<p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+ * @method void setNetworkInterfaces(array $NetworkInterfaces) 设置<p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
  */
 class InquiryPriceRunInstancesRequest extends AbstractModel
 {
@@ -178,6 +180,11 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
     public $LaunchTemplate;
 
     /**
+     * @var array <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     */
+    public $NetworkInterfaces;
+
+    /**
      * @param Placement $Placement <p>实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。<br> <b>注：如果您不指定LaunchTemplate参数，则Placement为必选参数。若同时传递Placement和LaunchTemplate，则默认覆盖LaunchTemplate中对应的Placement的值。</b></p>
      * @param string $ImageId <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。镜像类型分为四种：<br><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br>可通过以下方式获取可用的镜像ID：<br><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，取返回信息中的<code>ImageId</code>字段。</li><br> <b>注：如果您不指定LaunchTemplate参数，则ImageId为必选参数。若同时传递ImageId和LaunchTemplate，则默认覆盖LaunchTemplate中对应的ImageId的值。</b></p>
      * @param string $InstanceChargeType <p>实例<a href="https://cloud.tencent.com/document/product/213/2180">计费类型</a>。<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>SPOTPAID：竞价付费</li><br>默认值：POSTPAID_BY_HOUR。</p>
@@ -200,6 +207,7 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
      * @param string $HpcClusterId <p>高性能计算集群ID。</p>
      * @param CpuTopology $CpuTopology <p>描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。</p>
      * @param LaunchTemplate $LaunchTemplate <p>实例启动模板。</p>
+     * @param array $NetworkInterfaces <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
      */
     function __construct()
     {
@@ -321,6 +329,15 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
         if (array_key_exists("LaunchTemplate",$param) and $param["LaunchTemplate"] !== null) {
             $this->LaunchTemplate = new LaunchTemplate();
             $this->LaunchTemplate->deserialize($param["LaunchTemplate"]);
+        }
+
+        if (array_key_exists("NetworkInterfaces",$param) and $param["NetworkInterfaces"] !== null) {
+            $this->NetworkInterfaces = [];
+            foreach ($param["NetworkInterfaces"] as $key => $value){
+                $obj = new NetworkInterfaces();
+                $obj->deserialize($value);
+                array_push($this->NetworkInterfaces, $obj);
+            }
         }
     }
 }

@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrainingMode(string $TrainingMode) 设置<p>训练模式eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取<p>任务状态，eg：SUBMITTING提交中、PENDING排队中、<br>STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
- * @method void setStatus(string $Status) 设置<p>任务状态，eg：SUBMITTING提交中、PENDING排队中、<br>STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
+ * @method string getStatus() 获取<p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 提交中</li><li>PENDING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>FAILED： 异常</li><li>SUCCEED： 已完成</li><li>SUBMIT_FAILED： 提交失败</li></ul>
+ * @method void setStatus(string $Status) 设置<p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 提交中</li><li>PENDING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>FAILED： 异常</li><li>SUCCEED： 已完成</li><li>SUBMIT_FAILED： 提交失败</li></ul>
  * @method integer getRuntimeInSeconds() 获取<p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeInSeconds(integer $RuntimeInSeconds) 设置<p>运行时长</p>
@@ -167,7 +167,7 @@ class TrainingTaskSetItem extends AbstractModel
     public $TrainingMode;
 
     /**
-     * @var string <p>任务状态，eg：SUBMITTING提交中、PENDING排队中、<br>STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
+     * @var string <p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 提交中</li><li>PENDING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>FAILED： 异常</li><li>SUCCEED： 已完成</li><li>SUBMIT_FAILED： 提交失败</li></ul>
      */
     public $Status;
 
@@ -287,7 +287,7 @@ class TrainingTaskSetItem extends AbstractModel
      * @param array $ResourceConfigInfos <p>资源配置</p>
      * @param string $TrainingMode <p>训练模式eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status <p>任务状态，eg：SUBMITTING提交中、PENDING排队中、<br>STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
+     * @param string $Status <p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 提交中</li><li>PENDING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>FAILED： 异常</li><li>SUCCEED： 已完成</li><li>SUBMIT_FAILED： 提交失败</li></ul>
      * @param integer $RuntimeInSeconds <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime <p>创建时间</p>

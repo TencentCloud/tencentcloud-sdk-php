@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DownloadDspmExportLog请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method integer getTaskId() 获取要下载的导出任务ID
- * @method void setTaskId(integer $TaskId) 设置要下载的导出任务ID
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method integer getTaskId() 获取<p>要下载的导出任务ID</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>要下载的导出任务ID</p>
  */
 class DownloadDspmExportLogRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
     /**
-     * @var integer 要下载的导出任务ID
+     * @var integer <p>要下载的导出任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @param array $MemberId 集团账号的成员id
-     * @param integer $TaskId 要下载的导出任务ID
+     * @param array $MemberId <p>集团账号的成员id</p>
+     * @param integer $TaskId <p>要下载的导出任务ID</p>
      */
     function __construct()
     {

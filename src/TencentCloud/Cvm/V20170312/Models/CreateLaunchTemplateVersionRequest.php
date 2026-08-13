@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetadata(Metadata $Metadata) 设置<p>自定义metadata，支持创建 CVM 时添加自定义元数据键值对。<br><strong>注：内测中</strong>。</p>
  * @method string getTemplateDataModifyAction() 获取<p>只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。</p><ul><li>Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] </li><li>Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3]<br><strong>注：内测中</strong>。</li></ul>
  * @method void setTemplateDataModifyAction(string $TemplateDataModifyAction) 设置<p>只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。</p><ul><li>Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] </li><li>Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3]<br><strong>注：内测中</strong>。</li></ul>
+ * @method array getNetworkInterfaces() 获取<p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+ * @method void setNetworkInterfaces(array $NetworkInterfaces) 设置<p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
  */
 class CreateLaunchTemplateVersionRequest extends AbstractModel
 {
@@ -241,6 +243,11 @@ class CreateLaunchTemplateVersionRequest extends AbstractModel
     public $TemplateDataModifyAction;
 
     /**
+     * @var array <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     */
+    public $NetworkInterfaces;
+
+    /**
      * @param Placement $Placement <p>实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。</p>
      * @param string $LaunchTemplateId <p>启动模板ID，新版本将基于该实例启动模板ID创建。可通过 <a href="https://cloud.tencent.com/document/api/213/66322">DescribeLaunchTemplates</a> 接口返回值中的<code>LaunchTemplateId</code>获取。</p>
      * @param integer $LaunchTemplateVersion <p>若给定，新实例启动模板将基于给定的版本号创建。若未指定则使用默认版本,可以通过 <a href="https://cloud.tencent.com/document/api/213/66323">DescribeLaunchTemplateVersions</a>查询默认版本。</p>
@@ -272,6 +279,7 @@ class CreateLaunchTemplateVersionRequest extends AbstractModel
      * @param boolean $EnableJumboFrame <p>实例是否开启巨型帧，取值范围：<br>&lt;li/&gt; true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br>&lt;li/&gt;false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： <a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a></p>
      * @param Metadata $Metadata <p>自定义metadata，支持创建 CVM 时添加自定义元数据键值对。<br><strong>注：内测中</strong>。</p>
      * @param string $TemplateDataModifyAction <p>只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。</p><ul><li>Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] </li><li>Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3]<br><strong>注：内测中</strong>。</li></ul>
+     * @param array $NetworkInterfaces <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
      */
     function __construct()
     {
@@ -428,6 +436,15 @@ class CreateLaunchTemplateVersionRequest extends AbstractModel
 
         if (array_key_exists("TemplateDataModifyAction",$param) and $param["TemplateDataModifyAction"] !== null) {
             $this->TemplateDataModifyAction = $param["TemplateDataModifyAction"];
+        }
+
+        if (array_key_exists("NetworkInterfaces",$param) and $param["NetworkInterfaces"] !== null) {
+            $this->NetworkInterfaces = [];
+            foreach ($param["NetworkInterfaces"] as $key => $value){
+                $obj = new NetworkInterfaces();
+                $obj->deserialize($value);
+                array_push($this->NetworkInterfaces, $obj);
+            }
         }
     }
 }

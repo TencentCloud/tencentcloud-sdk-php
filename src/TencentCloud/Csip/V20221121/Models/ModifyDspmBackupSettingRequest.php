@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDspmBackupSetting请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method integer getBackupLogSaveTime() 获取备份日志保留时长
- * @method void setBackupLogSaveTime(integer $BackupLogSaveTime) 设置备份日志保留时长
- * @method integer getRestoreLogSaveTime() 获取恢复日志保留时长
- * @method void setRestoreLogSaveTime(integer $RestoreLogSaveTime) 设置恢复日志保留时长
- * @method integer getLogMaxSaveTime() 获取日志最大生命周期限制
- * @method void setLogMaxSaveTime(integer $LogMaxSaveTime) 设置日志最大生命周期限制
- * @method integer getOnlineLogMaxSaveTime() 获取在线日志最大天数限制
- * @method void setOnlineLogMaxSaveTime(integer $OnlineLogMaxSaveTime) 设置在线日志最大天数限制
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method integer getBackupLogSaveTime() 获取<p>备份日志保留时长</p>
+ * @method void setBackupLogSaveTime(integer $BackupLogSaveTime) 设置<p>备份日志保留时长</p>
+ * @method integer getRestoreLogSaveTime() 获取<p>恢复日志保留时长</p>
+ * @method void setRestoreLogSaveTime(integer $RestoreLogSaveTime) 设置<p>恢复日志保留时长</p>
+ * @method integer getLogMaxSaveTime() 获取<p>日志最大生命周期限制</p>
+ * @method void setLogMaxSaveTime(integer $LogMaxSaveTime) 设置<p>日志最大生命周期限制</p>
+ * @method integer getOnlineLogMaxSaveTime() 获取<p>在线日志最大天数限制</p>
+ * @method void setOnlineLogMaxSaveTime(integer $OnlineLogMaxSaveTime) 设置<p>在线日志最大天数限制</p>
  */
 class ModifyDspmBackupSettingRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
     /**
-     * @var integer 备份日志保留时长
+     * @var integer <p>备份日志保留时长</p>
      */
     public $BackupLogSaveTime;
 
     /**
-     * @var integer 恢复日志保留时长
+     * @var integer <p>恢复日志保留时长</p>
      */
     public $RestoreLogSaveTime;
 
     /**
-     * @var integer 日志最大生命周期限制
+     * @var integer <p>日志最大生命周期限制</p>
      */
     public $LogMaxSaveTime;
 
     /**
-     * @var integer 在线日志最大天数限制
+     * @var integer <p>在线日志最大天数限制</p>
      */
     public $OnlineLogMaxSaveTime;
 
     /**
-     * @param array $MemberId 集团账号的成员id
-     * @param integer $BackupLogSaveTime 备份日志保留时长
-     * @param integer $RestoreLogSaveTime 恢复日志保留时长
-     * @param integer $LogMaxSaveTime 日志最大生命周期限制
-     * @param integer $OnlineLogMaxSaveTime 在线日志最大天数限制
+     * @param array $MemberId <p>集团账号的成员id</p>
+     * @param integer $BackupLogSaveTime <p>备份日志保留时长</p>
+     * @param integer $RestoreLogSaveTime <p>恢复日志保留时长</p>
+     * @param integer $LogMaxSaveTime <p>日志最大生命周期限制</p>
+     * @param integer $OnlineLogMaxSaveTime <p>在线日志最大天数限制</p>
      */
     function __construct()
     {

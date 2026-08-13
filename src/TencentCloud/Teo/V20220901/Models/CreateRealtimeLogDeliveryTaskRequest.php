@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFields(array $Fields) 设置<p>投递的预设字段列表。取值参考：<ul><li><a href="https://cloud.tencent.com/document/product/1552/105791">七层访问日志（站点加速日志）</a></li><li><a href="https://cloud.tencent.com/document/product/1552/105792">四层代理日志</a></li><li><a href="https://cloud.tencent.com/document/product/1552/115585">边缘函数运行日志</a></li></ul></p><p>取值参考：DescribeLogFields</p>
  * @method array getCustomFields() 获取<p>投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。<br>自定义字段名称不能重复，仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE)。</p>
  * @method void setCustomFields(array $CustomFields) 设置<p>投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。<br>自定义字段名称不能重复，仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE)。</p>
+ * @method array getCustomExpressionFields() 获取<p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+ * @method void setCustomExpressionFields(array $CustomExpressionFields) 设置<p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
  * @method array getDeliveryConditions() 获取<p>日志投递的过滤条件，不填表示投递全量日志。</p>
  * @method void setDeliveryConditions(array $DeliveryConditions) 设置<p>日志投递的过滤条件，不填表示投递全量日志。</p>
  * @method integer getSample() 获取<p>采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填表示采样比例为 100%。</p>
@@ -92,6 +94,11 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $CustomFields;
 
     /**
+     * @var array <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+     */
+    public $CustomExpressionFields;
+
+    /**
      * @var array <p>日志投递的过滤条件，不填表示投递全量日志。</p>
      */
     public $DeliveryConditions;
@@ -130,6 +137,7 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
      * @param array $EntityList <p>实时日志投递任务对应的实体列表。取值示例如下：<ul><li>七层域名：domain.example.com</li><li>四层代理实例：sid-2s69eb5wcms7</li><li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li></ul></p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/103413">DescribeL4Proxy</a></p>
      * @param array $Fields <p>投递的预设字段列表。取值参考：<ul><li><a href="https://cloud.tencent.com/document/product/1552/105791">七层访问日志（站点加速日志）</a></li><li><a href="https://cloud.tencent.com/document/product/1552/105792">四层代理日志</a></li><li><a href="https://cloud.tencent.com/document/product/1552/115585">边缘函数运行日志</a></li></ul></p><p>取值参考：DescribeLogFields</p>
      * @param array $CustomFields <p>投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。<br>自定义字段名称不能重复，仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE)。</p>
+     * @param array $CustomExpressionFields <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
      * @param array $DeliveryConditions <p>日志投递的过滤条件，不填表示投递全量日志。</p>
      * @param integer $Sample <p>采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填表示采样比例为 100%。</p>
      * @param LogFormat $LogFormat <p>日志投递的输出格式，使用详情见 <a href="https://cloud.tencent.com/document/product/1552/110448">自定义日志输出格式</a>。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。</p>
@@ -184,6 +192,15 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
                 $obj = new CustomField();
                 $obj->deserialize($value);
                 array_push($this->CustomFields, $obj);
+            }
+        }
+
+        if (array_key_exists("CustomExpressionFields",$param) and $param["CustomExpressionFields"] !== null) {
+            $this->CustomExpressionFields = [];
+            foreach ($param["CustomExpressionFields"] as $key => $value){
+                $obj = new CustomExpressionField();
+                $obj->deserialize($value);
+                array_push($this->CustomExpressionFields, $obj);
             }
         }
 

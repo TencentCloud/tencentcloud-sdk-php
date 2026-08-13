@@ -20,154 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 服务详情
  *
- * @method string getServiceId() 获取服务id
- * @method void setServiceId(string $ServiceId) 设置服务id
- * @method string getServiceName() 获取服务名称
- * @method void setServiceName(string $ServiceName) 设置服务名称
- * @method string getServiceState() 获取服务状态
- * @method void setServiceState(string $ServiceState) 设置服务状态
- * @method integer getRunningReplicas() 获取运行中的副本数
- * @method void setRunningReplicas(integer $RunningReplicas) 设置运行中的副本数
- * @method integer getTotalReplicas() 获取期望的副本总数
- * @method void setTotalReplicas(integer $TotalReplicas) 设置期望的副本总数
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method array getComputeSet() 获取算力套餐详情
- * @method void setComputeSet(array $ComputeSet) 设置算力套餐详情
- * @method string getModelName() 获取模型名称
- * @method void setModelName(string $ModelName) 设置模型名称
- * @method array getDeploymentConfigs() 获取服务部署信息
- * @method void setDeploymentConfigs(array $DeploymentConfigs) 设置服务部署信息
- * @method HyperParam getHyperParam() 获取服务超参数配置
- * @method void setHyperParam(HyperParam $HyperParam) 设置服务超参数配置
- * @method string getSecurityType() 获取
- * @method void setSecurityType(string $SecurityType) 设置
- * @method array getRoleComputeSet() 获取
- * @method void setRoleComputeSet(array $RoleComputeSet) 设置
- * @method integer getTargetReplicas() 获取
- * @method void setTargetReplicas(integer $TargetReplicas) 设置
- * @method string getChargeType() 获取计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
- * @method void setChargeType(string $ChargeType) 设置计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
- * @method string getExpireTime() 获取到期时间(包月)，按量为空
- * @method void setExpireTime(string $ExpireTime) 设置到期时间(包月)，按量为空
- * @method string getRenewFlag() 获取自动续费标识(包月)
- * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识(包月)
- * @method string getRestrictState() 获取受限状态(如欠费隔离)
- * @method void setRestrictState(string $RestrictState) 设置受限状态(如欠费隔离)
- * @method integer getIsCustomDeploy() 获取是否自定义部署：1是 0否
- * @method void setIsCustomDeploy(integer $IsCustomDeploy) 设置是否自定义部署：1是 0否
+ * @method string getServiceId() 获取<p>服务id</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>服务id</p>
+ * @method string getServiceName() 获取<p>服务名称</p>
+ * @method void setServiceName(string $ServiceName) 设置<p>服务名称</p>
+ * @method string getServiceState() 获取<p>服务状态</p>
+ * @method void setServiceState(string $ServiceState) 设置<p>服务状态</p>
+ * @method integer getRunningReplicas() 获取<p>运行中的副本数</p>
+ * @method void setRunningReplicas(integer $RunningReplicas) 设置<p>运行中的副本数</p>
+ * @method integer getTotalReplicas() 获取<p>期望的副本总数</p>
+ * @method void setTotalReplicas(integer $TotalReplicas) 设置<p>期望的副本总数</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method array getComputeSet() 获取<p>算力套餐详情</p>
+ * @method void setComputeSet(array $ComputeSet) 设置<p>算力套餐详情</p>
+ * @method string getModelName() 获取<p>模型名称</p>
+ * @method void setModelName(string $ModelName) 设置<p>模型名称</p>
+ * @method array getDeploymentConfigs() 获取<p>服务部署信息</p>
+ * @method void setDeploymentConfigs(array $DeploymentConfigs) 设置<p>服务部署信息</p>
+ * @method HyperParam getHyperParam() 获取<p>服务超参数配置</p>
+ * @method void setHyperParam(HyperParam $HyperParam) 设置<p>服务超参数配置</p>
+ * @method string getSecurityType() 获取<p>安全类型</p>
+ * @method void setSecurityType(string $SecurityType) 设置<p>安全类型</p>
+ * @method array getRoleComputeSet() 获取<p>角色算力配置列表</p>
+ * @method void setRoleComputeSet(array $RoleComputeSet) 设置<p>角色算力配置列表</p>
+ * @method integer getTargetReplicas() 获取<p>目标副本数</p>
+ * @method void setTargetReplicas(integer $TargetReplicas) 设置<p>目标副本数</p>
+ * @method string getChargeType() 获取<p>计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)</p>
+ * @method void setChargeType(string $ChargeType) 设置<p>计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)</p>
+ * @method string getExpireTime() 获取<p>到期时间(包月)，按量为空</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>到期时间(包月)，按量为空</p>
+ * @method string getRenewFlag() 获取<p>自动续费标识(包月)</p>
+ * @method void setRenewFlag(string $RenewFlag) 设置<p>自动续费标识(包月)</p>
+ * @method string getRestrictState() 获取<p>受限状态(如欠费隔离)</p>
+ * @method void setRestrictState(string $RestrictState) 设置<p>受限状态(如欠费隔离)</p>
+ * @method integer getIsCustomDeploy() 获取<p>是否自定义部署：1是 0否</p>
+ * @method void setIsCustomDeploy(integer $IsCustomDeploy) 设置<p>是否自定义部署：1是 0否</p>
  */
 class ServiceDetail extends AbstractModel
 {
     /**
-     * @var string 服务id
+     * @var string <p>服务id</p>
      */
     public $ServiceId;
 
     /**
-     * @var string 服务名称
+     * @var string <p>服务名称</p>
      */
     public $ServiceName;
 
     /**
-     * @var string 服务状态
+     * @var string <p>服务状态</p>
      */
     public $ServiceState;
 
     /**
-     * @var integer 运行中的副本数
+     * @var integer <p>运行中的副本数</p>
      */
     public $RunningReplicas;
 
     /**
-     * @var integer 期望的副本总数
+     * @var integer <p>期望的副本总数</p>
      */
     public $TotalReplicas;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var array 算力套餐详情
+     * @var array <p>算力套餐详情</p>
      */
     public $ComputeSet;
 
     /**
-     * @var string 模型名称
+     * @var string <p>模型名称</p>
      */
     public $ModelName;
 
     /**
-     * @var array 服务部署信息
+     * @var array <p>服务部署信息</p>
      */
     public $DeploymentConfigs;
 
     /**
-     * @var HyperParam 服务超参数配置
+     * @var HyperParam <p>服务超参数配置</p>
      */
     public $HyperParam;
 
     /**
-     * @var string 
+     * @var string <p>安全类型</p>
      */
     public $SecurityType;
 
     /**
-     * @var array 
+     * @var array <p>角色算力配置列表</p>
      */
     public $RoleComputeSet;
 
     /**
-     * @var integer 
+     * @var integer <p>目标副本数</p>
      */
     public $TargetReplicas;
 
     /**
-     * @var string 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+     * @var string <p>计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)</p>
      */
     public $ChargeType;
 
     /**
-     * @var string 到期时间(包月)，按量为空
+     * @var string <p>到期时间(包月)，按量为空</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 自动续费标识(包月)
+     * @var string <p>自动续费标识(包月)</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string 受限状态(如欠费隔离)
+     * @var string <p>受限状态(如欠费隔离)</p>
      */
     public $RestrictState;
 
     /**
-     * @var integer 是否自定义部署：1是 0否
+     * @var integer <p>是否自定义部署：1是 0否</p>
      */
     public $IsCustomDeploy;
 
     /**
-     * @param string $ServiceId 服务id
-     * @param string $ServiceName 服务名称
-     * @param string $ServiceState 服务状态
-     * @param integer $RunningReplicas 运行中的副本数
-     * @param integer $TotalReplicas 期望的副本总数
-     * @param string $CreateTime 创建时间
-     * @param array $ComputeSet 算力套餐详情
-     * @param string $ModelName 模型名称
-     * @param array $DeploymentConfigs 服务部署信息
-     * @param HyperParam $HyperParam 服务超参数配置
-     * @param string $SecurityType 
-     * @param array $RoleComputeSet 
-     * @param integer $TargetReplicas 
-     * @param string $ChargeType 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
-     * @param string $ExpireTime 到期时间(包月)，按量为空
-     * @param string $RenewFlag 自动续费标识(包月)
-     * @param string $RestrictState 受限状态(如欠费隔离)
-     * @param integer $IsCustomDeploy 是否自定义部署：1是 0否
+     * @param string $ServiceId <p>服务id</p>
+     * @param string $ServiceName <p>服务名称</p>
+     * @param string $ServiceState <p>服务状态</p>
+     * @param integer $RunningReplicas <p>运行中的副本数</p>
+     * @param integer $TotalReplicas <p>期望的副本总数</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param array $ComputeSet <p>算力套餐详情</p>
+     * @param string $ModelName <p>模型名称</p>
+     * @param array $DeploymentConfigs <p>服务部署信息</p>
+     * @param HyperParam $HyperParam <p>服务超参数配置</p>
+     * @param string $SecurityType <p>安全类型</p>
+     * @param array $RoleComputeSet <p>角色算力配置列表</p>
+     * @param integer $TargetReplicas <p>目标副本数</p>
+     * @param string $ChargeType <p>计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)</p>
+     * @param string $ExpireTime <p>到期时间(包月)，按量为空</p>
+     * @param string $RenewFlag <p>自动续费标识(包月)</p>
+     * @param string $RestrictState <p>受限状态(如欠费隔离)</p>
+     * @param integer $IsCustomDeploy <p>是否自定义部署：1是 0否</p>
      */
     function __construct()
     {

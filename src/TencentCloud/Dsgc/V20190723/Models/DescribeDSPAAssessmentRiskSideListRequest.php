@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDSPAAssessmentRiskSideList请求参数结构体
  *
- * @method string getDspaId() 获取DSPA实例ID
- * @method void setDspaId(string $DspaId) 设置DSPA实例ID
- * @method integer getTemplateId() 获取评估模板id
- * @method void setTemplateId(integer $TemplateId) 设置评估模板id
+ * @method string getDspaId() 获取<p>DSPA实例ID</p>
+ * @method void setDspaId(string $DspaId) 设置<p>DSPA实例ID</p>
+ * @method integer getTemplateId() 获取<p>评估模板id</p>
+ * @method void setTemplateId(integer $TemplateId) 设置<p>评估模板id</p>
  */
 class DescribeDSPAAssessmentRiskSideListRequest extends AbstractModel
 {
     /**
-     * @var string DSPA实例ID
+     * @var string <p>DSPA实例ID</p>
      */
     public $DspaId;
 
     /**
-     * @var integer 评估模板id
+     * @var integer <p>评估模板id</p>
      */
     public $TemplateId;
 
     /**
-     * @param string $DspaId DSPA实例ID
-     * @param integer $TemplateId 评估模板id
+     * @param string $DspaId <p>DSPA实例ID</p>
+     * @param integer $TemplateId <p>评估模板id</p>
      */
     function __construct()
     {

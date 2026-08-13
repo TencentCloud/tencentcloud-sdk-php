@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTableConfig请求参数结构体
  *
- * @method string getJobId() 获取作业ID
- * @method void setJobId(string $JobId) 设置作业ID
- * @method integer getDebugId() 获取调试作业ID
- * @method void setDebugId(integer $DebugId) 设置调试作业ID
- * @method string getTableName() 获取表名
- * @method void setTableName(string $TableName) 设置表名
- * @method string getWorkSpaceId() 获取工作空间 SerialId
- * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
+ * @method string getJobId() 获取<p>作业ID</p>
+ * @method void setJobId(string $JobId) 设置<p>作业ID</p>
+ * @method integer getDebugId() 获取<p>调试作业ID</p>
+ * @method void setDebugId(integer $DebugId) 设置<p>调试作业ID</p>
+ * @method string getTableName() 获取<p>表名</p>
+ * @method void setTableName(string $TableName) 设置<p>表名</p>
+ * @method string getWorkSpaceId() 获取<p>工作空间 SerialId</p>
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置<p>工作空间 SerialId</p>
  */
 class DeleteTableConfigRequest extends AbstractModel
 {
     /**
-     * @var string 作业ID
+     * @var string <p>作业ID</p>
      */
     public $JobId;
 
     /**
-     * @var integer 调试作业ID
+     * @var integer <p>调试作业ID</p>
      */
     public $DebugId;
 
     /**
-     * @var string 表名
+     * @var string <p>表名</p>
      */
     public $TableName;
 
     /**
-     * @var string 工作空间 SerialId
+     * @var string <p>工作空间 SerialId</p>
      */
     public $WorkSpaceId;
 
     /**
-     * @param string $JobId 作业ID
-     * @param integer $DebugId 调试作业ID
-     * @param string $TableName 表名
-     * @param string $WorkSpaceId 工作空间 SerialId
+     * @param string $JobId <p>作业ID</p>
+     * @param integer $DebugId <p>调试作业ID</p>
+     * @param string $TableName <p>表名</p>
+     * @param string $WorkSpaceId <p>工作空间 SerialId</p>
      */
     function __construct()
     {

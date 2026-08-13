@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchCasterToEmergency请求参数结构体
  *
- * @method integer getCasterId() 获取导播台ID。
- * @method void setCasterId(integer $CasterId) 设置导播台ID。
+ * @method integer getCasterId() 获取<p>导播台ID。</p>
+ * @method void setCasterId(integer $CasterId) 设置<p>导播台ID。</p>
+ * @method boolean getFromBeginning() 获取<p>是否启用从头开始播放功能，仅对单点播输入源生效</p><p>默认值：false</p>
+ * @method void setFromBeginning(boolean $FromBeginning) 设置<p>是否启用从头开始播放功能，仅对单点播输入源生效</p><p>默认值：false</p>
  */
 class SwitchCasterToEmergencyRequest extends AbstractModel
 {
     /**
-     * @var integer 导播台ID。
+     * @var integer <p>导播台ID。</p>
      */
     public $CasterId;
 
     /**
-     * @param integer $CasterId 导播台ID。
+     * @var boolean <p>是否启用从头开始播放功能，仅对单点播输入源生效</p><p>默认值：false</p>
+     */
+    public $FromBeginning;
+
+    /**
+     * @param integer $CasterId <p>导播台ID。</p>
+     * @param boolean $FromBeginning <p>是否启用从头开始播放功能，仅对单点播输入源生效</p><p>默认值：false</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class SwitchCasterToEmergencyRequest extends AbstractModel
         }
         if (array_key_exists("CasterId",$param) and $param["CasterId"] !== null) {
             $this->CasterId = $param["CasterId"];
+        }
+
+        if (array_key_exists("FromBeginning",$param) and $param["FromBeginning"] !== null) {
+            $this->FromBeginning = $param["FromBeginning"];
         }
     }
 }

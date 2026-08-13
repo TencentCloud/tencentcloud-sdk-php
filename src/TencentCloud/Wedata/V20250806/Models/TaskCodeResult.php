@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务代码
  *
- * @method string getCodeInfo() 获取代码内容
+ * @method string getCodeInfo() 获取<p>base64编码的代码内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCodeInfo(string $CodeInfo) 设置代码内容
+ * @method void setCodeInfo(string $CodeInfo) 设置<p>base64编码的代码内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCodeFileSize() 获取代码文件大小，单位KB
+ * @method string getCodeFileSize() 获取<p>代码文件大小，单位KB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCodeFileSize(string $CodeFileSize) 设置代码文件大小，单位KB
+ * @method void setCodeFileSize(string $CodeFileSize) 设置<p>代码文件大小，单位KB</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskCodeResult extends AbstractModel
 {
     /**
-     * @var string 代码内容
+     * @var string <p>base64编码的代码内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeInfo;
 
     /**
-     * @var string 代码文件大小，单位KB
+     * @var string <p>代码文件大小，单位KB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeFileSize;
 
     /**
-     * @param string $CodeInfo 代码内容
+     * @param string $CodeInfo <p>base64编码的代码内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CodeFileSize 代码文件大小，单位KB
+     * @param string $CodeFileSize <p>代码文件大小，单位KB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

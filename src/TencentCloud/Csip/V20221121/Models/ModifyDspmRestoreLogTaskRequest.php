@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDspmRestoreLogTask请求参数结构体
  *
- * @method integer getId() 获取备份日志Id
- * @method void setId(integer $Id) 设置备份日志Id
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method integer getId() 获取<p>备份日志Id</p>
+ * @method void setId(integer $Id) 设置<p>备份日志Id</p>
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  */
 class ModifyDspmRestoreLogTaskRequest extends AbstractModel
 {
     /**
-     * @var integer 备份日志Id
+     * @var integer <p>备份日志Id</p>
      */
     public $Id;
 
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
     /**
-     * @param integer $Id 备份日志Id
-     * @param array $MemberId 集团账号的成员id
+     * @param integer $Id <p>备份日志Id</p>
+     * @param array $MemberId <p>集团账号的成员id</p>
      */
     function __construct()
     {

@@ -20,314 +20,314 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据库资产
  *
- * @method string getAssetId() 获取资产实例Id
- * @method void setAssetId(string $AssetId) 设置资产实例Id
- * @method string getAssetType() 获取资产类型
- * @method void setAssetType(string $AssetType) 设置资产类型
- * @method string getName() 获取 资产名
- * @method void setName(string $Name) 设置 资产名
- * @method integer getAccountCount() 获取账号数
- * @method void setAccountCount(integer $AccountCount) 设置账号数
- * @method string getPublicIp() 获取公网访问地址，如果有多个，使用';'分割
- * @method void setPublicIp(string $PublicIp) 设置公网访问地址，如果有多个，使用';'分割
- * @method string getPrivateIp() 获取内网访问地址，如果有多个，使用';'分割
- * @method void setPrivateIp(string $PrivateIp) 设置内网访问地址，如果有多个，使用';'分割
- * @method string getWanDomain() 获取广域网域名地址，如果有多个，使用';'分割
- * @method void setWanDomain(string $WanDomain) 设置广域网域名地址，如果有多个，使用';'分割
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getVpcId() 获取资产所在vpc的vpcid
- * @method void setVpcId(string $VpcId) 设置资产所在vpc的vpcid
- * @method string getVpcName() 获取资产所在vpc的vpc名
- * @method void setVpcName(string $VpcName) 设置资产所在vpc的vpc名
- * @method string getSubnetId() 获取资产所在vpc子网的subnetid
- * @method void setSubnetId(string $SubnetId) 设置资产所在vpc子网的subnetid
- * @method string getSubnetName() 获取资产所在vpc子网名
- * @method void setSubnetName(string $SubnetName) 设置资产所在vpc子网名
- * @method integer getStatus() 获取实例状态
- * @method void setStatus(integer $Status) 设置实例状态
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method array getManager() 获取管理者信息。
- * @method void setManager(array $Manager) 设置管理者信息。
- * @method integer getBindIdentify() 获取是否绑定身份。0-未绑定 1-已绑定
- * @method void setBindIdentify(integer $BindIdentify) 设置是否绑定身份。0-未绑定 1-已绑定
- * @method integer getIsManager() 获取是否管理员
- * @method void setIsManager(integer $IsManager) 设置是否管理员
- * @method DspmRiskCount getRiskCount() 获取风险统计信息
- * @method void setRiskCount(DspmRiskCount $RiskCount) 设置风险统计信息
- * @method string getSafetyAdvice() 获取安全建议。
-Resolve 立即解决
-Reinforcement 加固
-None 暂无异常
-
- * @method void setSafetyAdvice(string $SafetyAdvice) 设置安全建议。
-Resolve 立即解决
-Reinforcement 加固
-None 暂无异常
-
- * @method integer getLogDeliveryStatus() 获取日志投递状态。
-0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中
- * @method void setLogDeliveryStatus(integer $LogDeliveryStatus) 设置日志投递状态。
-0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中
- * @method integer getLogDeliverySupported() 获取是否支持日志投递。0-不支持 1-支持
- * @method void setLogDeliverySupported(integer $LogDeliverySupported) 设置是否支持日志投递。0-不支持 1-支持
- * @method DspmAssetDataScanDetail getDataScanInfo() 获取数据扫描信息
- * @method void setDataScanInfo(DspmAssetDataScanDetail $DataScanInfo) 设置数据扫描信息
- * @method integer getAppId() 获取资产所属账号app id
- * @method void setAppId(integer $AppId) 设置资产所属账号app id
- * @method string getNickName() 获取账号昵称
- * @method void setNickName(string $NickName) 设置账号昵称
- * @method string getUin() 获取资产所属账号uin
- * @method void setUin(string $Uin) 设置资产所属账号uin
- * @method integer getSecurityAnalyseStatus() 获取安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）
-
- * @method void setSecurityAnalyseStatus(integer $SecurityAnalyseStatus) 设置安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）
-
- * @method integer getTotalAuditLogs() 获取当前实例的总日志数
- * @method void setTotalAuditLogs(integer $TotalAuditLogs) 设置当前实例的总日志数
- * @method string getLogDeliveryDisableReason() 获取日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists
- * @method void setLogDeliveryDisableReason(string $LogDeliveryDisableReason) 设置日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists
- * @method integer getOldestOnlineLogTimestamp() 获取在线日志的起始时间戳，精确到秒
- * @method void setOldestOnlineLogTimestamp(integer $OldestOnlineLogTimestamp) 设置在线日志的起始时间戳，精确到秒
- * @method integer getNewestOnlineLogTimestamp() 获取在线日志的最新时间戳，精确到秒
- * @method void setNewestOnlineLogTimestamp(integer $NewestOnlineLogTimestamp) 设置在线日志的最新时间戳，精确到秒
- * @method string getOperationErrorMsg() 获取操作错误信息
- * @method void setOperationErrorMsg(string $OperationErrorMsg) 设置操作错误信息
- * @method integer getAccountOptSupported() 获取是否支持账号操作。0 不支持；1 支持
- * @method void setAccountOptSupported(integer $AccountOptSupported) 设置是否支持账号操作。0 不支持；1 支持
- * @method integer getInstanceType() 获取实例类型
- * @method void setInstanceType(integer $InstanceType) 设置实例类型
- * @method integer getClusterType() 获取集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
- * @method void setClusterType(integer $ClusterType) 设置集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
- * @method integer getIdentifyScanSupported() 获取是否支持敏感数据识别。0 不支持；1 支持
- * @method void setIdentifyScanSupported(integer $IdentifyScanSupported) 设置是否支持敏感数据识别。0 不支持；1 支持
+ * @method string getAssetId() 获取<p>资产实例Id</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产实例Id</p>
+ * @method string getAssetType() 获取<p>资产类型</p>
+ * @method void setAssetType(string $AssetType) 设置<p>资产类型</p>
+ * @method string getName() 获取<p>资产名</p>
+ * @method void setName(string $Name) 设置<p>资产名</p>
+ * @method integer getAccountCount() 获取<p>账号数</p>
+ * @method void setAccountCount(integer $AccountCount) 设置<p>账号数</p>
+ * @method string getPublicIp() 获取<p>公网访问地址，如果有多个，使用&#39;;&#39;分割</p>
+ * @method void setPublicIp(string $PublicIp) 设置<p>公网访问地址，如果有多个，使用&#39;;&#39;分割</p>
+ * @method string getPrivateIp() 获取<p>内网访问地址，如果有多个，使用&#39;;&#39;分割</p>
+ * @method void setPrivateIp(string $PrivateIp) 设置<p>内网访问地址，如果有多个，使用&#39;;&#39;分割</p>
+ * @method string getWanDomain() 获取<p>广域网域名地址，如果有多个，使用&#39;;&#39;分割</p>
+ * @method void setWanDomain(string $WanDomain) 设置<p>广域网域名地址，如果有多个，使用&#39;;&#39;分割</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getVpcId() 获取<p>资产所在vpc的vpcid</p>
+ * @method void setVpcId(string $VpcId) 设置<p>资产所在vpc的vpcid</p>
+ * @method string getVpcName() 获取<p>资产所在vpc的vpc名</p>
+ * @method void setVpcName(string $VpcName) 设置<p>资产所在vpc的vpc名</p>
+ * @method string getSubnetId() 获取<p>资产所在vpc子网的subnetid</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>资产所在vpc子网的subnetid</p>
+ * @method string getSubnetName() 获取<p>资产所在vpc子网名</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>资产所在vpc子网名</p>
+ * @method integer getStatus() 获取<p>实例状态</p>
+ * @method void setStatus(integer $Status) 设置<p>实例状态</p>
+ * @method string getCreateTime() 获取<p>创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。</p>
+ * @method array getManager() 获取<p>管理者信息。</p>
+ * @method void setManager(array $Manager) 设置<p>管理者信息。</p>
+ * @method integer getBindIdentify() 获取<p>是否绑定身份。0-未绑定 1-已绑定</p>
+ * @method void setBindIdentify(integer $BindIdentify) 设置<p>是否绑定身份。0-未绑定 1-已绑定</p>
+ * @method integer getIsManager() 获取<p>是否管理员</p>
+ * @method void setIsManager(integer $IsManager) 设置<p>是否管理员</p>
+ * @method DspmRiskCount getRiskCount() 获取<p>风险统计信息</p>
+ * @method void setRiskCount(DspmRiskCount $RiskCount) 设置<p>风险统计信息</p>
+ * @method string getSafetyAdvice() 获取<p>安全建议。<br>Resolve 立即解决<br>Reinforcement 加固<br>None 暂无异常</p>
+ * @method void setSafetyAdvice(string $SafetyAdvice) 设置<p>安全建议。<br>Resolve 立即解决<br>Reinforcement 加固<br>None 暂无异常</p>
+ * @method integer getLogDeliveryStatus() 获取<p>日志投递状态。<br>0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中</p>
+ * @method void setLogDeliveryStatus(integer $LogDeliveryStatus) 设置<p>日志投递状态。<br>0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中</p>
+ * @method integer getLogDeliverySupported() 获取<p>是否支持日志投递。0-不支持 1-支持</p>
+ * @method void setLogDeliverySupported(integer $LogDeliverySupported) 设置<p>是否支持日志投递。0-不支持 1-支持</p>
+ * @method DspmAssetDataScanDetail getDataScanInfo() 获取<p>数据扫描信息</p>
+ * @method void setDataScanInfo(DspmAssetDataScanDetail $DataScanInfo) 设置<p>数据扫描信息</p>
+ * @method integer getAppId() 获取<p>资产所属账号app id</p>
+ * @method void setAppId(integer $AppId) 设置<p>资产所属账号app id</p>
+ * @method string getNickName() 获取<p>账号昵称</p>
+ * @method void setNickName(string $NickName) 设置<p>账号昵称</p>
+ * @method string getUin() 获取<p>资产所属账号uin</p>
+ * @method void setUin(string $Uin) 设置<p>资产所属账号uin</p>
+ * @method integer getSecurityAnalyseStatus() 获取<p>安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）</p>
+ * @method void setSecurityAnalyseStatus(integer $SecurityAnalyseStatus) 设置<p>安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）</p>
+ * @method integer getTotalAuditLogs() 获取<p>当前实例的总日志数</p>
+ * @method void setTotalAuditLogs(integer $TotalAuditLogs) 设置<p>当前实例的总日志数</p>
+ * @method string getLogDeliveryDisableReason() 获取<p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
+ * @method void setLogDeliveryDisableReason(string $LogDeliveryDisableReason) 设置<p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
+ * @method integer getOldestOnlineLogTimestamp() 获取<p>在线日志的起始时间戳，精确到秒</p>
+ * @method void setOldestOnlineLogTimestamp(integer $OldestOnlineLogTimestamp) 设置<p>在线日志的起始时间戳，精确到秒</p>
+ * @method integer getNewestOnlineLogTimestamp() 获取<p>在线日志的最新时间戳，精确到秒</p>
+ * @method void setNewestOnlineLogTimestamp(integer $NewestOnlineLogTimestamp) 设置<p>在线日志的最新时间戳，精确到秒</p>
+ * @method string getOperationErrorMsg() 获取<p>操作错误信息</p>
+ * @method void setOperationErrorMsg(string $OperationErrorMsg) 设置<p>操作错误信息</p>
+ * @method integer getAccountOptSupported() 获取<p>是否支持账号操作。0 不支持；1 支持</p>
+ * @method void setAccountOptSupported(integer $AccountOptSupported) 设置<p>是否支持账号操作。0 不支持；1 支持</p>
+ * @method integer getInstanceType() 获取<p>实例类型</p>
+ * @method void setInstanceType(integer $InstanceType) 设置<p>实例类型</p>
+ * @method integer getClusterType() 获取<p>集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0</p>
+ * @method void setClusterType(integer $ClusterType) 设置<p>集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0</p>
+ * @method integer getIdentifyScanSupported() 获取<p>是否支持敏感数据识别。0 不支持；1 支持</p>
+ * @method void setIdentifyScanSupported(integer $IdentifyScanSupported) 设置<p>是否支持敏感数据识别。0 不支持；1 支持</p>
+ * @method string getClusterId() 获取<p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterName() 获取<p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspmDbAsset extends AbstractModel
 {
     /**
-     * @var string 资产实例Id
+     * @var string <p>资产实例Id</p>
      */
     public $AssetId;
 
     /**
-     * @var string 资产类型
+     * @var string <p>资产类型</p>
      */
     public $AssetType;
 
     /**
-     * @var string  资产名
+     * @var string <p>资产名</p>
      */
     public $Name;
 
     /**
-     * @var integer 账号数
+     * @var integer <p>账号数</p>
      */
     public $AccountCount;
 
     /**
-     * @var string 公网访问地址，如果有多个，使用';'分割
+     * @var string <p>公网访问地址，如果有多个，使用&#39;;&#39;分割</p>
      */
     public $PublicIp;
 
     /**
-     * @var string 内网访问地址，如果有多个，使用';'分割
+     * @var string <p>内网访问地址，如果有多个，使用&#39;;&#39;分割</p>
      */
     public $PrivateIp;
 
     /**
-     * @var string 广域网域名地址，如果有多个，使用';'分割
+     * @var string <p>广域网域名地址，如果有多个，使用&#39;;&#39;分割</p>
      */
     public $WanDomain;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 资产所在vpc的vpcid
+     * @var string <p>资产所在vpc的vpcid</p>
      */
     public $VpcId;
 
     /**
-     * @var string 资产所在vpc的vpc名
+     * @var string <p>资产所在vpc的vpc名</p>
      */
     public $VpcName;
 
     /**
-     * @var string 资产所在vpc子网的subnetid
+     * @var string <p>资产所在vpc子网的subnetid</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 资产所在vpc子网名
+     * @var string <p>资产所在vpc子网名</p>
      */
     public $SubnetName;
 
     /**
-     * @var integer 实例状态
+     * @var integer <p>实例状态</p>
      */
     public $Status;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var array 管理者信息。
+     * @var array <p>管理者信息。</p>
      */
     public $Manager;
 
     /**
-     * @var integer 是否绑定身份。0-未绑定 1-已绑定
+     * @var integer <p>是否绑定身份。0-未绑定 1-已绑定</p>
      */
     public $BindIdentify;
 
     /**
-     * @var integer 是否管理员
+     * @var integer <p>是否管理员</p>
      */
     public $IsManager;
 
     /**
-     * @var DspmRiskCount 风险统计信息
+     * @var DspmRiskCount <p>风险统计信息</p>
      */
     public $RiskCount;
 
     /**
-     * @var string 安全建议。
-Resolve 立即解决
-Reinforcement 加固
-None 暂无异常
-
+     * @var string <p>安全建议。<br>Resolve 立即解决<br>Reinforcement 加固<br>None 暂无异常</p>
      */
     public $SafetyAdvice;
 
     /**
-     * @var integer 日志投递状态。
-0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中
+     * @var integer <p>日志投递状态。<br>0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中</p>
      */
     public $LogDeliveryStatus;
 
     /**
-     * @var integer 是否支持日志投递。0-不支持 1-支持
+     * @var integer <p>是否支持日志投递。0-不支持 1-支持</p>
      */
     public $LogDeliverySupported;
 
     /**
-     * @var DspmAssetDataScanDetail 数据扫描信息
+     * @var DspmAssetDataScanDetail <p>数据扫描信息</p>
      */
     public $DataScanInfo;
 
     /**
-     * @var integer 资产所属账号app id
+     * @var integer <p>资产所属账号app id</p>
      */
     public $AppId;
 
     /**
-     * @var string 账号昵称
+     * @var string <p>账号昵称</p>
      */
     public $NickName;
 
     /**
-     * @var string 资产所属账号uin
+     * @var string <p>资产所属账号uin</p>
      */
     public $Uin;
 
     /**
-     * @var integer 安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）
-
+     * @var integer <p>安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）</p>
      */
     public $SecurityAnalyseStatus;
 
     /**
-     * @var integer 当前实例的总日志数
+     * @var integer <p>当前实例的总日志数</p>
      */
     public $TotalAuditLogs;
 
     /**
-     * @var string 日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists
+     * @var string <p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
      */
     public $LogDeliveryDisableReason;
 
     /**
-     * @var integer 在线日志的起始时间戳，精确到秒
+     * @var integer <p>在线日志的起始时间戳，精确到秒</p>
      */
     public $OldestOnlineLogTimestamp;
 
     /**
-     * @var integer 在线日志的最新时间戳，精确到秒
+     * @var integer <p>在线日志的最新时间戳，精确到秒</p>
      */
     public $NewestOnlineLogTimestamp;
 
     /**
-     * @var string 操作错误信息
+     * @var string <p>操作错误信息</p>
      */
     public $OperationErrorMsg;
 
     /**
-     * @var integer 是否支持账号操作。0 不支持；1 支持
+     * @var integer <p>是否支持账号操作。0 不支持；1 支持</p>
      */
     public $AccountOptSupported;
 
     /**
-     * @var integer 实例类型
+     * @var integer <p>实例类型</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+     * @var integer <p>集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0</p>
      */
     public $ClusterType;
 
     /**
-     * @var integer 是否支持敏感数据识别。0 不支持；1 支持
+     * @var integer <p>是否支持敏感数据识别。0 不支持；1 支持</p>
      */
     public $IdentifyScanSupported;
 
     /**
-     * @param string $AssetId 资产实例Id
-     * @param string $AssetType 资产类型
-     * @param string $Name  资产名
-     * @param integer $AccountCount 账号数
-     * @param string $PublicIp 公网访问地址，如果有多个，使用';'分割
-     * @param string $PrivateIp 内网访问地址，如果有多个，使用';'分割
-     * @param string $WanDomain 广域网域名地址，如果有多个，使用';'分割
-     * @param string $Region 地域
-     * @param string $VpcId 资产所在vpc的vpcid
-     * @param string $VpcName 资产所在vpc的vpc名
-     * @param string $SubnetId 资产所在vpc子网的subnetid
-     * @param string $SubnetName 资产所在vpc子网名
-     * @param integer $Status 实例状态
-     * @param string $CreateTime 创建时间。
-     * @param array $Manager 管理者信息。
-     * @param integer $BindIdentify 是否绑定身份。0-未绑定 1-已绑定
-     * @param integer $IsManager 是否管理员
-     * @param DspmRiskCount $RiskCount 风险统计信息
-     * @param string $SafetyAdvice 安全建议。
-Resolve 立即解决
-Reinforcement 加固
-None 暂无异常
+     * @var string <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterId;
 
-     * @param integer $LogDeliveryStatus 日志投递状态。
-0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中
-     * @param integer $LogDeliverySupported 是否支持日志投递。0-不支持 1-支持
-     * @param DspmAssetDataScanDetail $DataScanInfo 数据扫描信息
-     * @param integer $AppId 资产所属账号app id
-     * @param string $NickName 账号昵称
-     * @param string $Uin 资产所属账号uin
-     * @param integer $SecurityAnalyseStatus 安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）
+    /**
+     * @var string <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterName;
 
-     * @param integer $TotalAuditLogs 当前实例的总日志数
-     * @param string $LogDeliveryDisableReason 日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists
-     * @param integer $OldestOnlineLogTimestamp 在线日志的起始时间戳，精确到秒
-     * @param integer $NewestOnlineLogTimestamp 在线日志的最新时间戳，精确到秒
-     * @param string $OperationErrorMsg 操作错误信息
-     * @param integer $AccountOptSupported 是否支持账号操作。0 不支持；1 支持
-     * @param integer $InstanceType 实例类型
-     * @param integer $ClusterType 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
-     * @param integer $IdentifyScanSupported 是否支持敏感数据识别。0 不支持；1 支持
+    /**
+     * @param string $AssetId <p>资产实例Id</p>
+     * @param string $AssetType <p>资产类型</p>
+     * @param string $Name <p>资产名</p>
+     * @param integer $AccountCount <p>账号数</p>
+     * @param string $PublicIp <p>公网访问地址，如果有多个，使用&#39;;&#39;分割</p>
+     * @param string $PrivateIp <p>内网访问地址，如果有多个，使用&#39;;&#39;分割</p>
+     * @param string $WanDomain <p>广域网域名地址，如果有多个，使用&#39;;&#39;分割</p>
+     * @param string $Region <p>地域</p>
+     * @param string $VpcId <p>资产所在vpc的vpcid</p>
+     * @param string $VpcName <p>资产所在vpc的vpc名</p>
+     * @param string $SubnetId <p>资产所在vpc子网的subnetid</p>
+     * @param string $SubnetName <p>资产所在vpc子网名</p>
+     * @param integer $Status <p>实例状态</p>
+     * @param string $CreateTime <p>创建时间。</p>
+     * @param array $Manager <p>管理者信息。</p>
+     * @param integer $BindIdentify <p>是否绑定身份。0-未绑定 1-已绑定</p>
+     * @param integer $IsManager <p>是否管理员</p>
+     * @param DspmRiskCount $RiskCount <p>风险统计信息</p>
+     * @param string $SafetyAdvice <p>安全建议。<br>Resolve 立即解决<br>Reinforcement 加固<br>None 暂无异常</p>
+     * @param integer $LogDeliveryStatus <p>日志投递状态。<br>0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中</p>
+     * @param integer $LogDeliverySupported <p>是否支持日志投递。0-不支持 1-支持</p>
+     * @param DspmAssetDataScanDetail $DataScanInfo <p>数据扫描信息</p>
+     * @param integer $AppId <p>资产所属账号app id</p>
+     * @param string $NickName <p>账号昵称</p>
+     * @param string $Uin <p>资产所属账号uin</p>
+     * @param integer $SecurityAnalyseStatus <p>安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）</p>
+     * @param integer $TotalAuditLogs <p>当前实例的总日志数</p>
+     * @param string $LogDeliveryDisableReason <p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
+     * @param integer $OldestOnlineLogTimestamp <p>在线日志的起始时间戳，精确到秒</p>
+     * @param integer $NewestOnlineLogTimestamp <p>在线日志的最新时间戳，精确到秒</p>
+     * @param string $OperationErrorMsg <p>操作错误信息</p>
+     * @param integer $AccountOptSupported <p>是否支持账号操作。0 不支持；1 支持</p>
+     * @param integer $InstanceType <p>实例类型</p>
+     * @param integer $ClusterType <p>集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0</p>
+     * @param integer $IdentifyScanSupported <p>是否支持敏感数据识别。0 不支持；1 支持</p>
+     * @param string $ClusterId <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterName <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -487,6 +487,14 @@ None 暂无异常
 
         if (array_key_exists("IdentifyScanSupported",$param) and $param["IdentifyScanSupported"] !== null) {
             $this->IdentifyScanSupported = $param["IdentifyScanSupported"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

@@ -86,11 +86,11 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
 
 清除缓存任务详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
  * @method Models\CreateRealtimeLogDeliveryTaskResponse CreateRealtimeLogDeliveryTask(Models\CreateRealtimeLogDeliveryTaskRequest $req) 本接口用于创建实时日志投递任务。本接口有如下限制：
-- 当数据投递类型（LogType）为站点加速日志（七层访问日志）、四层代理日志、边缘函数运行日志时，同一个实体（七层域名、四层代理实例、边缘函数实例）在同种数据投递类型（LogType）和数据投递区域（Area）的组合下，只能被添加到如下实时日志投递任务类型（TaskType）组合中：
+- 当数据投递类型（LogType）为七层访问日志、四层代理日志、边缘函数运行日志时，同一个实体（七层域名、四层代理实例、边缘函数实例）在同种数据投递类型（LogType）和数据投递区域（Area）的组合下，只能被添加到如下实时日志投递任务类型（TaskType）组合中：
     - 一个推送至腾讯云  CLS 的任务，加上另一个推送至自定义 HTTP(S) 地址的任务；
     - 一个推送至腾讯云  CLS 的任务，加上另一个推送至 AWS S3 兼容对象存储的任务；
 - 当数据投递类型（LogType）为速率限制和 CC 攻击防护日志、托管规则日志、自定义规则日志、Bot 管理日志时，同一个实体在同种数据投递类型（LogType）和数据投递区域（Area）的组合下，只能被添加到一个实时日志投递任务中。
-- 当实时日志投递任务类型（TaskType）为 EdgeOne 日志分析（log_analysis）时，只支持数据投递类型（LogType）为站点加速日志（domain）或托管规则日志（web-attack）；在同一站点（ZoneId）、同一数据投递区域（Area）和数据的组合下，每种数据投递类型（LogType）只能添加一个推送至 EdgeOne 日志分析的实时日志投递任务。
+- 当实时日志投递任务类型（TaskType）为 EdgeOne 日志分析（log_analysis）时，只支持数据投递类型（LogType）为七层访问日志（l7-access-logs）或托管规则日志（web-attack）；在同一站点（ZoneId）、同一数据投递区域（Area）和数据的组合下，每种数据投递类型（LogType）只能添加一个推送至 EdgeOne 日志分析的实时日志投递任务。
 
 建议先通过 [DescribeRealtimeLogDeliveryTasks](https://cloud.tencent.com/document/product/1552/104110)  接口根据实体查询实时日志投递任务列表，检查实体是否已经被添加到另一实时日志投递任务中。
  * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) 本接口为旧版本创建规则引擎接口，EdgeOne 于 2025 年 1 月 21 日已对规则引擎相关接口全面升级，新版本创建七层加速规则接口详情请参考 [CreateL7AccRules](https://cloud.tencent.com/document/product/1552/115822)。
@@ -245,6 +245,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DisableOriginACLResponse DisableOriginACL(Models\DisableOriginACLRequest $req) 本接口用于关闭站点的源站防护功能。停用后，相关资源不再仅使用「源站防护」提供的回源 IP 网段请求您的源站，同时停止发送回源 IP 网段更新通知。
  * @method Models\DownloadL4LogsResponse DownloadL4Logs(Models\DownloadL4LogsRequest $req) 本接口（DownloadL4Logs）用于下载四层离线日志。
  * @method Models\DownloadL7LogsResponse DownloadL7Logs(Models\DownloadL7LogsRequest $req) 本接口（DownloadL7Logs）下载七层离线日志。
+ * @method Models\DummyParseZoneFullConfigResponse DummyParseZoneFullConfig(Models\DummyParseZoneFullConfigRequest $req) 本接口用于定义站点完整配置的结构，仅供查阅。注意：调用本接口不返回实际数据。
  * @method Models\EdgeKVDeleteResponse EdgeKVDelete(Models\EdgeKVDeleteRequest $req) 本接口用于删除指定命名空间中的一个或多个键值对数据，支持批量删除。删除后数据不可恢复。
  * @method Models\EdgeKVGetResponse EdgeKVGet(Models\EdgeKVGetRequest $req) 本接口用于从指定命名空间中批量读取键的值，支持一次查询最多 20 个键。
  * @method Models\EdgeKVListResponse EdgeKVList(Models\EdgeKVListRequest $req) 本接口用于列出指定命名空间下的所有键名，支持前缀过滤。通过 Cursor 实现游标遍历，返回下一个游标用于继续查询。适用于遍历命名空间中的所有键。

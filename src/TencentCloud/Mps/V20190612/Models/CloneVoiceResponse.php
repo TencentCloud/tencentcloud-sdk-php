@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioData(string $AudioData) 设置<p>合成音频的base64编码</p>
  * @method string getAudioUrl() 获取<p>合成音频Url，有效期24小时</p>
  * @method void setAudioUrl(string $AudioUrl) 设置<p>合成音频Url，有效期24小时</p>
+ * @method string getExtInfo() 获取<p>扩展信息，json字符串</p>
+ * @method void setExtInfo(string $ExtInfo) 设置<p>扩展信息，json字符串</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class CloneVoiceResponse extends AbstractModel
     public $AudioUrl;
 
     /**
+     * @var string <p>扩展信息，json字符串</p>
+     */
+    public $ExtInfo;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class CloneVoiceResponse extends AbstractModel
      * @param string $VoiceId <p>克隆生成的音色ID</p>
      * @param string $AudioData <p>合成音频的base64编码</p>
      * @param string $AudioUrl <p>合成音频Url，有效期24小时</p>
+     * @param string $ExtInfo <p>扩展信息，json字符串</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +112,10 @@ class CloneVoiceResponse extends AbstractModel
 
         if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
             $this->AudioUrl = $param["AudioUrl"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -28,74 +28,50 @@ use TencentCloud\Common\AbstractModel;
 当单位为%时，坐标范围为[0,1)；
 当单位为px时，X值范围为 [0，视频画面宽度]，Y值范围为 [0，视频画面高度]
  *
- * @method float getLeftTopX() 获取区域左上角X坐标。
-如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。
- * @method void setLeftTopX(float $LeftTopX) 设置区域左上角X坐标。
-如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。
- * @method float getLeftTopY() 获取区域左上角Y坐标。
-如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。
- * @method void setLeftTopY(float $LeftTopY) 设置区域左上角Y坐标。
-如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。
- * @method float getRightBottomX() 获取区域右下角X坐标。
-如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。
- * @method void setRightBottomX(float $RightBottomX) 设置区域右下角X坐标。
-如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。
- * @method float getRightBottomY() 获取区域右下角Y坐标。
-如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。
- * @method void setRightBottomY(float $RightBottomY) 设置区域右下角Y坐标。
-如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。
- * @method integer getUnit() 获取坐标单位
-- 1 百分比
-- 2 像素值
- * @method void setUnit(integer $Unit) 设置坐标单位
-- 1 百分比
-- 2 像素值
+ * @method float getLeftTopX() 获取<p>区域左上角X坐标。<br>如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。</p>
+ * @method void setLeftTopX(float $LeftTopX) 设置<p>区域左上角X坐标。<br>如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。</p>
+ * @method float getLeftTopY() 获取<p>区域左上角Y坐标。<br>如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。</p>
+ * @method void setLeftTopY(float $LeftTopY) 设置<p>区域左上角Y坐标。<br>如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。</p>
+ * @method float getRightBottomX() 获取<p>区域右下角X坐标。<br>如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。</p>
+ * @method void setRightBottomX(float $RightBottomX) 设置<p>区域右下角X坐标。<br>如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。</p>
+ * @method float getRightBottomY() 获取<p>区域右下角Y坐标。<br>如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。</p>
+ * @method void setRightBottomY(float $RightBottomY) 设置<p>区域右下角Y坐标。<br>如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。</p>
+ * @method integer getUnit() 获取<p>坐标单位</p><ul><li>1 百分比</li><li>2 像素值</li></ul>
+ * @method void setUnit(integer $Unit) 设置<p>坐标单位</p><ul><li>1 百分比</li><li>2 像素值</li></ul>
  */
 class EraseArea extends AbstractModel
 {
     /**
-     * @var float 区域左上角X坐标。
-如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。
+     * @var float <p>区域左上角X坐标。<br>如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。</p>
      */
     public $LeftTopX;
 
     /**
-     * @var float 区域左上角Y坐标。
-如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。
+     * @var float <p>区域左上角Y坐标。<br>如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。</p>
      */
     public $LeftTopY;
 
     /**
-     * @var float 区域右下角X坐标。
-如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。
+     * @var float <p>区域右下角X坐标。<br>如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。</p>
      */
     public $RightBottomX;
 
     /**
-     * @var float 区域右下角Y坐标。
-如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。
+     * @var float <p>区域右下角Y坐标。<br>如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。</p>
      */
     public $RightBottomY;
 
     /**
-     * @var integer 坐标单位
-- 1 百分比
-- 2 像素值
+     * @var integer <p>坐标单位</p><ul><li>1 百分比</li><li>2 像素值</li></ul>
      */
     public $Unit;
 
     /**
-     * @param float $LeftTopX 区域左上角X坐标。
-如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。
-     * @param float $LeftTopY 区域左上角Y坐标。
-如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。
-     * @param float $RightBottomX 区域右下角X坐标。
-如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。
-     * @param float $RightBottomY 区域右下角Y坐标。
-如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。
-     * @param integer $Unit 坐标单位
-- 1 百分比
-- 2 像素值
+     * @param float $LeftTopX <p>区域左上角X坐标。<br>如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。</p>
+     * @param float $LeftTopY <p>区域左上角Y坐标。<br>如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。</p>
+     * @param float $RightBottomX <p>区域右下角X坐标。<br>如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。</p>
+     * @param float $RightBottomY <p>区域右下角Y坐标。<br>如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。</p>
+     * @param integer $Unit <p>坐标单位</p><ul><li>1 百分比</li><li>2 像素值</li></ul>
      */
     function __construct()
     {

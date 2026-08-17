@@ -20,109 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 编排原子任务
  *
- * @method string getActivityType() 获取原子任务类型：
-<li>input: 起始节点</li>
-<li>output：终止节点</li>
-<li>action-trans：转码</li>
-<li>action-samplesnapshot：采样截图</li>
-<li>action-AIAnalysis: 分析</li>
-<li>action-AIRecognition：识别</li>
-<li>action-aiReview：审核</li>
-<li>action-animated-graphics：转动图</li>
-<li>action-image-sprite：雪碧图</li>
-<li>action-snapshotByTimeOffset: 时间点截图</li>
-<li>action-adaptive-substream：自适应码流</li>
-<li>action-AIQualityControl：媒体质检</li>
-<li>action-SmartSubtitles：智能字幕</li>
-<li>action-exec-rules：判断规则</li>
-<li>action-SmartErase：智能擦除</li>
-
-
-
- * @method void setActivityType(string $ActivityType) 设置原子任务类型：
-<li>input: 起始节点</li>
-<li>output：终止节点</li>
-<li>action-trans：转码</li>
-<li>action-samplesnapshot：采样截图</li>
-<li>action-AIAnalysis: 分析</li>
-<li>action-AIRecognition：识别</li>
-<li>action-aiReview：审核</li>
-<li>action-animated-graphics：转动图</li>
-<li>action-image-sprite：雪碧图</li>
-<li>action-snapshotByTimeOffset: 时间点截图</li>
-<li>action-adaptive-substream：自适应码流</li>
-<li>action-AIQualityControl：媒体质检</li>
-<li>action-SmartSubtitles：智能字幕</li>
-<li>action-exec-rules：判断规则</li>
-<li>action-SmartErase：智能擦除</li>
-
-
-
- * @method array getReardriveIndex() 获取后驱节点索引数组
- * @method void setReardriveIndex(array $ReardriveIndex) 设置后驱节点索引数组
- * @method ActivityPara getActivityPara() 获取原子任务参数
+ * @method string getActivityType() 获取<p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
+ * @method void setActivityType(string $ActivityType) 设置<p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
+ * @method array getReardriveIndex() 获取<p>后驱节点索引数组</p>
+ * @method void setReardriveIndex(array $ReardriveIndex) 设置<p>后驱节点索引数组</p>
+ * @method ActivityPara getActivityPara() 获取<p>原子任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setActivityPara(ActivityPara $ActivityPara) 设置原子任务参数
+ * @method void setActivityPara(ActivityPara $ActivityPara) 设置<p>原子任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Activity extends AbstractModel
 {
     /**
-     * @var string 原子任务类型：
-<li>input: 起始节点</li>
-<li>output：终止节点</li>
-<li>action-trans：转码</li>
-<li>action-samplesnapshot：采样截图</li>
-<li>action-AIAnalysis: 分析</li>
-<li>action-AIRecognition：识别</li>
-<li>action-aiReview：审核</li>
-<li>action-animated-graphics：转动图</li>
-<li>action-image-sprite：雪碧图</li>
-<li>action-snapshotByTimeOffset: 时间点截图</li>
-<li>action-adaptive-substream：自适应码流</li>
-<li>action-AIQualityControl：媒体质检</li>
-<li>action-SmartSubtitles：智能字幕</li>
-<li>action-exec-rules：判断规则</li>
-<li>action-SmartErase：智能擦除</li>
-
-
-
+     * @var string <p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
      */
     public $ActivityType;
 
     /**
-     * @var array 后驱节点索引数组
+     * @var array <p>后驱节点索引数组</p>
      */
     public $ReardriveIndex;
 
     /**
-     * @var ActivityPara 原子任务参数
+     * @var ActivityPara <p>原子任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActivityPara;
 
     /**
-     * @param string $ActivityType 原子任务类型：
-<li>input: 起始节点</li>
-<li>output：终止节点</li>
-<li>action-trans：转码</li>
-<li>action-samplesnapshot：采样截图</li>
-<li>action-AIAnalysis: 分析</li>
-<li>action-AIRecognition：识别</li>
-<li>action-aiReview：审核</li>
-<li>action-animated-graphics：转动图</li>
-<li>action-image-sprite：雪碧图</li>
-<li>action-snapshotByTimeOffset: 时间点截图</li>
-<li>action-adaptive-substream：自适应码流</li>
-<li>action-AIQualityControl：媒体质检</li>
-<li>action-SmartSubtitles：智能字幕</li>
-<li>action-exec-rules：判断规则</li>
-<li>action-SmartErase：智能擦除</li>
-
-
-
-     * @param array $ReardriveIndex 后驱节点索引数组
-     * @param ActivityPara $ActivityPara 原子任务参数
+     * @param string $ActivityType <p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
+     * @param array $ReardriveIndex <p>后驱节点索引数组</p>
+     * @param ActivityPara $ActivityPara <p>原子任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

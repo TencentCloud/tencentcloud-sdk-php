@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelName(string $ModelName) 设置<p>模型名称</p>
  * @method string getModelId() 获取<p>模型 ID。</p>
  * @method void setModelId(string $ModelId) 设置<p>模型 ID。</p>
+ * @method array getExtraModelIds() 获取<p>模型id别名列表</p>
+ * @method void setExtraModelIds(array $ExtraModelIds) 设置<p>模型id别名列表</p>
  * @method string getDisplayName() 获取<p>模型显示名称。</p>
  * @method void setDisplayName(string $DisplayName) 设置<p>模型显示名称。</p>
  * @method string getDescription() 获取<p>模型描述。</p>
@@ -70,6 +72,11 @@ class Model extends AbstractModel
      * @var string <p>模型 ID。</p>
      */
     public $ModelId;
+
+    /**
+     * @var array <p>模型id别名列表</p>
+     */
+    public $ExtraModelIds;
 
     /**
      * @var string <p>模型显示名称。</p>
@@ -159,6 +166,7 @@ class Model extends AbstractModel
     /**
      * @param string $ModelName <p>模型名称</p>
      * @param string $ModelId <p>模型 ID。</p>
+     * @param array $ExtraModelIds <p>模型id别名列表</p>
      * @param string $DisplayName <p>模型显示名称。</p>
      * @param string $Description <p>模型描述。</p>
      * @param string $Summary <p>模型概要。</p>
@@ -196,6 +204,10 @@ class Model extends AbstractModel
 
         if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
             $this->ModelId = $param["ModelId"];
+        }
+
+        if (array_key_exists("ExtraModelIds",$param) and $param["ExtraModelIds"] !== null) {
+            $this->ExtraModelIds = $param["ExtraModelIds"];
         }
 
         if (array_key_exists("DisplayName",$param) and $param["DisplayName"] !== null) {

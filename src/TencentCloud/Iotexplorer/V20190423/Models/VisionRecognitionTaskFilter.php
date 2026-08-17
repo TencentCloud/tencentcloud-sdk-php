@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMCPTaskResult请求参数结构体
+ * TWeSee 语义理解任务过滤条件
  *
- * @method string getTaskId() 获取<p>任务ID</p>
- * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
- * @method string getNextToken() 获取<p>下一次请求数据</p>
- * @method void setNextToken(string $NextToken) 设置<p>下一次请求数据</p>
+ * @method string getKey() 获取需要过滤的字段
+ * @method void setKey(string $Key) 设置需要过滤的字段
+ * @method array getValues() 获取需要过滤的值
+ * @method void setValues(array $Values) 设置需要过滤的值
  */
-class DescribeMCPTaskResultRequest extends AbstractModel
+class VisionRecognitionTaskFilter extends AbstractModel
 {
     /**
-     * @var string <p>任务ID</p>
+     * @var string 需要过滤的字段
      */
-    public $TaskId;
+    public $Key;
 
     /**
-     * @var string <p>下一次请求数据</p>
+     * @var array 需要过滤的值
      */
-    public $NextToken;
+    public $Values;
 
     /**
-     * @param string $TaskId <p>任务ID</p>
-     * @param string $NextToken <p>下一次请求数据</p>
+     * @param string $Key 需要过滤的字段
+     * @param array $Values 需要过滤的值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeMCPTaskResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
-            $this->NextToken = $param["NextToken"];
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

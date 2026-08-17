@@ -20,154 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListTWeSeeTasks请求参数结构体
  *
- * @method string getProductId() 获取产品 ID
- * @method void setProductId(string $ProductId) 设置产品 ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getServiceCategory() 获取算法类目。可选值：
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
- * @method void setServiceCategory(string $ServiceCategory) 设置算法类目。可选值：
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
- * @method integer getLimit() 获取分页拉取数量
- * @method void setLimit(integer $Limit) 设置分页拉取数量
- * @method integer getOffset() 获取分页拉取偏移
- * @method void setOffset(integer $Offset) 设置分页拉取偏移
- * @method array getServiceTypes() 获取算法类型。
-
-当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `CONT_PERSON_MOTIONLESS`：静姿检测
-
-当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
-- `COMP_HIGHLIGHT`：视频浓缩
- * @method void setServiceTypes(array $ServiceTypes) 设置算法类型。
-
-当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `CONT_PERSON_MOTIONLESS`：静姿检测
-
-当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
-- `COMP_HIGHLIGHT`：视频浓缩
- * @method integer getChannelId() 获取通道 ID
- * @method void setChannelId(integer $ChannelId) 设置通道 ID
- * @method integer getStartTimeMs() 获取查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
- * @method void setStartTimeMs(integer $StartTimeMs) 设置查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
- * @method integer getEndTimeMs() 获取查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
- * @method void setEndTimeMs(integer $EndTimeMs) 设置查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
- * @method integer getStatus() 获取要查询的任务的状态条件。不传则不按照状态过滤，可选值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
- * @method void setStatus(integer $Status) 设置要查询的任务的状态条件。不传则不按照状态过滤，可选值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
- * @method integer getFileURLExpireTime() 获取下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
- * @method void setFileURLExpireTime(integer $FileURLExpireTime) 设置下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+ * @method string getProductId() 获取<p>产品 ID</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品 ID</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method string getServiceCategory() 获取<p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+ * @method void setServiceCategory(string $ServiceCategory) 设置<p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+ * @method integer getLimit() 获取<p>分页拉取数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页拉取数量</p>
+ * @method integer getOffset() 获取<p>分页拉取偏移</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页拉取偏移</p>
+ * @method array getServiceTypes() 获取<p>算法类型。</p><p>当 ServiceCategory 为 <code>COMPREHENSION</code> 时，可选值包括：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>CONT_PERSON_MOTIONLESS</code>：静姿检测</li></ul><p>当 ServiceCategory 为 <code>HIGHLIGHT</code> 时，可选值包括：</p><ul><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+ * @method void setServiceTypes(array $ServiceTypes) 设置<p>算法类型。</p><p>当 ServiceCategory 为 <code>COMPREHENSION</code> 时，可选值包括：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>CONT_PERSON_MOTIONLESS</code>：静姿检测</li></ul><p>当 ServiceCategory 为 <code>HIGHLIGHT</code> 时，可选值包括：</p><ul><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+ * @method integer getChannelId() 获取<p>通道 ID</p>
+ * @method void setChannelId(integer $ChannelId) 设置<p>通道 ID</p>
+ * @method integer getStartTimeMs() 获取<p>查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
+ * @method void setStartTimeMs(integer $StartTimeMs) 设置<p>查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
+ * @method integer getEndTimeMs() 获取<p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
+ * @method void setEndTimeMs(integer $EndTimeMs) 设置<p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
+ * @method integer getStatus() 获取<p>要查询的任务的状态条件。不传则不按照状态过滤，可选值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>要查询的任务的状态条件。不传则不按照状态过滤，可选值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li></ul>
+ * @method integer getFileURLExpireTime() 获取<p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p>
+ * @method void setFileURLExpireTime(integer $FileURLExpireTime) 设置<p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p>
+ * @method array getFilters() 获取<p>任务结果过滤条件</p>
+ * @method void setFilters(array $Filters) 设置<p>任务结果过滤条件</p>
  */
 class ListTWeSeeTasksRequest extends AbstractModel
 {
     /**
-     * @var string 产品 ID
+     * @var string <p>产品 ID</p>
      */
     public $ProductId;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 算法类目。可选值：
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
+     * @var string <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public $ServiceCategory;
 
     /**
-     * @var integer 分页拉取数量
+     * @var integer <p>分页拉取数量</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页拉取偏移
+     * @var integer <p>分页拉取偏移</p>
      */
     public $Offset;
 
     /**
-     * @var array 算法类型。
-
-当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `CONT_PERSON_MOTIONLESS`：静姿检测
-
-当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
-- `COMP_HIGHLIGHT`：视频浓缩
+     * @var array <p>算法类型。</p><p>当 ServiceCategory 为 <code>COMPREHENSION</code> 时，可选值包括：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>CONT_PERSON_MOTIONLESS</code>：静姿检测</li></ul><p>当 ServiceCategory 为 <code>HIGHLIGHT</code> 时，可选值包括：</p><ul><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public $ServiceTypes;
 
     /**
-     * @var integer 通道 ID
+     * @var integer <p>通道 ID</p>
      */
     public $ChannelId;
 
     /**
-     * @var integer 查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
+     * @var integer <p>查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
      */
     public $StartTimeMs;
 
     /**
-     * @var integer 查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
+     * @var integer <p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
      */
     public $EndTimeMs;
 
     /**
-     * @var integer 要查询的任务的状态条件。不传则不按照状态过滤，可选值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
+     * @var integer <p>要查询的任务的状态条件。不传则不按照状态过滤，可选值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+     * @var integer <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p>
      */
     public $FileURLExpireTime;
 
     /**
-     * @param string $ProductId 产品 ID
-     * @param string $DeviceName 设备名称
-     * @param string $ServiceCategory 算法类目。可选值：
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
-     * @param integer $Limit 分页拉取数量
-     * @param integer $Offset 分页拉取偏移
-     * @param array $ServiceTypes 算法类型。
+     * @var array <p>任务结果过滤条件</p>
+     */
+    public $Filters;
 
-当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `CONT_PERSON_MOTIONLESS`：静姿检测
-
-当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
-- `COMP_HIGHLIGHT`：视频浓缩
-     * @param integer $ChannelId 通道 ID
-     * @param integer $StartTimeMs 查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
-     * @param integer $EndTimeMs 查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
-     * @param integer $Status 要查询的任务的状态条件。不传则不按照状态过滤，可选值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-     * @param integer $FileURLExpireTime 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+    /**
+     * @param string $ProductId <p>产品 ID</p>
+     * @param string $DeviceName <p>设备名称</p>
+     * @param string $ServiceCategory <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @param integer $Limit <p>分页拉取数量</p>
+     * @param integer $Offset <p>分页拉取偏移</p>
+     * @param array $ServiceTypes <p>算法类型。</p><p>当 ServiceCategory 为 <code>COMPREHENSION</code> 时，可选值包括：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>CONT_PERSON_MOTIONLESS</code>：静姿检测</li></ul><p>当 ServiceCategory 为 <code>HIGHLIGHT</code> 时，可选值包括：</p><ul><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @param integer $ChannelId <p>通道 ID</p>
+     * @param integer $StartTimeMs <p>查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
+     * @param integer $EndTimeMs <p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
+     * @param integer $Status <p>要查询的任务的状态条件。不传则不按照状态过滤，可选值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li></ul>
+     * @param integer $FileURLExpireTime <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p>
+     * @param array $Filters <p>任务结果过滤条件</p>
      */
     function __construct()
     {
@@ -224,6 +176,15 @@ class ListTWeSeeTasksRequest extends AbstractModel
 
         if (array_key_exists("FileURLExpireTime",$param) and $param["FileURLExpireTime"] !== null) {
             $this->FileURLExpireTime = $param["FileURLExpireTime"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new VisionRecognitionTaskFilter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

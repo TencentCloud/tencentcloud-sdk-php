@@ -25,19 +25,35 @@ use TencentCloud\Mna\V20210119\Models as Models;
 /**
  * @method Models\ActivateHardwareResponse ActivateHardware(Models\ActivateHardwareRequest $req) 激活硬件设备
  * @method Models\AddApplicationResponse AddApplication(Models\AddApplicationRequest $req) 新建应用
+ * @method Models\AddCustomerGatewayClusterResponse AddCustomerGatewayCluster(Models\AddCustomerGatewayClusterRequest $req) 创建客户自有网关集群。
+
+用于承载客户侧的自有网关实例，创建成功后返回集群 ID。
  * @method Models\AddDeviceResponse AddDevice(Models\AddDeviceRequest $req) 新建设备记录
+ * @method Models\AddGatewayResponse AddGateway(Models\AddGatewayRequest $req) 向指定的客户自有网关集群注册一个网关实例。
+
+注册成功后返回网关实例 ID、鉴权 Token 及 Agent 相关地址信息，用于后续网关 Agent 上报。
  * @method Models\AddGroupResponse AddGroup(Models\AddGroupRequest $req) 新建分组
  * @method Models\AddHardwareResponse AddHardware(Models\AddHardwareRequest $req) 添加硬件设备，生成未激活的硬件设备，可支持批量添加
  * @method Models\AddL3ConnResponse AddL3Conn(Models\AddL3ConnRequest $req) 新建互通规则
  * @method Models\CreateEncryptedKeyResponse CreateEncryptedKey(Models\CreateEncryptedKeyRequest $req) 通过此接口设置和更新预置密钥
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) 删除应用
+ * @method Models\DeleteCustomerGatewayClusterResponse DeleteCustomerGatewayCluster(Models\DeleteCustomerGatewayClusterRequest $req) 删除客户自有网关集群。
+
+删除指定的客户自有网关集群，操作不可逆。调用接口后，若通过 GetCustomerGatewayClusterList 接口查询不到对应集群，则表示删除成功。
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 删除设备信息
+ * @method Models\DeleteGatewayResponse DeleteGateway(Models\DeleteGatewayRequest $req) 从指定集群下删除一个客户自有网关实例。
+
+删除后，通过 GetCustomerGatewayClusterList 查询不到对应实例，则表示删除成功。
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除分组
  * @method Models\DeleteL3ConnResponse DeleteL3Conn(Models\DeleteL3ConnRequest $req) 删除互通规则
+ * @method Models\DescribeAccessPointListResponse DescribeAccessPointList(Models\DescribeAccessPointListRequest $req) 此接口用来查询接入点列表。
  * @method Models\DescribeAccessRegionsResponse DescribeAccessRegions(Models\DescribeAccessRegionsRequest $req) 查询可接入地域列表。
  * @method Models\DownloadActiveDeviceCountResponse DownloadActiveDeviceCount(Models\DownloadActiveDeviceCountRequest $req) 下载活跃设备数量统计
  * @method Models\GetActiveDeviceCountResponse GetActiveDeviceCount(Models\GetActiveDeviceCountRequest $req) 活跃设备数量统计
  * @method Models\GetApplicationResponse GetApplication(Models\GetApplicationRequest $req) 应用查询
+ * @method Models\GetCustomerGatewayClusterListResponse GetCustomerGatewayClusterList(Models\GetCustomerGatewayClusterListRequest $req) 查询客户自有网关集群列表。
+
+支持按集群名称关键字过滤，使用 Offset/Limit 分页返回集群及其下网关实例信息。
  * @method Models\GetDestIPByNameResponse GetDestIPByName(Models\GetDestIPByNameRequest $req) 统计单个设备访问目标IP地址信息
  * @method Models\GetDeviceResponse GetDevice(Models\GetDeviceRequest $req) 通过指定设备的ID查找设备详细信息
  * @method Models\GetDevicePayModeResponse GetDevicePayMode(Models\GetDevicePayModeRequest $req) 获取设备付费模式
@@ -65,6 +81,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GroupAddDeviceResponse GroupAddDevice(Models\GroupAddDeviceRequest $req) 向已存在分组中添加设备
  * @method Models\GroupDeleteDeviceResponse GroupDeleteDevice(Models\GroupDeleteDeviceRequest $req) 删除分组中的设备
  * @method Models\ModifyDeviceAccessRegionsResponse ModifyDeviceAccessRegions(Models\ModifyDeviceAccessRegionsRequest $req) 修改设备接入地域。
+ * @method Models\ModifyDeviceAccessScopeResponse ModifyDeviceAccessScope(Models\ModifyDeviceAccessScopeRequest $req) 修改设备接入网关类型。
  * @method Models\ModifyPackageRenewFlagResponse ModifyPackageRenewFlag(Models\ModifyPackageRenewFlagRequest $req) 可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
  * @method Models\OrderFlowPackageResponse OrderFlowPackage(Models\OrderFlowPackageRequest $req) 购买预付费流量包
  * @method Models\OrderPerLicenseResponse OrderPerLicense(Models\OrderPerLicenseRequest $req) 购买一次性授权License
@@ -72,6 +89,9 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\SetNotifyUrlResponse SetNotifyUrl(Models\SetNotifyUrlRequest $req) 设置用户流量告警信息接口，通过该接口设置流量包告警阈值以及告警时回调的url和key
  * @method Models\UpdateApplicationInfoResponse UpdateApplicationInfo(Models\UpdateApplicationInfoRequest $req) 更新应用信息
  * @method Models\UpdateApplicationKeyResponse UpdateApplicationKey(Models\UpdateApplicationKeyRequest $req) 更新应用密钥
+ * @method Models\UpdateCustomerGatewayClusterResponse UpdateCustomerGatewayCluster(Models\UpdateCustomerGatewayClusterRequest $req) 更新客户自有网关集群配置。
+
+目前仅支持修改集群的公网访问 IP。
  * @method Models\UpdateDeviceResponse UpdateDevice(Models\UpdateDeviceRequest $req) 更新设备信息
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 更新分组备注
  * @method Models\UpdateHardwareResponse UpdateHardware(Models\UpdateHardwareRequest $req) 更新硬件信息

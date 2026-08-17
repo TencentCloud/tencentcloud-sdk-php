@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasks(array $Tasks) 设置<p>任务类型列表（如 [&quot;Text Generation&quot;, &quot;Embedding&quot;]）</p>
  * @method string getModelUid() 获取<p>模型 UID（可选，前端预先生成的 UID，不传则后端自动生成）</p>
  * @method void setModelUid(string $ModelUid) 设置<p>模型 UID（可选，前端预先生成的 UID，不传则后端自动生成）</p>
+ * @method array getResourceTags() 获取<p>系统标签列表（TagKey-TagValue）</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>系统标签列表（TagKey-TagValue）</p>
+ * @method GooseFSConfig getGooseFSConfig() 获取<p>模型文件来源于goosefs</p>
+ * @method void setGooseFSConfig(GooseFSConfig $GooseFSConfig) 设置<p>模型文件来源于goosefs</p>
+ * @method string getStorageType() 获取<p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
+ * @method void setStorageType(string $StorageType) 设置<p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
  */
 class CreateInferenceModelRequest extends AbstractModel
 {
@@ -101,6 +107,21 @@ class CreateInferenceModelRequest extends AbstractModel
     public $ModelUid;
 
     /**
+     * @var array <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public $ResourceTags;
+
+    /**
+     * @var GooseFSConfig <p>模型文件来源于goosefs</p>
+     */
+    public $GooseFSConfig;
+
+    /**
+     * @var string <p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
+     */
+    public $StorageType;
+
+    /**
      * @param string $Name <p>模型名称（最长 256）</p>
      * @param string $ModelType <p>模型类型（如 LLM、Embedding、Reranker、ASR、TTS 等）</p>
      * @param string $InitialVersion <p>初始版本号（必填，如 v1、v1.5）</p>
@@ -112,6 +133,9 @@ class CreateInferenceModelRequest extends AbstractModel
      * @param boolean $UseCustomStorage <p>是否使用用户自带存储桶（默认 false 表示平台托管）</p>
      * @param array $Tasks <p>任务类型列表（如 [&quot;Text Generation&quot;, &quot;Embedding&quot;]）</p>
      * @param string $ModelUid <p>模型 UID（可选，前端预先生成的 UID，不传则后端自动生成）</p>
+     * @param array $ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     * @param GooseFSConfig $GooseFSConfig <p>模型文件来源于goosefs</p>
+     * @param string $StorageType <p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
      */
     function __construct()
     {
@@ -168,6 +192,24 @@ class CreateInferenceModelRequest extends AbstractModel
 
         if (array_key_exists("ModelUid",$param) and $param["ModelUid"] !== null) {
             $this->ModelUid = $param["ModelUid"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
+        }
+
+        if (array_key_exists("GooseFSConfig",$param) and $param["GooseFSConfig"] !== null) {
+            $this->GooseFSConfig = new GooseFSConfig();
+            $this->GooseFSConfig->deserialize($param["GooseFSConfig"]);
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

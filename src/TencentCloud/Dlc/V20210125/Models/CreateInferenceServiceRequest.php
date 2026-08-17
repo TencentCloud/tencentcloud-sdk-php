@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoscalerOptions(string $AutoscalerOptions) 设置<p>Autoscaler 配置（JSON 字符串）</p>
  * @method array getApiKeyIds() 获取<p>ApiKeyIds</p>
  * @method void setApiKeyIds(array $ApiKeyIds) 设置<p>ApiKeyIds</p>
+ * @method string getAdvancedOptions() 获取<p>AdvancedOptions 高级参数 JSON 字符串（可选），扁平 KV 结构，作用于 K8s RayService CR YAML 字段级</p>
+ * @method void setAdvancedOptions(string $AdvancedOptions) 设置<p>AdvancedOptions 高级参数 JSON 字符串（可选），扁平 KV 结构，作用于 K8s RayService CR YAML 字段级</p>
+ * @method array getResourceTags() 获取<p>系统标签列表（TagKey-TagValue）</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>系统标签列表（TagKey-TagValue）</p>
+ * @method boolean getIsCustom() 获取<p>自定义RayServe提交</p>
+ * @method void setIsCustom(boolean $IsCustom) 设置<p>自定义RayServe提交</p>
+ * @method string getRuntimeEnv() 获取<p>python runtime env</p>
+ * @method void setRuntimeEnv(string $RuntimeEnv) 设置<p>python runtime env</p>
  */
 class CreateInferenceServiceRequest extends AbstractModel
 {
@@ -150,6 +158,26 @@ class CreateInferenceServiceRequest extends AbstractModel
     public $ApiKeyIds;
 
     /**
+     * @var string <p>AdvancedOptions 高级参数 JSON 字符串（可选），扁平 KV 结构，作用于 K8s RayService CR YAML 字段级</p>
+     */
+    public $AdvancedOptions;
+
+    /**
+     * @var array <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public $ResourceTags;
+
+    /**
+     * @var boolean <p>自定义RayServe提交</p>
+     */
+    public $IsCustom;
+
+    /**
+     * @var string <p>python runtime env</p>
+     */
+    public $RuntimeEnv;
+
+    /**
      * @param string $Name <p>推理服务名称</p>
      * @param string $ModelUid <p>模型 UID（业务级唯一标识）</p>
      * @param string $Engine <p>推理引擎（vllm / xgboost）</p>
@@ -168,6 +196,10 @@ class CreateInferenceServiceRequest extends AbstractModel
      * @param integer $MaxReplicas <p>最大副本数（启用弹性伸缩时生效）</p>
      * @param string $AutoscalerOptions <p>Autoscaler 配置（JSON 字符串）</p>
      * @param array $ApiKeyIds <p>ApiKeyIds</p>
+     * @param string $AdvancedOptions <p>AdvancedOptions 高级参数 JSON 字符串（可选），扁平 KV 结构，作用于 K8s RayService CR YAML 字段级</p>
+     * @param array $ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     * @param boolean $IsCustom <p>自定义RayServe提交</p>
+     * @param string $RuntimeEnv <p>python runtime env</p>
      */
     function __construct()
     {
@@ -252,6 +284,27 @@ class CreateInferenceServiceRequest extends AbstractModel
 
         if (array_key_exists("ApiKeyIds",$param) and $param["ApiKeyIds"] !== null) {
             $this->ApiKeyIds = $param["ApiKeyIds"];
+        }
+
+        if (array_key_exists("AdvancedOptions",$param) and $param["AdvancedOptions"] !== null) {
+            $this->AdvancedOptions = $param["AdvancedOptions"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
+        }
+
+        if (array_key_exists("IsCustom",$param) and $param["IsCustom"] !== null) {
+            $this->IsCustom = $param["IsCustom"];
+        }
+
+        if (array_key_exists("RuntimeEnv",$param) and $param["RuntimeEnv"] !== null) {
+            $this->RuntimeEnv = $param["RuntimeEnv"];
         }
     }
 }

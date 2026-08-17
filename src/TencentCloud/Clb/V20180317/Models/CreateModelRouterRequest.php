@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置<p>模型路由的监听端口</p><p>取值范围：[1, 65535]</p>
  * @method RateLimitConfigForModelRouter getRateLimitConfig() 获取<p>限速配置</p>
  * @method void setRateLimitConfig(RateLimitConfigForModelRouter $RateLimitConfig) 设置<p>限速配置</p>
- * @method RouterSettingWithoutFallBack getRouterSetting() 获取<p>路由配置</p>
- * @method void setRouterSetting(RouterSettingWithoutFallBack $RouterSetting) 设置<p>路由配置</p>
+ * @method RouterSettingWithoutFallBack getRouterSetting() 获取<p>路由配置</p><p>新创建实例时，默认会开启粘连路由</p>
+ * @method void setRouterSetting(RouterSettingWithoutFallBack $RouterSetting) 设置<p>路由配置</p><p>新创建实例时，默认会开启粘连路由</p>
  * @method string getSchema() 获取<p>模型路由实例的网络协议</p><p>枚举值：</p><ul><li>HTTP： HTTP协议</li><li>HTTPS： HTTPS协议</li></ul>
  * @method void setSchema(string $Schema) 设置<p>模型路由实例的网络协议</p><p>枚举值：</p><ul><li>HTTP： HTTP协议</li><li>HTTPS： HTTPS协议</li></ul>
  * @method string getSubnetId() 获取<p>模型路由实例所属子网的ID</p>
@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelRouterBillingConfig(ModelRouterBillingConfigInput $ModelRouterBillingConfig) 设置<p>模型路由实例计费信息</p>
  * @method string getClientToken() 获取<p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
  * @method void setClientToken(string $ClientToken) 设置<p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+ * @method string getEipAddressId() 获取<p>弹性公网IP的ID</p>
+ * @method void setEipAddressId(string $EipAddressId) 设置<p>弹性公网IP的ID</p>
+ * @method integer getBandwidth() 获取<p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
  */
 class CreateModelRouterRequest extends AbstractModel
 {
@@ -94,7 +98,7 @@ class CreateModelRouterRequest extends AbstractModel
     public $RateLimitConfig;
 
     /**
-     * @var RouterSettingWithoutFallBack <p>路由配置</p>
+     * @var RouterSettingWithoutFallBack <p>路由配置</p><p>新创建实例时，默认会开启粘连路由</p>
      */
     public $RouterSetting;
 
@@ -129,6 +133,16 @@ class CreateModelRouterRequest extends AbstractModel
     public $ClientToken;
 
     /**
+     * @var string <p>弹性公网IP的ID</p>
+     */
+    public $EipAddressId;
+
+    /**
+     * @var integer <p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+     */
+    public $Bandwidth;
+
+    /**
      * @param string $ModelRouterType <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul>
      * @param string $BudgetId <p>关联的积分预算ID</p>
      * @param string $CertId <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
@@ -137,13 +151,15 @@ class CreateModelRouterRequest extends AbstractModel
      * @param string $NetworkType <p>网络类型</p><p>枚举值：</p><ul><li>Internet： 公网</li><li>Intranet： 内网</li></ul>
      * @param integer $Port <p>模型路由的监听端口</p><p>取值范围：[1, 65535]</p>
      * @param RateLimitConfigForModelRouter $RateLimitConfig <p>限速配置</p>
-     * @param RouterSettingWithoutFallBack $RouterSetting <p>路由配置</p>
+     * @param RouterSettingWithoutFallBack $RouterSetting <p>路由配置</p><p>新创建实例时，默认会开启粘连路由</p>
      * @param string $Schema <p>模型路由实例的网络协议</p><p>枚举值：</p><ul><li>HTTP： HTTP协议</li><li>HTTPS： HTTPS协议</li></ul>
      * @param string $SubnetId <p>模型路由实例所属子网的ID</p>
      * @param array $Tags <p>标签</p>
      * @param string $VpcId <p>模型路由实例所属VPC的ID</p>
      * @param ModelRouterBillingConfigInput $ModelRouterBillingConfig <p>模型路由实例计费信息</p>
      * @param string $ClientToken <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+     * @param string $EipAddressId <p>弹性公网IP的ID</p>
+     * @param integer $Bandwidth <p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
      */
     function __construct()
     {
@@ -225,6 +241,14 @@ class CreateModelRouterRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("EipAddressId",$param) and $param["EipAddressId"] !== null) {
+            $this->EipAddressId = $param["EipAddressId"];
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
         }
     }
 }

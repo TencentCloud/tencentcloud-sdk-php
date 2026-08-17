@@ -20,14 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 运行中部署的 GPU 资源汇总
  *
-
+ * @method string getGpuType() 获取<p>GPU 型号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGpuType(string $GpuType) 设置<p>GPU 型号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGpuCount() 获取<p>GPU 总数（gpuNum × replicas）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGpuCount(integer $GpuCount) 设置<p>GPU 总数（gpuNum × replicas）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReplicas() 获取<p>运行中的副本数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplicas(integer $Replicas) 设置<p>运行中的副本数</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GpuSummaryItem extends AbstractModel
 {
-
+    /**
+     * @var string <p>GPU 型号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GpuType;
 
     /**
+     * @var integer <p>GPU 总数（gpuNum × replicas）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GpuCount;
 
+    /**
+     * @var integer <p>运行中的副本数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Replicas;
+
+    /**
+     * @param string $GpuType <p>GPU 型号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GpuCount <p>GPU 总数（gpuNum × replicas）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Replicas <p>运行中的副本数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +74,16 @@ class GpuSummaryItem extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
+            $this->GpuType = $param["GpuType"];
+        }
 
+        if (array_key_exists("GpuCount",$param) and $param["GpuCount"] !== null) {
+            $this->GpuCount = $param["GpuCount"];
+        }
+
+        if (array_key_exists("Replicas",$param) and $param["Replicas"] !== null) {
+            $this->Replicas = $param["Replicas"];
+        }
     }
 }

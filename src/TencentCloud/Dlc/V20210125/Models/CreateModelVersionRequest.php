@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageUri(string $StorageUri) 设置<p>该版本的存储 URI（可选，如 cos://bucket-name/models/name/v2/）</p>
  * @method boolean getUseCustomStorage() 获取<p>是否使用用户自带存储桶（默认 false 表示平台托管）</p>
  * @method void setUseCustomStorage(boolean $UseCustomStorage) 设置<p>是否使用用户自带存储桶（默认 false 表示平台托管）</p>
+ * @method GooseFSConfig getGooseFSConfig() 获取<p>创建模型时，模型从goosfe里面选取，则需要传递该参数</p>
+ * @method void setGooseFSConfig(GooseFSConfig $GooseFSConfig) 设置<p>创建模型时，模型从goosfe里面选取，则需要传递该参数</p>
+ * @method string getStorageType() 获取<p>模型上传路径类型</p><p>枚举值：</p><ul><li>LOCAL： 本地上传</li><li>CFS： CFS上传</li><li>COS： COS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul><p>选择cos、cfs、cfstrubo则必须要传storageuri，选择local时不能传递goosefsconfig</p>
+ * @method void setStorageType(string $StorageType) 设置<p>模型上传路径类型</p><p>枚举值：</p><ul><li>LOCAL： 本地上传</li><li>CFS： CFS上传</li><li>COS： COS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul><p>选择cos、cfs、cfstrubo则必须要传storageuri，选择local时不能传递goosefsconfig</p>
  */
 class CreateModelVersionRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class CreateModelVersionRequest extends AbstractModel
     public $UseCustomStorage;
 
     /**
+     * @var GooseFSConfig <p>创建模型时，模型从goosfe里面选取，则需要传递该参数</p>
+     */
+    public $GooseFSConfig;
+
+    /**
+     * @var string <p>模型上传路径类型</p><p>枚举值：</p><ul><li>LOCAL： 本地上传</li><li>CFS： CFS上传</li><li>COS： COS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul><p>选择cos、cfs、cfstrubo则必须要传storageuri，选择local时不能传递goosefsconfig</p>
+     */
+    public $StorageType;
+
+    /**
      * @param string $ModelUid <p>模型UID</p>
      * @param string $ModelVersion <p>模型版本号</p>
      * @param string $Description <p>版本说明</p>
      * @param string $StorageUri <p>该版本的存储 URI（可选，如 cos://bucket-name/models/name/v2/）</p>
      * @param boolean $UseCustomStorage <p>是否使用用户自带存储桶（默认 false 表示平台托管）</p>
+     * @param GooseFSConfig $GooseFSConfig <p>创建模型时，模型从goosfe里面选取，则需要传递该参数</p>
+     * @param string $StorageType <p>模型上传路径类型</p><p>枚举值：</p><ul><li>LOCAL： 本地上传</li><li>CFS： CFS上传</li><li>COS： COS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul><p>选择cos、cfs、cfstrubo则必须要传storageuri，选择local时不能传递goosefsconfig</p>
      */
     function __construct()
     {
@@ -96,6 +112,15 @@ class CreateModelVersionRequest extends AbstractModel
 
         if (array_key_exists("UseCustomStorage",$param) and $param["UseCustomStorage"] !== null) {
             $this->UseCustomStorage = $param["UseCustomStorage"];
+        }
+
+        if (array_key_exists("GooseFSConfig",$param) and $param["GooseFSConfig"] !== null) {
+            $this->GooseFSConfig = new GooseFSConfig();
+            $this->GooseFSConfig->deserialize($param["GooseFSConfig"]);
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

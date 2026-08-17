@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p>
  * @method string getSubAccountUin() 获取<p>Sub UIN</p>
  * @method void setSubAccountUin(string $SubAccountUin) 设置<p>Sub UIN</p>
+ * @method array getResourceTags() 获取<p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceTags(array $ResourceTags) 设置<p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -187,6 +191,12 @@ class GetInferenceModelResponse extends AbstractModel
     public $SubAccountUin;
 
     /**
+     * @var array <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceTags;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -215,6 +225,8 @@ class GetInferenceModelResponse extends AbstractModel
      * @param integer $CreateTime <p>创建时间</p>
      * @param integer $UpdateTime <p>更新时间</p>
      * @param string $SubAccountUin <p>Sub UIN</p>
+     * @param array $ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -320,6 +332,15 @@ class GetInferenceModelResponse extends AbstractModel
 
         if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
             $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

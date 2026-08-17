@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubAccountUin() 获取<p>云账户的 Sub UIN</p>
  * @method void setSubAccountUin(string $SubAccountUin) 设置<p>云账户的 Sub UIN</p>
+ * @method array getResourceTags() 获取<p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceTags(array $ResourceTags) 设置<p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InferenceModelInfo extends AbstractModel
 {
@@ -248,6 +252,12 @@ class InferenceModelInfo extends AbstractModel
     public $SubAccountUin;
 
     /**
+     * @var array <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $ModelId <p>Model ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelUid <p>模型业务唯一标识</p>
@@ -292,6 +302,8 @@ class InferenceModelInfo extends AbstractModel
      * @param integer $UpdateTime <p>更新时间（毫秒时间戳）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAccountUin <p>云账户的 Sub UIN</p>
+     * @param array $ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -396,6 +408,15 @@ class InferenceModelInfo extends AbstractModel
 
         if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
             $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

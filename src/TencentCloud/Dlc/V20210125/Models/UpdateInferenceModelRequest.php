@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParameterSize(string $ParameterSize) 设置<p>模型参数量（可选，如 7B、1.5B）</p>
  * @method array getTags() 获取<p>模型标签列表（可选）</p>
  * @method void setTags(array $Tags) 设置<p>模型标签列表（可选）</p>
+ * @method array getResourceTags() 获取<p>系统标签列表（TagKey-TagValue）</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>系统标签列表（TagKey-TagValue）</p>
  */
 class UpdateInferenceModelRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UpdateInferenceModelRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var array <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $ModelUid <p>推理模型UID</p>
      * @param string $Name <p>模型名称（可选，不传则不修改）</p>
      * @param string $Description <p>模型描述（可选）</p>
      * @param string $ParameterSize <p>模型参数量（可选，如 7B、1.5B）</p>
      * @param array $Tags <p>模型标签列表（可选）</p>
+     * @param array $ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class UpdateInferenceModelRequest extends AbstractModel
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = $param["Tags"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

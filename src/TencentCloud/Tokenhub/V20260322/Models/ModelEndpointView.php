@@ -26,10 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndpointName(string $EndpointName) 设置<p>推理服务名称。未激活时与 ModelId 相同。</p>
  * @method string getModelId() 获取<p>模型 ID。</p>
  * @method void setModelId(string $ModelId) 设置<p>模型 ID。</p>
+ * @method array getExtraModelIds() 获取<p>模型id别名列表</p>
+ * @method void setExtraModelIds(array $ExtraModelIds) 设置<p>模型id别名列表</p>
  * @method string getModelName() 获取<p>模型名称。</p>
  * @method void setModelName(string $ModelName) 设置<p>模型名称。</p>
  * @method string getStatus() 获取<p>状态。取值：ACTIVE（运行中）、INACTIVE（已停止）。</p>
  * @method void setStatus(string $Status) 设置<p>状态。取值：ACTIVE（运行中）、INACTIVE（已停止）。</p>
+ * @method string getModelStatus() 获取<p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
+ * @method void setModelStatus(string $ModelStatus) 设置<p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
  * @method string getServiceType() 获取<p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
  * @method void setServiceType(string $ServiceType) 设置<p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
  * @method string getChargeType() 获取<p>计费方式。取值：FREE（免费体验）、TOKEN（按 Token 计费）。未激活时为空。</p>
@@ -63,6 +67,11 @@ class ModelEndpointView extends AbstractModel
     public $ModelId;
 
     /**
+     * @var array <p>模型id别名列表</p>
+     */
+    public $ExtraModelIds;
+
+    /**
      * @var string <p>模型名称。</p>
      */
     public $ModelName;
@@ -71,6 +80,11 @@ class ModelEndpointView extends AbstractModel
      * @var string <p>状态。取值：ACTIVE（运行中）、INACTIVE（已停止）。</p>
      */
     public $Status;
+
+    /**
+     * @var string <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
+     */
+    public $ModelStatus;
 
     /**
      * @var string <p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
@@ -111,8 +125,10 @@ class ModelEndpointView extends AbstractModel
      * @param string $EndpointId <p>推理服务 ID。网关默认创建的 id 与模型 id 相同；控制台自定义推理服务以 ep- 开头。</p>
      * @param string $EndpointName <p>推理服务名称。未激活时与 ModelId 相同。</p>
      * @param string $ModelId <p>模型 ID。</p>
+     * @param array $ExtraModelIds <p>模型id别名列表</p>
      * @param string $ModelName <p>模型名称。</p>
      * @param string $Status <p>状态。取值：ACTIVE（运行中）、INACTIVE（已停止）。</p>
+     * @param string $ModelStatus <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
      * @param string $ServiceType <p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
      * @param string $ChargeType <p>计费方式。取值：FREE（免费体验）、TOKEN（按 Token 计费）。未激活时为空。</p>
      * @param boolean $PaymentEnabled <p>是否已开启后付费。true 表示已开启，false 表示未开启。未激活时为 false。</p>
@@ -146,12 +162,20 @@ class ModelEndpointView extends AbstractModel
             $this->ModelId = $param["ModelId"];
         }
 
+        if (array_key_exists("ExtraModelIds",$param) and $param["ExtraModelIds"] !== null) {
+            $this->ExtraModelIds = $param["ExtraModelIds"];
+        }
+
         if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
             $this->ModelName = $param["ModelName"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ModelStatus",$param) and $param["ModelStatus"] !== null) {
+            $this->ModelStatus = $param["ModelStatus"];
         }
 
         if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {

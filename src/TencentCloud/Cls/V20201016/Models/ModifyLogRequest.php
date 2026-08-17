@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLog请求参数结构体
  *
- * @method string getTopicId() 获取<p>日志主题id</p>
- * @method void setTopicId(string $TopicId) 设置<p>日志主题id</p>
+ * @method string getTopicId() 获取<p>日志主题id</p><p>仅在创建日志主题时，开启了日志修改/删除开关的主题，支持日志修改/删除。该功能暂时仅面向白名单内客户使用。</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题id</p><p>仅在创建日志主题时，开启了日志修改/删除开关的主题，支持日志修改/删除。该功能暂时仅面向白名单内客户使用。</p>
  * @method integer getFrom() 获取<p>检索时间范围-开始时间</p><p>单位：ms</p>
  * @method void setFrom(integer $From) 设置<p>检索时间范围-开始时间</p><p>单位：ms</p>
  * @method integer getTo() 获取<p>检索时间范围-结束时间</p><p>单位：ms</p>
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLogRequest extends AbstractModel
 {
     /**
-     * @var string <p>日志主题id</p>
+     * @var string <p>日志主题id</p><p>仅在创建日志主题时，开启了日志修改/删除开关的主题，支持日志修改/删除。该功能暂时仅面向白名单内客户使用。</p>
      */
     public $TopicId;
 
@@ -66,7 +66,7 @@ class ModifyLogRequest extends AbstractModel
     public $ModifyContent;
 
     /**
-     * @param string $TopicId <p>日志主题id</p>
+     * @param string $TopicId <p>日志主题id</p><p>仅在创建日志主题时，开启了日志修改/删除开关的主题，支持日志修改/删除。该功能暂时仅面向白名单内客户使用。</p>
      * @param integer $From <p>检索时间范围-开始时间</p><p>单位：ms</p>
      * @param integer $To <p>检索时间范围-结束时间</p><p>单位：ms</p>
      * @param string $QueryString <p>日志检索条件，仅支持 CQL 语法，不支持 Lucene 语法</p><p>对符合检索条件的日志进行修改</p>

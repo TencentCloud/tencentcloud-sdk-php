@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPriceUnit(string $PriceUnit) 设置<p>价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。</p>
  * @method string getPeakPrice() 获取<p>高峰价格，为空表示无高峰定价</p>
  * @method void setPeakPrice(string $PeakPrice) 设置<p>高峰价格，为空表示无高峰定价</p>
+ * @method string getSpecification() 获取<p>规格描述，例如视觉/语音类模型有值（如 有参考视频 540P、图生视频 首帧 720P、动作控制 1080P、有声-未指定音色），其他模型为空。</p>
+ * @method void setSpecification(string $Specification) 设置<p>规格描述，例如视觉/语音类模型有值（如 有参考视频 540P、图生视频 首帧 720P、动作控制 1080P、有声-未指定音色），其他模型为空。</p>
+ * @method string getUsage() 获取<p>Token 用量描述，例如视觉/语音类模型有值（如 第1秒 62,500 Tokens，后续每秒 15,625 Tokens），其他模型为空。</p>
+ * @method void setUsage(string $Usage) 设置<p>Token 用量描述，例如视觉/语音类模型有值（如 第1秒 62,500 Tokens，后续每秒 15,625 Tokens），其他模型为空。</p>
+ * @method string getReferencePrice() 获取<p>参考费用/预估费用描述，例如视觉/语音类模型有值（如 第1秒 0.625 元，后续每秒 0.15625 元），其他模型为空。</p>
+ * @method void setReferencePrice(string $ReferencePrice) 设置<p>参考费用/预估费用描述，例如视觉/语音类模型有值（如 第1秒 0.625 元，后续每秒 0.15625 元），其他模型为空。</p>
  */
 class ModelChargingItem extends AbstractModel
 {
@@ -59,11 +65,29 @@ class ModelChargingItem extends AbstractModel
     public $PeakPrice;
 
     /**
+     * @var string <p>规格描述，例如视觉/语音类模型有值（如 有参考视频 540P、图生视频 首帧 720P、动作控制 1080P、有声-未指定音色），其他模型为空。</p>
+     */
+    public $Specification;
+
+    /**
+     * @var string <p>Token 用量描述，例如视觉/语音类模型有值（如 第1秒 62,500 Tokens，后续每秒 15,625 Tokens），其他模型为空。</p>
+     */
+    public $Usage;
+
+    /**
+     * @var string <p>参考费用/预估费用描述，例如视觉/语音类模型有值（如 第1秒 0.625 元，后续每秒 0.15625 元），其他模型为空。</p>
+     */
+    public $ReferencePrice;
+
+    /**
      * @param string $PriceName <p>价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。</p>
      * @param string $DisplayName <p>价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。</p>
      * @param string $Price <p>价格数值。</p>
      * @param string $PriceUnit <p>价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。</p>
      * @param string $PeakPrice <p>高峰价格，为空表示无高峰定价</p>
+     * @param string $Specification <p>规格描述，例如视觉/语音类模型有值（如 有参考视频 540P、图生视频 首帧 720P、动作控制 1080P、有声-未指定音色），其他模型为空。</p>
+     * @param string $Usage <p>Token 用量描述，例如视觉/语音类模型有值（如 第1秒 62,500 Tokens，后续每秒 15,625 Tokens），其他模型为空。</p>
+     * @param string $ReferencePrice <p>参考费用/预估费用描述，例如视觉/语音类模型有值（如 第1秒 0.625 元，后续每秒 0.15625 元），其他模型为空。</p>
      */
     function __construct()
     {
@@ -96,6 +120,18 @@ class ModelChargingItem extends AbstractModel
 
         if (array_key_exists("PeakPrice",$param) and $param["PeakPrice"] !== null) {
             $this->PeakPrice = $param["PeakPrice"];
+        }
+
+        if (array_key_exists("Specification",$param) and $param["Specification"] !== null) {
+            $this->Specification = $param["Specification"];
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = $param["Usage"];
+        }
+
+        if (array_key_exists("ReferencePrice",$param) and $param["ReferencePrice"] !== null) {
+            $this->ReferencePrice = $param["ReferencePrice"];
         }
     }
 }

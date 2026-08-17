@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListTWeSeeTasks返回参数结构体
+ * DescribeAccessPointList返回参数结构体
  *
- * @method array getTasks() 获取<p>任务列表</p>
- * @method void setTasks(array $Tasks) 设置<p>任务列表</p>
- * @method integer getTotal() 获取<p>任务数量</p>
- * @method void setTotal(integer $Total) 设置<p>任务数量</p>
+ * @method array getAccessPointList() 获取<p>接入点列表</p>
+ * @method void setAccessPointList(array $AccessPointList) 设置<p>接入点列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ListTWeSeeTasksResponse extends AbstractModel
+class DescribeAccessPointListResponse extends AbstractModel
 {
     /**
-     * @var array <p>任务列表</p>
+     * @var array <p>接入点列表</p>
      */
-    public $Tasks;
-
-    /**
-     * @var integer <p>任务数量</p>
-     */
-    public $Total;
+    public $AccessPointList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class ListTWeSeeTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Tasks <p>任务列表</p>
-     * @param integer $Total <p>任务数量</p>
+     * @param array $AccessPointList <p>接入点列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,13 @@ class ListTWeSeeTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
-            $this->Tasks = [];
-            foreach ($param["Tasks"] as $key => $value){
-                $obj = new SeeTaskInfo();
+        if (array_key_exists("AccessPointList",$param) and $param["AccessPointList"] !== null) {
+            $this->AccessPointList = [];
+            foreach ($param["AccessPointList"] as $key => $value){
+                $obj = new AccessPointInfo();
                 $obj->deserialize($value);
-                array_push($this->Tasks, $obj);
+                array_push($this->AccessPointList, $obj);
             }
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

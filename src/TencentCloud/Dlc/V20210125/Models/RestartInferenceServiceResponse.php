@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuResourceSummary(CpuSummaryItem $CpuResourceSummary) 设置<p>运行中部署的 CPU 资源汇总</p>
  * @method string getResourceConfig() 获取<p>资源配置（JSON 字符串，取自第一个部署）</p>
  * @method void setResourceConfig(string $ResourceConfig) 设置<p>资源配置（JSON 字符串，取自第一个部署）</p>
+ * @method array getResourceTags() 获取<p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceTags(array $ResourceTags) 设置<p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -247,6 +251,12 @@ class RestartInferenceServiceResponse extends AbstractModel
     public $ResourceConfig;
 
     /**
+     * @var array <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceTags;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -295,6 +305,8 @@ class RestartInferenceServiceResponse extends AbstractModel
      * @param string $SubAccountUin <p>子账号UIN（实际操作者）</p>
      * @param CpuSummaryItem $CpuResourceSummary <p>运行中部署的 CPU 资源汇总</p>
      * @param string $ResourceConfig <p>资源配置（JSON 字符串，取自第一个部署）</p>
+     * @param array $ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -401,6 +413,15 @@ class RestartInferenceServiceResponse extends AbstractModel
 
         if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
             $this->ResourceConfig = $param["ResourceConfig"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

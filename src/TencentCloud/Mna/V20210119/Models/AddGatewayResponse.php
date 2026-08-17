@@ -14,30 +14,44 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListTWeSeeTasks返回参数结构体
+ * AddGateway返回参数结构体
  *
- * @method array getTasks() 获取<p>任务列表</p>
- * @method void setTasks(array $Tasks) 设置<p>任务列表</p>
- * @method integer getTotal() 获取<p>任务数量</p>
- * @method void setTotal(integer $Total) 设置<p>任务数量</p>
+ * @method string getGatewayId() 获取<p>网关ID。</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关ID。</p>
+ * @method string getToken() 获取<p>网关鉴权 Token。</p>
+ * @method void setToken(string $Token) 设置<p>网关鉴权 Token。</p>
+ * @method string getRegisterCenterUrl() 获取<p>网关注册地址。</p>
+ * @method void setRegisterCenterUrl(string $RegisterCenterUrl) 设置<p>网关注册地址。</p>
+ * @method string getTelemetryUrl() 获取<p>网关上报地址。</p>
+ * @method void setTelemetryUrl(string $TelemetryUrl) 设置<p>网关上报地址。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ListTWeSeeTasksResponse extends AbstractModel
+class AddGatewayResponse extends AbstractModel
 {
     /**
-     * @var array <p>任务列表</p>
+     * @var string <p>网关ID。</p>
      */
-    public $Tasks;
+    public $GatewayId;
 
     /**
-     * @var integer <p>任务数量</p>
+     * @var string <p>网关鉴权 Token。</p>
      */
-    public $Total;
+    public $Token;
+
+    /**
+     * @var string <p>网关注册地址。</p>
+     */
+    public $RegisterCenterUrl;
+
+    /**
+     * @var string <p>网关上报地址。</p>
+     */
+    public $TelemetryUrl;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +59,10 @@ class ListTWeSeeTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Tasks <p>任务列表</p>
-     * @param integer $Total <p>任务数量</p>
+     * @param string $GatewayId <p>网关ID。</p>
+     * @param string $Token <p>网关鉴权 Token。</p>
+     * @param string $RegisterCenterUrl <p>网关注册地址。</p>
+     * @param string $TelemetryUrl <p>网关上报地址。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +78,20 @@ class ListTWeSeeTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
-            $this->Tasks = [];
-            foreach ($param["Tasks"] as $key => $value){
-                $obj = new SeeTaskInfo();
-                $obj->deserialize($value);
-                array_push($this->Tasks, $obj);
-            }
+        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
+            $this->GatewayId = $param["GatewayId"];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
+            $this->Token = $param["Token"];
+        }
+
+        if (array_key_exists("RegisterCenterUrl",$param) and $param["RegisterCenterUrl"] !== null) {
+            $this->RegisterCenterUrl = $param["RegisterCenterUrl"];
+        }
+
+        if (array_key_exists("TelemetryUrl",$param) and $param["TelemetryUrl"] !== null) {
+            $this->TelemetryUrl = $param["TelemetryUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

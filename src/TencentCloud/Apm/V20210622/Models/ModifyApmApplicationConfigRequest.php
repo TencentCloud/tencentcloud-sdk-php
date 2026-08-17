@@ -138,12 +138,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置<p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
  * @method boolean getUseDefaultFuseConfig() 获取<p>是否使用探针默认熔断阈值</p>
  * @method void setUseDefaultFuseConfig(boolean $UseDefaultFuseConfig) 设置<p>是否使用探针默认熔断阈值</p>
- * @method boolean getEnableHeadSampler() 获取<p>是否开启探针头采样</p>
- * @method void setEnableHeadSampler(boolean $EnableHeadSampler) 设置<p>是否开启探针头采样</p>
- * @method string getHeadSamplerType() 获取<p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
- * @method void setHeadSamplerType(string $HeadSamplerType) 设置<p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
- * @method integer getHeadSamplerArg() 获取<p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
- * @method void setHeadSamplerArg(integer $HeadSamplerArg) 设置<p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+ * @method boolean getEnableHeadSampler() 获取<p>是否开启探针头采样</p><p>（受限）</p>
+ * @method void setEnableHeadSampler(boolean $EnableHeadSampler) 设置<p>是否开启探针头采样</p><p>（受限）</p>
+ * @method string getHeadSamplerType() 获取<p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul><p>（受限）</p>
+ * @method void setHeadSamplerType(string $HeadSamplerType) 设置<p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul><p>（受限）</p>
+ * @method integer getHeadSamplerArg() 获取<p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p><p>（受限）</p>
+ * @method void setHeadSamplerArg(integer $HeadSamplerArg) 设置<p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p><p>（受限）</p>
+ * @method integer getCrossAccountStatus() 获取<p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+ * @method void setCrossAccountStatus(integer $CrossAccountStatus) 设置<p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+ * @method string getCrossAccountPeerId() 获取<p>跨账号关联ID</p>
+ * @method void setCrossAccountPeerId(string $CrossAccountPeerId) 设置<p>跨账号关联ID</p>
  */
 class ModifyApmApplicationConfigRequest extends AbstractModel
 {
@@ -443,19 +447,29 @@ class ModifyApmApplicationConfigRequest extends AbstractModel
     public $UseDefaultFuseConfig;
 
     /**
-     * @var boolean <p>是否开启探针头采样</p>
+     * @var boolean <p>是否开启探针头采样</p><p>（受限）</p>
      */
     public $EnableHeadSampler;
 
     /**
-     * @var string <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+     * @var string <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul><p>（受限）</p>
      */
     public $HeadSamplerType;
 
     /**
-     * @var integer <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+     * @var integer <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p><p>（受限）</p>
      */
     public $HeadSamplerArg;
+
+    /**
+     * @var integer <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     */
+    public $CrossAccountStatus;
+
+    /**
+     * @var string <p>跨账号关联ID</p>
+     */
+    public $CrossAccountPeerId;
 
     /**
      * @param string $InstanceId <p>业务系统 ID</p>
@@ -517,9 +531,11 @@ class ModifyApmApplicationConfigRequest extends AbstractModel
      * @param integer $ErrRateThreshold <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p>
      * @param integer $ResponseDurationWarningThreshold <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
      * @param boolean $UseDefaultFuseConfig <p>是否使用探针默认熔断阈值</p>
-     * @param boolean $EnableHeadSampler <p>是否开启探针头采样</p>
-     * @param string $HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
-     * @param integer $HeadSamplerArg <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+     * @param boolean $EnableHeadSampler <p>是否开启探针头采样</p><p>（受限）</p>
+     * @param string $HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul><p>（受限）</p>
+     * @param integer $HeadSamplerArg <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p><p>（受限）</p>
+     * @param integer $CrossAccountStatus <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     * @param string $CrossAccountPeerId <p>跨账号关联ID</p>
      */
     function __construct()
     {
@@ -792,6 +808,14 @@ class ModifyApmApplicationConfigRequest extends AbstractModel
 
         if (array_key_exists("HeadSamplerArg",$param) and $param["HeadSamplerArg"] !== null) {
             $this->HeadSamplerArg = $param["HeadSamplerArg"];
+        }
+
+        if (array_key_exists("CrossAccountStatus",$param) and $param["CrossAccountStatus"] !== null) {
+            $this->CrossAccountStatus = $param["CrossAccountStatus"];
+        }
+
+        if (array_key_exists("CrossAccountPeerId",$param) and $param["CrossAccountPeerId"] !== null) {
+            $this->CrossAccountPeerId = $param["CrossAccountPeerId"];
         }
     }
 }

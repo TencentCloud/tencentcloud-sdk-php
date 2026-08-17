@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageRegion(string $StorageRegion) 设置<p>上传 COS 存储桶所在地域。不填时使用默认地域。</p>
  * @method string getUploadMethod() 获取<p>上传方式</p><p>枚举值：</p><ul><li>single： 单文件上传</li><li>manifest： 上传源文件与 Manifest（先上传多个源文件，然后上传 Manifest JSON 触发分析）</li></ul><p>默认值：single</p>
  * @method void setUploadMethod(string $UploadMethod) 设置<p>上传方式</p><p>枚举值：</p><ul><li>single： 单文件上传</li><li>manifest： 上传源文件与 Manifest（先上传多个源文件，然后上传 Manifest JSON 触发分析）</li></ul><p>默认值：single</p>
+ * @method string getUploadTarget() 获取<p>上传目标</p><p>枚举值：</p><ul><li>session： 一次性上传会话（默认，通过入参传递 ComprehensionConfig 等上传参数）</li><li>stream： 上传到指定设备（加载对应设备的 ComprehensionConfig 等配置）</li></ul><p>默认值：session</p>
+ * @method void setUploadTarget(string $UploadTarget) 设置<p>上传目标</p><p>枚举值：</p><ul><li>session： 一次性上传会话（默认，通过入参传递 ComprehensionConfig 等上传参数）</li><li>stream： 上传到指定设备（加载对应设备的 ComprehensionConfig 等配置）</li></ul><p>默认值：session</p>
  */
 class CreateTWeSeeDirectUploadCredentialRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateTWeSeeDirectUploadCredentialRequest extends AbstractModel
     public $UploadMethod;
 
     /**
+     * @var string <p>上传目标</p><p>枚举值：</p><ul><li>session： 一次性上传会话（默认，通过入参传递 ComprehensionConfig 等上传参数）</li><li>stream： 上传到指定设备（加载对应设备的 ComprehensionConfig 等配置）</li></ul><p>默认值：session</p>
+     */
+    public $UploadTarget;
+
+    /**
      * @param string $ProductId <p>产品 ID</p><p>非 IoT 设备可传 <code>default</code></p>
      * @param string $DeviceName <p>设备名称</p>
      * @param string $ServiceType <p>算法类型</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解（支持视频文件或多帧图片）</li><li>IMG_COMP： 图片理解（单帧图片）</li></ul>
@@ -112,6 +119,7 @@ class CreateTWeSeeDirectUploadCredentialRequest extends AbstractModel
      * @param integer $MaxInvokeCount <p>该直传凭据最多可触发的分析次数</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
      * @param string $StorageRegion <p>上传 COS 存储桶所在地域。不填时使用默认地域。</p>
      * @param string $UploadMethod <p>上传方式</p><p>枚举值：</p><ul><li>single： 单文件上传</li><li>manifest： 上传源文件与 Manifest（先上传多个源文件，然后上传 Manifest JSON 触发分析）</li></ul><p>默认值：single</p>
+     * @param string $UploadTarget <p>上传目标</p><p>枚举值：</p><ul><li>session： 一次性上传会话（默认，通过入参传递 ComprehensionConfig 等上传参数）</li><li>stream： 上传到指定设备（加载对应设备的 ComprehensionConfig 等配置）</li></ul><p>默认值：session</p>
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class CreateTWeSeeDirectUploadCredentialRequest extends AbstractModel
 
         if (array_key_exists("UploadMethod",$param) and $param["UploadMethod"] !== null) {
             $this->UploadMethod = $param["UploadMethod"];
+        }
+
+        if (array_key_exists("UploadTarget",$param) and $param["UploadTarget"] !== null) {
+            $this->UploadTarget = $param["UploadTarget"];
         }
     }
 }

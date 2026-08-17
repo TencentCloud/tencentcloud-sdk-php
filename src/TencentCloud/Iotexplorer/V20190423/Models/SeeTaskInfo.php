@@ -20,190 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TWeSee 任务详情
  *
- * @method string getTaskId() 获取任务 ID
- * @method void setTaskId(string $TaskId) 设置任务 ID
- * @method integer getStatus() 获取任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
- * @method void setStatus(integer $Status) 设置任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
- * @method SeeTaskMetadata getMetadata() 获取任务元数据
- * @method void setMetadata(SeeTaskMetadata $Metadata) 设置任务元数据
- * @method string getServiceCategory() 获取算法类目。可能取值：
-
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
- * @method void setServiceCategory(string $ServiceCategory) 设置算法类目。可能取值：
-
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
- * @method string getServiceType() 获取算法类型。可能取值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `COMP_HIGHLIGHT`：视频浓缩
- * @method void setServiceType(string $ServiceType) 设置算法类型。可能取值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `COMP_HIGHLIGHT`：视频浓缩
- * @method string getServiceTier() 获取套餐规格。可能取值：
-
-- `POSTPAID`：后付费（适用于视频理解、图片理解）
-- `BASIC`：包年包月基础版（适用于视频理解）
- * @method void setServiceTier(string $ServiceTier) 设置套餐规格。可能取值：
-
-- `POSTPAID`：后付费（适用于视频理解、图片理解）
-- `BASIC`：包年包月基础版（适用于视频理解）
- * @method SeeComprehensionResult getComprehensionResult() 获取视觉理解结果（适用于视频理解、图片理解）
- * @method void setComprehensionResult(SeeComprehensionResult $ComprehensionResult) 设置视觉理解结果（适用于视频理解、图片理解）
- * @method SeeCompHighlightResult getCompHighlightResult() 获取视频语义浓缩结果（适用于视频语义浓缩）
- * @method void setCompHighlightResult(SeeCompHighlightResult $CompHighlightResult) 设置视频语义浓缩结果（适用于视频语义浓缩）
- * @method SeeDetectContinuousResult getDetectContinuousResult() 获取标签持续检测结果
- * @method void setDetectContinuousResult(SeeDetectContinuousResult $DetectContinuousResult) 设置标签持续检测结果
- * @method integer getCostBasic() 获取完成该任务所消耗的基础能力额度
- * @method void setCostBasic(integer $CostBasic) 设置完成该任务所消耗的基础能力额度
- * @method integer getCostAdvanced() 获取完成该任务所消耗的高级能力额度
- * @method void setCostAdvanced(integer $CostAdvanced) 设置完成该任务所消耗的高级能力额度
- * @method array getFiles() 获取输出文件名列表
- * @method void setFiles(array $Files) 设置输出文件名列表
- * @method array getFilesInfo() 获取输出文件详情列表
- * @method void setFilesInfo(array $FilesInfo) 设置输出文件详情列表
- * @method integer getCreateTime() 获取创建时间
- * @method void setCreateTime(integer $CreateTime) 设置创建时间
- * @method integer getUpdateTime() 获取最后更新时间
- * @method void setUpdateTime(integer $UpdateTime) 设置最后更新时间
+ * @method string getTaskId() 获取<p>任务 ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务 ID</p>
+ * @method integer getStatus() 获取<p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
+ * @method SeeTaskMetadata getMetadata() 获取<p>任务元数据</p>
+ * @method void setMetadata(SeeTaskMetadata $Metadata) 设置<p>任务元数据</p>
+ * @method string getServiceCategory() 获取<p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+ * @method void setServiceCategory(string $ServiceCategory) 设置<p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+ * @method string getServiceType() 获取<p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+ * @method void setServiceType(string $ServiceType) 设置<p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+ * @method string getServiceTier() 获取<p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+ * @method void setServiceTier(string $ServiceTier) 设置<p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+ * @method SeeComprehensionResult getComprehensionResult() 获取<p>视觉理解结果（适用于视频理解、图片理解）</p>
+ * @method void setComprehensionResult(SeeComprehensionResult $ComprehensionResult) 设置<p>视觉理解结果（适用于视频理解、图片理解）</p>
+ * @method SeeCompHighlightResult getCompHighlightResult() 获取<p>视频语义浓缩结果（适用于视频语义浓缩）</p>
+ * @method void setCompHighlightResult(SeeCompHighlightResult $CompHighlightResult) 设置<p>视频语义浓缩结果（适用于视频语义浓缩）</p>
+ * @method SeeDetectContinuousResult getDetectContinuousResult() 获取<p>标签持续检测结果</p>
+ * @method void setDetectContinuousResult(SeeDetectContinuousResult $DetectContinuousResult) 设置<p>标签持续检测结果</p>
+ * @method integer getCostBasic() 获取<p>完成该任务所消耗的基础能力额度</p>
+ * @method void setCostBasic(integer $CostBasic) 设置<p>完成该任务所消耗的基础能力额度</p>
+ * @method integer getCostAdvanced() 获取<p>完成该任务所消耗的高级能力额度</p>
+ * @method void setCostAdvanced(integer $CostAdvanced) 设置<p>完成该任务所消耗的高级能力额度</p>
+ * @method array getFiles() 获取<p>输出文件名列表</p>
+ * @method void setFiles(array $Files) 设置<p>输出文件名列表</p>
+ * @method array getFilesInfo() 获取<p>输出文件详情列表</p>
+ * @method void setFilesInfo(array $FilesInfo) 设置<p>输出文件详情列表</p>
+ * @method integer getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
+ * @method integer getUpdateTime() 获取<p>最后更新时间</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>最后更新时间</p>
+ * @method string getCOSURI() 获取<p>直传 COS 的对象 URI</p>
+ * @method void setCOSURI(string $COSURI) 设置<p>直传 COS 的对象 URI</p>
  */
 class SeeTaskInfo extends AbstractModel
 {
     /**
-     * @var string 任务 ID
+     * @var string <p>任务 ID</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
+     * @var integer <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
      */
     public $Status;
 
     /**
-     * @var SeeTaskMetadata 任务元数据
+     * @var SeeTaskMetadata <p>任务元数据</p>
      */
     public $Metadata;
 
     /**
-     * @var string 算法类目。可能取值：
-
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
+     * @var string <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public $ServiceCategory;
 
     /**
-     * @var string 算法类型。可能取值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `COMP_HIGHLIGHT`：视频浓缩
+     * @var string <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public $ServiceType;
 
     /**
-     * @var string 套餐规格。可能取值：
-
-- `POSTPAID`：后付费（适用于视频理解、图片理解）
-- `BASIC`：包年包月基础版（适用于视频理解）
+     * @var string <p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
      */
     public $ServiceTier;
 
     /**
-     * @var SeeComprehensionResult 视觉理解结果（适用于视频理解、图片理解）
+     * @var SeeComprehensionResult <p>视觉理解结果（适用于视频理解、图片理解）</p>
      */
     public $ComprehensionResult;
 
     /**
-     * @var SeeCompHighlightResult 视频语义浓缩结果（适用于视频语义浓缩）
+     * @var SeeCompHighlightResult <p>视频语义浓缩结果（适用于视频语义浓缩）</p>
      */
     public $CompHighlightResult;
 
     /**
-     * @var SeeDetectContinuousResult 标签持续检测结果
+     * @var SeeDetectContinuousResult <p>标签持续检测结果</p>
      */
     public $DetectContinuousResult;
 
     /**
-     * @var integer 完成该任务所消耗的基础能力额度
+     * @var integer <p>完成该任务所消耗的基础能力额度</p>
      */
     public $CostBasic;
 
     /**
-     * @var integer 完成该任务所消耗的高级能力额度
+     * @var integer <p>完成该任务所消耗的高级能力额度</p>
      */
     public $CostAdvanced;
 
     /**
-     * @var array 输出文件名列表
+     * @var array <p>输出文件名列表</p>
      */
     public $Files;
 
     /**
-     * @var array 输出文件详情列表
+     * @var array <p>输出文件详情列表</p>
      */
     public $FilesInfo;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 最后更新时间
+     * @var integer <p>最后更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $TaskId 任务 ID
-     * @param integer $Status 任务状态。可能取值：
+     * @var string <p>直传 COS 的对象 URI</p>
+     */
+    public $COSURI;
 
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
-     * @param SeeTaskMetadata $Metadata 任务元数据
-     * @param string $ServiceCategory 算法类目。可能取值：
-
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
-     * @param string $ServiceType 算法类型。可能取值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `COMP_HIGHLIGHT`：视频浓缩
-     * @param string $ServiceTier 套餐规格。可能取值：
-
-- `POSTPAID`：后付费（适用于视频理解、图片理解）
-- `BASIC`：包年包月基础版（适用于视频理解）
-     * @param SeeComprehensionResult $ComprehensionResult 视觉理解结果（适用于视频理解、图片理解）
-     * @param SeeCompHighlightResult $CompHighlightResult 视频语义浓缩结果（适用于视频语义浓缩）
-     * @param SeeDetectContinuousResult $DetectContinuousResult 标签持续检测结果
-     * @param integer $CostBasic 完成该任务所消耗的基础能力额度
-     * @param integer $CostAdvanced 完成该任务所消耗的高级能力额度
-     * @param array $Files 输出文件名列表
-     * @param array $FilesInfo 输出文件详情列表
-     * @param integer $CreateTime 创建时间
-     * @param integer $UpdateTime 最后更新时间
+    /**
+     * @param string $TaskId <p>任务 ID</p>
+     * @param integer $Status <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
+     * @param SeeTaskMetadata $Metadata <p>任务元数据</p>
+     * @param string $ServiceCategory <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @param string $ServiceType <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @param string $ServiceTier <p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+     * @param SeeComprehensionResult $ComprehensionResult <p>视觉理解结果（适用于视频理解、图片理解）</p>
+     * @param SeeCompHighlightResult $CompHighlightResult <p>视频语义浓缩结果（适用于视频语义浓缩）</p>
+     * @param SeeDetectContinuousResult $DetectContinuousResult <p>标签持续检测结果</p>
+     * @param integer $CostBasic <p>完成该任务所消耗的基础能力额度</p>
+     * @param integer $CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
+     * @param array $Files <p>输出文件名列表</p>
+     * @param array $FilesInfo <p>输出文件详情列表</p>
+     * @param integer $CreateTime <p>创建时间</p>
+     * @param integer $UpdateTime <p>最后更新时间</p>
+     * @param string $COSURI <p>直传 COS 的对象 URI</p>
      */
     function __construct()
     {
@@ -285,6 +233,10 @@ class SeeTaskInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("COSURI",$param) and $param["COSURI"] !== null) {
+            $this->COSURI = $param["COSURI"];
         }
     }
 }

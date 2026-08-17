@@ -198,6 +198,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeadSamplerType(string $HeadSamplerType) 设置<p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
  * @method integer getHeadSamplerArg() 获取<p>采样阈值，100等于关闭采样，0表示全采样</p>
  * @method void setHeadSamplerArg(integer $HeadSamplerArg) 设置<p>采样阈值，100等于关闭采样，0表示全采样</p>
+ * @method integer getCrossAccountStatus() 获取<p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+ * @method void setCrossAccountStatus(integer $CrossAccountStatus) 设置<p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+ * @method string getCrossAccountPeerId() 获取<p>跨账号关联ID</p>
+ * @method void setCrossAccountPeerId(string $CrossAccountPeerId) 设置<p>跨账号关联ID</p>
  */
 class ApmAppConfig extends AbstractModel
 {
@@ -555,6 +559,16 @@ class ApmAppConfig extends AbstractModel
     public $HeadSamplerArg;
 
     /**
+     * @var integer <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     */
+    public $CrossAccountStatus;
+
+    /**
+     * @var string <p>跨账号关联ID</p>
+     */
+    public $CrossAccountPeerId;
+
+    /**
      * @param string $InstanceKey <p>实例ID</p>
      * @param string $ServiceName <p>服务名</p>
      * @param integer $UrlConvergenceSwitch <p>URL收敛开关</p>
@@ -644,6 +658,8 @@ class ApmAppConfig extends AbstractModel
      * @param boolean $EnableHeadSampler <p>头采样开关</p>
      * @param string $HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
      * @param integer $HeadSamplerArg <p>采样阈值，100等于关闭采样，0表示全采样</p>
+     * @param integer $CrossAccountStatus <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     * @param string $CrossAccountPeerId <p>跨账号关联ID</p>
      */
     function __construct()
     {
@@ -932,6 +948,14 @@ class ApmAppConfig extends AbstractModel
 
         if (array_key_exists("HeadSamplerArg",$param) and $param["HeadSamplerArg"] !== null) {
             $this->HeadSamplerArg = $param["HeadSamplerArg"];
+        }
+
+        if (array_key_exists("CrossAccountStatus",$param) and $param["CrossAccountStatus"] !== null) {
+            $this->CrossAccountStatus = $param["CrossAccountStatus"];
+        }
+
+        if (array_key_exists("CrossAccountPeerId",$param) and $param["CrossAccountPeerId"] !== null) {
+            $this->CrossAccountPeerId = $param["CrossAccountPeerId"];
         }
     }
 }

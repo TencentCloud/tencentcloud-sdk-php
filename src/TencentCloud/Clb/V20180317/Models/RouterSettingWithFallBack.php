@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoutingStrategyArgs(RoutingStrategyArgs $RoutingStrategyArgs) 设置<p>L2模型组内路由调度算法参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method StickyConfig getStickyConfig() 获取<p>粘连配置参数</p>
+ * @method void setStickyConfig(StickyConfig $StickyConfig) 设置<p>粘连配置参数</p>
  */
 class RouterSettingWithFallBack extends AbstractModel
 {
@@ -74,6 +76,11 @@ class RouterSettingWithFallBack extends AbstractModel
     public $RoutingStrategyArgs;
 
     /**
+     * @var StickyConfig <p>粘连配置参数</p>
+     */
+    public $StickyConfig;
+
+    /**
      * @param string $CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FallBackItem $FallBack <p>回退策略</p>
@@ -84,6 +91,7 @@ class RouterSettingWithFallBack extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RoutingStrategyArgs $RoutingStrategyArgs <p>L2模型组内路由调度算法参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param StickyConfig $StickyConfig <p>粘连配置参数</p>
      */
     function __construct()
     {
@@ -118,6 +126,11 @@ class RouterSettingWithFallBack extends AbstractModel
         if (array_key_exists("RoutingStrategyArgs",$param) and $param["RoutingStrategyArgs"] !== null) {
             $this->RoutingStrategyArgs = new RoutingStrategyArgs();
             $this->RoutingStrategyArgs->deserialize($param["RoutingStrategyArgs"]);
+        }
+
+        if (array_key_exists("StickyConfig",$param) and $param["StickyConfig"] !== null) {
+            $this->StickyConfig = new StickyConfig();
+            $this->StickyConfig->deserialize($param["StickyConfig"]);
         }
     }
 }

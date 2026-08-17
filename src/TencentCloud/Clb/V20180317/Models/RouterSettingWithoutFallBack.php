@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoutingStrategyArgs(RoutingStrategyArgs $RoutingStrategyArgs) 设置<p>L2模型组内路由调度算法参数</p>
  * @method integer getNumRetries() 获取<p>CMR实例级别请求组内重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
  * @method void setNumRetries(integer $NumRetries) 设置<p>CMR实例级别请求组内重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
+ * @method StickyConfig getStickyConfig() 获取<p>粘连路由配置参数</p>
+ * @method void setStickyConfig(StickyConfig $StickyConfig) 设置<p>粘连路由配置参数</p>
  */
 class RouterSettingWithoutFallBack extends AbstractModel
 {
@@ -52,10 +54,16 @@ class RouterSettingWithoutFallBack extends AbstractModel
     public $NumRetries;
 
     /**
+     * @var StickyConfig <p>粘连路由配置参数</p>
+     */
+    public $StickyConfig;
+
+    /**
      * @param string $RoutingStrategy <p>路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
      * @param string $CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
      * @param RoutingStrategyArgs $RoutingStrategyArgs <p>L2模型组内路由调度算法参数</p>
      * @param integer $NumRetries <p>CMR实例级别请求组内重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
+     * @param StickyConfig $StickyConfig <p>粘连路由配置参数</p>
      */
     function __construct()
     {
@@ -85,6 +93,11 @@ class RouterSettingWithoutFallBack extends AbstractModel
 
         if (array_key_exists("NumRetries",$param) and $param["NumRetries"] !== null) {
             $this->NumRetries = $param["NumRetries"];
+        }
+
+        if (array_key_exists("StickyConfig",$param) and $param["StickyConfig"] !== null) {
+            $this->StickyConfig = new StickyConfig();
+            $this->StickyConfig->deserialize($param["StickyConfig"]);
         }
     }
 }

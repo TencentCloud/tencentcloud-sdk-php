@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询HTTP访问服务输出路由信息
  *
- * @method string getPath() 获取路径
- * @method void setPath(string $Path) 设置路径
- * @method HTTPServicePathRewrite getPathRewrite() 获取路径重写
- * @method void setPathRewrite(HTTPServicePathRewrite $PathRewrite) 设置路径重写
- * @method string getUpstreamResourceType() 获取上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
- * @method void setUpstreamResourceType(string $UpstreamResourceType) 设置上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
- * @method string getUpstreamResourceName() 获取上游服务名
- * @method void setUpstreamResourceName(string $UpstreamResourceName) 设置上游服务名
- * @method boolean getEnableSafeDomain() 获取是否开启安全域名
- * @method void setEnableSafeDomain(boolean $EnableSafeDomain) 设置是否开启安全域名
- * @method boolean getEnableAuth() 获取是否开启身份认证
- * @method void setEnableAuth(boolean $EnableAuth) 设置是否开启身份认证
- * @method boolean getEnablePathTransmission() 获取是否开启路径透传
- * @method void setEnablePathTransmission(boolean $EnablePathTransmission) 设置是否开启路径透传
- * @method HTTPServiceRouteQPSPolicy getQPSPolicy() 获取QPS限频策略
- * @method void setQPSPolicy(HTTPServiceRouteQPSPolicy $QPSPolicy) 设置QPS限频策略
- * @method boolean getEnable() 获取是否开启路由
- * @method void setEnable(boolean $Enable) 设置是否开启路由
- * @method HTTPServiceExtension getExtension() 获取扩展字段，内部包含headers处理等
- * @method void setExtension(HTTPServiceExtension $Extension) 设置扩展字段，内部包含headers处理等
- * @method string getCreateTime() 获取路由创建时间
- * @method void setCreateTime(string $CreateTime) 设置路由创建时间
- * @method string getUpdateTime() 获取路由更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置路由更新时间
+ * @method string getPath() 获取<p>路径</p>
+ * @method void setPath(string $Path) 设置<p>路径</p>
+ * @method HTTPServicePathRewrite getPathRewrite() 获取<p>路径重写规则</p>
+ * @method void setPathRewrite(HTTPServicePathRewrite $PathRewrite) 设置<p>路径重写规则</p>
+ * @method string getUpstreamResourceType() 获取<p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
+ * @method void setUpstreamResourceType(string $UpstreamResourceType) 设置<p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
+ * @method string getUpstreamResourceName() 获取<p>上游服务名</p>
+ * @method void setUpstreamResourceName(string $UpstreamResourceName) 设置<p>上游服务名</p>
+ * @method boolean getEnableSafeDomain() 获取<p>是否开启安全域名</p>
+ * @method void setEnableSafeDomain(boolean $EnableSafeDomain) 设置<p>是否开启安全域名</p>
+ * @method boolean getEnableAuth() 获取<p>是否开启身份认证</p>
+ * @method void setEnableAuth(boolean $EnableAuth) 设置<p>是否开启身份认证</p>
+ * @method boolean getEnablePathTransmission() 获取<p>是否开启路径透传</p>
+ * @method void setEnablePathTransmission(boolean $EnablePathTransmission) 设置<p>是否开启路径透传</p>
+ * @method HTTPServiceRouteQPSPolicy getQPSPolicy() 获取<p>QPS限频策略</p>
+ * @method void setQPSPolicy(HTTPServiceRouteQPSPolicy $QPSPolicy) 设置<p>QPS限频策略</p>
+ * @method boolean getEnable() 获取<p>是否开启路由</p>
+ * @method void setEnable(boolean $Enable) 设置<p>是否开启路由</p>
+ * @method HTTPServiceExtension getExtension() 获取<p>扩展字段，内部包含headers处理等</p>
+ * @method void setExtension(HTTPServiceExtension $Extension) 设置<p>扩展字段，内部包含headers处理等</p>
+ * @method string getCreateTime() 获取<p>路由创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>路由创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
+ * @method string getUpdateTime() 获取<p>路由更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>路由更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
  */
 class HTTPServiceRoute extends AbstractModel
 {
     /**
-     * @var string 路径
+     * @var string <p>路径</p>
      */
     public $Path;
 
     /**
-     * @var HTTPServicePathRewrite 路径重写
+     * @var HTTPServicePathRewrite <p>路径重写规则</p>
      */
     public $PathRewrite;
 
     /**
-     * @var string 上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
+     * @var string <p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
      */
     public $UpstreamResourceType;
 
     /**
-     * @var string 上游服务名
+     * @var string <p>上游服务名</p>
      */
     public $UpstreamResourceName;
 
     /**
-     * @var boolean 是否开启安全域名
+     * @var boolean <p>是否开启安全域名</p>
      */
     public $EnableSafeDomain;
 
     /**
-     * @var boolean 是否开启身份认证
+     * @var boolean <p>是否开启身份认证</p>
      */
     public $EnableAuth;
 
     /**
-     * @var boolean 是否开启路径透传
+     * @var boolean <p>是否开启路径透传</p>
      */
     public $EnablePathTransmission;
 
     /**
-     * @var HTTPServiceRouteQPSPolicy QPS限频策略
+     * @var HTTPServiceRouteQPSPolicy <p>QPS限频策略</p>
      */
     public $QPSPolicy;
 
     /**
-     * @var boolean 是否开启路由
+     * @var boolean <p>是否开启路由</p>
      */
     public $Enable;
 
     /**
-     * @var HTTPServiceExtension 扩展字段，内部包含headers处理等
+     * @var HTTPServiceExtension <p>扩展字段，内部包含headers处理等</p>
      */
     public $Extension;
 
     /**
-     * @var string 路由创建时间
+     * @var string <p>路由创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 路由更新时间
+     * @var string <p>路由更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $Path 路径
-     * @param HTTPServicePathRewrite $PathRewrite 路径重写
-     * @param string $UpstreamResourceType 上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
-     * @param string $UpstreamResourceName 上游服务名
-     * @param boolean $EnableSafeDomain 是否开启安全域名
-     * @param boolean $EnableAuth 是否开启身份认证
-     * @param boolean $EnablePathTransmission 是否开启路径透传
-     * @param HTTPServiceRouteQPSPolicy $QPSPolicy QPS限频策略
-     * @param boolean $Enable 是否开启路由
-     * @param HTTPServiceExtension $Extension 扩展字段，内部包含headers处理等
-     * @param string $CreateTime 路由创建时间
-     * @param string $UpdateTime 路由更新时间
+     * @param string $Path <p>路径</p>
+     * @param HTTPServicePathRewrite $PathRewrite <p>路径重写规则</p>
+     * @param string $UpstreamResourceType <p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
+     * @param string $UpstreamResourceName <p>上游服务名</p>
+     * @param boolean $EnableSafeDomain <p>是否开启安全域名</p>
+     * @param boolean $EnableAuth <p>是否开启身份认证</p>
+     * @param boolean $EnablePathTransmission <p>是否开启路径透传</p>
+     * @param HTTPServiceRouteQPSPolicy $QPSPolicy <p>QPS限频策略</p>
+     * @param boolean $Enable <p>是否开启路由</p>
+     * @param HTTPServiceExtension $Extension <p>扩展字段，内部包含headers处理等</p>
+     * @param string $CreateTime <p>路由创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
+     * @param string $UpdateTime <p>路由更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
      */
     function __construct()
     {

@@ -20,338 +20,230 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Datahub资源配置
  *
- * @method string getType() 获取资源类型  type类型如下: 
-KAFKA,
-EB_ES,
-EB_COS,
-EB_CLS,
-EB_,
-MONGODB,
-HTTP,
-TDW,
-ES,
-CLICKHOUSE,
-DTS,
-CLS,
-COS,
-TOPIC,
-MYSQL,
-MQTT,
-MYSQL_DATA,
-DORIS,
-POSTGRESQL,
-TDSQL_C_POSTGRESQL,
-TDSQL_POSTGRESQL,
-WAREHOUSE_POSTGRESQL,
-TDSQL_C_MYSQL,
-MARIADB,
-SQLSERVER,
-CTSDB,
-SCF
-
-
- * @method void setType(string $Type) 设置资源类型  type类型如下: 
-KAFKA,
-EB_ES,
-EB_COS,
-EB_CLS,
-EB_,
-MONGODB,
-HTTP,
-TDW,
-ES,
-CLICKHOUSE,
-DTS,
-CLS,
-COS,
-TOPIC,
-MYSQL,
-MQTT,
-MYSQL_DATA,
-DORIS,
-POSTGRESQL,
-TDSQL_C_POSTGRESQL,
-TDSQL_POSTGRESQL,
-WAREHOUSE_POSTGRESQL,
-TDSQL_C_MYSQL,
-MARIADB,
-SQLSERVER,
-CTSDB,
-SCF
-
-
- * @method KafkaParam getKafkaParam() 获取ckafka配置，Type为KAFKA时必填
+ * @method string getType() 获取<p>资源类型  type类型如下:<br>KAFKA,<br>EB_ES,<br>EB_COS,<br>EB_CLS,<br>EB_,<br>MONGODB,<br>HTTP,<br>TDW,<br>ES,<br>CLICKHOUSE,<br>DTS,<br>CLS,<br>COS,<br>TOPIC,<br>MYSQL,<br>MQTT,<br>MYSQL_DATA,<br>DORIS,<br>POSTGRESQL,<br>TDSQL_C_POSTGRESQL,<br>TDSQL_POSTGRESQL,<br>WAREHOUSE_POSTGRESQL,<br>TDSQL_C_MYSQL,<br>MARIADB,<br>SQLSERVER,<br>CTSDB,<br>SCF</p>
+ * @method void setType(string $Type) 设置<p>资源类型  type类型如下:<br>KAFKA,<br>EB_ES,<br>EB_COS,<br>EB_CLS,<br>EB_,<br>MONGODB,<br>HTTP,<br>TDW,<br>ES,<br>CLICKHOUSE,<br>DTS,<br>CLS,<br>COS,<br>TOPIC,<br>MYSQL,<br>MQTT,<br>MYSQL_DATA,<br>DORIS,<br>POSTGRESQL,<br>TDSQL_C_POSTGRESQL,<br>TDSQL_POSTGRESQL,<br>WAREHOUSE_POSTGRESQL,<br>TDSQL_C_MYSQL,<br>MARIADB,<br>SQLSERVER,<br>CTSDB,<br>SCF</p>
+ * @method KafkaParam getKafkaParam() 获取<p>ckafka配置，Type为KAFKA时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKafkaParam(KafkaParam $KafkaParam) 设置ckafka配置，Type为KAFKA时必填
+ * @method void setKafkaParam(KafkaParam $KafkaParam) 设置<p>ckafka配置，Type为KAFKA时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EventBusParam getEventBusParam() 获取EB配置，Type为EB时必填
+ * @method EventBusParam getEventBusParam() 获取<p>EB配置，Type为EB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventBusParam(EventBusParam $EventBusParam) 设置EB配置，Type为EB时必填
+ * @method void setEventBusParam(EventBusParam $EventBusParam) 设置<p>EB配置，Type为EB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MongoDBParam getMongoDBParam() 获取MongoDB配置，Type为MONGODB时必填
+ * @method MongoDBParam getMongoDBParam() 获取<p>MongoDB配置，Type为MONGODB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMongoDBParam(MongoDBParam $MongoDBParam) 设置MongoDB配置，Type为MONGODB时必填
+ * @method void setMongoDBParam(MongoDBParam $MongoDBParam) 设置<p>MongoDB配置，Type为MONGODB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EsParam getEsParam() 获取Es配置，Type为ES时必填
+ * @method EsParam getEsParam() 获取<p>Es配置，Type为ES时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEsParam(EsParam $EsParam) 设置Es配置，Type为ES时必填
+ * @method void setEsParam(EsParam $EsParam) 设置<p>Es配置，Type为ES时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TdwParam getTdwParam() 获取Tdw配置，Type为TDW时必填
+ * @method TdwParam getTdwParam() 获取<p>Tdw配置，Type为TDW时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTdwParam(TdwParam $TdwParam) 设置Tdw配置，Type为TDW时必填
+ * @method void setTdwParam(TdwParam $TdwParam) 设置<p>Tdw配置，Type为TDW时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DtsParam getDtsParam() 获取Dts配置，Type为DTS时必填
+ * @method DtsParam getDtsParam() 获取<p>Dts配置，Type为DTS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDtsParam(DtsParam $DtsParam) 设置Dts配置，Type为DTS时必填
+ * @method void setDtsParam(DtsParam $DtsParam) 设置<p>Dts配置，Type为DTS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ClickHouseParam getClickHouseParam() 获取ClickHouse配置，Type为CLICKHOUSE时必填
+ * @method ClickHouseParam getClickHouseParam() 获取<p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClickHouseParam(ClickHouseParam $ClickHouseParam) 设置ClickHouse配置，Type为CLICKHOUSE时必填
+ * @method void setClickHouseParam(ClickHouseParam $ClickHouseParam) 设置<p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ClsParam getClsParam() 获取Cls配置，Type为CLS时必填
+ * @method ClsParam getClsParam() 获取<p>Cls配置，Type为CLS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClsParam(ClsParam $ClsParam) 设置Cls配置，Type为CLS时必填
+ * @method void setClsParam(ClsParam $ClsParam) 设置<p>Cls配置，Type为CLS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CosParam getCosParam() 获取Cos配置，Type为COS时必填
+ * @method CosParam getCosParam() 获取<p>Cos配置，Type为COS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosParam(CosParam $CosParam) 设置Cos配置，Type为COS时必填
+ * @method void setCosParam(CosParam $CosParam) 设置<p>Cos配置，Type为COS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MySQLParam getMySQLParam() 获取MySQL配置，Type为MYSQL时必填
+ * @method MySQLParam getMySQLParam() 获取<p>MySQL配置，Type为MYSQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMySQLParam(MySQLParam $MySQLParam) 设置MySQL配置，Type为MYSQL时必填
+ * @method void setMySQLParam(MySQLParam $MySQLParam) 设置<p>MySQL配置，Type为MYSQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PostgreSQLParam getPostgreSQLParam() 获取PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+ * @method PostgreSQLParam getPostgreSQLParam() 获取<p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPostgreSQLParam(PostgreSQLParam $PostgreSQLParam) 设置PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+ * @method void setPostgreSQLParam(PostgreSQLParam $PostgreSQLParam) 设置<p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TopicParam getTopicParam() 获取Topic配置，Type为Topic时必填
+ * @method TopicParam getTopicParam() 获取<p>Topic配置，Type为Topic时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicParam(TopicParam $TopicParam) 设置Topic配置，Type为Topic时必填
+ * @method void setTopicParam(TopicParam $TopicParam) 设置<p>Topic配置，Type为Topic时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MariaDBParam getMariaDBParam() 获取MariaDB配置，Type为MARIADB时必填
+ * @method MariaDBParam getMariaDBParam() 获取<p>MariaDB配置，Type为MARIADB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMariaDBParam(MariaDBParam $MariaDBParam) 设置MariaDB配置，Type为MARIADB时必填
+ * @method void setMariaDBParam(MariaDBParam $MariaDBParam) 设置<p>MariaDB配置，Type为MARIADB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SQLServerParam getSQLServerParam() 获取SQLServer配置，Type为SQLSERVER时必填
+ * @method SQLServerParam getSQLServerParam() 获取<p>SQLServer配置，Type为SQLSERVER时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSQLServerParam(SQLServerParam $SQLServerParam) 设置SQLServer配置，Type为SQLSERVER时必填
+ * @method void setSQLServerParam(SQLServerParam $SQLServerParam) 设置<p>SQLServer配置，Type为SQLSERVER时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CtsdbParam getCtsdbParam() 获取Ctsdb配置，Type为CTSDB时必填
+ * @method CtsdbParam getCtsdbParam() 获取<p>Ctsdb配置，Type为CTSDB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCtsdbParam(CtsdbParam $CtsdbParam) 设置Ctsdb配置，Type为CTSDB时必填
+ * @method void setCtsdbParam(CtsdbParam $CtsdbParam) 设置<p>Ctsdb配置，Type为CTSDB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScfParam getScfParam() 获取Scf配置，Type为SCF时必填
+ * @method ScfParam getScfParam() 获取<p>Scf配置，Type为SCF时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScfParam(ScfParam $ScfParam) 设置Scf配置，Type为SCF时必填
+ * @method void setScfParam(ScfParam $ScfParam) 设置<p>Scf配置，Type为SCF时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MqttParam getMqttParam() 获取MQTT配置，Type为 MQTT 时必填
+ * @method MqttParam getMqttParam() 获取<p>MQTT配置，Type为 MQTT 时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMqttParam(MqttParam $MqttParam) 设置MQTT配置，Type为 MQTT 时必填
+ * @method void setMqttParam(MqttParam $MqttParam) 设置<p>MQTT配置，Type为 MQTT 时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method IcebergParam getIcebergParam() 获取<p>IceBerg配置</p>
+ * @method void setIcebergParam(IcebergParam $IcebergParam) 设置<p>IceBerg配置</p>
  */
 class DatahubResource extends AbstractModel
 {
     /**
-     * @var string 资源类型  type类型如下: 
-KAFKA,
-EB_ES,
-EB_COS,
-EB_CLS,
-EB_,
-MONGODB,
-HTTP,
-TDW,
-ES,
-CLICKHOUSE,
-DTS,
-CLS,
-COS,
-TOPIC,
-MYSQL,
-MQTT,
-MYSQL_DATA,
-DORIS,
-POSTGRESQL,
-TDSQL_C_POSTGRESQL,
-TDSQL_POSTGRESQL,
-WAREHOUSE_POSTGRESQL,
-TDSQL_C_MYSQL,
-MARIADB,
-SQLSERVER,
-CTSDB,
-SCF
-
-
+     * @var string <p>资源类型  type类型如下:<br>KAFKA,<br>EB_ES,<br>EB_COS,<br>EB_CLS,<br>EB_,<br>MONGODB,<br>HTTP,<br>TDW,<br>ES,<br>CLICKHOUSE,<br>DTS,<br>CLS,<br>COS,<br>TOPIC,<br>MYSQL,<br>MQTT,<br>MYSQL_DATA,<br>DORIS,<br>POSTGRESQL,<br>TDSQL_C_POSTGRESQL,<br>TDSQL_POSTGRESQL,<br>WAREHOUSE_POSTGRESQL,<br>TDSQL_C_MYSQL,<br>MARIADB,<br>SQLSERVER,<br>CTSDB,<br>SCF</p>
      */
     public $Type;
 
     /**
-     * @var KafkaParam ckafka配置，Type为KAFKA时必填
+     * @var KafkaParam <p>ckafka配置，Type为KAFKA时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaParam;
 
     /**
-     * @var EventBusParam EB配置，Type为EB时必填
+     * @var EventBusParam <p>EB配置，Type为EB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventBusParam;
 
     /**
-     * @var MongoDBParam MongoDB配置，Type为MONGODB时必填
+     * @var MongoDBParam <p>MongoDB配置，Type为MONGODB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongoDBParam;
 
     /**
-     * @var EsParam Es配置，Type为ES时必填
+     * @var EsParam <p>Es配置，Type为ES时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsParam;
 
     /**
-     * @var TdwParam Tdw配置，Type为TDW时必填
+     * @var TdwParam <p>Tdw配置，Type为TDW时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TdwParam;
 
     /**
-     * @var DtsParam Dts配置，Type为DTS时必填
+     * @var DtsParam <p>Dts配置，Type为DTS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DtsParam;
 
     /**
-     * @var ClickHouseParam ClickHouse配置，Type为CLICKHOUSE时必填
+     * @var ClickHouseParam <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClickHouseParam;
 
     /**
-     * @var ClsParam Cls配置，Type为CLS时必填
+     * @var ClsParam <p>Cls配置，Type为CLS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClsParam;
 
     /**
-     * @var CosParam Cos配置，Type为COS时必填
+     * @var CosParam <p>Cos配置，Type为COS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosParam;
 
     /**
-     * @var MySQLParam MySQL配置，Type为MYSQL时必填
+     * @var MySQLParam <p>MySQL配置，Type为MYSQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MySQLParam;
 
     /**
-     * @var PostgreSQLParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * @var PostgreSQLParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostgreSQLParam;
 
     /**
-     * @var TopicParam Topic配置，Type为Topic时必填
+     * @var TopicParam <p>Topic配置，Type为Topic时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicParam;
 
     /**
-     * @var MariaDBParam MariaDB配置，Type为MARIADB时必填
+     * @var MariaDBParam <p>MariaDB配置，Type为MARIADB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MariaDBParam;
 
     /**
-     * @var SQLServerParam SQLServer配置，Type为SQLSERVER时必填
+     * @var SQLServerParam <p>SQLServer配置，Type为SQLSERVER时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SQLServerParam;
 
     /**
-     * @var CtsdbParam Ctsdb配置，Type为CTSDB时必填
+     * @var CtsdbParam <p>Ctsdb配置，Type为CTSDB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CtsdbParam;
 
     /**
-     * @var ScfParam Scf配置，Type为SCF时必填
+     * @var ScfParam <p>Scf配置，Type为SCF时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScfParam;
 
     /**
-     * @var MqttParam MQTT配置，Type为 MQTT 时必填
+     * @var MqttParam <p>MQTT配置，Type为 MQTT 时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MqttParam;
 
     /**
-     * @param string $Type 资源类型  type类型如下: 
-KAFKA,
-EB_ES,
-EB_COS,
-EB_CLS,
-EB_,
-MONGODB,
-HTTP,
-TDW,
-ES,
-CLICKHOUSE,
-DTS,
-CLS,
-COS,
-TOPIC,
-MYSQL,
-MQTT,
-MYSQL_DATA,
-DORIS,
-POSTGRESQL,
-TDSQL_C_POSTGRESQL,
-TDSQL_POSTGRESQL,
-WAREHOUSE_POSTGRESQL,
-TDSQL_C_MYSQL,
-MARIADB,
-SQLSERVER,
-CTSDB,
-SCF
+     * @var IcebergParam <p>IceBerg配置</p>
+     */
+    public $IcebergParam;
 
-
-     * @param KafkaParam $KafkaParam ckafka配置，Type为KAFKA时必填
+    /**
+     * @param string $Type <p>资源类型  type类型如下:<br>KAFKA,<br>EB_ES,<br>EB_COS,<br>EB_CLS,<br>EB_,<br>MONGODB,<br>HTTP,<br>TDW,<br>ES,<br>CLICKHOUSE,<br>DTS,<br>CLS,<br>COS,<br>TOPIC,<br>MYSQL,<br>MQTT,<br>MYSQL_DATA,<br>DORIS,<br>POSTGRESQL,<br>TDSQL_C_POSTGRESQL,<br>TDSQL_POSTGRESQL,<br>WAREHOUSE_POSTGRESQL,<br>TDSQL_C_MYSQL,<br>MARIADB,<br>SQLSERVER,<br>CTSDB,<br>SCF</p>
+     * @param KafkaParam $KafkaParam <p>ckafka配置，Type为KAFKA时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventBusParam $EventBusParam EB配置，Type为EB时必填
+     * @param EventBusParam $EventBusParam <p>EB配置，Type为EB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MongoDBParam $MongoDBParam MongoDB配置，Type为MONGODB时必填
+     * @param MongoDBParam $MongoDBParam <p>MongoDB配置，Type为MONGODB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsParam $EsParam Es配置，Type为ES时必填
+     * @param EsParam $EsParam <p>Es配置，Type为ES时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TdwParam $TdwParam Tdw配置，Type为TDW时必填
+     * @param TdwParam $TdwParam <p>Tdw配置，Type为TDW时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DtsParam $DtsParam Dts配置，Type为DTS时必填
+     * @param DtsParam $DtsParam <p>Dts配置，Type为DTS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClickHouseParam $ClickHouseParam ClickHouse配置，Type为CLICKHOUSE时必填
+     * @param ClickHouseParam $ClickHouseParam <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClsParam $ClsParam Cls配置，Type为CLS时必填
+     * @param ClsParam $ClsParam <p>Cls配置，Type为CLS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosParam $CosParam Cos配置，Type为COS时必填
+     * @param CosParam $CosParam <p>Cos配置，Type为COS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MySQLParam $MySQLParam MySQL配置，Type为MYSQL时必填
+     * @param MySQLParam $MySQLParam <p>MySQL配置，Type为MYSQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostgreSQLParam $PostgreSQLParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * @param PostgreSQLParam $PostgreSQLParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicParam $TopicParam Topic配置，Type为Topic时必填
+     * @param TopicParam $TopicParam <p>Topic配置，Type为Topic时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MariaDBParam $MariaDBParam MariaDB配置，Type为MARIADB时必填
+     * @param MariaDBParam $MariaDBParam <p>MariaDB配置，Type为MARIADB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SQLServerParam $SQLServerParam SQLServer配置，Type为SQLSERVER时必填
+     * @param SQLServerParam $SQLServerParam <p>SQLServer配置，Type为SQLSERVER时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CtsdbParam $CtsdbParam Ctsdb配置，Type为CTSDB时必填
+     * @param CtsdbParam $CtsdbParam <p>Ctsdb配置，Type为CTSDB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScfParam $ScfParam Scf配置，Type为SCF时必填
+     * @param ScfParam $ScfParam <p>Scf配置，Type为SCF时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MqttParam $MqttParam MQTT配置，Type为 MQTT 时必填
+     * @param MqttParam $MqttParam <p>MQTT配置，Type为 MQTT 时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param IcebergParam $IcebergParam <p>IceBerg配置</p>
      */
     function __construct()
     {
@@ -453,6 +345,11 @@ SCF
         if (array_key_exists("MqttParam",$param) and $param["MqttParam"] !== null) {
             $this->MqttParam = new MqttParam();
             $this->MqttParam->deserialize($param["MqttParam"]);
+        }
+
+        if (array_key_exists("IcebergParam",$param) and $param["IcebergParam"] !== null) {
+            $this->IcebergParam = new IcebergParam();
+            $this->IcebergParam->deserialize($param["IcebergParam"]);
         }
     }
 }

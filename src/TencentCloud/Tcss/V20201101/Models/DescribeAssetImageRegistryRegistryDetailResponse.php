@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInsecure(integer $Insecure) 设置<p>安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1</p>
  * @method array getConnDetectDetail() 获取<p>联通性检测结果详情</p>
  * @method void setConnDetectDetail(array $ConnDetectDetail) 设置<p>联通性检测结果详情</p>
- * @method string getInstanceID() 获取<p>tcr情况下instance_id</p>
- * @method void setInstanceID(string $InstanceID) 设置<p>tcr情况下instance_id</p>
+ * @method string getInstanceID() 获取<p>TCR实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>TCR实例ID</p>
  * @method integer getSyncMode() 获取<p>同步方式，0全量同步，1增量同步</p>
  * @method void setSyncMode(integer $SyncMode) 设置<p>同步方式，0全量同步，1增量同步</p>
  * @method boolean getNeedScan() 获取<p>是否自动授权&amp;扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像</p>
@@ -113,7 +113,7 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
     public $ConnDetectDetail;
 
     /**
-     * @var string <p>tcr情况下instance_id</p>
+     * @var string <p>TCR实例ID</p>
      */
     public $InstanceID;
 
@@ -154,7 +154,7 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
      * @param integer $SpeedLimit <p>限速</p>
      * @param integer $Insecure <p>安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1</p>
      * @param array $ConnDetectDetail <p>联通性检测结果详情</p>
-     * @param string $InstanceID <p>tcr情况下instance_id</p>
+     * @param string $InstanceID <p>TCR实例ID</p>
      * @param integer $SyncMode <p>同步方式，0全量同步，1增量同步</p>
      * @param boolean $NeedScan <p>是否自动授权&amp;扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像</p>
      * @param string $WebhookUrl <p>webhook接入地址</p>

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) 设置<p>地域Id</p>
  * @method boolean getEnableAnonymous() 获取<p>是否支持匿名</p>
  * @method void setEnableAnonymous(boolean $EnableAnonymous) 设置<p>是否支持匿名</p>
- * @method integer getTokenValidTime() 获取<p>Token有效时间</p>
- * @method void setTokenValidTime(integer $TokenValidTime) 设置<p>Token有效时间</p>
+ * @method integer getTokenValidTime() 获取<p>Token有效时间，单位：小时</p>
+ * @method void setTokenValidTime(integer $TokenValidTime) 设置<p>Token有效时间，单位：小时</p>
  * @method string getInternalEndpoint() 获取<p>实例内部访问地址</p>
  * @method void setInternalEndpoint(string $InternalEndpoint) 设置<p>实例内部访问地址</p>
  * @method TagSpecification getTagSpecification() 获取<p>实例云标签</p>
@@ -109,7 +109,7 @@ class Registry extends AbstractModel
     public $EnableAnonymous;
 
     /**
-     * @var integer <p>Token有效时间</p>
+     * @var integer <p>Token有效时间，单位：小时</p>
      */
     public $TokenValidTime;
 
@@ -169,7 +169,7 @@ class Registry extends AbstractModel
      * @param string $RegionName <p>地域名称</p>
      * @param integer $RegionId <p>地域Id</p>
      * @param boolean $EnableAnonymous <p>是否支持匿名</p>
-     * @param integer $TokenValidTime <p>Token有效时间</p>
+     * @param integer $TokenValidTime <p>Token有效时间，单位：小时</p>
      * @param string $InternalEndpoint <p>实例内部访问地址</p>
      * @param TagSpecification $TagSpecification <p>实例云标签</p>
      * @param string $ExpiredAt <p>实例过期时间（预付费）</p>

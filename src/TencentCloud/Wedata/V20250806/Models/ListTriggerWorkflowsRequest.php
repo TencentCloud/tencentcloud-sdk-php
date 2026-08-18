@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListTriggerWorkflows请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method integer getPageNumber() 获取请求的数据页数。默认值为1，取值大于等于1
- * @method void setPageNumber(integer $PageNumber) 设置请求的数据页数。默认值为1，取值大于等于1
- * @method integer getPageSize() 获取每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
- * @method void setPageSize(integer $PageSize) 设置每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
- * @method string getKeyword() 获取搜索关键词
- * @method void setKeyword(string $Keyword) 设置搜索关键词
- * @method string getParentFolderPath() 获取工作流所属文件夹
- * @method void setParentFolderPath(string $ParentFolderPath) 设置工作流所属文件夹
- * @method string getBundleId() 获取bundleId项
- * @method void setBundleId(string $BundleId) 设置bundleId项
- * @method string getOwnerUin() 获取负责人ID
- * @method void setOwnerUin(string $OwnerUin) 设置负责人ID
- * @method string getCreateUserUin() 获取创建人ID
- * @method void setCreateUserUin(string $CreateUserUin) 设置创建人ID
- * @method array getModifyTime() 获取修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
- * @method void setModifyTime(array $ModifyTime) 设置修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
- * @method array getCreateTime() 获取创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
- * @method void setCreateTime(array $CreateTime) 设置创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method integer getPageNumber() 获取<p>请求的数据页数。默认值为1，取值大于等于1</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>请求的数据页数。默认值为1，取值大于等于1</p>
+ * @method integer getPageSize() 获取<p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
+ * @method string getKeyword() 获取<p>搜索关键词</p>
+ * @method void setKeyword(string $Keyword) 设置<p>搜索关键词</p>
+ * @method string getParentFolderPath() 获取<p>工作流所属文件夹</p>
+ * @method void setParentFolderPath(string $ParentFolderPath) 设置<p>工作流所属文件夹</p>
+ * @method string getBundleId() 获取<p>bundleId项</p>
+ * @method void setBundleId(string $BundleId) 设置<p>bundleId项</p>
+ * @method string getOwnerUin() 获取<p>负责人ID</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>负责人ID</p>
+ * @method string getCreateUserUin() 获取<p>创建人ID</p>
+ * @method void setCreateUserUin(string $CreateUserUin) 设置<p>创建人ID</p>
+ * @method string getExecuteUserUin() 获取<p>运行账号ID</p>
+ * @method void setExecuteUserUin(string $ExecuteUserUin) 设置<p>运行账号ID</p>
+ * @method array getModifyTime() 获取<p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+ * @method void setModifyTime(array $ModifyTime) 设置<p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+ * @method array getCreateTime() 获取<p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+ * @method void setCreateTime(array $CreateTime) 设置<p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
  */
 class ListTriggerWorkflowsRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 请求的数据页数。默认值为1，取值大于等于1
+     * @var integer <p>请求的数据页数。默认值为1，取值大于等于1</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
+     * @var integer <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
      */
     public $PageSize;
 
     /**
-     * @var string 搜索关键词
+     * @var string <p>搜索关键词</p>
      */
     public $Keyword;
 
     /**
-     * @var string 工作流所属文件夹
+     * @var string <p>工作流所属文件夹</p>
      */
     public $ParentFolderPath;
 
     /**
-     * @var string bundleId项
+     * @var string <p>bundleId项</p>
      */
     public $BundleId;
 
     /**
-     * @var string 负责人ID
+     * @var string <p>负责人ID</p>
      */
     public $OwnerUin;
 
     /**
-     * @var string 创建人ID
+     * @var string <p>创建人ID</p>
      */
     public $CreateUserUin;
 
     /**
-     * @var array 修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+     * @var string <p>运行账号ID</p>
+     */
+    public $ExecuteUserUin;
+
+    /**
+     * @var array <p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var array 创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+     * @var array <p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param integer $PageNumber 请求的数据页数。默认值为1，取值大于等于1
-     * @param integer $PageSize 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
-     * @param string $Keyword 搜索关键词
-     * @param string $ParentFolderPath 工作流所属文件夹
-     * @param string $BundleId bundleId项
-     * @param string $OwnerUin 负责人ID
-     * @param string $CreateUserUin 创建人ID
-     * @param array $ModifyTime 修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
-     * @param array $CreateTime 创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+     * @param string $ProjectId <p>项目ID</p>
+     * @param integer $PageNumber <p>请求的数据页数。默认值为1，取值大于等于1</p>
+     * @param integer $PageSize <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
+     * @param string $Keyword <p>搜索关键词</p>
+     * @param string $ParentFolderPath <p>工作流所属文件夹</p>
+     * @param string $BundleId <p>bundleId项</p>
+     * @param string $OwnerUin <p>负责人ID</p>
+     * @param string $CreateUserUin <p>创建人ID</p>
+     * @param string $ExecuteUserUin <p>运行账号ID</p>
+     * @param array $ModifyTime <p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+     * @param array $CreateTime <p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class ListTriggerWorkflowsRequest extends AbstractModel
 
         if (array_key_exists("CreateUserUin",$param) and $param["CreateUserUin"] !== null) {
             $this->CreateUserUin = $param["CreateUserUin"];
+        }
+
+        if (array_key_exists("ExecuteUserUin",$param) and $param["ExecuteUserUin"] !== null) {
+            $this->ExecuteUserUin = $param["ExecuteUserUin"];
         }
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {

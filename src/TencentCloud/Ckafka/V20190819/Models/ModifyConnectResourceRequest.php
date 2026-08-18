@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKafkaConnectParam(KafkaConnectParam $KafkaConnectParam) 设置<p>Kafka配置，Type为 KAFKA 时必填</p>
  * @method MqttConnectParam getMqttConnectParam() 获取<p>MQTT配置，Type为 MQTT 时必填</p>
  * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置<p>MQTT配置，Type为 MQTT 时必填</p>
+ * @method IcebergConnectParam getIcebergConnectParam() 获取<p>Iceberg配置，Type为ICEBERG时必填</p>
+ * @method void setIcebergConnectParam(IcebergConnectParam $IcebergConnectParam) 设置<p>Iceberg配置，Type为ICEBERG时必填</p>
  */
 class ModifyConnectResourceRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class ModifyConnectResourceRequest extends AbstractModel
     public $MqttConnectParam;
 
     /**
+     * @var IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时必填</p>
+     */
+    public $IcebergConnectParam;
+
+    /**
      * @param string $ResourceId <p>连接源的Id</p>
      * @param string $ResourceName <p>连接源名称，为空时不修改</p>
      * @param string $Description <p>连接源描述，为空时不修改</p>
@@ -152,6 +159,7 @@ class ModifyConnectResourceRequest extends AbstractModel
      * @param DorisModifyConnectParam $DorisConnectParam <p>Doris配置，Type为DORIS</p>
      * @param KafkaConnectParam $KafkaConnectParam <p>Kafka配置，Type为 KAFKA 时必填</p>
      * @param MqttConnectParam $MqttConnectParam <p>MQTT配置，Type为 MQTT 时必填</p>
+     * @param IcebergConnectParam $IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时必填</p>
      */
     function __construct()
     {
@@ -240,6 +248,11 @@ class ModifyConnectResourceRequest extends AbstractModel
         if (array_key_exists("MqttConnectParam",$param) and $param["MqttConnectParam"] !== null) {
             $this->MqttConnectParam = new MqttConnectParam();
             $this->MqttConnectParam->deserialize($param["MqttConnectParam"]);
+        }
+
+        if (array_key_exists("IcebergConnectParam",$param) and $param["IcebergConnectParam"] !== null) {
+            $this->IcebergConnectParam = new IcebergConnectParam();
+            $this->IcebergConnectParam->deserialize($param["IcebergConnectParam"]);
         }
     }
 }

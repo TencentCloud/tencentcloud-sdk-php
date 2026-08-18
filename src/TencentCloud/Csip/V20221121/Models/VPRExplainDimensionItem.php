@@ -14,32 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Wedata\V20250806\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 通用排序字段
+ * VPR解释卡片中的单个标签项
  *
- * @method string getName() 获取<p>排序字段名称</p>
- * @method void setName(string $Name) 设置<p>排序字段名称</p>
- * @method string getDirection() 获取<p>排序方向：ASC|DESC</p>
- * @method void setDirection(string $Direction) 设置<p>排序方向：ASC|DESC</p>
+ * @method string getKey() 获取<p>标签</p>
+ * @method void setKey(string $Key) 设置<p>标签</p>
+ * @method string getName() 获取<p>标签名称</p>
+ * @method void setName(string $Name) 设置<p>标签名称</p>
+ * @method string getRemark() 获取<p>标签描述</p>
+ * @method void setRemark(string $Remark) 设置<p>标签描述</p>
  */
-class OrderField extends AbstractModel
+class VPRExplainDimensionItem extends AbstractModel
 {
     /**
-     * @var string <p>排序字段名称</p>
+     * @var string <p>标签</p>
+     */
+    public $Key;
+
+    /**
+     * @var string <p>标签名称</p>
      */
     public $Name;
 
     /**
-     * @var string <p>排序方向：ASC|DESC</p>
+     * @var string <p>标签描述</p>
      */
-    public $Direction;
+    public $Remark;
 
     /**
-     * @param string $Name <p>排序字段名称</p>
-     * @param string $Direction <p>排序方向：ASC|DESC</p>
+     * @param string $Key <p>标签</p>
+     * @param string $Name <p>标签名称</p>
+     * @param string $Remark <p>标签描述</p>
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class OrderField extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
-            $this->Direction = $param["Direction"];
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

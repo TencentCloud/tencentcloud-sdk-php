@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyProject请求参数结构体
  *
- * @method string getProjectId() 获取目标修改的项目ID
- * @method void setProjectId(string $ProjectId) 设置目标修改的项目ID
- * @method string getDisplayName() 获取项目显示名称，可以为中文名,需要租户范围内唯一
- * @method void setDisplayName(string $DisplayName) 设置项目显示名称，可以为中文名,需要租户范围内唯一
- * @method string getDescription() 获取备注
- * @method void setDescription(string $Description) 设置备注
- * @method boolean getTaskSubmitApproval() 获取true/false则修改，不带该参数不修改。
- * @method void setTaskSubmitApproval(boolean $TaskSubmitApproval) 设置true/false则修改，不带该参数不修改。
- * @method ResourcePoolInfo getResourcePoolInfo() 获取资源池信息
- * @method void setResourcePoolInfo(ResourcePoolInfo $ResourcePoolInfo) 设置资源池信息
- * @method array getProjectManagers() 获取项目管理员
- * @method void setProjectManagers(array $ProjectManagers) 设置项目管理员
- * @method boolean getTaskStrictMode() 获取调度任务严格模式
- * @method void setTaskStrictMode(boolean $TaskStrictMode) 设置调度任务严格模式
- * @method string getExtraOptions() 获取以后新增选项可以直接通过前端的json格式写入去实现
- * @method void setExtraOptions(string $ExtraOptions) 设置以后新增选项可以直接通过前端的json格式写入去实现
- * @method string getModel() 获取项目类型，SIMPLE：简单模式 STANDARD：标准模式
- * @method void setModel(string $Model) 设置项目类型，SIMPLE：简单模式 STANDARD：标准模式
- * @method array getProjectOwner() 获取项目负责人
- * @method void setProjectOwner(array $ProjectOwner) 设置项目负责人
- * @method string getModifyType() 获取更新类型
- * @method void setModifyType(string $ModifyType) 设置更新类型
+ * @method string getProjectId() 获取<p>目标修改的项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>目标修改的项目ID</p>
+ * @method string getDisplayName() 获取<p>项目显示名称，可以为中文名,需要租户范围内唯一</p>
+ * @method void setDisplayName(string $DisplayName) 设置<p>项目显示名称，可以为中文名,需要租户范围内唯一</p>
+ * @method string getDescription() 获取<p>备注</p>
+ * @method void setDescription(string $Description) 设置<p>备注</p>
+ * @method boolean getTaskSubmitApproval() 获取<p>true/false则修改，不带该参数不修改。</p>
+ * @method void setTaskSubmitApproval(boolean $TaskSubmitApproval) 设置<p>true/false则修改，不带该参数不修改。</p>
+ * @method ResourcePoolInfo getResourcePoolInfo() 获取<p>资源池信息</p>
+ * @method void setResourcePoolInfo(ResourcePoolInfo $ResourcePoolInfo) 设置<p>资源池信息</p>
+ * @method array getProjectManagers() 获取<p>项目管理员</p>
+ * @method void setProjectManagers(array $ProjectManagers) 设置<p>项目管理员</p>
+ * @method boolean getTaskStrictMode() 获取<p>调度任务严格模式</p>
+ * @method void setTaskStrictMode(boolean $TaskStrictMode) 设置<p>调度任务严格模式</p>
+ * @method string getExtraOptions() 获取<p>以后新增选项可以直接通过前端的json格式写入去实现</p>
+ * @method void setExtraOptions(string $ExtraOptions) 设置<p>以后新增选项可以直接通过前端的json格式写入去实现</p>
+ * @method string getModel() 获取<p>项目类型，SIMPLE：简单模式 STANDARD：标准模式</p>
+ * @method void setModel(string $Model) 设置<p>项目类型，SIMPLE：简单模式 STANDARD：标准模式</p>
+ * @method array getProjectOwner() 获取<p>项目负责人</p>
+ * @method void setProjectOwner(array $ProjectOwner) 设置<p>项目负责人</p>
+ * @method string getModifyType() 获取<p>更新类型</p>
+ * @method void setModifyType(string $ModifyType) 设置<p>更新类型</p>
  */
 class ModifyProjectRequest extends AbstractModel
 {
     /**
-     * @var string 目标修改的项目ID
+     * @var string <p>目标修改的项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 项目显示名称，可以为中文名,需要租户范围内唯一
+     * @var string <p>项目显示名称，可以为中文名,需要租户范围内唯一</p>
      */
     public $DisplayName;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Description;
 
     /**
-     * @var boolean true/false则修改，不带该参数不修改。
+     * @var boolean <p>true/false则修改，不带该参数不修改。</p>
      */
     public $TaskSubmitApproval;
 
     /**
-     * @var ResourcePoolInfo 资源池信息
+     * @var ResourcePoolInfo <p>资源池信息</p>
      */
     public $ResourcePoolInfo;
 
     /**
-     * @var array 项目管理员
+     * @var array <p>项目管理员</p>
      */
     public $ProjectManagers;
 
     /**
-     * @var boolean 调度任务严格模式
+     * @var boolean <p>调度任务严格模式</p>
      */
     public $TaskStrictMode;
 
     /**
-     * @var string 以后新增选项可以直接通过前端的json格式写入去实现
+     * @var string <p>以后新增选项可以直接通过前端的json格式写入去实现</p>
      */
     public $ExtraOptions;
 
     /**
-     * @var string 项目类型，SIMPLE：简单模式 STANDARD：标准模式
+     * @var string <p>项目类型，SIMPLE：简单模式 STANDARD：标准模式</p>
      */
     public $Model;
 
     /**
-     * @var array 项目负责人
+     * @var array <p>项目负责人</p>
      */
     public $ProjectOwner;
 
     /**
-     * @var string 更新类型
+     * @var string <p>更新类型</p>
      */
     public $ModifyType;
 
     /**
-     * @param string $ProjectId 目标修改的项目ID
-     * @param string $DisplayName 项目显示名称，可以为中文名,需要租户范围内唯一
-     * @param string $Description 备注
-     * @param boolean $TaskSubmitApproval true/false则修改，不带该参数不修改。
-     * @param ResourcePoolInfo $ResourcePoolInfo 资源池信息
-     * @param array $ProjectManagers 项目管理员
-     * @param boolean $TaskStrictMode 调度任务严格模式
-     * @param string $ExtraOptions 以后新增选项可以直接通过前端的json格式写入去实现
-     * @param string $Model 项目类型，SIMPLE：简单模式 STANDARD：标准模式
-     * @param array $ProjectOwner 项目负责人
-     * @param string $ModifyType 更新类型
+     * @param string $ProjectId <p>目标修改的项目ID</p>
+     * @param string $DisplayName <p>项目显示名称，可以为中文名,需要租户范围内唯一</p>
+     * @param string $Description <p>备注</p>
+     * @param boolean $TaskSubmitApproval <p>true/false则修改，不带该参数不修改。</p>
+     * @param ResourcePoolInfo $ResourcePoolInfo <p>资源池信息</p>
+     * @param array $ProjectManagers <p>项目管理员</p>
+     * @param boolean $TaskStrictMode <p>调度任务严格模式</p>
+     * @param string $ExtraOptions <p>以后新增选项可以直接通过前端的json格式写入去实现</p>
+     * @param string $Model <p>项目类型，SIMPLE：简单模式 STANDARD：标准模式</p>
+     * @param array $ProjectOwner <p>项目负责人</p>
+     * @param string $ModifyType <p>更新类型</p>
      */
     function __construct()
     {

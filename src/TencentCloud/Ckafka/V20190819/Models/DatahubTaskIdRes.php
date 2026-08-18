@@ -20,18 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Datahub请求的taskid
  *
- * @method string getTaskId() 获取任务id
- * @method void setTaskId(string $TaskId) 设置任务id
+ * @method string getTaskId() 获取<p>任务id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
+ * @method string getDatahubId() 获取<p>DatahubId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatahubId(string $DatahubId) 设置<p>DatahubId</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatahubTaskIdRes extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 任务id
+     * @var string <p>DatahubId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatahubId;
+
+    /**
+     * @param string $TaskId <p>任务id</p>
+     * @param string $DatahubId <p>DatahubId</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -48,6 +60,10 @@ class DatahubTaskIdRes extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("DatahubId",$param) and $param["DatahubId"] !== null) {
+            $this->DatahubId = $param["DatahubId"];
         }
     }
 }

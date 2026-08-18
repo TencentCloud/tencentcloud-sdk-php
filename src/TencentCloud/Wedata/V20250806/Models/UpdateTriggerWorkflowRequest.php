@@ -44,8 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerWorkflowRunConfiguration(WorkflowRunConfig $TriggerWorkflowRunConfiguration) 设置<p>调度运行配置</p>
  * @method string getSchedulerStatus() 获取<p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
  * @method void setSchedulerStatus(string $SchedulerStatus) 设置<p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
- * @method string getTriggerMode() 获取<p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
- * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+ * @method string getTriggerMode() 获取<p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
+ * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
+ * @method string getExecuteUserUin() 获取<p>运行账号ID</p>
+ * @method void setExecuteUserUin(string $ExecuteUserUin) 设置<p>运行账号ID</p>
  */
 class UpdateTriggerWorkflowRequest extends AbstractModel
 {
@@ -110,9 +112,14 @@ class UpdateTriggerWorkflowRequest extends AbstractModel
     public $SchedulerStatus;
 
     /**
-     * @var string <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * @var string <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
      */
     public $TriggerMode;
+
+    /**
+     * @var string <p>运行账号ID</p>
+     */
+    public $ExecuteUserUin;
 
     /**
      * @param string $ProjectId <p>项目ID</p>
@@ -127,7 +134,8 @@ class UpdateTriggerWorkflowRequest extends AbstractModel
      * @param array $GeneralTaskParams <p>通用参数配置</p>
      * @param WorkflowRunConfig $TriggerWorkflowRunConfiguration <p>调度运行配置</p>
      * @param string $SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
-     * @param string $TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * @param string $TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
+     * @param string $ExecuteUserUin <p>运行账号ID</p>
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ class UpdateTriggerWorkflowRequest extends AbstractModel
 
         if (array_key_exists("TriggerMode",$param) and $param["TriggerMode"] !== null) {
             $this->TriggerMode = $param["TriggerMode"];
+        }
+
+        if (array_key_exists("ExecuteUserUin",$param) and $param["ExecuteUserUin"] !== null) {
+            $this->ExecuteUserUin = $param["ExecuteUserUin"];
         }
     }
 }

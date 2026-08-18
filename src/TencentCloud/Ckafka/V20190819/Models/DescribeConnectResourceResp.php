@@ -88,8 +88,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置<p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method IcebergConnectParam getIcebergConnectParam() 获取<p>Iceberg配置，Type为ICEBERG时返回</p>
+ * @method void setIcebergConnectParam(IcebergConnectParam $IcebergConnectParam) 设置<p>Iceberg配置，Type为ICEBERG时返回</p>
  * @method array getTags() 获取<p>标签列表</p>
  * @method void setTags(array $Tags) 设置<p>标签列表</p>
+ * @method array getIcebergDatabases() 获取<p>iceberg数据库和表信息</p>
+ * @method void setIcebergDatabases(array $IcebergDatabases) 设置<p>iceberg数据库和表信息</p>
  */
 class DescribeConnectResourceResp extends AbstractModel
 {
@@ -212,9 +216,19 @@ class DescribeConnectResourceResp extends AbstractModel
     public $MqttConnectParam;
 
     /**
+     * @var IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时返回</p>
+     */
+    public $IcebergConnectParam;
+
+    /**
      * @var array <p>标签列表</p>
      */
     public $Tags;
+
+    /**
+     * @var array <p>iceberg数据库和表信息</p>
+     */
+    public $IcebergDatabases;
 
     /**
      * @param string $ResourceId <p>连接源的Id</p>
@@ -251,7 +265,9 @@ class DescribeConnectResourceResp extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MqttConnectParam $MqttConnectParam <p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param IcebergConnectParam $IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时返回</p>
      * @param array $Tags <p>标签列表</p>
+     * @param array $IcebergDatabases <p>iceberg数据库和表信息</p>
      */
     function __construct()
     {
@@ -362,12 +378,26 @@ class DescribeConnectResourceResp extends AbstractModel
             $this->MqttConnectParam->deserialize($param["MqttConnectParam"]);
         }
 
+        if (array_key_exists("IcebergConnectParam",$param) and $param["IcebergConnectParam"] !== null) {
+            $this->IcebergConnectParam = new IcebergConnectParam();
+            $this->IcebergConnectParam->deserialize($param["IcebergConnectParam"]);
+        }
+
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = [];
             foreach ($param["Tags"] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("IcebergDatabases",$param) and $param["IcebergDatabases"] !== null) {
+            $this->IcebergDatabases = [];
+            foreach ($param["IcebergDatabases"] as $key => $value){
+                $obj = new IcebergDatabaseInfo();
+                $obj->deserialize($value);
+                array_push($this->IcebergDatabases, $obj);
             }
         }
     }

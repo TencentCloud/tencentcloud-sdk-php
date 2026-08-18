@@ -20,126 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流概要信息
  *
- * @method string getProjectId() 获取项目ID
+ * @method string getProjectId() 获取<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowId() 获取工作ID
+ * @method string getWorkflowId() 获取<p>工作ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置工作ID
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowName() 获取工作流名称
+ * @method string getWorkflowName() 获取<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskCount() 获取任务数量
+ * @method integer getTaskCount() 获取<p>任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskCount(integer $TaskCount) 设置任务数量
+ * @method void setTaskCount(integer $TaskCount) 设置<p>任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFolderId() 获取文件夹ID
+ * @method string getFolderId() 获取<p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderId(string $FolderId) 设置文件夹ID
+ * @method void setFolderId(string $FolderId) 设置<p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFolderName() 获取文件夹名称
+ * @method string getFolderName() 获取<p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderName(string $FolderName) 设置文件夹名称
+ * @method void setFolderName(string $FolderName) 设置<p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WorkflowTriggerConfig getWorkflowTriggerConfig() 获取调度配置
+ * @method WorkflowTriggerConfig getWorkflowTriggerConfig() 获取<p>调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowTriggerConfig(WorkflowTriggerConfig $WorkflowTriggerConfig) 设置调度配置
+ * @method void setWorkflowTriggerConfig(WorkflowTriggerConfig $WorkflowTriggerConfig) 设置<p>调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserNameInCharge() 获取责任人
+ * @method string getUserNameInCharge() 获取<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserNameInCharge(string $UserNameInCharge) 设置责任人
+ * @method void setUserNameInCharge(string $UserNameInCharge) 设置<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserUinInCharge() 获取责任人ID
+ * @method string getUserUinInCharge() 获取<p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserUinInCharge(string $UserUinInCharge) 设置责任人ID
+ * @method void setUserUinInCharge(string $UserUinInCharge) 设置<p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowParams() 获取工作流参数
- * @method void setWorkflowParams(string $WorkflowParams) 设置工作流参数
+ * @method string getWorkflowParams() 获取<p>工作流参数</p>
+ * @method void setWorkflowParams(string $WorkflowParams) 设置<p>工作流参数</p>
+ * @method string getExecuteUserUin() 获取<p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecuteUserUin(string $ExecuteUserUin) 设置<p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerWorkflowBrief extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 工作ID
+     * @var string <p>工作ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowName;
 
     /**
-     * @var integer 任务数量
+     * @var integer <p>任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskCount;
 
     /**
-     * @var string 文件夹ID
+     * @var string <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderId;
 
     /**
-     * @var string 文件夹名称
+     * @var string <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderName;
 
     /**
-     * @var WorkflowTriggerConfig 调度配置
+     * @var WorkflowTriggerConfig <p>调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowTriggerConfig;
 
     /**
-     * @var string 责任人
+     * @var string <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserNameInCharge;
 
     /**
-     * @var string 责任人ID
+     * @var string <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserUinInCharge;
 
     /**
-     * @var string 工作流参数
+     * @var string <p>工作流参数</p>
      */
     public $WorkflowParams;
 
     /**
-     * @param string $ProjectId 项目ID
+     * @var string <p>运行账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowId 工作ID
+     */
+    public $ExecuteUserUin;
+
+    /**
+     * @param string $ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowName 工作流名称
+     * @param string $WorkflowId <p>工作ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskCount 任务数量
+     * @param string $WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FolderId 文件夹ID
+     * @param integer $TaskCount <p>任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FolderName 文件夹名称
+     * @param string $FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowTriggerConfig $WorkflowTriggerConfig 调度配置
+     * @param string $FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserNameInCharge 责任人
+     * @param WorkflowTriggerConfig $WorkflowTriggerConfig <p>调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserUinInCharge 责任人ID
+     * @param string $UserNameInCharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowParams 工作流参数
+     * @param string $UserUinInCharge <p>责任人ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkflowParams <p>工作流参数</p>
+     * @param string $ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -193,6 +205,10 @@ class TriggerWorkflowBrief extends AbstractModel
 
         if (array_key_exists("WorkflowParams",$param) and $param["WorkflowParams"] !== null) {
             $this->WorkflowParams = $param["WorkflowParams"];
+        }
+
+        if (array_key_exists("ExecuteUserUin",$param) and $param["ExecuteUserUin"] !== null) {
+            $this->ExecuteUserUin = $param["ExecuteUserUin"];
         }
     }
 }

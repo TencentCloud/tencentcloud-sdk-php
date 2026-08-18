@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流调度配置
  *
- * @method string getTriggerMode() 获取<p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+ * @method string getTriggerMode() 获取<p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+ * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtraInfo() 获取<p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,23 +60,31 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileArrivalPath(string $FileArrivalPath) 设置<p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerMinimumIntervalSecond() 获取<p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerMinimumIntervalSecond(integer $TriggerMinimumIntervalSecond) 设置<p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerWaitTimeSecond() 获取<p>文件到达模式下    触发等待时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerWaitTimeSecond(integer $TriggerWaitTimeSecond) 设置<p>文件到达模式下    触发等待时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSchedulerStatus() 获取<p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchedulerStatus(string $SchedulerStatus) 设置<p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileNamePattern() 获取<p>文件到达模式下 文件匹配规则</p><p>入参限制：文件名匹配仅支持文件名和 *，不能包含路径分隔符 /</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileNamePattern(string $FileNamePattern) 设置<p>文件到达模式下 文件匹配规则</p><p>入参限制：文件名匹配仅支持文件名和 *，不能包含路径分隔符 /</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRecursive() 获取<p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecursive(integer $Recursive) 设置<p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTriggerMinimumIntervalSecond() 获取<p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerMinimumIntervalSecond(integer $TriggerMinimumIntervalSecond) 设置<p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTriggerWaitTimeSecond() 获取<p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerWaitTimeSecond(integer $TriggerWaitTimeSecond) 设置<p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTriggerConfig extends AbstractModel
 {
     /**
-     * @var string <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * @var string <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerMode;
@@ -136,25 +144,37 @@ class WorkflowTriggerConfig extends AbstractModel
     public $FileArrivalPath;
 
     /**
-     * @var integer <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TriggerMinimumIntervalSecond;
-
-    /**
-     * @var integer <p>文件到达模式下    触发等待时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TriggerWaitTimeSecond;
-
-    /**
      * @var string <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchedulerStatus;
 
     /**
-     * @param string $TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * @var string <p>文件到达模式下 文件匹配规则</p><p>入参限制：文件名匹配仅支持文件名和 *，不能包含路径分隔符 /</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileNamePattern;
+
+    /**
+     * @var integer <p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Recursive;
+
+    /**
+     * @var integer <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerMinimumIntervalSecond;
+
+    /**
+     * @var integer <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerWaitTimeSecond;
+
+    /**
+     * @param string $TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtraInfo <p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,11 +194,15 @@ class WorkflowTriggerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileArrivalPath <p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileNamePattern <p>文件到达模式下 文件匹配规则</p><p>入参限制：文件名匹配仅支持文件名和 *，不能包含路径分隔符 /</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Recursive <p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -234,16 +258,24 @@ class WorkflowTriggerConfig extends AbstractModel
             $this->FileArrivalPath = $param["FileArrivalPath"];
         }
 
+        if (array_key_exists("SchedulerStatus",$param) and $param["SchedulerStatus"] !== null) {
+            $this->SchedulerStatus = $param["SchedulerStatus"];
+        }
+
+        if (array_key_exists("FileNamePattern",$param) and $param["FileNamePattern"] !== null) {
+            $this->FileNamePattern = $param["FileNamePattern"];
+        }
+
+        if (array_key_exists("Recursive",$param) and $param["Recursive"] !== null) {
+            $this->Recursive = $param["Recursive"];
+        }
+
         if (array_key_exists("TriggerMinimumIntervalSecond",$param) and $param["TriggerMinimumIntervalSecond"] !== null) {
             $this->TriggerMinimumIntervalSecond = $param["TriggerMinimumIntervalSecond"];
         }
 
         if (array_key_exists("TriggerWaitTimeSecond",$param) and $param["TriggerWaitTimeSecond"] !== null) {
             $this->TriggerWaitTimeSecond = $param["TriggerWaitTimeSecond"];
-        }
-
-        if (array_key_exists("SchedulerStatus",$param) and $param["SchedulerStatus"] !== null) {
-            $this->SchedulerStatus = $param["SchedulerStatus"];
         }
     }
 }

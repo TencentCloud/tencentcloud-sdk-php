@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Topic配置
  *
- * @method string getResource() 获取单独售卖Topic的Topic名称
- * @method void setResource(string $Resource) 设置单独售卖Topic的Topic名称
- * @method string getOffsetType() 获取Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+ * @method string getResource() 获取<p>单独售卖Topic的Topic名称</p>
+ * @method void setResource(string $Resource) 设置<p>单独售卖Topic的Topic名称</p>
+ * @method string getOffsetType() 获取<p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOffsetType(string $OffsetType) 设置Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+ * @method void setOffsetType(string $OffsetType) 设置<p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStartTime() 获取Offset类型为timestamp时必传，传时间戳，精确到秒
+ * @method integer getStartTime() 获取<p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(integer $StartTime) 设置Offset类型为timestamp时必传，传时间戳，精确到秒
+ * @method void setStartTime(integer $StartTime) 设置<p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopicId() 获取Topic的TopicId【出参】
- * @method void setTopicId(string $TopicId) 设置Topic的TopicId【出参】
- * @method string getCompressionType() 获取写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
- * @method void setCompressionType(string $CompressionType) 设置写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
- * @method boolean getUseAutoCreateTopic() 获取使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
- * @method void setUseAutoCreateTopic(boolean $UseAutoCreateTopic) 设置使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
- * @method integer getMsgMultiple() 获取源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
- * @method void setMsgMultiple(integer $MsgMultiple) 设置源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+ * @method string getTopicId() 获取<p>Topic的TopicId【出参】</p>
+ * @method void setTopicId(string $TopicId) 设置<p>Topic的TopicId【出参】</p>
+ * @method string getCompressionType() 获取<p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，可选择&quot;gzip&quot;, &quot;snappy&quot;, &quot;lz4&quot;中的一个进行填写。</p>
+ * @method void setCompressionType(string $CompressionType) 设置<p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，可选择&quot;gzip&quot;, &quot;snappy&quot;, &quot;lz4&quot;中的一个进行填写。</p>
+ * @method boolean getUseAutoCreateTopic() 获取<p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）</p>
+ * @method void setUseAutoCreateTopic(boolean $UseAutoCreateTopic) 设置<p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）</p>
+ * @method integer getMsgMultiple() 获取<p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
+ * @method void setMsgMultiple(integer $MsgMultiple) 设置<p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
  */
 class TopicParam extends AbstractModel
 {
     /**
-     * @var string 单独售卖Topic的Topic名称
+     * @var string <p>单独售卖Topic的Topic名称</p>
      */
     public $Resource;
 
     /**
-     * @var string Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * @var string <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffsetType;
 
     /**
-     * @var integer Offset类型为timestamp时必传，传时间戳，精确到秒
+     * @var integer <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string Topic的TopicId【出参】
+     * @var string <p>Topic的TopicId【出参】</p>
      */
     public $TopicId;
 
     /**
-     * @var string 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+     * @var string <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，可选择&quot;gzip&quot;, &quot;snappy&quot;, &quot;lz4&quot;中的一个进行填写。</p>
      */
     public $CompressionType;
 
     /**
-     * @var boolean 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+     * @var boolean <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）</p>
      */
     public $UseAutoCreateTopic;
 
     /**
-     * @var integer 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+     * @var integer <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
      */
     public $MsgMultiple;
 
     /**
-     * @param string $Resource 单独售卖Topic的Topic名称
-     * @param string $OffsetType Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * @param string $Resource <p>单独售卖Topic的Topic名称</p>
+     * @param string $OffsetType <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StartTime Offset类型为timestamp时必传，传时间戳，精确到秒
+     * @param integer $StartTime <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TopicId Topic的TopicId【出参】
-     * @param string $CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-     * @param boolean $UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-     * @param integer $MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+     * @param string $TopicId <p>Topic的TopicId【出参】</p>
+     * @param string $CompressionType <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，可选择&quot;gzip&quot;, &quot;snappy&quot;, &quot;lz4&quot;中的一个进行填写。</p>
+     * @param boolean $UseAutoCreateTopic <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）</p>
+     * @param integer $MsgMultiple <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
      */
     function __construct()
     {

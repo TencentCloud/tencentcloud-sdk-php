@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取<p>数据实验室名称</p>
  * @method void setName(string $Name) 设置<p>数据实验室名称</p>
+ * @method string getImage() 获取<p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
+ * @method void setImage(string $Image) 设置<p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
  * @method string getLabImage() 获取<p>Lab 镜像地址（必填，用于开发工具如 Jupyter/VSCode/WebShell）。前端在&quot;内置 / 自定义&quot;两态中选择此值；当 Image 字段未显式传入时，后端会基于该字段按 R1（镜像表命中）/R2（同值 fallback）派生 Ray 集群镜像。</p>
  * @method void setLabImage(string $LabImage) 设置<p>Lab 镜像地址（必填，用于开发工具如 Jupyter/VSCode/WebShell）。前端在&quot;内置 / 自定义&quot;两态中选择此值；当 Image 字段未显式传入时，后端会基于该字段按 R1（镜像表命中）/R2（同值 fallback）派生 Ray 集群镜像。</p>
  * @method string getDescription() 获取<p>数据实验室描述</p>
  * @method void setDescription(string $Description) 设置<p>数据实验室描述</p>
- * @method string getImage() 获取<p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
- * @method void setImage(string $Image) 设置<p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
  * @method string getImagePullPolicy() 获取<p>镜像拉取策略（Always, IfNotPresent, Never）</p>
  * @method void setImagePullPolicy(string $ImagePullPolicy) 设置<p>镜像拉取策略（Always, IfNotPresent, Never）</p>
  * @method string getResourceConfigId() 获取<p>资源配置ID</p>
@@ -65,6 +65,11 @@ class UpdateLabRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string <p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
+     */
+    public $Image;
+
+    /**
      * @var string <p>Lab 镜像地址（必填，用于开发工具如 Jupyter/VSCode/WebShell）。前端在&quot;内置 / 自定义&quot;两态中选择此值；当 Image 字段未显式传入时，后端会基于该字段按 R1（镜像表命中）/R2（同值 fallback）派生 Ray 集群镜像。</p>
      */
     public $LabImage;
@@ -73,11 +78,6 @@ class UpdateLabRequest extends AbstractModel
      * @var string <p>数据实验室描述</p>
      */
     public $Description;
-
-    /**
-     * @var string <p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
-     */
-    public $Image;
 
     /**
      * @var string <p>镜像拉取策略（Always, IfNotPresent, Never）</p>
@@ -151,9 +151,9 @@ class UpdateLabRequest extends AbstractModel
 
     /**
      * @param string $Name <p>数据实验室名称</p>
+     * @param string $Image <p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
      * @param string $LabImage <p>Lab 镜像地址（必填，用于开发工具如 Jupyter/VSCode/WebShell）。前端在&quot;内置 / 自定义&quot;两态中选择此值；当 Image 字段未显式传入时，后端会基于该字段按 R1（镜像表命中）/R2（同值 fallback）派生 Ray 集群镜像。</p>
      * @param string $Description <p>数据实验室描述</p>
-     * @param string $Image <p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
      * @param string $ImagePullPolicy <p>镜像拉取策略（Always, IfNotPresent, Never）</p>
      * @param string $ResourceConfigId <p>资源配置ID</p>
      * @param string $GroupId <p>计算组 ID</p>
@@ -186,16 +186,16 @@ class UpdateLabRequest extends AbstractModel
             $this->Name = $param["Name"];
         }
 
+        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
+            $this->Image = $param["Image"];
+        }
+
         if (array_key_exists("LabImage",$param) and $param["LabImage"] !== null) {
             $this->LabImage = $param["LabImage"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
-        }
-
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
         }
 
         if (array_key_exists("ImagePullPolicy",$param) and $param["ImagePullPolicy"] !== null) {

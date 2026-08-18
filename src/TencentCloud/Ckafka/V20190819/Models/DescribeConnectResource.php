@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置<p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method IcebergConnectParam getIcebergConnectParam() 获取<p>Iceberg配置，Type为ICEBERG时返回</p>
+ * @method void setIcebergConnectParam(IcebergConnectParam $IcebergConnectParam) 设置<p>Iceberg配置，Type为ICEBERG时返回</p>
  * @method array getTags() 获取<p>标签列表</p>
  * @method void setTags(array $Tags) 设置<p>标签列表</p>
  */
@@ -223,6 +225,11 @@ class DescribeConnectResource extends AbstractModel
     public $MqttConnectParam;
 
     /**
+     * @var IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时返回</p>
+     */
+    public $IcebergConnectParam;
+
+    /**
      * @var array <p>标签列表</p>
      */
     public $Tags;
@@ -263,6 +270,7 @@ class DescribeConnectResource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MqttConnectParam $MqttConnectParam <p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param IcebergConnectParam $IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时返回</p>
      * @param array $Tags <p>标签列表</p>
      */
     function __construct()
@@ -380,6 +388,11 @@ class DescribeConnectResource extends AbstractModel
         if (array_key_exists("MqttConnectParam",$param) and $param["MqttConnectParam"] !== null) {
             $this->MqttConnectParam = new MqttConnectParam();
             $this->MqttConnectParam->deserialize($param["MqttConnectParam"]);
+        }
+
+        if (array_key_exists("IcebergConnectParam",$param) and $param["IcebergConnectParam"] !== null) {
+            $this->IcebergConnectParam = new IcebergConnectParam();
+            $this->IcebergConnectParam->deserialize($param["IcebergConnectParam"]);
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

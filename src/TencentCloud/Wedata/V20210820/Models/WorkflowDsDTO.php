@@ -20,237 +20,249 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流信息
  *
- * @method string getWorkflowId() 获取工作流ID
+ * @method string getWorkflowId() 获取<p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwner() 获取责任人
+ * @method string getOwner() 获取<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwner(string $Owner) 设置责任人
+ * @method void setOwner(string $Owner) 设置<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwnerId() 获取责任人ID
+ * @method string getOwnerId() 获取<p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnerId(string $OwnerId) 设置责任人ID
+ * @method void setOwnerId(string $OwnerId) 设置<p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目ID
+ * @method string getProjectId() 获取<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectIdent() 获取项目标识
+ * @method string getProjectIdent() 获取<p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectIdent(string $ProjectIdent) 设置项目标识
+ * @method void setProjectIdent(string $ProjectIdent) 设置<p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectName() 获取项目名称
+ * @method string getProjectName() 获取<p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectName(string $ProjectName) 设置项目名称
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowDesc() 获取工作流描述
+ * @method string getWorkflowDesc() 获取<p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowDesc(string $WorkflowDesc) 设置工作流描述
+ * @method void setWorkflowDesc(string $WorkflowDesc) 设置<p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowName() 获取工作流名称
+ * @method string getWorkflowName() 获取<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFolderId() 获取文件夹ID
+ * @method string getFolderId() 获取<p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderId(string $FolderId) 设置文件夹ID
+ * @method void setFolderId(string $FolderId) 设置<p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSparkParams() 获取SparkSQL参数
+ * @method string getSparkParams() 获取<p>SparkSQL参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSparkParams(string $SparkParams) 设置SparkSQL参数
+ * @method void setSparkParams(string $SparkParams) 设置<p>SparkSQL参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTasks() 获取任务列表
+ * @method array getTasks() 获取<p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTasks(array $Tasks) 设置任务列表
+ * @method void setTasks(array $Tasks) 设置<p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLinks() 获取任务链接列表
+ * @method array getLinks() 获取<p>任务链接列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLinks(array $Links) 设置任务链接列表
+ * @method void setLinks(array $Links) 设置<p>任务链接列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getParams() 获取参数列表
+ * @method array getParams() 获取<p>参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParams(array $Params) 设置参数列表
+ * @method void setParams(array $Params) 设置<p>参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowType() 获取工作流类型, 取值示例
-
-- cycle 周期工作流
-- manual 手动工作流
+ * @method string getWorkflowType() 获取<p>工作流类型, 取值示例</p><ul><li>cycle 周期工作流</li><li>manual 手动工作流</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowType(string $WorkflowType) 设置工作流类型, 取值示例
-
-- cycle 周期工作流
-- manual 手动工作流
+ * @method void setWorkflowType(string $WorkflowType) 设置<p>工作流类型, 取值示例</p><ul><li>cycle 周期工作流</li><li>manual 手动工作流</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateUser() 获取最近更新人名称
+ * @method string getUpdateUser() 获取<p>最近更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateUser(string $UpdateUser) 设置最近更新人名称
+ * @method void setUpdateUser(string $UpdateUser) 设置<p>最近更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateUserId() 获取最近更新人id
+ * @method string getUpdateUserId() 获取<p>最近更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateUserId(string $UpdateUserId) 设置最近更新人id
+ * @method void setUpdateUserId(string $UpdateUserId) 设置<p>最近更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBundleId() 获取BundleId CI/CD工程生成的bundle唯一标识	
+ * @method string getBundleId() 获取<p>BundleId CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBundleId(string $BundleId) 设置BundleId CI/CD工程生成的bundle唯一标识	
+ * @method void setBundleId(string $BundleId) 设置<p>BundleId CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBundleInfo() 获取BundleId信息
+ * @method string getBundleInfo() 获取<p>BundleId信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBundleInfo(string $BundleInfo) 设置BundleId信息
+ * @method void setBundleInfo(string $BundleInfo) 设置<p>BundleId信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecuteUserUin() 获取<p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecuteUserUin(string $ExecuteUserUin) 设置<p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecuteUserName() 获取<p>运行账号名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecuteUserName(string $ExecuteUserName) 设置<p>运行账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowDsDTO extends AbstractModel
 {
     /**
-     * @var string 工作流ID
+     * @var string <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 责任人
+     * @var string <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Owner;
 
     /**
-     * @var string 责任人ID
+     * @var string <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerId;
 
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 项目标识
+     * @var string <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectIdent;
 
     /**
-     * @var string 项目名称
+     * @var string <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
-     * @var string 工作流描述
+     * @var string <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowDesc;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowName;
 
     /**
-     * @var string 文件夹ID
+     * @var string <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderId;
 
     /**
-     * @var string SparkSQL参数
+     * @var string <p>SparkSQL参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkParams;
 
     /**
-     * @var array 任务列表
+     * @var array <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tasks;
 
     /**
-     * @var array 任务链接列表
+     * @var array <p>任务链接列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Links;
 
     /**
-     * @var array 参数列表
+     * @var array <p>参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Params;
 
     /**
-     * @var string 工作流类型, 取值示例
-
-- cycle 周期工作流
-- manual 手动工作流
+     * @var string <p>工作流类型, 取值示例</p><ul><li>cycle 周期工作流</li><li>manual 手动工作流</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowType;
 
     /**
-     * @var string 最近更新人名称
+     * @var string <p>最近更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateUser;
 
     /**
-     * @var string 最近更新人id
+     * @var string <p>最近更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateUserId;
 
     /**
-     * @var string BundleId CI/CD工程生成的bundle唯一标识	
+     * @var string <p>BundleId CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BundleId;
 
     /**
-     * @var string BundleId信息
+     * @var string <p>BundleId信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BundleInfo;
 
     /**
-     * @param string $WorkflowId 工作流ID
+     * @var string <p>运行账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Owner 责任人
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OwnerId 责任人ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectIdent 项目标识
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectName 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowDesc 工作流描述
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowName 工作流名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FolderId 文件夹ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SparkParams SparkSQL参数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tasks 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Links 任务链接列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Params 参数列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowType 工作流类型, 取值示例
+     */
+    public $ExecuteUserUin;
 
-- cycle 周期工作流
-- manual 手动工作流
+    /**
+     * @var string <p>运行账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateUser 最近更新人名称
+     */
+    public $ExecuteUserName;
+
+    /**
+     * @param string $WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateUserId 最近更新人id
+     * @param string $Owner <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BundleId BundleId CI/CD工程生成的bundle唯一标识	
+     * @param string $OwnerId <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BundleInfo BundleId信息
+     * @param string $ProjectId <p>项目ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectIdent <p>项目标识</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectName <p>项目名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkflowDesc <p>工作流描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkflowName <p>工作流名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FolderId <p>文件夹ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SparkParams <p>SparkSQL参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tasks <p>任务列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Links <p>任务链接列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Params <p>参数列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkflowType <p>工作流类型, 取值示例</p><ul><li>cycle 周期工作流</li><li>manual 手动工作流</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateUser <p>最近更新人名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateUserId <p>最近更新人id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleId <p>BundleId CI/CD工程生成的bundle唯一标识</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleInfo <p>BundleId信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecuteUserName <p>运行账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -351,6 +363,14 @@ class WorkflowDsDTO extends AbstractModel
 
         if (array_key_exists("BundleInfo",$param) and $param["BundleInfo"] !== null) {
             $this->BundleInfo = $param["BundleInfo"];
+        }
+
+        if (array_key_exists("ExecuteUserUin",$param) and $param["ExecuteUserUin"] !== null) {
+            $this->ExecuteUserUin = $param["ExecuteUserUin"];
+        }
+
+        if (array_key_exists("ExecuteUserName",$param) and $param["ExecuteUserName"] !== null) {
+            $this->ExecuteUserName = $param["ExecuteUserName"];
         }
     }
 }

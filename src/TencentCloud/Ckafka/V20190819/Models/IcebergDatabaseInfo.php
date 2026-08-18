@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Wedata\V20250806\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 通用排序字段
+ * iceberg数据
  *
- * @method string getName() 获取<p>排序字段名称</p>
- * @method void setName(string $Name) 设置<p>排序字段名称</p>
- * @method string getDirection() 获取<p>排序方向：ASC|DESC</p>
- * @method void setDirection(string $Direction) 设置<p>排序方向：ASC|DESC</p>
+ * @method string getName() 获取<p>数据库名</p>
+ * @method void setName(string $Name) 设置<p>数据库名</p>
+ * @method array getTables() 获取<p>表名称</p>
+ * @method void setTables(array $Tables) 设置<p>表名称</p>
  */
-class OrderField extends AbstractModel
+class IcebergDatabaseInfo extends AbstractModel
 {
     /**
-     * @var string <p>排序字段名称</p>
+     * @var string <p>数据库名</p>
      */
     public $Name;
 
     /**
-     * @var string <p>排序方向：ASC|DESC</p>
+     * @var array <p>表名称</p>
      */
-    public $Direction;
+    public $Tables;
 
     /**
-     * @param string $Name <p>排序字段名称</p>
-     * @param string $Direction <p>排序方向：ASC|DESC</p>
+     * @param string $Name <p>数据库名</p>
+     * @param array $Tables <p>表名称</p>
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class OrderField extends AbstractModel
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
-            $this->Direction = $param["Direction"];
+        if (array_key_exists("Tables",$param) and $param["Tables"] !== null) {
+            $this->Tables = $param["Tables"];
         }
     }
 }

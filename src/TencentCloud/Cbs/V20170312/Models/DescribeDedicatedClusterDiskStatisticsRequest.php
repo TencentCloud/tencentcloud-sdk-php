@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AIGC 生图任务的输出。
+ * DescribeDedicatedClusterDiskStatistics请求参数结构体
  *
- * @method array getFileInfos() 获取<p>AIGC 生图任务的输出文件信息。</p>
- * @method void setFileInfos(array $FileInfos) 设置<p>AIGC 生图任务的输出文件信息。</p>
+
  */
-class AigcImageTaskOutput extends AbstractModel
+class DescribeDedicatedClusterDiskStatisticsRequest extends AbstractModel
 {
-    /**
-     * @var array <p>AIGC 生图任务的输出文件信息。</p>
-     */
-    public $FileInfos;
+
 
     /**
-     * @param array $FileInfos <p>AIGC 生图任务的输出文件信息。</p>
+
      */
     function __construct()
     {
@@ -46,13 +42,6 @@ class AigcImageTaskOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileInfos",$param) and $param["FileInfos"] !== null) {
-            $this->FileInfos = [];
-            foreach ($param["FileInfos"] as $key => $value){
-                $obj = new AigcImageTaskOutputFileInfo();
-                $obj->deserialize($value);
-                array_push($this->FileInfos, $obj);
-            }
-        }
+
     }
 }

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchedulerStatus(string $SchedulerStatus) 设置<p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
  * @method string getTriggerMode() 获取<p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
  * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+ * @method string getExecuteUserUin() 获取<p>运行账号ID,未传时默认使用当前登录用户ID</p>
+ * @method void setExecuteUserUin(string $ExecuteUserUin) 设置<p>运行账号ID,未传时默认使用当前登录用户ID</p>
  */
 class CreateTriggerWorkflowRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CreateTriggerWorkflowRequest extends AbstractModel
     public $TriggerMode;
 
     /**
+     * @var string <p>运行账号ID,未传时默认使用当前登录用户ID</p>
+     */
+    public $ExecuteUserUin;
+
+    /**
      * @param string $ProjectId <p>项目ID</p>
      * @param string $WorkflowName <p>工作流名称</p>
      * @param string $ParentFolderPath <p>所属文件夹路径</p>
@@ -128,6 +135,7 @@ class CreateTriggerWorkflowRequest extends AbstractModel
      * @param WorkflowRunConfig $TriggerWorkflowRunConfiguration <p>工作流调度运行配置</p>
      * @param string $SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
      * @param string $TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * @param string $ExecuteUserUin <p>运行账号ID,未传时默认使用当前登录用户ID</p>
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ class CreateTriggerWorkflowRequest extends AbstractModel
 
         if (array_key_exists("TriggerMode",$param) and $param["TriggerMode"] !== null) {
             $this->TriggerMode = $param["TriggerMode"];
+        }
+
+        if (array_key_exists("ExecuteUserUin",$param) and $param["ExecuteUserUin"] !== null) {
+            $this->ExecuteUserUin = $param["ExecuteUserUin"];
         }
     }
 }

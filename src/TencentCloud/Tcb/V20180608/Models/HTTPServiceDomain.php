@@ -40,14 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置<p>状态。</p><p>枚举值：</p><ul><li>PROCESSING： 处理中</li><li>FAIL： 失败</li><li>EO_PENDING_VERIFICATION： 待验证edgeone归属权</li><li>SUCCESS： 成功</li></ul>
  * @method string getDNSStatus() 获取<p>DNS解析状态</p><p>枚举值：</p><ul><li>OK： 正常，命中目标 cname</li><li>EMPTY： 解析为空，域名尚未配置 CNAME 或未生效</li><li>INVALID： 异常，解析到其他非目标地址</li></ul>
  * @method void setDNSStatus(string $DNSStatus) 设置<p>DNS解析状态</p><p>枚举值：</p><ul><li>OK： 正常，命中目标 cname</li><li>EMPTY： 解析为空，域名尚未配置 CNAME 或未生效</li><li>INVALID： 异常，解析到其他非目标地址</li></ul>
+ * @method string getPlatformCnameDNSStatus() 获取<p>是否CNAME到平台任一网关入口，默认接入/CDN/EO，不含CustomCname</p><p>枚举值：</p><ul><li>EMPTY： 解析为空</li><li>OK： 命中</li><li>INVALID：  解析到其他非目标地址</li></ul>
+ * @method void setPlatformCnameDNSStatus(string $PlatformCnameDNSStatus) 设置<p>是否CNAME到平台任一网关入口，默认接入/CDN/EO，不含CustomCname</p><p>枚举值：</p><ul><li>EMPTY： 解析为空</li><li>OK： 命中</li><li>INVALID：  解析到其他非目标地址</li></ul>
  * @method array getRoutes() 获取<p>HTTP访问服务路由信息</p>
  * @method void setRoutes(array $Routes) 设置<p>HTTP访问服务路由信息</p>
  * @method HTTPServiceExtension getExtension() 获取<p>扩展字段，内部包含headers处理等</p>
  * @method void setExtension(HTTPServiceExtension $Extension) 设置<p>扩展字段，内部包含headers处理等</p>
- * @method string getCreateTime() 获取<p>域名创建时间</p>
- * @method void setCreateTime(string $CreateTime) 设置<p>域名创建时间</p>
- * @method string getUpdateTime() 获取<p>域名更新时间</p>
- * @method void setUpdateTime(string $UpdateTime) 设置<p>域名更新时间</p>
+ * @method string getCreateTime() 获取<p>域名创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>域名创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
+ * @method string getUpdateTime() 获取<p>域名更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>域名更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
  */
 class HTTPServiceDomain extends AbstractModel
 {
@@ -102,6 +104,11 @@ class HTTPServiceDomain extends AbstractModel
     public $DNSStatus;
 
     /**
+     * @var string <p>是否CNAME到平台任一网关入口，默认接入/CDN/EO，不含CustomCname</p><p>枚举值：</p><ul><li>EMPTY： 解析为空</li><li>OK： 命中</li><li>INVALID：  解析到其他非目标地址</li></ul>
+     */
+    public $PlatformCnameDNSStatus;
+
+    /**
      * @var array <p>HTTP访问服务路由信息</p>
      */
     public $Routes;
@@ -112,12 +119,12 @@ class HTTPServiceDomain extends AbstractModel
     public $Extension;
 
     /**
-     * @var string <p>域名创建时间</p>
+     * @var string <p>域名创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
      */
     public $CreateTime;
 
     /**
-     * @var string <p>域名更新时间</p>
+     * @var string <p>域名更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
      */
     public $UpdateTime;
 
@@ -132,10 +139,11 @@ class HTTPServiceDomain extends AbstractModel
      * @param boolean $Enable <p>域名开启状态</p>
      * @param string $Status <p>状态。</p><p>枚举值：</p><ul><li>PROCESSING： 处理中</li><li>FAIL： 失败</li><li>EO_PENDING_VERIFICATION： 待验证edgeone归属权</li><li>SUCCESS： 成功</li></ul>
      * @param string $DNSStatus <p>DNS解析状态</p><p>枚举值：</p><ul><li>OK： 正常，命中目标 cname</li><li>EMPTY： 解析为空，域名尚未配置 CNAME 或未生效</li><li>INVALID： 异常，解析到其他非目标地址</li></ul>
+     * @param string $PlatformCnameDNSStatus <p>是否CNAME到平台任一网关入口，默认接入/CDN/EO，不含CustomCname</p><p>枚举值：</p><ul><li>EMPTY： 解析为空</li><li>OK： 命中</li><li>INVALID：  解析到其他非目标地址</li></ul>
      * @param array $Routes <p>HTTP访问服务路由信息</p>
      * @param HTTPServiceExtension $Extension <p>扩展字段，内部包含headers处理等</p>
-     * @param string $CreateTime <p>域名创建时间</p>
-     * @param string $UpdateTime <p>域名更新时间</p>
+     * @param string $CreateTime <p>域名创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
+     * @param string $UpdateTime <p>域名更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
      */
     function __construct()
     {
@@ -188,6 +196,10 @@ class HTTPServiceDomain extends AbstractModel
 
         if (array_key_exists("DNSStatus",$param) and $param["DNSStatus"] !== null) {
             $this->DNSStatus = $param["DNSStatus"];
+        }
+
+        if (array_key_exists("PlatformCnameDNSStatus",$param) and $param["PlatformCnameDNSStatus"] !== null) {
+            $this->PlatformCnameDNSStatus = $param["PlatformCnameDNSStatus"];
         }
 
         if (array_key_exists("Routes",$param) and $param["Routes"] !== null) {

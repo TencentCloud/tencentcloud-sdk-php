@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecuteUserUin() 获取<p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecuteUserUin(string $ExecuteUserUin) 设置<p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerWorkflowDetail extends AbstractModel
 {
@@ -154,6 +158,12 @@ class TriggerWorkflowDetail extends AbstractModel
     public $TriggerMode;
 
     /**
+     * @var string <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecuteUserUin;
+
+    /**
      * @param string $WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerUin <p>责任人ID</p>
@@ -179,6 +189,8 @@ class TriggerWorkflowDetail extends AbstractModel
      * @param WorkflowRunConfig $TriggerWorkflowRunConfiguration <p>工作流运行参数配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecuteUserUin <p>运行账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class TriggerWorkflowDetail extends AbstractModel
 
         if (array_key_exists("TriggerMode",$param) and $param["TriggerMode"] !== null) {
             $this->TriggerMode = $param["TriggerMode"];
+        }
+
+        if (array_key_exists("ExecuteUserUin",$param) and $param["ExecuteUserUin"] !== null) {
+            $this->ExecuteUserUin = $param["ExecuteUserUin"];
         }
     }
 }

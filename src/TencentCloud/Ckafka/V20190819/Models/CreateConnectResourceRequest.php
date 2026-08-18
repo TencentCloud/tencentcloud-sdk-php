@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKafkaConnectParam(KafkaConnectParam $KafkaConnectParam) 设置<p>Kafka配置，Type为 KAFKA 时必填</p>
  * @method MqttConnectParam getMqttConnectParam() 获取<p>MQTT配置，Type为 MQTT 时必填</p>
  * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置<p>MQTT配置，Type为 MQTT 时必填</p>
+ * @method IcebergConnectParam getIcebergConnectParam() 获取<p>Iceberg配置，Type为ICEBERG时必填</p>
+ * @method void setIcebergConnectParam(IcebergConnectParam $IcebergConnectParam) 设置<p>Iceberg配置，Type为ICEBERG时必填</p>
  * @method array getTags() 获取<p>标签列表</p>
  * @method void setTags(array $Tags) 设置<p>标签列表</p>
  */
@@ -124,6 +126,11 @@ class CreateConnectResourceRequest extends AbstractModel
     public $MqttConnectParam;
 
     /**
+     * @var IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时必填</p>
+     */
+    public $IcebergConnectParam;
+
+    /**
      * @var array <p>标签列表</p>
      */
     public $Tags;
@@ -143,6 +150,7 @@ class CreateConnectResourceRequest extends AbstractModel
      * @param DorisConnectParam $DorisConnectParam <p>Doris 配置，Type为 DORIS 时必填</p>
      * @param KafkaConnectParam $KafkaConnectParam <p>Kafka配置，Type为 KAFKA 时必填</p>
      * @param MqttConnectParam $MqttConnectParam <p>MQTT配置，Type为 MQTT 时必填</p>
+     * @param IcebergConnectParam $IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时必填</p>
      * @param array $Tags <p>标签列表</p>
      */
     function __construct()
@@ -223,6 +231,11 @@ class CreateConnectResourceRequest extends AbstractModel
         if (array_key_exists("MqttConnectParam",$param) and $param["MqttConnectParam"] !== null) {
             $this->MqttConnectParam = new MqttConnectParam();
             $this->MqttConnectParam->deserialize($param["MqttConnectParam"]);
+        }
+
+        if (array_key_exists("IcebergConnectParam",$param) and $param["IcebergConnectParam"] !== null) {
+            $this->IcebergConnectParam = new IcebergConnectParam();
+            $this->IcebergConnectParam->deserialize($param["IcebergConnectParam"]);
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

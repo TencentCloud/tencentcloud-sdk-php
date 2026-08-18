@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResolution(string $Resolution) 设置<p>输出图片的分辨率</p><p>枚举值：</p><ul><li>1K： 短边分辨率 1080</li><li>2K： 短边分辨率 1440</li><li>4K： 短边分辨率 2160</li></ul><p>默认值：1K</p>
  * @method string getAspectRatio() 获取<p>输出图片的宽高比</p><p>枚举值：</p><ul><li>1:1： 宽高比 1:1</li><li>2:3： 宽高比 2:3</li><li>3:2： 宽高比 3:2</li><li>3:4： 宽高比 3:4</li><li>4:3： 宽高比 4:3</li><li>9:16： 宽高比 9:16</li><li>16:9： 宽高比 16:9</li></ul><p>默认值：1:1</p>
  * @method void setAspectRatio(string $AspectRatio) 设置<p>输出图片的宽高比</p><p>枚举值：</p><ul><li>1:1： 宽高比 1:1</li><li>2:3： 宽高比 2:3</li><li>3:2： 宽高比 3:2</li><li>3:4： 宽高比 3:4</li><li>4:3： 宽高比 4:3</li><li>9:16： 宽高比 9:16</li><li>16:9： 宽高比 16:9</li></ul><p>默认值：1:1</p>
+ * @method string getAdditionalParameters() 获取<p>附加参数。</p>
+ * @method void setAdditionalParameters(string $AdditionalParameters) 设置<p>附加参数。</p>
  */
 class CreateImageConfig extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateImageConfig extends AbstractModel
     public $AspectRatio;
 
     /**
+     * @var string <p>附加参数。</p>
+     */
+    public $AdditionalParameters;
+
+    /**
      * @param string $Model <p>生图模型</p><p>枚举值：</p><ul><li>WAND-create-1.0-lite： 轻量生图模型</li><li>WAND-create-1.0-flash： 质量-速度平衡生图模型</li><li>WAND-create-1.0-pro： 高质量生图模型</li></ul>
      * @param string $Prompt <p>生图指令</p>
      * @param string $Resolution <p>输出图片的分辨率</p><p>枚举值：</p><ul><li>1K： 短边分辨率 1080</li><li>2K： 短边分辨率 1440</li><li>4K： 短边分辨率 2160</li></ul><p>默认值：1K</p>
      * @param string $AspectRatio <p>输出图片的宽高比</p><p>枚举值：</p><ul><li>1:1： 宽高比 1:1</li><li>2:3： 宽高比 2:3</li><li>3:2： 宽高比 3:2</li><li>3:4： 宽高比 3:4</li><li>4:3： 宽高比 4:3</li><li>9:16： 宽高比 9:16</li><li>16:9： 宽高比 16:9</li></ul><p>默认值：1:1</p>
+     * @param string $AdditionalParameters <p>附加参数。</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateImageConfig extends AbstractModel
 
         if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
             $this->AspectRatio = $param["AspectRatio"];
+        }
+
+        if (array_key_exists("AdditionalParameters",$param) and $param["AdditionalParameters"] !== null) {
+            $this->AdditionalParameters = $param["AdditionalParameters"];
         }
     }
 }

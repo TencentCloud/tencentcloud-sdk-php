@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getActivityType() 获取<p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
  * @method void setActivityType(string $ActivityType) 设置<p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
+ * @method array getPredriveIndex() 获取<p>前驱节点索引数组。<br>注意：创建和修改编排时，该参数无效，由服务端自动生成。</p>
+ * @method void setPredriveIndex(array $PredriveIndex) 设置<p>前驱节点索引数组。<br>注意：创建和修改编排时，该参数无效，由服务端自动生成。</p>
  * @method array getReardriveIndex() 获取<p>后驱节点索引数组</p>
  * @method void setReardriveIndex(array $ReardriveIndex) 设置<p>后驱节点索引数组</p>
  * @method ActivityPara getActivityPara() 获取<p>原子任务参数</p>
@@ -37,6 +39,11 @@ class Activity extends AbstractModel
     public $ActivityType;
 
     /**
+     * @var array <p>前驱节点索引数组。<br>注意：创建和修改编排时，该参数无效，由服务端自动生成。</p>
+     */
+    public $PredriveIndex;
+
+    /**
      * @var array <p>后驱节点索引数组</p>
      */
     public $ReardriveIndex;
@@ -49,6 +56,7 @@ class Activity extends AbstractModel
 
     /**
      * @param string $ActivityType <p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
+     * @param array $PredriveIndex <p>前驱节点索引数组。<br>注意：创建和修改编排时，该参数无效，由服务端自动生成。</p>
      * @param array $ReardriveIndex <p>后驱节点索引数组</p>
      * @param ActivityPara $ActivityPara <p>原子任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,6 +76,10 @@ class Activity extends AbstractModel
         }
         if (array_key_exists("ActivityType",$param) and $param["ActivityType"] !== null) {
             $this->ActivityType = $param["ActivityType"];
+        }
+
+        if (array_key_exists("PredriveIndex",$param) and $param["PredriveIndex"] !== null) {
+            $this->PredriveIndex = $param["PredriveIndex"];
         }
 
         if (array_key_exists("ReardriveIndex",$param) and $param["ReardriveIndex"] !== null) {

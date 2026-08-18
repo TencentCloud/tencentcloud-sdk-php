@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置集群状态：0:creating 创建中；1: created 创建完成; 2: deleting 删除中； 3: deleted 删除完成； 4:  failed 创建失败 
  * @method array getClusterMountSet() 获取客户端集群挂载存储集合
  * @method void setClusterMountSet(array $ClusterMountSet) 设置客户端集群挂载存储集合
+ * @method string getZone() 获取
+ * @method void setZone(string $Zone) 设置
+ * @method integer getMountStorageNum() 获取
+ * @method void setMountStorageNum(integer $MountStorageNum) 设置
+ * @method string getStorageFileSystemId() 获取
+ * @method void setStorageFileSystemId(string $StorageFileSystemId) 设置
  */
 class CustomerClusterAttr extends AbstractModel
 {
@@ -87,6 +93,21 @@ class CustomerClusterAttr extends AbstractModel
     public $ClusterMountSet;
 
     /**
+     * @var string 
+     */
+    public $Zone;
+
+    /**
+     * @var integer 
+     */
+    public $MountStorageNum;
+
+    /**
+     * @var string 
+     */
+    public $StorageFileSystemId;
+
+    /**
      * @param string $ClusterId 集群id
      * @param string $VpcId vpc网络id
      * @param string $SubnetId 子网id
@@ -96,6 +117,9 @@ class CustomerClusterAttr extends AbstractModel
      * @param array $ManagerNodes 管理节点信息
      * @param integer $Status 集群状态：0:creating 创建中；1: created 创建完成; 2: deleting 删除中； 3: deleted 删除完成； 4:  failed 创建失败 
      * @param array $ClusterMountSet 客户端集群挂载存储集合
+     * @param string $Zone 
+     * @param integer $MountStorageNum 
+     * @param string $StorageFileSystemId 
      */
     function __construct()
     {
@@ -154,6 +178,18 @@ class CustomerClusterAttr extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ClusterMountSet, $obj);
             }
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("MountStorageNum",$param) and $param["MountStorageNum"] !== null) {
+            $this->MountStorageNum = $param["MountStorageNum"];
+        }
+
+        if (array_key_exists("StorageFileSystemId",$param) and $param["StorageFileSystemId"] !== null) {
+            $this->StorageFileSystemId = $param["StorageFileSystemId"];
         }
     }
 }

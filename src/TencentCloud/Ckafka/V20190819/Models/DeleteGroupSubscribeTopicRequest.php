@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGroupSubscribeTopic请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getGroup() 获取消费分组名称
- * @method void setGroup(string $Group) 设置消费分组名称
- * @method string getTopic() 获取主题名
- * @method void setTopic(string $Topic) 设置主题名
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p>
+ * @method string getGroup() 获取<p>消费分组名称</p>
+ * @method void setGroup(string $Group) 设置<p>消费分组名称</p>
+ * @method string getTopic() 获取<p>主题名</p>
+ * @method void setTopic(string $Topic) 设置<p>主题名</p>
  */
 class DeleteGroupSubscribeTopicRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 消费分组名称
+     * @var string <p>消费分组名称</p>
      */
     public $Group;
 
     /**
-     * @var string 主题名
+     * @var string <p>主题名</p>
      */
     public $Topic;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $Group 消费分组名称
-     * @param string $Topic 主题名
+     * @param string $InstanceId <p>ckafka集群实例Id</p>
+     * @param string $Group <p>消费分组名称</p>
+     * @param string $Topic <p>主题名</p>
      */
     function __construct()
     {

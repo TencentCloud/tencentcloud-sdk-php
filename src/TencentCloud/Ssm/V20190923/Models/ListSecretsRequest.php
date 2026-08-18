@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductName(string $ProductName) 设置<p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p>
  * @method integer getEncryptType() 获取<p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
  * @method void setEncryptType(integer $EncryptType) 设置<p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+ * @method string getInstanceID() 获取<p>云产品实例 ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>云产品实例 ID</p>
  */
 class ListSecretsRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ListSecretsRequest extends AbstractModel
     public $EncryptType;
 
     /**
+     * @var string <p>云产品实例 ID</p>
+     */
+    public $InstanceID;
+
+    /**
      * @param integer $Offset <p>查询列表的起始位置，以0开始，不设置默认为0。</p>
      * @param integer $Limit <p>单次查询返回的最大数量，0或不设置则使用默认值 20。</p>
      * @param integer $OrderType <p>根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。</p>
@@ -96,6 +103,7 @@ class ListSecretsRequest extends AbstractModel
      * @param integer $SecretType <p>0  -- 表示用户自定义凭据，默认为0。<br>1  -- 表示用户云产品凭据。<br>2 -- 表示SSH密钥对凭据。<br>3 -- 表示云API密钥对凭据。</p>
      * @param string $ProductName <p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p>
      * @param integer $EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+     * @param string $InstanceID <p>云产品实例 ID</p>
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class ListSecretsRequest extends AbstractModel
 
         if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
             $this->EncryptType = $param["EncryptType"];
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyPathLifecyclePolicy请求参数结构体
  *
- * @method string getLifecyclePolicyID() 获取生命周期管理策略ID
- * @method void setLifecyclePolicyID(string $LifecyclePolicyID) 设置生命周期管理策略ID
- * @method array getPaths() 获取生命周期管理策略关联目录的绝对路径列表
- * @method void setPaths(array $Paths) 设置生命周期管理策略关联目录的绝对路径列表
+ * @method string getLifecyclePolicyID() 获取<p>生命周期管理策略ID</p>
+ * @method void setLifecyclePolicyID(string $LifecyclePolicyID) 设置<p>生命周期管理策略ID</p>
+ * @method array getPaths() 获取<p>生命周期管理策略所关联的目录路径列表，每个路径必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。</p><p>示例：</p><ul><li>若挂载的是CFS根目录 /，需关联挂载路径下的 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需关联挂载路径下的 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul>
+ * @method void setPaths(array $Paths) 设置<p>生命周期管理策略所关联的目录路径列表，每个路径必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。</p><p>示例：</p><ul><li>若挂载的是CFS根目录 /，需关联挂载路径下的 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需关联挂载路径下的 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul>
  */
 class ApplyPathLifecyclePolicyRequest extends AbstractModel
 {
     /**
-     * @var string 生命周期管理策略ID
+     * @var string <p>生命周期管理策略ID</p>
      */
     public $LifecyclePolicyID;
 
     /**
-     * @var array 生命周期管理策略关联目录的绝对路径列表
+     * @var array <p>生命周期管理策略所关联的目录路径列表，每个路径必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。</p><p>示例：</p><ul><li>若挂载的是CFS根目录 /，需关联挂载路径下的 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需关联挂载路径下的 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public $Paths;
 
     /**
-     * @param string $LifecyclePolicyID 生命周期管理策略ID
-     * @param array $Paths 生命周期管理策略关联目录的绝对路径列表
+     * @param string $LifecyclePolicyID <p>生命周期管理策略ID</p>
+     * @param array $Paths <p>生命周期管理策略所关联的目录路径列表，每个路径必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。</p><p>示例：</p><ul><li>若挂载的是CFS根目录 /，需关联挂载路径下的 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需关联挂载路径下的 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     function __construct()
     {

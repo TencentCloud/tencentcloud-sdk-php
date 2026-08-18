@@ -42,12 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置<p>是否允许未同步的副本选为 leader: 1 开启  0 关闭</p>
  * @method integer getDeleteProtectionEnable() 获取<p>实例删除保护开关: 1 开启  0 关闭</p>
  * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) 设置<p>实例删除保护开关: 1 开启  0 关闭</p>
- * @method integer getRetentionBytes() 获取<p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
- * @method void setRetentionBytes(integer $RetentionBytes) 设置<p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+ * @method integer getRetentionBytes() 获取<p>实例级别消息保留大小</p><p>单位：byte</p><p>默认值：-1</p><p>实例级别消息保留大小</p>
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置<p>实例级别消息保留大小</p><p>单位：byte</p><p>默认值：-1</p><p>实例级别消息保留大小</p>
  * @method boolean getAdminSecurity() 获取<p>是否封禁高风险admin接口; true则封禁高风险adminApi; 关闭后不支持打开,仅专业版支持; 默认是false 对高风险admin接口不做处理</p>
  * @method void setAdminSecurity(boolean $AdminSecurity) 设置<p>是否封禁高风险admin接口; true则封禁高风险adminApi; 关闭后不支持打开,仅专业版支持; 默认是false 对高风险admin接口不做处理</p>
- * @method integer getTransactionalIdExpirationMs() 获取<p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>取值范围：[3600000, 604800000]<br>单位：ms
- * @method void setTransactionalIdExpirationMs(integer $TransactionalIdExpirationMs) 设置<p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>取值范围：[3600000, 604800000]<br>单位：ms
+ * @method integer getTransactionalIdExpirationMs() 获取<p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>取值范围：[3600000, 604800000]</p><p>单位：ms</p>
+ * @method void setTransactionalIdExpirationMs(integer $TransactionalIdExpirationMs) 设置<p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>取值范围：[3600000, 604800000]</p><p>单位：ms</p>
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
@@ -108,7 +108,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $DeleteProtectionEnable;
 
     /**
-     * @var integer <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+     * @var integer <p>实例级别消息保留大小</p><p>单位：byte</p><p>默认值：-1</p><p>实例级别消息保留大小</p>
      */
     public $RetentionBytes;
 
@@ -118,7 +118,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $AdminSecurity;
 
     /**
-     * @var integer <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>取值范围：[3600000, 604800000]<br>单位：ms
+     * @var integer <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>取值范围：[3600000, 604800000]</p><p>单位：ms</p>
      */
     public $TransactionalIdExpirationMs;
 
@@ -134,9 +134,9 @@ class ModifyInstanceAttributesRequest extends AbstractModel
      * @param integer $MaxMessageByte <p>实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)</p>
      * @param integer $UncleanLeaderElectionEnable <p>是否允许未同步的副本选为 leader: 1 开启  0 关闭</p>
      * @param integer $DeleteProtectionEnable <p>实例删除保护开关: 1 开启  0 关闭</p>
-     * @param integer $RetentionBytes <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+     * @param integer $RetentionBytes <p>实例级别消息保留大小</p><p>单位：byte</p><p>默认值：-1</p><p>实例级别消息保留大小</p>
      * @param boolean $AdminSecurity <p>是否封禁高风险admin接口; true则封禁高风险adminApi; 关闭后不支持打开,仅专业版支持; 默认是false 对高风险admin接口不做处理</p>
-     * @param integer $TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>取值范围：[3600000, 604800000]<br>单位：ms
+     * @param integer $TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>取值范围：[3600000, 604800000]</p><p>单位：ms</p>
      */
     function __construct()
     {

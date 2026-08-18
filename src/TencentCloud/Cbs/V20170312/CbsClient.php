@@ -85,7 +85,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * 可以根据定期快照策略ID、名称或者状态等信息来查询定期快照策略的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
 * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的定期快照策略表。
- * @method Models\DescribeDedicatedClusterDiskStatisticsResponse DescribeDedicatedClusterDiskStatistics(Models\DescribeDedicatedClusterDiskStatisticsRequest $req) 查询 CVM CDC 独享集群云硬盘统计信息。
+ * @method Models\DescribeDedicatedClusterDiskStatisticsResponse DescribeDedicatedClusterDiskStatistics(Models\DescribeDedicatedClusterDiskStatisticsRequest $req) 查询云服务器独享集群云硬盘统计信息。
  * @method Models\DescribeDiskAssociatedAutoSnapshotPolicyResponse DescribeDiskAssociatedAutoSnapshotPolicy(Models\DescribeDiskAssociatedAutoSnapshotPolicyRequest $req) 本接口（DescribeDiskAssociatedAutoSnapshotPolicy）用于查询云盘绑定的定期快照策略。
  * @method Models\DescribeDiskBackupsResponse DescribeDiskBackups(Models\DescribeDiskBackupsRequest $req) 本接口（DescribeDiskBackups）用于查询备份点的详细信息。
 

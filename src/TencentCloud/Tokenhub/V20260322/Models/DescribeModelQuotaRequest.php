@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Adp\V20260520\Models;
+namespace TencentCloud\Tokenhub\V20260322\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ClawAgent调用方自定义配置开关集合
+ * DescribeModelQuota请求参数结构体
  *
- * @method boolean getEnabled() 获取<p>是否允许C端用户在对话时动态传入自定义Agent配置</p>
- * @method void setEnabled(boolean $Enabled) 设置<p>是否允许C端用户在对话时动态传入自定义Agent配置</p>
+
  */
-class ClawAgentCustomConfig extends AbstractModel
+class DescribeModelQuotaRequest extends AbstractModel
 {
-    /**
-     * @var boolean <p>是否允许C端用户在对话时动态传入自定义Agent配置</p>
-     */
-    public $Enabled;
+
 
     /**
-     * @param boolean $Enabled <p>是否允许C端用户在对话时动态传入自定义Agent配置</p>
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class ClawAgentCustomConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
-        }
+
     }
 }

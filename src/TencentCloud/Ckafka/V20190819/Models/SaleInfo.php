@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 各版本销售信息
  *
- * @method boolean getFlag() 获取手动设置的flag标志，true表示售罄，false表示可售。
- * @method void setFlag(boolean $Flag) 设置手动设置的flag标志，true表示售罄，false表示可售。
- * @method string getVersion() 获取ckafka版本号(1.1.1/2.4.2/0.10.2)
- * @method void setVersion(string $Version) 设置ckafka版本号(1.1.1/2.4.2/0.10.2)
- * @method string getPlatform() 获取专业版、标准版标志
- * @method void setPlatform(string $Platform) 设置专业版、标准版标志
- * @method boolean getSoldOut() 获取售罄标志：true售罄
- * @method void setSoldOut(boolean $SoldOut) 设置售罄标志：true售罄
+ * @method boolean getFlag() 获取<p>手动设置的flag标志，true表示售罄，false表示可售。</p>
+ * @method void setFlag(boolean $Flag) 设置<p>手动设置的flag标志，true表示售罄，false表示可售。</p>
+ * @method string getVersion() 获取<p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
+ * @method void setVersion(string $Version) 设置<p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
+ * @method string getPlatform() 获取<p>专业版、标准版标志</p>
+ * @method void setPlatform(string $Platform) 设置<p>专业版、标准版标志</p>
+ * @method boolean getSoldOut() 获取<p>售罄标志：true售罄</p>
+ * @method void setSoldOut(boolean $SoldOut) 设置<p>售罄标志：true售罄</p>
  */
 class SaleInfo extends AbstractModel
 {
     /**
-     * @var boolean 手动设置的flag标志，true表示售罄，false表示可售。
+     * @var boolean <p>手动设置的flag标志，true表示售罄，false表示可售。</p>
      */
     public $Flag;
 
     /**
-     * @var string ckafka版本号(1.1.1/2.4.2/0.10.2)
+     * @var string <p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
      */
     public $Version;
 
     /**
-     * @var string 专业版、标准版标志
+     * @var string <p>专业版、标准版标志</p>
      */
     public $Platform;
 
     /**
-     * @var boolean 售罄标志：true售罄
+     * @var boolean <p>售罄标志：true售罄</p>
      */
     public $SoldOut;
 
     /**
-     * @param boolean $Flag 手动设置的flag标志，true表示售罄，false表示可售。
-     * @param string $Version ckafka版本号(1.1.1/2.4.2/0.10.2)
-     * @param string $Platform 专业版、标准版标志
-     * @param boolean $SoldOut 售罄标志：true售罄
+     * @param boolean $Flag <p>手动设置的flag标志，true表示售罄，false表示可售。</p>
+     * @param string $Version <p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
+     * @param string $Platform <p>专业版、标准版标志</p>
+     * @param boolean $SoldOut <p>售罄标志：true售罄</p>
      */
     function __construct()
     {

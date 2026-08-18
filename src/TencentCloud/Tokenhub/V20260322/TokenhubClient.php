@@ -74,6 +74,7 @@ use TencentCloud\Tokenhub\V20260322\Models as Models;
  * @method Models\DescribeModelListResponse DescribeModelList(Models\DescribeModelListRequest $req) 查询模型列表。
 
 支持按模型 ID、模型名称、模型能力等条件筛选，支持分页和排序。
+ * @method Models\DescribeModelQuotaResponse DescribeModelQuota(Models\DescribeModelQuotaRequest $req) 查询指定模型的 TPM 和 QPM 配额上限。
  * @method Models\DescribeTokenPlanResponse DescribeTokenPlan(Models\DescribeTokenPlanRequest $req) 查询 TokenPlan 套餐详情。
 
 返回套餐基本信息及额度中心主额度包余量。

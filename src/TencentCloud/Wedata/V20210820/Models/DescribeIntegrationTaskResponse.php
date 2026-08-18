@@ -20,40 +20,47 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIntegrationTask返回参数结构体
  *
- * @method IntegrationTaskInfo getTaskInfo() 获取任务信息
+ * @method IntegrationTaskInfo getTaskInfo() 获取<p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskInfo(IntegrationTaskInfo $TaskInfo) 设置任务信息
+ * @method void setTaskInfo(IntegrationTaskInfo $TaskInfo) 设置<p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AgentStatus getAgentStatus() 获取采集器统计信息
+ * @method AgentStatus getAgentStatus() 获取<p>采集器统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAgentStatus(AgentStatus $AgentStatus) 设置采集器统计信息
+ * @method void setAgentStatus(AgentStatus $AgentStatus) 设置<p>采集器统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TaskVersionInstance getTaskVersion() 获取任务版本信息
+ * @method TaskVersionInstance getTaskVersion() 获取<p>任务版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskVersion(TaskVersionInstance $TaskVersion) 设置任务版本信息
+ * @method void setTaskVersion(TaskVersionInstance $TaskVersion) 设置<p>任务版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTaskVersionList() 获取<p>历史实例信息</p>
+ * @method void setTaskVersionList(array $TaskVersionList) 设置<p>历史实例信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeIntegrationTaskResponse extends AbstractModel
 {
     /**
-     * @var IntegrationTaskInfo 任务信息
+     * @var IntegrationTaskInfo <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskInfo;
 
     /**
-     * @var AgentStatus 采集器统计信息
+     * @var AgentStatus <p>采集器统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AgentStatus;
 
     /**
-     * @var TaskVersionInstance 任务版本信息
+     * @var TaskVersionInstance <p>任务版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskVersion;
+
+    /**
+     * @var array <p>历史实例信息</p>
+     */
+    public $TaskVersionList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -61,12 +68,13 @@ class DescribeIntegrationTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param IntegrationTaskInfo $TaskInfo 任务信息
+     * @param IntegrationTaskInfo $TaskInfo <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentStatus $AgentStatus 采集器统计信息
+     * @param AgentStatus $AgentStatus <p>采集器统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskVersionInstance $TaskVersion 任务版本信息
+     * @param TaskVersionInstance $TaskVersion <p>任务版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TaskVersionList <p>历史实例信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -95,6 +103,15 @@ class DescribeIntegrationTaskResponse extends AbstractModel
         if (array_key_exists("TaskVersion",$param) and $param["TaskVersion"] !== null) {
             $this->TaskVersion = new TaskVersionInstance();
             $this->TaskVersion->deserialize($param["TaskVersion"]);
+        }
+
+        if (array_key_exists("TaskVersionList",$param) and $param["TaskVersionList"] !== null) {
+            $this->TaskVersionList = [];
+            foreach ($param["TaskVersionList"] as $key => $value){
+                $obj = new RealtimeTaskInstanceVO();
+                $obj->deserialize($value);
+                array_push($this->TaskVersionList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

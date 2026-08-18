@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyword(string $Keyword) 设置<p>关键字</p>
  * @method string getJobType() 获取<p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
  * @method void setJobType(string $JobType) 设置<p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
+ * @method string getContext() 获取<p>滚动查询游标</p>
+ * @method void setContext(string $Context) 设置<p>滚动查询游标</p>
  */
 class DescribeStreamTaskLogListRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeStreamTaskLogListRequest extends AbstractModel
     public $JobType;
 
     /**
+     * @var string <p>滚动查询游标</p>
+     */
+    public $Context;
+
+    /**
      * @param string $ProjectId <p>项目ID</p>
      * @param string $TaskId <p>任务ID</p>
      * @param string $JobId <p>作业ID</p>
@@ -112,6 +119,7 @@ class DescribeStreamTaskLogListRequest extends AbstractModel
      * @param integer $RunningOrderId <p>作业运行的实例ID</p>
      * @param string $Keyword <p>关键字</p>
      * @param string $JobType <p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
+     * @param string $Context <p>滚动查询游标</p>
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class DescribeStreamTaskLogListRequest extends AbstractModel
 
         if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
             $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
+            $this->Context = $param["Context"];
         }
     }
 }

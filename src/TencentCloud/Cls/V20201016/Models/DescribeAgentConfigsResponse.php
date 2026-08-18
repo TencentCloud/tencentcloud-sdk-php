@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAgentConfigs返回参数结构体
  *
- * @method array getLogConfigs() 获取采集配置
+ * @method array getLogConfigs() 获取<p>采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogConfigs(array $LogConfigs) 设置采集配置
+ * @method void setLogConfigs(array $LogConfigs) 设置<p>采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getServiceLogConfigs() 获取服务日志的配置信息
+ * @method array getServiceLogConfigs() 获取<p>服务日志的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceLogConfigs(array $ServiceLogConfigs) 设置服务日志的配置信息
+ * @method void setServiceLogConfigs(array $ServiceLogConfigs) 设置<p>服务日志的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastVersion() 获取弃用
+ * @method string getLastVersion() 获取<p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastVersion(string $LastVersion) 设置弃用
+ * @method void setLastVersion(string $LastVersion) 设置<p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getNeedUpdate() 获取弃用
+ * @method boolean getNeedUpdate() 获取<p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNeedUpdate(boolean $NeedUpdate) 设置弃用
+ * @method void setNeedUpdate(boolean $NeedUpdate) 设置<p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getURL() 获取弃用
+ * @method string getURL() 获取<p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setURL(string $URL) 设置弃用
+ * @method void setURL(string $URL) 设置<p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileMd5() 获取弃用
+ * @method string getFileMd5() 获取<p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileMd5(string $FileMd5) 设置弃用
+ * @method void setFileMd5(string $FileMd5) 设置<p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,37 +50,37 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAgentConfigsResponse extends AbstractModel
 {
     /**
-     * @var array 采集配置
+     * @var array <p>采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogConfigs;
 
     /**
-     * @var array 服务日志的配置信息
+     * @var array <p>服务日志的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceLogConfigs;
 
     /**
-     * @var string 弃用
+     * @var string <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastVersion;
 
     /**
-     * @var boolean 弃用
+     * @var boolean <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NeedUpdate;
 
     /**
-     * @var string 弃用
+     * @var string <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $URL;
 
     /**
-     * @var string 弃用
+     * @var string <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileMd5;
@@ -91,17 +91,17 @@ class DescribeAgentConfigsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $LogConfigs 采集配置
+     * @param array $LogConfigs <p>采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ServiceLogConfigs 服务日志的配置信息
+     * @param array $ServiceLogConfigs <p>服务日志的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastVersion 弃用
+     * @param string $LastVersion <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $NeedUpdate 弃用
+     * @param boolean $NeedUpdate <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $URL 弃用
+     * @param string $URL <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileMd5 弃用
+     * @param string $FileMd5 <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

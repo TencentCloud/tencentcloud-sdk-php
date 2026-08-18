@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dataagent\V20250513\Models;
+namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QuerySceneList返回参数结构体
+ * DescribeUsageSummaryList返回参数结构体
  *
- * @method array getDatas() 获取场景列表
- * @method void setDatas(array $Datas) 设置场景列表
- * @method integer getTotal() 获取总数
- * @method void setTotal(integer $Total) 设置总数
+ * @method string getTotalCount() 获取<p>总记录数，用于前端分页</p>
+ * @method void setTotalCount(string $TotalCount) 设置<p>总记录数，用于前端分页</p>
+ * @method array getUsageSummaryList() 获取<p>资源用量聚合明细列表</p>
+ * @method void setUsageSummaryList(array $UsageSummaryList) 设置<p>资源用量聚合明细列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class QuerySceneListResponse extends AbstractModel
+class DescribeUsageSummaryListResponse extends AbstractModel
 {
     /**
-     * @var array 场景列表
+     * @var string <p>总记录数，用于前端分页</p>
      */
-    public $Datas;
+    public $TotalCount;
 
     /**
-     * @var integer 总数
+     * @var array <p>资源用量聚合明细列表</p>
      */
-    public $Total;
+    public $UsageSummaryList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class QuerySceneListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Datas 场景列表
-     * @param integer $Total 总数
+     * @param string $TotalCount <p>总记录数，用于前端分页</p>
+     * @param array $UsageSummaryList <p>资源用量聚合明细列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,17 @@ class QuerySceneListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Datas",$param) and $param["Datas"] !== null) {
-            $this->Datas = [];
-            foreach ($param["Datas"] as $key => $value){
-                $obj = new Scene();
-                $obj->deserialize($value);
-                array_push($this->Datas, $obj);
-            }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("UsageSummaryList",$param) and $param["UsageSummaryList"] !== null) {
+            $this->UsageSummaryList = [];
+            foreach ($param["UsageSummaryList"] as $key => $value){
+                $obj = new UsageSummary();
+                $obj->deserialize($value);
+                array_push($this->UsageSummaryList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

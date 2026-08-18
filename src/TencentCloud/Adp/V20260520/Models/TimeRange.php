@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dataagent\V20250513\Models;
+namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpdateScene请求参数结构体
+ * 查询时间范围（Unix 秒）
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method Scene getScene() 获取场景
- * @method void setScene(Scene $Scene) 设置场景
+ * @method string getEndTime() 获取<p>结束时间，Unix 秒</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间，Unix 秒</p>
+ * @method string getStartTime() 获取<p>开始时间，Unix 秒</p>
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间，Unix 秒</p>
  */
-class UpdateSceneRequest extends AbstractModel
+class TimeRange extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>结束时间，Unix 秒</p>
      */
-    public $InstanceId;
+    public $EndTime;
 
     /**
-     * @var Scene 场景
+     * @var string <p>开始时间，Unix 秒</p>
      */
-    public $Scene;
+    public $StartTime;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param Scene $Scene 场景
+     * @param string $EndTime <p>结束时间，Unix 秒</p>
+     * @param string $StartTime <p>开始时间，Unix 秒</p>
      */
     function __construct()
     {
@@ -54,13 +54,12 @@ class UpdateSceneRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
 
-        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
-            $this->Scene = new Scene();
-            $this->Scene->deserialize($param["Scene"]);
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
     }
 }

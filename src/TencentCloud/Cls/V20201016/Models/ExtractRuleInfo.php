@@ -74,6 +74,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRawLogKey() 获取<p>原始日志的键名称(Key)；所有原始日志， 均以您指定的键名称（Key），原始日志内容作为值（Value）进行上传，为空时表示不开启原始日志上传。</p><ul><li>COS导入不支持此字段。</li></ul>
  * @method void setRawLogKey(string $RawLogKey) 设置<p>原始日志的键名称(Key)；所有原始日志， 均以您指定的键名称（Key），原始日志内容作为值（Value）进行上传，为空时表示不开启原始日志上传。</p><ul><li>COS导入不支持此字段。</li></ul>
+ * @method array getUnits() 获取<p>采集范围。空数组表示采集全部Unit，非空数组表示采集指定Unit</p>
+ * @method void setUnits(array $Units) 设置<p>采集范围。空数组表示采集全部Unit，非空数组表示采集指定Unit</p>
+ * @method boolean getIncludeKernel() 获取<p>是否采集内核日志</p><p>默认值：true</p>
+ * @method void setIncludeKernel(boolean $IncludeKernel) 设置<p>是否采集内核日志</p><p>默认值：true</p>
+ * @method boolean getUseJournalTime() 获取<p>是否使用journal原始时间。true ：用 journal 原始时间；false： 用采集时间 </p><p>默认值：false</p>
+ * @method void setUseJournalTime(boolean $UseJournalTime) 设置<p>是否使用journal原始时间。true ：用 journal 原始时间；false： 用采集时间 </p><p>默认值：false</p>
+ * @method array getKeysDelimiter() 获取<p>字段间分隔符数组（长度 = keys.length），每个元素是前一字段结尾到当前字段开头的分隔串</p>
+ * @method void setKeysDelimiter(array $KeysDelimiter) 设置<p>字段间分隔符数组（长度 = keys.length），每个元素是前一字段结尾到当前字段开头的分隔串</p>
+ * @method array getKeysFlag() 获取<p>字段标志位数组（长度 = keys.length），<code>0</code> = 普通字段，<code>1</code> = 包含子字段需二次拆分</p>
+ * @method void setKeysFlag(array $KeysFlag) 设置<p>字段标志位数组（长度 = keys.length），<code>0</code> = 普通字段，<code>1</code> = 包含子字段需二次拆分</p>
  */
 class ExtractRuleInfo extends AbstractModel
 {
@@ -189,6 +199,31 @@ class ExtractRuleInfo extends AbstractModel
     public $RawLogKey;
 
     /**
+     * @var array <p>采集范围。空数组表示采集全部Unit，非空数组表示采集指定Unit</p>
+     */
+    public $Units;
+
+    /**
+     * @var boolean <p>是否采集内核日志</p><p>默认值：true</p>
+     */
+    public $IncludeKernel;
+
+    /**
+     * @var boolean <p>是否使用journal原始时间。true ：用 journal 原始时间；false： 用采集时间 </p><p>默认值：false</p>
+     */
+    public $UseJournalTime;
+
+    /**
+     * @var array <p>字段间分隔符数组（长度 = keys.length），每个元素是前一字段结尾到当前字段开头的分隔串</p>
+     */
+    public $KeysDelimiter;
+
+    /**
+     * @var array <p>字段标志位数组（长度 = keys.length），<code>0</code> = 普通字段，<code>1</code> = 包含子字段需二次拆分</p>
+     */
+    public $KeysFlag;
+
+    /**
      * @param string $TimeKey <p>时间字段的key名字，TimeKey和TimeFormat必须成对出现</p>
      * @param string $TimeFormat <p>时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数</p><ul><li>参考 <a href="https://cloud.tencent.com/document/product/614/38614">配置时间格式</a> 文档</li></ul>
      * @param string $Delimiter <p>分隔符类型日志的分隔符，只有LogType为delimiter_log时有效</p>
@@ -216,6 +251,11 @@ class ExtractRuleInfo extends AbstractModel
      * @param array $AdvanceFilterRules <p>日志过滤规则列表（新版）。<br>注意：</p><ul><li>2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。</li><li>自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RawLogKey <p>原始日志的键名称(Key)；所有原始日志， 均以您指定的键名称（Key），原始日志内容作为值（Value）进行上传，为空时表示不开启原始日志上传。</p><ul><li>COS导入不支持此字段。</li></ul>
+     * @param array $Units <p>采集范围。空数组表示采集全部Unit，非空数组表示采集指定Unit</p>
+     * @param boolean $IncludeKernel <p>是否采集内核日志</p><p>默认值：true</p>
+     * @param boolean $UseJournalTime <p>是否使用journal原始时间。true ：用 journal 原始时间；false： 用采集时间 </p><p>默认值：false</p>
+     * @param array $KeysDelimiter <p>字段间分隔符数组（长度 = keys.length），每个元素是前一字段结尾到当前字段开头的分隔串</p>
+     * @param array $KeysFlag <p>字段标志位数组（长度 = keys.length），<code>0</code> = 普通字段，<code>1</code> = 包含子字段需二次拆分</p>
      */
     function __construct()
     {
@@ -332,6 +372,26 @@ class ExtractRuleInfo extends AbstractModel
 
         if (array_key_exists("RawLogKey",$param) and $param["RawLogKey"] !== null) {
             $this->RawLogKey = $param["RawLogKey"];
+        }
+
+        if (array_key_exists("Units",$param) and $param["Units"] !== null) {
+            $this->Units = $param["Units"];
+        }
+
+        if (array_key_exists("IncludeKernel",$param) and $param["IncludeKernel"] !== null) {
+            $this->IncludeKernel = $param["IncludeKernel"];
+        }
+
+        if (array_key_exists("UseJournalTime",$param) and $param["UseJournalTime"] !== null) {
+            $this->UseJournalTime = $param["UseJournalTime"];
+        }
+
+        if (array_key_exists("KeysDelimiter",$param) and $param["KeysDelimiter"] !== null) {
+            $this->KeysDelimiter = $param["KeysDelimiter"];
+        }
+
+        if (array_key_exists("KeysFlag",$param) and $param["KeysFlag"] !== null) {
+            $this->KeysFlag = $param["KeysFlag"];
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetachNodes请求参数结构体
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method array getNodeIds() 获取集群中的节点id
- * @method void setNodeIds(array $NodeIds) 设置集群中的节点id
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method array getNodeIds() 获取<p>集群中的节点id</p>
+ * @method void setNodeIds(array $NodeIds) 设置<p>集群中的节点id</p>
  */
 class DetachNodesRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var array 集群中的节点id
+     * @var array <p>集群中的节点id</p>
      */
     public $NodeIds;
 
     /**
-     * @param string $ClusterId 集群id
-     * @param array $NodeIds 集群中的节点id
+     * @param string $ClusterId <p>集群id</p>
+     * @param array $NodeIds <p>集群中的节点id</p>
      */
     function __construct()
     {

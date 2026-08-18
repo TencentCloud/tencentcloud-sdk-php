@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTableContentPreview返回参数结构体
  *
- * @method array getColumnNames() 获取表的列名列表
+ * @method array getColumnNames() 获取<p>表的列名列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColumnNames(array $ColumnNames) 设置表的列名列表
+ * @method void setColumnNames(array $ColumnNames) 设置<p>表的列名列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTableRecordSet() 获取表的行数据列表
+ * @method array getTableRecordSet() 获取<p>表的行数据列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableRecordSet(array $TableRecordSet) 设置表的行数据列表
+ * @method void setTableRecordSet(array $TableRecordSet) 设置<p>表的行数据列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取异步预览任务ID
+ * @method string getTaskId() 获取<p>异步预览任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置异步预览任务ID
+ * @method void setTaskId(string $TaskId) 设置<p>异步预览任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAsyncState() 获取异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功
+ * @method integer getAsyncState() 获取<p>异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncState(integer $AsyncState) 设置异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功
+ * @method void setAsyncState(integer $AsyncState) 设置<p>异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,25 +42,25 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTableContentPreviewResponse extends AbstractModel
 {
     /**
-     * @var array 表的列名列表
+     * @var array <p>表的列名列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColumnNames;
 
     /**
-     * @var array 表的行数据列表
+     * @var array <p>表的行数据列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableRecordSet;
 
     /**
-     * @var string 异步预览任务ID
+     * @var string <p>异步预览任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var integer 异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功
+     * @var integer <p>异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncState;
@@ -71,13 +71,13 @@ class DescribeTableContentPreviewResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ColumnNames 表的列名列表
+     * @param array $ColumnNames <p>表的列名列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TableRecordSet 表的行数据列表
+     * @param array $TableRecordSet <p>表的行数据列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 异步预览任务ID
+     * @param string $TaskId <p>异步预览任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AsyncState 异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功
+     * @param integer $AsyncState <p>异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

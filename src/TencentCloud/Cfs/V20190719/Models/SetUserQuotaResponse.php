@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetUserQuota返回参数结构体
  *
- * @method string getUserId() 获取UID/GID信息
- * @method void setUserId(string $UserId) 设置UID/GID信息
+ * @method string getUserId() 获取<p>UID/GID信息</p>
+ * @method void setUserId(string $UserId) 设置<p>UID/GID信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SetUserQuotaResponse extends AbstractModel
 {
     /**
-     * @var string UID/GID信息
+     * @var string <p>UID/GID信息</p>
      */
     public $UserId;
 
@@ -38,7 +38,7 @@ class SetUserQuotaResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $UserId UID/GID信息
+     * @param string $UserId <p>UID/GID信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

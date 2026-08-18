@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeService请求参数结构体
  *
- * @method string getInstanceID() 获取实例ID
- * @method void setInstanceID(string $InstanceID) 设置实例ID
- * @method string getID() 获取业务ID
- * @method void setID(string $ID) 设置业务ID
+ * @method string getInstanceID() 获取<p>实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
+ * @method string getID() 获取<p>业务ID</p>
+ * @method void setID(string $ID) 设置<p>业务ID</p>
  */
 class DescribeServiceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceID;
 
     /**
-     * @var string 业务ID
+     * @var string <p>业务ID</p>
      */
     public $ID;
 
     /**
-     * @param string $InstanceID 实例ID
-     * @param string $ID 业务ID
+     * @param string $InstanceID <p>实例ID</p>
+     * @param string $ID <p>业务ID</p>
      */
     function __construct()
     {

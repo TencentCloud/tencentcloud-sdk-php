@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dataagent\V20250513\Models;
+namespace TencentCloud\Tokenhub\V20260322\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AddScene返回参数结构体
+ * DescribeModelQuota返回参数结构体
  *
- * @method string getSceneId() 获取场景id
- * @method void setSceneId(string $SceneId) 设置场景id
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class AddSceneResponse extends AbstractModel
+class DescribeModelQuotaResponse extends AbstractModel
 {
-    /**
-     * @var string 场景id
-     */
-    public $SceneId;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $SceneId 场景id
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,10 +46,6 @@ class AddSceneResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SceneId",$param) and $param["SceneId"] !== null) {
-            $this->SceneId = $param["SceneId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

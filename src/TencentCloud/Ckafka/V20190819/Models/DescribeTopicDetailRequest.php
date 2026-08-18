@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderType(integer $OrderType) 设置<p>0-顺序、1-倒序，默认值为0。</p>
  * @method array getFilters() 获取<p>目前支持 ReplicaNum （副本数）筛选</p>
  * @method void setFilters(array $Filters) 设置<p>目前支持 ReplicaNum （副本数）筛选</p>
+ * @method boolean getSearchWordIgnoreCaseFlag() 获取<p>搜索topic时是否忽略大小写敏感</p>
+ * @method void setSearchWordIgnoreCaseFlag(boolean $SearchWordIgnoreCaseFlag) 设置<p>搜索topic时是否忽略大小写敏感</p>
  */
 class DescribeTopicDetailRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeTopicDetailRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var boolean <p>搜索topic时是否忽略大小写敏感</p>
+     */
+    public $SearchWordIgnoreCaseFlag;
+
+    /**
      * @param string $InstanceId <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      * @param string $SearchWord <p>（过滤条件）按照topicName过滤，支持模糊查询</p>
      * @param integer $Offset <p>偏移量，不填默认为0</p>
@@ -88,6 +95,7 @@ class DescribeTopicDetailRequest extends AbstractModel
      * @param string $OrderBy <p>根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。</p><p>该参数为空时，默认按CreateTime倒序排序</p>
      * @param integer $OrderType <p>0-顺序、1-倒序，默认值为0。</p>
      * @param array $Filters <p>目前支持 ReplicaNum （副本数）筛选</p>
+     * @param boolean $SearchWordIgnoreCaseFlag <p>搜索topic时是否忽略大小写敏感</p>
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class DescribeTopicDetailRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("SearchWordIgnoreCaseFlag",$param) and $param["SearchWordIgnoreCaseFlag"] !== null) {
+            $this->SearchWordIgnoreCaseFlag = $param["SearchWordIgnoreCaseFlag"];
         }
     }
 }

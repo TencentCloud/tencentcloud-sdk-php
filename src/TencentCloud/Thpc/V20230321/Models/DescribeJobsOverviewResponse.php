@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJobsOverview返回参数结构体
  *
- * @method integer getJobTotal() 获取作业任务数量
- * @method void setJobTotal(integer $JobTotal) 设置作业任务数量
- * @method integer getQueuingJobTotal() 获取排队中的作业任务数量
- * @method void setQueuingJobTotal(integer $QueuingJobTotal) 设置排队中的作业任务数量
- * @method integer getRunningJobTotal() 获取运行中的作业数量
- * @method void setRunningJobTotal(integer $RunningJobTotal) 设置运行中的作业数量
+ * @method integer getJobTotal() 获取<p>作业任务数量</p>
+ * @method void setJobTotal(integer $JobTotal) 设置<p>作业任务数量</p>
+ * @method integer getQueuingJobTotal() 获取<p>排队中的作业任务数量</p>
+ * @method void setQueuingJobTotal(integer $QueuingJobTotal) 设置<p>排队中的作业任务数量</p>
+ * @method integer getRunningJobTotal() 获取<p>运行中的作业数量</p>
+ * @method void setRunningJobTotal(integer $RunningJobTotal) 设置<p>运行中的作业数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeJobsOverviewResponse extends AbstractModel
 {
     /**
-     * @var integer 作业任务数量
+     * @var integer <p>作业任务数量</p>
      */
     public $JobTotal;
 
     /**
-     * @var integer 排队中的作业任务数量
+     * @var integer <p>排队中的作业任务数量</p>
      */
     public $QueuingJobTotal;
 
     /**
-     * @var integer 运行中的作业数量
+     * @var integer <p>运行中的作业数量</p>
      */
     public $RunningJobTotal;
 
@@ -52,9 +52,9 @@ class DescribeJobsOverviewResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $JobTotal 作业任务数量
-     * @param integer $QueuingJobTotal 排队中的作业任务数量
-     * @param integer $RunningJobTotal 运行中的作业数量
+     * @param integer $JobTotal <p>作业任务数量</p>
+     * @param integer $QueuingJobTotal <p>排队中的作业任务数量</p>
+     * @param integer $RunningJobTotal <p>运行中的作业数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

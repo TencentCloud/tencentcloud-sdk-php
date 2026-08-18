@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAgentConfigs请求参数结构体
  *
- * @method string getAgentVersion() 获取agent的版本号
- * @method void setAgentVersion(string $AgentVersion) 设置agent的版本号
- * @method string getAgentIp() 获取agent的IP地址
- * @method void setAgentIp(string $AgentIp) 设置agent的IP地址
- * @method array getLabels() 获取机器组标签列表
- * @method void setLabels(array $Labels) 设置机器组标签列表
- * @method string getInstanceId() 获取agent的instance id
- * @method void setInstanceId(string $InstanceId) 设置agent的instance id
+ * @method string getAgentVersion() 获取<p>agent的版本号</p>
+ * @method void setAgentVersion(string $AgentVersion) 设置<p>agent的版本号</p>
+ * @method string getAgentIp() 获取<p>agent的IP地址</p>
+ * @method void setAgentIp(string $AgentIp) 设置<p>agent的IP地址</p>
+ * @method array getLabels() 获取<p>机器组标签列表</p>
+ * @method void setLabels(array $Labels) 设置<p>机器组标签列表</p>
+ * @method string getInstanceId() 获取<p>agent的instance id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>agent的instance id</p>
  */
 class DescribeAgentConfigsRequest extends AbstractModel
 {
     /**
-     * @var string agent的版本号
+     * @var string <p>agent的版本号</p>
      */
     public $AgentVersion;
 
     /**
-     * @var string agent的IP地址
+     * @var string <p>agent的IP地址</p>
      */
     public $AgentIp;
 
     /**
-     * @var array 机器组标签列表
+     * @var array <p>机器组标签列表</p>
      */
     public $Labels;
 
     /**
-     * @var string agent的instance id
+     * @var string <p>agent的instance id</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $AgentVersion agent的版本号
-     * @param string $AgentIp agent的IP地址
-     * @param array $Labels 机器组标签列表
-     * @param string $InstanceId agent的instance id
+     * @param string $AgentVersion <p>agent的版本号</p>
+     * @param string $AgentIp <p>agent的IP地址</p>
+     * @param array $Labels <p>机器组标签列表</p>
+     * @param string $InstanceId <p>agent的instance id</p>
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取<p>ckafka集群实例Id</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p>
- * @method integer getType() 获取<p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
- * @method void setType(integer $Type) 设置<p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
+ * @method integer getType() 获取<p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li><li>5： 小版原地升级</li></ul>
+ * @method void setType(integer $Type) 设置<p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li><li>5： 小版原地升级</li></ul>
  * @method string getSourceVersion() 获取<p>版本号</p>
  * @method void setSourceVersion(string $SourceVersion) 设置<p>版本号</p>
  * @method string getTargetVersion() 获取<p>版本号</p>
@@ -39,7 +39,7 @@ class UpgradeBrokerVersionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
+     * @var integer <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li><li>5： 小版原地升级</li></ul>
      */
     public $Type;
 
@@ -60,7 +60,7 @@ class UpgradeBrokerVersionRequest extends AbstractModel
 
     /**
      * @param string $InstanceId <p>ckafka集群实例Id</p>
-     * @param integer $Type <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
+     * @param integer $Type <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li><li>5： 小版原地升级</li></ul>
      * @param string $SourceVersion <p>版本号</p>
      * @param string $TargetVersion <p>版本号</p>
      * @param string $DelayTimeStamp <p>延迟时间</p>

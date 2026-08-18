@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dataagent\V20250513\Models;
+namespace TencentCloud\Goosefs\V20220519\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteScene请求参数结构体
+ * 客户端挂载点
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getSceneId() 获取场景id
- * @method void setSceneId(string $SceneId) 设置场景id
+ * @method string getStorageFileSystemId() 获取
+ * @method void setStorageFileSystemId(string $StorageFileSystemId) 设置
+ * @method string getMountDir() 获取
+ * @method void setMountDir(string $MountDir) 设置
  */
-class DeleteSceneRequest extends AbstractModel
+class MountPointEntry extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 
      */
-    public $InstanceId;
+    public $StorageFileSystemId;
 
     /**
-     * @var string 场景id
+     * @var string 
      */
-    public $SceneId;
+    public $MountDir;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $SceneId 场景id
+     * @param string $StorageFileSystemId 
+     * @param string $MountDir 
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteSceneRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("StorageFileSystemId",$param) and $param["StorageFileSystemId"] !== null) {
+            $this->StorageFileSystemId = $param["StorageFileSystemId"];
         }
 
-        if (array_key_exists("SceneId",$param) and $param["SceneId"] !== null) {
-            $this->SceneId = $param["SceneId"];
+        if (array_key_exists("MountDir",$param) and $param["MountDir"] !== null) {
+            $this->MountDir = $param["MountDir"];
         }
     }
 }

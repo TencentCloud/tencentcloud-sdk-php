@@ -20,114 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDataFlow请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
- * @method string getSourceStorageType() 获取源端数据类型；包含S3_COS，S3_L5 
- * @method void setSourceStorageType(string $SourceStorageType) 设置源端数据类型；包含S3_COS，S3_L5 
- * @method string getSourceStorageAddress() 获取源端存储地址
- * @method void setSourceStorageAddress(string $SourceStorageAddress) 设置源端存储地址
- * @method string getSourcePath() 获取源端路径
- * @method void setSourcePath(string $SourcePath) 设置源端路径
- * @method string getTargetPath() 获取文件系统内目标路径
- * @method void setTargetPath(string $TargetPath) 设置文件系统内目标路径
- * @method string getSecretId() 获取密钥 ID
- * @method void setSecretId(string $SecretId) 设置密钥 ID
- * @method string getSecretKey() 获取密钥 key
- * @method void setSecretKey(string $SecretKey) 设置密钥 key
- * @method string getDataFlowName() 获取数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
- * @method void setDataFlowName(string $DataFlowName) 设置数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
- * @method integer getAutoRefresh() 获取 0：不开启自动更新  1：开启自动更新
- * @method void setAutoRefresh(integer $AutoRefresh) 设置 0：不开启自动更新  1：开启自动更新
- * @method string getUserKafkaTopic() 获取KafkaConsumer 消费时使用的Topic参数
- * @method void setUserKafkaTopic(string $UserKafkaTopic) 设置KafkaConsumer 消费时使用的Topic参数
- * @method string getServerAddr() 获取	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
- * @method void setServerAddr(string $ServerAddr) 设置	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
- * @method string getUserName() 获取Kafka消费用户名.示例值：name
- * @method void setUserName(string $UserName) 设置Kafka消费用户名.示例值：name
- * @method string getPassword() 获取Kafka消费用户密码。默认${SecretId}#${SecretKey}。
- * @method void setPassword(string $Password) 设置Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+ * @method string getFileSystemId() 获取<p>文件系统 ID ，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统 ID ，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
+ * @method string getSourceStorageType() 获取<p>源端数据类型；包含S3_COS，S3_L5</p>
+ * @method void setSourceStorageType(string $SourceStorageType) 设置<p>源端数据类型；包含S3_COS，S3_L5</p>
+ * @method string getSourceStorageAddress() 获取<p>源端存储地址</p>
+ * @method void setSourceStorageAddress(string $SourceStorageAddress) 设置<p>源端存储地址</p>
+ * @method string getSourcePath() 获取<p>源端路径</p>
+ * @method void setSourcePath(string $SourcePath) 设置<p>源端路径</p>
+ * @method string getTargetPath() 获取<p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
+ * @method void setTargetPath(string $TargetPath) 设置<p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
+ * @method string getSecretId() 获取<p>密钥 ID</p>
+ * @method void setSecretId(string $SecretId) 设置<p>密钥 ID</p>
+ * @method string getSecretKey() 获取<p>密钥 key</p>
+ * @method void setSecretKey(string $SecretKey) 设置<p>密钥 key</p>
+ * @method string getDataFlowName() 获取<p>数据流动名称；支持不超过64字符长度，支持中文、数字、_、-</p>
+ * @method void setDataFlowName(string $DataFlowName) 设置<p>数据流动名称；支持不超过64字符长度，支持中文、数字、_、-</p>
+ * @method integer getAutoRefresh() 获取<p>0：不开启自动更新  1：开启自动更新</p>
+ * @method void setAutoRefresh(integer $AutoRefresh) 设置<p>0：不开启自动更新  1：开启自动更新</p>
+ * @method string getUserKafkaTopic() 获取<p>KafkaConsumer 消费时使用的Topic参数</p>
+ * @method void setUserKafkaTopic(string $UserKafkaTopic) 设置<p>KafkaConsumer 消费时使用的Topic参数</p>
+ * @method string getServerAddr() 获取<p>服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
+ * @method void setServerAddr(string $ServerAddr) 设置<p>服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
+ * @method string getUserName() 获取<p>Kafka消费用户名.示例值：name</p>
+ * @method void setUserName(string $UserName) 设置<p>Kafka消费用户名.示例值：name</p>
+ * @method string getPassword() 获取<p>Kafka消费用户密码。默认${SecretId}#${SecretKey}。</p>
+ * @method void setPassword(string $Password) 设置<p>Kafka消费用户密码。默认${SecretId}#${SecretKey}。</p>
  */
 class CreateDataFlowRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+     * @var string <p>文件系统 ID ，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string 源端数据类型；包含S3_COS，S3_L5 
+     * @var string <p>源端数据类型；包含S3_COS，S3_L5</p>
      */
     public $SourceStorageType;
 
     /**
-     * @var string 源端存储地址
+     * @var string <p>源端存储地址</p>
      */
     public $SourceStorageAddress;
 
     /**
-     * @var string 源端路径
+     * @var string <p>源端路径</p>
      */
     public $SourcePath;
 
     /**
-     * @var string 文件系统内目标路径
+     * @var string <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public $TargetPath;
 
     /**
-     * @var string 密钥 ID
+     * @var string <p>密钥 ID</p>
      */
     public $SecretId;
 
     /**
-     * @var string 密钥 key
+     * @var string <p>密钥 key</p>
      */
     public $SecretKey;
 
     /**
-     * @var string 数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
+     * @var string <p>数据流动名称；支持不超过64字符长度，支持中文、数字、_、-</p>
      */
     public $DataFlowName;
 
     /**
-     * @var integer  0：不开启自动更新  1：开启自动更新
+     * @var integer <p>0：不开启自动更新  1：开启自动更新</p>
      */
     public $AutoRefresh;
 
     /**
-     * @var string KafkaConsumer 消费时使用的Topic参数
+     * @var string <p>KafkaConsumer 消费时使用的Topic参数</p>
      */
     public $UserKafkaTopic;
 
     /**
-     * @var string 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+     * @var string <p>服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
      */
     public $ServerAddr;
 
     /**
-     * @var string Kafka消费用户名.示例值：name
+     * @var string <p>Kafka消费用户名.示例值：name</p>
      */
     public $UserName;
 
     /**
-     * @var string Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+     * @var string <p>Kafka消费用户密码。默认${SecretId}#${SecretKey}。</p>
      */
     public $Password;
 
     /**
-     * @param string $FileSystemId 文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
-     * @param string $SourceStorageType 源端数据类型；包含S3_COS，S3_L5 
-     * @param string $SourceStorageAddress 源端存储地址
-     * @param string $SourcePath 源端路径
-     * @param string $TargetPath 文件系统内目标路径
-     * @param string $SecretId 密钥 ID
-     * @param string $SecretKey 密钥 key
-     * @param string $DataFlowName 数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
-     * @param integer $AutoRefresh  0：不开启自动更新  1：开启自动更新
-     * @param string $UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
-     * @param string $ServerAddr 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
-     * @param string $UserName Kafka消费用户名.示例值：name
-     * @param string $Password Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+     * @param string $FileSystemId <p>文件系统 ID ，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
+     * @param string $SourceStorageType <p>源端数据类型；包含S3_COS，S3_L5</p>
+     * @param string $SourceStorageAddress <p>源端存储地址</p>
+     * @param string $SourcePath <p>源端路径</p>
+     * @param string $TargetPath <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
+     * @param string $SecretId <p>密钥 ID</p>
+     * @param string $SecretKey <p>密钥 key</p>
+     * @param string $DataFlowName <p>数据流动名称；支持不超过64字符长度，支持中文、数字、_、-</p>
+     * @param integer $AutoRefresh <p>0：不开启自动更新  1：开启自动更新</p>
+     * @param string $UserKafkaTopic <p>KafkaConsumer 消费时使用的Topic参数</p>
+     * @param string $ServerAddr <p>服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
+     * @param string $UserName <p>Kafka消费用户名.示例值：name</p>
+     * @param string $Password <p>Kafka消费用户密码。默认${SecretId}#${SecretKey}。</p>
      */
     function __construct()
     {

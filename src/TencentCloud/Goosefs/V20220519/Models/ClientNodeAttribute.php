@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountPoint(string $MountPoint) 设置<p>自定义挂载点</p>
  * @method string getClusterId() 获取<p>客户端集群id</p>
  * @method void setClusterId(string $ClusterId) 设置<p>客户端集群id</p>
+ * @method array getMountPoints() 获取
+ * @method void setMountPoints(array $MountPoints) 设置
  */
 class ClientNodeAttribute extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ClientNodeAttribute extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var array 
+     */
+    public $MountPoints;
+
+    /**
      * @param string $ClientNodeIp <p>客户端节点IP</p>
      * @param string $Status <p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p>
      * @param string $ClientType <p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p>
@@ -88,6 +95,7 @@ class ClientNodeAttribute extends AbstractModel
      * @param string $InstanceId <p>cvmId</p>
      * @param string $MountPoint <p>自定义挂载点</p>
      * @param string $ClusterId <p>客户端集群id</p>
+     * @param array $MountPoints 
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class ClientNodeAttribute extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("MountPoints",$param) and $param["MountPoints"] !== null) {
+            $this->MountPoints = [];
+            foreach ($param["MountPoints"] as $key => $value){
+                $obj = new MountPointEntry();
+                $obj->deserialize($value);
+                array_push($this->MountPoints, $obj);
+            }
         }
     }
 }

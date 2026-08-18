@@ -20,158 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据流动信息
  *
- * @method string getDataFlowId() 获取数据流动管理 ID
- * @method void setDataFlowId(string $DataFlowId) 设置数据流动管理 ID
- * @method string getDataFlowName() 获取数据流动名称
- * @method void setDataFlowName(string $DataFlowName) 设置数据流动名称
- * @method string getSourceStorageType() 获取源端数据类型
- * @method void setSourceStorageType(string $SourceStorageType) 设置源端数据类型
- * @method string getSourceStorageAddress() 获取源端存储地址
- * @method void setSourceStorageAddress(string $SourceStorageAddress) 设置源端存储地址
- * @method string getSourcePath() 获取源端路径
- * @method void setSourcePath(string $SourcePath) 设置源端路径
- * @method string getTargetPath() 获取目录路径
- * @method void setTargetPath(string $TargetPath) 设置目录路径
- * @method string getStatus() 获取available：已生效
-pending：配置中
-unavailable：失效
-deleting：删除中
- * @method void setStatus(string $Status) 设置available：已生效
-pending：配置中
-unavailable：失效
-deleting：删除中
- * @method string getCreationTime() 获取创建时间
- * @method void setCreationTime(string $CreationTime) 设置创建时间
- * @method string getFileSystemId() 获取文件系统 ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- * @method integer getAutoRefresh() 获取0：不开启自动更新
-
-1：开启自动更新
- * @method void setAutoRefresh(integer $AutoRefresh) 设置0：不开启自动更新
-
-1：开启自动更新
- * @method string getUserKafkaTopic() 获取KafkaConsumer 消费时使用的Topic参数
- * @method void setUserKafkaTopic(string $UserKafkaTopic) 设置KafkaConsumer 消费时使用的Topic参数
- * @method string getServerAddr() 获取服务地址
- * @method void setServerAddr(string $ServerAddr) 设置服务地址
- * @method string getUserName() 获取Kafka消费用户名
- * @method void setUserName(string $UserName) 设置Kafka消费用户名
- * @method string getAutoRefreshStatus() 获取自动刷新的状态，available：已生效
-pending：配置中
-unavailable：失效
- * @method void setAutoRefreshStatus(string $AutoRefreshStatus) 设置自动刷新的状态，available：已生效
-pending：配置中
-unavailable：失效
- * @method string getAutoRefreshTime() 获取自动刷新开启时间
- * @method void setAutoRefreshTime(string $AutoRefreshTime) 设置自动刷新开启时间
+ * @method string getDataFlowId() 获取<p>数据流动管理 ID</p>
+ * @method void setDataFlowId(string $DataFlowId) 设置<p>数据流动管理 ID</p>
+ * @method string getDataFlowName() 获取<p>数据流动名称</p>
+ * @method void setDataFlowName(string $DataFlowName) 设置<p>数据流动名称</p>
+ * @method string getSourceStorageType() 获取<p>源端数据类型</p>
+ * @method void setSourceStorageType(string $SourceStorageType) 设置<p>源端数据类型</p>
+ * @method string getSourceStorageAddress() 获取<p>源端存储地址</p>
+ * @method void setSourceStorageAddress(string $SourceStorageAddress) 设置<p>源端存储地址</p>
+ * @method string getSourcePath() 获取<p>源端路径</p>
+ * @method void setSourcePath(string $SourcePath) 设置<p>源端路径</p>
+ * @method string getTargetPath() 获取<p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
+ * @method void setTargetPath(string $TargetPath) 设置<p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
+ * @method string getStatus() 获取<p>available：已生效<br>pending：配置中<br>unavailable：失效<br>deleting：删除中</p>
+ * @method void setStatus(string $Status) 设置<p>available：已生效<br>pending：配置中<br>unavailable：失效<br>deleting：删除中</p>
+ * @method string getCreationTime() 获取<p>创建时间</p>
+ * @method void setCreationTime(string $CreationTime) 设置<p>创建时间</p>
+ * @method string getFileSystemId() 获取<p>文件系统 ID</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统 ID</p>
+ * @method integer getAutoRefresh() 获取<p>0：不开启自动更新</p><p>1：开启自动更新</p>
+ * @method void setAutoRefresh(integer $AutoRefresh) 设置<p>0：不开启自动更新</p><p>1：开启自动更新</p>
+ * @method string getUserKafkaTopic() 获取<p>KafkaConsumer 消费时使用的Topic参数</p>
+ * @method void setUserKafkaTopic(string $UserKafkaTopic) 设置<p>KafkaConsumer 消费时使用的Topic参数</p>
+ * @method string getServerAddr() 获取<p>服务地址</p>
+ * @method void setServerAddr(string $ServerAddr) 设置<p>服务地址</p>
+ * @method string getUserName() 获取<p>Kafka消费用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>Kafka消费用户名</p>
+ * @method string getAutoRefreshStatus() 获取<p>自动刷新的状态，available：已生效<br>pending：配置中<br>unavailable：失效</p>
+ * @method void setAutoRefreshStatus(string $AutoRefreshStatus) 设置<p>自动刷新的状态，available：已生效<br>pending：配置中<br>unavailable：失效</p>
+ * @method string getAutoRefreshTime() 获取<p>自动刷新开启时间</p>
+ * @method void setAutoRefreshTime(string $AutoRefreshTime) 设置<p>自动刷新开启时间</p>
  */
 class DataFlowInfo extends AbstractModel
 {
     /**
-     * @var string 数据流动管理 ID
+     * @var string <p>数据流动管理 ID</p>
      */
     public $DataFlowId;
 
     /**
-     * @var string 数据流动名称
+     * @var string <p>数据流动名称</p>
      */
     public $DataFlowName;
 
     /**
-     * @var string 源端数据类型
+     * @var string <p>源端数据类型</p>
      */
     public $SourceStorageType;
 
     /**
-     * @var string 源端存储地址
+     * @var string <p>源端存储地址</p>
      */
     public $SourceStorageAddress;
 
     /**
-     * @var string 源端路径
+     * @var string <p>源端路径</p>
      */
     public $SourcePath;
 
     /**
-     * @var string 目录路径
+     * @var string <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public $TargetPath;
 
     /**
-     * @var string available：已生效
-pending：配置中
-unavailable：失效
-deleting：删除中
+     * @var string <p>available：已生效<br>pending：配置中<br>unavailable：失效<br>deleting：删除中</p>
      */
     public $Status;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreationTime;
 
     /**
-     * @var string 文件系统 ID
+     * @var string <p>文件系统 ID</p>
      */
     public $FileSystemId;
 
     /**
-     * @var integer 0：不开启自动更新
-
-1：开启自动更新
+     * @var integer <p>0：不开启自动更新</p><p>1：开启自动更新</p>
      */
     public $AutoRefresh;
 
     /**
-     * @var string KafkaConsumer 消费时使用的Topic参数
+     * @var string <p>KafkaConsumer 消费时使用的Topic参数</p>
      */
     public $UserKafkaTopic;
 
     /**
-     * @var string 服务地址
+     * @var string <p>服务地址</p>
      */
     public $ServerAddr;
 
     /**
-     * @var string Kafka消费用户名
+     * @var string <p>Kafka消费用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 自动刷新的状态，available：已生效
-pending：配置中
-unavailable：失效
+     * @var string <p>自动刷新的状态，available：已生效<br>pending：配置中<br>unavailable：失效</p>
      */
     public $AutoRefreshStatus;
 
     /**
-     * @var string 自动刷新开启时间
+     * @var string <p>自动刷新开启时间</p>
      */
     public $AutoRefreshTime;
 
     /**
-     * @param string $DataFlowId 数据流动管理 ID
-     * @param string $DataFlowName 数据流动名称
-     * @param string $SourceStorageType 源端数据类型
-     * @param string $SourceStorageAddress 源端存储地址
-     * @param string $SourcePath 源端路径
-     * @param string $TargetPath 目录路径
-     * @param string $Status available：已生效
-pending：配置中
-unavailable：失效
-deleting：删除中
-     * @param string $CreationTime 创建时间
-     * @param string $FileSystemId 文件系统 ID
-     * @param integer $AutoRefresh 0：不开启自动更新
-
-1：开启自动更新
-     * @param string $UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
-     * @param string $ServerAddr 服务地址
-     * @param string $UserName Kafka消费用户名
-     * @param string $AutoRefreshStatus 自动刷新的状态，available：已生效
-pending：配置中
-unavailable：失效
-     * @param string $AutoRefreshTime 自动刷新开启时间
+     * @param string $DataFlowId <p>数据流动管理 ID</p>
+     * @param string $DataFlowName <p>数据流动名称</p>
+     * @param string $SourceStorageType <p>源端数据类型</p>
+     * @param string $SourceStorageAddress <p>源端存储地址</p>
+     * @param string $SourcePath <p>源端路径</p>
+     * @param string $TargetPath <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
+     * @param string $Status <p>available：已生效<br>pending：配置中<br>unavailable：失效<br>deleting：删除中</p>
+     * @param string $CreationTime <p>创建时间</p>
+     * @param string $FileSystemId <p>文件系统 ID</p>
+     * @param integer $AutoRefresh <p>0：不开启自动更新</p><p>1：开启自动更新</p>
+     * @param string $UserKafkaTopic <p>KafkaConsumer 消费时使用的Topic参数</p>
+     * @param string $ServerAddr <p>服务地址</p>
+     * @param string $UserName <p>Kafka消费用户名</p>
+     * @param string $AutoRefreshStatus <p>自动刷新的状态，available：已生效<br>pending：配置中<br>unavailable：失效</p>
+     * @param string $AutoRefreshTime <p>自动刷新开启时间</p>
      */
     function __construct()
     {

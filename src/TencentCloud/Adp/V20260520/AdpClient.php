@@ -58,10 +58,13 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeAppTriggerSummaryListResponse DescribeAppTriggerSummaryList(Models\DescribeAppTriggerSummaryListRequest $req) DescribeAppTriggerSummaryList
  * @method Models\DescribeAuditLogListResponse DescribeAuditLogList(Models\DescribeAuditLogListRequest $req) 查看操作日志列表
  * @method Models\DescribeAuditLogMetaResponse DescribeAuditLogMeta(Models\DescribeAuditLogMetaRequest $req) 获取审计日志元信息
+ * @method Models\DescribeConcurrencyLimitDetailListResponse DescribeConcurrencyLimitDetailList(Models\DescribeConcurrencyLimitDetailListRequest $req) 查询并发超限明细，包含QPM/TPM超限与专属并发超限记录，返回超限发生时间、空间、应用、模型及请求内容
+ * @method Models\DescribeConsumptionDetailListResponse DescribeConsumptionDetailList(Models\DescribeConsumptionDetailListRequest $req) 查询资源消耗明细，包含计费相关字段（消耗类型、消耗目标、消耗场景、套餐包及PU消耗等）
  * @method Models\DescribeConversationResponse DescribeConversation(Models\DescribeConversationRequest $req) 查看会话信息
  * @method Models\DescribeConversationListResponse DescribeConversationList(Models\DescribeConversationListRequest $req) 获取会话列表
  * @method Models\DescribeConversationMessageListResponse DescribeConversationMessageList(Models\DescribeConversationMessageListRequest $req) 获取会话历史消息
  * @method Models\DescribeLatestReleaseResponse DescribeLatestRelease(Models\DescribeLatestReleaseRequest $req) 拉取最新发布信息(包含发布时间、状态、渠道)
+ * @method Models\DescribeMetricOverviewListResponse DescribeMetricOverviewList(Models\DescribeMetricOverviewListRequest $req) 查询看板总览KPI卡片数据，通过resource_type区分资源看板与业务看板域，返回各域KPI指标列表
  * @method Models\DescribeModelListResponse DescribeModelList(Models\DescribeModelListRequest $req) 查询模型列表
  * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) 获取插件详情
  * @method Models\DescribePluginSummaryListResponse DescribePluginSummaryList(Models\DescribePluginSummaryListRequest $req) 获取插件列表
@@ -73,6 +76,8 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeSkillSummaryListResponse DescribeSkillSummaryList(Models\DescribeSkillSummaryListRequest $req) 查询 Skill 列表
  * @method Models\DescribeSpaceListResponse DescribeSpaceList(Models\DescribeSpaceListRequest $req) 获取空间列表
  * @method Models\DescribeSystemVariableListResponse DescribeSystemVariableList(Models\DescribeSystemVariableListRequest $req) 获取系统变量
+ * @method Models\DescribeUsageDetailListResponse DescribeUsageDetailList(Models\DescribeUsageDetailListRequest $req) 查询资源调用时序明细，支持模型和插件两类资源，按时间顺序返回每条调用记录的详细信息
+ * @method Models\DescribeUsageSummaryListResponse DescribeUsageSummaryList(Models\DescribeUsageSummaryListRequest $req) 查询资源用量聚合明细，支持模型、插件、平台三类资源，按空间/应用维度聚合展示调用次数、Token消耗等指标
  * @method Models\DescribeVariableResponse DescribeVariable(Models\DescribeVariableRequest $req) 获取参数变量
  * @method Models\DescribeVariableListResponse DescribeVariableList(Models\DescribeVariableListRequest $req) 获取参数变量列表
  * @method Models\FavoritePluginResponse FavoritePlugin(Models\FavoritePluginRequest $req) 收藏插件

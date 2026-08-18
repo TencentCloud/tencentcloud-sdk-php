@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataFlowId(string $DataFlowId) 设置<p>数据流动 ID ，该接口可以通过 DescribeDataFlow 查询</p>
  * @method boolean getIsOverwrite() 获取<p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false</p>
  * @method void setIsOverwrite(boolean $IsOverwrite) 设置<p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false</p>
- * @method string getListPath() 获取<p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
- * @method void setListPath(string $ListPath) 设置<p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+ * @method string getListPath() 获取<p>数据清单文件路径，清单文件内每行为待处理文件的完整路径。所有路径（包括清单文件路径、清单文件内每行表示的待处理文件的路径）必须以 /cfs 开头，指向CFS文件系统内已存在的文件，与 TaskPath 参数二选一填写。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/lists/archive_list.txt</li><li>若挂载的是CFS子目录 /subdir，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/subdir/lists/archive_list.txt</li></ul>
+ * @method void setListPath(string $ListPath) 设置<p>数据清单文件路径，清单文件内每行为待处理文件的完整路径。所有路径（包括清单文件路径、清单文件内每行表示的待处理文件的路径）必须以 /cfs 开头，指向CFS文件系统内已存在的文件，与 TaskPath 参数二选一填写。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/lists/archive_list.txt</li><li>若挂载的是CFS子目录 /subdir，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/subdir/lists/archive_list.txt</li></ul>
  */
 class CreateLifecycleDataTaskRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class CreateLifecycleDataTaskRequest extends AbstractModel
     public $IsOverwrite;
 
     /**
-     * @var string <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+     * @var string <p>数据清单文件路径，清单文件内每行为待处理文件的完整路径。所有路径（包括清单文件路径、清单文件内每行表示的待处理文件的路径）必须以 /cfs 开头，指向CFS文件系统内已存在的文件，与 TaskPath 参数二选一填写。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/lists/archive_list.txt</li><li>若挂载的是CFS子目录 /subdir，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/subdir/lists/archive_list.txt</li></ul>
      */
     public $ListPath;
 
@@ -79,7 +79,7 @@ class CreateLifecycleDataTaskRequest extends AbstractModel
      * @param string $TaskPath <p>需要沉降的路径或文件，仅支持传入1个路径，不允许为空。</p>
      * @param string $DataFlowId <p>数据流动 ID ，该接口可以通过 DescribeDataFlow 查询</p>
      * @param boolean $IsOverwrite <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false</p>
-     * @param string $ListPath <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+     * @param string $ListPath <p>数据清单文件路径，清单文件内每行为待处理文件的完整路径。所有路径（包括清单文件路径、清单文件内每行表示的待处理文件的路径）必须以 /cfs 开头，指向CFS文件系统内已存在的文件，与 TaskPath 参数二选一填写。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/lists/archive_list.txt</li><li>若挂载的是CFS子目录 /subdir，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/subdir/lists/archive_list.txt</li></ul>
      */
     function __construct()
     {

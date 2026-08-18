@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncThrottleLimit(integer $SyncThrottleLimit) 设置<p>并发流量预估参考上限，MB/s</p>
  * @method boolean getAutoExpandFlag() 获取<p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
  * @method void setAutoExpandFlag(boolean $AutoExpandFlag) 设置<p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
+ * @method string getWarnMessage() 获取<p>不影响任务执行的警告信息</p>
+ * @method void setWarnMessage(string $WarnMessage) 设置<p>不影响任务执行的警告信息</p>
  */
 class DescribeDatahubTaskRes extends AbstractModel
 {
@@ -170,6 +172,11 @@ class DescribeDatahubTaskRes extends AbstractModel
     public $AutoExpandFlag;
 
     /**
+     * @var string <p>不影响任务执行的警告信息</p>
+     */
+    public $WarnMessage;
+
+    /**
      * @param string $TaskId <p>任务ID</p>
      * @param string $TaskName <p>任务名称</p>
      * @param string $TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
@@ -192,6 +199,7 @@ class DescribeDatahubTaskRes extends AbstractModel
      * @param integer $TaskMax <p>并发数</p><p>默认值：1</p>
      * @param integer $SyncThrottleLimit <p>并发流量预估参考上限，MB/s</p>
      * @param boolean $AutoExpandFlag <p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
+     * @param string $WarnMessage <p>不影响任务执行的警告信息</p>
      */
     function __construct()
     {
@@ -298,6 +306,10 @@ class DescribeDatahubTaskRes extends AbstractModel
 
         if (array_key_exists("AutoExpandFlag",$param) and $param["AutoExpandFlag"] !== null) {
             $this->AutoExpandFlag = $param["AutoExpandFlag"];
+        }
+
+        if (array_key_exists("WarnMessage",$param) and $param["WarnMessage"] !== null) {
+            $this->WarnMessage = $param["WarnMessage"];
         }
     }
 }

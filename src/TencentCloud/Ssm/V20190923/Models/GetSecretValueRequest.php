@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 对于云产品凭据如Mysql凭据，通过指定凭据名称和历史版本号来获取历史轮转凭据的明文信息，如果要获取当前正在使用的凭据版本的明文，需要将版本号指定为：SSM_Current。
  * @method void setVersionId(string $VersionId) 设置指定对应凭据的版本号。
 对于云产品凭据如Mysql凭据，通过指定凭据名称和历史版本号来获取历史轮转凭据的明文信息，如果要获取当前正在使用的凭据版本的明文，需要将版本号指定为：SSM_Current。
+ * @method string getEncryptionPublicKey() 获取
+ * @method void setEncryptionPublicKey(string $EncryptionPublicKey) 设置
+ * @method string getEncryptionAlgorithm() 获取
+ * @method void setEncryptionAlgorithm(string $EncryptionAlgorithm) 设置
  */
 class GetSecretValueRequest extends AbstractModel
 {
@@ -41,9 +45,21 @@ class GetSecretValueRequest extends AbstractModel
     public $VersionId;
 
     /**
+     * @var string 
+     */
+    public $EncryptionPublicKey;
+
+    /**
+     * @var string 
+     */
+    public $EncryptionAlgorithm;
+
+    /**
      * @param string $SecretName 指定凭据的名称。
      * @param string $VersionId 指定对应凭据的版本号。
 对于云产品凭据如Mysql凭据，通过指定凭据名称和历史版本号来获取历史轮转凭据的明文信息，如果要获取当前正在使用的凭据版本的明文，需要将版本号指定为：SSM_Current。
+     * @param string $EncryptionPublicKey 
+     * @param string $EncryptionAlgorithm 
      */
     function __construct()
     {
@@ -64,6 +80,14 @@ class GetSecretValueRequest extends AbstractModel
 
         if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
             $this->VersionId = $param["VersionId"];
+        }
+
+        if (array_key_exists("EncryptionPublicKey",$param) and $param["EncryptionPublicKey"] !== null) {
+            $this->EncryptionPublicKey = $param["EncryptionPublicKey"];
+        }
+
+        if (array_key_exists("EncryptionAlgorithm",$param) and $param["EncryptionAlgorithm"] !== null) {
+            $this->EncryptionAlgorithm = $param["EncryptionAlgorithm"];
         }
     }
 }

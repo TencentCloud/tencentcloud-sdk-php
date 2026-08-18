@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteUserQuota请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
- * @method string getUserType() 获取指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
- * @method void setUserType(string $UserType) 设置指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
- * @method string getUserId() 获取UID/GID信息，和DirectoryPath参数，两者必须填写一个
- * @method void setUserId(string $UserId) 设置UID/GID信息，和DirectoryPath参数，两者必须填写一个
- * @method string getDirectoryPath() 获取设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个
- * @method void setDirectoryPath(string $DirectoryPath) 设置设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个
+ * @method string getFileSystemId() 获取<p>文件系统ID，通过查询文件系统列表获取；<a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a></p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统ID，通过查询文件系统列表获取；<a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a></p>
+ * @method string getUserType() 获取<p>指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）</p>
+ * @method void setUserType(string $UserType) 设置<p>指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）</p>
+ * @method string getUserId() 获取<p>UID/GID信息，和DirectoryPath参数，两者必须填写一个</p>
+ * @method void setUserId(string $UserId) 设置<p>UID/GID信息，和DirectoryPath参数，两者必须填写一个</p>
+ * @method string getDirectoryPath() 获取<p>需删除配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。该参数与 UserId 参数至少填写一个。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需删除挂载路径下 test1/test2 的配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需删除挂载路径下 test1/test2 的配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
+ * @method void setDirectoryPath(string $DirectoryPath) 设置<p>需删除配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。该参数与 UserId 参数至少填写一个。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需删除挂载路径下 test1/test2 的配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需删除挂载路径下 test1/test2 的配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
  */
 class DeleteUserQuotaRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * @var string <p>文件系统ID，通过查询文件系统列表获取；<a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a></p>
      */
     public $FileSystemId;
 
     /**
-     * @var string 指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
+     * @var string <p>指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）</p>
      */
     public $UserType;
 
     /**
-     * @var string UID/GID信息，和DirectoryPath参数，两者必须填写一个
+     * @var string <p>UID/GID信息，和DirectoryPath参数，两者必须填写一个</p>
      */
     public $UserId;
 
     /**
-     * @var string 设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个
+     * @var string <p>需删除配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。该参数与 UserId 参数至少填写一个。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需删除挂载路径下 test1/test2 的配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需删除挂载路径下 test1/test2 的配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public $DirectoryPath;
 
     /**
-     * @param string $FileSystemId 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
-     * @param string $UserType 指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
-     * @param string $UserId UID/GID信息，和DirectoryPath参数，两者必须填写一个
-     * @param string $DirectoryPath 设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个
+     * @param string $FileSystemId <p>文件系统ID，通过查询文件系统列表获取；<a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a></p>
+     * @param string $UserType <p>指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）</p>
+     * @param string $UserId <p>UID/GID信息，和DirectoryPath参数，两者必须填写一个</p>
+     * @param string $DirectoryPath <p>需删除配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。该参数与 UserId 参数至少填写一个。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需删除挂载路径下 test1/test2 的配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需删除挂载路径下 test1/test2 的配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     function __construct()
     {

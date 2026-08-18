@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 路由实体对象
  *
- * @method integer getAccessType() 获取<p>实例接入方式0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
- * @method void setAccessType(integer $AccessType) 设置<p>实例接入方式0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
+ * @method integer getAccessType() 获取<p>实例接入方式<br>0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)<br>1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）<br>2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）<br>3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
+ * @method void setAccessType(integer $AccessType) 设置<p>实例接入方式<br>0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)<br>1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）<br>2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）<br>3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
  * @method integer getRouteId() 获取<p>路由Id</p>
  * @method void setRouteId(integer $RouteId) 设置<p>路由Id</p>
  * @method integer getVipType() 获取<p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
@@ -60,7 +60,7 @@ use TencentCloud\Common\AbstractModel;
 class Route extends AbstractModel
 {
     /**
-     * @var integer <p>实例接入方式0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
+     * @var integer <p>实例接入方式<br>0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)<br>1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）<br>2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）<br>3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
      */
     public $AccessType;
 
@@ -126,7 +126,7 @@ class Route extends AbstractModel
     public $Status;
 
     /**
-     * @param integer $AccessType <p>实例接入方式0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
+     * @param integer $AccessType <p>实例接入方式<br>0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)<br>1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）<br>2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）<br>3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
      * @param integer $RouteId <p>路由Id</p>
      * @param integer $VipType <p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
      * @param array $VipList <p>虚拟IP列表</p>

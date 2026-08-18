@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConfig返回参数结构体
  *
- * @method string getConfigId() 获取采集配置ID
- * @method void setConfigId(string $ConfigId) 设置采集配置ID
+ * @method string getConfigId() 获取<p>采集配置ID</p>
+ * @method void setConfigId(string $ConfigId) 设置<p>采集配置ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateConfigResponse extends AbstractModel
 {
     /**
-     * @var string 采集配置ID
+     * @var string <p>采集配置ID</p>
      */
     public $ConfigId;
 
@@ -38,7 +38,7 @@ class CreateConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ConfigId 采集配置ID
+     * @param string $ConfigId <p>采集配置ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

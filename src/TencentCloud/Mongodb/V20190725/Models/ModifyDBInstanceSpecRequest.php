@@ -42,8 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveNodeList(array $RemoveNodeList) 设置<p>删除节点列表。<br><strong>注意</strong>：基于分片实例各片节点的一致性原则，删除分片实例节点时，只需指定0分片对应的节点即可，如：cmgo-9nl1czif_0-node-readonly0 将删除每个分片的第1个只读节点。</p>
  * @method integer getCpu() 获取<p>实例配置变更后的CPU大小。单位：C。该参数为空值时，默认取实例当前的 CPU 大小。当前所支持的CPU规格，请参见<a href="https://cloud.tencent.com/document/product/240/64125">产品规格</a>。</p>
  * @method void setCpu(integer $Cpu) 设置<p>实例配置变更后的CPU大小。单位：C。该参数为空值时，默认取实例当前的 CPU 大小。当前所支持的CPU规格，请参见<a href="https://cloud.tencent.com/document/product/240/64125">产品规格</a>。</p>
- * @method string getMachineCode() 获取<p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>HIO10G：本地盘（高IO万兆型）。</li><li>HCD：云盘（云盘版）。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>通用 I 型不能变更到白名单规格类型</li></ol>
- * @method void setMachineCode(string $MachineCode) 设置<p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>HIO10G：本地盘（高IO万兆型）。</li><li>HCD：云盘（云盘版）。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>通用 I 型不能变更到白名单规格类型</li></ol>
+ * @method string getMachineCode() 获取<p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>GE.CD.T2：云盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>GE.CD.T1：云盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择通用II型。</li><li>HCD：云盘（云盘版），已售罄，建议选择通用II型。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
+ * @method void setMachineCode(string $MachineCode) 设置<p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>GE.CD.T2：云盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>GE.CD.T1：云盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择通用II型。</li><li>HCD：云盘（云盘版），已售罄，建议选择通用II型。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
+ * @method array getModifyShardList() 获取<p>单分片变配列表，用于指定需要单独调整规格的分片。每次设置时 CPU、内存、磁盘都必须指定；如果指定多个分片，所有分片的目标规格必须一致；未指定的分片保持不变。仅分片集群支持，副本集不支持。注意：此参数与整实例级别的变配参数（如 Memory、Volume、CpuNum 等）互斥，不能同时传入。</p>
+ * @method void setModifyShardList(array $ModifyShardList) 设置<p>单分片变配列表，用于指定需要单独调整规格的分片。每次设置时 CPU、内存、磁盘都必须指定；如果指定多个分片，所有分片的目标规格必须一致；未指定的分片保持不变。仅分片集群支持，副本集不支持。注意：此参数与整实例级别的变配参数（如 Memory、Volume、CpuNum 等）互斥，不能同时传入。</p>
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -104,9 +106,14 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var string <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>HIO10G：本地盘（高IO万兆型）。</li><li>HCD：云盘（云盘版）。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>通用 I 型不能变更到白名单规格类型</li></ol>
+     * @var string <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>GE.CD.T2：云盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>GE.CD.T1：云盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择通用II型。</li><li>HCD：云盘（云盘版），已售罄，建议选择通用II型。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
      */
     public $MachineCode;
+
+    /**
+     * @var array <p>单分片变配列表，用于指定需要单独调整规格的分片。每次设置时 CPU、内存、磁盘都必须指定；如果指定多个分片，所有分片的目标规格必须一致；未指定的分片保持不变。仅分片集群支持，副本集不支持。注意：此参数与整实例级别的变配参数（如 Memory、Volume、CpuNum 等）互斥，不能同时传入。</p>
+     */
+    public $ModifyShardList;
 
     /**
      * @param string $InstanceId <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
@@ -120,7 +127,8 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
      * @param array $AddNodeList <p>新增节点列表，节点类型及可用区信息。</p>
      * @param array $RemoveNodeList <p>删除节点列表。<br><strong>注意</strong>：基于分片实例各片节点的一致性原则，删除分片实例节点时，只需指定0分片对应的节点即可，如：cmgo-9nl1czif_0-node-readonly0 将删除每个分片的第1个只读节点。</p>
      * @param integer $Cpu <p>实例配置变更后的CPU大小。单位：C。该参数为空值时，默认取实例当前的 CPU 大小。当前所支持的CPU规格，请参见<a href="https://cloud.tencent.com/document/product/240/64125">产品规格</a>。</p>
-     * @param string $MachineCode <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>HIO10G：本地盘（高IO万兆型）。</li><li>HCD：云盘（云盘版）。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>通用 I 型不能变更到白名单规格类型</li></ol>
+     * @param string $MachineCode <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>GE.CD.T2：云盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>GE.CD.T1：云盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择通用II型。</li><li>HCD：云盘（云盘版），已售罄，建议选择通用II型。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
+     * @param array $ModifyShardList <p>单分片变配列表，用于指定需要单独调整规格的分片。每次设置时 CPU、内存、磁盘都必须指定；如果指定多个分片，所有分片的目标规格必须一致；未指定的分片保持不变。仅分片集群支持，副本集不支持。注意：此参数与整实例级别的变配参数（如 Memory、Volume、CpuNum 等）互斥，不能同时传入。</p>
      */
     function __construct()
     {
@@ -191,6 +199,15 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("MachineCode",$param) and $param["MachineCode"] !== null) {
             $this->MachineCode = $param["MachineCode"];
+        }
+
+        if (array_key_exists("ModifyShardList",$param) and $param["ModifyShardList"] !== null) {
+            $this->ModifyShardList = [];
+            foreach ($param["ModifyShardList"] as $key => $value){
+                $obj = new ModifyShardSpecInfo();
+                $obj->deserialize($value);
+                array_push($this->ModifyShardList, $obj);
+            }
         }
     }
 }

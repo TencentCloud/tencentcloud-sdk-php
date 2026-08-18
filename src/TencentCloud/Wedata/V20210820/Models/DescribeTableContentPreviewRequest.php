@@ -20,90 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTableContentPreview请求参数结构体
  *
- * @method string getTableId() 获取表ID
- * @method void setTableId(string $TableId) 设置表ID
- * @method string getTechnologyType() 获取组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA
- * @method void setTechnologyType(string $TechnologyType) 设置组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method string getResourceType() 获取资源类型枚举值，支持的值有TOPIC/PATH/TABLE/DATABASE
- * @method void setResourceType(string $ResourceType) 设置资源类型枚举值，支持的值有TOPIC/PATH/TABLE/DATABASE
- * @method string getTableName() 获取表名
- * @method void setTableName(string $TableName) 设置表名
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
- * @method integer getRowNum() 获取预览的行数，默认10行
- * @method void setRowNum(integer $RowNum) 设置预览的行数，默认10行
- * @method string getDatabaseName() 获取数据库名，kafka或其他无数据库概念的不填
- * @method void setDatabaseName(string $DatabaseName) 设置数据库名，kafka或其他无数据库概念的不填
- * @method string getTaskId() 获取异步查询预览结果时填写
- * @method void setTaskId(string $TaskId) 设置异步查询预览结果时填写
- * @method string getPartitionName() 获取分区信息
- * @method void setPartitionName(string $PartitionName) 设置分区信息
+ * @method string getTableId() 获取<p>表ID</p>
+ * @method void setTableId(string $TableId) 设置<p>表ID</p>
+ * @method string getTechnologyType() 获取<p>组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA</p>
+ * @method void setTechnologyType(string $TechnologyType) 设置<p>组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA</p>
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method string getResourceType() 获取<p>资源类型枚举值，支持的值有TOPIC/PATH/TABLE/DATABASE</p>
+ * @method void setResourceType(string $ResourceType) 设置<p>资源类型枚举值，支持的值有TOPIC/PATH/TABLE/DATABASE</p>
+ * @method string getTableName() 获取<p>表名</p>
+ * @method void setTableName(string $TableName) 设置<p>表名</p>
+ * @method string getProjectId() 获取<p>项目id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
+ * @method integer getRowNum() 获取<p>预览的行数，默认10行</p>
+ * @method void setRowNum(integer $RowNum) 设置<p>预览的行数，默认10行</p>
+ * @method string getDatabaseName() 获取<p>数据库名，kafka或其他无数据库概念的不填</p>
+ * @method void setDatabaseName(string $DatabaseName) 设置<p>数据库名，kafka或其他无数据库概念的不填</p>
+ * @method string getTaskId() 获取<p>异步查询预览结果时填写</p>
+ * @method void setTaskId(string $TaskId) 设置<p>异步查询预览结果时填写</p>
+ * @method string getPartitionName() 获取<p>分区信息</p>
+ * @method void setPartitionName(string $PartitionName) 设置<p>分区信息</p>
+ * @method string getResourceGroupId() 获取<p>资源组ID</p>
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>资源组ID</p>
+ * @method string getSql() 获取<p>执行SQL</p>
+ * @method void setSql(string $Sql) 设置<p>执行SQL</p>
+ * @method string getEngineId() 获取<p>引擎名</p>
+ * @method void setEngineId(string $EngineId) 设置<p>引擎名</p>
  */
 class DescribeTableContentPreviewRequest extends AbstractModel
 {
     /**
-     * @var string 表ID
+     * @var string <p>表ID</p>
      */
     public $TableId;
 
     /**
-     * @var string 组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA
+     * @var string <p>组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA</p>
      */
     public $TechnologyType;
 
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 资源类型枚举值，支持的值有TOPIC/PATH/TABLE/DATABASE
+     * @var string <p>资源类型枚举值，支持的值有TOPIC/PATH/TABLE/DATABASE</p>
      */
     public $ResourceType;
 
     /**
-     * @var string 表名
+     * @var string <p>表名</p>
      */
     public $TableName;
 
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 预览的行数，默认10行
+     * @var integer <p>预览的行数，默认10行</p>
      */
     public $RowNum;
 
     /**
-     * @var string 数据库名，kafka或其他无数据库概念的不填
+     * @var string <p>数据库名，kafka或其他无数据库概念的不填</p>
      */
     public $DatabaseName;
 
     /**
-     * @var string 异步查询预览结果时填写
+     * @var string <p>异步查询预览结果时填写</p>
      */
     public $TaskId;
 
     /**
-     * @var string 分区信息
+     * @var string <p>分区信息</p>
      */
     public $PartitionName;
 
     /**
-     * @param string $TableId 表ID
-     * @param string $TechnologyType 组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA
-     * @param string $ClusterId 集群id
-     * @param string $ResourceType 资源类型枚举值，支持的值有TOPIC/PATH/TABLE/DATABASE
-     * @param string $TableName 表名
-     * @param string $ProjectId 项目id
-     * @param integer $RowNum 预览的行数，默认10行
-     * @param string $DatabaseName 数据库名，kafka或其他无数据库概念的不填
-     * @param string $TaskId 异步查询预览结果时填写
-     * @param string $PartitionName 分区信息
+     * @var string <p>资源组ID</p>
+     */
+    public $ResourceGroupId;
+
+    /**
+     * @var string <p>执行SQL</p>
+     */
+    public $Sql;
+
+    /**
+     * @var string <p>引擎名</p>
+     */
+    public $EngineId;
+
+    /**
+     * @param string $TableId <p>表ID</p>
+     * @param string $TechnologyType <p>组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA</p>
+     * @param string $ClusterId <p>集群id</p>
+     * @param string $ResourceType <p>资源类型枚举值，支持的值有TOPIC/PATH/TABLE/DATABASE</p>
+     * @param string $TableName <p>表名</p>
+     * @param string $ProjectId <p>项目id</p>
+     * @param integer $RowNum <p>预览的行数，默认10行</p>
+     * @param string $DatabaseName <p>数据库名，kafka或其他无数据库概念的不填</p>
+     * @param string $TaskId <p>异步查询预览结果时填写</p>
+     * @param string $PartitionName <p>分区信息</p>
+     * @param string $ResourceGroupId <p>资源组ID</p>
+     * @param string $Sql <p>执行SQL</p>
+     * @param string $EngineId <p>引擎名</p>
      */
     function __construct()
     {
@@ -156,6 +180,18 @@ class DescribeTableContentPreviewRequest extends AbstractModel
 
         if (array_key_exists("PartitionName",$param) and $param["PartitionName"] !== null) {
             $this->PartitionName = $param["PartitionName"];
+        }
+
+        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
+            $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
+        if (array_key_exists("Sql",$param) and $param["Sql"] !== null) {
+            $this->Sql = $param["Sql"];
+        }
+
+        if (array_key_exists("EngineId",$param) and $param["EngineId"] !== null) {
+            $this->EngineId = $param["EngineId"];
         }
     }
 }

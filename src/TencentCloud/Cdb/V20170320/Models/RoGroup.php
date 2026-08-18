@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoGroupZone(string $RoGroupZone) 设置<p>只读组所在的可用区。</p>
  * @method integer getDelayReplicationTime() 获取<p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
  * @method void setDelayReplicationTime(integer $DelayReplicationTime) 设置<p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
+ * @method string getRoGroupType() 获取<p>只读组类型。</p><p>枚举值：</p><ul><li>normal： 普通RO组</li><li>direct： 纯网络转发模式</li><li>default： 默认RO组</li></ul><p>默认值：normal</p>
+ * @method void setRoGroupType(string $RoGroupType) 设置<p>只读组类型。</p><p>枚举值：</p><ul><li>normal： 普通RO组</li><li>direct： 纯网络转发模式</li><li>default： 默认RO组</li></ul><p>默认值：normal</p>
  */
 class RoGroup extends AbstractModel
 {
@@ -136,6 +138,11 @@ class RoGroup extends AbstractModel
     public $DelayReplicationTime;
 
     /**
+     * @var string <p>只读组类型。</p><p>枚举值：</p><ul><li>normal： 普通RO组</li><li>direct： 纯网络转发模式</li><li>default： 默认RO组</li></ul><p>默认值：normal</p>
+     */
+    public $RoGroupType;
+
+    /**
      * @param string $RoGroupMode <p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p>
      * @param string $RoGroupId <p>只读组 ID。<br>说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。</p>
      * @param string $RoGroupName <p>只读组名称。</p>
@@ -152,6 +159,7 @@ class RoGroup extends AbstractModel
      * @param string $RoGroupRegion <p>只读组所在的地域。</p>
      * @param string $RoGroupZone <p>只读组所在的可用区。</p>
      * @param integer $DelayReplicationTime <p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
+     * @param string $RoGroupType <p>只读组类型。</p><p>枚举值：</p><ul><li>normal： 普通RO组</li><li>direct： 纯网络转发模式</li><li>default： 默认RO组</li></ul><p>默认值：normal</p>
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class RoGroup extends AbstractModel
 
         if (array_key_exists("DelayReplicationTime",$param) and $param["DelayReplicationTime"] !== null) {
             $this->DelayReplicationTime = $param["DelayReplicationTime"];
+        }
+
+        if (array_key_exists("RoGroupType",$param) and $param["RoGroupType"] !== null) {
+            $this->RoGroupType = $param["RoGroupType"];
         }
     }
 }

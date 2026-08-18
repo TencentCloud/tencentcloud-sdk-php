@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationMembersAuthPolicy请求参数结构体
  *
- * @method integer getOffset() 获取偏移量。取值是limit的整数倍。默认值 : 0。
- * @method void setOffset(integer $Offset) 设置偏移量。取值是limit的整数倍。默认值 : 0。
- * @method integer getLimit() 获取限制数目。取值范围：1~50。默认值：10。
- * @method void setLimit(integer $Limit) 设置限制数目。取值范围：1~50。默认值：10。
- * @method integer getMemberUin() 获取成员uin。
- * @method void setMemberUin(integer $MemberUin) 设置成员uin。
- * @method integer getOrgSubAccountUin() 获取集团管理员子账号uin。
- * @method void setOrgSubAccountUin(integer $OrgSubAccountUin) 设置集团管理员子账号uin。
- * @method integer getPolicyId() 获取成员访问策略Id。
- * @method void setPolicyId(integer $PolicyId) 设置成员访问策略Id。
+ * @method integer getOffset() 获取<p>偏移量。取值是limit的整数倍。默认值 : 0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量。取值是limit的整数倍。默认值 : 0。</p>
+ * @method integer getLimit() 获取<p>限制数目。取值范围：1~50。默认值：10。</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制数目。取值范围：1~50。默认值：10。</p>
+ * @method integer getMemberUin() 获取<p>成员uin。</p>
+ * @method void setMemberUin(integer $MemberUin) 设置<p>成员uin。</p>
+ * @method integer getOrgSubAccountUin() 获取<p>集团管理员子账号uin。</p>
+ * @method void setOrgSubAccountUin(integer $OrgSubAccountUin) 设置<p>集团管理员子账号uin。</p>
+ * @method integer getPolicyId() 获取<p>成员访问策略Id。</p>
+ * @method void setPolicyId(integer $PolicyId) 设置<p>成员访问策略Id。</p>
  */
 class DescribeOrganizationMembersAuthPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量。取值是limit的整数倍。默认值 : 0。
+     * @var integer <p>偏移量。取值是limit的整数倍。默认值 : 0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 限制数目。取值范围：1~50。默认值：10。
+     * @var integer <p>限制数目。取值范围：1~50。默认值：10。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 成员uin。
+     * @var integer <p>成员uin。</p>
      */
     public $MemberUin;
 
     /**
-     * @var integer 集团管理员子账号uin。
+     * @var integer <p>集团管理员子账号uin。</p>
      */
     public $OrgSubAccountUin;
 
     /**
-     * @var integer 成员访问策略Id。
+     * @var integer <p>成员访问策略Id。</p>
      */
     public $PolicyId;
 
     /**
-     * @param integer $Offset 偏移量。取值是limit的整数倍。默认值 : 0。
-     * @param integer $Limit 限制数目。取值范围：1~50。默认值：10。
-     * @param integer $MemberUin 成员uin。
-     * @param integer $OrgSubAccountUin 集团管理员子账号uin。
-     * @param integer $PolicyId 成员访问策略Id。
+     * @param integer $Offset <p>偏移量。取值是limit的整数倍。默认值 : 0。</p>
+     * @param integer $Limit <p>限制数目。取值范围：1~50。默认值：10。</p>
+     * @param integer $MemberUin <p>成员uin。</p>
+     * @param integer $OrgSubAccountUin <p>集团管理员子账号uin。</p>
+     * @param integer $PolicyId <p>成员访问策略Id。</p>
      */
     function __construct()
     {

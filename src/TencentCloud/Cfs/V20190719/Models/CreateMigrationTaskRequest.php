@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcSecretKey(string $SrcSecretKey) 设置<p>数据源账号的 SecretKey</p>
  * @method string getFileSystemId() 获取<p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
  * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
- * @method string getFsPath() 获取<p>文件系统路径</p>
- * @method void setFsPath(string $FsPath) 设置<p>文件系统路径</p>
+ * @method string getFsPath() 获取<p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
+ * @method void setFsPath(string $FsPath) 设置<p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
  * @method integer getCoverType() 获取<p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
  * @method void setCoverType(integer $CoverType) 设置<p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
  * @method string getSrcService() 获取<p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
@@ -86,7 +86,7 @@ class CreateMigrationTaskRequest extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var string <p>文件系统路径</p>
+     * @var string <p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
      */
     public $FsPath;
 
@@ -142,7 +142,7 @@ class CreateMigrationTaskRequest extends AbstractModel
      * @param string $SrcSecretId <p>数据源账号的 SecretId</p>
      * @param string $SrcSecretKey <p>数据源账号的 SecretKey</p>
      * @param string $FileSystemId <p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
-     * @param string $FsPath <p>文件系统路径</p>
+     * @param string $FsPath <p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
      * @param integer $CoverType <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
      * @param string $SrcService <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
      * @param string $BucketName <p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>

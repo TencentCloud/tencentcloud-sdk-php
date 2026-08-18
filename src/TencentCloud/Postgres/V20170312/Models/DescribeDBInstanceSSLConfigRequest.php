@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceSSLConfig请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID，形如postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getDBInstanceId() 获取<p>实例ID，形如postgres-6bwgamo3。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method void setDBInstanceId(string $DBInstanceId) 设置<p>实例ID，形如postgres-6bwgamo3。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
  */
 class DescribeDBInstanceSSLConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @var string <p>实例ID，形如postgres-6bwgamo3。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public $DBInstanceId;
 
     /**
-     * @param string $DBInstanceId 实例ID，形如postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $DBInstanceId <p>实例ID，形如postgres-6bwgamo3。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     function __construct()
     {

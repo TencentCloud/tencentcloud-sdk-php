@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDedicatedClusterDiskStatistics返回参数结构体
  *
+ * @method array getDedicatedClusterDiskStatisticSet() 获取<p>云服务器独享集群云硬盘统计信息。</p>
+ * @method void setDedicatedClusterDiskStatisticSet(array $DedicatedClusterDiskStatisticSet) 设置<p>云服务器独享集群云硬盘统计信息。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDedicatedClusterDiskStatisticsResponse extends AbstractModel
 {
     /**
+     * @var array <p>云服务器独享集群云硬盘统计信息。</p>
+     */
+    public $DedicatedClusterDiskStatisticSet;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $DedicatedClusterDiskStatisticSet <p>云服务器独享集群云硬盘统计信息。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,15 @@ class DescribeDedicatedClusterDiskStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DedicatedClusterDiskStatisticSet",$param) and $param["DedicatedClusterDiskStatisticSet"] !== null) {
+            $this->DedicatedClusterDiskStatisticSet = [];
+            foreach ($param["DedicatedClusterDiskStatisticSet"] as $key => $value){
+                $obj = new DedicatedClusterDiskStatistic();
+                $obj->deserialize($value);
+                array_push($this->DedicatedClusterDiskStatisticSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

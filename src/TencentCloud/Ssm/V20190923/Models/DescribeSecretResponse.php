@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetUinString(string $TargetUinString) 设置<p>所属用户UIN 字符串</p>
  * @method array getAccountInfoList() 获取<p>对应云产品的账号信息</p>
  * @method void setAccountInfoList(array $AccountInfoList) 设置<p>对应云产品的账号信息</p>
+ * @method string getNextRotationTime() 获取
+ * @method void setNextRotationTime(string $NextRotationTime) 设置
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -180,6 +182,11 @@ class DescribeSecretResponse extends AbstractModel
     public $AccountInfoList;
 
     /**
+     * @var string 
+     */
+    public $NextRotationTime;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -207,6 +214,7 @@ class DescribeSecretResponse extends AbstractModel
      * @param string $CreateUinString <p>创建者 uin 字符串</p>
      * @param string $TargetUinString <p>所属用户UIN 字符串</p>
      * @param array $AccountInfoList <p>对应云产品的账号信息</p>
+     * @param string $NextRotationTime 
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -313,6 +321,10 @@ class DescribeSecretResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AccountInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("NextRotationTime",$param) and $param["NextRotationTime"] !== null) {
+            $this->NextRotationTime = $param["NextRotationTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnabled() 获取<p>企业共享开关</p>
  * @method void setEnabled(boolean $Enabled) 设置<p>企业共享开关</p>
- * @method integer getShareScope() 获取<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr></tbody></table>
- * @method void setShareScope(integer $ShareScope) 设置<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr></tbody></table>
+ * @method integer getShareScope() 获取<p>共享范围类型，1：企业全员，2：指定账户，3：指定空间</p>
+ * @method void setShareScope(integer $ShareScope) 设置<p>共享范围类型，1：企业全员，2：指定账户，3：指定空间</p>
  * @method array getTagIdList() 获取<p>企业共享应用标签</p>
  * @method void setTagIdList(array $TagIdList) 设置<p>企业共享应用标签</p>
+ * @method array getShareScopeList() 获取<p>共享范围信息(用户时StrId为uin,Name为用户名称;空间时StrId为空间ID,Name为空间名称)</p>
+ * @method void setShareScopeList(array $ShareScopeList) 设置<p>共享范围信息(用户时StrId为uin,Name为用户名称;空间时StrId为空间ID,Name为空间名称)</p>
  */
 class CorpShareConfig extends AbstractModel
 {
@@ -35,7 +37,7 @@ class CorpShareConfig extends AbstractModel
     public $Enabled;
 
     /**
-     * @var integer <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr></tbody></table>
+     * @var integer <p>共享范围类型，1：企业全员，2：指定账户，3：指定空间</p>
      */
     public $ShareScope;
 
@@ -45,9 +47,15 @@ class CorpShareConfig extends AbstractModel
     public $TagIdList;
 
     /**
+     * @var array <p>共享范围信息(用户时StrId为uin,Name为用户名称;空间时StrId为空间ID,Name为空间名称)</p>
+     */
+    public $ShareScopeList;
+
+    /**
      * @param boolean $Enabled <p>企业共享开关</p>
-     * @param integer $ShareScope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr></tbody></table>
+     * @param integer $ShareScope <p>共享范围类型，1：企业全员，2：指定账户，3：指定空间</p>
      * @param array $TagIdList <p>企业共享应用标签</p>
+     * @param array $ShareScopeList <p>共享范围信息(用户时StrId为uin,Name为用户名称;空间时StrId为空间ID,Name为空间名称)</p>
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class CorpShareConfig extends AbstractModel
 
         if (array_key_exists("TagIdList",$param) and $param["TagIdList"] !== null) {
             $this->TagIdList = $param["TagIdList"];
+        }
+
+        if (array_key_exists("ShareScopeList",$param) and $param["ShareScopeList"] !== null) {
+            $this->ShareScopeList = [];
+            foreach ($param["ShareScopeList"] as $key => $value){
+                $obj = new Identity();
+                $obj->deserialize($value);
+                array_push($this->ShareScopeList, $obj);
+            }
         }
     }
 }

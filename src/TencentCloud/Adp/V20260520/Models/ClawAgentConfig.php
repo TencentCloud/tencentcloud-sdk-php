@@ -20,10 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ClawAgent配置
  *
- * @method ClawAgentCustomConfig getCustomConfig() 获取调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomConfig(ClawAgentCustomConfig $CustomConfig) 设置调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ClawAgentAgentTeamConfig getAgentTeamConfig() 获取Agent团队协作配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgentTeamConfig(ClawAgentAgentTeamConfig $AgentTeamConfig) 设置Agent团队协作配置
@@ -35,12 +31,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class ClawAgentConfig extends AbstractModel
 {
-    /**
-     * @var ClawAgentCustomConfig 调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CustomConfig;
-
     /**
      * @var ClawAgentAgentTeamConfig Agent团队协作配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,8 +44,6 @@ class ClawAgentConfig extends AbstractModel
     public $LongMemoryConfig;
 
     /**
-     * @param ClawAgentCustomConfig $CustomConfig 调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClawAgentAgentTeamConfig $AgentTeamConfig Agent团队协作配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClawAgentLongMemoryConfig $LongMemoryConfig 长期记忆配置
@@ -74,11 +62,6 @@ class ClawAgentConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CustomConfig",$param) and $param["CustomConfig"] !== null) {
-            $this->CustomConfig = new ClawAgentCustomConfig();
-            $this->CustomConfig->deserialize($param["CustomConfig"]);
-        }
-
         if (array_key_exists("AgentTeamConfig",$param) and $param["AgentTeamConfig"] !== null) {
             $this->AgentTeamConfig = new ClawAgentAgentTeamConfig();
             $this->AgentTeamConfig->deserialize($param["AgentTeamConfig"]);

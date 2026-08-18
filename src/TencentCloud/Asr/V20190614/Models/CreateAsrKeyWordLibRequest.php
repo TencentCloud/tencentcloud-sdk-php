@@ -20,46 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAsrKeyWordLib请求参数结构体
  *
- * @method string getName() 获取词表名称，长度在1-20之间
-仅限中英文数字-_
- * @method void setName(string $Name) 设置词表名称，长度在1-20之间
-仅限中英文数字-_
- * @method string getKeyWordFile() 获取词文件（纯文本文件）的二进制base64编码，以行分隔
-格式要求：TXT
-每行只有一个词，不满足格式则报错无法上传
-每个词限制**5个汉字，15个字符**，单个词库最多不超过100个词
-注意不要有空行，尤其是最后一行
- * @method void setKeyWordFile(string $KeyWordFile) 设置词文件（纯文本文件）的二进制base64编码，以行分隔
-格式要求：TXT
-每行只有一个词，不满足格式则报错无法上传
-每个词限制**5个汉字，15个字符**，单个词库最多不超过100个词
-注意不要有空行，尤其是最后一行
+ * @method string getName() 获取<p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
+ * @method void setName(string $Name) 设置<p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
+ * @method string getKeyWordFile() 获取<p>词文件（纯文本文件）的二进制base64编码，以行分隔<br>格式要求：TXT<br>每行只有一个词，不满足格式则报错无法上传<br>每个词限制<strong>5个汉字，15个字符</strong>，单个词库最多不超过100个词<br>注意不要有空行，尤其是最后一行</p>
+ * @method void setKeyWordFile(string $KeyWordFile) 设置<p>词文件（纯文本文件）的二进制base64编码，以行分隔<br>格式要求：TXT<br>每行只有一个词，不满足格式则报错无法上传<br>每个词限制<strong>5个汉字，15个字符</strong>，单个词库最多不超过100个词<br>注意不要有空行，尤其是最后一行</p>
  */
 class CreateAsrKeyWordLibRequest extends AbstractModel
 {
     /**
-     * @var string 词表名称，长度在1-20之间
-仅限中英文数字-_
+     * @var string <p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
      */
     public $Name;
 
     /**
-     * @var string 词文件（纯文本文件）的二进制base64编码，以行分隔
-格式要求：TXT
-每行只有一个词，不满足格式则报错无法上传
-每个词限制**5个汉字，15个字符**，单个词库最多不超过100个词
-注意不要有空行，尤其是最后一行
+     * @var string <p>词文件（纯文本文件）的二进制base64编码，以行分隔<br>格式要求：TXT<br>每行只有一个词，不满足格式则报错无法上传<br>每个词限制<strong>5个汉字，15个字符</strong>，单个词库最多不超过100个词<br>注意不要有空行，尤其是最后一行</p>
      */
     public $KeyWordFile;
 
     /**
-     * @param string $Name 词表名称，长度在1-20之间
-仅限中英文数字-_
-     * @param string $KeyWordFile 词文件（纯文本文件）的二进制base64编码，以行分隔
-格式要求：TXT
-每行只有一个词，不满足格式则报错无法上传
-每个词限制**5个汉字，15个字符**，单个词库最多不超过100个词
-注意不要有空行，尤其是最后一行
+     * @param string $Name <p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
+     * @param string $KeyWordFile <p>词文件（纯文本文件）的二进制base64编码，以行分隔<br>格式要求：TXT<br>每行只有一个词，不满足格式则报错无法上传<br>每个词限制<strong>5个汉字，15个字符</strong>，单个词库最多不超过100个词<br>注意不要有空行，尤其是最后一行</p>
      */
     function __construct()
     {

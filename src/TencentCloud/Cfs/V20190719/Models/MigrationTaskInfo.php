@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) 设置<p>文件系统实例名称</p>
  * @method string getFileSystemId() 获取<p>文件系统实例Id</p>
  * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统实例Id</p>
- * @method string getFsPath() 获取<p>文件系统路径</p>
- * @method void setFsPath(string $FsPath) 设置<p>文件系统路径</p>
+ * @method string getFsPath() 获取<p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
+ * @method void setFsPath(string $FsPath) 设置<p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
  * @method integer getCoverType() 获取<p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
  * @method void setCoverType(integer $CoverType) 设置<p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
  * @method integer getCreateTime() 获取<p>创建时间</p>
@@ -128,7 +128,7 @@ class MigrationTaskInfo extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var string <p>文件系统路径</p>
+     * @var string <p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
      */
     public $FsPath;
 
@@ -223,7 +223,7 @@ class MigrationTaskInfo extends AbstractModel
      * @param string $ListAddress <p>清单地址</p>
      * @param string $FsName <p>文件系统实例名称</p>
      * @param string $FileSystemId <p>文件系统实例Id</p>
-     * @param string $FsPath <p>文件系统路径</p>
+     * @param string $FsPath <p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
      * @param integer $CoverType <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
      * @param integer $CreateTime <p>创建时间</p>
      * @param integer $EndTime <p>完成/终止时间</p>

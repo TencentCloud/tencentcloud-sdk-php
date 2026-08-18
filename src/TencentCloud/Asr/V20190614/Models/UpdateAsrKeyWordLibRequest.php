@@ -20,50 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAsrKeyWordLib请求参数结构体
  *
- * @method string getKeyWordLibId() 获取关键词表ID
- * @method void setKeyWordLibId(string $KeyWordLibId) 设置关键词表ID
- * @method string getName() 获取词表名称，长度在1-20之间
-仅限中英文数字-_
- * @method void setName(string $Name) 设置词表名称，长度在1-20之间
-仅限中英文数字-_
- * @method string getKeyWordFile() 获取- 词文件（纯文本文件）以行分隔 ，进行二进制base64编码
-- 格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 
-- 每个词最多5个汉字或15个字符，单个词库最多不超过100个词
-- 此参数为空则只更新词表名称
- * @method void setKeyWordFile(string $KeyWordFile) 设置- 词文件（纯文本文件）以行分隔 ，进行二进制base64编码
-- 格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 
-- 每个词最多5个汉字或15个字符，单个词库最多不超过100个词
-- 此参数为空则只更新词表名称
+ * @method string getKeyWordLibId() 获取<p>关键词表ID</p>
+ * @method void setKeyWordLibId(string $KeyWordLibId) 设置<p>关键词表ID</p>
+ * @method string getName() 获取<p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
+ * @method void setName(string $Name) 设置<p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
+ * @method string getKeyWordFile() 获取<ul><li>词文件（纯文本文件）以行分隔 ，进行二进制base64编码</li><li>格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 </li><li>每个词最多5个汉字或15个字符，单个词库最多不超过100个词</li><li>此参数为空则只更新词表名称</li></ul>
+ * @method void setKeyWordFile(string $KeyWordFile) 设置<ul><li>词文件（纯文本文件）以行分隔 ，进行二进制base64编码</li><li>格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 </li><li>每个词最多5个汉字或15个字符，单个词库最多不超过100个词</li><li>此参数为空则只更新词表名称</li></ul>
  */
 class UpdateAsrKeyWordLibRequest extends AbstractModel
 {
     /**
-     * @var string 关键词表ID
+     * @var string <p>关键词表ID</p>
      */
     public $KeyWordLibId;
 
     /**
-     * @var string 词表名称，长度在1-20之间
-仅限中英文数字-_
+     * @var string <p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
      */
     public $Name;
 
     /**
-     * @var string - 词文件（纯文本文件）以行分隔 ，进行二进制base64编码
-- 格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 
-- 每个词最多5个汉字或15个字符，单个词库最多不超过100个词
-- 此参数为空则只更新词表名称
+     * @var string <ul><li>词文件（纯文本文件）以行分隔 ，进行二进制base64编码</li><li>格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 </li><li>每个词最多5个汉字或15个字符，单个词库最多不超过100个词</li><li>此参数为空则只更新词表名称</li></ul>
      */
     public $KeyWordFile;
 
     /**
-     * @param string $KeyWordLibId 关键词表ID
-     * @param string $Name 词表名称，长度在1-20之间
-仅限中英文数字-_
-     * @param string $KeyWordFile - 词文件（纯文本文件）以行分隔 ，进行二进制base64编码
-- 格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 
-- 每个词最多5个汉字或15个字符，单个词库最多不超过100个词
-- 此参数为空则只更新词表名称
+     * @param string $KeyWordLibId <p>关键词表ID</p>
+     * @param string $Name <p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
+     * @param string $KeyWordFile <ul><li>词文件（纯文本文件）以行分隔 ，进行二进制base64编码</li><li>格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 </li><li>每个词最多5个汉字或15个字符，单个词库最多不超过100个词</li><li>此参数为空则只更新词表名称</li></ul>
      */
     function __construct()
     {

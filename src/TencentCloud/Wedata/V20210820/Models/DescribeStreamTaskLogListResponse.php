@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogContentList(array $LogContentList) 设置<p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContext() 获取<p>滚动查询游标</p>
+ * @method void setContext(string $Context) 设置<p>滚动查询游标</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +48,11 @@ class DescribeStreamTaskLogListResponse extends AbstractModel
     public $LogContentList;
 
     /**
+     * @var string <p>滚动查询游标</p>
+     */
+    public $Context;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class DescribeStreamTaskLogListResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LogContentList <p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Context <p>滚动查询游标</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -81,6 +89,10 @@ class DescribeStreamTaskLogListResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LogContentList, $obj);
             }
+        }
+
+        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
+            $this->Context = $param["Context"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

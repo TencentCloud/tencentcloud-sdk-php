@@ -20,58 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DoDirectoryOperation请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
- * @method string getOpetationType() 获取create：创建目录，等同于mkdir。
-check：确认目录是否存在，等同于stat。
-move：对文件/目录进行重命名，等同于mv。
- * @method void setOpetationType(string $OpetationType) 设置create：创建目录，等同于mkdir。
-check：确认目录是否存在，等同于stat。
-move：对文件/目录进行重命名，等同于mv。
- * @method string getDirectoryPath() 获取目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
- * @method void setDirectoryPath(string $DirectoryPath) 设置目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
- * @method string getMode() 获取创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
- * @method void setMode(string $Mode) 设置创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
- * @method string getDestPath() 获取mv 操作的目标目录名称。路径必须以/cfs/开头
- * @method void setDestPath(string $DestPath) 设置mv 操作的目标目录名称。路径必须以/cfs/开头
+ * @method string getFileSystemId() 获取<p>文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。</p>
+ * @method string getOpetationType() 获取<p>create：创建目录，等同于mkdir。<br>check：确认目录是否存在，等同于stat。<br>move：对文件/目录进行重命名，等同于mv。</p>
+ * @method void setOpetationType(string $OpetationType) 设置<p>create：创建目录，等同于mkdir。<br>check：确认目录是否存在，等同于stat。<br>move：对文件/目录进行重命名，等同于mv。</p>
+ * @method string getDirectoryPath() 获取<p>系统会默认递归创建路径中的所有父级目录。路径必须从 /cfs/ 开始，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li><p>若操作为 create/check</p><ul><li>若挂载的是CFS根目录 /，需在挂载路径下创建/检查是否存在 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需在挂载路径下创建/检查是否存在 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul></li><li><p>若操作为 move</p><ul><li>若挂载的是CFS根目录 /，需在挂载路径下移动 test1/test2 下的文件到 DestPath，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需在挂载路径下挂载路径下移动 test1/test2 下的文件到 DestPath，则入参值为 /cfs/subdir/test1/test2</li></ul></li></ul>
+ * @method void setDirectoryPath(string $DirectoryPath) 设置<p>系统会默认递归创建路径中的所有父级目录。路径必须从 /cfs/ 开始，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li><p>若操作为 create/check</p><ul><li>若挂载的是CFS根目录 /，需在挂载路径下创建/检查是否存在 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需在挂载路径下创建/检查是否存在 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul></li><li><p>若操作为 move</p><ul><li>若挂载的是CFS根目录 /，需在挂载路径下移动 test1/test2 下的文件到 DestPath，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需在挂载路径下挂载路径下移动 test1/test2 下的文件到 DestPath，则入参值为 /cfs/subdir/test1/test2</li></ul></li></ul>
+ * @method string getMode() 获取<p>创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。</p>
+ * @method void setMode(string $Mode) 设置<p>创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。</p>
+ * @method string getDestPath() 获取<p>mv 操作的目标目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将 DirectoryPath 下的文件移动到挂载路径下的 test3/test4，则入参值为 /cfs/test3/test4</li><li>若挂载的是CFS子目录 /subdir，需将 DirectoryPath 下的文件移动到挂载路径下的 test3/test4，则入参值为 /cfs/subdir/ test3/test4</li></ul>
+ * @method void setDestPath(string $DestPath) 设置<p>mv 操作的目标目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将 DirectoryPath 下的文件移动到挂载路径下的 test3/test4，则入参值为 /cfs/test3/test4</li><li>若挂载的是CFS子目录 /subdir，需将 DirectoryPath 下的文件移动到挂载路径下的 test3/test4，则入参值为 /cfs/subdir/ test3/test4</li></ul>
  */
 class DoDirectoryOperationRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
+     * @var string <p>文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string create：创建目录，等同于mkdir。
-check：确认目录是否存在，等同于stat。
-move：对文件/目录进行重命名，等同于mv。
+     * @var string <p>create：创建目录，等同于mkdir。<br>check：确认目录是否存在，等同于stat。<br>move：对文件/目录进行重命名，等同于mv。</p>
      */
     public $OpetationType;
 
     /**
-     * @var string 目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
+     * @var string <p>系统会默认递归创建路径中的所有父级目录。路径必须从 /cfs/ 开始，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li><p>若操作为 create/check</p><ul><li>若挂载的是CFS根目录 /，需在挂载路径下创建/检查是否存在 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需在挂载路径下创建/检查是否存在 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul></li><li><p>若操作为 move</p><ul><li>若挂载的是CFS根目录 /，需在挂载路径下移动 test1/test2 下的文件到 DestPath，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需在挂载路径下挂载路径下移动 test1/test2 下的文件到 DestPath，则入参值为 /cfs/subdir/test1/test2</li></ul></li></ul>
      */
     public $DirectoryPath;
 
     /**
-     * @var string 创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
+     * @var string <p>创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。</p>
      */
     public $Mode;
 
     /**
-     * @var string mv 操作的目标目录名称。路径必须以/cfs/开头
+     * @var string <p>mv 操作的目标目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将 DirectoryPath 下的文件移动到挂载路径下的 test3/test4，则入参值为 /cfs/test3/test4</li><li>若挂载的是CFS子目录 /subdir，需将 DirectoryPath 下的文件移动到挂载路径下的 test3/test4，则入参值为 /cfs/subdir/ test3/test4</li></ul>
      */
     public $DestPath;
 
     /**
-     * @param string $FileSystemId 文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
-     * @param string $OpetationType create：创建目录，等同于mkdir。
-check：确认目录是否存在，等同于stat。
-move：对文件/目录进行重命名，等同于mv。
-     * @param string $DirectoryPath 目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
-     * @param string $Mode 创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
-     * @param string $DestPath mv 操作的目标目录名称。路径必须以/cfs/开头
+     * @param string $FileSystemId <p>文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。</p>
+     * @param string $OpetationType <p>create：创建目录，等同于mkdir。<br>check：确认目录是否存在，等同于stat。<br>move：对文件/目录进行重命名，等同于mv。</p>
+     * @param string $DirectoryPath <p>系统会默认递归创建路径中的所有父级目录。路径必须从 /cfs/ 开始，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li><p>若操作为 create/check</p><ul><li>若挂载的是CFS根目录 /，需在挂载路径下创建/检查是否存在 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需在挂载路径下创建/检查是否存在 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul></li><li><p>若操作为 move</p><ul><li>若挂载的是CFS根目录 /，需在挂载路径下移动 test1/test2 下的文件到 DestPath，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需在挂载路径下挂载路径下移动 test1/test2 下的文件到 DestPath，则入参值为 /cfs/subdir/test1/test2</li></ul></li></ul>
+     * @param string $Mode <p>创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。</p>
+     * @param string $DestPath <p>mv 操作的目标目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将 DirectoryPath 下的文件移动到挂载路径下的 test3/test4，则入参值为 /cfs/test3/test4</li><li>若挂载的是CFS子目录 /subdir，需将 DirectoryPath 下的文件移动到挂载路径下的 test3/test4，则入参值为 /cfs/subdir/ test3/test4</li></ul>
      */
     function __construct()
     {

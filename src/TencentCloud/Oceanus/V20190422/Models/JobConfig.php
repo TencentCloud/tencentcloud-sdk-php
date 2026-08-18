@@ -182,6 +182,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogCOSBucket(string $LogCOSBucket) 设置<p>日志桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsLocked() 获取<p>是否支持滚动删除，0，手动删除，1，自动滚动删除</p>
+ * @method void setIsLocked(integer $IsLocked) 设置<p>是否支持滚动删除，0，手动删除，1，自动滚动删除</p>
  */
 class JobConfig extends AbstractModel
 {
@@ -443,6 +445,11 @@ class JobConfig extends AbstractModel
     public $LogCOSBucket;
 
     /**
+     * @var integer <p>是否支持滚动删除，0，手动删除，1，自动滚动删除</p>
+     */
+    public $IsLocked;
+
+    /**
      * @param string $JobId <p>作业Id</p>
      * @param string $EntrypointClass <p>主类</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -524,6 +531,7 @@ class JobConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogCOSBucket <p>日志桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsLocked <p>是否支持滚动删除，0，手动删除，1，自动滚动删除</p>
      */
     function __construct()
     {
@@ -731,6 +739,10 @@ class JobConfig extends AbstractModel
 
         if (array_key_exists("LogCOSBucket",$param) and $param["LogCOSBucket"] !== null) {
             $this->LogCOSBucket = $param["LogCOSBucket"];
+        }
+
+        if (array_key_exists("IsLocked",$param) and $param["IsLocked"] !== null) {
+            $this->IsLocked = $param["IsLocked"];
         }
     }
 }

@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDedicatedClusterDiskStatistics请求参数结构体
  *
-
+ * @method string getDedicatedClusterId() 获取<p>云服务器独享集群ID。</p>
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置<p>云服务器独享集群ID。</p>
  */
 class DescribeDedicatedClusterDiskStatisticsRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>云服务器独享集群ID。</p>
+     */
+    public $DedicatedClusterId;
 
     /**
-
+     * @param string $DedicatedClusterId <p>云服务器独享集群ID。</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeDedicatedClusterDiskStatisticsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
     }
 }

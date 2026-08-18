@@ -24,13 +24,11 @@ use TencentCloud\Dataagent\V20250513\Models as Models;
 
 /**
  * @method Models\AddChunkResponse AddChunk(Models\AddChunkRequest $req) 文档切片新增
- * @method Models\AddSceneResponse AddScene(Models\AddSceneRequest $req) 新增场景
  * @method Models\AppendKnowledgeTaskResponse AppendKnowledgeTask(Models\AppendKnowledgeTaskRequest $req) 追加文件
  * @method Models\ChatAIResponse ChatAI(Models\ChatAIRequest $req) 提供DataAgent 产品服务API
  * @method Models\CreateDataAgentSessionResponse CreateDataAgentSession(Models\CreateDataAgentSessionRequest $req) 生成DataAgent 会话ID
  * @method Models\DeleteChunkResponse DeleteChunk(Models\DeleteChunkRequest $req) 文档切片删除
  * @method Models\DeleteDataAgentSessionResponse DeleteDataAgentSession(Models\DeleteDataAgentSessionRequest $req) 删除会话
- * @method Models\DeleteSceneResponse DeleteScene(Models\DeleteSceneRequest $req) 删除场景
  * @method Models\ExecuteAgentApiResponse ExecuteAgentApi(Models\ExecuteAgentApiRequest $req) 执行datateam相关的命令行请求
  * @method Models\ExecuteAgentApiV1Response ExecuteAgentApiV1(Models\ExecuteAgentApiV1Request $req) 执行datateam相关的命令行请求
  * @method Models\GetJobsByKnowledgeBaseIdResponse GetJobsByKnowledgeBaseId(Models\GetJobsByKnowledgeBaseIdRequest $req) 根据知识库id查询jobs 列表
@@ -45,10 +43,8 @@ use TencentCloud\Dataagent\V20250513\Models as Models;
  * @method Models\QueryChunkListResponse QueryChunkList(Models\QueryChunkListRequest $req) 文档切片查询
  * @method Models\QueryKnowledgeTaskResponse QueryKnowledgeTask(Models\QueryKnowledgeTaskRequest $req) 查询文件任务状态
  * @method Models\QueryModelsResponse QueryModels(Models\QueryModelsRequest $req) 查询聊天支持模型信息
- * @method Models\QuerySceneListResponse QuerySceneList(Models\QuerySceneListRequest $req) 查询场景列表
  * @method Models\QueryUserAuthorityResponse QueryUserAuthority(Models\QueryUserAuthorityRequest $req) 查询对象权限
  * @method Models\StopChatAIResponse StopChatAI(Models\StopChatAIRequest $req) 中断DataAgent的回答输出
- * @method Models\UpdateSceneResponse UpdateScene(Models\UpdateSceneRequest $req) 更新场景
  * @method Models\UploadAndCommitFileResponse UploadAndCommitFile(Models\UploadAndCommitFileRequest $req) 上传提交文件
  */
 

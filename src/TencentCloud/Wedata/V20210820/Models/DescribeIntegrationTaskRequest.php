@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIntegrationTask请求参数结构体
  *
- * @method string getTaskId() 获取任务id
- * @method void setTaskId(string $TaskId) 设置任务id
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
- * @method integer getTaskType() 获取任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
- * @method void setTaskType(integer $TaskType) 设置任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
- * @method integer getInstanceVersion() 获取提交版本号
- * @method void setInstanceVersion(integer $InstanceVersion) 设置提交版本号
- * @method array getExtConfig() 获取额外参数
- * @method void setExtConfig(array $ExtConfig) 设置额外参数
+ * @method string getTaskId() 获取<p>任务id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
+ * @method string getProjectId() 获取<p>项目id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
+ * @method integer getTaskType() 获取<p>任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型</p>
+ * @method void setTaskType(integer $TaskType) 设置<p>任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型</p>
+ * @method integer getInstanceVersion() 获取<p>提交版本号</p>
+ * @method void setInstanceVersion(integer $InstanceVersion) 设置<p>提交版本号</p>
+ * @method array getExtConfig() 获取<p>额外参数</p>
+ * @method void setExtConfig(array $ExtConfig) 设置<p>额外参数</p>
  */
 class DescribeIntegrationTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
      */
     public $TaskId;
 
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
+     * @var integer <p>任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型</p>
      */
     public $TaskType;
 
     /**
-     * @var integer 提交版本号
+     * @var integer <p>提交版本号</p>
      */
     public $InstanceVersion;
 
     /**
-     * @var array 额外参数
+     * @var array <p>额外参数</p>
      */
     public $ExtConfig;
 
     /**
-     * @param string $TaskId 任务id
-     * @param string $ProjectId 项目id
-     * @param integer $TaskType 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
-     * @param integer $InstanceVersion 提交版本号
-     * @param array $ExtConfig 额外参数
+     * @param string $TaskId <p>任务id</p>
+     * @param string $ProjectId <p>项目id</p>
+     * @param integer $TaskType <p>任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型</p>
+     * @param integer $InstanceVersion <p>提交版本号</p>
+     * @param array $ExtConfig <p>额外参数</p>
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetIpTraceStatus返回参数结构体
  *
- * @method boolean getOpenIpTrace() 获取是否开启IP溯源
- * @method void setOpenIpTrace(boolean $OpenIpTrace) 设置是否开启IP溯源
- * @method integer getDurationTime() 获取IP溯源开启持续时间，单位：秒
- * @method void setDurationTime(integer $DurationTime) 设置IP溯源开启持续时间，单位：秒
- * @method IpTraceConfig getIpTraceConfig() 获取IP溯源配置
- * @method void setIpTraceConfig(IpTraceConfig $IpTraceConfig) 设置IP溯源配置
- * @method string getLastStartTime() 获取上次执行时间
- * @method void setLastStartTime(string $LastStartTime) 设置上次执行时间
- * @method string getLastEndTime() 获取上次关闭时间
- * @method void setLastEndTime(string $LastEndTime) 设置上次关闭时间
- * @method boolean getFilterKibanaIp() 获取是否过滤Kibana节点IP
- * @method void setFilterKibanaIp(boolean $FilterKibanaIp) 设置是否过滤Kibana节点IP
+ * @method boolean getOpenIpTrace() 获取<p>是否开启IP溯源</p>
+ * @method void setOpenIpTrace(boolean $OpenIpTrace) 设置<p>是否开启IP溯源</p>
+ * @method integer getDurationTime() 获取<p>IP溯源开启持续时间，单位：秒</p>
+ * @method void setDurationTime(integer $DurationTime) 设置<p>IP溯源开启持续时间，单位：秒</p>
+ * @method IpTraceConfig getIpTraceConfig() 获取<p>IP溯源配置</p>
+ * @method void setIpTraceConfig(IpTraceConfig $IpTraceConfig) 设置<p>IP溯源配置</p>
+ * @method string getLastStartTime() 获取<p>上次执行时间</p>
+ * @method void setLastStartTime(string $LastStartTime) 设置<p>上次执行时间</p>
+ * @method string getLastEndTime() 获取<p>上次关闭时间</p>
+ * @method void setLastEndTime(string $LastEndTime) 设置<p>上次关闭时间</p>
+ * @method boolean getFilterKibanaIp() 获取<p>是否过滤Kibana节点IP</p>
+ * @method void setFilterKibanaIp(boolean $FilterKibanaIp) 设置<p>是否过滤Kibana节点IP</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetIpTraceStatusResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否开启IP溯源
+     * @var boolean <p>是否开启IP溯源</p>
      */
     public $OpenIpTrace;
 
     /**
-     * @var integer IP溯源开启持续时间，单位：秒
+     * @var integer <p>IP溯源开启持续时间，单位：秒</p>
      */
     public $DurationTime;
 
     /**
-     * @var IpTraceConfig IP溯源配置
+     * @var IpTraceConfig <p>IP溯源配置</p>
      */
     public $IpTraceConfig;
 
     /**
-     * @var string 上次执行时间
+     * @var string <p>上次执行时间</p>
      */
     public $LastStartTime;
 
     /**
-     * @var string 上次关闭时间
+     * @var string <p>上次关闭时间</p>
      */
     public $LastEndTime;
 
     /**
-     * @var boolean 是否过滤Kibana节点IP
+     * @var boolean <p>是否过滤Kibana节点IP</p>
      */
     public $FilterKibanaIp;
 
@@ -73,12 +73,12 @@ class GetIpTraceStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $OpenIpTrace 是否开启IP溯源
-     * @param integer $DurationTime IP溯源开启持续时间，单位：秒
-     * @param IpTraceConfig $IpTraceConfig IP溯源配置
-     * @param string $LastStartTime 上次执行时间
-     * @param string $LastEndTime 上次关闭时间
-     * @param boolean $FilterKibanaIp 是否过滤Kibana节点IP
+     * @param boolean $OpenIpTrace <p>是否开启IP溯源</p>
+     * @param integer $DurationTime <p>IP溯源开启持续时间，单位：秒</p>
+     * @param IpTraceConfig $IpTraceConfig <p>IP溯源配置</p>
+     * @param string $LastStartTime <p>上次执行时间</p>
+     * @param string $LastEndTime <p>上次关闭时间</p>
+     * @param boolean $FilterKibanaIp <p>是否过滤Kibana节点IP</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

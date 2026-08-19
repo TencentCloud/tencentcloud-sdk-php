@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFaceIdResult请求参数结构体
  *
- * @method string getFaceIdToken() 获取SDK人脸核身流程的标识。
-- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
- * @method void setFaceIdToken(string $FaceIdToken) 设置SDK人脸核身流程的标识。
-- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
- * @method boolean getIsNeedVideo() 获取是否需要拉取视频。
-- 默认false：不需要。
- * @method void setIsNeedVideo(boolean $IsNeedVideo) 设置是否需要拉取视频。
-- 默认false：不需要。
- * @method boolean getIsNeedBestFrame() 获取是否需要拉取截帧。
-- 默认false：不需要。
- * @method void setIsNeedBestFrame(boolean $IsNeedBestFrame) 设置是否需要拉取截帧。
-- 默认false：不需要。
- * @method boolean getIsEncryptResponse() 获取是否对回包整体进行加密。
- * @method void setIsEncryptResponse(boolean $IsEncryptResponse) 设置是否对回包整体进行加密。
- * @method Encryption getEncryption() 获取是否需要对返回中的敏感信息进行加密。  
-只需指定加密算法Algorithm即可，其余字段传入默认值。
- * @method void setEncryption(Encryption $Encryption) 设置是否需要对返回中的敏感信息进行加密。  
-只需指定加密算法Algorithm即可，其余字段传入默认值。
+ * @method string getFaceIdToken() 获取<p>SDK人脸核身流程的标识。</p><ul><li>调用<a href="https://cloud.tencent.com/document/product/1007/49198">GetFaceIdToken</a>接口时生成。</li></ul>
+ * @method void setFaceIdToken(string $FaceIdToken) 设置<p>SDK人脸核身流程的标识。</p><ul><li>调用<a href="https://cloud.tencent.com/document/product/1007/49198">GetFaceIdToken</a>接口时生成。</li></ul>
+ * @method boolean getIsNeedVideo() 获取<p>是否需要拉取视频。</p><ul><li>默认false：不需要。</li></ul>
+ * @method void setIsNeedVideo(boolean $IsNeedVideo) 设置<p>是否需要拉取视频。</p><ul><li>默认false：不需要。</li></ul>
+ * @method boolean getIsNeedBestFrame() 获取<p>是否需要拉取截帧。</p><ul><li>默认false：不需要。</li></ul>
+ * @method void setIsNeedBestFrame(boolean $IsNeedBestFrame) 设置<p>是否需要拉取截帧。</p><ul><li>默认false：不需要。</li></ul>
+ * @method boolean getIsEncryptResponse() 获取<p>是否对回包整体进行加密。</p>
+ * @method void setIsEncryptResponse(boolean $IsEncryptResponse) 设置<p>是否对回包整体进行加密。</p>
+ * @method Encryption getEncryption() 获取<p>是否需要对返回中的敏感信息进行加密。<br>只需指定加密算法Algorithm即可，其余字段传入默认值。</p>
+ * @method void setEncryption(Encryption $Encryption) 设置<p>是否需要对返回中的敏感信息进行加密。<br>只需指定加密算法Algorithm即可，其余字段传入默认值。</p>
  */
 class GetFaceIdResultRequest extends AbstractModel
 {
     /**
-     * @var string SDK人脸核身流程的标识。
-- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
+     * @var string <p>SDK人脸核身流程的标识。</p><ul><li>调用<a href="https://cloud.tencent.com/document/product/1007/49198">GetFaceIdToken</a>接口时生成。</li></ul>
      */
     public $FaceIdToken;
 
     /**
-     * @var boolean 是否需要拉取视频。
-- 默认false：不需要。
+     * @var boolean <p>是否需要拉取视频。</p><ul><li>默认false：不需要。</li></ul>
      */
     public $IsNeedVideo;
 
     /**
-     * @var boolean 是否需要拉取截帧。
-- 默认false：不需要。
+     * @var boolean <p>是否需要拉取截帧。</p><ul><li>默认false：不需要。</li></ul>
      */
     public $IsNeedBestFrame;
 
     /**
-     * @var boolean 是否对回包整体进行加密。
+     * @var boolean <p>是否对回包整体进行加密。</p>
      */
     public $IsEncryptResponse;
 
     /**
-     * @var Encryption 是否需要对返回中的敏感信息进行加密。  
-只需指定加密算法Algorithm即可，其余字段传入默认值。
+     * @var Encryption <p>是否需要对返回中的敏感信息进行加密。<br>只需指定加密算法Algorithm即可，其余字段传入默认值。</p>
      */
     public $Encryption;
 
     /**
-     * @param string $FaceIdToken SDK人脸核身流程的标识。
-- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
-     * @param boolean $IsNeedVideo 是否需要拉取视频。
-- 默认false：不需要。
-     * @param boolean $IsNeedBestFrame 是否需要拉取截帧。
-- 默认false：不需要。
-     * @param boolean $IsEncryptResponse 是否对回包整体进行加密。
-     * @param Encryption $Encryption 是否需要对返回中的敏感信息进行加密。  
-只需指定加密算法Algorithm即可，其余字段传入默认值。
+     * @param string $FaceIdToken <p>SDK人脸核身流程的标识。</p><ul><li>调用<a href="https://cloud.tencent.com/document/product/1007/49198">GetFaceIdToken</a>接口时生成。</li></ul>
+     * @param boolean $IsNeedVideo <p>是否需要拉取视频。</p><ul><li>默认false：不需要。</li></ul>
+     * @param boolean $IsNeedBestFrame <p>是否需要拉取截帧。</p><ul><li>默认false：不需要。</li></ul>
+     * @param boolean $IsEncryptResponse <p>是否对回包整体进行加密。</p>
+     * @param Encryption $Encryption <p>是否需要对返回中的敏感信息进行加密。<br>只需指定加密算法Algorithm即可，其余字段传入默认值。</p>
      */
     function __construct()
     {

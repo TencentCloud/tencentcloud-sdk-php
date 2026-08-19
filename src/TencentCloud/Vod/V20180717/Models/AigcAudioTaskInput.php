@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrompt(string $Prompt) 设置<p>生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
  * @method string getNegativePrompt() 获取<p>要阻止模型生成视频的提示词。最大支持1000字符。</p>
  * @method void setNegativePrompt(string $NegativePrompt) 设置<p>要阻止模型生成视频的提示词。最大支持1000字符。</p>
+ * @method array getAudioInfos() 获取<p>参考音频信息</p>
+ * @method void setAudioInfos(array $AudioInfos) 设置<p>参考音频信息</p>
+ * @method array getVideoInfos() 获取<p>参考视频信息</p>
+ * @method void setVideoInfos(array $VideoInfos) 设置<p>参考视频信息</p>
  * @method boolean getEnhancePrompt() 获取<p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method void setEnhancePrompt(boolean $EnhancePrompt) 设置<p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method AigcAudioOutputConfig getOutputConfig() 获取<p>AIGC 生图输出结果文件输出。</p>
@@ -65,6 +69,16 @@ class AigcAudioTaskInput extends AbstractModel
     public $NegativePrompt;
 
     /**
+     * @var array <p>参考音频信息</p>
+     */
+    public $AudioInfos;
+
+    /**
+     * @var array <p>参考视频信息</p>
+     */
+    public $VideoInfos;
+
+    /**
      * @var boolean <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      */
     public $EnhancePrompt;
@@ -85,6 +99,8 @@ class AigcAudioTaskInput extends AbstractModel
      * @param string $SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
      * @param string $Prompt <p>生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
      * @param string $NegativePrompt <p>要阻止模型生成视频的提示词。最大支持1000字符。</p>
+     * @param array $AudioInfos <p>参考音频信息</p>
+     * @param array $VideoInfos <p>参考视频信息</p>
      * @param boolean $EnhancePrompt <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      * @param AigcAudioOutputConfig $OutputConfig <p>AIGC 生图输出结果文件输出。</p>
      * @param string $AdditionalParameters <p>额外参数</p>
@@ -120,6 +136,24 @@ class AigcAudioTaskInput extends AbstractModel
 
         if (array_key_exists("NegativePrompt",$param) and $param["NegativePrompt"] !== null) {
             $this->NegativePrompt = $param["NegativePrompt"];
+        }
+
+        if (array_key_exists("AudioInfos",$param) and $param["AudioInfos"] !== null) {
+            $this->AudioInfos = [];
+            foreach ($param["AudioInfos"] as $key => $value){
+                $obj = new AigcAudioReferenceAudioInfo();
+                $obj->deserialize($value);
+                array_push($this->AudioInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("VideoInfos",$param) and $param["VideoInfos"] !== null) {
+            $this->VideoInfos = [];
+            foreach ($param["VideoInfos"] as $key => $value){
+                $obj = new AigcAudioReferenceVideoInfo();
+                $obj->deserialize($value);
+                array_push($this->VideoInfos, $obj);
+            }
         }
 
         if (array_key_exists("EnhancePrompt",$param) and $param["EnhancePrompt"] !== null) {

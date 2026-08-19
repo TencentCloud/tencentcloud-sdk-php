@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryIpTraceLog请求参数结构体
  *
- * @method string getInstanceId() 获取ES集群ID
- * @method void setInstanceId(string $InstanceId) 设置ES集群ID
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method integer getOffset() 获取起始偏移量
- * @method void setOffset(integer $Offset) 设置起始偏移量
- * @method integer getLimit() 获取数据条数
- * @method void setLimit(integer $Limit) 设置数据条数
- * @method array getRemoteIp() 获取访问IP
- * @method void setRemoteIp(array $RemoteIp) 设置访问IP
- * @method array getTraceType() 获取Request/Response 请求/返回, 非必填
- * @method void setTraceType(array $TraceType) 设置Request/Response 请求/返回, 非必填
- * @method array getNetType() 获取Public/Private 公网访问/内网访问, 非必填
- * @method void setNetType(array $NetType) 设置Public/Private 公网访问/内网访问, 非必填
- * @method array getReqTypeOrRspStatus() 获取POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填
- * @method void setReqTypeOrRspStatus(array $ReqTypeOrRspStatus) 设置POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填
- * @method string getSearchKey() 获取关键字模糊查询，支持Lucene Query String
- * @method void setSearchKey(string $SearchKey) 设置关键字模糊查询，支持Lucene Query String
- * @method string getUri() 获取Uri搜索
- * @method void setUri(string $Uri) 设置Uri搜索
- * @method array getNodeIp() 获取集群节点IP
- * @method void setNodeIp(array $NodeIp) 设置集群节点IP
+ * @method string getInstanceId() 获取<p>ES集群ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ES集群ID</p>
+ * @method string getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间</p>
+ * @method string getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
+ * @method integer getOffset() 获取<p>起始偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>起始偏移量</p>
+ * @method integer getLimit() 获取<p>数据条数</p>
+ * @method void setLimit(integer $Limit) 设置<p>数据条数</p>
+ * @method array getRemoteIp() 获取<p>访问IP</p>
+ * @method void setRemoteIp(array $RemoteIp) 设置<p>访问IP</p>
+ * @method array getTraceType() 获取<p>Request/Response 请求/返回, 非必填</p>
+ * @method void setTraceType(array $TraceType) 设置<p>Request/Response 请求/返回, 非必填</p>
+ * @method array getNetType() 获取<p>Public/Private 公网访问/内网访问, 非必填</p>
+ * @method void setNetType(array $NetType) 设置<p>Public/Private 公网访问/内网访问, 非必填</p>
+ * @method array getReqTypeOrRspStatus() 获取<p>POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填</p>
+ * @method void setReqTypeOrRspStatus(array $ReqTypeOrRspStatus) 设置<p>POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填</p>
+ * @method string getSearchKey() 获取<p>关键字模糊查询，支持Lucene Query String</p>
+ * @method void setSearchKey(string $SearchKey) 设置<p>关键字模糊查询，支持Lucene Query String</p>
+ * @method string getUri() 获取<p>Uri搜索</p>
+ * @method void setUri(string $Uri) 设置<p>Uri搜索</p>
+ * @method array getNodeIp() 获取<p>集群节点IP</p>
+ * @method void setNodeIp(array $NodeIp) 设置<p>集群节点IP</p>
  */
 class QueryIpTraceLogRequest extends AbstractModel
 {
     /**
-     * @var string ES集群ID
+     * @var string <p>ES集群ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 开始时间
+     * @var string <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 起始偏移量
+     * @var integer <p>起始偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 数据条数
+     * @var integer <p>数据条数</p>
      */
     public $Limit;
 
     /**
-     * @var array 访问IP
+     * @var array <p>访问IP</p>
      */
     public $RemoteIp;
 
     /**
-     * @var array Request/Response 请求/返回, 非必填
+     * @var array <p>Request/Response 请求/返回, 非必填</p>
      */
     public $TraceType;
 
     /**
-     * @var array Public/Private 公网访问/内网访问, 非必填
+     * @var array <p>Public/Private 公网访问/内网访问, 非必填</p>
      */
     public $NetType;
 
     /**
-     * @var array POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填
+     * @var array <p>POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填</p>
      */
     public $ReqTypeOrRspStatus;
 
     /**
-     * @var string 关键字模糊查询，支持Lucene Query String
+     * @var string <p>关键字模糊查询，支持Lucene Query String</p>
      */
     public $SearchKey;
 
     /**
-     * @var string Uri搜索
+     * @var string <p>Uri搜索</p>
      */
     public $Uri;
 
     /**
-     * @var array 集群节点IP
+     * @var array <p>集群节点IP</p>
      */
     public $NodeIp;
 
     /**
-     * @param string $InstanceId ES集群ID
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param integer $Offset 起始偏移量
-     * @param integer $Limit 数据条数
-     * @param array $RemoteIp 访问IP
-     * @param array $TraceType Request/Response 请求/返回, 非必填
-     * @param array $NetType Public/Private 公网访问/内网访问, 非必填
-     * @param array $ReqTypeOrRspStatus POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填
-     * @param string $SearchKey 关键字模糊查询，支持Lucene Query String
-     * @param string $Uri Uri搜索
-     * @param array $NodeIp 集群节点IP
+     * @param string $InstanceId <p>ES集群ID</p>
+     * @param string $StartTime <p>开始时间</p>
+     * @param string $EndTime <p>结束时间</p>
+     * @param integer $Offset <p>起始偏移量</p>
+     * @param integer $Limit <p>数据条数</p>
+     * @param array $RemoteIp <p>访问IP</p>
+     * @param array $TraceType <p>Request/Response 请求/返回, 非必填</p>
+     * @param array $NetType <p>Public/Private 公网访问/内网访问, 非必填</p>
+     * @param array $ReqTypeOrRspStatus <p>POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填</p>
+     * @param string $SearchKey <p>关键字模糊查询，支持Lucene Query String</p>
+     * @param string $Uri <p>Uri搜索</p>
+     * @param array $NodeIp <p>集群节点IP</p>
      */
     function __construct()
     {

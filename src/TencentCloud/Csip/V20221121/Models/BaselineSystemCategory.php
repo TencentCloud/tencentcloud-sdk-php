@@ -1,0 +1,83 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Csip\V20221121\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 基线系统主分类（含其下所有子分类与检测项 ID 列表）。
+ *
+ * @method array getSubCategoryList() 获取<p>该父分类下的子分类列表（每个子分类含其内置检测项 ID 列表）。</p>
+ * @method void setSubCategoryList(array $SubCategoryList) 设置<p>该父分类下的子分类列表（每个子分类含其内置检测项 ID 列表）。</p>
+ * @method BaselineCategory getCategory() 获取<p>系统父分类基础信息（ID、名称、描述、CheckAssetType）。</p>
+ * @method void setCategory(BaselineCategory $Category) 设置<p>系统父分类基础信息（ID、名称、描述、CheckAssetType）。</p>
+ * @method integer getItemCount() 获取<p>检测项个数</p>
+ * @method void setItemCount(integer $ItemCount) 设置<p>检测项个数</p>
+ */
+class BaselineSystemCategory extends AbstractModel
+{
+    /**
+     * @var array <p>该父分类下的子分类列表（每个子分类含其内置检测项 ID 列表）。</p>
+     */
+    public $SubCategoryList;
+
+    /**
+     * @var BaselineCategory <p>系统父分类基础信息（ID、名称、描述、CheckAssetType）。</p>
+     */
+    public $Category;
+
+    /**
+     * @var integer <p>检测项个数</p>
+     */
+    public $ItemCount;
+
+    /**
+     * @param array $SubCategoryList <p>该父分类下的子分类列表（每个子分类含其内置检测项 ID 列表）。</p>
+     * @param BaselineCategory $Category <p>系统父分类基础信息（ID、名称、描述、CheckAssetType）。</p>
+     * @param integer $ItemCount <p>检测项个数</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("SubCategoryList",$param) and $param["SubCategoryList"] !== null) {
+            $this->SubCategoryList = [];
+            foreach ($param["SubCategoryList"] as $key => $value){
+                $obj = new BaselineSubCategory();
+                $obj->deserialize($value);
+                array_push($this->SubCategoryList, $obj);
+            }
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = new BaselineCategory();
+            $this->Category->deserialize($param["Category"]);
+        }
+
+        if (array_key_exists("ItemCount",$param) and $param["ItemCount"] !== null) {
+            $this->ItemCount = $param["ItemCount"];
+        }
+    }
+}

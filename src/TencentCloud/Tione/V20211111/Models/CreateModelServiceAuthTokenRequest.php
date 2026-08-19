@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateModelServiceAuthToken请求参数结构体
  *
- * @method string getServiceGroupId() 获取服务组 id
- * @method void setServiceGroupId(string $ServiceGroupId) 设置服务组 id
- * @method string getName() 获取token 名称
- * @method void setName(string $Name) 设置token 名称
- * @method string getDescription() 获取Description 描述
- * @method void setDescription(string $Description) 设置Description 描述
+ * @method string getServiceGroupId() 获取<p>服务组 id</p>
+ * @method void setServiceGroupId(string $ServiceGroupId) 设置<p>服务组 id</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method string getName() 获取<p>token 名称</p>
+ * @method void setName(string $Name) 设置<p>token 名称</p>
+ * @method string getDescription() 获取<p>Description 描述</p>
+ * @method void setDescription(string $Description) 设置<p>Description 描述</p>
  */
 class CreateModelServiceAuthTokenRequest extends AbstractModel
 {
     /**
-     * @var string 服务组 id
+     * @var string <p>服务组 id</p>
      */
     public $ServiceGroupId;
 
     /**
-     * @var string token 名称
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
+     * @var string <p>token 名称</p>
      */
     public $Name;
 
     /**
-     * @var string Description 描述
+     * @var string <p>Description 描述</p>
      */
     public $Description;
 
     /**
-     * @param string $ServiceGroupId 服务组 id
-     * @param string $Name token 名称
-     * @param string $Description Description 描述
+     * @param string $ServiceGroupId <p>服务组 id</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param string $Name <p>token 名称</p>
+     * @param string $Description <p>Description 描述</p>
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class CreateModelServiceAuthTokenRequest extends AbstractModel
         }
         if (array_key_exists("ServiceGroupId",$param) and $param["ServiceGroupId"] !== null) {
             $this->ServiceGroupId = $param["ServiceGroupId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {

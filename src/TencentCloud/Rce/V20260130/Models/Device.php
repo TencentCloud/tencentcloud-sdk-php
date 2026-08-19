@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignToken(string $SignToken) 设置<p>验签token，验签功能启用请联系我们。</p>
  * @method string getTokenTime() 获取<p>token生成时间戳，毫秒级。</p>
  * @method void setTokenTime(string $TokenTime) 设置<p>token生成时间戳，毫秒级。</p>
+ * @method string getPrivacyBrowser() 获取<p>隐私浏览器类型，当检测到隐私浏览器时返回，仅H5。</p>
+ * @method void setPrivacyBrowser(string $PrivacyBrowser) 设置<p>隐私浏览器类型，当检测到隐私浏览器时返回，仅H5。</p>
  */
 class Device extends AbstractModel
 {
@@ -108,6 +110,11 @@ class Device extends AbstractModel
     public $TokenTime;
 
     /**
+     * @var string <p>隐私浏览器类型，当检测到隐私浏览器时返回，仅H5。</p>
+     */
+    public $PrivacyBrowser;
+
+    /**
      * @param string $DeviceId <p>设备ID</p>
      * @param string $AppVersion <p>App版本信息</p>
      * @param string $Brand <p>品牌</p>
@@ -120,6 +127,7 @@ class Device extends AbstractModel
      * @param string $SdkBuildVersion <p>SDK版本</p>
      * @param string $SignToken <p>验签token，验签功能启用请联系我们。</p>
      * @param string $TokenTime <p>token生成时间戳，毫秒级。</p>
+     * @param string $PrivacyBrowser <p>隐私浏览器类型，当检测到隐私浏览器时返回，仅H5。</p>
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class Device extends AbstractModel
 
         if (array_key_exists("TokenTime",$param) and $param["TokenTime"] !== null) {
             $this->TokenTime = $param["TokenTime"];
+        }
+
+        if (array_key_exists("PrivacyBrowser",$param) and $param["PrivacyBrowser"] !== null) {
+            $this->PrivacyBrowser = $param["PrivacyBrowser"];
         }
     }
 }

@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopic请求参数结构体
  *
- * @method string getTopicName() 获取日志主题的名称。
- * @method void setTopicName(string $TopicName) 设置日志主题的名称。
- * @method integer getPartitionCount() 获取主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
- * @method void setPartitionCount(integer $PartitionCount) 设置主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
- * @method string getTopicType() 获取日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
- * @method void setTopicType(string $TopicType) 设置日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
- * @method integer getPeriod() 获取存储时间，单位天，默认为 30。
-- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
- * @method void setPeriod(integer $Period) 设置存储时间，单位天，默认为 30。
-- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
- * @method string getStorageType() 获取日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
- * @method void setStorageType(string $StorageType) 设置日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
+ * @method string getTopicName() 获取<p>日志主题的名称。</p>
+ * @method void setTopicName(string $TopicName) 设置<p>日志主题的名称。</p>
+ * @method integer getPartitionCount() 获取<p>主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。</p>
+ * @method void setPartitionCount(integer $PartitionCount) 设置<p>主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。</p>
+ * @method string getTopicType() 获取<p>日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。</p>
+ * @method void setTopicType(string $TopicType) 设置<p>日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。</p>
+ * @method integer getPeriod() 获取<p>存储时间，单位天，默认为 30。</p><ul><li>日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。</li><li>日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。</li></ul>
+ * @method void setPeriod(integer $Period) 设置<p>存储时间，单位天，默认为 30。</p><ul><li>日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。</li><li>日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。</li></ul>
+ * @method string getStorageType() 获取<p>日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。</p>
+ * @method void setStorageType(string $StorageType) 设置<p>日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。</p>
+ * @method array getTags() 获取<p>标签</p><p>最多支持一次传入20个</p>
+ * @method void setTags(array $Tags) 设置<p>标签</p><p>最多支持一次传入20个</p>
  */
 class CreateTopicRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题的名称。
+     * @var string <p>日志主题的名称。</p>
      */
     public $TopicName;
 
     /**
-     * @var integer 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+     * @var integer <p>主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。</p>
      */
     public $PartitionCount;
 
     /**
-     * @var string 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     * @var string <p>日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。</p>
      */
     public $TopicType;
 
     /**
-     * @var integer 存储时间，单位天，默认为 30。
-- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+     * @var integer <p>存储时间，单位天，默认为 30。</p><ul><li>日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。</li><li>日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。</li></ul>
      */
     public $Period;
 
     /**
-     * @var string 日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
+     * @var string <p>日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。</p>
      */
     public $StorageType;
 
     /**
-     * @param string $TopicName 日志主题的名称。
-     * @param integer $PartitionCount 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
-     * @param string $TopicType 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
-     * @param integer $Period 存储时间，单位天，默认为 30。
-- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
-     * @param string $StorageType 日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
+     * @var array <p>标签</p><p>最多支持一次传入20个</p>
+     */
+    public $Tags;
+
+    /**
+     * @param string $TopicName <p>日志主题的名称。</p>
+     * @param integer $PartitionCount <p>主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。</p>
+     * @param string $TopicType <p>日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。</p>
+     * @param integer $Period <p>存储时间，单位天，默认为 30。</p><ul><li>日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。</li><li>日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。</li></ul>
+     * @param string $StorageType <p>日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。</p>
+     * @param array $Tags <p>标签</p><p>最多支持一次传入20个</p>
      */
     function __construct()
     {
@@ -104,6 +104,15 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
             $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

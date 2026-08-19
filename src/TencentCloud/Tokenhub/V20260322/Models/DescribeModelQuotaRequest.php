@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModelQuota请求参数结构体
  *
-
+ * @method string getModelId() 获取<p>模型 ID。可通过 DescribeModelList 获取。</p>
+ * @method void setModelId(string $ModelId) 设置<p>模型 ID。可通过 DescribeModelList 获取。</p>
  */
 class DescribeModelQuotaRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>模型 ID。可通过 DescribeModelList 获取。</p>
+     */
+    public $ModelId;
 
     /**
-
+     * @param string $ModelId <p>模型 ID。可通过 DescribeModelList 获取。</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeModelQuotaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
+            $this->ModelId = $param["ModelId"];
+        }
     }
 }

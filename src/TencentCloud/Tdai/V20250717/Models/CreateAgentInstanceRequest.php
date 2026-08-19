@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSoulId(integer $SoulId) 设置<p>无</p>
  * @method string getDescription() 获取<p>无</p>
  * @method void setDescription(string $Description) 设置<p>无</p>
+ * @method boolean getUsePlatformAccount() 获取<p>企业版是否使用平台大账号模式发货</p>
+ * @method void setUsePlatformAccount(boolean $UsePlatformAccount) 设置<p>企业版是否使用平台大账号模式发货</p>
  */
 class CreateAgentInstanceRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateAgentInstanceRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var boolean <p>企业版是否使用平台大账号模式发货</p>
+     */
+    public $UsePlatformAccount;
+
+    /**
      * @param string $AgentId <p>智能体ID</p>
      * @param string $AgentVersion <p>智能体版本</p>
      * @param string $InstanceName <p>实例名</p>
@@ -104,6 +111,7 @@ class CreateAgentInstanceRequest extends AbstractModel
      * @param array $Skills <p>无</p>
      * @param integer $SoulId <p>无</p>
      * @param string $Description <p>无</p>
+     * @param boolean $UsePlatformAccount <p>企业版是否使用平台大账号模式发货</p>
      */
     function __construct()
     {
@@ -166,6 +174,10 @@ class CreateAgentInstanceRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("UsePlatformAccount",$param) and $param["UsePlatformAccount"] !== null) {
+            $this->UsePlatformAccount = $param["UsePlatformAccount"];
         }
     }
 }

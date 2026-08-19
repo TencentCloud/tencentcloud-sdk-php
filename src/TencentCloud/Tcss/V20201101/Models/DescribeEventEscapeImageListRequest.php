@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEventEscapeImageList请求参数结构体
  *
- * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
- * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method array getFilters() 获取过滤参数:
-EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)
-Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)
-ImageID: 镜像id
-ImageName:镜像名称
- * @method void setFilters(array $Filters) 设置过滤参数:
-EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)
-Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)
-ImageID: 镜像id
-ImageName:镜像名称
- * @method string getOrder() 获取升序降序,asc desc
- * @method void setOrder(string $Order) 设置升序降序,asc desc
- * @method string getBy() 获取排序字段
- * @method void setBy(string $By) 设置排序字段
+ * @method integer getLimit() 获取<p>需要返回的数量，默认为10，最大值为100</p>
+ * @method void setLimit(integer $Limit) 设置<p>需要返回的数量，默认为10，最大值为100</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method array getFilters() 获取<p>过滤参数:<br>EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)<br>Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)<br>ImageID: 镜像id<br>ImageName:镜像名称</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤参数:<br>EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)<br>Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)<br>ImageID: 镜像id<br>ImageName:镜像名称</p>
+ * @method string getOrder() 获取<p>升序降序,asc desc</p>
+ * @method void setOrder(string $Order) 设置<p>升序降序,asc desc</p>
+ * @method string getBy() 获取<p>排序字段</p>
+ * @method void setBy(string $By) 设置<p>排序字段</p>
  */
 class DescribeEventEscapeImageListRequest extends AbstractModel
 {
     /**
-     * @var integer 需要返回的数量，默认为10，最大值为100
+     * @var integer <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var array 过滤参数:
-EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)
-Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)
-ImageID: 镜像id
-ImageName:镜像名称
+     * @var array <p>过滤参数:<br>EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)<br>Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)<br>ImageID: 镜像id<br>ImageName:镜像名称</p>
      */
     public $Filters;
 
     /**
-     * @var string 升序降序,asc desc
+     * @var string <p>升序降序,asc desc</p>
      */
     public $Order;
 
     /**
-     * @var string 排序字段
+     * @var string <p>排序字段</p>
      */
     public $By;
 
     /**
-     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
-     * @param integer $Offset 偏移量，默认为0。
-     * @param array $Filters 过滤参数:
-EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)
-Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)
-ImageID: 镜像id
-ImageName:镜像名称
-     * @param string $Order 升序降序,asc desc
-     * @param string $By 排序字段
+     * @param integer $Limit <p>需要返回的数量，默认为10，最大值为100</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param array $Filters <p>过滤参数:<br>EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)<br>Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)<br>ImageID: 镜像id<br>ImageName:镜像名称</p>
+     * @param string $Order <p>升序降序,asc desc</p>
+     * @param string $By <p>排序字段</p>
      */
     function __construct()
     {

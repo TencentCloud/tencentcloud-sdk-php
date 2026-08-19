@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteModelServiceAuthToken请求参数结构体
  *
- * @method string getServiceGroupId() 获取服务组 id
- * @method void setServiceGroupId(string $ServiceGroupId) 设置服务组 id
- * @method string getAuthTokenValue() 获取token 值
- * @method void setAuthTokenValue(string $AuthTokenValue) 设置token 值
+ * @method string getServiceGroupId() 获取<p>服务组 id</p>
+ * @method void setServiceGroupId(string $ServiceGroupId) 设置<p>服务组 id</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method string getAuthTokenValue() 获取<p>token 值</p>
+ * @method void setAuthTokenValue(string $AuthTokenValue) 设置<p>token 值</p>
  */
 class DeleteModelServiceAuthTokenRequest extends AbstractModel
 {
     /**
-     * @var string 服务组 id
+     * @var string <p>服务组 id</p>
      */
     public $ServiceGroupId;
 
     /**
-     * @var string token 值
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
+     * @var string <p>token 值</p>
      */
     public $AuthTokenValue;
 
     /**
-     * @param string $ServiceGroupId 服务组 id
-     * @param string $AuthTokenValue token 值
+     * @param string $ServiceGroupId <p>服务组 id</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param string $AuthTokenValue <p>token 值</p>
      */
     function __construct()
     {
@@ -56,6 +64,10 @@ class DeleteModelServiceAuthTokenRequest extends AbstractModel
         }
         if (array_key_exists("ServiceGroupId",$param) and $param["ServiceGroupId"] !== null) {
             $this->ServiceGroupId = $param["ServiceGroupId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("AuthTokenValue",$param) and $param["AuthTokenValue"] !== null) {

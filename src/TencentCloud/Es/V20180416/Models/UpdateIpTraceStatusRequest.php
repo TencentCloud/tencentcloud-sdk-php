@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateIpTraceStatus请求参数结构体
  *
- * @method string getInstanceId() 获取集群ID
- * @method void setInstanceId(string $InstanceId) 设置集群ID
- * @method boolean getOpenIpTrace() 获取IP溯源配置开关
- * @method void setOpenIpTrace(boolean $OpenIpTrace) 设置IP溯源配置开关
- * @method integer getDurationTime() 获取IP溯源开启持续时间，单位：秒
- * @method void setDurationTime(integer $DurationTime) 设置IP溯源开启持续时间，单位：秒
- * @method IpTraceConfig getIpTraceConfig() 获取IP溯源配置
- * @method void setIpTraceConfig(IpTraceConfig $IpTraceConfig) 设置IP溯源配置
- * @method boolean getFilterKibanaIp() 获取是否过滤kibana节点IP
- * @method void setFilterKibanaIp(boolean $FilterKibanaIp) 设置是否过滤kibana节点IP
+ * @method string getInstanceId() 获取<p>集群ID。该字段为必填字段。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群ID。该字段为必填字段。</p>
+ * @method boolean getOpenIpTrace() 获取<p>IP溯源配置开关。该字段为必填字段。</p>
+ * @method void setOpenIpTrace(boolean $OpenIpTrace) 设置<p>IP溯源配置开关。该字段为必填字段。</p>
+ * @method integer getDurationTime() 获取<p>IP溯源开启持续时间，单位：秒。该字段为必填字段。</p>
+ * @method void setDurationTime(integer $DurationTime) 设置<p>IP溯源开启持续时间，单位：秒。该字段为必填字段。</p>
+ * @method IpTraceConfig getIpTraceConfig() 获取<p>IP溯源配置。该字段为必填字段。</p>
+ * @method void setIpTraceConfig(IpTraceConfig $IpTraceConfig) 设置<p>IP溯源配置。该字段为必填字段。</p>
+ * @method boolean getFilterKibanaIp() 获取<p>是否过滤kibana节点IP。</p>
+ * @method void setFilterKibanaIp(boolean $FilterKibanaIp) 设置<p>是否过滤kibana节点IP。</p>
  */
 class UpdateIpTraceStatusRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID。该字段为必填字段。</p>
      */
     public $InstanceId;
 
     /**
-     * @var boolean IP溯源配置开关
+     * @var boolean <p>IP溯源配置开关。该字段为必填字段。</p>
      */
     public $OpenIpTrace;
 
     /**
-     * @var integer IP溯源开启持续时间，单位：秒
+     * @var integer <p>IP溯源开启持续时间，单位：秒。该字段为必填字段。</p>
      */
     public $DurationTime;
 
     /**
-     * @var IpTraceConfig IP溯源配置
+     * @var IpTraceConfig <p>IP溯源配置。该字段为必填字段。</p>
      */
     public $IpTraceConfig;
 
     /**
-     * @var boolean 是否过滤kibana节点IP
+     * @var boolean <p>是否过滤kibana节点IP。</p>
      */
     public $FilterKibanaIp;
 
     /**
-     * @param string $InstanceId 集群ID
-     * @param boolean $OpenIpTrace IP溯源配置开关
-     * @param integer $DurationTime IP溯源开启持续时间，单位：秒
-     * @param IpTraceConfig $IpTraceConfig IP溯源配置
-     * @param boolean $FilterKibanaIp 是否过滤kibana节点IP
+     * @param string $InstanceId <p>集群ID。该字段为必填字段。</p>
+     * @param boolean $OpenIpTrace <p>IP溯源配置开关。该字段为必填字段。</p>
+     * @param integer $DurationTime <p>IP溯源开启持续时间，单位：秒。该字段为必填字段。</p>
+     * @param IpTraceConfig $IpTraceConfig <p>IP溯源配置。该字段为必填字段。</p>
+     * @param boolean $FilterKibanaIp <p>是否过滤kibana节点IP。</p>
      */
     function __construct()
     {

@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ckafka\V20190819\Models as Models;
 
 /**
+ * @method Models\AssociateRoutesSecurityGroupResponse AssociateRoutesSecurityGroup(Models\AssociateRoutesSecurityGroupRequest $req) 绑定路由安全组
  * @method Models\AuthorizeTokenResponse AuthorizeToken(Models\AuthorizeTokenRequest $req) 给实例授权token
  * @method Models\BatchCreateAclResponse BatchCreateAcl(Models\BatchCreateAclRequest $req) 批量添加ACL策略
  * @method Models\BatchModifyGroupOffsetsResponse BatchModifyGroupOffsets(Models\BatchModifyGroupOffsetsRequest $req) 批量修改消费组offset
@@ -100,6 +101,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeTopicSyncReplicaResponse DescribeTopicSyncReplica(Models\DescribeTopicSyncReplicaRequest $req) 获取Topic 副本详情信息
  * @method Models\DescribeTypeInstancesResponse DescribeTypeInstances(Models\DescribeTypeInstancesRequest $req) 本接口（DescribeTypeInstances）用于在用户账户下获取指定类型消息队列 CKafka 实例列表
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 查询用户信息
+ * @method Models\DisassociateRoutesSecurityGroupResponse DisassociateRoutesSecurityGroup(Models\DisassociateRoutesSecurityGroupRequest $req) 解绑路由安全组
  * @method Models\FetchDatahubMessageByOffsetResponse FetchDatahubMessageByOffset(Models\FetchDatahubMessageByOffsetRequest $req) 根据指定offset位置的消息
  * @method Models\FetchLatestDatahubMessageListResponse FetchLatestDatahubMessageList(Models\FetchLatestDatahubMessageListRequest $req) 查询最新消息列表
  * @method Models\FetchMessageByOffsetResponse FetchMessageByOffset(Models\FetchMessageByOffsetRequest $req) 根据指定offset位置的消息
@@ -117,6 +119,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\ModifyInstanceAttributesResponse ModifyInstanceAttributes(Models\ModifyInstanceAttributesRequest $req) 设置实例属性
  * @method Models\ModifyInstancePreResponse ModifyInstancePre(Models\ModifyInstancePreRequest $req) 预付费实例变配接口，调整磁盘，带宽,  分区
  * @method Models\ModifyPasswordResponse ModifyPassword(Models\ModifyPasswordRequest $req) 修改密码
+ * @method Models\ModifyRouteSecurityGroupsResponse ModifyRouteSecurityGroups(Models\ModifyRouteSecurityGroupsRequest $req) 修改路由安全组关联
  * @method Models\ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTask(Models\ModifyRoutineMaintenanceTaskRequest $req) 设置自动化运维属性
  * @method Models\ModifyThrottleRuleResponse ModifyThrottleRule(Models\ModifyThrottleRuleRequest $req) 修改限流规则接口
  * @method Models\ModifyTopicAttributesResponse ModifyTopicAttributes(Models\ModifyTopicAttributesRequest $req) 本接口用于修改主题属性。

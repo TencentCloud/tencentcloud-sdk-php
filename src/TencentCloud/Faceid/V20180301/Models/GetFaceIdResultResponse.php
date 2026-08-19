@@ -20,240 +20,142 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFaceIdResult返回参数结构体
  *
- * @method string getIdCard() 获取身份证。
- * @method void setIdCard(string $IdCard) 设置身份证。
- * @method string getName() 获取姓名。
- * @method void setName(string $Name) 设置姓名。
- * @method string getResult() 获取业务核验结果。
-- 参考：https://cloud.tencent.com/document/product/1007/47912。
- * @method void setResult(string $Result) 设置业务核验结果。
-- 参考：https://cloud.tencent.com/document/product/1007/47912。
- * @method string getDescription() 获取业务核验描述。
- * @method void setDescription(string $Description) 设置业务核验描述。
- * @method float getSimilarity() 获取相似度。
-- 取值：0-100。
-- 数值越大相似度越高。
- * @method void setSimilarity(float $Similarity) 设置相似度。
-- 取值：0-100。
-- 数值越大相似度越高。
- * @method string getVideoBase64() 获取用户核验的视频base64。
-- 如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+ * @method string getIdCard() 获取<p>身份证。</p>
+ * @method void setIdCard(string $IdCard) 设置<p>身份证。</p>
+ * @method string getName() 获取<p>姓名。</p>
+ * @method void setName(string $Name) 设置<p>姓名。</p>
+ * @method string getResult() 获取<p>业务核验结果。</p><ul><li>参考：https://cloud.tencent.com/document/product/1007/47912。</li></ul>
+ * @method void setResult(string $Result) 设置<p>业务核验结果。</p><ul><li>参考：https://cloud.tencent.com/document/product/1007/47912。</li></ul>
+ * @method string getDescription() 获取<p>业务核验描述。</p>
+ * @method void setDescription(string $Description) 设置<p>业务核验描述。</p>
+ * @method float getSimilarity() 获取<p>相似度。</p><ul><li>取值：0-100。</li><li>数值越大相似度越高。</li></ul>
+ * @method void setSimilarity(float $Similarity) 设置<p>相似度。</p><ul><li>取值：0-100。</li><li>数值越大相似度越高。</li></ul>
+ * @method string getVideoBase64() 获取<p>用户核验的视频base64。</p><ul><li>如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVideoBase64(string $VideoBase64) 设置用户核验的视频base64。
-- 如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+ * @method void setVideoBase64(string $VideoBase64) 设置<p>用户核验的视频base64。</p><ul><li>如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBestFrameBase64() 获取用户核验视频的截帧base64。
-- 如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+ * @method string getBestFrameBase64() 获取<p>用户核验视频的截帧base64。</p><ul><li>如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBestFrameBase64(string $BestFrameBase64) 设置用户核验视频的截帧base64。
-- 如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+ * @method void setBestFrameBase64(string $BestFrameBase64) 设置<p>用户核验视频的截帧base64。</p><ul><li>如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtra() 获取获取token时透传的信息。
+ * @method string getExtra() 获取<p>获取token时透传的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtra(string $Extra) 设置获取token时透传的信息。
+ * @method void setExtra(string $Extra) 设置<p>获取token时透传的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeviceInfoTag() 获取plus版：描述当前请求所在设备的风险标签。
-- 详情如下：
-06-疑似黑产设备。
-null-无设备风险。
-- 增强版：此字段不生效，默认为null。
+ * @method string getDeviceInfoTag() 获取<p>plus版：描述当前请求所在设备的风险标签。</p><ul><li>详情如下：<br>01-设备疑似被Root/设备疑似越狱。<br>02-设备疑似被注入。<br>03-设备疑似为模拟器。<br>04-设备疑似存在风险操作。<br>05-摄像头疑似被劫持。<br>06-疑似黑产设备。<br>null-无设备风险。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceInfoTag(string $DeviceInfoTag) 设置plus版：描述当前请求所在设备的风险标签。
-- 详情如下：
-06-疑似黑产设备。
-null-无设备风险。
-- 增强版：此字段不生效，默认为null。
+ * @method void setDeviceInfoTag(string $DeviceInfoTag) 设置<p>plus版：描述当前请求所在设备的风险标签。</p><ul><li>详情如下：<br>01-设备疑似被Root/设备疑似越狱。<br>02-设备疑似被注入。<br>03-设备疑似为模拟器。<br>04-设备疑似存在风险操作。<br>05-摄像头疑似被劫持。<br>06-疑似黑产设备。<br>null-无设备风险。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRiskInfoTag() 获取行为风险标签。
-- 仅错误码返回1007（设备疑似被劫持）时返回风险标签。
-- 标签说明：
-02：攻击风险
+ * @method string getRiskInfoTag() 获取<p>行为风险标签。</p><ul><li>仅错误码返回1007（设备疑似被劫持）时返回风险标签。</li><li>标签说明：<br>02：攻击风险</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskInfoTag(string $RiskInfoTag) 设置行为风险标签。
-- 仅错误码返回1007（设备疑似被劫持）时返回风险标签。
-- 标签说明：
-02：攻击风险
+ * @method void setRiskInfoTag(string $RiskInfoTag) 设置<p>行为风险标签。</p><ul><li>仅错误码返回1007（设备疑似被劫持）时返回风险标签。</li><li>标签说明：<br>02：攻击风险</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLivenessInfoTag() 获取plus版：描述当前请求活体阶段被拒绝的详细原因。
-- 详情如下：
-01-用户全程闭眼。
-02-用户未完成指定动作。
-03-疑似翻拍攻击。
-04-疑似合成图片。
-05-疑似合成视频。
-06-疑似合成动作。
-07-疑似黑产模板。
-08-疑似存在水印。
-09-反光校验未通过。
-10-最佳帧校验未通过。
-11-人脸质量过差。
-12-人脸距离不匹配。
-13-疑似对抗样本攻击。
-null-无。
-- 增强版：此字段不生效，默认为null。
+ * @method string getLivenessInfoTag() 获取<p>plus版：描述当前请求活体阶段被拒绝的详细原因。</p><ul><li>详情如下：<br>01-用户全程闭眼。<br>02-用户未完成指定动作。<br>03-疑似翻拍攻击。<br>04-疑似合成图片。<br>05-疑似合成视频。<br>06-疑似合成动作。<br>07-疑似黑产模板。<br>08-疑似存在水印。<br>09-反光校验未通过。<br>10-最佳帧校验未通过。<br>11-人脸质量过差。<br>12-人脸距离不匹配。<br>13-疑似对抗样本攻击。<br>null-无。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLivenessInfoTag(string $LivenessInfoTag) 设置plus版：描述当前请求活体阶段被拒绝的详细原因。
-- 详情如下：
-01-用户全程闭眼。
-02-用户未完成指定动作。
-03-疑似翻拍攻击。
-04-疑似合成图片。
-05-疑似合成视频。
-06-疑似合成动作。
-07-疑似黑产模板。
-08-疑似存在水印。
-09-反光校验未通过。
-10-最佳帧校验未通过。
-11-人脸质量过差。
-12-人脸距离不匹配。
-13-疑似对抗样本攻击。
-null-无。
-- 增强版：此字段不生效，默认为null。
+ * @method void setLivenessInfoTag(string $LivenessInfoTag) 设置<p>plus版：描述当前请求活体阶段被拒绝的详细原因。</p><ul><li>详情如下：<br>01-用户全程闭眼。<br>02-用户未完成指定动作。<br>03-疑似翻拍攻击。<br>04-疑似合成图片。<br>05-疑似合成视频。<br>06-疑似合成动作。<br>07-疑似黑产模板。<br>08-疑似存在水印。<br>09-反光校验未通过。<br>10-最佳帧校验未通过。<br>11-人脸质量过差。<br>12-人脸距离不匹配。<br>13-疑似对抗样本攻击。<br>null-无。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeviceInfoLevel() 获取plus版：描述当前请求所在设备的风险等级，共4级。
-- 详情如下：
-1 - 安全。
-2 - 低风险。
-3 - 中风险。
-4 - 高危。
-null - 未获取到风险等级。
-- 增强版：此字段不生效，默认为null。
+ * @method string getDeviceInfoLevel() 获取<p>plus版：描述当前请求所在设备的风险等级，共4级。</p><ul><li>详情如下：<br>1 - 安全。<br>2 - 低风险。<br>3 - 中风险。<br>4 - 高危。<br>null - 未获取到风险等级。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceInfoLevel(string $DeviceInfoLevel) 设置plus版：描述当前请求所在设备的风险等级，共4级。
-- 详情如下：
-1 - 安全。
-2 - 低风险。
-3 - 中风险。
-4 - 高危。
-null - 未获取到风险等级。
-- 增强版：此字段不生效，默认为null。
+ * @method void setDeviceInfoLevel(string $DeviceInfoLevel) 设置<p>plus版：描述当前请求所在设备的风险等级，共4级。</p><ul><li>详情如下：<br>1 - 安全。<br>2 - 低风险。<br>3 - 中风险。<br>4 - 高危。<br>null - 未获取到风险等级。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Encryption getEncryption() 获取敏感数据加密信息。
+ * @method Encryption getEncryption() 获取<p>敏感数据加密信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。
+ * @method void setEncryption(Encryption $Encryption) 设置<p>敏感数据加密信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEncryptedBody() 获取加密后的数据。
+ * @method string getEncryptedBody() 获取<p>加密后的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEncryptedBody(string $EncryptedBody) 设置加密后的数据。
+ * @method void setEncryptedBody(string $EncryptedBody) 设置<p>加密后的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIdCardFrontBase64() 获取<p>用户核验的身份证人像页base64</p>
+ * @method void setIdCardFrontBase64(string $IdCardFrontBase64) 设置<p>用户核验的身份证人像页base64</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetFaceIdResultResponse extends AbstractModel
 {
     /**
-     * @var string 身份证。
+     * @var string <p>身份证。</p>
      */
     public $IdCard;
 
     /**
-     * @var string 姓名。
+     * @var string <p>姓名。</p>
      */
     public $Name;
 
     /**
-     * @var string 业务核验结果。
-- 参考：https://cloud.tencent.com/document/product/1007/47912。
+     * @var string <p>业务核验结果。</p><ul><li>参考：https://cloud.tencent.com/document/product/1007/47912。</li></ul>
      */
     public $Result;
 
     /**
-     * @var string 业务核验描述。
+     * @var string <p>业务核验描述。</p>
      */
     public $Description;
 
     /**
-     * @var float 相似度。
-- 取值：0-100。
-- 数值越大相似度越高。
+     * @var float <p>相似度。</p><ul><li>取值：0-100。</li><li>数值越大相似度越高。</li></ul>
      */
     public $Similarity;
 
     /**
-     * @var string 用户核验的视频base64。
-- 如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * @var string <p>用户核验的视频base64。</p><ul><li>如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoBase64;
 
     /**
-     * @var string 用户核验视频的截帧base64。
-- 如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * @var string <p>用户核验视频的截帧base64。</p><ul><li>如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BestFrameBase64;
 
     /**
-     * @var string 获取token时透传的信息。
+     * @var string <p>获取token时透传的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
 
     /**
-     * @var string plus版：描述当前请求所在设备的风险标签。
-- 详情如下：
-06-疑似黑产设备。
-null-无设备风险。
-- 增强版：此字段不生效，默认为null。
+     * @var string <p>plus版：描述当前请求所在设备的风险标签。</p><ul><li>详情如下：<br>01-设备疑似被Root/设备疑似越狱。<br>02-设备疑似被注入。<br>03-设备疑似为模拟器。<br>04-设备疑似存在风险操作。<br>05-摄像头疑似被劫持。<br>06-疑似黑产设备。<br>null-无设备风险。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceInfoTag;
 
     /**
-     * @var string 行为风险标签。
-- 仅错误码返回1007（设备疑似被劫持）时返回风险标签。
-- 标签说明：
-02：攻击风险
+     * @var string <p>行为风险标签。</p><ul><li>仅错误码返回1007（设备疑似被劫持）时返回风险标签。</li><li>标签说明：<br>02：攻击风险</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskInfoTag;
 
     /**
-     * @var string plus版：描述当前请求活体阶段被拒绝的详细原因。
-- 详情如下：
-01-用户全程闭眼。
-02-用户未完成指定动作。
-03-疑似翻拍攻击。
-04-疑似合成图片。
-05-疑似合成视频。
-06-疑似合成动作。
-07-疑似黑产模板。
-08-疑似存在水印。
-09-反光校验未通过。
-10-最佳帧校验未通过。
-11-人脸质量过差。
-12-人脸距离不匹配。
-13-疑似对抗样本攻击。
-null-无。
-- 增强版：此字段不生效，默认为null。
+     * @var string <p>plus版：描述当前请求活体阶段被拒绝的详细原因。</p><ul><li>详情如下：<br>01-用户全程闭眼。<br>02-用户未完成指定动作。<br>03-疑似翻拍攻击。<br>04-疑似合成图片。<br>05-疑似合成视频。<br>06-疑似合成动作。<br>07-疑似黑产模板。<br>08-疑似存在水印。<br>09-反光校验未通过。<br>10-最佳帧校验未通过。<br>11-人脸质量过差。<br>12-人脸距离不匹配。<br>13-疑似对抗样本攻击。<br>null-无。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivenessInfoTag;
 
     /**
-     * @var string plus版：描述当前请求所在设备的风险等级，共4级。
-- 详情如下：
-1 - 安全。
-2 - 低风险。
-3 - 中风险。
-4 - 高危。
-null - 未获取到风险等级。
-- 增强版：此字段不生效，默认为null。
+     * @var string <p>plus版：描述当前请求所在设备的风险等级，共4级。</p><ul><li>详情如下：<br>1 - 安全。<br>2 - 低风险。<br>3 - 中风险。<br>4 - 高危。<br>null - 未获取到风险等级。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceInfoLevel;
 
     /**
-     * @var Encryption 敏感数据加密信息。
+     * @var Encryption <p>敏感数据加密信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Encryption;
 
     /**
-     * @var string 加密后的数据。
+     * @var string <p>加密后的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptedBody;
+
+    /**
+     * @var string <p>用户核验的身份证人像页base64</p>
+     */
+    public $IdCardFrontBase64;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -261,64 +163,30 @@ null - 未获取到风险等级。
     public $RequestId;
 
     /**
-     * @param string $IdCard 身份证。
-     * @param string $Name 姓名。
-     * @param string $Result 业务核验结果。
-- 参考：https://cloud.tencent.com/document/product/1007/47912。
-     * @param string $Description 业务核验描述。
-     * @param float $Similarity 相似度。
-- 取值：0-100。
-- 数值越大相似度越高。
-     * @param string $VideoBase64 用户核验的视频base64。
-- 如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * @param string $IdCard <p>身份证。</p>
+     * @param string $Name <p>姓名。</p>
+     * @param string $Result <p>业务核验结果。</p><ul><li>参考：https://cloud.tencent.com/document/product/1007/47912。</li></ul>
+     * @param string $Description <p>业务核验描述。</p>
+     * @param float $Similarity <p>相似度。</p><ul><li>取值：0-100。</li><li>数值越大相似度越高。</li></ul>
+     * @param string $VideoBase64 <p>用户核验的视频base64。</p><ul><li>如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BestFrameBase64 用户核验视频的截帧base64。
-- 如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * @param string $BestFrameBase64 <p>用户核验视频的截帧base64。</p><ul><li>如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Extra 获取token时透传的信息。
+     * @param string $Extra <p>获取token时透传的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeviceInfoTag plus版：描述当前请求所在设备的风险标签。
-- 详情如下：
-06-疑似黑产设备。
-null-无设备风险。
-- 增强版：此字段不生效，默认为null。
+     * @param string $DeviceInfoTag <p>plus版：描述当前请求所在设备的风险标签。</p><ul><li>详情如下：<br>01-设备疑似被Root/设备疑似越狱。<br>02-设备疑似被注入。<br>03-设备疑似为模拟器。<br>04-设备疑似存在风险操作。<br>05-摄像头疑似被劫持。<br>06-疑似黑产设备。<br>null-无设备风险。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RiskInfoTag 行为风险标签。
-- 仅错误码返回1007（设备疑似被劫持）时返回风险标签。
-- 标签说明：
-02：攻击风险
+     * @param string $RiskInfoTag <p>行为风险标签。</p><ul><li>仅错误码返回1007（设备疑似被劫持）时返回风险标签。</li><li>标签说明：<br>02：攻击风险</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LivenessInfoTag plus版：描述当前请求活体阶段被拒绝的详细原因。
-- 详情如下：
-01-用户全程闭眼。
-02-用户未完成指定动作。
-03-疑似翻拍攻击。
-04-疑似合成图片。
-05-疑似合成视频。
-06-疑似合成动作。
-07-疑似黑产模板。
-08-疑似存在水印。
-09-反光校验未通过。
-10-最佳帧校验未通过。
-11-人脸质量过差。
-12-人脸距离不匹配。
-13-疑似对抗样本攻击。
-null-无。
-- 增强版：此字段不生效，默认为null。
+     * @param string $LivenessInfoTag <p>plus版：描述当前请求活体阶段被拒绝的详细原因。</p><ul><li>详情如下：<br>01-用户全程闭眼。<br>02-用户未完成指定动作。<br>03-疑似翻拍攻击。<br>04-疑似合成图片。<br>05-疑似合成视频。<br>06-疑似合成动作。<br>07-疑似黑产模板。<br>08-疑似存在水印。<br>09-反光校验未通过。<br>10-最佳帧校验未通过。<br>11-人脸质量过差。<br>12-人脸距离不匹配。<br>13-疑似对抗样本攻击。<br>null-无。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeviceInfoLevel plus版：描述当前请求所在设备的风险等级，共4级。
-- 详情如下：
-1 - 安全。
-2 - 低风险。
-3 - 中风险。
-4 - 高危。
-null - 未获取到风险等级。
-- 增强版：此字段不生效，默认为null。
+     * @param string $DeviceInfoLevel <p>plus版：描述当前请求所在设备的风险等级，共4级。</p><ul><li>详情如下：<br>1 - 安全。<br>2 - 低风险。<br>3 - 中风险。<br>4 - 高危。<br>null - 未获取到风险等级。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Encryption $Encryption 敏感数据加密信息。
+     * @param Encryption $Encryption <p>敏感数据加密信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EncryptedBody 加密后的数据。
+     * @param string $EncryptedBody <p>加密后的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IdCardFrontBase64 <p>用户核验的身份证人像页base64</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -389,6 +257,10 @@ null - 未获取到风险等级。
 
         if (array_key_exists("EncryptedBody",$param) and $param["EncryptedBody"] !== null) {
             $this->EncryptedBody = $param["EncryptedBody"];
+        }
+
+        if (array_key_exists("IdCardFrontBase64",$param) and $param["IdCardFrontBase64"] !== null) {
+            $this->IdCardFrontBase64 = $param["IdCardFrontBase64"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

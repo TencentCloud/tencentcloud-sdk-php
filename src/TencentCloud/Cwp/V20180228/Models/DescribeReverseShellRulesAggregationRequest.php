@@ -20,54 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReverseShellRulesAggregation请求参数结构体
  *
- * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method array getFilters() 获取过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
- * @method void setFilters(array $Filters) 设置过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
- * @method string getBy() 获取排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序
- * @method void setBy(string $By) 设置排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序
- * @method string getOrder() 获取排序升序还是倒序，DESC有ASC、
- * @method void setOrder(string $Order) 设置排序升序还是倒序，DESC有ASC、
+ * @method integer getLimit() 获取<p>返回数量，默认为10，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为10，最大值为100。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method array getFilters() 获取<p>过滤条件。</p><li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。</p><li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
+ * @method string getBy() 获取<p>排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序</p>
+ * @method void setBy(string $By) 设置<p>排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序</p>
+ * @method string getOrder() 获取<p>排序升序还是倒序，DESC有ASC、</p>
+ * @method void setOrder(string $Order) 设置<p>排序升序还是倒序，DESC有ASC、</p>
  */
 class DescribeReverseShellRulesAggregationRequest extends AbstractModel
 {
     /**
-     * @var integer 返回数量，默认为10，最大值为100。
+     * @var integer <p>返回数量，默认为10，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var array 过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
+     * @var array <p>过滤条件。</p><li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
      */
     public $Filters;
 
     /**
-     * @var string 排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序
+     * @var string <p>排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序</p>
      */
     public $By;
 
     /**
-     * @var string 排序升序还是倒序，DESC有ASC、
+     * @var string <p>排序升序还是倒序，DESC有ASC、</p>
      */
     public $Order;
 
     /**
-     * @param integer $Limit 返回数量，默认为10，最大值为100。
-     * @param integer $Offset 偏移量，默认为0。
-     * @param array $Filters 过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
-     * @param string $By 排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序
-     * @param string $Order 排序升序还是倒序，DESC有ASC、
+     * @param integer $Limit <p>返回数量，默认为10，最大值为100。</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param array $Filters <p>过滤条件。</p><li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
+     * @param string $By <p>排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序</p>
+     * @param string $Order <p>排序升序还是倒序，DESC有ASC、</p>
      */
     function __construct()
     {

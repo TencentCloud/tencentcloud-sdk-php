@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMarkEssayAgentJob请求参数结构体
  *
- * @method string getJobId() 获取任务唯一ID。由服务端生成。
- * @method void setJobId(string $JobId) 设置任务唯一ID。由服务端生成。
+ * @method string getJobId() 获取<p>任务唯一ID。由服务端生成。</p>
+ * @method void setJobId(string $JobId) 设置<p>任务唯一ID。由服务端生成。</p>
  */
 class DescribeMarkEssayAgentJobRequest extends AbstractModel
 {
     /**
-     * @var string 任务唯一ID。由服务端生成。
+     * @var string <p>任务唯一ID。由服务端生成。</p>
      */
     public $JobId;
 
     /**
-     * @param string $JobId 任务唯一ID。由服务端生成。
+     * @param string $JobId <p>任务唯一ID。由服务端生成。</p>
      */
     function __construct()
     {

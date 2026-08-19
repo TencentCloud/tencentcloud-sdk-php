@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFaceIdToken返回参数结构体
  *
- * @method string getFaceIdToken() 获取token值。- 有效期 10分钟。- 只能完成1次核身。
- * @method void setFaceIdToken(string $FaceIdToken) 设置token值。- 有效期 10分钟。- 只能完成1次核身。
+ * @method string getFaceIdToken() 获取<p>token值。- 有效期 10分钟。- 只能完成1次核身。</p>
+ * @method void setFaceIdToken(string $FaceIdToken) 设置<p>token值。- 有效期 10分钟。- 只能完成1次核身。</p>
+ * @method string getClientConfig() 获取<p>客户端配置信息，SDK将使用该配置进行后续操作。请将返回值原样传递给客户端SDK。</p>
+ * @method void setClientConfig(string $ClientConfig) 设置<p>客户端配置信息，SDK将使用该配置进行后续操作。请将返回值原样传递给客户端SDK。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetFaceIdTokenResponse extends AbstractModel
 {
     /**
-     * @var string token值。- 有效期 10分钟。- 只能完成1次核身。
+     * @var string <p>token值。- 有效期 10分钟。- 只能完成1次核身。</p>
      */
     public $FaceIdToken;
+
+    /**
+     * @var string <p>客户端配置信息，SDK将使用该配置进行后续操作。请将返回值原样传递给客户端SDK。</p>
+     */
+    public $ClientConfig;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class GetFaceIdTokenResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FaceIdToken token值。- 有效期 10分钟。- 只能完成1次核身。
+     * @param string $FaceIdToken <p>token值。- 有效期 10分钟。- 只能完成1次核身。</p>
+     * @param string $ClientConfig <p>客户端配置信息，SDK将使用该配置进行后续操作。请将返回值原样传递给客户端SDK。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class GetFaceIdTokenResponse extends AbstractModel
         }
         if (array_key_exists("FaceIdToken",$param) and $param["FaceIdToken"] !== null) {
             $this->FaceIdToken = $param["FaceIdToken"];
+        }
+
+        if (array_key_exists("ClientConfig",$param) and $param["ClientConfig"] !== null) {
+            $this->ClientConfig = $param["ClientConfig"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

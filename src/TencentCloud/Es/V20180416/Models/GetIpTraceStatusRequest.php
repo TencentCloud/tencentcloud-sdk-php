@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetIpTraceStatus请求参数结构体
  *
- * @method string getInstanceId() 获取集群ID
- * @method void setInstanceId(string $InstanceId) 设置集群ID
+ * @method string getInstanceId() 获取<p>集群ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群ID</p>
  */
 class GetIpTraceStatusRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 集群ID
+     * @param string $InstanceId <p>集群ID</p>
      */
     function __construct()
     {

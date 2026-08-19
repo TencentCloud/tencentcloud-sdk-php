@@ -138,6 +138,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsOpenTDE(boolean $IsOpenTDE) 设置<p>是否开启透明加密</p>
  * @method string getRealZone() 获取<p>实例当前所在可用区</p>
  * @method void setRealZone(string $RealZone) 设置<p>实例当前所在可用区</p>
+ * @method string getStorageOverUse() 获取<p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p>
+ * @method void setStorageOverUse(string $StorageOverUse) 设置<p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p>
+ * @method string getStorageAutoExpand() 获取<p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
+ * @method void setStorageAutoExpand(string $StorageAutoExpand) 设置<p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -437,6 +441,16 @@ class CynosdbClusterDetail extends AbstractModel
     public $RealZone;
 
     /**
+     * @var string <p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p>
+     */
+    public $StorageOverUse;
+
+    /**
+     * @var string <p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
+     */
+    public $StorageAutoExpand;
+
+    /**
      * @param string $ClusterId <p>集群ID</p>
      * @param string $ClusterName <p>集群名称</p>
      * @param string $Region <p>地域</p>
@@ -496,6 +510,8 @@ class CynosdbClusterDetail extends AbstractModel
      * @param string $ClusterLevel <p>集群级别。例如 P0, P1</p>
      * @param boolean $IsOpenTDE <p>是否开启透明加密</p>
      * @param string $RealZone <p>实例当前所在可用区</p>
+     * @param string $StorageOverUse <p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p>
+     * @param string $StorageAutoExpand <p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
      */
     function __construct()
     {
@@ -775,6 +791,14 @@ class CynosdbClusterDetail extends AbstractModel
 
         if (array_key_exists("RealZone",$param) and $param["RealZone"] !== null) {
             $this->RealZone = $param["RealZone"];
+        }
+
+        if (array_key_exists("StorageOverUse",$param) and $param["StorageOverUse"] !== null) {
+            $this->StorageOverUse = $param["StorageOverUse"];
+        }
+
+        if (array_key_exists("StorageAutoExpand",$param) and $param["StorageAutoExpand"] !== null) {
+            $this->StorageAutoExpand = $param["StorageAutoExpand"];
         }
     }
 }

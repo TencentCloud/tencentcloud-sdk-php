@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChatCompletion返回参数结构体
  *
- * @method string getModel() 获取对话的模型服务组ID
- * @method void setModel(string $Model) 设置对话的模型服务组ID
- * @method array getChoices() 获取本次问答的答案。
- * @method void setChoices(array $Choices) 设置本次问答的答案。
- * @method string getId() 获取会话Id。
- * @method void setId(string $Id) 设置会话Id。
- * @method Usage getUsage() 获取token统计
- * @method void setUsage(Usage $Usage) 设置token统计
+ * @method string getModel() 获取<p>对话的模型服务组ID</p>
+ * @method void setModel(string $Model) 设置<p>对话的模型服务组ID</p>
+ * @method array getChoices() 获取<p>本次问答的答案。</p>
+ * @method void setChoices(array $Choices) 设置<p>本次问答的答案。</p>
+ * @method string getId() 获取<p>会话Id。</p>
+ * @method void setId(string $Id) 设置<p>会话Id。</p>
+ * @method Usage getUsage() 获取<p>token统计</p>
+ * @method void setUsage(Usage $Usage) 设置<p>token统计</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ChatCompletionResponse extends AbstractModel
 {
     /**
-     * @var string 对话的模型服务组ID
+     * @var string <p>对话的模型服务组ID</p>
      */
     public $Model;
 
     /**
-     * @var array 本次问答的答案。
+     * @var array <p>本次问答的答案。</p>
      */
     public $Choices;
 
     /**
-     * @var string 会话Id。
+     * @var string <p>会话Id。</p>
      */
     public $Id;
 
     /**
-     * @var Usage token统计
+     * @var Usage <p>token统计</p>
      */
     public $Usage;
 
@@ -59,10 +59,10 @@ class ChatCompletionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Model 对话的模型服务组ID
-     * @param array $Choices 本次问答的答案。
-     * @param string $Id 会话Id。
-     * @param Usage $Usage token统计
+     * @param string $Model <p>对话的模型服务组ID</p>
+     * @param array $Choices <p>本次问答的答案。</p>
+     * @param string $Id <p>会话Id。</p>
+     * @param Usage $Usage <p>token统计</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

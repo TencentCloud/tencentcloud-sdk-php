@@ -20,186 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetectAuth请求参数结构体
  *
- * @method string getRuleId() 获取业务流程ID。
-- 用于细分客户使用场景, 可为业务配置不同的业务流程。
-- 申请开通服务后，登录腾讯云[慧眼人脸核身控制](https://console.cloud.tencent.com/faceid)进行创建，审核通过后即可调用。
-- 如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
- * @method void setRuleId(string $RuleId) 设置业务流程ID。
-- 用于细分客户使用场景, 可为业务配置不同的业务流程。
-- 申请开通服务后，登录腾讯云[慧眼人脸核身控制](https://console.cloud.tencent.com/faceid)进行创建，审核通过后即可调用。
-- 如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
- * @method string getTerminalType() 获取本接口不需要传递此参数。
- * @method void setTerminalType(string $TerminalType) 设置本接口不需要传递此参数。
- * @method string getIdCard() 获取验证人的身份证号码。
-- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
-
- * @method void setIdCard(string $IdCard) 设置验证人的身份证号码。
-- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
-
- * @method string getName() 获取验证人的姓名。
-- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
-- 最长长度32位。中文请使用UTF-8编码。
- * @method void setName(string $Name) 设置验证人的姓名。
-- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
-- 最长长度32位。中文请使用UTF-8编码。
- * @method string getRedirectUrl() 获取认证结束后重定向的回调链接地址，仅微信H5场景使用。
-- 最长长度1024位。
-- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
-
- * @method void setRedirectUrl(string $RedirectUrl) 设置认证结束后重定向的回调链接地址，仅微信H5场景使用。
-- 最长长度1024位。
-- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
-
- * @method string getExtra() 获取透传字段，在获取验证结果时返回。
-- 最长长度1024位。
- * @method void setExtra(string $Extra) 设置透传字段，在获取验证结果时返回。
-- 最长长度1024位。
- * @method string getImageBase64() 获取用于人脸比对的图像数据，使用base64编码。
-- Base64编码后的图片数据大小不超过3M。
-- 仅支持jpg、png格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
- * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的图像数据，使用base64编码。
-- Base64编码后的图片数据大小不超过3M。
-- 仅支持jpg、png格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
- * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method string getIntentionVerifyText() 获取意愿核身（朗读模式）使用的文案。
-- 若未使用意愿核身（朗读模式），则该字段无需传入。
-- 最长可接受120的字符串长度。
- * @method void setIntentionVerifyText(string $IntentionVerifyText) 设置意愿核身（朗读模式）使用的文案。
-- 若未使用意愿核身（朗读模式），则该字段无需传入。
-- 最长可接受120的字符串长度。
- * @method array getIntentionQuestions() 获取意愿核身（语音播报+语音回答模式）使用的文案。
-- 包括：系统语音播报的文本、需要核验的标准文本。
-- 问答模式支持1-10轮（不超过10轮）的意愿确认。
- * @method void setIntentionQuestions(array $IntentionQuestions) 设置意愿核身（语音播报+语音回答模式）使用的文案。
-- 包括：系统语音播报的文本、需要核验的标准文本。
-- 问答模式支持1-10轮（不超过10轮）的意愿确认。
- * @method array getIntentionActions() 获取意愿核身（点头确认模式）使用的文案。
-- 若未使用意愿核身（点头确认模式），则该字段无需传入。
-- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
- * @method void setIntentionActions(array $IntentionActions) 设置意愿核身（点头确认模式）使用的文案。
-- 若未使用意愿核身（点头确认模式），则该字段无需传入。
-- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
- * @method RuleIdConfig getConfig() 获取意愿核身流程配置。
- * @method void setConfig(RuleIdConfig $Config) 设置意愿核身流程配置。
+ * @method string getRuleId() 获取<p>业务流程ID。</p><ul><li>用于细分客户使用场景, 可为业务配置不同的业务流程。</li><li>申请开通服务后，登录腾讯云<a href="https://console.cloud.tencent.com/faceid">慧眼人脸核身控制</a>进行创建，审核通过后即可调用。</li><li>如有疑问，请添加<a href="https://cloud.tencent.com/document/product/1007/56130">腾讯云人脸核身小助手</a>进行咨询。</li></ul>
+ * @method void setRuleId(string $RuleId) 设置<p>业务流程ID。</p><ul><li>用于细分客户使用场景, 可为业务配置不同的业务流程。</li><li>申请开通服务后，登录腾讯云<a href="https://console.cloud.tencent.com/faceid">慧眼人脸核身控制</a>进行创建，审核通过后即可调用。</li><li>如有疑问，请添加<a href="https://cloud.tencent.com/document/product/1007/56130">腾讯云人脸核身小助手</a>进行咨询。</li></ul>
+ * @method string getTerminalType() 获取<p>本接口不需要传递此参数。</p>
+ * @method void setTerminalType(string $TerminalType) 设置<p>本接口不需要传递此参数。</p>
+ * @method string getIdCard() 获取<p>验证人的身份证号码。</p><ul><li>调用 detectAuth 时，该字段是否必传，以在<a href="https://console.cloud.tencent.com/faceid/access">控制台</a>申请 ruleId 时的配置提示为准，具体必填字段请参阅控制台界面。</li><li>若身份证号包含字母，该字母必须为大写 X，小写 x 将无法通过校验。</li></ul>
+ * @method void setIdCard(string $IdCard) 设置<p>验证人的身份证号码。</p><ul><li>调用 detectAuth 时，该字段是否必传，以在<a href="https://console.cloud.tencent.com/faceid/access">控制台</a>申请 ruleId 时的配置提示为准，具体必填字段请参阅控制台界面。</li><li>若身份证号包含字母，该字母必须为大写 X，小写 x 将无法通过校验。</li></ul>
+ * @method string getName() 获取<p>验证人的姓名。</p><ul><li>调用 detectAuth 时，该字段是否必传，以在<a href="https://console.cloud.tencent.com/faceid/access">控制台</a>申请 ruleId 时的配置提示为准，具体必填字段请参阅控制台界面。</li><li>最长长度32位。中文请使用UTF-8编码。</li></ul>
+ * @method void setName(string $Name) 设置<p>验证人的姓名。</p><ul><li>调用 detectAuth 时，该字段是否必传，以在<a href="https://console.cloud.tencent.com/faceid/access">控制台</a>申请 ruleId 时的配置提示为准，具体必填字段请参阅控制台界面。</li><li>最长长度32位。中文请使用UTF-8编码。</li></ul>
+ * @method string getRedirectUrl() 获取<p>认证结束后重定向的回调链接地址，仅微信H5场景使用。</p><ul><li>最长长度1024位。</li><li>默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav</li></ul>
+ * @method void setRedirectUrl(string $RedirectUrl) 设置<p>认证结束后重定向的回调链接地址，仅微信H5场景使用。</p><ul><li>最长长度1024位。</li><li>默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav</li></ul>
+ * @method string getExtra() 获取<p>透传字段，在获取验证结果时返回。</p><ul><li>最长长度1024位。</li></ul>
+ * @method void setExtra(string $Extra) 设置<p>透传字段，在获取验证结果时返回。</p><ul><li>最长长度1024位。</li></ul>
+ * @method string getImageBase64() 获取<p>用于人脸比对的图像数据，使用base64编码。</p><ul><li>Base64编码后的图片数据大小不超过3M。</li><li>仅支持jpg、png格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li></ul>
+ * @method void setImageBase64(string $ImageBase64) 设置<p>用于人脸比对的图像数据，使用base64编码。</p><ul><li>Base64编码后的图片数据大小不超过3M。</li><li>仅支持jpg、png格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li></ul>
+ * @method Encryption getEncryption() 获取<p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
+ * @method void setEncryption(Encryption $Encryption) 设置<p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
+ * @method string getIntentionVerifyText() 获取<p>意愿核身（朗读模式）使用的文案。</p><ul><li>若未使用意愿核身（朗读模式），则该字段无需传入。</li><li>最长可接受120的字符串长度。</li></ul>
+ * @method void setIntentionVerifyText(string $IntentionVerifyText) 设置<p>意愿核身（朗读模式）使用的文案。</p><ul><li>若未使用意愿核身（朗读模式），则该字段无需传入。</li><li>最长可接受120的字符串长度。</li></ul>
+ * @method array getIntentionQuestions() 获取<p>意愿核身（语音播报+语音回答模式）使用的文案。</p><ul><li>包括：系统语音播报的文本、需要核验的标准文本。</li><li>问答模式支持1-10轮（不超过10轮）的意愿确认。</li></ul>
+ * @method void setIntentionQuestions(array $IntentionQuestions) 设置<p>意愿核身（语音播报+语音回答模式）使用的文案。</p><ul><li>包括：系统语音播报的文本、需要核验的标准文本。</li><li>问答模式支持1-10轮（不超过10轮）的意愿确认。</li></ul>
+ * @method array getIntentionActions() 获取<p>意愿核身（点头确认模式）使用的文案。</p><ul><li>若未使用意愿核身（点头确认模式），则该字段无需传入。</li><li>点头确认模式支持1-10轮（不超过10轮）的意愿确认。</li></ul>
+ * @method void setIntentionActions(array $IntentionActions) 设置<p>意愿核身（点头确认模式）使用的文案。</p><ul><li>若未使用意愿核身（点头确认模式），则该字段无需传入。</li><li>点头确认模式支持1-10轮（不超过10轮）的意愿确认。</li></ul>
+ * @method RuleIdConfig getConfig() 获取<p>意愿核身流程配置。</p>
+ * @method void setConfig(RuleIdConfig $Config) 设置<p>意愿核身流程配置。</p>
  */
 class DetectAuthRequest extends AbstractModel
 {
     /**
-     * @var string 业务流程ID。
-- 用于细分客户使用场景, 可为业务配置不同的业务流程。
-- 申请开通服务后，登录腾讯云[慧眼人脸核身控制](https://console.cloud.tencent.com/faceid)进行创建，审核通过后即可调用。
-- 如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
+     * @var string <p>业务流程ID。</p><ul><li>用于细分客户使用场景, 可为业务配置不同的业务流程。</li><li>申请开通服务后，登录腾讯云<a href="https://console.cloud.tencent.com/faceid">慧眼人脸核身控制</a>进行创建，审核通过后即可调用。</li><li>如有疑问，请添加<a href="https://cloud.tencent.com/document/product/1007/56130">腾讯云人脸核身小助手</a>进行咨询。</li></ul>
      */
     public $RuleId;
 
     /**
-     * @var string 本接口不需要传递此参数。
+     * @var string <p>本接口不需要传递此参数。</p>
      */
     public $TerminalType;
 
     /**
-     * @var string 验证人的身份证号码。
-- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
-
+     * @var string <p>验证人的身份证号码。</p><ul><li>调用 detectAuth 时，该字段是否必传，以在<a href="https://console.cloud.tencent.com/faceid/access">控制台</a>申请 ruleId 时的配置提示为准，具体必填字段请参阅控制台界面。</li><li>若身份证号包含字母，该字母必须为大写 X，小写 x 将无法通过校验。</li></ul>
      */
     public $IdCard;
 
     /**
-     * @var string 验证人的姓名。
-- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
-- 最长长度32位。中文请使用UTF-8编码。
+     * @var string <p>验证人的姓名。</p><ul><li>调用 detectAuth 时，该字段是否必传，以在<a href="https://console.cloud.tencent.com/faceid/access">控制台</a>申请 ruleId 时的配置提示为准，具体必填字段请参阅控制台界面。</li><li>最长长度32位。中文请使用UTF-8编码。</li></ul>
      */
     public $Name;
 
     /**
-     * @var string 认证结束后重定向的回调链接地址，仅微信H5场景使用。
-- 最长长度1024位。
-- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
-
+     * @var string <p>认证结束后重定向的回调链接地址，仅微信H5场景使用。</p><ul><li>最长长度1024位。</li><li>默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav</li></ul>
      */
     public $RedirectUrl;
 
     /**
-     * @var string 透传字段，在获取验证结果时返回。
-- 最长长度1024位。
+     * @var string <p>透传字段，在获取验证结果时返回。</p><ul><li>最长长度1024位。</li></ul>
      */
     public $Extra;
 
     /**
-     * @var string 用于人脸比对的图像数据，使用base64编码。
-- Base64编码后的图片数据大小不超过3M。
-- 仅支持jpg、png格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * @var string <p>用于人脸比对的图像数据，使用base64编码。</p><ul><li>Base64编码后的图片数据大小不超过3M。</li><li>仅支持jpg、png格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li></ul>
      */
     public $ImageBase64;
 
     /**
-     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @var Encryption <p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
      */
     public $Encryption;
 
     /**
-     * @var string 意愿核身（朗读模式）使用的文案。
-- 若未使用意愿核身（朗读模式），则该字段无需传入。
-- 最长可接受120的字符串长度。
+     * @var string <p>意愿核身（朗读模式）使用的文案。</p><ul><li>若未使用意愿核身（朗读模式），则该字段无需传入。</li><li>最长可接受120的字符串长度。</li></ul>
      */
     public $IntentionVerifyText;
 
     /**
-     * @var array 意愿核身（语音播报+语音回答模式）使用的文案。
-- 包括：系统语音播报的文本、需要核验的标准文本。
-- 问答模式支持1-10轮（不超过10轮）的意愿确认。
+     * @var array <p>意愿核身（语音播报+语音回答模式）使用的文案。</p><ul><li>包括：系统语音播报的文本、需要核验的标准文本。</li><li>问答模式支持1-10轮（不超过10轮）的意愿确认。</li></ul>
      */
     public $IntentionQuestions;
 
     /**
-     * @var array 意愿核身（点头确认模式）使用的文案。
-- 若未使用意愿核身（点头确认模式），则该字段无需传入。
-- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
+     * @var array <p>意愿核身（点头确认模式）使用的文案。</p><ul><li>若未使用意愿核身（点头确认模式），则该字段无需传入。</li><li>点头确认模式支持1-10轮（不超过10轮）的意愿确认。</li></ul>
      */
     public $IntentionActions;
 
     /**
-     * @var RuleIdConfig 意愿核身流程配置。
+     * @var RuleIdConfig <p>意愿核身流程配置。</p>
      */
     public $Config;
 
     /**
-     * @param string $RuleId 业务流程ID。
-- 用于细分客户使用场景, 可为业务配置不同的业务流程。
-- 申请开通服务后，登录腾讯云[慧眼人脸核身控制](https://console.cloud.tencent.com/faceid)进行创建，审核通过后即可调用。
-- 如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
-     * @param string $TerminalType 本接口不需要传递此参数。
-     * @param string $IdCard 验证人的身份证号码。
-- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
-
-     * @param string $Name 验证人的姓名。
-- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
-- 最长长度32位。中文请使用UTF-8编码。
-     * @param string $RedirectUrl 认证结束后重定向的回调链接地址，仅微信H5场景使用。
-- 最长长度1024位。
-- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
-
-     * @param string $Extra 透传字段，在获取验证结果时返回。
-- 最长长度1024位。
-     * @param string $ImageBase64 用于人脸比对的图像数据，使用base64编码。
-- Base64编码后的图片数据大小不超过3M。
-- 仅支持jpg、png格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param string $IntentionVerifyText 意愿核身（朗读模式）使用的文案。
-- 若未使用意愿核身（朗读模式），则该字段无需传入。
-- 最长可接受120的字符串长度。
-     * @param array $IntentionQuestions 意愿核身（语音播报+语音回答模式）使用的文案。
-- 包括：系统语音播报的文本、需要核验的标准文本。
-- 问答模式支持1-10轮（不超过10轮）的意愿确认。
-     * @param array $IntentionActions 意愿核身（点头确认模式）使用的文案。
-- 若未使用意愿核身（点头确认模式），则该字段无需传入。
-- 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
-     * @param RuleIdConfig $Config 意愿核身流程配置。
+     * @param string $RuleId <p>业务流程ID。</p><ul><li>用于细分客户使用场景, 可为业务配置不同的业务流程。</li><li>申请开通服务后，登录腾讯云<a href="https://console.cloud.tencent.com/faceid">慧眼人脸核身控制</a>进行创建，审核通过后即可调用。</li><li>如有疑问，请添加<a href="https://cloud.tencent.com/document/product/1007/56130">腾讯云人脸核身小助手</a>进行咨询。</li></ul>
+     * @param string $TerminalType <p>本接口不需要传递此参数。</p>
+     * @param string $IdCard <p>验证人的身份证号码。</p><ul><li>调用 detectAuth 时，该字段是否必传，以在<a href="https://console.cloud.tencent.com/faceid/access">控制台</a>申请 ruleId 时的配置提示为准，具体必填字段请参阅控制台界面。</li><li>若身份证号包含字母，该字母必须为大写 X，小写 x 将无法通过校验。</li></ul>
+     * @param string $Name <p>验证人的姓名。</p><ul><li>调用 detectAuth 时，该字段是否必传，以在<a href="https://console.cloud.tencent.com/faceid/access">控制台</a>申请 ruleId 时的配置提示为准，具体必填字段请参阅控制台界面。</li><li>最长长度32位。中文请使用UTF-8编码。</li></ul>
+     * @param string $RedirectUrl <p>认证结束后重定向的回调链接地址，仅微信H5场景使用。</p><ul><li>最长长度1024位。</li><li>默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav</li></ul>
+     * @param string $Extra <p>透传字段，在获取验证结果时返回。</p><ul><li>最长长度1024位。</li></ul>
+     * @param string $ImageBase64 <p>用于人脸比对的图像数据，使用base64编码。</p><ul><li>Base64编码后的图片数据大小不超过3M。</li><li>仅支持jpg、png格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li></ul>
+     * @param Encryption $Encryption <p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
+     * @param string $IntentionVerifyText <p>意愿核身（朗读模式）使用的文案。</p><ul><li>若未使用意愿核身（朗读模式），则该字段无需传入。</li><li>最长可接受120的字符串长度。</li></ul>
+     * @param array $IntentionQuestions <p>意愿核身（语音播报+语音回答模式）使用的文案。</p><ul><li>包括：系统语音播报的文本、需要核验的标准文本。</li><li>问答模式支持1-10轮（不超过10轮）的意愿确认。</li></ul>
+     * @param array $IntentionActions <p>意愿核身（点头确认模式）使用的文案。</p><ul><li>若未使用意愿核身（点头确认模式），则该字段无需传入。</li><li>点头确认模式支持1-10轮（不超过10轮）的意愿确认。</li></ul>
+     * @param RuleIdConfig $Config <p>意愿核身流程配置。</p>
      */
     function __construct()
     {

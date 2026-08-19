@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportIpTraceLog返回参数结构体
  *
- * @method array getIpTraceList() 获取IP时间列表
- * @method void setIpTraceList(array $IpTraceList) 设置IP时间列表
+ * @method array getIpTraceList() 获取<p>IP时间列表</p>
+ * @method void setIpTraceList(array $IpTraceList) 设置<p>IP时间列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ExportIpTraceLogResponse extends AbstractModel
 {
     /**
-     * @var array IP时间列表
+     * @var array <p>IP时间列表</p>
      */
     public $IpTraceList;
 
@@ -38,7 +38,7 @@ class ExportIpTraceLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $IpTraceList IP时间列表
+     * @param array $IpTraceList <p>IP时间列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

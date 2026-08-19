@@ -20,28 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetectAuth返回参数结构体
  *
- * @method string getUrl() 获取用于发起核身流程的URL，仅微信H5场景使用。
- * @method void setUrl(string $Url) 设置用于发起核身流程的URL，仅微信H5场景使用。
- * @method string getBizToken() 获取一次核验流程的唯一标识。
-- 有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。
-- 完成人脸核验后，需根据此标识调用[获取实名核身结果信息增强版](https://cloud.tencent.com/document/api/1007/41957)获取用户最终验证结果信息。
- * @method void setBizToken(string $BizToken) 设置一次核验流程的唯一标识。
-- 有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。
-- 完成人脸核验后，需根据此标识调用[获取实名核身结果信息增强版](https://cloud.tencent.com/document/api/1007/41957)获取用户最终验证结果信息。
+ * @method string getUrl() 获取<p>用于发起核身流程的URL，仅微信H5场景使用。</p>
+ * @method void setUrl(string $Url) 设置<p>用于发起核身流程的URL，仅微信H5场景使用。</p>
+ * @method string getBizToken() 获取<p>一次核验流程的唯一标识。</p><ul><li>有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。</li><li>完成人脸核验后，需根据此标识调用<a href="https://cloud.tencent.com/document/api/1007/41957">获取实名核身结果信息增强版</a>获取用户最终验证结果信息。</li></ul>
+ * @method void setBizToken(string $BizToken) 设置<p>一次核验流程的唯一标识。</p><ul><li>有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。</li><li>完成人脸核验后，需根据此标识调用<a href="https://cloud.tencent.com/document/api/1007/41957">获取实名核身结果信息增强版</a>获取用户最终验证结果信息。</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DetectAuthResponse extends AbstractModel
 {
     /**
-     * @var string 用于发起核身流程的URL，仅微信H5场景使用。
+     * @var string <p>用于发起核身流程的URL，仅微信H5场景使用。</p>
      */
     public $Url;
 
     /**
-     * @var string 一次核验流程的唯一标识。
-- 有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。
-- 完成人脸核验后，需根据此标识调用[获取实名核身结果信息增强版](https://cloud.tencent.com/document/api/1007/41957)获取用户最终验证结果信息。
+     * @var string <p>一次核验流程的唯一标识。</p><ul><li>有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。</li><li>完成人脸核验后，需根据此标识调用<a href="https://cloud.tencent.com/document/api/1007/41957">获取实名核身结果信息增强版</a>获取用户最终验证结果信息。</li></ul>
      */
     public $BizToken;
 
@@ -51,10 +45,8 @@ class DetectAuthResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Url 用于发起核身流程的URL，仅微信H5场景使用。
-     * @param string $BizToken 一次核验流程的唯一标识。
-- 有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。
-- 完成人脸核验后，需根据此标识调用[获取实名核身结果信息增强版](https://cloud.tencent.com/document/api/1007/41957)获取用户最终验证结果信息。
+     * @param string $Url <p>用于发起核身流程的URL，仅微信H5场景使用。</p>
+     * @param string $BizToken <p>一次核验流程的唯一标识。</p><ul><li>有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。</li><li>完成人脸核验后，需根据此标识调用<a href="https://cloud.tencent.com/document/api/1007/41957">获取实名核身结果信息增强版</a>获取用户最终验证结果信息。</li></ul>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

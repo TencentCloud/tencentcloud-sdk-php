@@ -60,6 +60,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置<p>无</p>
  * @method CreatingProgress getCreatingProgress() 获取<p>发货进度详情</p>
  * @method void setCreatingProgress(CreatingProgress $CreatingProgress) 设置<p>发货进度详情</p>
+ * @method string getRoleName() 获取<p>实例关联的角色名称</p>
+ * @method void setRoleName(string $RoleName) 设置<p>实例关联的角色名称</p>
+ * @method string getOfflineTime() 获取<p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
+ * @method void setOfflineTime(string $OfflineTime) 设置<p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
+ * @method string getProductName() 获取<p>商业化资源归属</p>
+ * @method void setProductName(string $ProductName) 设置<p>商业化资源归属</p>
  */
 class AgentInstance extends AbstractModel
 {
@@ -164,6 +170,21 @@ class AgentInstance extends AbstractModel
     public $CreatingProgress;
 
     /**
+     * @var string <p>实例关联的角色名称</p>
+     */
+    public $RoleName;
+
+    /**
+     * @var string <p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
+     */
+    public $OfflineTime;
+
+    /**
+     * @var string <p>商业化资源归属</p>
+     */
+    public $ProductName;
+
+    /**
      * @param string $InstanceId <p>智能体实例ID</p>
      * @param string $InstanceName <p>智能体实例名称</p>
      * @param string $AgentId <p>智能体ID</p>
@@ -184,6 +205,9 @@ class AgentInstance extends AbstractModel
      * @param string $LastActiveTime <p>无</p>
      * @param string $Description <p>无</p>
      * @param CreatingProgress $CreatingProgress <p>发货进度详情</p>
+     * @param string $RoleName <p>实例关联的角色名称</p>
+     * @param string $OfflineTime <p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
+     * @param string $ProductName <p>商业化资源归属</p>
      */
     function __construct()
     {
@@ -288,6 +312,18 @@ class AgentInstance extends AbstractModel
         if (array_key_exists("CreatingProgress",$param) and $param["CreatingProgress"] !== null) {
             $this->CreatingProgress = new CreatingProgress();
             $this->CreatingProgress->deserialize($param["CreatingProgress"]);
+        }
+
+        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
+            $this->RoleName = $param["RoleName"];
+        }
+
+        if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
+            $this->OfflineTime = $param["OfflineTime"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
         }
     }
 }

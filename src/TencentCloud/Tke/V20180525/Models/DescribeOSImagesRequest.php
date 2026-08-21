@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOSImages请求参数结构体
  *
-
+ * @method array getFilters() 获取<p>镜像拉取接口增加过滤字段</p>
+ * @method void setFilters(array $Filters) 设置<p>镜像拉取接口增加过滤字段</p>
  */
 class DescribeOSImagesRequest extends AbstractModel
 {
-
+    /**
+     * @var array <p>镜像拉取接口增加过滤字段</p>
+     */
+    public $Filters;
 
     /**
-
+     * @param array $Filters <p>镜像拉取接口增加过滤字段</p>
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class DescribeOSImagesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
     }
 }

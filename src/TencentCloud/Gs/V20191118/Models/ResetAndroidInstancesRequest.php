@@ -20,54 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetAndroidInstances请求参数结构体
  *
- * @method array getAndroidInstanceIds() 获取实例ID列表
- * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置实例ID列表
- * @method string getAndroidInstanceImageId() 获取指定有效的镜像 ID。
-默认取值：默认使用当前镜像。
- * @method void setAndroidInstanceImageId(string $AndroidInstanceImageId) 设置指定有效的镜像 ID。
-默认取值：默认使用当前镜像。
- * @method string getMode() 获取重置模式。在 AndroidInstanceImageId 不为空时才生效。
-
-CleanData：默认选项，清理系统属性和用户数据
-KeepSystemProperties：只保留系统属性
-KeepData: 保留系统属性和用户数据
- * @method void setMode(string $Mode) 设置重置模式。在 AndroidInstanceImageId 不为空时才生效。
-
-CleanData：默认选项，清理系统属性和用户数据
-KeepSystemProperties：只保留系统属性
-KeepData: 保留系统属性和用户数据
+ * @method array getAndroidInstanceIds() 获取<p>实例ID列表</p>
+ * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置<p>实例ID列表</p>
+ * @method string getAndroidInstanceImageId() 获取<p>指定有效的镜像 ID。<br>默认取值：默认使用当前镜像。</p>
+ * @method void setAndroidInstanceImageId(string $AndroidInstanceImageId) 设置<p>指定有效的镜像 ID。<br>默认取值：默认使用当前镜像。</p>
+ * @method string getMode() 获取<p>重置模式。在 AndroidInstanceImageId 不为空时才生效。</p><p>CleanData：默认选项，清理系统属性和用户数据<br>KeepSystemProperties：只保留系统属性<br>KeepData: 保留系统属性和用户数据</p>
+ * @method void setMode(string $Mode) 设置<p>重置模式。在 AndroidInstanceImageId 不为空时才生效。</p><p>CleanData：默认选项，清理系统属性和用户数据<br>KeepSystemProperties：只保留系统属性<br>KeepData: 保留系统属性和用户数据</p>
  */
 class ResetAndroidInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID列表
+     * @var array <p>实例ID列表</p>
      */
     public $AndroidInstanceIds;
 
     /**
-     * @var string 指定有效的镜像 ID。
-默认取值：默认使用当前镜像。
+     * @var string <p>指定有效的镜像 ID。<br>默认取值：默认使用当前镜像。</p>
      */
     public $AndroidInstanceImageId;
 
     /**
-     * @var string 重置模式。在 AndroidInstanceImageId 不为空时才生效。
-
-CleanData：默认选项，清理系统属性和用户数据
-KeepSystemProperties：只保留系统属性
-KeepData: 保留系统属性和用户数据
+     * @var string <p>重置模式。在 AndroidInstanceImageId 不为空时才生效。</p><p>CleanData：默认选项，清理系统属性和用户数据<br>KeepSystemProperties：只保留系统属性<br>KeepData: 保留系统属性和用户数据</p>
      */
     public $Mode;
 
     /**
-     * @param array $AndroidInstanceIds 实例ID列表
-     * @param string $AndroidInstanceImageId 指定有效的镜像 ID。
-默认取值：默认使用当前镜像。
-     * @param string $Mode 重置模式。在 AndroidInstanceImageId 不为空时才生效。
-
-CleanData：默认选项，清理系统属性和用户数据
-KeepSystemProperties：只保留系统属性
-KeepData: 保留系统属性和用户数据
+     * @param array $AndroidInstanceIds <p>实例ID列表</p>
+     * @param string $AndroidInstanceImageId <p>指定有效的镜像 ID。<br>默认取值：默认使用当前镜像。</p>
+     * @param string $Mode <p>重置模式。在 AndroidInstanceImageId 不为空时才生效。</p><p>CleanData：默认选项，清理系统属性和用户数据<br>KeepSystemProperties：只保留系统属性<br>KeepData: 保留系统属性和用户数据</p>
      */
     function __construct()
     {

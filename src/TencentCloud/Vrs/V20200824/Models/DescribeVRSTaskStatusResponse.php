@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVRSTaskStatus返回参数结构体
  *
- * @method DescribeVRSTaskStatusRespData getData() 获取声音复刻任务结果
- * @method void setData(DescribeVRSTaskStatusRespData $Data) 设置声音复刻任务结果
+ * @method DescribeVRSTaskStatusRespData getData() 获取<p>声音复刻任务结果</p>
+ * @method void setData(DescribeVRSTaskStatusRespData $Data) 设置<p>声音复刻任务结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVRSTaskStatusResponse extends AbstractModel
 {
     /**
-     * @var DescribeVRSTaskStatusRespData 声音复刻任务结果
+     * @var DescribeVRSTaskStatusRespData <p>声音复刻任务结果</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeVRSTaskStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DescribeVRSTaskStatusRespData $Data 声音复刻任务结果
+     * @param DescribeVRSTaskStatusRespData $Data <p>声音复刻任务结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

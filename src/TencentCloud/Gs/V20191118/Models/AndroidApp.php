@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安卓应用
  *
- * @method string getAndroidAppId() 获取安卓应用 Id
- * @method void setAndroidAppId(string $AndroidAppId) 设置安卓应用 Id
- * @method string getName() 获取安卓应用名称
- * @method void setName(string $Name) 设置安卓应用名称
- * @method string getState() 获取安卓应用状态（上架、下架）
- * @method void setState(string $State) 设置安卓应用状态（上架、下架）
- * @method array getAndroidAppVersionInfo() 获取安卓应用版本列表
- * @method void setAndroidAppVersionInfo(array $AndroidAppVersionInfo) 设置安卓应用版本列表
- * @method string getCreateTime() 获取安卓应用创建时间
- * @method void setCreateTime(string $CreateTime) 设置安卓应用创建时间
- * @method string getUserId() 获取用户 Id
- * @method void setUserId(string $UserId) 设置用户 Id
- * @method string getAppMode() 获取应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
- * @method void setAppMode(string $AppMode) 设置应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
- * @method string getUpdateState() 获取应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
- * @method void setUpdateState(string $UpdateState) 设置应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
- * @method string getPackageName() 获取安卓应用包名
- * @method void setPackageName(string $PackageName) 设置安卓应用包名
+ * @method string getAndroidAppId() 获取<p>安卓应用 Id</p>
+ * @method void setAndroidAppId(string $AndroidAppId) 设置<p>安卓应用 Id</p>
+ * @method string getName() 获取<p>安卓应用名称</p>
+ * @method void setName(string $Name) 设置<p>安卓应用名称</p>
+ * @method string getState() 获取<p>安卓应用状态（上架、下架）</p>
+ * @method void setState(string $State) 设置<p>安卓应用状态（上架、下架）</p>
+ * @method array getAndroidAppVersionInfo() 获取<p>安卓应用版本列表</p>
+ * @method void setAndroidAppVersionInfo(array $AndroidAppVersionInfo) 设置<p>安卓应用版本列表</p>
+ * @method string getCreateTime() 获取<p>安卓应用创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>安卓应用创建时间</p>
+ * @method string getUserId() 获取<p>用户 Id</p>
+ * @method void setUserId(string $UserId) 设置<p>用户 Id</p>
+ * @method string getAppMode() 获取<p>应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）</p>
+ * @method void setAppMode(string $AppMode) 设置<p>应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）</p>
+ * @method string getUpdateState() 获取<p>应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态</p>
+ * @method void setUpdateState(string $UpdateState) 设置<p>应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态</p>
+ * @method string getPackageName() 获取<p>安卓应用包名</p>
+ * @method void setPackageName(string $PackageName) 设置<p>安卓应用包名</p>
  */
 class AndroidApp extends AbstractModel
 {
     /**
-     * @var string 安卓应用 Id
+     * @var string <p>安卓应用 Id</p>
      */
     public $AndroidAppId;
 
     /**
-     * @var string 安卓应用名称
+     * @var string <p>安卓应用名称</p>
      */
     public $Name;
 
     /**
-     * @var string 安卓应用状态（上架、下架）
+     * @var string <p>安卓应用状态（上架、下架）</p>
      */
     public $State;
 
     /**
-     * @var array 安卓应用版本列表
+     * @var array <p>安卓应用版本列表</p>
      */
     public $AndroidAppVersionInfo;
 
     /**
-     * @var string 安卓应用创建时间
+     * @var string <p>安卓应用创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 用户 Id
+     * @var string <p>用户 Id</p>
      */
     public $UserId;
 
     /**
-     * @var string 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+     * @var string <p>应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）</p>
      */
     public $AppMode;
 
     /**
-     * @var string 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
+     * @var string <p>应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态</p>
      */
     public $UpdateState;
 
     /**
-     * @var string 安卓应用包名
+     * @var string <p>安卓应用包名</p>
      */
     public $PackageName;
 
     /**
-     * @param string $AndroidAppId 安卓应用 Id
-     * @param string $Name 安卓应用名称
-     * @param string $State 安卓应用状态（上架、下架）
-     * @param array $AndroidAppVersionInfo 安卓应用版本列表
-     * @param string $CreateTime 安卓应用创建时间
-     * @param string $UserId 用户 Id
-     * @param string $AppMode 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
-     * @param string $UpdateState 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
-     * @param string $PackageName 安卓应用包名
+     * @param string $AndroidAppId <p>安卓应用 Id</p>
+     * @param string $Name <p>安卓应用名称</p>
+     * @param string $State <p>安卓应用状态（上架、下架）</p>
+     * @param array $AndroidAppVersionInfo <p>安卓应用版本列表</p>
+     * @param string $CreateTime <p>安卓应用创建时间</p>
+     * @param string $UserId <p>用户 Id</p>
+     * @param string $AppMode <p>应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）</p>
+     * @param string $UpdateState <p>应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态</p>
+     * @param string $PackageName <p>安卓应用包名</p>
      */
     function __construct()
     {

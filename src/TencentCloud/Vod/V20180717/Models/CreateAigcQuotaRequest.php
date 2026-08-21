@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) 设置<p><strong>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</strong></p>
  * @method string getQuotaType() 获取<p>配额类型</p><p>枚举值：</p><ul><li>Image： AIGC 生图任务</li><li>Video： AIGC 生视频任务</li><li>Text： AIGC 生文任务</li></ul>
  * @method void setQuotaType(string $QuotaType) 设置<p>配额类型</p><p>枚举值：</p><ul><li>Image： AIGC 生图任务</li><li>Video： AIGC 生视频任务</li><li>Text： AIGC 生文任务</li></ul>
- * @method integer getQuotaLimit() 获取<p>任务的配额数</p><p>单位：- 当QuotaType=Image时，单位为张- 当QuotaType=Video时，单位为秒- 当QuotaType=Text时，单位为token</p>
- * @method void setQuotaLimit(integer $QuotaLimit) 设置<p>任务的配额数</p><p>单位：- 当QuotaType=Image时，单位为张- 当QuotaType=Video时，单位为秒- 当QuotaType=Text时，单位为token</p>
+ * @method integer getQuotaLimit() 获取<p>任务的配额数。</p><p>单位：张/秒/token数。</p><ul><li>当 QuotaType 为 Image 时，单位为张；</li><li>当 QuotaType 为 Video 时，单位为秒；</li><li>当 QuotaType 为 Text 时，单位为 token 数。</li></ul>
+ * @method void setQuotaLimit(integer $QuotaLimit) 设置<p>任务的配额数。</p><p>单位：张/秒/token数。</p><ul><li>当 QuotaType 为 Image 时，单位为张；</li><li>当 QuotaType 为 Video 时，单位为秒；</li><li>当 QuotaType 为 Text 时，单位为 token 数。</li></ul>
  * @method string getApiToken() 获取<p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
  * @method void setApiToken(string $ApiToken) 设置<p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
  */
@@ -42,7 +42,7 @@ class CreateAigcQuotaRequest extends AbstractModel
     public $QuotaType;
 
     /**
-     * @var integer <p>任务的配额数</p><p>单位：- 当QuotaType=Image时，单位为张- 当QuotaType=Video时，单位为秒- 当QuotaType=Text时，单位为token</p>
+     * @var integer <p>任务的配额数。</p><p>单位：张/秒/token数。</p><ul><li>当 QuotaType 为 Image 时，单位为张；</li><li>当 QuotaType 为 Video 时，单位为秒；</li><li>当 QuotaType 为 Text 时，单位为 token 数。</li></ul>
      */
     public $QuotaLimit;
 
@@ -54,7 +54,7 @@ class CreateAigcQuotaRequest extends AbstractModel
     /**
      * @param integer $SubAppId <p><strong>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</strong></p>
      * @param string $QuotaType <p>配额类型</p><p>枚举值：</p><ul><li>Image： AIGC 生图任务</li><li>Video： AIGC 生视频任务</li><li>Text： AIGC 生文任务</li></ul>
-     * @param integer $QuotaLimit <p>任务的配额数</p><p>单位：- 当QuotaType=Image时，单位为张- 当QuotaType=Video时，单位为秒- 当QuotaType=Text时，单位为token</p>
+     * @param integer $QuotaLimit <p>任务的配额数。</p><p>单位：张/秒/token数。</p><ul><li>当 QuotaType 为 Image 时，单位为张；</li><li>当 QuotaType 为 Video 时，单位为秒；</li><li>当 QuotaType 为 Text 时，单位为 token 数。</li></ul>
      * @param string $ApiToken <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
      */
     function __construct()

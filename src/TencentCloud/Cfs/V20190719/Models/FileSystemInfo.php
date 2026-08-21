@@ -20,278 +20,246 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文件系统基本信息
  *
- * @method string getCreationTime() 获取创建时间
- * @method void setCreationTime(string $CreationTime) 设置创建时间
- * @method string getCreationToken() 获取用户自定义名称
- * @method void setCreationToken(string $CreationToken) 设置用户自定义名称
- * @method string getFileSystemId() 获取文件系统 ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- * @method string getLifeCycleState() 获取文件系统状态。取值范围：
-- creating:创建中
-- mounting:挂载中
-- create_failed:创建失败
-- available:可使用
-- unserviced:停服中
-- upgrading:升级中
- * @method void setLifeCycleState(string $LifeCycleState) 设置文件系统状态。取值范围：
-- creating:创建中
-- mounting:挂载中
-- create_failed:创建失败
-- available:可使用
-- unserviced:停服中
-- upgrading:升级中
- * @method integer getSizeByte() 获取文件系统已使用容量。单位：Byte
- * @method void setSizeByte(integer $SizeByte) 设置文件系统已使用容量。单位：Byte
- * @method integer getSizeLimit() 获取文件系统空间限制。单位:GiB
- * @method void setSizeLimit(integer $SizeLimit) 设置文件系统空间限制。单位:GiB
- * @method integer getZoneId() 获取区域 ID
- * @method void setZoneId(integer $ZoneId) 设置区域 ID
- * @method string getZone() 获取区域名称
- * @method void setZone(string $Zone) 设置区域名称
- * @method string getProtocol() 获取文件系统协议类型, 支持 NFS,CIFS,TURBO
- * @method void setProtocol(string $Protocol) 设置文件系统协议类型, 支持 NFS,CIFS,TURBO
- * @method string getStorageType() 获取存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
- * @method void setStorageType(string $StorageType) 设置存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
- * @method string getStorageResourcePkg() 获取文件系统绑定的预付费存储包
- * @method void setStorageResourcePkg(string $StorageResourcePkg) 设置文件系统绑定的预付费存储包
- * @method string getBandwidthResourcePkg() 获取文件系统绑定的预付费带宽包（暂未支持）
- * @method void setBandwidthResourcePkg(string $BandwidthResourcePkg) 设置文件系统绑定的预付费带宽包（暂未支持）
- * @method PGroup getPGroup() 获取文件系统绑定权限组信息
- * @method void setPGroup(PGroup $PGroup) 设置文件系统绑定权限组信息
- * @method string getFsName() 获取用户自定义名称
- * @method void setFsName(string $FsName) 设置用户自定义名称
- * @method boolean getEncrypted() 获取文件系统是否加密,true：代表加密，false：非加密
- * @method void setEncrypted(boolean $Encrypted) 设置文件系统是否加密,true：代表加密，false：非加密
- * @method string getKmsKeyId() 获取加密所使用的密钥，可以为密钥的 ID 或者 ARN
- * @method void setKmsKeyId(string $KmsKeyId) 设置加密所使用的密钥，可以为密钥的 ID 或者 ARN
- * @method integer getAppId() 获取应用ID
- * @method void setAppId(integer $AppId) 设置应用ID
- * @method float getBandwidthLimit() 获取文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
- * @method void setBandwidthLimit(float $BandwidthLimit) 设置文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
- * @method string getAutoSnapshotPolicyId() 获取文件系统关联的快照策略
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置文件系统关联的快照策略
- * @method string getSnapStatus() 获取文件系统处理快照状态,snapping：快照中，normal：正常状态
- * @method void setSnapStatus(string $SnapStatus) 设置文件系统处理快照状态,snapping：快照中，normal：正常状态
- * @method integer getCapacity() 获取文件系统容量规格上限
-单位:GiB
- * @method void setCapacity(integer $Capacity) 设置文件系统容量规格上限
-单位:GiB
- * @method array getTags() 获取文件系统标签列表
- * @method void setTags(array $Tags) 设置文件系统标签列表
- * @method string getTieringState() 获取文件系统生命周期管理状态
-NotAvailable：不可用
-Available:可用
- * @method void setTieringState(string $TieringState) 设置文件系统生命周期管理状态
-NotAvailable：不可用
-Available:可用
- * @method TieringDetailInfo getTieringDetail() 获取分层存储详情
- * @method void setTieringDetail(TieringDetailInfo $TieringDetail) 设置分层存储详情
- * @method AutoScaleUpRule getAutoScaleUpRule() 获取文件系统自动扩容策略
- * @method void setAutoScaleUpRule(AutoScaleUpRule $AutoScaleUpRule) 设置文件系统自动扩容策略
- * @method string getVersion() 获取文件系统版本
- * @method void setVersion(string $Version) 设置文件系统版本
- * @method array getExstraPerformanceInfo() 获取额外性能信息
+ * @method string getCreationTime() 获取<p>创建时间</p>
+ * @method void setCreationTime(string $CreationTime) 设置<p>创建时间</p>
+ * @method string getCreationToken() 获取<p>用户自定义名称</p>
+ * @method void setCreationToken(string $CreationToken) 设置<p>用户自定义名称</p>
+ * @method string getFileSystemId() 获取<p>文件系统 ID</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统 ID</p>
+ * @method string getLifeCycleState() 获取<p>文件系统状态。取值范围：</p><ul><li>creating:创建中</li><li>mounting:挂载中</li><li>create_failed:创建失败</li><li>available:可使用</li><li>unserviced:停服中</li><li>upgrading:升级中</li></ul>
+ * @method void setLifeCycleState(string $LifeCycleState) 设置<p>文件系统状态。取值范围：</p><ul><li>creating:创建中</li><li>mounting:挂载中</li><li>create_failed:创建失败</li><li>available:可使用</li><li>unserviced:停服中</li><li>upgrading:升级中</li></ul>
+ * @method integer getSizeByte() 获取<p>文件系统已使用容量。单位：Byte</p>
+ * @method void setSizeByte(integer $SizeByte) 设置<p>文件系统已使用容量。单位：Byte</p>
+ * @method integer getSizeLimit() 获取<p>文件系统空间限制。单位:GiB</p>
+ * @method void setSizeLimit(integer $SizeLimit) 设置<p>文件系统空间限制。单位:GiB</p>
+ * @method integer getZoneId() 获取<p>区域 ID</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>区域 ID</p>
+ * @method string getZone() 获取<p>区域名称</p>
+ * @method void setZone(string $Zone) 设置<p>区域名称</p>
+ * @method string getProtocol() 获取<p>文件系统协议类型, 支持 NFS,CIFS,TURBO</p>
+ * @method void setProtocol(string $Protocol) 设置<p>文件系统协议类型, 支持 NFS,CIFS,TURBO</p>
+ * @method string getStorageType() 获取<p>存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型</p>
+ * @method void setStorageType(string $StorageType) 设置<p>存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型</p>
+ * @method string getStorageResourcePkg() 获取<p>文件系统绑定的预付费存储包</p>
+ * @method void setStorageResourcePkg(string $StorageResourcePkg) 设置<p>文件系统绑定的预付费存储包</p>
+ * @method string getBandwidthResourcePkg() 获取<p>文件系统绑定的预付费带宽包（暂未支持）</p>
+ * @method void setBandwidthResourcePkg(string $BandwidthResourcePkg) 设置<p>文件系统绑定的预付费带宽包（暂未支持）</p>
+ * @method PGroup getPGroup() 获取<p>文件系统绑定权限组信息</p>
+ * @method void setPGroup(PGroup $PGroup) 设置<p>文件系统绑定权限组信息</p>
+ * @method string getFsName() 获取<p>用户自定义名称</p>
+ * @method void setFsName(string $FsName) 设置<p>用户自定义名称</p>
+ * @method boolean getEncrypted() 获取<p>文件系统是否加密,true：代表加密，false：非加密</p>
+ * @method void setEncrypted(boolean $Encrypted) 设置<p>文件系统是否加密,true：代表加密，false：非加密</p>
+ * @method string getKmsKeyId() 获取<p>加密所使用的密钥，可以为密钥的 ID 或者 ARN</p>
+ * @method void setKmsKeyId(string $KmsKeyId) 设置<p>加密所使用的密钥，可以为密钥的 ID 或者 ARN</p>
+ * @method integer getAppId() 获取<p>应用ID</p>
+ * @method void setAppId(integer $AppId) 设置<p>应用ID</p>
+ * @method float getBandwidthLimit() 获取<p>文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s</p>
+ * @method void setBandwidthLimit(float $BandwidthLimit) 设置<p>文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s</p>
+ * @method string getAutoSnapshotPolicyId() 获取<p>文件系统关联的快照策略</p>
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置<p>文件系统关联的快照策略</p>
+ * @method string getSnapStatus() 获取<p>文件系统处理快照状态,snapping：快照中，normal：正常状态</p>
+ * @method void setSnapStatus(string $SnapStatus) 设置<p>文件系统处理快照状态,snapping：快照中，normal：正常状态</p>
+ * @method integer getCapacity() 获取<p>文件系统容量规格上限<br>单位:GiB</p>
+ * @method void setCapacity(integer $Capacity) 设置<p>文件系统容量规格上限<br>单位:GiB</p>
+ * @method array getTags() 获取<p>文件系统标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>文件系统标签列表</p>
+ * @method string getTieringState() 获取<p>文件系统生命周期管理状态<br>NotAvailable：不可用<br>Available:可用</p>
+ * @method void setTieringState(string $TieringState) 设置<p>文件系统生命周期管理状态<br>NotAvailable：不可用<br>Available:可用</p>
+ * @method TieringDetailInfo getTieringDetail() 获取<p>分层存储详情</p>
+ * @method void setTieringDetail(TieringDetailInfo $TieringDetail) 设置<p>分层存储详情</p>
+ * @method AutoScaleUpRule getAutoScaleUpRule() 获取<p>文件系统自动扩容策略</p>
+ * @method void setAutoScaleUpRule(AutoScaleUpRule $AutoScaleUpRule) 设置<p>文件系统自动扩容策略</p>
+ * @method string getVersion() 获取<p>文件系统版本</p>
+ * @method void setVersion(string $Version) 设置<p>文件系统版本</p>
+ * @method array getExstraPerformanceInfo() 获取<p>额外性能信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExstraPerformanceInfo(array $ExstraPerformanceInfo) 设置额外性能信息
+ * @method void setExstraPerformanceInfo(array $ExstraPerformanceInfo) 设置<p>额外性能信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMetaType() 获取basic：标准版元数据类型
-enhanced：增项版元数据类型
- * @method void setMetaType(string $MetaType) 设置basic：标准版元数据类型
-enhanced：增项版元数据类型
+ * @method string getMetaType() 获取<p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p>
+ * @method void setMetaType(string $MetaType) 设置<p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p>
+ * @method string getScenario() 获取<p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
+ * @method void setScenario(string $Scenario) 设置<p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
  */
 class FileSystemInfo extends AbstractModel
 {
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreationTime;
 
     /**
-     * @var string 用户自定义名称
+     * @var string <p>用户自定义名称</p>
      */
     public $CreationToken;
 
     /**
-     * @var string 文件系统 ID
+     * @var string <p>文件系统 ID</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string 文件系统状态。取值范围：
-- creating:创建中
-- mounting:挂载中
-- create_failed:创建失败
-- available:可使用
-- unserviced:停服中
-- upgrading:升级中
+     * @var string <p>文件系统状态。取值范围：</p><ul><li>creating:创建中</li><li>mounting:挂载中</li><li>create_failed:创建失败</li><li>available:可使用</li><li>unserviced:停服中</li><li>upgrading:升级中</li></ul>
      */
     public $LifeCycleState;
 
     /**
-     * @var integer 文件系统已使用容量。单位：Byte
+     * @var integer <p>文件系统已使用容量。单位：Byte</p>
      */
     public $SizeByte;
 
     /**
-     * @var integer 文件系统空间限制。单位:GiB
+     * @var integer <p>文件系统空间限制。单位:GiB</p>
      */
     public $SizeLimit;
 
     /**
-     * @var integer 区域 ID
+     * @var integer <p>区域 ID</p>
      */
     public $ZoneId;
 
     /**
-     * @var string 区域名称
+     * @var string <p>区域名称</p>
      */
     public $Zone;
 
     /**
-     * @var string 文件系统协议类型, 支持 NFS,CIFS,TURBO
+     * @var string <p>文件系统协议类型, 支持 NFS,CIFS,TURBO</p>
      */
     public $Protocol;
 
     /**
-     * @var string 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
+     * @var string <p>存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型</p>
      */
     public $StorageType;
 
     /**
-     * @var string 文件系统绑定的预付费存储包
+     * @var string <p>文件系统绑定的预付费存储包</p>
      */
     public $StorageResourcePkg;
 
     /**
-     * @var string 文件系统绑定的预付费带宽包（暂未支持）
+     * @var string <p>文件系统绑定的预付费带宽包（暂未支持）</p>
      */
     public $BandwidthResourcePkg;
 
     /**
-     * @var PGroup 文件系统绑定权限组信息
+     * @var PGroup <p>文件系统绑定权限组信息</p>
      */
     public $PGroup;
 
     /**
-     * @var string 用户自定义名称
+     * @var string <p>用户自定义名称</p>
      */
     public $FsName;
 
     /**
-     * @var boolean 文件系统是否加密,true：代表加密，false：非加密
+     * @var boolean <p>文件系统是否加密,true：代表加密，false：非加密</p>
      */
     public $Encrypted;
 
     /**
-     * @var string 加密所使用的密钥，可以为密钥的 ID 或者 ARN
+     * @var string <p>加密所使用的密钥，可以为密钥的 ID 或者 ARN</p>
      */
     public $KmsKeyId;
 
     /**
-     * @var integer 应用ID
+     * @var integer <p>应用ID</p>
      */
     public $AppId;
 
     /**
-     * @var float 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
+     * @var float <p>文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s</p>
      */
     public $BandwidthLimit;
 
     /**
-     * @var string 文件系统关联的快照策略
+     * @var string <p>文件系统关联的快照策略</p>
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var string 文件系统处理快照状态,snapping：快照中，normal：正常状态
+     * @var string <p>文件系统处理快照状态,snapping：快照中，normal：正常状态</p>
      */
     public $SnapStatus;
 
     /**
-     * @var integer 文件系统容量规格上限
-单位:GiB
+     * @var integer <p>文件系统容量规格上限<br>单位:GiB</p>
      */
     public $Capacity;
 
     /**
-     * @var array 文件系统标签列表
+     * @var array <p>文件系统标签列表</p>
      */
     public $Tags;
 
     /**
-     * @var string 文件系统生命周期管理状态
-NotAvailable：不可用
-Available:可用
+     * @var string <p>文件系统生命周期管理状态<br>NotAvailable：不可用<br>Available:可用</p>
      */
     public $TieringState;
 
     /**
-     * @var TieringDetailInfo 分层存储详情
+     * @var TieringDetailInfo <p>分层存储详情</p>
      */
     public $TieringDetail;
 
     /**
-     * @var AutoScaleUpRule 文件系统自动扩容策略
+     * @var AutoScaleUpRule <p>文件系统自动扩容策略</p>
      */
     public $AutoScaleUpRule;
 
     /**
-     * @var string 文件系统版本
+     * @var string <p>文件系统版本</p>
      */
     public $Version;
 
     /**
-     * @var array 额外性能信息
+     * @var array <p>额外性能信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExstraPerformanceInfo;
 
     /**
-     * @var string basic：标准版元数据类型
-enhanced：增项版元数据类型
+     * @var string <p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p>
      */
     public $MetaType;
 
     /**
-     * @param string $CreationTime 创建时间
-     * @param string $CreationToken 用户自定义名称
-     * @param string $FileSystemId 文件系统 ID
-     * @param string $LifeCycleState 文件系统状态。取值范围：
-- creating:创建中
-- mounting:挂载中
-- create_failed:创建失败
-- available:可使用
-- unserviced:停服中
-- upgrading:升级中
-     * @param integer $SizeByte 文件系统已使用容量。单位：Byte
-     * @param integer $SizeLimit 文件系统空间限制。单位:GiB
-     * @param integer $ZoneId 区域 ID
-     * @param string $Zone 区域名称
-     * @param string $Protocol 文件系统协议类型, 支持 NFS,CIFS,TURBO
-     * @param string $StorageType 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
-     * @param string $StorageResourcePkg 文件系统绑定的预付费存储包
-     * @param string $BandwidthResourcePkg 文件系统绑定的预付费带宽包（暂未支持）
-     * @param PGroup $PGroup 文件系统绑定权限组信息
-     * @param string $FsName 用户自定义名称
-     * @param boolean $Encrypted 文件系统是否加密,true：代表加密，false：非加密
-     * @param string $KmsKeyId 加密所使用的密钥，可以为密钥的 ID 或者 ARN
-     * @param integer $AppId 应用ID
-     * @param float $BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
-     * @param string $AutoSnapshotPolicyId 文件系统关联的快照策略
-     * @param string $SnapStatus 文件系统处理快照状态,snapping：快照中，normal：正常状态
-     * @param integer $Capacity 文件系统容量规格上限
-单位:GiB
-     * @param array $Tags 文件系统标签列表
-     * @param string $TieringState 文件系统生命周期管理状态
-NotAvailable：不可用
-Available:可用
-     * @param TieringDetailInfo $TieringDetail 分层存储详情
-     * @param AutoScaleUpRule $AutoScaleUpRule 文件系统自动扩容策略
-     * @param string $Version 文件系统版本
-     * @param array $ExstraPerformanceInfo 额外性能信息
+     * @var string <p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
+     */
+    public $Scenario;
+
+    /**
+     * @param string $CreationTime <p>创建时间</p>
+     * @param string $CreationToken <p>用户自定义名称</p>
+     * @param string $FileSystemId <p>文件系统 ID</p>
+     * @param string $LifeCycleState <p>文件系统状态。取值范围：</p><ul><li>creating:创建中</li><li>mounting:挂载中</li><li>create_failed:创建失败</li><li>available:可使用</li><li>unserviced:停服中</li><li>upgrading:升级中</li></ul>
+     * @param integer $SizeByte <p>文件系统已使用容量。单位：Byte</p>
+     * @param integer $SizeLimit <p>文件系统空间限制。单位:GiB</p>
+     * @param integer $ZoneId <p>区域 ID</p>
+     * @param string $Zone <p>区域名称</p>
+     * @param string $Protocol <p>文件系统协议类型, 支持 NFS,CIFS,TURBO</p>
+     * @param string $StorageType <p>存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型</p>
+     * @param string $StorageResourcePkg <p>文件系统绑定的预付费存储包</p>
+     * @param string $BandwidthResourcePkg <p>文件系统绑定的预付费带宽包（暂未支持）</p>
+     * @param PGroup $PGroup <p>文件系统绑定权限组信息</p>
+     * @param string $FsName <p>用户自定义名称</p>
+     * @param boolean $Encrypted <p>文件系统是否加密,true：代表加密，false：非加密</p>
+     * @param string $KmsKeyId <p>加密所使用的密钥，可以为密钥的 ID 或者 ARN</p>
+     * @param integer $AppId <p>应用ID</p>
+     * @param float $BandwidthLimit <p>文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s</p>
+     * @param string $AutoSnapshotPolicyId <p>文件系统关联的快照策略</p>
+     * @param string $SnapStatus <p>文件系统处理快照状态,snapping：快照中，normal：正常状态</p>
+     * @param integer $Capacity <p>文件系统容量规格上限<br>单位:GiB</p>
+     * @param array $Tags <p>文件系统标签列表</p>
+     * @param string $TieringState <p>文件系统生命周期管理状态<br>NotAvailable：不可用<br>Available:可用</p>
+     * @param TieringDetailInfo $TieringDetail <p>分层存储详情</p>
+     * @param AutoScaleUpRule $AutoScaleUpRule <p>文件系统自动扩容策略</p>
+     * @param string $Version <p>文件系统版本</p>
+     * @param array $ExstraPerformanceInfo <p>额外性能信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MetaType basic：标准版元数据类型
-enhanced：增项版元数据类型
+     * @param string $MetaType <p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p>
+     * @param string $Scenario <p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
      */
     function __construct()
     {
@@ -429,6 +397,10 @@ enhanced：增项版元数据类型
 
         if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
             $this->MetaType = $param["MetaType"];
+        }
+
+        if (array_key_exists("Scenario",$param) and $param["Scenario"] !== null) {
+            $this->Scenario = $param["Scenario"];
         }
     }
 }

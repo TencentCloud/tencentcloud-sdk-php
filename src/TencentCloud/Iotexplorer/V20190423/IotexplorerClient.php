@@ -124,6 +124,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 提供删除某个项目的能力。
  * @method Models\DeleteStudioProductResponse DeleteStudioProduct(Models\DeleteStudioProductRequest $req) 提供删除某个项目下产品的能力
  * @method Models\DeleteTWeSeeCallbackResponse DeleteTWeSeeCallback(Models\DeleteTWeSeeCallbackRequest $req) 删除 TWeSee 回调目标
+ * @method Models\DeleteTWeSeeTasksByConditionResponse DeleteTWeSeeTasksByCondition(Models\DeleteTWeSeeTasksByConditionRequest $req) 按条件删除指定设备和算法类目下的 TWeSee 任务及其关联数据。
  * @method Models\DeleteTWeTalkAIBotResponse DeleteTWeTalkAIBot(Models\DeleteTWeTalkAIBotRequest $req) 用于删除TWeTalk智能体。
  * @method Models\DeleteTWeTalkAgentResponse DeleteTWeTalkAgent(Models\DeleteTWeTalkAgentRequest $req) 用于删除TWeTalk智能体
  * @method Models\DeleteTWeTalkProductConfigV2Response DeleteTWeTalkProductConfigV2(Models\DeleteTWeTalkProductConfigV2Request $req) 用于删除配置TWeTalk服务连接产品配置信息。

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModel(string $Model) 设置<p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
  * @method string getPrompt() 获取<p>图片理解指令</p>
  * @method void setPrompt(string $Prompt) 设置<p>图片理解指令</p>
+ * @method string getParameters() 获取<p>图片理解模型参数，类型为 JSON 字符串。</p>
+ * @method void setParameters(string $Parameters) 设置<p>图片理解模型参数，类型为 JSON 字符串。</p>
  */
 class UnderstandImageConfig extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UnderstandImageConfig extends AbstractModel
     public $Prompt;
 
     /**
+     * @var string <p>图片理解模型参数，类型为 JSON 字符串。</p>
+     */
+    public $Parameters;
+
+    /**
      * @param string $Model <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
      * @param string $Prompt <p>图片理解指令</p>
+     * @param string $Parameters <p>图片理解模型参数，类型为 JSON 字符串。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class UnderstandImageConfig extends AbstractModel
 
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
             $this->Prompt = $param["Prompt"];
+        }
+
+        if (array_key_exists("Parameters",$param) and $param["Parameters"] !== null) {
+            $this->Parameters = $param["Parameters"];
         }
     }
 }

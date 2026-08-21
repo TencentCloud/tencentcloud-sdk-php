@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 操作系统描述
  *
- * @method string getSeriesName() 获取os聚合名称
- * @method void setSeriesName(string $SeriesName) 设置os聚合名称
- * @method string getAlias() 获取os别名
- * @method void setAlias(string $Alias) 设置os别名
- * @method string getOsName() 获取os名称
- * @method void setOsName(string $OsName) 设置os名称
- * @method string getOsCustomizeType() 获取操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)
- * @method void setOsCustomizeType(string $OsCustomizeType) 设置操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)
- * @method string getStatus() 获取os是否下线(online表示在线,offline表示下线)
- * @method void setStatus(string $Status) 设置os是否下线(online表示在线,offline表示下线)
- * @method string getImageId() 获取镜像id
- * @method void setImageId(string $ImageId) 设置镜像id
+ * @method string getSeriesName() 获取<p>os聚合名称</p>
+ * @method void setSeriesName(string $SeriesName) 设置<p>os聚合名称</p>
+ * @method string getAlias() 获取<p>os别名</p>
+ * @method void setAlias(string $Alias) 设置<p>os别名</p>
+ * @method string getOsName() 获取<p>os名称</p>
+ * @method void setOsName(string $OsName) 设置<p>os名称</p>
+ * @method string getOsCustomizeType() 获取<p>操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)</p>
+ * @method void setOsCustomizeType(string $OsCustomizeType) 设置<p>操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)</p>
+ * @method string getStatus() 获取<p>os是否下线(online表示在线,offline表示下线)</p>
+ * @method void setStatus(string $Status) 设置<p>os是否下线(online表示在线,offline表示下线)</p>
+ * @method string getImageId() 获取<p>镜像id</p>
+ * @method void setImageId(string $ImageId) 设置<p>镜像id</p>
+ * @method string getArch() 获取<p>架构</p>
+ * @method void setArch(string $Arch) 设置<p>架构</p>
  */
 class OSImage extends AbstractModel
 {
     /**
-     * @var string os聚合名称
+     * @var string <p>os聚合名称</p>
      */
     public $SeriesName;
 
     /**
-     * @var string os别名
+     * @var string <p>os别名</p>
      */
     public $Alias;
 
     /**
-     * @var string os名称
+     * @var string <p>os名称</p>
      */
     public $OsName;
 
     /**
-     * @var string 操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)
+     * @var string <p>操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)</p>
      */
     public $OsCustomizeType;
 
     /**
-     * @var string os是否下线(online表示在线,offline表示下线)
+     * @var string <p>os是否下线(online表示在线,offline表示下线)</p>
      */
     public $Status;
 
     /**
-     * @var string 镜像id
+     * @var string <p>镜像id</p>
      */
     public $ImageId;
 
     /**
-     * @param string $SeriesName os聚合名称
-     * @param string $Alias os别名
-     * @param string $OsName os名称
-     * @param string $OsCustomizeType 操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)
-     * @param string $Status os是否下线(online表示在线,offline表示下线)
-     * @param string $ImageId 镜像id
+     * @var string <p>架构</p>
+     */
+    public $Arch;
+
+    /**
+     * @param string $SeriesName <p>os聚合名称</p>
+     * @param string $Alias <p>os别名</p>
+     * @param string $OsName <p>os名称</p>
+     * @param string $OsCustomizeType <p>操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)</p>
+     * @param string $Status <p>os是否下线(online表示在线,offline表示下线)</p>
+     * @param string $ImageId <p>镜像id</p>
+     * @param string $Arch <p>架构</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class OSImage extends AbstractModel
 
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
             $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("Arch",$param) and $param["Arch"] !== null) {
+            $this->Arch = $param["Arch"];
         }
     }
 }

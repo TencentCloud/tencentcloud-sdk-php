@@ -20,178 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 电子发票详细条目信息
  *
- * @method string getName() 获取项目名称
- * @method void setName(string $Name) 设置项目名称
- * @method string getQuantity() 获取数量
- * @method void setQuantity(string $Quantity) 设置数量
- * @method string getSpecification() 获取规格型号
- * @method void setSpecification(string $Specification) 设置规格型号
- * @method string getPrice() 获取单价
- * @method void setPrice(string $Price) 设置单价
- * @method string getTotal() 获取金额
- * @method void setTotal(string $Total) 设置金额
- * @method string getTaxRate() 获取税率
- * @method void setTaxRate(string $TaxRate) 设置税率
- * @method string getTax() 获取税额
- * @method void setTax(string $Tax) 设置税额
- * @method string getUnit() 获取单位
- * @method void setUnit(string $Unit) 设置单位
- * @method string getVehicleType() 获取运输工具类型
- * @method void setVehicleType(string $VehicleType) 设置运输工具类型
- * @method string getVehicleBrand() 获取运输工具牌号
- * @method void setVehicleBrand(string $VehicleBrand) 设置运输工具牌号
- * @method string getDeparturePlace() 获取起始地
- * @method void setDeparturePlace(string $DeparturePlace) 设置起始地
- * @method string getArrivalPlace() 获取到达地
- * @method void setArrivalPlace(string $ArrivalPlace) 设置到达地
- * @method string getTransportItemsName() 获取运输货物名称，仅货物运输服务发票返回
- * @method void setTransportItemsName(string $TransportItemsName) 设置运输货物名称，仅货物运输服务发票返回
- * @method string getPlaceOfBuildingService() 获取建筑服务发生地，仅建筑发票返回
- * @method void setPlaceOfBuildingService(string $PlaceOfBuildingService) 设置建筑服务发生地，仅建筑发票返回
- * @method string getBuildingName() 获取建筑项目名称，仅建筑发票返回
- * @method void setBuildingName(string $BuildingName) 设置建筑项目名称，仅建筑发票返回
- * @method string getEstateNumber() 获取产权证书/不动产权证号，仅不动产经营租赁服务发票返回
- * @method void setEstateNumber(string $EstateNumber) 设置产权证书/不动产权证号，仅不动产经营租赁服务发票返回
- * @method string getAreaUnit() 获取面积单位，仅不动产经营租赁服务发票返回
- * @method void setAreaUnit(string $AreaUnit) 设置面积单位，仅不动产经营租赁服务发票返回
- * @method string getTraveler() 获取出行人，仅旅客运输服务发票返回
- * @method void setTraveler(string $Traveler) 设置出行人，仅旅客运输服务发票返回
- * @method string getTravelerID() 获取有效身份证件号，仅旅客运输服务发票返回
- * @method void setTravelerID(string $TravelerID) 设置有效身份证件号，仅旅客运输服务发票返回
- * @method string getTravelDate() 获取出行日期，仅旅客运输服务发票返回
- * @method void setTravelDate(string $TravelDate) 设置出行日期，仅旅客运输服务发票返回
- * @method string getTravelLevel() 获取等级，仅旅客运输服务发票返回
- * @method void setTravelLevel(string $TravelLevel) 设置等级，仅旅客运输服务发票返回
+ * @method string getName() 获取<p>项目名称</p>
+ * @method void setName(string $Name) 设置<p>项目名称</p>
+ * @method string getQuantity() 获取<p>数量</p>
+ * @method void setQuantity(string $Quantity) 设置<p>数量</p>
+ * @method string getSpecification() 获取<p>规格型号</p>
+ * @method void setSpecification(string $Specification) 设置<p>规格型号</p>
+ * @method string getPrice() 获取<p>单价</p>
+ * @method void setPrice(string $Price) 设置<p>单价</p>
+ * @method string getTotal() 获取<p>金额</p>
+ * @method void setTotal(string $Total) 设置<p>金额</p>
+ * @method string getTaxRate() 获取<p>税率</p>
+ * @method void setTaxRate(string $TaxRate) 设置<p>税率</p>
+ * @method string getTax() 获取<p>税额</p>
+ * @method void setTax(string $Tax) 设置<p>税额</p>
+ * @method string getUnit() 获取<p>单位</p>
+ * @method void setUnit(string $Unit) 设置<p>单位</p>
+ * @method string getVehicleType() 获取<p>运输工具类型</p>
+ * @method void setVehicleType(string $VehicleType) 设置<p>运输工具类型</p>
+ * @method string getVehicleBrand() 获取<p>运输工具牌号</p>
+ * @method void setVehicleBrand(string $VehicleBrand) 设置<p>运输工具牌号</p>
+ * @method string getDeparturePlace() 获取<p>起始地</p>
+ * @method void setDeparturePlace(string $DeparturePlace) 设置<p>起始地</p>
+ * @method string getArrivalPlace() 获取<p>到达地</p>
+ * @method void setArrivalPlace(string $ArrivalPlace) 设置<p>到达地</p>
+ * @method string getTransportItemsName() 获取<p>运输货物名称，仅货物运输服务发票返回</p>
+ * @method void setTransportItemsName(string $TransportItemsName) 设置<p>运输货物名称，仅货物运输服务发票返回</p>
+ * @method string getPlaceOfBuildingService() 获取<p>建筑服务发生地，仅建筑发票返回</p>
+ * @method void setPlaceOfBuildingService(string $PlaceOfBuildingService) 设置<p>建筑服务发生地，仅建筑发票返回</p>
+ * @method string getBuildingName() 获取<p>建筑项目名称，仅建筑发票返回</p>
+ * @method void setBuildingName(string $BuildingName) 设置<p>建筑项目名称，仅建筑发票返回</p>
+ * @method string getEstateNumber() 获取<p>产权证书/不动产权证号，仅不动产经营租赁服务发票返回</p>
+ * @method void setEstateNumber(string $EstateNumber) 设置<p>产权证书/不动产权证号，仅不动产经营租赁服务发票返回</p>
+ * @method string getAreaUnit() 获取<p>面积单位，仅不动产经营租赁服务发票返回</p>
+ * @method void setAreaUnit(string $AreaUnit) 设置<p>面积单位，仅不动产经营租赁服务发票返回</p>
+ * @method string getTraveler() 获取<p>出行人，仅旅客运输服务发票返回</p>
+ * @method void setTraveler(string $Traveler) 设置<p>出行人，仅旅客运输服务发票返回</p>
+ * @method string getTravelerID() 获取<p>有效身份证件号，仅旅客运输服务发票返回</p>
+ * @method void setTravelerID(string $TravelerID) 设置<p>有效身份证件号，仅旅客运输服务发票返回</p>
+ * @method string getTravelDate() 获取<p>出行日期，仅旅客运输服务发票返回</p>
+ * @method void setTravelDate(string $TravelDate) 设置<p>出行日期，仅旅客运输服务发票返回</p>
+ * @method string getTravelLevel() 获取<p>等级，仅旅客运输服务发票返回</p>
+ * @method void setTravelLevel(string $TravelLevel) 设置<p>等级，仅旅客运输服务发票返回</p>
+ * @method string getDateStart() 获取<p>通行日期起</p>
+ * @method void setDateStart(string $DateStart) 设置<p>通行日期起</p>
+ * @method string getDateEnd() 获取<p>通行日期止</p>
+ * @method void setDateEnd(string $DateEnd) 设置<p>通行日期止</p>
  */
 class VatElectronicItemInfo extends AbstractModel
 {
     /**
-     * @var string 项目名称
+     * @var string <p>项目名称</p>
      */
     public $Name;
 
     /**
-     * @var string 数量
+     * @var string <p>数量</p>
      */
     public $Quantity;
 
     /**
-     * @var string 规格型号
+     * @var string <p>规格型号</p>
      */
     public $Specification;
 
     /**
-     * @var string 单价
+     * @var string <p>单价</p>
      */
     public $Price;
 
     /**
-     * @var string 金额
+     * @var string <p>金额</p>
      */
     public $Total;
 
     /**
-     * @var string 税率
+     * @var string <p>税率</p>
      */
     public $TaxRate;
 
     /**
-     * @var string 税额
+     * @var string <p>税额</p>
      */
     public $Tax;
 
     /**
-     * @var string 单位
+     * @var string <p>单位</p>
      */
     public $Unit;
 
     /**
-     * @var string 运输工具类型
+     * @var string <p>运输工具类型</p>
      */
     public $VehicleType;
 
     /**
-     * @var string 运输工具牌号
+     * @var string <p>运输工具牌号</p>
      */
     public $VehicleBrand;
 
     /**
-     * @var string 起始地
+     * @var string <p>起始地</p>
      */
     public $DeparturePlace;
 
     /**
-     * @var string 到达地
+     * @var string <p>到达地</p>
      */
     public $ArrivalPlace;
 
     /**
-     * @var string 运输货物名称，仅货物运输服务发票返回
+     * @var string <p>运输货物名称，仅货物运输服务发票返回</p>
      */
     public $TransportItemsName;
 
     /**
-     * @var string 建筑服务发生地，仅建筑发票返回
+     * @var string <p>建筑服务发生地，仅建筑发票返回</p>
      */
     public $PlaceOfBuildingService;
 
     /**
-     * @var string 建筑项目名称，仅建筑发票返回
+     * @var string <p>建筑项目名称，仅建筑发票返回</p>
      */
     public $BuildingName;
 
     /**
-     * @var string 产权证书/不动产权证号，仅不动产经营租赁服务发票返回
+     * @var string <p>产权证书/不动产权证号，仅不动产经营租赁服务发票返回</p>
      */
     public $EstateNumber;
 
     /**
-     * @var string 面积单位，仅不动产经营租赁服务发票返回
+     * @var string <p>面积单位，仅不动产经营租赁服务发票返回</p>
      */
     public $AreaUnit;
 
     /**
-     * @var string 出行人，仅旅客运输服务发票返回
+     * @var string <p>出行人，仅旅客运输服务发票返回</p>
      */
     public $Traveler;
 
     /**
-     * @var string 有效身份证件号，仅旅客运输服务发票返回
+     * @var string <p>有效身份证件号，仅旅客运输服务发票返回</p>
      */
     public $TravelerID;
 
     /**
-     * @var string 出行日期，仅旅客运输服务发票返回
+     * @var string <p>出行日期，仅旅客运输服务发票返回</p>
      */
     public $TravelDate;
 
     /**
-     * @var string 等级，仅旅客运输服务发票返回
+     * @var string <p>等级，仅旅客运输服务发票返回</p>
      */
     public $TravelLevel;
 
     /**
-     * @param string $Name 项目名称
-     * @param string $Quantity 数量
-     * @param string $Specification 规格型号
-     * @param string $Price 单价
-     * @param string $Total 金额
-     * @param string $TaxRate 税率
-     * @param string $Tax 税额
-     * @param string $Unit 单位
-     * @param string $VehicleType 运输工具类型
-     * @param string $VehicleBrand 运输工具牌号
-     * @param string $DeparturePlace 起始地
-     * @param string $ArrivalPlace 到达地
-     * @param string $TransportItemsName 运输货物名称，仅货物运输服务发票返回
-     * @param string $PlaceOfBuildingService 建筑服务发生地，仅建筑发票返回
-     * @param string $BuildingName 建筑项目名称，仅建筑发票返回
-     * @param string $EstateNumber 产权证书/不动产权证号，仅不动产经营租赁服务发票返回
-     * @param string $AreaUnit 面积单位，仅不动产经营租赁服务发票返回
-     * @param string $Traveler 出行人，仅旅客运输服务发票返回
-     * @param string $TravelerID 有效身份证件号，仅旅客运输服务发票返回
-     * @param string $TravelDate 出行日期，仅旅客运输服务发票返回
-     * @param string $TravelLevel 等级，仅旅客运输服务发票返回
+     * @var string <p>通行日期起</p>
+     */
+    public $DateStart;
+
+    /**
+     * @var string <p>通行日期止</p>
+     */
+    public $DateEnd;
+
+    /**
+     * @param string $Name <p>项目名称</p>
+     * @param string $Quantity <p>数量</p>
+     * @param string $Specification <p>规格型号</p>
+     * @param string $Price <p>单价</p>
+     * @param string $Total <p>金额</p>
+     * @param string $TaxRate <p>税率</p>
+     * @param string $Tax <p>税额</p>
+     * @param string $Unit <p>单位</p>
+     * @param string $VehicleType <p>运输工具类型</p>
+     * @param string $VehicleBrand <p>运输工具牌号</p>
+     * @param string $DeparturePlace <p>起始地</p>
+     * @param string $ArrivalPlace <p>到达地</p>
+     * @param string $TransportItemsName <p>运输货物名称，仅货物运输服务发票返回</p>
+     * @param string $PlaceOfBuildingService <p>建筑服务发生地，仅建筑发票返回</p>
+     * @param string $BuildingName <p>建筑项目名称，仅建筑发票返回</p>
+     * @param string $EstateNumber <p>产权证书/不动产权证号，仅不动产经营租赁服务发票返回</p>
+     * @param string $AreaUnit <p>面积单位，仅不动产经营租赁服务发票返回</p>
+     * @param string $Traveler <p>出行人，仅旅客运输服务发票返回</p>
+     * @param string $TravelerID <p>有效身份证件号，仅旅客运输服务发票返回</p>
+     * @param string $TravelDate <p>出行日期，仅旅客运输服务发票返回</p>
+     * @param string $TravelLevel <p>等级，仅旅客运输服务发票返回</p>
+     * @param string $DateStart <p>通行日期起</p>
+     * @param string $DateEnd <p>通行日期止</p>
      */
     function __construct()
     {
@@ -288,6 +304,14 @@ class VatElectronicItemInfo extends AbstractModel
 
         if (array_key_exists("TravelLevel",$param) and $param["TravelLevel"] !== null) {
             $this->TravelLevel = $param["TravelLevel"];
+        }
+
+        if (array_key_exists("DateStart",$param) and $param["DateStart"] !== null) {
+            $this->DateStart = $param["DateStart"];
+        }
+
+        if (array_key_exists("DateEnd",$param) and $param["DateEnd"] !== null) {
+            $this->DateEnd = $param["DateEnd"];
         }
     }
 }

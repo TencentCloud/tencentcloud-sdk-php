@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMicroserviceType(string $MicroserviceType) 设置<p>微服务类型</p>
  * @method string getApplicationType() 获取<p>应用类型</p>
  * @method void setApplicationType(string $ApplicationType) 设置<p>应用类型</p>
- * @method string getGroupResourceType() 获取<p>部署组资源类型</p>
- * @method void setGroupResourceType(string $GroupResourceType) 设置<p>部署组资源类型</p>
+ * @method string getGroupResourceType() 获取<p>部署组资源类型</p><p>枚举值：</p><ul><li>GW： 网关</li><li>DEF： 普通业务部署组</li><li>SVL： Serverless</li></ul>
+ * @method void setGroupResourceType(string $GroupResourceType) 设置<p>部署组资源类型</p><p>枚举值：</p><ul><li>GW： 网关</li><li>DEF： 普通业务部署组</li><li>SVL： Serverless</li></ul>
  * @method integer getUpdatedTime() 获取<p>部署组更新时间戳</p>
  * @method void setUpdatedTime(integer $UpdatedTime) 设置<p>部署组更新时间戳</p>
  * @method string getDeployDesc() 获取<p>部署应用描述信息</p>
@@ -136,6 +136,64 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepositoryType(string $RepositoryType) 设置<p>仓库类型</p>
  * @method boolean getLivenessAutoRestart() 获取<p>是否自动重启</p>
  * @method void setLivenessAutoRestart(boolean $LivenessAutoRestart) 设置<p>是否自动重启</p>
+ * @method string getMeshSidecarVersion() 获取<p>Mesh Sidecar 数据面版本通道</p><p>枚举值：</p><ul><li>stable： 稳定版</li><li>release： 最新版</li></ul>
+ * @method void setMeshSidecarVersion(string $MeshSidecarVersion) 设置<p>Mesh Sidecar 数据面版本通道</p><p>枚举值：</p><ul><li>stable： 稳定版</li><li>release： 最新版</li></ul>
+ * @method string getBusinessLogConfigIdList() 获取<p>业务日志配置 ID 列表</p>
+ * @method void setBusinessLogConfigIdList(string $BusinessLogConfigIdList) 设置<p>业务日志配置 ID 列表</p>
+ * @method string getBusinessLogDeliveryConfigIdList() 获取<p>业务系统 ID</p>
+ * @method void setBusinessLogDeliveryConfigIdList(string $BusinessLogDeliveryConfigIdList) 设置<p>业务系统 ID</p>
+ * @method string getBusinessSystemId() 获取<p>String型普通说明场景</p>
+ * @method void setBusinessSystemId(string $BusinessSystemId) 设置<p>String型普通说明场景</p>
+ * @method string getBusinessSystemName() 获取<p>业务系统名称</p>
+ * @method void setBusinessSystemName(string $BusinessSystemName) 设置<p>业务系统名称</p>
+ * @method string getClsMachineGroupId() 获取<p>CLS 机器组 ID</p>
+ * @method void setClsMachineGroupId(string $ClsMachineGroupId) 设置<p>CLS 机器组 ID</p>
+ * @method boolean getEnableGovernance() 获取<p>是否开启服务治理</p>
+ * @method void setEnableGovernance(boolean $EnableGovernance) 设置<p>是否开启服务治理</p>
+ * @method boolean getEnableTelemetry() 获取<p>是否开启可观测</p>
+ * @method void setEnableTelemetry(boolean $EnableTelemetry) 设置<p>是否开启可观测</p>
+ * @method boolean getEnableTelemetryAgent() 获取<p>是否开启 OT Agent</p>
+ * @method void setEnableTelemetryAgent(boolean $EnableTelemetryAgent) 设置<p>是否开启 OT Agent</p>
+ * @method boolean getEnabledUnit() 获取<p>是否开启单元化</p>
+ * @method void setEnabledUnit(boolean $EnabledUnit) 设置<p>是否开启单元化</p>
+ * @method array getExclusiveInstances() 获取<p>独享注册中心/配置中心实例列表</p>
+ * @method void setExclusiveInstances(array $ExclusiveInstances) 设置<p>独享注册中心/配置中心实例列表</p>
+ * @method string getFrameworkType() 获取<p>框架接入类型</p>
+ * @method void setFrameworkType(string $FrameworkType) 设置<p>框架接入类型</p>
+ * @method string getGovernanceType() 获取<p>服务治理实例模式</p>
+ * @method void setGovernanceType(string $GovernanceType) 设置<p>服务治理实例模式</p>
+ * @method array getInstanceIdList() 获取<p>部署组关联实例 ID 列表</p>
+ * @method void setInstanceIdList(array $InstanceIdList) 设置<p>部署组关联实例 ID 列表</p>
+ * @method string getIsStop() 获取<p>部署组是否处于停止状态</p>
+ * @method void setIsStop(string $IsStop) 设置<p>部署组是否处于停止状态</p>
+ * @method string getK8sNamespaceName() 获取<p>K8s 命名空间名称</p>
+ * @method void setK8sNamespaceName(string $K8sNamespaceName) 设置<p>K8s 命名空间名称</p>
+ * @method string getLanguage() 获取<p>请求语言</p>
+ * @method void setLanguage(string $Language) 设置<p>请求语言</p>
+ * @method string getMicroserviceSubType() 获取<p>微服务子类型</p>
+ * @method void setMicroserviceSubType(string $MicroserviceSubType) 设置<p>微服务子类型</p>
+ * @method string getNonInvasiveType() 获取<p>非侵入接入子类型</p>
+ * @method void setNonInvasiveType(string $NonInvasiveType) 设置<p>非侵入接入子类型</p>
+ * @method string getPreStopScript() 获取<p>预停止脚本内容</p>
+ * @method void setPreStopScript(string $PreStopScript) 设置<p>预停止脚本内容</p>
+ * @method string getRealNamespaceName() 获取<p>实际使用的 K8s 命名空间名称</p>
+ * @method void setRealNamespaceName(string $RealNamespaceName) 设置<p>实际使用的 K8s 命名空间名称</p>
+ * @method array getServiceConfigList() 获取<p>Mesh 服务端口与健康检查配置列表</p>
+ * @method void setServiceConfigList(array $ServiceConfigList) 设置<p>Mesh 服务端口与健康检查配置列表</p>
+ * @method ServiceGovernanceConfig getServiceGovernanceConfig() 获取<p>服务治理配置聚合对象</p>
+ * @method void setServiceGovernanceConfig(ServiceGovernanceConfig $ServiceGovernanceConfig) 设置<p>服务治理配置聚合对象</p>
+ * @method array getTags() 获取<p>部署组标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>部署组标签列表</p>
+ * @method string getTapmOtAgentVersion() 获取<p>Tapm OT Agent 版本</p>
+ * @method void setTapmOtAgentVersion(string $TapmOtAgentVersion) 设置<p>Tapm OT Agent 版本</p>
+ * @method string getUnitEnvType() 获取<p>单元环境类型</p>
+ * @method void setUnitEnvType(string $UnitEnvType) 设置<p>单元环境类型</p>
+ * @method string getUnitId() 获取<p>单元 ID</p>
+ * @method void setUnitId(string $UnitId) 设置<p>单元 ID</p>
+ * @method string getUnitName() 获取<p>单元类型</p>
+ * @method void setUnitName(string $UnitName) 设置<p>单元类型</p>
+ * @method string getUnitType() 获取<p>部署组资源类型</p>
+ * @method void setUnitType(string $UnitType) 设置<p>部署组资源类型</p>
  */
 class VmGroup extends AbstractModel
 {
@@ -250,7 +308,7 @@ class VmGroup extends AbstractModel
     public $ApplicationType;
 
     /**
-     * @var string <p>部署组资源类型</p>
+     * @var string <p>部署组资源类型</p><p>枚举值：</p><ul><li>GW： 网关</li><li>DEF： 普通业务部署组</li><li>SVL： Serverless</li></ul>
      */
     public $GroupResourceType;
 
@@ -382,6 +440,151 @@ class VmGroup extends AbstractModel
     public $LivenessAutoRestart;
 
     /**
+     * @var string <p>Mesh Sidecar 数据面版本通道</p><p>枚举值：</p><ul><li>stable： 稳定版</li><li>release： 最新版</li></ul>
+     */
+    public $MeshSidecarVersion;
+
+    /**
+     * @var string <p>业务日志配置 ID 列表</p>
+     */
+    public $BusinessLogConfigIdList;
+
+    /**
+     * @var string <p>业务系统 ID</p>
+     */
+    public $BusinessLogDeliveryConfigIdList;
+
+    /**
+     * @var string <p>String型普通说明场景</p>
+     */
+    public $BusinessSystemId;
+
+    /**
+     * @var string <p>业务系统名称</p>
+     */
+    public $BusinessSystemName;
+
+    /**
+     * @var string <p>CLS 机器组 ID</p>
+     */
+    public $ClsMachineGroupId;
+
+    /**
+     * @var boolean <p>是否开启服务治理</p>
+     */
+    public $EnableGovernance;
+
+    /**
+     * @var boolean <p>是否开启可观测</p>
+     */
+    public $EnableTelemetry;
+
+    /**
+     * @var boolean <p>是否开启 OT Agent</p>
+     */
+    public $EnableTelemetryAgent;
+
+    /**
+     * @var boolean <p>是否开启单元化</p>
+     */
+    public $EnabledUnit;
+
+    /**
+     * @var array <p>独享注册中心/配置中心实例列表</p>
+     */
+    public $ExclusiveInstances;
+
+    /**
+     * @var string <p>框架接入类型</p>
+     */
+    public $FrameworkType;
+
+    /**
+     * @var string <p>服务治理实例模式</p>
+     */
+    public $GovernanceType;
+
+    /**
+     * @var array <p>部署组关联实例 ID 列表</p>
+     */
+    public $InstanceIdList;
+
+    /**
+     * @var string <p>部署组是否处于停止状态</p>
+     */
+    public $IsStop;
+
+    /**
+     * @var string <p>K8s 命名空间名称</p>
+     */
+    public $K8sNamespaceName;
+
+    /**
+     * @var string <p>请求语言</p>
+     */
+    public $Language;
+
+    /**
+     * @var string <p>微服务子类型</p>
+     */
+    public $MicroserviceSubType;
+
+    /**
+     * @var string <p>非侵入接入子类型</p>
+     */
+    public $NonInvasiveType;
+
+    /**
+     * @var string <p>预停止脚本内容</p>
+     */
+    public $PreStopScript;
+
+    /**
+     * @var string <p>实际使用的 K8s 命名空间名称</p>
+     */
+    public $RealNamespaceName;
+
+    /**
+     * @var array <p>Mesh 服务端口与健康检查配置列表</p>
+     */
+    public $ServiceConfigList;
+
+    /**
+     * @var ServiceGovernanceConfig <p>服务治理配置聚合对象</p>
+     */
+    public $ServiceGovernanceConfig;
+
+    /**
+     * @var array <p>部署组标签列表</p>
+     */
+    public $Tags;
+
+    /**
+     * @var string <p>Tapm OT Agent 版本</p>
+     */
+    public $TapmOtAgentVersion;
+
+    /**
+     * @var string <p>单元环境类型</p>
+     */
+    public $UnitEnvType;
+
+    /**
+     * @var string <p>单元 ID</p>
+     */
+    public $UnitId;
+
+    /**
+     * @var string <p>单元类型</p>
+     */
+    public $UnitName;
+
+    /**
+     * @var string <p>部署组资源类型</p>
+     */
+    public $UnitType;
+
+    /**
      * @param string $GroupId <p>部署组ID</p>
      * @param string $GroupName <p>部署组名称</p>
      * @param string $GroupStatus <p>部署组状态</p>
@@ -408,7 +611,7 @@ class VmGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MicroserviceType <p>微服务类型</p>
      * @param string $ApplicationType <p>应用类型</p>
-     * @param string $GroupResourceType <p>部署组资源类型</p>
+     * @param string $GroupResourceType <p>部署组资源类型</p><p>枚举值：</p><ul><li>GW： 网关</li><li>DEF： 普通业务部署组</li><li>SVL： Serverless</li></ul>
      * @param integer $UpdatedTime <p>部署组更新时间戳</p>
      * @param string $DeployDesc <p>部署应用描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -440,6 +643,35 @@ class VmGroup extends AbstractModel
      * @param string $RepositoryName <p>仓库名称</p>
      * @param string $RepositoryType <p>仓库类型</p>
      * @param boolean $LivenessAutoRestart <p>是否自动重启</p>
+     * @param string $MeshSidecarVersion <p>Mesh Sidecar 数据面版本通道</p><p>枚举值：</p><ul><li>stable： 稳定版</li><li>release： 最新版</li></ul>
+     * @param string $BusinessLogConfigIdList <p>业务日志配置 ID 列表</p>
+     * @param string $BusinessLogDeliveryConfigIdList <p>业务系统 ID</p>
+     * @param string $BusinessSystemId <p>String型普通说明场景</p>
+     * @param string $BusinessSystemName <p>业务系统名称</p>
+     * @param string $ClsMachineGroupId <p>CLS 机器组 ID</p>
+     * @param boolean $EnableGovernance <p>是否开启服务治理</p>
+     * @param boolean $EnableTelemetry <p>是否开启可观测</p>
+     * @param boolean $EnableTelemetryAgent <p>是否开启 OT Agent</p>
+     * @param boolean $EnabledUnit <p>是否开启单元化</p>
+     * @param array $ExclusiveInstances <p>独享注册中心/配置中心实例列表</p>
+     * @param string $FrameworkType <p>框架接入类型</p>
+     * @param string $GovernanceType <p>服务治理实例模式</p>
+     * @param array $InstanceIdList <p>部署组关联实例 ID 列表</p>
+     * @param string $IsStop <p>部署组是否处于停止状态</p>
+     * @param string $K8sNamespaceName <p>K8s 命名空间名称</p>
+     * @param string $Language <p>请求语言</p>
+     * @param string $MicroserviceSubType <p>微服务子类型</p>
+     * @param string $NonInvasiveType <p>非侵入接入子类型</p>
+     * @param string $PreStopScript <p>预停止脚本内容</p>
+     * @param string $RealNamespaceName <p>实际使用的 K8s 命名空间名称</p>
+     * @param array $ServiceConfigList <p>Mesh 服务端口与健康检查配置列表</p>
+     * @param ServiceGovernanceConfig $ServiceGovernanceConfig <p>服务治理配置聚合对象</p>
+     * @param array $Tags <p>部署组标签列表</p>
+     * @param string $TapmOtAgentVersion <p>Tapm OT Agent 版本</p>
+     * @param string $UnitEnvType <p>单元环境类型</p>
+     * @param string $UnitId <p>单元 ID</p>
+     * @param string $UnitName <p>单元类型</p>
+     * @param string $UnitType <p>部署组资源类型</p>
      */
     function __construct()
     {
@@ -644,6 +876,138 @@ class VmGroup extends AbstractModel
 
         if (array_key_exists("LivenessAutoRestart",$param) and $param["LivenessAutoRestart"] !== null) {
             $this->LivenessAutoRestart = $param["LivenessAutoRestart"];
+        }
+
+        if (array_key_exists("MeshSidecarVersion",$param) and $param["MeshSidecarVersion"] !== null) {
+            $this->MeshSidecarVersion = $param["MeshSidecarVersion"];
+        }
+
+        if (array_key_exists("BusinessLogConfigIdList",$param) and $param["BusinessLogConfigIdList"] !== null) {
+            $this->BusinessLogConfigIdList = $param["BusinessLogConfigIdList"];
+        }
+
+        if (array_key_exists("BusinessLogDeliveryConfigIdList",$param) and $param["BusinessLogDeliveryConfigIdList"] !== null) {
+            $this->BusinessLogDeliveryConfigIdList = $param["BusinessLogDeliveryConfigIdList"];
+        }
+
+        if (array_key_exists("BusinessSystemId",$param) and $param["BusinessSystemId"] !== null) {
+            $this->BusinessSystemId = $param["BusinessSystemId"];
+        }
+
+        if (array_key_exists("BusinessSystemName",$param) and $param["BusinessSystemName"] !== null) {
+            $this->BusinessSystemName = $param["BusinessSystemName"];
+        }
+
+        if (array_key_exists("ClsMachineGroupId",$param) and $param["ClsMachineGroupId"] !== null) {
+            $this->ClsMachineGroupId = $param["ClsMachineGroupId"];
+        }
+
+        if (array_key_exists("EnableGovernance",$param) and $param["EnableGovernance"] !== null) {
+            $this->EnableGovernance = $param["EnableGovernance"];
+        }
+
+        if (array_key_exists("EnableTelemetry",$param) and $param["EnableTelemetry"] !== null) {
+            $this->EnableTelemetry = $param["EnableTelemetry"];
+        }
+
+        if (array_key_exists("EnableTelemetryAgent",$param) and $param["EnableTelemetryAgent"] !== null) {
+            $this->EnableTelemetryAgent = $param["EnableTelemetryAgent"];
+        }
+
+        if (array_key_exists("EnabledUnit",$param) and $param["EnabledUnit"] !== null) {
+            $this->EnabledUnit = $param["EnabledUnit"];
+        }
+
+        if (array_key_exists("ExclusiveInstances",$param) and $param["ExclusiveInstances"] !== null) {
+            $this->ExclusiveInstances = [];
+            foreach ($param["ExclusiveInstances"] as $key => $value){
+                $obj = new ExclusiveInstance();
+                $obj->deserialize($value);
+                array_push($this->ExclusiveInstances, $obj);
+            }
+        }
+
+        if (array_key_exists("FrameworkType",$param) and $param["FrameworkType"] !== null) {
+            $this->FrameworkType = $param["FrameworkType"];
+        }
+
+        if (array_key_exists("GovernanceType",$param) and $param["GovernanceType"] !== null) {
+            $this->GovernanceType = $param["GovernanceType"];
+        }
+
+        if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
+            $this->InstanceIdList = $param["InstanceIdList"];
+        }
+
+        if (array_key_exists("IsStop",$param) and $param["IsStop"] !== null) {
+            $this->IsStop = $param["IsStop"];
+        }
+
+        if (array_key_exists("K8sNamespaceName",$param) and $param["K8sNamespaceName"] !== null) {
+            $this->K8sNamespaceName = $param["K8sNamespaceName"];
+        }
+
+        if (array_key_exists("Language",$param) and $param["Language"] !== null) {
+            $this->Language = $param["Language"];
+        }
+
+        if (array_key_exists("MicroserviceSubType",$param) and $param["MicroserviceSubType"] !== null) {
+            $this->MicroserviceSubType = $param["MicroserviceSubType"];
+        }
+
+        if (array_key_exists("NonInvasiveType",$param) and $param["NonInvasiveType"] !== null) {
+            $this->NonInvasiveType = $param["NonInvasiveType"];
+        }
+
+        if (array_key_exists("PreStopScript",$param) and $param["PreStopScript"] !== null) {
+            $this->PreStopScript = $param["PreStopScript"];
+        }
+
+        if (array_key_exists("RealNamespaceName",$param) and $param["RealNamespaceName"] !== null) {
+            $this->RealNamespaceName = $param["RealNamespaceName"];
+        }
+
+        if (array_key_exists("ServiceConfigList",$param) and $param["ServiceConfigList"] !== null) {
+            $this->ServiceConfigList = [];
+            foreach ($param["ServiceConfigList"] as $key => $value){
+                $obj = new ServiceConfig();
+                $obj->deserialize($value);
+                array_push($this->ServiceConfigList, $obj);
+            }
+        }
+
+        if (array_key_exists("ServiceGovernanceConfig",$param) and $param["ServiceGovernanceConfig"] !== null) {
+            $this->ServiceGovernanceConfig = new ServiceGovernanceConfig();
+            $this->ServiceGovernanceConfig->deserialize($param["ServiceGovernanceConfig"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("TapmOtAgentVersion",$param) and $param["TapmOtAgentVersion"] !== null) {
+            $this->TapmOtAgentVersion = $param["TapmOtAgentVersion"];
+        }
+
+        if (array_key_exists("UnitEnvType",$param) and $param["UnitEnvType"] !== null) {
+            $this->UnitEnvType = $param["UnitEnvType"];
+        }
+
+        if (array_key_exists("UnitId",$param) and $param["UnitId"] !== null) {
+            $this->UnitId = $param["UnitId"];
+        }
+
+        if (array_key_exists("UnitName",$param) and $param["UnitName"] !== null) {
+            $this->UnitName = $param["UnitName"];
+        }
+
+        if (array_key_exists("UnitType",$param) and $param["UnitType"] !== null) {
+            $this->UnitType = $param["UnitType"];
         }
     }
 }

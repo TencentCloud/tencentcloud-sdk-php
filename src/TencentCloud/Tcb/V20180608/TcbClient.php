@@ -28,6 +28,9 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 限制：一个环境最大可允许加入20个认证源。
  * @method Models\AllocateEnvResponse AllocateEnv(Models\AllocateEnvRequest $req) 从环境池里立即取出1个环境
  * @method Models\AssumeRoleForAllocatedEnvResponse AssumeRoleForAllocatedEnv(Models\AssumeRoleForAllocatedEnvRequest $req) 白名单接口，申请Tcb角色临时凭证
+ * @method Models\BindClsResponse BindCls(Models\BindClsRequest $req) 绑定自定义CLS日志主题
+
+**绑定自定义 CLS 日志主题需调用腾讯云 CLS「[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)」接口，按传入的 `Region` 拉取用户日志主题列表，仅筛选 `AssumerName` 为空的自有主题，并将其 `LogsetId`、`TopicId` 分别回填为绑定参数 `ClsLogsetId`、`ClsTopicId`（地域取请求参数 `Region` 作为 `ClsRegion`）。**
  * @method Models\BindStorageSourceResponse BindStorageSource(Models\BindStorageSourceRequest $req) 为云存储绑定外部云存储源。
 将一个用户自有的 COS桶 作为外部存储源绑定到指定云开发环境的云存储。绑定后，该环境的云存储文件操作将指向此桶，通过 BasePath 路径前缀实现与其他环境的数据隔离。
 每个环境仅允许绑定 1 个外部云存储源。

@@ -114,6 +114,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribeGrafanaInstancesResponse DescribeGrafanaInstances(Models\DescribeGrafanaInstancesRequest $req) 列出用户所有的 Grafana 服务
  * @method Models\DescribeGrafanaIntegrationsResponse DescribeGrafanaIntegrations(Models\DescribeGrafanaIntegrationsRequest $req) 列出 Grafana 已安装的集成
  * @method Models\DescribeGrafanaNotificationChannelsResponse DescribeGrafanaNotificationChannels(Models\DescribeGrafanaNotificationChannelsRequest $req) 列出 Grafana 告警通道
+ * @method Models\DescribeGrafanaVersionsResponse DescribeGrafanaVersions(Models\DescribeGrafanaVersionsRequest $req) 列出 Grafana 版本
  * @method Models\DescribeGrafanaWhiteListResponse DescribeGrafanaWhiteList(Models\DescribeGrafanaWhiteListRequest $req) 列出 Grafana 白名单
  * @method Models\DescribeInstalledPluginsResponse DescribeInstalledPlugins(Models\DescribeInstalledPluginsRequest $req) 列出实例已安装的插件
  * @method Models\DescribeMonitorResourceInfoResponse DescribeMonitorResourceInfo(Models\DescribeMonitorResourceInfoRequest $req) 获取资源消耗页概览

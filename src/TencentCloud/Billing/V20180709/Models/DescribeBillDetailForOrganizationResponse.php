@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillDetailForOrganization返回参数结构体
  *
- * @method array getDetailSet() 获取详情列表
- * @method void setDetailSet(array $DetailSet) 设置详情列表
- * @method integer getTotal() 获取总记录数，24小时缓存一次，可能比实际总记录数少
+ * @method array getDetailSet() 获取<p>详情列表</p>
+ * @method void setDetailSet(array $DetailSet) 设置<p>详情列表</p>
+ * @method integer getTotal() 获取<p>总记录数，24小时缓存一次，可能比实际总记录数少</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置总记录数，24小时缓存一次，可能比实际总记录数少
+ * @method void setTotal(integer $Total) 设置<p>总记录数，24小时缓存一次，可能比实际总记录数少</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContext() 获取本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
- * @method void setContext(string $Context) 设置本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+ * @method string getContext() 获取<p>本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度</p>
+ * @method void setContext(string $Context) 设置<p>本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBillDetailForOrganizationResponse extends AbstractModel
 {
     /**
-     * @var array 详情列表
+     * @var array <p>详情列表</p>
      */
     public $DetailSet;
 
     /**
-     * @var integer 总记录数，24小时缓存一次，可能比实际总记录数少
+     * @var integer <p>总记录数，24小时缓存一次，可能比实际总记录数少</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var string 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+     * @var string <p>本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度</p>
      */
     public $Context;
 
@@ -55,10 +55,10 @@ class DescribeBillDetailForOrganizationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DetailSet 详情列表
-     * @param integer $Total 总记录数，24小时缓存一次，可能比实际总记录数少
+     * @param array $DetailSet <p>详情列表</p>
+     * @param integer $Total <p>总记录数，24小时缓存一次，可能比实际总记录数少</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Context 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+     * @param string $Context <p>本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

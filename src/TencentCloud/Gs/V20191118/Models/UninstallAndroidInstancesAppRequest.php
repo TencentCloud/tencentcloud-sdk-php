@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UninstallAndroidInstancesApp请求参数结构体
  *
- * @method array getAndroidInstanceIds() 获取实例ID
- * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置实例ID
- * @method string getAndroidAppId() 获取应用ID
- * @method void setAndroidAppId(string $AndroidAppId) 设置应用ID
- * @method string getPackageName() 获取包名
- * @method void setPackageName(string $PackageName) 设置包名
+ * @method array getAndroidInstanceIds() 获取<p>实例ID</p>
+ * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置<p>实例ID</p>
+ * @method string getAndroidAppId() 获取<p>应用ID</p>
+ * @method void setAndroidAppId(string $AndroidAppId) 设置<p>应用ID</p>
+ * @method string getPackageName() 获取<p>包名</p>
+ * @method void setPackageName(string $PackageName) 设置<p>包名</p>
  */
 class UninstallAndroidInstancesAppRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID
+     * @var array <p>实例ID</p>
      */
     public $AndroidInstanceIds;
 
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
      */
     public $AndroidAppId;
 
     /**
-     * @var string 包名
+     * @var string <p>包名</p>
      */
     public $PackageName;
 
     /**
-     * @param array $AndroidInstanceIds 实例ID
-     * @param string $AndroidAppId 应用ID
-     * @param string $PackageName 包名
+     * @param array $AndroidInstanceIds <p>实例ID</p>
+     * @param string $AndroidAppId <p>应用ID</p>
+     * @param string $PackageName <p>包名</p>
      */
     function __construct()
     {

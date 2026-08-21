@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryForOrganization请求参数结构体
  *
- * @method string getMonth() 获取账单月份，格式为2023-04
- * @method void setMonth(string $Month) 设置账单月份，格式为2023-04
- * @method string getGroupType() 获取账单维度类型，枚举值如下：business、project、region、payMode、tag
- * @method void setGroupType(string $GroupType) 设置账单维度类型，枚举值如下：business、project、region、payMode、tag
- * @method array getTagKey() 获取标签键，GroupType=tag获取标签维度账单时传
- * @method void setTagKey(array $TagKey) 设置标签键，GroupType=tag获取标签维度账单时传
+ * @method string getMonth() 获取<p>账单月份，格式为2023-04</p>
+ * @method void setMonth(string $Month) 设置<p>账单月份，格式为2023-04</p>
+ * @method string getGroupType() 获取<p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
+ * @method void setGroupType(string $GroupType) 设置<p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
+ * @method array getTagKey() 获取<p>标签键，GroupType=tag获取标签维度账单时传</p>
+ * @method void setTagKey(array $TagKey) 设置<p>标签键，GroupType=tag获取标签维度账单时传</p>
  */
 class DescribeBillSummaryForOrganizationRequest extends AbstractModel
 {
     /**
-     * @var string 账单月份，格式为2023-04
+     * @var string <p>账单月份，格式为2023-04</p>
      */
     public $Month;
 
     /**
-     * @var string 账单维度类型，枚举值如下：business、project、region、payMode、tag
+     * @var string <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
      */
     public $GroupType;
 
     /**
-     * @var array 标签键，GroupType=tag获取标签维度账单时传
+     * @var array <p>标签键，GroupType=tag获取标签维度账单时传</p>
      */
     public $TagKey;
 
     /**
-     * @param string $Month 账单月份，格式为2023-04
-     * @param string $GroupType 账单维度类型，枚举值如下：business、project、region、payMode、tag
-     * @param array $TagKey 标签键，GroupType=tag获取标签维度账单时传
+     * @param string $Month <p>账单月份，格式为2023-04</p>
+     * @param string $GroupType <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
+     * @param array $TagKey <p>标签键，GroupType=tag获取标签维度账单时传</p>
      */
     function __construct()
     {

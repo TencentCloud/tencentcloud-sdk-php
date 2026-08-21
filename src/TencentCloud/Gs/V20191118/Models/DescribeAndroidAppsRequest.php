@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAndroidApps请求参数结构体
  *
- * @method integer getOffset() 获取分页偏移
- * @method void setOffset(integer $Offset) 设置分页偏移
- * @method integer getLimit() 获取每页数量
- * @method void setLimit(integer $Limit) 设置每页数量
- * @method array getAndroidAppIds() 获取应用ID数组
- * @method void setAndroidAppIds(array $AndroidAppIds) 设置应用ID数组
- * @method array getFilters() 获取过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
- * @method void setFilters(array $Filters) 设置过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
+ * @method integer getOffset() 获取<p>分页偏移</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移</p>
+ * @method integer getLimit() 获取<p>每页数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页数量</p>
+ * @method array getAndroidAppIds() 获取<p>应用ID数组</p>
+ * @method void setAndroidAppIds(array $AndroidAppIds) 设置<p>应用ID数组</p>
+ * @method array getFilters() 获取<p>过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。</p>
  */
 class DescribeAndroidAppsRequest extends AbstractModel
 {
     /**
-     * @var integer 分页偏移
+     * @var integer <p>分页偏移</p>
      */
     public $Offset;
 
     /**
-     * @var integer 每页数量
+     * @var integer <p>每页数量</p>
      */
     public $Limit;
 
     /**
-     * @var array 应用ID数组
+     * @var array <p>应用ID数组</p>
      */
     public $AndroidAppIds;
 
     /**
-     * @var array 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
+     * @var array <p>过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。</p>
      */
     public $Filters;
 
     /**
-     * @param integer $Offset 分页偏移
-     * @param integer $Limit 每页数量
-     * @param array $AndroidAppIds 应用ID数组
-     * @param array $Filters 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
+     * @param integer $Offset <p>分页偏移</p>
+     * @param integer $Limit <p>每页数量</p>
+     * @param array $AndroidAppIds <p>应用ID数组</p>
+     * @param array $Filters <p>过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。</p>
      */
     function __construct()
     {

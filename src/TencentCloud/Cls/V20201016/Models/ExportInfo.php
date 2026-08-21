@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyntaxRule(integer $SyntaxRule) 设置<p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
  * @method array getDerivedFields() 获取<p>导出字段</p>
  * @method void setDerivedFields(array $DerivedFields) 设置<p>导出字段</p>
+ * @method integer getCreateTimestamp() 获取<p>日志导出创建时间，毫秒时间戳</p><p>单位：ms</p>
+ * @method void setCreateTimestamp(integer $CreateTimestamp) 设置<p>日志导出创建时间，毫秒时间戳</p><p>单位：ms</p>
  */
 class ExportInfo extends AbstractModel
 {
@@ -129,6 +131,11 @@ class ExportInfo extends AbstractModel
     public $DerivedFields;
 
     /**
+     * @var integer <p>日志导出创建时间，毫秒时间戳</p><p>单位：ms</p>
+     */
+    public $CreateTimestamp;
+
+    /**
      * @param string $TopicId <p>日志主题ID</p>
      * @param string $ExportId <p>日志导出任务ID</p>
      * @param string $Query <p>日志导出查询语句</p>
@@ -144,6 +151,7 @@ class ExportInfo extends AbstractModel
      * @param string $CreateTime <p>日志导出创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      * @param integer $SyntaxRule <p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
      * @param array $DerivedFields <p>导出字段</p>
+     * @param integer $CreateTimestamp <p>日志导出创建时间，毫秒时间戳</p><p>单位：ms</p>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class ExportInfo extends AbstractModel
 
         if (array_key_exists("DerivedFields",$param) and $param["DerivedFields"] !== null) {
             $this->DerivedFields = $param["DerivedFields"];
+        }
+
+        if (array_key_exists("CreateTimestamp",$param) and $param["CreateTimestamp"] !== null) {
+            $this->CreateTimestamp = $param["CreateTimestamp"];
         }
     }
 }

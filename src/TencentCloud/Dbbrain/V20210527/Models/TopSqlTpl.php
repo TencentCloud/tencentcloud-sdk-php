@@ -84,9 +84,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuTimeMax(float $CpuTimeMax) 设置<p>最大cpu时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIoWaitTimeMin() 获取<p>最小io等待时间，单位秒</p>
+ * @method float getIoWaitTimeMin() 获取<p>最小io等待时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIoWaitTimeMin(integer $IoWaitTimeMin) 设置<p>最小io等待时间，单位秒</p>
+ * @method void setIoWaitTimeMin(float $IoWaitTimeMin) 设置<p>最小io等待时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getLatencyMax() 获取<p>最大执行时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -240,7 +240,7 @@ class TopSqlTpl extends AbstractModel
     public $CpuTimeMax;
 
     /**
-     * @var integer <p>最小io等待时间，单位秒</p>
+     * @var float <p>最小io等待时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IoWaitTimeMin;
@@ -372,7 +372,7 @@ class TopSqlTpl extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $CpuTimeMax <p>最大cpu时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IoWaitTimeMin <p>最小io等待时间，单位秒</p>
+     * @param float $IoWaitTimeMin <p>最小io等待时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $LatencyMax <p>最大执行时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。

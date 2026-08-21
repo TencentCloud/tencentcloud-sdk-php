@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安卓应用版本信息
  *
- * @method string getAndroidAppVersion() 获取安卓应用版本
- * @method void setAndroidAppVersion(string $AndroidAppVersion) 设置安卓应用版本
- * @method string getState() 获取安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
- * @method void setState(string $State) 设置安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
- * @method string getCreateTime() 获取安卓应用版本创建时间
- * @method void setCreateTime(string $CreateTime) 设置安卓应用版本创建时间
- * @method string getCommand() 获取shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
- * @method void setCommand(string $Command) 设置shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
- * @method string getUninstallCommand() 获取shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
- * @method void setUninstallCommand(string $UninstallCommand) 设置shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
- * @method string getCleanupMode() 获取应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
- * @method void setCleanupMode(string $CleanupMode) 设置应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
- * @method string getAndroidAppVersionName() 获取安卓应用版本名称（版本描述、备注）
- * @method void setAndroidAppVersionName(string $AndroidAppVersionName) 设置安卓应用版本名称（版本描述、备注）
- * @method string getActivity() 获取安卓应用启动页
- * @method void setActivity(string $Activity) 设置安卓应用启动页
- * @method string getVersionName() 获取应用版本号（Version Name）
- * @method void setVersionName(string $VersionName) 设置应用版本号（Version Name）
- * @method string getMD5() 获取应用包 MD5
- * @method void setMD5(string $MD5) 设置应用包 MD5
- * @method integer getFileSize() 获取应用包文件大小（字节）
- * @method void setFileSize(integer $FileSize) 设置应用包文件大小（字节）
- * @method string getPackageName() 获取安卓应用包名
- * @method void setPackageName(string $PackageName) 设置安卓应用包名
+ * @method string getAndroidAppVersion() 获取<p>安卓应用版本</p>
+ * @method void setAndroidAppVersion(string $AndroidAppVersion) 设置<p>安卓应用版本</p>
+ * @method string getState() 获取<p>安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功</p>
+ * @method void setState(string $State) 设置<p>安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功</p>
+ * @method string getCreateTime() 获取<p>安卓应用版本创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>安卓应用版本创建时间</p>
+ * @method string getCommand() 获取<p>shell 安装命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
+ * @method void setCommand(string $Command) 设置<p>shell 安装命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
+ * @method string getUninstallCommand() 获取<p>shell 卸载命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
+ * @method void setUninstallCommand(string $UninstallCommand) 设置<p>shell 卸载命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
+ * @method string getCleanupMode() 获取<p>应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。</p>
+ * @method void setCleanupMode(string $CleanupMode) 设置<p>应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。</p>
+ * @method string getAndroidAppVersionName() 获取<p>安卓应用版本名称（版本描述、备注）</p>
+ * @method void setAndroidAppVersionName(string $AndroidAppVersionName) 设置<p>安卓应用版本名称（版本描述、备注）</p>
+ * @method string getActivity() 获取<p>安卓应用启动页</p>
+ * @method void setActivity(string $Activity) 设置<p>安卓应用启动页</p>
+ * @method string getVersionName() 获取<p>应用版本号（Version Name）</p>
+ * @method void setVersionName(string $VersionName) 设置<p>应用版本号（Version Name）</p>
+ * @method string getMD5() 获取<p>应用包 MD5</p>
+ * @method void setMD5(string $MD5) 设置<p>应用包 MD5</p>
+ * @method integer getFileSize() 获取<p>应用包文件大小（字节）</p>
+ * @method void setFileSize(integer $FileSize) 设置<p>应用包文件大小（字节）</p>
+ * @method string getPackageName() 获取<p>安卓应用包名</p>
+ * @method void setPackageName(string $PackageName) 设置<p>安卓应用包名</p>
  */
 class AndroidAppVersionInfo extends AbstractModel
 {
     /**
-     * @var string 安卓应用版本
+     * @var string <p>安卓应用版本</p>
      */
     public $AndroidAppVersion;
 
     /**
-     * @var string 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
+     * @var string <p>安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功</p>
      */
     public $State;
 
     /**
-     * @var string 安卓应用版本创建时间
+     * @var string <p>安卓应用版本创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @var string <p>shell 安装命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
      */
     public $Command;
 
     /**
-     * @var string shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @var string <p>shell 卸载命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
      */
     public $UninstallCommand;
 
     /**
-     * @var string 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     * @var string <p>应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。</p>
      */
     public $CleanupMode;
 
     /**
-     * @var string 安卓应用版本名称（版本描述、备注）
+     * @var string <p>安卓应用版本名称（版本描述、备注）</p>
      */
     public $AndroidAppVersionName;
 
     /**
-     * @var string 安卓应用启动页
+     * @var string <p>安卓应用启动页</p>
      */
     public $Activity;
 
     /**
-     * @var string 应用版本号（Version Name）
+     * @var string <p>应用版本号（Version Name）</p>
      */
     public $VersionName;
 
     /**
-     * @var string 应用包 MD5
+     * @var string <p>应用包 MD5</p>
      */
     public $MD5;
 
     /**
-     * @var integer 应用包文件大小（字节）
+     * @var integer <p>应用包文件大小（字节）</p>
      */
     public $FileSize;
 
     /**
-     * @var string 安卓应用包名
+     * @var string <p>安卓应用包名</p>
      */
     public $PackageName;
 
     /**
-     * @param string $AndroidAppVersion 安卓应用版本
-     * @param string $State 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
-     * @param string $CreateTime 安卓应用版本创建时间
-     * @param string $Command shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
-     * @param string $UninstallCommand shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
-     * @param string $CleanupMode 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
-     * @param string $AndroidAppVersionName 安卓应用版本名称（版本描述、备注）
-     * @param string $Activity 安卓应用启动页
-     * @param string $VersionName 应用版本号（Version Name）
-     * @param string $MD5 应用包 MD5
-     * @param integer $FileSize 应用包文件大小（字节）
-     * @param string $PackageName 安卓应用包名
+     * @param string $AndroidAppVersion <p>安卓应用版本</p>
+     * @param string $State <p>安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功</p>
+     * @param string $CreateTime <p>安卓应用版本创建时间</p>
+     * @param string $Command <p>shell 安装命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
+     * @param string $UninstallCommand <p>shell 卸载命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
+     * @param string $CleanupMode <p>应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。</p>
+     * @param string $AndroidAppVersionName <p>安卓应用版本名称（版本描述、备注）</p>
+     * @param string $Activity <p>安卓应用启动页</p>
+     * @param string $VersionName <p>应用版本号（Version Name）</p>
+     * @param string $MD5 <p>应用包 MD5</p>
+     * @param integer $FileSize <p>应用包文件大小（字节）</p>
+     * @param string $PackageName <p>安卓应用包名</p>
      */
     function __construct()
     {

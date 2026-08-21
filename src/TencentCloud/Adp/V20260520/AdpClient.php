@@ -29,6 +29,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建应用
  * @method Models\CreateAppTriggerResponse CreateAppTrigger(Models\CreateAppTriggerRequest $req) CreateAppTrigger
  * @method Models\CreateConversationResponse CreateConversation(Models\CreateConversationRequest $req) 新建会话
+ * @method Models\CreateMsgRecordCategoryResponse CreateMsgRecordCategory(Models\CreateMsgRecordCategoryRequest $req) 创建一条消息记录分类，支持指定分类名称与父分类（ParentId 为 0 时表示一级分类）
  * @method Models\CreatePluginResponse CreatePlugin(Models\CreatePluginRequest $req) 获取插件详情
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 新增发布任务
  * @method Models\CreateSkillResponse CreateSkill(Models\CreateSkillRequest $req) 创建skill
@@ -41,6 +42,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) 删除应用
  * @method Models\DeleteAppTriggerResponse DeleteAppTrigger(Models\DeleteAppTriggerRequest $req) DeleteAppTrigger
  * @method Models\DeleteConversationResponse DeleteConversation(Models\DeleteConversationRequest $req) 删除会话
+ * @method Models\DeleteMsgRecordCategoryResponse DeleteMsgRecordCategory(Models\DeleteMsgRecordCategoryRequest $req) 删除指定的消息记录分类
  * @method Models\DeletePluginResponse DeletePlugin(Models\DeletePluginRequest $req) 修改插件
  * @method Models\DeleteSkillResponse DeleteSkill(Models\DeleteSkillRequest $req) 删除自定义 Skill  鉴权：创建者 ∨ (编辑权限 ∧ 删除权限） 拒绝场景：非 Custom 类型 / 已共享 / 安全检测中 / 上架审批中 / 下架审批中
  * @method Models\DeleteSkillShareResponse DeleteSkillShare(Models\DeleteSkillShareRequest $req) 提交共享 Skill 下架审批（v2，两段式：提交→审批→回调下架共享 Skill） 鉴权：删除权 拒绝场景：未共享 / 上架审批中 / 下架审批中
@@ -66,6 +68,8 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeLatestReleaseResponse DescribeLatestRelease(Models\DescribeLatestReleaseRequest $req) 拉取最新发布信息(包含发布时间、状态、渠道)
  * @method Models\DescribeMetricOverviewListResponse DescribeMetricOverviewList(Models\DescribeMetricOverviewListRequest $req) 查询看板总览KPI卡片数据，通过resource_type区分资源看板与业务看板域，返回各域KPI指标列表
  * @method Models\DescribeModelListResponse DescribeModelList(Models\DescribeModelListRequest $req) 查询模型列表
+ * @method Models\DescribeMsgRecordCategoryListResponse DescribeMsgRecordCategoryList(Models\DescribeMsgRecordCategoryListRequest $req) 查询应用的消息记录分类树，返回分类及子分类、各分类下记录数量与操作权限
+ * @method Models\DescribeMsgRecordListResponse DescribeMsgRecordList(Models\DescribeMsgRecordListRequest $req) 查询应用的对话消息记录列表，支持按渠道类型、反馈类型、意图、调用结果等条件过滤，并支持游标分页与按创建时间排序
  * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) 获取插件详情
  * @method Models\DescribePluginSummaryListResponse DescribePluginSummaryList(Models\DescribePluginSummaryListRequest $req) 获取插件列表
  * @method Models\DescribeReleaseListResponse DescribeReleaseList(Models\DescribeReleaseListRequest $req) 发布记录列表
@@ -86,6 +90,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用
  * @method Models\ModifyAppTriggerResponse ModifyAppTrigger(Models\ModifyAppTriggerRequest $req) ModifyAppTrigger
  * @method Models\ModifyConversationResponse ModifyConversation(Models\ModifyConversationRequest $req) 修改会话信息
+ * @method Models\ModifyMsgRecordCategoryResponse ModifyMsgRecordCategory(Models\ModifyMsgRecordCategoryRequest $req) 修改指定消息记录分类的名称
  * @method Models\ModifyPluginResponse ModifyPlugin(Models\ModifyPluginRequest $req) 修改插件
  * @method Models\ModifySkillResponse ModifySkill(Models\ModifySkillRequest $req) Skill修改
  * @method Models\ModifySpaceResponse ModifySpace(Models\ModifySpaceRequest $req) 编辑空间

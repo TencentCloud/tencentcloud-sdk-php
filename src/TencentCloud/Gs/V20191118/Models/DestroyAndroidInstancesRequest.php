@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DestroyAndroidInstances请求参数结构体
  *
- * @method array getAndroidInstanceIds() 获取安卓实例 ID 列表
- * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置安卓实例 ID 列表
+ * @method array getAndroidInstanceIds() 获取<p>安卓实例 ID 列表</p>
+ * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置<p>安卓实例 ID 列表</p>
  */
 class DestroyAndroidInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 安卓实例 ID 列表
+     * @var array <p>安卓实例 ID 列表</p>
      */
     public $AndroidInstanceIds;
 
     /**
-     * @param array $AndroidInstanceIds 安卓实例 ID 列表
+     * @param array $AndroidInstanceIds <p>安卓实例 ID 列表</p>
      */
     function __construct()
     {

@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 算力详情
  *
- * @method string getBundleType() 获取算力套餐ID
- * @method void setBundleType(string $BundleType) 设置算力套餐ID
- * @method integer getCount() 获取节点数量
- * @method void setCount(integer $Count) 设置节点数量
- * @method string getGPUCount() 获取显卡数量
- * @method void setGPUCount(string $GPUCount) 设置显卡数量
- * @method string getGPUMemory() 获取显存
- * @method void setGPUMemory(string $GPUMemory) 设置显存
- * @method string getGPUPerformance() 获取算力
- * @method void setGPUPerformance(string $GPUPerformance) 设置算力
- * @method string getCPU() 获取CPU核数
- * @method void setCPU(string $CPU) 设置CPU核数
- * @method string getMemory() 获取内存
- * @method void setMemory(string $Memory) 设置内存
- * @method boolean getPrepaidEnable() 获取该套餐是否支持包年包月
- * @method void setPrepaidEnable(boolean $PrepaidEnable) 设置该套餐是否支持包年包月
- * @method boolean getPostpaidEnable() 获取该套餐是否支持按量计费
- * @method void setPostpaidEnable(boolean $PostpaidEnable) 设置该套餐是否支持按量计费
+ * @method string getBundleType() 获取<p>算力套餐ID</p>
+ * @method void setBundleType(string $BundleType) 设置<p>算力套餐ID</p>
+ * @method integer getCount() 获取<p>节点数量</p>
+ * @method void setCount(integer $Count) 设置<p>节点数量</p>
+ * @method string getGPUCount() 获取<p>显卡数量</p>
+ * @method void setGPUCount(string $GPUCount) 设置<p>显卡数量</p>
+ * @method string getGPUMemory() 获取<p>显存</p>
+ * @method void setGPUMemory(string $GPUMemory) 设置<p>显存</p>
+ * @method string getGPUPerformance() 获取<p>算力</p>
+ * @method void setGPUPerformance(string $GPUPerformance) 设置<p>算力</p>
+ * @method string getCPU() 获取<p>CPU核数</p>
+ * @method void setCPU(string $CPU) 设置<p>CPU核数</p>
+ * @method string getMemory() 获取<p>内存</p>
+ * @method void setMemory(string $Memory) 设置<p>内存</p>
+ * @method boolean getPrepaidEnable() 获取<p>该套餐是否支持包年包月</p>
+ * @method void setPrepaidEnable(boolean $PrepaidEnable) 设置<p>该套餐是否支持包年包月</p>
+ * @method boolean getPostpaidEnable() 获取<p>该套餐是否支持按量计费</p>
+ * @method void setPostpaidEnable(boolean $PostpaidEnable) 设置<p>该套餐是否支持按量计费</p>
  */
 class ComputeDetail extends AbstractModel
 {
     /**
-     * @var string 算力套餐ID
+     * @var string <p>算力套餐ID</p>
      */
     public $BundleType;
 
     /**
-     * @var integer 节点数量
+     * @var integer <p>节点数量</p>
      */
     public $Count;
 
     /**
-     * @var string 显卡数量
+     * @var string <p>显卡数量</p>
      */
     public $GPUCount;
 
     /**
-     * @var string 显存
+     * @var string <p>显存</p>
      */
     public $GPUMemory;
 
     /**
-     * @var string 算力
+     * @var string <p>算力</p>
      */
     public $GPUPerformance;
 
     /**
-     * @var string CPU核数
+     * @var string <p>CPU核数</p>
      */
     public $CPU;
 
     /**
-     * @var string 内存
+     * @var string <p>内存</p>
      */
     public $Memory;
 
     /**
-     * @var boolean 该套餐是否支持包年包月
+     * @var boolean <p>该套餐是否支持包年包月</p>
      */
     public $PrepaidEnable;
 
     /**
-     * @var boolean 该套餐是否支持按量计费
+     * @var boolean <p>该套餐是否支持按量计费</p>
      */
     public $PostpaidEnable;
 
     /**
-     * @param string $BundleType 算力套餐ID
-     * @param integer $Count 节点数量
-     * @param string $GPUCount 显卡数量
-     * @param string $GPUMemory 显存
-     * @param string $GPUPerformance 算力
-     * @param string $CPU CPU核数
-     * @param string $Memory 内存
-     * @param boolean $PrepaidEnable 该套餐是否支持包年包月
-     * @param boolean $PostpaidEnable 该套餐是否支持按量计费
+     * @param string $BundleType <p>算力套餐ID</p>
+     * @param integer $Count <p>节点数量</p>
+     * @param string $GPUCount <p>显卡数量</p>
+     * @param string $GPUMemory <p>显存</p>
+     * @param string $GPUPerformance <p>算力</p>
+     * @param string $CPU <p>CPU核数</p>
+     * @param string $Memory <p>内存</p>
+     * @param boolean $PrepaidEnable <p>该套餐是否支持包年包月</p>
+     * @param boolean $PostpaidEnable <p>该套餐是否支持按量计费</p>
      */
     function __construct()
     {

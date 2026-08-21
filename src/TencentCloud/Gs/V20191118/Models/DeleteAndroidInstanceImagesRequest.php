@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAndroidInstanceImages请求参数结构体
  *
- * @method array getAndroidInstanceImageIds() 获取镜像 ID 列表
- * @method void setAndroidInstanceImageIds(array $AndroidInstanceImageIds) 设置镜像 ID 列表
+ * @method array getAndroidInstanceImageIds() 获取<p>镜像 ID 列表</p>
+ * @method void setAndroidInstanceImageIds(array $AndroidInstanceImageIds) 设置<p>镜像 ID 列表</p>
  */
 class DeleteAndroidInstanceImagesRequest extends AbstractModel
 {
     /**
-     * @var array 镜像 ID 列表
+     * @var array <p>镜像 ID 列表</p>
      */
     public $AndroidInstanceImageIds;
 
     /**
-     * @param array $AndroidInstanceImageIds 镜像 ID 列表
+     * @param array $AndroidInstanceImageIds <p>镜像 ID 列表</p>
      */
     function __construct()
     {

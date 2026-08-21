@@ -20,70 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetectEnvAndSoundQuality请求参数结构体
  *
- * @method string getTextId() 获取标注文本信息 ID
- * @method void setTextId(string $TextId) 设置标注文本信息 ID
- * @method string getAudioData() 获取语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。
- * @method void setAudioData(string $AudioData) 设置语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。
- * @method integer getTypeId() 获取1:环境检测 2:音质检测
- * @method void setTypeId(integer $TypeId) 设置1:环境检测 2:音质检测
- * @method string getCodec() 获取音频格式，音频类型(wav,mp3,aac,m4a)
- * @method void setCodec(string $Codec) 设置音频格式，音频类型(wav,mp3,aac,m4a)
- * @method integer getSampleRate() 获取音频采样率。
-16000：16k（默认）；
-24000：24k（仅一句话声音复刻支持）；
-48000：48k（仅一句话声音复刻支持）。
- * @method void setSampleRate(integer $SampleRate) 设置音频采样率。
-16000：16k（默认）；
-24000：24k（仅一句话声音复刻支持）；
-48000：48k（仅一句话声音复刻支持）。
- * @method integer getTaskType() 获取复刻类型。5 - 一句话声音复刻。
- * @method void setTaskType(integer $TaskType) 设置复刻类型。5 - 一句话声音复刻。
+ * @method string getTextId() 获取<p>标注文本信息 ID</p>
+ * @method void setTextId(string $TextId) 设置<p>标注文本信息 ID</p>
+ * @method string getAudioData() 获取<p>语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open(&quot;input.aac&quot;, mode=&quot;rb&quot;).read()), encoding=&#39;utf-8&#39;) )。</p>
+ * @method void setAudioData(string $AudioData) 设置<p>语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open(&quot;input.aac&quot;, mode=&quot;rb&quot;).read()), encoding=&#39;utf-8&#39;) )。</p>
+ * @method integer getTypeId() 获取<p>1:环境检测 2:音质检测</p>
+ * @method void setTypeId(integer $TypeId) 设置<p>1:环境检测 2:音质检测</p>
+ * @method string getCodec() 获取<p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
+ * @method void setCodec(string $Codec) 设置<p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
+ * @method integer getSampleRate() 获取<p>音频采样率。<br>16000：16k（默认）；<br>24000：24k（仅一句话声音复刻支持）；<br>48000：48k（仅一句话声音复刻支持）。</p>
+ * @method void setSampleRate(integer $SampleRate) 设置<p>音频采样率。<br>16000：16k（默认）；<br>24000：24k（仅一句话声音复刻支持）；<br>48000：48k（仅一句话声音复刻支持）。</p>
+ * @method integer getTaskType() 获取<p>复刻类型。5 - 一句话声音复刻。</p>
+ * @method void setTaskType(integer $TaskType) 设置<p>复刻类型。5 - 一句话声音复刻。</p>
  */
 class DetectEnvAndSoundQualityRequest extends AbstractModel
 {
     /**
-     * @var string 标注文本信息 ID
+     * @var string <p>标注文本信息 ID</p>
      */
     public $TextId;
 
     /**
-     * @var string 语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。
+     * @var string <p>语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open(&quot;input.aac&quot;, mode=&quot;rb&quot;).read()), encoding=&#39;utf-8&#39;) )。</p>
      */
     public $AudioData;
 
     /**
-     * @var integer 1:环境检测 2:音质检测
+     * @var integer <p>1:环境检测 2:音质检测</p>
      */
     public $TypeId;
 
     /**
-     * @var string 音频格式，音频类型(wav,mp3,aac,m4a)
+     * @var string <p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
      */
     public $Codec;
 
     /**
-     * @var integer 音频采样率。
-16000：16k（默认）；
-24000：24k（仅一句话声音复刻支持）；
-48000：48k（仅一句话声音复刻支持）。
+     * @var integer <p>音频采样率。<br>16000：16k（默认）；<br>24000：24k（仅一句话声音复刻支持）；<br>48000：48k（仅一句话声音复刻支持）。</p>
      */
     public $SampleRate;
 
     /**
-     * @var integer 复刻类型。5 - 一句话声音复刻。
+     * @var integer <p>复刻类型。5 - 一句话声音复刻。</p>
      */
     public $TaskType;
 
     /**
-     * @param string $TextId 标注文本信息 ID
-     * @param string $AudioData 语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。
-     * @param integer $TypeId 1:环境检测 2:音质检测
-     * @param string $Codec 音频格式，音频类型(wav,mp3,aac,m4a)
-     * @param integer $SampleRate 音频采样率。
-16000：16k（默认）；
-24000：24k（仅一句话声音复刻支持）；
-48000：48k（仅一句话声音复刻支持）。
-     * @param integer $TaskType 复刻类型。5 - 一句话声音复刻。
+     * @param string $TextId <p>标注文本信息 ID</p>
+     * @param string $AudioData <p>语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open(&quot;input.aac&quot;, mode=&quot;rb&quot;).read()), encoding=&#39;utf-8&#39;) )。</p>
+     * @param integer $TypeId <p>1:环境检测 2:音质检测</p>
+     * @param string $Codec <p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
+     * @param integer $SampleRate <p>音频采样率。<br>16000：16k（默认）；<br>24000：24k（仅一句话声音复刻支持）；<br>48000：48k（仅一句话声音复刻支持）。</p>
+     * @param integer $TaskType <p>复刻类型。5 - 一句话声音复刻。</p>
      */
     function __construct()
     {

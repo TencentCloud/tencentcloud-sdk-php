@@ -20,235 +20,115 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillDetailForOrganization请求参数结构体
  *
- * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
- * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
- * @method integer getLimit() 获取数量，最大值为100
- * @method void setLimit(integer $Limit) 设置数量，最大值为100
- * @method string getPeriodType() 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
- * @method void setPeriodType(string $PeriodType) 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
- * @method string getMonth() 获取月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。最多可拉取近18个月内的数据。
- * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。最多可拉取近18个月内的数据。
- * @method string getBeginTime() 获取周期开始时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取18个月内的数据。
- * @method void setBeginTime(string $BeginTime) 设置周期开始时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取18个月内的数据。
- * @method string getEndTime() 获取周期结束时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取近18个月内的数据。
- * @method void setEndTime(string $EndTime) 设置周期结束时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取近18个月内的数据。
- * @method integer getNeedRecordNum() 获取是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
- * @method void setNeedRecordNum(integer $NeedRecordNum) 设置是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
- * @method string getPayMode() 获取付费模式 prePay(表示包年包月)/postPay(表示按时按量)
- * @method void setPayMode(string $PayMode) 设置付费模式 prePay(表示包年包月)/postPay(表示按时按量)
- * @method string getResourceId() 获取查询指定资源信息
- * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
- * @method string getActionType() 获取查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
-包年包月新购
-包年包月续费
-包年包月配置变更
-包年包月退款 
-按量计费扣费 
-线下项目扣费 
-线下产品扣费 
-调账扣费 
-调账补偿 
-按量计费小时结 
-按量计费日结 
-按量计费月结 
-竞价实例小时结 
-线下项目调账补偿 
-线下产品调账补偿 
-优惠扣费 
-优惠补偿 
-按量计费迁入资源 
-按量计费迁出资源 
-包年包月迁入资源 
-包年包月迁出资源 
-预付费用 
-小时费用 
-预留实例退款 
-按量计费冲正 
-包年包月转按量 
-保底扣款 
-节省计划小时费用
- * @method void setActionType(string $ActionType) 设置查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
-包年包月新购
-包年包月续费
-包年包月配置变更
-包年包月退款 
-按量计费扣费 
-线下项目扣费 
-线下产品扣费 
-调账扣费 
-调账补偿 
-按量计费小时结 
-按量计费日结 
-按量计费月结 
-竞价实例小时结 
-线下项目调账补偿 
-线下产品调账补偿 
-优惠扣费 
-优惠补偿 
-按量计费迁入资源 
-按量计费迁出资源 
-包年包月迁入资源 
-包年包月迁出资源 
-预付费用 
-小时费用 
-预留实例退款 
-按量计费冲正 
-包年包月转按量 
-保底扣款 
-节省计划小时费用
- * @method integer getProjectId() 获取项目ID:资源所属项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID:资源所属项目ID
- * @method string getBusinessCode() 获取产品名称代码
-备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
- * @method void setBusinessCode(string $BusinessCode) 设置产品名称代码
-备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
- * @method string getContext() 获取上一次请求返回的上下文信息，翻页查询Month>=2023-05的月份的数据可加快查询速度，数据量10万级别以上的用户建议使用，查询速度可提升2~10倍
- * @method void setContext(string $Context) 设置上一次请求返回的上下文信息，翻页查询Month>=2023-05的月份的数据可加快查询速度，数据量10万级别以上的用户建议使用，查询速度可提升2~10倍
+ * @method integer getOffset() 获取<p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推</p>
+ * @method integer getLimit() 获取<p>数量，最大值为100</p>
+ * @method void setLimit(integer $Limit) 设置<p>数量，最大值为100</p>
+ * @method string getPeriodType() 获取<p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
+ * @method void setPeriodType(string $PeriodType) 设置<p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
+ * @method string getMonth() 获取<p>月份，格式为yyyy-mm，Month和BeginTime&amp;EndTime必传一个，如果有传BeginTime&amp;EndTime则Month字段无效。最多可拉取近18个月内的数据。</p>
+ * @method void setMonth(string $Month) 设置<p>月份，格式为yyyy-mm，Month和BeginTime&amp;EndTime必传一个，如果有传BeginTime&amp;EndTime则Month字段无效。最多可拉取近18个月内的数据。</p>
+ * @method string getBeginTime() 获取<p>周期开始时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取18个月内的数据。</p>
+ * @method void setBeginTime(string $BeginTime) 设置<p>周期开始时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取18个月内的数据。</p>
+ * @method string getEndTime() 获取<p>周期结束时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取近18个月内的数据。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>周期结束时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取近18个月内的数据。</p>
+ * @method integer getNeedRecordNum() 获取<p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
+ * @method void setNeedRecordNum(integer $NeedRecordNum) 设置<p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
+ * @method string getPayMode() 获取<p>付费模式 prePay(表示包年包月)/postPay(表示按时按量)</p>
+ * @method void setPayMode(string $PayMode) 设置<p>付费模式 prePay(表示包年包月)/postPay(表示按时按量)</p>
+ * @method string getResourceId() 获取<p>查询指定资源信息</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>查询指定资源信息</p>
+ * @method string getActionType() 获取<p>查询交易类型（请使用交易类型名称入参），入参示例枚举如下：<br>包年包月新购<br>包年包月续费<br>包年包月配置变更<br>包年包月退款<br>按量计费扣费<br>线下项目扣费<br>线下产品扣费<br>调账扣费<br>调账补偿<br>按量计费小时结<br>按量计费日结<br>按量计费月结<br>竞价实例小时结<br>线下项目调账补偿<br>线下产品调账补偿<br>优惠扣费<br>优惠补偿<br>按量计费迁入资源<br>按量计费迁出资源<br>包年包月迁入资源<br>包年包月迁出资源<br>预付费用<br>小时费用<br>预留实例退款<br>按量计费冲正<br>包年包月转按量<br>保底扣款<br>节省计划小时费用</p>
+ * @method void setActionType(string $ActionType) 设置<p>查询交易类型（请使用交易类型名称入参），入参示例枚举如下：<br>包年包月新购<br>包年包月续费<br>包年包月配置变更<br>包年包月退款<br>按量计费扣费<br>线下项目扣费<br>线下产品扣费<br>调账扣费<br>调账补偿<br>按量计费小时结<br>按量计费日结<br>按量计费月结<br>竞价实例小时结<br>线下项目调账补偿<br>线下产品调账补偿<br>优惠扣费<br>优惠补偿<br>按量计费迁入资源<br>按量计费迁出资源<br>包年包月迁入资源<br>包年包月迁出资源<br>预付费用<br>小时费用<br>预留实例退款<br>按量计费冲正<br>包年包月转按量<br>保底扣款<br>节省计划小时费用</p>
+ * @method integer getProjectId() 获取<p>项目ID:资源所属项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID:资源所属项目ID</p>
+ * @method string getBusinessCode() 获取<p>产品名称代码<br>备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a></p>
+ * @method void setBusinessCode(string $BusinessCode) 设置<p>产品名称代码<br>备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a></p>
+ * @method string getContext() 获取<p>上一次请求返回的上下文信息，翻页查询Month&gt;=2023-05的月份的数据可加快查询速度，数据量10万级别以上的用户建议使用，查询速度可提升2~10倍</p>
+ * @method void setContext(string $Context) 设置<p>上一次请求返回的上下文信息，翻页查询Month&gt;=2023-05的月份的数据可加快查询速度，数据量10万级别以上的用户建议使用，查询速度可提升2~10倍</p>
  */
 class DescribeBillDetailForOrganizationRequest extends AbstractModel
 {
     /**
-     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+     * @var integer <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推</p>
      */
     public $Offset;
 
     /**
-     * @var integer 数量，最大值为100
+     * @var integer <p>数量，最大值为100</p>
      */
     public $Limit;
 
     /**
-     * @var string 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     * @var string <p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
      * @deprecated
      */
     public $PeriodType;
 
     /**
-     * @var string 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。最多可拉取近18个月内的数据。
+     * @var string <p>月份，格式为yyyy-mm，Month和BeginTime&amp;EndTime必传一个，如果有传BeginTime&amp;EndTime则Month字段无效。最多可拉取近18个月内的数据。</p>
      */
     public $Month;
 
     /**
-     * @var string 周期开始时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取18个月内的数据。
+     * @var string <p>周期开始时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取18个月内的数据。</p>
      */
     public $BeginTime;
 
     /**
-     * @var string 周期结束时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取近18个月内的数据。
+     * @var string <p>周期结束时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取近18个月内的数据。</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
+     * @var integer <p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
      */
     public $NeedRecordNum;
 
     /**
-     * @var string 付费模式 prePay(表示包年包月)/postPay(表示按时按量)
+     * @var string <p>付费模式 prePay(表示包年包月)/postPay(表示按时按量)</p>
      */
     public $PayMode;
 
     /**
-     * @var string 查询指定资源信息
+     * @var string <p>查询指定资源信息</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
-包年包月新购
-包年包月续费
-包年包月配置变更
-包年包月退款 
-按量计费扣费 
-线下项目扣费 
-线下产品扣费 
-调账扣费 
-调账补偿 
-按量计费小时结 
-按量计费日结 
-按量计费月结 
-竞价实例小时结 
-线下项目调账补偿 
-线下产品调账补偿 
-优惠扣费 
-优惠补偿 
-按量计费迁入资源 
-按量计费迁出资源 
-包年包月迁入资源 
-包年包月迁出资源 
-预付费用 
-小时费用 
-预留实例退款 
-按量计费冲正 
-包年包月转按量 
-保底扣款 
-节省计划小时费用
+     * @var string <p>查询交易类型（请使用交易类型名称入参），入参示例枚举如下：<br>包年包月新购<br>包年包月续费<br>包年包月配置变更<br>包年包月退款<br>按量计费扣费<br>线下项目扣费<br>线下产品扣费<br>调账扣费<br>调账补偿<br>按量计费小时结<br>按量计费日结<br>按量计费月结<br>竞价实例小时结<br>线下项目调账补偿<br>线下产品调账补偿<br>优惠扣费<br>优惠补偿<br>按量计费迁入资源<br>按量计费迁出资源<br>包年包月迁入资源<br>包年包月迁出资源<br>预付费用<br>小时费用<br>预留实例退款<br>按量计费冲正<br>包年包月转按量<br>保底扣款<br>节省计划小时费用</p>
      */
     public $ActionType;
 
     /**
-     * @var integer 项目ID:资源所属项目ID
+     * @var integer <p>项目ID:资源所属项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 产品名称代码
-备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+     * @var string <p>产品名称代码<br>备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a></p>
      */
     public $BusinessCode;
 
     /**
-     * @var string 上一次请求返回的上下文信息，翻页查询Month>=2023-05的月份的数据可加快查询速度，数据量10万级别以上的用户建议使用，查询速度可提升2~10倍
+     * @var string <p>上一次请求返回的上下文信息，翻页查询Month&gt;=2023-05的月份的数据可加快查询速度，数据量10万级别以上的用户建议使用，查询速度可提升2~10倍</p>
      */
     public $Context;
 
     /**
-     * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
-     * @param integer $Limit 数量，最大值为100
-     * @param string $PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
-     * @param string $Month 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。最多可拉取近18个月内的数据。
-     * @param string $BeginTime 周期开始时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取18个月内的数据。
-     * @param string $EndTime 周期结束时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取近18个月内的数据。
-     * @param integer $NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
-     * @param string $PayMode 付费模式 prePay(表示包年包月)/postPay(表示按时按量)
-     * @param string $ResourceId 查询指定资源信息
-     * @param string $ActionType 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
-包年包月新购
-包年包月续费
-包年包月配置变更
-包年包月退款 
-按量计费扣费 
-线下项目扣费 
-线下产品扣费 
-调账扣费 
-调账补偿 
-按量计费小时结 
-按量计费日结 
-按量计费月结 
-竞价实例小时结 
-线下项目调账补偿 
-线下产品调账补偿 
-优惠扣费 
-优惠补偿 
-按量计费迁入资源 
-按量计费迁出资源 
-包年包月迁入资源 
-包年包月迁出资源 
-预付费用 
-小时费用 
-预留实例退款 
-按量计费冲正 
-包年包月转按量 
-保底扣款 
-节省计划小时费用
-     * @param integer $ProjectId 项目ID:资源所属项目ID
-     * @param string $BusinessCode 产品名称代码
-备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
-     * @param string $Context 上一次请求返回的上下文信息，翻页查询Month>=2023-05的月份的数据可加快查询速度，数据量10万级别以上的用户建议使用，查询速度可提升2~10倍
+     * @param integer $Offset <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推</p>
+     * @param integer $Limit <p>数量，最大值为100</p>
+     * @param string $PeriodType <p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
+     * @param string $Month <p>月份，格式为yyyy-mm，Month和BeginTime&amp;EndTime必传一个，如果有传BeginTime&amp;EndTime则Month字段无效。最多可拉取近18个月内的数据。</p>
+     * @param string $BeginTime <p>周期开始时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取18个月内的数据。</p>
+     * @param string $EndTime <p>周期结束时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&amp;EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。最多可拉取近18个月内的数据。</p>
+     * @param integer $NeedRecordNum <p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
+     * @param string $PayMode <p>付费模式 prePay(表示包年包月)/postPay(表示按时按量)</p>
+     * @param string $ResourceId <p>查询指定资源信息</p>
+     * @param string $ActionType <p>查询交易类型（请使用交易类型名称入参），入参示例枚举如下：<br>包年包月新购<br>包年包月续费<br>包年包月配置变更<br>包年包月退款<br>按量计费扣费<br>线下项目扣费<br>线下产品扣费<br>调账扣费<br>调账补偿<br>按量计费小时结<br>按量计费日结<br>按量计费月结<br>竞价实例小时结<br>线下项目调账补偿<br>线下产品调账补偿<br>优惠扣费<br>优惠补偿<br>按量计费迁入资源<br>按量计费迁出资源<br>包年包月迁入资源<br>包年包月迁出资源<br>预付费用<br>小时费用<br>预留实例退款<br>按量计费冲正<br>包年包月转按量<br>保底扣款<br>节省计划小时费用</p>
+     * @param integer $ProjectId <p>项目ID:资源所属项目ID</p>
+     * @param string $BusinessCode <p>产品名称代码<br>备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a></p>
+     * @param string $Context <p>上一次请求返回的上下文信息，翻页查询Month&gt;=2023-05的月份的数据可加快查询速度，数据量10万级别以上的用户建议使用，查询速度可提升2~10倍</p>
      */
     function __construct()
     {

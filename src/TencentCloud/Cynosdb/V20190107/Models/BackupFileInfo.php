@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapShotType(string $SnapShotType) 设置<p>快照类型，可选值：full，全量；increment，增量</p>
  * @method string getBackupName() 获取<p>备份文件备注</p>
  * @method void setBackupName(string $BackupName) 设置<p>备份文件备注</p>
+ * @method array getExistRegions() 获取<p>备份文件所在地域</p>
+ * @method void setExistRegions(array $ExistRegions) 设置<p>备份文件所在地域</p>
  * @method string getCopyStatus() 获取<p>投递状态</p>
  * @method void setCopyStatus(string $CopyStatus) 设置<p>投递状态</p>
  * @method string getEncryptKeyId() 获取<p>秘钥id</p>
@@ -118,6 +120,11 @@ class BackupFileInfo extends AbstractModel
     public $BackupName;
 
     /**
+     * @var array <p>备份文件所在地域</p>
+     */
+    public $ExistRegions;
+
+    /**
      * @var string <p>投递状态</p>
      */
     public $CopyStatus;
@@ -155,6 +162,7 @@ class BackupFileInfo extends AbstractModel
      * @param integer $BackupId <p>备份ID</p>
      * @param string $SnapShotType <p>快照类型，可选值：full，全量；increment，增量</p>
      * @param string $BackupName <p>备份文件备注</p>
+     * @param array $ExistRegions <p>备份文件所在地域</p>
      * @param string $CopyStatus <p>投递状态</p>
      * @param string $EncryptKeyId <p>秘钥id</p>
      * @param string $EncryptRegion <p>秘钥地域</p>
@@ -220,6 +228,15 @@ class BackupFileInfo extends AbstractModel
 
         if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
             $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("ExistRegions",$param) and $param["ExistRegions"] !== null) {
+            $this->ExistRegions = [];
+            foreach ($param["ExistRegions"] as $key => $value){
+                $obj = new BackupRegionAndIds();
+                $obj->deserialize($value);
+                array_push($this->ExistRegions, $obj);
+            }
         }
 
         if (array_key_exists("CopyStatus",$param) and $param["CopyStatus"] !== null) {

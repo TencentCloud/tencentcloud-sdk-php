@@ -107,6 +107,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeClusterPeriodScalePolicyResponse DescribeClusterPeriodScalePolicy(Models\DescribeClusterPeriodScalePolicyRequest $req) 查询集群内所有的周期弹性策略
  * @method Models\DescribeClusterReadOnlyResponse DescribeClusterReadOnly(Models\DescribeClusterReadOnlyRequest $req) 本接口（DescribeClusterReadOnly）用于查询集群只读开关。
  * @method Models\DescribeClusterServerlessScalePlansResponse DescribeClusterServerlessScalePlans(Models\DescribeClusterServerlessScalePlansRequest $req) 查询Serverless弹性扩容计划
+ * @method Models\DescribeClusterStorageAutoExpandResponse DescribeClusterStorageAutoExpand(Models\DescribeClusterStorageAutoExpandRequest $req) 本接口（DescribeClusterStorageAutoExpand）用于查询自动库容配置。
  * @method Models\DescribeClusterTransparentEncryptInfoResponse DescribeClusterTransparentEncryptInfo(Models\DescribeClusterTransparentEncryptInfoRequest $req) 查询集群透明加密信息
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息。

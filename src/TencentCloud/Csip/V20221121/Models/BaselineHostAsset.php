@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceID() 获取<p>云主机实例 ID，格式形如 ins-instanceid。</p>
  * @method void setInstanceID(string $InstanceID) 设置<p>云主机实例 ID，格式形如 ins-instanceid。</p>
- * @method string getQUUID() 获取<p>CWP（云镜）侧主机唯一标识 QUUID。</p>
- * @method void setQUUID(string $QUUID) 设置<p>CWP（云镜）侧主机唯一标识 QUUID。</p>
+ * @method string getQUUID() 获取<p>主机唯一标识 QUUID。</p>
+ * @method void setQUUID(string $QUUID) 设置<p>主机唯一标识 QUUID。</p>
  * @method string getUUID() 获取<p>主机 Agent 上报的 UUID。</p>
  * @method void setUUID(string $UUID) 设置<p>主机 Agent 上报的 UUID。</p>
  * @method string getPublicIP() 获取<p>主机公网 IP。</p>
@@ -57,7 +57,7 @@ class BaselineHostAsset extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var string <p>CWP（云镜）侧主机唯一标识 QUUID。</p>
+     * @var string <p>主机唯一标识 QUUID。</p>
      */
     public $QUUID;
 
@@ -123,7 +123,7 @@ class BaselineHostAsset extends AbstractModel
 
     /**
      * @param string $InstanceID <p>云主机实例 ID，格式形如 ins-instanceid。</p>
-     * @param string $QUUID <p>CWP（云镜）侧主机唯一标识 QUUID。</p>
+     * @param string $QUUID <p>主机唯一标识 QUUID。</p>
      * @param string $UUID <p>主机 Agent 上报的 UUID。</p>
      * @param string $PublicIP <p>主机公网 IP。</p>
      * @param string $PrivateIP <p>主机内网 IP。</p>

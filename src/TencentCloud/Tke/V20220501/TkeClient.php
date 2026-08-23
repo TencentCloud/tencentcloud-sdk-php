@@ -127,6 +127,7 @@ use TencentCloud\Tke\V20220501\Models as Models;
  * @method Models\DescribeNodePoolsResponse DescribeNodePools(Models\DescribeNodePoolsRequest $req) 查询 TKE 节点池列表
  * @method Models\DescribeNodePoolsElasticityStrengthResponse DescribeNodePoolsElasticityStrength(Models\DescribeNodePoolsElasticityStrengthRequest $req) 查询节点池健康度相关信息
  * @method Models\DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(Models\DescribeZoneInstanceConfigInfosRequest $req) 查询原生节点机型配置
+ * @method Models\DetachApplicationRoleResponse DetachApplicationRole(Models\DetachApplicationRoleRequest $req) 解绑原生节点 Application Role
  * @method Models\ModifyClusterMachineResponse ModifyClusterMachine(Models\ModifyClusterMachineRequest $req) 修改原生节点
  * @method Models\ModifyHealthCheckPolicyResponse ModifyHealthCheckPolicy(Models\ModifyHealthCheckPolicyRequest $req) 修改健康检测策略
  * @method Models\ModifyNodePoolResponse ModifyNodePool(Models\ModifyNodePoolRequest $req) 更新 TKE 节点池

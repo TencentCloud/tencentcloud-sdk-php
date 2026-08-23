@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置<p>节点角色：master/slave/readonly</p>
  * @method integer getWeight() 获取<p>路由权重，取值范围 [0, 100]</p>
  * @method void setWeight(integer $Weight) 设置<p>路由权重，取值范围 [0, 100]</p>
- * @method string getStatus() 获取<p>路由状态：available/unavailable</p>
- * @method void setStatus(string $Status) 设置<p>路由状态：available/unavailable</p>
+ * @method string getStatus() 获取<p>路由状态：online/offline</p><p>枚举值：</p><ul><li>online： 节点处于在线状态</li><li>offline： 节点处于下线状态</li></ul>
+ * @method void setStatus(string $Status) 设置<p>路由状态：online/offline</p><p>枚举值：</p><ul><li>online： 节点处于在线状态</li><li>offline： 节点处于下线状态</li></ul>
  */
 class ProxyRoute extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ProxyRoute extends AbstractModel
     public $Weight;
 
     /**
-     * @var string <p>路由状态：available/unavailable</p>
+     * @var string <p>路由状态：online/offline</p><p>枚举值：</p><ul><li>online： 节点处于在线状态</li><li>offline： 节点处于下线状态</li></ul>
      */
     public $Status;
 
@@ -55,7 +55,7 @@ class ProxyRoute extends AbstractModel
      * @param string $NodeId <p>路由指向的 PG 节点 ID（实例或只读节点 ID）</p>
      * @param string $Role <p>节点角色：master/slave/readonly</p>
      * @param integer $Weight <p>路由权重，取值范围 [0, 100]</p>
-     * @param string $Status <p>路由状态：available/unavailable</p>
+     * @param string $Status <p>路由状态：online/offline</p><p>枚举值：</p><ul><li>online： 节点处于在线状态</li><li>offline： 节点处于下线状态</li></ul>
      */
     function __construct()
     {

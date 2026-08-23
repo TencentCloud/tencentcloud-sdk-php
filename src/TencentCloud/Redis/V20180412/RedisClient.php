@@ -121,6 +121,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyInstanceLogDeliveryResponse ModifyInstanceLogDelivery(Models\ModifyInstanceLogDeliveryRequest $req) 本接口（ModifyInstanceLogDelivery）用于开启或关闭投递实例日志到CLS。
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) 本接口（ModifyInstanceParams）用于修改 Redis 实例的参数配置。
  * @method Models\ModifyInstancePasswordResponse ModifyInstancePassword(Models\ModifyInstancePasswordRequest $req) 本接口（ModifyInstancePassword）用于修改实例访问密码。
+ * @method Models\ModifyInstancePasswordPolicyResponse ModifyInstancePasswordPolicy(Models\ModifyInstancePasswordPolicyRequest $req) 本接口（ModifyInstancePasswordPolicy）用于修改实例密码复杂度。
  * @method Models\ModifyInstanceReadOnlyResponse ModifyInstanceReadOnly(Models\ModifyInstanceReadOnlyRequest $req) 本接口（ModifyInstanceReadOnly）用于设置实例输入模式。
  * @method Models\ModifyLogResponse ModifyLog(Models\ModifyLogRequest $req) 修改日志
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) 本接口（ModifyMaintenanceWindow）用于修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。

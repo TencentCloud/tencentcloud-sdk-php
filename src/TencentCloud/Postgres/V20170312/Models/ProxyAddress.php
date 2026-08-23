@@ -38,6 +38,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoutes(array $Routes) 设置<p>路由列表</p>
  * @method integer getConnectionPoolLimit() 获取<p>连接池大小</p>
  * @method void setConnectionPoolLimit(integer $ConnectionPoolLimit) 设置<p>连接池大小</p>
+ * @method boolean getRwSplitEnable() 获取<p>读写分离开关。启用后 proxy 将读请求分发到只读节点，写请求仍走主节点。</p>
+ * @method void setRwSplitEnable(boolean $RwSplitEnable) 设置<p>读写分离开关。启用后 proxy 将读请求分发到只读节点，写请求仍走主节点。</p>
+ * @method string getWeightMode() 获取<p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配</li><li>custom： 用户自定义权重</li></ul>
+ * @method void setWeightMode(string $WeightMode) 设置<p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配</li><li>custom： 用户自定义权重</li></ul>
+ * @method boolean getRoAutoAdd() 获取<p>新增只读是否自动加入读写分离</p>
+ * @method void setRoAutoAdd(boolean $RoAutoAdd) 设置<p>新增只读是否自动加入读写分离</p>
+ * @method boolean getLatencyRemove() 获取<p>延迟剔除开关</p>
+ * @method void setLatencyRemove(boolean $LatencyRemove) 设置<p>延迟剔除开关</p>
+ * @method integer getLatencyRemoveTime() 获取<p>延迟剔除阈值</p><p>单位：秒</p>
+ * @method void setLatencyRemoveTime(integer $LatencyRemoveTime) 设置<p>延迟剔除阈值</p><p>单位：秒</p>
+ * @method integer getMinRouteNum() 获取<p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+ * @method void setMinRouteNum(integer $MinRouteNum) 设置<p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+ * @method boolean getFailOver() 获取<p>只读全部异常时是否回切到主</p>
+ * @method void setFailOver(boolean $FailOver) 设置<p>只读全部异常时是否回切到主</p>
+ * @method integer getLoadBalancePolicy() 获取<p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+ * @method void setLoadBalancePolicy(integer $LoadBalancePolicy) 设置<p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
  */
 class ProxyAddress extends AbstractModel
 {
@@ -87,6 +103,46 @@ class ProxyAddress extends AbstractModel
     public $ConnectionPoolLimit;
 
     /**
+     * @var boolean <p>读写分离开关。启用后 proxy 将读请求分发到只读节点，写请求仍走主节点。</p>
+     */
+    public $RwSplitEnable;
+
+    /**
+     * @var string <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配</li><li>custom： 用户自定义权重</li></ul>
+     */
+    public $WeightMode;
+
+    /**
+     * @var boolean <p>新增只读是否自动加入读写分离</p>
+     */
+    public $RoAutoAdd;
+
+    /**
+     * @var boolean <p>延迟剔除开关</p>
+     */
+    public $LatencyRemove;
+
+    /**
+     * @var integer <p>延迟剔除阈值</p><p>单位：秒</p>
+     */
+    public $LatencyRemoveTime;
+
+    /**
+     * @var integer <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+     */
+    public $MinRouteNum;
+
+    /**
+     * @var boolean <p>只读全部异常时是否回切到主</p>
+     */
+    public $FailOver;
+
+    /**
+     * @var integer <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+     */
+    public $LoadBalancePolicy;
+
+    /**
      * @param string $AddressId <p>Proxy 接入地址 ID</p>
      * @param string $Vip <p>Proxy 接入地址 IP</p>
      * @param integer $Vport <p>Proxy 接入地址端口</p>
@@ -96,6 +152,14 @@ class ProxyAddress extends AbstractModel
      * @param boolean $ConnectionPool <p>是否开启连接池：0-未开启，1-开启</p>
      * @param array $Routes <p>路由列表</p>
      * @param integer $ConnectionPoolLimit <p>连接池大小</p>
+     * @param boolean $RwSplitEnable <p>读写分离开关。启用后 proxy 将读请求分发到只读节点，写请求仍走主节点。</p>
+     * @param string $WeightMode <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配</li><li>custom： 用户自定义权重</li></ul>
+     * @param boolean $RoAutoAdd <p>新增只读是否自动加入读写分离</p>
+     * @param boolean $LatencyRemove <p>延迟剔除开关</p>
+     * @param integer $LatencyRemoveTime <p>延迟剔除阈值</p><p>单位：秒</p>
+     * @param integer $MinRouteNum <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+     * @param boolean $FailOver <p>只读全部异常时是否回切到主</p>
+     * @param integer $LoadBalancePolicy <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
      */
     function __construct()
     {
@@ -149,6 +213,38 @@ class ProxyAddress extends AbstractModel
 
         if (array_key_exists("ConnectionPoolLimit",$param) and $param["ConnectionPoolLimit"] !== null) {
             $this->ConnectionPoolLimit = $param["ConnectionPoolLimit"];
+        }
+
+        if (array_key_exists("RwSplitEnable",$param) and $param["RwSplitEnable"] !== null) {
+            $this->RwSplitEnable = $param["RwSplitEnable"];
+        }
+
+        if (array_key_exists("WeightMode",$param) and $param["WeightMode"] !== null) {
+            $this->WeightMode = $param["WeightMode"];
+        }
+
+        if (array_key_exists("RoAutoAdd",$param) and $param["RoAutoAdd"] !== null) {
+            $this->RoAutoAdd = $param["RoAutoAdd"];
+        }
+
+        if (array_key_exists("LatencyRemove",$param) and $param["LatencyRemove"] !== null) {
+            $this->LatencyRemove = $param["LatencyRemove"];
+        }
+
+        if (array_key_exists("LatencyRemoveTime",$param) and $param["LatencyRemoveTime"] !== null) {
+            $this->LatencyRemoveTime = $param["LatencyRemoveTime"];
+        }
+
+        if (array_key_exists("MinRouteNum",$param) and $param["MinRouteNum"] !== null) {
+            $this->MinRouteNum = $param["MinRouteNum"];
+        }
+
+        if (array_key_exists("FailOver",$param) and $param["FailOver"] !== null) {
+            $this->FailOver = $param["FailOver"];
+        }
+
+        if (array_key_exists("LoadBalancePolicy",$param) and $param["LoadBalancePolicy"] !== null) {
+            $this->LoadBalancePolicy = $param["LoadBalancePolicy"];
         }
     }
 }

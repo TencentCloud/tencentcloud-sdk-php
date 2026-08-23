@@ -72,9 +72,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompareLibType(string $CompareLibType) 设置<p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLivenessMode() 获取<p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
+ * @method integer getLivenessMode() 获取<p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）<br>5: 远近活体</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 数字活体</li><li>2： 动作活体</li><li>3： 静默活体</li><li>4： 一闪活体（动作+光线）</li><li>5： 远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLivenessMode(integer $LivenessMode) 设置<p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
+ * @method void setLivenessMode(integer $LivenessMode) 设置<p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）<br>5: 远近活体</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 数字活体</li><li>2： 动作活体</li><li>3： 静默活体</li><li>4： 一闪活体（动作+光线）</li><li>5： 远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectDetail extends AbstractModel
@@ -158,7 +158,7 @@ class DetectDetail extends AbstractModel
     public $CompareLibType;
 
     /**
-     * @var integer <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
+     * @var integer <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）<br>5: 远近活体</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 数字活体</li><li>2： 动作活体</li><li>3： 静默活体</li><li>4： 一闪活体（动作+光线）</li><li>5： 远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivenessMode;
@@ -190,7 +190,7 @@ class DetectDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompareLibType <p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LivenessMode <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
+     * @param integer $LivenessMode <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）<br>5: 远近活体</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 数字活体</li><li>2： 动作活体</li><li>3： 静默活体</li><li>4： 一闪活体（动作+光线）</li><li>5： 远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

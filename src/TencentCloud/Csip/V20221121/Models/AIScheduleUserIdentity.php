@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI助手用户身份信息
  *
- * @method integer getAppId() 获取
- * @method void setAppId(integer $AppId) 设置
- * @method string getUin() 获取
- * @method void setUin(string $Uin) 设置
- * @method string getSubUin() 获取
- * @method void setSubUin(string $SubUin) 设置
- * @method string getUserId() 获取
- * @method void setUserId(string $UserId) 设置
- * @method string getBotId() 获取
- * @method void setBotId(string $BotId) 设置
- * @method string getChatId() 获取
- * @method void setChatId(string $ChatId) 设置
- * @method string getChannel() 获取
- * @method void setChannel(string $Channel) 设置
+ * @method integer getAppId() 获取<p>appid</p>
+ * @method void setAppId(integer $AppId) 设置<p>appid</p>
+ * @method string getUin() 获取<p>账号Uin</p>
+ * @method void setUin(string $Uin) 设置<p>账号Uin</p>
+ * @method string getSubUin() 获取<p>子账号uin</p>
+ * @method void setSubUin(string $SubUin) 设置<p>子账号uin</p>
+ * @method string getUserId() 获取<p>用户ID</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID</p>
+ * @method string getBotId() 获取<p>机器人ID</p>
+ * @method void setBotId(string $BotId) 设置<p>机器人ID</p>
+ * @method string getChatId() 获取<p>聊天ID</p>
+ * @method void setChatId(string $ChatId) 设置<p>聊天ID</p>
+ * @method string getChannel() 获取<p>渠道标识，如 wecom / qq / wx / feishu / dingtalk / cloud</p>
+ * @method void setChannel(string $Channel) 设置<p>渠道标识，如 wecom / qq / wx / feishu / dingtalk / cloud</p>
  */
 class AIScheduleUserIdentity extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>appid</p>
      */
     public $AppId;
 
     /**
-     * @var string 
+     * @var string <p>账号Uin</p>
      */
     public $Uin;
 
     /**
-     * @var string 
+     * @var string <p>子账号uin</p>
      */
     public $SubUin;
 
     /**
-     * @var string 
+     * @var string <p>用户ID</p>
      */
     public $UserId;
 
     /**
-     * @var string 
+     * @var string <p>机器人ID</p>
      */
     public $BotId;
 
     /**
-     * @var string 
+     * @var string <p>聊天ID</p>
      */
     public $ChatId;
 
     /**
-     * @var string 
+     * @var string <p>渠道标识，如 wecom / qq / wx / feishu / dingtalk / cloud</p>
      */
     public $Channel;
 
     /**
-     * @param integer $AppId 
-     * @param string $Uin 
-     * @param string $SubUin 
-     * @param string $UserId 
-     * @param string $BotId 
-     * @param string $ChatId 
-     * @param string $Channel 
+     * @param integer $AppId <p>appid</p>
+     * @param string $Uin <p>账号Uin</p>
+     * @param string $SubUin <p>子账号uin</p>
+     * @param string $UserId <p>用户ID</p>
+     * @param string $BotId <p>机器人ID</p>
+     * @param string $ChatId <p>聊天ID</p>
+     * @param string $Channel <p>渠道标识，如 wecom / qq / wx / feishu / dingtalk / cloud</p>
      */
     function __construct()
     {

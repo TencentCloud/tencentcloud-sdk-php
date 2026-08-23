@@ -20,85 +20,97 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 镜像描述信息
  *
- * @method string getImageType() 获取镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
- * @method void setImageType(string $ImageType) 设置镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
- * @method string getImageUrl() 获取镜像地址
- * @method void setImageUrl(string $ImageUrl) 设置镜像地址
- * @method string getRegistryRegion() 获取TCR镜像对应的地域
+ * @method string getImageType() 获取<p>镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像</p>
+ * @method void setImageType(string $ImageType) 设置<p>镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像</p>
+ * @method string getImageUrl() 获取<p>镜像地址</p>
+ * @method void setImageUrl(string $ImageUrl) 设置<p>镜像地址</p>
+ * @method string getRegistryRegion() 获取<p>TCR镜像对应的地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegistryRegion(string $RegistryRegion) 设置TCR镜像对应的地域
+ * @method void setRegistryRegion(string $RegistryRegion) 设置<p>TCR镜像对应的地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegistryId() 获取TCR镜像对应的实例id
+ * @method string getRegistryId() 获取<p>TCR镜像对应的实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegistryId(string $RegistryId) 设置TCR镜像对应的实例id
+ * @method void setRegistryId(string $RegistryId) 设置<p>TCR镜像对应的实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getAllowSaveAllContent() 获取是否允许导出全部内容
+ * @method boolean getAllowSaveAllContent() 获取<p>是否允许导出全部内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAllowSaveAllContent(boolean $AllowSaveAllContent) 设置是否允许导出全部内容
+ * @method void setAllowSaveAllContent(boolean $AllowSaveAllContent) 设置<p>是否允许导出全部内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getImageName() 获取镜像名称
+ * @method string getImageName() 获取<p>镜像名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageName(string $ImageName) 设置镜像名称
+ * @method void setImageName(string $ImageName) 设置<p>镜像名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSupportDataPipeline() 获取是否支持数据构建
+ * @method boolean getSupportDataPipeline() 获取<p>是否支持数据构建</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSupportDataPipeline(boolean $SupportDataPipeline) 设置是否支持数据构建
+ * @method void setSupportDataPipeline(boolean $SupportDataPipeline) 设置<p>是否支持数据构建</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageSecret getImageSecret() 获取<p>镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageSecret(ImageSecret $ImageSecret) 设置<p>镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageInfo extends AbstractModel
 {
     /**
-     * @var string 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
+     * @var string <p>镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像</p>
      */
     public $ImageType;
 
     /**
-     * @var string 镜像地址
+     * @var string <p>镜像地址</p>
      */
     public $ImageUrl;
 
     /**
-     * @var string TCR镜像对应的地域
+     * @var string <p>TCR镜像对应的地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistryRegion;
 
     /**
-     * @var string TCR镜像对应的实例id
+     * @var string <p>TCR镜像对应的实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistryId;
 
     /**
-     * @var boolean 是否允许导出全部内容
+     * @var boolean <p>是否允许导出全部内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowSaveAllContent;
 
     /**
-     * @var string 镜像名称
+     * @var string <p>镜像名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageName;
 
     /**
-     * @var boolean 是否支持数据构建
+     * @var boolean <p>是否支持数据构建</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportDataPipeline;
 
     /**
-     * @param string $ImageType 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
-     * @param string $ImageUrl 镜像地址
-     * @param string $RegistryRegion TCR镜像对应的地域
+     * @var ImageSecret <p>镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegistryId TCR镜像对应的实例id
+     */
+    public $ImageSecret;
+
+    /**
+     * @param string $ImageType <p>镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像</p>
+     * @param string $ImageUrl <p>镜像地址</p>
+     * @param string $RegistryRegion <p>TCR镜像对应的地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $AllowSaveAllContent 是否允许导出全部内容
+     * @param string $RegistryId <p>TCR镜像对应的实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ImageName 镜像名称
+     * @param boolean $AllowSaveAllContent <p>是否允许导出全部内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $SupportDataPipeline 是否支持数据构建
+     * @param string $ImageName <p>镜像名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SupportDataPipeline <p>是否支持数据构建</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageSecret $ImageSecret <p>镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +152,11 @@ class ImageInfo extends AbstractModel
 
         if (array_key_exists("SupportDataPipeline",$param) and $param["SupportDataPipeline"] !== null) {
             $this->SupportDataPipeline = $param["SupportDataPipeline"];
+        }
+
+        if (array_key_exists("ImageSecret",$param) and $param["ImageSecret"] !== null) {
+            $this->ImageSecret = new ImageSecret();
+            $this->ImageSecret->deserialize($param["ImageSecret"]);
         }
     }
 }

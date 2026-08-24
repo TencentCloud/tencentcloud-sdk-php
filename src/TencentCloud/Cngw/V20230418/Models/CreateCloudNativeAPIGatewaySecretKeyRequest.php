@@ -46,6 +46,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProvider(string $Provider) 设置<p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
  * @method string getSecretValue() 获取<p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
  * @method void setSecretValue(string $SecretValue) 设置<p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+ * @method AIGWAKSKCredentialConfig getAKSKCredentialConfig() 获取<p>AK/SK凭证配置</p>
+ * @method void setAKSKCredentialConfig(AIGWAKSKCredentialConfig $AKSKCredentialConfig) 设置<p>AK/SK凭证配置</p>
+ * @method AIGWCAMCredentialConfig getCAMCredentialConfig() 获取<p>CAM凭证配置</p>
+ * @method void setCAMCredentialConfig(AIGWCAMCredentialConfig $CAMCredentialConfig) 设置<p>CAM凭证配置</p>
+ * @method AIGWBearerTokenCredentialConfig getBearerTokenCredentialConfig() 获取<p>Bearer Token凭证配置</p>
+ * @method void setBearerTokenCredentialConfig(AIGWBearerTokenCredentialConfig $BearerTokenCredentialConfig) 设置<p>Bearer Token凭证配置</p>
+ * @method AIGWCustomHeaderCredentialConfig getCustomHeaderCredentialConfig() 获取<p>自定义Header凭证配置</p>
+ * @method void setCustomHeaderCredentialConfig(AIGWCustomHeaderCredentialConfig $CustomHeaderCredentialConfig) 设置<p>自定义Header凭证配置</p>
+ * @method AIGWQueryParamCredentialConfig getQueryParamCredentialConfig() 获取<p>自定义Query参数凭证配置</p>
+ * @method void setQueryParamCredentialConfig(AIGWQueryParamCredentialConfig $QueryParamCredentialConfig) 设置<p>自定义Query参数凭证配置</p>
+ * @method AIGWBasicCredentialConfig getBasicCredentialConfig() 获取<p>Basic Auth凭证配置</p>
+ * @method void setBasicCredentialConfig(AIGWBasicCredentialConfig $BasicCredentialConfig) 设置<p>Basic Auth凭证配置</p>
  */
 class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
 {
@@ -115,6 +127,36 @@ class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
     public $SecretValue;
 
     /**
+     * @var AIGWAKSKCredentialConfig <p>AK/SK凭证配置</p>
+     */
+    public $AKSKCredentialConfig;
+
+    /**
+     * @var AIGWCAMCredentialConfig <p>CAM凭证配置</p>
+     */
+    public $CAMCredentialConfig;
+
+    /**
+     * @var AIGWBearerTokenCredentialConfig <p>Bearer Token凭证配置</p>
+     */
+    public $BearerTokenCredentialConfig;
+
+    /**
+     * @var AIGWCustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
+     */
+    public $CustomHeaderCredentialConfig;
+
+    /**
+     * @var AIGWQueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     */
+    public $QueryParamCredentialConfig;
+
+    /**
+     * @var AIGWBasicCredentialConfig <p>Basic Auth凭证配置</p>
+     */
+    public $BasicCredentialConfig;
+
+    /**
      * @param string $GatewayId <p>实例 ID</p>
      * @param string $GenerateType <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
      * @param string $Name <p>密钥名称，2-60 字符。</p>
@@ -128,6 +170,12 @@ class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
      * @param AIGWOIDCCredentialConfig $OIDCCredentialConfig <p>OIDC凭证配置</p>
      * @param string $Provider <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
      * @param string $SecretValue <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+     * @param AIGWAKSKCredentialConfig $AKSKCredentialConfig <p>AK/SK凭证配置</p>
+     * @param AIGWCAMCredentialConfig $CAMCredentialConfig <p>CAM凭证配置</p>
+     * @param AIGWBearerTokenCredentialConfig $BearerTokenCredentialConfig <p>Bearer Token凭证配置</p>
+     * @param AIGWCustomHeaderCredentialConfig $CustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
+     * @param AIGWQueryParamCredentialConfig $QueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     * @param AIGWBasicCredentialConfig $BasicCredentialConfig <p>Basic Auth凭证配置</p>
      */
     function __construct()
     {
@@ -195,6 +243,36 @@ class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
 
         if (array_key_exists("SecretValue",$param) and $param["SecretValue"] !== null) {
             $this->SecretValue = $param["SecretValue"];
+        }
+
+        if (array_key_exists("AKSKCredentialConfig",$param) and $param["AKSKCredentialConfig"] !== null) {
+            $this->AKSKCredentialConfig = new AIGWAKSKCredentialConfig();
+            $this->AKSKCredentialConfig->deserialize($param["AKSKCredentialConfig"]);
+        }
+
+        if (array_key_exists("CAMCredentialConfig",$param) and $param["CAMCredentialConfig"] !== null) {
+            $this->CAMCredentialConfig = new AIGWCAMCredentialConfig();
+            $this->CAMCredentialConfig->deserialize($param["CAMCredentialConfig"]);
+        }
+
+        if (array_key_exists("BearerTokenCredentialConfig",$param) and $param["BearerTokenCredentialConfig"] !== null) {
+            $this->BearerTokenCredentialConfig = new AIGWBearerTokenCredentialConfig();
+            $this->BearerTokenCredentialConfig->deserialize($param["BearerTokenCredentialConfig"]);
+        }
+
+        if (array_key_exists("CustomHeaderCredentialConfig",$param) and $param["CustomHeaderCredentialConfig"] !== null) {
+            $this->CustomHeaderCredentialConfig = new AIGWCustomHeaderCredentialConfig();
+            $this->CustomHeaderCredentialConfig->deserialize($param["CustomHeaderCredentialConfig"]);
+        }
+
+        if (array_key_exists("QueryParamCredentialConfig",$param) and $param["QueryParamCredentialConfig"] !== null) {
+            $this->QueryParamCredentialConfig = new AIGWQueryParamCredentialConfig();
+            $this->QueryParamCredentialConfig->deserialize($param["QueryParamCredentialConfig"]);
+        }
+
+        if (array_key_exists("BasicCredentialConfig",$param) and $param["BasicCredentialConfig"] !== null) {
+            $this->BasicCredentialConfig = new AIGWBasicCredentialConfig();
+            $this->BasicCredentialConfig->deserialize($param["BasicCredentialConfig"]);
         }
     }
 }

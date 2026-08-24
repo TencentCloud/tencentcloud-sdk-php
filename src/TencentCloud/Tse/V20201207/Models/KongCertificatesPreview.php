@@ -20,106 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云原生网关证书预览信息
  *
- * @method string getName() 获取证书名称
- * @method void setName(string $Name) 设置证书名称
- * @method string getId() 获取Id
- * @method void setId(string $Id) 设置Id
- * @method array getBindDomains() 获取绑定的域名
- * @method void setBindDomains(array $BindDomains) 设置绑定的域名
- * @method string getStatus() 获取证书状态：expired(已过期)
-                   active(生效中)
- * @method void setStatus(string $Status) 设置证书状态：expired(已过期)
-                   active(生效中)
- * @method string getCrt() 获取证书pem格式
- * @method void setCrt(string $Crt) 设置证书pem格式
- * @method string getKey() 获取证书私钥
- * @method void setKey(string $Key) 设置证书私钥
- * @method string getExpireTime() 获取证书过期时间
- * @method void setExpireTime(string $ExpireTime) 设置证书过期时间
- * @method string getCreateTime() 获取证书上传时间
- * @method void setCreateTime(string $CreateTime) 设置证书上传时间
- * @method string getIssueTime() 获取证书签发时间
- * @method void setIssueTime(string $IssueTime) 设置证书签发时间
- * @method string getCertSource() 获取证书来源：native(kong自定义证书)
-                    ssl(ssl平台证书)
- * @method void setCertSource(string $CertSource) 设置证书来源：native(kong自定义证书)
-                    ssl(ssl平台证书)
- * @method string getCertId() 获取ssl平台证书Id
- * @method void setCertId(string $CertId) 设置ssl平台证书Id
+ * @method string getName() 获取<p>证书名称</p>
+ * @method void setName(string $Name) 设置<p>证书名称</p>
+ * @method string getId() 获取<p>Id</p>
+ * @method void setId(string $Id) 设置<p>Id</p>
+ * @method array getBindDomains() 获取<p>绑定的域名</p>
+ * @method void setBindDomains(array $BindDomains) 设置<p>绑定的域名</p>
+ * @method string getStatus() 获取<p>证书状态：expired(已过期)<br>                   active(生效中)</p>
+ * @method void setStatus(string $Status) 设置<p>证书状态：expired(已过期)<br>                   active(生效中)</p>
+ * @method string getCrt() 获取<p>证书pem格式</p>
+ * @method void setCrt(string $Crt) 设置<p>证书pem格式</p>
+ * @method string getKey() 获取<p>证书私钥</p>
+ * @method void setKey(string $Key) 设置<p>证书私钥</p>
+ * @method string getExpireTime() 获取<p>证书过期时间</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>证书过期时间</p>
+ * @method string getCreateTime() 获取<p>证书上传时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>证书上传时间</p>
+ * @method string getIssueTime() 获取<p>证书签发时间</p>
+ * @method void setIssueTime(string $IssueTime) 设置<p>证书签发时间</p>
+ * @method string getCertSource() 获取<p>证书来源：native(kong自定义证书)<br>                    ssl(ssl平台证书)</p>
+ * @method void setCertSource(string $CertSource) 设置<p>证书来源：native(kong自定义证书)<br>                    ssl(ssl平台证书)</p>
+ * @method string getCertId() 获取<p>ssl平台证书Id</p>
+ * @method void setCertId(string $CertId) 设置<p>ssl平台证书Id</p>
+ * @method string getCertType() 获取<p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+ * @method void setCertType(string $CertType) 设置<p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+ * @method string getCertUsage() 获取<p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+ * @method void setCertUsage(string $CertUsage) 设置<p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+ * @method integer getReferCount() 获取<p>证书被引用的次数</p>
+ * @method void setReferCount(integer $ReferCount) 设置<p>证书被引用的次数</p>
  */
 class KongCertificatesPreview extends AbstractModel
 {
     /**
-     * @var string 证书名称
+     * @var string <p>证书名称</p>
      */
     public $Name;
 
     /**
-     * @var string Id
+     * @var string <p>Id</p>
      */
     public $Id;
 
     /**
-     * @var array 绑定的域名
+     * @var array <p>绑定的域名</p>
      */
     public $BindDomains;
 
     /**
-     * @var string 证书状态：expired(已过期)
-                   active(生效中)
+     * @var string <p>证书状态：expired(已过期)<br>                   active(生效中)</p>
      */
     public $Status;
 
     /**
-     * @var string 证书pem格式
+     * @var string <p>证书pem格式</p>
      */
     public $Crt;
 
     /**
-     * @var string 证书私钥
+     * @var string <p>证书私钥</p>
      */
     public $Key;
 
     /**
-     * @var string 证书过期时间
+     * @var string <p>证书过期时间</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 证书上传时间
+     * @var string <p>证书上传时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 证书签发时间
+     * @var string <p>证书签发时间</p>
      */
     public $IssueTime;
 
     /**
-     * @var string 证书来源：native(kong自定义证书)
-                    ssl(ssl平台证书)
+     * @var string <p>证书来源：native(kong自定义证书)<br>                    ssl(ssl平台证书)</p>
      */
     public $CertSource;
 
     /**
-     * @var string ssl平台证书Id
+     * @var string <p>ssl平台证书Id</p>
      */
     public $CertId;
 
     /**
-     * @param string $Name 证书名称
-     * @param string $Id Id
-     * @param array $BindDomains 绑定的域名
-     * @param string $Status 证书状态：expired(已过期)
-                   active(生效中)
-     * @param string $Crt 证书pem格式
-     * @param string $Key 证书私钥
-     * @param string $ExpireTime 证书过期时间
-     * @param string $CreateTime 证书上传时间
-     * @param string $IssueTime 证书签发时间
-     * @param string $CertSource 证书来源：native(kong自定义证书)
-                    ssl(ssl平台证书)
-     * @param string $CertId ssl平台证书Id
+     * @var string <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     */
+    public $CertType;
+
+    /**
+     * @var string <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     */
+    public $CertUsage;
+
+    /**
+     * @var integer <p>证书被引用的次数</p>
+     */
+    public $ReferCount;
+
+    /**
+     * @param string $Name <p>证书名称</p>
+     * @param string $Id <p>Id</p>
+     * @param array $BindDomains <p>绑定的域名</p>
+     * @param string $Status <p>证书状态：expired(已过期)<br>                   active(生效中)</p>
+     * @param string $Crt <p>证书pem格式</p>
+     * @param string $Key <p>证书私钥</p>
+     * @param string $ExpireTime <p>证书过期时间</p>
+     * @param string $CreateTime <p>证书上传时间</p>
+     * @param string $IssueTime <p>证书签发时间</p>
+     * @param string $CertSource <p>证书来源：native(kong自定义证书)<br>                    ssl(ssl平台证书)</p>
+     * @param string $CertId <p>ssl平台证书Id</p>
+     * @param string $CertType <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     * @param string $CertUsage <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     * @param integer $ReferCount <p>证书被引用的次数</p>
      */
     function __construct()
     {
@@ -176,6 +192,18 @@ class KongCertificatesPreview extends AbstractModel
 
         if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
             $this->CertId = $param["CertId"];
+        }
+
+        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
+            $this->CertType = $param["CertType"];
+        }
+
+        if (array_key_exists("CertUsage",$param) and $param["CertUsage"] !== null) {
+            $this->CertUsage = $param["CertUsage"];
+        }
+
+        if (array_key_exists("ReferCount",$param) and $param["ReferCount"] !== null) {
+            $this->ReferCount = $param["ReferCount"];
         }
     }
 }

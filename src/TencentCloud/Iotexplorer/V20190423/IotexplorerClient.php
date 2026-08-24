@@ -100,6 +100,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomId(Models\CreateTRTCSignaturesWithRoomIdRequest $req) 创建TRTC通话参数
  * @method Models\CreateTWeSeeCallbackResponse CreateTWeSeeCallback(Models\CreateTWeSeeCallbackRequest $req) 创建 TWeSee 回调目标
  * @method Models\CreateTWeSeeDirectUploadCredentialResponse CreateTWeSeeDirectUploadCredential(Models\CreateTWeSeeDirectUploadCredentialRequest $req) 创建 TWeSee COS 直传凭据。调用方获取临时密钥后，可将视频 / 图片上传到返回的 StoragePath 前缀下；对象上传成功后由 COS 事件触发 TWeSee 任务创建。
+ * @method Models\CreateTWeSeePersonResponse CreateTWeSeePerson(Models\CreateTWeSeePersonRequest $req) 创建一个 TWeSee 人员，可关联已导入的人脸。
  * @method Models\CreateTWeSeePostPaidServiceResponse CreateTWeSeePostPaidService(Models\CreateTWeSeePostPaidServiceRequest $req) 开通 TWeSee 后付费服务
  * @method Models\CreateTWeSeeRecognitionTaskResponse CreateTWeSeeRecognitionTask(Models\CreateTWeSeeRecognitionTaskRequest $req) 创建 TWeSee 语义理解任务
  * @method Models\CreateTWeSeeRecognitionTaskWithFileResponse CreateTWeSeeRecognitionTaskWithFile(Models\CreateTWeSeeRecognitionTaskWithFileRequest $req) 同步执行 TWeSee 语义理解任务
@@ -124,6 +125,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 提供删除某个项目的能力。
  * @method Models\DeleteStudioProductResponse DeleteStudioProduct(Models\DeleteStudioProductRequest $req) 提供删除某个项目下产品的能力
  * @method Models\DeleteTWeSeeCallbackResponse DeleteTWeSeeCallback(Models\DeleteTWeSeeCallbackRequest $req) 删除 TWeSee 回调目标
+ * @method Models\DeleteTWeSeeFaceResponse DeleteTWeSeeFace(Models\DeleteTWeSeeFaceRequest $req) 删除指定 TWeSee 人脸。
+ * @method Models\DeleteTWeSeePersonResponse DeleteTWeSeePerson(Models\DeleteTWeSeePersonRequest $req) 删除指定 TWeSee 人员，可选择同时删除其关联人脸。
  * @method Models\DeleteTWeSeeTasksByConditionResponse DeleteTWeSeeTasksByCondition(Models\DeleteTWeSeeTasksByConditionRequest $req) 按条件删除指定设备和算法类目下的 TWeSee 任务及其关联数据。
  * @method Models\DeleteTWeTalkAIBotResponse DeleteTWeTalkAIBot(Models\DeleteTWeTalkAIBotRequest $req) 用于删除TWeTalk智能体。
  * @method Models\DeleteTWeTalkAgentResponse DeleteTWeTalkAgent(Models\DeleteTWeTalkAgentRequest $req) 用于删除TWeTalk智能体
@@ -188,6 +191,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeSubscribedTopicPolicyResponse DescribeSubscribedTopicPolicy(Models\DescribeSubscribedTopicPolicyRequest $req) 本接口（DescribeSubscribedTopicPolicy）用于获取设备已订阅Topic列表
  * @method Models\DescribeTWeSeeCallbackResponse DescribeTWeSeeCallback(Models\DescribeTWeSeeCallbackRequest $req) 查询 TWeSee 回调目标详情
  * @method Models\DescribeTWeSeeConfigResponse DescribeTWeSeeConfig(Models\DescribeTWeSeeConfigRequest $req) 拉取 TWeSee 配置
+ * @method Models\DescribeTWeSeeFaceResponse DescribeTWeSeeFace(Models\DescribeTWeSeeFaceRequest $req) 查询指定 TWeSee 人脸详情。
+ * @method Models\DescribeTWeSeePersonResponse DescribeTWeSeePerson(Models\DescribeTWeSeePersonRequest $req) 查询指定 TWeSee 人员详情及其代表人脸。
  * @method Models\DescribeTWeSeePostPaidServiceResponse DescribeTWeSeePostPaidService(Models\DescribeTWeSeePostPaidServiceRequest $req) 查询 TWeSee 后付费服务
  * @method Models\DescribeTWeSeeRecognitionTaskResponse DescribeTWeSeeRecognitionTask(Models\DescribeTWeSeeRecognitionTaskRequest $req) 查询 TWeSee 语义理解任务
  * @method Models\DescribeTWeSeeSubscriptionResponse DescribeTWeSeeSubscription(Models\DescribeTWeSeeSubscriptionRequest $req) 查询 TWeSee 预付费订阅
@@ -233,6 +238,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetTWeTalkProductConfigListV2Response GetTWeTalkProductConfigListV2(Models\GetTWeTalkProductConfigListV2Request $req) 用于查询TWeTalk服务连接产品配置信息。
  * @method Models\GetTopicRuleListResponse GetTopicRuleList(Models\GetTopicRuleListRequest $req) 获取规则列表
  * @method Models\GetWechatDeviceTicketResponse GetWechatDeviceTicket(Models\GetWechatDeviceTicketRequest $req) 查询微信设备授权票据
+ * @method Models\ImportTWeSeeFacesResponse ImportTWeSeeFaces(Models\ImportTWeSeeFacesRequest $req) 检测图片中的人脸，并返回可用于人员管理的人脸元数据。
  * @method Models\InheritCloudStorageUserResponse InheritCloudStorageUser(Models\InheritCloudStorageUserRequest $req) 继承云存用户
  * @method Models\InquireTWeSeeSubscriptionCreatePriceResponse InquireTWeSeeSubscriptionCreatePrice(Models\InquireTWeSeeSubscriptionCreatePriceRequest $req) 查询 TWeSee 预付费新购价格
  * @method Models\InquireTWeSeeSubscriptionRenewPriceResponse InquireTWeSeeSubscriptionRenewPrice(Models\InquireTWeSeeSubscriptionRenewPriceRequest $req) 查询 TWeSee 预付费续费价格
@@ -248,6 +254,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ListOtaModulesResponse ListOtaModules(Models\ListOtaModulesRequest $req) 本接口（ListOtaModules）用于获取OTA模块列表
  * @method Models\ListProductOtaModulesResponse ListProductOtaModules(Models\ListProductOtaModulesRequest $req) 本接口（ListProductOtaModules）用于获取产品OTA模块列表
  * @method Models\ListTWeSeeCallbackResponse ListTWeSeeCallback(Models\ListTWeSeeCallbackRequest $req) 查询 TWeSee 回调目标列表
+ * @method Models\ListTWeSeePersonsResponse ListTWeSeePersons(Models\ListTWeSeePersonsRequest $req) 查询指定设备的 TWeSee 人员列表。
  * @method Models\ListTWeSeeTasksResponse ListTWeSeeTasks(Models\ListTWeSeeTasksRequest $req) 短摘要列表查询
  * @method Models\ListTopicPolicyResponse ListTopicPolicy(Models\ListTopicPolicyRequest $req) 本接口（ListTopicPolicy）用于获取Topic列表
  * @method Models\ModifyApplicationResponse ModifyApplication(Models\ModifyApplicationRequest $req) 更新应用信息
@@ -266,6 +273,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ModifyStudioProductResponse ModifyStudioProduct(Models\ModifyStudioProductRequest $req) 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
  * @method Models\ModifyTWeSeeCallbackResponse ModifyTWeSeeCallback(Models\ModifyTWeSeeCallbackRequest $req) 修改 TWeSee 回调目标
  * @method Models\ModifyTWeSeeConfigResponse ModifyTWeSeeConfig(Models\ModifyTWeSeeConfigRequest $req) 修改 TWeSee 配置
+ * @method Models\ModifyTWeSeeFaceResponse ModifyTWeSeeFace(Models\ModifyTWeSeeFaceRequest $req) 将 TWeSee 人脸关联到指定人员，或修改其代表人脸状态。
+ * @method Models\ModifyTWeSeePersonResponse ModifyTWeSeePerson(Models\ModifyTWeSeePersonRequest $req) 修改指定 TWeSee 人员的名称或记忆状态。Name、IsRemembered 至少传入一项，不支持取消持久记忆。
  * @method Models\ModifyTWeSeeSubscriptionResponse ModifyTWeSeeSubscription(Models\ModifyTWeSeeSubscriptionRequest $req) 修改 TWeSee 预付费订阅
  * @method Models\ModifyTWeSeeSubscriptionRenewFlagResponse ModifyTWeSeeSubscriptionRenewFlag(Models\ModifyTWeSeeSubscriptionRenewFlagRequest $req) 修改 TWeSee 预付费订阅续费标识
  * @method Models\ModifyTWeTalkAIBotResponse ModifyTWeTalkAIBot(Models\ModifyTWeTalkAIBotRequest $req) 用于修改TWeTalk智能体。

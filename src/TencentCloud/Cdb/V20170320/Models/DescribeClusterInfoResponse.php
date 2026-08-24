@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterInfo返回参数结构体
  *
- * @method string getClusterName() 获取实例名称。
- * @method void setClusterName(string $ClusterName) 设置实例名称。
- * @method AddressInfo getReadWriteAddress() 获取云盘版实例的读写地址信息。
- * @method void setReadWriteAddress(AddressInfo $ReadWriteAddress) 设置云盘版实例的读写地址信息。
- * @method array getReadOnlyAddress() 获取云盘版实例的只读地址信息。
- * @method void setReadOnlyAddress(array $ReadOnlyAddress) 设置云盘版实例的只读地址信息。
- * @method array getNodeList() 获取云盘版实例的节点列表信息。
- * @method void setNodeList(array $NodeList) 设置云盘版实例的节点列表信息。
- * @method integer getReadonlyLimit() 获取只读空间保护阈值,单位GB
- * @method void setReadonlyLimit(integer $ReadonlyLimit) 设置只读空间保护阈值,单位GB
- * @method integer getNodeCount() 获取实例节点数。
- * @method void setNodeCount(integer $NodeCount) 设置实例节点数。
+ * @method string getClusterName() 获取<p>实例名称。</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>实例名称。</p>
+ * @method AddressInfo getReadWriteAddress() 获取<p>云盘版实例的读写地址信息。</p>
+ * @method void setReadWriteAddress(AddressInfo $ReadWriteAddress) 设置<p>云盘版实例的读写地址信息。</p>
+ * @method array getReadOnlyAddress() 获取<p>云盘版实例的只读地址信息。</p>
+ * @method void setReadOnlyAddress(array $ReadOnlyAddress) 设置<p>云盘版实例的只读地址信息。</p>
+ * @method array getNodeList() 获取<p>云盘版实例的节点列表信息。</p>
+ * @method void setNodeList(array $NodeList) 设置<p>云盘版实例的节点列表信息。</p>
+ * @method integer getReadonlyLimit() 获取<p>只读空间保护阈值,单位GB</p>
+ * @method void setReadonlyLimit(integer $ReadonlyLimit) 设置<p>只读空间保护阈值,单位GB</p>
+ * @method integer getNodeCount() 获取<p>实例节点数。</p>
+ * @method void setNodeCount(integer $NodeCount) 设置<p>实例节点数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeClusterInfoResponse extends AbstractModel
 {
     /**
-     * @var string 实例名称。
+     * @var string <p>实例名称。</p>
      */
     public $ClusterName;
 
     /**
-     * @var AddressInfo 云盘版实例的读写地址信息。
+     * @var AddressInfo <p>云盘版实例的读写地址信息。</p>
      */
     public $ReadWriteAddress;
 
     /**
-     * @var array 云盘版实例的只读地址信息。
+     * @var array <p>云盘版实例的只读地址信息。</p>
      */
     public $ReadOnlyAddress;
 
     /**
-     * @var array 云盘版实例的节点列表信息。
+     * @var array <p>云盘版实例的节点列表信息。</p>
      */
     public $NodeList;
 
     /**
-     * @var integer 只读空间保护阈值,单位GB
+     * @var integer <p>只读空间保护阈值,单位GB</p>
      */
     public $ReadonlyLimit;
 
     /**
-     * @var integer 实例节点数。
+     * @var integer <p>实例节点数。</p>
      */
     public $NodeCount;
 
@@ -73,12 +73,12 @@ class DescribeClusterInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ClusterName 实例名称。
-     * @param AddressInfo $ReadWriteAddress 云盘版实例的读写地址信息。
-     * @param array $ReadOnlyAddress 云盘版实例的只读地址信息。
-     * @param array $NodeList 云盘版实例的节点列表信息。
-     * @param integer $ReadonlyLimit 只读空间保护阈值,单位GB
-     * @param integer $NodeCount 实例节点数。
+     * @param string $ClusterName <p>实例名称。</p>
+     * @param AddressInfo $ReadWriteAddress <p>云盘版实例的读写地址信息。</p>
+     * @param array $ReadOnlyAddress <p>云盘版实例的只读地址信息。</p>
+     * @param array $NodeList <p>云盘版实例的节点列表信息。</p>
+     * @param integer $ReadonlyLimit <p>只读空间保护阈值,单位GB</p>
+     * @param integer $NodeCount <p>实例节点数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

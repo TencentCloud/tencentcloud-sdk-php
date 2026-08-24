@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置<p>是否启用健康检查</p>
  * @method AIGWHealthCheckSetting getHealthCheck() 获取<p>健康检查配置</p>
  * @method void setHealthCheck(AIGWHealthCheckSetting $HealthCheck) 设置<p>健康检查配置</p>
+ * @method boolean getPreserveHost() 获取<p>是否开启保留原Host功能</p>
+ * @method void setPreserveHost(boolean $PreserveHost) 设置<p>是否开启保留原Host功能</p>
  */
 class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
     public $HealthCheck;
 
     /**
+     * @var boolean <p>是否开启保留原Host功能</p>
+     */
+    public $PreserveHost;
+
+    /**
      * @param string $GatewayId <p>实例 ID</p>
      * @param string $Name <p>名字</p>
      * @param string $DisplayName <p>展示名字</p>
@@ -128,6 +135,7 @@ class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
      * @param string $Description <p>描述</p>
      * @param boolean $EnableHealthCheck <p>是否启用健康检查</p>
      * @param AIGWHealthCheckSetting $HealthCheck <p>健康检查配置</p>
+     * @param boolean $PreserveHost <p>是否开启保留原Host功能</p>
      */
     function __construct()
     {
@@ -195,6 +203,10 @@ class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
         if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
             $this->HealthCheck = new AIGWHealthCheckSetting();
             $this->HealthCheck->deserialize($param["HealthCheck"]);
+        }
+
+        if (array_key_exists("PreserveHost",$param) and $param["PreserveHost"] !== null) {
+            $this->PreserveHost = $param["PreserveHost"];
         }
     }
 }

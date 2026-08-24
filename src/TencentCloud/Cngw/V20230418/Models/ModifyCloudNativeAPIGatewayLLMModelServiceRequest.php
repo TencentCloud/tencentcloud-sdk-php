@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceName(string $ServiceName) 设置<p>服务名称。</p>
  * @method string getProtocol() 获取<p>协议类型，如 OpenAI、Custom。</p>
  * @method void setProtocol(string $Protocol) 设置<p>协议类型，如 OpenAI、Custom。</p>
+ * @method string getCustomProviderName() 获取<p>自定义供应商名称</p>
+ * @method void setCustomProviderName(string $CustomProviderName) 设置<p>自定义供应商名称</p>
+ * @method AIGWLoadBalanceConfig getLoadBalanceConfig() 获取<p>负载均衡配置</p>
+ * @method void setLoadBalanceConfig(AIGWLoadBalanceConfig $LoadBalanceConfig) 设置<p>负载均衡配置</p>
  */
 class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 {
@@ -220,6 +224,16 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
     public $Protocol;
 
     /**
+     * @var string <p>自定义供应商名称</p>
+     */
+    public $CustomProviderName;
+
+    /**
+     * @var AIGWLoadBalanceConfig <p>负载均衡配置</p>
+     */
+    public $LoadBalanceConfig;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $ModelServiceId <p>模型服务 ID，全局唯一标识。</p>
      * @param string $Name <p>修改服务名称，长度2-50字符，支持中英文、数字、下划线。</p>
@@ -248,6 +262,8 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
      * @param string $Namespace <p>命名空间。</p>
      * @param string $ServiceName <p>服务名称。</p>
      * @param string $Protocol <p>协议类型，如 OpenAI、Custom。</p>
+     * @param string $CustomProviderName <p>自定义供应商名称</p>
+     * @param AIGWLoadBalanceConfig $LoadBalanceConfig <p>负载均衡配置</p>
      */
     function __construct()
     {
@@ -385,6 +401,15 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("CustomProviderName",$param) and $param["CustomProviderName"] !== null) {
+            $this->CustomProviderName = $param["CustomProviderName"];
+        }
+
+        if (array_key_exists("LoadBalanceConfig",$param) and $param["LoadBalanceConfig"] !== null) {
+            $this->LoadBalanceConfig = new AIGWLoadBalanceConfig();
+            $this->LoadBalanceConfig->deserialize($param["LoadBalanceConfig"]);
         }
     }
 }

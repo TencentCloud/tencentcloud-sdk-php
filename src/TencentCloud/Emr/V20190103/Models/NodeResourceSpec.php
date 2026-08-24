@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSoftwareConfig() 获取<p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
  * @method void setSoftwareConfig(array $SoftwareConfig) 设置<p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
+ * @method string getCustomNodeName() 获取<p>自定义主机名</p>
+ * @method void setCustomNodeName(string $CustomNodeName) 设置<p>自定义主机名</p>
  */
 class NodeResourceSpec extends AbstractModel
 {
@@ -78,6 +80,11 @@ class NodeResourceSpec extends AbstractModel
     public $SoftwareConfig;
 
     /**
+     * @var string <p>自定义主机名</p>
+     */
+    public $CustomNodeName;
+
+    /**
      * @param string $InstanceType <p>规格类型，如S2.MEDIUM8</p>
      * @param array $SystemDisk <p>系统盘，系统盘个数不超过1块</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,6 +95,7 @@ class NodeResourceSpec extends AbstractModel
      * @param array $LocalDataDisk <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SoftwareConfig <p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
+     * @param string $CustomNodeName <p>自定义主机名</p>
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class NodeResourceSpec extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SoftwareConfig, $obj);
             }
+        }
+
+        if (array_key_exists("CustomNodeName",$param) and $param["CustomNodeName"] !== null) {
+            $this->CustomNodeName = $param["CustomNodeName"];
         }
     }
 }

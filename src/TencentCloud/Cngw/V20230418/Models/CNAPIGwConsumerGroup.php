@@ -20,70 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 消费者组结构
  *
- * @method string getConsumerGroupId() 获取分组id
- * @method void setConsumerGroupId(string $ConsumerGroupId) 设置分组id
- * @method string getName() 获取名字
- * @method void setName(string $Name) 设置名字
- * @method string getStatus() 获取状态Disable/Enable
- * @method void setStatus(string $Status) 设置状态Disable/Enable
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getModifyTime() 获取更新时间 yyyy-MM-dd hh:mm:ss
- * @method void setModifyTime(string $ModifyTime) 设置更新时间 yyyy-MM-dd hh:mm:ss
- * @method integer getBindCount() 获取绑定的消费者数量
+ * @method string getConsumerGroupId() 获取<p>分组id</p>
+ * @method void setConsumerGroupId(string $ConsumerGroupId) 设置<p>分组id</p>
+ * @method string getName() 获取<p>名字</p>
+ * @method void setName(string $Name) 设置<p>名字</p>
+ * @method string getStatus() 获取<p>状态Disable/Enable</p>
+ * @method void setStatus(string $Status) 设置<p>状态Disable/Enable</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getModifyTime() 获取<p>更新时间 yyyy-MM-dd hh:mm:ss</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>更新时间 yyyy-MM-dd hh:mm:ss</p>
+ * @method integer getBindCount() 获取<p>绑定的消费者数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBindCount(integer $BindCount) 设置绑定的消费者数量
+ * @method void setBindCount(integer $BindCount) 设置<p>绑定的消费者数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSyncStatus() 获取<p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Succes： 成功</li></ul>
+ * @method void setSyncStatus(string $SyncStatus) 设置<p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Succes： 成功</li></ul>
+ * @method string getSourceType() 获取<p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源已删除</li></ul>
+ * @method void setSourceType(string $SourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源已删除</li></ul>
+ * @method string getSyncedVersion() 获取<p>同步版本</p>
+ * @method void setSyncedVersion(string $SyncedVersion) 设置<p>同步版本</p>
  */
 class CNAPIGwConsumerGroup extends AbstractModel
 {
     /**
-     * @var string 分组id
+     * @var string <p>分组id</p>
      */
     public $ConsumerGroupId;
 
     /**
-     * @var string 名字
+     * @var string <p>名字</p>
      */
     public $Name;
 
     /**
-     * @var string 状态Disable/Enable
+     * @var string <p>状态Disable/Enable</p>
      */
     public $Status;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间 yyyy-MM-dd hh:mm:ss
+     * @var string <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
      */
     public $ModifyTime;
 
     /**
-     * @var integer 绑定的消费者数量
+     * @var integer <p>绑定的消费者数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindCount;
 
     /**
-     * @param string $ConsumerGroupId 分组id
-     * @param string $Name 名字
-     * @param string $Status 状态Disable/Enable
-     * @param string $Description 描述
-     * @param string $CreateTime 创建时间
-     * @param string $ModifyTime 更新时间 yyyy-MM-dd hh:mm:ss
-     * @param integer $BindCount 绑定的消费者数量
+     * @var string <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Succes： 成功</li></ul>
+     */
+    public $SyncStatus;
+
+    /**
+     * @var string <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源已删除</li></ul>
+     */
+    public $SourceType;
+
+    /**
+     * @var string <p>同步版本</p>
+     */
+    public $SyncedVersion;
+
+    /**
+     * @param string $ConsumerGroupId <p>分组id</p>
+     * @param string $Name <p>名字</p>
+     * @param string $Status <p>状态Disable/Enable</p>
+     * @param string $Description <p>描述</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $ModifyTime <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
+     * @param integer $BindCount <p>绑定的消费者数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Succes： 成功</li></ul>
+     * @param string $SourceType <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源已删除</li></ul>
+     * @param string $SyncedVersion <p>同步版本</p>
      */
     function __construct()
     {
@@ -124,6 +148,18 @@ class CNAPIGwConsumerGroup extends AbstractModel
 
         if (array_key_exists("BindCount",$param) and $param["BindCount"] !== null) {
             $this->BindCount = $param["BindCount"];
+        }
+
+        if (array_key_exists("SyncStatus",$param) and $param["SyncStatus"] !== null) {
+            $this->SyncStatus = $param["SyncStatus"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("SyncedVersion",$param) and $param["SyncedVersion"] !== null) {
+            $this->SyncedVersion = $param["SyncedVersion"];
         }
     }
 }

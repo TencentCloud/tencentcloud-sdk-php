@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
- * @method string getUserId() 获取<p>用户账号 ID ，例如：10000000</p>
- * @method void setUserId(string $UserId) 设置<p>用户账号 ID ，例如：10000000</p>
+ * @method string getUserId() 获取<p>用户子账号 ID ，例如：10000000</p>
+ * @method void setUserId(string $UserId) 设置<p>用户子账号 ID ，例如：10000000</p>
  * @method array getRole() 获取<p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
  * @method void setRole(array $Role) 设置<p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
  * @method string getNotes() 获取<p>备注</p>
@@ -37,7 +37,7 @@ class CreateSSOAccountRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string <p>用户账号 ID ，例如：10000000</p>
+     * @var string <p>用户子账号 ID ，例如：10000000</p>
      */
     public $UserId;
 
@@ -53,7 +53,7 @@ class CreateSSOAccountRequest extends AbstractModel
 
     /**
      * @param string $InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
-     * @param string $UserId <p>用户账号 ID ，例如：10000000</p>
+     * @param string $UserId <p>用户子账号 ID ，例如：10000000</p>
      * @param array $Role <p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
      * @param string $Notes <p>备注</p>
      */

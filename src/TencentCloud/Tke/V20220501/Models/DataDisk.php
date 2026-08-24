@@ -20,129 +20,129 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述了k8s节点数据盘相关配置与信息。
  *
- * @method string getDiskType() 获取云盘类型
+ * @method string getDiskType() 获取<p>云盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskType(string $DiskType) 设置云盘类型
+ * @method void setDiskType(string $DiskType) 设置<p>云盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileSystem() 获取文件系统(ext3/ext4/xfs)
+ * @method string getFileSystem() 获取<p>文件系统(ext3/ext4/xfs)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileSystem(string $FileSystem) 设置文件系统(ext3/ext4/xfs)
+ * @method void setFileSystem(string $FileSystem) 设置<p>文件系统(ext3/ext4/xfs)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDiskSize() 获取云盘大小(G）
+ * @method integer getDiskSize() 获取<p>云盘大小(G）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskSize(integer $DiskSize) 设置云盘大小(G）
+ * @method void setDiskSize(integer $DiskSize) 设置<p>云盘大小(G）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getAutoFormatAndMount() 获取是否自动化格式盘并挂载
+ * @method boolean getAutoFormatAndMount() 获取<p>是否自动化格式盘并挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) 设置是否自动化格式盘并挂载
+ * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) 设置<p>是否自动化格式盘并挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskPartition() 获取挂载设备名或分区名
+ * @method string getDiskPartition() 获取<p>挂载设备名或分区名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskPartition(string $DiskPartition) 设置挂载设备名或分区名
+ * @method void setDiskPartition(string $DiskPartition) 设置<p>挂载设备名或分区名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMountTarget() 获取挂载目录
+ * @method string getMountTarget() 获取<p>挂载目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMountTarget(string $MountTarget) 设置挂载目录
+ * @method void setMountTarget(string $MountTarget) 设置<p>挂载目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEncrypt() 获取传入该参数用于创建加密云盘，取值固定为ENCRYPT
+ * @method string getEncrypt() 获取<p>传入该参数用于创建加密云盘，取值固定为ENCRYPT</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEncrypt(string $Encrypt) 设置传入该参数用于创建加密云盘，取值固定为ENCRYPT
+ * @method void setEncrypt(string $Encrypt) 设置<p>传入该参数用于创建加密云盘，取值固定为ENCRYPT</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKmsKeyId() 获取购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空
+ * @method string getKmsKeyId() 获取<p>购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKmsKeyId(string $KmsKeyId) 设置购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空
+ * @method void setKmsKeyId(string $KmsKeyId) 设置<p>购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSnapshotId() 获取快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照
+ * @method string getSnapshotId() 获取<p>快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotId(string $SnapshotId) 设置快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照
+ * @method void setSnapshotId(string $SnapshotId) 设置<p>快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getThroughputPerformance() 获取云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能
+ * @method integer getThroughputPerformance() 获取<p>云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置<p>云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataDisk extends AbstractModel
 {
     /**
-     * @var string 云盘类型
+     * @var string <p>云盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
-     * @var string 文件系统(ext3/ext4/xfs)
+     * @var string <p>文件系统(ext3/ext4/xfs)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSystem;
 
     /**
-     * @var integer 云盘大小(G）
+     * @var integer <p>云盘大小(G）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
-     * @var boolean 是否自动化格式盘并挂载
+     * @var boolean <p>是否自动化格式盘并挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoFormatAndMount;
 
     /**
-     * @var string 挂载设备名或分区名
+     * @var string <p>挂载设备名或分区名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskPartition;
 
     /**
-     * @var string 挂载目录
+     * @var string <p>挂载目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountTarget;
 
     /**
-     * @var string 传入该参数用于创建加密云盘，取值固定为ENCRYPT
+     * @var string <p>传入该参数用于创建加密云盘，取值固定为ENCRYPT</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Encrypt;
 
     /**
-     * @var string 购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空
+     * @var string <p>购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KmsKeyId;
 
     /**
-     * @var string 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照
+     * @var string <p>快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotId;
 
     /**
-     * @var integer 云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能
+     * @var integer <p>云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThroughputPerformance;
 
     /**
-     * @param string $DiskType 云盘类型
+     * @param string $DiskType <p>云盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileSystem 文件系统(ext3/ext4/xfs)
+     * @param string $FileSystem <p>文件系统(ext3/ext4/xfs)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DiskSize 云盘大小(G）
+     * @param integer $DiskSize <p>云盘大小(G）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $AutoFormatAndMount 是否自动化格式盘并挂载
+     * @param boolean $AutoFormatAndMount <p>是否自动化格式盘并挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskPartition 挂载设备名或分区名
+     * @param string $DiskPartition <p>挂载设备名或分区名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MountTarget 挂载目录
+     * @param string $MountTarget <p>挂载目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT
+     * @param string $Encrypt <p>传入该参数用于创建加密云盘，取值固定为ENCRYPT</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KmsKeyId 购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空
+     * @param string $KmsKeyId <p>购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SnapshotId 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照
+     * @param string $SnapshotId <p>快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ThroughputPerformance 云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能
+     * @param integer $ThroughputPerformance <p>云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

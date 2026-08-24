@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceName(string $ServiceName) 设置<p>服务名称。</p>
  * @method string getProtocol() 获取<p>协议类型，如 OpenAI、Custom。</p>
  * @method void setProtocol(string $Protocol) 设置<p>协议类型，如 OpenAI、Custom。</p>
+ * @method AIGWLoadBalanceConfig getLoadBalanceConfig() 获取<p>负载均衡配置</p>
+ * @method void setLoadBalanceConfig(AIGWLoadBalanceConfig $LoadBalanceConfig) 设置<p>负载均衡配置</p>
  */
 class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 {
@@ -248,6 +250,11 @@ class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
     public $Protocol;
 
     /**
+     * @var AIGWLoadBalanceConfig <p>负载均衡配置</p>
+     */
+    public $LoadBalanceConfig;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $Name <p>服务名称，最长60个字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
      * @param string $ServiceType <p>服务类型。目前仅支持 LLMService。</p><p>枚举值：</p><ul><li>LLMService： 大语言模型服务</li></ul>
@@ -280,6 +287,7 @@ class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
      * @param string $Namespace <p>命名空间。</p>
      * @param string $ServiceName <p>服务名称。</p>
      * @param string $Protocol <p>协议类型，如 OpenAI、Custom。</p>
+     * @param AIGWLoadBalanceConfig $LoadBalanceConfig <p>负载均衡配置</p>
      */
     function __construct()
     {
@@ -433,6 +441,11 @@ class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("LoadBalanceConfig",$param) and $param["LoadBalanceConfig"] !== null) {
+            $this->LoadBalanceConfig = new AIGWLoadBalanceConfig();
+            $this->LoadBalanceConfig->deserialize($param["LoadBalanceConfig"]);
         }
     }
 }

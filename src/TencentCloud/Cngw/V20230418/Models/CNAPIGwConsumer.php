@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
  * @method string getModifyTime() 获取<p>更新时间 yyyy-MM-dd hh:mm:ss</p>
  * @method void setModifyTime(string $ModifyTime) 设置<p>更新时间 yyyy-MM-dd hh:mm:ss</p>
+ * @method string getPriority() 获取<p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
+ * @method void setPriority(string $Priority) 设置<p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
  * @method string getDescription() 获取<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置<p>描述</p>
@@ -36,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerGroups(array $ConsumerGroups) 设置<p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSyncStatus() 获取<p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+ * @method void setSyncStatus(string $SyncStatus) 设置<p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+ * @method string getSourceType() 获取<p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul>
+ * @method void setSourceType(string $SourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul>
+ * @method string getSyncedVersion() 获取<p>同步版本</p>
+ * @method void setSyncedVersion(string $SyncedVersion) 设置<p>同步版本</p>
  */
 class CNAPIGwConsumer extends AbstractModel
 {
@@ -60,6 +68,11 @@ class CNAPIGwConsumer extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var string <p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
+     */
+    public $Priority;
+
+    /**
      * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,14 +85,33 @@ class CNAPIGwConsumer extends AbstractModel
     public $ConsumerGroups;
 
     /**
+     * @var string <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+     */
+    public $SyncStatus;
+
+    /**
+     * @var string <p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul>
+     */
+    public $SourceType;
+
+    /**
+     * @var string <p>同步版本</p>
+     */
+    public $SyncedVersion;
+
+    /**
      * @param string $ConsumerId <p>消费者 ID。</p>
      * @param string $Name <p>名字</p>
      * @param string $CreateTime <p>创建时间</p>
      * @param string $ModifyTime <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
+     * @param string $Priority <p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
      * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConsumerGroups <p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+     * @param string $SourceType <p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul>
+     * @param string $SyncedVersion <p>同步版本</p>
      */
     function __construct()
     {
@@ -110,6 +142,10 @@ class CNAPIGwConsumer extends AbstractModel
             $this->ModifyTime = $param["ModifyTime"];
         }
 
+        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
+            $this->Priority = $param["Priority"];
+        }
+
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
         }
@@ -121,6 +157,18 @@ class CNAPIGwConsumer extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ConsumerGroups, $obj);
             }
+        }
+
+        if (array_key_exists("SyncStatus",$param) and $param["SyncStatus"] !== null) {
+            $this->SyncStatus = $param["SyncStatus"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("SyncedVersion",$param) and $param["SyncedVersion"] !== null) {
+            $this->SyncedVersion = $param["SyncedVersion"];
         }
     }
 }

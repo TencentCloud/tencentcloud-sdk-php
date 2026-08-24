@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 项目信息
  *
- * @method string getProjectName() 获取项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
- * @method void setProjectName(string $ProjectName) 设置项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
- * @method string getDisplayName() 获取项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
- * @method void setDisplayName(string $DisplayName) 设置项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
- * @method string getProjectModel() 获取项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式
- * @method void setProjectModel(string $ProjectModel) 设置项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式
+ * @method string getProjectName() 获取<p>项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
+ * @method void setProjectName(string $ProjectName) 设置<p>项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
+ * @method string getDisplayName() 获取<p>项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
+ * @method void setDisplayName(string $DisplayName) 设置<p>项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
+ * @method string getProjectModel() 获取<p>项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式</p>
+ * @method void setProjectModel(string $ProjectModel) 设置<p>项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式</p>
+ * @method string getScheduleMode() 获取<p>项目调度模式，task：任务模式 workflow：工作流模式</p>
+ * @method void setScheduleMode(string $ScheduleMode) 设置<p>项目调度模式，task：任务模式 workflow：工作流模式</p>
  */
 class ProjectRequest extends AbstractModel
 {
     /**
-     * @var string 项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
+     * @var string <p>项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
      */
     public $ProjectName;
 
     /**
-     * @var string 项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
+     * @var string <p>项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
      */
     public $DisplayName;
 
     /**
-     * @var string 项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式
+     * @var string <p>项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式</p>
      */
     public $ProjectModel;
 
     /**
-     * @param string $ProjectName 项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
-     * @param string $DisplayName 项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
-     * @param string $ProjectModel 项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式
+     * @var string <p>项目调度模式，task：任务模式 workflow：工作流模式</p>
+     */
+    public $ScheduleMode;
+
+    /**
+     * @param string $ProjectName <p>项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
+     * @param string $DisplayName <p>项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
+     * @param string $ProjectModel <p>项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式</p>
+     * @param string $ScheduleMode <p>项目调度模式，task：任务模式 workflow：工作流模式</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ProjectRequest extends AbstractModel
 
         if (array_key_exists("ProjectModel",$param) and $param["ProjectModel"] !== null) {
             $this->ProjectModel = $param["ProjectModel"];
+        }
+
+        if (array_key_exists("ScheduleMode",$param) and $param["ScheduleMode"] !== null) {
+            $this->ScheduleMode = $param["ScheduleMode"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置<p>分页大小</p>
  * @method integer getOffset() 获取<p>分页偏移</p>
  * @method void setOffset(integer $Offset) 设置<p>分页偏移</p>
+ * @method string getSecretKeyId() 获取<p>密钥凭证ID</p>
+ * @method void setSecretKeyId(string $SecretKeyId) 设置<p>密钥凭证ID</p>
  */
 class DescribeCloudNativeAPIGatewayMCPServerListRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeCloudNativeAPIGatewayMCPServerListRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string <p>密钥凭证ID</p>
+     */
+    public $SecretKeyId;
+
+    /**
      * @param string $GatewayId <p>实例 ID</p>
      * @param integer $Limit <p>分页大小</p>
      * @param integer $Offset <p>分页偏移</p>
+     * @param string $SecretKeyId <p>密钥凭证ID</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeCloudNativeAPIGatewayMCPServerListRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("SecretKeyId",$param) and $param["SecretKeyId"] !== null) {
+            $this->SecretKeyId = $param["SecretKeyId"];
         }
     }
 }

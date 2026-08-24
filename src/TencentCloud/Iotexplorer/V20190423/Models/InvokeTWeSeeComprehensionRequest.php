@@ -20,70 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InvokeTWeSeeComprehension请求参数结构体
  *
- * @method string getInputURL() 获取输入视频 / 图片的 URL
- * @method void setInputURL(string $InputURL) 设置输入视频 / 图片的 URL
- * @method string getServiceType() 获取算法类型。可选值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
- * @method void setServiceType(string $ServiceType) 设置算法类型。可选值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
- * @method SeeTaskMetadata getMetadata() 获取任务元数据
- * @method void setMetadata(SeeTaskMetadata $Metadata) 设置任务元数据
- * @method SeeComprehensionConfig getComprehensionConfig() 获取视觉理解配置项
- * @method void setComprehensionConfig(SeeComprehensionConfig $ComprehensionConfig) 设置视觉理解配置项
- * @method integer getWaitResultTimeout() 获取等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。
- * @method void setWaitResultTimeout(integer $WaitResultTimeout) 设置等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。
- * @method string getCallbackId() 获取回调目标 ID
- * @method void setCallbackId(string $CallbackId) 设置回调目标 ID
+ * @method string getInputURL() 获取<p>输入视频 / 图片的 URL</p>
+ * @method void setInputURL(string $InputURL) 设置<p>输入视频 / 图片的 URL</p>
+ * @method string getServiceType() 获取<p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li></ul>
+ * @method void setServiceType(string $ServiceType) 设置<p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li></ul>
+ * @method SeeTaskMetadata getMetadata() 获取<p>任务元数据</p>
+ * @method void setMetadata(SeeTaskMetadata $Metadata) 设置<p>任务元数据</p>
+ * @method SeeComprehensionConfig getComprehensionConfig() 获取<p>视觉理解配置项</p>
+ * @method void setComprehensionConfig(SeeComprehensionConfig $ComprehensionConfig) 设置<p>视觉理解配置项</p>
+ * @method integer getWaitResultTimeout() 获取<p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
+ * @method void setWaitResultTimeout(integer $WaitResultTimeout) 设置<p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
+ * @method string getCallbackId() 获取<p>回调目标 ID</p>
+ * @method void setCallbackId(string $CallbackId) 设置<p>回调目标 ID</p>
  */
 class InvokeTWeSeeComprehensionRequest extends AbstractModel
 {
     /**
-     * @var string 输入视频 / 图片的 URL
+     * @var string <p>输入视频 / 图片的 URL</p>
      */
     public $InputURL;
 
     /**
-     * @var string 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
+     * @var string <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li></ul>
      */
     public $ServiceType;
 
     /**
-     * @var SeeTaskMetadata 任务元数据
+     * @var SeeTaskMetadata <p>任务元数据</p>
      */
     public $Metadata;
 
     /**
-     * @var SeeComprehensionConfig 视觉理解配置项
+     * @var SeeComprehensionConfig <p>视觉理解配置项</p>
      */
     public $ComprehensionConfig;
 
     /**
-     * @var integer 等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。
+     * @var integer <p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
      */
     public $WaitResultTimeout;
 
     /**
-     * @var string 回调目标 ID
+     * @var string <p>回调目标 ID</p>
      */
     public $CallbackId;
 
     /**
-     * @param string $InputURL 输入视频 / 图片的 URL
-     * @param string $ServiceType 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-     * @param SeeTaskMetadata $Metadata 任务元数据
-     * @param SeeComprehensionConfig $ComprehensionConfig 视觉理解配置项
-     * @param integer $WaitResultTimeout 等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。
-     * @param string $CallbackId 回调目标 ID
+     * @param string $InputURL <p>输入视频 / 图片的 URL</p>
+     * @param string $ServiceType <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li></ul>
+     * @param SeeTaskMetadata $Metadata <p>任务元数据</p>
+     * @param SeeComprehensionConfig $ComprehensionConfig <p>视觉理解配置项</p>
+     * @param integer $WaitResultTimeout <p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
+     * @param string $CallbackId <p>回调目标 ID</p>
      */
     function __construct()
     {

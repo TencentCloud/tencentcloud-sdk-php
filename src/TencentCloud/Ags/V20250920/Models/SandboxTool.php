@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomConfiguration(CustomConfigurationDetail $CustomConfiguration) 设置<p>沙箱工具自定义配置</p>
  * @method LogConfiguration getLogConfiguration() 获取<p>沙箱工具日志推送相关配置</p>
  * @method void setLogConfiguration(LogConfiguration $LogConfiguration) 设置<p>沙箱工具日志推送相关配置</p>
+ * @method ComputerConfiguration getComputerConfiguration() 获取<p>桌面电脑环境类沙箱配置</p>
+ * @method void setComputerConfiguration(ComputerConfiguration $ComputerConfiguration) 设置<p>桌面电脑环境类沙箱配置</p>
  * @method string getStatusReason() 获取<p>用于说明沙箱工具处于该状态的原因</p>
  * @method void setStatusReason(string $StatusReason) 设置<p>用于说明沙箱工具处于该状态的原因</p>
  */
@@ -131,6 +133,11 @@ class SandboxTool extends AbstractModel
     public $LogConfiguration;
 
     /**
+     * @var ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public $ComputerConfiguration;
+
+    /**
      * @var string <p>用于说明沙箱工具处于该状态的原因</p>
      */
     public $StatusReason;
@@ -151,6 +158,7 @@ class SandboxTool extends AbstractModel
      * @param array $StorageMounts <p>沙箱工具中实例存储挂载配置</p>
      * @param CustomConfigurationDetail $CustomConfiguration <p>沙箱工具自定义配置</p>
      * @param LogConfiguration $LogConfiguration <p>沙箱工具日志推送相关配置</p>
+     * @param ComputerConfiguration $ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
      * @param string $StatusReason <p>用于说明沙箱工具处于该状态的原因</p>
      */
     function __construct()
@@ -237,6 +245,11 @@ class SandboxTool extends AbstractModel
         if (array_key_exists("LogConfiguration",$param) and $param["LogConfiguration"] !== null) {
             $this->LogConfiguration = new LogConfiguration();
             $this->LogConfiguration->deserialize($param["LogConfiguration"]);
+        }
+
+        if (array_key_exists("ComputerConfiguration",$param) and $param["ComputerConfiguration"] !== null) {
+            $this->ComputerConfiguration = new ComputerConfiguration();
+            $this->ComputerConfiguration->deserialize($param["ComputerConfiguration"]);
         }
 
         if (array_key_exists("StatusReason",$param) and $param["StatusReason"] !== null) {

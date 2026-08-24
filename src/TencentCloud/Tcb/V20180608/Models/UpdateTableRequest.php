@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateTable请求参数结构体
  *
- * @method string getTableName() 获取表名
- * @method void setTableName(string $TableName) 设置表名
- * @method string getTag() 获取FlexDB实例ID
- * @method void setTag(string $Tag) 设置FlexDB实例ID
- * @method array getDropIndexes() 获取待删除索引信息
- * @method void setDropIndexes(array $DropIndexes) 设置待删除索引信息
- * @method array getCreateIndexes() 获取待创建索引信息
- * @method void setCreateIndexes(array $CreateIndexes) 设置待创建索引信息
- * @method string getEnvId() 获取云开发环境ID
- * @method void setEnvId(string $EnvId) 设置云开发环境ID
- * @method MongoConnector getMongoConnector() 获取MongoDB连接器配置
- * @method void setMongoConnector(MongoConnector $MongoConnector) 设置MongoDB连接器配置
+ * @method string getTableName() 获取<p>表名</p>
+ * @method void setTableName(string $TableName) 设置<p>表名</p>
+ * @method string getTag() 获取<p>FlexDB实例ID</p>
+ * @method void setTag(string $Tag) 设置<p>FlexDB实例ID</p>
+ * @method array getDropIndexes() 获取<p>待删除索引信息</p>
+ * @method void setDropIndexes(array $DropIndexes) 设置<p>待删除索引信息</p>
+ * @method array getCreateIndexes() 获取<p>待创建索引信息</p>
+ * @method void setCreateIndexes(array $CreateIndexes) 设置<p>待创建索引信息</p>
+ * @method string getEnvId() 获取<p>云开发环境ID</p>
+ * @method void setEnvId(string $EnvId) 设置<p>云开发环境ID</p>
+ * @method MongoConnector getMongoConnector() 获取<p>MongoDB连接器配置</p>
+ * @method void setMongoConnector(MongoConnector $MongoConnector) 设置<p>MongoDB连接器配置</p>
  */
 class UpdateTableRequest extends AbstractModel
 {
     /**
-     * @var string 表名
+     * @var string <p>表名</p>
      */
     public $TableName;
 
     /**
-     * @var string FlexDB实例ID
+     * @var string <p>FlexDB实例ID</p>
      */
     public $Tag;
 
     /**
-     * @var array 待删除索引信息
+     * @var array <p>待删除索引信息</p>
      */
     public $DropIndexes;
 
     /**
-     * @var array 待创建索引信息
+     * @var array <p>待创建索引信息</p>
      */
     public $CreateIndexes;
 
     /**
-     * @var string 云开发环境ID
+     * @var string <p>云开发环境ID</p>
      */
     public $EnvId;
 
     /**
-     * @var MongoConnector MongoDB连接器配置
+     * @var MongoConnector <p>MongoDB连接器配置</p>
      */
     public $MongoConnector;
 
     /**
-     * @param string $TableName 表名
-     * @param string $Tag FlexDB实例ID
-     * @param array $DropIndexes 待删除索引信息
-     * @param array $CreateIndexes 待创建索引信息
-     * @param string $EnvId 云开发环境ID
-     * @param MongoConnector $MongoConnector MongoDB连接器配置
+     * @param string $TableName <p>表名</p>
+     * @param string $Tag <p>FlexDB实例ID</p>
+     * @param array $DropIndexes <p>待删除索引信息</p>
+     * @param array $CreateIndexes <p>待创建索引信息</p>
+     * @param string $EnvId <p>云开发环境ID</p>
+     * @param MongoConnector $MongoConnector <p>MongoDB连接器配置</p>
      */
     function __construct()
     {

@@ -79,6 +79,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreateDspmAssetAccessTopologyExportJobResponse CreateDspmAssetAccessTopologyExportJob(Models\CreateDspmAssetAccessTopologyExportJobRequest $req) 创建Dspm资产访问拓扑导出任务
  * @method Models\CreateDspmAssetIdentifyInfoExportJobResponse CreateDspmAssetIdentifyInfoExportJob(Models\CreateDspmAssetIdentifyInfoExportJobRequest $req) 创建Dspm资产列表导出任务
  * @method Models\CreateDspmAssetsExportJobResponse CreateDspmAssetsExportJob(Models\CreateDspmAssetsExportJobRequest $req) 创建Dspm资产列表导出任务
+ * @method Models\CreateDspmAuditFilterStrategyResponse CreateDspmAuditFilterStrategy(Models\CreateDspmAuditFilterStrategyRequest $req) 创建Dspm审计过滤策略
  * @method Models\CreateDspmExportTaskResponse CreateDspmExportTask(Models\CreateDspmExportTaskRequest $req) 创建日志导出任务
  * @method Models\CreateDspmIdentifyCategoryResponse CreateDspmIdentifyCategory(Models\CreateDspmIdentifyCategoryRequest $req) 创建dspm数据识别分类
  * @method Models\CreateDspmIdentifyComplianceCategoryRelationResponse CreateDspmIdentifyComplianceCategoryRelation(Models\CreateDspmIdentifyComplianceCategoryRelationRequest $req) 创建dspm数据识别模板分类关联
@@ -89,7 +90,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreateDspmIdentifyLevelGroupResponse CreateDspmIdentifyLevelGroup(Models\CreateDspmIdentifyLevelGroupRequest $req) 创建dspm数据识别分级组
  * @method Models\CreateDspmIdentifyRuleResponse CreateDspmIdentifyRule(Models\CreateDspmIdentifyRuleRequest $req) 创建dspm数据识别数据项
  * @method Models\CreateDspmPersonalIdentifyResponse CreateDspmPersonalIdentify(Models\CreateDspmPersonalIdentifyRequest $req) 创建Dspm个人身份id
+ * @method Models\CreateDspmResourceResponse CreateDspmResource(Models\CreateDspmResourceRequest $req) 创建Dspm实例
  * @method Models\CreateDspmRiskExportJobResponse CreateDspmRiskExportJob(Models\CreateDspmRiskExportJobRequest $req) 创建Dspm风险导出任务
+ * @method Models\CreateDspmRiskStrategyResponse CreateDspmRiskStrategy(Models\CreateDspmRiskStrategyRequest $req) 创建Dspm自定义风险策略
  * @method Models\CreateDspmWhitelistStrategyResponse CreateDspmWhitelistStrategy(Models\CreateDspmWhitelistStrategyRequest $req) 创建Dspm白名单策略
  * @method Models\CreateDynamicAssetsExportJobResponse CreateDynamicAssetsExportJob(Models\CreateDynamicAssetsExportJobRequest $req) 创建公网资产导出任务
  * @method Models\CreateEDRManualScanResponse CreateEDRManualScan(Models\CreateEDRManualScanRequest $req) 点击开始扫描后触发，支持多账号、多资产类型。同时选主机和容器集群时拆分为两个独立任务（主机+容器）。
@@ -146,7 +149,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DeleteDomainAndIpResponse DeleteDomainAndIp(Models\DeleteDomainAndIpRequest $req) 删除域名和ip请求
  * @method Models\DeleteDspmApplyOrderResponse DeleteDspmApplyOrder(Models\DeleteDspmApplyOrderRequest $req) 删除Dspm申请单
  * @method Models\DeleteDspmAssetAccountResponse DeleteDspmAssetAccount(Models\DeleteDspmAssetAccountRequest $req) 删除Dspm资产账号
+ * @method Models\DeleteDspmAuditFilterStrategyResponse DeleteDspmAuditFilterStrategy(Models\DeleteDspmAuditFilterStrategyRequest $req) 删除Dspm审计过滤策略
  * @method Models\DeleteDspmBackupLogListResponse DeleteDspmBackupLogList(Models\DeleteDspmBackupLogListRequest $req) 删除备份日志
+ * @method Models\DeleteDspmCkafkaConfigResponse DeleteDspmCkafkaConfig(Models\DeleteDspmCkafkaConfigRequest $req) 取消日志投递配置
  * @method Models\DeleteDspmExportTaskResponse DeleteDspmExportTask(Models\DeleteDspmExportTaskRequest $req) 删除导出任务
  * @method Models\DeleteDspmIdentifyCategoryResponse DeleteDspmIdentifyCategory(Models\DeleteDspmIdentifyCategoryRequest $req) 删除dspm数据识别分类
  * @method Models\DeleteDspmIdentifyComplianceCategoryRelationResponse DeleteDspmIdentifyComplianceCategoryRelation(Models\DeleteDspmIdentifyComplianceCategoryRelationRequest $req) 删除dspm数据识别模板分类关联
@@ -156,6 +161,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DeleteDspmIdentifyRuleResponse DeleteDspmIdentifyRule(Models\DeleteDspmIdentifyRuleRequest $req) 删除dspm数据识别数据项
  * @method Models\DeleteDspmPersonalIdentifyResponse DeleteDspmPersonalIdentify(Models\DeleteDspmPersonalIdentifyRequest $req) 删除Dspm个人身份id
  * @method Models\DeleteDspmRestoreLogListResponse DeleteDspmRestoreLogList(Models\DeleteDspmRestoreLogListRequest $req) 删除恢复日志
+ * @method Models\DeleteDspmRiskStrategyResponse DeleteDspmRiskStrategy(Models\DeleteDspmRiskStrategyRequest $req) 删除Dspm自定义风险策略。仅支持删除自定义策略（rule_source=custom）；内置策略不可删除，请通过 ModifyDspmRiskStrategy 的 IsEnabled 禁用。
+ * @method Models\DeleteDspmShareUserDataResponse DeleteDspmShareUserData(Models\DeleteDspmShareUserDataRequest $req) 删除dspmg共享账号数据
  * @method Models\DeleteDspmWhitelistStrategyResponse DeleteDspmWhitelistStrategy(Models\DeleteDspmWhitelistStrategyRequest $req) 删除Dspm白名单策略
  * @method Models\DeleteEDRRulesResponse DeleteEDRRules(Models\DeleteEDRRulesRequest $req) 删除EDR策略
  * @method Models\DeleteEDRScanTaskResponse DeleteEDRScanTask(Models\DeleteEDRScanTaskRequest $req) 删除已终止的扫描任务（物理删除主表及明细表）。只允许删除终态任务，只有创建者可操作。
@@ -371,8 +378,11 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeDspmAssetSupportedPrivilegesResponse DescribeDspmAssetSupportedPrivileges(Models\DescribeDspmAssetSupportedPrivilegesRequest $req) 查询Dspm资产支持的权限
  * @method Models\DescribeDspmAssetTableListResponse DescribeDspmAssetTableList(Models\DescribeDspmAssetTableListRequest $req) 查询资产表信息
  * @method Models\DescribeDspmAssetsResponse DescribeDspmAssets(Models\DescribeDspmAssetsRequest $req) 查询Dspm资产列表
+ * @method Models\DescribeDspmAuditFilterStrategyResponse DescribeDspmAuditFilterStrategy(Models\DescribeDspmAuditFilterStrategyRequest $req) 查询dspm审计过滤策略
  * @method Models\DescribeDspmBackupLogListResponse DescribeDspmBackupLogList(Models\DescribeDspmBackupLogListRequest $req) 查询备份日志列表
  * @method Models\DescribeDspmBackupSettingResponse DescribeDspmBackupSetting(Models\DescribeDspmBackupSettingRequest $req) 查询日志备份配置
+ * @method Models\DescribeDspmCkafkaRouteListResponse DescribeDspmCkafkaRouteList(Models\DescribeDspmCkafkaRouteListRequest $req) 查询Ckafka实例的路由信息
+ * @method Models\DescribeDspmCkafkaTopicListResponse DescribeDspmCkafkaTopicList(Models\DescribeDspmCkafkaTopicListRequest $req) 查询实例的主题列表
  * @method Models\DescribeDspmDictionaryListResponse DescribeDspmDictionaryList(Models\DescribeDspmDictionaryListRequest $req) 查询dspm字典信息列表
  * @method Models\DescribeDspmExportTaskResponse DescribeDspmExportTask(Models\DescribeDspmExportTaskRequest $req) 查询导出任务
  * @method Models\DescribeDspmIdentifyCategoryListResponse DescribeDspmIdentifyCategoryList(Models\DescribeDspmIdentifyCategoryListRequest $req) 查询dspm数据识别分类列表
@@ -387,19 +397,24 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeDspmIdentifyRuleDetailResponse DescribeDspmIdentifyRuleDetail(Models\DescribeDspmIdentifyRuleDetailRequest $req) 查询dspm数据识别数据项详情
  * @method Models\DescribeDspmIdentifyRuleListResponse DescribeDspmIdentifyRuleList(Models\DescribeDspmIdentifyRuleListRequest $req) 查询dspm数据识别数据项列表
  * @method Models\DescribeDspmIdentifyRuleTestResultResponse DescribeDspmIdentifyRuleTestResult(Models\DescribeDspmIdentifyRuleTestResultRequest $req) 查询dspm数据识别数据项验证结果
+ * @method Models\DescribeDspmLogDeliveryTypeResponse DescribeDspmLogDeliveryType(Models\DescribeDspmLogDeliveryTypeRequest $req) 查询日志投递的日志类型
  * @method Models\DescribeDspmLogListResponse DescribeDspmLogList(Models\DescribeDspmLogListRequest $req) 查询日志列表信息
+ * @method Models\DescribeDspmLogTypeConfigListResponse DescribeDspmLogTypeConfigList(Models\DescribeDspmLogTypeConfigListRequest $req) 查询租户日志投递配置
  * @method Models\DescribeDspmPayInfoResponse DescribeDspmPayInfo(Models\DescribeDspmPayInfoRequest $req) 获取已购Dspm订单信息
  * @method Models\DescribeDspmPersonApplyHistoryResponse DescribeDspmPersonApplyHistory(Models\DescribeDspmPersonApplyHistoryRequest $req) 查询Dspm访客申请记录
  * @method Models\DescribeDspmPersonalIdentifyListResponse DescribeDspmPersonalIdentifyList(Models\DescribeDspmPersonalIdentifyListRequest $req) 查询Dspm个人身份信息列表
+ * @method Models\DescribeDspmResourceResponse DescribeDspmResource(Models\DescribeDspmResourceRequest $req) 查询Dspm实例
  * @method Models\DescribeDspmRiskResponse DescribeDspmRisk(Models\DescribeDspmRiskRequest $req) 查询Dspm风险记录
  * @method Models\DescribeDspmRiskDetailResponse DescribeDspmRiskDetail(Models\DescribeDspmRiskDetailRequest $req) 查询Dspm风险详情
  * @method Models\DescribeDspmRiskStrategyResponse DescribeDspmRiskStrategy(Models\DescribeDspmRiskStrategyRequest $req) 查询Dspm风险策略
  * @method Models\DescribeDspmRiskStrategyGroupResponse DescribeDspmRiskStrategyGroup(Models\DescribeDspmRiskStrategyGroupRequest $req) 查询Dspm风险分组策略
  * @method Models\DescribeDspmRiskTendencyResponse DescribeDspmRiskTendency(Models\DescribeDspmRiskTendencyRequest $req) 查询Dspm风险趋势
+ * @method Models\DescribeDspmSessionListResponse DescribeDspmSessionList(Models\DescribeDspmSessionListRequest $req) 查询审计会话列表信息
  * @method Models\DescribeDspmStatisticsResponse DescribeDspmStatistics(Models\DescribeDspmStatisticsRequest $req) 查询Dspm统计信息
  * @method Models\DescribeDspmSupportedAssetTypeResponse DescribeDspmSupportedAssetType(Models\DescribeDspmSupportedAssetTypeRequest $req) 查询Dspm支持的资产类型信息
  * @method Models\DescribeDspmSyncAssetsStatusResponse DescribeDspmSyncAssetsStatus(Models\DescribeDspmSyncAssetsStatusRequest $req) 查询Dspm同步资产状态
  * @method Models\DescribeDspmSyncUsersStatusResponse DescribeDspmSyncUsersStatus(Models\DescribeDspmSyncUsersStatusRequest $req) 查询Dspm同步用户状态
+ * @method Models\DescribeDspmUserCkafkaInstanceListResponse DescribeDspmUserCkafkaInstanceList(Models\DescribeDspmUserCkafkaInstanceListRequest $req) 查询租户ckafka实例列表
  * @method Models\DescribeDspmWhitelistStrategyResponse DescribeDspmWhitelistStrategy(Models\DescribeDspmWhitelistStrategyRequest $req) 查询Dspm白名单策略
  * @method Models\DescribeDynamicAssetsResponse DescribeDynamicAssets(Models\DescribeDynamicAssetsRequest $req) 指定资产类型列表
  * @method Models\DescribeEDRRuleListResponse DescribeEDRRuleList(Models\DescribeEDRRuleListRequest $req) 获取EDR策略列表
@@ -650,7 +665,11 @@ capi 层处理流程：
  * @method Models\ModifyDspmAssetDataScanTaskStatusResponse ModifyDspmAssetDataScanTaskStatus(Models\ModifyDspmAssetDataScanTaskStatusRequest $req) 修改Dspm资产数据扫描任务状态
  * @method Models\ModifyDspmAssetLogDeliverySwitchResponse ModifyDspmAssetLogDeliverySwitch(Models\ModifyDspmAssetLogDeliverySwitchRequest $req) 修改Dspm资产日志投递开关
  * @method Models\ModifyDspmAssetSecurityAnalysisSwitchResponse ModifyDspmAssetSecurityAnalysisSwitch(Models\ModifyDspmAssetSecurityAnalysisSwitchRequest $req) 修改Dspm资产日志投递开关
+ * @method Models\ModifyDspmAuditFilterStrategyResponse ModifyDspmAuditFilterStrategy(Models\ModifyDspmAuditFilterStrategyRequest $req) 修改Dspm审计过滤策略
  * @method Models\ModifyDspmBackupSettingResponse ModifyDspmBackupSetting(Models\ModifyDspmBackupSettingRequest $req) 修改日志备份设置
+ * @method Models\ModifyDspmCkafkaSaveResponse ModifyDspmCkafkaSave(Models\ModifyDspmCkafkaSaveRequest $req) 租户Ckafka配置保存
+ * @method Models\ModifyDspmCkafkaStartResponse ModifyDspmCkafkaStart(Models\ModifyDspmCkafkaStartRequest $req) 日志投递开启
+ * @method Models\ModifyDspmCkafkaStopResponse ModifyDspmCkafkaStop(Models\ModifyDspmCkafkaStopRequest $req) 日志类型投递关闭
  * @method Models\ModifyDspmIdentifyCategoryResponse ModifyDspmIdentifyCategory(Models\ModifyDspmIdentifyCategoryRequest $req) 修改dspm数据识别分类
  * @method Models\ModifyDspmIdentifyComplianceGroupResponse ModifyDspmIdentifyComplianceGroup(Models\ModifyDspmIdentifyComplianceGroupRequest $req) 修改dspm数据识别模板
  * @method Models\ModifyDspmIdentifyComplianceGroupStatusResponse ModifyDspmIdentifyComplianceGroupStatus(Models\ModifyDspmIdentifyComplianceGroupStatusRequest $req) 修改dspm数据识别模板状态
@@ -661,6 +680,7 @@ capi 层处理流程：
  * @method Models\ModifyDspmIdentifyRuleResponse ModifyDspmIdentifyRule(Models\ModifyDspmIdentifyRuleRequest $req) 修改dspm数据识别数据项
  * @method Models\ModifyDspmIdentifyRuleStatusResponse ModifyDspmIdentifyRuleStatus(Models\ModifyDspmIdentifyRuleStatusRequest $req) 修改dspm数据识别数据项状态
  * @method Models\ModifyDspmIpInfoResponse ModifyDspmIpInfo(Models\ModifyDspmIpInfoRequest $req) 修改DspmIp信息
+ * @method Models\ModifyDspmLogDeliveryTypeResponse ModifyDspmLogDeliveryType(Models\ModifyDspmLogDeliveryTypeRequest $req) 修改日志投递配置信息
  * @method Models\ModifyDspmPersonalIdentifyResponse ModifyDspmPersonalIdentify(Models\ModifyDspmPersonalIdentifyRequest $req) 修改Dspm个人身份id
  * @method Models\ModifyDspmRestoreLogTaskResponse ModifyDspmRestoreLogTask(Models\ModifyDspmRestoreLogTaskRequest $req) 恢复备份日志
  * @method Models\ModifyDspmRiskInfoResponse ModifyDspmRiskInfo(Models\ModifyDspmRiskInfoRequest $req) 修改Dspm风险信息
@@ -718,6 +738,7 @@ capi 层处理流程：
  * @method Models\ModifySandboxLLMAuditRuleStatusResponse ModifySandboxLLMAuditRuleStatus(Models\ModifySandboxLLMAuditRuleStatusRequest $req) 批量切换 LLM 审计用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
  * @method Models\ModifySecurityScoreRuleResponse ModifySecurityScoreRule(Models\ModifySecurityScoreRuleRequest $req) 修改安全评分规则，必须传入完整规则集
  * @method Models\ModifyShareUserCSPMResponse ModifyShareUserCSPM(Models\ModifyShareUserCSPMRequest $req) 编辑CSPM共享账号
+ * @method Models\ModifyShareUserDspmResponse ModifyShareUserDspm(Models\ModifyShareUserDspmRequest $req) 编辑dspm监测账号
  * @method Models\ModifySkillScanAlertStatusResponse ModifySkillScanAlertStatus(Models\ModifySkillScanAlertStatusRequest $req) 批量修改 Skill 安全检测告警的处理状态
  * @method Models\ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitch(Models\ModifyUebaRuleSwitchRequest $req) 更新自定义策略的开关
  * @method Models\ModifyVulScanPeriodicResponse ModifyVulScanPeriodic(Models\ModifyVulScanPeriodicRequest $req) 修改漏洞扫描（周期扫描）
@@ -738,6 +759,7 @@ capi 层处理流程：
  * @method Models\ScanCSIPTaskAgainResponse ScanCSIPTaskAgain(Models\ScanCSIPTaskAgainRequest $req) CSIP 手动扫描任务删除接口
  * @method Models\ScanEDRTaskAgainResponse ScanEDRTaskAgain(Models\ScanEDRTaskAgainRequest $req) 基于原任务配置新建扫描任务。AssetId为空时从TaskId获取全部资产信息；AssetId非空时仅含该单资产。
  * @method Models\SendDspmAssetLoginSmsCodeResponse SendDspmAssetLoginSmsCode(Models\SendDspmAssetLoginSmsCodeRequest $req) 发送Dspm资产访问验证码
+ * @method Models\SendDspmCkafkaTestResponse SendDspmCkafkaTest(Models\SendDspmCkafkaTestRequest $req) 租户Ckafka联通性测试
  * @method Models\StartOrModifyPreventUninstallResponse StartOrModifyPreventUninstall(Models\StartOrModifyPreventUninstallRequest $req) 开启或者修改防卸载功能配置
  * @method Models\StartOrModifyProcessDaemonResponse StartOrModifyProcessDaemon(Models\StartOrModifyProcessDaemonRequest $req) 开启或者修改进程守护功能配置
  * @method Models\StopBaselineScanTaskResponse StopBaselineScanTask(Models\StopBaselineScanTaskRequest $req) 停止指定的基线扫描主任务，仅对处于 INIT / SUBTASK_CREATING / SCANNING 状态的任务生效。

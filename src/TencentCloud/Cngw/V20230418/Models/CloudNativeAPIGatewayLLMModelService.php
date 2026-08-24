@@ -88,6 +88,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyRotationPeriodDays(integer $KeyRotationPeriodDays) 设置<p>密钥轮转周期</p><p>单位：天</p>
  * @method string getExternalInstanceId() 获取<p>外部服务来源ID</p>
  * @method void setExternalInstanceId(string $ExternalInstanceId) 设置<p>外部服务来源ID</p>
+ * @method AIGWLoadBalanceConfig getLoadBalanceConfig() 获取<p>负载均衡配置。</p>
+ * @method void setLoadBalanceConfig(AIGWLoadBalanceConfig $LoadBalanceConfig) 设置<p>负载均衡配置。</p>
+ * @method boolean getCanPublish() 获取<p>是否可以发布到广场</p>
+ * @method void setCanPublish(boolean $CanPublish) 设置<p>是否可以发布到广场</p>
+ * @method string getPublishStatus() 获取<p>发布状态</p><p>枚举值：</p><ul><li>Unpublished： 未发布</li><li>Published： 已发布</li></ul>
+ * @method void setPublishStatus(string $PublishStatus) 设置<p>发布状态</p><p>枚举值：</p><ul><li>Unpublished： 未发布</li><li>Published： 已发布</li></ul>
+ * @method string getSyncStatus() 获取<p>同步状态</p><p>枚举值：</p><ul><li>Success： 成功</li><li>Fail： 失败</li></ul>
+ * @method void setSyncStatus(string $SyncStatus) 设置<p>同步状态</p><p>枚举值：</p><ul><li>Success： 成功</li><li>Fail： 失败</li></ul>
+ * @method string getSourceType() 获取<p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+ * @method void setSourceType(string $SourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+ * @method string getSyncedVersion() 获取<p>同步版本</p>
+ * @method void setSyncedVersion(string $SyncedVersion) 设置<p>同步版本</p>
+ * @method string getStatus() 获取<p>模型服务状态</p><p>枚举值：</p><ul><li>Online：  已上线</li><li>Offline： 已下线</li><li>Error： 健康检查异常</li></ul>
+ * @method void setStatus(string $Status) 设置<p>模型服务状态</p><p>枚举值：</p><ul><li>Online：  已上线</li><li>Offline： 已下线</li><li>Error： 健康检查异常</li></ul>
+ * @method boolean getEnableHealthCheck() 获取<p>是否启用健康检查</p>
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置<p>是否启用健康检查</p>
+ * @method AIGWLLMHealthCheckSetting getHealthCheck() 获取<p>健康检查配置</p>
+ * @method void setHealthCheck(AIGWLLMHealthCheckSetting $HealthCheck) 设置<p>健康检查配置</p>
  */
 class CloudNativeAPIGatewayLLMModelService extends AbstractModel
 {
@@ -262,6 +280,51 @@ class CloudNativeAPIGatewayLLMModelService extends AbstractModel
     public $ExternalInstanceId;
 
     /**
+     * @var AIGWLoadBalanceConfig <p>负载均衡配置。</p>
+     */
+    public $LoadBalanceConfig;
+
+    /**
+     * @var boolean <p>是否可以发布到广场</p>
+     */
+    public $CanPublish;
+
+    /**
+     * @var string <p>发布状态</p><p>枚举值：</p><ul><li>Unpublished： 未发布</li><li>Published： 已发布</li></ul>
+     */
+    public $PublishStatus;
+
+    /**
+     * @var string <p>同步状态</p><p>枚举值：</p><ul><li>Success： 成功</li><li>Fail： 失败</li></ul>
+     */
+    public $SyncStatus;
+
+    /**
+     * @var string <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+     */
+    public $SourceType;
+
+    /**
+     * @var string <p>同步版本</p>
+     */
+    public $SyncedVersion;
+
+    /**
+     * @var string <p>模型服务状态</p><p>枚举值：</p><ul><li>Online：  已上线</li><li>Offline： 已下线</li><li>Error： 健康检查异常</li></ul>
+     */
+    public $Status;
+
+    /**
+     * @var boolean <p>是否启用健康检查</p>
+     */
+    public $EnableHealthCheck;
+
+    /**
+     * @var AIGWLLMHealthCheckSetting <p>健康检查配置</p>
+     */
+    public $HealthCheck;
+
+    /**
      * @param string $Id <p>模型服务 ID。</p>
      * @param string $Name <p>模型服务名称。</p>
      * @param string $CreateTime <p>创建时间。</p>
@@ -296,6 +359,15 @@ class CloudNativeAPIGatewayLLMModelService extends AbstractModel
      * @param boolean $KeyRotationEnabled <p>是否开启密钥轮转</p>
      * @param integer $KeyRotationPeriodDays <p>密钥轮转周期</p><p>单位：天</p>
      * @param string $ExternalInstanceId <p>外部服务来源ID</p>
+     * @param AIGWLoadBalanceConfig $LoadBalanceConfig <p>负载均衡配置。</p>
+     * @param boolean $CanPublish <p>是否可以发布到广场</p>
+     * @param string $PublishStatus <p>发布状态</p><p>枚举值：</p><ul><li>Unpublished： 未发布</li><li>Published： 已发布</li></ul>
+     * @param string $SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Success： 成功</li><li>Fail： 失败</li></ul>
+     * @param string $SourceType <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+     * @param string $SyncedVersion <p>同步版本</p>
+     * @param string $Status <p>模型服务状态</p><p>枚举值：</p><ul><li>Online：  已上线</li><li>Offline： 已下线</li><li>Error： 健康检查异常</li></ul>
+     * @param boolean $EnableHealthCheck <p>是否启用健康检查</p>
+     * @param AIGWLLMHealthCheckSetting $HealthCheck <p>健康检查配置</p>
      */
     function __construct()
     {
@@ -457,6 +529,44 @@ class CloudNativeAPIGatewayLLMModelService extends AbstractModel
 
         if (array_key_exists("ExternalInstanceId",$param) and $param["ExternalInstanceId"] !== null) {
             $this->ExternalInstanceId = $param["ExternalInstanceId"];
+        }
+
+        if (array_key_exists("LoadBalanceConfig",$param) and $param["LoadBalanceConfig"] !== null) {
+            $this->LoadBalanceConfig = new AIGWLoadBalanceConfig();
+            $this->LoadBalanceConfig->deserialize($param["LoadBalanceConfig"]);
+        }
+
+        if (array_key_exists("CanPublish",$param) and $param["CanPublish"] !== null) {
+            $this->CanPublish = $param["CanPublish"];
+        }
+
+        if (array_key_exists("PublishStatus",$param) and $param["PublishStatus"] !== null) {
+            $this->PublishStatus = $param["PublishStatus"];
+        }
+
+        if (array_key_exists("SyncStatus",$param) and $param["SyncStatus"] !== null) {
+            $this->SyncStatus = $param["SyncStatus"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("SyncedVersion",$param) and $param["SyncedVersion"] !== null) {
+            $this->SyncedVersion = $param["SyncedVersion"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("EnableHealthCheck",$param) and $param["EnableHealthCheck"] !== null) {
+            $this->EnableHealthCheck = $param["EnableHealthCheck"];
+        }
+
+        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+            $this->HealthCheck = new AIGWLLMHealthCheckSetting();
+            $this->HealthCheck->deserialize($param["HealthCheck"]);
         }
     }
 }

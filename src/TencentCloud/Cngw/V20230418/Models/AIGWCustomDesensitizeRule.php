@@ -18,44 +18,44 @@ namespace TencentCloud\Cngw\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI 网关自定义脱敏规则（A 层 / B 层共用结构体，MaskFormat 含义随所属层不同）
+ * AI 网关自定义脱敏规则
  *
- * @method string getName() 获取<p>自定义脱敏规则名称</p>
- * @method void setName(string $Name) 设置<p>自定义脱敏规则名称</p>
- * @method string getPattern() 获取<p>自定义脱敏规则匹配正则</p>
- * @method void setPattern(string $Pattern) 设置<p>自定义脱敏规则匹配正则</p>
- * @method string getMaskFormat() 获取<p>自定义脱敏规则掩码</p>
- * @method void setMaskFormat(string $MaskFormat) 设置<p>自定义脱敏规则掩码</p>
- * @method boolean getEnabled() 获取<p>自定义脱敏规则开关</p>
- * @method void setEnabled(boolean $Enabled) 设置<p>自定义脱敏规则开关</p>
+ * @method string getName() 获取<p>规则名称，同一配置内唯一，最长 64</p>
+ * @method void setName(string $Name) 设置<p>规则名称，同一配置内唯一，最长 64</p>
+ * @method string getPattern() 获取<p>RE2 兼容的正则表达式</p>
+ * @method void setPattern(string $Pattern) 设置<p>RE2 兼容的正则表达式</p>
+ * @method string getMaskFormat() 获取<p>日志场景为掩码格式，转发场景为占位符；最长 64</p>
+ * @method void setMaskFormat(string $MaskFormat) 设置<p>日志场景为掩码格式，转发场景为占位符；最长 64</p>
+ * @method boolean getEnabled() 获取<p>单条自定义规则是否启用</p>
+ * @method void setEnabled(boolean $Enabled) 设置<p>单条自定义规则是否启用</p>
  */
 class AIGWCustomDesensitizeRule extends AbstractModel
 {
     /**
-     * @var string <p>自定义脱敏规则名称</p>
+     * @var string <p>规则名称，同一配置内唯一，最长 64</p>
      */
     public $Name;
 
     /**
-     * @var string <p>自定义脱敏规则匹配正则</p>
+     * @var string <p>RE2 兼容的正则表达式</p>
      */
     public $Pattern;
 
     /**
-     * @var string <p>自定义脱敏规则掩码</p>
+     * @var string <p>日志场景为掩码格式，转发场景为占位符；最长 64</p>
      */
     public $MaskFormat;
 
     /**
-     * @var boolean <p>自定义脱敏规则开关</p>
+     * @var boolean <p>单条自定义规则是否启用</p>
      */
     public $Enabled;
 
     /**
-     * @param string $Name <p>自定义脱敏规则名称</p>
-     * @param string $Pattern <p>自定义脱敏规则匹配正则</p>
-     * @param string $MaskFormat <p>自定义脱敏规则掩码</p>
-     * @param boolean $Enabled <p>自定义脱敏规则开关</p>
+     * @param string $Name <p>规则名称，同一配置内唯一，最长 64</p>
+     * @param string $Pattern <p>RE2 兼容的正则表达式</p>
+     * @param string $MaskFormat <p>日志场景为掩码格式，转发场景为占位符；最长 64</p>
+     * @param boolean $Enabled <p>单条自定义规则是否启用</p>
      */
     function __construct()
     {

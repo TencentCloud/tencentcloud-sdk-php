@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompHighlightResult(SeeCompHighlightResult $CompHighlightResult) 设置<p>视频语义浓缩结果（适用于视频语义浓缩）</p>
  * @method SeeDetectContinuousResult getDetectContinuousResult() 获取<p>标签持续检测结果</p>
  * @method void setDetectContinuousResult(SeeDetectContinuousResult $DetectContinuousResult) 设置<p>标签持续检测结果</p>
+ * @method SeeFaceRecognitionResult getFaceRecognitionResult() 获取<p>人脸检测结果</p>
+ * @method void setFaceRecognitionResult(SeeFaceRecognitionResult $FaceRecognitionResult) 设置<p>人脸检测结果</p>
  * @method integer getCostBasic() 获取<p>完成该任务所消耗的基础能力额度</p>
  * @method void setCostBasic(integer $CostBasic) 设置<p>完成该任务所消耗的基础能力额度</p>
  * @method integer getCostAdvanced() 获取<p>完成该任务所消耗的高级能力额度</p>
@@ -101,6 +103,11 @@ class SeeTaskInfo extends AbstractModel
     public $DetectContinuousResult;
 
     /**
+     * @var SeeFaceRecognitionResult <p>人脸检测结果</p>
+     */
+    public $FaceRecognitionResult;
+
+    /**
      * @var integer <p>完成该任务所消耗的基础能力额度</p>
      */
     public $CostBasic;
@@ -145,6 +152,7 @@ class SeeTaskInfo extends AbstractModel
      * @param SeeComprehensionResult $ComprehensionResult <p>视觉理解结果（适用于视频理解、图片理解）</p>
      * @param SeeCompHighlightResult $CompHighlightResult <p>视频语义浓缩结果（适用于视频语义浓缩）</p>
      * @param SeeDetectContinuousResult $DetectContinuousResult <p>标签持续检测结果</p>
+     * @param SeeFaceRecognitionResult $FaceRecognitionResult <p>人脸检测结果</p>
      * @param integer $CostBasic <p>完成该任务所消耗的基础能力额度</p>
      * @param integer $CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
      * @param array $Files <p>输出文件名列表</p>
@@ -204,6 +212,11 @@ class SeeTaskInfo extends AbstractModel
         if (array_key_exists("DetectContinuousResult",$param) and $param["DetectContinuousResult"] !== null) {
             $this->DetectContinuousResult = new SeeDetectContinuousResult();
             $this->DetectContinuousResult->deserialize($param["DetectContinuousResult"]);
+        }
+
+        if (array_key_exists("FaceRecognitionResult",$param) and $param["FaceRecognitionResult"] !== null) {
+            $this->FaceRecognitionResult = new SeeFaceRecognitionResult();
+            $this->FaceRecognitionResult->deserialize($param["FaceRecognitionResult"]);
         }
 
         if (array_key_exists("CostBasic",$param) and $param["CostBasic"] !== null) {

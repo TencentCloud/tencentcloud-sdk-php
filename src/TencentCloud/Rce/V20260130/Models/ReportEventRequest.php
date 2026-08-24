@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReportEvent请求参数结构体
  *
- * @method string getEventCode() 获取<p>事件码，标准事件包含：</p><p>枚举值：</p><ul><li>login： 登录</li><li>register： 注册</li><li>create_order： 创建订单</li><li>transaction： 交易支付</li><li>charge_back： 拒付</li><li>sms： 短信</li><li>logout： 登出</li><li>modify_account： 修改账号</li><li>modify_password： 修改密码</li><li>security_verification： 安全验证</li><li>add_promotion： 参加营销活动</li><li>redeem： 兑奖</li><li>withdraw： 提现</li><li>cust_event： 自定义事件，cust_xxx</li><li>scan_code： 扫码</li><li>lucky_draw： 抽奖</li><li>task： 做任务</li><li>invitation： 邀请</li><li>claim_red_packet： 领红包</li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
- * @method void setEventCode(string $EventCode) 设置<p>事件码，标准事件包含：</p><p>枚举值：</p><ul><li>login： 登录</li><li>register： 注册</li><li>create_order： 创建订单</li><li>transaction： 交易支付</li><li>charge_back： 拒付</li><li>sms： 短信</li><li>logout： 登出</li><li>modify_account： 修改账号</li><li>modify_password： 修改密码</li><li>security_verification： 安全验证</li><li>add_promotion： 参加营销活动</li><li>redeem： 兑奖</li><li>withdraw： 提现</li><li>cust_event： 自定义事件，cust_xxx</li><li>scan_code： 扫码</li><li>lucky_draw： 抽奖</li><li>task： 做任务</li><li>invitation： 邀请</li><li>claim_red_packet： 领红包</li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
+ * @method string getEventCode() 获取<p>事件码。用于指定业务接入的场景节点。</p><p> 账号保护产品下的标准事件包含：</p><ul><li> login： 登录<p></p></li> <li>register： 注册 </li><li>sms： 短信 </li><li>logout： 登出 </li><li>modify_account： 修改账号 </li><li>modify_password： 修改密码 </li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单 </li><li>transaction： 交易支付 </li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参加营销活动 </li><li>redeem： 兑奖 </li><li>withdraw： 提现 </li><li>cust_event： 自定义事件，cust_xxx </li><li>scan_code： 扫码 </li><li>lucky_draw： 抽奖 </li><li>task： 做任务 </li><li>invitation： 邀请 </li><li>claim_red_packet： 领红包 </li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
+ * @method void setEventCode(string $EventCode) 设置<p>事件码。用于指定业务接入的场景节点。</p><p> 账号保护产品下的标准事件包含：</p><ul><li> login： 登录<p></p></li> <li>register： 注册 </li><li>sms： 短信 </li><li>logout： 登出 </li><li>modify_account： 修改账号 </li><li>modify_password： 修改密码 </li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单 </li><li>transaction： 交易支付 </li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参加营销活动 </li><li>redeem： 兑奖 </li><li>withdraw： 提现 </li><li>cust_event： 自定义事件，cust_xxx </li><li>scan_code： 扫码 </li><li>lucky_draw： 抽奖 </li><li>task： 做任务 </li><li>invitation： 邀请 </li><li>claim_red_packet： 领红包 </li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
  * @method string getEventTime() 获取<p>事件的发生时间</p><p>参数格式：符合ISO 8601标准的带UTC时区的毫秒级时间</p>
  * @method void setEventTime(string $EventTime) 设置<p>事件的发生时间</p><p>参数格式：符合ISO 8601标准的带UTC时区的毫秒级时间</p>
  * @method string getSessionId() 获取<p>用户当前会话 ID， 用于关联用户登录前后的动作，如果没有传UserId，则SessionId必传，如缺失则可填充空字符串</p>
@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrowser(Browser $Browser) 设置<p>web浏览器相关信息，若您已集成我们的设备指纹SDK，则无需传入此字段</p>
  * @method App getApp() 获取<p>应用程序、操作系统和移动设备详细信息，若您已集成我们的设备指纹SDK，则无需传入此字段</p>
  * @method void setApp(App $App) 设置<p>应用程序、操作系统和移动设备详细信息，若您已集成我们的设备指纹SDK，则无需传入此字段</p>
- * @method DataAuthorization getDataAuthorization() 获取<p>数据授权信息，国内地域必填</p>
- * @method void setDataAuthorization(DataAuthorization $DataAuthorization) 设置<p>数据授权信息，国内地域必填</p>
- * @method string getUserPhoneEncrypt() 获取<p>手机号码加密方式，国内地域必填</p><p>枚举值：</p><ul><li>md5： md5加密</li><li>plain： 明文</li></ul>
- * @method void setUserPhoneEncrypt(string $UserPhoneEncrypt) 设置<p>手机号码加密方式，国内地域必填</p><p>枚举值：</p><ul><li>md5： md5加密</li><li>plain： 明文</li></ul>
+ * @method DataAuthorization getDataAuthorization() 获取<p>数据授权信息，境内地域必填</p>
+ * @method void setDataAuthorization(DataAuthorization $DataAuthorization) 设置<p>数据授权信息，境内地域必填</p>
+ * @method string getUserPhoneEncrypt() 获取<p>手机号码加密方式，境内地域必填</p><p>枚举值：</p><ul><li>md5： md5加密</li><li>plain： 明文</li></ul>
+ * @method void setUserPhoneEncrypt(string $UserPhoneEncrypt) 设置<p>手机号码加密方式，境内地域必填</p><p>枚举值：</p><ul><li>md5： md5加密</li><li>plain： 明文</li></ul>
  * @method string getWeChatOpenId() 获取<p>微信开放账号</p>
  * @method void setWeChatOpenId(string $WeChatOpenId) 设置<p>微信开放账号</p>
  * @method string getQQOpenId() 获取<p>QQ开放账号</p>
@@ -56,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 class ReportEventRequest extends AbstractModel
 {
     /**
-     * @var string <p>事件码，标准事件包含：</p><p>枚举值：</p><ul><li>login： 登录</li><li>register： 注册</li><li>create_order： 创建订单</li><li>transaction： 交易支付</li><li>charge_back： 拒付</li><li>sms： 短信</li><li>logout： 登出</li><li>modify_account： 修改账号</li><li>modify_password： 修改密码</li><li>security_verification： 安全验证</li><li>add_promotion： 参加营销活动</li><li>redeem： 兑奖</li><li>withdraw： 提现</li><li>cust_event： 自定义事件，cust_xxx</li><li>scan_code： 扫码</li><li>lucky_draw： 抽奖</li><li>task： 做任务</li><li>invitation： 邀请</li><li>claim_red_packet： 领红包</li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
+     * @var string <p>事件码。用于指定业务接入的场景节点。</p><p> 账号保护产品下的标准事件包含：</p><ul><li> login： 登录<p></p></li> <li>register： 注册 </li><li>sms： 短信 </li><li>logout： 登出 </li><li>modify_account： 修改账号 </li><li>modify_password： 修改密码 </li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单 </li><li>transaction： 交易支付 </li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参加营销活动 </li><li>redeem： 兑奖 </li><li>withdraw： 提现 </li><li>cust_event： 自定义事件，cust_xxx </li><li>scan_code： 扫码 </li><li>lucky_draw： 抽奖 </li><li>task： 做任务 </li><li>invitation： 邀请 </li><li>claim_red_packet： 领红包 </li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
      */
     public $EventCode;
 
@@ -111,12 +111,12 @@ class ReportEventRequest extends AbstractModel
     public $App;
 
     /**
-     * @var DataAuthorization <p>数据授权信息，国内地域必填</p>
+     * @var DataAuthorization <p>数据授权信息，境内地域必填</p>
      */
     public $DataAuthorization;
 
     /**
-     * @var string <p>手机号码加密方式，国内地域必填</p><p>枚举值：</p><ul><li>md5： md5加密</li><li>plain： 明文</li></ul>
+     * @var string <p>手机号码加密方式，境内地域必填</p><p>枚举值：</p><ul><li>md5： md5加密</li><li>plain： 明文</li></ul>
      */
     public $UserPhoneEncrypt;
 
@@ -136,7 +136,7 @@ class ReportEventRequest extends AbstractModel
     public $QQAppId;
 
     /**
-     * @param string $EventCode <p>事件码，标准事件包含：</p><p>枚举值：</p><ul><li>login： 登录</li><li>register： 注册</li><li>create_order： 创建订单</li><li>transaction： 交易支付</li><li>charge_back： 拒付</li><li>sms： 短信</li><li>logout： 登出</li><li>modify_account： 修改账号</li><li>modify_password： 修改密码</li><li>security_verification： 安全验证</li><li>add_promotion： 参加营销活动</li><li>redeem： 兑奖</li><li>withdraw： 提现</li><li>cust_event： 自定义事件，cust_xxx</li><li>scan_code： 扫码</li><li>lucky_draw： 抽奖</li><li>task： 做任务</li><li>invitation： 邀请</li><li>claim_red_packet： 领红包</li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
+     * @param string $EventCode <p>事件码。用于指定业务接入的场景节点。</p><p> 账号保护产品下的标准事件包含：</p><ul><li> login： 登录<p></p></li> <li>register： 注册 </li><li>sms： 短信 </li><li>logout： 登出 </li><li>modify_account： 修改账号 </li><li>modify_password： 修改密码 </li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单 </li><li>transaction： 交易支付 </li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参加营销活动 </li><li>redeem： 兑奖 </li><li>withdraw： 提现 </li><li>cust_event： 自定义事件，cust_xxx </li><li>scan_code： 扫码 </li><li>lucky_draw： 抽奖 </li><li>task： 做任务 </li><li>invitation： 邀请 </li><li>claim_red_packet： 领红包 </li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
      * @param string $EventTime <p>事件的发生时间</p><p>参数格式：符合ISO 8601标准的带UTC时区的毫秒级时间</p>
      * @param string $SessionId <p>用户当前会话 ID， 用于关联用户登录前后的动作，如果没有传UserId，则SessionId必传，如缺失则可填充空字符串</p>
      * @param string $DeviceToken <p>用户设备指纹token标识，在您的网站或者应用程序中集成设备指纹的SDK后获取</p>
@@ -147,8 +147,8 @@ class ReportEventRequest extends AbstractModel
      * @param string $UserPhone <p>用户提供的联系方式</p><p>参数格式：符合E.164标准的带“+”、地区编码和号码的格式</p>
      * @param Browser $Browser <p>web浏览器相关信息，若您已集成我们的设备指纹SDK，则无需传入此字段</p>
      * @param App $App <p>应用程序、操作系统和移动设备详细信息，若您已集成我们的设备指纹SDK，则无需传入此字段</p>
-     * @param DataAuthorization $DataAuthorization <p>数据授权信息，国内地域必填</p>
-     * @param string $UserPhoneEncrypt <p>手机号码加密方式，国内地域必填</p><p>枚举值：</p><ul><li>md5： md5加密</li><li>plain： 明文</li></ul>
+     * @param DataAuthorization $DataAuthorization <p>数据授权信息，境内地域必填</p>
+     * @param string $UserPhoneEncrypt <p>手机号码加密方式，境内地域必填</p><p>枚举值：</p><ul><li>md5： md5加密</li><li>plain： 明文</li></ul>
      * @param string $WeChatOpenId <p>微信开放账号</p>
      * @param string $QQOpenId <p>QQ开放账号</p>
      * @param string $QQAppId <p>QQ应用ID，当传入QQ开放账号时，该字段必填，QQ分配给网站或应用的AppId，用来唯一标识网站或应用</p>

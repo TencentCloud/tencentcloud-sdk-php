@@ -20,114 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 项目信息
  *
- * @method string getProjectId() 获取项目id
+ * @method string getProjectId() 获取<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectName() 获取项目标识，英文名
+ * @method string getProjectName() 获取<p>项目标识，英文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectName(string $ProjectName) 设置项目标识，英文名
+ * @method void setProjectName(string $ProjectName) 设置<p>项目标识，英文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDisplayName() 获取项目显示名称，可以为中文名
+ * @method string getDisplayName() 获取<p>项目显示名称，可以为中文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisplayName(string $DisplayName) 设置项目显示名称，可以为中文名
+ * @method void setDisplayName(string $DisplayName) 设置<p>项目显示名称，可以为中文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取备注
+ * @method string getDescription() 获取<p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置备注
+ * @method void setDescription(string $Description) 设置<p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatorUin() 获取项目创建人id
+ * @method string getCreatorUin() 获取<p>项目创建人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatorUin(string $CreatorUin) 设置项目创建人id
+ * @method void setCreatorUin(string $CreatorUin) 设置<p>项目创建人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectOwnerUin() 获取项目责任人id
+ * @method string getProjectOwnerUin() 获取<p>项目责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectOwnerUin(string $ProjectOwnerUin) 设置项目责任人id
+ * @method void setProjectOwnerUin(string $ProjectOwnerUin) 设置<p>项目责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
- * @method void setStatus(integer $Status) 设置项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
- * @method string getProjectModel() 获取项目模式，SIMPLE：简单模式 STANDARD：标准模式
+ * @method integer getStatus() 获取<p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
+ * @method void setStatus(integer $Status) 设置<p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
+ * @method string getProjectModel() 获取<p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectModel(string $ProjectModel) 设置项目模式，SIMPLE：简单模式 STANDARD：标准模式
+ * @method void setProjectModel(string $ProjectModel) 设置<p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWorkspaceExt() 获取<p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p>
+ * @method void setWorkspaceExt(array $WorkspaceExt) 设置<p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p>
  */
 class Project extends AbstractModel
 {
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 项目标识，英文名
+     * @var string <p>项目标识，英文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
-     * @var string 项目显示名称，可以为中文名
+     * @var string <p>项目显示名称，可以为中文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisplayName;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 项目创建人id
+     * @var string <p>项目创建人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorUin;
 
     /**
-     * @var string 项目责任人id
+     * @var string <p>项目责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectOwnerUin;
 
     /**
-     * @var integer 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+     * @var integer <p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
      */
     public $Status;
 
     /**
-     * @var string 项目模式，SIMPLE：简单模式 STANDARD：标准模式
+     * @var string <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectModel;
 
     /**
-     * @param string $ProjectId 项目id
+     * @var array <p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p>
+     */
+    public $WorkspaceExt;
+
+    /**
+     * @param string $ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectName 项目标识，英文名
+     * @param string $ProjectName <p>项目标识，英文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DisplayName 项目显示名称，可以为中文名
+     * @param string $DisplayName <p>项目显示名称，可以为中文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 备注
+     * @param string $Description <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param string $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatorUin 项目创建人id
+     * @param string $CreatorUin <p>项目创建人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectOwnerUin 项目责任人id
+     * @param string $ProjectOwnerUin <p>项目责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
-     * @param string $ProjectModel 项目模式，SIMPLE：简单模式 STANDARD：标准模式
+     * @param integer $Status <p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
+     * @param string $ProjectModel <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WorkspaceExt <p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p>
      */
     function __construct()
     {
@@ -176,6 +184,15 @@ class Project extends AbstractModel
 
         if (array_key_exists("ProjectModel",$param) and $param["ProjectModel"] !== null) {
             $this->ProjectModel = $param["ProjectModel"];
+        }
+
+        if (array_key_exists("WorkspaceExt",$param) and $param["WorkspaceExt"] !== null) {
+            $this->WorkspaceExt = [];
+            foreach ($param["WorkspaceExt"] as $key => $value){
+                $obj = new WorkspaceExt();
+                $obj->deserialize($value);
+                array_push($this->WorkspaceExt, $obj);
+            }
         }
     }
 }

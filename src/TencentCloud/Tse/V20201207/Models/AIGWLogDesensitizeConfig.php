@@ -18,44 +18,44 @@ namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI 网关 B 层日志脱敏配置（写入 LLM Log 前对 payload 掩码）
+ * AI 网关日志脱敏配置
  *
- * @method boolean getEnabled() 获取<p>日志脱敏开关</p>
- * @method void setEnabled(boolean $Enabled) 设置<p>日志脱敏开关</p>
- * @method array getPredefinedRuleTypes() 获取<p>预定义规则类型</p><p>枚举值：</p><ul><li>Phone： 电话号码</li><li>IdCard： 身份证号</li><li>BankCard： 银行卡号</li><li>Email： 邮箱地址</li><li>IP： IP地址</li><li>Name： 姓名</li></ul>
- * @method void setPredefinedRuleTypes(array $PredefinedRuleTypes) 设置<p>预定义规则类型</p><p>枚举值：</p><ul><li>Phone： 电话号码</li><li>IdCard： 身份证号</li><li>BankCard： 银行卡号</li><li>Email： 邮箱地址</li><li>IP： IP地址</li><li>Name： 姓名</li></ul>
- * @method array getCustomRules() 获取<p>自定义脱敏规则</p>
- * @method void setCustomRules(array $CustomRules) 设置<p>自定义脱敏规则</p>
- * @method array getScope() 获取<p>日志脱敏范围</p><p>枚举值：</p><ul><li>Request： 请求</li><li>Response： 响应</li></ul>
- * @method void setScope(array $Scope) 设置<p>日志脱敏范围</p><p>枚举值：</p><ul><li>Request： 请求</li><li>Response： 响应</li></ul>
+ * @method boolean getEnabled() 获取<p>日志脱敏配置总开关</p>
+ * @method void setEnabled(boolean $Enabled) 设置<p>日志脱敏配置总开关</p>
+ * @method array getPredefinedRuleTypes() 获取<p>内置规则类型：Phone、IdCard、BankCard、Email、IP、Name</p>
+ * @method void setPredefinedRuleTypes(array $PredefinedRuleTypes) 设置<p>内置规则类型：Phone、IdCard、BankCard、Email、IP、Name</p>
+ * @method array getCustomRules() 获取<p>自定义规则，最多 20 条</p>
+ * @method void setCustomRules(array $CustomRules) 设置<p>自定义规则，最多 20 条</p>
+ * @method array getScope() 获取<p>脱敏方向：Request、Response；为空时默认两者</p>
+ * @method void setScope(array $Scope) 设置<p>脱敏方向：Request、Response；为空时默认两者</p>
  */
 class AIGWLogDesensitizeConfig extends AbstractModel
 {
     /**
-     * @var boolean <p>日志脱敏开关</p>
+     * @var boolean <p>日志脱敏配置总开关</p>
      */
     public $Enabled;
 
     /**
-     * @var array <p>预定义规则类型</p><p>枚举值：</p><ul><li>Phone： 电话号码</li><li>IdCard： 身份证号</li><li>BankCard： 银行卡号</li><li>Email： 邮箱地址</li><li>IP： IP地址</li><li>Name： 姓名</li></ul>
+     * @var array <p>内置规则类型：Phone、IdCard、BankCard、Email、IP、Name</p>
      */
     public $PredefinedRuleTypes;
 
     /**
-     * @var array <p>自定义脱敏规则</p>
+     * @var array <p>自定义规则，最多 20 条</p>
      */
     public $CustomRules;
 
     /**
-     * @var array <p>日志脱敏范围</p><p>枚举值：</p><ul><li>Request： 请求</li><li>Response： 响应</li></ul>
+     * @var array <p>脱敏方向：Request、Response；为空时默认两者</p>
      */
     public $Scope;
 
     /**
-     * @param boolean $Enabled <p>日志脱敏开关</p>
-     * @param array $PredefinedRuleTypes <p>预定义规则类型</p><p>枚举值：</p><ul><li>Phone： 电话号码</li><li>IdCard： 身份证号</li><li>BankCard： 银行卡号</li><li>Email： 邮箱地址</li><li>IP： IP地址</li><li>Name： 姓名</li></ul>
-     * @param array $CustomRules <p>自定义脱敏规则</p>
-     * @param array $Scope <p>日志脱敏范围</p><p>枚举值：</p><ul><li>Request： 请求</li><li>Response： 响应</li></ul>
+     * @param boolean $Enabled <p>日志脱敏配置总开关</p>
+     * @param array $PredefinedRuleTypes <p>内置规则类型：Phone、IdCard、BankCard、Email、IP、Name</p>
+     * @param array $CustomRules <p>自定义规则，最多 20 条</p>
+     * @param array $Scope <p>脱敏方向：Request、Response；为空时默认两者</p>
      */
     function __construct()
     {

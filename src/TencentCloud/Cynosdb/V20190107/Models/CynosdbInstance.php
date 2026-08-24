@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置<p>地域</p>
  * @method string getZone() 获取<p>集群主可用区</p>
  * @method void setZone(string $Zone) 设置<p>集群主可用区</p>
- * @method string getStatus() 获取<p>实例状态</p>
- * @method void setStatus(string $Status) 设置<p>实例状态</p>
+ * @method string getStatus() 获取<p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 从回收站重新恢复</li><li>offlining： 下线中</li><li>offlined： 已下线</li><li>deleting： 删除中</li><li>deleted： 已删除</li></ul>
+ * @method void setStatus(string $Status) 设置<p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 从回收站重新恢复</li><li>offlining： 下线中</li><li>offlined： 已下线</li><li>deleting： 删除中</li><li>deleted： 已删除</li></ul>
  * @method string getStatusDesc() 获取<p>实例状态中文描述</p>
  * @method void setStatusDesc(string $StatusDesc) 设置<p>实例状态中文描述</p>
  * @method string getDbMode() 获取<p>实例形态，是否为serverless实例</p>
@@ -195,7 +195,7 @@ class CynosdbInstance extends AbstractModel
     public $Zone;
 
     /**
-     * @var string <p>实例状态</p>
+     * @var string <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 从回收站重新恢复</li><li>offlining： 下线中</li><li>offlined： 已下线</li><li>deleting： 删除中</li><li>deleted： 已删除</li></ul>
      */
     public $Status;
 
@@ -462,7 +462,7 @@ class CynosdbInstance extends AbstractModel
      * @param integer $ProjectId <p>项目ID</p>
      * @param string $Region <p>地域</p>
      * @param string $Zone <p>集群主可用区</p>
-     * @param string $Status <p>实例状态</p>
+     * @param string $Status <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 从回收站重新恢复</li><li>offlining： 下线中</li><li>offlined： 已下线</li><li>deleting： 删除中</li><li>deleted： 已删除</li></ul>
      * @param string $StatusDesc <p>实例状态中文描述</p>
      * @param string $DbMode <p>实例形态，是否为serverless实例</p>
      * @param string $DbType <p>数据库类型</p>

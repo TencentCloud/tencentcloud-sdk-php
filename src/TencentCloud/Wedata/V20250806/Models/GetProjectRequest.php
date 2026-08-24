@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetProject请求参数结构体
  *
- * @method string getProjectId() 获取项目id。一般使用项目Id来查询，与projectName必须存在一个。
- * @method void setProjectId(string $ProjectId) 设置项目id。一般使用项目Id来查询，与projectName必须存在一个。
+ * @method string getProjectId() 获取<p>项目id。一般使用项目Id来查询，与projectName必须存在一个。</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id。一般使用项目Id来查询，与projectName必须存在一个。</p>
  */
 class GetProjectRequest extends AbstractModel
 {
     /**
-     * @var string 项目id。一般使用项目Id来查询，与projectName必须存在一个。
+     * @var string <p>项目id。一般使用项目Id来查询，与projectName必须存在一个。</p>
      */
     public $ProjectId;
 
     /**
-     * @param string $ProjectId 项目id。一般使用项目Id来查询，与projectName必须存在一个。
+     * @param string $ProjectId <p>项目id。一般使用项目Id来查询，与projectName必须存在一个。</p>
      */
     function __construct()
     {

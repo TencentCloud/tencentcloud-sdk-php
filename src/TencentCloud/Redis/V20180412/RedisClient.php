@@ -70,6 +70,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(Models\DescribeInstanceNodeInfoRequest $req) 本接口（DescribeInstanceNodeInfo）用于查询实例节点信息。
  * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) 本接口（DescribeInstanceParamRecords）用于查询参数修改历史列表。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 本接口（DescribeInstanceParams）用于查询实例参数列表。
+ * @method Models\DescribeInstancePasswordPolicyResponse DescribeInstancePasswordPolicy(Models\DescribeInstancePasswordPolicyRequest $req) 查询指定实例当前密码复杂度配置
  * @method Models\DescribeInstanceSecurityGroupResponse DescribeInstanceSecurityGroup(Models\DescribeInstanceSecurityGroupRequest $req) 本接口（DescribeInstanceSecurityGroup）用于查询实例安全组信息。
  * @method Models\DescribeInstanceShardsResponse DescribeInstanceShards(Models\DescribeInstanceShardsRequest $req) 本接口（DescribeInstanceShards）用于获取集群架构实例的分片信息。
  * @method Models\DescribeInstanceSpecBandwidthResponse DescribeInstanceSpecBandwidth(Models\DescribeInstanceSpecBandwidthRequest $req) 本接口（DescribeInstanceSpecBandwidth）用于查询或计算带宽规格。

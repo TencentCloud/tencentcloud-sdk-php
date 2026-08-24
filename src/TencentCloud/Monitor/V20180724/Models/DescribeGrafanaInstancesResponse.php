@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaInstances返回参数结构体
  *
- * @method array getInstanceSet() 获取已废弃，请使用 Instances
- * @method void setInstanceSet(array $InstanceSet) 设置已废弃，请使用 Instances
- * @method integer getTotalCount() 获取符合查询条件的实例总数
- * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的实例总数
- * @method array getInstances() 获取实例列表
- * @method void setInstances(array $Instances) 设置实例列表
+ * @method array getInstanceSet() 获取<p>已废弃，请使用 Instances</p>
+ * @method void setInstanceSet(array $InstanceSet) 设置<p>已废弃，请使用 Instances</p>
+ * @method integer getTotalCount() 获取<p>符合查询条件的实例总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合查询条件的实例总数</p>
+ * @method array getInstances() 获取<p>实例列表</p>
+ * @method void setInstances(array $Instances) 设置<p>实例列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGrafanaInstancesResponse extends AbstractModel
 {
     /**
-     * @var array 已废弃，请使用 Instances
+     * @var array <p>已废弃，请使用 Instances</p>
      */
     public $InstanceSet;
 
     /**
-     * @var integer 符合查询条件的实例总数
+     * @var integer <p>符合查询条件的实例总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 实例列表
+     * @var array <p>实例列表</p>
      */
     public $Instances;
 
@@ -52,9 +52,9 @@ class DescribeGrafanaInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceSet 已废弃，请使用 Instances
-     * @param integer $TotalCount 符合查询条件的实例总数
-     * @param array $Instances 实例列表
+     * @param array $InstanceSet <p>已废弃，请使用 Instances</p>
+     * @param integer $TotalCount <p>符合查询条件的实例总数</p>
+     * @param array $Instances <p>实例列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

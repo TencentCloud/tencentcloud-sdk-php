@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecuteUserUin(string $ExecuteUserUin) 设置<p>运行账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCycleType() 获取<p>周期类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCycleType(string $CycleType) 设置<p>周期类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerTaskBrief extends AbstractModel
 {
@@ -184,6 +188,12 @@ class TriggerTaskBrief extends AbstractModel
     public $ExecuteUserUin;
 
     /**
+     * @var string <p>周期类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CycleType;
+
+    /**
      * @param string $ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName <p>项目名称</p>
@@ -215,6 +225,8 @@ class TriggerTaskBrief extends AbstractModel
      * @param string $DependencyTriggerPolicy <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CycleType <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -292,6 +304,10 @@ class TriggerTaskBrief extends AbstractModel
 
         if (array_key_exists("ExecuteUserUin",$param) and $param["ExecuteUserUin"] !== null) {
             $this->ExecuteUserUin = $param["ExecuteUserUin"];
+        }
+
+        if (array_key_exists("CycleType",$param) and $param["CycleType"] !== null) {
+            $this->CycleType = $param["CycleType"];
         }
     }
 }

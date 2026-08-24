@@ -24,26 +24,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayId(string $GatewayId) 设置<p>网关 id。</p>
  * @method string getModelAPIId() 获取<p>模型 API ID，全局唯一标识。</p>
  * @method void setModelAPIId(string $ModelAPIId) 设置<p>模型 API ID，全局唯一标识。</p>
- * @method string getName() 获取<p>模型 API 名称，最长 60 字符。</p>
- * @method void setName(string $Name) 设置<p>模型 API 名称，最长 60 字符。</p>
- * @method string getBasePath() 获取<p>统一前缀路径（可选）。例如 /v1/openai。</p>
- * @method void setBasePath(string $BasePath) 设置<p>统一前缀路径（可选）。例如 /v1/openai。</p>
- * @method string getDescription() 获取<p>模型 API 描述。最长 200 字符。</p>
- * @method void setDescription(string $Description) 设置<p>模型 API 描述。最长 200 字符。</p>
- * @method array getListModelServiceId() 获取<p>关联的模型服务 ID 列表，长度 1-10。</p>
- * @method void setListModelServiceId(array $ListModelServiceId) 设置<p>关联的模型服务 ID 列表，长度 1-10。</p>
- * @method CloudNativeAPIGatewayLLMModelServiceRoute getModelServiceRoute() 获取<p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
- * @method void setModelServiceRoute(CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute) 设置<p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
- * @method array getMatchHeaders() 获取<p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
- * @method void setMatchHeaders(array $MatchHeaders) 设置<p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
- * @method boolean getEnableCrossServiceFallback() 获取<p>是否启用跨服务 Fallback。</p>
- * @method void setEnableCrossServiceFallback(boolean $EnableCrossServiceFallback) 设置<p>是否启用跨服务 Fallback。</p>
- * @method AIGWCrossServiceFallbackConfig getCrossServiceFallbackConfig() 获取<p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
- * @method void setCrossServiceFallbackConfig(AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig) 设置<p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
- * @method AIGWTagFilter getTagFilter() 获取<p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
- * @method void setTagFilter(AIGWTagFilter $TagFilter) 设置<p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
- * @method AIGWLogConfig getLogConfig() 获取<p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
- * @method void setLogConfig(AIGWLogConfig $LogConfig) 设置<p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
+ * @method string getName() 获取<p>修改模型 API 名称</p>
+ * @method void setName(string $Name) 设置<p>修改模型 API 名称</p>
+ * @method string getBasePath() 获取<p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+ * @method void setBasePath(string $BasePath) 设置<p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+ * @method string getDescription() 获取<p>模型 API 的相关描述。</p>
+ * @method void setDescription(string $Description) 设置<p>模型 API 的相关描述。</p>
+ * @method array getListModelServiceId() 获取<p>关联的模型服务列表（支持填多个模型服务）</p>
+ * @method void setListModelServiceId(array $ListModelServiceId) 设置<p>关联的模型服务列表（支持填多个模型服务）</p>
+ * @method CloudNativeAPIGatewayLLMModelServiceRoute getModelServiceRoute() 获取<p>模型服务路由策略（是指如何路由到模型服务）</p>
+ * @method void setModelServiceRoute(CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute) 设置<p>模型服务路由策略（是指如何路由到模型服务）</p>
+ * @method array getMatchHeaders() 获取<p>headers 路由匹配</p>
+ * @method void setMatchHeaders(array $MatchHeaders) 设置<p>headers 路由匹配</p>
+ * @method boolean getEnableCrossServiceFallback() 获取<p>跨服务 fallback</p>
+ * @method void setEnableCrossServiceFallback(boolean $EnableCrossServiceFallback) 设置<p>跨服务 fallback</p>
+ * @method AIGWCrossServiceFallbackConfig getCrossServiceFallbackConfig() 获取<p>跨服务 fallback 配置</p>
+ * @method void setCrossServiceFallbackConfig(AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig) 设置<p>跨服务 fallback 配置</p>
+ * @method AIGWTagFilter getTagFilter() 获取<p>标签</p>
+ * @method void setTagFilter(AIGWTagFilter $TagFilter) 设置<p>标签</p>
+ * @method AIGWLogConfig getLogConfig() 获取<p>模型 API 日志配置</p>
+ * @method void setLogConfig(AIGWLogConfig $LogConfig) 设置<p>模型 API 日志配置</p>
+ * @method AIGWRerankMaxDocumentsConfig getMaxDocumentsConfig() 获取<p>Rerank场景最大文档数配置</p>
+ * @method void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig) 设置<p>Rerank场景最大文档数配置</p>
+ * @method AIGWSensitiveWordRoute getSensitiveWordRoute() 获取<p>敏感词路由配置</p>
+ * @method void setSensitiveWordRoute(AIGWSensitiveWordRoute $SensitiveWordRoute) 设置<p>敏感词路由配置</p>
  */
 class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
 {
@@ -58,68 +62,80 @@ class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     public $ModelAPIId;
 
     /**
-     * @var string <p>模型 API 名称，最长 60 字符。</p>
+     * @var string <p>修改模型 API 名称</p>
      */
     public $Name;
 
     /**
-     * @var string <p>统一前缀路径（可选）。例如 /v1/openai。</p>
+     * @var string <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
      */
     public $BasePath;
 
     /**
-     * @var string <p>模型 API 描述。最长 200 字符。</p>
+     * @var string <p>模型 API 的相关描述。</p>
      */
     public $Description;
 
     /**
-     * @var array <p>关联的模型服务 ID 列表，长度 1-10。</p>
+     * @var array <p>关联的模型服务列表（支持填多个模型服务）</p>
      */
     public $ListModelServiceId;
 
     /**
-     * @var CloudNativeAPIGatewayLLMModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
+     * @var CloudNativeAPIGatewayLLMModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
      */
     public $ModelServiceRoute;
 
     /**
-     * @var array <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+     * @var array <p>headers 路由匹配</p>
      */
     public $MatchHeaders;
 
     /**
-     * @var boolean <p>是否启用跨服务 Fallback。</p>
+     * @var boolean <p>跨服务 fallback</p>
      */
     public $EnableCrossServiceFallback;
 
     /**
-     * @var AIGWCrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
+     * @var AIGWCrossServiceFallbackConfig <p>跨服务 fallback 配置</p>
      */
     public $CrossServiceFallbackConfig;
 
     /**
-     * @var AIGWTagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+     * @var AIGWTagFilter <p>标签</p>
      */
     public $TagFilter;
 
     /**
-     * @var AIGWLogConfig <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
+     * @var AIGWLogConfig <p>模型 API 日志配置</p>
      */
     public $LogConfig;
 
     /**
+     * @var AIGWRerankMaxDocumentsConfig <p>Rerank场景最大文档数配置</p>
+     */
+    public $MaxDocumentsConfig;
+
+    /**
+     * @var AIGWSensitiveWordRoute <p>敏感词路由配置</p>
+     */
+    public $SensitiveWordRoute;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $ModelAPIId <p>模型 API ID，全局唯一标识。</p>
-     * @param string $Name <p>模型 API 名称，最长 60 字符。</p>
-     * @param string $BasePath <p>统一前缀路径（可选）。例如 /v1/openai。</p>
-     * @param string $Description <p>模型 API 描述。最长 200 字符。</p>
-     * @param array $ListModelServiceId <p>关联的模型服务 ID 列表，长度 1-10。</p>
-     * @param CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
-     * @param array $MatchHeaders <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
-     * @param boolean $EnableCrossServiceFallback <p>是否启用跨服务 Fallback。</p>
-     * @param AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
-     * @param AIGWTagFilter $TagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
-     * @param AIGWLogConfig $LogConfig <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
+     * @param string $Name <p>修改模型 API 名称</p>
+     * @param string $BasePath <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+     * @param string $Description <p>模型 API 的相关描述。</p>
+     * @param array $ListModelServiceId <p>关联的模型服务列表（支持填多个模型服务）</p>
+     * @param CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
+     * @param array $MatchHeaders <p>headers 路由匹配</p>
+     * @param boolean $EnableCrossServiceFallback <p>跨服务 fallback</p>
+     * @param AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig <p>跨服务 fallback 配置</p>
+     * @param AIGWTagFilter $TagFilter <p>标签</p>
+     * @param AIGWLogConfig $LogConfig <p>模型 API 日志配置</p>
+     * @param AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig <p>Rerank场景最大文档数配置</p>
+     * @param AIGWSensitiveWordRoute $SensitiveWordRoute <p>敏感词路由配置</p>
      */
     function __construct()
     {
@@ -189,6 +205,16 @@ class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
             $this->LogConfig = new AIGWLogConfig();
             $this->LogConfig->deserialize($param["LogConfig"]);
+        }
+
+        if (array_key_exists("MaxDocumentsConfig",$param) and $param["MaxDocumentsConfig"] !== null) {
+            $this->MaxDocumentsConfig = new AIGWRerankMaxDocumentsConfig();
+            $this->MaxDocumentsConfig->deserialize($param["MaxDocumentsConfig"]);
+        }
+
+        if (array_key_exists("SensitiveWordRoute",$param) and $param["SensitiveWordRoute"] !== null) {
+            $this->SensitiveWordRoute = new AIGWSensitiveWordRoute();
+            $this->SensitiveWordRoute->deserialize($param["SensitiveWordRoute"]);
         }
     }
 }

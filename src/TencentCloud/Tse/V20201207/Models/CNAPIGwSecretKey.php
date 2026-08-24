@@ -64,6 +64,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOIDCCredentialConfig(AIGWOIDCCredentialConfig $OIDCCredentialConfig) 设置<p>OIDC凭证配置</p>
  * @method string getProvider() 获取<p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
  * @method void setProvider(string $Provider) 设置<p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+ * @method AIGWAKSKCredentialConfig getAKSKCredentialConfig() 获取<p>AK/SK凭证配置</p>
+ * @method void setAKSKCredentialConfig(AIGWAKSKCredentialConfig $AKSKCredentialConfig) 设置<p>AK/SK凭证配置</p>
+ * @method AIGWCAMCredentialConfig getCAMCredentialConfig() 获取<p>CAM凭证配置</p>
+ * @method void setCAMCredentialConfig(AIGWCAMCredentialConfig $CAMCredentialConfig) 设置<p>CAM凭证配置</p>
+ * @method AIGWBearerTokenCredentialConfig getBearerTokenCredentialConfig() 获取<p>Bearer Token凭证配置</p>
+ * @method void setBearerTokenCredentialConfig(AIGWBearerTokenCredentialConfig $BearerTokenCredentialConfig) 设置<p>Bearer Token凭证配置</p>
+ * @method AIGWBasicCredentialConfig getBasicCredentialConfig() 获取<p>Basic Auth凭证配置</p>
+ * @method void setBasicCredentialConfig(AIGWBasicCredentialConfig $BasicCredentialConfig) 设置<p>Basic Auth凭证配置</p>
+ * @method AIGWCustomHeaderCredentialConfig getCustomHeaderCredentialConfig() 获取<p>自定义Header凭证配置</p>
+ * @method void setCustomHeaderCredentialConfig(AIGWCustomHeaderCredentialConfig $CustomHeaderCredentialConfig) 设置<p>自定义Header凭证配置</p>
+ * @method AIGWQueryParamCredentialConfig getQueryParamCredentialConfig() 获取<p>自定义Query参数凭证配置</p>
+ * @method void setQueryParamCredentialConfig(AIGWQueryParamCredentialConfig $QueryParamCredentialConfig) 设置<p>自定义Query参数凭证配置</p>
+ * @method string getSyncStatus() 获取<p>同步状态</p>
+ * @method void setSyncStatus(string $SyncStatus) 设置<p>同步状态</p>
+ * @method string getSourceType() 获取<p>来源类型</p>
+ * @method void setSourceType(string $SourceType) 设置<p>来源类型</p>
+ * @method string getSyncedVersion() 获取<p>已同步版本</p>
+ * @method void setSyncedVersion(string $SyncedVersion) 设置<p>已同步版本</p>
  */
 class CNAPIGwSecretKey extends AbstractModel
 {
@@ -162,6 +180,51 @@ class CNAPIGwSecretKey extends AbstractModel
     public $Provider;
 
     /**
+     * @var AIGWAKSKCredentialConfig <p>AK/SK凭证配置</p>
+     */
+    public $AKSKCredentialConfig;
+
+    /**
+     * @var AIGWCAMCredentialConfig <p>CAM凭证配置</p>
+     */
+    public $CAMCredentialConfig;
+
+    /**
+     * @var AIGWBearerTokenCredentialConfig <p>Bearer Token凭证配置</p>
+     */
+    public $BearerTokenCredentialConfig;
+
+    /**
+     * @var AIGWBasicCredentialConfig <p>Basic Auth凭证配置</p>
+     */
+    public $BasicCredentialConfig;
+
+    /**
+     * @var AIGWCustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
+     */
+    public $CustomHeaderCredentialConfig;
+
+    /**
+     * @var AIGWQueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     */
+    public $QueryParamCredentialConfig;
+
+    /**
+     * @var string <p>同步状态</p>
+     */
+    public $SyncStatus;
+
+    /**
+     * @var string <p>来源类型</p>
+     */
+    public $SourceType;
+
+    /**
+     * @var string <p>已同步版本</p>
+     */
+    public $SyncedVersion;
+
+    /**
      * @param string $SecretKeyId <p>密钥id</p>
      * @param string $Name <p>密钥名字</p>
      * @param string $SecretType <p>密钥协议类型。</p>
@@ -184,6 +247,15 @@ class CNAPIGwSecretKey extends AbstractModel
      * @param AIGWOAuthCredentialConfig $OAuthCredentialConfig <p>OAuth凭证配置</p>
      * @param AIGWOIDCCredentialConfig $OIDCCredentialConfig <p>OIDC凭证配置</p>
      * @param string $Provider <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+     * @param AIGWAKSKCredentialConfig $AKSKCredentialConfig <p>AK/SK凭证配置</p>
+     * @param AIGWCAMCredentialConfig $CAMCredentialConfig <p>CAM凭证配置</p>
+     * @param AIGWBearerTokenCredentialConfig $BearerTokenCredentialConfig <p>Bearer Token凭证配置</p>
+     * @param AIGWBasicCredentialConfig $BasicCredentialConfig <p>Basic Auth凭证配置</p>
+     * @param AIGWCustomHeaderCredentialConfig $CustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
+     * @param AIGWQueryParamCredentialConfig $QueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     * @param string $SyncStatus <p>同步状态</p>
+     * @param string $SourceType <p>来源类型</p>
+     * @param string $SyncedVersion <p>已同步版本</p>
      */
     function __construct()
     {
@@ -271,6 +343,48 @@ class CNAPIGwSecretKey extends AbstractModel
 
         if (array_key_exists("Provider",$param) and $param["Provider"] !== null) {
             $this->Provider = $param["Provider"];
+        }
+
+        if (array_key_exists("AKSKCredentialConfig",$param) and $param["AKSKCredentialConfig"] !== null) {
+            $this->AKSKCredentialConfig = new AIGWAKSKCredentialConfig();
+            $this->AKSKCredentialConfig->deserialize($param["AKSKCredentialConfig"]);
+        }
+
+        if (array_key_exists("CAMCredentialConfig",$param) and $param["CAMCredentialConfig"] !== null) {
+            $this->CAMCredentialConfig = new AIGWCAMCredentialConfig();
+            $this->CAMCredentialConfig->deserialize($param["CAMCredentialConfig"]);
+        }
+
+        if (array_key_exists("BearerTokenCredentialConfig",$param) and $param["BearerTokenCredentialConfig"] !== null) {
+            $this->BearerTokenCredentialConfig = new AIGWBearerTokenCredentialConfig();
+            $this->BearerTokenCredentialConfig->deserialize($param["BearerTokenCredentialConfig"]);
+        }
+
+        if (array_key_exists("BasicCredentialConfig",$param) and $param["BasicCredentialConfig"] !== null) {
+            $this->BasicCredentialConfig = new AIGWBasicCredentialConfig();
+            $this->BasicCredentialConfig->deserialize($param["BasicCredentialConfig"]);
+        }
+
+        if (array_key_exists("CustomHeaderCredentialConfig",$param) and $param["CustomHeaderCredentialConfig"] !== null) {
+            $this->CustomHeaderCredentialConfig = new AIGWCustomHeaderCredentialConfig();
+            $this->CustomHeaderCredentialConfig->deserialize($param["CustomHeaderCredentialConfig"]);
+        }
+
+        if (array_key_exists("QueryParamCredentialConfig",$param) and $param["QueryParamCredentialConfig"] !== null) {
+            $this->QueryParamCredentialConfig = new AIGWQueryParamCredentialConfig();
+            $this->QueryParamCredentialConfig->deserialize($param["QueryParamCredentialConfig"]);
+        }
+
+        if (array_key_exists("SyncStatus",$param) and $param["SyncStatus"] !== null) {
+            $this->SyncStatus = $param["SyncStatus"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("SyncedVersion",$param) and $param["SyncedVersion"] !== null) {
+            $this->SyncedVersion = $param["SyncedVersion"];
         }
     }
 }

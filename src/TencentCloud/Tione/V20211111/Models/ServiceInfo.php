@@ -152,6 +152,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchedulingStrategy(string $SchedulingStrategy) 设置<p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
  * @method integer getNodeCount() 获取<p>服务实际运行的节点数</p>
  * @method void setNodeCount(integer $NodeCount) 设置<p>服务实际运行的节点数</p>
+ * @method string getInferTemplateId() 获取<p>推理模板Id</p><p>参数格式：推理模板 ID</p>
+ * @method void setInferTemplateId(string $InferTemplateId) 设置<p>推理模板Id</p><p>参数格式：推理模板 ID</p>
  */
 class ServiceInfo extends AbstractModel
 {
@@ -388,6 +390,11 @@ class ServiceInfo extends AbstractModel
     public $NodeCount;
 
     /**
+     * @var string <p>推理模板Id</p><p>参数格式：推理模板 ID</p>
+     */
+    public $InferTemplateId;
+
+    /**
      * @param integer $Replicas <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageInfo $ImageInfo <p>镜像信息</p>
@@ -454,6 +461,7 @@ class ServiceInfo extends AbstractModel
      * @param array $VolumeMounts <p>批量数据盘挂载配置</p>
      * @param string $SchedulingStrategy <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
      * @param integer $NodeCount <p>服务实际运行的节点数</p>
+     * @param string $InferTemplateId <p>推理模板Id</p><p>参数格式：推理模板 ID</p>
      */
     function __construct()
     {
@@ -665,6 +673,10 @@ class ServiceInfo extends AbstractModel
 
         if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
             $this->NodeCount = $param["NodeCount"];
+        }
+
+        if (array_key_exists("InferTemplateId",$param) and $param["InferTemplateId"] !== null) {
+            $this->InferTemplateId = $param["InferTemplateId"];
         }
     }
 }

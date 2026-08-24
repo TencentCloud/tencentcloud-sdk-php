@@ -348,6 +348,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenMTLS(integer $OpenMTLS) 设置<p>开启mtls，0关闭，1开启</p>
  * @method string getServerCertSource() 获取<p>证书类型</p>
  * @method void setServerCertSource(string $ServerCertSource) 设置<p>证书类型</p>
+ * @method string getOldEsVip() 获取<p>集群待迁移的VIP</p>
+ * @method void setOldEsVip(string $OldEsVip) 设置<p>集群待迁移的VIP</p>
+ * @method string getOldEsPrivateTcpUrl() 获取<p>集群待迁移的TCP地址</p>
+ * @method void setOldEsPrivateTcpUrl(string $OldEsPrivateTcpUrl) 设置<p>集群待迁移的TCP地址</p>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -936,6 +940,16 @@ class InstanceInfo extends AbstractModel
     public $ServerCertSource;
 
     /**
+     * @var string <p>集群待迁移的VIP</p>
+     */
+    public $OldEsVip;
+
+    /**
+     * @var string <p>集群待迁移的TCP地址</p>
+     */
+    public $OldEsPrivateTcpUrl;
+
+    /**
      * @param string $InstanceId <p>实例ID</p>
      * @param string $InstanceName <p>实例名称</p>
      * @param string $Region <p>地域</p>
@@ -1100,6 +1114,8 @@ class InstanceInfo extends AbstractModel
      * @param integer $EnableAutoReplace <p>开启异常节点自动替换，0关闭，1开启</p>
      * @param integer $OpenMTLS <p>开启mtls，0关闭，1开启</p>
      * @param string $ServerCertSource <p>证书类型</p>
+     * @param string $OldEsVip <p>集群待迁移的VIP</p>
+     * @param string $OldEsPrivateTcpUrl <p>集群待迁移的TCP地址</p>
      */
     function __construct()
     {
@@ -1571,6 +1587,14 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("ServerCertSource",$param) and $param["ServerCertSource"] !== null) {
             $this->ServerCertSource = $param["ServerCertSource"];
+        }
+
+        if (array_key_exists("OldEsVip",$param) and $param["OldEsVip"] !== null) {
+            $this->OldEsVip = $param["OldEsVip"];
+        }
+
+        if (array_key_exists("OldEsPrivateTcpUrl",$param) and $param["OldEsPrivateTcpUrl"] !== null) {
+            $this->OldEsPrivateTcpUrl = $param["OldEsPrivateTcpUrl"];
         }
     }
 }

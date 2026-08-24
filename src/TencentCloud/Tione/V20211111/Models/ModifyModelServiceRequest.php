@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchedulingStrategy(string $SchedulingStrategy) 设置<p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
  * @method integer getTargetProjectId() 获取<p>目标工作空间，不为0则进行迁移，源服务只允许在默认空间</p>
  * @method void setTargetProjectId(integer $TargetProjectId) 设置<p>目标工作空间，不为0则进行迁移，源服务只允许在默认空间</p>
+ * @method string getInferTemplateId() 获取<p>推理模板 ID，在内置大模型场景下使用</p>
+ * @method void setInferTemplateId(string $InferTemplateId) 设置<p>推理模板 ID，在内置大模型场景下使用</p>
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -283,6 +285,11 @@ class ModifyModelServiceRequest extends AbstractModel
     public $TargetProjectId;
 
     /**
+     * @var string <p>推理模板 ID，在内置大模型场景下使用</p>
+     */
+    public $InferTemplateId;
+
+    /**
      * @param string $ServiceId <p>服务id</p>
      * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param ModelInfo $ModelInfo <p>模型信息，需要挂载模型时填写</p>
@@ -320,6 +327,7 @@ class ModifyModelServiceRequest extends AbstractModel
      * @param array $VolumeMounts <p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p>
      * @param string $SchedulingStrategy <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
      * @param integer $TargetProjectId <p>目标工作空间，不为0则进行迁移，源服务只允许在默认空间</p>
+     * @param string $InferTemplateId <p>推理模板 ID，在内置大模型场景下使用</p>
      */
     function __construct()
     {
@@ -507,6 +515,10 @@ class ModifyModelServiceRequest extends AbstractModel
 
         if (array_key_exists("TargetProjectId",$param) and $param["TargetProjectId"] !== null) {
             $this->TargetProjectId = $param["TargetProjectId"];
+        }
+
+        if (array_key_exists("InferTemplateId",$param) and $param["InferTemplateId"] !== null) {
+            $this->InferTemplateId = $param["InferTemplateId"];
         }
     }
 }

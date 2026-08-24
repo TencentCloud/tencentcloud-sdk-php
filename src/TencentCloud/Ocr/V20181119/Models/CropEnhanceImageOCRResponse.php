@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCroppedWidth(integer $CroppedWidth) 设置<p>处理后图的宽</p>
  * @method integer getCroppedHeight() 获取<p>处理后图的高</p>
  * @method void setCroppedHeight(integer $CroppedHeight) 设置<p>处理后图的高</p>
- * @method string getCroppedImage() 获取<p>图像处理后的jpg图片，base64格式</p>
- * @method void setCroppedImage(string $CroppedImage) 设置<p>图像处理后的jpg图片，base64格式</p>
+ * @method string getCroppedImage() 获取<p>图像处理后的jpg图片，base64格式</p><p><strong><p><code>该字段后续不返回内容，请使用CroppedImageUrl</code></p></strong></p>
+ * @method void setCroppedImage(string $CroppedImage) 设置<p>图像处理后的jpg图片，base64格式</p><p><strong><p><code>该字段后续不返回内容，请使用CroppedImageUrl</code></p></strong></p>
+ * @method string getCroppedImageUrl() 获取<p>图像处理后的jpg图片</p><p>参数格式：url格式</p>
+ * @method void setCroppedImageUrl(string $CroppedImageUrl) 设置<p>图像处理后的jpg图片</p><p>参数格式：url格式</p>
  * @method array getPosition() 获取<p>切图区域的4个角点坐标, 是个长度为8的数组<br>[0,1,2,3,4,5,6,7]</p><p>(0,1) 左上角坐标<br>(2,3) 右上角坐标<br>(4,5) 右下角坐标<br>(6,7) 左下角坐标</p>
  * @method void setPosition(array $Position) 设置<p>切图区域的4个角点坐标, 是个长度为8的数组<br>[0,1,2,3,4,5,6,7]</p><p>(0,1) 左上角坐标<br>(2,3) 右上角坐标<br>(4,5) 右下角坐标<br>(6,7) 左下角坐标</p>
  * @method integer getAngle() 获取<p>图像角度，AdjustOrientation =1时生效, 返回值如下  -1: 失败  0、90、180、270</p>
@@ -48,9 +50,14 @@ class CropEnhanceImageOCRResponse extends AbstractModel
     public $CroppedHeight;
 
     /**
-     * @var string <p>图像处理后的jpg图片，base64格式</p>
+     * @var string <p>图像处理后的jpg图片，base64格式</p><p><strong><p><code>该字段后续不返回内容，请使用CroppedImageUrl</code></p></strong></p>
      */
     public $CroppedImage;
+
+    /**
+     * @var string <p>图像处理后的jpg图片</p><p>参数格式：url格式</p>
+     */
+    public $CroppedImageUrl;
 
     /**
      * @var array <p>切图区域的4个角点坐标, 是个长度为8的数组<br>[0,1,2,3,4,5,6,7]</p><p>(0,1) 左上角坐标<br>(2,3) 右上角坐标<br>(4,5) 右下角坐标<br>(6,7) 左下角坐标</p>
@@ -71,7 +78,8 @@ class CropEnhanceImageOCRResponse extends AbstractModel
     /**
      * @param integer $CroppedWidth <p>处理后图的宽</p>
      * @param integer $CroppedHeight <p>处理后图的高</p>
-     * @param string $CroppedImage <p>图像处理后的jpg图片，base64格式</p>
+     * @param string $CroppedImage <p>图像处理后的jpg图片，base64格式</p><p><strong><p><code>该字段后续不返回内容，请使用CroppedImageUrl</code></p></strong></p>
+     * @param string $CroppedImageUrl <p>图像处理后的jpg图片</p><p>参数格式：url格式</p>
      * @param array $Position <p>切图区域的4个角点坐标, 是个长度为8的数组<br>[0,1,2,3,4,5,6,7]</p><p>(0,1) 左上角坐标<br>(2,3) 右上角坐标<br>(4,5) 右下角坐标<br>(6,7) 左下角坐标</p>
      * @param integer $Angle <p>图像角度，AdjustOrientation =1时生效, 返回值如下  -1: 失败  0、90、180、270</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,6 +108,10 @@ class CropEnhanceImageOCRResponse extends AbstractModel
 
         if (array_key_exists("CroppedImage",$param) and $param["CroppedImage"] !== null) {
             $this->CroppedImage = $param["CroppedImage"];
+        }
+
+        if (array_key_exists("CroppedImageUrl",$param) and $param["CroppedImageUrl"] !== null) {
+            $this->CroppedImageUrl = $param["CroppedImageUrl"];
         }
 
         if (array_key_exists("Position",$param) and $param["Position"] !== null) {

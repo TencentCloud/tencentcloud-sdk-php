@@ -62,6 +62,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogDesensitizeConfig(AIGWLogDesensitizeConfig $LogDesensitizeConfig) 设置<p>日志脱敏规则</p>
  * @method AIGWForwardDesensitizeConfig getForwardDesensitizeConfig() 获取<p>转发脱敏规则</p>
  * @method void setForwardDesensitizeConfig(AIGWForwardDesensitizeConfig $ForwardDesensitizeConfig) 设置<p>转发脱敏规则</p>
+ * @method AIGWRerankMaxDocumentsConfig getMaxDocumentsConfig() 获取<p>rerank documents 上限</p>
+ * @method void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig) 设置<p>rerank documents 上限</p>
+ * @method AIGWSensitiveWordRoute getSensitiveWordRoute() 获取<p>敏感词路由配置</p>
+ * @method void setSensitiveWordRoute(AIGWSensitiveWordRoute $SensitiveWordRoute) 设置<p>敏感词路由配置</p>
+ * @method array getConsumerGroupModelScopes() 获取<p>消费者组模型范围</p>
+ * @method void setConsumerGroupModelScopes(array $ConsumerGroupModelScopes) 设置<p>消费者组模型范围</p>
+ * @method AIGWConsumerModelScope getConsumerInheritModelScope() 获取<p>消费者继承的模型范围</p>
+ * @method void setConsumerInheritModelScope(AIGWConsumerModelScope $ConsumerInheritModelScope) 设置<p>消费者继承的模型范围</p>
  */
 class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
 {
@@ -171,6 +179,26 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
     public $ForwardDesensitizeConfig;
 
     /**
+     * @var AIGWRerankMaxDocumentsConfig <p>rerank documents 上限</p>
+     */
+    public $MaxDocumentsConfig;
+
+    /**
+     * @var AIGWSensitiveWordRoute <p>敏感词路由配置</p>
+     */
+    public $SensitiveWordRoute;
+
+    /**
+     * @var array <p>消费者组模型范围</p>
+     */
+    public $ConsumerGroupModelScopes;
+
+    /**
+     * @var AIGWConsumerModelScope <p>消费者继承的模型范围</p>
+     */
+    public $ConsumerInheritModelScope;
+
+    /**
      * @param string $Id <p>模型 API ID。</p>
      * @param string $CreateTime <p>创建时间</p>
      * @param string $ModifyTime <p>修改时间</p>
@@ -192,6 +220,10 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
      * @param AIGWLogConfig $LogConfig <p>日志显示相关开关</p>
      * @param AIGWLogDesensitizeConfig $LogDesensitizeConfig <p>日志脱敏规则</p>
      * @param AIGWForwardDesensitizeConfig $ForwardDesensitizeConfig <p>转发脱敏规则</p>
+     * @param AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig <p>rerank documents 上限</p>
+     * @param AIGWSensitiveWordRoute $SensitiveWordRoute <p>敏感词路由配置</p>
+     * @param array $ConsumerGroupModelScopes <p>消费者组模型范围</p>
+     * @param AIGWConsumerModelScope $ConsumerInheritModelScope <p>消费者继承的模型范围</p>
      */
     function __construct()
     {
@@ -304,6 +336,30 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
         if (array_key_exists("ForwardDesensitizeConfig",$param) and $param["ForwardDesensitizeConfig"] !== null) {
             $this->ForwardDesensitizeConfig = new AIGWForwardDesensitizeConfig();
             $this->ForwardDesensitizeConfig->deserialize($param["ForwardDesensitizeConfig"]);
+        }
+
+        if (array_key_exists("MaxDocumentsConfig",$param) and $param["MaxDocumentsConfig"] !== null) {
+            $this->MaxDocumentsConfig = new AIGWRerankMaxDocumentsConfig();
+            $this->MaxDocumentsConfig->deserialize($param["MaxDocumentsConfig"]);
+        }
+
+        if (array_key_exists("SensitiveWordRoute",$param) and $param["SensitiveWordRoute"] !== null) {
+            $this->SensitiveWordRoute = new AIGWSensitiveWordRoute();
+            $this->SensitiveWordRoute->deserialize($param["SensitiveWordRoute"]);
+        }
+
+        if (array_key_exists("ConsumerGroupModelScopes",$param) and $param["ConsumerGroupModelScopes"] !== null) {
+            $this->ConsumerGroupModelScopes = [];
+            foreach ($param["ConsumerGroupModelScopes"] as $key => $value){
+                $obj = new AIGWAuthModelScopeItem();
+                $obj->deserialize($value);
+                array_push($this->ConsumerGroupModelScopes, $obj);
+            }
+        }
+
+        if (array_key_exists("ConsumerInheritModelScope",$param) and $param["ConsumerInheritModelScope"] !== null) {
+            $this->ConsumerInheritModelScope = new AIGWConsumerModelScope();
+            $this->ConsumerInheritModelScope->deserialize($param["ConsumerInheritModelScope"]);
         }
     }
 }

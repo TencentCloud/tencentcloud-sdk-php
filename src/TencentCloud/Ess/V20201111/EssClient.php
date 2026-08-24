@@ -200,8 +200,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
 1. 该接口可生成签署人的批量、合同组签署/查看链接 。
 2. 该签署链接**默认有效期为30分钟**，过期后将失效，如需签署可重新创建批量签署链接 。
 3. 该接口返回的签署链接适用于APP集成的场景，支持APP打开或浏览器直接打开，**不支持微信小程序嵌入**。
-跳转到小程序的实现，参考微信官方文档(分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式)，如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>。
 4. 因h5涉及人脸身份认证能力基于慧眼人脸核身，对Android和iOS系统均有一定要求， 因此<font color='red'>App嵌入H5签署合同需要按照慧眼提供的<a href="https://cloud.tencent.com/document/product/1007/61076">慧眼人脸核身兼容性文档</a>做兼容性适配</font>。
+5. <font color='red'>iframe 嵌入暂不支持人脸相关操作</font>，包括设置密码等需要进行的人脸核验。
  * @method Models\CreateBatchSignUrlResponse CreateBatchSignUrl(Models\CreateBatchSignUrlRequest $req) 通过此接口，可以创建小程序批量签署链接，个人/企业员工可通过此链接跳转至小程序进行批量签署。请确保生成链接时的身份信息与签署合同参与方的信息保持一致。
 
 注意事项：
@@ -345,6 +345,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注: 
 1. `支持的文件类型有doc、docx、xls、xlsx、html、jpg、jpeg、png、bmp、txt`
 2. `可通过发起合同时设置预览来检查转换文件是否达到预期效果`
+
+整体流程如下图
+![image](https://qcloudimg.tencent-cloud.cn/raw/bb35c9cfa453d28eade16df36221f313.png)
  * @method Models\CreateFileCounterSignResponse CreateFileCounterSign(Models\CreateFileCounterSignRequest $req) 此接口用于发起数字文件CA加签操作。可以使用同步或者异步模式进行。
 
 **注意： 1. 文件类型暂时仅支持PDF类型文件。2. 此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。**
@@ -652,8 +655,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
 **注意**
 1. 该签署链接**默认有效期为30分钟**，过期后将失效，如需签署可重新创建签署链接。
 2. 该接口返回的签署链接适用于APP集成的场景，支持APP、支付宝打开或浏览器直接打开，**不支持微信小程序嵌入**。配置方式请参考：<a href="https://qian.tencent.com/developers/company/openqianh5/">跳转电子签H5</a>。
-如需跳转到小程序的实现，参考微信官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式），如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>。
 3. 因h5涉及人脸身份认证能力基于慧眼人脸核身，对Android和iOS系统均有一定要求， 因此<font color='red'>App嵌入H5签署合同需要按照慧眼提供的<a href="https://cloud.tencent.com/document/product/1007/61076">慧眼人脸核身兼容性文档</a>做兼容性适配</font>。
+4. <font color='red'>iframe 嵌入暂不支持人脸相关操作</font>，包括设置密码等需要进行的人脸核验。
  * @method Models\CreateInformationExtractionWebUrlResponse CreateInformationExtractionWebUrl(Models\CreateInformationExtractionWebUrlRequest $req) 此接口（CreateInformationExtractionWebUrl）用来创建合同信息提取web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
 
 注: 
@@ -1062,6 +1065,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注：
 1. `大文件转换所需的时间可能会比较长`
 2.  `本接口返回的文件资源ID就是PDF资源ID，可以直接用于【用PDF文件创建签署流程】接口发起合同。`
+
+整体流程如下图
+![image](https://qcloudimg.tencent-cloud.cn/raw/bb35c9cfa453d28eade16df36221f313.png)
  * @method Models\DescribeFileCounterSignResultResponse DescribeFileCounterSignResult(Models\DescribeFileCounterSignResultRequest $req) 文件CA加签任务结果查询接口，用于查询 CreateFileCounterSign接口 发起的异步加签任务。
 
 注意：`此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。`

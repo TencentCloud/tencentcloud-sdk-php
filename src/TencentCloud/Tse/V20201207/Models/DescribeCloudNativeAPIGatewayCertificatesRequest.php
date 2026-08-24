@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayCertificates请求参数结构体
  *
- * @method string getGatewayId() 获取网关ID
- * @method void setGatewayId(string $GatewayId) 设置网关ID
- * @method integer getLimit() 获取列表数量
- * @method void setLimit(integer $Limit) 设置列表数量
- * @method integer getOffset() 获取列表offset
- * @method void setOffset(integer $Offset) 设置列表offset
- * @method array getFilters() 获取过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name
- * @method void setFilters(array $Filters) 设置过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name
+ * @method string getGatewayId() 获取<p>网关ID</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关ID</p>
+ * @method integer getLimit() 获取<p>列表数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>列表数量</p>
+ * @method integer getOffset() 获取<p>列表offset</p>
+ * @method void setOffset(integer $Offset) 设置<p>列表offset</p>
+ * @method array getFilters() 获取<p>过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name</p>
+ * @method string getCertType() 获取<p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+ * @method void setCertType(string $CertType) 设置<p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+ * @method string getCertUsage() 获取<p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+ * @method void setCertUsage(string $CertUsage) 设置<p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
  */
 class DescribeCloudNativeAPIGatewayCertificatesRequest extends AbstractModel
 {
     /**
-     * @var string 网关ID
+     * @var string <p>网关ID</p>
      */
     public $GatewayId;
 
     /**
-     * @var integer 列表数量
+     * @var integer <p>列表数量</p>
      */
     public $Limit;
 
     /**
-     * @var integer 列表offset
+     * @var integer <p>列表offset</p>
      */
     public $Offset;
 
     /**
-     * @var array 过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name
+     * @var array <p>过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name</p>
      */
     public $Filters;
 
     /**
-     * @param string $GatewayId 网关ID
-     * @param integer $Limit 列表数量
-     * @param integer $Offset 列表offset
-     * @param array $Filters 过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name
+     * @var string <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     */
+    public $CertType;
+
+    /**
+     * @var string <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     */
+    public $CertUsage;
+
+    /**
+     * @param string $GatewayId <p>网关ID</p>
+     * @param integer $Limit <p>列表数量</p>
+     * @param integer $Offset <p>列表offset</p>
+     * @param array $Filters <p>过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name</p>
+     * @param string $CertType <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     * @param string $CertUsage <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class DescribeCloudNativeAPIGatewayCertificatesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
+            $this->CertType = $param["CertType"];
+        }
+
+        if (array_key_exists("CertUsage",$param) and $param["CertUsage"] !== null) {
+            $this->CertUsage = $param["CertUsage"];
         }
     }
 }

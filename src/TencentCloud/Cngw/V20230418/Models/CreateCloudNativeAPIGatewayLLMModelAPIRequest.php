@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagFilter(AIGWTagFilter $TagFilter) 设置<p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
  * @method AIGWLogConfig getLogConfig() 获取<p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
  * @method void setLogConfig(AIGWLogConfig $LogConfig) 设置<p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
+ * @method AIGWRerankMaxDocumentsConfig getMaxDocumentsConfig() 获取<p>Rerank场景最大文档数高级配置</p>
+ * @method void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig) 设置<p>Rerank场景最大文档数高级配置</p>
+ * @method AIGWSensitiveWordRoute getSensitiveWordRoute() 获取<p>敏感词路由配置</p>
+ * @method void setSensitiveWordRoute(AIGWSensitiveWordRoute $SensitiveWordRoute) 设置<p>敏感词路由配置</p>
  */
 class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     public $LogConfig;
 
     /**
+     * @var AIGWRerankMaxDocumentsConfig <p>Rerank场景最大文档数高级配置</p>
+     */
+    public $MaxDocumentsConfig;
+
+    /**
+     * @var AIGWSensitiveWordRoute <p>敏感词路由配置</p>
+     */
+    public $SensitiveWordRoute;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $Name <p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
      * @param string $SceneType <p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
@@ -136,6 +150,8 @@ class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
      * @param AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
      * @param AIGWTagFilter $TagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
      * @param AIGWLogConfig $LogConfig <p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
+     * @param AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig <p>Rerank场景最大文档数高级配置</p>
+     * @param AIGWSensitiveWordRoute $SensitiveWordRoute <p>敏感词路由配置</p>
      */
     function __construct()
     {
@@ -218,6 +234,16 @@ class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
             $this->LogConfig = new AIGWLogConfig();
             $this->LogConfig->deserialize($param["LogConfig"]);
+        }
+
+        if (array_key_exists("MaxDocumentsConfig",$param) and $param["MaxDocumentsConfig"] !== null) {
+            $this->MaxDocumentsConfig = new AIGWRerankMaxDocumentsConfig();
+            $this->MaxDocumentsConfig->deserialize($param["MaxDocumentsConfig"]);
+        }
+
+        if (array_key_exists("SensitiveWordRoute",$param) and $param["SensitiveWordRoute"] !== null) {
+            $this->SensitiveWordRoute = new AIGWSensitiveWordRoute();
+            $this->SensitiveWordRoute->deserialize($param["SensitiveWordRoute"]);
         }
     }
 }

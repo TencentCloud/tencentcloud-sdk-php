@@ -20,122 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDoS攻击事件对象
  *
- * @method string getEventId() 获取事件ID。
- * @method void setEventId(string $EventId) 设置事件ID。
- * @method string getAttackType() 获取攻击类型(对应交互事件名称)。
- * @method void setAttackType(string $AttackType) 设置攻击类型(对应交互事件名称)。
- * @method integer getAttackStatus() 获取攻击状态。
- * @method void setAttackStatus(integer $AttackStatus) 设置攻击状态。
- * @method integer getAttackMaxBandWidth() 获取攻击最大带宽，单位为 bps。
- * @method void setAttackMaxBandWidth(integer $AttackMaxBandWidth) 设置攻击最大带宽，单位为 bps。
- * @method integer getAttackPacketMaxRate() 获取攻击包速率峰值，单位为 pps。
- * @method void setAttackPacketMaxRate(integer $AttackPacketMaxRate) 设置攻击包速率峰值，单位为 pps。
- * @method integer getAttackStartTime() 获取攻击开始时间，单位为s。
- * @method void setAttackStartTime(integer $AttackStartTime) 设置攻击开始时间，单位为s。
- * @method integer getAttackEndTime() 获取攻击结束时间，单位为s。
- * @method void setAttackEndTime(integer $AttackEndTime) 设置攻击结束时间，单位为s。
- * @method integer getPolicyId() 获取DDoS策略组ID。
+ * @method string getEventId() 获取<p>事件 ID。</p>
+ * @method void setEventId(string $EventId) 设置<p>事件 ID。</p>
+ * @method string getAttackType() 获取<p>攻击类型。</p>
+ * @method void setAttackType(string $AttackType) 设置<p>攻击类型。</p>
+ * @method integer getAttackStatus() 获取<p>攻击状态。</p><p>枚举值：</p><ul><li>0： 观察中</li><li>1： 攻击中</li><li>2： 攻击结束</li></ul>
+ * @method void setAttackStatus(integer $AttackStatus) 设置<p>攻击状态。</p><p>枚举值：</p><ul><li>0： 观察中</li><li>1： 攻击中</li><li>2： 攻击结束</li></ul>
+ * @method integer getAttackMaxBandWidth() 获取<p>攻击最大带宽，单位为 bps。</p>
+ * @method void setAttackMaxBandWidth(integer $AttackMaxBandWidth) 设置<p>攻击最大带宽，单位为 bps。</p>
+ * @method integer getAttackPacketMaxRate() 获取<p>攻击包速率峰值，单位为 pps。</p>
+ * @method void setAttackPacketMaxRate(integer $AttackPacketMaxRate) 设置<p>攻击包速率峰值，单位为 pps。</p>
+ * @method integer getAttackStartTime() 获取<p>攻击开始时间戳。</p><p>单位：秒</p>
+ * @method void setAttackStartTime(integer $AttackStartTime) 设置<p>攻击开始时间戳。</p><p>单位：秒</p>
+ * @method integer getAttackEndTime() 获取<p>攻击结束时间戳。</p><p>单位：秒</p>
+ * @method void setAttackEndTime(integer $AttackEndTime) 设置<p>攻击结束时间戳。</p><p>单位：秒</p>
+ * @method integer getPolicyId() 获取<p>DDoS 策略组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyId(integer $PolicyId) 设置DDoS策略组ID。
+ * @method void setPolicyId(integer $PolicyId) 设置<p>DDoS 策略组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getZoneId() 获取站点ID。
+ * @method string getZoneId() 获取<p>站点 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneId(string $ZoneId) 设置站点ID。
+ * @method void setZoneId(string $ZoneId) 设置<p>站点 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getArea() 获取攻击事件所属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>
+ * @method string getArea() 获取<p>攻击事件所属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArea(string $Area) 设置攻击事件所属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>
+ * @method void setArea(string $Area) 设置<p>攻击事件所属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDDoSBlockData() 获取封禁解封信息。
+ * @method array getDDoSBlockData() 获取<p>封禁解封信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDDoSBlockData(array $DDoSBlockData) 设置封禁解封信息。
+ * @method void setDDoSBlockData(array $DDoSBlockData) 设置<p>封禁解封信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDDoSAttackDips() 获取<p>被 DDoS 攻击的目的 IP 列表。</p>
+ * @method void setDDoSAttackDips(array $DDoSAttackDips) 设置<p>被 DDoS 攻击的目的 IP 列表。</p>
  */
 class DDoSAttackEvent extends AbstractModel
 {
     /**
-     * @var string 事件ID。
+     * @var string <p>事件 ID。</p>
      */
     public $EventId;
 
     /**
-     * @var string 攻击类型(对应交互事件名称)。
+     * @var string <p>攻击类型。</p>
      */
     public $AttackType;
 
     /**
-     * @var integer 攻击状态。
+     * @var integer <p>攻击状态。</p><p>枚举值：</p><ul><li>0： 观察中</li><li>1： 攻击中</li><li>2： 攻击结束</li></ul>
      */
     public $AttackStatus;
 
     /**
-     * @var integer 攻击最大带宽，单位为 bps。
+     * @var integer <p>攻击最大带宽，单位为 bps。</p>
      */
     public $AttackMaxBandWidth;
 
     /**
-     * @var integer 攻击包速率峰值，单位为 pps。
+     * @var integer <p>攻击包速率峰值，单位为 pps。</p>
      */
     public $AttackPacketMaxRate;
 
     /**
-     * @var integer 攻击开始时间，单位为s。
+     * @var integer <p>攻击开始时间戳。</p><p>单位：秒</p>
      */
     public $AttackStartTime;
 
     /**
-     * @var integer 攻击结束时间，单位为s。
+     * @var integer <p>攻击结束时间戳。</p><p>单位：秒</p>
      */
     public $AttackEndTime;
 
     /**
-     * @var integer DDoS策略组ID。
+     * @var integer <p>DDoS 策略组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyId;
 
     /**
-     * @var string 站点ID。
+     * @var string <p>站点 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
-     * @var string 攻击事件所属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>
+     * @var string <p>攻击事件所属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Area;
 
     /**
-     * @var array 封禁解封信息。
+     * @var array <p>封禁解封信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DDoSBlockData;
 
     /**
-     * @param string $EventId 事件ID。
-     * @param string $AttackType 攻击类型(对应交互事件名称)。
-     * @param integer $AttackStatus 攻击状态。
-     * @param integer $AttackMaxBandWidth 攻击最大带宽，单位为 bps。
-     * @param integer $AttackPacketMaxRate 攻击包速率峰值，单位为 pps。
-     * @param integer $AttackStartTime 攻击开始时间，单位为s。
-     * @param integer $AttackEndTime 攻击结束时间，单位为s。
-     * @param integer $PolicyId DDoS策略组ID。
+     * @var array <p>被 DDoS 攻击的目的 IP 列表。</p>
+     */
+    public $DDoSAttackDips;
+
+    /**
+     * @param string $EventId <p>事件 ID。</p>
+     * @param string $AttackType <p>攻击类型。</p>
+     * @param integer $AttackStatus <p>攻击状态。</p><p>枚举值：</p><ul><li>0： 观察中</li><li>1： 攻击中</li><li>2： 攻击结束</li></ul>
+     * @param integer $AttackMaxBandWidth <p>攻击最大带宽，单位为 bps。</p>
+     * @param integer $AttackPacketMaxRate <p>攻击包速率峰值，单位为 pps。</p>
+     * @param integer $AttackStartTime <p>攻击开始时间戳。</p><p>单位：秒</p>
+     * @param integer $AttackEndTime <p>攻击结束时间戳。</p><p>单位：秒</p>
+     * @param integer $PolicyId <p>DDoS 策略组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ZoneId 站点ID。
+     * @param string $ZoneId <p>站点 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Area 攻击事件所属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>
+     * @param string $Area <p>攻击事件所属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DDoSBlockData 封禁解封信息。
+     * @param array $DDoSBlockData <p>封禁解封信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DDoSAttackDips <p>被 DDoS 攻击的目的 IP 列表。</p>
      */
     function __construct()
     {
@@ -197,6 +197,10 @@ class DDoSAttackEvent extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DDoSBlockData, $obj);
             }
+        }
+
+        if (array_key_exists("DDoSAttackDips",$param) and $param["DDoSAttackDips"] !== null) {
+            $this->DDoSAttackDips = $param["DDoSAttackDips"];
         }
     }
 }

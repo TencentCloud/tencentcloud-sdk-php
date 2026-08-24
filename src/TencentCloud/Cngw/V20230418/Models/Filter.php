@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询过滤通用对象
  *
- * @method string getName() 获取<p>过滤参数名</p>
- * @method void setName(string $Name) 设置<p>过滤参数名</p>
- * @method array getValues() 获取<p>过滤参数值</p>
- * @method void setValues(array $Values) 设置<p>过滤参数值</p>
+ * @method string getName() 获取过滤参数名
+ * @method void setName(string $Name) 设置过滤参数名
+ * @method array getValues() 获取过滤参数值
+ * @method void setValues(array $Values) 设置过滤参数值
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string <p>过滤参数名</p>
+     * @var string 过滤参数名
      */
     public $Name;
 
     /**
-     * @var array <p>过滤参数值</p>
+     * @var array 过滤参数值
      */
     public $Values;
 
     /**
-     * @param string $Name <p>过滤参数名</p>
-     * @param array $Values <p>过滤参数值</p>
+     * @param string $Name 过滤参数名
+     * @param array $Values 过滤参数值
      */
     function __construct()
     {

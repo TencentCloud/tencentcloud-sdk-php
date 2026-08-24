@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConflictStrategy(string $ConflictStrategy) 设置<p>Tool分组内工具命名冲突策略</p><p>枚举值：</p><ul><li>AutoPrefix： 自动前缀</li><li>Reject： 拒绝</li></ul>
  * @method string getMarketStatus() 获取<p>MCP 市场发布状态</p><p>枚举值：</p><ul><li>None： 未发布</li><li>Published： 已发布</li></ul>
  * @method void setMarketStatus(string $MarketStatus) 设置<p>MCP 市场发布状态</p><p>枚举值：</p><ul><li>None： 未发布</li><li>Published： 已发布</li></ul>
+ * @method boolean getPreserveHost() 获取<p>是否开启保留原Host功能</p>
+ * @method void setPreserveHost(boolean $PreserveHost) 设置<p>是否开启保留原Host功能</p>
  */
 class AIGWMCPServer extends AbstractModel
 {
@@ -173,6 +175,11 @@ class AIGWMCPServer extends AbstractModel
     public $MarketStatus;
 
     /**
+     * @var boolean <p>是否开启保留原Host功能</p>
+     */
+    public $PreserveHost;
+
+    /**
      * @param string $ServerId <p>MCP Server ID</p>
      * @param string $Name <p>MCP Server名称</p>
      * @param string $ServerType <p>MCP Server类型，取值：MCP/Rest2MCP</p>
@@ -196,6 +203,7 @@ class AIGWMCPServer extends AbstractModel
      * @param integer $ToolCountLimit <p>Tool分组内工具数量限制</p>
      * @param string $ConflictStrategy <p>Tool分组内工具命名冲突策略</p><p>枚举值：</p><ul><li>AutoPrefix： 自动前缀</li><li>Reject： 拒绝</li></ul>
      * @param string $MarketStatus <p>MCP 市场发布状态</p><p>枚举值：</p><ul><li>None： 未发布</li><li>Published： 已发布</li></ul>
+     * @param boolean $PreserveHost <p>是否开启保留原Host功能</p>
      */
     function __construct()
     {
@@ -291,6 +299,10 @@ class AIGWMCPServer extends AbstractModel
 
         if (array_key_exists("MarketStatus",$param) and $param["MarketStatus"] !== null) {
             $this->MarketStatus = $param["MarketStatus"];
+        }
+
+        if (array_key_exists("PreserveHost",$param) and $param["PreserveHost"] !== null) {
+            $this->PreserveHost = $param["PreserveHost"];
         }
     }
 }

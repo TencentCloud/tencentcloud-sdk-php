@@ -114,6 +114,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置<p>网关相关配置</p>
  * @method ResourceSupplyAttribute getResourceSupplyAttribute() 获取<p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
  * @method void setResourceSupplyAttribute(ResourceSupplyAttribute $ResourceSupplyAttribute) 设置<p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+ * @method string getInferTemplateId() 获取<p>推理模板 ID</p>
+ * @method void setInferTemplateId(string $InferTemplateId) 设置<p>推理模板 ID</p>
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -353,6 +355,11 @@ class CreateModelServiceRequest extends AbstractModel
     public $ResourceSupplyAttribute;
 
     /**
+     * @var string <p>推理模板 ID</p>
+     */
+    public $InferTemplateId;
+
+    /**
      * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param string $ServiceGroupId <p>新增版本时需要填写</p>
      * @param string $ServiceGroupName <p>不超过60个字，仅支持英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以英文、数字开头</p>
@@ -400,6 +407,7 @@ class CreateModelServiceRequest extends AbstractModel
      * @param LogConfig $GatewayLogConfig <p>网关日志投递相关配置</p>
      * @param GatewayConfig $GatewayConfig <p>网关相关配置</p>
      * @param ResourceSupplyAttribute $ResourceSupplyAttribute <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+     * @param string $InferTemplateId <p>推理模板 ID</p>
      */
     function __construct()
     {
@@ -635,6 +643,10 @@ class CreateModelServiceRequest extends AbstractModel
         if (array_key_exists("ResourceSupplyAttribute",$param) and $param["ResourceSupplyAttribute"] !== null) {
             $this->ResourceSupplyAttribute = new ResourceSupplyAttribute();
             $this->ResourceSupplyAttribute->deserialize($param["ResourceSupplyAttribute"]);
+        }
+
+        if (array_key_exists("InferTemplateId",$param) and $param["InferTemplateId"] !== null) {
+            $this->InferTemplateId = $param["InferTemplateId"];
         }
     }
 }

@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaInstances请求参数结构体
  *
- * @method integer getOffset() 获取查询偏移量
- * @method void setOffset(integer $Offset) 设置查询偏移量
- * @method integer getLimit() 获取查询数量
- * @method void setLimit(integer $Limit) 设置查询数量
- * @method array getInstanceIds() 获取Grafana 实例 ID 数组
- * @method void setInstanceIds(array $InstanceIds) 设置Grafana 实例 ID 数组
- * @method string getInstanceName() 获取Grafana 实例名，支持前缀模糊搜索
- * @method void setInstanceName(string $InstanceName) 设置Grafana 实例名，支持前缀模糊搜索
- * @method array getInstanceStatus() 获取查询状态
- * @method void setInstanceStatus(array $InstanceStatus) 设置查询状态
- * @method array getTagFilters() 获取标签过滤数组
- * @method void setTagFilters(array $TagFilters) 设置标签过滤数组
+ * @method integer getOffset() 获取<p>查询偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>查询偏移量</p>
+ * @method integer getLimit() 获取<p>查询数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>查询数量</p>
+ * @method array getInstanceIds() 获取<p>Grafana 实例 ID 数组</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>Grafana 实例 ID 数组</p>
+ * @method string getInstanceName() 获取<p>Grafana 实例名，支持前缀模糊搜索</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>Grafana 实例名，支持前缀模糊搜索</p>
+ * @method array getInstanceStatus() 获取<p>查询状态</p>
+ * @method void setInstanceStatus(array $InstanceStatus) 设置<p>查询状态</p>
+ * @method array getTagFilters() 获取<p>标签过滤数组</p>
+ * @method void setTagFilters(array $TagFilters) 设置<p>标签过滤数组</p>
  */
 class DescribeGrafanaInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 查询偏移量
+     * @var integer <p>查询偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 查询数量
+     * @var integer <p>查询数量</p>
      */
     public $Limit;
 
     /**
-     * @var array Grafana 实例 ID 数组
+     * @var array <p>Grafana 实例 ID 数组</p>
      */
     public $InstanceIds;
 
     /**
-     * @var string Grafana 实例名，支持前缀模糊搜索
+     * @var string <p>Grafana 实例名，支持前缀模糊搜索</p>
      */
     public $InstanceName;
 
     /**
-     * @var array 查询状态
+     * @var array <p>查询状态</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var array 标签过滤数组
+     * @var array <p>标签过滤数组</p>
      */
     public $TagFilters;
 
     /**
-     * @param integer $Offset 查询偏移量
-     * @param integer $Limit 查询数量
-     * @param array $InstanceIds Grafana 实例 ID 数组
-     * @param string $InstanceName Grafana 实例名，支持前缀模糊搜索
-     * @param array $InstanceStatus 查询状态
-     * @param array $TagFilters 标签过滤数组
+     * @param integer $Offset <p>查询偏移量</p>
+     * @param integer $Limit <p>查询数量</p>
+     * @param array $InstanceIds <p>Grafana 实例 ID 数组</p>
+     * @param string $InstanceName <p>Grafana 实例名，支持前缀模糊搜索</p>
+     * @param array $InstanceStatus <p>查询状态</p>
+     * @param array $TagFilters <p>标签过滤数组</p>
      */
     function __construct()
     {

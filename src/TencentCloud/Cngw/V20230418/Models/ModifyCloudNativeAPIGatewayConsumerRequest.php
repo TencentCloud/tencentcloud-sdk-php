@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCloudNativeAPIGatewayConsumer请求参数结构体
  *
- * @method string getGatewayId() 获取网关实例id
- * @method void setGatewayId(string $GatewayId) 设置网关实例id
+ * @method string getGatewayId() 获取<p>网关实例id</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关实例id</p>
  * @method string getConsumerId() 获取<p>消费者 ID。</p>
  * @method void setConsumerId(string $ConsumerId) 设置<p>消费者 ID。</p>
  * @method string getName() 获取<p>消费者名称，最长 60 字符。</p>
  * @method void setName(string $Name) 设置<p>消费者名称，最长 60 字符。</p>
+ * @method string getPriority() 获取<p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
+ * @method void setPriority(string $Priority) 设置<p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
  * @method string getDescription() 获取<p>消费者描述。最长 200 字符。</p>
  * @method void setDescription(string $Description) 设置<p>消费者描述。最长 200 字符。</p>
  */
 class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 网关实例id
+     * @var string <p>网关实例id</p>
      */
     public $GatewayId;
 
@@ -47,14 +49,20 @@ class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string <p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
+     */
+    public $Priority;
+
+    /**
      * @var string <p>消费者描述。最长 200 字符。</p>
      */
     public $Description;
 
     /**
-     * @param string $GatewayId 网关实例id
+     * @param string $GatewayId <p>网关实例id</p>
      * @param string $ConsumerId <p>消费者 ID。</p>
      * @param string $Name <p>消费者名称，最长 60 字符。</p>
+     * @param string $Priority <p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
      * @param string $Description <p>消费者描述。最长 200 字符。</p>
      */
     function __construct()
@@ -80,6 +88,10 @@ class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
+            $this->Priority = $param["Priority"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

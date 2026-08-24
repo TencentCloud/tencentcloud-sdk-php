@@ -20,58 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InvokeTWeSeeComprehension返回参数结构体
  *
- * @method string getTaskId() 获取任务 ID
- * @method void setTaskId(string $TaskId) 设置任务 ID
- * @method integer getStatus() 获取任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
- * @method void setStatus(integer $Status) 设置任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
- * @method SeeComprehensionResult getComprehensionResult() 获取视觉理解结果
- * @method void setComprehensionResult(SeeComprehensionResult $ComprehensionResult) 设置视觉理解结果
- * @method integer getCostBasic() 获取完成该任务所消耗的基础能力额度
- * @method void setCostBasic(integer $CostBasic) 设置完成该任务所消耗的基础能力额度
- * @method integer getCostAdvanced() 获取完成该任务所消耗的高级能力额度
- * @method void setCostAdvanced(integer $CostAdvanced) 设置完成该任务所消耗的高级能力额度
+ * @method string getTaskId() 获取<p>任务 ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务 ID</p>
+ * @method integer getStatus() 获取<p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
+ * @method SeeComprehensionResult getComprehensionResult() 获取<p>视觉理解结果</p>
+ * @method void setComprehensionResult(SeeComprehensionResult $ComprehensionResult) 设置<p>视觉理解结果</p>
+ * @method integer getCostBasic() 获取<p>完成该任务所消耗的基础能力额度</p>
+ * @method void setCostBasic(integer $CostBasic) 设置<p>完成该任务所消耗的基础能力额度</p>
+ * @method integer getCostAdvanced() 获取<p>完成该任务所消耗的高级能力额度</p>
+ * @method void setCostAdvanced(integer $CostAdvanced) 设置<p>完成该任务所消耗的高级能力额度</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class InvokeTWeSeeComprehensionResponse extends AbstractModel
 {
     /**
-     * @var string 任务 ID
+     * @var string <p>任务 ID</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
+     * @var integer <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
      */
     public $Status;
 
     /**
-     * @var SeeComprehensionResult 视觉理解结果
+     * @var SeeComprehensionResult <p>视觉理解结果</p>
      */
     public $ComprehensionResult;
 
     /**
-     * @var integer 完成该任务所消耗的基础能力额度
+     * @var integer <p>完成该任务所消耗的基础能力额度</p>
      */
     public $CostBasic;
 
     /**
-     * @var integer 完成该任务所消耗的高级能力额度
+     * @var integer <p>完成该任务所消耗的高级能力额度</p>
      */
     public $CostAdvanced;
 
@@ -81,16 +66,11 @@ class InvokeTWeSeeComprehensionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 任务 ID
-     * @param integer $Status 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
-     * @param SeeComprehensionResult $ComprehensionResult 视觉理解结果
-     * @param integer $CostBasic 完成该任务所消耗的基础能力额度
-     * @param integer $CostAdvanced 完成该任务所消耗的高级能力额度
+     * @param string $TaskId <p>任务 ID</p>
+     * @param integer $Status <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
+     * @param SeeComprehensionResult $ComprehensionResult <p>视觉理解结果</p>
+     * @param integer $CostBasic <p>完成该任务所消耗的基础能力额度</p>
+     * @param integer $CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

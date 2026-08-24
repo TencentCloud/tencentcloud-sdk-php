@@ -20,158 +20,166 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 弹性扩缩容规格配置
  *
- * @method integer getId() 获取配置ID。
- * @method void setId(integer $Id) 设置配置ID。
- * @method integer getClusterId() 获取集群实例ID。
- * @method void setClusterId(integer $ClusterId) 设置集群实例ID。
- * @method integer getScaleLowerBound() 获取自动扩缩容保留最小实例数。
- * @method void setScaleLowerBound(integer $ScaleLowerBound) 设置自动扩缩容保留最小实例数。
- * @method integer getScaleUpperBound() 获取自动扩缩容最大实例数。
- * @method void setScaleUpperBound(integer $ScaleUpperBound) 设置自动扩缩容最大实例数。
- * @method integer getStrategyType() 获取扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
- * @method void setStrategyType(integer $StrategyType) 设置扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
- * @method integer getNextTimeCanScale() 获取下次可扩容时间。
- * @method void setNextTimeCanScale(integer $NextTimeCanScale) 设置下次可扩容时间。
- * @method boolean getGraceDownFlag() 获取优雅缩容开关
- * @method void setGraceDownFlag(boolean $GraceDownFlag) 设置优雅缩容开关
- * @method string getHardwareType() 获取"CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
- * @method void setHardwareType(string $HardwareType) 设置"CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
- * @method string getPayMode() 获取"POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
- * @method void setPayMode(string $PayMode) 设置"POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
- * @method integer getPostPayPercentMin() 获取竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
- * @method void setPostPayPercentMin(integer $PostPayPercentMin) 设置竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
- * @method integer getChangeToPod() 获取预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
- * @method void setChangeToPod(integer $ChangeToPod) 设置预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
- * @method string getGroupName() 获取伸缩组名
- * @method void setGroupName(string $GroupName) 设置伸缩组名
- * @method string getYarnNodeLabel() 获取标签
- * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置标签
- * @method string getWarehouseName() 获取对应的计算组
- * @method void setWarehouseName(string $WarehouseName) 设置对应的计算组
- * @method integer getGroupStatus() 获取伸缩组状态
- * @method void setGroupStatus(integer $GroupStatus) 设置伸缩组状态
- * @method integer getParallel() 获取并行伸缩 0关闭；1开启
- * @method void setParallel(integer $Parallel) 设置并行伸缩 0关闭；1开启
- * @method integer getEnableMNode() 获取是否支持MNode
- * @method void setEnableMNode(integer $EnableMNode) 设置是否支持MNode
- * @method AutoScaleGroupAdvanceAttrs getExtraAdvanceAttrs() 获取伸缩组更多设置
+ * @method integer getId() 获取<p>配置ID。</p>
+ * @method void setId(integer $Id) 设置<p>配置ID。</p>
+ * @method integer getClusterId() 获取<p>集群实例ID。</p>
+ * @method void setClusterId(integer $ClusterId) 设置<p>集群实例ID。</p>
+ * @method integer getScaleLowerBound() 获取<p>自动扩缩容保留最小实例数。</p>
+ * @method void setScaleLowerBound(integer $ScaleLowerBound) 设置<p>自动扩缩容保留最小实例数。</p>
+ * @method integer getScaleUpperBound() 获取<p>自动扩缩容最大实例数。</p>
+ * @method void setScaleUpperBound(integer $ScaleUpperBound) 设置<p>自动扩缩容最大实例数。</p>
+ * @method integer getStrategyType() 获取<p>扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则</p>
+ * @method void setStrategyType(integer $StrategyType) 设置<p>扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则</p>
+ * @method integer getNextTimeCanScale() 获取<p>下次可扩容时间。</p>
+ * @method void setNextTimeCanScale(integer $NextTimeCanScale) 设置<p>下次可扩容时间。</p>
+ * @method boolean getGraceDownFlag() 获取<p>优雅缩容开关</p>
+ * @method void setGraceDownFlag(boolean $GraceDownFlag) 设置<p>优雅缩容开关</p>
+ * @method string getHardwareType() 获取<p>&quot;CVM&quot;表示规格全部使用CVM相关类型，&quot;POD&quot;表示规格使用容器相关类型,默认为&quot;CVM&quot;。</p>
+ * @method void setHardwareType(string $HardwareType) 设置<p>&quot;CVM&quot;表示规格全部使用CVM相关类型，&quot;POD&quot;表示规格使用容器相关类型,默认为&quot;CVM&quot;。</p>
+ * @method string getPayMode() 获取<p>&quot;POSTPAY&quot;表示只使用按量计费，&quot;SPOT_FIRST&quot;表示竞价实例优先，只有HardwareType为&quot;HOST&quot;时支持竞价实例优先，&quot;POD&quot;只支持纯按量计费。</p>
+ * @method void setPayMode(string $PayMode) 设置<p>&quot;POSTPAY&quot;表示只使用按量计费，&quot;SPOT_FIRST&quot;表示竞价实例优先，只有HardwareType为&quot;HOST&quot;时支持竞价实例优先，&quot;POD&quot;只支持纯按量计费。</p>
+ * @method integer getPostPayPercentMin() 获取<p>竞价实例优先的场景下，按量计费资源数量的最低百分比，整数</p>
+ * @method void setPostPayPercentMin(integer $PostPayPercentMin) 设置<p>竞价实例优先的场景下，按量计费资源数量的最低百分比，整数</p>
+ * @method integer getChangeToPod() 获取<p>预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选</p>
+ * @method void setChangeToPod(integer $ChangeToPod) 设置<p>预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选</p>
+ * @method string getGroupName() 获取<p>伸缩组名</p>
+ * @method void setGroupName(string $GroupName) 设置<p>伸缩组名</p>
+ * @method string getYarnNodeLabel() 获取<p>标签</p>
+ * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置<p>标签</p>
+ * @method string getWarehouseName() 获取<p>对应的计算组</p>
+ * @method void setWarehouseName(string $WarehouseName) 设置<p>对应的计算组</p>
+ * @method integer getGroupStatus() 获取<p>伸缩组状态</p>
+ * @method void setGroupStatus(integer $GroupStatus) 设置<p>伸缩组状态</p>
+ * @method integer getParallel() 获取<p>并行伸缩 0关闭；1开启</p>
+ * @method void setParallel(integer $Parallel) 设置<p>并行伸缩 0关闭；1开启</p>
+ * @method integer getEnableMNode() 获取<p>是否支持MNode</p>
+ * @method void setEnableMNode(integer $EnableMNode) 设置<p>是否支持MNode</p>
+ * @method AutoScaleGroupAdvanceAttrs getExtraAdvanceAttrs() 获取<p>伸缩组更多设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtraAdvanceAttrs(AutoScaleGroupAdvanceAttrs $ExtraAdvanceAttrs) 设置伸缩组更多设置
+ * @method void setExtraAdvanceAttrs(AutoScaleGroupAdvanceAttrs $ExtraAdvanceAttrs) 设置<p>伸缩组更多设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCustomNodeName() 获取<p>自定义主机名</p>
+ * @method void setCustomNodeName(string $CustomNodeName) 设置<p>自定义主机名</p>
  */
 class AutoScaleResourceConf extends AbstractModel
 {
     /**
-     * @var integer 配置ID。
+     * @var integer <p>配置ID。</p>
      */
     public $Id;
 
     /**
-     * @var integer 集群实例ID。
+     * @var integer <p>集群实例ID。</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 自动扩缩容保留最小实例数。
+     * @var integer <p>自动扩缩容保留最小实例数。</p>
      */
     public $ScaleLowerBound;
 
     /**
-     * @var integer 自动扩缩容最大实例数。
+     * @var integer <p>自动扩缩容最大实例数。</p>
      */
     public $ScaleUpperBound;
 
     /**
-     * @var integer 扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
+     * @var integer <p>扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则</p>
      */
     public $StrategyType;
 
     /**
-     * @var integer 下次可扩容时间。
+     * @var integer <p>下次可扩容时间。</p>
      */
     public $NextTimeCanScale;
 
     /**
-     * @var boolean 优雅缩容开关
+     * @var boolean <p>优雅缩容开关</p>
      */
     public $GraceDownFlag;
 
     /**
-     * @var string "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+     * @var string <p>&quot;CVM&quot;表示规格全部使用CVM相关类型，&quot;POD&quot;表示规格使用容器相关类型,默认为&quot;CVM&quot;。</p>
      */
     public $HardwareType;
 
     /**
-     * @var string "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+     * @var string <p>&quot;POSTPAY&quot;表示只使用按量计费，&quot;SPOT_FIRST&quot;表示竞价实例优先，只有HardwareType为&quot;HOST&quot;时支持竞价实例优先，&quot;POD&quot;只支持纯按量计费。</p>
      */
     public $PayMode;
 
     /**
-     * @var integer 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+     * @var integer <p>竞价实例优先的场景下，按量计费资源数量的最低百分比，整数</p>
      */
     public $PostPayPercentMin;
 
     /**
-     * @var integer 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
+     * @var integer <p>预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选</p>
      */
     public $ChangeToPod;
 
     /**
-     * @var string 伸缩组名
+     * @var string <p>伸缩组名</p>
      */
     public $GroupName;
 
     /**
-     * @var string 标签
+     * @var string <p>标签</p>
      */
     public $YarnNodeLabel;
 
     /**
-     * @var string 对应的计算组
+     * @var string <p>对应的计算组</p>
      */
     public $WarehouseName;
 
     /**
-     * @var integer 伸缩组状态
+     * @var integer <p>伸缩组状态</p>
      */
     public $GroupStatus;
 
     /**
-     * @var integer 并行伸缩 0关闭；1开启
+     * @var integer <p>并行伸缩 0关闭；1开启</p>
      */
     public $Parallel;
 
     /**
-     * @var integer 是否支持MNode
+     * @var integer <p>是否支持MNode</p>
      */
     public $EnableMNode;
 
     /**
-     * @var AutoScaleGroupAdvanceAttrs 伸缩组更多设置
+     * @var AutoScaleGroupAdvanceAttrs <p>伸缩组更多设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraAdvanceAttrs;
 
     /**
-     * @param integer $Id 配置ID。
-     * @param integer $ClusterId 集群实例ID。
-     * @param integer $ScaleLowerBound 自动扩缩容保留最小实例数。
-     * @param integer $ScaleUpperBound 自动扩缩容最大实例数。
-     * @param integer $StrategyType 扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
-     * @param integer $NextTimeCanScale 下次可扩容时间。
-     * @param boolean $GraceDownFlag 优雅缩容开关
-     * @param string $HardwareType "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
-     * @param string $PayMode "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
-     * @param integer $PostPayPercentMin 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
-     * @param integer $ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
-     * @param string $GroupName 伸缩组名
-     * @param string $YarnNodeLabel 标签
-     * @param string $WarehouseName 对应的计算组
-     * @param integer $GroupStatus 伸缩组状态
-     * @param integer $Parallel 并行伸缩 0关闭；1开启
-     * @param integer $EnableMNode 是否支持MNode
-     * @param AutoScaleGroupAdvanceAttrs $ExtraAdvanceAttrs 伸缩组更多设置
+     * @var string <p>自定义主机名</p>
+     */
+    public $CustomNodeName;
+
+    /**
+     * @param integer $Id <p>配置ID。</p>
+     * @param integer $ClusterId <p>集群实例ID。</p>
+     * @param integer $ScaleLowerBound <p>自动扩缩容保留最小实例数。</p>
+     * @param integer $ScaleUpperBound <p>自动扩缩容最大实例数。</p>
+     * @param integer $StrategyType <p>扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则</p>
+     * @param integer $NextTimeCanScale <p>下次可扩容时间。</p>
+     * @param boolean $GraceDownFlag <p>优雅缩容开关</p>
+     * @param string $HardwareType <p>&quot;CVM&quot;表示规格全部使用CVM相关类型，&quot;POD&quot;表示规格使用容器相关类型,默认为&quot;CVM&quot;。</p>
+     * @param string $PayMode <p>&quot;POSTPAY&quot;表示只使用按量计费，&quot;SPOT_FIRST&quot;表示竞价实例优先，只有HardwareType为&quot;HOST&quot;时支持竞价实例优先，&quot;POD&quot;只支持纯按量计费。</p>
+     * @param integer $PostPayPercentMin <p>竞价实例优先的场景下，按量计费资源数量的最低百分比，整数</p>
+     * @param integer $ChangeToPod <p>预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选</p>
+     * @param string $GroupName <p>伸缩组名</p>
+     * @param string $YarnNodeLabel <p>标签</p>
+     * @param string $WarehouseName <p>对应的计算组</p>
+     * @param integer $GroupStatus <p>伸缩组状态</p>
+     * @param integer $Parallel <p>并行伸缩 0关闭；1开启</p>
+     * @param integer $EnableMNode <p>是否支持MNode</p>
+     * @param AutoScaleGroupAdvanceAttrs $ExtraAdvanceAttrs <p>伸缩组更多设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CustomNodeName <p>自定义主机名</p>
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class AutoScaleResourceConf extends AbstractModel
         if (array_key_exists("ExtraAdvanceAttrs",$param) and $param["ExtraAdvanceAttrs"] !== null) {
             $this->ExtraAdvanceAttrs = new AutoScaleGroupAdvanceAttrs();
             $this->ExtraAdvanceAttrs->deserialize($param["ExtraAdvanceAttrs"]);
+        }
+
+        if (array_key_exists("CustomNodeName",$param) and $param["CustomNodeName"] !== null) {
+            $this->CustomNodeName = $param["CustomNodeName"];
         }
     }
 }

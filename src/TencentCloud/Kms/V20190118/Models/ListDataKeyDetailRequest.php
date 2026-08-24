@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListDataKeyDetail请求参数结构体
  *
- * @method integer getOffset() 获取含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
- * @method void setOffset(integer $Offset) 设置含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
- * @method integer getLimit() 获取含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
- * @method void setLimit(integer $Limit) 设置含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
- * @method integer getRole() 获取根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥
- * @method void setRole(integer $Role) 设置根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥
- * @method integer getOrderType() 获取根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序
- * @method void setOrderType(integer $OrderType) 设置根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序
- * @method integer getKeyState() 获取根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。
- * @method void setKeyState(integer $KeyState) 设置根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。
- * @method string getSearchKeyAlias() 获取根据DataKeyId或者DataKeyName进行模糊匹配查询
- * @method void setSearchKeyAlias(string $SearchKeyAlias) 设置根据DataKeyId或者DataKeyName进行模糊匹配查询
- * @method string getOrigin() 获取根据DateKey类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的数据密钥， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
- * @method void setOrigin(string $Origin) 设置根据DateKey类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的数据密钥， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
- * @method string getHsmClusterId() 获取KMS 高级版对应的 HSM 集群 ID。
- * @method void setHsmClusterId(string $HsmClusterId) 设置KMS 高级版对应的 HSM 集群 ID。
- * @method string getKeyId() 获取根密钥全局唯一标识符
- * @method void setKeyId(string $KeyId) 设置根密钥全局唯一标识符
- * @method integer getDataKeyLen() 获取数据密钥的长度
- * @method void setDataKeyLen(integer $DataKeyLen) 设置数据密钥的长度
- * @method array getTagFilters() 获取标签过滤条件
- * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
- * @method array getMemberAccounts() 获取成员账号信息数组
- * @method void setMemberAccounts(array $MemberAccounts) 设置成员账号信息数组
+ * @method integer getOffset() 获取<p>含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0</p>
+ * @method integer getLimit() 获取<p>含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200</p>
+ * @method void setLimit(integer $Limit) 设置<p>含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200</p>
+ * @method integer getRole() 获取<p>根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥</p>
+ * @method void setRole(integer $Role) 设置<p>根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥</p>
+ * @method integer getOrderType() 获取<p>根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序</p>
+ * @method void setOrderType(integer $OrderType) 设置<p>根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序</p>
+ * @method integer getKeyState() 获取<p>根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。</p>
+ * @method void setKeyState(integer $KeyState) 设置<p>根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。</p>
+ * @method string getSearchKeyAlias() 获取<p>根据DataKeyId或者DataKeyName进行模糊匹配查询</p>
+ * @method void setSearchKeyAlias(string $SearchKeyAlias) 设置<p>根据DataKeyId或者DataKeyName进行模糊匹配查询</p>
+ * @method string getOrigin() 获取<p>根据DateKey类型筛选， &quot;TENCENT_KMS&quot; 表示筛选密钥材料由KMS创建的数据密钥， &quot;EXTERNAL&quot; 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，&quot;ALL&quot; 或者不设置表示两种类型都查询，大小写敏感。</p>
+ * @method void setOrigin(string $Origin) 设置<p>根据DateKey类型筛选， &quot;TENCENT_KMS&quot; 表示筛选密钥材料由KMS创建的数据密钥， &quot;EXTERNAL&quot; 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，&quot;ALL&quot; 或者不设置表示两种类型都查询，大小写敏感。</p>
+ * @method string getHsmClusterId() 获取<p>KMS 高级版对应的 HSM 集群 ID。当指定集群ID时查询集群的密钥列表；当指定default时,查询公有云共享版的密钥列表；当为空，默认查询所有的密钥列表包括集群和非集群。</p>
+ * @method void setHsmClusterId(string $HsmClusterId) 设置<p>KMS 高级版对应的 HSM 集群 ID。当指定集群ID时查询集群的密钥列表；当指定default时,查询公有云共享版的密钥列表；当为空，默认查询所有的密钥列表包括集群和非集群。</p>
+ * @method string getKeyId() 获取<p>根密钥全局唯一标识符</p>
+ * @method void setKeyId(string $KeyId) 设置<p>根密钥全局唯一标识符</p>
+ * @method integer getDataKeyLen() 获取<p>数据密钥的长度</p>
+ * @method void setDataKeyLen(integer $DataKeyLen) 设置<p>数据密钥的长度</p>
+ * @method array getTagFilters() 获取<p>标签过滤条件</p>
+ * @method void setTagFilters(array $TagFilters) 设置<p>标签过滤条件</p>
+ * @method array getMemberAccounts() 获取<p>成员账号信息数组</p>
+ * @method void setMemberAccounts(array $MemberAccounts) 设置<p>成员账号信息数组</p>
  */
 class ListDataKeyDetailRequest extends AbstractModel
 {
     /**
-     * @var integer 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
+     * @var integer <p>含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
+     * @var integer <p>含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200</p>
      */
     public $Limit;
 
     /**
-     * @var integer 根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥
+     * @var integer <p>根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥</p>
      */
     public $Role;
 
     /**
-     * @var integer 根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序
+     * @var integer <p>根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序</p>
      */
     public $OrderType;
 
     /**
-     * @var integer 根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。
+     * @var integer <p>根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。</p>
      */
     public $KeyState;
 
     /**
-     * @var string 根据DataKeyId或者DataKeyName进行模糊匹配查询
+     * @var string <p>根据DataKeyId或者DataKeyName进行模糊匹配查询</p>
      */
     public $SearchKeyAlias;
 
     /**
-     * @var string 根据DateKey类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的数据密钥， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
+     * @var string <p>根据DateKey类型筛选， &quot;TENCENT_KMS&quot; 表示筛选密钥材料由KMS创建的数据密钥， &quot;EXTERNAL&quot; 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，&quot;ALL&quot; 或者不设置表示两种类型都查询，大小写敏感。</p>
      */
     public $Origin;
 
     /**
-     * @var string KMS 高级版对应的 HSM 集群 ID。
+     * @var string <p>KMS 高级版对应的 HSM 集群 ID。当指定集群ID时查询集群的密钥列表；当指定default时,查询公有云共享版的密钥列表；当为空，默认查询所有的密钥列表包括集群和非集群。</p>
      */
     public $HsmClusterId;
 
     /**
-     * @var string 根密钥全局唯一标识符
+     * @var string <p>根密钥全局唯一标识符</p>
      */
     public $KeyId;
 
     /**
-     * @var integer 数据密钥的长度
+     * @var integer <p>数据密钥的长度</p>
      */
     public $DataKeyLen;
 
     /**
-     * @var array 标签过滤条件
+     * @var array <p>标签过滤条件</p>
      */
     public $TagFilters;
 
     /**
-     * @var array 成员账号信息数组
+     * @var array <p>成员账号信息数组</p>
      */
     public $MemberAccounts;
 
     /**
-     * @param integer $Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
-     * @param integer $Limit 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
-     * @param integer $Role 根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥
-     * @param integer $OrderType 根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序
-     * @param integer $KeyState 根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。
-     * @param string $SearchKeyAlias 根据DataKeyId或者DataKeyName进行模糊匹配查询
-     * @param string $Origin 根据DateKey类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的数据密钥， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
-     * @param string $HsmClusterId KMS 高级版对应的 HSM 集群 ID。
-     * @param string $KeyId 根密钥全局唯一标识符
-     * @param integer $DataKeyLen 数据密钥的长度
-     * @param array $TagFilters 标签过滤条件
-     * @param array $MemberAccounts 成员账号信息数组
+     * @param integer $Offset <p>含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0</p>
+     * @param integer $Limit <p>含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200</p>
+     * @param integer $Role <p>根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥</p>
+     * @param integer $OrderType <p>根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序</p>
+     * @param integer $KeyState <p>根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。</p>
+     * @param string $SearchKeyAlias <p>根据DataKeyId或者DataKeyName进行模糊匹配查询</p>
+     * @param string $Origin <p>根据DateKey类型筛选， &quot;TENCENT_KMS&quot; 表示筛选密钥材料由KMS创建的数据密钥， &quot;EXTERNAL&quot; 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，&quot;ALL&quot; 或者不设置表示两种类型都查询，大小写敏感。</p>
+     * @param string $HsmClusterId <p>KMS 高级版对应的 HSM 集群 ID。当指定集群ID时查询集群的密钥列表；当指定default时,查询公有云共享版的密钥列表；当为空，默认查询所有的密钥列表包括集群和非集群。</p>
+     * @param string $KeyId <p>根密钥全局唯一标识符</p>
+     * @param integer $DataKeyLen <p>数据密钥的长度</p>
+     * @param array $TagFilters <p>标签过滤条件</p>
+     * @param array $MemberAccounts <p>成员账号信息数组</p>
      */
     function __construct()
     {

@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 操作日志描述
  *
- * @method integer getInstanceId() 获取EMR实例ID
- * @method void setInstanceId(integer $InstanceId) 设置EMR实例ID
- * @method string getOperation() 获取操作名称
- * @method void setOperation(string $Operation) 设置操作名称
- * @method integer getOperationType() 获取操作类型
- * @method void setOperationType(integer $OperationType) 设置操作类型
- * @method integer getUserType() 获取用户类型
- * @method void setUserType(integer $UserType) 设置用户类型
- * @method string getOperator() 获取操作者
- * @method void setOperator(string $Operator) 设置操作者
- * @method string getCreateTime() 获取操作时间
- * @method void setCreateTime(string $CreateTime) 设置操作时间
- * @method string getOperand() 获取操作对象
- * @method void setOperand(string $Operand) 设置操作对象
- * @method string getOperationDesc() 获取操作详情
- * @method void setOperationDesc(string $OperationDesc) 设置操作详情
- * @method string getSecurityLevel() 获取安全级别
- * @method void setSecurityLevel(string $SecurityLevel) 设置安全级别
+ * @method integer getInstanceId() 获取<p>EMR实例ID</p>
+ * @method void setInstanceId(integer $InstanceId) 设置<p>EMR实例ID</p>
+ * @method string getOperation() 获取<p>操作名称</p>
+ * @method void setOperation(string $Operation) 设置<p>操作名称</p>
+ * @method integer getOperationType() 获取<p>操作类型</p>
+ * @method void setOperationType(integer $OperationType) 设置<p>操作类型</p>
+ * @method integer getUserType() 获取<p>用户类型</p>
+ * @method void setUserType(integer $UserType) 设置<p>用户类型</p>
+ * @method string getOperator() 获取<p>操作者</p>
+ * @method void setOperator(string $Operator) 设置<p>操作者</p>
+ * @method string getCreateTime() 获取<p>操作时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>操作时间</p>
+ * @method string getOperand() 获取<p>操作对象</p>
+ * @method void setOperand(string $Operand) 设置<p>操作对象</p>
+ * @method string getOperationDesc() 获取<p>操作详情</p>
+ * @method void setOperationDesc(string $OperationDesc) 设置<p>操作详情</p>
+ * @method string getSecurityLevel() 获取<p>安全级别</p>
+ * @method void setSecurityLevel(string $SecurityLevel) 设置<p>安全级别</p>
+ * @method string getOperatorName() 获取<p>操作者名称</p>
+ * @method void setOperatorName(string $OperatorName) 设置<p>操作者名称</p>
  */
 class OperationLog extends AbstractModel
 {
     /**
-     * @var integer EMR实例ID
+     * @var integer <p>EMR实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 操作名称
+     * @var string <p>操作名称</p>
      */
     public $Operation;
 
     /**
-     * @var integer 操作类型
+     * @var integer <p>操作类型</p>
      */
     public $OperationType;
 
     /**
-     * @var integer 用户类型
+     * @var integer <p>用户类型</p>
      */
     public $UserType;
 
     /**
-     * @var string 操作者
+     * @var string <p>操作者</p>
      */
     public $Operator;
 
     /**
-     * @var string 操作时间
+     * @var string <p>操作时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 操作对象
+     * @var string <p>操作对象</p>
      */
     public $Operand;
 
     /**
-     * @var string 操作详情
+     * @var string <p>操作详情</p>
      */
     public $OperationDesc;
 
     /**
-     * @var string 安全级别
+     * @var string <p>安全级别</p>
      */
     public $SecurityLevel;
 
     /**
-     * @param integer $InstanceId EMR实例ID
-     * @param string $Operation 操作名称
-     * @param integer $OperationType 操作类型
-     * @param integer $UserType 用户类型
-     * @param string $Operator 操作者
-     * @param string $CreateTime 操作时间
-     * @param string $Operand 操作对象
-     * @param string $OperationDesc 操作详情
-     * @param string $SecurityLevel 安全级别
+     * @var string <p>操作者名称</p>
+     */
+    public $OperatorName;
+
+    /**
+     * @param integer $InstanceId <p>EMR实例ID</p>
+     * @param string $Operation <p>操作名称</p>
+     * @param integer $OperationType <p>操作类型</p>
+     * @param integer $UserType <p>用户类型</p>
+     * @param string $Operator <p>操作者</p>
+     * @param string $CreateTime <p>操作时间</p>
+     * @param string $Operand <p>操作对象</p>
+     * @param string $OperationDesc <p>操作详情</p>
+     * @param string $SecurityLevel <p>安全级别</p>
+     * @param string $OperatorName <p>操作者名称</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class OperationLog extends AbstractModel
 
         if (array_key_exists("SecurityLevel",$param) and $param["SecurityLevel"] !== null) {
             $this->SecurityLevel = $param["SecurityLevel"];
+        }
+
+        if (array_key_exists("OperatorName",$param) and $param["OperatorName"] !== null) {
+            $this->OperatorName = $param["OperatorName"];
         }
     }
 }

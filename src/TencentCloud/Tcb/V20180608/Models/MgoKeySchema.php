@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 本类型用于接口中描述待创建索引结构
  *
- * @method array getMgoIndexKeys() 获取索引字段
- * @method void setMgoIndexKeys(array $MgoIndexKeys) 设置索引字段
- * @method boolean getMgoIsUnique() 获取是否唯一索引
- * @method void setMgoIsUnique(boolean $MgoIsUnique) 设置是否唯一索引
- * @method boolean getMgoIsSparse() 获取是否稀疏索引
- * @method void setMgoIsSparse(boolean $MgoIsSparse) 设置是否稀疏索引
+ * @method array getMgoIndexKeys() 获取<p>索引字段</p>
+ * @method void setMgoIndexKeys(array $MgoIndexKeys) 设置<p>索引字段</p>
+ * @method boolean getMgoIsUnique() 获取<p>是否唯一索引</p>
+ * @method void setMgoIsUnique(boolean $MgoIsUnique) 设置<p>是否唯一索引</p>
+ * @method boolean getMgoIsSparse() 获取<p>是否稀疏索引</p>
+ * @method void setMgoIsSparse(boolean $MgoIsSparse) 设置<p>是否稀疏索引</p>
+ * @method string getPartialFilterExpression() 获取<p>稀疏索引表达式</p>
+ * @method void setPartialFilterExpression(string $PartialFilterExpression) 设置<p>稀疏索引表达式</p>
  */
 class MgoKeySchema extends AbstractModel
 {
     /**
-     * @var array 索引字段
+     * @var array <p>索引字段</p>
      */
     public $MgoIndexKeys;
 
     /**
-     * @var boolean 是否唯一索引
+     * @var boolean <p>是否唯一索引</p>
      */
     public $MgoIsUnique;
 
     /**
-     * @var boolean 是否稀疏索引
+     * @var boolean <p>是否稀疏索引</p>
      */
     public $MgoIsSparse;
 
     /**
-     * @param array $MgoIndexKeys 索引字段
-     * @param boolean $MgoIsUnique 是否唯一索引
-     * @param boolean $MgoIsSparse 是否稀疏索引
+     * @var string <p>稀疏索引表达式</p>
+     */
+    public $PartialFilterExpression;
+
+    /**
+     * @param array $MgoIndexKeys <p>索引字段</p>
+     * @param boolean $MgoIsUnique <p>是否唯一索引</p>
+     * @param boolean $MgoIsSparse <p>是否稀疏索引</p>
+     * @param string $PartialFilterExpression <p>稀疏索引表达式</p>
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class MgoKeySchema extends AbstractModel
 
         if (array_key_exists("MgoIsSparse",$param) and $param["MgoIsSparse"] !== null) {
             $this->MgoIsSparse = $param["MgoIsSparse"];
+        }
+
+        if (array_key_exists("PartialFilterExpression",$param) and $param["PartialFilterExpression"] !== null) {
+            $this->PartialFilterExpression = $param["PartialFilterExpression"];
         }
     }
 }

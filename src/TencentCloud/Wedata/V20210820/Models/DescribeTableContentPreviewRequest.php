@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSql(string $Sql) 设置<p>执行SQL</p>
  * @method string getEngineId() 获取<p>引擎名</p>
  * @method void setEngineId(string $EngineId) 设置<p>引擎名</p>
+ * @method string getEngineTypeDetail() 获取<p>引擎类型详情</p><ul><li>SparkSQL：SparkSQL</li><li>PrestoSQL：Presto</li><li>SparkBatch：Spark作业</li><li>StandardPresto：Presto</li><li>StandardSpark：Spark</li></ul>
+ * @method void setEngineTypeDetail(string $EngineTypeDetail) 设置<p>引擎类型详情</p><ul><li>SparkSQL：SparkSQL</li><li>PrestoSQL：Presto</li><li>SparkBatch：Spark作业</li><li>StandardPresto：Presto</li><li>StandardSpark：Spark</li></ul>
  */
 class DescribeTableContentPreviewRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeTableContentPreviewRequest extends AbstractModel
     public $EngineId;
 
     /**
+     * @var string <p>引擎类型详情</p><ul><li>SparkSQL：SparkSQL</li><li>PrestoSQL：Presto</li><li>SparkBatch：Spark作业</li><li>StandardPresto：Presto</li><li>StandardSpark：Spark</li></ul>
+     */
+    public $EngineTypeDetail;
+
+    /**
      * @param string $TableId <p>表ID</p>
      * @param string $TechnologyType <p>组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA</p>
      * @param string $ClusterId <p>集群id</p>
@@ -128,6 +135,7 @@ class DescribeTableContentPreviewRequest extends AbstractModel
      * @param string $ResourceGroupId <p>资源组ID</p>
      * @param string $Sql <p>执行SQL</p>
      * @param string $EngineId <p>引擎名</p>
+     * @param string $EngineTypeDetail <p>引擎类型详情</p><ul><li>SparkSQL：SparkSQL</li><li>PrestoSQL：Presto</li><li>SparkBatch：Spark作业</li><li>StandardPresto：Presto</li><li>StandardSpark：Spark</li></ul>
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DescribeTableContentPreviewRequest extends AbstractModel
 
         if (array_key_exists("EngineId",$param) and $param["EngineId"] !== null) {
             $this->EngineId = $param["EngineId"];
+        }
+
+        if (array_key_exists("EngineTypeDetail",$param) and $param["EngineTypeDetail"] !== null) {
+            $this->EngineTypeDetail = $param["EngineTypeDetail"];
         }
     }
 }

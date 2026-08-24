@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDoSAttackData返回参数结构体
  *
- * @method integer getTotalCount() 获取查询结果的总条数。
- * @method void setTotalCount(integer $TotalCount) 设置查询结果的总条数。
- * @method array getData() 获取DDoS攻击数据内容列表。
+ * @method integer getTotalCount() 获取<p>查询结果的总条数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>查询结果的总条数。</p>
+ * @method array getData() 获取<p>DDoS 攻击数据内容列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置DDoS攻击数据内容列表。
+ * @method void setData(array $Data) 设置<p>DDoS 攻击数据内容列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDDoSAttackDataResponse extends AbstractModel
 {
     /**
-     * @var integer 查询结果的总条数。
+     * @var integer <p>查询结果的总条数。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array DDoS攻击数据内容列表。
+     * @var array <p>DDoS 攻击数据内容列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -48,8 +48,8 @@ class DescribeDDoSAttackDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 查询结果的总条数。
-     * @param array $Data DDoS攻击数据内容列表。
+     * @param integer $TotalCount <p>查询结果的总条数。</p>
+     * @param array $Data <p>DDoS 攻击数据内容列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

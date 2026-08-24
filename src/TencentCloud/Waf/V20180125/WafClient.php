@@ -162,6 +162,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeWebshellStatusResponse DescribeWebshellStatus(Models\DescribeWebshellStatusRequest $req) 获取域名的webshell状态
  * @method Models\DestroyPostCKafkaFlowResponse DestroyPostCKafkaFlow(Models\DestroyPostCKafkaFlowRequest $req) 销毁CKafka投递流任务
  * @method Models\DestroyPostCLSFlowResponse DestroyPostCLSFlow(Models\DestroyPostCLSFlowRequest $req) 销毁CLS投递流任务
+ * @method Models\EnableClientMsgResponse EnableClientMsg(Models\EnableClientMsgRequest $req) 开关开启后，会将客户端的ip和port透传到后端
  * @method Models\EnableRateLimitsV2Response EnableRateLimitsV2(Models\EnableRateLimitsV2Request $req) 批量更改自研版限流规则开关
  * @method Models\FreshAntiFakeUrlResponse FreshAntiFakeUrl(Models\FreshAntiFakeUrlRequest $req) 刷新防篡改url
  * @method Models\GenerateDealsAndPayNewResponse GenerateDealsAndPayNew(Models\GenerateDealsAndPayNewRequest $req) 计费资源购买、续费下单接口
@@ -235,6 +236,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyWebshellStatusResponse ModifyWebshellStatus(Models\ModifyWebshellStatusRequest $req) 设置域名的webshell状态。
  * @method Models\PostAttackDownloadTaskResponse PostAttackDownloadTask(Models\PostAttackDownloadTaskRequest $req) 创建搜索下载攻击日志任务，使用CLS新版本的搜索下载getlog接口
  * @method Models\QueryBypassAllStatusResponse QueryBypassAllStatus(Models\QueryBypassAllStatusRequest $req) 查询该用户是否被加入了全局的bypass列表
+ * @method Models\QueryClientMsgResponse QueryClientMsg(Models\QueryClientMsgRequest $req) 查询是否开启透传客户端信息
  * @method Models\RefreshAccessCheckResultResponse RefreshAccessCheckResult(Models\RefreshAccessCheckResultRequest $req) 刷新接入检查的结果，后台会生成接入检查任务
  * @method Models\RemoveBypassAllRuleResponse RemoveBypassAllRule(Models\RemoveBypassAllRuleRequest $req) 删除一键bypass规则
  * @method Models\SearchAccessLogResponse SearchAccessLog(Models\SearchAccessLogRequest $req) 本接口用于搜索WAF访问日志

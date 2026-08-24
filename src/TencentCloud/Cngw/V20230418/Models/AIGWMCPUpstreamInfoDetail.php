@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMCPEndpoint(string $MCPEndpoint) 设置<p>mcp endpoint</p>
  * @method string getMessageEndpoint() 获取<p>SSE message路径</p>
  * @method void setMessageEndpoint(string $MessageEndpoint) 设置<p>SSE message路径</p>
+ * @method AIGWUpstreamTLSConfig getTLSConfig() 获取<p>TLS配置</p>
+ * @method void setTLSConfig(AIGWUpstreamTLSConfig $TLSConfig) 设置<p>TLS配置</p>
  */
 class AIGWMCPUpstreamInfoDetail extends AbstractModel
 {
@@ -108,6 +110,11 @@ class AIGWMCPUpstreamInfoDetail extends AbstractModel
     public $MessageEndpoint;
 
     /**
+     * @var AIGWUpstreamTLSConfig <p>TLS配置</p>
+     */
+    public $TLSConfig;
+
+    /**
      * @param string $SourceId <p>注册中心来源ID</p>
      * @param string $SourceName <p>注册中心来源名称, 入参不传，用于返回</p>
      * @param string $Namespace <p>命名空间</p>
@@ -120,6 +127,7 @@ class AIGWMCPUpstreamInfoDetail extends AbstractModel
      * @param string $ServiceGroup <p>服务分组</p>
      * @param string $MCPEndpoint <p>mcp endpoint</p>
      * @param string $MessageEndpoint <p>SSE message路径</p>
+     * @param AIGWUpstreamTLSConfig $TLSConfig <p>TLS配置</p>
      */
     function __construct()
     {
@@ -180,6 +188,11 @@ class AIGWMCPUpstreamInfoDetail extends AbstractModel
 
         if (array_key_exists("MessageEndpoint",$param) and $param["MessageEndpoint"] !== null) {
             $this->MessageEndpoint = $param["MessageEndpoint"];
+        }
+
+        if (array_key_exists("TLSConfig",$param) and $param["TLSConfig"] !== null) {
+            $this->TLSConfig = new AIGWUpstreamTLSConfig();
+            $this->TLSConfig->deserialize($param["TLSConfig"]);
         }
     }
 }

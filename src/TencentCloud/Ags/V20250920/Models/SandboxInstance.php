@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountOptions(array $MountOptions) 设置<p>存储挂载选项</p>
  * @method CustomConfigurationDetail getCustomConfiguration() 获取<p>沙箱实例自定义配置</p>
  * @method void setCustomConfiguration(CustomConfigurationDetail $CustomConfiguration) 设置<p>沙箱实例自定义配置</p>
+ * @method ComputerConfiguration getComputerConfiguration() 获取<p>桌面电脑环境类沙箱配置</p>
+ * @method void setComputerConfiguration(ComputerConfiguration $ComputerConfiguration) 设置<p>桌面电脑环境类沙箱配置</p>
  * @method string getNetworkMode() 获取<p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
  * @method void setNetworkMode(string $NetworkMode) 设置<p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
  * @method array getMetadata() 获取<p>沙箱实例元数据</p>
@@ -114,6 +116,11 @@ class SandboxInstance extends AbstractModel
     public $CustomConfiguration;
 
     /**
+     * @var ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public $ComputerConfiguration;
+
+    /**
      * @var string <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
      */
     public $NetworkMode;
@@ -141,6 +148,7 @@ class SandboxInstance extends AbstractModel
      * @param string $UpdateTime <p>更新时间（ISO 8601 格式）</p>
      * @param array $MountOptions <p>存储挂载选项</p>
      * @param CustomConfigurationDetail $CustomConfiguration <p>沙箱实例自定义配置</p>
+     * @param ComputerConfiguration $ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
      * @param string $NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
      * @param array $Metadata <p>沙箱实例元数据</p>
      * @param string $AuthMode <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即 TOKEN 认证</li><li>TOKEN： Token认证，即所有端口访问都需携带TOKEN</li><li>NONE： 免认证，即所有端口访问无需携带TOKEN</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带TOKEN，其他端口无需携带TOKEN</li></ul><p>默认值：DEFAULT</p>
@@ -210,6 +218,11 @@ class SandboxInstance extends AbstractModel
         if (array_key_exists("CustomConfiguration",$param) and $param["CustomConfiguration"] !== null) {
             $this->CustomConfiguration = new CustomConfigurationDetail();
             $this->CustomConfiguration->deserialize($param["CustomConfiguration"]);
+        }
+
+        if (array_key_exists("ComputerConfiguration",$param) and $param["ComputerConfiguration"] !== null) {
+            $this->ComputerConfiguration = new ComputerConfiguration();
+            $this->ComputerConfiguration->deserialize($param["ComputerConfiguration"]);
         }
 
         if (array_key_exists("NetworkMode",$param) and $param["NetworkMode"] !== null) {

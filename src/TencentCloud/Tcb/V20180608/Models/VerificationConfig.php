@@ -30,9 +30,9 @@ ErrorCode：int（0 表示成功，非 0 表示失败）
 ErrorMessage：字符串（ErrorCode 非 0 时，返回错误信息）
 - 如果使用自定义短信模板发送短信时，需要按照对应的短信服务商的要求，申请并审核通过对应的短信模板后，在云开发平台配置自定义短信模板，云开发平台对于短信模板不会做其他操作和限制，只做短信发送的逻辑，其他的操作限制都由短信服务商自身提供。
  *
- * @method string getType() 获取<p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li></ul>
+ * @method string getType() 获取<p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置<p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li></ul>
+ * @method void setType(string $Type) 设置<p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取<p>自定义 APIs 数据源唯一标识，当 Type 为 apis 时必填。用于定位微搭 APIs 中对应的数据源。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,11 +50,15 @@ ErrorMessage：字符串（ErrorCode 非 0 时，返回错误信息）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateProvider(SMSProviderTemplateConfig $TemplateProvider) 设置<p>自定义短信服务商模板配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SMSCloudFunctionConfig getCloudFunction() 获取<p>云函数短信通道配置，当 Type 为 function 时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudFunction(SMSCloudFunctionConfig $CloudFunction) 设置<p>云函数短信通道配置，当 Type 为 function 时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VerificationConfig extends AbstractModel
 {
     /**
-     * @var string <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li></ul>
+     * @var string <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -84,7 +88,13 @@ class VerificationConfig extends AbstractModel
     public $TemplateProvider;
 
     /**
-     * @param string $Type <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li></ul>
+     * @var SMSCloudFunctionConfig <p>云函数短信通道配置，当 Type 为 function 时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudFunction;
+
+    /**
+     * @param string $Type <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name <p>自定义 APIs 数据源唯一标识，当 Type 为 apis 时必填。用于定位微搭 APIs 中对应的数据源。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -93,6 +103,8 @@ class VerificationConfig extends AbstractModel
      * @param integer $SmsDayLimit <p>单个手机号每日短信发送上限。默认值为 30，传 -1 表示不限制，如果设置为不限制，需要注意恶意攻击，导致短信套餐用量计费问题。仅支持正整数或 -1。不传则不修改当前配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SMSProviderTemplateConfig $TemplateProvider <p>自定义短信服务商模板配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SMSCloudFunctionConfig $CloudFunction <p>云函数短信通道配置，当 Type 为 function 时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -127,6 +139,11 @@ class VerificationConfig extends AbstractModel
         if (array_key_exists("TemplateProvider",$param) and $param["TemplateProvider"] !== null) {
             $this->TemplateProvider = new SMSProviderTemplateConfig();
             $this->TemplateProvider->deserialize($param["TemplateProvider"]);
+        }
+
+        if (array_key_exists("CloudFunction",$param) and $param["CloudFunction"] !== null) {
+            $this->CloudFunction = new SMSCloudFunctionConfig();
+            $this->CloudFunction->deserialize($param["CloudFunction"]);
         }
     }
 }

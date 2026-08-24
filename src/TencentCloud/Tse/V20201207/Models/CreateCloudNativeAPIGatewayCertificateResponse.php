@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudNativeAPIGatewayCertificate返回参数结构体
  *
- * @method CertificateInfo getResult() 获取创建证书结果
- * @method void setResult(CertificateInfo $Result) 设置创建证书结果
+ * @method CertificateInfo getResult() 获取<p>创建证书结果</p>
+ * @method void setResult(CertificateInfo $Result) 设置<p>创建证书结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCloudNativeAPIGatewayCertificateResponse extends AbstractModel
 {
     /**
-     * @var CertificateInfo 创建证书结果
+     * @var CertificateInfo <p>创建证书结果</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class CreateCloudNativeAPIGatewayCertificateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CertificateInfo $Result 创建证书结果
+     * @param CertificateInfo $Result <p>创建证书结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

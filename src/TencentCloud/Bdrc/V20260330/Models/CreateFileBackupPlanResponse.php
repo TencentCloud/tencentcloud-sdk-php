@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFileBackupPlan返回参数结构体
  *
- * @method array getPlanIds() 获取备份计划 ID 列表
- * @method void setPlanIds(array $PlanIds) 设置备份计划 ID 列表
+ * @method array getPlanIds() 获取<p>备份计划 ID 列表</p>
+ * @method void setPlanIds(array $PlanIds) 设置<p>备份计划 ID 列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateFileBackupPlanResponse extends AbstractModel
 {
     /**
-     * @var array 备份计划 ID 列表
+     * @var array <p>备份计划 ID 列表</p>
      */
     public $PlanIds;
 
@@ -38,7 +38,7 @@ class CreateFileBackupPlanResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PlanIds 备份计划 ID 列表
+     * @param array $PlanIds <p>备份计划 ID 列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

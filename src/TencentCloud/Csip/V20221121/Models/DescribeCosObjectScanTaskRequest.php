@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskType() 获取<p>1: 敏感数据识别 2:恶意文件扫描</p>
  * @method void setTaskType(integer $TaskType) 设置<p>1: 敏感数据识别 2:恶意文件扫描</p>
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method array getBucketSet() 获取<p>存储桶列表</p>
  * @method void setBucketSet(array $BucketSet) 设置<p>存储桶列表</p>
  */
@@ -35,7 +35,7 @@ class DescribeCosObjectScanTaskRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -46,7 +46,7 @@ class DescribeCosObjectScanTaskRequest extends AbstractModel
 
     /**
      * @param integer $TaskType <p>1: 敏感数据识别 2:恶意文件扫描</p>
-     * @param array $MemberId 集团账号的成员id
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param array $BucketSet <p>存储桶列表</p>
      */
     function __construct()

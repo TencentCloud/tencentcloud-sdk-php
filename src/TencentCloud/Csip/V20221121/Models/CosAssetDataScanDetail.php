@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorInfo(string $ErrorInfo) 设置<p>识别失败信息</p>
  * @method array getCategoryDetails() 获取<p>识别结果分类详情</p>
  * @method void setCategoryDetails(array $CategoryDetails) 设置<p>识别结果分类详情</p>
+ * @method array getRuleDetails() 获取<p>无</p>
+ * @method void setRuleDetails(array $RuleDetails) 设置<p>无</p>
+ * @method array getLevelDetails() 获取<p>无</p>
+ * @method void setLevelDetails(array $LevelDetails) 设置<p>无</p>
+ * @method boolean getIsFullScanned() 获取<p>是否已发起全量扫描</p>
+ * @method void setIsFullScanned(boolean $IsFullScanned) 设置<p>是否已发起全量扫描</p>
  */
 class CosAssetDataScanDetail extends AbstractModel
 {
@@ -59,11 +65,29 @@ class CosAssetDataScanDetail extends AbstractModel
     public $CategoryDetails;
 
     /**
+     * @var array <p>无</p>
+     */
+    public $RuleDetails;
+
+    /**
+     * @var array <p>无</p>
+     */
+    public $LevelDetails;
+
+    /**
+     * @var boolean <p>是否已发起全量扫描</p>
+     */
+    public $IsFullScanned;
+
+    /**
      * @param integer $Status <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
      * @param float $Progress <p>识别进度</p>
      * @param integer $LatestScanTime <p>最近扫描时间</p>
      * @param string $ErrorInfo <p>识别失败信息</p>
      * @param array $CategoryDetails <p>识别结果分类详情</p>
+     * @param array $RuleDetails <p>无</p>
+     * @param array $LevelDetails <p>无</p>
+     * @param boolean $IsFullScanned <p>是否已发起全量扫描</p>
      */
     function __construct()
     {
@@ -101,6 +125,28 @@ class CosAssetDataScanDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CategoryDetails, $obj);
             }
+        }
+
+        if (array_key_exists("RuleDetails",$param) and $param["RuleDetails"] !== null) {
+            $this->RuleDetails = [];
+            foreach ($param["RuleDetails"] as $key => $value){
+                $obj = new CosIdentifyRuleDetail();
+                $obj->deserialize($value);
+                array_push($this->RuleDetails, $obj);
+            }
+        }
+
+        if (array_key_exists("LevelDetails",$param) and $param["LevelDetails"] !== null) {
+            $this->LevelDetails = [];
+            foreach ($param["LevelDetails"] as $key => $value){
+                $obj = new CosIdentifyLevelDetail();
+                $obj->deserialize($value);
+                array_push($this->LevelDetails, $obj);
+            }
+        }
+
+        if (array_key_exists("IsFullScanned",$param) and $param["IsFullScanned"] !== null) {
+            $this->IsFullScanned = $param["IsFullScanned"];
         }
     }
 }

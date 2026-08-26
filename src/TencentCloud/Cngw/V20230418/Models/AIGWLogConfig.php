@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequestLogPayloadMode(string $RequestLogPayloadMode) 设置<p>请求 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始请求</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
  * @method string getResponseLogPayloadMode() 获取<p>上游原始 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始上游响应</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
  * @method void setResponseLogPayloadMode(string $ResponseLogPayloadMode) 设置<p>上游原始 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始上游响应</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+ * @method string getRequestLogPayloadTruncationPolicy() 获取<p>请求 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+ * @method void setRequestLogPayloadTruncationPolicy(string $RequestLogPayloadTruncationPolicy) 设置<p>请求 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+ * @method string getResponseLogPayloadTruncationPolicy() 获取<p>响应 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+ * @method void setResponseLogPayloadTruncationPolicy(string $ResponseLogPayloadTruncationPolicy) 设置<p>响应 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
  */
 class AIGWLogConfig extends AbstractModel
 {
@@ -66,12 +70,24 @@ class AIGWLogConfig extends AbstractModel
     public $ResponseLogPayloadMode;
 
     /**
+     * @var string <p>请求 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+     */
+    public $RequestLogPayloadTruncationPolicy;
+
+    /**
+     * @var string <p>响应 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+     */
+    public $ResponseLogPayloadTruncationPolicy;
+
+    /**
      * @param boolean $EnableRequestLogPayloads <p>是否开启请求 payload 记录日志</p>
      * @param boolean $EnableResponseLogPayloads <p>是否开启响应 payload 记录日志</p>
      * @param integer $RequestLogPayloadMaxSize <p>日志记录的请求body的最大字节数</p><p>取值范围：[512, 1048576]</p><p>EnableRequestLogPayloads 为true时必填</p>
      * @param integer $ResponseLogPayloadMaxSize <p>日志记录的响应body的最大字节数</p><p>取值范围：[512, 1048576]</p><p>EnableResponseLogPayloads 为true时必填</p>
      * @param string $RequestLogPayloadMode <p>请求 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始请求</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
      * @param string $ResponseLogPayloadMode <p>上游原始 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始上游响应</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+     * @param string $RequestLogPayloadTruncationPolicy <p>请求 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+     * @param string $ResponseLogPayloadTruncationPolicy <p>响应 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class AIGWLogConfig extends AbstractModel
 
         if (array_key_exists("ResponseLogPayloadMode",$param) and $param["ResponseLogPayloadMode"] !== null) {
             $this->ResponseLogPayloadMode = $param["ResponseLogPayloadMode"];
+        }
+
+        if (array_key_exists("RequestLogPayloadTruncationPolicy",$param) and $param["RequestLogPayloadTruncationPolicy"] !== null) {
+            $this->RequestLogPayloadTruncationPolicy = $param["RequestLogPayloadTruncationPolicy"];
+        }
+
+        if (array_key_exists("ResponseLogPayloadTruncationPolicy",$param) and $param["ResponseLogPayloadTruncationPolicy"] !== null) {
+            $this->ResponseLogPayloadTruncationPolicy = $param["ResponseLogPayloadTruncationPolicy"];
         }
     }
 }

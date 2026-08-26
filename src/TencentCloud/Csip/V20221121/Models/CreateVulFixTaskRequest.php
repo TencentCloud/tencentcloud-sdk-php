@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) 设置<p>最大修复时间<br>单位：秒<br>默认值：3600</p>
  * @method boolean getCreateSnapshot() 获取<p>是否在修复前创建磁盘快照<br>默认值：false</p>
  * @method void setCreateSnapshot(boolean $CreateSnapshot) 设置<p>是否在修复前创建磁盘快照<br>默认值：false</p>
- * @method string getSnapshotName() 获取<p>快照名称，CreateSnapshot为true时有效<br>入参限制：最长128个字符</p>
- * @method void setSnapshotName(string $SnapshotName) 设置<p>快照名称，CreateSnapshot为true时有效<br>入参限制：最长128个字符</p>
+ * @method string getSnapshotName() 获取<p>快照名称，CreateSnapshot为true时有效入参限制：最长60个字符超长自动截断</p>
+ * @method void setSnapshotName(string $SnapshotName) 设置<p>快照名称，CreateSnapshot为true时有效入参限制：最长60个字符超长自动截断</p>
  * @method integer getSaveDays() 获取<p>快照保存天数，CreateSnapshot为true时有效</p>
  * @method void setSaveDays(integer $SaveDays) 设置<p>快照保存天数，CreateSnapshot为true时有效</p>
  * @method array getMemberId() 获取集团账号的成员id
@@ -51,7 +51,7 @@ class CreateVulFixTaskRequest extends AbstractModel
     public $CreateSnapshot;
 
     /**
-     * @var string <p>快照名称，CreateSnapshot为true时有效<br>入参限制：最长128个字符</p>
+     * @var string <p>快照名称，CreateSnapshot为true时有效入参限制：最长60个字符超长自动截断</p>
      */
     public $SnapshotName;
 
@@ -69,7 +69,7 @@ class CreateVulFixTaskRequest extends AbstractModel
      * @param array $FixItems <p>修复项列表，每项指定一个漏洞/KB补丁及其需要修复的主机<br>入参限制：最多100项，总实例数不超过5000</p>
      * @param integer $Timeout <p>最大修复时间<br>单位：秒<br>默认值：3600</p>
      * @param boolean $CreateSnapshot <p>是否在修复前创建磁盘快照<br>默认值：false</p>
-     * @param string $SnapshotName <p>快照名称，CreateSnapshot为true时有效<br>入参限制：最长128个字符</p>
+     * @param string $SnapshotName <p>快照名称，CreateSnapshot为true时有效入参限制：最长60个字符超长自动截断</p>
      * @param integer $SaveDays <p>快照保存天数，CreateSnapshot为true时有效</p>
      * @param array $MemberId 集团账号的成员id
      */

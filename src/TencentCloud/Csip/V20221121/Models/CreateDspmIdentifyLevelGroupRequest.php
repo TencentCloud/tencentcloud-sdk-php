@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置<p>描述</p>
  * @method array getLevelItems() 获取<p>无</p>
  * @method void setLevelItems(array $LevelItems) 设置<p>无</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class CreateDspmIdentifyLevelGroupRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateDspmIdentifyLevelGroupRequest extends AbstractModel
     public $LevelItems;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param string $Name <p>分级组名称</p>
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param string $Description <p>描述</p>
      * @param array $LevelItems <p>无</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateDspmIdentifyLevelGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LevelItems, $obj);
             }
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDCDBInstance返回参数结构体
  *
- * @method string getDealName() 获取长订单号。可以据此调用 DescribeOrders
- 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
- * @method void setDealName(string $DealName) 设置长订单号。可以据此调用 DescribeOrders
- 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
+ * @method string getDealName() 获取<p>长订单号。可以据此调用 DescribeOrders<br> 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。</p>
+ * @method void setDealName(string $DealName) 设置<p>长订单号。可以据此调用 DescribeOrders<br> 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class UpgradeDCDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 长订单号。可以据此调用 DescribeOrders
- 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
+     * @var string <p>长订单号。可以据此调用 DescribeOrders<br> 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。</p>
      */
     public $DealName;
 
@@ -41,8 +38,7 @@ class UpgradeDCDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DealName 长订单号。可以据此调用 DescribeOrders
- 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
+     * @param string $DealName <p>长订单号。可以据此调用 DescribeOrders<br> 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

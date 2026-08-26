@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method array getFilters() 获取<p>筛选条件</p>
  * @method void setFilters(array $Filters) 设置<p>筛选条件</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class DescribeDspmDictionaryListRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeDspmDictionaryListRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param string $DictType <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param array $Filters <p>筛选条件</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeDspmDictionaryListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

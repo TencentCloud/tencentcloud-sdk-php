@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBucketIdSet(array $BucketIdSet) 设置<p>存储桶资产id集合</p>
  * @method array getSampleRateSet() 获取<p>采样率集合</p>
  * @method void setSampleRateSet(array $SampleRateSet) 设置<p>采样率集合</p>
+ * @method integer getTargetAppId() 获取<p>appid；传 DefaultSampleRate 时必填；只修改已有桶时可选</p>
+ * @method void setTargetAppId(integer $TargetAppId) 设置<p>appid；传 DefaultSampleRate 时必填；只修改已有桶时可选</p>
+ * @method float getDefaultSampleRate() 获取<p>传入时修改 TargetAppId 的新增桶默认值； 不传时不修改默认值</p><p>取值范围：[0.001, 1]</p>
+ * @method void setDefaultSampleRate(float $DefaultSampleRate) 设置<p>传入时修改 TargetAppId 的新增桶默认值； 不传时不修改默认值</p><p>取值范围：[0.001, 1]</p>
  */
 class ModifyCosAuditObjectSampleRateRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ModifyCosAuditObjectSampleRateRequest extends AbstractModel
     public $SampleRateSet;
 
     /**
+     * @var integer <p>appid；传 DefaultSampleRate 时必填；只修改已有桶时可选</p>
+     */
+    public $TargetAppId;
+
+    /**
+     * @var float <p>传入时修改 TargetAppId 的新增桶默认值； 不传时不修改默认值</p><p>取值范围：[0.001, 1]</p>
+     */
+    public $DefaultSampleRate;
+
+    /**
      * @param array $BucketIdSet <p>存储桶资产id集合</p>
      * @param array $SampleRateSet <p>采样率集合</p>
+     * @param integer $TargetAppId <p>appid；传 DefaultSampleRate 时必填；只修改已有桶时可选</p>
+     * @param float $DefaultSampleRate <p>传入时修改 TargetAppId 的新增桶默认值； 不传时不修改默认值</p><p>取值范围：[0.001, 1]</p>
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ModifyCosAuditObjectSampleRateRequest extends AbstractModel
 
         if (array_key_exists("SampleRateSet",$param) and $param["SampleRateSet"] !== null) {
             $this->SampleRateSet = $param["SampleRateSet"];
+        }
+
+        if (array_key_exists("TargetAppId",$param) and $param["TargetAppId"] !== null) {
+            $this->TargetAppId = $param["TargetAppId"];
+        }
+
+        if (array_key_exists("DefaultSampleRate",$param) and $param["DefaultSampleRate"] !== null) {
+            $this->DefaultSampleRate = $param["DefaultSampleRate"];
         }
     }
 }

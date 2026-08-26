@@ -23,11 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomain() 获取删除的域名
  * @method void setDomain(string $Domain) 设置删除的域名
  * @method string getRuleId() 获取删除的规则ID
+说明：支持批量删除，多个规则ID用英文逗号分隔
+与DomainRuleIdList二选一，优先使用DomainRuleIdList
  * @method void setRuleId(string $RuleId) 设置删除的规则ID
+说明：支持批量删除，多个规则ID用英文逗号分隔
+与DomainRuleIdList二选一，优先使用DomainRuleIdList
  * @method string getEdition() 获取WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
  * @method void setEdition(string $Edition) 设置WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
  * @method array getDomainRuleIdList() 获取批量删除的规则列表
+说明：支持跨域名批量删除，每个元素指定域名和规则ID。如果不为空则忽略Domain和RuleId字段
  * @method void setDomainRuleIdList(array $DomainRuleIdList) 设置批量删除的规则列表
+说明：支持跨域名批量删除，每个元素指定域名和规则ID。如果不为空则忽略Domain和RuleId字段
  */
 class DeleteCustomRuleRequest extends AbstractModel
 {
@@ -38,6 +44,8 @@ class DeleteCustomRuleRequest extends AbstractModel
 
     /**
      * @var string 删除的规则ID
+说明：支持批量删除，多个规则ID用英文逗号分隔
+与DomainRuleIdList二选一，优先使用DomainRuleIdList
      */
     public $RuleId;
 
@@ -48,14 +56,18 @@ class DeleteCustomRuleRequest extends AbstractModel
 
     /**
      * @var array 批量删除的规则列表
+说明：支持跨域名批量删除，每个元素指定域名和规则ID。如果不为空则忽略Domain和RuleId字段
      */
     public $DomainRuleIdList;
 
     /**
      * @param string $Domain 删除的域名
      * @param string $RuleId 删除的规则ID
+说明：支持批量删除，多个规则ID用英文逗号分隔
+与DomainRuleIdList二选一，优先使用DomainRuleIdList
      * @param string $Edition WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
      * @param array $DomainRuleIdList 批量删除的规则列表
+说明：支持跨域名批量删除，每个元素指定域名和规则ID。如果不为空则忽略Domain和RuleId字段
      */
     function __construct()
     {

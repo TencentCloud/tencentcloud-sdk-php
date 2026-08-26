@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsHaveOldPostOrder(boolean $IsHaveOldPostOrder) 设置<p>是否存在旧后付费订单</p>
  * @method array getPostProductList() 获取<p>后付费产品列表</p>
  * @method void setPostProductList(array $PostProductList) 设置<p>后付费产品列表</p>
+ * @method float getDefaultSampleRate() 获取<p>该 AppId 新增桶默认采样率，单位为 0～1 比率</p><p>取值范围：[0.001, 1]</p>
+ * @method void setDefaultSampleRate(float $DefaultSampleRate) 设置<p>该 AppId 新增桶默认采样率，单位为 0～1 比率</p><p>取值范围：[0.001, 1]</p>
+ * @method boolean getBucketSamplingRateWhitelist() 获取<p>是否白名单，仅用于控制前端范围和精度</p>
+ * @method void setBucketSamplingRateWhitelist(boolean $BucketSamplingRateWhitelist) 设置<p>是否白名单，仅用于控制前端范围和精度</p>
  */
 class CosBucketBillingInfo extends AbstractModel
 {
@@ -122,6 +126,16 @@ class CosBucketBillingInfo extends AbstractModel
     public $PostProductList;
 
     /**
+     * @var float <p>该 AppId 新增桶默认采样率，单位为 0～1 比率</p><p>取值范围：[0.001, 1]</p>
+     */
+    public $DefaultSampleRate;
+
+    /**
+     * @var boolean <p>是否白名单，仅用于控制前端范围和精度</p>
+     */
+    public $BucketSamplingRateWhitelist;
+
+    /**
      * @param integer $AppId <p>appid</p>
      * @param string $OwnerUin <p>uin</p>
      * @param string $OwnerNickName <p>昵称</p>
@@ -136,6 +150,8 @@ class CosBucketBillingInfo extends AbstractModel
      * @param boolean $IsHaveNewPostOrder <p>是否存在新的后付费订单</p>
      * @param boolean $IsHaveOldPostOrder <p>是否存在旧后付费订单</p>
      * @param array $PostProductList <p>后付费产品列表</p>
+     * @param float $DefaultSampleRate <p>该 AppId 新增桶默认采样率，单位为 0～1 比率</p><p>取值范围：[0.001, 1]</p>
+     * @param boolean $BucketSamplingRateWhitelist <p>是否白名单，仅用于控制前端范围和精度</p>
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ class CosBucketBillingInfo extends AbstractModel
 
         if (array_key_exists("PostProductList",$param) and $param["PostProductList"] !== null) {
             $this->PostProductList = $param["PostProductList"];
+        }
+
+        if (array_key_exists("DefaultSampleRate",$param) and $param["DefaultSampleRate"] !== null) {
+            $this->DefaultSampleRate = $param["DefaultSampleRate"];
+        }
+
+        if (array_key_exists("BucketSamplingRateWhitelist",$param) and $param["BucketSamplingRateWhitelist"] !== null) {
+            $this->BucketSamplingRateWhitelist = $param["BucketSamplingRateWhitelist"];
         }
     }
 }

@@ -41,6 +41,7 @@ class CosIdentifyCategoryDetail extends AbstractModel
 
     /**
      * @var array <p>数据项集合</p>
+     * @deprecated
      */
     public $RuleSet;
 

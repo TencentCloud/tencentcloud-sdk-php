@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIds(array $Ids) 设置<p>级别组id</p>
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class DeleteDspmIdentifyLevelGroupRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteDspmIdentifyLevelGroupRequest extends AbstractModel
     public $MemberId;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param array $Ids <p>级别组id</p>
      * @param array $MemberId <p>集团账号的成员id</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteDspmIdentifyLevelGroupRequest extends AbstractModel
 
         if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
             $this->MemberId = $param["MemberId"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStructuredTestContent(array $StructuredTestContent) 设置<p>结构化测试内容</p>
  * @method string getUnStructuredTestContent() 获取<p>非结构化测试内容</p>
  * @method void setUnStructuredTestContent(string $UnStructuredTestContent) 设置<p>非结构化测试内容</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class DescribeDspmIdentifyRuleTestResultRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeDspmIdentifyRuleTestResultRequest extends AbstractModel
     public $UnStructuredTestContent;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param string $RuleType <p>规则类型</p><p>枚举值：</p><ul><li>structured： 结构化规则</li><li>unstructrued： 非结构化规则</li></ul>
      * @param string $RuleContent <p>规则内容</p>
      * @param integer $RuleId <p>数据项id</p>
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param array $StructuredTestContent <p>结构化测试内容</p>
      * @param string $UnStructuredTestContent <p>非结构化测试内容</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class DescribeDspmIdentifyRuleTestResultRequest extends AbstractModel
 
         if (array_key_exists("UnStructuredTestContent",$param) and $param["UnStructuredTestContent"] !== null) {
             $this->UnStructuredTestContent = $param["UnStructuredTestContent"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

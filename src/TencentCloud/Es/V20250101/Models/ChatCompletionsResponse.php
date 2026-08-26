@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChatCompletions返回参数结构体
  *
- * @method string getId() 获取此次请求的id
- * @method void setId(string $Id) 设置此次请求的id
- * @method array getChoices() 获取回复内容
- * @method void setChoices(array $Choices) 设置回复内容
- * @method TokenUsage getUsage() 获取token使用量
- * @method void setUsage(TokenUsage $Usage) 设置token使用量
- * @method array getOnlineSearchContent() 获取联网搜索结果。
+ * @method string getId() 获取<p>此次请求的id</p>
+ * @method void setId(string $Id) 设置<p>此次请求的id</p>
+ * @method array getChoices() 获取<p>回复内容</p>
+ * @method void setChoices(array $Choices) 设置<p>回复内容</p>
+ * @method TokenUsage getUsage() 获取<p>token使用量</p>
+ * @method void setUsage(TokenUsage $Usage) 设置<p>token使用量</p>
+ * @method array getOnlineSearchContent() 获取<p>联网搜索结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOnlineSearchContent(array $OnlineSearchContent) 设置联网搜索结果。
+ * @method void setOnlineSearchContent(array $OnlineSearchContent) 设置<p>联网搜索结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
@@ -36,22 +36,22 @@ use TencentCloud\Common\AbstractModel;
 class ChatCompletionsResponse extends AbstractModel
 {
     /**
-     * @var string 此次请求的id
+     * @var string <p>此次请求的id</p>
      */
     public $Id;
 
     /**
-     * @var array 回复内容
+     * @var array <p>回复内容</p>
      */
     public $Choices;
 
     /**
-     * @var TokenUsage token使用量
+     * @var TokenUsage <p>token使用量</p>
      */
     public $Usage;
 
     /**
-     * @var array 联网搜索结果。
+     * @var array <p>联网搜索结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OnlineSearchContent;
@@ -62,10 +62,10 @@ class ChatCompletionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Id 此次请求的id
-     * @param array $Choices 回复内容
-     * @param TokenUsage $Usage token使用量
-     * @param array $OnlineSearchContent 联网搜索结果。
+     * @param string $Id <p>此次请求的id</p>
+     * @param array $Choices <p>回复内容</p>
+     * @param TokenUsage $Usage <p>token使用量</p>
+     * @param array $OnlineSearchContent <p>联网搜索结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */

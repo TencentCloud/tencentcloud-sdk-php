@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpgradeSettings(MachineUpgradeSettings $UpgradeSettings) 设置<p>自动升级配置</p>
  * @method boolean getAutoRepair() 获取<p>是否开启自愈能力</p>
  * @method void setAutoRepair(boolean $AutoRepair) 设置<p>是否开启自愈能力</p>
- * @method string getInstanceChargeType() 获取<p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+ * @method string getInstanceChargeType() 获取<p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li><li>UNDERWRITE： 目标计费类型为包销计费</li></ul>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li><li>UNDERWRITE： 目标计费类型为包销计费</li></ul>
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取<p>包年包月机型计费配置</p>
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置<p>包年包月机型计费配置</p>
  * @method Disk getSystemDisk() 获取<p>系统盘配置</p>
@@ -99,7 +99,7 @@ class UpdateNativeNodePoolParam extends AbstractModel
     public $AutoRepair;
 
     /**
-     * @var string <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+     * @var string <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li><li>UNDERWRITE： 目标计费类型为包销计费</li></ul>
      */
     public $InstanceChargeType;
 
@@ -204,7 +204,7 @@ class UpdateNativeNodePoolParam extends AbstractModel
      * @param array $SecurityGroupIds <p>安全组列表</p>
      * @param MachineUpgradeSettings $UpgradeSettings <p>自动升级配置</p>
      * @param boolean $AutoRepair <p>是否开启自愈能力</p>
-     * @param string $InstanceChargeType <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+     * @param string $InstanceChargeType <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li><li>UNDERWRITE： 目标计费类型为包销计费</li></ul>
      * @param InstanceChargePrepaid $InstanceChargePrepaid <p>包年包月机型计费配置</p>
      * @param Disk $SystemDisk <p>系统盘配置</p>
      * @param ManagementConfig $Management <p>Machine 系统配置</p>

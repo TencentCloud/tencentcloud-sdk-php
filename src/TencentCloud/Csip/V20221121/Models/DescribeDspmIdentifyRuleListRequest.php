@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method Filter getFilter() 获取<p>筛选项</p>
  * @method void setFilter(Filter $Filter) 设置<p>筛选项</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class DescribeDspmIdentifyRuleListRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDspmIdentifyRuleListRequest extends AbstractModel
     public $Filter;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param Filter $Filter <p>筛选项</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class DescribeDspmIdentifyRuleListRequest extends AbstractModel
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

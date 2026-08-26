@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFileBackupPlan请求参数结构体
  *
- * @method string getPolicyId() 获取备份策略ID
- * @method void setPolicyId(string $PolicyId) 设置备份策略ID
- * @method string getBackupStorageId() 获取备份库ID
- * @method void setBackupStorageId(string $BackupStorageId) 设置备份库ID
- * @method string getPlanName() 获取计划名称
- * @method void setPlanName(string $PlanName) 设置计划名称
- * @method array getResources() 获取实例配置列表，[1,20]
- * @method void setResources(array $Resources) 设置实例配置列表，[1,20]
+ * @method string getPolicyId() 获取<p>备份策略ID</p>
+ * @method void setPolicyId(string $PolicyId) 设置<p>备份策略ID</p>
+ * @method string getBackupStorageId() 获取<p>备份库ID</p>
+ * @method void setBackupStorageId(string $BackupStorageId) 设置<p>备份库ID</p>
+ * @method string getPlanName() 获取<p>计划名称</p>
+ * @method void setPlanName(string $PlanName) 设置<p>计划名称</p>
+ * @method array getResources() 获取<p>实例配置列表，[1,20]</p>
+ * @method void setResources(array $Resources) 设置<p>实例配置列表，[1,20]</p>
+ * @method string getResourceType() 获取<p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+ * @method void setResourceType(string $ResourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
  */
 class CreateFileBackupPlanRequest extends AbstractModel
 {
     /**
-     * @var string 备份策略ID
+     * @var string <p>备份策略ID</p>
      */
     public $PolicyId;
 
     /**
-     * @var string 备份库ID
+     * @var string <p>备份库ID</p>
      */
     public $BackupStorageId;
 
     /**
-     * @var string 计划名称
+     * @var string <p>计划名称</p>
      */
     public $PlanName;
 
     /**
-     * @var array 实例配置列表，[1,20]
+     * @var array <p>实例配置列表，[1,20]</p>
      */
     public $Resources;
 
     /**
-     * @param string $PolicyId 备份策略ID
-     * @param string $BackupStorageId 备份库ID
-     * @param string $PlanName 计划名称
-     * @param array $Resources 实例配置列表，[1,20]
+     * @var string <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+     */
+    public $ResourceType;
+
+    /**
+     * @param string $PolicyId <p>备份策略ID</p>
+     * @param string $BackupStorageId <p>备份库ID</p>
+     * @param string $PlanName <p>计划名称</p>
+     * @param array $Resources <p>实例配置列表，[1,20]</p>
+     * @param string $ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateFileBackupPlanRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Resources, $obj);
             }
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
         }
     }
 }

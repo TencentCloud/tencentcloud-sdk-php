@@ -25,9 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRuleId() 获取编辑的规则ID
  * @method void setRuleId(integer $RuleId) 设置编辑的规则ID
  * @method string getRuleName() 获取编辑的规则名称
+入参限制：1-128个字符，不允许特殊字符
  * @method void setRuleName(string $RuleName) 设置编辑的规则名称
- * @method string getRuleAction() 获取动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
- * @method void setRuleAction(string $RuleAction) 设置动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+入参限制：1-128个字符，不允许特殊字符
+ * @method string getRuleAction() 获取动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当RuleAction为4（重定向）时，Redirect参数不能为空
+ * @method void setRuleAction(string $RuleAction) 设置动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当RuleAction为4（重定向）时，Redirect参数不能为空
  * @method array getStrategies() 获取匹配条件数组
  * @method void setStrategies(array $Strategies) 设置匹配条件数组
  * @method string getEdition() 获取WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
@@ -57,9 +65,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPageId() 获取拦截页面id
  * @method void setPageId(string $PageId) 设置拦截页面id
  * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
  * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
- * @method integer getActionRatio() 获取规则生效比例
- * @method void setActionRatio(integer $ActionRatio) 设置规则生效比例
+默认值：and
+入参限制：不区分大小写，仅支持and或or
+ * @method integer getActionRatio() 获取动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
+ * @method void setActionRatio(integer $ActionRatio) 设置动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
  */
 class ModifyCustomRuleRequest extends AbstractModel
 {
@@ -75,11 +91,15 @@ class ModifyCustomRuleRequest extends AbstractModel
 
     /**
      * @var string 编辑的规则名称
+入参限制：1-128个字符，不允许特殊字符
      */
     public $RuleName;
 
     /**
-     * @var string 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+     * @var string 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当RuleAction为4（重定向）时，Redirect参数不能为空
      */
     public $RuleAction;
 
@@ -144,11 +164,15 @@ class ModifyCustomRuleRequest extends AbstractModel
 
     /**
      * @var string 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
      */
     public $LogicalOp;
 
     /**
-     * @var integer 规则生效比例
+     * @var integer 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
      */
     public $ActionRatio;
 
@@ -156,7 +180,11 @@ class ModifyCustomRuleRequest extends AbstractModel
      * @param string $Domain 编辑的域名
      * @param integer $RuleId 编辑的规则ID
      * @param string $RuleName 编辑的规则名称
-     * @param string $RuleAction 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+入参限制：1-128个字符，不允许特殊字符
+     * @param string $RuleAction 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当RuleAction为4（重定向）时，Redirect参数不能为空
      * @param array $Strategies 匹配条件数组
      * @param string $Edition WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
      * @param string $Redirect 动作为重定向的时候重定向URL，默认为"/"
@@ -172,7 +200,11 @@ class ModifyCustomRuleRequest extends AbstractModel
      * @param integer $Status 开关状态，小程序风控规则的时候传该值
      * @param string $PageId 拦截页面id
      * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
-     * @param integer $ActionRatio 规则生效比例
+默认值：and
+入参限制：不区分大小写，仅支持and或or
+     * @param integer $ActionRatio 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
      */
     function __construct()
     {

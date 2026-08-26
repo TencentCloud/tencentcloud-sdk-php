@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerExtraConf(ContainerExtraConf $ContainerExtraConf) 设置<p>额外容器相关配置</p>
  * @method EnableSparkAppMonitorInfo getEnableSparkAppMonitorInfo() 获取<p>spark监控</p>
  * @method void setEnableSparkAppMonitorInfo(EnableSparkAppMonitorInfo $EnableSparkAppMonitorInfo) 设置<p>spark监控</p>
+ * @method array getComputeResourceGroupIds() 获取<p>已有EMR资源节点组Id列表</p>
+ * @method void setComputeResourceGroupIds(array $ComputeResourceGroupIds) 设置<p>已有EMR资源节点组Id列表</p>
+ * @method boolean getTerminateProtection() 获取<p>是否开启实例保护</p>
+ * @method void setTerminateProtection(boolean $TerminateProtection) 设置<p>是否开启实例保护</p>
  */
 class CreateCloudInstanceRequest extends AbstractModel
 {
@@ -171,6 +175,16 @@ class CreateCloudInstanceRequest extends AbstractModel
     public $EnableSparkAppMonitorInfo;
 
     /**
+     * @var array <p>已有EMR资源节点组Id列表</p>
+     */
+    public $ComputeResourceGroupIds;
+
+    /**
+     * @var boolean <p>是否开启实例保护</p>
+     */
+    public $TerminateProtection;
+
+    /**
      * @param string $InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      * @param string $ClusterClass <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li>
      * @param array $Software <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p>
@@ -192,6 +206,8 @@ class CreateCloudInstanceRequest extends AbstractModel
      * @param string $SgIP <p>安全组来源IP</p>
      * @param ContainerExtraConf $ContainerExtraConf <p>额外容器相关配置</p>
      * @param EnableSparkAppMonitorInfo $EnableSparkAppMonitorInfo <p>spark监控</p>
+     * @param array $ComputeResourceGroupIds <p>已有EMR资源节点组Id列表</p>
+     * @param boolean $TerminateProtection <p>是否开启实例保护</p>
      */
     function __construct()
     {
@@ -308,6 +324,14 @@ class CreateCloudInstanceRequest extends AbstractModel
         if (array_key_exists("EnableSparkAppMonitorInfo",$param) and $param["EnableSparkAppMonitorInfo"] !== null) {
             $this->EnableSparkAppMonitorInfo = new EnableSparkAppMonitorInfo();
             $this->EnableSparkAppMonitorInfo->deserialize($param["EnableSparkAppMonitorInfo"]);
+        }
+
+        if (array_key_exists("ComputeResourceGroupIds",$param) and $param["ComputeResourceGroupIds"] !== null) {
+            $this->ComputeResourceGroupIds = $param["ComputeResourceGroupIds"];
+        }
+
+        if (array_key_exists("TerminateProtection",$param) and $param["TerminateProtection"] !== null) {
+            $this->TerminateProtection = $param["TerminateProtection"];
         }
     }
 }

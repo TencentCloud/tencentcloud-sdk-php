@@ -21,19 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * AddCustomRule请求参数结构体
  *
  * @method string getName() 获取规则名称
+入参限制：1-128个字符，不允许特殊字符
  * @method void setName(string $Name) 设置规则名称
- * @method string getSortId() 获取优先级
- * @method void setSortId(string $SortId) 设置优先级
+入参限制：1-128个字符，不允许特殊字符
+ * @method string getSortId() 获取优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
+默认值：0
+ * @method void setSortId(string $SortId) 设置优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
+默认值：0
  * @method array getStrategies() 获取策略详情
  * @method void setStrategies(array $Strategies) 设置策略详情
  * @method string getDomain() 获取需要添加策略的域名
  * @method void setDomain(string $Domain) 设置需要添加策略的域名
- * @method string getActionType() 获取动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
- * @method void setActionType(string $ActionType) 设置动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+ * @method string getActionType() 获取动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当ActionType为4（重定向）时，Redirect参数不能为空
+ * @method void setActionType(string $ActionType) 设置动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当ActionType为4（重定向）时，Redirect参数不能为空
  * @method string getRedirect() 获取如果动作是重定向，则表示重定向的地址；其他情况可以为空
  * @method void setRedirect(string $Redirect) 设置如果动作是重定向，则表示重定向的地址；其他情况可以为空
- * @method string getExpireTime() 获取过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
- * @method void setExpireTime(string $ExpireTime) 设置过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+ * @method string getExpireTime() 获取过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59
+取值说明：0表示永不过期
+默认值：0（解析失败时也默认为0）
+ * @method void setExpireTime(string $ExpireTime) 设置过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59
+取值说明：0表示永不过期
+默认值：0（解析失败时也默认为0）
  * @method string getEdition() 获取WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
  * @method void setEdition(string $Edition) 设置WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
  * @method string getBypass() 获取放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
@@ -53,19 +67,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPageId() 获取拦截页面id
  * @method void setPageId(string $PageId) 设置拦截页面id
  * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
  * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
- * @method integer getActionRatio() 获取按照动作灰度的比例，默认是100
- * @method void setActionRatio(integer $ActionRatio) 设置按照动作灰度的比例，默认是100
+默认值：and
+入参限制：不区分大小写，仅支持and或or
+ * @method integer getActionRatio() 获取动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
+ * @method void setActionRatio(integer $ActionRatio) 设置动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
  */
 class AddCustomRuleRequest extends AbstractModel
 {
     /**
      * @var string 规则名称
+入参限制：1-128个字符，不允许特殊字符
      */
     public $Name;
 
     /**
-     * @var string 优先级
+     * @var string 优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
+默认值：0
      */
     public $SortId;
 
@@ -80,7 +104,10 @@ class AddCustomRuleRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+     * @var string 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当ActionType为4（重定向）时，Redirect参数不能为空
      */
     public $ActionType;
 
@@ -90,7 +117,9 @@ class AddCustomRuleRequest extends AbstractModel
     public $Redirect;
 
     /**
-     * @var string 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+     * @var string 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59
+取值说明：0表示永不过期
+默认值：0（解析失败时也默认为0）
      */
     public $ExpireTime;
 
@@ -142,22 +171,33 @@ class AddCustomRuleRequest extends AbstractModel
 
     /**
      * @var string 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
      */
     public $LogicalOp;
 
     /**
-     * @var integer 按照动作灰度的比例，默认是100
+     * @var integer 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
      */
     public $ActionRatio;
 
     /**
      * @param string $Name 规则名称
-     * @param string $SortId 优先级
+入参限制：1-128个字符，不允许特殊字符
+     * @param string $SortId 优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
+默认值：0
      * @param array $Strategies 策略详情
      * @param string $Domain 需要添加策略的域名
-     * @param string $ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+     * @param string $ActionType 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当ActionType为4（重定向）时，Redirect参数不能为空
      * @param string $Redirect 如果动作是重定向，则表示重定向的地址；其他情况可以为空
-     * @param string $ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+     * @param string $ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59
+取值说明：0表示永不过期
+默认值：0（解析失败时也默认为0）
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      * @param string $Bypass 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
      * @param string $EventId 添加规则的来源，默认为空
@@ -168,7 +208,11 @@ class AddCustomRuleRequest extends AbstractModel
      * @param integer $Status 开关状态，小程序风控规则的时候传该值
      * @param string $PageId 拦截页面id
      * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
-     * @param integer $ActionRatio 按照动作灰度的比例，默认是100
+默认值：and
+入参限制：不区分大小写，仅支持and或or
+     * @param integer $ActionRatio 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
      */
     function __construct()
     {

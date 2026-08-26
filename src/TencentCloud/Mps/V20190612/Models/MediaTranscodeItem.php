@@ -20,162 +20,126 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转码信息
  *
- * @method TaskOutputStorage getOutputStorage() 获取转码后文件的目标存储。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置转码后文件的目标存储。
- * @method string getPath() 获取转码后的视频文件路径。
- * @method void setPath(string $Path) 设置转码后的视频文件路径。
- * @method integer getDefinition() 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
- * @method void setDefinition(integer $Definition) 设置转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
- * @method integer getBitrate() 获取视频流码率平均值与音频流码率平均值之和， 单位：bps。
- * @method void setBitrate(integer $Bitrate) 设置视频流码率平均值与音频流码率平均值之和， 单位：bps。
- * @method integer getHeight() 获取视频流高度的最大值，单位：px。
- * @method void setHeight(integer $Height) 设置视频流高度的最大值，单位：px。
- * @method integer getWidth() 获取视频流宽度的最大值，单位：px。
- * @method void setWidth(integer $Width) 设置视频流宽度的最大值，单位：px。
- * @method integer getSize() 获取媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
- * @method void setSize(integer $Size) 设置媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
- * @method float getDuration() 获取视频时长，单位：秒。
- * @method void setDuration(float $Duration) 设置视频时长，单位：秒。
- * @method string getContainer() 获取容器类型，例如 m4a，mp4 等。
- * @method void setContainer(string $Container) 设置容器类型，例如 m4a，mp4 等。
- * @method string getMd5() 获取视频的 md5 值。
- * @method void setMd5(string $Md5) 设置视频的 md5 值。
- * @method array getAudioStreamSet() 获取音频流信息。
- * @method void setAudioStreamSet(array $AudioStreamSet) 设置音频流信息。
- * @method array getVideoStreamSet() 获取视频流信息。
- * @method void setVideoStreamSet(array $VideoStreamSet) 设置视频流信息。
- * @method string getCallBackExtInfo() 获取视频转码使用增强项说明，增强项解释
-<li>hdr：HDR配置</li>
-<li>wd_fps：插帧帧率配置</li>
-<li>video_super_resolution：	超分配置</li>
-<li>repair：综合增强配置</li>
-<li>denoise：视频降噪配置</li>
-<li>color_enhance：色彩增强配置</li>
-<li>scratch：去划痕配置</li>
-<li>artifact：去伪影（毛刺）配置</li>
-<li>sharp：细节增强配置</li>
-<li>low_light：低光照增强配置</li>
-<li>face_enhance：人脸增强配置</li>
+ * @method TaskOutputStorage getOutputStorage() 获取<p>转码后文件的目标存储。</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>转码后文件的目标存储。</p>
+ * @method string getPath() 获取<p>转码后的视频文件路径。</p>
+ * @method void setPath(string $Path) 设置<p>转码后的视频文件路径。</p>
+ * @method integer getDefinition() 获取<p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/862/37042">转码参数模板</a>。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/862/37042">转码参数模板</a>。</p>
+ * @method integer getBitrate() 获取<p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
+ * @method void setBitrate(integer $Bitrate) 设置<p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
+ * @method integer getHeight() 获取<p>视频流高度的最大值，单位：px。</p>
+ * @method void setHeight(integer $Height) 设置<p>视频流高度的最大值，单位：px。</p>
+ * @method integer getWidth() 获取<p>视频流宽度的最大值，单位：px。</p>
+ * @method void setWidth(integer $Width) 设置<p>视频流宽度的最大值，单位：px。</p>
+ * @method integer getSize() 获取<p>媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。</p>
+ * @method void setSize(integer $Size) 设置<p>媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。</p>
+ * @method float getDuration() 获取<p>视频时长，单位：秒。</p>
+ * @method void setDuration(float $Duration) 设置<p>视频时长，单位：秒。</p>
+ * @method string getContainer() 获取<p>容器类型，例如 m4a，mp4 等。</p>
+ * @method void setContainer(string $Container) 设置<p>容器类型，例如 m4a，mp4 等。</p>
+ * @method string getMd5() 获取<p>视频的 md5 值。</p>
+ * @method void setMd5(string $Md5) 设置<p>视频的 md5 值。</p>
+ * @method array getAudioStreamSet() 获取<p>音频流信息。</p>
+ * @method void setAudioStreamSet(array $AudioStreamSet) 设置<p>音频流信息。</p>
+ * @method array getVideoStreamSet() 获取<p>视频流信息。</p>
+ * @method void setVideoStreamSet(array $VideoStreamSet) 设置<p>视频流信息。</p>
+ * @method string getCallBackExtInfo() 获取<p>视频转码使用增强项说明，增强项解释</p><li>hdr：HDR配置</li><li>wd_fps：插帧帧率配置</li><li>video_super_resolution：    超分配置</li><li>repair：综合增强配置</li><li>denoise：视频降噪配置</li><li>color_enhance：色彩增强配置</li><li>scratch：去划痕配置</li><li>artifact：去伪影（毛刺）配置</li><li>sharp：细节增强配置</li><li>low_light：低光照增强配置</li><li>face_enhance：人脸增强配置</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCallBackExtInfo(string $CallBackExtInfo) 设置视频转码使用增强项说明，增强项解释
-<li>hdr：HDR配置</li>
-<li>wd_fps：插帧帧率配置</li>
-<li>video_super_resolution：	超分配置</li>
-<li>repair：综合增强配置</li>
-<li>denoise：视频降噪配置</li>
-<li>color_enhance：色彩增强配置</li>
-<li>scratch：去划痕配置</li>
-<li>artifact：去伪影（毛刺）配置</li>
-<li>sharp：细节增强配置</li>
-<li>low_light：低光照增强配置</li>
-<li>face_enhance：人脸增强配置</li>
+ * @method void setCallBackExtInfo(string $CallBackExtInfo) 设置<p>视频转码使用增强项说明，增强项解释</p><li>hdr：HDR配置</li><li>wd_fps：插帧帧率配置</li><li>video_super_resolution：    超分配置</li><li>repair：综合增强配置</li><li>denoise：视频降噪配置</li><li>color_enhance：色彩增强配置</li><li>scratch：去划痕配置</li><li>artifact：去伪影（毛刺）配置</li><li>sharp：细节增强配置</li><li>low_light：低光照增强配置</li><li>face_enhance：人脸增强配置</li>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaUsageItem getUsage() 获取<p>MediaTranscodeItem</p>
+ * @method void setUsage(MediaUsageItem $Usage) 设置<p>MediaTranscodeItem</p>
  */
 class MediaTranscodeItem extends AbstractModel
 {
     /**
-     * @var TaskOutputStorage 转码后文件的目标存储。
+     * @var TaskOutputStorage <p>转码后文件的目标存储。</p>
      */
     public $OutputStorage;
 
     /**
-     * @var string 转码后的视频文件路径。
+     * @var string <p>转码后的视频文件路径。</p>
      */
     public $Path;
 
     /**
-     * @var integer 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
+     * @var integer <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/862/37042">转码参数模板</a>。</p>
      */
     public $Definition;
 
     /**
-     * @var integer 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+     * @var integer <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
      */
     public $Bitrate;
 
     /**
-     * @var integer 视频流高度的最大值，单位：px。
+     * @var integer <p>视频流高度的最大值，单位：px。</p>
      */
     public $Height;
 
     /**
-     * @var integer 视频流宽度的最大值，单位：px。
+     * @var integer <p>视频流宽度的最大值，单位：px。</p>
      */
     public $Width;
 
     /**
-     * @var integer 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+     * @var integer <p>媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。</p>
      */
     public $Size;
 
     /**
-     * @var float 视频时长，单位：秒。
+     * @var float <p>视频时长，单位：秒。</p>
      */
     public $Duration;
 
     /**
-     * @var string 容器类型，例如 m4a，mp4 等。
+     * @var string <p>容器类型，例如 m4a，mp4 等。</p>
      */
     public $Container;
 
     /**
-     * @var string 视频的 md5 值。
+     * @var string <p>视频的 md5 值。</p>
      */
     public $Md5;
 
     /**
-     * @var array 音频流信息。
+     * @var array <p>音频流信息。</p>
      */
     public $AudioStreamSet;
 
     /**
-     * @var array 视频流信息。
+     * @var array <p>视频流信息。</p>
      */
     public $VideoStreamSet;
 
     /**
-     * @var string 视频转码使用增强项说明，增强项解释
-<li>hdr：HDR配置</li>
-<li>wd_fps：插帧帧率配置</li>
-<li>video_super_resolution：	超分配置</li>
-<li>repair：综合增强配置</li>
-<li>denoise：视频降噪配置</li>
-<li>color_enhance：色彩增强配置</li>
-<li>scratch：去划痕配置</li>
-<li>artifact：去伪影（毛刺）配置</li>
-<li>sharp：细节增强配置</li>
-<li>low_light：低光照增强配置</li>
-<li>face_enhance：人脸增强配置</li>
+     * @var string <p>视频转码使用增强项说明，增强项解释</p><li>hdr：HDR配置</li><li>wd_fps：插帧帧率配置</li><li>video_super_resolution：    超分配置</li><li>repair：综合增强配置</li><li>denoise：视频降噪配置</li><li>color_enhance：色彩增强配置</li><li>scratch：去划痕配置</li><li>artifact：去伪影（毛刺）配置</li><li>sharp：细节增强配置</li><li>low_light：低光照增强配置</li><li>face_enhance：人脸增强配置</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CallBackExtInfo;
 
     /**
-     * @param TaskOutputStorage $OutputStorage 转码后文件的目标存储。
-     * @param string $Path 转码后的视频文件路径。
-     * @param integer $Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
-     * @param integer $Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
-     * @param integer $Height 视频流高度的最大值，单位：px。
-     * @param integer $Width 视频流宽度的最大值，单位：px。
-     * @param integer $Size 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-     * @param float $Duration 视频时长，单位：秒。
-     * @param string $Container 容器类型，例如 m4a，mp4 等。
-     * @param string $Md5 视频的 md5 值。
-     * @param array $AudioStreamSet 音频流信息。
-     * @param array $VideoStreamSet 视频流信息。
-     * @param string $CallBackExtInfo 视频转码使用增强项说明，增强项解释
-<li>hdr：HDR配置</li>
-<li>wd_fps：插帧帧率配置</li>
-<li>video_super_resolution：	超分配置</li>
-<li>repair：综合增强配置</li>
-<li>denoise：视频降噪配置</li>
-<li>color_enhance：色彩增强配置</li>
-<li>scratch：去划痕配置</li>
-<li>artifact：去伪影（毛刺）配置</li>
-<li>sharp：细节增强配置</li>
-<li>low_light：低光照增强配置</li>
-<li>face_enhance：人脸增强配置</li>
+     * @var MediaUsageItem <p>MediaTranscodeItem</p>
+     */
+    public $Usage;
+
+    /**
+     * @param TaskOutputStorage $OutputStorage <p>转码后文件的目标存储。</p>
+     * @param string $Path <p>转码后的视频文件路径。</p>
+     * @param integer $Definition <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/862/37042">转码参数模板</a>。</p>
+     * @param integer $Bitrate <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
+     * @param integer $Height <p>视频流高度的最大值，单位：px。</p>
+     * @param integer $Width <p>视频流宽度的最大值，单位：px。</p>
+     * @param integer $Size <p>媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。</p>
+     * @param float $Duration <p>视频时长，单位：秒。</p>
+     * @param string $Container <p>容器类型，例如 m4a，mp4 等。</p>
+     * @param string $Md5 <p>视频的 md5 值。</p>
+     * @param array $AudioStreamSet <p>音频流信息。</p>
+     * @param array $VideoStreamSet <p>视频流信息。</p>
+     * @param string $CallBackExtInfo <p>视频转码使用增强项说明，增强项解释</p><li>hdr：HDR配置</li><li>wd_fps：插帧帧率配置</li><li>video_super_resolution：    超分配置</li><li>repair：综合增强配置</li><li>denoise：视频降噪配置</li><li>color_enhance：色彩增强配置</li><li>scratch：去划痕配置</li><li>artifact：去伪影（毛刺）配置</li><li>sharp：细节增强配置</li><li>low_light：低光照增强配置</li><li>face_enhance：人脸增强配置</li>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaUsageItem $Usage <p>MediaTranscodeItem</p>
      */
     function __construct()
     {
@@ -251,6 +215,11 @@ class MediaTranscodeItem extends AbstractModel
 
         if (array_key_exists("CallBackExtInfo",$param) and $param["CallBackExtInfo"] !== null) {
             $this->CallBackExtInfo = $param["CallBackExtInfo"];
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = new MediaUsageItem();
+            $this->Usage->deserialize($param["Usage"]);
         }
     }
 }

@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGooseFSVolumes() 获取<p>GooseFS盘</p>
  * @method void setGooseFSVolumes(array $GooseFSVolumes) 设置<p>GooseFS盘</p>
+ * @method boolean getEnableHistoryServer() 获取<p>开启HistoryServer</p>
+ * @method void setEnableHistoryServer(boolean $EnableHistoryServer) 设置<p>开启HistoryServer</p>
  */
 class DynamicInstanceForm extends AbstractModel
 {
@@ -201,6 +203,11 @@ class DynamicInstanceForm extends AbstractModel
     public $GooseFSVolumes;
 
     /**
+     * @var boolean <p>开启HistoryServer</p>
+     */
+    public $EnableHistoryServer;
+
+    /**
      * @param string $DynamicInstanceName <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace <p>命名空间</p>
@@ -236,6 +243,7 @@ class DynamicInstanceForm extends AbstractModel
      * @param ImageInfoV2 $ImageInfoV2 <p>自定义镜像</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GooseFSVolumes <p>GooseFS盘</p>
+     * @param boolean $EnableHistoryServer <p>开启HistoryServer</p>
      */
     function __construct()
     {
@@ -377,6 +385,10 @@ class DynamicInstanceForm extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GooseFSVolumes, $obj);
             }
+        }
+
+        if (array_key_exists("EnableHistoryServer",$param) and $param["EnableHistoryServer"] !== null) {
+            $this->EnableHistoryServer = $param["EnableHistoryServer"];
         }
     }
 }

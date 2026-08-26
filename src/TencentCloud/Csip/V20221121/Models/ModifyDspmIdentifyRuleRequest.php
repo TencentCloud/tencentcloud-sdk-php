@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStructuredRule(string $StructuredRule) 设置<p>结构化规则</p>
  * @method string getUnStructuredRule() 获取<p>非结构化规则</p>
  * @method void setUnStructuredRule(string $UnStructuredRule) 设置<p>非结构化规则</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class ModifyDspmIdentifyRuleRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyDspmIdentifyRuleRequest extends AbstractModel
     public $UnStructuredRule;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param integer $Id <p>数据项id</p>
      * @param string $Name <p>数据项名称</p>
      * @param array $MemberId <p>集团账号的成员id</p>
@@ -80,6 +87,7 @@ class ModifyDspmIdentifyRuleRequest extends AbstractModel
      * @param integer $Status <p>数据项启用状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
      * @param string $StructuredRule <p>结构化规则</p>
      * @param string $UnStructuredRule <p>非结构化规则</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ModifyDspmIdentifyRuleRequest extends AbstractModel
 
         if (array_key_exists("UnStructuredRule",$param) and $param["UnStructuredRule"] !== null) {
             $this->UnStructuredRule = $param["UnStructuredRule"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method Filter getFilter() 获取<p>过滤条件</p>
  * @method void setFilter(Filter $Filter) 设置<p>过滤条件</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class DescribeDspmIdentifyComplianceCategoryRuleListRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeDspmIdentifyComplianceCategoryRuleListRequest extends AbstractMode
     public $Filter;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param integer $ComplianceId <p>识别模板ID</p>
      * @param integer $CategoryId <p>分类ID</p>
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param Filter $Filter <p>过滤条件</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class DescribeDspmIdentifyComplianceCategoryRuleListRequest extends AbstractMode
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

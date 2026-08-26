@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getData() 获取结果
  * @method void setData(string $Data) 设置结果
- * @method integer getSessionID() 获取SessionID
- * @method void setSessionID(integer $SessionID) 设置SessionID
+ * @method integer getSessionID() 获取会话ID
+说明：新增时返回系统生成的SessionID，更新时返回请求中传入的SessionID
+ * @method void setSessionID(integer $SessionID) 设置会话ID
+说明：新增时返回系统生成的SessionID，更新时返回请求中传入的SessionID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +37,8 @@ class UpsertSessionResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var integer SessionID
+     * @var integer 会话ID
+说明：新增时返回系统生成的SessionID，更新时返回请求中传入的SessionID
      */
     public $SessionID;
 
@@ -46,7 +49,8 @@ class UpsertSessionResponse extends AbstractModel
 
     /**
      * @param string $Data 结果
-     * @param integer $SessionID SessionID
+     * @param integer $SessionID 会话ID
+说明：新增时返回系统生成的SessionID，更新时返回请求中传入的SessionID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

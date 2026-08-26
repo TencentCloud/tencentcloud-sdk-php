@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置<p>多轮对话的id</p>
  * @method IntentContent getIntentContent() 获取<p>意图检测请求内容</p>
  * @method void setIntentContent(IntentContent $IntentContent) 设置<p>意图检测请求内容</p>
+ * @method string getClientIP() 获取<p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
+ * @method void setClientIP(string $ClientIP) 设置<p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
  */
 class DescribeLLMContentSecCheckRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class DescribeLLMContentSecCheckRequest extends AbstractModel
     public $IntentContent;
 
     /**
+     * @var string <p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
+     */
+    public $ClientIP;
+
+    /**
      * @param string $ServiceId <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      * @param integer $Type <p>流量类型，是入向流量还是出向流量，入向：1，出向：2；入向和出向必填</p>
      * @param string $InstanceId <p>实例id，必传</p>
@@ -120,6 +127,7 @@ class DescribeLLMContentSecCheckRequest extends AbstractModel
      * @param string $ToolArgs <p>tool_call 场景工具参数</p>
      * @param string $SessionId <p>多轮对话的id</p>
      * @param IntentContent $IntentContent <p>意图检测请求内容</p>
+     * @param string $ClientIP <p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
      */
     function __construct()
     {
@@ -181,6 +189,10 @@ class DescribeLLMContentSecCheckRequest extends AbstractModel
         if (array_key_exists("IntentContent",$param) and $param["IntentContent"] !== null) {
             $this->IntentContent = new IntentContent();
             $this->IntentContent->deserialize($param["IntentContent"]);
+        }
+
+        if (array_key_exists("ClientIP",$param) and $param["ClientIP"] !== null) {
+            $this->ClientIP = $param["ClientIP"];
         }
     }
 }

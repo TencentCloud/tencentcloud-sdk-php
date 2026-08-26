@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置<p>描述</p>
  * @method integer getStatus() 获取<p>状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
  * @method void setStatus(integer $Status) 设置<p>状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class ModifyDspmIdentifyComplianceGroupRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyDspmIdentifyComplianceGroupRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param integer $Id <p>识别模板ID</p>
      * @param string $Name <p>识别模板名称</p>
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param string $Description <p>描述</p>
      * @param integer $Status <p>状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyDspmIdentifyComplianceGroupRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

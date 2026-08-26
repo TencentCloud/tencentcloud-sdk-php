@@ -253,7 +253,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\UpsertCCAutoStatusResponse UpsertCCAutoStatus(Models\UpsertCCAutoStatusRequest $req) 编辑SAAS型接入的紧急CC防护状态
  * @method Models\UpsertCCRuleResponse UpsertCCRule(Models\UpsertCCRuleRequest $req) Waf  CC V2 Upsert接口
  * @method Models\UpsertIpAccessControlResponse UpsertIpAccessControl(Models\UpsertIpAccessControlRequest $req) Waf IP黑白名单Upsert接口（建议使用CreateIpAccessControl、ModifyIpAccessControl来替换当前接口）
- * @method Models\UpsertSessionResponse UpsertSession(Models\UpsertSessionRequest $req) Waf  会话定义 Upsert接口
+ * @method Models\UpsertSessionResponse UpsertSession(Models\UpsertSessionRequest $req) 新增或更新WAF会话（Session）定义
+说明：SessionID传-1时为新增，传已有ID时为更新。每个域名最多支持10条会话规则。
  */
 
 class WafClient extends AbstractClient

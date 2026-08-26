@@ -101,6 +101,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreateExposureAutoTagRuleResponse CreateExposureAutoTagRule(Models\CreateExposureAutoTagRuleRequest $req) 云边界自动打标-创建规则
  * @method Models\CreateExposuresExportJobResponse CreateExposuresExportJob(Models\CreateExposuresExportJobRequest $req) 暴露资产导出任务
  * @method Models\CreateHighBaseLineRisksExportJobResponse CreateHighBaseLineRisksExportJob(Models\CreateHighBaseLineRisksExportJobRequest $req) 创建高危基线风险导出任务
+ * @method Models\CreateHostImageListExportJobResponse CreateHostImageListExportJob(Models\CreateHostImageListExportJobRequest $req) 创建本地镜像列表导出任务。导出字段包含镜像ID、镜像名、镜像版本、关联容器数、关联主机数、创建时间、所属账号昵称，以及扫描状态/漏洞/木马/敏感信息等风险字段。支持Filter过滤。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。单账号模式下自动排除NickName字段。
  * @method Models\CreateHostVulExportJobResponse CreateHostVulExportJob(Models\CreateHostVulExportJobRequest $req) 创建主机列漏洞表导出任务
  * @method Models\CreateIaCAccessTokenResponse CreateIaCAccessToken(Models\CreateIaCAccessTokenRequest $req) 创建IaC检测接入Token
  * @method Models\CreateIaCFileExportJobResponse CreateIaCFileExportJob(Models\CreateIaCFileExportJobRequest $req) 创建IaC检测文件导出任务
@@ -126,6 +127,10 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreatePublicAssetsExportJobResponse CreatePublicAssetsExportJob(Models\CreatePublicAssetsExportJobRequest $req) 创建公网资产导出任务
  * @method Models\CreateRiskCenterScanTaskResponse CreateRiskCenterScanTask(Models\CreateRiskCenterScanTaskRequest $req) 创建风险中心扫描任务
  * @method Models\CreateRiskDetailExportJobResponse CreateRiskDetailExportJob(Models\CreateRiskDetailExportJobRequest $req) 创建云资源配置检查风险详情导出任务示例
+ * @method Models\CreateSandboxACLRuleResponse CreateSandboxACLRule(Models\CreateSandboxACLRuleRequest $req) 创建一条 ACL 用户访问控制规则。可选择引用若干条系统规则，亦可自定义规则，两者至少提供其一
+ * @method Models\CreateSandboxDLPRuleResponse CreateSandboxDLPRule(Models\CreateSandboxDLPRuleRequest $req) 创建一条 DLP 用户规则。可引用若干系统规则（SystemRuleIDList），亦可自定义规则（UserRuleContent，名称 + 正则），两者至少提供其一；UserRuleInfo 为新增可选的结构化入参，与 UserRuleContent 同时传入时以 UserRuleInfo 为准
+ * @method Models\CreateSandboxFileRuleResponse CreateSandboxFileRule(Models\CreateSandboxFileRuleRequest $req) 创建命令沙箱文件访问规则
+ * @method Models\CreateSandboxLLMAuditRuleResponse CreateSandboxLLMAuditRule(Models\CreateSandboxLLMAuditRuleRequest $req) 创建一条 LLM 审计用户规则。必须引用至少一条系统规则，不支持用户自定义规则内容
  * @method Models\CreateScanStatisticExportJobResponse CreateScanStatisticExportJob(Models\CreateScanStatisticExportJobRequest $req) 暴露面扫描结果导出任务
  * @method Models\CreateScanTaskResponse CreateScanTask(Models\CreateScanTaskRequest $req) 创建立即检测任务
  * @method Models\CreateSkillScanResponse CreateSkillScan(Models\CreateSkillScanRequest $req) 上传 Skill ZIP 文件，触发异步安全检测。上传成功后应使用返回的 ContentHash + EngineVersion 轮询 DescribeSkillScanResult 接口获取结果。上传接口具备幂等性，同一 Hash 的文件重复上传不会创建重复任务。检测结果保留90天，超期后需重新上传检测。
@@ -179,6 +184,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DeleteLoginWhiteListResponse DeleteLoginWhiteList(Models\DeleteLoginWhiteListRequest $req) 本接口用于删除异地登录白名单规则。
  * @method Models\DeleteMachineClearHistoryResponse DeleteMachineClearHistory(Models\DeleteMachineClearHistoryRequest $req) 删除机器清理记录
  * @method Models\DeleteRiskScanTaskResponse DeleteRiskScanTask(Models\DeleteRiskScanTaskRequest $req) 删除风险中心扫描任务
+ * @method Models\DeleteSandboxACLRuleResponse DeleteSandboxACLRule(Models\DeleteSandboxACLRuleRequest $req) 批量删除 ACL 用户规则。删除后规则不再返回到列表查询，并不再对流量生效。任一 ID 不存在或属于其他租户时整体返回错误
+ * @method Models\DeleteSandboxDLPRuleResponse DeleteSandboxDLPRule(Models\DeleteSandboxDLPRuleRequest $req) 批量删除 DLP 用户规则。任一 ID 不存在或属于其他租户时整体返回错误
+ * @method Models\DeleteSandboxFileRuleResponse DeleteSandboxFileRule(Models\DeleteSandboxFileRuleRequest $req) 创建命令沙箱文件访问规则
  * @method Models\DeleteSandboxLLMAuditRuleResponse DeleteSandboxLLMAuditRule(Models\DeleteSandboxLLMAuditRuleRequest $req) 批量删除 LLM 审计用户规则。任一 ID 不存在或属于其他租户时整体返回错误
  * @method Models\DeleteVulWhitelistResponse DeleteVulWhitelist(Models\DeleteVulWhitelistRequest $req) 删除漏洞白名单
  * @method Models\DeleteWebhookPoliciesResponse DeleteWebhookPolicies(Models\DeleteWebhookPoliciesRequest $req) 批量删除通知策略。
@@ -220,6 +228,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeAccessKeyRiskDetailResponse DescribeAccessKeyRiskDetail(Models\DescribeAccessKeyRiskDetailRequest $req) 访问密钥风险记录详情
  * @method Models\DescribeAccessKeyUserDetailResponse DescribeAccessKeyUserDetail(Models\DescribeAccessKeyUserDetailRequest $req) 查询用户的账号详情
  * @method Models\DescribeAccessKeyUserListResponse DescribeAccessKeyUserList(Models\DescribeAccessKeyUserListRequest $req) 查询用户的账号列表
+ * @method Models\DescribeAccessKeyWhiteListResponse DescribeAccessKeyWhiteList(Models\DescribeAccessKeyWhiteListRequest $req) 访问密钥告警记录列表
  * @method Models\DescribeAgentConfigSettingResponse DescribeAgentConfigSetting(Models\DescribeAgentConfigSettingRequest $req) 查询客户端配置设置（配置组），从DescribeAgentRunMode拆分出的独立接口
  * @method Models\DescribeAgentRunModeResponse DescribeAgentRunMode(Models\DescribeAgentRunModeRequest $req) 获取客户端运行模式和运行配置信息
  * @method Models\DescribeAgentRunPolicyResponse DescribeAgentRunPolicy(Models\DescribeAgentRunPolicyRequest $req) 查询客户端运行策略（策略组），从DescribeAgentRunMode拆分出的独立接口
@@ -269,10 +278,12 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeCFWAssetStatisticsResponse DescribeCFWAssetStatistics(Models\DescribeCFWAssetStatisticsRequest $req) 云防资产中心统计数据
  * @method Models\DescribeCLSLogIndexV3Response DescribeCLSLogIndexV3(Models\DescribeCLSLogIndexV3Request $req) 获取日志索引信息
  * @method Models\DescribeCLSLogListV3Response DescribeCLSLogListV3(Models\DescribeCLSLogListV3Request $req) 日志分析检索接口v3
+ * @method Models\DescribeCSCPayInfoResponse DescribeCSCPayInfo(Models\DescribeCSCPayInfoRequest $req) 查询当前账号的合并版计费信息，包括订单状态、付费模式以及配额等详细信息。
  * @method Models\DescribeCSIPLicenseBindScheduleResponse DescribeCSIPLicenseBindSchedule(Models\DescribeCSIPLicenseBindScheduleRequest $req) 查询ModifyCSIPLicenseBinds返回的异步绑定任务进度。
  * @method Models\DescribeCSIPMalwareScanTaskDetailResponse DescribeCSIPMalwareScanTaskDetail(Models\DescribeCSIPMalwareScanTaskDetailRequest $req) CSIP 扫描任务主机详情接口
  * @method Models\DescribeCSIPMalwareScanTaskProgressResponse DescribeCSIPMalwareScanTaskProgress(Models\DescribeCSIPMalwareScanTaskProgressRequest $req) CSIP 手动扫描进度查询接口
  * @method Models\DescribeCSIPRiskStatisticsResponse DescribeCSIPRiskStatistics(Models\DescribeCSIPRiskStatisticsRequest $req) 获取风险中心风险概况示例
+ * @method Models\DescribeCSPMPayInfoResponse DescribeCSPMPayInfo(Models\DescribeCSPMPayInfoRequest $req) 获取已购CSPM订单信息
  * @method Models\DescribeCVMAssetInfoResponse DescribeCVMAssetInfo(Models\DescribeCVMAssetInfoRequest $req) cvm详情
  * @method Models\DescribeCVMAssetsResponse DescribeCVMAssets(Models\DescribeCVMAssetsRequest $req) 获取cvm列表
  * @method Models\DescribeCWPExposePathResponse DescribeCWPExposePath(Models\DescribeCWPExposePathRequest $req) 查询云边界分析路径节点(主机专用)
@@ -551,8 +562,13 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeSandboxACLAlertListResponse DescribeSandboxACLAlertList(Models\DescribeSandboxACLAlertListRequest $req) 分页查询 ACL 访问控制告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
  * @method Models\DescribeSandboxACLRuleListResponse DescribeSandboxACLRuleList(Models\DescribeSandboxACLRuleListRequest $req) 查询当前租户的 ACL 用户访问控制规则列表。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
  * @method Models\DescribeSandboxACLSystemRuleListResponse DescribeSandboxACLSystemRuleList(Models\DescribeSandboxACLSystemRuleListRequest $req) 查询流量沙箱访问控制（ACL）系统规则列表，系统规则由 CSIP 平台内置，可被用户规则引用
+ * @method Models\DescribeSandboxDLPAlertListResponse DescribeSandboxDLPAlertList(Models\DescribeSandboxDLPAlertListRequest $req) 分页查询 DLP 数据泄露告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+ * @method Models\DescribeSandboxDLPRuleListResponse DescribeSandboxDLPRuleList(Models\DescribeSandboxDLPRuleListRequest $req) 查询当前租户的 DLP 用户规则列表。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
  * @method Models\DescribeSandboxDLPSystemRuleListResponse DescribeSandboxDLPSystemRuleList(Models\DescribeSandboxDLPSystemRuleListRequest $req) 查询流量沙箱数据泄露防护（DLP）系统规则列表，系统规则由 CSIP 平台内置，可被用户规则引用
  * @method Models\DescribeSandboxFileRuleListResponse DescribeSandboxFileRuleList(Models\DescribeSandboxFileRuleListRequest $req) 获取命令沙箱文件规则列表
+ * @method Models\DescribeSandboxLLMAuditAlertListResponse DescribeSandboxLLMAuditAlertList(Models\DescribeSandboxLLMAuditAlertListRequest $req) 分页查询 LLM 审计告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+ * @method Models\DescribeSandboxLLMAuditRuleListResponse DescribeSandboxLLMAuditRuleList(Models\DescribeSandboxLLMAuditRuleListRequest $req) 查询当前租户的 LLM 审计用户规则列表。LLM 审计规则不支持用户自定义内容，只能引用系统规则组合。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
+ * @method Models\DescribeSandboxLLMAuditSystemRuleListResponse DescribeSandboxLLMAuditSystemRuleList(Models\DescribeSandboxLLMAuditSystemRuleListRequest $req) 查询 LLM 审计系统规则列表，系统规则由 CSIP 平台内置（来源于 LLM 审计系统规则库），按 LLM 推理防护 / ToolCall 防护拆分为两个扁平规则数组返回，可被用户规则引用
  * @method Models\DescribeScanReportListResponse DescribeScanReportList(Models\DescribeScanReportListRequest $req) 获取扫描报告列表
  * @method Models\DescribeScanStatisticResponse DescribeScanStatistic(Models\DescribeScanStatisticRequest $req) 查询云边界分析扫描结果统计信息
  * @method Models\DescribeScanTaskListResponse DescribeScanTaskList(Models\DescribeScanTaskListRequest $req) 获取扫描任务列表
@@ -568,6 +584,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeSkillScanPayInfoResponse DescribeSkillScanPayInfo(Models\DescribeSkillScanPayInfoRequest $req) 查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。
  * @method Models\DescribeSkillScanResultResponse DescribeSkillScanResult(Models\DescribeSkillScanResultRequest $req) 查询 Skill 安全检测结果。调用 CreateSkillScan 成功后使用返回的 ContentHash + EngineVersion 轮询本接口获取结果。上传成功后建议5分钟后首次轮询，如未检测完成之后每隔1分钟轮询一次。响应通过 Status 字段区分四种状态：检测完成（SUCCESS）、检测中（SCANNING）、无记录（NOT_FOUND）、检测失败（FAILED）。注意：检测结果保留90天，超期后将返回 NOT_FOUND。
  * @method Models\DescribeSourceIPAssetResponse DescribeSourceIPAsset(Models\DescribeSourceIPAssetRequest $req) 获取用户访问密钥资产列表（源IP视角）
+ * @method Models\DescribeSourceIPDetailResponse DescribeSourceIPDetail(Models\DescribeSourceIPDetailRequest $req) 获取用户访问密钥资产列表（源IP视角）
  * @method Models\DescribeSubUserInfoResponse DescribeSubUserInfo(Models\DescribeSubUserInfoRequest $req) 查询集团的子账号列表
  * @method Models\DescribeSubnetAssetsResponse DescribeSubnetAssets(Models\DescribeSubnetAssetsRequest $req) 获取子网列表
  * @method Models\DescribeTCRInstanceListResponse DescribeTCRInstanceList(Models\DescribeTCRInstanceListRequest $req) 获取TCR实例列表
@@ -579,6 +596,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeUebaBehaviorSummaryResponse DescribeUebaBehaviorSummary(Models\DescribeUebaBehaviorSummaryRequest $req) 查询用户行为分析的行为概览
  * @method Models\DescribeUebaRuleResponse DescribeUebaRule(Models\DescribeUebaRuleRequest $req) 查询用户行为分析策略列表
  * @method Models\DescribeUebaUserSummaryResponse DescribeUebaUserSummary(Models\DescribeUebaUserSummaryRequest $req) 获取用户行为分析模块的用户概览
+ * @method Models\DescribeUserAKInfoListResponse DescribeUserAKInfoList(Models\DescribeUserAKInfoListRequest $req) 获取账号AK信息
  * @method Models\DescribeUserCSPMInfoListResponse DescribeUserCSPMInfoList(Models\DescribeUserCSPMInfoListRequest $req) 获取账号CSPM信息
  * @method Models\DescribeUserCallRecordResponse DescribeUserCallRecord(Models\DescribeUserCallRecordRequest $req) 获取账号调用记录列表
  * @method Models\DescribeUserDspmInfoListResponse DescribeUserDspmInfoList(Models\DescribeUserDspmInfoListRequest $req) 获取账号dspm信息列表
@@ -587,6 +605,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeVULRiskAdvanceCFGListResponse DescribeVULRiskAdvanceCFGList(Models\DescribeVULRiskAdvanceCFGListRequest $req) 查询漏洞风险高级配置
  * @method Models\DescribeVULRiskDetailResponse DescribeVULRiskDetail(Models\DescribeVULRiskDetailRequest $req) 获取漏洞展开详情
  * @method Models\DescribeVdbAndPocInfoResponse DescribeVdbAndPocInfo(Models\DescribeVdbAndPocInfoRequest $req) 获取病毒库及POC的更新信息
+ * @method Models\DescribeVoucherEligibilityResponse DescribeVoucherEligibility(Models\DescribeVoucherEligibilityRequest $req) 检查当前用户是否有资格领取指定活动的代金券。
  * @method Models\DescribeVpcAssetsResponse DescribeVpcAssets(Models\DescribeVpcAssetsRequest $req) 获取vpc列表
  * @method Models\DescribeVulComponentRelateHostResponse DescribeVulComponentRelateHost(Models\DescribeVulComponentRelateHostRequest $req) 获取漏洞组件关联主机
  * @method Models\DescribeVulFixTaskDetailResponse DescribeVulFixTaskDetail(Models\DescribeVulFixTaskDetailRequest $req) 查询指定漏洞修复任务的详情信息，包含每台主机的修复状态、快照状态等明细数据，支持分页和筛选。
@@ -625,6 +644,8 @@ capi 层处理流程：
 2. 按 appid 分组透传到接入侧 ClusterInstall RPC
 
 说明（容器资产改版 2026 H1）：本接口为透传接口，capi 层不对 ClusterCaMD5 做存在性/类型/格式校验；DB 中未命中的 ClusterCaMD5 静默跳过、不报错。
+ * @method Models\InstallKeySandboxSkillResponse InstallKeySandboxSkill(Models\InstallKeySandboxSkillRequest $req) 在指定的机器实例上安装密钥沙箱SKILL。支持批量操作，一次可传入多个实例ID。安装后，目标机器上的AI Agent即可通过密钥沙箱代理访问凭据，无需接触明文密钥。已安装的实例重复调用不会报错（幂等），直接视为成功。
+ * @method Models\InstallSandboxPluginResponse InstallSandboxPlugin(Models\InstallSandboxPluginRequest $req) 触发将流量沙箱插件安装到指定范围内的 AI Agent 资产。通过 BelongAssetType 区分主机/容器维度，通过 EffectScope 指定安装目标（INCLUDE=仅安装到指定资产，EXCLUDE=全部资产减去指定资产）。接口仅触发下发动作，不等待完成
  * @method Models\ModifyAILinkSettingResponse ModifyAILinkSetting(Models\ModifyAILinkSettingRequest $req) 修改AI-Link智链引擎配置
  * @method Models\ModifyAIScheduleResponse ModifyAISchedule(Models\ModifyAIScheduleRequest $req) 修改AI 定时任务。
 
@@ -650,6 +671,7 @@ capi 层处理流程：
  * @method Models\ModifyCSIPLicenseUnBindsResponse ModifyCSIPLicenseUnBinds(Models\ModifyCSIPLicenseUnBindsRequest $req) 手动解绑主机授权。同步执行，直接返回结果。仅解绑主机授权（category=0，含专业版/旗舰版）。单订单模式下appid即可定位订单，无需传ResourceId。RASP解绑请用ModifyCSIPRaspLicenseUnBinds。
  * @method Models\ModifyCSIPRaspLicenseBindsResponse ModifyCSIPRaspLicenseBinds(Models\ModifyCSIPRaspLicenseBindsRequest $req) 绑定 RASP / 旗舰版授权到指定订单。异步执行，返回TaskId供查询进度。LicenseType=rasp 绑 RASP，LicenseType=enterprise_hp 绑旗舰版主机授权；AssetType 区分主机/容器节点/EKS。
  * @method Models\ModifyCSIPRaspLicenseUnBindsResponse ModifyCSIPRaspLicenseUnBinds(Models\ModifyCSIPRaspLicenseUnBindsRequest $req) 手动解绑RASP授权。同步执行，直接返回结果。仅解绑RASP授权（category=1），无解绑次数限制。单订单模式下appid即可定位订单，无需传ResourceId。
+ * @method Models\ModifyClusterDefendStatusResponse ModifyClusterDefendStatus(Models\ModifyClusterDefendStatusRequest $req) 修改集群防护状态
  * @method Models\ModifyCosAuditBucketMonitorStatusResponse ModifyCosAuditBucketMonitorStatus(Models\ModifyCosAuditBucketMonitorStatusRequest $req) 修改存储桶监测状态
  * @method Models\ModifyCosAuditMonitorAccountResponse ModifyCosAuditMonitorAccount(Models\ModifyCosAuditMonitorAccountRequest $req) 修改cos审计监测账号
  * @method Models\ModifyCosAuditObjectIdentifyStatusResponse ModifyCosAuditObjectIdentifyStatus(Models\ModifyCosAuditObjectIdentifyStatusRequest $req) 修改对象存储识别开关
@@ -735,8 +757,17 @@ capi 层处理流程：
  * @method Models\ModifyRiskCenterRiskStatusResponse ModifyRiskCenterRiskStatus(Models\ModifyRiskCenterRiskStatusRequest $req) 修改风险中心风险状态
  * @method Models\ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTask(Models\ModifyRiskCenterScanTaskRequest $req) 修改风险中心扫描任务
  * @method Models\ModifyRiskScanCronConfigResponse ModifyRiskScanCronConfig(Models\ModifyRiskScanCronConfigRequest $req) 更新周期扫描计划
+ * @method Models\ModifySandboxACLRuleResponse ModifySandboxACLRule(Models\ModifySandboxACLRuleRequest $req) 修改已有的 ACL 用户规则。未传字段保持原值，支持部分字段更新
+ * @method Models\ModifySandboxACLRuleStatusResponse ModifySandboxACLRuleStatus(Models\ModifySandboxACLRuleStatusRequest $req) 批量切换 ACL 用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+ * @method Models\ModifySandboxAlertStatusResponse ModifySandboxAlertStatus(Models\ModifySandboxAlertStatusRequest $req) 批量更新流量沙箱告警（覆盖 ACL / DLP / LLM 审计三类）。通过 AlertType + BelongAssetType 定位告警来源。Status 支持 HANDLED / IGNORE 修改状态，以及 DELETE 删除。任一告警 ID 不存在或属于其他租户时整体返回错误。注：加白（PASS）不经本接口，由 Create/Modify***Rule 通过 AlertID 回写触发
+ * @method Models\ModifySandboxDLPRuleResponse ModifySandboxDLPRule(Models\ModifySandboxDLPRuleRequest $req) 修改已存在的 DLP 用户规则。未传字段保持原值，支持部分字段更新；不支持修改 BelongAssetType
+ * @method Models\ModifySandboxDLPRuleStatusResponse ModifySandboxDLPRuleStatus(Models\ModifySandboxDLPRuleStatusRequest $req) 批量切换 DLP 用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+ * @method Models\ModifySandboxFileRuleResponse ModifySandboxFileRule(Models\ModifySandboxFileRuleRequest $req) 修改命令沙箱文件访问规则
+ * @method Models\ModifySandboxFileRuleStatusResponse ModifySandboxFileRuleStatus(Models\ModifySandboxFileRuleStatusRequest $req) 批量启用或禁用命令沙箱文件访问规则
+ * @method Models\ModifySandboxLLMAuditRuleResponse ModifySandboxLLMAuditRule(Models\ModifySandboxLLMAuditRuleRequest $req) 修改已有的 LLM 审计用户规则。未传字段保持原值，支持部分字段更新
  * @method Models\ModifySandboxLLMAuditRuleStatusResponse ModifySandboxLLMAuditRuleStatus(Models\ModifySandboxLLMAuditRuleStatusRequest $req) 批量切换 LLM 审计用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
  * @method Models\ModifySecurityScoreRuleResponse ModifySecurityScoreRule(Models\ModifySecurityScoreRuleRequest $req) 修改安全评分规则，必须传入完整规则集
+ * @method Models\ModifyShareUserAKResponse ModifyShareUserAK(Models\ModifyShareUserAKRequest $req) 编辑ak监测账号
  * @method Models\ModifyShareUserCSPMResponse ModifyShareUserCSPM(Models\ModifyShareUserCSPMRequest $req) 编辑CSPM共享账号
  * @method Models\ModifyShareUserDspmResponse ModifyShareUserDspm(Models\ModifyShareUserDspmRequest $req) 编辑dspm监测账号
  * @method Models\ModifySkillScanAlertStatusResponse ModifySkillScanAlertStatus(Models\ModifySkillScanAlertStatusRequest $req) 批量修改 Skill 安全检测告警的处理状态
@@ -775,6 +806,7 @@ capi 层处理流程：
  * @method Models\SyncImageRegistryResponse SyncImageRegistry(Models\SyncImageRegistryRequest $req) 镜像仓库同步
  * @method Models\TestWebhookReceiverResponse TestWebhookReceiver(Models\TestWebhookReceiverRequest $req) 向指定的接收机器人发送一条测试消息，验证可达性与配置正确性。对应表格行内的「测试」按钮。
  * @method Models\UninstallClusterAgentResponse UninstallClusterAgent(Models\UninstallClusterAgentRequest $req) 卸载集群容器安全Agent。
+ * @method Models\UninstallKeySandboxSkillResponse UninstallKeySandboxSkill(Models\UninstallKeySandboxSkillRequest $req) 从指定的机器实例上卸载密钥沙箱SKILL。支持批量操作，一次可传入多个实例ID。卸载后，目标机器上的AI Agent将无法再通过密钥沙箱代理访问凭据。未安装的实例重复调用不会报错（幂等），直接视为成功。
  * @method Models\UpdateAccessKeyAlarmStatusResponse UpdateAccessKeyAlarmStatus(Models\UpdateAccessKeyAlarmStatusRequest $req) 标记风险或者告警为 已处置/已忽略
  * @method Models\UpdateAccessKeyRemarkResponse UpdateAccessKeyRemark(Models\UpdateAccessKeyRemarkRequest $req) 编辑访问密钥/源IP备注
  * @method Models\UpdateAlertStatusListResponse UpdateAlertStatusList(Models\UpdateAlertStatusListRequest $req) 批量告警状态处理接口

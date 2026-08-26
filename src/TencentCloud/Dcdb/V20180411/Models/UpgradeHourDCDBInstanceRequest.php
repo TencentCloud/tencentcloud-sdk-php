@@ -20,94 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeHourDCDBInstance请求参数结构体
  *
- * @method string getInstanceId() 获取待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
- * @method void setInstanceId(string $InstanceId) 设置待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
- * @method string getUpgradeType() 获取升级类型，取值范围: 
-<li> ADD: 新增分片 </li> 
- <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
- * @method void setUpgradeType(string $UpgradeType) 设置升级类型，取值范围: 
-<li> ADD: 新增分片 </li> 
- <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
- * @method AddShardConfig getAddShardConfig() 获取新增分片配置，当UpgradeType为ADD时生效。
- * @method void setAddShardConfig(AddShardConfig $AddShardConfig) 设置新增分片配置，当UpgradeType为ADD时生效。
- * @method ExpandShardConfig getExpandShardConfig() 获取扩容分片配置，当UpgradeType为EXPAND时生效。
- * @method void setExpandShardConfig(ExpandShardConfig $ExpandShardConfig) 设置扩容分片配置，当UpgradeType为EXPAND时生效。
- * @method SplitShardConfig getSplitShardConfig() 获取切分分片配置，当UpgradeType为SPLIT时生效。
- * @method void setSplitShardConfig(SplitShardConfig $SplitShardConfig) 设置切分分片配置，当UpgradeType为SPLIT时生效。
- * @method string getSwitchStartTime() 获取切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
- * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
- * @method string getSwitchEndTime() 获取切换结束时间,  格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
- * @method void setSwitchEndTime(string $SwitchEndTime) 设置切换结束时间,  格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
- * @method integer getSwitchAutoRetry() 获取是否自动重试。 0：不自动重试  1：自动重试
- * @method void setSwitchAutoRetry(integer $SwitchAutoRetry) 设置是否自动重试。 0：不自动重试  1：自动重试
- * @method array getZones() 获取变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
- * @method void setZones(array $Zones) 设置变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+ * @method string getInstanceId() 获取<p>待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。</p>
+ * @method string getUpgradeType() 获取<p>升级类型，取值范围: </p><li> ADD: 新增分片 </li>  <li> EXPAND: 升级实例中的已有分片 </li>  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+ * @method void setUpgradeType(string $UpgradeType) 设置<p>升级类型，取值范围: </p><li> ADD: 新增分片 </li>  <li> EXPAND: 升级实例中的已有分片 </li>  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+ * @method AddShardConfig getAddShardConfig() 获取<p>新增分片配置，当UpgradeType为ADD时生效。</p>
+ * @method void setAddShardConfig(AddShardConfig $AddShardConfig) 设置<p>新增分片配置，当UpgradeType为ADD时生效。</p>
+ * @method ExpandShardConfig getExpandShardConfig() 获取<p>扩容分片配置，当UpgradeType为EXPAND时生效。</p>
+ * @method void setExpandShardConfig(ExpandShardConfig $ExpandShardConfig) 设置<p>扩容分片配置，当UpgradeType为EXPAND时生效。</p>
+ * @method SplitShardConfig getSplitShardConfig() 获取<p>切分分片配置，当UpgradeType为SPLIT时生效。</p>
+ * @method void setSplitShardConfig(SplitShardConfig $SplitShardConfig) 设置<p>切分分片配置，当UpgradeType为SPLIT时生效。</p>
+ * @method string getSwitchStartTime() 获取<p>切换开始时间，格式如: &quot;2019-12-12 07:00:00&quot;。开始时间必须在当前时间一个小时以后，3天以内。</p>
+ * @method void setSwitchStartTime(string $SwitchStartTime) 设置<p>切换开始时间，格式如: &quot;2019-12-12 07:00:00&quot;。开始时间必须在当前时间一个小时以后，3天以内。</p>
+ * @method string getSwitchEndTime() 获取<p>切换结束时间,  格式如: &quot;2019-12-12 07:15:00&quot;，结束时间必须大于开始时间。</p>
+ * @method void setSwitchEndTime(string $SwitchEndTime) 设置<p>切换结束时间,  格式如: &quot;2019-12-12 07:15:00&quot;，结束时间必须大于开始时间。</p>
+ * @method integer getSwitchAutoRetry() 获取<p>是否自动重试。 0：不自动重试  1：自动重试</p>
+ * @method void setSwitchAutoRetry(integer $SwitchAutoRetry) 设置<p>是否自动重试。 0：不自动重试  1：自动重试</p>
+ * @method array getZones() 获取<p>变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区</p>
+ * @method void setZones(array $Zones) 设置<p>变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区</p>
+ * @method integer getSwitchInterval() 获取<p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
+ * @method void setSwitchInterval(integer $SwitchInterval) 设置<p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
  */
 class UpgradeHourDCDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * @var string <p>待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 升级类型，取值范围: 
-<li> ADD: 新增分片 </li> 
- <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+     * @var string <p>升级类型，取值范围: </p><li> ADD: 新增分片 </li>  <li> EXPAND: 升级实例中的已有分片 </li>  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
      */
     public $UpgradeType;
 
     /**
-     * @var AddShardConfig 新增分片配置，当UpgradeType为ADD时生效。
+     * @var AddShardConfig <p>新增分片配置，当UpgradeType为ADD时生效。</p>
      */
     public $AddShardConfig;
 
     /**
-     * @var ExpandShardConfig 扩容分片配置，当UpgradeType为EXPAND时生效。
+     * @var ExpandShardConfig <p>扩容分片配置，当UpgradeType为EXPAND时生效。</p>
      */
     public $ExpandShardConfig;
 
     /**
-     * @var SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
+     * @var SplitShardConfig <p>切分分片配置，当UpgradeType为SPLIT时生效。</p>
      */
     public $SplitShardConfig;
 
     /**
-     * @var string 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+     * @var string <p>切换开始时间，格式如: &quot;2019-12-12 07:00:00&quot;。开始时间必须在当前时间一个小时以后，3天以内。</p>
      */
     public $SwitchStartTime;
 
     /**
-     * @var string 切换结束时间,  格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+     * @var string <p>切换结束时间,  格式如: &quot;2019-12-12 07:15:00&quot;，结束时间必须大于开始时间。</p>
      */
     public $SwitchEndTime;
 
     /**
-     * @var integer 是否自动重试。 0：不自动重试  1：自动重试
+     * @var integer <p>是否自动重试。 0：不自动重试  1：自动重试</p>
      */
     public $SwitchAutoRetry;
 
     /**
-     * @var array 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+     * @var array <p>变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区</p>
      */
     public $Zones;
 
     /**
-     * @param string $InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
-     * @param string $UpgradeType 升级类型，取值范围: 
-<li> ADD: 新增分片 </li> 
- <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
-     * @param AddShardConfig $AddShardConfig 新增分片配置，当UpgradeType为ADD时生效。
-     * @param ExpandShardConfig $ExpandShardConfig 扩容分片配置，当UpgradeType为EXPAND时生效。
-     * @param SplitShardConfig $SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
-     * @param string $SwitchStartTime 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
-     * @param string $SwitchEndTime 切换结束时间,  格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
-     * @param integer $SwitchAutoRetry 是否自动重试。 0：不自动重试  1：自动重试
-     * @param array $Zones 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+     * @var integer <p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
+     */
+    public $SwitchInterval;
+
+    /**
+     * @param string $InstanceId <p>待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。</p>
+     * @param string $UpgradeType <p>升级类型，取值范围: </p><li> ADD: 新增分片 </li>  <li> EXPAND: 升级实例中的已有分片 </li>  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+     * @param AddShardConfig $AddShardConfig <p>新增分片配置，当UpgradeType为ADD时生效。</p>
+     * @param ExpandShardConfig $ExpandShardConfig <p>扩容分片配置，当UpgradeType为EXPAND时生效。</p>
+     * @param SplitShardConfig $SplitShardConfig <p>切分分片配置，当UpgradeType为SPLIT时生效。</p>
+     * @param string $SwitchStartTime <p>切换开始时间，格式如: &quot;2019-12-12 07:00:00&quot;。开始时间必须在当前时间一个小时以后，3天以内。</p>
+     * @param string $SwitchEndTime <p>切换结束时间,  格式如: &quot;2019-12-12 07:15:00&quot;，结束时间必须大于开始时间。</p>
+     * @param integer $SwitchAutoRetry <p>是否自动重试。 0：不自动重试  1：自动重试</p>
+     * @param array $Zones <p>变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区</p>
+     * @param integer $SwitchInterval <p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
      */
     function __construct()
     {
@@ -159,6 +155,10 @@ class UpgradeHourDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("SwitchInterval",$param) and $param["SwitchInterval"] !== null) {
+            $this->SwitchInterval = $param["SwitchInterval"];
         }
     }
 }

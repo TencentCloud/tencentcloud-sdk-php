@@ -20,7 +20,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规则的匹配条件结构体
  *
- * @method string getField() 获取匹配字段 匹配字段不同，相应的匹配参数、逻辑符号、匹配内容有所不同具体如下所示： <table>
+ * @method string getField() 获取匹配字段 匹配字段不同，相应的匹配参数、逻辑符号、匹配内容有所不同，具体如下所示： <table>
 	<thead>
 		<tr>
 			<th>匹配字段</th>
@@ -45,13 +45,13 @@ use TencentCloud\Common\AbstractModel;
 		<tr>
 			<td>Referer（Referer）</td>
 			<td>不支持参数</td>
-			<td>empty（内容为空）<br />null（不存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>empty（内容为空）<br />nempty（内容不为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>URL（请求路径）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）<br /></td>
+			<td>eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）<br /></td>
 			<td>请以/开头,512个字符以内</td>
 		</tr>
 		<tr>
@@ -63,25 +63,25 @@ use TencentCloud\Common\AbstractModel;
 		<tr>
 			<td>HTTP_METHOD（HTTP请求方法）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br/>belong_to（属于）<br/>not_belong_to（不属于）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />rematch（正则匹配）</td>
 			<td>请输入方法名称,建议大写</td>
 		</tr>
 		<tr>
 			<td>QUERY_STRING（请求字符串）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">请求路径</font>逻辑符号</td>
+			<td>empty（内容为空）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET（GET参数值）</td>
 			<td>支持参数录入</td>
-			<td>contains（包含）<br />ncontains（不包含）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
+			<td>empty（内容为空）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET_PARAMS_NAMES（GET参数名）</td>
 			<td>不支持参数</td>
-			<td>exsit（存在参数）<br />nexsit（不存在参数）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
@@ -93,22 +93,20 @@ use TencentCloud\Common\AbstractModel;
 		<tr>
 			<td>GET_POST_NAMES（POST参数名）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">GET参数名</font>逻辑符号</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>POST_BODY（完整BODY）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">请求路径</font>逻辑符号</td>
+			<td>empty（内容为空）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入BODY内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>COOKIE（Cookie）</td>
 			<td>不支持参数</td>
-			<td>empty（内容为空）<br />null（不存在）<br />rematch（正则匹配）</td>
-			<td>
-				<font color="Red">暂不支持</font>
-			</td>
+			<td>empty（内容为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />rematch（正则匹配）</td>
+			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET_COOKIES_NAMES（Cookie参数名）</td>
@@ -125,48 +123,54 @@ use TencentCloud\Common\AbstractModel;
 		<tr>
 			<td>GET_HEADERS_NAMES（Header参数名）</td>
 			<td>不支持参数</td>
-			<td>exsit（存在参数）<br />nexsit（不存在参数）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>eq（等于）<br />neq（不等于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,建议小写,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>ARGS_HEADER（Header参数值）</td>
 			<td>支持参数录入</td>
-			<td>contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>empty（内容为空）<br />nempty（内容不为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>CONTENT_LENGTH（Content-length）</td>
-			<td>支持参数录入</td>
-			<td>numgt（数值大于）<br />numlt（数值小于）<br />numeq（数值等于）<br /></td>
+			<td>不支持参数</td>
+			<td>numeq（数值等于）<br />numneq（数值不等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numge（数值大于等于）<br />numle（数值小于等于）</td>
 			<td>请输入0-9999999999999之间的整数</td>
 		</tr>
 		<tr>
 			<td>IP_GEO（来源IP归属地）</td>
-			<td>支持参数录入</td>
-			<td>geo_in（属于）<br />geo_not_in（不属于）<br /></td>
+			<td>不支持参数</td>
+			<td>geo_in（属于）<br />geo_not_in（不属于）</td>
 			<td>请输入内容,10240字符以内，格式为序列化的JSON，格式为：[{"Country":"中国","Region":"广东","City":"深圳"}]</td>
+		</tr>
+		<tr>
+			<td>HOST（请求Host）</td>
+			<td>不支持参数</td>
+			<td>empty（内容为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>请输入Host值,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>CAPTCHA_RISK（验证码风险）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />belong（属于）<br />not_belong（不属于）<br />null（不存在）<br />exist（存在）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入风险等级值,支持数值范围0-255</td>
 		</tr>
 		<tr>
 			<td>CAPTCHA_DEVICE_RISK（验证码设备风险）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />belong（属于）<br />not_belong（不属于）<br />null（不存在）<br />exist（存在）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入设备风险代码,支持取值：101、201、301、401、501、601、701</td>
 		</tr>
 		<tr>
 			<td>CAPTCHAR_SCORE（验证码风险评估分）</td>
 			<td>不支持参数</td>
-			<td>numeq（数值等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numle（数值小于等于）<br />numge（数值大于等于）<br />null（不存在）<br />exist（存在）</td>
+			<td>numeq（数值等于）<br />numneq（数值不等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numle（数值小于等于）<br />numge（数值大于等于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入评估分数,支持数值范围0-100</td>
 		</tr>
 	</tbody>
 </table>
- * @method void setField(string $Field) 设置匹配字段 匹配字段不同，相应的匹配参数、逻辑符号、匹配内容有所不同具体如下所示： <table>
+ * @method void setField(string $Field) 设置匹配字段 匹配字段不同，相应的匹配参数、逻辑符号、匹配内容有所不同，具体如下所示： <table>
 	<thead>
 		<tr>
 			<th>匹配字段</th>
@@ -191,13 +195,13 @@ use TencentCloud\Common\AbstractModel;
 		<tr>
 			<td>Referer（Referer）</td>
 			<td>不支持参数</td>
-			<td>empty（内容为空）<br />null（不存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>empty（内容为空）<br />nempty（内容不为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>URL（请求路径）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）<br /></td>
+			<td>eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）<br /></td>
 			<td>请以/开头,512个字符以内</td>
 		</tr>
 		<tr>
@@ -209,25 +213,25 @@ use TencentCloud\Common\AbstractModel;
 		<tr>
 			<td>HTTP_METHOD（HTTP请求方法）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br/>belong_to（属于）<br/>not_belong_to（不属于）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />rematch（正则匹配）</td>
 			<td>请输入方法名称,建议大写</td>
 		</tr>
 		<tr>
 			<td>QUERY_STRING（请求字符串）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">请求路径</font>逻辑符号</td>
+			<td>empty（内容为空）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET（GET参数值）</td>
 			<td>支持参数录入</td>
-			<td>contains（包含）<br />ncontains（不包含）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
+			<td>empty（内容为空）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET_PARAMS_NAMES（GET参数名）</td>
 			<td>不支持参数</td>
-			<td>exsit（存在参数）<br />nexsit（不存在参数）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
@@ -239,22 +243,20 @@ use TencentCloud\Common\AbstractModel;
 		<tr>
 			<td>GET_POST_NAMES（POST参数名）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">GET参数名</font>逻辑符号</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>POST_BODY（完整BODY）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">请求路径</font>逻辑符号</td>
+			<td>empty（内容为空）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入BODY内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>COOKIE（Cookie）</td>
 			<td>不支持参数</td>
-			<td>empty（内容为空）<br />null（不存在）<br />rematch（正则匹配）</td>
-			<td>
-				<font color="Red">暂不支持</font>
-			</td>
+			<td>empty（内容为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />rematch（正则匹配）</td>
+			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET_COOKIES_NAMES（Cookie参数名）</td>
@@ -271,100 +273,114 @@ use TencentCloud\Common\AbstractModel;
 		<tr>
 			<td>GET_HEADERS_NAMES（Header参数名）</td>
 			<td>不支持参数</td>
-			<td>exsit（存在参数）<br />nexsit（不存在参数）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>eq（等于）<br />neq（不等于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,建议小写,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>ARGS_HEADER（Header参数值）</td>
 			<td>支持参数录入</td>
-			<td>contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>empty（内容为空）<br />nempty（内容不为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>CONTENT_LENGTH（Content-length）</td>
-			<td>支持参数录入</td>
-			<td>numgt（数值大于）<br />numlt（数值小于）<br />numeq（数值等于）<br /></td>
+			<td>不支持参数</td>
+			<td>numeq（数值等于）<br />numneq（数值不等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numge（数值大于等于）<br />numle（数值小于等于）</td>
 			<td>请输入0-9999999999999之间的整数</td>
 		</tr>
 		<tr>
 			<td>IP_GEO（来源IP归属地）</td>
-			<td>支持参数录入</td>
-			<td>geo_in（属于）<br />geo_not_in（不属于）<br /></td>
+			<td>不支持参数</td>
+			<td>geo_in（属于）<br />geo_not_in（不属于）</td>
 			<td>请输入内容,10240字符以内，格式为序列化的JSON，格式为：[{"Country":"中国","Region":"广东","City":"深圳"}]</td>
+		</tr>
+		<tr>
+			<td>HOST（请求Host）</td>
+			<td>不支持参数</td>
+			<td>empty（内容为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>请输入Host值,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>CAPTCHA_RISK（验证码风险）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />belong（属于）<br />not_belong（不属于）<br />null（不存在）<br />exist（存在）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入风险等级值,支持数值范围0-255</td>
 		</tr>
 		<tr>
 			<td>CAPTCHA_DEVICE_RISK（验证码设备风险）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />belong（属于）<br />not_belong（不属于）<br />null（不存在）<br />exist（存在）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入设备风险代码,支持取值：101、201、301、401、501、601、701</td>
 		</tr>
 		<tr>
 			<td>CAPTCHAR_SCORE（验证码风险评估分）</td>
 			<td>不支持参数</td>
-			<td>numeq（数值等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numle（数值小于等于）<br />numge（数值大于等于）<br />null（不存在）<br />exist（存在）</td>
+			<td>numeq（数值等于）<br />numneq（数值不等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numle（数值小于等于）<br />numge（数值大于等于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入评估分数,支持数值范围0-100</td>
 		</tr>
 	</tbody>
 </table>
  * @method string getCompareFunc() 获取逻辑符号 
 
-    逻辑符号一共分为以下几种类型：
+逻辑符号一共分为以下几种类型：
         empty （ 内容为空）
-        null （不存在）
+        nempty （ 内容不为空）
+   null （不存在）
+     nnull （存在）
         eq （ 等于）
-        neq （ 不等于）
+    neq （ 不等于）
         contains （ 包含）
         ncontains （ 不包含）
-        strprefix （ 前缀匹配）
-        strsuffix （ 后缀匹配）
+     belong_to （属于）
+        not_belong_to （不属于）
+  strprefix （ 前缀匹配）
+strsuffix （ 后缀匹配）
         len_eq （ 长度等于）
-        len_gt （ 长度大于）
+ len_gt （ 长度大于）
         len_lt （ 长度小于）
-        ipmatch （ 属于）
-        ipnmatch （ 不属于）
+        ipmatch （ IP匹配）
+   ipnmatch （ IP不匹配）
+        rematch （ 正则匹配）
         numgt （ 数值大于）
         numlt （ 数值小于）
         numeq （ 数值等于）
-        numneq （ 数值不等于）
-        numle （ 数值小于等于）
+ numneq （ 数值不等于）
+      numle （ 数值小于等于）
         numge （ 数值大于等于）
-		belong_to（属于）
-		not_belong_to（不属于）
         geo_in （ IP地理属于）
         geo_not_in （ IP地理不属于）
+        cel （ CEL表达式）
     各匹配字段对应的逻辑符号不同，详见上述匹配字段表格
  * @method void setCompareFunc(string $CompareFunc) 设置逻辑符号 
 
-    逻辑符号一共分为以下几种类型：
+逻辑符号一共分为以下几种类型：
         empty （ 内容为空）
-        null （不存在）
+        nempty （ 内容不为空）
+   null （不存在）
+     nnull （存在）
         eq （ 等于）
-        neq （ 不等于）
+    neq （ 不等于）
         contains （ 包含）
         ncontains （ 不包含）
-        strprefix （ 前缀匹配）
-        strsuffix （ 后缀匹配）
+     belong_to （属于）
+        not_belong_to （不属于）
+  strprefix （ 前缀匹配）
+strsuffix （ 后缀匹配）
         len_eq （ 长度等于）
-        len_gt （ 长度大于）
+ len_gt （ 长度大于）
         len_lt （ 长度小于）
-        ipmatch （ 属于）
-        ipnmatch （ 不属于）
+        ipmatch （ IP匹配）
+   ipnmatch （ IP不匹配）
+        rematch （ 正则匹配）
         numgt （ 数值大于）
         numlt （ 数值小于）
         numeq （ 数值等于）
-        numneq （ 数值不等于）
-        numle （ 数值小于等于）
+ numneq （ 数值不等于）
+      numle （ 数值小于等于）
         numge （ 数值大于等于）
-		belong_to（属于）
-		not_belong_to（不属于）
         geo_in （ IP地理属于）
         geo_not_in （ IP地理不属于）
+        cel （ CEL表达式）
     各匹配字段对应的逻辑符号不同，详见上述匹配字段表格
  * @method string getContent() 获取匹配内容
 
@@ -400,7 +416,7 @@ use TencentCloud\Common\AbstractModel;
 class Strategy extends AbstractModel
 {
     /**
-     * @var string 匹配字段 匹配字段不同，相应的匹配参数、逻辑符号、匹配内容有所不同具体如下所示： <table>
+     * @var string 匹配字段 匹配字段不同，相应的匹配参数、逻辑符号、匹配内容有所不同，具体如下所示： <table>
 	<thead>
 		<tr>
 			<th>匹配字段</th>
@@ -425,13 +441,13 @@ class Strategy extends AbstractModel
 		<tr>
 			<td>Referer（Referer）</td>
 			<td>不支持参数</td>
-			<td>empty（内容为空）<br />null（不存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>empty（内容为空）<br />nempty（内容不为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>URL（请求路径）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）<br /></td>
+			<td>eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）<br /></td>
 			<td>请以/开头,512个字符以内</td>
 		</tr>
 		<tr>
@@ -443,25 +459,25 @@ class Strategy extends AbstractModel
 		<tr>
 			<td>HTTP_METHOD（HTTP请求方法）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br/>belong_to（属于）<br/>not_belong_to（不属于）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />rematch（正则匹配）</td>
 			<td>请输入方法名称,建议大写</td>
 		</tr>
 		<tr>
 			<td>QUERY_STRING（请求字符串）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">请求路径</font>逻辑符号</td>
+			<td>empty（内容为空）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET（GET参数值）</td>
 			<td>支持参数录入</td>
-			<td>contains（包含）<br />ncontains（不包含）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
+			<td>empty（内容为空）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET_PARAMS_NAMES（GET参数名）</td>
 			<td>不支持参数</td>
-			<td>exsit（存在参数）<br />nexsit（不存在参数）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
@@ -473,22 +489,20 @@ class Strategy extends AbstractModel
 		<tr>
 			<td>GET_POST_NAMES（POST参数名）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">GET参数名</font>逻辑符号</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>POST_BODY（完整BODY）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">请求路径</font>逻辑符号</td>
+			<td>empty（内容为空）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入BODY内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>COOKIE（Cookie）</td>
 			<td>不支持参数</td>
-			<td>empty（内容为空）<br />null（不存在）<br />rematch（正则匹配）</td>
-			<td>
-				<font color="Red">暂不支持</font>
-			</td>
+			<td>empty（内容为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />rematch（正则匹配）</td>
+			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET_COOKIES_NAMES（Cookie参数名）</td>
@@ -505,43 +519,49 @@ class Strategy extends AbstractModel
 		<tr>
 			<td>GET_HEADERS_NAMES（Header参数名）</td>
 			<td>不支持参数</td>
-			<td>exsit（存在参数）<br />nexsit（不存在参数）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>eq（等于）<br />neq（不等于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,建议小写,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>ARGS_HEADER（Header参数值）</td>
 			<td>支持参数录入</td>
-			<td>contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>empty（内容为空）<br />nempty（内容不为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>CONTENT_LENGTH（Content-length）</td>
-			<td>支持参数录入</td>
-			<td>numgt（数值大于）<br />numlt（数值小于）<br />numeq（数值等于）<br /></td>
+			<td>不支持参数</td>
+			<td>numeq（数值等于）<br />numneq（数值不等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numge（数值大于等于）<br />numle（数值小于等于）</td>
 			<td>请输入0-9999999999999之间的整数</td>
 		</tr>
 		<tr>
 			<td>IP_GEO（来源IP归属地）</td>
-			<td>支持参数录入</td>
-			<td>geo_in（属于）<br />geo_not_in（不属于）<br /></td>
+			<td>不支持参数</td>
+			<td>geo_in（属于）<br />geo_not_in（不属于）</td>
 			<td>请输入内容,10240字符以内，格式为序列化的JSON，格式为：[{"Country":"中国","Region":"广东","City":"深圳"}]</td>
+		</tr>
+		<tr>
+			<td>HOST（请求Host）</td>
+			<td>不支持参数</td>
+			<td>empty（内容为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>请输入Host值,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>CAPTCHA_RISK（验证码风险）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />belong（属于）<br />not_belong（不属于）<br />null（不存在）<br />exist（存在）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入风险等级值,支持数值范围0-255</td>
 		</tr>
 		<tr>
 			<td>CAPTCHA_DEVICE_RISK（验证码设备风险）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />belong（属于）<br />not_belong（不属于）<br />null（不存在）<br />exist（存在）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入设备风险代码,支持取值：101、201、301、401、501、601、701</td>
 		</tr>
 		<tr>
 			<td>CAPTCHAR_SCORE（验证码风险评估分）</td>
 			<td>不支持参数</td>
-			<td>numeq（数值等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numle（数值小于等于）<br />numge（数值大于等于）<br />null（不存在）<br />exist（存在）</td>
+			<td>numeq（数值等于）<br />numneq（数值不等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numle（数值小于等于）<br />numge（数值大于等于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入评估分数,支持数值范围0-100</td>
 		</tr>
 	</tbody>
@@ -552,30 +572,34 @@ class Strategy extends AbstractModel
     /**
      * @var string 逻辑符号 
 
-    逻辑符号一共分为以下几种类型：
+逻辑符号一共分为以下几种类型：
         empty （ 内容为空）
-        null （不存在）
+        nempty （ 内容不为空）
+   null （不存在）
+     nnull （存在）
         eq （ 等于）
-        neq （ 不等于）
+    neq （ 不等于）
         contains （ 包含）
         ncontains （ 不包含）
-        strprefix （ 前缀匹配）
-        strsuffix （ 后缀匹配）
+     belong_to （属于）
+        not_belong_to （不属于）
+  strprefix （ 前缀匹配）
+strsuffix （ 后缀匹配）
         len_eq （ 长度等于）
-        len_gt （ 长度大于）
+ len_gt （ 长度大于）
         len_lt （ 长度小于）
-        ipmatch （ 属于）
-        ipnmatch （ 不属于）
+        ipmatch （ IP匹配）
+   ipnmatch （ IP不匹配）
+        rematch （ 正则匹配）
         numgt （ 数值大于）
         numlt （ 数值小于）
         numeq （ 数值等于）
-        numneq （ 数值不等于）
-        numle （ 数值小于等于）
+ numneq （ 数值不等于）
+      numle （ 数值小于等于）
         numge （ 数值大于等于）
-		belong_to（属于）
-		not_belong_to（不属于）
         geo_in （ IP地理属于）
         geo_not_in （ IP地理不属于）
+        cel （ CEL表达式）
     各匹配字段对应的逻辑符号不同，详见上述匹配字段表格
      */
     public $CompareFunc;
@@ -608,7 +632,7 @@ class Strategy extends AbstractModel
     public $CaseNotSensitive;
 
     /**
-     * @param string $Field 匹配字段 匹配字段不同，相应的匹配参数、逻辑符号、匹配内容有所不同具体如下所示： <table>
+     * @param string $Field 匹配字段 匹配字段不同，相应的匹配参数、逻辑符号、匹配内容有所不同，具体如下所示： <table>
 	<thead>
 		<tr>
 			<th>匹配字段</th>
@@ -633,13 +657,13 @@ class Strategy extends AbstractModel
 		<tr>
 			<td>Referer（Referer）</td>
 			<td>不支持参数</td>
-			<td>empty（内容为空）<br />null（不存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>empty（内容为空）<br />nempty（内容不为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>URL（请求路径）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）<br /></td>
+			<td>eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）<br /></td>
 			<td>请以/开头,512个字符以内</td>
 		</tr>
 		<tr>
@@ -651,25 +675,25 @@ class Strategy extends AbstractModel
 		<tr>
 			<td>HTTP_METHOD（HTTP请求方法）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br/>belong_to（属于）<br/>not_belong_to（不属于）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />rematch（正则匹配）</td>
 			<td>请输入方法名称,建议大写</td>
 		</tr>
 		<tr>
 			<td>QUERY_STRING（请求字符串）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">请求路径</font>逻辑符号</td>
+			<td>empty（内容为空）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET（GET参数值）</td>
 			<td>支持参数录入</td>
-			<td>contains（包含）<br />ncontains（不包含）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
+			<td>empty（内容为空）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET_PARAMS_NAMES（GET参数名）</td>
 			<td>不支持参数</td>
-			<td>exsit（存在参数）<br />nexsit（不存在参数）<br/>belong_to（属于）<br/>not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
@@ -681,22 +705,20 @@ class Strategy extends AbstractModel
 		<tr>
 			<td>GET_POST_NAMES（POST参数名）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">GET参数名</font>逻辑符号</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>POST_BODY（完整BODY）</td>
 			<td>不支持参数</td>
-			<td>同匹配字段<font color="Red">请求路径</font>逻辑符号</td>
+			<td>empty（内容为空）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入BODY内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>COOKIE（Cookie）</td>
 			<td>不支持参数</td>
-			<td>empty（内容为空）<br />null（不存在）<br />rematch（正则匹配）</td>
-			<td>
-				<font color="Red">暂不支持</font>
-			</td>
+			<td>empty（内容为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />rematch（正则匹配）</td>
+			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>GET_COOKIES_NAMES（Cookie参数名）</td>
@@ -713,73 +735,83 @@ class Strategy extends AbstractModel
 		<tr>
 			<td>GET_HEADERS_NAMES（Header参数名）</td>
 			<td>不支持参数</td>
-			<td>exsit（存在参数）<br />nexsit（不存在参数）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>eq（等于）<br />neq（不等于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,建议小写,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>ARGS_HEADER（Header参数值）</td>
 			<td>支持参数录入</td>
-			<td>contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>empty（内容为空）<br />nempty（内容不为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />belong_to（属于）<br />not_belong_to（不属于）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
 			<td>请输入内容,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>CONTENT_LENGTH（Content-length）</td>
-			<td>支持参数录入</td>
-			<td>numgt（数值大于）<br />numlt（数值小于）<br />numeq（数值等于）<br /></td>
+			<td>不支持参数</td>
+			<td>numeq（数值等于）<br />numneq（数值不等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numge（数值大于等于）<br />numle（数值小于等于）</td>
 			<td>请输入0-9999999999999之间的整数</td>
 		</tr>
 		<tr>
 			<td>IP_GEO（来源IP归属地）</td>
-			<td>支持参数录入</td>
-			<td>geo_in（属于）<br />geo_not_in（不属于）<br /></td>
+			<td>不支持参数</td>
+			<td>geo_in（属于）<br />geo_not_in（不属于）</td>
 			<td>请输入内容,10240字符以内，格式为序列化的JSON，格式为：[{"Country":"中国","Region":"广东","City":"深圳"}]</td>
+		</tr>
+		<tr>
+			<td>HOST（请求Host）</td>
+			<td>不支持参数</td>
+			<td>empty（内容为空）<br />null（不存在）<br />nnull（存在）<br />eq（等于）<br />neq（不等于）<br />contains（包含）<br />ncontains（不包含）<br />len_eq（长度等于）<br />len_gt（长度大于）<br />len_lt（长度小于）<br />strprefix（前缀匹配）<br />strsuffix（后缀匹配）<br />rematch（正则匹配）</td>
+			<td>请输入Host值,512个字符以内</td>
 		</tr>
 		<tr>
 			<td>CAPTCHA_RISK（验证码风险）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />belong（属于）<br />not_belong（不属于）<br />null（不存在）<br />exist（存在）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入风险等级值,支持数值范围0-255</td>
 		</tr>
 		<tr>
 			<td>CAPTCHA_DEVICE_RISK（验证码设备风险）</td>
 			<td>不支持参数</td>
-			<td>eq（等于）<br />neq（不等于）<br />belong（属于）<br />not_belong（不属于）<br />null（不存在）<br />exist（存在）</td>
+			<td>eq（等于）<br />neq（不等于）<br />belong_to（属于）<br />not_belong_to（不属于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入设备风险代码,支持取值：101、201、301、401、501、601、701</td>
 		</tr>
 		<tr>
 			<td>CAPTCHAR_SCORE（验证码风险评估分）</td>
 			<td>不支持参数</td>
-			<td>numeq（数值等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numle（数值小于等于）<br />numge（数值大于等于）<br />null（不存在）<br />exist（存在）</td>
+			<td>numeq（数值等于）<br />numneq（数值不等于）<br />numgt（数值大于）<br />numlt（数值小于）<br />numle（数值小于等于）<br />numge（数值大于等于）<br />null（不存在）<br />nnull（存在）</td>
 			<td>请输入评估分数,支持数值范围0-100</td>
 		</tr>
 	</tbody>
 </table>
      * @param string $CompareFunc 逻辑符号 
 
-    逻辑符号一共分为以下几种类型：
+逻辑符号一共分为以下几种类型：
         empty （ 内容为空）
-        null （不存在）
+        nempty （ 内容不为空）
+   null （不存在）
+     nnull （存在）
         eq （ 等于）
-        neq （ 不等于）
+    neq （ 不等于）
         contains （ 包含）
         ncontains （ 不包含）
-        strprefix （ 前缀匹配）
-        strsuffix （ 后缀匹配）
+     belong_to （属于）
+        not_belong_to （不属于）
+  strprefix （ 前缀匹配）
+strsuffix （ 后缀匹配）
         len_eq （ 长度等于）
-        len_gt （ 长度大于）
+ len_gt （ 长度大于）
         len_lt （ 长度小于）
-        ipmatch （ 属于）
-        ipnmatch （ 不属于）
+        ipmatch （ IP匹配）
+   ipnmatch （ IP不匹配）
+        rematch （ 正则匹配）
         numgt （ 数值大于）
         numlt （ 数值小于）
         numeq （ 数值等于）
-        numneq （ 数值不等于）
-        numle （ 数值小于等于）
+ numneq （ 数值不等于）
+      numle （ 数值小于等于）
         numge （ 数值大于等于）
-		belong_to（属于）
-		not_belong_to（不属于）
         geo_in （ IP地理属于）
         geo_not_in （ IP地理不属于）
+        cel （ CEL表达式）
     各匹配字段对应的逻辑符号不同，详见上述匹配字段表格
      * @param string $Content 匹配内容
 

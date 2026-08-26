@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * cos存储桶任务信息
  *
- * @method integer getAppId() 获取appid
- * @method void setAppId(integer $AppId) 设置appid
- * @method string getBucketName() 获取存储桶名
- * @method void setBucketName(string $BucketName) 设置存储桶名
- * @method string getTaskId() 获取任务id
- * @method void setTaskId(string $TaskId) 设置任务id
- * @method integer getLastScanTime() 获取最后一次扫描时间
- * @method void setLastScanTime(integer $LastScanTime) 设置最后一次扫描时间
+ * @method integer getAppId() 获取<p>appid</p>
+ * @method void setAppId(integer $AppId) 设置<p>appid</p>
+ * @method string getBucketName() 获取<p>存储桶名</p>
+ * @method void setBucketName(string $BucketName) 设置<p>存储桶名</p>
+ * @method string getTaskId() 获取<p>任务id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
+ * @method integer getLastScanTime() 获取<p>最后一次扫描时间</p>
+ * @method void setLastScanTime(integer $LastScanTime) 设置<p>最后一次扫描时间</p>
+ * @method integer getIdentifyFileCount() 获取<p>识别文件数量</p>
+ * @method void setIdentifyFileCount(integer $IdentifyFileCount) 设置<p>识别文件数量</p>
+ * @method integer getSensitiveFileCount() 获取<p>敏感文件数量</p>
+ * @method void setSensitiveFileCount(integer $SensitiveFileCount) 设置<p>敏感文件数量</p>
  */
 class CosBucketTaskInfo extends AbstractModel
 {
     /**
-     * @var integer appid
+     * @var integer <p>appid</p>
      */
     public $AppId;
 
     /**
-     * @var string 存储桶名
+     * @var string <p>存储桶名</p>
      */
     public $BucketName;
 
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 最后一次扫描时间
+     * @var integer <p>最后一次扫描时间</p>
      */
     public $LastScanTime;
 
     /**
-     * @param integer $AppId appid
-     * @param string $BucketName 存储桶名
-     * @param string $TaskId 任务id
-     * @param integer $LastScanTime 最后一次扫描时间
+     * @var integer <p>识别文件数量</p>
+     */
+    public $IdentifyFileCount;
+
+    /**
+     * @var integer <p>敏感文件数量</p>
+     */
+    public $SensitiveFileCount;
+
+    /**
+     * @param integer $AppId <p>appid</p>
+     * @param string $BucketName <p>存储桶名</p>
+     * @param string $TaskId <p>任务id</p>
+     * @param integer $LastScanTime <p>最后一次扫描时间</p>
+     * @param integer $IdentifyFileCount <p>识别文件数量</p>
+     * @param integer $SensitiveFileCount <p>敏感文件数量</p>
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class CosBucketTaskInfo extends AbstractModel
 
         if (array_key_exists("LastScanTime",$param) and $param["LastScanTime"] !== null) {
             $this->LastScanTime = $param["LastScanTime"];
+        }
+
+        if (array_key_exists("IdentifyFileCount",$param) and $param["IdentifyFileCount"] !== null) {
+            $this->IdentifyFileCount = $param["IdentifyFileCount"];
+        }
+
+        if (array_key_exists("SensitiveFileCount",$param) and $param["SensitiveFileCount"] !== null) {
+            $this->SensitiveFileCount = $param["SensitiveFileCount"];
         }
     }
 }

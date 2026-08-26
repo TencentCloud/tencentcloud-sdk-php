@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置<p>启用状态</p><p>枚举值：</p><ul><li>0： 不启用</li><li>1： 启用</li></ul>
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class ModifyDspmIdentifyComplianceGroupStatusRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyDspmIdentifyComplianceGroupStatusRequest extends AbstractModel
     public $MemberId;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param integer $Id <p>识别模板ID</p>
      * @param integer $Status <p>启用状态</p><p>枚举值：</p><ul><li>0： 不启用</li><li>1： 启用</li></ul>
      * @param array $MemberId <p>集团账号的成员id</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyDspmIdentifyComplianceGroupStatusRequest extends AbstractModel
 
         if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
             $this->MemberId = $param["MemberId"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

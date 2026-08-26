@@ -23,15 +23,38 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Monitor\V20230616\Models as Models;
 
 /**
+ * @method Models\CancelAIWorkbenchChatResponse CancelAIWorkbenchChat(Models\CancelAIWorkbenchChatRequest $req) 取消对话执行
+ * @method Models\CreateAIWorkbenchAgentResponse CreateAIWorkbenchAgent(Models\CreateAIWorkbenchAgentRequest $req) 创建 Agent
+ * @method Models\CreateAIWorkbenchTaskResponse CreateAIWorkbenchTask(Models\CreateAIWorkbenchTaskRequest $req) 创建任务
  * @method Models\CreateNoticeContentTmplResponse CreateNoticeContentTmpl(Models\CreateNoticeContentTmplRequest $req) 创建自定义通知内容模板
+ * @method Models\DeleteAIWorkbenchAgentResponse DeleteAIWorkbenchAgent(Models\DeleteAIWorkbenchAgentRequest $req) 删除 Agent
+ * @method Models\DeleteAIWorkbenchTaskResponse DeleteAIWorkbenchTask(Models\DeleteAIWorkbenchTaskRequest $req) 删除任务
  * @method Models\DeleteNoticeContentTmplsResponse DeleteNoticeContentTmpls(Models\DeleteNoticeContentTmplsRequest $req) 删除通知内容模板
+ * @method Models\DescribeAIWorkbenchAgentResponse DescribeAIWorkbenchAgent(Models\DescribeAIWorkbenchAgentRequest $req) 查询 Agent 详情
+ * @method Models\DescribeAIWorkbenchArtifactResponse DescribeAIWorkbenchArtifact(Models\DescribeAIWorkbenchArtifactRequest $req) 查询制品详情
+ * @method Models\DescribeAIWorkbenchExecutionResponse DescribeAIWorkbenchExecution(Models\DescribeAIWorkbenchExecutionRequest $req) 查询执行详情
  * @method Models\DescribeAIWorkbenchSREDigitalTwinTaskListResponse DescribeAIWorkbenchSREDigitalTwinTaskList(Models\DescribeAIWorkbenchSREDigitalTwinTaskListRequest $req) 查询AI工作台SRE数字分身任务列表
  * @method Models\DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse DescribeAIWorkbenchSREDigitalTwinWorkLogDetail(Models\DescribeAIWorkbenchSREDigitalTwinWorkLogDetailRequest $req) 查询AI工作台SRE数字分身工作日志详细信息
  * @method Models\DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse DescribeAIWorkbenchSREDigitalTwinWorkLogList(Models\DescribeAIWorkbenchSREDigitalTwinWorkLogListRequest $req) 查询AI工作台SRE数字分身任务工作日志列表
+ * @method Models\DescribeAIWorkbenchSessionResponse DescribeAIWorkbenchSession(Models\DescribeAIWorkbenchSessionRequest $req) 查询会话详情
+ * @method Models\DescribeAIWorkbenchSkillResponse DescribeAIWorkbenchSkill(Models\DescribeAIWorkbenchSkillRequest $req) 查询技能详情
  * @method Models\DescribeAlarmNotifyHistoriesResponse DescribeAlarmNotifyHistories(Models\DescribeAlarmNotifyHistoriesRequest $req) 按需查询告警的通知历史
  * @method Models\DescribeNoticeContentTmplResponse DescribeNoticeContentTmpl(Models\DescribeNoticeContentTmplRequest $req) 根据查询条件获取自定义通知内容模板，若所有查询条件空，则获取账号下所有模板
+ * @method Models\GetAIWorkbenchArtifactDownloadURLResponse GetAIWorkbenchArtifactDownloadURL(Models\GetAIWorkbenchArtifactDownloadURLRequest $req) 获取AI工作台制品的下载地址
+ * @method Models\ListAIWorkbenchAgentsResponse ListAIWorkbenchAgents(Models\ListAIWorkbenchAgentsRequest $req) 查询 Agent 列表
+ * @method Models\ListAIWorkbenchArtifactsResponse ListAIWorkbenchArtifacts(Models\ListAIWorkbenchArtifactsRequest $req) 查询产物列表
+ * @method Models\ListAIWorkbenchExecutionsResponse ListAIWorkbenchExecutions(Models\ListAIWorkbenchExecutionsRequest $req) 查询执行列表
+ * @method Models\ListAIWorkbenchMCPsResponse ListAIWorkbenchMCPs(Models\ListAIWorkbenchMCPsRequest $req) 查询 MCP 列表
+ * @method Models\ListAIWorkbenchMessagesResponse ListAIWorkbenchMessages(Models\ListAIWorkbenchMessagesRequest $req) 查询消息列表
+ * @method Models\ListAIWorkbenchResourceInstancesResponse ListAIWorkbenchResourceInstances(Models\ListAIWorkbenchResourceInstancesRequest $req) 列出资源实例
+ * @method Models\ListAIWorkbenchResourceMapsResponse ListAIWorkbenchResourceMaps(Models\ListAIWorkbenchResourceMapsRequest $req) 查询资源地图列表
+ * @method Models\ListAIWorkbenchSessionsResponse ListAIWorkbenchSessions(Models\ListAIWorkbenchSessionsRequest $req) 查询会话列表
+ * @method Models\ListAIWorkbenchSkillsResponse ListAIWorkbenchSkills(Models\ListAIWorkbenchSkillsRequest $req) 查询技能列表
+ * @method Models\ListAIWorkbenchTasksResponse ListAIWorkbenchTasks(Models\ListAIWorkbenchTasksRequest $req) 查询任务列表
  * @method Models\ModifyNoticeContentTmplResponse ModifyNoticeContentTmpl(Models\ModifyNoticeContentTmplRequest $req) 修改通知内容模板
  * @method Models\TriggerAIWorkbenchSREDigitalTwinTaskResponse TriggerAIWorkbenchSREDigitalTwinTask(Models\TriggerAIWorkbenchSREDigitalTwinTaskRequest $req) 触发数字分身任务请求
+ * @method Models\TriggerAIWorkbenchTaskResponse TriggerAIWorkbenchTask(Models\TriggerAIWorkbenchTaskRequest $req) 手动触发任务
+ * @method Models\UpdateAIWorkbenchAgentResponse UpdateAIWorkbenchAgent(Models\UpdateAIWorkbenchAgentRequest $req) 更新 Agent
  */
 
 class MonitorClient extends AbstractClient

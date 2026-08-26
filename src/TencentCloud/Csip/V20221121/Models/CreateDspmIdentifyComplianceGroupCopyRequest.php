@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>模板名称</p>
  * @method string getDescription() 获取<p>模板描述</p>
  * @method void setDescription(string $Description) 设置<p>模板描述</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class CreateDspmIdentifyComplianceGroupCopyRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateDspmIdentifyComplianceGroupCopyRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param integer $FromId <p>来源模板ID</p>
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param string $Name <p>模板名称</p>
      * @param string $Description <p>模板描述</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateDspmIdentifyComplianceGroupCopyRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method integer getLevelScore() 获取<p>敏感程度分</p><p>取值范围：[1, 10]</p><p>单位：敏感程度</p>
  * @method void setLevelScore(integer $LevelScore) 设置<p>敏感程度分</p><p>取值范围：[1, 10]</p><p>单位：敏感程度</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class ModifyDspmIdentifyLevelItemRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyDspmIdentifyLevelItemRequest extends AbstractModel
     public $LevelScore;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param integer $Id <p>级别组id</p>
      * @param string $Name <p>级别组名称</p>
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param integer $LevelScore <p>敏感程度分</p><p>取值范围：[1, 10]</p><p>单位：敏感程度</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyDspmIdentifyLevelItemRequest extends AbstractModel
 
         if (array_key_exists("LevelScore",$param) and $param["LevelScore"] !== null) {
             $this->LevelScore = $param["LevelScore"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

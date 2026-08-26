@@ -20,83 +20,75 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAIAgentCall请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method integer getAIAgentId() 获取AI智能体ID
- * @method void setAIAgentId(integer $AIAgentId) 设置AI智能体ID
- * @method string getCallee() 获取被叫号码
- * @method void setCallee(string $Callee) 设置被叫号码
- * @method array getCallers() 获取主叫号码列表
- * @method void setCallers(array $Callers) 设置主叫号码列表
- * @method array getPromptVariables() 获取提示词变量
- * @method void setPromptVariables(array $PromptVariables) 设置提示词变量
- * @method array getVariables() 获取通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
-
-1. dify-inputs-xxx 为dify的inputs变量
-2.  dify-inputs-user 为dify的user值
-3.  dify-inputs-conversation_id 为dify的conversation_id值
- * @method void setVariables(array $Variables) 设置通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
-
-1. dify-inputs-xxx 为dify的inputs变量
-2.  dify-inputs-user 为dify的user值
-3.  dify-inputs-conversation_id 为dify的conversation_id值
- * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
- * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+ * @method integer getSdkAppId() 获取<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method integer getAIAgentId() 获取<p>AI智能体ID</p>
+ * @method void setAIAgentId(integer $AIAgentId) 设置<p>AI智能体ID</p>
+ * @method string getCallee() 获取<p>被叫号码</p>
+ * @method void setCallee(string $Callee) 设置<p>被叫号码</p>
+ * @method array getCallers() 获取<p>主叫号码列表</p>
+ * @method void setCallers(array $Callers) 设置<p>主叫号码列表</p>
+ * @method array getPromptVariables() 获取<p>提示词变量</p>
+ * @method void setPromptVariables(array $PromptVariables) 设置<p>提示词变量</p>
+ * @method array getVariables() 获取<p>通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  </p><ol><li>dify-inputs-xxx 为dify的inputs变量</li><li>dify-inputs-user 为dify的user值</li><li>dify-inputs-conversation_id 为dify的conversation_id值</li></ol>
+ * @method void setVariables(array $Variables) 设置<p>通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  </p><ol><li>dify-inputs-xxx 为dify的inputs变量</li><li>dify-inputs-user 为dify的user值</li><li>dify-inputs-conversation_id 为dify的conversation_id值</li></ol>
+ * @method integer getMaxRingTimeoutSecond() 获取<p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置<p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
+ * @method integer getAcquireTimeoutSecond() 获取<p>智能体并发不足时，排队等待超时时间，单位秒</p><p>取值范围：[0, 5]</p><p>默认值：5</p>
+ * @method void setAcquireTimeoutSecond(integer $AcquireTimeoutSecond) 设置<p>智能体并发不足时，排队等待超时时间，单位秒</p><p>取值范围：[0, 5]</p><p>默认值：5</p>
  */
 class CreateAIAgentCallRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @var integer <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public $SdkAppId;
 
     /**
-     * @var integer AI智能体ID
+     * @var integer <p>AI智能体ID</p>
      */
     public $AIAgentId;
 
     /**
-     * @var string 被叫号码
+     * @var string <p>被叫号码</p>
      */
     public $Callee;
 
     /**
-     * @var array 主叫号码列表
+     * @var array <p>主叫号码列表</p>
      */
     public $Callers;
 
     /**
-     * @var array 提示词变量
+     * @var array <p>提示词变量</p>
      * @deprecated
      */
     public $PromptVariables;
 
     /**
-     * @var array 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
-
-1. dify-inputs-xxx 为dify的inputs变量
-2.  dify-inputs-user 为dify的user值
-3.  dify-inputs-conversation_id 为dify的conversation_id值
+     * @var array <p>通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  </p><ol><li>dify-inputs-xxx 为dify的inputs变量</li><li>dify-inputs-user 为dify的user值</li><li>dify-inputs-conversation_id 为dify的conversation_id值</li></ol>
      */
     public $Variables;
 
     /**
-     * @var integer 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * @var integer <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
      */
     public $MaxRingTimeoutSecond;
 
     /**
-     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param integer $AIAgentId AI智能体ID
-     * @param string $Callee 被叫号码
-     * @param array $Callers 主叫号码列表
-     * @param array $PromptVariables 提示词变量
-     * @param array $Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
+     * @var integer <p>智能体并发不足时，排队等待超时时间，单位秒</p><p>取值范围：[0, 5]</p><p>默认值：5</p>
+     */
+    public $AcquireTimeoutSecond;
 
-1. dify-inputs-xxx 为dify的inputs变量
-2.  dify-inputs-user 为dify的user值
-3.  dify-inputs-conversation_id 为dify的conversation_id值
-     * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+    /**
+     * @param integer $SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param integer $AIAgentId <p>AI智能体ID</p>
+     * @param string $Callee <p>被叫号码</p>
+     * @param array $Callers <p>主叫号码列表</p>
+     * @param array $PromptVariables <p>提示词变量</p>
+     * @param array $Variables <p>通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  </p><ol><li>dify-inputs-xxx 为dify的inputs变量</li><li>dify-inputs-user 为dify的user值</li><li>dify-inputs-conversation_id 为dify的conversation_id值</li></ol>
+     * @param integer $MaxRingTimeoutSecond <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
+     * @param integer $AcquireTimeoutSecond <p>智能体并发不足时，排队等待超时时间，单位秒</p><p>取值范围：[0, 5]</p><p>默认值：5</p>
      */
     function __construct()
     {
@@ -147,6 +139,10 @@ class CreateAIAgentCallRequest extends AbstractModel
 
         if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
             $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
+        }
+
+        if (array_key_exists("AcquireTimeoutSecond",$param) and $param["AcquireTimeoutSecond"] !== null) {
+            $this->AcquireTimeoutSecond = $param["AcquireTimeoutSecond"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>标签</p>
  * @method CustomConfiguration getCustomConfiguration() 获取<p>沙箱工具自定义配置</p>
  * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置<p>沙箱工具自定义配置</p>
+ * @method ComputerConfiguration getComputerConfiguration() 获取<p>桌面电脑环境类沙箱配置</p>
+ * @method void setComputerConfiguration(ComputerConfiguration $ComputerConfiguration) 设置<p>桌面电脑环境类沙箱配置</p>
  */
 class UpdateSandboxToolRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UpdateSandboxToolRequest extends AbstractModel
     public $CustomConfiguration;
 
     /**
+     * @var ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public $ComputerConfiguration;
+
+    /**
      * @param string $ToolId <p>沙箱工具ID</p>
      * @param string $Description <p>沙箱工具描述，最大长度200字符</p>
      * @param NetworkConfiguration $NetworkConfiguration <p>网络配置</p>
      * @param array $Tags <p>标签</p>
      * @param CustomConfiguration $CustomConfiguration <p>沙箱工具自定义配置</p>
+     * @param ComputerConfiguration $ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
      */
     function __construct()
     {
@@ -103,6 +111,11 @@ class UpdateSandboxToolRequest extends AbstractModel
         if (array_key_exists("CustomConfiguration",$param) and $param["CustomConfiguration"] !== null) {
             $this->CustomConfiguration = new CustomConfiguration();
             $this->CustomConfiguration->deserialize($param["CustomConfiguration"]);
+        }
+
+        if (array_key_exists("ComputerConfiguration",$param) and $param["ComputerConfiguration"] !== null) {
+            $this->ComputerConfiguration = new ComputerConfiguration();
+            $this->ComputerConfiguration->deserialize($param["ComputerConfiguration"]);
         }
     }
 }

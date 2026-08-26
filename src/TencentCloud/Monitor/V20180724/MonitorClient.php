@@ -28,6 +28,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\BindingPolicyTagResponse BindingPolicyTag(Models\BindingPolicyTagRequest $req) 策略绑定标签
  * @method Models\CheckAddressByPrometheusResponse CheckAddressByPrometheus(Models\CheckAddressByPrometheusRequest $req) 检查用户地址联通性
  * @method Models\CleanGrafanaInstanceResponse CleanGrafanaInstance(Models\CleanGrafanaInstanceRequest $req) 强制销毁 Grafana 实例
+ * @method Models\CreateAlarmHistoryShieldResponse CreateAlarmHistoryShield(Models\CreateAlarmHistoryShieldRequest $req) 创建小程序告警屏蔽规则
  * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) 创建通知模板
  * @method Models\CreateAlarmPolicyResponse CreateAlarmPolicy(Models\CreateAlarmPolicyRequest $req) 创建告警策略
  * @method Models\CreateAlarmShieldResponse CreateAlarmShield(Models\CreateAlarmShieldRequest $req) 创建告警屏蔽规则
@@ -59,6 +60,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\CreatePrometheusTempResponse CreatePrometheusTemp(Models\CreatePrometheusTempRequest $req) 创建一个云原生Prometheus模板
  * @method Models\CreateRecordingRuleResponse CreateRecordingRule(Models\CreateRecordingRuleRequest $req) 创建 Prometheus 的预聚合规则
  * @method Models\CreateSSOAccountResponse CreateSSOAccount(Models\CreateSSOAccountRequest $req) Grafana实例授权其他腾讯云用户
+ * @method Models\DeleteAlarmHistoryShieldsResponse DeleteAlarmHistoryShields(Models\DeleteAlarmHistoryShieldsRequest $req) 删除小程序告警屏蔽规则
  * @method Models\DeleteAlarmNoticesResponse DeleteAlarmNotices(Models\DeleteAlarmNoticesRequest $req) 删除告警通知模板
  * @method Models\DeleteAlarmPolicyResponse DeleteAlarmPolicy(Models\DeleteAlarmPolicyRequest $req) 删除告警策略
  * @method Models\DeleteAlarmShieldsResponse DeleteAlarmShields(Models\DeleteAlarmShieldsRequest $req) 删除告警屏蔽规则
@@ -89,6 +91,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribeAlarmHistoriesResponse DescribeAlarmHistories(Models\DescribeAlarmHistoriesRequest $req) 查询告警历史
 
 请注意，**如果使用子用户进行告警历史的查询，只能查询到被授权项目下的告警历史**，或不区分项目的产品的告警历史。如何对子账户授予项目的权限，请参考 [访问管理-项目与标签](https://cloud.tencent.com/document/product/598/32738)。
+ * @method Models\DescribeAlarmHistoryShieldResponse DescribeAlarmHistoryShield(Models\DescribeAlarmHistoryShieldRequest $req) 获取小程序告警屏蔽规则
  * @method Models\DescribeAlarmMetricsResponse DescribeAlarmMetrics(Models\DescribeAlarmMetricsRequest $req) 查询告警指标列表
  * @method Models\DescribeAlarmNoticeResponse DescribeAlarmNotice(Models\DescribeAlarmNoticeRequest $req) 查询单个通知模板的详情
  * @method Models\DescribeAlarmNoticeCallbacksResponse DescribeAlarmNoticeCallbacks(Models\DescribeAlarmNoticeCallbacksRequest $req) 获取告警通知模板所有回调URL
@@ -200,6 +203,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\GetPrometheusAgentManagementCommandResponse GetPrometheusAgentManagementCommand(Models\GetPrometheusAgentManagementCommandRequest $req) 获取 Prometheus Agent 管理相关的命令行
  * @method Models\GetTopNMonitorDataResponse GetTopNMonitorData(Models\GetTopNMonitorDataRequest $req) 支持TopN查询，对于给定的监控指标和时间区间，按照指标大小按序返回不同维度组合及数据。
  * @method Models\InstallPluginsResponse InstallPlugins(Models\InstallPluginsRequest $req) 安装 Grafana Plugin
+ * @method Models\ModifyAlarmHistoryShieldResponse ModifyAlarmHistoryShield(Models\ModifyAlarmHistoryShieldRequest $req) 修改小程序告警屏蔽规则
  * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 编辑告警通知模板
  * @method Models\ModifyAlarmPolicyConditionResponse ModifyAlarmPolicyCondition(Models\ModifyAlarmPolicyConditionRequest $req) 修改告警策略触发条件
  * @method Models\ModifyAlarmPolicyInfoResponse ModifyAlarmPolicyInfo(Models\ModifyAlarmPolicyInfoRequest $req) 告警2.0编辑告警策略基本信息，包括策略名、备注

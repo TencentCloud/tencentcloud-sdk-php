@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTextToSpeechAsyncTask返回参数结构体
  *
- * @method integer getErrorCode() 获取<p>错误码，成功时返回0</p>
- * @method void setErrorCode(integer $ErrorCode) 设置<p>错误码，成功时返回0</p>
+ * @method integer getErrorCode() 获取<p>错误码，成功时返回0，处理中返回100</p>
+ * @method void setErrorCode(integer $ErrorCode) 设置<p>错误码，成功时返回0，处理中返回100</p>
  * @method string getMsg() 获取<p>错误信息，成功时返回success</p>
  * @method void setMsg(string $Msg) 设置<p>错误信息，成功时返回success</p>
  * @method string getStatus() 获取<p>任务状态</p><p>枚举值：</p><ul><li>success： 成功</li><li>fail： 失败</li><li>processing： 处理中</li></ul>
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTextToSpeechAsyncTaskResponse extends AbstractModel
 {
     /**
-     * @var integer <p>错误码，成功时返回0</p>
+     * @var integer <p>错误码，成功时返回0，处理中返回100</p>
      */
     public $ErrorCode;
 
@@ -73,7 +73,7 @@ class DescribeTextToSpeechAsyncTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ErrorCode <p>错误码，成功时返回0</p>
+     * @param integer $ErrorCode <p>错误码，成功时返回0，处理中返回100</p>
      * @param string $Msg <p>错误信息，成功时返回success</p>
      * @param string $Status <p>任务状态</p><p>枚举值：</p><ul><li>success： 成功</li><li>fail： 失败</li><li>processing： 处理中</li></ul>
      * @param string $AudioUrl <p>合成音频url</p>

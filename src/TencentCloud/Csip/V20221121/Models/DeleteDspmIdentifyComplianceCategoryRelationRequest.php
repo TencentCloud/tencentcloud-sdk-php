@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCategoryId(integer $CategoryId) 设置<p>分类ID</p>
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+ * @method string getOperationSource() 获取<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
  */
 class DeleteDspmIdentifyComplianceCategoryRelationRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteDspmIdentifyComplianceCategoryRelationRequest extends AbstractModel
     public $MemberId;
 
     /**
+     * @var string <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param integer $ComplianceId <p>识别模板ID</p>
      * @param integer $CategoryId <p>分类ID</p>
      * @param array $MemberId <p>集团账号的成员id</p>
+     * @param string $OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteDspmIdentifyComplianceCategoryRelationRequest extends AbstractModel
 
         if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
             $this->MemberId = $param["MemberId"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

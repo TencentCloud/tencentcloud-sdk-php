@@ -18,84 +18,92 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * cos概览页面数据结构
+ * 对象存储审计概览页面数据结构
  *
- * @method integer getAssetCount() 获取资产总数
- * @method void setAssetCount(integer $AssetCount) 设置资产总数
- * @method integer getAlarmAssetCount() 获取需要立即处理的资产数
- * @method void setAlarmAssetCount(integer $AlarmAssetCount) 设置需要立即处理的资产数
- * @method integer getRiskAssetCount() 获取需要加固的资产数
- * @method void setRiskAssetCount(integer $RiskAssetCount) 设置需要加固的资产数
- * @method integer getAlarmCount() 获取告警总数
- * @method void setAlarmCount(integer $AlarmCount) 设置告警总数
- * @method integer getIncrementAlarmCount() 获取当日新增告警总数
- * @method void setIncrementAlarmCount(integer $IncrementAlarmCount) 设置当日新增告警总数
- * @method integer getRiskCount() 获取风险总数
- * @method void setRiskCount(integer $RiskCount) 设置风险总数
- * @method integer getIncrementRiskCount() 获取当日新增告警总数
- * @method void setIncrementRiskCount(integer $IncrementRiskCount) 设置当日新增告警总数
- * @method array getRiskTop() 获取风险top详情
- * @method void setRiskTop(array $RiskTop) 设置风险top详情
- * @method array getAlarmTop() 获取告警风险top
- * @method void setAlarmTop(array $AlarmTop) 设置告警风险top
+ * @method integer getAssetCount() 获取<p>资产总数</p>
+ * @method void setAssetCount(integer $AssetCount) 设置<p>资产总数</p>
+ * @method integer getAlarmAssetCount() 获取<p>需要立即处理的资产数</p>
+ * @method void setAlarmAssetCount(integer $AlarmAssetCount) 设置<p>需要立即处理的资产数</p>
+ * @method integer getRiskAssetCount() 获取<p>需要加固的资产数</p>
+ * @method void setRiskAssetCount(integer $RiskAssetCount) 设置<p>需要加固的资产数</p>
+ * @method integer getAlarmCount() 获取<p>告警总数</p>
+ * @method void setAlarmCount(integer $AlarmCount) 设置<p>告警总数</p>
+ * @method integer getIncrementAlarmCount() 获取<p>当日新增告警总数</p>
+ * @method void setIncrementAlarmCount(integer $IncrementAlarmCount) 设置<p>当日新增告警总数</p>
+ * @method integer getRiskCount() 获取<p>风险总数</p>
+ * @method void setRiskCount(integer $RiskCount) 设置<p>风险总数</p>
+ * @method integer getIncrementRiskCount() 获取<p>当日新增告警总数</p>
+ * @method void setIncrementRiskCount(integer $IncrementRiskCount) 设置<p>当日新增告警总数</p>
+ * @method array getRiskTop() 获取<p>风险top详情</p>
+ * @method void setRiskTop(array $RiskTop) 设置<p>风险top详情</p>
+ * @method array getAlarmTop() 获取<p>告警风险top</p>
+ * @method void setAlarmTop(array $AlarmTop) 设置<p>告警风险top</p>
+ * @method integer getHighLevelSensitiveFileCount() 获取<p>高等级敏感文件数</p>
+ * @method void setHighLevelSensitiveFileCount(integer $HighLevelSensitiveFileCount) 设置<p>高等级敏感文件数</p>
  */
 class CosOverview extends AbstractModel
 {
     /**
-     * @var integer 资产总数
+     * @var integer <p>资产总数</p>
      */
     public $AssetCount;
 
     /**
-     * @var integer 需要立即处理的资产数
+     * @var integer <p>需要立即处理的资产数</p>
      */
     public $AlarmAssetCount;
 
     /**
-     * @var integer 需要加固的资产数
+     * @var integer <p>需要加固的资产数</p>
      */
     public $RiskAssetCount;
 
     /**
-     * @var integer 告警总数
+     * @var integer <p>告警总数</p>
      */
     public $AlarmCount;
 
     /**
-     * @var integer 当日新增告警总数
+     * @var integer <p>当日新增告警总数</p>
      */
     public $IncrementAlarmCount;
 
     /**
-     * @var integer 风险总数
+     * @var integer <p>风险总数</p>
      */
     public $RiskCount;
 
     /**
-     * @var integer 当日新增告警总数
+     * @var integer <p>当日新增告警总数</p>
      */
     public $IncrementRiskCount;
 
     /**
-     * @var array 风险top详情
+     * @var array <p>风险top详情</p>
      */
     public $RiskTop;
 
     /**
-     * @var array 告警风险top
+     * @var array <p>告警风险top</p>
      */
     public $AlarmTop;
 
     /**
-     * @param integer $AssetCount 资产总数
-     * @param integer $AlarmAssetCount 需要立即处理的资产数
-     * @param integer $RiskAssetCount 需要加固的资产数
-     * @param integer $AlarmCount 告警总数
-     * @param integer $IncrementAlarmCount 当日新增告警总数
-     * @param integer $RiskCount 风险总数
-     * @param integer $IncrementRiskCount 当日新增告警总数
-     * @param array $RiskTop 风险top详情
-     * @param array $AlarmTop 告警风险top
+     * @var integer <p>高等级敏感文件数</p>
+     */
+    public $HighLevelSensitiveFileCount;
+
+    /**
+     * @param integer $AssetCount <p>资产总数</p>
+     * @param integer $AlarmAssetCount <p>需要立即处理的资产数</p>
+     * @param integer $RiskAssetCount <p>需要加固的资产数</p>
+     * @param integer $AlarmCount <p>告警总数</p>
+     * @param integer $IncrementAlarmCount <p>当日新增告警总数</p>
+     * @param integer $RiskCount <p>风险总数</p>
+     * @param integer $IncrementRiskCount <p>当日新增告警总数</p>
+     * @param array $RiskTop <p>风险top详情</p>
+     * @param array $AlarmTop <p>告警风险top</p>
+     * @param integer $HighLevelSensitiveFileCount <p>高等级敏感文件数</p>
      */
     function __construct()
     {
@@ -154,6 +162,10 @@ class CosOverview extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AlarmTop, $obj);
             }
+        }
+
+        if (array_key_exists("HighLevelSensitiveFileCount",$param) and $param["HighLevelSensitiveFileCount"] !== null) {
+            $this->HighLevelSensitiveFileCount = $param["HighLevelSensitiveFileCount"];
         }
     }
 }

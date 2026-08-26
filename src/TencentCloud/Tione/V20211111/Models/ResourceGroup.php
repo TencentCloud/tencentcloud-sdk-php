@@ -20,89 +20,89 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源组
  *
- * @method string getResourceGroupId() 获取资源组id
- * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id
- * @method string getResourceGroupName() 获取资源组名称
- * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名称
- * @method integer getFreeInstance() 获取可用节点个数(运行中的节点)
- * @method void setFreeInstance(integer $FreeInstance) 设置可用节点个数(运行中的节点)
- * @method integer getTotalInstance() 获取总节点个数(所有节点)
- * @method void setTotalInstance(integer $TotalInstance) 设置总节点个数(所有节点)
- * @method GroupResource getUsedResource() 获取资源组已用的资源
+ * @method string getResourceGroupId() 获取<p>资源组id</p>
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>资源组id</p>
+ * @method string getResourceGroupName() 获取<p>资源组名称</p>
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置<p>资源组名称</p>
+ * @method integer getFreeInstance() 获取<p>可用节点个数(运行中的节点)</p>
+ * @method void setFreeInstance(integer $FreeInstance) 设置<p>可用节点个数(运行中的节点)</p>
+ * @method integer getTotalInstance() 获取<p>总节点个数(所有节点)</p>
+ * @method void setTotalInstance(integer $TotalInstance) 设置<p>总节点个数(所有节点)</p>
+ * @method GroupResource getUsedResource() 获取<p>资源组已用的资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUsedResource(GroupResource $UsedResource) 设置资源组已用的资源
+ * @method void setUsedResource(GroupResource $UsedResource) 设置<p>资源组已用的资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method GroupResource getTotalResource() 获取资源组总资源
+ * @method GroupResource getTotalResource() 获取<p>资源组总资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalResource(GroupResource $TotalResource) 设置资源组总资源
+ * @method void setTotalResource(GroupResource $TotalResource) 设置<p>资源组总资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInstanceSet() 获取节点信息
+ * @method array getInstanceSet() 获取<p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceSet(array $InstanceSet) 设置节点信息
+ * @method void setInstanceSet(array $InstanceSet) 设置<p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTagSet() 获取标签列表
+ * @method array getTagSet() 获取<p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagSet(array $TagSet) 设置标签列表
+ * @method void setTagSet(array $TagSet) 设置<p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceGroup extends AbstractModel
 {
     /**
-     * @var string 资源组id
+     * @var string <p>资源组id</p>
      */
     public $ResourceGroupId;
 
     /**
-     * @var string 资源组名称
+     * @var string <p>资源组名称</p>
      */
     public $ResourceGroupName;
 
     /**
-     * @var integer 可用节点个数(运行中的节点)
+     * @var integer <p>可用节点个数(运行中的节点)</p>
      */
     public $FreeInstance;
 
     /**
-     * @var integer 总节点个数(所有节点)
+     * @var integer <p>总节点个数(所有节点)</p>
      */
     public $TotalInstance;
 
     /**
-     * @var GroupResource 资源组已用的资源
+     * @var GroupResource <p>资源组已用的资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedResource;
 
     /**
-     * @var GroupResource 资源组总资源
+     * @var GroupResource <p>资源组总资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalResource;
 
     /**
-     * @var array 节点信息
+     * @var array <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceSet;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
     /**
-     * @param string $ResourceGroupId 资源组id
-     * @param string $ResourceGroupName 资源组名称
-     * @param integer $FreeInstance 可用节点个数(运行中的节点)
-     * @param integer $TotalInstance 总节点个数(所有节点)
-     * @param GroupResource $UsedResource 资源组已用的资源
+     * @param string $ResourceGroupId <p>资源组id</p>
+     * @param string $ResourceGroupName <p>资源组名称</p>
+     * @param integer $FreeInstance <p>可用节点个数(运行中的节点)</p>
+     * @param integer $TotalInstance <p>总节点个数(所有节点)</p>
+     * @param GroupResource $UsedResource <p>资源组已用的资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupResource $TotalResource 资源组总资源
+     * @param GroupResource $TotalResource <p>资源组总资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InstanceSet 节点信息
+     * @param array $InstanceSet <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TagSet 标签列表
+     * @param array $TagSet <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

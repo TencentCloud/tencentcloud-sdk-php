@@ -20,189 +20,201 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流画布详情
  *
- * @method string getWorkflowId() 获取工作流id
+ * @method string getWorkflowId() 获取<p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置工作流id
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowDesc() 获取工作流详情描述
+ * @method string getWorkflowDesc() 获取<p>工作流详情描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowDesc(string $WorkflowDesc) 设置工作流详情描述
+ * @method void setWorkflowDesc(string $WorkflowDesc) 设置<p>工作流详情描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowName() 获取工作流名称
+ * @method string getWorkflowName() 获取<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFolderId() 获取所属文件夹id
+ * @method string getFolderId() 获取<p>所属文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderId(string $FolderId) 设置所属文件夹id
+ * @method void setFolderId(string $FolderId) 设置<p>所属文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFolderIds() 获取所属文件夹ids
+ * @method array getFolderIds() 获取<p>所属文件夹ids</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderIds(array $FolderIds) 设置所属文件夹ids
+ * @method void setFolderIds(array $FolderIds) 设置<p>所属文件夹ids</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTasks() 获取任务列表
+ * @method array getTasks() 获取<p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTasks(array $Tasks) 设置任务列表
+ * @method void setTasks(array $Tasks) 设置<p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLinks() 获取任务依赖边列表
+ * @method array getLinks() 获取<p>任务依赖边列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLinks(array $Links) 设置任务依赖边列表
+ * @method void setLinks(array $Links) 设置<p>任务依赖边列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserGroupId() 获取工作流所属用户分组id,若有多个分号隔开: a;b;c
+ * @method string getUserGroupId() 获取<p>工作流所属用户分组id,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserGroupId(string $UserGroupId) 设置工作流所属用户分组id,若有多个分号隔开: a;b;c
+ * @method void setUserGroupId(string $UserGroupId) 设置<p>工作流所属用户分组id,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserGroupName() 获取工作流所属用户分组名称,若有多个分号隔开: a;b;c
+ * @method string getUserGroupName() 获取<p>工作流所属用户分组名称,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserGroupName(string $UserGroupName) 设置工作流所属用户分组名称,若有多个分号隔开: a;b;c
+ * @method void setUserGroupName(string $UserGroupName) 设置<p>工作流所属用户分组名称,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目id
+ * @method string getProjectId() 获取<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectIdent() 获取项目标识
+ * @method string getProjectIdent() 获取<p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectIdent(string $ProjectIdent) 设置项目标识
+ * @method void setProjectIdent(string $ProjectIdent) 设置<p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectName() 获取项目名称
+ * @method string getProjectName() 获取<p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectName(string $ProjectName) 设置项目名称
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwner() 获取责任人
+ * @method string getOwner() 获取<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwner(string $Owner) 设置责任人
+ * @method void setOwner(string $Owner) 设置<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwnerId() 获取责任人UserId
+ * @method string getOwnerId() 获取<p>责任人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnerId(string $OwnerId) 设置责任人UserId
+ * @method void setOwnerId(string $OwnerId) 设置<p>责任人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowType() 获取工作流类型，周期cycle，手动manual
+ * @method string getWorkflowType() 获取<p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowType(string $WorkflowType) 设置工作流类型，周期cycle，手动manual
+ * @method void setWorkflowType(string $WorkflowType) 设置<p>工作流类型，周期cycle，手动manual</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowCanvasOpsDto extends AbstractModel
 {
     /**
-     * @var string 工作流id
+     * @var string <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 工作流详情描述
+     * @var string <p>工作流详情描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowDesc;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowName;
 
     /**
-     * @var string 所属文件夹id
+     * @var string <p>所属文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderId;
 
     /**
-     * @var array 所属文件夹ids
+     * @var array <p>所属文件夹ids</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderIds;
 
     /**
-     * @var array 任务列表
+     * @var array <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tasks;
 
     /**
-     * @var array 任务依赖边列表
+     * @var array <p>任务依赖边列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Links;
 
     /**
-     * @var string 工作流所属用户分组id,若有多个分号隔开: a;b;c
+     * @var string <p>工作流所属用户分组id,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserGroupId;
 
     /**
-     * @var string 工作流所属用户分组名称,若有多个分号隔开: a;b;c
+     * @var string <p>工作流所属用户分组名称,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserGroupName;
 
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 项目标识
+     * @var string <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectIdent;
 
     /**
-     * @var string 项目名称
+     * @var string <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
-     * @var string 责任人
+     * @var string <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Owner;
 
     /**
-     * @var string 责任人UserId
+     * @var string <p>责任人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerId;
 
     /**
-     * @var string 工作流类型，周期cycle，手动manual
+     * @var string <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowType;
 
     /**
-     * @param string $WorkflowId 工作流id
+     * @var string <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowDesc 工作流详情描述
+     */
+    public $Privilege;
+
+    /**
+     * @param string $WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowName 工作流名称
+     * @param string $WorkflowDesc <p>工作流详情描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FolderId 所属文件夹id
+     * @param string $WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FolderIds 所属文件夹ids
+     * @param string $FolderId <p>所属文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tasks 任务列表
+     * @param array $FolderIds <p>所属文件夹ids</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Links 任务依赖边列表
+     * @param array $Tasks <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserGroupId 工作流所属用户分组id,若有多个分号隔开: a;b;c
+     * @param array $Links <p>任务依赖边列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserGroupName 工作流所属用户分组名称,若有多个分号隔开: a;b;c
+     * @param string $UserGroupId <p>工作流所属用户分组id,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目id
+     * @param string $UserGroupName <p>工作流所属用户分组名称,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectIdent 项目标识
+     * @param string $ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectName 项目名称
+     * @param string $ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Owner 责任人
+     * @param string $ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OwnerId 责任人UserId
+     * @param string $Owner <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowType 工作流类型，周期cycle，手动manual
+     * @param string $OwnerId <p>责任人UserId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkflowType <p>工作流类型，周期cycle，手动manual</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -286,6 +298,10 @@ class WorkflowCanvasOpsDto extends AbstractModel
 
         if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {
             $this->WorkflowType = $param["WorkflowType"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

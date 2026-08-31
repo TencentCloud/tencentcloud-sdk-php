@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarmPolicy返回参数结构体
  *
- * @method string getPolicyId() 获取告警策略 ID
- * @method void setPolicyId(string $PolicyId) 设置告警策略 ID
- * @method string getOriginId() 获取可用于实例、实例组的绑定和解绑接口（[BindingPolicyObject](https://cloud.tencent.com/document/product/248/40421)、[UnBindingAllPolicyObject](https://cloud.tencent.com/document/product/248/40568)、[UnBindingPolicyObject](https://cloud.tencent.com/document/product/248/40567)）的策略 ID
- * @method void setOriginId(string $OriginId) 设置可用于实例、实例组的绑定和解绑接口（[BindingPolicyObject](https://cloud.tencent.com/document/product/248/40421)、[UnBindingAllPolicyObject](https://cloud.tencent.com/document/product/248/40568)、[UnBindingPolicyObject](https://cloud.tencent.com/document/product/248/40567)）的策略 ID
+ * @method string getPolicyId() 获取<p>告警策略 ID</p>
+ * @method void setPolicyId(string $PolicyId) 设置<p>告警策略 ID</p>
+ * @method string getOriginId() 获取<p>可用于实例、实例组的绑定和解绑接口（<a href="https://cloud.tencent.com/document/product/248/40421">BindingPolicyObject</a>、<a href="https://cloud.tencent.com/document/product/248/40568">UnBindingAllPolicyObject</a>、<a href="https://cloud.tencent.com/document/product/248/40567">UnBindingPolicyObject</a>）的策略 ID</p>
+ * @method void setOriginId(string $OriginId) 设置<p>可用于实例、实例组的绑定和解绑接口（<a href="https://cloud.tencent.com/document/product/248/40421">BindingPolicyObject</a>、<a href="https://cloud.tencent.com/document/product/248/40568">UnBindingAllPolicyObject</a>、<a href="https://cloud.tencent.com/document/product/248/40567">UnBindingPolicyObject</a>）的策略 ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAlarmPolicyResponse extends AbstractModel
 {
     /**
-     * @var string 告警策略 ID
+     * @var string <p>告警策略 ID</p>
      */
     public $PolicyId;
 
     /**
-     * @var string 可用于实例、实例组的绑定和解绑接口（[BindingPolicyObject](https://cloud.tencent.com/document/product/248/40421)、[UnBindingAllPolicyObject](https://cloud.tencent.com/document/product/248/40568)、[UnBindingPolicyObject](https://cloud.tencent.com/document/product/248/40567)）的策略 ID
+     * @var string <p>可用于实例、实例组的绑定和解绑接口（<a href="https://cloud.tencent.com/document/product/248/40421">BindingPolicyObject</a>、<a href="https://cloud.tencent.com/document/product/248/40568">UnBindingAllPolicyObject</a>、<a href="https://cloud.tencent.com/document/product/248/40567">UnBindingPolicyObject</a>）的策略 ID</p>
      */
     public $OriginId;
 
@@ -45,8 +45,8 @@ class CreateAlarmPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $PolicyId 告警策略 ID
-     * @param string $OriginId 可用于实例、实例组的绑定和解绑接口（[BindingPolicyObject](https://cloud.tencent.com/document/product/248/40421)、[UnBindingAllPolicyObject](https://cloud.tencent.com/document/product/248/40568)、[UnBindingPolicyObject](https://cloud.tencent.com/document/product/248/40567)）的策略 ID
+     * @param string $PolicyId <p>告警策略 ID</p>
+     * @param string $OriginId <p>可用于实例、实例组的绑定和解绑接口（<a href="https://cloud.tencent.com/document/product/248/40421">BindingPolicyObject</a>、<a href="https://cloud.tencent.com/document/product/248/40568">UnBindingAllPolicyObject</a>、<a href="https://cloud.tencent.com/document/product/248/40567">UnBindingPolicyObject</a>）的策略 ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

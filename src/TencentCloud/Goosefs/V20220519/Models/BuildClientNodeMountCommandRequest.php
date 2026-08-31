@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BuildClientNodeMountCommand请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
- * @method string getCustomMountDir() 获取自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
- * @method void setCustomMountDir(string $CustomMountDir) 设置自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
- * @method string getClusterId() 获取客户端集群ID
- * @method void setClusterId(string $ClusterId) 设置客户端集群ID
+ * @method string getFileSystemId() 获取<p>文件系统ID</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统ID</p>
+ * @method string getCustomMountDir() 获取<p>自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy</p>
+ * @method void setCustomMountDir(string $CustomMountDir) 设置<p>自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy</p>
+ * @method string getClusterId() 获取<p>客户端集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>客户端集群ID</p>
  */
 class BuildClientNodeMountCommandRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统ID
+     * @var string <p>文件系统ID</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string 自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
+     * @var string <p>自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy</p>
      */
     public $CustomMountDir;
 
     /**
-     * @var string 客户端集群ID
+     * @var string <p>客户端集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @param string $FileSystemId 文件系统ID
-     * @param string $CustomMountDir 自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
-     * @param string $ClusterId 客户端集群ID
+     * @param string $FileSystemId <p>文件系统ID</p>
+     * @param string $CustomMountDir <p>自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy</p>
+     * @param string $ClusterId <p>客户端集群ID</p>
      */
     function __construct()
     {

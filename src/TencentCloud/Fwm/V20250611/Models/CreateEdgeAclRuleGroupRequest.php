@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEdgeAclRuleGroup请求参数结构体
  *
- * @method string getGroupName() 获取规则组名称，长度1-50字符
- * @method void setGroupName(string $GroupName) 设置规则组名称，长度1-50字符
- * @method string getProduct() 获取产品类型，固定为 cfw_edge_acl
- * @method void setProduct(string $Product) 设置产品类型，固定为 cfw_edge_acl
- * @method array getRules() 获取规则列表
- * @method void setRules(array $Rules) 设置规则列表
+ * @method string getGroupName() 获取<p>规则组名称，长度1-50字符</p>
+ * @method void setGroupName(string $GroupName) 设置<p>规则组名称，长度1-50字符</p>
+ * @method string getProduct() 获取<p>产品类型，固定为 cfw_edge_acl</p>
+ * @method void setProduct(string $Product) 设置<p>产品类型，固定为 cfw_edge_acl</p>
+ * @method array getRules() 获取<p>规则列表</p>
+ * @method void setRules(array $Rules) 设置<p>规则列表</p>
  */
 class CreateEdgeAclRuleGroupRequest extends AbstractModel
 {
     /**
-     * @var string 规则组名称，长度1-50字符
+     * @var string <p>规则组名称，长度1-50字符</p>
      */
     public $GroupName;
 
     /**
-     * @var string 产品类型，固定为 cfw_edge_acl
+     * @var string <p>产品类型，固定为 cfw_edge_acl</p>
      */
     public $Product;
 
     /**
-     * @var array 规则列表
+     * @var array <p>规则列表</p>
      */
     public $Rules;
 
     /**
-     * @param string $GroupName 规则组名称，长度1-50字符
-     * @param string $Product 产品类型，固定为 cfw_edge_acl
-     * @param array $Rules 规则列表
+     * @param string $GroupName <p>规则组名称，长度1-50字符</p>
+     * @param string $Product <p>产品类型，固定为 cfw_edge_acl</p>
+     * @param array $Rules <p>规则列表</p>
      */
     function __construct()
     {

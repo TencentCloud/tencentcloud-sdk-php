@@ -20,281 +20,293 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户角色信息
  *
- * @method integer getId() 获取业务ID
- * @method void setId(integer $Id) 设置业务ID
- * @method array getRoleList() 获取角色列表
+ * @method integer getId() 获取<p>业务ID</p>
+ * @method void setId(integer $Id) 设置<p>业务ID</p>
+ * @method array getRoleList() 获取<p>角色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoleList(array $RoleList) 设置角色列表
+ * @method void setRoleList(array $RoleList) 设置<p>角色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRoleIdList() 获取角色ID列表
+ * @method array getRoleIdList() 获取<p>角色ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoleIdList(array $RoleIdList) 设置角色ID列表
+ * @method void setRoleIdList(array $RoleIdList) 设置<p>角色ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserId() 获取用户ID
- * @method void setUserId(string $UserId) 设置用户ID
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getCorpId() 获取企业ID
- * @method void setCorpId(string $CorpId) 设置企业ID
- * @method string getEmail() 获取邮箱
+ * @method string getUserId() 获取<p>用户ID</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getCorpId() 获取<p>企业ID</p>
+ * @method void setCorpId(string $CorpId) 设置<p>企业ID</p>
+ * @method string getEmail() 获取<p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmail(string $Email) 设置邮箱
+ * @method void setEmail(string $Email) 设置<p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedUser() 获取创建人
+ * @method string getCreatedUser() 获取<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedUser(string $CreatedUser) 设置创建人
+ * @method void setCreatedUser(string $CreatedUser) 设置<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedAt() 获取创建时间
+ * @method string getCreatedAt() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedUser() 获取更新人
+ * @method string getUpdatedUser() 获取<p>更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedUser(string $UpdatedUser) 设置更新人
+ * @method void setUpdatedUser(string $UpdatedUser) 设置<p>更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedAt() 获取更新时间
+ * @method string getUpdatedAt() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastLogin() 获取最后一次登录时间
+ * @method string getLastLogin() 获取<p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastLogin(string $LastLogin) 设置最后一次登录时间
+ * @method void setLastLogin(string $LastLogin) 设置<p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取账号状态
+ * @method integer getStatus() 获取<p>账号状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置账号状态
+ * @method void setStatus(integer $Status) 设置<p>账号状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPhoneNumber() 获取手机号码
+ * @method string getPhoneNumber() 获取<p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码
+ * @method void setPhoneNumber(string $PhoneNumber) 设置<p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAreaCode() 获取手机号区号
+ * @method string getAreaCode() 获取<p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAreaCode(string $AreaCode) 设置手机号区号
+ * @method void setAreaCode(string $AreaCode) 设置<p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getRootAccount() 获取是否为主账号
+ * @method boolean getRootAccount() 获取<p>是否为主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRootAccount(boolean $RootAccount) 设置是否为主账号
+ * @method void setRootAccount(boolean $RootAccount) 设置<p>是否为主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getCorpAdmin() 获取是否为企业管理员
+ * @method boolean getCorpAdmin() 获取<p>是否为企业管理员</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCorpAdmin(boolean $CorpAdmin) 设置是否为企业管理员
+ * @method void setCorpAdmin(boolean $CorpAdmin) 设置<p>是否为企业管理员</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppUserId() 获取企微用户id
+ * @method string getAppUserId() 获取<p>企微用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppUserId(string $AppUserId) 设置企微用户id
+ * @method void setAppUserId(string $AppUserId) 设置<p>企微用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppUserAliasName() 获取昵称
+ * @method string getAppUserAliasName() 获取<p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppUserAliasName(string $AppUserAliasName) 设置昵称
+ * @method void setAppUserAliasName(string $AppUserAliasName) 设置<p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppUserName() 获取应用用户名
+ * @method string getAppUserName() 获取<p>应用用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppUserName(string $AppUserName) 设置应用用户名
+ * @method void setAppUserName(string $AppUserName) 设置<p>应用用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getInValidateAppRange() 获取是否在可见范围内
+ * @method boolean getInValidateAppRange() 获取<p>是否在可见范围内</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInValidateAppRange(boolean $InValidateAppRange) 设置是否在可见范围内
+ * @method void setInValidateAppRange(boolean $InValidateAppRange) 设置<p>是否在可见范围内</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppOpenUserId() 获取用户openid
+ * @method string getAppOpenUserId() 获取<p>用户openid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppOpenUserId(string $AppOpenUserId) 设置用户openid
+ * @method void setAppOpenUserId(string $AppOpenUserId) 设置<p>用户openid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEmailActivationStatus() 获取邮箱激活状态
+ * @method integer getEmailActivationStatus() 获取<p>邮箱激活状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmailActivationStatus(integer $EmailActivationStatus) 设置邮箱激活状态
+ * @method void setEmailActivationStatus(integer $EmailActivationStatus) 设置<p>邮箱激活状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getUserGroupList() 获取用户组信息
+ * @method array getUserGroupList() 获取<p>用户组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserGroupList(array $UserGroupList) 设置用户组信息
+ * @method void setUserGroupList(array $UserGroupList) 设置<p>用户组信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIdentityType() 获取<p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIdentityType(string $IdentityType) 设置<p>用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserRoleListDataUserRoleInfo extends AbstractModel
 {
     /**
-     * @var integer 业务ID
+     * @var integer <p>业务ID</p>
      */
     public $Id;
 
     /**
-     * @var array 角色列表
+     * @var array <p>角色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleList;
 
     /**
-     * @var array 角色ID列表
+     * @var array <p>角色ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleIdList;
 
     /**
-     * @var string 用户ID
+     * @var string <p>用户ID</p>
      */
     public $UserId;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 企业ID
+     * @var string <p>企业ID</p>
      */
     public $CorpId;
 
     /**
-     * @var string 邮箱
+     * @var string <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Email;
 
     /**
-     * @var string 创建人
+     * @var string <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedUser;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
-     * @var string 更新人
+     * @var string <p>更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedUser;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
-     * @var string 最后一次登录时间
+     * @var string <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastLogin;
 
     /**
-     * @var integer 账号状态
+     * @var integer <p>账号状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 手机号码
+     * @var string <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneNumber;
 
     /**
-     * @var string 手机号区号
+     * @var string <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AreaCode;
 
     /**
-     * @var boolean 是否为主账号
+     * @var boolean <p>是否为主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RootAccount;
 
     /**
-     * @var boolean 是否为企业管理员
+     * @var boolean <p>是否为企业管理员</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CorpAdmin;
 
     /**
-     * @var string 企微用户id
+     * @var string <p>企微用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppUserId;
 
     /**
-     * @var string 昵称
+     * @var string <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppUserAliasName;
 
     /**
-     * @var string 应用用户名
+     * @var string <p>应用用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppUserName;
 
     /**
-     * @var boolean 是否在可见范围内
+     * @var boolean <p>是否在可见范围内</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InValidateAppRange;
 
     /**
-     * @var string 用户openid
+     * @var string <p>用户openid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppOpenUserId;
 
     /**
-     * @var integer 邮箱激活状态
+     * @var integer <p>邮箱激活状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmailActivationStatus;
 
     /**
-     * @var array 用户组信息
+     * @var array <p>用户组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserGroupList;
 
     /**
-     * @param integer $Id 业务ID
-     * @param array $RoleList 角色列表
+     * @var string <p>用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RoleIdList 角色ID列表
+     */
+    public $IdentityType;
+
+    /**
+     * @param integer $Id <p>业务ID</p>
+     * @param array $RoleList <p>角色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserId 用户ID
-     * @param string $UserName 用户名
-     * @param string $CorpId 企业ID
-     * @param string $Email 邮箱
+     * @param array $RoleIdList <p>角色ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedUser 创建人
+     * @param string $UserId <p>用户ID</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $CorpId <p>企业ID</p>
+     * @param string $Email <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedAt 创建时间
+     * @param string $CreatedUser <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedUser 更新人
+     * @param string $CreatedAt <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedAt 更新时间
+     * @param string $UpdatedUser <p>更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastLogin 最后一次登录时间
+     * @param string $UpdatedAt <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 账号状态
+     * @param string $LastLogin <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PhoneNumber 手机号码
+     * @param integer $Status <p>账号状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AreaCode 手机号区号
+     * @param string $PhoneNumber <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $RootAccount 是否为主账号
+     * @param string $AreaCode <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $CorpAdmin 是否为企业管理员
+     * @param boolean $RootAccount <p>是否为主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppUserId 企微用户id
+     * @param boolean $CorpAdmin <p>是否为企业管理员</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppUserAliasName 昵称
+     * @param string $AppUserId <p>企微用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppUserName 应用用户名
+     * @param string $AppUserAliasName <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $InValidateAppRange 是否在可见范围内
+     * @param string $AppUserName <p>应用用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppOpenUserId 用户openid
+     * @param boolean $InValidateAppRange <p>是否在可见范围内</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EmailActivationStatus 邮箱激活状态
+     * @param string $AppOpenUserId <p>用户openid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $UserGroupList 用户组信息
+     * @param integer $EmailActivationStatus <p>邮箱激活状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $UserGroupList <p>用户组信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IdentityType <p>用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -414,6 +426,10 @@ class UserRoleListDataUserRoleInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->UserGroupList, $obj);
             }
+        }
+
+        if (array_key_exists("IdentityType",$param) and $param["IdentityType"] !== null) {
+            $this->IdentityType = $param["IdentityType"];
         }
     }
 }

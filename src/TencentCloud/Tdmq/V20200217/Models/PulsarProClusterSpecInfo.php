@@ -18,7 +18,7 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Pulsar专业版集群规格信息
+ * Pulsar标准版或专业版集群规格信息
  *
  * @method string getSpecName() 获取<p>集群规格名称</p>
  * @method void setSpecName(string $SpecName) 设置<p>集群规格名称</p>

@@ -20,53 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音量美化配置
  *
- * @method string getSwitch() 获取能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
- * @method void setSwitch(string $Switch) 设置能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
- * @method array getTypes() 获取类型，可多选，可选值：
-<li>declick：杂音去除</li>
-<li>deesser：齿音压制</li>
-默认值：declick。
+ * @method string getSwitch() 获取<p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
+ * @method void setSwitch(string $Switch) 设置<p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
+ * @method array getTypes() 获取<p>类型，可多选，可选值：</p><li>declick：杂音去除</li><li>deesser：齿音压制</li>默认值：declick。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTypes(array $Types) 设置类型，可多选，可选值：
-<li>declick：杂音去除</li>
-<li>deesser：齿音压制</li>
-默认值：declick。
+ * @method void setTypes(array $Types) 设置<p>类型，可多选，可选值：</p><li>declick：杂音去除</li><li>deesser：齿音压制</li>默认值：declick。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioBeautifyConfig extends AbstractModel
 {
     /**
-     * @var string 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
+     * @var string <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
      */
     public $Switch;
 
     /**
-     * @var array 类型，可多选，可选值：
-<li>declick：杂音去除</li>
-<li>deesser：齿音压制</li>
-默认值：declick。
+     * @var array <p>类型，可多选，可选值：</p><li>declick：杂音去除</li><li>deesser：齿音压制</li>默认值：declick。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Types;
 
     /**
-     * @param string $Switch 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
-     * @param array $Types 类型，可多选，可选值：
-<li>declick：杂音去除</li>
-<li>deesser：齿音压制</li>
-默认值：declick。
+     * @param string $Switch <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
+     * @param array $Types <p>类型，可多选，可选值：</p><li>declick：杂音去除</li><li>deesser：齿音压制</li>默认值：declick。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BuildClientNodeMountCommand返回参数结构体
  *
- * @method string getCommand() 获取挂载命令
- * @method void setCommand(string $Command) 设置挂载命令
+ * @method string getCommand() 获取<p>挂载命令</p>
+ * @method void setCommand(string $Command) 设置<p>挂载命令</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class BuildClientNodeMountCommandResponse extends AbstractModel
 {
     /**
-     * @var string 挂载命令
+     * @var string <p>挂载命令</p>
      */
     public $Command;
 
@@ -38,7 +38,7 @@ class BuildClientNodeMountCommandResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Command 挂载命令
+     * @param string $Command <p>挂载命令</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

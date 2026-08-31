@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 指定规格任务统计数据。
  *
- * @method string getSpecification() 获取任务规格。
- * @method void setSpecification(string $Specification) 设置任务规格。
- * @method array getData() 获取统计数据。
- * @method void setData(array $Data) 设置统计数据。
+ * @method string getSpecification() 获取<p>任务规格。</p>
+ * @method void setSpecification(string $Specification) 设置<p>任务规格。</p>
+ * @method array getData() 获取<p>统计数据。</p>
+ * @method void setData(array $Data) 设置<p>统计数据。</p>
  */
 class SpecificationDataItem extends AbstractModel
 {
     /**
-     * @var string 任务规格。
+     * @var string <p>任务规格。</p>
      */
     public $Specification;
 
     /**
-     * @var array 统计数据。
+     * @var array <p>统计数据。</p>
      */
     public $Data;
 
     /**
-     * @param string $Specification 任务规格。
-     * @param array $Data 统计数据。
+     * @param string $Specification <p>任务规格。</p>
+     * @param array $Data <p>统计数据。</p>
      */
     function __construct()
     {

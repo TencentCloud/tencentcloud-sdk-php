@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAccountPassword请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getNewPassword() 获取数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
- * @method void setNewPassword(string $NewPassword) 设置数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
- * @method array getAccounts() 获取云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
- * @method void setAccounts(array $Accounts) 设置云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
- * @method boolean getSkipValidatePassword() 获取该字段已废弃。
- * @method void setSkipValidatePassword(boolean $SkipValidatePassword) 设置该字段已废弃。
+ * @method string getInstanceId() 获取<p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method string getNewPassword() 获取<p>数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&amp;=!@#$%^*()）中的两种，长度为8-64个字符。</p>
+ * @method void setNewPassword(string $NewPassword) 设置<p>数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&amp;=!@#$%^*()）中的两种，长度为8-64个字符。</p>
+ * @method array getAccounts() 获取<p>云数据库账号。可通过 <a href="https://cloud.tencent.com/document/api/236/17499">DescribeAccounts</a> 接口获取。</p>
+ * @method void setAccounts(array $Accounts) 设置<p>云数据库账号。可通过 <a href="https://cloud.tencent.com/document/api/236/17499">DescribeAccounts</a> 接口获取。</p>
+ * @method boolean getSkipValidatePassword() 获取<p>该字段已废弃。</p>
+ * @method void setSkipValidatePassword(boolean $SkipValidatePassword) 设置<p>该字段已废弃。</p>
  */
 class ModifyAccountPasswordRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
+     * @var string <p>数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&amp;=!@#$%^*()）中的两种，长度为8-64个字符。</p>
      */
     public $NewPassword;
 
     /**
-     * @var array 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @var array <p>云数据库账号。可通过 <a href="https://cloud.tencent.com/document/api/236/17499">DescribeAccounts</a> 接口获取。</p>
      */
     public $Accounts;
 
     /**
-     * @var boolean 该字段已废弃。
+     * @var boolean <p>该字段已废弃。</p>
      * @deprecated
      */
     public $SkipValidatePassword;
 
     /**
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $NewPassword 数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
-     * @param array $Accounts 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
-     * @param boolean $SkipValidatePassword 该字段已废弃。
+     * @param string $InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param string $NewPassword <p>数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&amp;=!@#$%^*()）中的两种，长度为8-64个字符。</p>
+     * @param array $Accounts <p>云数据库账号。可通过 <a href="https://cloud.tencent.com/document/api/236/17499">DescribeAccounts</a> 接口获取。</p>
+     * @param boolean $SkipValidatePassword <p>该字段已废弃。</p>
      */
     function __construct()
     {

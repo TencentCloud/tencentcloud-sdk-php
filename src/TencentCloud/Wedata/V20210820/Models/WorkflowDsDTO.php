@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecuteUserName(string $ExecuteUserName) 设置<p>运行账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowDsDTO extends AbstractModel
 {
@@ -224,6 +228,12 @@ class WorkflowDsDTO extends AbstractModel
     public $ExecuteUserName;
 
     /**
+     * @var string <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Privilege;
+
+    /**
      * @param string $WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Owner <p>责任人</p>
@@ -263,6 +273,8 @@ class WorkflowDsDTO extends AbstractModel
      * @param string $ExecuteUserUin <p>运行账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecuteUserName <p>运行账号名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -371,6 +383,10 @@ class WorkflowDsDTO extends AbstractModel
 
         if (array_key_exists("ExecuteUserName",$param) and $param["ExecuteUserName"] !== null) {
             $this->ExecuteUserName = $param["ExecuteUserName"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

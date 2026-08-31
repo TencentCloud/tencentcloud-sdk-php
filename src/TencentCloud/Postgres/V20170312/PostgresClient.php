@@ -28,12 +28,14 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\CloseAccountCAMResponse CloseAccountCAM(Models\CloseAccountCAMRequest $req) 本接口用于关闭数据库账户的CAM验证服务。
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 关闭数据库实例的审计功能
  * @method Models\CloseDBExtranetAccessResponse CloseDBExtranetAccess(Models\CloseDBExtranetAccessRequest $req) 本接口（CloseDBExtranetAccess）用于关闭实例公网地址。
+ * @method Models\CloseDBProxyAddressResponse CloseDBProxyAddress(Models\CloseDBProxyAddressRequest $req) 本接口用于关闭（删除）数据库代理的指定地址。接口为异步操作，返回 TaskId 供调用方通过 DescribeTasks 查询任务执行进度。约束：代理组至少保留一个地址，不允许删除最后一个地址。
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 此接口用于创建数据账号，返回的Oid为账号唯一标识。与数据库系统表pg_roles中记录的oid一致。
  * @method Models\CreateAuditLogFileResponse CreateAuditLogFile(Models\CreateAuditLogFileRequest $req) 创建审计日志文件
  * @method Models\CreateBackupPlanResponse CreateBackupPlan(Models\CreateBackupPlanRequest $req) 此接口用于创建备份策略。
  * @method Models\CreateBaseBackupResponse CreateBaseBackup(Models\CreateBaseBackupRequest $req) 本接口（CreateBaseBackup）用于创建实例的数据备份。
  * @method Models\CreateDBInstanceNetworkAccessResponse CreateDBInstanceNetworkAccess(Models\CreateDBInstanceNetworkAccessRequest $req) 本接口（CreateDBInstanceNetworkAccess）用于创建实例网络。单个实例允许创建的网络配置最多为2套，最少为1套。
  * @method Models\CreateDBProxyResponse CreateDBProxy(Models\CreateDBProxyRequest $req) 本接口（CreateDBProxy）用于为指定的 PostgreSQL 实例创建数据库代理（Proxy）。走计费下单流程，下单成功后异步发起 Proxy 创建任务，同步返回订单号 DealName 与 Proxy 实例 ID ProxyGroupId。当前仅支持后付费按量计费。
+ * @method Models\CreateDBProxyAddressResponse CreateDBProxyAddress(Models\CreateDBProxyAddressRequest $req) 本接口（CreateDBProxyAddress）用于为指定实例的数据库代理创建连接地址。该接口为异步接口，调用成功后返回 TaskId，可通过 DescribeTasks 接口查询任务执行进度。<p>支持同时配置读写分离策略，包括权重模式、路由分配、延迟剔除、故障转移等高级功能。</p>
  * @method Models\CreateDatabaseResponse CreateDatabase(Models\CreateDatabaseRequest $req) 此接口用于创建数据库，需指定数据库名及所有者。
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 本接口 (CreateInstances) 用于创建一个或者多个PostgreSQL实例，通过此接口创建的实例无需进行初始化，可直接使用。
 <li>实例创建成功后将自动开机启动，实例状态变为“运行中”。</li>
@@ -90,6 +92,7 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\DescribeDBInstanceSecurityGroupsResponse DescribeDBInstanceSecurityGroups(Models\DescribeDBInstanceSecurityGroupsRequest $req) 本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组。
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
  * @method Models\DescribeDBProxyResponse DescribeDBProxy(Models\DescribeDBProxyRequest $req) 本接口（DescribeDBProxy）用于查询指定 PostgreSQL 实例下的数据库代理（Proxy）信息，包含 Proxy 节点列表与接入地址列表。可选传入 ProxyGroupId 精确查询某一 Proxy；不传则返回该实例下的全部 Proxy。
+ * @method Models\DescribeDBProxySSLConfigResponse DescribeDBProxySSLConfig(Models\DescribeDBProxySSLConfigRequest $req) 本接口用于查询指定代理连接地址的 SSL 配置信息，包括 SSL 是否开启、连接地址和 CA 证书下载地址。
  * @method Models\DescribeDBProxySpecsResponse DescribeDBProxySpecs(Models\DescribeDBProxySpecsRequest $req) 查询代理可售规格
  * @method Models\DescribeDBVersionsResponse DescribeDBVersions(Models\DescribeDBVersionsRequest $req) 本接口（DescribeDBVersions）用于查询支持的数据库版本。
  * @method Models\DescribeDBXlogsResponse DescribeDBXlogs(Models\DescribeDBXlogsRequest $req) 本接口（DescribeDBXlogs）用于获取实例Xlog列表。 **本接口属于早期接口，已停止功能迭代，推荐使用接口**[DescribeLogBackups](https://cloud.tencent.com/document/api/409/89021)**替代**。
@@ -141,6 +144,7 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\ModifyDBInstancesProjectResponse ModifyDBInstancesProject(Models\ModifyDBInstancesProjectRequest $req) 本接口（ModifyDBInstancesProject）用于修改实例所属项目。
  * @method Models\ModifyDBProxyResponse ModifyDBProxy(Models\ModifyDBProxyRequest $req) 本接口（ModifyDBProxy）用于修改数据库代理（Proxy）。支持两种模式：①仅修改 Description 时同步生效，不下单，DealName 为空；②变更 Proxy 节点规格或数量（ProxyNodeCustom）时走计费下单流程，异步触发变配任务，返回 DealName。可通过 SwitchTag 控制变配执行时机。
  * @method Models\ModifyDBProxyAddressResponse ModifyDBProxyAddress(Models\ModifyDBProxyAddressRequest $req) 修改代理地址配置
+ * @method Models\ModifyDBProxySSLConfigResponse ModifyDBProxySSLConfig(Models\ModifyDBProxySSLConfigRequest $req) 本接口（ModifyDBProxySSLConfig）用于修改数据库代理连接地址的 SSL 配置。该接口为异步接口，调用成功后返回 TaskId，可通过 DescribeTasks 接口查询任务执行进度。<p>当前仅支持物理机（local）存储类型的代理开启 SSL。SSL 开启时需提供 ConnectAddress，且必须与代理地址的 Vip 保持一致。</p><p>当 SSL 状态与当前配置一致时，接口直接返回成功，TaskId 为 0，无需等待任务。</p>
  * @method Models\ModifyDatabaseOwnerResponse ModifyDatabaseOwner(Models\ModifyDatabaseOwnerRequest $req) 修改数据库所有者
  * @method Models\ModifyMaintainTimeWindowResponse ModifyMaintainTimeWindow(Models\ModifyMaintainTimeWindowRequest $req) 本接口 (ModifyMaintainTimeWindow) 用于实例维护时间窗口的修改。
  * @method Models\ModifyParameterTemplateResponse ModifyParameterTemplate(Models\ModifyParameterTemplateRequest $req) 本接口（ModifyParameterTemplate）主要用于修改参数模板名称，描述等配置，也可用于管理参数模板中的参数列表。

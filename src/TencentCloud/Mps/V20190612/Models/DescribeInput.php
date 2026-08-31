@@ -20,202 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询输入配置信息。
  *
- * @method string getInputId() 获取输入Id。
- * @method void setInputId(string $InputId) 设置输入Id。
- * @method string getInputName() 获取输入名称。
- * @method void setInputName(string $InputName) 设置输入名称。
- * @method string getDescription() 获取输入描述。
+ * @method string getInputId() 获取<p>输入Id。</p>
+ * @method void setInputId(string $InputId) 设置<p>输入Id。</p>
+ * @method string getInputName() 获取<p>输入名称。</p>
+ * @method void setInputName(string $InputName) 设置<p>输入名称。</p>
+ * @method string getDescription() 获取<p>输入描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置输入描述。
+ * @method void setDescription(string $Description) 设置<p>输入描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocol() 获取输入协议。
- * @method void setProtocol(string $Protocol) 设置输入协议。
- * @method array getInputAddressList() 获取输入地址列表。
- * @method void setInputAddressList(array $InputAddressList) 设置输入地址列表。
- * @method array getAllowIpList() 获取输入IP白名单列表。
- * @method void setAllowIpList(array $AllowIpList) 设置输入IP白名单列表。
- * @method DescribeInputSRTSettings getSRTSettings() 获取输入的SRT配置信息。
+ * @method string getProtocol() 获取<p>输入协议。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>输入协议。</p>
+ * @method array getInputAddressList() 获取<p>输入地址列表。</p>
+ * @method void setInputAddressList(array $InputAddressList) 设置<p>输入地址列表。</p>
+ * @method array getAllowIpList() 获取<p>输入IP白名单列表。</p>
+ * @method void setAllowIpList(array $AllowIpList) 设置<p>输入IP白名单列表。</p>
+ * @method DescribeInputSRTSettings getSRTSettings() 获取<p>输入的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSRTSettings(DescribeInputSRTSettings $SRTSettings) 设置输入的SRT配置信息。
+ * @method void setSRTSettings(DescribeInputSRTSettings $SRTSettings) 设置<p>输入的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeInputRTPSettings getRTPSettings() 获取输入的RTP配置信息。
+ * @method DescribeInputRTPSettings getRTPSettings() 获取<p>输入的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRTPSettings(DescribeInputRTPSettings $RTPSettings) 设置输入的RTP配置信息。
+ * @method void setRTPSettings(DescribeInputRTPSettings $RTPSettings) 设置<p>输入的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInputRegion() 获取输入的地区。
- * @method void setInputRegion(string $InputRegion) 设置输入的地区。
- * @method DescribeInputRTMPSettings getRTMPSettings() 获取输入的RTMP配置信息。
- * @method void setRTMPSettings(DescribeInputRTMPSettings $RTMPSettings) 设置输入的RTMP配置信息。
- * @method string getFailOver() 获取输入的主备开关。
+ * @method string getInputRegion() 获取<p>输入的地区。</p>
+ * @method void setInputRegion(string $InputRegion) 设置<p>输入的地区。</p>
+ * @method DescribeInputRTMPSettings getRTMPSettings() 获取<p>输入的RTMP配置信息。</p>
+ * @method void setRTMPSettings(DescribeInputRTMPSettings $RTMPSettings) 设置<p>输入的RTMP配置信息。</p>
+ * @method string getFailOver() 获取<p>输入的主备开关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailOver(string $FailOver) 设置输入的主备开关。
+ * @method void setFailOver(string $FailOver) 设置<p>输入的主备开关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeInputRTMPPullSettings getRTMPPullSettings() 获取输入的RTMP_PULL配置信息。
+ * @method DescribeInputRTMPPullSettings getRTMPPullSettings() 获取<p>输入的RTMP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRTMPPullSettings(DescribeInputRTMPPullSettings $RTMPPullSettings) 设置输入的RTMP_PULL配置信息。
+ * @method void setRTMPPullSettings(DescribeInputRTMPPullSettings $RTMPPullSettings) 设置<p>输入的RTMP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeInputRTSPPullSettings getRTSPPullSettings() 获取输入的RTSP_PULL配置信息。
+ * @method DescribeInputRTSPPullSettings getRTSPPullSettings() 获取<p>输入的RTSP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRTSPPullSettings(DescribeInputRTSPPullSettings $RTSPPullSettings) 设置输入的RTSP_PULL配置信息。
+ * @method void setRTSPPullSettings(DescribeInputRTSPPullSettings $RTSPPullSettings) 设置<p>输入的RTSP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeInputHLSPullSettings getHLSPullSettings() 获取输入的HLS_PULL配置信息。
+ * @method DescribeInputHLSPullSettings getHLSPullSettings() 获取<p>输入的HLS_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) 设置输入的HLS_PULL配置信息。
+ * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) 设置<p>输入的HLS_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ResilientStreamConf getResilientStream() 获取延播平滑吐流配置信息。
+ * @method ResilientStreamConf getResilientStream() 获取<p>延播平滑吐流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResilientStream(ResilientStreamConf $ResilientStream) 设置延播平滑吐流配置信息。
+ * @method void setResilientStream(ResilientStreamConf $ResilientStream) 设置<p>延播平滑吐流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSecurityGroupIds() 获取绑定的输入安全组 ID。	
+ * @method array getSecurityGroupIds() 获取<p>绑定的输入安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。	
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>绑定的输入安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getZones() 获取可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
- * @method void setZones(array $Zones) 设置可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
- * @method DescribeInputRISTSettings getRISTSettings() 获取输入的RIST配置信息。
+ * @method array getZones() 获取<p>可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。</p>
+ * @method void setZones(array $Zones) 设置<p>可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。</p>
+ * @method DescribeInputRISTSettings getRISTSettings() 获取<p>输入的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRISTSettings(DescribeInputRISTSettings $RISTSettings) 设置输入的RIST配置信息。
+ * @method void setRISTSettings(DescribeInputRISTSettings $RISTSettings) 设置<p>输入的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getStreamUrls() 获取输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
- * @method void setStreamUrls(array $StreamUrls) 设置输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+ * @method array getStreamUrls() 获取<p>输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址</p>
+ * @method void setStreamUrls(array $StreamUrls) 设置<p>输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址</p>
  */
 class DescribeInput extends AbstractModel
 {
     /**
-     * @var string 输入Id。
+     * @var string <p>输入Id。</p>
      */
     public $InputId;
 
     /**
-     * @var string 输入名称。
+     * @var string <p>输入名称。</p>
      */
     public $InputName;
 
     /**
-     * @var string 输入描述。
+     * @var string <p>输入描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 输入协议。
+     * @var string <p>输入协议。</p>
      */
     public $Protocol;
 
     /**
-     * @var array 输入地址列表。
+     * @var array <p>输入地址列表。</p>
      */
     public $InputAddressList;
 
     /**
-     * @var array 输入IP白名单列表。
+     * @var array <p>输入IP白名单列表。</p>
      */
     public $AllowIpList;
 
     /**
-     * @var DescribeInputSRTSettings 输入的SRT配置信息。
+     * @var DescribeInputSRTSettings <p>输入的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SRTSettings;
 
     /**
-     * @var DescribeInputRTPSettings 输入的RTP配置信息。
+     * @var DescribeInputRTPSettings <p>输入的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RTPSettings;
 
     /**
-     * @var string 输入的地区。
+     * @var string <p>输入的地区。</p>
      */
     public $InputRegion;
 
     /**
-     * @var DescribeInputRTMPSettings 输入的RTMP配置信息。
+     * @var DescribeInputRTMPSettings <p>输入的RTMP配置信息。</p>
      */
     public $RTMPSettings;
 
     /**
-     * @var string 输入的主备开关。
+     * @var string <p>输入的主备开关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailOver;
 
     /**
-     * @var DescribeInputRTMPPullSettings 输入的RTMP_PULL配置信息。
+     * @var DescribeInputRTMPPullSettings <p>输入的RTMP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RTMPPullSettings;
 
     /**
-     * @var DescribeInputRTSPPullSettings 输入的RTSP_PULL配置信息。
+     * @var DescribeInputRTSPPullSettings <p>输入的RTSP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RTSPPullSettings;
 
     /**
-     * @var DescribeInputHLSPullSettings 输入的HLS_PULL配置信息。
+     * @var DescribeInputHLSPullSettings <p>输入的HLS_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HLSPullSettings;
 
     /**
-     * @var ResilientStreamConf 延播平滑吐流配置信息。
+     * @var ResilientStreamConf <p>延播平滑吐流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResilientStream;
 
     /**
-     * @var array 绑定的输入安全组 ID。	
+     * @var array <p>绑定的输入安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
+     * @var array <p>可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。</p>
      */
     public $Zones;
 
     /**
-     * @var DescribeInputRISTSettings 输入的RIST配置信息。
+     * @var DescribeInputRISTSettings <p>输入的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RISTSettings;
 
     /**
-     * @var array 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+     * @var array <p>输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址</p>
      */
     public $StreamUrls;
 
     /**
-     * @param string $InputId 输入Id。
-     * @param string $InputName 输入名称。
-     * @param string $Description 输入描述。
+     * @param string $InputId <p>输入Id。</p>
+     * @param string $InputName <p>输入名称。</p>
+     * @param string $Description <p>输入描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Protocol 输入协议。
-     * @param array $InputAddressList 输入地址列表。
-     * @param array $AllowIpList 输入IP白名单列表。
-     * @param DescribeInputSRTSettings $SRTSettings 输入的SRT配置信息。
+     * @param string $Protocol <p>输入协议。</p>
+     * @param array $InputAddressList <p>输入地址列表。</p>
+     * @param array $AllowIpList <p>输入IP白名单列表。</p>
+     * @param DescribeInputSRTSettings $SRTSettings <p>输入的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeInputRTPSettings $RTPSettings 输入的RTP配置信息。
+     * @param DescribeInputRTPSettings $RTPSettings <p>输入的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InputRegion 输入的地区。
-     * @param DescribeInputRTMPSettings $RTMPSettings 输入的RTMP配置信息。
-     * @param string $FailOver 输入的主备开关。
+     * @param string $InputRegion <p>输入的地区。</p>
+     * @param DescribeInputRTMPSettings $RTMPSettings <p>输入的RTMP配置信息。</p>
+     * @param string $FailOver <p>输入的主备开关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeInputRTMPPullSettings $RTMPPullSettings 输入的RTMP_PULL配置信息。
+     * @param DescribeInputRTMPPullSettings $RTMPPullSettings <p>输入的RTMP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeInputRTSPPullSettings $RTSPPullSettings 输入的RTSP_PULL配置信息。
+     * @param DescribeInputRTSPPullSettings $RTSPPullSettings <p>输入的RTSP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeInputHLSPullSettings $HLSPullSettings 输入的HLS_PULL配置信息。
+     * @param DescribeInputHLSPullSettings $HLSPullSettings <p>输入的HLS_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResilientStreamConf $ResilientStream 延播平滑吐流配置信息。
+     * @param ResilientStreamConf $ResilientStream <p>延播平滑吐流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SecurityGroupIds 绑定的输入安全组 ID。	
+     * @param array $SecurityGroupIds <p>绑定的输入安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Zones 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
-     * @param DescribeInputRISTSettings $RISTSettings 输入的RIST配置信息。
+     * @param array $Zones <p>可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。</p>
+     * @param DescribeInputRISTSettings $RISTSettings <p>输入的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $StreamUrls 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+     * @param array $StreamUrls <p>输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址</p>
      */
     function __construct()
     {

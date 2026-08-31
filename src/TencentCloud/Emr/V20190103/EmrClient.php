@@ -71,6 +71,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeInstancesListResponse DescribeInstancesList(Models\DescribeInstancesListRequest $req) 查询集群列表
  * @method Models\DescribeJobFlowResponse DescribeJobFlow(Models\DescribeJobFlowRequest $req) 查询流程任务
  * @method Models\DescribeKyuubiQueryInfoResponse DescribeKyuubiQueryInfo(Models\DescribeKyuubiQueryInfoRequest $req) 查询Kyuubi查询信息
+ * @method Models\DescribeMetaDBInfoResponse DescribeMetaDBInfo(Models\DescribeMetaDBInfoRequest $req) 集群metadb数据
  * @method Models\DescribeNodeDataDisksResponse DescribeNodeDataDisks(Models\DescribeNodeDataDisksRequest $req) 查询节点数据盘信息
  * @method Models\DescribeNodeResourceConfigFastResponse DescribeNodeResourceConfigFast(Models\DescribeNodeResourceConfigFastRequest $req) 快速获取当前集群的节点规格配置
  * @method Models\DescribeNodeSpecResponse DescribeNodeSpec(Models\DescribeNodeSpecRequest $req) 查询节点规格

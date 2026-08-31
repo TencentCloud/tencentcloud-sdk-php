@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 飞书机器人内容模板配置
  *
- * @method string getContentTmpl() 获取内容模板
- * @method void setContentTmpl(string $ContentTmpl) 设置内容模板
- * @method string getTitleTmpl() 获取标题模板
- * @method void setTitleTmpl(string $TitleTmpl) 设置标题模板
+ * @method string getContentTmpl() 获取<p>内容模板</p>
+ * @method void setContentTmpl(string $ContentTmpl) 设置<p>内容模板</p>
+ * @method string getTitleTmpl() 获取<p>标题模板</p>
+ * @method void setTitleTmpl(string $TitleTmpl) 设置<p>标题模板</p>
+ * @method RobotNoticeTitleColor getTitleColor() 获取<p>通知内容模版标题自定义颜色</p>
+ * @method void setTitleColor(RobotNoticeTitleColor $TitleColor) 设置<p>通知内容模版标题自定义颜色</p>
  */
 class FeiShuRobotNoticeTmpl extends AbstractModel
 {
     /**
-     * @var string 内容模板
+     * @var string <p>内容模板</p>
      */
     public $ContentTmpl;
 
     /**
-     * @var string 标题模板
+     * @var string <p>标题模板</p>
      */
     public $TitleTmpl;
 
     /**
-     * @param string $ContentTmpl 内容模板
-     * @param string $TitleTmpl 标题模板
+     * @var RobotNoticeTitleColor <p>通知内容模版标题自定义颜色</p>
+     */
+    public $TitleColor;
+
+    /**
+     * @param string $ContentTmpl <p>内容模板</p>
+     * @param string $TitleTmpl <p>标题模板</p>
+     * @param RobotNoticeTitleColor $TitleColor <p>通知内容模版标题自定义颜色</p>
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class FeiShuRobotNoticeTmpl extends AbstractModel
 
         if (array_key_exists("TitleTmpl",$param) and $param["TitleTmpl"] !== null) {
             $this->TitleTmpl = $param["TitleTmpl"];
+        }
+
+        if (array_key_exists("TitleColor",$param) and $param["TitleColor"] !== null) {
+            $this->TitleColor = new RobotNoticeTitleColor();
+            $this->TitleColor->deserialize($param["TitleColor"]);
         }
     }
 }

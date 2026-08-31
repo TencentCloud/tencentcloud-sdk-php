@@ -20,206 +20,238 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集团成员信息
  *
- * @method string getMemberId() 获取成员 ID
+ * @method string getMemberId() 获取<p>成员 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMemberId(string $MemberId) 设置成员 ID
+ * @method void setMemberId(string $MemberId) 设置<p>成员 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppId() 获取成员账号 AppId
+ * @method string getAppId() 获取<p>成员账号 AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(string $AppId) 设置成员账号 AppId
+ * @method void setAppId(string $AppId) 设置<p>成员账号 AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUin() 获取账号Uin
- * @method void setUin(string $Uin) 设置账号Uin
- * @method string getNickname() 获取账号名称
+ * @method string getUin() 获取<p>账号Uin</p>
+ * @method void setUin(string $Uin) 设置<p>账号Uin</p>
+ * @method string getNickname() 获取<p>账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNickname(string $Nickname) 设置账号名称
+ * @method void setNickname(string $Nickname) 设置<p>账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSubAccountCount() 获取子账号数量
+ * @method integer getSubAccountCount() 获取<p>子账号数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubAccountCount(integer $SubAccountCount) 设置子账号数量
+ * @method void setSubAccountCount(integer $SubAccountCount) 设置<p>子账号数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNodeName() 获取所属组织架构节点名称
+ * @method string getNodeName() 获取<p>所属组织架构节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeName(string $NodeName) 设置所属组织架构节点名称
+ * @method void setNodeName(string $NodeName) 设置<p>所属组织架构节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRole() 获取成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员
+ * @method string getRole() 获取<p>成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRole(string $Role) 设置成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员
+ * @method void setRole(string $Role) 设置<p>成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRoleDisplay() 获取成员身份显示名称（前端展示用）
+ * @method string getRoleDisplay() 获取<p>成员身份显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoleDisplay(string $RoleDisplay) 设置成员身份显示名称（前端展示用）
+ * @method void setRoleDisplay(string $RoleDisplay) 设置<p>成员身份显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AccountGroupInfo getAccountGroup() 获取所属账户组 
+ * @method AccountGroupInfo getAccountGroup() 获取<p>所属账户组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountGroup(AccountGroupInfo $AccountGroup) 设置所属账户组 
+ * @method void setAccountGroup(AccountGroupInfo $AccountGroup) 设置<p>所属账户组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCfwManaged() 获取云防火墙纳管状态：0-未纳管，1-已纳管
+ * @method integer getCfwManaged() 获取<p>云防火墙纳管状态：0-未纳管，1-已纳管</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCfwManaged(integer $CfwManaged) 设置云防火墙纳管状态：0-未纳管，1-已纳管
+ * @method void setCfwManaged(integer $CfwManaged) 设置<p>云防火墙纳管状态：0-未纳管，1-已纳管</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCfwShareRole() 获取云防火墙共享角色：sharer-共享者，user-使用者，none-未设置
+ * @method string getCfwShareRole() 获取<p>云防火墙共享角色：sharer-共享者，user-使用者，none-未设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCfwShareRole(string $CfwShareRole) 设置云防火墙共享角色：sharer-共享者，user-使用者，none-未设置
+ * @method void setCfwShareRole(string $CfwShareRole) 设置<p>云防火墙共享角色：sharer-共享者，user-使用者，none-未设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCfwShareRoleDisplay() 获取云防火墙共享角色显示名称（前端展示用）
+ * @method string getCfwShareRoleDisplay() 获取<p>云防火墙共享角色显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCfwShareRoleDisplay(string $CfwShareRoleDisplay) 设置云防火墙共享角色显示名称（前端展示用）
+ * @method void setCfwShareRoleDisplay(string $CfwShareRoleDisplay) 设置<p>云防火墙共享角色显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCfwSharerAppId() 获取云防火墙共享者 AppId，成员角色为使用者时有值
+ * @method string getCfwSharerAppId() 获取<p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCfwSharerAppId(string $CfwSharerAppId) 设置云防火墙共享者 AppId，成员角色为使用者时有值
+ * @method void setCfwSharerAppId(string $CfwSharerAppId) 设置<p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCfwInstanceId() 获取云防火墙计费实例 ID，非空表示已购买云防火墙
+ * @method string getCfwInstanceId() 获取<p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCfwInstanceId(string $CfwInstanceId) 设置云防火墙计费实例 ID，非空表示已购买云防火墙
+ * @method void setCfwInstanceId(string $CfwInstanceId) 设置<p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPolicyAnalysisEnabled() 获取策略分析权限：0-关闭，1-开启
+ * @method integer getPolicyAnalysisEnabled() 获取<p>策略分析权限：0-关闭，1-开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyAnalysisEnabled(integer $PolicyAnalysisEnabled) 设置策略分析权限：0-关闭，1-开启
+ * @method void setPolicyAnalysisEnabled(integer $PolicyAnalysisEnabled) 设置<p>策略分析权限：0-关闭，1-开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMemberCreateTime() 获取成员加入集团时间
+ * @method string getMemberCreateTime() 获取<p>成员加入集团时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMemberCreateTime(string $MemberCreateTime) 设置成员加入集团时间
+ * @method void setMemberCreateTime(string $MemberCreateTime) 设置<p>成员加入集团时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getJoinType() 获取账号加入方式
- * @method void setJoinType(string $JoinType) 设置账号加入方式
+ * @method string getJoinType() 获取<p>账号加入方式</p>
+ * @method void setJoinType(string $JoinType) 设置<p>账号加入方式</p>
+ * @method integer getCfwPayStatus() 获取<p>云防火墙套餐状态</p><p>枚举值：</p><ul><li>0： 未购买</li><li>2： 已购买</li><li>3： 试用中</li><li>4： 已过期</li></ul>
+ * @method void setCfwPayStatus(integer $CfwPayStatus) 设置<p>云防火墙套餐状态</p><p>枚举值：</p><ul><li>0： 未购买</li><li>2： 已购买</li><li>3： 试用中</li><li>4： 已过期</li></ul>
+ * @method integer getCfwCapable() 获取<p>是否具备云防火墙使用能力</p>
+ * @method void setCfwCapable(integer $CfwCapable) 设置<p>是否具备云防火墙使用能力</p>
+ * @method integer getSgManaged() 获取<p>私有安全组纳管开关， 0:未纳管，1:已纳管</p>
+ * @method void setSgManaged(integer $SgManaged) 设置<p>私有安全组纳管开关， 0:未纳管，1:已纳管</p>
+ * @method integer getIsCfwPostPay() 获取<p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
+ * @method void setIsCfwPostPay(integer $IsCfwPostPay) 设置<p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
  */
 class OrganMemberItem extends AbstractModel
 {
     /**
-     * @var string 成员 ID
+     * @var string <p>成员 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberId;
 
     /**
-     * @var string 成员账号 AppId
+     * @var string <p>成员账号 AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var string 账号Uin
+     * @var string <p>账号Uin</p>
      */
     public $Uin;
 
     /**
-     * @var string 账号名称
+     * @var string <p>账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nickname;
 
     /**
-     * @var integer 子账号数量
+     * @var integer <p>子账号数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountCount;
 
     /**
-     * @var string 所属组织架构节点名称
+     * @var string <p>所属组织架构节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeName;
 
     /**
-     * @var string 成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员
+     * @var string <p>成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Role;
 
     /**
-     * @var string 成员身份显示名称（前端展示用）
+     * @var string <p>成员身份显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleDisplay;
 
     /**
-     * @var AccountGroupInfo 所属账户组 
+     * @var AccountGroupInfo <p>所属账户组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountGroup;
 
     /**
-     * @var integer 云防火墙纳管状态：0-未纳管，1-已纳管
+     * @var integer <p>云防火墙纳管状态：0-未纳管，1-已纳管</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CfwManaged;
 
     /**
-     * @var string 云防火墙共享角色：sharer-共享者，user-使用者，none-未设置
+     * @var string <p>云防火墙共享角色：sharer-共享者，user-使用者，none-未设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CfwShareRole;
 
     /**
-     * @var string 云防火墙共享角色显示名称（前端展示用）
+     * @var string <p>云防火墙共享角色显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CfwShareRoleDisplay;
 
     /**
-     * @var string 云防火墙共享者 AppId，成员角色为使用者时有值
+     * @var string <p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CfwSharerAppId;
 
     /**
-     * @var string 云防火墙计费实例 ID，非空表示已购买云防火墙
+     * @var string <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CfwInstanceId;
 
     /**
-     * @var integer 策略分析权限：0-关闭，1-开启
+     * @var integer <p>策略分析权限：0-关闭，1-开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyAnalysisEnabled;
 
     /**
-     * @var string 成员加入集团时间
+     * @var string <p>成员加入集团时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberCreateTime;
 
     /**
-     * @var string 账号加入方式
+     * @var string <p>账号加入方式</p>
      */
     public $JoinType;
 
     /**
-     * @param string $MemberId 成员 ID
+     * @var integer <p>云防火墙套餐状态</p><p>枚举值：</p><ul><li>0： 未购买</li><li>2： 已购买</li><li>3： 试用中</li><li>4： 已过期</li></ul>
+     */
+    public $CfwPayStatus;
+
+    /**
+     * @var integer <p>是否具备云防火墙使用能力</p>
+     */
+    public $CfwCapable;
+
+    /**
+     * @var integer <p>私有安全组纳管开关， 0:未纳管，1:已纳管</p>
+     */
+    public $SgManaged;
+
+    /**
+     * @var integer <p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
+     */
+    public $IsCfwPostPay;
+
+    /**
+     * @param string $MemberId <p>成员 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppId 成员账号 AppId
+     * @param string $AppId <p>成员账号 AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Uin 账号Uin
-     * @param string $Nickname 账号名称
+     * @param string $Uin <p>账号Uin</p>
+     * @param string $Nickname <p>账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SubAccountCount 子账号数量
+     * @param integer $SubAccountCount <p>子账号数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NodeName 所属组织架构节点名称
+     * @param string $NodeName <p>所属组织架构节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Role 成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员
+     * @param string $Role <p>成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RoleDisplay 成员身份显示名称（前端展示用）
+     * @param string $RoleDisplay <p>成员身份显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountGroupInfo $AccountGroup 所属账户组 
+     * @param AccountGroupInfo $AccountGroup <p>所属账户组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CfwManaged 云防火墙纳管状态：0-未纳管，1-已纳管
+     * @param integer $CfwManaged <p>云防火墙纳管状态：0-未纳管，1-已纳管</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CfwShareRole 云防火墙共享角色：sharer-共享者，user-使用者，none-未设置
+     * @param string $CfwShareRole <p>云防火墙共享角色：sharer-共享者，user-使用者，none-未设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CfwShareRoleDisplay 云防火墙共享角色显示名称（前端展示用）
+     * @param string $CfwShareRoleDisplay <p>云防火墙共享角色显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CfwSharerAppId 云防火墙共享者 AppId，成员角色为使用者时有值
+     * @param string $CfwSharerAppId <p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CfwInstanceId 云防火墙计费实例 ID，非空表示已购买云防火墙
+     * @param string $CfwInstanceId <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PolicyAnalysisEnabled 策略分析权限：0-关闭，1-开启
+     * @param integer $PolicyAnalysisEnabled <p>策略分析权限：0-关闭，1-开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MemberCreateTime 成员加入集团时间
+     * @param string $MemberCreateTime <p>成员加入集团时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $JoinType 账号加入方式
+     * @param string $JoinType <p>账号加入方式</p>
+     * @param integer $CfwPayStatus <p>云防火墙套餐状态</p><p>枚举值：</p><ul><li>0： 未购买</li><li>2： 已购买</li><li>3： 试用中</li><li>4： 已过期</li></ul>
+     * @param integer $CfwCapable <p>是否具备云防火墙使用能力</p>
+     * @param integer $SgManaged <p>私有安全组纳管开关， 0:未纳管，1:已纳管</p>
+     * @param integer $IsCfwPostPay <p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
      */
     function __construct()
     {
@@ -301,6 +333,22 @@ class OrganMemberItem extends AbstractModel
 
         if (array_key_exists("JoinType",$param) and $param["JoinType"] !== null) {
             $this->JoinType = $param["JoinType"];
+        }
+
+        if (array_key_exists("CfwPayStatus",$param) and $param["CfwPayStatus"] !== null) {
+            $this->CfwPayStatus = $param["CfwPayStatus"];
+        }
+
+        if (array_key_exists("CfwCapable",$param) and $param["CfwCapable"] !== null) {
+            $this->CfwCapable = $param["CfwCapable"];
+        }
+
+        if (array_key_exists("SgManaged",$param) and $param["SgManaged"] !== null) {
+            $this->SgManaged = $param["SgManaged"];
+        }
+
+        if (array_key_exists("IsCfwPostPay",$param) and $param["IsCfwPostPay"] !== null) {
+            $this->IsCfwPostPay = $param["IsCfwPostPay"];
         }
     }
 }

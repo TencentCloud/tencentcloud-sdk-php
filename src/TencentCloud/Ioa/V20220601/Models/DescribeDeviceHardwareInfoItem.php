@@ -56,6 +56,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemarkName(string $RemarkName) 设置<p>终端备注名</p>
  * @method string getBiosUuid() 获取<p>BiosUUID（启动盘标识符）</p>
  * @method void setBiosUuid(string $BiosUuid) 设置<p>BiosUUID（启动盘标识符）</p>
+ * @method array getNetworkCards() 获取<p>多网卡数据</p>
+ * @method void setNetworkCards(array $NetworkCards) 设置<p>多网卡数据</p>
+ * @method array getVideoCards() 获取<p>多显卡数据</p>
+ * @method void setVideoCards(array $VideoCards) 设置<p>多显卡数据</p>
+ * @method string getMainBoard() 获取<p>主板型号</p>
+ * @method void setMainBoard(string $MainBoard) 设置<p>主板型号</p>
+ * @method string getBaseBoardSn() 获取<p>主板序列号</p>
+ * @method void setBaseBoardSn(string $BaseBoardSn) 设置<p>主板序列号</p>
+ * @method string getBaseBoardManufacturer() 获取<p>主板制造商</p>
+ * @method void setBaseBoardManufacturer(string $BaseBoardManufacturer) 设置<p>主板制造商</p>
+ * @method string getAudioCard() 获取<p>声卡</p>
+ * @method void setAudioCard(string $AudioCard) 设置<p>声卡</p>
  */
 class DescribeDeviceHardwareInfoItem extends AbstractModel
 {
@@ -150,6 +162,36 @@ class DescribeDeviceHardwareInfoItem extends AbstractModel
     public $BiosUuid;
 
     /**
+     * @var array <p>多网卡数据</p>
+     */
+    public $NetworkCards;
+
+    /**
+     * @var array <p>多显卡数据</p>
+     */
+    public $VideoCards;
+
+    /**
+     * @var string <p>主板型号</p>
+     */
+    public $MainBoard;
+
+    /**
+     * @var string <p>主板序列号</p>
+     */
+    public $BaseBoardSn;
+
+    /**
+     * @var string <p>主板制造商</p>
+     */
+    public $BaseBoardManufacturer;
+
+    /**
+     * @var string <p>声卡</p>
+     */
+    public $AudioCard;
+
+    /**
      * @param integer $Id <p>设备ID</p>
      * @param string $Mid <p>设备唯一标识符</p>
      * @param integer $OsType <p>OS平台 0 Windows 1 Linux 2 macOS 4 Android 5 iOS</p>
@@ -168,6 +210,12 @@ class DescribeDeviceHardwareInfoItem extends AbstractModel
      * @param string $Monitor <p>显示器品牌型号</p>
      * @param string $RemarkName <p>终端备注名</p>
      * @param string $BiosUuid <p>BiosUUID（启动盘标识符）</p>
+     * @param array $NetworkCards <p>多网卡数据</p>
+     * @param array $VideoCards <p>多显卡数据</p>
+     * @param string $MainBoard <p>主板型号</p>
+     * @param string $BaseBoardSn <p>主板序列号</p>
+     * @param string $BaseBoardManufacturer <p>主板制造商</p>
+     * @param string $AudioCard <p>声卡</p>
      */
     function __construct()
     {
@@ -252,6 +300,40 @@ class DescribeDeviceHardwareInfoItem extends AbstractModel
 
         if (array_key_exists("BiosUuid",$param) and $param["BiosUuid"] !== null) {
             $this->BiosUuid = $param["BiosUuid"];
+        }
+
+        if (array_key_exists("NetworkCards",$param) and $param["NetworkCards"] !== null) {
+            $this->NetworkCards = [];
+            foreach ($param["NetworkCards"] as $key => $value){
+                $obj = new DeviceNetworkCardBrief();
+                $obj->deserialize($value);
+                array_push($this->NetworkCards, $obj);
+            }
+        }
+
+        if (array_key_exists("VideoCards",$param) and $param["VideoCards"] !== null) {
+            $this->VideoCards = [];
+            foreach ($param["VideoCards"] as $key => $value){
+                $obj = new DeviceVideoCardBrief();
+                $obj->deserialize($value);
+                array_push($this->VideoCards, $obj);
+            }
+        }
+
+        if (array_key_exists("MainBoard",$param) and $param["MainBoard"] !== null) {
+            $this->MainBoard = $param["MainBoard"];
+        }
+
+        if (array_key_exists("BaseBoardSn",$param) and $param["BaseBoardSn"] !== null) {
+            $this->BaseBoardSn = $param["BaseBoardSn"];
+        }
+
+        if (array_key_exists("BaseBoardManufacturer",$param) and $param["BaseBoardManufacturer"] !== null) {
+            $this->BaseBoardManufacturer = $param["BaseBoardManufacturer"];
+        }
+
+        if (array_key_exists("AudioCard",$param) and $param["AudioCard"] !== null) {
+            $this->AudioCard = $param["AudioCard"];
         }
     }
 }

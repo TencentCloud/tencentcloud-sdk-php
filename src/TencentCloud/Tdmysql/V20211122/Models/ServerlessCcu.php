@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * serverless实例的ccu规格
  *
- * @method integer getMinCcu() 获取<p>ccu最小值</p>
- * @method void setMinCcu(integer $MinCcu) 设置<p>ccu最小值</p>
+ * @method float getMinCcu() 获取<p>ccu最小值</p>
+ * @method void setMinCcu(float $MinCcu) 设置<p>ccu最小值</p>
  * @method array getMaxCcu() 获取<p>ccu最大值范围</p>
  * @method void setMaxCcu(array $MaxCcu) 设置<p>ccu最大值范围</p>
  */
 class ServerlessCcu extends AbstractModel
 {
     /**
-     * @var integer <p>ccu最小值</p>
+     * @var float <p>ccu最小值</p>
      */
     public $MinCcu;
 
@@ -38,7 +38,7 @@ class ServerlessCcu extends AbstractModel
     public $MaxCcu;
 
     /**
-     * @param integer $MinCcu <p>ccu最小值</p>
+     * @param float $MinCcu <p>ccu最小值</p>
      * @param array $MaxCcu <p>ccu最大值范围</p>
      */
     function __construct()

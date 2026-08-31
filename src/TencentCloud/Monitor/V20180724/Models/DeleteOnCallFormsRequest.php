@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOnCallForms请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method array getOnCallFormIDs() 获取要删除的值班表id
- * @method void setOnCallFormIDs(array $OnCallFormIDs) 设置要删除的值班表id
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method array getOnCallFormIDs() 获取<p>要删除的值班表id</p>
+ * @method void setOnCallFormIDs(array $OnCallFormIDs) 设置<p>要删除的值班表id</p>
  */
 class DeleteOnCallFormsRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var array 要删除的值班表id
+     * @var array <p>要删除的值班表id</p>
      */
     public $OnCallFormIDs;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param array $OnCallFormIDs 要删除的值班表id
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param array $OnCallFormIDs <p>要删除的值班表id</p>
      */
     function __construct()
     {

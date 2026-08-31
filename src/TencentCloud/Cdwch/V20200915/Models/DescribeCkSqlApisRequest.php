@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置<p>用户名称，api与user相关的必填</p>
  * @method string getUserType() 获取<p>账户的类型</p>
  * @method void setUserType(string $UserType) 设置<p>账户的类型</p>
+ * @method string getInstanceType() 获取<p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
  */
 class DescribeCkSqlApisRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeCkSqlApisRequest extends AbstractModel
     public $UserType;
 
     /**
+     * @var string <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId <p>实例id</p>
      * @param string $ApiType <p>api接口名称,GetClusters:获取集群cluster列表<br>GetSystemUsers:获取系统用户列表<br>CheckNodeCluster: 检查节点是否隶属一个cluster<br>GetClusterDatabases: 获取一个cluster下的数据库列表<br>GetClusterTables: 获取一个cluster下的数据库表列表<br>GetPrivilegeUsers: 获取授权的用户列表<br>GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限<br>GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）<br>RevokeClusterUser:解绑cluster用户<br>DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑<br>GetUserOptionMessages:获取用户配置备注信息<br>GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY</p>
      * @param string $Cluster <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得。当 ApiType 取值为 GET_SYSTEM_USERS、GET_PRIVILEGE_USERS、GET_CLUSTER_DATABASES或GET_CLUSTER_TABLES 时，本参数必填。</p>
      * @param string $UserName <p>用户名称，api与user相关的必填</p>
      * @param string $UserType <p>账户的类型</p>
+     * @param string $InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeCkSqlApisRequest extends AbstractModel
 
         if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
             $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

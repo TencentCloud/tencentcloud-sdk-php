@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNestedBySpTaskIds(array $NestedBySpTaskIds) 设置<p>引用该手动工作流的嵌套工作流任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowExtOpsDto extends AbstractModel
 {
@@ -208,6 +212,12 @@ class WorkflowExtOpsDto extends AbstractModel
     public $NestedBySpTaskIds;
 
     /**
+     * @var string <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Privilege;
+
+    /**
      * @param integer $TaskCount <p>任务数量count</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FolderName <p>文件名</p>
@@ -243,6 +253,8 @@ class WorkflowExtOpsDto extends AbstractModel
      * @param string $BundleId <p>bundle客户端绑定唯一id</p>
      * @param string $BundleInfo <p>bundle客户端扩展信息，json格式</p>
      * @param array $NestedBySpTaskIds <p>引用该手动工作流的嵌套工作流任务ID列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -332,6 +344,10 @@ class WorkflowExtOpsDto extends AbstractModel
 
         if (array_key_exists("NestedBySpTaskIds",$param) and $param["NestedBySpTaskIds"] !== null) {
             $this->NestedBySpTaskIds = $param["NestedBySpTaskIds"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

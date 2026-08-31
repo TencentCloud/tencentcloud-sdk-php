@@ -20,74 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 采样截图信息
  *
- * @method integer getDefinition() 获取采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
- * @method void setDefinition(integer $Definition) 设置采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
- * @method string getSampleType() 获取采样方式，取值范围：
-<li>Percent：根据百分比间隔采样。</li>
-<li>Time：根据时间间隔采样。</li>
- * @method void setSampleType(string $SampleType) 设置采样方式，取值范围：
-<li>Percent：根据百分比间隔采样。</li>
-<li>Time：根据时间间隔采样。</li>
- * @method integer getInterval() 获取采样间隔
-<li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
-<li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
- * @method void setInterval(integer $Interval) 设置采样间隔
-<li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
-<li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
- * @method TaskOutputStorage getStorage() 获取截图后文件的存储位置。
- * @method void setStorage(TaskOutputStorage $Storage) 设置截图后文件的存储位置。
- * @method array getImagePathSet() 获取生成的截图 path 列表。
- * @method void setImagePathSet(array $ImagePathSet) 设置生成的截图 path 列表。
- * @method array getWaterMarkDefinition() 获取截图如果被打上了水印，被打水印的模板 ID 列表。
- * @method void setWaterMarkDefinition(array $WaterMarkDefinition) 设置截图如果被打上了水印，被打水印的模板 ID 列表。
+ * @method integer getDefinition() 获取<p>采样截图规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF">采样截图参数模板</a>。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>采样截图规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF">采样截图参数模板</a>。</p>
+ * @method string getSampleType() 获取<p>采样方式，取值范围：</p><li>Percent：根据百分比间隔采样。</li><li>Time：根据时间间隔采样。</li>
+ * @method void setSampleType(string $SampleType) 设置<p>采样方式，取值范围：</p><li>Percent：根据百分比间隔采样。</li><li>Time：根据时间间隔采样。</li>
+ * @method integer getInterval() 获取<p>采样间隔</p><li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li><li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
+ * @method void setInterval(integer $Interval) 设置<p>采样间隔</p><li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li><li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
+ * @method TaskOutputStorage getStorage() 获取<p>截图后文件的存储位置。</p>
+ * @method void setStorage(TaskOutputStorage $Storage) 设置<p>截图后文件的存储位置。</p>
+ * @method array getImagePathSet() 获取<p>生成的截图 path 列表。</p>
+ * @method void setImagePathSet(array $ImagePathSet) 设置<p>生成的截图 path 列表。</p>
+ * @method array getWaterMarkDefinition() 获取<p>截图如果被打上了水印，被打水印的模板 ID 列表。</p>
+ * @method void setWaterMarkDefinition(array $WaterMarkDefinition) 设置<p>截图如果被打上了水印，被打水印的模板 ID 列表。</p>
  */
 class MediaSampleSnapshotItem extends AbstractModel
 {
     /**
-     * @var integer 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * @var integer <p>采样截图规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF">采样截图参数模板</a>。</p>
      */
     public $Definition;
 
     /**
-     * @var string 采样方式，取值范围：
-<li>Percent：根据百分比间隔采样。</li>
-<li>Time：根据时间间隔采样。</li>
+     * @var string <p>采样方式，取值范围：</p><li>Percent：根据百分比间隔采样。</li><li>Time：根据时间间隔采样。</li>
      */
     public $SampleType;
 
     /**
-     * @var integer 采样间隔
-<li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
-<li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
+     * @var integer <p>采样间隔</p><li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li><li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
      */
     public $Interval;
 
     /**
-     * @var TaskOutputStorage 截图后文件的存储位置。
+     * @var TaskOutputStorage <p>截图后文件的存储位置。</p>
      */
     public $Storage;
 
     /**
-     * @var array 生成的截图 path 列表。
+     * @var array <p>生成的截图 path 列表。</p>
      */
     public $ImagePathSet;
 
     /**
-     * @var array 截图如果被打上了水印，被打水印的模板 ID 列表。
+     * @var array <p>截图如果被打上了水印，被打水印的模板 ID 列表。</p>
      */
     public $WaterMarkDefinition;
 
     /**
-     * @param integer $Definition 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-     * @param string $SampleType 采样方式，取值范围：
-<li>Percent：根据百分比间隔采样。</li>
-<li>Time：根据时间间隔采样。</li>
-     * @param integer $Interval 采样间隔
-<li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
-<li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
-     * @param TaskOutputStorage $Storage 截图后文件的存储位置。
-     * @param array $ImagePathSet 生成的截图 path 列表。
-     * @param array $WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
+     * @param integer $Definition <p>采样截图规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF">采样截图参数模板</a>。</p>
+     * @param string $SampleType <p>采样方式，取值范围：</p><li>Percent：根据百分比间隔采样。</li><li>Time：根据时间间隔采样。</li>
+     * @param integer $Interval <p>采样间隔</p><li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li><li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
+     * @param TaskOutputStorage $Storage <p>截图后文件的存储位置。</p>
+     * @param array $ImagePathSet <p>生成的截图 path 列表。</p>
+     * @param array $WaterMarkDefinition <p>截图如果被打上了水印，被打水印的模板 ID 列表。</p>
      */
     function __construct()
     {

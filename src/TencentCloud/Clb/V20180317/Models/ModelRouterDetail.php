@@ -71,7 +71,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVpcId() 获取<p>模型路由实例所属VPC的ID</p>
  * @method void setVpcId(string $VpcId) 设置<p>模型路由实例所属VPC的ID</p>
  * @method integer getBandwidth() 获取<p>带宽</p><p>单位：Mbps</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidth(integer $Bandwidth) 设置<p>带宽</p><p>单位：Mbps</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEipAddressId() 获取<p>弹性公网IP的ID</p>
  * @method void setEipAddressId(string $EipAddressId) 设置<p>弹性公网IP的ID</p>
  * @method ModelRouterBillingConfigOutput getBillingConfig() 获取<p>计费信息</p>
@@ -194,6 +196,7 @@ class ModelRouterDetail extends AbstractModel
 
     /**
      * @var integer <p>带宽</p><p>单位：Mbps</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bandwidth;
 
@@ -234,6 +237,7 @@ class ModelRouterDetail extends AbstractModel
      * @param string $Vip <p>模型路由实例VIP</p>
      * @param string $VpcId <p>模型路由实例所属VPC的ID</p>
      * @param integer $Bandwidth <p>带宽</p><p>单位：Mbps</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EipAddressId <p>弹性公网IP的ID</p>
      * @param ModelRouterBillingConfigOutput $BillingConfig <p>计费信息</p>
      */

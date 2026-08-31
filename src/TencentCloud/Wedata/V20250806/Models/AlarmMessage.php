@@ -20,90 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警信息
  *
- * @method integer getAlarmMessageId() 获取告警消息Id
- * @method void setAlarmMessageId(integer $AlarmMessageId) 设置告警消息Id
- * @method string getAlarmTime() 获取告警时间，同一条告警可能发送多次，只显示最新的告警时间
- * @method void setAlarmTime(string $AlarmTime) 设置告警时间，同一条告警可能发送多次，只显示最新的告警时间
- * @method string getTaskName() 获取任务名称
- * @method void setTaskName(string $TaskName) 设置任务名称
- * @method string getTaskId() 获取任务Id
- * @method void setTaskId(string $TaskId) 设置任务Id
- * @method string getCurRunDate() 获取任务的实例数据时间
- * @method void setCurRunDate(string $CurRunDate) 设置任务的实例数据时间
- * @method string getAlarmReason() 获取告警原因
- * @method void setAlarmReason(string $AlarmReason) 设置告警原因
- * @method integer getAlarmLevel() 获取告警级别，1.普通， 2.重要，3.紧急
- * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别，1.普通， 2.重要，3.紧急
- * @method string getAlarmRuleId() 获取告警规则Id
- * @method void setAlarmRuleId(string $AlarmRuleId) 设置告警规则Id
- * @method array getAlarmWays() 获取告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群 
- * @method void setAlarmWays(array $AlarmWays) 设置告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群 
- * @method array getAlarmRecipients() 获取告警接收人
- * @method void setAlarmRecipients(array $AlarmRecipients) 设置告警接收人
+ * @method integer getAlarmMessageId() 获取<p>告警消息Id</p>
+ * @method void setAlarmMessageId(integer $AlarmMessageId) 设置<p>告警消息Id</p>
+ * @method string getAlarmTime() 获取<p>告警时间，同一条告警可能发送多次，只显示最新的告警时间</p>
+ * @method void setAlarmTime(string $AlarmTime) 设置<p>告警时间，同一条告警可能发送多次，只显示最新的告警时间</p>
+ * @method string getTaskName() 获取<p>任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
+ * @method string getTaskId() 获取<p>任务Id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务Id</p>
+ * @method string getCurRunDate() 获取<p>任务的实例数据时间</p>
+ * @method void setCurRunDate(string $CurRunDate) 设置<p>任务的实例数据时间</p>
+ * @method string getAlarmReason() 获取<p>告警原因</p>
+ * @method void setAlarmReason(string $AlarmReason) 设置<p>告警原因</p>
+ * @method integer getAlarmLevel() 获取<p>告警级别，1.普通， 2.重要，3.紧急</p>
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置<p>告警级别，1.普通， 2.重要，3.紧急</p>
+ * @method string getAlarmRuleId() 获取<p>告警规则Id</p>
+ * @method void setAlarmRuleId(string $AlarmRuleId) 设置<p>告警规则Id</p>
+ * @method array getAlarmWays() 获取<p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群</p>
+ * @method void setAlarmWays(array $AlarmWays) 设置<p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群</p>
+ * @method array getAlarmRecipients() 获取<p>告警接收人</p>
+ * @method void setAlarmRecipients(array $AlarmRecipients) 设置<p>告警接收人</p>
+ * @method array getCustomEmails() 获取<p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomEmails(array $CustomEmails) 设置<p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmMessage extends AbstractModel
 {
     /**
-     * @var integer 告警消息Id
+     * @var integer <p>告警消息Id</p>
      */
     public $AlarmMessageId;
 
     /**
-     * @var string 告警时间，同一条告警可能发送多次，只显示最新的告警时间
+     * @var string <p>告警时间，同一条告警可能发送多次，只显示最新的告警时间</p>
      */
     public $AlarmTime;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var string 任务Id
+     * @var string <p>任务Id</p>
      */
     public $TaskId;
 
     /**
-     * @var string 任务的实例数据时间
+     * @var string <p>任务的实例数据时间</p>
      */
     public $CurRunDate;
 
     /**
-     * @var string 告警原因
+     * @var string <p>告警原因</p>
      */
     public $AlarmReason;
 
     /**
-     * @var integer 告警级别，1.普通， 2.重要，3.紧急
+     * @var integer <p>告警级别，1.普通， 2.重要，3.紧急</p>
      */
     public $AlarmLevel;
 
     /**
-     * @var string 告警规则Id
+     * @var string <p>告警规则Id</p>
      */
     public $AlarmRuleId;
 
     /**
-     * @var array 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群 
+     * @var array <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群</p>
      */
     public $AlarmWays;
 
     /**
-     * @var array 告警接收人
+     * @var array <p>告警接收人</p>
      */
     public $AlarmRecipients;
 
     /**
-     * @param integer $AlarmMessageId 告警消息Id
-     * @param string $AlarmTime 告警时间，同一条告警可能发送多次，只显示最新的告警时间
-     * @param string $TaskName 任务名称
-     * @param string $TaskId 任务Id
-     * @param string $CurRunDate 任务的实例数据时间
-     * @param string $AlarmReason 告警原因
-     * @param integer $AlarmLevel 告警级别，1.普通， 2.重要，3.紧急
-     * @param string $AlarmRuleId 告警规则Id
-     * @param array $AlarmWays 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群 
-     * @param array $AlarmRecipients 告警接收人
+     * @var array <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomEmails;
+
+    /**
+     * @param integer $AlarmMessageId <p>告警消息Id</p>
+     * @param string $AlarmTime <p>告警时间，同一条告警可能发送多次，只显示最新的告警时间</p>
+     * @param string $TaskName <p>任务名称</p>
+     * @param string $TaskId <p>任务Id</p>
+     * @param string $CurRunDate <p>任务的实例数据时间</p>
+     * @param string $AlarmReason <p>告警原因</p>
+     * @param integer $AlarmLevel <p>告警级别，1.普通， 2.重要，3.紧急</p>
+     * @param string $AlarmRuleId <p>告警规则Id</p>
+     * @param array $AlarmWays <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群</p>
+     * @param array $AlarmRecipients <p>告警接收人</p>
+     * @param array $CustomEmails <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -156,6 +168,10 @@ class AlarmMessage extends AbstractModel
 
         if (array_key_exists("AlarmRecipients",$param) and $param["AlarmRecipients"] !== null) {
             $this->AlarmRecipients = $param["AlarmRecipients"];
+        }
+
+        if (array_key_exists("CustomEmails",$param) and $param["CustomEmails"] !== null) {
+            $this->CustomEmails = $param["CustomEmails"];
         }
     }
 }

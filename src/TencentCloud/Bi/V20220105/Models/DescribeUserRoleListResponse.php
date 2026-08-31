@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorInfo(ErrorInfo $ErrorInfo) 设置自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtra() 获取扩展描述信息(提供更多异常信息,用于辅助判断)
+ * @method string getExtra() 获取<p>扩展描述信息(提供更多异常信息,用于辅助判断)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtra(string $Extra) 设置扩展描述信息(提供更多异常信息,用于辅助判断)
+ * @method void setExtra(string $Extra) 设置<p>扩展描述信息(提供更多异常信息,用于辅助判断)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method UserRoleListData getData() 获取数据
+ * @method UserRoleListData getData() 获取<p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(UserRoleListData $Data) 设置数据
+ * @method void setData(UserRoleListData $Data) 设置<p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMsg() 获取消息
+ * @method string getMsg() 获取<p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMsg(string $Msg) 设置消息
+ * @method void setMsg(string $Msg) 设置<p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,19 +48,19 @@ class DescribeUserRoleListResponse extends AbstractModel
     public $ErrorInfo;
 
     /**
-     * @var string 扩展描述信息(提供更多异常信息,用于辅助判断)
+     * @var string <p>扩展描述信息(提供更多异常信息,用于辅助判断)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
 
     /**
-     * @var UserRoleListData 数据
+     * @var UserRoleListData <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
-     * @var string 消息
+     * @var string <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Msg;
@@ -73,11 +73,11 @@ class DescribeUserRoleListResponse extends AbstractModel
     /**
      * @param ErrorInfo $ErrorInfo 自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Extra 扩展描述信息(提供更多异常信息,用于辅助判断)
+     * @param string $Extra <p>扩展描述信息(提供更多异常信息,用于辅助判断)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserRoleListData $Data 数据
+     * @param UserRoleListData $Data <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Msg 消息
+     * @param string $Msg <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

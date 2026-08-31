@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置<p>偏移量，取Limit整数倍</p>
  * @method string getEngineType() 获取<p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
  * @method void setEngineType(string $EngineType) 设置<p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
+ * @method string getOrderBy() 获取<p>查询Order By字段，支持 StorageNodeNum/CreateTime/CreateVersion</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>查询Order By字段，支持 StorageNodeNum/CreateTime/CreateVersion</p>
+ * @method string getOrderDirection() 获取<p>排序方向</p><p>枚举值：</p><ul><li>ASC： 升序</li><li>DESC： 降序</li></ul><p>默认值：DESC</p>
+ * @method void setOrderDirection(string $OrderDirection) 设置<p>排序方向</p><p>枚举值：</p><ul><li>ASC： 升序</li><li>DESC： 降序</li></ul><p>默认值：DESC</p>
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $EngineType;
 
     /**
+     * @var string <p>查询Order By字段，支持 StorageNodeNum/CreateTime/CreateVersion</p>
+     */
+    public $OrderBy;
+
+    /**
+     * @var string <p>排序方向</p><p>枚举值：</p><ul><li>ASC： 升序</li><li>DESC： 降序</li></ul><p>默认值：DESC</p>
+     */
+    public $OrderDirection;
+
+    /**
      * @param array $Filters <p>过滤参数</p>
      * @param integer $Limit <p>最大返回个数，默认为20，上限为100</p>
      * @param integer $Offset <p>偏移量，取Limit整数倍</p>
      * @param string $EngineType <p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
+     * @param string $OrderBy <p>查询Order By字段，支持 StorageNodeNum/CreateTime/CreateVersion</p>
+     * @param string $OrderDirection <p>排序方向</p><p>枚举值：</p><ul><li>ASC： 升序</li><li>DESC： 降序</li></ul><p>默认值：DESC</p>
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
             $this->EngineType = $param["EngineType"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

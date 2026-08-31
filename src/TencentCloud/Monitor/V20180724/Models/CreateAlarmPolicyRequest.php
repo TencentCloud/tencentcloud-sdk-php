@@ -20,178 +20,186 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarmPolicy请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method string getPolicyName() 获取策略名称，不超过60字符
- * @method void setPolicyName(string $PolicyName) 设置策略名称，不超过60字符
- * @method string getMonitorType() 获取监控类型 MT_QCE=云产品监控
- * @method void setMonitorType(string $MonitorType) 设置监控类型 MT_QCE=云产品监控
- * @method string getNamespace() 获取告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
- * @method void setNamespace(string $Namespace) 设置告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
- * @method string getRemark() 获取备注，不超过100字符，仅支持中英文、数字、下划线、-
- * @method void setRemark(string $Remark) 设置备注，不超过100字符，仅支持中英文、数字、下划线、-
- * @method integer getEnable() 获取是否启用 0=停用 1=启用，可不传 默认为1
- * @method void setEnable(integer $Enable) 设置是否启用 0=停用 1=启用，可不传 默认为1
- * @method integer getProjectId() 获取项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
- * @method void setProjectId(integer $ProjectId) 设置项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
- * @method integer getConditionTemplateId() 获取触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
- * @method void setConditionTemplateId(integer $ConditionTemplateId) 设置触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
- * @method AlarmPolicyCondition getCondition() 获取指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
- * @method void setCondition(AlarmPolicyCondition $Condition) 设置指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
- * @method AlarmPolicyEventCondition getEventCondition() 获取事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
- * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) 设置事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
- * @method array getNoticeIds() 获取通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
- * @method void setNoticeIds(array $NoticeIds) 设置通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
- * @method array getTriggerTasks() 获取触发任务列表
- * @method void setTriggerTasks(array $TriggerTasks) 设置触发任务列表
- * @method AlarmPolicyFilter getFilter() 获取全局过滤条件
- * @method void setFilter(AlarmPolicyFilter $Filter) 设置全局过滤条件
- * @method array getGroupBy() 获取聚合维度列表，指定按哪些维度 key 来做 group by
- * @method void setGroupBy(array $GroupBy) 设置聚合维度列表，指定按哪些维度 key 来做 group by
- * @method array getTags() 获取模板绑定的标签
- * @method void setTags(array $Tags) 设置模板绑定的标签
- * @method LogAlarmReq getLogAlarmReqInfo() 获取日志告警信息
- * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) 设置日志告警信息
- * @method array getHierarchicalNotices() 获取告警分级通知规则配置
- * @method void setHierarchicalNotices(array $HierarchicalNotices) 设置告警分级通知规则配置
- * @method integer getMigrateFlag() 获取迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
- * @method void setMigrateFlag(integer $MigrateFlag) 设置迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
- * @method string getEbSubject() 获取事件配置的告警
- * @method void setEbSubject(string $EbSubject) 设置事件配置的告警
- * @method string getAdditionalAlarmContent() 获取附加告警内容
- * @method void setAdditionalAlarmContent(string $AdditionalAlarmContent) 设置附加告警内容
- * @method array getNoticeContentTmplBindInfos() 获取通知模板绑定信息
- * @method void setNoticeContentTmplBindInfos(array $NoticeContentTmplBindInfos) 设置通知模板绑定信息
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method string getPolicyName() 获取<p>策略名称，不超过60字符</p>
+ * @method void setPolicyName(string $PolicyName) 设置<p>策略名称，不超过60字符</p>
+ * @method string getMonitorType() 获取<p>监控类型 MT_QCE=云产品监控</p>
+ * @method void setMonitorType(string $MonitorType) 设置<p>监控类型 MT_QCE=云产品监控</p>
+ * @method string getNamespace() 获取<p>告警策略类型，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
+ * @method void setNamespace(string $Namespace) 设置<p>告警策略类型，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
+ * @method string getRemark() 获取<p>备注，不超过100字符，仅支持中英文、数字、下划线、-</p>
+ * @method void setRemark(string $Remark) 设置<p>备注，不超过100字符，仅支持中英文、数字、下划线、-</p>
+ * @method integer getEnable() 获取<p>是否启用 0=停用 1=启用，可不传 默认为1</p>
+ * @method void setEnable(integer $Enable) 设置<p>是否启用 0=停用 1=启用，可不传 默认为1</p>
+ * @method integer getProjectId() 获取<p>项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 <a href="https://console.cloud.tencent.com/project">账号中心-项目管理</a> 中查看。</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 <a href="https://console.cloud.tencent.com/project">账号中心-项目管理</a> 中查看。</p>
+ * @method integer getConditionTemplateId() 获取<p>触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 <a href="https://cloud.tencent.com/document/api/248/70250">DescribeConditionsTemplateList</a> 接口获取。</p>
+ * @method void setConditionTemplateId(integer $ConditionTemplateId) 设置<p>触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 <a href="https://cloud.tencent.com/document/api/248/70250">DescribeConditionsTemplateList</a> 接口获取。</p>
+ * @method AlarmPolicyCondition getCondition() 获取<p>指标触发条件，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
+ * @method void setCondition(AlarmPolicyCondition $Condition) 设置<p>指标触发条件，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
+ * @method AlarmPolicyEventCondition getEventCondition() 获取<p>事件触发条件，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询。</p>
+ * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) 设置<p>事件触发条件，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询。</p>
+ * @method array getNoticeIds() 获取<p>通知规则 Id 列表，由 <a href="https://cloud.tencent.com/document/product/248/51280">DescribeAlarmNotices</a> 获得</p>
+ * @method void setNoticeIds(array $NoticeIds) 设置<p>通知规则 Id 列表，由 <a href="https://cloud.tencent.com/document/product/248/51280">DescribeAlarmNotices</a> 获得</p>
+ * @method array getTriggerTasks() 获取<p>触发任务列表</p>
+ * @method void setTriggerTasks(array $TriggerTasks) 设置<p>触发任务列表</p>
+ * @method AlarmPolicyFilter getFilter() 获取<p>全局过滤条件</p>
+ * @method void setFilter(AlarmPolicyFilter $Filter) 设置<p>全局过滤条件</p>
+ * @method array getGroupBy() 获取<p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
+ * @method void setGroupBy(array $GroupBy) 设置<p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
+ * @method integer getIsBindAll() 获取<p>是否绑定全部对象。如果是的话，不需要再传filter或者调用BindPolicyObject，0=否，1=是，默认为否</p><p>取值范围：[0, 1]</p><p>默认值：0</p><p>不是所有策略类型都支持绑定全部对象</p>
+ * @method void setIsBindAll(integer $IsBindAll) 设置<p>是否绑定全部对象。如果是的话，不需要再传filter或者调用BindPolicyObject，0=否，1=是，默认为否</p><p>取值范围：[0, 1]</p><p>默认值：0</p><p>不是所有策略类型都支持绑定全部对象</p>
+ * @method array getTags() 获取<p>模板绑定的标签</p>
+ * @method void setTags(array $Tags) 设置<p>模板绑定的标签</p>
+ * @method LogAlarmReq getLogAlarmReqInfo() 获取<p>日志告警信息</p>
+ * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) 设置<p>日志告警信息</p>
+ * @method array getHierarchicalNotices() 获取<p>告警分级通知规则配置</p>
+ * @method void setHierarchicalNotices(array $HierarchicalNotices) 设置<p>告警分级通知规则配置</p>
+ * @method integer getMigrateFlag() 获取<p>迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑</p>
+ * @method void setMigrateFlag(integer $MigrateFlag) 设置<p>迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑</p>
+ * @method string getEbSubject() 获取<p>事件配置的告警</p>
+ * @method void setEbSubject(string $EbSubject) 设置<p>事件配置的告警</p>
+ * @method string getAdditionalAlarmContent() 获取<p>附加告警内容</p>
+ * @method void setAdditionalAlarmContent(string $AdditionalAlarmContent) 设置<p>附加告警内容</p>
+ * @method array getNoticeContentTmplBindInfos() 获取<p>通知模板绑定信息</p>
+ * @method void setNoticeContentTmplBindInfos(array $NoticeContentTmplBindInfos) 设置<p>通知模板绑定信息</p>
  */
 class CreateAlarmPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var string 策略名称，不超过60字符
+     * @var string <p>策略名称，不超过60字符</p>
      */
     public $PolicyName;
 
     /**
-     * @var string 监控类型 MT_QCE=云产品监控
+     * @var string <p>监控类型 MT_QCE=云产品监控</p>
      */
     public $MonitorType;
 
     /**
-     * @var string 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
+     * @var string <p>告警策略类型，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
      */
     public $Namespace;
 
     /**
-     * @var string 备注，不超过100字符，仅支持中英文、数字、下划线、-
+     * @var string <p>备注，不超过100字符，仅支持中英文、数字、下划线、-</p>
      */
     public $Remark;
 
     /**
-     * @var integer 是否启用 0=停用 1=启用，可不传 默认为1
+     * @var integer <p>是否启用 0=停用 1=启用，可不传 默认为1</p>
      */
     public $Enable;
 
     /**
-     * @var integer 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
+     * @var integer <p>项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 <a href="https://console.cloud.tencent.com/project">账号中心-项目管理</a> 中查看。</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
+     * @var integer <p>触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 <a href="https://cloud.tencent.com/document/api/248/70250">DescribeConditionsTemplateList</a> 接口获取。</p>
      */
     public $ConditionTemplateId;
 
     /**
-     * @var AlarmPolicyCondition 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @var AlarmPolicyCondition <p>指标触发条件，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
      */
     public $Condition;
 
     /**
-     * @var AlarmPolicyEventCondition 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
+     * @var AlarmPolicyEventCondition <p>事件触发条件，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询。</p>
      */
     public $EventCondition;
 
     /**
-     * @var array 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
+     * @var array <p>通知规则 Id 列表，由 <a href="https://cloud.tencent.com/document/product/248/51280">DescribeAlarmNotices</a> 获得</p>
      */
     public $NoticeIds;
 
     /**
-     * @var array 触发任务列表
+     * @var array <p>触发任务列表</p>
      */
     public $TriggerTasks;
 
     /**
-     * @var AlarmPolicyFilter 全局过滤条件
+     * @var AlarmPolicyFilter <p>全局过滤条件</p>
      */
     public $Filter;
 
     /**
-     * @var array 聚合维度列表，指定按哪些维度 key 来做 group by
+     * @var array <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
      */
     public $GroupBy;
 
     /**
-     * @var array 模板绑定的标签
+     * @var integer <p>是否绑定全部对象。如果是的话，不需要再传filter或者调用BindPolicyObject，0=否，1=是，默认为否</p><p>取值范围：[0, 1]</p><p>默认值：0</p><p>不是所有策略类型都支持绑定全部对象</p>
+     */
+    public $IsBindAll;
+
+    /**
+     * @var array <p>模板绑定的标签</p>
      */
     public $Tags;
 
     /**
-     * @var LogAlarmReq 日志告警信息
+     * @var LogAlarmReq <p>日志告警信息</p>
      */
     public $LogAlarmReqInfo;
 
     /**
-     * @var array 告警分级通知规则配置
+     * @var array <p>告警分级通知规则配置</p>
      */
     public $HierarchicalNotices;
 
     /**
-     * @var integer 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
+     * @var integer <p>迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑</p>
      */
     public $MigrateFlag;
 
     /**
-     * @var string 事件配置的告警
+     * @var string <p>事件配置的告警</p>
      */
     public $EbSubject;
 
     /**
-     * @var string 附加告警内容
+     * @var string <p>附加告警内容</p>
      */
     public $AdditionalAlarmContent;
 
     /**
-     * @var array 通知模板绑定信息
+     * @var array <p>通知模板绑定信息</p>
      */
     public $NoticeContentTmplBindInfos;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param string $PolicyName 策略名称，不超过60字符
-     * @param string $MonitorType 监控类型 MT_QCE=云产品监控
-     * @param string $Namespace 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
-     * @param string $Remark 备注，不超过100字符，仅支持中英文、数字、下划线、-
-     * @param integer $Enable 是否启用 0=停用 1=启用，可不传 默认为1
-     * @param integer $ProjectId 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
-     * @param integer $ConditionTemplateId 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
-     * @param AlarmPolicyCondition $Condition 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
-     * @param AlarmPolicyEventCondition $EventCondition 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
-     * @param array $NoticeIds 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
-     * @param array $TriggerTasks 触发任务列表
-     * @param AlarmPolicyFilter $Filter 全局过滤条件
-     * @param array $GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
-     * @param array $Tags 模板绑定的标签
-     * @param LogAlarmReq $LogAlarmReqInfo 日志告警信息
-     * @param array $HierarchicalNotices 告警分级通知规则配置
-     * @param integer $MigrateFlag 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
-     * @param string $EbSubject 事件配置的告警
-     * @param string $AdditionalAlarmContent 附加告警内容
-     * @param array $NoticeContentTmplBindInfos 通知模板绑定信息
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param string $PolicyName <p>策略名称，不超过60字符</p>
+     * @param string $MonitorType <p>监控类型 MT_QCE=云产品监控</p>
+     * @param string $Namespace <p>告警策略类型，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
+     * @param string $Remark <p>备注，不超过100字符，仅支持中英文、数字、下划线、-</p>
+     * @param integer $Enable <p>是否启用 0=停用 1=启用，可不传 默认为1</p>
+     * @param integer $ProjectId <p>项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 <a href="https://console.cloud.tencent.com/project">账号中心-项目管理</a> 中查看。</p>
+     * @param integer $ConditionTemplateId <p>触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 <a href="https://cloud.tencent.com/document/api/248/70250">DescribeConditionsTemplateList</a> 接口获取。</p>
+     * @param AlarmPolicyCondition $Condition <p>指标触发条件，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
+     * @param AlarmPolicyEventCondition $EventCondition <p>事件触发条件，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询。</p>
+     * @param array $NoticeIds <p>通知规则 Id 列表，由 <a href="https://cloud.tencent.com/document/product/248/51280">DescribeAlarmNotices</a> 获得</p>
+     * @param array $TriggerTasks <p>触发任务列表</p>
+     * @param AlarmPolicyFilter $Filter <p>全局过滤条件</p>
+     * @param array $GroupBy <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
+     * @param integer $IsBindAll <p>是否绑定全部对象。如果是的话，不需要再传filter或者调用BindPolicyObject，0=否，1=是，默认为否</p><p>取值范围：[0, 1]</p><p>默认值：0</p><p>不是所有策略类型都支持绑定全部对象</p>
+     * @param array $Tags <p>模板绑定的标签</p>
+     * @param LogAlarmReq $LogAlarmReqInfo <p>日志告警信息</p>
+     * @param array $HierarchicalNotices <p>告警分级通知规则配置</p>
+     * @param integer $MigrateFlag <p>迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑</p>
+     * @param string $EbSubject <p>事件配置的告警</p>
+     * @param string $AdditionalAlarmContent <p>附加告警内容</p>
+     * @param array $NoticeContentTmplBindInfos <p>通知模板绑定信息</p>
      */
     function __construct()
     {
@@ -268,6 +276,10 @@ class CreateAlarmPolicyRequest extends AbstractModel
 
         if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
             $this->GroupBy = $param["GroupBy"];
+        }
+
+        if (array_key_exists("IsBindAll",$param) and $param["IsBindAll"] !== null) {
+            $this->IsBindAll = $param["IsBindAll"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

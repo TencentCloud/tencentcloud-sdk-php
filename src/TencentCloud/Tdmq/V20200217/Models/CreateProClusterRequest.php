@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProCluster请求参数结构体
  *
- * @method array getZoneIds() 获取<p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
- * @method void setZoneIds(array $ZoneIds) 设置<p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+ * @method array getZoneIds() 获取<p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>专业版：当选择PULSAR.P2.MINI1时只支持两个可用区，其他规格支持三个可用区<br>标准版（PULSAR.S2系列）：只支持两个可用区</p>
+ * @method void setZoneIds(array $ZoneIds) 设置<p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>专业版：当选择PULSAR.P2.MINI1时只支持两个可用区，其他规格支持三个可用区<br>标准版（PULSAR.S2系列）：只支持两个可用区</p>
  * @method string getProductName() 获取<p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
  * @method void setProductName(string $ProductName) 设置<p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
  * @method integer getAutoRenewFlag() 获取<p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
@@ -40,11 +40,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>集群的标签列表(已废弃)</p>
  * @method string getInstanceVersion() 获取<p>集群版本信息</p>
  * @method void setInstanceVersion(string $InstanceVersion) 设置<p>集群版本信息</p>
+ * @method string getUserTenant() 获取<p>用户自定义租户名，可选。<br>不能为空，支持数字、字母以及符号 “-_=:.”，长度不超过 64 个字符。<br>未传时使用默认规则（实例 ID 作为租户名）。</p>
+ * @method void setUserTenant(string $UserTenant) 设置<p>用户自定义租户名，可选。<br>不能为空，支持数字、字母以及符号 “-_=:.”，长度不超过 64 个字符。<br>未传时使用默认规则（实例 ID 作为租户名）。</p>
+ * @method integer getElasticTpsEnabled() 获取<p>是否开启弹性TPS（1：开启，0：关闭），仅专业版P1固定存储集群支持</p>
+ * @method void setElasticTpsEnabled(integer $ElasticTpsEnabled) 设置<p>是否开启弹性TPS（1：开启，0：关闭），仅专业版P1固定存储集群支持</p>
  */
 class CreateProClusterRequest extends AbstractModel
 {
     /**
-     * @var array <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+     * @var array <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>专业版：当选择PULSAR.P2.MINI1时只支持两个可用区，其他规格支持三个可用区<br>标准版（PULSAR.S2系列）：只支持两个可用区</p>
      */
     public $ZoneIds;
 
@@ -94,7 +98,17 @@ class CreateProClusterRequest extends AbstractModel
     public $InstanceVersion;
 
     /**
-     * @param array $ZoneIds <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+     * @var string <p>用户自定义租户名，可选。<br>不能为空，支持数字、字母以及符号 “-_=:.”，长度不超过 64 个字符。<br>未传时使用默认规则（实例 ID 作为租户名）。</p>
+     */
+    public $UserTenant;
+
+    /**
+     * @var integer <p>是否开启弹性TPS（1：开启，0：关闭），仅专业版P1固定存储集群支持</p>
+     */
+    public $ElasticTpsEnabled;
+
+    /**
+     * @param array $ZoneIds <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>专业版：当选择PULSAR.P2.MINI1时只支持两个可用区，其他规格支持三个可用区<br>标准版（PULSAR.S2系列）：只支持两个可用区</p>
      * @param string $ProductName <p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
      * @param integer $AutoRenewFlag <p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
      * @param integer $TimeSpan <p>购买时长，取值范围：1～50</p>
@@ -104,6 +118,8 @@ class CreateProClusterRequest extends AbstractModel
      * @param VpcInfo $Vpc <p>vpc网络标签</p>
      * @param array $Tags <p>集群的标签列表(已废弃)</p>
      * @param string $InstanceVersion <p>集群版本信息</p>
+     * @param string $UserTenant <p>用户自定义租户名，可选。<br>不能为空，支持数字、字母以及符号 “-_=:.”，长度不超过 64 个字符。<br>未传时使用默认规则（实例 ID 作为租户名）。</p>
+     * @param integer $ElasticTpsEnabled <p>是否开启弹性TPS（1：开启，0：关闭），仅专业版P1固定存储集群支持</p>
      */
     function __construct()
     {
@@ -162,6 +178,14 @@ class CreateProClusterRequest extends AbstractModel
 
         if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
             $this->InstanceVersion = $param["InstanceVersion"];
+        }
+
+        if (array_key_exists("UserTenant",$param) and $param["UserTenant"] !== null) {
+            $this->UserTenant = $param["UserTenant"];
+        }
+
+        if (array_key_exists("ElasticTpsEnabled",$param) and $param["ElasticTpsEnabled"] !== null) {
+            $this->ElasticTpsEnabled = $param["ElasticTpsEnabled"];
         }
     }
 }

@@ -166,7 +166,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeEnvsResponse DescribeEnvs(Models\DescribeEnvsRequest $req) 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
  * @method Models\DescribeGatewayVersionsResponse DescribeGatewayVersions(Models\DescribeGatewayVersionsRequest $req) 查询网关版本信息
 暂不鉴权
- * @method Models\DescribeHTTPServiceRouteResponse DescribeHTTPServiceRoute(Models\DescribeHTTPServiceRouteRequest $req) 本接口DescribeHTTPServiceRoute用于查询环境下HTTP访问服务路由信息。可通过Filters过滤。如果不存在不会返回错误。HTTP访问服务提供了默认域名，通过本接口可直接获取默认域名。
+ * @method Models\DescribeHTTPServiceRouteResponse DescribeHTTPServiceRoute(Models\DescribeHTTPServiceRouteRequest $req) 本接口DescribeHTTPServiceRoute用于查询环境下HTTP访问服务路由信息。可通过Filters过滤。如果不存在不会返回错误。HTTP访问服务提供了默认域名，通过本接口可直接获取默认域名。前置需已开通 HTTP 访问服务；调用CreateHTTPServiceRoute或者ModifyHTTPServiceRoute后可使用本接口查询创建或者修改结果
  * @method Models\DescribeHostingDomainTaskResponse DescribeHostingDomainTask(Models\DescribeHostingDomainTaskRequest $req) 查询静态托管域名任务状态
  * @method Models\DescribeLoginConfigResponse DescribeLoginConfig(Models\DescribeLoginConfigRequest $req) 查询指定云开发环境的登录策略配置。包括手机号短信登录、邮箱登录、用户名密码登录和匿名登录方式的开启状态，同时包含短信验证码发送通道、MFA 多因子认证和密码的更新策略。
  * @method Models\DescribeManagedAIModelListResponse DescribeManagedAIModelList(Models\DescribeManagedAIModelListRequest $req) 查询云开发平台支持的托管类型 AI 模型列表。
@@ -221,6 +221,7 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
  * @method Models\ModifyClsTopicResponse ModifyClsTopic(Models\ModifyClsTopicRequest $req) 修改日志主题
  * @method Models\ModifyDatabaseACLResponse ModifyDatabaseACL(Models\ModifyDatabaseACLRequest $req) 本接口（ModifyDatabaseACL）用于修改文档型数据库权限。
  * @method Models\ModifyEnvResponse ModifyEnv(Models\ModifyEnvRequest $req) 更新环境信息
+ * @method Models\ModifyEnvExtraResponse ModifyEnvExtra(Models\ModifyEnvExtraRequest $req) 修改环境额外配置
  * @method Models\ModifyEnvPlanResponse ModifyEnvPlan(Models\ModifyEnvPlanRequest $req) 本接口用于变更云开发环境套餐。
 该接口会自动下单并支付，会在腾讯云账户中扣除余额（余额不足会下单失败）。
 该接口支持自动扣除代金券（AutoVoucher=true时），符合条件的代金券会被自动扣除。

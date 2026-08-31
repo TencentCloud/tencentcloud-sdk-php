@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 代理相关应用信息，如集团主企业代子企业操作
  *
- * @method string getAppId() 获取代理机构的应用编号,32位字符串，一般不用传
- * @method void setAppId(string $AppId) 设置代理机构的应用编号,32位字符串，一般不用传
- * @method string getProxyAppId() 获取被代理机构的应用号，一般不用传
- * @method void setProxyAppId(string $ProxyAppId) 设置被代理机构的应用号，一般不用传
- * @method string getProxyOrganizationId() 获取被代理机构在电子签平台的机构编号，集团代理下场景必传
- * @method void setProxyOrganizationId(string $ProxyOrganizationId) 设置被代理机构在电子签平台的机构编号，集团代理下场景必传
- * @method string getProxyOperator() 获取被代理机构的经办人，一般不用传
- * @method void setProxyOperator(string $ProxyOperator) 设置被代理机构的经办人，一般不用传
+ * @method string getAppId() 获取<p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
+ * @method void setAppId(string $AppId) 设置<p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
+ * @method string getProxyAppId() 获取<p>被代理机构的应用号，一般不用传</p>
+ * @method void setProxyAppId(string $ProxyAppId) 设置<p>被代理机构的应用号，一般不用传</p>
+ * @method string getProxyOrganizationId() 获取<p>被代理机构在电子签平台的机构编号，集团代理下场景必传</p>
+ * @method void setProxyOrganizationId(string $ProxyOrganizationId) 设置<p>被代理机构在电子签平台的机构编号，集团代理下场景必传</p>
+ * @method string getProxyOperator() 获取<p>被代理机构的经办人，一般不用传</p>
+ * @method void setProxyOperator(string $ProxyOperator) 设置<p>被代理机构的经办人，一般不用传</p>
  */
 class Agent extends AbstractModel
 {
     /**
-     * @var string 代理机构的应用编号,32位字符串，一般不用传
+     * @var string <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
      * @deprecated
      */
     public $AppId;
 
     /**
-     * @var string 被代理机构的应用号，一般不用传
+     * @var string <p>被代理机构的应用号，一般不用传</p>
      * @deprecated
      */
     public $ProxyAppId;
 
     /**
-     * @var string 被代理机构在电子签平台的机构编号，集团代理下场景必传
+     * @var string <p>被代理机构在电子签平台的机构编号，集团代理下场景必传</p>
      */
     public $ProxyOrganizationId;
 
     /**
-     * @var string 被代理机构的经办人，一般不用传
+     * @var string <p>被代理机构的经办人，一般不用传</p>
      * @deprecated
      */
     public $ProxyOperator;
 
     /**
-     * @param string $AppId 代理机构的应用编号,32位字符串，一般不用传
-     * @param string $ProxyAppId 被代理机构的应用号，一般不用传
-     * @param string $ProxyOrganizationId 被代理机构在电子签平台的机构编号，集团代理下场景必传
-     * @param string $ProxyOperator 被代理机构的经办人，一般不用传
+     * @param string $AppId <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
+     * @param string $ProxyAppId <p>被代理机构的应用号，一般不用传</p>
+     * @param string $ProxyOrganizationId <p>被代理机构在电子签平台的机构编号，集团代理下场景必传</p>
+     * @param string $ProxyOperator <p>被代理机构的经办人，一般不用传</p>
      */
     function __construct()
     {

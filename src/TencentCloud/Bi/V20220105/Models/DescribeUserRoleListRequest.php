@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserRoleList请求参数结构体
  *
- * @method integer getPageNo() 获取页码
- * @method void setPageNo(integer $PageNo) 设置页码
- * @method integer getPageSize() 获取页数
- * @method void setPageSize(integer $PageSize) 设置页数
- * @method boolean getAllPage() 获取全部页码
- * @method void setAllPage(boolean $AllPage) 设置全部页码
- * @method string getUserType() 获取0 企业用户 1 访客 不填表示所有用户
- * @method void setUserType(string $UserType) 设置0 企业用户 1 访客 不填表示所有用户
- * @method string getKeyword() 获取模糊搜索的关键字
- * @method void setKeyword(string $Keyword) 设置模糊搜索的关键字
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
- * @method boolean getIsOnlyBindAppUser() 获取是否只获取绑定企微应用的
- * @method void setIsOnlyBindAppUser(boolean $IsOnlyBindAppUser) 设置是否只获取绑定企微应用的
+ * @method integer getPageNo() 获取<p>页码</p>
+ * @method void setPageNo(integer $PageNo) 设置<p>页码</p>
+ * @method integer getPageSize() 获取<p>页数</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>页数</p>
+ * @method boolean getAllPage() 获取<p>全部页码</p>
+ * @method void setAllPage(boolean $AllPage) 设置<p>全部页码</p>
+ * @method string getUserType() 获取<p>0 企业用户 1 访客 不填表示所有用户</p>
+ * @method void setUserType(string $UserType) 设置<p>0 企业用户 1 访客 不填表示所有用户</p>
+ * @method string getKeyword() 获取<p>模糊搜索的关键字</p>
+ * @method void setKeyword(string $Keyword) 设置<p>模糊搜索的关键字</p>
+ * @method string getProjectId() 获取<p>项目id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
+ * @method boolean getIsOnlyBindAppUser() 获取<p>是否只获取绑定企微应用的</p>
+ * @method void setIsOnlyBindAppUser(boolean $IsOnlyBindAppUser) 设置<p>是否只获取绑定企微应用的</p>
+ * @method string getIdentityType() 获取<p>用户类型</p>
+ * @method void setIdentityType(string $IdentityType) 设置<p>用户类型</p>
  */
 class DescribeUserRoleListRequest extends AbstractModel
 {
     /**
-     * @var integer 页码
+     * @var integer <p>页码</p>
      */
     public $PageNo;
 
     /**
-     * @var integer 页数
+     * @var integer <p>页数</p>
      */
     public $PageSize;
 
     /**
-     * @var boolean 全部页码
+     * @var boolean <p>全部页码</p>
      */
     public $AllPage;
 
     /**
-     * @var string 0 企业用户 1 访客 不填表示所有用户
+     * @var string <p>0 企业用户 1 访客 不填表示所有用户</p>
      */
     public $UserType;
 
     /**
-     * @var string 模糊搜索的关键字
+     * @var string <p>模糊搜索的关键字</p>
      */
     public $Keyword;
 
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
      */
     public $ProjectId;
 
     /**
-     * @var boolean 是否只获取绑定企微应用的
+     * @var boolean <p>是否只获取绑定企微应用的</p>
      */
     public $IsOnlyBindAppUser;
 
     /**
-     * @param integer $PageNo 页码
-     * @param integer $PageSize 页数
-     * @param boolean $AllPage 全部页码
-     * @param string $UserType 0 企业用户 1 访客 不填表示所有用户
-     * @param string $Keyword 模糊搜索的关键字
-     * @param string $ProjectId 项目id
-     * @param boolean $IsOnlyBindAppUser 是否只获取绑定企微应用的
+     * @var string <p>用户类型</p>
+     */
+    public $IdentityType;
+
+    /**
+     * @param integer $PageNo <p>页码</p>
+     * @param integer $PageSize <p>页数</p>
+     * @param boolean $AllPage <p>全部页码</p>
+     * @param string $UserType <p>0 企业用户 1 访客 不填表示所有用户</p>
+     * @param string $Keyword <p>模糊搜索的关键字</p>
+     * @param string $ProjectId <p>项目id</p>
+     * @param boolean $IsOnlyBindAppUser <p>是否只获取绑定企微应用的</p>
+     * @param string $IdentityType <p>用户类型</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeUserRoleListRequest extends AbstractModel
 
         if (array_key_exists("IsOnlyBindAppUser",$param) and $param["IsOnlyBindAppUser"] !== null) {
             $this->IsOnlyBindAppUser = $param["IsOnlyBindAppUser"];
+        }
+
+        if (array_key_exists("IdentityType",$param) and $param["IdentityType"] !== null) {
+            $this->IdentityType = $param["IdentityType"];
         }
     }
 }

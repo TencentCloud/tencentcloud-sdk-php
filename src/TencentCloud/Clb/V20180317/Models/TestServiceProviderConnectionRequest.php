@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceProviderId(string $ServiceProviderId) 设置<p>BYOK的ID，当AccessType为PrivateCustom时生效</p>
  * @method boolean getVerifySSL() 获取<p>是否校验服务提供商的SSL证书</p><p>默认值：AccessType取值为：</p><ul><li>PublicBYOK时，该参数无效；</li><li>PublicCustom时，该参数默认为true；</li><li>PrivateCustom时，该参数默认为false；</li></ul>
  * @method void setVerifySSL(boolean $VerifySSL) 设置<p>是否校验服务提供商的SSL证书</p><p>默认值：AccessType取值为：</p><ul><li>PublicBYOK时，该参数无效；</li><li>PublicCustom时，该参数默认为true；</li><li>PrivateCustom时，该参数默认为false；</li></ul>
+ * @method string getHealthCheckProtocol() 获取<p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
+ * @method void setHealthCheckProtocol(string $HealthCheckProtocol) 设置<p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
+ * @method string getCMRPrivateNetworkTunnelId() 获取<p>    CMR 私网管道ID </p>
+ * @method void setCMRPrivateNetworkTunnelId(string $CMRPrivateNetworkTunnelId) 设置<p>    CMR 私网管道ID </p>
  */
 class TestServiceProviderConnectionRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class TestServiceProviderConnectionRequest extends AbstractModel
     public $VerifySSL;
 
     /**
+     * @var string <p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
+     */
+    public $HealthCheckProtocol;
+
+    /**
+     * @var string <p>    CMR 私网管道ID </p>
+     */
+    public $CMRPrivateNetworkTunnelId;
+
+    /**
      * @param array $Models <p>需要探测的模型列表</p><p>入参限制：上限为20个模型</p>
      * @param string $ProviderKey <p>需要探测的Key</p>
      * @param string $ProviderKeyId <p>需要探测的KeyId，和ProviderKey二者传一个即可</p>
@@ -104,6 +118,8 @@ class TestServiceProviderConnectionRequest extends AbstractModel
      * @param string $HostHeader <p>请求携带的Host头部，当AccessType为PrivateCustom时生效</p>
      * @param string $ServiceProviderId <p>BYOK的ID，当AccessType为PrivateCustom时生效</p>
      * @param boolean $VerifySSL <p>是否校验服务提供商的SSL证书</p><p>默认值：AccessType取值为：</p><ul><li>PublicBYOK时，该参数无效；</li><li>PublicCustom时，该参数默认为true；</li><li>PrivateCustom时，该参数默认为false；</li></ul>
+     * @param string $HealthCheckProtocol <p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
+     * @param string $CMRPrivateNetworkTunnelId <p>    CMR 私网管道ID </p>
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class TestServiceProviderConnectionRequest extends AbstractModel
 
         if (array_key_exists("VerifySSL",$param) and $param["VerifySSL"] !== null) {
             $this->VerifySSL = $param["VerifySSL"];
+        }
+
+        if (array_key_exists("HealthCheckProtocol",$param) and $param["HealthCheckProtocol"] !== null) {
+            $this->HealthCheckProtocol = $param["HealthCheckProtocol"];
+        }
+
+        if (array_key_exists("CMRPrivateNetworkTunnelId",$param) and $param["CMRPrivateNetworkTunnelId"] !== null) {
+            $this->CMRPrivateNetworkTunnelId = $param["CMRPrivateNetworkTunnelId"];
         }
     }
 }

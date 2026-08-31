@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云联网路由传播策略
  *
- * @method array getRouteConditions() 获取路由条件
- * @method void setRouteConditions(array $RouteConditions) 设置路由条件
- * @method array getBroadcastConditions() 获取传播条件
- * @method void setBroadcastConditions(array $BroadcastConditions) 设置传播条件
- * @method string getAction() 获取路由行为，`accept` 允许，`drop` 拒绝
- * @method void setAction(string $Action) 设置路由行为，`accept` 允许，`drop` 拒绝
- * @method string getDescription() 获取策略描述
- * @method void setDescription(string $Description) 设置策略描述
- * @method string getOperateAsPath() 获取as-path操作
- * @method void setOperateAsPath(string $OperateAsPath) 设置as-path操作
- * @method string getAsPathOperateMode() 获取as-path操作模式
- * @method void setAsPathOperateMode(string $AsPathOperateMode) 设置as-path操作模式
- * @method array getOperateCommunitySet() 获取community操作
- * @method void setOperateCommunitySet(array $OperateCommunitySet) 设置community操作
- * @method string getCommunityOperateMode() 获取community操作模式
- * @method void setCommunityOperateMode(string $CommunityOperateMode) 设置community操作模式
+ * @method array getRouteConditions() 获取<p>路由条件</p>
+ * @method void setRouteConditions(array $RouteConditions) 设置<p>路由条件</p>
+ * @method array getBroadcastConditions() 获取<p>传播条件</p>
+ * @method void setBroadcastConditions(array $BroadcastConditions) 设置<p>传播条件</p>
+ * @method string getAction() 获取<p>路由行为，<code>accept</code> 允许，<code>drop</code> 拒绝</p>
+ * @method void setAction(string $Action) 设置<p>路由行为，<code>accept</code> 允许，<code>drop</code> 拒绝</p>
+ * @method string getDescription() 获取<p>策略描述</p>
+ * @method void setDescription(string $Description) 设置<p>策略描述</p>
+ * @method string getOperateAsPath() 获取<p>as-path操作</p>
+ * @method void setOperateAsPath(string $OperateAsPath) 设置<p>as-path操作</p>
+ * @method string getAsPathOperateMode() 获取<p>as-path操作模式</p>
+ * @method void setAsPathOperateMode(string $AsPathOperateMode) 设置<p>as-path操作模式</p>
+ * @method array getOperateCommunitySet() 获取<p>community操作</p>
+ * @method void setOperateCommunitySet(array $OperateCommunitySet) 设置<p>community操作</p>
+ * @method string getCommunityOperateMode() 获取<p>community操作模式</p>
+ * @method void setCommunityOperateMode(string $CommunityOperateMode) 设置<p>community操作模式</p>
  */
 class CcnRouteTableBroadcastPolicy extends AbstractModel
 {
     /**
-     * @var array 路由条件
+     * @var array <p>路由条件</p>
      */
     public $RouteConditions;
 
     /**
-     * @var array 传播条件
+     * @var array <p>传播条件</p>
      */
     public $BroadcastConditions;
 
     /**
-     * @var string 路由行为，`accept` 允许，`drop` 拒绝
+     * @var string <p>路由行为，<code>accept</code> 允许，<code>drop</code> 拒绝</p>
      */
     public $Action;
 
     /**
-     * @var string 策略描述
+     * @var string <p>策略描述</p>
      */
     public $Description;
 
     /**
-     * @var string as-path操作
+     * @var string <p>as-path操作</p>
      */
     public $OperateAsPath;
 
     /**
-     * @var string as-path操作模式
+     * @var string <p>as-path操作模式</p>
      */
     public $AsPathOperateMode;
 
     /**
-     * @var array community操作
+     * @var array <p>community操作</p>
      */
     public $OperateCommunitySet;
 
     /**
-     * @var string community操作模式
+     * @var string <p>community操作模式</p>
      */
     public $CommunityOperateMode;
 
     /**
-     * @param array $RouteConditions 路由条件
-     * @param array $BroadcastConditions 传播条件
-     * @param string $Action 路由行为，`accept` 允许，`drop` 拒绝
-     * @param string $Description 策略描述
-     * @param string $OperateAsPath as-path操作
-     * @param string $AsPathOperateMode as-path操作模式
-     * @param array $OperateCommunitySet community操作
-     * @param string $CommunityOperateMode community操作模式
+     * @param array $RouteConditions <p>路由条件</p>
+     * @param array $BroadcastConditions <p>传播条件</p>
+     * @param string $Action <p>路由行为，<code>accept</code> 允许，<code>drop</code> 拒绝</p>
+     * @param string $Description <p>策略描述</p>
+     * @param string $OperateAsPath <p>as-path操作</p>
+     * @param string $AsPathOperateMode <p>as-path操作模式</p>
+     * @param array $OperateCommunitySet <p>community操作</p>
+     * @param string $CommunityOperateMode <p>community操作模式</p>
      */
     function __construct()
     {

@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAddressTemplateList请求参数结构体
  *
- * @method integer getOffset() 获取偏移量，分页用
- * @method void setOffset(integer $Offset) 设置偏移量，分页用
- * @method integer getLimit() 获取条数，分页用
- * @method void setLimit(integer $Limit) 设置条数，分页用
- * @method string getBy() 获取排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
- * @method void setBy(string $By) 设置排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
- * @method string getOrder() 获取排序，取值 ：asc正序，desc逆序
- * @method void setOrder(string $Order) 设置排序，取值 ：asc正序，desc逆序
- * @method string getSearchValue() 获取搜索值
- * @method void setSearchValue(string $SearchValue) 设置搜索值
- * @method string getUuid() 获取检索地址模板唯一id
- * @method void setUuid(string $Uuid) 设置检索地址模板唯一id
- * @method string getTemplateType() 获取模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
- * @method void setTemplateType(string $TemplateType) 设置模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
- * @method string getTemplateId() 获取模板Id
- * @method void setTemplateId(string $TemplateId) 设置模板Id
+ * @method integer getOffset() 获取<p>偏移量，分页用</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，分页用</p>
+ * @method integer getLimit() 获取<p>条数，分页用</p>
+ * @method void setLimit(integer $Limit) 设置<p>条数，分页用</p>
+ * @method string getBy() 获取<p>排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数</p>
+ * @method void setBy(string $By) 设置<p>排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数</p>
+ * @method string getOrder() 获取<p>排序，取值 ：asc正序，desc逆序</p>
+ * @method void setOrder(string $Order) 设置<p>排序，取值 ：asc正序，desc逆序</p>
+ * @method string getSearchValue() 获取<p>搜索值</p>
+ * @method void setSearchValue(string $SearchValue) 设置<p>搜索值</p>
+ * @method string getUuid() 获取<p>检索地址模板唯一id</p>
+ * @method void setUuid(string $Uuid) 设置<p>检索地址模板唯一id</p>
+ * @method string getTemplateType() 获取<p>模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板</p>
+ * @method void setTemplateType(string $TemplateType) 设置<p>模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板</p>
+ * @method string getTemplateId() 获取<p>模板Id</p>
+ * @method void setTemplateId(string $TemplateId) 设置<p>模板Id</p>
+ * @method string getSourceType() 获取<p>模板来源</p>
+ * @method void setSourceType(string $SourceType) 设置<p>模板来源</p>
  */
 class DescribeAddressTemplateListRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量，分页用
+     * @var integer <p>偏移量，分页用</p>
      */
     public $Offset;
 
     /**
-     * @var integer 条数，分页用
+     * @var integer <p>条数，分页用</p>
      */
     public $Limit;
 
     /**
-     * @var string 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
+     * @var string <p>排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数</p>
      */
     public $By;
 
     /**
-     * @var string 排序，取值 ：asc正序，desc逆序
+     * @var string <p>排序，取值 ：asc正序，desc逆序</p>
      */
     public $Order;
 
     /**
-     * @var string 搜索值
+     * @var string <p>搜索值</p>
      */
     public $SearchValue;
 
     /**
-     * @var string 检索地址模板唯一id
+     * @var string <p>检索地址模板唯一id</p>
      */
     public $Uuid;
 
     /**
-     * @var string 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
+     * @var string <p>模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板</p>
      */
     public $TemplateType;
 
     /**
-     * @var string 模板Id
+     * @var string <p>模板Id</p>
      */
     public $TemplateId;
 
     /**
-     * @param integer $Offset 偏移量，分页用
-     * @param integer $Limit 条数，分页用
-     * @param string $By 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
-     * @param string $Order 排序，取值 ：asc正序，desc逆序
-     * @param string $SearchValue 搜索值
-     * @param string $Uuid 检索地址模板唯一id
-     * @param string $TemplateType 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
-     * @param string $TemplateId 模板Id
+     * @var string <p>模板来源</p>
+     */
+    public $SourceType;
+
+    /**
+     * @param integer $Offset <p>偏移量，分页用</p>
+     * @param integer $Limit <p>条数，分页用</p>
+     * @param string $By <p>排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数</p>
+     * @param string $Order <p>排序，取值 ：asc正序，desc逆序</p>
+     * @param string $SearchValue <p>搜索值</p>
+     * @param string $Uuid <p>检索地址模板唯一id</p>
+     * @param string $TemplateType <p>模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板</p>
+     * @param string $TemplateId <p>模板Id</p>
+     * @param string $SourceType <p>模板来源</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeAddressTemplateListRequest extends AbstractModel
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
         }
     }
 }

@@ -36,8 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelProtocol(string $ModelProtocol) 设置<p>模型协议</p>
  * @method string getModelProvider() 获取<p>模型提供商</p>
  * @method void setModelProvider(string $ModelProvider) 设置<p>模型提供商</p>
- * @method string getServiceProviderId() 获取<p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx</p>
- * @method void setServiceProviderId(string $ServiceProviderId) 设置<p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx</p>
+ * @method string getServiceProviderId() 获取<p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx，预留参数</p>
+ * @method void setServiceProviderId(string $ServiceProviderId) 设置<p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx，预留参数</p>
+ * @method string getCMRPrivateNetworkTunnelId() 获取<p>    CMR 私网管道ID </p>
+ * @method void setCMRPrivateNetworkTunnelId(string $CMRPrivateNetworkTunnelId) 设置<p>    CMR 私网管道ID </p>
  */
 class DescribeUpperModelsRequest extends AbstractModel
 {
@@ -82,9 +84,14 @@ class DescribeUpperModelsRequest extends AbstractModel
     public $ModelProvider;
 
     /**
-     * @var string <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx</p>
+     * @var string <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx，预留参数</p>
      */
     public $ServiceProviderId;
+
+    /**
+     * @var string <p>    CMR 私网管道ID </p>
+     */
+    public $CMRPrivateNetworkTunnelId;
 
     /**
      * @param string $AccessType <p>接入类型：PublicBYOK/PublicCustom/PrivateCustom</p>
@@ -95,7 +102,8 @@ class DescribeUpperModelsRequest extends AbstractModel
      * @param string $ModelPath <p>模型列表端点路径，可选</p><p>默认值：/v1/models</p>
      * @param string $ModelProtocol <p>模型协议</p>
      * @param string $ModelProvider <p>模型提供商</p>
-     * @param string $ServiceProviderId <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx</p>
+     * @param string $ServiceProviderId <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx，预留参数</p>
+     * @param string $CMRPrivateNetworkTunnelId <p>    CMR 私网管道ID </p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeUpperModelsRequest extends AbstractModel
 
         if (array_key_exists("ServiceProviderId",$param) and $param["ServiceProviderId"] !== null) {
             $this->ServiceProviderId = $param["ServiceProviderId"];
+        }
+
+        if (array_key_exists("CMRPrivateNetworkTunnelId",$param) and $param["CMRPrivateNetworkTunnelId"] !== null) {
+            $this->CMRPrivateNetworkTunnelId = $param["CMRPrivateNetworkTunnelId"];
         }
     }
 }

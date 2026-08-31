@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServerlessCcuSpec() 获取<p>svls节点售卖规格列表</p>
  * @method void setServerlessCcuSpec(array $ServerlessCcuSpec) 设置<p>svls节点售卖规格列表</p>
+ * @method ServerlessNodeNumSpec getServerlessNodeNumSpec() 获取<p>serverless节点数量配置</p>
+ * @method void setServerlessNodeNumSpec(ServerlessNodeNumSpec $ServerlessNodeNumSpec) 设置<p>serverless节点数量配置</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,6 +45,11 @@ class DescribeSpecsResponse extends AbstractModel
     public $ServerlessCcuSpec;
 
     /**
+     * @var ServerlessNodeNumSpec <p>serverless节点数量配置</p>
+     */
+    public $ServerlessNodeNumSpec;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -51,6 +58,7 @@ class DescribeSpecsResponse extends AbstractModel
      * @param array $HybridNodeSpecs <p>对等节点售卖规格列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServerlessCcuSpec <p>svls节点售卖规格列表</p>
+     * @param ServerlessNodeNumSpec $ServerlessNodeNumSpec <p>serverless节点数量配置</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -82,6 +90,11 @@ class DescribeSpecsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ServerlessCcuSpec, $obj);
             }
+        }
+
+        if (array_key_exists("ServerlessNodeNumSpec",$param) and $param["ServerlessNodeNumSpec"] !== null) {
+            $this->ServerlessNodeNumSpec = new ServerlessNodeNumSpec();
+            $this->ServerlessNodeNumSpec->deserialize($param["ServerlessNodeNumSpec"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

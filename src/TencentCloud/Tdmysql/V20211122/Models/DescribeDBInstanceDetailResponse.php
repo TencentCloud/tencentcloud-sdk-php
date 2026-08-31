@@ -152,6 +152,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptionEnable(integer $EncryptionEnable) 设置<p>是否开启透明加密，0：未开启；1：已开启</p>
  * @method string getEncryptionKmsRegion() 获取<p>真实使用的kms地域，用于后续调用kms服务</p>
  * @method void setEncryptionKmsRegion(string $EncryptionKmsRegion) 设置<p>真实使用的kms地域，用于后续调用kms服务</p>
+ * @method array getAutoScaleConfigs() 获取<p>serverless自动变配配置</p>
+ * @method void setAutoScaleConfigs(array $AutoScaleConfigs) 设置<p>serverless自动变配配置</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -468,6 +470,11 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
     public $EncryptionKmsRegion;
 
     /**
+     * @var array <p>serverless自动变配配置</p>
+     */
+    public $AutoScaleConfigs;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -539,6 +546,7 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
      * @param MaintenanceWindowInfo $MaintenanceWindow <p>维护窗口配置</p>
      * @param integer $EncryptionEnable <p>是否开启透明加密，0：未开启；1：已开启</p>
      * @param string $EncryptionKmsRegion <p>真实使用的kms地域，用于后续调用kms服务</p>
+     * @param array $AutoScaleConfigs <p>serverless自动变配配置</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -819,6 +827,15 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
 
         if (array_key_exists("EncryptionKmsRegion",$param) and $param["EncryptionKmsRegion"] !== null) {
             $this->EncryptionKmsRegion = $param["EncryptionKmsRegion"];
+        }
+
+        if (array_key_exists("AutoScaleConfigs",$param) and $param["AutoScaleConfigs"] !== null) {
+            $this->AutoScaleConfigs = [];
+            foreach ($param["AutoScaleConfigs"] as $key => $value){
+                $obj = new AutoScalingConfig();
+                $obj->deserialize($value);
+                array_push($this->AutoScaleConfigs, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

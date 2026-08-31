@@ -20,61 +20,61 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能分类任务结果类型
  *
- * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
- * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
- * @method string getErrCodeExt() 获取错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
- * @method void setErrCodeExt(string $ErrCodeExt) 设置错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
- * @method integer getErrCode() 获取错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
- * @method void setErrCode(integer $ErrCode) 设置错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
- * @method string getMessage() 获取错误信息。
- * @method void setMessage(string $Message) 设置错误信息。
- * @method AiAnalysisTaskClassificationInput getInput() 获取智能分类任务输入。
- * @method void setInput(AiAnalysisTaskClassificationInput $Input) 设置智能分类任务输入。
- * @method AiAnalysisTaskClassificationOutput getOutput() 获取智能分类任务输出。
+ * @method string getStatus() 获取<p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
+ * @method void setStatus(string $Status) 设置<p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
+ * @method string getErrCodeExt() 获取<p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) 设置<p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
+ * @method integer getErrCode() 获取<p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
+ * @method void setErrCode(integer $ErrCode) 设置<p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
+ * @method string getMessage() 获取<p>错误信息。</p>
+ * @method void setMessage(string $Message) 设置<p>错误信息。</p>
+ * @method AiAnalysisTaskClassificationInput getInput() 获取<p>智能分类任务输入。</p>
+ * @method void setInput(AiAnalysisTaskClassificationInput $Input) 设置<p>智能分类任务输入。</p>
+ * @method AiAnalysisTaskClassificationOutput getOutput() 获取<p>智能分类任务输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutput(AiAnalysisTaskClassificationOutput $Output) 设置智能分类任务输出。
+ * @method void setOutput(AiAnalysisTaskClassificationOutput $Output) 设置<p>智能分类任务输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisTaskClassificationResult extends AbstractModel
 {
     /**
-     * @var string 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * @var string <p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
      */
     public $Status;
 
     /**
-     * @var string 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+     * @var string <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
+     * @var integer <p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
      */
     public $ErrCode;
 
     /**
-     * @var string 错误信息。
+     * @var string <p>错误信息。</p>
      */
     public $Message;
 
     /**
-     * @var AiAnalysisTaskClassificationInput 智能分类任务输入。
+     * @var AiAnalysisTaskClassificationInput <p>智能分类任务输入。</p>
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskClassificationOutput 智能分类任务输出。
+     * @var AiAnalysisTaskClassificationOutput <p>智能分类任务输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
     /**
-     * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
-     * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
-     * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
-     * @param string $Message 错误信息。
-     * @param AiAnalysisTaskClassificationInput $Input 智能分类任务输入。
-     * @param AiAnalysisTaskClassificationOutput $Output 智能分类任务输出。
+     * @param string $Status <p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
+     * @param string $ErrCodeExt <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
+     * @param integer $ErrCode <p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
+     * @param string $Message <p>错误信息。</p>
+     * @param AiAnalysisTaskClassificationInput $Input <p>智能分类任务输入。</p>
+     * @param AiAnalysisTaskClassificationOutput $Output <p>智能分类任务输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,130 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CCN路由策略对象
  *
- * @method string getRouteId() 获取路由策略ID
- * @method void setRouteId(string $RouteId) 设置路由策略ID
- * @method string getDestinationCidrBlock() 获取目的端
- * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的端
- * @method string getInstanceType() 获取下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
- * @method void setInstanceType(string $InstanceType) 设置下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
- * @method string getInstanceId() 获取下一跳（关联实例）
- * @method void setInstanceId(string $InstanceId) 设置下一跳（关联实例）
- * @method string getInstanceName() 获取下一跳名称（关联实例名称）
- * @method void setInstanceName(string $InstanceName) 设置下一跳名称（关联实例名称）
- * @method string getInstanceRegion() 获取下一跳所属地域（关联实例所属地域）
- * @method void setInstanceRegion(string $InstanceRegion) 设置下一跳所属地域（关联实例所属地域）
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method boolean getEnabled() 获取路由是否启用
- * @method void setEnabled(boolean $Enabled) 设置路由是否启用
- * @method string getInstanceUin() 获取关联实例所属UIN（根账号）
- * @method void setInstanceUin(string $InstanceUin) 设置关联实例所属UIN（根账号）
- * @method string getExtraState() 获取路由的扩展状态
- * @method void setExtraState(string $ExtraState) 设置路由的扩展状态
- * @method boolean getIsBgp() 获取是否动态路由
- * @method void setIsBgp(boolean $IsBgp) 设置是否动态路由
- * @method integer getRoutePriority() 获取路由优先级
- * @method void setRoutePriority(integer $RoutePriority) 设置路由优先级
- * @method string getInstanceExtraName() 获取下一跳扩展名称（关联实例的扩展名称）
- * @method void setInstanceExtraName(string $InstanceExtraName) 设置下一跳扩展名称（关联实例的扩展名称）
- * @method string getAliasType() 获取实例类型
- * @method void setAliasType(string $AliasType) 设置实例类型
- * @method string getAliasInstanceId() 获取实例id
- * @method void setAliasInstanceId(string $AliasInstanceId) 设置实例id
+ * @method string getRouteId() 获取<p>路由策略ID</p>
+ * @method void setRouteId(string $RouteId) 设置<p>路由策略ID</p>
+ * @method string getDestinationCidrBlock() 获取<p>目的端</p>
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置<p>目的端</p>
+ * @method string getInstanceType() 获取<p>下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT</p>
+ * @method string getInstanceId() 获取<p>下一跳（关联实例）</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>下一跳（关联实例）</p>
+ * @method string getInstanceName() 获取<p>下一跳名称（关联实例名称）</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>下一跳名称（关联实例名称）</p>
+ * @method string getInstanceRegion() 获取<p>下一跳所属地域（关联实例所属地域）</p>
+ * @method void setInstanceRegion(string $InstanceRegion) 设置<p>下一跳所属地域（关联实例所属地域）</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method boolean getEnabled() 获取<p>路由是否启用</p>
+ * @method void setEnabled(boolean $Enabled) 设置<p>路由是否启用</p>
+ * @method string getInstanceUin() 获取<p>关联实例所属UIN（根账号）</p>
+ * @method void setInstanceUin(string $InstanceUin) 设置<p>关联实例所属UIN（根账号）</p>
+ * @method string getExtraState() 获取<p>路由的扩展状态</p>
+ * @method void setExtraState(string $ExtraState) 设置<p>路由的扩展状态</p>
+ * @method boolean getIsBgp() 获取<p>是否动态路由</p>
+ * @method void setIsBgp(boolean $IsBgp) 设置<p>是否动态路由</p>
+ * @method integer getRoutePriority() 获取<p>路由优先级</p>
+ * @method void setRoutePriority(integer $RoutePriority) 设置<p>路由优先级</p>
+ * @method string getInstanceExtraName() 获取<p>下一跳扩展名称（关联实例的扩展名称）</p>
+ * @method void setInstanceExtraName(string $InstanceExtraName) 设置<p>下一跳扩展名称（关联实例的扩展名称）</p>
+ * @method string getAliasType() 获取<p>实例类型</p>
+ * @method void setAliasType(string $AliasType) 设置<p>实例类型</p>
+ * @method string getAliasInstanceId() 获取<p>实例id</p>
+ * @method void setAliasInstanceId(string $AliasInstanceId) 设置<p>实例id</p>
+ * @method string getRouteTableId() 获取<p>路由表ID</p>
+ * @method void setRouteTableId(string $RouteTableId) 设置<p>路由表ID</p>
+ * @method string getAsPath() 获取<p>AS-PATH</p>
+ * @method void setAsPath(string $AsPath) 设置<p>AS-PATH</p>
  */
 class CcnRoute extends AbstractModel
 {
     /**
-     * @var string 路由策略ID
+     * @var string <p>路由策略ID</p>
      */
     public $RouteId;
 
     /**
-     * @var string 目的端
+     * @var string <p>目的端</p>
      */
     public $DestinationCidrBlock;
 
     /**
-     * @var string 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+     * @var string <p>下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 下一跳（关联实例）
+     * @var string <p>下一跳（关联实例）</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 下一跳名称（关联实例名称）
+     * @var string <p>下一跳名称（关联实例名称）</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 下一跳所属地域（关联实例所属地域）
+     * @var string <p>下一跳所属地域（关联实例所属地域）</p>
      */
     public $InstanceRegion;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var boolean 路由是否启用
+     * @var boolean <p>路由是否启用</p>
      */
     public $Enabled;
 
     /**
-     * @var string 关联实例所属UIN（根账号）
+     * @var string <p>关联实例所属UIN（根账号）</p>
      */
     public $InstanceUin;
 
     /**
-     * @var string 路由的扩展状态
+     * @var string <p>路由的扩展状态</p>
      */
     public $ExtraState;
 
     /**
-     * @var boolean 是否动态路由
+     * @var boolean <p>是否动态路由</p>
      */
     public $IsBgp;
 
     /**
-     * @var integer 路由优先级
+     * @var integer <p>路由优先级</p>
      */
     public $RoutePriority;
 
     /**
-     * @var string 下一跳扩展名称（关联实例的扩展名称）
+     * @var string <p>下一跳扩展名称（关联实例的扩展名称）</p>
      */
     public $InstanceExtraName;
 
     /**
-     * @var string 实例类型
+     * @var string <p>实例类型</p>
      */
     public $AliasType;
 
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $AliasInstanceId;
 
     /**
-     * @param string $RouteId 路由策略ID
-     * @param string $DestinationCidrBlock 目的端
-     * @param string $InstanceType 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
-     * @param string $InstanceId 下一跳（关联实例）
-     * @param string $InstanceName 下一跳名称（关联实例名称）
-     * @param string $InstanceRegion 下一跳所属地域（关联实例所属地域）
-     * @param string $UpdateTime 更新时间
-     * @param boolean $Enabled 路由是否启用
-     * @param string $InstanceUin 关联实例所属UIN（根账号）
-     * @param string $ExtraState 路由的扩展状态
-     * @param boolean $IsBgp 是否动态路由
-     * @param integer $RoutePriority 路由优先级
-     * @param string $InstanceExtraName 下一跳扩展名称（关联实例的扩展名称）
-     * @param string $AliasType 实例类型
-     * @param string $AliasInstanceId 实例id
+     * @var string <p>路由表ID</p>
+     */
+    public $RouteTableId;
+
+    /**
+     * @var string <p>AS-PATH</p>
+     */
+    public $AsPath;
+
+    /**
+     * @param string $RouteId <p>路由策略ID</p>
+     * @param string $DestinationCidrBlock <p>目的端</p>
+     * @param string $InstanceType <p>下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT</p>
+     * @param string $InstanceId <p>下一跳（关联实例）</p>
+     * @param string $InstanceName <p>下一跳名称（关联实例名称）</p>
+     * @param string $InstanceRegion <p>下一跳所属地域（关联实例所属地域）</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param boolean $Enabled <p>路由是否启用</p>
+     * @param string $InstanceUin <p>关联实例所属UIN（根账号）</p>
+     * @param string $ExtraState <p>路由的扩展状态</p>
+     * @param boolean $IsBgp <p>是否动态路由</p>
+     * @param integer $RoutePriority <p>路由优先级</p>
+     * @param string $InstanceExtraName <p>下一跳扩展名称（关联实例的扩展名称）</p>
+     * @param string $AliasType <p>实例类型</p>
+     * @param string $AliasInstanceId <p>实例id</p>
+     * @param string $RouteTableId <p>路由表ID</p>
+     * @param string $AsPath <p>AS-PATH</p>
      */
     function __construct()
     {
@@ -216,6 +232,14 @@ class CcnRoute extends AbstractModel
 
         if (array_key_exists("AliasInstanceId",$param) and $param["AliasInstanceId"] !== null) {
             $this->AliasInstanceId = $param["AliasInstanceId"];
+        }
+
+        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
+            $this->RouteTableId = $param["RouteTableId"];
+        }
+
+        if (array_key_exists("AsPath",$param) and $param["AsPath"] !== null) {
+            $this->AsPath = $param["AsPath"];
         }
     }
 }

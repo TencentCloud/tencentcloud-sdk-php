@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileUrl(string $FileUrl) 设置<p>媒体文件播放地址。</p>
  * @method string getFileId() 获取<p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
  * @method void setFileId(string $FileId) 设置<p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
- * @method MediaMetaData getMetaData() 获取<p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
- * @method void setMetaData(MediaMetaData $MetaData) 设置<p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+ * @method MediaMetaData getMetaData() 获取<p>输出音频的元信息。</p>
+ * @method void setMetaData(MediaMetaData $MetaData) 设置<p>输出音频的元信息。</p>
  * @method float getDuration() 获取<p>时长</p><p>单位：秒</p>
  * @method void setDuration(float $Duration) 设置<p>时长</p><p>单位：秒</p>
  */
@@ -77,7 +77,7 @@ class AigcAudioTaskOutputFileInfo extends AbstractModel
     public $FileId;
 
     /**
-     * @var MediaMetaData <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+     * @var MediaMetaData <p>输出音频的元信息。</p>
      */
     public $MetaData;
 
@@ -94,7 +94,7 @@ class AigcAudioTaskOutputFileInfo extends AbstractModel
      * @param string $FileType <p>文件类型，例如 mp4、flv 等。</p>
      * @param string $FileUrl <p>媒体文件播放地址。</p>
      * @param string $FileId <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
-     * @param MediaMetaData $MetaData <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+     * @param MediaMetaData $MetaData <p>输出音频的元信息。</p>
      * @param float $Duration <p>时长</p><p>单位：秒</p>
      */
     function __construct()

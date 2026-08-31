@@ -20,114 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTWeSeeSubscription返回参数结构体
  *
- * @method string getResourceId() 获取资源 ID
- * @method void setResourceId(string $ResourceId) 设置资源 ID
- * @method string getServiceTier() 获取套餐规格。可能取值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
- * @method void setServiceTier(string $ServiceTier) 设置套餐规格。可能取值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
- * @method integer getExpireTime() 获取到期时间，秒级时间戳
- * @method void setExpireTime(integer $ExpireTime) 设置到期时间，秒级时间戳
- * @method boolean getEnabled() 获取启用状态，`true` 为开启，`false` 为关闭
- * @method void setEnabled(boolean $Enabled) 设置启用状态，`true` 为开启，`false` 为关闭
- * @method string getStatus() 获取订阅状态。可能取值：
-
-- `NORMAL`：正常
-- `ISOLATED`：隔离
- * @method void setStatus(string $Status) 设置订阅状态。可能取值：
-
-- `NORMAL`：正常
-- `ISOLATED`：隔离
- * @method SeeComprehensionConfig getComprehensionConfig() 获取视觉理解配置（适用于视频理解、图片理解）
- * @method void setComprehensionConfig(SeeComprehensionConfig $ComprehensionConfig) 设置视觉理解配置（适用于视频理解、图片理解）
- * @method SeeCompHighlightConfig getCompHighlightConfig() 获取视频语义浓缩配置（适用于视频语义浓缩）
- * @method void setCompHighlightConfig(SeeCompHighlightConfig $CompHighlightConfig) 设置视频语义浓缩配置（适用于视频语义浓缩）
- * @method SeeEventIdFilterConfig getEventIdFilterConfig() 获取云存事件 ID 过滤规则配置项
- * @method void setEventIdFilterConfig(SeeEventIdFilterConfig $EventIdFilterConfig) 设置云存事件 ID 过滤规则配置项
- * @method integer getQuotaBasic() 获取当前周期基础能力总额度
- * @method void setQuotaBasic(integer $QuotaBasic) 设置当前周期基础能力总额度
- * @method integer getQuotaUsedBasic() 获取当前周期基础能力已用额度
- * @method void setQuotaUsedBasic(integer $QuotaUsedBasic) 设置当前周期基础能力已用额度
- * @method integer getQuotaAdvanced() 获取当前周期高级能力总额度
- * @method void setQuotaAdvanced(integer $QuotaAdvanced) 设置当前周期高级能力总额度
- * @method integer getQuotaUsedAdvanced() 获取当前周期高级能力已用额度
- * @method void setQuotaUsedAdvanced(integer $QuotaUsedAdvanced) 设置当前周期高级能力已用额度
- * @method integer getQuotaRefreshTime() 获取额度刷新时间
- * @method void setQuotaRefreshTime(integer $QuotaRefreshTime) 设置额度刷新时间
+ * @method string getResourceId() 获取<p>资源 ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源 ID</p>
+ * @method string getServiceTier() 获取<p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+ * @method void setServiceTier(string $ServiceTier) 设置<p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+ * @method integer getExpireTime() 获取<p>到期时间，秒级时间戳</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>到期时间，秒级时间戳</p>
+ * @method boolean getEnabled() 获取<p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
+ * @method void setEnabled(boolean $Enabled) 设置<p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
+ * @method string getStatus() 获取<p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul>
+ * @method void setStatus(string $Status) 设置<p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul>
+ * @method SeeComprehensionConfig getComprehensionConfig() 获取<p>视觉理解配置（适用于视频理解、图片理解）</p>
+ * @method void setComprehensionConfig(SeeComprehensionConfig $ComprehensionConfig) 设置<p>视觉理解配置（适用于视频理解、图片理解）</p>
+ * @method SeeCompHighlightConfig getCompHighlightConfig() 获取<p>视频语义浓缩配置（适用于视频语义浓缩）</p>
+ * @method void setCompHighlightConfig(SeeCompHighlightConfig $CompHighlightConfig) 设置<p>视频语义浓缩配置（适用于视频语义浓缩）</p>
+ * @method SeeEventIdFilterConfig getEventIdFilterConfig() 获取<p>云存事件 ID 过滤规则配置项</p>
+ * @method void setEventIdFilterConfig(SeeEventIdFilterConfig $EventIdFilterConfig) 设置<p>云存事件 ID 过滤规则配置项</p>
+ * @method SeeSummarizeConfig getSummarizeConfig() 获取<p>每日与每周总结配置</p>
+ * @method void setSummarizeConfig(SeeSummarizeConfig $SummarizeConfig) 设置<p>每日与每周总结配置</p>
+ * @method integer getQuotaBasic() 获取<p>当前周期基础能力总额度</p>
+ * @method void setQuotaBasic(integer $QuotaBasic) 设置<p>当前周期基础能力总额度</p>
+ * @method integer getQuotaUsedBasic() 获取<p>当前周期基础能力已用额度</p>
+ * @method void setQuotaUsedBasic(integer $QuotaUsedBasic) 设置<p>当前周期基础能力已用额度</p>
+ * @method integer getQuotaAdvanced() 获取<p>当前周期高级能力总额度</p>
+ * @method void setQuotaAdvanced(integer $QuotaAdvanced) 设置<p>当前周期高级能力总额度</p>
+ * @method integer getQuotaUsedAdvanced() 获取<p>当前周期高级能力已用额度</p>
+ * @method void setQuotaUsedAdvanced(integer $QuotaUsedAdvanced) 设置<p>当前周期高级能力已用额度</p>
+ * @method integer getQuotaRefreshTime() 获取<p>额度刷新时间</p>
+ * @method void setQuotaRefreshTime(integer $QuotaRefreshTime) 设置<p>额度刷新时间</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTWeSeeSubscriptionResponse extends AbstractModel
 {
     /**
-     * @var string 资源 ID
+     * @var string <p>资源 ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 套餐规格。可能取值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
+     * @var string <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
      */
     public $ServiceTier;
 
     /**
-     * @var integer 到期时间，秒级时间戳
+     * @var integer <p>到期时间，秒级时间戳</p>
      */
     public $ExpireTime;
 
     /**
-     * @var boolean 启用状态，`true` 为开启，`false` 为关闭
+     * @var boolean <p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
      */
     public $Enabled;
 
     /**
-     * @var string 订阅状态。可能取值：
-
-- `NORMAL`：正常
-- `ISOLATED`：隔离
+     * @var string <p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul>
      */
     public $Status;
 
     /**
-     * @var SeeComprehensionConfig 视觉理解配置（适用于视频理解、图片理解）
+     * @var SeeComprehensionConfig <p>视觉理解配置（适用于视频理解、图片理解）</p>
      */
     public $ComprehensionConfig;
 
     /**
-     * @var SeeCompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩）
+     * @var SeeCompHighlightConfig <p>视频语义浓缩配置（适用于视频语义浓缩）</p>
      */
     public $CompHighlightConfig;
 
     /**
-     * @var SeeEventIdFilterConfig 云存事件 ID 过滤规则配置项
+     * @var SeeEventIdFilterConfig <p>云存事件 ID 过滤规则配置项</p>
      */
     public $EventIdFilterConfig;
 
     /**
-     * @var integer 当前周期基础能力总额度
+     * @var SeeSummarizeConfig <p>每日与每周总结配置</p>
+     */
+    public $SummarizeConfig;
+
+    /**
+     * @var integer <p>当前周期基础能力总额度</p>
      */
     public $QuotaBasic;
 
     /**
-     * @var integer 当前周期基础能力已用额度
+     * @var integer <p>当前周期基础能力已用额度</p>
      */
     public $QuotaUsedBasic;
 
     /**
-     * @var integer 当前周期高级能力总额度
+     * @var integer <p>当前周期高级能力总额度</p>
      */
     public $QuotaAdvanced;
 
     /**
-     * @var integer 当前周期高级能力已用额度
+     * @var integer <p>当前周期高级能力已用额度</p>
      */
     public $QuotaUsedAdvanced;
 
     /**
-     * @var integer 额度刷新时间
+     * @var integer <p>额度刷新时间</p>
      */
     public $QuotaRefreshTime;
 
@@ -137,24 +129,20 @@ class DescribeTWeSeeSubscriptionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResourceId 资源 ID
-     * @param string $ServiceTier 套餐规格。可能取值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
-     * @param integer $ExpireTime 到期时间，秒级时间戳
-     * @param boolean $Enabled 启用状态，`true` 为开启，`false` 为关闭
-     * @param string $Status 订阅状态。可能取值：
-
-- `NORMAL`：正常
-- `ISOLATED`：隔离
-     * @param SeeComprehensionConfig $ComprehensionConfig 视觉理解配置（适用于视频理解、图片理解）
-     * @param SeeCompHighlightConfig $CompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩）
-     * @param SeeEventIdFilterConfig $EventIdFilterConfig 云存事件 ID 过滤规则配置项
-     * @param integer $QuotaBasic 当前周期基础能力总额度
-     * @param integer $QuotaUsedBasic 当前周期基础能力已用额度
-     * @param integer $QuotaAdvanced 当前周期高级能力总额度
-     * @param integer $QuotaUsedAdvanced 当前周期高级能力已用额度
-     * @param integer $QuotaRefreshTime 额度刷新时间
+     * @param string $ResourceId <p>资源 ID</p>
+     * @param string $ServiceTier <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+     * @param integer $ExpireTime <p>到期时间，秒级时间戳</p>
+     * @param boolean $Enabled <p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
+     * @param string $Status <p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul>
+     * @param SeeComprehensionConfig $ComprehensionConfig <p>视觉理解配置（适用于视频理解、图片理解）</p>
+     * @param SeeCompHighlightConfig $CompHighlightConfig <p>视频语义浓缩配置（适用于视频语义浓缩）</p>
+     * @param SeeEventIdFilterConfig $EventIdFilterConfig <p>云存事件 ID 过滤规则配置项</p>
+     * @param SeeSummarizeConfig $SummarizeConfig <p>每日与每周总结配置</p>
+     * @param integer $QuotaBasic <p>当前周期基础能力总额度</p>
+     * @param integer $QuotaUsedBasic <p>当前周期基础能力已用额度</p>
+     * @param integer $QuotaAdvanced <p>当前周期高级能力总额度</p>
+     * @param integer $QuotaUsedAdvanced <p>当前周期高级能力已用额度</p>
+     * @param integer $QuotaRefreshTime <p>额度刷新时间</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -203,6 +191,11 @@ class DescribeTWeSeeSubscriptionResponse extends AbstractModel
         if (array_key_exists("EventIdFilterConfig",$param) and $param["EventIdFilterConfig"] !== null) {
             $this->EventIdFilterConfig = new SeeEventIdFilterConfig();
             $this->EventIdFilterConfig->deserialize($param["EventIdFilterConfig"]);
+        }
+
+        if (array_key_exists("SummarizeConfig",$param) and $param["SummarizeConfig"] !== null) {
+            $this->SummarizeConfig = new SeeSummarizeConfig();
+            $this->SummarizeConfig->deserialize($param["SummarizeConfig"]);
         }
 
         if (array_key_exists("QuotaBasic",$param) and $param["QuotaBasic"] !== null) {

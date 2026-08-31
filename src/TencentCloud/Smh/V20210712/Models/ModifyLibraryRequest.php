@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置<p>备注，最多 250 个字符。如不传则不修改。</p>
  * @method LibraryExtension getLibraryExtension() 获取<p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
  * @method void setLibraryExtension(LibraryExtension $LibraryExtension) 设置<p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
+ * @method array getTags() 获取<p>媒体库标签列表。</p>
+ * @method void setTags(array $Tags) 设置<p>媒体库标签列表。</p>
  */
 class ModifyLibraryRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyLibraryRequest extends AbstractModel
     public $LibraryExtension;
 
     /**
+     * @var array <p>媒体库标签列表。</p>
+     */
+    public $Tags;
+
+    /**
      * @param string $LibraryId <p>媒体库 ID</p>
      * @param string $Name <p>媒体库名称，最多 50 个字符。如不传则不修改。</p>
      * @param string $Remark <p>备注，最多 250 个字符。如不传则不修改。</p>
      * @param LibraryExtension $LibraryExtension <p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
+     * @param array $Tags <p>媒体库标签列表。</p>
      */
     function __construct()
     {
@@ -85,6 +93,15 @@ class ModifyLibraryRequest extends AbstractModel
         if (array_key_exists("LibraryExtension",$param) and $param["LibraryExtension"] !== null) {
             $this->LibraryExtension = new LibraryExtension();
             $this->LibraryExtension->deserialize($param["LibraryExtension"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

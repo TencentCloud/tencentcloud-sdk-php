@@ -18,7 +18,7 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Pulsar专业版集群信息
+ * Pulsar标准版或专业版集群信息
  *
  * @method string getClusterId() 获取<p>集群Id。</p>
  * @method void setClusterId(string $ClusterId) 设置<p>集群Id。</p>
@@ -42,9 +42,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanEditRoute(boolean $CanEditRoute) 设置<p>是否可以修改路由</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingLabelVersion() 获取<p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+ * @method string getBillingLabelVersion() 获取<p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置<p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+ * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置<p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpireTime() 获取<p>实例到期时间戳，毫秒级精度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,14 +58,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultPartitionNumber(integer $DefaultPartitionNumber) 设置<p>自动创建主题的默认分区数，如果没开启就是0</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTenant() 获取<p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
- * @method void setTenant(string $Tenant) 设置<p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+ * @method string getTenant() 获取<p>用户自定义的租户别名，如果没有，会复用集群 ID</p>
+ * @method void setTenant(string $Tenant) 设置<p>用户自定义的租户别名，如果没有，会复用集群 ID</p>
  * @method integer getDeleteProtection() 获取<p>删除保护开关标识</p>
  * @method void setDeleteProtection(integer $DeleteProtection) 设置<p>删除保护开关标识</p>
  * @method integer getElasticTpsEnabled() 获取<p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
  * @method void setElasticTpsEnabled(integer $ElasticTpsEnabled) 设置<p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
  * @method integer getEncryptionStatus() 获取<p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
  * @method void setEncryptionStatus(integer $EncryptionStatus) 设置<p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
+ * @method integer getAutoExpansionEnabled() 获取<p>是否开启磁盘自动扩容。枚举值：0-关闭，1-开启</p>
+ * @method void setAutoExpansionEnabled(integer $AutoExpansionEnabled) 设置<p>是否开启磁盘自动扩容。枚举值：0-关闭，1-开启</p>
  */
 class PulsarProClusterInfo extends AbstractModel
 {
@@ -117,7 +119,7 @@ class PulsarProClusterInfo extends AbstractModel
     public $CanEditRoute;
 
     /**
-     * @var string <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+     * @var string <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingLabelVersion;
@@ -141,7 +143,7 @@ class PulsarProClusterInfo extends AbstractModel
     public $DefaultPartitionNumber;
 
     /**
-     * @var string <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+     * @var string <p>用户自定义的租户别名，如果没有，会复用集群 ID</p>
      */
     public $Tenant;
 
@@ -161,6 +163,11 @@ class PulsarProClusterInfo extends AbstractModel
     public $EncryptionStatus;
 
     /**
+     * @var integer <p>是否开启磁盘自动扩容。枚举值：0-关闭，1-开启</p>
+     */
+    public $AutoExpansionEnabled;
+
+    /**
      * @param string $ClusterId <p>集群Id。</p>
      * @param string $ClusterName <p>集群名称。</p>
      * @param string $Remark <p>说明信息。</p>
@@ -172,7 +179,7 @@ class PulsarProClusterInfo extends AbstractModel
      * @param integer $MaxStorage <p>最大储存容量，单位：MB</p>
      * @param boolean $CanEditRoute <p>是否可以修改路由</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingLabelVersion <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+     * @param string $BillingLabelVersion <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime <p>实例到期时间戳，毫秒级精度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -180,10 +187,11 @@ class PulsarProClusterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefaultPartitionNumber <p>自动创建主题的默认分区数，如果没开启就是0</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Tenant <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+     * @param string $Tenant <p>用户自定义的租户别名，如果没有，会复用集群 ID</p>
      * @param integer $DeleteProtection <p>删除保护开关标识</p>
      * @param integer $ElasticTpsEnabled <p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
      * @param integer $EncryptionStatus <p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
+     * @param integer $AutoExpansionEnabled <p>是否开启磁盘自动扩容。枚举值：0-关闭，1-开启</p>
      */
     function __construct()
     {
@@ -269,6 +277,10 @@ class PulsarProClusterInfo extends AbstractModel
 
         if (array_key_exists("EncryptionStatus",$param) and $param["EncryptionStatus"] !== null) {
             $this->EncryptionStatus = $param["EncryptionStatus"];
+        }
+
+        if (array_key_exists("AutoExpansionEnabled",$param) and $param["AutoExpansionEnabled"] !== null) {
+            $this->AutoExpansionEnabled = $param["AutoExpansionEnabled"];
         }
     }
 }

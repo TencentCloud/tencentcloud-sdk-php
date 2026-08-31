@@ -202,6 +202,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAnalysisRelationInfos(array $AnalysisRelationInfos) 设置<p>分析引擎关系信息</p>
  * @method AnalysisInstanceInfo getAnalysisInstanceInfo() 获取<p>分析引擎实例信息</p>
  * @method void setAnalysisInstanceInfo(AnalysisInstanceInfo $AnalysisInstanceInfo) 设置<p>分析引擎实例信息</p>
+ * @method array getAutoScaleConfigs() 获取<p>有关该实例的多个自动变配相关配置，ccu、nodecount 值</p>
+ * @method void setAutoScaleConfigs(array $AutoScaleConfigs) 设置<p>有关该实例的多个自动变配相关配置，ccu、nodecount 值</p>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -561,6 +563,11 @@ class InstanceInfo extends AbstractModel
     public $AnalysisInstanceInfo;
 
     /**
+     * @var array <p>有关该实例的多个自动变配相关配置，ccu、nodecount 值</p>
+     */
+    public $AutoScaleConfigs;
+
+    /**
      * @param integer $ComputeNodeNum <p>计算节点数量</p>
      * @param string $Zone <p>区域</p>
      * @param string $CreateVersion <p>创建实例版本</p>
@@ -652,6 +659,7 @@ class InstanceInfo extends AbstractModel
      * @param string $AnalysisMode <p>分析引擎模式</p><p>枚举值：</p><ul><li>libra： LibraDB分析引擎模式</li></ul>
      * @param array $AnalysisRelationInfos <p>分析引擎关系信息</p>
      * @param AnalysisInstanceInfo $AnalysisInstanceInfo <p>分析引擎实例信息</p>
+     * @param array $AutoScaleConfigs <p>有关该实例的多个自动变配相关配置，ccu、nodecount 值</p>
      */
     function __construct()
     {
@@ -938,6 +946,15 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("AnalysisInstanceInfo",$param) and $param["AnalysisInstanceInfo"] !== null) {
             $this->AnalysisInstanceInfo = new AnalysisInstanceInfo();
             $this->AnalysisInstanceInfo->deserialize($param["AnalysisInstanceInfo"]);
+        }
+
+        if (array_key_exists("AutoScaleConfigs",$param) and $param["AutoScaleConfigs"] !== null) {
+            $this->AutoScaleConfigs = [];
+            foreach ($param["AutoScaleConfigs"] as $key => $value){
+                $obj = new AutoScalingConfig();
+                $obj->deserialize($value);
+                array_push($this->AutoScaleConfigs, $obj);
+            }
         }
     }
 }

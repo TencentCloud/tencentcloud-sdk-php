@@ -91,7 +91,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
  * @method Models\VoicePrintCountResponse VoicePrintCount(Models\VoicePrintCountRequest $req) 统计并返回注册的说话人id总数
  * @method Models\VoicePrintDeleteResponse VoicePrintDelete(Models\VoicePrintDeleteRequest $req) 本接口用于以删除已经注册的说话人信息（删除之后，原有的说话人ID和说话人音频数据都会失效）
  * @method Models\VoicePrintEnrollResponse VoicePrintEnroll(Models\VoicePrintEnrollRequest $req) 说话人注册接口用于注册一个指定音频，生成一个唯一的说话人id，后续可通过说话人验证接口验证其它音频和已有的说话人ID匹配度，注册时可指定说话人昵称，方便标识说话人ID，  说话人昵称可重复配置。 
-（注: 一个appid最多可以注册1000个说话人ID，一个说话人ID仅支持一条音频注册，后续可通过更新接口进行更新）
+（注: 一个appid最多可以注册1000个说话人ID和1000个group，一个group最多可容纳100个说话人ID，一个说话人ID仅支持一条音频注册，后续可通过更新接口进行更新）
 
 使用须知
 支持的输入格式：编码文件(PCM, WAV)、16 bit采样位数、单声道（mono）。

@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用于AIGC视频生成的参考视频素材。
  *
- * @method string getVideoUrl() 获取参考视频url。需要外网可访问。
-可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声
-通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频
-参考视频为待编辑视频时，不能定义视频首尾帧。
- * @method void setVideoUrl(string $VideoUrl) 设置参考视频url。需要外网可访问。
-可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声
-通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频
-参考视频为待编辑视频时，不能定义视频首尾帧。
- * @method string getReferType() 获取通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。
- * @method void setReferType(string $ReferType) 设置通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。
- * @method string getKeepOriginalSound() 获取通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。
- * @method void setKeepOriginalSound(string $KeepOriginalSound) 设置通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。
+ * @method string getVideoUrl() 获取<p>参考视频url。需要外网可访问。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声<br>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频<br>参考视频为待编辑视频时，不能定义视频首尾帧。</p>
+ * @method void setVideoUrl(string $VideoUrl) 设置<p>参考视频url。需要外网可访问。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声<br>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频<br>参考视频为待编辑视频时，不能定义视频首尾帧。</p>
+ * @method string getReferType() 获取<p>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。</p>
+ * @method void setReferType(string $ReferType) 设置<p>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。</p>
+ * @method string getKeepOriginalSound() 获取<p>通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。</p>
+ * @method void setKeepOriginalSound(string $KeepOriginalSound) 设置<p>通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。</p>
  */
 class AigcVideoReferenceVideoInfo extends AbstractModel
 {
     /**
-     * @var string 参考视频url。需要外网可访问。
-可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声
-通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频
-参考视频为待编辑视频时，不能定义视频首尾帧。
+     * @var string <p>参考视频url。需要外网可访问。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声<br>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频<br>参考视频为待编辑视频时，不能定义视频首尾帧。</p>
      */
     public $VideoUrl;
 
     /**
-     * @var string 通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。
+     * @var string <p>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。</p>
      */
     public $ReferType;
 
     /**
-     * @var string 通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。
+     * @var string <p>通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。</p>
      */
     public $KeepOriginalSound;
 
     /**
-     * @param string $VideoUrl 参考视频url。需要外网可访问。
-可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声
-通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频
-参考视频为待编辑视频时，不能定义视频首尾帧。
-     * @param string $ReferType 通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。
-     * @param string $KeepOriginalSound 通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。
+     * @param string $VideoUrl <p>参考视频url。需要外网可访问。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声<br>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频<br>参考视频为待编辑视频时，不能定义视频首尾帧。</p>
+     * @param string $ReferType <p>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。</p>
+     * @param string $KeepOriginalSound <p>通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。</p>
      */
     function __construct()
     {

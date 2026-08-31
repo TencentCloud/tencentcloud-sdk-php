@@ -114,6 +114,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleTimeList(array $ScheduleTimeList) 设置<p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>对象权限</p><p>枚举值：</p><ul><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>对象权限</p><p>枚举值：</p><ul><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ManualTriggerRecordOpsDto extends AbstractModel
 {
@@ -261,6 +265,12 @@ class ManualTriggerRecordOpsDto extends AbstractModel
     public $ScheduleTimeList;
 
     /**
+     * @var string <p>对象权限</p><p>枚举值：</p><ul><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Privilege;
+
+    /**
      * @param string $TriggerId <p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerName <p>用户提交运行时配置的运行名称</p>
@@ -307,6 +317,8 @@ class ManualTriggerRecordOpsDto extends AbstractModel
      * @param string $ParentSpInstanceDataTime <p>父嵌套工作流任务实例数据时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ScheduleTimeList <p>数据时间列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>对象权限</p><p>枚举值：</p><ul><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -416,6 +428,10 @@ class ManualTriggerRecordOpsDto extends AbstractModel
 
         if (array_key_exists("ScheduleTimeList",$param) and $param["ScheduleTimeList"] !== null) {
             $this->ScheduleTimeList = $param["ScheduleTimeList"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

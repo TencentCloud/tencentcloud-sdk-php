@@ -227,6 +227,8 @@ RouteName和Tiers均为选填，至少传入一个。Tiers为全量替换（非�
 限制条件：
 - 共享型升级为性能容量型实例后，不支持再回退到共享型实例。
 - 传统型负载均衡实例不支持升级为性能容量型实例。
+
+本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
  * @method Models\ModifyLoadBalancersProjectResponse ModifyLoadBalancersProject(Models\ModifyLoadBalancersProjectRequest $req) 修改一个或多个负载均衡实例所属项目。
  * @method Models\ModifyModelAliasAttributesResponse ModifyModelAliasAttributes(Models\ModifyModelAliasAttributesRequest $req) 批量修改模型别名属性。本期支持批量修改模型别名的 Coefficient 配置。接口为异步接口，提交成功后返回 RequestId。
  * @method Models\ModifyModelAttributesResponse ModifyModelAttributes(Models\ModifyModelAttributesRequest $req) 修改BYOK的属性，包含：自定义名字

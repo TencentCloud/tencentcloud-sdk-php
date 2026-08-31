@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建媒体传输流的输出的RTP的目标地址。
  *
- * @method string getIp() 获取转推的目标IP。
- * @method void setIp(string $Ip) 设置转推的目标IP。
- * @method integer getPort() 获取转推的目标端口。
- * @method void setPort(integer $Port) 设置转推的目标端口。
+ * @method string getIp() 获取<p>转推的目标IP。</p>
+ * @method void setIp(string $Ip) 设置<p>转推的目标IP。</p>
+ * @method integer getPort() 获取<p>转推的目标端口。</p>
+ * @method void setPort(integer $Port) 设置<p>转推的目标端口。</p>
  */
 class CreateOutputRTPSettingsDestinations extends AbstractModel
 {
     /**
-     * @var string 转推的目标IP。
+     * @var string <p>转推的目标IP。</p>
      */
     public $Ip;
 
     /**
-     * @var integer 转推的目标端口。
+     * @var integer <p>转推的目标端口。</p>
      */
     public $Port;
 
     /**
-     * @param string $Ip 转推的目标IP。
-     * @param integer $Port 转推的目标端口。
+     * @param string $Ip <p>转推的目标IP。</p>
+     * @param integer $Port <p>转推的目标端口。</p>
      */
     function __construct()
     {

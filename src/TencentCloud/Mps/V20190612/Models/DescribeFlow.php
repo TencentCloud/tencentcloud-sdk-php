@@ -20,94 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询Flow的配置信息。
  *
- * @method string getFlowId() 获取流Id。
- * @method void setFlowId(string $FlowId) 设置流Id。
- * @method string getFlowName() 获取流名称。
- * @method void setFlowName(string $FlowName) 设置流名称。
- * @method string getState() 获取流状态，目前有IDLE/RUNNING。
- * @method void setState(string $State) 设置流状态，目前有IDLE/RUNNING。
- * @method integer getMaxBandwidth() 获取最大带宽值。
- * @method void setMaxBandwidth(integer $MaxBandwidth) 设置最大带宽值。
- * @method array getInputGroup() 获取输入组。
- * @method void setInputGroup(array $InputGroup) 设置输入组。
- * @method array getOutputGroup() 获取输出组。
+ * @method string getFlowId() 获取<p>流Id。</p>
+ * @method void setFlowId(string $FlowId) 设置<p>流Id。</p>
+ * @method string getFlowName() 获取<p>流名称。</p>
+ * @method void setFlowName(string $FlowName) 设置<p>流名称。</p>
+ * @method string getState() 获取<p>流状态，目前有IDLE/RUNNING。</p>
+ * @method void setState(string $State) 设置<p>流状态，目前有IDLE/RUNNING。</p>
+ * @method integer getMaxBandwidth() 获取<p>最大带宽值。</p>
+ * @method void setMaxBandwidth(integer $MaxBandwidth) 设置<p>最大带宽值。</p>
+ * @method array getInputGroup() 获取<p>输入组。</p>
+ * @method void setInputGroup(array $InputGroup) 设置<p>输入组。</p>
+ * @method array getOutputGroup() 获取<p>输出组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputGroup(array $OutputGroup) 设置输出组。
+ * @method void setOutputGroup(array $OutputGroup) 设置<p>输出组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEventId() 获取该Flow关联的媒体传输事件EventId。
- * @method void setEventId(string $EventId) 设置该Flow关联的媒体传输事件EventId。
- * @method string getRegion() 获取媒体传输输入流所属的区域，取值和InputRegion相同。
- * @method void setRegion(string $Region) 设置媒体传输输入流所属的区域，取值和InputRegion相同。
- * @method array getAllowedInputProtocols() 获取该Flow允许创建的输入协议
- * @method void setAllowedInputProtocols(array $AllowedInputProtocols) 设置该Flow允许创建的输入协议
- * @method array getAllowedOutputProtocols() 获取该Flow允许创建的输出协议
- * @method void setAllowedOutputProtocols(array $AllowedOutputProtocols) 设置该Flow允许创建的输出协议
+ * @method string getEventId() 获取<p>该Flow关联的媒体传输事件EventId。</p>
+ * @method void setEventId(string $EventId) 设置<p>该Flow关联的媒体传输事件EventId。</p>
+ * @method string getRegion() 获取<p>媒体传输输入流所属的区域，取值和InputRegion相同。</p>
+ * @method void setRegion(string $Region) 设置<p>媒体传输输入流所属的区域，取值和InputRegion相同。</p>
+ * @method array getAllowedInputProtocols() 获取<p>该Flow允许创建的输入协议</p>
+ * @method void setAllowedInputProtocols(array $AllowedInputProtocols) 设置<p>该Flow允许创建的输入协议</p>
+ * @method array getAllowedOutputProtocols() 获取<p>该Flow允许创建的输出协议</p>
+ * @method void setAllowedOutputProtocols(array $AllowedOutputProtocols) 设置<p>该Flow允许创建的输出协议</p>
  */
 class DescribeFlow extends AbstractModel
 {
     /**
-     * @var string 流Id。
+     * @var string <p>流Id。</p>
      */
     public $FlowId;
 
     /**
-     * @var string 流名称。
+     * @var string <p>流名称。</p>
      */
     public $FlowName;
 
     /**
-     * @var string 流状态，目前有IDLE/RUNNING。
+     * @var string <p>流状态，目前有IDLE/RUNNING。</p>
      */
     public $State;
 
     /**
-     * @var integer 最大带宽值。
+     * @var integer <p>最大带宽值。</p>
      */
     public $MaxBandwidth;
 
     /**
-     * @var array 输入组。
+     * @var array <p>输入组。</p>
      */
     public $InputGroup;
 
     /**
-     * @var array 输出组。
+     * @var array <p>输出组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputGroup;
 
     /**
-     * @var string 该Flow关联的媒体传输事件EventId。
+     * @var string <p>该Flow关联的媒体传输事件EventId。</p>
      */
     public $EventId;
 
     /**
-     * @var string 媒体传输输入流所属的区域，取值和InputRegion相同。
+     * @var string <p>媒体传输输入流所属的区域，取值和InputRegion相同。</p>
      */
     public $Region;
 
     /**
-     * @var array 该Flow允许创建的输入协议
+     * @var array <p>该Flow允许创建的输入协议</p>
      */
     public $AllowedInputProtocols;
 
     /**
-     * @var array 该Flow允许创建的输出协议
+     * @var array <p>该Flow允许创建的输出协议</p>
      */
     public $AllowedOutputProtocols;
 
     /**
-     * @param string $FlowId 流Id。
-     * @param string $FlowName 流名称。
-     * @param string $State 流状态，目前有IDLE/RUNNING。
-     * @param integer $MaxBandwidth 最大带宽值。
-     * @param array $InputGroup 输入组。
-     * @param array $OutputGroup 输出组。
+     * @param string $FlowId <p>流Id。</p>
+     * @param string $FlowName <p>流名称。</p>
+     * @param string $State <p>流状态，目前有IDLE/RUNNING。</p>
+     * @param integer $MaxBandwidth <p>最大带宽值。</p>
+     * @param array $InputGroup <p>输入组。</p>
+     * @param array $OutputGroup <p>输出组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EventId 该Flow关联的媒体传输事件EventId。
-     * @param string $Region 媒体传输输入流所属的区域，取值和InputRegion相同。
-     * @param array $AllowedInputProtocols 该Flow允许创建的输入协议
-     * @param array $AllowedOutputProtocols 该Flow允许创建的输出协议
+     * @param string $EventId <p>该Flow关联的媒体传输事件EventId。</p>
+     * @param string $Region <p>媒体传输输入流所属的区域，取值和InputRegion相同。</p>
+     * @param array $AllowedInputProtocols <p>该Flow允许创建的输入协议</p>
+     * @param array $AllowedOutputProtocols <p>该Flow允许创建的输出协议</p>
      */
     function __construct()
     {

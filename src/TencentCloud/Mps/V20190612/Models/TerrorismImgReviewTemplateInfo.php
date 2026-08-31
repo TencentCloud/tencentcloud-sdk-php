@@ -20,82 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 画面涉敏任务控制参数
  *
- * @method string getSwitch() 获取画面涉敏任务开关，可选值：
-<li>ON：开启画面涉敏任务；</li>
-<li>OFF：关闭画面涉敏任务。</li>
- * @method void setSwitch(string $Switch) 设置画面涉敏任务开关，可选值：
-<li>ON：开启画面涉敏任务；</li>
-<li>OFF：关闭画面涉敏任务。</li>
- * @method array getLabelSet() 获取画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
-<li>guns：武器枪支；</li>
-<li>crowd：人群聚集；</li>
-<li>bloody：血腥画面；</li>
-<li>police：警察部队；</li>
-<li>banners：涉敏旗帜；</li>
-<li>militant：武装分子；</li>
-<li>explosion：爆炸火灾；</li>
-<li>terrorists：涉敏人物；</li>
- * @method void setLabelSet(array $LabelSet) 设置画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
-<li>guns：武器枪支；</li>
-<li>crowd：人群聚集；</li>
-<li>bloody：血腥画面；</li>
-<li>police：警察部队；</li>
-<li>banners：涉敏旗帜；</li>
-<li>militant：武装分子；</li>
-<li>explosion：爆炸火灾；</li>
-<li>terrorists：涉敏人物；</li>
- * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
- * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
- * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
- * @method void setReviewConfidence(integer $ReviewConfidence) 设置判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
+ * @method string getSwitch() 获取<p>画面涉敏任务开关，可选值：</p><li>ON：开启画面涉敏任务；</li><li>OFF：关闭画面涉敏任务。</li>
+ * @method void setSwitch(string $Switch) 设置<p>画面涉敏任务开关，可选值：</p><li>ON：开启画面涉敏任务；</li><li>OFF：关闭画面涉敏任务。</li>
+ * @method array getLabelSet() 获取<p>画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：</p><li>guns：武器枪支；</li><li>crowd：人群聚集；</li><li>bloody：血腥画面；</li><li>police：警察部队；</li><li>banners：涉敏旗帜；</li><li>militant：武装分子；</li><li>explosion：爆炸火灾；</li><li>terrorists：涉敏人物；</li>
+ * @method void setLabelSet(array $LabelSet) 设置<p>画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：</p><li>guns：武器枪支；</li><li>crowd：人群聚集；</li><li>bloody：血腥画面；</li><li>police：警察部队；</li><li>banners：涉敏旗帜；</li><li>militant：武装分子；</li><li>explosion：爆炸火灾；</li><li>terrorists：涉敏人物；</li>
+ * @method integer getBlockConfidence() 获取<p>判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。</p>
+ * @method void setBlockConfidence(integer $BlockConfidence) 设置<p>判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。</p>
+ * @method integer getReviewConfidence() 获取<p>判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。</p>
+ * @method void setReviewConfidence(integer $ReviewConfidence) 设置<p>判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。</p>
  */
 class TerrorismImgReviewTemplateInfo extends AbstractModel
 {
     /**
-     * @var string 画面涉敏任务开关，可选值：
-<li>ON：开启画面涉敏任务；</li>
-<li>OFF：关闭画面涉敏任务。</li>
+     * @var string <p>画面涉敏任务开关，可选值：</p><li>ON：开启画面涉敏任务；</li><li>OFF：关闭画面涉敏任务。</li>
      */
     public $Switch;
 
     /**
-     * @var array 画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
-<li>guns：武器枪支；</li>
-<li>crowd：人群聚集；</li>
-<li>bloody：血腥画面；</li>
-<li>police：警察部队；</li>
-<li>banners：涉敏旗帜；</li>
-<li>militant：武装分子；</li>
-<li>explosion：爆炸火灾；</li>
-<li>terrorists：涉敏人物；</li>
+     * @var array <p>画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：</p><li>guns：武器枪支；</li><li>crowd：人群聚集；</li><li>bloody：血腥画面；</li><li>police：警察部队；</li><li>banners：涉敏旗帜；</li><li>militant：武装分子；</li><li>explosion：爆炸火灾；</li><li>terrorists：涉敏人物；</li>
      */
     public $LabelSet;
 
     /**
-     * @var integer 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+     * @var integer <p>判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。</p>
      */
     public $BlockConfidence;
 
     /**
-     * @var integer 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
+     * @var integer <p>判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。</p>
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch 画面涉敏任务开关，可选值：
-<li>ON：开启画面涉敏任务；</li>
-<li>OFF：关闭画面涉敏任务。</li>
-     * @param array $LabelSet 画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
-<li>guns：武器枪支；</li>
-<li>crowd：人群聚集；</li>
-<li>bloody：血腥画面；</li>
-<li>police：警察部队；</li>
-<li>banners：涉敏旗帜；</li>
-<li>militant：武装分子；</li>
-<li>explosion：爆炸火灾；</li>
-<li>terrorists：涉敏人物；</li>
-     * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
-     * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
+     * @param string $Switch <p>画面涉敏任务开关，可选值：</p><li>ON：开启画面涉敏任务；</li><li>OFF：关闭画面涉敏任务。</li>
+     * @param array $LabelSet <p>画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：</p><li>guns：武器枪支；</li><li>crowd：人群聚集；</li><li>bloody：血腥画面；</li><li>police：警察部队；</li><li>banners：涉敏旗帜；</li><li>militant：武装分子；</li><li>explosion：爆炸火灾；</li><li>terrorists：涉敏人物；</li>
+     * @param integer $BlockConfidence <p>判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。</p>
+     * @param integer $ReviewConfidence <p>判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。</p>
      */
     function __construct()
     {

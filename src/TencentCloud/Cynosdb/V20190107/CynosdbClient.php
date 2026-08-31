@@ -190,6 +190,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyClusterBinlogRedoLogAutoCopyVaultResponse ModifyClusterBinlogRedoLogAutoCopyVault(Models\ModifyClusterBinlogRedoLogAutoCopyVaultRequest $req) 修改集群Binlog和RedoLog自动拷贝到保险箱的配置
  * @method Models\ModifyClusterDatabaseResponse ModifyClusterDatabase(Models\ModifyClusterDatabaseRequest $req) 本接口（ModifyClusterDatabase）用于修改数据库的账号授权。
  * @method Models\ModifyClusterGlobalEncryptionResponse ModifyClusterGlobalEncryption(Models\ModifyClusterGlobalEncryptionRequest $req) 开关全局加密
+ * @method Models\ModifyClusterLevelResponse ModifyClusterLevel(Models\ModifyClusterLevelRequest $req) 修改集群级别
  * @method Models\ModifyClusterNameResponse ModifyClusterName(Models\ModifyClusterNameRequest $req) 本接口（ModifyClusterName）用于修改集群名称。
  * @method Models\ModifyClusterParamResponse ModifyClusterParam(Models\ModifyClusterParamRequest $req) 本接口（ModifyClusterParam）用于修改集群参数。
  * @method Models\ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexity(Models\ModifyClusterPasswordComplexityRequest $req) 本接口（ModifyClusterPasswordComplexity）用于修改/开启集群密码复杂度。

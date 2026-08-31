@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBucketRegion(string $BucketRegion) 设置<p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
  * @method LibraryExtension getLibraryExtension() 获取<p>媒体库配置项，部分参数新建后不可更改</p>
  * @method void setLibraryExtension(LibraryExtension $LibraryExtension) 设置<p>媒体库配置项，部分参数新建后不可更改</p>
+ * @method array getTags() 获取<p>媒体库标签列表。</p>
+ * @method void setTags(array $Tags) 设置<p>媒体库标签列表。</p>
  */
 class CreateLibraryRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateLibraryRequest extends AbstractModel
     public $LibraryExtension;
 
     /**
+     * @var array <p>媒体库标签列表。</p>
+     */
+    public $Tags;
+
+    /**
      * @param string $Name <p>媒体库名称，最多 50 个字符</p>
      * @param string $Remark <p>备注，最多 250 个字符</p>
      * @param string $BucketName <p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p>
      * @param string $BucketRegion <p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
      * @param LibraryExtension $LibraryExtension <p>媒体库配置项，部分参数新建后不可更改</p>
+     * @param array $Tags <p>媒体库标签列表。</p>
      */
     function __construct()
     {
@@ -97,6 +105,15 @@ class CreateLibraryRequest extends AbstractModel
         if (array_key_exists("LibraryExtension",$param) and $param["LibraryExtension"] !== null) {
             $this->LibraryExtension = new LibraryExtension();
             $this->LibraryExtension->deserialize($param["LibraryExtension"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

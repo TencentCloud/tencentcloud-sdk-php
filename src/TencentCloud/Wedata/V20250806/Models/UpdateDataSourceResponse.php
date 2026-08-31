@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateDataSource返回参数结构体
  *
- * @method DataSourceStatus getData() 获取操作是否成功
- * @method void setData(DataSourceStatus $Data) 设置操作是否成功
+ * @method DataSourceStatus getData() 获取<p>操作是否成功</p>
+ * @method void setData(DataSourceStatus $Data) 设置<p>操作是否成功</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateDataSourceResponse extends AbstractModel
 {
     /**
-     * @var DataSourceStatus 操作是否成功
+     * @var DataSourceStatus <p>操作是否成功</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class UpdateDataSourceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DataSourceStatus $Data 操作是否成功
+     * @param DataSourceStatus $Data <p>操作是否成功</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

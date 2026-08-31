@@ -316,6 +316,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyTaskType(TaskTypeOpsDto $ProxyTaskType) 设置<p>代理任务类型（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -772,6 +776,12 @@ class InstanceOpsDto extends AbstractModel
     public $ProxyTaskType;
 
     /**
+     * @var string <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Privilege;
+
+    /**
      * @param string $TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName <p>任务名称</p>
@@ -919,6 +929,8 @@ class InstanceOpsDto extends AbstractModel
      * @param string $WorkflowRunName <p>嵌套工作流名称（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskTypeOpsDto $ProxyTaskType <p>代理任务类型（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1255,6 +1267,10 @@ class InstanceOpsDto extends AbstractModel
         if (array_key_exists("ProxyTaskType",$param) and $param["ProxyTaskType"] !== null) {
             $this->ProxyTaskType = new TaskTypeOpsDto();
             $this->ProxyTaskType->deserialize($param["ProxyTaskType"]);
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

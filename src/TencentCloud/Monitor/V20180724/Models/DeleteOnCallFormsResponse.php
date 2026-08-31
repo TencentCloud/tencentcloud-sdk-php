@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOnCallForms返回参数结构体
  *
- * @method array getFailedOnCallFormIDs() 获取失败删除的排班id
- * @method void setFailedOnCallFormIDs(array $FailedOnCallFormIDs) 设置失败删除的排班id
- * @method array getSuccessOnCallFormIDs() 获取成功删除的排班id
- * @method void setSuccessOnCallFormIDs(array $SuccessOnCallFormIDs) 设置成功删除的排班id
+ * @method array getFailedOnCallFormIDs() 获取<p>失败删除的排班id</p>
+ * @method void setFailedOnCallFormIDs(array $FailedOnCallFormIDs) 设置<p>失败删除的排班id</p>
+ * @method array getSuccessOnCallFormIDs() 获取<p>成功删除的排班id</p>
+ * @method void setSuccessOnCallFormIDs(array $SuccessOnCallFormIDs) 设置<p>成功删除的排班id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteOnCallFormsResponse extends AbstractModel
 {
     /**
-     * @var array 失败删除的排班id
+     * @var array <p>失败删除的排班id</p>
      */
     public $FailedOnCallFormIDs;
 
     /**
-     * @var array 成功删除的排班id
+     * @var array <p>成功删除的排班id</p>
      */
     public $SuccessOnCallFormIDs;
 
@@ -45,8 +45,8 @@ class DeleteOnCallFormsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FailedOnCallFormIDs 失败删除的排班id
-     * @param array $SuccessOnCallFormIDs 成功删除的排班id
+     * @param array $FailedOnCallFormIDs <p>失败删除的排班id</p>
+     * @param array $SuccessOnCallFormIDs <p>成功删除的排班id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

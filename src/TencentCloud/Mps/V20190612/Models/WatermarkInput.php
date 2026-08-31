@@ -20,106 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒体处理任务中的水印参数类型
  *
- * @method integer getDefinition() 获取水印模板 ID。
- * @method void setDefinition(integer $Definition) 设置水印模板 ID。
- * @method RawWatermarkParameter getRawParameter() 获取水印自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
-水印自定义参数不支持截图打水印。
- * @method void setRawParameter(RawWatermarkParameter $RawParameter) 设置水印自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
-水印自定义参数不支持截图打水印。
- * @method string getTextContent() 获取文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
-文字水印不支持截图打水印。
- * @method void setTextContent(string $TextContent) 设置文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
-文字水印不支持截图打水印。
- * @method string getSvgContent() 获取SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
-SVG 水印不支持截图打水印。
- * @method void setSvgContent(string $SvgContent) 设置SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
-SVG 水印不支持截图打水印。
- * @method float getStartTimeOffset() 获取水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
-<li>不填或填0，表示水印从画面开始就出现；</li>
-<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
-<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
-注：只用于视频场景，截图不支持。
- * @method void setStartTimeOffset(float $StartTimeOffset) 设置水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
-<li>不填或填0，表示水印从画面开始就出现；</li>
-<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
-<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
-注：只用于视频场景，截图不支持。
- * @method float getEndTimeOffset() 获取水印的结束时间偏移，单位：秒。
-<li>不填或填0，表示水印持续到画面结束；</li>
-<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
-<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
-注：只用于视频场景，截图不支持。
- * @method void setEndTimeOffset(float $EndTimeOffset) 设置水印的结束时间偏移，单位：秒。
-<li>不填或填0，表示水印持续到画面结束；</li>
-<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
-<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
-注：只用于视频场景，截图不支持。
+ * @method integer getDefinition() 获取<p>水印模板 ID。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>水印模板 ID。</p>
+ * @method RawWatermarkParameter getRawParameter() 获取<p>水印自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。<br>水印自定义参数不支持截图打水印。</p>
+ * @method void setRawParameter(RawWatermarkParameter $RawParameter) 设置<p>水印自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。<br>水印自定义参数不支持截图打水印。</p>
+ * @method string getTextContent() 获取<p>文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。<br>文字水印不支持截图打水印。</p>
+ * @method void setTextContent(string $TextContent) 设置<p>文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。<br>文字水印不支持截图打水印。</p>
+ * @method string getSvgContent() 获取<p>SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。<br>SVG 水印不支持截图打水印。</p>
+ * @method void setSvgContent(string $SvgContent) 设置<p>SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。<br>SVG 水印不支持截图打水印。</p>
+ * @method float getStartTimeOffset() 获取<p>水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。</p><li>不填或填0，表示水印从画面开始就出现；</li><li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li><li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>注：只用于视频场景，截图不支持。
+ * @method void setStartTimeOffset(float $StartTimeOffset) 设置<p>水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。</p><li>不填或填0，表示水印从画面开始就出现；</li><li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li><li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>注：只用于视频场景，截图不支持。
+ * @method float getEndTimeOffset() 获取<p>水印的结束时间偏移，单位：秒。</p><li>不填或填0，表示水印持续到画面结束；</li><li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li><li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>注：只用于视频场景，截图不支持。
+ * @method void setEndTimeOffset(float $EndTimeOffset) 设置<p>水印的结束时间偏移，单位：秒。</p><li>不填或填0，表示水印持续到画面结束；</li><li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li><li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>注：只用于视频场景，截图不支持。
  */
 class WatermarkInput extends AbstractModel
 {
     /**
-     * @var integer 水印模板 ID。
+     * @var integer <p>水印模板 ID。</p>
      */
     public $Definition;
 
     /**
-     * @var RawWatermarkParameter 水印自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
-水印自定义参数不支持截图打水印。
+     * @var RawWatermarkParameter <p>水印自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。<br>水印自定义参数不支持截图打水印。</p>
      */
     public $RawParameter;
 
     /**
-     * @var string 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
-文字水印不支持截图打水印。
+     * @var string <p>文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。<br>文字水印不支持截图打水印。</p>
      */
     public $TextContent;
 
     /**
-     * @var string SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
-SVG 水印不支持截图打水印。
+     * @var string <p>SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。<br>SVG 水印不支持截图打水印。</p>
      */
     public $SvgContent;
 
     /**
-     * @var float 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
-<li>不填或填0，表示水印从画面开始就出现；</li>
-<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
-<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
-注：只用于视频场景，截图不支持。
+     * @var float <p>水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。</p><li>不填或填0，表示水印从画面开始就出现；</li><li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li><li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>注：只用于视频场景，截图不支持。
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 水印的结束时间偏移，单位：秒。
-<li>不填或填0，表示水印持续到画面结束；</li>
-<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
-<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
-注：只用于视频场景，截图不支持。
+     * @var float <p>水印的结束时间偏移，单位：秒。</p><li>不填或填0，表示水印持续到画面结束；</li><li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li><li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>注：只用于视频场景，截图不支持。
      */
     public $EndTimeOffset;
 
     /**
-     * @param integer $Definition 水印模板 ID。
-     * @param RawWatermarkParameter $RawParameter 水印自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
-水印自定义参数不支持截图打水印。
-     * @param string $TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
-文字水印不支持截图打水印。
-     * @param string $SvgContent SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
-SVG 水印不支持截图打水印。
-     * @param float $StartTimeOffset 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
-<li>不填或填0，表示水印从画面开始就出现；</li>
-<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
-<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
-注：只用于视频场景，截图不支持。
-     * @param float $EndTimeOffset 水印的结束时间偏移，单位：秒。
-<li>不填或填0，表示水印持续到画面结束；</li>
-<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
-<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
-注：只用于视频场景，截图不支持。
+     * @param integer $Definition <p>水印模板 ID。</p>
+     * @param RawWatermarkParameter $RawParameter <p>水印自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。<br>水印自定义参数不支持截图打水印。</p>
+     * @param string $TextContent <p>文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。<br>文字水印不支持截图打水印。</p>
+     * @param string $SvgContent <p>SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。<br>SVG 水印不支持截图打水印。</p>
+     * @param float $StartTimeOffset <p>水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。</p><li>不填或填0，表示水印从画面开始就出现；</li><li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li><li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>注：只用于视频场景，截图不支持。
+     * @param float $EndTimeOffset <p>水印的结束时间偏移，单位：秒。</p><li>不填或填0，表示水印持续到画面结束；</li><li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li><li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>注：只用于视频场景，截图不支持。
      */
     function __construct()
     {

@@ -20,65 +20,65 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全组信息。
  *
- * @method string getId() 获取安全组 ID。
- * @method void setId(string $Id) 设置安全组 ID。
- * @method string getName() 获取安全组名称。
- * @method void setName(string $Name) 设置安全组名称。
- * @method array getWhitelist() 获取白名单列表。
- * @method void setWhitelist(array $Whitelist) 设置白名单列表。
- * @method array getOccupiedInputs() 获取绑定的输入流列表。
+ * @method string getId() 获取<p>安全组 ID。</p>
+ * @method void setId(string $Id) 设置<p>安全组 ID。</p>
+ * @method string getName() 获取<p>安全组名称。</p>
+ * @method void setName(string $Name) 设置<p>安全组名称。</p>
+ * @method array getWhitelist() 获取<p>白名单列表。</p>
+ * @method void setWhitelist(array $Whitelist) 设置<p>白名单列表。</p>
+ * @method array getOccupiedInputs() 获取<p>绑定的输入流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOccupiedInputs(array $OccupiedInputs) 设置绑定的输入流列表。
+ * @method void setOccupiedInputs(array $OccupiedInputs) 设置<p>绑定的输入流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取安全组地址。
- * @method void setRegion(string $Region) 设置安全组地址。
- * @method array getOccupiedOutputs() 获取绑定的输出流列表。
+ * @method string getRegion() 获取<p>安全组地址。</p>
+ * @method void setRegion(string $Region) 设置<p>安全组地址。</p>
+ * @method array getOccupiedOutputs() 获取<p>绑定的输出流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOccupiedOutputs(array $OccupiedOutputs) 设置绑定的输出流列表。
+ * @method void setOccupiedOutputs(array $OccupiedOutputs) 设置<p>绑定的输出流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityGroupInfo extends AbstractModel
 {
     /**
-     * @var string 安全组 ID。
+     * @var string <p>安全组 ID。</p>
      */
     public $Id;
 
     /**
-     * @var string 安全组名称。
+     * @var string <p>安全组名称。</p>
      */
     public $Name;
 
     /**
-     * @var array 白名单列表。
+     * @var array <p>白名单列表。</p>
      */
     public $Whitelist;
 
     /**
-     * @var array 绑定的输入流列表。
+     * @var array <p>绑定的输入流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OccupiedInputs;
 
     /**
-     * @var string 安全组地址。
+     * @var string <p>安全组地址。</p>
      */
     public $Region;
 
     /**
-     * @var array 绑定的输出流列表。
+     * @var array <p>绑定的输出流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OccupiedOutputs;
 
     /**
-     * @param string $Id 安全组 ID。
-     * @param string $Name 安全组名称。
-     * @param array $Whitelist 白名单列表。
-     * @param array $OccupiedInputs 绑定的输入流列表。
+     * @param string $Id <p>安全组 ID。</p>
+     * @param string $Name <p>安全组名称。</p>
+     * @param array $Whitelist <p>白名单列表。</p>
+     * @param array $OccupiedInputs <p>绑定的输入流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 安全组地址。
-     * @param array $OccupiedOutputs 绑定的输出流列表。
+     * @param string $Region <p>安全组地址。</p>
+     * @param array $OccupiedOutputs <p>绑定的输出流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog请求参数结构体
  *
- * @method integer getFrom() 获取<p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p>
- * @method void setFrom(integer $From) 设置<p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p>
- * @method integer getTo() 获取<p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p>
- * @method void setTo(integer $To) 设置<p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p>
+ * @method integer getFrom() 获取<p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，包含 From 时刻</p>
+ * @method void setFrom(integer $From) 设置<p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，包含 From 时刻</p>
+ * @method integer getTo() 获取<p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，不包含 To 时刻</p>
+ * @method void setTo(integer $To) 设置<p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，不包含 To 时刻</p>
  * @method string getQueryString() 获取<p>检索分析语句，最大长度为12KB<br>语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句<br>使用*或空字符串可查询所有日志</p><p>默认值：空字符串</p>
  * @method void setQueryString(string $QueryString) 设置<p>检索分析语句，最大长度为12KB<br>语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句<br>使用*或空字符串可查询所有日志</p><p>默认值：空字符串</p>
  * @method integer getQuerySyntax() 获取<p>检索语法规则，默认值为1，推荐使用1 。</p><ul><li>0：Lucene语法</li><li>1：CQL语法（CLS Query Language，日志服务专用检索语法）</li></ul><p>详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。</p><p>默认值：1</p>
@@ -54,12 +54,12 @@ use TencentCloud\Common\AbstractModel;
 class SearchLogRequest extends AbstractModel
 {
     /**
-     * @var integer <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * @var integer <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，包含 From 时刻</p>
      */
     public $From;
 
     /**
-     * @var integer <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * @var integer <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，不包含 To 时刻</p>
      */
     public $To;
 
@@ -131,8 +131,8 @@ class SearchLogRequest extends AbstractModel
     public $SyntaxRule;
 
     /**
-     * @param integer $From <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p>
-     * @param integer $To <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * @param integer $From <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，包含 From 时刻</p>
+     * @param integer $To <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，不包含 To 时刻</p>
      * @param string $QueryString <p>检索分析语句，最大长度为12KB<br>语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句<br>使用*或空字符串可查询所有日志</p><p>默认值：空字符串</p>
      * @param integer $QuerySyntax <p>检索语法规则，默认值为1，推荐使用1 。</p><ul><li>0：Lucene语法</li><li>1：CQL语法（CLS Query Language，日志服务专用检索语法）</li></ul><p>详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。</p><p>默认值：1</p>
      * @param string $TopicId <ul><li>要检索分析的日志主题ID，仅能指定一个日志主题。</li><li>如需同时检索多个日志主题，请使用Topics参数。</li><li>TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。</li></ul>

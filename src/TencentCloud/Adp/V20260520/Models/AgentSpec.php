@@ -22,18 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method AgentProfile getProfile() 获取<p>Agent基本配置</p>
  * @method void setProfile(AgentProfile $Profile) 设置<p>Agent基本配置</p>
- * @method string getInstructions() 获取系统提示词
- * @method void setInstructions(string $Instructions) 设置系统提示词
- * @method AgentModelConfig getModel() 获取主模型配置
- * @method void setModel(AgentModelConfig $Model) 设置主模型配置
+ * @method string getInstructions() 获取<p>系统提示词</p>
+ * @method void setInstructions(string $Instructions) 设置<p>系统提示词</p>
+ * @method AgentModelConfig getModel() 获取<p>主模型配置</p>
+ * @method void setModel(AgentModelConfig $Model) 设置<p>主模型配置</p>
  * @method array getToolList() 获取<p>工具信息</p>
  * @method void setToolList(array $ToolList) 设置<p>工具信息</p>
  * @method array getPluginList() 获取<p>插件信息</p>
  * @method void setPluginList(array $PluginList) 设置<p>插件信息</p>
  * @method array getSkillList() 获取<p>技能信息</p>
  * @method void setSkillList(array $SkillList) 设置<p>技能信息</p>
- * @method AgentAdvancedConfig getAdvancedConfig() 获取高级设置
- * @method void setAdvancedConfig(AgentAdvancedConfig $AdvancedConfig) 设置高级设置
+ * @method AgentAdvancedConfig getAdvancedConfig() 获取<p>高级设置</p>
+ * @method void setAdvancedConfig(AgentAdvancedConfig $AdvancedConfig) 设置<p>高级设置</p>
+ * @method array getExternalToolList() 获取<p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
+ * @method void setExternalToolList(array $ExternalToolList) 设置<p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
  */
 class AgentSpec extends AbstractModel
 {
@@ -43,12 +45,12 @@ class AgentSpec extends AbstractModel
     public $Profile;
 
     /**
-     * @var string 系统提示词
+     * @var string <p>系统提示词</p>
      */
     public $Instructions;
 
     /**
-     * @var AgentModelConfig 主模型配置
+     * @var AgentModelConfig <p>主模型配置</p>
      */
     public $Model;
 
@@ -68,18 +70,24 @@ class AgentSpec extends AbstractModel
     public $SkillList;
 
     /**
-     * @var AgentAdvancedConfig 高级设置
+     * @var AgentAdvancedConfig <p>高级设置</p>
      */
     public $AdvancedConfig;
 
     /**
+     * @var array <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
+     */
+    public $ExternalToolList;
+
+    /**
      * @param AgentProfile $Profile <p>Agent基本配置</p>
-     * @param string $Instructions 系统提示词
-     * @param AgentModelConfig $Model 主模型配置
+     * @param string $Instructions <p>系统提示词</p>
+     * @param AgentModelConfig $Model <p>主模型配置</p>
      * @param array $ToolList <p>工具信息</p>
      * @param array $PluginList <p>插件信息</p>
      * @param array $SkillList <p>技能信息</p>
-     * @param AgentAdvancedConfig $AdvancedConfig 高级设置
+     * @param AgentAdvancedConfig $AdvancedConfig <p>高级设置</p>
+     * @param array $ExternalToolList <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
      */
     function __construct()
     {
@@ -138,6 +146,15 @@ class AgentSpec extends AbstractModel
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
             $this->AdvancedConfig = new AgentAdvancedConfig();
             $this->AdvancedConfig->deserialize($param["AdvancedConfig"]);
+        }
+
+        if (array_key_exists("ExternalToolList",$param) and $param["ExternalToolList"] !== null) {
+            $this->ExternalToolList = [];
+            foreach ($param["ExternalToolList"] as $key => $value){
+                $obj = new AgentExternalToolConfig();
+                $obj->deserialize($value);
+                array_push($this->ExternalToolList, $obj);
+            }
         }
     }
 }

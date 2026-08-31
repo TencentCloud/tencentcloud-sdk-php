@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOnCallForm请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method string getOnCallFormName() 获取值班表名称
- * @method void setOnCallFormName(string $OnCallFormName) 设置值班表名称
- * @method array getStaffInfos() 获取值班人员id组
- * @method void setStaffInfos(array $StaffInfos) 设置值班人员id组
- * @method string getRotationType() 获取轮转类型
- * @method void setRotationType(string $RotationType) 设置轮转类型
- * @method string getShiftTime() 获取换班时间
- * @method void setShiftTime(string $ShiftTime) 设置换班时间
- * @method integer getEffectiveStartTime() 获取有效期开始时间，单位s
- * @method void setEffectiveStartTime(integer $EffectiveStartTime) 设置有效期开始时间，单位s
- * @method integer getEffectiveEndTime() 获取有效期结束时间，单位s
- * @method void setEffectiveEndTime(integer $EffectiveEndTime) 设置有效期结束时间，单位s
- * @method float getTimeZone() 获取时区(-12 - 12)
- * @method void setTimeZone(float $TimeZone) 设置时区(-12 - 12)
- * @method string getOnCallFormDesc() 获取值班表描述
- * @method void setOnCallFormDesc(string $OnCallFormDesc) 设置值班表描述
- * @method array getCoverStaffInfos() 获取轮班信息
- * @method void setCoverStaffInfos(array $CoverStaffInfos) 设置轮班信息
- * @method array getTags() 获取模板绑定的标签
- * @method void setTags(array $Tags) 设置模板绑定的标签
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method string getOnCallFormName() 获取<p>值班表名称</p>
+ * @method void setOnCallFormName(string $OnCallFormName) 设置<p>值班表名称</p>
+ * @method array getStaffInfos() 获取<p>值班人员id组</p>
+ * @method void setStaffInfos(array $StaffInfos) 设置<p>值班人员id组</p>
+ * @method string getRotationType() 获取<p>轮转类型</p>
+ * @method void setRotationType(string $RotationType) 设置<p>轮转类型</p>
+ * @method string getShiftTime() 获取<p>换班时间</p>
+ * @method void setShiftTime(string $ShiftTime) 设置<p>换班时间</p>
+ * @method integer getEffectiveStartTime() 获取<p>有效期开始时间，单位s</p>
+ * @method void setEffectiveStartTime(integer $EffectiveStartTime) 设置<p>有效期开始时间，单位s</p>
+ * @method integer getEffectiveEndTime() 获取<p>有效期结束时间，单位s</p>
+ * @method void setEffectiveEndTime(integer $EffectiveEndTime) 设置<p>有效期结束时间，单位s</p>
+ * @method float getTimeZone() 获取<p>时区(-12 - 12)</p>
+ * @method void setTimeZone(float $TimeZone) 设置<p>时区(-12 - 12)</p>
+ * @method string getOnCallFormDesc() 获取<p>值班表描述</p>
+ * @method void setOnCallFormDesc(string $OnCallFormDesc) 设置<p>值班表描述</p>
+ * @method array getCoverStaffInfos() 获取<p>轮班信息</p>
+ * @method void setCoverStaffInfos(array $CoverStaffInfos) 设置<p>轮班信息</p>
+ * @method array getTags() 获取<p>模板绑定的标签</p>
+ * @method void setTags(array $Tags) 设置<p>模板绑定的标签</p>
  */
 class CreateOnCallFormRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var string 值班表名称
+     * @var string <p>值班表名称</p>
      */
     public $OnCallFormName;
 
     /**
-     * @var array 值班人员id组
+     * @var array <p>值班人员id组</p>
      */
     public $StaffInfos;
 
     /**
-     * @var string 轮转类型
+     * @var string <p>轮转类型</p>
      */
     public $RotationType;
 
     /**
-     * @var string 换班时间
+     * @var string <p>换班时间</p>
      */
     public $ShiftTime;
 
     /**
-     * @var integer 有效期开始时间，单位s
+     * @var integer <p>有效期开始时间，单位s</p>
      */
     public $EffectiveStartTime;
 
     /**
-     * @var integer 有效期结束时间，单位s
+     * @var integer <p>有效期结束时间，单位s</p>
      */
     public $EffectiveEndTime;
 
     /**
-     * @var float 时区(-12 - 12)
+     * @var float <p>时区(-12 - 12)</p>
      */
     public $TimeZone;
 
     /**
-     * @var string 值班表描述
+     * @var string <p>值班表描述</p>
      */
     public $OnCallFormDesc;
 
     /**
-     * @var array 轮班信息
+     * @var array <p>轮班信息</p>
      */
     public $CoverStaffInfos;
 
     /**
-     * @var array 模板绑定的标签
+     * @var array <p>模板绑定的标签</p>
      */
     public $Tags;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param string $OnCallFormName 值班表名称
-     * @param array $StaffInfos 值班人员id组
-     * @param string $RotationType 轮转类型
-     * @param string $ShiftTime 换班时间
-     * @param integer $EffectiveStartTime 有效期开始时间，单位s
-     * @param integer $EffectiveEndTime 有效期结束时间，单位s
-     * @param float $TimeZone 时区(-12 - 12)
-     * @param string $OnCallFormDesc 值班表描述
-     * @param array $CoverStaffInfos 轮班信息
-     * @param array $Tags 模板绑定的标签
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param string $OnCallFormName <p>值班表名称</p>
+     * @param array $StaffInfos <p>值班人员id组</p>
+     * @param string $RotationType <p>轮转类型</p>
+     * @param string $ShiftTime <p>换班时间</p>
+     * @param integer $EffectiveStartTime <p>有效期开始时间，单位s</p>
+     * @param integer $EffectiveEndTime <p>有效期结束时间，单位s</p>
+     * @param float $TimeZone <p>时区(-12 - 12)</p>
+     * @param string $OnCallFormDesc <p>值班表描述</p>
+     * @param array $CoverStaffInfos <p>轮班信息</p>
+     * @param array $Tags <p>模板绑定的标签</p>
      */
     function __construct()
     {

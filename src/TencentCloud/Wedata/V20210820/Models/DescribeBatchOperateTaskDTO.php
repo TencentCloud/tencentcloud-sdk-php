@@ -20,297 +20,273 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 批量操作任务列表
  *
- * @method string getTaskId() 获取任务ID
+ * @method string getTaskId() 获取<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskName() 获取任务名
+ * @method string getTaskName() 获取<p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskName(string $TaskName) 设置任务名
+ * @method void setTaskName(string $TaskName) 设置<p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowId() 获取工作流Id
+ * @method string getWorkflowId() 获取<p>工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置工作流Id
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowName() 获取工作流名
+ * @method string getWorkflowName() 获取<p>工作流名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取状态
+ * @method string getStatus() 获取<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置状态
+ * @method void setStatus(string $Status) 设置<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskTypeId() 获取任务ID
+ * @method integer getTaskTypeId() 获取<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeId(integer $TaskTypeId) 设置任务ID
+ * @method void setTaskTypeId(integer $TaskTypeId) 设置<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskTypeDesc() 获取任务类型
+ * @method string getTaskTypeDesc() 获取<p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeDesc(string $TaskTypeDesc) 设置任务类型
+ * @method void setTaskTypeDesc(string $TaskTypeDesc) 设置<p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFolderName() 获取文件夹名
+ * @method string getFolderName() 获取<p>文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderName(string $FolderName) 设置文件夹名
+ * @method void setFolderName(string $FolderName) 设置<p>文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFolderId() 获取文件夹ID
+ * @method string getFolderId() 获取<p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderId(string $FolderId) 设置文件夹ID
+ * @method void setFolderId(string $FolderId) 设置<p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInCharge() 获取负责人
+ * @method string getInCharge() 获取<p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInCharge(string $InCharge) 设置负责人
+ * @method void setInCharge(string $InCharge) 设置<p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSubmit() 获取是否提交
+ * @method integer getSubmit() 获取<p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubmit(integer $Submit) 设置是否提交
+ * @method void setSubmit(integer $Submit) 设置<p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDataEngine() 获取引擎：
-presto\SparkJob\SparkSql
+ * @method string getDataEngine() 获取<p>引擎：<br>presto\SparkJob\SparkSql</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataEngine(string $DataEngine) 设置引擎：
-presto\SparkJob\SparkSql
+ * @method void setDataEngine(string $DataEngine) 设置<p>引擎：<br>presto\SparkJob\SparkSql</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创造时间
+ * @method string getCreateTime() 获取<p>创造时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创造时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创造时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCycleUnit() 获取周期类型D天周期
-H小时
-Ccrontab类型
-I分钟
-O一次性
-Y年
-R用户驱动
-W周
-M月
+ * @method string getCycleUnit() 获取<p>周期类型D天周期<br>H小时<br>Ccrontab类型<br>I分钟<br>O一次性<br>Y年<br>R用户驱动<br>W周<br>M月</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleUnit(string $CycleUnit) 设置周期类型D天周期
-H小时
-Ccrontab类型
-I分钟
-O一次性
-Y年
-R用户驱动
-W周
-M月
+ * @method void setCycleUnit(string $CycleUnit) 设置<p>周期类型D天周期<br>H小时<br>Ccrontab类型<br>I分钟<br>O一次性<br>Y年<br>R用户驱动<br>W周<br>M月</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleDesc() 获取调度计划
+ * @method string getScheduleDesc() 获取<p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleDesc(string $ScheduleDesc) 设置调度计划
+ * @method void setScheduleDesc(string $ScheduleDesc) 设置<p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDatasourceId() 获取数据源ID
+ * @method string getDatasourceId() 获取<p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatasourceId(string $DatasourceId) 设置数据源ID
+ * @method void setDatasourceId(string $DatasourceId) 设置<p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDatasourceType() 获取数据源类型
+ * @method string getDatasourceType() 获取<p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatasourceType(string $DatasourceType) 设置数据源类型
+ * @method void setDatasourceType(string $DatasourceType) 设置<p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getComputeResource() 获取引擎名称
+ * @method string getComputeResource() 获取<p>引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComputeResource(string $ComputeResource) 设置引擎名称
+ * @method void setComputeResource(string $ComputeResource) 设置<p>引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDlcRegion() 获取dlc地域
+ * @method string getDlcRegion() 获取<p>dlc地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDlcRegion(string $DlcRegion) 设置dlc地域
+ * @method void setDlcRegion(string $DlcRegion) 设置<p>dlc地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIsInherit() 获取资源组或自定义
+ * @method string getIsInherit() 获取<p>资源组或自定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsInherit(string $IsInherit) 设置资源组或自定义
+ * @method void setIsInherit(string $IsInherit) 设置<p>资源组或自定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeBatchOperateTaskDTO extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 任务名
+     * @var string <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
-     * @var string 工作流Id
+     * @var string <p>工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 工作流名
+     * @var string <p>工作流名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowName;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var integer 任务ID
+     * @var integer <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeId;
 
     /**
-     * @var string 任务类型
+     * @var string <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeDesc;
 
     /**
-     * @var string 文件夹名
+     * @var string <p>文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderName;
 
     /**
-     * @var string 文件夹ID
+     * @var string <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderId;
 
     /**
-     * @var string 负责人
+     * @var string <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InCharge;
 
     /**
-     * @var integer 是否提交
+     * @var integer <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Submit;
 
     /**
-     * @var string 引擎：
-presto\SparkJob\SparkSql
+     * @var string <p>引擎：<br>presto\SparkJob\SparkSql</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngine;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 创造时间
+     * @var string <p>创造时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 周期类型D天周期
-H小时
-Ccrontab类型
-I分钟
-O一次性
-Y年
-R用户驱动
-W周
-M月
+     * @var string <p>周期类型D天周期<br>H小时<br>Ccrontab类型<br>I分钟<br>O一次性<br>Y年<br>R用户驱动<br>W周<br>M月</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleUnit;
 
     /**
-     * @var string 调度计划
+     * @var string <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleDesc;
 
     /**
-     * @var string 数据源ID
+     * @var string <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceId;
 
     /**
-     * @var string 数据源类型
+     * @var string <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceType;
 
     /**
-     * @var string 引擎名称
+     * @var string <p>引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComputeResource;
 
     /**
-     * @var string dlc地域
+     * @var string <p>dlc地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DlcRegion;
 
     /**
-     * @var string 资源组或自定义
+     * @var string <p>资源组或自定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsInherit;
 
     /**
-     * @param string $TaskId 任务ID
+     * @var string <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskName 任务名
+     */
+    public $Privilege;
+
+    /**
+     * @param string $TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowId 工作流Id
+     * @param string $TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowName 工作流名
+     * @param string $WorkflowId <p>工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 状态
+     * @param string $WorkflowName <p>工作流名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskTypeId 任务ID
+     * @param string $Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskTypeDesc 任务类型
+     * @param integer $TaskTypeId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FolderName 文件夹名
+     * @param string $TaskTypeDesc <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FolderId 文件夹ID
+     * @param string $FolderName <p>文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InCharge 负责人
+     * @param string $FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Submit 是否提交
+     * @param string $InCharge <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DataEngine 引擎：
-presto\SparkJob\SparkSql
+     * @param integer $Submit <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $DataEngine <p>引擎：<br>presto\SparkJob\SparkSql</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创造时间
+     * @param string $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CycleUnit 周期类型D天周期
-H小时
-Ccrontab类型
-I分钟
-O一次性
-Y年
-R用户驱动
-W周
-M月
+     * @param string $CreateTime <p>创造时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleDesc 调度计划
+     * @param string $CycleUnit <p>周期类型D天周期<br>H小时<br>Ccrontab类型<br>I分钟<br>O一次性<br>Y年<br>R用户驱动<br>W周<br>M月</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DatasourceId 数据源ID
+     * @param string $ScheduleDesc <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DatasourceType 数据源类型
+     * @param string $DatasourceId <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ComputeResource 引擎名称
+     * @param string $DatasourceType <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DlcRegion dlc地域
+     * @param string $ComputeResource <p>引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IsInherit 资源组或自定义
+     * @param string $DlcRegion <p>dlc地域</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsInherit <p>资源组或自定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -408,6 +384,10 @@ M月
 
         if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
             $this->IsInherit = $param["IsInherit"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

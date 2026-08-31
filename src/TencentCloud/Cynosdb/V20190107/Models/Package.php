@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 CCU-计算资源包，DISK-存储资源包
  * @method void setPackageType(string $PackageType) 设置资源包类型
 CCU-计算资源包，DISK-存储资源包
+ * @method string getPackageVersion() 获取资源包套餐版本
+base-基础，common-通用，enterprise-企业
+ * @method void setPackageVersion(string $PackageVersion) 设置资源包套餐版本
+base-基础，common-通用，enterprise-企业
  * @method string getPackageRegion() 获取资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
  * @method void setPackageRegion(string $PackageRegion) 设置资源包使用地域
@@ -85,6 +89,12 @@ class Package extends AbstractModel
 CCU-计算资源包，DISK-存储资源包
      */
     public $PackageType;
+
+    /**
+     * @var string 资源包套餐版本
+base-基础，common-通用，enterprise-企业
+     */
+    public $PackageVersion;
 
     /**
      * @var string 资源包使用地域
@@ -144,6 +154,8 @@ refund-已退费。
      * @param string $PackageName 资源包名称
      * @param string $PackageType 资源包类型
 CCU-计算资源包，DISK-存储资源包
+     * @param string $PackageVersion 资源包套餐版本
+base-基础，common-通用，enterprise-企业
      * @param string $PackageRegion 资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
      * @param string $Status 资源包状态
@@ -188,6 +200,10 @@ refund-已退费。
 
         if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
             $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("PackageVersion",$param) and $param["PackageVersion"] !== null) {
+            $this->PackageVersion = $param["PackageVersion"];
         }
 
         if (array_key_exists("PackageRegion",$param) and $param["PackageRegion"] !== null) {

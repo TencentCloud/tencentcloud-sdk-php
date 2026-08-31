@@ -20,110 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConfigureSubscribeJob请求参数结构体
  *
- * @method string getSubscribeId() 获取数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
- * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
- * @method string getSubscribeMode() 获取数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
- * @method void setSubscribeMode(string $SubscribeMode) 设置数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
- * @method string getAccessType() 获取源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
- * @method void setAccessType(string $AccessType) 设置源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
- * @method array getEndpoints() 获取数据库节点信息
- * @method void setEndpoints(array $Endpoints) 设置数据库节点信息
- * @method SubscribeKafkaConfig getKafkaConfig() 获取Kafka配置
- * @method void setKafkaConfig(SubscribeKafkaConfig $KafkaConfig) 设置Kafka配置
- * @method array getSubscribeObjects() 获取订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数
- * @method void setSubscribeObjects(array $SubscribeObjects) 设置订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数
- * @method string getProtocol() 获取订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档
- * @method void setProtocol(string $Protocol) 设置订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档
- * @method array getPipelineInfo() 获取mongo选填参数：输出聚合设置。
- * @method void setPipelineInfo(array $PipelineInfo) 设置mongo选填参数：输出聚合设置。
- * @method array getExtraAttr() 获取为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
-其他业务暂没有可选参数。
- * @method void setExtraAttr(array $ExtraAttr) 设置为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
-其他业务暂没有可选参数。
- * @method string getConsumerVpcId() 获取vpc id
- * @method void setConsumerVpcId(string $ConsumerVpcId) 设置vpc id
- * @method string getConsumerSubnetId() 获取subnet id
- * @method void setConsumerSubnetId(string $ConsumerSubnetId) 设置subnet id
+ * @method string getSubscribeId() 获取<p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+ * @method void setSubscribeId(string $SubscribeId) 设置<p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+ * @method string getSubscribeMode() 获取<p>数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
+ * @method void setSubscribeMode(string $SubscribeMode) 设置<p>数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
+ * @method string getAccessType() 获取<p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
+ * @method void setAccessType(string $AccessType) 设置<p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
+ * @method array getEndpoints() 获取<p>数据库节点信息</p>
+ * @method void setEndpoints(array $Endpoints) 设置<p>数据库节点信息</p>
+ * @method SubscribeKafkaConfig getKafkaConfig() 获取<p>Kafka配置</p>
+ * @method void setKafkaConfig(SubscribeKafkaConfig $KafkaConfig) 设置<p>Kafka配置</p>
+ * @method array getSubscribeObjects() 获取<p>订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数</p>
+ * @method void setSubscribeObjects(array $SubscribeObjects) 设置<p>订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数</p>
+ * @method string getProtocol() 获取<p>订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档</p>
+ * @method void setProtocol(string $Protocol) 设置<p>订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档</p>
+ * @method array getPipelineInfo() 获取<p>mongo选填参数：输出聚合设置。</p>
+ * @method void setPipelineInfo(array $PipelineInfo) 设置<p>mongo选填参数：输出聚合设置。</p>
+ * @method array getExtraAttr() 获取<p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。<br>其他业务暂没有可选参数。</p>
+ * @method void setExtraAttr(array $ExtraAttr) 设置<p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。<br>其他业务暂没有可选参数。</p>
+ * @method string getConsumerVpcId() 获取<p>vpc id</p>
+ * @method void setConsumerVpcId(string $ConsumerVpcId) 设置<p>vpc id</p>
+ * @method string getConsumerSubnetId() 获取<p>subnet id</p>
+ * @method void setConsumerSubnetId(string $ConsumerSubnetId) 设置<p>subnet id</p>
  */
 class ConfigureSubscribeJobRequest extends AbstractModel
 {
     /**
-     * @var string 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+     * @var string <p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
      */
     public $SubscribeId;
 
     /**
-     * @var string 数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
+     * @var string <p>数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
      */
     public $SubscribeMode;
 
     /**
-     * @var string 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
+     * @var string <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
      */
     public $AccessType;
 
     /**
-     * @var array 数据库节点信息
+     * @var array <p>数据库节点信息</p>
      */
     public $Endpoints;
 
     /**
-     * @var SubscribeKafkaConfig Kafka配置
+     * @var SubscribeKafkaConfig <p>Kafka配置</p>
      */
     public $KafkaConfig;
 
     /**
-     * @var array 订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数
+     * @var array <p>订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数</p>
      */
     public $SubscribeObjects;
 
     /**
-     * @var string 订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档
+     * @var string <p>订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档</p>
      */
     public $Protocol;
 
     /**
-     * @var array mongo选填参数：输出聚合设置。
+     * @var array <p>mongo选填参数：输出聚合设置。</p>
      */
     public $PipelineInfo;
 
     /**
-     * @var array 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
-其他业务暂没有可选参数。
+     * @var array <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。<br>其他业务暂没有可选参数。</p>
      */
     public $ExtraAttr;
 
     /**
-     * @var string vpc id
+     * @var string <p>vpc id</p>
      */
     public $ConsumerVpcId;
 
     /**
-     * @var string subnet id
+     * @var string <p>subnet id</p>
      */
     public $ConsumerSubnetId;
 
     /**
-     * @param string $SubscribeId 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
-     * @param string $SubscribeMode 数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
-     * @param string $AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
-     * @param array $Endpoints 数据库节点信息
-     * @param SubscribeKafkaConfig $KafkaConfig Kafka配置
-     * @param array $SubscribeObjects 订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数
-     * @param string $Protocol 订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档
-     * @param array $PipelineInfo mongo选填参数：输出聚合设置。
-     * @param array $ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
-其他业务暂没有可选参数。
-     * @param string $ConsumerVpcId vpc id
-     * @param string $ConsumerSubnetId subnet id
+     * @param string $SubscribeId <p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+     * @param string $SubscribeMode <p>数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
+     * @param string $AccessType <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
+     * @param array $Endpoints <p>数据库节点信息</p>
+     * @param SubscribeKafkaConfig $KafkaConfig <p>Kafka配置</p>
+     * @param array $SubscribeObjects <p>订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数</p>
+     * @param string $Protocol <p>订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档</p>
+     * @param array $PipelineInfo <p>mongo选填参数：输出聚合设置。</p>
+     * @param array $ExtraAttr <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。<br>其他业务暂没有可选参数。</p>
+     * @param string $ConsumerVpcId <p>vpc id</p>
+     * @param string $ConsumerSubnetId <p>subnet id</p>
      */
     function __construct()
     {

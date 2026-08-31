@@ -450,43 +450,26 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateFlowByFilesResponse CreateFlowByFiles(Models\CreateFlowByFilesRequest $req) 此接口（CreateFlowByFiles）用来通过上传后的pdf资源编号来创建待签署的合同流程。<br/>
 适用场景：适用非制式的合同文件签署。一般开发者自己有完整的签署文件，可以通过该接口传入完整的PDF文件及流程信息生成待签署的合同流程。<br/>
 
-<table>
-	<thead>
-		<tr>
-			<th>签署人类别</th>
-			<th>需要提前准备的信息</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>自己企业的员工签署（未认证加入或已认证加入）</td>
-			<td>签署企业的名字、员工的真实名字、员工的触达手机号、员工的证件号（证件号非必传）</td>
-		</tr>
-		<tr>
-			<td>自己企业的员工签署（已认证加入）</td>
-			<td>签署企业的名字、员工在电子签平台的ID（UserId）</td>
-		</tr>
-		<tr>
-			<td>其他企业的员工签署</td>
-			<td>签署企业的名字、员工的真实名字、员工的触达手机号、员工的证件号（证件号非必传）</td>
-		</tr>
-		<tr>
-			<td>个人（自然人）签署</td>
-			<td>个人的真实名字、个人的触达手机号、个人的身份证（证件号非必传）</td>
-		</tr>
-	</tbody>
-</table>
+## 传参方式指引
+
+| 签署方类型 | ApproverType | 需要提前准备的信息 | 对应 Approvers 关键字段 |
+|------|------|------|------|
+| 本企业员工（未认证加入） | 0 | 签署企业名、员工真实姓名、员工触达手机号、证件号（非必传） | OrganizationName + ApproverName + ApproverMobile |
+| 本企业员工（已认证加入） | 0 | 签署企业名、员工在电子签平台的 ID（UserId） | OrganizationName + UserId |
+| 他方企业员工 | 0 | 签署企业名、员工真实姓名、员工触达手机号、证件号（非必传） | OrganizationName + ApproverName + ApproverMobile |
+| 个人（自然人） | 1 | 个人真实姓名、个人触达手机号、身份证号（非必传） | ApproverName + ApproverMobile |
 
 
+该接口需要依赖[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口生成pdf资源编号（FileIds）进行使用。（如果非pdf文件需要调用[创建文件转换任务](https://qian.tencent.com/developers/companyApis/templatesAndFiles/DescribeFileConvertTask)接口转换成pdf资源）<br/>
 
-该接口需要依赖[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口生成pdf资源编号（FileIds）进行使用。（如果非pdf文件需要调用[创建文件转换任务](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi)接口转换成pdf资源）<br/>
-
-
-![image](https://qcloudimg.tencent-cloud.cn/raw/f097a74b289e3e1acd740936bdfe9843.png)
+## 整体流程图
+![image](https://qcloudimg.tencent-cloud.cn/raw/9577ac334c083ecfe0014a187d64b485.svg)
 
 注：
--  合同**发起后就会扣减合同的额度**, 只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。（**过期，拒签，签署完成，解除完成等状态不会返还额度**）
-- **静默（自动）签署不支持合同签署方存在填写**功能
+-  合同<font color="red">发起后就会扣减合同的额度</font> , 只有撤销没有参与方签署过或只有自动签署签署过的合同，且<font color="red">有撤销合同额度</font>的情形下，才会返还合同额度。（**过期，拒签，签署完成，解除完成等状态不会返还额度**）。具体可以参考[合同撤销返还额度说明](https://qian.tencent.com/developers/company/contract_cancel_quota)。
+- 支持的证件类型可以参考[支持的证件类型](https://qian.tencent.com/developers/company/id_card_support)。
+- 合同发起方需要【组织管理】->【角色管理】中拥有<font color="red">接口发起合同</font>的权限
+![image](https://qcloudimg.tencent-cloud.cn/raw/c8553d1823ca1323e82c11f01c86e8cd.png)
 
 
 <font color="red">相关视频指引</font> <br>
@@ -897,6 +880,123 @@ use TencentCloud\Ess\V20201111\Models as Models;
 </ul>
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/3427941ecb091bf0c55009bad192dd1c.png)
+ * @method Models\CreateRequestWithEncryptionResponse CreateRequestWithEncryption(Models\CreateRequestWithEncryptionRequest $req) 该接口支持对请求内容进行加密传输。调用方需使用约定的 AES-CBC 或 SM4-CBC 算法对请求内容进行加密，并使用 HMAC-SHA256 或 HMAC-SM3 算法对 IV 和加密后的数据进行完整性校验，防止请求内容被篡改。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/391df0a37c2b213445c4909ba98824ac.svg)
+
+**请求端加密流程**
+1. 每次请求使用密码学安全的随机源生成 16 字节 的 IV。每次请求必须重新生成，严禁复用。
+2. 使用约定的 AES-CBC 或 SM4-CBC 算法对原始请求体进行加密，使用 PKCS#7 Padding。
+3. 将加密后的密文原始字节进行标准 Base64 编码，作为 EncryptedData 参数。
+4. 将 IV 原始字节进行标准 Base64 编码，作为 IV 参数。
+5. 对 IV 原始字节和密文原始字节直接拼接（不添加分隔符），计算 HMAC-SHA256 或 HMAC-SM4：HMAC(Key, IVBytes || CiphertextBytes)
+6. 将 HMAC 的结果进行 标准 Base64 编码，作为 EncryptionSignature 参数。
+
+**响应端解密流程**
+1. 先判断本接口自身是否返回外层错误，此时错误为明文（标准腾讯云错误体），有则直接失败处理。
+2. 分别对 IV、EncryptedData、EncryptionSignature 做标准 Base64 解码，得到原始字节。
+3. 将 IV 与密文原始字节直接拼接（无分隔符），计算 HMAC-SHA256 或 HMAC-SM4：HMAC(Key, IVBytes || CiphertextBytes)。
+4. 与响应中 EncryptionSignature 解码后的字节做恒定时间比较，不一致立即失败，不得继续解密。
+5. 使用约定的 AES-CBC 或 SM4-CBC，以 IV 和密钥解密 EncryptedData，去除 PKCS#7 Padding 得到明文。
+6. 先用腾讯云标准错误体反序列化明文，判断被加密业务接口是否返回 Error。
+7. 无业务错误时，再用目标业务接口的响应结构体反序列化明文，取出实际业务参数。
+
+**响应端错误处理**
+1. 外层错误（本接口本身调用失败）：返回标准腾讯云错误 JSON（含 Error.Code / Error.Message），无 EncryptedData，不需要解密即可处理。
+2. 内层错误（业务接口执行失败）：外层成功，但解密后的明文里包含 Error.Code / Error.Message，按目标业务接口的错误规范处理。
+
+**处理过程示例**
+```
+# ========== 前置约定 ==========
+AESKey  : 加密 密钥（AES 32 字节，SM4 16 字节）
+HMACKey : HMAC 密钥（与加密密钥需要不同）
+ALGO    : AES-CBC 或 SM4-CBC，双方约定
+HMAC    : ALGO == AES-CBC ? HMAC-SHA256 : HMAC-SM3
+
+# ========== 请求端：加密并调用 ==========
+function CallWithEncryption(bizAction, bizRequestObj):
+    # 1. 序列化业务请求
+    plaintext = JSON.stringify(bizRequestObj)
+    # 2. 生成 16 字节随机 IV（每次新生成，禁止复用）
+    iv = SecureRandom(16)
+    # 3. 对称加密（PKCS#7 Padding）
+    ciphertext = SymmetricEncrypt(ALGO, AESKey, iv, plaintext)
+    # 4. 计算完整性签名：HMAC(Key, IV || Ciphertext)
+    signature = HMAC(HMACKey, concat(iv, ciphertext))
+    # 5. 组装外层请求参数
+    encReq = {
+        RequestAction:       bizAction,
+        IV:                  Base64(iv),
+        EncryptedData:       Base64(ciphertext),
+        EncryptionSignature: Base64(signature),
+    }
+    # 6. 调用 CreateRequestWithEncryption
+    #    TC3-HMAC-SHA256 鉴权由官方 SDK 自动完成
+    encResp = CloudAPI.CreateRequestWithEncryption(encReq)
+    # 7. 外层错误：明文，直接抛出
+    if encResp.Error != nil:
+        raise OuterError(encResp.Error)
+    # 8. 解密并返回业务响应
+    return DecryptResponse(encResp.Response)
+
+# ========== 响应端：校验并解密 ==========
+function DecryptResponse(resp):
+    # 1. Base64 解码
+    ivBytes  = Base64Decode(resp.IV)
+    ctBytes  = Base64Decode(resp.EncryptedData)
+    sigBytes = Base64Decode(resp.EncryptionSignature)
+    # 2. 重新计算 HMAC
+    expected = HMAC(HMACKey, concat(ivBytes, ctBytes))
+    # 3. 恒定时间比较，失败立即终止（不得继续解密）
+    if not ConstantTimeEqual(expected, sigBytes):
+        raise SignatureMismatch
+    # 4. 对称解密，去除 PKCS#7 Padding
+    plaintext = SymmetricDecrypt(ALGO, AESKey, ivBytes, ctBytes)
+    # 5. 先按腾讯云错误体解析，判断业务是否失败
+    bizErr = TryParseTencentCloudError(plaintext)
+    if bizErr != nil:
+        raise BusinessError(bizErr)
+    # 6. 按目标业务接口的响应结构反序列化
+    return JSON.parse(plaintext, BizResponseSchema)
+```
+
+**AES-CBC 示例**
+
+以下示例参数及结果可用于验证 AES-CBC 加密和 HMAC-SHA256 签名算法的实现是否正确。
+
+加密密钥：AES-CBC-Key-1234
+签名密钥：AES-HMAC-Key-123
+IV：1234567890abcdef
+请求内容：{"Request": "This is a test."}
+
+最终请求参数：
+```
+{
+  "RequestAction": "DescribeFlowComponents",
+  "IV": "MTIzNDU2Nzg5MGFiY2RlZg==",
+  "EncryptedData": "Iqp2W1jislwMNmE7bH9dKZZiMQsfkAPyvAAqDFRnWLw=",
+  "EncryptionSignature": "4TT3PUCZgZT7YmEPtXDm5PDcM6xT7FoYHfMW8xunB5I="
+}
+```
+
+**SM4-CBC 示例**
+
+以下示例参数及结果可用于验证 SM4-CBC 加密和 HMAC-SM4 签名算法的实现是否正确。
+
+加密密钥：SM4-CBC-Key-1234
+签名密钥：SM4-HMAC-Key-123
+IV：fedcba0987654321
+请求内容：{"Request": "This is a test."}
+
+最终请求参数：
+```
+{
+  "RequestAction": "DescribeFlowComponents",
+  "IV": "ZmVkY2JhMDk4NzY1NDMyMQ==",
+  "EncryptedData": "GwUovQhNUPaUnVM/UDXMtPOYTpTSi2B1oyZDFbyyvns=",
+  "EncryptionSignature": "nHB/v/AvOaDCQ66esFNnp12lHKcGkwaLGid0Warl/KE="
+}
+```
  * @method Models\CreateRiskIdentificationTaskFeedbackResponse CreateRiskIdentificationTaskFeedback(Models\CreateRiskIdentificationTaskFeedbackRequest $req) 此接口（CreateRiskIdentificationTaskFeedback）用于创建合同审查任务结果反馈。
  * @method Models\CreateSchemeUrlResponse CreateSchemeUrl(Models\CreateSchemeUrlRequest $req) 获取跳转至腾讯电子签小程序的签署链接
 

@@ -78,8 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(string $TemplateId) 设置<p>参数模板id</p>
  * @method string getSQLMode() 获取<p>兼容模式，enum:MySQL,HBase</p>
  * @method void setSQLMode(string $SQLMode) 设置<p>兼容模式，enum:MySQL,HBase</p>
- * @method AutoScalingConfig getAutoScaleConfig() 获取<p>svls实例的ccu变配配置</p>
- * @method void setAutoScaleConfig(AutoScalingConfig $AutoScaleConfig) 设置<p>svls实例的ccu变配配置</p>
+ * @method AutoScalingConfig getAutoScaleConfig() 获取<p>SVLS 实例的ccu变配配置</p><p>入参限制：同时传入 AutoScaleConfigs 时此参数不再生效</p>
+ * @method void setAutoScaleConfig(AutoScalingConfig $AutoScaleConfig) 设置<p>SVLS 实例的ccu变配配置</p><p>入参限制：同时传入 AutoScaleConfigs 时此参数不再生效</p>
  * @method array getSecurityGroupIds() 获取<p>绑定安全组列表</p>
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>绑定安全组列表</p>
  * @method string getUserName() 获取<p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置<p>dbaadmin密码</p>
  * @method integer getEncryptionEnable() 获取<p>是否开启透明加密，0：不开启，1：开启</p>
  * @method void setEncryptionEnable(integer $EncryptionEnable) 设置<p>是否开启透明加密，0：不开启，1：开启</p>
+ * @method array getAutoScaleConfigs() 获取<p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
+ * @method void setAutoScaleConfigs(array $AutoScaleConfigs) 设置<p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -237,7 +239,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $SQLMode;
 
     /**
-     * @var AutoScalingConfig <p>svls实例的ccu变配配置</p>
+     * @var AutoScalingConfig <p>SVLS 实例的ccu变配配置</p><p>入参限制：同时传入 AutoScaleConfigs 时此参数不再生效</p>
      */
     public $AutoScaleConfig;
 
@@ -260,6 +262,11 @@ class CreateDBInstancesRequest extends AbstractModel
      * @var integer <p>是否开启透明加密，0：不开启，1：开启</p>
      */
     public $EncryptionEnable;
+
+    /**
+     * @var array <p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
+     */
+    public $AutoScaleConfigs;
 
     /**
      * @param string $Zone <p>创建实例区域</p>
@@ -291,11 +298,12 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $InstanceMode <p>实例模式</p>
      * @param string $TemplateId <p>参数模板id</p>
      * @param string $SQLMode <p>兼容模式，enum:MySQL,HBase</p>
-     * @param AutoScalingConfig $AutoScaleConfig <p>svls实例的ccu变配配置</p>
+     * @param AutoScalingConfig $AutoScaleConfig <p>SVLS 实例的ccu变配配置</p><p>入参限制：同时传入 AutoScaleConfigs 时此参数不再生效</p>
      * @param array $SecurityGroupIds <p>绑定安全组列表</p>
      * @param string $UserName <p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
      * @param string $Password <p>dbaadmin密码</p>
      * @param integer $EncryptionEnable <p>是否开启透明加密，0：不开启，1：开启</p>
+     * @param array $AutoScaleConfigs <p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
      */
     function __construct()
     {
@@ -455,6 +463,15 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("EncryptionEnable",$param) and $param["EncryptionEnable"] !== null) {
             $this->EncryptionEnable = $param["EncryptionEnable"];
+        }
+
+        if (array_key_exists("AutoScaleConfigs",$param) and $param["AutoScaleConfigs"] !== null) {
+            $this->AutoScaleConfigs = [];
+            foreach ($param["AutoScaleConfigs"] as $key => $value){
+                $obj = new AutoScalingConfig();
+                $obj->deserialize($value);
+                array_push($this->AutoScaleConfigs, $obj);
+            }
         }
     }
 }

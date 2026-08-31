@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOnCallForm返回参数结构体
  *
- * @method OneOnCallForm getOnCallForm() 获取值班详情
- * @method void setOnCallForm(OneOnCallForm $OnCallForm) 设置值班详情
+ * @method OneOnCallForm getOnCallForm() 获取<p>值班详情</p>
+ * @method void setOnCallForm(OneOnCallForm $OnCallForm) 设置<p>值班详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeOnCallFormResponse extends AbstractModel
 {
     /**
-     * @var OneOnCallForm 值班详情
+     * @var OneOnCallForm <p>值班详情</p>
      */
     public $OnCallForm;
 
@@ -38,7 +38,7 @@ class DescribeOnCallFormResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param OneOnCallForm $OnCallForm 值班详情
+     * @param OneOnCallForm $OnCallForm <p>值班详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

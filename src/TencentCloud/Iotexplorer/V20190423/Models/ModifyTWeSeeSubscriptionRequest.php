@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTWeSeeSubscription请求参数结构体
  *
- * @method string getProductId() 获取产品 ID
- * @method void setProductId(string $ProductId) 设置产品 ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
+ * @method string getProductId() 获取产品 ID
+ * @method void setProductId(string $ProductId) 设置产品 ID
  * @method string getServiceType() 获取算法类型。可选值：
 
 - `VID_COMP`：视频理解
@@ -32,26 +32,28 @@ use TencentCloud\Common\AbstractModel;
 - `VID_COMP`：视频理解
  * @method integer getChannelId() 获取通道 ID
  * @method void setChannelId(integer $ChannelId) 设置通道 ID
- * @method boolean getEnabled() 获取功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
- * @method void setEnabled(boolean $Enabled) 设置功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
- * @method SeeComprehensionConfig getComprehensionConfig() 获取视觉理解配置（适用于视频理解、图片理解），不传则不修改
- * @method void setComprehensionConfig(SeeComprehensionConfig $ComprehensionConfig) 设置视觉理解配置（适用于视频理解、图片理解），不传则不修改
  * @method SeeCompHighlightConfig getCompHighlightConfig() 获取视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
  * @method void setCompHighlightConfig(SeeCompHighlightConfig $CompHighlightConfig) 设置视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
+ * @method SeeComprehensionConfig getComprehensionConfig() 获取视觉理解配置（适用于视频理解、图片理解），不传则不修改
+ * @method void setComprehensionConfig(SeeComprehensionConfig $ComprehensionConfig) 设置视觉理解配置（适用于视频理解、图片理解），不传则不修改
+ * @method boolean getEnabled() 获取功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+ * @method void setEnabled(boolean $Enabled) 设置功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
  * @method SeeEventIdFilterConfig getEventIdFilterConfig() 获取云存事件 ID 过滤规则配置，不传则不修改
  * @method void setEventIdFilterConfig(SeeEventIdFilterConfig $EventIdFilterConfig) 设置云存事件 ID 过滤规则配置，不传则不修改
+ * @method SeeSummarizeConfig getSummarizeConfig() 获取每日与每周总结配置，不传则不修改
+ * @method void setSummarizeConfig(SeeSummarizeConfig $SummarizeConfig) 设置每日与每周总结配置，不传则不修改
  */
 class ModifyTWeSeeSubscriptionRequest extends AbstractModel
 {
     /**
-     * @var string 产品 ID
-     */
-    public $ProductId;
-
-    /**
      * @var string 设备名称
      */
     public $DeviceName;
+
+    /**
+     * @var string 产品 ID
+     */
+    public $ProductId;
 
     /**
      * @var string 算法类型。可选值：
@@ -66,9 +68,9 @@ class ModifyTWeSeeSubscriptionRequest extends AbstractModel
     public $ChannelId;
 
     /**
-     * @var boolean 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+     * @var SeeCompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
      */
-    public $Enabled;
+    public $CompHighlightConfig;
 
     /**
      * @var SeeComprehensionConfig 视觉理解配置（适用于视频理解、图片理解），不传则不修改
@@ -76,9 +78,9 @@ class ModifyTWeSeeSubscriptionRequest extends AbstractModel
     public $ComprehensionConfig;
 
     /**
-     * @var SeeCompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
+     * @var boolean 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
      */
-    public $CompHighlightConfig;
+    public $Enabled;
 
     /**
      * @var SeeEventIdFilterConfig 云存事件 ID 过滤规则配置，不传则不修改
@@ -86,16 +88,22 @@ class ModifyTWeSeeSubscriptionRequest extends AbstractModel
     public $EventIdFilterConfig;
 
     /**
-     * @param string $ProductId 产品 ID
+     * @var SeeSummarizeConfig 每日与每周总结配置，不传则不修改
+     */
+    public $SummarizeConfig;
+
+    /**
      * @param string $DeviceName 设备名称
+     * @param string $ProductId 产品 ID
      * @param string $ServiceType 算法类型。可选值：
 
 - `VID_COMP`：视频理解
      * @param integer $ChannelId 通道 ID
-     * @param boolean $Enabled 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
-     * @param SeeComprehensionConfig $ComprehensionConfig 视觉理解配置（适用于视频理解、图片理解），不传则不修改
      * @param SeeCompHighlightConfig $CompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
+     * @param SeeComprehensionConfig $ComprehensionConfig 视觉理解配置（适用于视频理解、图片理解），不传则不修改
+     * @param boolean $Enabled 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
      * @param SeeEventIdFilterConfig $EventIdFilterConfig 云存事件 ID 过滤规则配置，不传则不修改
+     * @param SeeSummarizeConfig $SummarizeConfig 每日与每周总结配置，不传则不修改
      */
     function __construct()
     {
@@ -110,12 +118,12 @@ class ModifyTWeSeeSubscriptionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
-        }
-
         if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
             $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
 
         if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
@@ -126,8 +134,9 @@ class ModifyTWeSeeSubscriptionRequest extends AbstractModel
             $this->ChannelId = $param["ChannelId"];
         }
 
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
+        if (array_key_exists("CompHighlightConfig",$param) and $param["CompHighlightConfig"] !== null) {
+            $this->CompHighlightConfig = new SeeCompHighlightConfig();
+            $this->CompHighlightConfig->deserialize($param["CompHighlightConfig"]);
         }
 
         if (array_key_exists("ComprehensionConfig",$param) and $param["ComprehensionConfig"] !== null) {
@@ -135,14 +144,18 @@ class ModifyTWeSeeSubscriptionRequest extends AbstractModel
             $this->ComprehensionConfig->deserialize($param["ComprehensionConfig"]);
         }
 
-        if (array_key_exists("CompHighlightConfig",$param) and $param["CompHighlightConfig"] !== null) {
-            $this->CompHighlightConfig = new SeeCompHighlightConfig();
-            $this->CompHighlightConfig->deserialize($param["CompHighlightConfig"]);
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
 
         if (array_key_exists("EventIdFilterConfig",$param) and $param["EventIdFilterConfig"] !== null) {
             $this->EventIdFilterConfig = new SeeEventIdFilterConfig();
             $this->EventIdFilterConfig->deserialize($param["EventIdFilterConfig"]);
+        }
+
+        if (array_key_exists("SummarizeConfig",$param) and $param["SummarizeConfig"] !== null) {
+            $this->SummarizeConfig = new SeeSummarizeConfig();
+            $this->SummarizeConfig->deserialize($param["SummarizeConfig"]);
         }
     }
 }

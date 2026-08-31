@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置<p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
  * @method SeeTaskMetadata getMetadata() 获取<p>任务元数据</p>
  * @method void setMetadata(SeeTaskMetadata $Metadata) 设置<p>任务元数据</p>
- * @method string getServiceCategory() 获取<p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
- * @method void setServiceCategory(string $ServiceCategory) 设置<p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
- * @method string getServiceType() 获取<p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
- * @method void setServiceType(string $ServiceType) 设置<p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+ * @method string getServiceCategory() 获取<p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
+ * @method void setServiceCategory(string $ServiceCategory) 设置<p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
+ * @method string getServiceType() 获取<p>算法类型。</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li><li>IMG_COMP： 图片理解</li><li>COMP_HIGHLIGHT： 视频浓缩</li><li>DAILY_SUM： 每日总结</li><li>WEEKLY_SUM： 每周总结</li></ul>
+ * @method void setServiceType(string $ServiceType) 设置<p>算法类型。</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li><li>IMG_COMP： 图片理解</li><li>COMP_HIGHLIGHT： 视频浓缩</li><li>DAILY_SUM： 每日总结</li><li>WEEKLY_SUM： 每周总结</li></ul>
  * @method string getServiceTier() 获取<p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
  * @method void setServiceTier(string $ServiceTier) 设置<p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
  * @method SeeComprehensionResult getComprehensionResult() 获取<p>视觉理解结果（适用于视频理解、图片理解）</p>
@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetectContinuousResult(SeeDetectContinuousResult $DetectContinuousResult) 设置<p>标签持续检测结果</p>
  * @method SeeFaceRecognitionResult getFaceRecognitionResult() 获取<p>人脸检测结果</p>
  * @method void setFaceRecognitionResult(SeeFaceRecognitionResult $FaceRecognitionResult) 设置<p>人脸检测结果</p>
+ * @method SeeSummarizeResult getSummarizeResult() 获取<p>每日或每周总结结果</p>
+ * @method void setSummarizeResult(SeeSummarizeResult $SummarizeResult) 设置<p>每日或每周总结结果</p>
  * @method integer getCostBasic() 获取<p>完成该任务所消耗的基础能力额度</p>
  * @method void setCostBasic(integer $CostBasic) 设置<p>完成该任务所消耗的基础能力额度</p>
  * @method integer getCostAdvanced() 获取<p>完成该任务所消耗的高级能力额度</p>
@@ -73,12 +75,12 @@ class SeeTaskInfo extends AbstractModel
     public $Metadata;
 
     /**
-     * @var string <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @var string <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
      */
     public $ServiceCategory;
 
     /**
-     * @var string <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @var string <p>算法类型。</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li><li>IMG_COMP： 图片理解</li><li>COMP_HIGHLIGHT： 视频浓缩</li><li>DAILY_SUM： 每日总结</li><li>WEEKLY_SUM： 每周总结</li></ul>
      */
     public $ServiceType;
 
@@ -106,6 +108,11 @@ class SeeTaskInfo extends AbstractModel
      * @var SeeFaceRecognitionResult <p>人脸检测结果</p>
      */
     public $FaceRecognitionResult;
+
+    /**
+     * @var SeeSummarizeResult <p>每日或每周总结结果</p>
+     */
+    public $SummarizeResult;
 
     /**
      * @var integer <p>完成该任务所消耗的基础能力额度</p>
@@ -146,13 +153,14 @@ class SeeTaskInfo extends AbstractModel
      * @param string $TaskId <p>任务 ID</p>
      * @param integer $Status <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
      * @param SeeTaskMetadata $Metadata <p>任务元数据</p>
-     * @param string $ServiceCategory <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
-     * @param string $ServiceType <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @param string $ServiceCategory <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
+     * @param string $ServiceType <p>算法类型。</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li><li>IMG_COMP： 图片理解</li><li>COMP_HIGHLIGHT： 视频浓缩</li><li>DAILY_SUM： 每日总结</li><li>WEEKLY_SUM： 每周总结</li></ul>
      * @param string $ServiceTier <p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
      * @param SeeComprehensionResult $ComprehensionResult <p>视觉理解结果（适用于视频理解、图片理解）</p>
      * @param SeeCompHighlightResult $CompHighlightResult <p>视频语义浓缩结果（适用于视频语义浓缩）</p>
      * @param SeeDetectContinuousResult $DetectContinuousResult <p>标签持续检测结果</p>
      * @param SeeFaceRecognitionResult $FaceRecognitionResult <p>人脸检测结果</p>
+     * @param SeeSummarizeResult $SummarizeResult <p>每日或每周总结结果</p>
      * @param integer $CostBasic <p>完成该任务所消耗的基础能力额度</p>
      * @param integer $CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
      * @param array $Files <p>输出文件名列表</p>
@@ -217,6 +225,11 @@ class SeeTaskInfo extends AbstractModel
         if (array_key_exists("FaceRecognitionResult",$param) and $param["FaceRecognitionResult"] !== null) {
             $this->FaceRecognitionResult = new SeeFaceRecognitionResult();
             $this->FaceRecognitionResult->deserialize($param["FaceRecognitionResult"]);
+        }
+
+        if (array_key_exists("SummarizeResult",$param) and $param["SummarizeResult"] !== null) {
+            $this->SummarizeResult = new SeeSummarizeResult();
+            $this->SummarizeResult->deserialize($param["SummarizeResult"]);
         }
 
         if (array_key_exists("CostBasic",$param) and $param["CostBasic"] !== null) {

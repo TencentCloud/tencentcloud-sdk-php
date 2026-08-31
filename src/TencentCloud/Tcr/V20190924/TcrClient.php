@@ -101,10 +101,12 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeNamespacePersonalResponse DescribeNamespacePersonal(Models\DescribeNamespacePersonalRequest $req) 查询个人版命名空间信息
  * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) 查询命名空间列表或指定命名空间信息
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 用于在TCR中获取可用区域
+ * @method Models\DescribeReplicationExecutionsResponse DescribeReplicationExecutions(Models\DescribeReplicationExecutionsRequest $req) 实例同步/实例复制策略执行记录列表
  * @method Models\DescribeReplicationInstanceCreateTasksResponse DescribeReplicationInstanceCreateTasks(Models\DescribeReplicationInstanceCreateTasksRequest $req) 查询创建从实例任务状态
  * @method Models\DescribeReplicationInstanceSyncStatusResponse DescribeReplicationInstanceSyncStatus(Models\DescribeReplicationInstanceSyncStatusRequest $req) 查询从实例同步状态
  * @method Models\DescribeReplicationInstancesResponse DescribeReplicationInstances(Models\DescribeReplicationInstancesRequest $req) 查询从实例列表
  * @method Models\DescribeReplicationPoliciesResponse DescribeReplicationPolicies(Models\DescribeReplicationPoliciesRequest $req) 获取实例同步规则列表
+ * @method Models\DescribeReplicationTasksResponse DescribeReplicationTasks(Models\DescribeReplicationTasksRequest $req) 实例同步/实例复制执行任务列表
  * @method Models\DescribeRepositoriesResponse DescribeRepositories(Models\DescribeRepositoriesRequest $req) 查询镜像仓库列表或指定镜像仓库信息
  * @method Models\DescribeRepositoryFilterPersonalResponse DescribeRepositoryFilterPersonal(Models\DescribeRepositoryFilterPersonalRequest $req) 用于在个人版镜像仓库中，获取满足输入搜索条件的用户镜像仓库
  * @method Models\DescribeRepositoryOwnerPersonalResponse DescribeRepositoryOwnerPersonal(Models\DescribeRepositoryOwnerPersonalRequest $req) 用于在个人版中获取用户全部的镜像仓库列表

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGlobalPrivileges(array $GlobalPrivileges) 设置<p>全局权限</p>
  * @method array getDatabasePrivilegeList() 获取<p>数据库表权限</p>
  * @method void setDatabasePrivilegeList(array $DatabasePrivilegeList) 设置<p>数据库表权限</p>
+ * @method string getInstanceType() 获取<p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
  */
 class ModifyUserNewPrivilegeRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyUserNewPrivilegeRequest extends AbstractModel
     public $DatabasePrivilegeList;
 
     /**
+     * @var string <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId <p>实例id</p>
      * @param string $Cluster <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p>
      * @param string $UserName <p>用户名</p>
      * @param boolean $AllDatabase <p>是否所有数据库表</p>
      * @param array $GlobalPrivileges <p>全局权限</p>
      * @param array $DatabasePrivilegeList <p>数据库表权限</p>
+     * @param string $InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class ModifyUserNewPrivilegeRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DatabasePrivilegeList, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

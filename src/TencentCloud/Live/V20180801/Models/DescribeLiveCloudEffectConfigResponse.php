@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEffectTemplateList() 获取<p>模板生礼物的模板信息列表。</p>
  * @method void setEffectTemplateList(array $EffectTemplateList) 设置<p>模板生礼物的模板信息列表。</p>
+ * @method array getPunishmentEffectTemplateList() 获取<p>惩罚特效模板信息列表。</p>
+ * @method void setPunishmentEffectTemplateList(array $PunishmentEffectTemplateList) 设置<p>惩罚特效模板信息列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeLiveCloudEffectConfigResponse extends AbstractModel
     public $EffectTemplateList;
 
     /**
+     * @var array <p>惩罚特效模板信息列表。</p>
+     */
+    public $PunishmentEffectTemplateList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $EffectTemplateList <p>模板生礼物的模板信息列表。</p>
+     * @param array $PunishmentEffectTemplateList <p>惩罚特效模板信息列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,15 @@ class DescribeLiveCloudEffectConfigResponse extends AbstractModel
                 $obj = new CloudEffectTemplateInfo();
                 $obj->deserialize($value);
                 array_push($this->EffectTemplateList, $obj);
+            }
+        }
+
+        if (array_key_exists("PunishmentEffectTemplateList",$param) and $param["PunishmentEffectTemplateList"] !== null) {
+            $this->PunishmentEffectTemplateList = [];
+            foreach ($param["PunishmentEffectTemplateList"] as $key => $value){
+                $obj = new CloudEffectTemplateInfo();
+                $obj->deserialize($value);
+                array_push($this->PunishmentEffectTemplateList, $obj);
             }
         }
 

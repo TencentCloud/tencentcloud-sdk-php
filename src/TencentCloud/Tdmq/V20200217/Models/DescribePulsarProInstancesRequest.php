@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePulsarProInstances请求参数结构体
  *
- * @method array getFilters() 获取查询条件过滤器
- * @method void setFilters(array $Filters) 设置查询条件过滤器
- * @method integer getLimit() 获取查询数目上限，默认20
- * @method void setLimit(integer $Limit) 设置查询数目上限，默认20
- * @method integer getOffset() 获取查询起始位置
- * @method void setOffset(integer $Offset) 设置查询起始位置
+ * @method array getFilters() 获取<p>查询条件过滤器</p>
+ * @method void setFilters(array $Filters) 设置<p>查询条件过滤器</p>
+ * @method integer getLimit() 获取<p>查询数目上限，默认20</p>
+ * @method void setLimit(integer $Limit) 设置<p>查询数目上限，默认20</p>
+ * @method integer getOffset() 获取<p>查询起始位置</p>
+ * @method void setOffset(integer $Offset) 设置<p>查询起始位置</p>
  */
 class DescribePulsarProInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 查询条件过滤器
+     * @var array <p>查询条件过滤器</p>
      */
     public $Filters;
 
     /**
-     * @var integer 查询数目上限，默认20
+     * @var integer <p>查询数目上限，默认20</p>
      */
     public $Limit;
 
     /**
-     * @var integer 查询起始位置
+     * @var integer <p>查询起始位置</p>
      */
     public $Offset;
 
     /**
-     * @param array $Filters 查询条件过滤器
-     * @param integer $Limit 查询数目上限，默认20
-     * @param integer $Offset 查询起始位置
+     * @param array $Filters <p>查询条件过滤器</p>
+     * @param integer $Limit <p>查询数目上限，默认20</p>
+     * @param integer $Offset <p>查询起始位置</p>
      */
     function __construct()
     {

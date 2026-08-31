@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 传输流日志信息。
  *
- * @method integer getTimestamp() 获取时间戳，单位为秒。
- * @method void setTimestamp(integer $Timestamp) 设置时间戳，单位为秒。
- * @method string getType() 获取输入输出类型（input/output）。
- * @method void setType(string $Type) 设置输入输出类型（input/output）。
- * @method string getInputOutputId() 获取输入或输出Id。
- * @method void setInputOutputId(string $InputOutputId) 设置输入或输出Id。
- * @method string getProtocol() 获取协议。
- * @method void setProtocol(string $Protocol) 设置协议。
- * @method string getEventCode() 获取事件代码。
- * @method void setEventCode(string $EventCode) 设置事件代码。
- * @method string getEventMessage() 获取事件信息。
- * @method void setEventMessage(string $EventMessage) 设置事件信息。
- * @method string getRemoteIp() 获取对端IP。
- * @method void setRemoteIp(string $RemoteIp) 设置对端IP。
- * @method string getRemotePort() 获取对端端口。
- * @method void setRemotePort(string $RemotePort) 设置对端端口。
- * @method string getPipeline() 获取主备通道，0为主通道，1为备通道。
- * @method void setPipeline(string $Pipeline) 设置主备通道，0为主通道，1为备通道。
- * @method string getInputOutputName() 获取输入或输出的名称。
- * @method void setInputOutputName(string $InputOutputName) 设置输入或输出的名称。
+ * @method integer getTimestamp() 获取<p>时间戳，单位为秒。</p>
+ * @method void setTimestamp(integer $Timestamp) 设置<p>时间戳，单位为秒。</p>
+ * @method string getType() 获取<p>输入输出类型（input/output）。</p>
+ * @method void setType(string $Type) 设置<p>输入输出类型（input/output）。</p>
+ * @method string getInputOutputId() 获取<p>输入或输出Id。</p>
+ * @method void setInputOutputId(string $InputOutputId) 设置<p>输入或输出Id。</p>
+ * @method string getProtocol() 获取<p>协议。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议。</p>
+ * @method string getEventCode() 获取<p>事件代码。</p>
+ * @method void setEventCode(string $EventCode) 设置<p>事件代码。</p>
+ * @method string getEventMessage() 获取<p>事件信息。</p>
+ * @method void setEventMessage(string $EventMessage) 设置<p>事件信息。</p>
+ * @method string getRemoteIp() 获取<p>对端IP。</p>
+ * @method void setRemoteIp(string $RemoteIp) 设置<p>对端IP。</p>
+ * @method string getRemotePort() 获取<p>对端端口。</p>
+ * @method void setRemotePort(string $RemotePort) 设置<p>对端端口。</p>
+ * @method string getPipeline() 获取<p>主备通道，0为主通道，1为备通道。</p>
+ * @method void setPipeline(string $Pipeline) 设置<p>主备通道，0为主通道，1为备通道。</p>
+ * @method string getInputOutputName() 获取<p>输入或输出的名称。</p>
+ * @method void setInputOutputName(string $InputOutputName) 设置<p>输入或输出的名称。</p>
  */
 class FlowLogInfo extends AbstractModel
 {
     /**
-     * @var integer 时间戳，单位为秒。
+     * @var integer <p>时间戳，单位为秒。</p>
      */
     public $Timestamp;
 
     /**
-     * @var string 输入输出类型（input/output）。
+     * @var string <p>输入输出类型（input/output）。</p>
      */
     public $Type;
 
     /**
-     * @var string 输入或输出Id。
+     * @var string <p>输入或输出Id。</p>
      */
     public $InputOutputId;
 
     /**
-     * @var string 协议。
+     * @var string <p>协议。</p>
      */
     public $Protocol;
 
     /**
-     * @var string 事件代码。
+     * @var string <p>事件代码。</p>
      */
     public $EventCode;
 
     /**
-     * @var string 事件信息。
+     * @var string <p>事件信息。</p>
      */
     public $EventMessage;
 
     /**
-     * @var string 对端IP。
+     * @var string <p>对端IP。</p>
      */
     public $RemoteIp;
 
     /**
-     * @var string 对端端口。
+     * @var string <p>对端端口。</p>
      */
     public $RemotePort;
 
     /**
-     * @var string 主备通道，0为主通道，1为备通道。
+     * @var string <p>主备通道，0为主通道，1为备通道。</p>
      */
     public $Pipeline;
 
     /**
-     * @var string 输入或输出的名称。
+     * @var string <p>输入或输出的名称。</p>
      */
     public $InputOutputName;
 
     /**
-     * @param integer $Timestamp 时间戳，单位为秒。
-     * @param string $Type 输入输出类型（input/output）。
-     * @param string $InputOutputId 输入或输出Id。
-     * @param string $Protocol 协议。
-     * @param string $EventCode 事件代码。
-     * @param string $EventMessage 事件信息。
-     * @param string $RemoteIp 对端IP。
-     * @param string $RemotePort 对端端口。
-     * @param string $Pipeline 主备通道，0为主通道，1为备通道。
-     * @param string $InputOutputName 输入或输出的名称。
+     * @param integer $Timestamp <p>时间戳，单位为秒。</p>
+     * @param string $Type <p>输入输出类型（input/output）。</p>
+     * @param string $InputOutputId <p>输入或输出Id。</p>
+     * @param string $Protocol <p>协议。</p>
+     * @param string $EventCode <p>事件代码。</p>
+     * @param string $EventMessage <p>事件信息。</p>
+     * @param string $RemoteIp <p>对端IP。</p>
+     * @param string $RemotePort <p>对端端口。</p>
+     * @param string $Pipeline <p>主备通道，0为主通道，1为备通道。</p>
+     * @param string $InputOutputName <p>输入或输出的名称。</p>
      */
     function __construct()
     {

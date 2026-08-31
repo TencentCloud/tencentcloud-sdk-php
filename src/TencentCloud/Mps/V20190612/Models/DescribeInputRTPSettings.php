@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询输入的RTP配置信息。
  *
- * @method string getFEC() 获取是否FEC。
- * @method void setFEC(string $FEC) 设置是否FEC。
- * @method integer getIdleTimeout() 获取空闲超时时间。
- * @method void setIdleTimeout(integer $IdleTimeout) 设置空闲超时时间。
+ * @method string getFEC() 获取<p>是否FEC。</p>
+ * @method void setFEC(string $FEC) 设置<p>是否FEC。</p>
+ * @method integer getIdleTimeout() 获取<p>空闲超时时间。</p>
+ * @method void setIdleTimeout(integer $IdleTimeout) 设置<p>空闲超时时间。</p>
  */
 class DescribeInputRTPSettings extends AbstractModel
 {
     /**
-     * @var string 是否FEC。
+     * @var string <p>是否FEC。</p>
      */
     public $FEC;
 
     /**
-     * @var integer 空闲超时时间。
+     * @var integer <p>空闲超时时间。</p>
      */
     public $IdleTimeout;
 
     /**
-     * @param string $FEC 是否FEC。
-     * @param integer $IdleTimeout 空闲超时时间。
+     * @param string $FEC <p>是否FEC。</p>
+     * @param integer $IdleTimeout <p>空闲超时时间。</p>
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOnCallForm请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method string getOnCallFormID() 获取值班id
- * @method void setOnCallFormID(string $OnCallFormID) 设置值班id
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method string getOnCallFormID() 获取<p>值班id</p>
+ * @method void setOnCallFormID(string $OnCallFormID) 设置<p>值班id</p>
  */
 class DescribeOnCallFormRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var string 值班id
+     * @var string <p>值班id</p>
      */
     public $OnCallFormID;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param string $OnCallFormID 值班id
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param string $OnCallFormID <p>值班id</p>
      */
     function __construct()
     {

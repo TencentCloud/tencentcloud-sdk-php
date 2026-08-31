@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableCustomDestPath(boolean $EnableCustomDestPath) 设置<p>是否开启自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
  * @method string getCustomDestPath() 获取<p>自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
  * @method void setCustomDestPath(string $CustomDestPath) 设置<p>自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
+ * @method string getOutputBucket() 获取<p>输出的COS桶，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+ * @method void setOutputBucket(string $OutputBucket) 设置<p>输出的COS桶，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+ * @method string getOutputPrefix() 获取<p>输出的COS桶的前缀，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+ * @method void setOutputPrefix(string $OutputPrefix) 设置<p>输出的COS桶的前缀，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+ * @method boolean getEnableCustomSrcPath() 获取<p>是否支持自定义数据源路径(暂时仅支持清单过滤使用)</p>
+ * @method void setEnableCustomSrcPath(boolean $EnableCustomSrcPath) 设置<p>是否支持自定义数据源路径(暂时仅支持清单过滤使用)</p>
+ * @method string getCustomSrcPath() 获取<p>自定义数据源路径(暂时仅支持清单过滤使用)</p>
+ * @method void setCustomSrcPath(string $CustomSrcPath) 设置<p>自定义数据源路径(暂时仅支持清单过滤使用)</p>
  */
 class CreateDataRepositoryTaskRequest extends AbstractModel
 {
@@ -110,6 +118,26 @@ class CreateDataRepositoryTaskRequest extends AbstractModel
     public $CustomDestPath;
 
     /**
+     * @var string <p>输出的COS桶，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+     */
+    public $OutputBucket;
+
+    /**
+     * @var string <p>输出的COS桶的前缀，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+     */
+    public $OutputPrefix;
+
+    /**
+     * @var boolean <p>是否支持自定义数据源路径(暂时仅支持清单过滤使用)</p>
+     */
+    public $EnableCustomSrcPath;
+
+    /**
+     * @var string <p>自定义数据源路径(暂时仅支持清单过滤使用)</p>
+     */
+    public $CustomSrcPath;
+
+    /**
      * @param string $TaskType <p>数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)</p>
      * @param string $Bucket <p>COS存储桶名</p>
      * @param string $FileSystemId <p>文件系统ID</p>
@@ -122,6 +150,10 @@ class CreateDataRepositoryTaskRequest extends AbstractModel
      * @param string $DataFlowSubPath <p>自定义路径(暂时仅供预热使用)</p>
      * @param boolean $EnableCustomDestPath <p>是否开启自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
      * @param string $CustomDestPath <p>自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
+     * @param string $OutputBucket <p>输出的COS桶，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+     * @param string $OutputPrefix <p>输出的COS桶的前缀，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+     * @param boolean $EnableCustomSrcPath <p>是否支持自定义数据源路径(暂时仅支持清单过滤使用)</p>
+     * @param string $CustomSrcPath <p>自定义数据源路径(暂时仅支持清单过滤使用)</p>
      */
     function __construct()
     {
@@ -182,6 +214,22 @@ class CreateDataRepositoryTaskRequest extends AbstractModel
 
         if (array_key_exists("CustomDestPath",$param) and $param["CustomDestPath"] !== null) {
             $this->CustomDestPath = $param["CustomDestPath"];
+        }
+
+        if (array_key_exists("OutputBucket",$param) and $param["OutputBucket"] !== null) {
+            $this->OutputBucket = $param["OutputBucket"];
+        }
+
+        if (array_key_exists("OutputPrefix",$param) and $param["OutputPrefix"] !== null) {
+            $this->OutputPrefix = $param["OutputPrefix"];
+        }
+
+        if (array_key_exists("EnableCustomSrcPath",$param) and $param["EnableCustomSrcPath"] !== null) {
+            $this->EnableCustomSrcPath = $param["EnableCustomSrcPath"];
+        }
+
+        if (array_key_exists("CustomSrcPath",$param) and $param["CustomSrcPath"] !== null) {
+            $this->CustomSrcPath = $param["CustomSrcPath"];
         }
     }
 }

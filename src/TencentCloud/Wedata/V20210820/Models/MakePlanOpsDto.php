@@ -176,6 +176,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunScheduleRangeWeekDays(array $RunScheduleRangeWeekDays) 设置<p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>资源权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 可见</li><li>CAN_MANAGE： 可管理</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>资源权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 可见</li><li>CAN_MANAGE： 可管理</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MakePlanOpsDto extends AbstractModel
 {
@@ -426,6 +430,12 @@ class MakePlanOpsDto extends AbstractModel
     public $RunScheduleRangeWeekDays;
 
     /**
+     * @var string <p>资源权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 可见</li><li>CAN_MANAGE： 可管理</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Privilege;
+
+    /**
      * @param string $PlanId <p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MakeName <p>补录计划名称</p>
@@ -503,6 +513,8 @@ class MakePlanOpsDto extends AbstractModel
      * @param string $RunScheduleRangeEndTime <p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RunScheduleRangeWeekDays <p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>资源权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 可见</li><li>CAN_MANAGE： 可管理</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -700,6 +712,10 @@ class MakePlanOpsDto extends AbstractModel
 
         if (array_key_exists("RunScheduleRangeWeekDays",$param) and $param["RunScheduleRangeWeekDays"] !== null) {
             $this->RunScheduleRangeWeekDays = $param["RunScheduleRangeWeekDays"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

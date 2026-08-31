@@ -20,138 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListOpsWorkflows请求参数结构体
  *
- * @method string getProjectId() 获取项目Id
- * @method void setProjectId(string $ProjectId) 设置项目Id
- * @method integer getPageNumber() 获取分页页码
- * @method void setPageNumber(integer $PageNumber) 设置分页页码
- * @method integer getPageSize() 获取分页大小
- * @method void setPageSize(integer $PageSize) 设置分页大小
- * @method string getFolderId() 获取文件Id
- * @method void setFolderId(string $FolderId) 设置文件Id
- * @method string getStatus() 获取工作流状态筛选
-* ALL_RUNNING : 全部调度中
-* ALL_FREEZED : 全部已暂停
-* ALL_STOPPTED : 全部已下线
-* PART_RUNNING : 部分调度中
-* ALL_NO_RUNNING : 全部未调度
-* ALL_INVALID : 全部已失效
- * @method void setStatus(string $Status) 设置工作流状态筛选
-* ALL_RUNNING : 全部调度中
-* ALL_FREEZED : 全部已暂停
-* ALL_STOPPTED : 全部已下线
-* PART_RUNNING : 部分调度中
-* ALL_NO_RUNNING : 全部未调度
-* ALL_INVALID : 全部已失效
- * @method string getOwnerUin() 获取负责人Id
- * @method void setOwnerUin(string $OwnerUin) 设置负责人Id
- * @method string getWorkflowType() 获取工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle
- * @method void setWorkflowType(string $WorkflowType) 设置工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle
- * @method string getKeyWord() 获取工作流关键词过滤，支持工作流 Id/name 模糊匹配
- * @method void setKeyWord(string $KeyWord) 设置工作流关键词过滤，支持工作流 Id/name 模糊匹配
- * @method string getSortItem() 获取排序项，可选CreateTime、TaskCount
- * @method void setSortItem(string $SortItem) 设置排序项，可选CreateTime、TaskCount
- * @method string getSortType() 获取排序方式，DESC或ASC, 大写
- * @method void setSortType(string $SortType) 设置排序方式，DESC或ASC, 大写
- * @method string getCreateUserUin() 获取创建人Id
- * @method void setCreateUserUin(string $CreateUserUin) 设置创建人Id
- * @method string getModifyTime() 获取更新时间，格式yyyy-MM-dd HH:mm:ss
- * @method void setModifyTime(string $ModifyTime) 设置更新时间，格式yyyy-MM-dd HH:mm:ss
- * @method string getCreateTime() 获取创建时间，格式yyyy-MM-dd HH:mm:ss
- * @method void setCreateTime(string $CreateTime) 设置创建时间，格式yyyy-MM-dd HH:mm:ss
+ * @method string getProjectId() 获取<p>项目Id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目Id</p>
+ * @method integer getPageNumber() 获取<p>分页页码</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>分页页码</p>
+ * @method integer getPageSize() 获取<p>分页大小</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>分页大小</p>
+ * @method string getFolderId() 获取<p>文件Id</p>
+ * @method void setFolderId(string $FolderId) 设置<p>文件Id</p>
+ * @method string getStatus() 获取<p>工作流状态筛选</p><ul><li>ALL_RUNNING : 全部调度中</li><li>ALL_FREEZED : 全部已暂停</li><li>ALL_STOPPTED : 全部已下线</li><li>PART_RUNNING : 部分调度中</li><li>ALL_NO_RUNNING : 全部未调度</li><li>ALL_INVALID : 全部已失效</li></ul>
+ * @method void setStatus(string $Status) 设置<p>工作流状态筛选</p><ul><li>ALL_RUNNING : 全部调度中</li><li>ALL_FREEZED : 全部已暂停</li><li>ALL_STOPPTED : 全部已下线</li><li>PART_RUNNING : 部分调度中</li><li>ALL_NO_RUNNING : 全部未调度</li><li>ALL_INVALID : 全部已失效</li></ul>
+ * @method string getOwnerUin() 获取<p>负责人Id</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>负责人Id</p>
+ * @method string getWorkflowType() 获取<p>工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle</p>
+ * @method void setWorkflowType(string $WorkflowType) 设置<p>工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle</p>
+ * @method string getKeyWord() 获取<p>工作流关键词过滤，支持工作流 Id/name 模糊匹配</p>
+ * @method void setKeyWord(string $KeyWord) 设置<p>工作流关键词过滤，支持工作流 Id/name 模糊匹配</p>
+ * @method string getSortItem() 获取<p>排序项，可选CreateTime、TaskCount</p>
+ * @method void setSortItem(string $SortItem) 设置<p>排序项，可选CreateTime、TaskCount</p>
+ * @method string getSortType() 获取<p>排序方式，DESC或ASC, 大写</p>
+ * @method void setSortType(string $SortType) 设置<p>排序方式，DESC或ASC, 大写</p>
+ * @method string getCreateUserUin() 获取<p>创建人Id</p>
+ * @method void setCreateUserUin(string $CreateUserUin) 设置<p>创建人Id</p>
+ * @method string getModifyTime() 获取<p>更新时间，格式yyyy-MM-dd HH:mm:ss</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>更新时间，格式yyyy-MM-dd HH:mm:ss</p>
+ * @method string getCreateTime() 获取<p>创建时间，格式yyyy-MM-dd HH:mm:ss</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，格式yyyy-MM-dd HH:mm:ss</p>
  */
 class ListOpsWorkflowsRequest extends AbstractModel
 {
     /**
-     * @var string 项目Id
+     * @var string <p>项目Id</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 分页页码
+     * @var integer <p>分页页码</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 分页大小
+     * @var integer <p>分页大小</p>
      */
     public $PageSize;
 
     /**
-     * @var string 文件Id
+     * @var string <p>文件Id</p>
      */
     public $FolderId;
 
     /**
-     * @var string 工作流状态筛选
-* ALL_RUNNING : 全部调度中
-* ALL_FREEZED : 全部已暂停
-* ALL_STOPPTED : 全部已下线
-* PART_RUNNING : 部分调度中
-* ALL_NO_RUNNING : 全部未调度
-* ALL_INVALID : 全部已失效
+     * @var string <p>工作流状态筛选</p><ul><li>ALL_RUNNING : 全部调度中</li><li>ALL_FREEZED : 全部已暂停</li><li>ALL_STOPPTED : 全部已下线</li><li>PART_RUNNING : 部分调度中</li><li>ALL_NO_RUNNING : 全部未调度</li><li>ALL_INVALID : 全部已失效</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 负责人Id
+     * @var string <p>负责人Id</p>
      */
     public $OwnerUin;
 
     /**
-     * @var string 工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle
+     * @var string <p>工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle</p>
      */
     public $WorkflowType;
 
     /**
-     * @var string 工作流关键词过滤，支持工作流 Id/name 模糊匹配
+     * @var string <p>工作流关键词过滤，支持工作流 Id/name 模糊匹配</p>
      */
     public $KeyWord;
 
     /**
-     * @var string 排序项，可选CreateTime、TaskCount
+     * @var string <p>排序项，可选CreateTime、TaskCount</p>
      */
     public $SortItem;
 
     /**
-     * @var string 排序方式，DESC或ASC, 大写
+     * @var string <p>排序方式，DESC或ASC, 大写</p>
      */
     public $SortType;
 
     /**
-     * @var string 创建人Id
+     * @var string <p>创建人Id</p>
      */
     public $CreateUserUin;
 
     /**
-     * @var string 更新时间，格式yyyy-MM-dd HH:mm:ss
+     * @var string <p>更新时间，格式yyyy-MM-dd HH:mm:ss</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 创建时间，格式yyyy-MM-dd HH:mm:ss
+     * @var string <p>创建时间，格式yyyy-MM-dd HH:mm:ss</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $ProjectId 项目Id
-     * @param integer $PageNumber 分页页码
-     * @param integer $PageSize 分页大小
-     * @param string $FolderId 文件Id
-     * @param string $Status 工作流状态筛选
-* ALL_RUNNING : 全部调度中
-* ALL_FREEZED : 全部已暂停
-* ALL_STOPPTED : 全部已下线
-* PART_RUNNING : 部分调度中
-* ALL_NO_RUNNING : 全部未调度
-* ALL_INVALID : 全部已失效
-     * @param string $OwnerUin 负责人Id
-     * @param string $WorkflowType 工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle
-     * @param string $KeyWord 工作流关键词过滤，支持工作流 Id/name 模糊匹配
-     * @param string $SortItem 排序项，可选CreateTime、TaskCount
-     * @param string $SortType 排序方式，DESC或ASC, 大写
-     * @param string $CreateUserUin 创建人Id
-     * @param string $ModifyTime 更新时间，格式yyyy-MM-dd HH:mm:ss
-     * @param string $CreateTime 创建时间，格式yyyy-MM-dd HH:mm:ss
+     * @param string $ProjectId <p>项目Id</p>
+     * @param integer $PageNumber <p>分页页码</p>
+     * @param integer $PageSize <p>分页大小</p>
+     * @param string $FolderId <p>文件Id</p>
+     * @param string $Status <p>工作流状态筛选</p><ul><li>ALL_RUNNING : 全部调度中</li><li>ALL_FREEZED : 全部已暂停</li><li>ALL_STOPPTED : 全部已下线</li><li>PART_RUNNING : 部分调度中</li><li>ALL_NO_RUNNING : 全部未调度</li><li>ALL_INVALID : 全部已失效</li></ul>
+     * @param string $OwnerUin <p>负责人Id</p>
+     * @param string $WorkflowType <p>工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle</p>
+     * @param string $KeyWord <p>工作流关键词过滤，支持工作流 Id/name 模糊匹配</p>
+     * @param string $SortItem <p>排序项，可选CreateTime、TaskCount</p>
+     * @param string $SortType <p>排序方式，DESC或ASC, 大写</p>
+     * @param string $CreateUserUin <p>创建人Id</p>
+     * @param string $ModifyTime <p>更新时间，格式yyyy-MM-dd HH:mm:ss</p>
+     * @param string $CreateTime <p>创建时间，格式yyyy-MM-dd HH:mm:ss</p>
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListOpsWorkflows返回参数结构体
  *
- * @method OpsWorkflows getData() 获取工作流列表
- * @method void setData(OpsWorkflows $Data) 设置工作流列表
+ * @method OpsWorkflows getData() 获取<p>工作流列表</p>
+ * @method void setData(OpsWorkflows $Data) 设置<p>工作流列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListOpsWorkflowsResponse extends AbstractModel
 {
     /**
-     * @var OpsWorkflows 工作流列表
+     * @var OpsWorkflows <p>工作流列表</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class ListOpsWorkflowsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param OpsWorkflows $Data 工作流列表
+     * @param OpsWorkflows $Data <p>工作流列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

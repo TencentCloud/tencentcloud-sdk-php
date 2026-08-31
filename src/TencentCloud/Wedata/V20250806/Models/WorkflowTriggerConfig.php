@@ -72,13 +72,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecursive(integer $Recursive) 设置<p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerMinimumIntervalSecond() 获取<p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+ * @method integer getTriggerMinimumInterval() 获取<p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerMinimumIntervalSecond(integer $TriggerMinimumIntervalSecond) 设置<p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+ * @method void setTriggerMinimumInterval(integer $TriggerMinimumInterval) 设置<p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerWaitTimeSecond() 获取<p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+ * @method integer getTriggerWaitTime() 获取<p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerWaitTimeSecond(integer $TriggerWaitTimeSecond) 设置<p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+ * @method void setTriggerWaitTime(integer $TriggerWaitTime) 设置<p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTriggerMinimumIntervalSecond() 获取<p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerMinimumIntervalSecond(integer $TriggerMinimumIntervalSecond) 设置<p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTriggerWaitTimeSecond() 获取<p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerWaitTimeSecond(integer $TriggerWaitTimeSecond) 设置<p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTriggerConfig extends AbstractModel
@@ -162,13 +170,25 @@ class WorkflowTriggerConfig extends AbstractModel
     public $Recursive;
 
     /**
-     * @var integer <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+     * @var integer <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerMinimumInterval;
+
+    /**
+     * @var integer <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerWaitTime;
+
+    /**
+     * @var integer <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerMinimumIntervalSecond;
 
     /**
-     * @var integer <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+     * @var integer <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerWaitTimeSecond;
@@ -200,9 +220,13 @@ class WorkflowTriggerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Recursive <p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+     * @param integer $TriggerMinimumInterval <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+     * @param integer $TriggerWaitTime <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -268,6 +292,14 @@ class WorkflowTriggerConfig extends AbstractModel
 
         if (array_key_exists("Recursive",$param) and $param["Recursive"] !== null) {
             $this->Recursive = $param["Recursive"];
+        }
+
+        if (array_key_exists("TriggerMinimumInterval",$param) and $param["TriggerMinimumInterval"] !== null) {
+            $this->TriggerMinimumInterval = $param["TriggerMinimumInterval"];
+        }
+
+        if (array_key_exists("TriggerWaitTime",$param) and $param["TriggerWaitTime"] !== null) {
+            $this->TriggerWaitTime = $param["TriggerWaitTime"];
         }
 
         if (array_key_exists("TriggerMinimumIntervalSecond",$param) and $param["TriggerMinimumIntervalSecond"] !== null) {

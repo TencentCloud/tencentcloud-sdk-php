@@ -20,170 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云联网（CCN）关联实例（Instance）对象
  *
- * @method string getCcnId() 获取云联网实例ID。
- * @method void setCcnId(string $CcnId) 设置云联网实例ID。
- * @method string getInstanceType() 获取关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
- * @method void setInstanceType(string $InstanceType) 设置关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
- * @method string getInstanceId() 获取关联实例ID。
- * @method void setInstanceId(string $InstanceId) 设置关联实例ID。
- * @method string getInstanceName() 获取关联实例名称。
- * @method void setInstanceName(string $InstanceName) 设置关联实例名称。
- * @method string getInstanceRegion() 获取关联实例所属大区，例如：ap-guangzhou。
- * @method void setInstanceRegion(string $InstanceRegion) 设置关联实例所属大区，例如：ap-guangzhou。
- * @method string getInstanceUin() 获取关联实例所属UIN（根账号）。
- * @method void setInstanceUin(string $InstanceUin) 设置关联实例所属UIN（根账号）。
- * @method array getCidrBlock() 获取关联实例CIDR。
- * @method void setCidrBlock(array $CidrBlock) 设置关联实例CIDR。
- * @method string getState() 获取关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
- * @method void setState(string $State) 设置关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
- * @method string getAttachedTime() 获取关联时间。
- * @method void setAttachedTime(string $AttachedTime) 设置关联时间。
- * @method string getCcnUin() 获取云联网所属UIN（根账号）。
- * @method void setCcnUin(string $CcnUin) 设置云联网所属UIN（根账号）。
- * @method string getInstanceArea() 获取关联实例所属的大地域，如: CHINA_MAINLAND
- * @method void setInstanceArea(string $InstanceArea) 设置关联实例所属的大地域，如: CHINA_MAINLAND
- * @method string getDescription() 获取备注
- * @method void setDescription(string $Description) 设置备注
- * @method string getRouteTableId() 获取路由表ID
- * @method void setRouteTableId(string $RouteTableId) 设置路由表ID
- * @method string getRouteTableName() 获取路由表名称
- * @method void setRouteTableName(string $RouteTableName) 设置路由表名称
+ * @method string getCcnId() 获取<p>云联网实例ID。</p>
+ * @method void setCcnId(string $CcnId) 设置<p>云联网实例ID。</p>
+ * @method string getInstanceType() 获取<p>关联实例类型：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li>
+ * @method void setInstanceType(string $InstanceType) 设置<p>关联实例类型：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li>
+ * @method string getInstanceId() 获取<p>关联实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>关联实例ID。</p>
+ * @method string getInstanceName() 获取<p>关联实例名称。</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>关联实例名称。</p>
+ * @method string getInstanceRegion() 获取<p>关联实例所属大区，例如：ap-guangzhou。</p>
+ * @method void setInstanceRegion(string $InstanceRegion) 设置<p>关联实例所属大区，例如：ap-guangzhou。</p>
+ * @method string getInstanceUin() 获取<p>关联实例所属UIN（根账号）。</p>
+ * @method void setInstanceUin(string $InstanceUin) 设置<p>关联实例所属UIN（根账号）。</p>
+ * @method array getCidrBlock() 获取<p>关联实例CIDR。</p>
+ * @method void setCidrBlock(array $CidrBlock) 设置<p>关联实例CIDR。</p>
+ * @method string getState() 获取<p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
+ * @method void setState(string $State) 设置<p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
+ * @method string getAttachedTime() 获取<p>关联时间。</p>
+ * @method void setAttachedTime(string $AttachedTime) 设置<p>关联时间。</p>
+ * @method string getCcnUin() 获取<p>云联网所属UIN（根账号）。</p>
+ * @method void setCcnUin(string $CcnUin) 设置<p>云联网所属UIN（根账号）。</p>
+ * @method string getInstanceArea() 获取<p>关联实例所属的大地域，如: CHINA_MAINLAND</p>
+ * @method void setInstanceArea(string $InstanceArea) 设置<p>关联实例所属的大地域，如: CHINA_MAINLAND</p>
+ * @method string getDescription() 获取<p>备注</p>
+ * @method void setDescription(string $Description) 设置<p>备注</p>
+ * @method string getRouteTableId() 获取<p>路由表ID</p>
+ * @method void setRouteTableId(string $RouteTableId) 设置<p>路由表ID</p>
+ * @method string getRouteTableName() 获取<p>路由表名称</p>
+ * @method void setRouteTableName(string $RouteTableName) 设置<p>路由表名称</p>
+ * @method string getAliasType() 获取<p>别名类型</p>
+ * @method void setAliasType(string $AliasType) 设置<p>别名类型</p>
+ * @method string getAliasInstanceId() 获取<p>别名ID</p>
+ * @method void setAliasInstanceId(string $AliasInstanceId) 设置<p>别名ID</p>
  */
 class CcnAttachedInstance extends AbstractModel
 {
     /**
-     * @var string 云联网实例ID。
+     * @var string <p>云联网实例ID。</p>
      */
     public $CcnId;
 
     /**
-     * @var string 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+     * @var string <p>关联实例类型：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li>
      */
     public $InstanceType;
 
     /**
-     * @var string 关联实例ID。
+     * @var string <p>关联实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 关联实例名称。
+     * @var string <p>关联实例名称。</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 关联实例所属大区，例如：ap-guangzhou。
+     * @var string <p>关联实例所属大区，例如：ap-guangzhou。</p>
      */
     public $InstanceRegion;
 
     /**
-     * @var string 关联实例所属UIN（根账号）。
+     * @var string <p>关联实例所属UIN（根账号）。</p>
      */
     public $InstanceUin;
 
     /**
-     * @var array 关联实例CIDR。
+     * @var array <p>关联实例CIDR。</p>
      */
     public $CidrBlock;
 
     /**
-     * @var string 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+     * @var string <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
      */
     public $State;
 
     /**
-     * @var string 关联时间。
+     * @var string <p>关联时间。</p>
      */
     public $AttachedTime;
 
     /**
-     * @var string 云联网所属UIN（根账号）。
+     * @var string <p>云联网所属UIN（根账号）。</p>
      */
     public $CcnUin;
 
     /**
-     * @var string 关联实例所属的大地域，如: CHINA_MAINLAND
+     * @var string <p>关联实例所属的大地域，如: CHINA_MAINLAND</p>
      */
     public $InstanceArea;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Description;
 
     /**
-     * @var string 路由表ID
+     * @var string <p>路由表ID</p>
      */
     public $RouteTableId;
 
     /**
-     * @var string 路由表名称
+     * @var string <p>路由表名称</p>
      */
     public $RouteTableName;
 
     /**
-     * @param string $CcnId 云联网实例ID。
-     * @param string $InstanceType 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-     * @param string $InstanceId 关联实例ID。
-     * @param string $InstanceName 关联实例名称。
-     * @param string $InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
-     * @param string $InstanceUin 关联实例所属UIN（根账号）。
-     * @param array $CidrBlock 关联实例CIDR。
-     * @param string $State 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
-     * @param string $AttachedTime 关联时间。
-     * @param string $CcnUin 云联网所属UIN（根账号）。
-     * @param string $InstanceArea 关联实例所属的大地域，如: CHINA_MAINLAND
-     * @param string $Description 备注
-     * @param string $RouteTableId 路由表ID
-     * @param string $RouteTableName 路由表名称
+     * @var string <p>别名类型</p>
+     */
+    public $AliasType;
+
+    /**
+     * @var string <p>别名ID</p>
+     */
+    public $AliasInstanceId;
+
+    /**
+     * @param string $CcnId <p>云联网实例ID。</p>
+     * @param string $InstanceType <p>关联实例类型：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li>
+     * @param string $InstanceId <p>关联实例ID。</p>
+     * @param string $InstanceName <p>关联实例名称。</p>
+     * @param string $InstanceRegion <p>关联实例所属大区，例如：ap-guangzhou。</p>
+     * @param string $InstanceUin <p>关联实例所属UIN（根账号）。</p>
+     * @param array $CidrBlock <p>关联实例CIDR。</p>
+     * @param string $State <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
+     * @param string $AttachedTime <p>关联时间。</p>
+     * @param string $CcnUin <p>云联网所属UIN（根账号）。</p>
+     * @param string $InstanceArea <p>关联实例所属的大地域，如: CHINA_MAINLAND</p>
+     * @param string $Description <p>备注</p>
+     * @param string $RouteTableId <p>路由表ID</p>
+     * @param string $RouteTableName <p>路由表名称</p>
+     * @param string $AliasType <p>别名类型</p>
+     * @param string $AliasInstanceId <p>别名ID</p>
      */
     function __construct()
     {
@@ -252,6 +220,14 @@ class CcnAttachedInstance extends AbstractModel
 
         if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
             $this->RouteTableName = $param["RouteTableName"];
+        }
+
+        if (array_key_exists("AliasType",$param) and $param["AliasType"] !== null) {
+            $this->AliasType = $param["AliasType"];
+        }
+
+        if (array_key_exists("AliasInstanceId",$param) and $param["AliasInstanceId"] !== null) {
+            $this->AliasInstanceId = $param["AliasInstanceId"];
         }
     }
 }

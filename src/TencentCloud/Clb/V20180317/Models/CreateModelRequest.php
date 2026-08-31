@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置<p>模型协议</p>
  * @method string getApiBase() 获取<p>API Base URL</p>
  * @method void setApiBase(string $ApiBase) 设置<p>API Base URL</p>
+ * @method array getApiBases() 获取<p>多协议 Api Base URL</p>
+ * @method void setApiBases(array $ApiBases) 设置<p>多协议 Api Base URL</p>
  * @method string getVpcId() 获取<p>VPC ID</p>
  * @method void setVpcId(string $VpcId) 设置<p>VPC ID</p>
  * @method string getSubnetId() 获取<p>子网 ID</p>
@@ -48,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVerifySSL(boolean $VerifySSL) 设置<p>是否校验服务提供商的SSL证书</p>
  * @method ServiceProviderHealthCheckConfigInput getHealthCheckConfig() 获取<p>健康检查配置</p>
  * @method void setHealthCheckConfig(ServiceProviderHealthCheckConfigInput $HealthCheckConfig) 设置<p>健康检查配置</p>
+ * @method string getCMRPrivateNetworkTunnelId() 获取<p>私网管道 ID</p>
+ * @method void setCMRPrivateNetworkTunnelId(string $CMRPrivateNetworkTunnelId) 设置<p>私网管道 ID</p>
+ * @method array getHealthCheckConfigs() 获取<p>健康检查配置</p>
+ * @method void setHealthCheckConfigs(array $HealthCheckConfigs) 设置<p>健康检查配置</p>
  */
 class CreateModelRequest extends AbstractModel
 {
@@ -92,6 +98,11 @@ class CreateModelRequest extends AbstractModel
     public $ApiBase;
 
     /**
+     * @var array <p>多协议 Api Base URL</p>
+     */
+    public $ApiBases;
+
+    /**
      * @var string <p>VPC ID</p>
      */
     public $VpcId;
@@ -122,6 +133,16 @@ class CreateModelRequest extends AbstractModel
     public $HealthCheckConfig;
 
     /**
+     * @var string <p>私网管道 ID</p>
+     */
+    public $CMRPrivateNetworkTunnelId;
+
+    /**
+     * @var array <p>健康检查配置</p>
+     */
+    public $HealthCheckConfigs;
+
+    /**
      * @param string $AccessType <p>接入类型：PublicBYOK/PublicCustom/PrivateCustom</p>
      * @param string $ModelProvider <p>模型提供商</p>
      * @param array $ModelIds <p>通用模型标识列表</p>
@@ -130,12 +151,15 @@ class CreateModelRequest extends AbstractModel
      * @param string $ServiceProviderName <p>服务供应商(创建BYOK自定义名称)。</p>
      * @param string $Protocol <p>模型协议</p>
      * @param string $ApiBase <p>API Base URL</p>
+     * @param array $ApiBases <p>多协议 Api Base URL</p>
      * @param string $VpcId <p>VPC ID</p>
      * @param string $SubnetId <p>子网 ID</p>
      * @param string $HostHeader <p>转发请求时添加的Host请求头</p>
      * @param array $Tags <p>标签信息</p>
      * @param boolean $VerifySSL <p>是否校验服务提供商的SSL证书</p>
      * @param ServiceProviderHealthCheckConfigInput $HealthCheckConfig <p>健康检查配置</p>
+     * @param string $CMRPrivateNetworkTunnelId <p>私网管道 ID</p>
+     * @param array $HealthCheckConfigs <p>健康检查配置</p>
      */
     function __construct()
     {
@@ -192,6 +216,15 @@ class CreateModelRequest extends AbstractModel
             $this->ApiBase = $param["ApiBase"];
         }
 
+        if (array_key_exists("ApiBases",$param) and $param["ApiBases"] !== null) {
+            $this->ApiBases = [];
+            foreach ($param["ApiBases"] as $key => $value){
+                $obj = new ApiBaseItem();
+                $obj->deserialize($value);
+                array_push($this->ApiBases, $obj);
+            }
+        }
+
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
         }
@@ -220,6 +253,19 @@ class CreateModelRequest extends AbstractModel
         if (array_key_exists("HealthCheckConfig",$param) and $param["HealthCheckConfig"] !== null) {
             $this->HealthCheckConfig = new ServiceProviderHealthCheckConfigInput();
             $this->HealthCheckConfig->deserialize($param["HealthCheckConfig"]);
+        }
+
+        if (array_key_exists("CMRPrivateNetworkTunnelId",$param) and $param["CMRPrivateNetworkTunnelId"] !== null) {
+            $this->CMRPrivateNetworkTunnelId = $param["CMRPrivateNetworkTunnelId"];
+        }
+
+        if (array_key_exists("HealthCheckConfigs",$param) and $param["HealthCheckConfigs"] !== null) {
+            $this->HealthCheckConfigs = [];
+            foreach ($param["HealthCheckConfigs"] as $key => $value){
+                $obj = new ServiceProviderHealthCheckConfigItemInput();
+                $obj->deserialize($value);
+                array_push($this->HealthCheckConfigs, $obj);
+            }
         }
     }
 }

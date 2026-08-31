@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转推的目标地址信息。
  *
- * @method string getIp() 获取目标地址的IP。
- * @method void setIp(string $Ip) 设置目标地址的IP。
- * @method integer getPort() 获取目标地址的端口。
- * @method void setPort(integer $Port) 设置目标地址的端口。
+ * @method string getIp() 获取<p>目标地址的IP。</p>
+ * @method void setIp(string $Ip) 设置<p>目标地址的IP。</p>
+ * @method integer getPort() 获取<p>目标地址的端口。</p>
+ * @method void setPort(integer $Port) 设置<p>目标地址的端口。</p>
  */
 class SRTAddressDestination extends AbstractModel
 {
     /**
-     * @var string 目标地址的IP。
+     * @var string <p>目标地址的IP。</p>
      */
     public $Ip;
 
     /**
-     * @var integer 目标地址的端口。
+     * @var integer <p>目标地址的端口。</p>
      */
     public $Port;
 
     /**
-     * @param string $Ip 目标地址的IP。
-     * @param integer $Port 目标地址的端口。
+     * @param string $Ip <p>目标地址的IP。</p>
+     * @param integer $Port <p>目标地址的端口。</p>
      */
     function __construct()
     {

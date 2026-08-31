@@ -30,11 +30,13 @@ use TencentCloud\Mps\V20190612\Models as Models;
 智能字幕（语音全文、语音热词、语音翻译）
  * @method Models\BatchStartStreamLinkFlowResponse BatchStartStreamLinkFlow(Models\BatchStartStreamLinkFlowRequest $req) 批量启动媒体传输流。
  * @method Models\BatchStopStreamLinkFlowResponse BatchStopStreamLinkFlow(Models\BatchStopStreamLinkFlowRequest $req) 批量停止媒体传输流。
+ * @method Models\ChangeVoiceResponse ChangeVoice(Models\ChangeVoiceRequest $req) 同步音色转换，根据输入音频和指定音色将输入音频转换为指定音色
  * @method Models\CloneViralResponse CloneViral(Models\CloneViralRequest $req) 爆款复刻。输入爆款参考视频+商品图，生成风格/节奏对齐的视频
  * @method Models\CloneVoiceResponse CloneVoice(Models\CloneVoiceRequest $req) 同步接口，使用该接口从参考音频克隆一个音色
  * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) 创建用户自定义内容分析模板，数量上限：50。
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) 创建用户自定义内容识别模板，数量上限：50。
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) 创建转自适应码流模板，数量上限：100。
+ * @method Models\CreateAgentRecordTaskResponse CreateAgentRecordTask(Models\CreateAgentRecordTaskRequest $req) 调用该接口，用于创建Agent录制任务。
  * @method Models\CreateAiDramaTaskResponse CreateAiDramaTask(Models\CreateAiDramaTaskRequest $req) Ai漫剧工作流，输入剧本，自动拆分分镜，生成Ai漫剧
  * @method Models\CreateAiFissionTaskResponse CreateAiFissionTask(Models\CreateAiFissionTaskRequest $req) 创建ai视频裂变任务
  * @method Models\CreateAigcAudioTaskResponse CreateAigcAudioTask(Models\CreateAigcAudioTaskRequest $req) 调用该接口，用于创建AI生音频任务。
@@ -146,6 +148,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeAIAnalysisTemplatesResponse DescribeAIAnalysisTemplates(Models\DescribeAIAnalysisTemplatesRequest $req) 根据内容分析模板唯一标识，获取内容分析模板详情列表。返回结果包含符合条件的所有用户自定义内容分析模板及系统预置视频内容分析模板
  * @method Models\DescribeAIRecognitionTemplatesResponse DescribeAIRecognitionTemplates(Models\DescribeAIRecognitionTemplatesRequest $req) 根据内容识别模板唯一标识，获取内容识别模板详情列表。返回结果包含符合条件的所有用户自定义内容识别模板及系统预置视频内容识别模板
  * @method Models\DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(Models\DescribeAdaptiveDynamicStreamingTemplatesRequest $req) 查询转自适应码流模板，支持根据条件，分页查询。
+ * @method Models\DescribeAgentRecordTaskResponse DescribeAgentRecordTask(Models\DescribeAgentRecordTaskRequest $req) 调用该接口，用于查询Agent录制任务的进度以及获取生成结果。
  * @method Models\DescribeAigcAudioTaskResponse DescribeAigcAudioTask(Models\DescribeAigcAudioTaskRequest $req) 调用该接口，用于查询AIGC生视频任务的进度以及获取生成结果。
  * @method Models\DescribeAigcImageTaskResponse DescribeAigcImageTask(Models\DescribeAigcImageTaskRequest $req) 调用该接口，查询AIGC生图片任务进度以及获取生成结果。
  * @method Models\DescribeAigcTaskListResponse DescribeAigcTaskList(Models\DescribeAigcTaskListRequest $req) 查询AIGC任务列表详细信息
@@ -310,6 +313,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 - 智能内容审核（例如鉴黄、敏感信息检测）；
 - 智能内容分析（例如标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
 - 智能内容识别（例如人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）；
+ * @method Models\QueryHunyuan3DTaskResponse QueryHunyuan3DTask(Models\QueryHunyuan3DTaskRequest $req) 查询混元3D任务对应的结果
  * @method Models\QueryProjectResponse QueryProject(Models\QueryProjectRequest $req) 剧集项目查询
  * @method Models\RecognizeAudioResponse RecognizeAudio(Models\RecognizeAudioRequest $req) 同步接口，返回语音识别结果
  * @method Models\RecognizeMediaForZhiXueResponse RecognizeMediaForZhiXue(Models\RecognizeMediaForZhiXueRequest $req) 智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
@@ -318,6 +322,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannel(Models\StartStreamPackageLinearAssemblyChannelRequest $req) 启动媒体包装频道。
  * @method Models\StopStreamLinkFlowResponse StopStreamLinkFlow(Models\StopStreamLinkFlowRequest $req) 停止媒体传输流。
  * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) 停止线性组装频道。
+ * @method Models\SubmitHunyuan3DTaskResponse SubmitHunyuan3DTask(Models\SubmitHunyuan3DTaskRequest $req) 提交创建混元3D的任务
  * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) 同步接口，返回克隆音色ID或合成音频结果。克隆/设计音色数量上限默认100
  * @method Models\TextToSpeechResponse TextToSpeech(Models\TextToSpeechRequest $req) 同步语音合成，根据输入文本和指定音色生成语音
  * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) 异步语音合成接口，支持长文本转语音

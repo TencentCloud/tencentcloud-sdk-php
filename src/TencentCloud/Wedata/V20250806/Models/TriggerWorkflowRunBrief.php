@@ -164,6 +164,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentTaskExecutionName(string $ParentTaskExecutionName) 设置<p>父任务运行名称 【由嵌套工作流触发独有】</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerWorkflowRunBrief extends AbstractModel
 {
@@ -384,6 +388,12 @@ class TriggerWorkflowRunBrief extends AbstractModel
     public $ParentTaskExecutionName;
 
     /**
+     * @var string <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Privilege;
+
+    /**
      * @param string $AppId <p>用户AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId <p>项目ID</p>
@@ -455,6 +465,8 @@ class TriggerWorkflowRunBrief extends AbstractModel
      * @param string $ParentTaskExecutionId <p>父任务运行ID 【由嵌套工作流触发独有】</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParentTaskExecutionName <p>父任务运行名称 【由嵌套工作流触发独有】</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -612,6 +624,10 @@ class TriggerWorkflowRunBrief extends AbstractModel
 
         if (array_key_exists("ParentTaskExecutionName",$param) and $param["ParentTaskExecutionName"] !== null) {
             $this->ParentTaskExecutionName = $param["ParentTaskExecutionName"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

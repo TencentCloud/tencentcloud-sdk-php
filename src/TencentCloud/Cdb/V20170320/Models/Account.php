@@ -18,28 +18,28 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据库账号信息
+ * 账号信息
  *
- * @method string getUser() 获取<p>账号名，可输入1 - 32个字符。</p>
- * @method void setUser(string $User) 设置<p>账号名，可输入1 - 32个字符。</p>
- * @method string getHost() 获取<p>账号的主机。</p><p>IP 形式，支持填入%。</p>
- * @method void setHost(string $Host) 设置<p>账号的主机。</p><p>IP 形式，支持填入%。</p>
+ * @method string getUser() 获取账号名称
+ * @method void setUser(string $User) 设置账号名称
+ * @method string getHost() 获取账号的主机地址
+ * @method void setHost(string $Host) 设置账号的主机地址
  */
 class Account extends AbstractModel
 {
     /**
-     * @var string <p>账号名，可输入1 - 32个字符。</p>
+     * @var string 账号名称
      */
     public $User;
 
     /**
-     * @var string <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
+     * @var string 账号的主机地址
      */
     public $Host;
 
     /**
-     * @param string $User <p>账号名，可输入1 - 32个字符。</p>
-     * @param string $Host <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
+     * @param string $User 账号名称
+     * @param string $Host 账号的主机地址
      */
     function __construct()
     {

@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLarkOpenId(string $LarkOpenId) 设置<p>飞书OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIdentityType() 获取<p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIdentityType(string $IdentityType) 设置<p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserInfo extends AbstractModel
 {
@@ -98,6 +102,12 @@ class UserInfo extends AbstractModel
     public $LarkOpenId;
 
     /**
+     * @var string <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IdentityType;
+
+    /**
      * @param string $UserId <p>用户ID</p>
      * @param string $UserName <p>用户名</p>
      * @param string $Email <p>邮箱</p>
@@ -111,6 +121,8 @@ class UserInfo extends AbstractModel
      * @param string $AppUserName <p>企微账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LarkOpenId <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IdentityType <p>用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -156,6 +168,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("LarkOpenId",$param) and $param["LarkOpenId"] !== null) {
             $this->LarkOpenId = $param["LarkOpenId"];
+        }
+
+        if (array_key_exists("IdentityType",$param) and $param["IdentityType"] !== null) {
+            $this->IdentityType = $param["IdentityType"];
         }
     }
 }

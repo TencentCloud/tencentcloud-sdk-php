@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountName(string $AccountName) 设置账户名
  * @method string getHost() 获取主机
  * @method void setHost(string $Host) 设置主机
- * @method string getDb() 获取数据库名，为*时，忽略Type/TableName, 表示修改用户全局权限；
- * @method void setDb(string $Db) 设置数据库名，为*时，忽略Type/TableName, 表示修改用户全局权限；
- * @method string getType() 获取指定数据库下的对象类型，可选"table"，"*"
- * @method void setType(string $Type) 设置指定数据库下的对象类型，可选"table"，"*"
- * @method string getTableName() 获取当Type="table"时，用来指定表名
- * @method void setTableName(string $TableName) 设置当Type="table"时，用来指定表名
+ * @method string getDb() 获取数据库名。为*时，忽略Type/TableName，表示查询用户全局权限；不传时默认为*。
+ * @method void setDb(string $Db) 设置数据库名。为*时，忽略Type/TableName，表示查询用户全局权限；不传时默认为*。
+ * @method string getType() 获取指定数据库下的对象类型，可选"table"、"*"。不传时默认为*；Type为table时，必须指定TableName。
+ * @method void setType(string $Type) 设置指定数据库下的对象类型，可选"table"、"*"。不传时默认为*；Type为table时，必须指定TableName。
+ * @method string getTableName() 获取当Type="table"时，用来指定表名；Type为table时必填。
+ * @method void setTableName(string $TableName) 设置当Type="table"时，用来指定表名；Type为table时必填。
  */
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
@@ -51,17 +51,17 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
     public $Host;
 
     /**
-     * @var string 数据库名，为*时，忽略Type/TableName, 表示修改用户全局权限；
+     * @var string 数据库名。为*时，忽略Type/TableName，表示查询用户全局权限；不传时默认为*。
      */
     public $Db;
 
     /**
-     * @var string 指定数据库下的对象类型，可选"table"，"*"
+     * @var string 指定数据库下的对象类型，可选"table"、"*"。不传时默认为*；Type为table时，必须指定TableName。
      */
     public $Type;
 
     /**
-     * @var string 当Type="table"时，用来指定表名
+     * @var string 当Type="table"时，用来指定表名；Type为table时必填。
      */
     public $TableName;
 
@@ -69,9 +69,9 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
      * @param string $ClusterId 集群id
      * @param string $AccountName 账户名
      * @param string $Host 主机
-     * @param string $Db 数据库名，为*时，忽略Type/TableName, 表示修改用户全局权限；
-     * @param string $Type 指定数据库下的对象类型，可选"table"，"*"
-     * @param string $TableName 当Type="table"时，用来指定表名
+     * @param string $Db 数据库名。为*时，忽略Type/TableName，表示查询用户全局权限；不传时默认为*。
+     * @param string $Type 指定数据库下的对象类型，可选"table"、"*"。不传时默认为*；Type为table时，必须指定TableName。
+     * @param string $TableName 当Type="table"时，用来指定表名；Type为table时必填。
      */
     function __construct()
     {

@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI 样本管理，人物信息。
  *
- * @method string getPersonId() 获取人物 ID。
- * @method void setPersonId(string $PersonId) 设置人物 ID。
- * @method string getName() 获取人物名称。
- * @method void setName(string $Name) 设置人物名称。
- * @method string getDescription() 获取人物描述。
- * @method void setDescription(string $Description) 设置人物描述。
- * @method array getFaceInfoSet() 获取人脸信息。
- * @method void setFaceInfoSet(array $FaceInfoSet) 设置人脸信息。
- * @method array getTagSet() 获取人物标签。
- * @method void setTagSet(array $TagSet) 设置人物标签。
- * @method array getUsageSet() 获取应用场景。
- * @method void setUsageSet(array $UsageSet) 设置应用场景。
- * @method string getCreateTime() 获取创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- * @method void setCreateTime(string $CreateTime) 设置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- * @method string getUpdateTime() 获取最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- * @method void setUpdateTime(string $UpdateTime) 设置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method string getPersonId() 获取<p>人物 ID。</p>
+ * @method void setPersonId(string $PersonId) 设置<p>人物 ID。</p>
+ * @method string getName() 获取<p>人物名称。</p>
+ * @method void setName(string $Name) 设置<p>人物名称。</p>
+ * @method string getDescription() 获取<p>人物描述。</p>
+ * @method void setDescription(string $Description) 设置<p>人物描述。</p>
+ * @method array getFaceInfoSet() 获取<p>人脸信息。</p>
+ * @method void setFaceInfoSet(array $FaceInfoSet) 设置<p>人脸信息。</p>
+ * @method array getTagSet() 获取<p>人物标签。</p>
+ * @method void setTagSet(array $TagSet) 设置<p>人物标签。</p>
+ * @method array getUsageSet() 获取<p>应用场景。</p>
+ * @method void setUsageSet(array $UsageSet) 设置<p>应用场景。</p>
+ * @method string getCreateTime() 获取<p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+ * @method string getUpdateTime() 获取<p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
  */
 class AiSamplePerson extends AbstractModel
 {
     /**
-     * @var string 人物 ID。
+     * @var string <p>人物 ID。</p>
      */
     public $PersonId;
 
     /**
-     * @var string 人物名称。
+     * @var string <p>人物名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 人物描述。
+     * @var string <p>人物描述。</p>
      */
     public $Description;
 
     /**
-     * @var array 人脸信息。
+     * @var array <p>人脸信息。</p>
      */
     public $FaceInfoSet;
 
     /**
-     * @var array 人物标签。
+     * @var array <p>人物标签。</p>
      */
     public $TagSet;
 
     /**
-     * @var array 应用场景。
+     * @var array <p>应用场景。</p>
      */
     public $UsageSet;
 
     /**
-     * @var string 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @var string <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @var string <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $PersonId 人物 ID。
-     * @param string $Name 人物名称。
-     * @param string $Description 人物描述。
-     * @param array $FaceInfoSet 人脸信息。
-     * @param array $TagSet 人物标签。
-     * @param array $UsageSet 应用场景。
-     * @param string $CreateTime 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-     * @param string $UpdateTime 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param string $PersonId <p>人物 ID。</p>
+     * @param string $Name <p>人物名称。</p>
+     * @param string $Description <p>人物描述。</p>
+     * @param array $FaceInfoSet <p>人脸信息。</p>
+     * @param array $TagSet <p>人物标签。</p>
+     * @param array $UsageSet <p>应用场景。</p>
+     * @param string $CreateTime <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+     * @param string $UpdateTime <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     function __construct()
     {

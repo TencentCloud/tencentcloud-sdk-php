@@ -20,114 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云端特效信息。
  *
- * @method string getId() 获取云端特效 ID。
- * @method void setId(string $Id) 设置云端特效 ID。
- * @method string getPrompt() 获取云端特效描述词。
- * @method void setPrompt(string $Prompt) 设置云端特效描述词。
- * @method string getFlag() 获取云端特效标签。
- * @method void setFlag(string $Flag) 设置云端特效标签。
- * @method string getStatus() 获取云端特效生成状态。
-生成中 - GENERATING。
-处理中 - PROCESSING。
-生成失败 - FAILED。
-已完成 - FINISH。
-
- * @method void setStatus(string $Status) 设置云端特效生成状态。
-生成中 - GENERATING。
-处理中 - PROCESSING。
-生成失败 - FAILED。
-已完成 - FINISH。
-
- * @method string getMessage() 获取特效信息，生成失败时，此处返回失败原因。
- * @method void setMessage(string $Message) 设置特效信息，生成失败时，此处返回失败原因。
- * @method string getPreviewImageUrl() 获取云端特效预览图片。
- * @method void setPreviewImageUrl(string $PreviewImageUrl) 设置云端特效预览图片。
- * @method string getType() 获取云端特效类型。
-PGC : 官方精品特效。
-AIGC : AI生成的特效。
-UGC : 用户上传特效。
- * @method void setType(string $Type) 设置云端特效类型。
-PGC : 官方精品特效。
-AIGC : AI生成的特效。
-UGC : 用户上传特效。
- * @method string getCreateTime() 获取云端特效创建时间。
- * @method void setCreateTime(string $CreateTime) 设置云端特效创建时间。
- * @method string getUpdateTime() 获取云端特效更新时间。
- * @method void setUpdateTime(string $UpdateTime) 设置云端特效更新时间。
+ * @method string getId() 获取<p>云端特效 ID。</p>
+ * @method void setId(string $Id) 设置<p>云端特效 ID。</p>
+ * @method string getPrompt() 获取<p>云端特效描述词。</p>
+ * @method void setPrompt(string $Prompt) 设置<p>云端特效描述词。</p>
+ * @method string getFlag() 获取<p>云端特效标签。</p>
+ * @method void setFlag(string $Flag) 设置<p>云端特效标签。</p>
+ * @method string getStatus() 获取<p>云端特效生成状态。<br>生成中 - GENERATING。<br>处理中 - PROCESSING。<br>生成失败 - FAILED。<br>已完成 - FINISH。</p>
+ * @method void setStatus(string $Status) 设置<p>云端特效生成状态。<br>生成中 - GENERATING。<br>处理中 - PROCESSING。<br>生成失败 - FAILED。<br>已完成 - FINISH。</p>
+ * @method string getMessage() 获取<p>特效信息，生成失败时，此处返回失败原因。</p>
+ * @method void setMessage(string $Message) 设置<p>特效信息，生成失败时，此处返回失败原因。</p>
+ * @method string getPreviewImageUrl() 获取<p>云端特效预览图片。</p>
+ * @method void setPreviewImageUrl(string $PreviewImageUrl) 设置<p>云端特效预览图片。</p>
+ * @method string getType() 获取<p>云端特效类型。<br>PGC : 官方精品特效。<br>AIGC : AI生成的特效。<br>UGC : 用户上传特效。</p>
+ * @method void setType(string $Type) 设置<p>云端特效类型。<br>PGC : 官方精品特效。<br>AIGC : AI生成的特效。<br>UGC : 用户上传特效。</p>
+ * @method string getCreateTime() 获取<p>云端特效创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>云端特效创建时间。</p>
+ * @method string getUpdateTime() 获取<p>云端特效更新时间。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>云端特效更新时间。</p>
  */
 class CloudEffectInfo extends AbstractModel
 {
     /**
-     * @var string 云端特效 ID。
+     * @var string <p>云端特效 ID。</p>
      */
     public $Id;
 
     /**
-     * @var string 云端特效描述词。
+     * @var string <p>云端特效描述词。</p>
      */
     public $Prompt;
 
     /**
-     * @var string 云端特效标签。
+     * @var string <p>云端特效标签。</p>
      */
     public $Flag;
 
     /**
-     * @var string 云端特效生成状态。
-生成中 - GENERATING。
-处理中 - PROCESSING。
-生成失败 - FAILED。
-已完成 - FINISH。
-
+     * @var string <p>云端特效生成状态。<br>生成中 - GENERATING。<br>处理中 - PROCESSING。<br>生成失败 - FAILED。<br>已完成 - FINISH。</p>
      */
     public $Status;
 
     /**
-     * @var string 特效信息，生成失败时，此处返回失败原因。
+     * @var string <p>特效信息，生成失败时，此处返回失败原因。</p>
      */
     public $Message;
 
     /**
-     * @var string 云端特效预览图片。
+     * @var string <p>云端特效预览图片。</p>
      */
     public $PreviewImageUrl;
 
     /**
-     * @var string 云端特效类型。
-PGC : 官方精品特效。
-AIGC : AI生成的特效。
-UGC : 用户上传特效。
+     * @var string <p>云端特效类型。<br>PGC : 官方精品特效。<br>AIGC : AI生成的特效。<br>UGC : 用户上传特效。</p>
      */
     public $Type;
 
     /**
-     * @var string 云端特效创建时间。
+     * @var string <p>云端特效创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 云端特效更新时间。
+     * @var string <p>云端特效更新时间。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $Id 云端特效 ID。
-     * @param string $Prompt 云端特效描述词。
-     * @param string $Flag 云端特效标签。
-     * @param string $Status 云端特效生成状态。
-生成中 - GENERATING。
-处理中 - PROCESSING。
-生成失败 - FAILED。
-已完成 - FINISH。
-
-     * @param string $Message 特效信息，生成失败时，此处返回失败原因。
-     * @param string $PreviewImageUrl 云端特效预览图片。
-     * @param string $Type 云端特效类型。
-PGC : 官方精品特效。
-AIGC : AI生成的特效。
-UGC : 用户上传特效。
-     * @param string $CreateTime 云端特效创建时间。
-     * @param string $UpdateTime 云端特效更新时间。
+     * @param string $Id <p>云端特效 ID。</p>
+     * @param string $Prompt <p>云端特效描述词。</p>
+     * @param string $Flag <p>云端特效标签。</p>
+     * @param string $Status <p>云端特效生成状态。<br>生成中 - GENERATING。<br>处理中 - PROCESSING。<br>生成失败 - FAILED。<br>已完成 - FINISH。</p>
+     * @param string $Message <p>特效信息，生成失败时，此处返回失败原因。</p>
+     * @param string $PreviewImageUrl <p>云端特效预览图片。</p>
+     * @param string $Type <p>云端特效类型。<br>PGC : 官方精品特效。<br>AIGC : AI生成的特效。<br>UGC : 用户上传特效。</p>
+     * @param string $CreateTime <p>云端特效创建时间。</p>
+     * @param string $UpdateTime <p>云端特效更新时间。</p>
      */
     function __construct()
     {

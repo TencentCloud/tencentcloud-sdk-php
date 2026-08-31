@@ -20,146 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述 HAVIP 信息
  *
- * @method string getHaVipId() 获取`HAVIP`的`ID`，是`HAVIP`的唯一标识。
- * @method void setHaVipId(string $HaVipId) 设置`HAVIP`的`ID`，是`HAVIP`的唯一标识。
- * @method string getHaVipName() 获取`HAVIP`名称。
- * @method void setHaVipName(string $HaVipName) 设置`HAVIP`名称。
- * @method string getVip() 获取虚拟IP地址。
- * @method void setVip(string $Vip) 设置虚拟IP地址。
- * @method string getVpcId() 获取`HAVIP`所在私有网络`ID`。
- * @method void setVpcId(string $VpcId) 设置`HAVIP`所在私有网络`ID`。
- * @method string getSubnetId() 获取`HAVIP`所在子网`ID`。
- * @method void setSubnetId(string $SubnetId) 设置`HAVIP`所在子网`ID`。
- * @method string getNetworkInterfaceId() 获取`HAVIP`关联弹性网卡`ID`。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置`HAVIP`关联弹性网卡`ID`。
- * @method string getInstanceId() 获取被绑定的实例`ID`。
- * @method void setInstanceId(string $InstanceId) 设置被绑定的实例`ID`。
- * @method string getAddressIp() 获取绑定`EIP`。
- * @method void setAddressIp(string $AddressIp) 设置绑定`EIP`。
- * @method string getState() 获取状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
- * @method void setState(string $State) 设置状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method string getBusiness() 获取使用havip的业务标识。
- * @method void setBusiness(string $Business) 设置使用havip的业务标识。
- * @method array getHaVipAssociationSet() 获取`HAVIP`的飘移范围。
- * @method void setHaVipAssociationSet(array $HaVipAssociationSet) 设置`HAVIP`的飘移范围。
- * @method boolean getCheckAssociate() 获取是否开启`HAVIP`的漂移范围校验。
- * @method void setCheckAssociate(boolean $CheckAssociate) 设置是否开启`HAVIP`的漂移范围校验。
- * @method string getCdcId() 获取CDC实例ID。
- * @method void setCdcId(string $CdcId) 设置CDC实例ID。
- * @method string getFlushedTime() 获取HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
- * @method void setFlushedTime(string $FlushedTime) 设置HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
- * @method array getTagSet() 获取标签键值对。	
- * @method void setTagSet(array $TagSet) 设置标签键值对。	
+ * @method string getHaVipId() 获取<p><code>HAVIP</code>的<code>ID</code>，是<code>HAVIP</code>的唯一标识。</p>
+ * @method void setHaVipId(string $HaVipId) 设置<p><code>HAVIP</code>的<code>ID</code>，是<code>HAVIP</code>的唯一标识。</p>
+ * @method string getHaVipName() 获取<p><code>HAVIP</code>名称。</p>
+ * @method void setHaVipName(string $HaVipName) 设置<p><code>HAVIP</code>名称。</p>
+ * @method string getVip() 获取<p>虚拟IP地址。</p>
+ * @method void setVip(string $Vip) 设置<p>虚拟IP地址。</p>
+ * @method string getVpcId() 获取<p><code>HAVIP</code>所在私有网络<code>ID</code>。</p>
+ * @method void setVpcId(string $VpcId) 设置<p><code>HAVIP</code>所在私有网络<code>ID</code>。</p>
+ * @method string getSubnetId() 获取<p><code>HAVIP</code>所在子网<code>ID</code>。</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p><code>HAVIP</code>所在子网<code>ID</code>。</p>
+ * @method string getNetworkInterfaceId() 获取<p><code>HAVIP</code>关联弹性网卡<code>ID</code>。</p>
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置<p><code>HAVIP</code>关联弹性网卡<code>ID</code>。</p>
+ * @method string getInstanceId() 获取<p>被绑定的实例<code>ID</code>。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>被绑定的实例<code>ID</code>。</p>
+ * @method string getAddressIp() 获取<p>绑定<code>EIP</code>。</p>
+ * @method void setAddressIp(string $AddressIp) 设置<p>绑定<code>EIP</code>。</p>
+ * @method string getState() 获取<p>状态：</p><li><code>AVAILABLE</code>：运行中</li><li><code>UNBIND</code>：未绑定</li>
+ * @method void setState(string $State) 设置<p>状态：</p><li><code>AVAILABLE</code>：运行中</li><li><code>UNBIND</code>：未绑定</li>
+ * @method string getCreatedTime() 获取<p>创建时间。</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间。</p>
+ * @method string getBusiness() 获取<p>使用havip的业务标识。</p>
+ * @method void setBusiness(string $Business) 设置<p>使用havip的业务标识。</p>
+ * @method array getHaVipAssociationSet() 获取<p><code>HAVIP</code>的飘移范围。</p>
+ * @method void setHaVipAssociationSet(array $HaVipAssociationSet) 设置<p><code>HAVIP</code>的飘移范围。</p>
+ * @method boolean getCheckAssociate() 获取<p>是否开启<code>HAVIP</code>的漂移范围校验。</p>
+ * @method void setCheckAssociate(boolean $CheckAssociate) 设置<p>是否开启<code>HAVIP</code>的漂移范围校验。</p>
+ * @method string getCdcId() 获取<p>CDC实例ID。</p>
+ * @method void setCdcId(string $CdcId) 设置<p>CDC实例ID。</p>
+ * @method string getFlushedTime() 获取<p>HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00</p>
+ * @method void setFlushedTime(string $FlushedTime) 设置<p>HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00</p>
+ * @method array getTagSet() 获取<p>标签键值对。</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签键值对。</p>
  */
 class HaVip extends AbstractModel
 {
     /**
-     * @var string `HAVIP`的`ID`，是`HAVIP`的唯一标识。
+     * @var string <p><code>HAVIP</code>的<code>ID</code>，是<code>HAVIP</code>的唯一标识。</p>
      */
     public $HaVipId;
 
     /**
-     * @var string `HAVIP`名称。
+     * @var string <p><code>HAVIP</code>名称。</p>
      */
     public $HaVipName;
 
     /**
-     * @var string 虚拟IP地址。
+     * @var string <p>虚拟IP地址。</p>
      */
     public $Vip;
 
     /**
-     * @var string `HAVIP`所在私有网络`ID`。
+     * @var string <p><code>HAVIP</code>所在私有网络<code>ID</code>。</p>
      */
     public $VpcId;
 
     /**
-     * @var string `HAVIP`所在子网`ID`。
+     * @var string <p><code>HAVIP</code>所在子网<code>ID</code>。</p>
      */
     public $SubnetId;
 
     /**
-     * @var string `HAVIP`关联弹性网卡`ID`。
+     * @var string <p><code>HAVIP</code>关联弹性网卡<code>ID</code>。</p>
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var string 被绑定的实例`ID`。
+     * @var string <p>被绑定的实例<code>ID</code>。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 绑定`EIP`。
+     * @var string <p>绑定<code>EIP</code>。</p>
      */
     public $AddressIp;
 
     /**
-     * @var string 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
+     * @var string <p>状态：</p><li><code>AVAILABLE</code>：运行中</li><li><code>UNBIND</code>：未绑定</li>
      */
     public $State;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 使用havip的业务标识。
+     * @var string <p>使用havip的业务标识。</p>
      */
     public $Business;
 
     /**
-     * @var array `HAVIP`的飘移范围。
+     * @var array <p><code>HAVIP</code>的飘移范围。</p>
      */
     public $HaVipAssociationSet;
 
     /**
-     * @var boolean 是否开启`HAVIP`的漂移范围校验。
+     * @var boolean <p>是否开启<code>HAVIP</code>的漂移范围校验。</p>
      */
     public $CheckAssociate;
 
     /**
-     * @var string CDC实例ID。
+     * @var string <p>CDC实例ID。</p>
      */
     public $CdcId;
 
     /**
-     * @var string HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+     * @var string <p>HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00</p>
      */
     public $FlushedTime;
 
     /**
-     * @var array 标签键值对。	
+     * @var array <p>标签键值对。</p>
      */
     public $TagSet;
 
     /**
-     * @param string $HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
-     * @param string $HaVipName `HAVIP`名称。
-     * @param string $Vip 虚拟IP地址。
-     * @param string $VpcId `HAVIP`所在私有网络`ID`。
-     * @param string $SubnetId `HAVIP`所在子网`ID`。
-     * @param string $NetworkInterfaceId `HAVIP`关联弹性网卡`ID`。
-     * @param string $InstanceId 被绑定的实例`ID`。
-     * @param string $AddressIp 绑定`EIP`。
-     * @param string $State 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
-     * @param string $CreatedTime 创建时间。
-     * @param string $Business 使用havip的业务标识。
-     * @param array $HaVipAssociationSet `HAVIP`的飘移范围。
-     * @param boolean $CheckAssociate 是否开启`HAVIP`的漂移范围校验。
-     * @param string $CdcId CDC实例ID。
-     * @param string $FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-     * @param array $TagSet 标签键值对。	
+     * @param string $HaVipId <p><code>HAVIP</code>的<code>ID</code>，是<code>HAVIP</code>的唯一标识。</p>
+     * @param string $HaVipName <p><code>HAVIP</code>名称。</p>
+     * @param string $Vip <p>虚拟IP地址。</p>
+     * @param string $VpcId <p><code>HAVIP</code>所在私有网络<code>ID</code>。</p>
+     * @param string $SubnetId <p><code>HAVIP</code>所在子网<code>ID</code>。</p>
+     * @param string $NetworkInterfaceId <p><code>HAVIP</code>关联弹性网卡<code>ID</code>。</p>
+     * @param string $InstanceId <p>被绑定的实例<code>ID</code>。</p>
+     * @param string $AddressIp <p>绑定<code>EIP</code>。</p>
+     * @param string $State <p>状态：</p><li><code>AVAILABLE</code>：运行中</li><li><code>UNBIND</code>：未绑定</li>
+     * @param string $CreatedTime <p>创建时间。</p>
+     * @param string $Business <p>使用havip的业务标识。</p>
+     * @param array $HaVipAssociationSet <p><code>HAVIP</code>的飘移范围。</p>
+     * @param boolean $CheckAssociate <p>是否开启<code>HAVIP</code>的漂移范围校验。</p>
+     * @param string $CdcId <p>CDC实例ID。</p>
+     * @param string $FlushedTime <p>HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00</p>
+     * @param array $TagSet <p>标签键值对。</p>
      */
     function __construct()
     {

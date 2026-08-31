@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，从0开始。
  * @method integer getLimit() 获取单次列出的数量限制，不超过100.
  * @method void setLimit(integer $Limit) 设置单次列出的数量限制，不超过100.
+ * @method array getTagFilters() 获取
+ * @method void setTagFilters(array $TagFilters) 设置
  */
 class DescribeLibrariesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeLibrariesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 
+     */
+    public $TagFilters;
+
+    /**
      * @param array $LibraryIds 按照一个或者多个媒体库 ID 查询，每次请求的上限为 100 个。
      * @param integer $PageNumber 页码，整型，配合 PageSize 使用，默认值为 1。
      * @param integer $PageSize 每页数目，整型，配合 PageNumber 使用，默认值为 20，最大值为 100。
      * @param integer $Offset 偏移量，从0开始。
      * @param integer $Limit 单次列出的数量限制，不超过100.
+     * @param array $TagFilters 
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class DescribeLibrariesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

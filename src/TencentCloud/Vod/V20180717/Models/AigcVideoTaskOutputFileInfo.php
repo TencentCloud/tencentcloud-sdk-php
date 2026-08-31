@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileContent(string $FileContent) 设置<p>文件内容。当 UsageType 为 position_info 时有返回值。</p>
  * @method string getFileId() 获取<p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
  * @method void setFileId(string $FileId) 设置<p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
- * @method MediaMetaData getMetaData() 获取<p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
- * @method void setMetaData(MediaMetaData $MetaData) 设置<p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+ * @method MediaMetaData getMetaData() 获取<p>输出视频的元信息。</p>
+ * @method void setMetaData(MediaMetaData $MetaData) 设置<p>输出视频的元信息。</p>
  * @method string getUsageType() 获取<p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
  * @method void setUsageType(string $UsageType) 设置<p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
  */
@@ -84,7 +84,7 @@ class AigcVideoTaskOutputFileInfo extends AbstractModel
     public $FileId;
 
     /**
-     * @var MediaMetaData <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+     * @var MediaMetaData <p>输出视频的元信息。</p>
      */
     public $MetaData;
 
@@ -102,7 +102,7 @@ class AigcVideoTaskOutputFileInfo extends AbstractModel
      * @param string $FileUrl <p>媒体文件播放地址。</p>
      * @param string $FileContent <p>文件内容。当 UsageType 为 position_info 时有返回值。</p>
      * @param string $FileId <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
-     * @param MediaMetaData $MetaData <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+     * @param MediaMetaData $MetaData <p>输出视频的元信息。</p>
      * @param string $UsageType <p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
      */
     function __construct()

@@ -20,89 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVirusScanConfig返回参数结构体
  *
- * @method boolean getEnableScan() 获取是否开启定期扫描
- * @method void setEnableScan(boolean $EnableScan) 设置是否开启定期扫描
- * @method integer getCycle() 获取检测周期每隔多少天
- * @method void setCycle(integer $Cycle) 设置检测周期每隔多少天
- * @method string getBeginScanAt() 获取扫描开始时间
- * @method void setBeginScanAt(string $BeginScanAt) 设置扫描开始时间
- * @method integer getTimeout() 获取超时时长，单位小时
- * @method void setTimeout(integer $Timeout) 设置超时时长，单位小时
- * @method string getScanRangeType() 获取SCAN_NODE:扫描节点
-SCAN_CONTAINER:扫描容器
- * @method void setScanRangeType(string $ScanRangeType) 设置SCAN_NODE:扫描节点
-SCAN_CONTAINER:扫描容器
- * @method array getScanIDs() 获取自选扫描范围的容器id或者节点id 
- * @method void setScanIDs(array $ScanIDs) 设置自选扫描范围的容器id或者节点id 
- * @method array getScanPath() 获取自选排除或扫描的地址
- * @method void setScanPath(array $ScanPath) 设置自选排除或扫描的地址
- * @method string getScanPathMode() 获取扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
- * @method void setScanPathMode(string $ScanPathMode) 设置扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
- * @method boolean getIsIncludePath() 获取true:包含路径
-false:排除路径
- * @method void setIsIncludePath(boolean $IsIncludePath) 设置true:包含路径
-false:排除路径
+ * @method boolean getEnableScan() 获取<p>是否开启定期扫描</p>
+ * @method void setEnableScan(boolean $EnableScan) 设置<p>是否开启定期扫描</p>
+ * @method integer getCycle() 获取<p>检测周期每隔多少天</p>
+ * @method void setCycle(integer $Cycle) 设置<p>检测周期每隔多少天</p>
+ * @method string getBeginScanAt() 获取<p>扫描开始时间</p>
+ * @method void setBeginScanAt(string $BeginScanAt) 设置<p>扫描开始时间</p>
+ * @method integer getTimeout() 获取<p>超时时长，单位小时</p>
+ * @method void setTimeout(integer $Timeout) 设置<p>超时时长，单位小时</p>
+ * @method string getScanRangeType() 获取<p>SCAN_NODE:扫描节点<br>SCAN_CONTAINER:扫描容器</p>
+ * @method void setScanRangeType(string $ScanRangeType) 设置<p>SCAN_NODE:扫描节点<br>SCAN_CONTAINER:扫描容器</p>
+ * @method array getScanIDs() 获取<p>自选扫描范围的容器id或者节点id</p>
+ * @method void setScanIDs(array $ScanIDs) 设置<p>自选扫描范围的容器id或者节点id</p>
+ * @method array getScanPath() 获取<p>自选排除或扫描的地址</p>
+ * @method void setScanPath(array $ScanPath) 设置<p>自选排除或扫描的地址</p>
+ * @method string getScanPathMode() 获取<p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
+ * @method void setScanPathMode(string $ScanPathMode) 设置<p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
+ * @method boolean getIsIncludePath() 获取<p>true:包含路径<br>false:排除路径</p>
+ * @method void setIsIncludePath(boolean $IsIncludePath) 设置<p>true:包含路径<br>false:排除路径</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVirusScanConfigResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否开启定期扫描
+     * @var boolean <p>是否开启定期扫描</p>
      */
     public $EnableScan;
 
     /**
-     * @var integer 检测周期每隔多少天
+     * @var integer <p>检测周期每隔多少天</p>
      */
     public $Cycle;
 
     /**
-     * @var string 扫描开始时间
+     * @var string <p>扫描开始时间</p>
      */
     public $BeginScanAt;
 
     /**
-     * @var integer 超时时长，单位小时
+     * @var integer <p>超时时长，单位小时</p>
      */
     public $Timeout;
 
     /**
-     * @var string SCAN_NODE:扫描节点
-SCAN_CONTAINER:扫描容器
+     * @var string <p>SCAN_NODE:扫描节点<br>SCAN_CONTAINER:扫描容器</p>
      */
     public $ScanRangeType;
 
     /**
-     * @var array 自选扫描范围的容器id或者节点id 
+     * @var array <p>自选扫描范围的容器id或者节点id</p>
      */
     public $ScanIDs;
 
     /**
-     * @var array 自选排除或扫描的地址
+     * @var array <p>自选排除或扫描的地址</p>
      */
     public $ScanPath;
 
     /**
-     * @var string 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
+     * @var string <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
      */
     public $ScanPathMode;
 
     /**
-     * @var boolean true:包含路径
-false:排除路径
+     * @var boolean <p>true:包含路径<br>false:排除路径</p>
      */
     public $IsIncludePath;
 
@@ -112,21 +94,15 @@ false:排除路径
     public $RequestId;
 
     /**
-     * @param boolean $EnableScan 是否开启定期扫描
-     * @param integer $Cycle 检测周期每隔多少天
-     * @param string $BeginScanAt 扫描开始时间
-     * @param integer $Timeout 超时时长，单位小时
-     * @param string $ScanRangeType SCAN_NODE:扫描节点
-SCAN_CONTAINER:扫描容器
-     * @param array $ScanIDs 自选扫描范围的容器id或者节点id 
-     * @param array $ScanPath 自选排除或扫描的地址
-     * @param string $ScanPathMode 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
-     * @param boolean $IsIncludePath true:包含路径
-false:排除路径
+     * @param boolean $EnableScan <p>是否开启定期扫描</p>
+     * @param integer $Cycle <p>检测周期每隔多少天</p>
+     * @param string $BeginScanAt <p>扫描开始时间</p>
+     * @param integer $Timeout <p>超时时长，单位小时</p>
+     * @param string $ScanRangeType <p>SCAN_NODE:扫描节点<br>SCAN_CONTAINER:扫描容器</p>
+     * @param array $ScanIDs <p>自选扫描范围的容器id或者节点id</p>
+     * @param array $ScanPath <p>自选排除或扫描的地址</p>
+     * @param string $ScanPathMode <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
+     * @param boolean $IsIncludePath <p>true:包含路径<br>false:排除路径</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

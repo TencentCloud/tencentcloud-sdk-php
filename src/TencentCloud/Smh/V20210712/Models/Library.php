@@ -20,98 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PaaS 服务媒体库信息
  *
- * @method string getLibraryId() 获取媒体库 ID
- * @method void setLibraryId(string $LibraryId) 设置媒体库 ID
- * @method string getName() 获取媒体库友好名称
- * @method void setName(string $Name) 设置媒体库友好名称
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method string getBucketName() 获取媒体库绑定的 COS 存储桶
- * @method void setBucketName(string $BucketName) 设置媒体库绑定的 COS 存储桶
- * @method string getBucketRegion() 获取媒体库绑定的 COS 存储桶所在的地域
- * @method void setBucketRegion(string $BucketRegion) 设置媒体库绑定的 COS 存储桶所在的地域
- * @method string getAccessDomain() 获取该媒体库的业务 API 访问域名
- * @method void setAccessDomain(string $AccessDomain) 设置该媒体库的业务 API 访问域名
- * @method string getCreationTime() 获取媒体库创建时间
- * @method void setCreationTime(string $CreationTime) 设置媒体库创建时间
- * @method LibraryExtension getLibraryExtension() 获取媒体库配置项
- * @method void setLibraryExtension(LibraryExtension $LibraryExtension) 设置媒体库配置项
- * @method string getSize() 获取媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。
- * @method void setSize(string $Size) 设置媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。
- * @method string getDirNum() 获取媒体库目录数，由于数字类型精度限制，该字段为 String 类型。
- * @method void setDirNum(string $DirNum) 设置媒体库目录数，由于数字类型精度限制，该字段为 String 类型。
- * @method string getFileNum() 获取媒体库文件数，由于数字类型精度限制，该字段为 String 类型。
- * @method void setFileNum(string $FileNum) 设置媒体库文件数，由于数字类型精度限制，该字段为 String 类型。
+ * @method string getLibraryId() 获取<p>媒体库 ID</p>
+ * @method void setLibraryId(string $LibraryId) 设置<p>媒体库 ID</p>
+ * @method string getName() 获取<p>媒体库友好名称</p>
+ * @method void setName(string $Name) 设置<p>媒体库友好名称</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getBucketName() 获取<p>媒体库绑定的 COS 存储桶</p>
+ * @method void setBucketName(string $BucketName) 设置<p>媒体库绑定的 COS 存储桶</p>
+ * @method string getBucketRegion() 获取<p>媒体库绑定的 COS 存储桶所在的地域</p>
+ * @method void setBucketRegion(string $BucketRegion) 设置<p>媒体库绑定的 COS 存储桶所在的地域</p>
+ * @method string getAccessDomain() 获取<p>该媒体库的业务 API 访问域名</p>
+ * @method void setAccessDomain(string $AccessDomain) 设置<p>该媒体库的业务 API 访问域名</p>
+ * @method string getCreationTime() 获取<p>媒体库创建时间</p>
+ * @method void setCreationTime(string $CreationTime) 设置<p>媒体库创建时间</p>
+ * @method LibraryExtension getLibraryExtension() 获取<p>媒体库配置项</p>
+ * @method void setLibraryExtension(LibraryExtension $LibraryExtension) 设置<p>媒体库配置项</p>
+ * @method string getSize() 获取<p>媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。</p>
+ * @method void setSize(string $Size) 设置<p>媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。</p>
+ * @method string getDirNum() 获取<p>媒体库目录数，由于数字类型精度限制，该字段为 String 类型。</p>
+ * @method void setDirNum(string $DirNum) 设置<p>媒体库目录数，由于数字类型精度限制，该字段为 String 类型。</p>
+ * @method string getFileNum() 获取<p>媒体库文件数，由于数字类型精度限制，该字段为 String 类型。</p>
+ * @method void setFileNum(string $FileNum) 设置<p>媒体库文件数，由于数字类型精度限制，该字段为 String 类型。</p>
+ * @method array getTags() 获取<p>媒体库关联的标签列表。</p>
+ * @method void setTags(array $Tags) 设置<p>媒体库关联的标签列表。</p>
  */
 class Library extends AbstractModel
 {
     /**
-     * @var string 媒体库 ID
+     * @var string <p>媒体库 ID</p>
      */
     public $LibraryId;
 
     /**
-     * @var string 媒体库友好名称
+     * @var string <p>媒体库友好名称</p>
      */
     public $Name;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var string 媒体库绑定的 COS 存储桶
+     * @var string <p>媒体库绑定的 COS 存储桶</p>
      */
     public $BucketName;
 
     /**
-     * @var string 媒体库绑定的 COS 存储桶所在的地域
+     * @var string <p>媒体库绑定的 COS 存储桶所在的地域</p>
      */
     public $BucketRegion;
 
     /**
-     * @var string 该媒体库的业务 API 访问域名
+     * @var string <p>该媒体库的业务 API 访问域名</p>
      */
     public $AccessDomain;
 
     /**
-     * @var string 媒体库创建时间
+     * @var string <p>媒体库创建时间</p>
      */
     public $CreationTime;
 
     /**
-     * @var LibraryExtension 媒体库配置项
+     * @var LibraryExtension <p>媒体库配置项</p>
      */
     public $LibraryExtension;
 
     /**
-     * @var string 媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。
+     * @var string <p>媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。</p>
      */
     public $Size;
 
     /**
-     * @var string 媒体库目录数，由于数字类型精度限制，该字段为 String 类型。
+     * @var string <p>媒体库目录数，由于数字类型精度限制，该字段为 String 类型。</p>
      */
     public $DirNum;
 
     /**
-     * @var string 媒体库文件数，由于数字类型精度限制，该字段为 String 类型。
+     * @var string <p>媒体库文件数，由于数字类型精度限制，该字段为 String 类型。</p>
      */
     public $FileNum;
 
     /**
-     * @param string $LibraryId 媒体库 ID
-     * @param string $Name 媒体库友好名称
-     * @param string $Remark 备注
-     * @param string $BucketName 媒体库绑定的 COS 存储桶
-     * @param string $BucketRegion 媒体库绑定的 COS 存储桶所在的地域
-     * @param string $AccessDomain 该媒体库的业务 API 访问域名
-     * @param string $CreationTime 媒体库创建时间
-     * @param LibraryExtension $LibraryExtension 媒体库配置项
-     * @param string $Size 媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。
-     * @param string $DirNum 媒体库目录数，由于数字类型精度限制，该字段为 String 类型。
-     * @param string $FileNum 媒体库文件数，由于数字类型精度限制，该字段为 String 类型。
+     * @var array <p>媒体库关联的标签列表。</p>
+     */
+    public $Tags;
+
+    /**
+     * @param string $LibraryId <p>媒体库 ID</p>
+     * @param string $Name <p>媒体库友好名称</p>
+     * @param string $Remark <p>备注</p>
+     * @param string $BucketName <p>媒体库绑定的 COS 存储桶</p>
+     * @param string $BucketRegion <p>媒体库绑定的 COS 存储桶所在的地域</p>
+     * @param string $AccessDomain <p>该媒体库的业务 API 访问域名</p>
+     * @param string $CreationTime <p>媒体库创建时间</p>
+     * @param LibraryExtension $LibraryExtension <p>媒体库配置项</p>
+     * @param string $Size <p>媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。</p>
+     * @param string $DirNum <p>媒体库目录数，由于数字类型精度限制，该字段为 String 类型。</p>
+     * @param string $FileNum <p>媒体库文件数，由于数字类型精度限制，该字段为 String 类型。</p>
+     * @param array $Tags <p>媒体库关联的标签列表。</p>
      */
     function __construct()
     {
@@ -169,6 +177,15 @@ class Library extends AbstractModel
 
         if (array_key_exists("FileNum",$param) and $param["FileNum"] !== null) {
             $this->FileNum = $param["FileNum"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

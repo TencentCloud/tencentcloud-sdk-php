@@ -20,85 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 对视频转自适应码流任务结果类型
  *
- * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
- * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
- * @method string getErrCodeExt() 获取错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
- * @method void setErrCodeExt(string $ErrCodeExt) 设置错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
- * @method integer getErrCode() 获取错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
- * @method void setErrCode(integer $ErrCode) 设置错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
- * @method string getMessage() 获取错误信息。
- * @method void setMessage(string $Message) 设置错误信息。
- * @method AdaptiveDynamicStreamingTaskInput getInput() 获取对视频转自适应码流任务的输入。
- * @method void setInput(AdaptiveDynamicStreamingTaskInput $Input) 设置对视频转自适应码流任务的输入。
- * @method AdaptiveDynamicStreamingInfoItem getOutput() 获取对视频转自适应码流任务的输出。
+ * @method string getStatus() 获取<p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
+ * @method void setStatus(string $Status) 设置<p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
+ * @method string getErrCodeExt() 获取<p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
+ * @method void setErrCodeExt(string $ErrCodeExt) 设置<p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
+ * @method integer getErrCode() 获取<p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
+ * @method void setErrCode(integer $ErrCode) 设置<p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
+ * @method string getMessage() 获取<p>错误信息。</p>
+ * @method void setMessage(string $Message) 设置<p>错误信息。</p>
+ * @method AdaptiveDynamicStreamingTaskInput getInput() 获取<p>对视频转自适应码流任务的输入。</p>
+ * @method void setInput(AdaptiveDynamicStreamingTaskInput $Input) 设置<p>对视频转自适应码流任务的输入。</p>
+ * @method AdaptiveDynamicStreamingInfoItem getOutput() 获取<p>对视频转自适应码流任务的输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutput(AdaptiveDynamicStreamingInfoItem $Output) 设置对视频转自适应码流任务的输出。
+ * @method void setOutput(AdaptiveDynamicStreamingInfoItem $Output) 设置<p>对视频转自适应码流任务的输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBeginProcessTime() 获取任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method string getBeginProcessTime() 获取<p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBeginProcessTime(string $BeginProcessTime) 设置任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method void setBeginProcessTime(string $BeginProcessTime) 设置<p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFinishTime() 获取任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method string getFinishTime() 获取<p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFinishTime(string $FinishTime) 设置任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method void setFinishTime(string $FinishTime) 设置<p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
 {
     /**
-     * @var string 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * @var string <p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
      */
     public $Status;
 
     /**
-     * @var string 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+     * @var string <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
+     * @var integer <p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
      */
     public $ErrCode;
 
     /**
-     * @var string 错误信息。
+     * @var string <p>错误信息。</p>
      */
     public $Message;
 
     /**
-     * @var AdaptiveDynamicStreamingTaskInput 对视频转自适应码流任务的输入。
+     * @var AdaptiveDynamicStreamingTaskInput <p>对视频转自适应码流任务的输入。</p>
      */
     public $Input;
 
     /**
-     * @var AdaptiveDynamicStreamingInfoItem 对视频转自适应码流任务的输出。
+     * @var AdaptiveDynamicStreamingInfoItem <p>对视频转自适应码流任务的输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
     /**
-     * @var string 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @var string <p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @var string <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinishTime;
 
     /**
-     * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
-     * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
-     * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
-     * @param string $Message 错误信息。
-     * @param AdaptiveDynamicStreamingTaskInput $Input 对视频转自适应码流任务的输入。
-     * @param AdaptiveDynamicStreamingInfoItem $Output 对视频转自适应码流任务的输出。
+     * @param string $Status <p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
+     * @param string $ErrCodeExt <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
+     * @param integer $ErrCode <p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
+     * @param string $Message <p>错误信息。</p>
+     * @param AdaptiveDynamicStreamingTaskInput $Input <p>对视频转自适应码流任务的输入。</p>
+     * @param AdaptiveDynamicStreamingInfoItem $Output <p>对视频转自适应码流任务的输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param string $BeginProcessTime <p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param string $FinishTime <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

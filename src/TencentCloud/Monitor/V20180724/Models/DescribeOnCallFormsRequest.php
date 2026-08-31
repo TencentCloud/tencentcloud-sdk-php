@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOnCallForms请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method integer getOffset() 获取分页查询起始位
- * @method void setOffset(integer $Offset) 设置分页查询起始位
- * @method integer getLimit() 获取分页查询页数
- * @method void setLimit(integer $Limit) 设置分页查询页数
- * @method array getOnCallFormStaffIDs() 获取支持userId进行检索
- * @method void setOnCallFormStaffIDs(array $OnCallFormStaffIDs) 设置支持userId进行检索
- * @method string getRotationType() 获取值班类型
- * @method void setRotationType(string $RotationType) 设置值班类型
- * @method string getOrder() 获取排序方式
- * @method void setOrder(string $Order) 设置排序方式
- * @method string getOnCallFormName() 获取支持id、name进行检索
- * @method void setOnCallFormName(string $OnCallFormName) 设置支持id、name进行检索
+ * @method string getModule() 获取<p>固定值，为&quot;monitor&quot;</p>
+ * @method void setModule(string $Module) 设置<p>固定值，为&quot;monitor&quot;</p>
+ * @method integer getOffset() 获取<p>分页查询起始位</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页查询起始位</p>
+ * @method integer getLimit() 获取<p>分页查询页数</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页查询页数</p>
+ * @method array getOnCallFormStaffIDs() 获取<p>支持userId进行检索</p>
+ * @method void setOnCallFormStaffIDs(array $OnCallFormStaffIDs) 设置<p>支持userId进行检索</p>
+ * @method string getRotationType() 获取<p>值班类型</p>
+ * @method void setRotationType(string $RotationType) 设置<p>值班类型</p>
+ * @method string getOrder() 获取<p>排序方式</p>
+ * @method void setOrder(string $Order) 设置<p>排序方式</p>
+ * @method string getOnCallFormName() 获取<p>支持id、name进行检索</p>
+ * @method void setOnCallFormName(string $OnCallFormName) 设置<p>支持id、name进行检索</p>
  */
 class DescribeOnCallFormsRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string <p>固定值，为&quot;monitor&quot;</p>
      */
     public $Module;
 
     /**
-     * @var integer 分页查询起始位
+     * @var integer <p>分页查询起始位</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页查询页数
+     * @var integer <p>分页查询页数</p>
      */
     public $Limit;
 
     /**
-     * @var array 支持userId进行检索
+     * @var array <p>支持userId进行检索</p>
      */
     public $OnCallFormStaffIDs;
 
     /**
-     * @var string 值班类型
+     * @var string <p>值班类型</p>
      */
     public $RotationType;
 
     /**
-     * @var string 排序方式
+     * @var string <p>排序方式</p>
      */
     public $Order;
 
     /**
-     * @var string 支持id、name进行检索
+     * @var string <p>支持id、name进行检索</p>
      */
     public $OnCallFormName;
 
     /**
-     * @param string $Module 固定值，为"monitor"
-     * @param integer $Offset 分页查询起始位
-     * @param integer $Limit 分页查询页数
-     * @param array $OnCallFormStaffIDs 支持userId进行检索
-     * @param string $RotationType 值班类型
-     * @param string $Order 排序方式
-     * @param string $OnCallFormName 支持id、name进行检索
+     * @param string $Module <p>固定值，为&quot;monitor&quot;</p>
+     * @param integer $Offset <p>分页查询起始位</p>
+     * @param integer $Limit <p>分页查询页数</p>
+     * @param array $OnCallFormStaffIDs <p>支持userId进行检索</p>
+     * @param string $RotationType <p>值班类型</p>
+     * @param string $Order <p>排序方式</p>
+     * @param string $OnCallFormName <p>支持id、name进行检索</p>
      */
     function __construct()
     {

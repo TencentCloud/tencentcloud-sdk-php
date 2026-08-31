@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebUiVersion(integer $WebUiVersion) 设置<p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
  * @method boolean getEnableCbsSysEncryptFlag() 获取<p>系统盘是否加密</p>
  * @method void setEnableCbsSysEncryptFlag(boolean $EnableCbsSysEncryptFlag) 设置<p>系统盘是否加密</p>
+ * @method array getMetaDBGroupInfo() 获取<p>自定义metadb数据</p>
+ * @method void setMetaDBGroupInfo(array $MetaDBGroupInfo) 设置<p>自定义metadb数据</p>
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -227,6 +229,11 @@ class CreateClusterRequest extends AbstractModel
     public $EnableCbsSysEncryptFlag;
 
     /**
+     * @var array <p>自定义metadb数据</p>
+     */
+    public $MetaDBGroupInfo;
+
+    /**
      * @param string $ProductVersion <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
      * @param boolean $EnableSupportHAFlag <p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li>
      * @param string $InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
@@ -256,6 +263,7 @@ class CreateClusterRequest extends AbstractModel
      * @param integer $PartitionNumber <p>分区置放群组分区</p>
      * @param integer $WebUiVersion <p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
      * @param boolean $EnableCbsSysEncryptFlag <p>系统盘是否加密</p>
+     * @param array $MetaDBGroupInfo <p>自定义metadb数据</p>
      */
     function __construct()
     {
@@ -413,6 +421,15 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("EnableCbsSysEncryptFlag",$param) and $param["EnableCbsSysEncryptFlag"] !== null) {
             $this->EnableCbsSysEncryptFlag = $param["EnableCbsSysEncryptFlag"];
+        }
+
+        if (array_key_exists("MetaDBGroupInfo",$param) and $param["MetaDBGroupInfo"] !== null) {
+            $this->MetaDBGroupInfo = [];
+            foreach ($param["MetaDBGroupInfo"] as $key => $value){
+                $obj = new CustomMetaDBInfo();
+                $obj->deserialize($value);
+                array_push($this->MetaDBGroupInfo, $obj);
+            }
         }
     }
 }

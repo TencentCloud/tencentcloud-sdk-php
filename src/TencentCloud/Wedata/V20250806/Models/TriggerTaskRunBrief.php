@@ -256,6 +256,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleRunType(string $ScheduleRunType) 设置<p>调度执行类型</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li><li>2： 用户驱动，手动触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerTaskRunBrief extends AbstractModel
 {
@@ -614,6 +618,12 @@ class TriggerTaskRunBrief extends AbstractModel
     public $ScheduleRunType;
 
     /**
+     * @var string <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Privilege;
+
+    /**
      * @param string $ExecutionId <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionState <p>执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING</p>
@@ -731,6 +741,8 @@ class TriggerTaskRunBrief extends AbstractModel
      * @param boolean $AssociatedEntityExist <p>关联实体是否存在，true表示任务/工作流等实体存在，false表示实体已被删除</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleRunType <p>调度执行类型</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li><li>2： 用户驱动，手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -980,6 +992,10 @@ class TriggerTaskRunBrief extends AbstractModel
 
         if (array_key_exists("ScheduleRunType",$param) and $param["ScheduleRunType"] !== null) {
             $this->ScheduleRunType = $param["ScheduleRunType"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

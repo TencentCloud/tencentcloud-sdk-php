@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询输出的SRT配置信息。
  *
- * @method array getDestinations() 获取转推的目标的地址信息列表，SRT模式为CALLER时使用。
+ * @method array getDestinations() 获取<p>转推的目标的地址信息列表，SRT模式为CALLER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDestinations(array $Destinations) 设置转推的目标的地址信息列表，SRT模式为CALLER时使用。
+ * @method void setDestinations(array $Destinations) 设置<p>转推的目标的地址信息列表，SRT模式为CALLER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStreamId() 获取流Id。
+ * @method string getStreamId() 获取<p>流Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStreamId(string $StreamId) 设置流Id。
+ * @method void setStreamId(string $StreamId) 设置<p>流Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLatency() 获取延迟。
+ * @method integer getLatency() 获取<p>延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLatency(integer $Latency) 设置延迟。
+ * @method void setLatency(integer $Latency) 设置<p>延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRecvLatency() 获取接收延迟。
+ * @method integer getRecvLatency() 获取<p>接收延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecvLatency(integer $RecvLatency) 设置接收延迟。
+ * @method void setRecvLatency(integer $RecvLatency) 设置<p>接收延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPeerLatency() 获取对端延迟。
+ * @method integer getPeerLatency() 获取<p>对端延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeerLatency(integer $PeerLatency) 设置对端延迟。
+ * @method void setPeerLatency(integer $PeerLatency) 设置<p>对端延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPeerIdleTimeout() 获取对端空闲超时时间。
+ * @method integer getPeerIdleTimeout() 获取<p>对端空闲超时时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeerIdleTimeout(integer $PeerIdleTimeout) 设置对端空闲超时时间。
+ * @method void setPeerIdleTimeout(integer $PeerIdleTimeout) 设置<p>对端空闲超时时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPassphrase() 获取加密密钥。
+ * @method string getPassphrase() 获取<p>加密密钥。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPassphrase(string $Passphrase) 设置加密密钥。
+ * @method void setPassphrase(string $Passphrase) 设置<p>加密密钥。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPbKeyLen() 获取加密密钥长度。
+ * @method integer getPbKeyLen() 获取<p>加密密钥长度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPbKeyLen(integer $PbKeyLen) 设置加密密钥长度。
+ * @method void setPbKeyLen(integer $PbKeyLen) 设置<p>加密密钥长度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMode() 获取SRT模式。
+ * @method string getMode() 获取<p>SRT模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMode(string $Mode) 设置SRT模式。
+ * @method void setMode(string $Mode) 设置<p>SRT模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSourceAddresses() 获取服务器监听地址，SRT模式为LISTENER时使用。
+ * @method array getSourceAddresses() 获取<p>服务器监听地址，SRT模式为LISTENER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceAddresses(array $SourceAddresses) 设置服务器监听地址，SRT模式为LISTENER时使用。
+ * @method void setSourceAddresses(array $SourceAddresses) 设置<p>服务器监听地址，SRT模式为LISTENER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SRTFECFullOptions getFEC() 获取FEC 配置
- * @method void setFEC(SRTFECFullOptions $FEC) 设置FEC 配置
+ * @method SRTFECFullOptions getFEC() 获取<p>FEC 配置</p>
+ * @method void setFEC(SRTFECFullOptions $FEC) 设置<p>FEC 配置</p>
  */
 class DescribeOutputSRTSettings extends AbstractModel
 {
     /**
-     * @var array 转推的目标的地址信息列表，SRT模式为CALLER时使用。
+     * @var array <p>转推的目标的地址信息列表，SRT模式为CALLER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Destinations;
 
     /**
-     * @var string 流Id。
+     * @var string <p>流Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamId;
 
     /**
-     * @var integer 延迟。
+     * @var integer <p>延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Latency;
 
     /**
-     * @var integer 接收延迟。
+     * @var integer <p>接收延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecvLatency;
 
     /**
-     * @var integer 对端延迟。
+     * @var integer <p>对端延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeerLatency;
 
     /**
-     * @var integer 对端空闲超时时间。
+     * @var integer <p>对端空闲超时时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeerIdleTimeout;
 
     /**
-     * @var string 加密密钥。
+     * @var string <p>加密密钥。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Passphrase;
 
     /**
-     * @var integer 加密密钥长度。
+     * @var integer <p>加密密钥长度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PbKeyLen;
 
     /**
-     * @var string SRT模式。
+     * @var string <p>SRT模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
 
     /**
-     * @var array 服务器监听地址，SRT模式为LISTENER时使用。
+     * @var array <p>服务器监听地址，SRT模式为LISTENER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceAddresses;
 
     /**
-     * @var SRTFECFullOptions FEC 配置
+     * @var SRTFECFullOptions <p>FEC 配置</p>
      */
     public $FEC;
 
     /**
-     * @param array $Destinations 转推的目标的地址信息列表，SRT模式为CALLER时使用。
+     * @param array $Destinations <p>转推的目标的地址信息列表，SRT模式为CALLER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StreamId 流Id。
+     * @param string $StreamId <p>流Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Latency 延迟。
+     * @param integer $Latency <p>延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RecvLatency 接收延迟。
+     * @param integer $RecvLatency <p>接收延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PeerLatency 对端延迟。
+     * @param integer $PeerLatency <p>对端延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PeerIdleTimeout 对端空闲超时时间。
+     * @param integer $PeerIdleTimeout <p>对端空闲超时时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Passphrase 加密密钥。
+     * @param string $Passphrase <p>加密密钥。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PbKeyLen 加密密钥长度。
+     * @param integer $PbKeyLen <p>加密密钥长度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Mode SRT模式。
+     * @param string $Mode <p>SRT模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SourceAddresses 服务器监听地址，SRT模式为LISTENER时使用。
+     * @param array $SourceAddresses <p>服务器监听地址，SRT模式为LISTENER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SRTFECFullOptions $FEC FEC 配置
+     * @param SRTFECFullOptions $FEC <p>FEC 配置</p>
      */
     function __construct()
     {

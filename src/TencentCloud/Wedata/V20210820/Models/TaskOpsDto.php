@@ -416,6 +416,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyTaskTypeId(integer $ProxyTaskTypeId) 设置<p>代理任务类型ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>对象权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 管理权限</li><li>CAN_VIEW： 只读权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>对象权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 管理权限</li><li>CAN_VIEW： 只读权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOpsDto extends AbstractModel
 {
@@ -1018,6 +1022,12 @@ class TaskOpsDto extends AbstractModel
     public $ProxyTaskTypeId;
 
     /**
+     * @var string <p>对象权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 管理权限</li><li>CAN_VIEW： 只读权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Privilege;
+
+    /**
      * @param string $TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId <p>虚拟任务id</p>
@@ -1215,6 +1225,8 @@ class TaskOpsDto extends AbstractModel
      * @param string $ProxyTaskId <p>代理任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxyTaskTypeId <p>代理任务类型ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>对象权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 管理权限</li><li>CAN_VIEW： 只读权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1645,6 +1657,10 @@ class TaskOpsDto extends AbstractModel
 
         if (array_key_exists("ProxyTaskTypeId",$param) and $param["ProxyTaskTypeId"] !== null) {
             $this->ProxyTaskTypeId = $param["ProxyTaskTypeId"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

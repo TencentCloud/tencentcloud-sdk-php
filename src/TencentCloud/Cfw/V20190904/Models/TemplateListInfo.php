@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 地址模板列表数据
  *
- * @method string getUuid() 获取模板ID
- * @method void setUuid(string $Uuid) 设置模板ID
- * @method string getName() 获取模板名称
- * @method void setName(string $Name) 设置模板名称
- * @method string getDetail() 获取描述
- * @method void setDetail(string $Detail) 设置描述
- * @method string getIpString() 获取IP模板
- * @method void setIpString(string $IpString) 设置IP模板
- * @method string getInsertTime() 获取插入时间
- * @method void setInsertTime(string $InsertTime) 设置插入时间
- * @method string getUpdateTime() 获取修改时间
- * @method void setUpdateTime(string $UpdateTime) 设置修改时间
- * @method integer getType() 获取模板类型
- * @method void setType(integer $Type) 设置模板类型
- * @method integer getRulesNum() 获取关联规则条数
- * @method void setRulesNum(integer $RulesNum) 设置关联规则条数
- * @method string getTemplateId() 获取模板Id
- * @method void setTemplateId(string $TemplateId) 设置模板Id
- * @method string getProtocolType() 获取协议端口模板，协议类型，4:4层协议，7:7层协议
- * @method void setProtocolType(string $ProtocolType) 设置协议端口模板，协议类型，4:4层协议，7:7层协议
- * @method integer getIPNum() 获取模板包含地址数量
- * @method void setIPNum(integer $IPNum) 设置模板包含地址数量
- * @method integer getIpVersion() 获取IP版本,0,IPv4;1,IPv6
- * @method void setIpVersion(integer $IpVersion) 设置IP版本,0,IPv4;1,IPv6
+ * @method string getUuid() 获取<p>模板ID</p>
+ * @method void setUuid(string $Uuid) 设置<p>模板ID</p>
+ * @method string getName() 获取<p>模板名称</p>
+ * @method void setName(string $Name) 设置<p>模板名称</p>
+ * @method string getDetail() 获取<p>描述</p>
+ * @method void setDetail(string $Detail) 设置<p>描述</p>
+ * @method string getIpString() 获取<p>IP模板</p>
+ * @method void setIpString(string $IpString) 设置<p>IP模板</p>
+ * @method string getInsertTime() 获取<p>插入时间</p>
+ * @method void setInsertTime(string $InsertTime) 设置<p>插入时间</p>
+ * @method string getUpdateTime() 获取<p>修改时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>修改时间</p>
+ * @method integer getType() 获取<p>模板类型</p>
+ * @method void setType(integer $Type) 设置<p>模板类型</p>
+ * @method integer getRulesNum() 获取<p>关联规则条数</p>
+ * @method void setRulesNum(integer $RulesNum) 设置<p>关联规则条数</p>
+ * @method string getTemplateId() 获取<p>模板Id</p>
+ * @method void setTemplateId(string $TemplateId) 设置<p>模板Id</p>
+ * @method string getProtocolType() 获取<p>协议端口模板，协议类型，4:4层协议，7:7层协议</p>
+ * @method void setProtocolType(string $ProtocolType) 设置<p>协议端口模板，协议类型，4:4层协议，7:7层协议</p>
+ * @method integer getIPNum() 获取<p>模板包含地址数量</p>
+ * @method void setIPNum(integer $IPNum) 设置<p>模板包含地址数量</p>
+ * @method integer getIpVersion() 获取<p>IP版本,0,IPv4;1,IPv6</p>
+ * @method void setIpVersion(integer $IpVersion) 设置<p>IP版本,0,IPv4;1,IPv6</p>
  */
 class TemplateListInfo extends AbstractModel
 {
     /**
-     * @var string 模板ID
+     * @var string <p>模板ID</p>
      */
     public $Uuid;
 
     /**
-     * @var string 模板名称
+     * @var string <p>模板名称</p>
      */
     public $Name;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Detail;
 
     /**
-     * @var string IP模板
+     * @var string <p>IP模板</p>
      */
     public $IpString;
 
     /**
-     * @var string 插入时间
+     * @var string <p>插入时间</p>
      */
     public $InsertTime;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer 模板类型
+     * @var integer <p>模板类型</p>
      */
     public $Type;
 
     /**
-     * @var integer 关联规则条数
+     * @var integer <p>关联规则条数</p>
      */
     public $RulesNum;
 
     /**
-     * @var string 模板Id
+     * @var string <p>模板Id</p>
      */
     public $TemplateId;
 
     /**
-     * @var string 协议端口模板，协议类型，4:4层协议，7:7层协议
+     * @var string <p>协议端口模板，协议类型，4:4层协议，7:7层协议</p>
      */
     public $ProtocolType;
 
     /**
-     * @var integer 模板包含地址数量
+     * @var integer <p>模板包含地址数量</p>
      */
     public $IPNum;
 
     /**
-     * @var integer IP版本,0,IPv4;1,IPv6
+     * @var integer <p>IP版本,0,IPv4;1,IPv6</p>
      */
     public $IpVersion;
 
     /**
-     * @param string $Uuid 模板ID
-     * @param string $Name 模板名称
-     * @param string $Detail 描述
-     * @param string $IpString IP模板
-     * @param string $InsertTime 插入时间
-     * @param string $UpdateTime 修改时间
-     * @param integer $Type 模板类型
-     * @param integer $RulesNum 关联规则条数
-     * @param string $TemplateId 模板Id
-     * @param string $ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
-     * @param integer $IPNum 模板包含地址数量
-     * @param integer $IpVersion IP版本,0,IPv4;1,IPv6
+     * @param string $Uuid <p>模板ID</p>
+     * @param string $Name <p>模板名称</p>
+     * @param string $Detail <p>描述</p>
+     * @param string $IpString <p>IP模板</p>
+     * @param string $InsertTime <p>插入时间</p>
+     * @param string $UpdateTime <p>修改时间</p>
+     * @param integer $Type <p>模板类型</p>
+     * @param integer $RulesNum <p>关联规则条数</p>
+     * @param string $TemplateId <p>模板Id</p>
+     * @param string $ProtocolType <p>协议端口模板，协议类型，4:4层协议，7:7层协议</p>
+     * @param integer $IPNum <p>模板包含地址数量</p>
+     * @param integer $IpVersion <p>IP版本,0,IPv4;1,IPv6</p>
      */
     function __construct()
     {

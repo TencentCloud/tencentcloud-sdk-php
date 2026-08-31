@@ -20,66 +20,73 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAddressTemplateList返回参数结构体
  *
- * @method integer getTotal() 获取模板总数
- * @method void setTotal(integer $Total) 设置模板总数
- * @method array getData() 获取模板列表数据
- * @method void setData(array $Data) 设置模板列表数据
- * @method array getNameList() 获取模板名称列表
- * @method void setNameList(array $NameList) 设置模板名称列表
- * @method integer getIpTemplateCount() 获取Ip地址模板数量
- * @method void setIpTemplateCount(integer $IpTemplateCount) 设置Ip地址模板数量
- * @method integer getDomainTemplateCount() 获取域名地址模板数量
- * @method void setDomainTemplateCount(integer $DomainTemplateCount) 设置域名地址模板数量
- * @method integer getPortTemplateCount() 获取协议端口模板数量
- * @method void setPortTemplateCount(integer $PortTemplateCount) 设置协议端口模板数量
- * @method integer getUsedTemplateCount() 获取已使用的地址模板数
- * @method void setUsedTemplateCount(integer $UsedTemplateCount) 设置已使用的地址模板数
- * @method integer getTemplateQuotaCount() 获取地址模板配额数量
- * @method void setTemplateQuotaCount(integer $TemplateQuotaCount) 设置地址模板配额数量
+ * @method integer getTotal() 获取<p>模板总数</p>
+ * @method void setTotal(integer $Total) 设置<p>模板总数</p>
+ * @method array getData() 获取<p>模板列表数据</p>
+ * @method void setData(array $Data) 设置<p>模板列表数据</p>
+ * @method array getNameList() 获取<p>模板名称列表</p>
+ * @method void setNameList(array $NameList) 设置<p>模板名称列表</p>
+ * @method integer getIpTemplateCount() 获取<p>Ip地址模板数量</p>
+ * @method void setIpTemplateCount(integer $IpTemplateCount) 设置<p>Ip地址模板数量</p>
+ * @method integer getDomainTemplateCount() 获取<p>域名地址模板数量</p>
+ * @method void setDomainTemplateCount(integer $DomainTemplateCount) 设置<p>域名地址模板数量</p>
+ * @method integer getPortTemplateCount() 获取<p>协议端口模板数量</p>
+ * @method void setPortTemplateCount(integer $PortTemplateCount) 设置<p>协议端口模板数量</p>
+ * @method integer getUsedTemplateCount() 获取<p>已使用的地址模板数</p>
+ * @method void setUsedTemplateCount(integer $UsedTemplateCount) 设置<p>已使用的地址模板数</p>
+ * @method integer getTemplateQuotaCount() 获取<p>地址模板配额数量</p>
+ * @method void setTemplateQuotaCount(integer $TemplateQuotaCount) 设置<p>地址模板配额数量</p>
+ * @method integer getTkeTemplateCount() 获取<p>容器服务地址模板数量</p>
+ * @method void setTkeTemplateCount(integer $TkeTemplateCount) 设置<p>容器服务地址模板数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAddressTemplateListResponse extends AbstractModel
 {
     /**
-     * @var integer 模板总数
+     * @var integer <p>模板总数</p>
      */
     public $Total;
 
     /**
-     * @var array 模板列表数据
+     * @var array <p>模板列表数据</p>
      */
     public $Data;
 
     /**
-     * @var array 模板名称列表
+     * @var array <p>模板名称列表</p>
      */
     public $NameList;
 
     /**
-     * @var integer Ip地址模板数量
+     * @var integer <p>Ip地址模板数量</p>
      */
     public $IpTemplateCount;
 
     /**
-     * @var integer 域名地址模板数量
+     * @var integer <p>域名地址模板数量</p>
      */
     public $DomainTemplateCount;
 
     /**
-     * @var integer 协议端口模板数量
+     * @var integer <p>协议端口模板数量</p>
      */
     public $PortTemplateCount;
 
     /**
-     * @var integer 已使用的地址模板数
+     * @var integer <p>已使用的地址模板数</p>
      */
     public $UsedTemplateCount;
 
     /**
-     * @var integer 地址模板配额数量
+     * @var integer <p>地址模板配额数量</p>
      */
     public $TemplateQuotaCount;
+
+    /**
+     * @var integer <p>容器服务地址模板数量</p>
+     */
+    public $TkeTemplateCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -87,14 +94,15 @@ class DescribeAddressTemplateListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 模板总数
-     * @param array $Data 模板列表数据
-     * @param array $NameList 模板名称列表
-     * @param integer $IpTemplateCount Ip地址模板数量
-     * @param integer $DomainTemplateCount 域名地址模板数量
-     * @param integer $PortTemplateCount 协议端口模板数量
-     * @param integer $UsedTemplateCount 已使用的地址模板数
-     * @param integer $TemplateQuotaCount 地址模板配额数量
+     * @param integer $Total <p>模板总数</p>
+     * @param array $Data <p>模板列表数据</p>
+     * @param array $NameList <p>模板名称列表</p>
+     * @param integer $IpTemplateCount <p>Ip地址模板数量</p>
+     * @param integer $DomainTemplateCount <p>域名地址模板数量</p>
+     * @param integer $PortTemplateCount <p>协议端口模板数量</p>
+     * @param integer $UsedTemplateCount <p>已使用的地址模板数</p>
+     * @param integer $TemplateQuotaCount <p>地址模板配额数量</p>
+     * @param integer $TkeTemplateCount <p>容器服务地址模板数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -145,6 +153,10 @@ class DescribeAddressTemplateListResponse extends AbstractModel
 
         if (array_key_exists("TemplateQuotaCount",$param) and $param["TemplateQuotaCount"] !== null) {
             $this->TemplateQuotaCount = $param["TemplateQuotaCount"];
+        }
+
+        if (array_key_exists("TkeTemplateCount",$param) and $param["TkeTemplateCount"] !== null) {
+            $this->TkeTemplateCount = $param["TkeTemplateCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

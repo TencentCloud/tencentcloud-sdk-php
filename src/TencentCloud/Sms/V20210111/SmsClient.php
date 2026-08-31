@@ -34,6 +34,7 @@ use TencentCloud\Sms\V20210111\Models as Models;
 <blockquote class="d-mod-explain"><div class="d-mod-title d-explain-title" style="line-height: normal;"><i class="d-icon-explain"></i>说明：</div><p></p><ul><li>个人认证用户不支持使用 API 删除短信正文模板，请参阅了解 <a href="https://cloud.tencent.com/document/product/378/3629">实名认证基本介绍</a>，如果为个人认证请登录 <a href="https://console.cloud.tencent.com/smsv2">控制台</a> 删除短信正文模板。</li></ul></blockquote>
  * @method Models\DescribePhoneNumberInfoResponse DescribePhoneNumberInfo(Models\DescribePhoneNumberInfoRequest $req) 本接口 (DescribePhoneNumberInfo) 用于提供电话号码的信息查询，包括国家（或地区）码、规范的 E.164 格式号码等。
 - 例如：查询号码 +86018501234444，可以得到国家码 86、规范的 E.164 号码 +8618501234444 等信息。
+ * @method Models\DescribeSendRecordListResponse DescribeSendRecordList(Models\DescribeSendRecordListRequest $req) 本接口 (DescribeSendRecordList) 用于查询单个手机号在指定时间范围内的短信下发记录。
  * @method Models\DescribeSmsSignListResponse DescribeSmsSignList(Models\DescribeSmsSignListRequest $req) 本接口 (DescribeSmsSignList) 用于查询短信签名状态。
 <blockquote class="d-mod-explain"><div class="d-mod-title d-explain-title" style="line-height: normal;"><i class="d-icon-explain"></i>说明：</div><p></p><ul><li>个人认证用户不支持使用 API 查询短信签名，请参阅了解 <a href="https://cloud.tencent.com/document/product/378/3629">实名认证基本介绍</a>，如果为个人认证请登录 <a href="https://console.cloud.tencent.com/smsv2">控制台</a> 查询短信签名。</li></ul></blockquote>
  * @method Models\DescribeSmsTemplateListResponse DescribeSmsTemplateList(Models\DescribeSmsTemplateListRequest $req) 本接口 (DescribeSmsTemplateList) 用于查询短信模板状态。

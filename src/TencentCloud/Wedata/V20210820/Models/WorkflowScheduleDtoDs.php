@@ -20,309 +20,321 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流调度信息
  *
- * @method string getProjectId() 获取项目ID
+ * @method string getProjectId() 获取<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowId() 获取工作流ID
+ * @method string getWorkflowId() 获取<p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreater() 获取创建人
+ * @method string getCreater() 获取<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreater(string $Creater) 设置创建人
+ * @method void setCreater(string $Creater) 设置<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModifyTime() 获取修改时间
+ * @method string getModifyTime() 获取<p>修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModifyTime(string $ModifyTime) 设置修改时间
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDelayTime() 获取延迟时间
+ * @method integer getDelayTime() 获取<p>延迟时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDelayTime(integer $DelayTime) 设置延迟时间
+ * @method void setDelayTime(integer $DelayTime) 设置<p>延迟时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStartupTime() 获取启动时间
+ * @method integer getStartupTime() 获取<p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartupTime(integer $StartupTime) 设置启动时间
+ * @method void setStartupTime(integer $StartupTime) 设置<p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSelfDepend() 获取任务依赖
+ * @method string getSelfDepend() 获取<p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSelfDepend(string $SelfDepend) 设置任务依赖
+ * @method void setSelfDepend(string $SelfDepend) 设置<p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取开始时间
+ * @method string getStartTime() 获取<p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置开始时间
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取结束时间
+ * @method string getEndTime() 获取<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskAction() 获取指定运行时间
+ * @method string getTaskAction() 获取<p>指定运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskAction(string $TaskAction) 设置指定运行时间
+ * @method void setTaskAction(string $TaskAction) 设置<p>指定运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCycleType() 获取调度周期时间单位
+ * @method string getCycleType() 获取<p>调度周期时间单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleType(string $CycleType) 设置调度周期时间单位
+ * @method void setCycleType(string $CycleType) 设置<p>调度周期时间单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCycleStep() 获取调度周期
+ * @method integer getCycleStep() 获取<p>调度周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleStep(integer $CycleStep) 设置调度周期
+ * @method void setCycleStep(integer $CycleStep) 设置<p>调度周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCrontabExpression() 获取Cron表达式
+ * @method string getCrontabExpression() 获取<p>Cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCrontabExpression(string $CrontabExpression) 设置Cron表达式
+ * @method void setCrontabExpression(string $CrontabExpression) 设置<p>Cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutionStartTime() 获取执行时间左闭区间
+ * @method string getExecutionStartTime() 获取<p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionStartTime(string $ExecutionStartTime) 设置执行时间左闭区间
+ * @method void setExecutionStartTime(string $ExecutionStartTime) 设置<p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutionEndTime() 获取执行时间右闭区间
+ * @method string getExecutionEndTime() 获取<p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionEndTime(string $ExecutionEndTime) 设置执行时间右闭区间
+ * @method void setExecutionEndTime(string $ExecutionEndTime) 设置<p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceInitStrategy() 获取实例初始化策略
+ * @method string getInstanceInitStrategy() 获取<p>实例初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceInitStrategy(string $InstanceInitStrategy) 设置实例初始化策略
+ * @method void setInstanceInitStrategy(string $InstanceInitStrategy) 设置<p>实例初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDependencyWorkflow() 获取工作流依赖
+ * @method string getDependencyWorkflow() 获取<p>工作流依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置工作流依赖
+ * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置<p>工作流依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchedulerDesc() 获取调度计划
+ * @method string getSchedulerDesc() 获取<p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchedulerDesc(string $SchedulerDesc) 设置调度计划
+ * @method void setSchedulerDesc(string $SchedulerDesc) 设置<p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFirstSubmitTime() 获取工作流首次提交时间
+ * @method string getFirstSubmitTime() 获取<p>工作流首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFirstSubmitTime(string $FirstSubmitTime) 设置工作流首次提交时间
+ * @method void setFirstSubmitTime(string $FirstSubmitTime) 设置<p>工作流首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLatestSubmitTime() 获取工作流最近提交时间
+ * @method string getLatestSubmitTime() 获取<p>工作流最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLatestSubmitTime(string $LatestSubmitTime) 设置工作流最近提交时间
+ * @method void setLatestSubmitTime(string $LatestSubmitTime) 设置<p>工作流最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCalendarOpen() 获取日历调度是否开启
+ * @method string getCalendarOpen() 获取<p>日历调度是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCalendarOpen(string $CalendarOpen) 设置日历调度是否开启
+ * @method void setCalendarOpen(string $CalendarOpen) 设置<p>日历调度是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCalendarName() 获取日历调度名称
+ * @method string getCalendarName() 获取<p>日历调度名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCalendarName(string $CalendarName) 设置日历调度名称
+ * @method void setCalendarName(string $CalendarName) 设置<p>日历调度名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCalendarId() 获取日历调度id
+ * @method string getCalendarId() 获取<p>日历调度id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCalendarId(string $CalendarId) 设置日历调度id
+ * @method void setCalendarId(string $CalendarId) 设置<p>日历调度id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleTimeZone() 获取时区配置
+ * @method string getScheduleTimeZone() 获取<p>时区配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区配置
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置<p>时区配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowScheduleDtoDs extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 工作流ID
+     * @var string <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 创建人
+     * @var string <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Creater;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
-     * @var integer 延迟时间
+     * @var integer <p>延迟时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayTime;
 
     /**
-     * @var integer 启动时间
+     * @var integer <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartupTime;
 
     /**
-     * @var string 任务依赖
+     * @var string <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfDepend;
 
     /**
-     * @var string 开始时间
+     * @var string <p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 指定运行时间
+     * @var string <p>指定运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskAction;
 
     /**
-     * @var string 调度周期时间单位
+     * @var string <p>调度周期时间单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleType;
 
     /**
-     * @var integer 调度周期
+     * @var integer <p>调度周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleStep;
 
     /**
-     * @var string Cron表达式
+     * @var string <p>Cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrontabExpression;
 
     /**
-     * @var string 执行时间左闭区间
+     * @var string <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionStartTime;
 
     /**
-     * @var string 执行时间右闭区间
+     * @var string <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionEndTime;
 
     /**
-     * @var string 实例初始化策略
+     * @var string <p>实例初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceInitStrategy;
 
     /**
-     * @var string 工作流依赖
+     * @var string <p>工作流依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependencyWorkflow;
 
     /**
-     * @var string 调度计划
+     * @var string <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchedulerDesc;
 
     /**
-     * @var string 工作流首次提交时间
+     * @var string <p>工作流首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstSubmitTime;
 
     /**
-     * @var string 工作流最近提交时间
+     * @var string <p>工作流最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestSubmitTime;
 
     /**
-     * @var string 日历调度是否开启
+     * @var string <p>日历调度是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalendarOpen;
 
     /**
-     * @var string 日历调度名称
+     * @var string <p>日历调度名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalendarName;
 
     /**
-     * @var string 日历调度id
+     * @var string <p>日历调度id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalendarId;
 
     /**
-     * @var string 时区配置
+     * @var string <p>时区配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTimeZone;
 
     /**
-     * @param string $ProjectId 项目ID
+     * @var string <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowId 工作流ID
+     */
+    public $Privilege;
+
+    /**
+     * @param string $ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param string $WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Creater 创建人
+     * @param string $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModifyTime 修改时间
+     * @param string $Creater <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DelayTime 延迟时间
+     * @param string $ModifyTime <p>修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StartupTime 启动时间
+     * @param integer $DelayTime <p>延迟时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SelfDepend 任务依赖
+     * @param integer $StartupTime <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime 开始时间
+     * @param string $SelfDepend <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 结束时间
+     * @param string $StartTime <p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskAction 指定运行时间
+     * @param string $EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CycleType 调度周期时间单位
+     * @param string $TaskAction <p>指定运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CycleStep 调度周期
+     * @param string $CycleType <p>调度周期时间单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CrontabExpression Cron表达式
+     * @param integer $CycleStep <p>调度周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutionStartTime 执行时间左闭区间
+     * @param string $CrontabExpression <p>Cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutionEndTime 执行时间右闭区间
+     * @param string $ExecutionStartTime <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceInitStrategy 实例初始化策略
+     * @param string $ExecutionEndTime <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DependencyWorkflow 工作流依赖
+     * @param string $InstanceInitStrategy <p>实例初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchedulerDesc 调度计划
+     * @param string $DependencyWorkflow <p>工作流依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FirstSubmitTime 工作流首次提交时间
+     * @param string $SchedulerDesc <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LatestSubmitTime 工作流最近提交时间
+     * @param string $FirstSubmitTime <p>工作流首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CalendarOpen 日历调度是否开启
+     * @param string $LatestSubmitTime <p>工作流最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CalendarName 日历调度名称
+     * @param string $CalendarOpen <p>日历调度是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CalendarId 日历调度id
+     * @param string $CalendarName <p>日历调度名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleTimeZone 时区配置
+     * @param string $CalendarId <p>日历调度id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleTimeZone <p>时区配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -436,6 +448,10 @@ class WorkflowScheduleDtoDs extends AbstractModel
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySLInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例唯一标识符（字符串表示）。
- * @method void setInstanceId(string $InstanceId) 设置实例唯一标识符（字符串表示）。
- * @method string getZone() 获取需要变更的区域名称。
- * @method void setZone(string $Zone) 设置需要变更的区域名称。
- * @method integer getNodeNum() 获取该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。
- * @method void setNodeNum(integer $NodeNum) 设置该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。
- * @method string getClientToken() 获取唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
- * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+ * @method string getInstanceId() 获取<p>实例唯一标识符（字符串表示）。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例唯一标识符（字符串表示）。</p>
+ * @method string getZone() 获取<p>需要变更的区域名称。</p>
+ * @method void setZone(string $Zone) 设置<p>需要变更的区域名称。</p>
+ * @method integer getNodeNum() 获取<p>该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。</p>
+ * @method void setNodeNum(integer $NodeNum) 设置<p>该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。</p>
+ * @method string getClientToken() 获取<p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
+ * @method integer getDiskSize() 获取<p>存储空间大小，需要是100的倍数，且不允许比当前存储空间小（只允许扩容）</p><p>单位：GB</p>
+ * @method void setDiskSize(integer $DiskSize) 设置<p>存储空间大小，需要是100的倍数，且不允许比当前存储空间小（只允许扩容）</p><p>单位：GB</p>
  */
 class ModifySLInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例唯一标识符（字符串表示）。
+     * @var string <p>实例唯一标识符（字符串表示）。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 需要变更的区域名称。
+     * @var string <p>需要变更的区域名称。</p>
      */
     public $Zone;
 
     /**
-     * @var integer 该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。
+     * @var integer <p>该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。</p>
      */
     public $NodeNum;
 
     /**
-     * @var string 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     * @var string <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
      */
     public $ClientToken;
 
     /**
-     * @param string $InstanceId 实例唯一标识符（字符串表示）。
-     * @param string $Zone 需要变更的区域名称。
-     * @param integer $NodeNum 该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。
-     * @param string $ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     * @var integer <p>存储空间大小，需要是100的倍数，且不允许比当前存储空间小（只允许扩容）</p><p>单位：GB</p>
+     */
+    public $DiskSize;
+
+    /**
+     * @param string $InstanceId <p>实例唯一标识符（字符串表示）。</p>
+     * @param string $Zone <p>需要变更的区域名称。</p>
+     * @param integer $NodeNum <p>该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。</p>
+     * @param string $ClientToken <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
+     * @param integer $DiskSize <p>存储空间大小，需要是100的倍数，且不允许比当前存储空间小（只允许扩容）</p><p>单位：GB</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifySLInstanceRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
+            $this->DiskSize = $param["DiskSize"];
         }
     }
 }

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomSteps(array $CustomSteps) 设置<p>非敏感环境变量，构建容器中以 $KEY 引用</p>
  * @method array getSecrets() 获取<p>敏感凭证（AES 加密落库），构建容器中以 $SECRET_NAME 引用</p>
  * @method void setSecrets(array $Secrets) 设置<p>敏感凭证（AES 加密落库），构建容器中以 $SECRET_NAME 引用</p>
+ * @method string getNodeJsVersion() 获取<p>选择 NodeRuntime 版本: 16,18,20,22,24 等</p>
+ * @method void setNodeJsVersion(string $NodeJsVersion) 设置<p>选择 NodeRuntime 版本: 16,18,20,22,24 等</p>
  */
 class CreateCloudAppRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateCloudAppRequest extends AbstractModel
     public $Secrets;
 
     /**
+     * @var string <p>选择 NodeRuntime 版本: 16,18,20,22,24 等</p>
+     */
+    public $NodeJsVersion;
+
+    /**
      * @param string $EnvId <p>环境ID</p>
      * @param string $ServiceName <p>服务名</p>
      * @param string $DeployType <p>部署类型</p>
@@ -104,6 +111,7 @@ class CreateCloudAppRequest extends AbstractModel
      * @param array $Env <p>Commands 与 CustomSteps 至少填一个，docker 镜像构建场景强烈建议用 CustomSteps</p>
      * @param array $CustomSteps <p>非敏感环境变量，构建容器中以 $KEY 引用</p>
      * @param array $Secrets <p>敏感凭证（AES 加密落库），构建容器中以 $SECRET_NAME 引用</p>
+     * @param string $NodeJsVersion <p>选择 NodeRuntime 版本: 16,18,20,22,24 等</p>
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class CreateCloudAppRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Secrets, $obj);
             }
+        }
+
+        if (array_key_exists("NodeJsVersion",$param) and $param["NodeJsVersion"] !== null) {
+            $this->NodeJsVersion = $param["NodeJsVersion"];
         }
     }
 }

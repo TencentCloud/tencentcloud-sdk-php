@@ -20,141 +20,153 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文件夹属性
  *
- * @method string getId() 获取文件夹id
+ * @method string getId() 获取<p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置文件夹id
+ * @method void setId(string $Id) 设置<p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取文件夹名称
+ * @method string getName() 获取<p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置文件夹名称
+ * @method void setName(string $Name) 设置<p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取所属项目id
+ * @method string getProjectId() 获取<p>所属项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置所属项目id
+ * @method void setProjectId(string $ProjectId) 设置<p>所属项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParentsFolderId() 获取父文件夹id
+ * @method string getParentsFolderId() 获取<p>父文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParentsFolderId(string $ParentsFolderId) 设置父文件夹id
+ * @method void setParentsFolderId(string $ParentsFolderId) 设置<p>父文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取工作流总数
+ * @method integer getTotal() 获取<p>工作流总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置工作流总数
+ * @method void setTotal(integer $Total) 设置<p>工作流总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getWorkflows() 获取工作流列表
+ * @method array getWorkflows() 获取<p>工作流列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflows(array $Workflows) 设置工作流列表
+ * @method void setWorkflows(array $Workflows) 设置<p>工作流列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalFolders() 获取子文件夹总数
+ * @method integer getTotalFolders() 获取<p>子文件夹总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalFolders(integer $TotalFolders) 设置子文件夹总数
+ * @method void setTotalFolders(integer $TotalFolders) 设置<p>子文件夹总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFolders() 获取子文件夹列表
+ * @method array getFolders() 获取<p>子文件夹列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolders(array $Folders) 设置子文件夹列表
+ * @method void setFolders(array $Folders) 设置<p>子文件夹列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFindType() 获取搜索类型
+ * @method string getFindType() 获取<p>搜索类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFindType(string $FindType) 设置搜索类型
+ * @method void setFindType(string $FindType) 设置<p>搜索类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivilege() 获取<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivilege(string $Privilege) 设置<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FolderDsDto extends AbstractModel
 {
     /**
-     * @var string 文件夹id
+     * @var string <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 文件夹名称
+     * @var string <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 所属项目id
+     * @var string <p>所属项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 父文件夹id
+     * @var string <p>父文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentsFolderId;
 
     /**
-     * @var integer 工作流总数
+     * @var integer <p>工作流总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var array 工作流列表
+     * @var array <p>工作流列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Workflows;
 
     /**
-     * @var integer 子文件夹总数
+     * @var integer <p>子文件夹总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalFolders;
 
     /**
-     * @var array 子文件夹列表
+     * @var array <p>子文件夹列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Folders;
 
     /**
-     * @var string 搜索类型
+     * @var string <p>搜索类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FindType;
 
     /**
-     * @param string $Id 文件夹id
+     * @var string <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     */
+    public $Privilege;
+
+    /**
+     * @param string $Id <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 文件夹名称
+     * @param string $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 所属项目id
+     * @param string $Name <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $ProjectId <p>所属项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParentsFolderId 父文件夹id
+     * @param string $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total 工作流总数
+     * @param string $ParentsFolderId <p>父文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Workflows 工作流列表
+     * @param integer $Total <p>工作流总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalFolders 子文件夹总数
+     * @param array $Workflows <p>工作流列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Folders 子文件夹列表
+     * @param integer $TotalFolders <p>子文件夹总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FindType 搜索类型
+     * @param array $Folders <p>子文件夹列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FindType <p>搜索类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -222,6 +234,10 @@ class FolderDsDto extends AbstractModel
 
         if (array_key_exists("FindType",$param) and $param["FindType"] !== null) {
             $this->FindType = $param["FindType"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
     }
 }

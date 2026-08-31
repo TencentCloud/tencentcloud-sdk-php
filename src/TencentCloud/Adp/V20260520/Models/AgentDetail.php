@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkillList(array $SkillList) 设置<p>技能详情</p>
  * @method AgentAdvancedConfig getAdvancedConfig() 获取<p>高级配置</p>
  * @method void setAdvancedConfig(AgentAdvancedConfig $AdvancedConfig) 设置<p>高级配置</p>
+ * @method array getExternalToolList() 获取<p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
+ * @method void setExternalToolList(array $ExternalToolList) 设置<p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
  */
 class AgentDetail extends AbstractModel
 {
@@ -80,6 +82,11 @@ class AgentDetail extends AbstractModel
     public $AdvancedConfig;
 
     /**
+     * @var array <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
+     */
+    public $ExternalToolList;
+
+    /**
      * @param string $AgentId <p>Agent ID</p>
      * @param AgentProfile $Profile <p>Agent基本配置</p>
      * @param string $Instructions <p>系统提示词</p>
@@ -88,6 +95,7 @@ class AgentDetail extends AbstractModel
      * @param array $PluginList <p>插件配置</p>
      * @param array $SkillList <p>技能详情</p>
      * @param AgentAdvancedConfig $AdvancedConfig <p>高级配置</p>
+     * @param array $ExternalToolList <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
      */
     function __construct()
     {
@@ -150,6 +158,15 @@ class AgentDetail extends AbstractModel
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
             $this->AdvancedConfig = new AgentAdvancedConfig();
             $this->AdvancedConfig->deserialize($param["AdvancedConfig"]);
+        }
+
+        if (array_key_exists("ExternalToolList",$param) and $param["ExternalToolList"] !== null) {
+            $this->ExternalToolList = [];
+            foreach ($param["ExternalToolList"] as $key => $value){
+                $obj = new AgentExternalToolConfig();
+                $obj->deserialize($value);
+                array_push($this->ExternalToolList, $obj);
+            }
         }
     }
 }

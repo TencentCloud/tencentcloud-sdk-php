@@ -31,7 +31,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\CreateCmqTopicResponse CreateCmqTopic(Models\CreateCmqTopicRequest $req) 创建cmq主题
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 用于在用户账户下创建消息队列 Tdmq 命名空间
  * @method Models\CreateEnvironmentRoleResponse CreateEnvironmentRole(Models\CreateEnvironmentRoleRequest $req) 创建环境角色授权
- * @method Models\CreateProClusterResponse CreateProCluster(Models\CreateProClusterRequest $req) 创建专业集群——预付费，仅通过api调用
+ * @method Models\CreateProClusterResponse CreateProCluster(Models\CreateProClusterRequest $req) 创建Pulsar标准版或专业版实例——预付费，仅通过api调用
  * @method Models\CreateRabbitMQBindingResponse CreateRabbitMQBinding(Models\CreateRabbitMQBindingRequest $req) 创建RabbitMQ路由关系
  * @method Models\CreateRabbitMQUserResponse CreateRabbitMQUser(Models\CreateRabbitMQUserRequest $req) 创建RabbitMQ的用户
  * @method Models\CreateRabbitMQVipInstanceResponse CreateRabbitMQVipInstance(Models\CreateRabbitMQVipInstanceRequest $req) 创建 RabbitMQ 托管版实例
@@ -111,8 +111,8 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeNodeHealthOptResponse DescribeNodeHealthOpt(Models\DescribeNodeHealthOptRequest $req) 运营端获节点健康状态
  * @method Models\DescribePublisherSummaryResponse DescribePublisherSummary(Models\DescribePublisherSummaryRequest $req) 获取消息生产概览信息
  * @method Models\DescribePublishersResponse DescribePublishers(Models\DescribePublishersRequest $req) 获取生产者信息列表
- * @method Models\DescribePulsarProInstanceDetailResponse DescribePulsarProInstanceDetail(Models\DescribePulsarProInstanceDetailRequest $req) 获取Pulsar专业版集群实例信息
- * @method Models\DescribePulsarProInstancesResponse DescribePulsarProInstances(Models\DescribePulsarProInstancesRequest $req) 查询用户已购的Pulsar专业版实例列表
+ * @method Models\DescribePulsarProInstanceDetailResponse DescribePulsarProInstanceDetail(Models\DescribePulsarProInstanceDetailRequest $req) 获取Pulsar标准版或专业版实例信息
+ * @method Models\DescribePulsarProInstancesResponse DescribePulsarProInstances(Models\DescribePulsarProInstancesRequest $req) 查询用户已购的Pulsar实例列表
  * @method Models\DescribeRabbitMQBindingsResponse DescribeRabbitMQBindings(Models\DescribeRabbitMQBindingsRequest $req) 查询RabbitMQ路由关系列表
  * @method Models\DescribeRabbitMQExchangesResponse DescribeRabbitMQExchanges(Models\DescribeRabbitMQExchangesRequest $req) 查询RabbitMQ exchange 列表
  * @method Models\DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeList(Models\DescribeRabbitMQNodeListRequest $req) 查询 RabbitMQ 托管版节点列表
@@ -189,7 +189,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\ImportRocketMQTopicsResponse ImportRocketMQTopics(Models\ImportRocketMQTopicsRequest $req) 历史接口，对应接口已迁移到trocket
 
 导入topic列表
- * @method Models\ModifyClusterResponse ModifyCluster(Models\ModifyClusterRequest $req) 更新集群信息
+ * @method Models\ModifyClusterResponse ModifyCluster(Models\ModifyClusterRequest $req) 更新虚拟集群信息
  * @method Models\ModifyCmqQueueAttributeResponse ModifyCmqQueueAttribute(Models\ModifyCmqQueueAttributeRequest $req) 修改cmq队列属性
  * @method Models\ModifyCmqSubscriptionAttributeResponse ModifyCmqSubscriptionAttribute(Models\ModifyCmqSubscriptionAttributeRequest $req) 修改cmq订阅属性
  * @method Models\ModifyCmqTopicAttributeResponse ModifyCmqTopicAttribute(Models\ModifyCmqTopicAttributeRequest $req) 修改cmq主题属性

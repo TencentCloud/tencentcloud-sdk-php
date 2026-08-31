@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置<p>产品 ID</p>
  * @method string getDeviceName() 获取<p>设备名称</p>
  * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
- * @method string getServiceCategory() 获取<p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li></ul>
- * @method void setServiceCategory(string $ServiceCategory) 设置<p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li></ul>
+ * @method string getServiceCategory() 获取<p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
+ * @method void setServiceCategory(string $ServiceCategory) 设置<p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
  * @method array getConditions() 获取<p>任务删除条件，至少传入一个条件。不同条件之间为 AND 关系，同一条件的 Values 之间为 OR 关系。</p>
  * @method void setConditions(array $Conditions) 设置<p>任务删除条件，至少传入一个条件。不同条件之间为 AND 关系，同一条件的 Values 之间为 OR 关系。</p>
  * @method integer getChannelId() 获取<p>通道 ID</p><p>默认值：0</p>
@@ -44,7 +44,7 @@ class DeleteTWeSeeTasksByConditionRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var string <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li></ul>
+     * @var string <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
      */
     public $ServiceCategory;
 
@@ -61,7 +61,7 @@ class DeleteTWeSeeTasksByConditionRequest extends AbstractModel
     /**
      * @param string $ProductId <p>产品 ID</p>
      * @param string $DeviceName <p>设备名称</p>
-     * @param string $ServiceCategory <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li></ul>
+     * @param string $ServiceCategory <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
      * @param array $Conditions <p>任务删除条件，至少传入一个条件。不同条件之间为 AND 关系，同一条件的 Values 之间为 OR 关系。</p>
      * @param integer $ChannelId <p>通道 ID</p><p>默认值：0</p>
      */

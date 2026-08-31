@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiBase(string $ApiBase) 设置<p>API Base URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getApiBases() 获取<p>多协议 API Base URL</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiBases(array $ApiBases) 设置<p>多协议 API Base URL</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取<p>模型创建时间（ISO 8601）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置<p>模型创建时间（ISO 8601）</p>
@@ -68,6 +72,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ServiceProviderHealthCheckConfigOutput getHealthCheckConfig() 获取<p>健康检查配置</p>
  * @method void setHealthCheckConfig(ServiceProviderHealthCheckConfigOutput $HealthCheckConfig) 设置<p>健康检查配置</p>
+ * @method string getCMRPrivateNetworkTunnelId() 获取<p>私网管道 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCMRPrivateNetworkTunnelId(string $CMRPrivateNetworkTunnelId) 设置<p>私网管道 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCMRPrivateNetworkTunnelName() 获取<p>私网管道名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCMRPrivateNetworkTunnelName(string $CMRPrivateNetworkTunnelName) 设置<p>私网管道名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getHealthCheckConfigs() 获取<p>健康检查配置</p>
+ * @method void setHealthCheckConfigs(array $HealthCheckConfigs) 设置<p>健康检查配置</p>
  */
 class ModelKeyInfoItem extends AbstractModel
 {
@@ -81,6 +95,12 @@ class ModelKeyInfoItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiBase;
+
+    /**
+     * @var array <p>多协议 API Base URL</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiBases;
 
     /**
      * @var string <p>模型创建时间（ISO 8601）</p>
@@ -168,8 +188,27 @@ class ModelKeyInfoItem extends AbstractModel
     public $HealthCheckConfig;
 
     /**
+     * @var string <p>私网管道 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CMRPrivateNetworkTunnelId;
+
+    /**
+     * @var string <p>私网管道名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CMRPrivateNetworkTunnelName;
+
+    /**
+     * @var array <p>健康检查配置</p>
+     */
+    public $HealthCheckConfigs;
+
+    /**
      * @param string $AccessType <p>接入类型</p>
      * @param string $ApiBase <p>API Base URL</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ApiBases <p>多协议 API Base URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt <p>模型创建时间（ISO 8601）</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -192,6 +231,11 @@ class ModelKeyInfoItem extends AbstractModel
      * @param string $VpcId <p>VPC 实例 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceProviderHealthCheckConfigOutput $HealthCheckConfig <p>健康检查配置</p>
+     * @param string $CMRPrivateNetworkTunnelId <p>私网管道 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CMRPrivateNetworkTunnelName <p>私网管道名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $HealthCheckConfigs <p>健康检查配置</p>
      */
     function __construct()
     {
@@ -212,6 +256,15 @@ class ModelKeyInfoItem extends AbstractModel
 
         if (array_key_exists("ApiBase",$param) and $param["ApiBase"] !== null) {
             $this->ApiBase = $param["ApiBase"];
+        }
+
+        if (array_key_exists("ApiBases",$param) and $param["ApiBases"] !== null) {
+            $this->ApiBases = [];
+            foreach ($param["ApiBases"] as $key => $value){
+                $obj = new ApiBaseItem();
+                $obj->deserialize($value);
+                array_push($this->ApiBases, $obj);
+            }
         }
 
         if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
@@ -292,6 +345,23 @@ class ModelKeyInfoItem extends AbstractModel
         if (array_key_exists("HealthCheckConfig",$param) and $param["HealthCheckConfig"] !== null) {
             $this->HealthCheckConfig = new ServiceProviderHealthCheckConfigOutput();
             $this->HealthCheckConfig->deserialize($param["HealthCheckConfig"]);
+        }
+
+        if (array_key_exists("CMRPrivateNetworkTunnelId",$param) and $param["CMRPrivateNetworkTunnelId"] !== null) {
+            $this->CMRPrivateNetworkTunnelId = $param["CMRPrivateNetworkTunnelId"];
+        }
+
+        if (array_key_exists("CMRPrivateNetworkTunnelName",$param) and $param["CMRPrivateNetworkTunnelName"] !== null) {
+            $this->CMRPrivateNetworkTunnelName = $param["CMRPrivateNetworkTunnelName"];
+        }
+
+        if (array_key_exists("HealthCheckConfigs",$param) and $param["HealthCheckConfigs"] !== null) {
+            $this->HealthCheckConfigs = [];
+            foreach ($param["HealthCheckConfigs"] as $key => $value){
+                $obj = new ServiceProviderHealthCheckConfigItemOutput();
+                $obj->deserialize($value);
+                array_push($this->HealthCheckConfigs, $obj);
+            }
         }
     }
 }

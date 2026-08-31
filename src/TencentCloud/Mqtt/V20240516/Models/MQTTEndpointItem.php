@@ -20,66 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MQTTEndpoint
  *
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
- * @method string getUrl() 获取接入点
- * @method void setUrl(string $Url) 设置接入点
- * @method string getVpcId() 获取vpc信息
- * @method void setVpcId(string $VpcId) 设置vpc信息
- * @method string getSubnetId() 获取子网信息
- * @method void setSubnetId(string $SubnetId) 设置子网信息
- * @method string getHost() 获取主机
- * @method void setHost(string $Host) 设置主机
- * @method integer getPort() 获取端口
- * @method void setPort(integer $Port) 设置端口
- * @method string getIp() 获取接入点ip
- * @method void setIp(string $Ip) 设置接入点ip
+ * @method string getType() 获取<p>类型</p>
+ * @method void setType(string $Type) 设置<p>类型</p>
+ * @method string getUrl() 获取<p>接入点</p>
+ * @method void setUrl(string $Url) 设置<p>接入点</p>
+ * @method string getVpcId() 获取<p>vpc信息</p>
+ * @method void setVpcId(string $VpcId) 设置<p>vpc信息</p>
+ * @method string getSubnetId() 获取<p>子网信息</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网信息</p>
+ * @method string getHost() 获取<p>主机</p>
+ * @method void setHost(string $Host) 设置<p>主机</p>
+ * @method integer getPort() 获取<p>端口</p>
+ * @method void setPort(integer $Port) 设置<p>端口</p>
+ * @method string getIp() 获取<p>接入点ip</p>
+ * @method void setIp(string $Ip) 设置<p>接入点ip</p>
+ * @method boolean getPortEnable() 获取<p>端口是否打开</p>
+ * @method void setPortEnable(boolean $PortEnable) 设置<p>端口是否打开</p>
+ * @method string getVpcEndpointId() 获取<p>vpce唯一id</p>
+ * @method void setVpcEndpointId(string $VpcEndpointId) 设置<p>vpce唯一id</p>
  */
 class MQTTEndpointItem extends AbstractModel
 {
     /**
-     * @var string 类型
+     * @var string <p>类型</p>
      */
     public $Type;
 
     /**
-     * @var string 接入点
+     * @var string <p>接入点</p>
      */
     public $Url;
 
     /**
-     * @var string vpc信息
+     * @var string <p>vpc信息</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网信息
+     * @var string <p>子网信息</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 主机
+     * @var string <p>主机</p>
      */
     public $Host;
 
     /**
-     * @var integer 端口
+     * @var integer <p>端口</p>
      */
     public $Port;
 
     /**
-     * @var string 接入点ip
+     * @var string <p>接入点ip</p>
      */
     public $Ip;
 
     /**
-     * @param string $Type 类型
-     * @param string $Url 接入点
-     * @param string $VpcId vpc信息
-     * @param string $SubnetId 子网信息
-     * @param string $Host 主机
-     * @param integer $Port 端口
-     * @param string $Ip 接入点ip
+     * @var boolean <p>端口是否打开</p>
+     */
+    public $PortEnable;
+
+    /**
+     * @var string <p>vpce唯一id</p>
+     */
+    public $VpcEndpointId;
+
+    /**
+     * @param string $Type <p>类型</p>
+     * @param string $Url <p>接入点</p>
+     * @param string $VpcId <p>vpc信息</p>
+     * @param string $SubnetId <p>子网信息</p>
+     * @param string $Host <p>主机</p>
+     * @param integer $Port <p>端口</p>
+     * @param string $Ip <p>接入点ip</p>
+     * @param boolean $PortEnable <p>端口是否打开</p>
+     * @param string $VpcEndpointId <p>vpce唯一id</p>
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class MQTTEndpointItem extends AbstractModel
 
         if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
             $this->Ip = $param["Ip"];
+        }
+
+        if (array_key_exists("PortEnable",$param) and $param["PortEnable"] !== null) {
+            $this->PortEnable = $param["PortEnable"];
+        }
+
+        if (array_key_exists("VpcEndpointId",$param) and $param["VpcEndpointId"] !== null) {
+            $this->VpcEndpointId = $param["VpcEndpointId"];
         }
     }
 }

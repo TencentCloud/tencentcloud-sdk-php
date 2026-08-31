@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTWeSeeTask请求参数结构体
  *
- * @method string getTaskId() 获取任务 ID
- * @method void setTaskId(string $TaskId) 设置任务 ID
+ * @method string getTaskId() 获取<p>任务 ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务 ID</p>
+ * @method integer getFileURLExpireTime() 获取<p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p><p>单位：秒</p>
+ * @method void setFileURLExpireTime(integer $FileURLExpireTime) 设置<p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p><p>单位：秒</p>
  */
 class DescribeTWeSeeTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务 ID
+     * @var string <p>任务 ID</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 任务 ID
+     * @var integer <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p><p>单位：秒</p>
+     */
+    public $FileURLExpireTime;
+
+    /**
+     * @param string $TaskId <p>任务 ID</p>
+     * @param integer $FileURLExpireTime <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p><p>单位：秒</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeTWeSeeTaskRequest extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("FileURLExpireTime",$param) and $param["FileURLExpireTime"] !== null) {
+            $this->FileURLExpireTime = $param["FileURLExpireTime"];
         }
     }
 }

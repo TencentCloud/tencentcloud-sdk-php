@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCause() 获取集群活动起因。
  * @method void setCause(string $Cause) 设置集群活动起因。
+ * @method string getQueueName() 获取队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQueueName(string $QueueName) 设置队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取集群活动描述。
  * @method void setDescription(string $Description) 设置集群活动描述。
  * @method array getRelatedNodeActivitySet() 获取集群活动相关节点活动集合。
@@ -84,6 +88,12 @@ class ClusterActivity extends AbstractModel
     public $Cause;
 
     /**
+     * @var string 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QueueName;
+
+    /**
      * @var string 集群活动描述。
      */
     public $Description;
@@ -112,6 +122,8 @@ class ClusterActivity extends AbstractModel
      * @param string $ResultDetail 集群活动结果详情。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cause 集群活动起因。
+     * @param string $QueueName 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 集群活动描述。
      * @param array $RelatedNodeActivitySet 集群活动相关节点活动集合。
      * @param string $StartTime 集群活动开始时间。
@@ -156,6 +168,10 @@ class ClusterActivity extends AbstractModel
 
         if (array_key_exists("Cause",$param) and $param["Cause"] !== null) {
             $this->Cause = $param["Cause"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI 样本管理，标签操作。
  *
- * @method string getType() 获取操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
- * @method void setType(string $Type) 设置操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
- * @method array getTags() 获取标签，长度限制：128 个字符。
- * @method void setTags(array $Tags) 设置标签，长度限制：128 个字符。
+ * @method string getType() 获取<p>操作类型，可选值：add（添加）、delete（删除）、reset（重置）。</p>
+ * @method void setType(string $Type) 设置<p>操作类型，可选值：add（添加）、delete（删除）、reset（重置）。</p>
+ * @method array getTags() 获取<p>标签，长度限制：128 个字符。</p>
+ * @method void setTags(array $Tags) 设置<p>标签，长度限制：128 个字符。</p>
  */
 class AiSampleTagOperation extends AbstractModel
 {
     /**
-     * @var string 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
+     * @var string <p>操作类型，可选值：add（添加）、delete（删除）、reset（重置）。</p>
      */
     public $Type;
 
     /**
-     * @var array 标签，长度限制：128 个字符。
+     * @var array <p>标签，长度限制：128 个字符。</p>
      */
     public $Tags;
 
     /**
-     * @param string $Type 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
-     * @param array $Tags 标签，长度限制：128 个字符。
+     * @param string $Type <p>操作类型，可选值：add（添加）、delete（删除）、reset（重置）。</p>
+     * @param array $Tags <p>标签，长度限制：128 个字符。</p>
      */
     function __construct()
     {

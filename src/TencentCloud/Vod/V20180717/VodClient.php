@@ -27,7 +27,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 该接口用于申请媒体文件（和封面文件）的上传，获取文件上传到云点播的元信息（包括上传路径、上传签名等），用于后续上传接口。
 * 上传流程请参考 [服务端上传综述](/document/product/266/9759)。
  * @method Models\AttachMediaSubtitlesResponse AttachMediaSubtitles(Models\AttachMediaSubtitlesRequest $req) 关联媒资字幕，将指定的字幕关联到转自适应码流模板号对应的媒体输出文件中（或解除关联）。
- * @method Models\CloneVoiceAsyncResponse CloneVoiceAsync(Models\CloneVoiceAsyncRequest $req) 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+ * @method Models\CloneVoiceAsyncResponse CloneVoiceAsync(Models\CloneVoiceAsyncRequest $req) 发起音色克隆任务，基于参考音频克隆生成专属音色，生成的音色可供后续语音合成使用。音色克隆为异步任务，音色 ID 及试听音频在任务完成后产出。
  * @method Models\CommitUploadResponse CommitUpload(Models\CommitUploadRequest $req) 该接口用于确认媒体文件（和封面文件）上传到腾讯云点播的结果，并存储媒体信息，返回文件的播放地址和文件 ID。
  * @method Models\ComposeMediaResponse ComposeMedia(Models\ComposeMediaRequest $req) 该接口用于合成媒体文件，可以达到以下效果：
 
@@ -180,7 +180,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(Models\DeleteTranscodeTemplateRequest $req) 删除用户自定义转码模板。
  * @method Models\DeleteVodDomainResponse DeleteVodDomain(Models\DeleteVodDomainRequest $req) 该接口用于删除点播加速域名。
 1、域名删除前需要先关闭所有区域的加速。
- * @method Models\DeleteVoiceResponse DeleteVoice(Models\DeleteVoiceRequest $req) 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+ * @method Models\DeleteVoiceResponse DeleteVoice(Models\DeleteVoiceRequest $req) 按音色 ID 删除指定音色，删除后不可恢复、不可再用于后续接口。仅支持删除本账号下的音色，系统预置音色不支持删除。
+
+注意：新设计、克隆的音色未被激活前无法被删除（查询不到即不可操作），需首次使用该新建音色执行一次 TTS 后才被激活。
  * @method Models\DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(Models\DeleteWatermarkTemplateRequest $req) 删除用户自定义水印模板。
  * @method Models\DeleteWordSamplesResponse DeleteWordSamples(Models\DeleteWordSamplesRequest $req) 该接口用于批量删除关键词样本。
  * @method Models\DescribeAIAnalysisTemplatesResponse DescribeAIAnalysisTemplates(Models\DescribeAIAnalysisTemplatesRequest $req) 根据音视频内容分析模板唯一标识，获取音视频内容分析模板详情列表。返回结果包含符合条件的所有用户自定义音视频内容分析模板及[系统预置音视频内容分析模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF)。
@@ -336,10 +338,12 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 只能查询到最近三天（72 小时）内的任务。
  * @method Models\DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(Models\DescribeTranscodeTemplatesRequest $req) 根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
  * @method Models\DescribeVodDomainsResponse DescribeVodDomains(Models\DescribeVodDomainsRequest $req) 该接口用于查询点播域名信息列表。
- * @method Models\DescribeVoicesResponse DescribeVoices(Models\DescribeVoicesRequest $req) 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+ * @method Models\DescribeVoicesResponse DescribeVoices(Models\DescribeVoicesRequest $req) 查询当前账号下可用音色列表，支持按音色 ID、类型、名称、性别、年龄、语言、标签、场景等可选条件过滤。
+
+注意：新设计、克隆的音色未被激活前无法被查询到，需首次使用该新建音色执行一次TTS后才被激活。
  * @method Models\DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(Models\DescribeWatermarkTemplatesRequest $req) 查询用户自定义水印模板，支持根据条件，分页查询。
  * @method Models\DescribeWordSamplesResponse DescribeWordSamples(Models\DescribeWordSamplesRequest $req) 该接口用于根据应用场景、关键词、标签，分页查询关键词样本信息。
- * @method Models\DesignVoiceAsyncResponse DesignVoiceAsync(Models\DesignVoiceAsyncRequest $req) 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+ * @method Models\DesignVoiceAsyncResponse DesignVoiceAsync(Models\DesignVoiceAsyncRequest $req) 发起音色设计任务，根据自然语言描述文本生成自定义音色，可同时指定音色画像（名称、性别、年龄、语言、标签、场景等）；提交时若附带试听文本，则任务完成后同时产出试听音频。音色设计为异步任务，音色 ID 在任务完成后产出。
  * @method Models\EditMediaResponse EditMedia(Models\EditMediaRequest $req) 对视频进行编辑（剪辑、拼接等），生成一个新的点播视频。编辑的功能包括：
 
 1. 对点播中的一个文件进行剪辑，生成一个新的视频；
@@ -615,9 +619,11 @@ use TencentCloud\Vod\V20180717\Models as Models;
 
 剪辑不固化的优势在于其剪辑操作十分“轻量化”，不会产生额外的存储开销。但其不足之处在于生命周期与原始录制视频相同，且无法进一步进行转码等视频处理。
  * @method Models\SplitMediaResponse SplitMedia(Models\SplitMediaRequest $req) 对点播视频进行拆条，生成多个新的点播视频。
- * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+ * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) 发起语音合成任务，将文本合成为语音，面向长文本场景（最大 200000 字符），支持指定音色及语速、音量、音调、采样率、输出格式等合成参数。语音合成为异步任务，完成后产出音频结果。
  * @method Models\UpdateAigcApiTokenResponse UpdateAigcApiToken(Models\UpdateAigcApiTokenRequest $req) 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
- * @method Models\UpdateVoiceResponse UpdateVoice(Models\UpdateVoiceRequest $req) 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+ * @method Models\UpdateVoiceResponse UpdateVoice(Models\UpdateVoiceRequest $req) 按音色 ID 更新音色的画像信息（名称、描述、性别、年龄、语言、标签、场景等），返回更新后的完整音色信息。仅支持更新本账号下的音色，系统预置音色不支持更新。
+
+注意：新设计、克隆的音色未被激活前无法被更新，需首次使用该新建音色执行一次 TTS 后才被激活。
  * @method Models\VerifyDomainRecordResponse VerifyDomainRecord(Models\VerifyDomainRecordRequest $req) 该接口用于验证域名解析值。
  * @method Models\WeChatMiniProgramPublishResponse WeChatMiniProgramPublish(Models\WeChatMiniProgramPublishRequest $req) 将点播视频发布到微信小程序，供微信小程序播放器播放。
 本接口支持发布原始视频和转码后视频。

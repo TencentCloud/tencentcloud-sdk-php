@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMediaMetaData请求参数结构体
  *
- * @method MediaInputInfo getInputInfo() 获取需要获取元信息的文件输入信息。
- * @method void setInputInfo(MediaInputInfo $InputInfo) 设置需要获取元信息的文件输入信息。
+ * @method MediaInputInfo getInputInfo() 获取<p>需要获取元信息的文件输入信息。</p>
+ * @method void setInputInfo(MediaInputInfo $InputInfo) 设置<p>需要获取元信息的文件输入信息。</p>
+ * @method string getMode() 获取<p>指定为slow时，增加接口超时时间</p><p>枚举值：</p><ul><li>slow： 增加接口超时时间</li></ul>
+ * @method void setMode(string $Mode) 设置<p>指定为slow时，增加接口超时时间</p><p>枚举值：</p><ul><li>slow： 增加接口超时时间</li></ul>
  */
 class DescribeMediaMetaDataRequest extends AbstractModel
 {
     /**
-     * @var MediaInputInfo 需要获取元信息的文件输入信息。
+     * @var MediaInputInfo <p>需要获取元信息的文件输入信息。</p>
      */
     public $InputInfo;
 
     /**
-     * @param MediaInputInfo $InputInfo 需要获取元信息的文件输入信息。
+     * @var string <p>指定为slow时，增加接口超时时间</p><p>枚举值：</p><ul><li>slow： 增加接口超时时间</li></ul>
+     */
+    public $Mode;
+
+    /**
+     * @param MediaInputInfo $InputInfo <p>需要获取元信息的文件输入信息。</p>
+     * @param string $Mode <p>指定为slow时，增加接口超时时间</p><p>枚举值：</p><ul><li>slow： 增加接口超时时间</li></ul>
      */
     function __construct()
     {
@@ -49,6 +57,10 @@ class DescribeMediaMetaDataRequest extends AbstractModel
         if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {
             $this->InputInfo = new MediaInputInfo();
             $this->InputInfo->deserialize($param["InputInfo"]);
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置<p>UID/GID信息</p>
  * @method integer getCapacityHardLimit() 获取<p>容量硬限制，单位GiB。设置范围10-10000000。</p>
  * @method void setCapacityHardLimit(integer $CapacityHardLimit) 设置<p>容量硬限制，单位GiB。设置范围10-10000000。</p>
- * @method integer getFileHardLimit() 获取<p>文件硬限制，单位个。设置范围1000-100000000</p>
- * @method void setFileHardLimit(integer $FileHardLimit) 设置<p>文件硬限制，单位个。设置范围1000-100000000</p>
+ * @method integer getFileHardLimit() 获取<p>文件硬限制</p><p>取值范围：[1000, 1000000000]</p><p>单位：个</p><p>默认值：无默认值</p>
+ * @method void setFileHardLimit(integer $FileHardLimit) 设置<p>文件硬限制</p><p>取值范围：[1000, 1000000000]</p><p>单位：个</p><p>默认值：无默认值</p>
  * @method string getDirectoryPath() 获取<p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
  * @method void setDirectoryPath(string $DirectoryPath) 设置<p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
  */
@@ -56,7 +56,7 @@ class SetUserQuotaRequest extends AbstractModel
     public $CapacityHardLimit;
 
     /**
-     * @var integer <p>文件硬限制，单位个。设置范围1000-100000000</p>
+     * @var integer <p>文件硬限制</p><p>取值范围：[1000, 1000000000]</p><p>单位：个</p><p>默认值：无默认值</p>
      */
     public $FileHardLimit;
 
@@ -70,7 +70,7 @@ class SetUserQuotaRequest extends AbstractModel
      * @param string $UserType <p>指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额</p>
      * @param string $UserId <p>UID/GID信息</p>
      * @param integer $CapacityHardLimit <p>容量硬限制，单位GiB。设置范围10-10000000。</p>
-     * @param integer $FileHardLimit <p>文件硬限制，单位个。设置范围1000-100000000</p>
+     * @param integer $FileHardLimit <p>文件硬限制</p><p>取值范围：[1000, 1000000000]</p><p>单位：个</p><p>默认值：无默认值</p>
      * @param string $DirectoryPath <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     function __construct()

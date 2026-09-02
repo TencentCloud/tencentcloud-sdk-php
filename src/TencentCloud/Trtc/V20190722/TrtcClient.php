@@ -53,12 +53,23 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 ●指定内容参数（LiveModerationParams）来指定内容理解需要的详细参数。
 ●指定存储参数（LiveModerationStorageParams）将命中的切片文件指定上传到您希望的云存储，目前支持腾讯云（对象存储COS）以及第三方AWS（S3）和阿里云（OSS）
  * @method Models\CreatePictureResponse CreatePicture(Models\CreatePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
+ * @method Models\CreateRecognizeVocabV3Response CreateRecognizeVocabV3(Models\CreateRecognizeVocabV3Request $req) 接口说明：
+用户通过本接口进行热词表的创建。
+
+• 默认最多可创建30个热词表。
+• 每个热词表最多可添加1000个词，每个词最长10个汉字或30个英文字符，不能超出限制。
+• 热词表可以通过数组或者本地文件形式上传。
+• 本地文件必须为UTF-8编码格式，每行仅添加一个热词且不能包含标点和特殊字符。
+• 热词权重取值范围为[1,11]之间的整数或者100，权重越大代表该词被识别出来的概率越大。
+• 注意: 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
  * @method Models\DeleteCloudModerationResponse DeleteCloudModeration(Models\DeleteCloudModerationRequest $req) 成功开启AI 内容理解任务后，可以使用此接口来停止进行内容识别。
  * @method Models\DeleteCloudRecordingResponse DeleteCloudRecording(Models\DeleteCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
  * @method Models\DeleteCloudSliceTaskResponse DeleteCloudSliceTask(Models\DeleteCloudSliceTaskRequest $req) 成功开启切片任务后，可以使用此接口来停止任务。停止切片成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
  * @method Models\DeleteCloudTranscriptionResponse DeleteCloudTranscription(Models\DeleteCloudTranscriptionRequest $req) 成功开启转录后，可以使用此接口来停止转录任务。
  * @method Models\DeleteLiveStreamModerationResponse DeleteLiveStreamModeration(Models\DeleteLiveStreamModerationRequest $req) 成功开启直播流AI 内容理解任务后，可以使用此接口来停止进行内容识别。
  * @method Models\DeletePictureResponse DeletePicture(Models\DeletePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁删除自定义背景图或水印，可通过此接口删除已上传的图片。无需频繁删除图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
+ * @method Models\DeleteRecognizeVocabV3Response DeleteRecognizeVocabV3(Models\DeleteRecognizeVocabV3Request $req) 接口说明：
+用户通过本接口进行热词表的删除。
  * @method Models\DeleteVoicePrintResponse DeleteVoicePrint(Models\DeleteVoicePrintRequest $req) 传入声纹ID，删除之前注册的声纹信息
  * @method Models\DescribeAIConversationResponse DescribeAIConversation(Models\DescribeAIConversationRequest $req) 查询AI对话任务状态。
  * @method Models\DescribeAITranscriptionResponse DescribeAITranscription(Models\DescribeAITranscriptionRequest $req) 查询AI转录任务状态。
@@ -188,6 +199,12 @@ peakCurrentUsers：峰值同时在线人数。
  * @method Models\DescribeWebRecordResponse DescribeWebRecord(Models\DescribeWebRecordRequest $req) 查询页面录制任务
  * @method Models\DismissRoomResponse DismissRoom(Models\DismissRoomRequest $req) 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\DismissRoomByStrRoomIdResponse DismissRoomByStrRoomId(Models\DismissRoomByStrRoomIdRequest $req) 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+ * @method Models\DownloadRecognizeVocabV3Response DownloadRecognizeVocabV3(Models\DownloadRecognizeVocabV3Request $req) 接口说明：
+用户通过本接口进行热词表的下载，获得词表权重文件形式的 base64 值，文件形式为通过 “|” 分割的词和权重，即 word|weight 的形式。
+ * @method Models\GetRecognizeVocabListV3Response GetRecognizeVocabListV3(Models\GetRecognizeVocabListV3Request $req) 接口说明：
+用户通过本接口分页列举所有的热词表。
+ * @method Models\GetRecognizeVocabV3Response GetRecognizeVocabV3(Models\GetRecognizeVocabV3Request $req) 接口说明：
+用户根据词表的ID可以获取对应的热词表信息
  * @method Models\ModifyCloudModerationResponse ModifyCloudModeration(Models\ModifyCloudModerationRequest $req) 成功开启AI 内容理解任务后，可以使用此接口来更新订阅黑白名单。
  * @method Models\ModifyCloudRecordingResponse ModifyCloudRecording(Models\ModifyCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来更新录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。更新操作是全量覆盖，并不是增量更新的模式，也就是说每次更新都需要携带全量的信息。
  * @method Models\ModifyCloudSliceTaskResponse ModifyCloudSliceTask(Models\ModifyCloudSliceTaskRequest $req) 成功开启切片任务后，可以使用此接口来更新任务。用于更新指定订阅流白名单或者黑名单。
@@ -195,6 +212,8 @@ peakCurrentUsers：峰值同时在线人数。
  * @method Models\RegisterVoicePrintResponse RegisterVoicePrint(Models\RegisterVoicePrintRequest $req) 传入音频base64串，注册声纹信息，返回声纹ID
  * @method Models\RemoveUserResponse RemoveUser(Models\RemoveUserRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\RemoveUserByStrRoomIdResponse RemoveUserByStrRoomId(Models\RemoveUserByStrRoomIdRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+ * @method Models\SetVocabStateV3Response SetVocabStateV3(Models\SetVocabStateV3Request $req) 接口说明：
+用户通过该接口可以设置热词表的默认状态。初始状态为0，用户可设置状态为1，即为默认状态。默认状态表示用户在请求识别时，如不设置热词表ID，则默认使用状态为1的热词表。
  * @method Models\StartAIConversationResponse StartAIConversation(Models\StartAIConversationRequest $req) 启动AI对话任务，AI通道机器人进入TRTC房间，与房间内指定的成员进行AI对话，适用于智能客服，AI口语教师等场景
 
 TRTC AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS)服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
@@ -277,6 +296,8 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
  * @method Models\UpdatePublishCdnStreamResponse UpdatePublishCdnStream(Models\UpdatePublishCdnStreamRequest $req) 接口说明：
 成功发起混流转推后，可以使用此接口来更新任务。仅在任务进行时有效，任务退出后更新将会返回错误。更新操作为增量更新模式。
 注意：为了保障推流的稳定性，更新不支持任务在纯音频、音视频、纯视频之间进行切换。
+ * @method Models\UpdateRecognizeVocabV3Response UpdateRecognizeVocabV3(Models\UpdateRecognizeVocabV3Request $req) 接口说明：
+用户通过本接口进行热词表的更新。
  * @method Models\UpdateStreamIngestResponse UpdateStreamIngest(Models\UpdateStreamIngestRequest $req) 更新输入在线媒体流任务的StreamUrl
  * @method Models\UpdateVoicePrintResponse UpdateVoicePrint(Models\UpdateVoicePrintRequest $req) 传入声纹ID以及对应音频信息，更新对应声纹信息
  * @method Models\VoiceCloneResponse VoiceClone(Models\VoiceCloneRequest $req) 声音克隆

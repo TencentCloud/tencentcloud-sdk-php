@@ -20,62 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendStatusStatistics请求参数结构体
  *
- * @method string getBeginTime() 获取起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
- * @method void setBeginTime(string $BeginTime) 设置起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
- * @method string getEndTime() 获取结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
-注：EndTime 必须大于等于 BeginTime。
- * @method void setEndTime(string $EndTime) 设置结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
-注：EndTime 必须大于等于 BeginTime。
- * @method string getSmsSdkAppId() 获取短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
- * @method void setSmsSdkAppId(string $SmsSdkAppId) 设置短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
- * @method integer getLimit() 获取最大上限。
-注：目前固定设置为0。
- * @method void setLimit(integer $Limit) 设置最大上限。
-注：目前固定设置为0。
- * @method integer getOffset() 获取偏移量。
-注：目前固定设置为0。
- * @method void setOffset(integer $Offset) 设置偏移量。
-注：目前固定设置为0。
+ * @method string getBeginTime() 获取<p>起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。注：统计范围包含当前小时。</p><p>参数格式：yyyymmddhh</p>
+ * @method void setBeginTime(string $BeginTime) 设置<p>起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。注：统计范围包含当前小时。</p><p>参数格式：yyyymmddhh</p>
+ * @method string getEndTime() 获取<p>结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。注：EndTime 必须大于等于 BeginTime，统计范围包含当前小时。</p><p>参数格式：yyyymmddhh</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。注：EndTime 必须大于等于 BeginTime，统计范围包含当前小时。</p><p>参数格式：yyyymmddhh</p>
+ * @method string getSmsSdkAppId() 获取<p>短信 SdkAppId 在 <a href="https://console.cloud.tencent.com/smsv2/app-manage">短信控制台</a>  添加应用后生成的实际 SdkAppId，示例如1400006666。</p>
+ * @method void setSmsSdkAppId(string $SmsSdkAppId) 设置<p>短信 SdkAppId 在 <a href="https://console.cloud.tencent.com/smsv2/app-manage">短信控制台</a>  添加应用后生成的实际 SdkAppId，示例如1400006666。</p>
+ * @method integer getLimit() 获取<p>最大上限。<br>注：目前固定设置为0。</p>
+ * @method void setLimit(integer $Limit) 设置<p>最大上限。<br>注：目前固定设置为0。</p>
+ * @method integer getOffset() 获取<p>偏移量。<br>注：目前固定设置为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量。<br>注：目前固定设置为0。</p>
  */
 class SendStatusStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
+     * @var string <p>起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。注：统计范围包含当前小时。</p><p>参数格式：yyyymmddhh</p>
      */
     public $BeginTime;
 
     /**
-     * @var string 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
-注：EndTime 必须大于等于 BeginTime。
+     * @var string <p>结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。注：EndTime 必须大于等于 BeginTime，统计范围包含当前小时。</p><p>参数格式：yyyymmddhh</p>
      */
     public $EndTime;
 
     /**
-     * @var string 短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
+     * @var string <p>短信 SdkAppId 在 <a href="https://console.cloud.tencent.com/smsv2/app-manage">短信控制台</a>  添加应用后生成的实际 SdkAppId，示例如1400006666。</p>
      */
     public $SmsSdkAppId;
 
     /**
-     * @var integer 最大上限。
-注：目前固定设置为0。
+     * @var integer <p>最大上限。<br>注：目前固定设置为0。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量。
-注：目前固定设置为0。
+     * @var integer <p>偏移量。<br>注：目前固定设置为0。</p>
      */
     public $Offset;
 
     /**
-     * @param string $BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
-     * @param string $EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
-注：EndTime 必须大于等于 BeginTime。
-     * @param string $SmsSdkAppId 短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
-     * @param integer $Limit 最大上限。
-注：目前固定设置为0。
-     * @param integer $Offset 偏移量。
-注：目前固定设置为0。
+     * @param string $BeginTime <p>起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。注：统计范围包含当前小时。</p><p>参数格式：yyyymmddhh</p>
+     * @param string $EndTime <p>结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。注：EndTime 必须大于等于 BeginTime，统计范围包含当前小时。</p><p>参数格式：yyyymmddhh</p>
+     * @param string $SmsSdkAppId <p>短信 SdkAppId 在 <a href="https://console.cloud.tencent.com/smsv2/app-manage">短信控制台</a>  添加应用后生成的实际 SdkAppId，示例如1400006666。</p>
+     * @param integer $Limit <p>最大上限。<br>注：目前固定设置为0。</p>
+     * @param integer $Offset <p>偏移量。<br>注：目前固定设置为0。</p>
      */
     function __construct()
     {

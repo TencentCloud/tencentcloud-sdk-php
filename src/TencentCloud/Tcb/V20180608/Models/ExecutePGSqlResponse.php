@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumns(array $Columns) 设置<p>字段名列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getColumnTypes() 获取<p>字段类型名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColumnTypes(array $ColumnTypes) 设置<p>字段类型名</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRows() 获取<p>数据行。每一行数据都是一个JSON串，将JSON进行反序列化将得到了每列的值。值可能是 null 或者 字符串，如果是 null 说明该列的值为 &lt;null&gt;，如果是字符串则为该列的值的字符串表示形式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRows(array $Rows) 设置<p>数据行。每一行数据都是一个JSON串，将JSON进行反序列化将得到了每列的值。值可能是 null 或者 字符串，如果是 null 说明该列的值为 &lt;null&gt;，如果是字符串则为该列的值的字符串表示形式。</p>
@@ -49,6 +53,12 @@ class ExecutePGSqlResponse extends AbstractModel
     public $Columns;
 
     /**
+     * @var array <p>字段类型名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColumnTypes;
+
+    /**
      * @var array <p>数据行。每一行数据都是一个JSON串，将JSON进行反序列化将得到了每列的值。值可能是 null 或者 字符串，如果是 null 说明该列的值为 &lt;null&gt;，如果是字符串则为该列的值的字符串表示形式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -67,6 +77,8 @@ class ExecutePGSqlResponse extends AbstractModel
     /**
      * @param integer $AffectedRows <p>影响行数</p>
      * @param array $Columns <p>字段名列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ColumnTypes <p>字段类型名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Rows <p>数据行。每一行数据都是一个JSON串，将JSON进行反序列化将得到了每列的值。值可能是 null 或者 字符串，如果是 null 说明该列的值为 &lt;null&gt;，如果是字符串则为该列的值的字符串表示形式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -92,6 +104,10 @@ class ExecutePGSqlResponse extends AbstractModel
 
         if (array_key_exists("Columns",$param) and $param["Columns"] !== null) {
             $this->Columns = $param["Columns"];
+        }
+
+        if (array_key_exists("ColumnTypes",$param) and $param["ColumnTypes"] !== null) {
+            $this->ColumnTypes = $param["ColumnTypes"];
         }
 
         if (array_key_exists("Rows",$param) and $param["Rows"] !== null) {

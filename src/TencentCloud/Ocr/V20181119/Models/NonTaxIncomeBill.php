@@ -20,210 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 非税收入
  *
- * @method string getTitle() 获取发票名称
- * @method void setTitle(string $Title) 设置发票名称
- * @method string getNumber() 获取发票号码
- * @method void setNumber(string $Number) 设置发票号码
- * @method string getCode() 获取发票代码
- * @method void setCode(string $Code) 设置发票代码
- * @method string getCheckCode() 获取校验码
- * @method void setCheckCode(string $CheckCode) 设置校验码
- * @method string getDate() 获取开票日期
- * @method void setDate(string $Date) 设置开票日期
- * @method string getTotal() 获取价税合计（小写）
- * @method void setTotal(string $Total) 设置价税合计（小写）
- * @method string getTotalCn() 获取价税合计（大写）
- * @method void setTotalCn(string $TotalCn) 设置价税合计（大写）
- * @method string getBuyer() 获取交款人名称
- * @method void setBuyer(string $Buyer) 设置交款人名称
- * @method string getBuyerTaxID() 获取交款人纳税人识别号
- * @method void setBuyerTaxID(string $BuyerTaxID) 设置交款人纳税人识别号
- * @method string getSeller() 获取收款人名称
- * @method void setSeller(string $Seller) 设置收款人名称
- * @method string getSellerCompany() 获取收款单位名称
- * @method void setSellerCompany(string $SellerCompany) 设置收款单位名称
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method string getCurrencyCode() 获取币种
- * @method void setCurrencyCode(string $CurrencyCode) 设置币种
- * @method string getReviewer() 获取复核人
- * @method void setReviewer(string $Reviewer) 设置复核人
- * @method integer getQRCodeMark() 获取是否存在二维码（1：有，0：无）
- * @method void setQRCodeMark(integer $QRCodeMark) 设置是否存在二维码（1：有，0：无）
- * @method string getOtherInfo() 获取其他信息
- * @method void setOtherInfo(string $OtherInfo) 设置其他信息
- * @method string getPaymentCode() 获取缴款码
- * @method void setPaymentCode(string $PaymentCode) 设置缴款码
- * @method string getReceiveUnitCode() 获取执收单位编码
- * @method void setReceiveUnitCode(string $ReceiveUnitCode) 设置执收单位编码
- * @method string getReceiver() 获取执收单位名称
- * @method void setReceiver(string $Receiver) 设置执收单位名称
- * @method string getOperator() 获取经办人
- * @method void setOperator(string $Operator) 设置经办人
- * @method string getPayerAccount() 获取付款人账号
- * @method void setPayerAccount(string $PayerAccount) 设置付款人账号
- * @method string getPayerBank() 获取付款人开户银行
- * @method void setPayerBank(string $PayerBank) 设置付款人开户银行
- * @method string getReceiverAccount() 获取收款人账号
- * @method void setReceiverAccount(string $ReceiverAccount) 设置收款人账号
- * @method string getReceiverBank() 获取收款人开户银行
- * @method void setReceiverBank(string $ReceiverBank) 设置收款人开户银行
- * @method array getNonTaxItems() 获取条目
- * @method void setNonTaxItems(array $NonTaxItems) 设置条目
+ * @method string getTitle() 获取<p>发票名称</p>
+ * @method void setTitle(string $Title) 设置<p>发票名称</p>
+ * @method string getNumber() 获取<p>发票号码</p>
+ * @method void setNumber(string $Number) 设置<p>发票号码</p>
+ * @method string getCode() 获取<p>发票代码</p>
+ * @method void setCode(string $Code) 设置<p>发票代码</p>
+ * @method string getCheckCode() 获取<p>校验码</p>
+ * @method void setCheckCode(string $CheckCode) 设置<p>校验码</p>
+ * @method string getDate() 获取<p>开票日期</p>
+ * @method void setDate(string $Date) 设置<p>开票日期</p>
+ * @method string getTotal() 获取<p>价税合计（小写）</p>
+ * @method void setTotal(string $Total) 设置<p>价税合计（小写）</p>
+ * @method string getTotalCn() 获取<p>价税合计（大写）</p>
+ * @method void setTotalCn(string $TotalCn) 设置<p>价税合计（大写）</p>
+ * @method string getBuyer() 获取<p>交款人名称</p>
+ * @method void setBuyer(string $Buyer) 设置<p>交款人名称</p>
+ * @method string getBuyerTaxID() 获取<p>交款人纳税人识别号</p>
+ * @method void setBuyerTaxID(string $BuyerTaxID) 设置<p>交款人纳税人识别号</p>
+ * @method string getSeller() 获取<p>收款人名称</p>
+ * @method void setSeller(string $Seller) 设置<p>收款人名称</p>
+ * @method string getSellerCompany() 获取<p>收款单位名称</p>
+ * @method void setSellerCompany(string $SellerCompany) 设置<p>收款单位名称</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getCurrencyCode() 获取<p>币种</p>
+ * @method void setCurrencyCode(string $CurrencyCode) 设置<p>币种</p>
+ * @method string getReviewer() 获取<p>复核人</p>
+ * @method void setReviewer(string $Reviewer) 设置<p>复核人</p>
+ * @method integer getQRCodeMark() 获取<p>是否存在二维码（1：有，0：无）</p>
+ * @method void setQRCodeMark(integer $QRCodeMark) 设置<p>是否存在二维码（1：有，0：无）</p>
+ * @method string getOtherInfo() 获取<p>其他信息</p>
+ * @method void setOtherInfo(string $OtherInfo) 设置<p>其他信息</p>
+ * @method string getPaymentCode() 获取<p>缴款码</p>
+ * @method void setPaymentCode(string $PaymentCode) 设置<p>缴款码</p>
+ * @method string getReceiveUnitCode() 获取<p>执收单位编码</p>
+ * @method void setReceiveUnitCode(string $ReceiveUnitCode) 设置<p>执收单位编码</p>
+ * @method string getReceiver() 获取<p>执收单位名称</p>
+ * @method void setReceiver(string $Receiver) 设置<p>执收单位名称</p>
+ * @method string getOperator() 获取<p>经办人</p>
+ * @method void setOperator(string $Operator) 设置<p>经办人</p>
+ * @method string getPayerAccount() 获取<p>付款人账号</p>
+ * @method void setPayerAccount(string $PayerAccount) 设置<p>付款人账号</p>
+ * @method string getPayerBank() 获取<p>付款人开户银行</p>
+ * @method void setPayerBank(string $PayerBank) 设置<p>付款人开户银行</p>
+ * @method string getReceiverAccount() 获取<p>收款人账号</p>
+ * @method void setReceiverAccount(string $ReceiverAccount) 设置<p>收款人账号</p>
+ * @method string getReceiverBank() 获取<p>收款人开户银行</p>
+ * @method void setReceiverBank(string $ReceiverBank) 设置<p>收款人开户银行</p>
+ * @method array getNonTaxItems() 获取<p>条目</p>
+ * @method void setNonTaxItems(array $NonTaxItems) 设置<p>条目</p>
+ * @method string getBillName() 获取<p>票据名称</p>
+ * @method void setBillName(string $BillName) 设置<p>票据名称</p>
  */
 class NonTaxIncomeBill extends AbstractModel
 {
     /**
-     * @var string 发票名称
+     * @var string <p>发票名称</p>
      */
     public $Title;
 
     /**
-     * @var string 发票号码
+     * @var string <p>发票号码</p>
      */
     public $Number;
 
     /**
-     * @var string 发票代码
+     * @var string <p>发票代码</p>
      */
     public $Code;
 
     /**
-     * @var string 校验码
+     * @var string <p>校验码</p>
      */
     public $CheckCode;
 
     /**
-     * @var string 开票日期
+     * @var string <p>开票日期</p>
      */
     public $Date;
 
     /**
-     * @var string 价税合计（小写）
+     * @var string <p>价税合计（小写）</p>
      */
     public $Total;
 
     /**
-     * @var string 价税合计（大写）
+     * @var string <p>价税合计（大写）</p>
      */
     public $TotalCn;
 
     /**
-     * @var string 交款人名称
+     * @var string <p>交款人名称</p>
      */
     public $Buyer;
 
     /**
-     * @var string 交款人纳税人识别号
+     * @var string <p>交款人纳税人识别号</p>
      */
     public $BuyerTaxID;
 
     /**
-     * @var string 收款人名称
+     * @var string <p>收款人名称</p>
      */
     public $Seller;
 
     /**
-     * @var string 收款单位名称
+     * @var string <p>收款单位名称</p>
      */
     public $SellerCompany;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var string 币种
+     * @var string <p>币种</p>
      */
     public $CurrencyCode;
 
     /**
-     * @var string 复核人
+     * @var string <p>复核人</p>
      */
     public $Reviewer;
 
     /**
-     * @var integer 是否存在二维码（1：有，0：无）
+     * @var integer <p>是否存在二维码（1：有，0：无）</p>
      */
     public $QRCodeMark;
 
     /**
-     * @var string 其他信息
+     * @var string <p>其他信息</p>
      */
     public $OtherInfo;
 
     /**
-     * @var string 缴款码
+     * @var string <p>缴款码</p>
      */
     public $PaymentCode;
 
     /**
-     * @var string 执收单位编码
+     * @var string <p>执收单位编码</p>
      */
     public $ReceiveUnitCode;
 
     /**
-     * @var string 执收单位名称
+     * @var string <p>执收单位名称</p>
      */
     public $Receiver;
 
     /**
-     * @var string 经办人
+     * @var string <p>经办人</p>
      */
     public $Operator;
 
     /**
-     * @var string 付款人账号
+     * @var string <p>付款人账号</p>
      */
     public $PayerAccount;
 
     /**
-     * @var string 付款人开户银行
+     * @var string <p>付款人开户银行</p>
      */
     public $PayerBank;
 
     /**
-     * @var string 收款人账号
+     * @var string <p>收款人账号</p>
      */
     public $ReceiverAccount;
 
     /**
-     * @var string 收款人开户银行
+     * @var string <p>收款人开户银行</p>
      */
     public $ReceiverBank;
 
     /**
-     * @var array 条目
+     * @var array <p>条目</p>
      */
     public $NonTaxItems;
 
     /**
-     * @param string $Title 发票名称
-     * @param string $Number 发票号码
-     * @param string $Code 发票代码
-     * @param string $CheckCode 校验码
-     * @param string $Date 开票日期
-     * @param string $Total 价税合计（小写）
-     * @param string $TotalCn 价税合计（大写）
-     * @param string $Buyer 交款人名称
-     * @param string $BuyerTaxID 交款人纳税人识别号
-     * @param string $Seller 收款人名称
-     * @param string $SellerCompany 收款单位名称
-     * @param string $Remark 备注
-     * @param string $CurrencyCode 币种
-     * @param string $Reviewer 复核人
-     * @param integer $QRCodeMark 是否存在二维码（1：有，0：无）
-     * @param string $OtherInfo 其他信息
-     * @param string $PaymentCode 缴款码
-     * @param string $ReceiveUnitCode 执收单位编码
-     * @param string $Receiver 执收单位名称
-     * @param string $Operator 经办人
-     * @param string $PayerAccount 付款人账号
-     * @param string $PayerBank 付款人开户银行
-     * @param string $ReceiverAccount 收款人账号
-     * @param string $ReceiverBank 收款人开户银行
-     * @param array $NonTaxItems 条目
+     * @var string <p>票据名称</p>
+     */
+    public $BillName;
+
+    /**
+     * @param string $Title <p>发票名称</p>
+     * @param string $Number <p>发票号码</p>
+     * @param string $Code <p>发票代码</p>
+     * @param string $CheckCode <p>校验码</p>
+     * @param string $Date <p>开票日期</p>
+     * @param string $Total <p>价税合计（小写）</p>
+     * @param string $TotalCn <p>价税合计（大写）</p>
+     * @param string $Buyer <p>交款人名称</p>
+     * @param string $BuyerTaxID <p>交款人纳税人识别号</p>
+     * @param string $Seller <p>收款人名称</p>
+     * @param string $SellerCompany <p>收款单位名称</p>
+     * @param string $Remark <p>备注</p>
+     * @param string $CurrencyCode <p>币种</p>
+     * @param string $Reviewer <p>复核人</p>
+     * @param integer $QRCodeMark <p>是否存在二维码（1：有，0：无）</p>
+     * @param string $OtherInfo <p>其他信息</p>
+     * @param string $PaymentCode <p>缴款码</p>
+     * @param string $ReceiveUnitCode <p>执收单位编码</p>
+     * @param string $Receiver <p>执收单位名称</p>
+     * @param string $Operator <p>经办人</p>
+     * @param string $PayerAccount <p>付款人账号</p>
+     * @param string $PayerBank <p>付款人开户银行</p>
+     * @param string $ReceiverAccount <p>收款人账号</p>
+     * @param string $ReceiverBank <p>收款人开户银行</p>
+     * @param array $NonTaxItems <p>条目</p>
+     * @param string $BillName <p>票据名称</p>
      */
     function __construct()
     {
@@ -341,6 +349,10 @@ class NonTaxIncomeBill extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->NonTaxItems, $obj);
             }
+        }
+
+        if (array_key_exists("BillName",$param) and $param["BillName"] !== null) {
+            $this->BillName = $param["BillName"];
         }
     }
 }

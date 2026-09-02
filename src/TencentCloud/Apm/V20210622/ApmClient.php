@@ -66,6 +66,7 @@ use TencentCloud\Apm\V20210622\Models as Models;
  * @method Models\DescribeGeneralSpanListResponse DescribeGeneralSpanList(Models\DescribeGeneralSpanListRequest $req) 通用查询调用链列表
  * @method Models\DescribeMetricRecordsResponse DescribeMetricRecords(Models\DescribeMetricRecordsRequest $req) 查询指标列表接口，查询指标更推荐使用DescribeGeneralMetricData接口
  * @method Models\DescribeOPRAllVulCountResponse DescribeOPRAllVulCount(Models\DescribeOPRAllVulCountRequest $req) 查询用户所有漏洞信息
+ * @method Models\DescribeRelatedServicesOnTraceResponse DescribeRelatedServicesOnTrace(Models\DescribeRelatedServicesOnTraceRequest $req) 根据链路查询目标服务的上下游相关服务
  * @method Models\DescribeServiceOverviewResponse DescribeServiceOverview(Models\DescribeServiceOverviewRequest $req) 应用概览数据拉取
  * @method Models\DescribeTagValuesResponse DescribeTagValues(Models\DescribeTagValuesRequest $req) 根据维度名和过滤条件，查询维度数据.
  * @method Models\DescribeTopologyNewResponse DescribeTopologyNew(Models\DescribeTopologyNewRequest $req) 根据应用名查询服务拓扑图

@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDateStart(string $DateStart) 设置<p>通行日期起</p>
  * @method string getDateEnd() 获取<p>通行日期止</p>
  * @method void setDateEnd(string $DateEnd) 设置<p>通行日期止</p>
+ * @method string getVinNo() 获取<p>车架号</p>
+ * @method void setVinNo(string $VinNo) 设置<p>车架号</p>
  */
 class VatElectronicItemInfo extends AbstractModel
 {
@@ -185,6 +187,11 @@ class VatElectronicItemInfo extends AbstractModel
     public $DateEnd;
 
     /**
+     * @var string <p>车架号</p>
+     */
+    public $VinNo;
+
+    /**
      * @param string $Name <p>项目名称</p>
      * @param string $Quantity <p>数量</p>
      * @param string $Specification <p>规格型号</p>
@@ -208,6 +215,7 @@ class VatElectronicItemInfo extends AbstractModel
      * @param string $TravelLevel <p>等级，仅旅客运输服务发票返回</p>
      * @param string $DateStart <p>通行日期起</p>
      * @param string $DateEnd <p>通行日期止</p>
+     * @param string $VinNo <p>车架号</p>
      */
     function __construct()
     {
@@ -312,6 +320,10 @@ class VatElectronicItemInfo extends AbstractModel
 
         if (array_key_exists("DateEnd",$param) and $param["DateEnd"] !== null) {
             $this->DateEnd = $param["DateEnd"];
+        }
+
+        if (array_key_exists("VinNo",$param) and $param["VinNo"] !== null) {
+            $this->VinNo = $param["VinNo"];
         }
     }
 }

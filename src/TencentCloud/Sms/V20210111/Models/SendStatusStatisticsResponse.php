@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendStatusStatistics返回参数结构体
  *
- * @method SendStatusStatistics getSendStatusStatistics() 获取发送数据统计响应包体。
- * @method void setSendStatusStatistics(SendStatusStatistics $SendStatusStatistics) 设置发送数据统计响应包体。
+ * @method SendStatusStatistics getSendStatusStatistics() 获取<p>发送数据统计响应包体。</p>
+ * @method void setSendStatusStatistics(SendStatusStatistics $SendStatusStatistics) 设置<p>发送数据统计响应包体。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SendStatusStatisticsResponse extends AbstractModel
 {
     /**
-     * @var SendStatusStatistics 发送数据统计响应包体。
+     * @var SendStatusStatistics <p>发送数据统计响应包体。</p>
      */
     public $SendStatusStatistics;
 
@@ -38,7 +38,7 @@ class SendStatusStatisticsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SendStatusStatistics $SendStatusStatistics 发送数据统计响应包体。
+     * @param SendStatusStatistics $SendStatusStatistics <p>发送数据统计响应包体。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceNodeProperty返回参数结构体
  *
- * @method array getMongos() 获取Mongos节点属性。
- * @method void setMongos(array $Mongos) 设置Mongos节点属性。
- * @method array getReplicateSets() 获取副本集节点信息。
- * @method void setReplicateSets(array $ReplicateSets) 设置副本集节点信息。
+ * @method array getMongos() 获取<p>Mongos节点属性。</p>
+ * @method void setMongos(array $Mongos) 设置<p>Mongos节点属性。</p>
+ * @method array getReplicateSets() 获取<p>副本集节点信息。</p>
+ * @method void setReplicateSets(array $ReplicateSets) 设置<p>副本集节点信息。</p>
+ * @method array getDynamoProxies() 获取<p>Dynamo节点信息</p>
+ * @method void setDynamoProxies(array $DynamoProxies) 设置<p>Dynamo节点信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBInstanceNodePropertyResponse extends AbstractModel
 {
     /**
-     * @var array Mongos节点属性。
+     * @var array <p>Mongos节点属性。</p>
      */
     public $Mongos;
 
     /**
-     * @var array 副本集节点信息。
+     * @var array <p>副本集节点信息。</p>
      */
     public $ReplicateSets;
+
+    /**
+     * @var array <p>Dynamo节点信息</p>
+     */
+    public $DynamoProxies;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeDBInstanceNodePropertyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Mongos Mongos节点属性。
-     * @param array $ReplicateSets 副本集节点信息。
+     * @param array $Mongos <p>Mongos节点属性。</p>
+     * @param array $ReplicateSets <p>副本集节点信息。</p>
+     * @param array $DynamoProxies <p>Dynamo节点信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -77,6 +85,15 @@ class DescribeDBInstanceNodePropertyResponse extends AbstractModel
                 $obj = new ReplicateSetInfo();
                 $obj->deserialize($value);
                 array_push($this->ReplicateSets, $obj);
+            }
+        }
+
+        if (array_key_exists("DynamoProxies",$param) and $param["DynamoProxies"] !== null) {
+            $this->DynamoProxies = [];
+            foreach ($param["DynamoProxies"] as $key => $value){
+                $obj = new NodeProperty();
+                $obj->deserialize($value);
+                array_push($this->DynamoProxies, $obj);
             }
         }
 

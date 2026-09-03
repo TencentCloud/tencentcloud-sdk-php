@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * metadata 项
  *
- * @method string getName() 获取<p>沙箱元数据名</p>
- * @method void setName(string $Name) 设置<p>沙箱元数据名</p>
- * @method string getValue() 获取<p>沙箱元数据值</p>
- * @method void setValue(string $Value) 设置<p>沙箱元数据值</p>
+ * @method string getName() 获取<p>元数据名</p>
+ * @method void setName(string $Name) 设置<p>元数据名</p>
+ * @method string getValue() 获取<p>元数据值</p>
+ * @method void setValue(string $Value) 设置<p>元数据值</p>
  */
 class MetadataVar extends AbstractModel
 {
     /**
-     * @var string <p>沙箱元数据名</p>
+     * @var string <p>元数据名</p>
      */
     public $Name;
 
     /**
-     * @var string <p>沙箱元数据值</p>
+     * @var string <p>元数据值</p>
      */
     public $Value;
 
     /**
-     * @param string $Name <p>沙箱元数据名</p>
-     * @param string $Value <p>沙箱元数据值</p>
+     * @param string $Name <p>元数据名</p>
+     * @param string $Value <p>元数据值</p>
      */
     function __construct()
     {

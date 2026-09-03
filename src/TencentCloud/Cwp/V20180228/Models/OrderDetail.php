@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 订单详情
  *
- * @method string getResourceID() 获取资源ID
- * @method void setResourceID(string $ResourceID) 设置资源ID
- * @method string getInquireKey() 获取计费项
- * @method void setInquireKey(string $InquireKey) 设置计费项
- * @method integer getStatus() 获取订单状态
-- 1 正常
-- 2 隔离期
-- 3 已销毁
- * @method void setStatus(integer $Status) 设置订单状态
-- 1 正常
-- 2 隔离期
-- 3 已销毁
+ * @method string getResourceID() 获取<p>资源ID</p>
+ * @method void setResourceID(string $ResourceID) 设置<p>资源ID</p>
+ * @method string getInquireKey() 获取<p>计费项</p>
+ * @method void setInquireKey(string $InquireKey) 设置<p>计费项</p>
+ * @method integer getStatus() 获取<p>订单状态</p><ul><li>1 正常</li><li>2 隔离期</li><li>3 已销毁</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>订单状态</p><ul><li>1 正常</li><li>2 隔离期</li><li>3 已销毁</li></ul>
+ * @method integer getSourceType() 获取<p>源类型</p>
+ * @method void setSourceType(integer $SourceType) 设置<p>源类型</p>
  */
 class OrderDetail extends AbstractModel
 {
     /**
-     * @var string 资源ID
+     * @var string <p>资源ID</p>
      */
     public $ResourceID;
 
     /**
-     * @var string 计费项
+     * @var string <p>计费项</p>
      */
     public $InquireKey;
 
     /**
-     * @var integer 订单状态
-- 1 正常
-- 2 隔离期
-- 3 已销毁
+     * @var integer <p>订单状态</p><ul><li>1 正常</li><li>2 隔离期</li><li>3 已销毁</li></ul>
      */
     public $Status;
 
     /**
-     * @param string $ResourceID 资源ID
-     * @param string $InquireKey 计费项
-     * @param integer $Status 订单状态
-- 1 正常
-- 2 隔离期
-- 3 已销毁
+     * @var integer <p>源类型</p>
+     */
+    public $SourceType;
+
+    /**
+     * @param string $ResourceID <p>资源ID</p>
+     * @param string $InquireKey <p>计费项</p>
+     * @param integer $Status <p>订单状态</p><ul><li>1 正常</li><li>2 隔离期</li><li>3 已销毁</li></ul>
+     * @param integer $SourceType <p>源类型</p>
      */
     function __construct()
     {
@@ -84,6 +80,10 @@ class OrderDetail extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
         }
     }
 }

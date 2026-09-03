@@ -20,162 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 软件统计响应对象集合
  *
- * @method string getUserName() 获取终端用户名
+ * @method string getUserName() 获取<p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserName(string $UserName) 设置终端用户名
+ * @method void setUserName(string $UserName) 设置<p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMacAddr() 获取mac地址
+ * @method string getMacAddr() 获取<p>mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMacAddr(string $MacAddr) 设置mac地址
+ * @method void setMacAddr(string $MacAddr) 设置<p>mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取终端计算机名称
+ * @method string getName() 获取<p>终端计算机名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置终端计算机名称
+ * @method void setName(string $Name) 设置<p>终端计算机名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGroupNamePath() 获取终端组路径名
+ * @method string getGroupNamePath() 获取<p>终端组路径名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupNamePath(string $GroupNamePath) 设置终端组路径名
+ * @method void setGroupNamePath(string $GroupNamePath) 设置<p>终端组路径名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIp() 获取IP地址
+ * @method string getIp() 获取<p>IP地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIp(string $Ip) 设置IP地址
+ * @method void setIp(string $Ip) 设置<p>IP地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMid() 获取唯一标识Mid
+ * @method string getMid() 获取<p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMid(string $Mid) 设置唯一标识Mid
+ * @method void setMid(string $Mid) 设置<p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIoaUserName() 获取企业账户名
+ * @method string getIoaUserName() 获取<p>企业账户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIoaUserName(string $IoaUserName) 设置企业账户名
+ * @method void setIoaUserName(string $IoaUserName) 设置<p>企业账户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGroupId() 获取终端分组Id(只支持32位)
+ * @method integer getGroupId() 获取<p>终端分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupId(integer $GroupId) 设置终端分组Id(只支持32位)
+ * @method void setGroupId(integer $GroupId) 设置<p>终端分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGroupName() 获取终端组名
+ * @method string getGroupName() 获取<p>终端组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupName(string $GroupName) 设置终端组名
+ * @method void setGroupName(string $GroupName) 设置<p>终端组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getId() 获取终端列表Id(只支持32位)
+ * @method integer getId() 获取<p>终端列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置终端列表Id(只支持32位)
+ * @method void setId(integer $Id) 设置<p>终端列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSoftNum() 获取软件数量(只支持32位)
+ * @method integer getSoftNum() 获取<p>软件数量(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSoftNum(integer $SoftNum) 设置软件数量(只支持32位)
+ * @method void setSoftNum(integer $SoftNum) 设置<p>软件数量(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPiracyRisk() 获取盗版风险（1=风险;2=未知）
+ * @method integer getPiracyRisk() 获取<p>盗版风险（1=风险;2=未知）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPiracyRisk(integer $PiracyRisk) 设置盗版风险（1=风险;2=未知）
+ * @method void setPiracyRisk(integer $PiracyRisk) 设置<p>盗版风险（1=风险;2=未知）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemarkName() 获取终端备注名
- * @method void setRemarkName(string $RemarkName) 设置终端备注名
+ * @method string getRemarkName() 获取<p>终端备注名</p>
+ * @method void setRemarkName(string $RemarkName) 设置<p>终端备注名</p>
  */
 class DescribeSoftCensusListByDeviceData extends AbstractModel
 {
     /**
-     * @var string 终端用户名
+     * @var string <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
-     * @var string mac地址
+     * @var string <p>mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MacAddr;
 
     /**
-     * @var string 终端计算机名称
+     * @var string <p>终端计算机名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 终端组路径名
+     * @var string <p>终端组路径名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupNamePath;
 
     /**
-     * @var string IP地址
+     * @var string <p>IP地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
-     * @var string 唯一标识Mid
+     * @var string <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mid;
 
     /**
-     * @var string 企业账户名
+     * @var string <p>企业账户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IoaUserName;
 
     /**
-     * @var integer 终端分组Id(只支持32位)
+     * @var integer <p>终端分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
-     * @var string 终端组名
+     * @var string <p>终端组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
-     * @var integer 终端列表Id(只支持32位)
+     * @var integer <p>终端列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var integer 软件数量(只支持32位)
+     * @var integer <p>软件数量(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SoftNum;
 
     /**
-     * @var integer 盗版风险（1=风险;2=未知）
+     * @var integer <p>盗版风险（1=风险;2=未知）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PiracyRisk;
 
     /**
-     * @var string 终端备注名
+     * @var string <p>终端备注名</p>
      */
     public $RemarkName;
 
     /**
-     * @param string $UserName 终端用户名
+     * @param string $UserName <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MacAddr mac地址
+     * @param string $MacAddr <p>mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 终端计算机名称
+     * @param string $Name <p>终端计算机名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GroupNamePath 终端组路径名
+     * @param string $GroupNamePath <p>终端组路径名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ip IP地址
+     * @param string $Ip <p>IP地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Mid 唯一标识Mid
+     * @param string $Mid <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IoaUserName 企业账户名
+     * @param string $IoaUserName <p>企业账户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $GroupId 终端分组Id(只支持32位)
+     * @param integer $GroupId <p>终端分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GroupName 终端组名
+     * @param string $GroupName <p>终端组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Id 终端列表Id(只支持32位)
+     * @param integer $Id <p>终端列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SoftNum 软件数量(只支持32位)
+     * @param integer $SoftNum <p>软件数量(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PiracyRisk 盗版风险（1=风险;2=未知）
+     * @param integer $PiracyRisk <p>盗版风险（1=风险;2=未知）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RemarkName 终端备注名
+     * @param string $RemarkName <p>终端备注名</p>
      */
     function __construct()
     {

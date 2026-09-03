@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetRecognizeVocabV3请求参数结构体
  *
-
+ * @method string getVocabId() 获取<p>词表 id</p>
+ * @method void setVocabId(string $VocabId) 设置<p>词表 id</p>
+ * @method integer getSdkAppId() 获取<p>客户维度唯一标识</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>客户维度唯一标识</p>
  */
 class GetRecognizeVocabV3Request extends AbstractModel
 {
-
+    /**
+     * @var string <p>词表 id</p>
+     */
+    public $VocabId;
 
     /**
+     * @var integer <p>客户维度唯一标识</p>
+     */
+    public $SdkAppId;
 
+    /**
+     * @param string $VocabId <p>词表 id</p>
+     * @param integer $SdkAppId <p>客户维度唯一标识</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class GetRecognizeVocabV3Request extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("VocabId",$param) and $param["VocabId"] !== null) {
+            $this->VocabId = $param["VocabId"];
+        }
 
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
+        }
     }
 }

@@ -20,213 +20,213 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoteWrite配置信息
  *
- * @method string getTaskId() 获取任务id
+ * @method string getTaskId() 获取<p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务id
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopicId() 获取日志主题ID
+ * @method string getTopicId() 获取<p>日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置日志主题ID
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取Remote Write任务名称
+ * @method string getName() 获取<p>Remote Write任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置Remote Write任务名称
+ * @method void setName(string $Name) 设置<p>Remote Write任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNetType() 获取网络类型
-1: 内网
-2:外网
+ * @method integer getNetType() 获取<p>网络类型<br>1: 内网<br>2:外网</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetType(integer $NetType) 设置网络类型
-1: 内网
-2:外网
+ * @method void setNetType(integer $NetType) 设置<p>网络类型<br>1: 内网<br>2:外网</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcId() 获取私有网络id
+ * @method string getVpcId() 获取<p>私有网络id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcId(string $VpcId) 设置私有网络id
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取任务运行状态
-1: 运行中
-2:暂停
-3: 失败
+ * @method integer getStatus() 获取<p>任务运行状态<br>1: 运行中<br>2:暂停<br>3: 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置任务运行状态
-1: 运行中
-2:暂停
-3: 失败
+ * @method void setStatus(integer $Status) 设置<p>任务运行状态<br>1: 运行中<br>2:暂停<br>3: 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTarget() 获取目标服务名称
+ * @method string getTarget() 获取<p>目标服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTarget(string $Target) 设置目标服务名称
+ * @method void setTarget(string $Target) 设置<p>目标服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemoteWriteURL() 获取目标地址
+ * @method string getRemoteWriteURL() 获取<p>目标地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemoteWriteURL(string $RemoteWriteURL) 设置目标地址
+ * @method void setRemoteWriteURL(string $RemoteWriteURL) 设置<p>目标地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAuthType() 获取鉴权类型
-0: 无鉴权 1: basic_auth 2: token
+ * @method integer getAuthType() 获取<p>鉴权类型<br>0: 无鉴权 1: basic_auth 2: token</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAuthType(integer $AuthType) 设置鉴权类型
-0: 无鉴权 1: basic_auth 2: token
+ * @method void setAuthType(integer $AuthType) 设置<p>鉴权类型<br>0: 无鉴权 1: basic_auth 2: token</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RemoteWriteAuthInfo getAuthInfo() 获取鉴权信息
+ * @method RemoteWriteAuthInfo getAuthInfo() 获取<p>鉴权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAuthInfo(RemoteWriteAuthInfo $AuthInfo) 设置鉴权信息
+ * @method void setAuthInfo(RemoteWriteAuthInfo $AuthInfo) 设置<p>鉴权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogsetId() 获取日志集
+ * @method string getLogsetId() 获取<p>日志集</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogsetId(string $LogsetId) 设置日志集
+ * @method void setLogsetId(string $LogsetId) 设置<p>日志集</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEnable() 获取任务状态
+ * @method integer getEnable() 获取<p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnable(integer $Enable) 设置任务状态
+ * @method void setEnable(integer $Enable) 设置<p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVirtualGatewayType() 获取后端服务类型
+ * @method integer getVirtualGatewayType() 获取<p>后端服务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVirtualGatewayType(integer $VirtualGatewayType) 设置后端服务类型
+ * @method void setVirtualGatewayType(integer $VirtualGatewayType) 设置<p>后端服务类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取<p>云时序数据库实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置<p>云时序数据库实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHasServicesLog() 获取<p>是否开启投递服务日志。1：关闭，2：开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasServicesLog(integer $HasServicesLog) 设置<p>是否开启投递服务日志。1：关闭，2：开启。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RemoteWriteInfo extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 日志主题ID
+     * @var string <p>日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
-     * @var string Remote Write任务名称
+     * @var string <p>Remote Write任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var integer 网络类型
-1: 内网
-2:外网
+     * @var integer <p>网络类型<br>1: 内网<br>2:外网</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetType;
 
     /**
-     * @var string 私有网络id
+     * @var string <p>私有网络id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
-     * @var integer 任务运行状态
-1: 运行中
-2:暂停
-3: 失败
+     * @var integer <p>任务运行状态<br>1: 运行中<br>2:暂停<br>3: 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 目标服务名称
+     * @var string <p>目标服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Target;
 
     /**
-     * @var string 目标地址
+     * @var string <p>目标地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteWriteURL;
 
     /**
-     * @var integer 鉴权类型
-0: 无鉴权 1: basic_auth 2: token
+     * @var integer <p>鉴权类型<br>0: 无鉴权 1: basic_auth 2: token</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthType;
 
     /**
-     * @var RemoteWriteAuthInfo 鉴权信息
+     * @var RemoteWriteAuthInfo <p>鉴权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthInfo;
 
     /**
-     * @var string 日志集
+     * @var string <p>日志集</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogsetId;
 
     /**
-     * @var integer 任务状态
+     * @var integer <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enable;
 
     /**
-     * @var integer 后端服务类型
+     * @var integer <p>后端服务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualGatewayType;
 
     /**
-     * @param string $TaskId 任务id
+     * @var string <p>云时序数据库实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TopicId 日志主题ID
+     */
+    public $InstanceId;
+
+    /**
+     * @var integer <p>是否开启投递服务日志。1：关闭，2：开启。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name Remote Write任务名称
+     */
+    public $HasServicesLog;
+
+    /**
+     * @param string $TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NetType 网络类型
-1: 内网
-2:外网
+     * @param string $TopicId <p>日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcId 私有网络id
+     * @param string $Name <p>Remote Write任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 任务运行状态
-1: 运行中
-2:暂停
-3: 失败
+     * @param integer $NetType <p>网络类型<br>1: 内网<br>2:外网</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param string $VpcId <p>私有网络id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param integer $Status <p>任务运行状态<br>1: 运行中<br>2:暂停<br>3: 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Target 目标服务名称
+     * @param string $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RemoteWriteURL 目标地址
+     * @param string $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AuthType 鉴权类型
-0: 无鉴权 1: basic_auth 2: token
+     * @param string $Target <p>目标服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoteWriteAuthInfo $AuthInfo 鉴权信息
+     * @param string $RemoteWriteURL <p>目标地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogsetId 日志集
+     * @param integer $AuthType <p>鉴权类型<br>0: 无鉴权 1: basic_auth 2: token</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Enable 任务状态
+     * @param RemoteWriteAuthInfo $AuthInfo <p>鉴权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VirtualGatewayType 后端服务类型
+     * @param string $LogsetId <p>日志集</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Enable <p>任务状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VirtualGatewayType <p>后端服务类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId <p>云时序数据库实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -301,6 +301,14 @@ class RemoteWriteInfo extends AbstractModel
 
         if (array_key_exists("VirtualGatewayType",$param) and $param["VirtualGatewayType"] !== null) {
             $this->VirtualGatewayType = $param["VirtualGatewayType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
+            $this->HasServicesLog = $param["HasServicesLog"];
         }
     }
 }

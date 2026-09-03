@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdatePublishCdnStream请求参数结构体
  *
- * @method integer getSdkAppId() 获取TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
- * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
- * @method string getTaskId() 获取唯一标识转推任务。
- * @method void setTaskId(string $TaskId) 设置唯一标识转推任务。
- * @method integer getSequenceNumber() 获取客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。
- * @method void setSequenceNumber(integer $SequenceNumber) 设置客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。
- * @method integer getWithTranscoding() 获取是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
- * @method void setWithTranscoding(integer $WithTranscoding) 设置是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
- * @method McuAudioParams getAudioParams() 获取更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。
- * @method void setAudioParams(McuAudioParams $AudioParams) 设置更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。
- * @method McuVideoParams getVideoParams() 获取更新视频相关参数，转码时支持更新除编码类型之外的编码参数，视频布局参数，背景图片和背景颜色参数，水印参数。不填表示不更新此参数。
- * @method void setVideoParams(McuVideoParams $VideoParams) 设置更新视频相关参数，转码时支持更新除编码类型之外的编码参数，视频布局参数，背景图片和背景颜色参数，水印参数。不填表示不更新此参数。
- * @method SingleSubscribeParams getSingleSubscribeParams() 获取更新单流转推的用户上行参数，仅在非转码时有效。不填表示不更新此参数。
- * @method void setSingleSubscribeParams(SingleSubscribeParams $SingleSubscribeParams) 设置更新单流转推的用户上行参数，仅在非转码时有效。不填表示不更新此参数。
- * @method array getPublishCdnParams() 获取更新转推的CDN参数。不填表示不更新此参数。
- * @method void setPublishCdnParams(array $PublishCdnParams) 设置更新转推的CDN参数。不填表示不更新此参数。
- * @method McuSeiParams getSeiParams() 获取混流SEI参数
- * @method void setSeiParams(McuSeiParams $SeiParams) 设置混流SEI参数
- * @method array getFeedBackRoomParams() 获取回推房间信息
- * @method void setFeedBackRoomParams(array $FeedBackRoomParams) 设置回推房间信息
+ * @method integer getSdkAppId() 获取<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转推的房间所对应的SdkAppId相同。</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转推的房间所对应的SdkAppId相同。</p>
+ * @method string getTaskId() 获取<p>唯一标识转推任务。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>唯一标识转推任务。</p>
+ * @method integer getSequenceNumber() 获取<p>客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。</p>
+ * @method void setSequenceNumber(integer $SequenceNumber) 设置<p>客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。</p>
+ * @method integer getWithTranscoding() 获取<p>是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。</p>
+ * @method void setWithTranscoding(integer $WithTranscoding) 设置<p>是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。</p>
+ * @method McuAudioParams getAudioParams() 获取<p>更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。</p>
+ * @method void setAudioParams(McuAudioParams $AudioParams) 设置<p>更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。</p>
+ * @method McuVideoParams getVideoParams() 获取<p>更新视频相关参数，转码时支持更新除编码类型之外的编码参数，视频布局参数，背景图片和背景颜色参数，水印参数。不填表示不更新此参数。</p>
+ * @method void setVideoParams(McuVideoParams $VideoParams) 设置<p>更新视频相关参数，转码时支持更新除编码类型之外的编码参数，视频布局参数，背景图片和背景颜色参数，水印参数。不填表示不更新此参数。</p>
+ * @method SingleSubscribeParams getSingleSubscribeParams() 获取<p>更新单流转推的用户上行参数，仅在非转码时有效。不填表示不更新此参数。</p>
+ * @method void setSingleSubscribeParams(SingleSubscribeParams $SingleSubscribeParams) 设置<p>更新单流转推的用户上行参数，仅在非转码时有效。不填表示不更新此参数。</p>
+ * @method array getPublishCdnParams() 获取<p>更新转推的CDN参数。不填表示不更新此参数。</p>
+ * @method void setPublishCdnParams(array $PublishCdnParams) 设置<p>更新转推的CDN参数。不填表示不更新此参数。</p>
+ * @method McuSeiParams getSeiParams() 获取<p>混流SEI参数</p>
+ * @method void setSeiParams(McuSeiParams $SeiParams) 设置<p>混流SEI参数</p>
+ * @method array getFeedBackRoomParams() 获取<p>回推房间信息</p>
+ * @method void setFeedBackRoomParams(array $FeedBackRoomParams) 设置<p>回推房间信息</p>
  */
 class UpdatePublishCdnStreamRequest extends AbstractModel
 {
     /**
-     * @var integer TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
+     * @var integer <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转推的房间所对应的SdkAppId相同。</p>
      */
     public $SdkAppId;
 
     /**
-     * @var string 唯一标识转推任务。
+     * @var string <p>唯一标识转推任务。</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。
+     * @var integer <p>客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。</p>
      */
     public $SequenceNumber;
 
     /**
-     * @var integer 是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
+     * @var integer <p>是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。</p>
      */
     public $WithTranscoding;
 
     /**
-     * @var McuAudioParams 更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。
+     * @var McuAudioParams <p>更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。</p>
      */
     public $AudioParams;
 
     /**
-     * @var McuVideoParams 更新视频相关参数，转码时支持更新除编码类型之外的编码参数，视频布局参数，背景图片和背景颜色参数，水印参数。不填表示不更新此参数。
+     * @var McuVideoParams <p>更新视频相关参数，转码时支持更新除编码类型之外的编码参数，视频布局参数，背景图片和背景颜色参数，水印参数。不填表示不更新此参数。</p>
      */
     public $VideoParams;
 
     /**
-     * @var SingleSubscribeParams 更新单流转推的用户上行参数，仅在非转码时有效。不填表示不更新此参数。
+     * @var SingleSubscribeParams <p>更新单流转推的用户上行参数，仅在非转码时有效。不填表示不更新此参数。</p>
      */
     public $SingleSubscribeParams;
 
     /**
-     * @var array 更新转推的CDN参数。不填表示不更新此参数。
+     * @var array <p>更新转推的CDN参数。不填表示不更新此参数。</p>
      */
     public $PublishCdnParams;
 
     /**
-     * @var McuSeiParams 混流SEI参数
+     * @var McuSeiParams <p>混流SEI参数</p>
      */
     public $SeiParams;
 
     /**
-     * @var array 回推房间信息
+     * @var array <p>回推房间信息</p>
      */
     public $FeedBackRoomParams;
 
     /**
-     * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
-     * @param string $TaskId 唯一标识转推任务。
-     * @param integer $SequenceNumber 客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。
-     * @param integer $WithTranscoding 是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
-     * @param McuAudioParams $AudioParams 更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。
-     * @param McuVideoParams $VideoParams 更新视频相关参数，转码时支持更新除编码类型之外的编码参数，视频布局参数，背景图片和背景颜色参数，水印参数。不填表示不更新此参数。
-     * @param SingleSubscribeParams $SingleSubscribeParams 更新单流转推的用户上行参数，仅在非转码时有效。不填表示不更新此参数。
-     * @param array $PublishCdnParams 更新转推的CDN参数。不填表示不更新此参数。
-     * @param McuSeiParams $SeiParams 混流SEI参数
-     * @param array $FeedBackRoomParams 回推房间信息
+     * @param integer $SdkAppId <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转推的房间所对应的SdkAppId相同。</p>
+     * @param string $TaskId <p>唯一标识转推任务。</p>
+     * @param integer $SequenceNumber <p>客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。</p>
+     * @param integer $WithTranscoding <p>是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。</p>
+     * @param McuAudioParams $AudioParams <p>更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。</p>
+     * @param McuVideoParams $VideoParams <p>更新视频相关参数，转码时支持更新除编码类型之外的编码参数，视频布局参数，背景图片和背景颜色参数，水印参数。不填表示不更新此参数。</p>
+     * @param SingleSubscribeParams $SingleSubscribeParams <p>更新单流转推的用户上行参数，仅在非转码时有效。不填表示不更新此参数。</p>
+     * @param array $PublishCdnParams <p>更新转推的CDN参数。不填表示不更新此参数。</p>
+     * @param McuSeiParams $SeiParams <p>混流SEI参数</p>
+     * @param array $FeedBackRoomParams <p>回推房间信息</p>
      */
     function __construct()
     {

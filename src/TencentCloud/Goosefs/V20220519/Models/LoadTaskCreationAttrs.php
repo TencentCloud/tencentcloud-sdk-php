@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建预热任务
  *
- * @method string getTaskType() 获取预热任务类型，枚举值，MetadataLoad｜DistributedLoad。
- * @method void setTaskType(string $TaskType) 设置预热任务类型，枚举值，MetadataLoad｜DistributedLoad。
- * @method integer getPriority() 获取任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
- * @method void setPriority(integer $Priority) 设置任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
- * @method string getDescription() 获取任务描述，支持中文
- * @method void setDescription(string $Description) 设置任务描述，支持中文
- * @method MetadataLoadAttrs getMetadataLoadAttrs() 获取元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
- * @method void setMetadataLoadAttrs(MetadataLoadAttrs $MetadataLoadAttrs) 设置元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
- * @method DistributedLoadAttrs getDistributedLoadAttrs() 获取数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
- * @method void setDistributedLoadAttrs(DistributedLoadAttrs $DistributedLoadAttrs) 设置数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
- * @method string getReportPath() 获取将任务执行报告写入 COS 的路径，如果不需要报告则入参空
- * @method void setReportPath(string $ReportPath) 设置将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+ * @method string getTaskType() 获取<p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad。</p>
+ * @method void setTaskType(string $TaskType) 设置<p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad。</p>
+ * @method integer getPriority() 获取<p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
+ * @method void setPriority(integer $Priority) 设置<p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
+ * @method string getDescription() 获取<p>任务描述，支持中文</p>
+ * @method void setDescription(string $Description) 设置<p>任务描述，支持中文</p>
+ * @method MetadataLoadAttrs getMetadataLoadAttrs() 获取<p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
+ * @method void setMetadataLoadAttrs(MetadataLoadAttrs $MetadataLoadAttrs) 设置<p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
+ * @method DistributedLoadAttrs getDistributedLoadAttrs() 获取<p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
+ * @method void setDistributedLoadAttrs(DistributedLoadAttrs $DistributedLoadAttrs) 设置<p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
+ * @method string getReportPath() 获取<p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
+ * @method void setReportPath(string $ReportPath) 设置<p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
+ * @method LoadDataAttrs getLoadDataAttrs() 获取<p>仅预热数据任务参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+ * @method void setLoadDataAttrs(LoadDataAttrs $LoadDataAttrs) 设置<p>仅预热数据任务参数。入参数TaskType为LoadData时，该参数不应为空。</p>
  */
 class LoadTaskCreationAttrs extends AbstractModel
 {
     /**
-     * @var string 预热任务类型，枚举值，MetadataLoad｜DistributedLoad。
+     * @var string <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad。</p>
      */
     public $TaskType;
 
     /**
-     * @var integer 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
+     * @var integer <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
      */
     public $Priority;
 
     /**
-     * @var string 任务描述，支持中文
+     * @var string <p>任务描述，支持中文</p>
      */
     public $Description;
 
     /**
-     * @var MetadataLoadAttrs 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
+     * @var MetadataLoadAttrs <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
      */
     public $MetadataLoadAttrs;
 
     /**
-     * @var DistributedLoadAttrs 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
+     * @var DistributedLoadAttrs <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
      */
     public $DistributedLoadAttrs;
 
     /**
-     * @var string 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+     * @var string <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
      */
     public $ReportPath;
 
     /**
-     * @param string $TaskType 预热任务类型，枚举值，MetadataLoad｜DistributedLoad。
-     * @param integer $Priority 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
-     * @param string $Description 任务描述，支持中文
-     * @param MetadataLoadAttrs $MetadataLoadAttrs 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
-     * @param DistributedLoadAttrs $DistributedLoadAttrs 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
-     * @param string $ReportPath 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+     * @var LoadDataAttrs <p>仅预热数据任务参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+     */
+    public $LoadDataAttrs;
+
+    /**
+     * @param string $TaskType <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad。</p>
+     * @param integer $Priority <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
+     * @param string $Description <p>任务描述，支持中文</p>
+     * @param MetadataLoadAttrs $MetadataLoadAttrs <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
+     * @param DistributedLoadAttrs $DistributedLoadAttrs <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
+     * @param string $ReportPath <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
+     * @param LoadDataAttrs $LoadDataAttrs <p>仅预热数据任务参数。入参数TaskType为LoadData时，该参数不应为空。</p>
      */
     function __construct()
     {
@@ -110,6 +118,11 @@ class LoadTaskCreationAttrs extends AbstractModel
 
         if (array_key_exists("ReportPath",$param) and $param["ReportPath"] !== null) {
             $this->ReportPath = $param["ReportPath"];
+        }
+
+        if (array_key_exists("LoadDataAttrs",$param) and $param["LoadDataAttrs"] !== null) {
+            $this->LoadDataAttrs = new LoadDataAttrs();
+            $this->LoadDataAttrs->deserialize($param["LoadDataAttrs"]);
         }
     }
 }

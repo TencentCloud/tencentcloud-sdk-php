@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageTracksCount(integer $MessageTracksCount) 设置<p>消息消费情况列表总条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDelayMessageStatus() 获取<p>5.x 时间轮定时消息状态，仅在查询定时消息（命中 RMQ_SYS_WHEEL_TIMER）时返回。枚举值：PENDING（未到期）、DELIVERED（已到期投递）、RECALLED（已撤回）、NOT_FOUND（消息不存在）、UNSUPPORTED（该消息类型不支持状态查询，如 4.x DelayLevel 延迟消息）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDelayMessageStatus(string $DelayMessageStatus) 设置<p>5.x 时间轮定时消息状态，仅在查询定时消息（命中 RMQ_SYS_WHEEL_TIMER）时返回。枚举值：PENDING（未到期）、DELIVERED（已到期投递）、RECALLED（已撤回）、NOT_FOUND（消息不存在）、UNSUPPORTED（该消息类型不支持状态查询，如 4.x DelayLevel 延迟消息）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -98,6 +102,12 @@ class DescribeMessageResponse extends AbstractModel
     public $MessageTracksCount;
 
     /**
+     * @var string <p>5.x 时间轮定时消息状态，仅在查询定时消息（命中 RMQ_SYS_WHEEL_TIMER）时返回。枚举值：PENDING（未到期）、DELIVERED（已到期投递）、RECALLED（已撤回）、NOT_FOUND（消息不存在）、UNSUPPORTED（该消息类型不支持状态查询，如 4.x DelayLevel 延迟消息）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DelayMessageStatus;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -114,6 +124,8 @@ class DescribeMessageResponse extends AbstractModel
      * @param string $ShowTopicName <p>主题名称</p>
      * @param string $LiteTopic <p>轻量主题名称</p>
      * @param integer $MessageTracksCount <p>消息消费情况列表总条数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DelayMessageStatus <p>5.x 时间轮定时消息状态，仅在查询定时消息（命中 RMQ_SYS_WHEEL_TIMER）时返回。枚举值：PENDING（未到期）、DELIVERED（已到期投递）、RECALLED（已撤回）、NOT_FOUND（消息不存在）、UNSUPPORTED（该消息类型不支持状态查询，如 4.x DelayLevel 延迟消息）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -169,6 +181,10 @@ class DescribeMessageResponse extends AbstractModel
 
         if (array_key_exists("MessageTracksCount",$param) and $param["MessageTracksCount"] !== null) {
             $this->MessageTracksCount = $param["MessageTracksCount"];
+        }
+
+        if (array_key_exists("DelayMessageStatus",$param) and $param["DelayMessageStatus"] !== null) {
+            $this->DelayMessageStatus = $param["DelayMessageStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

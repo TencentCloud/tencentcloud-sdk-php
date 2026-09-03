@@ -26,11 +26,18 @@ use TencentCloud\Trro\V20220325\Models as Models;
  * @method Models\BatchDeleteDevicesResponse BatchDeleteDevices(Models\BatchDeleteDevicesRequest $req) 用于批量删除设备
  * @method Models\BatchDeletePolicyResponse BatchDeletePolicy(Models\BatchDeletePolicyRequest $req) 用于批量删除修改权限配置
  * @method Models\BoundLicensesResponse BoundLicenses(Models\BoundLicensesRequest $req) 为推流设备绑定license，优先绑定到期时间最近的，到期时间相同优先绑定月包
+ * @method Models\CreateBatchVideoAnnotationJobResponse CreateBatchVideoAnnotationJob(Models\CreateBatchVideoAnnotationJobRequest $req) 提交S3兼容存储桶数据源的目录前缀创建批量标注任务。创建后，服务端异步列举前缀下全部视频逐个建立处理项（受配额上限控制，超限截断）。
  * @method Models\CreateCloudRecordingResponse CreateCloudRecording(Models\CreateCloudRecordingRequest $req) 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 用于创建设备
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 用于创建项目
+ * @method Models\CreateVideoAnnotationJobResponse CreateVideoAnnotationJob(Models\CreateVideoAnnotationJobRequest $req) 提交单个视频创建标注任务。支持 S3兼容 存储与 HTTP URL 两种输入源；通过后任务异步执行。
+ * @method Models\DeleteAnnotationJobResponse DeleteAnnotationJob(Models\DeleteAnnotationJobRequest $req) 删除整个任务并级联删除其全部处理项。
+ * @method Models\DeleteAnnotationTaskResponse DeleteAnnotationTask(Models\DeleteAnnotationTaskRequest $req) 删除任务下的单个处理项。
  * @method Models\DeleteCloudRecordingResponse DeleteCloudRecording(Models\DeleteCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 用于删除项目
+ * @method Models\DescribeAnnotationJobsResponse DescribeAnnotationJobs(Models\DescribeAnnotationJobsRequest $req) 分页查询当前用户的任务列表，支持按状态、输入路径前缀过滤。注意任务的聚合状态由后台周期刷新，处理项全部完成后任务状态有短暂延迟。
+ * @method Models\DescribeAnnotationResultsResponse DescribeAnnotationResults(Models\DescribeAnnotationResultsRequest $req) 查询单个处理项的标注结果详情，返回结果的完整 JSON 原文。仅处理成功（或需确认场景）返回内容。
+ * @method Models\DescribeAnnotationTasksResponse DescribeAnnotationTasks(Models\DescribeAnnotationTasksRequest $req) 分页查询某任务下的处理项列表（每个视频一项），支持按文件名前缀、状态过滤。
  * @method Models\DescribeDeviceInfoResponse DescribeDeviceInfo(Models\DescribeDeviceInfoRequest $req) 用于获取指定设备信息
  * @method Models\DescribeDeviceListResponse DescribeDeviceList(Models\DescribeDeviceListRequest $req) 用于获取设备信息列表
  * @method Models\DescribeDeviceSessionDetailsResponse DescribeDeviceSessionDetails(Models\DescribeDeviceSessionDetailsRequest $req) 获取设备会话数据详单
@@ -56,6 +63,7 @@ use TencentCloud\Trro\V20220325\Models as Models;
  * @method Models\ModifyProjectSecModeResponse ModifyProjectSecMode(Models\ModifyProjectSecModeRequest $req) 使用项目共享密钥可动态生成设备登录密钥，登录前无需对设备进行提前注册，适合希望简化业务流程的客户。由于是公共密钥，请务必注意保护项目共享密钥，并及时更新。建议项目共享密钥保存在服务器侧。由服务器生成设备登录密码下发给设备，避免密钥保存在客户端侧产生的密钥泄露风险。
 
 开启项目共享密钥后，对于已注册的设备，仍可使用原设备密码登录。若希望仅能通过共享密钥生成密码登录，请通过云 API 将设备密码更新为"USEPROJECTKEYPWD"。
+ * @method Models\RetryAnnotationTaskResponse RetryAnnotationTask(Models\RetryAnnotationTaskRequest $req) 重跑超时或异常的处理项：重置回未处理状态重新等待执行，所属任务若为异常态自动恢复为处理中。其余状态不可重试。
  * @method Models\StartPublishLiveStreamResponse StartPublishLiveStream(Models\StartPublishLiveStreamRequest $req) 启动一个混流转推任务，将 TRTC 房间的多路音视频流混成一路音视频流，编码后推到直播 CDN 或者回推到 TRTC 房间。也支持不转码直接转推 TRTC 房间的单路流。启动成功后，会返回一个 SdkAppid 维度唯一的任务 Id（TaskId）。您需要保存该 TaskId，后续需要依赖此 TaskId 更新和结束任务。
  * @method Models\StopPublishLiveStreamResponse StopPublishLiveStream(Models\StopPublishLiveStreamRequest $req) 停止指定的混流转推任务。如果没有调用 Stop 接口停止任务，所有参与混流转推的主播离开房间超过MaxIdleTime 设置的时间后，任务也会自动停止。
  */

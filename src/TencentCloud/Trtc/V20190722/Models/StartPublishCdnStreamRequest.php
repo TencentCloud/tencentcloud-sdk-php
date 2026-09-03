@@ -20,122 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartPublishCdnStream请求参数结构体
  *
- * @method integer getSdkAppId() 获取TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
- * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
- * @method string getRoomId() 获取主房间信息RoomId，转推的TRTC房间所对应的RoomId。
- * @method void setRoomId(string $RoomId) 设置主房间信息RoomId，转推的TRTC房间所对应的RoomId。
- * @method integer getRoomIdType() 获取主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
- * @method void setRoomIdType(integer $RoomIdType) 设置主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
- * @method AgentParams getAgentParams() 获取转推服务加入TRTC房间的机器人参数。
- * @method void setAgentParams(AgentParams $AgentParams) 设置转推服务加入TRTC房间的机器人参数。
- * @method integer getWithTranscoding() 获取是否转码，0表示无需转码，1表示需要转码。
-WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。
-注：
-1，混流是必须转码的，这个参数需设置为1。
-2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
- * @method void setWithTranscoding(integer $WithTranscoding) 设置是否转码，0表示无需转码，1表示需要转码。
-WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。
-注：
-1，混流是必须转码的，这个参数需设置为1。
-2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
- * @method McuAudioParams getAudioParams() 获取转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
- * @method void setAudioParams(McuAudioParams $AudioParams) 设置转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
- * @method McuVideoParams getVideoParams() 获取转推流的视频编码参数，不填表示纯音频转推。
- * @method void setVideoParams(McuVideoParams $VideoParams) 设置转推流的视频编码参数，不填表示纯音频转推。
- * @method SingleSubscribeParams getSingleSubscribeParams() 获取需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。
- * @method void setSingleSubscribeParams(SingleSubscribeParams $SingleSubscribeParams) 设置需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。
- * @method array getPublishCdnParams() 获取转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。
- * @method void setPublishCdnParams(array $PublishCdnParams) 设置转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。
- * @method McuSeiParams getSeiParams() 获取混流SEI参数
- * @method void setSeiParams(McuSeiParams $SeiParams) 设置混流SEI参数
- * @method array getFeedBackRoomParams() 获取回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
- * @method void setFeedBackRoomParams(array $FeedBackRoomParams) 设置回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
- * @method McuRecordParams getRecordParams() 获取转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。
- * @method void setRecordParams(McuRecordParams $RecordParams) 设置转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。
+ * @method integer getSdkAppId() 获取<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转推的房间所对应的SdkAppId相同。</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转推的房间所对应的SdkAppId相同。</p>
+ * @method string getRoomId() 获取<p>主房间信息RoomId，转推的TRTC房间所对应的RoomId。</p>
+ * @method void setRoomId(string $RoomId) 设置<p>主房间信息RoomId，转推的TRTC房间所对应的RoomId。</p>
+ * @method integer getRoomIdType() 获取<p>主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。</p>
+ * @method void setRoomIdType(integer $RoomIdType) 设置<p>主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。</p>
+ * @method AgentParams getAgentParams() 获取<p>转推服务加入TRTC房间的机器人参数。</p>
+ * @method void setAgentParams(AgentParams $AgentParams) 设置<p>转推服务加入TRTC房间的机器人参数。</p>
+ * @method integer getWithTranscoding() 获取<p>是否转码，0表示无需转码，1表示需要转码。<br>WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。<br>注：<br>1，混流是必须转码的，这个参数需设置为1。<br>2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。</p>
+ * @method void setWithTranscoding(integer $WithTranscoding) 设置<p>是否转码，0表示无需转码，1表示需要转码。<br>WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。<br>注：<br>1，混流是必须转码的，这个参数需设置为1。<br>2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。</p>
+ * @method McuAudioParams getAudioParams() 获取<p>转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。</p>
+ * @method void setAudioParams(McuAudioParams $AudioParams) 设置<p>转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。</p>
+ * @method McuVideoParams getVideoParams() 获取<p>转推流的视频编码参数，不填表示纯音频转推。</p>
+ * @method void setVideoParams(McuVideoParams $VideoParams) 设置<p>转推流的视频编码参数，不填表示纯音频转推。</p>
+ * @method SingleSubscribeParams getSingleSubscribeParams() 获取<p>需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。</p>
+ * @method void setSingleSubscribeParams(SingleSubscribeParams $SingleSubscribeParams) 设置<p>需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。</p>
+ * @method array getPublishCdnParams() 获取<p>转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。</p>
+ * @method void setPublishCdnParams(array $PublishCdnParams) 设置<p>转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。</p>
+ * @method McuSeiParams getSeiParams() 获取<p>混流SEI参数</p>
+ * @method void setSeiParams(McuSeiParams $SeiParams) 设置<p>混流SEI参数</p>
+ * @method array getFeedBackRoomParams() 获取<p>回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。</p>
+ * @method void setFeedBackRoomParams(array $FeedBackRoomParams) 设置<p>回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。</p>
+ * @method McuRecordParams getRecordParams() 获取<p>转推录制参数，<a href="https://cloud.tencent.com/document/product/647/111748">参考文档</a>。</p>
+ * @method void setRecordParams(McuRecordParams $RecordParams) 设置<p>转推录制参数，<a href="https://cloud.tencent.com/document/product/647/111748">参考文档</a>。</p>
  */
 class StartPublishCdnStreamRequest extends AbstractModel
 {
     /**
-     * @var integer TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
+     * @var integer <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转推的房间所对应的SdkAppId相同。</p>
      */
     public $SdkAppId;
 
     /**
-     * @var string 主房间信息RoomId，转推的TRTC房间所对应的RoomId。
+     * @var string <p>主房间信息RoomId，转推的TRTC房间所对应的RoomId。</p>
      */
     public $RoomId;
 
     /**
-     * @var integer 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
+     * @var integer <p>主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。</p>
      */
     public $RoomIdType;
 
     /**
-     * @var AgentParams 转推服务加入TRTC房间的机器人参数。
+     * @var AgentParams <p>转推服务加入TRTC房间的机器人参数。</p>
      */
     public $AgentParams;
 
     /**
-     * @var integer 是否转码，0表示无需转码，1表示需要转码。
-WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。
-注：
-1，混流是必须转码的，这个参数需设置为1。
-2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
+     * @var integer <p>是否转码，0表示无需转码，1表示需要转码。<br>WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。<br>注：<br>1，混流是必须转码的，这个参数需设置为1。<br>2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。</p>
      */
     public $WithTranscoding;
 
     /**
-     * @var McuAudioParams 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
+     * @var McuAudioParams <p>转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。</p>
      */
     public $AudioParams;
 
     /**
-     * @var McuVideoParams 转推流的视频编码参数，不填表示纯音频转推。
+     * @var McuVideoParams <p>转推流的视频编码参数，不填表示纯音频转推。</p>
      */
     public $VideoParams;
 
     /**
-     * @var SingleSubscribeParams 需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。
+     * @var SingleSubscribeParams <p>需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。</p>
      */
     public $SingleSubscribeParams;
 
     /**
-     * @var array 转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。
+     * @var array <p>转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。</p>
      */
     public $PublishCdnParams;
 
     /**
-     * @var McuSeiParams 混流SEI参数
+     * @var McuSeiParams <p>混流SEI参数</p>
      */
     public $SeiParams;
 
     /**
-     * @var array 回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
+     * @var array <p>回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。</p>
      */
     public $FeedBackRoomParams;
 
     /**
-     * @var McuRecordParams 转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。
+     * @var McuRecordParams <p>转推录制参数，<a href="https://cloud.tencent.com/document/product/647/111748">参考文档</a>。</p>
      */
     public $RecordParams;
 
     /**
-     * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
-     * @param string $RoomId 主房间信息RoomId，转推的TRTC房间所对应的RoomId。
-     * @param integer $RoomIdType 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
-     * @param AgentParams $AgentParams 转推服务加入TRTC房间的机器人参数。
-     * @param integer $WithTranscoding 是否转码，0表示无需转码，1表示需要转码。
-WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。
-注：
-1，混流是必须转码的，这个参数需设置为1。
-2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
-     * @param McuAudioParams $AudioParams 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
-     * @param McuVideoParams $VideoParams 转推流的视频编码参数，不填表示纯音频转推。
-     * @param SingleSubscribeParams $SingleSubscribeParams 需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。
-     * @param array $PublishCdnParams 转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。
-     * @param McuSeiParams $SeiParams 混流SEI参数
-     * @param array $FeedBackRoomParams 回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
-     * @param McuRecordParams $RecordParams 转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。
+     * @param integer $SdkAppId <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转推的房间所对应的SdkAppId相同。</p>
+     * @param string $RoomId <p>主房间信息RoomId，转推的TRTC房间所对应的RoomId。</p>
+     * @param integer $RoomIdType <p>主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。</p>
+     * @param AgentParams $AgentParams <p>转推服务加入TRTC房间的机器人参数。</p>
+     * @param integer $WithTranscoding <p>是否转码，0表示无需转码，1表示需要转码。<br>WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。<br>注：<br>1，混流是必须转码的，这个参数需设置为1。<br>2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。</p>
+     * @param McuAudioParams $AudioParams <p>转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。</p>
+     * @param McuVideoParams $VideoParams <p>转推流的视频编码参数，不填表示纯音频转推。</p>
+     * @param SingleSubscribeParams $SingleSubscribeParams <p>需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。</p>
+     * @param array $PublishCdnParams <p>转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。</p>
+     * @param McuSeiParams $SeiParams <p>混流SEI参数</p>
+     * @param array $FeedBackRoomParams <p>回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。</p>
+     * @param McuRecordParams $RecordParams <p>转推录制参数，<a href="https://cloud.tencent.com/document/product/647/111748">参考文档</a>。</p>
      */
     function __construct()
     {

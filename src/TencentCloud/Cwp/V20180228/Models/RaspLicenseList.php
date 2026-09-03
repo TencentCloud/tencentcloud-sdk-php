@@ -20,306 +20,226 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 重保授权包列表对象
  *
- * @method string getQUUID() 获取机器唯一ID
- * @method void setQUUID(string $QUUID) 设置机器唯一ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getPublicIP() 获取公网IP
- * @method void setPublicIP(string $PublicIP) 设置公网IP
- * @method string getPrivateIP() 获取内网IP
- * @method void setPrivateIP(string $PrivateIP) 设置内网IP
- * @method array getTags() 获取云标签信息
- * @method void setTags(array $Tags) 设置云标签信息
- * @method array getProtectionVersion() 获取防护版本信息
-- CriticalProtection 重保防护包
-- Pro 容器安全-专业版
-- Ultimate 主机安全-旗舰版
- * @method void setProtectionVersion(array $ProtectionVersion) 设置防护版本信息
-- CriticalProtection 重保防护包
-- Pro 容器安全-专业版
-- Ultimate 主机安全-旗舰版
- * @method integer getConfigurationSetting() 获取防护设置
-- 0 未配置
-- 1 已配置
- * @method void setConfigurationSetting(integer $ConfigurationSetting) 设置防护设置
-- 0 未配置
-- 1 已配置
- * @method integer getEnable() 获取总开关
-- 0 未开启
-- 1已开启
- * @method void setEnable(integer $Enable) 设置总开关
-- 0 未开启
-- 1已开启
- * @method integer getVulDefEnable() 获取漏洞防御开关
-- 0 未开启
-- 1 开启
- * @method void setVulDefEnable(integer $VulDefEnable) 设置漏洞防御开关
-- 0 未开启
-- 1 开启
- * @method integer getVulDefMode() 获取漏洞防御模式
-- 0 标准
-- 1 重保
- * @method void setVulDefMode(integer $VulDefMode) 设置漏洞防御模式
-- 0 标准
-- 1 重保
- * @method integer getVulDefAction() 获取漏洞防御动作
-- 0 仅检测
-- 1 检测+防御
- * @method void setVulDefAction(integer $VulDefAction) 设置漏洞防御动作
-- 0 仅检测
-- 1 检测+防御
- * @method integer getMemShellDefEnable() 获取内存马防御开关
-- 0 未开启
-- 1 开启
- * @method void setMemShellDefEnable(integer $MemShellDefEnable) 设置内存马防御开关
-- 0 未开启
-- 1 开启
- * @method integer getSafeInject() 获取更多防护
-- 0 不注入会重启的进程 
-- 1 注入会重启的进程
- * @method void setSafeInject(integer $SafeInject) 设置更多防护
-- 0 不注入会重启的进程 
-- 1 注入会重启的进程
- * @method integer getPerformanceLimit() 获取性能阈值配置开关
-- 0 未开启
-- 1 开启
- * @method void setPerformanceLimit(integer $PerformanceLimit) 设置性能阈值配置开关
-- 0 未开启
-- 1 开启
- * @method integer getPerformanceLimitCpu() 获取CPU阈值,取值1-99
- * @method void setPerformanceLimitCpu(integer $PerformanceLimitCpu) 设置CPU阈值,取值1-99
- * @method integer getPerformanceLimitMem() 获取内存阈值,取值1-99
- * @method void setPerformanceLimitMem(integer $PerformanceLimitMem) 设置内存阈值,取值1-99
- * @method integer getPerformanceLimitMemAmount() 获取内存剩余阈值
- * @method void setPerformanceLimitMemAmount(integer $PerformanceLimitMemAmount) 设置内存剩余阈值
- * @method integer getRaspException() 获取插件状态
-- 0 使用正常
-- 1 存在异常
-- 2 未使用
- * @method void setRaspException(integer $RaspException) 设置插件状态
-- 0 使用正常
-- 1 存在异常
-- 2 未使用
- * @method string getLatestUpdateTime() 获取最近更新时间
- * @method void setLatestUpdateTime(string $LatestUpdateTime) 设置最近更新时间
- * @method string getClusterName() 获取集群ID,仅容器资产有值
- * @method void setClusterName(string $ClusterName) 设置集群ID,仅容器资产有值
- * @method string getClusterId() 获取集群名称,仅容器资产有值
- * @method void setClusterId(string $ClusterId) 设置集群名称,仅容器资产有值
- * @method OrderDetail getOrderDetail() 获取订单信息
- * @method void setOrderDetail(OrderDetail $OrderDetail) 设置订单信息
- * @method boolean getIsUnBind() 获取是否允许解绑,fasle 不允许 true 允许
- * @method void setIsUnBind(boolean $IsUnBind) 设置是否允许解绑,fasle 不允许 true 允许
- * @method string getUUID() 获取uuid 机器唯一ID,仅AssetType = CWP 时有值
- * @method void setUUID(string $UUID) 设置uuid 机器唯一ID,仅AssetType = CWP 时有值
- * @method string getReason() 获取无注入/注入失败原因
- * @method void setReason(string $Reason) 设置无注入/注入失败原因
+ * @method string getQUUID() 获取<p>机器唯一ID</p>
+ * @method void setQUUID(string $QUUID) 设置<p>机器唯一ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getPublicIP() 获取<p>公网IP</p>
+ * @method void setPublicIP(string $PublicIP) 设置<p>公网IP</p>
+ * @method string getPrivateIP() 获取<p>内网IP</p>
+ * @method void setPrivateIP(string $PrivateIP) 设置<p>内网IP</p>
+ * @method array getTags() 获取<p>云标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>云标签信息</p>
+ * @method array getCWPTags() 获取<p>主机标签信息(仅AssetType=CWP/TCSS_HOST有值)</p>
+ * @method void setCWPTags(array $CWPTags) 设置<p>主机标签信息(仅AssetType=CWP/TCSS_HOST有值)</p>
+ * @method array getProtectionVersion() 获取<p>防护版本信息</p><ul><li>CriticalProtection 重保防护包</li><li>Pro 容器安全-专业版</li><li>Ultimate 主机安全-旗舰版</li></ul>
+ * @method void setProtectionVersion(array $ProtectionVersion) 设置<p>防护版本信息</p><ul><li>CriticalProtection 重保防护包</li><li>Pro 容器安全-专业版</li><li>Ultimate 主机安全-旗舰版</li></ul>
+ * @method integer getConfigurationSetting() 获取<p>防护设置</p><ul><li>0 未配置</li><li>1 已配置</li></ul>
+ * @method void setConfigurationSetting(integer $ConfigurationSetting) 设置<p>防护设置</p><ul><li>0 未配置</li><li>1 已配置</li></ul>
+ * @method integer getEnable() 获取<p>总开关</p><ul><li>0 未开启</li><li>1已开启</li></ul>
+ * @method void setEnable(integer $Enable) 设置<p>总开关</p><ul><li>0 未开启</li><li>1已开启</li></ul>
+ * @method integer getVulDefEnable() 获取<p>漏洞防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+ * @method void setVulDefEnable(integer $VulDefEnable) 设置<p>漏洞防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+ * @method integer getVulDefMode() 获取<p>漏洞防御模式</p><ul><li>0 标准</li><li>1 重保</li></ul>
+ * @method void setVulDefMode(integer $VulDefMode) 设置<p>漏洞防御模式</p><ul><li>0 标准</li><li>1 重保</li></ul>
+ * @method integer getVulDefAction() 获取<p>漏洞防御动作</p><ul><li>0 仅检测</li><li>1 检测+防御</li></ul>
+ * @method void setVulDefAction(integer $VulDefAction) 设置<p>漏洞防御动作</p><ul><li>0 仅检测</li><li>1 检测+防御</li></ul>
+ * @method integer getMemShellDefEnable() 获取<p>内存马防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+ * @method void setMemShellDefEnable(integer $MemShellDefEnable) 设置<p>内存马防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+ * @method integer getSafeInject() 获取<p>更多防护</p><ul><li>0 不注入会重启的进程 </li><li>1 注入会重启的进程</li></ul>
+ * @method void setSafeInject(integer $SafeInject) 设置<p>更多防护</p><ul><li>0 不注入会重启的进程 </li><li>1 注入会重启的进程</li></ul>
+ * @method integer getPerformanceLimit() 获取<p>性能阈值配置开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+ * @method void setPerformanceLimit(integer $PerformanceLimit) 设置<p>性能阈值配置开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+ * @method integer getPerformanceLimitCpu() 获取<p>CPU阈值,取值1-99</p>
+ * @method void setPerformanceLimitCpu(integer $PerformanceLimitCpu) 设置<p>CPU阈值,取值1-99</p>
+ * @method integer getPerformanceLimitMem() 获取<p>内存阈值,取值1-99</p>
+ * @method void setPerformanceLimitMem(integer $PerformanceLimitMem) 设置<p>内存阈值,取值1-99</p>
+ * @method integer getPerformanceLimitMemAmount() 获取<p>内存剩余阈值</p>
+ * @method void setPerformanceLimitMemAmount(integer $PerformanceLimitMemAmount) 设置<p>内存剩余阈值</p>
+ * @method integer getRaspException() 获取<p>插件状态</p><ul><li>0 使用正常</li><li>1 存在异常</li><li>2 未使用</li></ul>
+ * @method void setRaspException(integer $RaspException) 设置<p>插件状态</p><ul><li>0 使用正常</li><li>1 存在异常</li><li>2 未使用</li></ul>
+ * @method string getLatestUpdateTime() 获取<p>最近更新时间</p>
+ * @method void setLatestUpdateTime(string $LatestUpdateTime) 设置<p>最近更新时间</p>
+ * @method string getClusterName() 获取<p>集群ID,仅容器资产有值</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群ID,仅容器资产有值</p>
+ * @method string getClusterId() 获取<p>集群名称,仅容器资产有值</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群名称,仅容器资产有值</p>
+ * @method OrderDetail getOrderDetail() 获取<p>订单信息</p>
+ * @method void setOrderDetail(OrderDetail $OrderDetail) 设置<p>订单信息</p>
+ * @method boolean getIsUnBind() 获取<p>是否允许解绑,fasle 不允许 true 允许</p>
+ * @method void setIsUnBind(boolean $IsUnBind) 设置<p>是否允许解绑,fasle 不允许 true 允许</p>
+ * @method string getUUID() 获取<p>uuid 机器唯一ID,仅AssetType = CWP 时有值</p>
+ * @method void setUUID(string $UUID) 设置<p>uuid 机器唯一ID,仅AssetType = CWP 时有值</p>
+ * @method string getReason() 获取<p>无注入/注入失败原因</p>
+ * @method void setReason(string $Reason) 设置<p>无注入/注入失败原因</p>
  */
 class RaspLicenseList extends AbstractModel
 {
     /**
-     * @var string 机器唯一ID
+     * @var string <p>机器唯一ID</p>
      */
     public $QUUID;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 公网IP
+     * @var string <p>公网IP</p>
      */
     public $PublicIP;
 
     /**
-     * @var string 内网IP
+     * @var string <p>内网IP</p>
      */
     public $PrivateIP;
 
     /**
-     * @var array 云标签信息
+     * @var array <p>云标签信息</p>
      */
     public $Tags;
 
     /**
-     * @var array 防护版本信息
-- CriticalProtection 重保防护包
-- Pro 容器安全-专业版
-- Ultimate 主机安全-旗舰版
+     * @var array <p>主机标签信息(仅AssetType=CWP/TCSS_HOST有值)</p>
+     */
+    public $CWPTags;
+
+    /**
+     * @var array <p>防护版本信息</p><ul><li>CriticalProtection 重保防护包</li><li>Pro 容器安全-专业版</li><li>Ultimate 主机安全-旗舰版</li></ul>
      */
     public $ProtectionVersion;
 
     /**
-     * @var integer 防护设置
-- 0 未配置
-- 1 已配置
+     * @var integer <p>防护设置</p><ul><li>0 未配置</li><li>1 已配置</li></ul>
      */
     public $ConfigurationSetting;
 
     /**
-     * @var integer 总开关
-- 0 未开启
-- 1已开启
+     * @var integer <p>总开关</p><ul><li>0 未开启</li><li>1已开启</li></ul>
      */
     public $Enable;
 
     /**
-     * @var integer 漏洞防御开关
-- 0 未开启
-- 1 开启
+     * @var integer <p>漏洞防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
      */
     public $VulDefEnable;
 
     /**
-     * @var integer 漏洞防御模式
-- 0 标准
-- 1 重保
+     * @var integer <p>漏洞防御模式</p><ul><li>0 标准</li><li>1 重保</li></ul>
      */
     public $VulDefMode;
 
     /**
-     * @var integer 漏洞防御动作
-- 0 仅检测
-- 1 检测+防御
+     * @var integer <p>漏洞防御动作</p><ul><li>0 仅检测</li><li>1 检测+防御</li></ul>
      */
     public $VulDefAction;
 
     /**
-     * @var integer 内存马防御开关
-- 0 未开启
-- 1 开启
+     * @var integer <p>内存马防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
      */
     public $MemShellDefEnable;
 
     /**
-     * @var integer 更多防护
-- 0 不注入会重启的进程 
-- 1 注入会重启的进程
+     * @var integer <p>更多防护</p><ul><li>0 不注入会重启的进程 </li><li>1 注入会重启的进程</li></ul>
      */
     public $SafeInject;
 
     /**
-     * @var integer 性能阈值配置开关
-- 0 未开启
-- 1 开启
+     * @var integer <p>性能阈值配置开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
      */
     public $PerformanceLimit;
 
     /**
-     * @var integer CPU阈值,取值1-99
+     * @var integer <p>CPU阈值,取值1-99</p>
      */
     public $PerformanceLimitCpu;
 
     /**
-     * @var integer 内存阈值,取值1-99
+     * @var integer <p>内存阈值,取值1-99</p>
      */
     public $PerformanceLimitMem;
 
     /**
-     * @var integer 内存剩余阈值
+     * @var integer <p>内存剩余阈值</p>
      */
     public $PerformanceLimitMemAmount;
 
     /**
-     * @var integer 插件状态
-- 0 使用正常
-- 1 存在异常
-- 2 未使用
+     * @var integer <p>插件状态</p><ul><li>0 使用正常</li><li>1 存在异常</li><li>2 未使用</li></ul>
      */
     public $RaspException;
 
     /**
-     * @var string 最近更新时间
+     * @var string <p>最近更新时间</p>
      */
     public $LatestUpdateTime;
 
     /**
-     * @var string 集群ID,仅容器资产有值
+     * @var string <p>集群ID,仅容器资产有值</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 集群名称,仅容器资产有值
+     * @var string <p>集群名称,仅容器资产有值</p>
      */
     public $ClusterId;
 
     /**
-     * @var OrderDetail 订单信息
+     * @var OrderDetail <p>订单信息</p>
      */
     public $OrderDetail;
 
     /**
-     * @var boolean 是否允许解绑,fasle 不允许 true 允许
+     * @var boolean <p>是否允许解绑,fasle 不允许 true 允许</p>
      */
     public $IsUnBind;
 
     /**
-     * @var string uuid 机器唯一ID,仅AssetType = CWP 时有值
+     * @var string <p>uuid 机器唯一ID,仅AssetType = CWP 时有值</p>
      */
     public $UUID;
 
     /**
-     * @var string 无注入/注入失败原因
+     * @var string <p>无注入/注入失败原因</p>
      */
     public $Reason;
 
     /**
-     * @param string $QUUID 机器唯一ID
-     * @param string $InstanceName 实例名称
-     * @param string $InstanceId 实例ID
-     * @param string $PublicIP 公网IP
-     * @param string $PrivateIP 内网IP
-     * @param array $Tags 云标签信息
-     * @param array $ProtectionVersion 防护版本信息
-- CriticalProtection 重保防护包
-- Pro 容器安全-专业版
-- Ultimate 主机安全-旗舰版
-     * @param integer $ConfigurationSetting 防护设置
-- 0 未配置
-- 1 已配置
-     * @param integer $Enable 总开关
-- 0 未开启
-- 1已开启
-     * @param integer $VulDefEnable 漏洞防御开关
-- 0 未开启
-- 1 开启
-     * @param integer $VulDefMode 漏洞防御模式
-- 0 标准
-- 1 重保
-     * @param integer $VulDefAction 漏洞防御动作
-- 0 仅检测
-- 1 检测+防御
-     * @param integer $MemShellDefEnable 内存马防御开关
-- 0 未开启
-- 1 开启
-     * @param integer $SafeInject 更多防护
-- 0 不注入会重启的进程 
-- 1 注入会重启的进程
-     * @param integer $PerformanceLimit 性能阈值配置开关
-- 0 未开启
-- 1 开启
-     * @param integer $PerformanceLimitCpu CPU阈值,取值1-99
-     * @param integer $PerformanceLimitMem 内存阈值,取值1-99
-     * @param integer $PerformanceLimitMemAmount 内存剩余阈值
-     * @param integer $RaspException 插件状态
-- 0 使用正常
-- 1 存在异常
-- 2 未使用
-     * @param string $LatestUpdateTime 最近更新时间
-     * @param string $ClusterName 集群ID,仅容器资产有值
-     * @param string $ClusterId 集群名称,仅容器资产有值
-     * @param OrderDetail $OrderDetail 订单信息
-     * @param boolean $IsUnBind 是否允许解绑,fasle 不允许 true 允许
-     * @param string $UUID uuid 机器唯一ID,仅AssetType = CWP 时有值
-     * @param string $Reason 无注入/注入失败原因
+     * @param string $QUUID <p>机器唯一ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $PublicIP <p>公网IP</p>
+     * @param string $PrivateIP <p>内网IP</p>
+     * @param array $Tags <p>云标签信息</p>
+     * @param array $CWPTags <p>主机标签信息(仅AssetType=CWP/TCSS_HOST有值)</p>
+     * @param array $ProtectionVersion <p>防护版本信息</p><ul><li>CriticalProtection 重保防护包</li><li>Pro 容器安全-专业版</li><li>Ultimate 主机安全-旗舰版</li></ul>
+     * @param integer $ConfigurationSetting <p>防护设置</p><ul><li>0 未配置</li><li>1 已配置</li></ul>
+     * @param integer $Enable <p>总开关</p><ul><li>0 未开启</li><li>1已开启</li></ul>
+     * @param integer $VulDefEnable <p>漏洞防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+     * @param integer $VulDefMode <p>漏洞防御模式</p><ul><li>0 标准</li><li>1 重保</li></ul>
+     * @param integer $VulDefAction <p>漏洞防御动作</p><ul><li>0 仅检测</li><li>1 检测+防御</li></ul>
+     * @param integer $MemShellDefEnable <p>内存马防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+     * @param integer $SafeInject <p>更多防护</p><ul><li>0 不注入会重启的进程 </li><li>1 注入会重启的进程</li></ul>
+     * @param integer $PerformanceLimit <p>性能阈值配置开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+     * @param integer $PerformanceLimitCpu <p>CPU阈值,取值1-99</p>
+     * @param integer $PerformanceLimitMem <p>内存阈值,取值1-99</p>
+     * @param integer $PerformanceLimitMemAmount <p>内存剩余阈值</p>
+     * @param integer $RaspException <p>插件状态</p><ul><li>0 使用正常</li><li>1 存在异常</li><li>2 未使用</li></ul>
+     * @param string $LatestUpdateTime <p>最近更新时间</p>
+     * @param string $ClusterName <p>集群ID,仅容器资产有值</p>
+     * @param string $ClusterId <p>集群名称,仅容器资产有值</p>
+     * @param OrderDetail $OrderDetail <p>订单信息</p>
+     * @param boolean $IsUnBind <p>是否允许解绑,fasle 不允许 true 允许</p>
+     * @param string $UUID <p>uuid 机器唯一ID,仅AssetType = CWP 时有值</p>
+     * @param string $Reason <p>无注入/注入失败原因</p>
      */
     function __construct()
     {
@@ -360,6 +280,15 @@ class RaspLicenseList extends AbstractModel
                 $obj = new Tags();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("CWPTags",$param) and $param["CWPTags"] !== null) {
+            $this->CWPTags = [];
+            foreach ($param["CWPTags"] as $key => $value){
+                $obj = new CWPTags();
+                $obj->deserialize($value);
+                array_push($this->CWPTags, $obj);
             }
         }
 

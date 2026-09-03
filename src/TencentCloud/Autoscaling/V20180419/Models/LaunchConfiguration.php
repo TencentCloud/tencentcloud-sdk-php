@@ -20,302 +20,290 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 符合条件的启动配置信息的集合。
  *
- * @method integer getProjectId() 获取实例所属项目ID。
- * @method void setProjectId(integer $ProjectId) 设置实例所属项目ID。
- * @method string getLaunchConfigurationId() 获取启动配置ID。
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID。
- * @method string getLaunchConfigurationName() 获取启动配置名称。
- * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置启动配置名称。
- * @method string getInstanceType() 获取实例机型。
- * @method void setInstanceType(string $InstanceType) 设置实例机型。
- * @method SystemDisk getSystemDisk() 获取实例系统盘配置信息。
- * @method void setSystemDisk(SystemDisk $SystemDisk) 设置实例系统盘配置信息。
- * @method array getDataDisks() 获取实例数据盘配置信息。
- * @method void setDataDisks(array $DataDisks) 设置实例数据盘配置信息。
- * @method LimitedLoginSettings getLoginSettings() 获取实例登录设置。
- * @method void setLoginSettings(LimitedLoginSettings $LoginSettings) 设置实例登录设置。
- * @method InternetAccessible getInternetAccessible() 获取公网带宽相关信息设置。
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽相关信息设置。
- * @method array getSecurityGroupIds() 获取实例所属安全组。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组。
- * @method array getAutoScalingGroupAbstractSet() 获取启动配置关联的伸缩组。
- * @method void setAutoScalingGroupAbstractSet(array $AutoScalingGroupAbstractSet) 设置启动配置关联的伸缩组。
- * @method string getUserData() 获取自定义数据。
+ * @method integer getProjectId() 获取<p>实例所属项目ID。</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>实例所属项目ID。</p>
+ * @method string getLaunchConfigurationId() 获取<p>启动配置ID。</p>
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置<p>启动配置ID。</p>
+ * @method string getLaunchConfigurationName() 获取<p>启动配置名称。</p>
+ * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置<p>启动配置名称。</p>
+ * @method string getInstanceType() 获取<p>实例机型。</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例机型。</p>
+ * @method SystemDisk getSystemDisk() 获取<p>实例系统盘配置信息。</p>
+ * @method void setSystemDisk(SystemDisk $SystemDisk) 设置<p>实例系统盘配置信息。</p>
+ * @method array getDataDisks() 获取<p>实例数据盘配置信息。</p>
+ * @method void setDataDisks(array $DataDisks) 设置<p>实例数据盘配置信息。</p>
+ * @method LimitedLoginSettings getLoginSettings() 获取<p>实例登录设置。</p>
+ * @method void setLoginSettings(LimitedLoginSettings $LoginSettings) 设置<p>实例登录设置。</p>
+ * @method InternetAccessible getInternetAccessible() 获取<p>公网带宽相关信息设置。</p>
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置<p>公网带宽相关信息设置。</p>
+ * @method array getSecurityGroupIds() 获取<p>实例所属安全组。</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>实例所属安全组。</p>
+ * @method array getAutoScalingGroupAbstractSet() 获取<p>启动配置关联的伸缩组。</p>
+ * @method void setAutoScalingGroupAbstractSet(array $AutoScalingGroupAbstractSet) 设置<p>启动配置关联的伸缩组。</p>
+ * @method string getUserData() 获取<p>自定义数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserData(string $UserData) 设置自定义数据。
+ * @method void setUserData(string $UserData) 设置<p>自定义数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedTime() 获取启动配置创建时间，为标准`UTC`时间。
- * @method void setCreatedTime(string $CreatedTime) 设置启动配置创建时间，为标准`UTC`时间。
- * @method EnhancedService getEnhancedService() 获取实例的增强服务启用情况与其设置。
- * @method void setEnhancedService(EnhancedService $EnhancedService) 设置实例的增强服务启用情况与其设置。
- * @method string getImageId() 获取镜像ID。
- * @method void setImageId(string $ImageId) 设置镜像ID。
- * @method string getLaunchConfigurationStatus() 获取启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li>
- * @method void setLaunchConfigurationStatus(string $LaunchConfigurationStatus) 设置启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li>
- * @method string getInstanceChargeType() 获取实例计费类型，取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
- * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+ * @method string getCreatedTime() 获取<p>启动配置创建时间，为标准<code>UTC</code>时间。</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>启动配置创建时间，为标准<code>UTC</code>时间。</p>
+ * @method EnhancedService getEnhancedService() 获取<p>实例的增强服务启用情况与其设置。</p>
+ * @method void setEnhancedService(EnhancedService $EnhancedService) 设置<p>实例的增强服务启用情况与其设置。</p>
+ * @method string getImageId() 获取<p>镜像ID。</p>
+ * @method void setImageId(string $ImageId) 设置<p>镜像ID。</p>
+ * @method string getLaunchConfigurationStatus() 获取<p>启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li></p>
+ * @method void setLaunchConfigurationStatus(string $LaunchConfigurationStatus) 设置<p>启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li></p>
+ * @method string getInstanceChargeType() 获取<p>实例计费类型，取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>实例计费类型，取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取<p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置<p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInstanceTypes() 获取实例机型列表。
- * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表。
- * @method array getInstanceTags() 获取实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
- * @method void setInstanceTags(array $InstanceTags) 设置实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
- * @method array getTags() 获取标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
- * @method void setTags(array $Tags) 设置标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
- * @method integer getVersionNumber() 获取版本号。
- * @method void setVersionNumber(integer $VersionNumber) 设置版本号。
- * @method string getUpdatedTime() 获取更新时间，为标准`UTC`时间。
- * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间，为标准`UTC`时间。
- * @method string getCamRoleName() 获取CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
- * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
- * @method string getLastOperationInstanceTypesCheckPolicy() 获取上次操作时，InstanceTypesCheckPolicy 取值。
- * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) 设置上次操作时，InstanceTypesCheckPolicy 取值。
- * @method HostNameSettings getHostNameSettings() 获取云服务器主机名（HostName）的相关设置。
- * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置云服务器主机名（HostName）的相关设置。
- * @method InstanceNameSettings getInstanceNameSettings() 获取云服务器实例名（InstanceName）的相关设置。
- * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) 设置云服务器实例名（InstanceName）的相关设置。
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method string getDiskTypePolicy() 获取云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li>
- * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li>
- * @method string getHpcClusterId() 获取高性能计算集群ID。<br>
-注意：此字段默认为空。
- * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。<br>
-注意：此字段默认为空。
- * @method IPv6InternetAccessible getIPv6InternetAccessible() 获取IPv6公网带宽相关信息设置。
- * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) 设置IPv6公网带宽相关信息设置。
- * @method array getDisasterRecoverGroupIds() 获取置放群组id，仅支持指定一个。
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组id，仅支持指定一个。
- * @method string getImageFamily() 获取镜像族名称。
- * @method void setImageFamily(string $ImageFamily) 设置镜像族名称。
- * @method string getDedicatedClusterId() 获取本地专用集群 ID。
- * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置本地专用集群 ID。
+ * @method array getInstanceTypes() 获取<p>实例机型列表。</p>
+ * @method void setInstanceTypes(array $InstanceTypes) 设置<p>实例机型列表。</p>
+ * @method array getInstanceTags() 获取<p>实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。</p>
+ * @method void setInstanceTags(array $InstanceTags) 设置<p>实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。</p>
+ * @method array getTags() 获取<p>标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。</p>
+ * @method integer getVersionNumber() 获取<p>版本号。</p>
+ * @method void setVersionNumber(integer $VersionNumber) 设置<p>版本号。</p>
+ * @method string getUpdatedTime() 获取<p>更新时间，为标准<code>UTC</code>时间。</p>
+ * @method void setUpdatedTime(string $UpdatedTime) 设置<p>更新时间，为标准<code>UTC</code>时间。</p>
+ * @method string getCamRoleName() 获取<p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
+ * @method void setCamRoleName(string $CamRoleName) 设置<p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
+ * @method string getLastOperationInstanceTypesCheckPolicy() 获取<p>上次操作时，InstanceTypesCheckPolicy 取值。</p>
+ * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) 设置<p>上次操作时，InstanceTypesCheckPolicy 取值。</p>
+ * @method HostNameSettings getHostNameSettings() 获取<p>云服务器主机名（HostName）的相关设置。</p>
+ * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置<p>云服务器主机名（HostName）的相关设置。</p>
+ * @method InstanceNameSettings getInstanceNameSettings() 获取<p>云服务器实例名（InstanceName）的相关设置。</p>
+ * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) 设置<p>云服务器实例名（InstanceName）的相关设置。</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取<p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置<p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+ * @method string getDiskTypePolicy() 获取<p>云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li></p>
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置<p>云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li></p>
+ * @method string getHpcClusterId() 获取<p>高性能计算集群ID。<br><br>注意：此字段默认为空。</p>
+ * @method void setHpcClusterId(string $HpcClusterId) 设置<p>高性能计算集群ID。<br><br>注意：此字段默认为空。</p>
+ * @method IPv6InternetAccessible getIPv6InternetAccessible() 获取<p>IPv6公网带宽相关信息设置。</p>
+ * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) 设置<p>IPv6公网带宽相关信息设置。</p>
+ * @method array getDisasterRecoverGroupIds() 获取<p>置放群组id，仅支持指定一个。</p>
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置<p>置放群组id，仅支持指定一个。</p>
+ * @method string getImageFamily() 获取<p>镜像族名称。</p>
+ * @method void setImageFamily(string $ImageFamily) 设置<p>镜像族名称。</p>
+ * @method string getDedicatedClusterId() 获取<p>本地专用集群 ID。</p>
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置<p>本地专用集群 ID。</p>
+ * @method array getNetworkInterfaces() 获取<p>启动配置的弹性网卡配置。</p>
+ * @method void setNetworkInterfaces(array $NetworkInterfaces) 设置<p>启动配置的弹性网卡配置。</p>
  */
 class LaunchConfiguration extends AbstractModel
 {
     /**
-     * @var integer 实例所属项目ID。
+     * @var integer <p>实例所属项目ID。</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 启动配置ID。
+     * @var string <p>启动配置ID。</p>
      */
     public $LaunchConfigurationId;
 
     /**
-     * @var string 启动配置名称。
+     * @var string <p>启动配置名称。</p>
      */
     public $LaunchConfigurationName;
 
     /**
-     * @var string 实例机型。
+     * @var string <p>实例机型。</p>
      */
     public $InstanceType;
 
     /**
-     * @var SystemDisk 实例系统盘配置信息。
+     * @var SystemDisk <p>实例系统盘配置信息。</p>
      */
     public $SystemDisk;
 
     /**
-     * @var array 实例数据盘配置信息。
+     * @var array <p>实例数据盘配置信息。</p>
      */
     public $DataDisks;
 
     /**
-     * @var LimitedLoginSettings 实例登录设置。
+     * @var LimitedLoginSettings <p>实例登录设置。</p>
      */
     public $LoginSettings;
 
     /**
-     * @var InternetAccessible 公网带宽相关信息设置。
+     * @var InternetAccessible <p>公网带宽相关信息设置。</p>
      */
     public $InternetAccessible;
 
     /**
-     * @var array 实例所属安全组。
+     * @var array <p>实例所属安全组。</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array 启动配置关联的伸缩组。
+     * @var array <p>启动配置关联的伸缩组。</p>
      */
     public $AutoScalingGroupAbstractSet;
 
     /**
-     * @var string 自定义数据。
+     * @var string <p>自定义数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserData;
 
     /**
-     * @var string 启动配置创建时间，为标准`UTC`时间。
+     * @var string <p>启动配置创建时间，为标准<code>UTC</code>时间。</p>
      */
     public $CreatedTime;
 
     /**
-     * @var EnhancedService 实例的增强服务启用情况与其设置。
+     * @var EnhancedService <p>实例的增强服务启用情况与其设置。</p>
      */
     public $EnhancedService;
 
     /**
-     * @var string 镜像ID。
+     * @var string <p>镜像ID。</p>
      */
     public $ImageId;
 
     /**
-     * @var string 启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li>
+     * @var string <p>启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li></p>
      */
     public $LaunchConfigurationStatus;
 
     /**
-     * @var string 实例计费类型，取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
+     * @var string <p>实例计费类型，取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
      */
     public $InstanceChargeType;
 
     /**
-     * @var InstanceMarketOptionsRequest 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * @var InstanceMarketOptionsRequest <p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceMarketOptions;
 
     /**
-     * @var array 实例机型列表。
+     * @var array <p>实例机型列表。</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var array 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+     * @var array <p>实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。</p>
      */
     public $InstanceTags;
 
     /**
-     * @var array 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
+     * @var array <p>标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。</p>
      */
     public $Tags;
 
     /**
-     * @var integer 版本号。
+     * @var integer <p>版本号。</p>
      */
     public $VersionNumber;
 
     /**
-     * @var string 更新时间，为标准`UTC`时间。
+     * @var string <p>更新时间，为标准<code>UTC</code>时间。</p>
      */
     public $UpdatedTime;
 
     /**
-     * @var string CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+     * @var string <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
      */
     public $CamRoleName;
 
     /**
-     * @var string 上次操作时，InstanceTypesCheckPolicy 取值。
+     * @var string <p>上次操作时，InstanceTypesCheckPolicy 取值。</p>
      */
     public $LastOperationInstanceTypesCheckPolicy;
 
     /**
-     * @var HostNameSettings 云服务器主机名（HostName）的相关设置。
+     * @var HostNameSettings <p>云服务器主机名（HostName）的相关设置。</p>
      */
     public $HostNameSettings;
 
     /**
-     * @var InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
+     * @var InstanceNameSettings <p>云服务器实例名（InstanceName）的相关设置。</p>
      */
     public $InstanceNameSettings;
 
     /**
-     * @var InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * @var InstanceChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var string 云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li>
+     * @var string <p>云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li></p>
      */
     public $DiskTypePolicy;
 
     /**
-     * @var string 高性能计算集群ID。<br>
-注意：此字段默认为空。
+     * @var string <p>高性能计算集群ID。<br><br>注意：此字段默认为空。</p>
      */
     public $HpcClusterId;
 
     /**
-     * @var IPv6InternetAccessible IPv6公网带宽相关信息设置。
+     * @var IPv6InternetAccessible <p>IPv6公网带宽相关信息设置。</p>
      */
     public $IPv6InternetAccessible;
 
     /**
-     * @var array 置放群组id，仅支持指定一个。
+     * @var array <p>置放群组id，仅支持指定一个。</p>
      */
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var string 镜像族名称。
+     * @var string <p>镜像族名称。</p>
      */
     public $ImageFamily;
 
     /**
-     * @var string 本地专用集群 ID。
+     * @var string <p>本地专用集群 ID。</p>
      */
     public $DedicatedClusterId;
 
     /**
-     * @param integer $ProjectId 实例所属项目ID。
-     * @param string $LaunchConfigurationId 启动配置ID。
-     * @param string $LaunchConfigurationName 启动配置名称。
-     * @param string $InstanceType 实例机型。
-     * @param SystemDisk $SystemDisk 实例系统盘配置信息。
-     * @param array $DataDisks 实例数据盘配置信息。
-     * @param LimitedLoginSettings $LoginSettings 实例登录设置。
-     * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置。
-     * @param array $SecurityGroupIds 实例所属安全组。
-     * @param array $AutoScalingGroupAbstractSet 启动配置关联的伸缩组。
-     * @param string $UserData 自定义数据。
+     * @var array <p>启动配置的弹性网卡配置。</p>
+     */
+    public $NetworkInterfaces;
+
+    /**
+     * @param integer $ProjectId <p>实例所属项目ID。</p>
+     * @param string $LaunchConfigurationId <p>启动配置ID。</p>
+     * @param string $LaunchConfigurationName <p>启动配置名称。</p>
+     * @param string $InstanceType <p>实例机型。</p>
+     * @param SystemDisk $SystemDisk <p>实例系统盘配置信息。</p>
+     * @param array $DataDisks <p>实例数据盘配置信息。</p>
+     * @param LimitedLoginSettings $LoginSettings <p>实例登录设置。</p>
+     * @param InternetAccessible $InternetAccessible <p>公网带宽相关信息设置。</p>
+     * @param array $SecurityGroupIds <p>实例所属安全组。</p>
+     * @param array $AutoScalingGroupAbstractSet <p>启动配置关联的伸缩组。</p>
+     * @param string $UserData <p>自定义数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedTime 启动配置创建时间，为标准`UTC`时间。
-     * @param EnhancedService $EnhancedService 实例的增强服务启用情况与其设置。
-     * @param string $ImageId 镜像ID。
-     * @param string $LaunchConfigurationStatus 启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li>
-     * @param string $InstanceChargeType 实例计费类型，取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
-     * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * @param string $CreatedTime <p>启动配置创建时间，为标准<code>UTC</code>时间。</p>
+     * @param EnhancedService $EnhancedService <p>实例的增强服务启用情况与其设置。</p>
+     * @param string $ImageId <p>镜像ID。</p>
+     * @param string $LaunchConfigurationStatus <p>启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li></p>
+     * @param string $InstanceChargeType <p>实例计费类型，取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
+     * @param InstanceMarketOptionsRequest $InstanceMarketOptions <p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InstanceTypes 实例机型列表。
-     * @param array $InstanceTags 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
-     * @param array $Tags 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
-     * @param integer $VersionNumber 版本号。
-     * @param string $UpdatedTime 更新时间，为标准`UTC`时间。
-     * @param string $CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
-     * @param string $LastOperationInstanceTypesCheckPolicy 上次操作时，InstanceTypesCheckPolicy 取值。
-     * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
-     * @param InstanceNameSettings $InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     * @param string $DiskTypePolicy 云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li>
-     * @param string $HpcClusterId 高性能计算集群ID。<br>
-注意：此字段默认为空。
-     * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6公网带宽相关信息设置。
-     * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
-     * @param string $ImageFamily 镜像族名称。
-     * @param string $DedicatedClusterId 本地专用集群 ID。
+     * @param array $InstanceTypes <p>实例机型列表。</p>
+     * @param array $InstanceTags <p>实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。</p>
+     * @param array $Tags <p>标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。</p>
+     * @param integer $VersionNumber <p>版本号。</p>
+     * @param string $UpdatedTime <p>更新时间，为标准<code>UTC</code>时间。</p>
+     * @param string $CamRoleName <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
+     * @param string $LastOperationInstanceTypesCheckPolicy <p>上次操作时，InstanceTypesCheckPolicy 取值。</p>
+     * @param HostNameSettings $HostNameSettings <p>云服务器主机名（HostName）的相关设置。</p>
+     * @param InstanceNameSettings $InstanceNameSettings <p>云服务器实例名（InstanceName）的相关设置。</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+     * @param string $DiskTypePolicy <p>云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li></p>
+     * @param string $HpcClusterId <p>高性能计算集群ID。<br><br>注意：此字段默认为空。</p>
+     * @param IPv6InternetAccessible $IPv6InternetAccessible <p>IPv6公网带宽相关信息设置。</p>
+     * @param array $DisasterRecoverGroupIds <p>置放群组id，仅支持指定一个。</p>
+     * @param string $ImageFamily <p>镜像族名称。</p>
+     * @param string $DedicatedClusterId <p>本地专用集群 ID。</p>
+     * @param array $NetworkInterfaces <p>启动配置的弹性网卡配置。</p>
      */
     function __construct()
     {
@@ -489,6 +477,15 @@ class LaunchConfiguration extends AbstractModel
 
         if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
             $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
+        if (array_key_exists("NetworkInterfaces",$param) and $param["NetworkInterfaces"] !== null) {
+            $this->NetworkInterfaces = [];
+            foreach ($param["NetworkInterfaces"] as $key => $value){
+                $obj = new NetworkInterface();
+                $obj->deserialize($value);
+                array_push($this->NetworkInterfaces, $obj);
+            }
         }
     }
 }

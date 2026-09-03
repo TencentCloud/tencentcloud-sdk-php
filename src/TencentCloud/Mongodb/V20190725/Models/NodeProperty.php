@@ -20,174 +20,110 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节点属性
  *
- * @method string getZone() 获取节点所在的可用区。
- * @method void setZone(string $Zone) 设置节点所在的可用区。
- * @method string getNodeName() 获取节点名称。
- * @method void setNodeName(string $NodeName) 设置节点名称。
- * @method string getAddress() 获取节点访问地址。
- * @method void setAddress(string $Address) 设置节点访问地址。
- * @method string getWanServiceAddress() 获取节点公网访问外网地址(IP或域名，示例为IP方式)。
- * @method void setWanServiceAddress(string $WanServiceAddress) 设置节点公网访问外网地址(IP或域名，示例为IP方式)。
- * @method string getRole() 获取节点角色。
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
- * @method void setRole(string $Role) 设置节点角色。
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
- * @method boolean getHidden() 获取节点是否为 Hidden 节点。
-- true：Hidden 节点。
-- false：非 Hidden 节点。
- * @method void setHidden(boolean $Hidden) 设置节点是否为 Hidden 节点。
-- true：Hidden 节点。
-- false：非 Hidden 节点。
- * @method string getStatus() 获取节点状态。
-- NORMAL：正常运行中。
-- STARTUP：正在启动。
-- STARTUP2：正在启动，处理中间数据。
-- RECOVERING：恢复中，暂不可用。
-- DOWN：已掉线。
-- UNKNOWN：未知状态。
-- ROLLBACK：回滚中。
-- REMOVED：已移除。
- * @method void setStatus(string $Status) 设置节点状态。
-- NORMAL：正常运行中。
-- STARTUP：正在启动。
-- STARTUP2：正在启动，处理中间数据。
-- RECOVERING：恢复中，暂不可用。
-- DOWN：已掉线。
-- UNKNOWN：未知状态。
-- ROLLBACK：回滚中。
-- REMOVED：已移除。
- * @method integer getSlaveDelay() 获取主从同步延迟时间，单位：秒。
- * @method void setSlaveDelay(integer $SlaveDelay) 设置主从同步延迟时间，单位：秒。
- * @method integer getPriority() 获取节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
- * @method void setPriority(integer $Priority) 设置节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
- * @method integer getVotes() 获取节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
- * @method void setVotes(integer $Votes) 设置节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
- * @method array getTags() 获取节点标签。
+ * @method string getZone() 获取<p>节点所在的可用区。</p>
+ * @method void setZone(string $Zone) 设置<p>节点所在的可用区。</p>
+ * @method string getNodeName() 获取<p>节点名称。</p>
+ * @method void setNodeName(string $NodeName) 设置<p>节点名称。</p>
+ * @method string getAddress() 获取<p>节点访问地址。</p>
+ * @method void setAddress(string $Address) 设置<p>节点访问地址。</p>
+ * @method string getWanServiceAddress() 获取<p>节点公网访问外网地址(IP或域名，示例为IP方式)。</p>
+ * @method void setWanServiceAddress(string $WanServiceAddress) 设置<p>节点公网访问外网地址(IP或域名，示例为IP方式)。</p>
+ * @method string getRole() 获取<p>节点角色。</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+ * @method void setRole(string $Role) 设置<p>节点角色。</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+ * @method boolean getHidden() 获取<p>节点是否为 Hidden 节点。</p><ul><li>true：Hidden 节点。</li><li>false：非 Hidden 节点。</li></ul>
+ * @method void setHidden(boolean $Hidden) 设置<p>节点是否为 Hidden 节点。</p><ul><li>true：Hidden 节点。</li><li>false：非 Hidden 节点。</li></ul>
+ * @method string getStatus() 获取<p>节点状态。</p><ul><li>NORMAL：正常运行中。</li><li>STARTUP：正在启动。</li><li>STARTUP2：正在启动，处理中间数据。</li><li>RECOVERING：恢复中，暂不可用。</li><li>DOWN：已掉线。</li><li>UNKNOWN：未知状态。</li><li>ROLLBACK：回滚中。</li><li>REMOVED：已移除。</li></ul>
+ * @method void setStatus(string $Status) 设置<p>节点状态。</p><ul><li>NORMAL：正常运行中。</li><li>STARTUP：正在启动。</li><li>STARTUP2：正在启动，处理中间数据。</li><li>RECOVERING：恢复中，暂不可用。</li><li>DOWN：已掉线。</li><li>UNKNOWN：未知状态。</li><li>ROLLBACK：回滚中。</li><li>REMOVED：已移除。</li></ul>
+ * @method integer getSlaveDelay() 获取<p>主从同步延迟时间，单位：秒。</p>
+ * @method void setSlaveDelay(integer $SlaveDelay) 设置<p>主从同步延迟时间，单位：秒。</p>
+ * @method integer getPriority() 获取<p>节点优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
+ * @method void setPriority(integer $Priority) 设置<p>节点优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
+ * @method integer getVotes() 获取<p>节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+ * @method void setVotes(integer $Votes) 设置<p>节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+ * @method array getTags() 获取<p>节点标签。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置节点标签。
+ * @method void setTags(array $Tags) 设置<p>节点标签。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReplicateSetId() 获取副本集 ID。
- * @method void setReplicateSetId(string $ReplicateSetId) 设置副本集 ID。
+ * @method string getReplicateSetId() 获取<p>副本集 ID。</p>
+ * @method void setReplicateSetId(string $ReplicateSetId) 设置<p>副本集 ID。</p>
  */
 class NodeProperty extends AbstractModel
 {
     /**
-     * @var string 节点所在的可用区。
+     * @var string <p>节点所在的可用区。</p>
      */
     public $Zone;
 
     /**
-     * @var string 节点名称。
+     * @var string <p>节点名称。</p>
      */
     public $NodeName;
 
     /**
-     * @var string 节点访问地址。
+     * @var string <p>节点访问地址。</p>
      */
     public $Address;
 
     /**
-     * @var string 节点公网访问外网地址(IP或域名，示例为IP方式)。
+     * @var string <p>节点公网访问外网地址(IP或域名，示例为IP方式)。</p>
      */
     public $WanServiceAddress;
 
     /**
-     * @var string 节点角色。
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
+     * @var string <p>节点角色。</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
      */
     public $Role;
 
     /**
-     * @var boolean 节点是否为 Hidden 节点。
-- true：Hidden 节点。
-- false：非 Hidden 节点。
+     * @var boolean <p>节点是否为 Hidden 节点。</p><ul><li>true：Hidden 节点。</li><li>false：非 Hidden 节点。</li></ul>
      */
     public $Hidden;
 
     /**
-     * @var string 节点状态。
-- NORMAL：正常运行中。
-- STARTUP：正在启动。
-- STARTUP2：正在启动，处理中间数据。
-- RECOVERING：恢复中，暂不可用。
-- DOWN：已掉线。
-- UNKNOWN：未知状态。
-- ROLLBACK：回滚中。
-- REMOVED：已移除。
+     * @var string <p>节点状态。</p><ul><li>NORMAL：正常运行中。</li><li>STARTUP：正在启动。</li><li>STARTUP2：正在启动，处理中间数据。</li><li>RECOVERING：恢复中，暂不可用。</li><li>DOWN：已掉线。</li><li>UNKNOWN：未知状态。</li><li>ROLLBACK：回滚中。</li><li>REMOVED：已移除。</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 主从同步延迟时间，单位：秒。
+     * @var integer <p>主从同步延迟时间，单位：秒。</p>
      */
     public $SlaveDelay;
 
     /**
-     * @var integer 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
+     * @var integer <p>节点优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
      */
     public $Priority;
 
     /**
-     * @var integer 节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
+     * @var integer <p>节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
      */
     public $Votes;
 
     /**
-     * @var array 节点标签。
+     * @var array <p>节点标签。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string 副本集 ID。
+     * @var string <p>副本集 ID。</p>
      */
     public $ReplicateSetId;
 
     /**
-     * @param string $Zone 节点所在的可用区。
-     * @param string $NodeName 节点名称。
-     * @param string $Address 节点访问地址。
-     * @param string $WanServiceAddress 节点公网访问外网地址(IP或域名，示例为IP方式)。
-     * @param string $Role 节点角色。
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
-     * @param boolean $Hidden 节点是否为 Hidden 节点。
-- true：Hidden 节点。
-- false：非 Hidden 节点。
-     * @param string $Status 节点状态。
-- NORMAL：正常运行中。
-- STARTUP：正在启动。
-- STARTUP2：正在启动，处理中间数据。
-- RECOVERING：恢复中，暂不可用。
-- DOWN：已掉线。
-- UNKNOWN：未知状态。
-- ROLLBACK：回滚中。
-- REMOVED：已移除。
-     * @param integer $SlaveDelay 主从同步延迟时间，单位：秒。
-     * @param integer $Priority 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
-     * @param integer $Votes 节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
-     * @param array $Tags 节点标签。
+     * @param string $Zone <p>节点所在的可用区。</p>
+     * @param string $NodeName <p>节点名称。</p>
+     * @param string $Address <p>节点访问地址。</p>
+     * @param string $WanServiceAddress <p>节点公网访问外网地址(IP或域名，示例为IP方式)。</p>
+     * @param string $Role <p>节点角色。</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+     * @param boolean $Hidden <p>节点是否为 Hidden 节点。</p><ul><li>true：Hidden 节点。</li><li>false：非 Hidden 节点。</li></ul>
+     * @param string $Status <p>节点状态。</p><ul><li>NORMAL：正常运行中。</li><li>STARTUP：正在启动。</li><li>STARTUP2：正在启动，处理中间数据。</li><li>RECOVERING：恢复中，暂不可用。</li><li>DOWN：已掉线。</li><li>UNKNOWN：未知状态。</li><li>ROLLBACK：回滚中。</li><li>REMOVED：已移除。</li></ul>
+     * @param integer $SlaveDelay <p>主从同步延迟时间，单位：秒。</p>
+     * @param integer $Priority <p>节点优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
+     * @param integer $Votes <p>节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+     * @param array $Tags <p>节点标签。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReplicateSetId 副本集 ID。
+     * @param string $ReplicateSetId <p>副本集 ID。</p>
      */
     function __construct()
     {

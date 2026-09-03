@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoAdjustQuota(integer $AutoAdjustQuota) 设置<p>自动调整配额</p>
  * @method integer getRPM() 获取<p>RPM（每分钟请求数限流）。当推理服务未单独设置时，回退为关联模型的默认 RPM 值。</p>
  * @method void setRPM(integer $RPM) 设置<p>RPM（每分钟请求数限流）。当推理服务未单独设置时，回退为关联模型的默认 RPM 值。</p>
+ * @method string getModelStatus() 获取<p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
+ * @method void setModelStatus(string $ModelStatus) 设置<p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
  */
 class EndpointDetail extends AbstractModel
 {
@@ -115,6 +117,11 @@ class EndpointDetail extends AbstractModel
     public $RPM;
 
     /**
+     * @var string <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
+     */
+    public $ModelStatus;
+
+    /**
      * @param string $EndpointId <p>推理服务 ID。</p>
      * @param string $EndpointName <p>服务名称。</p>
      * @param string $ModelName <p>模型名称。</p>
@@ -128,6 +135,7 @@ class EndpointDetail extends AbstractModel
      * @param integer $TPM <p>TPM（每分钟 Token 限流）。当推理服务未单独设置时，回退为关联模型的默认 TPM 值。</p>
      * @param integer $AutoAdjustQuota <p>自动调整配额</p>
      * @param integer $RPM <p>RPM（每分钟请求数限流）。当推理服务未单独设置时，回退为关联模型的默认 RPM 值。</p>
+     * @param string $ModelStatus <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class EndpointDetail extends AbstractModel
 
         if (array_key_exists("RPM",$param) and $param["RPM"] !== null) {
             $this->RPM = $param["RPM"];
+        }
+
+        if (array_key_exists("ModelStatus",$param) and $param["ModelStatus"] !== null) {
+            $this->ModelStatus = $param["ModelStatus"];
         }
     }
 }

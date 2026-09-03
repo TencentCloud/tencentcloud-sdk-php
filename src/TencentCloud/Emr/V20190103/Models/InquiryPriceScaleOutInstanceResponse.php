@@ -20,23 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceScaleOutInstance返回参数结构体
  *
- * @method string getOriginalCost() 获取原价，单位为元。
- * @method void setOriginalCost(string $OriginalCost) 设置原价，单位为元。
- * @method string getDiscountCost() 获取折扣价，单位为元。
- * @method void setDiscountCost(string $DiscountCost) 设置折扣价，单位为元。
- * @method string getUnit() 获取扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
- * @method void setUnit(string $Unit) 设置扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
- * @method PriceResource getPriceSpec() 获取询价的节点规格。
+ * @method string getOriginalCost() 获取<p>原价，单位为元。</p>
+ * @method void setOriginalCost(string $OriginalCost) 设置<p>原价，单位为元。</p>
+ * @method string getDiscountCost() 获取<p>折扣价，单位为元。</p>
+ * @method void setDiscountCost(string $DiscountCost) 设置<p>折扣价，单位为元。</p>
+ * @method string getUnit() 获取<p>扩容的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
+ * @method void setUnit(string $Unit) 设置<p>扩容的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
+ * @method PriceResource getPriceSpec() 获取<p>询价的节点规格。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPriceSpec(PriceResource $PriceSpec) 设置询价的节点规格。
+ * @method void setPriceSpec(PriceResource $PriceSpec) 设置<p>询价的节点规格。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMultipleEmrPrice() 获取对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+ * @method array getMultipleEmrPrice() 获取<p>对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMultipleEmrPrice(array $MultipleEmrPrice) 设置对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+ * @method void setMultipleEmrPrice(array $MultipleEmrPrice) 设置<p>对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -44,30 +40,28 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceScaleOutInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 原价，单位为元。
+     * @var string <p>原价，单位为元。</p>
      */
     public $OriginalCost;
 
     /**
-     * @var string 折扣价，单位为元。
+     * @var string <p>折扣价，单位为元。</p>
      */
     public $DiscountCost;
 
     /**
-     * @var string 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+     * @var string <p>扩容的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
      */
     public $Unit;
 
     /**
-     * @var PriceResource 询价的节点规格。
+     * @var PriceResource <p>询价的节点规格。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PriceSpec;
 
     /**
-     * @var array 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+     * @var array <p>对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultipleEmrPrice;
@@ -78,14 +72,12 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $OriginalCost 原价，单位为元。
-     * @param string $DiscountCost 折扣价，单位为元。
-     * @param string $Unit 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
-     * @param PriceResource $PriceSpec 询价的节点规格。
+     * @param string $OriginalCost <p>原价，单位为元。</p>
+     * @param string $DiscountCost <p>折扣价，单位为元。</p>
+     * @param string $Unit <p>扩容的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
+     * @param PriceResource $PriceSpec <p>询价的节点规格。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MultipleEmrPrice 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+     * @param array $MultipleEmrPrice <p>对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -74,6 +74,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPluginConfigs(array $PluginConfigs) 设置<p>插件配置</p>
  * @method boolean getIgnoreHealthCheck() 获取<p>是否忽略健康检查</p>
  * @method void setIgnoreHealthCheck(boolean $IgnoreHealthCheck) 设置<p>是否忽略健康检查</p>
+ * @method string getCredentialID() 获取<p>凭据ID</p>
+ * @method void setCredentialID(string $CredentialID) 设置<p>凭据ID</p>
+ * @method string getDomain() 获取<p>访问域名</p>
+ * @method void setDomain(string $Domain) 设置<p>访问域名</p>
+ * @method string getRequestProtocolType() 获取<p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+ * @method void setRequestProtocolType(string $RequestProtocolType) 设置<p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
  */
 class ModifyMcpServerRequest extends AbstractModel
 {
@@ -213,6 +219,21 @@ class ModifyMcpServerRequest extends AbstractModel
     public $IgnoreHealthCheck;
 
     /**
+     * @var string <p>凭据ID</p>
+     */
+    public $CredentialID;
+
+    /**
+     * @var string <p>访问域名</p>
+     */
+    public $Domain;
+
+    /**
+     * @var string <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+     */
+    public $RequestProtocolType;
+
+    /**
      * @param string $ID <p>mcp server ID</p>
      * @param string $Mode <p>模式：proxy代理模式； wrap封装模式；</p>
      * @param string $McpVersion <p>版本号：2024-11-05 2025-03-26</p>
@@ -240,6 +261,9 @@ class ModifyMcpServerRequest extends AbstractModel
      * @param string $WrapPaasID <p>封装的API分组ID</p>
      * @param array $PluginConfigs <p>插件配置</p>
      * @param boolean $IgnoreHealthCheck <p>是否忽略健康检查</p>
+     * @param string $CredentialID <p>凭据ID</p>
+     * @param string $Domain <p>访问域名</p>
+     * @param string $RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
      */
     function __construct()
     {
@@ -383,6 +407,18 @@ class ModifyMcpServerRequest extends AbstractModel
 
         if (array_key_exists("IgnoreHealthCheck",$param) and $param["IgnoreHealthCheck"] !== null) {
             $this->IgnoreHealthCheck = $param["IgnoreHealthCheck"];
+        }
+
+        if (array_key_exists("CredentialID",$param) and $param["CredentialID"] !== null) {
+            $this->CredentialID = $param["CredentialID"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("RequestProtocolType",$param) and $param["RequestProtocolType"] !== null) {
+            $this->RequestProtocolType = $param["RequestProtocolType"];
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CancelRebuildIndexTask请求参数结构体
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getTaskId() 获取索引重建任务ID
- * @method void setTaskId(string $TaskId) 设置索引重建任务ID
+ * @method string getTopicId() 获取<p>日志主题ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/614/56454">DescribeTopics</a></p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/614/56454">DescribeTopics</a></p>
+ * @method string getTaskId() 获取<p>索引重建任务ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/614/127535">DescribeRebuildIndexTasks</a></p>
+ * @method void setTaskId(string $TaskId) 设置<p>索引重建任务ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/614/127535">DescribeRebuildIndexTasks</a></p>
  */
 class CancelRebuildIndexTaskRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string <p>日志主题ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/614/56454">DescribeTopics</a></p>
      */
     public $TopicId;
 
     /**
-     * @var string 索引重建任务ID
+     * @var string <p>索引重建任务ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/614/127535">DescribeRebuildIndexTasks</a></p>
      */
     public $TaskId;
 
     /**
-     * @param string $TopicId 日志主题ID
-     * @param string $TaskId 索引重建任务ID
+     * @param string $TopicId <p>日志主题ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/614/56454">DescribeTopics</a></p>
+     * @param string $TaskId <p>索引重建任务ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/614/127535">DescribeRebuildIndexTasks</a></p>
      */
     function __construct()
     {

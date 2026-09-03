@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 副本集信息
  *
- * @method array getNodes() 获取节点属性
- * @method void setNodes(array $Nodes) 设置节点属性
+ * @method array getNodes() 获取<p>节点属性</p>
+ * @method void setNodes(array $Nodes) 设置<p>节点属性</p>
  */
 class ReplicateSetInfo extends AbstractModel
 {
     /**
-     * @var array 节点属性
+     * @var array <p>节点属性</p>
      */
     public $Nodes;
 
     /**
-     * @param array $Nodes 节点属性
+     * @param array $Nodes <p>节点属性</p>
      */
     function __construct()
     {

@@ -32,13 +32,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageList(array $MessageList) 设置<p>消息列表</p>
  * @method array getMessages() 获取<p>消息列表</p>
  * @method void setMessages(array $Messages) 设置<p>消息列表</p>
- * @method ConversationResetInfo getResetInfo() 获取<p>最近一次重置信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResetInfo(ConversationResetInfo $ResetInfo) 设置<p>最近一次重置信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRecordSummaryList() 获取<p>单次对话记录统计列表，与 message_list 通过 record_id / related_record_id 关联</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordSummaryList(array $RecordSummaryList) 设置<p>单次对话记录统计列表，与 message_list 通过 record_id / related_record_id 关联</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ConversationResetInfo getResetInfo() 获取<p>最近一次重置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResetInfo(ConversationResetInfo $ResetInfo) 设置<p>最近一次重置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -77,16 +77,16 @@ class DescribeConversationMessageListResponse extends AbstractModel
     public $Messages;
 
     /**
-     * @var ConversationResetInfo <p>最近一次重置信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ResetInfo;
-
-    /**
      * @var array <p>单次对话记录统计列表，与 message_list 通过 record_id / related_record_id 关联</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordSummaryList;
+
+    /**
+     * @var ConversationResetInfo <p>最近一次重置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResetInfo;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -100,9 +100,9 @@ class DescribeConversationMessageListResponse extends AbstractModel
      * @param string $LastRecordId <p>最后一个记录 ID</p>
      * @param array $MessageList <p>消息列表</p>
      * @param array $Messages <p>消息列表</p>
-     * @param ConversationResetInfo $ResetInfo <p>最近一次重置信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RecordSummaryList <p>单次对话记录统计列表，与 message_list 通过 record_id / related_record_id 关联</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConversationResetInfo $ResetInfo <p>最近一次重置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -153,11 +153,6 @@ class DescribeConversationMessageListResponse extends AbstractModel
             }
         }
 
-        if (array_key_exists("ResetInfo",$param) and $param["ResetInfo"] !== null) {
-            $this->ResetInfo = new ConversationResetInfo();
-            $this->ResetInfo->deserialize($param["ResetInfo"]);
-        }
-
         if (array_key_exists("RecordSummaryList",$param) and $param["RecordSummaryList"] !== null) {
             $this->RecordSummaryList = [];
             foreach ($param["RecordSummaryList"] as $key => $value){
@@ -165,6 +160,11 @@ class DescribeConversationMessageListResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RecordSummaryList, $obj);
             }
+        }
+
+        if (array_key_exists("ResetInfo",$param) and $param["ResetInfo"] !== null) {
+            $this->ResetInfo = new ConversationResetInfo();
+            $this->ResetInfo->deserialize($param["ResetInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

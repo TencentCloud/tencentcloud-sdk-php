@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApplicationList请求参数结构体
  *
- * @method integer getProjectId() 获取项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project
- * @method void setProjectId(integer $ProjectId) 设置项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project
- * @method integer getPageNo() 获取页码ID，0表示第一页，以此后推。默认填0
- * @method void setPageNo(integer $PageNo) 设置页码ID，0表示第一页，以此后推。默认填0
- * @method integer getPageSize() 获取每页展示应用数量。默认填200
- * @method void setPageSize(integer $PageSize) 设置每页展示应用数量。默认填200
- * @method string getSearchText() 获取所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用
- * @method void setSearchText(string $SearchText) 设置所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用
- * @method array getTagSet() 获取标签列表
- * @method void setTagSet(array $TagSet) 设置标签列表
- * @method array getFilters() 获取查找过滤关键字列表
- * @method void setFilters(array $Filters) 设置查找过滤关键字列表
+ * @method integer getProjectId() 获取<p>项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project</p>
+ * @method integer getPageNo() 获取<p>页码ID，0表示第一页，以此后推。默认填0</p>
+ * @method void setPageNo(integer $PageNo) 设置<p>页码ID，0表示第一页，以此后推。默认填0</p>
+ * @method integer getPageSize() 获取<p>每页展示应用数量。默认填200</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页展示应用数量。默认填200</p>
+ * @method string getSearchText() 获取<p>所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用</p>
+ * @method void setSearchText(string $SearchText) 设置<p>所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用</p>
+ * @method array getTagSet() 获取<p>标签列表</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签列表</p>
+ * @method array getFilters() 获取<p>查找过滤关键字列表</p>
+ * @method void setFilters(array $Filters) 设置<p>查找过滤关键字列表</p>
+ * @method integer getNewVersion() 获取<p>是否查询GME3.0应用</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+ * @method void setNewVersion(integer $NewVersion) 设置<p>是否查询GME3.0应用</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
  */
 class DescribeApplicationListRequest extends AbstractModel
 {
     /**
-     * @var integer 项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project
+     * @var integer <p>项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 页码ID，0表示第一页，以此后推。默认填0
+     * @var integer <p>页码ID，0表示第一页，以此后推。默认填0</p>
      */
     public $PageNo;
 
     /**
-     * @var integer 每页展示应用数量。默认填200
+     * @var integer <p>每页展示应用数量。默认填200</p>
      */
     public $PageSize;
 
     /**
-     * @var string 所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用
+     * @var string <p>所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用</p>
      */
     public $SearchText;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $TagSet;
 
     /**
-     * @var array 查找过滤关键字列表
+     * @var array <p>查找过滤关键字列表</p>
      */
     public $Filters;
 
     /**
-     * @param integer $ProjectId 项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project
-     * @param integer $PageNo 页码ID，0表示第一页，以此后推。默认填0
-     * @param integer $PageSize 每页展示应用数量。默认填200
-     * @param string $SearchText 所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用
-     * @param array $TagSet 标签列表
-     * @param array $Filters 查找过滤关键字列表
+     * @var integer <p>是否查询GME3.0应用</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public $NewVersion;
+
+    /**
+     * @param integer $ProjectId <p>项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project</p>
+     * @param integer $PageNo <p>页码ID，0表示第一页，以此后推。默认填0</p>
+     * @param integer $PageSize <p>每页展示应用数量。默认填200</p>
+     * @param string $SearchText <p>所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用</p>
+     * @param array $TagSet <p>标签列表</p>
+     * @param array $Filters <p>查找过滤关键字列表</p>
+     * @param integer $NewVersion <p>是否查询GME3.0应用</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ class DescribeApplicationListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("NewVersion",$param) and $param["NewVersion"] !== null) {
+            $this->NewVersion = $param["NewVersion"];
         }
     }
 }

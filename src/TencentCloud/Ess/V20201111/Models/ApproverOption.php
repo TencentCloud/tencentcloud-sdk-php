@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverMobileMode(string $ApproverMobileMode) 设置<p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li><li>&quot;&quot;： 不走手机号传参模式</li></ul><p>默认值：&quot;&quot;</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>在指定签署人姓名，证件号的情况下会触发</li></ul>
  * @method boolean getForbidModifySealInfos() 获取<p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
  * @method void setForbidModifySealInfos(boolean $ForbidModifySealInfos) 设置<p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
+ * @method integer getAddSignComponentUseSealSize() 获取<p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关 </li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改。</li></ul><p>默认值：0</p>
+ * @method void setAddSignComponentUseSealSize(integer $AddSignComponentUseSealSize) 设置<p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关 </li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改。</li></ul><p>默认值：0</p>
  */
 class ApproverOption extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ApproverOption extends AbstractModel
     public $ForbidModifySealInfos;
 
     /**
+     * @var integer <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关 </li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改。</li></ul><p>默认值：0</p>
+     */
+    public $AddSignComponentUseSealSize;
+
+    /**
      * @param boolean $NoRefuse <p>签署方是否可以拒签</p><ul><li> **false** : ( 默认)可以拒签</li><li> **true** :不可以拒签</li></ul>
      * @param boolean $NoTransfer <p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul>
      * @param boolean $CanEditApprover <p>允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑</p>
@@ -88,6 +95,7 @@ class ApproverOption extends AbstractModel
      * @param boolean $ForbidAddSignDate <p>禁止在签署过程中添加签署日期控件<br> <br>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：</p><ul><li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li><li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li></ul>
      * @param string $ApproverMobileMode <p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li><li>&quot;&quot;： 不走手机号传参模式</li></ul><p>默认值：&quot;&quot;</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>在指定签署人姓名，证件号的情况下会触发</li></ul>
      * @param boolean $ForbidModifySealInfos <p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
+     * @param integer $AddSignComponentUseSealSize <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关 </li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改。</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ApproverOption extends AbstractModel
 
         if (array_key_exists("ForbidModifySealInfos",$param) and $param["ForbidModifySealInfos"] !== null) {
             $this->ForbidModifySealInfos = $param["ForbidModifySealInfos"];
+        }
+
+        if (array_key_exists("AddSignComponentUseSealSize",$param) and $param["AddSignComponentUseSealSize"] !== null) {
+            $this->AddSignComponentUseSealSize = $param["AddSignComponentUseSealSize"];
         }
     }
 }

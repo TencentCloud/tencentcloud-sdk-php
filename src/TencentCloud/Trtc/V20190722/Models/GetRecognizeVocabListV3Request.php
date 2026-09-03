@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetRecognizeVocabListV3请求参数结构体
  *
-
+ * @method integer getSdkAppId() 获取<p>客户维度唯一标识</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>客户维度唯一标识</p>
+ * @method integer getOffset() 获取<p>分页偏移</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移</p>
+ * @method integer getLimit() 获取<p>分页大小</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页大小</p>
  */
 class GetRecognizeVocabListV3Request extends AbstractModel
 {
-
+    /**
+     * @var integer <p>客户维度唯一标识</p>
+     */
+    public $SdkAppId;
 
     /**
+     * @var integer <p>分页偏移</p>
+     */
+    public $Offset;
 
+    /**
+     * @var integer <p>分页大小</p>
+     */
+    public $Limit;
+
+    /**
+     * @param integer $SdkAppId <p>客户维度唯一标识</p>
+     * @param integer $Offset <p>分页偏移</p>
+     * @param integer $Limit <p>分页大小</p>
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class GetRecognizeVocabListV3Request extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
+        }
 
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
     }
 }

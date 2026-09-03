@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNodeSpec返回参数结构体
  *
- * @method array getNodeSpecs() 获取节点规格类型
- * @method void setNodeSpecs(array $NodeSpecs) 设置节点规格类型
+ * @method array getNodeSpecs() 获取<p>节点规格类型</p>
+ * @method void setNodeSpecs(array $NodeSpecs) 设置<p>节点规格类型</p>
+ * @method array getArchitectures() 获取<p>机型架构信息</p>
+ * @method void setArchitectures(array $Architectures) 设置<p>机型架构信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeNodeSpecResponse extends AbstractModel
 {
     /**
-     * @var array 节点规格类型
+     * @var array <p>节点规格类型</p>
      */
     public $NodeSpecs;
+
+    /**
+     * @var array <p>机型架构信息</p>
+     */
+    public $Architectures;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeNodeSpecResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $NodeSpecs 节点规格类型
+     * @param array $NodeSpecs <p>节点规格类型</p>
+     * @param array $Architectures <p>机型架构信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,15 @@ class DescribeNodeSpecResponse extends AbstractModel
                 $obj = new DescribeNodeSpec();
                 $obj->deserialize($value);
                 array_push($this->NodeSpecs, $obj);
+            }
+        }
+
+        if (array_key_exists("Architectures",$param) and $param["Architectures"] !== null) {
+            $this->Architectures = [];
+            foreach ($param["Architectures"] as $key => $value){
+                $obj = new ArchitectureInfo();
+                $obj->deserialize($value);
+                array_push($this->Architectures, $obj);
             }
         }
 

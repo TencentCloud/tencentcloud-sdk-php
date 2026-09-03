@@ -228,6 +228,7 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
  * @method Models\ModifyHTTPServiceRouteResponse ModifyHTTPServiceRoute(Models\ModifyHTTPServiceRouteRequest $req) 本接口ModifyHTTPServiceRoute用于修改HTTP访问服务路由。支持增量修改，对应字段不传参数则不修改
  * @method Models\ModifyLoginConfigResponse ModifyLoginConfig(Models\ModifyLoginConfigRequest $req) 修改指定云开发环境的登录策略配置。支持开启或关闭手机号短信登录、邮箱登录、用户名密码登录和匿名登录，同时可配置短信验证码发送通道、MFA 多因子认证和密码更新策略。
 修改后立即生效，影响该环境下所有终端用户的登录行为。
+ * @method Models\ModifyPGInstanceSpecResponse ModifyPGInstanceSpec(Models\ModifyPGInstanceSpecRequest $req) 对 PG 独享实例变配
  * @method Models\ModifyProviderResponse ModifyProvider(Models\ModifyProviderRequest $req) 修改身份认证源。更新指定云开发环境下已有身份认证源的配置信息，支持修改基本信息（名称、图标、描述）、协议连接配置（ClientId、ClientSecret、端点地址等）、登录行为控制（透传模式、自动注册、邮箱/手机号自动关联）以及启用状态。
 对于 OIDC 类型身份源，修改 Issuer 后将自动通过 OpenID Connect Discovery 重新获取端点配置。
 若自定义登录（CUSTOM）或邮箱登录（EMAIL）身份源尚不存在，调用该接口时将自动创建。

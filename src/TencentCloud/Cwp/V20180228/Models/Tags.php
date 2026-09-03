@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 平台标签
  *
- * @method string getTagKey() 获取标签键
- * @method void setTagKey(string $TagKey) 设置标签键
- * @method string getTagValue() 获取标签值
- * @method void setTagValue(string $TagValue) 设置标签值
+ * @method string getTagKey() 获取<p>标签键</p>
+ * @method void setTagKey(string $TagKey) 设置<p>标签键</p>
+ * @method string getTagValue() 获取<p>标签值</p>
+ * @method void setTagValue(string $TagValue) 设置<p>标签值</p>
  */
 class Tags extends AbstractModel
 {
     /**
-     * @var string 标签键
+     * @var string <p>标签键</p>
      */
     public $TagKey;
 
     /**
-     * @var string 标签值
+     * @var string <p>标签值</p>
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey 标签键
-     * @param string $TagValue 标签值
+     * @param string $TagKey <p>标签键</p>
+     * @param string $TagValue <p>标签值</p>
      */
     function __construct()
     {

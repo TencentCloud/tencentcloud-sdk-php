@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccountGroups请求参数结构体
  *
- * @method integer getDeepin() 获取搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
- * @method void setDeepin(integer $Deepin) 设置搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+ * @method string getDomainInstanceId() 获取管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+ * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+ * @method integer getDeepin() 获取（仅SaaS版本适用）搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+ * @method void setDeepin(integer $Deepin) 设置（仅SaaS版本适用）搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
  * @method Condition getCondition() 获取查询条件
 
 过滤参数
@@ -52,7 +54,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountGroupsRequest extends AbstractModel
 {
     /**
-     * @var integer 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+     * @var string 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public $DomainInstanceId;
+
+    /**
+     * @var integer （仅SaaS版本适用）搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
      */
     public $Deepin;
 
@@ -78,7 +85,8 @@ class DescribeAccountGroupsRequest extends AbstractModel
     public $ParentId;
 
     /**
-     * @param integer $Deepin 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+     * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param integer $Deepin （仅SaaS版本适用）搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
      * @param Condition $Condition 查询条件
 
 过滤参数
@@ -106,6 +114,10 @@ class DescribeAccountGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DomainInstanceId",$param) and $param["DomainInstanceId"] !== null) {
+            $this->DomainInstanceId = $param["DomainInstanceId"];
+        }
+
         if (array_key_exists("Deepin",$param) and $param["Deepin"] !== null) {
             $this->Deepin = $param["Deepin"];
         }

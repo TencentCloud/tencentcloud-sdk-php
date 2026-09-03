@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 所属组
  *
- * @method integer getAccountGroupId() 获取组Id(只支持32位)
- * @method void setAccountGroupId(integer $AccountGroupId) 设置组Id(只支持32位)
+ * @method integer getAccountGroupId() 获取<p>组Id(只支持32位)</p>
+ * @method void setAccountGroupId(integer $AccountGroupId) 设置<p>组Id(只支持32位)</p>
  */
 class DescribeLocalAccountAccountGroupsData extends AbstractModel
 {
     /**
-     * @var integer 组Id(只支持32位)
+     * @var integer <p>组Id(只支持32位)</p>
      */
     public $AccountGroupId;
 
     /**
-     * @param integer $AccountGroupId 组Id(只支持32位)
+     * @param integer $AccountGroupId <p>组Id(只支持32位)</p>
      */
     function __construct()
     {

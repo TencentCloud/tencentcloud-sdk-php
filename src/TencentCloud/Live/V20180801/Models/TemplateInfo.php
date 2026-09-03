@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVcodec(string $Vcodec) 设置<p>视频编码：h264/h265/origin，默认h264。</p><p>origin: 保持原始编码格式</p>
  * @method integer getVideoBitrate() 获取<p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
  * @method void setVideoBitrate(integer $VideoBitrate) 设置<p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
- * @method string getAcodec() 获取<p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
- * @method void setAcodec(string $Acodec) 设置<p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+ * @method string getAcodec() 获取<p>音频编码。默认为自动适配</p>
+ * @method void setAcodec(string $Acodec) 设置<p>音频编码。默认为自动适配</p>
  * @method integer getAudioBitrate() 获取<p>音频码率。取值范围：0kbps - 500kbps。<br>默认0。</p>
  * @method void setAudioBitrate(integer $AudioBitrate) 设置<p>音频码率。取值范围：0kbps - 500kbps。<br>默认0。</p>
  * @method integer getWidth() 获取<p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
@@ -98,7 +98,7 @@ class TemplateInfo extends AbstractModel
     public $VideoBitrate;
 
     /**
-     * @var string <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+     * @var string <p>音频编码。默认为自动适配</p>
      */
     public $Acodec;
 
@@ -230,7 +230,7 @@ class TemplateInfo extends AbstractModel
     /**
      * @param string $Vcodec <p>视频编码：h264/h265/origin，默认h264。</p><p>origin: 保持原始编码格式</p>
      * @param integer $VideoBitrate <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
-     * @param string $Acodec <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+     * @param string $Acodec <p>音频编码。默认为自动适配</p>
      * @param integer $AudioBitrate <p>音频码率。取值范围：0kbps - 500kbps。<br>默认0。</p>
      * @param integer $Width <p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
      * @param integer $Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>

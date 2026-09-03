@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetVocabStateV3请求参数结构体
  *
-
+ * @method string getVocabId() 获取<p>词表 id</p>
+ * @method void setVocabId(string $VocabId) 设置<p>词表 id</p>
+ * @method integer getState() 获取<p>是否设置为默认词表</p>
+ * @method void setState(integer $State) 设置<p>是否设置为默认词表</p>
+ * @method integer getSdkAppId() 获取<p>客户维度唯一标识</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>客户维度唯一标识</p>
  */
 class SetVocabStateV3Request extends AbstractModel
 {
-
+    /**
+     * @var string <p>词表 id</p>
+     */
+    public $VocabId;
 
     /**
+     * @var integer <p>是否设置为默认词表</p>
+     */
+    public $State;
 
+    /**
+     * @var integer <p>客户维度唯一标识</p>
+     */
+    public $SdkAppId;
+
+    /**
+     * @param string $VocabId <p>词表 id</p>
+     * @param integer $State <p>是否设置为默认词表</p>
+     * @param integer $SdkAppId <p>客户维度唯一标识</p>
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class SetVocabStateV3Request extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("VocabId",$param) and $param["VocabId"] !== null) {
+            $this->VocabId = $param["VocabId"];
+        }
 
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
+        }
+
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
+        }
     }
 }

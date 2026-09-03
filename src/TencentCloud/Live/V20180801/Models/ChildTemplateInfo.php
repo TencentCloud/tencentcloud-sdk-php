@@ -20,294 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自适应码率转码模板，子模板，出入参数。
  *
- * @method integer getTemplateId() 获取自适应码率转码模板，子模板Id。
-入参时候，填写此字段，表示更新子模板，否则是新增子模板。
+ * @method integer getTemplateId() 获取<p>自适应码率转码模板，子模板Id。<br>入参时候，填写此字段，表示更新子模板，否则是新增子模板。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateId(integer $TemplateId) 设置自适应码率转码模板，子模板Id。
-入参时候，填写此字段，表示更新子模板，否则是新增子模板。
+ * @method void setTemplateId(integer $TemplateId) 设置<p>自适应码率转码模板，子模板Id。<br>入参时候，填写此字段，表示更新子模板，否则是新增子模板。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplateName() 获取子模板名称。
+ * @method string getTemplateName() 获取<p>子模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateName(string $TemplateName) 设置子模板名称。
+ * @method void setTemplateName(string $TemplateName) 设置<p>子模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVcodec() 获取视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式。
+ * @method string getVcodec() 获取<p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式。
+ * @method void setVcodec(string $Vcodec) 设置<p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVideoBitrate() 获取视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+ * @method integer getVideoBitrate() 获取<p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+ * @method void setVideoBitrate(integer $VideoBitrate) 设置<p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWidth() 获取宽，默认0。
-范围[0-3000]。
-数值必须是2的倍数，0是原始宽度。
+ * @method integer getWidth() 获取<p>宽，默认0。<br>范围[0-3000]。<br>数值必须是2的倍数，0是原始宽度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidth(integer $Width) 设置宽，默认0。
-范围[0-3000]。
-数值必须是2的倍数，0是原始宽度。
+ * @method void setWidth(integer $Width) 设置<p>宽，默认0。<br>范围[0-3000]。<br>数值必须是2的倍数，0是原始宽度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHeight() 获取高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
+ * @method integer getHeight() 获取<p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeight(integer $Height) 设置高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
+ * @method void setHeight(integer $Height) 设置<p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFps() 获取帧率，默认0。
-范围0-60fps。
+ * @method integer getFps() 获取<p>帧率，默认0。<br>范围0-60fps。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFps(integer $Fps) 设置帧率，默认0。
-范围0-60fps。
+ * @method void setFps(integer $Fps) 设置<p>帧率，默认0。<br>范围0-60fps。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGop() 获取关键帧间隔，单位：秒。
-默认原始的间隔。
-范围2-6。
-同一个父模板下面的所有子模板，gop必须相等且存在。
+ * @method integer getGop() 获取<p>关键帧间隔，单位：秒。<br>默认原始的间隔。<br>范围2-6。<br>同一个父模板下面的所有子模板，gop必须相等且存在。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGop(integer $Gop) 设置关键帧间隔，单位：秒。
-默认原始的间隔。
-范围2-6。
-同一个父模板下面的所有子模板，gop必须相等且存在。
+ * @method void setGop(integer $Gop) 设置<p>关键帧间隔，单位：秒。<br>默认原始的间隔。<br>范围2-6。<br>同一个父模板下面的所有子模板，gop必须相等且存在。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNeedVideo() 获取是否保留视频，0：否，1：是。默认1。
+ * @method integer getNeedVideo() 获取<p>是否保留视频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNeedVideo(integer $NeedVideo) 设置是否保留视频，0：否，1：是。默认1。
+ * @method void setNeedVideo(integer $NeedVideo) 设置<p>是否保留视频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNeedAudio() 获取是否保留音频，0：否，1：是。默认1。
+ * @method integer getNeedAudio() 获取<p>是否保留音频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNeedAudio(integer $NeedAudio) 设置是否保留音频，0：否，1：是。默认1。
+ * @method void setNeedAudio(integer $NeedAudio) 设置<p>是否保留音频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBitrateToOrig() 获取当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+ * @method integer getBitrateToOrig() 获取<p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBitrateToOrig(integer $BitrateToOrig) 设置当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+ * @method void setBitrateToOrig(integer $BitrateToOrig) 设置<p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHeightToOrig() 获取当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+ * @method integer getHeightToOrig() 获取<p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeightToOrig(integer $HeightToOrig) 设置当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+ * @method void setHeightToOrig(integer $HeightToOrig) 设置<p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFpsToOrig() 获取当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+ * @method integer getFpsToOrig() 获取<p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFpsToOrig(integer $FpsToOrig) 设置当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+ * @method void setFpsToOrig(integer $FpsToOrig) 设置<p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getShortEdgeAsHeight() 获取是否以短边作为高度，0：否，1：是。默认0。
+ * @method integer getShortEdgeAsHeight() 获取<p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) 设置是否以短边作为高度，0：否，1：是。默认0。
+ * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) 设置<p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHlsContainerFormat() 获取HLS 分片类型。
-可选值：ts、fmp4。
-注：编码方式为 H.265 时生效。
+ * @method string getHlsContainerFormat() 获取<p>HLS 分片类型。<br>可选值：ts、fmp4。<br>注：编码方式为 H.265 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHlsContainerFormat(string $HlsContainerFormat) 设置HLS 分片类型。
-可选值：ts、fmp4。
-注：编码方式为 H.265 时生效。
+ * @method void setHlsContainerFormat(string $HlsContainerFormat) 设置<p>HLS 分片类型。<br>可选值：ts、fmp4。<br>注：编码方式为 H.265 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHlsMp4VideoCodecTag() 获取编码标签。
-可选值：hvc1、hev1。
-注：HLS 分片类型选择 fmp4 时生效。
+ * @method string getHlsMp4VideoCodecTag() 获取<p>编码标签。<br>可选值：hvc1、hev1。<br>注：HLS 分片类型选择 fmp4 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHlsMp4VideoCodecTag(string $HlsMp4VideoCodecTag) 设置编码标签。
-可选值：hvc1、hev1。
-注：HLS 分片类型选择 fmp4 时生效。
+ * @method void setHlsMp4VideoCodecTag(string $HlsMp4VideoCodecTag) 设置<p>编码标签。<br>可选值：hvc1、hev1。<br>注：HLS 分片类型选择 fmp4 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAcodec() 获取<p>子流音频编码类型。默认为&quot;自动适配&quot;</p>
+ * @method void setAcodec(string $Acodec) 设置<p>子流音频编码类型。默认为&quot;自动适配&quot;</p>
+ * @method integer getAudioBitrate() 获取<p>子流音频码率</p><p>单位：Kbps</p>
+ * @method void setAudioBitrate(integer $AudioBitrate) 设置<p>子流音频码率</p><p>单位：Kbps</p>
  */
 class ChildTemplateInfo extends AbstractModel
 {
     /**
-     * @var integer 自适应码率转码模板，子模板Id。
-入参时候，填写此字段，表示更新子模板，否则是新增子模板。
+     * @var integer <p>自适应码率转码模板，子模板Id。<br>入参时候，填写此字段，表示更新子模板，否则是新增子模板。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
     /**
-     * @var string 子模板名称。
+     * @var string <p>子模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateName;
 
     /**
-     * @var string 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式。
+     * @var string <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vcodec;
 
     /**
-     * @var integer 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * @var integer <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoBitrate;
 
     /**
-     * @var integer 宽，默认0。
-范围[0-3000]。
-数值必须是2的倍数，0是原始宽度。
+     * @var integer <p>宽，默认0。<br>范围[0-3000]。<br>数值必须是2的倍数，0是原始宽度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
-     * @var integer 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
+     * @var integer <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
-     * @var integer 帧率，默认0。
-范围0-60fps。
+     * @var integer <p>帧率，默认0。<br>范围0-60fps。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fps;
 
     /**
-     * @var integer 关键帧间隔，单位：秒。
-默认原始的间隔。
-范围2-6。
-同一个父模板下面的所有子模板，gop必须相等且存在。
+     * @var integer <p>关键帧间隔，单位：秒。<br>默认原始的间隔。<br>范围2-6。<br>同一个父模板下面的所有子模板，gop必须相等且存在。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gop;
 
     /**
-     * @var integer 是否保留视频，0：否，1：是。默认1。
+     * @var integer <p>是否保留视频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NeedVideo;
 
     /**
-     * @var integer 是否保留音频，0：否，1：是。默认1。
+     * @var integer <p>是否保留音频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NeedAudio;
 
     /**
-     * @var integer 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+     * @var integer <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BitrateToOrig;
 
     /**
-     * @var integer 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+     * @var integer <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeightToOrig;
 
     /**
-     * @var integer 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+     * @var integer <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FpsToOrig;
 
     /**
-     * @var integer 是否以短边作为高度，0：否，1：是。默认0。
+     * @var integer <p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShortEdgeAsHeight;
 
     /**
-     * @var string HLS 分片类型。
-可选值：ts、fmp4。
-注：编码方式为 H.265 时生效。
+     * @var string <p>HLS 分片类型。<br>可选值：ts、fmp4。<br>注：编码方式为 H.265 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HlsContainerFormat;
 
     /**
-     * @var string 编码标签。
-可选值：hvc1、hev1。
-注：HLS 分片类型选择 fmp4 时生效。
+     * @var string <p>编码标签。<br>可选值：hvc1、hev1。<br>注：HLS 分片类型选择 fmp4 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HlsMp4VideoCodecTag;
 
     /**
-     * @param integer $TemplateId 自适应码率转码模板，子模板Id。
-入参时候，填写此字段，表示更新子模板，否则是新增子模板。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TemplateName 子模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Vcodec 视频编码：h264/h265/origin，默认origin。
+     * @var string <p>子流音频编码类型。默认为&quot;自动适配&quot;</p>
+     */
+    public $Acodec;
 
-origin: 保持原始编码格式。
+    /**
+     * @var integer <p>子流音频码率</p><p>单位：Kbps</p>
+     */
+    public $AudioBitrate;
+
+    /**
+     * @param integer $TemplateId <p>自适应码率转码模板，子模板Id。<br>入参时候，填写此字段，表示更新子模板，否则是新增子模板。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VideoBitrate 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * @param string $TemplateName <p>子模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Width 宽，默认0。
-范围[0-3000]。
-数值必须是2的倍数，0是原始宽度。
+     * @param string $Vcodec <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Height 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
+     * @param integer $VideoBitrate <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Fps 帧率，默认0。
-范围0-60fps。
+     * @param integer $Width <p>宽，默认0。<br>范围[0-3000]。<br>数值必须是2的倍数，0是原始宽度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Gop 关键帧间隔，单位：秒。
-默认原始的间隔。
-范围2-6。
-同一个父模板下面的所有子模板，gop必须相等且存在。
+     * @param integer $Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NeedVideo 是否保留视频，0：否，1：是。默认1。
+     * @param integer $Fps <p>帧率，默认0。<br>范围0-60fps。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NeedAudio 是否保留音频，0：否，1：是。默认1。
+     * @param integer $Gop <p>关键帧间隔，单位：秒。<br>默认原始的间隔。<br>范围2-6。<br>同一个父模板下面的所有子模板，gop必须相等且存在。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+     * @param integer $NeedVideo <p>是否保留视频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+     * @param integer $NeedAudio <p>是否保留音频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+     * @param integer $BitrateToOrig <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
+     * @param integer $HeightToOrig <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HlsContainerFormat HLS 分片类型。
-可选值：ts、fmp4。
-注：编码方式为 H.265 时生效。
+     * @param integer $FpsToOrig <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HlsMp4VideoCodecTag 编码标签。
-可选值：hvc1、hev1。
-注：HLS 分片类型选择 fmp4 时生效。
+     * @param integer $ShortEdgeAsHeight <p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HlsContainerFormat <p>HLS 分片类型。<br>可选值：ts、fmp4。<br>注：编码方式为 H.265 时生效。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HlsMp4VideoCodecTag <p>编码标签。<br>可选值：hvc1、hev1。<br>注：HLS 分片类型选择 fmp4 时生效。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Acodec <p>子流音频编码类型。默认为&quot;自动适配&quot;</p>
+     * @param integer $AudioBitrate <p>子流音频码率</p><p>单位：Kbps</p>
      */
     function __construct()
     {
@@ -384,6 +308,14 @@ origin: 保持原始编码格式。
 
         if (array_key_exists("HlsMp4VideoCodecTag",$param) and $param["HlsMp4VideoCodecTag"] !== null) {
             $this->HlsMp4VideoCodecTag = $param["HlsMp4VideoCodecTag"];
+        }
+
+        if (array_key_exists("Acodec",$param) and $param["Acodec"] !== null) {
+            $this->Acodec = $param["Acodec"];
+        }
+
+        if (array_key_exists("AudioBitrate",$param) and $param["AudioBitrate"] !== null) {
+            $this->AudioBitrate = $param["AudioBitrate"];
         }
     }
 }

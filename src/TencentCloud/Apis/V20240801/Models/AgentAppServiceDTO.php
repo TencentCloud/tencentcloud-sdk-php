@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvokeLimitConfigStatus(boolean $InvokeLimitConfigStatus) 设置<p>是否限流</p>
  * @method InvokeLimitConfigDTO getInvokeLimitConfig() 获取<p>限流配置</p>
  * @method void setInvokeLimitConfig(InvokeLimitConfigDTO $InvokeLimitConfig) 设置<p>限流配置</p>
- * @method boolean getNeedAuth() 获取<p>是否要认证</p>
- * @method void setNeedAuth(boolean $NeedAuth) 设置<p>是否要认证</p>
- * @method string getAgentCredentialID() 获取<p>凭据ID</p>
- * @method void setAgentCredentialID(string $AgentCredentialID) 设置<p>凭据ID</p>
+ * @method boolean getNeedAuth() 获取<p>是否要认证（已废弃，请勿使用）</p>
+ * @method void setNeedAuth(boolean $NeedAuth) 设置<p>是否要认证（已废弃，请勿使用）</p>
+ * @method string getAgentCredentialID() 获取<p>凭据ID（已废弃，请勿使用）</p>
+ * @method void setAgentCredentialID(string $AgentCredentialID) 设置<p>凭据ID（已废弃，请勿使用）</p>
  */
 class AgentAppServiceDTO extends AbstractModel
 {
@@ -49,12 +49,14 @@ class AgentAppServiceDTO extends AbstractModel
     public $InvokeLimitConfig;
 
     /**
-     * @var boolean <p>是否要认证</p>
+     * @var boolean <p>是否要认证（已废弃，请勿使用）</p>
+     * @deprecated
      */
     public $NeedAuth;
 
     /**
-     * @var string <p>凭据ID</p>
+     * @var string <p>凭据ID（已废弃，请勿使用）</p>
+     * @deprecated
      */
     public $AgentCredentialID;
 
@@ -62,8 +64,8 @@ class AgentAppServiceDTO extends AbstractModel
      * @param string $ID <p>ID</p>
      * @param boolean $InvokeLimitConfigStatus <p>是否限流</p>
      * @param InvokeLimitConfigDTO $InvokeLimitConfig <p>限流配置</p>
-     * @param boolean $NeedAuth <p>是否要认证</p>
-     * @param string $AgentCredentialID <p>凭据ID</p>
+     * @param boolean $NeedAuth <p>是否要认证（已废弃，请勿使用）</p>
+     * @param string $AgentCredentialID <p>凭据ID（已废弃，请勿使用）</p>
      */
     function __construct()
     {

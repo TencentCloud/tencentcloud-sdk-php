@@ -38,6 +38,7 @@ class TokenLimitConfigDTO extends AbstractModel
     /**
      * @var string <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Type;
 

@@ -20,235 +20,239 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询输出的配置信息。
  *
- * @method string getOutputId() 获取输出Id。
- * @method void setOutputId(string $OutputId) 设置输出Id。
- * @method string getOutputName() 获取输出名称。
- * @method void setOutputName(string $OutputName) 设置输出名称。
- * @method string getOutputType() 获取输出类型。
- * @method void setOutputType(string $OutputType) 设置输出类型。
- * @method string getOutputKind() 获取输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
- * @method void setOutputKind(string $OutputKind) 设置输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
- * @method string getDescription() 获取输出描述。
+ * @method string getOutputId() 获取<p>输出Id。</p>
+ * @method void setOutputId(string $OutputId) 设置<p>输出Id。</p>
+ * @method string getOutputName() 获取<p>输出名称。</p>
+ * @method void setOutputName(string $OutputName) 设置<p>输出名称。</p>
+ * @method string getOutputType() 获取<p>输出类型。</p>
+ * @method void setOutputType(string $OutputType) 设置<p>输出类型。</p>
+ * @method string getOutputKind() 获取<p>输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。</p>
+ * @method void setOutputKind(string $OutputKind) 设置<p>输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。</p>
+ * @method string getDescription() 获取<p>输出描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置输出描述。
+ * @method void setDescription(string $Description) 设置<p>输出描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocol() 获取输出协议。
- * @method void setProtocol(string $Protocol) 设置输出协议。
- * @method array getOutputAddressList() 获取输出的出口地址信息列表。
- * @method void setOutputAddressList(array $OutputAddressList) 设置输出的出口地址信息列表。
- * @method string getOutputRegion() 获取输出的地区。
+ * @method string getProtocol() 获取<p>输出协议。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>输出协议。</p>
+ * @method array getOutputAddressList() 获取<p>输出的出口地址信息列表。</p>
+ * @method void setOutputAddressList(array $OutputAddressList) 设置<p>输出的出口地址信息列表。</p>
+ * @method string getOutputRegion() 获取<p>输出的地区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputRegion(string $OutputRegion) 设置输出的地区。
+ * @method void setOutputRegion(string $OutputRegion) 设置<p>输出的地区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeOutputSRTSettings getSRTSettings() 获取输出的SRT配置信息。
+ * @method DescribeOutputSRTSettings getSRTSettings() 获取<p>输出的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSRTSettings(DescribeOutputSRTSettings $SRTSettings) 设置输出的SRT配置信息。
+ * @method void setSRTSettings(DescribeOutputSRTSettings $SRTSettings) 设置<p>输出的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeOutputRTPSettings getRTPSettings() 获取输出的RTP配置信息。
+ * @method DescribeOutputRTPSettings getRTPSettings() 获取<p>输出的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRTPSettings(DescribeOutputRTPSettings $RTPSettings) 设置输出的RTP配置信息。
+ * @method void setRTPSettings(DescribeOutputRTPSettings $RTPSettings) 设置<p>输出的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeOutputRTMPSettings getRTMPSettings() 获取输出的RTMP配置信息。
+ * @method DescribeOutputRTMPSettings getRTMPSettings() 获取<p>输出的RTMP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRTMPSettings(DescribeOutputRTMPSettings $RTMPSettings) 设置输出的RTMP配置信息。
+ * @method void setRTMPSettings(DescribeOutputRTMPSettings $RTMPSettings) 设置<p>输出的RTMP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeOutputRTMPPullSettings getRTMPPullSettings() 获取输出的RTMP拉流配置信息。
+ * @method DescribeOutputRTMPPullSettings getRTMPPullSettings() 获取<p>输出的RTMP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRTMPPullSettings(DescribeOutputRTMPPullSettings $RTMPPullSettings) 设置输出的RTMP拉流配置信息。
+ * @method void setRTMPPullSettings(DescribeOutputRTMPPullSettings $RTMPPullSettings) 设置<p>输出的RTMP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAllowIpList() 获取CIDR白名单列表。
-当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
+ * @method array getAllowIpList() 获取<p>CIDR白名单列表。<br>当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAllowIpList(array $AllowIpList) 设置CIDR白名单列表。
-当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
+ * @method void setAllowIpList(array $AllowIpList) 设置<p>CIDR白名单列表。<br>当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeOutputRTSPPullSettings getRTSPPullSettings() 获取输出的RTSP拉流配置信息。
+ * @method DescribeOutputRTSPPullSettings getRTSPPullSettings() 获取<p>输出的RTSP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRTSPPullSettings(DescribeOutputRTSPPullSettings $RTSPPullSettings) 设置输出的RTSP拉流配置信息。
+ * @method void setRTSPPullSettings(DescribeOutputRTSPPullSettings $RTSPPullSettings) 设置<p>输出的RTSP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeOutputHLSPullSettings getHLSPullSettings() 获取输出的HLS拉流配置信息。
+ * @method DescribeOutputHLSPullSettings getHLSPullSettings() 获取<p>输出的HLS拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHLSPullSettings(DescribeOutputHLSPullSettings $HLSPullSettings) 设置输出的HLS拉流配置信息。
+ * @method void setHLSPullSettings(DescribeOutputHLSPullSettings $HLSPullSettings) 设置<p>输出的HLS拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxConcurrent() 获取最大拉流并发数，最大为4，默认4。
- * @method void setMaxConcurrent(integer $MaxConcurrent) 设置最大拉流并发数，最大为4，默认4。
- * @method array getSecurityGroupIds() 获取绑定的安全组 ID。
+ * @method integer getMaxConcurrent() 获取<p>最大拉流并发数，最大为4，默认4。</p>
+ * @method void setMaxConcurrent(integer $MaxConcurrent) 设置<p>最大拉流并发数，最大为4，默认4。</p>
+ * @method array getSecurityGroupIds() 获取<p>绑定的安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的安全组 ID。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>绑定的安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getZones() 获取可用区，output目前最多只支持一个。	
- * @method void setZones(array $Zones) 设置可用区，output目前最多只支持一个。	
- * @method DescribeOutputRISTSettings getRISTSettings() 获取输出的RIST配置信息。
+ * @method array getZones() 获取<p>可用区，output目前最多只支持一个。</p>
+ * @method void setZones(array $Zones) 设置<p>可用区，output目前最多只支持一个。</p>
+ * @method DescribeOutputRISTSettings getRISTSettings() 获取<p>输出的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRISTSettings(DescribeOutputRISTSettings $RISTSettings) 设置输出的RIST配置信息。
+ * @method void setRISTSettings(DescribeOutputRISTSettings $RISTSettings) 设置<p>输出的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PidSelector getPidSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道
- * @method void setPidSelector(PidSelector $PidSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道
- * @method array getStreamUrls() 获取输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
- * @method void setStreamUrls(array $StreamUrls) 设置输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
- * @method StreamSelector getStreamSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道
- * @method void setStreamSelector(StreamSelector $StreamSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道
+ * @method PidSelector getPidSelector() 获取<p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
+ * @method void setPidSelector(PidSelector $PidSelector) 设置<p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
+ * @method array getStreamUrls() 获取<p>输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址</p>
+ * @method void setStreamUrls(array $StreamUrls) 设置<p>输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址</p>
+ * @method StreamSelector getStreamSelector() 获取<p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
+ * @method void setStreamSelector(StreamSelector $StreamSelector) 设置<p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
+ * @method string getState() 获取<p>启用或者禁用输出</p><p>枚举值：</p><ul><li>DISABLED： 禁用</li><li>ENABLED： 启用</li></ul>
+ * @method void setState(string $State) 设置<p>启用或者禁用输出</p><p>枚举值：</p><ul><li>DISABLED： 禁用</li><li>ENABLED： 启用</li></ul>
  */
 class DescribeOutput extends AbstractModel
 {
     /**
-     * @var string 输出Id。
+     * @var string <p>输出Id。</p>
      */
     public $OutputId;
 
     /**
-     * @var string 输出名称。
+     * @var string <p>输出名称。</p>
      */
     public $OutputName;
 
     /**
-     * @var string 输出类型。
+     * @var string <p>输出类型。</p>
      */
     public $OutputType;
 
     /**
-     * @var string 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     * @var string <p>输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。</p>
      */
     public $OutputKind;
 
     /**
-     * @var string 输出描述。
+     * @var string <p>输出描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 输出协议。
+     * @var string <p>输出协议。</p>
      */
     public $Protocol;
 
     /**
-     * @var array 输出的出口地址信息列表。
+     * @var array <p>输出的出口地址信息列表。</p>
      */
     public $OutputAddressList;
 
     /**
-     * @var string 输出的地区。
+     * @var string <p>输出的地区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputRegion;
 
     /**
-     * @var DescribeOutputSRTSettings 输出的SRT配置信息。
+     * @var DescribeOutputSRTSettings <p>输出的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SRTSettings;
 
     /**
-     * @var DescribeOutputRTPSettings 输出的RTP配置信息。
+     * @var DescribeOutputRTPSettings <p>输出的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RTPSettings;
 
     /**
-     * @var DescribeOutputRTMPSettings 输出的RTMP配置信息。
+     * @var DescribeOutputRTMPSettings <p>输出的RTMP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RTMPSettings;
 
     /**
-     * @var DescribeOutputRTMPPullSettings 输出的RTMP拉流配置信息。
+     * @var DescribeOutputRTMPPullSettings <p>输出的RTMP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RTMPPullSettings;
 
     /**
-     * @var array CIDR白名单列表。
-当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
+     * @var array <p>CIDR白名单列表。<br>当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowIpList;
 
     /**
-     * @var DescribeOutputRTSPPullSettings 输出的RTSP拉流配置信息。
+     * @var DescribeOutputRTSPPullSettings <p>输出的RTSP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RTSPPullSettings;
 
     /**
-     * @var DescribeOutputHLSPullSettings 输出的HLS拉流配置信息。
+     * @var DescribeOutputHLSPullSettings <p>输出的HLS拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HLSPullSettings;
 
     /**
-     * @var integer 最大拉流并发数，最大为4，默认4。
+     * @var integer <p>最大拉流并发数，最大为4，默认4。</p>
      */
     public $MaxConcurrent;
 
     /**
-     * @var array 绑定的安全组 ID。
+     * @var array <p>绑定的安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array 可用区，output目前最多只支持一个。	
+     * @var array <p>可用区，output目前最多只支持一个。</p>
      */
     public $Zones;
 
     /**
-     * @var DescribeOutputRISTSettings 输出的RIST配置信息。
+     * @var DescribeOutputRISTSettings <p>输出的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RISTSettings;
 
     /**
-     * @var PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @var PidSelector <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
      * @deprecated
      */
     public $PidSelector;
 
     /**
-     * @var array 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+     * @var array <p>输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址</p>
      */
     public $StreamUrls;
 
     /**
-     * @var StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @var StreamSelector <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
      */
     public $StreamSelector;
 
     /**
-     * @param string $OutputId 输出Id。
-     * @param string $OutputName 输出名称。
-     * @param string $OutputType 输出类型。
-     * @param string $OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
-     * @param string $Description 输出描述。
+     * @var string <p>启用或者禁用输出</p><p>枚举值：</p><ul><li>DISABLED： 禁用</li><li>ENABLED： 启用</li></ul>
+     */
+    public $State;
+
+    /**
+     * @param string $OutputId <p>输出Id。</p>
+     * @param string $OutputName <p>输出名称。</p>
+     * @param string $OutputType <p>输出类型。</p>
+     * @param string $OutputKind <p>输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。</p>
+     * @param string $Description <p>输出描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Protocol 输出协议。
-     * @param array $OutputAddressList 输出的出口地址信息列表。
-     * @param string $OutputRegion 输出的地区。
+     * @param string $Protocol <p>输出协议。</p>
+     * @param array $OutputAddressList <p>输出的出口地址信息列表。</p>
+     * @param string $OutputRegion <p>输出的地区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeOutputSRTSettings $SRTSettings 输出的SRT配置信息。
+     * @param DescribeOutputSRTSettings $SRTSettings <p>输出的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeOutputRTPSettings $RTPSettings 输出的RTP配置信息。
+     * @param DescribeOutputRTPSettings $RTPSettings <p>输出的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeOutputRTMPSettings $RTMPSettings 输出的RTMP配置信息。
+     * @param DescribeOutputRTMPSettings $RTMPSettings <p>输出的RTMP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeOutputRTMPPullSettings $RTMPPullSettings 输出的RTMP拉流配置信息。
+     * @param DescribeOutputRTMPPullSettings $RTMPPullSettings <p>输出的RTMP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AllowIpList CIDR白名单列表。
-当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
+     * @param array $AllowIpList <p>CIDR白名单列表。<br>当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeOutputRTSPPullSettings $RTSPPullSettings 输出的RTSP拉流配置信息。
+     * @param DescribeOutputRTSPPullSettings $RTSPPullSettings <p>输出的RTSP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeOutputHLSPullSettings $HLSPullSettings 输出的HLS拉流配置信息。
+     * @param DescribeOutputHLSPullSettings $HLSPullSettings <p>输出的HLS拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxConcurrent 最大拉流并发数，最大为4，默认4。
-     * @param array $SecurityGroupIds 绑定的安全组 ID。
+     * @param integer $MaxConcurrent <p>最大拉流并发数，最大为4，默认4。</p>
+     * @param array $SecurityGroupIds <p>绑定的安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Zones 可用区，output目前最多只支持一个。	
-     * @param DescribeOutputRISTSettings $RISTSettings 输出的RIST配置信息。
+     * @param array $Zones <p>可用区，output目前最多只支持一个。</p>
+     * @param DescribeOutputRISTSettings $RISTSettings <p>输出的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PidSelector $PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
-     * @param array $StreamUrls 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
-     * @param StreamSelector $StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @param PidSelector $PidSelector <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
+     * @param array $StreamUrls <p>输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址</p>
+     * @param StreamSelector $StreamSelector <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
+     * @param string $State <p>启用或者禁用输出</p><p>枚举值：</p><ul><li>DISABLED： 禁用</li><li>ENABLED： 启用</li></ul>
      */
     function __construct()
     {
@@ -368,6 +372,10 @@ class DescribeOutput extends AbstractModel
         if (array_key_exists("StreamSelector",$param) and $param["StreamSelector"] !== null) {
             $this->StreamSelector = new StreamSelector();
             $this->StreamSelector->deserialize($param["StreamSelector"]);
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
         }
     }
 }

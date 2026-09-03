@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRayClusterYaml(string $RayClusterYaml) 设置<p>rayClusterYamlJson</p>
  * @method ImageInfoV2 getImageInfoV2() 获取<p>镜像信息</p>
  * @method void setImageInfoV2(ImageInfoV2 $ImageInfoV2) 设置<p>镜像信息</p>
+ * @method boolean getEnableHistoryServer() 获取<p>是否开启日志收集</p>
+ * @method void setEnableHistoryServer(boolean $EnableHistoryServer) 设置<p>是否开启日志收集</p>
+ * @method string getTensorBoardUrl() 获取<p>tensorboard 链接</p>
+ * @method void setTensorBoardUrl(string $TensorBoardUrl) 设置<p>tensorboard 链接</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -187,6 +191,16 @@ class DescribeDynamicInstanceDetailResponse extends AbstractModel
     public $ImageInfoV2;
 
     /**
+     * @var boolean <p>是否开启日志收集</p>
+     */
+    public $EnableHistoryServer;
+
+    /**
+     * @var string <p>tensorboard 链接</p>
+     */
+    public $TensorBoardUrl;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -215,6 +229,8 @@ class DescribeDynamicInstanceDetailResponse extends AbstractModel
      * @param PersistentVolume $PersistentVolume <p>存储信息</p>
      * @param string $RayClusterYaml <p>rayClusterYamlJson</p>
      * @param ImageInfoV2 $ImageInfoV2 <p>镜像信息</p>
+     * @param boolean $EnableHistoryServer <p>是否开启日志收集</p>
+     * @param string $TensorBoardUrl <p>tensorboard 链接</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -345,6 +361,14 @@ class DescribeDynamicInstanceDetailResponse extends AbstractModel
         if (array_key_exists("ImageInfoV2",$param) and $param["ImageInfoV2"] !== null) {
             $this->ImageInfoV2 = new ImageInfoV2();
             $this->ImageInfoV2->deserialize($param["ImageInfoV2"]);
+        }
+
+        if (array_key_exists("EnableHistoryServer",$param) and $param["EnableHistoryServer"] !== null) {
+            $this->EnableHistoryServer = $param["EnableHistoryServer"];
+        }
+
+        if (array_key_exists("TensorBoardUrl",$param) and $param["TensorBoardUrl"] !== null) {
+            $this->TensorBoardUrl = $param["TensorBoardUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

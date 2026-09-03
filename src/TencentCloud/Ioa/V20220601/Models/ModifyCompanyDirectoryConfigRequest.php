@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置<p>企业目录 ID</p>
  * @method string getDescription() 获取<p>描述</p>
  * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method array getNameI18n() 获取<p>名称多语言</p>
+ * @method void setNameI18n(array $NameI18n) 设置<p>名称多语言</p>
  */
 class ModifyCompanyDirectoryConfigRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ModifyCompanyDirectoryConfigRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var array <p>名称多语言</p>
+     */
+    public $NameI18n;
+
+    /**
      * @param string $Type <p>企业目录类型</p>
      * @param string $Name <p>企业目录名</p>
      * @param string $Config <p>使用 JSON 字符串表示的配置信息</p><p>调用此接口前，需要先调用DescribeCompanyDirectoryConfig获取完整的配置，然后对里面需要更新的配置进行修改，请求的时候必须传完整配置，否则可能导致配置缺失出现错误。如果是脱敏的信息，保持原样的脱敏格式提交，如果和脱敏格式不一致，会认为是新的配置值更新原有配置</p>
@@ -104,6 +111,7 @@ class ModifyCompanyDirectoryConfigRequest extends AbstractModel
      * @param boolean $DisplayOnLoginPage <p>是否在登录页展示</p>
      * @param integer $Id <p>企业目录 ID</p>
      * @param string $Description <p>描述</p>
+     * @param array $NameI18n <p>名称多语言</p>
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class ModifyCompanyDirectoryConfigRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("NameI18n",$param) and $param["NameI18n"] !== null) {
+            $this->NameI18n = [];
+            foreach ($param["NameI18n"] as $key => $value){
+                $obj = new I18nString();
+                $obj->deserialize($value);
+                array_push($this->NameI18n, $obj);
+            }
         }
     }
 }

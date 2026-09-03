@@ -30,9 +30,11 @@ use TencentCloud\Common\AbstractModel;
 1: 不开启录制；
 2: 开启录制（使用控制台自动录制模板参数，参考：[跳转文档](https://cloud.tencent.com/document/product/647/111748#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88)）；
 3: 开启录制（使用API指定参数）。
- * @method string getRecordKey() 获取录制任务 key，标识一个录制任务；您可以通过该参数，将多个转推任务录制成一个文件。不指定该参数时，只录制当前转推任务。
+ * @method string getRecordKey() 获取录制任务标识 key，显式关联多个转推任务到一个录制任务；一般不需设置，默认录制本次转推内容。
+如果有特殊需求，比如将多段转推内容分时录制到同一个文件，可以通过设置此参数来控制。举例: 时间点10:00 发起转推任务:A + RecorderKey:abc，10:05分发起转推任务B+ RecorderKey:abc，那么录制文件会包含，转推A(10:00~10:05分的内容)+转推B的内容。
 【限制长度为128字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线(_)和连词符(-)】
- * @method void setRecordKey(string $RecordKey) 设置录制任务 key，标识一个录制任务；您可以通过该参数，将多个转推任务录制成一个文件。不指定该参数时，只录制当前转推任务。
+ * @method void setRecordKey(string $RecordKey) 设置录制任务标识 key，显式关联多个转推任务到一个录制任务；一般不需设置，默认录制本次转推内容。
+如果有特殊需求，比如将多段转推内容分时录制到同一个文件，可以通过设置此参数来控制。举例: 时间点10:00 发起转推任务:A + RecorderKey:abc，10:05分发起转推任务B+ RecorderKey:abc，那么录制文件会包含，转推A(10:00~10:05分的内容)+转推B的内容。
 【限制长度为128字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线(_)和连词符(-)】
  * @method integer getRecordWaitTime() 获取【仅当UniRecord=3时此参数有效】
 续录等待时间，对应录制模板“续录等待时长”，单位：秒。该值需大于等于 5，且小于等于 86400(24小时)，默认值为 30。启用续录时，录制任务空闲超过RecordWaitTime的时长，自动结束。
@@ -73,7 +75,8 @@ class McuRecordParams extends AbstractModel
     public $UniRecord;
 
     /**
-     * @var string 录制任务 key，标识一个录制任务；您可以通过该参数，将多个转推任务录制成一个文件。不指定该参数时，只录制当前转推任务。
+     * @var string 录制任务标识 key，显式关联多个转推任务到一个录制任务；一般不需设置，默认录制本次转推内容。
+如果有特殊需求，比如将多段转推内容分时录制到同一个文件，可以通过设置此参数来控制。举例: 时间点10:00 发起转推任务:A + RecorderKey:abc，10:05分发起转推任务B+ RecorderKey:abc，那么录制文件会包含，转推A(10:00~10:05分的内容)+转推B的内容。
 【限制长度为128字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线(_)和连词符(-)】
      */
     public $RecordKey;
@@ -121,7 +124,8 @@ class McuRecordParams extends AbstractModel
 1: 不开启录制；
 2: 开启录制（使用控制台自动录制模板参数，参考：[跳转文档](https://cloud.tencent.com/document/product/647/111748#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88)）；
 3: 开启录制（使用API指定参数）。
-     * @param string $RecordKey 录制任务 key，标识一个录制任务；您可以通过该参数，将多个转推任务录制成一个文件。不指定该参数时，只录制当前转推任务。
+     * @param string $RecordKey 录制任务标识 key，显式关联多个转推任务到一个录制任务；一般不需设置，默认录制本次转推内容。
+如果有特殊需求，比如将多段转推内容分时录制到同一个文件，可以通过设置此参数来控制。举例: 时间点10:00 发起转推任务:A + RecorderKey:abc，10:05分发起转推任务B+ RecorderKey:abc，那么录制文件会包含，转推A(10:00~10:05分的内容)+转推B的内容。
 【限制长度为128字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线(_)和连词符(-)】
      * @param integer $RecordWaitTime 【仅当UniRecord=3时此参数有效】
 续录等待时间，对应录制模板“续录等待时长”，单位：秒。该值需大于等于 5，且小于等于 86400(24小时)，默认值为 30。启用续录时，录制任务空闲超过RecordWaitTime的时长，自动结束。

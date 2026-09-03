@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) 设置<p>请求超时时间，单位秒</p>
  * @method AuthConfig getAuthConfig() 获取<p>授权信息</p>
  * @method void setAuthConfig(AuthConfig $AuthConfig) 设置<p>授权信息</p>
+ * @method boolean getSupportsApps() 获取<p>是否支持交互界面（MCP Apps），插件级标签，默认false</p>
+ * @method void setSupportsApps(boolean $SupportsApps) 设置<p>是否支持交互界面（MCP Apps），插件级标签，默认false</p>
  */
 class MCPPluginConfig extends AbstractModel
 {
@@ -80,6 +82,11 @@ class MCPPluginConfig extends AbstractModel
     public $AuthConfig;
 
     /**
+     * @var boolean <p>是否支持交互界面（MCP Apps），插件级标签，默认false</p>
+     */
+    public $SupportsApps;
+
+    /**
      * @param string $ExternalMCPServerUrl <p>MCP插件外部访问地址</p>
      * @param string $MCPServerUrl <p>MCP server地址</p>
      * @param integer $MCPTransport <p>MCP传输类型: SSE/Streamable<br>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | SSE + HTTP 模式 |<br>| 1 | Streamable HTTP 模式 |</p>
@@ -88,6 +95,7 @@ class MCPPluginConfig extends AbstractModel
      * @param integer $SSEReadTimeout <p>SSE长连接超时时间，单位秒</p>
      * @param integer $Timeout <p>请求超时时间，单位秒</p>
      * @param AuthConfig $AuthConfig <p>授权信息</p>
+     * @param boolean $SupportsApps <p>是否支持交互界面（MCP Apps），插件级标签，默认false</p>
      */
     function __construct()
     {
@@ -143,6 +151,10 @@ class MCPPluginConfig extends AbstractModel
         if (array_key_exists("AuthConfig",$param) and $param["AuthConfig"] !== null) {
             $this->AuthConfig = new AuthConfig();
             $this->AuthConfig->deserialize($param["AuthConfig"]);
+        }
+
+        if (array_key_exists("SupportsApps",$param) and $param["SupportsApps"] !== null) {
+            $this->SupportsApps = $param["SupportsApps"];
         }
     }
 }

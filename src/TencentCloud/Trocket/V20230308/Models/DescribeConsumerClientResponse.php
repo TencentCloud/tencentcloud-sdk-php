@@ -20,30 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerClient返回参数结构体
  *
- * @method ConsumerClient getClient() 获取客户端详情
+ * @method ConsumerClient getClient() 获取<p>客户端详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClient(ConsumerClient $Client) 设置客户端详情
+ * @method void setClient(ConsumerClient $Client) 设置<p>客户端详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTopicList() 获取主题消费信息
+ * @method array getTopicList() 获取<p>主题消费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicList(array $TopicList) 设置主题消费信息
+ * @method void setTopicList(array $TopicList) 设置<p>主题消费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTopicTotalCount() 获取<p>订阅主题总数</p>
+ * @method void setTopicTotalCount(integer $TopicTotalCount) 设置<p>订阅主题总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeConsumerClientResponse extends AbstractModel
 {
     /**
-     * @var ConsumerClient 客户端详情
+     * @var ConsumerClient <p>客户端详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Client;
 
     /**
-     * @var array 主题消费信息
+     * @var array <p>主题消费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicList;
+
+    /**
+     * @var integer <p>订阅主题总数</p>
+     */
+    public $TopicTotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +58,11 @@ class DescribeConsumerClientResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ConsumerClient $Client 客户端详情
+     * @param ConsumerClient $Client <p>客户端详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TopicList 主题消费信息
+     * @param array $TopicList <p>主题消费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TopicTotalCount <p>订阅主题总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -82,6 +90,10 @@ class DescribeConsumerClientResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TopicList, $obj);
             }
+        }
+
+        if (array_key_exists("TopicTotalCount",$param) and $param["TopicTotalCount"] !== null) {
+            $this->TopicTotalCount = $param["TopicTotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

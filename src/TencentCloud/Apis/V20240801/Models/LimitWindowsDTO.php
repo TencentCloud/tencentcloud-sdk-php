@@ -20,33 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 限流窗口配置
  *
- * @method integer getInterval() 获取时间窗口，分钟
+ * @method integer getInterval() 获取<p>时间窗口，分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInterval(integer $Interval) 设置时间窗口，分钟
+ * @method void setInterval(integer $Interval) 设置<p>时间窗口，分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLimit() 获取累计上限，k
+ * @method integer getLimit() 获取<p>累计上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLimit(integer $Limit) 设置累计上限，k
+ * @method void setLimit(integer $Limit) 设置<p>累计上限，k</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取<p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li><li>timeRange： 时间范围</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(string $Type) 设置<p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li><li>timeRange： 时间范围</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TimeRange getTimeRange() 获取<p>时间区间配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimeRange(TimeRange $TimeRange) 设置<p>时间区间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LimitWindowsDTO extends AbstractModel
 {
     /**
-     * @var integer 时间窗口，分钟
+     * @var integer <p>时间窗口，分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Interval;
 
     /**
-     * @var integer 累计上限，k
+     * @var integer <p>累计上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Limit;
 
     /**
-     * @param integer $Interval 时间窗口，分钟
+     * @var string <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li><li>timeRange： 时间范围</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Limit 累计上限，k
+     */
+    public $Type;
+
+    /**
+     * @var TimeRange <p>时间区间配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TimeRange;
+
+    /**
+     * @param integer $Interval <p>时间窗口，分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Limit <p>累计上限，k</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li><li>timeRange： 时间范围</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeRange $TimeRange <p>时间区间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +92,15 @@ class LimitWindowsDTO extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("TimeRange",$param) and $param["TimeRange"] !== null) {
+            $this->TimeRange = new TimeRange();
+            $this->TimeRange->deserialize($param["TimeRange"]);
         }
     }
 }

@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffPeak(string $OffPeak) 设置<p>是否开启错峰。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method string getFrameInterpolate() 获取<p>是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method void setFrameInterpolate(string $FrameInterpolate) 设置<p>是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
- * @method string getLogoAdd() 获取<p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
- * @method void setLogoAdd(string $LogoAdd) 设置<p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
+ * @method string getLogoAdd() 获取<p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
+ * @method void setLogoAdd(string $LogoAdd) 设置<p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method string getEnableBGM() 获取<p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
  * @method void setEnableBGM(string $EnableBGM) 设置<p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
  */
@@ -126,7 +126,7 @@ class AigcVideoOutputConfig extends AbstractModel
     public $FrameInterpolate;
 
     /**
-     * @var string <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
+     * @var string <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      */
     public $LogoAdd;
 
@@ -150,7 +150,7 @@ class AigcVideoOutputConfig extends AbstractModel
      * @param string $EnhanceSwitch <p>是否启用视频增强。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>说明：</p><ol><li>对于选择的分辨率超过模型可生成分辨率时，默认会启用增强。</li><li>对于模型可以直出的分辨率，也可以主动选择模型直出低分辨率，使用增强获得指定分辨率。</li></ol>
      * @param string $OffPeak <p>是否开启错峰。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      * @param string $FrameInterpolate <p>是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
-     * @param string $LogoAdd <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
+     * @param string $LogoAdd <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      * @param string $EnableBGM <p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
      */
     function __construct()

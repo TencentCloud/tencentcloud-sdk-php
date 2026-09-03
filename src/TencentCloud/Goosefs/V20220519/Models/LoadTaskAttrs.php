@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 预热任务参数
  *
- * @method string getTaskId() 获取预热任务 ID
- * @method void setTaskId(string $TaskId) 设置预热任务 ID
- * @method string getTaskType() 获取预热任务类型，枚举值，MetadataLoad｜DistributedLoad
- * @method void setTaskType(string $TaskType) 设置预热任务类型，枚举值，MetadataLoad｜DistributedLoad
- * @method string getDescription() 获取任务描述，支持中文
- * @method void setDescription(string $Description) 设置任务描述，支持中文
- * @method integer getPriority() 获取任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
- * @method void setPriority(integer $Priority) 设置任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
- * @method MetadataLoadAttrs getMetadataLoadAttrs() 获取元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
- * @method void setMetadataLoadAttrs(MetadataLoadAttrs $MetadataLoadAttrs) 设置元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
- * @method DistributedLoadAttrs getDistributedLoadAttrs() 获取数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
- * @method void setDistributedLoadAttrs(DistributedLoadAttrs $DistributedLoadAttrs) 设置数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
- * @method string getReportPath() 获取将任务执行报告写入 COS 的路径，如果不需要报告则入参空
- * @method void setReportPath(string $ReportPath) 设置将任务执行报告写入 COS 的路径，如果不需要报告则入参空
- * @method string getState() 获取枚举，Completed，Running，Waiting，Cancelled
- * @method void setState(string $State) 设置枚举，Completed，Running，Waiting，Cancelled
- * @method string getTaskMessage() 获取任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息 
- * @method void setTaskMessage(string $TaskMessage) 设置任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息 
- * @method string getCreateTime() 获取预热任务创建时间
- * @method void setCreateTime(string $CreateTime) 设置预热任务创建时间
- * @method string getModifyTime() 获取预热任务变更时间
- * @method void setModifyTime(string $ModifyTime) 设置预热任务变更时间
- * @method string getRequester() 获取任务提交账号，子账号或服务角色 ID
- * @method void setRequester(string $Requester) 设置任务提交账号，子账号或服务角色 ID
+ * @method string getTaskId() 获取<p>预热任务 ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>预热任务 ID</p>
+ * @method string getTaskType() 获取<p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad</p>
+ * @method void setTaskType(string $TaskType) 设置<p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad</p>
+ * @method string getDescription() 获取<p>任务描述，支持中文</p>
+ * @method void setDescription(string $Description) 设置<p>任务描述，支持中文</p>
+ * @method integer getPriority() 获取<p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
+ * @method void setPriority(integer $Priority) 设置<p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
+ * @method MetadataLoadAttrs getMetadataLoadAttrs() 获取<p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
+ * @method void setMetadataLoadAttrs(MetadataLoadAttrs $MetadataLoadAttrs) 设置<p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
+ * @method DistributedLoadAttrs getDistributedLoadAttrs() 获取<p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
+ * @method void setDistributedLoadAttrs(DistributedLoadAttrs $DistributedLoadAttrs) 设置<p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
+ * @method LoadDataAttrs getLoadDataAttrs() 获取<p>仅预热数据参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+ * @method void setLoadDataAttrs(LoadDataAttrs $LoadDataAttrs) 设置<p>仅预热数据参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+ * @method string getReportPath() 获取<p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
+ * @method void setReportPath(string $ReportPath) 设置<p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
+ * @method string getState() 获取<p>枚举，Completed，Running，Waiting，Cancelled</p>
+ * @method void setState(string $State) 设置<p>枚举，Completed，Running，Waiting，Cancelled</p>
+ * @method string getTaskMessage() 获取<p>任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息</p>
+ * @method void setTaskMessage(string $TaskMessage) 设置<p>任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息</p>
+ * @method string getCreateTime() 获取<p>预热任务创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>预热任务创建时间</p>
+ * @method string getModifyTime() 获取<p>预热任务变更时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>预热任务变更时间</p>
+ * @method string getRequester() 获取<p>任务提交账号，子账号或服务角色 ID</p>
+ * @method void setRequester(string $Requester) 设置<p>任务提交账号，子账号或服务角色 ID</p>
  */
 class LoadTaskAttrs extends AbstractModel
 {
     /**
-     * @var string 预热任务 ID
+     * @var string <p>预热任务 ID</p>
      */
     public $TaskId;
 
     /**
-     * @var string 预热任务类型，枚举值，MetadataLoad｜DistributedLoad
+     * @var string <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad</p>
      */
     public $TaskType;
 
     /**
-     * @var string 任务描述，支持中文
+     * @var string <p>任务描述，支持中文</p>
      */
     public $Description;
 
     /**
-     * @var integer 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
+     * @var integer <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
      */
     public $Priority;
 
     /**
-     * @var MetadataLoadAttrs 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
+     * @var MetadataLoadAttrs <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
      */
     public $MetadataLoadAttrs;
 
     /**
-     * @var DistributedLoadAttrs 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
+     * @var DistributedLoadAttrs <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
      */
     public $DistributedLoadAttrs;
 
     /**
-     * @var string 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+     * @var LoadDataAttrs <p>仅预热数据参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+     */
+    public $LoadDataAttrs;
+
+    /**
+     * @var string <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
      */
     public $ReportPath;
 
     /**
-     * @var string 枚举，Completed，Running，Waiting，Cancelled
+     * @var string <p>枚举，Completed，Running，Waiting，Cancelled</p>
      */
     public $State;
 
     /**
-     * @var string 任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息 
+     * @var string <p>任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息</p>
      */
     public $TaskMessage;
 
     /**
-     * @var string 预热任务创建时间
+     * @var string <p>预热任务创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 预热任务变更时间
+     * @var string <p>预热任务变更时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 任务提交账号，子账号或服务角色 ID
+     * @var string <p>任务提交账号，子账号或服务角色 ID</p>
      */
     public $Requester;
 
     /**
-     * @param string $TaskId 预热任务 ID
-     * @param string $TaskType 预热任务类型，枚举值，MetadataLoad｜DistributedLoad
-     * @param string $Description 任务描述，支持中文
-     * @param integer $Priority 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
-     * @param MetadataLoadAttrs $MetadataLoadAttrs 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
-     * @param DistributedLoadAttrs $DistributedLoadAttrs 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
-     * @param string $ReportPath 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
-     * @param string $State 枚举，Completed，Running，Waiting，Cancelled
-     * @param string $TaskMessage 任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息 
-     * @param string $CreateTime 预热任务创建时间
-     * @param string $ModifyTime 预热任务变更时间
-     * @param string $Requester 任务提交账号，子账号或服务角色 ID
+     * @param string $TaskId <p>预热任务 ID</p>
+     * @param string $TaskType <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad</p>
+     * @param string $Description <p>任务描述，支持中文</p>
+     * @param integer $Priority <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
+     * @param MetadataLoadAttrs $MetadataLoadAttrs <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
+     * @param DistributedLoadAttrs $DistributedLoadAttrs <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
+     * @param LoadDataAttrs $LoadDataAttrs <p>仅预热数据参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+     * @param string $ReportPath <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
+     * @param string $State <p>枚举，Completed，Running，Waiting，Cancelled</p>
+     * @param string $TaskMessage <p>任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息</p>
+     * @param string $CreateTime <p>预热任务创建时间</p>
+     * @param string $ModifyTime <p>预热任务变更时间</p>
+     * @param string $Requester <p>任务提交账号，子账号或服务角色 ID</p>
      */
     function __construct()
     {
@@ -158,6 +166,11 @@ class LoadTaskAttrs extends AbstractModel
         if (array_key_exists("DistributedLoadAttrs",$param) and $param["DistributedLoadAttrs"] !== null) {
             $this->DistributedLoadAttrs = new DistributedLoadAttrs();
             $this->DistributedLoadAttrs->deserialize($param["DistributedLoadAttrs"]);
+        }
+
+        if (array_key_exists("LoadDataAttrs",$param) and $param["LoadDataAttrs"] !== null) {
+            $this->LoadDataAttrs = new LoadDataAttrs();
+            $this->LoadDataAttrs->deserialize($param["LoadDataAttrs"]);
         }
 
         if (array_key_exists("ReportPath",$param) and $param["ReportPath"] !== null) {

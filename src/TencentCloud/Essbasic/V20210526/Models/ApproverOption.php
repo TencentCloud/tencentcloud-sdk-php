@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForbidAddSignDate(boolean $ForbidAddSignDate) 设置<p>禁止在签署过程中添加签署日期控件<br> <br>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：</p><ul><li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li><li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li></ul>
  * @method string getApproverMobileMode() 获取<p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li><li>&quot;&quot;： 不走手机号传参模式</li></ul><p>默认值：&quot;&quot;</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>渠道方签署人不会触发</li><li>非渠道方签署人在指定签署人姓名，证件号的情况下会触发</li></ul>
  * @method void setApproverMobileMode(string $ApproverMobileMode) 设置<p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li><li>&quot;&quot;： 不走手机号传参模式</li></ul><p>默认值：&quot;&quot;</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>渠道方签署人不会触发</li><li>非渠道方签署人在指定签署人姓名，证件号的情况下会触发</li></ul>
+ * @method integer getAddSignComponentUseSealSize() 获取<p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+ * @method void setAddSignComponentUseSealSize(integer $AddSignComponentUseSealSize) 设置<p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
  */
 class ApproverOption extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ApproverOption extends AbstractModel
     public $ApproverMobileMode;
 
     /**
+     * @var integer <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+     */
+    public $AddSignComponentUseSealSize;
+
+    /**
      * @param boolean $NoRefuse <p>是否可以拒签 默认false-可以拒签 true-不可以拒签</p>
      * @param boolean $NoTransfer <p>是否可以转发 默认false-可以转发 true-不可以转发</p>
      * @param boolean $HideOneKeySign <p>当签署方有多个签署区时候，是否隐藏一键所有的签署区</p><p>false：（默认）不隐藏<br>true：隐藏，每个签署区要单独选择印章或者签名</p>
@@ -80,6 +87,7 @@ class ApproverOption extends AbstractModel
      * @param string $FlowReadLimit <p>签署人阅读合同限制参数<br> <br>取值：</p><ul><li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li><li> LimitReadTime，阅读合同仅限制阅读时长</li><li> LimitBottom，阅读合同仅限制必须阅读到底</li><li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li></ul>
      * @param boolean $ForbidAddSignDate <p>禁止在签署过程中添加签署日期控件<br> <br>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：</p><ul><li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li><li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li></ul>
      * @param string $ApproverMobileMode <p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li><li>&quot;&quot;： 不走手机号传参模式</li></ul><p>默认值：&quot;&quot;</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>渠道方签署人不会触发</li><li>非渠道方签署人在指定签署人姓名，证件号的情况下会触发</li></ul>
+     * @param integer $AddSignComponentUseSealSize <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ApproverOption extends AbstractModel
 
         if (array_key_exists("ApproverMobileMode",$param) and $param["ApproverMobileMode"] !== null) {
             $this->ApproverMobileMode = $param["ApproverMobileMode"];
+        }
+
+        if (array_key_exists("AddSignComponentUseSealSize",$param) and $param["AddSignComponentUseSealSize"] !== null) {
+            $this->AddSignComponentUseSealSize = $param["AddSignComponentUseSealSize"];
         }
     }
 }

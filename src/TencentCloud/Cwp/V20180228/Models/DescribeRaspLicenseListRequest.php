@@ -32,6 +32,7 @@ use TencentCloud\Common\AbstractModel;
 - NodeName 容器节点名称
 - ClusterID 容器集群ID
 - ClusterName 容器集群名称
+- CWPTags 主机标签(值为标签ID,多个取并集,仅AssetType=CWP/TCSS_HOST生效)
  * @method void setFilters(array $Filters) 设置过滤条件
 - AssetType 资产类型(CWP 主机安全资产, TCSS_HOST 容器主机节点,TCSS_EKS 容器超级节点)
 - PluginStatus 插件状态(Normal 使用正常,Abnormal 存在异常,Unused 未使用)
@@ -44,6 +45,7 @@ use TencentCloud\Common\AbstractModel;
 - NodeName 容器节点名称
 - ClusterID 容器集群ID
 - ClusterName 容器集群名称
+- CWPTags 主机标签(值为标签ID,多个取并集,仅AssetType=CWP/TCSS_HOST生效)
  * @method integer getLimit() 获取限制条数,默认10
  * @method void setLimit(integer $Limit) 设置限制条数,默认10
  * @method integer getOffset() 获取偏移量,默认0
@@ -70,6 +72,7 @@ class DescribeRaspLicenseListRequest extends AbstractModel
 - NodeName 容器节点名称
 - ClusterID 容器集群ID
 - ClusterName 容器集群名称
+- CWPTags 主机标签(值为标签ID,多个取并集,仅AssetType=CWP/TCSS_HOST生效)
      */
     public $Filters;
 
@@ -107,6 +110,7 @@ class DescribeRaspLicenseListRequest extends AbstractModel
 - NodeName 容器节点名称
 - ClusterID 容器集群ID
 - ClusterName 容器集群名称
+- CWPTags 主机标签(值为标签ID,多个取并集,仅AssetType=CWP/TCSS_HOST生效)
      * @param integer $Limit 限制条数,默认10
      * @param integer $Offset 偏移量,默认0
      * @param string $Order 排序方式,ASC 正序,DESC 倒序

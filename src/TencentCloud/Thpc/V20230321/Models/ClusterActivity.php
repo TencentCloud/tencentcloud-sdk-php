@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置集群活动开始时间。
  * @method string getEndTime() 获取集群活动结束时间。
  * @method void setEndTime(string $EndTime) 设置集群活动结束时间。
+ * @method string getQueueName() 获取队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQueueName(string $QueueName) 设置队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterActivity extends AbstractModel
 {
@@ -104,6 +108,12 @@ class ClusterActivity extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QueueName;
+
+    /**
      * @param string $ClusterId 集群ID。
      * @param string $ActivityId 集群活动ID。
      * @param string $ActivityType 集群活动类型。取值范围：<br><li>CreateAndAddNodes：创建实例并添加进集群</li><br><li>RemoveNodesFromCluster：从集群移除实例</li><br><li>TerminateNodes：销毁实例</li><br><li>MountStorageOption：增加挂载选项并进行挂载</li><br><li>UmountStorageOption：删除集群挂载存储选项并解挂载</li>
@@ -116,6 +126,8 @@ class ClusterActivity extends AbstractModel
      * @param array $RelatedNodeActivitySet 集群活动相关节点活动集合。
      * @param string $StartTime 集群活动开始时间。
      * @param string $EndTime 集群活动结束时间。
+     * @param string $QueueName 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -177,6 +189,10 @@ class ClusterActivity extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
         }
     }
 }

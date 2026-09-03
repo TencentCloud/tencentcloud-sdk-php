@@ -18,7 +18,7 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述了实例的公网可访问性，声明了实例的公网使用计费模式，最大带宽等
+ * 描述了实例的主网卡公网可访问性，声明了实例的公网使用计费模式，最大带宽等
  *
  * @method string getInternetChargeType() 获取网络计费类型。取值范围：<br><li>BANDWIDTH_PREPAID：预付费按带宽结算</li><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li><li>BANDWIDTH_PACKAGE：带宽包用户</li>默认取值：非带宽包用户默认与子机付费类型保持一致，比如子机付费类型为预付费，网络计费类型默认为预付费；子机付费类型为后付费，网络计费类型默认为后付费。
  * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费类型。取值范围：<br><li>BANDWIDTH_PREPAID：预付费按带宽结算</li><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li><li>BANDWIDTH_PACKAGE：带宽包用户</li>默认取值：非带宽包用户默认与子机付费类型保持一致，比如子机付费类型为预付费，网络计费类型默认为预付费；子机付费类型为后付费，网络计费类型默认为后付费。

@@ -20,90 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceNodeProperty请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- * @method array getNodeIds() 获取节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
- * @method void setNodeIds(array $NodeIds) 设置节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
- * @method array getRoles() 获取节点角色。可选值包括：
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
- * @method void setRoles(array $Roles) 设置节点角色。可选值包括：
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
- * @method boolean getOnlyHidden() 获取该参数指定节点是否为 Hidden 节点，默认为 false。
- * @method void setOnlyHidden(boolean $OnlyHidden) 设置该参数指定节点是否为 Hidden 节点，默认为 false。
- * @method integer getPriority() 获取该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
- * @method void setPriority(integer $Priority) 设置该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
- * @method integer getVotes() 获取该参数指定节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
- * @method void setVotes(integer $Votes) 设置该参数指定节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
- * @method array getTags() 获取节点标签。
- * @method void setTags(array $Tags) 设置节点标签。
+ * @method string getInstanceId() 获取<p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+ * @method array getNodeIds() 获取<p>节点 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台的节点管理</a>复制节点 ID。</p>
+ * @method void setNodeIds(array $NodeIds) 设置<p>节点 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台的节点管理</a>复制节点 ID。</p>
+ * @method array getRoles() 获取<p>节点角色。可选值包括：</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+ * @method void setRoles(array $Roles) 设置<p>节点角色。可选值包括：</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+ * @method boolean getOnlyHidden() 获取<p>该参数指定节点是否为 Hidden 节点，默认为 false。</p>
+ * @method void setOnlyHidden(boolean $OnlyHidden) 设置<p>该参数指定节点是否为 Hidden 节点，默认为 false。</p>
+ * @method integer getPriority() 获取<p>该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
+ * @method void setPriority(integer $Priority) 设置<p>该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
+ * @method integer getVotes() 获取<p>该参数指定节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+ * @method void setVotes(integer $Votes) 设置<p>该参数指定节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+ * @method array getTags() 获取<p>节点标签。</p>
+ * @method void setTags(array $Tags) 设置<p>节点标签。</p>
  */
 class DescribeDBInstanceNodePropertyRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @var string <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
+     * @var array <p>节点 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台的节点管理</a>复制节点 ID。</p>
      */
     public $NodeIds;
 
     /**
-     * @var array 节点角色。可选值包括：
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
+     * @var array <p>节点角色。可选值包括：</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
      */
     public $Roles;
 
     /**
-     * @var boolean 该参数指定节点是否为 Hidden 节点，默认为 false。
+     * @var boolean <p>该参数指定节点是否为 Hidden 节点，默认为 false。</p>
      */
     public $OnlyHidden;
 
     /**
-     * @var integer 该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
+     * @var integer <p>该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
      */
     public $Priority;
 
     /**
-     * @var integer 该参数指定节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
+     * @var integer <p>该参数指定节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
      */
     public $Votes;
 
     /**
-     * @var array 节点标签。
+     * @var array <p>节点标签。</p>
      */
     public $Tags;
 
     /**
-     * @param string $InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param array $NodeIds 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
-     * @param array $Roles 节点角色。可选值包括：
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
-     * @param boolean $OnlyHidden 该参数指定节点是否为 Hidden 节点，默认为 false。
-     * @param integer $Priority 该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
-     * @param integer $Votes 该参数指定节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
-     * @param array $Tags 节点标签。
+     * @param string $InstanceId <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+     * @param array $NodeIds <p>节点 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台的节点管理</a>复制节点 ID。</p>
+     * @param array $Roles <p>节点角色。可选值包括：</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+     * @param boolean $OnlyHidden <p>该参数指定节点是否为 Hidden 节点，默认为 false。</p>
+     * @param integer $Priority <p>该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
+     * @param integer $Votes <p>该参数指定节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+     * @param array $Tags <p>节点标签。</p>
      */
     function __construct()
     {

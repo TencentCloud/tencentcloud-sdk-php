@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节点分组信息
  *
- * @method integer getId() 获取自增id，数据库中唯一
- * @method void setId(integer $Id) 设置自增id，数据库中唯一
- * @method string getGroupName() 获取节点分组名称
- * @method void setGroupName(string $GroupName) 设置节点分组名称
- * @method string getGroupId() 获取节点分组id
- * @method void setGroupId(string $GroupId) 设置节点分组id
- * @method integer getEdgeCount() 获取包含边缘节点数量
- * @method void setEdgeCount(integer $EdgeCount) 设置包含边缘节点数量
+ * @method integer getId() 获取<p>自增id，数据库中唯一</p>
+ * @method void setId(integer $Id) 设置<p>自增id，数据库中唯一</p>
+ * @method string getGroupName() 获取<p>节点分组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>节点分组名称</p>
+ * @method string getGroupId() 获取<p>节点分组id</p>
+ * @method void setGroupId(string $GroupId) 设置<p>节点分组id</p>
+ * @method integer getEdgeCount() 获取<p>包含边缘节点数量</p>
+ * @method void setEdgeCount(integer $EdgeCount) 设置<p>包含边缘节点数量</p>
+ * @method array getGroupNameI18n() 获取<p>分组中英文</p>
+ * @method void setGroupNameI18n(array $GroupNameI18n) 设置<p>分组中英文</p>
  */
 class DescribeDLPEdgeNodeGroupsRspItem extends AbstractModel
 {
     /**
-     * @var integer 自增id，数据库中唯一
+     * @var integer <p>自增id，数据库中唯一</p>
      */
     public $Id;
 
     /**
-     * @var string 节点分组名称
+     * @var string <p>节点分组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var string 节点分组id
+     * @var string <p>节点分组id</p>
      */
     public $GroupId;
 
     /**
-     * @var integer 包含边缘节点数量
+     * @var integer <p>包含边缘节点数量</p>
      */
     public $EdgeCount;
 
     /**
-     * @param integer $Id 自增id，数据库中唯一
-     * @param string $GroupName 节点分组名称
-     * @param string $GroupId 节点分组id
-     * @param integer $EdgeCount 包含边缘节点数量
+     * @var array <p>分组中英文</p>
+     */
+    public $GroupNameI18n;
+
+    /**
+     * @param integer $Id <p>自增id，数据库中唯一</p>
+     * @param string $GroupName <p>节点分组名称</p>
+     * @param string $GroupId <p>节点分组id</p>
+     * @param integer $EdgeCount <p>包含边缘节点数量</p>
+     * @param array $GroupNameI18n <p>分组中英文</p>
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class DescribeDLPEdgeNodeGroupsRspItem extends AbstractModel
 
         if (array_key_exists("EdgeCount",$param) and $param["EdgeCount"] !== null) {
             $this->EdgeCount = $param["EdgeCount"];
+        }
+
+        if (array_key_exists("GroupNameI18n",$param) and $param["GroupNameI18n"] !== null) {
+            $this->GroupNameI18n = [];
+            foreach ($param["GroupNameI18n"] as $key => $value){
+                $obj = new I18nString();
+                $obj->deserialize($value);
+                array_push($this->GroupNameI18n, $obj);
+            }
         }
     }
 }

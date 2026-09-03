@@ -138,6 +138,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskComplexityRoute(TaskComplexityRouteDTO $TaskComplexityRoute) 设置<p>任务复杂度路由配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDomain() 获取<p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomain(string $Domain) 设置<p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRequestProtocolType() 获取<p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRequestProtocolType(string $RequestProtocolType) 设置<p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeModelServiceResponseVO extends AbstractModel
 {
@@ -365,6 +373,18 @@ class DescribeModelServiceResponseVO extends AbstractModel
     public $TaskComplexityRoute;
 
     /**
+     * @var string <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domain;
+
+    /**
+     * @var string <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RequestProtocolType;
+
+    /**
      * @param integer $AppID <p>腾讯云AppID</p>
      * @param string $Uin <p>腾讯云Uin</p>
      * @param string $InstanceID <p>实例ID</p>
@@ -423,6 +443,10 @@ class DescribeModelServiceResponseVO extends AbstractModel
      * @param array $TokenLengthRoute <p>token长度路由配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskComplexityRouteDTO $TaskComplexityRoute <p>任务复杂度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Domain <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -626,6 +650,14 @@ class DescribeModelServiceResponseVO extends AbstractModel
         if (array_key_exists("TaskComplexityRoute",$param) and $param["TaskComplexityRoute"] !== null) {
             $this->TaskComplexityRoute = new TaskComplexityRouteDTO();
             $this->TaskComplexityRoute->deserialize($param["TaskComplexityRoute"]);
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("RequestProtocolType",$param) and $param["RequestProtocolType"] !== null) {
+            $this->RequestProtocolType = $param["RequestProtocolType"];
         }
     }
 }

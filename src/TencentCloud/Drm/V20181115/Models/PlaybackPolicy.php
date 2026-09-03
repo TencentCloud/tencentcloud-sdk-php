@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseDurationSeconds(integer $LicenseDurationSeconds) 设置<p>播放许可证的有效期</p><p>单位：秒</p>
  * @method integer getPlaybackDurationSeconds() 获取<p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
  * @method void setPlaybackDurationSeconds(integer $PlaybackDurationSeconds) 设置<p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
+ * @method boolean getCanPersistent() 获取<p>是否允许下发离线license</p><p>默认值：false</p><p>widevine方案，<br>当CanPersistent为true时，根据license request中请求的是online还是offline license自动匹配下发。<br>当CanPersistent为false时，只下发online license。</p><p>fairplay方案。<br>当CanPersistent为true时，只下发offline license。<br>当CanPersistent为false时，只下发online license。</p>
+ * @method void setCanPersistent(boolean $CanPersistent) 设置<p>是否允许下发离线license</p><p>默认值：false</p><p>widevine方案，<br>当CanPersistent为true时，根据license request中请求的是online还是offline license自动匹配下发。<br>当CanPersistent为false时，只下发online license。</p><p>fairplay方案。<br>当CanPersistent为true时，只下发offline license。<br>当CanPersistent为false时，只下发online license。</p>
  */
 class PlaybackPolicy extends AbstractModel
 {
@@ -38,8 +40,14 @@ class PlaybackPolicy extends AbstractModel
     public $PlaybackDurationSeconds;
 
     /**
+     * @var boolean <p>是否允许下发离线license</p><p>默认值：false</p><p>widevine方案，<br>当CanPersistent为true时，根据license request中请求的是online还是offline license自动匹配下发。<br>当CanPersistent为false时，只下发online license。</p><p>fairplay方案。<br>当CanPersistent为true时，只下发offline license。<br>当CanPersistent为false时，只下发online license。</p>
+     */
+    public $CanPersistent;
+
+    /**
      * @param integer $LicenseDurationSeconds <p>播放许可证的有效期</p><p>单位：秒</p>
      * @param integer $PlaybackDurationSeconds <p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
+     * @param boolean $CanPersistent <p>是否允许下发离线license</p><p>默认值：false</p><p>widevine方案，<br>当CanPersistent为true时，根据license request中请求的是online还是offline license自动匹配下发。<br>当CanPersistent为false时，只下发online license。</p><p>fairplay方案。<br>当CanPersistent为true时，只下发offline license。<br>当CanPersistent为false时，只下发online license。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class PlaybackPolicy extends AbstractModel
 
         if (array_key_exists("PlaybackDurationSeconds",$param) and $param["PlaybackDurationSeconds"] !== null) {
             $this->PlaybackDurationSeconds = $param["PlaybackDurationSeconds"];
+        }
+
+        if (array_key_exists("CanPersistent",$param) and $param["CanPersistent"] !== null) {
+            $this->CanPersistent = $param["CanPersistent"];
         }
     }
 }

@@ -20,231 +20,107 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillResourceSummary请求参数结构体
  *
- * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
- * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
- * @method integer getLimit() 获取数量，最大值为1000
- * @method void setLimit(integer $Limit) 设置数量，最大值为1000
- * @method string getMonth() 获取月份，格式为yyyy-mm。不能早于开通账单2.0的月份
- * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm。不能早于开通账单2.0的月份
- * @method string getPeriodType() 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
- * @method void setPeriodType(string $PeriodType) 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
- * @method integer getNeedRecordNum() 获取是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
- * @method void setNeedRecordNum(integer $NeedRecordNum) 设置是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
- * @method string getActionType() 获取查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
-包年包月新购
-包年包月续费
-包年包月配置变更
-包年包月退款 
-按量计费扣费 
-线下项目扣费 
-线下产品扣费 
-调账扣费 
-调账补偿 
-按量计费小时结 
-按量计费日结 
-按量计费月结 
-竞价实例小时结 
-线下项目调账补偿 
-线下产品调账补偿 
-优惠扣费 
-优惠补偿 
-按量计费迁入资源 
-按量计费迁出资源 
-包年包月迁入资源 
-包年包月迁出资源 
-预付费用 
-小时费用 
-预留实例退款 
-按量计费冲正 
-包年包月转按量 
-保底扣款 
-节省计划小时费用
- * @method void setActionType(string $ActionType) 设置查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
-包年包月新购
-包年包月续费
-包年包月配置变更
-包年包月退款 
-按量计费扣费 
-线下项目扣费 
-线下产品扣费 
-调账扣费 
-调账补偿 
-按量计费小时结 
-按量计费日结 
-按量计费月结 
-竞价实例小时结 
-线下项目调账补偿 
-线下产品调账补偿 
-优惠扣费 
-优惠补偿 
-按量计费迁入资源 
-按量计费迁出资源 
-包年包月迁入资源 
-包年包月迁出资源 
-预付费用 
-小时费用 
-预留实例退款 
-按量计费冲正 
-包年包月转按量 
-保底扣款 
-节省计划小时费用
- * @method string getResourceId() 获取查询指定资源信息
- * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
- * @method string getPayMode() 获取付费模式 prePay/postPay
- * @method void setPayMode(string $PayMode) 设置付费模式 prePay/postPay
- * @method string getBusinessCode() 获取产品名称代码
-备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
- * @method void setBusinessCode(string $BusinessCode) 设置产品名称代码
-备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
- * @method string getPayerUin() 获取支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
- * @method void setPayerUin(string $PayerUin) 设置支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
- * @method string getTagKey() 获取分账标签键，用户自定义（支持2021-01以后账单查询）
- * @method void setTagKey(string $TagKey) 设置分账标签键，用户自定义（支持2021-01以后账单查询）
- * @method string getTagValue() 获取分账标签值，该参数为空表示该标签键下未设置标签值的记录
-（支持2021-01以后账单查询）
- * @method void setTagValue(string $TagValue) 设置分账标签值，该参数为空表示该标签键下未设置标签值的记录
-（支持2021-01以后账单查询）
+ * @method integer getOffset() 获取<p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推</p>
+ * @method integer getLimit() 获取<p>数量，最大值为1000</p>
+ * @method void setLimit(integer $Limit) 设置<p>数量，最大值为1000</p>
+ * @method string getMonth() 获取<p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
+ * @method void setMonth(string $Month) 设置<p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
+ * @method string getPeriodType() 获取<p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
+ * @method void setPeriodType(string $PeriodType) 设置<p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
+ * @method integer getNeedRecordNum() 获取<p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
+ * @method void setNeedRecordNum(integer $NeedRecordNum) 设置<p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
+ * @method string getActionType() 获取<p>查询交易类型（请使用交易类型名称入参），入参示例枚举如下：<br>包年包月新购<br>包年包月续费<br>包年包月配置变更<br>包年包月退款<br>按量计费扣费<br>线下项目扣费<br>线下产品扣费<br>调账扣费<br>调账补偿<br>按量计费小时结<br>按量计费日结<br>按量计费月结<br>竞价实例小时结<br>线下项目调账补偿<br>线下产品调账补偿<br>优惠扣费<br>优惠补偿<br>按量计费迁入资源<br>按量计费迁出资源<br>包年包月迁入资源<br>包年包月迁出资源<br>预付费用<br>小时费用<br>预留实例退款<br>按量计费冲正<br>包年包月转按量<br>保底扣款<br>节省计划小时费用</p>
+ * @method void setActionType(string $ActionType) 设置<p>查询交易类型（请使用交易类型名称入参），入参示例枚举如下：<br>包年包月新购<br>包年包月续费<br>包年包月配置变更<br>包年包月退款<br>按量计费扣费<br>线下项目扣费<br>线下产品扣费<br>调账扣费<br>调账补偿<br>按量计费小时结<br>按量计费日结<br>按量计费月结<br>竞价实例小时结<br>线下项目调账补偿<br>线下产品调账补偿<br>优惠扣费<br>优惠补偿<br>按量计费迁入资源<br>按量计费迁出资源<br>包年包月迁入资源<br>包年包月迁出资源<br>预付费用<br>小时费用<br>预留实例退款<br>按量计费冲正<br>包年包月转按量<br>保底扣款<br>节省计划小时费用</p>
+ * @method string getResourceId() 获取<p>查询指定资源信息</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>查询指定资源信息</p>
+ * @method string getPayMode() 获取<p>付费模式 prePay/postPay</p>
+ * @method void setPayMode(string $PayMode) 设置<p>付费模式 prePay/postPay</p>
+ * @method string getBusinessCode() 获取<p>产品名称代码<br>备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a></p>
+ * @method void setBusinessCode(string $BusinessCode) 设置<p>产品名称代码<br>备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a></p>
+ * @method string getPayerUin() 获取<p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+ * @method void setPayerUin(string $PayerUin) 设置<p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+ * @method string getTagKey() 获取<p>分账标签键，用户自定义（支持2021-01以后账单查询）</p>
+ * @method void setTagKey(string $TagKey) 设置<p>分账标签键，用户自定义（支持2021-01以后账单查询）</p>
+ * @method string getTagValue() 获取<p>分账标签值，该参数为空表示该标签键下未设置标签值的记录<br>（支持2021-01以后账单查询）</p>
+ * @method void setTagValue(string $TagValue) 设置<p>分账标签值，该参数为空表示该标签键下未设置标签值的记录<br>（支持2021-01以后账单查询）</p>
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
     /**
-     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+     * @var integer <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推</p>
      */
     public $Offset;
 
     /**
-     * @var integer 数量，最大值为1000
+     * @var integer <p>数量，最大值为1000</p>
      */
     public $Limit;
 
     /**
-     * @var string 月份，格式为yyyy-mm。不能早于开通账单2.0的月份
+     * @var string <p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
      */
     public $Month;
 
     /**
-     * @var string 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     * @var string <p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
      * @deprecated
      */
     public $PeriodType;
 
     /**
-     * @var integer 是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
+     * @var integer <p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
      */
     public $NeedRecordNum;
 
     /**
-     * @var string 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
-包年包月新购
-包年包月续费
-包年包月配置变更
-包年包月退款 
-按量计费扣费 
-线下项目扣费 
-线下产品扣费 
-调账扣费 
-调账补偿 
-按量计费小时结 
-按量计费日结 
-按量计费月结 
-竞价实例小时结 
-线下项目调账补偿 
-线下产品调账补偿 
-优惠扣费 
-优惠补偿 
-按量计费迁入资源 
-按量计费迁出资源 
-包年包月迁入资源 
-包年包月迁出资源 
-预付费用 
-小时费用 
-预留实例退款 
-按量计费冲正 
-包年包月转按量 
-保底扣款 
-节省计划小时费用
+     * @var string <p>查询交易类型（请使用交易类型名称入参），入参示例枚举如下：<br>包年包月新购<br>包年包月续费<br>包年包月配置变更<br>包年包月退款<br>按量计费扣费<br>线下项目扣费<br>线下产品扣费<br>调账扣费<br>调账补偿<br>按量计费小时结<br>按量计费日结<br>按量计费月结<br>竞价实例小时结<br>线下项目调账补偿<br>线下产品调账补偿<br>优惠扣费<br>优惠补偿<br>按量计费迁入资源<br>按量计费迁出资源<br>包年包月迁入资源<br>包年包月迁出资源<br>预付费用<br>小时费用<br>预留实例退款<br>按量计费冲正<br>包年包月转按量<br>保底扣款<br>节省计划小时费用</p>
      */
     public $ActionType;
 
     /**
-     * @var string 查询指定资源信息
+     * @var string <p>查询指定资源信息</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 付费模式 prePay/postPay
+     * @var string <p>付费模式 prePay/postPay</p>
      */
     public $PayMode;
 
     /**
-     * @var string 产品名称代码
-备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+     * @var string <p>产品名称代码<br>备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a></p>
      */
     public $BusinessCode;
 
     /**
-     * @var string 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+     * @var string <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
      */
     public $PayerUin;
 
     /**
-     * @var string 分账标签键，用户自定义（支持2021-01以后账单查询）
+     * @var string <p>分账标签键，用户自定义（支持2021-01以后账单查询）</p>
      */
     public $TagKey;
 
     /**
-     * @var string 分账标签值，该参数为空表示该标签键下未设置标签值的记录
-（支持2021-01以后账单查询）
+     * @var string <p>分账标签值，该参数为空表示该标签键下未设置标签值的记录<br>（支持2021-01以后账单查询）</p>
      */
     public $TagValue;
 
     /**
-     * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
-     * @param integer $Limit 数量，最大值为1000
-     * @param string $Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份
-     * @param string $PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
-     * @param integer $NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
-     * @param string $ActionType 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
-包年包月新购
-包年包月续费
-包年包月配置变更
-包年包月退款 
-按量计费扣费 
-线下项目扣费 
-线下产品扣费 
-调账扣费 
-调账补偿 
-按量计费小时结 
-按量计费日结 
-按量计费月结 
-竞价实例小时结 
-线下项目调账补偿 
-线下产品调账补偿 
-优惠扣费 
-优惠补偿 
-按量计费迁入资源 
-按量计费迁出资源 
-包年包月迁入资源 
-包年包月迁出资源 
-预付费用 
-小时费用 
-预留实例退款 
-按量计费冲正 
-包年包月转按量 
-保底扣款 
-节省计划小时费用
-     * @param string $ResourceId 查询指定资源信息
-     * @param string $PayMode 付费模式 prePay/postPay
-     * @param string $BusinessCode 产品名称代码
-备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
-     * @param string $PayerUin 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
-     * @param string $TagKey 分账标签键，用户自定义（支持2021-01以后账单查询）
-     * @param string $TagValue 分账标签值，该参数为空表示该标签键下未设置标签值的记录
-（支持2021-01以后账单查询）
+     * @param integer $Offset <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推</p>
+     * @param integer $Limit <p>数量，最大值为1000</p>
+     * @param string $Month <p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
+     * @param string $PeriodType <p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
+     * @param integer $NeedRecordNum <p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
+     * @param string $ActionType <p>查询交易类型（请使用交易类型名称入参），入参示例枚举如下：<br>包年包月新购<br>包年包月续费<br>包年包月配置变更<br>包年包月退款<br>按量计费扣费<br>线下项目扣费<br>线下产品扣费<br>调账扣费<br>调账补偿<br>按量计费小时结<br>按量计费日结<br>按量计费月结<br>竞价实例小时结<br>线下项目调账补偿<br>线下产品调账补偿<br>优惠扣费<br>优惠补偿<br>按量计费迁入资源<br>按量计费迁出资源<br>包年包月迁入资源<br>包年包月迁出资源<br>预付费用<br>小时费用<br>预留实例退款<br>按量计费冲正<br>包年包月转按量<br>保底扣款<br>节省计划小时费用</p>
+     * @param string $ResourceId <p>查询指定资源信息</p>
+     * @param string $PayMode <p>付费模式 prePay/postPay</p>
+     * @param string $BusinessCode <p>产品名称代码<br>备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a></p>
+     * @param string $PayerUin <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+     * @param string $TagKey <p>分账标签键，用户自定义（支持2021-01以后账单查询）</p>
+     * @param string $TagValue <p>分账标签值，该参数为空表示该标签键下未设置标签值的记录<br>（支持2021-01以后账单查询）</p>
      */
     function __construct()
     {

@@ -20,238 +20,238 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 聚合软件的已安装终端列表中的一行数据
  *
- * @method string getDeviceName() 获取终端名
+ * @method string getDeviceName() 获取<p>终端名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceName(string $DeviceName) 设置终端名
+ * @method void setDeviceName(string $DeviceName) 设置<p>终端名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastLoginAccount() 获取最近登录账号
+ * @method string getLastLoginAccount() 获取<p>最近登录账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastLoginAccount(string $LastLoginAccount) 设置最近登录账号
+ * @method void setLastLoginAccount(string $LastLoginAccount) 设置<p>最近登录账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeviceUserName() 获取终端用户名
+ * @method string getDeviceUserName() 获取<p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceUserName(string $DeviceUserName) 设置终端用户名
+ * @method void setDeviceUserName(string $DeviceUserName) 设置<p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取软件版本
+ * @method string getVersion() 获取<p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置软件版本
+ * @method void setVersion(string $Version) 设置<p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPiracyRisk() 获取是否盗版
+ * @method integer getPiracyRisk() 获取<p>是否盗版</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPiracyRisk(integer $PiracyRisk) 设置是否盗版
+ * @method void setPiracyRisk(integer $PiracyRisk) 设置<p>是否盗版</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPiracyReason() 获取盗版原因
+ * @method string getPiracyReason() 获取<p>盗版原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPiracyReason(string $PiracyReason) 设置盗版原因
+ * @method void setPiracyReason(string $PiracyReason) 设置<p>盗版原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstallTime() 获取安装时间
+ * @method string getInstallTime() 获取<p>安装时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstallTime(string $InstallTime) 设置安装时间
+ * @method void setInstallTime(string $InstallTime) 设置<p>安装时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserPath() 获取用户目录
+ * @method string getUserPath() 获取<p>用户目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserPath(string $UserPath) 设置用户目录
+ * @method void setUserPath(string $UserPath) 设置<p>用户目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserGroup() 获取所在分组
+ * @method string getUserGroup() 获取<p>所在分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserGroup(string $UserGroup) 设置所在分组
+ * @method void setUserGroup(string $UserGroup) 设置<p>所在分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIP() 获取IP
+ * @method string getIP() 获取<p>IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIP(string $IP) 设置IP
+ * @method void setIP(string $IP) 设置<p>IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMAC() 获取MAC
+ * @method string getMAC() 获取<p>MAC</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMAC(string $MAC) 设置MAC
+ * @method void setMAC(string $MAC) 设置<p>MAC</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUseTime() 获取使用时长
+ * @method integer getUseTime() 获取<p>使用时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUseTime(integer $UseTime) 设置使用时长
+ * @method void setUseTime(integer $UseTime) 设置<p>使用时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeviceId() 获取设备ID
+ * @method integer getDeviceId() 获取<p>设备ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceId(integer $DeviceId) 设置设备ID
+ * @method void setDeviceId(integer $DeviceId) 设置<p>设备ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFullSoftName() 获取软件全名
+ * @method string getFullSoftName() 获取<p>软件全名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFullSoftName(string $FullSoftName) 设置软件全名
+ * @method void setFullSoftName(string $FullSoftName) 设置<p>软件全名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getId() 获取数据ID（唯一）
+ * @method integer getId() 获取<p>数据ID（唯一）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置数据ID（唯一）
+ * @method void setId(integer $Id) 设置<p>数据ID（唯一）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNewVersion() 获取该终端此款软件可升级到的目标版本号
- * @method void setNewVersion(string $NewVersion) 设置该终端此款软件可升级到的目标版本号
- * @method integer getUpgradeSoftId() 获取该软件对应运营配置的可升级id
- * @method void setUpgradeSoftId(integer $UpgradeSoftId) 设置该软件对应运营配置的可升级id
- * @method string getRemarkName() 获取终端备注名
- * @method void setRemarkName(string $RemarkName) 设置终端备注名
- * @method integer getSoftwareId() 获取软件id
- * @method void setSoftwareId(integer $SoftwareId) 设置软件id
- * @method integer getOsType() 获取0:win 2:mac
- * @method void setOsType(integer $OsType) 设置0:win 2:mac
- * @method string getAssetType() 获取所有权
- * @method void setAssetType(string $AssetType) 设置所有权
+ * @method string getNewVersion() 获取<p>该终端此款软件可升级到的目标版本号</p>
+ * @method void setNewVersion(string $NewVersion) 设置<p>该终端此款软件可升级到的目标版本号</p>
+ * @method integer getUpgradeSoftId() 获取<p>该软件对应运营配置的可升级id</p>
+ * @method void setUpgradeSoftId(integer $UpgradeSoftId) 设置<p>该软件对应运营配置的可升级id</p>
+ * @method string getRemarkName() 获取<p>终端备注名</p>
+ * @method void setRemarkName(string $RemarkName) 设置<p>终端备注名</p>
+ * @method integer getSoftwareId() 获取<p>软件id</p>
+ * @method void setSoftwareId(integer $SoftwareId) 设置<p>软件id</p>
+ * @method integer getOsType() 获取<p>0:win 2:mac</p>
+ * @method void setOsType(integer $OsType) 设置<p>0:win 2:mac</p>
+ * @method string getAssetType() 获取<p>所有权</p>
+ * @method void setAssetType(string $AssetType) 设置<p>所有权</p>
  */
 class AggrSoftDeviceRow extends AbstractModel
 {
     /**
-     * @var string 终端名
+     * @var string <p>终端名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
     /**
-     * @var string 最近登录账号
+     * @var string <p>最近登录账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastLoginAccount;
 
     /**
-     * @var string 终端用户名
+     * @var string <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceUserName;
 
     /**
-     * @var string 软件版本
+     * @var string <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
-     * @var integer 是否盗版
+     * @var integer <p>是否盗版</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PiracyRisk;
 
     /**
-     * @var string 盗版原因
+     * @var string <p>盗版原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PiracyReason;
 
     /**
-     * @var string 安装时间
+     * @var string <p>安装时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstallTime;
 
     /**
-     * @var string 用户目录
+     * @var string <p>用户目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserPath;
 
     /**
-     * @var string 所在分组
+     * @var string <p>所在分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserGroup;
 
     /**
-     * @var string IP
+     * @var string <p>IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IP;
 
     /**
-     * @var string MAC
+     * @var string <p>MAC</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MAC;
 
     /**
-     * @var integer 使用时长
+     * @var integer <p>使用时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseTime;
 
     /**
-     * @var integer 设备ID
+     * @var integer <p>设备ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
-     * @var string 软件全名
+     * @var string <p>软件全名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FullSoftName;
 
     /**
-     * @var integer 数据ID（唯一）
+     * @var integer <p>数据ID（唯一）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 该终端此款软件可升级到的目标版本号
+     * @var string <p>该终端此款软件可升级到的目标版本号</p>
      */
     public $NewVersion;
 
     /**
-     * @var integer 该软件对应运营配置的可升级id
+     * @var integer <p>该软件对应运营配置的可升级id</p>
      */
     public $UpgradeSoftId;
 
     /**
-     * @var string 终端备注名
+     * @var string <p>终端备注名</p>
      */
     public $RemarkName;
 
     /**
-     * @var integer 软件id
+     * @var integer <p>软件id</p>
      */
     public $SoftwareId;
 
     /**
-     * @var integer 0:win 2:mac
+     * @var integer <p>0:win 2:mac</p>
      */
     public $OsType;
 
     /**
-     * @var string 所有权
+     * @var string <p>所有权</p>
      */
     public $AssetType;
 
     /**
-     * @param string $DeviceName 终端名
+     * @param string $DeviceName <p>终端名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastLoginAccount 最近登录账号
+     * @param string $LastLoginAccount <p>最近登录账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeviceUserName 终端用户名
+     * @param string $DeviceUserName <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version 软件版本
+     * @param string $Version <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PiracyRisk 是否盗版
+     * @param integer $PiracyRisk <p>是否盗版</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PiracyReason 盗版原因
+     * @param string $PiracyReason <p>盗版原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstallTime 安装时间
+     * @param string $InstallTime <p>安装时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserPath 用户目录
+     * @param string $UserPath <p>用户目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserGroup 所在分组
+     * @param string $UserGroup <p>所在分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IP IP
+     * @param string $IP <p>IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MAC MAC
+     * @param string $MAC <p>MAC</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UseTime 使用时长
+     * @param integer $UseTime <p>使用时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DeviceId 设备ID
+     * @param integer $DeviceId <p>设备ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FullSoftName 软件全名
+     * @param string $FullSoftName <p>软件全名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Id 数据ID（唯一）
+     * @param integer $Id <p>数据ID（唯一）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NewVersion 该终端此款软件可升级到的目标版本号
-     * @param integer $UpgradeSoftId 该软件对应运营配置的可升级id
-     * @param string $RemarkName 终端备注名
-     * @param integer $SoftwareId 软件id
-     * @param integer $OsType 0:win 2:mac
-     * @param string $AssetType 所有权
+     * @param string $NewVersion <p>该终端此款软件可升级到的目标版本号</p>
+     * @param integer $UpgradeSoftId <p>该软件对应运营配置的可升级id</p>
+     * @param string $RemarkName <p>终端备注名</p>
+     * @param integer $SoftwareId <p>软件id</p>
+     * @param integer $OsType <p>0:win 2:mac</p>
+     * @param string $AssetType <p>所有权</p>
      */
     function __construct()
     {

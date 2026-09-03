@@ -20,102 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRemoteWriteTask请求参数结构体
  *
- * @method string getTopicId() 获取日志主题 ID
- * @method void setTopicId(string $TopicId) 设置日志主题 ID
- * @method string getName() 获取任务名称
- * @method void setName(string $Name) 设置任务名称
- * @method string getTarget() 获取目标服务名称
- * @method void setTarget(string $Target) 设置目标服务名称
- * @method string getRemoteWriteURL() 获取目标地址
- * @method void setRemoteWriteURL(string $RemoteWriteURL) 设置目标地址
- * @method integer getAuthType() 获取鉴权类型
-0: 无鉴权
-1: basic_auth 
-2: token
- * @method void setAuthType(integer $AuthType) 设置鉴权类型
-0: 无鉴权
-1: basic_auth 
-2: token
- * @method integer getNetType() 获取网络类型： 1 内网 2外网
- * @method void setNetType(integer $NetType) 设置网络类型： 1 内网 2外网
- * @method string getVpcId() 获取私有网络id
- * @method void setVpcId(string $VpcId) 设置私有网络id
- * @method RemoteWriteAuthInfo getAuthInfo() 获取鉴权信息
- * @method void setAuthInfo(RemoteWriteAuthInfo $AuthInfo) 设置鉴权信息
- * @method integer getVirtualGatewayType() 获取后端服务类型
-0 CVM
-1025 CLB
- * @method void setVirtualGatewayType(integer $VirtualGatewayType) 设置后端服务类型
-0 CVM
-1025 CLB
+ * @method string getTopicId() 获取<p>日志主题 ID</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题 ID</p>
+ * @method string getName() 获取<p>任务名称</p>
+ * @method void setName(string $Name) 设置<p>任务名称</p>
+ * @method string getTarget() 获取<p>目标服务名称</p>
+ * @method void setTarget(string $Target) 设置<p>目标服务名称</p>
+ * @method string getRemoteWriteURL() 获取<p>目标地址</p>
+ * @method void setRemoteWriteURL(string $RemoteWriteURL) 设置<p>目标地址</p>
+ * @method integer getAuthType() 获取<p>鉴权类型<br>0: 无鉴权<br>1: basic_auth<br>2: token</p>
+ * @method void setAuthType(integer $AuthType) 设置<p>鉴权类型<br>0: 无鉴权<br>1: basic_auth<br>2: token</p>
+ * @method integer getNetType() 获取<p>网络类型： 1 内网 2外网</p>
+ * @method void setNetType(integer $NetType) 设置<p>网络类型： 1 内网 2外网</p>
+ * @method string getVpcId() 获取<p>私有网络id</p>
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络id</p>
+ * @method RemoteWriteAuthInfo getAuthInfo() 获取<p>鉴权信息</p>
+ * @method void setAuthInfo(RemoteWriteAuthInfo $AuthInfo) 设置<p>鉴权信息</p>
+ * @method integer getVirtualGatewayType() 获取<p>后端服务类型<br>0 CVM<br>1025 CLB</p>
+ * @method void setVirtualGatewayType(integer $VirtualGatewayType) 设置<p>后端服务类型<br>0 CVM<br>1025 CLB</p>
+ * @method string getInstanceId() 获取<p>云时序数据库实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>云时序数据库实例ID</p>
+ * @method integer getHasServicesLog() 获取<p>是否开启投递服务日志。1：关闭，2：开启。 默认值：2</p>
+ * @method void setHasServicesLog(integer $HasServicesLog) 设置<p>是否开启投递服务日志。1：关闭，2：开启。 默认值：2</p>
  */
 class CreateRemoteWriteTaskRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题 ID
+     * @var string <p>日志主题 ID</p>
      */
     public $TopicId;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $Name;
 
     /**
-     * @var string 目标服务名称
+     * @var string <p>目标服务名称</p>
      */
     public $Target;
 
     /**
-     * @var string 目标地址
+     * @var string <p>目标地址</p>
      */
     public $RemoteWriteURL;
 
     /**
-     * @var integer 鉴权类型
-0: 无鉴权
-1: basic_auth 
-2: token
+     * @var integer <p>鉴权类型<br>0: 无鉴权<br>1: basic_auth<br>2: token</p>
      */
     public $AuthType;
 
     /**
-     * @var integer 网络类型： 1 内网 2外网
+     * @var integer <p>网络类型： 1 内网 2外网</p>
      */
     public $NetType;
 
     /**
-     * @var string 私有网络id
+     * @var string <p>私有网络id</p>
      */
     public $VpcId;
 
     /**
-     * @var RemoteWriteAuthInfo 鉴权信息
+     * @var RemoteWriteAuthInfo <p>鉴权信息</p>
      */
     public $AuthInfo;
 
     /**
-     * @var integer 后端服务类型
-0 CVM
-1025 CLB
+     * @var integer <p>后端服务类型<br>0 CVM<br>1025 CLB</p>
      */
     public $VirtualGatewayType;
 
     /**
-     * @param string $TopicId 日志主题 ID
-     * @param string $Name 任务名称
-     * @param string $Target 目标服务名称
-     * @param string $RemoteWriteURL 目标地址
-     * @param integer $AuthType 鉴权类型
-0: 无鉴权
-1: basic_auth 
-2: token
-     * @param integer $NetType 网络类型： 1 内网 2外网
-     * @param string $VpcId 私有网络id
-     * @param RemoteWriteAuthInfo $AuthInfo 鉴权信息
-     * @param integer $VirtualGatewayType 后端服务类型
-0 CVM
-1025 CLB
+     * @var string <p>云时序数据库实例ID</p>
+     */
+    public $InstanceId;
+
+    /**
+     * @var integer <p>是否开启投递服务日志。1：关闭，2：开启。 默认值：2</p>
+     */
+    public $HasServicesLog;
+
+    /**
+     * @param string $TopicId <p>日志主题 ID</p>
+     * @param string $Name <p>任务名称</p>
+     * @param string $Target <p>目标服务名称</p>
+     * @param string $RemoteWriteURL <p>目标地址</p>
+     * @param integer $AuthType <p>鉴权类型<br>0: 无鉴权<br>1: basic_auth<br>2: token</p>
+     * @param integer $NetType <p>网络类型： 1 内网 2外网</p>
+     * @param string $VpcId <p>私有网络id</p>
+     * @param RemoteWriteAuthInfo $AuthInfo <p>鉴权信息</p>
+     * @param integer $VirtualGatewayType <p>后端服务类型<br>0 CVM<br>1025 CLB</p>
+     * @param string $InstanceId <p>云时序数据库实例ID</p>
+     * @param integer $HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。 默认值：2</p>
      */
     function __construct()
     {
@@ -165,6 +161,14 @@ class CreateRemoteWriteTaskRequest extends AbstractModel
 
         if (array_key_exists("VirtualGatewayType",$param) and $param["VirtualGatewayType"] !== null) {
             $this->VirtualGatewayType = $param["VirtualGatewayType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
+            $this->HasServicesLog = $param["HasServicesLog"];
         }
     }
 }

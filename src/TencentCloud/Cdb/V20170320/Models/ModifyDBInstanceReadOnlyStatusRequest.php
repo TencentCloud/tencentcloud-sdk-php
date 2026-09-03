@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceReadOnlyStatus请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
- * @method integer getReadOnly() 获取是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态
- * @method void setReadOnly(integer $ReadOnly) 设置是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态
+ * @method string getInstanceId() 获取<p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用<a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。此接口不支持设置云盘版实例为只读。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用<a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。此接口不支持设置云盘版实例为只读。</p>
+ * @method integer getReadOnly() 获取<p>是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态</p>
+ * @method void setReadOnly(integer $ReadOnly) 设置<p>是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态</p>
  */
 class ModifyDBInstanceReadOnlyStatusRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * @var string <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用<a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。此接口不支持设置云盘版实例为只读。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态
+     * @var integer <p>是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态</p>
      */
     public $ReadOnly;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
-     * @param integer $ReadOnly 是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态
+     * @param string $InstanceId <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用<a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。此接口不支持设置云盘版实例为只读。</p>
+     * @param integer $ReadOnly <p>是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态</p>
      */
     function __construct()
     {

@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedHpcClusterId(boolean $NeedHpcClusterId) 设置<p>是否需要提供高性能计算集群</p>
  * @method boolean getIsGpuInstance() 获取<p>是否是GPU机型</p>
  * @method void setIsGpuInstance(boolean $IsGpuInstance) 设置<p>是否是GPU机型</p>
+ * @method string getGpuResourceKey() 获取<p>K8S场景GPU资源定义</p>
+ * @method void setGpuResourceKey(string $GpuResourceKey) 设置<p>K8S场景GPU资源定义</p>
+ * @method integer getGpuNum() 获取<p>GPU卡数</p>
+ * @method void setGpuNum(integer $GpuNum) 设置<p>GPU卡数</p>
  */
 class NodeSpecInstanceType extends AbstractModel
 {
@@ -211,6 +215,16 @@ class NodeSpecInstanceType extends AbstractModel
     public $IsGpuInstance;
 
     /**
+     * @var string <p>K8S场景GPU资源定义</p>
+     */
+    public $GpuResourceKey;
+
+    /**
+     * @var integer <p>GPU卡数</p>
+     */
+    public $GpuNum;
+
+    /**
      * @param string $InstanceType <p>规格</p>
      * @param integer $Cpu <p>4</p>
      * @param integer $Memory <p>8，单位G</p>
@@ -240,6 +254,8 @@ class NodeSpecInstanceType extends AbstractModel
      * @param string $QuotaUnit <p>配额单位</p>
      * @param boolean $NeedHpcClusterId <p>是否需要提供高性能计算集群</p>
      * @param boolean $IsGpuInstance <p>是否是GPU机型</p>
+     * @param string $GpuResourceKey <p>K8S场景GPU资源定义</p>
+     * @param integer $GpuNum <p>GPU卡数</p>
      */
     function __construct()
     {
@@ -367,6 +383,14 @@ class NodeSpecInstanceType extends AbstractModel
 
         if (array_key_exists("IsGpuInstance",$param) and $param["IsGpuInstance"] !== null) {
             $this->IsGpuInstance = $param["IsGpuInstance"];
+        }
+
+        if (array_key_exists("GpuResourceKey",$param) and $param["GpuResourceKey"] !== null) {
+            $this->GpuResourceKey = $param["GpuResourceKey"];
+        }
+
+        if (array_key_exists("GpuNum",$param) and $param["GpuNum"] !== null) {
+            $this->GpuNum = $param["GpuNum"];
         }
     }
 }

@@ -20,82 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述DLC托管存储基本信息
  *
- * @method string getName() 获取托管存储名称
- * @method void setName(string $Name) 设置托管存储名称
- * @method string getType() 获取托管存储类型
- * @method void setType(string $Type) 设置托管存储类型
- * @method float getSpaceUsedSize() 获取存储用量
- * @method void setSpaceUsedSize(float $SpaceUsedSize) 设置存储用量
- * @method integer getCreateTimeStamp() 获取创建时候的时间戳
- * @method void setCreateTimeStamp(integer $CreateTimeStamp) 设置创建时候的时间戳
- * @method integer getDefaultBucket() 获取是否是用户默认桶，0：默认桶，1：非默认桶
- * @method void setDefaultBucket(integer $DefaultBucket) 设置是否是用户默认桶，0：默认桶，1：非默认桶
- * @method string getShortName() 获取托管存储short name
- * @method void setShortName(string $ShortName) 设置托管存储short name
- * @method string getDescription() 获取桶描述信息
- * @method void setDescription(string $Description) 设置桶描述信息
- * @method string getStatus() 获取托管桶状态，当前取值为：creating、bind、readOnly、isolate
- * @method void setStatus(string $Status) 设置托管桶状态，当前取值为：creating、bind、readOnly、isolate
- * @method array getTagList() 获取托管存储桶标签列表
- * @method void setTagList(array $TagList) 设置托管存储桶标签列表
+ * @method string getName() 获取<p>托管存储名称</p>
+ * @method void setName(string $Name) 设置<p>托管存储名称</p>
+ * @method string getType() 获取<p>托管存储类型</p>
+ * @method void setType(string $Type) 设置<p>托管存储类型</p>
+ * @method float getSpaceUsedSize() 获取<p>存储用量</p>
+ * @method void setSpaceUsedSize(float $SpaceUsedSize) 设置<p>存储用量</p>
+ * @method integer getCreateTimeStamp() 获取<p>创建时候的时间戳</p>
+ * @method void setCreateTimeStamp(integer $CreateTimeStamp) 设置<p>创建时候的时间戳</p>
+ * @method integer getDefaultBucket() 获取<p>是否是用户默认桶，0：默认桶，1：非默认桶</p>
+ * @method void setDefaultBucket(integer $DefaultBucket) 设置<p>是否是用户默认桶，0：默认桶，1：非默认桶</p>
+ * @method string getShortName() 获取<p>托管存储short name</p>
+ * @method void setShortName(string $ShortName) 设置<p>托管存储short name</p>
+ * @method string getDescription() 获取<p>桶描述信息</p>
+ * @method void setDescription(string $Description) 设置<p>桶描述信息</p>
+ * @method string getStatus() 获取<p>托管桶状态，当前取值为：creating、bind、readOnly、isolate</p>
+ * @method void setStatus(string $Status) 设置<p>托管桶状态，当前取值为：creating、bind、readOnly、isolate</p>
+ * @method array getTagList() 获取<p>托管存储桶标签列表</p>
+ * @method void setTagList(array $TagList) 设置<p>托管存储桶标签列表</p>
+ * @method boolean getMultiAZ() 获取<p>是否是多AZ存储桶</p>
+ * @method void setMultiAZ(boolean $MultiAZ) 设置<p>是否是多AZ存储桶</p>
+ * @method array getConfiguration() 获取<p>存储桶配置信息</p>
+ * @method void setConfiguration(array $Configuration) 设置<p>存储桶配置信息</p>
  */
 class LakeFsInfo extends AbstractModel
 {
     /**
-     * @var string 托管存储名称
+     * @var string <p>托管存储名称</p>
      */
     public $Name;
 
     /**
-     * @var string 托管存储类型
+     * @var string <p>托管存储类型</p>
      */
     public $Type;
 
     /**
-     * @var float 存储用量
+     * @var float <p>存储用量</p>
      */
     public $SpaceUsedSize;
 
     /**
-     * @var integer 创建时候的时间戳
+     * @var integer <p>创建时候的时间戳</p>
      */
     public $CreateTimeStamp;
 
     /**
-     * @var integer 是否是用户默认桶，0：默认桶，1：非默认桶
+     * @var integer <p>是否是用户默认桶，0：默认桶，1：非默认桶</p>
      */
     public $DefaultBucket;
 
     /**
-     * @var string 托管存储short name
+     * @var string <p>托管存储short name</p>
      */
     public $ShortName;
 
     /**
-     * @var string 桶描述信息
+     * @var string <p>桶描述信息</p>
      */
     public $Description;
 
     /**
-     * @var string 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+     * @var string <p>托管桶状态，当前取值为：creating、bind、readOnly、isolate</p>
      */
     public $Status;
 
     /**
-     * @var array 托管存储桶标签列表
+     * @var array <p>托管存储桶标签列表</p>
      */
     public $TagList;
 
     /**
-     * @param string $Name 托管存储名称
-     * @param string $Type 托管存储类型
-     * @param float $SpaceUsedSize 存储用量
-     * @param integer $CreateTimeStamp 创建时候的时间戳
-     * @param integer $DefaultBucket 是否是用户默认桶，0：默认桶，1：非默认桶
-     * @param string $ShortName 托管存储short name
-     * @param string $Description 桶描述信息
-     * @param string $Status 托管桶状态，当前取值为：creating、bind、readOnly、isolate
-     * @param array $TagList 托管存储桶标签列表
+     * @var boolean <p>是否是多AZ存储桶</p>
+     */
+    public $MultiAZ;
+
+    /**
+     * @var array <p>存储桶配置信息</p>
+     */
+    public $Configuration;
+
+    /**
+     * @param string $Name <p>托管存储名称</p>
+     * @param string $Type <p>托管存储类型</p>
+     * @param float $SpaceUsedSize <p>存储用量</p>
+     * @param integer $CreateTimeStamp <p>创建时候的时间戳</p>
+     * @param integer $DefaultBucket <p>是否是用户默认桶，0：默认桶，1：非默认桶</p>
+     * @param string $ShortName <p>托管存储short name</p>
+     * @param string $Description <p>桶描述信息</p>
+     * @param string $Status <p>托管桶状态，当前取值为：creating、bind、readOnly、isolate</p>
+     * @param array $TagList <p>托管存储桶标签列表</p>
+     * @param boolean $MultiAZ <p>是否是多AZ存储桶</p>
+     * @param array $Configuration <p>存储桶配置信息</p>
      */
     function __construct()
     {
@@ -148,6 +164,19 @@ class LakeFsInfo extends AbstractModel
                 $obj = new TagInfo();
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
+            }
+        }
+
+        if (array_key_exists("MultiAZ",$param) and $param["MultiAZ"] !== null) {
+            $this->MultiAZ = $param["MultiAZ"];
+        }
+
+        if (array_key_exists("Configuration",$param) and $param["Configuration"] !== null) {
+            $this->Configuration = [];
+            foreach ($param["Configuration"] as $key => $value){
+                $obj = new KVPair();
+                $obj->deserialize($value);
+                array_push($this->Configuration, $obj);
             }
         }
     }

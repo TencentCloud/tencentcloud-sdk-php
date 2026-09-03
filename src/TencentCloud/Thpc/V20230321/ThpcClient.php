@@ -29,6 +29,11 @@ use TencentCloud\Thpc\V20230321\Models as Models;
 * 本接口为目前只支持SchedulerType为SLURM的集群。
 * 单个集群中队列数量上限为10个。
  * @method Models\AttachNodesResponse AttachNodes(Models\AttachNodesRequest $req) 本接口 (AttachNodes) 用于绑定一个或者多个计算节点指定资源到指定集群中。
+ * @method Models\BindClusterVpcResponse BindClusterVpc(Models\BindClusterVpcRequest $req) 本接口 (BindClusterVpc) 用于为IDC集群绑定VPC和子网。
+
+* 绑定VPC后，集群可在该VPC内开启专线/VPN代理。
+* VpcId和SubnetId为必填参数，且子网必须属于指定的VPC。
+* 若集群已开通代理，需先关闭代理（DisableClusterDedicatedProxy）再变更VPC绑定。
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 本接口 (CreateCluster) 用于创建并启动集群。
 
 * 本接口为异步接口， 当创建集群请求下发成功后会返回一个集群`ID`和一个`RequestId`，此时创建集群操作并未立即完成。在此期间集群的状态将会处于“PENDING”或者“INITING”，集群创建结果可以通过调用 [DescribeClusters](https://cloud.tencent.com/document/product/1527/72100)  接口查询，如果集群状态(ClusterStatus)变为“RUNNING(运行中)”，则代表集群创建成功，“ INIT_FAILED”代表集群创建失败。
@@ -45,6 +50,10 @@ use TencentCloud\Thpc\V20230321\Models as Models;
  * @method Models\DeleteScheduledActionResponse DeleteScheduledAction(Models\DeleteScheduledActionRequest $req) 删除指定的定时伸缩任务。
  * @method Models\DescribeAutoScalingConfigurationResponse DescribeAutoScalingConfiguration(Models\DescribeAutoScalingConfigurationRequest $req) 本接口(DescribeAutoScalingConfiguration)用于查询集群弹性伸缩配置信息。本接口仅适用于弹性伸缩类型为THPC_AS的集群。
  * @method Models\DescribeClusterActivitiesResponse DescribeClusterActivities(Models\DescribeClusterActivitiesRequest $req) 本接口（DescribeClusterActivities）用于查询集群活动历史记录列表。
+ * @method Models\DescribeClusterDedicatedProxyResponse DescribeClusterDedicatedProxy(Models\DescribeClusterDedicatedProxyRequest $req) 本接口 (DescribeClusterDedicatedProxy) 用于查询IDC集群专线/VPN代理的状态。
+
+* 返回终端节点（EndPoint）的当前状态，包括是否就绪、VIP地址等信息。
+* 若代理未开通，EndPointReady返回false，EndPointStatus为UNKNOWN。
  * @method Models\DescribeClusterStorageOptionResponse DescribeClusterStorageOption(Models\DescribeClusterStorageOptionRequest $req) 本接口 (DescribeClusterStorageOption) 用于查询集群存储选项信息。
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。
  * @method Models\DescribeInitNodeScriptsResponse DescribeInitNodeScripts(Models\DescribeInitNodeScriptsRequest $req) 本接口 (DescribeInitNodeScripts) 用于查询节点初始化脚本列表。
@@ -59,6 +68,25 @@ use TencentCloud\Thpc\V20230321\Models as Models;
  * @method Models\DescribeScheduledActionsResponse DescribeScheduledActions(Models\DescribeScheduledActionsRequest $req) 查询指定集群队列的定时伸缩任务列表。
  * @method Models\DescribeWorkspacesResponse DescribeWorkspaces(Models\DescribeWorkspacesRequest $req) 本接口（DescribeWorkspaces）用于查询工作空间列表。
  * @method Models\DetachNodesResponse DetachNodes(Models\DetachNodesRequest $req) 本接口 (DetachNodes) 用于将一个或者多个计算节点从集群中移除，但是不销毁指定计算资源。
+ * @method Models\DisableClusterDedicatedProxyResponse DisableClusterDedicatedProxy(Models\DisableClusterDedicatedProxyRequest $req) 本接口 (DisableClusterDedicatedProxy) 用于关闭IDC集群的专线/VPN代理。
+
+* 关闭后，系统将删除VPC终端节点（EndPoint），断开IDC集群与云上VPC的网络连接。
+* 若代理未开通，调用将返回ProxyNotEnabled错误。
+* 操作不可逆，关闭后需重新调用EnableClusterDedicatedProxy开启。
+ * @method Models\EnableClusterDedicatedProxyResponse EnableClusterDedicatedProxy(Models\EnableClusterDedicatedProxyRequest $req) 本接口 (EnableClusterDedicatedProxy) 用于开启IDC集群的专线/VPN代理。
+
+* 开启后，系统将自动创建VPC终端节点（EndPoint），实现IDC集群与云上VPC的网络互通。
+* 若代理已开通，重复调用将幂等返回已有EndPoint信息。
+* SubnetId与VpcId需同时指定或同时不指定。若不指定，则使用集群已绑定的VPC和子网。
+ * @method Models\GenerateRegisterCodeResponse GenerateRegisterCode(Models\GenerateRegisterCodeRequest $req) 本接口(GenerateRegisterCode)用于为队列创建一个注册码，注册码用于IDC机器的注册纳管。
+ * @method Models\GenerateRegisterCommandResponse GenerateRegisterCommand(Models\GenerateRegisterCommandRequest $req) 本接口 (GenerateRegisterCommand) 用于生成IDC集群的节点注册命令。
+
+* 返回的注册命令可直接在IDC机器上以root身份执行，将该机器纳管进指定的IDC集群。
+* 当<code>Proxy=true</code>时，系统会先确保集群专线代理就绪（自动开启终端节点并轮询至ACTIVE），再签发注册码并渲染带代理VIP的注册命令；若在超时窗口内代理仍未就绪，将返回<code>FailedOperation.ProxyNotReady</code>。
+* 当<code>Proxy=false</code>时，IDC机器需可直连集群，直接签发注册码并渲染注册命令。
+* VpcId与SubnetId需同时指定或同时不指定；仅当<code>Proxy=true</code>且集群未绑定VPC时二者必填。当<code>Proxy=false</code>时二者不生效，若仍传入将返回<code>InvalidParameterValue.ParametersNotSupported</code>。
+* 若集群此前已开启专线代理并绑定了VPC/子网，本次传入的VpcId/SubnetId与已绑定值不一致时，将返回<code>UnsupportedOperation.VpcAlreadyBound</code>（不支持改绑）。
+* 仅支持IDC类型集群，对非IDC集群调用将返回<code>InvalidParameterValue.ParametersNotSupported</code>。
  * @method Models\InquirePriceCreateWorkspacesResponse InquirePriceCreateWorkspaces(Models\InquirePriceCreateWorkspacesRequest $req) 本接口(InquirePriceCreateWorkspaces)用于创建实例询价。
  * @method Models\InquirePriceModifyWorkspacesChargeTypeResponse InquirePriceModifyWorkspacesChargeType(Models\InquirePriceModifyWorkspacesChargeTypeRequest $req) 查询按量计费工作空间转换为包年包月的价格。不会创建订单或变更资源。
  * @method Models\ModifyClusterDeletionProtectionResponse ModifyClusterDeletionProtection(Models\ModifyClusterDeletionProtectionRequest $req) 修改集群删除保护状态

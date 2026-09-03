@@ -20,118 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * spark session详细信息
  *
- * @method string getSparkSessionId() 获取spark session id
- * @method void setSparkSessionId(string $SparkSessionId) 设置spark session id
- * @method string getSparkSessionName() 获取spark session名称
- * @method void setSparkSessionName(string $SparkSessionName) 设置spark session名称
- * @method string getResourceGroupId() 获取资源组id
- * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id
- * @method string getEngineSessionId() 获取engine session id
- * @method void setEngineSessionId(string $EngineSessionId) 设置engine session id
- * @method string getEngineSessionName() 获取engine session   
-name
- * @method void setEngineSessionName(string $EngineSessionName) 设置engine session   
-name
- * @method integer getIdleTimeoutMin() 获取自动销毁时间
- * @method void setIdleTimeoutMin(integer $IdleTimeoutMin) 设置自动销毁时间
- * @method string getDriverSpec() 获取driver规格
- * @method void setDriverSpec(string $DriverSpec) 设置driver规格
- * @method string getExecutorSpec() 获取executor规格
- * @method void setExecutorSpec(string $ExecutorSpec) 设置executor规格
- * @method integer getExecutorNumMin() 获取executor最小数量
- * @method void setExecutorNumMin(integer $ExecutorNumMin) 设置executor最小数量
- * @method integer getExecutorNumMax() 获取executor最大数量
- * @method void setExecutorNumMax(integer $ExecutorNumMax) 设置executor最大数量
- * @method integer getTotalSpecMin() 获取总规格最小
- * @method void setTotalSpecMin(integer $TotalSpecMin) 设置总规格最小
- * @method integer getTotalSpecMax() 获取总规格最大
- * @method void setTotalSpecMax(integer $TotalSpecMax) 设置总规格最大
- * @method string getState() 获取状态，STARTING、RUNNING、TERMINATED
- * @method void setState(string $State) 设置状态，STARTING、RUNNING、TERMINATED
+ * @method string getSparkSessionId() 获取<p>spark session id</p>
+ * @method void setSparkSessionId(string $SparkSessionId) 设置<p>spark session id</p>
+ * @method string getSparkSessionName() 获取<p>spark session名称</p>
+ * @method void setSparkSessionName(string $SparkSessionName) 设置<p>spark session名称</p>
+ * @method string getResourceGroupId() 获取<p>资源组id</p>
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>资源组id</p>
+ * @method string getEngineSessionId() 获取<p>engine session id</p>
+ * @method void setEngineSessionId(string $EngineSessionId) 设置<p>engine session id</p>
+ * @method string getEngineSessionName() 获取<p>engine session<br>name</p>
+ * @method void setEngineSessionName(string $EngineSessionName) 设置<p>engine session<br>name</p>
+ * @method integer getIdleTimeoutMin() 获取<p>自动销毁时间</p>
+ * @method void setIdleTimeoutMin(integer $IdleTimeoutMin) 设置<p>自动销毁时间</p>
+ * @method string getDriverSpec() 获取<p>driver规格</p>
+ * @method void setDriverSpec(string $DriverSpec) 设置<p>driver规格</p>
+ * @method string getExecutorSpec() 获取<p>executor规格</p>
+ * @method void setExecutorSpec(string $ExecutorSpec) 设置<p>executor规格</p>
+ * @method integer getExecutorNumMin() 获取<p>executor最小数量</p>
+ * @method void setExecutorNumMin(integer $ExecutorNumMin) 设置<p>executor最小数量</p>
+ * @method integer getExecutorNumMax() 获取<p>executor最大数量</p>
+ * @method void setExecutorNumMax(integer $ExecutorNumMax) 设置<p>executor最大数量</p>
+ * @method integer getTotalSpecMin() 获取<p>总规格最小</p>
+ * @method void setTotalSpecMin(integer $TotalSpecMin) 设置<p>总规格最小</p>
+ * @method integer getTotalSpecMax() 获取<p>总规格最大</p>
+ * @method void setTotalSpecMax(integer $TotalSpecMax) 设置<p>总规格最大</p>
+ * @method string getState() 获取<p>状态，STARTING、RUNNING、TERMINATED</p>
+ * @method void setState(string $State) 设置<p>状态，STARTING、RUNNING、TERMINATED</p>
+ * @method string getApplicationId() 获取<p>应用 ID</p>
+ * @method void setApplicationId(string $ApplicationId) 设置<p>应用 ID</p>
+ * @method integer getApplicationStartTime() 获取<p>应用启动时间</p>
+ * @method void setApplicationStartTime(integer $ApplicationStartTime) 设置<p>应用启动时间</p>
  */
 class SparkSessionInfo extends AbstractModel
 {
     /**
-     * @var string spark session id
+     * @var string <p>spark session id</p>
      */
     public $SparkSessionId;
 
     /**
-     * @var string spark session名称
+     * @var string <p>spark session名称</p>
      */
     public $SparkSessionName;
 
     /**
-     * @var string 资源组id
+     * @var string <p>资源组id</p>
      */
     public $ResourceGroupId;
 
     /**
-     * @var string engine session id
+     * @var string <p>engine session id</p>
      */
     public $EngineSessionId;
 
     /**
-     * @var string engine session   
-name
+     * @var string <p>engine session<br>name</p>
      */
     public $EngineSessionName;
 
     /**
-     * @var integer 自动销毁时间
+     * @var integer <p>自动销毁时间</p>
      */
     public $IdleTimeoutMin;
 
     /**
-     * @var string driver规格
+     * @var string <p>driver规格</p>
      */
     public $DriverSpec;
 
     /**
-     * @var string executor规格
+     * @var string <p>executor规格</p>
      */
     public $ExecutorSpec;
 
     /**
-     * @var integer executor最小数量
+     * @var integer <p>executor最小数量</p>
      */
     public $ExecutorNumMin;
 
     /**
-     * @var integer executor最大数量
+     * @var integer <p>executor最大数量</p>
      */
     public $ExecutorNumMax;
 
     /**
-     * @var integer 总规格最小
+     * @var integer <p>总规格最小</p>
      */
     public $TotalSpecMin;
 
     /**
-     * @var integer 总规格最大
+     * @var integer <p>总规格最大</p>
      */
     public $TotalSpecMax;
 
     /**
-     * @var string 状态，STARTING、RUNNING、TERMINATED
+     * @var string <p>状态，STARTING、RUNNING、TERMINATED</p>
      */
     public $State;
 
     /**
-     * @param string $SparkSessionId spark session id
-     * @param string $SparkSessionName spark session名称
-     * @param string $ResourceGroupId 资源组id
-     * @param string $EngineSessionId engine session id
-     * @param string $EngineSessionName engine session   
-name
-     * @param integer $IdleTimeoutMin 自动销毁时间
-     * @param string $DriverSpec driver规格
-     * @param string $ExecutorSpec executor规格
-     * @param integer $ExecutorNumMin executor最小数量
-     * @param integer $ExecutorNumMax executor最大数量
-     * @param integer $TotalSpecMin 总规格最小
-     * @param integer $TotalSpecMax 总规格最大
-     * @param string $State 状态，STARTING、RUNNING、TERMINATED
+     * @var string <p>应用 ID</p>
+     */
+    public $ApplicationId;
+
+    /**
+     * @var integer <p>应用启动时间</p>
+     */
+    public $ApplicationStartTime;
+
+    /**
+     * @param string $SparkSessionId <p>spark session id</p>
+     * @param string $SparkSessionName <p>spark session名称</p>
+     * @param string $ResourceGroupId <p>资源组id</p>
+     * @param string $EngineSessionId <p>engine session id</p>
+     * @param string $EngineSessionName <p>engine session<br>name</p>
+     * @param integer $IdleTimeoutMin <p>自动销毁时间</p>
+     * @param string $DriverSpec <p>driver规格</p>
+     * @param string $ExecutorSpec <p>executor规格</p>
+     * @param integer $ExecutorNumMin <p>executor最小数量</p>
+     * @param integer $ExecutorNumMax <p>executor最大数量</p>
+     * @param integer $TotalSpecMin <p>总规格最小</p>
+     * @param integer $TotalSpecMax <p>总规格最大</p>
+     * @param string $State <p>状态，STARTING、RUNNING、TERMINATED</p>
+     * @param string $ApplicationId <p>应用 ID</p>
+     * @param integer $ApplicationStartTime <p>应用启动时间</p>
      */
     function __construct()
     {
@@ -196,6 +208,14 @@ name
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("ApplicationStartTime",$param) and $param["ApplicationStartTime"] !== null) {
+            $this->ApplicationStartTime = $param["ApplicationStartTime"];
         }
     }
 }

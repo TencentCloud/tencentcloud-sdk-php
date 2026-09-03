@@ -20,14 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateRecognizeVocabV3请求参数结构体
  *
-
+ * @method string getVocabId() 获取<p>词表 id</p>
+ * @method void setVocabId(string $VocabId) 设置<p>词表 id</p>
+ * @method integer getSdkAppId() 获取<p>客户维度唯一标识</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>客户维度唯一标识</p>
+ * @method string getName() 获取<p>词表名称</p>
+ * @method void setName(string $Name) 设置<p>词表名称</p>
+ * @method string getDescription() 获取<p>词表描述</p>
+ * @method void setDescription(string $Description) 设置<p>词表描述</p>
+ * @method array getWordWeights() 获取<p>热词数组</p>
+ * @method void setWordWeights(array $WordWeights) 设置<p>热词数组</p>
+ * @method string getWordWeightStr() 获取<p>base64 编码的词表文本</p>
+ * @method void setWordWeightStr(string $WordWeightStr) 设置<p>base64 编码的词表文本</p>
  */
 class UpdateRecognizeVocabV3Request extends AbstractModel
 {
-
+    /**
+     * @var string <p>词表 id</p>
+     */
+    public $VocabId;
 
     /**
+     * @var integer <p>客户维度唯一标识</p>
+     */
+    public $SdkAppId;
 
+    /**
+     * @var string <p>词表名称</p>
+     */
+    public $Name;
+
+    /**
+     * @var string <p>词表描述</p>
+     */
+    public $Description;
+
+    /**
+     * @var array <p>热词数组</p>
+     */
+    public $WordWeights;
+
+    /**
+     * @var string <p>base64 编码的词表文本</p>
+     */
+    public $WordWeightStr;
+
+    /**
+     * @param string $VocabId <p>词表 id</p>
+     * @param integer $SdkAppId <p>客户维度唯一标识</p>
+     * @param string $Name <p>词表名称</p>
+     * @param string $Description <p>词表描述</p>
+     * @param array $WordWeights <p>热词数组</p>
+     * @param string $WordWeightStr <p>base64 编码的词表文本</p>
      */
     function __construct()
     {
@@ -42,6 +86,33 @@ class UpdateRecognizeVocabV3Request extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("VocabId",$param) and $param["VocabId"] !== null) {
+            $this->VocabId = $param["VocabId"];
+        }
 
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("WordWeights",$param) and $param["WordWeights"] !== null) {
+            $this->WordWeights = [];
+            foreach ($param["WordWeights"] as $key => $value){
+                $obj = new HotWord();
+                $obj->deserialize($value);
+                array_push($this->WordWeights, $obj);
+            }
+        }
+
+        if (array_key_exists("WordWeightStr",$param) and $param["WordWeightStr"] !== null) {
+            $this->WordWeightStr = $param["WordWeightStr"];
+        }
     }
 }

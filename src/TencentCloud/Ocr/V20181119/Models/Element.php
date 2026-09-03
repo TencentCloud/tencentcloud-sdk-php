@@ -20,54 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 试题识别结果-元素内容
  *
- * @method string getText() 获取元素内容，当type为figure时该字段内容为图片的位置
- * @method void setText(string $Text) 设置元素内容，当type为figure时该字段内容为图片的位置
- * @method Polygon getCoord() 获取元素坐标
- * @method void setCoord(Polygon $Coord) 设置元素坐标
- * @method string getGroupType() 获取元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)
- * @method void setGroupType(string $GroupType) 设置元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)
- * @method array getResultList() 获取结果列表
+ * @method string getText() 获取<p>元素内容，当type为figure时该字段内容为图片的位置</p>
+ * @method void setText(string $Text) 设置<p>元素内容，当type为figure时该字段内容为图片的位置</p>
+ * @method Polygon getCoord() 获取<p>元素坐标</p>
+ * @method void setCoord(Polygon $Coord) 设置<p>元素坐标</p>
+ * @method string getGroupType() 获取<p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p>
+ * @method void setGroupType(string $GroupType) 设置<p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p>
+ * @method array getResultList() 获取<p>结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultList(array $ResultList) 设置结果列表
+ * @method void setResultList(array $ResultList) 设置<p>结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIndex() 获取元素索引
- * @method void setIndex(integer $Index) 设置元素索引
+ * @method integer getIndex() 获取<p>元素索引</p>
+ * @method void setIndex(integer $Index) 设置<p>元素索引</p>
+ * @method integer getPageIndex() 获取<p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
+ * @method void setPageIndex(integer $PageIndex) 设置<p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
  */
 class Element extends AbstractModel
 {
     /**
-     * @var string 元素内容，当type为figure时该字段内容为图片的位置
+     * @var string <p>元素内容，当type为figure时该字段内容为图片的位置</p>
      */
     public $Text;
 
     /**
-     * @var Polygon 元素坐标
+     * @var Polygon <p>元素坐标</p>
      */
     public $Coord;
 
     /**
-     * @var string 元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)
+     * @var string <p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p>
      */
     public $GroupType;
 
     /**
-     * @var array 结果列表
+     * @var array <p>结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultList;
 
     /**
-     * @var integer 元素索引
+     * @var integer <p>元素索引</p>
      */
     public $Index;
 
     /**
-     * @param string $Text 元素内容，当type为figure时该字段内容为图片的位置
-     * @param Polygon $Coord 元素坐标
-     * @param string $GroupType 元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)
-     * @param array $ResultList 结果列表
+     * @var integer <p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
+     */
+    public $PageIndex;
+
+    /**
+     * @param string $Text <p>元素内容，当type为figure时该字段内容为图片的位置</p>
+     * @param Polygon $Coord <p>元素坐标</p>
+     * @param string $GroupType <p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p>
+     * @param array $ResultList <p>结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Index 元素索引
+     * @param integer $Index <p>元素索引</p>
+     * @param integer $PageIndex <p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
      */
     function __construct()
     {
@@ -106,6 +114,10 @@ class Element extends AbstractModel
 
         if (array_key_exists("Index",$param) and $param["Index"] !== null) {
             $this->Index = $param["Index"];
+        }
+
+        if (array_key_exists("PageIndex",$param) and $param["PageIndex"] !== null) {
+            $this->PageIndex = $param["PageIndex"];
         }
     }
 }

@@ -20,142 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceScaleOutInstance请求参数结构体
  *
- * @method string getTimeUnit() 获取扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
- * @method void setTimeUnit(string $TimeUnit) 设置扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
- * @method integer getTimeSpan() 获取扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
- * @method void setTimeSpan(integer $TimeSpan) 设置扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
- * @method integer getZoneId() 获取实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。
- * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。
- * @method integer getPayMode() 获取实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
- * @method void setPayMode(integer $PayMode) 设置实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method integer getCoreCount() 获取扩容的Core节点数量。
- * @method void setCoreCount(integer $CoreCount) 设置扩容的Core节点数量。
- * @method integer getTaskCount() 获取扩容的Task节点数量。
- * @method void setTaskCount(integer $TaskCount) 设置扩容的Task节点数量。
- * @method string getCurrency() 获取货币种类。取值范围：
-<li>CNY：表示人民币。</li>
- * @method void setCurrency(string $Currency) 设置货币种类。取值范围：
-<li>CNY：表示人民币。</li>
- * @method integer getRouterCount() 获取扩容的Router节点数量。
- * @method void setRouterCount(integer $RouterCount) 设置扩容的Router节点数量。
- * @method integer getMasterCount() 获取扩容的Master节点数量。
- * @method void setMasterCount(integer $MasterCount) 设置扩容的Master节点数量。
- * @method string getResourceBaseType() 获取类型为ComputeResource和EMR以及默认，默认为EMR
- * @method void setResourceBaseType(string $ResourceBaseType) 设置类型为ComputeResource和EMR以及默认，默认为EMR
- * @method string getComputeResourceId() 获取计算资源id
- * @method void setComputeResourceId(string $ComputeResourceId) 设置计算资源id
- * @method string getHardwareResourceType() 获取扩容资源类型
- * @method void setHardwareResourceType(string $HardwareResourceType) 设置扩容资源类型
+ * @method string getTimeUnit() 获取<p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+ * @method void setTimeUnit(string $TimeUnit) 设置<p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+ * @method integer getTimeSpan() 获取<p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+ * @method void setTimeSpan(integer $TimeSpan) 设置<p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+ * @method integer getZoneId() 获取<p>实例所属的可用区ID，例如100003。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/213/15707">DescribeZones</a> 的返回值中的ZoneId字段来获取。</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>实例所属的可用区ID，例如100003。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/213/15707">DescribeZones</a> 的返回值中的ZoneId字段来获取。</p>
+ * @method integer getPayMode() 获取<p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
+ * @method void setPayMode(integer $PayMode) 设置<p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
+ * @method string getInstanceId() 获取<p>实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID。</p>
+ * @method integer getCoreCount() 获取<p>扩容的Core节点数量。</p>
+ * @method void setCoreCount(integer $CoreCount) 设置<p>扩容的Core节点数量。</p>
+ * @method integer getTaskCount() 获取<p>扩容的Task节点数量。</p>
+ * @method void setTaskCount(integer $TaskCount) 设置<p>扩容的Task节点数量。</p>
+ * @method string getCurrency() 获取<p>货币种类。取值范围：</p><li>CNY：表示人民币。</li>
+ * @method void setCurrency(string $Currency) 设置<p>货币种类。取值范围：</p><li>CNY：表示人民币。</li>
+ * @method integer getRouterCount() 获取<p>扩容的Router节点数量。</p>
+ * @method void setRouterCount(integer $RouterCount) 设置<p>扩容的Router节点数量。</p>
+ * @method integer getMasterCount() 获取<p>扩容的Master节点数量。</p>
+ * @method void setMasterCount(integer $MasterCount) 设置<p>扩容的Master节点数量。</p>
+ * @method string getResourceBaseType() 获取<p>类型为ComputeResource和EMR以及默认，默认为EMR</p>
+ * @method void setResourceBaseType(string $ResourceBaseType) 设置<p>类型为ComputeResource和EMR以及默认，默认为EMR</p>
+ * @method string getComputeResourceId() 获取<p>计算资源id</p>
+ * @method void setComputeResourceId(string $ComputeResourceId) 设置<p>计算资源id</p>
+ * @method string getHardwareResourceType() 获取<p>扩容资源类型</p>
+ * @method void setHardwareResourceType(string $HardwareResourceType) 设置<p>扩容资源类型</p>
+ * @method string getNodeGroupId() 获取<p>节点组ID</p>
+ * @method void setNodeGroupId(string $NodeGroupId) 设置<p>节点组ID</p>
  */
 class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * @var string <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public $TimeUnit;
 
     /**
-     * @var integer 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * @var integer <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public $TimeSpan;
 
     /**
-     * @var integer 实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。
+     * @var integer <p>实例所属的可用区ID，例如100003。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/213/15707">DescribeZones</a> 的返回值中的ZoneId字段来获取。</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+     * @var integer <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
      */
     public $PayMode;
 
     /**
-     * @var string 实例ID。
+     * @var string <p>实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 扩容的Core节点数量。
+     * @var integer <p>扩容的Core节点数量。</p>
      */
     public $CoreCount;
 
     /**
-     * @var integer 扩容的Task节点数量。
+     * @var integer <p>扩容的Task节点数量。</p>
      */
     public $TaskCount;
 
     /**
-     * @var string 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+     * @var string <p>货币种类。取值范围：</p><li>CNY：表示人民币。</li>
      */
     public $Currency;
 
     /**
-     * @var integer 扩容的Router节点数量。
+     * @var integer <p>扩容的Router节点数量。</p>
      */
     public $RouterCount;
 
     /**
-     * @var integer 扩容的Master节点数量。
+     * @var integer <p>扩容的Master节点数量。</p>
      */
     public $MasterCount;
 
     /**
-     * @var string 类型为ComputeResource和EMR以及默认，默认为EMR
+     * @var string <p>类型为ComputeResource和EMR以及默认，默认为EMR</p>
      */
     public $ResourceBaseType;
 
     /**
-     * @var string 计算资源id
+     * @var string <p>计算资源id</p>
      */
     public $ComputeResourceId;
 
     /**
-     * @var string 扩容资源类型
+     * @var string <p>扩容资源类型</p>
      */
     public $HardwareResourceType;
 
     /**
-     * @param string $TimeUnit 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
-     * @param integer $TimeSpan 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
-     * @param integer $ZoneId 实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。
-     * @param integer $PayMode 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
-     * @param string $InstanceId 实例ID。
-     * @param integer $CoreCount 扩容的Core节点数量。
-     * @param integer $TaskCount 扩容的Task节点数量。
-     * @param string $Currency 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
-     * @param integer $RouterCount 扩容的Router节点数量。
-     * @param integer $MasterCount 扩容的Master节点数量。
-     * @param string $ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR
-     * @param string $ComputeResourceId 计算资源id
-     * @param string $HardwareResourceType 扩容资源类型
+     * @var string <p>节点组ID</p>
+     */
+    public $NodeGroupId;
+
+    /**
+     * @param string $TimeUnit <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * @param integer $TimeSpan <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * @param integer $ZoneId <p>实例所属的可用区ID，例如100003。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/213/15707">DescribeZones</a> 的返回值中的ZoneId字段来获取。</p>
+     * @param integer $PayMode <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
+     * @param string $InstanceId <p>实例ID。</p>
+     * @param integer $CoreCount <p>扩容的Core节点数量。</p>
+     * @param integer $TaskCount <p>扩容的Task节点数量。</p>
+     * @param string $Currency <p>货币种类。取值范围：</p><li>CNY：表示人民币。</li>
+     * @param integer $RouterCount <p>扩容的Router节点数量。</p>
+     * @param integer $MasterCount <p>扩容的Master节点数量。</p>
+     * @param string $ResourceBaseType <p>类型为ComputeResource和EMR以及默认，默认为EMR</p>
+     * @param string $ComputeResourceId <p>计算资源id</p>
+     * @param string $HardwareResourceType <p>扩容资源类型</p>
+     * @param string $NodeGroupId <p>节点组ID</p>
      */
     function __construct()
     {
@@ -220,6 +200,10 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
             $this->HardwareResourceType = $param["HardwareResourceType"];
+        }
+
+        if (array_key_exists("NodeGroupId",$param) and $param["NodeGroupId"] !== null) {
+            $this->NodeGroupId = $param["NodeGroupId"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) 设置<p>模板 Id。</p>
  * @method string getVcodec() 获取<p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式</p>
  * @method void setVcodec(string $Vcodec) 设置<p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式</p>
- * @method string getAcodec() 获取<p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
- * @method void setAcodec(string $Acodec) 设置<p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+ * @method string getAcodec() 获取<p>音频编码。默认为自动适配</p>
+ * @method void setAcodec(string $Acodec) 设置<p>音频编码。默认为自动适配</p>
  * @method integer getAudioBitrate() 获取<p>音频码率，默认0。<br>范围：0-500。</p>
  * @method void setAudioBitrate(integer $AudioBitrate) 设置<p>音频码率，默认0。<br>范围：0-500。</p>
  * @method string getDescription() 获取<p>模板描述。</p>
@@ -84,7 +84,7 @@ class ModifyLiveTranscodeTemplateRequest extends AbstractModel
     public $Vcodec;
 
     /**
-     * @var string <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+     * @var string <p>音频编码。默认为自动适配</p>
      */
     public $Acodec;
 
@@ -201,7 +201,7 @@ class ModifyLiveTranscodeTemplateRequest extends AbstractModel
     /**
      * @param integer $TemplateId <p>模板 Id。</p>
      * @param string $Vcodec <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式</p>
-     * @param string $Acodec <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+     * @param string $Acodec <p>音频编码。默认为自动适配</p>
      * @param integer $AudioBitrate <p>音频码率，默认0。<br>范围：0-500。</p>
      * @param string $Description <p>模板描述。</p>
      * @param integer $VideoBitrate <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>

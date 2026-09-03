@@ -24,6 +24,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
 
 /**
  * @method Models\AddDMSPartitionsResponse AddDMSPartitions(Models\AddDMSPartitionsRequest $req) DMS元数据新增分区
+ * @method Models\AddDeploymentResponse AddDeployment(Models\AddDeploymentRequest $req) 为已有推理服务新增部署
  * @method Models\AddOptimizerEnginesResponse AddOptimizerEngines(Models\AddOptimizerEnginesRequest $req) 添加数据优化资源
  * @method Models\AddUsersToWorkGroupResponse AddUsersToWorkGroup(Models\AddUsersToWorkGroupRequest $req) 添加用户到工作组
  * @method Models\AlterDMSDatabaseResponse AlterDMSDatabase(Models\AlterDMSDatabaseRequest $req) DMS元数据更新库
@@ -35,6 +36,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\AttachDataMaskPolicyResponse AttachDataMaskPolicy(Models\AttachDataMaskPolicyRequest $req) 绑定数据脱敏策略
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) 绑定鉴权策略到用户
  * @method Models\AttachWorkGroupPolicyResponse AttachWorkGroupPolicy(Models\AttachWorkGroupPolicyRequest $req) 绑定鉴权策略到工作组
+ * @method Models\BindApiKeyResponse BindApiKey(Models\BindApiKeyRequest $req) 绑定 API Key 到推理服务
  * @method Models\BindWorkGroupsToUserResponse BindWorkGroupsToUser(Models\BindWorkGroupsToUserRequest $req) 绑定工作组到用户
  * @method Models\CancelNotebookSessionStatementResponse CancelNotebookSessionStatement(Models\CancelNotebookSessionStatementRequest $req) 本接口（CancelNotebookSessionStatement）用于取消session中执行的任务
  * @method Models\CancelNotebookSessionStatementBatchResponse CancelNotebookSessionStatementBatch(Models\CancelNotebookSessionStatementBatchRequest $req) 本接口（CancelNotebookSessionStatementBatch）用于批量取消Session 中执行的任务
@@ -42,14 +44,21 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CancelSparkSessionBatchSQLResponse CancelSparkSessionBatchSQL(Models\CancelSparkSessionBatchSQLRequest $req) 本接口（CancelSparkSessionBatchSQL）用于取消Spark SQL批任务。
  * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 本接口（CancelTask），用于取消任务
  * @method Models\CancelTasksResponse CancelTasks(Models\CancelTasksRequest $req) 批量取消任务
+ * @method Models\CancelTrainingJobInstanceResponse CancelTrainingJobInstance(Models\CancelTrainingJobInstanceRequest $req) 暂停（取消）实例
+ * @method Models\CheckApiKeyNameResponse CheckApiKeyName(Models\CheckApiKeyNameRequest $req) 检查 API Key 名称是否重复
  * @method Models\CheckDataEngineConfigPairsValidityResponse CheckDataEngineConfigPairsValidity(Models\CheckDataEngineConfigPairsValidityRequest $req) 本接口（CheckDataEngineConfigPairsValidity）用于检查引擎用户自定义参数的有效性
  * @method Models\CheckDataEngineImageCanBeRollbackResponse CheckDataEngineImageCanBeRollback(Models\CheckDataEngineImageCanBeRollbackRequest $req) 本接口（CheckDataEngineImageCanBeRollback）用于查看集群是否能回滚。
  * @method Models\CheckDataEngineImageCanBeUpgradeResponse CheckDataEngineImageCanBeUpgrade(Models\CheckDataEngineImageCanBeUpgradeRequest $req) 本接口（CheckDataEngineImageCanBeUpgrade）用于查看集群镜像是否能够升级。
+ * @method Models\CheckJobSpecNameResponse CheckJobSpecName(Models\CheckJobSpecNameRequest $req) 训练作业配置与普通 RayJob 配置共用 job_spec 表及 (appId, name) 唯一命名空间，重名检查统一挂在本接口，供两类前端表单复用
  * @method Models\CheckLockMetaDataResponse CheckLockMetaData(Models\CheckLockMetaDataRequest $req) 元数据锁检查
+ * @method Models\CheckModelIdentifierResponse CheckModelIdentifier(Models\CheckModelIdentifierRequest $req) 检查模型标识符是否重复
  * @method Models\CheckModifyPartitionResponse CheckModifyPartition(Models\CheckModifyPartitionRequest $req) 变配校验：判断用户的目标配置是否可以执行变配。校验逻辑：对于缩容场景（目标值 < 当前值），检查 default 队列的 min 值是否足够承受缩容差值。
  * @method Models\CheckQueueNameResponse CheckQueueName(Models\CheckQueueNameRequest $req) 资源队列名称合法性检测：校验队列名称是否合法，包括非空校验、格式校验（以小写字母开头，只允许小写字母、数字和连字符，长度1~11）和同分区下重名校验。
  * @method Models\CheckResourceNameResponse CheckResourceName(Models\CheckResourceNameRequest $req) 校验资源名称合法性
+ * @method Models\CheckServiceNameResponse CheckServiceName(Models\CheckServiceNameRequest $req) 检查推理服务名称是否重复
  * @method Models\CopyJobSpecResponse CopyJobSpec(Models\CopyJobSpecRequest $req) 复制一份已有的作业配置
+ * @method Models\CreateApiKeyResponse CreateApiKey(Models\CreateApiKeyRequest $req) 创建 API Key
+ * @method Models\CreateBenchmarkTaskResponse CreateBenchmarkTask(Models\CreateBenchmarkTaskRequest $req) 创建性能评测任务
  * @method Models\CreateCHDFSBindingProductResponse CreateCHDFSBindingProduct(Models\CreateCHDFSBindingProductRequest $req) 此接口（CreateCHDFSBindingProduct）用于创建元数据加速桶和产品绑定关系
  * @method Models\CreateClusterGroupResponse CreateClusterGroup(Models\CreateClusterGroupRequest $req) 创建集群组
  * @method Models\CreateDMSDatabaseResponse CreateDMSDatabase(Models\CreateDMSDatabaseRequest $req) DMS元数据创建库
@@ -66,6 +75,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateJobSpecResponse CreateJobSpec(Models\CreateJobSpecRequest $req) 创建作业配置
  * @method Models\CreateLabResponse CreateLab(Models\CreateLabRequest $req) 创建实验室
  * @method Models\CreateMetaDatabaseResponse CreateMetaDatabase(Models\CreateMetaDatabaseRequest $req) 本接口（CreateMetaDatabase）用于创建元数据库
+ * @method Models\CreateMlflowServerResponse CreateMlflowServer(Models\CreateMlflowServerRequest $req) 创建 MlFlow Server
  * @method Models\CreateModelVersionResponse CreateModelVersion(Models\CreateModelVersionRequest $req) 创建模型新版本
  * @method Models\CreateNotebookSessionResponse CreateNotebookSession(Models\CreateNotebookSessionRequest $req) 本接口（CreateNotebookSession）用于创建交互式session（notebook）
  * @method Models\CreateNotebookSessionStatementResponse CreateNotebookSessionStatement(Models\CreateNotebookSessionStatementRequest $req) 本接口（CreateNotebookSessionStatement）用于在session中执行代码片段
@@ -90,17 +100,25 @@ use TencentCloud\Dlc\V20210125\Models as Models;
 
 按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
  * @method Models\CreateTcIcebergTableResponse CreateTcIcebergTable(Models\CreateTcIcebergTableRequest $req) 创建TIceberg表
+ * @method Models\CreateTrainingJobInstanceResponse CreateTrainingJobInstance(Models\CreateTrainingJobInstanceRequest $req) 基于配置创建实例并提交 RayJob
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
  * @method Models\CreateUserRoleResponse CreateUserRole(Models\CreateUserRoleRequest $req) 创建用户角色
  * @method Models\CreateUserVpcConnectionResponse CreateUserVpcConnection(Models\CreateUserVpcConnectionRequest $req) 创建用户vpc连接到指定引擎网络
  * @method Models\CreateWorkGroupResponse CreateWorkGroup(Models\CreateWorkGroupRequest $req) 创建工作组
+ * @method Models\DeleteApiKeyResponse DeleteApiKey(Models\DeleteApiKeyRequest $req) 删除 API Key
+ * @method Models\DeleteBenchmarkTaskResponse DeleteBenchmarkTask(Models\DeleteBenchmarkTaskRequest $req) 删除性能评测任务
  * @method Models\DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProduct(Models\DeleteCHDFSBindingProductRequest $req) 此接口（DeleteCHDFSBindingProduct）用于删除元数据加速桶和产品绑定关系
  * @method Models\DeleteClusterGroupResponse DeleteClusterGroup(Models\DeleteClusterGroupRequest $req) 删除集群组
  * @method Models\DeleteDataEngineResponse DeleteDataEngine(Models\DeleteDataEngineRequest $req) 删除数据引擎
  * @method Models\DeleteDataMaskStrategyResponse DeleteDataMaskStrategy(Models\DeleteDataMaskStrategyRequest $req) 删除数据脱敏策略
+ * @method Models\DeleteDeploymentResponse DeleteDeployment(Models\DeleteDeploymentRequest $req) 删除指定部署
+ * @method Models\DeleteInferenceServiceResponse DeleteInferenceService(Models\DeleteInferenceServiceRequest $req) 删除推理服务（含所有部署）
  * @method Models\DeleteJobSpecResponse DeleteJobSpec(Models\DeleteJobSpecRequest $req) 根据配置ID删除作业配置
  * @method Models\DeleteLabResponse DeleteLab(Models\DeleteLabRequest $req) 删除数据实验室
  * @method Models\DeleteMetaDatabaseResponse DeleteMetaDatabase(Models\DeleteMetaDatabaseRequest $req) 本接口（DeleteMetaDatabase）用于一键删除元数据库
+ * @method Models\DeleteMlflowServerResponse DeleteMlflowServer(Models\DeleteMlflowServerRequest $req) 删除 MlFlow Server 请求
+ * @method Models\DeleteModelResponse DeleteModel(Models\DeleteModelRequest $req) 删除模型及其所有版本（平台托管模型同时删除 COS 文件，用户自带桶仅删除元数据）
+ * @method Models\DeleteModelVersionResponse DeleteModelVersion(Models\DeleteModelVersionRequest $req) 删除模型版本（平台托管模型同时删除 COS 文件，用户自带桶仅删除元数据）
  * @method Models\DeleteNativeSparkSessionResponse DeleteNativeSparkSession(Models\DeleteNativeSparkSessionRequest $req) 根据spark session名称销毁eg spark session
  * @method Models\DeleteNotebookSessionResponse DeleteNotebookSession(Models\DeleteNotebookSessionRequest $req) 本接口（DeleteNotebookSession）用于删除交互式session（notebook）
  * @method Models\DeletePartitionQueueResponse DeletePartitionQueue(Models\DeletePartitionQueueRequest $req) 删除资源队列
@@ -112,11 +130,16 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DeleteStandardEngineResourceGroupResponse DeleteStandardEngineResourceGroup(Models\DeleteStandardEngineResourceGroupRequest $req) 删除标准引擎资源组
  * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 删除表
  * @method Models\DeleteThirdPartyAccessUserResponse DeleteThirdPartyAccessUser(Models\DeleteThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）用于移除第三方平台访问
+ * @method Models\DeleteTrainingJobInstanceResponse DeleteTrainingJobInstance(Models\DeleteTrainingJobInstanceRequest $req) 删除训练作业实例（软删除本地元数据，仅终态实例可删除）
+ * @method Models\DeleteTrainingJobSpecResponse DeleteTrainingJobSpec(Models\DeleteTrainingJobSpecRequest $req) 删除训练作业配置
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DeleteUserVpcConnectionResponse DeleteUserVpcConnection(Models\DeleteUserVpcConnectionRequest $req) 删除用户vpc到引擎网络的连接
  * @method Models\DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroup(Models\DeleteUsersFromWorkGroupRequest $req) 从工作组中删除用户
  * @method Models\DeleteWorkGroupResponse DeleteWorkGroup(Models\DeleteWorkGroupRequest $req) 删除工作组
  * @method Models\DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(Models\DescribeAdvancedStoreLocationRequest $req) 查询sql查询界面高级设置
+ * @method Models\DescribeBindablePrometheusResponse DescribeBindablePrometheus(Models\DescribeBindablePrometheusRequest $req) 查询 TKE 集群可绑定的托管 Prometheus 实例列表。若 TKE 已绑定，返回 Bound=true 与 BoundInstance；若未绑定，返回 Bound=false 与候选列表 Instances（同 VPC 实例前置）。
+ * @method Models\DescribeClsTopicsResponse DescribeClsTopics(Models\DescribeClsTopicsRequest $req) 查询 CLS 日志主题列表：TopicName 走模糊匹配，TopicId 走精确匹配，两者均可为空；分页返回。
+ * @method Models\DescribeClusterEventLogSwitchResponse DescribeClusterEventLogSwitch(Models\DescribeClusterEventLogSwitchRequest $req) 查询指定 TKE 集群是否开启了事件日志。已开启时同时返回关联的 CLS 日志集 ID、日志主题 ID 与主题所在地域。
  * @method Models\DescribeClusterGroupResponse DescribeClusterGroup(Models\DescribeClusterGroupRequest $req) 根据集群组 ID 获取集群组详情。支持通过 IncludeDeleted 参数控制是否返回已软删除的记录（用于悬挂 cluster 回显场景）。
  * @method Models\DescribeClusterGroupClustersResponse DescribeClusterGroupClusters(Models\DescribeClusterGroupClustersRequest $req) 计算组关联 cluster 使用情况响应
  * @method Models\DescribeClusterMonitorInfosResponse DescribeClusterMonitorInfos(Models\DescribeClusterMonitorInfosRequest $req) 查询任务监控指标信息
@@ -136,6 +159,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeDatabaseResponse DescribeDatabase(Models\DescribeDatabaseRequest $req) 本接口（DescribeDatabase）,查询数据库详细信息
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询数据库列表。
  * @method Models\DescribeDatasourceConnectionResponse DescribeDatasourceConnection(Models\DescribeDatasourceConnectionRequest $req) 本接口（DescribeDatasourceConnection）用于查询数据源信息
+ * @method Models\DescribeEmrClusterInfoResponse DescribeEmrClusterInfo(Models\DescribeEmrClusterInfoRequest $req) 按 EMR 集群 ID 精确查询单个 EMR 集群的详细信息，包含 VPC、COS Bucket、关联 TKE 集群 ID、资源用量等。
  * @method Models\DescribeEngineNetworksResponse DescribeEngineNetworks(Models\DescribeEngineNetworksRequest $req) 查询引擎网络信息
  * @method Models\DescribeEngineNodeSpecResponse DescribeEngineNodeSpec(Models\DescribeEngineNodeSpecRequest $req) 查询引擎可用的节点规格
  * @method Models\DescribeEngineUsageInfoResponse DescribeEngineUsageInfo(Models\DescribeEngineUsageInfoRequest $req) 本接口根据引擎ID查询数据引擎资源使用情况
@@ -148,6 +172,15 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeMCPSubUinResponse DescribeMCPSubUin(Models\DescribeMCPSubUinRequest $req) 获取账户子账户信息
  * @method Models\DescribeMCPTaskResponse DescribeMCPTask(Models\DescribeMCPTaskRequest $req) 该接口（DescribeTasks）用于查询任务列表
  * @method Models\DescribeMCPTaskResultResponse DescribeMCPTaskResult(Models\DescribeMCPTaskResultRequest $req) 获取任务结果查询
+ * @method Models\DescribeMlFlowConfigResponse DescribeMlFlowConfig(Models\DescribeMlFlowConfigRequest $req) 查询训练实例的 MLflow 接入配置。 
+MlFlowMode 表示接入的 mlflow 模式，支持 local=Sidecar / remote=已有 Server / none=不启用。云上默认为 remote。
+MlFlowUrl 表示访问的 MLflow URL。
+RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
+ * @method Models\DescribeMlflowServerResponse DescribeMlflowServer(Models\DescribeMlflowServerRequest $req) 查询 MlFlow Server 状态
+ * @method Models\DescribeMlflowServerEventsResponse DescribeMlflowServerEvents(Models\DescribeMlflowServerEventsRequest $req) 查询 MlFlow Server K8s 事件
+ * @method Models\DescribeMlflowServerPodsResponse DescribeMlflowServerPods(Models\DescribeMlflowServerPodsRequest $req) MlFlow Server Pod 列表响应
+ * @method Models\DescribeModelEnginesResponse DescribeModelEngines(Models\DescribeModelEnginesRequest $req) 根据模型 UID 查询该模型可选的推理引擎列表。后端自动根据模型的 SupportedEngines 声明或 ModelType 进行引擎过滤
+ * @method Models\DescribeModelTaskOptionsResponse DescribeModelTaskOptions(Models\DescribeModelTaskOptionsRequest $req) 查询指定模型类型下可选的任务类型列表。
  * @method Models\DescribeNativeSparkSessionsResponse DescribeNativeSparkSessions(Models\DescribeNativeSparkSessionsRequest $req) 根据资源组获取spark session列表
  * @method Models\DescribeNetworkConnectionsResponse DescribeNetworkConnections(Models\DescribeNetworkConnectionsRequest $req) 查询网络配置列表
  * @method Models\DescribeNotebookSessionResponse DescribeNotebookSession(Models\DescribeNotebookSessionRequest $req) 本接口（DescribeNotebookSession）用于查询交互式 session详情信息
@@ -160,6 +193,8 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribePartitionDetailResponse DescribePartitionDetail(Models\DescribePartitionDetailRequest $req) 获取指定资源分区详情
  * @method Models\DescribePartitionQueuesResponse DescribePartitionQueues(Models\DescribePartitionQueuesRequest $req) 查询指定分区的所有队列列表
  * @method Models\DescribePartitionsResponse DescribePartitions(Models\DescribePartitionsRequest $req) 获取分区列表信息
+ * @method Models\DescribePostTrainingPresetResponse DescribePostTrainingPreset(Models\DescribePostTrainingPresetRequest $req) 获取零代码后训练的推荐参数和资源规格配置
+ * @method Models\DescribeRecommendedParamsResponse DescribeRecommendedParams(Models\DescribeRecommendedParamsRequest $req) 获取推荐的高级参数
  * @method Models\DescribeResourceGroupUsageInfoResponse DescribeResourceGroupUsageInfo(Models\DescribeResourceGroupUsageInfoRequest $req) 本接口根据资源组ID查询资源组CU使用情况
  * @method Models\DescribeResultDownloadResponse DescribeResultDownload(Models\DescribeResultDownloadRequest $req) 查询结果下载任务
  * @method Models\DescribeSaleRegionsResponse DescribeSaleRegions(Models\DescribeSaleRegionsRequest $req) 查询可售卖的地域列表，仅返回状态为AVAILABLE的地域
@@ -192,6 +227,10 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeTasksCostInfoResponse DescribeTasksCostInfo(Models\DescribeTasksCostInfoRequest $req) 该接口（DescribeTasksCostInfo）用于查询任务消耗
  * @method Models\DescribeTasksOverviewResponse DescribeTasksOverview(Models\DescribeTasksOverviewRequest $req) 查看任务概览页
  * @method Models\DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUser(Models\DescribeThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）查询开通第三方平台访问的用户信息
+ * @method Models\DescribeTkeClusterImportInfoResponse DescribeTkeClusterImportInfo(Models\DescribeTkeClusterImportInfoRequest $req) 按 EMR 集群 ID 查询已导入的 TKE 集群详情，返回 tke_cluster 表中该条导入记录的核心字段，并对 LoadBalancerId / PrometheusInstanceId / ContainerLogTopicId 三个 ID 分别回查腾讯云 API 获取对应名称一并返回。名称查询失败或查不到时对应字段返回空字符串，不影响主接口返回。
+ * @method Models\DescribeTrainingCheckpointsResponse DescribeTrainingCheckpoints(Models\DescribeTrainingCheckpointsRequest $req) 列出训练实例 Checkpoint 文件列表的响应
+ * @method Models\DescribeTrainingJobInstanceResponse DescribeTrainingJobInstance(Models\DescribeTrainingJobInstanceRequest $req) 查询训练实例详情
+ * @method Models\DescribeTrainingJobSpecResponse DescribeTrainingJobSpec(Models\DescribeTrainingJobSpecRequest $req) 获取训练作业配置详情
  * @method Models\DescribeUDFPolicyResponse DescribeUDFPolicy(Models\DescribeUDFPolicyRequest $req) 获取UDF权限信息
  * @method Models\DescribeUpdatableDataEnginesResponse DescribeUpdatableDataEngines(Models\DescribeUpdatableDataEnginesRequest $req) 查询可更新配置的引擎列表
  * @method Models\DescribeUserDataEngineConfigResponse DescribeUserDataEngineConfig(Models\DescribeUserDataEngineConfigRequest $req) 查询用户自定义引擎参数
@@ -241,9 +280,17 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\GetRayJobYamlResponse GetRayJobYaml(Models\GetRayJobYamlRequest $req) 获取RayJob的YAML内容
  * @method Models\GetResourceConfigResponse GetResourceConfig(Models\GetResourceConfigRequest $req) 获取资源配置模板详情
  * @method Models\GrantDLCCatalogAccessResponse GrantDLCCatalogAccess(Models\GrantDLCCatalogAccessRequest $req) 授权访问DLC Catalog
+ * @method Models\ImportExternalClusterResponse ImportExternalCluster(Models\ImportExternalClusterRequest $req) 通过 ClusterType 区分两种导入模式：TKE（直接导入裸 TKE 集群，ClusterId 为 TKE 集群 ID）或 EMR（通过 EMR 集群导入，ClusterId 为 EMR 集群 ID，底层会关联查询对应的 TKE 集群 ID 一并落库）。两种模式均将 TKE 集群 ID 存入 tke_cluster 表。接口是异步的，返回的 WorkflowId 可用于轮询注册进度；ResourcePoolId / ResourcePoolCode 为资源池的唯一标识。
+ * @method Models\ImportTkeClusterResponse ImportTkeCluster(Models\ImportTkeClusterRequest $req) 将用户在控制台选择的 EMR-TKE 集群及配套的 COS Bucket、Prometheus 实例、负载均衡、容器日志主题等资源，注册为 DLC 的外部资源池（EXTERNAL_TKE）。接口是异步的，返回的 WorkflowId 可用于轮询注册进度；ResourcePoolId / ResourcePoolCode 为资源池的唯一标识。
  * @method Models\InitializeTCLakeResponse InitializeTCLake(Models\InitializeTCLakeRequest $req) 开通TCLake
  * @method Models\LaunchStandardEngineResourceGroupsResponse LaunchStandardEngineResourceGroups(Models\LaunchStandardEngineResourceGroupsRequest $req) 启动标准引擎资源组
+ * @method Models\ListApiKeysResponse ListApiKeys(Models\ListApiKeysRequest $req) 列出 API Key
+ * @method Models\ListAvailableApiKeysResponse ListAvailableApiKeys(Models\ListAvailableApiKeysRequest $req) 列出空闲 API Key（未绑定服务）
+ * @method Models\ListBenchmarkSummaryResponse ListBenchmarkSummary(Models\ListBenchmarkSummaryRequest $req) 查询评测排行榜（所有模型的评测汇总数据）
+ * @method Models\ListBenchmarkTasksResponse ListBenchmarkTasks(Models\ListBenchmarkTasksRequest $req) 列出性能评测任务
  * @method Models\ListClusterGroupsResponse ListClusterGroups(Models\ListClusterGroupsRequest $req) 列出所有集群组
+ * @method Models\ListDeploymentReplicasResponse ListDeploymentReplicas(Models\ListDeploymentReplicasRequest $req) 列出部署的副本列表
+ * @method Models\ListDeploymentsResponse ListDeployments(Models\ListDeploymentsRequest $req) 列出推理服务的部署列表
  * @method Models\ListExampleCategoriesResponse ListExampleCategories(Models\ListExampleCategoriesRequest $req) 获取所有案例分类
  * @method Models\ListExampleDifficultiesResponse ListExampleDifficulties(Models\ListExampleDifficultiesRequest $req) 获取所有案例分类
  * @method Models\ListExampleTagsResponse ListExampleTags(Models\ListExampleTagsRequest $req) 返回标签去重列表，按出现频次从高到低排序。
@@ -255,13 +302,20 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ListJobSpecsResponse ListJobSpecs(Models\ListJobSpecsRequest $req) 分页查询作业配置列表
  * @method Models\ListJobsBySpecResponse ListJobsBySpec(Models\ListJobsBySpecRequest $req) 分页查询某作业配置下产生的所有作业实例
  * @method Models\ListLabsResponse ListLabs(Models\ListLabsRequest $req) 列出实验室列表
+ * @method Models\ListMlflowServerTrainingInstancesResponse ListMlflowServerTrainingInstances(Models\ListMlflowServerTrainingInstancesRequest $req) 查询 MlFlow Server 关联的训练实例列表
+ * @method Models\ListMlflowServersResponse ListMlflowServers(Models\ListMlflowServersRequest $req) 列出 MlFlow Server
  * @method Models\ListModelVersionsResponse ListModelVersions(Models\ListModelVersionsRequest $req) 列出模型所有版本
  * @method Models\ListRayClusterJobsResponse ListRayClusterJobs(Models\ListRayClusterJobsRequest $req) 查询指定 Ray 集群下提交的所有作业，分页返回。底层委托给 ListRayJobs，强制注入 ClusterId 作为过滤条件。
  * @method Models\ListRayClustersResponse ListRayClusters(Models\ListRayClustersRequest $req) 列出所有集群
  * @method Models\ListRayJobsResponse ListRayJobs(Models\ListRayJobsRequest $req) 根据集群ID列出所有Ray任务
+ * @method Models\ListRegionLbsResponse ListRegionLbs(Models\ListRegionLbsRequest $req) 列出用户在指定地域下的 CLB 负载均衡实例，返回实例 ID、名称与网络类型（OPEN/INTERNAL）。
  * @method Models\ListResourceConfigsResponse ListResourceConfigs(Models\ListResourceConfigsRequest $req) 列出所有资源配置模板
+ * @method Models\ListServiceApiKeysResponse ListServiceApiKeys(Models\ListServiceApiKeysRequest $req) 列出指定推理服务绑定的 API Key
  * @method Models\ListTaskJobLogDetailResponse ListTaskJobLogDetail(Models\ListTaskJobLogDetailRequest $req) 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
  * @method Models\ListTaskJobLogNameResponse ListTaskJobLogName(Models\ListTaskJobLogNameRequest $req) 本接口（ListTaskJobLogName）用于获取spark-jar日志名称列表
+ * @method Models\ListTkeCosBucketsResponse ListTkeCosBuckets(Models\ListTkeCosBucketsRequest $req) 获取tke纳管cos列表
+ * @method Models\ListTrainingJobInstanceResponse ListTrainingJobInstance(Models\ListTrainingJobInstanceRequest $req) 列出训练作业实例
+ * @method Models\ListTrainingJobSpecResponse ListTrainingJobSpec(Models\ListTrainingJobSpecRequest $req) 获取训练作业配置的列表。
  * @method Models\LockMetaDataResponse LockMetaData(Models\LockMetaDataRequest $req) 元数据锁
  * @method Models\ModifyAdvancedStoreLocationResponse ModifyAdvancedStoreLocation(Models\ModifyAdvancedStoreLocationRequest $req) 修改sql查询界面高级设置。
  * @method Models\ModifyClusterPriorityResponse ModifyClusterPriority(Models\ModifyClusterPriorityRequest $req) 修改集群的调度优先级（1-9，数字越大优先级越高）
@@ -273,6 +327,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) 更新spark作业
  * @method Models\ModifySparkAppBatchResponse ModifySparkAppBatch(Models\ModifySparkAppBatchRequest $req) 本接口（ModifySparkAppBatch）用于批量修改Spark作业参数配置
  * @method Models\ModifySparkAppForTDLCResponse ModifySparkAppForTDLC(Models\ModifySparkAppForTDLCRequest $req) 更新tdlc spark作业
+ * @method Models\ModifyTrainingJobSpecResponse ModifyTrainingJobSpec(Models\ModifyTrainingJobSpecRequest $req) 就地更新训练作业配置
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyUserTypeResponse ModifyUserType(Models\ModifyUserTypeRequest $req) 修改用户类型。只有管理员用户能够调用该接口进行操作
  * @method Models\ModifyWorkGroupResponse ModifyWorkGroup(Models\ModifyWorkGroupRequest $req) 修改工作组信息
@@ -286,27 +341,37 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\RegisterThirdPartyAccessUserResponse RegisterThirdPartyAccessUser(Models\RegisterThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）用于开通第三方平台访问
  * @method Models\RenewDataEngineResponse RenewDataEngine(Models\RenewDataEngineRequest $req) 续费数据引擎
  * @method Models\ReportHeartbeatMetaDataResponse ReportHeartbeatMetaData(Models\ReportHeartbeatMetaDataRequest $req) 上报元数据心跳
+ * @method Models\RerunBenchmarkTaskResponse RerunBenchmarkTask(Models\RerunBenchmarkTaskRequest $req) 重新运行性能评测任务
  * @method Models\RestartDataEngineResponse RestartDataEngine(Models\RestartDataEngineRequest $req) 重启引擎
+ * @method Models\RestartDeploymentResponse RestartDeployment(Models\RestartDeploymentRequest $req) 再次运行部署（以当前配置重新部署）
  * @method Models\RestartInferenceServiceResponse RestartInferenceService(Models\RestartInferenceServiceRequest $req) 重启推理服务（操作所有部署）。
+ * @method Models\ResumeTrainingJobInstanceResponse ResumeTrainingJobInstance(Models\ResumeTrainingJobInstanceRequest $req) 断点续训（克隆实例）
  * @method Models\RevokeDLCCatalogAccessResponse RevokeDLCCatalogAccess(Models\RevokeDLCCatalogAccessRequest $req) 撤销DLC Catalog访问权限
  * @method Models\RollbackDataEngineImageResponse RollbackDataEngineImage(Models\RollbackDataEngineImageRequest $req) 回滚引擎镜像版本
  * @method Models\RunJobSpecResponse RunJobSpec(Models\RunJobSpecRequest $req) 基于指定作业配置提交一次作业实例
  * @method Models\SetOptimizerPolicyResponse SetOptimizerPolicy(Models\SetOptimizerPolicyRequest $req) 设置优化策略的接口
  * @method Models\StartLabResponse StartLab(Models\StartLabRequest $req) 启动实验室
+ * @method Models\StartMlflowServerResponse StartMlflowServer(Models\StartMlflowServerRequest $req) 启动 MlFlow Server（apply K8s 资源，幂等可重试）
  * @method Models\StartRayClusterResponse StartRayCluster(Models\StartRayClusterRequest $req) 启动集群
+ * @method Models\StopBenchmarkTaskResponse StopBenchmarkTask(Models\StopBenchmarkTaskRequest $req) 停止性能评测任务
+ * @method Models\StopDeploymentResponse StopDeployment(Models\StopDeploymentRequest $req) 停止部署
  * @method Models\StopInferenceServiceResponse StopInferenceService(Models\StopInferenceServiceRequest $req) 停止推理服务（操作所有部署）。
  * @method Models\StopLabResponse StopLab(Models\StopLabRequest $req) 停止实验室
+ * @method Models\StopMlflowServerResponse StopMlflowServer(Models\StopMlflowServerRequest $req) 停止 MlFlow Server
  * @method Models\StopRayClusterResponse StopRayCluster(Models\StopRayClusterRequest $req) 停止集群
+ * @method Models\SubmitTrainingJobResponse SubmitTrainingJob(Models\SubmitTrainingJobRequest $req) 断点续训（克隆实例）
  * @method Models\SuspendResumeDataEngineResponse SuspendResumeDataEngine(Models\SuspendResumeDataEngineRequest $req) 本接口用于控制挂起或启动数据引擎
  * @method Models\SwitchDataEngineResponse SwitchDataEngine(Models\SwitchDataEngineRequest $req) 切换主备集群
  * @method Models\SwitchDataEngineImageResponse SwitchDataEngineImage(Models\SwitchDataEngineImageRequest $req) 切换引擎镜像版本
  * @method Models\UnbindWorkGroupsFromUserResponse UnbindWorkGroupsFromUser(Models\UnbindWorkGroupsFromUserRequest $req) 解绑用户上的用户组
  * @method Models\UnboundDatasourceHouseResponse UnboundDatasourceHouse(Models\UnboundDatasourceHouseRequest $req) 解绑数据源与队列
  * @method Models\UnlockMetaDataResponse UnlockMetaData(Models\UnlockMetaDataRequest $req) 元数据解锁
+ * @method Models\UpdateApiKeyStatusResponse UpdateApiKeyStatus(Models\UpdateApiKeyStatusRequest $req) 更新 API Key 状态
  * @method Models\UpdateClusterGroupResponse UpdateClusterGroup(Models\UpdateClusterGroupRequest $req) 更新集群组
  * @method Models\UpdateDataEngineResponse UpdateDataEngine(Models\UpdateDataEngineRequest $req) 本接口用于更新数据引擎配置
  * @method Models\UpdateDataEngineConfigResponse UpdateDataEngineConfig(Models\UpdateDataEngineConfigRequest $req) 用户某种操作，触发引擎配置修改
  * @method Models\UpdateDataMaskStrategyResponse UpdateDataMaskStrategy(Models\UpdateDataMaskStrategyRequest $req) 更新数据脱敏策略
+ * @method Models\UpdateDeploymentResponse UpdateDeployment(Models\UpdateDeploymentRequest $req) 更新部署配置
  * @method Models\UpdateEngineResourceGroupNetworkConfigInfoResponse UpdateEngineResourceGroupNetworkConfigInfo(Models\UpdateEngineResourceGroupNetworkConfigInfoRequest $req) 更新标准引擎资源组网络配置信息
  * @method Models\UpdateInferenceModelResponse UpdateInferenceModel(Models\UpdateInferenceModelRequest $req) 更新推理模型（编辑标签、描述、参数量）
  * @method Models\UpdateJobSpecResponse UpdateJobSpec(Models\UpdateJobSpecRequest $req) 更新已有作业配置的字段
@@ -317,6 +382,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\UpdateRayJobPriorityResponse UpdateRayJobPriority(Models\UpdateRayJobPriorityRequest $req) 更新处于 SUBMITTED/PENDING 状态的作业的优先级。仅 SUBMITTED/PENDING 状态的作业允许调整优先级。内部通过调用 Neutrino 的 UpdateJobConfig 接口更新 ENVIRONMENT 配置中的 priority 字段。
  * @method Models\UpdateResourceConfigResponse UpdateResourceConfig(Models\UpdateResourceConfigRequest $req) 更新资源配置模板
  * @method Models\UpdateRowFilterResponse UpdateRowFilter(Models\UpdateRowFilterRequest $req) 此接口用于更新行过滤规则。注意只能更新过滤规则，不能更新规格对象catalog，database和table。
+ * @method Models\UpdateServiceAuthConfigResponse UpdateServiceAuthConfig(Models\UpdateServiceAuthConfigRequest $req) 更新推理服务的 API-Key 鉴权配置（启用/停用）
  * @method Models\UpdateStandardEngineResourceGroupBaseInfoResponse UpdateStandardEngineResourceGroupBaseInfo(Models\UpdateStandardEngineResourceGroupBaseInfoRequest $req) 更新标准引擎资源组基础信息
  * @method Models\UpdateStandardEngineResourceGroupConfigInfoResponse UpdateStandardEngineResourceGroupConfigInfo(Models\UpdateStandardEngineResourceGroupConfigInfoRequest $req) 更新标准引擎资源组基础信息
  * @method Models\UpdateStandardEngineResourceGroupResourceInfoResponse UpdateStandardEngineResourceGroupResourceInfo(Models\UpdateStandardEngineResourceGroupResourceInfoRequest $req) 更新标准引擎资源组基础信息

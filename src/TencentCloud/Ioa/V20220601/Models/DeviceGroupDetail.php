@@ -20,154 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回的数组列表
  *
- * @method integer getId() 获取设备组id
- * @method void setId(integer $Id) 设置设备组id
- * @method string getName() 获取设备组名称
- * @method void setName(string $Name) 设置设备组名称
- * @method string getDescription() 获取设备组描述
- * @method void setDescription(string $Description) 设置设备组描述
- * @method integer getParentId() 获取父节点id
- * @method void setParentId(integer $ParentId) 设置父节点id
- * @method string getIdPath() 获取基于id的节点路径
- * @method void setIdPath(string $IdPath) 设置基于id的节点路径
- * @method string getNamePath() 获取基于名称的节点路径
- * @method void setNamePath(string $NamePath) 设置基于名称的节点路径
- * @method integer getLocked() 获取分组锁定状态
- * @method void setLocked(integer $Locked) 设置分组锁定状态
- * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）
- * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）
- * @method integer getSort() 获取排序
- * @method void setSort(integer $Sort) 设置排序
- * @method integer getFromAuto() 获取是否自动调整
- * @method void setFromAuto(integer $FromAuto) 设置是否自动调整
- * @method integer getCount() 获取子节点数量
- * @method void setCount(integer $Count) 设置子节点数量
- * @method string getIcon() 获取图标
- * @method void setIcon(string $Icon) 设置图标
- * @method integer getWithIp() 获取是否有ip
- * @method void setWithIp(integer $WithIp) 设置是否有ip
- * @method boolean getHasIp() 获取是否有组ip
- * @method void setHasIp(boolean $HasIp) 设置是否有组ip
- * @method boolean getIsLeaf() 获取是否是叶子节点
- * @method void setIsLeaf(boolean $IsLeaf) 设置是否是叶子节点
- * @method boolean getReadOnly() 获取是否只读
- * @method void setReadOnly(boolean $ReadOnly) 设置是否只读
- * @method integer getBindAccount() 获取对应绑定的账号id
- * @method void setBindAccount(integer $BindAccount) 设置对应绑定的账号id
- * @method string getBindAccountName() 获取绑定账号的用户名
- * @method void setBindAccountName(string $BindAccountName) 设置绑定账号的用户名
+ * @method integer getId() 获取<p>设备组id</p>
+ * @method void setId(integer $Id) 设置<p>设备组id</p>
+ * @method string getName() 获取<p>设备组名称</p>
+ * @method void setName(string $Name) 设置<p>设备组名称</p>
+ * @method string getDescription() 获取<p>设备组描述</p>
+ * @method void setDescription(string $Description) 设置<p>设备组描述</p>
+ * @method integer getParentId() 获取<p>父节点id</p>
+ * @method void setParentId(integer $ParentId) 设置<p>父节点id</p>
+ * @method string getIdPath() 获取<p>基于id的节点路径</p>
+ * @method void setIdPath(string $IdPath) 设置<p>基于id的节点路径</p>
+ * @method string getNamePath() 获取<p>基于名称的节点路径</p>
+ * @method void setNamePath(string $NamePath) 设置<p>基于名称的节点路径</p>
+ * @method integer getLocked() 获取<p>分组锁定状态</p>
+ * @method void setLocked(integer $Locked) 设置<p>分组锁定状态</p>
+ * @method integer getOsType() 获取<p>系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）</p>
+ * @method void setOsType(integer $OsType) 设置<p>系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）</p>
+ * @method integer getSort() 获取<p>排序</p>
+ * @method void setSort(integer $Sort) 设置<p>排序</p>
+ * @method integer getFromAuto() 获取<p>是否自动调整</p>
+ * @method void setFromAuto(integer $FromAuto) 设置<p>是否自动调整</p>
+ * @method integer getCount() 获取<p>子节点数量</p>
+ * @method void setCount(integer $Count) 设置<p>子节点数量</p>
+ * @method string getIcon() 获取<p>图标</p>
+ * @method void setIcon(string $Icon) 设置<p>图标</p>
+ * @method integer getWithIp() 获取<p>是否有ip</p>
+ * @method void setWithIp(integer $WithIp) 设置<p>是否有ip</p>
+ * @method boolean getHasIp() 获取<p>是否有组ip</p>
+ * @method void setHasIp(boolean $HasIp) 设置<p>是否有组ip</p>
+ * @method boolean getIsLeaf() 获取<p>是否是叶子节点</p>
+ * @method void setIsLeaf(boolean $IsLeaf) 设置<p>是否是叶子节点</p>
+ * @method boolean getReadOnly() 获取<p>是否只读</p>
+ * @method void setReadOnly(boolean $ReadOnly) 设置<p>是否只读</p>
+ * @method integer getBindAccount() 获取<p>对应绑定的账号id</p>
+ * @method void setBindAccount(integer $BindAccount) 设置<p>对应绑定的账号id</p>
+ * @method string getBindAccountName() 获取<p>绑定账号的用户名</p>
+ * @method void setBindAccountName(string $BindAccountName) 设置<p>绑定账号的用户名</p>
  */
 class DeviceGroupDetail extends AbstractModel
 {
     /**
-     * @var integer 设备组id
+     * @var integer <p>设备组id</p>
      */
     public $Id;
 
     /**
-     * @var string 设备组名称
+     * @var string <p>设备组名称</p>
      */
     public $Name;
 
     /**
-     * @var string 设备组描述
+     * @var string <p>设备组描述</p>
      */
     public $Description;
 
     /**
-     * @var integer 父节点id
+     * @var integer <p>父节点id</p>
      */
     public $ParentId;
 
     /**
-     * @var string 基于id的节点路径
+     * @var string <p>基于id的节点路径</p>
      */
     public $IdPath;
 
     /**
-     * @var string 基于名称的节点路径
+     * @var string <p>基于名称的节点路径</p>
      */
     public $NamePath;
 
     /**
-     * @var integer 分组锁定状态
+     * @var integer <p>分组锁定状态</p>
      */
     public $Locked;
 
     /**
-     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）
+     * @var integer <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）</p>
      */
     public $OsType;
 
     /**
-     * @var integer 排序
+     * @var integer <p>排序</p>
      */
     public $Sort;
 
     /**
-     * @var integer 是否自动调整
+     * @var integer <p>是否自动调整</p>
      */
     public $FromAuto;
 
     /**
-     * @var integer 子节点数量
+     * @var integer <p>子节点数量</p>
      */
     public $Count;
 
     /**
-     * @var string 图标
+     * @var string <p>图标</p>
      */
     public $Icon;
 
     /**
-     * @var integer 是否有ip
+     * @var integer <p>是否有ip</p>
      */
     public $WithIp;
 
     /**
-     * @var boolean 是否有组ip
+     * @var boolean <p>是否有组ip</p>
      */
     public $HasIp;
 
     /**
-     * @var boolean 是否是叶子节点
+     * @var boolean <p>是否是叶子节点</p>
      */
     public $IsLeaf;
 
     /**
-     * @var boolean 是否只读
+     * @var boolean <p>是否只读</p>
      */
     public $ReadOnly;
 
     /**
-     * @var integer 对应绑定的账号id
+     * @var integer <p>对应绑定的账号id</p>
      */
     public $BindAccount;
 
     /**
-     * @var string 绑定账号的用户名
+     * @var string <p>绑定账号的用户名</p>
      */
     public $BindAccountName;
 
     /**
-     * @param integer $Id 设备组id
-     * @param string $Name 设备组名称
-     * @param string $Description 设备组描述
-     * @param integer $ParentId 父节点id
-     * @param string $IdPath 基于id的节点路径
-     * @param string $NamePath 基于名称的节点路径
-     * @param integer $Locked 分组锁定状态
-     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）
-     * @param integer $Sort 排序
-     * @param integer $FromAuto 是否自动调整
-     * @param integer $Count 子节点数量
-     * @param string $Icon 图标
-     * @param integer $WithIp 是否有ip
-     * @param boolean $HasIp 是否有组ip
-     * @param boolean $IsLeaf 是否是叶子节点
-     * @param boolean $ReadOnly 是否只读
-     * @param integer $BindAccount 对应绑定的账号id
-     * @param string $BindAccountName 绑定账号的用户名
+     * @param integer $Id <p>设备组id</p>
+     * @param string $Name <p>设备组名称</p>
+     * @param string $Description <p>设备组描述</p>
+     * @param integer $ParentId <p>父节点id</p>
+     * @param string $IdPath <p>基于id的节点路径</p>
+     * @param string $NamePath <p>基于名称的节点路径</p>
+     * @param integer $Locked <p>分组锁定状态</p>
+     * @param integer $OsType <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）</p>
+     * @param integer $Sort <p>排序</p>
+     * @param integer $FromAuto <p>是否自动调整</p>
+     * @param integer $Count <p>子节点数量</p>
+     * @param string $Icon <p>图标</p>
+     * @param integer $WithIp <p>是否有ip</p>
+     * @param boolean $HasIp <p>是否有组ip</p>
+     * @param boolean $IsLeaf <p>是否是叶子节点</p>
+     * @param boolean $ReadOnly <p>是否只读</p>
+     * @param integer $BindAccount <p>对应绑定的账号id</p>
+     * @param string $BindAccountName <p>绑定账号的用户名</p>
      */
     function __construct()
     {

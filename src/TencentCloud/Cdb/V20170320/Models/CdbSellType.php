@@ -20,58 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 售卖实例类型
  *
- * @method string getTypeName() 获取售卖实例名称。
-Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
-CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
-TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
-CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
-CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
-ECONOMICAL：表示经济型。
- * @method void setTypeName(string $TypeName) 设置售卖实例名称。
-Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
-CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
-TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
-CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
-CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
-ECONOMICAL：表示经济型。
- * @method array getEngineVersion() 获取引擎版本号
- * @method void setEngineVersion(array $EngineVersion) 设置引擎版本号
- * @method array getConfigIds() 获取售卖规格Id
- * @method void setConfigIds(array $ConfigIds) 设置售卖规格Id
+ * @method string getTypeName() 获取<p>售卖实例名称。<br>Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。<br>CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。<br>TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。<br>CLOUD_NATIVE_CLUSTER：表示云盘版标准型。<br>CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。<br>CLOUD_NATIVE_CLUSTER_ULTRA：表示云盘版旗舰型。<br>CLOUD_NATIVE_SINGLE_NODE：表示云盘版单节点<br>ECONOMICAL：表示经济型。</p>
+ * @method void setTypeName(string $TypeName) 设置<p>售卖实例名称。<br>Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。<br>CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。<br>TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。<br>CLOUD_NATIVE_CLUSTER：表示云盘版标准型。<br>CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。<br>CLOUD_NATIVE_CLUSTER_ULTRA：表示云盘版旗舰型。<br>CLOUD_NATIVE_SINGLE_NODE：表示云盘版单节点<br>ECONOMICAL：表示经济型。</p>
+ * @method array getEngineVersion() 获取<p>引擎版本号</p>
+ * @method void setEngineVersion(array $EngineVersion) 设置<p>引擎版本号</p>
+ * @method array getConfigIds() 获取<p>售卖规格Id</p>
+ * @method void setConfigIds(array $ConfigIds) 设置<p>售卖规格Id</p>
  */
 class CdbSellType extends AbstractModel
 {
     /**
-     * @var string 售卖实例名称。
-Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
-CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
-TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
-CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
-CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
-ECONOMICAL：表示经济型。
+     * @var string <p>售卖实例名称。<br>Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。<br>CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。<br>TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。<br>CLOUD_NATIVE_CLUSTER：表示云盘版标准型。<br>CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。<br>CLOUD_NATIVE_CLUSTER_ULTRA：表示云盘版旗舰型。<br>CLOUD_NATIVE_SINGLE_NODE：表示云盘版单节点<br>ECONOMICAL：表示经济型。</p>
      */
     public $TypeName;
 
     /**
-     * @var array 引擎版本号
+     * @var array <p>引擎版本号</p>
      */
     public $EngineVersion;
 
     /**
-     * @var array 售卖规格Id
+     * @var array <p>售卖规格Id</p>
      */
     public $ConfigIds;
 
     /**
-     * @param string $TypeName 售卖实例名称。
-Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
-CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
-TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
-CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
-CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
-ECONOMICAL：表示经济型。
-     * @param array $EngineVersion 引擎版本号
-     * @param array $ConfigIds 售卖规格Id
+     * @param string $TypeName <p>售卖实例名称。<br>Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。<br>CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。<br>TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。<br>CLOUD_NATIVE_CLUSTER：表示云盘版标准型。<br>CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。<br>CLOUD_NATIVE_CLUSTER_ULTRA：表示云盘版旗舰型。<br>CLOUD_NATIVE_SINGLE_NODE：表示云盘版单节点<br>ECONOMICAL：表示经济型。</p>
+     * @param array $EngineVersion <p>引擎版本号</p>
+     * @param array $ConfigIds <p>售卖规格Id</p>
      */
     function __construct()
     {

@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageInfoV2(ImageInfoV2 $ImageInfoV2) 设置<p>自定义镜像</p>
  * @method array getGooseFSVolumes() 获取<p>GooseFS盘</p>
  * @method void setGooseFSVolumes(array $GooseFSVolumes) 设置<p>GooseFS盘</p>
+ * @method boolean getEnableHistoryServer() 获取<p>是否开启日志收集</p>
+ * @method void setEnableHistoryServer(boolean $EnableHistoryServer) 设置<p>是否开启日志收集</p>
  */
 class ModifyDynamicInstanceForm extends AbstractModel
 {
@@ -143,6 +145,11 @@ class ModifyDynamicInstanceForm extends AbstractModel
     public $GooseFSVolumes;
 
     /**
+     * @var boolean <p>是否开启日志收集</p>
+     */
+    public $EnableHistoryServer;
+
+    /**
      * @param integer $ModifyScope <p>更新作用域：<br>1：添加workerGroup（DynamicInstance级别）<br>2：更新存储配置（DynamicInstance级别）<br>3：更新标签配置（DynamicInstance级别）<br>4：更新高级配置（DynamicInstance级别）<br>5：更新PodCpu、PodMem（DynamicInstance-group级别）<br>6：更新PodNum、MinPodNum、MaxPodNum（DynamicInstance-group级别）<br>7：更新存储配置（DynamicInstance-group级别）<br>8：更新标签配置（DynamicInstance-group级别）</p>
      * @param DynamicInstanceGroup $AddDynamicInstanceGroup <p>添加的workerGroup信息</p>
      * @param boolean $SupportPV <p>是否支持存储配置</p>
@@ -160,6 +167,7 @@ class ModifyDynamicInstanceForm extends AbstractModel
      * @param CustomImage $CustomImage <p>自定义镜像</p>
      * @param ImageInfoV2 $ImageInfoV2 <p>自定义镜像</p>
      * @param array $GooseFSVolumes <p>GooseFS盘</p>
+     * @param boolean $EnableHistoryServer <p>是否开启日志收集</p>
      */
     function __construct()
     {
@@ -294,6 +302,10 @@ class ModifyDynamicInstanceForm extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GooseFSVolumes, $obj);
             }
+        }
+
+        if (array_key_exists("EnableHistoryServer",$param) and $param["EnableHistoryServer"] !== null) {
+            $this->EnableHistoryServer = $param["EnableHistoryServer"];
         }
     }
 }

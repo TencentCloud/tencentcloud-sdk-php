@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 终端自定义分组列表数据
  *
- * @method integer getId() 获取终端自定义分组id
- * @method void setId(integer $Id) 设置终端自定义分组id
- * @method string getDeviceVirtualGroupName() 获取自定义分组名称
- * @method void setDeviceVirtualGroupName(string $DeviceVirtualGroupName) 设置自定义分组名称
- * @method integer getDeviceCount() 获取设备数
- * @method void setDeviceCount(integer $DeviceCount) 设置设备数
- * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
- * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
- * @method string getItime() 获取创建时间
- * @method void setItime(string $Itime) 设置创建时间
- * @method string getUtime() 获取更新时间
- * @method void setUtime(string $Utime) 设置更新时间
+ * @method integer getId() 获取<p>终端自定义分组id</p>
+ * @method void setId(integer $Id) 设置<p>终端自定义分组id</p>
+ * @method string getDeviceVirtualGroupName() 获取<p>自定义分组名称</p>
+ * @method void setDeviceVirtualGroupName(string $DeviceVirtualGroupName) 设置<p>自定义分组名称</p>
+ * @method integer getDeviceCount() 获取<p>设备数</p>
+ * @method void setDeviceCount(integer $DeviceCount) 设置<p>设备数</p>
+ * @method integer getOsType() 获取<p>系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）</p>
+ * @method void setOsType(integer $OsType) 设置<p>系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）</p>
+ * @method string getItime() 获取<p>创建时间</p>
+ * @method void setItime(string $Itime) 设置<p>创建时间</p>
+ * @method string getUtime() 获取<p>更新时间</p>
+ * @method void setUtime(string $Utime) 设置<p>更新时间</p>
  */
 class DeviceVirtualDeviceGroupsDetail extends AbstractModel
 {
     /**
-     * @var integer 终端自定义分组id
+     * @var integer <p>终端自定义分组id</p>
      */
     public $Id;
 
     /**
-     * @var string 自定义分组名称
+     * @var string <p>自定义分组名称</p>
      */
     public $DeviceVirtualGroupName;
 
     /**
-     * @var integer 设备数
+     * @var integer <p>设备数</p>
      */
     public $DeviceCount;
 
     /**
-     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
+     * @var integer <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）</p>
      */
     public $OsType;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $Itime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $Utime;
 
     /**
-     * @param integer $Id 终端自定义分组id
-     * @param string $DeviceVirtualGroupName 自定义分组名称
-     * @param integer $DeviceCount 设备数
-     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
-     * @param string $Itime 创建时间
-     * @param string $Utime 更新时间
+     * @param integer $Id <p>终端自定义分组id</p>
+     * @param string $DeviceVirtualGroupName <p>自定义分组名称</p>
+     * @param integer $DeviceCount <p>设备数</p>
+     * @param integer $OsType <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）</p>
+     * @param string $Itime <p>创建时间</p>
+     * @param string $Utime <p>更新时间</p>
      */
     function __construct()
     {

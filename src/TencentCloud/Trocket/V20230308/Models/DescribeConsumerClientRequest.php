@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
  * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
- * @method string getClientId() 获取客户端ID，从 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140) 接口中的 [ConsumerClient](https://cloud.tencent.com/document/api/1493/96031#ConsumerClient) 出参中获得。
- * @method void setClientId(string $ClientId) 设置客户端ID，从 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140) 接口中的 [ConsumerClient](https://cloud.tencent.com/document/api/1493/96031#ConsumerClient) 出参中获得。
+ * @method string getClientId() 获取<p>客户端ID，从 <a href="https://cloud.tencent.com/document/api/1493/120140">DescribeConsumerClientList</a> 接口中的 <a href="https://cloud.tencent.com/document/api/1493/96031#ConsumerClient">ConsumerClient</a> 出参中获得。</p>
+ * @method void setClientId(string $ClientId) 设置<p>客户端ID，从 <a href="https://cloud.tencent.com/document/api/1493/120140">DescribeConsumerClientList</a> 接口中的 <a href="https://cloud.tencent.com/document/api/1493/96031#ConsumerClient">ConsumerClient</a> 出参中获得。</p>
  * @method array getFilters() 获取过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
  * @method void setFilters(array $Filters) 设置过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
  * @method integer getOffset() 获取查询起始位置，默认为0。
@@ -41,7 +41,7 @@ class DescribeConsumerClientRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 客户端ID，从 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140) 接口中的 [ConsumerClient](https://cloud.tencent.com/document/api/1493/96031#ConsumerClient) 出参中获得。
+     * @var string <p>客户端ID，从 <a href="https://cloud.tencent.com/document/api/1493/120140">DescribeConsumerClientList</a> 接口中的 <a href="https://cloud.tencent.com/document/api/1493/96031#ConsumerClient">ConsumerClient</a> 出参中获得。</p>
      */
     public $ClientId;
 
@@ -67,7 +67,7 @@ class DescribeConsumerClientRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
-     * @param string $ClientId 客户端ID，从 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140) 接口中的 [ConsumerClient](https://cloud.tencent.com/document/api/1493/96031#ConsumerClient) 出参中获得。
+     * @param string $ClientId <p>客户端ID，从 <a href="https://cloud.tencent.com/document/api/1493/120140">DescribeConsumerClientList</a> 接口中的 <a href="https://cloud.tencent.com/document/api/1493/96031#ConsumerClient">ConsumerClient</a> 出参中获得。</p>
      * @param array $Filters 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
      * @param integer $Offset 查询起始位置，默认为0。
      * @param integer $Limit 查询结果限制数量，默认20。

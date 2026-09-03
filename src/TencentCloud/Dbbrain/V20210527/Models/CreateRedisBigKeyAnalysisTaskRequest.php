@@ -20,46 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRedisBigKeyAnalysisTask请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method string getProduct() 获取服务产品类型，支持值包括 "redis" - 云数据库 Redis。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值包括 "redis" - 云数据库 Redis。
- * @method array getShardIds() 获取分片节点序号列表。当列表为空时，选择所有分片节点。
- * @method void setShardIds(array $ShardIds) 设置分片节点序号列表。当列表为空时，选择所有分片节点。
- * @method array getKeyDelimiterList() 获取Top Key前缀的分隔符列表。
-目前仅支持以下分割符：[",", ";", ":", "_", "-", "+", "@", "=", "|", "#", "."]，当列表为空时，默认选择所有分隔符。
- * @method void setKeyDelimiterList(array $KeyDelimiterList) 设置Top Key前缀的分隔符列表。
-目前仅支持以下分割符：[",", ";", ":", "_", "-", "+", "@", "=", "|", "#", "."]，当列表为空时，默认选择所有分隔符。
+ * @method string getInstanceId() 获取<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+ * @method string getProduct() 获取<p>服务产品类型，支持值包括 &quot;redis&quot; - 云数据库 Redis。</p>
+ * @method void setProduct(string $Product) 设置<p>服务产品类型，支持值包括 &quot;redis&quot; - 云数据库 Redis。</p>
+ * @method array getShardIds() 获取<p>分片节点序号列表。当列表为空时，选择所有分片节点。</p>
+ * @method void setShardIds(array $ShardIds) 设置<p>分片节点序号列表。当列表为空时，选择所有分片节点。</p>
+ * @method array getKeyDelimiterList() 获取<p>Top Key前缀的分隔符列表。<br>目前仅支持以下分割符：[&quot;,&quot;, &quot;;&quot;, &quot;:&quot;, &quot;_&quot;, &quot;-&quot;, &quot;+&quot;, &quot;@&quot;, &quot;=&quot;, &quot;|&quot;, &quot;#&quot;, &quot;.&quot;]，当列表为空时，默认选择所有分隔符。</p>
+ * @method void setKeyDelimiterList(array $KeyDelimiterList) 设置<p>Top Key前缀的分隔符列表。<br>目前仅支持以下分割符：[&quot;,&quot;, &quot;;&quot;, &quot;:&quot;, &quot;_&quot;, &quot;-&quot;, &quot;+&quot;, &quot;@&quot;, &quot;=&quot;, &quot;|&quot;, &quot;#&quot;, &quot;.&quot;]，当列表为空时，默认选择所有分隔符。</p>
+ * @method string getBackupId() 获取<p>历史备份文件ID</p>
+ * @method void setBackupId(string $BackupId) 设置<p>历史备份文件ID</p>
  */
 class CreateRedisBigKeyAnalysisTaskRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @var string <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
+     * @var string <p>服务产品类型，支持值包括 &quot;redis&quot; - 云数据库 Redis。</p>
      */
     public $Product;
 
     /**
-     * @var array 分片节点序号列表。当列表为空时，选择所有分片节点。
+     * @var array <p>分片节点序号列表。当列表为空时，选择所有分片节点。</p>
      */
     public $ShardIds;
 
     /**
-     * @var array Top Key前缀的分隔符列表。
-目前仅支持以下分割符：[",", ";", ":", "_", "-", "+", "@", "=", "|", "#", "."]，当列表为空时，默认选择所有分隔符。
+     * @var array <p>Top Key前缀的分隔符列表。<br>目前仅支持以下分割符：[&quot;,&quot;, &quot;;&quot;, &quot;:&quot;, &quot;_&quot;, &quot;-&quot;, &quot;+&quot;, &quot;@&quot;, &quot;=&quot;, &quot;|&quot;, &quot;#&quot;, &quot;.&quot;]，当列表为空时，默认选择所有分隔符。</p>
      */
     public $KeyDelimiterList;
 
     /**
-     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param string $Product 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
-     * @param array $ShardIds 分片节点序号列表。当列表为空时，选择所有分片节点。
-     * @param array $KeyDelimiterList Top Key前缀的分隔符列表。
-目前仅支持以下分割符：[",", ";", ":", "_", "-", "+", "@", "=", "|", "#", "."]，当列表为空时，默认选择所有分隔符。
+     * @var string <p>历史备份文件ID</p>
+     */
+    public $BackupId;
+
+    /**
+     * @param string $InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param string $Product <p>服务产品类型，支持值包括 &quot;redis&quot; - 云数据库 Redis。</p>
+     * @param array $ShardIds <p>分片节点序号列表。当列表为空时，选择所有分片节点。</p>
+     * @param array $KeyDelimiterList <p>Top Key前缀的分隔符列表。<br>目前仅支持以下分割符：[&quot;,&quot;, &quot;;&quot;, &quot;:&quot;, &quot;_&quot;, &quot;-&quot;, &quot;+&quot;, &quot;@&quot;, &quot;=&quot;, &quot;|&quot;, &quot;#&quot;, &quot;.&quot;]，当列表为空时，默认选择所有分隔符。</p>
+     * @param string $BackupId <p>历史备份文件ID</p>
      */
     function __construct()
     {
@@ -88,6 +92,10 @@ class CreateRedisBigKeyAnalysisTaskRequest extends AbstractModel
 
         if (array_key_exists("KeyDelimiterList",$param) and $param["KeyDelimiterList"] !== null) {
             $this->KeyDelimiterList = $param["KeyDelimiterList"];
+        }
+
+        if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
+            $this->BackupId = $param["BackupId"];
         }
     }
 }

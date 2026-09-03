@@ -35,6 +35,7 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\DeleteBudgetResponse DeleteBudget(Models\DeleteBudgetRequest $req) 依据预算ID删除对应预算项目
  * @method Models\DeleteGatherRuleResponse DeleteGatherRule(Models\DeleteGatherRuleRequest $req) 删除归集规则
  * @method Models\DescribeAccountBalanceResponse DescribeAccountBalance(Models\DescribeAccountBalanceRequest $req) 获取云账户余额信息。
+ * @method Models\DescribeAccountWarningResponse DescribeAccountWarning(Models\DescribeAccountWarningRequest $req) 云api查余额告警阈值接口，支持传入uin
  * @method Models\DescribeAllocateConditionsResponse DescribeAllocateConditions(Models\DescribeAllocateConditionsRequest $req) 查询资源目录筛选条件
  * @method Models\DescribeAllocationBillConditionsResponse DescribeAllocationBillConditions(Models\DescribeAllocationBillConditionsRequest $req) 查询分账账单筛选条件
  * @method Models\DescribeAllocationBillDetailResponse DescribeAllocationBillDetail(Models\DescribeAllocationBillDetailRequest $req) 查询分账账单明细
@@ -93,6 +94,7 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\DescribeTagListResponse DescribeTagList(Models\DescribeTagListRequest $req) 获取分账标签
  * @method Models\DescribeVoucherInfoResponse DescribeVoucherInfo(Models\DescribeVoucherInfoRequest $req) 获取代金券相关信息
  * @method Models\DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(Models\DescribeVoucherUsageDetailsRequest $req) 获取代金券使用记录
+ * @method Models\ModifyAccountWarningResponse ModifyAccountWarning(Models\ModifyAccountWarningRequest $req) 云api设置余额告警阈值接口
  * @method Models\ModifyAllocationRuleResponse ModifyAllocationRule(Models\ModifyAllocationRuleRequest $req) 编辑公摊规则
  * @method Models\ModifyAllocationUnitResponse ModifyAllocationUnit(Models\ModifyAllocationUnitRequest $req) 修改分账单元信息
  * @method Models\ModifyBudgetResponse ModifyBudget(Models\ModifyBudgetRequest $req) 更新预算信息

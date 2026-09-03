@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceProviderId() 获取<p>BYOK的ID</p><p>参数格式：byok-kot39u7j</p>
  * @method void setServiceProviderId(string $ServiceProviderId) 设置<p>BYOK的ID</p><p>参数格式：byok-kot39u7j</p>
- * @method string getServiceProviderName() 获取<p>BYOK的自定义名字</p><p>入参限制：1～256个字符</p>
- * @method void setServiceProviderName(string $ServiceProviderName) 设置<p>BYOK的自定义名字</p><p>入参限制：1～256个字符</p>
+ * @method string getServiceProviderName() 获取<p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
+ * @method void setServiceProviderName(string $ServiceProviderName) 设置<p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
+ * @method array getApiBases() 获取<p>多协议 Api Base URL</p>
+ * @method void setApiBases(array $ApiBases) 设置<p>多协议 Api Base URL</p>
  */
 class ModifyModelAttributesRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class ModifyModelAttributesRequest extends AbstractModel
     public $ServiceProviderId;
 
     /**
-     * @var string <p>BYOK的自定义名字</p><p>入参限制：1～256个字符</p>
+     * @var string <p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
      */
     public $ServiceProviderName;
 
     /**
+     * @var array <p>多协议 Api Base URL</p>
+     */
+    public $ApiBases;
+
+    /**
      * @param string $ServiceProviderId <p>BYOK的ID</p><p>参数格式：byok-kot39u7j</p>
-     * @param string $ServiceProviderName <p>BYOK的自定义名字</p><p>入参限制：1～256个字符</p>
+     * @param string $ServiceProviderName <p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
+     * @param array $ApiBases <p>多协议 Api Base URL</p>
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class ModifyModelAttributesRequest extends AbstractModel
 
         if (array_key_exists("ServiceProviderName",$param) and $param["ServiceProviderName"] !== null) {
             $this->ServiceProviderName = $param["ServiceProviderName"];
+        }
+
+        if (array_key_exists("ApiBases",$param) and $param["ApiBases"] !== null) {
+            $this->ApiBases = [];
+            foreach ($param["ApiBases"] as $key => $value){
+                $obj = new ApiBaseItem();
+                $obj->deserialize($value);
+                array_push($this->ApiBases, $obj);
+            }
         }
     }
 }

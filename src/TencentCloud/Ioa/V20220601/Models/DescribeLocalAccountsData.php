@@ -20,170 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 获取账号列表响应的单个对象
  *
- * @method integer getId() 获取uid，数据库中唯一
- * @method void setId(integer $Id) 设置uid，数据库中唯一
- * @method string getUserId() 获取账号，登录账号
- * @method void setUserId(string $UserId) 设置账号，登录账号
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method integer getAccountId() 获取账号id，同Id字段
- * @method void setAccountId(integer $AccountId) 设置账号id，同Id字段
- * @method integer getGroupId() 获取账号所在的分组id
- * @method void setGroupId(integer $GroupId) 设置账号所在的分组id
- * @method string getGroupName() 获取账号所在的分组名称
- * @method void setGroupName(string $GroupName) 设置账号所在的分组名称
- * @method string getNamePath() 获取账号所在的分组名称路径，用英文.分割
- * @method void setNamePath(string $NamePath) 设置账号所在的分组名称路径，用英文.分割
- * @method integer getSource() 获取账号来源,0表示本地账号(只支持32位)
- * @method void setSource(integer $Source) 设置账号来源,0表示本地账号(只支持32位)
- * @method integer getStatus() 获取账号状态,0禁用，1启用(只支持32位)
- * @method void setStatus(integer $Status) 设置账号状态,0禁用，1启用(只支持32位)
- * @method string getItime() 获取账号的创建时间
- * @method void setItime(string $Itime) 设置账号的创建时间
- * @method string getUtime() 获取账号的最后更新时间
- * @method void setUtime(string $Utime) 设置账号的最后更新时间
- * @method string getExtraInfo() 获取账号的扩展信息，包含邮箱、手机号、身份证、职位等信息
- * @method void setExtraInfo(string $ExtraInfo) 设置账号的扩展信息，包含邮箱、手机号、身份证、职位等信息
- * @method string getRiskLevel() 获取用户风险等级，枚举：none, low, middle, high
- * @method void setRiskLevel(string $RiskLevel) 设置用户风险等级，枚举：none, low, middle, high
- * @method array getAccountGroups() 获取所属组
- * @method void setAccountGroups(array $AccountGroups) 设置所属组
- * @method integer getMobileBindNum() 获取绑定手机端设备数
- * @method void setMobileBindNum(integer $MobileBindNum) 设置绑定手机端设备数
- * @method integer getPcBindNum() 获取绑定Pc端设备数
- * @method void setPcBindNum(integer $PcBindNum) 设置绑定Pc端设备数
- * @method integer getOnlineStatus() 获取账号在线状态 1：在线 2：离线
- * @method void setOnlineStatus(integer $OnlineStatus) 设置账号在线状态 1：在线 2：离线
- * @method integer getActiveStatus() 获取账号活跃状态 1：活跃 2：非活跃
- * @method void setActiveStatus(integer $ActiveStatus) 设置账号活跃状态 1：活跃 2：非活跃
- * @method string getLoginTime() 获取账号登录时间
- * @method void setLoginTime(string $LoginTime) 设置账号登录时间
- * @method string getLogoutTime() 获取账号登出时间
- * @method void setLogoutTime(string $LogoutTime) 设置账号登出时间
+ * @method integer getId() 获取<p>uid，数据库中唯一</p>
+ * @method void setId(integer $Id) 设置<p>uid，数据库中唯一</p>
+ * @method string getUserId() 获取<p>账号，登录账号</p>
+ * @method void setUserId(string $UserId) 设置<p>账号，登录账号</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method integer getAccountId() 获取<p>账号id，同Id字段</p>
+ * @method void setAccountId(integer $AccountId) 设置<p>账号id，同Id字段</p>
+ * @method integer getGroupId() 获取<p>账号所在的分组id</p>
+ * @method void setGroupId(integer $GroupId) 设置<p>账号所在的分组id</p>
+ * @method string getGroupName() 获取<p>账号所在的分组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>账号所在的分组名称</p>
+ * @method string getNamePath() 获取<p>账号所在的分组名称路径，用英文.分割</p>
+ * @method void setNamePath(string $NamePath) 设置<p>账号所在的分组名称路径，用英文.分割</p>
+ * @method integer getSource() 获取<p>账号来源,0表示本地账号(只支持32位)</p>
+ * @method void setSource(integer $Source) 设置<p>账号来源,0表示本地账号(只支持32位)</p>
+ * @method integer getStatus() 获取<p>账号状态,0禁用，1启用(只支持32位)</p>
+ * @method void setStatus(integer $Status) 设置<p>账号状态,0禁用，1启用(只支持32位)</p>
+ * @method string getItime() 获取<p>账号的创建时间</p>
+ * @method void setItime(string $Itime) 设置<p>账号的创建时间</p>
+ * @method string getUtime() 获取<p>账号的最后更新时间</p>
+ * @method void setUtime(string $Utime) 设置<p>账号的最后更新时间</p>
+ * @method string getExtraInfo() 获取<p>账号的扩展信息，包含邮箱、手机号、身份证、职位等信息</p>
+ * @method void setExtraInfo(string $ExtraInfo) 设置<p>账号的扩展信息，包含邮箱、手机号、身份证、职位等信息</p>
+ * @method string getRiskLevel() 获取<p>用户风险等级，枚举：none, low, middle, high</p>
+ * @method void setRiskLevel(string $RiskLevel) 设置<p>用户风险等级，枚举：none, low, middle, high</p>
+ * @method array getAccountGroups() 获取<p>所属组</p>
+ * @method void setAccountGroups(array $AccountGroups) 设置<p>所属组</p>
+ * @method integer getMobileBindNum() 获取<p>绑定手机端设备数</p>
+ * @method void setMobileBindNum(integer $MobileBindNum) 设置<p>绑定手机端设备数</p>
+ * @method integer getPcBindNum() 获取<p>绑定Pc端设备数</p>
+ * @method void setPcBindNum(integer $PcBindNum) 设置<p>绑定Pc端设备数</p>
+ * @method integer getOnlineStatus() 获取<p>账号在线状态 1：在线 2：离线</p>
+ * @method void setOnlineStatus(integer $OnlineStatus) 设置<p>账号在线状态 1：在线 2：离线</p>
+ * @method integer getActiveStatus() 获取<p>账号活跃状态 1：活跃 2：非活跃</p>
+ * @method void setActiveStatus(integer $ActiveStatus) 设置<p>账号活跃状态 1：活跃 2：非活跃</p>
+ * @method string getLoginTime() 获取<p>账号登录时间</p>
+ * @method void setLoginTime(string $LoginTime) 设置<p>账号登录时间</p>
+ * @method string getLogoutTime() 获取<p>账号登出时间</p>
+ * @method void setLogoutTime(string $LogoutTime) 设置<p>账号登出时间</p>
  */
 class DescribeLocalAccountsData extends AbstractModel
 {
     /**
-     * @var integer uid，数据库中唯一
+     * @var integer <p>uid，数据库中唯一</p>
      */
     public $Id;
 
     /**
-     * @var string 账号，登录账号
+     * @var string <p>账号，登录账号</p>
      */
     public $UserId;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var integer 账号id，同Id字段
+     * @var integer <p>账号id，同Id字段</p>
      */
     public $AccountId;
 
     /**
-     * @var integer 账号所在的分组id
+     * @var integer <p>账号所在的分组id</p>
      */
     public $GroupId;
 
     /**
-     * @var string 账号所在的分组名称
+     * @var string <p>账号所在的分组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var string 账号所在的分组名称路径，用英文.分割
+     * @var string <p>账号所在的分组名称路径，用英文.分割</p>
      */
     public $NamePath;
 
     /**
-     * @var integer 账号来源,0表示本地账号(只支持32位)
+     * @var integer <p>账号来源,0表示本地账号(只支持32位)</p>
      */
     public $Source;
 
     /**
-     * @var integer 账号状态,0禁用，1启用(只支持32位)
+     * @var integer <p>账号状态,0禁用，1启用(只支持32位)</p>
      */
     public $Status;
 
     /**
-     * @var string 账号的创建时间
+     * @var string <p>账号的创建时间</p>
      */
     public $Itime;
 
     /**
-     * @var string 账号的最后更新时间
+     * @var string <p>账号的最后更新时间</p>
      */
     public $Utime;
 
     /**
-     * @var string 账号的扩展信息，包含邮箱、手机号、身份证、职位等信息
+     * @var string <p>账号的扩展信息，包含邮箱、手机号、身份证、职位等信息</p>
      */
     public $ExtraInfo;
 
     /**
-     * @var string 用户风险等级，枚举：none, low, middle, high
+     * @var string <p>用户风险等级，枚举：none, low, middle, high</p>
      */
     public $RiskLevel;
 
     /**
-     * @var array 所属组
+     * @var array <p>所属组</p>
      */
     public $AccountGroups;
 
     /**
-     * @var integer 绑定手机端设备数
+     * @var integer <p>绑定手机端设备数</p>
      */
     public $MobileBindNum;
 
     /**
-     * @var integer 绑定Pc端设备数
+     * @var integer <p>绑定Pc端设备数</p>
      */
     public $PcBindNum;
 
     /**
-     * @var integer 账号在线状态 1：在线 2：离线
+     * @var integer <p>账号在线状态 1：在线 2：离线</p>
      */
     public $OnlineStatus;
 
     /**
-     * @var integer 账号活跃状态 1：活跃 2：非活跃
+     * @var integer <p>账号活跃状态 1：活跃 2：非活跃</p>
      */
     public $ActiveStatus;
 
     /**
-     * @var string 账号登录时间
+     * @var string <p>账号登录时间</p>
      */
     public $LoginTime;
 
     /**
-     * @var string 账号登出时间
+     * @var string <p>账号登出时间</p>
      */
     public $LogoutTime;
 
     /**
-     * @param integer $Id uid，数据库中唯一
-     * @param string $UserId 账号，登录账号
-     * @param string $UserName 用户名
-     * @param integer $AccountId 账号id，同Id字段
-     * @param integer $GroupId 账号所在的分组id
-     * @param string $GroupName 账号所在的分组名称
-     * @param string $NamePath 账号所在的分组名称路径，用英文.分割
-     * @param integer $Source 账号来源,0表示本地账号(只支持32位)
-     * @param integer $Status 账号状态,0禁用，1启用(只支持32位)
-     * @param string $Itime 账号的创建时间
-     * @param string $Utime 账号的最后更新时间
-     * @param string $ExtraInfo 账号的扩展信息，包含邮箱、手机号、身份证、职位等信息
-     * @param string $RiskLevel 用户风险等级，枚举：none, low, middle, high
-     * @param array $AccountGroups 所属组
-     * @param integer $MobileBindNum 绑定手机端设备数
-     * @param integer $PcBindNum 绑定Pc端设备数
-     * @param integer $OnlineStatus 账号在线状态 1：在线 2：离线
-     * @param integer $ActiveStatus 账号活跃状态 1：活跃 2：非活跃
-     * @param string $LoginTime 账号登录时间
-     * @param string $LogoutTime 账号登出时间
+     * @param integer $Id <p>uid，数据库中唯一</p>
+     * @param string $UserId <p>账号，登录账号</p>
+     * @param string $UserName <p>用户名</p>
+     * @param integer $AccountId <p>账号id，同Id字段</p>
+     * @param integer $GroupId <p>账号所在的分组id</p>
+     * @param string $GroupName <p>账号所在的分组名称</p>
+     * @param string $NamePath <p>账号所在的分组名称路径，用英文.分割</p>
+     * @param integer $Source <p>账号来源,0表示本地账号(只支持32位)</p>
+     * @param integer $Status <p>账号状态,0禁用，1启用(只支持32位)</p>
+     * @param string $Itime <p>账号的创建时间</p>
+     * @param string $Utime <p>账号的最后更新时间</p>
+     * @param string $ExtraInfo <p>账号的扩展信息，包含邮箱、手机号、身份证、职位等信息</p>
+     * @param string $RiskLevel <p>用户风险等级，枚举：none, low, middle, high</p>
+     * @param array $AccountGroups <p>所属组</p>
+     * @param integer $MobileBindNum <p>绑定手机端设备数</p>
+     * @param integer $PcBindNum <p>绑定Pc端设备数</p>
+     * @param integer $OnlineStatus <p>账号在线状态 1：在线 2：离线</p>
+     * @param integer $ActiveStatus <p>账号活跃状态 1：活跃 2：非活跃</p>
+     * @param string $LoginTime <p>账号登录时间</p>
+     * @param string $LogoutTime <p>账号登出时间</p>
      */
     function __construct()
     {

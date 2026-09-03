@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTokenLengthRoute(array $TokenLengthRoute) 设置<p>token长度路由策略</p>
  * @method TaskComplexityRouteDTO getTaskComplexityRoute() 获取<p>任务复杂度路由策略</p>
  * @method void setTaskComplexityRoute(TaskComplexityRouteDTO $TaskComplexityRoute) 设置<p>任务复杂度路由策略</p>
+ * @method string getDomain() 获取<p>访问域名</p>
+ * @method void setDomain(string $Domain) 设置<p>访问域名</p>
+ * @method string getRequestProtocolType() 获取<p>访问协议</p>
+ * @method void setRequestProtocolType(string $RequestProtocolType) 设置<p>访问协议</p>
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -241,6 +245,16 @@ class ModifyModelServiceRequest extends AbstractModel
     public $TaskComplexityRoute;
 
     /**
+     * @var string <p>访问域名</p>
+     */
+    public $Domain;
+
+    /**
+     * @var string <p>访问协议</p>
+     */
+    public $RequestProtocolType;
+
+    /**
      * @param string $InstanceID <p>实例</p>
      * @param string $ID <p>模型服务ID</p>
      * @param string $Name <p>模型服务名称</p>
@@ -272,6 +286,8 @@ class ModifyModelServiceRequest extends AbstractModel
      * @param string $RouteStrategy <p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul>
      * @param array $TokenLengthRoute <p>token长度路由策略</p>
      * @param TaskComplexityRouteDTO $TaskComplexityRoute <p>任务复杂度路由策略</p>
+     * @param string $Domain <p>访问域名</p>
+     * @param string $RequestProtocolType <p>访问协议</p>
      */
     function __construct()
     {
@@ -434,6 +450,14 @@ class ModifyModelServiceRequest extends AbstractModel
         if (array_key_exists("TaskComplexityRoute",$param) and $param["TaskComplexityRoute"] !== null) {
             $this->TaskComplexityRoute = new TaskComplexityRouteDTO();
             $this->TaskComplexityRoute->deserialize($param["TaskComplexityRoute"]);
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("RequestProtocolType",$param) and $param["RequestProtocolType"] !== null) {
+            $this->RequestProtocolType = $param["RequestProtocolType"];
         }
     }
 }

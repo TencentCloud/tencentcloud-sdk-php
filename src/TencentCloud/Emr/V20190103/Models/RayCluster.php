@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDashboardUrl(string $DashboardUrl) 设置<p>head访问地址,也是dashboard地址</p>
  * @method string getNamespace() 获取<p>命名空间</p>
  * @method void setNamespace(string $Namespace) 设置<p>命名空间</p>
+ * @method integer getStorageCount() 获取<p>raycluster挂载的volume数量</p>
+ * @method void setStorageCount(integer $StorageCount) 设置<p>raycluster挂载的volume数量</p>
  */
 class RayCluster extends AbstractModel
 {
@@ -80,6 +82,11 @@ class RayCluster extends AbstractModel
     public $Namespace;
 
     /**
+     * @var integer <p>raycluster挂载的volume数量</p>
+     */
+    public $StorageCount;
+
+    /**
      * @param string $RayClusterName <p>RayCluster 集群名</p>
      * @param integer $RayClusterId <p>RayCluster 集群 id</p>
      * @param integer $PodCount <p>pod 数量</p>
@@ -88,6 +95,7 @@ class RayCluster extends AbstractModel
      * @param integer $SubmitType <p>创建类型</p><p>枚举值：</p><ul><li>1： 表单创建</li><li>2： yaml创建</li></ul>
      * @param string $DashboardUrl <p>head访问地址,也是dashboard地址</p>
      * @param string $Namespace <p>命名空间</p>
+     * @param integer $StorageCount <p>raycluster挂载的volume数量</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class RayCluster extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("StorageCount",$param) and $param["StorageCount"] !== null) {
+            $this->StorageCount = $param["StorageCount"];
         }
     }
 }

@@ -20,178 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 账号分组信息
  *
- * @method string getNamePath() 获取账号分组名全路径，点分格式
- * @method void setNamePath(string $NamePath) 设置账号分组名全路径，点分格式
- * @method array getIdPathArr() 获取账号分组ID全路径，数组格式
- * @method void setIdPathArr(array $IdPathArr) 设置账号分组ID全路径，数组格式
- * @method string getExtraInfo() 获取扩展信息
- * @method void setExtraInfo(string $ExtraInfo) 设置扩展信息
- * @method string getUtime() 获取最后更新时间
- * @method void setUtime(string $Utime) 设置最后更新时间
- * @method integer getParentId() 获取父分组ID
- * @method void setParentId(integer $ParentId) 设置父分组ID
- * @method string getOrgId() 获取源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
- * @method void setOrgId(string $OrgId) 设置源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
- * @method string getName() 获取分组名称
- * @method void setName(string $Name) 设置分组名称
- * @method integer getId() 获取分组ID
- * @method void setId(integer $Id) 设置分组ID
- * @method string getDescription() 获取分组描述
- * @method void setDescription(string $Description) 设置分组描述
- * @method integer getSource() 获取同步数据源
- * @method void setSource(integer $Source) 设置同步数据源
- * @method string getIdPath() 获取账号分组ID全路径，点分格式
- * @method void setIdPath(string $IdPath) 设置账号分组ID全路径，点分格式
- * @method string getItime() 获取创建时间
- * @method void setItime(string $Itime) 设置创建时间
- * @method string getParentOrgId() 获取父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
- * @method void setParentOrgId(string $ParentOrgId) 设置父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
- * @method string getImportType() 获取导入类型
- * @method void setImportType(string $ImportType) 设置导入类型
- * @method string getMiniIamId() 获取miniIAM id
- * @method void setMiniIamId(string $MiniIamId) 设置miniIAM id
- * @method integer getUserTotal() 获取该分组下含子组的所有用户总数
- * @method void setUserTotal(integer $UserTotal) 设置该分组下含子组的所有用户总数
- * @method boolean getIsLeaf() 获取是否叶子节点
- * @method void setIsLeaf(boolean $IsLeaf) 设置是否叶子节点
- * @method boolean getReadOnly() 获取是否该账户的直接权限
- * @method void setReadOnly(boolean $ReadOnly) 设置是否该账户的直接权限
- * @method string getLatestSyncResult() 获取最新一次同步任务的结果
- * @method void setLatestSyncResult(string $LatestSyncResult) 设置最新一次同步任务的结果
- * @method string getLatestSyncTime() 获取最新一次同步任务的结束时间
- * @method void setLatestSyncTime(string $LatestSyncTime) 设置最新一次同步任务的结束时间
- * @method array getNamePathArr() 获取分组名称数组
- * @method void setNamePathArr(array $NamePathArr) 设置分组名称数组
+ * @method string getNamePath() 获取<p>账号分组名全路径，点分格式</p>
+ * @method void setNamePath(string $NamePath) 设置<p>账号分组名全路径，点分格式</p>
+ * @method array getIdPathArr() 获取<p>账号分组ID全路径，数组格式</p>
+ * @method void setIdPathArr(array $IdPathArr) 设置<p>账号分组ID全路径，数组格式</p>
+ * @method string getExtraInfo() 获取<p>扩展信息</p>
+ * @method void setExtraInfo(string $ExtraInfo) 设置<p>扩展信息</p>
+ * @method string getUtime() 获取<p>最后更新时间</p>
+ * @method void setUtime(string $Utime) 设置<p>最后更新时间</p>
+ * @method integer getParentId() 获取<p>父分组ID</p>
+ * @method void setParentId(integer $ParentId) 设置<p>父分组ID</p>
+ * @method string getOrgId() 获取<p>源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
+ * @method void setOrgId(string $OrgId) 设置<p>源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
+ * @method string getName() 获取<p>分组名称</p>
+ * @method void setName(string $Name) 设置<p>分组名称</p>
+ * @method integer getId() 获取<p>分组ID</p>
+ * @method void setId(integer $Id) 设置<p>分组ID</p>
+ * @method string getDescription() 获取<p>分组描述</p>
+ * @method void setDescription(string $Description) 设置<p>分组描述</p>
+ * @method integer getSource() 获取<p>同步数据源</p>
+ * @method void setSource(integer $Source) 设置<p>同步数据源</p>
+ * @method string getIdPath() 获取<p>账号分组ID全路径，点分格式</p>
+ * @method void setIdPath(string $IdPath) 设置<p>账号分组ID全路径，点分格式</p>
+ * @method string getItime() 获取<p>创建时间</p>
+ * @method void setItime(string $Itime) 设置<p>创建时间</p>
+ * @method string getParentOrgId() 获取<p>父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
+ * @method void setParentOrgId(string $ParentOrgId) 设置<p>父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
+ * @method string getImportType() 获取<p>导入类型</p>
+ * @method void setImportType(string $ImportType) 设置<p>导入类型</p>
+ * @method string getMiniIamId() 获取<p>miniIAM id</p>
+ * @method void setMiniIamId(string $MiniIamId) 设置<p>miniIAM id</p>
+ * @method integer getUserTotal() 获取<p>该分组下含子组的所有用户总数</p>
+ * @method void setUserTotal(integer $UserTotal) 设置<p>该分组下含子组的所有用户总数</p>
+ * @method boolean getIsLeaf() 获取<p>是否叶子节点</p>
+ * @method void setIsLeaf(boolean $IsLeaf) 设置<p>是否叶子节点</p>
+ * @method boolean getReadOnly() 获取<p>是否该账户的直接权限</p>
+ * @method void setReadOnly(boolean $ReadOnly) 设置<p>是否该账户的直接权限</p>
+ * @method string getLatestSyncResult() 获取<p>最新一次同步任务的结果</p>
+ * @method void setLatestSyncResult(string $LatestSyncResult) 设置<p>最新一次同步任务的结果</p>
+ * @method string getLatestSyncTime() 获取<p>最新一次同步任务的结束时间</p>
+ * @method void setLatestSyncTime(string $LatestSyncTime) 设置<p>最新一次同步任务的结束时间</p>
+ * @method array getNamePathArr() 获取<p>分组名称数组</p>
+ * @method void setNamePathArr(array $NamePathArr) 设置<p>分组名称数组</p>
  */
 class DescribeAccountGroupsData extends AbstractModel
 {
     /**
-     * @var string 账号分组名全路径，点分格式
+     * @var string <p>账号分组名全路径，点分格式</p>
      */
     public $NamePath;
 
     /**
-     * @var array 账号分组ID全路径，数组格式
+     * @var array <p>账号分组ID全路径，数组格式</p>
      */
     public $IdPathArr;
 
     /**
-     * @var string 扩展信息
+     * @var string <p>扩展信息</p>
      */
     public $ExtraInfo;
 
     /**
-     * @var string 最后更新时间
+     * @var string <p>最后更新时间</p>
      */
     public $Utime;
 
     /**
-     * @var integer 父分组ID
+     * @var integer <p>父分组ID</p>
      */
     public $ParentId;
 
     /**
-     * @var string 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+     * @var string <p>源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
      */
     public $OrgId;
 
     /**
-     * @var string 分组名称
+     * @var string <p>分组名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 分组ID
+     * @var integer <p>分组ID</p>
      */
     public $Id;
 
     /**
-     * @var string 分组描述
+     * @var string <p>分组描述</p>
      */
     public $Description;
 
     /**
-     * @var integer 同步数据源
+     * @var integer <p>同步数据源</p>
      */
     public $Source;
 
     /**
-     * @var string 账号分组ID全路径，点分格式
+     * @var string <p>账号分组ID全路径，点分格式</p>
      */
     public $IdPath;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $Itime;
 
     /**
-     * @var string 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+     * @var string <p>父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
      */
     public $ParentOrgId;
 
     /**
-     * @var string 导入类型
+     * @var string <p>导入类型</p>
      */
     public $ImportType;
 
     /**
-     * @var string miniIAM id
+     * @var string <p>miniIAM id</p>
      */
     public $MiniIamId;
 
     /**
-     * @var integer 该分组下含子组的所有用户总数
+     * @var integer <p>该分组下含子组的所有用户总数</p>
      */
     public $UserTotal;
 
     /**
-     * @var boolean 是否叶子节点
+     * @var boolean <p>是否叶子节点</p>
      */
     public $IsLeaf;
 
     /**
-     * @var boolean 是否该账户的直接权限
+     * @var boolean <p>是否该账户的直接权限</p>
      */
     public $ReadOnly;
 
     /**
-     * @var string 最新一次同步任务的结果
+     * @var string <p>最新一次同步任务的结果</p>
      */
     public $LatestSyncResult;
 
     /**
-     * @var string 最新一次同步任务的结束时间
+     * @var string <p>最新一次同步任务的结束时间</p>
      */
     public $LatestSyncTime;
 
     /**
-     * @var array 分组名称数组
+     * @var array <p>分组名称数组</p>
      */
     public $NamePathArr;
 
     /**
-     * @param string $NamePath 账号分组名全路径，点分格式
-     * @param array $IdPathArr 账号分组ID全路径，数组格式
-     * @param string $ExtraInfo 扩展信息
-     * @param string $Utime 最后更新时间
-     * @param integer $ParentId 父分组ID
-     * @param string $OrgId 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
-     * @param string $Name 分组名称
-     * @param integer $Id 分组ID
-     * @param string $Description 分组描述
-     * @param integer $Source 同步数据源
-     * @param string $IdPath 账号分组ID全路径，点分格式
-     * @param string $Itime 创建时间
-     * @param string $ParentOrgId 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
-     * @param string $ImportType 导入类型
-     * @param string $MiniIamId miniIAM id
-     * @param integer $UserTotal 该分组下含子组的所有用户总数
-     * @param boolean $IsLeaf 是否叶子节点
-     * @param boolean $ReadOnly 是否该账户的直接权限
-     * @param string $LatestSyncResult 最新一次同步任务的结果
-     * @param string $LatestSyncTime 最新一次同步任务的结束时间
-     * @param array $NamePathArr 分组名称数组
+     * @param string $NamePath <p>账号分组名全路径，点分格式</p>
+     * @param array $IdPathArr <p>账号分组ID全路径，数组格式</p>
+     * @param string $ExtraInfo <p>扩展信息</p>
+     * @param string $Utime <p>最后更新时间</p>
+     * @param integer $ParentId <p>父分组ID</p>
+     * @param string $OrgId <p>源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
+     * @param string $Name <p>分组名称</p>
+     * @param integer $Id <p>分组ID</p>
+     * @param string $Description <p>分组描述</p>
+     * @param integer $Source <p>同步数据源</p>
+     * @param string $IdPath <p>账号分组ID全路径，点分格式</p>
+     * @param string $Itime <p>创建时间</p>
+     * @param string $ParentOrgId <p>父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
+     * @param string $ImportType <p>导入类型</p>
+     * @param string $MiniIamId <p>miniIAM id</p>
+     * @param integer $UserTotal <p>该分组下含子组的所有用户总数</p>
+     * @param boolean $IsLeaf <p>是否叶子节点</p>
+     * @param boolean $ReadOnly <p>是否该账户的直接权限</p>
+     * @param string $LatestSyncResult <p>最新一次同步任务的结果</p>
+     * @param string $LatestSyncTime <p>最新一次同步任务的结束时间</p>
+     * @param array $NamePathArr <p>分组名称数组</p>
      */
     function __construct()
     {

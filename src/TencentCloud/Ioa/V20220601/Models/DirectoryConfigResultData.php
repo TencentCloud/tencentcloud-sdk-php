@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthSupportPlatforms(array $AuthSupportPlatforms) 设置<p>认证支持的平台, PC 或 Mobile</p>
  * @method array getAuthMethods() 获取<p>认证方式，授权认证/扫码认证 等</p>
  * @method void setAuthMethods(array $AuthMethods) 设置<p>认证方式，授权认证/扫码认证 等</p>
+ * @method array getNameI18n() 获取<p>名称多语言支持</p>
+ * @method void setNameI18n(array $NameI18n) 设置<p>名称多语言支持</p>
  */
 class DirectoryConfigResultData extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DirectoryConfigResultData extends AbstractModel
     public $AuthMethods;
 
     /**
+     * @var array <p>名称多语言支持</p>
+     */
+    public $NameI18n;
+
+    /**
      * @param integer $Id <p>企业目录 ID</p>
      * @param string $Name <p>企业目录名称</p>
      * @param string $IdentifySourceId <p>身份源配置 ID</p>
@@ -96,6 +103,7 @@ class DirectoryConfigResultData extends AbstractModel
      * @param integer $AuthPolicyId <p>认证策略 ID</p>
      * @param array $AuthSupportPlatforms <p>认证支持的平台, PC 或 Mobile</p>
      * @param array $AuthMethods <p>认证方式，授权认证/扫码认证 等</p>
+     * @param array $NameI18n <p>名称多语言支持</p>
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class DirectoryConfigResultData extends AbstractModel
 
         if (array_key_exists("AuthMethods",$param) and $param["AuthMethods"] !== null) {
             $this->AuthMethods = $param["AuthMethods"];
+        }
+
+        if (array_key_exists("NameI18n",$param) and $param["NameI18n"] !== null) {
+            $this->NameI18n = [];
+            foreach ($param["NameI18n"] as $key => $value){
+                $obj = new I18nString();
+                $obj->deserialize($value);
+                array_push($this->NameI18n, $obj);
+            }
         }
     }
 }

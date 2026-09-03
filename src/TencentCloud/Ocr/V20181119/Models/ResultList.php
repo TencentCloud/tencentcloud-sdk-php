@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 结果列表
  *
- * @method array getQuestion() 获取题干
+ * @method array getQuestion() 获取<p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuestion(array $Question) 设置题干
+ * @method void setQuestion(array $Question) 设置<p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOption() 获取选项
+ * @method array getOption() 获取<p>选项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOption(array $Option) 设置选项
+ * @method void setOption(array $Option) 设置<p>选项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFigure() 获取插图
+ * @method array getFigure() 获取<p>插图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFigure(array $Figure) 设置插图
+ * @method void setFigure(array $Figure) 设置<p>插图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTable() 获取表格
+ * @method array getTable() 获取<p>表格</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTable(array $Table) 设置表格
+ * @method void setTable(array $Table) 设置<p>表格</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnswer() 获取答案
+ * @method array getAnswer() 获取<p>答案</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnswer(array $Answer) 设置答案
+ * @method void setAnswer(array $Answer) 设置<p>答案</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getParse() 获取解析
- * @method void setParse(array $Parse) 设置解析
- * @method array getCoord() 获取整题的坐标
+ * @method array getParse() 获取<p>解析</p>
+ * @method void setParse(array $Parse) 设置<p>解析</p>
+ * @method array getCoord() 获取<p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCoord(array $Coord) 设置整题的坐标
+ * @method void setCoord(array $Coord) 设置<p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCoordPageIndex() 获取<p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+ * @method void setCoordPageIndex(array $CoordPageIndex) 设置<p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
  */
 class ResultList extends AbstractModel
 {
     /**
-     * @var array 题干
+     * @var array <p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Question;
 
     /**
-     * @var array 选项
+     * @var array <p>选项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Option;
 
     /**
-     * @var array 插图
+     * @var array <p>插图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Figure;
 
     /**
-     * @var array 表格
+     * @var array <p>表格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Table;
 
     /**
-     * @var array 答案
+     * @var array <p>答案</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Answer;
 
     /**
-     * @var array 解析
+     * @var array <p>解析</p>
      */
     public $Parse;
 
     /**
-     * @var array 整题的坐标
+     * @var array <p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coord;
 
     /**
-     * @param array $Question 题干
+     * @var array <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+     */
+    public $CoordPageIndex;
+
+    /**
+     * @param array $Question <p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Option 选项
+     * @param array $Option <p>选项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Figure 插图
+     * @param array $Figure <p>插图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Table 表格
+     * @param array $Table <p>表格</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Answer 答案
+     * @param array $Answer <p>答案</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Parse 解析
-     * @param array $Coord 整题的坐标
+     * @param array $Parse <p>解析</p>
+     * @param array $Coord <p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CoordPageIndex <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
      */
     function __construct()
     {
@@ -179,6 +187,10 @@ class ResultList extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Coord, $obj);
             }
+        }
+
+        if (array_key_exists("CoordPageIndex",$param) and $param["CoordPageIndex"] !== null) {
+            $this->CoordPageIndex = $param["CoordPageIndex"];
         }
     }
 }

@@ -18,14 +18,13 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态等
+ * 描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态、时间等
 
 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
 
 * 最多只能有5个Filter
 * 同一个Filter存在多个Values，Values值数量最多不能超过5个。
-
  *
  * @method string getName() 获取<p>过滤键的名称。</p>
  * @method void setName(string $Name) 设置<p>过滤键的名称。</p>

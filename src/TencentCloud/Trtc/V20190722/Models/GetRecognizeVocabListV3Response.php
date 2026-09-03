@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetRecognizeVocabListV3返回参数结构体
  *
+ * @method array getVocabList() 获取<p>词表列表</p>
+ * @method void setVocabList(array $VocabList) 设置<p>词表列表</p>
+ * @method integer getTotalCount() 获取<p>词表个数</p><p>单位：个</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>词表个数</p><p>单位：个</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetRecognizeVocabListV3Response extends AbstractModel
 {
     /**
+     * @var array <p>词表列表</p>
+     */
+    public $VocabList;
+
+    /**
+     * @var integer <p>词表个数</p><p>单位：个</p>
+     */
+    public $TotalCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $VocabList <p>词表列表</p>
+     * @param integer $TotalCount <p>词表个数</p><p>单位：个</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class GetRecognizeVocabListV3Response extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("VocabList",$param) and $param["VocabList"] !== null) {
+            $this->VocabList = [];
+            foreach ($param["VocabList"] as $key => $value){
+                $obj = new Vocab();
+                $obj->deserialize($value);
+                array_push($this->VocabList, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

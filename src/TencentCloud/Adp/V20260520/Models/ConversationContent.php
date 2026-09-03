@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkflowInput(string $WorkflowInput) 设置<p>工作流输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ConversationMcpApp getMcpApp() 获取<p>MCP-APP调用信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMcpApp(ConversationMcpApp $McpApp) 设置<p>MCP-APP调用信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConversationContent extends AbstractModel
 {
@@ -158,6 +162,12 @@ class ConversationContent extends AbstractModel
     public $WorkflowInput;
 
     /**
+     * @var ConversationMcpApp <p>MCP-APP调用信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $McpApp;
+
+    /**
      * @param string $Text <p>文本内容</p>
      * @param string $Type <p>内容类型, text：文本,image：图片,file：文件,custom_variables：自定义输入参数信息,widget_action：widget动作信息</p>
      * @param array $CustomParamList <p>自定义参数数据</p>
@@ -179,6 +189,8 @@ class ConversationContent extends AbstractModel
      * @param array $TaskList <p>智能体任务列表</p>
      * @param array $Tasks <p>智能体任务列表</p>
      * @param string $WorkflowInput <p>工作流输入参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConversationMcpApp $McpApp <p>MCP-APP调用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -290,6 +302,11 @@ class ConversationContent extends AbstractModel
 
         if (array_key_exists("WorkflowInput",$param) and $param["WorkflowInput"] !== null) {
             $this->WorkflowInput = $param["WorkflowInput"];
+        }
+
+        if (array_key_exists("McpApp",$param) and $param["McpApp"] !== null) {
+            $this->McpApp = new ConversationMcpApp();
+            $this->McpApp->deserialize($param["McpApp"]);
         }
     }
 }

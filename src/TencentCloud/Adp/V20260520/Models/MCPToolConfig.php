@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputs(array $Inputs) 设置<p>输入参数</p>
  * @method array getOutputs() 获取<p>输出参数</p>
  * @method void setOutputs(array $Outputs) 设置<p>输出参数</p>
+ * @method MCPToolMeta getMeta() 获取<p>工具meta信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMeta(MCPToolMeta $Meta) 设置<p>工具meta信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSupportsApps() 获取<p>是否支持交互界面（MCP Apps），插件级标签  默认值：false</p>
+ * @method void setSupportsApps(boolean $SupportsApps) 设置<p>是否支持交互界面（MCP Apps），插件级标签  默认值：false</p>
  */
 class MCPToolConfig extends AbstractModel
 {
@@ -38,8 +44,22 @@ class MCPToolConfig extends AbstractModel
     public $Outputs;
 
     /**
+     * @var MCPToolMeta <p>工具meta信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Meta;
+
+    /**
+     * @var boolean <p>是否支持交互界面（MCP Apps），插件级标签  默认值：false</p>
+     */
+    public $SupportsApps;
+
+    /**
      * @param array $Inputs <p>输入参数</p>
      * @param array $Outputs <p>输出参数</p>
+     * @param MCPToolMeta $Meta <p>工具meta信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SupportsApps <p>是否支持交互界面（MCP Apps），插件级标签  默认值：false</p>
      */
     function __construct()
     {
@@ -70,6 +90,15 @@ class MCPToolConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Outputs, $obj);
             }
+        }
+
+        if (array_key_exists("Meta",$param) and $param["Meta"] !== null) {
+            $this->Meta = new MCPToolMeta();
+            $this->Meta->deserialize($param["Meta"]);
+        }
+
+        if (array_key_exists("SupportsApps",$param) and $param["SupportsApps"] !== null) {
+            $this->SupportsApps = $param["SupportsApps"];
         }
     }
 }

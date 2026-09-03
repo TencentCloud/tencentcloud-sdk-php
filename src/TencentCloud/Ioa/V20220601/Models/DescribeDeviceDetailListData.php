@@ -20,213 +20,213 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 终端详情响应对象集合
  *
- * @method string getUserName() 获取账号名
+ * @method string getUserName() 获取<p>账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserName(string $UserName) 设置账号名
+ * @method void setUserName(string $UserName) 设置<p>账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getComputerName() 获取计算机名
+ * @method string getComputerName() 获取<p>计算机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComputerName(string $ComputerName) 设置计算机名
+ * @method void setComputerName(string $ComputerName) 设置<p>计算机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取名称
+ * @method string getName() 获取<p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置名称
+ * @method void setName(string $Name) 设置<p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountGroupIdPath() 获取用户组IdPath
+ * @method string getAccountGroupIdPath() 获取<p>用户组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountGroupIdPath(string $AccountGroupIdPath) 设置用户组IdPath
+ * @method void setAccountGroupIdPath(string $AccountGroupIdPath) 设置<p>用户组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAccountGroupId() 获取用户组id(只支持32位)
+ * @method integer getAccountGroupId() 获取<p>用户组id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountGroupId(integer $AccountGroupId) 设置用户组id(只支持32位)
+ * @method void setAccountGroupId(integer $AccountGroupId) 设置<p>用户组id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGroupNamePath() 获取终端组名path
+ * @method string getGroupNamePath() 获取<p>终端组名path</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupNamePath(string $GroupNamePath) 设置终端组名path
+ * @method void setGroupNamePath(string $GroupNamePath) 设置<p>终端组名path</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIp() 获取Ip地址
+ * @method string getIp() 获取<p>Ip地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIp(string $Ip) 设置Ip地址
+ * @method void setIp(string $Ip) 设置<p>Ip地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountGroupName() 获取用户组名
+ * @method string getAccountGroupName() 获取<p>用户组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountGroupName(string $AccountGroupName) 设置用户组名
+ * @method void setAccountGroupName(string $AccountGroupName) 设置<p>用户组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGroupIdPath() 获取终端组IdPath
+ * @method string getGroupIdPath() 获取<p>终端组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupIdPath(string $GroupIdPath) 设置终端组IdPath
+ * @method void setGroupIdPath(string $GroupIdPath) 设置<p>终端组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMid() 获取唯一标识Mid
+ * @method string getMid() 获取<p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMid(string $Mid) 设置唯一标识Mid
+ * @method void setMid(string $Mid) 设置<p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIoaUserName() 获取IOA账号名
+ * @method string getIoaUserName() 获取<p>IOA账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIoaUserName(string $IoaUserName) 设置IOA账号名
+ * @method void setIoaUserName(string $IoaUserName) 设置<p>IOA账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGroupId() 获取所在分组Id(只支持32位)
+ * @method integer getGroupId() 获取<p>所在分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupId(integer $GroupId) 设置所在分组Id(只支持32位)
+ * @method void setGroupId(integer $GroupId) 设置<p>所在分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGroupName() 获取所在分组Name
+ * @method string getGroupName() 获取<p>所在分组Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupName(string $GroupName) 设置所在分组Name
+ * @method void setGroupName(string $GroupName) 设置<p>所在分组Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMac() 获取Mac地址
+ * @method string getMac() 获取<p>Mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMac(string $Mac) 设置Mac地址
+ * @method void setMac(string $Mac) 设置<p>Mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取软件版本
+ * @method string getVersion() 获取<p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置软件版本
+ * @method void setVersion(string $Version) 设置<p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountGroupNamePath() 获取用户组名Path
+ * @method string getAccountGroupNamePath() 获取<p>用户组名Path</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountGroupNamePath(string $AccountGroupNamePath) 设置用户组名Path
+ * @method void setAccountGroupNamePath(string $AccountGroupNamePath) 设置<p>用户组名Path</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getId() 获取列表Id(只支持32位)
+ * @method integer getId() 获取<p>列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置列表Id(只支持32位)
+ * @method void setId(integer $Id) 设置<p>列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDeviceDetailListData extends AbstractModel
 {
     /**
-     * @var string 账号名
+     * @var string <p>账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
-     * @var string 计算机名
+     * @var string <p>计算机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComputerName;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 用户组IdPath
+     * @var string <p>用户组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountGroupIdPath;
 
     /**
-     * @var integer 用户组id(只支持32位)
+     * @var integer <p>用户组id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountGroupId;
 
     /**
-     * @var string 终端组名path
+     * @var string <p>终端组名path</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupNamePath;
 
     /**
-     * @var string Ip地址
+     * @var string <p>Ip地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
-     * @var string 用户组名
+     * @var string <p>用户组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountGroupName;
 
     /**
-     * @var string 终端组IdPath
+     * @var string <p>终端组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupIdPath;
 
     /**
-     * @var string 唯一标识Mid
+     * @var string <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mid;
 
     /**
-     * @var string IOA账号名
+     * @var string <p>IOA账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IoaUserName;
 
     /**
-     * @var integer 所在分组Id(只支持32位)
+     * @var integer <p>所在分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
-     * @var string 所在分组Name
+     * @var string <p>所在分组Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
-     * @var string Mac地址
+     * @var string <p>Mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mac;
 
     /**
-     * @var string 软件版本
+     * @var string <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
-     * @var string 用户组名Path
+     * @var string <p>用户组名Path</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountGroupNamePath;
 
     /**
-     * @var integer 列表Id(只支持32位)
+     * @var integer <p>列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @param string $UserName 账号名
+     * @param string $UserName <p>账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ComputerName 计算机名
+     * @param string $ComputerName <p>计算机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 名称
+     * @param string $Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountGroupIdPath 用户组IdPath
+     * @param string $AccountGroupIdPath <p>用户组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AccountGroupId 用户组id(只支持32位)
+     * @param integer $AccountGroupId <p>用户组id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GroupNamePath 终端组名path
+     * @param string $GroupNamePath <p>终端组名path</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ip Ip地址
+     * @param string $Ip <p>Ip地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountGroupName 用户组名
+     * @param string $AccountGroupName <p>用户组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GroupIdPath 终端组IdPath
+     * @param string $GroupIdPath <p>终端组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Mid 唯一标识Mid
+     * @param string $Mid <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IoaUserName IOA账号名
+     * @param string $IoaUserName <p>IOA账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $GroupId 所在分组Id(只支持32位)
+     * @param integer $GroupId <p>所在分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GroupName 所在分组Name
+     * @param string $GroupName <p>所在分组Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Mac Mac地址
+     * @param string $Mac <p>Mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version 软件版本
+     * @param string $Version <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountGroupNamePath 用户组名Path
+     * @param string $AccountGroupNamePath <p>用户组名Path</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Id 列表Id(只支持32位)
+     * @param integer $Id <p>列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,94 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ClearLaunchConfigurationAttributes请求参数结构体
  *
- * @method string getLaunchConfigurationId() 获取启动配置ID。可通过如下方式获取：
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
-<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID。可通过如下方式获取：
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
-<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
- * @method boolean getClearDataDisks() 获取是否清空数据盘信息，非必填，默认为 false。
-填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。
- * @method void setClearDataDisks(boolean $ClearDataDisks) 设置是否清空数据盘信息，非必填，默认为 false。
-填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。
- * @method boolean getClearHostNameSettings() 获取是否清空云服务器主机名相关设置信息，非必填，默认为 false。
-填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。
- * @method void setClearHostNameSettings(boolean $ClearHostNameSettings) 设置是否清空云服务器主机名相关设置信息，非必填，默认为 false。
-填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。
- * @method boolean getClearInstanceNameSettings() 获取是否清空云服务器实例名相关设置信息，非必填，默认为 false。
-填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
- * @method void setClearInstanceNameSettings(boolean $ClearInstanceNameSettings) 设置是否清空云服务器实例名相关设置信息，非必填，默认为 false。
-填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
- * @method boolean getClearDisasterRecoverGroupIds() 获取是否清空置放群组信息，非必填，默认为 false。
-填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
- * @method void setClearDisasterRecoverGroupIds(boolean $ClearDisasterRecoverGroupIds) 设置是否清空置放群组信息，非必填，默认为 false。
-填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
- * @method boolean getClearInstanceTags() 获取是否清空实例标签列表，非必填，默认为 false。
-填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
- * @method void setClearInstanceTags(boolean $ClearInstanceTags) 设置是否清空实例标签列表，非必填，默认为 false。
-填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
- * @method boolean getClearMetadata() 获取是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
- * @method void setClearMetadata(boolean $ClearMetadata) 设置是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+ * @method string getLaunchConfigurationId() 获取<p>启动配置ID。可通过如下方式获取：</p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li><li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置<p>启动配置ID。可通过如下方式获取：</p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li><li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
+ * @method boolean getClearDataDisks() 获取<p>是否清空数据盘信息，非必填，默认为 false。<br>填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。</p>
+ * @method void setClearDataDisks(boolean $ClearDataDisks) 设置<p>是否清空数据盘信息，非必填，默认为 false。<br>填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。</p>
+ * @method boolean getClearHostNameSettings() 获取<p>是否清空云服务器主机名相关设置信息，非必填，默认为 false。<br>填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。</p>
+ * @method void setClearHostNameSettings(boolean $ClearHostNameSettings) 设置<p>是否清空云服务器主机名相关设置信息，非必填，默认为 false。<br>填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。</p>
+ * @method boolean getClearInstanceNameSettings() 获取<p>是否清空云服务器实例名相关设置信息，非必填，默认为 false。<br>填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。</p>
+ * @method void setClearInstanceNameSettings(boolean $ClearInstanceNameSettings) 设置<p>是否清空云服务器实例名相关设置信息，非必填，默认为 false。<br>填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。</p>
+ * @method boolean getClearDisasterRecoverGroupIds() 获取<p>是否清空置放群组信息，非必填，默认为 false。<br>填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。</p>
+ * @method void setClearDisasterRecoverGroupIds(boolean $ClearDisasterRecoverGroupIds) 设置<p>是否清空置放群组信息，非必填，默认为 false。<br>填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。</p>
+ * @method boolean getClearInstanceTags() 获取<p>是否清空实例标签列表，非必填，默认为 false。<br>填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。</p>
+ * @method void setClearInstanceTags(boolean $ClearInstanceTags) 设置<p>是否清空实例标签列表，非必填，默认为 false。<br>填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。</p>
+ * @method boolean getClearMetadata() 获取<p>是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。</p>
+ * @method void setClearMetadata(boolean $ClearMetadata) 设置<p>是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。</p>
+ * @method boolean getClearNetworkInterfaces() 获取<p>是否清除启动配置中的 NetworkInterfaces。取值 TRUE 时清除；未传或 FALSE 时不处理该字段。</p>
+ * @method void setClearNetworkInterfaces(boolean $ClearNetworkInterfaces) 设置<p>是否清除启动配置中的 NetworkInterfaces。取值 TRUE 时清除；未传或 FALSE 时不处理该字段。</p>
  */
 class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 启动配置ID。可通过如下方式获取：
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
-<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
+     * @var string <p>启动配置ID。可通过如下方式获取：</p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li><li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
      */
     public $LaunchConfigurationId;
 
     /**
-     * @var boolean 是否清空数据盘信息，非必填，默认为 false。
-填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。
+     * @var boolean <p>是否清空数据盘信息，非必填，默认为 false。<br>填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。</p>
      */
     public $ClearDataDisks;
 
     /**
-     * @var boolean 是否清空云服务器主机名相关设置信息，非必填，默认为 false。
-填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。
+     * @var boolean <p>是否清空云服务器主机名相关设置信息，非必填，默认为 false。<br>填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。</p>
      */
     public $ClearHostNameSettings;
 
     /**
-     * @var boolean 是否清空云服务器实例名相关设置信息，非必填，默认为 false。
-填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
+     * @var boolean <p>是否清空云服务器实例名相关设置信息，非必填，默认为 false。<br>填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。</p>
      */
     public $ClearInstanceNameSettings;
 
     /**
-     * @var boolean 是否清空置放群组信息，非必填，默认为 false。
-填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
+     * @var boolean <p>是否清空置放群组信息，非必填，默认为 false。<br>填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。</p>
      */
     public $ClearDisasterRecoverGroupIds;
 
     /**
-     * @var boolean 是否清空实例标签列表，非必填，默认为 false。
-填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+     * @var boolean <p>是否清空实例标签列表，非必填，默认为 false。<br>填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。</p>
      */
     public $ClearInstanceTags;
 
     /**
-     * @var boolean 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+     * @var boolean <p>是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。</p>
      */
     public $ClearMetadata;
 
     /**
-     * @param string $LaunchConfigurationId 启动配置ID。可通过如下方式获取：
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
-<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
-     * @param boolean $ClearDataDisks 是否清空数据盘信息，非必填，默认为 false。
-填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。
-     * @param boolean $ClearHostNameSettings 是否清空云服务器主机名相关设置信息，非必填，默认为 false。
-填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。
-     * @param boolean $ClearInstanceNameSettings 是否清空云服务器实例名相关设置信息，非必填，默认为 false。
-填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
-     * @param boolean $ClearDisasterRecoverGroupIds 是否清空置放群组信息，非必填，默认为 false。
-填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
-     * @param boolean $ClearInstanceTags 是否清空实例标签列表，非必填，默认为 false。
-填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
-     * @param boolean $ClearMetadata 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+     * @var boolean <p>是否清除启动配置中的 NetworkInterfaces。取值 TRUE 时清除；未传或 FALSE 时不处理该字段。</p>
+     */
+    public $ClearNetworkInterfaces;
+
+    /**
+     * @param string $LaunchConfigurationId <p>启动配置ID。可通过如下方式获取：</p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li><li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
+     * @param boolean $ClearDataDisks <p>是否清空数据盘信息，非必填，默认为 false。<br>填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。</p>
+     * @param boolean $ClearHostNameSettings <p>是否清空云服务器主机名相关设置信息，非必填，默认为 false。<br>填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。</p>
+     * @param boolean $ClearInstanceNameSettings <p>是否清空云服务器实例名相关设置信息，非必填，默认为 false。<br>填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。</p>
+     * @param boolean $ClearDisasterRecoverGroupIds <p>是否清空置放群组信息，非必填，默认为 false。<br>填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。</p>
+     * @param boolean $ClearInstanceTags <p>是否清空实例标签列表，非必填，默认为 false。<br>填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。</p>
+     * @param boolean $ClearMetadata <p>是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。</p>
+     * @param boolean $ClearNetworkInterfaces <p>是否清除启动配置中的 NetworkInterfaces。取值 TRUE 时清除；未传或 FALSE 时不处理该字段。</p>
      */
     function __construct()
     {
@@ -148,6 +128,10 @@ class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 
         if (array_key_exists("ClearMetadata",$param) and $param["ClearMetadata"] !== null) {
             $this->ClearMetadata = $param["ClearMetadata"];
+        }
+
+        if (array_key_exists("ClearNetworkInterfaces",$param) and $param["ClearNetworkInterfaces"] !== null) {
+            $this->ClearNetworkInterfaces = $param["ClearNetworkInterfaces"];
         }
     }
 }

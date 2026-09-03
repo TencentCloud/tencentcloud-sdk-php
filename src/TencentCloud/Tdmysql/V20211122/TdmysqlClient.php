@@ -23,10 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tdmysql\V20211122\Models as Models;
 
 /**
+ * @method Models\BreakStandbyDBInstanceRelationResponse BreakStandbyDBInstanceRelation(Models\BreakStandbyDBInstanceRelationRequest $req) 本接口（BreakStandbyDBInstanceRelation）用于提供断开灾备实例主备连接功能
  * @method Models\CancelIsolateDBInstancesResponse CancelIsolateDBInstances(Models\CancelIsolateDBInstancesRequest $req) 本接口（CancelIsolateDBInstances）提供批量解除隔离实例功能
  * @method Models\CreateCloneInstanceResponse CreateCloneInstance(Models\CreateCloneInstanceRequest $req) 本接口（CreateCloneInstance）提供创建克隆实例功能
  * @method Models\CreateDBInstancesResponse CreateDBInstances(Models\CreateDBInstancesRequest $req) 本接口（CreateDBInstances）提供批量创建实例功能
  * @method Models\CreateDBSBackupResponse CreateDBSBackup(Models\CreateDBSBackupRequest $req) 创建实例手工备份  CreateDBSBackup
+ * @method Models\CreateStandbyDBInstanceResponse CreateStandbyDBInstance(Models\CreateStandbyDBInstanceRequest $req) 本接口（CreateStandbyDBInstances）提供批量创建灾备实例功能
  * @method Models\CreateUsersResponse CreateUsers(Models\CreateUsersRequest $req) 本接口（CreateUsers）用于批量创建用户
  * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) 删除实例手工备份 DeleteDBSBackupSets
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 本接口（DeleteUsers）用于批量删除用户
@@ -50,6 +52,7 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\DescribeSaleInfoResponse DescribeSaleInfo(Models\DescribeSaleInfoRequest $req) 本接口（DescribeSaleInfo）提供查询可用售卖地域功能
  * @method Models\DescribeSlowLogsResponse DescribeSlowLogs(Models\DescribeSlowLogsRequest $req) 本接口提供查询慢日志功能
  * @method Models\DescribeSpecsResponse DescribeSpecs(Models\DescribeSpecsRequest $req) 本接口（DescribeSpecs）提供查询售卖规格功能
+ * @method Models\DescribeStandbyDBInstanceRelationDetailResponse DescribeStandbyDBInstanceRelationDetail(Models\DescribeStandbyDBInstanceRelationDetailRequest $req) 本接口（DescribeStandbyDBinstanceRelations）用于查询实例灾备连接关系
  * @method Models\DescribeUserPrivilegesResponse DescribeUserPrivileges(Models\DescribeUserPrivilegesRequest $req) 本接口（DescribeUserPrivileges）提供查询用户的权限功能
  * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) 本接口（DescribeUsers）提供查询用户列表功能
  * @method Models\DestroyInstancesResponse DestroyInstances(Models\DestroyInstancesRequest $req) 本接口（DestroyInstances）提供批量销毁实例功能

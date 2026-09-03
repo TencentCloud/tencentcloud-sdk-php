@@ -18,68 +18,68 @@ namespace TencentCloud\Ioa\V20220601\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GrantedAccountItem
+ * 账号分组授权信息
  *
- * @method integer getAccountGroupId() 获取账户组Id
- * @method void setAccountGroupId(integer $AccountGroupId) 设置账户组Id
- * @method string getName() 获取分组名称
- * @method void setName(string $Name) 设置分组名称
- * @method array getIdPathArray() 获取所属分组Id
- * @method void setIdPathArray(array $IdPathArray) 设置所属分组Id
- * @method array getNamePathArray() 获取所属分组NamePathArray
- * @method void setNamePathArray(array $NamePathArray) 设置所属分组NamePathArray
- * @method integer getAccountCount() 获取目录id
- * @method void setAccountCount(integer $AccountCount) 设置目录id
- * @method integer getExpireTime() 获取过期时间
- * @method void setExpireTime(integer $ExpireTime) 设置过期时间
- * @method integer getRelationId() 获取关联id
- * @method void setRelationId(integer $RelationId) 设置关联id
+ * @method integer getAccountGroupId() 获取<p>账户组Id</p>
+ * @method void setAccountGroupId(integer $AccountGroupId) 设置<p>账户组Id</p>
+ * @method string getName() 获取<p>分组名称</p>
+ * @method void setName(string $Name) 设置<p>分组名称</p>
+ * @method array getIdPathArray() 获取<p>所属分组Id</p>
+ * @method void setIdPathArray(array $IdPathArray) 设置<p>所属分组Id</p>
+ * @method array getNamePathArray() 获取<p>所属分组NamePathArray</p>
+ * @method void setNamePathArray(array $NamePathArray) 设置<p>所属分组NamePathArray</p>
+ * @method integer getAccountCount() 获取<p>目录id</p>
+ * @method void setAccountCount(integer $AccountCount) 设置<p>目录id</p>
+ * @method integer getExpireTime() 获取<p>过期时间</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>过期时间</p>
+ * @method integer getRelationId() 获取<p>关联id</p>
+ * @method void setRelationId(integer $RelationId) 设置<p>关联id</p>
  */
 class GrantedAccountGroupItem extends AbstractModel
 {
     /**
-     * @var integer 账户组Id
+     * @var integer <p>账户组Id</p>
      */
     public $AccountGroupId;
 
     /**
-     * @var string 分组名称
+     * @var string <p>分组名称</p>
      */
     public $Name;
 
     /**
-     * @var array 所属分组Id
+     * @var array <p>所属分组Id</p>
      */
     public $IdPathArray;
 
     /**
-     * @var array 所属分组NamePathArray
+     * @var array <p>所属分组NamePathArray</p>
      */
     public $NamePathArray;
 
     /**
-     * @var integer 目录id
+     * @var integer <p>目录id</p>
      */
     public $AccountCount;
 
     /**
-     * @var integer 过期时间
+     * @var integer <p>过期时间</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer 关联id
+     * @var integer <p>关联id</p>
      */
     public $RelationId;
 
     /**
-     * @param integer $AccountGroupId 账户组Id
-     * @param string $Name 分组名称
-     * @param array $IdPathArray 所属分组Id
-     * @param array $NamePathArray 所属分组NamePathArray
-     * @param integer $AccountCount 目录id
-     * @param integer $ExpireTime 过期时间
-     * @param integer $RelationId 关联id
+     * @param integer $AccountGroupId <p>账户组Id</p>
+     * @param string $Name <p>分组名称</p>
+     * @param array $IdPathArray <p>所属分组Id</p>
+     * @param array $NamePathArray <p>所属分组NamePathArray</p>
+     * @param integer $AccountCount <p>目录id</p>
+     * @param integer $ExpireTime <p>过期时间</p>
+     * @param integer $RelationId <p>关联id</p>
      */
     function __construct()
     {

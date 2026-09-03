@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置<p>描述</p>
  * @method string getScene() 获取<p>使用场景：API 创建，快速上手，普通配置等</p>
  * @method void setScene(string $Scene) 设置<p>使用场景：API 创建，快速上手，普通配置等</p>
+ * @method array getNameI18n() 获取<p>名称多语言</p>
+ * @method void setNameI18n(array $NameI18n) 设置<p>名称多语言</p>
  */
 class CreateCompanyDirectoryConfigRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateCompanyDirectoryConfigRequest extends AbstractModel
     public $Scene;
 
     /**
+     * @var array <p>名称多语言</p>
+     */
+    public $NameI18n;
+
+    /**
      * @param string $Type <p>企业目录类型</p>
      * @param string $Name <p>企业目录名</p>
      * @param string $Config <p>配置是通过 SM2 加密再 Hex 之后的数据</p>
@@ -104,6 +111,7 @@ class CreateCompanyDirectoryConfigRequest extends AbstractModel
      * @param boolean $DisplayOnLoginPage <p>是否在登录页展示</p>
      * @param string $Description <p>描述</p>
      * @param string $Scene <p>使用场景：API 创建，快速上手，普通配置等</p>
+     * @param array $NameI18n <p>名称多语言</p>
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class CreateCompanyDirectoryConfigRequest extends AbstractModel
 
         if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
             $this->Scene = $param["Scene"];
+        }
+
+        if (array_key_exists("NameI18n",$param) and $param["NameI18n"] !== null) {
+            $this->NameI18n = [];
+            foreach ($param["NameI18n"] as $key => $value){
+                $obj = new I18nString();
+                $obj->deserialize($value);
+                array_push($this->NameI18n, $obj);
+            }
         }
     }
 }

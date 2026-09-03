@@ -20,65 +20,67 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 关联的mcp服务配置
  *
- * @method string getID() 获取mcp server id
- * @method void setID(string $ID) 设置mcp server id
- * @method boolean getNeedAuth() 获取是否需要鉴权
+ * @method string getID() 获取<p>mcp server id</p>
+ * @method void setID(string $ID) 设置<p>mcp server id</p>
+ * @method boolean getNeedAuth() 获取<p>是否需要鉴权（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNeedAuth(boolean $NeedAuth) 设置是否需要鉴权
+ * @method void setNeedAuth(boolean $NeedAuth) 设置<p>是否需要鉴权（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAgentCredentialID() 获取凭据代填的ID
+ * @method string getAgentCredentialID() 获取<p>凭据代填的ID（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAgentCredentialID(string $AgentCredentialID) 设置凭据代填的ID
+ * @method void setAgentCredentialID(string $AgentCredentialID) 设置<p>凭据代填的ID（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSSEResourceIdentifier() 获取应用为OAuth2认证时，sse模式请求mcp时的资源标识
+ * @method string getSSEResourceIdentifier() 获取<p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSSEResourceIdentifier(string $SSEResourceIdentifier) 设置应用为OAuth2认证时，sse模式请求mcp时的资源标识
+ * @method void setSSEResourceIdentifier(string $SSEResourceIdentifier) 设置<p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStreamableResourceIdentifier() 获取应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+ * @method string getStreamableResourceIdentifier() 获取<p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStreamableResourceIdentifier(string $StreamableResourceIdentifier) 设置应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+ * @method void setStreamableResourceIdentifier(string $StreamableResourceIdentifier) 设置<p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentAppMcpServerDTO extends AbstractModel
 {
     /**
-     * @var string mcp server id
+     * @var string <p>mcp server id</p>
      */
     public $ID;
 
     /**
-     * @var boolean 是否需要鉴权
+     * @var boolean <p>是否需要鉴权（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $NeedAuth;
 
     /**
-     * @var string 凭据代填的ID
+     * @var string <p>凭据代填的ID（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $AgentCredentialID;
 
     /**
-     * @var string 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * @var string <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SSEResourceIdentifier;
 
     /**
-     * @var string 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * @var string <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamableResourceIdentifier;
 
     /**
-     * @param string $ID mcp server id
-     * @param boolean $NeedAuth 是否需要鉴权
+     * @param string $ID <p>mcp server id</p>
+     * @param boolean $NeedAuth <p>是否需要鉴权（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AgentCredentialID 凭据代填的ID
+     * @param string $AgentCredentialID <p>凭据代填的ID（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SSEResourceIdentifier 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * @param string $SSEResourceIdentifier <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StreamableResourceIdentifier 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * @param string $StreamableResourceIdentifier <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

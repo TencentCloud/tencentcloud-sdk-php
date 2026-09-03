@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillResourceSummary返回参数结构体
  *
- * @method array getResourceSummarySet() 获取资源汇总列表
- * @method void setResourceSummarySet(array $ResourceSummarySet) 设置资源汇总列表
- * @method integer getTotal() 获取资源汇总列表总数，入参NeedRecordNum为0时不返回
+ * @method array getResourceSummarySet() 获取<p>资源汇总列表</p>
+ * @method void setResourceSummarySet(array $ResourceSummarySet) 设置<p>资源汇总列表</p>
+ * @method integer getTotal() 获取<p>资源汇总列表总数，入参NeedRecordNum为0时不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置资源汇总列表总数，入参NeedRecordNum为0时不返回
+ * @method void setTotal(integer $Total) 设置<p>资源汇总列表总数，入参NeedRecordNum为0时不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBillResourceSummaryResponse extends AbstractModel
 {
     /**
-     * @var array 资源汇总列表
+     * @var array <p>资源汇总列表</p>
      */
     public $ResourceSummarySet;
 
     /**
-     * @var integer 资源汇总列表总数，入参NeedRecordNum为0时不返回
+     * @var integer <p>资源汇总列表总数，入参NeedRecordNum为0时不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
@@ -48,8 +48,8 @@ class DescribeBillResourceSummaryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ResourceSummarySet 资源汇总列表
-     * @param integer $Total 资源汇总列表总数，入参NeedRecordNum为0时不返回
+     * @param array $ResourceSummarySet <p>资源汇总列表</p>
+     * @param integer $Total <p>资源汇总列表总数，入参NeedRecordNum为0时不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

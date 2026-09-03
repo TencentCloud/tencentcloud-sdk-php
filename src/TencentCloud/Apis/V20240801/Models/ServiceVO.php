@@ -288,6 +288,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMcpServerNum(integer $McpServerNum) 设置<p>绑定的mcp server数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCredentialID() 获取<p>凭据ID</p>
+ * @method void setCredentialID(string $CredentialID) 设置<p>凭据ID</p>
+ * @method string getCredentialName() 获取<p>凭据名称</p>
+ * @method void setCredentialName(string $CredentialName) 设置<p>凭据名称</p>
+ * @method string getRequestProtocolType() 获取<p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRequestProtocolType(string $RequestProtocolType) 设置<p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceVO extends AbstractModel
 {
@@ -703,6 +711,22 @@ class ServiceVO extends AbstractModel
     public $McpServerNum;
 
     /**
+     * @var string <p>凭据ID</p>
+     */
+    public $CredentialID;
+
+    /**
+     * @var string <p>凭据名称</p>
+     */
+    public $CredentialName;
+
+    /**
+     * @var string <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RequestProtocolType;
+
+    /**
      * @param string $InstanceID <p>实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name <p>名称</p>
@@ -836,6 +860,10 @@ class ServiceVO extends AbstractModel
      * @param integer $Timeout <p>请求的超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $McpServerNum <p>绑定的mcp server数量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CredentialID <p>凭据ID</p>
+     * @param string $CredentialName <p>凭据名称</p>
+     * @param string $RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1161,6 +1189,18 @@ class ServiceVO extends AbstractModel
 
         if (array_key_exists("McpServerNum",$param) and $param["McpServerNum"] !== null) {
             $this->McpServerNum = $param["McpServerNum"];
+        }
+
+        if (array_key_exists("CredentialID",$param) and $param["CredentialID"] !== null) {
+            $this->CredentialID = $param["CredentialID"];
+        }
+
+        if (array_key_exists("CredentialName",$param) and $param["CredentialName"] !== null) {
+            $this->CredentialName = $param["CredentialName"];
+        }
+
+        if (array_key_exists("RequestProtocolType",$param) and $param["RequestProtocolType"] !== null) {
+            $this->RequestProtocolType = $param["RequestProtocolType"];
         }
     }
 }

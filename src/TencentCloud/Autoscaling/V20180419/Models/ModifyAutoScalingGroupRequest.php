@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesiredCapacity(integer $DesiredCapacity) 设置<p>期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
  * @method string getLaunchConfigurationId() 获取<p>启动配置ID。可以通过如下方式获取可用的启动配置ID:</p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li><li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置<p>启动配置ID。可以通过如下方式获取可用的启动配置ID:</p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li><li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
- * @method integer getMaxSize() 获取<p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
- * @method void setMaxSize(integer $MaxSize) 设置<p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
+ * @method integer getMaxSize() 获取<p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p><p>取值范围：[0, 2000]</p>
+ * @method void setMaxSize(integer $MaxSize) 设置<p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p><p>取值范围：[0, 2000]</p>
  * @method integer getMinSize() 获取<p>最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
  * @method void setMinSize(integer $MinSize) 设置<p>最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
  * @method integer getProjectId() 获取<p>项目ID。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/651/78725">DescribeProject</a> 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。</p>
@@ -99,7 +99,7 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
     public $LaunchConfigurationId;
 
     /**
-     * @var integer <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
+     * @var integer <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p><p>取值范围：[0, 2000]</p>
      */
     public $MaxSize;
 
@@ -204,7 +204,7 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
      * @param integer $DefaultCooldown <p>默认冷却时间，单位秒，取值范围 [0,3600]，默认值为300。</p>
      * @param integer $DesiredCapacity <p>期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
      * @param string $LaunchConfigurationId <p>启动配置ID。可以通过如下方式获取可用的启动配置ID:</p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li><li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
-     * @param integer $MaxSize <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
+     * @param integer $MaxSize <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p><p>取值范围：[0, 2000]</p>
      * @param integer $MinSize <p>最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
      * @param integer $ProjectId <p>项目ID。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/651/78725">DescribeProject</a> 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。</p>
      * @param array $SubnetIds <p>子网ID列表。有效的私有网络子网ID可通过登录<a href="https://console.cloud.tencent.com/vpc/subnet">控制台</a>查询；也可以调用接口 <a href="https://cloud.tencent.com/document/product/215/15784">DescribeSubnets</a> ，从接口返回中的SubnetId字段获取。</p>

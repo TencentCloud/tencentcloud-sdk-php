@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceId(string $SourceId) 设置<p>对应 Config 的配置 ID</p>
  * @method boolean getDisplayOnLoginPage() 获取<p>是否在登录页展示</p>
  * @method void setDisplayOnLoginPage(boolean $DisplayOnLoginPage) 设置<p>是否在登录页展示</p>
+ * @method array getNameI18n() 获取<p>名称多语言</p>
+ * @method void setNameI18n(array $NameI18n) 设置<p>名称多语言</p>
  */
 class DirectoryConfigData extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DirectoryConfigData extends AbstractModel
     public $DisplayOnLoginPage;
 
     /**
+     * @var array <p>名称多语言</p>
+     */
+    public $NameI18n;
+
+    /**
      * @param integer $Id <p>企业目录 ID</p>
      * @param string $Type <p>目录对应身份源类型</p><p>枚举值：</p><ul><li>WeCom： 企业微信</li><li>Lark： 飞书</li><li>DingTalk： 钉钉</li><li>MicrosoftEntraID： 微软 AAD</li></ul>
      * @param string $Name <p>企业目录名称</p>
@@ -112,6 +119,7 @@ class DirectoryConfigData extends AbstractModel
      * @param string $Description <p>描述</p>
      * @param string $SourceId <p>对应 Config 的配置 ID</p>
      * @param boolean $DisplayOnLoginPage <p>是否在登录页展示</p>
+     * @param array $NameI18n <p>名称多语言</p>
      */
     function __construct()
     {
@@ -168,6 +176,15 @@ class DirectoryConfigData extends AbstractModel
 
         if (array_key_exists("DisplayOnLoginPage",$param) and $param["DisplayOnLoginPage"] !== null) {
             $this->DisplayOnLoginPage = $param["DisplayOnLoginPage"];
+        }
+
+        if (array_key_exists("NameI18n",$param) and $param["NameI18n"] !== null) {
+            $this->NameI18n = [];
+            foreach ($param["NameI18n"] as $key => $value){
+                $obj = new I18nString();
+                $obj->deserialize($value);
+                array_push($this->NameI18n, $obj);
+            }
         }
     }
 }

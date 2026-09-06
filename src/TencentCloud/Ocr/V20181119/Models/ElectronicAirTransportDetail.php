@@ -20,117 +20,117 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全电发票（航空运输电子客票行程单）详细信息
  *
- * @method string getFlightSegment() 获取航段序号
+ * @method string getFlightSegment() 获取<p>航段序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlightSegment(string $FlightSegment) 设置航段序号
+ * @method void setFlightSegment(string $FlightSegment) 设置<p>航段序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStationGetOn() 获取始发站
+ * @method string getStationGetOn() 获取<p>始发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStationGetOn(string $StationGetOn) 设置始发站
+ * @method void setStationGetOn(string $StationGetOn) 设置<p>始发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStationGetOff() 获取目的站
+ * @method string getStationGetOff() 获取<p>目的站</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStationGetOff(string $StationGetOff) 设置目的站
+ * @method void setStationGetOff(string $StationGetOff) 设置<p>目的站</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCarrier() 获取承运人
+ * @method string getCarrier() 获取<p>承运人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCarrier(string $Carrier) 设置承运人
+ * @method void setCarrier(string $Carrier) 设置<p>承运人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFlightNumber() 获取航班号
+ * @method string getFlightNumber() 获取<p>航班号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlightNumber(string $FlightNumber) 设置航班号
+ * @method void setFlightNumber(string $FlightNumber) 设置<p>航班号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSeatLevel() 获取座位等级
+ * @method string getSeatLevel() 获取<p>座位等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSeatLevel(string $SeatLevel) 设置座位等级
+ * @method void setSeatLevel(string $SeatLevel) 设置<p>座位等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFlightDate() 获取承运日期
+ * @method string getFlightDate() 获取<p>承运日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlightDate(string $FlightDate) 设置承运日期
+ * @method void setFlightDate(string $FlightDate) 设置<p>承运日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDepartureTime() 获取起飞时间
+ * @method string getDepartureTime() 获取<p>起飞时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDepartureTime(string $DepartureTime) 设置起飞时间
+ * @method void setDepartureTime(string $DepartureTime) 设置<p>起飞时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFareBasis() 获取客票级别/客票类别
+ * @method string getFareBasis() 获取<p>客票级别/客票类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFareBasis(string $FareBasis) 设置客票级别/客票类别
+ * @method void setFareBasis(string $FareBasis) 设置<p>客票级别/客票类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ElectronicAirTransportDetail extends AbstractModel
 {
     /**
-     * @var string 航段序号
+     * @var string <p>航段序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlightSegment;
 
     /**
-     * @var string 始发站
+     * @var string <p>始发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StationGetOn;
 
     /**
-     * @var string 目的站
+     * @var string <p>目的站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StationGetOff;
 
     /**
-     * @var string 承运人
+     * @var string <p>承运人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Carrier;
 
     /**
-     * @var string 航班号
+     * @var string <p>航班号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlightNumber;
 
     /**
-     * @var string 座位等级
+     * @var string <p>座位等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SeatLevel;
 
     /**
-     * @var string 承运日期
+     * @var string <p>承运日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlightDate;
 
     /**
-     * @var string 起飞时间
+     * @var string <p>起飞时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DepartureTime;
 
     /**
-     * @var string 客票级别/客票类别
+     * @var string <p>客票级别/客票类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FareBasis;
 
     /**
-     * @param string $FlightSegment 航段序号
+     * @param string $FlightSegment <p>航段序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StationGetOn 始发站
+     * @param string $StationGetOn <p>始发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StationGetOff 目的站
+     * @param string $StationGetOff <p>目的站</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Carrier 承运人
+     * @param string $Carrier <p>承运人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FlightNumber 航班号
+     * @param string $FlightNumber <p>航班号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SeatLevel 座位等级
+     * @param string $SeatLevel <p>座位等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FlightDate 承运日期
+     * @param string $FlightDate <p>承运日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DepartureTime 起飞时间
+     * @param string $DepartureTime <p>起飞时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FareBasis 客票级别/客票类别
+     * @param string $FareBasis <p>客票级别/客票类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

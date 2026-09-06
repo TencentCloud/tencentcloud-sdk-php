@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterDetailDatabases请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getOffset() 获取偏移量，默认0
- * @method void setOffset(integer $Offset) 设置偏移量，默认0
- * @method integer getLimit() 获取返回数量，默认20,最大100
- * @method void setLimit(integer $Limit) 设置返回数量，默认20,最大100
- * @method string getDbName() 获取数据库名称
- * @method void setDbName(string $DbName) 设置数据库名称
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method integer getOffset() 获取<p>偏移量，默认0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认0</p>
+ * @method integer getLimit() 获取<p>返回数量，默认20,最大100</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认20,最大100</p>
+ * @method string getDbName() 获取<p>数据库名称，通过该字段进行子串匹配</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名称，通过该字段进行子串匹配</p>
  */
 class DescribeClusterDetailDatabasesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 偏移量，默认0
+     * @var integer <p>偏移量，默认0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认20,最大100
+     * @var integer <p>返回数量，默认20,最大100</p>
      */
     public $Limit;
 
     /**
-     * @var string 数据库名称
+     * @var string <p>数据库名称，通过该字段进行子串匹配</p>
      */
     public $DbName;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param integer $Offset 偏移量，默认0
-     * @param integer $Limit 返回数量，默认20,最大100
-     * @param string $DbName 数据库名称
+     * @param string $ClusterId <p>集群ID</p>
+     * @param integer $Offset <p>偏移量，默认0</p>
+     * @param integer $Limit <p>返回数量，默认20,最大100</p>
+     * @param string $DbName <p>数据库名称，通过该字段进行子串匹配</p>
      */
     function __construct()
     {

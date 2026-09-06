@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEipAddressId(string $EipAddressId) 设置<p>弹性公网IP的ID</p>
  * @method ModelRouterBillingConfigOutput getBillingConfig() 获取<p>计费信息</p>
  * @method void setBillingConfig(ModelRouterBillingConfigOutput $BillingConfig) 设置<p>计费信息</p>
+ * @method EmbeddingConfig getEmbeddingConfig() 获取<p>Embedding配置</p>
+ * @method void setEmbeddingConfig(EmbeddingConfig $EmbeddingConfig) 设置<p>Embedding配置</p>
  */
 class ModelRouterDetail extends AbstractModel
 {
@@ -211,6 +213,11 @@ class ModelRouterDetail extends AbstractModel
     public $BillingConfig;
 
     /**
+     * @var EmbeddingConfig <p>Embedding配置</p>
+     */
+    public $EmbeddingConfig;
+
+    /**
      * @param string $BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BudgetName <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
@@ -240,6 +247,7 @@ class ModelRouterDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EipAddressId <p>弹性公网IP的ID</p>
      * @param ModelRouterBillingConfigOutput $BillingConfig <p>计费信息</p>
+     * @param EmbeddingConfig $EmbeddingConfig <p>Embedding配置</p>
      */
     function __construct()
     {
@@ -371,6 +379,11 @@ class ModelRouterDetail extends AbstractModel
         if (array_key_exists("BillingConfig",$param) and $param["BillingConfig"] !== null) {
             $this->BillingConfig = new ModelRouterBillingConfigOutput();
             $this->BillingConfig->deserialize($param["BillingConfig"]);
+        }
+
+        if (array_key_exists("EmbeddingConfig",$param) and $param["EmbeddingConfig"] !== null) {
+            $this->EmbeddingConfig = new EmbeddingConfig();
+            $this->EmbeddingConfig->deserialize($param["EmbeddingConfig"]);
         }
     }
 }

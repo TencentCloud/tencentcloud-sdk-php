@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceProviders(array $ServiceProviders) 设置<p>BYOK列表</p>
  * @method string getType() 获取<p>模型类型</p>
  * @method void setType(string $Type) 设置<p>模型类型</p>
+ * @method string getCapability() 获取<p>输出模态</p>
+ * @method void setCapability(string $Capability) 设置<p>输出模态</p>
  */
 class ModelAssociation extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModelAssociation extends AbstractModel
     public $Type;
 
     /**
+     * @var string <p>输出模态</p>
+     */
+    public $Capability;
+
+    /**
      * @param array $InputModalitiesUnion <p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
      * @param string $ModelName <p>模型名称</p>
      * @param array $ServiceProviders <p>BYOK列表</p>
      * @param string $Type <p>模型类型</p>
+     * @param string $Capability <p>输出模态</p>
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class ModelAssociation extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Capability",$param) and $param["Capability"] !== null) {
+            $this->Capability = $param["Capability"];
         }
     }
 }

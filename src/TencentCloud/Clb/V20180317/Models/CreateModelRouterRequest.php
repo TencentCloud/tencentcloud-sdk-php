@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEipAddressId(string $EipAddressId) 设置<p>弹性公网IP的ID</p>
  * @method integer getBandwidth() 获取<p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
  * @method void setBandwidth(integer $Bandwidth) 设置<p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+ * @method EmbeddingConfig getEmbeddingConfig() 获取<p>Embedding 配置</p>
+ * @method void setEmbeddingConfig(EmbeddingConfig $EmbeddingConfig) 设置<p>Embedding 配置</p>
  */
 class CreateModelRouterRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class CreateModelRouterRequest extends AbstractModel
     public $Bandwidth;
 
     /**
+     * @var EmbeddingConfig <p>Embedding 配置</p>
+     */
+    public $EmbeddingConfig;
+
+    /**
      * @param string $ModelRouterType <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul>
      * @param string $BudgetId <p>关联的积分预算ID</p>
      * @param string $CertId <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
@@ -160,6 +167,7 @@ class CreateModelRouterRequest extends AbstractModel
      * @param string $ClientToken <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
      * @param string $EipAddressId <p>弹性公网IP的ID</p>
      * @param integer $Bandwidth <p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+     * @param EmbeddingConfig $EmbeddingConfig <p>Embedding 配置</p>
      */
     function __construct()
     {
@@ -249,6 +257,11 @@ class CreateModelRouterRequest extends AbstractModel
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
             $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("EmbeddingConfig",$param) and $param["EmbeddingConfig"] !== null) {
+            $this->EmbeddingConfig = new EmbeddingConfig();
+            $this->EmbeddingConfig->deserialize($param["EmbeddingConfig"]);
         }
     }
 }

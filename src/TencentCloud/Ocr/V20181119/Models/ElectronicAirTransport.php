@@ -20,242 +20,234 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全电发票（航空运输电子客票行程单）
  *
- * @method string getCode() 获取发票代码
+ * @method string getCode() 获取<p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCode(string $Code) 设置发票代码
+ * @method void setCode(string $Code) 设置<p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNumber() 获取发票号码
+ * @method string getNumber() 获取<p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNumber(string $Number) 设置发票号码
+ * @method void setNumber(string $Number) 设置<p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDate() 获取开票日期
+ * @method string getDate() 获取<p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDate(string $Date) 设置开票日期
+ * @method void setDate(string $Date) 设置<p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAmount() 获取金额
+ * @method string getAmount() 获取<p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAmount(string $Amount) 设置金额
+ * @method void setAmount(string $Amount) 设置<p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCheckCode() 获取校验码
+ * @method string getCheckCode() 获取<p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCheckCode(string $CheckCode) 设置校验码
+ * @method void setCheckCode(string $CheckCode) 设置<p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTotal() 获取价税合计
+ * @method string getTotal() 获取<p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(string $Total) 设置价税合计
+ * @method void setTotal(string $Total) 设置<p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeductionMark() 获取抵扣标志
+ * @method string getDeductionMark() 获取<p>抵扣标志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeductionMark(string $DeductionMark) 设置抵扣标志
+ * @method void setDeductionMark(string $DeductionMark) 设置<p>抵扣标志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStateCode() 获取发票状态代码，0正常 1 未更新  2作废 3已红冲
+ * @method string getStateCode() 获取<p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStateCode(string $StateCode) 设置发票状态代码，0正常 1 未更新  2作废 3已红冲
+ * @method void setStateCode(string $StateCode) 设置<p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBuyerTaxCode() 获取购方识别号
+ * @method string getBuyerTaxCode() 获取<p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBuyerTaxCode(string $BuyerTaxCode) 设置购方识别号
+ * @method void setBuyerTaxCode(string $BuyerTaxCode) 设置<p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBuyerName() 获取购方名称
+ * @method string getBuyerName() 获取<p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBuyerName(string $BuyerName) 设置购方名称
+ * @method void setBuyerName(string $BuyerName) 设置<p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTax() 获取合计税额
+ * @method string getTax() 获取<p>合计税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTax(string $Tax) 设置合计税额
+ * @method void setTax(string $Tax) 设置<p>合计税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDomesticInternationalMark() 获取国内国际标识
+ * @method string getDomesticInternationalMark() 获取<p>国内国际标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomesticInternationalMark(string $DomesticInternationalMark) 设置国内国际标识
+ * @method void setDomesticInternationalMark(string $DomesticInternationalMark) 设置<p>国内国际标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPassengerName() 获取旅客姓名
+ * @method string getPassengerName() 获取<p>旅客姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPassengerName(string $PassengerName) 设置旅客姓名
+ * @method void setPassengerName(string $PassengerName) 设置<p>旅客姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPassengerNo() 获取有效身份证件号码
+ * @method string getPassengerNo() 获取<p>有效身份证件号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPassengerNo(string $PassengerNo) 设置有效身份证件号码
+ * @method void setPassengerNo(string $PassengerNo) 设置<p>有效身份证件号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getElectronicNumber() 获取电子客票号码
+ * @method string getElectronicNumber() 获取<p>电子客票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setElectronicNumber(string $ElectronicNumber) 设置电子客票号码
+ * @method void setElectronicNumber(string $ElectronicNumber) 设置<p>电子客票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getElectronicAirTransportDetails() 获取全电发票（航空运输电子客票行程单）详细信息
-
-
+ * @method array getElectronicAirTransportDetails() 获取<p>全电发票（航空运输电子客票行程单）详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setElectronicAirTransportDetails(array $ElectronicAirTransportDetails) 设置全电发票（航空运输电子客票行程单）详细信息
-
-
+ * @method void setElectronicAirTransportDetails(array $ElectronicAirTransportDetails) 设置<p>全电发票（航空运输电子客票行程单）详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFare() 获取票价
- * @method void setFare(string $Fare) 设置票价
- * @method string getFuelSurcharge() 获取燃油附加费
- * @method void setFuelSurcharge(string $FuelSurcharge) 设置燃油附加费
- * @method string getTaxAmount() 获取增值税税额
- * @method void setTaxAmount(string $TaxAmount) 设置增值税税额
- * @method string getDevelopmentFund() 获取民航发展基金
- * @method void setDevelopmentFund(string $DevelopmentFund) 设置民航发展基金
+ * @method string getFare() 获取<p>票价</p>
+ * @method void setFare(string $Fare) 设置<p>票价</p>
+ * @method string getFuelSurcharge() 获取<p>燃油附加费</p>
+ * @method void setFuelSurcharge(string $FuelSurcharge) 设置<p>燃油附加费</p>
+ * @method string getTaxAmount() 获取<p>增值税税额</p>
+ * @method void setTaxAmount(string $TaxAmount) 设置<p>增值税税额</p>
+ * @method string getDevelopmentFund() 获取<p>民航发展基金</p>
+ * @method void setDevelopmentFund(string $DevelopmentFund) 设置<p>民航发展基金</p>
  */
 class ElectronicAirTransport extends AbstractModel
 {
     /**
-     * @var string 发票代码
+     * @var string <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
-     * @var string 发票号码
+     * @var string <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Number;
 
     /**
-     * @var string 开票日期
+     * @var string <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Date;
 
     /**
-     * @var string 金额
+     * @var string <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Amount;
 
     /**
-     * @var string 校验码
+     * @var string <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckCode;
 
     /**
-     * @var string 价税合计
+     * @var string <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var string 抵扣标志
+     * @var string <p>抵扣标志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeductionMark;
 
     /**
-     * @var string 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * @var string <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StateCode;
 
     /**
-     * @var string 购方识别号
+     * @var string <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuyerTaxCode;
 
     /**
-     * @var string 购方名称
+     * @var string <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuyerName;
 
     /**
-     * @var string 合计税额
+     * @var string <p>合计税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tax;
 
     /**
-     * @var string 国内国际标识
+     * @var string <p>国内国际标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomesticInternationalMark;
 
     /**
-     * @var string 旅客姓名
+     * @var string <p>旅客姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PassengerName;
 
     /**
-     * @var string 有效身份证件号码
+     * @var string <p>有效身份证件号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PassengerNo;
 
     /**
-     * @var string 电子客票号码
+     * @var string <p>电子客票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElectronicNumber;
 
     /**
-     * @var array 全电发票（航空运输电子客票行程单）详细信息
-
-
+     * @var array <p>全电发票（航空运输电子客票行程单）详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElectronicAirTransportDetails;
 
     /**
-     * @var string 票价
+     * @var string <p>票价</p>
      */
     public $Fare;
 
     /**
-     * @var string 燃油附加费
+     * @var string <p>燃油附加费</p>
      */
     public $FuelSurcharge;
 
     /**
-     * @var string 增值税税额
+     * @var string <p>增值税税额</p>
      */
     public $TaxAmount;
 
     /**
-     * @var string 民航发展基金
+     * @var string <p>民航发展基金</p>
      */
     public $DevelopmentFund;
 
     /**
-     * @param string $Code 发票代码
+     * @param string $Code <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Number 发票号码
+     * @param string $Number <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Date 开票日期
+     * @param string $Date <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Amount 金额
+     * @param string $Amount <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CheckCode 校验码
+     * @param string $CheckCode <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Total 价税合计
+     * @param string $Total <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeductionMark 抵扣标志
+     * @param string $DeductionMark <p>抵扣标志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StateCode 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * @param string $StateCode <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BuyerTaxCode 购方识别号
+     * @param string $BuyerTaxCode <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BuyerName 购方名称
+     * @param string $BuyerName <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Tax 合计税额
+     * @param string $Tax <p>合计税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DomesticInternationalMark 国内国际标识
+     * @param string $DomesticInternationalMark <p>国内国际标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PassengerName 旅客姓名
+     * @param string $PassengerName <p>旅客姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PassengerNo 有效身份证件号码
+     * @param string $PassengerNo <p>有效身份证件号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ElectronicNumber 电子客票号码
+     * @param string $ElectronicNumber <p>电子客票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ElectronicAirTransportDetails 全电发票（航空运输电子客票行程单）详细信息
-
-
+     * @param array $ElectronicAirTransportDetails <p>全电发票（航空运输电子客票行程单）详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Fare 票价
-     * @param string $FuelSurcharge 燃油附加费
-     * @param string $TaxAmount 增值税税额
-     * @param string $DevelopmentFund 民航发展基金
+     * @param string $Fare <p>票价</p>
+     * @param string $FuelSurcharge <p>燃油附加费</p>
+     * @param string $TaxAmount <p>增值税税额</p>
+     * @param string $DevelopmentFund <p>民航发展基金</p>
      */
     function __construct()
     {

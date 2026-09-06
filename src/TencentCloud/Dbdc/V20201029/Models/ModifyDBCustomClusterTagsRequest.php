@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取<p>DB Custom 集群ID</p><p>参数格式：dbcc-xxxxxxxx</p>
  * @method void setClusterId(string $ClusterId) 设置<p>DB Custom 集群ID</p><p>参数格式：dbcc-xxxxxxxx</p>
- * @method array getAddTags() 获取<p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p>
- * @method void setAddTags(array $AddTags) 设置<p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p>
- * @method array getDeleteTagKeys() 获取<p>为 DB Custom 集群删除的标签Key</p>
- * @method void setDeleteTagKeys(array $DeleteTagKeys) 设置<p>为 DB Custom 集群删除的标签Key</p>
+ * @method array getAddTags() 获取<p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p><p>如果集群未关联输入的标签键，则增加关联；若已关联，则将该集群关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
+ * @method void setAddTags(array $AddTags) 设置<p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p><p>如果集群未关联输入的标签键，则增加关联；若已关联，则将该集群关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
+ * @method array getDeleteTagKeys() 获取<p>为 DB Custom 集群解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
+ * @method void setDeleteTagKeys(array $DeleteTagKeys) 设置<p>为 DB Custom 集群解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
  */
 class ModifyDBCustomClusterTagsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyDBCustomClusterTagsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p>
+     * @var array <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p><p>如果集群未关联输入的标签键，则增加关联；若已关联，则将该集群关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     public $AddTags;
 
     /**
-     * @var array <p>为 DB Custom 集群删除的标签Key</p>
+     * @var array <p>为 DB Custom 集群解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     public $DeleteTagKeys;
 
     /**
      * @param string $ClusterId <p>DB Custom 集群ID</p><p>参数格式：dbcc-xxxxxxxx</p>
-     * @param array $AddTags <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p>
-     * @param array $DeleteTagKeys <p>为 DB Custom 集群删除的标签Key</p>
+     * @param array $AddTags <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p><p>如果集群未关联输入的标签键，则增加关联；若已关联，则将该集群关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
+     * @param array $DeleteTagKeys <p>为 DB Custom 集群解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     function __construct()
     {

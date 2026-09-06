@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouterSetting(RouterSettingWithFallBack $RouterSetting) 设置<p>路由配置</p>
  * @method integer getBandwidth() 获取<p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
  * @method void setBandwidth(integer $Bandwidth) 设置<p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+ * @method string getCapability() 获取<p>模型输出模态</p>
+ * @method void setCapability(string $Capability) 设置<p>模型输出模态</p>
+ * @method EmbeddingConfig getEmbeddingConfig() 获取<p>embedding 模态配置</p>
+ * @method void setEmbeddingConfig(EmbeddingConfig $EmbeddingConfig) 设置<p>embedding 模态配置</p>
  */
 class ModifyModelRouterAttributesRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class ModifyModelRouterAttributesRequest extends AbstractModel
     public $Bandwidth;
 
     /**
+     * @var string <p>模型输出模态</p>
+     */
+    public $Capability;
+
+    /**
+     * @var EmbeddingConfig <p>embedding 模态配置</p>
+     */
+    public $EmbeddingConfig;
+
+    /**
      * @param string $ModelRouterId <p>模型路由ID</p>
      * @param string $CertId <p>新的 HTTPS 证书ID，用于替换实例 HTTPS 服务端点当前绑定的证书。常用于证书到期前的更换场景。</p><p>使用限制：</p><ul><li>仅企业型（Enterprise）且服务端点协议为 HTTPS 的实例支持修改证书。</li><li>证书须为 SSL 证书控制台中状态为“已签发”（可用）且未过期的服务器证书（SVR 类型）。可在 <a href="https://console.cloud.tencent.com/ssl">SSL 证书控制台</a> 查看证书ID。</li><li>替换后新证书立即生效，过程中不会中断业务流量。</li><li>若传入的证书与当前绑定的证书相同，接口直接返回成功，不做任何变更。</li></ul><p>不传则证书保持不变。可通过 <code>DescribeModelRouterDetail</code> 接口的 <code>ServiceEndPoints.CertId</code> 字段查询当前绑定的证书。</p>
      * @param string $ModelRouterName <p>模型路由名称</p>
      * @param RateLimitConfigForModelRouter $RateLimitConfig <p>限速配置</p>
      * @param RouterSettingWithFallBack $RouterSetting <p>路由配置</p>
      * @param integer $Bandwidth <p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+     * @param string $Capability <p>模型输出模态</p>
+     * @param EmbeddingConfig $EmbeddingConfig <p>embedding 模态配置</p>
      */
     function __construct()
     {
@@ -110,6 +126,15 @@ class ModifyModelRouterAttributesRequest extends AbstractModel
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
             $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("Capability",$param) and $param["Capability"] !== null) {
+            $this->Capability = $param["Capability"];
+        }
+
+        if (array_key_exists("EmbeddingConfig",$param) and $param["EmbeddingConfig"] !== null) {
+            $this->EmbeddingConfig = new EmbeddingConfig();
+            $this->EmbeddingConfig->deserialize($param["EmbeddingConfig"]);
         }
     }
 }

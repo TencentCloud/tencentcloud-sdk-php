@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequestBody(string $RequestBody) 设置<p>请求结构体</p>
  * @method string getTaskType() 获取<p>任务类型</p>
  * @method void setTaskType(string $TaskType) 设置<p>任务类型</p>
+ * @method string getTaskInfo() 获取<p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskInfo(string $TaskInfo) 设置<p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStage() 获取<p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStage(string $Stage) 设置<p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -99,6 +107,18 @@ class DescribeAigcTaskStatusResponse extends AbstractModel
     public $TaskType;
 
     /**
+     * @var string <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskInfo;
+
+    /**
+     * @var string <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Stage;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -115,6 +135,10 @@ class DescribeAigcTaskStatusResponse extends AbstractModel
      * @param string $TaskResultMsg <p>任务返回错误信息</p>
      * @param string $RequestBody <p>请求结构体</p>
      * @param string $TaskType <p>任务类型</p>
+     * @param string $TaskInfo <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Stage <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -168,6 +192,14 @@ class DescribeAigcTaskStatusResponse extends AbstractModel
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
+            $this->TaskInfo = $param["TaskInfo"];
+        }
+
+        if (array_key_exists("Stage",$param) and $param["Stage"] !== null) {
+            $this->Stage = $param["Stage"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

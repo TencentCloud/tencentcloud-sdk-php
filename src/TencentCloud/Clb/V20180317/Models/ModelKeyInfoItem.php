@@ -82,6 +82,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHealthCheckConfigs() 获取<p>健康检查配置</p>
  * @method void setHealthCheckConfigs(array $HealthCheckConfigs) 设置<p>健康检查配置</p>
+ * @method string getCapability() 获取<p>模型输出模态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCapability(string $Capability) 设置<p>模型输出模态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEndpointPath() 获取<p>请求后缀</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndpointPath(string $EndpointPath) 设置<p>请求后缀</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModelKeyInfoItem extends AbstractModel
 {
@@ -205,6 +213,18 @@ class ModelKeyInfoItem extends AbstractModel
     public $HealthCheckConfigs;
 
     /**
+     * @var string <p>模型输出模态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Capability;
+
+    /**
+     * @var string <p>请求后缀</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndpointPath;
+
+    /**
      * @param string $AccessType <p>接入类型</p>
      * @param string $ApiBase <p>API Base URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -236,6 +256,10 @@ class ModelKeyInfoItem extends AbstractModel
      * @param string $CMRPrivateNetworkTunnelName <p>私网管道名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HealthCheckConfigs <p>健康检查配置</p>
+     * @param string $Capability <p>模型输出模态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EndpointPath <p>请求后缀</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -362,6 +386,14 @@ class ModelKeyInfoItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->HealthCheckConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("Capability",$param) and $param["Capability"] !== null) {
+            $this->Capability = $param["Capability"];
+        }
+
+        if (array_key_exists("EndpointPath",$param) and $param["EndpointPath"] !== null) {
+            $this->EndpointPath = $param["EndpointPath"];
         }
     }
 }

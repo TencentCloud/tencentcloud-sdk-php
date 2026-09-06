@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置<p>翻页限制</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
  * @method integer getOffset() 获取<p>翻页偏移量</p><p>默认值：0</p>
  * @method void setOffset(integer $Offset) 设置<p>翻页偏移量</p><p>默认值：0</p>
+ * @method string getCapability() 获取<p>模型输出模态</p>
+ * @method void setCapability(string $Capability) 设置<p>模型输出模态</p>
  */
 class DescribeModelAssociationsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeModelAssociationsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string <p>模型输出模态</p>
+     */
+    public $Capability;
+
+    /**
      * @param string $ModelRouterId <p>模型路由实例ID</p>
      * @param integer $Limit <p>翻页限制</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
      * @param integer $Offset <p>翻页偏移量</p><p>默认值：0</p>
+     * @param string $Capability <p>模型输出模态</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeModelAssociationsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Capability",$param) and $param["Capability"] !== null) {
+            $this->Capability = $param["Capability"];
         }
     }
 }

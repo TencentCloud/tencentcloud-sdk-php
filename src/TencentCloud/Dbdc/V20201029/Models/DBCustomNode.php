@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>节点绑定的安全组</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDisasterRecoverGroupId() 获取<p>置放群组ID</p>
+ * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置<p>置放群组ID</p>
  */
 class DBCustomNode extends AbstractModel
 {
@@ -232,6 +234,11 @@ class DBCustomNode extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var string <p>置放群组ID</p>
+     */
+    public $DisasterRecoverGroupId;
+
+    /**
      * @param string $NodeId <p>节点ID</p>
      * @param string $NodeName <p>节点名称</p>
      * @param string $SSHEndpoint <p>访问此节点的SSH Endpoint，格式为IP:Port</p>
@@ -264,6 +271,7 @@ class DBCustomNode extends AbstractModel
      * @param string $EniIP <p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
      * @param array $SecurityGroupIds <p>节点绑定的安全组</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DisasterRecoverGroupId <p>置放群组ID</p>
      */
     function __construct()
     {
@@ -399,6 +407,10 @@ class DBCustomNode extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("DisasterRecoverGroupId",$param) and $param["DisasterRecoverGroupId"] !== null) {
+            $this->DisasterRecoverGroupId = $param["DisasterRecoverGroupId"];
         }
     }
 }

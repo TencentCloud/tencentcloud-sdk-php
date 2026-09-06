@@ -20,298 +20,354 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全电发票（铁路电子客票）
  *
- * @method string getBuyerName() 获取购方名称
+ * @method string getBuyerName() 获取<p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBuyerName(string $BuyerName) 设置购方名称
+ * @method void setBuyerName(string $BuyerName) 设置<p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBuyerTaxCode() 获取购方识别号
+ * @method string getBuyerTaxCode() 获取<p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBuyerTaxCode(string $BuyerTaxCode) 设置购方识别号
+ * @method void setBuyerTaxCode(string $BuyerTaxCode) 设置<p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNumber() 获取发票号码
+ * @method string getNumber() 获取<p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNumber(string $Number) 设置发票号码
+ * @method void setNumber(string $Number) 设置<p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDate() 获取开票日期
+ * @method string getDate() 获取<p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDate(string $Date) 设置开票日期
+ * @method void setDate(string $Date) 设置<p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTotalCN() 获取价税合计（中文大写）
+ * @method string getTotalCN() 获取<p>价税合计（中文大写）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCN(string $TotalCN) 设置价税合计（中文大写）
+ * @method void setTotalCN(string $TotalCN) 设置<p>价税合计（中文大写）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTax() 获取税额
+ * @method string getTax() 获取<p>税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTax(string $Tax) 设置税额
+ * @method void setTax(string $Tax) 设置<p>税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServiceType() 获取业务类型，0：退票，1:售票
+ * @method string getServiceType() 获取<p>业务类型，0：退票，1:售票</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceType(string $ServiceType) 设置业务类型，0：退票，1:售票
+ * @method void setServiceType(string $ServiceType) 设置<p>业务类型，0：退票，1:售票</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTimeGetOn() 获取出发时间
+ * @method string getTimeGetOn() 获取<p>出发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeGetOn(string $TimeGetOn) 设置出发时间
+ * @method void setTimeGetOn(string $TimeGetOn) 设置<p>出发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTrainNumber() 获取车次
+ * @method string getTrainNumber() 获取<p>车次</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTrainNumber(string $TrainNumber) 设置车次
+ * @method void setTrainNumber(string $TrainNumber) 设置<p>车次</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCode() 获取发票代码
+ * @method string getCode() 获取<p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCode(string $Code) 设置发票代码
+ * @method void setCode(string $Code) 设置<p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSeatType() 获取席别
+ * @method string getSeatType() 获取<p>席别</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSeatType(string $SeatType) 设置席别
+ * @method void setSeatType(string $SeatType) 设置<p>席别</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDateGetOn() 获取乘车日期
+ * @method string getDateGetOn() 获取<p>乘车日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDateGetOn(string $DateGetOn) 设置乘车日期
+ * @method void setDateGetOn(string $DateGetOn) 设置<p>乘车日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTrainCabin() 获取车厢
+ * @method string getTrainCabin() 获取<p>车厢</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTrainCabin(string $TrainCabin) 设置车厢
+ * @method void setTrainCabin(string $TrainCabin) 设置<p>车厢</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStationGetOn() 获取出发站
+ * @method string getStationGetOn() 获取<p>出发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStationGetOn(string $StationGetOn) 设置出发站
+ * @method void setStationGetOn(string $StationGetOn) 设置<p>出发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getElectronicNumber() 获取电子客票号
+ * @method string getElectronicNumber() 获取<p>电子客票号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setElectronicNumber(string $ElectronicNumber) 设置电子客票号
+ * @method void setElectronicNumber(string $ElectronicNumber) 设置<p>电子客票号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPassengerName() 获取姓名
+ * @method string getPassengerName() 获取<p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPassengerName(string $PassengerName) 设置姓名
+ * @method void setPassengerName(string $PassengerName) 设置<p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPassengerNo() 获取证件号
+ * @method string getPassengerNo() 获取<p>证件号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPassengerNo(string $PassengerNo) 设置证件号
+ * @method void setPassengerNo(string $PassengerNo) 设置<p>证件号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAmount() 获取金额
+ * @method string getAmount() 获取<p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAmount(string $Amount) 设置金额
+ * @method void setAmount(string $Amount) 设置<p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStationGetOff() 获取到达站
+ * @method string getStationGetOff() 获取<p>到达站</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStationGetOff(string $StationGetOff) 设置到达站
+ * @method void setStationGetOff(string $StationGetOff) 设置<p>到达站</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaxRate() 获取税率
+ * @method string getTaxRate() 获取<p>税率</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaxRate(string $TaxRate) 设置税率
+ * @method void setTaxRate(string $TaxRate) 设置<p>税率</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSeat() 获取席位
+ * @method string getSeat() 获取<p>席位</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSeat(string $Seat) 设置席位
+ * @method void setSeat(string $Seat) 设置<p>席位</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTotal() 获取价税合计
+ * @method string getTotal() 获取<p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(string $Total) 设置价税合计
+ * @method void setTotal(string $Total) 设置<p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCheckCode() 获取校验码
+ * @method string getCheckCode() 获取<p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCheckCode(string $CheckCode) 设置校验码
+ * @method void setCheckCode(string $CheckCode) 设置<p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStateCode() 获取发票状态代码，0正常 1 未更新  2作废 3已红冲
+ * @method string getStateCode() 获取<p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStateCode(string $StateCode) 设置发票状态代码，0正常 1 未更新  2作废 3已红冲
+ * @method void setStateCode(string $StateCode) 设置<p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取<p>发票类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(string $Type) 设置<p>发票类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAirConditionerFeature() 获取<p>空调特征</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAirConditionerFeature(string $AirConditionerFeature) 设置<p>空调特征</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTicketType() 获取<p>票种，不替代 VatInvoice.Type。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTicketType(string $TicketType) 设置<p>票种，不替代 VatInvoice.Type。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginalTaxRate() 获取<p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginalTaxRate(string $OriginalTaxRate) 设置<p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFullElectronicNumber() 获取<p>全电发票号码，映射源字段 qdfphm。</p>
+ * @method void setFullElectronicNumber(string $FullElectronicNumber) 设置<p>全电发票号码，映射源字段 qdfphm。</p>
  */
 class ElectronicTrainTicket extends AbstractModel
 {
     /**
-     * @var string 购方名称
+     * @var string <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuyerName;
 
     /**
-     * @var string 购方识别号
+     * @var string <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuyerTaxCode;
 
     /**
-     * @var string 发票号码
+     * @var string <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Number;
 
     /**
-     * @var string 开票日期
+     * @var string <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Date;
 
     /**
-     * @var string 价税合计（中文大写）
+     * @var string <p>价税合计（中文大写）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCN;
 
     /**
-     * @var string 税额
+     * @var string <p>税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tax;
 
     /**
-     * @var string 业务类型，0：退票，1:售票
+     * @var string <p>业务类型，0：退票，1:售票</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceType;
 
     /**
-     * @var string 出发时间
+     * @var string <p>出发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeGetOn;
 
     /**
-     * @var string 车次
+     * @var string <p>车次</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrainNumber;
 
     /**
-     * @var string 发票代码
+     * @var string <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
-     * @var string 席别
+     * @var string <p>席别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SeatType;
 
     /**
-     * @var string 乘车日期
+     * @var string <p>乘车日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DateGetOn;
 
     /**
-     * @var string 车厢
+     * @var string <p>车厢</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrainCabin;
 
     /**
-     * @var string 出发站
+     * @var string <p>出发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StationGetOn;
 
     /**
-     * @var string 电子客票号
+     * @var string <p>电子客票号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElectronicNumber;
 
     /**
-     * @var string 姓名
+     * @var string <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PassengerName;
 
     /**
-     * @var string 证件号
+     * @var string <p>证件号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PassengerNo;
 
     /**
-     * @var string 金额
+     * @var string <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Amount;
 
     /**
-     * @var string 到达站
+     * @var string <p>到达站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StationGetOff;
 
     /**
-     * @var string 税率
+     * @var string <p>税率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaxRate;
 
     /**
-     * @var string 席位
+     * @var string <p>席位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Seat;
 
     /**
-     * @var string 价税合计
+     * @var string <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var string 校验码
+     * @var string <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckCode;
 
     /**
-     * @var string 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * @var string <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StateCode;
 
     /**
-     * @param string $BuyerName 购方名称
+     * @var string <p>发票类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BuyerTaxCode 购方识别号
+     */
+    public $Type;
+
+    /**
+     * @var string <p>空调特征</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Number 发票号码
+     */
+    public $AirConditionerFeature;
+
+    /**
+     * @var string <p>票种，不替代 VatInvoice.Type。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Date 开票日期
+     */
+    public $TicketType;
+
+    /**
+     * @var string <p>原始税率</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TotalCN 价税合计（中文大写）
+     */
+    public $OriginalTaxRate;
+
+    /**
+     * @var string <p>全电发票号码，映射源字段 qdfphm。</p>
+     */
+    public $FullElectronicNumber;
+
+    /**
+     * @param string $BuyerName <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Tax 税额
+     * @param string $BuyerTaxCode <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServiceType 业务类型，0：退票，1:售票
+     * @param string $Number <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TimeGetOn 出发时间
+     * @param string $Date <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TrainNumber 车次
+     * @param string $TotalCN <p>价税合计（中文大写）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Code 发票代码
+     * @param string $Tax <p>税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SeatType 席别
+     * @param string $ServiceType <p>业务类型，0：退票，1:售票</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DateGetOn 乘车日期
+     * @param string $TimeGetOn <p>出发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TrainCabin 车厢
+     * @param string $TrainNumber <p>车次</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StationGetOn 出发站
+     * @param string $Code <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ElectronicNumber 电子客票号
+     * @param string $SeatType <p>席别</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PassengerName 姓名
+     * @param string $DateGetOn <p>乘车日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PassengerNo 证件号
+     * @param string $TrainCabin <p>车厢</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Amount 金额
+     * @param string $StationGetOn <p>出发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StationGetOff 到达站
+     * @param string $ElectronicNumber <p>电子客票号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaxRate 税率
+     * @param string $PassengerName <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Seat 席位
+     * @param string $PassengerNo <p>证件号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Total 价税合计
+     * @param string $Amount <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CheckCode 校验码
+     * @param string $StationGetOff <p>到达站</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StateCode 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * @param string $TaxRate <p>税率</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Seat <p>席位</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Total <p>价税合计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CheckCode <p>校验码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StateCode <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type <p>发票类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AirConditionerFeature <p>空调特征</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TicketType <p>票种，不替代 VatInvoice.Type。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginalTaxRate <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FullElectronicNumber <p>全电发票号码，映射源字段 qdfphm。</p>
      */
     function __construct()
     {
@@ -420,6 +476,26 @@ class ElectronicTrainTicket extends AbstractModel
 
         if (array_key_exists("StateCode",$param) and $param["StateCode"] !== null) {
             $this->StateCode = $param["StateCode"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("AirConditionerFeature",$param) and $param["AirConditionerFeature"] !== null) {
+            $this->AirConditionerFeature = $param["AirConditionerFeature"];
+        }
+
+        if (array_key_exists("TicketType",$param) and $param["TicketType"] !== null) {
+            $this->TicketType = $param["TicketType"];
+        }
+
+        if (array_key_exists("OriginalTaxRate",$param) and $param["OriginalTaxRate"] !== null) {
+            $this->OriginalTaxRate = $param["OriginalTaxRate"];
+        }
+
+        if (array_key_exists("FullElectronicNumber",$param) and $param["FullElectronicNumber"] !== null) {
+            $this->FullElectronicNumber = $param["FullElectronicNumber"];
         }
     }
 }

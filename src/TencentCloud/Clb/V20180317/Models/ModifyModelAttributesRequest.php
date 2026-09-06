@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceProviderName(string $ServiceProviderName) 设置<p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
  * @method array getApiBases() 获取<p>多协议 Api Base URL</p>
  * @method void setApiBases(array $ApiBases) 设置<p>多协议 Api Base URL</p>
+ * @method string getApiBase() 获取<p>非chat输出模态的Api Base URL</p>
+ * @method void setApiBase(string $ApiBase) 设置<p>非chat输出模态的Api Base URL</p>
+ * @method string getEndpointPath() 获取<p>非chat输出模态的请求后缀</p>
+ * @method void setEndpointPath(string $EndpointPath) 设置<p>非chat输出模态的请求后缀</p>
  */
 class ModifyModelAttributesRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ModifyModelAttributesRequest extends AbstractModel
     public $ApiBases;
 
     /**
+     * @var string <p>非chat输出模态的Api Base URL</p>
+     */
+    public $ApiBase;
+
+    /**
+     * @var string <p>非chat输出模态的请求后缀</p>
+     */
+    public $EndpointPath;
+
+    /**
      * @param string $ServiceProviderId <p>BYOK的ID</p><p>参数格式：byok-kot39u7j</p>
      * @param string $ServiceProviderName <p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
      * @param array $ApiBases <p>多协议 Api Base URL</p>
+     * @param string $ApiBase <p>非chat输出模态的Api Base URL</p>
+     * @param string $EndpointPath <p>非chat输出模态的请求后缀</p>
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class ModifyModelAttributesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ApiBases, $obj);
             }
+        }
+
+        if (array_key_exists("ApiBase",$param) and $param["ApiBase"] !== null) {
+            $this->ApiBase = $param["ApiBase"];
+        }
+
+        if (array_key_exists("EndpointPath",$param) and $param["EndpointPath"] !== null) {
+            $this->EndpointPath = $param["EndpointPath"];
         }
     }
 }

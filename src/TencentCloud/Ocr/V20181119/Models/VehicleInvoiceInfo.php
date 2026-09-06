@@ -20,162 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 机动车销售统一发票信息
  *
- * @method string getCarType() 获取车辆类型
- * @method void setCarType(string $CarType) 设置车辆类型
- * @method string getPlateModel() 获取厂牌型号
- * @method void setPlateModel(string $PlateModel) 设置厂牌型号
- * @method string getProduceAddress() 获取产地
- * @method void setProduceAddress(string $ProduceAddress) 设置产地
- * @method string getCertificateNo() 获取合格证号
- * @method void setCertificateNo(string $CertificateNo) 设置合格证号
- * @method string getImportNo() 获取进口证明书号
- * @method void setImportNo(string $ImportNo) 设置进口证明书号
- * @method string getVinNo() 获取LSVCA2NP9HN0xxxxx
- * @method void setVinNo(string $VinNo) 设置LSVCA2NP9HN0xxxxx
- * @method string getPayTaxesNo() 获取完税证书号
- * @method void setPayTaxesNo(string $PayTaxesNo) 设置完税证书号
- * @method string getTonnage() 获取吨位
- * @method void setTonnage(string $Tonnage) 设置吨位
- * @method string getLimitCount() 获取限乘人数
- * @method void setLimitCount(string $LimitCount) 设置限乘人数
- * @method string getEngineNo() 获取发动机号码
- * @method void setEngineNo(string $EngineNo) 设置发动机号码
- * @method string getBizCheckFormNo() 获取商检单号
- * @method void setBizCheckFormNo(string $BizCheckFormNo) 设置商检单号
- * @method string getTaxtationOrgCode() 获取主管税务机关代码
- * @method void setTaxtationOrgCode(string $TaxtationOrgCode) 设置主管税务机关代码
- * @method string getTaxtationOrgName() 获取主管税务机关名称
- * @method void setTaxtationOrgName(string $TaxtationOrgName) 设置主管税务机关名称
- * @method string getMotorTaxRate() 获取税率
- * @method void setMotorTaxRate(string $MotorTaxRate) 设置税率
- * @method string getMotorBankName() 获取银行账号
- * @method void setMotorBankName(string $MotorBankName) 设置银行账号
- * @method string getMotorBankAccount() 获取开户行
- * @method void setMotorBankAccount(string $MotorBankAccount) 设置开户行
- * @method string getSellerAddress() 获取销售地址
- * @method void setSellerAddress(string $SellerAddress) 设置销售地址
- * @method string getSellerTel() 获取销售电话
- * @method void setSellerTel(string $SellerTel) 设置销售电话
- * @method string getBuyerNo() 获取购方身份证
- * @method void setBuyerNo(string $BuyerNo) 设置购方身份证
+ * @method string getCarType() 获取<p>车辆类型</p>
+ * @method void setCarType(string $CarType) 设置<p>车辆类型</p>
+ * @method string getPlateModel() 获取<p>厂牌型号</p>
+ * @method void setPlateModel(string $PlateModel) 设置<p>厂牌型号</p>
+ * @method string getProduceAddress() 获取<p>产地</p>
+ * @method void setProduceAddress(string $ProduceAddress) 设置<p>产地</p>
+ * @method string getCertificateNo() 获取<p>合格证号</p>
+ * @method void setCertificateNo(string $CertificateNo) 设置<p>合格证号</p>
+ * @method string getImportNo() 获取<p>进口证明书号</p>
+ * @method void setImportNo(string $ImportNo) 设置<p>进口证明书号</p>
+ * @method string getVinNo() 获取<p>LSVCA2NP9HN0xxxxx</p>
+ * @method void setVinNo(string $VinNo) 设置<p>LSVCA2NP9HN0xxxxx</p>
+ * @method string getPayTaxesNo() 获取<p>完税证书号</p>
+ * @method void setPayTaxesNo(string $PayTaxesNo) 设置<p>完税证书号</p>
+ * @method string getTonnage() 获取<p>吨位</p>
+ * @method void setTonnage(string $Tonnage) 设置<p>吨位</p>
+ * @method string getLimitCount() 获取<p>限乘人数</p>
+ * @method void setLimitCount(string $LimitCount) 设置<p>限乘人数</p>
+ * @method string getEngineNo() 获取<p>发动机号码</p>
+ * @method void setEngineNo(string $EngineNo) 设置<p>发动机号码</p>
+ * @method string getBizCheckFormNo() 获取<p>商检单号</p>
+ * @method void setBizCheckFormNo(string $BizCheckFormNo) 设置<p>商检单号</p>
+ * @method string getTaxtationOrgCode() 获取<p>主管税务机关代码</p>
+ * @method void setTaxtationOrgCode(string $TaxtationOrgCode) 设置<p>主管税务机关代码</p>
+ * @method string getTaxtationOrgName() 获取<p>主管税务机关名称</p>
+ * @method void setTaxtationOrgName(string $TaxtationOrgName) 设置<p>主管税务机关名称</p>
+ * @method string getMotorTaxRate() 获取<p>税率</p>
+ * @method void setMotorTaxRate(string $MotorTaxRate) 设置<p>税率</p>
+ * @method string getMotorBankName() 获取<p>银行账号</p>
+ * @method void setMotorBankName(string $MotorBankName) 设置<p>银行账号</p>
+ * @method string getMotorBankAccount() 获取<p>开户行</p>
+ * @method void setMotorBankAccount(string $MotorBankAccount) 设置<p>开户行</p>
+ * @method string getSellerAddress() 获取<p>销售地址</p>
+ * @method void setSellerAddress(string $SellerAddress) 设置<p>销售地址</p>
+ * @method string getSellerTel() 获取<p>销售电话</p>
+ * @method void setSellerTel(string $SellerTel) 设置<p>销售电话</p>
+ * @method string getBuyerNo() 获取<p>购方身份证</p>
+ * @method void setBuyerNo(string $BuyerNo) 设置<p>购方身份证</p>
  */
 class VehicleInvoiceInfo extends AbstractModel
 {
     /**
-     * @var string 车辆类型
+     * @var string <p>车辆类型</p>
      */
     public $CarType;
 
     /**
-     * @var string 厂牌型号
+     * @var string <p>厂牌型号</p>
      */
     public $PlateModel;
 
     /**
-     * @var string 产地
+     * @var string <p>产地</p>
      */
     public $ProduceAddress;
 
     /**
-     * @var string 合格证号
+     * @var string <p>合格证号</p>
      */
     public $CertificateNo;
 
     /**
-     * @var string 进口证明书号
+     * @var string <p>进口证明书号</p>
      */
     public $ImportNo;
 
     /**
-     * @var string LSVCA2NP9HN0xxxxx
+     * @var string <p>LSVCA2NP9HN0xxxxx</p>
      */
     public $VinNo;
 
     /**
-     * @var string 完税证书号
+     * @var string <p>完税证书号</p>
      */
     public $PayTaxesNo;
 
     /**
-     * @var string 吨位
+     * @var string <p>吨位</p>
      */
     public $Tonnage;
 
     /**
-     * @var string 限乘人数
+     * @var string <p>限乘人数</p>
      */
     public $LimitCount;
 
     /**
-     * @var string 发动机号码
+     * @var string <p>发动机号码</p>
      */
     public $EngineNo;
 
     /**
-     * @var string 商检单号
+     * @var string <p>商检单号</p>
      */
     public $BizCheckFormNo;
 
     /**
-     * @var string 主管税务机关代码
+     * @var string <p>主管税务机关代码</p>
      */
     public $TaxtationOrgCode;
 
     /**
-     * @var string 主管税务机关名称
+     * @var string <p>主管税务机关名称</p>
      */
     public $TaxtationOrgName;
 
     /**
-     * @var string 税率
+     * @var string <p>税率</p>
      */
     public $MotorTaxRate;
 
     /**
-     * @var string 银行账号
+     * @var string <p>银行账号</p>
      */
     public $MotorBankName;
 
     /**
-     * @var string 开户行
+     * @var string <p>开户行</p>
      */
     public $MotorBankAccount;
 
     /**
-     * @var string 销售地址
+     * @var string <p>销售地址</p>
      */
     public $SellerAddress;
 
     /**
-     * @var string 销售电话
+     * @var string <p>销售电话</p>
      */
     public $SellerTel;
 
     /**
-     * @var string 购方身份证
+     * @var string <p>购方身份证</p>
      */
     public $BuyerNo;
 
     /**
-     * @param string $CarType 车辆类型
-     * @param string $PlateModel 厂牌型号
-     * @param string $ProduceAddress 产地
-     * @param string $CertificateNo 合格证号
-     * @param string $ImportNo 进口证明书号
-     * @param string $VinNo LSVCA2NP9HN0xxxxx
-     * @param string $PayTaxesNo 完税证书号
-     * @param string $Tonnage 吨位
-     * @param string $LimitCount 限乘人数
-     * @param string $EngineNo 发动机号码
-     * @param string $BizCheckFormNo 商检单号
-     * @param string $TaxtationOrgCode 主管税务机关代码
-     * @param string $TaxtationOrgName 主管税务机关名称
-     * @param string $MotorTaxRate 税率
-     * @param string $MotorBankName 银行账号
-     * @param string $MotorBankAccount 开户行
-     * @param string $SellerAddress 销售地址
-     * @param string $SellerTel 销售电话
-     * @param string $BuyerNo 购方身份证
+     * @param string $CarType <p>车辆类型</p>
+     * @param string $PlateModel <p>厂牌型号</p>
+     * @param string $ProduceAddress <p>产地</p>
+     * @param string $CertificateNo <p>合格证号</p>
+     * @param string $ImportNo <p>进口证明书号</p>
+     * @param string $VinNo <p>LSVCA2NP9HN0xxxxx</p>
+     * @param string $PayTaxesNo <p>完税证书号</p>
+     * @param string $Tonnage <p>吨位</p>
+     * @param string $LimitCount <p>限乘人数</p>
+     * @param string $EngineNo <p>发动机号码</p>
+     * @param string $BizCheckFormNo <p>商检单号</p>
+     * @param string $TaxtationOrgCode <p>主管税务机关代码</p>
+     * @param string $TaxtationOrgName <p>主管税务机关名称</p>
+     * @param string $MotorTaxRate <p>税率</p>
+     * @param string $MotorBankName <p>银行账号</p>
+     * @param string $MotorBankAccount <p>开户行</p>
+     * @param string $SellerAddress <p>销售地址</p>
+     * @param string $SellerTel <p>销售电话</p>
+     * @param string $BuyerNo <p>购方身份证</p>
      */
     function __construct()
     {

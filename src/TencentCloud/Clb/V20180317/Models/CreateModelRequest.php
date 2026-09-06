@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCMRPrivateNetworkTunnelId(string $CMRPrivateNetworkTunnelId) 设置<p>私网管道 ID</p>
  * @method array getHealthCheckConfigs() 获取<p>健康检查配置</p>
  * @method void setHealthCheckConfigs(array $HealthCheckConfigs) 设置<p>健康检查配置</p>
+ * @method string getCapability() 获取<p>模型输出模态</p>
+ * @method void setCapability(string $Capability) 设置<p>模型输出模态</p>
+ * @method string getEndpointPath() 获取<p>请求后缀</p>
+ * @method void setEndpointPath(string $EndpointPath) 设置<p>请求后缀</p>
  */
 class CreateModelRequest extends AbstractModel
 {
@@ -143,6 +147,16 @@ class CreateModelRequest extends AbstractModel
     public $HealthCheckConfigs;
 
     /**
+     * @var string <p>模型输出模态</p>
+     */
+    public $Capability;
+
+    /**
+     * @var string <p>请求后缀</p>
+     */
+    public $EndpointPath;
+
+    /**
      * @param string $AccessType <p>接入类型：PublicBYOK/PublicCustom/PrivateCustom</p>
      * @param string $ModelProvider <p>模型提供商</p>
      * @param array $ModelIds <p>通用模型标识列表</p>
@@ -160,6 +174,8 @@ class CreateModelRequest extends AbstractModel
      * @param ServiceProviderHealthCheckConfigInput $HealthCheckConfig <p>健康检查配置</p>
      * @param string $CMRPrivateNetworkTunnelId <p>私网管道 ID</p>
      * @param array $HealthCheckConfigs <p>健康检查配置</p>
+     * @param string $Capability <p>模型输出模态</p>
+     * @param string $EndpointPath <p>请求后缀</p>
      */
     function __construct()
     {
@@ -266,6 +282,14 @@ class CreateModelRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->HealthCheckConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("Capability",$param) and $param["Capability"] !== null) {
+            $this->Capability = $param["Capability"];
+        }
+
+        if (array_key_exists("EndpointPath",$param) and $param["EndpointPath"] !== null) {
+            $this->EndpointPath = $param["EndpointPath"];
         }
     }
 }

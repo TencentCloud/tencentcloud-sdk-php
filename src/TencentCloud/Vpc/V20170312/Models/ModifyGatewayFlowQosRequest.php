@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGatewayFlowQos请求参数结构体
  *
- * @method string getGatewayId() 获取网关实例ID，目前我们支持的网关实例类型有，
-专线网关实例ID，形如，`dcg-ltjahce6`；
-Nat网关实例ID，形如，`nat-ltjahce6`；
-VPN网关实例ID，形如，`vpn-ltjahce6`。
- * @method void setGatewayId(string $GatewayId) 设置网关实例ID，目前我们支持的网关实例类型有，
-专线网关实例ID，形如，`dcg-ltjahce6`；
-Nat网关实例ID，形如，`nat-ltjahce6`；
-VPN网关实例ID，形如，`vpn-ltjahce6`。
- * @method integer getBandwidth() 获取流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
- * @method void setBandwidth(integer $Bandwidth) 设置流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
- * @method array getIpAddresses() 获取限流的云服务器内网IP。
- * @method void setIpAddresses(array $IpAddresses) 设置限流的云服务器内网IP。
+ * @method string getGatewayId() 获取<p>网关实例ID，目前我们支持的网关实例类型有，<br>专线网关实例ID，形如，<code>dcg-ltjahce6</code>；<br>Nat网关实例ID，形如，<code>nat-ltjahce6</code>；<br>VPN网关实例ID，形如，<code>vpn-ltjahce6</code>。</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关实例ID，目前我们支持的网关实例类型有，<br>专线网关实例ID，形如，<code>dcg-ltjahce6</code>；<br>Nat网关实例ID，形如，<code>nat-ltjahce6</code>；<br>VPN网关实例ID，形如，<code>vpn-ltjahce6</code>。</p>
+ * @method integer getBandwidth() 获取<p>流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。</p>
+ * @method array getIpAddresses() 获取<p>限流的云服务器内网IP。</p><p>参数格式：10.0.0.2</p>
+ * @method void setIpAddresses(array $IpAddresses) 设置<p>限流的云服务器内网IP。</p><p>参数格式：10.0.0.2</p>
+ * @method string getDirection() 获取<p>限流方向，取值为In代表入向，Out代表出向。当前仅标准型Nat实例网关流控带宽方向可设置入向限流。</p>
+ * @method void setDirection(string $Direction) 设置<p>限流方向，取值为In代表入向，Out代表出向。当前仅标准型Nat实例网关流控带宽方向可设置入向限流。</p>
  */
 class ModifyGatewayFlowQosRequest extends AbstractModel
 {
     /**
-     * @var string 网关实例ID，目前我们支持的网关实例类型有，
-专线网关实例ID，形如，`dcg-ltjahce6`；
-Nat网关实例ID，形如，`nat-ltjahce6`；
-VPN网关实例ID，形如，`vpn-ltjahce6`。
+     * @var string <p>网关实例ID，目前我们支持的网关实例类型有，<br>专线网关实例ID，形如，<code>dcg-ltjahce6</code>；<br>Nat网关实例ID，形如，<code>nat-ltjahce6</code>；<br>VPN网关实例ID，形如，<code>vpn-ltjahce6</code>。</p>
      */
     public $GatewayId;
 
     /**
-     * @var integer 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
+     * @var integer <p>流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。</p>
      */
     public $Bandwidth;
 
     /**
-     * @var array 限流的云服务器内网IP。
+     * @var array <p>限流的云服务器内网IP。</p><p>参数格式：10.0.0.2</p>
      */
     public $IpAddresses;
 
     /**
-     * @param string $GatewayId 网关实例ID，目前我们支持的网关实例类型有，
-专线网关实例ID，形如，`dcg-ltjahce6`；
-Nat网关实例ID，形如，`nat-ltjahce6`；
-VPN网关实例ID，形如，`vpn-ltjahce6`。
-     * @param integer $Bandwidth 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
-     * @param array $IpAddresses 限流的云服务器内网IP。
+     * @var string <p>限流方向，取值为In代表入向，Out代表出向。当前仅标准型Nat实例网关流控带宽方向可设置入向限流。</p>
+     */
+    public $Direction;
+
+    /**
+     * @param string $GatewayId <p>网关实例ID，目前我们支持的网关实例类型有，<br>专线网关实例ID，形如，<code>dcg-ltjahce6</code>；<br>Nat网关实例ID，形如，<code>nat-ltjahce6</code>；<br>VPN网关实例ID，形如，<code>vpn-ltjahce6</code>。</p>
+     * @param integer $Bandwidth <p>流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。</p>
+     * @param array $IpAddresses <p>限流的云服务器内网IP。</p><p>参数格式：10.0.0.2</p>
+     * @param string $Direction <p>限流方向，取值为In代表入向，Out代表出向。当前仅标准型Nat实例网关流控带宽方向可设置入向限流。</p>
      */
     function __construct()
     {
@@ -84,6 +80,10 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
 
         if (array_key_exists("IpAddresses",$param) and $param["IpAddresses"] !== null) {
             $this->IpAddresses = $param["IpAddresses"];
+        }
+
+        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
+            $this->Direction = $param["Direction"];
         }
     }
 }

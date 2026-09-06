@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncludeZoneStocks(boolean $IncludeZoneStocks) 设置<p>是否需要返回可用区信息</p>
  * @method string getDeviceType() 获取<p>实例机器类型</p>
  * @method void setDeviceType(string $DeviceType) 设置<p>实例机器类型</p>
- * @method string getClusterLevel() 获取<p>集群级别，可空。例如 P0, P1</p>
- * @method void setClusterLevel(string $ClusterLevel) 设置<p>集群级别，可空。例如 P0, P1</p>
+ * @method string getClusterLevel() 获取<p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
+ * @method void setClusterLevel(string $ClusterLevel) 设置<p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
  */
 class DescribeInstanceSpecsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeInstanceSpecsRequest extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var string <p>集群级别，可空。例如 P0, P1</p>
+     * @var string <p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
      */
     public $ClusterLevel;
 
@@ -55,7 +55,7 @@ class DescribeInstanceSpecsRequest extends AbstractModel
      * @param string $DbType <p>数据库类型，取值范围: </p><li> MYSQL </li>
      * @param boolean $IncludeZoneStocks <p>是否需要返回可用区信息</p>
      * @param string $DeviceType <p>实例机器类型</p>
-     * @param string $ClusterLevel <p>集群级别，可空。例如 P0, P1</p>
+     * @param string $ClusterLevel <p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
      */
     function __construct()
     {

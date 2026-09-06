@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRequestBody(string $RequestBody) 设置<p>任务请求包</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskInfo() 获取<p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskInfo(string $TaskInfo) 设置<p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStage() 获取<p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStage(string $Stage) 设置<p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AigcTaskListItem extends AbstractModel
 {
@@ -117,6 +125,18 @@ class AigcTaskListItem extends AbstractModel
     public $RequestBody;
 
     /**
+     * @var string <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskInfo;
+
+    /**
+     * @var string <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Stage;
+
+    /**
      * @param string $TaskId <p>任务ID</p>
      * @param string $TaskType <p>任务类型</p><p>枚举值：</p><ul><li>VideoRedraw： 转绘任务</li><li>AIDrama： AI漫剧任务</li></ul>
      * @param string $TaskStatus <p>任务状态</p><p>枚举值：</p><ul><li>PENDING： 任务等待调度</li><li>RUNNING： 任务运行中</li><li>FINISHED： 任务执行成功</li><li>STOP： 任务被中止</li><li>FAILED： 任务失败</li><li>TIMEOUT： 任务超时</li></ul>
@@ -131,6 +151,10 @@ class AigcTaskListItem extends AbstractModel
      * @param string $Ratio <p>输出视频的宽高比</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestBody <p>任务请求包</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskInfo <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Stage <p>任务子状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -192,6 +216,14 @@ class AigcTaskListItem extends AbstractModel
 
         if (array_key_exists("RequestBody",$param) and $param["RequestBody"] !== null) {
             $this->RequestBody = $param["RequestBody"];
+        }
+
+        if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
+            $this->TaskInfo = $param["TaskInfo"];
+        }
+
+        if (array_key_exists("Stage",$param) and $param["Stage"] !== null) {
+            $this->Stage = $param["Stage"];
         }
     }
 }

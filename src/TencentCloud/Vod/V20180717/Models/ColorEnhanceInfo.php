@@ -20,50 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 色彩增强控制参数
  *
- * @method string getSwitch() 获取色彩增强控制开关，可选值：
-<li>ON：开启综合增强；</li>
-<li>OFF：关闭综合增强。</li>
- * @method void setSwitch(string $Switch) 设置色彩增强控制开关，可选值：
-<li>ON：开启综合增强；</li>
-<li>OFF：关闭综合增强。</li>
- * @method string getType() 获取色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：
-<li>weak：轻色彩增强；</li>
-<li>normal：正常色彩增强；</li>
-<li>strong：强色彩增强。</li>
-默认值：weak。
- * @method void setType(string $Type) 设置色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：
-<li>weak：轻色彩增强；</li>
-<li>normal：正常色彩增强；</li>
-<li>strong：强色彩增强。</li>
-默认值：weak。
+ * @method string getSwitch() 获取<p>色彩增强控制开关</p><p>枚举值：</p><ul><li>ON： 开启色彩增强</li><li>OFF： 关闭色彩增强</li></ul>
+ * @method void setSwitch(string $Switch) 设置<p>色彩增强控制开关</p><p>枚举值：</p><ul><li>ON： 开启色彩增强</li><li>OFF： 关闭色彩增强</li></ul>
+ * @method string getType() 获取<p>色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：</p><li>weak：轻色彩增强；</li><li>normal：正常色彩增强；</li><li>strong：强色彩增强。</li>默认值：weak。
+ * @method void setType(string $Type) 设置<p>色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：</p><li>weak：轻色彩增强；</li><li>normal：正常色彩增强；</li><li>strong：强色彩增强。</li>默认值：weak。
  */
 class ColorEnhanceInfo extends AbstractModel
 {
     /**
-     * @var string 色彩增强控制开关，可选值：
-<li>ON：开启综合增强；</li>
-<li>OFF：关闭综合增强。</li>
+     * @var string <p>色彩增强控制开关</p><p>枚举值：</p><ul><li>ON： 开启色彩增强</li><li>OFF： 关闭色彩增强</li></ul>
      */
     public $Switch;
 
     /**
-     * @var string 色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：
-<li>weak：轻色彩增强；</li>
-<li>normal：正常色彩增强；</li>
-<li>strong：强色彩增强。</li>
-默认值：weak。
+     * @var string <p>色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：</p><li>weak：轻色彩增强；</li><li>normal：正常色彩增强；</li><li>strong：强色彩增强。</li>默认值：weak。
      */
     public $Type;
 
     /**
-     * @param string $Switch 色彩增强控制开关，可选值：
-<li>ON：开启综合增强；</li>
-<li>OFF：关闭综合增强。</li>
-     * @param string $Type 色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：
-<li>weak：轻色彩增强；</li>
-<li>normal：正常色彩增强；</li>
-<li>strong：强色彩增强。</li>
-默认值：weak。
+     * @param string $Switch <p>色彩增强控制开关</p><p>枚举值：</p><ul><li>ON： 开启色彩增强</li><li>OFF： 关闭色彩增强</li></ul>
+     * @param string $Type <p>色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：</p><li>weak：轻色彩增强；</li><li>normal：正常色彩增强；</li><li>strong：强色彩增强。</li>默认值：weak。
      */
     function __construct()
     {

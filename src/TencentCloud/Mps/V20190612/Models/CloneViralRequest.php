@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContentParam(CloneViralContent $ContentParam) 设置<p>内容/风格相关参数</p>
  * @method CloneViralPersona getPersona() 获取<p>模特形象</p>
  * @method void setPersona(CloneViralPersona $Persona) 设置<p>模特形象</p>
+ * @method CloneViralOutputOption getOutput() 获取<p>输出相关参数</p>
+ * @method void setOutput(CloneViralOutputOption $Output) 设置<p>输出相关参数</p>
  */
 class CloneViralRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CloneViralRequest extends AbstractModel
     public $Persona;
 
     /**
+     * @var CloneViralOutputOption <p>输出相关参数</p>
+     */
+    public $Output;
+
+    /**
      * @param string $VideoUrl <p>爆款视频Url</p>
      * @param CloneViralProduct $Product <p>产品信息</p>
      * @param CloneViralAIGC $AIGCParam <p>AIGC生视频相关参数</p>
      * @param CloneViralContent $ContentParam <p>内容/风格相关参数</p>
      * @param CloneViralPersona $Persona <p>模特形象</p>
+     * @param CloneViralOutputOption $Output <p>输出相关参数</p>
      */
     function __construct()
     {
@@ -100,6 +108,11 @@ class CloneViralRequest extends AbstractModel
         if (array_key_exists("Persona",$param) and $param["Persona"] !== null) {
             $this->Persona = new CloneViralPersona();
             $this->Persona->deserialize($param["Persona"]);
+        }
+
+        if (array_key_exists("Output",$param) and $param["Output"] !== null) {
+            $this->Output = new CloneViralOutputOption();
+            $this->Output->deserialize($param["Output"]);
         }
     }
 }

@@ -20,406 +20,430 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 增值税发票、购车发票、全电发票的基础要素字段信息。
  *
- * @method string getCode() 获取发票代码
- * @method void setCode(string $Code) 设置发票代码
- * @method string getNumber() 获取发票号码
- * @method void setNumber(string $Number) 设置发票号码
- * @method string getDate() 获取开票日期
- * @method void setDate(string $Date) 设置开票日期
- * @method string getBuyerName() 获取购方抬头
-通用机打发票类型时不返回
- * @method void setBuyerName(string $BuyerName) 设置购方抬头
-通用机打发票类型时不返回
- * @method string getBuyerTaxCode() 获取购方税号
-通用机打发票类型时不返回
- * @method void setBuyerTaxCode(string $BuyerTaxCode) 设置购方税号
-通用机打发票类型时不返回
- * @method string getBuyerAddressPhone() 获取购方地址电话
-通用机打发票类型做不返回
- * @method void setBuyerAddressPhone(string $BuyerAddressPhone) 设置购方地址电话
-通用机打发票类型做不返回
- * @method string getBuyerBankAccount() 获取购方银行账号
-通用机打发票类型时不返回
- * @method void setBuyerBankAccount(string $BuyerBankAccount) 设置购方银行账号
-通用机打发票类型时不返回
- * @method string getSellerName() 获取销方名称
- * @method void setSellerName(string $SellerName) 设置销方名称
- * @method string getSellerTaxCode() 获取销方税号
- * @method void setSellerTaxCode(string $SellerTaxCode) 设置销方税号
- * @method string getSellerAddressPhone() 获取销方地址电话
- * @method void setSellerAddressPhone(string $SellerAddressPhone) 设置销方地址电话
- * @method string getSellerBankAccount() 获取销方银行账号
- * @method void setSellerBankAccount(string $SellerBankAccount) 设置销方银行账号
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method string getMachineNo() 获取机器编码
- * @method void setMachineNo(string $MachineNo) 设置机器编码
- * @method string getType() 获取票种类型
-01：增值税专用发票，
-02：货运运输业增值税专用发票，
-03：机动车销售统一发票，
-04：增值税普通发票，
-08：增值税电子专用发票（含全电，全电仅新版接口支持），
-09：全电发票，
-0901：全电纸质发票(增值税专用发票)，
-0903：全电纸质(机动车销售统一发票)，
-0904：全电纸质发票(增值税普通发票)，
-0910：电子发票(普通发票)，
-0915：全电纸质(二手车销售统一发票)，
-0920：电子发票(增值税专用发票)，
-0930：电子发票(机动车销售统一发票)，
-0940：电子发票(二手车销售统一发票)，
-10：增值税电子普通发票（含全电，全电仅新版接口支持），
-11：增值税普通发票（卷式），
-14：增值税电子（通行费）发票，
-15：二手车销售统一发票，
-32：深圳区块链发票，
-61：电子发票（航空运输电子客票行程单），
-8208：电子发票(通行费发票)，
-83：电子发票(铁路电子客票)，
-100：区块链发票，
-101：财政票据，
-102：通用电子发票，
-103：车辆通行费
-
-
-
-
- * @method void setType(string $Type) 设置票种类型
-01：增值税专用发票，
-02：货运运输业增值税专用发票，
-03：机动车销售统一发票，
-04：增值税普通发票，
-08：增值税电子专用发票（含全电，全电仅新版接口支持），
-09：全电发票，
-0901：全电纸质发票(增值税专用发票)，
-0903：全电纸质(机动车销售统一发票)，
-0904：全电纸质发票(增值税普通发票)，
-0910：电子发票(普通发票)，
-0915：全电纸质(二手车销售统一发票)，
-0920：电子发票(增值税专用发票)，
-0930：电子发票(机动车销售统一发票)，
-0940：电子发票(二手车销售统一发票)，
-10：增值税电子普通发票（含全电，全电仅新版接口支持），
-11：增值税普通发票（卷式），
-14：增值税电子（通行费）发票，
-15：二手车销售统一发票，
-32：深圳区块链发票，
-61：电子发票（航空运输电子客票行程单），
-8208：电子发票(通行费发票)，
-83：电子发票(铁路电子客票)，
-100：区块链发票，
-101：财政票据，
-102：通用电子发票，
-103：车辆通行费
-
-
-
-
- * @method string getElectronicType() 获取具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
- * @method void setElectronicType(string $ElectronicType) 设置具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
- * @method string getCheckCode() 获取检验码
- * @method void setCheckCode(string $CheckCode) 设置检验码
- * @method string getIsAbandoned() 获取是否作废（红冲）是否作废（红冲）
-Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
- * @method void setIsAbandoned(string $IsAbandoned) 设置是否作废（红冲）是否作废（红冲）
-Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
- * @method string getHasSellerList() 获取是否有销货清单 
-Y: 有清单 N：无清单 
-卷票无
- * @method void setHasSellerList(string $HasSellerList) 设置是否有销货清单 
-Y: 有清单 N：无清单 
-卷票无
- * @method string getSellerListTitle() 获取销货清单标题
- * @method void setSellerListTitle(string $SellerListTitle) 设置销货清单标题
- * @method string getSellerListTax() 获取销货清单税额
- * @method void setSellerListTax(string $SellerListTax) 设置销货清单税额
- * @method string getAmountWithoutTax() 获取不含税金额
- * @method void setAmountWithoutTax(string $AmountWithoutTax) 设置不含税金额
- * @method string getTaxAmount() 获取税额
- * @method void setTaxAmount(string $TaxAmount) 设置税额
- * @method string getAmountWithTax() 获取含税金额
- * @method void setAmountWithTax(string $AmountWithTax) 设置含税金额
- * @method array getItems() 获取项目明细
- * @method void setItems(array $Items) 设置项目明细
- * @method string getTaxBureau() 获取所属税局
- * @method void setTaxBureau(string $TaxBureau) 设置所属税局
- * @method string getTrafficFreeFlag() 获取通行费标志:Y、是;N、否
- * @method void setTrafficFreeFlag(string $TrafficFreeFlag) 设置通行费标志:Y、是;N、否
- * @method boolean getRedLetterInvoiceMark() 获取是否为红票
+ * @method string getCode() 获取<p>发票代码</p>
+ * @method void setCode(string $Code) 设置<p>发票代码</p>
+ * @method string getNumber() 获取<p>发票号码</p>
+ * @method void setNumber(string $Number) 设置<p>发票号码</p>
+ * @method string getDate() 获取<p>开票日期</p>
+ * @method void setDate(string $Date) 设置<p>开票日期</p>
+ * @method string getBuyerName() 获取<p>购方抬头<br>通用机打发票类型时不返回</p>
+ * @method void setBuyerName(string $BuyerName) 设置<p>购方抬头<br>通用机打发票类型时不返回</p>
+ * @method string getBuyerTaxCode() 获取<p>购方税号<br>通用机打发票类型时不返回</p>
+ * @method void setBuyerTaxCode(string $BuyerTaxCode) 设置<p>购方税号<br>通用机打发票类型时不返回</p>
+ * @method string getBuyerAddressPhone() 获取<p>购方地址电话<br>通用机打发票类型做不返回</p>
+ * @method void setBuyerAddressPhone(string $BuyerAddressPhone) 设置<p>购方地址电话<br>通用机打发票类型做不返回</p>
+ * @method string getBuyerBankAccount() 获取<p>购方银行账号<br>通用机打发票类型时不返回</p>
+ * @method void setBuyerBankAccount(string $BuyerBankAccount) 设置<p>购方银行账号<br>通用机打发票类型时不返回</p>
+ * @method string getSellerName() 获取<p>销方名称</p>
+ * @method void setSellerName(string $SellerName) 设置<p>销方名称</p>
+ * @method string getSellerTaxCode() 获取<p>销方税号</p>
+ * @method void setSellerTaxCode(string $SellerTaxCode) 设置<p>销方税号</p>
+ * @method string getSellerAddressPhone() 获取<p>销方地址电话</p>
+ * @method void setSellerAddressPhone(string $SellerAddressPhone) 设置<p>销方地址电话</p>
+ * @method string getSellerBankAccount() 获取<p>销方银行账号</p>
+ * @method void setSellerBankAccount(string $SellerBankAccount) 设置<p>销方银行账号</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getMachineNo() 获取<p>机器编码</p>
+ * @method void setMachineNo(string $MachineNo) 设置<p>机器编码</p>
+ * @method string getType() 获取<p>票种类型<br>01：增值税专用发票，<br>02：货运运输业增值税专用发票，<br>03：机动车销售统一发票，<br>04：增值税普通发票，<br>08：增值税电子专用发票（含全电，全电仅新版接口支持），<br>09：全电发票，<br>0901：全电纸质发票(增值税专用发票)，<br>0903：全电纸质(机动车销售统一发票)，<br>0904：全电纸质发票(增值税普通发票)，<br>0910：电子发票(普通发票)，<br>0915：全电纸质(二手车销售统一发票)，<br>0920：电子发票(增值税专用发票)，<br>0930：电子发票(机动车销售统一发票)，<br>0940：电子发票(二手车销售统一发票)，<br>10：增值税电子普通发票（含全电，全电仅新版接口支持），<br>11：增值税普通发票（卷式），<br>14：增值税电子（通行费）发票，<br>15：二手车销售统一发票，<br>32：深圳区块链发票，<br>61：电子发票（航空运输电子客票行程单），<br>8208：电子发票(通行费发票)，<br>83：电子发票(铁路电子客票)，<br>100：区块链发票，<br>101：财政票据，<br>102：通用电子发票，<br>103：车辆通行费</p>
+ * @method void setType(string $Type) 设置<p>票种类型<br>01：增值税专用发票，<br>02：货运运输业增值税专用发票，<br>03：机动车销售统一发票，<br>04：增值税普通发票，<br>08：增值税电子专用发票（含全电，全电仅新版接口支持），<br>09：全电发票，<br>0901：全电纸质发票(增值税专用发票)，<br>0903：全电纸质(机动车销售统一发票)，<br>0904：全电纸质发票(增值税普通发票)，<br>0910：电子发票(普通发票)，<br>0915：全电纸质(二手车销售统一发票)，<br>0920：电子发票(增值税专用发票)，<br>0930：电子发票(机动车销售统一发票)，<br>0940：电子发票(二手车销售统一发票)，<br>10：增值税电子普通发票（含全电，全电仅新版接口支持），<br>11：增值税普通发票（卷式），<br>14：增值税电子（通行费）发票，<br>15：二手车销售统一发票，<br>32：深圳区块链发票，<br>61：电子发票（航空运输电子客票行程单），<br>8208：电子发票(通行费发票)，<br>83：电子发票(铁路电子客票)，<br>100：区块链发票，<br>101：财政票据，<br>102：通用电子发票，<br>103：车辆通行费</p>
+ * @method string getElectronicType() 获取<p>具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单</p>
+ * @method void setElectronicType(string $ElectronicType) 设置<p>具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单</p>
+ * @method string getCheckCode() 获取<p>检验码</p>
+ * @method void setCheckCode(string $CheckCode) 设置<p>检验码</p>
+ * @method string getIsAbandoned() 获取<p>是否作废（红冲）是否作废（红冲）<br>Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲</p>
+ * @method void setIsAbandoned(string $IsAbandoned) 设置<p>是否作废（红冲）是否作废（红冲）<br>Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲</p>
+ * @method string getHasSellerList() 获取<p>是否有销货清单<br>Y: 有清单 N：无清单<br>卷票无</p>
+ * @method void setHasSellerList(string $HasSellerList) 设置<p>是否有销货清单<br>Y: 有清单 N：无清单<br>卷票无</p>
+ * @method string getSellerListTitle() 获取<p>销货清单标题</p>
+ * @method void setSellerListTitle(string $SellerListTitle) 设置<p>销货清单标题</p>
+ * @method string getSellerListTax() 获取<p>销货清单税额</p>
+ * @method void setSellerListTax(string $SellerListTax) 设置<p>销货清单税额</p>
+ * @method string getAmountWithoutTax() 获取<p>不含税金额</p>
+ * @method void setAmountWithoutTax(string $AmountWithoutTax) 设置<p>不含税金额</p>
+ * @method string getTaxAmount() 获取<p>税额</p>
+ * @method void setTaxAmount(string $TaxAmount) 设置<p>税额</p>
+ * @method string getAmountWithTax() 获取<p>含税金额</p>
+ * @method void setAmountWithTax(string $AmountWithTax) 设置<p>含税金额</p>
+ * @method array getItems() 获取<p>项目明细</p>
+ * @method void setItems(array $Items) 设置<p>项目明细</p>
+ * @method string getTaxBureau() 获取<p>所属税局</p>
+ * @method void setTaxBureau(string $TaxBureau) 设置<p>所属税局</p>
+ * @method string getTrafficFreeFlag() 获取<p>通行费标志:Y、是;N、否</p>
+ * @method void setTrafficFreeFlag(string $TrafficFreeFlag) 设置<p>通行费标志:Y、是;N、否</p>
+ * @method boolean getRedLetterInvoiceMark() 获取<p>是否为红票</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRedLetterInvoiceMark(boolean $RedLetterInvoiceMark) 设置是否为红票
+ * @method void setRedLetterInvoiceMark(boolean $RedLetterInvoiceMark) 设置<p>是否为红票</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIssuingTypeMark() 获取开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+ * @method integer getIssuingTypeMark() 获取<p>开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIssuingTypeMark(integer $IssuingTypeMark) 设置开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+ * @method void setIssuingTypeMark(integer $IssuingTypeMark) 设置<p>开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSellerAgentName() 获取代开销售方名称
- * @method void setSellerAgentName(string $SellerAgentName) 设置代开销售方名称
- * @method string getSellerAgentTaxID() 获取代开销售方税号
- * @method void setSellerAgentTaxID(string $SellerAgentTaxID) 设置代开销售方税号
+ * @method string getSellerAgentName() 获取<p>代开销售方名称</p>
+ * @method void setSellerAgentName(string $SellerAgentName) 设置<p>代开销售方名称</p>
+ * @method string getSellerAgentTaxID() 获取<p>代开销售方税号</p>
+ * @method void setSellerAgentTaxID(string $SellerAgentTaxID) 设置<p>代开销售方税号</p>
+ * @method string getRegionCode() 获取<p>地区代码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionCode(string $RegionCode) 设置<p>地区代码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReviewerName() 获取<p>复核人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReviewerName(string $ReviewerName) 设置<p>复核人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIssuerName() 获取<p>开票人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIssuerName(string $IssuerName) 设置<p>开票人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayeeName() 获取<p>收款人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayeeName(string $PayeeName) 设置<p>收款人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMachineCode() 获取<p>开票机号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineCode(string $MachineCode) 设置<p>开票机号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaxControlCode() 获取<p>税控码/密码区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaxControlCode(string $TaxControlCode) 设置<p>税控码/密码区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAmountWithTaxCN() 获取<p>价税合计（中文大写）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAmountWithTaxCN(string $AmountWithTaxCN) 设置<p>价税合计（中文大写）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaxRate() 获取<p>税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaxRate(string $TaxRate) 设置<p>税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSpecialTicketCode() 获取<p>特殊票种代码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpecialTicketCode(string $SpecialTicketCode) 设置<p>特殊票种代码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRedLetterInvoices() 获取<p>红字发票信息列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRedLetterInvoices(array $RedLetterInvoices) 设置<p>红字发票信息列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFullElectronicType() 获取<p>全电类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFullElectronicType(string $FullElectronicType) 设置<p>全电类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOfdUrl() 获取<p>OFD版式文件下载链接</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOfdUrl(string $OfdUrl) 设置<p>OFD版式文件下载链接</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPdfUrl() 获取<p>PDF版式文件下载链接</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPdfUrl(string $PdfUrl) 设置<p>PDF版式文件下载链接</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginalCode() 获取<p>原发票代码，对应蓝字发票代码。</p>
+ * @method void setOriginalCode(string $OriginalCode) 设置<p>原发票代码，对应蓝字发票代码。</p>
+ * @method string getOriginalNumber() 获取<p>原发票号码，对应蓝字发票号码。</p>
+ * @method void setOriginalNumber(string $OriginalNumber) 设置<p>原发票号码，对应蓝字发票号码。</p>
  */
 class VatInvoice extends AbstractModel
 {
     /**
-     * @var string 发票代码
+     * @var string <p>发票代码</p>
      */
     public $Code;
 
     /**
-     * @var string 发票号码
+     * @var string <p>发票号码</p>
      */
     public $Number;
 
     /**
-     * @var string 开票日期
+     * @var string <p>开票日期</p>
      */
     public $Date;
 
     /**
-     * @var string 购方抬头
-通用机打发票类型时不返回
+     * @var string <p>购方抬头<br>通用机打发票类型时不返回</p>
      */
     public $BuyerName;
 
     /**
-     * @var string 购方税号
-通用机打发票类型时不返回
+     * @var string <p>购方税号<br>通用机打发票类型时不返回</p>
      */
     public $BuyerTaxCode;
 
     /**
-     * @var string 购方地址电话
-通用机打发票类型做不返回
+     * @var string <p>购方地址电话<br>通用机打发票类型做不返回</p>
      */
     public $BuyerAddressPhone;
 
     /**
-     * @var string 购方银行账号
-通用机打发票类型时不返回
+     * @var string <p>购方银行账号<br>通用机打发票类型时不返回</p>
      */
     public $BuyerBankAccount;
 
     /**
-     * @var string 销方名称
+     * @var string <p>销方名称</p>
      */
     public $SellerName;
 
     /**
-     * @var string 销方税号
+     * @var string <p>销方税号</p>
      */
     public $SellerTaxCode;
 
     /**
-     * @var string 销方地址电话
+     * @var string <p>销方地址电话</p>
      */
     public $SellerAddressPhone;
 
     /**
-     * @var string 销方银行账号
+     * @var string <p>销方银行账号</p>
      */
     public $SellerBankAccount;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var string 机器编码
+     * @var string <p>机器编码</p>
      */
     public $MachineNo;
 
     /**
-     * @var string 票种类型
-01：增值税专用发票，
-02：货运运输业增值税专用发票，
-03：机动车销售统一发票，
-04：增值税普通发票，
-08：增值税电子专用发票（含全电，全电仅新版接口支持），
-09：全电发票，
-0901：全电纸质发票(增值税专用发票)，
-0903：全电纸质(机动车销售统一发票)，
-0904：全电纸质发票(增值税普通发票)，
-0910：电子发票(普通发票)，
-0915：全电纸质(二手车销售统一发票)，
-0920：电子发票(增值税专用发票)，
-0930：电子发票(机动车销售统一发票)，
-0940：电子发票(二手车销售统一发票)，
-10：增值税电子普通发票（含全电，全电仅新版接口支持），
-11：增值税普通发票（卷式），
-14：增值税电子（通行费）发票，
-15：二手车销售统一发票，
-32：深圳区块链发票，
-61：电子发票（航空运输电子客票行程单），
-8208：电子发票(通行费发票)，
-83：电子发票(铁路电子客票)，
-100：区块链发票，
-101：财政票据，
-102：通用电子发票，
-103：车辆通行费
-
-
-
-
+     * @var string <p>票种类型<br>01：增值税专用发票，<br>02：货运运输业增值税专用发票，<br>03：机动车销售统一发票，<br>04：增值税普通发票，<br>08：增值税电子专用发票（含全电，全电仅新版接口支持），<br>09：全电发票，<br>0901：全电纸质发票(增值税专用发票)，<br>0903：全电纸质(机动车销售统一发票)，<br>0904：全电纸质发票(增值税普通发票)，<br>0910：电子发票(普通发票)，<br>0915：全电纸质(二手车销售统一发票)，<br>0920：电子发票(增值税专用发票)，<br>0930：电子发票(机动车销售统一发票)，<br>0940：电子发票(二手车销售统一发票)，<br>10：增值税电子普通发票（含全电，全电仅新版接口支持），<br>11：增值税普通发票（卷式），<br>14：增值税电子（通行费）发票，<br>15：二手车销售统一发票，<br>32：深圳区块链发票，<br>61：电子发票（航空运输电子客票行程单），<br>8208：电子发票(通行费发票)，<br>83：电子发票(铁路电子客票)，<br>100：区块链发票，<br>101：财政票据，<br>102：通用电子发票，<br>103：车辆通行费</p>
      */
     public $Type;
 
     /**
-     * @var string 具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
+     * @var string <p>具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单</p>
      */
     public $ElectronicType;
 
     /**
-     * @var string 检验码
+     * @var string <p>检验码</p>
      */
     public $CheckCode;
 
     /**
-     * @var string 是否作废（红冲）是否作废（红冲）
-Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
+     * @var string <p>是否作废（红冲）是否作废（红冲）<br>Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲</p>
      */
     public $IsAbandoned;
 
     /**
-     * @var string 是否有销货清单 
-Y: 有清单 N：无清单 
-卷票无
+     * @var string <p>是否有销货清单<br>Y: 有清单 N：无清单<br>卷票无</p>
      */
     public $HasSellerList;
 
     /**
-     * @var string 销货清单标题
+     * @var string <p>销货清单标题</p>
      */
     public $SellerListTitle;
 
     /**
-     * @var string 销货清单税额
+     * @var string <p>销货清单税额</p>
      */
     public $SellerListTax;
 
     /**
-     * @var string 不含税金额
+     * @var string <p>不含税金额</p>
      */
     public $AmountWithoutTax;
 
     /**
-     * @var string 税额
+     * @var string <p>税额</p>
      */
     public $TaxAmount;
 
     /**
-     * @var string 含税金额
+     * @var string <p>含税金额</p>
      */
     public $AmountWithTax;
 
     /**
-     * @var array 项目明细
+     * @var array <p>项目明细</p>
      */
     public $Items;
 
     /**
-     * @var string 所属税局
+     * @var string <p>所属税局</p>
      */
     public $TaxBureau;
 
     /**
-     * @var string 通行费标志:Y、是;N、否
+     * @var string <p>通行费标志:Y、是;N、否</p>
      */
     public $TrafficFreeFlag;
 
     /**
-     * @var boolean 是否为红票
+     * @var boolean <p>是否为红票</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RedLetterInvoiceMark;
 
     /**
-     * @var integer 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+     * @var integer <p>开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IssuingTypeMark;
 
     /**
-     * @var string 代开销售方名称
+     * @var string <p>代开销售方名称</p>
      */
     public $SellerAgentName;
 
     /**
-     * @var string 代开销售方税号
+     * @var string <p>代开销售方税号</p>
      */
     public $SellerAgentTaxID;
 
     /**
-     * @param string $Code 发票代码
-     * @param string $Number 发票号码
-     * @param string $Date 开票日期
-     * @param string $BuyerName 购方抬头
-通用机打发票类型时不返回
-     * @param string $BuyerTaxCode 购方税号
-通用机打发票类型时不返回
-     * @param string $BuyerAddressPhone 购方地址电话
-通用机打发票类型做不返回
-     * @param string $BuyerBankAccount 购方银行账号
-通用机打发票类型时不返回
-     * @param string $SellerName 销方名称
-     * @param string $SellerTaxCode 销方税号
-     * @param string $SellerAddressPhone 销方地址电话
-     * @param string $SellerBankAccount 销方银行账号
-     * @param string $Remark 备注
-     * @param string $MachineNo 机器编码
-     * @param string $Type 票种类型
-01：增值税专用发票，
-02：货运运输业增值税专用发票，
-03：机动车销售统一发票，
-04：增值税普通发票，
-08：增值税电子专用发票（含全电，全电仅新版接口支持），
-09：全电发票，
-0901：全电纸质发票(增值税专用发票)，
-0903：全电纸质(机动车销售统一发票)，
-0904：全电纸质发票(增值税普通发票)，
-0910：电子发票(普通发票)，
-0915：全电纸质(二手车销售统一发票)，
-0920：电子发票(增值税专用发票)，
-0930：电子发票(机动车销售统一发票)，
-0940：电子发票(二手车销售统一发票)，
-10：增值税电子普通发票（含全电，全电仅新版接口支持），
-11：增值税普通发票（卷式），
-14：增值税电子（通行费）发票，
-15：二手车销售统一发票，
-32：深圳区块链发票，
-61：电子发票（航空运输电子客票行程单），
-8208：电子发票(通行费发票)，
-83：电子发票(铁路电子客票)，
-100：区块链发票，
-101：财政票据，
-102：通用电子发票，
-103：车辆通行费
-
-
-
-
-     * @param string $ElectronicType 具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
-     * @param string $CheckCode 检验码
-     * @param string $IsAbandoned 是否作废（红冲）是否作废（红冲）
-Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
-     * @param string $HasSellerList 是否有销货清单 
-Y: 有清单 N：无清单 
-卷票无
-     * @param string $SellerListTitle 销货清单标题
-     * @param string $SellerListTax 销货清单税额
-     * @param string $AmountWithoutTax 不含税金额
-     * @param string $TaxAmount 税额
-     * @param string $AmountWithTax 含税金额
-     * @param array $Items 项目明细
-     * @param string $TaxBureau 所属税局
-     * @param string $TrafficFreeFlag 通行费标志:Y、是;N、否
-     * @param boolean $RedLetterInvoiceMark 是否为红票
+     * @var string <p>地区代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IssuingTypeMark 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+     */
+    public $RegionCode;
+
+    /**
+     * @var string <p>复核人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SellerAgentName 代开销售方名称
-     * @param string $SellerAgentTaxID 代开销售方税号
+     */
+    public $ReviewerName;
+
+    /**
+     * @var string <p>开票人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IssuerName;
+
+    /**
+     * @var string <p>收款人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayeeName;
+
+    /**
+     * @var string <p>开票机号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineCode;
+
+    /**
+     * @var string <p>税控码/密码区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaxControlCode;
+
+    /**
+     * @var string <p>价税合计（中文大写）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AmountWithTaxCN;
+
+    /**
+     * @var string <p>税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaxRate;
+
+    /**
+     * @var string <p>特殊票种代码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpecialTicketCode;
+
+    /**
+     * @var array <p>红字发票信息列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RedLetterInvoices;
+
+    /**
+     * @var string <p>全电类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FullElectronicType;
+
+    /**
+     * @var string <p>OFD版式文件下载链接</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OfdUrl;
+
+    /**
+     * @var string <p>PDF版式文件下载链接</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PdfUrl;
+
+    /**
+     * @var string <p>原发票代码，对应蓝字发票代码。</p>
+     */
+    public $OriginalCode;
+
+    /**
+     * @var string <p>原发票号码，对应蓝字发票号码。</p>
+     */
+    public $OriginalNumber;
+
+    /**
+     * @param string $Code <p>发票代码</p>
+     * @param string $Number <p>发票号码</p>
+     * @param string $Date <p>开票日期</p>
+     * @param string $BuyerName <p>购方抬头<br>通用机打发票类型时不返回</p>
+     * @param string $BuyerTaxCode <p>购方税号<br>通用机打发票类型时不返回</p>
+     * @param string $BuyerAddressPhone <p>购方地址电话<br>通用机打发票类型做不返回</p>
+     * @param string $BuyerBankAccount <p>购方银行账号<br>通用机打发票类型时不返回</p>
+     * @param string $SellerName <p>销方名称</p>
+     * @param string $SellerTaxCode <p>销方税号</p>
+     * @param string $SellerAddressPhone <p>销方地址电话</p>
+     * @param string $SellerBankAccount <p>销方银行账号</p>
+     * @param string $Remark <p>备注</p>
+     * @param string $MachineNo <p>机器编码</p>
+     * @param string $Type <p>票种类型<br>01：增值税专用发票，<br>02：货运运输业增值税专用发票，<br>03：机动车销售统一发票，<br>04：增值税普通发票，<br>08：增值税电子专用发票（含全电，全电仅新版接口支持），<br>09：全电发票，<br>0901：全电纸质发票(增值税专用发票)，<br>0903：全电纸质(机动车销售统一发票)，<br>0904：全电纸质发票(增值税普通发票)，<br>0910：电子发票(普通发票)，<br>0915：全电纸质(二手车销售统一发票)，<br>0920：电子发票(增值税专用发票)，<br>0930：电子发票(机动车销售统一发票)，<br>0940：电子发票(二手车销售统一发票)，<br>10：增值税电子普通发票（含全电，全电仅新版接口支持），<br>11：增值税普通发票（卷式），<br>14：增值税电子（通行费）发票，<br>15：二手车销售统一发票，<br>32：深圳区块链发票，<br>61：电子发票（航空运输电子客票行程单），<br>8208：电子发票(通行费发票)，<br>83：电子发票(铁路电子客票)，<br>100：区块链发票，<br>101：财政票据，<br>102：通用电子发票，<br>103：车辆通行费</p>
+     * @param string $ElectronicType <p>具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单</p>
+     * @param string $CheckCode <p>检验码</p>
+     * @param string $IsAbandoned <p>是否作废（红冲）是否作废（红冲）<br>Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲</p>
+     * @param string $HasSellerList <p>是否有销货清单<br>Y: 有清单 N：无清单<br>卷票无</p>
+     * @param string $SellerListTitle <p>销货清单标题</p>
+     * @param string $SellerListTax <p>销货清单税额</p>
+     * @param string $AmountWithoutTax <p>不含税金额</p>
+     * @param string $TaxAmount <p>税额</p>
+     * @param string $AmountWithTax <p>含税金额</p>
+     * @param array $Items <p>项目明细</p>
+     * @param string $TaxBureau <p>所属税局</p>
+     * @param string $TrafficFreeFlag <p>通行费标志:Y、是;N、否</p>
+     * @param boolean $RedLetterInvoiceMark <p>是否为红票</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IssuingTypeMark <p>开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SellerAgentName <p>代开销售方名称</p>
+     * @param string $SellerAgentTaxID <p>代开销售方税号</p>
+     * @param string $RegionCode <p>地区代码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReviewerName <p>复核人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IssuerName <p>开票人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayeeName <p>收款人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MachineCode <p>开票机号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaxControlCode <p>税控码/密码区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AmountWithTaxCN <p>价税合计（中文大写）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaxRate <p>税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SpecialTicketCode <p>特殊票种代码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RedLetterInvoices <p>红字发票信息列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FullElectronicType <p>全电类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OfdUrl <p>OFD版式文件下载链接</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PdfUrl <p>PDF版式文件下载链接</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginalCode <p>原发票代码，对应蓝字发票代码。</p>
+     * @param string $OriginalNumber <p>原发票号码，对应蓝字发票号码。</p>
      */
     function __construct()
     {
@@ -557,6 +581,71 @@ Y: 有清单 N：无清单
 
         if (array_key_exists("SellerAgentTaxID",$param) and $param["SellerAgentTaxID"] !== null) {
             $this->SellerAgentTaxID = $param["SellerAgentTaxID"];
+        }
+
+        if (array_key_exists("RegionCode",$param) and $param["RegionCode"] !== null) {
+            $this->RegionCode = $param["RegionCode"];
+        }
+
+        if (array_key_exists("ReviewerName",$param) and $param["ReviewerName"] !== null) {
+            $this->ReviewerName = $param["ReviewerName"];
+        }
+
+        if (array_key_exists("IssuerName",$param) and $param["IssuerName"] !== null) {
+            $this->IssuerName = $param["IssuerName"];
+        }
+
+        if (array_key_exists("PayeeName",$param) and $param["PayeeName"] !== null) {
+            $this->PayeeName = $param["PayeeName"];
+        }
+
+        if (array_key_exists("MachineCode",$param) and $param["MachineCode"] !== null) {
+            $this->MachineCode = $param["MachineCode"];
+        }
+
+        if (array_key_exists("TaxControlCode",$param) and $param["TaxControlCode"] !== null) {
+            $this->TaxControlCode = $param["TaxControlCode"];
+        }
+
+        if (array_key_exists("AmountWithTaxCN",$param) and $param["AmountWithTaxCN"] !== null) {
+            $this->AmountWithTaxCN = $param["AmountWithTaxCN"];
+        }
+
+        if (array_key_exists("TaxRate",$param) and $param["TaxRate"] !== null) {
+            $this->TaxRate = $param["TaxRate"];
+        }
+
+        if (array_key_exists("SpecialTicketCode",$param) and $param["SpecialTicketCode"] !== null) {
+            $this->SpecialTicketCode = $param["SpecialTicketCode"];
+        }
+
+        if (array_key_exists("RedLetterInvoices",$param) and $param["RedLetterInvoices"] !== null) {
+            $this->RedLetterInvoices = [];
+            foreach ($param["RedLetterInvoices"] as $key => $value){
+                $obj = new RedLetterInvoiceItem();
+                $obj->deserialize($value);
+                array_push($this->RedLetterInvoices, $obj);
+            }
+        }
+
+        if (array_key_exists("FullElectronicType",$param) and $param["FullElectronicType"] !== null) {
+            $this->FullElectronicType = $param["FullElectronicType"];
+        }
+
+        if (array_key_exists("OfdUrl",$param) and $param["OfdUrl"] !== null) {
+            $this->OfdUrl = $param["OfdUrl"];
+        }
+
+        if (array_key_exists("PdfUrl",$param) and $param["PdfUrl"] !== null) {
+            $this->PdfUrl = $param["PdfUrl"];
+        }
+
+        if (array_key_exists("OriginalCode",$param) and $param["OriginalCode"] !== null) {
+            $this->OriginalCode = $param["OriginalCode"];
+        }
+
+        if (array_key_exists("OriginalNumber",$param) and $param["OriginalNumber"] !== null) {
+            $this->OriginalNumber = $param["OriginalNumber"];
         }
     }
 }

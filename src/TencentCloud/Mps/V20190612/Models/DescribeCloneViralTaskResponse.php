@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) 设置<p>失败时返回错误信息</p>
  * @method array getVideoUrls() 获取<p>当任务状态为 DONE时，返回视频Url列表，视频存储24小时</p>
  * @method void setVideoUrls(array $VideoUrls) 设置<p>当任务状态为 DONE时，返回视频Url列表，视频存储24小时</p>
+ * @method string getRequestBody() 获取<p>任务请求体</p>
+ * @method void setRequestBody(string $RequestBody) 设置<p>任务请求体</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class DescribeCloneViralTaskResponse extends AbstractModel
     public $VideoUrls;
 
     /**
+     * @var string <p>任务请求体</p>
+     */
+    public $RequestBody;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class DescribeCloneViralTaskResponse extends AbstractModel
      * @param string $Status <p>任务状态</p><p>枚举值：</p><ul><li>WAIT： 等待中</li><li>RUN： 执行中</li><li>FAIL： 任务失败</li><li>DONE： 任务成功</li></ul>
      * @param string $Message <p>失败时返回错误信息</p>
      * @param array $VideoUrls <p>当任务状态为 DONE时，返回视频Url列表，视频存储24小时</p>
+     * @param string $RequestBody <p>任务请求体</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +88,10 @@ class DescribeCloneViralTaskResponse extends AbstractModel
 
         if (array_key_exists("VideoUrls",$param) and $param["VideoUrls"] !== null) {
             $this->VideoUrls = $param["VideoUrls"];
+        }
+
+        if (array_key_exists("RequestBody",$param) and $param["RequestBody"] !== null) {
+            $this->RequestBody = $param["RequestBody"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

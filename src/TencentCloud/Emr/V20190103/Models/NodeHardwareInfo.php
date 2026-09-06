@@ -150,6 +150,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGpuDesc(string $GpuDesc) 设置<p>Gpu信息</p>
  * @method array getDiskHealthIssues() 获取<p>磁盘问题描述</p>
  * @method void setDiskHealthIssues(array $DiskHealthIssues) 设置<p>磁盘问题描述</p>
+ * @method string getNodeGroupId() 获取<p>所在节点组ID</p>
+ * @method void setNodeGroupId(string $NodeGroupId) 设置<p>所在节点组ID</p>
+ * @method string getNodeGroupName() 获取<p>所在节点组名称</p>
+ * @method void setNodeGroupName(string $NodeGroupName) 设置<p>所在节点组名称</p>
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -463,6 +467,16 @@ class NodeHardwareInfo extends AbstractModel
     public $DiskHealthIssues;
 
     /**
+     * @var string <p>所在节点组ID</p>
+     */
+    public $NodeGroupId;
+
+    /**
+     * @var string <p>所在节点组名称</p>
+     */
+    public $NodeGroupName;
+
+    /**
      * @param integer $AppId <p>用户APPID</p>
      * @param string $SerialNo <p>序列号</p>
      * @param string $OrderNo <p>机器实例ID</p>
@@ -528,6 +542,8 @@ class NodeHardwareInfo extends AbstractModel
      * @param boolean $UnderwriteSetAutoRenew <p>包销资源是否支持设置自动续费</p>
      * @param string $GpuDesc <p>Gpu信息</p>
      * @param array $DiskHealthIssues <p>磁盘问题描述</p>
+     * @param string $NodeGroupId <p>所在节点组ID</p>
+     * @param string $NodeGroupName <p>所在节点组名称</p>
      */
     function __construct()
     {
@@ -801,6 +817,14 @@ class NodeHardwareInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DiskHealthIssues, $obj);
             }
+        }
+
+        if (array_key_exists("NodeGroupId",$param) and $param["NodeGroupId"] !== null) {
+            $this->NodeGroupId = $param["NodeGroupId"];
+        }
+
+        if (array_key_exists("NodeGroupName",$param) and $param["NodeGroupName"] !== null) {
+            $this->NodeGroupName = $param["NodeGroupName"];
         }
     }
 }

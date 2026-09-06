@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TransferStoragePrepayToPostpay请求参数结构体
  *
-
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
  */
 class TransferStoragePrepayToPostpayRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>集群id</p>
+     */
+    public $ClusterId;
 
     /**
-
+     * @param string $ClusterId <p>集群id</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class TransferStoragePrepayToPostpayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
     }
 }

@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 边缘函数详情
  *
- * @method string getFunctionId() 获取函数 ID。
- * @method void setFunctionId(string $FunctionId) 设置函数 ID。
- * @method string getZoneId() 获取站点 ID。
- * @method void setZoneId(string $ZoneId) 设置站点 ID。
- * @method string getName() 获取函数名字。
- * @method void setName(string $Name) 设置函数名字。
- * @method string getRemark() 获取函数描述。
- * @method void setRemark(string $Remark) 设置函数描述。
- * @method string getContent() 获取函数内容。
- * @method void setContent(string $Content) 设置函数内容。
- * @method string getDomain() 获取函数默认域名。
- * @method void setDomain(string $Domain) 设置函数默认域名。
- * @method string getCreateTime() 获取创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
- * @method string getUpdateTime() 获取修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
- * @method void setUpdateTime(string $UpdateTime) 设置修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+ * @method string getFunctionId() 获取<p>函数 ID。</p>
+ * @method void setFunctionId(string $FunctionId) 设置<p>函数 ID。</p>
+ * @method string getZoneId() 获取<p>站点 ID。</p>
+ * @method void setZoneId(string $ZoneId) 设置<p>站点 ID。</p>
+ * @method string getName() 获取<p>函数名字。</p>
+ * @method void setName(string $Name) 设置<p>函数名字。</p>
+ * @method string getRemark() 获取<p>函数描述。</p>
+ * @method void setRemark(string $Remark) 设置<p>函数描述。</p>
+ * @method string getContent() 获取<p>函数内容。</p>
+ * @method void setContent(string $Content) 设置<p>函数内容。</p>
+ * @method string getDomain() 获取<p>函数默认域名。</p>
+ * @method void setDomain(string $Domain) 设置<p>函数默认域名。</p>
+ * @method array getDomainComplianceRestrictions() 获取<p>边缘函数默认域名因合规问题产生的地区访问限制列表。</p>
+ * @method void setDomainComplianceRestrictions(array $DomainComplianceRestrictions) 设置<p>边缘函数默认域名因合规问题产生的地区访问限制列表。</p>
+ * @method string getCreateTime() 获取<p>创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
+ * @method string getUpdateTime() 获取<p>修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
  */
 class FunctionInfo extends AbstractModel
 {
     /**
-     * @var string 函数 ID。
+     * @var string <p>函数 ID。</p>
      */
     public $FunctionId;
 
     /**
-     * @var string 站点 ID。
+     * @var string <p>站点 ID。</p>
      */
     public $ZoneId;
 
     /**
-     * @var string 函数名字。
+     * @var string <p>函数名字。</p>
      */
     public $Name;
 
     /**
-     * @var string 函数描述。
+     * @var string <p>函数描述。</p>
      */
     public $Remark;
 
     /**
-     * @var string 函数内容。
+     * @var string <p>函数内容。</p>
      */
     public $Content;
 
     /**
-     * @var string 函数默认域名。
+     * @var string <p>函数默认域名。</p>
      */
     public $Domain;
 
     /**
-     * @var string 创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+     * @var array <p>边缘函数默认域名因合规问题产生的地区访问限制列表。</p>
+     */
+    public $DomainComplianceRestrictions;
+
+    /**
+     * @var string <p>创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+     * @var string <p>修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $FunctionId 函数 ID。
-     * @param string $ZoneId 站点 ID。
-     * @param string $Name 函数名字。
-     * @param string $Remark 函数描述。
-     * @param string $Content 函数内容。
-     * @param string $Domain 函数默认域名。
-     * @param string $CreateTime 创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
-     * @param string $UpdateTime 修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+     * @param string $FunctionId <p>函数 ID。</p>
+     * @param string $ZoneId <p>站点 ID。</p>
+     * @param string $Name <p>函数名字。</p>
+     * @param string $Remark <p>函数描述。</p>
+     * @param string $Content <p>函数内容。</p>
+     * @param string $Domain <p>函数默认域名。</p>
+     * @param array $DomainComplianceRestrictions <p>边缘函数默认域名因合规问题产生的地区访问限制列表。</p>
+     * @param string $CreateTime <p>创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
+     * @param string $UpdateTime <p>修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     function __construct()
     {
@@ -124,6 +132,15 @@ class FunctionInfo extends AbstractModel
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("DomainComplianceRestrictions",$param) and $param["DomainComplianceRestrictions"] !== null) {
+            $this->DomainComplianceRestrictions = [];
+            foreach ($param["DomainComplianceRestrictions"] as $key => $value){
+                $obj = new ComplianceRestriction();
+                $obj->deserialize($value);
+                array_push($this->DomainComplianceRestrictions, $obj);
+            }
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

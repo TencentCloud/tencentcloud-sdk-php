@@ -49,6 +49,7 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CreateCommonMixStreamResponse CreateCommonMixStream(Models\CreateCommonMixStreamRequest $req) 该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
 注意：当前最多支持16路混流。
 最佳实践：https://cloud.tencent.com/document/product/267/45566
+ * @method Models\CreateLiveAvatarCloneFigureResponse CreateLiveAvatarCloneFigure(Models\CreateLiveAvatarCloneFigureRequest $req) 调用该接口，用于创建数字人直播间/AIGC直播间话术。
  * @method Models\CreateLiveAvatarRoomResponse CreateLiveAvatarRoom(Models\CreateLiveAvatarRoomRequest $req) 调用该接口，用于创建数字人直播间。
  * @method Models\CreateLiveAvatarScriptResponse CreateLiveAvatarScript(Models\CreateLiveAvatarScriptRequest $req) 调用该接口，用于创建数字人直播间/AIGC直播间话术。
  * @method Models\CreateLiveCallbackRuleResponse CreateLiveCallbackRule(Models\CreateLiveCallbackRuleRequest $req) 创建回调规则，需要先调用[CreateLiveCallbackTemplate](/document/product/267/32637)接口创建回调模板，将返回的模板id绑定到域名/路径进行使用。
@@ -137,6 +138,7 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\DeleteCasterMarkWordInfoResponse DeleteCasterMarkWordInfo(Models\DeleteCasterMarkWordInfoRequest $req) 该接口用来删除导播台的文本配置。
  * @method Models\DeleteCasterOutputInfoResponse DeleteCasterOutputInfo(Models\DeleteCasterOutputInfoRequest $req) 该接口用来删除导播台的推流信息。
 注：若删除推流到腾讯云直播源站配置，即OutputIndex为0，OutputType为1的推流配置，在重新启动主监后，系统会自动重新生成一个推流到腾讯云直播源站配置。
+ * @method Models\DeleteLiveAvatarCloneFigureResponse DeleteLiveAvatarCloneFigure(Models\DeleteLiveAvatarCloneFigureRequest $req) 调用该接口，用于删除已有的数字人直播间里面的话术。
  * @method Models\DeleteLiveAvatarRoomResponse DeleteLiveAvatarRoom(Models\DeleteLiveAvatarRoomRequest $req) 调用该接口，用于删除已有的数字人直播间。
  * @method Models\DeleteLiveAvatarScriptResponse DeleteLiveAvatarScript(Models\DeleteLiveAvatarScriptRequest $req) 调用该接口，用于删除已有的数字人直播间里面的话术。
  * @method Models\DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(Models\DeleteLiveCallbackRuleRequest $req) 删除回调规则。
@@ -198,6 +200,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 查询某段时间内5分钟粒度的各播放http状态码的个数。
 备注：数据延迟1小时，如10:00-10:59点的数据12点才能查到。
  * @method Models\DescribeLiveAvatarBackgroundListResponse DescribeLiveAvatarBackgroundList(Models\DescribeLiveAvatarBackgroundListRequest $req) 调用该接口，获取可用的数字人背景列表信息列表。根据入参，可返回官方预设背景，以及用户上传背景。
+ * @method Models\DescribeLiveAvatarCloneFigureListResponse DescribeLiveAvatarCloneFigureList(Models\DescribeLiveAvatarCloneFigureListRequest $req) 调用该接口，查询数字人直播间信息列表。
  * @method Models\DescribeLiveAvatarImageListResponse DescribeLiveAvatarImageList(Models\DescribeLiveAvatarImageListRequest $req) 调用该接口，获取可用的数字人形象信息列表。包括官方预制形象，以及个人定制形象。
  * @method Models\DescribeLiveAvatarRoomsResponse DescribeLiveAvatarRooms(Models\DescribeLiveAvatarRoomsRequest $req) 调用该接口，查询数字人直播间信息列表。
  * @method Models\DescribeLiveAvatarScriptsResponse DescribeLiveAvatarScripts(Models\DescribeLiveAvatarScriptsRequest $req) 调用该接口，查询数字人直播间话术信息列表。新增产品ID参数

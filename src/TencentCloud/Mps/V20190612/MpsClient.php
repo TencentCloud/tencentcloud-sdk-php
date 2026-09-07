@@ -257,6 +257,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ModifyAsrHotwordsResponse ModifyAsrHotwords(Models\ModifyAsrHotwordsRequest $req) 智能字幕更新热词库接口
  * @method Models\ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplate(Models\ModifyBlindWatermarkTemplateRequest $req) 修改用户自定义数字水印模板，数字水印类型不允许修改。
  * @method Models\ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(Models\ModifyContentReviewTemplateRequest $req) 修改用户自定义内容审核模板。
+ * @method Models\ModifyDocToVideoTaskStatusResponse ModifyDocToVideoTaskStatus(Models\ModifyDocToVideoTaskStatusRequest $req) 修改 AIGC 文档生视频任务状态。
+
+包含 confirm（确认当前阶段）和 regenerate（重新生成当前阶段）两种动作含义。
  * @method Models\ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(Models\ModifyImageSpriteTemplateRequest $req) 修改用户自定义雪碧图模板。
  * @method Models\ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(Models\ModifyLiveRecordTemplateRequest $req) 修改直播录制模板
  * @method Models\ModifyPersonSampleResponse ModifyPersonSample(Models\ModifyPersonSampleRequest $req) 该接口用于根据素材 ID，修改素材样本信息，包括名称、描述的修改，以及五官、标签的添加、删除、重置操作。五官删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。

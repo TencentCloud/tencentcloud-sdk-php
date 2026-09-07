@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientAppPath(string $ClientAppPath) 设置<p>客户端工具路径</p>
  * @method string getClientAppKind() 获取<p>客户端工具类型</p>
  * @method void setClientAppKind(string $ClientAppKind) 设置<p>客户端工具类型</p>
+ * @method array getClientAppArgs() 获取<p>客户端工具启动参数</p>
+ * @method void setClientAppArgs(array $ClientAppArgs) 设置<p>客户端工具启动参数</p>
  * @method string getUrl() 获取<p>应用资产url</p>
  * @method void setUrl(string $Url) 设置<p>应用资产url</p>
  * @method integer getBindStatus() 获取<p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul>
@@ -118,6 +120,11 @@ class AppAsset extends AbstractModel
      * @var string <p>客户端工具类型</p>
      */
     public $ClientAppKind;
+
+    /**
+     * @var array <p>客户端工具启动参数</p>
+     */
+    public $ClientAppArgs;
 
     /**
      * @var string <p>应用资产url</p>
@@ -228,6 +235,7 @@ class AppAsset extends AbstractModel
      * @param integer $Kind <p>应用资产类型。1-web应用</p>
      * @param string $ClientAppPath <p>客户端工具路径</p>
      * @param string $ClientAppKind <p>客户端工具类型</p>
+     * @param array $ClientAppArgs <p>客户端工具启动参数</p>
      * @param string $Url <p>应用资产url</p>
      * @param integer $BindStatus <p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul>
      * @param string $DeviceInstanceId <p>应用服务器实例id</p>
@@ -292,6 +300,10 @@ class AppAsset extends AbstractModel
 
         if (array_key_exists("ClientAppKind",$param) and $param["ClientAppKind"] !== null) {
             $this->ClientAppKind = $param["ClientAppKind"];
+        }
+
+        if (array_key_exists("ClientAppArgs",$param) and $param["ClientAppArgs"] !== null) {
+            $this->ClientAppArgs = $param["ClientAppArgs"];
         }
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {

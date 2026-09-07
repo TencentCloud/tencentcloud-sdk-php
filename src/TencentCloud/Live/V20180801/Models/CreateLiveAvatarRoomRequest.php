@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveAvatarRoom请求参数结构体
  *
- * @method string getName() 获取直播间名称。
- * @method void setName(string $Name) 设置直播间名称。
- * @method string getOperator() 获取操作者。
- * @method void setOperator(string $Operator) 设置操作者。
+ * @method string getName() 获取<p>直播间名称。</p>
+ * @method void setName(string $Name) 设置<p>直播间名称。</p>
+ * @method string getOperator() 获取<p>操作者。</p>
+ * @method void setOperator(string $Operator) 设置<p>操作者。</p>
+ * @method string getAvatarKey() 获取<p>形象ID</p>
+ * @method void setAvatarKey(string $AvatarKey) 设置<p>形象ID</p>
+ * @method string getTimbreKey() 获取<p>音色ID</p>
+ * @method void setTimbreKey(string $TimbreKey) 设置<p>音色ID</p>
+ * @method string getLiveMode() 获取<p>房间模式</p><p>枚举值：</p><ul><li>INTERACT： 交互模式</li><li>FREE： 自由模式</li><li>NORMAL： 普通模式</li></ul>
+ * @method void setLiveMode(string $LiveMode) 设置<p>房间模式</p><p>枚举值：</p><ul><li>INTERACT： 交互模式</li><li>FREE： 自由模式</li><li>NORMAL： 普通模式</li></ul>
  */
 class CreateLiveAvatarRoomRequest extends AbstractModel
 {
     /**
-     * @var string 直播间名称。
+     * @var string <p>直播间名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 操作者。
+     * @var string <p>操作者。</p>
      */
     public $Operator;
 
     /**
-     * @param string $Name 直播间名称。
-     * @param string $Operator 操作者。
+     * @var string <p>形象ID</p>
+     */
+    public $AvatarKey;
+
+    /**
+     * @var string <p>音色ID</p>
+     */
+    public $TimbreKey;
+
+    /**
+     * @var string <p>房间模式</p><p>枚举值：</p><ul><li>INTERACT： 交互模式</li><li>FREE： 自由模式</li><li>NORMAL： 普通模式</li></ul>
+     */
+    public $LiveMode;
+
+    /**
+     * @param string $Name <p>直播间名称。</p>
+     * @param string $Operator <p>操作者。</p>
+     * @param string $AvatarKey <p>形象ID</p>
+     * @param string $TimbreKey <p>音色ID</p>
+     * @param string $LiveMode <p>房间模式</p><p>枚举值：</p><ul><li>INTERACT： 交互模式</li><li>FREE： 自由模式</li><li>NORMAL： 普通模式</li></ul>
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class CreateLiveAvatarRoomRequest extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("AvatarKey",$param) and $param["AvatarKey"] !== null) {
+            $this->AvatarKey = $param["AvatarKey"];
+        }
+
+        if (array_key_exists("TimbreKey",$param) and $param["TimbreKey"] !== null) {
+            $this->TimbreKey = $param["TimbreKey"];
+        }
+
+        if (array_key_exists("LiveMode",$param) and $param["LiveMode"] !== null) {
+            $this->LiveMode = $param["LiveMode"];
         }
     }
 }

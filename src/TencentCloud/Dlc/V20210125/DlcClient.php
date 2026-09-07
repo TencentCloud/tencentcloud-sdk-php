@@ -273,7 +273,6 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
  * @method Models\GetRayClusterYamlResponse GetRayClusterYaml(Models\GetRayClusterYamlRequest $req) 获取RayCluster的YAML内容
  * @method Models\GetRayJobResponse GetRayJob(Models\GetRayJobRequest $req) 根据任务ID获取Ray任务详情
  * @method Models\GetRayJobEventResponse GetRayJobEvent(Models\GetRayJobEventRequest $req) 通过 ResourceManager 调用 CLS SearchLog API 查询作业相关日志。不返回总数，使用 Context 进行翻页，ListOver 标识是否还有更多数据。
- * @method Models\GetRayJobEventLogResponse GetRayJobEventLog(Models\GetRayJobEventLogRequest $req) 获取作业事件日志
  * @method Models\GetRayJobHistoryResponse GetRayJobHistory(Models\GetRayJobHistoryRequest $req) 根据任务ID获取Ray任务的历史执行记录
  * @method Models\GetRayJobPodYamlResponse GetRayJobPodYaml(Models\GetRayJobPodYamlRequest $req) 获取Pod的YAML内容
  * @method Models\GetRayJobPodsResponse GetRayJobPods(Models\GetRayJobPodsRequest $req) 获取作业的Pod列表

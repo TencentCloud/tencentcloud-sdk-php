@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyWebhookTrigger请求参数结构体
  *
- * @method string getRegistryId() 获取实例Id
- * @method void setRegistryId(string $RegistryId) 设置实例Id
- * @method WebhookTrigger getTrigger() 获取触发器参数
- * @method void setTrigger(WebhookTrigger $Trigger) 设置触发器参数
- * @method string getNamespace() 获取命名空间
- * @method void setNamespace(string $Namespace) 设置命名空间
+ * @method string getRegistryId() 获取<p>实例Id</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>实例Id</p>
+ * @method WebhookTrigger getTrigger() 获取<p>触发器参数</p>
+ * @method void setTrigger(WebhookTrigger $Trigger) 设置<p>触发器参数</p>
+ * @method string getNamespace() 获取<p>命名空间</p>
+ * @method void setNamespace(string $Namespace) 设置<p>命名空间</p>
  */
 class ModifyWebhookTriggerRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string <p>实例Id</p>
      */
     public $RegistryId;
 
     /**
-     * @var WebhookTrigger 触发器参数
+     * @var WebhookTrigger <p>触发器参数</p>
      */
     public $Trigger;
 
     /**
-     * @var string 命名空间
+     * @var string <p>命名空间</p>
      */
     public $Namespace;
 
     /**
-     * @param string $RegistryId 实例Id
-     * @param WebhookTrigger $Trigger 触发器参数
-     * @param string $Namespace 命名空间
+     * @param string $RegistryId <p>实例Id</p>
+     * @param WebhookTrigger $Trigger <p>触发器参数</p>
+     * @param string $Namespace <p>命名空间</p>
      */
     function __construct()
     {

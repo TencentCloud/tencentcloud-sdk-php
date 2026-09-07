@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserLoginName(string $UserLoginName) 设置<p>用户登录时输入的用户名</p>
  * @method Result getLoginResult() 获取<p>登录结果</p>
  * @method void setLoginResult(Result $LoginResult) 设置<p>登录结果</p>
+ * @method string getRegisterTime() 获取<p>用户注册时间。</p><p>参数格式：要求符合ISO 8601标准的带时区的毫秒级时间，格式&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot; ，例如&quot;2025-10-19T09:11:10.145+08:00&quot;</p>
+ * @method void setRegisterTime(string $RegisterTime) 设置<p>用户注册时间。</p><p>参数格式：要求符合ISO 8601标准的带时区的毫秒级时间，格式&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot; ，例如&quot;2025-10-19T09:11:10.145+08:00&quot;</p>
+ * @method boolean getIsPaidUser() 获取<p>是否付费用户。</p><p>枚举值：</p><ul><li>true： 付费用户</li><li>false： 非付费用户</li></ul>
+ * @method void setIsPaidUser(boolean $IsPaidUser) 设置<p>是否付费用户。</p><p>枚举值：</p><ul><li>true： 付费用户</li><li>false： 非付费用户</li></ul>
  * @method array getCust() 获取<p>与RCE约定的定制化信息，为K:V 格式的对象数组，示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
  * @method void setCust(array $Cust) 设置<p>与RCE约定的定制化信息，为K:V 格式的对象数组，示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
  */
@@ -47,6 +51,16 @@ class LoginEvent extends AbstractModel
     public $LoginResult;
 
     /**
+     * @var string <p>用户注册时间。</p><p>参数格式：要求符合ISO 8601标准的带时区的毫秒级时间，格式&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot; ，例如&quot;2025-10-19T09:11:10.145+08:00&quot;</p>
+     */
+    public $RegisterTime;
+
+    /**
+     * @var boolean <p>是否付费用户。</p><p>枚举值：</p><ul><li>true： 付费用户</li><li>false： 非付费用户</li></ul>
+     */
+    public $IsPaidUser;
+
+    /**
      * @var array <p>与RCE约定的定制化信息，为K:V 格式的对象数组，示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
      */
     public $Cust;
@@ -55,6 +69,8 @@ class LoginEvent extends AbstractModel
      * @param User $UserInfo <p>用户基础信息</p>
      * @param string $UserLoginName <p>用户登录时输入的用户名</p>
      * @param Result $LoginResult <p>登录结果</p>
+     * @param string $RegisterTime <p>用户注册时间。</p><p>参数格式：要求符合ISO 8601标准的带时区的毫秒级时间，格式&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot; ，例如&quot;2025-10-19T09:11:10.145+08:00&quot;</p>
+     * @param boolean $IsPaidUser <p>是否付费用户。</p><p>枚举值：</p><ul><li>true： 付费用户</li><li>false： 非付费用户</li></ul>
      * @param array $Cust <p>与RCE约定的定制化信息，为K:V 格式的对象数组，示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
      */
     function __construct()
@@ -82,6 +98,14 @@ class LoginEvent extends AbstractModel
         if (array_key_exists("LoginResult",$param) and $param["LoginResult"] !== null) {
             $this->LoginResult = new Result();
             $this->LoginResult->deserialize($param["LoginResult"]);
+        }
+
+        if (array_key_exists("RegisterTime",$param) and $param["RegisterTime"] !== null) {
+            $this->RegisterTime = $param["RegisterTime"];
+        }
+
+        if (array_key_exists("IsPaidUser",$param) and $param["IsPaidUser"] !== null) {
+            $this->IsPaidUser = $param["IsPaidUser"];
         }
 
         if (array_key_exists("Cust",$param) and $param["Cust"] !== null) {

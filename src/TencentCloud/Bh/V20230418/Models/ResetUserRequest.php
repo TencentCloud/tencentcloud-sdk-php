@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetUser请求参数结构体
  *
- * @method array getIdSet() 获取用户ID集合
- * @method void setIdSet(array $IdSet) 设置用户ID集合
+ * @method array getIdSet() 获取<p>用户ID集合</p>
+ * @method void setIdSet(array $IdSet) 设置<p>用户ID集合</p>
+ * @method integer getResetType() 获取<p>重置类型</p><p>枚举值：</p><ul><li>0： 同时重置本地认证密码、OTP验证码</li><li>1： 仅重置本地认证密码</li><li>2： 仅重置OTP验证码</li></ul><p>默认值：0</p>
+ * @method void setResetType(integer $ResetType) 设置<p>重置类型</p><p>枚举值：</p><ul><li>0： 同时重置本地认证密码、OTP验证码</li><li>1： 仅重置本地认证密码</li><li>2： 仅重置OTP验证码</li></ul><p>默认值：0</p>
  */
 class ResetUserRequest extends AbstractModel
 {
     /**
-     * @var array 用户ID集合
+     * @var array <p>用户ID集合</p>
      */
     public $IdSet;
 
     /**
-     * @param array $IdSet 用户ID集合
+     * @var integer <p>重置类型</p><p>枚举值：</p><ul><li>0： 同时重置本地认证密码、OTP验证码</li><li>1： 仅重置本地认证密码</li><li>2： 仅重置OTP验证码</li></ul><p>默认值：0</p>
+     */
+    public $ResetType;
+
+    /**
+     * @param array $IdSet <p>用户ID集合</p>
+     * @param integer $ResetType <p>重置类型</p><p>枚举值：</p><ul><li>0： 同时重置本地认证密码、OTP验证码</li><li>1： 仅重置本地认证密码</li><li>2： 仅重置OTP验证码</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ResetUserRequest extends AbstractModel
         }
         if (array_key_exists("IdSet",$param) and $param["IdSet"] !== null) {
             $this->IdSet = $param["IdSet"];
+        }
+
+        if (array_key_exists("ResetType",$param) and $param["ResetType"] !== null) {
+            $this->ResetType = $param["ResetType"];
         }
     }
 }

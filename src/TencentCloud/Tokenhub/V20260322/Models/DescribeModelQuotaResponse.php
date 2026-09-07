@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTPMInputReserveLimit(integer $TPMInputReserveLimit) 设置<p>TPM 预留 input 配额</p>
  * @method integer getTPMOutputReserveLimit() 获取<p>TPM 预留 output 配额</p>
  * @method void setTPMOutputReserveLimit(integer $TPMOutputReserveLimit) 设置<p>TPM 预留 output 配额</p>
+ * @method integer getTPMInputReservePostPaidLimit() 获取<p>TPM 预留后付费 input 配额</p>
+ * @method void setTPMInputReservePostPaidLimit(integer $TPMInputReservePostPaidLimit) 设置<p>TPM 预留后付费 input 配额</p>
+ * @method integer getTPMOutputReservePostPaidLimit() 获取<p>TPM 预留后付费 output 配额</p>
+ * @method void setTPMOutputReservePostPaidLimit(integer $TPMOutputReservePostPaidLimit) 设置<p>TPM 预留后付费 output 配额</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +79,16 @@ class DescribeModelQuotaResponse extends AbstractModel
     public $TPMOutputReserveLimit;
 
     /**
+     * @var integer <p>TPM 预留后付费 input 配额</p>
+     */
+    public $TPMInputReservePostPaidLimit;
+
+    /**
+     * @var integer <p>TPM 预留后付费 output 配额</p>
+     */
+    public $TPMOutputReservePostPaidLimit;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +101,8 @@ class DescribeModelQuotaResponse extends AbstractModel
      * @param integer $TPMOutputQuotaLimit <p>TPM 保障包 output 配额</p>
      * @param integer $TPMInputReserveLimit <p>TPM 预留 input 配额</p>
      * @param integer $TPMOutputReserveLimit <p>TPM 预留 output 配额</p>
+     * @param integer $TPMInputReservePostPaidLimit <p>TPM 预留后付费 input 配额</p>
+     * @param integer $TPMOutputReservePostPaidLimit <p>TPM 预留后付费 output 配额</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +144,14 @@ class DescribeModelQuotaResponse extends AbstractModel
 
         if (array_key_exists("TPMOutputReserveLimit",$param) and $param["TPMOutputReserveLimit"] !== null) {
             $this->TPMOutputReserveLimit = $param["TPMOutputReserveLimit"];
+        }
+
+        if (array_key_exists("TPMInputReservePostPaidLimit",$param) and $param["TPMInputReservePostPaidLimit"] !== null) {
+            $this->TPMInputReservePostPaidLimit = $param["TPMInputReservePostPaidLimit"];
+        }
+
+        if (array_key_exists("TPMOutputReservePostPaidLimit",$param) and $param["TPMOutputReservePostPaidLimit"] !== null) {
+            $this->TPMOutputReservePostPaidLimit = $param["TPMOutputReservePostPaidLimit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

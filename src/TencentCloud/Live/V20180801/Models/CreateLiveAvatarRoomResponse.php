@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveAvatarRoom返回参数结构体
  *
- * @method string getRoomId() 获取数字人直播间 ID。
- * @method void setRoomId(string $RoomId) 设置数字人直播间 ID。
+ * @method string getRoomId() 获取<p>数字人直播间 ID。</p>
+ * @method void setRoomId(string $RoomId) 设置<p>数字人直播间 ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateLiveAvatarRoomResponse extends AbstractModel
 {
     /**
-     * @var string 数字人直播间 ID。
+     * @var string <p>数字人直播间 ID。</p>
      */
     public $RoomId;
 
@@ -38,7 +38,7 @@ class CreateLiveAvatarRoomResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $RoomId 数字人直播间 ID。
+     * @param string $RoomId <p>数字人直播间 ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

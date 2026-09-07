@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置<p>备份开始时间。</p>
  * @method string getBackupId() 获取<p>备份任务ID。</p>
  * @method void setBackupId(string $BackupId) 设置<p>备份任务ID。</p>
- * @method string getBackupType() 获取<p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
- * @method void setBackupType(string $BackupType) 设置<p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
+ * @method string getBackupType() 获取<p>备份类型。</p><p>枚举值：</p><ul><li>0： 用户发起的手动备份</li><li>1： 凌晨系统发起的自动备份</li><li>2： 变配触发的备份</li></ul>
+ * @method void setBackupType(string $BackupType) 设置<p>备份类型。</p><p>枚举值：</p><ul><li>0： 用户发起的手动备份</li><li>1： 凌晨系统发起的自动备份</li><li>2： 变配触发的备份</li></ul>
  * @method integer getStatus() 获取<p>备份状态。 </p><ul><li>1：备份被其它流程锁定。</li><li>2：备份正常，没有被任何流程锁定。</li><li>-1：备份已过期。</li><li>3：备份正在被导出。</li><li>4：备份导出成功。</li></ul>
  * @method void setStatus(integer $Status) 设置<p>备份状态。 </p><ul><li>1：备份被其它流程锁定。</li><li>2：备份正常，没有被任何流程锁定。</li><li>-1：备份已过期。</li><li>3：备份正在被导出。</li><li>4：备份导出成功。</li></ul>
  * @method string getRemark() 获取<p>备份的备注信息。</p>
@@ -66,7 +66,7 @@ class RedisBackupSet extends AbstractModel
     public $BackupId;
 
     /**
-     * @var string <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
+     * @var string <p>备份类型。</p><p>枚举值：</p><ul><li>0： 用户发起的手动备份</li><li>1： 凌晨系统发起的自动备份</li><li>2： 变配触发的备份</li></ul>
      */
     public $BackupType;
 
@@ -138,7 +138,7 @@ class RedisBackupSet extends AbstractModel
     /**
      * @param string $StartTime <p>备份开始时间。</p>
      * @param string $BackupId <p>备份任务ID。</p>
-     * @param string $BackupType <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
+     * @param string $BackupType <p>备份类型。</p><p>枚举值：</p><ul><li>0： 用户发起的手动备份</li><li>1： 凌晨系统发起的自动备份</li><li>2： 变配触发的备份</li></ul>
      * @param integer $Status <p>备份状态。 </p><ul><li>1：备份被其它流程锁定。</li><li>2：备份正常，没有被任何流程锁定。</li><li>-1：备份已过期。</li><li>3：备份正在被导出。</li><li>4：备份导出成功。</li></ul>
      * @param string $Remark <p>备份的备注信息。</p>
      * @param integer $Locked <p>备份是否被锁定。</p><ul><li>0：未被锁定。</li><li>1：已被锁定。</li></ul>

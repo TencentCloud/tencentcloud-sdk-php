@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedOn(string $CreatedOn) 设置<p>创建时间。</p>
  * @method string getModifiedOn() 获取<p>修改时间。</p>
  * @method void setModifiedOn(string $ModifiedOn) 设置<p>修改时间。</p>
+ * @method array getComplianceRestrictions() 获取<p>域名因合规问题产生的地区访问限制列表。</p>
+ * @method void setComplianceRestrictions(array $ComplianceRestrictions) 设置<p>域名因合规问题产生的地区访问限制列表。</p>
  */
 class AccelerationDomain extends AbstractModel
 {
@@ -146,6 +148,11 @@ class AccelerationDomain extends AbstractModel
     public $ModifiedOn;
 
     /**
+     * @var array <p>域名因合规问题产生的地区访问限制列表。</p>
+     */
+    public $ComplianceRestrictions;
+
+    /**
      * @param string $ZoneId <p>站点 ID。</p>
      * @param string $DomainName <p>加速域名名称。</p>
      * @param string $DomainStatus <p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul>
@@ -168,6 +175,7 @@ class AccelerationDomain extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedOn <p>创建时间。</p>
      * @param string $ModifiedOn <p>修改时间。</p>
+     * @param array $ComplianceRestrictions <p>域名因合规问题产生的地区访问限制列表。</p>
      */
     function __construct()
     {
@@ -239,6 +247,15 @@ class AccelerationDomain extends AbstractModel
 
         if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
             $this->ModifiedOn = $param["ModifiedOn"];
+        }
+
+        if (array_key_exists("ComplianceRestrictions",$param) and $param["ComplianceRestrictions"] !== null) {
+            $this->ComplianceRestrictions = [];
+            foreach ($param["ComplianceRestrictions"] as $key => $value){
+                $obj = new ComplianceRestriction();
+                $obj->deserialize($value);
+                array_push($this->ComplianceRestrictions, $obj);
+            }
         }
     }
 }

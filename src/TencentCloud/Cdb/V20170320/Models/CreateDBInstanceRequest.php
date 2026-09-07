@@ -108,6 +108,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestroyProtect(string $DestroyProtect) 设置<p>开启或关闭实例销毁保护。on-开启，off-关闭</p>
  * @method string getFourthZone() 获取<p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
  * @method void setFourthZone(string $FourthZone) 设置<p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+ * @method AutoStrategy getAutoStrategy() 获取<p>弹性扩容参数（如果不传，则不开启）</p>
+ * @method void setAutoStrategy(AutoStrategy $AutoStrategy) 设置<p>弹性扩容参数（如果不传，则不开启）</p>
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -332,6 +334,11 @@ class CreateDBInstanceRequest extends AbstractModel
     public $FourthZone;
 
     /**
+     * @var AutoStrategy <p>弹性扩容参数（如果不传，则不开启）</p>
+     */
+    public $AutoStrategy;
+
+    /**
      * @param integer $Memory <p>实例内存大小，单位：MB，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的内存规格。</p>
      * @param integer $Volume <p>实例硬盘大小，单位：GB，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的硬盘范围。</p>
      * @param integer $Period <p>实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p>
@@ -376,6 +383,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $DiskEncryption <p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p>
      * @param string $DestroyProtect <p>开启或关闭实例销毁保护。on-开启，off-关闭</p>
      * @param string $FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     * @param AutoStrategy $AutoStrategy <p>弹性扩容参数（如果不传，则不开启）</p>
      */
     function __construct()
     {
@@ -576,6 +584,11 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("FourthZone",$param) and $param["FourthZone"] !== null) {
             $this->FourthZone = $param["FourthZone"];
+        }
+
+        if (array_key_exists("AutoStrategy",$param) and $param["AutoStrategy"] !== null) {
+            $this->AutoStrategy = new AutoStrategy();
+            $this->AutoStrategy->deserialize($param["AutoStrategy"]);
         }
     }
 }

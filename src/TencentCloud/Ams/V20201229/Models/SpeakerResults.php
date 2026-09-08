@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 说话人结果
  *
- * @method string getLabel() 获取标签
- * @method void setLabel(string $Label) 设置标签
- * @method integer getScore() 获取得分
- * @method void setScore(integer $Score) 设置得分
- * @method float getStartTime() 获取开始时间
- * @method void setStartTime(float $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getLabel() 获取<p>标签</p>
+ * @method void setLabel(string $Label) 设置<p>标签</p>
+ * @method integer getScore() 获取<p>得分</p>
+ * @method void setScore(integer $Score) 设置<p>得分</p>
+ * @method float getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(float $StartTime) 设置<p>开始时间</p>
+ * @method float getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(float $EndTime) 设置<p>结束时间</p>
  */
 class SpeakerResults extends AbstractModel
 {
     /**
-     * @var string 标签
+     * @var string <p>标签</p>
      */
     public $Label;
 
     /**
-     * @var integer 得分
+     * @var integer <p>得分</p>
      */
     public $Score;
 
     /**
-     * @var float 开始时间
+     * @var float <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var float <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @param string $Label 标签
-     * @param integer $Score 得分
-     * @param float $StartTime 开始时间
-     * @param string $EndTime 结束时间
+     * @param string $Label <p>标签</p>
+     * @param integer $Score <p>得分</p>
+     * @param float $StartTime <p>开始时间</p>
+     * @param float $EndTime <p>结束时间</p>
      */
     function __construct()
     {

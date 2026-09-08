@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置日志主题id
  * @method string getPartitionId() 获取分区id
  * @method void setPartitionId(string $PartitionId) 设置分区id
+ * @method integer getOffsetType() 获取获取offset方式。 0 表示 fetch_offset，1 表示 list_offset
+ * @method void setOffsetType(integer $OffsetType) 设置获取offset方式。 0 表示 fetch_offset，1 表示 list_offset
  */
 class DescribeConsumerOffsetsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeConsumerOffsetsRequest extends AbstractModel
     public $PartitionId;
 
     /**
+     * @var integer 获取offset方式。 0 表示 fetch_offset，1 表示 list_offset
+     */
+    public $OffsetType;
+
+    /**
      * @param string $ConsumerGroup 日志主题对应的消费组标识
      * @param string $From 时间戳(秒级时间戳)
      * @param string $LogsetId 日志集id(日志主题对应的id)
      * @param string $TopicId 日志主题id
      * @param string $PartitionId 分区id
+     * @param integer $OffsetType 获取offset方式。 0 表示 fetch_offset，1 表示 list_offset
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeConsumerOffsetsRequest extends AbstractModel
 
         if (array_key_exists("PartitionId",$param) and $param["PartitionId"] !== null) {
             $this->PartitionId = $param["PartitionId"];
+        }
+
+        if (array_key_exists("OffsetType",$param) and $param["OffsetType"] !== null) {
+            $this->OffsetType = $param["OffsetType"];
         }
     }
 }

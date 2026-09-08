@@ -29,6 +29,8 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 关闭数据库实例的审计功能
  * @method Models\CloseDBExtranetAccessResponse CloseDBExtranetAccess(Models\CloseDBExtranetAccessRequest $req) 本接口（CloseDBExtranetAccess）用于关闭实例公网地址。
  * @method Models\CloseDBProxyAddressResponse CloseDBProxyAddress(Models\CloseDBProxyAddressRequest $req) 本接口用于关闭（删除）数据库代理的指定地址。接口为异步操作，返回 TaskId 供调用方通过 DescribeTasks 查询任务执行进度。约束：代理组至少保留一个地址，不允许删除最后一个地址。
+ * @method Models\CloseMem0ServiceResponse CloseMem0Service(Models\CloseMem0ServiceRequest $req) 本接口（CloseMem0Service）用于关闭实例的Mem0服务
+ * @method Models\ClosePostgRESTServiceResponse ClosePostgRESTService(Models\ClosePostgRESTServiceRequest $req) 本接口（ClosePostgRestService）用于关闭实例的PostgREST服务
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 此接口用于创建数据账号，返回的Oid为账号唯一标识。与数据库系统表pg_roles中记录的oid一致。
  * @method Models\CreateAuditLogFileResponse CreateAuditLogFile(Models\CreateAuditLogFileRequest $req) 创建审计日志文件
  * @method Models\CreateBackupPlanResponse CreateBackupPlan(Models\CreateBackupPlanRequest $req) 此接口用于创建备份策略。
@@ -103,10 +105,12 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\DescribeEncryptionKeysResponse DescribeEncryptionKeys(Models\DescribeEncryptionKeysRequest $req) 本接口 （DescribeEncryptionKeys） 用于查询实例的密钥信息列表。
  * @method Models\DescribeLogBackupsResponse DescribeLogBackups(Models\DescribeLogBackupsRequest $req) 本接口（DescribeLogBackups）用于查询日志备份列表。
  * @method Models\DescribeMaintainTimeWindowResponse DescribeMaintainTimeWindow(Models\DescribeMaintainTimeWindowRequest $req) 本接口 (DescribeMaintainTimeWindow) 用于查询实例的维护时间窗口
+ * @method Models\DescribeMem0ServiceResponse DescribeMem0Service(Models\DescribeMem0ServiceRequest $req) 本接口（DescribeMem0Service）用于查询某个实例的Mem0服务信息
  * @method Models\DescribeOrdersResponse DescribeOrders(Models\DescribeOrdersRequest $req) 本接口（DescribeOrders）用于查询订单信息。
  * @method Models\DescribeParameterTemplateAttributesResponse DescribeParameterTemplateAttributes(Models\DescribeParameterTemplateAttributesRequest $req) 本接口（DescribeParameterTemplateAttributes）用于查询某个参数模板的具体内容，包括基本信息和参数信息。
  * @method Models\DescribeParameterTemplatesResponse DescribeParameterTemplates(Models\DescribeParameterTemplatesRequest $req) 本接口 (DescribeParameterTemplates) 用于查询参数模板列表。
  * @method Models\DescribeParamsEventResponse DescribeParamsEvent(Models\DescribeParamsEventRequest $req) 本接口（DescribeParamsEvent）用于查询参数修改事件。
+ * @method Models\DescribePostgRESTServiceResponse DescribePostgRESTService(Models\DescribePostgRESTServiceRequest $req) 本接口（DescribePostgRestService）用于查询某个实例的PostgREST服务信息
  * @method Models\DescribeProductConfigResponse DescribeProductConfig(Models\DescribeProductConfigRequest $req) 本接口（DescribeProductConfig）用于查询售卖规格配置。**本接口属于早期接口，已停止功能迭代，推荐使用新接口**[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)**替代**。
  * @method Models\DescribeReadOnlyGroupsResponse DescribeReadOnlyGroups(Models\DescribeReadOnlyGroupsRequest $req) 本接口（DescribeReadOnlyGroups）用于查询只读组列表
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口 (DescribeRegions) 用于查询售卖地域信息。
@@ -154,6 +158,8 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\OpenAccountCAMResponse OpenAccountCAM(Models\OpenAccountCAMRequest $req) 本接口用于开启数据库账户的CAM验证服务。
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) 开启数据库实例的审计功能
  * @method Models\OpenDBExtranetAccessResponse OpenDBExtranetAccess(Models\OpenDBExtranetAccessRequest $req) 本接口（OpenDBExtranetAccess）用于开通实例公网地址。
+ * @method Models\OpenMem0ServiceResponse OpenMem0Service(Models\OpenMem0ServiceRequest $req) 本接口（OpenMem0Service）用于开启实例Mem0服务
+ * @method Models\OpenPostgRESTServiceResponse OpenPostgRESTService(Models\OpenPostgRESTServiceRequest $req) 本接口（OpenPostgRestService）用于开启实例PostgREST服务
  * @method Models\RebalanceReadOnlyGroupResponse RebalanceReadOnlyGroup(Models\RebalanceReadOnlyGroupRequest $req) 本接口(RebalanceReadOnlyGroup)用于重新均衡 RO 组内实例的负载。注意，RO 组内 RO 实例会有一次数据库连接瞬断，请确保应用程序能重连数据库，谨慎操作。
  * @method Models\RefreshAccountPasswordResponse RefreshAccountPassword(Models\RefreshAccountPasswordRequest $req) 本接口用于对开启CAM验证的账户执行手动刷新密码。
  * @method Models\ReloadBalanceDBProxyNodeResponse ReloadBalanceDBProxyNode(Models\ReloadBalanceDBProxyNodeRequest $req) 本接口（ReloadBalanceDBProxyNode）用于重新均衡数据库代理节点

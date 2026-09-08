@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetText(array $TargetText) 设置<p>命中的文本内容</p>
  * @method string getSuggestion() 获取<p>违规建议</p>
  * @method void setSuggestion(string $Suggestion) 设置<p>违规建议</p>
+ * @method string getExtra() 获取<p>其他信息</p>
+ * @method void setExtra(string $Extra) 设置<p>其他信息</p>
  */
 class VideoLLMDetail extends AbstractModel
 {
@@ -52,10 +54,16 @@ class VideoLLMDetail extends AbstractModel
     public $Suggestion;
 
     /**
+     * @var string <p>其他信息</p>
+     */
+    public $Extra;
+
+    /**
      * @param string $LabelName <p>命中的标签名</p>
      * @param string $Reason <p>命中标签的原因</p>
      * @param array $TargetText <p>命中的文本内容</p>
      * @param string $Suggestion <p>违规建议</p>
+     * @param string $Extra <p>其他信息</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class VideoLLMDetail extends AbstractModel
 
         if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
             $this->Suggestion = $param["Suggestion"];
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
     }
 }

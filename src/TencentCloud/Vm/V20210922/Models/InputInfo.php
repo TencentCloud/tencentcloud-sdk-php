@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextContent(string $TextContent) 设置<p>大模型审核场景下，base64编码的审核要求内容</p>
  * @method string getTitle() 获取<p>文章标题</p>
  * @method void setTitle(string $Title) 设置<p>文章标题</p>
+ * @method string getExtra() 获取<p>其他信息</p>
+ * @method void setExtra(string $Extra) 设置<p>其他信息</p>
  */
 class InputInfo extends AbstractModel
 {
@@ -69,6 +71,11 @@ class InputInfo extends AbstractModel
     public $Title;
 
     /**
+     * @var string <p>其他信息</p>
+     */
+    public $Extra;
+
+    /**
      * @param string $Type <p>传入的类型可选：URL，COS</p>
      * @param string $Url <p>Url地址</p>
      * @param string $BucketInfo <p>桶信息。当输入当时COS时，该字段不为空</p>
@@ -76,6 +83,7 @@ class InputInfo extends AbstractModel
      * @param array $ImageUrlList <p>大模型审核可选输入图片列表</p>
      * @param string $TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
      * @param string $Title <p>文章标题</p>
+     * @param string $Extra <p>其他信息</p>
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ class InputInfo extends AbstractModel
 
         if (array_key_exists("Title",$param) and $param["Title"] !== null) {
             $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
     }
 }

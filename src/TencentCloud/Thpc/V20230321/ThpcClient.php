@@ -54,6 +54,7 @@ use TencentCloud\Thpc\V20230321\Models as Models;
 
 * 返回终端节点（EndPoint）的当前状态，包括是否就绪、VIP地址等信息。
 * 若代理未开通，EndPointReady返回false，EndPointStatus为UNKNOWN。
+ * @method Models\DescribeClusterMonitorStatusResponse DescribeClusterMonitorStatus(Models\DescribeClusterMonitorStatusRequest $req) 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
  * @method Models\DescribeClusterStorageOptionResponse DescribeClusterStorageOption(Models\DescribeClusterStorageOptionRequest $req) 本接口 (DescribeClusterStorageOption) 用于查询集群存储选项信息。
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。
  * @method Models\DescribeInitNodeScriptsResponse DescribeInitNodeScripts(Models\DescribeInitNodeScriptsRequest $req) 本接口 (DescribeInitNodeScripts) 用于查询节点初始化脚本列表。
@@ -73,11 +74,13 @@ use TencentCloud\Thpc\V20230321\Models as Models;
 * 关闭后，系统将删除VPC终端节点（EndPoint），断开IDC集群与云上VPC的网络连接。
 * 若代理未开通，调用将返回ProxyNotEnabled错误。
 * 操作不可逆，关闭后需重新调用EnableClusterDedicatedProxy开启。
+ * @method Models\DisableClusterMonitorResponse DisableClusterMonitor(Models\DisableClusterMonitorRequest $req) 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
  * @method Models\EnableClusterDedicatedProxyResponse EnableClusterDedicatedProxy(Models\EnableClusterDedicatedProxyRequest $req) 本接口 (EnableClusterDedicatedProxy) 用于开启IDC集群的专线/VPN代理。
 
 * 开启后，系统将自动创建VPC终端节点（EndPoint），实现IDC集群与云上VPC的网络互通。
 * 若代理已开通，重复调用将幂等返回已有EndPoint信息。
 * SubnetId与VpcId需同时指定或同时不指定。若不指定，则使用集群已绑定的VPC和子网。
+ * @method Models\EnableClusterMonitorResponse EnableClusterMonitor(Models\EnableClusterMonitorRequest $req) 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
  * @method Models\GenerateRegisterCodeResponse GenerateRegisterCode(Models\GenerateRegisterCodeRequest $req) 本接口(GenerateRegisterCode)用于为队列创建一个注册码，注册码用于IDC机器的注册纳管。
  * @method Models\GenerateRegisterCommandResponse GenerateRegisterCommand(Models\GenerateRegisterCommandRequest $req) 本接口 (GenerateRegisterCommand) 用于生成IDC集群的节点注册命令。
 

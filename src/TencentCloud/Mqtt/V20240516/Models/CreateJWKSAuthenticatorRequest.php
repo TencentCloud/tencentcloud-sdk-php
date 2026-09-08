@@ -20,82 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateJWKSAuthenticator请求参数结构体
  *
- * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method string getEndpoint() 获取JWKS服务地址，（Text字段和Endpoint字段必须选择一个填写）
- * @method void setEndpoint(string $Endpoint) 设置JWKS服务地址，（Text字段和Endpoint字段必须选择一个填写）
- * @method integer getRefreshInterval() 获取认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址（Endpoint）时生效。
- * @method void setRefreshInterval(integer $RefreshInterval) 设置认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址（Endpoint）时生效。
- * @method string getText() 获取jwks文本，（Text字段和Endpoint字段必须选择一个填写）
- * @method void setText(string $Text) 设置jwks文本，（Text字段和Endpoint字段必须选择一个填写）
- * @method string getStatus() 获取认证器是否开启：open-启用；close-关闭，默认open-启用
- * @method void setStatus(string $Status) 设置认证器是否开启：open-启用；close-关闭，默认open-启用
- * @method string getRemark() 获取说明，不能超过 128 个字符
- * @method void setRemark(string $Remark) 设置说明，不能超过 128 个字符
- * @method string getFrom() 获取认证字段；
-username-对应 MQTT CONNECT Packet 中 username 字段，
-password-对应 MQTT CONNECT Packet 中 password 字段。
-
-默认username
- * @method void setFrom(string $From) 设置认证字段；
-username-对应 MQTT CONNECT Packet 中 username 字段，
-password-对应 MQTT CONNECT Packet 中 password 字段。
-
-默认username
+ * @method string getInstanceId() 获取<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method string getEndpoint() 获取<p>JWKS服务地址，（Text字段和Endpoint字段必须选择一个填写）</p>
+ * @method void setEndpoint(string $Endpoint) 设置<p>JWKS服务地址，（Text字段和Endpoint字段必须选择一个填写）</p>
+ * @method integer getRefreshInterval() 获取<p>认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址（Endpoint）时生效。</p>
+ * @method void setRefreshInterval(integer $RefreshInterval) 设置<p>认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址（Endpoint）时生效。</p>
+ * @method string getText() 获取<p>jwks文本，（Text字段和Endpoint字段必须选择一个填写）</p>
+ * @method void setText(string $Text) 设置<p>jwks文本，（Text字段和Endpoint字段必须选择一个填写）</p>
+ * @method string getStatus() 获取<p>认证器是否开启：open-启用；close-关闭，默认open-启用</p>
+ * @method void setStatus(string $Status) 设置<p>认证器是否开启：open-启用；close-关闭，默认open-启用</p>
+ * @method string getRemark() 获取<p>说明，不能超过 128 个字符</p>
+ * @method void setRemark(string $Remark) 设置<p>说明，不能超过 128 个字符</p>
+ * @method string getFrom() 获取<p>认证字段；<br>username-对应 MQTT CONNECT Packet 中 username 字段，<br>password-对应 MQTT CONNECT Packet 中 password 字段。</p><p>默认username</p>
+ * @method void setFrom(string $From) 设置<p>认证字段；<br>username-对应 MQTT CONNECT Packet 中 username 字段，<br>password-对应 MQTT CONNECT Packet 中 password 字段。</p><p>默认username</p>
  */
 class CreateJWKSAuthenticatorRequest extends AbstractModel
 {
     /**
-     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @var string <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string JWKS服务地址，（Text字段和Endpoint字段必须选择一个填写）
+     * @var string <p>JWKS服务地址，（Text字段和Endpoint字段必须选择一个填写）</p>
      */
     public $Endpoint;
 
     /**
-     * @var integer 认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址（Endpoint）时生效。
+     * @var integer <p>认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址（Endpoint）时生效。</p>
      */
     public $RefreshInterval;
 
     /**
-     * @var string jwks文本，（Text字段和Endpoint字段必须选择一个填写）
+     * @var string <p>jwks文本，（Text字段和Endpoint字段必须选择一个填写）</p>
      */
     public $Text;
 
     /**
-     * @var string 认证器是否开启：open-启用；close-关闭，默认open-启用
+     * @var string <p>认证器是否开启：open-启用；close-关闭，默认open-启用</p>
      */
     public $Status;
 
     /**
-     * @var string 说明，不能超过 128 个字符
+     * @var string <p>说明，不能超过 128 个字符</p>
      */
     public $Remark;
 
     /**
-     * @var string 认证字段；
-username-对应 MQTT CONNECT Packet 中 username 字段，
-password-对应 MQTT CONNECT Packet 中 password 字段。
-
-默认username
+     * @var string <p>认证字段；<br>username-对应 MQTT CONNECT Packet 中 username 字段，<br>password-对应 MQTT CONNECT Packet 中 password 字段。</p><p>默认username</p>
      */
     public $From;
 
     /**
-     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param string $Endpoint JWKS服务地址，（Text字段和Endpoint字段必须选择一个填写）
-     * @param integer $RefreshInterval 认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址（Endpoint）时生效。
-     * @param string $Text jwks文本，（Text字段和Endpoint字段必须选择一个填写）
-     * @param string $Status 认证器是否开启：open-启用；close-关闭，默认open-启用
-     * @param string $Remark 说明，不能超过 128 个字符
-     * @param string $From 认证字段；
-username-对应 MQTT CONNECT Packet 中 username 字段，
-password-对应 MQTT CONNECT Packet 中 password 字段。
-
-默认username
+     * @param string $InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param string $Endpoint <p>JWKS服务地址，（Text字段和Endpoint字段必须选择一个填写）</p>
+     * @param integer $RefreshInterval <p>认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址（Endpoint）时生效。</p>
+     * @param string $Text <p>jwks文本，（Text字段和Endpoint字段必须选择一个填写）</p>
+     * @param string $Status <p>认证器是否开启：open-启用；close-关闭，默认open-启用</p>
+     * @param string $Remark <p>说明，不能超过 128 个字符</p>
+     * @param string $From <p>认证字段；<br>username-对应 MQTT CONNECT Packet 中 username 字段，<br>password-对应 MQTT CONNECT Packet 中 password 字段。</p><p>默认username</p>
      */
     function __construct()
     {

@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartition(integer $Partition) 设置<p>分区大小，如果跟控制台规格配比不相符，则无法创建成功。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563</p>
  * @method array getTags() 获取<p>标签</p>
  * @method void setTags(array $Tags) 设置<p>标签</p>
- * @method string getDiskType() 获取<p>专业版/高级版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认为 &quot;CLOUD_BASIC&quot;</p>
- * @method void setDiskType(string $DiskType) 设置<p>专业版/高级版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认为 &quot;CLOUD_BASIC&quot;</p>
+ * @method string getDiskType() 获取<p>专业版/高级版实例磁盘类型，标准版实例不需要填写。</p><p>枚举值：</p><ul><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li></ul><p>默认值：CLOUD_PREMIUM</p>
+ * @method void setDiskType(string $DiskType) 设置<p>专业版/高级版实例磁盘类型，标准版实例不需要填写。</p><p>枚举值：</p><ul><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li></ul><p>默认值：CLOUD_PREMIUM</p>
  * @method boolean getMultiZoneFlag() 获取<p>是否创建跨可用区实例，当前参数为 true 时，zoneIds必填</p>
  * @method void setMultiZoneFlag(boolean $MultiZoneFlag) 设置<p>是否创建跨可用区实例，当前参数为 true 时，zoneIds必填</p>
  * @method array getZoneIds() 获取<p>可用区列表，购买多可用区实例时为必填项</p>
@@ -147,7 +147,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认为 &quot;CLOUD_BASIC&quot;</p>
+     * @var string <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。</p><p>枚举值：</p><ul><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li></ul><p>默认值：CLOUD_PREMIUM</p>
      */
     public $DiskType;
 
@@ -207,7 +207,7 @@ class CreateInstancePreRequest extends AbstractModel
      * @param integer $BandWidth <p>实例带宽,默认值为40，单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745</p>
      * @param integer $Partition <p>分区大小，如果跟控制台规格配比不相符，则无法创建成功。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563</p>
      * @param array $Tags <p>标签</p>
-     * @param string $DiskType <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认为 &quot;CLOUD_BASIC&quot;</p>
+     * @param string $DiskType <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。</p><p>枚举值：</p><ul><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li></ul><p>默认值：CLOUD_PREMIUM</p>
      * @param boolean $MultiZoneFlag <p>是否创建跨可用区实例，当前参数为 true 时，zoneIds必填</p>
      * @param array $ZoneIds <p>可用区列表，购买多可用区实例时为必填项</p>
      * @param integer $PublicNetworkMonthly <p>公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍</p>

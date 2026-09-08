@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method WAAConfiguration getWAAConfiguration() 获取<p>waa沙箱工具配置</p>
  * @method void setWAAConfiguration(WAAConfiguration $WAAConfiguration) 设置<p>waa沙箱工具配置</p>
+ * @method OSWorldConfiguration getOSWorldConfiguration() 获取<p>配置内置 OSWorld</p>
+ * @method void setOSWorldConfiguration(OSWorldConfiguration $OSWorldConfiguration) 设置<p>配置内置 OSWorld</p>
  */
 class ComputerConfiguration extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ComputerConfiguration extends AbstractModel
     public $WAAConfiguration;
 
     /**
+     * @var OSWorldConfiguration <p>配置内置 OSWorld</p>
+     */
+    public $OSWorldConfiguration;
+
+    /**
      * @param WAAConfiguration $WAAConfiguration <p>waa沙箱工具配置</p>
+     * @param OSWorldConfiguration $OSWorldConfiguration <p>配置内置 OSWorld</p>
      */
     function __construct()
     {
@@ -49,6 +57,11 @@ class ComputerConfiguration extends AbstractModel
         if (array_key_exists("WAAConfiguration",$param) and $param["WAAConfiguration"] !== null) {
             $this->WAAConfiguration = new WAAConfiguration();
             $this->WAAConfiguration->deserialize($param["WAAConfiguration"]);
+        }
+
+        if (array_key_exists("OSWorldConfiguration",$param) and $param["OSWorldConfiguration"] !== null) {
+            $this->OSWorldConfiguration = new OSWorldConfiguration();
+            $this->OSWorldConfiguration->deserialize($param["OSWorldConfiguration"]);
         }
     }
 }

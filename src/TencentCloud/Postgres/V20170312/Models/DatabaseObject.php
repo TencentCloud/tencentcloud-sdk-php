@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述数据库中某个对象所属的类型、是在哪个数据库、模式、表中的对象。
  *
- * @method string getObjectType() 获取支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
- * @method void setObjectType(string $ObjectType) 设置支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
- * @method string getObjectName() 获取所描述的数据库对象名称
- * @method void setObjectName(string $ObjectName) 设置所描述的数据库对象名称
- * @method string getDatabaseName() 获取所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
- * @method void setDatabaseName(string $DatabaseName) 设置所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
- * @method string getSchemaName() 获取所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
- * @method void setSchemaName(string $SchemaName) 设置所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
- * @method string getTableName() 获取所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
- * @method void setTableName(string $TableName) 设置所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
+ * @method string getObjectType() 获取<p>支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。</p>
+ * @method void setObjectType(string $ObjectType) 设置<p>支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。</p>
+ * @method string getObjectName() 获取<p>所描述的数据库对象名称，或者当ModifyType为grantRole / revokeRole时，必须等于顶层UserName</p>
+ * @method void setObjectName(string $ObjectName) 设置<p>所描述的数据库对象名称，或者当ModifyType为grantRole / revokeRole时，必须等于顶层UserName</p>
+ * @method string getDatabaseName() 获取<p>所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。</p>
+ * @method void setDatabaseName(string $DatabaseName) 设置<p>所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。</p>
+ * @method string getSchemaName() 获取<p>所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。</p>
+ * @method string getTableName() 获取<p>所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。</p>
+ * @method void setTableName(string $TableName) 设置<p>所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。</p>
  */
 class DatabaseObject extends AbstractModel
 {
     /**
-     * @var string 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
+     * @var string <p>支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。</p>
      */
     public $ObjectType;
 
     /**
-     * @var string 所描述的数据库对象名称
+     * @var string <p>所描述的数据库对象名称，或者当ModifyType为grantRole / revokeRole时，必须等于顶层UserName</p>
      */
     public $ObjectName;
 
     /**
-     * @var string 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
+     * @var string <p>所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。</p>
      */
     public $DatabaseName;
 
     /**
-     * @var string 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
+     * @var string <p>所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。</p>
      */
     public $SchemaName;
 
     /**
-     * @var string 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
+     * @var string <p>所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。</p>
      */
     public $TableName;
 
     /**
-     * @param string $ObjectType 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
-     * @param string $ObjectName 所描述的数据库对象名称
-     * @param string $DatabaseName 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
-     * @param string $SchemaName 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
-     * @param string $TableName 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
+     * @param string $ObjectType <p>支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。</p>
+     * @param string $ObjectName <p>所描述的数据库对象名称，或者当ModifyType为grantRole / revokeRole时，必须等于顶层UserName</p>
+     * @param string $DatabaseName <p>所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。</p>
+     * @param string $SchemaName <p>所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。</p>
+     * @param string $TableName <p>所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。</p>
      */
     function __construct()
     {

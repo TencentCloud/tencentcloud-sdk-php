@@ -94,8 +94,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\CreateStaticStoreResponse CreateStaticStore(Models\CreateStaticStoreRequest $req) 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口(CreateTable)用于创建文档型数据库表，支持创建capped类型集合，暂时不支持分片表。
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建tcb用户
- * @method Models\CreateVmInstanceResponse CreateVmInstance(Models\CreateVmInstanceRequest $req) 创建虚拟服务器
-创建流程为先调用[DescribeVmSpec](https://cloud.tencent.com/document/product/876/129360)获取可购买的规格，同时调用[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)拉取镜像列表，选中一个规格和一个镜像后，调用[InquireVmPrice](https://cloud.tencent.com/document/product/876/129759)询价，如果价格可接受，调用此接口创建实例
  * @method Models\DeleteAIModelResponse DeleteAIModel(Models\DeleteAIModelRequest $req) 删除 AI 模型配置分组，支持批量删除。内置分组无法删除。分组删除后，该分组下的所有模型配置将同步移除，针对该分组模型的请求将会失败，请在删除前确认业务侧已停止对该分组的调用。
 
 注意：
@@ -117,7 +115,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 接口入参中的 Tag 为文档型数据库的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取。
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 删除tcb用户
- * @method Models\DeleteVmInstanceResponse DeleteVmInstance(Models\DeleteVmInstanceRequest $req) 销毁云服务器实例
  * @method Models\DescribeAIModelsResponse DescribeAIModels(Models\DescribeAIModelsRequest $req) 查询指定云开发环境下已配置的 AI 模型分组列表。返回结果包含该环境下所有类型的模型分组（自定义类型 custom、内置类型 builtin），以及各分组下的模型列表、服务地址、启用状态等配置信息。
 
 通常在以下场景中使用：
@@ -166,6 +163,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeEnvsResponse DescribeEnvs(Models\DescribeEnvsRequest $req) 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
  * @method Models\DescribeGatewayVersionsResponse DescribeGatewayVersions(Models\DescribeGatewayVersionsRequest $req) 查询网关版本信息
 暂不鉴权
+ * @method Models\DescribeHTTPServiceCachePurgeTaskResponse DescribeHTTPServiceCachePurgeTask(Models\DescribeHTTPServiceCachePurgeTaskRequest $req) 本接口DescribeHTTPServiceCachePurgeTask为只读查询，不修改任何缓存或环境资源，仅返回指定环境下域名缓存刷新任务的状态与时间等信息。通过PurgeHTTPServiceCache清除域名缓存后，可通过此接口传入任务id可查询清除任务状态、时间、缓存类型等信息。也可通过此接口查询历史任务记录。
  * @method Models\DescribeHTTPServiceRouteResponse DescribeHTTPServiceRoute(Models\DescribeHTTPServiceRouteRequest $req) 本接口DescribeHTTPServiceRoute用于查询环境下HTTP访问服务路由信息。可通过Filters过滤。如果不存在不会返回错误。HTTP访问服务提供了默认域名，通过本接口可直接获取默认域名。前置需已开通 HTTP 访问服务；调用CreateHTTPServiceRoute或者ModifyHTTPServiceRoute后可使用本接口查询创建或者修改结果
  * @method Models\DescribeHostingDomainTaskResponse DescribeHostingDomainTask(Models\DescribeHostingDomainTaskRequest $req) 查询静态托管域名任务状态
  * @method Models\DescribeLoginConfigResponse DescribeLoginConfig(Models\DescribeLoginConfigRequest $req) 查询指定云开发环境的登录策略配置。包括手机号短信登录、邮箱登录、用户名密码登录和匿名登录方式的开启状态，同时包含短信验证码发送通道、MFA 多因子认证和密码的更新策略。
@@ -193,8 +191,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 接口入参中的 Tag 为文档型数据库的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取。
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口(DescribeTables)用于查询文档型数据库所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等。
  * @method Models\DescribeUserListResponse DescribeUserList(Models\DescribeUserListRequest $req) 查询tcb用户列表
- * @method Models\DescribeVmInstancesResponse DescribeVmInstances(Models\DescribeVmInstancesRequest $req) 查询环境下的云服务器列表
- * @method Models\DescribeVmSpecResponse DescribeVmSpec(Models\DescribeVmSpecRequest $req) 云服务器规格list
  * @method Models\DestroyEnvResponse DestroyEnv(Models\DestroyEnvRequest $req) 本接口用于销毁云开发环境。
 云开发环境遵循腾讯云包年包月预付费产品生命周期，因此环境销毁需要分两步：
 1. 资源退费。此时会根据当前环境剩余有效期，自动退还相关费用(代金券不退)。退款后，环境进入隔离期。
@@ -211,7 +207,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DestroyStaticStoreResponse DestroyStaticStore(Models\DestroyStaticStoreRequest $req) 销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
  * @method Models\ExecutePGSqlResponse ExecutePGSql(Models\ExecutePGSqlRequest $req) 在Postgres数据库上执行SQL
  * @method Models\GetProvidersResponse GetProviders(Models\GetProvidersRequest $req) 查询指定云开发环境下的身份认证源列表。返回该环境已配置的所有身份认证源信息，包括第三方登录（OAuth、OIDC、SAML）、微信小程序登录、自定义登录和邮箱登录等。返回结果包含认证源基本信息、关联应用、配置状态及启用情况。若自定义登录或邮箱登录的身份源尚未创建，接口会自动追加一个默认关闭状态的身份源记录。
- * @method Models\InquireVmPriceResponse InquireVmPrice(Models\InquireVmPriceRequest $req) 查询服务器价格
  * @method Models\ListPGUserMigrationsResponse ListPGUserMigrations(Models\ListPGUserMigrationsRequest $req) 本接口（ListPGUserMigrations）用于查询目标环境已应用的用户 migration 列表。
  * @method Models\ListTablesResponse ListTables(Models\ListTablesRequest $req) 本接口(ListTables)用于查询文档型数据库所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等。
 
@@ -244,6 +239,7 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
 本接口仅更新存储源绑定关系，不会迁移您的数据。
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改tcb用户
  * @method Models\PreviewPGUserMigrationsResponse PreviewPGUserMigrations(Models\PreviewPGUserMigrationsRequest $req) 本接口（PreviewPGUserMigrations）用于预览SQL migrations 在远端的执行计划，不实际执行SQL。
+ * @method Models\PurgeHTTPServiceCacheResponse PurgeHTTPServiceCache(Models\PurgeHTTPServiceCacheRequest $req) 本接口PurgeHTTPServiceCache为异步操作，清除指定环境下 HTTPService 域名的缓存，操作不可逆，仅影响指定 Domain 的缓存命中，不影响源站数据。用于清除HTTP访问服务域名缓存。支持刷新CDN和EO两种类型。清除缓存后会生成任务id，通过DescribeHTTPServiceCachePurgeTask传入任务id可查询任务进度和详细信息。
  * @method Models\PushPGUserMigrationsResponse PushPGUserMigrations(Models\PushPGUserMigrationsRequest $req) 本接口（PushPGUserMigrations）用于批量应用Migrations。
  * @method Models\ReleaseEnvResponse ReleaseEnv(Models\ReleaseEnvRequest $req) 从环境池里立即取出1个环境
  * @method Models\RenewEnvResponse RenewEnv(Models\RenewEnvRequest $req) 本接口用于云开发环境套餐续费。

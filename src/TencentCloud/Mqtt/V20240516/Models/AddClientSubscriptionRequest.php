@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddClientSubscription请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getClientId() 获取客户端id
- * @method void setClientId(string $ClientId) 设置客户端id
- * @method string getTopicFilter() 获取订阅
- * @method void setTopicFilter(string $TopicFilter) 设置订阅
- * @method string getQos() 获取服务质量:0,1,2
- * @method void setQos(string $Qos) 设置服务质量:0,1,2
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getClientId() 获取<p>客户端id</p>
+ * @method void setClientId(string $ClientId) 设置<p>客户端id</p>
+ * @method string getTopicFilter() 获取<p>订阅</p>
+ * @method void setTopicFilter(string $TopicFilter) 设置<p>订阅</p>
+ * @method string getQos() 获取<p>服务质量:0,1,2</p>
+ * @method void setQos(string $Qos) 设置<p>服务质量:0,1,2</p>
  */
 class AddClientSubscriptionRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 客户端id
+     * @var string <p>客户端id</p>
      */
     public $ClientId;
 
     /**
-     * @var string 订阅
+     * @var string <p>订阅</p>
      */
     public $TopicFilter;
 
     /**
-     * @var string 服务质量:0,1,2
+     * @var string <p>服务质量:0,1,2</p>
      */
     public $Qos;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $ClientId 客户端id
-     * @param string $TopicFilter 订阅
-     * @param string $Qos 服务质量:0,1,2
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $ClientId <p>客户端id</p>
+     * @param string $TopicFilter <p>订阅</p>
+     * @param string $Qos <p>服务质量:0,1,2</p>
      */
     function __construct()
     {

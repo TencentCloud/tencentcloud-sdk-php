@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillUsageDetail返回参数结构体
  *
- * @method integer getTotal() 获取总数
- * @method void setTotal(integer $Total) 设置总数
- * @method array getDetails() 获取消耗详情
- * @method void setDetails(array $Details) 设置消耗详情
+ * @method integer getTotal() 获取<p>总数</p>
+ * @method void setTotal(integer $Total) 设置<p>总数</p>
+ * @method array getDetails() 获取<p>消耗详情</p>
+ * @method void setDetails(array $Details) 设置<p>消耗详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBillUsageDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var integer <p>总数</p>
      */
     public $Total;
 
     /**
-     * @var array 消耗详情
+     * @var array <p>消耗详情</p>
      */
     public $Details;
 
@@ -45,8 +45,8 @@ class DescribeBillUsageDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总数
-     * @param array $Details 消耗详情
+     * @param integer $Total <p>总数</p>
+     * @param array $Details <p>消耗详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

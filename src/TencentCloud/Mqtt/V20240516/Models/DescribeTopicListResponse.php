@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicList返回参数结构体
  *
- * @method integer getTotalCount() 获取查询总数
- * @method void setTotalCount(integer $TotalCount) 设置查询总数
- * @method array getData() 获取主题列表
- * @method void setData(array $Data) 设置主题列表
+ * @method integer getTotalCount() 获取<p>查询总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>查询总数</p>
+ * @method array getData() 获取<p>主题列表</p>
+ * @method void setData(array $Data) 设置<p>主题列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTopicListResponse extends AbstractModel
 {
     /**
-     * @var integer 查询总数
+     * @var integer <p>查询总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 主题列表
+     * @var array <p>主题列表</p>
      */
     public $Data;
 
@@ -45,8 +45,8 @@ class DescribeTopicListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 查询总数
-     * @param array $Data 主题列表
+     * @param integer $TotalCount <p>查询总数</p>
+     * @param array $Data <p>主题列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

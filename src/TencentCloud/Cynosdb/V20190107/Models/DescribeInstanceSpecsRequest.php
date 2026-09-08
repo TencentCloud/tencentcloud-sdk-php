@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) 设置<p>实例机器类型</p>
  * @method string getClusterLevel() 获取<p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
  * @method void setClusterLevel(string $ClusterLevel) 设置<p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
  */
 class DescribeInstanceSpecsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeInstanceSpecsRequest extends AbstractModel
     public $ClusterLevel;
 
     /**
+     * @var string <p>可用区</p>
+     */
+    public $Zone;
+
+    /**
      * @param string $DbType <p>数据库类型，取值范围: </p><li> MYSQL </li>
      * @param boolean $IncludeZoneStocks <p>是否需要返回可用区信息</p>
      * @param string $DeviceType <p>实例机器类型</p>
      * @param string $ClusterLevel <p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
+     * @param string $Zone <p>可用区</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeInstanceSpecsRequest extends AbstractModel
 
         if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
             $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

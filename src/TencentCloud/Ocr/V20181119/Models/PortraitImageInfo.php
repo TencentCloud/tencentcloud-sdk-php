@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 头像照片和坐标
  *
- * @method string getPortraitImage() 获取头像
+ * @method string getPortraitImage() 获取<p>头像</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPortraitImage(string $PortraitImage) 设置头像
+ * @method void setPortraitImage(string $PortraitImage) 设置<p>头像</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageCoordinates getImageCoordinates() 获取头像坐标
+ * @method ImageCoordinates getImageCoordinates() 获取<p>头像坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageCoordinates(ImageCoordinates $ImageCoordinates) 设置头像坐标
+ * @method void setImageCoordinates(ImageCoordinates $ImageCoordinates) 设置<p>头像坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PortraitImageInfo extends AbstractModel
 {
     /**
-     * @var string 头像
+     * @var string <p>头像</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PortraitImage;
 
     /**
-     * @var ImageCoordinates 头像坐标
+     * @var ImageCoordinates <p>头像坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageCoordinates;
 
     /**
-     * @param string $PortraitImage 头像
+     * @param string $PortraitImage <p>头像</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageCoordinates $ImageCoordinates 头像坐标
+     * @param ImageCoordinates $ImageCoordinates <p>头像坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

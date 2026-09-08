@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态等
  *
- * @method string getName() 获取需要过滤的字段。过滤条件数量限制为10。
- * @method void setName(string $Name) 设置需要过滤的字段。过滤条件数量限制为10。
- * @method array getValues() 获取字段的过滤值。
- * @method void setValues(array $Values) 设置字段的过滤值。
+ * @method string getName() 获取<p>需要过滤的字段。过滤条件数量限制为10。</p>
+ * @method void setName(string $Name) 设置<p>需要过滤的字段。过滤条件数量限制为10。</p>
+ * @method array getValues() 获取<p>字段的过滤值。</p>
+ * @method void setValues(array $Values) 设置<p>字段的过滤值。</p>
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string 需要过滤的字段。过滤条件数量限制为10。
+     * @var string <p>需要过滤的字段。过滤条件数量限制为10。</p>
      */
     public $Name;
 
     /**
-     * @var array 字段的过滤值。
+     * @var array <p>字段的过滤值。</p>
      */
     public $Values;
 
     /**
-     * @param string $Name 需要过滤的字段。过滤条件数量限制为10。
-     * @param array $Values 字段的过滤值。
+     * @param string $Name <p>需要过滤的字段。过滤条件数量限制为10。</p>
+     * @param array $Values <p>字段的过滤值。</p>
      */
     function __construct()
     {

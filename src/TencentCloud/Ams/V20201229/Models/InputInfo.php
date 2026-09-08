@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageUrlList(array $ImageUrlList) 设置<p>大模型审核可选输入图片列表</p>
  * @method string getTextContent() 获取<p>大模型审核场景下，base64编码的审核要求内容</p>
  * @method void setTextContent(string $TextContent) 设置<p>大模型审核场景下，base64编码的审核要求内容</p>
+ * @method string getTitle() 获取<p>标题</p>
+ * @method void setTitle(string $Title) 设置<p>标题</p>
+ * @method string getExtra() 获取<p>其他信息</p>
+ * @method void setExtra(string $Extra) 设置<p>其他信息</p>
  */
 class InputInfo extends AbstractModel
 {
@@ -62,12 +66,24 @@ class InputInfo extends AbstractModel
     public $TextContent;
 
     /**
+     * @var string <p>标题</p>
+     */
+    public $Title;
+
+    /**
+     * @var string <p>其他信息</p>
+     */
+    public $Extra;
+
+    /**
      * @param string $Type <p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p>
      * @param string $Url <p>该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。</p>
      * @param BucketInfo $BucketInfo <p>该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ImageUrlList <p>大模型审核可选输入图片列表</p>
      * @param string $TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
+     * @param string $Title <p>标题</p>
+     * @param string $Extra <p>其他信息</p>
      */
     function __construct()
     {
@@ -101,6 +117,14 @@ class InputInfo extends AbstractModel
 
         if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
             $this->TextContent = $param["TextContent"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
     }
 }

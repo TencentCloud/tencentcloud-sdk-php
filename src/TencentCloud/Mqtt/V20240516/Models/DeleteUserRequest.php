@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteUser请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getUsername() 获取用户名
- * @method void setUsername(string $Username) 设置用户名
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getUsername() 获取<p>用户名</p>
+ * @method void setUsername(string $Username) 设置<p>用户名</p>
  */
 class DeleteUserRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $Username;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Username 用户名
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $Username <p>用户名</p>
      */
     function __construct()
     {

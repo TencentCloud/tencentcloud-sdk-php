@@ -78,6 +78,8 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateRecordingRuleTaskResponse CreateRecordingRuleTask(Models\CreateRecordingRuleTaskRequest $req) 创建指标预聚合任务
  * @method Models\CreateRecordingRuleYamlTaskResponse CreateRecordingRuleYamlTask(Models\CreateRecordingRuleYamlTaskRequest $req) 通过yaml文件创建指标预聚合任务
  * @method Models\CreateRemoteWriteTaskResponse CreateRemoteWriteTask(Models\CreateRemoteWriteTaskRequest $req) 创建remote write投递任务
+ * @method Models\CreateResourceGraphResponse CreateResourceGraph(Models\CreateResourceGraphRequest $req) 创建工作区。
+ * @method Models\CreateResourceGraphProductIngestTaskResponse CreateResourceGraphProductIngestTask(Models\CreateResourceGraphProductIngestTaskRequest $req) 接入指定云产品。EBPF 类产品需提供 EBPFCollectRule，API 类产品仅需 Product。
  * @method Models\CreateS3RechargeResponse CreateS3Recharge(Models\CreateS3RechargeRequest $req) 本接口用于创建aws导入任务
  * @method Models\CreateScheduledSqlResponse CreateScheduledSql(Models\CreateScheduledSqlRequest $req) 本接口用于创建定时SQL分析任务
  * @method Models\CreateSearchViewResponse CreateSearchView(Models\CreateSearchViewRequest $req) 新建查询视图
@@ -118,6 +120,8 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteRecordingRuleTaskResponse DeleteRecordingRuleTask(Models\DeleteRecordingRuleTaskRequest $req) 本接口用于删除预聚合分析任务
  * @method Models\DeleteRecordingRuleYamlTaskResponse DeleteRecordingRuleYamlTask(Models\DeleteRecordingRuleYamlTaskRequest $req) 本接口用于删除yaml预聚合任务
  * @method Models\DeleteRemoteWriteTaskResponse DeleteRemoteWriteTask(Models\DeleteRemoteWriteTaskRequest $req) 删除RemoteWrite任务
+ * @method Models\DeleteResourceGraphResponse DeleteResourceGraph(Models\DeleteResourceGraphRequest $req) 删除工作区。删除前需确认是否级联清理已接入的云产品（待产品确认）。
+ * @method Models\DeleteResourceGraphProductIngestTaskResponse DeleteResourceGraphProductIngestTask(Models\DeleteResourceGraphProductIngestTaskRequest $req) 删除产品接入任务
  * @method Models\DeleteS3RechargeResponse DeleteS3Recharge(Models\DeleteS3RechargeRequest $req) 本接口用于删除aws导入任务
  * @method Models\DeleteScheduledSqlResponse DeleteScheduledSql(Models\DeleteScheduledSqlRequest $req) 本接口用于删除定时SQL分析任务
  * @method Models\DeleteSearchViewResponse DeleteSearchView(Models\DeleteSearchViewRequest $req) 删除查询视图
@@ -178,6 +182,16 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\DescribeRecordingRuleTaskResponse DescribeRecordingRuleTask(Models\DescribeRecordingRuleTaskRequest $req) 本接口用于获取预聚合任务列表
  * @method Models\DescribeRecordingRuleYamlTaskResponse DescribeRecordingRuleYamlTask(Models\DescribeRecordingRuleYamlTaskRequest $req) 本接口用于获取yaml预聚合任务列表
  * @method Models\DescribeRemoteWriteTasksResponse DescribeRemoteWriteTasks(Models\DescribeRemoteWriteTasksRequest $req) 本接口获取RemoteWrite投递任务列表
+ * @method Models\DescribeResourceGraphDetailResponse DescribeResourceGraphDetail(Models\DescribeResourceGraphDetailRequest $req) 查询单个云产品接入的详情，包含基本信息、实例选择、eBPF 采集规则和关联的日志主题。
+ * @method Models\DescribeResourceGraphEntitiesResponse DescribeResourceGraphEntities(Models\DescribeResourceGraphEntitiesRequest $req) 分页查询资源图谱实体列表。Filters 支持  Product / EntityClassName / Keyword 过滤；TagFilter 由于结构特殊（key 单选 + values 多选）独立成字段。
+ * @method Models\DescribeResourceGraphEntityDependencyResponse DescribeResourceGraphEntityDependency(Models\DescribeResourceGraphEntityDependencyRequest $req) 以指定实体为中心，按 Direction（上/下游/全部）+ Hop（跳数）查询依赖拓扑，同时返回拓扑图（节点+边）、4 张卡片汇总、列表区数据、产品 tag 汇总。
+ * @method Models\DescribeResourceGraphEntityDetailResponse DescribeResourceGraphEntityDetail(Models\DescribeResourceGraphEntityDetailRequest $req) 查询单个实体的完整详情，包含基本信息、动态属性、标签、关联主题。
+ * @method Models\DescribeResourceGraphFailureDetailResponse DescribeResourceGraphFailureDetail(Models\DescribeResourceGraphFailureDetailRequest $req) 查询资源图谱失败详情
+ * @method Models\DescribeResourceGraphIngestTaskFailureDetailResponse DescribeResourceGraphIngestTaskFailureDetail(Models\DescribeResourceGraphIngestTaskFailureDetailRequest $req) 查询资源图谱失败详情
+ * @method Models\DescribeResourceGraphProductIngestTaskDetailResponse DescribeResourceGraphProductIngestTaskDetail(Models\DescribeResourceGraphProductIngestTaskDetailRequest $req) 查询单个云产品接入的详情，包含基本信息、实例选择、eBPF 采集规则和关联的日志主题。
+ * @method Models\DescribeResourceGraphProductIngestTaskListResponse DescribeResourceGraphProductIngestTaskList(Models\DescribeResourceGraphProductIngestTaskListRequest $req) 分页查询云产品接入列表，返回顶部 4 张卡片汇总 + 列表行。支持按 Status / CollectMethod / Product / Name 过滤。
+ * @method Models\DescribeResourceGraphTkeClusterStatusResponse DescribeResourceGraphTkeClusterStatus(Models\DescribeResourceGraphTkeClusterStatusRequest $req) 资源图谱tke集群接入状态
+ * @method Models\DescribeResourceGraphsResponse DescribeResourceGraphs(Models\DescribeResourceGraphsRequest $req) 分页查询工作区列表，支持按 WorkAreaId / Name / Region 过滤。
  * @method Models\DescribeS3RechargesResponse DescribeS3Recharges(Models\DescribeS3RechargesRequest $req) 本接口用于获取cos导入配置
  * @method Models\DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(Models\DescribeScheduledSqlInfoRequest $req) 本接口用于获取定时SQL分析任务列表
  * @method Models\DescribeSearchViewsResponse DescribeSearchViews(Models\DescribeSearchViewsRequest $req) 获取查询视图列表
@@ -228,6 +242,9 @@ API 中 Region 填写任意一个地域均可，建议使用广州(ap-guangzhou)
  * @method Models\ModifyRecordingRuleTaskResponse ModifyRecordingRuleTask(Models\ModifyRecordingRuleTaskRequest $req) 本接口用于修改定时预聚合任务
  * @method Models\ModifyRecordingRuleYamlTaskResponse ModifyRecordingRuleYamlTask(Models\ModifyRecordingRuleYamlTaskRequest $req) 通过yaml文件修改指标预聚合任务
  * @method Models\ModifyRemoteWriteTaskResponse ModifyRemoteWriteTask(Models\ModifyRemoteWriteTaskRequest $req) 修改RemoteWrite任务
+ * @method Models\ModifyResourceGraphResponse ModifyResourceGraph(Models\ModifyResourceGraphRequest $req) 编辑工作区基本信息。支持改名（仍需保持租户内唯一）和修改描述，主题地域 Region 不可修改。
+ * @method Models\ModifyResourceGraphEntityTopicsRelationResponse ModifyResourceGraphEntityTopicsRelation(Models\ModifyResourceGraphEntityTopicsRelationRequest $req) 修改资源图谱实体与日志主题关系
+ * @method Models\ModifyResourceGraphProductIngestTaskResponse ModifyResourceGraphProductIngestTask(Models\ModifyResourceGraphProductIngestTaskRequest $req) 编辑已接入云产品的实例选择、eBPF 规则、日志主题配置。
  * @method Models\ModifyS3RechargeResponse ModifyS3Recharge(Models\ModifyS3RechargeRequest $req) 本接口用于修改aws导入任务
  * @method Models\ModifyScheduledSqlResponse ModifyScheduledSql(Models\ModifyScheduledSqlRequest $req) 本接口用于修改定时SQL分析任务
  * @method Models\ModifySearchViewResponse ModifySearchView(Models\ModifySearchViewRequest $req) 修改查询视图
@@ -243,6 +260,8 @@ API 中 Region 填写任意一个地域均可开通所有地域的 CLS，建议�
  * @method Models\QueryMetricResponse QueryMetric(Models\QueryMetricRequest $req) 查询指定时刻指标的最新值。
 如果该时刻向前推5分钟内均无指标数据，则无相应的查询结果。
  * @method Models\QueryRangeMetricResponse QueryRangeMetric(Models\QueryRangeMetricRequest $req) 查询指定时间范围内指标的变化趋势
+ * @method Models\RetryResourceGraphResponse RetryResourceGraph(Models\RetryResourceGraphRequest $req) 重试资源图谱
+ * @method Models\RetryResourceGraphProductIngestTaskResponse RetryResourceGraphProductIngestTask(Models\RetryResourceGraphProductIngestTaskRequest $req) 重试初始化资源图谱工作区
  * @method Models\RetryShipperTaskResponse RetryShipperTask(Models\RetryShipperTaskRequest $req) 重试失败的投递任务
  * @method Models\SearchCosRechargeInfoResponse SearchCosRechargeInfo(Models\SearchCosRechargeInfoRequest $req) 本接口用于预览cos导入信息
  * @method Models\SearchDashboardSubscribeResponse SearchDashboardSubscribe(Models\SearchDashboardSubscribeRequest $req) 此接口用于预览仪表盘订阅

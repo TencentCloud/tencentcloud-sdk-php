@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserSig请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method string getUid() 获取用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
- * @method void setUid(string $Uid) 设置用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
- * @method string getClientData() 获取用户签名数据，必填字段，为标准 JSON 格式
- * @method void setClientData(string $ClientData) 设置用户签名数据，必填字段，为标准 JSON 格式
- * @method integer getExpiredTime() 获取有效期，单位秒，不超过 1 小时
- * @method void setExpiredTime(integer $ExpiredTime) 设置有效期，单位秒，不超过 1 小时
+ * @method integer getSdkAppId() 获取<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method string getUid() 获取<p>用户 ID</p>
+ * @method void setUid(string $Uid) 设置<p>用户 ID</p>
+ * @method string getClientData() 获取<p>用户签名数据</p>
+ * @method void setClientData(string $ClientData) 设置<p>用户签名数据</p>
+ * @method integer getExpiredTime() 获取<p>有效期，单位秒，不超过 1 小时</p>
+ * @method void setExpiredTime(integer $ExpiredTime) 设置<p>有效期，单位秒，不超过 1 小时</p>
  */
 class CreateUserSigRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @var integer <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public $SdkAppId;
 
     /**
-     * @var string 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
+     * @var string <p>用户 ID</p>
      */
     public $Uid;
 
     /**
-     * @var string 用户签名数据，必填字段，为标准 JSON 格式
+     * @var string <p>用户签名数据</p>
      */
     public $ClientData;
 
     /**
-     * @var integer 有效期，单位秒，不超过 1 小时
+     * @var integer <p>有效期，单位秒，不超过 1 小时</p>
      */
     public $ExpiredTime;
 
     /**
-     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param string $Uid 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
-     * @param string $ClientData 用户签名数据，必填字段，为标准 JSON 格式
-     * @param integer $ExpiredTime 有效期，单位秒，不超过 1 小时
+     * @param integer $SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param string $Uid <p>用户 ID</p>
+     * @param string $ClientData <p>用户签名数据</p>
+     * @param integer $ExpiredTime <p>有效期，单位秒，不超过 1 小时</p>
      */
     function __construct()
     {

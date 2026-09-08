@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 对象变量
  *
- * @method string getKey() 获取变量的名称
- * @method void setKey(string $Key) 设置变量的名称
- * @method string getValue() 获取变量的值
- * @method void setValue(string $Value) 设置变量的值
+ * @method string getKey() 获取<p>变量的名称</p>
+ * @method void setKey(string $Key) 设置<p>变量的名称</p>
+ * @method string getValue() 获取<p>变量的值</p>
+ * @method void setValue(string $Value) 设置<p>变量的值</p>
  */
 class Variable extends AbstractModel
 {
     /**
-     * @var string 变量的名称
+     * @var string <p>变量的名称</p>
      */
     public $Key;
 
     /**
-     * @var string 变量的值
+     * @var string <p>变量的值</p>
      */
     public $Value;
 
     /**
-     * @param string $Key 变量的名称
-     * @param string $Value 变量的值
+     * @param string $Key <p>变量的名称</p>
+     * @param string $Value <p>变量的值</p>
      */
     function __construct()
     {

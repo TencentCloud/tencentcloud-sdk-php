@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopic请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getTopic() 获取主题
- * @method void setTopic(string $Topic) 设置主题
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getTopic() 获取<p>主题</p>
+ * @method void setTopic(string $Topic) 设置<p>主题</p>
  */
 class DescribeTopicRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 主题
+     * @var string <p>主题</p>
      */
     public $Topic;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Topic 主题
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $Topic <p>主题</p>
      */
     function __construct()
     {

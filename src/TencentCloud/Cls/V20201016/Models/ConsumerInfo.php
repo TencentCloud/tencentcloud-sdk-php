@@ -20,130 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 投递规则
  *
- * @method string getConsumerId() 获取投递规则ID
- * @method void setConsumerId(string $ConsumerId) 设置投递规则ID
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method boolean getEffective() 获取投递任务是否生效
- * @method void setEffective(boolean $Effective) 设置投递任务是否生效
- * @method Ckafka getCkafka() 获取CKafka的描述
- * @method void setCkafka(Ckafka $Ckafka) 设置CKafka的描述
- * @method boolean getNeedContent() 获取是否投递日志的元数据信息
- * @method void setNeedContent(boolean $NeedContent) 设置是否投递日志的元数据信息
- * @method ConsumerContent getContent() 获取如果需要投递元数据信息，元数据信息的描述
+ * @method string getConsumerId() 获取<p>投递规则ID</p>
+ * @method void setConsumerId(string $ConsumerId) 设置<p>投递规则ID</p>
+ * @method string getTopicId() 获取<p>日志主题ID</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题ID</p>
+ * @method boolean getEffective() 获取<p>投递任务是否生效</p>
+ * @method void setEffective(boolean $Effective) 设置<p>投递任务是否生效</p>
+ * @method Ckafka getCkafka() 获取<p>CKafka的描述</p>
+ * @method void setCkafka(Ckafka $Ckafka) 设置<p>CKafka的描述</p>
+ * @method boolean getNeedContent() 获取<p>是否投递日志的元数据信息</p>
+ * @method void setNeedContent(boolean $NeedContent) 设置<p>是否投递日志的元数据信息</p>
+ * @method ConsumerContent getContent() 获取<p>如果需要投递元数据信息，元数据信息的描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContent(ConsumerContent $Content) 设置如果需要投递元数据信息，元数据信息的描述
+ * @method void setContent(ConsumerContent $Content) 设置<p>如果需要投递元数据信息，元数据信息的描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCompression() 获取压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+ * @method integer getCompression() 获取<p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompression(integer $Compression) 设置压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+ * @method void setCompression(integer $Compression) 设置<p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateTime() 获取投递任务创建毫秒时间戳
+ * @method integer getCreateTime() 获取<p>投递任务创建毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(integer $CreateTime) 设置投递任务创建毫秒时间戳
+ * @method void setCreateTime(integer $CreateTime) 设置<p>投递任务创建毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRoleArn() 获取角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)	
+ * @method string getRoleArn() 获取<p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoleArn(string $RoleArn) 设置角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)	
+ * @method void setRoleArn(string $RoleArn) 设置<p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExternalId() 获取外部ID
+ * @method string getExternalId() 获取<p>外部ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExternalId(string $ExternalId) 设置外部ID
+ * @method void setExternalId(string $ExternalId) 设置<p>外部ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskStatus() 获取任务运行状态。支持`0`,`1`,`2` - `0`: 停止 - `1`: 运行中 - `2`: 异常	
+ * @method integer getTaskStatus() 获取<p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code> - <code>0</code>: 停止 - <code>1</code>: 运行中 - <code>2</code>: 异常</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskStatus(integer $TaskStatus) 设置任务运行状态。支持`0`,`1`,`2` - `0`: 停止 - `1`: 运行中 - `2`: 异常	
+ * @method void setTaskStatus(integer $TaskStatus) 设置<p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code> - <code>0</code>: 停止 - <code>1</code>: 运行中 - <code>2</code>: 异常</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AdvancedConsumerConfiguration getAdvancedConfig() 获取高级配置
- * @method void setAdvancedConfig(AdvancedConsumerConfiguration $AdvancedConfig) 设置高级配置
+ * @method AdvancedConsumerConfiguration getAdvancedConfig() 获取<p>高级配置</p>
+ * @method void setAdvancedConfig(AdvancedConsumerConfiguration $AdvancedConfig) 设置<p>高级配置</p>
+ * @method string getDSLFilter() 获取<p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+ * @method void setDSLFilter(string $DSLFilter) 设置<p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
  */
 class ConsumerInfo extends AbstractModel
 {
     /**
-     * @var string 投递规则ID
+     * @var string <p>投递规则ID</p>
      */
     public $ConsumerId;
 
     /**
-     * @var string 日志主题ID
+     * @var string <p>日志主题ID</p>
      */
     public $TopicId;
 
     /**
-     * @var boolean 投递任务是否生效
+     * @var boolean <p>投递任务是否生效</p>
      */
     public $Effective;
 
     /**
-     * @var Ckafka CKafka的描述
+     * @var Ckafka <p>CKafka的描述</p>
      */
     public $Ckafka;
 
     /**
-     * @var boolean 是否投递日志的元数据信息
+     * @var boolean <p>是否投递日志的元数据信息</p>
      */
     public $NeedContent;
 
     /**
-     * @var ConsumerContent 如果需要投递元数据信息，元数据信息的描述
+     * @var ConsumerContent <p>如果需要投递元数据信息，元数据信息的描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
-     * @var integer 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * @var integer <p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Compression;
 
     /**
-     * @var integer 投递任务创建毫秒时间戳
+     * @var integer <p>投递任务创建毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)	
+     * @var string <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleArn;
 
     /**
-     * @var string 外部ID
+     * @var string <p>外部ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExternalId;
 
     /**
-     * @var integer 任务运行状态。支持`0`,`1`,`2` - `0`: 停止 - `1`: 运行中 - `2`: 异常	
+     * @var integer <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code> - <code>0</code>: 停止 - <code>1</code>: 运行中 - <code>2</code>: 异常</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskStatus;
 
     /**
-     * @var AdvancedConsumerConfiguration 高级配置
+     * @var AdvancedConsumerConfiguration <p>高级配置</p>
      */
     public $AdvancedConfig;
 
     /**
-     * @param string $ConsumerId 投递规则ID
-     * @param string $TopicId 日志主题ID
-     * @param boolean $Effective 投递任务是否生效
-     * @param Ckafka $Ckafka CKafka的描述
-     * @param boolean $NeedContent 是否投递日志的元数据信息
-     * @param ConsumerContent $Content 如果需要投递元数据信息，元数据信息的描述
+     * @var string <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+     */
+    public $DSLFilter;
+
+    /**
+     * @param string $ConsumerId <p>投递规则ID</p>
+     * @param string $TopicId <p>日志主题ID</p>
+     * @param boolean $Effective <p>投递任务是否生效</p>
+     * @param Ckafka $Ckafka <p>CKafka的描述</p>
+     * @param boolean $NeedContent <p>是否投递日志的元数据信息</p>
+     * @param ConsumerContent $Content <p>如果需要投递元数据信息，元数据信息的描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * @param integer $Compression <p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateTime 投递任务创建毫秒时间戳
+     * @param integer $CreateTime <p>投递任务创建毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)	
+     * @param string $RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExternalId 外部ID
+     * @param string $ExternalId <p>外部ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskStatus 任务运行状态。支持`0`,`1`,`2` - `0`: 停止 - `1`: 运行中 - `2`: 异常	
+     * @param integer $TaskStatus <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code> - <code>0</code>: 停止 - <code>1</code>: 运行中 - <code>2</code>: 异常</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedConsumerConfiguration $AdvancedConfig 高级配置
+     * @param AdvancedConsumerConfiguration $AdvancedConfig <p>高级配置</p>
+     * @param string $DSLFilter <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
      */
     function __construct()
     {
@@ -207,6 +215,10 @@ class ConsumerInfo extends AbstractModel
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
             $this->AdvancedConfig = new AdvancedConsumerConfiguration();
             $this->AdvancedConfig->deserialize($param["AdvancedConfig"]);
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

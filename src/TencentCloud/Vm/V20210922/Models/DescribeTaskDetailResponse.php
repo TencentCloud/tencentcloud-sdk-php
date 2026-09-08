@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSegmentCosUrlList(SegmentCosUrlList $SegmentCosUrlList) 设置<p>该字段用于返回检测结果明细数据相关的cos url</p>
  * @method array getVideoSegments() 获取<p>该字段用于返回视频中视频切片审核的结果</p>
  * @method void setVideoSegments(array $VideoSegments) 设置<p>该字段用于返回视频中视频切片审核的结果</p>
+ * @method array getHitSnippetInfos() 获取<p>命中信息</p>
+ * @method void setHitSnippetInfos(array $HitSnippetInfos) 设置<p>命中信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -180,6 +182,11 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $VideoSegments;
 
     /**
+     * @var array <p>命中信息</p>
+     */
+    public $HitSnippetInfos;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -207,6 +214,7 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param array $Asrs <p>该字段用于返回音频文件识别出的对应文本内容。</p>
      * @param SegmentCosUrlList $SegmentCosUrlList <p>该字段用于返回检测结果明细数据相关的cos url</p>
      * @param array $VideoSegments <p>该字段用于返回视频中视频切片审核的结果</p>
+     * @param array $HitSnippetInfos <p>命中信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -335,6 +343,15 @@ class DescribeTaskDetailResponse extends AbstractModel
                 $obj = new VideoSegment();
                 $obj->deserialize($value);
                 array_push($this->VideoSegments, $obj);
+            }
+        }
+
+        if (array_key_exists("HitSnippetInfos",$param) and $param["HitSnippetInfos"] !== null) {
+            $this->HitSnippetInfos = [];
+            foreach ($param["HitSnippetInfos"] as $key => $value){
+                $obj = new HitSnippetInfo();
+                $obj->deserialize($value);
+                array_push($this->HitSnippetInfos, $obj);
             }
         }
 

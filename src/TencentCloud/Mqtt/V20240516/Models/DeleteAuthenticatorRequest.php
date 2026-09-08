@@ -20,38 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAuthenticator请求参数结构体
  *
- * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method string getType() 获取认证器类型:
-JWT：JWT认证器
-JWKS：JWKS认证器
-HTTP：HTTP认证器
- * @method void setType(string $Type) 设置认证器类型:
-JWT：JWT认证器
-JWKS：JWKS认证器
-HTTP：HTTP认证器
+ * @method string getInstanceId() 获取<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method string getType() 获取<p>认证器类型:<br>JWT：JWT认证器<br>JWKS：JWKS认证器<br>HTTP：HTTP认证器</p>
+ * @method void setType(string $Type) 设置<p>认证器类型:<br>JWT：JWT认证器<br>JWKS：JWKS认证器<br>HTTP：HTTP认证器</p>
  */
 class DeleteAuthenticatorRequest extends AbstractModel
 {
     /**
-     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @var string <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 认证器类型:
-JWT：JWT认证器
-JWKS：JWKS认证器
-HTTP：HTTP认证器
+     * @var string <p>认证器类型:<br>JWT：JWT认证器<br>JWKS：JWKS认证器<br>HTTP：HTTP认证器</p>
      */
     public $Type;
 
     /**
-     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param string $Type 认证器类型:
-JWT：JWT认证器
-JWKS：JWKS认证器
-HTTP：HTTP认证器
+     * @param string $InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param string $Type <p>认证器类型:<br>JWT：JWT认证器<br>JWKS：JWKS认证器<br>HTTP：HTTP认证器</p>
      */
     function __construct()
     {

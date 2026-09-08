@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUser请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method string getUsername() 获取用户名
- * @method void setUsername(string $Username) 设置用户名
- * @method string getRemark() 获取备注，长度不超过128个字符。
- * @method void setRemark(string $Remark) 设置备注，长度不超过128个字符。
+ * @method string getInstanceId() 获取<p>实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method string getUsername() 获取<p>用户名</p>
+ * @method void setUsername(string $Username) 设置<p>用户名</p>
+ * @method string getRemark() 获取<p>备注，长度不超过128个字符。</p>
+ * @method void setRemark(string $Remark) 设置<p>备注，长度不超过128个字符。</p>
  */
 class ModifyUserRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @var string <p>实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $Username;
 
     /**
-     * @var string 备注，长度不超过128个字符。
+     * @var string <p>备注，长度不超过128个字符。</p>
      */
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param string $Username 用户名
-     * @param string $Remark 备注，长度不超过128个字符。
+     * @param string $InstanceId <p>实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param string $Username <p>用户名</p>
+     * @param string $Remark <p>备注，长度不超过128个字符。</p>
      */
     function __construct()
     {

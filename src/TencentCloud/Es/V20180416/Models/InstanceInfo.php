@@ -352,6 +352,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldEsVip(string $OldEsVip) 设置<p>集群待迁移的VIP</p>
  * @method string getOldEsPrivateTcpUrl() 获取<p>集群待迁移的TCP地址</p>
  * @method void setOldEsPrivateTcpUrl(string $OldEsPrivateTcpUrl) 设置<p>集群待迁移的TCP地址</p>
+ * @method boolean getNeedOfflineOldNodesNotify() 获取<p>是否需要从VIP下线旧节点</p>
+ * @method void setNeedOfflineOldNodesNotify(boolean $NeedOfflineOldNodesNotify) 设置<p>是否需要从VIP下线旧节点</p>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -950,6 +952,11 @@ class InstanceInfo extends AbstractModel
     public $OldEsPrivateTcpUrl;
 
     /**
+     * @var boolean <p>是否需要从VIP下线旧节点</p>
+     */
+    public $NeedOfflineOldNodesNotify;
+
+    /**
      * @param string $InstanceId <p>实例ID</p>
      * @param string $InstanceName <p>实例名称</p>
      * @param string $Region <p>地域</p>
@@ -1116,6 +1123,7 @@ class InstanceInfo extends AbstractModel
      * @param string $ServerCertSource <p>证书类型</p>
      * @param string $OldEsVip <p>集群待迁移的VIP</p>
      * @param string $OldEsPrivateTcpUrl <p>集群待迁移的TCP地址</p>
+     * @param boolean $NeedOfflineOldNodesNotify <p>是否需要从VIP下线旧节点</p>
      */
     function __construct()
     {
@@ -1595,6 +1603,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("OldEsPrivateTcpUrl",$param) and $param["OldEsPrivateTcpUrl"] !== null) {
             $this->OldEsPrivateTcpUrl = $param["OldEsPrivateTcpUrl"];
+        }
+
+        if (array_key_exists("NeedOfflineOldNodesNotify",$param) and $param["NeedOfflineOldNodesNotify"] !== null) {
+            $this->NeedOfflineOldNodesNotify = $param["NeedOfflineOldNodesNotify"];
         }
     }
 }

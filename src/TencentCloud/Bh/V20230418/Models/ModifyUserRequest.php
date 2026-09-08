@@ -20,98 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUser请求参数结构体
  *
- * @method integer getId() 获取用户ID
- * @method void setId(integer $Id) 设置用户ID
- * @method string getRealName() 获取用户姓名，最大长度20个字符，不能包含空格
- * @method void setRealName(string $RealName) 设置用户姓名，最大长度20个字符，不能包含空格
- * @method string getPhone() 获取按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
- * @method void setPhone(string $Phone) 设置按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
- * @method string getEmail() 获取电子邮件
- * @method void setEmail(string $Email) 设置电子邮件
- * @method string getValidateFrom() 获取用户生效时间，如:"2021-09-22T00:00:00+00:00"
-生效、失效时间不填则用户长期有效
- * @method void setValidateFrom(string $ValidateFrom) 设置用户生效时间，如:"2021-09-22T00:00:00+00:00"
-生效、失效时间不填则用户长期有效
- * @method string getValidateTo() 获取用户失效时间，如:"2021-09-23T00:00:00+00:00"
-生效、失效时间不填则用户长期有效
- * @method void setValidateTo(string $ValidateTo) 设置用户失效时间，如:"2021-09-23T00:00:00+00:00"
-生效、失效时间不填则用户长期有效
- * @method array getGroupIdSet() 获取所属用户组ID集合
- * @method void setGroupIdSet(array $GroupIdSet) 设置所属用户组ID集合
- * @method integer getAuthType() 获取认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0
- * @method void setAuthType(integer $AuthType) 设置认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0
- * @method string getValidateTime() 获取访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
- * @method void setValidateTime(string $ValidateTime) 设置访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
- * @method string getDepartmentId() 获取用户所属部门的ID，如1.2.3
- * @method void setDepartmentId(string $DepartmentId) 设置用户所属部门的ID，如1.2.3
+ * @method integer getId() 获取<p>用户ID</p>
+ * @method void setId(integer $Id) 设置<p>用户ID</p>
+ * @method string getRealName() 获取<p>用户姓名，最大长度20个字符，不能包含空格</p>
+ * @method void setRealName(string $RealName) 设置<p>用户姓名，最大长度20个字符，不能包含空格</p>
+ * @method string getPhone() 获取<p>按照&quot;国家地区代码|手机号&quot;的格式输入。如: &quot;+86|xxxxxxxx&quot;</p>
+ * @method void setPhone(string $Phone) 设置<p>按照&quot;国家地区代码|手机号&quot;的格式输入。如: &quot;+86|xxxxxxxx&quot;</p>
+ * @method string getEmail() 获取<p>电子邮件</p>
+ * @method void setEmail(string $Email) 设置<p>电子邮件</p>
+ * @method string getValidateFrom() 获取<p>用户生效时间，如:&quot;2021-09-22T00:00:00+00:00&quot;<br>生效、失效时间不填则用户长期有效</p>
+ * @method void setValidateFrom(string $ValidateFrom) 设置<p>用户生效时间，如:&quot;2021-09-22T00:00:00+00:00&quot;<br>生效、失效时间不填则用户长期有效</p>
+ * @method string getValidateTo() 获取<p>用户失效时间，如:&quot;2021-09-23T00:00:00+00:00&quot;<br>生效、失效时间不填则用户长期有效</p>
+ * @method void setValidateTo(string $ValidateTo) 设置<p>用户失效时间，如:&quot;2021-09-23T00:00:00+00:00&quot;<br>生效、失效时间不填则用户长期有效</p>
+ * @method array getGroupIdSet() 获取<p>所属用户组ID集合</p>
+ * @method void setGroupIdSet(array $GroupIdSet) 设置<p>所属用户组ID集合</p>
+ * @method integer getAuthType() 获取<p>认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0</p>
+ * @method void setAuthType(integer $AuthType) 设置<p>认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0</p>
+ * @method string getValidateTime() 获取<p>访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问</p>
+ * @method void setValidateTime(string $ValidateTime) 设置<p>访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问</p>
+ * @method string getDepartmentId() 获取<p>用户所属部门的ID，如1.2.3</p>
+ * @method void setDepartmentId(string $DepartmentId) 设置<p>用户所属部门的ID，如1.2.3</p>
  */
 class ModifyUserRequest extends AbstractModel
 {
     /**
-     * @var integer 用户ID
+     * @var integer <p>用户ID</p>
      */
     public $Id;
 
     /**
-     * @var string 用户姓名，最大长度20个字符，不能包含空格
+     * @var string <p>用户姓名，最大长度20个字符，不能包含空格</p>
      */
     public $RealName;
 
     /**
-     * @var string 按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
+     * @var string <p>按照&quot;国家地区代码|手机号&quot;的格式输入。如: &quot;+86|xxxxxxxx&quot;</p>
      */
     public $Phone;
 
     /**
-     * @var string 电子邮件
+     * @var string <p>电子邮件</p>
      */
     public $Email;
 
     /**
-     * @var string 用户生效时间，如:"2021-09-22T00:00:00+00:00"
-生效、失效时间不填则用户长期有效
+     * @var string <p>用户生效时间，如:&quot;2021-09-22T00:00:00+00:00&quot;<br>生效、失效时间不填则用户长期有效</p>
      */
     public $ValidateFrom;
 
     /**
-     * @var string 用户失效时间，如:"2021-09-23T00:00:00+00:00"
-生效、失效时间不填则用户长期有效
+     * @var string <p>用户失效时间，如:&quot;2021-09-23T00:00:00+00:00&quot;<br>生效、失效时间不填则用户长期有效</p>
      */
     public $ValidateTo;
 
     /**
-     * @var array 所属用户组ID集合
+     * @var array <p>所属用户组ID集合</p>
      */
     public $GroupIdSet;
 
     /**
-     * @var integer 认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0
+     * @var integer <p>认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0</p>
      */
     public $AuthType;
 
     /**
-     * @var string 访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
+     * @var string <p>访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问</p>
      */
     public $ValidateTime;
 
     /**
-     * @var string 用户所属部门的ID，如1.2.3
+     * @var string <p>用户所属部门的ID，如1.2.3</p>
      */
     public $DepartmentId;
 
     /**
-     * @param integer $Id 用户ID
-     * @param string $RealName 用户姓名，最大长度20个字符，不能包含空格
-     * @param string $Phone 按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
-     * @param string $Email 电子邮件
-     * @param string $ValidateFrom 用户生效时间，如:"2021-09-22T00:00:00+00:00"
-生效、失效时间不填则用户长期有效
-     * @param string $ValidateTo 用户失效时间，如:"2021-09-23T00:00:00+00:00"
-生效、失效时间不填则用户长期有效
-     * @param array $GroupIdSet 所属用户组ID集合
-     * @param integer $AuthType 认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0
-     * @param string $ValidateTime 访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
-     * @param string $DepartmentId 用户所属部门的ID，如1.2.3
+     * @param integer $Id <p>用户ID</p>
+     * @param string $RealName <p>用户姓名，最大长度20个字符，不能包含空格</p>
+     * @param string $Phone <p>按照&quot;国家地区代码|手机号&quot;的格式输入。如: &quot;+86|xxxxxxxx&quot;</p>
+     * @param string $Email <p>电子邮件</p>
+     * @param string $ValidateFrom <p>用户生效时间，如:&quot;2021-09-22T00:00:00+00:00&quot;<br>生效、失效时间不填则用户长期有效</p>
+     * @param string $ValidateTo <p>用户失效时间，如:&quot;2021-09-23T00:00:00+00:00&quot;<br>生效、失效时间不填则用户长期有效</p>
+     * @param array $GroupIdSet <p>所属用户组ID集合</p>
+     * @param integer $AuthType <p>认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0</p>
+     * @param string $ValidateTime <p>访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问</p>
+     * @param string $DepartmentId <p>用户所属部门的ID，如1.2.3</p>
      */
     function __construct()
     {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用于修改数据库对象的权限，其中包含了数据库对象描述的数据结构、需要修改的权限列表以及修改的类型等。
  *
- * @method DatabasePrivilege getDatabasePrivilege() 获取要修改的数据库对象及权限列表
- * @method void setDatabasePrivilege(DatabasePrivilege $DatabasePrivilege) 设置要修改的数据库对象及权限列表
- * @method string getModifyType() 获取修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
- * @method void setModifyType(string $ModifyType) 设置修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
- * @method boolean getIsCascade() 获取当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
- * @method void setIsCascade(boolean $IsCascade) 设置当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
+ * @method DatabasePrivilege getDatabasePrivilege() 获取<p>要修改的数据库对象及权限列表</p>
+ * @method void setDatabasePrivilege(DatabasePrivilege $DatabasePrivilege) 设置<p>要修改的数据库对象及权限列表</p>
+ * @method string getModifyType() 获取<p>修改的方式，当前仅支持grantObject、revokeObject、alterRole、grantRole、revoke，当前仅支持grantObject、revokeObject、alterRole、grantRole、revokeRole。gRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型、grantRole代表加入对应角色、revokeRole 代表移出对应角色。</p>
+ * @method void setModifyType(string $ModifyType) 设置<p>修改的方式，当前仅支持grantObject、revokeObject、alterRole、grantRole、revoke，当前仅支持grantObject、revokeObject、alterRole、grantRole、revokeRole。gRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型、grantRole代表加入对应角色、revokeRole 代表移出对应角色。</p>
+ * @method boolean getIsCascade() 获取<p>当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。</p>
+ * @method void setIsCascade(boolean $IsCascade) 设置<p>当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。</p>
  */
 class ModifyPrivilege extends AbstractModel
 {
     /**
-     * @var DatabasePrivilege 要修改的数据库对象及权限列表
+     * @var DatabasePrivilege <p>要修改的数据库对象及权限列表</p>
      */
     public $DatabasePrivilege;
 
     /**
-     * @var string 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
+     * @var string <p>修改的方式，当前仅支持grantObject、revokeObject、alterRole、grantRole、revoke，当前仅支持grantObject、revokeObject、alterRole、grantRole、revokeRole。gRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型、grantRole代表加入对应角色、revokeRole 代表移出对应角色。</p>
      */
     public $ModifyType;
 
     /**
-     * @var boolean 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
+     * @var boolean <p>当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。</p>
      */
     public $IsCascade;
 
     /**
-     * @param DatabasePrivilege $DatabasePrivilege 要修改的数据库对象及权限列表
-     * @param string $ModifyType 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
-     * @param boolean $IsCascade 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
+     * @param DatabasePrivilege $DatabasePrivilege <p>要修改的数据库对象及权限列表</p>
+     * @param string $ModifyType <p>修改的方式，当前仅支持grantObject、revokeObject、alterRole、grantRole、revoke，当前仅支持grantObject、revokeObject、alterRole、grantRole、revokeRole。gRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型、grantRole代表加入对应角色、revokeRole 代表移出对应角色。</p>
+     * @param boolean $IsCascade <p>当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。</p>
      */
     function __construct()
     {

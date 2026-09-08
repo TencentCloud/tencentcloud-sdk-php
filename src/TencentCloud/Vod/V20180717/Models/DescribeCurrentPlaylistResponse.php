@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCurrentPlaylist返回参数结构体
  *
- * @method array getCurrentPlaylist() 获取当前播放列表信息。
- * @method void setCurrentPlaylist(array $CurrentPlaylist) 设置当前播放列表信息。
+ * @method array getCurrentPlaylist() 获取<p>当前播放列表信息。</p>
+ * @method void setCurrentPlaylist(array $CurrentPlaylist) 设置<p>当前播放列表信息。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCurrentPlaylistResponse extends AbstractModel
 {
     /**
-     * @var array 当前播放列表信息。
+     * @var array <p>当前播放列表信息。</p>
      */
     public $CurrentPlaylist;
 
@@ -38,7 +38,7 @@ class DescribeCurrentPlaylistResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CurrentPlaylist 当前播放列表信息。
+     * @param array $CurrentPlaylist <p>当前播放列表信息。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

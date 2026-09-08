@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenConfigRecorder请求参数结构体
  *
-
+ * @method integer getFromMode() 获取<p>1:从控制中心调用</p>
+ * @method void setFromMode(integer $FromMode) 设置<p>1:从控制中心调用</p>
  */
 class OpenConfigRecorderRequest extends AbstractModel
 {
-
+    /**
+     * @var integer <p>1:从控制中心调用</p>
+     */
+    public $FromMode;
 
     /**
-
+     * @param integer $FromMode <p>1:从控制中心调用</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class OpenConfigRecorderRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("FromMode",$param) and $param["FromMode"] !== null) {
+            $this->FromMode = $param["FromMode"];
+        }
     }
 }

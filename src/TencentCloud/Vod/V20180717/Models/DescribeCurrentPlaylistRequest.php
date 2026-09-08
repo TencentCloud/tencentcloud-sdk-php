@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCurrentPlaylist请求参数结构体
  *
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。</b>
- * @method string getRoundPlayId() 获取轮播播单唯一标识。
- * @method void setRoundPlayId(string $RoundPlayId) 设置轮播播单唯一标识。
- * @method integer getLimit() 获取返回的播放列表的长度。最大10，默认值为5。
- * @method void setLimit(integer $Limit) 设置返回的播放列表的长度。最大10，默认值为5。
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
+ * @method string getRoundPlayId() 获取<p>轮播播单唯一标识。</p>
+ * @method void setRoundPlayId(string $RoundPlayId) 设置<p>轮播播单唯一标识。</p>
+ * @method integer getLimit() 获取<p>返回的播放列表的长度。最大10，默认值为5。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回的播放列表的长度。最大10，默认值为5。</p>
  */
 class DescribeCurrentPlaylistRequest extends AbstractModel
 {
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 轮播播单唯一标识。
+     * @var string <p>轮播播单唯一标识。</p>
      */
     public $RoundPlayId;
 
     /**
-     * @var integer 返回的播放列表的长度。最大10，默认值为5。
+     * @var integer <p>返回的播放列表的长度。最大10，默认值为5。</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
-     * @param string $RoundPlayId 轮播播单唯一标识。
-     * @param integer $Limit 返回的播放列表的长度。最大10，默认值为5。
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
+     * @param string $RoundPlayId <p>轮播播单唯一标识。</p>
+     * @param integer $Limit <p>返回的播放列表的长度。最大10，默认值为5。</p>
      */
     function __construct()
     {

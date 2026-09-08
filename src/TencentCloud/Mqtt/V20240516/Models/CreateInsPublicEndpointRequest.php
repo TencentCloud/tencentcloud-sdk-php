@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInsPublicEndpoint请求参数结构体
  *
- * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method integer getBandwidth() 获取带宽,单位Mbps
- * @method void setBandwidth(integer $Bandwidth) 设置带宽,单位Mbps
- * @method array getRules() 获取公网访问规则
- * @method void setRules(array $Rules) 设置公网访问规则
+ * @method string getInstanceId() 获取<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method integer getBandwidth() 获取<p>带宽,单位Mbps</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>带宽,单位Mbps</p>
+ * @method array getRules() 获取<p>公网访问规则</p>
+ * @method void setRules(array $Rules) 设置<p>公网访问规则</p>
  */
 class CreateInsPublicEndpointRequest extends AbstractModel
 {
     /**
-     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @var string <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 带宽,单位Mbps
+     * @var integer <p>带宽,单位Mbps</p>
      */
     public $Bandwidth;
 
     /**
-     * @var array 公网访问规则
+     * @var array <p>公网访问规则</p>
      */
     public $Rules;
 
     /**
-     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param integer $Bandwidth 带宽,单位Mbps
-     * @param array $Rules 公网访问规则
+     * @param string $InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param integer $Bandwidth <p>带宽,单位Mbps</p>
+     * @param array $Rules <p>公网访问规则</p>
      */
     function __construct()
     {

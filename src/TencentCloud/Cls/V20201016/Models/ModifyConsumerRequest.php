@@ -20,98 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyConsumer请求参数结构体
  *
- * @method string getTopicId() 获取投递任务绑定的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
- * @method void setTopicId(string $TopicId) 设置投递任务绑定的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
- * @method boolean getEffective() 获取投递任务是否生效，默认不生效
- * @method void setEffective(boolean $Effective) 设置投递任务是否生效，默认不生效
- * @method boolean getNeedContent() 获取是否投递日志的元数据信息，默认为 true。
-当NeedContent为true时：字段Content有效。
-当NeedContent为false时：字段Content无效。
- * @method void setNeedContent(boolean $NeedContent) 设置是否投递日志的元数据信息，默认为 true。
-当NeedContent为true时：字段Content有效。
-当NeedContent为false时：字段Content无效。
- * @method ConsumerContent getContent() 获取如果需要投递元数据信息，元数据信息的描述
- * @method void setContent(ConsumerContent $Content) 设置如果需要投递元数据信息，元数据信息的描述
- * @method Ckafka getCkafka() 获取CKafka的描述
- * @method void setCkafka(Ckafka $Ckafka) 设置CKafka的描述
- * @method integer getCompression() 获取投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
- * @method void setCompression(integer $Compression) 设置投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
- * @method string getRoleArn() 获取角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
- * @method void setRoleArn(string $RoleArn) 设置角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
- * @method string getExternalId() 获取外部ID
- * @method void setExternalId(string $ExternalId) 设置外部ID
- * @method AdvancedConsumerConfiguration getAdvancedConfig() 获取高级配置
- * @method void setAdvancedConfig(AdvancedConsumerConfiguration $AdvancedConfig) 设置高级配置
+ * @method string getTopicId() 获取<p>投递任务绑定的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
+ * @method void setTopicId(string $TopicId) 设置<p>投递任务绑定的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
+ * @method boolean getEffective() 获取<p>投递任务是否生效，默认不生效</p>
+ * @method void setEffective(boolean $Effective) 设置<p>投递任务是否生效，默认不生效</p>
+ * @method boolean getNeedContent() 获取<p>是否投递日志的元数据信息，默认为 true。<br>当NeedContent为true时：字段Content有效。<br>当NeedContent为false时：字段Content无效。</p>
+ * @method void setNeedContent(boolean $NeedContent) 设置<p>是否投递日志的元数据信息，默认为 true。<br>当NeedContent为true时：字段Content有效。<br>当NeedContent为false时：字段Content无效。</p>
+ * @method ConsumerContent getContent() 获取<p>如果需要投递元数据信息，元数据信息的描述</p>
+ * @method void setContent(ConsumerContent $Content) 设置<p>如果需要投递元数据信息，元数据信息的描述</p>
+ * @method Ckafka getCkafka() 获取<p>CKafka的描述</p>
+ * @method void setCkafka(Ckafka $Ckafka) 设置<p>CKafka的描述</p>
+ * @method integer getCompression() 获取<p>投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]</p>
+ * @method void setCompression(integer $Compression) 设置<p>投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]</p>
+ * @method string getRoleArn() 获取<p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+ * @method void setRoleArn(string $RoleArn) 设置<p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+ * @method string getExternalId() 获取<p>外部ID</p>
+ * @method void setExternalId(string $ExternalId) 设置<p>外部ID</p>
+ * @method AdvancedConsumerConfiguration getAdvancedConfig() 获取<p>高级配置</p>
+ * @method void setAdvancedConfig(AdvancedConsumerConfiguration $AdvancedConfig) 设置<p>高级配置</p>
+ * @method string getDSLFilter() 获取<p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+ * @method void setDSLFilter(string $DSLFilter) 设置<p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
  */
 class ModifyConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 投递任务绑定的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * @var string <p>投递任务绑定的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
      */
     public $TopicId;
 
     /**
-     * @var boolean 投递任务是否生效，默认不生效
+     * @var boolean <p>投递任务是否生效，默认不生效</p>
      */
     public $Effective;
 
     /**
-     * @var boolean 是否投递日志的元数据信息，默认为 true。
-当NeedContent为true时：字段Content有效。
-当NeedContent为false时：字段Content无效。
+     * @var boolean <p>是否投递日志的元数据信息，默认为 true。<br>当NeedContent为true时：字段Content有效。<br>当NeedContent为false时：字段Content无效。</p>
      */
     public $NeedContent;
 
     /**
-     * @var ConsumerContent 如果需要投递元数据信息，元数据信息的描述
+     * @var ConsumerContent <p>如果需要投递元数据信息，元数据信息的描述</p>
      */
     public $Content;
 
     /**
-     * @var Ckafka CKafka的描述
+     * @var Ckafka <p>CKafka的描述</p>
      */
     public $Ckafka;
 
     /**
-     * @var integer 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
+     * @var integer <p>投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]</p>
      */
     public $Compression;
 
     /**
-     * @var string 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @var string <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
      */
     public $RoleArn;
 
     /**
-     * @var string 外部ID
+     * @var string <p>外部ID</p>
      */
     public $ExternalId;
 
     /**
-     * @var AdvancedConsumerConfiguration 高级配置
+     * @var AdvancedConsumerConfiguration <p>高级配置</p>
      */
     public $AdvancedConfig;
 
     /**
-     * @param string $TopicId 投递任务绑定的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
-     * @param boolean $Effective 投递任务是否生效，默认不生效
-     * @param boolean $NeedContent 是否投递日志的元数据信息，默认为 true。
-当NeedContent为true时：字段Content有效。
-当NeedContent为false时：字段Content无效。
-     * @param ConsumerContent $Content 如果需要投递元数据信息，元数据信息的描述
-     * @param Ckafka $Ckafka CKafka的描述
-     * @param integer $Compression 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
-     * @param string $RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
-     * @param string $ExternalId 外部ID
-     * @param AdvancedConsumerConfiguration $AdvancedConfig 高级配置
+     * @var string <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+     */
+    public $DSLFilter;
+
+    /**
+     * @param string $TopicId <p>投递任务绑定的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
+     * @param boolean $Effective <p>投递任务是否生效，默认不生效</p>
+     * @param boolean $NeedContent <p>是否投递日志的元数据信息，默认为 true。<br>当NeedContent为true时：字段Content有效。<br>当NeedContent为false时：字段Content无效。</p>
+     * @param ConsumerContent $Content <p>如果需要投递元数据信息，元数据信息的描述</p>
+     * @param Ckafka $Ckafka <p>CKafka的描述</p>
+     * @param integer $Compression <p>投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]</p>
+     * @param string $RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+     * @param string $ExternalId <p>外部ID</p>
+     * @param AdvancedConsumerConfiguration $AdvancedConfig <p>高级配置</p>
+     * @param string $DSLFilter <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
      */
     function __construct()
     {
@@ -163,6 +155,10 @@ class ModifyConsumerRequest extends AbstractModel
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
             $this->AdvancedConfig = new AdvancedConsumerConfiguration();
             $this->AdvancedConfig->deserialize($param["AdvancedConfig"]);
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

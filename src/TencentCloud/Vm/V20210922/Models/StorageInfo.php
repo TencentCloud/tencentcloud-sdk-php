@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextContent(string $TextContent) 设置<p>大模型审核场景下，base64编码的审核要求内容</p>
  * @method string getTitle() 获取<p>文章标题</p>
  * @method void setTitle(string $Title) 设置<p>文章标题</p>
+ * @method string getExtra() 获取<p>额外信息</p>
+ * @method void setExtra(string $Extra) 设置<p>额外信息</p>
  */
 class StorageInfo extends AbstractModel
 {
@@ -66,12 +68,18 @@ class StorageInfo extends AbstractModel
     public $Title;
 
     /**
+     * @var string <p>额外信息</p>
+     */
+    public $Extra;
+
+    /**
      * @param string $Type <p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p>
      * @param string $Url <p>资源链接</p>
      * @param BucketInfo $BucketInfo <p>腾讯云存储桶信息</p>
      * @param array $ImageUrlList <p>大模型审核场景下，送审的图片列表</p>
      * @param string $TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
      * @param string $Title <p>文章标题</p>
+     * @param string $Extra <p>额外信息</p>
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class StorageInfo extends AbstractModel
 
         if (array_key_exists("Title",$param) and $param["Title"] !== null) {
             $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
     }
 }

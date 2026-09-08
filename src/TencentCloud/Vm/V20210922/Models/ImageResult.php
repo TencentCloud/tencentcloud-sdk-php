@@ -20,146 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Result结果详情
  *
- * @method integer getHitFlag() 获取违规标志
-0 未命中
-1 命中
- * @method void setHitFlag(integer $HitFlag) 设置违规标志
-0 未命中
-1 命中
- * @method string getLabel() 获取命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
- * @method void setLabel(string $Label) 设置命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
- * @method string getSuggestion() 获取审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
- * @method void setSuggestion(string $Suggestion) 设置审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
- * @method integer getScore() 获取得分
- * @method void setScore(integer $Score) 设置得分
- * @method array getResults() 获取画面截帧图片结果集
- * @method void setResults(array $Results) 设置画面截帧图片结果集
- * @method string getUrl() 获取该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
- * @method void setUrl(string $Url) 设置该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
- * @method string getExtra() 获取附加字段
- * @method void setExtra(string $Extra) 设置附加字段
- * @method string getSubLabel() 获取二级标签
- * @method void setSubLabel(string $SubLabel) 设置二级标签
- * @method array getRecognitionResults() 获取场景结果
- * @method void setRecognitionResults(array $RecognitionResults) 设置场景结果
- * @method string getHitType() 获取审核命中类型
- * @method void setHitType(string $HitType) 设置审核命中类型
- * @method string getRequestId() 获取截帧请求ID
- * @method void setRequestId(string $RequestId) 设置截帧请求ID
+ * @method integer getHitFlag() 获取<p>违规标志<br>0 未命中<br>1 命中</p>
+ * @method void setHitFlag(integer $HitFlag) 设置<p>违规标志<br>0 未命中<br>1 命中</p>
+ * @method string getLabel() 获取<p>命中的标签<br>Porn 色情<br>Sexy 性感<br>Polity 政治<br>Illegal 违法<br>Abuse 谩骂<br>Terror 暴恐<br>Ad 广告</p>
+ * @method void setLabel(string $Label) 设置<p>命中的标签<br>Porn 色情<br>Sexy 性感<br>Polity 政治<br>Illegal 违法<br>Abuse 谩骂<br>Terror 暴恐<br>Ad 广告</p>
+ * @method string getSuggestion() 获取<p>审核建议，可选值：<br>Pass 通过，<br>Review 建议人审，<br>Block 确认违规</p>
+ * @method void setSuggestion(string $Suggestion) 设置<p>审核建议，可选值：<br>Pass 通过，<br>Review 建议人审，<br>Block 确认违规</p>
+ * @method integer getScore() 获取<p>得分</p>
+ * @method void setScore(integer $Score) 设置<p>得分</p>
+ * @method array getResults() 获取<p>画面截帧图片结果集</p>
+ * @method void setResults(array $Results) 设置<p>画面截帧图片结果集</p>
+ * @method string getUrl() 获取<p>该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用<a href="https://cloud.tencent.com/document/product/1265/104001">COS预签名</a>功能更新签名时效。</p>
+ * @method void setUrl(string $Url) 设置<p>该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用<a href="https://cloud.tencent.com/document/product/1265/104001">COS预签名</a>功能更新签名时效。</p>
+ * @method string getExtra() 获取<p>附加字段</p>
+ * @method void setExtra(string $Extra) 设置<p>附加字段</p>
+ * @method string getSubLabel() 获取<p>二级标签</p>
+ * @method void setSubLabel(string $SubLabel) 设置<p>二级标签</p>
+ * @method array getRecognitionResults() 获取<p>场景结果</p>
+ * @method void setRecognitionResults(array $RecognitionResults) 设置<p>场景结果</p>
+ * @method string getHitType() 获取<p>审核命中类型</p>
+ * @method void setHitType(string $HitType) 设置<p>审核命中类型</p>
+ * @method string getRequestId() 获取<p>截帧请求ID</p>
+ * @method void setRequestId(string $RequestId) 设置<p>截帧请求ID</p>
+ * @method array getHitSnippetInfos() 获取<p>命中信息</p>
+ * @method void setHitSnippetInfos(array $HitSnippetInfos) 设置<p>命中信息</p>
  */
 class ImageResult extends AbstractModel
 {
     /**
-     * @var integer 违规标志
-0 未命中
-1 命中
+     * @var integer <p>违规标志<br>0 未命中<br>1 命中</p>
      */
     public $HitFlag;
 
     /**
-     * @var string 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * @var string <p>命中的标签<br>Porn 色情<br>Sexy 性感<br>Polity 政治<br>Illegal 违法<br>Abuse 谩骂<br>Terror 暴恐<br>Ad 广告</p>
      */
     public $Label;
 
     /**
-     * @var string 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @var string <p>审核建议，可选值：<br>Pass 通过，<br>Review 建议人审，<br>Block 确认违规</p>
      */
     public $Suggestion;
 
     /**
-     * @var integer 得分
+     * @var integer <p>得分</p>
      */
     public $Score;
 
     /**
-     * @var array 画面截帧图片结果集
+     * @var array <p>画面截帧图片结果集</p>
      */
     public $Results;
 
     /**
-     * @var string 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
+     * @var string <p>该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用<a href="https://cloud.tencent.com/document/product/1265/104001">COS预签名</a>功能更新签名时效。</p>
      */
     public $Url;
 
     /**
-     * @var string 附加字段
+     * @var string <p>附加字段</p>
      */
     public $Extra;
 
     /**
-     * @var string 二级标签
+     * @var string <p>二级标签</p>
      */
     public $SubLabel;
 
     /**
-     * @var array 场景结果
+     * @var array <p>场景结果</p>
      */
     public $RecognitionResults;
 
     /**
-     * @var string 审核命中类型
+     * @var string <p>审核命中类型</p>
      */
     public $HitType;
 
     /**
-     * @var string 截帧请求ID
+     * @var string <p>截帧请求ID</p>
      */
     public $RequestId;
 
     /**
-     * @param integer $HitFlag 违规标志
-0 未命中
-1 命中
-     * @param string $Label 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-     * @param string $Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
-     * @param integer $Score 得分
-     * @param array $Results 画面截帧图片结果集
-     * @param string $Url 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-     * @param string $Extra 附加字段
-     * @param string $SubLabel 二级标签
-     * @param array $RecognitionResults 场景结果
-     * @param string $HitType 审核命中类型
-     * @param string $RequestId 截帧请求ID
+     * @var array <p>命中信息</p>
+     */
+    public $HitSnippetInfos;
+
+    /**
+     * @param integer $HitFlag <p>违规标志<br>0 未命中<br>1 命中</p>
+     * @param string $Label <p>命中的标签<br>Porn 色情<br>Sexy 性感<br>Polity 政治<br>Illegal 违法<br>Abuse 谩骂<br>Terror 暴恐<br>Ad 广告</p>
+     * @param string $Suggestion <p>审核建议，可选值：<br>Pass 通过，<br>Review 建议人审，<br>Block 确认违规</p>
+     * @param integer $Score <p>得分</p>
+     * @param array $Results <p>画面截帧图片结果集</p>
+     * @param string $Url <p>该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用<a href="https://cloud.tencent.com/document/product/1265/104001">COS预签名</a>功能更新签名时效。</p>
+     * @param string $Extra <p>附加字段</p>
+     * @param string $SubLabel <p>二级标签</p>
+     * @param array $RecognitionResults <p>场景结果</p>
+     * @param string $HitType <p>审核命中类型</p>
+     * @param string $RequestId <p>截帧请求ID</p>
+     * @param array $HitSnippetInfos <p>命中信息</p>
      */
     function __construct()
     {
@@ -226,6 +186,15 @@ Block 确认违规
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
+        }
+
+        if (array_key_exists("HitSnippetInfos",$param) and $param["HitSnippetInfos"] !== null) {
+            $this->HitSnippetInfos = [];
+            foreach ($param["HitSnippetInfos"] as $key => $value){
+                $obj = new HitSnippetInfo();
+                $obj->deserialize($value);
+                array_push($this->HitSnippetInfos, $obj);
+            }
         }
     }
 }

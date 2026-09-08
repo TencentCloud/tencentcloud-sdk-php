@@ -20,58 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInsPublicEndpoints返回参数结构体
  *
- * @method array getEndpoints() 获取接入点
- * @method void setEndpoints(array $Endpoints) 设置接入点
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method integer getBandwidth() 获取带宽，单位Mbps
- * @method void setBandwidth(integer $Bandwidth) 设置带宽，单位Mbps
- * @method array getRules() 获取公网访问规则
- * @method void setRules(array $Rules) 设置公网访问规则
- * @method string getStatus() 获取公网状态：
-    NORMAL-正常
-    CLOSING-关闭中
-    MODIFYING-修改中
-    CREATING-开启中
-    CLOSE-关闭
- * @method void setStatus(string $Status) 设置公网状态：
-    NORMAL-正常
-    CLOSING-关闭中
-    MODIFYING-修改中
-    CREATING-开启中
-    CLOSE-关闭
+ * @method array getEndpoints() 获取<p>接入点</p>
+ * @method void setEndpoints(array $Endpoints) 设置<p>接入点</p>
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method integer getBandwidth() 获取<p>带宽，单位Mbps</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>带宽，单位Mbps</p>
+ * @method array getRules() 获取<p>公网访问规则</p>
+ * @method void setRules(array $Rules) 设置<p>公网访问规则</p>
+ * @method string getStatus() 获取<p>公网状态：<br>    NORMAL-正常<br>    CLOSING-关闭中<br>    MODIFYING-修改中<br>    CREATING-开启中<br>    CLOSE-关闭</p>
+ * @method void setStatus(string $Status) 设置<p>公网状态：<br>    NORMAL-正常<br>    CLOSING-关闭中<br>    MODIFYING-修改中<br>    CREATING-开启中<br>    CLOSE-关闭</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInsPublicEndpointsResponse extends AbstractModel
 {
     /**
-     * @var array 接入点
+     * @var array <p>接入点</p>
      */
     public $Endpoints;
 
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 带宽，单位Mbps
+     * @var integer <p>带宽，单位Mbps</p>
      */
     public $Bandwidth;
 
     /**
-     * @var array 公网访问规则
+     * @var array <p>公网访问规则</p>
      */
     public $Rules;
 
     /**
-     * @var string 公网状态：
-    NORMAL-正常
-    CLOSING-关闭中
-    MODIFYING-修改中
-    CREATING-开启中
-    CLOSE-关闭
+     * @var string <p>公网状态：<br>    NORMAL-正常<br>    CLOSING-关闭中<br>    MODIFYING-修改中<br>    CREATING-开启中<br>    CLOSE-关闭</p>
      */
     public $Status;
 
@@ -81,16 +66,11 @@ class DescribeInsPublicEndpointsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Endpoints 接入点
-     * @param string $InstanceId 实例id
-     * @param integer $Bandwidth 带宽，单位Mbps
-     * @param array $Rules 公网访问规则
-     * @param string $Status 公网状态：
-    NORMAL-正常
-    CLOSING-关闭中
-    MODIFYING-修改中
-    CREATING-开启中
-    CLOSE-关闭
+     * @param array $Endpoints <p>接入点</p>
+     * @param string $InstanceId <p>实例id</p>
+     * @param integer $Bandwidth <p>带宽，单位Mbps</p>
+     * @param array $Rules <p>公网访问规则</p>
+     * @param string $Status <p>公网状态：<br>    NORMAL-正常<br>    CLOSING-关闭中<br>    MODIFYING-修改中<br>    CREATING-开启中<br>    CLOSE-关闭</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

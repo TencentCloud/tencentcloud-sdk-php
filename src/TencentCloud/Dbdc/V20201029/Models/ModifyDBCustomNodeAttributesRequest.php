@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNodeId() 获取<p>节点ID</p><p>参数格式：dbcn-hq98qjym</p>
  * @method void setNodeId(string $NodeId) 设置<p>节点ID</p><p>参数格式：dbcn-hq98qjym</p>
+ * @method array getNodeIds() 获取<p>节点 ID 列表</p><p>入参限制：最多支持 100 个</p><p>NodeId 和 NodeIds 必须传一个且不能同时传</p>
+ * @method void setNodeIds(array $NodeIds) 设置<p>节点 ID 列表</p><p>入参限制：最多支持 100 个</p><p>NodeId 和 NodeIds 必须传一个且不能同时传</p>
  * @method string getHostName() 获取<p>主机 HostName</p><p>入参限制：参数设置规则参见：<a href="https://cloud.tencent.com/document/api/1322/132929">创建 DB Custom 节点接口</a>的 HostName 参数说明。</p><p>注意：节点在没有加入到集群之前才支持修改主机 HostName。</p>
  * @method void setHostName(string $HostName) 设置<p>主机 HostName</p><p>入参限制：参数设置规则参见：<a href="https://cloud.tencent.com/document/api/1322/132929">创建 DB Custom 节点接口</a>的 HostName 参数说明。</p><p>注意：节点在没有加入到集群之前才支持修改主机 HostName。</p>
  * @method string getNodeName() 获取<p>节点名称</p><p>入参限制：参数设置规则参见：<a href="https://cloud.tencent.com/document/api/1322/132929">创建 DB Custom 节点接口</a>的 NodeName 参数说明。</p>
@@ -35,6 +37,11 @@ class ModifyDBCustomNodeAttributesRequest extends AbstractModel
      * @var string <p>节点ID</p><p>参数格式：dbcn-hq98qjym</p>
      */
     public $NodeId;
+
+    /**
+     * @var array <p>节点 ID 列表</p><p>入参限制：最多支持 100 个</p><p>NodeId 和 NodeIds 必须传一个且不能同时传</p>
+     */
+    public $NodeIds;
 
     /**
      * @var string <p>主机 HostName</p><p>入参限制：参数设置规则参见：<a href="https://cloud.tencent.com/document/api/1322/132929">创建 DB Custom 节点接口</a>的 HostName 参数说明。</p><p>注意：节点在没有加入到集群之前才支持修改主机 HostName。</p>
@@ -53,6 +60,7 @@ class ModifyDBCustomNodeAttributesRequest extends AbstractModel
 
     /**
      * @param string $NodeId <p>节点ID</p><p>参数格式：dbcn-hq98qjym</p>
+     * @param array $NodeIds <p>节点 ID 列表</p><p>入参限制：最多支持 100 个</p><p>NodeId 和 NodeIds 必须传一个且不能同时传</p>
      * @param string $HostName <p>主机 HostName</p><p>入参限制：参数设置规则参见：<a href="https://cloud.tencent.com/document/api/1322/132929">创建 DB Custom 节点接口</a>的 HostName 参数说明。</p><p>注意：节点在没有加入到集群之前才支持修改主机 HostName。</p>
      * @param string $NodeName <p>节点名称</p><p>入参限制：参数设置规则参见：<a href="https://cloud.tencent.com/document/api/1322/132929">创建 DB Custom 节点接口</a>的 NodeName 参数说明。</p>
      * @param boolean $AutoReboot <p>修改实例 HostName 是否自动重启实例，不传默认自动重启。</p><p>枚举值：</p><ul><li>true： 修改主机 HostName，并自动重启主机</li><li>false： 修改主机 HostName，不自动重启主机，需要手动重启使新主机 HostName 生效</li></ul><p>默认值：true</p>
@@ -72,6 +80,10 @@ class ModifyDBCustomNodeAttributesRequest extends AbstractModel
         }
         if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
             $this->NodeId = $param["NodeId"];
+        }
+
+        if (array_key_exists("NodeIds",$param) and $param["NodeIds"] !== null) {
+            $this->NodeIds = $param["NodeIds"];
         }
 
         if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {

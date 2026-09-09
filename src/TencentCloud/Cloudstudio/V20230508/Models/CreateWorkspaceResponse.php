@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWorkspace返回参数结构体
  *
- * @method string getSpaceKey() 获取工作空间 SpaceKey
- * @method void setSpaceKey(string $SpaceKey) 设置工作空间 SpaceKey
- * @method string getName() 获取工作空间名称
- * @method void setName(string $Name) 设置工作空间名称
+ * @method string getSpaceKey() 获取<p>工作空间 SpaceKey</p>
+ * @method void setSpaceKey(string $SpaceKey) 设置<p>工作空间 SpaceKey</p>
+ * @method string getName() 获取<p>工作空间名称</p>
+ * @method void setName(string $Name) 设置<p>工作空间名称</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateWorkspaceResponse extends AbstractModel
 {
     /**
-     * @var string 工作空间 SpaceKey
+     * @var string <p>工作空间 SpaceKey</p>
      */
     public $SpaceKey;
 
     /**
-     * @var string 工作空间名称
+     * @var string <p>工作空间名称</p>
      */
     public $Name;
 
@@ -45,8 +45,8 @@ class CreateWorkspaceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SpaceKey 工作空间 SpaceKey
-     * @param string $Name 工作空间名称
+     * @param string $SpaceKey <p>工作空间 SpaceKey</p>
+     * @param string $Name <p>工作空间名称</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

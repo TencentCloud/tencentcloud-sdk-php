@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMongoDBProcessList请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method string getProduct() 获取服务产品类型，支持值：mongodb
- * @method void setProduct(string $Product) 设置服务产品类型，支持值：mongodb
- * @method integer getID() 获取线程的ID，用于筛选线程列表。
- * @method void setID(integer $ID) 设置线程的ID，用于筛选线程列表。
- * @method string getHost() 获取线程的操作主机地址，用于筛选线程列表。
- * @method void setHost(string $Host) 设置线程的操作主机地址，用于筛选线程列表。
- * @method string getDB() 获取线程的操作数据库，用于筛选线程列表,如果是多个 使用 ','  分割
- * @method void setDB(string $DB) 设置线程的操作数据库，用于筛选线程列表,如果是多个 使用 ','  分割
- * @method string getType() 获取命令类型 ,如果是多个 使用 ','  分割
- * @method void setType(string $Type) 设置命令类型 ,如果是多个 使用 ','  分割
- * @method integer getTime() 获取线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
- * @method void setTime(integer $Time) 设置线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
- * @method integer getLimit() 获取返回数量，默认20。
- * @method void setLimit(integer $Limit) 设置返回数量，默认20。
+ * @method string getInstanceId() 获取<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+ * @method string getProduct() 获取<p>服务产品类型，支持值：mongodb</p>
+ * @method void setProduct(string $Product) 设置<p>服务产品类型，支持值：mongodb</p>
+ * @method integer getID() 获取<p>线程的ID，用于筛选线程列表。</p>
+ * @method void setID(integer $ID) 设置<p>线程的ID，用于筛选线程列表。</p>
+ * @method string getHost() 获取<p>线程的操作主机地址，用于筛选线程列表。</p>
+ * @method void setHost(string $Host) 设置<p>线程的操作主机地址，用于筛选线程列表。</p>
+ * @method string getDB() 获取<p>线程的操作数据库，用于筛选线程列表,如果是多个 使用 &#39;,&#39;  分割</p>
+ * @method void setDB(string $DB) 设置<p>线程的操作数据库，用于筛选线程列表,如果是多个 使用 &#39;,&#39;  分割</p>
+ * @method string getType() 获取<p>命令类型 ,如果是多个 使用 &#39;,&#39;  分割</p>
+ * @method void setType(string $Type) 设置<p>命令类型 ,如果是多个 使用 &#39;,&#39;  分割</p>
+ * @method integer getTime() 获取<p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
+ * @method void setTime(integer $Time) 设置<p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认20。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认20。</p>
  */
 class DescribeMongoDBProcessListRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @var string <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 服务产品类型，支持值：mongodb
+     * @var string <p>服务产品类型，支持值：mongodb</p>
      */
     public $Product;
 
     /**
-     * @var integer 线程的ID，用于筛选线程列表。
+     * @var integer <p>线程的ID，用于筛选线程列表。</p>
      */
     public $ID;
 
     /**
-     * @var string 线程的操作主机地址，用于筛选线程列表。
+     * @var string <p>线程的操作主机地址，用于筛选线程列表。</p>
      */
     public $Host;
 
     /**
-     * @var string 线程的操作数据库，用于筛选线程列表,如果是多个 使用 ','  分割
+     * @var string <p>线程的操作数据库，用于筛选线程列表,如果是多个 使用 &#39;,&#39;  分割</p>
      */
     public $DB;
 
     /**
-     * @var string 命令类型 ,如果是多个 使用 ','  分割
+     * @var string <p>命令类型 ,如果是多个 使用 &#39;,&#39;  分割</p>
      */
     public $Type;
 
     /**
-     * @var integer 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
+     * @var integer <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
      */
     public $Time;
 
     /**
-     * @var integer 返回数量，默认20。
+     * @var integer <p>返回数量，默认20。</p>
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param string $Product 服务产品类型，支持值：mongodb
-     * @param integer $ID 线程的ID，用于筛选线程列表。
-     * @param string $Host 线程的操作主机地址，用于筛选线程列表。
-     * @param string $DB 线程的操作数据库，用于筛选线程列表,如果是多个 使用 ','  分割
-     * @param string $Type 命令类型 ,如果是多个 使用 ','  分割
-     * @param integer $Time 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
-     * @param integer $Limit 返回数量，默认20。
+     * @param string $InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param string $Product <p>服务产品类型，支持值：mongodb</p>
+     * @param integer $ID <p>线程的ID，用于筛选线程列表。</p>
+     * @param string $Host <p>线程的操作主机地址，用于筛选线程列表。</p>
+     * @param string $DB <p>线程的操作数据库，用于筛选线程列表,如果是多个 使用 &#39;,&#39;  分割</p>
+     * @param string $Type <p>命令类型 ,如果是多个 使用 &#39;,&#39;  分割</p>
+     * @param integer $Time <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
+     * @param integer $Limit <p>返回数量，默认20。</p>
      */
     function __construct()
     {

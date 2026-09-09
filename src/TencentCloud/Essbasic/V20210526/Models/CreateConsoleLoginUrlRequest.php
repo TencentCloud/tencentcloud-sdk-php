@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoActive(boolean $AutoActive) 设置<p>是否自动激活子客企业，有下面两种选项：</p><p><strong>false（默认设置）</strong>：不自动激活子客户。您需要通过控制台或调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive">激活或者续期子企业</a>接口手动完成激活过程。</p><p><strong>true</strong>：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。</p><p><b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png" alt="image"></p>
  * @method string getBusinessLicense() 获取<p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
  * @method void setBusinessLicense(string $BusinessLicense) 设置<p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
- * @method string getProxyAddress() 获取<p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
- * @method void setProxyAddress(string $ProxyAddress) 设置<p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
+ * @method string getProxyAddress() 获取<p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。    </p><p>入参限制：最大长度500个字符</p>
+ * @method void setProxyAddress(string $ProxyAddress) 设置<p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。    </p><p>入参限制：最大长度500个字符</p>
  * @method string getProxyLegalName() 获取<p>组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
  * @method void setProxyLegalName(string $ProxyLegalName) 设置<p>组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
  * @method array getPowerOfAttorneys() 获取<p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。<br> p.s. 如果上传授权书 ，需遵循以下条件 </p><ol><li>超管的信息（超管姓名，超管手机号）必须为必填参数。 </li><li>认证方式AuthorizationTypes必须只能是上传授权书方式</li></ol>
@@ -154,7 +154,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $BusinessLicense;
 
     /**
-     * @var string <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
+     * @var string <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。    </p><p>入参限制：最大长度500个字符</p>
      */
     public $ProxyAddress;
 
@@ -216,7 +216,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $TopNavigationStatus <p>是否展示头顶导航栏  <ul><li> <strong>ENABLE</strong> : (默认)进入web控制台展示头顶导航栏</li> <li> <strong>DISABLE</strong> : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数<strong>仅在企业和员工激活完成，登录控制台场景才生效</strong>。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a></p>
      * @param boolean $AutoActive <p>是否自动激活子客企业，有下面两种选项：</p><p><strong>false（默认设置）</strong>：不自动激活子客户。您需要通过控制台或调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive">激活或者续期子企业</a>接口手动完成激活过程。</p><p><strong>true</strong>：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。</p><p><b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png" alt="image"></p>
      * @param string $BusinessLicense <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
-     * @param string $ProxyAddress <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
+     * @param string $ProxyAddress <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。    </p><p>入参限制：最大长度500个字符</p>
      * @param string $ProxyLegalName <p>组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
      * @param array $PowerOfAttorneys <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。<br> p.s. 如果上传授权书 ，需遵循以下条件 </p><ol><li>超管的信息（超管姓名，超管手机号）必须为必填参数。 </li><li>认证方式AuthorizationTypes必须只能是上传授权书方式</li></ol>
      * @param OrganizationAuthorizationOptions $OrganizationAuthorizationOptions <p>企业认证时个性化能力信息</p>

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dataagent\V20250513\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetSessionDetails请求参数结构体
+ * 配置下发参数
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getSessionId() 获取会话ID
- * @method void setSessionId(string $SessionId) 设置会话ID
+ * @method string getFileName() 获取配置文件名字
+ * @method void setFileName(string $FileName) 设置配置文件名字
+ * @method string getParams() 获取配置文件参数,需要转为base64
+ * @method void setParams(string $Params) 设置配置文件参数,需要转为base64
  */
-class GetSessionDetailsRequest extends AbstractModel
+class ConfSubContext extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 配置文件名字
      */
-    public $InstanceId;
+    public $FileName;
 
     /**
-     * @var string 会话ID
+     * @var string 配置文件参数,需要转为base64
      */
-    public $SessionId;
+    public $Params;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $SessionId 会话ID
+     * @param string $FileName 配置文件名字
+     * @param string $Params 配置文件参数,需要转为base64
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class GetSessionDetailsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
+            $this->FileName = $param["FileName"];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
+            $this->Params = $param["Params"];
         }
     }
 }

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextWatermark(SceneWarnInfo $TextWatermark) 设置<p>文字水印提示</p>
  * @method string getWatermarkContent() 获取<p>水印内容，当未检测到文字水印时不返回，返回多组水印时以 | 分隔。</p>
  * @method void setWatermarkContent(string $WatermarkContent) 设置<p>水印内容，当未检测到文字水印时不返回，返回多组水印时以 | 分隔。</p>
+ * @method SceneWarnInfo getTemplate() 获取<p>模板图片提示</p>
+ * @method void setTemplate(SceneWarnInfo $Template) 设置<p>模板图片提示</p>
+ * @method ReasoningResult getReasoningResult() 获取<p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+ * @method void setReasoningResult(ReasoningResult $ReasoningResult) 设置<p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +72,16 @@ class VerifyScenePhotoResponse extends AbstractModel
     public $WatermarkContent;
 
     /**
+     * @var SceneWarnInfo <p>模板图片提示</p>
+     */
+    public $Template;
+
+    /**
+     * @var ReasoningResult <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+     */
+    public $ReasoningResult;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +93,8 @@ class VerifyScenePhotoResponse extends AbstractModel
      * @param SceneWarnInfo $Screenshot <p>截图提示</p>
      * @param SceneWarnInfo $TextWatermark <p>文字水印提示</p>
      * @param string $WatermarkContent <p>水印内容，当未检测到文字水印时不返回，返回多组水印时以 | 分隔。</p>
+     * @param SceneWarnInfo $Template <p>模板图片提示</p>
+     * @param ReasoningResult $ReasoningResult <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -121,6 +137,16 @@ class VerifyScenePhotoResponse extends AbstractModel
 
         if (array_key_exists("WatermarkContent",$param) and $param["WatermarkContent"] !== null) {
             $this->WatermarkContent = $param["WatermarkContent"];
+        }
+
+        if (array_key_exists("Template",$param) and $param["Template"] !== null) {
+            $this->Template = new SceneWarnInfo();
+            $this->Template->deserialize($param["Template"]);
+        }
+
+        if (array_key_exists("ReasoningResult",$param) and $param["ReasoningResult"] !== null) {
+            $this->ReasoningResult = new ReasoningResult();
+            $this->ReasoningResult->deserialize($param["ReasoningResult"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

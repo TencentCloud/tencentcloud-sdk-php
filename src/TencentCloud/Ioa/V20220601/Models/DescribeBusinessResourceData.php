@@ -182,6 +182,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectorGroupType(string $ConnectorGroupType) 设置<p>通道类型</p><p>枚举值：</p><ul><li>vpc： vpc类型</li><li>native： 专线类型</li></ul><p>默认值：native</p>
  * @method string getDomainSuffix() 获取<p>域名后缀</p>
  * @method void setDomainSuffix(string $DomainSuffix) 设置<p>域名后缀</p>
+ * @method integer getConnectivityCheckSwitch() 获取<p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+ * @method void setConnectivityCheckSwitch(integer $ConnectivityCheckSwitch) 设置<p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+ * @method integer getConnectivityCheckInterval() 获取<p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+ * @method void setConnectivityCheckInterval(integer $ConnectivityCheckInterval) 设置<p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+ * @method string getConnectivityCheckIntervalUnit() 获取<p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+ * @method void setConnectivityCheckIntervalUnit(string $ConnectivityCheckIntervalUnit) 设置<p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+ * @method integer getURLAuditState() 获取<p>URL审计开关：0-关闭 1-开启，默认0</p>
+ * @method void setURLAuditState(integer $URLAuditState) 设置<p>URL审计开关：0-关闭 1-开启，默认0</p>
+ * @method string getURLAuditId() 获取<p>URL审计证书ID列表，多个用分号分隔</p>
+ * @method void setURLAuditId(string $URLAuditId) 设置<p>URL审计证书ID列表，多个用分号分隔</p>
+ * @method string getURLPath() 获取<p>URL审计路径，多个用分号分隔</p>
+ * @method void setURLPath(string $URLPath) 设置<p>URL审计路径，多个用分号分隔</p>
+ * @method integer getReachableType() 获取<p>检测方式：0-未检测 1-主动 2-流量</p>
+ * @method void setReachableType(integer $ReachableType) 设置<p>检测方式：0-未检测 1-主动 2-流量</p>
+ * @method string getAPISecretName() 获取<p>API密钥名称</p>
+ * @method void setAPISecretName(string $APISecretName) 设置<p>API密钥名称</p>
+ * @method string getAPISecretKey() 获取<p>API密钥Key</p>
+ * @method void setAPISecretKey(string $APISecretKey) 设置<p>API密钥Key</p>
+ * @method integer getEnableSensitiveRes() 获取<p>是否为敏感资源：0-否 1-是</p>
+ * @method void setEnableSensitiveRes(integer $EnableSensitiveRes) 设置<p>是否为敏感资源：0-否 1-是</p>
+ * @method integer getEnableIPPolicy() 获取<p>用户接入IP限制开关：0-不启用 1-启用</p>
+ * @method void setEnableIPPolicy(integer $EnableIPPolicy) 设置<p>用户接入IP限制开关：0-不启用 1-启用</p>
+ * @method integer getIPPolicyAttr() 获取<p>IP分组属性：0-白名单 1-黑名单</p>
+ * @method void setIPPolicyAttr(integer $IPPolicyAttr) 设置<p>IP分组属性：0-白名单 1-黑名单</p>
+ * @method array getIPPolicyIds() 获取<p>IP分组ID列表</p>
+ * @method void setIPPolicyIds(array $IPPolicyIds) 设置<p>IP分组ID列表</p>
+ * @method string getIPPolicyNames() 获取<p>IP分组名称（分号分隔）</p>
+ * @method void setIPPolicyNames(string $IPPolicyNames) 设置<p>IP分组名称（分号分隔）</p>
+ * @method integer getEnableUserAgent() 获取<p>访问浏览器规则开关：0-不启用 1-启用</p>
+ * @method void setEnableUserAgent(integer $EnableUserAgent) 设置<p>访问浏览器规则开关：0-不启用 1-启用</p>
+ * @method integer getUserAgentAttr() 获取<p>浏览器规则属性：0-白名单 1-黑名单</p>
+ * @method void setUserAgentAttr(integer $UserAgentAttr) 设置<p>浏览器规则属性：0-白名单 1-黑名单</p>
+ * @method array getUserAgentIds() 获取<p>浏览器规则ID列表</p>
+ * @method void setUserAgentIds(array $UserAgentIds) 设置<p>浏览器规则ID列表</p>
+ * @method string getUserAgentNames() 获取<p>浏览器规则名称（分号分隔）</p>
+ * @method void setUserAgentNames(string $UserAgentNames) 设置<p>浏览器规则名称（分号分隔）</p>
  */
 class DescribeBusinessResourceData extends AbstractModel
 {
@@ -435,6 +471,96 @@ class DescribeBusinessResourceData extends AbstractModel
     public $DomainSuffix;
 
     /**
+     * @var integer <p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+     */
+    public $ConnectivityCheckSwitch;
+
+    /**
+     * @var integer <p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+     */
+    public $ConnectivityCheckInterval;
+
+    /**
+     * @var string <p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+     */
+    public $ConnectivityCheckIntervalUnit;
+
+    /**
+     * @var integer <p>URL审计开关：0-关闭 1-开启，默认0</p>
+     */
+    public $URLAuditState;
+
+    /**
+     * @var string <p>URL审计证书ID列表，多个用分号分隔</p>
+     */
+    public $URLAuditId;
+
+    /**
+     * @var string <p>URL审计路径，多个用分号分隔</p>
+     */
+    public $URLPath;
+
+    /**
+     * @var integer <p>检测方式：0-未检测 1-主动 2-流量</p>
+     */
+    public $ReachableType;
+
+    /**
+     * @var string <p>API密钥名称</p>
+     */
+    public $APISecretName;
+
+    /**
+     * @var string <p>API密钥Key</p>
+     */
+    public $APISecretKey;
+
+    /**
+     * @var integer <p>是否为敏感资源：0-否 1-是</p>
+     */
+    public $EnableSensitiveRes;
+
+    /**
+     * @var integer <p>用户接入IP限制开关：0-不启用 1-启用</p>
+     */
+    public $EnableIPPolicy;
+
+    /**
+     * @var integer <p>IP分组属性：0-白名单 1-黑名单</p>
+     */
+    public $IPPolicyAttr;
+
+    /**
+     * @var array <p>IP分组ID列表</p>
+     */
+    public $IPPolicyIds;
+
+    /**
+     * @var string <p>IP分组名称（分号分隔）</p>
+     */
+    public $IPPolicyNames;
+
+    /**
+     * @var integer <p>访问浏览器规则开关：0-不启用 1-启用</p>
+     */
+    public $EnableUserAgent;
+
+    /**
+     * @var integer <p>浏览器规则属性：0-白名单 1-黑名单</p>
+     */
+    public $UserAgentAttr;
+
+    /**
+     * @var array <p>浏览器规则ID列表</p>
+     */
+    public $UserAgentIds;
+
+    /**
+     * @var string <p>浏览器规则名称（分号分隔）</p>
+     */
+    public $UserAgentNames;
+
+    /**
      * @param integer $ServiceId <p>业务资源id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName <p>业务资源名称</p>
@@ -516,6 +642,24 @@ class DescribeBusinessResourceData extends AbstractModel
      * @param integer $WebGwNoAuth <p>web免鉴权：1-鉴权 2-免鉴权</p>
      * @param string $ConnectorGroupType <p>通道类型</p><p>枚举值：</p><ul><li>vpc： vpc类型</li><li>native： 专线类型</li></ul><p>默认值：native</p>
      * @param string $DomainSuffix <p>域名后缀</p>
+     * @param integer $ConnectivityCheckSwitch <p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+     * @param integer $ConnectivityCheckInterval <p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+     * @param string $ConnectivityCheckIntervalUnit <p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+     * @param integer $URLAuditState <p>URL审计开关：0-关闭 1-开启，默认0</p>
+     * @param string $URLAuditId <p>URL审计证书ID列表，多个用分号分隔</p>
+     * @param string $URLPath <p>URL审计路径，多个用分号分隔</p>
+     * @param integer $ReachableType <p>检测方式：0-未检测 1-主动 2-流量</p>
+     * @param string $APISecretName <p>API密钥名称</p>
+     * @param string $APISecretKey <p>API密钥Key</p>
+     * @param integer $EnableSensitiveRes <p>是否为敏感资源：0-否 1-是</p>
+     * @param integer $EnableIPPolicy <p>用户接入IP限制开关：0-不启用 1-启用</p>
+     * @param integer $IPPolicyAttr <p>IP分组属性：0-白名单 1-黑名单</p>
+     * @param array $IPPolicyIds <p>IP分组ID列表</p>
+     * @param string $IPPolicyNames <p>IP分组名称（分号分隔）</p>
+     * @param integer $EnableUserAgent <p>访问浏览器规则开关：0-不启用 1-启用</p>
+     * @param integer $UserAgentAttr <p>浏览器规则属性：0-白名单 1-黑名单</p>
+     * @param array $UserAgentIds <p>浏览器规则ID列表</p>
+     * @param string $UserAgentNames <p>浏览器规则名称（分号分隔）</p>
      */
     function __construct()
     {
@@ -696,6 +840,78 @@ class DescribeBusinessResourceData extends AbstractModel
 
         if (array_key_exists("DomainSuffix",$param) and $param["DomainSuffix"] !== null) {
             $this->DomainSuffix = $param["DomainSuffix"];
+        }
+
+        if (array_key_exists("ConnectivityCheckSwitch",$param) and $param["ConnectivityCheckSwitch"] !== null) {
+            $this->ConnectivityCheckSwitch = $param["ConnectivityCheckSwitch"];
+        }
+
+        if (array_key_exists("ConnectivityCheckInterval",$param) and $param["ConnectivityCheckInterval"] !== null) {
+            $this->ConnectivityCheckInterval = $param["ConnectivityCheckInterval"];
+        }
+
+        if (array_key_exists("ConnectivityCheckIntervalUnit",$param) and $param["ConnectivityCheckIntervalUnit"] !== null) {
+            $this->ConnectivityCheckIntervalUnit = $param["ConnectivityCheckIntervalUnit"];
+        }
+
+        if (array_key_exists("URLAuditState",$param) and $param["URLAuditState"] !== null) {
+            $this->URLAuditState = $param["URLAuditState"];
+        }
+
+        if (array_key_exists("URLAuditId",$param) and $param["URLAuditId"] !== null) {
+            $this->URLAuditId = $param["URLAuditId"];
+        }
+
+        if (array_key_exists("URLPath",$param) and $param["URLPath"] !== null) {
+            $this->URLPath = $param["URLPath"];
+        }
+
+        if (array_key_exists("ReachableType",$param) and $param["ReachableType"] !== null) {
+            $this->ReachableType = $param["ReachableType"];
+        }
+
+        if (array_key_exists("APISecretName",$param) and $param["APISecretName"] !== null) {
+            $this->APISecretName = $param["APISecretName"];
+        }
+
+        if (array_key_exists("APISecretKey",$param) and $param["APISecretKey"] !== null) {
+            $this->APISecretKey = $param["APISecretKey"];
+        }
+
+        if (array_key_exists("EnableSensitiveRes",$param) and $param["EnableSensitiveRes"] !== null) {
+            $this->EnableSensitiveRes = $param["EnableSensitiveRes"];
+        }
+
+        if (array_key_exists("EnableIPPolicy",$param) and $param["EnableIPPolicy"] !== null) {
+            $this->EnableIPPolicy = $param["EnableIPPolicy"];
+        }
+
+        if (array_key_exists("IPPolicyAttr",$param) and $param["IPPolicyAttr"] !== null) {
+            $this->IPPolicyAttr = $param["IPPolicyAttr"];
+        }
+
+        if (array_key_exists("IPPolicyIds",$param) and $param["IPPolicyIds"] !== null) {
+            $this->IPPolicyIds = $param["IPPolicyIds"];
+        }
+
+        if (array_key_exists("IPPolicyNames",$param) and $param["IPPolicyNames"] !== null) {
+            $this->IPPolicyNames = $param["IPPolicyNames"];
+        }
+
+        if (array_key_exists("EnableUserAgent",$param) and $param["EnableUserAgent"] !== null) {
+            $this->EnableUserAgent = $param["EnableUserAgent"];
+        }
+
+        if (array_key_exists("UserAgentAttr",$param) and $param["UserAgentAttr"] !== null) {
+            $this->UserAgentAttr = $param["UserAgentAttr"];
+        }
+
+        if (array_key_exists("UserAgentIds",$param) and $param["UserAgentIds"] !== null) {
+            $this->UserAgentIds = $param["UserAgentIds"];
+        }
+
+        if (array_key_exists("UserAgentNames",$param) and $param["UserAgentNames"] !== null) {
+            $this->UserAgentNames = $param["UserAgentNames"];
         }
     }
 }

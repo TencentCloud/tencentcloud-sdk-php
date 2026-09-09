@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreviewAfterStart(boolean $PreviewAfterStart) 设置<p>发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul></p>
  * @method boolean getSignAfterStart() 获取<p>发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul></p>
  * @method void setSignAfterStart(boolean $SignAfterStart) 设置<p>发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul></p>
- * @method boolean getNeedFlowDraft() 获取<p>发起过程中是否保存草稿</p>
- * @method void setNeedFlowDraft(boolean $NeedFlowDraft) 设置<p>发起过程中是否保存草稿</p>
+ * @method boolean getNeedFlowDraft() 获取<p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过CreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">CreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol>
+ * @method void setNeedFlowDraft(boolean $NeedFlowDraft) 设置<p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过CreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">CreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol>
  * @method integer getCcInfoVisibility() 获取<p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p>
  * @method void setCcInfoVisibility(integer $CcInfoVisibility) 设置<p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p>
  */
@@ -190,7 +190,7 @@ class CreateFlowOption extends AbstractModel
     public $SignAfterStart;
 
     /**
-     * @var boolean <p>发起过程中是否保存草稿</p>
+     * @var boolean <p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过CreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">CreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol>
      */
     public $NeedFlowDraft;
 
@@ -223,7 +223,7 @@ class CreateFlowOption extends AbstractModel
      * @param boolean $HideSignCodeAfterStart <p>发起后签署码隐藏，默认false，注：仅对新版页面生效</p>
      * @param boolean $PreviewAfterStart <p>发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul></p>
      * @param boolean $SignAfterStart <p>发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul></p>
-     * @param boolean $NeedFlowDraft <p>发起过程中是否保存草稿</p>
+     * @param boolean $NeedFlowDraft <p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过CreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">CreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol>
      * @param integer $CcInfoVisibility <p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p>
      */
     function __construct()

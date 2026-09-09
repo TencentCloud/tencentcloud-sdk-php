@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLegalName(string $LegalName) 设置<p>企业法人的姓名</p>
  * @method string getAutoJumpUrl() 获取<p><font color="red">即将废弃</font>，入参请使用JumpEvents。<br>认证完成跳回的链接，最长500个字符。</p>
  * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置<p><font color="red">即将废弃</font>，入参请使用JumpEvents。<br>认证完成跳回的链接，最长500个字符。</p>
- * @method string getOrganizationAddress() 获取<p>营业执照企业地址</p>
- * @method void setOrganizationAddress(string $OrganizationAddress) 设置<p>营业执照企业地址</p>
+ * @method string getOrganizationAddress() 获取<p>营业执照企业地址</p><p>入参限制：最大长度500个字符</p>
+ * @method void setOrganizationAddress(string $OrganizationAddress) 设置<p>营业执照企业地址</p><p>入参限制：最大长度500个字符</p>
  * @method string getAdminName() 获取<p>认证人姓名</p>
  * @method void setAdminName(string $AdminName) 设置<p>认证人姓名</p>
  * @method string getAdminMobile() 获取<p>认证人手机号</p>
@@ -116,7 +116,7 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
     public $AutoJumpUrl;
 
     /**
-     * @var string <p>营业执照企业地址</p>
+     * @var string <p>营业执照企业地址</p><p>入参限制：最大长度500个字符</p>
      */
     public $OrganizationAddress;
 
@@ -247,7 +247,7 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
      * @param string $UniformSocialCreditCode <p>企业统一社会信用代码</p>
      * @param string $LegalName <p>企业法人的姓名</p>
      * @param string $AutoJumpUrl <p><font color="red">即将废弃</font>，入参请使用JumpEvents。<br>认证完成跳回的链接，最长500个字符。</p>
-     * @param string $OrganizationAddress <p>营业执照企业地址</p>
+     * @param string $OrganizationAddress <p>营业执照企业地址</p><p>入参限制：最大长度500个字符</p>
      * @param string $AdminName <p>认证人姓名</p>
      * @param string $AdminMobile <p>认证人手机号</p>
      * @param string $AdminIdCardNumber <p>认证人身份证号</p>

@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模板对应的合同类型
  *
- * @method string getUserFlowTypeId() 获取合同类型id
- * @method void setUserFlowTypeId(string $UserFlowTypeId) 设置合同类型id
- * @method string getName() 获取合同类型名称
- * @method void setName(string $Name) 设置合同类型名称
- * @method string getDescription() 获取合同类型的具体描述
- * @method void setDescription(string $Description) 设置合同类型的具体描述
- * @method integer getTemplateNum() 获取每个合同类型绑定的模板数量
- * @method void setTemplateNum(integer $TemplateNum) 设置每个合同类型绑定的模板数量
+ * @method string getUserFlowTypeId() 获取<p>合同类型id</p>
+ * @method void setUserFlowTypeId(string $UserFlowTypeId) 设置<p>合同类型id</p>
+ * @method string getName() 获取<p>合同类型名称</p>
+ * @method void setName(string $Name) 设置<p>合同类型名称</p>
+ * @method string getDescription() 获取<p>合同类型的具体描述</p>
+ * @method void setDescription(string $Description) 设置<p>合同类型的具体描述</p>
+ * @method integer getTemplateNum() 获取<p>每个合同类型绑定的模板数量</p>
+ * @method void setTemplateNum(integer $TemplateNum) 设置<p>每个合同类型绑定的模板数量</p>
+ * @method integer getStatus() 获取<p>自定义合同类型状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>自定义合同类型状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
  */
 class TemplateUserFlowType extends AbstractModel
 {
     /**
-     * @var string 合同类型id
+     * @var string <p>合同类型id</p>
      */
     public $UserFlowTypeId;
 
     /**
-     * @var string 合同类型名称
+     * @var string <p>合同类型名称</p>
      */
     public $Name;
 
     /**
-     * @var string 合同类型的具体描述
+     * @var string <p>合同类型的具体描述</p>
      */
     public $Description;
 
     /**
-     * @var integer 每个合同类型绑定的模板数量
+     * @var integer <p>每个合同类型绑定的模板数量</p>
      */
     public $TemplateNum;
 
     /**
-     * @param string $UserFlowTypeId 合同类型id
-     * @param string $Name 合同类型名称
-     * @param string $Description 合同类型的具体描述
-     * @param integer $TemplateNum 每个合同类型绑定的模板数量
+     * @var integer <p>自定义合同类型状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
+     */
+    public $Status;
+
+    /**
+     * @param string $UserFlowTypeId <p>合同类型id</p>
+     * @param string $Name <p>合同类型名称</p>
+     * @param string $Description <p>合同类型的具体描述</p>
+     * @param integer $TemplateNum <p>每个合同类型绑定的模板数量</p>
+     * @param integer $Status <p>自定义合同类型状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class TemplateUserFlowType extends AbstractModel
 
         if (array_key_exists("TemplateNum",$param) and $param["TemplateNum"] !== null) {
             $this->TemplateNum = $param["TemplateNum"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

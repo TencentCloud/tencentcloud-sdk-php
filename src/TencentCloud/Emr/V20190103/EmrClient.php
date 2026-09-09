@@ -55,6 +55,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeEMREventListResponse DescribeEMREventList(Models\DescribeEMREventListRequest $req) 查询EMR事件监控数据
  * @method Models\DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(Models\DescribeEmrApplicationStaticsRequest $req) yarn application 统计接口查询
  * @method Models\DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetrics(Models\DescribeEmrOverviewMetricsRequest $req) 查询监控概览页指标数据
+ * @method Models\DescribeExportConfsResponse DescribeExportConfs(Models\DescribeExportConfsRequest $req) 查询导出配置
  * @method Models\DescribeGlobalConfigResponse DescribeGlobalConfig(Models\DescribeGlobalConfigRequest $req) 查询YARN资源调度的全局配置
  * @method Models\DescribeGroupsSTDResponse DescribeGroupsSTD(Models\DescribeGroupsSTDRequest $req) 查询用户组
  * @method Models\DescribeHBaseTableOverviewResponse DescribeHBaseTableOverview(Models\DescribeHBaseTableOverviewRequest $req) 获取Hbase表级监控数据概览接口
@@ -118,6 +119,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
 - 接口调用成功，会创建Serverless HBase实例，创建实例请求成功会返回请求的 RequestID。
 - 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用DescribeInstancesList查看当前实例的StatusDesc状态。
  * @method Models\ModifySLInstanceBasicResponse ModifySLInstanceBasic(Models\ModifySLInstanceBasicRequest $req) serverless hbase修改实例名称
+ * @method Models\ModifyServiceParamsByExportConfsResponse ModifyServiceParamsByExportConfs(Models\ModifyServiceParamsByExportConfsRequest $req) 配置导入下发
  * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) 用户管理-修改用户组
  * @method Models\ModifyUserManagerPwdResponse ModifyUserManagerPwd(Models\ModifyUserManagerPwdRequest $req) 修改用户密码（用户管理）
  * @method Models\ModifyUsersOfGroupSTDResponse ModifyUsersOfGroupSTD(Models\ModifyUsersOfGroupSTDRequest $req) 变更用户组用户信息

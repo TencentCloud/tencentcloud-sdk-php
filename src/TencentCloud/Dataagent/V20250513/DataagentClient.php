@@ -34,7 +34,6 @@ use TencentCloud\Dataagent\V20250513\Models as Models;
  * @method Models\GetJobsByKnowledgeBaseIdResponse GetJobsByKnowledgeBaseId(Models\GetJobsByKnowledgeBaseIdRequest $req) 根据知识库id查询jobs 列表
  * @method Models\GetKnowledgeBaseFileListResponse GetKnowledgeBaseFileList(Models\GetKnowledgeBaseFileListRequest $req) 获取知识库文件信息列表
  * @method Models\GetKnowledgeBaseListResponse GetKnowledgeBaseList(Models\GetKnowledgeBaseListRequest $req) 获取知识库列表
- * @method Models\GetSessionDetailsResponse GetSessionDetails(Models\GetSessionDetailsRequest $req) 获取用户会话记录详情列表
  * @method Models\GetUploadJobDetailsResponse GetUploadJobDetails(Models\GetUploadJobDetailsRequest $req) 查询上传任务
  * @method Models\GetUserInstanceListResponse GetUserInstanceList(Models\GetUserInstanceListRequest $req) 获取实例信息列表
  * @method Models\ModifyChunkResponse ModifyChunk(Models\ModifyChunkRequest $req) 编辑修改分片
@@ -44,6 +43,7 @@ use TencentCloud\Dataagent\V20250513\Models as Models;
  * @method Models\QueryKnowledgeTaskResponse QueryKnowledgeTask(Models\QueryKnowledgeTaskRequest $req) 查询文件任务状态
  * @method Models\QueryModelsResponse QueryModels(Models\QueryModelsRequest $req) 查询聊天支持模型信息
  * @method Models\QueryUserAuthorityResponse QueryUserAuthority(Models\QueryUserAuthorityRequest $req) 查询对象权限
+ * @method Models\QueryUserSessionDetailResponse QueryUserSessionDetail(Models\QueryUserSessionDetailRequest $req) 查询用户会话详情
  * @method Models\StopChatAIResponse StopChatAI(Models\StopChatAIRequest $req) 中断DataAgent的回答输出
  * @method Models\UploadAndCommitFileResponse UploadAndCommitFile(Models\UploadAndCommitFileRequest $req) 上传提交文件
  */

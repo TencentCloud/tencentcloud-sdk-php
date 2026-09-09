@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthType(integer $AuthType) 设置<p>授权类型</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： API Key</li><li>2： CAM授权</li><li>3： OAuth2.0授权</li></ul>
  * @method integer getOAuthConsent() 获取<p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
  * @method void setOAuthConsent(integer $OAuthConsent) 设置<p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
+ * @method AgentPluginCredentialConfig getCredentialConfig() 获取<p>凭证配置</p>
+ * @method void setCredentialConfig(AgentPluginCredentialConfig $CredentialConfig) 设置<p>凭证配置</p>
  */
 class AgentPluginConfig extends AbstractModel
 {
@@ -66,12 +68,18 @@ class AgentPluginConfig extends AbstractModel
     public $OAuthConsent;
 
     /**
+     * @var AgentPluginCredentialConfig <p>凭证配置</p>
+     */
+    public $CredentialConfig;
+
+    /**
      * @param string $PluginId <p>插件id</p>
      * @param array $HeaderParameterList <p>插件 Header 参数</p>
      * @param array $QueryParameterList <p>插件 Query 参数</p>
      * @param boolean $EnableCamRoleAuth <p>是否使用CAM一键授权，仅 auth_type=2时生效</p>
      * @param integer $AuthType <p>授权类型</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： API Key</li><li>2： CAM授权</li><li>3： OAuth2.0授权</li></ul>
      * @param integer $OAuthConsent <p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
+     * @param AgentPluginCredentialConfig $CredentialConfig <p>凭证配置</p>
      */
     function __construct()
     {
@@ -118,6 +126,11 @@ class AgentPluginConfig extends AbstractModel
 
         if (array_key_exists("OAuthConsent",$param) and $param["OAuthConsent"] !== null) {
             $this->OAuthConsent = $param["OAuthConsent"];
+        }
+
+        if (array_key_exists("CredentialConfig",$param) and $param["CredentialConfig"] !== null) {
+            $this->CredentialConfig = new AgentPluginCredentialConfig();
+            $this->CredentialConfig->deserialize($param["CredentialConfig"]);
         }
     }
 }

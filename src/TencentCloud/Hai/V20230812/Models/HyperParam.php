@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述了服务的超参数配置
  *
- * @method HiCacheInfo getHiCache() 获取HiCache缓存
- * @method void setHiCache(HiCacheInfo $HiCache) 设置HiCache缓存
+ * @method HiCacheInfo getHiCache() 获取<p>HiCache缓存</p>
+ * @method void setHiCache(HiCacheInfo $HiCache) 设置<p>HiCache缓存</p>
  */
 class HyperParam extends AbstractModel
 {
     /**
-     * @var HiCacheInfo HiCache缓存
+     * @var HiCacheInfo <p>HiCache缓存</p>
      */
     public $HiCache;
 
     /**
-     * @param HiCacheInfo $HiCache HiCache缓存
+     * @param HiCacheInfo $HiCache <p>HiCache缓存</p>
      */
     function __construct()
     {

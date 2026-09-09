@@ -54,7 +54,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\CreateCLSIndexResponse CreateCLSIndex(Models\CreateCLSIndexRequest $req) 针对指定实时日志投递任务（task-id），在对应的腾讯云 CLS 日志主题中创建投递日志字段对应的键值索引。如果您在腾讯云 CLS 已经创建索引，本接口将采用合并的方式追加索引。
  * @method Models\CreateConfigGroupVersionResponse CreateConfigGroupVersion(Models\CreateConfigGroupVersionRequest $req) 在版本管理模式下，用于创建指定配置组的新版本。
  * @method Models\CreateContentIdentifierResponse CreateContentIdentifier(Models\CreateContentIdentifierRequest $req) 创建内容标识符，可以设置描述、标签等信息，同时需要绑定企业版套餐用于统计计费数据；一个内容标识符只能绑定一个计费套餐，一个计费套餐可以绑定多个内容标识符。该功能仅限白名单开放。
- * @method Models\CreateCustomizeErrorPageResponse CreateCustomizeErrorPage(Models\CreateCustomizeErrorPageRequest $req) 创建自定义错误页面。
+ * @method Models\CreateCustomizeErrorPageResponse CreateCustomizeErrorPage(Models\CreateCustomizeErrorPageRequest $req) 创建自定义响应页面。
  * @method Models\CreateDnsRecordResponse CreateDnsRecord(Models\CreateDnsRecordRequest $req) 在创建完站点后，并且站点为 NS 模式接入时，您可以通过本接口创建 DNS 记录。
  * @method Models\CreateEdgeKVNamespaceResponse CreateEdgeKVNamespace(Models\CreateEdgeKVNamespaceRequest $req) 本接口用于在指定站点下创建 KV 命名空间。
  * @method Models\CreateFunctionResponse CreateFunction(Models\CreateFunctionRequest $req) 创建并部署边缘函数至 EdgeOne 的边缘节点。
@@ -278,7 +278,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
 ](https://cloud.tencent.com/document/product/1552/103409) 。
  * @method Models\ModifyApplicationProxyStatusResponse ModifyApplicationProxyStatus(Models\ModifyApplicationProxyStatusRequest $req) 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理实例状态](https://cloud.tencent.com/document/product/1552/103408) 。
  * @method Models\ModifyContentIdentifierResponse ModifyContentIdentifier(Models\ModifyContentIdentifierRequest $req) 修改内容标识符，仅支持修改描述。该功能仅白名单开放。
- * @method Models\ModifyCustomErrorPageResponse ModifyCustomErrorPage(Models\ModifyCustomErrorPageRequest $req) 修改自定义错误页面。
+ * @method Models\ModifyCustomErrorPageResponse ModifyCustomErrorPage(Models\ModifyCustomErrorPageRequest $req) 修改自定义响应页面。
  * @method Models\ModifyDDoSProtectionResponse ModifyDDoSProtection(Models\ModifyDDoSProtectionRequest $req) 修改站点的独立 DDoS 防护。
  * @method Models\ModifyDnsRecordsResponse ModifyDnsRecords(Models\ModifyDnsRecordsRequest $req) 您可以通过本接口批量修改 DNS 记录。
  * @method Models\ModifyDnsRecordsStatusResponse ModifyDnsRecordsStatus(Models\ModifyDnsRecordsStatusRequest $req) 您可以通过本接口批量修改 DNS 记录的状态，批量对记录进行开启和停用。

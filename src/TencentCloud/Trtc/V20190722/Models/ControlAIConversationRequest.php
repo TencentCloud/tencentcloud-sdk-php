@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ControlAIConversation请求参数结构体
  *
- * @method string getTaskId() 获取任务唯一标识
- * @method void setTaskId(string $TaskId) 设置任务唯一标识
- * @method string getCommand() 获取控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
- * @method void setCommand(string $Command) 设置控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
- * @method ServerPushText getServerPushText() 获取服务端发送播报文本命令，当Command为ServerPushText时必填
- * @method void setServerPushText(ServerPushText $ServerPushText) 设置服务端发送播报文本命令，当Command为ServerPushText时必填
- * @method InvokeLLM getInvokeLLM() 获取服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
- * @method void setInvokeLLM(InvokeLLM $InvokeLLM) 设置服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+ * @method string getTaskId() 获取<p>任务唯一标识</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务唯一标识</p>
+ * @method string getCommand() 获取<p>控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话。- TransparentData，透传信息给客户端。</p>
+ * @method void setCommand(string $Command) 设置<p>控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话。- TransparentData，透传信息给客户端。</p>
+ * @method ServerPushText getServerPushText() 获取<p>服务端发送播报文本命令，当Command为ServerPushText时必填</p>
+ * @method void setServerPushText(ServerPushText $ServerPushText) 设置<p>服务端发送播报文本命令，当Command为ServerPushText时必填</p>
+ * @method InvokeLLM getInvokeLLM() 获取<p>服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM=&quot;1&quot;</p>
+ * @method void setInvokeLLM(InvokeLLM $InvokeLLM) 设置<p>服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM=&quot;1&quot;</p>
+ * @method TransparentData getTransparentData() 获取<p>ai对话需要透传给客户端的信息</p>
+ * @method void setTransparentData(TransparentData $TransparentData) 设置<p>ai对话需要透传给客户端的信息</p>
  */
 class ControlAIConversationRequest extends AbstractModel
 {
     /**
-     * @var string 任务唯一标识
+     * @var string <p>任务唯一标识</p>
      */
     public $TaskId;
 
     /**
-     * @var string 控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
+     * @var string <p>控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话。- TransparentData，透传信息给客户端。</p>
      */
     public $Command;
 
     /**
-     * @var ServerPushText 服务端发送播报文本命令，当Command为ServerPushText时必填
+     * @var ServerPushText <p>服务端发送播报文本命令，当Command为ServerPushText时必填</p>
      */
     public $ServerPushText;
 
     /**
-     * @var InvokeLLM 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+     * @var InvokeLLM <p>服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM=&quot;1&quot;</p>
      */
     public $InvokeLLM;
 
     /**
-     * @param string $TaskId 任务唯一标识
-     * @param string $Command 控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
-     * @param ServerPushText $ServerPushText 服务端发送播报文本命令，当Command为ServerPushText时必填
-     * @param InvokeLLM $InvokeLLM 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+     * @var TransparentData <p>ai对话需要透传给客户端的信息</p>
+     */
+    public $TransparentData;
+
+    /**
+     * @param string $TaskId <p>任务唯一标识</p>
+     * @param string $Command <p>控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话。- TransparentData，透传信息给客户端。</p>
+     * @param ServerPushText $ServerPushText <p>服务端发送播报文本命令，当Command为ServerPushText时必填</p>
+     * @param InvokeLLM $InvokeLLM <p>服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM=&quot;1&quot;</p>
+     * @param TransparentData $TransparentData <p>ai对话需要透传给客户端的信息</p>
      */
     function __construct()
     {
@@ -86,6 +94,11 @@ class ControlAIConversationRequest extends AbstractModel
         if (array_key_exists("InvokeLLM",$param) and $param["InvokeLLM"] !== null) {
             $this->InvokeLLM = new InvokeLLM();
             $this->InvokeLLM->deserialize($param["InvokeLLM"]);
+        }
+
+        if (array_key_exists("TransparentData",$param) and $param["TransparentData"] !== null) {
+            $this->TransparentData = new TransparentData();
+            $this->TransparentData->deserialize($param["TransparentData"]);
         }
     }
 }

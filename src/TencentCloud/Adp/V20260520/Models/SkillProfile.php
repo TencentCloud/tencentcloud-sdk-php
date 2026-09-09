@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SkillProfile Skill 基础展示信息。
  *
- * @method string getCreateTime() 获取创建时间（Unix秒）
- * @method void setCreateTime(string $CreateTime) 设置创建时间（Unix秒）
- * @method string getCreator() 获取创建者
- * @method void setCreator(string $Creator) 设置创建者
- * @method string getDescription() 获取Skill 描述
- * @method void setDescription(string $Description) 设置Skill 描述
- * @method string getDisplayDescription() 获取Skill 展示描述
- * @method void setDisplayDescription(string $DisplayDescription) 设置Skill 展示描述
- * @method string getDisplayName() 获取Skill 展示名称
- * @method void setDisplayName(string $DisplayName) 设置Skill 展示名称
- * @method string getIconUrl() 获取Skill 图标
- * @method void setIconUrl(string $IconUrl) 设置Skill 图标
- * @method string getName() 获取Skill 名称
- * @method void setName(string $Name) 设置Skill 名称
- * @method string getUpdateTime() 获取更新时间（Unix秒）
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间（Unix秒）
+ * @method string getCreateTime() 获取<p>创建时间（Unix秒）</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间（Unix秒）</p>
+ * @method string getCreator() 获取<p>创建者</p>
+ * @method void setCreator(string $Creator) 设置<p>创建者</p>
+ * @method string getDescription() 获取<p>Skill 描述</p>
+ * @method void setDescription(string $Description) 设置<p>Skill 描述</p>
+ * @method string getDisplayDescription() 获取<p>Skill 展示描述</p>
+ * @method void setDisplayDescription(string $DisplayDescription) 设置<p>Skill 展示描述</p>
+ * @method string getDisplayName() 获取<p>Skill 展示名称</p>
+ * @method void setDisplayName(string $DisplayName) 设置<p>Skill 展示名称</p>
+ * @method string getIconUrl() 获取<p>Skill 图标</p>
+ * @method void setIconUrl(string $IconUrl) 设置<p>Skill 图标</p>
+ * @method string getName() 获取<p>Skill 名称</p>
+ * @method void setName(string $Name) 设置<p>Skill 名称</p>
+ * @method string getUpdateTime() 获取<p>更新时间（Unix秒）</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间（Unix秒）</p>
+ * @method string getSpaceId() 获取<p>空间</p>
+ * @method void setSpaceId(string $SpaceId) 设置<p>空间</p>
  */
 class SkillProfile extends AbstractModel
 {
     /**
-     * @var string 创建时间（Unix秒）
+     * @var string <p>创建时间（Unix秒）</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 创建者
+     * @var string <p>创建者</p>
      */
     public $Creator;
 
     /**
-     * @var string Skill 描述
+     * @var string <p>Skill 描述</p>
      */
     public $Description;
 
     /**
-     * @var string Skill 展示描述
+     * @var string <p>Skill 展示描述</p>
      */
     public $DisplayDescription;
 
     /**
-     * @var string Skill 展示名称
+     * @var string <p>Skill 展示名称</p>
      */
     public $DisplayName;
 
     /**
-     * @var string Skill 图标
+     * @var string <p>Skill 图标</p>
      */
     public $IconUrl;
 
     /**
-     * @var string Skill 名称
+     * @var string <p>Skill 名称</p>
      */
     public $Name;
 
     /**
-     * @var string 更新时间（Unix秒）
+     * @var string <p>更新时间（Unix秒）</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $CreateTime 创建时间（Unix秒）
-     * @param string $Creator 创建者
-     * @param string $Description Skill 描述
-     * @param string $DisplayDescription Skill 展示描述
-     * @param string $DisplayName Skill 展示名称
-     * @param string $IconUrl Skill 图标
-     * @param string $Name Skill 名称
-     * @param string $UpdateTime 更新时间（Unix秒）
+     * @var string <p>空间</p>
+     */
+    public $SpaceId;
+
+    /**
+     * @param string $CreateTime <p>创建时间（Unix秒）</p>
+     * @param string $Creator <p>创建者</p>
+     * @param string $Description <p>Skill 描述</p>
+     * @param string $DisplayDescription <p>Skill 展示描述</p>
+     * @param string $DisplayName <p>Skill 展示名称</p>
+     * @param string $IconUrl <p>Skill 图标</p>
+     * @param string $Name <p>Skill 名称</p>
+     * @param string $UpdateTime <p>更新时间（Unix秒）</p>
+     * @param string $SpaceId <p>空间</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class SkillProfile extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
         }
     }
 }

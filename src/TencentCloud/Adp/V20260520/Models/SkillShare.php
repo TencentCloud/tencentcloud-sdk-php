@@ -20,86 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SkillShare Skill 企业共享信息。
  *
- * @method string getApprovalId() 获取审批ID
- * @method void setApprovalId(string $ApprovalId) 设置审批ID
- * @method string getShareSkillId() 获取共享后关联的新 skill_id
- * @method void setShareSkillId(string $ShareSkillId) 设置共享后关联的新 skill_id
- * @method string getShareVersion() 获取共享版本，如 1.0.0
- * @method void setShareVersion(string $ShareVersion) 设置共享版本，如 1.0.0
- * @method string getShareVersionId() 获取共享版本ID
- * @method void setShareVersionId(string $ShareVersionId) 设置共享版本ID
- * @method string getSkillId() 获取原 skill_id
- * @method void setSkillId(string $SkillId) 设置原 skill_id
- * @method integer getStatus() 获取共享状态
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未共享 |
-| 1 | 已共享 |
-| 2 | 审批中 |
- * @method void setStatus(integer $Status) 设置共享状态
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未共享 |
-| 1 | 已共享 |
-| 2 | 审批中 |
+ * @method string getApprovalId() 获取<p>审批ID</p>
+ * @method void setApprovalId(string $ApprovalId) 设置<p>审批ID</p>
+ * @method string getShareSkillId() 获取<p>共享后关联的新 skill_id</p>
+ * @method void setShareSkillId(string $ShareSkillId) 设置<p>共享后关联的新 skill_id</p>
+ * @method string getShareVersion() 获取<p>共享版本，如 1.0.0</p>
+ * @method void setShareVersion(string $ShareVersion) 设置<p>共享版本，如 1.0.0</p>
+ * @method string getShareVersionId() 获取<p>共享版本ID</p>
+ * @method void setShareVersionId(string $ShareVersionId) 设置<p>共享版本ID</p>
+ * @method string getSkillId() 获取<p>原 skill_id</p>
+ * @method void setSkillId(string $SkillId) 设置<p>原 skill_id</p>
+ * @method integer getStatus() 获取<p>共享状态</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 未共享 |<br>| 1 | 已共享 |<br>| 2 | 审批中 |</p>
+ * @method void setStatus(integer $Status) 设置<p>共享状态</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 未共享 |<br>| 1 | 已共享 |<br>| 2 | 审批中 |</p>
+ * @method SkillCorpShareConfig getCorpShareConfig() 获取<p>企业共享范围</p>
+ * @method void setCorpShareConfig(SkillCorpShareConfig $CorpShareConfig) 设置<p>企业共享范围</p>
  */
 class SkillShare extends AbstractModel
 {
     /**
-     * @var string 审批ID
+     * @var string <p>审批ID</p>
      */
     public $ApprovalId;
 
     /**
-     * @var string 共享后关联的新 skill_id
+     * @var string <p>共享后关联的新 skill_id</p>
      */
     public $ShareSkillId;
 
     /**
-     * @var string 共享版本，如 1.0.0
+     * @var string <p>共享版本，如 1.0.0</p>
      */
     public $ShareVersion;
 
     /**
-     * @var string 共享版本ID
+     * @var string <p>共享版本ID</p>
      */
     public $ShareVersionId;
 
     /**
-     * @var string 原 skill_id
+     * @var string <p>原 skill_id</p>
      */
     public $SkillId;
 
     /**
-     * @var integer 共享状态
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未共享 |
-| 1 | 已共享 |
-| 2 | 审批中 |
+     * @var integer <p>共享状态</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 未共享 |<br>| 1 | 已共享 |<br>| 2 | 审批中 |</p>
      */
     public $Status;
 
     /**
-     * @param string $ApprovalId 审批ID
-     * @param string $ShareSkillId 共享后关联的新 skill_id
-     * @param string $ShareVersion 共享版本，如 1.0.0
-     * @param string $ShareVersionId 共享版本ID
-     * @param string $SkillId 原 skill_id
-     * @param integer $Status 共享状态
+     * @var SkillCorpShareConfig <p>企业共享范围</p>
+     */
+    public $CorpShareConfig;
 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未共享 |
-| 1 | 已共享 |
-| 2 | 审批中 |
+    /**
+     * @param string $ApprovalId <p>审批ID</p>
+     * @param string $ShareSkillId <p>共享后关联的新 skill_id</p>
+     * @param string $ShareVersion <p>共享版本，如 1.0.0</p>
+     * @param string $ShareVersionId <p>共享版本ID</p>
+     * @param string $SkillId <p>原 skill_id</p>
+     * @param integer $Status <p>共享状态</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 未共享 |<br>| 1 | 已共享 |<br>| 2 | 审批中 |</p>
+     * @param SkillCorpShareConfig $CorpShareConfig <p>企业共享范围</p>
      */
     function __construct()
     {
@@ -136,6 +116,11 @@ class SkillShare extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CorpShareConfig",$param) and $param["CorpShareConfig"] !== null) {
+            $this->CorpShareConfig = new SkillCorpShareConfig();
+            $this->CorpShareConfig->deserialize($param["CorpShareConfig"]);
         }
     }
 }

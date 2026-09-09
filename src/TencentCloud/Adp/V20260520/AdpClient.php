@@ -23,11 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Adp\V20260520\Models as Models;
 
 /**
- * @method Models\CopyAgentFromAppResponse CopyAgentFromApp(Models\CopyAgentFromAppRequest $req) 创建Agent
+ * @method Models\CopyAgentFromAppResponse CopyAgentFromApp(Models\CopyAgentFromAppRequest $req) 复制 Agent（目前仅支持claw模式））
  * @method Models\CopyAppResponse CopyApp(Models\CopyAppRequest $req) 复制应用
  * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 创建Agent
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建应用
  * @method Models\CreateAppTriggerResponse CreateAppTrigger(Models\CreateAppTriggerRequest $req) CreateAppTrigger
+ * @method Models\CreateChannelResponse CreateChannel(Models\CreateChannelRequest $req) 创建渠道（通过scene区分B端应用发布渠道与C端IM渠道）
  * @method Models\CreateConversationResponse CreateConversation(Models\CreateConversationRequest $req) 新建会话
  * @method Models\CreateMsgRecordCategoryResponse CreateMsgRecordCategory(Models\CreateMsgRecordCategoryRequest $req) 创建一条消息记录分类，支持指定分类名称与父分类（ParentId 为 0 时表示一级分类）
  * @method Models\CreatePluginResponse CreatePlugin(Models\CreatePluginRequest $req) 获取插件详情
@@ -41,6 +42,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DeleteAgentResponse DeleteAgent(Models\DeleteAgentRequest $req) 删除Agent
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) 删除应用
  * @method Models\DeleteAppTriggerResponse DeleteAppTrigger(Models\DeleteAppTriggerRequest $req) DeleteAppTrigger
+ * @method Models\DeleteChannelResponse DeleteChannel(Models\DeleteChannelRequest $req) 删除渠道（通过scene区分场景）
  * @method Models\DeleteConversationResponse DeleteConversation(Models\DeleteConversationRequest $req) 删除会话
  * @method Models\DeleteMsgRecordCategoryResponse DeleteMsgRecordCategory(Models\DeleteMsgRecordCategoryRequest $req) 删除指定的消息记录分类
  * @method Models\DeletePluginResponse DeletePlugin(Models\DeletePluginRequest $req) 修改插件
@@ -60,6 +62,8 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeAppTriggerSummaryListResponse DescribeAppTriggerSummaryList(Models\DescribeAppTriggerSummaryListRequest $req) DescribeAppTriggerSummaryList
  * @method Models\DescribeAuditLogListResponse DescribeAuditLogList(Models\DescribeAuditLogListRequest $req) 查看操作日志列表
  * @method Models\DescribeAuditLogMetaResponse DescribeAuditLogMeta(Models\DescribeAuditLogMetaRequest $req) 获取审计日志元信息
+ * @method Models\DescribeChannelResponse DescribeChannel(Models\DescribeChannelRequest $req) 获取渠道详情（scene区分场景）
+ * @method Models\DescribeChannelListResponse DescribeChannelList(Models\DescribeChannelListRequest $req) 获取渠道列表（scene区分场景）
  * @method Models\DescribeConcurrencyLimitDetailListResponse DescribeConcurrencyLimitDetailList(Models\DescribeConcurrencyLimitDetailListRequest $req) 查询并发超限明细，包含QPM/TPM超限与专属并发超限记录，返回超限发生时间、空间、应用、模型及请求内容
  * @method Models\DescribeConsumptionDetailListResponse DescribeConsumptionDetailList(Models\DescribeConsumptionDetailListRequest $req) 查询资源消耗明细，包含计费相关字段（消耗类型、消耗目标、消耗场景、套餐包及PU消耗等）
  * @method Models\DescribeConversationResponse DescribeConversation(Models\DescribeConversationRequest $req) 查看会话信息
@@ -89,6 +93,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\ModifyAgentResponse ModifyAgent(Models\ModifyAgentRequest $req) 修改Agent配置信息
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用
  * @method Models\ModifyAppTriggerResponse ModifyAppTrigger(Models\ModifyAppTriggerRequest $req) ModifyAppTrigger
+ * @method Models\ModifyChannelResponse ModifyChannel(Models\ModifyChannelRequest $req) 修改渠道（支持修改备注与企微机器人渠道回调机器人ID）
  * @method Models\ModifyConversationResponse ModifyConversation(Models\ModifyConversationRequest $req) 修改会话信息
  * @method Models\ModifyMsgRecordCategoryResponse ModifyMsgRecordCategory(Models\ModifyMsgRecordCategoryRequest $req) 修改指定消息记录分类的名称
  * @method Models\ModifyPluginResponse ModifyPlugin(Models\ModifyPluginRequest $req) 修改插件

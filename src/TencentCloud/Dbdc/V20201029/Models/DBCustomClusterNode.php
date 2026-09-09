@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>节点绑定的安全组</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLatestRunningTaskType() 获取<p>节点最新进行中的任务类型</p><p>枚举值：</p><ul><li>add-nodes-to-cluster： 添加节点到集群</li><li>remove-nodes-from-cluster： 从集群中移除节点</li><li>modify-nodes-attributes： 修改节点属性</li><li>modify-nodes-drg： 修改节点置放群组</li></ul>
+ * @method void setLatestRunningTaskType(string $LatestRunningTaskType) 设置<p>节点最新进行中的任务类型</p><p>枚举值：</p><ul><li>add-nodes-to-cluster： 添加节点到集群</li><li>remove-nodes-from-cluster： 从集群中移除节点</li><li>modify-nodes-attributes： 修改节点属性</li><li>modify-nodes-drg： 修改节点置放群组</li></ul>
  */
 class DBCustomClusterNode extends AbstractModel
 {
@@ -103,6 +105,11 @@ class DBCustomClusterNode extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var string <p>节点最新进行中的任务类型</p><p>枚举值：</p><ul><li>add-nodes-to-cluster： 添加节点到集群</li><li>remove-nodes-from-cluster： 从集群中移除节点</li><li>modify-nodes-attributes： 修改节点属性</li><li>modify-nodes-drg： 修改节点置放群组</li></ul>
+     */
+    public $LatestRunningTaskType;
+
+    /**
      * @param string $NodeId <p>节点ID</p>
      * @param string $NodeName <p>节点名称</p>
      * @param string $LanIP <p>节点内网IP地址</p>
@@ -116,6 +123,7 @@ class DBCustomClusterNode extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroupIds <p>节点绑定的安全组</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LatestRunningTaskType <p>节点最新进行中的任务类型</p><p>枚举值：</p><ul><li>add-nodes-to-cluster： 添加节点到集群</li><li>remove-nodes-from-cluster： 从集群中移除节点</li><li>modify-nodes-attributes： 修改节点属性</li><li>modify-nodes-drg： 修改节点置放群组</li></ul>
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class DBCustomClusterNode extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("LatestRunningTaskType",$param) and $param["LatestRunningTaskType"] !== null) {
+            $this->LatestRunningTaskType = $param["LatestRunningTaskType"];
         }
     }
 }

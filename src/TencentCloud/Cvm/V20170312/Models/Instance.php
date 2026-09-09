@@ -120,6 +120,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperationErrorMsg(string $LatestOperationErrorMsg) 设置<p>实例的最新操作错误信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableJumboFrame() 获取<p>实例是否开启巨型帧</p>
+ * @method void setEnableJumboFrame(boolean $EnableJumboFrame) 设置<p>实例是否开启巨型帧</p>
  * @method Metadata getMetadata() 获取<p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
  * @method void setMetadata(Metadata $Metadata) 设置<p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
  * @method array getPublicIPv6Addresses() 获取<p>实例绑定的公网IPv6地址。</p>
@@ -351,6 +353,11 @@ class Instance extends AbstractModel
     public $LatestOperationErrorMsg;
 
     /**
+     * @var boolean <p>实例是否开启巨型帧</p>
+     */
+    public $EnableJumboFrame;
+
+    /**
      * @var Metadata <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
      */
     public $Metadata;
@@ -421,6 +428,7 @@ class Instance extends AbstractModel
      * @param integer $DefaultLoginPort <p>默认登录端口。</p>
      * @param string $LatestOperationErrorMsg <p>实例的最新操作错误信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableJumboFrame <p>实例是否开启巨型帧</p>
      * @param Metadata $Metadata <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
      * @param array $PublicIPv6Addresses <p>实例绑定的公网IPv6地址。</p>
      * @param CpuTopology $CpuTopology <p>描述了实例CPU拓扑结构的相关信息。</p>
@@ -621,6 +629,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("LatestOperationErrorMsg",$param) and $param["LatestOperationErrorMsg"] !== null) {
             $this->LatestOperationErrorMsg = $param["LatestOperationErrorMsg"];
+        }
+
+        if (array_key_exists("EnableJumboFrame",$param) and $param["EnableJumboFrame"] !== null) {
+            $this->EnableJumboFrame = $param["EnableJumboFrame"];
         }
 
         if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {

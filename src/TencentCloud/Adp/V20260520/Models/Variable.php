@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultValue(string $DefaultValue) 设置<p>默认值</p>
  * @method string getDescription() 获取<p>变量描述</p>
  * @method void setDescription(string $Description) 设置<p>变量描述</p>
- * @method integer getModuleType() 获取<p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
- * @method void setModuleType(integer $ModuleType) 设置<p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
+ * @method integer getModuleType() 获取<p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
+ * @method void setModuleType(integer $ModuleType) 设置<p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
  * @method string getName() 获取<p>变量名称</p>
  * @method void setName(string $Name) 设置<p>变量名称</p>
  * @method integer getType() 获取<p>变量类型</p><p>枚举值：</p><ul><li>0： 字符串</li><li>1： 整数</li><li>2： 浮点数</li><li>3： 布尔值</li><li>4： 对象</li><li>5： 字符串数组</li><li>6： 整数数组</li><li>7： 浮点数数组</li><li>8： 布尔值数组</li><li>9： 对象数组</li><li>10： 文件</li><li>11： 文档</li><li>12： 图片</li><li>13： 音频</li><li>14： 视频</li><li>15： 文件数组</li><li>16： 文档数组</li><li>17： 图片数组</li><li>18： 音频数组</li><li>19： 视频数组</li><li>20： 数组的数组</li><li>21： 密钥</li></ul>
@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableEndpoints(boolean $EnableEndpoints) 设置<p>是否启用网络策略(仅环境变量生效)</p>
  * @method array getEndpointList() 获取<p>网络策略列表(支持: 精确域名、*.通配子域名、可带协议/端口/路径前缀)</p>
  * @method void setEndpointList(array $EndpointList) 设置<p>网络策略列表(支持: 精确域名、*.通配子域名、可带协议/端口/路径前缀)</p>
+ * @method boolean getIsBuiltin() 获取<p>是否内置变量</p>
+ * @method void setIsBuiltin(boolean $IsBuiltin) 设置<p>是否内置变量</p>
+ * @method boolean getEnableSandbox() 获取<p>是否可注入到沙箱环境</p>
+ * @method void setEnableSandbox(boolean $EnableSandbox) 设置<p>是否可注入到沙箱环境</p>
  */
 class Variable extends AbstractModel
 {
@@ -57,7 +61,7 @@ class Variable extends AbstractModel
     public $Description;
 
     /**
-     * @var integer <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
+     * @var integer <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
      */
     public $ModuleType;
 
@@ -87,15 +91,27 @@ class Variable extends AbstractModel
     public $EndpointList;
 
     /**
+     * @var boolean <p>是否内置变量</p>
+     */
+    public $IsBuiltin;
+
+    /**
+     * @var boolean <p>是否可注入到沙箱环境</p>
+     */
+    public $EnableSandbox;
+
+    /**
      * @param string $DefaultFileName <p>默认文件名称</p>
      * @param string $DefaultValue <p>默认值</p>
      * @param string $Description <p>变量描述</p>
-     * @param integer $ModuleType <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
+     * @param integer $ModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
      * @param string $Name <p>变量名称</p>
      * @param integer $Type <p>变量类型</p><p>枚举值：</p><ul><li>0： 字符串</li><li>1： 整数</li><li>2： 浮点数</li><li>3： 布尔值</li><li>4： 对象</li><li>5： 字符串数组</li><li>6： 整数数组</li><li>7： 浮点数数组</li><li>8： 布尔值数组</li><li>9： 对象数组</li><li>10： 文件</li><li>11： 文档</li><li>12： 图片</li><li>13： 音频</li><li>14： 视频</li><li>15： 文件数组</li><li>16： 文档数组</li><li>17： 图片数组</li><li>18： 音频数组</li><li>19： 视频数组</li><li>20： 数组的数组</li><li>21： 密钥</li></ul>
      * @param string $VariableId <p>变量ID</p>
      * @param boolean $EnableEndpoints <p>是否启用网络策略(仅环境变量生效)</p>
      * @param array $EndpointList <p>网络策略列表(支持: 精确域名、*.通配子域名、可带协议/端口/路径前缀)</p>
+     * @param boolean $IsBuiltin <p>是否内置变量</p>
+     * @param boolean $EnableSandbox <p>是否可注入到沙箱环境</p>
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class Variable extends AbstractModel
 
         if (array_key_exists("EndpointList",$param) and $param["EndpointList"] !== null) {
             $this->EndpointList = $param["EndpointList"];
+        }
+
+        if (array_key_exists("IsBuiltin",$param) and $param["IsBuiltin"] !== null) {
+            $this->IsBuiltin = $param["IsBuiltin"];
+        }
+
+        if (array_key_exists("EnableSandbox",$param) and $param["EnableSandbox"] !== null) {
+            $this->EnableSandbox = $param["EnableSandbox"];
         }
     }
 }

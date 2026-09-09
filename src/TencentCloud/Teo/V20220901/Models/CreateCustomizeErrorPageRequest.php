@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCustomizeErrorPage请求参数结构体
  *
- * @method string getZoneId() 获取站点 ID。
- * @method void setZoneId(string $ZoneId) 设置站点 ID。
- * @method string getName() 获取自定义错误页名称，名称为 2-30 个字符。
- * @method void setName(string $Name) 设置自定义错误页名称，名称为 2-30 个字符。
- * @method string getContentType() 获取自定义错误页面类型，取值有：<li>text/html； </li><li>application/json；</li><li>text/plain；</li><li>text/xml。</li>
- * @method void setContentType(string $ContentType) 设置自定义错误页面类型，取值有：<li>text/html； </li><li>application/json；</li><li>text/plain；</li><li>text/xml。</li>
- * @method string getDescription() 获取自定义错误页面描述，描述不超过 60 个字符。
- * @method void setDescription(string $Description) 设置自定义错误页面描述，描述不超过 60 个字符。
- * @method string getContent() 获取自定义错误页面内容，内容不超过 2KB。
- * @method void setContent(string $Content) 设置自定义错误页面内容，内容不超过 2KB。
+ * @method string getZoneId() 获取<p>站点 ID。</p>
+ * @method void setZoneId(string $ZoneId) 设置<p>站点 ID。</p>
+ * @method string getName() 获取<p>自定义响应页面名称，名称为 2-30 个字符。</p>
+ * @method void setName(string $Name) 设置<p>自定义响应页面名称，名称为 2-30 个字符。</p>
+ * @method string getContentType() 获取<p>自定义响应页面类型，取值有：</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
+ * @method void setContentType(string $ContentType) 设置<p>自定义响应页面类型，取值有：</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
+ * @method string getDescription() 获取<p>自定义响应页面描述，描述不超过 60 个字符。</p>
+ * @method void setDescription(string $Description) 设置<p>自定义响应页面描述，描述不超过 60 个字符。</p>
+ * @method string getContent() 获取<p>自定义响应页面内容，内容不超过 16KB。</p>
+ * @method void setContent(string $Content) 设置<p>自定义响应页面内容，内容不超过 16KB。</p>
  */
 class CreateCustomizeErrorPageRequest extends AbstractModel
 {
     /**
-     * @var string 站点 ID。
+     * @var string <p>站点 ID。</p>
      */
     public $ZoneId;
 
     /**
-     * @var string 自定义错误页名称，名称为 2-30 个字符。
+     * @var string <p>自定义响应页面名称，名称为 2-30 个字符。</p>
      */
     public $Name;
 
     /**
-     * @var string 自定义错误页面类型，取值有：<li>text/html； </li><li>application/json；</li><li>text/plain；</li><li>text/xml。</li>
+     * @var string <p>自定义响应页面类型，取值有：</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
      */
     public $ContentType;
 
     /**
-     * @var string 自定义错误页面描述，描述不超过 60 个字符。
+     * @var string <p>自定义响应页面描述，描述不超过 60 个字符。</p>
      */
     public $Description;
 
     /**
-     * @var string 自定义错误页面内容，内容不超过 2KB。
+     * @var string <p>自定义响应页面内容，内容不超过 16KB。</p>
      */
     public $Content;
 
     /**
-     * @param string $ZoneId 站点 ID。
-     * @param string $Name 自定义错误页名称，名称为 2-30 个字符。
-     * @param string $ContentType 自定义错误页面类型，取值有：<li>text/html； </li><li>application/json；</li><li>text/plain；</li><li>text/xml。</li>
-     * @param string $Description 自定义错误页面描述，描述不超过 60 个字符。
-     * @param string $Content 自定义错误页面内容，内容不超过 2KB。
+     * @param string $ZoneId <p>站点 ID。</p>
+     * @param string $Name <p>自定义响应页面名称，名称为 2-30 个字符。</p>
+     * @param string $ContentType <p>自定义响应页面类型，取值有：</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
+     * @param string $Description <p>自定义响应页面描述，描述不超过 60 个字符。</p>
+     * @param string $Content <p>自定义响应页面内容，内容不超过 16KB。</p>
      */
     function __construct()
     {

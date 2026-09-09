@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCustomizeErrorPage返回参数结构体
  *
- * @method string getPageId() 获取页面 ID。
- * @method void setPageId(string $PageId) 设置页面 ID。
+ * @method string getPageId() 获取<p>自定义响应页面 ID。</p>
+ * @method void setPageId(string $PageId) 设置<p>自定义响应页面 ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCustomizeErrorPageResponse extends AbstractModel
 {
     /**
-     * @var string 页面 ID。
+     * @var string <p>自定义响应页面 ID。</p>
      */
     public $PageId;
 
@@ -38,7 +38,7 @@ class CreateCustomizeErrorPageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $PageId 页面 ID。
+     * @param string $PageId <p>自定义响应页面 ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -103,6 +103,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 请使用 [日志分析SearchLog接口](https://cloud.tencent.com/document/product/1132/118363)
  * @method Models\DescribeNDRAssetIdentificationCursorListResponse DescribeNDRAssetIdentificationCursorList(Models\DescribeNDRAssetIdentificationCursorListRequest $req) DescribeNDRAssetIdentificationCursorList - 游标获取NDR资产识别结果列表
  * @method Models\DescribeNDRAssetIdentificationListResponse DescribeNDRAssetIdentificationList(Models\DescribeNDRAssetIdentificationListRequest $req) DescribeNDRAssetIdentificationList - 获取NDR资产识别结果列表
+ * @method Models\DescribeNDRDataLeakOutAlertListResponse DescribeNDRDataLeakOutAlertList(Models\DescribeNDRDataLeakOutAlertListRequest $req) DescribeNDRDataLeakOutAlertList -- 查询NDR数据泄露出站告警列表
  * @method Models\DescribeNatAcRuleResponse DescribeNatAcRule(Models\DescribeNatAcRuleRequest $req) 查询NAT访问控制列表
  * @method Models\DescribeNatCcnFwSwitchResponse DescribeNatCcnFwSwitch(Models\DescribeNatCcnFwSwitchRequest $req) 查询NAT CCN防火墙开关配置
  * @method Models\DescribeNatFwClusterRegionStatusResponse DescribeNatFwClusterRegionStatus(Models\DescribeNatFwClusterRegionStatusRequest $req) 查询指定NAT所在地域是否有NAT防火墙引流集群

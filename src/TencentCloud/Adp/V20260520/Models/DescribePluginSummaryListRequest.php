@@ -20,32 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePluginSummaryList请求参数结构体
  *
- * @method string getSpaceId() 获取空间ID，查询空间内的插件列表时使用
- * @method void setSpaceId(string $SpaceId) 设置空间ID，查询空间内的插件列表时使用
- * @method array getFilterList() 获取过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
- * @method void setFilterList(array $FilterList) 设置过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
+ * @method string getSpaceId() 获取<p>空间ID，查询空间内的插件列表时使用</p>
+ * @method void setSpaceId(string $SpaceId) 设置<p>空间ID，查询空间内的插件列表时使用</p>
+ * @method array getFilterList() 获取<p>过滤条件列表，支持 PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType、AuthType、IsShared、IsCreatedByMe</p>
+ * @method void setFilterList(array $FilterList) 设置<p>过滤条件列表，支持 PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType、AuthType、IsShared、IsCreatedByMe</p>
  * @method boolean getIsFavoriteOnly() 获取<p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
  * @method void setIsFavoriteOnly(boolean $IsFavoriteOnly) 设置<p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
  * @method integer getModule() 获取<p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
  * @method void setModule(integer $Module) 设置<p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
- * @method integer getPageNumber() 获取页码 从0开始
- * @method void setPageNumber(integer $PageNumber) 设置页码 从0开始
- * @method integer getPageSize() 获取每页大小
- * @method void setPageSize(integer $PageSize) 设置每页大小
- * @method string getQuery() 获取查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
- * @method void setQuery(string $Query) 设置查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
+ * @method integer getPageNumber() 获取<p>页码 从0开始</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码 从0开始</p>
+ * @method integer getPageSize() 获取<p>每页大小</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页大小</p>
+ * @method string getQuery() 获取<p>查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述</p>
+ * @method void setQuery(string $Query) 设置<p>查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述</p>
  * @method integer getSortType() 获取<p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
  * @method void setSortType(integer $SortType) 设置<p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
+ * @method integer getPluginSpaceRelation() 获取<p>筛选当前空间/企业共享插件</p><p>取值范围：[0, 2]</p>
+ * @method void setPluginSpaceRelation(integer $PluginSpaceRelation) 设置<p>筛选当前空间/企业共享插件</p><p>取值范围：[0, 2]</p>
  */
 class DescribePluginSummaryListRequest extends AbstractModel
 {
     /**
-     * @var string 空间ID，查询空间内的插件列表时使用
+     * @var string <p>空间ID，查询空间内的插件列表时使用</p>
      */
     public $SpaceId;
 
     /**
-     * @var array 过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
+     * @var array <p>过滤条件列表，支持 PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType、AuthType、IsShared、IsCreatedByMe</p>
      */
     public $FilterList;
 
@@ -60,17 +62,17 @@ class DescribePluginSummaryListRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var integer 页码 从0开始
+     * @var integer <p>页码 从0开始</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页大小
+     * @var integer <p>每页大小</p>
      */
     public $PageSize;
 
     /**
-     * @var string 查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
+     * @var string <p>查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述</p>
      */
     public $Query;
 
@@ -80,14 +82,20 @@ class DescribePluginSummaryListRequest extends AbstractModel
     public $SortType;
 
     /**
-     * @param string $SpaceId 空间ID，查询空间内的插件列表时使用
-     * @param array $FilterList 过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
+     * @var integer <p>筛选当前空间/企业共享插件</p><p>取值范围：[0, 2]</p>
+     */
+    public $PluginSpaceRelation;
+
+    /**
+     * @param string $SpaceId <p>空间ID，查询空间内的插件列表时使用</p>
+     * @param array $FilterList <p>过滤条件列表，支持 PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType、AuthType、IsShared、IsCreatedByMe</p>
      * @param boolean $IsFavoriteOnly <p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
      * @param integer $Module <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
-     * @param integer $PageNumber 页码 从0开始
-     * @param integer $PageSize 每页大小
-     * @param string $Query 查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
+     * @param integer $PageNumber <p>页码 从0开始</p>
+     * @param integer $PageSize <p>每页大小</p>
+     * @param string $Query <p>查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述</p>
      * @param integer $SortType <p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
+     * @param integer $PluginSpaceRelation <p>筛选当前空间/企业共享插件</p><p>取值范围：[0, 2]</p>
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class DescribePluginSummaryListRequest extends AbstractModel
 
         if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
             $this->SortType = $param["SortType"];
+        }
+
+        if (array_key_exists("PluginSpaceRelation",$param) and $param["PluginSpaceRelation"] !== null) {
+            $this->PluginSpaceRelation = $param["PluginSpaceRelation"];
         }
     }
 }

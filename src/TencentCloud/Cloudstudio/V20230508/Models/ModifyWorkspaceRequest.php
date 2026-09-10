@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyWorkspace请求参数结构体
  *
- * @method string getSpaceKey() 获取工作空间 SpaceKey. 更新该工作空间的属性
- * @method void setSpaceKey(string $SpaceKey) 设置工作空间 SpaceKey. 更新该工作空间的属性
- * @method string getName() 获取工作空间名称
- * @method void setName(string $Name) 设置工作空间名称
- * @method string getDescription() 获取工作空间描述
- * @method void setDescription(string $Description) 设置工作空间描述
- * @method string getSpecs() 获取工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。
- * @method void setSpecs(string $Specs) 设置工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。
- * @method array getEnvs() 获取环境变量. 会被注入到工作空间中
- * @method void setEnvs(array $Envs) 设置环境变量. 会被注入到工作空间中
- * @method array getExtensions() 获取预装插件. 工作空间启动时, 会自动安装这些插件 
- * @method void setExtensions(array $Extensions) 设置预装插件. 工作空间启动时, 会自动安装这些插件 
- * @method LifeCycle getLifecycle() 获取工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
- * @method void setLifecycle(LifeCycle $Lifecycle) 设置工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+ * @method string getSpaceKey() 获取<p>工作空间 SpaceKey. 更新该工作空间的属性</p>
+ * @method void setSpaceKey(string $SpaceKey) 设置<p>工作空间 SpaceKey. 更新该工作空间的属性</p>
+ * @method string getName() 获取<p>工作空间名称</p>
+ * @method void setName(string $Name) 设置<p>工作空间名称</p>
+ * @method string getDescription() 获取<p>工作空间描述</p>
+ * @method void setDescription(string $Description) 设置<p>工作空间描述</p>
+ * @method string getSpecs() 获取<p>工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。</p>
+ * @method void setSpecs(string $Specs) 设置<p>工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。</p>
+ * @method array getEnvs() 获取<p>环境变量. 会被注入到工作空间中</p>
+ * @method void setEnvs(array $Envs) 设置<p>环境变量. 会被注入到工作空间中</p>
+ * @method array getExtensions() 获取<p>预装插件. 工作空间启动时, 会自动安装这些插件</p>
+ * @method void setExtensions(array $Extensions) 设置<p>预装插件. 工作空间启动时, 会自动安装这些插件</p>
+ * @method LifeCycle getLifecycle() 获取<p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
+ * @method void setLifecycle(LifeCycle $Lifecycle) 设置<p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
  */
 class ModifyWorkspaceRequest extends AbstractModel
 {
     /**
-     * @var string 工作空间 SpaceKey. 更新该工作空间的属性
+     * @var string <p>工作空间 SpaceKey. 更新该工作空间的属性</p>
      */
     public $SpaceKey;
 
     /**
-     * @var string 工作空间名称
+     * @var string <p>工作空间名称</p>
      */
     public $Name;
 
     /**
-     * @var string 工作空间描述
+     * @var string <p>工作空间描述</p>
      */
     public $Description;
 
     /**
-     * @var string 工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。
+     * @var string <p>工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。</p>
      */
     public $Specs;
 
     /**
-     * @var array 环境变量. 会被注入到工作空间中
+     * @var array <p>环境变量. 会被注入到工作空间中</p>
      */
     public $Envs;
 
     /**
-     * @var array 预装插件. 工作空间启动时, 会自动安装这些插件 
+     * @var array <p>预装插件. 工作空间启动时, 会自动安装这些插件</p>
      */
     public $Extensions;
 
     /**
-     * @var LifeCycle 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+     * @var LifeCycle <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
      */
     public $Lifecycle;
 
     /**
-     * @param string $SpaceKey 工作空间 SpaceKey. 更新该工作空间的属性
-     * @param string $Name 工作空间名称
-     * @param string $Description 工作空间描述
-     * @param string $Specs 工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。
-     * @param array $Envs 环境变量. 会被注入到工作空间中
-     * @param array $Extensions 预装插件. 工作空间启动时, 会自动安装这些插件 
-     * @param LifeCycle $Lifecycle 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+     * @param string $SpaceKey <p>工作空间 SpaceKey. 更新该工作空间的属性</p>
+     * @param string $Name <p>工作空间名称</p>
+     * @param string $Description <p>工作空间描述</p>
+     * @param string $Specs <p>工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。</p>
+     * @param array $Envs <p>环境变量. 会被注入到工作空间中</p>
+     * @param array $Extensions <p>预装插件. 工作空间启动时, 会自动安装这些插件</p>
+     * @param LifeCycle $Lifecycle <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
      */
     function __construct()
     {

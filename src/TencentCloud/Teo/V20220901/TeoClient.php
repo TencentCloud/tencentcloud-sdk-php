@@ -245,8 +245,10 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
 停用站点可以通过 [切换站点状态](https://cloud.tencent.com/document/product/1552/80707) 接口将站点切换至关闭状态
 删除站点可以通过 [删除站点](https://cloud.tencent.com/document/product/1552/80717) 接口将站点删除
  * @method Models\DisableOriginACLResponse DisableOriginACL(Models\DisableOriginACLRequest $req) 本接口用于关闭站点的源站防护功能。停用后，相关资源不再仅使用「源站防护」提供的回源 IP 网段请求您的源站，同时停止发送回源 IP 网段更新通知。
- * @method Models\DownloadL4LogsResponse DownloadL4Logs(Models\DownloadL4LogsRequest $req) 本接口（DownloadL4Logs）用于下载四层离线日志。
- * @method Models\DownloadL7LogsResponse DownloadL7Logs(Models\DownloadL7LogsRequest $req) 本接口（DownloadL7Logs）下载七层离线日志。
+ * @method Models\DownloadL4LogsResponse DownloadL4Logs(Models\DownloadL4LogsRequest $req) 本接口（DownloadL4Logs）用于获取四层代理业务的离线日志下载链接。
+**注意：**仅当离线日志功能开启期间，EO 才会存储相关离线日志并提供下载服务。具体功能介绍请见[文档](https://cloud.tencent.com/document/product/1552/73660)。
+ * @method Models\DownloadL7LogsResponse DownloadL7Logs(Models\DownloadL7LogsRequest $req) 本接口（DownloadL7Logs）用于获取七层域名业务的离线日志下载链接。
+**注意：**仅当离线日志功能开启期间，EO 才会存储相关离线日志并提供下载服务。具体功能介绍请见[文档](https://cloud.tencent.com/document/product/1552/73660)。
  * @method Models\DummyParseZoneFullConfigResponse DummyParseZoneFullConfig(Models\DummyParseZoneFullConfigRequest $req) 本接口用于定义站点完整配置的结构，仅供查阅。注意：调用本接口不返回实际数据。
  * @method Models\EdgeKVDeleteResponse EdgeKVDelete(Models\EdgeKVDeleteRequest $req) 本接口用于删除指定命名空间中的一个或多个键值对数据，支持批量删除。删除后数据不可恢复。
  * @method Models\EdgeKVGetResponse EdgeKVGet(Models\EdgeKVGetRequest $req) 本接口用于从指定命名空间中批量读取键的值，支持一次查询最多 20 个键。

@@ -25,7 +25,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
 /**
  * @method Models\CopyAgentFromAppResponse CopyAgentFromApp(Models\CopyAgentFromAppRequest $req) 复制 Agent（目前仅支持claw模式））
  * @method Models\CopyAppResponse CopyApp(Models\CopyAppRequest $req) 复制应用
- * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 创建Agent
+ * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 创建Agent（目前仅支持claw模式）
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建应用
  * @method Models\CreateAppTriggerResponse CreateAppTrigger(Models\CreateAppTriggerRequest $req) CreateAppTrigger
  * @method Models\CreateChannelResponse CreateChannel(Models\CreateChannelRequest $req) 创建渠道（通过scene区分B端应用发布渠道与C端IM渠道）

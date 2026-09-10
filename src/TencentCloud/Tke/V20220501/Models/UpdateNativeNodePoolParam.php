@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutomationService(boolean $AutomationService) 设置<p>原生节点池安装自动化助手开关状态</p>
  * @method string getPassword() 获取<p>原生节点池密码</p>
  * @method void setPassword(string $Password) 设置<p>原生节点池密码</p>
+ * @method string getCustomImage() 获取<p>自定义镜像 ID</p>
+ * @method void setCustomImage(string $CustomImage) 设置<p>自定义镜像 ID</p>
  */
 class UpdateNativeNodePoolParam extends AbstractModel
 {
@@ -199,6 +201,11 @@ class UpdateNativeNodePoolParam extends AbstractModel
     public $Password;
 
     /**
+     * @var string <p>自定义镜像 ID</p>
+     */
+    public $CustomImage;
+
+    /**
      * @param MachineSetScaling $Scaling <p>伸缩配置</p>
      * @param array $SubnetIds <p>子网列表</p>
      * @param array $SecurityGroupIds <p>安全组列表</p>
@@ -224,6 +231,7 @@ class UpdateNativeNodePoolParam extends AbstractModel
      * @param array $GPUConfigs <p>节点池 GPU 配置</p>
      * @param boolean $AutomationService <p>原生节点池安装自动化助手开关状态</p>
      * @param string $Password <p>原生节点池密码</p>
+     * @param string $CustomImage <p>自定义镜像 ID</p>
      */
     function __construct()
     {
@@ -352,6 +360,10 @@ class UpdateNativeNodePoolParam extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("CustomImage",$param) and $param["CustomImage"] !== null) {
+            $this->CustomImage = $param["CustomImage"];
         }
     }
 }

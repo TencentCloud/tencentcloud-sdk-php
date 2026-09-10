@@ -22,18 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getAuthType() 获取<p>授权方式。</p><p>枚举值：</p><ul><li>0：无鉴权</li><li>1：API Key 鉴权</li><li>2：CAM 授权</li><li>3：OAuth 2.0 授权</li></ul>
  * @method void setAuthType(integer $AuthType) 设置<p>授权方式。</p><p>枚举值：</p><ul><li>0：无鉴权</li><li>1：API Key 鉴权</li><li>2：CAM 授权</li><li>3：OAuth 2.0 授权</li></ul>
- * @method ApiKeyAuthConfig getApiKeyAuthConfig() 获取API Key授权配置
+ * @method ApiKeyAuthConfig getApiKeyAuthConfig() 获取<p>API Key授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiKeyAuthConfig(ApiKeyAuthConfig $ApiKeyAuthConfig) 设置API Key授权配置
+ * @method void setApiKeyAuthConfig(ApiKeyAuthConfig $ApiKeyAuthConfig) 设置<p>API Key授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CamAuthConfig getCamAuthConfig() 获取CAM授权配置
+ * @method CamAuthConfig getCamAuthConfig() 获取<p>CAM授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCamAuthConfig(CamAuthConfig $CamAuthConfig) 设置CAM授权配置
+ * @method void setCamAuthConfig(CamAuthConfig $CamAuthConfig) 设置<p>CAM授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OAuthConfig getOAuthConfig() 获取OAuth2.0授权配置
+ * @method OAuthConfig getOAuthConfig() 获取<p>OAuth2.0授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOAuthConfig(OAuthConfig $OAuthConfig) 设置OAuth2.0授权配置
+ * @method void setOAuthConfig(OAuthConfig $OAuthConfig) 设置<p>OAuth2.0授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AccessKeyAuthConfig getAccessKeyAuthConfig() 获取<p>AccessKey授权配置</p>
+ * @method void setAccessKeyAuthConfig(AccessKeyAuthConfig $AccessKeyAuthConfig) 设置<p>AccessKey授权配置</p>
  */
 class AuthConfig extends AbstractModel
 {
@@ -43,31 +45,37 @@ class AuthConfig extends AbstractModel
     public $AuthType;
 
     /**
-     * @var ApiKeyAuthConfig API Key授权配置
+     * @var ApiKeyAuthConfig <p>API Key授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiKeyAuthConfig;
 
     /**
-     * @var CamAuthConfig CAM授权配置
+     * @var CamAuthConfig <p>CAM授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CamAuthConfig;
 
     /**
-     * @var OAuthConfig OAuth2.0授权配置
+     * @var OAuthConfig <p>OAuth2.0授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OAuthConfig;
 
     /**
+     * @var AccessKeyAuthConfig <p>AccessKey授权配置</p>
+     */
+    public $AccessKeyAuthConfig;
+
+    /**
      * @param integer $AuthType <p>授权方式。</p><p>枚举值：</p><ul><li>0：无鉴权</li><li>1：API Key 鉴权</li><li>2：CAM 授权</li><li>3：OAuth 2.0 授权</li></ul>
-     * @param ApiKeyAuthConfig $ApiKeyAuthConfig API Key授权配置
+     * @param ApiKeyAuthConfig $ApiKeyAuthConfig <p>API Key授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CamAuthConfig $CamAuthConfig CAM授权配置
+     * @param CamAuthConfig $CamAuthConfig <p>CAM授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OAuthConfig $OAuthConfig OAuth2.0授权配置
+     * @param OAuthConfig $OAuthConfig <p>OAuth2.0授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessKeyAuthConfig $AccessKeyAuthConfig <p>AccessKey授权配置</p>
      */
     function __construct()
     {
@@ -99,6 +107,11 @@ class AuthConfig extends AbstractModel
         if (array_key_exists("OAuthConfig",$param) and $param["OAuthConfig"] !== null) {
             $this->OAuthConfig = new OAuthConfig();
             $this->OAuthConfig->deserialize($param["OAuthConfig"]);
+        }
+
+        if (array_key_exists("AccessKeyAuthConfig",$param) and $param["AccessKeyAuthConfig"] !== null) {
+            $this->AccessKeyAuthConfig = new AccessKeyAuthConfig();
+            $this->AccessKeyAuthConfig->deserialize($param["AccessKeyAuthConfig"]);
         }
     }
 }

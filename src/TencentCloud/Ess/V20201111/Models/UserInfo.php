@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户信息
  *
- * @method string getUserId() 获取用户在平台的编号
- * @method void setUserId(string $UserId) 设置用户在平台的编号
- * @method string getChannel() 获取用户的来源渠道，一般不用传，特定场景根据接口说明传值
- * @method void setChannel(string $Channel) 设置用户的来源渠道，一般不用传，特定场景根据接口说明传值
- * @method string getOpenId() 获取用户在渠道的编号，一般不用传，特定场景根据接口说明传值
- * @method void setOpenId(string $OpenId) 设置用户在渠道的编号，一般不用传，特定场景根据接口说明传值
- * @method string getClientIp() 获取用户真实IP，内部字段，暂未开放
- * @method void setClientIp(string $ClientIp) 设置用户真实IP，内部字段，暂未开放
- * @method string getProxyIp() 获取用户代理IP，内部字段，暂未开放
- * @method void setProxyIp(string $ProxyIp) 设置用户代理IP，内部字段，暂未开放
+ * @method string getUserId() 获取<p>用户在平台中的编号（UserId）</p><p>UserId 获取方式：<a href="https://qcloudimg.tencent-cloud.cn/raw/6b054d6161b04c24855de15cb243f6bf.png" target="_blank">点击查看</a></p>
+ * @method void setUserId(string $UserId) 设置<p>用户在平台中的编号（UserId）</p><p>UserId 获取方式：<a href="https://qcloudimg.tencent-cloud.cn/raw/6b054d6161b04c24855de15cb243f6bf.png" target="_blank">点击查看</a></p>
+ * @method string getChannel() 获取<p>用户的来源渠道，一般不用传，特定场景根据接口说明传值</p>
+ * @method void setChannel(string $Channel) 设置<p>用户的来源渠道，一般不用传，特定场景根据接口说明传值</p>
+ * @method string getOpenId() 获取<p>用户在渠道的编号，一般不用传，特定场景根据接口说明传值</p>
+ * @method void setOpenId(string $OpenId) 设置<p>用户在渠道的编号，一般不用传，特定场景根据接口说明传值</p>
+ * @method string getClientIp() 获取<p>用户真实IP，内部字段，暂未开放</p>
+ * @method void setClientIp(string $ClientIp) 设置<p>用户真实IP，内部字段，暂未开放</p>
+ * @method string getProxyIp() 获取<p>用户代理IP，内部字段，暂未开放</p>
+ * @method void setProxyIp(string $ProxyIp) 设置<p>用户代理IP，内部字段，暂未开放</p>
  */
 class UserInfo extends AbstractModel
 {
     /**
-     * @var string 用户在平台的编号
+     * @var string <p>用户在平台中的编号（UserId）</p><p>UserId 获取方式：<a href="https://qcloudimg.tencent-cloud.cn/raw/6b054d6161b04c24855de15cb243f6bf.png" target="_blank">点击查看</a></p>
      */
     public $UserId;
 
     /**
-     * @var string 用户的来源渠道，一般不用传，特定场景根据接口说明传值
+     * @var string <p>用户的来源渠道，一般不用传，特定场景根据接口说明传值</p>
      * @deprecated
      */
     public $Channel;
 
     /**
-     * @var string 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+     * @var string <p>用户在渠道的编号，一般不用传，特定场景根据接口说明传值</p>
      * @deprecated
      */
     public $OpenId;
 
     /**
-     * @var string 用户真实IP，内部字段，暂未开放
+     * @var string <p>用户真实IP，内部字段，暂未开放</p>
      * @deprecated
      */
     public $ClientIp;
 
     /**
-     * @var string 用户代理IP，内部字段，暂未开放
+     * @var string <p>用户代理IP，内部字段，暂未开放</p>
      * @deprecated
      */
     public $ProxyIp;
 
     /**
-     * @param string $UserId 用户在平台的编号
-     * @param string $Channel 用户的来源渠道，一般不用传，特定场景根据接口说明传值
-     * @param string $OpenId 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
-     * @param string $ClientIp 用户真实IP，内部字段，暂未开放
-     * @param string $ProxyIp 用户代理IP，内部字段，暂未开放
+     * @param string $UserId <p>用户在平台中的编号（UserId）</p><p>UserId 获取方式：<a href="https://qcloudimg.tencent-cloud.cn/raw/6b054d6161b04c24855de15cb243f6bf.png" target="_blank">点击查看</a></p>
+     * @param string $Channel <p>用户的来源渠道，一般不用传，特定场景根据接口说明传值</p>
+     * @param string $OpenId <p>用户在渠道的编号，一般不用传，特定场景根据接口说明传值</p>
+     * @param string $ClientIp <p>用户真实IP，内部字段，暂未开放</p>
+     * @param string $ProxyIp <p>用户代理IP，内部字段，暂未开放</p>
      */
     function __construct()
     {

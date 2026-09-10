@@ -86,6 +86,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 - **已开通**：`LogServiceInfo` 中存在日志主题 ID 等有效信息
 - **未开通 / 开通中**：`LogServiceInfo` 为空或相关字段缺失
+ * @method Models\CreateFunctionResponse CreateFunction(Models\CreateFunctionRequest $req) 创建云函数
  * @method Models\CreateHTTPServiceRouteResponse CreateHTTPServiceRoute(Models\CreateHTTPServiceRouteRequest $req) 本接口CreateHTTPServiceRoute用于创建HTTP访问服务路由。如果不传Domain.Routes，仅创建域名信息。首次创建域名后需要调用DescribeHTTPServiceRoute查询域名状态，如果状态是PROCESSING，需要轮询查询域名状态直到SUCCESS或者FAIL。如果状态是FAIL，可以删除后重新创建。创建成功后域名可能无法访问，原因是异步下发的路由，可通过http或者https探测路由是否下发，如果http访问返回404或者https访问握手失败，可等待一会再试，直到访问正常。此外HTTP访问服务提供了默认域名，通过DescribeHTTPServiceRoute接口可直接获取默认域名。
  * @method Models\CreateHostingDomainResponse CreateHostingDomain(Models\CreateHostingDomainRequest $req) 创建托管域名
  * @method Models\CreateMySQLResponse CreateMySQL(Models\CreateMySQLRequest $req) 本接口（CreateMySQL）用于开通Mysql型数据库。
@@ -109,6 +110,9 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 安全域名被删除之后，可能会引起跨域问题，请谨慎操作。
  * @method Models\DeleteCloudAppResponse DeleteCloudApp(Models\DeleteCloudAppRequest $req) 删除云应用服务
  * @method Models\DeleteCloudAppVersionResponse DeleteCloudAppVersion(Models\DeleteCloudAppVersionRequest $req) 删除云应用服务版本
+ * @method Models\DeleteFunctionResponse DeleteFunction(Models\DeleteFunctionRequest $req) 删除云函数。
+
+删除指定环境下的云函数。调用接口后，若通过 GetFunction 接口查询不到该函数，则表示删除成功。
  * @method Models\DeleteHTTPServiceRouteResponse DeleteHTTPServiceRoute(Models\DeleteHTTPServiceRouteRequest $req) 本接口DeleteHTTPServiceRoute用于删除HTTP访问服务域名或者路由。可批量删除多条path路由、删除域名及所有path路由，如果Paths字段为空则删除域名及所有path路由，如果Paths不为空则仅删除path路由。
  * @method Models\DeleteProviderResponse DeleteProvider(Models\DeleteProviderRequest $req) 删除认证源
  * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 本接口(DeleteTable)用于删除文档型数据库表，删除表后表中数据将会被删除且无法恢复，请谨慎操作。
@@ -205,8 +209,11 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 销毁后可以通过 [DescribeMySQLTaskStatus](https://cloud.tencent.com/document/api/876/128183) 接口查询销毁结果，如果 `Response.Data. Status = FAILED ` 表示销毁失败，可以重新调用销毁接口重试。
  * @method Models\DestroyStaticStoreResponse DestroyStaticStore(Models\DestroyStaticStoreRequest $req) 销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
+ * @method Models\DownloadFunctionResponse DownloadFunction(Models\DownloadFunctionRequest $req) 获取云函数地址并下载zip包
  * @method Models\ExecutePGSqlResponse ExecutePGSql(Models\ExecutePGSqlRequest $req) 在Postgres数据库上执行SQL
+ * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) 获取云函数详情
  * @method Models\GetProvidersResponse GetProviders(Models\GetProvidersRequest $req) 查询指定云开发环境下的身份认证源列表。返回该环境已配置的所有身份认证源信息，包括第三方登录（OAuth、OIDC、SAML）、微信小程序登录、自定义登录和邮箱登录等。返回结果包含认证源基本信息、关联应用、配置状态及启用情况。若自定义登录或邮箱登录的身份源尚未创建，接口会自动追加一个默认关闭状态的身份源记录。
+ * @method Models\ListFunctionsResponse ListFunctions(Models\ListFunctionsRequest $req) 该接口根据传入的查询参数返回相关函数信息。
  * @method Models\ListPGUserMigrationsResponse ListPGUserMigrations(Models\ListPGUserMigrationsRequest $req) 本接口（ListPGUserMigrations）用于查询目标环境已应用的用户 migration 列表。
  * @method Models\ListTablesResponse ListTables(Models\ListTablesRequest $req) 本接口(ListTables)用于查询文档型数据库所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等。
 
@@ -274,6 +281,8 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
 若 OriginType 为 CUSTOM（即用户通过 [CreateAIModel](https://cloud.tencent.com/document/product/876/131320) 接口自行创建的自定义分组），不支持恢复为内置托管类型。
 
 更新成功后，可通过 [DescribeAIModels](https://cloud.tencent.com/document/product/876/131318) 接口查询最新分组配置。
+ * @method Models\UpdateFunctionCodeResponse UpdateFunctionCode(Models\UpdateFunctionCodeRequest $req) 更新云函数代码
+ * @method Models\UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(Models\UpdateFunctionConfigurationRequest $req) 该接口根据传入参数更新函数配置。
  * @method Models\UpdateTableResponse UpdateTable(Models\UpdateTableRequest $req) 本接口(UpdateTable)用于修改文档型数据库表信息，当前可以支持创建和删除索引。
  * @method Models\VerifyHTTPServiceRouteResponse VerifyHTTPServiceRoute(Models\VerifyHTTPServiceRouteRequest $req) 覆盖的校验项包括：
 1. Ownership：域名所有权（TXT/CNAME 记录）；

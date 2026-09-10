@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) 设置<p>智能字幕</p>
  * @method SmartEraseTaskInput getSmartEraseTask() 获取<p>智能擦除类型任务参数</p>
  * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) 设置<p>智能擦除类型任务参数</p>
+ * @method AIDubbingTaskInput getAIDubbingTask() 获取<p>AI配音类型任务参数</p>
+ * @method void setAIDubbingTask(AIDubbingTaskInput $AIDubbingTask) 设置<p>AI配音类型任务参数</p>
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取<p>任务的事件通知信息，不填代表不获取事件通知。</p>
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置<p>任务的事件通知信息，不填代表不获取事件通知。</p>
  * @method integer getTasksPriority() 获取<p>任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
@@ -117,6 +119,11 @@ class ProcessMediaRequest extends AbstractModel
     public $SmartEraseTask;
 
     /**
+     * @var AIDubbingTaskInput <p>AI配音类型任务参数</p>
+     */
+    public $AIDubbingTask;
+
+    /**
      * @var TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
     public $TaskNotifyConfig;
@@ -168,6 +175,7 @@ class ProcessMediaRequest extends AbstractModel
      * @param AiQualityControlTaskInput $AiQualityControlTask <p>媒体质检类型任务参数。</p>
      * @param SmartSubtitlesTaskInput $SmartSubtitlesTask <p>智能字幕</p>
      * @param SmartEraseTaskInput $SmartEraseTask <p>智能擦除类型任务参数</p>
+     * @param AIDubbingTaskInput $AIDubbingTask <p>AI配音类型任务参数</p>
      * @param TaskNotifyConfig $TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      * @param integer $TasksPriority <p>任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
      * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。</p>
@@ -241,6 +249,11 @@ class ProcessMediaRequest extends AbstractModel
         if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
             $this->SmartEraseTask = new SmartEraseTaskInput();
             $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
+        }
+
+        if (array_key_exists("AIDubbingTask",$param) and $param["AIDubbingTask"] !== null) {
+            $this->AIDubbingTask = new AIDubbingTaskInput();
+            $this->AIDubbingTask->deserialize($param["AIDubbingTask"]);
         }
 
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {

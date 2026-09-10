@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineType() 获取<p>原生节点机型 Native, NativeCVM</p>
  * @method void setMachineType(string $MachineType) 设置<p>原生节点机型 Native, NativeCVM</p>
+ * @method string getCustomImage() 获取<p>自定义镜像 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomImage(string $CustomImage) 设置<p>自定义镜像 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NativeNodePoolInfo extends AbstractModel
 {
@@ -199,6 +203,12 @@ class NativeNodePoolInfo extends AbstractModel
     public $MachineType;
 
     /**
+     * @var string <p>自定义镜像 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomImage;
+
+    /**
      * @param MachineSetScaling $Scaling <p>伸缩配置</p>
      * @param array $SubnetIds <p>子网列表</p>
      * @param array $SecurityGroupIds <p>安全组列表</p>
@@ -228,6 +238,8 @@ class NativeNodePoolInfo extends AbstractModel
      * @param array $DataDisks <p>原生节点池数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineType <p>原生节点机型 Native, NativeCVM</p>
+     * @param string $CustomImage <p>自定义镜像 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -340,6 +352,10 @@ class NativeNodePoolInfo extends AbstractModel
 
         if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
             $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("CustomImage",$param) and $param["CustomImage"] !== null) {
+            $this->CustomImage = $param["CustomImage"];
         }
     }
 }

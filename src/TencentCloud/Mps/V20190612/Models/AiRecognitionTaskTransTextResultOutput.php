@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 翻译结果。
  *
- * @method array getSegmentSet() 获取翻译片段列表。
- * @method void setSegmentSet(array $SegmentSet) 设置翻译片段列表。
- * @method string getSubtitlePath() 获取字幕文件地址。
- * @method void setSubtitlePath(string $SubtitlePath) 设置字幕文件地址。
+ * @method array getSegmentSet() 获取<p>翻译片段列表。</p>
+ * @method void setSegmentSet(array $SegmentSet) 设置<p>翻译片段列表。</p>
+ * @method string getSubtitlePath() 获取<p>字幕文件地址。</p>
+ * @method void setSubtitlePath(string $SubtitlePath) 设置<p>字幕文件地址。</p>
  */
 class AiRecognitionTaskTransTextResultOutput extends AbstractModel
 {
     /**
-     * @var array 翻译片段列表。
+     * @var array <p>翻译片段列表。</p>
      */
     public $SegmentSet;
 
     /**
-     * @var string 字幕文件地址。
+     * @var string <p>字幕文件地址。</p>
      */
     public $SubtitlePath;
 
     /**
-     * @param array $SegmentSet 翻译片段列表。
-     * @param string $SubtitlePath 字幕文件地址。
+     * @param array $SegmentSet <p>翻译片段列表。</p>
+     * @param string $SubtitlePath <p>字幕文件地址。</p>
      */
     function __construct()
     {

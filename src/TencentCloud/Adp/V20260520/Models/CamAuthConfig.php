@@ -20,66 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CAM授权信息
  *
- * @method string getRoleName() 获取角色名称
- * @method void setRoleName(string $RoleName) 设置角色名称
- * @method integer getKeyLocation() 获取密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 头鉴权 |
-| 1 | 请求信息鉴权 |
- * @method void setKeyLocation(integer $KeyLocation) 设置密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 头鉴权 |
-| 1 | 请求信息鉴权 |
- * @method string getSecretIdName() 获取SecretId字段名称
- * @method void setSecretIdName(string $SecretIdName) 设置SecretId字段名称
- * @method string getSecretKeyName() 获取SecretKey字段名称
- * @method void setSecretKeyName(string $SecretKeyName) 设置SecretKey字段名称
+ * @method string getRoleName() 获取<p>角色名称</p>
+ * @method void setRoleName(string $RoleName) 设置<p>角色名称</p>
+ * @method integer getKeyLocation() 获取<p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 头鉴权 |<br>| 1 | 请求信息鉴权 |</p>
+ * @method void setKeyLocation(integer $KeyLocation) 设置<p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 头鉴权 |<br>| 1 | 请求信息鉴权 |</p>
+ * @method string getSecretIdName() 获取<p>SecretId字段名称</p>
+ * @method void setSecretIdName(string $SecretIdName) 设置<p>SecretId字段名称</p>
+ * @method string getSecretKeyName() 获取<p>SecretKey字段名称</p>
+ * @method void setSecretKeyName(string $SecretKeyName) 设置<p>SecretKey字段名称</p>
+ * @method array getParamList() 获取<p>CAM Access Key 字段配置</p>
+ * @method void setParamList(array $ParamList) 设置<p>CAM Access Key 字段配置</p>
+ * @method boolean getSupportRoleAuth() 获取<p>是否支持CAM角色授权</p>
+ * @method void setSupportRoleAuth(boolean $SupportRoleAuth) 设置<p>是否支持CAM角色授权</p>
  */
 class CamAuthConfig extends AbstractModel
 {
     /**
-     * @var string 角色名称
+     * @var string <p>角色名称</p>
      */
     public $RoleName;
 
     /**
-     * @var integer 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 头鉴权 |
-| 1 | 请求信息鉴权 |
+     * @var integer <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 头鉴权 |<br>| 1 | 请求信息鉴权 |</p>
      */
     public $KeyLocation;
 
     /**
-     * @var string SecretId字段名称
+     * @var string <p>SecretId字段名称</p>
      */
     public $SecretIdName;
 
     /**
-     * @var string SecretKey字段名称
+     * @var string <p>SecretKey字段名称</p>
      */
     public $SecretKeyName;
 
     /**
-     * @param string $RoleName 角色名称
-     * @param integer $KeyLocation 密钥位置 HEADER/QUERY
+     * @var array <p>CAM Access Key 字段配置</p>
+     */
+    public $ParamList;
 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 头鉴权 |
-| 1 | 请求信息鉴权 |
-     * @param string $SecretIdName SecretId字段名称
-     * @param string $SecretKeyName SecretKey字段名称
+    /**
+     * @var boolean <p>是否支持CAM角色授权</p>
+     */
+    public $SupportRoleAuth;
+
+    /**
+     * @param string $RoleName <p>角色名称</p>
+     * @param integer $KeyLocation <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 头鉴权 |<br>| 1 | 请求信息鉴权 |</p>
+     * @param string $SecretIdName <p>SecretId字段名称</p>
+     * @param string $SecretKeyName <p>SecretKey字段名称</p>
+     * @param array $ParamList <p>CAM Access Key 字段配置</p>
+     * @param boolean $SupportRoleAuth <p>是否支持CAM角色授权</p>
      */
     function __construct()
     {
@@ -108,6 +100,19 @@ class CamAuthConfig extends AbstractModel
 
         if (array_key_exists("SecretKeyName",$param) and $param["SecretKeyName"] !== null) {
             $this->SecretKeyName = $param["SecretKeyName"];
+        }
+
+        if (array_key_exists("ParamList",$param) and $param["ParamList"] !== null) {
+            $this->ParamList = [];
+            foreach ($param["ParamList"] as $key => $value){
+                $obj = new AccessKeyParamConfig();
+                $obj->deserialize($value);
+                array_push($this->ParamList, $obj);
+            }
+        }
+
+        if (array_key_exists("SupportRoleAuth",$param) and $param["SupportRoleAuth"] !== null) {
+            $this->SupportRoleAuth = $param["SupportRoleAuth"];
         }
     }
 }

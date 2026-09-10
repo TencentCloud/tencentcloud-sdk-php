@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeInstance返回参数结构体
  *
- * @method string getDealId() 获取交易ID。
- * @method void setDealId(string $DealId) 设置交易ID。
- * @method string getDealName() 获取订单号。
- * @method void setDealName(string $DealName) 设置订单号。
+ * @method string getDealId() 获取<p>交易ID。</p>
+ * @method void setDealId(string $DealId) 设置<p>交易ID。</p>
+ * @method string getDealName() 获取<p>订单号。</p>
+ * @method void setDealName(string $DealName) 设置<p>订单号。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class UpgradeInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 交易ID。
+     * @var string <p>交易ID。</p>
      * @deprecated
      */
     public $DealId;
 
     /**
-     * @var string 订单号。
+     * @var string <p>订单号。</p>
      */
     public $DealName;
 
@@ -46,8 +46,8 @@ class UpgradeInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DealId 交易ID。
-     * @param string $DealName 订单号。
+     * @param string $DealId <p>交易ID。</p>
+     * @param string $DealName <p>订单号。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method integer getMemSize() 获取配置变更后，每个分片持久化内存容量，单位：GB。
-<ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
- * @method void setMemSize(integer $MemSize) 设置配置变更后，每个分片持久化内存容量，单位：GB。
-<ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
- * @method integer getMachineCpu() 获取CPU 核数，可忽略不传
- * @method void setMachineCpu(integer $MachineCpu) 设置CPU 核数，可忽略不传
- * @method integer getMachineMemory() 获取实例内存容量，单位：GB。
-<ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
- * @method void setMachineMemory(integer $MachineMemory) 设置实例内存容量，单位：GB。
-<ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
- * @method integer getShardNum() 获取配置变更后，分片数量。
-<ul><li>增加后分片的数量务必为增加之前数量的整数倍。分片数量支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
- * @method void setShardNum(integer $ShardNum) 设置配置变更后，分片数量。
-<ul><li>增加后分片的数量务必为增加之前数量的整数倍。分片数量支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
- * @method integer getDiskSize() 获取配置变更后，每个分片硬盘的容量。单位：GB。
-<ul><li>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
- * @method void setDiskSize(integer $DiskSize) 设置配置变更后，每个分片硬盘的容量。单位：GB。
-<ul><li>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+ * @method string getInstanceId() 获取<p>实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。</p>
+ * @method integer getMemSize() 获取<p>配置变更后，每个分片持久化内存容量，单位：GB。</p><ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+ * @method void setMemSize(integer $MemSize) 设置<p>配置变更后，每个分片持久化内存容量，单位：GB。</p><ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+ * @method integer getMachineCpu() 获取<p>CPU 核数，可忽略不传</p>
+ * @method void setMachineCpu(integer $MachineCpu) 设置<p>CPU 核数，可忽略不传</p>
+ * @method integer getMachineMemory() 获取<p>实例内存容量，单位：GB。</p><ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+ * @method void setMachineMemory(integer $MachineMemory) 设置<p>实例内存容量，单位：GB。</p><ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+ * @method integer getShardNum() 获取<p>配置变更后，分片数量。</p><ul><li>增加后分片的数量务必为增加之前数量的整数倍。分片数量支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+ * @method void setShardNum(integer $ShardNum) 设置<p>配置变更后，分片数量。</p><ul><li>增加后分片的数量务必为增加之前数量的整数倍。分片数量支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+ * @method integer getDiskSize() 获取<p>配置变更后，每个分片硬盘的容量。单位：GB。</p><ul><li>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+ * @method void setDiskSize(integer $DiskSize) 设置<p>配置变更后，每个分片硬盘的容量。单位：GB。</p><ul><li>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+ * @method integer getReplicasNum() 获取<p>配置变更后，副本数量。需要和NodeSet参数一起传递。</p><p>取值范围：[1, 2]</p>
+ * @method void setReplicasNum(integer $ReplicasNum) 设置<p>配置变更后，副本数量。需要和NodeSet参数一起传递。</p><p>取值范围：[1, 2]</p>
+ * @method array getNodeSet() 获取<p>配置变更后，副本节点信息。</p><ul><li>增加副本：可不传NodeId</li><li>删除副本：需传保留节点的NodeId</li></ul>
+ * @method void setNodeSet(array $NodeSet) 设置<p>配置变更后，副本节点信息。</p><ul><li>增加副本：可不传NodeId</li><li>删除副本：需传保留节点的NodeId</li></ul>
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string <p>实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 配置变更后，每个分片持久化内存容量，单位：GB。
-<ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+     * @var integer <p>配置变更后，每个分片持久化内存容量，单位：GB。</p><ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
      */
     public $MemSize;
 
     /**
-     * @var integer CPU 核数，可忽略不传
+     * @var integer <p>CPU 核数，可忽略不传</p>
      */
     public $MachineCpu;
 
     /**
-     * @var integer 实例内存容量，单位：GB。
-<ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+     * @var integer <p>实例内存容量，单位：GB。</p><ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
      */
     public $MachineMemory;
 
     /**
-     * @var integer 配置变更后，分片数量。
-<ul><li>增加后分片的数量务必为增加之前数量的整数倍。分片数量支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+     * @var integer <p>配置变更后，分片数量。</p><ul><li>增加后分片的数量务必为增加之前数量的整数倍。分片数量支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
      */
     public $ShardNum;
 
     /**
-     * @var integer 配置变更后，每个分片硬盘的容量。单位：GB。
-<ul><li>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+     * @var integer <p>配置变更后，每个分片硬盘的容量。单位：GB。</p><ul><li>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
      */
     public $DiskSize;
 
     /**
-     * @param string $InstanceId 实例 ID。
-     * @param integer $MemSize 配置变更后，每个分片持久化内存容量，单位：GB。
-<ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
-     * @param integer $MachineCpu CPU 核数，可忽略不传
-     * @param integer $MachineMemory 实例内存容量，单位：GB。
-<ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
-     * @param integer $ShardNum 配置变更后，分片数量。
-<ul><li>增加后分片的数量务必为增加之前数量的整数倍。分片数量支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
-     * @param integer $DiskSize 配置变更后，每个分片硬盘的容量。单位：GB。
-<ul><li>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+     * @var integer <p>配置变更后，副本数量。需要和NodeSet参数一起传递。</p><p>取值范围：[1, 2]</p>
+     */
+    public $ReplicasNum;
+
+    /**
+     * @var array <p>配置变更后，副本节点信息。</p><ul><li>增加副本：可不传NodeId</li><li>删除副本：需传保留节点的NodeId</li></ul>
+     */
+    public $NodeSet;
+
+    /**
+     * @param string $InstanceId <p>实例 ID。</p>
+     * @param integer $MemSize <p>配置变更后，每个分片持久化内存容量，单位：GB。</p><ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+     * @param integer $MachineCpu <p>CPU 核数，可忽略不传</p>
+     * @param integer $MachineMemory <p>实例内存容量，单位：GB。</p><ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+     * @param integer $ShardNum <p>配置变更后，分片数量。</p><ul><li>增加后分片的数量务必为增加之前数量的整数倍。分片数量支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+     * @param integer $DiskSize <p>配置变更后，每个分片硬盘的容量。单位：GB。</p><ul><li>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+     * @param integer $ReplicasNum <p>配置变更后，副本数量。需要和NodeSet参数一起传递。</p><p>取值范围：[1, 2]</p>
+     * @param array $NodeSet <p>配置变更后，副本节点信息。</p><ul><li>增加副本：可不传NodeId</li><li>删除副本：需传保留节点的NodeId</li></ul>
      */
     function __construct()
     {
@@ -124,6 +124,19 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("ReplicasNum",$param) and $param["ReplicasNum"] !== null) {
+            $this->ReplicasNum = $param["ReplicasNum"];
+        }
+
+        if (array_key_exists("NodeSet",$param) and $param["NodeSet"] !== null) {
+            $this->NodeSet = [];
+            foreach ($param["NodeSet"] as $key => $value){
+                $obj = new NodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeSet, $obj);
+            }
         }
     }
 }

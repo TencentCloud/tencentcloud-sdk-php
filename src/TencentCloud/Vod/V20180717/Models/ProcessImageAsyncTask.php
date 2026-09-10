@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeautyConfig(ImageBeautyConfig $BeautyConfig) 设置<p>图片美颜配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiCutOutConfig getAiCutOutConfig() 获取<p>Ai抠图配置</p>
+ * @method void setAiCutOutConfig(AiCutOutConfig $AiCutOutConfig) 设置<p>Ai抠图配置</p>
  */
 class ProcessImageAsyncTask extends AbstractModel
 {
@@ -54,12 +56,18 @@ class ProcessImageAsyncTask extends AbstractModel
     public $BeautyConfig;
 
     /**
+     * @var AiCutOutConfig <p>Ai抠图配置</p>
+     */
+    public $AiCutOutConfig;
+
+    /**
      * @param ImageEncodeConfig $EncodeConfig <p>图片转码输出配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageEnhanceConfig $EnhanceConfig <p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageBeautyConfig $BeautyConfig <p>图片美颜配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiCutOutConfig $AiCutOutConfig <p>Ai抠图配置</p>
      */
     function __construct()
     {
@@ -87,6 +95,11 @@ class ProcessImageAsyncTask extends AbstractModel
         if (array_key_exists("BeautyConfig",$param) and $param["BeautyConfig"] !== null) {
             $this->BeautyConfig = new ImageBeautyConfig();
             $this->BeautyConfig->deserialize($param["BeautyConfig"]);
+        }
+
+        if (array_key_exists("AiCutOutConfig",$param) and $param["AiCutOutConfig"] !== null) {
+            $this->AiCutOutConfig = new AiCutOutConfig();
+            $this->AiCutOutConfig->deserialize($param["AiCutOutConfig"]);
         }
     }
 }

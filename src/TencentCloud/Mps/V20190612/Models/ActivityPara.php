@@ -20,166 +20,174 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 编排原子任务
  *
- * @method TranscodeTaskInput getTranscodeTask() 获取视频转码任务
+ * @method TranscodeTaskInput getTranscodeTask() 获取<p>视频转码任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranscodeTask(TranscodeTaskInput $TranscodeTask) 设置视频转码任务
+ * @method void setTranscodeTask(TranscodeTaskInput $TranscodeTask) 设置<p>视频转码任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AnimatedGraphicTaskInput getAnimatedGraphicTask() 获取视频转动图任务
+ * @method AnimatedGraphicTaskInput getAnimatedGraphicTask() 获取<p>视频转动图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnimatedGraphicTask(AnimatedGraphicTaskInput $AnimatedGraphicTask) 设置视频转动图任务
+ * @method void setAnimatedGraphicTask(AnimatedGraphicTaskInput $AnimatedGraphicTask) 设置<p>视频转动图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() 获取视频按时间点截图任务
+ * @method SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() 获取<p>视频按时间点截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask) 设置视频按时间点截图任务
+ * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask) 设置<p>视频按时间点截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SampleSnapshotTaskInput getSampleSnapshotTask() 获取视频采样截图任务
+ * @method SampleSnapshotTaskInput getSampleSnapshotTask() 获取<p>视频采样截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSampleSnapshotTask(SampleSnapshotTaskInput $SampleSnapshotTask) 设置视频采样截图任务
+ * @method void setSampleSnapshotTask(SampleSnapshotTaskInput $SampleSnapshotTask) 设置<p>视频采样截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageSpriteTaskInput getImageSpriteTask() 获取视频截雪碧图任务
+ * @method ImageSpriteTaskInput getImageSpriteTask() 获取<p>视频截雪碧图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageSpriteTask(ImageSpriteTaskInput $ImageSpriteTask) 设置视频截雪碧图任务
+ * @method void setImageSpriteTask(ImageSpriteTaskInput $ImageSpriteTask) 设置<p>视频截雪碧图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AdaptiveDynamicStreamingTaskInput getAdaptiveDynamicStreamingTask() 获取转自适应码流任务
+ * @method AdaptiveDynamicStreamingTaskInput getAdaptiveDynamicStreamingTask() 获取<p>转自适应码流任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdaptiveDynamicStreamingTask(AdaptiveDynamicStreamingTaskInput $AdaptiveDynamicStreamingTask) 设置转自适应码流任务
+ * @method void setAdaptiveDynamicStreamingTask(AdaptiveDynamicStreamingTaskInput $AdaptiveDynamicStreamingTask) 设置<p>转自适应码流任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiContentReviewTaskInput getAiContentReviewTask() 获取视频内容审核类型任务
+ * @method AiContentReviewTaskInput getAiContentReviewTask() 获取<p>视频内容审核类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置视频内容审核类型任务
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置<p>视频内容审核类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiAnalysisTaskInput getAiAnalysisTask() 获取视频内容分析类型任务
+ * @method AiAnalysisTaskInput getAiAnalysisTask() 获取<p>视频内容分析类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置视频内容分析类型任务
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置<p>视频内容分析类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiRecognitionTaskInput getAiRecognitionTask() 获取视频内容识别类型任务
+ * @method AiRecognitionTaskInput getAiRecognitionTask() 获取<p>视频内容识别类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置视频内容识别类型任务
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置<p>视频内容识别类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiQualityControlTaskInput getQualityControlTask() 获取媒体质检任务
+ * @method AiQualityControlTaskInput getQualityControlTask() 获取<p>媒体质检任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQualityControlTask(AiQualityControlTaskInput $QualityControlTask) 设置媒体质检任务
+ * @method void setQualityControlTask(AiQualityControlTaskInput $QualityControlTask) 设置<p>媒体质检任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ExecRulesTask getExecRulesTask() 获取任务条件判断
+ * @method ExecRulesTask getExecRulesTask() 获取<p>任务条件判断</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecRulesTask(ExecRulesTask $ExecRulesTask) 设置任务条件判断
+ * @method void setExecRulesTask(ExecRulesTask $ExecRulesTask) 设置<p>任务条件判断</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() 获取智能字幕任务
+ * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() 获取<p>智能字幕任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) 设置智能字幕任务
+ * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) 设置<p>智能字幕任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SmartEraseTaskInput getSmartEraseTask() 获取智能擦除任务
+ * @method SmartEraseTaskInput getSmartEraseTask() 获取<p>智能擦除任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) 设置智能擦除任务
+ * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) 设置<p>智能擦除任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AIDubbingTaskInput getAIDubbingTask() 获取<p>AI配音任务。</p>
+ * @method void setAIDubbingTask(AIDubbingTaskInput $AIDubbingTask) 设置<p>AI配音任务。</p>
  */
 class ActivityPara extends AbstractModel
 {
     /**
-     * @var TranscodeTaskInput 视频转码任务
+     * @var TranscodeTaskInput <p>视频转码任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeTask;
 
     /**
-     * @var AnimatedGraphicTaskInput 视频转动图任务
+     * @var AnimatedGraphicTaskInput <p>视频转动图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnimatedGraphicTask;
 
     /**
-     * @var SnapshotByTimeOffsetTaskInput 视频按时间点截图任务
+     * @var SnapshotByTimeOffsetTaskInput <p>视频按时间点截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
-     * @var SampleSnapshotTaskInput 视频采样截图任务
+     * @var SampleSnapshotTaskInput <p>视频采样截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleSnapshotTask;
 
     /**
-     * @var ImageSpriteTaskInput 视频截雪碧图任务
+     * @var ImageSpriteTaskInput <p>视频截雪碧图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSpriteTask;
 
     /**
-     * @var AdaptiveDynamicStreamingTaskInput 转自适应码流任务
+     * @var AdaptiveDynamicStreamingTaskInput <p>转自适应码流任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdaptiveDynamicStreamingTask;
 
     /**
-     * @var AiContentReviewTaskInput 视频内容审核类型任务
+     * @var AiContentReviewTaskInput <p>视频内容审核类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput 视频内容分析类型任务
+     * @var AiAnalysisTaskInput <p>视频内容分析类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiAnalysisTask;
 
     /**
-     * @var AiRecognitionTaskInput 视频内容识别类型任务
+     * @var AiRecognitionTaskInput <p>视频内容识别类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiRecognitionTask;
 
     /**
-     * @var AiQualityControlTaskInput 媒体质检任务
+     * @var AiQualityControlTaskInput <p>媒体质检任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityControlTask;
 
     /**
-     * @var ExecRulesTask 任务条件判断
+     * @var ExecRulesTask <p>任务条件判断</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecRulesTask;
 
     /**
-     * @var SmartSubtitlesTaskInput 智能字幕任务
+     * @var SmartSubtitlesTaskInput <p>智能字幕任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmartSubtitlesTask;
 
     /**
-     * @var SmartEraseTaskInput 智能擦除任务
+     * @var SmartEraseTaskInput <p>智能擦除任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmartEraseTask;
 
     /**
-     * @param TranscodeTaskInput $TranscodeTask 视频转码任务
+     * @var AIDubbingTaskInput <p>AI配音任务。</p>
+     */
+    public $AIDubbingTask;
+
+    /**
+     * @param TranscodeTaskInput $TranscodeTask <p>视频转码任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnimatedGraphicTaskInput $AnimatedGraphicTask 视频转动图任务
+     * @param AnimatedGraphicTaskInput $AnimatedGraphicTask <p>视频转动图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask 视频按时间点截图任务
+     * @param SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask <p>视频按时间点截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SampleSnapshotTaskInput $SampleSnapshotTask 视频采样截图任务
+     * @param SampleSnapshotTaskInput $SampleSnapshotTask <p>视频采样截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageSpriteTaskInput $ImageSpriteTask 视频截雪碧图任务
+     * @param ImageSpriteTaskInput $ImageSpriteTask <p>视频截雪碧图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdaptiveDynamicStreamingTaskInput $AdaptiveDynamicStreamingTask 转自适应码流任务
+     * @param AdaptiveDynamicStreamingTaskInput $AdaptiveDynamicStreamingTask <p>转自适应码流任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务
+     * @param AiContentReviewTaskInput $AiContentReviewTask <p>视频内容审核类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务
+     * @param AiAnalysisTaskInput $AiAnalysisTask <p>视频内容分析类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务
+     * @param AiRecognitionTaskInput $AiRecognitionTask <p>视频内容识别类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiQualityControlTaskInput $QualityControlTask 媒体质检任务
+     * @param AiQualityControlTaskInput $QualityControlTask <p>媒体质检任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecRulesTask $ExecRulesTask 任务条件判断
+     * @param ExecRulesTask $ExecRulesTask <p>任务条件判断</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask 智能字幕任务
+     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask <p>智能字幕任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartEraseTaskInput $SmartEraseTask 智能擦除任务
+     * @param SmartEraseTaskInput $SmartEraseTask <p>智能擦除任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param AIDubbingTaskInput $AIDubbingTask <p>AI配音任务。</p>
      */
     function __construct()
     {
@@ -257,6 +265,11 @@ class ActivityPara extends AbstractModel
         if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
             $this->SmartEraseTask = new SmartEraseTaskInput();
             $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
+        }
+
+        if (array_key_exists("AIDubbingTask",$param) and $param["AIDubbingTask"] !== null) {
+            $this->AIDubbingTask = new AIDubbingTaskInput();
+            $this->AIDubbingTask->deserialize($param["AIDubbingTask"]);
         }
     }
 }

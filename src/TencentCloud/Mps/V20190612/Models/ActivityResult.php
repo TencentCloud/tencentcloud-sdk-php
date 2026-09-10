@@ -20,74 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 编排任务输出
  *
- * @method string getActivityType() 获取原子任务类型。
-<li>Transcode：转码。</li>
-<li>SampleSnapshot：采样截图。</li>
-<li>AnimatedGraphics：转动图。</li>
-<li>SnapshotByTimeOffset：时间点截图。</li>
-<li>ImageSprites：雪碧图。</li>
-<li>AdaptiveDynamicStreaming：自适应码流。</li>
-<li>AiContentReview：内容审核。</li>
-<li>AIRecognition：智能识别。</li>
-<li>AIAnalysis：智能分析。</li>
-<li>AiQualityControl：媒体质检。</li>
-<li>SmartSubtitles：智能字幕。</li>
-<li>SmartErase：智能擦除。</li>
- * @method void setActivityType(string $ActivityType) 设置原子任务类型。
-<li>Transcode：转码。</li>
-<li>SampleSnapshot：采样截图。</li>
-<li>AnimatedGraphics：转动图。</li>
-<li>SnapshotByTimeOffset：时间点截图。</li>
-<li>ImageSprites：雪碧图。</li>
-<li>AdaptiveDynamicStreaming：自适应码流。</li>
-<li>AiContentReview：内容审核。</li>
-<li>AIRecognition：智能识别。</li>
-<li>AIAnalysis：智能分析。</li>
-<li>AiQualityControl：媒体质检。</li>
-<li>SmartSubtitles：智能字幕。</li>
-<li>SmartErase：智能擦除。</li>
- * @method ActivityResItem getActivityResItem() 获取原子任务输出。
- * @method void setActivityResItem(ActivityResItem $ActivityResItem) 设置原子任务输出。
+ * @method string getActivityType() 获取<p>原子任务类型。</p><li>Transcode：转码。</li><li>SampleSnapshot：采样截图。</li><li>AnimatedGraphics：转动图。</li><li>SnapshotByTimeOffset：时间点截图。</li><li>ImageSprites：雪碧图。</li><li>AdaptiveDynamicStreaming：自适应码流。</li><li>AiContentReview：内容审核。</li><li>AIRecognition：智能识别。</li><li>AIAnalysis：智能分析。</li><li>AiQualityControl：媒体质检。</li><li>SmartSubtitles：智能字幕。</li><li>SmartErase：智能擦除。</li><li>Dubbing: AI配音</li>
+ * @method void setActivityType(string $ActivityType) 设置<p>原子任务类型。</p><li>Transcode：转码。</li><li>SampleSnapshot：采样截图。</li><li>AnimatedGraphics：转动图。</li><li>SnapshotByTimeOffset：时间点截图。</li><li>ImageSprites：雪碧图。</li><li>AdaptiveDynamicStreaming：自适应码流。</li><li>AiContentReview：内容审核。</li><li>AIRecognition：智能识别。</li><li>AIAnalysis：智能分析。</li><li>AiQualityControl：媒体质检。</li><li>SmartSubtitles：智能字幕。</li><li>SmartErase：智能擦除。</li><li>Dubbing: AI配音</li>
+ * @method ActivityResItem getActivityResItem() 获取<p>原子任务输出。</p>
+ * @method void setActivityResItem(ActivityResItem $ActivityResItem) 设置<p>原子任务输出。</p>
  */
 class ActivityResult extends AbstractModel
 {
     /**
-     * @var string 原子任务类型。
-<li>Transcode：转码。</li>
-<li>SampleSnapshot：采样截图。</li>
-<li>AnimatedGraphics：转动图。</li>
-<li>SnapshotByTimeOffset：时间点截图。</li>
-<li>ImageSprites：雪碧图。</li>
-<li>AdaptiveDynamicStreaming：自适应码流。</li>
-<li>AiContentReview：内容审核。</li>
-<li>AIRecognition：智能识别。</li>
-<li>AIAnalysis：智能分析。</li>
-<li>AiQualityControl：媒体质检。</li>
-<li>SmartSubtitles：智能字幕。</li>
-<li>SmartErase：智能擦除。</li>
+     * @var string <p>原子任务类型。</p><li>Transcode：转码。</li><li>SampleSnapshot：采样截图。</li><li>AnimatedGraphics：转动图。</li><li>SnapshotByTimeOffset：时间点截图。</li><li>ImageSprites：雪碧图。</li><li>AdaptiveDynamicStreaming：自适应码流。</li><li>AiContentReview：内容审核。</li><li>AIRecognition：智能识别。</li><li>AIAnalysis：智能分析。</li><li>AiQualityControl：媒体质检。</li><li>SmartSubtitles：智能字幕。</li><li>SmartErase：智能擦除。</li><li>Dubbing: AI配音</li>
      */
     public $ActivityType;
 
     /**
-     * @var ActivityResItem 原子任务输出。
+     * @var ActivityResItem <p>原子任务输出。</p>
      */
     public $ActivityResItem;
 
     /**
-     * @param string $ActivityType 原子任务类型。
-<li>Transcode：转码。</li>
-<li>SampleSnapshot：采样截图。</li>
-<li>AnimatedGraphics：转动图。</li>
-<li>SnapshotByTimeOffset：时间点截图。</li>
-<li>ImageSprites：雪碧图。</li>
-<li>AdaptiveDynamicStreaming：自适应码流。</li>
-<li>AiContentReview：内容审核。</li>
-<li>AIRecognition：智能识别。</li>
-<li>AIAnalysis：智能分析。</li>
-<li>AiQualityControl：媒体质检。</li>
-<li>SmartSubtitles：智能字幕。</li>
-<li>SmartErase：智能擦除。</li>
-     * @param ActivityResItem $ActivityResItem 原子任务输出。
+     * @param string $ActivityType <p>原子任务类型。</p><li>Transcode：转码。</li><li>SampleSnapshot：采样截图。</li><li>AnimatedGraphics：转动图。</li><li>SnapshotByTimeOffset：时间点截图。</li><li>ImageSprites：雪碧图。</li><li>AdaptiveDynamicStreaming：自适应码流。</li><li>AiContentReview：内容审核。</li><li>AIRecognition：智能识别。</li><li>AIAnalysis：智能分析。</li><li>AiQualityControl：媒体质检。</li><li>SmartSubtitles：智能字幕。</li><li>SmartErase：智能擦除。</li><li>Dubbing: AI配音</li>
+     * @param ActivityResItem $ActivityResItem <p>原子任务输出。</p>
      */
     function __construct()
     {

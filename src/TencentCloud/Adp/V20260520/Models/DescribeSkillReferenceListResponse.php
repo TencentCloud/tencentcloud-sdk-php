@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getReferenceList() 获取<p>按 SkillRefType 分组的引用汇总：某类型 total_count = 0 时不入组（不返回空占位） 本期同时落 OPENCLAW / AGENT / CORP_ASSISTANT 三路</p>
  * @method void setReferenceList(array $ReferenceList) 设置<p>按 SkillRefType 分组的引用汇总：某类型 total_count = 0 时不入组（不返回空占位） 本期同时落 OPENCLAW / AGENT / CORP_ASSISTANT 三路</p>
+ * @method boolean getAllowForceModify() 获取<p>当前用户是否允许强制删除有引用的Skill</p>
+ * @method void setAllowForceModify(boolean $AllowForceModify) 设置<p>当前用户是否允许强制删除有引用的Skill</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeSkillReferenceListResponse extends AbstractModel
     public $ReferenceList;
 
     /**
+     * @var boolean <p>当前用户是否允许强制删除有引用的Skill</p>
+     */
+    public $AllowForceModify;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $ReferenceList <p>按 SkillRefType 分组的引用汇总：某类型 total_count = 0 时不入组（不返回空占位） 本期同时落 OPENCLAW / AGENT / CORP_ASSISTANT 三路</p>
+     * @param boolean $AllowForceModify <p>当前用户是否允许强制删除有引用的Skill</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +69,10 @@ class DescribeSkillReferenceListResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ReferenceList, $obj);
             }
+        }
+
+        if (array_key_exists("AllowForceModify",$param) and $param["AllowForceModify"] !== null) {
+            $this->AllowForceModify = $param["AllowForceModify"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

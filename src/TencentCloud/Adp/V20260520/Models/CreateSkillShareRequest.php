@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpaceId(string $SpaceId) 设置<p>空间ID，必填</p>
  * @method string getVersionId() 获取<p>必填，被共享的版本id（必须高于已共享版本）</p>
  * @method void setVersionId(string $VersionId) 设置<p>必填，被共享的版本id（必须高于已共享版本）</p>
+ * @method SkillCorpShareConfig getCorpShareConfig() 获取<p>共享配置</p>
+ * @method void setCorpShareConfig(SkillCorpShareConfig $CorpShareConfig) 设置<p>共享配置</p>
  */
 class CreateSkillShareRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateSkillShareRequest extends AbstractModel
     public $VersionId;
 
     /**
+     * @var SkillCorpShareConfig <p>共享配置</p>
+     */
+    public $CorpShareConfig;
+
+    /**
      * @param string $ApplyRemark <p>必填，申请备注（弹窗&quot;申请备注&quot;）</p>
      * @param string $SkillId <p>必填，原skill_id</p>
      * @param string $SpaceId <p>空间ID，必填</p>
      * @param string $VersionId <p>必填，被共享的版本id（必须高于已共享版本）</p>
+     * @param SkillCorpShareConfig $CorpShareConfig <p>共享配置</p>
      */
     function __construct()
     {
@@ -84,6 +92,11 @@ class CreateSkillShareRequest extends AbstractModel
 
         if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
             $this->VersionId = $param["VersionId"];
+        }
+
+        if (array_key_exists("CorpShareConfig",$param) and $param["CorpShareConfig"] !== null) {
+            $this->CorpShareConfig = new SkillCorpShareConfig();
+            $this->CorpShareConfig->deserialize($param["CorpShareConfig"]);
         }
     }
 }

@@ -20,166 +20,174 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 编排子任务输出
  *
- * @method MediaProcessTaskTranscodeResult getTranscodeTask() 获取转码任务输出
+ * @method MediaProcessTaskTranscodeResult getTranscodeTask() 获取<p>转码任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranscodeTask(MediaProcessTaskTranscodeResult $TranscodeTask) 设置转码任务输出
+ * @method void setTranscodeTask(MediaProcessTaskTranscodeResult $TranscodeTask) 设置<p>转码任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() 获取转动图任务输出
+ * @method MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() 获取<p>转动图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) 设置转动图任务输出
+ * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) 设置<p>转动图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() 获取时间点截图任务输出
+ * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() 获取<p>时间点截图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) 设置时间点截图任务输出
+ * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) 设置<p>时间点截图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() 获取采样截图任务输出
+ * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() 获取<p>采样截图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) 设置采样截图任务输出
+ * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) 设置<p>采样截图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() 获取雪碧图任务输出
+ * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() 获取<p>雪碧图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) 设置雪碧图任务输出
+ * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) 设置<p>雪碧图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() 获取自适应码流任务输出
+ * @method MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() 获取<p>自适应码流任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) 设置自适应码流任务输出
+ * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) 设置<p>自适应码流任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScheduleRecognitionTaskResult getRecognitionTask() 获取识别任务输出
+ * @method ScheduleRecognitionTaskResult getRecognitionTask() 获取<p>识别任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecognitionTask(ScheduleRecognitionTaskResult $RecognitionTask) 设置识别任务输出
+ * @method void setRecognitionTask(ScheduleRecognitionTaskResult $RecognitionTask) 设置<p>识别任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScheduleReviewTaskResult getReviewTask() 获取审核任务输出
+ * @method ScheduleReviewTaskResult getReviewTask() 获取<p>审核任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReviewTask(ScheduleReviewTaskResult $ReviewTask) 设置审核任务输出
+ * @method void setReviewTask(ScheduleReviewTaskResult $ReviewTask) 设置<p>审核任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScheduleAnalysisTaskResult getAnalysisTask() 获取分析任务输出
+ * @method ScheduleAnalysisTaskResult getAnalysisTask() 获取<p>分析任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnalysisTask(ScheduleAnalysisTaskResult $AnalysisTask) 设置分析任务输出
+ * @method void setAnalysisTask(ScheduleAnalysisTaskResult $AnalysisTask) 设置<p>分析任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScheduleQualityControlTaskResult getQualityControlTask() 获取媒体质检任务输出
+ * @method ScheduleQualityControlTaskResult getQualityControlTask() 获取<p>媒体质检任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) 设置媒体质检任务输出
+ * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) 设置<p>媒体质检任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScheduleExecRuleTaskResult getExecRuleTask() 获取条件判断任务输出
+ * @method ScheduleExecRuleTaskResult getExecRuleTask() 获取<p>条件判断任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecRuleTask(ScheduleExecRuleTaskResult $ExecRuleTask) 设置条件判断任务输出
+ * @method void setExecRuleTask(ScheduleExecRuleTaskResult $ExecRuleTask) 设置<p>条件判断任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() 获取智能字幕任务输出
+ * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() 获取<p>智能字幕任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) 设置智能字幕任务输出
+ * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) 设置<p>智能字幕任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SmartEraseTaskResult getSmartEraseTask() 获取智能擦除任务输出
+ * @method SmartEraseTaskResult getSmartEraseTask() 获取<p>智能擦除任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSmartEraseTask(SmartEraseTaskResult $SmartEraseTask) 设置智能擦除任务输出
+ * @method void setSmartEraseTask(SmartEraseTaskResult $SmartEraseTask) 设置<p>智能擦除任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AIDubbingTaskResult getAIDubbingTask() 获取<p>AI配音任务输出。</p>
+ * @method void setAIDubbingTask(AIDubbingTaskResult $AIDubbingTask) 设置<p>AI配音任务输出。</p>
  */
 class ActivityResItem extends AbstractModel
 {
     /**
-     * @var MediaProcessTaskTranscodeResult 转码任务输出
+     * @var MediaProcessTaskTranscodeResult <p>转码任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeTask;
 
     /**
-     * @var MediaProcessTaskAnimatedGraphicResult 转动图任务输出
+     * @var MediaProcessTaskAnimatedGraphicResult <p>转动图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnimatedGraphicTask;
 
     /**
-     * @var MediaProcessTaskSnapshotByTimeOffsetResult 时间点截图任务输出
+     * @var MediaProcessTaskSnapshotByTimeOffsetResult <p>时间点截图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
-     * @var MediaProcessTaskSampleSnapshotResult 采样截图任务输出
+     * @var MediaProcessTaskSampleSnapshotResult <p>采样截图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleSnapshotTask;
 
     /**
-     * @var MediaProcessTaskImageSpriteResult 雪碧图任务输出
+     * @var MediaProcessTaskImageSpriteResult <p>雪碧图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSpriteTask;
 
     /**
-     * @var MediaProcessTaskAdaptiveDynamicStreamingResult 自适应码流任务输出
+     * @var MediaProcessTaskAdaptiveDynamicStreamingResult <p>自适应码流任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdaptiveDynamicStreamingTask;
 
     /**
-     * @var ScheduleRecognitionTaskResult 识别任务输出
+     * @var ScheduleRecognitionTaskResult <p>识别任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecognitionTask;
 
     /**
-     * @var ScheduleReviewTaskResult 审核任务输出
+     * @var ScheduleReviewTaskResult <p>审核任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReviewTask;
 
     /**
-     * @var ScheduleAnalysisTaskResult 分析任务输出
+     * @var ScheduleAnalysisTaskResult <p>分析任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisTask;
 
     /**
-     * @var ScheduleQualityControlTaskResult 媒体质检任务输出
+     * @var ScheduleQualityControlTaskResult <p>媒体质检任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityControlTask;
 
     /**
-     * @var ScheduleExecRuleTaskResult 条件判断任务输出
+     * @var ScheduleExecRuleTaskResult <p>条件判断任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecRuleTask;
 
     /**
-     * @var ScheduleSmartSubtitleTaskResult 智能字幕任务输出
+     * @var ScheduleSmartSubtitleTaskResult <p>智能字幕任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmartSubtitlesTask;
 
     /**
-     * @var SmartEraseTaskResult 智能擦除任务输出
+     * @var SmartEraseTaskResult <p>智能擦除任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmartEraseTask;
 
     /**
-     * @param MediaProcessTaskTranscodeResult $TranscodeTask 转码任务输出
+     * @var AIDubbingTaskResult <p>AI配音任务输出。</p>
+     */
+    public $AIDubbingTask;
+
+    /**
+     * @param MediaProcessTaskTranscodeResult $TranscodeTask <p>转码任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask 转动图任务输出
+     * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask <p>转动图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask 时间点截图任务输出
+     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask <p>时间点截图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask 采样截图任务输出
+     * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask <p>采样截图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask 雪碧图任务输出
+     * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask <p>雪碧图任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask 自适应码流任务输出
+     * @param MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask <p>自适应码流任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleRecognitionTaskResult $RecognitionTask 识别任务输出
+     * @param ScheduleRecognitionTaskResult $RecognitionTask <p>识别任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleReviewTaskResult $ReviewTask 审核任务输出
+     * @param ScheduleReviewTaskResult $ReviewTask <p>审核任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleAnalysisTaskResult $AnalysisTask 分析任务输出
+     * @param ScheduleAnalysisTaskResult $AnalysisTask <p>分析任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleQualityControlTaskResult $QualityControlTask 媒体质检任务输出
+     * @param ScheduleQualityControlTaskResult $QualityControlTask <p>媒体质检任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleExecRuleTaskResult $ExecRuleTask 条件判断任务输出
+     * @param ScheduleExecRuleTaskResult $ExecRuleTask <p>条件判断任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask 智能字幕任务输出
+     * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask <p>智能字幕任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartEraseTaskResult $SmartEraseTask 智能擦除任务输出
+     * @param SmartEraseTaskResult $SmartEraseTask <p>智能擦除任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param AIDubbingTaskResult $AIDubbingTask <p>AI配音任务输出。</p>
      */
     function __construct()
     {
@@ -257,6 +265,11 @@ class ActivityResItem extends AbstractModel
         if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
             $this->SmartEraseTask = new SmartEraseTaskResult();
             $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
+        }
+
+        if (array_key_exists("AIDubbingTask",$param) and $param["AIDubbingTask"] !== null) {
+            $this->AIDubbingTask = new AIDubbingTaskResult();
+            $this->AIDubbingTask->deserialize($param["AIDubbingTask"]);
         }
     }
 }

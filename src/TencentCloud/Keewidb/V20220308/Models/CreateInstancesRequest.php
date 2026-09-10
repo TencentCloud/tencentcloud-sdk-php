@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenew(integer $AutoRenew) 设置<p>包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul></p>
  * @method array getSecurityGroupIdList() 获取<p>给实例设置安全组 ID 数组。</p>
  * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置<p>给实例设置安全组 ID 数组。</p>
+ * @method array getNodeSet() 获取<p>实例的节点信息。</p><ul><li>包含节点ID、节点类型、节点可用区 ID等。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/86230#NodeInfo">NodeInfo</a> 。</li><li>目前支持传入节点的类型（主节点或者副本节点），节点的可用区。未指定该参数时，系统将默认创建单可用区架构实例。</li></ul>
+ * @method void setNodeSet(array $NodeSet) 设置<p>实例的节点信息。</p><ul><li>包含节点ID、节点类型、节点可用区 ID等。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/86230#NodeInfo">NodeInfo</a> 。</li><li>目前支持传入节点的类型（主节点或者副本节点），节点的可用区。未指定该参数时，系统将默认创建单可用区架构实例。</li></ul>
  * @method array getResourceTags() 获取<p>给实例绑定标签。</p>
  * @method void setResourceTags(array $ResourceTags) 设置<p>给实例绑定标签。</p>
  * @method integer getMemSize() 获取<p>极速版，单分片持久化内存容量。<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p><p>单位：GB。</p>
@@ -155,6 +157,11 @@ class CreateInstancesRequest extends AbstractModel
     public $SecurityGroupIdList;
 
     /**
+     * @var array <p>实例的节点信息。</p><ul><li>包含节点ID、节点类型、节点可用区 ID等。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/86230#NodeInfo">NodeInfo</a> 。</li><li>目前支持传入节点的类型（主节点或者副本节点），节点的可用区。未指定该参数时，系统将默认创建单可用区架构实例。</li></ul>
+     */
+    public $NodeSet;
+
+    /**
      * @var array <p>给实例绑定标签。</p>
      */
     public $ResourceTags;
@@ -202,6 +209,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param integer $VPort <p>自定义端口。默认为6379，范围[1024,65535]。</p>
      * @param integer $AutoRenew <p>包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul></p>
      * @param array $SecurityGroupIdList <p>给实例设置安全组 ID 数组。</p>
+     * @param array $NodeSet <p>实例的节点信息。</p><ul><li>包含节点ID、节点类型、节点可用区 ID等。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/86230#NodeInfo">NodeInfo</a> 。</li><li>目前支持传入节点的类型（主节点或者副本节点），节点的可用区。未指定该参数时，系统将默认创建单可用区架构实例。</li></ul>
      * @param array $ResourceTags <p>给实例绑定标签。</p>
      * @param integer $MemSize <p>极速版，单分片持久化内存容量。<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p><p>单位：GB。</p>
      * @param integer $DiskSize <p>每个分片硬盘的容量。单位：GB。<br>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
@@ -288,6 +296,15 @@ class CreateInstancesRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIdList",$param) and $param["SecurityGroupIdList"] !== null) {
             $this->SecurityGroupIdList = $param["SecurityGroupIdList"];
+        }
+
+        if (array_key_exists("NodeSet",$param) and $param["NodeSet"] !== null) {
+            $this->NodeSet = [];
+            foreach ($param["NodeSet"] as $key => $value){
+                $obj = new NodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeSet, $obj);
+            }
         }
 
         if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {

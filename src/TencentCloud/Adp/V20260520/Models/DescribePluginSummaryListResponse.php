@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePluginSummaryList返回参数结构体
  *
- * @method array getPluginList() 获取plugin_list
- * @method void setPluginList(array $PluginList) 设置plugin_list
- * @method integer getTotalCount() 获取total_count
- * @method void setTotalCount(integer $TotalCount) 设置total_count
+ * @method array getPluginList() 获取<p>plugin_list</p>
+ * @method void setPluginList(array $PluginList) 设置<p>plugin_list</p>
+ * @method integer getTotalCount() 获取<p>total_count</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>total_count</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribePluginSummaryListResponse extends AbstractModel
 {
     /**
-     * @var array plugin_list
+     * @var array <p>plugin_list</p>
      */
     public $PluginList;
 
     /**
-     * @var integer total_count
+     * @var integer <p>total_count</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribePluginSummaryListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PluginList plugin_list
-     * @param integer $TotalCount total_count
+     * @param array $PluginList <p>plugin_list</p>
+     * @param integer $TotalCount <p>total_count</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

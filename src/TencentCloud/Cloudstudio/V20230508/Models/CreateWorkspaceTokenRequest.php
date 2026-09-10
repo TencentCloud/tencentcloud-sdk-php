@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWorkspaceToken请求参数结构体
  *
- * @method string getSpaceKey() 获取工作空间 SpaceKey
- * @method void setSpaceKey(string $SpaceKey) 设置工作空间 SpaceKey
- * @method integer getTokenExpiredLimitSec() 获取token过期时间，单位是秒，默认 3600
- * @method void setTokenExpiredLimitSec(integer $TokenExpiredLimitSec) 设置token过期时间，单位是秒，默认 3600
- * @method array getPolicies() 获取token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
- * @method void setPolicies(array $Policies) 设置token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
+ * @method string getSpaceKey() 获取<p>工作空间 SpaceKey</p>
+ * @method void setSpaceKey(string $SpaceKey) 设置<p>工作空间 SpaceKey</p>
+ * @method integer getTokenExpiredLimitSec() 获取<p>token过期时间，单位是秒，默认 3600</p>
+ * @method void setTokenExpiredLimitSec(integer $TokenExpiredLimitSec) 设置<p>token过期时间，单位是秒，默认 3600</p>
+ * @method array getPolicies() 获取<p>token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only</p>
+ * @method void setPolicies(array $Policies) 设置<p>token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only</p>
  */
 class CreateWorkspaceTokenRequest extends AbstractModel
 {
     /**
-     * @var string 工作空间 SpaceKey
+     * @var string <p>工作空间 SpaceKey</p>
      */
     public $SpaceKey;
 
     /**
-     * @var integer token过期时间，单位是秒，默认 3600
+     * @var integer <p>token过期时间，单位是秒，默认 3600</p>
      */
     public $TokenExpiredLimitSec;
 
     /**
-     * @var array token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
+     * @var array <p>token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only</p>
      */
     public $Policies;
 
     /**
-     * @param string $SpaceKey 工作空间 SpaceKey
-     * @param integer $TokenExpiredLimitSec token过期时间，单位是秒，默认 3600
-     * @param array $Policies token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
+     * @param string $SpaceKey <p>工作空间 SpaceKey</p>
+     * @param integer $TokenExpiredLimitSec <p>token过期时间，单位是秒，默认 3600</p>
+     * @param array $Policies <p>token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only</p>
      */
     function __construct()
     {

@@ -208,6 +208,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastDiagnoseTime(string $LastDiagnoseTime) 设置<p>最新诊断时间</p><p>参数格式：RFC3339</p>
  * @method string getManagerUin() 获取<p>负责人Uin</p>
  * @method void setManagerUin(string $ManagerUin) 设置<p>负责人Uin</p>
+ * @method string getStartupPoint() 获取<p>启动位点</p>
+ * @method void setStartupPoint(string $StartupPoint) 设置<p>启动位点</p>
+ * @method boolean getIsEvent() 获取<p>是否有事件</p>
+ * @method void setIsEvent(boolean $IsEvent) 设置<p>是否有事件</p>
+ * @method boolean getIsAlarm() 获取<p>是否告警</p>
+ * @method void setIsAlarm(boolean $IsAlarm) 设置<p>是否告警</p>
  */
 class JobV1 extends AbstractModel
 {
@@ -510,6 +516,21 @@ class JobV1 extends AbstractModel
     public $ManagerUin;
 
     /**
+     * @var string <p>启动位点</p>
+     */
+    public $StartupPoint;
+
+    /**
+     * @var boolean <p>是否有事件</p>
+     */
+    public $IsEvent;
+
+    /**
+     * @var boolean <p>是否告警</p>
+     */
+    public $IsAlarm;
+
+    /**
      * @param string $JobId <p>作业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region <p>地域</p>
@@ -604,6 +625,9 @@ class JobV1 extends AbstractModel
      * @param integer $HealthScore <p>健康分数</p>
      * @param string $LastDiagnoseTime <p>最新诊断时间</p><p>参数格式：RFC3339</p>
      * @param string $ManagerUin <p>负责人Uin</p>
+     * @param string $StartupPoint <p>启动位点</p>
+     * @param boolean $IsEvent <p>是否有事件</p>
+     * @param boolean $IsAlarm <p>是否告警</p>
      */
     function __construct()
     {
@@ -826,6 +850,18 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("ManagerUin",$param) and $param["ManagerUin"] !== null) {
             $this->ManagerUin = $param["ManagerUin"];
+        }
+
+        if (array_key_exists("StartupPoint",$param) and $param["StartupPoint"] !== null) {
+            $this->StartupPoint = $param["StartupPoint"];
+        }
+
+        if (array_key_exists("IsEvent",$param) and $param["IsEvent"] !== null) {
+            $this->IsEvent = $param["IsEvent"];
+        }
+
+        if (array_key_exists("IsAlarm",$param) and $param["IsAlarm"] !== null) {
+            $this->IsAlarm = $param["IsAlarm"];
         }
     }
 }

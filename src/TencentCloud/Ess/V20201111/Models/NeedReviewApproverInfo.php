@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 需要进行签署审核的签署人信息
  *
- * @method string getApproverType() 获取<p>签署方经办人的类型，支持以下类型</p><ul><li> ORGANIZATION 企业（含企业自动签）</li><li>PERSON 个人（含个人自动签）</li></ul>
- * @method void setApproverType(string $ApproverType) 设置<p>签署方经办人的类型，支持以下类型</p><ul><li> ORGANIZATION 企业（含企业自动签）</li><li>PERSON 个人（含个人自动签）</li></ul>
+ * @method string getApproverType() 获取<p>签署方经办人的类型，支持以下类型<ul><li> ORGANIZATION 企业（含企业“授权签”）</li><li>PERSON 个人（含个人“授权签”）</li></ul></p>
+ * @method void setApproverType(string $ApproverType) 设置<p>签署方经办人的类型，支持以下类型<ul><li> ORGANIZATION 企业（含企业“授权签”）</li><li>PERSON 个人（含个人“授权签”）</li></ul></p>
  * @method string getApproverName() 获取<p>签署方经办人的姓名。 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p>
  * @method void setApproverName(string $ApproverName) 设置<p>签署方经办人的姓名。 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p>
  * @method string getApproverMobile() 获取<p>签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。</p>
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class NeedReviewApproverInfo extends AbstractModel
 {
     /**
-     * @var string <p>签署方经办人的类型，支持以下类型</p><ul><li> ORGANIZATION 企业（含企业自动签）</li><li>PERSON 个人（含个人自动签）</li></ul>
+     * @var string <p>签署方经办人的类型，支持以下类型<ul><li> ORGANIZATION 企业（含企业“授权签”）</li><li>PERSON 个人（含个人“授权签”）</li></ul></p>
      */
     public $ApproverType;
 
@@ -66,7 +66,7 @@ class NeedReviewApproverInfo extends AbstractModel
     public $OrganizationName;
 
     /**
-     * @param string $ApproverType <p>签署方经办人的类型，支持以下类型</p><ul><li> ORGANIZATION 企业（含企业自动签）</li><li>PERSON 个人（含个人自动签）</li></ul>
+     * @param string $ApproverType <p>签署方经办人的类型，支持以下类型<ul><li> ORGANIZATION 企业（含企业“授权签”）</li><li>PERSON 个人（含个人“授权签”）</li></ul></p>
      * @param string $ApproverName <p>签署方经办人的姓名。 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p>
      * @param string $ApproverMobile <p>签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。</p>
      * @param string $ApproverIdCardType <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同居民身份证)</li></ul>

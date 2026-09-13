@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>扩展服务名称</p>
  * @method array getHasAuthUserList() 获取<p>授权员工列表</p>
  * @method void setHasAuthUserList(array $HasAuthUserList) 设置<p>授权员工列表</p>
- * @method array getHasAuthOrganizationList() 获取<p>授权企业列表（企业自动签时，该字段有值）</p>
- * @method void setHasAuthOrganizationList(array $HasAuthOrganizationList) 设置<p>授权企业列表（企业自动签时，该字段有值）</p>
+ * @method array getHasAuthOrganizationList() 获取<p>授权企业列表（企业“授权签”时，该字段有值）</p>
+ * @method void setHasAuthOrganizationList(array $HasAuthOrganizationList) 设置<p>授权企业列表（企业“授权签”时，该字段有值）</p>
  * @method integer getAuthUserTotal() 获取<p>授权员工列表总数</p>
  * @method void setAuthUserTotal(integer $AuthUserTotal) 设置<p>授权员工列表总数</p>
  * @method integer getAuthOrganizationTotal() 获取<p>授权企业列表总数</p>
@@ -51,7 +51,7 @@ class AuthInfoDetail extends AbstractModel
     public $HasAuthUserList;
 
     /**
-     * @var array <p>授权企业列表（企业自动签时，该字段有值）</p>
+     * @var array <p>授权企业列表（企业“授权签”时，该字段有值）</p>
      */
     public $HasAuthOrganizationList;
 
@@ -69,7 +69,7 @@ class AuthInfoDetail extends AbstractModel
      * @param string $Type <p>扩展服务类型，和入参一致</p>
      * @param string $Name <p>扩展服务名称</p>
      * @param array $HasAuthUserList <p>授权员工列表</p>
-     * @param array $HasAuthOrganizationList <p>授权企业列表（企业自动签时，该字段有值）</p>
+     * @param array $HasAuthOrganizationList <p>授权企业列表（企业“授权签”时，该字段有值）</p>
      * @param integer $AuthUserTotal <p>授权员工列表总数</p>
      * @param integer $AuthOrganizationTotal <p>授权企业列表总数</p>
      */

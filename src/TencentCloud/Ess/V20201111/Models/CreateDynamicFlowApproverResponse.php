@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDynamicFlowApprover返回参数结构体
  *
- * @method string getFlowId() 获取合同流程ID，为32位字符串
- * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串
- * @method array getDynamicFlowApproverList() 获取补充动态合同签署人的结果数组
- * @method void setDynamicFlowApproverList(array $DynamicFlowApproverList) 设置补充动态合同签署人的结果数组
+ * @method string getFlowId() 获取<p>合同流程ID，为32位字符串</p>
+ * @method void setFlowId(string $FlowId) 设置<p>合同流程ID，为32位字符串</p>
+ * @method array getDynamicFlowApproverList() 获取<p>补充动态合同签署人的结果数组</p>
+ * @method void setDynamicFlowApproverList(array $DynamicFlowApproverList) 设置<p>补充动态合同签署人的结果数组</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateDynamicFlowApproverResponse extends AbstractModel
 {
     /**
-     * @var string 合同流程ID，为32位字符串
+     * @var string <p>合同流程ID，为32位字符串</p>
      */
     public $FlowId;
 
     /**
-     * @var array 补充动态合同签署人的结果数组
+     * @var array <p>补充动态合同签署人的结果数组</p>
      */
     public $DynamicFlowApproverList;
 
@@ -45,8 +45,8 @@ class CreateDynamicFlowApproverResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 合同流程ID，为32位字符串
-     * @param array $DynamicFlowApproverList 补充动态合同签署人的结果数组
+     * @param string $FlowId <p>合同流程ID，为32位字符串</p>
+     * @param array $DynamicFlowApproverList <p>补充动态合同签署人的结果数组</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,58 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePersonAuthCertificateImage返回参数结构体
  *
- * @method string getAuthCertUrl() 获取个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
- * @method void setAuthCertUrl(string $AuthCertUrl) 设置个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
- * @method string getImageCertId() 获取个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
-该编号会合成到个人用户证书证明图片。
-
-注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
- * @method void setImageCertId(string $ImageCertId) 设置个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
-该编号会合成到个人用户证书证明图片。
-
-注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
- * @method string getSerialNumber() 获取在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
- * @method void setSerialNumber(string $SerialNumber) 设置在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
- * @method integer getValidFrom() 获取CA证书颁发时间，格式为Unix标准时间戳（秒）   
-该时间格式化后会合成到个人用户证书证明图片
- * @method void setValidFrom(integer $ValidFrom) 设置CA证书颁发时间，格式为Unix标准时间戳（秒）   
-该时间格式化后会合成到个人用户证书证明图片
- * @method integer getValidTo() 获取CA证书有效截止时间，格式为Unix标准时间戳（秒）
-该时间格式化后会合成到个人用户证书证明图片
- * @method void setValidTo(integer $ValidTo) 设置CA证书有效截止时间，格式为Unix标准时间戳（秒）
-该时间格式化后会合成到个人用户证书证明图片
+ * @method string getAuthCertUrl() 获取<p>个人用户认证证书图片下载URL，<code>有效期为5分钟</code>，超过有效期后将无法再下载。</p>
+ * @method void setAuthCertUrl(string $AuthCertUrl) 设置<p>个人用户认证证书图片下载URL，<code>有效期为5分钟</code>，超过有效期后将无法再下载。</p>
+ * @method string getImageCertId() 获取<p>个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。<br>该编号会合成到个人用户证书证明图片。</p><p>注: <code>个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动</code></p>
+ * @method void setImageCertId(string $ImageCertId) 设置<p>个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。<br>该编号会合成到个人用户证书证明图片。</p><p>注: <code>个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动</code></p>
+ * @method string getSerialNumber() 获取<p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。</p>
+ * @method void setSerialNumber(string $SerialNumber) 设置<p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。</p>
+ * @method integer getValidFrom() 获取<p>CA证书颁发时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
+ * @method void setValidFrom(integer $ValidFrom) 设置<p>CA证书颁发时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
+ * @method integer getValidTo() 获取<p>CA证书有效截止时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
+ * @method void setValidTo(integer $ValidTo) 设置<p>CA证书有效截止时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreatePersonAuthCertificateImageResponse extends AbstractModel
 {
     /**
-     * @var string 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
+     * @var string <p>个人用户认证证书图片下载URL，<code>有效期为5分钟</code>，超过有效期后将无法再下载。</p>
      */
     public $AuthCertUrl;
 
     /**
-     * @var string 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
-该编号会合成到个人用户证书证明图片。
-
-注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
+     * @var string <p>个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。<br>该编号会合成到个人用户证书证明图片。</p><p>注: <code>个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动</code></p>
      */
     public $ImageCertId;
 
     /**
-     * @var string 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
+     * @var string <p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。</p>
      */
     public $SerialNumber;
 
     /**
-     * @var integer CA证书颁发时间，格式为Unix标准时间戳（秒）   
-该时间格式化后会合成到个人用户证书证明图片
+     * @var integer <p>CA证书颁发时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
      */
     public $ValidFrom;
 
     /**
-     * @var integer CA证书有效截止时间，格式为Unix标准时间戳（秒）
-该时间格式化后会合成到个人用户证书证明图片
+     * @var integer <p>CA证书有效截止时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
      */
     public $ValidTo;
 
@@ -81,16 +66,11 @@ class CreatePersonAuthCertificateImageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AuthCertUrl 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
-     * @param string $ImageCertId 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
-该编号会合成到个人用户证书证明图片。
-
-注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-     * @param string $SerialNumber 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-     * @param integer $ValidFrom CA证书颁发时间，格式为Unix标准时间戳（秒）   
-该时间格式化后会合成到个人用户证书证明图片
-     * @param integer $ValidTo CA证书有效截止时间，格式为Unix标准时间戳（秒）
-该时间格式化后会合成到个人用户证书证明图片
+     * @param string $AuthCertUrl <p>个人用户认证证书图片下载URL，<code>有效期为5分钟</code>，超过有效期后将无法再下载。</p>
+     * @param string $ImageCertId <p>个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。<br>该编号会合成到个人用户证书证明图片。</p><p>注: <code>个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动</code></p>
+     * @param string $SerialNumber <p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。</p>
+     * @param integer $ValidFrom <p>CA证书颁发时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
+     * @param integer $ValidTo <p>CA证书有效截止时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

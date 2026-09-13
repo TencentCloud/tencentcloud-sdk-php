@@ -20,62 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateExtendedServiceAuthInfos请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method array getUserIds() 获取本企业员工的id，需要已实名，正常在职员工
- * @method void setUserIds(array $UserIds) 设置本企业员工的id，需要已实名，正常在职员工
- * @method string getExtendServiceType() 获取取值
-<ul><li>OPEN_SERVER_SIGN：企业自动签</li>
-<li>BATCH_SIGN：批量签署</li>
-</ul>
- * @method void setExtendServiceType(string $ExtendServiceType) 设置取值
-<ul><li>OPEN_SERVER_SIGN：企业自动签</li>
-<li>BATCH_SIGN：批量签署</li>
-</ul>
- * @method Agent getAgent() 获取代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method array getUserIds() 获取<p>本企业员工的id，需要已实名，正常在职员工</p>
+ * @method void setUserIds(array $UserIds) 设置<p>本企业员工的id，需要已实名，正常在职员工</p>
+ * @method string getExtendServiceType() 获取<p>取值<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p>
+ * @method void setExtendServiceType(string $ExtendServiceType) 设置<p>取值<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p>
+ * @method Agent getAgent() 获取<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method void setAgent(Agent $Agent) 设置<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
  */
 class CreateExtendedServiceAuthInfosRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @var UserInfo <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public $Operator;
 
     /**
-     * @var array 本企业员工的id，需要已实名，正常在职员工
+     * @var array <p>本企业员工的id，需要已实名，正常在职员工</p>
      */
     public $UserIds;
 
     /**
-     * @var string 取值
-<ul><li>OPEN_SERVER_SIGN：企业自动签</li>
-<li>BATCH_SIGN：批量签署</li>
-</ul>
+     * @var string <p>取值<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p>
      */
     public $ExtendServiceType;
 
     /**
-     * @var Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param array $UserIds 本企业员工的id，需要已实名，正常在职员工
-     * @param string $ExtendServiceType 取值
-<ul><li>OPEN_SERVER_SIGN：企业自动签</li>
-<li>BATCH_SIGN：批量签署</li>
-</ul>
-     * @param Agent $Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param UserInfo $Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param array $UserIds <p>本企业员工的id，需要已实名，正常在职员工</p>
+     * @param string $ExtendServiceType <p>取值<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p>
+     * @param Agent $Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePersonCertificate返回参数结构体
  *
- * @method string getCert() 获取证书的Base64
- * @method void setCert(string $Cert) 设置证书的Base64
+ * @method string getCert() 获取<p>证书的Base64</p>
+ * @method void setCert(string $Cert) 设置<p>证书的Base64</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribePersonCertificateResponse extends AbstractModel
 {
     /**
-     * @var string 证书的Base64
+     * @var string <p>证书的Base64</p>
      */
     public $Cert;
 
@@ -38,7 +38,7 @@ class DescribePersonCertificateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Cert 证书的Base64
+     * @param string $Cert <p>证书的Base64</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

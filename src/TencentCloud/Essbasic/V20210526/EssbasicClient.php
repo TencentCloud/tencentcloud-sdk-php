@@ -44,7 +44,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 注:
 - 有对应合同撤销权限的人:  <font color='red'>**发起人所在企业的超管、法人**</font>
 - 签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateReleaseFlow" target="_blank">发起解除合同流程接口</a>
-- <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
+- <font color='red'>只有撤销没有参与方签署过或只有【授权签署】签署过的合同，才会返还合同额度。</font>
 - 撤销后可以看合同PDF内容的人员： 发起方的超管， 发起方自己，发起方撤销合同的操作人员，已经签署合同、已经填写合同、邀请填写已经补充信息的参与人员， 其他参与人员看不到合同的内容。
  * @method Models\ChannelBatchCancelFlowsResponse ChannelBatchCancelFlows(Models\ChannelBatchCancelFlowsRequest $req) 通过合同编号批量撤销合同，单次最多支持撤销100份合同。
 
@@ -98,7 +98,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 **合同额度返还规则**:
 
 1.撤销服务按照合同份额 1:1赠送免费撤销次数。例如购买 100 份合同，赠送 100 次免费撤销额度。
-2.仅当没有任何参与方签署过，或仅自动签署完成的合同，撤销后才会使用免费撤销额度。
+2.仅当没有任何参与方签署过，或仅授权签署完成的合同，撤销后才会使用免费撤销额度。
 3.当赠送的免费撤销额度使用完后，后续仍可撤销合同，但不会返还合同额度。
 
 **注**:
@@ -150,7 +150,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 <li>此接口需要保证：渠道应用已开启：动态签署人2.0能力</li>
 <li>此接口需要保证：合同发起时指定开启了动态合同</li>
 <li>此接口补充的动态签署人传参规则，请参考接口：<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles" target="_blank">用PDF文件创建签署流程</a>的签署人传参规则</li>
-<li>此接口补充的动态签署人暂不支持他方企业自动签署。</li>
+<li>此接口补充的动态签署人暂不支持他方企业授权签署。</li>
 </ul>
  * @method Models\ChannelCreateEmbedWebUrlResponse ChannelCreateEmbedWebUrl(Models\ChannelCreateEmbedWebUrlRequest $req) 本接口（ChannelCreateEmbedWebUrl）用于创建可嵌入web页面的URL（此web页面可以通过iframe方式嵌入到贵方系统的网页中），支持以下类型的Web链接创建：
 1. 创建印章
@@ -202,12 +202,12 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  <font color="red">发起方（第三方子企业 A 的企业与员工）必须完成实名</font>；作为 **签署方** 的第三方子企业 A 员工 / 个人自然人 / SaaS 平台企业员工 / 第三方子企业 B 员工等，其企业和个人可以未实名。
 
 ### 1.3 注意事项
--  合同<font color="red">发起后就会扣减合同的额度</font> , 只有撤销没有参与方签署过或只有自动签署签署过的合同，且<font color="red">有撤销合同额度</font>的情形下，才会返还合同额度。（**过期，拒签，签署完成，解除完成等状态不会返还额度**）。具体可以参考 [合同撤销返还额度说明](https://qian.tencent.com/developers/partner/contract_cancel_quota) 。
+-  合同<font color="red">发起后就会扣减合同的额度</font> , 只有撤销没有参与方签署过或只有授权签署签署过的合同，且<font color="red">有撤销合同额度</font>的情形下，才会返还合同额度。（**过期，拒签，签署完成，解除完成等状态不会返还额度**）。具体可以参考 [合同撤销返还额度说明](https://qian.tencent.com/developers/partner/contract_cancel_quota) 。
 - <font color="red">支持的证件类型</font>可以参考 [支持的证件类型](https://qian.tencent.com/developers/partner/id_card_support) 。
 - <font color="red">不同类型的签署方传参不同</font>，各类型签署方的信息传递方式详见  [签署方入参指引](https://qian.tencent.com/developers/partner/flow_approver) 。
 - 如果合同正式发起前如需<font color="red">预览</font>效果，可参考 [使用文件发起的预览](https://qian.tencent.com/developers/partner/preview_guide#%E4%B8%80%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E8%B5%B7%E7%9A%84%E9%A2%84%E8%A7%88)
 - 关于填写方与签署方的<font color="red">填写、签署先后顺序</font>设置，详见 [填写与签署顺序说明](https://qian.tencent.com/developers/partner/fill_sign_order)。
-- 关于<font color="red">本企业自动签署与其他企业自动签署</font>的配置与使用，详见 [自动签署](https://qian.tencent.com/developers/partner/autosign_guide)。
+- 关于<font color="red">本企业授权签署与其他企业授权签署</font>的配置与使用，详见 [授权签署](https://qian.tencent.com/developers/partner/autosign_guide)。
 
 ### 1.4 视频教程
 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-UploadFiles.mp4" target="_blank">【上传文件代码】编写示例</a>
@@ -901,9 +901,9 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 - 企业注销授权书
 
 注: 需自行保证传入真实的企业/法人/超管信息，否则后续的审核将会拒绝。
- * @method Models\CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrl(Models\CreatePartnerAutoSignAuthUrlRequest $req) 创建一个用于他方自动签授权的链接（可选择他方授权或我方授权）。通过这个链接，合作方企业可以直接进入小程序，进行自动签授权操作。
+ * @method Models\CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrl(Models\CreatePartnerAutoSignAuthUrlRequest $req) 创建一个用于他方【授权签】授权的链接（可选择他方授权或我方授权）。通过这个链接，合作方企业可以直接进入小程序，进行【授权签】授权操作。
 
-如果授权企业尚未开通企业自动签功能，该链接还将引导他们首先开通本企业的自动签服务
+如果授权企业尚未开通企业【授权签】功能，该链接还将引导他们首先开通本企业的【授权签】服务
 
 
 注: 
@@ -912,7 +912,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 3. 授权企业和被授权企业必须都是已认证企业
 4. <font color='red'>需要授权企业或被授权企业的超管或者法人打开链接</font>走开通逻辑。
 
-**该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权**
+**该接口效果同控制台： 企业设置-> 扩展服务 -> 企业授权签署 -> 合作企业方授权**
 ![image](https://qcloudimg.tencent-cloud.cn/raw/091823fd4f02af7dda416fa10ca65f2d.png)
  * @method Models\CreatePersonAuthCertificateImageResponse CreatePersonAuthCertificateImage(Models\CreatePersonAuthCertificateImageRequest $req) 获取个人用户认证证书图片下载URL
 
@@ -1294,9 +1294,9 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 
 * **变更直接成功/确认成功后**：触发 [企业基础信息修改通知回调](https://qian.tencent.com/developers/partner/callback_types_staffs#%E5%8D%81%E5%9B%9B-%E4%BC%81%E4%B8%9A%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF%E4%BF%AE%E6%94%B9%E9%80%9A%E7%9F%A5)
 * **人工收录审核产生结果后**：触发 [企业收录申请审核结果回调](https://qian.tencent.com/developers/partner/callback_types_staffs#%E5%8D%81%E5%85%AD-%E4%BC%81%E4%B8%9A%E6%94%B6%E5%BD%95%E7%94%B3%E8%AF%B7%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)
- * @method Models\ModifyPartnerAutoSignAuthUrlResponse ModifyPartnerAutoSignAuthUrl(Models\ModifyPartnerAutoSignAuthUrlRequest $req) 创建一个用于更新他方自动签授权的链接（可选择他方授权或我方授权）。通过这个链接，合作方企业可以直接进入小程序，进行自动签更新授权（印章）操作。
+ * @method Models\ModifyPartnerAutoSignAuthUrlResponse ModifyPartnerAutoSignAuthUrl(Models\ModifyPartnerAutoSignAuthUrlRequest $req) 创建一个用于更新他方授权签授权的链接（可选择他方授权或我方授权）。通过这个链接，合作方企业可以直接进入小程序，进行授权签更新授权（印章）操作。
 
-如果授权企业尚未开通企业自动签功能，该链接还将引导他们首先开通本企业的自动签服务
+如果授权企业尚未开通企业授权签功能，该链接还将引导他们首先开通本企业的授权签服务
 
 
 注: 

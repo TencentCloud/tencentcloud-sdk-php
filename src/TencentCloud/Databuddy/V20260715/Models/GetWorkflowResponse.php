@@ -14,23 +14,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Databuddy\V20260715\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ReassociateBusinessLogConfig返回参数结构体
+ * GetWorkflow返回参数结构体
  *
+ * @method GetWorkflowRsp getData() 获取<p>获取工作流详细信息响应内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(GetWorkflowRsp $Data) 设置<p>获取工作流详细信息响应内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ReassociateBusinessLogConfigResponse extends AbstractModel
+class GetWorkflowResponse extends AbstractModel
 {
+    /**
+     * @var GetWorkflowRsp <p>获取工作流详细信息响应内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Data;
+
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param GetWorkflowRsp $Data <p>获取工作流详细信息响应内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +58,11 @@ class ReassociateBusinessLogConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new GetWorkflowRsp();
+            $this->Data->deserialize($param["Data"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

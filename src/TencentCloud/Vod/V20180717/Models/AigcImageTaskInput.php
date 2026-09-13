@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeed(integer $Seed) 设置<p>模型随机种子。</p>
  * @method string getSceneType() 获取<p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
  * @method void setSceneType(string $SceneType) 设置<p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+ * @method string getExtInfo() 获取<p>透传参数。</p>
+ * @method void setExtInfo(string $ExtInfo) 设置<p>透传参数。</p>
  */
 class AigcImageTaskInput extends AbstractModel
 {
@@ -94,6 +96,11 @@ class AigcImageTaskInput extends AbstractModel
     public $SceneType;
 
     /**
+     * @var string <p>透传参数。</p>
+     */
+    public $ExtInfo;
+
+    /**
      * @param string $ModelName <p>模型名称。</p>
      * @param string $ModelVersion <p>模型版本。</p>
      * @param array $FileInfos <p>AIGC生图任务输入文件信息。</p>
@@ -104,6 +111,7 @@ class AigcImageTaskInput extends AbstractModel
      * @param AigcImageOutputConfig $OutputConfig <p>AIGC 生图输出结果文件输出。</p>
      * @param integer $Seed <p>模型随机种子。</p>
      * @param string $SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+     * @param string $ExtInfo <p>透传参数。</p>
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class AigcImageTaskInput extends AbstractModel
 
         if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
             $this->SceneType = $param["SceneType"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

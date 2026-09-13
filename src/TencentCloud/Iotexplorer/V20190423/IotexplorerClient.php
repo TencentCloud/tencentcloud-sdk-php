@@ -26,7 +26,9 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ActivateTWeCallLicenseResponse ActivateTWeCallLicense(Models\ActivateTWeCallLicenseRequest $req) 激活
  * @method Models\ActivateTWeTalkResponse ActivateTWeTalk(Models\ActivateTWeTalkRequest $req) TWeTalk设备激活接口。
  * @method Models\BatchCreateTWeSeeRecognitionTaskResponse BatchCreateTWeSeeRecognitionTask(Models\BatchCreateTWeSeeRecognitionTaskRequest $req) 批量同步执行 TWeSee 语义理解任务
+ * @method Models\BatchCreateTWeSeeSubscriptionResponse BatchCreateTWeSeeSubscription(Models\BatchCreateTWeSeeSubscriptionRequest $req) 批量开通 TWeSee 预付费订阅
  * @method Models\BatchInvokeTWeSeeRecognitionTaskResponse BatchInvokeTWeSeeRecognitionTask(Models\BatchInvokeTWeSeeRecognitionTaskRequest $req) 批量同步执行 TWeSee 语义理解任务
+ * @method Models\BatchRenewTWeSeeSubscriptionResponse BatchRenewTWeSeeSubscription(Models\BatchRenewTWeSeeSubscriptionRequest $req) 批量续费 TWeSee 预付费订阅
  * @method Models\BatchUpdateFirmwareResponse BatchUpdateFirmware(Models\BatchUpdateFirmwareRequest $req) 本接口（BatchUpdateFirmware）用于批量更新设备固件
  * @method Models\BindCloudStorageUserResponse BindCloudStorageUser(Models\BindCloudStorageUserRequest $req) 绑定云存用户
  * @method Models\BindDevicesResponse BindDevices(Models\BindDevicesRequest $req) 批量绑定子设备

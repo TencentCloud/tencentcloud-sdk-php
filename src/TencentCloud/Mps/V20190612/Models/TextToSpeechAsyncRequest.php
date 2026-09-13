@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) 设置<p>语音合成文本</p>
  * @method string getVoiceId() 获取<p>音色ID</p>
  * @method void setVoiceId(string $VoiceId) 设置<p>音色ID</p>
- * @method string getTextLang() 获取<p>文本语言，默认中文</p>
- * @method void setTextLang(string $TextLang) 设置<p>文本语言，默认中文</p>
+ * @method string getTextLang() 获取<p>文本语言，不填时默认自动探测</p>
+ * @method void setTextLang(string $TextLang) 设置<p>文本语言，不填时默认自动探测</p>
  * @method string getExtParam() 获取<p>扩展参数，json字符串</p><p>synExt Object 语音合成扩展参数<br>  duration Float 合成音频时长，单位秒，示例：5.2<br>  sampleRate Integer 合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>  pitch Integer 音调，默认0原音色输出，取值[-12, 12]</p><p>transExt Object 翻译扩展参数<br>  transInfo Object<br>   transDst String 目标语言，如en<br>  transRequirement String 翻译要求</p>
  * @method void setExtParam(string $ExtParam) 设置<p>扩展参数，json字符串</p><p>synExt Object 语音合成扩展参数<br>  duration Float 合成音频时长，单位秒，示例：5.2<br>  sampleRate Integer 合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>  pitch Integer 音调，默认0原音色输出，取值[-12, 12]</p><p>transExt Object 翻译扩展参数<br>  transInfo Object<br>   transDst String 目标语言，如en<br>  transRequirement String 翻译要求</p>
  */
@@ -42,7 +42,7 @@ class TextToSpeechAsyncRequest extends AbstractModel
     public $VoiceId;
 
     /**
-     * @var string <p>文本语言，默认中文</p>
+     * @var string <p>文本语言，不填时默认自动探测</p>
      */
     public $TextLang;
 
@@ -54,7 +54,7 @@ class TextToSpeechAsyncRequest extends AbstractModel
     /**
      * @param string $Text <p>语音合成文本</p>
      * @param string $VoiceId <p>音色ID</p>
-     * @param string $TextLang <p>文本语言，默认中文</p>
+     * @param string $TextLang <p>文本语言，不填时默认自动探测</p>
      * @param string $ExtParam <p>扩展参数，json字符串</p><p>synExt Object 语音合成扩展参数<br>  duration Float 合成音频时长，单位秒，示例：5.2<br>  sampleRate Integer 合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>  pitch Integer 音调，默认0原音色输出，取值[-12, 12]</p><p>transExt Object 翻译扩展参数<br>  transInfo Object<br>   transDst String 目标语言，如en<br>  transRequirement String 翻译要求</p>
      */
     function __construct()

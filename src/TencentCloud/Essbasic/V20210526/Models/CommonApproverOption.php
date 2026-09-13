@@ -19,7 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 签署人配置信息。
-此参数对子客和自动签无效，不允许进行修改。
+此参数对子客和“授权签”无效，不允许进行修改。
  *
  * @method boolean getCanEditApprover() 获取<p>是否允许修改签署人信息</p>
  * @method void setCanEditApprover(boolean $CanEditApprover) 设置<p>是否允许修改签署人信息</p>

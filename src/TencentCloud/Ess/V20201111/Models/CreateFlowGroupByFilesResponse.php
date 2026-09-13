@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowGroupByFiles返回参数结构体
  *
- * @method string getFlowGroupId() 获取合同(流程)组的合同组Id
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同(流程)组的合同组Id
- * @method array getFlowIds() 获取合同(流程)组中子合同列表.
- * @method void setFlowIds(array $FlowIds) 设置合同(流程)组中子合同列表.
- * @method array getApprovers() 获取合同组签署方信息。
- * @method void setApprovers(array $Approvers) 设置合同组签署方信息。
- * @method string getWorkflowInstanceId() 获取发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回
- * @method void setWorkflowInstanceId(string $WorkflowInstanceId) 设置发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回
+ * @method string getFlowGroupId() 获取<p>合同(流程)组的合同组Id</p>
+ * @method void setFlowGroupId(string $FlowGroupId) 设置<p>合同(流程)组的合同组Id</p>
+ * @method array getFlowIds() 获取<p>合同(流程)组中子合同列表.</p>
+ * @method void setFlowIds(array $FlowIds) 设置<p>合同(流程)组中子合同列表.</p>
+ * @method array getApprovers() 获取<p>合同组签署方信息。</p>
+ * @method void setApprovers(array $Approvers) 设置<p>合同组签署方信息。</p>
+ * @method string getWorkflowInstanceId() 获取<p>发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回</p>
+ * @method void setWorkflowInstanceId(string $WorkflowInstanceId) 设置<p>发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateFlowGroupByFilesResponse extends AbstractModel
 {
     /**
-     * @var string 合同(流程)组的合同组Id
+     * @var string <p>合同(流程)组的合同组Id</p>
      */
     public $FlowGroupId;
 
     /**
-     * @var array 合同(流程)组中子合同列表.
+     * @var array <p>合同(流程)组中子合同列表.</p>
      */
     public $FlowIds;
 
     /**
-     * @var array 合同组签署方信息。
+     * @var array <p>合同组签署方信息。</p>
      */
     public $Approvers;
 
     /**
-     * @var string 发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回
+     * @var string <p>发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回</p>
      */
     public $WorkflowInstanceId;
 
@@ -59,10 +59,10 @@ class CreateFlowGroupByFilesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowGroupId 合同(流程)组的合同组Id
-     * @param array $FlowIds 合同(流程)组中子合同列表.
-     * @param array $Approvers 合同组签署方信息。
-     * @param string $WorkflowInstanceId 发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回
+     * @param string $FlowGroupId <p>合同(流程)组的合同组Id</p>
+     * @param array $FlowIds <p>合同(流程)组中子合同列表.</p>
+     * @param array $Approvers <p>合同组签署方信息。</p>
+     * @param string $WorkflowInstanceId <p>发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

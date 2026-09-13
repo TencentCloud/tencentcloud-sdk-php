@@ -205,9 +205,6 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\ModifyUploadInfoResponse ModifyUploadInfo(Models\ModifyUploadInfoRequest $req) 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。
  * @method Models\OperateApplicationTcrBindingResponse OperateApplicationTcrBinding(Models\OperateApplicationTcrBindingRequest $req) 绑定解绑tcr仓库
- * @method Models\ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(Models\ReassociateBusinessLogConfigRequest $req) 后端服务已经删除这个接口,  API 接口下线处理
-
-重关联业务日志配置
  * @method Models\ReleaseApiGroupResponse ReleaseApiGroup(Models\ReleaseApiGroupRequest $req) 发布Api分组
  * @method Models\ReleaseConfigResponse ReleaseConfig(Models\ReleaseConfigRequest $req) 发布配置
  * @method Models\ReleaseConfigWithDetailRespResponse ReleaseConfigWithDetailResp(Models\ReleaseConfigWithDetailRespRequest $req) 发布配置，并且返回配置ID。

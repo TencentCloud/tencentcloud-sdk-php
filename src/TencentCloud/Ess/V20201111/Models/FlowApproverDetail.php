@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignOrder(integer $SignOrder) 设置<p>签署顺序，如果是有序签署，签署顺序从小到大</p>
  * @method integer getApproveTime() 获取<p>签署人签署时间，时间戳，单位秒</p>
  * @method void setApproveTime(integer $ApproveTime) 设置<p>签署人签署时间，时间戳，单位秒</p>
- * @method string getApproveType() 获取<p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
- * @method void setApproveType(string $ApproveType) 设置<p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
+ * @method string getApproveType() 获取<p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业“授权签”</p>
+ * @method void setApproveType(string $ApproveType) 设置<p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业“授权签”</p>
  * @method string getApproverSource() 获取<p>签署方侧用户来源，如WEWORKAPP-企业微信等</p>
  * @method void setApproverSource(string $ApproverSource) 设置<p>签署方侧用户来源，如WEWORKAPP-企业微信等</p>
  * @method string getCustomApproverTag() 获取<p>客户自定义签署方标识</p>
@@ -99,7 +99,7 @@ class FlowApproverDetail extends AbstractModel
     public $ApproveTime;
 
     /**
-     * @var string <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
+     * @var string <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业“授权签”</p>
      */
     public $ApproveType;
 
@@ -152,7 +152,7 @@ class FlowApproverDetail extends AbstractModel
      * @param string $Mobile <p>签署人手机号</p>
      * @param integer $SignOrder <p>签署顺序，如果是有序签署，签署顺序从小到大</p>
      * @param integer $ApproveTime <p>签署人签署时间，时间戳，单位秒</p>
-     * @param string $ApproveType <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
+     * @param string $ApproveType <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业“授权签”</p>
      * @param string $ApproverSource <p>签署方侧用户来源，如WEWORKAPP-企业微信等</p>
      * @param string $CustomApproverTag <p>客户自定义签署方标识</p>
      * @param string $OrganizationId <p>签署方企业Id</p>

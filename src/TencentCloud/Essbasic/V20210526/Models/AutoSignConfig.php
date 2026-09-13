@@ -18,7 +18,7 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 自动签开启、签署相关配置
+ * “授权签”开启、签署相关配置
  *
  * @method UserThreeFactor getUserInfo() 获取<p>自动签开通个人用户信息, 包括名字,身份证等</p>
  * @method void setUserInfo(UserThreeFactor $UserInfo) 设置<p>自动签开通个人用户信息, 包括名字,身份证等</p>

@@ -20,158 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyExtendedService请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method string getServiceType() 获取要管理的拓展服务类型。
-<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
-<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
-<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
-<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
-<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
-<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
-<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
-<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
-<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
-<li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
-<li>APP_LOGIN：限制企业员工小程序端登录</li>
-<li>PC_LOGIN：限制企业员工网页端登录</li>
-</ul>
- * @method void setServiceType(string $ServiceType) 设置要管理的拓展服务类型。
-<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
-<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
-<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
-<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
-<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
-<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
-<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
-<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
-<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
-<li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
-<li>APP_LOGIN：限制企业员工小程序端登录</li>
-<li>PC_LOGIN：限制企业员工网页端登录</li>
-</ul>
- * @method string getOperate() 获取操作类型
-<ul>
-<li>OPEN : 开通</li>
-<li>CLOSE : 关闭</li>
-</ul>
- * @method void setOperate(string $Operate) 设置操作类型
-<ul>
-<li>OPEN : 开通</li>
-<li>CLOSE : 关闭</li>
-</ul>
- * @method Agent getAgent() 获取代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method string getEndpoint() 获取链接跳转类型，支持以下类型
-<ul>
-<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li>
-<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
-</ul>
- * @method void setEndpoint(string $Endpoint) 设置链接跳转类型，支持以下类型
-<ul>
-<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li>
-<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
-</ul>
+ * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method string getServiceType() 获取<p>要管理的拓展服务类型。<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>AUTO_SIGN_CAN_FILL_IN：本企业“授权签”合同支持签前内容补充</li><li>OVERSEA_SIGN：企业与港澳台居民签署合同</li><li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li><li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li><li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li><li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li><li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li><li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li><li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li><li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li><li>FLOW_APPROVAL：合同审批强制开启</li><li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li><li>APP_LOGIN：限制企业员工小程序端登录</li><li>PC_LOGIN：限制企业员工网页端登录</li></ul></p>
+ * @method void setServiceType(string $ServiceType) 设置<p>要管理的拓展服务类型。<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>AUTO_SIGN_CAN_FILL_IN：本企业“授权签”合同支持签前内容补充</li><li>OVERSEA_SIGN：企业与港澳台居民签署合同</li><li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li><li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li><li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li><li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li><li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li><li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li><li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li><li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li><li>FLOW_APPROVAL：合同审批强制开启</li><li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li><li>APP_LOGIN：限制企业员工小程序端登录</li><li>PC_LOGIN：限制企业员工网页端登录</li></ul></p>
+ * @method string getOperate() 获取<p>操作类型</p><ul><li>OPEN : 开通</li><li>CLOSE : 关闭</li></ul>
+ * @method void setOperate(string $Operate) 设置<p>操作类型</p><ul><li>OPEN : 开通</li><li>CLOSE : 关闭</li></ul>
+ * @method Agent getAgent() 获取<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method void setAgent(Agent $Agent) 设置<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method string getEndpoint() 获取<p>链接跳转类型，支持以下类型</p><ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li><li>APP : 第三方APP或小程序跳转电子签小程序</li><li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li></ul>
+ * @method void setEndpoint(string $Endpoint) 设置<p>链接跳转类型，支持以下类型</p><ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li><li>APP : 第三方APP或小程序跳转电子签小程序</li><li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li></ul>
  */
 class ModifyExtendedServiceRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @var UserInfo <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public $Operator;
 
     /**
-     * @var string 要管理的拓展服务类型。
-<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
-<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
-<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
-<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
-<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
-<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
-<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
-<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
-<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
-<li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
-<li>APP_LOGIN：限制企业员工小程序端登录</li>
-<li>PC_LOGIN：限制企业员工网页端登录</li>
-</ul>
+     * @var string <p>要管理的拓展服务类型。<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>AUTO_SIGN_CAN_FILL_IN：本企业“授权签”合同支持签前内容补充</li><li>OVERSEA_SIGN：企业与港澳台居民签署合同</li><li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li><li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li><li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li><li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li><li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li><li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li><li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li><li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li><li>FLOW_APPROVAL：合同审批强制开启</li><li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li><li>APP_LOGIN：限制企业员工小程序端登录</li><li>PC_LOGIN：限制企业员工网页端登录</li></ul></p>
      */
     public $ServiceType;
 
     /**
-     * @var string 操作类型
-<ul>
-<li>OPEN : 开通</li>
-<li>CLOSE : 关闭</li>
-</ul>
+     * @var string <p>操作类型</p><ul><li>OPEN : 开通</li><li>CLOSE : 关闭</li></ul>
      */
     public $Operate;
 
     /**
-     * @var Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public $Agent;
 
     /**
-     * @var string 链接跳转类型，支持以下类型
-<ul>
-<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li>
-<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
-</ul>
+     * @var string <p>链接跳转类型，支持以下类型</p><ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li><li>APP : 第三方APP或小程序跳转电子签小程序</li><li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li></ul>
      */
     public $Endpoint;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $ServiceType 要管理的拓展服务类型。
-<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
-<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
-<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
-<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
-<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
-<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
-<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
-<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
-<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
-<li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
-<li>APP_LOGIN：限制企业员工小程序端登录</li>
-<li>PC_LOGIN：限制企业员工网页端登录</li>
-</ul>
-     * @param string $Operate 操作类型
-<ul>
-<li>OPEN : 开通</li>
-<li>CLOSE : 关闭</li>
-</ul>
-     * @param Agent $Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param string $Endpoint 链接跳转类型，支持以下类型
-<ul>
-<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li>
-<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
-</ul>
+     * @param UserInfo $Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param string $ServiceType <p>要管理的拓展服务类型。<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>AUTO_SIGN_CAN_FILL_IN：本企业“授权签”合同支持签前内容补充</li><li>OVERSEA_SIGN：企业与港澳台居民签署合同</li><li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li><li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li><li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li><li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li><li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li><li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li><li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li><li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li><li>FLOW_APPROVAL：合同审批强制开启</li><li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li><li>APP_LOGIN：限制企业员工小程序端登录</li><li>PC_LOGIN：限制企业员工网页端登录</li></ul></p>
+     * @param string $Operate <p>操作类型</p><ul><li>OPEN : 开通</li><li>CLOSE : 关闭</li></ul>
+     * @param Agent $Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param string $Endpoint <p>链接跳转类型，支持以下类型</p><ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li><li>APP : 第三方APP或小程序跳转电子签小程序</li><li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li></ul>
      */
     function __construct()
     {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDimension() 获取<p>回填请求的统计维度。</p>
  * @method void setDimension(string $Dimension) 设置<p>回填请求的统计维度。</p>
- * @method string getMetricType() 获取<p>回填请求的指标族：tokens / search 。</p>
- * @method void setMetricType(string $MetricType) 设置<p>回填请求的指标族：tokens / search 。</p>
- * @method array getMetricKeys() 获取<p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
- * @method void setMetricKeys(array $MetricKeys) 设置<p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+ * @method string getMetricType() 获取<p>回填请求的指标族：取值同入参 MetricType（tokens / search / apikey_usage）</p><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+ * @method void setMetricType(string $MetricType) 设置<p>回填请求的指标族：取值同入参 MetricType（tokens / search / apikey_usage）</p><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+ * @method array getMetricKeys() 获取<p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：<br>tokens=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken]<br>search=[SearchRequestCount,SearchCount]<br>apikey_usage=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken, RequestCount, RequestFailCount]</p>
+ * @method void setMetricKeys(array $MetricKeys) 设置<p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：<br>tokens=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken]<br>search=[SearchRequestCount,SearchCount]<br>apikey_usage=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken, RequestCount, RequestFailCount]</p>
  * @method string getViewName() 获取<p>视图（数据来源）</p>
  * @method void setViewName(string $ViewName) 设置<p>视图（数据来源）</p>
  * @method integer getPeriod() 获取<p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
@@ -42,12 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置<p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
  * @method array getTimestamps() 获取<p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
  * @method void setTimestamps(array $Timestamps) 设置<p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
- * @method array getTopList() 获取<p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
- * @method void setTopList(array $TopList) 设置<p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+ * @method array getTopList() 获取<p>对象排行列表，按 SortKey 降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+ * @method void setTopList(array $TopList) 设置<p>对象排行列表，按 SortKey 降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
  * @method UsageStats getPageStats() 获取<p>分页统计结果</p>
  * @method void setPageStats(UsageStats $PageStats) 设置<p>分页统计结果</p>
  * @method UsageStats getTotalStats() 获取<p>总统计结果</p>
  * @method void setTotalStats(UsageStats $TotalStats) 设置<p>总统计结果</p>
+ * @method string getSortKey() 获取<p>排序指标键</p>
+ * @method void setSortKey(string $SortKey) 设置<p>排序指标键</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -59,12 +61,12 @@ class DescribeUsageRankListResponse extends AbstractModel
     public $Dimension;
 
     /**
-     * @var string <p>回填请求的指标族：tokens / search 。</p>
+     * @var string <p>回填请求的指标族：取值同入参 MetricType（tokens / search / apikey_usage）</p><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
      */
     public $MetricType;
 
     /**
-     * @var array <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+     * @var array <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：<br>tokens=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken]<br>search=[SearchRequestCount,SearchCount]<br>apikey_usage=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken, RequestCount, RequestFailCount]</p>
      */
     public $MetricKeys;
 
@@ -109,7 +111,7 @@ class DescribeUsageRankListResponse extends AbstractModel
     public $Timestamps;
 
     /**
-     * @var array <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+     * @var array <p>对象排行列表，按 SortKey 降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
      */
     public $TopList;
 
@@ -124,14 +126,19 @@ class DescribeUsageRankListResponse extends AbstractModel
     public $TotalStats;
 
     /**
+     * @var string <p>排序指标键</p>
+     */
+    public $SortKey;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $Dimension <p>回填请求的统计维度。</p>
-     * @param string $MetricType <p>回填请求的指标族：tokens / search 。</p>
-     * @param array $MetricKeys <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+     * @param string $MetricType <p>回填请求的指标族：取值同入参 MetricType（tokens / search / apikey_usage）</p><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+     * @param array $MetricKeys <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：<br>tokens=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken]<br>search=[SearchRequestCount,SearchCount]<br>apikey_usage=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken, RequestCount, RequestFailCount]</p>
      * @param string $ViewName <p>视图（数据来源）</p>
      * @param integer $Period <p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
      * @param string $StartTime <p>回填请求的起始时间。</p>
@@ -140,9 +147,10 @@ class DescribeUsageRankListResponse extends AbstractModel
      * @param integer $Offset <p>回填请求的翻页起点。ShowAll=true 时为 0。</p>
      * @param integer $Limit <p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
      * @param array $Timestamps <p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
-     * @param array $TopList <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+     * @param array $TopList <p>对象排行列表，按 SortKey 降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
      * @param UsageStats $PageStats <p>分页统计结果</p>
      * @param UsageStats $TotalStats <p>总统计结果</p>
+     * @param string $SortKey <p>排序指标键</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -219,6 +227,10 @@ class DescribeUsageRankListResponse extends AbstractModel
         if (array_key_exists("TotalStats",$param) and $param["TotalStats"] !== null) {
             $this->TotalStats = new UsageStats();
             $this->TotalStats->deserialize($param["TotalStats"]);
+        }
+
+        if (array_key_exists("SortKey",$param) and $param["SortKey"] !== null) {
+            $this->SortKey = $param["SortKey"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

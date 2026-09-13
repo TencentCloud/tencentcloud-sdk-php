@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
  * @method string getIdCardType() 获取<p>证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li><li>OTHER_CARD_TYPE : 其他</li></ul><p>注: <code>其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
  * @method void setIdCardType(string $IdCardType) 设置<p>证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li><li>OTHER_CARD_TYPE : 其他</li></ul><p>注: <code>其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
- * @method string getMobile() 获取<p>手机号码；当需要开通自动签时，该参数必传</p>
- * @method void setMobile(string $Mobile) 设置<p>手机号码；当需要开通自动签时，该参数必传</p>
+ * @method string getMobile() 获取<p>手机号码；当需要开通授权签时，该参数必传</p>
+ * @method void setMobile(string $Mobile) 设置<p>手机号码；当需要开通授权签时，该参数必传</p>
  * @method string getFileId() 获取<p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
  * @method void setFileId(string $FileId) 设置<p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
  * @method string getSceneKey() 获取<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
@@ -80,7 +80,7 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
     public $IdCardType;
 
     /**
-     * @var string <p>手机号码；当需要开通自动签时，该参数必传</p>
+     * @var string <p>手机号码；当需要开通授权签时，该参数必传</p>
      */
     public $Mobile;
 
@@ -125,7 +125,7 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
      * @param string $SealName <p>电子印章名字，1-50个中文字符<br>注:<code>同一企业下电子印章名字不能相同</code></p>
      * @param UserInfo $Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      * @param string $IdCardType <p>证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li><li>OTHER_CARD_TYPE : 其他</li></ul><p>注: <code>其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
-     * @param string $Mobile <p>手机号码；当需要开通自动签时，该参数必传</p>
+     * @param string $Mobile <p>手机号码；当需要开通授权签时，该参数必传</p>
      * @param string $FileId <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
      * @param string $SceneKey <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      * @param integer $LicenseType <p>该字段已不再使用，设置不生效。</p>

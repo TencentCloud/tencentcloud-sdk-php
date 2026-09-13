@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBatchInitOrganizationUrl返回参数结构体
  *
- * @method string getMiniAppPath() 获取小程序路径
- * @method void setMiniAppPath(string $MiniAppPath) 设置小程序路径
- * @method string getOperateLongUrl() 获取操作长链
- * @method void setOperateLongUrl(string $OperateLongUrl) 设置操作长链
- * @method string getOperateShortUrl() 获取操作短链
- * @method void setOperateShortUrl(string $OperateShortUrl) 设置操作短链
- * @method string getQRCodeUrl() 获取操作二维码
- * @method void setQRCodeUrl(string $QRCodeUrl) 设置操作二维码
+ * @method string getMiniAppPath() 获取<p>小程序路径</p>
+ * @method void setMiniAppPath(string $MiniAppPath) 设置<p>小程序路径</p>
+ * @method string getOperateLongUrl() 获取<p>操作长链</p>
+ * @method void setOperateLongUrl(string $OperateLongUrl) 设置<p>操作长链</p>
+ * @method string getOperateShortUrl() 获取<p>操作短链</p>
+ * @method void setOperateShortUrl(string $OperateShortUrl) 设置<p>操作短链</p>
+ * @method string getQRCodeUrl() 获取<p>操作二维码</p>
+ * @method void setQRCodeUrl(string $QRCodeUrl) 设置<p>操作二维码</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateBatchInitOrganizationUrlResponse extends AbstractModel
 {
     /**
-     * @var string 小程序路径
+     * @var string <p>小程序路径</p>
      */
     public $MiniAppPath;
 
     /**
-     * @var string 操作长链
+     * @var string <p>操作长链</p>
      */
     public $OperateLongUrl;
 
     /**
-     * @var string 操作短链
+     * @var string <p>操作短链</p>
      */
     public $OperateShortUrl;
 
     /**
-     * @var string 操作二维码
+     * @var string <p>操作二维码</p>
      */
     public $QRCodeUrl;
 
@@ -59,10 +59,10 @@ class CreateBatchInitOrganizationUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MiniAppPath 小程序路径
-     * @param string $OperateLongUrl 操作长链
-     * @param string $OperateShortUrl 操作短链
-     * @param string $QRCodeUrl 操作二维码
+     * @param string $MiniAppPath <p>小程序路径</p>
+     * @param string $OperateLongUrl <p>操作长链</p>
+     * @param string $OperateShortUrl <p>操作短链</p>
+     * @param string $QRCodeUrl <p>操作二维码</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

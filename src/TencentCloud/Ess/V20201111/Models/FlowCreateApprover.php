@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建流程的签署方信息
  *
- * @method integer getApproverType() 获取<p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：</p><ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，自动签署可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">自动签署使用说明</a>文档。</li><li> <b>7</b> :个人C端自动签署，适用于个人自动签场景。注: <b>个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul>
- * @method void setApproverType(integer $ApproverType) 设置<p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：</p><ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，自动签署可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">自动签署使用说明</a>文档。</li><li> <b>7</b> :个人C端自动签署，适用于个人自动签场景。注: <b>个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul>
- * @method string getOrganizationName() 获取<p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p><p>注: <code>当approverType=0(企业签署方) 或 approverType=3(企业静默签署)时，必须指定</code></p>
- * @method void setOrganizationName(string $OrganizationName) 设置<p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p><p>注: <code>当approverType=0(企业签署方) 或 approverType=3(企业静默签署)时，必须指定</code></p>
+ * @method integer getApproverType() 获取<p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>7</b> :个人C端“授权签”，适用于个人“授权签”场景。注: <b>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul></p>
+ * @method void setApproverType(integer $ApproverType) 设置<p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>7</b> :个人C端“授权签”，适用于个人“授权签”场景。注: <b>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul></p>
+ * @method string getOrganizationName() 获取<p>组织机构名称。请确认该名称与企业营业执照中注册的名称一致。如果名称中包含英文括号()，请使用中文括号（）代替。注: <code>当approverType=0(企业签署方) 或 approverType=3(企业“授权签”)时，必须指定</code></p>
+ * @method void setOrganizationName(string $OrganizationName) 设置<p>组织机构名称。请确认该名称与企业营业执照中注册的名称一致。如果名称中包含英文括号()，请使用中文括号（）代替。注: <code>当approverType=0(企业签署方) 或 approverType=3(企业“授权签”)时，必须指定</code></p>
  * @method string getApproverName() 获取<p>签署方经办人的姓名。<br>经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p><p>在未指定签署人电子签UserId情况下，为必填参数</p>
  * @method void setApproverName(string $ApproverName) 设置<p>签署方经办人的姓名。<br>经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p><p>在未指定签署人电子签UserId情况下，为必填参数</p>
  * @method string getApproverMobile() 获取<p>签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 此手机号用于通知和用户的实名认证等环境，请确认手机号所有方为此合同签署方。</p><p>注：<code>在未指定签署人电子签UserId情况下，为必填参数</code></p>
@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJumpUrl(string $JumpUrl) 设置<p>签署完前端跳转的url，暂未使用</p>
  * @method string getSignId() 获取<p>签署人的签署ID</p><ul><li>在CreateFlow、CreatePrepareFlow等发起流程时不需要传入此参数，电子签后台系统会自动生成。</li><li>在CreateFlowSignUrl、CreateBatchQuickSignUrl等生成签署链接时，可以通过查询详情接口获取签署人的SignId，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</li></ul>
  * @method void setSignId(string $SignId) 设置<p>签署人的签署ID</p><ul><li>在CreateFlow、CreatePrepareFlow等发起流程时不需要传入此参数，电子签后台系统会自动生成。</li><li>在CreateFlowSignUrl、CreateBatchQuickSignUrl等生成签署链接时，可以通过查询详情接口获取签署人的SignId，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</li></ul>
- * @method boolean getApproverNeedSignReview() 获取<p>此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：</p><ul><li>**false**：（默认）不需要审批，直接签署。</li><li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul><p>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同</code></p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
- * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置<p>此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：</p><ul><li>**false**：（默认）不需要审批，直接签署。</li><li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul><p>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同</code></p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
+ * @method boolean getApproverNeedSignReview() 获取<p>此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：<ul><li><strong>false</strong>：（默认）不需要审批，直接签署。</li><li><strong>true</strong>：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、“授权签”合同</code><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
+ * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置<p>此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：<ul><li><strong>false</strong>：（默认）不需要审批，直接签署。</li><li><strong>true</strong>：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、“授权签”合同</code><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
  * @method array getSignComponents() 获取<p>签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效</p><p>合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体</p><ul><li> 个人签名/印章</li><li> 企业印章</li><li> 骑缝章等签署控件</li></ul><p><code>此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主</code></p>
  * @method void setSignComponents(array $SignComponents) 设置<p>签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效</p><p>合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体</p><ul><li> 个人签名/印章</li><li> 企业印章</li><li> 骑缝章等签署控件</li></ul><p><code>此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主</code></p>
  * @method array getComponents() 获取<p>签署人填写控件 此参数仅针对文件发起（CreateFlowByFiles）生效</p><p>合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体</p><ul><li>单行文本控件</li><li>多行文本控件</li><li>勾选框控件</li><li>数字控件</li><li>图片控件</li><li>动态表格等填写控件</li></ul><p><code>此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主</code></p>
@@ -86,12 +86,12 @@ use TencentCloud\Common\AbstractModel;
 class FlowCreateApprover extends AbstractModel
 {
     /**
-     * @var integer <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：</p><ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，自动签署可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">自动签署使用说明</a>文档。</li><li> <b>7</b> :个人C端自动签署，适用于个人自动签场景。注: <b>个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul>
+     * @var integer <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>7</b> :个人C端“授权签”，适用于个人“授权签”场景。注: <b>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul></p>
      */
     public $ApproverType;
 
     /**
-     * @var string <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p><p>注: <code>当approverType=0(企业签署方) 或 approverType=3(企业静默签署)时，必须指定</code></p>
+     * @var string <p>组织机构名称。请确认该名称与企业营业执照中注册的名称一致。如果名称中包含英文括号()，请使用中文括号（）代替。注: <code>当approverType=0(企业签署方) 或 approverType=3(企业“授权签”)时，必须指定</code></p>
      */
     public $OrganizationName;
 
@@ -182,7 +182,7 @@ class FlowCreateApprover extends AbstractModel
     public $SignId;
 
     /**
-     * @var boolean <p>此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：</p><ul><li>**false**：（默认）不需要审批，直接签署。</li><li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul><p>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同</code></p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
+     * @var boolean <p>此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：<ul><li><strong>false</strong>：（默认）不需要审批，直接签署。</li><li><strong>true</strong>：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、“授权签”合同</code><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
      */
     public $ApproverNeedSignReview;
 
@@ -242,8 +242,8 @@ class FlowCreateApprover extends AbstractModel
     public $ApproverEmail;
 
     /**
-     * @param integer $ApproverType <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：</p><ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，自动签署可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">自动签署使用说明</a>文档。</li><li> <b>7</b> :个人C端自动签署，适用于个人自动签场景。注: <b>个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul>
-     * @param string $OrganizationName <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p><p>注: <code>当approverType=0(企业签署方) 或 approverType=3(企业静默签署)时，必须指定</code></p>
+     * @param integer $ApproverType <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>7</b> :个人C端“授权签”，适用于个人“授权签”场景。注: <b>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul></p>
+     * @param string $OrganizationName <p>组织机构名称。请确认该名称与企业营业执照中注册的名称一致。如果名称中包含英文括号()，请使用中文括号（）代替。注: <code>当approverType=0(企业签署方) 或 approverType=3(企业“授权签”)时，必须指定</code></p>
      * @param string $ApproverName <p>签署方经办人的姓名。<br>经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p><p>在未指定签署人电子签UserId情况下，为必填参数</p>
      * @param string $ApproverMobile <p>签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 此手机号用于通知和用户的实名认证等环境，请确认手机号所有方为此合同签署方。</p><p>注：<code>在未指定签署人电子签UserId情况下，为必填参数</code></p>
      * @param string $ApproverIdCardType <p>证件类型，支持以下类型</p><ul><li><b>ID_CARD</b>: 居民身份证 (默认值)</li><li><b>HONGKONG_AND_MACAO</b> : 港澳居民来往内地通行证</li><li><b>HONGKONG_MACAO_AND_TAIWAN</b> : 港澳台居民居住证(格式同居民身份证)</li></ul>
@@ -261,7 +261,7 @@ class FlowCreateApprover extends AbstractModel
      * @param ApproverOption $ApproverOption <p>签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。</p>
      * @param string $JumpUrl <p>签署完前端跳转的url，暂未使用</p>
      * @param string $SignId <p>签署人的签署ID</p><ul><li>在CreateFlow、CreatePrepareFlow等发起流程时不需要传入此参数，电子签后台系统会自动生成。</li><li>在CreateFlowSignUrl、CreateBatchQuickSignUrl等生成签署链接时，可以通过查询详情接口获取签署人的SignId，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</li></ul>
-     * @param boolean $ApproverNeedSignReview <p>此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：</p><ul><li>**false**：（默认）不需要审批，直接签署。</li><li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul><p>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同</code></p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
+     * @param boolean $ApproverNeedSignReview <p>此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：<ul><li><strong>false</strong>：（默认）不需要审批，直接签署。</li><li><strong>true</strong>：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、“授权签”合同</code><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
      * @param array $SignComponents <p>签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效</p><p>合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体</p><ul><li> 个人签名/印章</li><li> 企业印章</li><li> 骑缝章等签署控件</li></ul><p><code>此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主</code></p>
      * @param array $Components <p>签署人填写控件 此参数仅针对文件发起（CreateFlowByFiles）生效</p><p>合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体</p><ul><li>单行文本控件</li><li>多行文本控件</li><li>勾选框控件</li><li>数字控件</li><li>图片控件</li><li>动态表格等填写控件</li></ul><p><code>此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主</code></p>
      * @param array $ComponentLimitType <p>当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：</p><ul><li> <b>HANDWRITE</b> :需要实时手写的手写签名。</li><li> <b>HANDWRITTEN_ESIGN</b> :长效手写签名， 是使用保存到个人中心的印章列表的手写签名。(并且包含HANDWRITE)</li><li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li><li> <b>ESIGN</b> :个人印章类型。</li><li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li><li> <b>SYSTEM_ESIGN</b> :系统签名。该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署。</li></ul><p>各种签名的样式可以参考下图：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg" alt="image"></p>

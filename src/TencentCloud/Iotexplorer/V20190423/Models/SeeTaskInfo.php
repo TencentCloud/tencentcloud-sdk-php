@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(integer $UpdateTime) 设置<p>最后更新时间</p>
  * @method string getCOSURI() 获取<p>直传 COS 的对象 URI</p>
  * @method void setCOSURI(string $COSURI) 设置<p>直传 COS 的对象 URI</p>
+ * @method string getInputURL() 获取<p>任务的输入 URL</p>
+ * @method void setInputURL(string $InputURL) 设置<p>任务的输入 URL</p>
  */
 class SeeTaskInfo extends AbstractModel
 {
@@ -150,6 +152,11 @@ class SeeTaskInfo extends AbstractModel
     public $COSURI;
 
     /**
+     * @var string <p>任务的输入 URL</p>
+     */
+    public $InputURL;
+
+    /**
      * @param string $TaskId <p>任务 ID</p>
      * @param integer $Status <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
      * @param SeeTaskMetadata $Metadata <p>任务元数据</p>
@@ -168,6 +175,7 @@ class SeeTaskInfo extends AbstractModel
      * @param integer $CreateTime <p>创建时间</p>
      * @param integer $UpdateTime <p>最后更新时间</p>
      * @param string $COSURI <p>直传 COS 的对象 URI</p>
+     * @param string $InputURL <p>任务的输入 URL</p>
      */
     function __construct()
     {
@@ -263,6 +271,10 @@ class SeeTaskInfo extends AbstractModel
 
         if (array_key_exists("COSURI",$param) and $param["COSURI"] !== null) {
             $this->COSURI = $param["COSURI"];
+        }
+
+        if (array_key_exists("InputURL",$param) and $param["InputURL"] !== null) {
+            $this->InputURL = $param["InputURL"];
         }
     }
 }

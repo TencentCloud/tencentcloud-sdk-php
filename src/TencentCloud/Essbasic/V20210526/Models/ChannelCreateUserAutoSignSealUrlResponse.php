@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(string $AppId) 设置<p>腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
  * @method string getAppOriginalId() 获取<p>腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
  * @method void setAppOriginalId(string $AppOriginalId) 设置<p>腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
- * @method string getUrl() 获取<p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
- * @method void setUrl(string $Url) 设置<p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+ * @method string getUrl() 获取<p>个人用户“授权签”的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+ * @method void setUrl(string $Url) 设置<p>个人用户“授权签”的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
  * @method string getPath() 获取<p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
  * @method void setPath(string $Path) 设置<p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
  * @method string getQrCode() 获取<p>base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p>
@@ -46,7 +46,7 @@ class ChannelCreateUserAutoSignSealUrlResponse extends AbstractModel
     public $AppOriginalId;
 
     /**
-     * @var string <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+     * @var string <p>个人用户“授权签”的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
      */
     public $Url;
 
@@ -68,7 +68,7 @@ class ChannelCreateUserAutoSignSealUrlResponse extends AbstractModel
     /**
      * @param string $AppId <p>腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
      * @param string $AppOriginalId <p>腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
-     * @param string $Url <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+     * @param string $Url <p>个人用户“授权签”的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
      * @param string $Path <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
      * @param string $QrCode <p>base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

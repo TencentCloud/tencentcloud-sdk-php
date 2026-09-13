@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelId(integer $ChannelId) 设置<p>通道ID</p>
  * @method string getThumbnail() 获取<p>缩略图路径</p>
  * @method void setThumbnail(string $Thumbnail) 设置<p>缩略图路径</p>
+ * @method string getConfidence() 获取<p>搜索结果置信度</p><p>枚举值：</p><ul><li>high： 高（精准匹配，或包括性的匹配）</li><li>medium： 中（近义匹配）</li><li>low： 低（模糊匹配，部分要素与用户 Query 可能不符合）</li></ul>
+ * @method void setConfidence(string $Confidence) 设置<p>搜索结果置信度</p><p>枚举值：</p><ul><li>high： 高（精准匹配，或包括性的匹配）</li><li>medium： 中（近义匹配）</li><li>low： 低（模糊匹配，部分要素与用户 Query 可能不符合）</li></ul>
+ * @method SeeTaskInfo getTaskInfo() 获取<p>任务信息</p><p>当入参 WithTaskInfo = true 时，出参中会返回任务信息</p>
+ * @method void setTaskInfo(SeeTaskInfo $TaskInfo) 设置<p>任务信息</p><p>当入参 WithTaskInfo = true 时，出参中会返回任务信息</p>
  */
 class TargetInfo extends AbstractModel
 {
@@ -87,6 +91,16 @@ class TargetInfo extends AbstractModel
     public $Thumbnail;
 
     /**
+     * @var string <p>搜索结果置信度</p><p>枚举值：</p><ul><li>high： 高（精准匹配，或包括性的匹配）</li><li>medium： 中（近义匹配）</li><li>low： 低（模糊匹配，部分要素与用户 Query 可能不符合）</li></ul>
+     */
+    public $Confidence;
+
+    /**
+     * @var SeeTaskInfo <p>任务信息</p><p>当入参 WithTaskInfo = true 时，出参中会返回任务信息</p>
+     */
+    public $TaskInfo;
+
+    /**
      * @param string $Id <p>视频唯一ID</p>
      * @param string $ProductId <p>产品ID</p>
      * @param string $DeviceName <p>设备名称</p>
@@ -96,6 +110,8 @@ class TargetInfo extends AbstractModel
      * @param string $Summary <p>视频内容摘要</p>
      * @param integer $ChannelId <p>通道ID</p>
      * @param string $Thumbnail <p>缩略图路径</p>
+     * @param string $Confidence <p>搜索结果置信度</p><p>枚举值：</p><ul><li>high： 高（精准匹配，或包括性的匹配）</li><li>medium： 中（近义匹配）</li><li>low： 低（模糊匹配，部分要素与用户 Query 可能不符合）</li></ul>
+     * @param SeeTaskInfo $TaskInfo <p>任务信息</p><p>当入参 WithTaskInfo = true 时，出参中会返回任务信息</p>
      */
     function __construct()
     {
@@ -144,6 +160,15 @@ class TargetInfo extends AbstractModel
 
         if (array_key_exists("Thumbnail",$param) and $param["Thumbnail"] !== null) {
             $this->Thumbnail = $param["Thumbnail"];
+        }
+
+        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
+            $this->Confidence = $param["Confidence"];
+        }
+
+        if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
+            $this->TaskInfo = new SeeTaskInfo();
+            $this->TaskInfo->deserialize($param["TaskInfo"]);
         }
     }
 }

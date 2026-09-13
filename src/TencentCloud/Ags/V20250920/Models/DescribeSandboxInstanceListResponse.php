@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSandboxInstanceList返回参数结构体
  *
- * @method array getInstanceSet() 获取沙箱实例列表
- * @method void setInstanceSet(array $InstanceSet) 设置沙箱实例列表
- * @method integer getTotalCount() 获取符合条件的实例总数
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例总数
+ * @method array getInstanceSet() 获取<p>沙箱实例列表</p>
+ * @method void setInstanceSet(array $InstanceSet) 设置<p>沙箱实例列表</p>
+ * @method integer getTotalCount() 获取<p>符合条件的实例总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的实例总数</p>
+ * @method string getNextToken() 获取<p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+ * @method void setNextToken(string $NextToken) 设置<p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSandboxInstanceListResponse extends AbstractModel
 {
     /**
-     * @var array 沙箱实例列表
+     * @var array <p>沙箱实例列表</p>
      */
     public $InstanceSet;
 
     /**
-     * @var integer 符合条件的实例总数
+     * @var integer <p>符合条件的实例总数</p>
      */
     public $TotalCount;
+
+    /**
+     * @var string <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+     */
+    public $NextToken;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeSandboxInstanceListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceSet 沙箱实例列表
-     * @param integer $TotalCount 符合条件的实例总数
+     * @param array $InstanceSet <p>沙箱实例列表</p>
+     * @param integer $TotalCount <p>符合条件的实例总数</p>
+     * @param string $NextToken <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeSandboxInstanceListResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
+            $this->NextToken = $param["NextToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

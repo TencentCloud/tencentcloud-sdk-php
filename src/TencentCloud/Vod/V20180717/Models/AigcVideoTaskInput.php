@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSceneType(string $SceneType) 设置<p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
  * @method integer getSeed() 获取<p>模型随机种子。</p>
  * @method void setSeed(integer $Seed) 设置<p>模型随机种子。</p>
+ * @method string getExtInfo() 获取<p>透传参数。</p>
+ * @method void setExtInfo(string $ExtInfo) 设置<p>透传参数。</p>
  */
 class AigcVideoTaskInput extends AbstractModel
 {
@@ -122,6 +124,11 @@ class AigcVideoTaskInput extends AbstractModel
     public $Seed;
 
     /**
+     * @var string <p>透传参数。</p>
+     */
+    public $ExtInfo;
+
+    /**
      * @param string $ModelName <p>模型名称。</p>
      * @param string $ModelVersion <p>模型版本。</p>
      * @param array $FileInfos <p>AIGC 生视频任务输入文件信息。</p>
@@ -136,6 +143,7 @@ class AigcVideoTaskInput extends AbstractModel
      * @param string $InputRegion <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
      * @param string $SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
      * @param integer $Seed <p>模型随机种子。</p>
+     * @param string $ExtInfo <p>透传参数。</p>
      */
     function __construct()
     {
@@ -215,6 +223,10 @@ class AigcVideoTaskInput extends AbstractModel
 
         if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
             $this->Seed = $param["Seed"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

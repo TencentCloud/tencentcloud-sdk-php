@@ -20,153 +20,135 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeThaiIDCardOCR返回参数结构体
  *
- * @method string getID() 获取身份证号码
- * @method void setID(string $ID) 设置身份证号码
- * @method string getThaiName() 获取泰文姓名
- * @method void setThaiName(string $ThaiName) 设置泰文姓名
- * @method string getEnFirstName() 获取英文姓名
- * @method void setEnFirstName(string $EnFirstName) 设置英文姓名
- * @method string getEnLastName() 获取英文姓名
- * @method void setEnLastName(string $EnLastName) 设置英文姓名
- * @method string getIssueDate() 获取泰文签发日期
- * @method void setIssueDate(string $IssueDate) 设置泰文签发日期
- * @method string getExpirationDate() 获取泰文到期日期
- * @method void setExpirationDate(string $ExpirationDate) 设置泰文到期日期
- * @method string getEnIssueDate() 获取英文签发日期
- * @method void setEnIssueDate(string $EnIssueDate) 设置英文签发日期
- * @method string getEnExpirationDate() 获取英文到期日期
- * @method void setEnExpirationDate(string $EnExpirationDate) 设置英文到期日期
- * @method string getBirthday() 获取泰文出生日期
- * @method void setBirthday(string $Birthday) 设置泰文出生日期
- * @method string getEnBirthday() 获取英文出生日期
- * @method void setEnBirthday(string $EnBirthday) 设置英文出生日期
- * @method string getReligion() 获取宗教信仰
- * @method void setReligion(string $Religion) 设置宗教信仰
- * @method string getSerialNumber() 获取序列号
- * @method void setSerialNumber(string $SerialNumber) 设置序列号
- * @method string getAddress() 获取地址
- * @method void setAddress(string $Address) 设置地址
- * @method string getLaserID() 获取背面号码
- * @method void setLaserID(string $LaserID) 设置背面号码
- * @method string getPortraitImage() 获取证件人像照片抠取
- * @method void setPortraitImage(string $PortraitImage) 设置证件人像照片抠取
- * @method array getWarnCardInfos() 获取告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
- * @method void setWarnCardInfos(array $WarnCardInfos) 设置告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
- * @method string getAdvancedInfo() 获取该字段已废弃， 将固定返回"1"，不建议使用。 
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置该字段已废弃， 将固定返回"1"，不建议使用。 
- * @method integer getCardCount() 获取卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
- * @method void setCardCount(integer $CardCount) 设置卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
+ * @method string getID() 获取<p>身份证号码</p>
+ * @method void setID(string $ID) 设置<p>身份证号码</p>
+ * @method string getThaiName() 获取<p>泰文姓名</p>
+ * @method void setThaiName(string $ThaiName) 设置<p>泰文姓名</p>
+ * @method string getEnFirstName() 获取<p>英文姓名</p>
+ * @method void setEnFirstName(string $EnFirstName) 设置<p>英文姓名</p>
+ * @method string getEnLastName() 获取<p>英文姓名</p>
+ * @method void setEnLastName(string $EnLastName) 设置<p>英文姓名</p>
+ * @method string getIssueDate() 获取<p>泰文签发日期</p>
+ * @method void setIssueDate(string $IssueDate) 设置<p>泰文签发日期</p>
+ * @method string getExpirationDate() 获取<p>泰文到期日期</p>
+ * @method void setExpirationDate(string $ExpirationDate) 设置<p>泰文到期日期</p>
+ * @method string getEnIssueDate() 获取<p>英文签发日期</p>
+ * @method void setEnIssueDate(string $EnIssueDate) 设置<p>英文签发日期</p>
+ * @method string getEnExpirationDate() 获取<p>英文到期日期</p>
+ * @method void setEnExpirationDate(string $EnExpirationDate) 设置<p>英文到期日期</p>
+ * @method string getBirthday() 获取<p>泰文出生日期</p>
+ * @method void setBirthday(string $Birthday) 设置<p>泰文出生日期</p>
+ * @method string getEnBirthday() 获取<p>英文出生日期</p>
+ * @method void setEnBirthday(string $EnBirthday) 设置<p>英文出生日期</p>
+ * @method string getReligion() 获取<p>宗教信仰</p>
+ * @method void setReligion(string $Religion) 设置<p>宗教信仰</p>
+ * @method string getSerialNumber() 获取<p>序列号</p>
+ * @method void setSerialNumber(string $SerialNumber) 设置<p>序列号</p>
+ * @method string getAddress() 获取<p>地址</p>
+ * @method void setAddress(string $Address) 设置<p>地址</p>
+ * @method string getLaserID() 获取<p>背面号码</p>
+ * @method void setLaserID(string $LaserID) 设置<p>背面号码</p>
+ * @method string getPortraitImage() 获取<p>证件人像照片抠取</p>
+ * @method void setPortraitImage(string $PortraitImage) 设置<p>证件人像照片抠取</p>
+ * @method array getWarnCardInfos() 获取<p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p>
+ * @method void setWarnCardInfos(array $WarnCardInfos) 设置<p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p>
+ * @method string getAdvancedInfo() 获取<p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置<p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
+ * @method integer getCardCount() 获取<p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
+ * @method void setCardCount(integer $CardCount) 设置<p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RecognizeThaiIDCardOCRResponse extends AbstractModel
 {
     /**
-     * @var string 身份证号码
+     * @var string <p>身份证号码</p>
      */
     public $ID;
 
     /**
-     * @var string 泰文姓名
+     * @var string <p>泰文姓名</p>
      */
     public $ThaiName;
 
     /**
-     * @var string 英文姓名
+     * @var string <p>英文姓名</p>
      */
     public $EnFirstName;
 
     /**
-     * @var string 英文姓名
+     * @var string <p>英文姓名</p>
      */
     public $EnLastName;
 
     /**
-     * @var string 泰文签发日期
+     * @var string <p>泰文签发日期</p>
      */
     public $IssueDate;
 
     /**
-     * @var string 泰文到期日期
+     * @var string <p>泰文到期日期</p>
      */
     public $ExpirationDate;
 
     /**
-     * @var string 英文签发日期
+     * @var string <p>英文签发日期</p>
      */
     public $EnIssueDate;
 
     /**
-     * @var string 英文到期日期
+     * @var string <p>英文到期日期</p>
      */
     public $EnExpirationDate;
 
     /**
-     * @var string 泰文出生日期
+     * @var string <p>泰文出生日期</p>
      */
     public $Birthday;
 
     /**
-     * @var string 英文出生日期
+     * @var string <p>英文出生日期</p>
      */
     public $EnBirthday;
 
     /**
-     * @var string 宗教信仰
+     * @var string <p>宗教信仰</p>
      */
     public $Religion;
 
     /**
-     * @var string 序列号
+     * @var string <p>序列号</p>
      */
     public $SerialNumber;
 
     /**
-     * @var string 地址
+     * @var string <p>地址</p>
      */
     public $Address;
 
     /**
-     * @var string 背面号码
+     * @var string <p>背面号码</p>
      */
     public $LaserID;
 
     /**
-     * @var string 证件人像照片抠取
+     * @var string <p>证件人像照片抠取</p>
      */
     public $PortraitImage;
 
     /**
-     * @var array 告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
+     * @var array <p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p>
      */
     public $WarnCardInfos;
 
     /**
-     * @var string 该字段已废弃， 将固定返回"1"，不建议使用。 
+     * @var string <p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
      * @deprecated
      */
     public $AdvancedInfo;
 
     /**
-     * @var integer 卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
+     * @var integer <p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
      */
     public $CardCount;
 
@@ -176,30 +158,24 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ID 身份证号码
-     * @param string $ThaiName 泰文姓名
-     * @param string $EnFirstName 英文姓名
-     * @param string $EnLastName 英文姓名
-     * @param string $IssueDate 泰文签发日期
-     * @param string $ExpirationDate 泰文到期日期
-     * @param string $EnIssueDate 英文签发日期
-     * @param string $EnExpirationDate 英文到期日期
-     * @param string $Birthday 泰文出生日期
-     * @param string $EnBirthday 英文出生日期
-     * @param string $Religion 宗教信仰
-     * @param string $SerialNumber 序列号
-     * @param string $Address 地址
-     * @param string $LaserID 背面号码
-     * @param string $PortraitImage 证件人像照片抠取
-     * @param array $WarnCardInfos 告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
-     * @param string $AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。 
-     * @param integer $CardCount 卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
+     * @param string $ID <p>身份证号码</p>
+     * @param string $ThaiName <p>泰文姓名</p>
+     * @param string $EnFirstName <p>英文姓名</p>
+     * @param string $EnLastName <p>英文姓名</p>
+     * @param string $IssueDate <p>泰文签发日期</p>
+     * @param string $ExpirationDate <p>泰文到期日期</p>
+     * @param string $EnIssueDate <p>英文签发日期</p>
+     * @param string $EnExpirationDate <p>英文到期日期</p>
+     * @param string $Birthday <p>泰文出生日期</p>
+     * @param string $EnBirthday <p>英文出生日期</p>
+     * @param string $Religion <p>宗教信仰</p>
+     * @param string $SerialNumber <p>序列号</p>
+     * @param string $Address <p>地址</p>
+     * @param string $LaserID <p>背面号码</p>
+     * @param string $PortraitImage <p>证件人像照片抠取</p>
+     * @param array $WarnCardInfos <p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p>
+     * @param string $AdvancedInfo <p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
+     * @param integer $CardCount <p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

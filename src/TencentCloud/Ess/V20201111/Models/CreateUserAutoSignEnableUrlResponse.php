@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserAutoSignEnableUrl返回参数结构体
  *
- * @method string getUrl() 获取<p>个人用户自动签的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
- * @method void setUrl(string $Url) 设置<p>个人用户自动签的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+ * @method string getUrl() 获取<p>个人用户“授权签”的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+ * @method void setUrl(string $Url) 设置<p>个人用户“授权签”的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
  * @method string getAppId() 获取<p>腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
  * @method void setAppId(string $AppId) 设置<p>腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
  * @method string getAppOriginalId() 获取<p>腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateUserAutoSignEnableUrlResponse extends AbstractModel
 {
     /**
-     * @var string <p>个人用户自动签的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+     * @var string <p>个人用户“授权签”的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
      */
     public $Url;
 
@@ -73,7 +73,7 @@ class CreateUserAutoSignEnableUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Url <p>个人用户自动签的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+     * @param string $Url <p>个人用户“授权签”的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
      * @param string $AppId <p>腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
      * @param string $AppOriginalId <p>腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
      * @param string $Path <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>

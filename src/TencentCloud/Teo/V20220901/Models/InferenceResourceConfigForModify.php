@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 推理服务资源配置的修改参数。
  *
- * @method string getScalingMode() 获取扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
- * @method void setScalingMode(string $ScalingMode) 设置扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
- * @method InferenceAutoScalingConfig getAutoScalingConfig() 获取推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
- * @method void setAutoScalingConfig(InferenceAutoScalingConfig $AutoScalingConfig) 设置推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
- * @method InferenceManualInstanceConfig getManualInstanceConfig() 获取推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
- * @method void setManualInstanceConfig(InferenceManualInstanceConfig $ManualInstanceConfig) 设置推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
- * @method integer getConcurrency() 获取单实例的并发数。默认值为 1。
- * @method void setConcurrency(integer $Concurrency) 设置单实例的并发数。默认值为 1。
+ * @method string getScalingMode() 获取<p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
+ * @method void setScalingMode(string $ScalingMode) 设置<p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
+ * @method InferenceAutoScalingConfig getAutoScalingConfig() 获取<p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
+ * @method void setAutoScalingConfig(InferenceAutoScalingConfig $AutoScalingConfig) 设置<p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
+ * @method InferenceManualInstanceConfig getManualInstanceConfig() 获取<p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
+ * @method void setManualInstanceConfig(InferenceManualInstanceConfig $ManualInstanceConfig) 设置<p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
+ * @method integer getConcurrency() 获取<p>单实例的并发数。默认值为 1。</p>
+ * @method void setConcurrency(integer $Concurrency) 设置<p>单实例的并发数。默认值为 1。</p>
+ * @method InferenceHardwareConfigForModify getHardwareConfig() 获取<p>推理服务的硬件资源配置。</p>
+ * @method void setHardwareConfig(InferenceHardwareConfigForModify $HardwareConfig) 设置<p>推理服务的硬件资源配置。</p>
  */
 class InferenceResourceConfigForModify extends AbstractModel
 {
     /**
-     * @var string 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
+     * @var string <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
      */
     public $ScalingMode;
 
     /**
-     * @var InferenceAutoScalingConfig 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
+     * @var InferenceAutoScalingConfig <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
      */
     public $AutoScalingConfig;
 
     /**
-     * @var InferenceManualInstanceConfig 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
+     * @var InferenceManualInstanceConfig <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
      */
     public $ManualInstanceConfig;
 
     /**
-     * @var integer 单实例的并发数。默认值为 1。
+     * @var integer <p>单实例的并发数。默认值为 1。</p>
      */
     public $Concurrency;
 
     /**
-     * @param string $ScalingMode 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
-     * @param InferenceAutoScalingConfig $AutoScalingConfig 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
-     * @param InferenceManualInstanceConfig $ManualInstanceConfig 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
-     * @param integer $Concurrency 单实例的并发数。默认值为 1。
+     * @var InferenceHardwareConfigForModify <p>推理服务的硬件资源配置。</p>
+     */
+    public $HardwareConfig;
+
+    /**
+     * @param string $ScalingMode <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
+     * @param InferenceAutoScalingConfig $AutoScalingConfig <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
+     * @param InferenceManualInstanceConfig $ManualInstanceConfig <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
+     * @param integer $Concurrency <p>单实例的并发数。默认值为 1。</p>
+     * @param InferenceHardwareConfigForModify $HardwareConfig <p>推理服务的硬件资源配置。</p>
      */
     function __construct()
     {
@@ -86,6 +94,11 @@ class InferenceResourceConfigForModify extends AbstractModel
 
         if (array_key_exists("Concurrency",$param) and $param["Concurrency"] !== null) {
             $this->Concurrency = $param["Concurrency"];
+        }
+
+        if (array_key_exists("HardwareConfig",$param) and $param["HardwareConfig"] !== null) {
+            $this->HardwareConfig = new InferenceHardwareConfigForModify();
+            $this->HardwareConfig->deserialize($param["HardwareConfig"]);
         }
     }
 }

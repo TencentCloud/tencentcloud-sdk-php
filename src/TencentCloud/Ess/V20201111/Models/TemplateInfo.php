@@ -57,8 +57,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedOn(integer $CreatedOn) 设置<p>模板创建的时间戳，格式为Unix标准时间戳（秒）</p>
  * @method Recipient getPromoter() 获取<p>此模板创建方角色信息。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png">点击查看在模板中配置的创建方角色的样子</a></p>
  * @method void setPromoter(Recipient $Promoter) 设置<p>此模板创建方角色信息。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png">点击查看在模板中配置的创建方角色的样子</a></p>
- * @method integer getTemplateType() 获取<p>模板类型可以分为以下两种：</p><p><b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。<br><b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
- * @method void setTemplateType(integer $TemplateType) 设置<p>模板类型可以分为以下两种：</p><p><b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。<br><b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
+ * @method integer getTemplateType() 获取<p>模板类型可以分为以下两种：<b>1</b>：带有本企业“授权签”的模板，即签署过程无需签署人手动操作，系统自动完成签署。<b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
+ * @method void setTemplateType(integer $TemplateType) 设置<p>模板类型可以分为以下两种：<b>1</b>：带有本企业“授权签”的模板，即签署过程无需签署人手动操作，系统自动完成签署。<b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
  * @method integer getAvailable() 获取<p>模板可用状态可以分为以下两种：</p><p><b>1</b>：（默认）启用状态，即模板可以正常使用。<br><b>2</b>：停用状态，即模板暂时无法使用。</p><p>可到控制台启停模板</p>
  * @method void setAvailable(integer $Available) 设置<p>模板可用状态可以分为以下两种：</p><p><b>1</b>：（默认）启用状态，即模板可以正常使用。<br><b>2</b>：停用状态，即模板暂时无法使用。</p><p>可到控制台启停模板</p>
  * @method string getOrganizationId() 获取<p>创建模板的企业ID，电子签的机构ID</p>
@@ -75,8 +75,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublished(boolean $Published) 设置<p>模板是否已发布可以分为以下两种状态：</p><p><b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。<br><b>false</b>：未发布状态，表示该模板还未发布，无法使用。</p>
  * @method string getShareTemplateId() 获取<p><b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。</p>
  * @method void setShareTemplateId(string $ShareTemplateId) 设置<p><b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。</p>
- * @method array getTemplateSeals() 获取<p>此模板配置的预填印章列表（包括自动签署指定的印章）</p>
- * @method void setTemplateSeals(array $TemplateSeals) 设置<p>此模板配置的预填印章列表（包括自动签署指定的印章）</p>
+ * @method array getTemplateSeals() 获取<p>此模板配置的预填印章列表（包括“授权签”指定的印章）</p>
+ * @method void setTemplateSeals(array $TemplateSeals) 设置<p>此模板配置的预填印章列表（包括“授权签”指定的印章）</p>
  * @method array getSeals() 获取<p>模板内部指定的印章列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeals(array $Seals) 设置<p>模板内部指定的印章列表</p>
@@ -155,7 +155,7 @@ class TemplateInfo extends AbstractModel
     public $Promoter;
 
     /**
-     * @var integer <p>模板类型可以分为以下两种：</p><p><b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。<br><b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
+     * @var integer <p>模板类型可以分为以下两种：<b>1</b>：带有本企业“授权签”的模板，即签署过程无需签署人手动操作，系统自动完成签署。<b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
      */
     public $TemplateType;
 
@@ -200,7 +200,7 @@ class TemplateInfo extends AbstractModel
     public $ShareTemplateId;
 
     /**
-     * @var array <p>此模板配置的预填印章列表（包括自动签署指定的印章）</p>
+     * @var array <p>此模板配置的预填印章列表（包括“授权签”指定的印章）</p>
      */
     public $TemplateSeals;
 
@@ -226,7 +226,7 @@ class TemplateInfo extends AbstractModel
      * @param string $Creator <p>模板的创建者信息，用户的名字</p><p>注： <code>是创建者的名字，而非创建者的用户ID</code></p>
      * @param integer $CreatedOn <p>模板创建的时间戳，格式为Unix标准时间戳（秒）</p>
      * @param Recipient $Promoter <p>此模板创建方角色信息。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png">点击查看在模板中配置的创建方角色的样子</a></p>
-     * @param integer $TemplateType <p>模板类型可以分为以下两种：</p><p><b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。<br><b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
+     * @param integer $TemplateType <p>模板类型可以分为以下两种：<b>1</b>：带有本企业“授权签”的模板，即签署过程无需签署人手动操作，系统自动完成签署。<b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
      * @param integer $Available <p>模板可用状态可以分为以下两种：</p><p><b>1</b>：（默认）启用状态，即模板可以正常使用。<br><b>2</b>：停用状态，即模板暂时无法使用。</p><p>可到控制台启停模板</p>
      * @param string $OrganizationId <p>创建模板的企业ID，电子签的机构ID</p>
      * @param string $CreatorId <p>模板创建人用户ID</p>
@@ -235,7 +235,7 @@ class TemplateInfo extends AbstractModel
      * @param string $TemplateVersion <p>模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成</p>
      * @param boolean $Published <p>模板是否已发布可以分为以下两种状态：</p><p><b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。<br><b>false</b>：未发布状态，表示该模板还未发布，无法使用。</p>
      * @param string $ShareTemplateId <p><b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。</p>
-     * @param array $TemplateSeals <p>此模板配置的预填印章列表（包括自动签署指定的印章）</p>
+     * @param array $TemplateSeals <p>此模板配置的预填印章列表（包括“授权签”指定的印章）</p>
      * @param array $Seals <p>模板内部指定的印章列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */

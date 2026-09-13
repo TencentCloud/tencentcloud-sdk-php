@@ -18,7 +18,7 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 授权企业列表（目前仅用于“企业自动签 -> 合作企业授权”）
+ * 授权企业列表（目前仅用于“企业“授权签” -> 合作企业授权”）
  *
  * @method string getOrganizationOpenId() 获取授权企业openid，
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置授权企业openid，

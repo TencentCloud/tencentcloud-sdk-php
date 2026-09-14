@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccelerateRegions返回参数结构体
  *
- * @method array getAcceleratorRegionSet() 获取加速地域信息。
- * @method void setAcceleratorRegionSet(array $AcceleratorRegionSet) 设置加速地域信息。
+ * @method array getAcceleratorRegionSet() 获取<p>加速地域信息。</p>
+ * @method void setAcceleratorRegionSet(array $AcceleratorRegionSet) 设置<p>加速地域信息。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAccelerateRegionsResponse extends AbstractModel
 {
     /**
-     * @var array 加速地域信息。
+     * @var array <p>加速地域信息。</p>
      */
     public $AcceleratorRegionSet;
 
@@ -38,7 +38,7 @@ class DescribeAccelerateRegionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AcceleratorRegionSet 加速地域信息。
+     * @param array $AcceleratorRegionSet <p>加速地域信息。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

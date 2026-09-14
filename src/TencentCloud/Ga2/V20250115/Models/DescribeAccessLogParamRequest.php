@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccessLogParam请求参数结构体
  *
-
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
  */
 class DescribeAccessLogParamRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>全球加速实例ID。</p>
+     */
+    public $GlobalAcceleratorId;
 
     /**
-
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeAccessLogParamRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("GlobalAcceleratorId",$param) and $param["GlobalAcceleratorId"] !== null) {
+            $this->GlobalAcceleratorId = $param["GlobalAcceleratorId"];
+        }
     }
 }

@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCancelUserAutoSignEnableUrl请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
- * @method string getSceneKey() 获取自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
- * @method void setSceneKey(string $SceneKey) 设置自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
- * @method UserThreeFactor getUserInfo() 获取指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
- * @method void setUserInfo(UserThreeFactor $UserInfo) 设置指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+ * @method Agent getAgent() 获取<p>渠道应用相关信息</p>
+ * @method void setAgent(Agent $Agent) 设置<p>渠道应用相关信息</p>
+ * @method UserInfo getOperator() 获取<p>操作人信息</p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>操作人信息</p>
+ * @method string getSceneKey() 获取<p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
+ * @method void setSceneKey(string $SceneKey) 设置<p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
+ * @method UserThreeFactor getUserInfo() 获取<p>指定撤销链接的用户信息，包含姓名、证件类型、证件号码。</p>
+ * @method void setUserInfo(UserThreeFactor $UserInfo) 设置<p>指定撤销链接的用户信息，包含姓名、证件类型、证件号码。</p>
  */
 class ChannelCancelUserAutoSignEnableUrlRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息
+     * @var Agent <p>渠道应用相关信息</p>
      */
     public $Agent;
 
     /**
-     * @var UserInfo 操作人信息
+     * @var UserInfo <p>操作人信息</p>
      */
     public $Operator;
 
     /**
-     * @var string 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * @var string <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
      */
     public $SceneKey;
 
     /**
-     * @var UserThreeFactor 指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+     * @var UserThreeFactor <p>指定撤销链接的用户信息，包含姓名、证件类型、证件号码。</p>
      */
     public $UserInfo;
 
     /**
-     * @param Agent $Agent 渠道应用相关信息
-     * @param UserInfo $Operator 操作人信息
-     * @param string $SceneKey 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
-     * @param UserThreeFactor $UserInfo 指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+     * @param Agent $Agent <p>渠道应用相关信息</p>
+     * @param UserInfo $Operator <p>操作人信息</p>
+     * @param string $SceneKey <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
+     * @param UserThreeFactor $UserInfo <p>指定撤销链接的用户信息，包含姓名、证件类型、证件号码。</p>
      */
     function __construct()
     {

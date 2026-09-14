@@ -23,16 +23,23 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Adp\V20260520\Models as Models;
 
 /**
+ * @method Models\CheckLabelResponse CheckLabel(Models\CheckLabelRequest $req) 校验标签下的标准词是否已存在
  * @method Models\CopyAgentFromAppResponse CopyAgentFromApp(Models\CopyAgentFromAppRequest $req) 复制 Agent（目前仅支持claw模式））
  * @method Models\CopyAppResponse CopyApp(Models\CopyAppRequest $req) 复制应用
  * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 创建Agent（目前仅支持claw模式）
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建应用
  * @method Models\CreateAppTriggerResponse CreateAppTrigger(Models\CreateAppTriggerRequest $req) CreateAppTrigger
+ * @method Models\CreateCategoryResponse CreateCategory(Models\CreateCategoryRequest $req) 创建分类
  * @method Models\CreateChannelResponse CreateChannel(Models\CreateChannelRequest $req) 创建渠道（通过scene区分B端应用发布渠道与C端IM渠道）
  * @method Models\CreateConversationResponse CreateConversation(Models\CreateConversationRequest $req) 新建会话
+ * @method Models\CreateKBResponse CreateKB(Models\CreateKBRequest $req) 创建知识库
+ * @method Models\CreateLabelResponse CreateLabel(Models\CreateLabelRequest $req) 创建标签
  * @method Models\CreateMsgRecordCategoryResponse CreateMsgRecordCategory(Models\CreateMsgRecordCategoryRequest $req) 创建一条消息记录分类，支持指定分类名称与父分类（ParentId 为 0 时表示一级分类）
  * @method Models\CreatePluginResponse CreatePlugin(Models\CreatePluginRequest $req) 获取插件详情
+ * @method Models\CreateQAGenerationTaskResponse CreateQAGenerationTask(Models\CreateQAGenerationTaskRequest $req) 创建 QA 生成任务
+ * @method Models\CreateQAListResponse CreateQAList(Models\CreateQAListRequest $req) 批量创建 QA
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 新增发布任务
+ * @method Models\CreateSimilarQuestionResponse CreateSimilarQuestion(Models\CreateSimilarQuestionRequest $req) 创建相似问生成任务
  * @method Models\CreateSkillResponse CreateSkill(Models\CreateSkillRequest $req) 创建skill
  * @method Models\CreateSkillShareResponse CreateSkillShare(Models\CreateSkillShareRequest $req) 提交自定义Skill至企业级共享审批（两段式：提交→审批→回调创建共享任务）
  * @method Models\CreateSpaceResponse CreateSpace(Models\CreateSpaceRequest $req) 创建空间
@@ -42,10 +49,15 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DeleteAgentResponse DeleteAgent(Models\DeleteAgentRequest $req) 删除Agent
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) 删除应用
  * @method Models\DeleteAppTriggerResponse DeleteAppTrigger(Models\DeleteAppTriggerRequest $req) DeleteAppTrigger
+ * @method Models\DeleteCategoryResponse DeleteCategory(Models\DeleteCategoryRequest $req) 删除分类
  * @method Models\DeleteChannelResponse DeleteChannel(Models\DeleteChannelRequest $req) 删除渠道（通过scene区分场景）
  * @method Models\DeleteConversationResponse DeleteConversation(Models\DeleteConversationRequest $req) 删除会话
+ * @method Models\DeleteDocListResponse DeleteDocList(Models\DeleteDocListRequest $req) 批量删除文档
+ * @method Models\DeleteKBResponse DeleteKB(Models\DeleteKBRequest $req) 删除知识库
+ * @method Models\DeleteLabelListResponse DeleteLabelList(Models\DeleteLabelListRequest $req) 批量删除标签
  * @method Models\DeleteMsgRecordCategoryResponse DeleteMsgRecordCategory(Models\DeleteMsgRecordCategoryRequest $req) 删除指定的消息记录分类
  * @method Models\DeletePluginResponse DeletePlugin(Models\DeletePluginRequest $req) 修改插件
+ * @method Models\DeleteQAListResponse DeleteQAList(Models\DeleteQAListRequest $req) 批量删除 QA
  * @method Models\DeleteSkillResponse DeleteSkill(Models\DeleteSkillRequest $req) 删除自定义 Skill  鉴权：创建者 ∨ (编辑权限 ∧ 删除权限） 拒绝场景：非 Custom 类型 / 已共享 / 安全检测中 / 上架审批中 / 下架审批中
  * @method Models\DeleteSkillShareResponse DeleteSkillShare(Models\DeleteSkillShareRequest $req) 提交共享 Skill 下架审批（v2，两段式：提交→审批→回调下架共享 Skill） 鉴权：删除权 拒绝场景：未共享 / 上架审批中 / 下架审批中
  * @method Models\DeleteSpaceResponse DeleteSpace(Models\DeleteSpaceRequest $req) 删除空间
@@ -62,13 +74,22 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeAppTriggerSummaryListResponse DescribeAppTriggerSummaryList(Models\DescribeAppTriggerSummaryListRequest $req) DescribeAppTriggerSummaryList
  * @method Models\DescribeAuditLogListResponse DescribeAuditLogList(Models\DescribeAuditLogListRequest $req) 查看操作日志列表
  * @method Models\DescribeAuditLogMetaResponse DescribeAuditLogMeta(Models\DescribeAuditLogMetaRequest $req) 获取审计日志元信息
+ * @method Models\DescribeCategoryListResponse DescribeCategoryList(Models\DescribeCategoryListRequest $req) 查询分类列表
  * @method Models\DescribeChannelResponse DescribeChannel(Models\DescribeChannelRequest $req) 获取渠道详情（scene区分场景）
  * @method Models\DescribeChannelListResponse DescribeChannelList(Models\DescribeChannelListRequest $req) 获取渠道列表（scene区分场景）
  * @method Models\DescribeConcurrencyLimitDetailListResponse DescribeConcurrencyLimitDetailList(Models\DescribeConcurrencyLimitDetailListRequest $req) 查询并发超限明细，包含QPM/TPM超限与专属并发超限记录，返回超限发生时间、空间、应用、模型及请求内容
+ * @method Models\DescribeConflictQAResponse DescribeConflictQA(Models\DescribeConflictQARequest $req) 查询冲突问详情
+ * @method Models\DescribeConflictQASummaryListResponse DescribeConflictQASummaryList(Models\DescribeConflictQASummaryListRequest $req) 查询冲突问列表
  * @method Models\DescribeConsumptionDetailListResponse DescribeConsumptionDetailList(Models\DescribeConsumptionDetailListRequest $req) 查询资源消耗明细，包含计费相关字段（消耗类型、消耗目标、消耗场景、套餐包及PU消耗等）
  * @method Models\DescribeConversationResponse DescribeConversation(Models\DescribeConversationRequest $req) 查看会话信息
  * @method Models\DescribeConversationListResponse DescribeConversationList(Models\DescribeConversationListRequest $req) 获取会话列表
  * @method Models\DescribeConversationMessageListResponse DescribeConversationMessageList(Models\DescribeConversationMessageListRequest $req) 获取会话历史消息
+ * @method Models\DescribeDocResponse DescribeDoc(Models\DescribeDocRequest $req) 查询文档详情
+ * @method Models\DescribeDocSummaryListResponse DescribeDocSummaryList(Models\DescribeDocSummaryListRequest $req) 查询文档摘要列表
+ * @method Models\DescribeKBResponse DescribeKB(Models\DescribeKBRequest $req) 查询知识库详情
+ * @method Models\DescribeKBSummaryListResponse DescribeKBSummaryList(Models\DescribeKBSummaryListRequest $req) 查询知识库列表
+ * @method Models\DescribeLabelResponse DescribeLabel(Models\DescribeLabelRequest $req) 查询标签详情
+ * @method Models\DescribeLabelSummaryListResponse DescribeLabelSummaryList(Models\DescribeLabelSummaryListRequest $req) 查询标签列表
  * @method Models\DescribeLatestReleaseResponse DescribeLatestRelease(Models\DescribeLatestReleaseRequest $req) 拉取最新发布信息(包含发布时间、状态、渠道)
  * @method Models\DescribeMetricOverviewListResponse DescribeMetricOverviewList(Models\DescribeMetricOverviewListRequest $req) 查询看板总览KPI卡片数据，通过resource_type区分资源看板与业务看板域，返回各域KPI指标列表
  * @method Models\DescribeModelListResponse DescribeModelList(Models\DescribeModelListRequest $req) 查询模型列表
@@ -76,6 +97,8 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeMsgRecordListResponse DescribeMsgRecordList(Models\DescribeMsgRecordListRequest $req) 查询应用的对话消息记录列表，支持按渠道类型、反馈类型、意图、调用结果等条件过滤，并支持游标分页与按创建时间排序
  * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) 获取插件详情
  * @method Models\DescribePluginSummaryListResponse DescribePluginSummaryList(Models\DescribePluginSummaryListRequest $req) 获取插件列表
+ * @method Models\DescribeQAResponse DescribeQA(Models\DescribeQARequest $req) 查询 QA 详情
+ * @method Models\DescribeQASummaryListResponse DescribeQASummaryList(Models\DescribeQASummaryListRequest $req) 查询 QA 列表
  * @method Models\DescribeReleaseListResponse DescribeReleaseList(Models\DescribeReleaseListRequest $req) 发布记录列表
  * @method Models\DescribeReleaseSummaryResponse DescribeReleaseSummary(Models\DescribeReleaseSummaryRequest $req) 查询发布任务
  * @method Models\DescribeSkillCategoryListResponse DescribeSkillCategoryList(Models\DescribeSkillCategoryListRequest $req) 查询 Skill 分类列表
@@ -88,15 +111,25 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeUsageSummaryListResponse DescribeUsageSummaryList(Models\DescribeUsageSummaryListRequest $req) 查询资源用量聚合明细，支持模型、插件、平台三类资源，按空间/应用维度聚合展示调用次数、Token消耗等指标
  * @method Models\DescribeVariableResponse DescribeVariable(Models\DescribeVariableRequest $req) 获取参数变量
  * @method Models\DescribeVariableListResponse DescribeVariableList(Models\DescribeVariableListRequest $req) 获取参数变量列表
+ * @method Models\ExportQAResponse ExportQA(Models\ExportQARequest $req) 异步导出 QA
  * @method Models\FavoritePluginResponse FavoritePlugin(Models\FavoritePluginRequest $req) 收藏插件
  * @method Models\FavoriteSkillResponse FavoriteSkill(Models\FavoriteSkillRequest $req) 收藏skill
+ * @method Models\ImportDocListResponse ImportDocList(Models\ImportDocListRequest $req) 批量导入文档
  * @method Models\ModifyAgentResponse ModifyAgent(Models\ModifyAgentRequest $req) 修改Agent配置信息
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用
  * @method Models\ModifyAppTriggerResponse ModifyAppTrigger(Models\ModifyAppTriggerRequest $req) ModifyAppTrigger
+ * @method Models\ModifyCategoryResponse ModifyCategory(Models\ModifyCategoryRequest $req) 修改分类
  * @method Models\ModifyChannelResponse ModifyChannel(Models\ModifyChannelRequest $req) 修改渠道（支持修改备注与企微机器人渠道回调机器人ID）
+ * @method Models\ModifyConflictQAResponse ModifyConflictQA(Models\ModifyConflictQARequest $req) 修改冲突问
  * @method Models\ModifyConversationResponse ModifyConversation(Models\ModifyConversationRequest $req) 修改会话信息
+ * @method Models\ModifyDocResponse ModifyDoc(Models\ModifyDocRequest $req) 修改单个文档
+ * @method Models\ModifyDocListResponse ModifyDocList(Models\ModifyDocListRequest $req) 批量修改文档
+ * @method Models\ModifyKBResponse ModifyKB(Models\ModifyKBRequest $req) 修改知识库
+ * @method Models\ModifyLabelResponse ModifyLabel(Models\ModifyLabelRequest $req) 修改标签
  * @method Models\ModifyMsgRecordCategoryResponse ModifyMsgRecordCategory(Models\ModifyMsgRecordCategoryRequest $req) 修改指定消息记录分类的名称
  * @method Models\ModifyPluginResponse ModifyPlugin(Models\ModifyPluginRequest $req) 修改插件
+ * @method Models\ModifyQAResponse ModifyQA(Models\ModifyQARequest $req) 修改单个 QA
+ * @method Models\ModifyQAListResponse ModifyQAList(Models\ModifyQAListRequest $req) 批量修改 QA
  * @method Models\ModifySkillResponse ModifySkill(Models\ModifySkillRequest $req) Skill修改
  * @method Models\ModifySpaceResponse ModifySpace(Models\ModifySpaceRequest $req) 编辑空间
  * @method Models\ModifyVariableResponse ModifyVariable(Models\ModifyVariableRequest $req) 更新参数变量
@@ -108,6 +141,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\RetryReleaseResponse RetryRelease(Models\RetryReleaseRequest $req) 重试发布(发布暂停之后再次重新发布)
  * @method Models\RollbackReleaseResponse RollbackRelease(Models\RollbackReleaseRequest $req) 回滚发布
  * @method Models\RunAppTriggerNowResponse RunAppTriggerNow(Models\RunAppTriggerNowRequest $req) RunAppTriggerNow
+ * @method Models\SearchKnowledgeResponse SearchKnowledge(Models\SearchKnowledgeRequest $req) 知识检索
  * @method Models\UnfavoritePluginResponse UnfavoritePlugin(Models\UnfavoritePluginRequest $req) 取消收藏插件
  * @method Models\UnfavoriteSkillResponse UnfavoriteSkill(Models\UnfavoriteSkillRequest $req) 取消收藏skill
  */

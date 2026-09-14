@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceVersion(string $ServiceVersion) 设置<p>组件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProperties() 获取<p>导出配置参数</p>
+ * @method string getProperties() 获取<p>导出配置参数 base64格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProperties(string $Properties) 设置<p>导出配置参数</p>
+ * @method void setProperties(string $Properties) 设置<p>导出配置参数 base64格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExportConfMeta extends AbstractModel
@@ -58,7 +58,7 @@ class ExportConfMeta extends AbstractModel
     public $ServiceVersion;
 
     /**
-     * @var string <p>导出配置参数</p>
+     * @var string <p>导出配置参数 base64格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Properties;
@@ -70,7 +70,7 @@ class ExportConfMeta extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceVersion <p>组件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Properties <p>导出配置参数</p>
+     * @param string $Properties <p>导出配置参数 base64格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

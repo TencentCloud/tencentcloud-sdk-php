@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNodeName() 获取<p>画布中的节点名称</p>
  * @method void setNodeName(string $NodeName) 设置<p>画布中的节点名称</p>
- * @method string getNodeType() 获取<p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li></ul>
- * @method void setNodeType(string $NodeType) 设置<p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li></ul>
+ * @method string getNodeType() 获取<p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li><li>TRANSFER_AGENT： 转接智能体节点</li><li>WORK_TIME： 工作时间节点</li></ul>
+ * @method void setNodeType(string $NodeType) 设置<p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li><li>TRANSFER_AGENT： 转接智能体节点</li><li>WORK_TIME： 工作时间节点</li></ul>
  * @method integer getTimestamp() 获取<p>经过当前节点的时间戳</p><p>单位：ms</p>
  * @method void setTimestamp(integer $Timestamp) 设置<p>经过当前节点的时间戳</p><p>单位：ms</p>
+ * @method AICallAPICallDetail getAPICall() 获取<p>接口调用节点的调用详情，包含请求、响应、耗时以及每次重试的明细。仅 NodeType 为 API_CALL 时有值，其余节点类型不返回该字段。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAPICall(AICallAPICallDetail $APICall) 设置<p>接口调用节点的调用详情，包含请求、响应、耗时以及每次重试的明细。仅 NodeType 为 API_CALL 时有值，其余节点类型不返回该字段。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AIRoundPath extends AbstractModel
 {
@@ -35,7 +39,7 @@ class AIRoundPath extends AbstractModel
     public $NodeName;
 
     /**
-     * @var string <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li></ul>
+     * @var string <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li><li>TRANSFER_AGENT： 转接智能体节点</li><li>WORK_TIME： 工作时间节点</li></ul>
      */
     public $NodeType;
 
@@ -45,9 +49,17 @@ class AIRoundPath extends AbstractModel
     public $Timestamp;
 
     /**
+     * @var AICallAPICallDetail <p>接口调用节点的调用详情，包含请求、响应、耗时以及每次重试的明细。仅 NodeType 为 API_CALL 时有值，其余节点类型不返回该字段。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $APICall;
+
+    /**
      * @param string $NodeName <p>画布中的节点名称</p>
-     * @param string $NodeType <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li></ul>
+     * @param string $NodeType <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li><li>TRANSFER_AGENT： 转接智能体节点</li><li>WORK_TIME： 工作时间节点</li></ul>
      * @param integer $Timestamp <p>经过当前节点的时间戳</p><p>单位：ms</p>
+     * @param AICallAPICallDetail $APICall <p>接口调用节点的调用详情，包含请求、响应、耗时以及每次重试的明细。仅 NodeType 为 API_CALL 时有值，其余节点类型不返回该字段。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,11 @@ class AIRoundPath extends AbstractModel
 
         if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
             $this->Timestamp = $param["Timestamp"];
+        }
+
+        if (array_key_exists("APICall",$param) and $param["APICall"] !== null) {
+            $this->APICall = new AICallAPICallDetail();
+            $this->APICall->deserialize($param["APICall"]);
         }
     }
 }

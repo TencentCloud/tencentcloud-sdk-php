@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setASRTranscript(string $ASRTranscript) 设置<p>ASR语音识别引擎将用户语音转换成的原始文本结果</p>
  * @method string getMatchedIntent() 获取<p>命中画布中该对话节点配置的回复分类</p>
  * @method void setMatchedIntent(string $MatchedIntent) 设置<p>命中画布中该对话节点配置的回复分类</p>
- * @method string getExtractedSlots() 获取<p>用户回复分类的标签， json序列化后的信息</p>
- * @method void setExtractedSlots(string $ExtractedSlots) 设置<p>用户回复分类的标签， json序列化后的信息</p>
- * @method string getBranchType() 获取<p>用户回复命中的分支类型</p><p>枚举值：</p><ul><li>Intent： 用户意图</li><li>Fallback： 兜底分支</li><li>NoResponse： 无响应跳转分支</li><li>SlotCollectionSuccess： 词槽收集完成跳转分支</li><li>SlotCollectionFail： 词槽收集失败跳转分支</li><li>GlobalIntent： 全局节点意图</li><li>LogicAnd： 逻辑判断节点 and</li><li>LogicOr： 逻辑判断节点 or</li><li>DTMF成功： DTMFSuccess</li><li>DTMF失败： DTMFFail</li><li>DTMF导航： DTMFNavigation</li><li>DTMF分机： DTMFExtension</li><li>DTMF收号： DTMFCollection</li><li>转接智能体节点失败： TransferAgentFail</li></ul>
- * @method void setBranchType(string $BranchType) 设置<p>用户回复命中的分支类型</p><p>枚举值：</p><ul><li>Intent： 用户意图</li><li>Fallback： 兜底分支</li><li>NoResponse： 无响应跳转分支</li><li>SlotCollectionSuccess： 词槽收集完成跳转分支</li><li>SlotCollectionFail： 词槽收集失败跳转分支</li><li>GlobalIntent： 全局节点意图</li><li>LogicAnd： 逻辑判断节点 and</li><li>LogicOr： 逻辑判断节点 or</li><li>DTMF成功： DTMFSuccess</li><li>DTMF失败： DTMFFail</li><li>DTMF导航： DTMFNavigation</li><li>DTMF分机： DTMFExtension</li><li>DTMF收号： DTMFCollection</li><li>转接智能体节点失败： TransferAgentFail</li></ul>
+ * @method string getExtractedSlots() 获取<p>本轮收集到的词槽列表（TagType 为 2 或 3），json 序列化后的字符串。数组元素含 TagName（词槽名）、TagValue（词槽值）、TagType（词槽类型，2 表示必填词槽，3 表示选填词槽）三个字段；无词槽时为空字符串。</p>
+ * @method void setExtractedSlots(string $ExtractedSlots) 设置<p>本轮收集到的词槽列表（TagType 为 2 或 3），json 序列化后的字符串。数组元素含 TagName（词槽名）、TagValue（词槽值）、TagType（词槽类型，2 表示必填词槽，3 表示选填词槽）三个字段；无词槽时为空字符串。</p>
+ * @method string getBranchType() 获取<p>用户回复命中的分支类型</p><p>枚举值：</p><ul><li>Intent： 用户意图</li><li>Fallback： 兜底分支</li><li>NoResponse： 无响应跳转分支</li><li>SlotCollectionSuccess： 词槽收集完成跳转分支</li><li>SlotCollectionFail： 词槽收集失败跳转分支</li><li>GlobalIntent： 全局节点意图</li><li>LogicAnd： 逻辑判断节点 and</li><li>LogicOr： 逻辑判断节点 or</li><li>DTMFSuccess： DTMF 收号成功</li><li>DTMFFail： DTMF 收号失败</li><li>DTMFNavigation： DTMF 导航</li><li>DTMFExtension： DTMF 分机</li><li>DTMFCollection： DTMF 收号</li><li>TransferAgentFail： 转接智能体节点失败</li><li>Other： 其他分支类型</li></ul>
+ * @method void setBranchType(string $BranchType) 设置<p>用户回复命中的分支类型</p><p>枚举值：</p><ul><li>Intent： 用户意图</li><li>Fallback： 兜底分支</li><li>NoResponse： 无响应跳转分支</li><li>SlotCollectionSuccess： 词槽收集完成跳转分支</li><li>SlotCollectionFail： 词槽收集失败跳转分支</li><li>GlobalIntent： 全局节点意图</li><li>LogicAnd： 逻辑判断节点 and</li><li>LogicOr： 逻辑判断节点 or</li><li>DTMFSuccess： DTMF 收号成功</li><li>DTMFFail： DTMF 收号失败</li><li>DTMFNavigation： DTMF 导航</li><li>DTMFExtension： DTMF 分机</li><li>DTMFCollection： DTMF 收号</li><li>TransferAgentFail： 转接智能体节点失败</li><li>Other： 其他分支类型</li></ul>
  */
 class UserReplyEvent extends AbstractModel
 {
@@ -42,20 +42,20 @@ class UserReplyEvent extends AbstractModel
     public $MatchedIntent;
 
     /**
-     * @var string <p>用户回复分类的标签， json序列化后的信息</p>
+     * @var string <p>本轮收集到的词槽列表（TagType 为 2 或 3），json 序列化后的字符串。数组元素含 TagName（词槽名）、TagValue（词槽值）、TagType（词槽类型，2 表示必填词槽，3 表示选填词槽）三个字段；无词槽时为空字符串。</p>
      */
     public $ExtractedSlots;
 
     /**
-     * @var string <p>用户回复命中的分支类型</p><p>枚举值：</p><ul><li>Intent： 用户意图</li><li>Fallback： 兜底分支</li><li>NoResponse： 无响应跳转分支</li><li>SlotCollectionSuccess： 词槽收集完成跳转分支</li><li>SlotCollectionFail： 词槽收集失败跳转分支</li><li>GlobalIntent： 全局节点意图</li><li>LogicAnd： 逻辑判断节点 and</li><li>LogicOr： 逻辑判断节点 or</li><li>DTMF成功： DTMFSuccess</li><li>DTMF失败： DTMFFail</li><li>DTMF导航： DTMFNavigation</li><li>DTMF分机： DTMFExtension</li><li>DTMF收号： DTMFCollection</li><li>转接智能体节点失败： TransferAgentFail</li></ul>
+     * @var string <p>用户回复命中的分支类型</p><p>枚举值：</p><ul><li>Intent： 用户意图</li><li>Fallback： 兜底分支</li><li>NoResponse： 无响应跳转分支</li><li>SlotCollectionSuccess： 词槽收集完成跳转分支</li><li>SlotCollectionFail： 词槽收集失败跳转分支</li><li>GlobalIntent： 全局节点意图</li><li>LogicAnd： 逻辑判断节点 and</li><li>LogicOr： 逻辑判断节点 or</li><li>DTMFSuccess： DTMF 收号成功</li><li>DTMFFail： DTMF 收号失败</li><li>DTMFNavigation： DTMF 导航</li><li>DTMFExtension： DTMF 分机</li><li>DTMFCollection： DTMF 收号</li><li>TransferAgentFail： 转接智能体节点失败</li><li>Other： 其他分支类型</li></ul>
      */
     public $BranchType;
 
     /**
      * @param string $ASRTranscript <p>ASR语音识别引擎将用户语音转换成的原始文本结果</p>
      * @param string $MatchedIntent <p>命中画布中该对话节点配置的回复分类</p>
-     * @param string $ExtractedSlots <p>用户回复分类的标签， json序列化后的信息</p>
-     * @param string $BranchType <p>用户回复命中的分支类型</p><p>枚举值：</p><ul><li>Intent： 用户意图</li><li>Fallback： 兜底分支</li><li>NoResponse： 无响应跳转分支</li><li>SlotCollectionSuccess： 词槽收集完成跳转分支</li><li>SlotCollectionFail： 词槽收集失败跳转分支</li><li>GlobalIntent： 全局节点意图</li><li>LogicAnd： 逻辑判断节点 and</li><li>LogicOr： 逻辑判断节点 or</li><li>DTMF成功： DTMFSuccess</li><li>DTMF失败： DTMFFail</li><li>DTMF导航： DTMFNavigation</li><li>DTMF分机： DTMFExtension</li><li>DTMF收号： DTMFCollection</li><li>转接智能体节点失败： TransferAgentFail</li></ul>
+     * @param string $ExtractedSlots <p>本轮收集到的词槽列表（TagType 为 2 或 3），json 序列化后的字符串。数组元素含 TagName（词槽名）、TagValue（词槽值）、TagType（词槽类型，2 表示必填词槽，3 表示选填词槽）三个字段；无词槽时为空字符串。</p>
+     * @param string $BranchType <p>用户回复命中的分支类型</p><p>枚举值：</p><ul><li>Intent： 用户意图</li><li>Fallback： 兜底分支</li><li>NoResponse： 无响应跳转分支</li><li>SlotCollectionSuccess： 词槽收集完成跳转分支</li><li>SlotCollectionFail： 词槽收集失败跳转分支</li><li>GlobalIntent： 全局节点意图</li><li>LogicAnd： 逻辑判断节点 and</li><li>LogicOr： 逻辑判断节点 or</li><li>DTMFSuccess： DTMF 收号成功</li><li>DTMFFail： DTMF 收号失败</li><li>DTMFNavigation： DTMF 导航</li><li>DTMFExtension： DTMF 分机</li><li>DTMFCollection： DTMF 收号</li><li>TransferAgentFail： 转接智能体节点失败</li><li>Other： 其他分支类型</li></ul>
      */
     function __construct()
     {

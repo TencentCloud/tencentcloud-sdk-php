@@ -20,178 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 监听器信息
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method string getListenerId() 获取监听器ID。
- * @method void setListenerId(string $ListenerId) 设置监听器ID。
- * @method string getName() 获取监听器名称。
- * @method void setName(string $Name) 设置监听器名称。
- * @method string getDescription() 获取监听器描述。
- * @method void setDescription(string $Description) 设置监听器描述。
- * @method string getProtocol() 获取协议。
- * @method void setProtocol(string $Protocol) 设置协议。
- * @method PortRanges getPortRanges() 获取端口范围。
- * @method void setPortRanges(PortRanges $PortRanges) 设置端口范围。
- * @method boolean getXForwardedForRealIp() 获取是否打开七层获取源IP方式。
- * @method void setXForwardedForRealIp(boolean $XForwardedForRealIp) 设置是否打开七层获取源IP方式。
- * @method string getClientAffinity() 获取开启会话保持。
- * @method void setClientAffinity(string $ClientAffinity) 设置开启会话保持。
- * @method integer getClientAffinityTime() 获取会话保持时间。
- * @method void setClientAffinityTime(integer $ClientAffinityTime) 设置会话保持时间。
- * @method string getCertificationType() 获取SSL解析方式。
- * @method void setCertificationType(string $CertificationType) 设置SSL解析方式。
- * @method array getServerCertificates() 获取服务器证书。
- * @method void setServerCertificates(array $ServerCertificates) 设置服务器证书。
- * @method array getClientCaCertificates() 获取客户端证书。
- * @method void setClientCaCertificates(array $ClientCaCertificates) 设置客户端证书。
- * @method string getCipherPolicyId() 获取TLS密码套件包。
- * @method void setCipherPolicyId(string $CipherPolicyId) 设置TLS密码套件包。
- * @method string getHttpVersion() 获取HTTP版本。
- * @method void setHttpVersion(string $HttpVersion) 设置HTTP版本。
- * @method integer getRequestTimeout() 获取请求超时时间。
- * @method void setRequestTimeout(integer $RequestTimeout) 设置请求超时时间。
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method string getListenerType() 获取监听路由类型。
- * @method void setListenerType(string $ListenerType) 设置监听路由类型。
- * @method string getStatus() 获取监听器状态。
- * @method void setStatus(string $Status) 设置监听器状态。
- * @method integer getEndpointGroupCounts() 获取所属监听器终端节点组个数。
- * @method void setEndpointGroupCounts(integer $EndpointGroupCounts) 设置所属监听器终端节点组个数。
- * @method string getGetRealIpType() 获取四层获取源IP方式。
- * @method void setGetRealIpType(string $GetRealIpType) 设置四层获取源IP方式。
- * @method integer getIdleTimeout() 获取连接超时时间。
- * @method void setIdleTimeout(integer $IdleTimeout) 设置连接超时时间。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method string getListenerId() 获取<p>监听器ID。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器ID。</p>
+ * @method string getName() 获取<p>监听器名称。</p>
+ * @method void setName(string $Name) 设置<p>监听器名称。</p>
+ * @method string getDescription() 获取<p>监听器描述。</p>
+ * @method void setDescription(string $Description) 设置<p>监听器描述。</p>
+ * @method string getProtocol() 获取<p>协议。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议。</p>
+ * @method PortRanges getPortRanges() 获取<p>端口范围。</p>
+ * @method void setPortRanges(PortRanges $PortRanges) 设置<p>端口范围。</p>
+ * @method boolean getXForwardedForRealIp() 获取<p>是否打开七层获取源IP方式。</p>
+ * @method void setXForwardedForRealIp(boolean $XForwardedForRealIp) 设置<p>是否打开七层获取源IP方式。</p>
+ * @method string getClientAffinity() 获取<p>开启会话保持。</p>
+ * @method void setClientAffinity(string $ClientAffinity) 设置<p>开启会话保持。</p>
+ * @method integer getClientAffinityTime() 获取<p>会话保持时间。</p>
+ * @method void setClientAffinityTime(integer $ClientAffinityTime) 设置<p>会话保持时间。</p>
+ * @method string getCertificationType() 获取<p>SSL解析方式。</p>
+ * @method void setCertificationType(string $CertificationType) 设置<p>SSL解析方式。</p>
+ * @method array getServerCertificates() 获取<p>服务器证书。</p>
+ * @method void setServerCertificates(array $ServerCertificates) 设置<p>服务器证书。</p>
+ * @method array getClientCaCertificates() 获取<p>客户端证书。</p>
+ * @method void setClientCaCertificates(array $ClientCaCertificates) 设置<p>客户端证书。</p>
+ * @method string getCipherPolicyId() 获取<p>TLS密码套件包。</p>
+ * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>TLS密码套件包。</p>
+ * @method string getHttpVersion() 获取<p>HTTP版本。</p>
+ * @method void setHttpVersion(string $HttpVersion) 设置<p>HTTP版本。</p>
+ * @method integer getRequestTimeout() 获取<p>请求超时时间。</p>
+ * @method void setRequestTimeout(integer $RequestTimeout) 设置<p>请求超时时间。</p>
+ * @method string getCreateTime() 获取<p>创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。</p>
+ * @method string getListenerType() 获取<p>监听路由类型。</p>
+ * @method void setListenerType(string $ListenerType) 设置<p>监听路由类型。</p>
+ * @method string getStatus() 获取<p>监听器状态。</p><p>枚举值：</p><ul><li>ACTIVE： 可用。</li><li>CREATING： 创建中。</li><li>DELETING： 删除中。</li><li>CONFIGURING： 修改配置中。</li></ul>
+ * @method void setStatus(string $Status) 设置<p>监听器状态。</p><p>枚举值：</p><ul><li>ACTIVE： 可用。</li><li>CREATING： 创建中。</li><li>DELETING： 删除中。</li><li>CONFIGURING： 修改配置中。</li></ul>
+ * @method integer getEndpointGroupCounts() 获取<p>所属监听器终端节点组个数。</p>
+ * @method void setEndpointGroupCounts(integer $EndpointGroupCounts) 设置<p>所属监听器终端节点组个数。</p>
+ * @method string getGetRealIpType() 获取<p>四层获取源IP方式。</p>
+ * @method void setGetRealIpType(string $GetRealIpType) 设置<p>四层获取源IP方式。</p>
+ * @method integer getIdleTimeout() 获取<p>连接超时时间。</p>
+ * @method void setIdleTimeout(integer $IdleTimeout) 设置<p>连接超时时间。</p>
  */
 class ListenerSet extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var string 监听器ID。
+     * @var string <p>监听器ID。</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 监听器名称。
+     * @var string <p>监听器名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 监听器描述。
+     * @var string <p>监听器描述。</p>
      */
     public $Description;
 
     /**
-     * @var string 协议。
+     * @var string <p>协议。</p>
      */
     public $Protocol;
 
     /**
-     * @var PortRanges 端口范围。
+     * @var PortRanges <p>端口范围。</p>
      */
     public $PortRanges;
 
     /**
-     * @var boolean 是否打开七层获取源IP方式。
+     * @var boolean <p>是否打开七层获取源IP方式。</p>
      */
     public $XForwardedForRealIp;
 
     /**
-     * @var string 开启会话保持。
+     * @var string <p>开启会话保持。</p>
      */
     public $ClientAffinity;
 
     /**
-     * @var integer 会话保持时间。
+     * @var integer <p>会话保持时间。</p>
      */
     public $ClientAffinityTime;
 
     /**
-     * @var string SSL解析方式。
+     * @var string <p>SSL解析方式。</p>
      */
     public $CertificationType;
 
     /**
-     * @var array 服务器证书。
+     * @var array <p>服务器证书。</p>
      */
     public $ServerCertificates;
 
     /**
-     * @var array 客户端证书。
+     * @var array <p>客户端证书。</p>
      */
     public $ClientCaCertificates;
 
     /**
-     * @var string TLS密码套件包。
+     * @var string <p>TLS密码套件包。</p>
      */
     public $CipherPolicyId;
 
     /**
-     * @var string HTTP版本。
+     * @var string <p>HTTP版本。</p>
      */
     public $HttpVersion;
 
     /**
-     * @var integer 请求超时时间。
+     * @var integer <p>请求超时时间。</p>
      */
     public $RequestTimeout;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 监听路由类型。
+     * @var string <p>监听路由类型。</p>
      */
     public $ListenerType;
 
     /**
-     * @var string 监听器状态。
+     * @var string <p>监听器状态。</p><p>枚举值：</p><ul><li>ACTIVE： 可用。</li><li>CREATING： 创建中。</li><li>DELETING： 删除中。</li><li>CONFIGURING： 修改配置中。</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 所属监听器终端节点组个数。
+     * @var integer <p>所属监听器终端节点组个数。</p>
      */
     public $EndpointGroupCounts;
 
     /**
-     * @var string 四层获取源IP方式。
+     * @var string <p>四层获取源IP方式。</p>
      */
     public $GetRealIpType;
 
     /**
-     * @var integer 连接超时时间。
+     * @var integer <p>连接超时时间。</p>
      */
     public $IdleTimeout;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param string $ListenerId 监听器ID。
-     * @param string $Name 监听器名称。
-     * @param string $Description 监听器描述。
-     * @param string $Protocol 协议。
-     * @param PortRanges $PortRanges 端口范围。
-     * @param boolean $XForwardedForRealIp 是否打开七层获取源IP方式。
-     * @param string $ClientAffinity 开启会话保持。
-     * @param integer $ClientAffinityTime 会话保持时间。
-     * @param string $CertificationType SSL解析方式。
-     * @param array $ServerCertificates 服务器证书。
-     * @param array $ClientCaCertificates 客户端证书。
-     * @param string $CipherPolicyId TLS密码套件包。
-     * @param string $HttpVersion HTTP版本。
-     * @param integer $RequestTimeout 请求超时时间。
-     * @param string $CreateTime 创建时间。
-     * @param string $ListenerType 监听路由类型。
-     * @param string $Status 监听器状态。
-     * @param integer $EndpointGroupCounts 所属监听器终端节点组个数。
-     * @param string $GetRealIpType 四层获取源IP方式。
-     * @param integer $IdleTimeout 连接超时时间。
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param string $ListenerId <p>监听器ID。</p>
+     * @param string $Name <p>监听器名称。</p>
+     * @param string $Description <p>监听器描述。</p>
+     * @param string $Protocol <p>协议。</p>
+     * @param PortRanges $PortRanges <p>端口范围。</p>
+     * @param boolean $XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
+     * @param string $ClientAffinity <p>开启会话保持。</p>
+     * @param integer $ClientAffinityTime <p>会话保持时间。</p>
+     * @param string $CertificationType <p>SSL解析方式。</p>
+     * @param array $ServerCertificates <p>服务器证书。</p>
+     * @param array $ClientCaCertificates <p>客户端证书。</p>
+     * @param string $CipherPolicyId <p>TLS密码套件包。</p>
+     * @param string $HttpVersion <p>HTTP版本。</p>
+     * @param integer $RequestTimeout <p>请求超时时间。</p>
+     * @param string $CreateTime <p>创建时间。</p>
+     * @param string $ListenerType <p>监听路由类型。</p>
+     * @param string $Status <p>监听器状态。</p><p>枚举值：</p><ul><li>ACTIVE： 可用。</li><li>CREATING： 创建中。</li><li>DELETING： 删除中。</li><li>CONFIGURING： 修改配置中。</li></ul>
+     * @param integer $EndpointGroupCounts <p>所属监听器终端节点组个数。</p>
+     * @param string $GetRealIpType <p>四层获取源IP方式。</p>
+     * @param integer $IdleTimeout <p>连接超时时间。</p>
      */
     function __construct()
     {

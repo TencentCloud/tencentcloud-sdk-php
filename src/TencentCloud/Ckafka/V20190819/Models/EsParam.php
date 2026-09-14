@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordMappingMode(string $RecordMappingMode) 设置<p>用来区分当前索引映射，属于新建索引还是存量索引。&quot;EXIST_MAPPING&quot;：从存量索引中选择；&quot;NEW_MAPPING&quot;：新建索引</p>
  * @method string getProtocol() 获取<p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
  * @method void setProtocol(string $Protocol) 设置<p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+ * @method string getSourceDataFormat() 获取<p>用户选择数据订阅任务的数据（如DTS）时，源数据的格式</p><p>枚举值：</p><ul><li>Debezium： Debezium格式json</li><li>Canal： Canal格式json</li></ul>
+ * @method void setSourceDataFormat(string $SourceDataFormat) 设置<p>用户选择数据订阅任务的数据（如DTS）时，源数据的格式</p><p>枚举值：</p><ul><li>Debezium： Debezium格式json</li><li>Canal： Canal格式json</li></ul>
  */
 class EsParam extends AbstractModel
 {
@@ -171,6 +173,11 @@ class EsParam extends AbstractModel
     public $Protocol;
 
     /**
+     * @var string <p>用户选择数据订阅任务的数据（如DTS）时，源数据的格式</p><p>枚举值：</p><ul><li>Debezium： Debezium格式json</li><li>Canal： Canal格式json</li></ul>
+     */
+    public $SourceDataFormat;
+
+    /**
      * @param string $Resource <p>Es实例资源Id</p>
      * @param integer $Port <p>Es的连接port</p>
      * @param string $UserName <p>Es用户名</p>
@@ -192,6 +199,7 @@ class EsParam extends AbstractModel
      * @param string $DateField <p>消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射</p>
      * @param string $RecordMappingMode <p>用来区分当前索引映射，属于新建索引还是存量索引。&quot;EXIST_MAPPING&quot;：从存量索引中选择；&quot;NEW_MAPPING&quot;：新建索引</p>
      * @param string $Protocol <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+     * @param string $SourceDataFormat <p>用户选择数据订阅任务的数据（如DTS）时，源数据的格式</p><p>枚举值：</p><ul><li>Debezium： Debezium格式json</li><li>Canal： Canal格式json</li></ul>
      */
     function __construct()
     {
@@ -295,6 +303,10 @@ class EsParam extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("SourceDataFormat",$param) and $param["SourceDataFormat"] !== null) {
+            $this->SourceDataFormat = $param["SourceDataFormat"];
         }
     }
 }

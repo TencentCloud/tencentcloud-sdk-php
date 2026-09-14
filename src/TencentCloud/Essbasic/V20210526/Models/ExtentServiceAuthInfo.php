@@ -20,90 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 扩展服务开通和授权的详细信息
  *
- * @method string getType() 获取扩展服务类型
-<ul>
-<li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
-<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
-<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
-<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
-</ul>
- * @method void setType(string $Type) 设置扩展服务类型
-<ul>
-<li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
-<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
-<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
-<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
-</ul>
- * @method string getName() 获取扩展服务名称 
- * @method void setName(string $Name) 设置扩展服务名称 
- * @method string getStatus() 获取扩展服务的开通状态
-**ENABLE**：开通 
-**DISABLE**：未开通	
- * @method void setStatus(string $Status) 设置扩展服务的开通状态
-**ENABLE**：开通 
-**DISABLE**：未开通	
- * @method string getOperatorOpenId() 获取操作扩展服务的操作人第三方应用平台的用户openid
- * @method void setOperatorOpenId(string $OperatorOpenId) 设置操作扩展服务的操作人第三方应用平台的用户openid
- * @method integer getOperateOn() 获取扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
- * @method void setOperateOn(integer $OperateOn) 设置扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
+ * @method string getType() 获取<p>扩展服务类型<ul><li>AUTO_SIGN             企业“授权签”（“授权签”）</li><li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li><li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li><li> DOWNLOAD_FLOW         授权渠道下载合同 </li><li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li><li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li></ul></p>
+ * @method void setType(string $Type) 设置<p>扩展服务类型<ul><li>AUTO_SIGN             企业“授权签”（“授权签”）</li><li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li><li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li><li> DOWNLOAD_FLOW         授权渠道下载合同 </li><li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li><li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li></ul></p>
+ * @method string getName() 获取<p>扩展服务名称</p>
+ * @method void setName(string $Name) 设置<p>扩展服务名称</p>
+ * @method string getStatus() 获取<p>扩展服务的开通状态<br><strong>ENABLE</strong>：开通<br><strong>DISABLE</strong>：未开通</p>
+ * @method void setStatus(string $Status) 设置<p>扩展服务的开通状态<br><strong>ENABLE</strong>：开通<br><strong>DISABLE</strong>：未开通</p>
+ * @method string getOperatorOpenId() 获取<p>操作扩展服务的操作人第三方应用平台的用户openid</p>
+ * @method void setOperatorOpenId(string $OperatorOpenId) 设置<p>操作扩展服务的操作人第三方应用平台的用户openid</p>
+ * @method integer getOperateOn() 获取<p>扩展服务的操作时间，格式为Unix标准时间戳（秒）。</p>
+ * @method void setOperateOn(integer $OperateOn) 设置<p>扩展服务的操作时间，格式为Unix标准时间戳（秒）。</p>
  */
 class ExtentServiceAuthInfo extends AbstractModel
 {
     /**
-     * @var string 扩展服务类型
-<ul>
-<li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
-<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
-<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
-<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
-</ul>
+     * @var string <p>扩展服务类型<ul><li>AUTO_SIGN             企业“授权签”（“授权签”）</li><li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li><li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li><li> DOWNLOAD_FLOW         授权渠道下载合同 </li><li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li><li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li></ul></p>
      */
     public $Type;
 
     /**
-     * @var string 扩展服务名称 
+     * @var string <p>扩展服务名称</p>
      */
     public $Name;
 
     /**
-     * @var string 扩展服务的开通状态
-**ENABLE**：开通 
-**DISABLE**：未开通	
+     * @var string <p>扩展服务的开通状态<br><strong>ENABLE</strong>：开通<br><strong>DISABLE</strong>：未开通</p>
      */
     public $Status;
 
     /**
-     * @var string 操作扩展服务的操作人第三方应用平台的用户openid
+     * @var string <p>操作扩展服务的操作人第三方应用平台的用户openid</p>
      */
     public $OperatorOpenId;
 
     /**
-     * @var integer 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
+     * @var integer <p>扩展服务的操作时间，格式为Unix标准时间戳（秒）。</p>
      */
     public $OperateOn;
 
     /**
-     * @param string $Type 扩展服务类型
-<ul>
-<li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
-<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
-<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
-<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
-</ul>
-     * @param string $Name 扩展服务名称 
-     * @param string $Status 扩展服务的开通状态
-**ENABLE**：开通 
-**DISABLE**：未开通	
-     * @param string $OperatorOpenId 操作扩展服务的操作人第三方应用平台的用户openid
-     * @param integer $OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
+     * @param string $Type <p>扩展服务类型<ul><li>AUTO_SIGN             企业“授权签”（“授权签”）</li><li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li><li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li><li> DOWNLOAD_FLOW         授权渠道下载合同 </li><li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li><li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li></ul></p>
+     * @param string $Name <p>扩展服务名称</p>
+     * @param string $Status <p>扩展服务的开通状态<br><strong>ENABLE</strong>：开通<br><strong>DISABLE</strong>：未开通</p>
+     * @param string $OperatorOpenId <p>操作扩展服务的操作人第三方应用平台的用户openid</p>
+     * @param integer $OperateOn <p>扩展服务的操作时间，格式为Unix标准时间戳（秒）。</p>
      */
     function __construct()
     {

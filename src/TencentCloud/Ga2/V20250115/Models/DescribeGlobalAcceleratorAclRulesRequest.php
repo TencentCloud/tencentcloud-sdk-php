@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
  * @method integer getLimit() 获取<p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
  * @method void setLimit(integer $Limit) 设置<p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
+ * @method array getFilters() 获取<p>过滤条件。<li>global-accelerator-acl-rule-id - String -（过滤条件）ACL规则ID。</li></p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。<li>global-accelerator-acl-rule-id - String -（过滤条件）ACL规则ID。</li></p>
  */
 class DescribeGlobalAcceleratorAclRulesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeGlobalAcceleratorAclRulesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array <p>过滤条件。<li>global-accelerator-acl-rule-id - String -（过滤条件）ACL规则ID。</li></p>
+     */
+    public $Filters;
+
+    /**
      * @param string $GlobalAcceleratorAclPolicyId <p>访问控制策略ID。</p>
      * @param integer $Offset <p>偏移量，默认为0。</p>
      * @param integer $Limit <p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
+     * @param array $Filters <p>过滤条件。<li>global-accelerator-acl-rule-id - String -（过滤条件）ACL规则ID。</li></p>
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class DescribeGlobalAcceleratorAclRulesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

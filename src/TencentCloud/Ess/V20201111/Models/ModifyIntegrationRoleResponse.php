@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyIntegrationRole返回参数结构体
  *
- * @method string getRoleId() 获取角色id
- * @method void setRoleId(string $RoleId) 设置角色id
+ * @method string getRoleId() 获取<p>角色id</p>
+ * @method void setRoleId(string $RoleId) 设置<p>角色id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyIntegrationRoleResponse extends AbstractModel
 {
     /**
-     * @var string 角色id
+     * @var string <p>角色id</p>
      */
     public $RoleId;
 
@@ -38,7 +38,7 @@ class ModifyIntegrationRoleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $RoleId 角色id
+     * @param string $RoleId <p>角色id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

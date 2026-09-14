@@ -20,82 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyIntegrationRole请求参数结构体
  *
- * @method string getRoleId() 获取角色Id，可通过接口 DescribeIntegrationRoles 查询获取
- * @method void setRoleId(string $RoleId) 设置角色Id，可通过接口 DescribeIntegrationRoles 查询获取
- * @method string getName() 获取角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
- * @method void setName(string $Name) 设置角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
-
-注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
-
-注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
- * @method string getDescription() 获取角色描述，最大长度为50个字符
- * @method void setDescription(string $Description) 设置角色描述，最大长度为50个字符
- * @method array getPermissionGroups() 获取权限树
- * @method void setPermissionGroups(array $PermissionGroups) 设置权限树
- * @method array getSubOrganizationIds() 获取集团角色的话，需要传递集团子企业列表，如果是全选，则传1
- * @method void setSubOrganizationIds(array $SubOrganizationIds) 设置集团角色的话，需要传递集团子企业列表，如果是全选，则传1
- * @method Agent getAgent() 获取代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method string getRoleId() 获取<p>角色Id，可通过接口 DescribeIntegrationRoles 查询获取</p>
+ * @method void setRoleId(string $RoleId) 设置<p>角色Id，可通过接口 DescribeIntegrationRoles 查询获取</p>
+ * @method string getName() 获取<p>角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。</p>
+ * @method void setName(string $Name) 设置<p>角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。</p>
+ * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
+ * @method string getDescription() 获取<p>角色描述，最大长度为50个字符</p>
+ * @method void setDescription(string $Description) 设置<p>角色描述，最大长度为50个字符</p>
+ * @method array getPermissionGroups() 获取<p>权限树</p>
+ * @method void setPermissionGroups(array $PermissionGroups) 设置<p>权限树</p>
+ * @method array getSubOrganizationIds() 获取<p>集团角色的话，需要传递集团子企业列表，如果是全选，则传1</p>
+ * @method void setSubOrganizationIds(array $SubOrganizationIds) 设置<p>集团角色的话，需要传递集团子企业列表，如果是全选，则传1</p>
+ * @method Agent getAgent() 获取<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method void setAgent(Agent $Agent) 设置<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
  */
 class ModifyIntegrationRoleRequest extends AbstractModel
 {
     /**
-     * @var string 角色Id，可通过接口 DescribeIntegrationRoles 查询获取
+     * @var string <p>角色Id，可通过接口 DescribeIntegrationRoles 查询获取</p>
      */
     public $RoleId;
 
     /**
-     * @var string 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
+     * @var string <p>角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。</p>
      */
     public $Name;
 
     /**
-     * @var UserInfo 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
-
-注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * @var UserInfo <p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
      */
     public $Operator;
 
     /**
-     * @var string 角色描述，最大长度为50个字符
+     * @var string <p>角色描述，最大长度为50个字符</p>
      */
     public $Description;
 
     /**
-     * @var array 权限树
+     * @var array <p>权限树</p>
      */
     public $PermissionGroups;
 
     /**
-     * @var array 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
+     * @var array <p>集团角色的话，需要传递集团子企业列表，如果是全选，则传1</p>
      */
     public $SubOrganizationIds;
 
     /**
-     * @var Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public $Agent;
 
     /**
-     * @param string $RoleId 角色Id，可通过接口 DescribeIntegrationRoles 查询获取
-     * @param string $Name 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
-     * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
-
-注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
-     * @param string $Description 角色描述，最大长度为50个字符
-     * @param array $PermissionGroups 权限树
-     * @param array $SubOrganizationIds 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
-     * @param Agent $Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param string $RoleId <p>角色Id，可通过接口 DescribeIntegrationRoles 查询获取</p>
+     * @param string $Name <p>角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。</p>
+     * @param UserInfo $Operator <p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
+     * @param string $Description <p>角色描述，最大长度为50个字符</p>
+     * @param array $PermissionGroups <p>权限树</p>
+     * @param array $SubOrganizationIds <p>集团角色的话，需要传递集团子企业列表，如果是全选，则传1</p>
+     * @param Agent $Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     function __construct()
     {

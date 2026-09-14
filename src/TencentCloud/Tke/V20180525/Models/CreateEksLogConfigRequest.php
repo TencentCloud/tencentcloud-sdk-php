@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEksLogConfig请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getLogConfig() 获取日志采集配置的json表达
- * @method void setLogConfig(string $LogConfig) 设置日志采集配置的json表达
- * @method string getLogsetId() 获取日志集ID
- * @method void setLogsetId(string $LogsetId) 设置日志集ID
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getLogConfig() 获取<p>日志采集配置的json表达</p>
+ * @method void setLogConfig(string $LogConfig) 设置<p>日志采集配置的json表达</p>
+ * @method string getLogsetId() 获取<p>日志集ID</p>
+ * @method void setLogsetId(string $LogsetId) 设置<p>日志集ID</p>
  */
 class CreateEksLogConfigRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 日志采集配置的json表达
+     * @var string <p>日志采集配置的json表达</p>
      */
     public $LogConfig;
 
     /**
-     * @var string 日志集ID
+     * @var string <p>日志集ID</p>
      */
     public $LogsetId;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $LogConfig 日志采集配置的json表达
-     * @param string $LogsetId 日志集ID
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $LogConfig <p>日志采集配置的json表达</p>
+     * @param string $LogsetId <p>日志集ID</p>
      */
     function __construct()
     {

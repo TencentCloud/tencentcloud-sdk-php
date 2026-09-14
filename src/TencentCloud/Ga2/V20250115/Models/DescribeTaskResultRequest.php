@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskResult请求参数结构体
  *
- * @method string getTaskId() 获取异步任务ID。
- * @method void setTaskId(string $TaskId) 设置异步任务ID。
+ * @method string getTaskId() 获取<p>异步任务ID。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>异步任务ID。</p>
  */
 class DescribeTaskResultRequest extends AbstractModel
 {
     /**
-     * @var string 异步任务ID。
+     * @var string <p>异步任务ID。</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 异步任务ID。
+     * @param string $TaskId <p>异步任务ID。</p>
      */
     function __construct()
     {

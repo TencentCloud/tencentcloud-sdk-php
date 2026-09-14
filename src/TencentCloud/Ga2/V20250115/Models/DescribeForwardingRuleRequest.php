@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeForwardingRule请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method string getListenerId() 获取监听器ID。
- * @method void setListenerId(string $ListenerId) 设置监听器ID。
- * @method string getForwardingPolicyId() 获取七层转发规则ID。
- * @method void setForwardingPolicyId(string $ForwardingPolicyId) 设置七层转发规则ID。
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method string getListenerId() 获取<p>监听器ID。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器ID。</p>
+ * @method string getForwardingPolicyId() 获取<p>七层转发规则ID。</p>
+ * @method void setForwardingPolicyId(string $ForwardingPolicyId) 设置<p>七层转发规则ID。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100。</p>
+ * @method array getFilters() 获取<p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
  */
 class DescribeForwardingRuleRequest extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var string 监听器ID。
+     * @var string <p>监听器ID。</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 七层转发规则ID。
+     * @var string <p>七层转发规则ID。</p>
      */
     public $ForwardingPolicyId;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer <p>返回数量，默认为20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param string $ListenerId 监听器ID。
-     * @param string $ForwardingPolicyId 七层转发规则ID。
-     * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @var array <p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
+     */
+    public $Filters;
+
+    /**
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param string $ListenerId <p>监听器ID。</p>
+     * @param string $ForwardingPolicyId <p>七层转发规则ID。</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100。</p>
+     * @param array $Filters <p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class DescribeForwardingRuleRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisassociateAddress请求参数结构体
  *
- * @method string getAddressId() 获取标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
- * @method void setAddressId(string $AddressId) 设置标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
- * @method boolean getReallocateNormalPublicIp() 获取表示解绑 EIP 之后是否分配普通公网 IP。取值范围：<li>TRUE：表示解绑 EIP 之后分配普通公网 IP。</li><li>FALSE：表示解绑 EIP 之后不分配普通公网 IP。</li>默认取值：FALSE。<br><br>只有满足以下条件时才能指定该参数：<li>只有在解绑主网卡的主内网 IP 上的 EIP 时才能指定该参数。</li><li>解绑 EIP 后重新分配普通公网 IP 操作一个账号每天最多操作 10 次；详情可通过 [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) 接口获取。</li>
- * @method void setReallocateNormalPublicIp(boolean $ReallocateNormalPublicIp) 设置表示解绑 EIP 之后是否分配普通公网 IP。取值范围：<li>TRUE：表示解绑 EIP 之后分配普通公网 IP。</li><li>FALSE：表示解绑 EIP 之后不分配普通公网 IP。</li>默认取值：FALSE。<br><br>只有满足以下条件时才能指定该参数：<li>只有在解绑主网卡的主内网 IP 上的 EIP 时才能指定该参数。</li><li>解绑 EIP 后重新分配普通公网 IP 操作一个账号每天最多操作 10 次；详情可通过 [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) 接口获取。</li>
+ * @method string getAddressId() 获取<p>标识 EIP 的唯一 ID。EIP 唯一 ID 形如：<code>eip-11112222</code>。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
+ * @method void setAddressId(string $AddressId) 设置<p>标识 EIP 的唯一 ID。EIP 唯一 ID 形如：<code>eip-11112222</code>。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
+ * @method boolean getReallocateNormalPublicIp() 获取<p>表示解绑 EIP 之后是否分配普通公网 IP。取值范围：<li><code>true</code>：表示解绑 EIP 之后分配普通公网 IP。</li><li><code>false</code>：表示解绑 EIP 之后不分配普通公网 IP。</li>默认取值：<code>false</code>。<br><br>只有满足以下条件时才能指定该参数：<li>只有在解绑主网卡的主内网 IP 上的 EIP 时才能指定该参数。</li><li>解绑 EIP 后重新分配普通公网 IP 操作一个账号每天最多操作 10 次；详情可通过 <a href="https://cloud.tencent.com/document/api/213/1378">DescribeAddressQuota</a> 接口获取。</li></p>
+ * @method void setReallocateNormalPublicIp(boolean $ReallocateNormalPublicIp) 设置<p>表示解绑 EIP 之后是否分配普通公网 IP。取值范围：<li><code>true</code>：表示解绑 EIP 之后分配普通公网 IP。</li><li><code>false</code>：表示解绑 EIP 之后不分配普通公网 IP。</li>默认取值：<code>false</code>。<br><br>只有满足以下条件时才能指定该参数：<li>只有在解绑主网卡的主内网 IP 上的 EIP 时才能指定该参数。</li><li>解绑 EIP 后重新分配普通公网 IP 操作一个账号每天最多操作 10 次；详情可通过 <a href="https://cloud.tencent.com/document/api/213/1378">DescribeAddressQuota</a> 接口获取。</li></p>
  */
 class DisassociateAddressRequest extends AbstractModel
 {
     /**
-     * @var string 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+     * @var string <p>标识 EIP 的唯一 ID。EIP 唯一 ID 形如：<code>eip-11112222</code>。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
      */
     public $AddressId;
 
     /**
-     * @var boolean 表示解绑 EIP 之后是否分配普通公网 IP。取值范围：<li>TRUE：表示解绑 EIP 之后分配普通公网 IP。</li><li>FALSE：表示解绑 EIP 之后不分配普通公网 IP。</li>默认取值：FALSE。<br><br>只有满足以下条件时才能指定该参数：<li>只有在解绑主网卡的主内网 IP 上的 EIP 时才能指定该参数。</li><li>解绑 EIP 后重新分配普通公网 IP 操作一个账号每天最多操作 10 次；详情可通过 [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) 接口获取。</li>
+     * @var boolean <p>表示解绑 EIP 之后是否分配普通公网 IP。取值范围：<li><code>true</code>：表示解绑 EIP 之后分配普通公网 IP。</li><li><code>false</code>：表示解绑 EIP 之后不分配普通公网 IP。</li>默认取值：<code>false</code>。<br><br>只有满足以下条件时才能指定该参数：<li>只有在解绑主网卡的主内网 IP 上的 EIP 时才能指定该参数。</li><li>解绑 EIP 后重新分配普通公网 IP 操作一个账号每天最多操作 10 次；详情可通过 <a href="https://cloud.tencent.com/document/api/213/1378">DescribeAddressQuota</a> 接口获取。</li></p>
      */
     public $ReallocateNormalPublicIp;
 
     /**
-     * @param string $AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
-     * @param boolean $ReallocateNormalPublicIp 表示解绑 EIP 之后是否分配普通公网 IP。取值范围：<li>TRUE：表示解绑 EIP 之后分配普通公网 IP。</li><li>FALSE：表示解绑 EIP 之后不分配普通公网 IP。</li>默认取值：FALSE。<br><br>只有满足以下条件时才能指定该参数：<li>只有在解绑主网卡的主内网 IP 上的 EIP 时才能指定该参数。</li><li>解绑 EIP 后重新分配普通公网 IP 操作一个账号每天最多操作 10 次；详情可通过 [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) 接口获取。</li>
+     * @param string $AddressId <p>标识 EIP 的唯一 ID。EIP 唯一 ID 形如：<code>eip-11112222</code>。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
+     * @param boolean $ReallocateNormalPublicIp <p>表示解绑 EIP 之后是否分配普通公网 IP。取值范围：<li><code>true</code>：表示解绑 EIP 之后分配普通公网 IP。</li><li><code>false</code>：表示解绑 EIP 之后不分配普通公网 IP。</li>默认取值：<code>false</code>。<br><br>只有满足以下条件时才能指定该参数：<li>只有在解绑主网卡的主内网 IP 上的 EIP 时才能指定该参数。</li><li>解绑 EIP 后重新分配普通公网 IP 操作一个账号每天最多操作 10 次；详情可通过 <a href="https://cloud.tencent.com/document/api/213/1378">DescribeAddressQuota</a> 接口获取。</li></p>
      */
     function __construct()
     {

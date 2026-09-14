@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>HPPTS加密算法套件</p>
  * @method string getHttpVersion() 获取<p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
  * @method void setHttpVersion(string $HttpVersion) 设置<p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+ * @method array getOriginPrivateIps() 获取<p>出终端节点组内网IP</p>
+ * @method void setOriginPrivateIps(array $OriginPrivateIps) 设置<p>出终端节点组内网IP</p>
+ * @method array getOriginPublicCidrs() 获取<p>出终端节点组公网CIDR</p>
+ * @method void setOriginPublicCidrs(array $OriginPublicCidrs) 设置<p>出终端节点组公网CIDR</p>
  */
 class EndpointGroupConfigurationSet extends AbstractModel
 {
@@ -227,6 +231,16 @@ class EndpointGroupConfigurationSet extends AbstractModel
     public $HttpVersion;
 
     /**
+     * @var array <p>出终端节点组内网IP</p>
+     */
+    public $OriginPrivateIps;
+
+    /**
+     * @var array <p>出终端节点组公网CIDR</p>
+     */
+    public $OriginPublicCidrs;
+
+    /**
      * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
      * @param string $ListenerId <p>监听器实例ID。</p>
      * @param string $EndpointGroupId <p>终端节点组ID。</p>
@@ -256,6 +270,8 @@ class EndpointGroupConfigurationSet extends AbstractModel
      * @param string $IspType <p>运营商类型；中国移动(CMCC)，中国联通(CUCC)，中国电信(CTCC)。</p>
      * @param string $CipherPolicyId <p>HPPTS加密算法套件</p>
      * @param string $HttpVersion <p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     * @param array $OriginPrivateIps <p>出终端节点组内网IP</p>
+     * @param array $OriginPublicCidrs <p>出终端节点组公网CIDR</p>
      */
     function __construct()
     {
@@ -394,6 +410,14 @@ class EndpointGroupConfigurationSet extends AbstractModel
 
         if (array_key_exists("HttpVersion",$param) and $param["HttpVersion"] !== null) {
             $this->HttpVersion = $param["HttpVersion"];
+        }
+
+        if (array_key_exists("OriginPrivateIps",$param) and $param["OriginPrivateIps"] !== null) {
+            $this->OriginPrivateIps = $param["OriginPrivateIps"];
+        }
+
+        if (array_key_exists("OriginPublicCidrs",$param) and $param["OriginPublicCidrs"] !== null) {
+            $this->OriginPublicCidrs = $param["OriginPublicCidrs"];
         }
     }
 }

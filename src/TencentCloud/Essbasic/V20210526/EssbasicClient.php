@@ -58,7 +58,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 **合同额度返还规则**:
 
 1.撤销服务按照合同份额 1:1赠送免费撤销次数。例如购买 100 份合同，赠送 100 次免费撤销额度。
-2.仅当没有任何参与方签署过，或仅自动签署完成的合同，撤销后才会使用免费撤销额度。
+2.仅当没有任何参与方签署过，或仅授权签署完成的合同，撤销后才会使用免费撤销额度。
 3.当赠送的免费撤销额度使用完后，后续仍可撤销合同，但不会返还合同额度。
 
 **注**:
@@ -75,7 +75,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 **合同额度返还规则**:
 
 1.撤销服务按照合同份额 1:1赠送免费撤销次数。例如购买 100 份合同，赠送 100 次免费撤销额度。
-2.仅当没有任何参与方签署过，或仅自动签署完成的合同，撤销后才会使用免费撤销额度。
+2.仅当没有任何参与方签署过，或仅授权签署完成的合同，撤销后才会使用免费撤销额度。
 3.当赠送的免费撤销额度使用完后，后续仍可撤销合同，但不会返还合同额度。
 
 **注**:
@@ -85,7 +85,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\ChannelCancelMultiFlowSignQRCodeResponse ChannelCancelMultiFlowSignQRCode(Models\ChannelCancelMultiFlowSignQRCodeRequest $req) 此接口（CancelMultiFlowSignQRCode）用于废除取消一码多签签署码。
 该接口所需的二维码ID，源自[创建一码多签签署码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)生成的。
 如果该签署码尚处于有效期内，可通过本接口将其设置为失效状态。
- * @method Models\ChannelCancelUserAutoSignEnableUrlResponse ChannelCancelUserAutoSignEnableUrl(Models\ChannelCancelUserAutoSignEnableUrlRequest $req) 此接口（ChannelCancelUserAutoSignEnableUrl）用来撤销发送给个人用户的自动签开通链接，撤销后对应的个人用户开通链接失效。若个人用户已经完成开通，将无法撤销。（处方单场景专用，使用此接口请与客户经理确认）
+ * @method Models\ChannelCancelUserAutoSignEnableUrlResponse ChannelCancelUserAutoSignEnableUrl(Models\ChannelCancelUserAutoSignEnableUrlRequest $req) 此接口（ChannelCancelUserAutoSignEnableUrl）用来撤销发送给个人用户的授权签开通链接，撤销后对应的个人用户开通链接失效。若个人用户已经完成开通，将无法撤销。（处方单场景专用，使用此接口请与客户经理确认）
  * @method Models\ChannelCreateBatchCancelFlowUrlResponse ChannelCreateBatchCancelFlowUrl(Models\ChannelCreateBatchCancelFlowUrlRequest $req) 通过合同编号生成批量撤销合同的链接，单次最多支持撤销100份合同,   返回的链接需要有此权限的人<font color='red'>**合同的发起人（并已经授予撤销权限）或者发起人所在企业的超管、法人**</font>在<font color='red'>**手机端**</font>打开,  跳转到腾讯电子签小程序输入撤销原因来进行撤销合同
 
 适用场景：如果某个合同当前**至少还有一方没有签署**，则可通过该接口取消该合同流程。常用于合同发错、内容填错，需要及时撤销的场景。
@@ -272,11 +272,11 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 ### 5. 合同额度的扣减与返还
 - **扣减时机**：合同一旦发起，相关的合同额度就会被扣减，合同组下面的每个合同都要扣减一个合同额度。
-- **返还条件**：只有在合同被撤销且没有任何签署方签署过，或者只有自动签署的情况下，合同额度才会被返还。
+- **返还条件**：只有在合同被撤销且没有任何签署方签署过，或者只有授权签署的情况下，合同额度才会被返还。
 - **不返还的情况**：如果合同已过期、被拒签、签署完成或已解除，合同额度将不会被返还。
 
-### 6. 静默（自动）签署的限制
-- 在使用静默（自动）签署功能时，合同签署方不能有填写控件。<font color="red">此接口静默签(企业自动签)能力为白名单功能</font>，使用前请联系对接的客户经理沟通。
+### 6. 授权签署的限制
+- 在使用授权签署功能时，合同签署方不能有填写控件。<font color="red">此接口授权签(企业授权签)能力为白名单功能</font>，使用前请联系对接的客户经理沟通。
 
 ### 7.合同组暂不支持抄送功能
  * @method Models\ChannelCreateFlowGroupByTemplatesResponse ChannelCreateFlowGroupByTemplates(Models\ChannelCreateFlowGroupByTemplatesRequest $req) 接口（ChannelCreateFlowGroupByTemplates）用于通过多模板创建合同组签署流程。
@@ -337,11 +337,11 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 ### 5. 合同额度的扣减与返还
 - **扣减时机**：合同一旦发起，相关的合同额度就会被扣减，合同组下面的每个合同都要扣减一个合同额度。
-- **返还条件**：只有在合同被撤销且没有任何签署方签署过，或者只有自动签署的情况下，合同额度才会被返还。
+- **返还条件**：只有在合同被撤销且没有任何签署方签署过，或者只有授权签署的情况下，合同额度才会被返还。
 - **不返还的情况**：如果合同已过期、被拒签、签署完成或已解除，合同额度将不会被返还。
 
-### 6. 静默（自动）签署的限制
-- 在使用静默（自动）签署功能时，合同签署方不能有填写控件。<font color="red">此接口静默签(企业自动签)能力为白名单功能</font>，使用前请联系对接的客户经理沟通。
+### 6. 授权签署的限制
+- 在使用授权签署功能时，合同签署方不能有填写控件。<font color="red">此接口授权签(企业授权签)能力为白名单功能</font>，使用前请联系对接的客户经理沟通。
 
 ### 7.合同组暂不支持抄送功能
  * @method Models\ChannelCreateFlowRemindsResponse ChannelCreateFlowReminds(Models\ChannelCreateFlowRemindsRequest $req) 指定需要批量催办的签署流程ID，批量催办合同，最多100个。需要符合以下条件的合同才可被催办
@@ -467,14 +467,14 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 适用场景2：创建当前企业的自定义角色，并且创建时进行权限的设置（PermissionGroups 参数要传），权限树内容 PermissionGroups 可参考[查询角色列表接口](https://qian.tencent.com/developers/partnerApis/accounts/ChannelDescribeRoles) 的输出。此处注意权限树内容可能会更新，需尽量拉取最新的权限树内容，并且权限树内容 PermissionGroups 必须是一颗完整的权限树。
  * @method Models\ChannelCreateSealPolicyResponse ChannelCreateSealPolicy(Models\ChannelCreateSealPolicyRequest $req) 将指定印章授权给第三方平台子客企业下的某些员工
- * @method Models\ChannelCreateUserAutoSignEnableUrlResponse ChannelCreateUserAutoSignEnableUrl(Models\ChannelCreateUserAutoSignEnableUrlRequest $req) 获取个人用户自动签的开通链接。
+ * @method Models\ChannelCreateUserAutoSignEnableUrlResponse ChannelCreateUserAutoSignEnableUrl(Models\ChannelCreateUserAutoSignEnableUrlRequest $req) 获取个人用户授权签的开通链接。
 
 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
- * @method Models\ChannelCreateUserAutoSignSealUrlResponse ChannelCreateUserAutoSignSealUrl(Models\ChannelCreateUserAutoSignSealUrlRequest $req) 获取设置自动签印章小程序链接。
+ * @method Models\ChannelCreateUserAutoSignSealUrlResponse ChannelCreateUserAutoSignSealUrl(Models\ChannelCreateUserAutoSignSealUrlRequest $req) 获取设置授权签印章小程序链接。
 
 注意：
-<ul><li>需要<code>企业开通自动签</code>后使用。</li>
-<li>仅支持<code>已经开通了自动签的个人</code>更换自动签印章。</li>
+<ul><li>需要<code>企业开通授权签</code>后使用。</li>
+<li>仅支持<code>已经开通了授权签的个人</code>更换授权签印章。</li>
 <li>链接有效期默认7天，<code>最多30天</code>。</li>
 <li>该接口的链接适用于<code>小程序</code>端。</li>
 <li>该接口不会扣除您的合同套餐，暂不参与计费。</li></ul>
@@ -564,16 +564,16 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 3. 请在**签署完成后的24小时内**获取视频，**过期后将无法获取**。
 
 **注意：该接口需要开通白名单，请联系客户经理开通后使用。**
- * @method Models\ChannelDescribeUserAutoSignStatusResponse ChannelDescribeUserAutoSignStatus(Models\ChannelDescribeUserAutoSignStatusRequest $req) 通过此接口获取个人用户自动签的开通状态。
+ * @method Models\ChannelDescribeUserAutoSignStatusResponse ChannelDescribeUserAutoSignStatus(Models\ChannelDescribeUserAutoSignStatusRequest $req) 通过此接口获取个人用户授权签的开通状态。
 
 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
- * @method Models\ChannelDisableUserAutoSignResponse ChannelDisableUserAutoSign(Models\ChannelDisableUserAutoSignRequest $req) 通过此接口可以关闭个人用户自动签功能。
+ * @method Models\ChannelDisableUserAutoSignResponse ChannelDisableUserAutoSign(Models\ChannelDisableUserAutoSignRequest $req) 通过此接口可以关闭个人用户授权签功能。
 无需对应的用户刷脸等方式同意即可关闭。
 
 注意: 
 
 <ul><li>处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。</li>
-<li>如果此用户在开通时候绑定过个人自动签账号许可,  关闭此用户的自动签不会归还个人自动签账号许可的额度。</li></ul>
+<li>如果此用户在开通时候绑定过个人授权签账号许可,  关闭此用户的授权签不会归还个人授权签账号许可的额度。</li></ul>
  * @method Models\ChannelModifyRoleResponse ChannelModifyRole(Models\ChannelModifyRoleRequest $req) 此接口（ChannelModifyRole）用来更新企业自定义角色。
 
 适用场景1：更新当前企业的自定义角色的名称或描述等其他信息，更新时不进行权限的设置（PermissionGroups 参数不传）。
@@ -828,7 +828,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 2. 仅企业拥有`超管`或`法人角色`的员工才有调用本接口的权限。
 3. 若原合同有填写控件，且当前经办人已经完成填写，则不支持进行转交。
 4. 若当前经办人已签署完成，或者处于签署流程中，或合同处于完成态（例如：签署完成，拒签，撤销，过期等），则不支持进行转交。
- * @method Models\CreateFlowGroupSignReviewResponse CreateFlowGroupSignReview(Models\CreateFlowGroupSignReviewRequest $req) 1. 在使用[通过多文件创建合同组签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByFiles)或[通过多模板创建合同组签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByTemplates)创建合同组签署流程时，若指定了参数以下参数为true,则可以调用此接口提交企业内部签署审批结果,即使是自动签署也需要进行审核通过才会进行签署。
+ * @method Models\CreateFlowGroupSignReviewResponse CreateFlowGroupSignReview(Models\CreateFlowGroupSignReviewRequest $req) 1. 在使用[通过多文件创建合同组签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByFiles)或[通过多模板创建合同组签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByTemplates)创建合同组签署流程时，若指定了参数以下参数为true,则可以调用此接口提交企业内部签署审批结果,即使是授权签署也需要进行审核通过才会进行签署。
   - [FlowInfo.NeedSignReview](https://qian.tencent.com/developers/partnerApis/dataTypes/#flowinfo)
   - [FlowFileInfo.NeedSignReview](https://qian.tencent.com/developers/partnerApis/dataTypes/#flowfileinfo)
   - [FlowApproverInfo.ApproverNeedSignReview](https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverinfo) 
@@ -870,17 +870,17 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 ![image](https://qcloudimg.tencent-cloud.cn/raw/140a2fb771ac66a185d0a000d37485f6.png)
 
 ### 1.4 注意事项
--  合同<font color="red">发起后就会扣减合同的额度</font> , 只有撤销没有参与方签署过或只有自动签署签署过的合同，且<font color="red">有撤销合同额度</font>的情形下，才会返还合同额度。（**过期，拒签，签署完成，解除完成等状态不会返还额度**）。具体可以参考 [合同撤销返还额度说明](https://qian.tencent.com/developers/partner/contract_cancel_quota) 。
+-  合同<font color="red">发起后就会扣减合同的额度</font> , 只有撤销没有参与方签署过或只有【授权签署】签署过的合同，且<font color="red">有撤销合同额度</font>的情形下，才会返还合同额度。（**过期，拒签，签署完成，解除完成等状态不会返还额度**）。具体可以参考 [合同撤销返还额度说明](https://qian.tencent.com/developers/partner/contract_cancel_quota) 。
 - <font color="red">支持的证件类型</font>可以参考 [支持的证件类型](https://qian.tencent.com/developers/partner/id_card_support) 。
 - <font color="red">不同类型的签署方传参不同</font>，各类型签署方的信息传递方式详见  [签署方入参指引](https://qian.tencent.com/developers/partner/flow_approver) 。
 - 如果合同正式发起前如需<font color="red">预览</font>效果，可参考 [使用模板发起的预览](https://qian.tencent.com/developers/partner/preview_guide/#%E4%BA%8C%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%9D%BF%E5%8F%91%E8%B5%B7%E7%9A%84%E9%A2%84%E8%A7%88)
 - 关于填写方与签署方的<font color="red">填写、签署先后顺序</font>设置，详见 [填写与签署顺序说明](https://qian.tencent.com/developers/partner/fill_sign_order)。
-- 关于<font color="red">本企业自动签署与其他企业自动签署</font>的配置与使用，详见 [自动签署](https://qian.tencent.com/developers/partner/autosign_guide)。
+- 关于<font color="red">本企业授权签署与其他企业授权签署</font>的配置与使用，详见 [授权签署](https://qian.tencent.com/developers/partner/autosign_guide)。
 - 如若在模板中配置了[动态表格](https://qian.tencent.com/developers/partner/dynamic_table), 如果模板中配有附件控件，上传的附件必须为A4尺寸的PDF。
 
 ### 1.5 视频教程
 
-1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateTemplates.mp4" target="_blank">创建模板 & 设置成本企业自动签署</a>
+1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateTemplates.mp4" target="_blank">创建模板 & 设置成本企业授权签署</a>
 2. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateFlowsByTemplates.mp4" target="_blank">【用模板创建签署流程】编写示例视频教程</a>
  * @method Models\CreateLegalSealQrCodeResponse CreateLegalSealQrCode(Models\CreateLegalSealQrCodeRequest $req) 该接口用于获取创建法人章的二维码，需要通过微信扫描。扫描后将跳转到腾讯电子签署，进入到创建法人章的流程。
 
@@ -923,7 +923,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 注:  
 <ul>
 <li>只能获取个人用户证明图片, 企业员工的暂不支持</li>
-<li>专为电子处方单（医疗自动签）特定场景使用。在使用前，请务必与您的客户经理联系以确认已经开通电子处方单功能 </li>
+<li>专为电子处方单（医疗授权签）特定场景使用。在使用前，请务必与您的客户经理联系以确认已经开通电子处方单功能 </li>
 </ul>
  * @method Models\CreateRequestWithEncryptionResponse CreateRequestWithEncryption(Models\CreateRequestWithEncryptionRequest $req) 该接口支持对请求内容进行加密传输。调用方需使用约定的 AES-CBC 或 SM4-CBC 算法对请求内容进行加密，并使用 HMAC-SHA256 或 HMAC-SM3 算法对 IV 和加密后的数据进行完整性校验，防止请求内容被篡改。
 
@@ -1114,14 +1114,14 @@ IV：fedcba0987654321
 Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批人打开。
  * @method Models\DescribeExtendedServiceAuthDetailResponse DescribeExtendedServiceAuthDetail(Models\DescribeExtendedServiceAuthDetailRequest $req) 查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
 
-1. **企业自动签**
+1. **企业授权签**
 2. **批量签署**
 
 
 注: <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Agent.ProxyOperator.OpenId 需要传递超管或者法人的OpenId)
  * @method Models\DescribeExtendedServiceAuthInfoResponse DescribeExtendedServiceAuthInfo(Models\DescribeExtendedServiceAuthInfoRequest $req) 查询企业扩展服务的开通和授权情况，当前支持查询以下内容：
 
-1. **企业自动签**
+1. **企业授权签**
 2. **企业与港澳台居民签署合同**
 3. **使用手机号验证签署方身份**
 4. **拓宽签署方年龄限制**
@@ -1207,7 +1207,7 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 >2. TemplateId 和TemplateIds互为独立，若两个参数都传入，则以TemplateId为准
 
 <font color="red">相关视频指引</font> <br>
-1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateTemplates.mp4" target="_blank">创建模板&设置成本企业自动签署</a><br>
+1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateTemplates.mp4" target="_blank">创建模板&设置成本企业授权签署</a><br>
  * @method Models\DescribeUsageResponse DescribeUsage(Models\DescribeUsageRequest $req) 此接口（DescribeUsage）用于获取此应用下子客企业的合同消耗数量。
 
 <font color="red">此接口于 2026 年 2 月 3 日下线</font>， 请使用新接口:<a   href="https://qian.tencent.com/developers/partnerApis/fee/ChannelDescribeBillUsageDetail">查询渠道计费消耗情况 </a>
@@ -1231,7 +1231,7 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 - **直接开通的情形：** 若在操作过程中接口没有返回跳转链接，这表明无需进行任何跳转操作。此时，相应的企业拓展服务将会直接被开通或关闭。
 
 - **需要法人或者超管签署开通协议的情形：** 当需要开通以下企业拓展服务时， 系统将返回一个操作链接。贵方需要主动联系并通知企业的超级管理员（超管）或法人。由他们点击该链接，完成服务的开通操作。
-  - **AUTO_SIGN（企业自动签）**
+  - **AUTO_SIGN（企业授权签）**
   - **DOWNLOAD_FLOW（授权渠道下载合同）**
 
 注意： `在调用此接口以管理企业扩展服务时，操作者（ Agent.ProxyOperator.OpenId）必须是企业的超级管理员（超管）或法人`

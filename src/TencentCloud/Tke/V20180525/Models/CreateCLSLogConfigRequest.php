@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCLSLogConfig请求参数结构体
  *
- * @method string getLogConfig() 获取日志采集配置的json表达
- * @method void setLogConfig(string $LogConfig) 设置日志采集配置的json表达
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getLogsetId() 获取CLS日志集ID
- * @method void setLogsetId(string $LogsetId) 设置CLS日志集ID
- * @method string getClusterType() 获取当前集群类型支持tke（标准集群）、eks（serverless集群）
- * @method void setClusterType(string $ClusterType) 设置当前集群类型支持tke（标准集群）、eks（serverless集群）
+ * @method string getLogConfig() 获取<p>日志采集配置的json表达</p>
+ * @method void setLogConfig(string $LogConfig) 设置<p>日志采集配置的json表达</p>
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getLogsetId() 获取<p>CLS日志集ID</p>
+ * @method void setLogsetId(string $LogsetId) 设置<p>CLS日志集ID</p>
+ * @method string getClusterType() 获取<p>当前集群类型支持tke（标准集群）、eks（serverless集群）</p>
+ * @method void setClusterType(string $ClusterType) 设置<p>当前集群类型支持tke（标准集群）、eks（serverless集群）</p>
  */
 class CreateCLSLogConfigRequest extends AbstractModel
 {
     /**
-     * @var string 日志采集配置的json表达
+     * @var string <p>日志采集配置的json表达</p>
      */
     public $LogConfig;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string CLS日志集ID
+     * @var string <p>CLS日志集ID</p>
      */
     public $LogsetId;
 
     /**
-     * @var string 当前集群类型支持tke（标准集群）、eks（serverless集群）
+     * @var string <p>当前集群类型支持tke（标准集群）、eks（serverless集群）</p>
      */
     public $ClusterType;
 
     /**
-     * @param string $LogConfig 日志采集配置的json表达
-     * @param string $ClusterId 集群ID
-     * @param string $LogsetId CLS日志集ID
-     * @param string $ClusterType 当前集群类型支持tke（标准集群）、eks（serverless集群）
+     * @param string $LogConfig <p>日志采集配置的json表达</p>
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $LogsetId <p>CLS日志集ID</p>
+     * @param string $ClusterType <p>当前集群类型支持tke（标准集群）、eks（serverless集群）</p>
      */
     function __construct()
     {

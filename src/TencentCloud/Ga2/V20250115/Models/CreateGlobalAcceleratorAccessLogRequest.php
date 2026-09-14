@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGlobalAcceleratorAccessLog请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取<p>GA示例唯一Id</p>
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>GA示例唯一Id</p>
+ * @method string getGlobalAcceleratorId() 获取<p>GA实例唯一Id</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>GA实例唯一Id</p>
  * @method string getListenerId() 获取<p>监听器Id</p>
  * @method void setListenerId(string $ListenerId) 设置<p>监听器Id</p>
  * @method string getEndpointGroupId() 获取<p>终端节点组Id</p>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateGlobalAcceleratorAccessLogRequest extends AbstractModel
 {
     /**
-     * @var string <p>GA示例唯一Id</p>
+     * @var string <p>GA实例唯一Id</p>
      */
     public $GlobalAcceleratorId;
 
@@ -80,7 +80,7 @@ class CreateGlobalAcceleratorAccessLogRequest extends AbstractModel
     public $FlowLogDescription;
 
     /**
-     * @param string $GlobalAcceleratorId <p>GA示例唯一Id</p>
+     * @param string $GlobalAcceleratorId <p>GA实例唯一Id</p>
      * @param string $ListenerId <p>监听器Id</p>
      * @param string $EndpointGroupId <p>终端节点组Id</p>
      * @param string $CloudRegion <p>日志集所在地域</p>

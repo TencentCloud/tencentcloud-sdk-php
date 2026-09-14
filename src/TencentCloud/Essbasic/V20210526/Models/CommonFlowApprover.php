@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getNotChannelOrganization() 获取<p>指定签署人非第三方平台子客企业下员工还是SaaS平台企业，在ApproverType为ORGANIZATION时指定。</p><ul><li>false: 默认值，第三方平台子客企业下员工</li><li>true: SaaS平台企业下的员工</li></ul>
  * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置<p>指定签署人非第三方平台子客企业下员工还是SaaS平台企业，在ApproverType为ORGANIZATION时指定。</p><ul><li>false: 默认值，第三方平台子客企业下员工</li><li>true: SaaS平台企业下的员工</li></ul>
- * @method integer getApproverType() 获取<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><p> <strong>0</strong> :企业/企业员工（企业签署方或模板发起时的企业静默签）<br> <strong>1</strong> :个人/自然人<br><strong>3</strong> :企业/企业员工自动签（他方企业自动签署或文件发起时的本方企业自动签）</p><p>注：类型为3（企业/企业员工自动签）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。<br>使用自动签时，请确保企业已经开通自动签功能，开通方式：控制台 -&gt; 企业设置 -&gt; 扩展服务 -&gt; 企业自动签。<br>使用文件发起自动签时使用前请联系对接的客户经理沟通。</p>
- * @method void setApproverType(integer $ApproverType) 设置<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><p> <strong>0</strong> :企业/企业员工（企业签署方或模板发起时的企业静默签）<br> <strong>1</strong> :个人/自然人<br><strong>3</strong> :企业/企业员工自动签（他方企业自动签署或文件发起时的本方企业自动签）</p><p>注：类型为3（企业/企业员工自动签）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。<br>使用自动签时，请确保企业已经开通自动签功能，开通方式：控制台 -&gt; 企业设置 -&gt; 扩展服务 -&gt; 企业自动签。<br>使用文件发起自动签时使用前请联系对接的客户经理沟通。</p>
+ * @method integer getApproverType() 获取<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下: <strong>0</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”） <strong>1</strong> :个人/自然人<strong>3</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）注：类型为3（企业/企业员工“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。使用“授权签”时，请确保企业已经开通“授权签”功能，开通方式：控制台 -&gt; 企业设置 -&gt; 扩展服务 -&gt; 企业“授权签”。使用文件发起“授权签”时使用前请联系对接的客户经理沟通。</p>
+ * @method void setApproverType(integer $ApproverType) 设置<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下: <strong>0</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”） <strong>1</strong> :个人/自然人<strong>3</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）注：类型为3（企业/企业员工“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。使用“授权签”时，请确保企业已经开通“授权签”功能，开通方式：控制台 -&gt; 企业设置 -&gt; 扩展服务 -&gt; 企业“授权签”。使用文件发起“授权签”时使用前请联系对接的客户经理沟通。</p>
  * @method string getOrganizationId() 获取<p>电子签平台给企业生成的企业id</p>
  * @method void setOrganizationId(string $OrganizationId) 设置<p>电子签平台给企业生成的企业id</p>
- * @method string getOrganizationOpenId() 获取<p>企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传</p>
- * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置<p>企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传</p>
- * @method string getOrganizationName() 获取<p>企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传</p>
- * @method void setOrganizationName(string $OrganizationName) 设置<p>企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传</p>
+ * @method string getOrganizationOpenId() 获取<p>企业OpenId，第三方应用集成非“授权签”子客企业签署人发起合同必传</p>
+ * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置<p>企业OpenId，第三方应用集成非“授权签”子客企业签署人发起合同必传</p>
+ * @method string getOrganizationName() 获取<p>企业名称，第三方应用集成非“授权签”子客企业签署人必传，saas企业签署人必传</p>
+ * @method void setOrganizationName(string $OrganizationName) 设置<p>企业名称，第三方应用集成非“授权签”子客企业签署人必传，saas企业签署人必传</p>
  * @method string getUserId() 获取<p>电子签平台给企业员工或者自热人生成的用户id</p>
  * @method void setUserId(string $UserId) 设置<p>电子签平台给企业员工或者自热人生成的用户id</p>
  * @method string getOpenId() 获取<p>第三方平台子客企业员工的唯一标识</p>
@@ -69,7 +69,7 @@ class CommonFlowApprover extends AbstractModel
     public $NotChannelOrganization;
 
     /**
-     * @var integer <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><p> <strong>0</strong> :企业/企业员工（企业签署方或模板发起时的企业静默签）<br> <strong>1</strong> :个人/自然人<br><strong>3</strong> :企业/企业员工自动签（他方企业自动签署或文件发起时的本方企业自动签）</p><p>注：类型为3（企业/企业员工自动签）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。<br>使用自动签时，请确保企业已经开通自动签功能，开通方式：控制台 -&gt; 企业设置 -&gt; 扩展服务 -&gt; 企业自动签。<br>使用文件发起自动签时使用前请联系对接的客户经理沟通。</p>
+     * @var integer <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下: <strong>0</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”） <strong>1</strong> :个人/自然人<strong>3</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）注：类型为3（企业/企业员工“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。使用“授权签”时，请确保企业已经开通“授权签”功能，开通方式：控制台 -&gt; 企业设置 -&gt; 扩展服务 -&gt; 企业“授权签”。使用文件发起“授权签”时使用前请联系对接的客户经理沟通。</p>
      */
     public $ApproverType;
 
@@ -79,12 +79,12 @@ class CommonFlowApprover extends AbstractModel
     public $OrganizationId;
 
     /**
-     * @var string <p>企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传</p>
+     * @var string <p>企业OpenId，第三方应用集成非“授权签”子客企业签署人发起合同必传</p>
      */
     public $OrganizationOpenId;
 
     /**
-     * @var string <p>企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传</p>
+     * @var string <p>企业名称，第三方应用集成非“授权签”子客企业签署人必传，saas企业签署人必传</p>
      */
     public $OrganizationName;
 
@@ -165,10 +165,10 @@ class CommonFlowApprover extends AbstractModel
 
     /**
      * @param boolean $NotChannelOrganization <p>指定签署人非第三方平台子客企业下员工还是SaaS平台企业，在ApproverType为ORGANIZATION时指定。</p><ul><li>false: 默认值，第三方平台子客企业下员工</li><li>true: SaaS平台企业下的员工</li></ul>
-     * @param integer $ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><p> <strong>0</strong> :企业/企业员工（企业签署方或模板发起时的企业静默签）<br> <strong>1</strong> :个人/自然人<br><strong>3</strong> :企业/企业员工自动签（他方企业自动签署或文件发起时的本方企业自动签）</p><p>注：类型为3（企业/企业员工自动签）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。<br>使用自动签时，请确保企业已经开通自动签功能，开通方式：控制台 -&gt; 企业设置 -&gt; 扩展服务 -&gt; 企业自动签。<br>使用文件发起自动签时使用前请联系对接的客户经理沟通。</p>
+     * @param integer $ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下: <strong>0</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”） <strong>1</strong> :个人/自然人<strong>3</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）注：类型为3（企业/企业员工“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。使用“授权签”时，请确保企业已经开通“授权签”功能，开通方式：控制台 -&gt; 企业设置 -&gt; 扩展服务 -&gt; 企业“授权签”。使用文件发起“授权签”时使用前请联系对接的客户经理沟通。</p>
      * @param string $OrganizationId <p>电子签平台给企业生成的企业id</p>
-     * @param string $OrganizationOpenId <p>企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传</p>
-     * @param string $OrganizationName <p>企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传</p>
+     * @param string $OrganizationOpenId <p>企业OpenId，第三方应用集成非“授权签”子客企业签署人发起合同必传</p>
+     * @param string $OrganizationName <p>企业名称，第三方应用集成非“授权签”子客企业签署人必传，saas企业签署人必传</p>
      * @param string $UserId <p>电子签平台给企业员工或者自热人生成的用户id</p>
      * @param string $OpenId <p>第三方平台子客企业员工的唯一标识</p>
      * @param string $ApproverName <p>签署方经办人的姓名。<br>经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p>

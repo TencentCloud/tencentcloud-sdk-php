@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrompt(string $Prompt) 设置<p>用于生成视频的prompt信息。</p><p>prompt长度限制：2000字符。</p>
  * @method string getModelName() 获取<p>文档生成视频模型名称</p><p>默认值：Wand</p>
  * @method void setModelName(string $ModelName) 设置<p>文档生成视频模型名称</p><p>默认值：Wand</p>
- * @method string getModelVersion() 获取<p>文档生成视频模型版本号</p><p>默认值：1.0</p>
- * @method void setModelVersion(string $ModelVersion) 设置<p>文档生成视频模型版本号</p><p>默认值：1.0</p>
+ * @method string getModelVersion() 获取<p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
+ * @method void setModelVersion(string $ModelVersion) 设置<p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
  * @method string getRatio() 获取<p>生成视频的宽高比。</p><p>枚举值：</p><ul><li>16:9： 16:9</li><li>9:16： 9:16</li><li>1:1： 1:1</li></ul><p>默认值：16:9</p>
  * @method void setRatio(string $Ratio) 设置<p>生成视频的宽高比。</p><p>枚举值：</p><ul><li>16:9： 16:9</li><li>9:16： 9:16</li><li>1:1： 1:1</li></ul><p>默认值：16:9</p>
  * @method string getLanguage() 获取<p>生成视频的语言。</p><p>枚举值：</p><ul><li>zh： 中文</li><li>en： 英文</li><li>ja： 日语</li><li>ko： 韩语</li><li>ru： 俄语</li><li>fr： 法语</li><li>es： 西班牙语</li><li>de： 德语</li></ul><p>默认值：zh</p>
@@ -67,7 +67,7 @@ class DocToVideoInput extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string <p>文档生成视频模型版本号</p><p>默认值：1.0</p>
+     * @var string <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
      */
     public $ModelVersion;
 
@@ -125,7 +125,7 @@ class DocToVideoInput extends AbstractModel
      * @param array $FileUrl <p>用于生成视频的文档链接。</p><p>支持的文档类型：pdf、pptx、docx、png、jpg<br>文档数量限制：3个<br>文档大小限制：10MB<br>文档页数限制：100页</p>
      * @param string $Prompt <p>用于生成视频的prompt信息。</p><p>prompt长度限制：2000字符。</p>
      * @param string $ModelName <p>文档生成视频模型名称</p><p>默认值：Wand</p>
-     * @param string $ModelVersion <p>文档生成视频模型版本号</p><p>默认值：1.0</p>
+     * @param string $ModelVersion <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
      * @param string $Ratio <p>生成视频的宽高比。</p><p>枚举值：</p><ul><li>16:9： 16:9</li><li>9:16： 9:16</li><li>1:1： 1:1</li></ul><p>默认值：16:9</p>
      * @param string $Language <p>生成视频的语言。</p><p>枚举值：</p><ul><li>zh： 中文</li><li>en： 英文</li><li>ja： 日语</li><li>ko： 韩语</li><li>ru： 俄语</li><li>fr： 法语</li><li>es： 西班牙语</li><li>de： 德语</li></ul><p>默认值：zh</p>
      * @param integer $ReferenceDuration <p>生成视频的时长参考。</p><p>非准确的视频时长，仅供大模型参考生成。</p><p>取值范围：[15, 1200]</p><p>单位：秒</p>

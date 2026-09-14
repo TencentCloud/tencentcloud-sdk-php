@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoundId(string $RoundId) 设置<p>本轮对话的唯一标识 Id</p>
  * @method integer getRoundIndex() 获取<p>轮次</p>
  * @method void setRoundIndex(integer $RoundIndex) 设置<p>轮次</p>
- * @method string getTags() 获取<p>用户回复分类的标签， json序列化后的表示</p>
- * @method void setTags(string $Tags) 设置<p>用户回复分类的标签， json序列化后的表示</p>
+ * @method string getTags() 获取<p>本轮命中的普通标签列表（TagType 为 1），json 序列化后的字符串。数组元素含 TagName（标签名）、TagValue（标签值）、TagType（标签类型，1 表示普通标签）三个字段；无标签时为空字符串。</p>
+ * @method void setTags(string $Tags) 设置<p>本轮命中的普通标签列表（TagType 为 1），json 序列化后的字符串。数组元素含 TagName（标签名）、TagValue（标签值）、TagType（标签类型，1 表示普通标签）三个字段；无标签时为空字符串。</p>
  * @method array getMessages() 获取<p>本轮涉及到的消息内容</p>
  * @method void setMessages(array $Messages) 设置<p>本轮涉及到的消息内容</p>
  * @method array getPaths() 获取<p>本轮对话在画布中经过的节点路径</p>
@@ -44,7 +44,7 @@ class AICallInteractionRound extends AbstractModel
     public $RoundIndex;
 
     /**
-     * @var string <p>用户回复分类的标签， json序列化后的表示</p>
+     * @var string <p>本轮命中的普通标签列表（TagType 为 1），json 序列化后的字符串。数组元素含 TagName（标签名）、TagValue（标签值）、TagType（标签类型，1 表示普通标签）三个字段；无标签时为空字符串。</p>
      */
     public $Tags;
 
@@ -61,7 +61,7 @@ class AICallInteractionRound extends AbstractModel
     /**
      * @param string $RoundId <p>本轮对话的唯一标识 Id</p>
      * @param integer $RoundIndex <p>轮次</p>
-     * @param string $Tags <p>用户回复分类的标签， json序列化后的表示</p>
+     * @param string $Tags <p>本轮命中的普通标签列表（TagType 为 1），json 序列化后的字符串。数组元素含 TagName（标签名）、TagValue（标签值）、TagType（标签类型，1 表示普通标签）三个字段；无标签时为空字符串。</p>
      * @param array $Messages <p>本轮涉及到的消息内容</p>
      * @param array $Paths <p>本轮对话在画布中经过的节点路径</p>
      */

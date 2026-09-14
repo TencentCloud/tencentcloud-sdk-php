@@ -20,80 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBatchInitOrganizationUrl请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.AppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.AppId 必填。
- * @method array getOperateTypes() 获取初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权自动签</li>
-</ul>
- * @method void setOperateTypes(array $OperateTypes) 设置初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权自动签</li>
-</ul>
- * @method array getProxyOrganizationOpenIds() 获取批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个
- * @method void setProxyOrganizationOpenIds(array $ProxyOrganizationOpenIds) 设置批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个
- * @method boolean getIsAuthorizePlatformApplication() 获取当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权自动签时传true。
-![image](https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png)
- * @method void setIsAuthorizePlatformApplication(boolean $IsAuthorizePlatformApplication) 设置当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权自动签时传true。
-![image](https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png)
- * @method string getAuthorizedProxyOrganizationOpenId() 获取被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权自动签时必传。
-
-
-
- * @method void setAuthorizedProxyOrganizationOpenId(string $AuthorizedProxyOrganizationOpenId) 设置被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权自动签时必传。
+ * @method Agent getAgent() 获取<p>应用相关信息。 此接口Agent.AppId 必填。</p>
+ * @method void setAgent(Agent $Agent) 设置<p>应用相关信息。 此接口Agent.AppId 必填。</p>
+ * @method array getOperateTypes() 获取<p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>OPEN_AUTO_SIGN :开通企业授权签署</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权“授权签”</li></ul></p>
+ * @method void setOperateTypes(array $OperateTypes) 设置<p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>OPEN_AUTO_SIGN :开通企业授权签署</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权“授权签”</li></ul></p>
+ * @method array getProxyOrganizationOpenIds() 获取<p>批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个</p>
+ * @method void setProxyOrganizationOpenIds(array $ProxyOrganizationOpenIds) 设置<p>批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个</p>
+ * @method boolean getIsAuthorizePlatformApplication() 获取<p>当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权【授权签】时传true。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png" alt="image"></p>
+ * @method void setIsAuthorizePlatformApplication(boolean $IsAuthorizePlatformApplication) 设置<p>当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权【授权签】时传true。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png" alt="image"></p>
+ * @method string getAuthorizedProxyOrganizationOpenId() 获取<p>被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权【授权签】时必传。</p>
+ * @method void setAuthorizedProxyOrganizationOpenId(string $AuthorizedProxyOrganizationOpenId) 设置<p>被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权【授权签】时必传。</p>
  */
 class CreateBatchInitOrganizationUrlRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.AppId 必填。
+     * @var Agent <p>应用相关信息。 此接口Agent.AppId 必填。</p>
      */
     public $Agent;
 
     /**
-     * @var array 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权自动签</li>
-</ul>
+     * @var array <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>OPEN_AUTO_SIGN :开通企业授权签署</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权“授权签”</li></ul></p>
      */
     public $OperateTypes;
 
     /**
-     * @var array 批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个
+     * @var array <p>批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个</p>
      */
     public $ProxyOrganizationOpenIds;
 
     /**
-     * @var boolean 当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权自动签时传true。
-![image](https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png)
+     * @var boolean <p>当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权【授权签】时传true。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png" alt="image"></p>
      */
     public $IsAuthorizePlatformApplication;
 
     /**
-     * @var string 被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权自动签时必传。
-
-
-
+     * @var string <p>被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权【授权签】时必传。</p>
      */
     public $AuthorizedProxyOrganizationOpenId;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.AppId 必填。
-     * @param array $OperateTypes 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权自动签</li>
-</ul>
-     * @param array $ProxyOrganizationOpenIds 批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个
-     * @param boolean $IsAuthorizePlatformApplication 当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权自动签时传true。
-![image](https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png)
-     * @param string $AuthorizedProxyOrganizationOpenId 被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权自动签时必传。
+     * @param Agent $Agent <p>应用相关信息。 此接口Agent.AppId 必填。</p>
+     * @param array $OperateTypes <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>OPEN_AUTO_SIGN :开通企业授权签署</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权“授权签”</li></ul></p>
+     * @param array $ProxyOrganizationOpenIds <p>批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个</p>
+     * @param boolean $IsAuthorizePlatformApplication <p>当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权【授权签】时传true。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png" alt="image"></p>
+     * @param string $AuthorizedProxyOrganizationOpenId <p>被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权【授权签】时必传。</p>
      */
     function __construct()
     {

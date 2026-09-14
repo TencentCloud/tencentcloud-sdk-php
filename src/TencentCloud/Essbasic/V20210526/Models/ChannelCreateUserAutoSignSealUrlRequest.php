@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取<p>渠道应用相关信息。</p>
  * @method void setAgent(Agent $Agent) 设置<p>渠道应用相关信息。</p>
- * @method string getSceneKey() 获取<p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
- * @method void setSceneKey(string $SceneKey) 设置<p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
+ * @method string getSceneKey() 获取<p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景</li><li>OTHER：  通用场景</li></ul>
+ * @method void setSceneKey(string $SceneKey) 设置<p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景</li><li>OTHER：  通用场景</li></ul>
  * @method UserThreeFactor getUserInfo() 获取<p>“授权签”开通个人用户信息，包括名字，身份证等。</p>
  * @method void setUserInfo(UserThreeFactor $UserInfo) 设置<p>“授权签”开通个人用户信息，包括名字，身份证等。</p>
  * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
@@ -41,7 +41,7 @@ class ChannelCreateUserAutoSignSealUrlRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
+     * @var string <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景</li><li>OTHER：  通用场景</li></ul>
      */
     public $SceneKey;
 
@@ -67,7 +67,7 @@ class ChannelCreateUserAutoSignSealUrlRequest extends AbstractModel
 
     /**
      * @param Agent $Agent <p>渠道应用相关信息。</p>
-     * @param string $SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
+     * @param string $SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景</li><li>OTHER：  通用场景</li></ul>
      * @param UserThreeFactor $UserInfo <p>“授权签”开通个人用户信息，包括名字，身份证等。</p>
      * @param UserInfo $Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      * @param integer $ExpiredTime <p>链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。<code>如果不传，默认过期时间为当前时间往后7天。</code></p>

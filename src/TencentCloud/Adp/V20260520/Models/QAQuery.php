@@ -1,0 +1,65 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Adp\V20260520\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * QA 查询条件
+ *
+ * @method string getQuery() 获取<p>查询关键词（模糊搜索）</p>
+ * @method void setQuery(string $Query) 设置<p>查询关键词（模糊搜索）</p>
+ * @method array getQueryScopeList() 获取<p>查询范围（query 作用的字段）：1=问题，2=标签或标签值，3=答案；支持多选，缺省时无效</p>
+ * @method void setQueryScopeList(array $QueryScopeList) 设置<p>查询范围（query 作用的字段）：1=问题，2=标签或标签值，3=答案；支持多选，缺省时无效</p>
+ */
+class QAQuery extends AbstractModel
+{
+    /**
+     * @var string <p>查询关键词（模糊搜索）</p>
+     */
+    public $Query;
+
+    /**
+     * @var array <p>查询范围（query 作用的字段）：1=问题，2=标签或标签值，3=答案；支持多选，缺省时无效</p>
+     */
+    public $QueryScopeList;
+
+    /**
+     * @param string $Query <p>查询关键词（模糊搜索）</p>
+     * @param array $QueryScopeList <p>查询范围（query 作用的字段）：1=问题，2=标签或标签值，3=答案；支持多选，缺省时无效</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
+            $this->Query = $param["Query"];
+        }
+
+        if (array_key_exists("QueryScopeList",$param) and $param["QueryScopeList"] !== null) {
+            $this->QueryScopeList = $param["QueryScopeList"];
+        }
+    }
+}

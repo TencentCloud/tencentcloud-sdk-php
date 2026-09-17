@@ -112,7 +112,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
 ](https://cloud.tencent.com/document/product/1552/103415) 。
  * @method Models\DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(Models\DeleteApplicationProxyRuleRequest $req) 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [删除四层代理转发规则](https://cloud.tencent.com/document/product/1552/103414) 。
  * @method Models\DeleteContentIdentifierResponse DeleteContentIdentifier(Models\DeleteContentIdentifierRequest $req) 删除指定的内容标识符。该功能仅白名单开放。
- * @method Models\DeleteCustomErrorPageResponse DeleteCustomErrorPage(Models\DeleteCustomErrorPageRequest $req) 删除自定义错误页面。
+ * @method Models\DeleteCustomErrorPageResponse DeleteCustomErrorPage(Models\DeleteCustomErrorPageRequest $req) 删除自定义响应页面。
  * @method Models\DeleteDnsRecordsResponse DeleteDnsRecords(Models\DeleteDnsRecordsRequest $req) 您可以用本接口批量删除 DNS 记录。
  * @method Models\DeleteEdgeKVNamespaceResponse DeleteEdgeKVNamespace(Models\DeleteEdgeKVNamespaceRequest $req) 本接口用于删除指定的 KV 命名空间。删除后命名空间内的所有键值对数据将被清空且不可恢复。若命名空间正被边缘函数引用，需先解除绑定关系后方可删除。
  * @method Models\DeleteFunctionResponse DeleteFunction(Models\DeleteFunctionRequest $req) 删除边缘函数，删除后函数无法恢复，关联的触发规则会一并删除。

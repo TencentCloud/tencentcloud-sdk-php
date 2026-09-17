@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Adp\V20260520\Models as Models;
 
 /**
- * @method Models\CheckLabelResponse CheckLabel(Models\CheckLabelRequest $req) 校验标签下的标准词是否已存在
+ * @method Models\CheckLabelResponse CheckLabel(Models\CheckLabelRequest $req) 校验标签
  * @method Models\CopyAgentFromAppResponse CopyAgentFromApp(Models\CopyAgentFromAppRequest $req) 复制 Agent（目前仅支持claw模式））
  * @method Models\CopyAppResponse CopyApp(Models\CopyAppRequest $req) 复制应用
  * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 创建Agent（目前仅支持claw模式）
@@ -101,6 +101,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeQASummaryListResponse DescribeQASummaryList(Models\DescribeQASummaryListRequest $req) 查询 QA 列表
  * @method Models\DescribeReleaseListResponse DescribeReleaseList(Models\DescribeReleaseListRequest $req) 发布记录列表
  * @method Models\DescribeReleaseSummaryResponse DescribeReleaseSummary(Models\DescribeReleaseSummaryRequest $req) 查询发布任务
+ * @method Models\DescribeResourceSummaryResponse DescribeResourceSummary(Models\DescribeResourceSummaryRequest $req) 获取用户资源套餐和增值包用量信息
  * @method Models\DescribeSkillCategoryListResponse DescribeSkillCategoryList(Models\DescribeSkillCategoryListRequest $req) 查询 Skill 分类列表
  * @method Models\DescribeSkillDetailResponse DescribeSkillDetail(Models\DescribeSkillDetailRequest $req) 查询skill详情
  * @method Models\DescribeSkillReferenceListResponse DescribeSkillReferenceList(Models\DescribeSkillReferenceListRequest $req) 查询某个 Skill 被引用的详情列表（按 SkillRefType 分组：OpenClaw / cloud agent / 企业助手 agent） 鉴权：同 DescribeSkillDetail（能看该 Skill 即可查）

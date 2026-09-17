@@ -80,8 +80,8 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateNotebookSessionResponse CreateNotebookSession(Models\CreateNotebookSessionRequest $req) 本接口（CreateNotebookSession）用于创建交互式session（notebook）
  * @method Models\CreateNotebookSessionStatementResponse CreateNotebookSessionStatement(Models\CreateNotebookSessionStatementRequest $req) 本接口（CreateNotebookSessionStatement）用于在session中执行代码片段
  * @method Models\CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQL(Models\CreateNotebookSessionStatementSupportBatchSQLRequest $req) 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建交互式session并执行SQL任务
- * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 新增资源包
- * @method Models\CreatePartitionQueueResponse CreatePartitionQueue(Models\CreatePartitionQueueRequest $req) 新增资源队列：在指定分区下创建一个新的资源队列，支持设置队列名称、描述、资源规格列表和队列类型。
+ * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 新增资源包（预付费 / 后付费）
+ * @method Models\CreatePartitionQueueResponse CreatePartitionQueue(Models\CreatePartitionQueueRequest $req) 新增资源队列：在指定分区下创建一个新的资源队列，支持设置队列编码、别名、描述、资源规格列表和队列类型。
  * @method Models\CreateRayClusterResponse CreateRayCluster(Models\CreateRayClusterRequest $req) 创建集群
  * @method Models\CreateResourceConfigResponse CreateResourceConfig(Models\CreateResourceConfigRequest $req) 创建资源配置模板
  * @method Models\CreateResultDownloadResponse CreateResultDownload(Models\CreateResultDownloadRequest $req) 创建查询结果下载任务
@@ -322,7 +322,7 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
  * @method Models\ModifyGovernEventRuleResponse ModifyGovernEventRule(Models\ModifyGovernEventRuleRequest $req) 修改数据治理事件阈值
  * @method Models\ModifyLabPriorityResponse ModifyLabPriority(Models\ModifyLabPriorityRequest $req) 修改实验室的调度优先级（1-9，数字越大优先级越高）
  * @method Models\ModifyPartitionDescriptionResponse ModifyPartitionDescription(Models\ModifyPartitionDescriptionRequest $req) 修改分区描述
- * @method Models\ModifyPartitionQueueResponse ModifyPartitionQueue(Models\ModifyPartitionQueueRequest $req) 编辑资源队列：根据队列ID修改指定资源队列的名称、描述、资源规格列表和队列类型等信息。
+ * @method Models\ModifyPartitionQueueResponse ModifyPartitionQueue(Models\ModifyPartitionQueueRequest $req) 编辑资源队列：根据队列ID修改指定资源队列的别名（显示名）、描述、资源规格列表和队列类型等信息。队列编码（QueueName）不可变，仅作为一致性校验键。
  * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) 更新spark作业
  * @method Models\ModifySparkAppBatchResponse ModifySparkAppBatch(Models\ModifySparkAppBatchRequest $req) 本接口（ModifySparkAppBatch）用于批量修改Spark作业参数配置
  * @method Models\ModifySparkAppForTDLCResponse ModifySparkAppForTDLC(Models\ModifySparkAppForTDLCRequest $req) 更新tdlc spark作业

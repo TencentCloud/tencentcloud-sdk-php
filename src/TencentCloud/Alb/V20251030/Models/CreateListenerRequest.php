@@ -20,186 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateListener请求参数结构体
  *
- * @method array getDefaultActions() 获取默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。
- * @method void setDefaultActions(array $DefaultActions) 设置默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。
- * @method integer getListenerPort() 获取负载均衡实例前端使用的端口。  取值：1~65535。
- * @method void setListenerPort(integer $ListenerPort) 设置负载均衡实例前端使用的端口。  取值：1~65535。
- * @method string getListenerProtocol() 获取监听协议。  取值：HTTP、HTTPS 或 QUIC。
- * @method void setListenerProtocol(string $ListenerProtocol) 设置监听协议。  取值：HTTP、HTTPS 或 QUIC。
- * @method string getLoadBalancerId() 获取负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
- * @method array getCaCertificateIds() 获取监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。
-当 CaEnabled 参数取值为 true 时，此参数必填。
- * @method void setCaCertificateIds(array $CaCertificateIds) 设置监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。
-当 CaEnabled 参数取值为 true 时，此参数必填。
- * @method boolean getCaEnabled() 获取是否开启双向认证。
-取值：
-true：开启。
-false（默认值）：不开启。
- * @method void setCaEnabled(boolean $CaEnabled) 设置是否开启双向认证。
-取值：
-true：开启。
-false（默认值）：不开启。
- * @method array getCertificateIds() 获取服务器证书 ID 列表。
- * @method void setCertificateIds(array $CertificateIds) 设置服务器证书 ID 列表。
- * @method string getClientToken() 获取客户端Token，用于保证请求的幂等性。  
-
-从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
- * @method void setClientToken(string $ClientToken) 设置客户端Token，用于保证请求的幂等性。  
-
-从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
- * @method boolean getGzipEnabled() 获取是否开启Gzip压缩。取值:true(默认值):是。false:否
- * @method void setGzipEnabled(boolean $GzipEnabled) 设置是否开启Gzip压缩。取值:true(默认值):是。false:否
- * @method boolean getHttp2Enabled() 获取是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。
- * @method void setHttp2Enabled(boolean $Http2Enabled) 设置是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。
- * @method integer getIdleTimeout() 获取连接空闲超时时间。单位：秒。
-取值范围：1~600。
-默认值：15。
-如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。
- * @method void setIdleTimeout(integer $IdleTimeout) 设置连接空闲超时时间。单位：秒。
-取值范围：1~600。
-默认值：15。
-如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。
- * @method string getListenerName() 获取自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
- * @method void setListenerName(string $ListenerName) 设置自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
- * @method integer getRequestTimeout() 获取请求超时时间。单位：秒。
-取值：1~600。
-默认值：60。
-如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。
- * @method void setRequestTimeout(integer $RequestTimeout) 设置请求超时时间。单位：秒。
-取值：1~600。
-默认值：60。
-如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。
- * @method string getSecurityPolicyId() 获取安全策略 ID，格式为 tls- 后接 8 位字母数字。
- * @method void setSecurityPolicyId(string $SecurityPolicyId) 设置安全策略 ID，格式为 tls- 后接 8 位字母数字。
- * @method array getTags() 获取标签列表。最大支持20个。
- * @method void setTags(array $Tags) 设置标签列表。最大支持20个。
- * @method XForwardedForConfig getXForwardedForConfig() 获取X-Forwarded-For配置
- * @method void setXForwardedForConfig(XForwardedForConfig $XForwardedForConfig) 设置X-Forwarded-For配置
+ * @method array getDefaultActions() 获取<p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
+ * @method void setDefaultActions(array $DefaultActions) 设置<p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
+ * @method integer getListenerPort() 获取<p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
+ * @method void setListenerPort(integer $ListenerPort) 设置<p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
+ * @method string getListenerProtocol() 获取<p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+ * @method void setListenerProtocol(string $ListenerProtocol) 设置<p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+ * @method string getLoadBalancerId() 获取<p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
+ * @method array getCaCertificateIds() 获取<p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
+ * @method void setCaCertificateIds(array $CaCertificateIds) 设置<p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
+ * @method boolean getCaEnabled() 获取<p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p>
+ * @method void setCaEnabled(boolean $CaEnabled) 设置<p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p>
+ * @method array getCertificateIds() 获取<p>服务器证书 ID 列表。</p>
+ * @method void setCertificateIds(array $CertificateIds) 设置<p>服务器证书 ID 列表。</p>
+ * @method string getClientToken() 获取<p>客户端Token，用于保证请求的幂等性。  </p><p>从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>客户端Token，用于保证请求的幂等性。  </p><p>从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+ * @method boolean getGzipEnabled() 获取<p>是否开启Gzip压缩。取值:true(默认值):是。false:否</p>
+ * @method void setGzipEnabled(boolean $GzipEnabled) 设置<p>是否开启Gzip压缩。取值:true(默认值):是。false:否</p>
+ * @method boolean getHttp2Enabled() 获取<p>是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。</p>
+ * @method void setHttp2Enabled(boolean $Http2Enabled) 设置<p>是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。</p>
+ * @method integer getIdleTimeout() 获取<p>连接空闲超时时间。单位：秒。<br>取值范围：1~600。<br>默认值：15。<br>如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。</p>
+ * @method void setIdleTimeout(integer $IdleTimeout) 设置<p>连接空闲超时时间。单位：秒。<br>取值范围：1~600。<br>默认值：15。<br>如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。</p>
+ * @method string getListenerName() 获取<p>自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
+ * @method void setListenerName(string $ListenerName) 设置<p>自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
+ * @method integer getRequestTimeout() 获取<p>连接请求超时时间。单位：秒。取值：1~600。默认值：60。如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。</p>
+ * @method void setRequestTimeout(integer $RequestTimeout) 设置<p>连接请求超时时间。单位：秒。取值：1~600。默认值：60。如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。</p>
+ * @method string getSecurityPolicyId() 获取<p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
+ * @method void setSecurityPolicyId(string $SecurityPolicyId) 设置<p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
+ * @method array getTags() 获取<p>标签列表。最大支持20个。</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表。最大支持20个。</p>
+ * @method XForwardedForConfig getXForwardedForConfig() 获取<p>X-Forwarded-For配置</p>
+ * @method void setXForwardedForConfig(XForwardedForConfig $XForwardedForConfig) 设置<p>X-Forwarded-For配置</p>
  */
 class CreateListenerRequest extends AbstractModel
 {
     /**
-     * @var array 默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。
+     * @var array <p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
      */
     public $DefaultActions;
 
     /**
-     * @var integer 负载均衡实例前端使用的端口。  取值：1~65535。
+     * @var integer <p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
      */
     public $ListenerPort;
 
     /**
-     * @var string 监听协议。  取值：HTTP、HTTPS 或 QUIC。
+     * @var string <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
      */
     public $ListenerProtocol;
 
     /**
-     * @var string 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * @var string <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。
-当 CaEnabled 参数取值为 true 时，此参数必填。
+     * @var array <p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
      */
     public $CaCertificateIds;
 
     /**
-     * @var boolean 是否开启双向认证。
-取值：
-true：开启。
-false（默认值）：不开启。
+     * @var boolean <p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p>
      */
     public $CaEnabled;
 
     /**
-     * @var array 服务器证书 ID 列表。
+     * @var array <p>服务器证书 ID 列表。</p>
      */
     public $CertificateIds;
 
     /**
-     * @var string 客户端Token，用于保证请求的幂等性。  
-
-从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+     * @var string <p>客户端Token，用于保证请求的幂等性。  </p><p>从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
      */
     public $ClientToken;
 
     /**
-     * @var boolean 是否开启Gzip压缩。取值:true(默认值):是。false:否
+     * @var boolean <p>是否开启Gzip压缩。取值:true(默认值):是。false:否</p>
      */
     public $GzipEnabled;
 
     /**
-     * @var boolean 是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。
+     * @var boolean <p>是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。</p>
      */
     public $Http2Enabled;
 
     /**
-     * @var integer 连接空闲超时时间。单位：秒。
-取值范围：1~600。
-默认值：15。
-如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。
+     * @var integer <p>连接空闲超时时间。单位：秒。<br>取值范围：1~600。<br>默认值：15。<br>如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。</p>
      */
     public $IdleTimeout;
 
     /**
-     * @var string 自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+     * @var string <p>自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
      */
     public $ListenerName;
 
     /**
-     * @var integer 请求超时时间。单位：秒。
-取值：1~600。
-默认值：60。
-如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。
+     * @var integer <p>连接请求超时时间。单位：秒。取值：1~600。默认值：60。如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。</p>
      */
     public $RequestTimeout;
 
     /**
-     * @var string 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+     * @var string <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
      */
     public $SecurityPolicyId;
 
     /**
-     * @var array 标签列表。最大支持20个。
+     * @var array <p>标签列表。最大支持20个。</p>
      */
     public $Tags;
 
     /**
-     * @var XForwardedForConfig X-Forwarded-For配置
+     * @var XForwardedForConfig <p>X-Forwarded-For配置</p>
      */
     public $XForwardedForConfig;
 
     /**
-     * @param array $DefaultActions 默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。
-     * @param integer $ListenerPort 负载均衡实例前端使用的端口。  取值：1~65535。
-     * @param string $ListenerProtocol 监听协议。  取值：HTTP、HTTPS 或 QUIC。
-     * @param string $LoadBalancerId 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
-     * @param array $CaCertificateIds 监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。
-当 CaEnabled 参数取值为 true 时，此参数必填。
-     * @param boolean $CaEnabled 是否开启双向认证。
-取值：
-true：开启。
-false（默认值）：不开启。
-     * @param array $CertificateIds 服务器证书 ID 列表。
-     * @param string $ClientToken 客户端Token，用于保证请求的幂等性。  
-
-从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
-     * @param boolean $GzipEnabled 是否开启Gzip压缩。取值:true(默认值):是。false:否
-     * @param boolean $Http2Enabled 是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。
-     * @param integer $IdleTimeout 连接空闲超时时间。单位：秒。
-取值范围：1~600。
-默认值：15。
-如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。
-     * @param string $ListenerName 自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
-     * @param integer $RequestTimeout 请求超时时间。单位：秒。
-取值：1~600。
-默认值：60。
-如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。
-     * @param string $SecurityPolicyId 安全策略 ID，格式为 tls- 后接 8 位字母数字。
-     * @param array $Tags 标签列表。最大支持20个。
-     * @param XForwardedForConfig $XForwardedForConfig X-Forwarded-For配置
+     * @param array $DefaultActions <p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
+     * @param integer $ListenerPort <p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
+     * @param string $ListenerProtocol <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+     * @param string $LoadBalancerId <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
+     * @param array $CaCertificateIds <p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
+     * @param boolean $CaEnabled <p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p>
+     * @param array $CertificateIds <p>服务器证书 ID 列表。</p>
+     * @param string $ClientToken <p>客户端Token，用于保证请求的幂等性。  </p><p>从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+     * @param boolean $GzipEnabled <p>是否开启Gzip压缩。取值:true(默认值):是。false:否</p>
+     * @param boolean $Http2Enabled <p>是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。</p>
+     * @param integer $IdleTimeout <p>连接空闲超时时间。单位：秒。<br>取值范围：1~600。<br>默认值：15。<br>如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。</p>
+     * @param string $ListenerName <p>自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
+     * @param integer $RequestTimeout <p>连接请求超时时间。单位：秒。取值：1~600。默认值：60。如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。</p>
+     * @param string $SecurityPolicyId <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
+     * @param array $Tags <p>标签列表。最大支持20个。</p>
+     * @param XForwardedForConfig $XForwardedForConfig <p>X-Forwarded-For配置</p>
      */
     function __construct()
     {

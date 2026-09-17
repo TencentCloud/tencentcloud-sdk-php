@@ -20,166 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeValidIDCardOCR请求参数结构体
  *
- * @method string getImageBase64() 获取图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method void setImageBase64(string $ImageBase64) 设置图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method string getImageUrl() 获取图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
- * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
- * @method integer getCardType() 获取0 自动，自动判断输入证件的类型
-1 身份证人像面，指定输入证件类型为二代身份证人像面
-2 身份证国徽面，指定输入证件类型为二代身份证国徽面
-3 身份证人像国徽面，指定输入证件类型为二代身份证人像面或者国徽面
-4 临时身份证人像面，指定输入证件类型为临时身份证人像面
-5 临时身份证国徽面，指定输入证件类型为临时身份证国徽面
-6 临时身份证人像国徽面，指定输入证件类型为临时身份证人像面或者国徽面
-7 港澳台居住证人像面，指定输入证件类型为港澳台居住证人像面
-8 港澳台居住证国徽面，指定输入证件类型为港澳台居住证国徽面
-9 港澳台居住证人像国徽面，指定输入证件类型为港澳台居住证人像面或者国徽面
-10 外国人永久居留身份证人像面，指定输入证件类型为外国人永久居留证人像面
-11 外国人永久居留身份证国徽面，指定输入证件类型为外国人永久居留证国徽面
-12 外国人永久居留身份证人像国徽面，指定输入证件类型为外国人永久居留证人像或者国徽面
-该参数如果不填，将为您自动判断卡证类型。
- * @method void setCardType(integer $CardType) 设置0 自动，自动判断输入证件的类型
-1 身份证人像面，指定输入证件类型为二代身份证人像面
-2 身份证国徽面，指定输入证件类型为二代身份证国徽面
-3 身份证人像国徽面，指定输入证件类型为二代身份证人像面或者国徽面
-4 临时身份证人像面，指定输入证件类型为临时身份证人像面
-5 临时身份证国徽面，指定输入证件类型为临时身份证国徽面
-6 临时身份证人像国徽面，指定输入证件类型为临时身份证人像面或者国徽面
-7 港澳台居住证人像面，指定输入证件类型为港澳台居住证人像面
-8 港澳台居住证国徽面，指定输入证件类型为港澳台居住证国徽面
-9 港澳台居住证人像国徽面，指定输入证件类型为港澳台居住证人像面或者国徽面
-10 外国人永久居留身份证人像面，指定输入证件类型为外国人永久居留证人像面
-11 外国人永久居留身份证国徽面，指定输入证件类型为外国人永久居留证国徽面
-12 外国人永久居留身份证人像国徽面，指定输入证件类型为外国人永久居留证人像或者国徽面
-该参数如果不填，将为您自动判断卡证类型。
- * @method boolean getEnablePortrait() 获取默认值为false，打开返回证件头像切图。
- * @method void setEnablePortrait(boolean $EnablePortrait) 设置默认值为false，打开返回证件头像切图。
- * @method boolean getEnableCropImage() 获取默认值为false，打开返回证件主体切图。
- * @method void setEnableCropImage(boolean $EnableCropImage) 设置默认值为false，打开返回证件主体切图。
- * @method boolean getEnableBorderCheck() 获取默认值为false，打开返回边缘完整性判断。
- * @method void setEnableBorderCheck(boolean $EnableBorderCheck) 设置默认值为false，打开返回边缘完整性判断。
- * @method boolean getEnableOcclusionCheck() 获取默认值为false，打开返回证件是否被遮挡。
- * @method void setEnableOcclusionCheck(boolean $EnableOcclusionCheck) 设置默认值为false，打开返回证件是否被遮挡。
- * @method boolean getEnableCopyCheck() 获取默认值为false，打开返回证件是否存在复印。
- * @method void setEnableCopyCheck(boolean $EnableCopyCheck) 设置默认值为false，打开返回证件是否存在复印。
- * @method boolean getEnableReshootCheck() 获取默认值为false，打开返回证件是否存在屏幕翻拍。
- * @method void setEnableReshootCheck(boolean $EnableReshootCheck) 设置默认值为false，打开返回证件是否存在屏幕翻拍。
- * @method boolean getEnablePSCheck() 获取默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效
- * @method void setEnablePSCheck(boolean $EnablePSCheck) 设置默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效
- * @method boolean getEnableWordCheck() 获取默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
- * @method void setEnableWordCheck(boolean $EnableWordCheck) 设置默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
- * @method boolean getEnableQualityCheck() 获取默认值为false，打开返回证件是否模糊。
- * @method void setEnableQualityCheck(boolean $EnableQualityCheck) 设置默认值为false，打开返回证件是否模糊。
- * @method boolean getEnableElectronCheck() 获取默认值为false，打开返回是否存在电子身份证判断。
- * @method void setEnableElectronCheck(boolean $EnableElectronCheck) 设置默认值为false，打开返回是否存在电子身份证判断。
+ * @method string getImageBase64() 获取<p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
+ * @method void setImageBase64(string $ImageBase64) 设置<p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
+ * @method string getImageUrl() 获取<p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p>
+ * @method void setImageUrl(string $ImageUrl) 设置<p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p>
+ * @method integer getCardType() 获取<p>0 自动，自动判断输入证件的类型<br>1 身份证人像面，指定输入证件类型为二代身份证人像面<br>2 身份证国徽面，指定输入证件类型为二代身份证国徽面<br>3 身份证人像国徽面，指定输入证件类型为二代身份证人像面或者国徽面<br>4 临时身份证人像面，指定输入证件类型为临时身份证人像面<br>5 临时身份证国徽面，指定输入证件类型为临时身份证国徽面<br>6 临时身份证人像国徽面，指定输入证件类型为临时身份证人像面或者国徽面<br>7 港澳台居住证人像面，指定输入证件类型为港澳台居住证人像面<br>8 港澳台居住证国徽面，指定输入证件类型为港澳台居住证国徽面<br>9 港澳台居住证人像国徽面，指定输入证件类型为港澳台居住证人像面或者国徽面<br>10 外国人永久居留身份证人像面，指定输入证件类型为外国人永久居留证人像面<br>11 外国人永久居留身份证国徽面，指定输入证件类型为外国人永久居留证国徽面<br>12 外国人永久居留身份证人像国徽面，指定输入证件类型为外国人永久居留证人像或者国徽面<br>该参数如果不填，将为您自动判断卡证类型。</p>
+ * @method void setCardType(integer $CardType) 设置<p>0 自动，自动判断输入证件的类型<br>1 身份证人像面，指定输入证件类型为二代身份证人像面<br>2 身份证国徽面，指定输入证件类型为二代身份证国徽面<br>3 身份证人像国徽面，指定输入证件类型为二代身份证人像面或者国徽面<br>4 临时身份证人像面，指定输入证件类型为临时身份证人像面<br>5 临时身份证国徽面，指定输入证件类型为临时身份证国徽面<br>6 临时身份证人像国徽面，指定输入证件类型为临时身份证人像面或者国徽面<br>7 港澳台居住证人像面，指定输入证件类型为港澳台居住证人像面<br>8 港澳台居住证国徽面，指定输入证件类型为港澳台居住证国徽面<br>9 港澳台居住证人像国徽面，指定输入证件类型为港澳台居住证人像面或者国徽面<br>10 外国人永久居留身份证人像面，指定输入证件类型为外国人永久居留证人像面<br>11 外国人永久居留身份证国徽面，指定输入证件类型为外国人永久居留证国徽面<br>12 外国人永久居留身份证人像国徽面，指定输入证件类型为外国人永久居留证人像或者国徽面<br>该参数如果不填，将为您自动判断卡证类型。</p>
+ * @method boolean getEnablePortrait() 获取<p>默认值为false，打开返回证件头像切图。</p>
+ * @method void setEnablePortrait(boolean $EnablePortrait) 设置<p>默认值为false，打开返回证件头像切图。</p>
+ * @method boolean getEnableCropImage() 获取<p>默认值为false，打开返回证件主体切图。</p>
+ * @method void setEnableCropImage(boolean $EnableCropImage) 设置<p>默认值为false，打开返回证件主体切图。</p>
+ * @method boolean getEnableBorderCheck() 获取<p>默认值为false，打开返回边缘完整性判断。</p>
+ * @method void setEnableBorderCheck(boolean $EnableBorderCheck) 设置<p>默认值为false，打开返回边缘完整性判断。</p>
+ * @method boolean getEnableOcclusionCheck() 获取<p>默认值为false，打开返回证件是否被遮挡。</p>
+ * @method void setEnableOcclusionCheck(boolean $EnableOcclusionCheck) 设置<p>默认值为false，打开返回证件是否被遮挡。</p>
+ * @method boolean getEnableCopyCheck() 获取<p>默认值为false，打开返回证件是否存在复印。</p>
+ * @method void setEnableCopyCheck(boolean $EnableCopyCheck) 设置<p>默认值为false，打开返回证件是否存在复印。</p>
+ * @method boolean getEnableReshootCheck() 获取<p>默认值为false，打开返回证件是否存在屏幕翻拍。</p>
+ * @method void setEnableReshootCheck(boolean $EnableReshootCheck) 设置<p>默认值为false，打开返回证件是否存在屏幕翻拍。</p>
+ * @method boolean getEnableReflectCheck() 获取<p>默认值为false，打开返回是否存在反光。</p>
+ * @method void setEnableReflectCheck(boolean $EnableReflectCheck) 设置<p>默认值为false，打开返回是否存在反光。</p>
+ * @method boolean getEnablePSCheck() 获取<p>默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效</p>
+ * @method void setEnablePSCheck(boolean $EnablePSCheck) 设置<p>默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效</p>
+ * @method boolean getEnableWordCheck() 获取<p>默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效</p>
+ * @method void setEnableWordCheck(boolean $EnableWordCheck) 设置<p>默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效</p>
+ * @method boolean getEnableQualityCheck() 获取<p>默认值为false，打开返回证件是否模糊。</p>
+ * @method void setEnableQualityCheck(boolean $EnableQualityCheck) 设置<p>默认值为false，打开返回证件是否模糊。</p>
+ * @method boolean getEnableElectronCheck() 获取<p>默认值为false，打开返回是否存在电子身份证判断。</p>
+ * @method void setEnableElectronCheck(boolean $EnableElectronCheck) 设置<p>默认值为false，打开返回是否存在电子身份证判断。</p>
  */
 class RecognizeValidIDCardOCRRequest extends AbstractModel
 {
     /**
-     * @var string 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * @var string <p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
     public $ImageBase64;
 
     /**
-     * @var string 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+     * @var string <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p>
      */
     public $ImageUrl;
 
     /**
-     * @var integer 0 自动，自动判断输入证件的类型
-1 身份证人像面，指定输入证件类型为二代身份证人像面
-2 身份证国徽面，指定输入证件类型为二代身份证国徽面
-3 身份证人像国徽面，指定输入证件类型为二代身份证人像面或者国徽面
-4 临时身份证人像面，指定输入证件类型为临时身份证人像面
-5 临时身份证国徽面，指定输入证件类型为临时身份证国徽面
-6 临时身份证人像国徽面，指定输入证件类型为临时身份证人像面或者国徽面
-7 港澳台居住证人像面，指定输入证件类型为港澳台居住证人像面
-8 港澳台居住证国徽面，指定输入证件类型为港澳台居住证国徽面
-9 港澳台居住证人像国徽面，指定输入证件类型为港澳台居住证人像面或者国徽面
-10 外国人永久居留身份证人像面，指定输入证件类型为外国人永久居留证人像面
-11 外国人永久居留身份证国徽面，指定输入证件类型为外国人永久居留证国徽面
-12 外国人永久居留身份证人像国徽面，指定输入证件类型为外国人永久居留证人像或者国徽面
-该参数如果不填，将为您自动判断卡证类型。
+     * @var integer <p>0 自动，自动判断输入证件的类型<br>1 身份证人像面，指定输入证件类型为二代身份证人像面<br>2 身份证国徽面，指定输入证件类型为二代身份证国徽面<br>3 身份证人像国徽面，指定输入证件类型为二代身份证人像面或者国徽面<br>4 临时身份证人像面，指定输入证件类型为临时身份证人像面<br>5 临时身份证国徽面，指定输入证件类型为临时身份证国徽面<br>6 临时身份证人像国徽面，指定输入证件类型为临时身份证人像面或者国徽面<br>7 港澳台居住证人像面，指定输入证件类型为港澳台居住证人像面<br>8 港澳台居住证国徽面，指定输入证件类型为港澳台居住证国徽面<br>9 港澳台居住证人像国徽面，指定输入证件类型为港澳台居住证人像面或者国徽面<br>10 外国人永久居留身份证人像面，指定输入证件类型为外国人永久居留证人像面<br>11 外国人永久居留身份证国徽面，指定输入证件类型为外国人永久居留证国徽面<br>12 外国人永久居留身份证人像国徽面，指定输入证件类型为外国人永久居留证人像或者国徽面<br>该参数如果不填，将为您自动判断卡证类型。</p>
      */
     public $CardType;
 
     /**
-     * @var boolean 默认值为false，打开返回证件头像切图。
+     * @var boolean <p>默认值为false，打开返回证件头像切图。</p>
      */
     public $EnablePortrait;
 
     /**
-     * @var boolean 默认值为false，打开返回证件主体切图。
+     * @var boolean <p>默认值为false，打开返回证件主体切图。</p>
      */
     public $EnableCropImage;
 
     /**
-     * @var boolean 默认值为false，打开返回边缘完整性判断。
+     * @var boolean <p>默认值为false，打开返回边缘完整性判断。</p>
      */
     public $EnableBorderCheck;
 
     /**
-     * @var boolean 默认值为false，打开返回证件是否被遮挡。
+     * @var boolean <p>默认值为false，打开返回证件是否被遮挡。</p>
      */
     public $EnableOcclusionCheck;
 
     /**
-     * @var boolean 默认值为false，打开返回证件是否存在复印。
+     * @var boolean <p>默认值为false，打开返回证件是否存在复印。</p>
      */
     public $EnableCopyCheck;
 
     /**
-     * @var boolean 默认值为false，打开返回证件是否存在屏幕翻拍。
+     * @var boolean <p>默认值为false，打开返回证件是否存在屏幕翻拍。</p>
      */
     public $EnableReshootCheck;
 
     /**
-     * @var boolean 默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效
+     * @var boolean <p>默认值为false，打开返回是否存在反光。</p>
+     */
+    public $EnableReflectCheck;
+
+    /**
+     * @var boolean <p>默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效</p>
      */
     public $EnablePSCheck;
 
     /**
-     * @var boolean 默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
+     * @var boolean <p>默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效</p>
      */
     public $EnableWordCheck;
 
     /**
-     * @var boolean 默认值为false，打开返回证件是否模糊。
+     * @var boolean <p>默认值为false，打开返回证件是否模糊。</p>
      */
     public $EnableQualityCheck;
 
     /**
-     * @var boolean 默认值为false，打开返回是否存在电子身份证判断。
+     * @var boolean <p>默认值为false，打开返回是否存在电子身份证判断。</p>
      */
     public $EnableElectronCheck;
 
     /**
-     * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
-     * @param integer $CardType 0 自动，自动判断输入证件的类型
-1 身份证人像面，指定输入证件类型为二代身份证人像面
-2 身份证国徽面，指定输入证件类型为二代身份证国徽面
-3 身份证人像国徽面，指定输入证件类型为二代身份证人像面或者国徽面
-4 临时身份证人像面，指定输入证件类型为临时身份证人像面
-5 临时身份证国徽面，指定输入证件类型为临时身份证国徽面
-6 临时身份证人像国徽面，指定输入证件类型为临时身份证人像面或者国徽面
-7 港澳台居住证人像面，指定输入证件类型为港澳台居住证人像面
-8 港澳台居住证国徽面，指定输入证件类型为港澳台居住证国徽面
-9 港澳台居住证人像国徽面，指定输入证件类型为港澳台居住证人像面或者国徽面
-10 外国人永久居留身份证人像面，指定输入证件类型为外国人永久居留证人像面
-11 外国人永久居留身份证国徽面，指定输入证件类型为外国人永久居留证国徽面
-12 外国人永久居留身份证人像国徽面，指定输入证件类型为外国人永久居留证人像或者国徽面
-该参数如果不填，将为您自动判断卡证类型。
-     * @param boolean $EnablePortrait 默认值为false，打开返回证件头像切图。
-     * @param boolean $EnableCropImage 默认值为false，打开返回证件主体切图。
-     * @param boolean $EnableBorderCheck 默认值为false，打开返回边缘完整性判断。
-     * @param boolean $EnableOcclusionCheck 默认值为false，打开返回证件是否被遮挡。
-     * @param boolean $EnableCopyCheck 默认值为false，打开返回证件是否存在复印。
-     * @param boolean $EnableReshootCheck 默认值为false，打开返回证件是否存在屏幕翻拍。
-     * @param boolean $EnablePSCheck 默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效
-     * @param boolean $EnableWordCheck 默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
-     * @param boolean $EnableQualityCheck 默认值为false，打开返回证件是否模糊。
-     * @param boolean $EnableElectronCheck 默认值为false，打开返回是否存在电子身份证判断。
+     * @param string $ImageBase64 <p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
+     * @param string $ImageUrl <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p>
+     * @param integer $CardType <p>0 自动，自动判断输入证件的类型<br>1 身份证人像面，指定输入证件类型为二代身份证人像面<br>2 身份证国徽面，指定输入证件类型为二代身份证国徽面<br>3 身份证人像国徽面，指定输入证件类型为二代身份证人像面或者国徽面<br>4 临时身份证人像面，指定输入证件类型为临时身份证人像面<br>5 临时身份证国徽面，指定输入证件类型为临时身份证国徽面<br>6 临时身份证人像国徽面，指定输入证件类型为临时身份证人像面或者国徽面<br>7 港澳台居住证人像面，指定输入证件类型为港澳台居住证人像面<br>8 港澳台居住证国徽面，指定输入证件类型为港澳台居住证国徽面<br>9 港澳台居住证人像国徽面，指定输入证件类型为港澳台居住证人像面或者国徽面<br>10 外国人永久居留身份证人像面，指定输入证件类型为外国人永久居留证人像面<br>11 外国人永久居留身份证国徽面，指定输入证件类型为外国人永久居留证国徽面<br>12 外国人永久居留身份证人像国徽面，指定输入证件类型为外国人永久居留证人像或者国徽面<br>该参数如果不填，将为您自动判断卡证类型。</p>
+     * @param boolean $EnablePortrait <p>默认值为false，打开返回证件头像切图。</p>
+     * @param boolean $EnableCropImage <p>默认值为false，打开返回证件主体切图。</p>
+     * @param boolean $EnableBorderCheck <p>默认值为false，打开返回边缘完整性判断。</p>
+     * @param boolean $EnableOcclusionCheck <p>默认值为false，打开返回证件是否被遮挡。</p>
+     * @param boolean $EnableCopyCheck <p>默认值为false，打开返回证件是否存在复印。</p>
+     * @param boolean $EnableReshootCheck <p>默认值为false，打开返回证件是否存在屏幕翻拍。</p>
+     * @param boolean $EnableReflectCheck <p>默认值为false，打开返回是否存在反光。</p>
+     * @param boolean $EnablePSCheck <p>默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效</p>
+     * @param boolean $EnableWordCheck <p>默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效</p>
+     * @param boolean $EnableQualityCheck <p>默认值为false，打开返回证件是否模糊。</p>
+     * @param boolean $EnableElectronCheck <p>默认值为false，打开返回是否存在电子身份证判断。</p>
      */
     function __construct()
     {
@@ -228,6 +184,10 @@ class RecognizeValidIDCardOCRRequest extends AbstractModel
 
         if (array_key_exists("EnableReshootCheck",$param) and $param["EnableReshootCheck"] !== null) {
             $this->EnableReshootCheck = $param["EnableReshootCheck"];
+        }
+
+        if (array_key_exists("EnableReflectCheck",$param) and $param["EnableReflectCheck"] !== null) {
+            $this->EnableReflectCheck = $param["EnableReflectCheck"];
         }
 
         if (array_key_exists("EnablePSCheck",$param) and $param["EnablePSCheck"] !== null) {

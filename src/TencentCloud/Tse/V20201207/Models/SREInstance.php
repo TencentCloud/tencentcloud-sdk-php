@@ -20,330 +20,346 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 微服务注册引擎实例
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method string getEdition() 获取版本号
- * @method void setEdition(string $Edition) 设置版本号
- * @method string getStatus() 获取状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail
- * @method void setStatus(string $Status) 设置状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail
- * @method string getSpecId() 获取规格ID
- * @method void setSpecId(string $SpecId) 设置规格ID
- * @method integer getReplica() 获取副本数
- * @method void setReplica(integer $Replica) 设置副本数
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
- * @method string getVpcId() 获取Vpc iD
- * @method void setVpcId(string $VpcId) 设置Vpc iD
- * @method array getSubnetIds() 获取子网ID
- * @method void setSubnetIds(array $SubnetIds) 设置子网ID
- * @method boolean getEnableStorage() 获取是否开启持久化存储
- * @method void setEnableStorage(boolean $EnableStorage) 设置是否开启持久化存储
- * @method string getStorageType() 获取数据存储方式
- * @method void setStorageType(string $StorageType) 设置数据存储方式
- * @method integer getStorageCapacity() 获取云硬盘容量
- * @method void setStorageCapacity(integer $StorageCapacity) 设置云硬盘容量
- * @method string getPaymode() 获取计费方式
- * @method void setPaymode(string $Paymode) 设置计费方式
- * @method string getEKSClusterID() 获取EKS集群的ID
- * @method void setEKSClusterID(string $EKSClusterID) 设置EKS集群的ID
- * @method string getCreateTime() 获取集群创建时间
- * @method void setCreateTime(string $CreateTime) 设置集群创建时间
- * @method array getEnvInfos() 获取环境配置信息列表
- * @method void setEnvInfos(array $EnvInfos) 设置环境配置信息列表
- * @method string getEngineRegion() 获取引擎所在的区域
- * @method void setEngineRegion(string $EngineRegion) 设置引擎所在的区域
- * @method boolean getEnableInternet() 获取注册引擎是否开启公网
- * @method void setEnableInternet(boolean $EnableInternet) 设置注册引擎是否开启公网
- * @method array getVpcInfos() 获取私有网络列表信息
- * @method void setVpcInfos(array $VpcInfos) 设置私有网络列表信息
- * @method array getServiceGovernanceInfos() 获取服务治理相关信息列表
- * @method void setServiceGovernanceInfos(array $ServiceGovernanceInfos) 设置服务治理相关信息列表
- * @method array getTags() 获取实例的标签信息
- * @method void setTags(array $Tags) 设置实例的标签信息
- * @method boolean getEnableConsoleInternet() 获取引擎实例是否开启控制台公网访问地址
- * @method void setEnableConsoleInternet(boolean $EnableConsoleInternet) 设置引擎实例是否开启控制台公网访问地址
- * @method boolean getEnableConsoleIntranet() 获取引擎实例是否开启控制台内网访问地址
- * @method void setEnableConsoleIntranet(boolean $EnableConsoleIntranet) 设置引擎实例是否开启控制台内网访问地址
- * @method boolean getConfigInfoVisible() 获取引擎实例是否展示参数配置页面
- * @method void setConfigInfoVisible(boolean $ConfigInfoVisible) 设置引擎实例是否展示参数配置页面
- * @method string getConsoleDefaultPwd() 获取引擎实例控制台默认密码
- * @method void setConsoleDefaultPwd(string $ConsoleDefaultPwd) 设置引擎实例控制台默认密码
- * @method integer getTradeType() 获取交易付费类型，0后付费/1预付费
- * @method void setTradeType(integer $TradeType) 设置交易付费类型，0后付费/1预付费
- * @method integer getAutoRenewFlag() 获取自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
- * @method string getCurDeadline() 获取预付费到期时间
- * @method void setCurDeadline(string $CurDeadline) 设置预付费到期时间
- * @method string getIsolateTime() 获取隔离开始时间
- * @method void setIsolateTime(string $IsolateTime) 设置隔离开始时间
- * @method array getRegionInfos() 获取实例地域相关的描述信息
- * @method void setRegionInfos(array $RegionInfos) 设置实例地域相关的描述信息
- * @method string getEKSType() 获取所在EKS环境，分为common和yunti
- * @method void setEKSType(string $EKSType) 设置所在EKS环境，分为common和yunti
- * @method string getFeatureVersion() 获取引擎的产品版本
- * @method void setFeatureVersion(string $FeatureVersion) 设置引擎的产品版本
- * @method boolean getEnableClientIntranet() 获取引擎实例是否开启客户端内网访问地址
- * @method void setEnableClientIntranet(boolean $EnableClientIntranet) 设置引擎实例是否开启客户端内网访问地址
- * @method array getStorageOption() 获取存储额外配置选项
- * @method void setStorageOption(array $StorageOption) 设置存储额外配置选项
- * @method ZookeeperRegionInfo getZookeeperRegionInfo() 获取Zookeeper的额外环境数据信息
- * @method void setZookeeperRegionInfo(ZookeeperRegionInfo $ZookeeperRegionInfo) 设置Zookeeper的额外环境数据信息
- * @method string getDeployMode() 获取部署架构
- * @method void setDeployMode(string $DeployMode) 设置部署架构
- * @method string getGlobalType() 获取全局属性
- * @method void setGlobalType(string $GlobalType) 设置全局属性
- * @method string getGroupType() 获取所属组类型
- * @method void setGroupType(string $GroupType) 设置所属组类型
- * @method array getGroupId() 获取组id
- * @method void setGroupId(array $GroupId) 设置组id
- * @method boolean getIsMainRegion() 获取是否为主地域
- * @method void setIsMainRegion(boolean $IsMainRegion) 设置是否为主地域
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getName() 获取<p>名称</p>
+ * @method void setName(string $Name) 设置<p>名称</p>
+ * @method string getEdition() 获取<p>版本号</p>
+ * @method void setEdition(string $Edition) 设置<p>版本号</p>
+ * @method string getStatus() 获取<p>状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail</p>
+ * @method void setStatus(string $Status) 设置<p>状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail</p>
+ * @method string getSpecId() 获取<p>规格ID</p>
+ * @method void setSpecId(string $SpecId) 设置<p>规格ID</p>
+ * @method integer getReplica() 获取<p>副本数</p>
+ * @method void setReplica(integer $Replica) 设置<p>副本数</p>
+ * @method string getType() 获取<p>类型</p>
+ * @method void setType(string $Type) 设置<p>类型</p>
+ * @method string getVpcId() 获取<p>Vpc iD</p>
+ * @method void setVpcId(string $VpcId) 设置<p>Vpc iD</p>
+ * @method array getSubnetIds() 获取<p>子网ID</p>
+ * @method void setSubnetIds(array $SubnetIds) 设置<p>子网ID</p>
+ * @method boolean getEnableStorage() 获取<p>是否开启持久化存储</p>
+ * @method void setEnableStorage(boolean $EnableStorage) 设置<p>是否开启持久化存储</p>
+ * @method string getStorageType() 获取<p>数据存储方式</p>
+ * @method void setStorageType(string $StorageType) 设置<p>数据存储方式</p>
+ * @method integer getStorageCapacity() 获取<p>云硬盘容量</p>
+ * @method void setStorageCapacity(integer $StorageCapacity) 设置<p>云硬盘容量</p>
+ * @method string getPaymode() 获取<p>计费方式</p>
+ * @method void setPaymode(string $Paymode) 设置<p>计费方式</p>
+ * @method string getEKSClusterID() 获取<p>EKS集群的ID</p>
+ * @method void setEKSClusterID(string $EKSClusterID) 设置<p>EKS集群的ID</p>
+ * @method string getCreateTime() 获取<p>集群创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>集群创建时间</p>
+ * @method array getEnvInfos() 获取<p>环境配置信息列表</p>
+ * @method void setEnvInfos(array $EnvInfos) 设置<p>环境配置信息列表</p>
+ * @method string getEngineRegion() 获取<p>引擎所在的区域</p>
+ * @method void setEngineRegion(string $EngineRegion) 设置<p>引擎所在的区域</p>
+ * @method boolean getEnableInternet() 获取<p>注册引擎是否开启公网</p>
+ * @method void setEnableInternet(boolean $EnableInternet) 设置<p>注册引擎是否开启公网</p>
+ * @method array getVpcInfos() 获取<p>私有网络列表信息</p>
+ * @method void setVpcInfos(array $VpcInfos) 设置<p>私有网络列表信息</p>
+ * @method array getServiceGovernanceInfos() 获取<p>服务治理相关信息列表</p>
+ * @method void setServiceGovernanceInfos(array $ServiceGovernanceInfos) 设置<p>服务治理相关信息列表</p>
+ * @method array getTags() 获取<p>实例的标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>实例的标签信息</p>
+ * @method boolean getEnableConsoleInternet() 获取<p>引擎实例是否开启控制台公网访问地址</p>
+ * @method void setEnableConsoleInternet(boolean $EnableConsoleInternet) 设置<p>引擎实例是否开启控制台公网访问地址</p>
+ * @method boolean getEnableConsoleIntranet() 获取<p>引擎实例是否开启控制台内网访问地址</p>
+ * @method void setEnableConsoleIntranet(boolean $EnableConsoleIntranet) 设置<p>引擎实例是否开启控制台内网访问地址</p>
+ * @method boolean getConfigInfoVisible() 获取<p>引擎实例是否展示参数配置页面</p>
+ * @method void setConfigInfoVisible(boolean $ConfigInfoVisible) 设置<p>引擎实例是否展示参数配置页面</p>
+ * @method string getConsoleDefaultPwd() 获取<p>引擎实例控制台默认密码</p>
+ * @method void setConsoleDefaultPwd(string $ConsoleDefaultPwd) 设置<p>引擎实例控制台默认密码</p>
+ * @method integer getTradeType() 获取<p>交易付费类型，0后付费/1预付费</p>
+ * @method void setTradeType(integer $TradeType) 设置<p>交易付费类型，0后付费/1预付费</p>
+ * @method integer getAutoRenewFlag() 获取<p>自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费</p>
+ * @method string getCurDeadline() 获取<p>预付费到期时间</p>
+ * @method void setCurDeadline(string $CurDeadline) 设置<p>预付费到期时间</p>
+ * @method string getIsolateTime() 获取<p>隔离开始时间</p>
+ * @method void setIsolateTime(string $IsolateTime) 设置<p>隔离开始时间</p>
+ * @method array getRegionInfos() 获取<p>实例地域相关的描述信息</p>
+ * @method void setRegionInfos(array $RegionInfos) 设置<p>实例地域相关的描述信息</p>
+ * @method string getEKSType() 获取<p>所在EKS环境，分为common和yunti</p>
+ * @method void setEKSType(string $EKSType) 设置<p>所在EKS环境，分为common和yunti</p>
+ * @method string getFeatureVersion() 获取<p>引擎的产品版本</p>
+ * @method void setFeatureVersion(string $FeatureVersion) 设置<p>引擎的产品版本</p>
+ * @method boolean getEnableClientIntranet() 获取<p>引擎实例是否开启客户端内网访问地址</p>
+ * @method void setEnableClientIntranet(boolean $EnableClientIntranet) 设置<p>引擎实例是否开启客户端内网访问地址</p>
+ * @method array getStorageOption() 获取<p>存储额外配置选项</p>
+ * @method void setStorageOption(array $StorageOption) 设置<p>存储额外配置选项</p>
+ * @method ZookeeperRegionInfo getZookeeperRegionInfo() 获取<p>Zookeeper的额外环境数据信息</p>
+ * @method void setZookeeperRegionInfo(ZookeeperRegionInfo $ZookeeperRegionInfo) 设置<p>Zookeeper的额外环境数据信息</p>
+ * @method string getDeployMode() 获取<p>部署架构</p>
+ * @method void setDeployMode(string $DeployMode) 设置<p>部署架构</p>
+ * @method string getGlobalType() 获取<p>全局属性</p>
+ * @method void setGlobalType(string $GlobalType) 设置<p>全局属性</p>
+ * @method string getGroupType() 获取<p>所属组类型</p>
+ * @method void setGroupType(string $GroupType) 设置<p>所属组类型</p>
+ * @method array getGroupId() 获取<p>组id</p>
+ * @method void setGroupId(array $GroupId) 设置<p>组id</p>
+ * @method boolean getIsMainRegion() 获取<p>是否为主地域</p>
+ * @method void setIsMainRegion(boolean $IsMainRegion) 设置<p>是否为主地域</p>
+ * @method boolean getMutationEnabled() 获取<p>是否禁止变更</p>
+ * @method void setMutationEnabled(boolean $MutationEnabled) 设置<p>是否禁止变更</p>
+ * @method boolean getMaxCapacityLimitEnabled() 获取<p>禁止限流</p>
+ * @method void setMaxCapacityLimitEnabled(boolean $MaxCapacityLimitEnabled) 设置<p>禁止限流</p>
  */
 class SREInstance extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
      */
     public $Name;
 
     /**
-     * @var string 版本号
+     * @var string <p>版本号</p>
      */
     public $Edition;
 
     /**
-     * @var string 状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail
+     * @var string <p>状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail</p>
      */
     public $Status;
 
     /**
-     * @var string 规格ID
+     * @var string <p>规格ID</p>
      */
     public $SpecId;
 
     /**
-     * @var integer 副本数
+     * @var integer <p>副本数</p>
      */
     public $Replica;
 
     /**
-     * @var string 类型
+     * @var string <p>类型</p>
      */
     public $Type;
 
     /**
-     * @var string Vpc iD
+     * @var string <p>Vpc iD</p>
      */
     public $VpcId;
 
     /**
-     * @var array 子网ID
+     * @var array <p>子网ID</p>
      */
     public $SubnetIds;
 
     /**
-     * @var boolean 是否开启持久化存储
+     * @var boolean <p>是否开启持久化存储</p>
      */
     public $EnableStorage;
 
     /**
-     * @var string 数据存储方式
+     * @var string <p>数据存储方式</p>
      */
     public $StorageType;
 
     /**
-     * @var integer 云硬盘容量
+     * @var integer <p>云硬盘容量</p>
      */
     public $StorageCapacity;
 
     /**
-     * @var string 计费方式
+     * @var string <p>计费方式</p>
      */
     public $Paymode;
 
     /**
-     * @var string EKS集群的ID
+     * @var string <p>EKS集群的ID</p>
      */
     public $EKSClusterID;
 
     /**
-     * @var string 集群创建时间
+     * @var string <p>集群创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var array 环境配置信息列表
+     * @var array <p>环境配置信息列表</p>
      */
     public $EnvInfos;
 
     /**
-     * @var string 引擎所在的区域
+     * @var string <p>引擎所在的区域</p>
      */
     public $EngineRegion;
 
     /**
-     * @var boolean 注册引擎是否开启公网
+     * @var boolean <p>注册引擎是否开启公网</p>
      */
     public $EnableInternet;
 
     /**
-     * @var array 私有网络列表信息
+     * @var array <p>私有网络列表信息</p>
      */
     public $VpcInfos;
 
     /**
-     * @var array 服务治理相关信息列表
+     * @var array <p>服务治理相关信息列表</p>
      */
     public $ServiceGovernanceInfos;
 
     /**
-     * @var array 实例的标签信息
+     * @var array <p>实例的标签信息</p>
      */
     public $Tags;
 
     /**
-     * @var boolean 引擎实例是否开启控制台公网访问地址
+     * @var boolean <p>引擎实例是否开启控制台公网访问地址</p>
      */
     public $EnableConsoleInternet;
 
     /**
-     * @var boolean 引擎实例是否开启控制台内网访问地址
+     * @var boolean <p>引擎实例是否开启控制台内网访问地址</p>
      */
     public $EnableConsoleIntranet;
 
     /**
-     * @var boolean 引擎实例是否展示参数配置页面
+     * @var boolean <p>引擎实例是否展示参数配置页面</p>
      */
     public $ConfigInfoVisible;
 
     /**
-     * @var string 引擎实例控制台默认密码
+     * @var string <p>引擎实例控制台默认密码</p>
      */
     public $ConsoleDefaultPwd;
 
     /**
-     * @var integer 交易付费类型，0后付费/1预付费
+     * @var integer <p>交易付费类型，0后付费/1预付费</p>
      */
     public $TradeType;
 
     /**
-     * @var integer 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+     * @var integer <p>自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 预付费到期时间
+     * @var string <p>预付费到期时间</p>
      */
     public $CurDeadline;
 
     /**
-     * @var string 隔离开始时间
+     * @var string <p>隔离开始时间</p>
      */
     public $IsolateTime;
 
     /**
-     * @var array 实例地域相关的描述信息
+     * @var array <p>实例地域相关的描述信息</p>
      */
     public $RegionInfos;
 
     /**
-     * @var string 所在EKS环境，分为common和yunti
+     * @var string <p>所在EKS环境，分为common和yunti</p>
      */
     public $EKSType;
 
     /**
-     * @var string 引擎的产品版本
+     * @var string <p>引擎的产品版本</p>
      */
     public $FeatureVersion;
 
     /**
-     * @var boolean 引擎实例是否开启客户端内网访问地址
+     * @var boolean <p>引擎实例是否开启客户端内网访问地址</p>
      */
     public $EnableClientIntranet;
 
     /**
-     * @var array 存储额外配置选项
+     * @var array <p>存储额外配置选项</p>
      */
     public $StorageOption;
 
     /**
-     * @var ZookeeperRegionInfo Zookeeper的额外环境数据信息
+     * @var ZookeeperRegionInfo <p>Zookeeper的额外环境数据信息</p>
      */
     public $ZookeeperRegionInfo;
 
     /**
-     * @var string 部署架构
+     * @var string <p>部署架构</p>
      */
     public $DeployMode;
 
     /**
-     * @var string 全局属性
+     * @var string <p>全局属性</p>
      */
     public $GlobalType;
 
     /**
-     * @var string 所属组类型
+     * @var string <p>所属组类型</p>
      */
     public $GroupType;
 
     /**
-     * @var array 组id
+     * @var array <p>组id</p>
      */
     public $GroupId;
 
     /**
-     * @var boolean 是否为主地域
+     * @var boolean <p>是否为主地域</p>
      */
     public $IsMainRegion;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Name 名称
-     * @param string $Edition 版本号
-     * @param string $Status 状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail
-     * @param string $SpecId 规格ID
-     * @param integer $Replica 副本数
-     * @param string $Type 类型
-     * @param string $VpcId Vpc iD
-     * @param array $SubnetIds 子网ID
-     * @param boolean $EnableStorage 是否开启持久化存储
-     * @param string $StorageType 数据存储方式
-     * @param integer $StorageCapacity 云硬盘容量
-     * @param string $Paymode 计费方式
-     * @param string $EKSClusterID EKS集群的ID
-     * @param string $CreateTime 集群创建时间
-     * @param array $EnvInfos 环境配置信息列表
-     * @param string $EngineRegion 引擎所在的区域
-     * @param boolean $EnableInternet 注册引擎是否开启公网
-     * @param array $VpcInfos 私有网络列表信息
-     * @param array $ServiceGovernanceInfos 服务治理相关信息列表
-     * @param array $Tags 实例的标签信息
-     * @param boolean $EnableConsoleInternet 引擎实例是否开启控制台公网访问地址
-     * @param boolean $EnableConsoleIntranet 引擎实例是否开启控制台内网访问地址
-     * @param boolean $ConfigInfoVisible 引擎实例是否展示参数配置页面
-     * @param string $ConsoleDefaultPwd 引擎实例控制台默认密码
-     * @param integer $TradeType 交易付费类型，0后付费/1预付费
-     * @param integer $AutoRenewFlag 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
-     * @param string $CurDeadline 预付费到期时间
-     * @param string $IsolateTime 隔离开始时间
-     * @param array $RegionInfos 实例地域相关的描述信息
-     * @param string $EKSType 所在EKS环境，分为common和yunti
-     * @param string $FeatureVersion 引擎的产品版本
-     * @param boolean $EnableClientIntranet 引擎实例是否开启客户端内网访问地址
-     * @param array $StorageOption 存储额外配置选项
-     * @param ZookeeperRegionInfo $ZookeeperRegionInfo Zookeeper的额外环境数据信息
-     * @param string $DeployMode 部署架构
-     * @param string $GlobalType 全局属性
-     * @param string $GroupType 所属组类型
-     * @param array $GroupId 组id
-     * @param boolean $IsMainRegion 是否为主地域
+     * @var boolean <p>是否禁止变更</p>
+     */
+    public $MutationEnabled;
+
+    /**
+     * @var boolean <p>禁止限流</p>
+     */
+    public $MaxCapacityLimitEnabled;
+
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $Name <p>名称</p>
+     * @param string $Edition <p>版本号</p>
+     * @param string $Status <p>状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail</p>
+     * @param string $SpecId <p>规格ID</p>
+     * @param integer $Replica <p>副本数</p>
+     * @param string $Type <p>类型</p>
+     * @param string $VpcId <p>Vpc iD</p>
+     * @param array $SubnetIds <p>子网ID</p>
+     * @param boolean $EnableStorage <p>是否开启持久化存储</p>
+     * @param string $StorageType <p>数据存储方式</p>
+     * @param integer $StorageCapacity <p>云硬盘容量</p>
+     * @param string $Paymode <p>计费方式</p>
+     * @param string $EKSClusterID <p>EKS集群的ID</p>
+     * @param string $CreateTime <p>集群创建时间</p>
+     * @param array $EnvInfos <p>环境配置信息列表</p>
+     * @param string $EngineRegion <p>引擎所在的区域</p>
+     * @param boolean $EnableInternet <p>注册引擎是否开启公网</p>
+     * @param array $VpcInfos <p>私有网络列表信息</p>
+     * @param array $ServiceGovernanceInfos <p>服务治理相关信息列表</p>
+     * @param array $Tags <p>实例的标签信息</p>
+     * @param boolean $EnableConsoleInternet <p>引擎实例是否开启控制台公网访问地址</p>
+     * @param boolean $EnableConsoleIntranet <p>引擎实例是否开启控制台内网访问地址</p>
+     * @param boolean $ConfigInfoVisible <p>引擎实例是否展示参数配置页面</p>
+     * @param string $ConsoleDefaultPwd <p>引擎实例控制台默认密码</p>
+     * @param integer $TradeType <p>交易付费类型，0后付费/1预付费</p>
+     * @param integer $AutoRenewFlag <p>自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费</p>
+     * @param string $CurDeadline <p>预付费到期时间</p>
+     * @param string $IsolateTime <p>隔离开始时间</p>
+     * @param array $RegionInfos <p>实例地域相关的描述信息</p>
+     * @param string $EKSType <p>所在EKS环境，分为common和yunti</p>
+     * @param string $FeatureVersion <p>引擎的产品版本</p>
+     * @param boolean $EnableClientIntranet <p>引擎实例是否开启客户端内网访问地址</p>
+     * @param array $StorageOption <p>存储额外配置选项</p>
+     * @param ZookeeperRegionInfo $ZookeeperRegionInfo <p>Zookeeper的额外环境数据信息</p>
+     * @param string $DeployMode <p>部署架构</p>
+     * @param string $GlobalType <p>全局属性</p>
+     * @param string $GroupType <p>所属组类型</p>
+     * @param array $GroupId <p>组id</p>
+     * @param boolean $IsMainRegion <p>是否为主地域</p>
+     * @param boolean $MutationEnabled <p>是否禁止变更</p>
+     * @param boolean $MaxCapacityLimitEnabled <p>禁止限流</p>
      */
     function __construct()
     {
@@ -547,6 +563,14 @@ class SREInstance extends AbstractModel
 
         if (array_key_exists("IsMainRegion",$param) and $param["IsMainRegion"] !== null) {
             $this->IsMainRegion = $param["IsMainRegion"];
+        }
+
+        if (array_key_exists("MutationEnabled",$param) and $param["MutationEnabled"] !== null) {
+            $this->MutationEnabled = $param["MutationEnabled"];
+        }
+
+        if (array_key_exists("MaxCapacityLimitEnabled",$param) and $param["MaxCapacityLimitEnabled"] !== null) {
+            $this->MaxCapacityLimitEnabled = $param["MaxCapacityLimitEnabled"];
         }
     }
 }

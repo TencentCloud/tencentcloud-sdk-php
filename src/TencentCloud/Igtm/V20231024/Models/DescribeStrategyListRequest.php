@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStrategyList请求参数结构体
  *
- * @method string getInstanceId() 获取实例 id
- * @method void setInstanceId(string $InstanceId) 设置实例 id
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取每页条数
- * @method void setLimit(integer $Limit) 设置每页条数
- * @method array getFilters() 获取策略过滤条件：StrategyName：策略名称
- * @method void setFilters(array $Filters) 设置策略过滤条件：StrategyName：策略名称
+ * @method string getInstanceId() 获取<p>实例 id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 id</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method integer getLimit() 获取<p>每页条数</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页条数</p>
+ * @method array getFilters() 获取<p>策略过滤条件：StrategyName：策略名称</p>
+ * @method void setFilters(array $Filters) 设置<p>策略过滤条件：StrategyName：策略名称</p>
  */
 class DescribeStrategyListRequest extends AbstractModel
 {
     /**
-     * @var string 实例 id
+     * @var string <p>实例 id</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 每页条数
+     * @var integer <p>每页条数</p>
      */
     public $Limit;
 
     /**
-     * @var array 策略过滤条件：StrategyName：策略名称
+     * @var array <p>策略过滤条件：StrategyName：策略名称</p>
      */
     public $Filters;
 
     /**
-     * @param string $InstanceId 实例 id
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 每页条数
-     * @param array $Filters 策略过滤条件：StrategyName：策略名称
+     * @param string $InstanceId <p>实例 id</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param integer $Limit <p>每页条数</p>
+     * @param array $Filters <p>策略过滤条件：StrategyName：策略名称</p>
      */
     function __construct()
     {

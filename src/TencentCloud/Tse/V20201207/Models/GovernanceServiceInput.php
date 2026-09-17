@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置<p>是否开启同步到全局注册中心</p>
  * @method integer getType() 获取<p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
  * @method void setType(integer $Type) 设置<p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
+ * @method array getExtendedMetadata() 获取<p>拓展服务元数据</p>
+ * @method void setExtendedMetadata(array $ExtendedMetadata) 设置<p>拓展服务元数据</p>
  */
 class GovernanceServiceInput extends AbstractModel
 {
@@ -115,6 +117,11 @@ class GovernanceServiceInput extends AbstractModel
     public $Type;
 
     /**
+     * @var array <p>拓展服务元数据</p>
+     */
+    public $ExtendedMetadata;
+
+    /**
      * @param string $Name <p>服务名。</p>
      * @param string $Namespace <p>服务所属命名空间。</p>
      * @param string $Comment <p>服务描述信息。</p>
@@ -128,6 +135,7 @@ class GovernanceServiceInput extends AbstractModel
      * @param array $ExportTo <p>该服务对哪些命名空间可见</p>
      * @param boolean $SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      * @param integer $Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
+     * @param array $ExtendedMetadata <p>拓展服务元数据</p>
      */
     function __construct()
     {
@@ -197,6 +205,15 @@ class GovernanceServiceInput extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("ExtendedMetadata",$param) and $param["ExtendedMetadata"] !== null) {
+            $this->ExtendedMetadata = [];
+            foreach ($param["ExtendedMetadata"] as $key => $value){
+                $obj = new ExtendedMetadata();
+                $obj->deserialize($value);
+                array_push($this->ExtendedMetadata, $obj);
+            }
         }
     }
 }

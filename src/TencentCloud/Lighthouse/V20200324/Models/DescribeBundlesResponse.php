@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBundles返回参数结构体
  *
- * @method array getBundleSet() 获取套餐详细信息列表。
- * @method void setBundleSet(array $BundleSet) 设置套餐详细信息列表。
- * @method integer getTotalCount() 获取符合要求的套餐总数，用于分页展示。
- * @method void setTotalCount(integer $TotalCount) 设置符合要求的套餐总数，用于分页展示。
+ * @method array getBundleSet() 获取<p>套餐详细信息列表。</p>
+ * @method void setBundleSet(array $BundleSet) 设置<p>套餐详细信息列表。</p>
+ * @method integer getTotalCount() 获取<p>符合要求的套餐总数，用于分页展示。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合要求的套餐总数，用于分页展示。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBundlesResponse extends AbstractModel
 {
     /**
-     * @var array 套餐详细信息列表。
+     * @var array <p>套餐详细信息列表。</p>
      */
     public $BundleSet;
 
     /**
-     * @var integer 符合要求的套餐总数，用于分页展示。
+     * @var integer <p>符合要求的套餐总数，用于分页展示。</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeBundlesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $BundleSet 套餐详细信息列表。
-     * @param integer $TotalCount 符合要求的套餐总数，用于分页展示。
+     * @param array $BundleSet <p>套餐详细信息列表。</p>
+     * @param integer $TotalCount <p>符合要求的套餐总数，用于分页展示。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

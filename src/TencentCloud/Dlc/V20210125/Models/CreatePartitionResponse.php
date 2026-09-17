@@ -23,7 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDealName() 获取<p>子订单号</p>
  * @method void setDealName(string $DealName) 设置<p>子订单号</p>
  * @method string getBigDealId() 获取<p>大订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBigDealId(string $BigDealId) 设置<p>大订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillId() 获取<p>冻结流水号（后付费返回；预付费为空）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillId(string $BillId) 设置<p>冻结流水号（后付费返回；预付费为空）</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,8 +42,15 @@ class CreatePartitionResponse extends AbstractModel
 
     /**
      * @var string <p>大订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BigDealId;
+
+    /**
+     * @var string <p>冻结流水号（后付费返回；预付费为空）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -47,6 +60,9 @@ class CreatePartitionResponse extends AbstractModel
     /**
      * @param string $DealName <p>子订单号</p>
      * @param string $BigDealId <p>大订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillId <p>冻结流水号（后付费返回；预付费为空）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +84,10 @@ class CreatePartitionResponse extends AbstractModel
 
         if (array_key_exists("BigDealId",$param) and $param["BigDealId"] !== null) {
             $this->BigDealId = $param["BigDealId"];
+        }
+
+        if (array_key_exists("BillId",$param) and $param["BillId"] !== null) {
+            $this->BillId = $param["BillId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

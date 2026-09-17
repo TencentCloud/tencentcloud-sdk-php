@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateListener返回参数结构体
  *
- * @method string getListenerId() 获取监听器 ID，格式为 lst- 后接 8 位字母数字。
- * @method void setListenerId(string $ListenerId) 设置监听器 ID，格式为 lst- 后接 8 位字母数字。
+ * @method string getListenerId() 获取<p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateListenerResponse extends AbstractModel
 {
     /**
-     * @var string 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * @var string <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      */
     public $ListenerId;
 
@@ -38,7 +38,7 @@ class CreateListenerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * @param string $ListenerId <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

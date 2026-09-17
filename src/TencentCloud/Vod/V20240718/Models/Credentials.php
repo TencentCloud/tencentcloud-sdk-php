@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 临时访问凭证。
  *
- * @method string getAccessKeyId() 获取访问凭证 ID。
- * @method void setAccessKeyId(string $AccessKeyId) 设置访问凭证 ID。
- * @method string getSecretAccessKey() 获取访问凭证 Key。
- * @method void setSecretAccessKey(string $SecretAccessKey) 设置访问凭证 Key。
- * @method string getSessionToken() 获取访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
- * @method void setSessionToken(string $SessionToken) 设置访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
- * @method string getExpiration() 获取访问凭证的过期时间。
- * @method void setExpiration(string $Expiration) 设置访问凭证的过期时间。
+ * @method string getAccessKeyId() 获取<p>访问凭证 ID。</p>
+ * @method void setAccessKeyId(string $AccessKeyId) 设置<p>访问凭证 ID。</p>
+ * @method string getSecretAccessKey() 获取<p>访问凭证 Key。</p>
+ * @method void setSecretAccessKey(string $SecretAccessKey) 设置<p>访问凭证 Key。</p>
+ * @method string getSessionToken() 获取<p>访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。</p>
+ * @method void setSessionToken(string $SessionToken) 设置<p>访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。</p>
+ * @method string getExpiration() 获取<p>访问凭证的过期时间。</p>
+ * @method void setExpiration(string $Expiration) 设置<p>访问凭证的过期时间。</p>
  */
 class Credentials extends AbstractModel
 {
     /**
-     * @var string 访问凭证 ID。
+     * @var string <p>访问凭证 ID。</p>
      */
     public $AccessKeyId;
 
     /**
-     * @var string 访问凭证 Key。
+     * @var string <p>访问凭证 Key。</p>
      */
     public $SecretAccessKey;
 
     /**
-     * @var string 访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
+     * @var string <p>访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。</p>
      */
     public $SessionToken;
 
     /**
-     * @var string 访问凭证的过期时间。
+     * @var string <p>访问凭证的过期时间。</p>
      */
     public $Expiration;
 
     /**
-     * @param string $AccessKeyId 访问凭证 ID。
-     * @param string $SecretAccessKey 访问凭证 Key。
-     * @param string $SessionToken 访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
-     * @param string $Expiration 访问凭证的过期时间。
+     * @param string $AccessKeyId <p>访问凭证 ID。</p>
+     * @param string $SecretAccessKey <p>访问凭证 Key。</p>
+     * @param string $SessionToken <p>访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。</p>
+     * @param string $Expiration <p>访问凭证的过期时间。</p>
      */
     function __construct()
     {

@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceStatus(integer $ServiceStatus) 设置<p>服务健康状态</p>
  * @method integer getType() 获取<p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
  * @method void setType(integer $Type) 设置<p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+ * @method array getExtendedMetadata() 获取<p>服务元数据</p>
+ * @method void setExtendedMetadata(array $ExtendedMetadata) 设置<p>服务元数据</p>
  */
 class GovernanceService extends AbstractModel
 {
@@ -178,6 +180,11 @@ class GovernanceService extends AbstractModel
     public $Type;
 
     /**
+     * @var array <p>服务元数据</p>
+     */
+    public $ExtendedMetadata;
+
+    /**
      * @param string $Name <p>服务名称。</p>
      * @param string $Namespace <p>命名空间名称。</p>
      * @param array $Metadatas <p>元数据信息数组。</p>
@@ -200,6 +207,7 @@ class GovernanceService extends AbstractModel
      * @param integer $IsolateInstanceCount <p>隔离实例数</p>
      * @param integer $ServiceStatus <p>服务健康状态</p>
      * @param integer $Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+     * @param array $ExtendedMetadata <p>服务元数据</p>
      */
     function __construct()
     {
@@ -305,6 +313,15 @@ class GovernanceService extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("ExtendedMetadata",$param) and $param["ExtendedMetadata"] !== null) {
+            $this->ExtendedMetadata = [];
+            foreach ($param["ExtendedMetadata"] as $key => $value){
+                $obj = new ExtendedMetadata();
+                $obj->deserialize($value);
+                array_push($this->ExtendedMetadata, $obj);
+            }
         }
     }
 }

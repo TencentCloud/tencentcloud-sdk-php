@@ -20,45 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeValidIDCardOCR返回参数结构体
  *
- * @method string getType() 获取卡证类型
-身份证人像面
-身份证国徽面
-
-临时身份证人像面
-临时身份证人像面
-
-港澳台居住证人像面
-港澳台居住证国徽面
-
-外国人永久居留证人像面
-外国人永久居留证国徽面
- * @method void setType(string $Type) 设置卡证类型
-身份证人像面
-身份证国徽面
-
-临时身份证人像面
-临时身份证人像面
-
-港澳台居住证人像面
-港澳台居住证国徽面
-
-外国人永久居留证人像面
-外国人永久居留证国徽面
- * @method IDCardInfo getIDCardInfo() 获取身份证信息
+ * @method string getType() 获取<p>卡证类型<br>身份证人像面<br>身份证国徽面</p><p>临时身份证人像面<br>临时身份证人像面</p><p>港澳台居住证人像面<br>港澳台居住证国徽面</p><p>外国人永久居留证人像面<br>外国人永久居留证国徽面</p>
+ * @method void setType(string $Type) 设置<p>卡证类型<br>身份证人像面<br>身份证国徽面</p><p>临时身份证人像面<br>临时身份证人像面</p><p>港澳台居住证人像面<br>港澳台居住证国徽面</p><p>外国人永久居留证人像面<br>外国人永久居留证国徽面</p>
+ * @method IDCardInfo getIDCardInfo() 获取<p>身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIDCardInfo(IDCardInfo $IDCardInfo) 设置身份证信息
+ * @method void setIDCardInfo(IDCardInfo $IDCardInfo) 设置<p>身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TemporaryIDCardInfo getTemporaryIDCardInfo() 获取临时身份证信息
+ * @method TemporaryIDCardInfo getTemporaryIDCardInfo() 获取<p>临时身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemporaryIDCardInfo(TemporaryIDCardInfo $TemporaryIDCardInfo) 设置临时身份证信息
+ * @method void setTemporaryIDCardInfo(TemporaryIDCardInfo $TemporaryIDCardInfo) 设置<p>临时身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ResidencePermitInfo getResidencePermitInfo() 获取港澳台居住证信息
+ * @method ResidencePermitInfo getResidencePermitInfo() 获取<p>港澳台居住证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResidencePermitInfo(ResidencePermitInfo $ResidencePermitInfo) 设置港澳台居住证信息
+ * @method void setResidencePermitInfo(ResidencePermitInfo $ResidencePermitInfo) 设置<p>港澳台居住证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PermanentResidencePermitInfo getPermanentResidencePermitInfo() 获取外国人永久居留证信息
+ * @method PermanentResidencePermitInfo getPermanentResidencePermitInfo() 获取<p>外国人永久居留证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPermanentResidencePermitInfo(PermanentResidencePermitInfo $PermanentResidencePermitInfo) 设置外国人永久居留证信息
+ * @method void setPermanentResidencePermitInfo(PermanentResidencePermitInfo $PermanentResidencePermitInfo) 设置<p>外国人永久居留证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -66,41 +44,30 @@ use TencentCloud\Common\AbstractModel;
 class RecognizeValidIDCardOCRResponse extends AbstractModel
 {
     /**
-     * @var string 卡证类型
-身份证人像面
-身份证国徽面
-
-临时身份证人像面
-临时身份证人像面
-
-港澳台居住证人像面
-港澳台居住证国徽面
-
-外国人永久居留证人像面
-外国人永久居留证国徽面
+     * @var string <p>卡证类型<br>身份证人像面<br>身份证国徽面</p><p>临时身份证人像面<br>临时身份证人像面</p><p>港澳台居住证人像面<br>港澳台居住证国徽面</p><p>外国人永久居留证人像面<br>外国人永久居留证国徽面</p>
      */
     public $Type;
 
     /**
-     * @var IDCardInfo 身份证信息
+     * @var IDCardInfo <p>身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IDCardInfo;
 
     /**
-     * @var TemporaryIDCardInfo 临时身份证信息
+     * @var TemporaryIDCardInfo <p>临时身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemporaryIDCardInfo;
 
     /**
-     * @var ResidencePermitInfo 港澳台居住证信息
+     * @var ResidencePermitInfo <p>港澳台居住证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResidencePermitInfo;
 
     /**
-     * @var PermanentResidencePermitInfo 外国人永久居留证信息
+     * @var PermanentResidencePermitInfo <p>外国人永久居留证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PermanentResidencePermitInfo;
@@ -111,25 +78,14 @@ class RecognizeValidIDCardOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Type 卡证类型
-身份证人像面
-身份证国徽面
-
-临时身份证人像面
-临时身份证人像面
-
-港澳台居住证人像面
-港澳台居住证国徽面
-
-外国人永久居留证人像面
-外国人永久居留证国徽面
-     * @param IDCardInfo $IDCardInfo 身份证信息
+     * @param string $Type <p>卡证类型<br>身份证人像面<br>身份证国徽面</p><p>临时身份证人像面<br>临时身份证人像面</p><p>港澳台居住证人像面<br>港澳台居住证国徽面</p><p>外国人永久居留证人像面<br>外国人永久居留证国徽面</p>
+     * @param IDCardInfo $IDCardInfo <p>身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemporaryIDCardInfo $TemporaryIDCardInfo 临时身份证信息
+     * @param TemporaryIDCardInfo $TemporaryIDCardInfo <p>临时身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResidencePermitInfo $ResidencePermitInfo 港澳台居住证信息
+     * @param ResidencePermitInfo $ResidencePermitInfo <p>港澳台居住证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PermanentResidencePermitInfo $PermanentResidencePermitInfo 外国人永久居留证信息
+     * @param PermanentResidencePermitInfo $PermanentResidencePermitInfo <p>外国人永久居留证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

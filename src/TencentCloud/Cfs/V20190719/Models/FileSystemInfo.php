@@ -80,6 +80,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetaType(string $MetaType) 设置<p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p>
  * @method string getScenario() 获取<p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
  * @method void setScenario(string $Scenario) 设置<p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
+ * @method float getFullDeleteCapacityUsage() 获取<p>过满删除容量占比，0.0 表示关闭</p><p>取值范围：[0.0, 1.0]</p>
+ * @method void setFullDeleteCapacityUsage(float $FullDeleteCapacityUsage) 设置<p>过满删除容量占比，0.0 表示关闭</p><p>取值范围：[0.0, 1.0]</p>
+ * @method integer getFullDeleteMinTtl() 获取<p>过满删除最小存活时间，单位秒</p><p>单位：秒</p>
+ * @method void setFullDeleteMinTtl(integer $FullDeleteMinTtl) 设置<p>过满删除最小存活时间，单位秒</p><p>单位：秒</p>
+ * @method integer getExpireDeleteTtl() 获取<p>过期删除 TTL，单位秒，0 表示关闭</p><p>单位：秒</p>
+ * @method void setExpireDeleteTtl(integer $ExpireDeleteTtl) 设置<p>过期删除 TTL，单位秒，0 表示关闭</p><p>单位：秒</p>
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -230,6 +236,21 @@ class FileSystemInfo extends AbstractModel
     public $Scenario;
 
     /**
+     * @var float <p>过满删除容量占比，0.0 表示关闭</p><p>取值范围：[0.0, 1.0]</p>
+     */
+    public $FullDeleteCapacityUsage;
+
+    /**
+     * @var integer <p>过满删除最小存活时间，单位秒</p><p>单位：秒</p>
+     */
+    public $FullDeleteMinTtl;
+
+    /**
+     * @var integer <p>过期删除 TTL，单位秒，0 表示关闭</p><p>单位：秒</p>
+     */
+    public $ExpireDeleteTtl;
+
+    /**
      * @param string $CreationTime <p>创建时间</p>
      * @param string $CreationToken <p>用户自定义名称</p>
      * @param string $FileSystemId <p>文件系统 ID</p>
@@ -260,6 +281,9 @@ class FileSystemInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetaType <p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p>
      * @param string $Scenario <p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
+     * @param float $FullDeleteCapacityUsage <p>过满删除容量占比，0.0 表示关闭</p><p>取值范围：[0.0, 1.0]</p>
+     * @param integer $FullDeleteMinTtl <p>过满删除最小存活时间，单位秒</p><p>单位：秒</p>
+     * @param integer $ExpireDeleteTtl <p>过期删除 TTL，单位秒，0 表示关闭</p><p>单位：秒</p>
      */
     function __construct()
     {
@@ -401,6 +425,18 @@ class FileSystemInfo extends AbstractModel
 
         if (array_key_exists("Scenario",$param) and $param["Scenario"] !== null) {
             $this->Scenario = $param["Scenario"];
+        }
+
+        if (array_key_exists("FullDeleteCapacityUsage",$param) and $param["FullDeleteCapacityUsage"] !== null) {
+            $this->FullDeleteCapacityUsage = $param["FullDeleteCapacityUsage"];
+        }
+
+        if (array_key_exists("FullDeleteMinTtl",$param) and $param["FullDeleteMinTtl"] !== null) {
+            $this->FullDeleteMinTtl = $param["FullDeleteMinTtl"];
+        }
+
+        if (array_key_exists("ExpireDeleteTtl",$param) and $param["ExpireDeleteTtl"] !== null) {
+            $this->ExpireDeleteTtl = $param["ExpireDeleteTtl"];
         }
     }
 }

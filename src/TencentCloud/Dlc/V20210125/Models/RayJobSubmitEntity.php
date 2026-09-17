@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePartitionName(string $ResourcePartitionName) 设置<p>默认资源分区名称</p>
  * @method string getQueue() 获取<p>所属队列名称</p>
  * @method void setQueue(string $Queue) 设置<p>所属队列名称</p>
+ * @method string getQueueAlias() 获取<p>所属队列别名</p>
+ * @method void setQueueAlias(string $QueueAlias) 设置<p>所属队列别名</p>
  * @method string getStatus() 获取<p>任务状态</p>
  * @method void setStatus(string $Status) 设置<p>任务状态</p>
  * @method string getEntrypoint() 获取<p>入口命令</p>
@@ -98,6 +100,11 @@ class RayJobSubmitEntity extends AbstractModel
      * @var string <p>所属队列名称</p>
      */
     public $Queue;
+
+    /**
+     * @var string <p>所属队列别名</p>
+     */
+    public $QueueAlias;
 
     /**
      * @var string <p>任务状态</p>
@@ -224,6 +231,7 @@ class RayJobSubmitEntity extends AbstractModel
      * @param string $ResourcePartitionId <p>所属资源分区ID</p>
      * @param string $ResourcePartitionName <p>默认资源分区名称</p>
      * @param string $Queue <p>所属队列名称</p>
+     * @param string $QueueAlias <p>所属队列别名</p>
      * @param string $Status <p>任务状态</p>
      * @param string $Entrypoint <p>入口命令</p>
      * @param string $JobName <p>任务名称</p>
@@ -276,6 +284,10 @@ class RayJobSubmitEntity extends AbstractModel
 
         if (array_key_exists("Queue",$param) and $param["Queue"] !== null) {
             $this->Queue = $param["Queue"];
+        }
+
+        if (array_key_exists("QueueAlias",$param) and $param["QueueAlias"] !== null) {
+            $this->QueueAlias = $param["QueueAlias"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

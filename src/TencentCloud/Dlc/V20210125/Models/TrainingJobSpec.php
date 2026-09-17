@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueue(string $Queue) 设置<p>队列名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQueueAlias() 获取<p>所属队列别名</p>
+ * @method void setQueueAlias(string $QueueAlias) 设置<p>所属队列别名</p>
  * @method CheckpointMountInfo getCheckpointMountInfo() 获取<p>Checkpoint 挂载摘要</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckpointMountInfo(CheckpointMountInfo $CheckpointMountInfo) 设置<p>Checkpoint 挂载摘要</p>
@@ -218,6 +220,11 @@ class TrainingJobSpec extends AbstractModel
     public $Queue;
 
     /**
+     * @var string <p>所属队列别名</p>
+     */
+    public $QueueAlias;
+
+    /**
      * @var CheckpointMountInfo <p>Checkpoint 挂载摘要</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -352,6 +359,7 @@ class TrainingJobSpec extends AbstractModel
      * @param string $ResourcePartitionName <p>资源分区名称</p>
      * @param string $Queue <p>队列名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $QueueAlias <p>所属队列别名</p>
      * @param CheckpointMountInfo $CheckpointMountInfo <p>Checkpoint 挂载摘要</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Catalog <p>存储卷挂载配置 JSON</p>
@@ -452,6 +460,10 @@ class TrainingJobSpec extends AbstractModel
 
         if (array_key_exists("Queue",$param) and $param["Queue"] !== null) {
             $this->Queue = $param["Queue"];
+        }
+
+        if (array_key_exists("QueueAlias",$param) and $param["QueueAlias"] !== null) {
+            $this->QueueAlias = $param["QueueAlias"];
         }
 
         if (array_key_exists("CheckpointMountInfo",$param) and $param["CheckpointMountInfo"] !== null) {

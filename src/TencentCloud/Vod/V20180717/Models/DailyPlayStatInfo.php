@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 播放统计信息。
  *
- * @method string getDate() 获取播放媒体文件的日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setDate(string $Date) 设置播放媒体文件的日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getFileId() 获取媒体文件ID。
- * @method void setFileId(string $FileId) 设置媒体文件ID。
- * @method integer getPlayTimes() 获取播放次数。
- * @method void setPlayTimes(integer $PlayTimes) 设置播放次数。
- * @method integer getTraffic() 获取播放流量，单位：字节。
- * @method void setTraffic(integer $Traffic) 设置播放流量，单位：字节。
+ * @method string getDate() 获取<p>播放媒体文件的日期，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setDate(string $Date) 设置<p>播放媒体文件的日期，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getFileId() 获取<p>媒体文件ID。</p>
+ * @method void setFileId(string $FileId) 设置<p>媒体文件ID。</p>
+ * @method integer getPlayTimes() 获取<p>播放次数。</p>
+ * @method void setPlayTimes(integer $PlayTimes) 设置<p>播放次数。</p>
+ * @method integer getTraffic() 获取<p>播放流量，单位：字节。</p>
+ * @method void setTraffic(integer $Traffic) 设置<p>播放流量，单位：字节。</p>
  */
 class DailyPlayStatInfo extends AbstractModel
 {
     /**
-     * @var string 播放媒体文件的日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>播放媒体文件的日期，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $Date;
 
     /**
-     * @var string 媒体文件ID。
+     * @var string <p>媒体文件ID。</p>
      */
     public $FileId;
 
     /**
-     * @var integer 播放次数。
+     * @var integer <p>播放次数。</p>
      */
     public $PlayTimes;
 
     /**
-     * @var integer 播放流量，单位：字节。
+     * @var integer <p>播放流量，单位：字节。</p>
      */
     public $Traffic;
 
     /**
-     * @param string $Date 播放媒体文件的日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $FileId 媒体文件ID。
-     * @param integer $PlayTimes 播放次数。
-     * @param integer $Traffic 播放流量，单位：字节。
+     * @param string $Date <p>播放媒体文件的日期，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $FileId <p>媒体文件ID。</p>
+     * @param integer $PlayTimes <p>播放次数。</p>
+     * @param integer $Traffic <p>播放流量，单位：字节。</p>
      */
     function __construct()
     {

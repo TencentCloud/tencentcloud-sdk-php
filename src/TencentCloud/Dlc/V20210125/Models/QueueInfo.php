@@ -22,11 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取<p>队列ID</p>
  * @method void setId(integer $Id) 设置<p>队列ID</p>
- * @method string getQueueName() 获取<p>队列名称</p>
- * @method void setQueueName(string $QueueName) 设置<p>队列名称</p>
+ * @method string getQueueName() 获取<p>不可变的Code</p>
+ * @method void setQueueName(string $QueueName) 设置<p>不可变的Code</p>
+ * @method string getAlias() 获取<p>队列别名（用户可改显示名）；alias 为空时回落为 QueueName</p>
+ * @method void setAlias(string $Alias) 设置<p>队列别名（用户可改显示名）；alias 为空时回落为 QueueName</p>
  * @method array getResourceUsage() 获取<p>资源用量列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceUsage(array $ResourceUsage) 设置<p>资源用量列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResourceQuotas() 获取<p>队列各资源类型的实时余量（总量 / 已用量 / 可用量）。由 Kueue Prometheus 指标实时计算；监控关闭或查询失败时为 null，字段省略不返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceQuotas(array $ResourceQuotas) 设置<p>队列各资源类型的实时余量（总量 / 已用量 / 可用量）。由 Kueue Prometheus 指标实时计算；监控关闭或查询失败时为 null，字段省略不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取<p>队列描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -45,15 +51,26 @@ class QueueInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var string <p>队列名称</p>
+     * @var string <p>不可变的Code</p>
      */
     public $QueueName;
+
+    /**
+     * @var string <p>队列别名（用户可改显示名）；alias 为空时回落为 QueueName</p>
+     */
+    public $Alias;
 
     /**
      * @var array <p>资源用量列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceUsage;
+
+    /**
+     * @var array <p>队列各资源类型的实时余量（总量 / 已用量 / 可用量）。由 Kueue Prometheus 指标实时计算；监控关闭或查询失败时为 null，字段省略不返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceQuotas;
 
     /**
      * @var string <p>队列描述</p>
@@ -73,8 +90,11 @@ class QueueInfo extends AbstractModel
 
     /**
      * @param integer $Id <p>队列ID</p>
-     * @param string $QueueName <p>队列名称</p>
+     * @param string $QueueName <p>不可变的Code</p>
+     * @param string $Alias <p>队列别名（用户可改显示名）；alias 为空时回落为 QueueName</p>
      * @param array $ResourceUsage <p>资源用量列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ResourceQuotas <p>队列各资源类型的实时余量（总量 / 已用量 / 可用量）。由 Kueue Prometheus 指标实时计算；监控关闭或查询失败时为 null，字段省略不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description <p>队列描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,12 +122,25 @@ class QueueInfo extends AbstractModel
             $this->QueueName = $param["QueueName"];
         }
 
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
+        }
+
         if (array_key_exists("ResourceUsage",$param) and $param["ResourceUsage"] !== null) {
             $this->ResourceUsage = [];
             foreach ($param["ResourceUsage"] as $key => $value){
                 $obj = new ResourceUsage();
                 $obj->deserialize($value);
                 array_push($this->ResourceUsage, $obj);
+            }
+        }
+
+        if (array_key_exists("ResourceQuotas",$param) and $param["ResourceQuotas"] !== null) {
+            $this->ResourceQuotas = [];
+            foreach ($param["ResourceQuotas"] as $key => $value){
+                $obj = new QueueResourceQuota();
+                $obj->deserialize($value);
+                array_push($this->ResourceQuotas, $obj);
             }
         }
 

@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPartitionCode() 获取<p>分区编码</p>
  * @method void setPartitionCode(string $PartitionCode) 设置<p>分区编码</p>
- * @method string getQueueName() 获取<p>队列名称</p>
- * @method void setQueueName(string $QueueName) 设置<p>队列名称</p>
  * @method array getResourceUsages() 获取<p>资源规格列表，定义队列的资源类型及大小范围</p>
  * @method void setResourceUsages(array $ResourceUsages) 设置<p>资源规格列表，定义队列的资源类型及大小范围</p>
  * @method integer getQueueType() 获取<p>队列类型：1-独占型，2-共享型</p>
  * @method void setQueueType(integer $QueueType) 设置<p>队列类型：1-独占型，2-共享型</p>
+ * @method string getQueueName() 获取<p>队列编码（不可变 code）：透传时按 RFC1123 校验并作为队列的固定标识；未透传时系统自动生成（格式 dlc-rg-xxxxxxxx）。落库后不可修改</p>
+ * @method void setQueueName(string $QueueName) 设置<p>队列编码（不可变 code）：透传时按 RFC1123 校验并作为队列的固定标识；未透传时系统自动生成（格式 dlc-rg-xxxxxxxx）。落库后不可修改</p>
+ * @method string getAlias() 获取<p>队列别名（显示名）：用户可见、可修改；未提供时等于最终 QueueName。可与其它队列重复</p>
+ * @method void setAlias(string $Alias) 设置<p>队列别名（显示名）：用户可见、可修改；未提供时等于最终 QueueName。可与其它队列重复</p>
  * @method string getDescription() 获取<p>队列描述</p>
  * @method void setDescription(string $Description) 设置<p>队列描述</p>
  */
@@ -37,11 +39,6 @@ class CreatePartitionQueueRequest extends AbstractModel
      * @var string <p>分区编码</p>
      */
     public $PartitionCode;
-
-    /**
-     * @var string <p>队列名称</p>
-     */
-    public $QueueName;
 
     /**
      * @var array <p>资源规格列表，定义队列的资源类型及大小范围</p>
@@ -54,15 +51,26 @@ class CreatePartitionQueueRequest extends AbstractModel
     public $QueueType;
 
     /**
+     * @var string <p>队列编码（不可变 code）：透传时按 RFC1123 校验并作为队列的固定标识；未透传时系统自动生成（格式 dlc-rg-xxxxxxxx）。落库后不可修改</p>
+     */
+    public $QueueName;
+
+    /**
+     * @var string <p>队列别名（显示名）：用户可见、可修改；未提供时等于最终 QueueName。可与其它队列重复</p>
+     */
+    public $Alias;
+
+    /**
      * @var string <p>队列描述</p>
      */
     public $Description;
 
     /**
      * @param string $PartitionCode <p>分区编码</p>
-     * @param string $QueueName <p>队列名称</p>
      * @param array $ResourceUsages <p>资源规格列表，定义队列的资源类型及大小范围</p>
      * @param integer $QueueType <p>队列类型：1-独占型，2-共享型</p>
+     * @param string $QueueName <p>队列编码（不可变 code）：透传时按 RFC1123 校验并作为队列的固定标识；未透传时系统自动生成（格式 dlc-rg-xxxxxxxx）。落库后不可修改</p>
+     * @param string $Alias <p>队列别名（显示名）：用户可见、可修改；未提供时等于最终 QueueName。可与其它队列重复</p>
      * @param string $Description <p>队列描述</p>
      */
     function __construct()
@@ -82,10 +90,6 @@ class CreatePartitionQueueRequest extends AbstractModel
             $this->PartitionCode = $param["PartitionCode"];
         }
 
-        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
-            $this->QueueName = $param["QueueName"];
-        }
-
         if (array_key_exists("ResourceUsages",$param) and $param["ResourceUsages"] !== null) {
             $this->ResourceUsages = [];
             foreach ($param["ResourceUsages"] as $key => $value){
@@ -97,6 +101,14 @@ class CreatePartitionQueueRequest extends AbstractModel
 
         if (array_key_exists("QueueType",$param) and $param["QueueType"] !== null) {
             $this->QueueType = $param["QueueType"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

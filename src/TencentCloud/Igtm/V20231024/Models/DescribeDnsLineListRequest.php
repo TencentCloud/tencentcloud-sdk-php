@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDnsLineList请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
  */
 class DescribeDnsLineListRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例id
+     * @param string $InstanceId <p>实例id</p>
      */
     function __construct()
     {

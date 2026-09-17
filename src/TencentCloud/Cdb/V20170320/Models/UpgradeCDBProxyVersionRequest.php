@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeCDBProxyVersion请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
- * @method string getProxyGroupId() 获取数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method string getSrcProxyVersion() 获取数据库代理当前版本
- * @method void setSrcProxyVersion(string $SrcProxyVersion) 设置数据库代理当前版本
- * @method string getDstProxyVersion() 获取数据库代理升级版本
- * @method void setDstProxyVersion(string $DstProxyVersion) 设置数据库代理升级版本
- * @method string getUpgradeTime() 获取升级时间 ：nowTime（升级完成时）timeWindow（实例维护时间）
- * @method void setUpgradeTime(string $UpgradeTime) 设置升级时间 ：nowTime（升级完成时）timeWindow（实例维护时间）
+ * @method string getInstanceId() 获取<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+ * @method string getProxyGroupId() 获取<p>数据库代理 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置<p>数据库代理 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+ * @method string getSrcProxyVersion() 获取<p>数据库代理当前版本</p>
+ * @method void setSrcProxyVersion(string $SrcProxyVersion) 设置<p>数据库代理当前版本</p>
+ * @method string getDstProxyVersion() 获取<p>数据库代理升级版本</p>
+ * @method void setDstProxyVersion(string $DstProxyVersion) 设置<p>数据库代理升级版本</p>
+ * @method string getUpgradeTime() 获取<p>升级切换时间</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 实例维护时间</li><li>rollUpgrade： 滚动升级</li></ul>
+ * @method void setUpgradeTime(string $UpgradeTime) 设置<p>升级切换时间</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 实例维护时间</li><li>rollUpgrade： 滚动升级</li></ul>
+ * @method integer getRollUpgradeWaitingTime() 获取<p>滚动升级等待时间</p><p>取值范围：[10, 3600]</p><p>单位：秒</p>
+ * @method void setRollUpgradeWaitingTime(integer $RollUpgradeWaitingTime) 设置<p>滚动升级等待时间</p><p>取值范围：[10, 3600]</p><p>单位：秒</p>
  */
 class UpgradeCDBProxyVersionRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @var string <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @var string <p>数据库代理 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var string 数据库代理当前版本
+     * @var string <p>数据库代理当前版本</p>
      */
     public $SrcProxyVersion;
 
     /**
-     * @var string 数据库代理升级版本
+     * @var string <p>数据库代理升级版本</p>
      */
     public $DstProxyVersion;
 
     /**
-     * @var string 升级时间 ：nowTime（升级完成时）timeWindow（实例维护时间）
+     * @var string <p>升级切换时间</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 实例维护时间</li><li>rollUpgrade： 滚动升级</li></ul>
      */
     public $UpgradeTime;
 
     /**
-     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-     * @param string $ProxyGroupId 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param string $SrcProxyVersion 数据库代理当前版本
-     * @param string $DstProxyVersion 数据库代理升级版本
-     * @param string $UpgradeTime 升级时间 ：nowTime（升级完成时）timeWindow（实例维护时间）
+     * @var integer <p>滚动升级等待时间</p><p>取值范围：[10, 3600]</p><p>单位：秒</p>
+     */
+    public $RollUpgradeWaitingTime;
+
+    /**
+     * @param string $InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+     * @param string $ProxyGroupId <p>数据库代理 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+     * @param string $SrcProxyVersion <p>数据库代理当前版本</p>
+     * @param string $DstProxyVersion <p>数据库代理升级版本</p>
+     * @param string $UpgradeTime <p>升级切换时间</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 实例维护时间</li><li>rollUpgrade： 滚动升级</li></ul>
+     * @param integer $RollUpgradeWaitingTime <p>滚动升级等待时间</p><p>取值范围：[10, 3600]</p><p>单位：秒</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpgradeCDBProxyVersionRequest extends AbstractModel
 
         if (array_key_exists("UpgradeTime",$param) and $param["UpgradeTime"] !== null) {
             $this->UpgradeTime = $param["UpgradeTime"];
+        }
+
+        if (array_key_exists("RollUpgradeWaitingTime",$param) and $param["RollUpgradeWaitingTime"] !== null) {
+            $this->RollUpgradeWaitingTime = $param["RollUpgradeWaitingTime"];
         }
     }
 }

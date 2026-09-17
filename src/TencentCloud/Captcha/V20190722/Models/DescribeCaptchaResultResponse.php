@@ -20,97 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCaptchaResult返回参数结构体
  *
- * @method integer getCaptchaCode() 获取1 OK 验证通过
-7 captcha no match 传入的Randstr不合法，请检查Randstr是否与前端返回的Randstr一致
-8 ticket expired 传入的Ticket已过期（Ticket有效期5分钟），请重新生成Ticket、Randstr进行校验
-9 ticket reused 传入的Ticket被重复使用，请重新生成Ticket、Randstr进行校验
-15 decrypt fail 传入的Ticket不合法，请检查Ticket是否与前端返回的Ticket一致
-16 appid-ticket mismatch 传入的CaptchaAppId错误，请检查CaptchaAppId是否与前端传入的CaptchaAppId一致，并且保障CaptchaAppId是从验证码控制台【验证管理】->【基础配置】中获取
-21 diff 票据校验异常，可能的原因是（1）若Ticket包含trerror前缀，一般是由于用户网络较差，导致前端自动容灾，而生成了容灾票据，业务侧可根据需要进行跳过或二次处理。（2）若Ticket不包含trerror前缀，则是由于验证码风控系统发现请求有安全风险，业务侧可根据需要进行拦截。
-100 appid-secretkey-ticket mismatch 参数校验错误，（1）请检查CaptchaAppId与AppSecretKey是否正确，CaptchaAppId、AppSecretKey需要在验证码控制台【验证管理】>【基础配置】中获取（2）请检查传入的Ticket是否由传入的CaptchaAppId生成
- * @method void setCaptchaCode(integer $CaptchaCode) 设置1 OK 验证通过
-7 captcha no match 传入的Randstr不合法，请检查Randstr是否与前端返回的Randstr一致
-8 ticket expired 传入的Ticket已过期（Ticket有效期5分钟），请重新生成Ticket、Randstr进行校验
-9 ticket reused 传入的Ticket被重复使用，请重新生成Ticket、Randstr进行校验
-15 decrypt fail 传入的Ticket不合法，请检查Ticket是否与前端返回的Ticket一致
-16 appid-ticket mismatch 传入的CaptchaAppId错误，请检查CaptchaAppId是否与前端传入的CaptchaAppId一致，并且保障CaptchaAppId是从验证码控制台【验证管理】->【基础配置】中获取
-21 diff 票据校验异常，可能的原因是（1）若Ticket包含trerror前缀，一般是由于用户网络较差，导致前端自动容灾，而生成了容灾票据，业务侧可根据需要进行跳过或二次处理。（2）若Ticket不包含trerror前缀，则是由于验证码风控系统发现请求有安全风险，业务侧可根据需要进行拦截。
-100 appid-secretkey-ticket mismatch 参数校验错误，（1）请检查CaptchaAppId与AppSecretKey是否正确，CaptchaAppId、AppSecretKey需要在验证码控制台【验证管理】>【基础配置】中获取（2）请检查传入的Ticket是否由传入的CaptchaAppId生成
- * @method string getCaptchaMsg() 获取状态描述及验证错误信息
- * @method void setCaptchaMsg(string $CaptchaMsg) 设置状态描述及验证错误信息
- * @method integer getEvilLevel() 获取无感验证模式下，该参数返回验证结果：
-EvilLevel=0 请求无恶意
-EvilLevel=100 请求有恶意
- * @method void setEvilLevel(integer $EvilLevel) 设置无感验证模式下，该参数返回验证结果：
-EvilLevel=0 请求无恶意
-EvilLevel=100 请求有恶意
- * @method integer getGetCaptchaTime() 获取前端获取验证码时间，时间戳格式
- * @method void setGetCaptchaTime(integer $GetCaptchaTime) 设置前端获取验证码时间，时间戳格式
- * @method integer getEvilBitmap() 获取拦截类型
+ * @method integer getCaptchaCode() 获取<p>1 OK 验证通过<br>7 captcha no match 传入的Randstr不合法，请检查Randstr是否与前端返回的Randstr一致<br>8 ticket expired 传入的Ticket已过期（Ticket有效期5分钟），请重新生成Ticket、Randstr进行校验<br>9 ticket reused 传入的Ticket被重复使用，请重新生成Ticket、Randstr进行校验<br>15 decrypt fail 传入的Ticket不合法，请检查Ticket是否与前端返回的Ticket一致<br>16 appid-ticket mismatch 传入的CaptchaAppId错误，请检查CaptchaAppId是否与前端传入的CaptchaAppId一致，并且保障CaptchaAppId是从验证码控制台【验证管理】-&gt;【基础配置】中获取<br>21 diff 票据校验异常，可能的原因是（1）若Ticket包含trerror前缀，一般是由于用户网络较差，导致前端自动容灾，而生成了容灾票据，业务侧可根据需要进行跳过或二次处理。（2）若Ticket不包含trerror前缀，则是由于验证码风控系统发现请求有安全风险，业务侧可根据需要进行拦截。<br>100 appid-secretkey-ticket mismatch 参数校验错误，（1）请检查CaptchaAppId与AppSecretKey是否正确，CaptchaAppId、AppSecretKey需要在验证码控制台【验证管理】&gt;【基础配置】中获取（2）请检查传入的Ticket是否由传入的CaptchaAppId生成</p>
+ * @method void setCaptchaCode(integer $CaptchaCode) 设置<p>1 OK 验证通过<br>7 captcha no match 传入的Randstr不合法，请检查Randstr是否与前端返回的Randstr一致<br>8 ticket expired 传入的Ticket已过期（Ticket有效期5分钟），请重新生成Ticket、Randstr进行校验<br>9 ticket reused 传入的Ticket被重复使用，请重新生成Ticket、Randstr进行校验<br>15 decrypt fail 传入的Ticket不合法，请检查Ticket是否与前端返回的Ticket一致<br>16 appid-ticket mismatch 传入的CaptchaAppId错误，请检查CaptchaAppId是否与前端传入的CaptchaAppId一致，并且保障CaptchaAppId是从验证码控制台【验证管理】-&gt;【基础配置】中获取<br>21 diff 票据校验异常，可能的原因是（1）若Ticket包含trerror前缀，一般是由于用户网络较差，导致前端自动容灾，而生成了容灾票据，业务侧可根据需要进行跳过或二次处理。（2）若Ticket不包含trerror前缀，则是由于验证码风控系统发现请求有安全风险，业务侧可根据需要进行拦截。<br>100 appid-secretkey-ticket mismatch 参数校验错误，（1）请检查CaptchaAppId与AppSecretKey是否正确，CaptchaAppId、AppSecretKey需要在验证码控制台【验证管理】&gt;【基础配置】中获取（2）请检查传入的Ticket是否由传入的CaptchaAppId生成</p>
+ * @method string getCaptchaMsg() 获取<p>状态描述及验证错误信息</p>
+ * @method void setCaptchaMsg(string $CaptchaMsg) 设置<p>状态描述及验证错误信息</p>
+ * @method integer getEvilLevel() 获取<p>无感验证模式下，该参数返回验证结果：<br>EvilLevel=0 请求无恶意<br>EvilLevel=100 请求有恶意</p>
+ * @method void setEvilLevel(integer $EvilLevel) 设置<p>无感验证模式下，该参数返回验证结果：<br>EvilLevel=0 请求无恶意<br>EvilLevel=100 请求有恶意</p>
+ * @method integer getGetCaptchaTime() 获取<p>前端获取验证码时间，时间戳格式</p>
+ * @method void setGetCaptchaTime(integer $GetCaptchaTime) 设置<p>前端获取验证码时间，时间戳格式</p>
+ * @method integer getEvilBitmap() 获取<p>拦截类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEvilBitmap(integer $EvilBitmap) 设置拦截类型
+ * @method void setEvilBitmap(integer $EvilBitmap) 设置<p>拦截类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSubmitCaptchaTime() 获取提交验证码时间
- * @method void setSubmitCaptchaTime(integer $SubmitCaptchaTime) 设置提交验证码时间
- * @method string getDeviceRiskCategory() 获取设备风险大类
+ * @method integer getSubmitCaptchaTime() 获取<p>提交验证码时间</p>
+ * @method void setSubmitCaptchaTime(integer $SubmitCaptchaTime) 设置<p>提交验证码时间</p>
+ * @method string getDeviceRiskCategory() 获取<p>设备风险大类</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceRiskCategory(string $DeviceRiskCategory) 设置设备风险大类
+ * @method void setDeviceRiskCategory(string $DeviceRiskCategory) 设置<p>设备风险大类</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScore() 获取验证码评分
- * @method void setScore(integer $Score) 设置验证码评分
+ * @method integer getScore() 获取<p>验证码评分</p><p>取值0-100，分值越高，风险越大</p>
+ * @method void setScore(integer $Score) 设置<p>验证码评分</p><p>取值0-100，分值越高，风险越大</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCaptchaResultResponse extends AbstractModel
 {
     /**
-     * @var integer 1 OK 验证通过
-7 captcha no match 传入的Randstr不合法，请检查Randstr是否与前端返回的Randstr一致
-8 ticket expired 传入的Ticket已过期（Ticket有效期5分钟），请重新生成Ticket、Randstr进行校验
-9 ticket reused 传入的Ticket被重复使用，请重新生成Ticket、Randstr进行校验
-15 decrypt fail 传入的Ticket不合法，请检查Ticket是否与前端返回的Ticket一致
-16 appid-ticket mismatch 传入的CaptchaAppId错误，请检查CaptchaAppId是否与前端传入的CaptchaAppId一致，并且保障CaptchaAppId是从验证码控制台【验证管理】->【基础配置】中获取
-21 diff 票据校验异常，可能的原因是（1）若Ticket包含trerror前缀，一般是由于用户网络较差，导致前端自动容灾，而生成了容灾票据，业务侧可根据需要进行跳过或二次处理。（2）若Ticket不包含trerror前缀，则是由于验证码风控系统发现请求有安全风险，业务侧可根据需要进行拦截。
-100 appid-secretkey-ticket mismatch 参数校验错误，（1）请检查CaptchaAppId与AppSecretKey是否正确，CaptchaAppId、AppSecretKey需要在验证码控制台【验证管理】>【基础配置】中获取（2）请检查传入的Ticket是否由传入的CaptchaAppId生成
+     * @var integer <p>1 OK 验证通过<br>7 captcha no match 传入的Randstr不合法，请检查Randstr是否与前端返回的Randstr一致<br>8 ticket expired 传入的Ticket已过期（Ticket有效期5分钟），请重新生成Ticket、Randstr进行校验<br>9 ticket reused 传入的Ticket被重复使用，请重新生成Ticket、Randstr进行校验<br>15 decrypt fail 传入的Ticket不合法，请检查Ticket是否与前端返回的Ticket一致<br>16 appid-ticket mismatch 传入的CaptchaAppId错误，请检查CaptchaAppId是否与前端传入的CaptchaAppId一致，并且保障CaptchaAppId是从验证码控制台【验证管理】-&gt;【基础配置】中获取<br>21 diff 票据校验异常，可能的原因是（1）若Ticket包含trerror前缀，一般是由于用户网络较差，导致前端自动容灾，而生成了容灾票据，业务侧可根据需要进行跳过或二次处理。（2）若Ticket不包含trerror前缀，则是由于验证码风控系统发现请求有安全风险，业务侧可根据需要进行拦截。<br>100 appid-secretkey-ticket mismatch 参数校验错误，（1）请检查CaptchaAppId与AppSecretKey是否正确，CaptchaAppId、AppSecretKey需要在验证码控制台【验证管理】&gt;【基础配置】中获取（2）请检查传入的Ticket是否由传入的CaptchaAppId生成</p>
      */
     public $CaptchaCode;
 
     /**
-     * @var string 状态描述及验证错误信息
+     * @var string <p>状态描述及验证错误信息</p>
      */
     public $CaptchaMsg;
 
     /**
-     * @var integer 无感验证模式下，该参数返回验证结果：
-EvilLevel=0 请求无恶意
-EvilLevel=100 请求有恶意
+     * @var integer <p>无感验证模式下，该参数返回验证结果：<br>EvilLevel=0 请求无恶意<br>EvilLevel=100 请求有恶意</p>
      */
     public $EvilLevel;
 
     /**
-     * @var integer 前端获取验证码时间，时间戳格式
+     * @var integer <p>前端获取验证码时间，时间戳格式</p>
      */
     public $GetCaptchaTime;
 
     /**
-     * @var integer 拦截类型
+     * @var integer <p>拦截类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EvilBitmap;
 
     /**
-     * @var integer 提交验证码时间
+     * @var integer <p>提交验证码时间</p>
      */
     public $SubmitCaptchaTime;
 
     /**
-     * @var string 设备风险大类
+     * @var string <p>设备风险大类</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceRiskCategory;
 
     /**
-     * @var integer 验证码评分
+     * @var integer <p>验证码评分</p><p>取值0-100，分值越高，风险越大</p>
      */
     public $Score;
 
@@ -120,25 +93,16 @@ EvilLevel=100 请求有恶意
     public $RequestId;
 
     /**
-     * @param integer $CaptchaCode 1 OK 验证通过
-7 captcha no match 传入的Randstr不合法，请检查Randstr是否与前端返回的Randstr一致
-8 ticket expired 传入的Ticket已过期（Ticket有效期5分钟），请重新生成Ticket、Randstr进行校验
-9 ticket reused 传入的Ticket被重复使用，请重新生成Ticket、Randstr进行校验
-15 decrypt fail 传入的Ticket不合法，请检查Ticket是否与前端返回的Ticket一致
-16 appid-ticket mismatch 传入的CaptchaAppId错误，请检查CaptchaAppId是否与前端传入的CaptchaAppId一致，并且保障CaptchaAppId是从验证码控制台【验证管理】->【基础配置】中获取
-21 diff 票据校验异常，可能的原因是（1）若Ticket包含trerror前缀，一般是由于用户网络较差，导致前端自动容灾，而生成了容灾票据，业务侧可根据需要进行跳过或二次处理。（2）若Ticket不包含trerror前缀，则是由于验证码风控系统发现请求有安全风险，业务侧可根据需要进行拦截。
-100 appid-secretkey-ticket mismatch 参数校验错误，（1）请检查CaptchaAppId与AppSecretKey是否正确，CaptchaAppId、AppSecretKey需要在验证码控制台【验证管理】>【基础配置】中获取（2）请检查传入的Ticket是否由传入的CaptchaAppId生成
-     * @param string $CaptchaMsg 状态描述及验证错误信息
-     * @param integer $EvilLevel 无感验证模式下，该参数返回验证结果：
-EvilLevel=0 请求无恶意
-EvilLevel=100 请求有恶意
-     * @param integer $GetCaptchaTime 前端获取验证码时间，时间戳格式
-     * @param integer $EvilBitmap 拦截类型
+     * @param integer $CaptchaCode <p>1 OK 验证通过<br>7 captcha no match 传入的Randstr不合法，请检查Randstr是否与前端返回的Randstr一致<br>8 ticket expired 传入的Ticket已过期（Ticket有效期5分钟），请重新生成Ticket、Randstr进行校验<br>9 ticket reused 传入的Ticket被重复使用，请重新生成Ticket、Randstr进行校验<br>15 decrypt fail 传入的Ticket不合法，请检查Ticket是否与前端返回的Ticket一致<br>16 appid-ticket mismatch 传入的CaptchaAppId错误，请检查CaptchaAppId是否与前端传入的CaptchaAppId一致，并且保障CaptchaAppId是从验证码控制台【验证管理】-&gt;【基础配置】中获取<br>21 diff 票据校验异常，可能的原因是（1）若Ticket包含trerror前缀，一般是由于用户网络较差，导致前端自动容灾，而生成了容灾票据，业务侧可根据需要进行跳过或二次处理。（2）若Ticket不包含trerror前缀，则是由于验证码风控系统发现请求有安全风险，业务侧可根据需要进行拦截。<br>100 appid-secretkey-ticket mismatch 参数校验错误，（1）请检查CaptchaAppId与AppSecretKey是否正确，CaptchaAppId、AppSecretKey需要在验证码控制台【验证管理】&gt;【基础配置】中获取（2）请检查传入的Ticket是否由传入的CaptchaAppId生成</p>
+     * @param string $CaptchaMsg <p>状态描述及验证错误信息</p>
+     * @param integer $EvilLevel <p>无感验证模式下，该参数返回验证结果：<br>EvilLevel=0 请求无恶意<br>EvilLevel=100 请求有恶意</p>
+     * @param integer $GetCaptchaTime <p>前端获取验证码时间，时间戳格式</p>
+     * @param integer $EvilBitmap <p>拦截类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SubmitCaptchaTime 提交验证码时间
-     * @param string $DeviceRiskCategory 设备风险大类
+     * @param integer $SubmitCaptchaTime <p>提交验证码时间</p>
+     * @param string $DeviceRiskCategory <p>设备风险大类</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Score 验证码评分
+     * @param integer $Score <p>验证码评分</p><p>取值0-100，分值越高，风险越大</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

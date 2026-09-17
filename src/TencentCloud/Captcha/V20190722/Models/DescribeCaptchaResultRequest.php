@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCaptchaResult请求参数结构体
  *
- * @method integer getCaptchaType() 获取固定填值：9。
- * @method void setCaptchaType(integer $CaptchaType) 设置固定填值：9。
- * @method string getTicket() 获取前端回调函数返回的用户验证票据
- * @method void setTicket(string $Ticket) 设置前端回调函数返回的用户验证票据
- * @method string getUserIp() 获取业务侧获取到的验证码使用者的外网IP
- * @method void setUserIp(string $UserIp) 设置业务侧获取到的验证码使用者的外网IP
- * @method string getRandstr() 获取前端回调函数返回的随机字符串
- * @method void setRandstr(string $Randstr) 设置前端回调函数返回的随机字符串
- * @method integer getCaptchaAppId() 获取验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
- * @method void setCaptchaAppId(integer $CaptchaAppId) 设置验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
- * @method string getAppSecretKey() 获取验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
- * @method void setAppSecretKey(string $AppSecretKey) 设置验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
- * @method integer getBusinessId() 获取预留字段
- * @method void setBusinessId(integer $BusinessId) 设置预留字段
- * @method integer getSceneId() 获取预留字段
- * @method void setSceneId(integer $SceneId) 设置预留字段
- * @method string getMacAddress() 获取mac 地址或设备唯一标识
- * @method void setMacAddress(string $MacAddress) 设置mac 地址或设备唯一标识
- * @method string getImei() 获取手机设备号
- * @method void setImei(string $Imei) 设置手机设备号
- * @method integer getNeedGetCaptchaTime() 获取是否返回前端获取验证码时间，取值1：需要返回
- * @method void setNeedGetCaptchaTime(integer $NeedGetCaptchaTime) 设置是否返回前端获取验证码时间，取值1：需要返回
+ * @method integer getCaptchaType() 获取<p>固定填值：9。</p>
+ * @method void setCaptchaType(integer $CaptchaType) 设置<p>固定填值：9。</p>
+ * @method string getTicket() 获取<p>前端回调函数返回的用户验证票据</p>
+ * @method void setTicket(string $Ticket) 设置<p>前端回调函数返回的用户验证票据</p>
+ * @method string getUserIp() 获取<p>业务侧获取到的验证码使用者的外网IP</p>
+ * @method void setUserIp(string $UserIp) 设置<p>业务侧获取到的验证码使用者的外网IP</p>
+ * @method string getRandstr() 获取<p>前端回调函数返回的随机字符串</p>
+ * @method void setRandstr(string $Randstr) 设置<p>前端回调函数返回的随机字符串</p>
+ * @method integer getCaptchaAppId() 获取<p>验证码应用ID。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到CaptchaAppId。</p>
+ * @method void setCaptchaAppId(integer $CaptchaAppId) 设置<p>验证码应用ID。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到CaptchaAppId。</p>
+ * @method string getAppSecretKey() 获取<p>验证码应用密钥。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。</p>
+ * @method void setAppSecretKey(string $AppSecretKey) 设置<p>验证码应用密钥。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。</p>
+ * @method integer getBusinessId() 获取<p>预留字段</p>
+ * @method void setBusinessId(integer $BusinessId) 设置<p>预留字段</p>
+ * @method integer getSceneId() 获取<p>预留字段</p>
+ * @method void setSceneId(integer $SceneId) 设置<p>预留字段</p>
+ * @method string getMacAddress() 获取<p>mac 地址或设备唯一标识</p>
+ * @method void setMacAddress(string $MacAddress) 设置<p>mac 地址或设备唯一标识</p>
+ * @method string getImei() 获取<p>手机设备号</p>
+ * @method void setImei(string $Imei) 设置<p>手机设备号</p>
+ * @method integer getNeedGetCaptchaTime() 获取<p>是否返回前端获取验证码时间，取值1：需要返回</p>
+ * @method void setNeedGetCaptchaTime(integer $NeedGetCaptchaTime) 设置<p>是否返回前端获取验证码时间，取值1：需要返回</p>
  */
 class DescribeCaptchaResultRequest extends AbstractModel
 {
     /**
-     * @var integer 固定填值：9。
+     * @var integer <p>固定填值：9。</p>
      */
     public $CaptchaType;
 
     /**
-     * @var string 前端回调函数返回的用户验证票据
+     * @var string <p>前端回调函数返回的用户验证票据</p>
      */
     public $Ticket;
 
     /**
-     * @var string 业务侧获取到的验证码使用者的外网IP
+     * @var string <p>业务侧获取到的验证码使用者的外网IP</p>
      */
     public $UserIp;
 
     /**
-     * @var string 前端回调函数返回的随机字符串
+     * @var string <p>前端回调函数返回的随机字符串</p>
      */
     public $Randstr;
 
     /**
-     * @var integer 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
+     * @var integer <p>验证码应用ID。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到CaptchaAppId。</p>
      */
     public $CaptchaAppId;
 
     /**
-     * @var string 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
+     * @var string <p>验证码应用密钥。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。</p>
      */
     public $AppSecretKey;
 
     /**
-     * @var integer 预留字段
+     * @var integer <p>预留字段</p>
      */
     public $BusinessId;
 
     /**
-     * @var integer 预留字段
+     * @var integer <p>预留字段</p>
      */
     public $SceneId;
 
     /**
-     * @var string mac 地址或设备唯一标识
+     * @var string <p>mac 地址或设备唯一标识</p>
      */
     public $MacAddress;
 
     /**
-     * @var string 手机设备号
+     * @var string <p>手机设备号</p>
      */
     public $Imei;
 
     /**
-     * @var integer 是否返回前端获取验证码时间，取值1：需要返回
+     * @var integer <p>是否返回前端获取验证码时间，取值1：需要返回</p>
      */
     public $NeedGetCaptchaTime;
 
     /**
-     * @param integer $CaptchaType 固定填值：9。
-     * @param string $Ticket 前端回调函数返回的用户验证票据
-     * @param string $UserIp 业务侧获取到的验证码使用者的外网IP
-     * @param string $Randstr 前端回调函数返回的随机字符串
-     * @param integer $CaptchaAppId 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
-     * @param string $AppSecretKey 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
-     * @param integer $BusinessId 预留字段
-     * @param integer $SceneId 预留字段
-     * @param string $MacAddress mac 地址或设备唯一标识
-     * @param string $Imei 手机设备号
-     * @param integer $NeedGetCaptchaTime 是否返回前端获取验证码时间，取值1：需要返回
+     * @param integer $CaptchaType <p>固定填值：9。</p>
+     * @param string $Ticket <p>前端回调函数返回的用户验证票据</p>
+     * @param string $UserIp <p>业务侧获取到的验证码使用者的外网IP</p>
+     * @param string $Randstr <p>前端回调函数返回的随机字符串</p>
+     * @param integer $CaptchaAppId <p>验证码应用ID。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到CaptchaAppId。</p>
+     * @param string $AppSecretKey <p>验证码应用密钥。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。</p>
+     * @param integer $BusinessId <p>预留字段</p>
+     * @param integer $SceneId <p>预留字段</p>
+     * @param string $MacAddress <p>mac 地址或设备唯一标识</p>
+     * @param string $Imei <p>手机设备号</p>
+     * @param integer $NeedGetCaptchaTime <p>是否返回前端获取验证码时间，取值1：需要返回</p>
      */
     function __construct()
     {

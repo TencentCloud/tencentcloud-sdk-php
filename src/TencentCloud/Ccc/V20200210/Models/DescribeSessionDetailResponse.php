@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSysHangupReason(integer $SysHangupReason) 设置<p>接通后系统挂断原因状态码</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
  * @method string getSysHangupReasonString() 获取<p>接通后系统挂断原因</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
  * @method void setSysHangupReasonString(string $SysHangupReasonString) 设置<p>接通后系统挂断原因</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+ * @method integer getEndStatusV2() 获取<p>通话结束状态V2（灰度中）</p>
+ * @method void setEndStatusV2(integer $EndStatusV2) 设置<p>通话结束状态V2（灰度中）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -201,6 +203,11 @@ class DescribeSessionDetailResponse extends AbstractModel
     public $SysHangupReasonString;
 
     /**
+     * @var integer <p>通话结束状态V2（灰度中）</p>
+     */
+    public $EndStatusV2;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -231,6 +238,7 @@ class DescribeSessionDetailResponse extends AbstractModel
      * @param array $ServeParticipants <p>服务参与者列表</p>
      * @param integer $SysHangupReason <p>接通后系统挂断原因状态码</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
      * @param string $SysHangupReasonString <p>接通后系统挂断原因</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+     * @param integer $EndStatusV2 <p>通话结束状态V2（灰度中）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -364,6 +372,10 @@ class DescribeSessionDetailResponse extends AbstractModel
 
         if (array_key_exists("SysHangupReasonString",$param) and $param["SysHangupReasonString"] !== null) {
             $this->SysHangupReasonString = $param["SysHangupReasonString"];
+        }
+
+        if (array_key_exists("EndStatusV2",$param) and $param["EndStatusV2"] !== null) {
+            $this->EndStatusV2 = $param["EndStatusV2"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListTargetsForPolicy请求参数结构体
  *
- * @method integer getPolicyId() 获取策略Id。
- * @method void setPolicyId(integer $PolicyId) 设置策略Id。
- * @method integer getRp() 获取每页数量。默认值是 20，必须大于 0 且小于或等于 200
- * @method void setRp(integer $Rp) 设置每页数量。默认值是 20，必须大于 0 且小于或等于 200
- * @method integer getPage() 获取页码。默认值是 1，从 1开始，不能大于 200
- * @method void setPage(integer $Page) 设置页码。默认值是 1，从 1开始，不能大于 200
- * @method string getTargetType() 获取策略类型。取值范围：All-全部、User-用户、Node-节点
- * @method void setTargetType(string $TargetType) 设置策略类型。取值范围：All-全部、User-用户、Node-节点
- * @method string getPolicyType() 获取策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
- * @method void setPolicyType(string $PolicyType) 设置策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
- * @method string getKeyword() 获取按照多个策略id搜索，空格隔开。
- * @method void setKeyword(string $Keyword) 设置按照多个策略id搜索，空格隔开。
+ * @method integer getPolicyId() 获取<p>策略Id。</p>
+ * @method void setPolicyId(integer $PolicyId) 设置<p>策略Id。</p>
+ * @method integer getRp() 获取<p>每页数量。默认值是 20，必须大于 0 且小于或等于 200</p>
+ * @method void setRp(integer $Rp) 设置<p>每页数量。默认值是 20，必须大于 0 且小于或等于 200</p>
+ * @method integer getPage() 获取<p>页码。默认值是 1，从 1开始，不能大于 200</p>
+ * @method void setPage(integer $Page) 设置<p>页码。默认值是 1，从 1开始，不能大于 200</p>
+ * @method string getTargetType() 获取<p>策略类型。取值范围：All-全部、User-用户、Node-节点</p>
+ * @method void setTargetType(string $TargetType) 设置<p>策略类型。取值范围：All-全部、User-用户、Node-节点</p>
+ * @method string getPolicyType() 获取<p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
+ * @method void setPolicyType(string $PolicyType) 设置<p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
+ * @method string getKeyword() 获取<p>按照多个策略id搜索，空格隔开。</p>
+ * @method void setKeyword(string $Keyword) 设置<p>按照多个策略id搜索，空格隔开。</p>
  */
 class ListTargetsForPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 策略Id。
+     * @var integer <p>策略Id。</p>
      */
     public $PolicyId;
 
     /**
-     * @var integer 每页数量。默认值是 20，必须大于 0 且小于或等于 200
+     * @var integer <p>每页数量。默认值是 20，必须大于 0 且小于或等于 200</p>
      */
     public $Rp;
 
     /**
-     * @var integer 页码。默认值是 1，从 1开始，不能大于 200
+     * @var integer <p>页码。默认值是 1，从 1开始，不能大于 200</p>
      */
     public $Page;
 
     /**
-     * @var string 策略类型。取值范围：All-全部、User-用户、Node-节点
+     * @var string <p>策略类型。取值范围：All-全部、User-用户、Node-节点</p>
      */
     public $TargetType;
 
     /**
-     * @var string 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+     * @var string <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
      */
     public $PolicyType;
 
     /**
-     * @var string 按照多个策略id搜索，空格隔开。
+     * @var string <p>按照多个策略id搜索，空格隔开。</p>
      */
     public $Keyword;
 
     /**
-     * @param integer $PolicyId 策略Id。
-     * @param integer $Rp 每页数量。默认值是 20，必须大于 0 且小于或等于 200
-     * @param integer $Page 页码。默认值是 1，从 1开始，不能大于 200
-     * @param string $TargetType 策略类型。取值范围：All-全部、User-用户、Node-节点
-     * @param string $PolicyType 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
-     * @param string $Keyword 按照多个策略id搜索，空格隔开。
+     * @param integer $PolicyId <p>策略Id。</p>
+     * @param integer $Rp <p>每页数量。默认值是 20，必须大于 0 且小于或等于 200</p>
+     * @param integer $Page <p>页码。默认值是 1，从 1开始，不能大于 200</p>
+     * @param string $TargetType <p>策略类型。取值范围：All-全部、User-用户、Node-节点</p>
+     * @param string $PolicyType <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
+     * @param string $Keyword <p>按照多个策略id搜索，空格隔开。</p>
      */
     function __construct()
     {

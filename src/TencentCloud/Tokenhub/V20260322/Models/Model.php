@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelImage(ModelImage $ModelImage) 设置<p>模型图标。</p>
  * @method string getProvider() 获取<p>模型供应商。</p>
  * @method void setProvider(string $Provider) 设置<p>模型供应商。</p>
+ * @method string getProviderIntroduction() 获取<p>markdown 原生内容的模型提供方详情</p>
+ * @method void setProviderIntroduction(string $ProviderIntroduction) 设置<p>markdown 原生内容的模型提供方详情</p>
  * @method string getStatus() 获取<p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
  * @method void setStatus(string $Status) 设置<p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
  * @method array getTags() 获取<p>标签列表。</p>
@@ -114,6 +116,11 @@ class Model extends AbstractModel
     public $Provider;
 
     /**
+     * @var string <p>markdown 原生内容的模型提供方详情</p>
+     */
+    public $ProviderIntroduction;
+
+    /**
      * @var string <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
      */
     public $Status;
@@ -174,6 +181,7 @@ class Model extends AbstractModel
      * @param string $Brand <p>模型品牌。</p>
      * @param ModelImage $ModelImage <p>模型图标。</p>
      * @param string $Provider <p>模型供应商。</p>
+     * @param string $ProviderIntroduction <p>markdown 原生内容的模型提供方详情</p>
      * @param string $Status <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
      * @param array $Tags <p>标签列表。</p>
      * @param array $ModelChargingInfo <p>计费信息列表。</p>
@@ -237,6 +245,10 @@ class Model extends AbstractModel
 
         if (array_key_exists("Provider",$param) and $param["Provider"] !== null) {
             $this->Provider = $param["Provider"];
+        }
+
+        if (array_key_exists("ProviderIntroduction",$param) and $param["ProviderIntroduction"] !== null) {
+            $this->ProviderIntroduction = $param["ProviderIntroduction"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

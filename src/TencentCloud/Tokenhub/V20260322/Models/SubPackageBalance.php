@@ -20,114 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * API Key 额度及用量信息
  *
- * @method string getExclusiveQuota() 获取独占额度。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method void setExclusiveQuota(string $ExclusiveQuota) 设置独占额度。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method string getExclusiveUsed() 获取独占额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method void setExclusiveUsed(string $ExclusiveUsed) 设置独占额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method string getExclusiveRemain() 获取独占额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method void setExclusiveRemain(string $ExclusiveRemain) 设置独占额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method string getSharedQuota() 获取共享额度上限，-1 表示不限。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method void setSharedQuota(string $SharedQuota) 设置共享额度上限，-1 表示不限。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method string getSharedUsed() 获取共享额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method void setSharedUsed(string $SharedUsed) 设置共享额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method string getSharedRemain() 获取共享额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method void setSharedRemain(string $SharedRemain) 设置共享额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method integer getStatus() 获取API Key 额度包状态。取值：0（正常）、1（耗尽）。
- * @method void setStatus(integer $Status) 设置API Key 额度包状态。取值：0（正常）、1（耗尽）。
+ * @method string getExclusiveQuota() 获取<p>独占额度。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method void setExclusiveQuota(string $ExclusiveQuota) 设置<p>独占额度。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method string getExclusiveUsed() 获取<p>独占额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method void setExclusiveUsed(string $ExclusiveUsed) 设置<p>独占额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method string getExclusiveRemain() 获取<p>独占额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method void setExclusiveRemain(string $ExclusiveRemain) 设置<p>独占额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method string getSharedQuota() 获取<p>共享额度上限，-1 表示不限。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method void setSharedQuota(string $SharedQuota) 设置<p>共享额度上限，-1 表示不限。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method string getSharedUsed() 获取<p>共享额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method void setSharedUsed(string $SharedUsed) 设置<p>共享额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method string getSharedRemain() 获取<p>共享额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method void setSharedRemain(string $SharedRemain) 设置<p>共享额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method string getTotalUsed() 获取<p>当前周期已用总量 exclusive_used + shared_used + overflow_used</p>
+ * @method void setTotalUsed(string $TotalUsed) 设置<p>当前周期已用总量 exclusive_used + shared_used + overflow_used</p>
+ * @method integer getStatus() 获取<p>API Key 额度包状态。取值：0（正常）、1（耗尽）。</p>
+ * @method void setStatus(integer $Status) 设置<p>API Key 额度包状态。取值：0（正常）、1（耗尽）。</p>
  */
 class SubPackageBalance extends AbstractModel
 {
     /**
-     * @var string 独占额度。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * @var string <p>独占额度。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public $ExclusiveQuota;
 
     /**
-     * @var string 独占额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * @var string <p>独占额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public $ExclusiveUsed;
 
     /**
-     * @var string 独占额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * @var string <p>独占额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public $ExclusiveRemain;
 
     /**
-     * @var string 共享额度上限，-1 表示不限。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * @var string <p>共享额度上限，-1 表示不限。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public $SharedQuota;
 
     /**
-     * @var string 共享额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * @var string <p>共享额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public $SharedUsed;
 
     /**
-     * @var string 共享额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * @var string <p>共享额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public $SharedRemain;
 
     /**
-     * @var integer API Key 额度包状态。取值：0（正常）、1（耗尽）。
+     * @var string <p>当前周期已用总量 exclusive_used + shared_used + overflow_used</p>
+     */
+    public $TotalUsed;
+
+    /**
+     * @var integer <p>API Key 额度包状态。取值：0（正常）、1（耗尽）。</p>
      */
     public $Status;
 
     /**
-     * @param string $ExclusiveQuota 独占额度。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param string $ExclusiveUsed 独占额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param string $ExclusiveRemain 独占额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param string $SharedQuota 共享额度上限，-1 表示不限。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param string $SharedUsed 共享额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param string $SharedRemain 共享额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param integer $Status API Key 额度包状态。取值：0（正常）、1（耗尽）。
+     * @param string $ExclusiveQuota <p>独占额度。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param string $ExclusiveUsed <p>独占额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param string $ExclusiveRemain <p>独占额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param string $SharedQuota <p>共享额度上限，-1 表示不限。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param string $SharedUsed <p>共享额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param string $SharedRemain <p>共享额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param string $TotalUsed <p>当前周期已用总量 exclusive_used + shared_used + overflow_used</p>
+     * @param integer $Status <p>API Key 额度包状态。取值：0（正常）、1（耗尽）。</p>
      */
     function __construct()
     {
@@ -164,6 +124,10 @@ class SubPackageBalance extends AbstractModel
 
         if (array_key_exists("SharedRemain",$param) and $param["SharedRemain"] !== null) {
             $this->SharedRemain = $param["SharedRemain"];
+        }
+
+        if (array_key_exists("TotalUsed",$param) and $param["TotalUsed"] !== null) {
+            $this->TotalUsed = $param["TotalUsed"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

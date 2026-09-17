@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMonitorDetail返回参数结构体
  *
- * @method MonitorDetail getMonitorDetail() 获取探测规则
- * @method void setMonitorDetail(MonitorDetail $MonitorDetail) 设置探测规则
+ * @method MonitorDetail getMonitorDetail() 获取<p>探测规则</p>
+ * @method void setMonitorDetail(MonitorDetail $MonitorDetail) 设置<p>探测规则</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeMonitorDetailResponse extends AbstractModel
 {
     /**
-     * @var MonitorDetail 探测规则
+     * @var MonitorDetail <p>探测规则</p>
      */
     public $MonitorDetail;
 
@@ -38,7 +38,7 @@ class DescribeMonitorDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param MonitorDetail $MonitorDetail 探测规则
+     * @param MonitorDetail $MonitorDetail <p>探测规则</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,75 +20,75 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoundPlays请求参数结构体
  *
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method array getRoundPlayIds() 获取过滤条件：轮播播单标识，数组长度限制：100。
- * @method void setRoundPlayIds(array $RoundPlayIds) 设置过滤条件：轮播播单标识，数组长度限制：100。
- * @method string getStatus() 获取过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li>
- * @method void setStatus(string $Status) 设置过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li>
- * @method TimeRange getCreateTime() 获取过滤条件：轮播播单创建时间。
- * @method void setCreateTime(TimeRange $CreateTime) 设置过滤条件：轮播播单创建时间。
- * @method TimeRange getUpdateTime() 获取过滤条件：轮播播单更新时间。
- * @method void setUpdateTime(TimeRange $UpdateTime) 设置过滤条件：轮播播单更新时间。
- * @method string getScrollToken() 获取翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
- * @method void setScrollToken(string $ScrollToken) 设置翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
- * @method integer getOffset() 获取分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
- * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
- * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
- * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method array getRoundPlayIds() 获取<p>过滤条件：轮播播单标识，数组长度限制：100。</p>
+ * @method void setRoundPlayIds(array $RoundPlayIds) 设置<p>过滤条件：轮播播单标识，数组长度限制：100。</p>
+ * @method string getStatus() 获取<p>过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li></p>
+ * @method void setStatus(string $Status) 设置<p>过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li></p>
+ * @method TimeRange getCreateTime() 获取<p>过滤条件：轮播播单创建时间。</p>
+ * @method void setCreateTime(TimeRange $CreateTime) 设置<p>过滤条件：轮播播单创建时间。</p>
+ * @method TimeRange getUpdateTime() 获取<p>过滤条件：轮播播单更新时间。</p>
+ * @method void setUpdateTime(TimeRange $UpdateTime) 设置<p>过滤条件：轮播播单更新时间。</p>
+ * @method string getScrollToken() 获取<p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
+ * @method void setScrollToken(string $ScrollToken) 设置<p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
+ * @method integer getOffset() 获取<p>分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。</p>
+ * @method integer getLimit() 获取<p>返回记录条数，默认值：10，最大值：100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回记录条数，默认值：10，最大值：100。</p>
  */
 class DescribeRoundPlaysRequest extends AbstractModel
 {
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array 过滤条件：轮播播单标识，数组长度限制：100。
+     * @var array <p>过滤条件：轮播播单标识，数组长度限制：100。</p>
      */
     public $RoundPlayIds;
 
     /**
-     * @var string 过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li>
+     * @var string <p>过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li></p>
      */
     public $Status;
 
     /**
-     * @var TimeRange 过滤条件：轮播播单创建时间。
+     * @var TimeRange <p>过滤条件：轮播播单创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var TimeRange 过滤条件：轮播播单更新时间。
+     * @var TimeRange <p>过滤条件：轮播播单更新时间。</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+     * @var string <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
      */
     public $ScrollToken;
 
     /**
-     * @var integer 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
+     * @var integer <p>分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。</p>
      * @deprecated
      */
     public $Offset;
 
     /**
-     * @var integer 返回记录条数，默认值：10，最大值：100。
+     * @var integer <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param array $RoundPlayIds 过滤条件：轮播播单标识，数组长度限制：100。
-     * @param string $Status 过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li>
-     * @param TimeRange $CreateTime 过滤条件：轮播播单创建时间。
-     * @param TimeRange $UpdateTime 过滤条件：轮播播单更新时间。
-     * @param string $ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
-     * @param integer $Offset 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
-     * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param array $RoundPlayIds <p>过滤条件：轮播播单标识，数组长度限制：100。</p>
+     * @param string $Status <p>过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li></p>
+     * @param TimeRange $CreateTime <p>过滤条件：轮播播单创建时间。</p>
+     * @param TimeRange $UpdateTime <p>过滤条件：轮播播单更新时间。</p>
+     * @param string $ScrollToken <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
+     * @param integer $Offset <p>分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。</p>
+     * @param integer $Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     function __construct()
     {

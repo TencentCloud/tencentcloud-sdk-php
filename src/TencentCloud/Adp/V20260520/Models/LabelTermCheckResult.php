@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 标准词校验项
  *
- * @method CheckResult getCheckResult() 获取<p>校验结果</p>
+ * @method CheckResult getCheckResult() 获取校验结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCheckResult(CheckResult $CheckResult) 设置<p>校验结果</p>
+ * @method void setCheckResult(CheckResult $CheckResult) 设置校验结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTerm() 获取<p>待校验的标准词</p>
- * @method void setTerm(string $Term) 设置<p>待校验的标准词</p>
- * @method string getTermId() 获取<p>已存在时返回对应标准词 ID</p>
- * @method void setTermId(string $TermId) 设置<p>已存在时返回对应标准词 ID</p>
+ * @method string getTerm() 获取待校验的标准词
+ * @method void setTerm(string $Term) 设置待校验的标准词
+ * @method string getTermId() 获取已存在时返回对应标准词 ID
+ * @method void setTermId(string $TermId) 设置已存在时返回对应标准词 ID
  */
 class LabelTermCheckResult extends AbstractModel
 {
     /**
-     * @var CheckResult <p>校验结果</p>
+     * @var CheckResult 校验结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckResult;
 
     /**
-     * @var string <p>待校验的标准词</p>
+     * @var string 待校验的标准词
      */
     public $Term;
 
     /**
-     * @var string <p>已存在时返回对应标准词 ID</p>
+     * @var string 已存在时返回对应标准词 ID
      */
     public $TermId;
 
     /**
-     * @param CheckResult $CheckResult <p>校验结果</p>
+     * @param CheckResult $CheckResult 校验结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Term <p>待校验的标准词</p>
-     * @param string $TermId <p>已存在时返回对应标准词 ID</p>
+     * @param string $Term 待校验的标准词
+     * @param string $TermId 已存在时返回对应标准词 ID
      */
     function __construct()
     {

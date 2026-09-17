@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通用校验结果
  *
- * @method boolean getPassed() 获取<p>是否通过校验</p>
- * @method void setPassed(boolean $Passed) 设置<p>是否通过校验</p>
- * @method string getReason() 获取<p>失败原因（passed=false 时填充）</p>
- * @method void setReason(string $Reason) 设置<p>失败原因（passed=false 时填充）</p>
+ * @method boolean getPassed() 获取是否通过校验
+ * @method void setPassed(boolean $Passed) 设置是否通过校验
+ * @method string getReason() 获取失败原因（passed=false 时填充）
+ * @method void setReason(string $Reason) 设置失败原因（passed=false 时填充）
  */
 class CheckResult extends AbstractModel
 {
     /**
-     * @var boolean <p>是否通过校验</p>
+     * @var boolean 是否通过校验
      */
     public $Passed;
 
     /**
-     * @var string <p>失败原因（passed=false 时填充）</p>
+     * @var string 失败原因（passed=false 时填充）
      */
     public $Reason;
 
     /**
-     * @param boolean $Passed <p>是否通过校验</p>
-     * @param string $Reason <p>失败原因（passed=false 时填充）</p>
+     * @param boolean $Passed 是否通过校验
+     * @param string $Reason 失败原因（passed=false 时填充）
      */
     function __construct()
     {

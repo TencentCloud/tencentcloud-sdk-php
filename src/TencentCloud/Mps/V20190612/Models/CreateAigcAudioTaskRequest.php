@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModelName() 获取<p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic、EL、Mureka。</p>
  * @method void setModelName(string $ModelName) 设置<p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic、EL、Mureka。</p>
- * @method string getModelVersion() 获取<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。模型GL支持的版本号：3.0-clip、3.0-pro。模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。模型EL支持的版本号: compose_v2、sound_t2s_v2。模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
- * @method void setModelVersion(string $ModelVersion) 设置<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。模型GL支持的版本号：3.0-clip、3.0-pro。模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。模型EL支持的版本号: compose_v2、sound_t2s_v2。模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
+ * @method string getModelVersion() 获取<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。<br>模型EL支持的版本号: compose_v2、sound_t2s_v2。<br>模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
+ * @method void setModelVersion(string $ModelVersion) 设置<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。<br>模型EL支持的版本号: compose_v2、sound_t2s_v2。<br>模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
  * @method string getSceneType() 获取<p>指定场景生音频。音乐: music。</p>
  * @method void setSceneType(string $SceneType) 设置<p>指定场景生音频。音乐: music。</p>
  * @method string getPrompt() 获取<p>生成音乐的描述。(注：最大支持2000字符)。</p>
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStoreCosParam(AigcStoreCosParam $StoreCosParam) 设置<p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
  * @method AigcAudioExtraParam getExtraParameters() 获取<p>用于传入要求的额外参数。</p>
  * @method void setExtraParameters(AigcAudioExtraParam $ExtraParameters) 设置<p>用于传入要求的额外参数。</p>
- * @method string getAdditionalParameters() 获取<p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li></ol>
- * @method void setAdditionalParameters(string $AdditionalParameters) 设置<p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li></ol>
+ * @method string getAdditionalParameters() 获取<p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li><li>Mureka模型支持的透传参数有：<br>n: 指定输出音频文件数。<br>非instrumental版本支持：lyrics，gender，reference_id，melody_id。<br>instrumental版本支持：instrumental_id。</li></ol>
+ * @method void setAdditionalParameters(string $AdditionalParameters) 设置<p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li><li>Mureka模型支持的透传参数有：<br>n: 指定输出音频文件数。<br>非instrumental版本支持：lyrics，gender，reference_id，melody_id。<br>instrumental版本支持：instrumental_id。</li></ol>
  * @method string getOperator() 获取<p>接口操作者名称。</p>
  * @method void setOperator(string $Operator) 设置<p>接口操作者名称。</p>
  */
@@ -49,7 +49,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。模型GL支持的版本号：3.0-clip、3.0-pro。模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。模型EL支持的版本号: compose_v2、sound_t2s_v2。模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
+     * @var string <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。<br>模型EL支持的版本号: compose_v2、sound_t2s_v2。<br>模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
      */
     public $ModelVersion;
 
@@ -84,7 +84,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $ExtraParameters;
 
     /**
-     * @var string <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li></ol>
+     * @var string <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li><li>Mureka模型支持的透传参数有：<br>n: 指定输出音频文件数。<br>非instrumental版本支持：lyrics，gender，reference_id，melody_id。<br>instrumental版本支持：instrumental_id。</li></ol>
      */
     public $AdditionalParameters;
 
@@ -95,14 +95,14 @@ class CreateAigcAudioTaskRequest extends AbstractModel
 
     /**
      * @param string $ModelName <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic、EL、Mureka。</p>
-     * @param string $ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。模型GL支持的版本号：3.0-clip、3.0-pro。模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。模型EL支持的版本号: compose_v2、sound_t2s_v2。模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
+     * @param string $ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。<br>模型EL支持的版本号: compose_v2、sound_t2s_v2。<br>模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
      * @param string $SceneType <p>指定场景生音频。音乐: music。</p>
      * @param string $Prompt <p>生成音乐的描述。(注：最大支持2000字符)。</p>
      * @param array $VideoInfos <p>参考视频信息。仅部分模型支持。</p><ol><li>Kling的视频生音效。</li><li>EL的视频配背景音乐。</li></ol>
      * @param array $AudioInfos <p>传入参考音频信息。</p><ol><li>MiniMaxMusic的翻唱功能使用。</li></ol><p>比如传入音频生成音乐时需要传入。</p>
      * @param AigcStoreCosParam $StoreCosParam <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
      * @param AigcAudioExtraParam $ExtraParameters <p>用于传入要求的额外参数。</p>
-     * @param string $AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li></ol>
+     * @param string $AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li><li>Mureka模型支持的透传参数有：<br>n: 指定输出音频文件数。<br>非instrumental版本支持：lyrics，gender，reference_id，melody_id。<br>instrumental版本支持：instrumental_id。</li></ol>
      * @param string $Operator <p>接口操作者名称。</p>
      */
     function __construct()

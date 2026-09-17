@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI 样本管理，关键词输入信息。
  *
- * @method string getKeyword() 获取关键词，长度限制：20 个字符。
- * @method void setKeyword(string $Keyword) 设置关键词，长度限制：20 个字符。
- * @method array getTags() 获取关键词标签
-<li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li>
- * @method void setTags(array $Tags) 设置关键词标签
-<li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li>
+ * @method string getKeyword() 获取<p>关键词，长度限制：20 个字符。</p>
+ * @method void setKeyword(string $Keyword) 设置<p>关键词，长度限制：20 个字符。</p>
+ * @method array getTags() 获取<p>关键词标签</p><li>数组长度限制：20 个标签；</li><li>单个标签长度限制：128 个字符。</li>
+ * @method void setTags(array $Tags) 设置<p>关键词标签</p><li>数组长度限制：20 个标签；</li><li>单个标签长度限制：128 个字符。</li>
  */
 class AiSampleWordInfo extends AbstractModel
 {
     /**
-     * @var string 关键词，长度限制：20 个字符。
+     * @var string <p>关键词，长度限制：20 个字符。</p>
      */
     public $Keyword;
 
     /**
-     * @var array 关键词标签
-<li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li>
+     * @var array <p>关键词标签</p><li>数组长度限制：20 个标签；</li><li>单个标签长度限制：128 个字符。</li>
      */
     public $Tags;
 
     /**
-     * @param string $Keyword 关键词，长度限制：20 个字符。
-     * @param array $Tags 关键词标签
-<li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li>
+     * @param string $Keyword <p>关键词，长度限制：20 个字符。</p>
+     * @param array $Tags <p>关键词标签</p><li>数组长度限制：20 个标签；</li><li>单个标签长度限制：128 个字符。</li>
      */
     function __construct()
     {

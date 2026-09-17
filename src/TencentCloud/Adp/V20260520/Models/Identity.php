@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通用身份信息（支持数字 ID 与字符串 ID 两种形态）
  *
- * @method string getDescription() 获取<p>描述</p>
- * @method void setDescription(string $Description) 设置<p>描述</p>
- * @method string getId() 获取<p>数字 ID</p>
- * @method void setId(string $Id) 设置<p>数字 ID</p>
- * @method string getName() 获取<p>名称</p>
- * @method void setName(string $Name) 设置<p>名称</p>
- * @method string getStrId() 获取<p>字符串 ID</p>
- * @method void setStrId(string $StrId) 设置<p>字符串 ID</p>
+ * @method string getDescription() 获取描述
+ * @method void setDescription(string $Description) 设置描述
+ * @method string getId() 获取数字 ID
+ * @method void setId(string $Id) 设置数字 ID
+ * @method string getName() 获取名称
+ * @method void setName(string $Name) 设置名称
+ * @method string getStrId() 获取字符串 ID
+ * @method void setStrId(string $StrId) 设置字符串 ID
  */
 class Identity extends AbstractModel
 {
     /**
-     * @var string <p>描述</p>
+     * @var string 描述
      */
     public $Description;
 
     /**
-     * @var string <p>数字 ID</p>
+     * @var string 数字 ID
      */
     public $Id;
 
     /**
-     * @var string <p>名称</p>
+     * @var string 名称
      */
     public $Name;
 
     /**
-     * @var string <p>字符串 ID</p>
+     * @var string 字符串 ID
      */
     public $StrId;
 
     /**
-     * @param string $Description <p>描述</p>
-     * @param string $Id <p>数字 ID</p>
-     * @param string $Name <p>名称</p>
-     * @param string $StrId <p>字符串 ID</p>
+     * @param string $Description 描述
+     * @param string $Id 数字 ID
+     * @param string $Name 名称
+     * @param string $StrId 字符串 ID
      */
     function __construct()
     {

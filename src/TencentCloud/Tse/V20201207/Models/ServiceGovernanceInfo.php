@@ -20,90 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 服务治理相关的信息
  *
- * @method string getEngineRegion() 获取引擎所在的地域
- * @method void setEngineRegion(string $EngineRegion) 设置引擎所在的地域
- * @method array getBoundK8SInfos() 获取服务治理引擎绑定的kubernetes集群信息
- * @method void setBoundK8SInfos(array $BoundK8SInfos) 设置服务治理引擎绑定的kubernetes集群信息
- * @method array getVpcInfos() 获取服务治理引擎绑定的网络信息
- * @method void setVpcInfos(array $VpcInfos) 设置服务治理引擎绑定的网络信息
- * @method boolean getAuthOpen() 获取当前实例鉴权是否开启
- * @method void setAuthOpen(boolean $AuthOpen) 设置当前实例鉴权是否开启
- * @method array getFeatures() 获取该实例支持的功能，鉴权就是 Auth
- * @method void setFeatures(array $Features) 设置该实例支持的功能，鉴权就是 Auth
- * @method string getMainPassword() 获取主账户名默认为 polaris，该值为主账户的默认密码
- * @method void setMainPassword(string $MainPassword) 设置主账户名默认为 polaris，该值为主账户的默认密码
- * @method array getPgwVpcInfos() 获取服务治理pushgateway引擎绑定的网络信息
- * @method void setPgwVpcInfos(array $PgwVpcInfos) 设置服务治理pushgateway引擎绑定的网络信息
- * @method array getLimiterVpcInfos() 获取服务治理限流server引擎绑定的网络信息
- * @method void setLimiterVpcInfos(array $LimiterVpcInfos) 设置服务治理限流server引擎绑定的网络信息
- * @method array getCLSTopics() 获取引擎关联CLS日志主题信息
- * @method void setCLSTopics(array $CLSTopics) 设置引擎关联CLS日志主题信息
- * @method string getSubPassword() 获取子用户密码
- * @method void setSubPassword(string $SubPassword) 设置子用户密码
+ * @method string getEngineRegion() 获取<p>引擎所在的地域</p>
+ * @method void setEngineRegion(string $EngineRegion) 设置<p>引擎所在的地域</p>
+ * @method array getBoundK8SInfos() 获取<p>服务治理引擎绑定的kubernetes集群信息</p>
+ * @method void setBoundK8SInfos(array $BoundK8SInfos) 设置<p>服务治理引擎绑定的kubernetes集群信息</p>
+ * @method array getVpcInfos() 获取<p>服务治理引擎绑定的网络信息</p>
+ * @method void setVpcInfos(array $VpcInfos) 设置<p>服务治理引擎绑定的网络信息</p>
+ * @method boolean getAuthOpen() 获取<p>当前实例鉴权是否开启</p>
+ * @method void setAuthOpen(boolean $AuthOpen) 设置<p>当前实例鉴权是否开启</p>
+ * @method array getFeatures() 获取<p>该实例支持的功能，鉴权就是 Auth</p>
+ * @method void setFeatures(array $Features) 设置<p>该实例支持的功能，鉴权就是 Auth</p>
+ * @method string getMainPassword() 获取<p>主账户名默认为 polaris，该值为主账户的默认密码</p>
+ * @method void setMainPassword(string $MainPassword) 设置<p>主账户名默认为 polaris，该值为主账户的默认密码</p>
+ * @method array getPgwVpcInfos() 获取<p>服务治理pushgateway引擎绑定的网络信息</p>
+ * @method void setPgwVpcInfos(array $PgwVpcInfos) 设置<p>服务治理pushgateway引擎绑定的网络信息</p>
+ * @method array getLimiterVpcInfos() 获取<p>服务治理限流server引擎绑定的网络信息</p>
+ * @method void setLimiterVpcInfos(array $LimiterVpcInfos) 设置<p>服务治理限流server引擎绑定的网络信息</p>
+ * @method array getCLSTopics() 获取<p>引擎关联CLS日志主题信息</p>
+ * @method void setCLSTopics(array $CLSTopics) 设置<p>引擎关联CLS日志主题信息</p>
+ * @method string getSubPassword() 获取<p>子用户密码</p>
+ * @method void setSubPassword(string $SubPassword) 设置<p>子用户密码</p>
+ * @method boolean getDisableMutation() 获取<p>是否允许变更</p>
+ * @method void setDisableMutation(boolean $DisableMutation) 设置<p>是否允许变更</p>
+ * @method boolean getMaxCapacityLimitEnabled() 获取<p>是否开启限流</p>
+ * @method void setMaxCapacityLimitEnabled(boolean $MaxCapacityLimitEnabled) 设置<p>是否开启限流</p>
  */
 class ServiceGovernanceInfo extends AbstractModel
 {
     /**
-     * @var string 引擎所在的地域
+     * @var string <p>引擎所在的地域</p>
      */
     public $EngineRegion;
 
     /**
-     * @var array 服务治理引擎绑定的kubernetes集群信息
+     * @var array <p>服务治理引擎绑定的kubernetes集群信息</p>
      */
     public $BoundK8SInfos;
 
     /**
-     * @var array 服务治理引擎绑定的网络信息
+     * @var array <p>服务治理引擎绑定的网络信息</p>
      */
     public $VpcInfos;
 
     /**
-     * @var boolean 当前实例鉴权是否开启
+     * @var boolean <p>当前实例鉴权是否开启</p>
      */
     public $AuthOpen;
 
     /**
-     * @var array 该实例支持的功能，鉴权就是 Auth
+     * @var array <p>该实例支持的功能，鉴权就是 Auth</p>
      */
     public $Features;
 
     /**
-     * @var string 主账户名默认为 polaris，该值为主账户的默认密码
+     * @var string <p>主账户名默认为 polaris，该值为主账户的默认密码</p>
      */
     public $MainPassword;
 
     /**
-     * @var array 服务治理pushgateway引擎绑定的网络信息
+     * @var array <p>服务治理pushgateway引擎绑定的网络信息</p>
      */
     public $PgwVpcInfos;
 
     /**
-     * @var array 服务治理限流server引擎绑定的网络信息
+     * @var array <p>服务治理限流server引擎绑定的网络信息</p>
      */
     public $LimiterVpcInfos;
 
     /**
-     * @var array 引擎关联CLS日志主题信息
+     * @var array <p>引擎关联CLS日志主题信息</p>
      */
     public $CLSTopics;
 
     /**
-     * @var string 子用户密码
+     * @var string <p>子用户密码</p>
      */
     public $SubPassword;
 
     /**
-     * @param string $EngineRegion 引擎所在的地域
-     * @param array $BoundK8SInfos 服务治理引擎绑定的kubernetes集群信息
-     * @param array $VpcInfos 服务治理引擎绑定的网络信息
-     * @param boolean $AuthOpen 当前实例鉴权是否开启
-     * @param array $Features 该实例支持的功能，鉴权就是 Auth
-     * @param string $MainPassword 主账户名默认为 polaris，该值为主账户的默认密码
-     * @param array $PgwVpcInfos 服务治理pushgateway引擎绑定的网络信息
-     * @param array $LimiterVpcInfos 服务治理限流server引擎绑定的网络信息
-     * @param array $CLSTopics 引擎关联CLS日志主题信息
-     * @param string $SubPassword 子用户密码
+     * @var boolean <p>是否允许变更</p>
+     */
+    public $DisableMutation;
+
+    /**
+     * @var boolean <p>是否开启限流</p>
+     */
+    public $MaxCapacityLimitEnabled;
+
+    /**
+     * @param string $EngineRegion <p>引擎所在的地域</p>
+     * @param array $BoundK8SInfos <p>服务治理引擎绑定的kubernetes集群信息</p>
+     * @param array $VpcInfos <p>服务治理引擎绑定的网络信息</p>
+     * @param boolean $AuthOpen <p>当前实例鉴权是否开启</p>
+     * @param array $Features <p>该实例支持的功能，鉴权就是 Auth</p>
+     * @param string $MainPassword <p>主账户名默认为 polaris，该值为主账户的默认密码</p>
+     * @param array $PgwVpcInfos <p>服务治理pushgateway引擎绑定的网络信息</p>
+     * @param array $LimiterVpcInfos <p>服务治理限流server引擎绑定的网络信息</p>
+     * @param array $CLSTopics <p>引擎关联CLS日志主题信息</p>
+     * @param string $SubPassword <p>子用户密码</p>
+     * @param boolean $DisableMutation <p>是否允许变更</p>
+     * @param boolean $MaxCapacityLimitEnabled <p>是否开启限流</p>
      */
     function __construct()
     {
@@ -181,6 +197,14 @@ class ServiceGovernanceInfo extends AbstractModel
 
         if (array_key_exists("SubPassword",$param) and $param["SubPassword"] !== null) {
             $this->SubPassword = $param["SubPassword"];
+        }
+
+        if (array_key_exists("DisableMutation",$param) and $param["DisableMutation"] !== null) {
+            $this->DisableMutation = $param["DisableMutation"];
+        }
+
+        if (array_key_exists("MaxCapacityLimitEnabled",$param) and $param["MaxCapacityLimitEnabled"] !== null) {
+            $this->MaxCapacityLimitEnabled = $param["MaxCapacityLimitEnabled"];
         }
     }
 }

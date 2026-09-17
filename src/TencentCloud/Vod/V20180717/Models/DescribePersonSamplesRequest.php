@@ -20,86 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePersonSamples请求参数结构体
  *
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method string getType() 获取拉取的素材类型，可选值：
-<li>UserDefine：用户自定义素材库；</li>
-<li>Default：系统默认素材库。</li>
-
-默认值：UserDefine，拉取用户自定义素材库素材。
-说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。
- * @method void setType(string $Type) 设置拉取的素材类型，可选值：
-<li>UserDefine：用户自定义素材库；</li>
-<li>Default：系统默认素材库。</li>
-
-默认值：UserDefine，拉取用户自定义素材库素材。
-说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。
- * @method array getPersonIds() 获取素材 ID，数组长度限制：100。
- * @method void setPersonIds(array $PersonIds) 设置素材 ID，数组长度限制：100。
- * @method array getNames() 获取素材名称，数组长度限制：20。
- * @method void setNames(array $Names) 设置素材名称，数组长度限制：20。
- * @method array getTags() 获取素材标签，数组长度限制：20。
- * @method void setTags(array $Tags) 设置素材标签，数组长度限制：20。
- * @method integer getOffset() 获取分页偏移量，默认值：0。
- * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
- * @method integer getLimit() 获取返回记录条数，默认值：100，最大值：100。
- * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：100，最大值：100。
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method string getType() 获取<p>拉取的素材类型，可选值：</p><li>UserDefine：用户自定义素材库；</li><li>Default：系统默认素材库。</li><p>默认值：UserDefine，拉取用户自定义素材库素材。<br>说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。</p>
+ * @method void setType(string $Type) 设置<p>拉取的素材类型，可选值：</p><li>UserDefine：用户自定义素材库；</li><li>Default：系统默认素材库。</li><p>默认值：UserDefine，拉取用户自定义素材库素材。<br>说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。</p>
+ * @method array getPersonIds() 获取<p>素材 ID，数组长度限制：100。</p>
+ * @method void setPersonIds(array $PersonIds) 设置<p>素材 ID，数组长度限制：100。</p>
+ * @method array getNames() 获取<p>素材名称，数组长度限制：20。</p>
+ * @method void setNames(array $Names) 设置<p>素材名称，数组长度限制：20。</p>
+ * @method array getTags() 获取<p>素材标签，数组长度限制：20。</p>
+ * @method void setTags(array $Tags) 设置<p>素材标签，数组长度限制：20。</p>
+ * @method integer getOffset() 获取<p>分页偏移量，默认值：0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认值：0。</p>
+ * @method integer getLimit() 获取<p>返回记录条数，默认值：100，最大值：100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回记录条数，默认值：100，最大值：100。</p>
  */
 class DescribePersonSamplesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 拉取的素材类型，可选值：
-<li>UserDefine：用户自定义素材库；</li>
-<li>Default：系统默认素材库。</li>
-
-默认值：UserDefine，拉取用户自定义素材库素材。
-说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。
+     * @var string <p>拉取的素材类型，可选值：</p><li>UserDefine：用户自定义素材库；</li><li>Default：系统默认素材库。</li><p>默认值：UserDefine，拉取用户自定义素材库素材。<br>说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。</p>
      */
     public $Type;
 
     /**
-     * @var array 素材 ID，数组长度限制：100。
+     * @var array <p>素材 ID，数组长度限制：100。</p>
      */
     public $PersonIds;
 
     /**
-     * @var array 素材名称，数组长度限制：20。
+     * @var array <p>素材名称，数组长度限制：20。</p>
      */
     public $Names;
 
     /**
-     * @var array 素材标签，数组长度限制：20。
+     * @var array <p>素材标签，数组长度限制：20。</p>
      */
     public $Tags;
 
     /**
-     * @var integer 分页偏移量，默认值：0。
+     * @var integer <p>分页偏移量，默认值：0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回记录条数，默认值：100，最大值：100。
+     * @var integer <p>返回记录条数，默认值：100，最大值：100。</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param string $Type 拉取的素材类型，可选值：
-<li>UserDefine：用户自定义素材库；</li>
-<li>Default：系统默认素材库。</li>
-
-默认值：UserDefine，拉取用户自定义素材库素材。
-说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。
-     * @param array $PersonIds 素材 ID，数组长度限制：100。
-     * @param array $Names 素材名称，数组长度限制：20。
-     * @param array $Tags 素材标签，数组长度限制：20。
-     * @param integer $Offset 分页偏移量，默认值：0。
-     * @param integer $Limit 返回记录条数，默认值：100，最大值：100。
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param string $Type <p>拉取的素材类型，可选值：</p><li>UserDefine：用户自定义素材库；</li><li>Default：系统默认素材库。</li><p>默认值：UserDefine，拉取用户自定义素材库素材。<br>说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。</p>
+     * @param array $PersonIds <p>素材 ID，数组长度限制：100。</p>
+     * @param array $Names <p>素材名称，数组长度限制：20。</p>
+     * @param array $Tags <p>素材标签，数组长度限制：20。</p>
+     * @param integer $Offset <p>分页偏移量，默认值：0。</p>
+     * @param integer $Limit <p>返回记录条数，默认值：100，最大值：100。</p>
      */
     function __construct()
     {

@@ -108,6 +108,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSysHangupReason(integer $SysHangupReason) 设置<p>接通后系统挂断原因，枚举类似</p>
  * @method string getSysHangupReasonString() 获取<p>接通后系统挂断原因，文字描述信息</p>
  * @method void setSysHangupReasonString(string $SysHangupReasonString) 设置<p>接通后系统挂断原因，文字描述信息</p>
+ * @method integer getEndStatusV2() 获取<p>通话结束状态V2（灰度中）</p>
+ * @method void setEndStatusV2(integer $EndStatusV2) 设置<p>通话结束状态V2（灰度中）</p>
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -331,6 +333,11 @@ class TelCdrInfo extends AbstractModel
     public $SysHangupReasonString;
 
     /**
+     * @var integer <p>通话结束状态V2（灰度中）</p>
+     */
+    public $EndStatusV2;
+
+    /**
      * @param string $Caller <p>主叫号码</p>
      * @param string $Callee <p>被叫号码</p>
      * @param integer $Time <p>呼叫发起时间戳，Unix 时间戳</p>
@@ -375,6 +382,7 @@ class TelCdrInfo extends AbstractModel
      * @param string $AIAgentName <p>如果是智能体相关通话，这里是智能体名称</p>
      * @param integer $SysHangupReason <p>接通后系统挂断原因，枚举类似</p>
      * @param string $SysHangupReasonString <p>接通后系统挂断原因，文字描述信息</p>
+     * @param integer $EndStatusV2 <p>通话结束状态V2（灰度中）</p>
      */
     function __construct()
     {
@@ -580,6 +588,10 @@ class TelCdrInfo extends AbstractModel
 
         if (array_key_exists("SysHangupReasonString",$param) and $param["SysHangupReasonString"] !== null) {
             $this->SysHangupReasonString = $param["SysHangupReasonString"];
+        }
+
+        if (array_key_exists("EndStatusV2",$param) and $param["EndStatusV2"] !== null) {
+            $this->EndStatusV2 = $param["EndStatusV2"];
         }
     }
 }

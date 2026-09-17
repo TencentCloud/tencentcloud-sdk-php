@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMonitorDetail请求参数结构体
  *
- * @method integer getMonitorId() 获取监控器id
- * @method void setMonitorId(integer $MonitorId) 设置监控器id
+ * @method integer getMonitorId() 获取<p>监控器id</p>
+ * @method void setMonitorId(integer $MonitorId) 设置<p>监控器id</p>
  */
 class DescribeMonitorDetailRequest extends AbstractModel
 {
     /**
-     * @var integer 监控器id
+     * @var integer <p>监控器id</p>
      */
     public $MonitorId;
 
     /**
-     * @param integer $MonitorId 监控器id
+     * @param integer $MonitorId <p>监控器id</p>
      */
     function __construct()
     {

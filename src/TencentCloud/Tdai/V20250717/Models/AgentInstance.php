@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOfflineTime(string $OfflineTime) 设置<p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
  * @method string getProductName() 获取<p>商业化资源归属</p>
  * @method void setProductName(string $ProductName) 设置<p>商业化资源归属</p>
+ * @method array getCapabilities() 获取<p>具备能力</p>
+ * @method void setCapabilities(array $Capabilities) 设置<p>具备能力</p>
+ * @method boolean getDeploymentFree() 获取<p>是否是免部署实例</p>
+ * @method void setDeploymentFree(boolean $DeploymentFree) 设置<p>是否是免部署实例</p>
  */
 class AgentInstance extends AbstractModel
 {
@@ -185,6 +189,16 @@ class AgentInstance extends AbstractModel
     public $ProductName;
 
     /**
+     * @var array <p>具备能力</p>
+     */
+    public $Capabilities;
+
+    /**
+     * @var boolean <p>是否是免部署实例</p>
+     */
+    public $DeploymentFree;
+
+    /**
      * @param string $InstanceId <p>智能体实例ID</p>
      * @param string $InstanceName <p>智能体实例名称</p>
      * @param string $AgentId <p>智能体ID</p>
@@ -208,6 +222,8 @@ class AgentInstance extends AbstractModel
      * @param string $RoleName <p>实例关联的角色名称</p>
      * @param string $OfflineTime <p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
      * @param string $ProductName <p>商业化资源归属</p>
+     * @param array $Capabilities <p>具备能力</p>
+     * @param boolean $DeploymentFree <p>是否是免部署实例</p>
      */
     function __construct()
     {
@@ -324,6 +340,14 @@ class AgentInstance extends AbstractModel
 
         if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
             $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("Capabilities",$param) and $param["Capabilities"] !== null) {
+            $this->Capabilities = $param["Capabilities"];
+        }
+
+        if (array_key_exists("DeploymentFree",$param) and $param["DeploymentFree"] !== null) {
+            $this->DeploymentFree = $param["DeploymentFree"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setToken(string $Token) 设置<p>访问Token</p>
  * @method string getExpiresAt() 获取<p>过期时间</p>
  * @method void setExpiresAt(string $ExpiresAt) 设置<p>过期时间</p>
- * @method string getTrafficToken() 获取<p>非管控面（envd）的访问Token</p>
- * @method void setTrafficToken(string $TrafficToken) 设置<p>非管控面（envd）的访问Token</p>
+ * @method string getTrafficToken() 获取<p>除管控面envd端口(49983)以外端口的访问Token</p>
+ * @method void setTrafficToken(string $TrafficToken) 设置<p>除管控面envd端口(49983)以外端口的访问Token</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,7 +42,7 @@ class AcquireSandboxInstanceTokenResponse extends AbstractModel
     public $ExpiresAt;
 
     /**
-     * @var string <p>非管控面（envd）的访问Token</p>
+     * @var string <p>除管控面envd端口(49983)以外端口的访问Token</p>
      */
     public $TrafficToken;
 
@@ -54,7 +54,7 @@ class AcquireSandboxInstanceTokenResponse extends AbstractModel
     /**
      * @param string $Token <p>访问Token</p>
      * @param string $ExpiresAt <p>过期时间</p>
-     * @param string $TrafficToken <p>非管控面（envd）的访问Token</p>
+     * @param string $TrafficToken <p>除管控面envd端口(49983)以外端口的访问Token</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePartitionName(string $ResourcePartitionName) 设置<p>默认资源分区名称</p>
  * @method string getQueue() 获取<p>默认队列名称</p>
  * @method void setQueue(string $Queue) 设置<p>默认队列名称</p>
+ * @method string getQueueAlias() 获取<p>所属队列别名</p>
+ * @method void setQueueAlias(string $QueueAlias) 设置<p>所属队列别名</p>
  * @method string getGroupId() 获取<p>集群组Id</p>
  * @method void setGroupId(string $GroupId) 设置<p>集群组Id</p>
  * @method string getClusterId() 获取<p>集群id</p>
@@ -62,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobPackage(string $JobPackage) 设置<p>作业包URL</p>
  * @method string getJobPackageName() 获取<p>作业包名称</p>
  * @method void setJobPackageName(string $JobPackageName) 设置<p>作业包名称</p>
+ * @method string getJobPackageSource() 获取<p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
+ * @method void setJobPackageSource(string $JobPackageSource) 设置<p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
  * @method integer getPriority() 获取<p>优先级</p>
  * @method void setPriority(integer $Priority) 设置<p>优先级</p>
  * @method integer getAppId() 获取<p>应用ID</p>
@@ -70,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) 设置<p>创建者UIN</p>
  * @method string getSubAccountUin() 获取<p>子用户UIN</p>
  * @method void setSubAccountUin(string $SubAccountUin) 设置<p>子用户UIN</p>
+ * @method string getSubAccountName() 获取<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+ * @method void setSubAccountName(string $SubAccountName) 设置<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
  * @method integer getCreateTime() 获取<p>创建时间</p>
  * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
  * @method integer getUpdateTime() 获取<p>更新时间</p>
@@ -174,6 +180,11 @@ class JobSpec extends AbstractModel
     public $Queue;
 
     /**
+     * @var string <p>所属队列别名</p>
+     */
+    public $QueueAlias;
+
+    /**
      * @var string <p>集群组Id</p>
      */
     public $GroupId;
@@ -199,6 +210,11 @@ class JobSpec extends AbstractModel
     public $JobPackageName;
 
     /**
+     * @var string <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
+     */
+    public $JobPackageSource;
+
+    /**
      * @var integer <p>优先级</p>
      */
     public $Priority;
@@ -217,6 +233,11 @@ class JobSpec extends AbstractModel
      * @var string <p>子用户UIN</p>
      */
     public $SubAccountUin;
+
+    /**
+     * @var string <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public $SubAccountName;
 
     /**
      * @var integer <p>创建时间</p>
@@ -285,15 +306,18 @@ class JobSpec extends AbstractModel
      * @param string $ResourcePartitionId <p>默认资源分区ID</p>
      * @param string $ResourcePartitionName <p>默认资源分区名称</p>
      * @param string $Queue <p>默认队列名称</p>
+     * @param string $QueueAlias <p>所属队列别名</p>
      * @param string $GroupId <p>集群组Id</p>
      * @param string $ClusterId <p>集群id</p>
      * @param string $ClusterGroup <p>默认计算组名称</p>
      * @param string $JobPackage <p>作业包URL</p>
      * @param string $JobPackageName <p>作业包名称</p>
+     * @param string $JobPackageSource <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
      * @param integer $Priority <p>优先级</p>
      * @param integer $AppId <p>应用ID</p>
      * @param string $Uin <p>创建者UIN</p>
      * @param string $SubAccountUin <p>子用户UIN</p>
+     * @param string $SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
      * @param integer $CreateTime <p>创建时间</p>
      * @param integer $UpdateTime <p>更新时间</p>
      * @param integer $JobInstanceCount <p>该配置产生的作业实例数量</p>
@@ -382,6 +406,10 @@ class JobSpec extends AbstractModel
             $this->Queue = $param["Queue"];
         }
 
+        if (array_key_exists("QueueAlias",$param) and $param["QueueAlias"] !== null) {
+            $this->QueueAlias = $param["QueueAlias"];
+        }
+
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
         }
@@ -402,6 +430,10 @@ class JobSpec extends AbstractModel
             $this->JobPackageName = $param["JobPackageName"];
         }
 
+        if (array_key_exists("JobPackageSource",$param) and $param["JobPackageSource"] !== null) {
+            $this->JobPackageSource = $param["JobPackageSource"];
+        }
+
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
             $this->Priority = $param["Priority"];
         }
@@ -416,6 +448,10 @@ class JobSpec extends AbstractModel
 
         if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
             $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("SubAccountName",$param) and $param["SubAccountName"] !== null) {
+            $this->SubAccountName = $param["SubAccountName"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

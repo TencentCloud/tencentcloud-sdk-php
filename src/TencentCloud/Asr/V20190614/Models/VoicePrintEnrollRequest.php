@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置<p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
  * @method string getSpeakerNick() 获取<p>说话人昵称  不超过32字节</p>
  * @method void setSpeakerNick(string $SpeakerNick) 设置<p>说话人昵称  不超过32字节</p>
- * @method string getGroupId() 获取<p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p>
- * @method void setGroupId(string $GroupId) 设置<p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p>
+ * @method string getGroupId() 获取<p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p><p><strong>注意：</strong></p><ul><li><p>一个group最多可容纳20个说话人ID</p></li><li><p>group主要用在声纹1：N比对场景</p></li></ul>
+ * @method void setGroupId(string $GroupId) 设置<p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p><p><strong>注意：</strong></p><ul><li><p>一个group最多可容纳20个说话人ID</p></li><li><p>group主要用在声纹1：N比对场景</p></li></ul>
  * @method string getAudioUrl() 获取<p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
  * @method void setAudioUrl(string $AudioUrl) 设置<p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
  */
@@ -56,7 +56,7 @@ class VoicePrintEnrollRequest extends AbstractModel
     public $SpeakerNick;
 
     /**
-     * @var string <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p>
+     * @var string <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p><p><strong>注意：</strong></p><ul><li><p>一个group最多可容纳20个说话人ID</p></li><li><p>group主要用在声纹1：N比对场景</p></li></ul>
      */
     public $GroupId;
 
@@ -70,7 +70,7 @@ class VoicePrintEnrollRequest extends AbstractModel
      * @param integer $SampleRate <p>音频采样率，目前支持16000，单位：Hz，必填</p>
      * @param string $Data <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
      * @param string $SpeakerNick <p>说话人昵称  不超过32字节</p>
-     * @param string $GroupId <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p>
+     * @param string $GroupId <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p><p><strong>注意：</strong></p><ul><li><p>一个group最多可容纳20个说话人ID</p></li><li><p>group主要用在声纹1：N比对场景</p></li></ul>
      * @param string $AudioUrl <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
      */
     function __construct()

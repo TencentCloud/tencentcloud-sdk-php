@@ -20,126 +20,134 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型参数
  *
- * @method string getDeepThinking() 获取是否开启深度思考
- * @method void setDeepThinking(string $DeepThinking) 设置是否开启深度思考
- * @method float getFrequencyPenalty() 获取频率惩罚
+ * @method string getDeepThinking() 获取<p>是否开启深度思考</p>
+ * @method void setDeepThinking(string $DeepThinking) 设置<p>是否开启深度思考</p>
+ * @method float getFrequencyPenalty() 获取<p>频率惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrequencyPenalty(float $FrequencyPenalty) 设置频率惩罚
+ * @method void setFrequencyPenalty(float $FrequencyPenalty) 设置<p>频率惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxTokens() 获取最大输出长度
+ * @method integer getMaxTokens() 获取<p>最大输出长度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxTokens(integer $MaxTokens) 设置最大输出长度
+ * @method void setMaxTokens(integer $MaxTokens) 设置<p>最大输出长度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getPresencePenalty() 获取存在惩罚
+ * @method float getPresencePenalty() 获取<p>存在惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPresencePenalty(float $PresencePenalty) 设置存在惩罚
+ * @method void setPresencePenalty(float $PresencePenalty) 设置<p>存在惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReasoningEffort() 获取深度思考效果
- * @method void setReasoningEffort(string $ReasoningEffort) 设置深度思考效果
- * @method float getRepetitionPenalty() 获取重复惩罚
+ * @method string getReasoningEffort() 获取<p>深度思考效果</p>
+ * @method void setReasoningEffort(string $ReasoningEffort) 设置<p>深度思考效果</p>
+ * @method float getRepetitionPenalty() 获取<p>重复惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRepetitionPenalty(float $RepetitionPenalty) 设置重复惩罚
+ * @method void setRepetitionPenalty(float $RepetitionPenalty) 设置<p>重复惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReplyFormat() 获取输出格式（text、json_object）
- * @method void setReplyFormat(string $ReplyFormat) 设置输出格式（text、json_object）
- * @method integer getSeed() 获取seed 随机种子
+ * @method string getReplyFormat() 获取<p>输出格式（text、json_object）</p>
+ * @method void setReplyFormat(string $ReplyFormat) 设置<p>输出格式（text、json_object）</p>
+ * @method integer getSeed() 获取<p>seed 随机种子</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSeed(integer $Seed) 设置seed 随机种子
+ * @method void setSeed(integer $Seed) 设置<p>seed 随机种子</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getStopSequenceList() 获取停止序列
- * @method void setStopSequenceList(array $StopSequenceList) 设置停止序列
- * @method float getTemperature() 获取温度
+ * @method array getStopSequenceList() 获取<p>停止序列</p>
+ * @method void setStopSequenceList(array $StopSequenceList) 设置<p>停止序列</p>
+ * @method float getTemperature() 获取<p>温度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemperature(float $Temperature) 设置温度
+ * @method void setTemperature(float $Temperature) 设置<p>温度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getTopP() 获取top_p
+ * @method float getTopP() 获取<p>top_p</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopP(float $TopP) 设置top_p
+ * @method void setTopP(float $TopP) 设置<p>top_p</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTopK() 获取<p>top_k</p>
+ * @method void setTopK(integer $TopK) 设置<p>top_k</p>
  */
 class ModelParams extends AbstractModel
 {
     /**
-     * @var string 是否开启深度思考
+     * @var string <p>是否开启深度思考</p>
      */
     public $DeepThinking;
 
     /**
-     * @var float 频率惩罚
+     * @var float <p>频率惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrequencyPenalty;
 
     /**
-     * @var integer 最大输出长度
+     * @var integer <p>最大输出长度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxTokens;
 
     /**
-     * @var float 存在惩罚
+     * @var float <p>存在惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PresencePenalty;
 
     /**
-     * @var string 深度思考效果
+     * @var string <p>深度思考效果</p>
      */
     public $ReasoningEffort;
 
     /**
-     * @var float 重复惩罚
+     * @var float <p>重复惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepetitionPenalty;
 
     /**
-     * @var string 输出格式（text、json_object）
+     * @var string <p>输出格式（text、json_object）</p>
      */
     public $ReplyFormat;
 
     /**
-     * @var integer seed 随机种子
+     * @var integer <p>seed 随机种子</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Seed;
 
     /**
-     * @var array 停止序列
+     * @var array <p>停止序列</p>
      */
     public $StopSequenceList;
 
     /**
-     * @var float 温度
+     * @var float <p>温度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Temperature;
 
     /**
-     * @var float top_p
+     * @var float <p>top_p</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopP;
 
     /**
-     * @param string $DeepThinking 是否开启深度思考
-     * @param float $FrequencyPenalty 频率惩罚
+     * @var integer <p>top_k</p>
+     */
+    public $TopK;
+
+    /**
+     * @param string $DeepThinking <p>是否开启深度思考</p>
+     * @param float $FrequencyPenalty <p>频率惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxTokens 最大输出长度
+     * @param integer $MaxTokens <p>最大输出长度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $PresencePenalty 存在惩罚
+     * @param float $PresencePenalty <p>存在惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReasoningEffort 深度思考效果
-     * @param float $RepetitionPenalty 重复惩罚
+     * @param string $ReasoningEffort <p>深度思考效果</p>
+     * @param float $RepetitionPenalty <p>重复惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReplyFormat 输出格式（text、json_object）
-     * @param integer $Seed seed 随机种子
+     * @param string $ReplyFormat <p>输出格式（text、json_object）</p>
+     * @param integer $Seed <p>seed 随机种子</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $StopSequenceList 停止序列
-     * @param float $Temperature 温度
+     * @param array $StopSequenceList <p>停止序列</p>
+     * @param float $Temperature <p>温度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $TopP top_p
+     * @param float $TopP <p>top_p</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TopK <p>top_k</p>
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ class ModelParams extends AbstractModel
 
         if (array_key_exists("TopP",$param) and $param["TopP"] !== null) {
             $this->TopP = $param["TopP"];
+        }
+
+        if (array_key_exists("TopK",$param) and $param["TopK"] !== null) {
+            $this->TopK = $param["TopK"];
         }
     }
 }

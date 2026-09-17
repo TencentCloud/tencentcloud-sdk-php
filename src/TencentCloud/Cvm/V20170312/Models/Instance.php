@@ -112,6 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseType(string $LicenseType) 设置<p>实例的操作系统许可类型，默认为TencentCloud</p>
  * @method boolean getDisableApiTermination() 获取<p>实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。</p>
  * @method void setDisableApiTermination(boolean $DisableApiTermination) 设置<p>实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。</p>
+ * @method string getHostName() 获取<p>实例主机名。</p>
+ * @method void setHostName(string $HostName) 设置<p>实例主机名。</p>
  * @method string getDefaultLoginUser() 获取<p>默认登录用户。</p>
  * @method void setDefaultLoginUser(string $DefaultLoginUser) 设置<p>默认登录用户。</p>
  * @method integer getDefaultLoginPort() 获取<p>默认登录端口。</p>
@@ -337,6 +339,11 @@ class Instance extends AbstractModel
     public $DisableApiTermination;
 
     /**
+     * @var string <p>实例主机名。</p>
+     */
+    public $HostName;
+
+    /**
      * @var string <p>默认登录用户。</p>
      */
     public $DefaultLoginUser;
@@ -424,6 +431,7 @@ class Instance extends AbstractModel
      * @param GPUInfo $GPUInfo <p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
      * @param string $LicenseType <p>实例的操作系统许可类型，默认为TencentCloud</p>
      * @param boolean $DisableApiTermination <p>实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。</p>
+     * @param string $HostName <p>实例主机名。</p>
      * @param string $DefaultLoginUser <p>默认登录用户。</p>
      * @param integer $DefaultLoginPort <p>默认登录端口。</p>
      * @param string $LatestOperationErrorMsg <p>实例的最新操作错误信息。</p>
@@ -617,6 +625,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
             $this->DisableApiTermination = $param["DisableApiTermination"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
         }
 
         if (array_key_exists("DefaultLoginUser",$param) and $param["DefaultLoginUser"] !== null) {

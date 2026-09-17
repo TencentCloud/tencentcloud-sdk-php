@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点 ID。
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
- * @method string getPageId() 获取自定义页面 ID。
- * @method void setPageId(string $PageId) 设置自定义页面 ID。
+ * @method string getPageId() 获取自定义响应页面 ID。
+ * @method void setPageId(string $PageId) 设置自定义响应页面 ID。
  */
 class DeleteCustomErrorPageRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteCustomErrorPageRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 自定义页面 ID。
+     * @var string 自定义响应页面 ID。
      */
     public $PageId;
 
     /**
      * @param string $ZoneId 站点 ID。
-     * @param string $PageId 自定义页面 ID。
+     * @param string $PageId 自定义响应页面 ID。
      */
     function __construct()
     {

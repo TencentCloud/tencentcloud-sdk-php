@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVodDomainConfig请求参数结构体
  *
- * @method string getDomain() 获取域名。
- * @method void setDomain(string $Domain) 设置域名。
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method RefererAuthPolicy getRefererAuthPolicy() 获取[Referer 防盗链](/document/product/266/14046)规则。
- * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) 设置[Referer 防盗链](/document/product/266/14046)规则。
- * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() 获取[Key 防盗链](/document/product/266/14047)规则。
- * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) 设置[Key 防盗链](/document/product/266/14047)规则。
- * @method DomainQUICConfig getQUICConfig() 获取QUIC 配置。
- * @method void setQUICConfig(DomainQUICConfig $QUICConfig) 设置QUIC 配置。
- * @method IPFilterPolicy getIPFilterPolicy() 获取IP 访问限制规则。
- * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) 设置IP 访问限制规则。
+ * @method string getDomain() 获取<p>域名。</p>
+ * @method void setDomain(string $Domain) 设置<p>域名。</p>
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method RefererAuthPolicy getRefererAuthPolicy() 获取<p><a href="/document/product/266/14046">Referer 防盗链</a>规则。</p>
+ * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) 设置<p><a href="/document/product/266/14046">Referer 防盗链</a>规则。</p>
+ * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() 获取<p><a href="/document/product/266/14047">Key 防盗链</a>规则。</p>
+ * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) 设置<p><a href="/document/product/266/14047">Key 防盗链</a>规则。</p>
+ * @method DomainQUICConfig getQUICConfig() 获取<p>QUIC 配置。</p>
+ * @method void setQUICConfig(DomainQUICConfig $QUICConfig) 设置<p>QUIC 配置。</p>
+ * @method IPFilterPolicy getIPFilterPolicy() 获取<p>IP 访问限制规则。</p>
+ * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) 设置<p>IP 访问限制规则。</p>
  */
 class ModifyVodDomainConfigRequest extends AbstractModel
 {
     /**
-     * @var string 域名。
+     * @var string <p>域名。</p>
      */
     public $Domain;
 
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var RefererAuthPolicy [Referer 防盗链](/document/product/266/14046)规则。
+     * @var RefererAuthPolicy <p><a href="/document/product/266/14046">Referer 防盗链</a>规则。</p>
      */
     public $RefererAuthPolicy;
 
     /**
-     * @var UrlSignatureAuthPolicy [Key 防盗链](/document/product/266/14047)规则。
+     * @var UrlSignatureAuthPolicy <p><a href="/document/product/266/14047">Key 防盗链</a>规则。</p>
      */
     public $UrlSignatureAuthPolicy;
 
     /**
-     * @var DomainQUICConfig QUIC 配置。
+     * @var DomainQUICConfig <p>QUIC 配置。</p>
      */
     public $QUICConfig;
 
     /**
-     * @var IPFilterPolicy IP 访问限制规则。
+     * @var IPFilterPolicy <p>IP 访问限制规则。</p>
      */
     public $IPFilterPolicy;
 
     /**
-     * @param string $Domain 域名。
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param RefererAuthPolicy $RefererAuthPolicy [Referer 防盗链](/document/product/266/14046)规则。
-     * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy [Key 防盗链](/document/product/266/14047)规则。
-     * @param DomainQUICConfig $QUICConfig QUIC 配置。
-     * @param IPFilterPolicy $IPFilterPolicy IP 访问限制规则。
+     * @param string $Domain <p>域名。</p>
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param RefererAuthPolicy $RefererAuthPolicy <p><a href="/document/product/266/14046">Referer 防盗链</a>规则。</p>
+     * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy <p><a href="/document/product/266/14047">Key 防盗链</a>规则。</p>
+     * @param DomainQUICConfig $QUICConfig <p>QUIC 配置。</p>
+     * @param IPFilterPolicy $IPFilterPolicy <p>IP 访问限制规则。</p>
      */
     function __construct()
     {

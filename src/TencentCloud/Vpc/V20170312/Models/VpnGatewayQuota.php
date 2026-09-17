@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VPN网关配额对象
  *
- * @method integer getBandwidth() 获取带宽配额，单位：Mbps。
- * @method void setBandwidth(integer $Bandwidth) 设置带宽配额，单位：Mbps。
- * @method string getCname() 获取配额中文名称
- * @method void setCname(string $Cname) 设置配额中文名称
- * @method string getName() 获取配额英文名称
- * @method void setName(string $Name) 设置配额英文名称
+ * @method integer getBandwidth() 获取<p>带宽配额，单位：Mbps。</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>带宽配额，单位：Mbps。</p>
+ * @method string getCname() 获取<p>配额中文名称</p>
+ * @method void setCname(string $Cname) 设置<p>配额中文名称</p>
+ * @method string getName() 获取<p>配额英文名称</p>
+ * @method void setName(string $Name) 设置<p>配额英文名称</p>
+ * @method array getMaxConnection() 获取<p>SSL 连接数可选配额</p>
+ * @method void setMaxConnection(array $MaxConnection) 设置<p>SSL 连接数可选配额</p>
  */
 class VpnGatewayQuota extends AbstractModel
 {
     /**
-     * @var integer 带宽配额，单位：Mbps。
+     * @var integer <p>带宽配额，单位：Mbps。</p>
      */
     public $Bandwidth;
 
     /**
-     * @var string 配额中文名称
+     * @var string <p>配额中文名称</p>
      */
     public $Cname;
 
     /**
-     * @var string 配额英文名称
+     * @var string <p>配额英文名称</p>
      */
     public $Name;
 
     /**
-     * @param integer $Bandwidth 带宽配额，单位：Mbps。
-     * @param string $Cname 配额中文名称
-     * @param string $Name 配额英文名称
+     * @var array <p>SSL 连接数可选配额</p>
+     */
+    public $MaxConnection;
+
+    /**
+     * @param integer $Bandwidth <p>带宽配额，单位：Mbps。</p>
+     * @param string $Cname <p>配额中文名称</p>
+     * @param string $Name <p>配额英文名称</p>
+     * @param array $MaxConnection <p>SSL 连接数可选配额</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class VpnGatewayQuota extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
+            $this->MaxConnection = $param["MaxConnection"];
         }
     }
 }

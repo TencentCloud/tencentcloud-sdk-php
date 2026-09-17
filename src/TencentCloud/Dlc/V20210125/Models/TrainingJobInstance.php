@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePartitionName(string $ResourcePartitionName) 设置<p>资源分区名称</p>
  * @method string getQueue() 获取<p>队列名称</p>
  * @method void setQueue(string $Queue) 设置<p>队列名称</p>
+ * @method string getQueueAlias() 获取<p>所属队列别名</p>
+ * @method void setQueueAlias(string $QueueAlias) 设置<p>所属队列别名</p>
  * @method string getRuntimeEnv() 获取<p>提交时 runtime_env JSON</p>
  * @method void setRuntimeEnv(string $RuntimeEnv) 设置<p>提交时 runtime_env JSON</p>
  * @method string getEntrypoint() 获取<p>提交时 entrypoint</p>
@@ -158,6 +160,11 @@ class TrainingJobInstance extends AbstractModel
     public $Queue;
 
     /**
+     * @var string <p>所属队列别名</p>
+     */
+    public $QueueAlias;
+
+    /**
      * @var string <p>提交时 runtime_env JSON</p>
      */
     public $RuntimeEnv;
@@ -262,6 +269,7 @@ class TrainingJobInstance extends AbstractModel
      * @param string $ResourcePartitionId <p>资源分区 ID</p>
      * @param string $ResourcePartitionName <p>资源分区名称</p>
      * @param string $Queue <p>队列名称</p>
+     * @param string $QueueAlias <p>所属队列别名</p>
      * @param string $RuntimeEnv <p>提交时 runtime_env JSON</p>
      * @param string $Entrypoint <p>提交时 entrypoint</p>
      * @param string $Image <p>提交时镜像</p>
@@ -348,6 +356,10 @@ class TrainingJobInstance extends AbstractModel
 
         if (array_key_exists("Queue",$param) and $param["Queue"] !== null) {
             $this->Queue = $param["Queue"];
+        }
+
+        if (array_key_exists("QueueAlias",$param) and $param["QueueAlias"] !== null) {
+            $this->QueueAlias = $param["QueueAlias"];
         }
 
         if (array_key_exists("RuntimeEnv",$param) and $param["RuntimeEnv"] !== null) {

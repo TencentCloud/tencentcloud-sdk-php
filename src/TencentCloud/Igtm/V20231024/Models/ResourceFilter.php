@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 查询时过滤条件。
  *
  * @method string getName() 获取过滤字段名，支持的列表如下：
-- type：主资源类型，CDN。
-- instanceId：IGTM实例ID。此为必传参数，未传将导致接口查询失败。
+- MonitorName：监控器名称。
+- MonitorId：监控器名称
  * @method void setName(string $Name) 设置过滤字段名，支持的列表如下：
-- type：主资源类型，CDN。
-- instanceId：IGTM实例ID。此为必传参数，未传将导致接口查询失败。
+- MonitorName：监控器名称。
+- MonitorId：监控器名称
  * @method array getValue() 获取过滤字段值。
 
  * @method void setValue(array $Value) 设置过滤字段值。
@@ -39,8 +39,8 @@ class ResourceFilter extends AbstractModel
 {
     /**
      * @var string 过滤字段名，支持的列表如下：
-- type：主资源类型，CDN。
-- instanceId：IGTM实例ID。此为必传参数，未传将导致接口查询失败。
+- MonitorName：监控器名称。
+- MonitorId：监控器名称
      */
     public $Name;
 
@@ -58,8 +58,8 @@ class ResourceFilter extends AbstractModel
 
     /**
      * @param string $Name 过滤字段名，支持的列表如下：
-- type：主资源类型，CDN。
-- instanceId：IGTM实例ID。此为必传参数，未传将导致接口查询失败。
+- MonitorName：监控器名称。
+- MonitorId：监控器名称
      * @param array $Value 过滤字段值。
 
      * @param boolean $Fuzzy 是否启用模糊查询，仅支持过滤字段名为domain。

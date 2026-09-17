@@ -20,49 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 流程活动详情
  *
- * @method string getActivityCode() 获取<p>活动编码</p>
- * @method void setActivityCode(string $ActivityCode) 设置<p>活动编码</p>
- * @method integer getStatus() 获取<p>活动状态</p>
- * @method void setStatus(integer $Status) 设置<p>活动状态</p>
- * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method string getActivityCode() 获取<p>活动编码；国际站返回英文编码，国内站返回中文描述</p>
+ * @method void setActivityCode(string $ActivityCode) 设置<p>活动编码；国际站返回英文编码，国内站返回中文描述</p>
+ * @method integer getStatus() 获取<p>活动状态：1-运行中，2-已完成，-2-失败</p>
+ * @method void setStatus(integer $Status) 设置<p>活动状态：1-运行中，2-已完成，-2-失败</p>
+ * @method string getCreateTime() 获取<p>活动创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>活动创建时间</p>
+ * @method integer getDuration() 获取<p>耗时（秒），活动未完成时省略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDuration() 获取<p>耗时（秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDuration(integer $Duration) 设置<p>耗时（秒）</p>
+ * @method void setDuration(integer $Duration) 设置<p>耗时（秒），活动未完成时省略</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowActivityDetail extends AbstractModel
 {
     /**
-     * @var string <p>活动编码</p>
+     * @var string <p>活动编码；国际站返回英文编码，国内站返回中文描述</p>
      */
     public $ActivityCode;
 
     /**
-     * @var integer <p>活动状态</p>
+     * @var integer <p>活动状态：1-运行中，2-已完成，-2-失败</p>
      */
     public $Status;
 
     /**
-     * @var string <p>创建时间</p>
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string <p>活动创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer <p>耗时（秒）</p>
+     * @var integer <p>耗时（秒），活动未完成时省略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
-     * @param string $ActivityCode <p>活动编码</p>
-     * @param integer $Status <p>活动状态</p>
-     * @param string $CreateTime <p>创建时间</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Duration <p>耗时（秒）</p>
+     * @param string $ActivityCode <p>活动编码；国际站返回英文编码，国内站返回中文描述</p>
+     * @param integer $Status <p>活动状态：1-运行中，2-已完成，-2-失败</p>
+     * @param string $CreateTime <p>活动创建时间</p>
+     * @param integer $Duration <p>耗时（秒），活动未完成时省略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

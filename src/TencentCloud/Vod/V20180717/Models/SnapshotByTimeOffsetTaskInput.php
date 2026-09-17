@@ -20,50 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 对视频按指定时间点截图任务输入参数类型
  *
- * @method integer getDefinition() 获取指定时间点截图模板 ID。
- * @method void setDefinition(integer $Definition) 设置指定时间点截图模板 ID。
- * @method array getExtTimeOffsetSet() 获取截图时间点列表，时间点支持 s、% 两种格式：
-<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
-<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
- * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) 设置截图时间点列表，时间点支持 s、% 两种格式：
-<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
-<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
- * @method array getTimeOffsetSet() 获取截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
- * @method void setTimeOffsetSet(array $TimeOffsetSet) 设置截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
- * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
- * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+ * @method integer getDefinition() 获取<p>指定时间点截图模板 ID。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>指定时间点截图模板 ID。</p>
+ * @method array getExtTimeOffsetSet() 获取<p>截图时间点列表，时间点支持 s、% 两种格式：</p><li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li><li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+ * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) 设置<p>截图时间点列表，时间点支持 s、% 两种格式：</p><li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li><li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+ * @method array getTimeOffsetSet() 获取<p>截图时间点列表，单位为<font color="red">毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。</p>
+ * @method void setTimeOffsetSet(array $TimeOffsetSet) 设置<p>截图时间点列表，单位为<font color="red">毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。</p>
+ * @method array getWatermarkSet() 获取<p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
+ * @method void setWatermarkSet(array $WatermarkSet) 设置<p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
  */
 class SnapshotByTimeOffsetTaskInput extends AbstractModel
 {
     /**
-     * @var integer 指定时间点截图模板 ID。
+     * @var integer <p>指定时间点截图模板 ID。</p>
      */
     public $Definition;
 
     /**
-     * @var array 截图时间点列表，时间点支持 s、% 两种格式：
-<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
-<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+     * @var array <p>截图时间点列表，时间点支持 s、% 两种格式：</p><li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li><li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
      */
     public $ExtTimeOffsetSet;
 
     /**
-     * @var array 截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
+     * @var array <p>截图时间点列表，单位为<font color="red">毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。</p>
      */
     public $TimeOffsetSet;
 
     /**
-     * @var array 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * @var array <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
      */
     public $WatermarkSet;
 
     /**
-     * @param integer $Definition 指定时间点截图模板 ID。
-     * @param array $ExtTimeOffsetSet 截图时间点列表，时间点支持 s、% 两种格式：
-<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
-<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
-     * @param array $TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
-     * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * @param integer $Definition <p>指定时间点截图模板 ID。</p>
+     * @param array $ExtTimeOffsetSet <p>截图时间点列表，时间点支持 s、% 两种格式：</p><li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li><li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+     * @param array $TimeOffsetSet <p>截图时间点列表，单位为<font color="red">毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。</p>
+     * @param array $WatermarkSet <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
      */
     function __construct()
     {

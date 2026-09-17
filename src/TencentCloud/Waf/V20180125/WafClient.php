@@ -36,6 +36,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\AddSpartaProtectionResponse AddSpartaProtection(Models\AddSpartaProtectionRequest $req) 添加SaaS型WAF防护域名
  * @method Models\BatchOperateUserSignatureRulesResponse BatchOperateUserSignatureRules(Models\BatchOperateUserSignatureRulesRequest $req) 批量操作tiga子规则
  * @method Models\CreateAccessExportResponse CreateAccessExport(Models\CreateAccessExportRequest $req) 本接口用于创建访问日志导出
+ * @method Models\CreateAndUpdateBatchCCRuleResponse CreateAndUpdateBatchCCRule(Models\CreateAndUpdateBatchCCRuleRequest $req) 批量cc规则配置接口
  * @method Models\CreateAreaBanRuleResponse CreateAreaBanRule(Models\CreateAreaBanRuleRequest $req) 添加（编辑）地域封禁中的地域信息
  * @method Models\CreateBatchIpAccessControlResponse CreateBatchIpAccessControl(Models\CreateBatchIpAccessControlRequest $req) 批量IP黑白名单新增接口
  * @method Models\CreateDealsResponse CreateDeals(Models\CreateDealsRequest $req) 计费资源购买、续费下单接口

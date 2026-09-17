@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取<p>知识库名称</p>
  * @method void setName(string $Name) 设置<p>知识库名称</p>
+ * @method KBPermission getPermission() 获取<p>操作权限</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPermission(KBPermission $Permission) 设置<p>操作权限</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProcessingFlagList() 获取<p>处理中状态列表</p>
  * @method void setProcessingFlagList(array $ProcessingFlagList) 设置<p>处理中状态列表</p>
  * @method integer getSharedSubType() 获取<p>共享子类型：1=普通，2=公众号<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARED_KB_SUB_TYPE_UNKNOWN</td><td>0</td><td></td></tr><tr><td>SHARED_KB_SUB_TYPE_NORMAL</td><td>1</td><td>普通</td></tr><tr><td>SHARED_KB_SUB_TYPE_PUBLIC_ACCOUNT</td><td>2</td><td>公众号</td></tr></tbody></table></p>
@@ -106,6 +110,12 @@ class KBSummary extends AbstractModel
     public $Name;
 
     /**
+     * @var KBPermission <p>操作权限</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Permission;
+
+    /**
      * @var array <p>处理中状态列表</p>
      */
     public $ProcessingFlagList;
@@ -133,6 +143,8 @@ class KBSummary extends AbstractModel
      * @param Operator $LatestOperator <p>最后操作人，仅共享知识库返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name <p>知识库名称</p>
+     * @param KBPermission $Permission <p>操作权限</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProcessingFlagList <p>处理中状态列表</p>
      * @param integer $SharedSubType <p>共享子类型：1=普通，2=公众号<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARED_KB_SUB_TYPE_UNKNOWN</td><td>0</td><td></td></tr><tr><td>SHARED_KB_SUB_TYPE_NORMAL</td><td>1</td><td>普通</td></tr><tr><td>SHARED_KB_SUB_TYPE_PUBLIC_ACCOUNT</td><td>2</td><td>公众号</td></tr></tbody></table></p>
      * @param string $UpdateTime <p>更新时间（Unix 秒）</p>
@@ -195,6 +207,11 @@ class KBSummary extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Permission",$param) and $param["Permission"] !== null) {
+            $this->Permission = new KBPermission();
+            $this->Permission->deserialize($param["Permission"]);
         }
 
         if (array_key_exists("ProcessingFlagList",$param) and $param["ProcessingFlagList"] !== null) {

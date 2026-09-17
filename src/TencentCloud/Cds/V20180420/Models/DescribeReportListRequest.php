@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReportList请求参数结构体
  *
- * @method integer getLimit() 获取限制数目
- * @method void setLimit(integer $Limit) 设置限制数目
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method string getName() 获取报告名称
- * @method void setName(string $Name) 设置报告名称
- * @method integer getStartTime() 获取开始时间
- * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
- * @method integer getReportType() 获取报告类型
- * @method void setReportType(integer $ReportType) 设置报告类型
- * @method integer getReportStatus() 获取报告状态
- * @method void setReportStatus(integer $ReportStatus) 设置报告状态
- * @method integer getTemplateId() 获取报表模版id
- * @method void setTemplateId(integer $TemplateId) 设置报表模版id
- * @method string getField() 获取需要排序的字段
- * @method void setField(string $Field) 设置需要排序的字段
- * @method string getSort() 获取排序顺序 asc desc
- * @method void setSort(string $Sort) 设置排序顺序 asc desc
- * @method integer getCntDay() 获取时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
- * @method void setCntDay(integer $CntDay) 设置时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+ * @method integer getLimit() 获取<p>限制数目</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制数目</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method string getName() 获取<p>报告名称</p>
+ * @method void setName(string $Name) 设置<p>报告名称</p>
+ * @method integer getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间</p>
+ * @method integer getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间</p>
+ * @method integer getReportType() 获取<p>报告类型</p>
+ * @method void setReportType(integer $ReportType) 设置<p>报告类型</p>
+ * @method integer getReportStatus() 获取<p>报告状态</p>
+ * @method void setReportStatus(integer $ReportStatus) 设置<p>报告状态</p>
+ * @method integer getTemplateId() 获取<p>报表模板id</p>
+ * @method void setTemplateId(integer $TemplateId) 设置<p>报表模板id</p>
+ * @method string getField() 获取<p>需要排序的字段</p>
+ * @method void setField(string $Field) 设置<p>需要排序的字段</p>
+ * @method string getSort() 获取<p>排序顺序 asc desc</p>
+ * @method void setSort(string $Sort) 设置<p>排序顺序 asc desc</p>
+ * @method integer getCntDay() 获取<p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
+ * @method void setCntDay(integer $CntDay) 设置<p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
  */
 class DescribeReportListRequest extends AbstractModel
 {
     /**
-     * @var integer 限制数目
+     * @var integer <p>限制数目</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var string 报告名称
+     * @var string <p>报告名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间
+     * @var integer <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 报告类型
+     * @var integer <p>报告类型</p>
      */
     public $ReportType;
 
     /**
-     * @var integer 报告状态
+     * @var integer <p>报告状态</p>
      */
     public $ReportStatus;
 
     /**
-     * @var integer 报表模版id
+     * @var integer <p>报表模板id</p>
      */
     public $TemplateId;
 
     /**
-     * @var string 需要排序的字段
+     * @var string <p>需要排序的字段</p>
      */
     public $Field;
 
     /**
-     * @var string 排序顺序 asc desc
+     * @var string <p>排序顺序 asc desc</p>
      */
     public $Sort;
 
     /**
-     * @var integer 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+     * @var integer <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
      */
     public $CntDay;
 
     /**
-     * @param integer $Limit 限制数目
-     * @param integer $Offset 偏移量
-     * @param string $Name 报告名称
-     * @param integer $StartTime 开始时间
-     * @param integer $EndTime 结束时间
-     * @param integer $ReportType 报告类型
-     * @param integer $ReportStatus 报告状态
-     * @param integer $TemplateId 报表模版id
-     * @param string $Field 需要排序的字段
-     * @param string $Sort 排序顺序 asc desc
-     * @param integer $CntDay 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+     * @param integer $Limit <p>限制数目</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param string $Name <p>报告名称</p>
+     * @param integer $StartTime <p>开始时间</p>
+     * @param integer $EndTime <p>结束时间</p>
+     * @param integer $ReportType <p>报告类型</p>
+     * @param integer $ReportStatus <p>报告状态</p>
+     * @param integer $TemplateId <p>报表模板id</p>
+     * @param string $Field <p>需要排序的字段</p>
+     * @param string $Sort <p>排序顺序 asc desc</p>
+     * @param integer $CntDay <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
      */
     function __construct()
     {

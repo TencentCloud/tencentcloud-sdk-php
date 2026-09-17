@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpnGatewaySslClient返回参数结构体
  *
- * @method integer getTaskId() 获取异步任务ID。
- * @method void setTaskId(integer $TaskId) 设置异步任务ID。
- * @method string getSslVpnClientId() 获取SSL-VPN client 唯一ID
- * @method void setSslVpnClientId(string $SslVpnClientId) 设置SSL-VPN client 唯一ID
+ * @method integer getTaskId() 获取<p>异步任务ID。</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>异步任务ID。</p>
+ * @method string getSslVpnClientId() 获取<p>SSL VPN客户端唯一ID</p>
+ * @method void setSslVpnClientId(string $SslVpnClientId) 设置<p>SSL VPN客户端唯一ID</p>
+ * @method array getSslVpnClientIds() 获取<p>SSL VPN客户端唯一ID</p><p>仅批量场景返回</p>
+ * @method void setSslVpnClientIds(array $SslVpnClientIds) 设置<p>SSL VPN客户端唯一ID</p><p>仅批量场景返回</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateVpnGatewaySslClientResponse extends AbstractModel
 {
     /**
-     * @var integer 异步任务ID。
+     * @var integer <p>异步任务ID。</p>
      */
     public $TaskId;
 
     /**
-     * @var string SSL-VPN client 唯一ID
+     * @var string <p>SSL VPN客户端唯一ID</p>
      */
     public $SslVpnClientId;
+
+    /**
+     * @var array <p>SSL VPN客户端唯一ID</p><p>仅批量场景返回</p>
+     */
+    public $SslVpnClientIds;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class CreateVpnGatewaySslClientResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId 异步任务ID。
-     * @param string $SslVpnClientId SSL-VPN client 唯一ID
+     * @param integer $TaskId <p>异步任务ID。</p>
+     * @param string $SslVpnClientId <p>SSL VPN客户端唯一ID</p>
+     * @param array $SslVpnClientIds <p>SSL VPN客户端唯一ID</p><p>仅批量场景返回</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class CreateVpnGatewaySslClientResponse extends AbstractModel
 
         if (array_key_exists("SslVpnClientId",$param) and $param["SslVpnClientId"] !== null) {
             $this->SslVpnClientId = $param["SslVpnClientId"];
+        }
+
+        if (array_key_exists("SslVpnClientIds",$param) and $param["SslVpnClientIds"] !== null) {
+            $this->SslVpnClientIds = $param["SslVpnClientIds"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

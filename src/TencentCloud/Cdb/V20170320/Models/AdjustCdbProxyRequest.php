@@ -20,78 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AdjustCdbProxy请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
- * @method string getProxyGroupId() 获取代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method array getProxyNodeCustom() 获取节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
-示例中参数说明：
-NodeCount：节点个数
-Region：节点地域
-Zone：节点可用区
-Cpu：单个代理节点核数（单位：核）
-Mem：单个代理节点内存数（单位：MB）
- * @method void setProxyNodeCustom(array $ProxyNodeCustom) 设置节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
-示例中参数说明：
-NodeCount：节点个数
-Region：节点地域
-Zone：节点可用区
-Cpu：单个代理节点核数（单位：核）
-Mem：单个代理节点内存数（单位：MB）
- * @method string getReloadBalance() 获取重新负载均衡：auto(自动),manual(手动)
- * @method void setReloadBalance(string $ReloadBalance) 设置重新负载均衡：auto(自动),manual(手动)
- * @method string getUpgradeTime() 获取升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
- * @method void setUpgradeTime(string $UpgradeTime) 设置升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
+ * @method string getInstanceId() 获取<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+ * @method string getProxyGroupId() 获取<p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置<p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+ * @method array getProxyNodeCustom() 获取<p>节点规格配置<br>备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。<br>示例中参数说明：<br>NodeCount：节点个数<br>Region：节点地域<br>Zone：节点可用区<br>Cpu：单个代理节点核数（单位：核）<br>Mem：单个代理节点内存数（单位：MB）</p>
+ * @method void setProxyNodeCustom(array $ProxyNodeCustom) 设置<p>节点规格配置<br>备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。<br>示例中参数说明：<br>NodeCount：节点个数<br>Region：节点地域<br>Zone：节点可用区<br>Cpu：单个代理节点核数（单位：核）<br>Mem：单个代理节点内存数（单位：MB）</p>
+ * @method string getReloadBalance() 获取<p>重新负载均衡：auto(自动),manual(手动)</p>
+ * @method void setReloadBalance(string $ReloadBalance) 设置<p>重新负载均衡：auto(自动),manual(手动)</p>
+ * @method string getUpgradeTime() 获取<p>升级切换时间。</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 维护时间内</li><li>rollUpgrade： 滚动升级</li></ul>
+ * @method void setUpgradeTime(string $UpgradeTime) 设置<p>升级切换时间。</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 维护时间内</li><li>rollUpgrade： 滚动升级</li></ul>
+ * @method integer getRollUpgradeWaitingTime() 获取<p>滚动升级或平滑变配等待时间</p><p>取值范围：[0, 3600]</p><p>单位：秒</p>
+ * @method void setRollUpgradeWaitingTime(integer $RollUpgradeWaitingTime) 设置<p>滚动升级或平滑变配等待时间</p><p>取值范围：[0, 3600]</p><p>单位：秒</p>
  */
 class AdjustCdbProxyRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @var string <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @var string <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var array 节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
-示例中参数说明：
-NodeCount：节点个数
-Region：节点地域
-Zone：节点可用区
-Cpu：单个代理节点核数（单位：核）
-Mem：单个代理节点内存数（单位：MB）
+     * @var array <p>节点规格配置<br>备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。<br>示例中参数说明：<br>NodeCount：节点个数<br>Region：节点地域<br>Zone：节点可用区<br>Cpu：单个代理节点核数（单位：核）<br>Mem：单个代理节点内存数（单位：MB）</p>
      */
     public $ProxyNodeCustom;
 
     /**
-     * @var string 重新负载均衡：auto(自动),manual(手动)
+     * @var string <p>重新负载均衡：auto(自动),manual(手动)</p>
      */
     public $ReloadBalance;
 
     /**
-     * @var string 升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
+     * @var string <p>升级切换时间。</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 维护时间内</li><li>rollUpgrade： 滚动升级</li></ul>
      */
     public $UpgradeTime;
 
     /**
-     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-     * @param string $ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param array $ProxyNodeCustom 节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
-示例中参数说明：
-NodeCount：节点个数
-Region：节点地域
-Zone：节点可用区
-Cpu：单个代理节点核数（单位：核）
-Mem：单个代理节点内存数（单位：MB）
-     * @param string $ReloadBalance 重新负载均衡：auto(自动),manual(手动)
-     * @param string $UpgradeTime 升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
+     * @var integer <p>滚动升级或平滑变配等待时间</p><p>取值范围：[0, 3600]</p><p>单位：秒</p>
+     */
+    public $RollUpgradeWaitingTime;
+
+    /**
+     * @param string $InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+     * @param string $ProxyGroupId <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+     * @param array $ProxyNodeCustom <p>节点规格配置<br>备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。<br>示例中参数说明：<br>NodeCount：节点个数<br>Region：节点地域<br>Zone：节点可用区<br>Cpu：单个代理节点核数（单位：核）<br>Mem：单个代理节点内存数（单位：MB）</p>
+     * @param string $ReloadBalance <p>重新负载均衡：auto(自动),manual(手动)</p>
+     * @param string $UpgradeTime <p>升级切换时间。</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 维护时间内</li><li>rollUpgrade： 滚动升级</li></ul>
+     * @param integer $RollUpgradeWaitingTime <p>滚动升级或平滑变配等待时间</p><p>取值范围：[0, 3600]</p><p>单位：秒</p>
      */
     function __construct()
     {
@@ -129,6 +109,10 @@ Mem：单个代理节点内存数（单位：MB）
 
         if (array_key_exists("UpgradeTime",$param) and $param["UpgradeTime"] !== null) {
             $this->UpgradeTime = $param["UpgradeTime"];
+        }
+
+        if (array_key_exists("RollUpgradeWaitingTime",$param) and $param["RollUpgradeWaitingTime"] !== null) {
+            $this->RollUpgradeWaitingTime = $param["RollUpgradeWaitingTime"];
         }
     }
 }

@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 多视角图生 3D 场景下，MultiViewImages 数组中的单个视角。
  *
  * @method string getViewType() 获取<p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViewType(string $ViewType) 设置<p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getViewImageUrl() 获取<p>图片 URL（http / https）</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViewImageUrl(string $ViewImageUrl) 设置<p>图片 URL（http / https）</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ViewImage extends AbstractModel
 {
     /**
      * @var string <p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ViewType;
 
     /**
      * @var string <p>图片 URL（http / https）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ViewImageUrl;
 
     /**
      * @param string $ViewType <p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ViewImageUrl <p>图片 URL（http / https）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

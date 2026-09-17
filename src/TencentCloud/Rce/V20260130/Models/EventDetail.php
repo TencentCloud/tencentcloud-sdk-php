@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClaimRedPacket(ClaimRedPacketEvent $ClaimRedPacket) 设置<p>领红包</p>
  * @method BrowseEvent getBrowse() 获取<p>浏览</p>
  * @method void setBrowse(BrowseEvent $Browse) 设置<p>浏览</p>
+ * @method ChatEvent getChat() 获取<p>聊天消息</p>
+ * @method void setChat(ChatEvent $Chat) 设置<p>聊天消息</p>
+ * @method ModifyRoleEvent getModifyRole() 获取<p>编辑角色资料</p>
+ * @method void setModifyRole(ModifyRoleEvent $ModifyRole) 设置<p>编辑角色资料</p>
+ * @method AddFriendEvent getAddFriend() 获取<p>添加好友</p>
+ * @method void setAddFriend(AddFriendEvent $AddFriend) 设置<p>添加好友</p>
+ * @method ModifyGuildEvent getModifyGuild() 获取<p>编辑公会资料</p>
+ * @method void setModifyGuild(ModifyGuildEvent $ModifyGuild) 设置<p>编辑公会资料</p>
  */
 class EventDetail extends AbstractModel
 {
@@ -164,6 +172,26 @@ class EventDetail extends AbstractModel
     public $Browse;
 
     /**
+     * @var ChatEvent <p>聊天消息</p>
+     */
+    public $Chat;
+
+    /**
+     * @var ModifyRoleEvent <p>编辑角色资料</p>
+     */
+    public $ModifyRole;
+
+    /**
+     * @var AddFriendEvent <p>添加好友</p>
+     */
+    public $AddFriend;
+
+    /**
+     * @var ModifyGuildEvent <p>编辑公会资料</p>
+     */
+    public $ModifyGuild;
+
+    /**
      * @param LoginEvent $Login <p>登录</p>
      * @param RegisterEvent $Register <p>注册（变更用户信息）</p>
      * @param CreateOrderEvent $CreateOrder <p>创建订单</p>
@@ -184,6 +212,10 @@ class EventDetail extends AbstractModel
      * @param InvitationEvent $Invitation <p>邀请</p>
      * @param ClaimRedPacketEvent $ClaimRedPacket <p>领红包</p>
      * @param BrowseEvent $Browse <p>浏览</p>
+     * @param ChatEvent $Chat <p>聊天消息</p>
+     * @param ModifyRoleEvent $ModifyRole <p>编辑角色资料</p>
+     * @param AddFriendEvent $AddFriend <p>添加好友</p>
+     * @param ModifyGuildEvent $ModifyGuild <p>编辑公会资料</p>
      */
     function __construct()
     {
@@ -296,6 +328,26 @@ class EventDetail extends AbstractModel
         if (array_key_exists("Browse",$param) and $param["Browse"] !== null) {
             $this->Browse = new BrowseEvent();
             $this->Browse->deserialize($param["Browse"]);
+        }
+
+        if (array_key_exists("Chat",$param) and $param["Chat"] !== null) {
+            $this->Chat = new ChatEvent();
+            $this->Chat->deserialize($param["Chat"]);
+        }
+
+        if (array_key_exists("ModifyRole",$param) and $param["ModifyRole"] !== null) {
+            $this->ModifyRole = new ModifyRoleEvent();
+            $this->ModifyRole->deserialize($param["ModifyRole"]);
+        }
+
+        if (array_key_exists("AddFriend",$param) and $param["AddFriend"] !== null) {
+            $this->AddFriend = new AddFriendEvent();
+            $this->AddFriend->deserialize($param["AddFriend"]);
+        }
+
+        if (array_key_exists("ModifyGuild",$param) and $param["ModifyGuild"] !== null) {
+            $this->ModifyGuild = new ModifyGuildEvent();
+            $this->ModifyGuild->deserialize($param["ModifyGuild"]);
         }
     }
 }

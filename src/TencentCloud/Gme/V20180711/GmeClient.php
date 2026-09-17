@@ -38,6 +38,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
 <li>音频文件格式支持的类型：.wav、.m4a、.amr、.mp3、.aac、.wma、.ogg</li>
 </br>
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 本接口(CreateApp)用于创建一个GME应用。
+ * @method Models\CreateAudioModerationSyncResponse CreateAudioModerationSync(Models\CreateAudioModerationSyncRequest $req) 短音频内容理解同步接口
  * @method Models\CreateCustomizationResponse CreateCustomization(Models\CreateCustomizationRequest $req) 用户使用该接口可以创建语音消息转文本热句模型，以供识别调用
  * @method Models\CreateScanUserResponse CreateScanUser(Models\CreateScanUserRequest $req) 新增自定义送检用户。**接口使用前提**：目前 CreateScanUser 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
  * @method Models\DeleteCustomizationResponse DeleteCustomization(Models\DeleteCustomizationRequest $req) 用户通过该接口可以删除语音消息转文本热句模型

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyClusterSlaveZone请求参数结构体
  *
- * @method string getClusterId() 获取集群Id
- * @method void setClusterId(string $ClusterId) 设置集群Id
- * @method string getOldSlaveZone() 获取旧从可用区
- * @method void setOldSlaveZone(string $OldSlaveZone) 设置旧从可用区
- * @method string getNewSlaveZone() 获取新从可用区
- * @method void setNewSlaveZone(string $NewSlaveZone) 设置新从可用区
- * @method string getBinlogSyncWay() 获取binlog同步方式。默认值：async。可选值：sync、semisync、async
- * @method void setBinlogSyncWay(string $BinlogSyncWay) 设置binlog同步方式。默认值：async。可选值：sync、semisync、async
- * @method integer getSemiSyncTimeout() 获取半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。
- * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) 设置半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。
+ * @method string getClusterId() 获取<p>集群Id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群Id</p>
+ * @method string getOldSlaveZone() 获取<p>旧备可用区</p>
+ * @method void setOldSlaveZone(string $OldSlaveZone) 设置<p>旧备可用区</p>
+ * @method string getNewSlaveZone() 获取<p>新备可用区</p>
+ * @method void setNewSlaveZone(string $NewSlaveZone) 设置<p>新备可用区</p>
+ * @method string getBinlogSyncWay() 获取<p>binlog同步方式。默认值：async。可选值：sync、semisync、async</p>
+ * @method void setBinlogSyncWay(string $BinlogSyncWay) 设置<p>binlog同步方式。默认值：async。可选值：sync、semisync、async</p>
+ * @method integer getSemiSyncTimeout() 获取<p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。</p>
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) 设置<p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。</p>
  */
 class ModifyClusterSlaveZoneRequest extends AbstractModel
 {
     /**
-     * @var string 集群Id
+     * @var string <p>集群Id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 旧从可用区
+     * @var string <p>旧备可用区</p>
      */
     public $OldSlaveZone;
 
     /**
-     * @var string 新从可用区
+     * @var string <p>新备可用区</p>
      */
     public $NewSlaveZone;
 
     /**
-     * @var string binlog同步方式。默认值：async。可选值：sync、semisync、async
+     * @var string <p>binlog同步方式。默认值：async。可选值：sync、semisync、async</p>
      */
     public $BinlogSyncWay;
 
     /**
-     * @var integer 半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。
+     * @var integer <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。</p>
      */
     public $SemiSyncTimeout;
 
     /**
-     * @param string $ClusterId 集群Id
-     * @param string $OldSlaveZone 旧从可用区
-     * @param string $NewSlaveZone 新从可用区
-     * @param string $BinlogSyncWay binlog同步方式。默认值：async。可选值：sync、semisync、async
-     * @param integer $SemiSyncTimeout 半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。
+     * @param string $ClusterId <p>集群Id</p>
+     * @param string $OldSlaveZone <p>旧备可用区</p>
+     * @param string $NewSlaveZone <p>新备可用区</p>
+     * @param string $BinlogSyncWay <p>binlog同步方式。默认值：async。可选值：sync、semisync、async</p>
+     * @param integer $SemiSyncTimeout <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。</p>
      */
     function __construct()
     {

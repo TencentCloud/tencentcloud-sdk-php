@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserPoint(CreditPoint $UserPoint) 设置<p>用户积分</p>
  * @method string getUserType() 获取<p>用户类型</p>
  * @method void setUserType(string $UserType) 设置<p>用户类型</p>
+ * @method boolean getIsPaid() 获取<p>是否付费账号</p>
+ * @method void setIsPaid(boolean $IsPaid) 设置<p>是否付费账号</p>
  */
 class User extends AbstractModel
 {
@@ -45,9 +47,15 @@ class User extends AbstractModel
     public $UserType;
 
     /**
+     * @var boolean <p>是否付费账号</p>
+     */
+    public $IsPaid;
+
+    /**
      * @param string $UserLevel <p>用户等级</p>
      * @param CreditPoint $UserPoint <p>用户积分</p>
      * @param string $UserType <p>用户类型</p>
+     * @param boolean $IsPaid <p>是否付费账号</p>
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class User extends AbstractModel
 
         if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
             $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("IsPaid",$param) and $param["IsPaid"] !== null) {
+            $this->IsPaid = $param["IsPaid"];
         }
     }
 }

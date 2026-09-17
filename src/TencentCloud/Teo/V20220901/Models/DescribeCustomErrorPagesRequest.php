@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCustomErrorPages请求参数结构体
  *
- * @method string getZoneId() 获取站点 ID。
- * @method void setZoneId(string $ZoneId) 设置站点 ID。
- * @method array getFilters() 获取过滤条件，Filters.Values 的上限为20，详细的过滤条件Name值如下：
-<li>page-id： 按照页面 ID 进行过滤；</li>
-<li>name： 按照页面名称进行过滤；</li>
-<li>description：按照页面描述过滤；</li>
-<li>content-type：按照页面类型过滤。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values 的上限为20，详细的过滤条件Name值如下：
-<li>page-id： 按照页面 ID 进行过滤；</li>
-<li>name： 按照页面名称进行过滤；</li>
-<li>description：按照页面描述过滤；</li>
-<li>content-type：按照页面类型过滤。</li>
- * @method integer getOffset() 获取分页查询偏移量。默认值：0。
- * @method void setOffset(integer $Offset) 设置分页查询偏移量。默认值：0。
- * @method integer getLimit() 获取分页查询限制数目。默认值：20，最大值：1000。 
- * @method void setLimit(integer $Limit) 设置分页查询限制数目。默认值：20，最大值：1000。 
+ * @method string getZoneId() 获取<p>站点 ID。</p>
+ * @method void setZoneId(string $ZoneId) 设置<p>站点 ID。</p>
+ * @method array getFilters() 获取<p>过滤条件，Filters.Values 的上限为 20，详细的过滤条件Name值如下：<li>page-id： 按照页面 ID 进行过滤；</li><li>name： 按照页面名称进行过滤；</li><li>description：按照页面描述过滤；</li><li>content-type：按照页面类型过滤。</li></p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件，Filters.Values 的上限为 20，详细的过滤条件Name值如下：<li>page-id： 按照页面 ID 进行过滤；</li><li>name： 按照页面名称进行过滤；</li><li>description：按照页面描述过滤；</li><li>content-type：按照页面类型过滤。</li></p>
+ * @method integer getOffset() 获取<p>分页查询偏移量。默认值：0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页查询偏移量。默认值：0。</p>
+ * @method integer getLimit() 获取<p>分页查询限制数目。默认值：20，最大值：1000。</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页查询限制数目。默认值：20，最大值：1000。</p>
  */
 class DescribeCustomErrorPagesRequest extends AbstractModel
 {
     /**
-     * @var string 站点 ID。
+     * @var string <p>站点 ID。</p>
      */
     public $ZoneId;
 
     /**
-     * @var array 过滤条件，Filters.Values 的上限为20，详细的过滤条件Name值如下：
-<li>page-id： 按照页面 ID 进行过滤；</li>
-<li>name： 按照页面名称进行过滤；</li>
-<li>description：按照页面描述过滤；</li>
-<li>content-type：按照页面类型过滤。</li>
+     * @var array <p>过滤条件，Filters.Values 的上限为 20，详细的过滤条件Name值如下：<li>page-id： 按照页面 ID 进行过滤；</li><li>name： 按照页面名称进行过滤；</li><li>description：按照页面描述过滤；</li><li>content-type：按照页面类型过滤。</li></p>
      */
     public $Filters;
 
     /**
-     * @var integer 分页查询偏移量。默认值：0。
+     * @var integer <p>分页查询偏移量。默认值：0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页查询限制数目。默认值：20，最大值：1000。 
+     * @var integer <p>分页查询限制数目。默认值：20，最大值：1000。</p>
      */
     public $Limit;
 
     /**
-     * @param string $ZoneId 站点 ID。
-     * @param array $Filters 过滤条件，Filters.Values 的上限为20，详细的过滤条件Name值如下：
-<li>page-id： 按照页面 ID 进行过滤；</li>
-<li>name： 按照页面名称进行过滤；</li>
-<li>description：按照页面描述过滤；</li>
-<li>content-type：按照页面类型过滤。</li>
-     * @param integer $Offset 分页查询偏移量。默认值：0。
-     * @param integer $Limit 分页查询限制数目。默认值：20，最大值：1000。 
+     * @param string $ZoneId <p>站点 ID。</p>
+     * @param array $Filters <p>过滤条件，Filters.Values 的上限为 20，详细的过滤条件Name值如下：<li>page-id： 按照页面 ID 进行过滤；</li><li>name： 按照页面名称进行过滤；</li><li>description：按照页面描述过滤；</li><li>content-type：按照页面类型过滤。</li></p>
+     * @param integer $Offset <p>分页查询偏移量。默认值：0。</p>
+     * @param integer $Limit <p>分页查询限制数目。默认值：20，最大值：1000。</p>
      */
     function __construct()
     {

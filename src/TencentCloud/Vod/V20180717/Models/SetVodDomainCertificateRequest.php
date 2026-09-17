@@ -20,50 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetVodDomainCertificate请求参数结构体
  *
- * @method string getDomain() 获取域名。
- * @method void setDomain(string $Domain) 设置域名。
- * @method string getOperation() 获取本次接口调用的操作类型，可选值：
-<li>Set：设置域名的 HTTPS 所需证书；</li>
-<li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
- * @method void setOperation(string $Operation) 设置本次接口调用的操作类型，可选值：
-<li>Set：设置域名的 HTTPS 所需证书；</li>
-<li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method string getCertID() 获取[腾讯云SSL](/document/product/400/7572) 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。
- * @method void setCertID(string $CertID) 设置[腾讯云SSL](/document/product/400/7572) 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。
+ * @method string getDomain() 获取<p>域名。</p>
+ * @method void setDomain(string $Domain) 设置<p>域名。</p>
+ * @method string getOperation() 获取<p>本次接口调用的操作类型，可选值：</p><li>Set：设置域名的 HTTPS 所需证书；</li><li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
+ * @method void setOperation(string $Operation) 设置<p>本次接口调用的操作类型，可选值：</p><li>Set：设置域名的 HTTPS 所需证书；</li><li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method string getCertID() 获取<p><a href="/document/product/400/7572">腾讯云SSL</a> 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。</p>
+ * @method void setCertID(string $CertID) 设置<p><a href="/document/product/400/7572">腾讯云SSL</a> 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。</p>
  */
 class SetVodDomainCertificateRequest extends AbstractModel
 {
     /**
-     * @var string 域名。
+     * @var string <p>域名。</p>
      */
     public $Domain;
 
     /**
-     * @var string 本次接口调用的操作类型，可选值：
-<li>Set：设置域名的 HTTPS 所需证书；</li>
-<li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
+     * @var string <p>本次接口调用的操作类型，可选值：</p><li>Set：设置域名的 HTTPS 所需证书；</li><li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
      */
     public $Operation;
 
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string [腾讯云SSL](/document/product/400/7572) 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。
+     * @var string <p><a href="/document/product/400/7572">腾讯云SSL</a> 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。</p>
      */
     public $CertID;
 
     /**
-     * @param string $Domain 域名。
-     * @param string $Operation 本次接口调用的操作类型，可选值：
-<li>Set：设置域名的 HTTPS 所需证书；</li>
-<li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param string $CertID [腾讯云SSL](/document/product/400/7572) 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。
+     * @param string $Domain <p>域名。</p>
+     * @param string $Operation <p>本次接口调用的操作类型，可选值：</p><li>Set：设置域名的 HTTPS 所需证书；</li><li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param string $CertID <p><a href="/document/product/400/7572">腾讯云SSL</a> 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。</p>
      */
     function __construct()
     {

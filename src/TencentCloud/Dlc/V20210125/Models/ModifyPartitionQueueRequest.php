@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置资源队列ID
  * @method string getPartitionCode() 获取分区编码
  * @method void setPartitionCode(string $PartitionCode) 设置分区编码
- * @method string getQueueName() 获取队列名称
- * @method void setQueueName(string $QueueName) 设置队列名称
+ * @method string getQueueName() 获取队列编码（不可变 code）：与 Id 定位记录的一致性校验键，传入值必须与队列当前 QueueName 一致，不参与更新
+ * @method void setQueueName(string $QueueName) 设置队列编码（不可变 code）：与 Id 定位记录的一致性校验键，传入值必须与队列当前 QueueName 一致，不参与更新
+ * @method string getAlias() 获取队列别名（显示名）：透传时更新，未透传时保持不变。可与其它队列重复
+ * @method void setAlias(string $Alias) 设置队列别名（显示名）：透传时更新，未透传时保持不变。可与其它队列重复
  * @method string getDescription() 获取队列描述
  * @method void setDescription(string $Description) 设置队列描述
  * @method array getResourceUsages() 获取资源规格列表，定义队列的资源类型及大小范围
@@ -46,9 +48,14 @@ class ModifyPartitionQueueRequest extends AbstractModel
     public $PartitionCode;
 
     /**
-     * @var string 队列名称
+     * @var string 队列编码（不可变 code）：与 Id 定位记录的一致性校验键，传入值必须与队列当前 QueueName 一致，不参与更新
      */
     public $QueueName;
+
+    /**
+     * @var string 队列别名（显示名）：透传时更新，未透传时保持不变。可与其它队列重复
+     */
+    public $Alias;
 
     /**
      * @var string 队列描述
@@ -68,7 +75,8 @@ class ModifyPartitionQueueRequest extends AbstractModel
     /**
      * @param integer $Id 资源队列ID
      * @param string $PartitionCode 分区编码
-     * @param string $QueueName 队列名称
+     * @param string $QueueName 队列编码（不可变 code）：与 Id 定位记录的一致性校验键，传入值必须与队列当前 QueueName 一致，不参与更新
+     * @param string $Alias 队列别名（显示名）：透传时更新，未透传时保持不变。可与其它队列重复
      * @param string $Description 队列描述
      * @param array $ResourceUsages 资源规格列表，定义队列的资源类型及大小范围
      * @param integer $QueueType 队列类型：1-独占型，2-共享型
@@ -96,6 +104,10 @@ class ModifyPartitionQueueRequest extends AbstractModel
 
         if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
             $this->QueueName = $param["QueueName"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

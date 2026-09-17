@@ -20,122 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpnGatewaySslServer请求参数结构体
  *
- * @method string getVpnGatewayId() 获取VPN网关实例ID。
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
- * @method string getSslVpnServerName() 获取SSL-VPN-SERVER 实例名称，长度不超过60个字节。
- * @method void setSslVpnServerName(string $SslVpnServerName) 设置SSL-VPN-SERVER 实例名称，长度不超过60个字节。
- * @method string getRemoteAddress() 获取客户端地址网段。
- * @method void setRemoteAddress(string $RemoteAddress) 设置客户端地址网段。
- * @method array getLocalAddress() 获取云端地址（CIDR）列表。
- * @method void setLocalAddress(array $LocalAddress) 设置云端地址（CIDR）列表。
- * @method string getSslVpnProtocol() 获取SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
- * @method void setSslVpnProtocol(string $SslVpnProtocol) 设置SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
- * @method integer getSslVpnPort() 获取SSL VPN服务端监听协议端口，默认1194。
- * @method void setSslVpnPort(integer $SslVpnPort) 设置SSL VPN服务端监听协议端口，默认1194。
- * @method string getIntegrityAlgorithm() 获取认证算法。可选 'SHA1'，默认SHA1。
- * @method void setIntegrityAlgorithm(string $IntegrityAlgorithm) 设置认证算法。可选 'SHA1'，默认SHA1。
- * @method string getEncryptAlgorithm() 获取加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
- * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
- * @method boolean getCompress() 获取是否支持压缩。当前不支持压缩，默认False。
- * @method void setCompress(boolean $Compress) 设置是否支持压缩。当前不支持压缩，默认False。
- * @method boolean getSsoEnabled() 获取是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
- * @method void setSsoEnabled(boolean $SsoEnabled) 设置是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
- * @method boolean getAccessPolicyEnabled() 获取是否开启策略访问控制。默认为False
- * @method void setAccessPolicyEnabled(boolean $AccessPolicyEnabled) 设置是否开启策略访问控制。默认为False
- * @method string getSamlData() 获取SAML-DATA，开启SSO时传。
- * @method void setSamlData(string $SamlData) 设置SAML-DATA，开启SSO时传。
- * @method array getTags() 获取指定绑定的标签列表
- * @method void setTags(array $Tags) 设置指定绑定的标签列表
- * @method DnsServers getDnsServers() 获取DNS Server 地址
- * @method void setDnsServers(DnsServers $DnsServers) 设置DNS Server 地址
+ * @method string getVpnGatewayId() 获取<p>VPN网关实例ID。</p>
+ * @method void setVpnGatewayId(string $VpnGatewayId) 设置<p>VPN网关实例ID。</p>
+ * @method string getSslVpnServerName() 获取<p>SSL-VPN-SERVER 实例名称，长度不超过60个字节。</p>
+ * @method void setSslVpnServerName(string $SslVpnServerName) 设置<p>SSL-VPN-SERVER 实例名称，长度不超过60个字节。</p>
+ * @method string getRemoteAddress() 获取<p>客户端地址网段。</p>
+ * @method void setRemoteAddress(string $RemoteAddress) 设置<p>客户端地址网段。</p>
+ * @method array getLocalAddress() 获取<p>云端地址（CIDR）列表。</p>
+ * @method void setLocalAddress(array $LocalAddress) 设置<p>云端地址（CIDR）列表。</p>
+ * @method string getSslVpnProtocol() 获取<p>SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。</p>
+ * @method void setSslVpnProtocol(string $SslVpnProtocol) 设置<p>SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。</p>
+ * @method integer getSslVpnPort() 获取<p>SSL VPN服务端监听协议端口，默认9798。</p>
+ * @method void setSslVpnPort(integer $SslVpnPort) 设置<p>SSL VPN服务端监听协议端口，默认9798。</p>
+ * @method string getIntegrityAlgorithm() 获取<p>认证算法。可选 &#39;SHA1&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39; 默认SHA1。</p>
+ * @method void setIntegrityAlgorithm(string $IntegrityAlgorithm) 设置<p>认证算法。可选 &#39;SHA1&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39; 默认SHA1。</p>
+ * @method string getEncryptAlgorithm() 获取<p>加密算法。可选 &#39;AES-128-CBC&#39;,&#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;。</p><p>默认值：AES-128-CBC</p>
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置<p>加密算法。可选 &#39;AES-128-CBC&#39;,&#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;。</p><p>默认值：AES-128-CBC</p>
+ * @method boolean getCompress() 获取<p>是否支持压缩。当前不支持压缩，默认False。</p>
+ * @method void setCompress(boolean $Compress) 设置<p>是否支持压缩。当前不支持压缩，默认False。</p>
+ * @method boolean getSsoEnabled() 获取<p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
+ * @method void setSsoEnabled(boolean $SsoEnabled) 设置<p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
+ * @method boolean getAccessPolicyEnabled() 获取<p>是否开启策略访问控制。默认为False</p>
+ * @method void setAccessPolicyEnabled(boolean $AccessPolicyEnabled) 设置<p>是否开启策略访问控制。默认为False</p>
+ * @method string getSamlData() 获取<p>SAML-DATA，开启SSO时传。</p>
+ * @method void setSamlData(string $SamlData) 设置<p>SAML-DATA，开启SSO时传。</p>
+ * @method array getTags() 获取<p>指定绑定的标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>指定绑定的标签列表</p>
+ * @method DnsServers getDnsServers() 获取<p>DNS Server 地址</p>
+ * @method void setDnsServers(DnsServers $DnsServers) 设置<p>DNS Server 地址</p>
  */
 class CreateVpnGatewaySslServerRequest extends AbstractModel
 {
     /**
-     * @var string VPN网关实例ID。
+     * @var string <p>VPN网关实例ID。</p>
      */
     public $VpnGatewayId;
 
     /**
-     * @var string SSL-VPN-SERVER 实例名称，长度不超过60个字节。
+     * @var string <p>SSL-VPN-SERVER 实例名称，长度不超过60个字节。</p>
      */
     public $SslVpnServerName;
 
     /**
-     * @var string 客户端地址网段。
+     * @var string <p>客户端地址网段。</p>
      */
     public $RemoteAddress;
 
     /**
-     * @var array 云端地址（CIDR）列表。
+     * @var array <p>云端地址（CIDR）列表。</p>
      */
     public $LocalAddress;
 
     /**
-     * @var string SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
+     * @var string <p>SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。</p>
      */
     public $SslVpnProtocol;
 
     /**
-     * @var integer SSL VPN服务端监听协议端口，默认1194。
+     * @var integer <p>SSL VPN服务端监听协议端口，默认9798。</p>
      */
     public $SslVpnPort;
 
     /**
-     * @var string 认证算法。可选 'SHA1'，默认SHA1。
+     * @var string <p>认证算法。可选 &#39;SHA1&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39; 默认SHA1。</p>
      */
     public $IntegrityAlgorithm;
 
     /**
-     * @var string 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
+     * @var string <p>加密算法。可选 &#39;AES-128-CBC&#39;,&#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;。</p><p>默认值：AES-128-CBC</p>
      */
     public $EncryptAlgorithm;
 
     /**
-     * @var boolean 是否支持压缩。当前不支持压缩，默认False。
+     * @var boolean <p>是否支持压缩。当前不支持压缩，默认False。</p>
      */
     public $Compress;
 
     /**
-     * @var boolean 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
+     * @var boolean <p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
      */
     public $SsoEnabled;
 
     /**
-     * @var boolean 是否开启策略访问控制。默认为False
+     * @var boolean <p>是否开启策略访问控制。默认为False</p>
      */
     public $AccessPolicyEnabled;
 
     /**
-     * @var string SAML-DATA，开启SSO时传。
+     * @var string <p>SAML-DATA，开启SSO时传。</p>
      */
     public $SamlData;
 
     /**
-     * @var array 指定绑定的标签列表
+     * @var array <p>指定绑定的标签列表</p>
      */
     public $Tags;
 
     /**
-     * @var DnsServers DNS Server 地址
+     * @var DnsServers <p>DNS Server 地址</p>
      */
     public $DnsServers;
 
     /**
-     * @param string $VpnGatewayId VPN网关实例ID。
-     * @param string $SslVpnServerName SSL-VPN-SERVER 实例名称，长度不超过60个字节。
-     * @param string $RemoteAddress 客户端地址网段。
-     * @param array $LocalAddress 云端地址（CIDR）列表。
-     * @param string $SslVpnProtocol SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
-     * @param integer $SslVpnPort SSL VPN服务端监听协议端口，默认1194。
-     * @param string $IntegrityAlgorithm 认证算法。可选 'SHA1'，默认SHA1。
-     * @param string $EncryptAlgorithm 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
-     * @param boolean $Compress 是否支持压缩。当前不支持压缩，默认False。
-     * @param boolean $SsoEnabled 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
-     * @param boolean $AccessPolicyEnabled 是否开启策略访问控制。默认为False
-     * @param string $SamlData SAML-DATA，开启SSO时传。
-     * @param array $Tags 指定绑定的标签列表
-     * @param DnsServers $DnsServers DNS Server 地址
+     * @param string $VpnGatewayId <p>VPN网关实例ID。</p>
+     * @param string $SslVpnServerName <p>SSL-VPN-SERVER 实例名称，长度不超过60个字节。</p>
+     * @param string $RemoteAddress <p>客户端地址网段。</p>
+     * @param array $LocalAddress <p>云端地址（CIDR）列表。</p>
+     * @param string $SslVpnProtocol <p>SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。</p>
+     * @param integer $SslVpnPort <p>SSL VPN服务端监听协议端口，默认9798。</p>
+     * @param string $IntegrityAlgorithm <p>认证算法。可选 &#39;SHA1&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39; 默认SHA1。</p>
+     * @param string $EncryptAlgorithm <p>加密算法。可选 &#39;AES-128-CBC&#39;,&#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;。</p><p>默认值：AES-128-CBC</p>
+     * @param boolean $Compress <p>是否支持压缩。当前不支持压缩，默认False。</p>
+     * @param boolean $SsoEnabled <p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
+     * @param boolean $AccessPolicyEnabled <p>是否开启策略访问控制。默认为False</p>
+     * @param string $SamlData <p>SAML-DATA，开启SSO时传。</p>
+     * @param array $Tags <p>指定绑定的标签列表</p>
+     * @param DnsServers $DnsServers <p>DNS Server 地址</p>
      */
     function __construct()
     {

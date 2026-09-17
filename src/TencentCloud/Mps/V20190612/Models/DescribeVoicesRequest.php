@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置<p>标签</p>
  * @method array getScenes() 获取<p>场景</p>
  * @method void setScenes(array $Scenes) 设置<p>场景</p>
+ * @method integer getPageNum() 获取<p>分页查询页码。从1开始，默认1</p>
+ * @method void setPageNum(integer $PageNum) 设置<p>分页查询页码。从1开始，默认1</p>
+ * @method integer getPageSize() 获取<p>页大小。不填默认返回所有符合条件数据</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>页大小。不填默认返回所有符合条件数据</p>
  * @method string getExtParam() 获取<p>扩展参数，json字符串</p><p>其他筛选条件voiceName String 音色名，模糊匹配labels Array of String 标签，匹配包含这些标签的音色</p>
  * @method void setExtParam(string $ExtParam) 设置<p>扩展参数，json字符串</p><p>其他筛选条件voiceName String 音色名，模糊匹配labels Array of String 标签，匹配包含这些标签的音色</p>
  */
@@ -89,6 +93,16 @@ class DescribeVoicesRequest extends AbstractModel
     public $Scenes;
 
     /**
+     * @var integer <p>分页查询页码。从1开始，默认1</p>
+     */
+    public $PageNum;
+
+    /**
+     * @var integer <p>页大小。不填默认返回所有符合条件数据</p>
+     */
+    public $PageSize;
+
+    /**
      * @var string <p>扩展参数，json字符串</p><p>其他筛选条件voiceName String 音色名，模糊匹配labels Array of String 标签，匹配包含这些标签的音色</p>
      */
     public $ExtParam;
@@ -103,6 +117,8 @@ class DescribeVoicesRequest extends AbstractModel
      * @param array $Languages <p>语言</p>
      * @param array $Labels <p>标签</p>
      * @param array $Scenes <p>场景</p>
+     * @param integer $PageNum <p>分页查询页码。从1开始，默认1</p>
+     * @param integer $PageSize <p>页大小。不填默认返回所有符合条件数据</p>
      * @param string $ExtParam <p>扩展参数，json字符串</p><p>其他筛选条件voiceName String 音色名，模糊匹配labels Array of String 标签，匹配包含这些标签的音色</p>
      */
     function __construct()
@@ -152,6 +168,14 @@ class DescribeVoicesRequest extends AbstractModel
 
         if (array_key_exists("Scenes",$param) and $param["Scenes"] !== null) {
             $this->Scenes = $param["Scenes"];
+        }
+
+        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
+            $this->PageNum = $param["PageNum"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
 
         if (array_key_exists("ExtParam",$param) and $param["ExtParam"] !== null) {

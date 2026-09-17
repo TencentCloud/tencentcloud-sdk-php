@@ -20,86 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 人脸识别任务控制参数
  *
- * @method string getSwitch() 获取人脸识别任务开关，可选值：
-<li>ON：开启智能人脸识别任务；</li>
-<li>OFF：关闭智能人脸识别任务。</li>
- * @method void setSwitch(string $Switch) 设置人脸识别任务开关，可选值：
-<li>ON：开启智能人脸识别任务；</li>
-<li>OFF：关闭智能人脸识别任务。</li>
- * @method float getScore() 获取人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。
- * @method void setScore(float $Score) 设置人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。
- * @method array getDefaultLibraryLabelSet() 获取默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
-<li>entertainment：娱乐明星；</li>
-<li>sport：体育明星；</li>
-<li>politician：相关人物。</li>
- * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) 设置默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
-<li>entertainment：娱乐明星；</li>
-<li>sport：体育明星；</li>
-<li>politician：相关人物。</li>
- * @method array getUserDefineLibraryLabelSet() 获取用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
-标签个数最多 100 个，每个标签长度最多 16 个字符。
- * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) 设置用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
-标签个数最多 100 个，每个标签长度最多 16 个字符。
- * @method string getFaceLibrary() 获取人物库选择，可选值：
-<li>Default：使用默认人物库；</li>
-<li>UserDefine：使用用户自定义人物库。</li>
-<li>All：同时使用默认人物库和用户自定义人物库。</li>
- * @method void setFaceLibrary(string $FaceLibrary) 设置人物库选择，可选值：
-<li>Default：使用默认人物库；</li>
-<li>UserDefine：使用用户自定义人物库。</li>
-<li>All：同时使用默认人物库和用户自定义人物库。</li>
+ * @method string getSwitch() 获取<p>人脸识别任务开关，可选值：</p><li>ON：开启智能人脸识别任务；</li><li>OFF：关闭智能人脸识别任务。</li>
+ * @method void setSwitch(string $Switch) 设置<p>人脸识别任务开关，可选值：</p><li>ON：开启智能人脸识别任务；</li><li>OFF：关闭智能人脸识别任务。</li>
+ * @method float getScore() 获取<p>人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。</p>
+ * @method void setScore(float $Score) 设置<p>人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。</p>
+ * @method array getDefaultLibraryLabelSet() 获取<p>默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：</p><li>entertainment：娱乐明星；</li><li>sport：体育明星；</li><li>politician：相关人物。</li>
+ * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) 设置<p>默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：</p><li>entertainment：娱乐明星；</li><li>sport：体育明星；</li><li>politician：相关人物。</li>
+ * @method array getUserDefineLibraryLabelSet() 获取<p>用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。<br>标签个数最多 100 个，每个标签长度最多 16 个字符。</p>
+ * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) 设置<p>用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。<br>标签个数最多 100 个，每个标签长度最多 16 个字符。</p>
+ * @method string getFaceLibrary() 获取<p>人物库选择，可选值：</p><li>Default：使用默认人物库；</li><li>UserDefine：使用用户自定义人物库。</li><li>All：同时使用默认人物库和用户自定义人物库。</li>
+ * @method void setFaceLibrary(string $FaceLibrary) 设置<p>人物库选择，可选值：</p><li>Default：使用默认人物库；</li><li>UserDefine：使用用户自定义人物库。</li><li>All：同时使用默认人物库和用户自定义人物库。</li>
  */
 class FaceConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string 人脸识别任务开关，可选值：
-<li>ON：开启智能人脸识别任务；</li>
-<li>OFF：关闭智能人脸识别任务。</li>
+     * @var string <p>人脸识别任务开关，可选值：</p><li>ON：开启智能人脸识别任务；</li><li>OFF：关闭智能人脸识别任务。</li>
      */
     public $Switch;
 
     /**
-     * @var float 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。
+     * @var float <p>人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。</p>
      */
     public $Score;
 
     /**
-     * @var array 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
-<li>entertainment：娱乐明星；</li>
-<li>sport：体育明星；</li>
-<li>politician：相关人物。</li>
+     * @var array <p>默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：</p><li>entertainment：娱乐明星；</li><li>sport：体育明星；</li><li>politician：相关人物。</li>
      */
     public $DefaultLibraryLabelSet;
 
     /**
-     * @var array 用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
-标签个数最多 100 个，每个标签长度最多 16 个字符。
+     * @var array <p>用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。<br>标签个数最多 100 个，每个标签长度最多 16 个字符。</p>
      */
     public $UserDefineLibraryLabelSet;
 
     /**
-     * @var string 人物库选择，可选值：
-<li>Default：使用默认人物库；</li>
-<li>UserDefine：使用用户自定义人物库。</li>
-<li>All：同时使用默认人物库和用户自定义人物库。</li>
+     * @var string <p>人物库选择，可选值：</p><li>Default：使用默认人物库；</li><li>UserDefine：使用用户自定义人物库。</li><li>All：同时使用默认人物库和用户自定义人物库。</li>
      */
     public $FaceLibrary;
 
     /**
-     * @param string $Switch 人脸识别任务开关，可选值：
-<li>ON：开启智能人脸识别任务；</li>
-<li>OFF：关闭智能人脸识别任务。</li>
-     * @param float $Score 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。
-     * @param array $DefaultLibraryLabelSet 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
-<li>entertainment：娱乐明星；</li>
-<li>sport：体育明星；</li>
-<li>politician：相关人物。</li>
-     * @param array $UserDefineLibraryLabelSet 用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
-标签个数最多 100 个，每个标签长度最多 16 个字符。
-     * @param string $FaceLibrary 人物库选择，可选值：
-<li>Default：使用默认人物库；</li>
-<li>UserDefine：使用用户自定义人物库。</li>
-<li>All：同时使用默认人物库和用户自定义人物库。</li>
+     * @param string $Switch <p>人脸识别任务开关，可选值：</p><li>ON：开启智能人脸识别任务；</li><li>OFF：关闭智能人脸识别任务。</li>
+     * @param float $Score <p>人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。</p>
+     * @param array $DefaultLibraryLabelSet <p>默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：</p><li>entertainment：娱乐明星；</li><li>sport：体育明星；</li><li>politician：相关人物。</li>
+     * @param array $UserDefineLibraryLabelSet <p>用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。<br>标签个数最多 100 个，每个标签长度最多 16 个字符。</p>
+     * @param string $FaceLibrary <p>人物库选择，可选值：</p><li>Default：使用默认人物库；</li><li>UserDefine：使用用户自定义人物库。</li><li>All：同时使用默认人物库和用户自定义人物库。</li>
      */
     function __construct()
     {

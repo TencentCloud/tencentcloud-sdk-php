@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置<p>域名</p>
  * @method string getDomainType() 获取<p>域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调</p>
  * @method void setDomainType(string $DomainType) 设置<p>域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调</p>
- * @method string getAccessType() 获取<p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
- * @method void setAccessType(string $AccessType) 设置<p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+ * @method string getAccessType() 获取<p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN（即将下线）</li><li>EO： 接入云开发EdgeOne</li><li>CUSTOM： 自定义接入类型（其他CDN或者WAF）</li><li>NONE： 不接入，当使用泛域名接入时，可通过NONE来接入子域名，子域名证书及协议继承泛域名</li></ul><p>默认值：DIRECT</p>
+ * @method void setAccessType(string $AccessType) 设置<p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN（即将下线）</li><li>EO： 接入云开发EdgeOne</li><li>CUSTOM： 自定义接入类型（其他CDN或者WAF）</li><li>NONE： 不接入，当使用泛域名接入时，可通过NONE来接入子域名，子域名证书及协议继承泛域名</li></ul><p>默认值：DIRECT</p>
  * @method string getCertId() 获取<p>证书ID。当前账户下SSL平台的证书ID</p>
  * @method void setCertId(string $CertId) 设置<p>证书ID。当前账户下SSL平台的证书ID</p>
  * @method string getProtocol() 获取<p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
@@ -64,7 +64,7 @@ class HTTPServiceDomain extends AbstractModel
     public $DomainType;
 
     /**
-     * @var string <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+     * @var string <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN（即将下线）</li><li>EO： 接入云开发EdgeOne</li><li>CUSTOM： 自定义接入类型（其他CDN或者WAF）</li><li>NONE： 不接入，当使用泛域名接入时，可通过NONE来接入子域名，子域名证书及协议继承泛域名</li></ul><p>默认值：DIRECT</p>
      */
     public $AccessType;
 
@@ -131,7 +131,7 @@ class HTTPServiceDomain extends AbstractModel
     /**
      * @param string $Domain <p>域名</p>
      * @param string $DomainType <p>域名类型。 HTTPSERVICE: HTTP访问服务，CBR: 云托管服务，ANYSERVICE: 任意服务，AI_AGENT: AI agent，VM: 主机，INTEGRATION_CALLBACK: 集成回调</p>
-     * @param string $AccessType <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+     * @param string $AccessType <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN（即将下线）</li><li>EO： 接入云开发EdgeOne</li><li>CUSTOM： 自定义接入类型（其他CDN或者WAF）</li><li>NONE： 不接入，当使用泛域名接入时，可通过NONE来接入子域名，子域名证书及协议继承泛域名</li></ul><p>默认值：DIRECT</p>
      * @param string $CertId <p>证书ID。当前账户下SSL平台的证书ID</p>
      * @param string $Protocol <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
      * @param string $Cname <p>配置DNS解析的CNAME。根据AccessType返回不同的CNAME值。</p>

@@ -20,150 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 监听器简要信息出参
  *
- * @method boolean getCaEnable() 获取是否开启双向认证。
- * @method void setCaEnable(boolean $CaEnable) 设置是否开启双向认证。
- * @method string getCreateTime() 获取监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
- * @method void setCreateTime(string $CreateTime) 设置监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
- * @method boolean getGzipEnabled() 获取是否启用 Gzip 压缩。
- * @method void setGzipEnabled(boolean $GzipEnabled) 设置是否启用 Gzip 压缩。
- * @method boolean getHttp2Enable() 获取是否启用http2。
- * @method void setHttp2Enable(boolean $Http2Enable) 设置是否启用http2。
- * @method integer getIdleTimeout() 获取空闲超时时间。
- * @method void setIdleTimeout(integer $IdleTimeout) 设置空闲超时时间。
- * @method string getListenerId() 获取监听器 ID，格式为 lst- 后接 8 位字母数字。
- * @method void setListenerId(string $ListenerId) 设置监听器 ID，格式为 lst- 后接 8 位字母数字。
- * @method string getListenerName() 获取监听器名称。
- * @method void setListenerName(string $ListenerName) 设置监听器名称。
- * @method integer getListenerPort() 获取监听器端口。
- * @method void setListenerPort(integer $ListenerPort) 设置监听器端口。
- * @method string getListenerProtocol() 获取监听器协议。
- * @method void setListenerProtocol(string $ListenerProtocol) 设置监听器协议。
- * @method string getListenerStatus() 获取监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
- * @method void setListenerStatus(string $ListenerStatus) 设置监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
- * @method string getModifyTime() 获取监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
- * @method void setModifyTime(string $ModifyTime) 设置监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
- * @method integer getRequestTimeout() 获取请求超时时间。
- * @method void setRequestTimeout(integer $RequestTimeout) 设置请求超时时间。
- * @method array getTags() 获取标签。
- * @method void setTags(array $Tags) 设置标签。
- * @method string getTlsSecurityPolicyId() 获取安全策略 ID。
- * @method void setTlsSecurityPolicyId(string $TlsSecurityPolicyId) 设置安全策略 ID。
- * @method XForwardedForConfig getXForwardedForConfig() 获取XForwardedFor配置。
- * @method void setXForwardedForConfig(XForwardedForConfig $XForwardedForConfig) 设置XForwardedFor配置。
+ * @method boolean getCaEnable() 获取<p>是否开启双向认证。</p>
+ * @method void setCaEnable(boolean $CaEnable) 设置<p>是否开启双向认证。</p>
+ * @method string getCreateTime() 获取<p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+ * @method boolean getGzipEnabled() 获取<p>是否启用 Gzip 压缩。</p>
+ * @method void setGzipEnabled(boolean $GzipEnabled) 设置<p>是否启用 Gzip 压缩。</p>
+ * @method boolean getHttp2Enable() 获取<p>是否启用http2。</p>
+ * @method void setHttp2Enable(boolean $Http2Enable) 设置<p>是否启用http2。</p>
+ * @method integer getIdleTimeout() 获取<p>空闲超时时间。</p>
+ * @method void setIdleTimeout(integer $IdleTimeout) 设置<p>空闲超时时间。</p>
+ * @method string getListenerId() 获取<p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+ * @method string getListenerName() 获取<p>监听器名称。</p>
+ * @method void setListenerName(string $ListenerName) 设置<p>监听器名称。</p>
+ * @method integer getListenerPort() 获取<p>监听器端口。</p>
+ * @method void setListenerPort(integer $ListenerPort) 设置<p>监听器端口。</p>
+ * @method string getListenerProtocol() 获取<p>监听器协议。</p>
+ * @method void setListenerProtocol(string $ListenerProtocol) 设置<p>监听器协议。</p>
+ * @method string getListenerStatus() 获取<p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
+ * @method void setListenerStatus(string $ListenerStatus) 设置<p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
+ * @method string getModifyTime() 获取<p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+ * @method integer getRequestTimeout() 获取<p>连接请求超时时间。</p>
+ * @method void setRequestTimeout(integer $RequestTimeout) 设置<p>连接请求超时时间。</p>
+ * @method array getTags() 获取<p>标签。</p>
+ * @method void setTags(array $Tags) 设置<p>标签。</p>
+ * @method string getTlsSecurityPolicyId() 获取<p>安全策略 ID。</p>
+ * @method void setTlsSecurityPolicyId(string $TlsSecurityPolicyId) 设置<p>安全策略 ID。</p>
+ * @method XForwardedForConfig getXForwardedForConfig() 获取<p>XForwardedFor配置。</p>
+ * @method void setXForwardedForConfig(XForwardedForConfig $XForwardedForConfig) 设置<p>XForwardedFor配置。</p>
  */
 class ListenerOutput extends AbstractModel
 {
     /**
-     * @var boolean 是否开启双向认证。
+     * @var boolean <p>是否开启双向认证。</p>
      */
     public $CaEnable;
 
     /**
-     * @var string 监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+     * @var string <p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
      */
     public $CreateTime;
 
     /**
-     * @var boolean 是否启用 Gzip 压缩。
+     * @var boolean <p>是否启用 Gzip 压缩。</p>
      */
     public $GzipEnabled;
 
     /**
-     * @var boolean 是否启用http2。
+     * @var boolean <p>是否启用http2。</p>
      */
     public $Http2Enable;
 
     /**
-     * @var integer 空闲超时时间。
+     * @var integer <p>空闲超时时间。</p>
      */
     public $IdleTimeout;
 
     /**
-     * @var string 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * @var string <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 监听器名称。
+     * @var string <p>监听器名称。</p>
      */
     public $ListenerName;
 
     /**
-     * @var integer 监听器端口。
+     * @var integer <p>监听器端口。</p>
      */
     public $ListenerPort;
 
     /**
-     * @var string 监听器协议。
+     * @var string <p>监听器协议。</p>
      */
     public $ListenerProtocol;
 
     /**
-     * @var string 监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
+     * @var string <p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
      */
     public $ListenerStatus;
 
     /**
-     * @var string 监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+     * @var string <p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
      */
     public $ModifyTime;
 
     /**
-     * @var integer 请求超时时间。
+     * @var integer <p>连接请求超时时间。</p>
      */
     public $RequestTimeout;
 
     /**
-     * @var array 标签。
+     * @var array <p>标签。</p>
      */
     public $Tags;
 
     /**
-     * @var string 安全策略 ID。
+     * @var string <p>安全策略 ID。</p>
      */
     public $TlsSecurityPolicyId;
 
     /**
-     * @var XForwardedForConfig XForwardedFor配置。
+     * @var XForwardedForConfig <p>XForwardedFor配置。</p>
      */
     public $XForwardedForConfig;
 
     /**
-     * @param boolean $CaEnable 是否开启双向认证。
-     * @param string $CreateTime 监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
-     * @param boolean $GzipEnabled 是否启用 Gzip 压缩。
-     * @param boolean $Http2Enable 是否启用http2。
-     * @param integer $IdleTimeout 空闲超时时间。
-     * @param string $ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
-     * @param string $ListenerName 监听器名称。
-     * @param integer $ListenerPort 监听器端口。
-     * @param string $ListenerProtocol 监听器协议。
-     * @param string $ListenerStatus 监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
-     * @param string $ModifyTime 监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
-     * @param integer $RequestTimeout 请求超时时间。
-     * @param array $Tags 标签。
-     * @param string $TlsSecurityPolicyId 安全策略 ID。
-     * @param XForwardedForConfig $XForwardedForConfig XForwardedFor配置。
+     * @param boolean $CaEnable <p>是否开启双向认证。</p>
+     * @param string $CreateTime <p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+     * @param boolean $GzipEnabled <p>是否启用 Gzip 压缩。</p>
+     * @param boolean $Http2Enable <p>是否启用http2。</p>
+     * @param integer $IdleTimeout <p>空闲超时时间。</p>
+     * @param string $ListenerId <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+     * @param string $ListenerName <p>监听器名称。</p>
+     * @param integer $ListenerPort <p>监听器端口。</p>
+     * @param string $ListenerProtocol <p>监听器协议。</p>
+     * @param string $ListenerStatus <p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
+     * @param string $ModifyTime <p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+     * @param integer $RequestTimeout <p>连接请求超时时间。</p>
+     * @param array $Tags <p>标签。</p>
+     * @param string $TlsSecurityPolicyId <p>安全策略 ID。</p>
+     * @param XForwardedForConfig $XForwardedForConfig <p>XForwardedFor配置。</p>
      */
     function __construct()
     {

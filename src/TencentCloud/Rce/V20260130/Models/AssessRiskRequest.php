@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssessRisk请求参数结构体
  *
- * @method string getEventCode() 获取<p>事件码。用于指定业务接入的场景节点。</p><p> 账号保护产品下的标准事件包含：</p><ul><li> login： 登录<p></p></li> <li>register： 注册 </li><li>sms： 短信 </li><li>logout： 登出 </li><li>modify_account： 修改账号 </li><li>modify_password： 修改密码 </li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单 </li><li>transaction： 交易支付 </li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参加营销活动 </li><li>redeem： 兑奖 </li><li>withdraw： 提现 </li><li>cust_event： 自定义事件，cust_xxx </li><li>scan_code： 扫码 </li><li>lucky_draw： 抽奖 </li><li>task： 做任务 </li><li>invitation： 邀请 </li><li>claim_red_packet： 领红包 </li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
- * @method void setEventCode(string $EventCode) 设置<p>事件码。用于指定业务接入的场景节点。</p><p> 账号保护产品下的标准事件包含：</p><ul><li> login： 登录<p></p></li> <li>register： 注册 </li><li>sms： 短信 </li><li>logout： 登出 </li><li>modify_account： 修改账号 </li><li>modify_password： 修改密码 </li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单 </li><li>transaction： 交易支付 </li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参加营销活动 </li><li>redeem： 兑奖 </li><li>withdraw： 提现 </li><li>cust_event： 自定义事件，cust_xxx </li><li>scan_code： 扫码 </li><li>lucky_draw： 抽奖 </li><li>task： 做任务 </li><li>invitation： 邀请 </li><li>claim_red_packet： 领红包 </li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
+ * @method string getEventCode() 获取<p>事件码。用于指定业务接入的场景节点。</p><p>账号保护产品下的标准事件包含：</p><ul><li>login： 登录</li><li>register： 注册（创建账户）</li><li>sms： 短信</li><li>logout： 登出</li><li>modify_account： 修改账号</li><li>modify_password： 修改密码</li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单</li><li>transaction： 交易支付</li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参与营销活动</li><li>redeem： 兑奖</li><li>withdraw： 提现</li><li>scan_code： 扫码</li><li>task： 做任务</li><li>claim_red_packet： 领红包</li><li>lucky_draw： 抽奖</li><li>invitation： 邀请</li><li>browse： 浏览</li></ul><p>社群保护产品下的标准事件包含：</p><ul><li>chat： 聊天消息</li><li>modify_role： 编辑角色资料</li><li>add_friend： 添加好友</li><li>modify_guild： 编辑公会资料</li></ul><p>自定义事件以 cust_ 为前缀，可与 RCE 约定后进行风险评估。</p>
+ * @method void setEventCode(string $EventCode) 设置<p>事件码。用于指定业务接入的场景节点。</p><p>账号保护产品下的标准事件包含：</p><ul><li>login： 登录</li><li>register： 注册（创建账户）</li><li>sms： 短信</li><li>logout： 登出</li><li>modify_account： 修改账号</li><li>modify_password： 修改密码</li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单</li><li>transaction： 交易支付</li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参与营销活动</li><li>redeem： 兑奖</li><li>withdraw： 提现</li><li>scan_code： 扫码</li><li>task： 做任务</li><li>claim_red_packet： 领红包</li><li>lucky_draw： 抽奖</li><li>invitation： 邀请</li><li>browse： 浏览</li></ul><p>社群保护产品下的标准事件包含：</p><ul><li>chat： 聊天消息</li><li>modify_role： 编辑角色资料</li><li>add_friend： 添加好友</li><li>modify_guild： 编辑公会资料</li></ul><p>自定义事件以 cust_ 为前缀，可与 RCE 约定后进行风险评估。</p>
  * @method string getEventTime() 获取<p>事件的发生时间</p><p>参数格式：符合ISO 8601标准的带UTC时区的毫秒级时间</p>
  * @method void setEventTime(string $EventTime) 设置<p>事件的发生时间</p><p>参数格式：符合ISO 8601标准的带UTC时区的毫秒级时间</p>
  * @method string getSessionId() 获取<p>用户当前会话 ID， 用于关联用户登录前后的动作，如果没有传UserId，则SessionId必传，如缺失则可填充空字符串</p>
@@ -52,11 +52,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQQOpenId(string $QQOpenId) 设置<p>QQ开放账号</p>
  * @method string getQQAppId() 获取<p>QQ应用ID，当传入QQ开放账号时，该字段必填，QQ分配给网站或应用的AppId，用来唯一标识网站或应用</p>
  * @method void setQQAppId(string $QQAppId) 设置<p>QQ应用ID，当传入QQ开放账号时，该字段必填，QQ分配给网站或应用的AppId，用来唯一标识网站或应用</p>
+ * @method string getBusinessId() 获取<p>业务序列号，您系统中一次业务动作的流水号</p>
+ * @method void setBusinessId(string $BusinessId) 设置<p>业务序列号，您系统中一次业务动作的流水号</p>
  */
 class AssessRiskRequest extends AbstractModel
 {
     /**
-     * @var string <p>事件码。用于指定业务接入的场景节点。</p><p> 账号保护产品下的标准事件包含：</p><ul><li> login： 登录<p></p></li> <li>register： 注册 </li><li>sms： 短信 </li><li>logout： 登出 </li><li>modify_account： 修改账号 </li><li>modify_password： 修改密码 </li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单 </li><li>transaction： 交易支付 </li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参加营销活动 </li><li>redeem： 兑奖 </li><li>withdraw： 提现 </li><li>cust_event： 自定义事件，cust_xxx </li><li>scan_code： 扫码 </li><li>lucky_draw： 抽奖 </li><li>task： 做任务 </li><li>invitation： 邀请 </li><li>claim_red_packet： 领红包 </li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
+     * @var string <p>事件码。用于指定业务接入的场景节点。</p><p>账号保护产品下的标准事件包含：</p><ul><li>login： 登录</li><li>register： 注册（创建账户）</li><li>sms： 短信</li><li>logout： 登出</li><li>modify_account： 修改账号</li><li>modify_password： 修改密码</li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单</li><li>transaction： 交易支付</li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参与营销活动</li><li>redeem： 兑奖</li><li>withdraw： 提现</li><li>scan_code： 扫码</li><li>task： 做任务</li><li>claim_red_packet： 领红包</li><li>lucky_draw： 抽奖</li><li>invitation： 邀请</li><li>browse： 浏览</li></ul><p>社群保护产品下的标准事件包含：</p><ul><li>chat： 聊天消息</li><li>modify_role： 编辑角色资料</li><li>add_friend： 添加好友</li><li>modify_guild： 编辑公会资料</li></ul><p>自定义事件以 cust_ 为前缀，可与 RCE 约定后进行风险评估。</p>
      */
     public $EventCode;
 
@@ -136,7 +138,12 @@ class AssessRiskRequest extends AbstractModel
     public $QQAppId;
 
     /**
-     * @param string $EventCode <p>事件码。用于指定业务接入的场景节点。</p><p> 账号保护产品下的标准事件包含：</p><ul><li> login： 登录<p></p></li> <li>register： 注册 </li><li>sms： 短信 </li><li>logout： 登出 </li><li>modify_account： 修改账号 </li><li>modify_password： 修改密码 </li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单 </li><li>transaction： 交易支付 </li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参加营销活动 </li><li>redeem： 兑奖 </li><li>withdraw： 提现 </li><li>cust_event： 自定义事件，cust_xxx </li><li>scan_code： 扫码 </li><li>lucky_draw： 抽奖 </li><li>task： 做任务 </li><li>invitation： 邀请 </li><li>claim_red_packet： 领红包 </li><li>browse： 浏览</li></ul><p>自定义事件可与RCE约定后进行风险评估</p>
+     * @var string <p>业务序列号，您系统中一次业务动作的流水号</p>
+     */
+    public $BusinessId;
+
+    /**
+     * @param string $EventCode <p>事件码。用于指定业务接入的场景节点。</p><p>账号保护产品下的标准事件包含：</p><ul><li>login： 登录</li><li>register： 注册（创建账户）</li><li>sms： 短信</li><li>logout： 登出</li><li>modify_account： 修改账号</li><li>modify_password： 修改密码</li><li>security_verification： 安全验证</li></ul><p>交易保护产品下的标准事件包含：</p><ul><li>create_order： 创建订单</li><li>transaction： 交易支付</li><li>charge_back： 拒付</li></ul><p>营销保护产品下的标准事件包含：</p><ul><li>add_promotion： 参与营销活动</li><li>redeem： 兑奖</li><li>withdraw： 提现</li><li>scan_code： 扫码</li><li>task： 做任务</li><li>claim_red_packet： 领红包</li><li>lucky_draw： 抽奖</li><li>invitation： 邀请</li><li>browse： 浏览</li></ul><p>社群保护产品下的标准事件包含：</p><ul><li>chat： 聊天消息</li><li>modify_role： 编辑角色资料</li><li>add_friend： 添加好友</li><li>modify_guild： 编辑公会资料</li></ul><p>自定义事件以 cust_ 为前缀，可与 RCE 约定后进行风险评估。</p>
      * @param string $EventTime <p>事件的发生时间</p><p>参数格式：符合ISO 8601标准的带UTC时区的毫秒级时间</p>
      * @param string $SessionId <p>用户当前会话 ID， 用于关联用户登录前后的动作，如果没有传UserId，则SessionId必传，如缺失则可填充空字符串</p>
      * @param string $DeviceToken <p>用户设备指纹token标识，在您的网站或者应用程序中集成设备指纹的SDK后获取</p>
@@ -152,6 +159,7 @@ class AssessRiskRequest extends AbstractModel
      * @param string $WeChatOpenId <p>微信开放账号</p>
      * @param string $QQOpenId <p>QQ开放账号</p>
      * @param string $QQAppId <p>QQ应用ID，当传入QQ开放账号时，该字段必填，QQ分配给网站或应用的AppId，用来唯一标识网站或应用</p>
+     * @param string $BusinessId <p>业务序列号，您系统中一次业务动作的流水号</p>
      */
     function __construct()
     {
@@ -232,6 +240,10 @@ class AssessRiskRequest extends AbstractModel
 
         if (array_key_exists("QQAppId",$param) and $param["QQAppId"] !== null) {
             $this->QQAppId = $param["QQAppId"];
+        }
+
+        if (array_key_exists("BusinessId",$param) and $param["BusinessId"] !== null) {
+            $this->BusinessId = $param["BusinessId"];
         }
     }
 }

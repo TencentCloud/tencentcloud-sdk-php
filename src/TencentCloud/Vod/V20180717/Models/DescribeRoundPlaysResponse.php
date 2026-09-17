@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoundPlays返回参数结构体
  *
- * @method integer getTotalCount() 获取符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
- * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
- * @method array getRoundPlaySet() 获取轮播播单详情列表。
- * @method void setRoundPlaySet(array $RoundPlaySet) 设置轮播播单详情列表。
- * @method string getScrollToken() 获取翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
- * @method void setScrollToken(string $ScrollToken) 设置翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+ * @method integer getTotalCount() 获取<p>符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。</p>
+ * @method array getRoundPlaySet() 获取<p>轮播播单详情列表。</p>
+ * @method void setRoundPlaySet(array $RoundPlaySet) 设置<p>轮播播单详情列表。</p>
+ * @method string getScrollToken() 获取<p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
+ * @method void setScrollToken(string $ScrollToken) 设置<p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRoundPlaysResponse extends AbstractModel
 {
     /**
-     * @var integer 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
+     * @var integer <p>符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。</p>
      * @deprecated
      */
     public $TotalCount;
 
     /**
-     * @var array 轮播播单详情列表。
+     * @var array <p>轮播播单详情列表。</p>
      */
     public $RoundPlaySet;
 
     /**
-     * @var string 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+     * @var string <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
      */
     public $ScrollToken;
 
@@ -53,9 +53,9 @@ class DescribeRoundPlaysResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
-     * @param array $RoundPlaySet 轮播播单详情列表。
-     * @param string $ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+     * @param integer $TotalCount <p>符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。</p>
+     * @param array $RoundPlaySet <p>轮播播单详情列表。</p>
+     * @param string $ScrollToken <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

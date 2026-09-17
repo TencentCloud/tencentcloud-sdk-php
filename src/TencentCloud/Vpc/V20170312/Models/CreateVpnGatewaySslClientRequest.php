@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpnGatewaySslClient请求参数结构体
  *
- * @method string getSslVpnServerId() 获取SSL-VPN-SERVER 实例ID。
- * @method void setSslVpnServerId(string $SslVpnServerId) 设置SSL-VPN-SERVER 实例ID。
- * @method string getSslVpnClientName() 获取SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
- * @method void setSslVpnClientName(string $SslVpnClientName) 设置SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
- * @method array getSslVpnClientNames() 获取SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
- * @method void setSslVpnClientNames(array $SslVpnClientNames) 设置SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
- * @method array getTags() 获取指定绑定的标签列表
- * @method void setTags(array $Tags) 设置指定绑定的标签列表
+ * @method string getSslVpnServerId() 获取<p>SSL-VPN-SERVER 实例ID。</p>
+ * @method void setSslVpnServerId(string $SslVpnServerId) 设置<p>SSL-VPN-SERVER 实例ID。</p>
+ * @method string getSslVpnClientName() 获取<p>SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。</p>
+ * @method void setSslVpnClientName(string $SslVpnClientName) 设置<p>SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。</p>
+ * @method array getSslVpnClientNames() 获取<p>SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。</p>
+ * @method void setSslVpnClientNames(array $SslVpnClientNames) 设置<p>SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。</p>
+ * @method array getTags() 获取<p>指定绑定的标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>指定绑定的标签列表</p>
  */
 class CreateVpnGatewaySslClientRequest extends AbstractModel
 {
     /**
-     * @var string SSL-VPN-SERVER 实例ID。
+     * @var string <p>SSL-VPN-SERVER 实例ID。</p>
      */
     public $SslVpnServerId;
 
     /**
-     * @var string SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
+     * @var string <p>SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。</p>
      */
     public $SslVpnClientName;
 
     /**
-     * @var array SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+     * @var array <p>SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。</p>
      */
     public $SslVpnClientNames;
 
     /**
-     * @var array 指定绑定的标签列表
+     * @var array <p>指定绑定的标签列表</p>
      */
     public $Tags;
 
     /**
-     * @param string $SslVpnServerId SSL-VPN-SERVER 实例ID。
-     * @param string $SslVpnClientName SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
-     * @param array $SslVpnClientNames SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
-     * @param array $Tags 指定绑定的标签列表
+     * @param string $SslVpnServerId <p>SSL-VPN-SERVER 实例ID。</p>
+     * @param string $SslVpnClientName <p>SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。</p>
+     * @param array $SslVpnClientNames <p>SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。</p>
+     * @param array $Tags <p>指定绑定的标签列表</p>
      */
     function __construct()
     {

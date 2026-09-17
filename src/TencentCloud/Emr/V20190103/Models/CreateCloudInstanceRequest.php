@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeResourceGroupIds(array $ComputeResourceGroupIds) 设置<p>已有EMR资源节点组Id列表</p>
  * @method boolean getTerminateProtection() 获取<p>是否开启实例保护</p>
  * @method void setTerminateProtection(boolean $TerminateProtection) 设置<p>是否开启实例保护</p>
+ * @method boolean getEnableEmrProxy() 获取<p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
+ * @method void setEnableEmrProxy(boolean $EnableEmrProxy) 设置<p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
+ * @method string getLogStoreID() 获取<p>日志存储服务实例id</p>
+ * @method void setLogStoreID(string $LogStoreID) 设置<p>日志存储服务实例id</p>
  */
 class CreateCloudInstanceRequest extends AbstractModel
 {
@@ -185,6 +189,16 @@ class CreateCloudInstanceRequest extends AbstractModel
     public $TerminateProtection;
 
     /**
+     * @var boolean <p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
+     */
+    public $EnableEmrProxy;
+
+    /**
+     * @var string <p>日志存储服务实例id</p>
+     */
+    public $LogStoreID;
+
+    /**
      * @param string $InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      * @param string $ClusterClass <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li>
      * @param array $Software <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p>
@@ -208,6 +222,8 @@ class CreateCloudInstanceRequest extends AbstractModel
      * @param EnableSparkAppMonitorInfo $EnableSparkAppMonitorInfo <p>spark监控</p>
      * @param array $ComputeResourceGroupIds <p>已有EMR资源节点组Id列表</p>
      * @param boolean $TerminateProtection <p>是否开启实例保护</p>
+     * @param boolean $EnableEmrProxy <p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
+     * @param string $LogStoreID <p>日志存储服务实例id</p>
      */
     function __construct()
     {
@@ -332,6 +348,14 @@ class CreateCloudInstanceRequest extends AbstractModel
 
         if (array_key_exists("TerminateProtection",$param) and $param["TerminateProtection"] !== null) {
             $this->TerminateProtection = $param["TerminateProtection"];
+        }
+
+        if (array_key_exists("EnableEmrProxy",$param) and $param["EnableEmrProxy"] !== null) {
+            $this->EnableEmrProxy = $param["EnableEmrProxy"];
+        }
+
+        if (array_key_exists("LogStoreID",$param) and $param["LogStoreID"] !== null) {
+            $this->LogStoreID = $param["LogStoreID"];
         }
     }
 }

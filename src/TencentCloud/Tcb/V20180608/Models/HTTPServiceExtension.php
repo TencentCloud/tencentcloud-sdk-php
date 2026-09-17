@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method HTTPServiceHeadersHandler getHeadersHandler() 获取<p>添加请求头列表</p>
  * @method void setHeadersHandler(HTTPServiceHeadersHandler $HeadersHandler) 设置<p>添加请求头列表</p>
- * @method HTTPServiceCacheSet getCache() 获取<p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
- * @method void setCache(HTTPServiceCacheSet $Cache) 设置<p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
+ * @method HTTPServiceCacheSet getCache() 获取<p>HTTPService 缓存配置，仅限自定义域名配置。包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
+ * @method void setCache(HTTPServiceCacheSet $Cache) 设置<p>HTTPService 缓存配置，仅限自定义域名配置。包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
  */
 class HTTPServiceExtension extends AbstractModel
 {
@@ -33,13 +33,13 @@ class HTTPServiceExtension extends AbstractModel
     public $HeadersHandler;
 
     /**
-     * @var HTTPServiceCacheSet <p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
+     * @var HTTPServiceCacheSet <p>HTTPService 缓存配置，仅限自定义域名配置。包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
      */
     public $Cache;
 
     /**
      * @param HTTPServiceHeadersHandler $HeadersHandler <p>添加请求头列表</p>
-     * @param HTTPServiceCacheSet $Cache <p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
+     * @param HTTPServiceCacheSet $Cache <p>HTTPService 缓存配置，仅限自定义域名配置。包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
      */
     function __construct()
     {

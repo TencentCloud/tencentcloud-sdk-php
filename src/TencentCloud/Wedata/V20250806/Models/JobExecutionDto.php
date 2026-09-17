@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultPreviewFilePath(string $ResultPreviewFilePath) 设置预览结果路径
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchemaInfoFilePath() 获取结果集schema信息文件cos路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchemaInfoFilePath(string $SchemaInfoFilePath) 设置结果集schema信息文件cos路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResultTotalCount() 获取任务执行的结果总行数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultTotalCount(integer $ResultTotalCount) 设置任务执行的结果总行数
@@ -95,6 +99,10 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getScriptContentTruncate() 获取是否需要截断脚本内容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScriptContentTruncate(boolean $ScriptContentTruncate) 设置是否需要截断脚本内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getCollectedPreviewResult() 获取预览结果集是否收集完成
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCollectedPreviewResult(boolean $CollectedPreviewResult) 设置预览结果集是否收集完成
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobExecutionDto extends AbstractModel
@@ -160,6 +168,12 @@ class JobExecutionDto extends AbstractModel
     public $ResultPreviewFilePath;
 
     /**
+     * @var string 结果集schema信息文件cos路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SchemaInfoFilePath;
+
+    /**
      * @var integer 任务执行的结果总行数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -214,6 +228,12 @@ class JobExecutionDto extends AbstractModel
     public $ScriptContentTruncate;
 
     /**
+     * @var boolean 预览结果集是否收集完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CollectedPreviewResult;
+
+    /**
      * @param string $JobId 数据探索任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobExecutionId 子查询任务ID
@@ -234,6 +254,8 @@ class JobExecutionDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResultPreviewFilePath 预览结果路径
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchemaInfoFilePath 结果集schema信息文件cos路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResultTotalCount 任务执行的结果总行数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
@@ -251,6 +273,8 @@ class JobExecutionDto extends AbstractModel
      * @param boolean $CollectingTotalResult 是否正在收集全量结果：默认false，true表示正在收集全量结果，用于前端判断是否需要继续轮询
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ScriptContentTruncate 是否需要截断脚本内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $CollectedPreviewResult 预览结果集是否收集完成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -306,6 +330,10 @@ class JobExecutionDto extends AbstractModel
             $this->ResultPreviewFilePath = $param["ResultPreviewFilePath"];
         }
 
+        if (array_key_exists("SchemaInfoFilePath",$param) and $param["SchemaInfoFilePath"] !== null) {
+            $this->SchemaInfoFilePath = $param["SchemaInfoFilePath"];
+        }
+
         if (array_key_exists("ResultTotalCount",$param) and $param["ResultTotalCount"] !== null) {
             $this->ResultTotalCount = $param["ResultTotalCount"];
         }
@@ -340,6 +368,10 @@ class JobExecutionDto extends AbstractModel
 
         if (array_key_exists("ScriptContentTruncate",$param) and $param["ScriptContentTruncate"] !== null) {
             $this->ScriptContentTruncate = $param["ScriptContentTruncate"];
+        }
+
+        if (array_key_exists("CollectedPreviewResult",$param) and $param["CollectedPreviewResult"] !== null) {
+            $this->CollectedPreviewResult = $param["CollectedPreviewResult"];
         }
     }
 }

@@ -92,6 +92,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\CreateMySQLResponse CreateMySQL(Models\CreateMySQLRequest $req) 本接口（CreateMySQL）用于开通Mysql型数据库。
 
 开通后，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询开通结果，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)，可以通过 [RunSql](https://cloud.tencent.com/document/api/876/127880) 接口来执行 sql 命令，比如创建表格、插入数据、删除表格等 sql 命令。
+ * @method Models\CreatePlatformEnvResponse CreatePlatformEnv(Models\CreatePlatformEnvRequest $req) 用户在购买平台版套餐后，可调用此接口创建平台版套餐环境，将产生一个平台版套餐环境。
  * @method Models\CreateStaticStoreResponse CreateStaticStore(Models\CreateStaticStoreRequest $req) 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口(CreateTable)用于创建文档型数据库表，支持创建capped类型集合，暂时不支持分片表。
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建tcb用户
@@ -183,6 +184,38 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 调用该接口前需要先查询Mysql是否开通，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询，只有已开通的才能查到集群信息，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)，可以通过 [RunSql](https://cloud.tencent.com/document/api/876/127880) 接口来执行 MySql 命令，比如创建表格、插入数据、删除表格等 MySql 命令。
  * @method Models\DescribeMySQLTaskStatusResponse DescribeMySQLTaskStatus(Models\DescribeMySQLTaskStatusRequest $req) 本接口（DescribeMySQLTaskStatus）用于查询Mysql任务状态。
  * @method Models\DescribePGUserMigrationResponse DescribePGUserMigration(Models\DescribePGUserMigrationRequest $req) 本接口（DescribePGUserMigration）用于查询目标环境指定 migration 详情。
+ * @method Models\DescribePlatformAccountCircleResponse DescribePlatformAccountCircle(Models\DescribePlatformAccountCircleRequest $req) 查询平台版资源计费周期。
+云开发平台版资源点都是按月结算的，每个月都有一定的抵扣额度。
+
+例如：
+  某个平台版在 2026-01-05 购买了3个月(到期时间: 2026-04-05)，则他可以在以下3个周期内，分别享有40000资源点的额度：
+  1. 2026-01-05 ~ 2026-02-05 23:59:59
+  2. 2026-02-06 ~ 2026-03-05 23:59:59
+  3. 2026-03-06 ~ 2026-04-05 23:59:59
+
+本接口，用于获取平台版当前属于哪个计费周期内。
+
+影响范围：只读查询，不影响平台版资源
+使用场景：控制台资源用量页面/API 主动查询当前计费周期等
+ * @method Models\DescribePlatformCreditsUsageResponse DescribePlatformCreditsUsage(Models\DescribePlatformCreditsUsageRequest $req) 查询平台版本资源点模式下的资源点用量
+ * @method Models\DescribePlatformCreditsUsageDetailResponse DescribePlatformCreditsUsageDetail(Models\DescribePlatformCreditsUsageDetailRequest $req) 查询平台版资源点模式下的资源点用量及原始用量明细
+ * @method Models\DescribePlatformEnvUsageResponse DescribePlatformEnvUsage(Models\DescribePlatformEnvUsageRequest $req) 查询平台版环境资源用量
+
+指定查询范围，按资源类型返回各资源指标的用量及用量明细(按天)
+用量信息包含资源点用量，原始用量值（如流量、调用次数、容量等），原始用量单位等
+
+影响范围：只读查询、不改变资源
+使用场景：控制台用量页/API 查询平台版环境用量
+ * @method Models\DescribePlatformsResponse DescribePlatforms(Models\DescribePlatformsRequest $req) 查询平台版资源信息列表，返回信息包括
+
+1.平台版基础信息如资源id，所属地域等;
+2.计费相关信息如：购买/过期时间，资源规格，计费状态等; 
+3.底层资源信息如：存储，日志，静态托管等资源信息等;
+
+入参支持platformIds，可查询指定平台版套餐信息
+
+影响范围：查询接口，返回当前用户账号下平台版资源信息
+使用场景：控制台展示平台版套餐信息/查平台版资源详情/资源状态
  * @method Models\DescribeQuotaDataResponse DescribeQuotaData(Models\DescribeQuotaDataRequest $req) 查询指定指标的配额使用量
  * @method Models\DescribeResourcePermissionResponse DescribeResourcePermission(Models\DescribeResourcePermissionRequest $req) 查询资源基础权限。
 
@@ -208,6 +241,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DestroyMySQLResponse DestroyMySQL(Models\DestroyMySQLRequest $req) 本接口（DestroyMySQL）用于销毁Mysql。
 
 销毁后可以通过 [DescribeMySQLTaskStatus](https://cloud.tencent.com/document/api/876/128183) 接口查询销毁结果，如果 `Response.Data. Status = FAILED ` 表示销毁失败，可以重新调用销毁接口重试。
+ * @method Models\DestroyPlatformEnvResponse DestroyPlatformEnv(Models\DestroyPlatformEnvRequest $req) 用户可以调用本接口，删除平台版套餐下的指定平台版环境。
  * @method Models\DestroyStaticStoreResponse DestroyStaticStore(Models\DestroyStaticStoreRequest $req) 销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
  * @method Models\DownloadFunctionResponse DownloadFunction(Models\DownloadFunctionRequest $req) 获取云函数地址并下载zip包
  * @method Models\ExecutePGSqlResponse ExecutePGSql(Models\ExecutePGSqlRequest $req) 在Postgres数据库上执行SQL
@@ -231,6 +265,7 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
  * @method Models\ModifyLoginConfigResponse ModifyLoginConfig(Models\ModifyLoginConfigRequest $req) 修改指定云开发环境的登录策略配置。支持开启或关闭手机号短信登录、邮箱登录、用户名密码登录和匿名登录，同时可配置短信验证码发送通道、MFA 多因子认证和密码更新策略。
 修改后立即生效，影响该环境下所有终端用户的登录行为。
  * @method Models\ModifyPGInstanceSpecResponse ModifyPGInstanceSpec(Models\ModifyPGInstanceSpecRequest $req) 对 PG 独享实例变配
+ * @method Models\ModifyPlatformEnvResponse ModifyPlatformEnv(Models\ModifyPlatformEnvRequest $req) 修改平台版环境信息
  * @method Models\ModifyProviderResponse ModifyProvider(Models\ModifyProviderRequest $req) 修改身份认证源。更新指定云开发环境下已有身份认证源的配置信息，支持修改基本信息（名称、图标、描述）、协议连接配置（ClientId、ClientSecret、端点地址等）、登录行为控制（透传模式、自动注册、邮箱/手机号自动关联）以及启用状态。
 对于 OIDC 类型身份源，修改 Issuer 后将自动通过 OpenID Connect Discovery 重新获取端点配置。
 若自定义登录（CUSTOM）或邮箱登录（EMAIL）身份源尚不存在，调用该接口时将自动创建。

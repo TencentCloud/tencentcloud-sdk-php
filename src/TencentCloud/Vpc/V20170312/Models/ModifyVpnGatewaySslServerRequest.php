@@ -20,106 +20,107 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVpnGatewaySslServer请求参数结构体
  *
- * @method string getSslVpnServerId() 获取SSL-VPN SERVER 实例ID
- * @method void setSslVpnServerId(string $SslVpnServerId) 设置SSL-VPN SERVER 实例ID
- * @method string getSslVpnServerName() 获取SSL-VPN SERVER NAME
- * @method void setSslVpnServerName(string $SslVpnServerName) 设置SSL-VPN SERVER NAME
- * @method array getLocalAddress() 获取本端地址
- * @method void setLocalAddress(array $LocalAddress) 设置本端地址
- * @method string getRemoteAddress() 获取客户端地址
- * @method void setRemoteAddress(string $RemoteAddress) 设置客户端地址
- * @method string getSslVpnProtocol() 获取SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
- * @method void setSslVpnProtocol(string $SslVpnProtocol) 设置SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
- * @method integer getSslVpnPort() 获取SSL VPN服务端监听协议端口。
- * @method void setSslVpnPort(integer $SslVpnPort) 设置SSL VPN服务端监听协议端口。
- * @method string getEncryptAlgorithm() 获取加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
- * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
- * @method string getIntegrityAlgorithm() 获取认证算法。可选 'SHA1'，默认SHA1。
- * @method void setIntegrityAlgorithm(string $IntegrityAlgorithm) 设置认证算法。可选 'SHA1'，默认SHA1。
- * @method boolean getCompress() 获取是否支持压缩。当前不支持压缩。默认False。
- * @method void setCompress(boolean $Compress) 设置是否支持压缩。当前不支持压缩。默认False。
- * @method boolean getSsoEnabled() 获取是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
- * @method void setSsoEnabled(boolean $SsoEnabled) 设置是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
- * @method string getSamlData() 获取SAML-DATA
- * @method void setSamlData(string $SamlData) 设置SAML-DATA
- * @method DnsServers getDnsServers() 获取DNS Server地址
- * @method void setDnsServers(DnsServers $DnsServers) 设置DNS Server地址
+ * @method string getSslVpnServerId() 获取<p>SSL-VPN SERVER 实例ID</p>
+ * @method void setSslVpnServerId(string $SslVpnServerId) 设置<p>SSL-VPN SERVER 实例ID</p>
+ * @method string getSslVpnServerName() 获取<p>SSL-VPN SERVER NAME</p>
+ * @method void setSslVpnServerName(string $SslVpnServerName) 设置<p>SSL-VPN SERVER NAME</p>
+ * @method array getLocalAddress() 获取<p>本端地址</p>
+ * @method void setLocalAddress(array $LocalAddress) 设置<p>本端地址</p>
+ * @method string getRemoteAddress() 获取<p>客户端地址</p>
+ * @method void setRemoteAddress(string $RemoteAddress) 设置<p>客户端地址</p>
+ * @method string getSslVpnProtocol() 获取<p>SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP</p>
+ * @method void setSslVpnProtocol(string $SslVpnProtocol) 设置<p>SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP</p>
+ * @method integer getSslVpnPort() 获取<p>SSL VPN服务端监听协议端口。</p>
+ * @method void setSslVpnPort(integer $SslVpnPort) 设置<p>SSL VPN服务端监听协议端口。</p>
+ * @method string getEncryptAlgorithm() 获取<p>加密算法。可选值 &#39;AES-128-CBC&#39;, &#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;, 默认AES-128-CBC。</p>
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置<p>加密算法。可选值 &#39;AES-128-CBC&#39;, &#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;, 默认AES-128-CBC。</p>
+ * @method string getIntegrityAlgorithm() 获取<p>认证算法。可选 &#39;SHA1&#39;, &#39;MD5&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39;，默认SHA1。</p>
+ * @method void setIntegrityAlgorithm(string $IntegrityAlgorithm) 设置<p>认证算法。可选 &#39;SHA1&#39;, &#39;MD5&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39;，默认SHA1。</p>
+ * @method boolean getCompress() 获取<p>是否支持压缩。当前不支持压缩。默认False。</p>
+ * @method void setCompress(boolean $Compress) 设置<p>是否支持压缩。当前不支持压缩。默认False。</p>
+ * @method boolean getSsoEnabled() 获取<p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
+ * @method void setSsoEnabled(boolean $SsoEnabled) 设置<p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
+ * @method string getSamlData() 获取<p>SAML-DATA</p>
+ * @method void setSamlData(string $SamlData) 设置<p>SAML-DATA</p>
+ * @method DnsServers getDnsServers() 获取<p>DNS Server地址</p>
+ * @method void setDnsServers(DnsServers $DnsServers) 设置<p>DNS Server地址</p>
  */
 class ModifyVpnGatewaySslServerRequest extends AbstractModel
 {
     /**
-     * @var string SSL-VPN SERVER 实例ID
+     * @var string <p>SSL-VPN SERVER 实例ID</p>
      */
     public $SslVpnServerId;
 
     /**
-     * @var string SSL-VPN SERVER NAME
+     * @var string <p>SSL-VPN SERVER NAME</p>
      */
     public $SslVpnServerName;
 
     /**
-     * @var array 本端地址
+     * @var array <p>本端地址</p>
      */
     public $LocalAddress;
 
     /**
-     * @var string 客户端地址
+     * @var string <p>客户端地址</p>
      */
     public $RemoteAddress;
 
     /**
-     * @var string SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
+     * @var string <p>SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP</p>
+     * @deprecated
      */
     public $SslVpnProtocol;
 
     /**
-     * @var integer SSL VPN服务端监听协议端口。
+     * @var integer <p>SSL VPN服务端监听协议端口。</p>
      */
     public $SslVpnPort;
 
     /**
-     * @var string 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
+     * @var string <p>加密算法。可选值 &#39;AES-128-CBC&#39;, &#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;, 默认AES-128-CBC。</p>
      */
     public $EncryptAlgorithm;
 
     /**
-     * @var string 认证算法。可选 'SHA1'，默认SHA1。
+     * @var string <p>认证算法。可选 &#39;SHA1&#39;, &#39;MD5&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39;，默认SHA1。</p>
      */
     public $IntegrityAlgorithm;
 
     /**
-     * @var boolean 是否支持压缩。当前不支持压缩。默认False。
+     * @var boolean <p>是否支持压缩。当前不支持压缩。默认False。</p>
      */
     public $Compress;
 
     /**
-     * @var boolean 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
+     * @var boolean <p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
      */
     public $SsoEnabled;
 
     /**
-     * @var string SAML-DATA
+     * @var string <p>SAML-DATA</p>
      */
     public $SamlData;
 
     /**
-     * @var DnsServers DNS Server地址
+     * @var DnsServers <p>DNS Server地址</p>
      */
     public $DnsServers;
 
     /**
-     * @param string $SslVpnServerId SSL-VPN SERVER 实例ID
-     * @param string $SslVpnServerName SSL-VPN SERVER NAME
-     * @param array $LocalAddress 本端地址
-     * @param string $RemoteAddress 客户端地址
-     * @param string $SslVpnProtocol SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
-     * @param integer $SslVpnPort SSL VPN服务端监听协议端口。
-     * @param string $EncryptAlgorithm 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
-     * @param string $IntegrityAlgorithm 认证算法。可选 'SHA1'，默认SHA1。
-     * @param boolean $Compress 是否支持压缩。当前不支持压缩。默认False。
-     * @param boolean $SsoEnabled 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
-     * @param string $SamlData SAML-DATA
-     * @param DnsServers $DnsServers DNS Server地址
+     * @param string $SslVpnServerId <p>SSL-VPN SERVER 实例ID</p>
+     * @param string $SslVpnServerName <p>SSL-VPN SERVER NAME</p>
+     * @param array $LocalAddress <p>本端地址</p>
+     * @param string $RemoteAddress <p>客户端地址</p>
+     * @param string $SslVpnProtocol <p>SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP</p>
+     * @param integer $SslVpnPort <p>SSL VPN服务端监听协议端口。</p>
+     * @param string $EncryptAlgorithm <p>加密算法。可选值 &#39;AES-128-CBC&#39;, &#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;, 默认AES-128-CBC。</p>
+     * @param string $IntegrityAlgorithm <p>认证算法。可选 &#39;SHA1&#39;, &#39;MD5&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39;，默认SHA1。</p>
+     * @param boolean $Compress <p>是否支持压缩。当前不支持压缩。默认False。</p>
+     * @param boolean $SsoEnabled <p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
+     * @param string $SamlData <p>SAML-DATA</p>
+     * @param DnsServers $DnsServers <p>DNS Server地址</p>
      */
     function __construct()
     {

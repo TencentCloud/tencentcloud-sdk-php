@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AIGC 生视频任务的用量。
  *
- * @method integer getInputTokens() 获取<p>输入 Token 数目。</p>
- * @method void setInputTokens(integer $InputTokens) 设置<p>输入 Token 数目。</p>
- * @method integer getThoughtTokens() 获取<p>思考产生的 Token 数目。</p>
- * @method void setThoughtTokens(integer $ThoughtTokens) 设置<p>思考产生的 Token 数目。</p>
- * @method integer getInputImageCount() 获取<p>输入图片数目。</p>
- * @method void setInputImageCount(integer $InputImageCount) 设置<p>输入图片数目。</p>
- * @method integer getInputSeconds() 获取<p>输入视频的时长。</p><p>单位：秒。</p>
- * @method void setInputSeconds(integer $InputSeconds) 设置<p>输入视频的时长。</p><p>单位：秒。</p>
- * @method integer getOutputSeconds() 获取<p>输出视频时长。</p><p>单位：秒。</p>
- * @method void setOutputSeconds(integer $OutputSeconds) 设置<p>输出视频时长。</p><p>单位：秒。</p>
- * @method integer getTotalSeconds() 获取<p>输入输出总时长。</p><p>默认值：秒。</p>
- * @method void setTotalSeconds(integer $TotalSeconds) 设置<p>输入输出总时长。</p><p>默认值：秒。</p>
+ * @method integer getInputTokens() 获取<p>输入 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
+ * @method void setInputTokens(integer $InputTokens) 设置<p>输入 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
+ * @method integer getThoughtTokens() 获取<p>思考产生的 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
+ * @method void setThoughtTokens(integer $ThoughtTokens) 设置<p>思考产生的 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
+ * @method integer getInputImageCount() 获取<p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+ * @method void setInputImageCount(integer $InputImageCount) 设置<p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+ * @method integer getInputSeconds() 获取<p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+ * @method void setInputSeconds(integer $InputSeconds) 设置<p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+ * @method integer getOutputSeconds() 获取<p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+ * @method void setOutputSeconds(integer $OutputSeconds) 设置<p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+ * @method integer getTotalSeconds() 获取<p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+ * @method void setTotalSeconds(integer $TotalSeconds) 设置<p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
  */
 class AigcVideoTaskUsage extends AbstractModel
 {
     /**
-     * @var integer <p>输入 Token 数目。</p>
+     * @var integer <p>输入 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
      */
     public $InputTokens;
 
     /**
-     * @var integer <p>思考产生的 Token 数目。</p>
+     * @var integer <p>思考产生的 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
      */
     public $ThoughtTokens;
 
     /**
-     * @var integer <p>输入图片数目。</p>
+     * @var integer <p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
      */
     public $InputImageCount;
 
     /**
-     * @var integer <p>输入视频的时长。</p><p>单位：秒。</p>
+     * @var integer <p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
      */
     public $InputSeconds;
 
     /**
-     * @var integer <p>输出视频时长。</p><p>单位：秒。</p>
+     * @var integer <p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
      */
     public $OutputSeconds;
 
     /**
-     * @var integer <p>输入输出总时长。</p><p>默认值：秒。</p>
+     * @var integer <p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
      */
     public $TotalSeconds;
 
     /**
-     * @param integer $InputTokens <p>输入 Token 数目。</p>
-     * @param integer $ThoughtTokens <p>思考产生的 Token 数目。</p>
-     * @param integer $InputImageCount <p>输入图片数目。</p>
-     * @param integer $InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p>
-     * @param integer $OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p>
-     * @param integer $TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p>
+     * @param integer $InputTokens <p>输入 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
+     * @param integer $ThoughtTokens <p>思考产生的 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
+     * @param integer $InputImageCount <p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * @param integer $InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * @param integer $OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * @param integer $TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
      */
     function __construct()
     {

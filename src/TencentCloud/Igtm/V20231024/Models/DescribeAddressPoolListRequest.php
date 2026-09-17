@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAddressPoolList请求参数结构体
  *
- * @method array getFilters() 获取告警过滤条件：PoolName：地址池名称；MonitorId：监控器id
- * @method void setFilters(array $Filters) 设置告警过滤条件：PoolName：地址池名称；MonitorId：监控器id
- * @method integer getOffset() 获取页数
- * @method void setOffset(integer $Offset) 设置页数
- * @method integer getLimit() 获取每页数
- * @method void setLimit(integer $Limit) 设置每页数
+ * @method array getFilters() 获取<p>告警过滤条件：PoolName：地址池名称；MonitorId：监控器id</p>
+ * @method void setFilters(array $Filters) 设置<p>告警过滤条件：PoolName：地址池名称；MonitorId：监控器id</p>
+ * @method integer getOffset() 获取<p>页数</p>
+ * @method void setOffset(integer $Offset) 设置<p>页数</p>
+ * @method integer getLimit() 获取<p>每页数</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页数</p>
  */
 class DescribeAddressPoolListRequest extends AbstractModel
 {
     /**
-     * @var array 告警过滤条件：PoolName：地址池名称；MonitorId：监控器id
+     * @var array <p>告警过滤条件：PoolName：地址池名称；MonitorId：监控器id</p>
      */
     public $Filters;
 
     /**
-     * @var integer 页数
+     * @var integer <p>页数</p>
      */
     public $Offset;
 
     /**
-     * @var integer 每页数
+     * @var integer <p>每页数</p>
      */
     public $Limit;
 
     /**
-     * @param array $Filters 告警过滤条件：PoolName：地址池名称；MonitorId：监控器id
-     * @param integer $Offset 页数
-     * @param integer $Limit 每页数
+     * @param array $Filters <p>告警过滤条件：PoolName：地址池名称；MonitorId：监控器id</p>
+     * @param integer $Offset <p>页数</p>
+     * @param integer $Limit <p>每页数</p>
      */
     function __construct()
     {

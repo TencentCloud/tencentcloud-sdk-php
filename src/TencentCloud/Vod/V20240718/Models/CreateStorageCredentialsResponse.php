@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStorageCredentials返回参数结构体
  *
- * @method Credentials getCredentials() 获取临时访问凭证。
- * @method void setCredentials(Credentials $Credentials) 设置临时访问凭证。
+ * @method Credentials getCredentials() 获取<p>临时访问凭证。</p>
+ * @method void setCredentials(Credentials $Credentials) 设置<p>临时访问凭证。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateStorageCredentialsResponse extends AbstractModel
 {
     /**
-     * @var Credentials 临时访问凭证。
+     * @var Credentials <p>临时访问凭证。</p>
      */
     public $Credentials;
 
@@ -38,7 +38,7 @@ class CreateStorageCredentialsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Credentials $Credentials 临时访问凭证。
+     * @param Credentials $Credentials <p>临时访问凭证。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

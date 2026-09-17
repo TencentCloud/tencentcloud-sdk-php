@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteWordSamples请求参数结构体
  *
- * @method array getKeywords() 获取关键词，数组长度限制：100 个词。
- * @method void setKeywords(array $Keywords) 设置关键词，数组长度限制：100 个词。
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+ * @method array getKeywords() 获取<p>关键词，数组长度限制：100 个词。</p>
+ * @method void setKeywords(array $Keywords) 设置<p>关键词，数组长度限制：100 个词。</p>
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
  */
 class DeleteWordSamplesRequest extends AbstractModel
 {
     /**
-     * @var array 关键词，数组长度限制：100 个词。
+     * @var array <p>关键词，数组长度限制：100 个词。</p>
      */
     public $Keywords;
 
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @param array $Keywords 关键词，数组长度限制：100 个词。
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @param array $Keywords <p>关键词，数组长度限制：100 个词。</p>
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     function __construct()
     {

@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTimerReport请求参数结构体
  *
- * @method string getTplName() 获取任务名称 不变更为""
- * @method void setTplName(string $TplName) 设置任务名称 不变更为""
- * @method integer getCntTime() 获取执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31
- * @method void setCntTime(integer $CntTime) 设置执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31
- * @method integer getCntCycle() 获取重复周期
- * @method void setCntCycle(integer $CntCycle) 设置重复周期
- * @method string getReceivers() 获取发送目标
- * @method void setReceivers(string $Receivers) 设置发送目标
- * @method integer getCntDay() 获取时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
- * @method void setCntDay(integer $CntDay) 设置时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
- * @method string getCntDate() 获取执行时间 格式15:04 到分钟
- * @method void setCntDate(string $CntDate) 设置执行时间 格式15:04 到分钟
- * @method string getRemark() 获取报告说明
- * @method void setRemark(string $Remark) 设置报告说明
- * @method integer getTemplateId() 获取模版Id
- * @method void setTemplateId(integer $TemplateId) 设置模版Id
- * @method integer getReportType() 获取报表类型
- * @method void setReportType(integer $ReportType) 设置报表类型
- * @method array getAssetsId() 获取关联的资产数组
- * @method void setAssetsId(array $AssetsId) 设置关联的资产数组
- * @method integer getNotification() 获取报表通知 1关闭 2开启 不变更为0
- * @method void setNotification(integer $Notification) 设置报表通知 1关闭 2开启 不变更为0
- * @method integer getMissionStart() 获取任务起停 1:关闭 2:开启 单次报表默认为2
- * @method void setMissionStart(integer $MissionStart) 设置任务起停 1:关闭 2:开启 单次报表默认为2
+ * @method string getTplName() 获取<p>任务名称 不变更为&quot;&quot;</p>
+ * @method void setTplName(string $TplName) 设置<p>任务名称 不变更为&quot;&quot;</p>
+ * @method integer getCntTime() 获取<p>执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31</p>
+ * @method void setCntTime(integer $CntTime) 设置<p>执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31</p>
+ * @method integer getCntCycle() 获取<p>重复周期</p>
+ * @method void setCntCycle(integer $CntCycle) 设置<p>重复周期</p>
+ * @method string getReceivers() 获取<p>发送目标</p>
+ * @method void setReceivers(string $Receivers) 设置<p>发送目标</p>
+ * @method integer getCntDay() 获取<p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
+ * @method void setCntDay(integer $CntDay) 设置<p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
+ * @method string getCntDate() 获取<p>执行时间 格式15:04 到分钟</p>
+ * @method void setCntDate(string $CntDate) 设置<p>执行时间 格式15:04 到分钟</p>
+ * @method string getRemark() 获取<p>报告说明</p>
+ * @method void setRemark(string $Remark) 设置<p>报告说明</p>
+ * @method integer getTemplateId() 获取<p>模板Id</p>
+ * @method void setTemplateId(integer $TemplateId) 设置<p>模板Id</p>
+ * @method integer getReportType() 获取<p>报表类型</p>
+ * @method void setReportType(integer $ReportType) 设置<p>报表类型</p>
+ * @method array getAssetsId() 获取<p>关联的资产数组</p>
+ * @method void setAssetsId(array $AssetsId) 设置<p>关联的资产数组</p>
+ * @method integer getNotification() 获取<p>报表通知 1关闭 2开启 不变更为0</p>
+ * @method void setNotification(integer $Notification) 设置<p>报表通知 1关闭 2开启 不变更为0</p>
+ * @method integer getMissionStart() 获取<p>任务起停 1:关闭 2:开启 单次报表默认为2</p>
+ * @method void setMissionStart(integer $MissionStart) 设置<p>任务起停 1:关闭 2:开启 单次报表默认为2</p>
  */
 class CreateTimerReportRequest extends AbstractModel
 {
     /**
-     * @var string 任务名称 不变更为""
+     * @var string <p>任务名称 不变更为&quot;&quot;</p>
      */
     public $TplName;
 
     /**
-     * @var integer 执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31
+     * @var integer <p>执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31</p>
      */
     public $CntTime;
 
     /**
-     * @var integer 重复周期
+     * @var integer <p>重复周期</p>
      */
     public $CntCycle;
 
     /**
-     * @var string 发送目标
+     * @var string <p>发送目标</p>
      */
     public $Receivers;
 
     /**
-     * @var integer 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+     * @var integer <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
      */
     public $CntDay;
 
     /**
-     * @var string 执行时间 格式15:04 到分钟
+     * @var string <p>执行时间 格式15:04 到分钟</p>
      */
     public $CntDate;
 
     /**
-     * @var string 报告说明
+     * @var string <p>报告说明</p>
      */
     public $Remark;
 
     /**
-     * @var integer 模版Id
+     * @var integer <p>模板Id</p>
      */
     public $TemplateId;
 
     /**
-     * @var integer 报表类型
+     * @var integer <p>报表类型</p>
      */
     public $ReportType;
 
     /**
-     * @var array 关联的资产数组
+     * @var array <p>关联的资产数组</p>
      */
     public $AssetsId;
 
     /**
-     * @var integer 报表通知 1关闭 2开启 不变更为0
+     * @var integer <p>报表通知 1关闭 2开启 不变更为0</p>
      */
     public $Notification;
 
     /**
-     * @var integer 任务起停 1:关闭 2:开启 单次报表默认为2
+     * @var integer <p>任务起停 1:关闭 2:开启 单次报表默认为2</p>
      */
     public $MissionStart;
 
     /**
-     * @param string $TplName 任务名称 不变更为""
-     * @param integer $CntTime 执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31
-     * @param integer $CntCycle 重复周期
-     * @param string $Receivers 发送目标
-     * @param integer $CntDay 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-     * @param string $CntDate 执行时间 格式15:04 到分钟
-     * @param string $Remark 报告说明
-     * @param integer $TemplateId 模版Id
-     * @param integer $ReportType 报表类型
-     * @param array $AssetsId 关联的资产数组
-     * @param integer $Notification 报表通知 1关闭 2开启 不变更为0
-     * @param integer $MissionStart 任务起停 1:关闭 2:开启 单次报表默认为2
+     * @param string $TplName <p>任务名称 不变更为&quot;&quot;</p>
+     * @param integer $CntTime <p>执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31</p>
+     * @param integer $CntCycle <p>重复周期</p>
+     * @param string $Receivers <p>发送目标</p>
+     * @param integer $CntDay <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
+     * @param string $CntDate <p>执行时间 格式15:04 到分钟</p>
+     * @param string $Remark <p>报告说明</p>
+     * @param integer $TemplateId <p>模板Id</p>
+     * @param integer $ReportType <p>报表类型</p>
+     * @param array $AssetsId <p>关联的资产数组</p>
+     * @param integer $Notification <p>报表通知 1关闭 2开启 不变更为0</p>
+     * @param integer $MissionStart <p>任务起停 1:关闭 2:开启 单次报表默认为2</p>
      */
     function __construct()
     {

@@ -20,130 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 卡证告警信息返回
  *
- * @method integer getBorderCheck() 获取证件边缘是否完整
-0：正常
-1：边缘不完整
- * @method void setBorderCheck(integer $BorderCheck) 设置证件边缘是否完整
-0：正常
-1：边缘不完整
- * @method integer getOcclusionCheck() 获取证件是否被遮挡
-0：正常
-1：有遮挡
- * @method void setOcclusionCheck(integer $OcclusionCheck) 设置证件是否被遮挡
-0：正常
-1：有遮挡
- * @method integer getCopyCheck() 获取是否复印
-0:正常
-1:复印件
- * @method void setCopyCheck(integer $CopyCheck) 设置是否复印
-0:正常
-1:复印件
- * @method integer getReshootCheck() 获取是否屏幕翻拍
-0:正常
-1:翻拍
- * @method void setReshootCheck(integer $ReshootCheck) 设置是否屏幕翻拍
-0:正常
-1:翻拍
- * @method integer getPSCheck() 获取证件是否有PS
-0：正常
-1：有PS
- * @method void setPSCheck(integer $PSCheck) 设置证件是否有PS
-0：正常
-1：有PS
- * @method integer getBlurCheck() 获取是否模糊：
-0:正常
-1:模糊
- * @method void setBlurCheck(integer $BlurCheck) 设置是否模糊：
-0:正常
-1:模糊
- * @method float getBlurScore() 获取模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
- * @method void setBlurScore(float $BlurScore) 设置模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
- * @method integer getElectronCheck() 获取是否电子身份证
-0：否
-1：是电子身份证
- * @method void setElectronCheck(integer $ElectronCheck) 设置是否电子身份证
-0：否
-1：是电子身份证
+ * @method integer getBorderCheck() 获取<p>证件边缘是否完整<br>0：正常<br>1：边缘不完整</p>
+ * @method void setBorderCheck(integer $BorderCheck) 设置<p>证件边缘是否完整<br>0：正常<br>1：边缘不完整</p>
+ * @method integer getOcclusionCheck() 获取<p>证件是否被遮挡<br>0：正常<br>1：有遮挡</p>
+ * @method void setOcclusionCheck(integer $OcclusionCheck) 设置<p>证件是否被遮挡<br>0：正常<br>1：有遮挡</p>
+ * @method integer getCopyCheck() 获取<p>是否复印<br>0:正常<br>1:复印件</p>
+ * @method void setCopyCheck(integer $CopyCheck) 设置<p>是否复印<br>0:正常<br>1:复印件</p>
+ * @method integer getReshootCheck() 获取<p>是否屏幕翻拍<br>0:正常<br>1:翻拍</p>
+ * @method void setReshootCheck(integer $ReshootCheck) 设置<p>是否屏幕翻拍<br>0:正常<br>1:翻拍</p>
+ * @method integer getPSCheck() 获取<p>证件是否有PS<br>0：正常<br>1：有PS</p>
+ * @method void setPSCheck(integer $PSCheck) 设置<p>证件是否有PS<br>0：正常<br>1：有PS</p>
+ * @method integer getBlurCheck() 获取<p>是否模糊：<br>0:正常<br>1:模糊</p>
+ * @method void setBlurCheck(integer $BlurCheck) 设置<p>是否模糊：<br>0:正常<br>1:模糊</p>
+ * @method float getBlurScore() 获取<p>模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5</p>
+ * @method void setBlurScore(float $BlurScore) 设置<p>模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5</p>
+ * @method integer getElectronCheck() 获取<p>是否电子身份证<br>0：否<br>1：是电子身份证</p>
+ * @method void setElectronCheck(integer $ElectronCheck) 设置<p>是否电子身份证<br>0：否<br>1：是电子身份证</p>
+ * @method integer getReflectCheck() 获取<p>是否存在反光</p><p>枚举值：</p><ul><li>0： 正常</li><li>1： 反光</li></ul><p>默认值：0</p>
+ * @method void setReflectCheck(integer $ReflectCheck) 设置<p>是否存在反光</p><p>枚举值：</p><ul><li>0： 正常</li><li>1： 反光</li></ul><p>默认值：0</p>
  */
 class CardWarnInfo extends AbstractModel
 {
     /**
-     * @var integer 证件边缘是否完整
-0：正常
-1：边缘不完整
+     * @var integer <p>证件边缘是否完整<br>0：正常<br>1：边缘不完整</p>
      */
     public $BorderCheck;
 
     /**
-     * @var integer 证件是否被遮挡
-0：正常
-1：有遮挡
+     * @var integer <p>证件是否被遮挡<br>0：正常<br>1：有遮挡</p>
      */
     public $OcclusionCheck;
 
     /**
-     * @var integer 是否复印
-0:正常
-1:复印件
+     * @var integer <p>是否复印<br>0:正常<br>1:复印件</p>
      */
     public $CopyCheck;
 
     /**
-     * @var integer 是否屏幕翻拍
-0:正常
-1:翻拍
+     * @var integer <p>是否屏幕翻拍<br>0:正常<br>1:翻拍</p>
      */
     public $ReshootCheck;
 
     /**
-     * @var integer 证件是否有PS
-0：正常
-1：有PS
+     * @var integer <p>证件是否有PS<br>0：正常<br>1：有PS</p>
      */
     public $PSCheck;
 
     /**
-     * @var integer 是否模糊：
-0:正常
-1:模糊
+     * @var integer <p>是否模糊：<br>0:正常<br>1:模糊</p>
      */
     public $BlurCheck;
 
     /**
-     * @var float 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+     * @var float <p>模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5</p>
      */
     public $BlurScore;
 
     /**
-     * @var integer 是否电子身份证
-0：否
-1：是电子身份证
+     * @var integer <p>是否电子身份证<br>0：否<br>1：是电子身份证</p>
      */
     public $ElectronCheck;
 
     /**
-     * @param integer $BorderCheck 证件边缘是否完整
-0：正常
-1：边缘不完整
-     * @param integer $OcclusionCheck 证件是否被遮挡
-0：正常
-1：有遮挡
-     * @param integer $CopyCheck 是否复印
-0:正常
-1:复印件
-     * @param integer $ReshootCheck 是否屏幕翻拍
-0:正常
-1:翻拍
-     * @param integer $PSCheck 证件是否有PS
-0：正常
-1：有PS
-     * @param integer $BlurCheck 是否模糊：
-0:正常
-1:模糊
-     * @param float $BlurScore 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
-     * @param integer $ElectronCheck 是否电子身份证
-0：否
-1：是电子身份证
+     * @var integer <p>是否存在反光</p><p>枚举值：</p><ul><li>0： 正常</li><li>1： 反光</li></ul><p>默认值：0</p>
+     */
+    public $ReflectCheck;
+
+    /**
+     * @param integer $BorderCheck <p>证件边缘是否完整<br>0：正常<br>1：边缘不完整</p>
+     * @param integer $OcclusionCheck <p>证件是否被遮挡<br>0：正常<br>1：有遮挡</p>
+     * @param integer $CopyCheck <p>是否复印<br>0:正常<br>1:复印件</p>
+     * @param integer $ReshootCheck <p>是否屏幕翻拍<br>0:正常<br>1:翻拍</p>
+     * @param integer $PSCheck <p>证件是否有PS<br>0：正常<br>1：有PS</p>
+     * @param integer $BlurCheck <p>是否模糊：<br>0:正常<br>1:模糊</p>
+     * @param float $BlurScore <p>模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5</p>
+     * @param integer $ElectronCheck <p>是否电子身份证<br>0：否<br>1：是电子身份证</p>
+     * @param integer $ReflectCheck <p>是否存在反光</p><p>枚举值：</p><ul><li>0： 正常</li><li>1： 反光</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -188,6 +140,10 @@ class CardWarnInfo extends AbstractModel
 
         if (array_key_exists("ElectronCheck",$param) and $param["ElectronCheck"] !== null) {
             $this->ElectronCheck = $param["ElectronCheck"];
+        }
+
+        if (array_key_exists("ReflectCheck",$param) and $param["ReflectCheck"] !== null) {
+            $this->ReflectCheck = $param["ReflectCheck"];
         }
     }
 }

@@ -20,156 +20,141 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeListenerDetail返回参数结构体
  *
- * @method array getCaCertificateIds() 获取监听器绑定的CA证书ID列表。
- * @method void setCaCertificateIds(array $CaCertificateIds) 设置监听器绑定的CA证书ID列表。
- * @method boolean getCaEnabled() 获取是否开启双向认证。
- * @method void setCaEnabled(boolean $CaEnabled) 设置是否开启双向认证。
- * @method array getCertificateIds() 获取服务器证书 ID 列表。
- * @method void setCertificateIds(array $CertificateIds) 设置服务器证书 ID 列表。
- * @method string getCreateTime() 获取监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
- * @method void setCreateTime(string $CreateTime) 设置监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
- * @method array getDefaultActions() 获取规则动作列表。
- * @method void setDefaultActions(array $DefaultActions) 设置规则动作列表。
- * @method boolean getGzipEnabled() 获取是否启用 Gzip 压缩。
- * @method void setGzipEnabled(boolean $GzipEnabled) 设置是否启用 Gzip 压缩。
- * @method boolean getHttp2Enabled() 获取是否开启HTTP/2特性。
- * @method void setHttp2Enabled(boolean $Http2Enabled) 设置是否开启HTTP/2特性。
- * @method integer getIdleTimeout() 获取指定连接空闲超时时间。单位：秒。
- * @method void setIdleTimeout(integer $IdleTimeout) 设置指定连接空闲超时时间。单位：秒。
- * @method string getListenerId() 获取监听器 ID，格式为 lst- 后接 8 位字母数字。
- * @method void setListenerId(string $ListenerId) 设置监听器 ID，格式为 lst- 后接 8 位字母数字。
- * @method string getListenerName() 获取自定义监听名称。
- * @method void setListenerName(string $ListenerName) 设置自定义监听名称。
- * @method integer getListenerPort() 获取负载均衡实例前端使用的端口。
- * @method void setListenerPort(integer $ListenerPort) 设置负载均衡实例前端使用的端口。
- * @method string getListenerProtocol() 获取监听协议。
- * @method void setListenerProtocol(string $ListenerProtocol) 设置监听协议。
- * @method string getListenerStatus() 获取监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
- * @method void setListenerStatus(string $ListenerStatus) 设置监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
- * @method string getLoadBalancerId() 获取负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
- * @method string getModifyTime() 获取监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
- * @method void setModifyTime(string $ModifyTime) 设置监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
- * @method integer getRequestTimeout() 获取请求超时时间。单位：秒。
- * @method void setRequestTimeout(integer $RequestTimeout) 设置请求超时时间。单位：秒。
- * @method string getSecurityPolicyId() 获取安全策略 ID，格式为 tls- 后接 8 位字母数字。
- * @method void setSecurityPolicyId(string $SecurityPolicyId) 设置安全策略 ID，格式为 tls- 后接 8 位字母数字。
- * @method array getTags() 获取标签。
- * @method void setTags(array $Tags) 设置标签。
- * @method XForwardedForConfig getXForwardedForConfig() 获取XForwardedFor配置。
- * @method void setXForwardedForConfig(XForwardedForConfig $XForwardedForConfig) 设置XForwardedFor配置。
+ * @method array getCaCertificateIds() 获取<p>监听器绑定的CA证书ID列表。</p>
+ * @method void setCaCertificateIds(array $CaCertificateIds) 设置<p>监听器绑定的CA证书ID列表。</p>
+ * @method boolean getCaEnabled() 获取<p>是否开启双向认证。</p>
+ * @method void setCaEnabled(boolean $CaEnabled) 设置<p>是否开启双向认证。</p>
+ * @method array getCertificateIds() 获取<p>服务器证书 ID 列表。</p>
+ * @method void setCertificateIds(array $CertificateIds) 设置<p>服务器证书 ID 列表。</p>
+ * @method string getCreateTime() 获取<p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+ * @method array getDefaultActions() 获取<p>规则动作列表。</p>
+ * @method void setDefaultActions(array $DefaultActions) 设置<p>规则动作列表。</p>
+ * @method boolean getGzipEnabled() 获取<p>是否启用 Gzip 压缩。</p>
+ * @method void setGzipEnabled(boolean $GzipEnabled) 设置<p>是否启用 Gzip 压缩。</p>
+ * @method boolean getHttp2Enabled() 获取<p>是否开启HTTP/2特性。</p>
+ * @method void setHttp2Enabled(boolean $Http2Enabled) 设置<p>是否开启HTTP/2特性。</p>
+ * @method integer getIdleTimeout() 获取<p>指定连接空闲超时时间。单位：秒。</p>
+ * @method void setIdleTimeout(integer $IdleTimeout) 设置<p>指定连接空闲超时时间。单位：秒。</p>
+ * @method string getListenerId() 获取<p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+ * @method string getListenerName() 获取<p>自定义监听名称。</p>
+ * @method void setListenerName(string $ListenerName) 设置<p>自定义监听名称。</p>
+ * @method integer getListenerPort() 获取<p>负载均衡实例前端使用的端口。</p>
+ * @method void setListenerPort(integer $ListenerPort) 设置<p>负载均衡实例前端使用的端口。</p>
+ * @method string getListenerProtocol() 获取<p>监听协议。</p>
+ * @method void setListenerProtocol(string $ListenerProtocol) 设置<p>监听协议。</p>
+ * @method string getListenerStatus() 获取<p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
+ * @method void setListenerStatus(string $ListenerStatus) 设置<p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
+ * @method string getLoadBalancerId() 获取<p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
+ * @method string getModifyTime() 获取<p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+ * @method integer getRequestTimeout() 获取<p>连接请求超时时间。单位：秒。</p>
+ * @method void setRequestTimeout(integer $RequestTimeout) 设置<p>连接请求超时时间。单位：秒。</p>
+ * @method string getSecurityPolicyId() 获取<p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
+ * @method void setSecurityPolicyId(string $SecurityPolicyId) 设置<p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
+ * @method array getTags() 获取<p>标签。</p>
+ * @method void setTags(array $Tags) 设置<p>标签。</p>
+ * @method XForwardedForConfig getXForwardedForConfig() 获取<p>XForwardedFor配置。</p>
+ * @method void setXForwardedForConfig(XForwardedForConfig $XForwardedForConfig) 设置<p>XForwardedFor配置。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeListenerDetailResponse extends AbstractModel
 {
     /**
-     * @var array 监听器绑定的CA证书ID列表。
+     * @var array <p>监听器绑定的CA证书ID列表。</p>
      */
     public $CaCertificateIds;
 
     /**
-     * @var boolean 是否开启双向认证。
+     * @var boolean <p>是否开启双向认证。</p>
      */
     public $CaEnabled;
 
     /**
-     * @var array 服务器证书 ID 列表。
+     * @var array <p>服务器证书 ID 列表。</p>
      */
     public $CertificateIds;
 
     /**
-     * @var string 监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+     * @var string <p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
      */
     public $CreateTime;
 
     /**
-     * @var array 规则动作列表。
+     * @var array <p>规则动作列表。</p>
      */
     public $DefaultActions;
 
     /**
-     * @var boolean 是否启用 Gzip 压缩。
+     * @var boolean <p>是否启用 Gzip 压缩。</p>
      */
     public $GzipEnabled;
 
     /**
-     * @var boolean 是否开启HTTP/2特性。
+     * @var boolean <p>是否开启HTTP/2特性。</p>
      */
     public $Http2Enabled;
 
     /**
-     * @var integer 指定连接空闲超时时间。单位：秒。
+     * @var integer <p>指定连接空闲超时时间。单位：秒。</p>
      */
     public $IdleTimeout;
 
     /**
-     * @var string 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * @var string <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 自定义监听名称。
+     * @var string <p>自定义监听名称。</p>
      */
     public $ListenerName;
 
     /**
-     * @var integer 负载均衡实例前端使用的端口。
+     * @var integer <p>负载均衡实例前端使用的端口。</p>
      */
     public $ListenerPort;
 
     /**
-     * @var string 监听协议。
+     * @var string <p>监听协议。</p>
      */
     public $ListenerProtocol;
 
     /**
-     * @var string 监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
+     * @var string <p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
      */
     public $ListenerStatus;
 
     /**
-     * @var string 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * @var string <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+     * @var string <p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
      */
     public $ModifyTime;
 
     /**
-     * @var integer 请求超时时间。单位：秒。
+     * @var integer <p>连接请求超时时间。单位：秒。</p>
      */
     public $RequestTimeout;
 
     /**
-     * @var string 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+     * @var string <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
      */
     public $SecurityPolicyId;
 
     /**
-     * @var array 标签。
+     * @var array <p>标签。</p>
      */
     public $Tags;
 
     /**
-     * @var XForwardedForConfig XForwardedFor配置。
+     * @var XForwardedForConfig <p>XForwardedFor配置。</p>
      */
     public $XForwardedForConfig;
 
@@ -179,30 +164,25 @@ class DescribeListenerDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CaCertificateIds 监听器绑定的CA证书ID列表。
-     * @param boolean $CaEnabled 是否开启双向认证。
-     * @param array $CertificateIds 服务器证书 ID 列表。
-     * @param string $CreateTime 监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
-     * @param array $DefaultActions 规则动作列表。
-     * @param boolean $GzipEnabled 是否启用 Gzip 压缩。
-     * @param boolean $Http2Enabled 是否开启HTTP/2特性。
-     * @param integer $IdleTimeout 指定连接空闲超时时间。单位：秒。
-     * @param string $ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
-     * @param string $ListenerName 自定义监听名称。
-     * @param integer $ListenerPort 负载均衡实例前端使用的端口。
-     * @param string $ListenerProtocol 监听协议。
-     * @param string $ListenerStatus 监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
-     * @param string $LoadBalancerId 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
-     * @param string $ModifyTime 监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
-     * @param integer $RequestTimeout 请求超时时间。单位：秒。
-     * @param string $SecurityPolicyId 安全策略 ID，格式为 tls- 后接 8 位字母数字。
-     * @param array $Tags 标签。
-     * @param XForwardedForConfig $XForwardedForConfig XForwardedFor配置。
+     * @param array $CaCertificateIds <p>监听器绑定的CA证书ID列表。</p>
+     * @param boolean $CaEnabled <p>是否开启双向认证。</p>
+     * @param array $CertificateIds <p>服务器证书 ID 列表。</p>
+     * @param string $CreateTime <p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+     * @param array $DefaultActions <p>规则动作列表。</p>
+     * @param boolean $GzipEnabled <p>是否启用 Gzip 压缩。</p>
+     * @param boolean $Http2Enabled <p>是否开启HTTP/2特性。</p>
+     * @param integer $IdleTimeout <p>指定连接空闲超时时间。单位：秒。</p>
+     * @param string $ListenerId <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+     * @param string $ListenerName <p>自定义监听名称。</p>
+     * @param integer $ListenerPort <p>负载均衡实例前端使用的端口。</p>
+     * @param string $ListenerProtocol <p>监听协议。</p>
+     * @param string $ListenerStatus <p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
+     * @param string $LoadBalancerId <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
+     * @param string $ModifyTime <p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+     * @param integer $RequestTimeout <p>连接请求超时时间。单位：秒。</p>
+     * @param string $SecurityPolicyId <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
+     * @param array $Tags <p>标签。</p>
+     * @param XForwardedForConfig $XForwardedForConfig <p>XForwardedFor配置。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

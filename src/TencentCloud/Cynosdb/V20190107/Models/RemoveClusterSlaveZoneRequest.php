@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveClusterSlaveZone请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getSlaveZone() 获取从可用区
- * @method void setSlaveZone(string $SlaveZone) 设置从可用区
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getSlaveZone() 获取<p>备可用区</p>
+ * @method void setSlaveZone(string $SlaveZone) 设置<p>备可用区</p>
  */
 class RemoveClusterSlaveZoneRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 从可用区
+     * @var string <p>备可用区</p>
      */
     public $SlaveZone;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $SlaveZone 从可用区
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $SlaveZone <p>备可用区</p>
      */
     function __construct()
     {

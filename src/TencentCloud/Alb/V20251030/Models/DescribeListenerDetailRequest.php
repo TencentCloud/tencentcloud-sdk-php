@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeListenerDetail请求参数结构体
  *
- * @method string getListenerId() 获取监听器 ID，格式为 lst- 后接 8 位字母数字。
- * @method void setListenerId(string $ListenerId) 设置监听器 ID，格式为 lst- 后接 8 位字母数字。
- * @method string getLoadBalancerId() 获取负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+ * @method string getListenerId() 获取<p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+ * @method string getLoadBalancerId() 获取<p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
  */
 class DescribeListenerDetailRequest extends AbstractModel
 {
     /**
-     * @var string 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * @var string <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * @var string <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @param string $ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
-     * @param string $LoadBalancerId 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * @param string $ListenerId <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+     * @param string $LoadBalancerId <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      */
     function __construct()
     {

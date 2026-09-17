@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks返回参数结构体
  *
- * @method array getTaskSet() 获取任务概要列表。
- * @method void setTaskSet(array $TaskSet) 设置任务概要列表。
- * @method string getScrollToken() 获取翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
- * @method void setScrollToken(string $ScrollToken) 设置翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+ * @method array getTaskSet() 获取<p>任务概要列表。</p>
+ * @method void setTaskSet(array $TaskSet) 设置<p>任务概要列表。</p>
+ * @method string getScrollToken() 获取<p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
+ * @method void setScrollToken(string $ScrollToken) 设置<p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTasksResponse extends AbstractModel
 {
     /**
-     * @var array 任务概要列表。
+     * @var array <p>任务概要列表。</p>
      */
     public $TaskSet;
 
     /**
-     * @var string 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+     * @var string <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
      */
     public $ScrollToken;
 
@@ -45,8 +45,8 @@ class DescribeTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TaskSet 任务概要列表。
-     * @param string $ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+     * @param array $TaskSet <p>任务概要列表。</p>
+     * @param string $ScrollToken <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

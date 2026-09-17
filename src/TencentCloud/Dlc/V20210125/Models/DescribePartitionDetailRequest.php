@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePartitionDetail请求参数结构体
  *
- * @method string getPartitionCode() 获取分区编码
- * @method void setPartitionCode(string $PartitionCode) 设置分区编码
+ * @method string getPartitionCode() 获取<p>分区编码</p>
+ * @method void setPartitionCode(string $PartitionCode) 设置<p>分区编码</p>
  */
 class DescribePartitionDetailRequest extends AbstractModel
 {
     /**
-     * @var string 分区编码
+     * @var string <p>分区编码</p>
      */
     public $PartitionCode;
 
     /**
-     * @param string $PartitionCode 分区编码
+     * @param string $PartitionCode <p>分区编码</p>
      */
     function __construct()
     {

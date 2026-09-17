@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfsFileSystems返回参数结构体
  *
- * @method array getFileSystems() 获取文件系统信息
- * @method void setFileSystems(array $FileSystems) 设置文件系统信息
- * @method integer getTotalCount() 获取文件系统总数
- * @method void setTotalCount(integer $TotalCount) 设置文件系统总数
+ * @method array getFileSystems() 获取<p>文件系统信息</p>
+ * @method void setFileSystems(array $FileSystems) 设置<p>文件系统信息</p>
+ * @method integer getTotalCount() 获取<p>文件系统总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>文件系统总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCfsFileSystemsResponse extends AbstractModel
 {
     /**
-     * @var array 文件系统信息
+     * @var array <p>文件系统信息</p>
      */
     public $FileSystems;
 
     /**
-     * @var integer 文件系统总数
+     * @var integer <p>文件系统总数</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeCfsFileSystemsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FileSystems 文件系统信息
-     * @param integer $TotalCount 文件系统总数
+     * @param array $FileSystems <p>文件系统信息</p>
+     * @param integer $TotalCount <p>文件系统总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

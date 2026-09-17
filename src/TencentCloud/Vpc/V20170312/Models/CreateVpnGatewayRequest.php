@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxConnection(integer $MaxConnection) 设置<p>SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；</p><p>单位：个</p><p>默认值：5</p><p>仅 SSL / SSL_CCN 类型需要填这个参数。</p>
  * @method integer getBgpAsn() 获取<p>BGP ASN。</p>
  * @method void setBgpAsn(integer $BgpAsn) 设置<p>BGP ASN。</p>
+ * @method boolean getIsPrivate() 获取<p>是否是私网类型</p>
+ * @method void setIsPrivate(boolean $IsPrivate) 设置<p>是否是私网类型</p>
+ * @method string getSubnetId() 获取<p>私网唯一ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>私网唯一ID</p>
+ * @method boolean getBgpEnable() 获取<p>BGP 开关，开启时需指定BgpAsn。</p>
+ * @method void setBgpEnable(boolean $BgpEnable) 设置<p>BGP 开关，开启时需指定BgpAsn。</p>
+ * @method string getIpStack() 获取<p>内外层IP协议</p><p>枚举值：</p><ul><li>4in4： IPv4 over IPv4</li><li>6in4： IPv6 over IPv4</li><li>6in6： IPv6 over IPv6</li><li>4in6： IPv4 over IPv6</li></ul><p>默认值：4in4</p>
+ * @method void setIpStack(string $IpStack) 设置<p>内外层IP协议</p><p>枚举值：</p><ul><li>4in4： IPv4 over IPv4</li><li>6in4： IPv6 over IPv4</li><li>6in6： IPv6 over IPv6</li><li>4in6： IPv4 over IPv6</li></ul><p>默认值：4in4</p>
+ * @method string getAccessSubnet() 获取<p>CCN类型私网VPN接入网段</p>
+ * @method void setAccessSubnet(string $AccessSubnet) 设置<p>CCN类型私网VPN接入网段</p>
  */
 class CreateVpnGatewayRequest extends AbstractModel
 {
@@ -72,6 +82,7 @@ class CreateVpnGatewayRequest extends AbstractModel
 
     /**
      * @var string <p>可用区，如：ap-guangzhou-2。</p>
+     * @deprecated
      */
     public $Zone;
 
@@ -101,6 +112,31 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $BgpAsn;
 
     /**
+     * @var boolean <p>是否是私网类型</p>
+     */
+    public $IsPrivate;
+
+    /**
+     * @var string <p>私网唯一ID</p>
+     */
+    public $SubnetId;
+
+    /**
+     * @var boolean <p>BGP 开关，开启时需指定BgpAsn。</p>
+     */
+    public $BgpEnable;
+
+    /**
+     * @var string <p>内外层IP协议</p><p>枚举值：</p><ul><li>4in4： IPv4 over IPv4</li><li>6in4： IPv6 over IPv4</li><li>6in6： IPv6 over IPv6</li><li>4in6： IPv4 over IPv6</li></ul><p>默认值：4in4</p>
+     */
+    public $IpStack;
+
+    /**
+     * @var string <p>CCN类型私网VPN接入网段</p>
+     */
+    public $AccessSubnet;
+
+    /**
      * @param string $VpcId <p>VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>。接口返回值中的VpcId获取</p><p>入参限制：当Type为CCN/SSL_CCN 类型时传 &quot;&quot;，IPSEC/SSL 类型必须传对应VPC实例ID。</p>
      * @param string $VpnGatewayName <p>VPN网关名称，最大长度不能超过60个字节。</p>
      * @param integer $InternetMaxBandwidthOut <p>公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。</p>
@@ -112,6 +148,11 @@ class CreateVpnGatewayRequest extends AbstractModel
      * @param string $CdcId <p>CDC实例ID。</p>
      * @param integer $MaxConnection <p>SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；</p><p>单位：个</p><p>默认值：5</p><p>仅 SSL / SSL_CCN 类型需要填这个参数。</p>
      * @param integer $BgpAsn <p>BGP ASN。</p>
+     * @param boolean $IsPrivate <p>是否是私网类型</p>
+     * @param string $SubnetId <p>私网唯一ID</p>
+     * @param boolean $BgpEnable <p>BGP 开关，开启时需指定BgpAsn。</p>
+     * @param string $IpStack <p>内外层IP协议</p><p>枚举值：</p><ul><li>4in4： IPv4 over IPv4</li><li>6in4： IPv6 over IPv4</li><li>6in6： IPv6 over IPv6</li><li>4in6： IPv4 over IPv6</li></ul><p>默认值：4in4</p>
+     * @param string $AccessSubnet <p>CCN类型私网VPN接入网段</p>
      */
     function __construct()
     {
@@ -174,6 +215,26 @@ class CreateVpnGatewayRequest extends AbstractModel
 
         if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
             $this->BgpAsn = $param["BgpAsn"];
+        }
+
+        if (array_key_exists("IsPrivate",$param) and $param["IsPrivate"] !== null) {
+            $this->IsPrivate = $param["IsPrivate"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("BgpEnable",$param) and $param["BgpEnable"] !== null) {
+            $this->BgpEnable = $param["BgpEnable"];
+        }
+
+        if (array_key_exists("IpStack",$param) and $param["IpStack"] !== null) {
+            $this->IpStack = $param["IpStack"];
+        }
+
+        if (array_key_exists("AccessSubnet",$param) and $param["AccessSubnet"] !== null) {
+            $this->AccessSubnet = $param["AccessSubnet"];
         }
     }
 }

@@ -92,8 +92,8 @@ use TencentCloud\Billing\V20180709\Models as Models;
 2、子用户使用该接口时，应具备QcloudFinanceRenewManageFullAccess权限策略。
  * @method Models\DescribeSavingPlanResourceInfoResponse DescribeSavingPlanResourceInfo(Models\DescribeSavingPlanResourceInfoRequest $req) 查询节省计划详情
  * @method Models\DescribeTagListResponse DescribeTagList(Models\DescribeTagListRequest $req) 获取分账标签
- * @method Models\DescribeVoucherInfoResponse DescribeVoucherInfo(Models\DescribeVoucherInfoRequest $req) 获取代金券相关信息
- * @method Models\DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(Models\DescribeVoucherUsageDetailsRequest $req) 获取代金券使用记录
+ * @method Models\DescribeVoucherInfoResponse DescribeVoucherInfo(Models\DescribeVoucherInfoRequest $req) 获取近两年的代金券信息。
+ * @method Models\DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(Models\DescribeVoucherUsageDetailsRequest $req) 获取代金券近两年的使用记录。
  * @method Models\ModifyAccountWarningResponse ModifyAccountWarning(Models\ModifyAccountWarningRequest $req) 云api设置余额告警阈值接口
  * @method Models\ModifyAllocationRuleResponse ModifyAllocationRule(Models\ModifyAllocationRuleRequest $req) 编辑公摊规则
  * @method Models\ModifyAllocationUnitResponse ModifyAllocationUnit(Models\ModifyAllocationUnitRequest $req) 修改分账单元信息

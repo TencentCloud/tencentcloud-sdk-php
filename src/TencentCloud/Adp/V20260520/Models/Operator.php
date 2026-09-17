@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通用操作人信息
  *
- * @method string getUserId() 获取<p>用户 ID</p>
- * @method void setUserId(string $UserId) 设置<p>用户 ID</p>
- * @method string getUserName() 获取<p>用户姓名</p>
- * @method void setUserName(string $UserName) 设置<p>用户姓名</p>
+ * @method string getUserId() 获取用户 ID
+ * @method void setUserId(string $UserId) 设置用户 ID
+ * @method string getUserName() 获取用户姓名
+ * @method void setUserName(string $UserName) 设置用户姓名
  */
 class Operator extends AbstractModel
 {
     /**
-     * @var string <p>用户 ID</p>
+     * @var string 用户 ID
      */
     public $UserId;
 
     /**
-     * @var string <p>用户姓名</p>
+     * @var string 用户姓名
      */
     public $UserName;
 
     /**
-     * @param string $UserId <p>用户 ID</p>
-     * @param string $UserName <p>用户姓名</p>
+     * @param string $UserId 用户 ID
+     * @param string $UserName 用户姓名
      */
     function __construct()
     {

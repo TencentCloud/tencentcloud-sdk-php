@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePartitionName(string $ResourcePartitionName) 设置<p>默认资源分区名称</p>
  * @method string getQueue() 获取<p>默认队列名称</p>
  * @method void setQueue(string $Queue) 设置<p>默认队列名称</p>
+ * @method string getQueueAlias() 获取<p>所属队列别名</p>
+ * @method void setQueueAlias(string $QueueAlias) 设置<p>所属队列别名</p>
  * @method string getJobPackage() 获取<p>作业包URL</p>
  * @method void setJobPackage(string $JobPackage) 设置<p>作业包URL</p>
  * @method string getJobPackageName() 获取<p>作业包名称</p>
@@ -184,6 +186,11 @@ class CreateJobSpecResponse extends AbstractModel
     public $Queue;
 
     /**
+     * @var string <p>所属队列别名</p>
+     */
+    public $QueueAlias;
+
+    /**
      * @var string <p>作业包URL</p>
      */
     public $JobPackage;
@@ -308,6 +315,7 @@ class CreateJobSpecResponse extends AbstractModel
      * @param string $ResourcePartitionId <p>默认资源分区ID</p>
      * @param string $ResourcePartitionName <p>默认资源分区名称</p>
      * @param string $Queue <p>默认队列名称</p>
+     * @param string $QueueAlias <p>所属队列别名</p>
      * @param string $JobPackage <p>作业包URL</p>
      * @param string $JobPackageName <p>作业包名称</p>
      * @param string $JobPackageSource <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
@@ -408,6 +416,10 @@ class CreateJobSpecResponse extends AbstractModel
 
         if (array_key_exists("Queue",$param) and $param["Queue"] !== null) {
             $this->Queue = $param["Queue"];
+        }
+
+        if (array_key_exists("QueueAlias",$param) and $param["QueueAlias"] !== null) {
+            $this->QueueAlias = $param["QueueAlias"];
         }
 
         if (array_key_exists("JobPackage",$param) and $param["JobPackage"] !== null) {

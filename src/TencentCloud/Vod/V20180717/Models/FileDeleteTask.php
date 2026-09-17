@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文件删除任务
  *
- * @method array getFileIdSet() 获取删除文件 ID 列表。
- * @method void setFileIdSet(array $FileIdSet) 设置删除文件 ID 列表。
- * @method array getFileDeleteResultInfo() 获取删除文件结果信息列表。
- * @method void setFileDeleteResultInfo(array $FileDeleteResultInfo) 设置删除文件结果信息列表。
+ * @method array getFileIdSet() 获取<p>删除文件 ID 列表。</p>
+ * @method void setFileIdSet(array $FileIdSet) 设置<p>删除文件 ID 列表。</p>
+ * @method array getFileDeleteResultInfo() 获取<p>删除文件结果信息列表。</p>
+ * @method void setFileDeleteResultInfo(array $FileDeleteResultInfo) 设置<p>删除文件结果信息列表。</p>
  */
 class FileDeleteTask extends AbstractModel
 {
     /**
-     * @var array 删除文件 ID 列表。
+     * @var array <p>删除文件 ID 列表。</p>
      */
     public $FileIdSet;
 
     /**
-     * @var array 删除文件结果信息列表。
+     * @var array <p>删除文件结果信息列表。</p>
      */
     public $FileDeleteResultInfo;
 
     /**
-     * @param array $FileIdSet 删除文件 ID 列表。
-     * @param array $FileDeleteResultInfo 删除文件结果信息列表。
+     * @param array $FileIdSet <p>删除文件 ID 列表。</p>
+     * @param array $FileDeleteResultInfo <p>删除文件结果信息列表。</p>
      */
     function __construct()
     {

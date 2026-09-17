@@ -44,6 +44,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
 2，高级模式，在简易模式基础上，支持设定规则，为不同类型的告警分别设定通知渠道，并支持告警升级功能。需填写如下参数：
 - NoticeRules
  * @method Models\CreateAlarmShieldResponse CreateAlarmShield(Models\CreateAlarmShieldRequest $req) 该接口用于创建告警屏蔽规则。
+ * @method Models\CreateCLSDeliverTaskResponse CreateCLSDeliverTask(Models\CreateCLSDeliverTaskRequest $req) 新建CLS投递任务
  * @method Models\CreateCloudProductLogCollectionResponse CreateCloudProductLogCollection(Models\CreateCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建采集规则配置
  * @method Models\CreateConfigExtraResponse CreateConfigExtra(Models\CreateConfigExtraRequest $req) 本接口用于创建特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
@@ -91,6 +92,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) 本接口用于删除告警策略。
  * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) 该接口用于删除通知渠道组
  * @method Models\DeleteAlarmShieldResponse DeleteAlarmShield(Models\DeleteAlarmShieldRequest $req) 该接口用于删除告警屏蔽规则。当告警屏蔽规则在生效中或者是在失效中，无法被删除
+ * @method Models\DeleteCLSDeliverTaskResponse DeleteCLSDeliverTask(Models\DeleteCLSDeliverTaskRequest $req) 删除CLS投递任务
  * @method Models\DeleteCloudProductLogCollectionResponse DeleteCloudProductLogCollection(Models\DeleteCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除采集规则配置
  * @method Models\DeleteConfigExtraResponse DeleteConfigExtra(Models\DeleteConfigExtraRequest $req) 本接口用于删除特殊采集规则配置，特殊采集配置应用于自建K8S环境的采集Agent
@@ -135,6 +137,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DescribeAlarmShieldsResponse DescribeAlarmShields(Models\DescribeAlarmShieldsRequest $req) 获取告警屏蔽配置规则
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) 本接口用于获取告警策略列表。
  * @method Models\DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(Models\DescribeAlertRecordHistoryRequest $req) 获取告警历史，例如今天未恢复的告警
+ * @method Models\DescribeCLSDeliverTasksResponse DescribeCLSDeliverTasks(Models\DescribeCLSDeliverTasksRequest $req) 获取CLS投递任务列表
  * @method Models\DescribeCloudProductLogTasksResponse DescribeCloudProductLogTasks(Models\DescribeCloudProductLogTasksRequest $req) 云产品接入使用相关接口
  * @method Models\DescribeClusterBaseMetricConfigsResponse DescribeClusterBaseMetricConfigs(Models\DescribeClusterBaseMetricConfigsRequest $req) 获取指标订阅配置
  * @method Models\DescribeClusterMetricConfigsResponse DescribeClusterMetricConfigs(Models\DescribeClusterMetricConfigsRequest $req) 获取指标订阅配置
@@ -213,6 +216,7 @@ API 中 Region 填写任意一个地域均可，建议使用广州(ap-guangzhou)
  * @method Models\ModifyAlarmResponse ModifyAlarm(Models\ModifyAlarmRequest $req) 本接口用于修改告警策略。需要至少修改一项有效内容。
  * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 该接口用于修改通知渠道组
  * @method Models\ModifyAlarmShieldResponse ModifyAlarmShield(Models\ModifyAlarmShieldRequest $req) 该接口用于修改告警屏蔽规则。当告警屏蔽规则为失效中时，无法对其进行修改
+ * @method Models\ModifyCLSDeliverTaskResponse ModifyCLSDeliverTask(Models\ModifyCLSDeliverTaskRequest $req) 修改CLS投递任务
  * @method Models\ModifyCloudProductLogCollectionResponse ModifyCloudProductLogCollection(Models\ModifyCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\ModifyConfigResponse ModifyConfig(Models\ModifyConfigRequest $req) 修改采集规则配置
  * @method Models\ModifyConfigExtraResponse ModifyConfigExtra(Models\ModifyConfigExtraRequest $req) 本接口用于修改特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent

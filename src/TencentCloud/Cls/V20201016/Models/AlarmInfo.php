@@ -20,194 +20,206 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警策略描述
  *
- * @method string getName() 获取告警策略名称。
- * @method void setName(string $Name) 设置告警策略名称。
- * @method array getAlarmTargets() 获取监控对象列表。
- * @method void setAlarmTargets(array $AlarmTargets) 设置监控对象列表。
- * @method MonitorTime getMonitorTime() 获取监控任务运行时间点。
- * @method void setMonitorTime(MonitorTime $MonitorTime) 设置监控任务运行时间点。
- * @method string getCondition() 获取是否触发告警的单触发条件。与MultiConditions参数互斥。
- * @method void setCondition(string $Condition) 设置是否触发告警的单触发条件。与MultiConditions参数互斥。
- * @method integer getTriggerCount() 获取持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
- * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
- * @method integer getAlarmPeriod() 获取告警重复的周期。单位是min。取值范围是0~1440。
- * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警重复的周期。单位是min。取值范围是0~1440。
- * @method array getAlarmNoticeIds() 获取关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
- * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
- * @method boolean getStatus() 获取开启状态。
- * @method void setStatus(boolean $Status) 设置开启状态。
- * @method string getAlarmId() 获取告警策略ID。
- * @method void setAlarmId(string $AlarmId) 设置告警策略ID。
- * @method string getCreateTime() 获取创建时间。格式： YYYY-MM-DD HH:MM:SS
- * @method void setCreateTime(string $CreateTime) 设置创建时间。格式： YYYY-MM-DD HH:MM:SS
- * @method string getUpdateTime() 获取最近更新时间。格式： YYYY-MM-DD HH:MM:SS
- * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间。格式： YYYY-MM-DD HH:MM:SS
- * @method string getMessageTemplate() 获取自定义通知模板
+ * @method string getName() 获取<p>告警策略名称。</p>
+ * @method void setName(string $Name) 设置<p>告警策略名称。</p>
+ * @method array getAlarmTargets() 获取<p>监控对象列表。</p>
+ * @method void setAlarmTargets(array $AlarmTargets) 设置<p>监控对象列表。</p>
+ * @method MonitorTime getMonitorTime() 获取<p>监控任务运行时间点。</p>
+ * @method void setMonitorTime(MonitorTime $MonitorTime) 设置<p>监控任务运行时间点。</p>
+ * @method string getCondition() 获取<p>是否触发告警的单触发条件。与MultiConditions参数互斥。</p>
+ * @method void setCondition(string $Condition) 设置<p>是否触发告警的单触发条件。与MultiConditions参数互斥。</p>
+ * @method integer getTriggerCount() 获取<p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。</p>
+ * @method void setTriggerCount(integer $TriggerCount) 设置<p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。</p>
+ * @method integer getAlarmPeriod() 获取<p>告警重复的周期。单位是min。取值范围是0~1440。</p>
+ * @method void setAlarmPeriod(integer $AlarmPeriod) 设置<p>告警重复的周期。单位是min。取值范围是0~1440。</p>
+ * @method array getAlarmNoticeIds() 获取<p>关联的告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+ * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置<p>关联的告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+ * @method boolean getStatus() 获取<p>开启状态。</p>
+ * @method void setStatus(boolean $Status) 设置<p>开启状态。</p>
+ * @method string getAlarmId() 获取<p>告警策略ID。</p>
+ * @method void setAlarmId(string $AlarmId) 设置<p>告警策略ID。</p>
+ * @method string getCreateTime() 获取<p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
+ * @method string getUpdateTime() 获取<p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
+ * @method string getMessageTemplate() 获取<p>自定义通知模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessageTemplate(string $MessageTemplate) 设置自定义通知模板
+ * @method void setMessageTemplate(string $MessageTemplate) 设置<p>自定义通知模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CallBackInfo getCallBack() 获取自定义回调模板
- * @method void setCallBack(CallBackInfo $CallBack) 设置自定义回调模板
- * @method array getAnalysis() 获取多维分析设置
- * @method void setAnalysis(array $Analysis) 设置多维分析设置
- * @method boolean getGroupTriggerStatus() 获取分组触发状态。true：开启，false：关闭（默认）
- * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置分组触发状态。true：开启，false：关闭（默认）
- * @method array getGroupTriggerCondition() 获取分组触发条件。
- * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置分组触发条件。
- * @method array getTags() 获取告警策略绑定的标签信息。
- * @method void setTags(array $Tags) 设置告警策略绑定的标签信息。
- * @method integer getMonitorObjectType() 获取监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
- * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
- * @method integer getAlarmLevel() 获取告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
- * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
- * @method array getClassifications() 获取告警附加分类字段。
- * @method void setClassifications(array $Classifications) 设置告警附加分类字段。
- * @method array getMultiConditions() 获取多触发条件。与
-Condition互斥。
- * @method void setMultiConditions(array $MultiConditions) 设置多触发条件。与
-Condition互斥。
- * @method MonitorNotice getMonitorNotice() 获取腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
- * @method void setMonitorNotice(MonitorNotice $MonitorNotice) 设置腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
+ * @method CallBackInfo getCallBack() 获取<p>自定义回调模板</p>
+ * @method void setCallBack(CallBackInfo $CallBack) 设置<p>自定义回调模板</p>
+ * @method array getAnalysis() 获取<p>多维分析设置</p>
+ * @method void setAnalysis(array $Analysis) 设置<p>多维分析设置</p>
+ * @method boolean getGroupTriggerStatus() 获取<p>分组触发状态。true：开启，false：关闭（默认）</p>
+ * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置<p>分组触发状态。true：开启，false：关闭（默认）</p>
+ * @method array getGroupTriggerCondition() 获取<p>分组触发条件。</p>
+ * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置<p>分组触发条件。</p>
+ * @method array getTags() 获取<p>告警策略绑定的标签信息。</p>
+ * @method void setTags(array $Tags) 设置<p>告警策略绑定的标签信息。</p>
+ * @method integer getMonitorObjectType() 获取<p>监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。</p>
+ * @method void setMonitorObjectType(integer $MonitorObjectType) 设置<p>监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。</p>
+ * @method integer getAlarmLevel() 获取<p>告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。</p>
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置<p>告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。</p>
+ * @method array getClassifications() 获取<p>告警附加分类字段。</p>
+ * @method void setClassifications(array $Classifications) 设置<p>告警附加分类字段。</p>
+ * @method array getMultiConditions() 获取<p>多触发条件。与<br>Condition互斥。</p>
+ * @method void setMultiConditions(array $MultiConditions) 设置<p>多触发条件。与<br>Condition互斥。</p>
+ * @method MonitorNotice getMonitorNotice() 获取<p>腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥</p>
+ * @method void setMonitorNotice(MonitorNotice $MonitorNotice) 设置<p>腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥</p>
+ * @method AIAnalysis getAIAnalysis() 获取<p>AI分析内容</p>
+ * @method void setAIAnalysis(AIAnalysis $AIAnalysis) 设置<p>AI分析内容</p>
+ * @method integer getSubUin() 获取<p>最后修改人的uin信息</p>
+ * @method void setSubUin(integer $SubUin) 设置<p>最后修改人的uin信息</p>
  */
 class AlarmInfo extends AbstractModel
 {
     /**
-     * @var string 告警策略名称。
+     * @var string <p>告警策略名称。</p>
      */
     public $Name;
 
     /**
-     * @var array 监控对象列表。
+     * @var array <p>监控对象列表。</p>
      */
     public $AlarmTargets;
 
     /**
-     * @var MonitorTime 监控任务运行时间点。
+     * @var MonitorTime <p>监控任务运行时间点。</p>
      */
     public $MonitorTime;
 
     /**
-     * @var string 是否触发告警的单触发条件。与MultiConditions参数互斥。
+     * @var string <p>是否触发告警的单触发条件。与MultiConditions参数互斥。</p>
      */
     public $Condition;
 
     /**
-     * @var integer 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+     * @var integer <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。</p>
      */
     public $TriggerCount;
 
     /**
-     * @var integer 告警重复的周期。单位是min。取值范围是0~1440。
+     * @var integer <p>告警重复的周期。单位是min。取值范围是0~1440。</p>
      */
     public $AlarmPeriod;
 
     /**
-     * @var array 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
+     * @var array <p>关联的告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
      */
     public $AlarmNoticeIds;
 
     /**
-     * @var boolean 开启状态。
+     * @var boolean <p>开启状态。</p>
      */
     public $Status;
 
     /**
-     * @var string 告警策略ID。
+     * @var string <p>告警策略ID。</p>
      */
     public $AlarmId;
 
     /**
-     * @var string 创建时间。格式： YYYY-MM-DD HH:MM:SS
+     * @var string <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+     * @var string <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 自定义通知模板
+     * @var string <p>自定义通知模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageTemplate;
 
     /**
-     * @var CallBackInfo 自定义回调模板
+     * @var CallBackInfo <p>自定义回调模板</p>
      */
     public $CallBack;
 
     /**
-     * @var array 多维分析设置
+     * @var array <p>多维分析设置</p>
      */
     public $Analysis;
 
     /**
-     * @var boolean 分组触发状态。true：开启，false：关闭（默认）
+     * @var boolean <p>分组触发状态。true：开启，false：关闭（默认）</p>
      */
     public $GroupTriggerStatus;
 
     /**
-     * @var array 分组触发条件。
+     * @var array <p>分组触发条件。</p>
      */
     public $GroupTriggerCondition;
 
     /**
-     * @var array 告警策略绑定的标签信息。
+     * @var array <p>告警策略绑定的标签信息。</p>
      */
     public $Tags;
 
     /**
-     * @var integer 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+     * @var integer <p>监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。</p>
      */
     public $MonitorObjectType;
 
     /**
-     * @var integer 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+     * @var integer <p>告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。</p>
      */
     public $AlarmLevel;
 
     /**
-     * @var array 告警附加分类字段。
+     * @var array <p>告警附加分类字段。</p>
      */
     public $Classifications;
 
     /**
-     * @var array 多触发条件。与
-Condition互斥。
+     * @var array <p>多触发条件。与<br>Condition互斥。</p>
      */
     public $MultiConditions;
 
     /**
-     * @var MonitorNotice 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
+     * @var MonitorNotice <p>腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥</p>
      */
     public $MonitorNotice;
 
     /**
-     * @param string $Name 告警策略名称。
-     * @param array $AlarmTargets 监控对象列表。
-     * @param MonitorTime $MonitorTime 监控任务运行时间点。
-     * @param string $Condition 是否触发告警的单触发条件。与MultiConditions参数互斥。
-     * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
-     * @param integer $AlarmPeriod 告警重复的周期。单位是min。取值范围是0~1440。
-     * @param array $AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
-     * @param boolean $Status 开启状态。
-     * @param string $AlarmId 告警策略ID。
-     * @param string $CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
-     * @param string $UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
-     * @param string $MessageTemplate 自定义通知模板
+     * @var AIAnalysis <p>AI分析内容</p>
+     */
+    public $AIAnalysis;
+
+    /**
+     * @var integer <p>最后修改人的uin信息</p>
+     */
+    public $SubUin;
+
+    /**
+     * @param string $Name <p>告警策略名称。</p>
+     * @param array $AlarmTargets <p>监控对象列表。</p>
+     * @param MonitorTime $MonitorTime <p>监控任务运行时间点。</p>
+     * @param string $Condition <p>是否触发告警的单触发条件。与MultiConditions参数互斥。</p>
+     * @param integer $TriggerCount <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。</p>
+     * @param integer $AlarmPeriod <p>告警重复的周期。单位是min。取值范围是0~1440。</p>
+     * @param array $AlarmNoticeIds <p>关联的告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+     * @param boolean $Status <p>开启状态。</p>
+     * @param string $AlarmId <p>告警策略ID。</p>
+     * @param string $CreateTime <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
+     * @param string $UpdateTime <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
+     * @param string $MessageTemplate <p>自定义通知模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CallBackInfo $CallBack 自定义回调模板
-     * @param array $Analysis 多维分析设置
-     * @param boolean $GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
-     * @param array $GroupTriggerCondition 分组触发条件。
-     * @param array $Tags 告警策略绑定的标签信息。
-     * @param integer $MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-     * @param integer $AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-     * @param array $Classifications 告警附加分类字段。
-     * @param array $MultiConditions 多触发条件。与
-Condition互斥。
-     * @param MonitorNotice $MonitorNotice 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
+     * @param CallBackInfo $CallBack <p>自定义回调模板</p>
+     * @param array $Analysis <p>多维分析设置</p>
+     * @param boolean $GroupTriggerStatus <p>分组触发状态。true：开启，false：关闭（默认）</p>
+     * @param array $GroupTriggerCondition <p>分组触发条件。</p>
+     * @param array $Tags <p>告警策略绑定的标签信息。</p>
+     * @param integer $MonitorObjectType <p>监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。</p>
+     * @param integer $AlarmLevel <p>告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。</p>
+     * @param array $Classifications <p>告警附加分类字段。</p>
+     * @param array $MultiConditions <p>多触发条件。与<br>Condition互斥。</p>
+     * @param MonitorNotice $MonitorNotice <p>腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥</p>
+     * @param AIAnalysis $AIAnalysis <p>AI分析内容</p>
+     * @param integer $SubUin <p>最后修改人的uin信息</p>
      */
     function __construct()
     {
@@ -336,6 +348,15 @@ Condition互斥。
         if (array_key_exists("MonitorNotice",$param) and $param["MonitorNotice"] !== null) {
             $this->MonitorNotice = new MonitorNotice();
             $this->MonitorNotice->deserialize($param["MonitorNotice"]);
+        }
+
+        if (array_key_exists("AIAnalysis",$param) and $param["AIAnalysis"] !== null) {
+            $this->AIAnalysis = new AIAnalysis();
+            $this->AIAnalysis->deserialize($param["AIAnalysis"]);
+        }
+
+        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
+            $this->SubUin = $param["SubUin"];
         }
     }
 }

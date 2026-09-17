@@ -20,118 +20,126 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Prometheus告警规则分组信息
  *
- * @method string getGroupId() 获取告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
+ * @method string getGroupId() 获取<p>告警分组ID，满足正则表达式<code>alert-[a-z0-9]{8}</code></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupId(string $GroupId) 设置告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
+ * @method void setGroupId(string $GroupId) 设置<p>告警分组ID，满足正则表达式<code>alert-[a-z0-9]{8}</code></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGroupName() 获取告警分组名称
+ * @method string getGroupName() 获取<p>告警分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupName(string $GroupName) 设置告警分组名称
+ * @method void setGroupName(string $GroupName) 设置<p>告警分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAMPReceivers() 获取腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
+ * @method array getAMPReceivers() 获取<p>腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAMPReceivers(array $AMPReceivers) 设置腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
+ * @method void setAMPReceivers(array $AMPReceivers) 设置<p>腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PrometheusAlertCustomReceiver getCustomReceiver() 获取自定义告警模板
+ * @method PrometheusAlertCustomReceiver getCustomReceiver() 获取<p>自定义告警模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomReceiver(PrometheusAlertCustomReceiver $CustomReceiver) 设置自定义告警模板
+ * @method void setCustomReceiver(PrometheusAlertCustomReceiver $CustomReceiver) 设置<p>自定义告警模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRepeatInterval() 获取告警通知间隔
+ * @method string getRepeatInterval() 获取<p>告警通知间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRepeatInterval(string $RepeatInterval) 设置告警通知间隔
+ * @method void setRepeatInterval(string $RepeatInterval) 设置<p>告警通知间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplateId() 获取若告警分组通过模板创建，则返回模板ID
+ * @method string getTemplateId() 获取<p>若告警分组通过模板创建，则返回模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateId(string $TemplateId) 设置若告警分组通过模板创建，则返回模板ID
+ * @method void setTemplateId(string $TemplateId) 设置<p>若告警分组通过模板创建，则返回模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRules() 获取分组内告警规则详情
+ * @method array getRules() 获取<p>分组内告警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRules(array $Rules) 设置分组内告警规则详情
+ * @method void setRules(array $Rules) 设置<p>分组内告警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedAt() 获取分组创建时间
+ * @method string getCreatedAt() 获取<p>分组创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedAt(string $CreatedAt) 设置分组创建时间
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>分组创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedAt() 获取分组更新时间
+ * @method string getUpdatedAt() 获取<p>分组更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedAt(string $UpdatedAt) 设置分组更新时间
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>分组更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLastModifySubAccountUin() 获取<p>最后修改人子账号uin</p>
+ * @method void setLastModifySubAccountUin(string $LastModifySubAccountUin) 设置<p>最后修改人子账号uin</p>
  */
 class PrometheusAlertGroupSet extends AbstractModel
 {
     /**
-     * @var string 告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
+     * @var string <p>告警分组ID，满足正则表达式<code>alert-[a-z0-9]{8}</code></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
-     * @var string 告警分组名称
+     * @var string <p>告警分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
-     * @var array 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
+     * @var array <p>腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AMPReceivers;
 
     /**
-     * @var PrometheusAlertCustomReceiver 自定义告警模板
+     * @var PrometheusAlertCustomReceiver <p>自定义告警模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomReceiver;
 
     /**
-     * @var string 告警通知间隔
+     * @var string <p>告警通知间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepeatInterval;
 
     /**
-     * @var string 若告警分组通过模板创建，则返回模板ID
+     * @var string <p>若告警分组通过模板创建，则返回模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
     /**
-     * @var array 分组内告警规则详情
+     * @var array <p>分组内告警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rules;
 
     /**
-     * @var string 分组创建时间
+     * @var string <p>分组创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
-     * @var string 分组更新时间
+     * @var string <p>分组更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
-     * @param string $GroupId 告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
+     * @var string <p>最后修改人子账号uin</p>
+     */
+    public $LastModifySubAccountUin;
+
+    /**
+     * @param string $GroupId <p>告警分组ID，满足正则表达式<code>alert-[a-z0-9]{8}</code></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GroupName 告警分组名称
+     * @param string $GroupName <p>告警分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AMPReceivers 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
+     * @param array $AMPReceivers <p>腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrometheusAlertCustomReceiver $CustomReceiver 自定义告警模板
+     * @param PrometheusAlertCustomReceiver $CustomReceiver <p>自定义告警模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RepeatInterval 告警通知间隔
+     * @param string $RepeatInterval <p>告警通知间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TemplateId 若告警分组通过模板创建，则返回模板ID
+     * @param string $TemplateId <p>若告警分组通过模板创建，则返回模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Rules 分组内告警规则详情
+     * @param array $Rules <p>分组内告警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedAt 分组创建时间
+     * @param string $CreatedAt <p>分组创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedAt 分组更新时间
+     * @param string $UpdatedAt <p>分组更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastModifySubAccountUin <p>最后修改人子账号uin</p>
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class PrometheusAlertGroupSet extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("LastModifySubAccountUin",$param) and $param["LastModifySubAccountUin"] !== null) {
+            $this->LastModifySubAccountUin = $param["LastModifySubAccountUin"];
         }
     }
 }

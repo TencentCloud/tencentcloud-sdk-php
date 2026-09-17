@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePartitionName(string $ResourcePartitionName) 设置<p>默认资源分区名称</p>
  * @method string getQueue() 获取<p>所属队列名称</p>
  * @method void setQueue(string $Queue) 设置<p>所属队列名称</p>
+ * @method string getQueueAlias() 获取<p>所属队列别名</p>
+ * @method void setQueueAlias(string $QueueAlias) 设置<p>所属队列别名</p>
  * @method integer getAppId() 获取<p>应用ID</p>
  * @method void setAppId(integer $AppId) 设置<p>应用ID</p>
  * @method string getUin() 获取<p>用户UIN</p>
@@ -115,6 +117,11 @@ class GetRayClusterResponse extends AbstractModel
      * @var string <p>所属队列名称</p>
      */
     public $Queue;
+
+    /**
+     * @var string <p>所属队列别名</p>
+     */
+    public $QueueAlias;
 
     /**
      * @var integer <p>应用ID</p>
@@ -234,6 +241,7 @@ class GetRayClusterResponse extends AbstractModel
      * @param string $ResourcePartitionId <p>所属资源分区ID</p>
      * @param string $ResourcePartitionName <p>默认资源分区名称</p>
      * @param string $Queue <p>所属队列名称</p>
+     * @param string $QueueAlias <p>所属队列别名</p>
      * @param integer $AppId <p>应用ID</p>
      * @param string $Uin <p>用户UIN</p>
      * @param string $SubAccountUin <p>子用户UIN</p>
@@ -296,6 +304,10 @@ class GetRayClusterResponse extends AbstractModel
 
         if (array_key_exists("Queue",$param) and $param["Queue"] !== null) {
             $this->Queue = $param["Queue"];
+        }
+
+        if (array_key_exists("QueueAlias",$param) and $param["QueueAlias"] !== null) {
+            $this->QueueAlias = $param["QueueAlias"];
         }
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {

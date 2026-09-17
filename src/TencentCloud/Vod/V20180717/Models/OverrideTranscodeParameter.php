@@ -20,86 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自定义视频转码参数。
  *
- * @method string getContainer() 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
- * @method void setContainer(string $Container) 设置封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
- * @method integer getRemoveVideo() 获取是否去除视频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
- * @method void setRemoveVideo(integer $RemoveVideo) 设置是否去除视频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
- * @method integer getRemoveAudio() 获取是否去除音频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
- * @method void setRemoveAudio(integer $RemoveAudio) 设置是否去除音频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
- * @method VideoTemplateInfoForUpdate getVideoTemplate() 获取视频流配置参数。
+ * @method string getContainer() 获取<p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+ * @method void setContainer(string $Container) 设置<p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+ * @method integer getRemoveVideo() 获取<p>是否去除视频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
+ * @method void setRemoveVideo(integer $RemoveVideo) 设置<p>是否去除视频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
+ * @method integer getRemoveAudio() 获取<p>是否去除音频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
+ * @method void setRemoveAudio(integer $RemoveAudio) 设置<p>是否去除音频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
+ * @method VideoTemplateInfoForUpdate getVideoTemplate() 获取<p>视频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) 设置视频流配置参数。
+ * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) 设置<p>视频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AudioTemplateInfoForUpdate getAudioTemplate() 获取音频流配置参数。
+ * @method AudioTemplateInfoForUpdate getAudioTemplate() 获取<p>音频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) 设置音频流配置参数。
+ * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) 设置<p>音频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TEHDConfigForUpdate getTEHDConfig() 获取极速高清转码配置参数。
+ * @method TEHDConfigForUpdate getTEHDConfig() 获取<p>极速高清转码配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) 设置极速高清转码配置参数。
+ * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) 设置<p>极速高清转码配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStdExtInfo() 获取<p>标准扩展字段，特殊用途使用。</p>
+ * @method void setStdExtInfo(string $StdExtInfo) 设置<p>标准扩展字段，特殊用途使用。</p>
  */
 class OverrideTranscodeParameter extends AbstractModel
 {
     /**
-     * @var string 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
+     * @var string <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
      */
     public $Container;
 
     /**
-     * @var integer 是否去除视频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
+     * @var integer <p>是否去除视频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
      */
     public $RemoveVideo;
 
     /**
-     * @var integer 是否去除音频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
+     * @var integer <p>是否去除音频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
      */
     public $RemoveAudio;
 
     /**
-     * @var VideoTemplateInfoForUpdate 视频流配置参数。
+     * @var VideoTemplateInfoForUpdate <p>视频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfoForUpdate 音频流配置参数。
+     * @var AudioTemplateInfoForUpdate <p>音频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfigForUpdate 极速高清转码配置参数。
+     * @var TEHDConfigForUpdate <p>极速高清转码配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TEHDConfig;
 
     /**
-     * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
-     * @param integer $RemoveVideo 是否去除视频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
-     * @param integer $RemoveAudio 是否去除音频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
-     * @param VideoTemplateInfoForUpdate $VideoTemplate 视频流配置参数。
+     * @var string <p>标准扩展字段，特殊用途使用。</p>
+     */
+    public $StdExtInfo;
+
+    /**
+     * @param string $Container <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+     * @param integer $RemoveVideo <p>是否去除视频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
+     * @param integer $RemoveAudio <p>是否去除音频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
+     * @param VideoTemplateInfoForUpdate $VideoTemplate <p>视频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioTemplateInfoForUpdate $AudioTemplate 音频流配置参数。
+     * @param AudioTemplateInfoForUpdate $AudioTemplate <p>音频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TEHDConfigForUpdate $TEHDConfig 极速高清转码配置参数。
+     * @param TEHDConfigForUpdate $TEHDConfig <p>极速高清转码配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StdExtInfo <p>标准扩展字段，特殊用途使用。</p>
      */
     function __construct()
     {
@@ -139,6 +131,10 @@ class OverrideTranscodeParameter extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfigForUpdate();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

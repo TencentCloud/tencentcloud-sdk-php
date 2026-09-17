@@ -21,6 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 自定义缓存键参数。约束：FullURLCache=on 与 QueryStringSwitch=on 互斥
 使用示例：
 - 整 URL 参与缓存键：{FullURLCache: "on", QueryStringSwitch: "off"}
+- 整 URL 不参与缓存键：{FullURLCache: "off", QueryStringSwitch: "off"}
 - URL 路径 + 仅保留 x/y：{FullURLCache: "off", QueryStringSwitch: "on", QueryStringAction: "includeCustom", QueryStringValues: ["x", "y"]}
 - URL 路径 + 忽略 debug：{FullURLCache: "off", QueryStringSwitch: "on", QueryStringAction: "excludeCustom", QueryStringValues: ["debug"]}
  *
@@ -30,8 +31,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryStringSwitch(string $QueryStringSwitch) 设置<p>查询参数是否参与缓存键</p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul>
  * @method string getQueryStringAction() 获取<p>QueryStringSwitch=on 时必填</p><p>枚举值：</p><ul><li>includeCustom： 白名单</li><li>excludeCustom： 黑名单</li></ul>
  * @method void setQueryStringAction(string $QueryStringAction) 设置<p>QueryStringSwitch=on 时必填</p><p>枚举值：</p><ul><li>includeCustom： 白名单</li><li>excludeCustom： 黑名单</li></ul>
- * @method array getQueryStringValues() 获取<p>参数名列表</p><p>入参限制：最多 100 项，单项 1~128 字节</p>
- * @method void setQueryStringValues(array $QueryStringValues) 设置<p>参数名列表</p><p>入参限制：最多 100 项，单项 1~128 字节</p>
+ * @method array getQueryStringValues() 获取<p>参数名列表</p><p>入参限制：最多 30 项，单项 1~128 字节</p>
+ * @method void setQueryStringValues(array $QueryStringValues) 设置<p>参数名列表</p><p>入参限制：最多 30 项，单项 1~128 字节</p>
  */
 class HTTPServiceCacheKeyParams extends AbstractModel
 {
@@ -51,7 +52,7 @@ class HTTPServiceCacheKeyParams extends AbstractModel
     public $QueryStringAction;
 
     /**
-     * @var array <p>参数名列表</p><p>入参限制：最多 100 项，单项 1~128 字节</p>
+     * @var array <p>参数名列表</p><p>入参限制：最多 30 项，单项 1~128 字节</p>
      */
     public $QueryStringValues;
 
@@ -59,7 +60,7 @@ class HTTPServiceCacheKeyParams extends AbstractModel
      * @param string $FullURLCache <p>全 URL 缓存开关</p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul>
      * @param string $QueryStringSwitch <p>查询参数是否参与缓存键</p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul>
      * @param string $QueryStringAction <p>QueryStringSwitch=on 时必填</p><p>枚举值：</p><ul><li>includeCustom： 白名单</li><li>excludeCustom： 黑名单</li></ul>
-     * @param array $QueryStringValues <p>参数名列表</p><p>入参限制：最多 100 项，单项 1~128 字节</p>
+     * @param array $QueryStringValues <p>参数名列表</p><p>入参限制：最多 30 项，单项 1~128 字节</p>
      */
     function __construct()
     {

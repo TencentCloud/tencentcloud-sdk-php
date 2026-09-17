@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCopyPairAttribute请求参数结构体
  *
- * @method string getCopyPairId() 获取要修改属性的复制对id
- * @method void setCopyPairId(string $CopyPairId) 设置要修改属性的复制对id
- * @method string getCopyPairType() 获取要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE
- * @method void setCopyPairType(string $CopyPairType) 设置要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE
- * @method string getCopyPairName() 获取修改复制对名称（长度最大支持 64 个字符）
- * @method void setCopyPairName(string $CopyPairName) 设置修改复制对名称（长度最大支持 64 个字符）
+ * @method string getCopyPairId() 获取<p>要修改属性的复制对id</p>
+ * @method void setCopyPairId(string $CopyPairId) 设置<p>要修改属性的复制对id</p>
+ * @method string getCopyPairType() 获取<p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
+ * @method void setCopyPairType(string $CopyPairType) 设置<p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
+ * @method string getCopyPairName() 获取<p>修改复制对名称（长度最大支持 64 个字符）</p>
+ * @method void setCopyPairName(string $CopyPairName) 设置<p>修改复制对名称（长度最大支持 64 个字符）</p>
+ * @method string getInstanceType() 获取<p>容灾端实例类型（仅容灾端CVM未创建时可修改）</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>容灾端实例类型（仅容灾端CVM未创建时可修改）</p>
  */
 class ModifyCopyPairAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 要修改属性的复制对id
+     * @var string <p>要修改属性的复制对id</p>
      */
     public $CopyPairId;
 
     /**
-     * @var string 要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE
+     * @var string <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
      */
     public $CopyPairType;
 
     /**
-     * @var string 修改复制对名称（长度最大支持 64 个字符）
+     * @var string <p>修改复制对名称（长度最大支持 64 个字符）</p>
      */
     public $CopyPairName;
 
     /**
-     * @param string $CopyPairId 要修改属性的复制对id
-     * @param string $CopyPairType 要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE
-     * @param string $CopyPairName 修改复制对名称（长度最大支持 64 个字符）
+     * @var string <p>容灾端实例类型（仅容灾端CVM未创建时可修改）</p>
+     */
+    public $InstanceType;
+
+    /**
+     * @param string $CopyPairId <p>要修改属性的复制对id</p>
+     * @param string $CopyPairType <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
+     * @param string $CopyPairName <p>修改复制对名称（长度最大支持 64 个字符）</p>
+     * @param string $InstanceType <p>容灾端实例类型（仅容灾端CVM未创建时可修改）</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyCopyPairAttributeRequest extends AbstractModel
 
         if (array_key_exists("CopyPairName",$param) and $param["CopyPairName"] !== null) {
             $this->CopyPairName = $param["CopyPairName"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

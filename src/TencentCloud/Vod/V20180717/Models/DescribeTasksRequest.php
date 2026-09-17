@@ -20,82 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks请求参数结构体
  *
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method string getStatus() 获取过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
- * @method void setStatus(string $Status) 设置过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
- * @method string getFileId() 获取过滤条件：文件 ID。
- * @method void setFileId(string $FileId) 设置过滤条件：文件 ID。
- * @method TimeRange getCreateTime() 获取过滤条件：任务创建时间。
- * @method void setCreateTime(TimeRange $CreateTime) 设置过滤条件：任务创建时间。
- * @method TimeRange getFinishTime() 获取过滤条件：任务结束时间。
- * @method void setFinishTime(TimeRange $FinishTime) 设置过滤条件：任务结束时间。
- * @method SortBy getSort() 获取排序方式。Sort.Field 可选：
-<li> CreateTime 任务创建时间。</li>
-<li>FinishTime 任务结束时间。</li>
- * @method void setSort(SortBy $Sort) 设置排序方式。Sort.Field 可选：
-<li> CreateTime 任务创建时间。</li>
-<li>FinishTime 任务结束时间。</li>
- * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
- * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
- * @method string getScrollToken() 获取翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
- * @method void setScrollToken(string $ScrollToken) 设置翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method string getStatus() 获取<p>过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。</p>
+ * @method void setStatus(string $Status) 设置<p>过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。</p>
+ * @method string getFileId() 获取<p>过滤条件：文件 ID。</p>
+ * @method void setFileId(string $FileId) 设置<p>过滤条件：文件 ID。</p>
+ * @method TimeRange getCreateTime() 获取<p>过滤条件：任务创建时间。</p>
+ * @method void setCreateTime(TimeRange $CreateTime) 设置<p>过滤条件：任务创建时间。</p>
+ * @method TimeRange getFinishTime() 获取<p>过滤条件：任务结束时间。</p>
+ * @method void setFinishTime(TimeRange $FinishTime) 设置<p>过滤条件：任务结束时间。</p>
+ * @method SortBy getSort() 获取<p>排序方式。Sort.Field 可选：</p><li> CreateTime 任务创建时间。</li><li>FinishTime 任务结束时间。</li>
+ * @method void setSort(SortBy $Sort) 设置<p>排序方式。Sort.Field 可选：</p><li> CreateTime 任务创建时间。</li><li>FinishTime 任务结束时间。</li>
+ * @method integer getLimit() 获取<p>返回记录条数，默认值：10，最大值：100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回记录条数，默认值：10，最大值：100。</p>
+ * @method string getScrollToken() 获取<p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
+ * @method void setScrollToken(string $ScrollToken) 设置<p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
  */
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * @var string <p>过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。</p>
      */
     public $Status;
 
     /**
-     * @var string 过滤条件：文件 ID。
+     * @var string <p>过滤条件：文件 ID。</p>
      */
     public $FileId;
 
     /**
-     * @var TimeRange 过滤条件：任务创建时间。
+     * @var TimeRange <p>过滤条件：任务创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var TimeRange 过滤条件：任务结束时间。
+     * @var TimeRange <p>过滤条件：任务结束时间。</p>
      */
     public $FinishTime;
 
     /**
-     * @var SortBy 排序方式。Sort.Field 可选：
-<li> CreateTime 任务创建时间。</li>
-<li>FinishTime 任务结束时间。</li>
+     * @var SortBy <p>排序方式。Sort.Field 可选：</p><li> CreateTime 任务创建时间。</li><li>FinishTime 任务结束时间。</li>
      */
     public $Sort;
 
     /**
-     * @var integer 返回记录条数，默认值：10，最大值：100。
+     * @var integer <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public $Limit;
 
     /**
-     * @var string 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+     * @var string <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
      */
     public $ScrollToken;
 
     /**
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param string $Status 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
-     * @param string $FileId 过滤条件：文件 ID。
-     * @param TimeRange $CreateTime 过滤条件：任务创建时间。
-     * @param TimeRange $FinishTime 过滤条件：任务结束时间。
-     * @param SortBy $Sort 排序方式。Sort.Field 可选：
-<li> CreateTime 任务创建时间。</li>
-<li>FinishTime 任务结束时间。</li>
-     * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
-     * @param string $ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param string $Status <p>过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。</p>
+     * @param string $FileId <p>过滤条件：文件 ID。</p>
+     * @param TimeRange $CreateTime <p>过滤条件：任务创建时间。</p>
+     * @param TimeRange $FinishTime <p>过滤条件：任务结束时间。</p>
+     * @param SortBy $Sort <p>排序方式。Sort.Field 可选：</p><li> CreateTime 任务创建时间。</li><li>FinishTime 任务结束时间。</li>
+     * @param integer $Limit <p>返回记录条数，默认值：10，最大值：100。</p>
+     * @param string $ScrollToken <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
      */
     function __construct()
     {

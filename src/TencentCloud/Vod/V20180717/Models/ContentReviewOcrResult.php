@@ -20,54 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片Ocr 文字鉴别信息的任务结果类型
  *
- * @method float getConfidence() 获取Ocr 文字鉴别结果的评分，分值为0到100。
- * @method void setConfidence(float $Confidence) 设置Ocr 文字鉴别结果的评分，分值为0到100。
- * @method string getSuggestion() 获取Ocr 文字鉴别的结果建议，取值范围：
-<li>pass；</li>
-<li>review；</li>
-<li>block。</li>
- * @method void setSuggestion(string $Suggestion) 设置Ocr 文字鉴别的结果建议，取值范围：
-<li>pass；</li>
-<li>review；</li>
-<li>block。</li>
- * @method array getKeywordSet() 获取Ocr 文字鉴别的嫌疑关键词列表。
- * @method void setKeywordSet(array $KeywordSet) 设置Ocr 文字鉴别的嫌疑关键词列表。
- * @method array getAreaCoordSet() 获取Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
- * @method void setAreaCoordSet(array $AreaCoordSet) 设置Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+ * @method float getConfidence() 获取<p>Ocr 文字鉴别结果的评分，分值为0到100。</p>
+ * @method void setConfidence(float $Confidence) 设置<p>Ocr 文字鉴别结果的评分，分值为0到100。</p>
+ * @method string getSuggestion() 获取<p>Ocr 文字鉴别的结果建议，取值范围：</p><li>pass；</li><li>review；</li><li>block。</li>
+ * @method void setSuggestion(string $Suggestion) 设置<p>Ocr 文字鉴别的结果建议，取值范围：</p><li>pass；</li><li>review；</li><li>block。</li>
+ * @method array getKeywordSet() 获取<p>Ocr 文字鉴别的嫌疑关键词列表。</p>
+ * @method void setKeywordSet(array $KeywordSet) 设置<p>Ocr 文字鉴别的嫌疑关键词列表。</p>
+ * @method array getAreaCoordSet() 获取<p>Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。</p>
+ * @method void setAreaCoordSet(array $AreaCoordSet) 设置<p>Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。</p>
  */
 class ContentReviewOcrResult extends AbstractModel
 {
     /**
-     * @var float Ocr 文字鉴别结果的评分，分值为0到100。
+     * @var float <p>Ocr 文字鉴别结果的评分，分值为0到100。</p>
      */
     public $Confidence;
 
     /**
-     * @var string Ocr 文字鉴别的结果建议，取值范围：
-<li>pass；</li>
-<li>review；</li>
-<li>block。</li>
+     * @var string <p>Ocr 文字鉴别的结果建议，取值范围：</p><li>pass；</li><li>review；</li><li>block。</li>
      */
     public $Suggestion;
 
     /**
-     * @var array Ocr 文字鉴别的嫌疑关键词列表。
+     * @var array <p>Ocr 文字鉴别的嫌疑关键词列表。</p>
      */
     public $KeywordSet;
 
     /**
-     * @var array Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * @var array <p>Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。</p>
      */
     public $AreaCoordSet;
 
     /**
-     * @param float $Confidence Ocr 文字鉴别结果的评分，分值为0到100。
-     * @param string $Suggestion Ocr 文字鉴别的结果建议，取值范围：
-<li>pass；</li>
-<li>review；</li>
-<li>block。</li>
-     * @param array $KeywordSet Ocr 文字鉴别的嫌疑关键词列表。
-     * @param array $AreaCoordSet Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * @param float $Confidence <p>Ocr 文字鉴别结果的评分，分值为0到100。</p>
+     * @param string $Suggestion <p>Ocr 文字鉴别的结果建议，取值范围：</p><li>pass；</li><li>review；</li><li>block。</li>
+     * @param array $KeywordSet <p>Ocr 文字鉴别的嫌疑关键词列表。</p>
+     * @param array $AreaCoordSet <p>Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。</p>
      */
     function __construct()
     {

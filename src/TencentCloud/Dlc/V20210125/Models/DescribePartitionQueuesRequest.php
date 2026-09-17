@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置页码
  * @method integer getPageSize() 获取每页返回数量
  * @method void setPageSize(integer $PageSize) 设置每页返回数量
+ * @method boolean getShowResourceQuotas() 获取是否返回队列实时余量（ResourceQuotas），默认 false 不返回。余量需实时查询 Prometheus，仅在需要时透传 true。Used 为计费 spec 口径（队列内业务容器 Pod limits，经 kube_pod_labels 队列过滤），依赖 kube_pod_labels 指标采集
+ * @method void setShowResourceQuotas(boolean $ShowResourceQuotas) 设置是否返回队列实时余量（ResourceQuotas），默认 false 不返回。余量需实时查询 Prometheus，仅在需要时透传 true。Used 为计费 spec 口径（队列内业务容器 Pod limits，经 kube_pod_labels 队列过滤），依赖 kube_pod_labels 指标采集
  */
 class DescribePartitionQueuesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribePartitionQueuesRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var boolean 是否返回队列实时余量（ResourceQuotas），默认 false 不返回。余量需实时查询 Prometheus，仅在需要时透传 true。Used 为计费 spec 口径（队列内业务容器 Pod limits，经 kube_pod_labels 队列过滤），依赖 kube_pod_labels 指标采集
+     */
+    public $ShowResourceQuotas;
+
+    /**
      * @param string $PartitionCode 分区编码
      * @param array $SortFields 排序字段列表
      * @param array $Filters 筛选条件列表
      * @param integer $Page 页码
      * @param integer $PageSize 每页返回数量
+     * @param boolean $ShowResourceQuotas 是否返回队列实时余量（ResourceQuotas），默认 false 不返回。余量需实时查询 Prometheus，仅在需要时透传 true。Used 为计费 spec 口径（队列内业务容器 Pod limits，经 kube_pod_labels 队列过滤），依赖 kube_pod_labels 指标采集
      */
     function __construct()
     {
@@ -106,6 +114,10 @@ class DescribePartitionQueuesRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("ShowResourceQuotas",$param) and $param["ShowResourceQuotas"] !== null) {
+            $this->ShowResourceQuotas = $param["ShowResourceQuotas"];
         }
     }
 }

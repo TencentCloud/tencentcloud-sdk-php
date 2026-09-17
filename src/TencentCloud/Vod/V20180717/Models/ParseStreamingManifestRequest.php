@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ParseStreamingManifest请求参数结构体
  *
- * @method string getMediaManifestContent() 获取待解析的索引文件内容。
- * @method void setMediaManifestContent(string $MediaManifestContent) 设置待解析的索引文件内容。
- * @method string getManifestType() 获取视频索引文件格式。默认 m3u8 格式。
-<li>m3u8</li>
-<li>mpd</li>
- * @method void setManifestType(string $ManifestType) 设置视频索引文件格式。默认 m3u8 格式。
-<li>m3u8</li>
-<li>mpd</li>
+ * @method string getMediaManifestContent() 获取<p>待解析的索引文件内容。</p>
+ * @method void setMediaManifestContent(string $MediaManifestContent) 设置<p>待解析的索引文件内容。</p>
+ * @method string getManifestType() 获取<p>视频索引文件格式。默认 m3u8 格式。</p><li>m3u8</li><li>mpd</li>
+ * @method void setManifestType(string $ManifestType) 设置<p>视频索引文件格式。默认 m3u8 格式。</p><li>m3u8</li><li>mpd</li>
  */
 class ParseStreamingManifestRequest extends AbstractModel
 {
     /**
-     * @var string 待解析的索引文件内容。
+     * @var string <p>待解析的索引文件内容。</p>
      */
     public $MediaManifestContent;
 
     /**
-     * @var string 视频索引文件格式。默认 m3u8 格式。
-<li>m3u8</li>
-<li>mpd</li>
+     * @var string <p>视频索引文件格式。默认 m3u8 格式。</p><li>m3u8</li><li>mpd</li>
      */
     public $ManifestType;
 
     /**
-     * @param string $MediaManifestContent 待解析的索引文件内容。
-     * @param string $ManifestType 视频索引文件格式。默认 m3u8 格式。
-<li>m3u8</li>
-<li>mpd</li>
+     * @param string $MediaManifestContent <p>待解析的索引文件内容。</p>
+     * @param string $ManifestType <p>视频索引文件格式。默认 m3u8 格式。</p><li>m3u8</li><li>mpd</li>
      */
     function __construct()
     {

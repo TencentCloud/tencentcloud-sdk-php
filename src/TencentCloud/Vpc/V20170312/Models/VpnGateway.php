@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBgpAsn(integer $BgpAsn) 设置<p>Bgp ASN</p>
  * @method array getTagSet() 获取<p>标签列表</p>
  * @method void setTagSet(array $TagSet) 设置<p>标签列表</p>
+ * @method boolean getIsPrivate() 获取<p>私网VPN标识</p>
+ * @method void setIsPrivate(boolean $IsPrivate) 设置<p>私网VPN标识</p>
  */
 class VpnGateway extends AbstractModel
 {
@@ -178,6 +180,11 @@ class VpnGateway extends AbstractModel
     public $TagSet;
 
     /**
+     * @var boolean <p>私网VPN标识</p>
+     */
+    public $IsPrivate;
+
+    /**
      * @param string $VpnGatewayId <p>网关实例ID。</p>
      * @param string $VpcId <p>VPC实例ID。</p>
      * @param string $VpnGatewayName <p>网关实例名称。</p>
@@ -200,6 +207,7 @@ class VpnGateway extends AbstractModel
      * @param integer $MaxConnection <p>SSL-VPN 客户端连接数。</p>
      * @param integer $BgpAsn <p>Bgp ASN</p>
      * @param array $TagSet <p>标签列表</p>
+     * @param boolean $IsPrivate <p>私网VPN标识</p>
      */
     function __construct()
     {
@@ -310,6 +318,10 @@ class VpnGateway extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("IsPrivate",$param) and $param["IsPrivate"] !== null) {
+            $this->IsPrivate = $param["IsPrivate"];
         }
     }
 }

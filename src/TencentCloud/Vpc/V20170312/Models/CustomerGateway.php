@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 对端网关
  *
- * @method string getCustomerGatewayId() 获取用户网关唯一ID
- * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置用户网关唯一ID
- * @method string getCustomerGatewayName() 获取网关名称
- * @method void setCustomerGatewayName(string $CustomerGatewayName) 设置网关名称
- * @method string getIpAddress() 获取公网地址
- * @method void setIpAddress(string $IpAddress) 设置公网地址
- * @method string getCreatedTime() 获取创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method integer getBgpAsn() 获取BGP ASN。
- * @method void setBgpAsn(integer $BgpAsn) 设置BGP ASN。
+ * @method string getCustomerGatewayId() 获取<p>用户网关唯一ID</p>
+ * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置<p>用户网关唯一ID</p>
+ * @method string getCustomerGatewayName() 获取<p>网关名称</p>
+ * @method void setCustomerGatewayName(string $CustomerGatewayName) 设置<p>网关名称</p>
+ * @method string getIpAddress() 获取<p>公网地址</p>
+ * @method void setIpAddress(string $IpAddress) 设置<p>公网地址</p>
+ * @method string getCreatedTime() 获取<p>创建时间</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间</p>
+ * @method integer getBgpAsn() 获取<p>BGP ASN。</p>
+ * @method void setBgpAsn(integer $BgpAsn) 设置<p>BGP ASN。</p>
+ * @method integer getVpnConnNum() 获取<p>关联通道数</p>
+ * @method void setVpnConnNum(integer $VpnConnNum) 设置<p>关联通道数</p>
+ * @method array getTagSet() 获取<p>标签信息</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签信息</p>
  */
 class CustomerGateway extends AbstractModel
 {
     /**
-     * @var string 用户网关唯一ID
+     * @var string <p>用户网关唯一ID</p>
      */
     public $CustomerGatewayId;
 
     /**
-     * @var string 网关名称
+     * @var string <p>网关名称</p>
      */
     public $CustomerGatewayName;
 
     /**
-     * @var string 公网地址
+     * @var string <p>公网地址</p>
      */
     public $IpAddress;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreatedTime;
 
     /**
-     * @var integer BGP ASN。
+     * @var integer <p>BGP ASN。</p>
      */
     public $BgpAsn;
 
     /**
-     * @param string $CustomerGatewayId 用户网关唯一ID
-     * @param string $CustomerGatewayName 网关名称
-     * @param string $IpAddress 公网地址
-     * @param string $CreatedTime 创建时间
-     * @param integer $BgpAsn BGP ASN。
+     * @var integer <p>关联通道数</p>
+     */
+    public $VpnConnNum;
+
+    /**
+     * @var array <p>标签信息</p>
+     */
+    public $TagSet;
+
+    /**
+     * @param string $CustomerGatewayId <p>用户网关唯一ID</p>
+     * @param string $CustomerGatewayName <p>网关名称</p>
+     * @param string $IpAddress <p>公网地址</p>
+     * @param string $CreatedTime <p>创建时间</p>
+     * @param integer $BgpAsn <p>BGP ASN。</p>
+     * @param integer $VpnConnNum <p>关联通道数</p>
+     * @param array $TagSet <p>标签信息</p>
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class CustomerGateway extends AbstractModel
 
         if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
             $this->BgpAsn = $param["BgpAsn"];
+        }
+
+        if (array_key_exists("VpnConnNum",$param) and $param["VpnConnNum"] !== null) {
+            $this->VpnConnNum = $param["VpnConnNum"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

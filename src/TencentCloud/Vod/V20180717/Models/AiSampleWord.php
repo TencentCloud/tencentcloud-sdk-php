@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI 样本管理，关键词输出信息。
  *
- * @method string getKeyword() 获取关键词。
- * @method void setKeyword(string $Keyword) 设置关键词。
- * @method array getTagSet() 获取关键词标签。
- * @method void setTagSet(array $TagSet) 设置关键词标签。
- * @method array getUsageSet() 获取关键词应用场景。
- * @method void setUsageSet(array $UsageSet) 设置关键词应用场景。
- * @method string getCreateTime() 获取创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setCreateTime(string $CreateTime) 设置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getUpdateTime() 获取最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setUpdateTime(string $UpdateTime) 设置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getKeyword() 获取<p>关键词。</p>
+ * @method void setKeyword(string $Keyword) 设置<p>关键词。</p>
+ * @method array getTagSet() 获取<p>关键词标签。</p>
+ * @method void setTagSet(array $TagSet) 设置<p>关键词标签。</p>
+ * @method array getUsageSet() 获取<p>关键词应用场景。</p>
+ * @method void setUsageSet(array $UsageSet) 设置<p>关键词应用场景。</p>
+ * @method string getCreateTime() 获取<p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getUpdateTime() 获取<p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
  */
 class AiSampleWord extends AbstractModel
 {
     /**
-     * @var string 关键词。
+     * @var string <p>关键词。</p>
      */
     public $Keyword;
 
     /**
-     * @var array 关键词标签。
+     * @var array <p>关键词标签。</p>
      */
     public $TagSet;
 
     /**
-     * @var array 关键词应用场景。
+     * @var array <p>关键词应用场景。</p>
      */
     public $UsageSet;
 
     /**
-     * @var string 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $Keyword 关键词。
-     * @param array $TagSet 关键词标签。
-     * @param array $UsageSet 关键词应用场景。
-     * @param string $CreateTime 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $UpdateTime 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $Keyword <p>关键词。</p>
+     * @param array $TagSet <p>关键词标签。</p>
+     * @param array $UsageSet <p>关键词应用场景。</p>
+     * @param string $CreateTime <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $UpdateTime <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     function __construct()
     {

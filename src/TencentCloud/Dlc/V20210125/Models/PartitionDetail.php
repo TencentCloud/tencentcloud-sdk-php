@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceQuota(array $ResourceQuota) 设置<p>资源配额列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSchedulableLimitList() 获取<p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchedulableLimitList(array $SchedulableLimitList) 设置<p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayMode() 获取<p>付费模式</p>
  * @method void setPayMode(integer $PayMode) 设置<p>付费模式</p>
  * @method integer getRenewFlag() 获取<p>续费标志</p>
@@ -52,6 +56,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取<p>状态</p>
  * @method void setStatus(integer $Status) 设置<p>状态</p>
+ * @method string getExpireTime() 获取<p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+ * @method string getIsolatedTimestamp() 获取<p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+ * @method void setIsolatedTimestamp(string $IsolatedTimestamp) 设置<p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+ * @method array getTags() 获取<p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置<p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourcePoolKind() 获取<p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+ * @method void setResourcePoolKind(string $ResourcePoolKind) 设置<p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+ * @method string getExternalClusterId() 获取<p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+ * @method void setExternalClusterId(string $ExternalClusterId) 设置<p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
  */
 class PartitionDetail extends AbstractModel
 {
@@ -95,6 +111,12 @@ class PartitionDetail extends AbstractModel
     public $ResourceQuota;
 
     /**
+     * @var array <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SchedulableLimitList;
+
+    /**
      * @var integer <p>付费模式</p>
      */
     public $PayMode;
@@ -116,6 +138,32 @@ class PartitionDetail extends AbstractModel
     public $Status;
 
     /**
+     * @var string <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+     */
+    public $IsolatedTimestamp;
+
+    /**
+     * @var array <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var string <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+     */
+    public $ResourcePoolKind;
+
+    /**
+     * @var string <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+     */
+    public $ExternalClusterId;
+
+    /**
      * @param string $PartitionCode <p>分区编码</p>
      * @param string $PartitionName <p>分区名称</p>
      * @param string $Description <p>分区描述</p>
@@ -127,11 +175,19 @@ class PartitionDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceQuota <p>资源配额列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SchedulableLimitList <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode <p>付费模式</p>
      * @param integer $RenewFlag <p>续费标志</p>
      * @param string $Scheduler <p>调度器类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status <p>状态</p>
+     * @param string $ExpireTime <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+     * @param string $IsolatedTimestamp <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+     * @param array $Tags <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourcePoolKind <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+     * @param string $ExternalClusterId <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
      */
     function __construct()
     {
@@ -179,6 +235,15 @@ class PartitionDetail extends AbstractModel
             }
         }
 
+        if (array_key_exists("SchedulableLimitList",$param) and $param["SchedulableLimitList"] !== null) {
+            $this->SchedulableLimitList = [];
+            foreach ($param["SchedulableLimitList"] as $key => $value){
+                $obj = new SchedulableLimit();
+                $obj->deserialize($value);
+                array_push($this->SchedulableLimitList, $obj);
+            }
+        }
+
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
         }
@@ -193,6 +258,31 @@ class PartitionDetail extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("IsolatedTimestamp",$param) and $param["IsolatedTimestamp"] !== null) {
+            $this->IsolatedTimestamp = $param["IsolatedTimestamp"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new CloudTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("ResourcePoolKind",$param) and $param["ResourcePoolKind"] !== null) {
+            $this->ResourcePoolKind = $param["ResourcePoolKind"];
+        }
+
+        if (array_key_exists("ExternalClusterId",$param) and $param["ExternalClusterId"] !== null) {
+            $this->ExternalClusterId = $param["ExternalClusterId"];
         }
     }
 }

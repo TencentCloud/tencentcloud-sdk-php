@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsHidden(boolean $IsHidden) 设置<p>是否隐藏</p>
  * @method boolean getIsChatHidden() 获取<p>是否隐藏会话</p>
  * @method void setIsChatHidden(boolean $IsChatHidden) 设置<p>是否隐藏会话</p>
+ * @method array getAttachments() 获取<p>传递图片附件</p>
+ * @method void setAttachments(array $Attachments) 设置<p>传递图片附件</p>
  */
 class CreateChatCompletionRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateChatCompletionRequest extends AbstractModel
     public $IsChatHidden;
 
     /**
+     * @var array <p>传递图片附件</p>
+     */
+    public $Attachments;
+
+    /**
      * @param string $InputContent <p>输入内容</p>
      * @param string $InstanceId <p>实例ID</p>
      * @param string $ChatId <p>对话窗口ID，空值表示新的会话</p>
      * @param boolean $IsHidden <p>是否隐藏</p>
      * @param boolean $IsChatHidden <p>是否隐藏会话</p>
+     * @param array $Attachments <p>传递图片附件</p>
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class CreateChatCompletionRequest extends AbstractModel
 
         if (array_key_exists("IsChatHidden",$param) and $param["IsChatHidden"] !== null) {
             $this->IsChatHidden = $param["IsChatHidden"];
+        }
+
+        if (array_key_exists("Attachments",$param) and $param["Attachments"] !== null) {
+            $this->Attachments = [];
+            foreach ($param["Attachments"] as $key => $value){
+                $obj = new Attachments();
+                $obj->deserialize($value);
+                array_push($this->Attachments, $obj);
+            }
         }
     }
 }

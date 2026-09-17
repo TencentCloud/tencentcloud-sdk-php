@@ -54,6 +54,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\CreateAigcAudioTaskResponse CreateAigcAudioTask(Models\CreateAigcAudioTaskRequest $req) 调用该接口，用于创建 AI 生音频任务。
  * @method Models\CreateAigcCustomElementResponse CreateAigcCustomElement(Models\CreateAigcCustomElementRequest $req) 调用该接口，针对指定模型进行主体创建。
  * @method Models\CreateAigcCustomVoiceResponse CreateAigcCustomVoice(Models\CreateAigcCustomVoiceRequest $req) 该接口用于创建 AIGC 自定义音色。注意，调用本接口会产生创建自定义音色费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#5e5217e8-29fc-467e-ac2d-853648f988b7)。
+ * @method Models\CreateAigcHunyuan3DTaskResponse CreateAigcHunyuan3DTask(Models\CreateAigcHunyuan3DTaskRequest $req) 该接口用于创建 AIGC 混元 3D 任务。
  * @method Models\CreateAigcImageTaskResponse CreateAigcImageTask(Models\CreateAigcImageTaskRequest $req) 该接口用于[生成 AIGC 图片](https://cloud.tencent.com/document/product/266/124473)。默认限制1个并发处理，接口调用会产生实际费用，请参考点播 [AIGC 生图片计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
  * @method Models\CreateAigcQuotaResponse CreateAigcQuota(Models\CreateAigcQuotaRequest $req) 用于创建并启用 AIGC 配额配置，配额用量从启用配额功能时开始累计，达到限额后将无法继续使用 AIGC 功能。
 

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisplayName(string $DisplayName) 设置<p>展示名字</p>
  * @method string getServerId() 获取<p>服务 id</p>
  * @method void setServerId(string $ServerId) 设置<p>服务 id</p>
- * @method string getUpstreamType() 获取<p>后端类型</p><p>枚举值：</p><ul><li>HostIP： 域名 ip</li><li>MCPRegistry： MCP 注册中心</li><li>VirtualMCPServer： 虚拟MCP 服务</li></ul>
- * @method void setUpstreamType(string $UpstreamType) 设置<p>后端类型</p><p>枚举值：</p><ul><li>HostIP： 域名 ip</li><li>MCPRegistry： MCP 注册中心</li><li>VirtualMCPServer： 虚拟MCP 服务</li></ul>
+ * @method string getUpstreamType() 获取<p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
+ * @method void setUpstreamType(string $UpstreamType) 设置<p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
  * @method integer getTimeout() 获取<p>超时时间，单位ms，最大60000</p>
  * @method void setTimeout(integer $Timeout) 设置<p>超时时间，单位ms，最大60000</p>
  * @method integer getRetryCount() 获取<p>重试次数，最大3次</p>
@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheck(AIGWHealthCheckSetting $HealthCheck) 设置<p>健康检查配置</p>
  * @method boolean getPreserveHost() 获取<p>是否开启保留原Host功能</p>
  * @method void setPreserveHost(boolean $PreserveHost) 设置<p>是否开启保留原Host功能</p>
+ * @method AIGWLogConfig getLogConfig() 获取<p>日志配置</p>
+ * @method void setLogConfig(AIGWLogConfig $LogConfig) 设置<p>日志配置</p>
  */
 class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
 {
@@ -63,7 +65,7 @@ class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
     public $ServerId;
 
     /**
-     * @var string <p>后端类型</p><p>枚举值：</p><ul><li>HostIP： 域名 ip</li><li>MCPRegistry： MCP 注册中心</li><li>VirtualMCPServer： 虚拟MCP 服务</li></ul>
+     * @var string <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
      */
     public $UpstreamType;
 
@@ -108,10 +110,15 @@ class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
     public $PreserveHost;
 
     /**
+     * @var AIGWLogConfig <p>日志配置</p>
+     */
+    public $LogConfig;
+
+    /**
      * @param string $GatewayId <p>实例 ID</p>
      * @param string $DisplayName <p>展示名字</p>
      * @param string $ServerId <p>服务 id</p>
-     * @param string $UpstreamType <p>后端类型</p><p>枚举值：</p><ul><li>HostIP： 域名 ip</li><li>MCPRegistry： MCP 注册中心</li><li>VirtualMCPServer： 虚拟MCP 服务</li></ul>
+     * @param string $UpstreamType <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
      * @param integer $Timeout <p>超时时间，单位ms，最大60000</p>
      * @param integer $RetryCount <p>重试次数，最大3次</p>
      * @param AIGWMCPUpstreamInfo $UpstreamInfo <p>注册中心来源信息</p>
@@ -120,6 +127,7 @@ class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
      * @param boolean $EnableHealthCheck <p>是否启用健康检查</p>
      * @param AIGWHealthCheckSetting $HealthCheck <p>健康检查配置</p>
      * @param boolean $PreserveHost <p>是否开启保留原Host功能</p>
+     * @param AIGWLogConfig $LogConfig <p>日志配置</p>
      */
     function __construct()
     {
@@ -183,6 +191,11 @@ class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
 
         if (array_key_exists("PreserveHost",$param) and $param["PreserveHost"] !== null) {
             $this->PreserveHost = $param["PreserveHost"];
+        }
+
+        if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
+            $this->LogConfig = new AIGWLogConfig();
+            $this->LogConfig->deserialize($param["LogConfig"]);
         }
     }
 }

@@ -20,26 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDspmAssetTableList请求参数结构体
  *
- * @method string getAssetId() 获取资产实例id
- * @method void setAssetId(string $AssetId) 设置资产实例id
- * @method string getDbName() 获取数据库名称
- * @method void setDbName(string $DbName) 设置数据库名称
+ * @method string getAssetId() 获取<p>资产实例id</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产实例id</p>
+ * @method string getDbName() 获取<p>数据库名称</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名称</p>
+ * @method string getSchemaName() 获取<p>Schema名称</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>Schema名称</p>
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
- * @method Filter getFilter() 获取筛选项
- * @method void setFilter(Filter $Filter) 设置筛选项
+ * @method Filter getFilter() 获取<p>筛选项</p>
+ * @method void setFilter(Filter $Filter) 设置<p>筛选项</p>
  */
 class DescribeDspmAssetTableListRequest extends AbstractModel
 {
     /**
-     * @var string 资产实例id
+     * @var string <p>资产实例id</p>
      */
     public $AssetId;
 
     /**
-     * @var string 数据库名称
+     * @var string <p>数据库名称</p>
      */
     public $DbName;
+
+    /**
+     * @var string <p>Schema名称</p>
+     */
+    public $SchemaName;
 
     /**
      * @var array <p>集团账号的成员id</p>
@@ -47,15 +54,16 @@ class DescribeDspmAssetTableListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter 筛选项
+     * @var Filter <p>筛选项</p>
      */
     public $Filter;
 
     /**
-     * @param string $AssetId 资产实例id
-     * @param string $DbName 数据库名称
+     * @param string $AssetId <p>资产实例id</p>
+     * @param string $DbName <p>数据库名称</p>
+     * @param string $SchemaName <p>Schema名称</p>
      * @param array $MemberId <p>集团账号的成员id</p>
-     * @param Filter $Filter 筛选项
+     * @param Filter $Filter <p>筛选项</p>
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class DescribeDspmAssetTableListRequest extends AbstractModel
 
         if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
             $this->DbName = $param["DbName"];
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
         }
 
         if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {

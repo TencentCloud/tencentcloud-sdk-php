@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
- * @method string getAssetId() 获取资产ID
- * @method void setAssetId(string $AssetId) 设置资产ID
- * @method string getIp() 获取资产IP
- * @method void setIp(string $Ip) 设置资产IP
- * @method string getDomain() 获取资产域名
- * @method void setDomain(string $Domain) 设置资产域名
- * @method string getPort() 获取端口或端口范围
- * @method void setPort(string $Port) 设置端口或端口范围
+ * @method string getAssetId() 获取<p>资产ID</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产ID</p>
+ * @method string getIp() 获取<p>资产IP</p>
+ * @method void setIp(string $Ip) 设置<p>资产IP</p>
+ * @method string getDomain() 获取<p>资产域名</p>
+ * @method void setDomain(string $Domain) 设置<p>资产域名</p>
+ * @method string getPort() 获取<p>端口或端口范围</p>
+ * @method void setPort(string $Port) 设置<p>端口或端口范围</p>
  */
 class DescribeExposePathRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class DescribeExposePathRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var string 资产ID
+     * @var string <p>资产ID</p>
      */
     public $AssetId;
 
     /**
-     * @var string 资产IP
+     * @var string <p>资产IP</p>
      */
     public $Ip;
 
     /**
-     * @var string 资产域名
+     * @var string <p>资产域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 端口或端口范围
+     * @var string <p>端口或端口范围</p>
      */
     public $Port;
 
     /**
      * @param array $MemberId <p>集团账号的成员id</p>
-     * @param string $AssetId 资产ID
-     * @param string $Ip 资产IP
-     * @param string $Domain 资产域名
-     * @param string $Port 端口或端口范围
+     * @param string $AssetId <p>资产ID</p>
+     * @param string $Ip <p>资产IP</p>
+     * @param string $Domain <p>资产域名</p>
+     * @param string $Port <p>端口或端口范围</p>
      */
     function __construct()
     {

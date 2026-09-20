@@ -20,142 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyKafkaRecharge请求参数结构体
  *
- * @method string getId() 获取导入配置Id。
-- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
- * @method void setId(string $Id) 设置导入配置Id。
-- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
- * @method string getTopicId() 获取导入CLS目标TopicId。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
- * @method void setTopicId(string $TopicId) 设置导入CLS目标TopicId。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
- * @method string getName() 获取Kafka导入配置名称
- * @method void setName(string $Name) 设置Kafka导入配置名称
- * @method integer getKafkaType() 获取导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。
- * @method void setKafkaType(integer $KafkaType) 设置导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。
- * @method string getKafkaInstance() 获取腾讯云CKafka实例ID，KafkaType为0时必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
- * @method void setKafkaInstance(string $KafkaInstance) 设置腾讯云CKafka实例ID，KafkaType为0时必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
- * @method string getServerAddr() 获取服务地址，KafkaType为1时必填。
- * @method void setServerAddr(string $ServerAddr) 设置服务地址，KafkaType为1时必填。
- * @method boolean getIsEncryptionAddr() 获取ServerAddr是否为加密连接，KafkaType为1时必填。
- * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置ServerAddr是否为加密连接，KafkaType为1时必填。
- * @method KafkaProtocolInfo getProtocol() 获取加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
- * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
- * @method string getUserKafkaTopics() 获取用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-
-- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
- * @method void setUserKafkaTopics(string $UserKafkaTopics) 设置用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-
-- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
- * @method string getConsumerGroupName() 获取用户Kafka消费组名称
- * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户Kafka消费组名称
- * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则
- * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则
- * @method integer getStatusControl() 获取导入控制，1：暂停；2：启动。
- * @method void setStatusControl(integer $StatusControl) 设置导入控制，1：暂停；2：启动。
- * @method UserKafkaMeta getUserKafkaMeta() 获取用户kafka拓展信息
- * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) 设置用户kafka拓展信息
+ * @method string getId() 获取<p>导入配置Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/94448">创建Kafka数据订阅任务</a>获取Kafka导入配置Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/94446">获取Kafka数据订阅任务列表</a>获取Kafka导入配置Id。</li></ul>
+ * @method void setId(string $Id) 设置<p>导入配置Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/94448">创建Kafka数据订阅任务</a>获取Kafka导入配置Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/94446">获取Kafka数据订阅任务列表</a>获取Kafka导入配置Id。</li></ul>
+ * @method string getTopicId() 获取<p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a>获取日志主题Id。</li></ul>
+ * @method void setTopicId(string $TopicId) 设置<p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a>获取日志主题Id。</li></ul>
+ * @method string getName() 获取<p>Kafka导入配置名称</p>
+ * @method void setName(string $Name) 设置<p>Kafka导入配置名称</p>
+ * @method integer getKafkaType() 获取<p>导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。</p>
+ * @method void setKafkaType(integer $KafkaType) 设置<p>导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。</p>
+ * @method string getKafkaInstance() 获取<p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
+ * @method void setKafkaInstance(string $KafkaInstance) 设置<p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
+ * @method string getServerAddr() 获取<p>服务地址，KafkaType为1时必填。</p>
+ * @method void setServerAddr(string $ServerAddr) 设置<p>服务地址，KafkaType为1时必填。</p>
+ * @method boolean getIsEncryptionAddr() 获取<p>ServerAddr是否为加密连接，KafkaType为1时必填。</p>
+ * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置<p>ServerAddr是否为加密连接，KafkaType为1时必填。</p>
+ * @method KafkaProtocolInfo getProtocol() 获取<p>加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
+ * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置<p>加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
+ * @method string getUserKafkaTopics() 获取<p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。</p><ul><li>Kafka类型为腾讯云CKafka时：通过 <a href="https://cloud.tencent.com/document/product/597/40847">获取主题列表</a> 获取TopicName。</li></ul>
+ * @method void setUserKafkaTopics(string $UserKafkaTopics) 设置<p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。</p><ul><li>Kafka类型为腾讯云CKafka时：通过 <a href="https://cloud.tencent.com/document/product/597/40847">获取主题列表</a> 获取TopicName。</li></ul>
+ * @method string getConsumerGroupName() 获取<p>用户Kafka消费组名称</p>
+ * @method void setConsumerGroupName(string $ConsumerGroupName) 设置<p>用户Kafka消费组名称</p>
+ * @method LogRechargeRuleInfo getLogRechargeRule() 获取<p>日志导入规则</p>
+ * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置<p>日志导入规则</p>
+ * @method integer getStatusControl() 获取<p>导入控制，1：暂停；2：启动。</p>
+ * @method void setStatusControl(integer $StatusControl) 设置<p>导入控制，1：暂停；2：启动。</p>
+ * @method NetworkInfo getNetworkInfo() 获取<p>私有网络信息参数</p>
+ * @method void setNetworkInfo(NetworkInfo $NetworkInfo) 设置<p>私有网络信息参数</p>
+ * @method UserKafkaMeta getUserKafkaMeta() 获取<p>用户kafka拓展信息</p>
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) 设置<p>用户kafka拓展信息</p>
  */
 class ModifyKafkaRechargeRequest extends AbstractModel
 {
     /**
-     * @var string 导入配置Id。
-- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+     * @var string <p>导入配置Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/94448">创建Kafka数据订阅任务</a>获取Kafka导入配置Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/94446">获取Kafka数据订阅任务列表</a>获取Kafka导入配置Id。</li></ul>
      */
     public $Id;
 
     /**
-     * @var string 导入CLS目标TopicId。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
+     * @var string <p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a>获取日志主题Id。</li></ul>
      */
     public $TopicId;
 
     /**
-     * @var string Kafka导入配置名称
+     * @var string <p>Kafka导入配置名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。
+     * @var integer <p>导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。</p>
      */
     public $KafkaType;
 
     /**
-     * @var string 腾讯云CKafka实例ID，KafkaType为0时必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+     * @var string <p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
      */
     public $KafkaInstance;
 
     /**
-     * @var string 服务地址，KafkaType为1时必填。
+     * @var string <p>服务地址，KafkaType为1时必填。</p>
      */
     public $ServerAddr;
 
     /**
-     * @var boolean ServerAddr是否为加密连接，KafkaType为1时必填。
+     * @var boolean <p>ServerAddr是否为加密连接，KafkaType为1时必填。</p>
      */
     public $IsEncryptionAddr;
 
     /**
-     * @var KafkaProtocolInfo 加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
+     * @var KafkaProtocolInfo <p>加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
      */
     public $Protocol;
 
     /**
-     * @var string 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-
-- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
+     * @var string <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。</p><ul><li>Kafka类型为腾讯云CKafka时：通过 <a href="https://cloud.tencent.com/document/product/597/40847">获取主题列表</a> 获取TopicName。</li></ul>
      */
     public $UserKafkaTopics;
 
     /**
-     * @var string 用户Kafka消费组名称
+     * @var string <p>用户Kafka消费组名称</p>
      */
     public $ConsumerGroupName;
 
     /**
-     * @var LogRechargeRuleInfo 日志导入规则
+     * @var LogRechargeRuleInfo <p>日志导入规则</p>
      */
     public $LogRechargeRule;
 
     /**
-     * @var integer 导入控制，1：暂停；2：启动。
+     * @var integer <p>导入控制，1：暂停；2：启动。</p>
      */
     public $StatusControl;
 
     /**
-     * @var UserKafkaMeta 用户kafka拓展信息
+     * @var NetworkInfo <p>私有网络信息参数</p>
+     */
+    public $NetworkInfo;
+
+    /**
+     * @var UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     public $UserKafkaMeta;
 
     /**
-     * @param string $Id 导入配置Id。
-- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
-     * @param string $TopicId 导入CLS目标TopicId。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
-     * @param string $Name Kafka导入配置名称
-     * @param integer $KafkaType 导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。
-     * @param string $KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
-     * @param string $ServerAddr 服务地址，KafkaType为1时必填。
-     * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填。
-     * @param KafkaProtocolInfo $Protocol 加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
-     * @param string $UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-
-- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
-     * @param string $ConsumerGroupName 用户Kafka消费组名称
-     * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则
-     * @param integer $StatusControl 导入控制，1：暂停；2：启动。
-     * @param UserKafkaMeta $UserKafkaMeta 用户kafka拓展信息
+     * @param string $Id <p>导入配置Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/94448">创建Kafka数据订阅任务</a>获取Kafka导入配置Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/94446">获取Kafka数据订阅任务列表</a>获取Kafka导入配置Id。</li></ul>
+     * @param string $TopicId <p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a>获取日志主题Id。</li></ul>
+     * @param string $Name <p>Kafka导入配置名称</p>
+     * @param integer $KafkaType <p>导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。</p>
+     * @param string $KafkaInstance <p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
+     * @param string $ServerAddr <p>服务地址，KafkaType为1时必填。</p>
+     * @param boolean $IsEncryptionAddr <p>ServerAddr是否为加密连接，KafkaType为1时必填。</p>
+     * @param KafkaProtocolInfo $Protocol <p>加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
+     * @param string $UserKafkaTopics <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。</p><ul><li>Kafka类型为腾讯云CKafka时：通过 <a href="https://cloud.tencent.com/document/product/597/40847">获取主题列表</a> 获取TopicName。</li></ul>
+     * @param string $ConsumerGroupName <p>用户Kafka消费组名称</p>
+     * @param LogRechargeRuleInfo $LogRechargeRule <p>日志导入规则</p>
+     * @param integer $StatusControl <p>导入控制，1：暂停；2：启动。</p>
+     * @param NetworkInfo $NetworkInfo <p>私有网络信息参数</p>
+     * @param UserKafkaMeta $UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     function __construct()
     {
@@ -218,6 +198,11 @@ class ModifyKafkaRechargeRequest extends AbstractModel
 
         if (array_key_exists("StatusControl",$param) and $param["StatusControl"] !== null) {
             $this->StatusControl = $param["StatusControl"];
+        }
+
+        if (array_key_exists("NetworkInfo",$param) and $param["NetworkInfo"] !== null) {
+            $this->NetworkInfo = new NetworkInfo();
+            $this->NetworkInfo->deserialize($param["NetworkInfo"]);
         }
 
         if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {

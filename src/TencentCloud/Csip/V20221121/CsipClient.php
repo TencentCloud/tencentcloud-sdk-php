@@ -34,7 +34,6 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\BatchModifyImageSensitiveWhitelistResponse BatchModifyImageSensitiveWhitelist(Models\BatchModifyImageSensitiveWhitelistRequest $req) 批量修改容器镜像敏感信息白名单
  * @method Models\BatchModifyImageVirusWhitelistResponse BatchModifyImageVirusWhitelist(Models\BatchModifyImageVirusWhitelistRequest $req) 批量修改镜像木马白名单
  * @method Models\BatchModifyImageVulWhitelistResponse BatchModifyImageVulWhitelist(Models\BatchModifyImageVulWhitelistRequest $req) 批量修改容器镜像漏洞白名单
- * @method Models\BindClusterOwnerResponse BindClusterOwner(Models\BindClusterOwnerRequest $req) 绑定集群负责人
  * @method Models\CancelEdrAlertIgnoreResponse CancelEdrAlertIgnore(Models\CancelEdrAlertIgnoreRequest $req) 取消已永久忽略的EDR多行为告警，从AI-Link永久忽略白名单移除对应主机+规则记录，并将告警状态恢复为待处理（PENDING）
  * @method Models\CheckCWPExposePathPermissionResponse CheckCWPExposePathPermission(Models\CheckCWPExposePathPermissionRequest $req) 判断当前用户是否旗舰版(适用于主机)
  * @method Models\CheckImageRegistryInstanceNameDuplicateResponse CheckImageRegistryInstanceNameDuplicate(Models\CheckImageRegistryInstanceNameDuplicateRequest $req) 检查镜像仓库实例名是否重复
@@ -315,7 +314,6 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeClusterContainerWebServiceListResponse DescribeClusterContainerWebServiceList(Models\DescribeClusterContainerWebServiceListRequest $req) 查询容器关联Web服务列表。通过容器ID获取关联的Web服务信息，支持分页。
  * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) 查询集群详情
  * @method Models\DescribeClusterInstallCommandResponse DescribeClusterInstallCommand(Models\DescribeClusterInstallCommandRequest $req) 查询集群安装命令
- * @method Models\DescribeClusterListV2Response DescribeClusterListV2(Models\DescribeClusterListV2Request $req) 查询集群列表
  * @method Models\DescribeClusterNamespaceListResponse DescribeClusterNamespaceList(Models\DescribeClusterNamespaceListRequest $req) 查询集群命名空间列表
  * @method Models\DescribeClusterNodeListResponse DescribeClusterNodeList(Models\DescribeClusterNodeListRequest $req) 查询集群节点列表
  * @method Models\DescribeClusterPodAssetsResponse DescribeClusterPodAssets(Models\DescribeClusterPodAssetsRequest $req) 集群pod列表
@@ -581,8 +579,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeSecurityScoreRuleResponse DescribeSecurityScoreRule(Models\DescribeSecurityScoreRuleRequest $req) 获取当前账号的安全评分规则，无自定义则返回内置默认规则
  * @method Models\DescribeSkillScanAlertDetailResponse DescribeSkillScanAlertDetail(Models\DescribeSkillScanAlertDetailRequest $req) 查询 Skill 安全检测告警详情，包含本地告警信息和引擎实时检测数据
  * @method Models\DescribeSkillScanAlertListResponse DescribeSkillScanAlertList(Models\DescribeSkillScanAlertListRequest $req) 查询 Skill 安全检测告警列表，支持分页、过滤和排序
- * @method Models\DescribeSkillScanPayInfoResponse DescribeSkillScanPayInfo(Models\DescribeSkillScanPayInfoRequest $req) 查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。
+ * @method Models\DescribeSkillScanPayInfoResponse DescribeSkillScanPayInfo(Models\DescribeSkillScanPayInfoRequest $req) 查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。后付费资源信息通过 PostPayStatus、PostPayResourceId、PostPayBeginTime 返回，与预付费订单字段相互独立，二者可同时有效（预付额度耗尽后溢出用量进入后付费）。
  * @method Models\DescribeSkillScanResultResponse DescribeSkillScanResult(Models\DescribeSkillScanResultRequest $req) 查询 Skill 安全检测结果。调用 CreateSkillScan 成功后使用返回的 ContentHash + EngineVersion 轮询本接口获取结果。上传成功后建议5分钟后首次轮询，如未检测完成之后每隔1分钟轮询一次。响应通过 Status 字段区分四种状态：检测完成（SUCCESS）、检测中（SCANNING）、无记录（NOT_FOUND）、检测失败（FAILED）。注意：检测结果保留90天，超期后将返回 NOT_FOUND。
+ * @method Models\DescribeSkillScanTaskListResponse DescribeSkillScanTaskList(Models\DescribeSkillScanTaskListRequest $req) 分页查询 Skill 扫描任务列表，返回每个任务的 Skill 名称、消耗次数与上传时间，按上传时间倒序排列。默认查询本月数据，可通过 StartTime / EndTime 指定时间范围。
  * @method Models\DescribeSourceIPAssetResponse DescribeSourceIPAsset(Models\DescribeSourceIPAssetRequest $req) 获取用户访问密钥资产列表（源IP视角）
  * @method Models\DescribeSourceIPDetailResponse DescribeSourceIPDetail(Models\DescribeSourceIPDetailRequest $req) 获取用户访问密钥资产列表（源IP视角）
  * @method Models\DescribeSubUserInfoResponse DescribeSubUserInfo(Models\DescribeSubUserInfoRequest $req) 查询集团的子账号列表

@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置<p>地域信息</p>
  * @method string getUserName() 获取<p>镜像仓库用户名</p>
  * @method void setUserName(string $UserName) 设置<p>镜像仓库用户名</p>
+ * @method string getConnStatus() 获取<p>连接状态</p><p>枚举值：</p><ul><li>status_connected： 连接成功</li><li>status_connecting： 连接中</li><li>status_connect_failed： 连接失败</li><li>status_partial_failed： 部分连接失败</li></ul>
+ * @method void setConnStatus(string $ConnStatus) 设置<p>连接状态</p><p>枚举值：</p><ul><li>status_connected： 连接成功</li><li>status_connecting： 连接中</li><li>status_connect_failed： 连接失败</li><li>status_partial_failed： 部分连接失败</li></ul>
  */
 class ImageRegistryInfo extends AbstractModel
 {
@@ -164,6 +166,11 @@ class ImageRegistryInfo extends AbstractModel
     public $UserName;
 
     /**
+     * @var string <p>连接状态</p><p>枚举值：</p><ul><li>status_connected： 连接成功</li><li>status_connecting： 连接中</li><li>status_connect_failed： 连接失败</li><li>status_partial_failed： 部分连接失败</li></ul>
+     */
+    public $ConnStatus;
+
+    /**
      * @param integer $RegistryId <p>仓库id</p>
      * @param string $Name <p>仓库名</p>
      * @param string $RegistryType <p>仓库类型</p>
@@ -184,6 +191,7 @@ class ImageRegistryInfo extends AbstractModel
      * @param string $SyncFailReason <p>同步失败原因</p>
      * @param RegionInfo $RegionInfo <p>地域信息</p>
      * @param string $UserName <p>镜像仓库用户名</p>
+     * @param string $ConnStatus <p>连接状态</p><p>枚举值：</p><ul><li>status_connected： 连接成功</li><li>status_connecting： 连接中</li><li>status_connect_failed： 连接失败</li><li>status_partial_failed： 部分连接失败</li></ul>
      */
     function __construct()
     {
@@ -282,6 +290,10 @@ class ImageRegistryInfo extends AbstractModel
 
         if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
             $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("ConnStatus",$param) and $param["ConnStatus"] !== null) {
+            $this->ConnStatus = $param["ConnStatus"];
         }
     }
 }

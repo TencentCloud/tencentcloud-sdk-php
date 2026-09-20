@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayId(string $GatewayId) 设置实例 ID
  * @method string getSecretKeyId() 获取密钥id
  * @method void setSecretKeyId(string $SecretKeyId) 设置密钥id
+ * @method string getSecretValueType() 获取指定从 AKSK 或 CAM 成对凭证中返回哪一半。取值：AccessKey（AKSK 返回 AccessKeyId，CAM 返回 SecretId）、SecretKey（AKSK 返回 SecretAccessKey，CAM 返回 SecretKey）。不传则保持原行为，仅返回 AccessKeyId 或 SecretId。
+ * @method void setSecretValueType(string $SecretValueType) 设置指定从 AKSK 或 CAM 成对凭证中返回哪一半。取值：AccessKey（AKSK 返回 AccessKeyId，CAM 返回 SecretId）、SecretKey（AKSK 返回 SecretAccessKey，CAM 返回 SecretKey）。不传则保持原行为，仅返回 AccessKeyId 或 SecretId。
  */
 class DescribeCloudNativeAPIGatewaySecretKeyValueRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeCloudNativeAPIGatewaySecretKeyValueRequest extends AbstractModel
     public $SecretKeyId;
 
     /**
+     * @var string 指定从 AKSK 或 CAM 成对凭证中返回哪一半。取值：AccessKey（AKSK 返回 AccessKeyId，CAM 返回 SecretId）、SecretKey（AKSK 返回 SecretAccessKey，CAM 返回 SecretKey）。不传则保持原行为，仅返回 AccessKeyId 或 SecretId。
+     */
+    public $SecretValueType;
+
+    /**
      * @param string $GatewayId 实例 ID
      * @param string $SecretKeyId 密钥id
+     * @param string $SecretValueType 指定从 AKSK 或 CAM 成对凭证中返回哪一半。取值：AccessKey（AKSK 返回 AccessKeyId，CAM 返回 SecretId）、SecretKey（AKSK 返回 SecretAccessKey，CAM 返回 SecretKey）。不传则保持原行为，仅返回 AccessKeyId 或 SecretId。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeCloudNativeAPIGatewaySecretKeyValueRequest extends AbstractModel
 
         if (array_key_exists("SecretKeyId",$param) and $param["SecretKeyId"] !== null) {
             $this->SecretKeyId = $param["SecretKeyId"];
+        }
+
+        if (array_key_exists("SecretValueType",$param) and $param["SecretValueType"] !== null) {
+            $this->SecretValueType = $param["SecretValueType"];
         }
     }
 }

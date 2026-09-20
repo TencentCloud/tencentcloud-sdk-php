@@ -18,28 +18,28 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 配置格式
+ * 通用键值对 POJO（替代各 DTO 中重复定义的 PropEntry / KVPair / PropertyEntry）。
  *
- * @method string getKey() 获取<p>配置的key值</p>
- * @method void setKey(string $Key) 设置<p>配置的key值</p>
- * @method string getValue() 获取<p>配置的value值</p>
- * @method void setValue(string $Value) 设置<p>配置的value值</p>
+ * @method string getKey() 获取配置的key值
+ * @method void setKey(string $Key) 设置配置的key值
+ * @method string getValue() 获取配置的value值
+ * @method void setValue(string $Value) 设置配置的value值
  */
 class KVPair extends AbstractModel
 {
     /**
-     * @var string <p>配置的key值</p>
+     * @var string 配置的key值
      */
     public $Key;
 
     /**
-     * @var string <p>配置的value值</p>
+     * @var string 配置的value值
      */
     public $Value;
 
     /**
-     * @param string $Key <p>配置的key值</p>
-     * @param string $Value <p>配置的value值</p>
+     * @param string $Key 配置的key值
+     * @param string $Value 配置的value值
      */
     function __construct()
     {

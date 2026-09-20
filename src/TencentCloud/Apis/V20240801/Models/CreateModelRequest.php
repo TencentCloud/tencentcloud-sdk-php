@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetPath(string $TargetPath) 设置<p>目标路径</p>
  * @method array getTargetHosts() 获取<p>目标服务器</p>
  * @method void setTargetHosts(array $TargetHosts) 设置<p>目标服务器</p>
+ * @method string getProvider() 获取<p>模型提供商</p><p>枚举值：</p><ul><li>tencentTokenHub： 腾讯云TokenHub</li><li>tiONE： TI-ONE应用</li><li>default： 其他</li></ul>
+ * @method void setProvider(string $Provider) 设置<p>模型提供商</p><p>枚举值：</p><ul><li>tencentTokenHub： 腾讯云TokenHub</li><li>tiONE： TI-ONE应用</li><li>default： 其他</li></ul>
+ * @method array getApiKeys() 获取<p>Provider=tencentTokenHub时对应的密钥</p>
+ * @method void setApiKeys(array $ApiKeys) 设置<p>Provider=tencentTokenHub时对应的密钥</p>
  * @method string getCredentialID() 获取<p>凭据ID</p>
  * @method void setCredentialID(string $CredentialID) 设置<p>凭据ID</p>
  * @method boolean getCheckTargetCertsError() 获取<p>https时，是否检查证书合法</p>
@@ -69,6 +73,16 @@ class CreateModelRequest extends AbstractModel
     public $TargetHosts;
 
     /**
+     * @var string <p>模型提供商</p><p>枚举值：</p><ul><li>tencentTokenHub： 腾讯云TokenHub</li><li>tiONE： TI-ONE应用</li><li>default： 其他</li></ul>
+     */
+    public $Provider;
+
+    /**
+     * @var array <p>Provider=tencentTokenHub时对应的密钥</p>
+     */
+    public $ApiKeys;
+
+    /**
      * @var string <p>凭据ID</p>
      */
     public $CredentialID;
@@ -99,6 +113,8 @@ class CreateModelRequest extends AbstractModel
      * @param string $HttpProtocolType <p>协议类型：http/https</p>
      * @param string $TargetPath <p>目标路径</p>
      * @param array $TargetHosts <p>目标服务器</p>
+     * @param string $Provider <p>模型提供商</p><p>枚举值：</p><ul><li>tencentTokenHub： 腾讯云TokenHub</li><li>tiONE： TI-ONE应用</li><li>default： 其他</li></ul>
+     * @param array $ApiKeys <p>Provider=tencentTokenHub时对应的密钥</p>
      * @param string $CredentialID <p>凭据ID</p>
      * @param boolean $CheckTargetCertsError <p>https时，是否检查证书合法</p>
      * @param string $HttpProtocolVersion <p>http协议版本：1.1/2.0</p>
@@ -141,6 +157,14 @@ class CreateModelRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TargetHosts, $obj);
             }
+        }
+
+        if (array_key_exists("Provider",$param) and $param["Provider"] !== null) {
+            $this->Provider = $param["Provider"];
+        }
+
+        if (array_key_exists("ApiKeys",$param) and $param["ApiKeys"] !== null) {
+            $this->ApiKeys = $param["ApiKeys"];
         }
 
         if (array_key_exists("CredentialID",$param) and $param["CredentialID"] !== null) {

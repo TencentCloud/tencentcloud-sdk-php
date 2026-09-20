@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequestTimeout(integer $RequestTimeout) 设置<p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
  * @method boolean getXForwardedForRealIp() 获取<p>是否打开七层获取源IP方式。</p>
  * @method void setXForwardedForRealIp(boolean $XForwardedForRealIp) 设置<p>是否打开七层获取源IP方式。</p>
- * @method string getCertificationType() 获取<p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
- * @method void setCertificationType(string $CertificationType) 设置<p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+ * @method string getCertificationType() 获取<p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向。</li><li>MUTUAL： 双向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+ * @method void setCertificationType(string $CertificationType) 设置<p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向。</li><li>MUTUAL： 双向。</li></ul><p>HTTPS监听器，此字段必传。</p>
  * @method string getCipherPolicyId() 获取<p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
  * @method void setCipherPolicyId(string $CipherPolicyId) 设置<p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
  * @method array getServerCertificates() 获取<p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
@@ -111,7 +111,7 @@ class CreateListenerRequest extends AbstractModel
     public $XForwardedForRealIp;
 
     /**
-     * @var string <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+     * @var string <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向。</li><li>MUTUAL： 双向。</li></ul><p>HTTPS监听器，此字段必传。</p>
      */
     public $CertificationType;
 
@@ -147,7 +147,7 @@ class CreateListenerRequest extends AbstractModel
      * @param string $ClientAffinity <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul><p>仅支持4层监听器 ，7层不支持修改</p>
      * @param integer $RequestTimeout <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
      * @param boolean $XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
-     * @param string $CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+     * @param string $CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向。</li><li>MUTUAL： 双向。</li></ul><p>HTTPS监听器，此字段必传。</p>
      * @param string $CipherPolicyId <p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
      * @param array $ServerCertificates <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
      * @param array $ClientCaCertificates <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>

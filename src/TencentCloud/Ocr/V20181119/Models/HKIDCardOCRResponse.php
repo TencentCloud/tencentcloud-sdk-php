@@ -20,152 +20,131 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HKIDCardOCR返回参数结构体
  *
- * @method string getCnName() 获取中文姓名
- * @method void setCnName(string $CnName) 设置中文姓名
- * @method string getEnName() 获取英文姓名
- * @method void setEnName(string $EnName) 设置英文姓名
- * @method string getTelexCode() 获取中文姓名对应电码
- * @method void setTelexCode(string $TelexCode) 设置中文姓名对应电码
- * @method string getSex() 获取性别 ：“男M”或“女F”
- * @method void setSex(string $Sex) 设置性别 ：“男M”或“女F”
- * @method string getBirthday() 获取出生日期
- * @method void setBirthday(string $Birthday) 设置出生日期
- * @method integer getPermanent() 获取永久性居民身份证。
-0：非永久；
-1：永久；
--1：未知。
- * @method void setPermanent(integer $Permanent) 设置永久性居民身份证。
-0：非永久；
-1：永久；
--1：未知。
- * @method string getIdNum() 获取身份证号码
- * @method void setIdNum(string $IdNum) 设置身份证号码
- * @method string getSymbol() 获取证件符号，出生日期下的符号，例如"***AZ"
- * @method void setSymbol(string $Symbol) 设置证件符号，出生日期下的符号，例如"***AZ"
- * @method string getFirstIssueDate() 获取首次签发日期
- * @method void setFirstIssueDate(string $FirstIssueDate) 设置首次签发日期
- * @method string getCurrentIssueDate() 获取最近领用日期
- * @method void setCurrentIssueDate(string $CurrentIssueDate) 设置最近领用日期
- * @method integer getFakeDetectResult() 获取真假判断。
-0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；
-1：假；
-2：真。
+ * @method string getCnName() 获取<p>中文姓名</p>
+ * @method void setCnName(string $CnName) 设置<p>中文姓名</p>
+ * @method string getEnName() 获取<p>英文姓名</p>
+ * @method void setEnName(string $EnName) 设置<p>英文姓名</p>
+ * @method string getTelexCode() 获取<p>中文姓名对应电码</p>
+ * @method void setTelexCode(string $TelexCode) 设置<p>中文姓名对应电码</p>
+ * @method string getSex() 获取<p>性别 ：“男M”或“女F”</p>
+ * @method void setSex(string $Sex) 设置<p>性别 ：“男M”或“女F”</p>
+ * @method string getBirthday() 获取<p>出生日期</p>
+ * @method void setBirthday(string $Birthday) 设置<p>出生日期</p>
+ * @method integer getPermanent() 获取<p>永久性居民身份证。<br>0：非永久；<br>1：永久；<br>-1：未知。</p>
+ * @method void setPermanent(integer $Permanent) 设置<p>永久性居民身份证。<br>0：非永久；<br>1：永久；<br>-1：未知。</p>
+ * @method string getIdNum() 获取<p>身份证号码</p>
+ * @method void setIdNum(string $IdNum) 设置<p>身份证号码</p>
+ * @method string getSymbol() 获取<p>证件符号，出生日期下的符号，例如&quot;***AZ&quot;</p>
+ * @method void setSymbol(string $Symbol) 设置<p>证件符号，出生日期下的符号，例如&quot;***AZ&quot;</p>
+ * @method string getFirstIssueDate() 获取<p>首次签发日期</p>
+ * @method void setFirstIssueDate(string $FirstIssueDate) 设置<p>首次签发日期</p>
+ * @method string getCurrentIssueDate() 获取<p>最近领用日期</p>
+ * @method void setCurrentIssueDate(string $CurrentIssueDate) 设置<p>最近领用日期</p>
+ * @method integer getFakeDetectResult() 获取<p>真假判断。<br>0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；<br>1：假；<br>2：真。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFakeDetectResult(integer $FakeDetectResult) 设置真假判断。
-0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；
-1：假；
-2：真。
+ * @method void setFakeDetectResult(integer $FakeDetectResult) 设置<p>真假判断。<br>0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；<br>1：假；<br>2：真。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHeadImage() 获取Base64编码的证件左侧人像大图
+ * @method string getHeadImage() 获取<p>Base64编码的证件左侧人像大图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeadImage(string $HeadImage) 设置Base64编码的证件左侧人像大图
+ * @method void setHeadImage(string $HeadImage) 设置<p>Base64编码的证件左侧人像大图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSmallHeadImage() 获取Base64编码的证件右侧人像小图
+ * @method string getSmallHeadImage() 获取<p>Base64编码的证件右侧人像小图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSmallHeadImage(string $SmallHeadImage) 设置Base64编码的证件右侧人像小图
+ * @method void setSmallHeadImage(string $SmallHeadImage) 设置<p>Base64编码的证件右侧人像小图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getWarningCode() 获取该字段已废弃， 将固定返回空数组，不建议使用。
-
- * @method void setWarningCode(array $WarningCode) 设置该字段已废弃， 将固定返回空数组，不建议使用。
-
- * @method array getWarnCardInfos() 获取该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
- * @method void setWarnCardInfos(array $WarnCardInfos) 设置该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
- * @method string getWindowEmbeddedText() 获取证件透明视窗内的文本信息
- * @method void setWindowEmbeddedText(string $WindowEmbeddedText) 设置证件透明视窗内的文本信息
+ * @method array getWarningCode() 获取<p>该字段已废弃， 将固定返回空数组，不建议使用。</p>
+ * @method void setWarningCode(array $WarningCode) 设置<p>该字段已废弃， 将固定返回空数组，不建议使用。</p>
+ * @method array getWarnCardInfos() 获取<p>该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通</p>
+ * @method void setWarnCardInfos(array $WarnCardInfos) 设置<p>该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通</p>
+ * @method string getWindowEmbeddedText() 获取<p>证件透明视窗内的文本信息</p>
+ * @method void setWindowEmbeddedText(string $WindowEmbeddedText) 设置<p>证件透明视窗内的文本信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class HKIDCardOCRResponse extends AbstractModel
 {
     /**
-     * @var string 中文姓名
+     * @var string <p>中文姓名</p>
      */
     public $CnName;
 
     /**
-     * @var string 英文姓名
+     * @var string <p>英文姓名</p>
      */
     public $EnName;
 
     /**
-     * @var string 中文姓名对应电码
+     * @var string <p>中文姓名对应电码</p>
      */
     public $TelexCode;
 
     /**
-     * @var string 性别 ：“男M”或“女F”
+     * @var string <p>性别 ：“男M”或“女F”</p>
      */
     public $Sex;
 
     /**
-     * @var string 出生日期
+     * @var string <p>出生日期</p>
      */
     public $Birthday;
 
     /**
-     * @var integer 永久性居民身份证。
-0：非永久；
-1：永久；
--1：未知。
+     * @var integer <p>永久性居民身份证。<br>0：非永久；<br>1：永久；<br>-1：未知。</p>
      */
     public $Permanent;
 
     /**
-     * @var string 身份证号码
+     * @var string <p>身份证号码</p>
      */
     public $IdNum;
 
     /**
-     * @var string 证件符号，出生日期下的符号，例如"***AZ"
+     * @var string <p>证件符号，出生日期下的符号，例如&quot;***AZ&quot;</p>
      */
     public $Symbol;
 
     /**
-     * @var string 首次签发日期
+     * @var string <p>首次签发日期</p>
      */
     public $FirstIssueDate;
 
     /**
-     * @var string 最近领用日期
+     * @var string <p>最近领用日期</p>
      */
     public $CurrentIssueDate;
 
     /**
-     * @var integer 真假判断。
-0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；
-1：假；
-2：真。
+     * @var integer <p>真假判断。<br>0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；<br>1：假；<br>2：真。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $FakeDetectResult;
 
     /**
-     * @var string Base64编码的证件左侧人像大图
+     * @var string <p>Base64编码的证件左侧人像大图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadImage;
 
     /**
-     * @var string Base64编码的证件右侧人像小图
+     * @var string <p>Base64编码的证件右侧人像小图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmallHeadImage;
 
     /**
-     * @var array 该字段已废弃， 将固定返回空数组，不建议使用。
-
+     * @var array <p>该字段已废弃， 将固定返回空数组，不建议使用。</p>
      * @deprecated
      */
     public $WarningCode;
 
     /**
-     * @var array 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
+     * @var array <p>该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通</p>
      */
     public $WarnCardInfos;
 
     /**
-     * @var string 证件透明视窗内的文本信息
+     * @var string <p>证件透明视窗内的文本信息</p>
      */
     public $WindowEmbeddedText;
 
@@ -175,32 +154,25 @@ class HKIDCardOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CnName 中文姓名
-     * @param string $EnName 英文姓名
-     * @param string $TelexCode 中文姓名对应电码
-     * @param string $Sex 性别 ：“男M”或“女F”
-     * @param string $Birthday 出生日期
-     * @param integer $Permanent 永久性居民身份证。
-0：非永久；
-1：永久；
--1：未知。
-     * @param string $IdNum 身份证号码
-     * @param string $Symbol 证件符号，出生日期下的符号，例如"***AZ"
-     * @param string $FirstIssueDate 首次签发日期
-     * @param string $CurrentIssueDate 最近领用日期
-     * @param integer $FakeDetectResult 真假判断。
-0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；
-1：假；
-2：真。
+     * @param string $CnName <p>中文姓名</p>
+     * @param string $EnName <p>英文姓名</p>
+     * @param string $TelexCode <p>中文姓名对应电码</p>
+     * @param string $Sex <p>性别 ：“男M”或“女F”</p>
+     * @param string $Birthday <p>出生日期</p>
+     * @param integer $Permanent <p>永久性居民身份证。<br>0：非永久；<br>1：永久；<br>-1：未知。</p>
+     * @param string $IdNum <p>身份证号码</p>
+     * @param string $Symbol <p>证件符号，出生日期下的符号，例如&quot;***AZ&quot;</p>
+     * @param string $FirstIssueDate <p>首次签发日期</p>
+     * @param string $CurrentIssueDate <p>最近领用日期</p>
+     * @param integer $FakeDetectResult <p>真假判断。<br>0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；<br>1：假；<br>2：真。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HeadImage Base64编码的证件左侧人像大图
+     * @param string $HeadImage <p>Base64编码的证件左侧人像大图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SmallHeadImage Base64编码的证件右侧人像小图
+     * @param string $SmallHeadImage <p>Base64编码的证件右侧人像小图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $WarningCode 该字段已废弃， 将固定返回空数组，不建议使用。
-
-     * @param array $WarnCardInfos 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
-     * @param string $WindowEmbeddedText 证件透明视窗内的文本信息
+     * @param array $WarningCode <p>该字段已废弃， 将固定返回空数组，不建议使用。</p>
+     * @param array $WarnCardInfos <p>该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通</p>
+     * @param string $WindowEmbeddedText <p>证件透明视窗内的文本信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateKafkaRecharge返回参数结构体
  *
- * @method string getId() 获取Kafka导入配置ID
- * @method void setId(string $Id) 设置Kafka导入配置ID
+ * @method string getId() 获取<p>Kafka导入配置ID</p>
+ * @method void setId(string $Id) 设置<p>Kafka导入配置ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateKafkaRechargeResponse extends AbstractModel
 {
     /**
-     * @var string Kafka导入配置ID
+     * @var string <p>Kafka导入配置ID</p>
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class CreateKafkaRechargeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Id Kafka导入配置ID
+     * @param string $Id <p>Kafka导入配置ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserInfo请求参数结构体
  *
- * @method string getAppName() 获取应用名称。
- * @method void setAppName(string $AppName) 设置应用名称。
- * @method string getUserId() 获取用户标识。
- * @method void setUserId(string $UserId) 设置用户标识。
+ * @method string getAppName() 获取<p>应用名称。</p>
+ * @method void setAppName(string $AppName) 设置<p>应用名称。</p>
+ * @method string getUserId() 获取<p>用户标识。</p>
+ * @method void setUserId(string $UserId) 设置<p>用户标识。</p>
  */
 class DescribeUserInfoRequest extends AbstractModel
 {
     /**
-     * @var string 应用名称。
+     * @var string <p>应用名称。</p>
      */
     public $AppName;
 
     /**
-     * @var string 用户标识。
+     * @var string <p>用户标识。</p>
      */
     public $UserId;
 
     /**
-     * @param string $AppName 应用名称。
-     * @param string $UserId 用户标识。
+     * @param string $AppName <p>应用名称。</p>
+     * @param string $UserId <p>用户标识。</p>
      */
     function __construct()
     {

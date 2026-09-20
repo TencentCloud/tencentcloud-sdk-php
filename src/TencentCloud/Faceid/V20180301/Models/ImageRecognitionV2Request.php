@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOptional(string $Optional) 设置<p>本接口不需要传递此参数。</p>
  * @method Encryption getEncryption() 获取<p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
  * @method void setEncryption(Encryption $Encryption) 设置<p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
- * @method string getExtra() 获取<p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
- * @method void setExtra(string $Extra) 设置<p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
+ * @method string getExtra() 获取<p>自定义描述字段。</p><ul><li><p>用于描述调用业务信息，出参中将返回此描述字段。</p></li><li><p>每个自定义描述字段最长支持10 个字符（即 [0,10] 个字符）；不传该参数时，出参中此字段返回空字符串。</p></li></ul>
+ * @method void setExtra(string $Extra) 设置<p>自定义描述字段。</p><ul><li><p>用于描述调用业务信息，出参中将返回此描述字段。</p></li><li><p>每个自定义描述字段最长支持10 个字符（即 [0,10] 个字符）；不传该参数时，出参中此字段返回空字符串。</p></li></ul>
  */
 class ImageRecognitionV2Request extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ImageRecognitionV2Request extends AbstractModel
     public $Encryption;
 
     /**
-     * @var string <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
+     * @var string <p>自定义描述字段。</p><ul><li><p>用于描述调用业务信息，出参中将返回此描述字段。</p></li><li><p>每个自定义描述字段最长支持10 个字符（即 [0,10] 个字符）；不传该参数时，出参中此字段返回空字符串。</p></li></ul>
      */
     public $Extra;
 
@@ -71,7 +71,7 @@ class ImageRecognitionV2Request extends AbstractModel
      * @param string $ImageBase64 <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
      * @param string $Optional <p>本接口不需要传递此参数。</p>
      * @param Encryption $Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
-     * @param string $Extra <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
+     * @param string $Extra <p>自定义描述字段。</p><ul><li><p>用于描述调用业务信息，出参中将返回此描述字段。</p></li><li><p>每个自定义描述字段最长支持10 个字符（即 [0,10] 个字符）；不传该参数时，出参中此字段返回空字符串。</p></li></ul>
      */
     function __construct()
     {

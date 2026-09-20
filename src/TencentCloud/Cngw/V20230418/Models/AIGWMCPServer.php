@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerType(string $ServerType) 设置<p>MCP Server类型，取值：MCP/Rest2MCP</p>
  * @method string getTransport() 获取<p>协议类型，取值: StreamableHttp</p>
  * @method void setTransport(string $Transport) 设置<p>协议类型，取值: StreamableHttp</p>
- * @method string getUpstreamType() 获取<p>服务类型：</p><ul><li>Registry  </li><li>HostIP</li></ul>
- * @method void setUpstreamType(string $UpstreamType) 设置<p>服务类型：</p><ul><li>Registry  </li><li>HostIP</li></ul>
+ * @method string getUpstreamType() 获取<p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
+ * @method void setUpstreamType(string $UpstreamType) 设置<p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
  * @method string getDisplayName() 获取<p>展示名字</p>
  * @method void setDisplayName(string $DisplayName) 设置<p>展示名字</p>
  * @method string getMCPEndpoint() 获取<p>MCP提供给客户端的Endpoint</p>
@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMarketStatus(string $MarketStatus) 设置<p>MCP 市场发布状态</p><p>枚举值：</p><ul><li>None： 未发布</li><li>Published： 已发布</li></ul>
  * @method boolean getPreserveHost() 获取<p>是否开启保留原Host功能</p>
  * @method void setPreserveHost(boolean $PreserveHost) 设置<p>是否开启保留原Host功能</p>
+ * @method AIGWLogConfig getLogConfig() 获取<p>日志采集配置</p>
+ * @method void setLogConfig(AIGWLogConfig $LogConfig) 设置<p>日志采集配置</p>
  */
 class AIGWMCPServer extends AbstractModel
 {
@@ -92,7 +94,7 @@ class AIGWMCPServer extends AbstractModel
     public $Transport;
 
     /**
-     * @var string <p>服务类型：</p><ul><li>Registry  </li><li>HostIP</li></ul>
+     * @var string <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
      */
     public $UpstreamType;
 
@@ -180,11 +182,16 @@ class AIGWMCPServer extends AbstractModel
     public $PreserveHost;
 
     /**
+     * @var AIGWLogConfig <p>日志采集配置</p>
+     */
+    public $LogConfig;
+
+    /**
      * @param string $ServerId <p>MCP Server ID</p>
      * @param string $Name <p>MCP Server名称</p>
      * @param string $ServerType <p>MCP Server类型，取值：MCP/Rest2MCP</p>
      * @param string $Transport <p>协议类型，取值: StreamableHttp</p>
-     * @param string $UpstreamType <p>服务类型：</p><ul><li>Registry  </li><li>HostIP</li></ul>
+     * @param string $UpstreamType <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
      * @param string $DisplayName <p>展示名字</p>
      * @param string $MCPEndpoint <p>MCP提供给客户端的Endpoint</p>
      * @param AIGWMCPUpstreamInfoDetail $UpstreamInfo <p>注册中心来源信息</p>
@@ -204,6 +211,7 @@ class AIGWMCPServer extends AbstractModel
      * @param string $ConflictStrategy <p>Tool分组内工具命名冲突策略</p><p>枚举值：</p><ul><li>AutoPrefix： 自动前缀</li><li>Reject： 拒绝</li></ul>
      * @param string $MarketStatus <p>MCP 市场发布状态</p><p>枚举值：</p><ul><li>None： 未发布</li><li>Published： 已发布</li></ul>
      * @param boolean $PreserveHost <p>是否开启保留原Host功能</p>
+     * @param AIGWLogConfig $LogConfig <p>日志采集配置</p>
      */
     function __construct()
     {
@@ -303,6 +311,11 @@ class AIGWMCPServer extends AbstractModel
 
         if (array_key_exists("PreserveHost",$param) and $param["PreserveHost"] !== null) {
             $this->PreserveHost = $param["PreserveHost"];
+        }
+
+        if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
+            $this->LogConfig = new AIGWLogConfig();
+            $this->LogConfig->deserialize($param["LogConfig"]);
         }
     }
 }

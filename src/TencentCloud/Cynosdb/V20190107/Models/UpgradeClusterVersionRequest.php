@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeClusterVersion请求参数结构体
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method string getCynosVersion() 获取内核版本
- * @method void setCynosVersion(string $CynosVersion) 设置内核版本
- * @method string getUpgradeType() 获取升级时间类型，可选：upgradeImmediate,upgradeInMaintain
- * @method void setUpgradeType(string $UpgradeType) 设置升级时间类型，可选：upgradeImmediate,upgradeInMaintain
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method string getCynosVersion() 获取<p>内核版本</p>
+ * @method void setCynosVersion(string $CynosVersion) 设置<p>内核版本</p>
+ * @method string getUpgradeType() 获取<p>升级时间类型，可选：upgradeImmediate,upgradeInMaintain</p>
+ * @method void setUpgradeType(string $UpgradeType) 设置<p>升级时间类型，可选：upgradeImmediate,upgradeInMaintain</p>
  */
 class UpgradeClusterVersionRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 内核版本
+     * @var string <p>内核版本</p>
      */
     public $CynosVersion;
 
     /**
-     * @var string 升级时间类型，可选：upgradeImmediate,upgradeInMaintain
+     * @var string <p>升级时间类型，可选：upgradeImmediate,upgradeInMaintain</p>
      */
     public $UpgradeType;
 
     /**
-     * @param string $ClusterId 集群id
-     * @param string $CynosVersion 内核版本
-     * @param string $UpgradeType 升级时间类型，可选：upgradeImmediate,upgradeInMaintain
+     * @param string $ClusterId <p>集群id</p>
+     * @param string $CynosVersion <p>内核版本</p>
+     * @param string $UpgradeType <p>升级时间类型，可选：upgradeImmediate,upgradeInMaintain</p>
      */
     function __construct()
     {

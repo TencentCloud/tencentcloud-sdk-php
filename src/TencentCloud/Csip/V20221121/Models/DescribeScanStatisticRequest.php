@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScanStatistic请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method string getTaskLogId() 获取体检任务id
  * @method void setTaskLogId(string $TaskLogId) 设置体检任务id
  */
 class DescribeScanStatisticRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -38,7 +38,7 @@ class DescribeScanStatisticRequest extends AbstractModel
     public $TaskLogId;
 
     /**
-     * @param array $MemberId 集团账号的成员id
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param string $TaskLogId 体检任务id
      */
     function __construct()

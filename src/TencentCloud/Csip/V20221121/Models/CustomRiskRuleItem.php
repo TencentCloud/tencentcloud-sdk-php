@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStandardTerms(array $StandardTerms) 设置<p>安全条款规范</p>
  * @method string getAssetTypeIconURL() 获取<p>资产类型图标</p>
  * @method void setAssetTypeIconURL(string $AssetTypeIconURL) 设置<p>资产类型图标</p>
+ * @method integer getEnableDefault() 获取<p>规则默认开启状态</p>
+ * @method void setEnableDefault(integer $EnableDefault) 设置<p>规则默认开启状态</p>
  */
 class CustomRiskRuleItem extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CustomRiskRuleItem extends AbstractModel
     public $AssetTypeIconURL;
 
     /**
+     * @var integer <p>规则默认开启状态</p>
+     */
+    public $EnableDefault;
+
+    /**
      * @param string $RuleID <p>风险规则ID</p>
      * @param string $Provider <p>腾讯云</p>
      * @param string $RiskTitle <p>风险标题</p>
@@ -128,6 +135,7 @@ class CustomRiskRuleItem extends AbstractModel
      * @param string $CheckType <p>检查类型</p>
      * @param array $StandardTerms <p>安全条款规范</p>
      * @param string $AssetTypeIconURL <p>资产类型图标</p>
+     * @param integer $EnableDefault <p>规则默认开启状态</p>
      */
     function __construct()
     {
@@ -197,6 +205,10 @@ class CustomRiskRuleItem extends AbstractModel
 
         if (array_key_exists("AssetTypeIconURL",$param) and $param["AssetTypeIconURL"] !== null) {
             $this->AssetTypeIconURL = $param["AssetTypeIconURL"];
+        }
+
+        if (array_key_exists("EnableDefault",$param) and $param["EnableDefault"] !== null) {
+            $this->EnableDefault = $param["EnableDefault"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置<p>开始位置</p>
  * @method integer getLimit() 获取<p>每页数量</p>
  * @method void setLimit(integer $Limit) 设置<p>每页数量</p>
+ * @method string getKeyword() 获取<p>关键字</p>
+ * @method void setKeyword(string $Keyword) 设置<p>关键字</p>
  * @method array getFilters() 获取<p>过滤条件</p>
  * @method void setFilters(array $Filters) 设置<p>过滤条件</p>
  * @method array getAlarmLevels() 获取<p>配额预警级别</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Warning： 预警</li><li>NearLimit： 临近超限</li><li>Exceeded： 超限</li></ul>
@@ -49,6 +51,11 @@ class DescribeCloudNativeAPIGatewayAIQuotaListRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string <p>关键字</p>
+     */
+    public $Keyword;
+
+    /**
      * @var array <p>过滤条件</p>
      */
     public $Filters;
@@ -62,6 +69,7 @@ class DescribeCloudNativeAPIGatewayAIQuotaListRequest extends AbstractModel
      * @param string $GatewayId <p>网关实例Id</p>
      * @param integer $Offset <p>开始位置</p>
      * @param integer $Limit <p>每页数量</p>
+     * @param string $Keyword <p>关键字</p>
      * @param array $Filters <p>过滤条件</p>
      * @param array $AlarmLevels <p>配额预警级别</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Warning： 预警</li><li>NearLimit： 临近超限</li><li>Exceeded： 超限</li></ul>
      */
@@ -88,6 +96,10 @@ class DescribeCloudNativeAPIGatewayAIQuotaListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

@@ -20,94 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 歌曲基础信息。
  *
- * @method string getMusicId() 获取歌曲Id。
- * @method void setMusicId(string $MusicId) 设置歌曲Id。
- * @method string getName() 获取歌曲名称。
- * @method void setName(string $Name) 设置歌曲名称。
- * @method array getSingerSet() 获取歌手名称。
- * @method void setSingerSet(array $SingerSet) 设置歌手名称。
- * @method integer getDuration() 获取播放时长。
- * @method void setDuration(integer $Duration) 设置播放时长。
- * @method string getSingerImageUrl() 获取歌手图片链接。
- * @method void setSingerImageUrl(string $SingerImageUrl) 设置歌手图片链接。
- * @method MusicAlbumInfo getAlbumInfo() 获取专辑信息。
+ * @method string getMusicId() 获取<p>歌曲Id。</p>
+ * @method void setMusicId(string $MusicId) 设置<p>歌曲Id。</p>
+ * @method string getName() 获取<p>歌曲名称。</p>
+ * @method void setName(string $Name) 设置<p>歌曲名称。</p>
+ * @method array getSingerSet() 获取<p>歌手名称。</p>
+ * @method void setSingerSet(array $SingerSet) 设置<p>歌手名称。</p>
+ * @method integer getDuration() 获取<p>播放时长。</p><p>单位：秒</p>
+ * @method void setDuration(integer $Duration) 设置<p>播放时长。</p><p>单位：秒</p>
+ * @method string getSingerImageUrl() 获取<p>歌手图片链接。</p>
+ * @method void setSingerImageUrl(string $SingerImageUrl) 设置<p>歌手图片链接。</p>
+ * @method MusicAlbumInfo getAlbumInfo() 获取<p>专辑信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlbumInfo(MusicAlbumInfo $AlbumInfo) 设置专辑信息。
+ * @method void setAlbumInfo(MusicAlbumInfo $AlbumInfo) 设置<p>专辑信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRightSet() 获取权益列表，取值有：
-<li>Play：可播；</li>
-<li>Sing：可唱。</li>
- * @method void setRightSet(array $RightSet) 设置权益列表，取值有：
-<li>Play：可播；</li>
-<li>Sing：可唱。</li>
- * @method string getRecommendType() 获取推荐类型，取值有：
-<li>Featured：精选；</li>
-<li>Other：其他。</li>
- * @method void setRecommendType(string $RecommendType) 设置推荐类型，取值有：
-<li>Featured：精选；</li>
-<li>Other：其他。</li>
+ * @method array getRightSet() 获取<p>权益列表，取值有：</p><li>Play：可播；</li><li>Sing：可唱。</li>
+ * @method void setRightSet(array $RightSet) 设置<p>权益列表，取值有：</p><li>Play：可播；</li><li>Sing：可唱。</li>
+ * @method string getRecommendType() 获取<p>推荐类型，取值有：</p><li>Featured：精选；</li><li>Other：其他。</li>
+ * @method void setRecommendType(string $RecommendType) 设置<p>推荐类型，取值有：</p><li>Featured：精选；</li><li>Other：其他。</li>
  */
 class KTVMusicBaseInfo extends AbstractModel
 {
     /**
-     * @var string 歌曲Id。
+     * @var string <p>歌曲Id。</p>
      */
     public $MusicId;
 
     /**
-     * @var string 歌曲名称。
+     * @var string <p>歌曲名称。</p>
      */
     public $Name;
 
     /**
-     * @var array 歌手名称。
+     * @var array <p>歌手名称。</p>
      */
     public $SingerSet;
 
     /**
-     * @var integer 播放时长。
+     * @var integer <p>播放时长。</p><p>单位：秒</p>
      */
     public $Duration;
 
     /**
-     * @var string 歌手图片链接。
+     * @var string <p>歌手图片链接。</p>
      */
     public $SingerImageUrl;
 
     /**
-     * @var MusicAlbumInfo 专辑信息。
+     * @var MusicAlbumInfo <p>专辑信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlbumInfo;
 
     /**
-     * @var array 权益列表，取值有：
-<li>Play：可播；</li>
-<li>Sing：可唱。</li>
+     * @var array <p>权益列表，取值有：</p><li>Play：可播；</li><li>Sing：可唱。</li>
      */
     public $RightSet;
 
     /**
-     * @var string 推荐类型，取值有：
-<li>Featured：精选；</li>
-<li>Other：其他。</li>
+     * @var string <p>推荐类型，取值有：</p><li>Featured：精选；</li><li>Other：其他。</li>
      */
     public $RecommendType;
 
     /**
-     * @param string $MusicId 歌曲Id。
-     * @param string $Name 歌曲名称。
-     * @param array $SingerSet 歌手名称。
-     * @param integer $Duration 播放时长。
-     * @param string $SingerImageUrl 歌手图片链接。
-     * @param MusicAlbumInfo $AlbumInfo 专辑信息。
+     * @param string $MusicId <p>歌曲Id。</p>
+     * @param string $Name <p>歌曲名称。</p>
+     * @param array $SingerSet <p>歌手名称。</p>
+     * @param integer $Duration <p>播放时长。</p><p>单位：秒</p>
+     * @param string $SingerImageUrl <p>歌手图片链接。</p>
+     * @param MusicAlbumInfo $AlbumInfo <p>专辑信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RightSet 权益列表，取值有：
-<li>Play：可播；</li>
-<li>Sing：可唱。</li>
-     * @param string $RecommendType 推荐类型，取值有：
-<li>Featured：精选；</li>
-<li>Other：其他。</li>
+     * @param array $RightSet <p>权益列表，取值有：</p><li>Play：可播；</li><li>Sing：可唱。</li>
+     * @param string $RecommendType <p>推荐类型，取值有：</p><li>Featured：精选；</li><li>Other：其他。</li>
      */
     function __construct()
     {

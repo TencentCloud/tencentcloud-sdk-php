@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOtherAssetCount(integer $OtherAssetCount) 设置<p>其他云环境资产总数</p>
  * @method integer getAzureAssetCount() 获取<p>微软云资产数量</p>
  * @method void setAzureAssetCount(integer $AzureAssetCount) 设置<p>微软云资产数量</p>
+ * @method integer getTceAssetCount() 获取<p>腾讯TCE专有云资产数量</p>
+ * @method void setTceAssetCount(integer $TceAssetCount) 设置<p>腾讯TCE专有云资产数量</p>
  */
 class AssetProviderDistributeInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class AssetProviderDistributeInfo extends AbstractModel
     public $AzureAssetCount;
 
     /**
+     * @var integer <p>腾讯TCE专有云资产数量</p>
+     */
+    public $TceAssetCount;
+
+    /**
      * @param integer $TencentAssetCount <p>腾讯云资产总数</p>
      * @param integer $AliAssetCount <p>阿里云资产总数</p>
      * @param integer $AwsAssetCount <p>亚马逊云资产总数</p>
      * @param integer $OtherAssetCount <p>其他云环境资产总数</p>
      * @param integer $AzureAssetCount <p>微软云资产数量</p>
+     * @param integer $TceAssetCount <p>腾讯TCE专有云资产数量</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class AssetProviderDistributeInfo extends AbstractModel
 
         if (array_key_exists("AzureAssetCount",$param) and $param["AzureAssetCount"] !== null) {
             $this->AzureAssetCount = $param["AzureAssetCount"];
+        }
+
+        if (array_key_exists("TceAssetCount",$param) and $param["TceAssetCount"] !== null) {
+            $this->TceAssetCount = $param["TceAssetCount"];
         }
     }
 }

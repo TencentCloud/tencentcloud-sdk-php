@@ -335,6 +335,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\TriggerEventResponse TriggerEvent(Models\TriggerEventRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 触发事件。本接口已废弃，请使用接口TriggerDsEvent。
  * @method Models\TriggerManualTasksResponse TriggerManualTasks(Models\TriggerManualTasksRequest $req) 手动任务触发运行
+ * @method Models\UnbindingResourceResponse UnbindingResource(Models\UnbindingResourceRequest $req) 解绑bundle绑定的资源
  * @method Models\UnboundProjectExecutorResourceResponse UnboundProjectExecutorResource(Models\UnboundProjectExecutorResourceRequest $req) 商业化版本：执行资源组/资源包解除绑定项目
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务
  * @method Models\UpdateCodeTemplateResponse UpdateCodeTemplate(Models\UpdateCodeTemplateRequest $req) 更新模版

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
  * @method string getGroup() 获取<p>消费组</p>
  * @method void setGroup(string $Group) 设置<p>消费组</p>
+ * @method string getLabel() 获取<p>消费者标签</p><p>传入 Label 表示只删除该标签路由，不传表示删除完整路由</p>
+ * @method void setLabel(string $Label) 设置<p>消费者标签</p><p>传入 Label 表示只删除该标签路由，不传表示删除完整路由</p>
  */
 class DeleteConsumerRouteConfigRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteConsumerRouteConfigRequest extends AbstractModel
     public $Group;
 
     /**
+     * @var string <p>消费者标签</p><p>传入 Label 表示只删除该标签路由，不传表示删除完整路由</p>
+     */
+    public $Label;
+
+    /**
      * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Group <p>消费组</p>
+     * @param string $Label <p>消费者标签</p><p>传入 Label 表示只删除该标签路由，不传表示删除完整路由</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteConsumerRouteConfigRequest extends AbstractModel
 
         if (array_key_exists("Group",$param) and $param["Group"] !== null) {
             $this->Group = $param["Group"];
+        }
+
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = $param["Label"];
         }
     }
 }

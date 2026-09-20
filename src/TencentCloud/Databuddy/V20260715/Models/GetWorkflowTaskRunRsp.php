@@ -20,465 +20,477 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetWorkflowTaskRunRsp
  *
- * @method string getTaskName() 获取任务名称
+ * @method string getTaskName() 获取<p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskName(string $TaskName) 设置任务名称
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowTaskRunId() 获取任务运行ID
+ * @method string getWorkflowTaskRunId() 获取<p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowTaskRunId(string $WorkflowTaskRunId) 设置任务运行ID
+ * @method void setWorkflowTaskRunId(string $WorkflowTaskRunId) 设置<p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunState() 获取运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed
+ * @method string getRunState() 获取<p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunState(string $RunState) 设置运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed
+ * @method void setRunState(string $RunState) 设置<p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkspaceId() 获取工作空间ID
+ * @method string getWorkspaceId() 获取<p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkspaceId(string $WorkspaceId) 设置工作空间ID
+ * @method void setWorkspaceId(string $WorkspaceId) 设置<p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowId() 获取工作流ID
+ * @method string getWorkflowId() 获取<p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowRunId() 获取工作流运行ID
+ * @method string getWorkflowRunId() 获取<p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowRunId(string $WorkflowRunId) 设置工作流运行ID
+ * @method void setWorkflowRunId(string $WorkflowRunId) 设置<p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取任务ID
+ * @method string getTaskId() 获取<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskTypeName() 获取任务类型名称
+ * @method string getTaskTypeName() 获取<p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeName(string $TaskTypeName) 设置任务类型名称
+ * @method void setTaskTypeName(string $TaskTypeName) 设置<p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskVersionId() 获取任务版本ID
+ * @method string getTaskVersionId() 获取<p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskVersionId(string $TaskVersionId) 设置任务版本ID
+ * @method void setTaskVersionId(string $TaskVersionId) 设置<p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTriggerType() 获取触发类型 (参考SchedulerTriggerType枚举)
+ * @method string getTriggerType() 获取<p>触发类型 (参考SchedulerTriggerType枚举)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerType(string $TriggerType) 设置触发类型 (参考SchedulerTriggerType枚举)
+ * @method void setTriggerType(string $TriggerType) 设置<p>触发类型 (参考SchedulerTriggerType枚举)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupId() 获取所属资源组ID
+ * @method string getResourceGroupId() 获取<p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置所属资源组ID
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrorCodeString() 获取错误码
+ * @method string getErrorCodeString() 获取<p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorCodeString(string $ErrorCodeString) 设置错误码
+ * @method void setErrorCodeString(string $ErrorCodeString) 设置<p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunUserUin() 获取运行用户UIN
+ * @method string getRunUserUin() 获取<p>运行用户UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunUserUin(string $RunUserUin) 设置运行用户UIN
+ * @method void setRunUserUin(string $RunUserUin) 设置<p>运行用户UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunUserName() 获取运行用户名称
+ * @method string getRunUserName() 获取<p>运行用户名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunUserName(string $RunUserName) 设置运行用户名称
+ * @method void setRunUserName(string $RunUserName) 设置<p>运行用户名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateUserUin() 获取创建人UIN
+ * @method string getCreateUserUin() 获取<p>创建人UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateUserUin(string $CreateUserUin) 设置创建人UIN
+ * @method void setCreateUserUin(string $CreateUserUin) 设置<p>创建人UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getJobId() 获取执行平台执行ID
+ * @method string getJobId() 获取<p>执行平台执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobId(string $JobId) 设置执行平台执行ID
+ * @method void setJobId(string $JobId) 设置<p>执行平台执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间，单位：毫秒时间戳
+ * @method string getCreateTime() 获取<p>创建时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间，单位：毫秒时间戳
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间，单位：毫秒时间戳
+ * @method string getUpdateTime() 获取<p>更新时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间，单位：毫秒时间戳
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDependenceFinishedTime() 获取依赖任务完成时间，单位：毫秒时间戳
+ * @method string getDependenceFinishedTime() 获取<p>依赖任务完成时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependenceFinishedTime(string $DependenceFinishedTime) 设置依赖任务完成时间，单位：毫秒时间戳
+ * @method void setDependenceFinishedTime(string $DependenceFinishedTime) 设置<p>依赖任务完成时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunStartTime() 获取运行开始时间，单位：毫秒时间戳
+ * @method string getRunStartTime() 获取<p>运行开始时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunStartTime(string $RunStartTime) 设置运行开始时间，单位：毫秒时间戳
+ * @method void setRunStartTime(string $RunStartTime) 设置<p>运行开始时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunEndTime() 获取运行结束时间，单位：毫秒时间戳
+ * @method string getRunEndTime() 获取<p>运行结束时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunEndTime(string $RunEndTime) 设置运行结束时间，单位：毫秒时间戳
+ * @method void setRunEndTime(string $RunEndTime) 设置<p>运行结束时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunCostTime() 获取运行时长，单位：秒
+ * @method string getRunCostTime() 获取<p>运行时长，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunCostTime(string $RunCostTime) 设置运行时长，单位：秒
+ * @method void setRunCostTime(string $RunCostTime) 设置<p>运行时长，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWaitTime() 获取等待时长（依赖就绪到开始运行的等待耗时），单位：秒
+ * @method string getWaitTime() 获取<p>等待时长（依赖就绪到开始运行的等待耗时），单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWaitTime(string $WaitTime) 设置等待时长（依赖就绪到开始运行的等待耗时），单位：秒
+ * @method void setWaitTime(string $WaitTime) 设置<p>等待时长（依赖就绪到开始运行的等待耗时），单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIssueTime() 获取下发执行平台时间，单位：毫秒时间戳
+ * @method string getIssueTime() 获取<p>下发执行平台时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIssueTime(string $IssueTime) 设置下发执行平台时间，单位：毫秒时间戳
+ * @method void setIssueTime(string $IssueTime) 设置<p>下发执行平台时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTimeZone() 获取时区
+ * @method string getTimeZone() 获取<p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeZone(string $TimeZone) 设置时区
+ * @method void setTimeZone(string $TimeZone) 设置<p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDependOnList() 获取依赖上游任务ID列表
+ * @method array getDependOnList() 获取<p>依赖上游任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependOnList(array $DependOnList) 设置依赖上游任务ID列表
+ * @method void setDependOnList(array $DependOnList) 设置<p>依赖上游任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunParams() 获取运行参数
+ * @method string getRunParams() 获取<p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunParams(string $RunParams) 设置运行参数
+ * @method void setRunParams(string $RunParams) 设置<p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskTypeExtensions() 获取任务扩展信息，包含脚本路径
+ * @method string getTaskTypeExtensions() 获取<p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeExtensions(string $TaskTypeExtensions) 设置任务扩展信息，包含脚本路径
+ * @method void setTaskTypeExtensions(string $TaskTypeExtensions) 设置<p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getLeftCoordinate() 获取任务X坐标
+ * @method float getLeftCoordinate() 获取<p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLeftCoordinate(float $LeftCoordinate) 设置任务X坐标
+ * @method void setLeftCoordinate(float $LeftCoordinate) 设置<p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getTopCoordinate() 获取任务Y坐标
+ * @method float getTopCoordinate() 获取<p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopCoordinate(float $TopCoordinate) 设置任务Y坐标
+ * @method void setTopCoordinate(float $TopCoordinate) 设置<p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRetryTimes() 获取重试次数
+ * @method integer getRetryTimes() 获取<p>重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRetryTimes(integer $RetryTimes) 设置重试次数
+ * @method void setRetryTimes(integer $RetryTimes) 设置<p>重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowName() 获取工作流名称
+ * @method string getWorkflowName() 获取<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRerunTimes() 获取重跑次数
+ * @method integer getRerunTimes() 获取<p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRerunTimes(integer $RerunTimes) 设置重跑次数
+ * @method void setRerunTimes(integer $RerunTimes) 设置<p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsLatestRun() 获取是否最新一次运行
+ * @method boolean getIsLatestRun() 获取<p>是否最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsLatestRun(boolean $IsLatestRun) 设置是否最新一次运行
+ * @method void setIsLatestRun(boolean $IsLatestRun) 设置<p>是否最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResourceGroupInfoList() 获取资源组信息列表
+ * @method array getResourceGroupInfoList() 获取<p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupInfoList(array $ResourceGroupInfoList) 设置资源组信息列表
+ * @method void setResourceGroupInfoList(array $ResourceGroupInfoList) 设置<p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrorMessage() 获取错误消息
+ * @method string getErrorMessage() 获取<p>错误消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorMessage(string $ErrorMessage) 设置错误消息
+ * @method void setErrorMessage(string $ErrorMessage) 设置<p>错误消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunResult() 获取运行结果
+ * @method string getRunResult() 获取<p>运行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunResult(string $RunResult) 设置运行结果
+ * @method void setRunResult(string $RunResult) 设置<p>运行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method InnerWorkflowTaskRun getInnerWorkflowTaskRun() 获取内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）
+ * @method InnerWorkflowTaskRun getInnerWorkflowTaskRun() 获取<p>内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInnerWorkflowTaskRun(InnerWorkflowTaskRun $InnerWorkflowTaskRun) 设置内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）
+ * @method void setInnerWorkflowTaskRun(InnerWorkflowTaskRun $InnerWorkflowTaskRun) 设置<p>内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScheduledTime() 获取<p>计划调度时间</p><p>参数格式：毫秒时间戳（UTC）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduledTime(string $ScheduledTime) 设置<p>计划调度时间</p><p>参数格式：毫秒时间戳（UTC）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GetWorkflowTaskRunRsp extends AbstractModel
 {
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
-     * @var string 任务运行ID
+     * @var string <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowTaskRunId;
 
     /**
-     * @var string 运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed
+     * @var string <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunState;
 
     /**
-     * @var string 工作空间ID
+     * @var string <p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkspaceId;
 
     /**
-     * @var string 工作流ID
+     * @var string <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 工作流运行ID
+     * @var string <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowRunId;
 
     /**
-     * @var string 任务ID
+     * @var string <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 任务类型名称
+     * @var string <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeName;
 
     /**
-     * @var string 任务版本ID
+     * @var string <p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskVersionId;
 
     /**
-     * @var string 触发类型 (参考SchedulerTriggerType枚举)
+     * @var string <p>触发类型 (参考SchedulerTriggerType枚举)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerType;
 
     /**
-     * @var string 所属资源组ID
+     * @var string <p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
 
     /**
-     * @var string 错误码
+     * @var string <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorCodeString;
 
     /**
-     * @var string 运行用户UIN
+     * @var string <p>运行用户UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunUserUin;
 
     /**
-     * @var string 运行用户名称
+     * @var string <p>运行用户名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunUserName;
 
     /**
-     * @var string 创建人UIN
+     * @var string <p>创建人UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUserUin;
 
     /**
-     * @var string 执行平台执行ID
+     * @var string <p>执行平台执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
 
     /**
-     * @var string 创建时间，单位：毫秒时间戳
+     * @var string <p>创建时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间，单位：毫秒时间戳
+     * @var string <p>更新时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 依赖任务完成时间，单位：毫秒时间戳
+     * @var string <p>依赖任务完成时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependenceFinishedTime;
 
     /**
-     * @var string 运行开始时间，单位：毫秒时间戳
+     * @var string <p>运行开始时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunStartTime;
 
     /**
-     * @var string 运行结束时间，单位：毫秒时间戳
+     * @var string <p>运行结束时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunEndTime;
 
     /**
-     * @var string 运行时长，单位：秒
+     * @var string <p>运行时长，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunCostTime;
 
     /**
-     * @var string 等待时长（依赖就绪到开始运行的等待耗时），单位：秒
+     * @var string <p>等待时长（依赖就绪到开始运行的等待耗时），单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaitTime;
 
     /**
-     * @var string 下发执行平台时间，单位：毫秒时间戳
+     * @var string <p>下发执行平台时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IssueTime;
 
     /**
-     * @var string 时区
+     * @var string <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeZone;
 
     /**
-     * @var array 依赖上游任务ID列表
+     * @var array <p>依赖上游任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependOnList;
 
     /**
-     * @var string 运行参数
+     * @var string <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunParams;
 
     /**
-     * @var string 任务扩展信息，包含脚本路径
+     * @var string <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeExtensions;
 
     /**
-     * @var float 任务X坐标
+     * @var float <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LeftCoordinate;
 
     /**
-     * @var float 任务Y坐标
+     * @var float <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopCoordinate;
 
     /**
-     * @var integer 重试次数
+     * @var integer <p>重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetryTimes;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowName;
 
     /**
-     * @var integer 重跑次数
+     * @var integer <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RerunTimes;
 
     /**
-     * @var boolean 是否最新一次运行
+     * @var boolean <p>是否最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsLatestRun;
 
     /**
-     * @var array 资源组信息列表
+     * @var array <p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupInfoList;
 
     /**
-     * @var string 错误消息
+     * @var string <p>错误消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
     /**
-     * @var string 运行结果
+     * @var string <p>运行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunResult;
 
     /**
-     * @var InnerWorkflowTaskRun 内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）
+     * @var InnerWorkflowTaskRun <p>内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InnerWorkflowTaskRun;
 
     /**
-     * @param string $TaskName 任务名称
+     * @var string <p>计划调度时间</p><p>参数格式：毫秒时间戳（UTC）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowTaskRunId 任务运行ID
+     */
+    public $ScheduledTime;
+
+    /**
+     * @param string $TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunState 运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed
+     * @param string $WorkflowTaskRunId <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkspaceId 工作空间ID
+     * @param string $RunState <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowId 工作流ID
+     * @param string $WorkspaceId <p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowRunId 工作流运行ID
+     * @param string $WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 任务ID
+     * @param string $WorkflowRunId <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskTypeName 任务类型名称
+     * @param string $TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskVersionId 任务版本ID
+     * @param string $TaskTypeName <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TriggerType 触发类型 (参考SchedulerTriggerType枚举)
+     * @param string $TaskVersionId <p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupId 所属资源组ID
+     * @param string $TriggerType <p>触发类型 (参考SchedulerTriggerType枚举)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ErrorCodeString 错误码
+     * @param string $ResourceGroupId <p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunUserUin 运行用户UIN
+     * @param string $ErrorCodeString <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunUserName 运行用户名称
+     * @param string $RunUserUin <p>运行用户UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateUserUin 创建人UIN
+     * @param string $RunUserName <p>运行用户名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $JobId 执行平台执行ID
+     * @param string $CreateUserUin <p>创建人UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间，单位：毫秒时间戳
+     * @param string $JobId <p>执行平台执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间，单位：毫秒时间戳
+     * @param string $CreateTime <p>创建时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DependenceFinishedTime 依赖任务完成时间，单位：毫秒时间戳
+     * @param string $UpdateTime <p>更新时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunStartTime 运行开始时间，单位：毫秒时间戳
+     * @param string $DependenceFinishedTime <p>依赖任务完成时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunEndTime 运行结束时间，单位：毫秒时间戳
+     * @param string $RunStartTime <p>运行开始时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunCostTime 运行时长，单位：秒
+     * @param string $RunEndTime <p>运行结束时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WaitTime 等待时长（依赖就绪到开始运行的等待耗时），单位：秒
+     * @param string $RunCostTime <p>运行时长，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IssueTime 下发执行平台时间，单位：毫秒时间戳
+     * @param string $WaitTime <p>等待时长（依赖就绪到开始运行的等待耗时），单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TimeZone 时区
+     * @param string $IssueTime <p>下发执行平台时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DependOnList 依赖上游任务ID列表
+     * @param string $TimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunParams 运行参数
+     * @param array $DependOnList <p>依赖上游任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskTypeExtensions 任务扩展信息，包含脚本路径
+     * @param string $RunParams <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $LeftCoordinate 任务X坐标
+     * @param string $TaskTypeExtensions <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $TopCoordinate 任务Y坐标
+     * @param float $LeftCoordinate <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RetryTimes 重试次数
+     * @param float $TopCoordinate <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowName 工作流名称
+     * @param integer $RetryTimes <p>重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RerunTimes 重跑次数
+     * @param string $WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsLatestRun 是否最新一次运行
+     * @param integer $RerunTimes <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ResourceGroupInfoList 资源组信息列表
+     * @param boolean $IsLatestRun <p>是否最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ErrorMessage 错误消息
+     * @param array $ResourceGroupInfoList <p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunResult 运行结果
+     * @param string $ErrorMessage <p>错误消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InnerWorkflowTaskRun $InnerWorkflowTaskRun 内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）
+     * @param string $RunResult <p>运行结果</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InnerWorkflowTaskRun $InnerWorkflowTaskRun <p>内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduledTime <p>计划调度时间</p><p>参数格式：毫秒时间戳（UTC）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -650,6 +662,10 @@ class GetWorkflowTaskRunRsp extends AbstractModel
         if (array_key_exists("InnerWorkflowTaskRun",$param) and $param["InnerWorkflowTaskRun"] !== null) {
             $this->InnerWorkflowTaskRun = new InnerWorkflowTaskRun();
             $this->InnerWorkflowTaskRun->deserialize($param["InnerWorkflowTaskRun"]);
+        }
+
+        if (array_key_exists("ScheduledTime",$param) and $param["ScheduledTime"] !== null) {
+            $this->ScheduledTime = $param["ScheduledTime"];
         }
     }
 }

@@ -122,6 +122,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceBandwidth(integer $DeviceBandwidth) 设置<p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
  * @method string getDestroyProtect() 获取<p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
  * @method void setDestroyProtect(string $DestroyProtect) 设置<p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
+ * @method string getDiskEncryption() 获取<p>云盘版实例才使用该值。 on表示磁盘加密，否则为不加密。</p>
+ * @method void setDiskEncryption(string $DiskEncryption) 设置<p>云盘版实例才使用该值。 on表示磁盘加密，否则为不加密。</p>
  * @method string getCpuModel() 获取<p>TDSQL引擎参数</p>
  * @method void setCpuModel(string $CpuModel) 设置<p>TDSQL引擎参数</p>
  * @method UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() 获取<p>分析引擎实例版本升级信息</p>
@@ -387,6 +389,11 @@ class InstanceInfo extends AbstractModel
     public $DestroyProtect;
 
     /**
+     * @var string <p>云盘版实例才使用该值。 on表示磁盘加密，否则为不加密。</p>
+     */
+    public $DiskEncryption;
+
+    /**
      * @var string <p>TDSQL引擎参数</p>
      */
     public $CpuModel;
@@ -449,6 +456,7 @@ class InstanceInfo extends AbstractModel
      * @param array $AnalysisNodeInfos <p>分析引擎节点列表</p>
      * @param integer $DeviceBandwidth <p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
      * @param string $DestroyProtect <p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
+     * @param string $DiskEncryption <p>云盘版实例才使用该值。 on表示磁盘加密，否则为不加密。</p>
      * @param string $CpuModel <p>TDSQL引擎参数</p>
      * @param UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo <p>分析引擎实例版本升级信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -696,6 +704,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("DestroyProtect",$param) and $param["DestroyProtect"] !== null) {
             $this->DestroyProtect = $param["DestroyProtect"];
+        }
+
+        if (array_key_exists("DiskEncryption",$param) and $param["DiskEncryption"] !== null) {
+            $this->DiskEncryption = $param["DiskEncryption"];
         }
 
         if (array_key_exists("CpuModel",$param) and $param["CpuModel"] !== null) {

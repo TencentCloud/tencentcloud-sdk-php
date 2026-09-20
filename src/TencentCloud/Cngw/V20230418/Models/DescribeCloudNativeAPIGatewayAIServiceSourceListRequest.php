@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayAIServiceSourceList请求参数结构体
  *
- * @method string getGatewayId() 获取实例 ID
- * @method void setGatewayId(string $GatewayId) 设置实例 ID
- * @method integer getLimit() 获取分页大小
- * @method void setLimit(integer $Limit) 设置分页大小
- * @method integer getOffset() 获取分页偏移
- * @method void setOffset(integer $Offset) 设置分页偏移
+ * @method string getGatewayId() 获取<p>实例 ID</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>实例 ID</p>
+ * @method integer getLimit() 获取<p>分页大小</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页大小</p>
+ * @method integer getOffset() 获取<p>分页偏移</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移</p>
+ * @method string getKeyword() 获取<p>搜索关键词</p>
+ * @method void setKeyword(string $Keyword) 设置<p>搜索关键词</p>
+ * @method array getFilters() 获取<p>过滤条件</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件</p>
  */
 class DescribeCloudNativeAPIGatewayAIServiceSourceListRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $GatewayId;
 
     /**
-     * @var integer 分页大小
+     * @var integer <p>分页大小</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移
+     * @var integer <p>分页偏移</p>
      */
     public $Offset;
 
     /**
-     * @param string $GatewayId 实例 ID
-     * @param integer $Limit 分页大小
-     * @param integer $Offset 分页偏移
+     * @var string <p>搜索关键词</p>
+     */
+    public $Keyword;
+
+    /**
+     * @var array <p>过滤条件</p>
+     */
+    public $Filters;
+
+    /**
+     * @param string $GatewayId <p>实例 ID</p>
+     * @param integer $Limit <p>分页大小</p>
+     * @param integer $Offset <p>分页偏移</p>
+     * @param string $Keyword <p>搜索关键词</p>
+     * @param array $Filters <p>过滤条件</p>
      */
     function __construct()
     {
@@ -72,6 +88,19 @@ class DescribeCloudNativeAPIGatewayAIServiceSourceListRequest extends AbstractMo
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

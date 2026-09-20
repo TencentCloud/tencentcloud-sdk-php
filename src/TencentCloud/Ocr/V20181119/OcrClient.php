@@ -315,7 +315,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 支持的文件大小：PDF/Word/PPT支持150M且300页以内、Excel支持10M以内、TXT支持10M以内、图片文件支持70M以内。
 
-默认接口请求频率限制：5 并发。
+默认接口请求频率限制：5 页并发（注：可同时解析5页，且同步和异步接口共享并发资源，支持增购并发）。
  * @method Models\PassportOCRResponse PassportOCR(Models\PassportOCRRequest $req) <b>此接口为护照识别（中国大陆地区护照）的旧版本服务，不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/37657">护照识别（多国多地区护照）</a>。</b>
 
 本接口支持中国大陆地区护照个人资料页多个字段的检测与识别。已支持字段包括英文姓名、中文姓名、国家码、护照号、出生地、出生日期、国籍英文、性别英文、有效期、签发地点英文、签发日期、持证人签名、护照机读码（MRZ码）等。

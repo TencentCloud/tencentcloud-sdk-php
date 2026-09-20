@@ -20,138 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kafka导入配置信息
  *
- * @method string getId() 获取Kafka数据订阅配置的ID。
- * @method void setId(string $Id) 设置Kafka数据订阅配置的ID。
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getName() 获取Kafka导入任务名称
- * @method void setName(string $Name) 设置Kafka导入任务名称
- * @method integer getKafkaType() 获取导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
- * @method void setKafkaType(integer $KafkaType) 设置导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
- * @method string getKafkaInstance() 获取腾讯云CKafka实例ID，KafkaType为0时必填
- * @method void setKafkaInstance(string $KafkaInstance) 设置腾讯云CKafka实例ID，KafkaType为0时必填
- * @method string getServerAddr() 获取服务地址
- * @method void setServerAddr(string $ServerAddr) 设置服务地址
- * @method boolean getIsEncryptionAddr() 获取ServerAddr是否为加密连接	
- * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置ServerAddr是否为加密连接	
- * @method KafkaProtocolInfo getProtocol() 获取加密访问协议，IsEncryptionAddr参数为true时必填
- * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置加密访问协议，IsEncryptionAddr参数为true时必填
- * @method string getUserKafkaTopics() 获取用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
- * @method void setUserKafkaTopics(string $UserKafkaTopics) 设置用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
- * @method string getConsumerGroupName() 获取用户Kafka消费组名称	
- * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户Kafka消费组名称	
- * @method integer getStatus() 获取状态 ，1：运行中；2：暂停。
- * @method void setStatus(integer $Status) 设置状态 ，1：运行中；2：暂停。
- * @method integer getOffset() 获取导入数据位置，-2:最早（默认），-1：最晚
- * @method void setOffset(integer $Offset) 设置导入数据位置，-2:最早（默认），-1：最晚
- * @method string getCreateTime() 获取创建时间。格式`YYYY-MM-DD HH:MM:SS`
- * @method void setCreateTime(string $CreateTime) 设置创建时间。格式`YYYY-MM-DD HH:MM:SS`
- * @method string getUpdateTime() 获取更新时间。格式`YYYY-MM-DD HH:MM:SS`
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间。格式`YYYY-MM-DD HH:MM:SS`
- * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则
- * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则
- * @method UserKafkaMeta getUserKafkaMeta() 获取用户kafka拓展信息
- * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) 设置用户kafka拓展信息
+ * @method string getId() 获取<p>Kafka数据订阅配置的ID。</p>
+ * @method void setId(string $Id) 设置<p>Kafka数据订阅配置的ID。</p>
+ * @method string getTopicId() 获取<p>日志主题ID</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题ID</p>
+ * @method string getName() 获取<p>Kafka导入任务名称</p>
+ * @method void setName(string $Name) 设置<p>Kafka导入任务名称</p>
+ * @method integer getKafkaType() 获取<p>导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka</p>
+ * @method void setKafkaType(integer $KafkaType) 设置<p>导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka</p>
+ * @method string getKafkaInstance() 获取<p>腾讯云CKafka实例ID，KafkaType为0时必填</p>
+ * @method void setKafkaInstance(string $KafkaInstance) 设置<p>腾讯云CKafka实例ID，KafkaType为0时必填</p>
+ * @method string getServerAddr() 获取<p>服务地址</p>
+ * @method void setServerAddr(string $ServerAddr) 设置<p>服务地址</p>
+ * @method boolean getIsEncryptionAddr() 获取<p>ServerAddr是否为加密连接</p>
+ * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置<p>ServerAddr是否为加密连接</p>
+ * @method KafkaProtocolInfo getProtocol() 获取<p>加密访问协议，IsEncryptionAddr参数为true时必填</p>
+ * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置<p>加密访问协议，IsEncryptionAddr参数为true时必填</p>
+ * @method string getUserKafkaTopics() 获取<p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开</p>
+ * @method void setUserKafkaTopics(string $UserKafkaTopics) 设置<p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开</p>
+ * @method string getConsumerGroupName() 获取<p>用户Kafka消费组名称</p>
+ * @method void setConsumerGroupName(string $ConsumerGroupName) 设置<p>用户Kafka消费组名称</p>
+ * @method integer getStatus() 获取<p>状态 ，1：运行中；2：暂停。</p>
+ * @method void setStatus(integer $Status) 设置<p>状态 ，1：运行中；2：暂停。</p>
+ * @method integer getOffset() 获取<p>导入数据位置，-2:最早（默认），-1：最晚</p>
+ * @method void setOffset(integer $Offset) 设置<p>导入数据位置，-2:最早（默认），-1：最晚</p>
+ * @method string getCreateTime() 获取<p>创建时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
+ * @method string getUpdateTime() 获取<p>更新时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
+ * @method LogRechargeRuleInfo getLogRechargeRule() 获取<p>日志导入规则</p>
+ * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置<p>日志导入规则</p>
+ * @method NetworkInfo getNetworkInfo() 获取<p>私有网络信息</p>
+ * @method void setNetworkInfo(NetworkInfo $NetworkInfo) 设置<p>私有网络信息</p>
+ * @method UserKafkaMeta getUserKafkaMeta() 获取<p>用户kafka拓展信息</p>
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) 设置<p>用户kafka拓展信息</p>
  */
 class KafkaRechargeInfo extends AbstractModel
 {
     /**
-     * @var string Kafka数据订阅配置的ID。
+     * @var string <p>Kafka数据订阅配置的ID。</p>
      */
     public $Id;
 
     /**
-     * @var string 日志主题ID
+     * @var string <p>日志主题ID</p>
      */
     public $TopicId;
 
     /**
-     * @var string Kafka导入任务名称
+     * @var string <p>Kafka导入任务名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+     * @var integer <p>导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka</p>
      */
     public $KafkaType;
 
     /**
-     * @var string 腾讯云CKafka实例ID，KafkaType为0时必填
+     * @var string <p>腾讯云CKafka实例ID，KafkaType为0时必填</p>
      */
     public $KafkaInstance;
 
     /**
-     * @var string 服务地址
+     * @var string <p>服务地址</p>
      */
     public $ServerAddr;
 
     /**
-     * @var boolean ServerAddr是否为加密连接	
+     * @var boolean <p>ServerAddr是否为加密连接</p>
      */
     public $IsEncryptionAddr;
 
     /**
-     * @var KafkaProtocolInfo 加密访问协议，IsEncryptionAddr参数为true时必填
+     * @var KafkaProtocolInfo <p>加密访问协议，IsEncryptionAddr参数为true时必填</p>
      */
     public $Protocol;
 
     /**
-     * @var string 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
+     * @var string <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开</p>
      */
     public $UserKafkaTopics;
 
     /**
-     * @var string 用户Kafka消费组名称	
+     * @var string <p>用户Kafka消费组名称</p>
      */
     public $ConsumerGroupName;
 
     /**
-     * @var integer 状态 ，1：运行中；2：暂停。
+     * @var integer <p>状态 ，1：运行中；2：暂停。</p>
      */
     public $Status;
 
     /**
-     * @var integer 导入数据位置，-2:最早（默认），-1：最晚
+     * @var integer <p>导入数据位置，-2:最早（默认），-1：最晚</p>
      */
     public $Offset;
 
     /**
-     * @var string 创建时间。格式`YYYY-MM-DD HH:MM:SS`
+     * @var string <p>创建时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间。格式`YYYY-MM-DD HH:MM:SS`
+     * @var string <p>更新时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
      */
     public $UpdateTime;
 
     /**
-     * @var LogRechargeRuleInfo 日志导入规则
+     * @var LogRechargeRuleInfo <p>日志导入规则</p>
      */
     public $LogRechargeRule;
 
     /**
-     * @var UserKafkaMeta 用户kafka拓展信息
+     * @var NetworkInfo <p>私有网络信息</p>
+     */
+    public $NetworkInfo;
+
+    /**
+     * @var UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     public $UserKafkaMeta;
 
     /**
-     * @param string $Id Kafka数据订阅配置的ID。
-     * @param string $TopicId 日志主题ID
-     * @param string $Name Kafka导入任务名称
-     * @param integer $KafkaType 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
-     * @param string $KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
-     * @param string $ServerAddr 服务地址
-     * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接	
-     * @param KafkaProtocolInfo $Protocol 加密访问协议，IsEncryptionAddr参数为true时必填
-     * @param string $UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
-     * @param string $ConsumerGroupName 用户Kafka消费组名称	
-     * @param integer $Status 状态 ，1：运行中；2：暂停。
-     * @param integer $Offset 导入数据位置，-2:最早（默认），-1：最晚
-     * @param string $CreateTime 创建时间。格式`YYYY-MM-DD HH:MM:SS`
-     * @param string $UpdateTime 更新时间。格式`YYYY-MM-DD HH:MM:SS`
-     * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则
-     * @param UserKafkaMeta $UserKafkaMeta 用户kafka拓展信息
+     * @param string $Id <p>Kafka数据订阅配置的ID。</p>
+     * @param string $TopicId <p>日志主题ID</p>
+     * @param string $Name <p>Kafka导入任务名称</p>
+     * @param integer $KafkaType <p>导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka</p>
+     * @param string $KafkaInstance <p>腾讯云CKafka实例ID，KafkaType为0时必填</p>
+     * @param string $ServerAddr <p>服务地址</p>
+     * @param boolean $IsEncryptionAddr <p>ServerAddr是否为加密连接</p>
+     * @param KafkaProtocolInfo $Protocol <p>加密访问协议，IsEncryptionAddr参数为true时必填</p>
+     * @param string $UserKafkaTopics <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开</p>
+     * @param string $ConsumerGroupName <p>用户Kafka消费组名称</p>
+     * @param integer $Status <p>状态 ，1：运行中；2：暂停。</p>
+     * @param integer $Offset <p>导入数据位置，-2:最早（默认），-1：最晚</p>
+     * @param string $CreateTime <p>创建时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
+     * @param string $UpdateTime <p>更新时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
+     * @param LogRechargeRuleInfo $LogRechargeRule <p>日志导入规则</p>
+     * @param NetworkInfo $NetworkInfo <p>私有网络信息</p>
+     * @param UserKafkaMeta $UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     function __construct()
     {
@@ -226,6 +234,11 @@ class KafkaRechargeInfo extends AbstractModel
         if (array_key_exists("LogRechargeRule",$param) and $param["LogRechargeRule"] !== null) {
             $this->LogRechargeRule = new LogRechargeRuleInfo();
             $this->LogRechargeRule->deserialize($param["LogRechargeRule"]);
+        }
+
+        if (array_key_exists("NetworkInfo",$param) and $param["NetworkInfo"] !== null) {
+            $this->NetworkInfo = new NetworkInfo();
+            $this->NetworkInfo->deserialize($param["NetworkInfo"]);
         }
 
         if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {

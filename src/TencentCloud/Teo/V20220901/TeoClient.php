@@ -144,6 +144,23 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
 该功能仅企业版套餐支持，并且该功能当前仍在内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service?from=connect-us)。
  * @method Models\DescribeApplicationProxiesResponse DescribeApplicationProxies(Models\DescribeApplicationProxiesRequest $req) 本接口为旧版，如需调用请尽快迁移至新版，新版接口中将四层代理实例列表的查询和四层转发规则的查询拆分成两个接口，详情请参考 [查询四层代理实例列表](https://cloud.tencent.com/document/product/1552/103413) 和 [查询四层代理转发规则列表](https://cloud.tencent.com/document/product/1552/103412)。
  * @method Models\DescribeAvailableCustomActionsForRuleEngineResponse DescribeAvailableCustomActionsForRuleEngine(Models\DescribeAvailableCustomActionsForRuleEngineRequest $req) 查询站点规则引擎操作可用的定制配置列表。
+ * @method Models\DescribeAvailableOriginACLFamilyResponse DescribeAvailableOriginACLFamily(Models\DescribeAvailableOriginACLFamilyRequest $req) 查询源站防护 IP 段控制域详细信息，包含版本号和具体IP网段信息等。
+标准控制域和精简控制域主要区别在于提供的 IP 段数量差异，后者数量更少,但是使用上有些限制，具体限制请咨询产品。具体格式说明如下：
+标准控制域：
+<li>gaz：标准全球控制域；</li>
+<li>mlc：标准中国控制域；</li>
+<li>emc：标准海外(全球不含中国)控制域；</li>
+精简控制域控制域：
+<li>plat-gaz：精简全球控制域；</li>
+<li>plat-mlc：精简中国控制域；</li>
+<li>plat-emc：精简海外(全球不含中国)控制域；</li>
+<li>plat-specific-gaz：定制版控全球可用区制域；</li>
+<li>plat-specific-mlc：定制版控中国大陆可用区控制域；</li>
+<li>plat-specific-emc：定制版控全球（不含中国大陆）可用区控制域；</li>
+缩写说明：
+<li>gaz：Global AZ Availability Zone;</li>
+<li>mlc：mainlandChina;</li>
+<li>emc：Exclude mainlandChina.</li>
  * @method Models\DescribeAvailablePlansResponse DescribeAvailablePlans(Models\DescribeAvailablePlansRequest $req) 查询当前账户可用套餐信息列表
  * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) 通过本接口查询计费数据。
  * @method Models\DescribeConfigGroupVersionDetailResponse DescribeConfigGroupVersionDetail(Models\DescribeConfigGroupVersionDetailRequest $req) 在版本管理模式下，用于获取版本的详细信息，包括版本 ID、描述、状态、创建时间、所属配置组信息以及版本配置文件的内容。版本管理功能内测中，当前仅白名单开放。

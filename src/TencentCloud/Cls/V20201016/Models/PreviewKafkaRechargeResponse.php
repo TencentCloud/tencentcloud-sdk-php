@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PreviewKafkaRecharge返回参数结构体
  *
- * @method string getLogSample() 获取日志样例，PreviewType为2时返回
- * @method void setLogSample(string $LogSample) 设置日志样例，PreviewType为2时返回
- * @method string getLogData() 获取日志预览结果
- * @method void setLogData(string $LogData) 设置日志预览结果
+ * @method string getLogSample() 获取<p>日志样例，PreviewType为2时返回</p>
+ * @method void setLogSample(string $LogSample) 设置<p>日志样例，PreviewType为2时返回</p>
+ * @method string getLogData() 获取<p>日志预览结果</p>
+ * @method void setLogData(string $LogData) 设置<p>日志预览结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class PreviewKafkaRechargeResponse extends AbstractModel
 {
     /**
-     * @var string 日志样例，PreviewType为2时返回
+     * @var string <p>日志样例，PreviewType为2时返回</p>
      */
     public $LogSample;
 
     /**
-     * @var string 日志预览结果
+     * @var string <p>日志预览结果</p>
      */
     public $LogData;
 
@@ -45,8 +45,8 @@ class PreviewKafkaRechargeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $LogSample 日志样例，PreviewType为2时返回
-     * @param string $LogData 日志预览结果
+     * @param string $LogSample <p>日志样例，PreviewType为2时返回</p>
+     * @param string $LogData <p>日志预览结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

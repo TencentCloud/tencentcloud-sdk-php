@@ -67,6 +67,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeAgentReleasePreviewListResponse DescribeAgentReleasePreviewList(Models\DescribeAgentReleasePreviewListRequest $req) 获取应用下 Agent 的发布预览列表
  * @method Models\DescribeAgentSummaryListResponse DescribeAgentSummaryList(Models\DescribeAgentSummaryListRequest $req) 查询 Agent 摘要信息列表
  * @method Models\DescribeAppResponse DescribeApp(Models\DescribeAppRequest $req) 获取应用信息
+ * @method Models\DescribeAppStatisticsOverviewResponse DescribeAppStatisticsOverview(Models\DescribeAppStatisticsOverviewRequest $req) 查询应用视图下的调用统计总览，包含总调用次数、调用成功率、总tokens平均耗时及首tokens平均耗时；RAG 应用额外返回各回复方式的调用次数及占比，用于绘制饼图
  * @method Models\DescribeAppSummaryListResponse DescribeAppSummaryList(Models\DescribeAppSummaryListRequest $req) 获取应用摘要列表
  * @method Models\DescribeAppTriggerResponse DescribeAppTrigger(Models\DescribeAppTriggerRequest $req) DescribeAppTrigger
  * @method Models\DescribeAppTriggerInstanceResponse DescribeAppTriggerInstance(Models\DescribeAppTriggerInstanceRequest $req) DescribeAppTriggerInstance

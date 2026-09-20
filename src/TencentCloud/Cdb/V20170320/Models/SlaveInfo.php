@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirst(SlaveInstanceInfo $First) 设置<p>第一备机信息</p>
  * @method SlaveInstanceInfo getSecond() 获取<p>第二备机信息</p>
  * @method void setSecond(SlaveInstanceInfo $Second) 设置<p>第二备机信息</p>
+ * @method SlaveInstanceInfo getThird() 获取<p>第三备机信息</p>
+ * @method void setThird(SlaveInstanceInfo $Third) 设置<p>第三备机信息</p>
  */
 class SlaveInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SlaveInfo extends AbstractModel
     public $Second;
 
     /**
+     * @var SlaveInstanceInfo <p>第三备机信息</p>
+     */
+    public $Third;
+
+    /**
      * @param SlaveInstanceInfo $First <p>第一备机信息</p>
      * @param SlaveInstanceInfo $Second <p>第二备机信息</p>
+     * @param SlaveInstanceInfo $Third <p>第三备机信息</p>
      */
     function __construct()
     {
@@ -62,6 +70,11 @@ class SlaveInfo extends AbstractModel
         if (array_key_exists("Second",$param) and $param["Second"] !== null) {
             $this->Second = new SlaveInstanceInfo();
             $this->Second->deserialize($param["Second"]);
+        }
+
+        if (array_key_exists("Third",$param) and $param["Third"] !== null) {
+            $this->Third = new SlaveInstanceInfo();
+            $this->Third->deserialize($param["Third"]);
         }
     }
 }

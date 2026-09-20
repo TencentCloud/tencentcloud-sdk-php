@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method array getStandardIDs() 获取<p>规范ID</p>
  * @method void setStandardIDs(array $StandardIDs) 设置<p>规范ID</p>
+ * @method array getAssetTagIDs() 获取<p>资产标签ID</p>
+ * @method void setAssetTagIDs(array $AssetTagIDs) 设置<p>资产标签ID</p>
  */
 class DescribeCFGRiskReportStatisticsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeCFGRiskReportStatisticsRequest extends AbstractModel
     public $StandardIDs;
 
     /**
+     * @var array <p>资产标签ID</p>
+     */
+    public $AssetTagIDs;
+
+    /**
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param array $StandardIDs <p>规范ID</p>
+     * @param array $AssetTagIDs <p>资产标签ID</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeCFGRiskReportStatisticsRequest extends AbstractModel
 
         if (array_key_exists("StandardIDs",$param) and $param["StandardIDs"] !== null) {
             $this->StandardIDs = $param["StandardIDs"];
+        }
+
+        if (array_key_exists("AssetTagIDs",$param) and $param["AssetTagIDs"] !== null) {
+            $this->AssetTagIDs = $param["AssetTagIDs"];
         }
     }
 }

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerType(string $ServerType) 设置<p>MCP服务类型</p><ul><li>MCP</li><li>Rest2MCP</li></ul>
  * @method string getTransport() 获取<p>传输协议：StreamableHttp或SSE</p><p>枚举值：</p><ul><li>StreamableHttp： Streamable HTTP</li><li>SSE： Server-Sent Events</li></ul>
  * @method void setTransport(string $Transport) 设置<p>传输协议：StreamableHttp或SSE</p><p>枚举值：</p><ul><li>StreamableHttp： Streamable HTTP</li><li>SSE： Server-Sent Events</li></ul>
- * @method string getUpstreamType() 获取<p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心- Registry</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li></ul>
- * @method void setUpstreamType(string $UpstreamType) 设置<p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心- Registry</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li></ul>
+ * @method string getUpstreamType() 获取<p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
+ * @method void setUpstreamType(string $UpstreamType) 设置<p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
  * @method AIGWMCPUpstreamInfo getUpstreamInfo() 获取<p>注册中心来源信息</p>
  * @method void setUpstreamInfo(AIGWMCPUpstreamInfo $UpstreamInfo) 设置<p>注册中心来源信息</p>
  * @method AIGWMCPSessionConfig getSessionConfig() 获取<p>会话配置</p>
@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheck(AIGWHealthCheckSetting $HealthCheck) 设置<p>健康检查配置</p>
  * @method boolean getPreserveHost() 获取<p>是否开启保留原Host功能</p>
  * @method void setPreserveHost(boolean $PreserveHost) 设置<p>是否开启保留原Host功能</p>
+ * @method AIGWLogConfig getLogConfig() 获取<p>日志采集配置</p>
+ * @method void setLogConfig(AIGWLogConfig $LogConfig) 设置<p>日志采集配置</p>
  */
 class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
 {
@@ -77,7 +79,7 @@ class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
     public $Transport;
 
     /**
-     * @var string <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心- Registry</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li></ul>
+     * @var string <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
      */
     public $UpstreamType;
 
@@ -122,12 +124,17 @@ class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
     public $PreserveHost;
 
     /**
+     * @var AIGWLogConfig <p>日志采集配置</p>
+     */
+    public $LogConfig;
+
+    /**
      * @param string $GatewayId <p>实例 ID</p>
      * @param string $Name <p>名字</p>
      * @param string $DisplayName <p>展示名字</p>
      * @param string $ServerType <p>MCP服务类型</p><ul><li>MCP</li><li>Rest2MCP</li></ul>
      * @param string $Transport <p>传输协议：StreamableHttp或SSE</p><p>枚举值：</p><ul><li>StreamableHttp： Streamable HTTP</li><li>SSE： Server-Sent Events</li></ul>
-     * @param string $UpstreamType <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心- Registry</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li></ul>
+     * @param string $UpstreamType <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
      * @param AIGWMCPUpstreamInfo $UpstreamInfo <p>注册中心来源信息</p>
      * @param AIGWMCPSessionConfig $SessionConfig <p>会话配置</p>
      * @param integer $Timeout <p>超时时间，单位ms，最大60000</p>
@@ -136,6 +143,7 @@ class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
      * @param boolean $EnableHealthCheck <p>是否启用健康检查</p>
      * @param AIGWHealthCheckSetting $HealthCheck <p>健康检查配置</p>
      * @param boolean $PreserveHost <p>是否开启保留原Host功能</p>
+     * @param AIGWLogConfig $LogConfig <p>日志采集配置</p>
      */
     function __construct()
     {
@@ -207,6 +215,11 @@ class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
 
         if (array_key_exists("PreserveHost",$param) and $param["PreserveHost"] !== null) {
             $this->PreserveHost = $param["PreserveHost"];
+        }
+
+        if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
+            $this->LogConfig = new AIGWLogConfig();
+            $this->LogConfig->deserialize($param["LogConfig"]);
         }
     }
 }

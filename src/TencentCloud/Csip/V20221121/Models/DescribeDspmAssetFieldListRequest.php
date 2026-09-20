@@ -20,31 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDspmAssetFieldList请求参数结构体
  *
- * @method string getAssetId() 获取资产实例id
- * @method void setAssetId(string $AssetId) 设置资产实例id
- * @method string getDbName() 获取数据库名称
- * @method void setDbName(string $DbName) 设置数据库名称
- * @method string getTableName() 获取表名
- * @method void setTableName(string $TableName) 设置表名
+ * @method string getAssetId() 获取<p>资产实例id</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产实例id</p>
+ * @method string getDbName() 获取<p>数据库名称</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名称</p>
+ * @method string getTableName() 获取<p>表名</p>
+ * @method void setTableName(string $TableName) 设置<p>表名</p>
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
- * @method Filter getFilter() 获取筛选项
- * @method void setFilter(Filter $Filter) 设置筛选项
+ * @method Filter getFilter() 获取<p>筛选项</p>
+ * @method void setFilter(Filter $Filter) 设置<p>筛选项</p>
+ * @method string getSchemaName() 获取<p>SchemaName</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>SchemaName</p>
  */
 class DescribeDspmAssetFieldListRequest extends AbstractModel
 {
     /**
-     * @var string 资产实例id
+     * @var string <p>资产实例id</p>
      */
     public $AssetId;
 
     /**
-     * @var string 数据库名称
+     * @var string <p>数据库名称</p>
      */
     public $DbName;
 
     /**
-     * @var string 表名
+     * @var string <p>表名</p>
      */
     public $TableName;
 
@@ -54,16 +56,22 @@ class DescribeDspmAssetFieldListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter 筛选项
+     * @var Filter <p>筛选项</p>
      */
     public $Filter;
 
     /**
-     * @param string $AssetId 资产实例id
-     * @param string $DbName 数据库名称
-     * @param string $TableName 表名
+     * @var string <p>SchemaName</p>
+     */
+    public $SchemaName;
+
+    /**
+     * @param string $AssetId <p>资产实例id</p>
+     * @param string $DbName <p>数据库名称</p>
+     * @param string $TableName <p>表名</p>
      * @param array $MemberId <p>集团账号的成员id</p>
-     * @param Filter $Filter 筛选项
+     * @param Filter $Filter <p>筛选项</p>
+     * @param string $SchemaName <p>SchemaName</p>
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class DescribeDspmAssetFieldListRequest extends AbstractModel
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
         }
     }
 }

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicTags(array $TopicTags) 设置<p>投递任务关联topic的标签信息</p>
  * @method array getLogsetTags() 获取<p>投递任务关联logset的标签信息</p>
  * @method void setLogsetTags(array $LogsetTags) 设置<p>投递任务关联logset的标签信息</p>
+ * @method string getApplicationId() 获取<p>应用id</p>
+ * @method void setApplicationId(string $ApplicationId) 设置<p>应用id</p>
  */
 class CloudProductLogTaskInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CloudProductLogTaskInfo extends AbstractModel
     public $LogsetTags;
 
     /**
+     * @var string <p>应用id</p>
+     */
+    public $ApplicationId;
+
+    /**
      * @param string $ClsRegion <p>日志服务地域</p>
      * @param string $InstanceId <p>实例ID</p>
      * @param string $LogsetId <p>日志集ID</p>
@@ -96,6 +103,7 @@ class CloudProductLogTaskInfo extends AbstractModel
      * @param integer $Status <p>任务状态， 0创建中 1创建完成 2 删除中</p>
      * @param array $TopicTags <p>投递任务关联topic的标签信息</p>
      * @param array $LogsetTags <p>投递任务关联logset的标签信息</p>
+     * @param string $ApplicationId <p>应用id</p>
      */
     function __construct()
     {
@@ -154,6 +162,10 @@ class CloudProductLogTaskInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LogsetTags, $obj);
             }
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }

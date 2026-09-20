@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置<p>排序类型</p>
  * @method string getBy() 获取<p>排序字段</p>
  * @method void setBy(string $By) 设置<p>排序字段</p>
+ * @method array getAssetTagIDs() 获取<p>资产标签ID</p>
+ * @method void setAssetTagIDs(array $AssetTagIDs) 设置<p>资产标签ID</p>
  */
 class CreateCFGRiskPDFReportExportJobRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateCFGRiskPDFReportExportJobRequest extends AbstractModel
     public $By;
 
     /**
+     * @var array <p>资产标签ID</p>
+     */
+    public $AssetTagIDs;
+
+    /**
      * @param integer $StandardID <p>合规规范ID</p>
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param array $Filters <p>过滤内容</p>
@@ -80,6 +87,7 @@ class CreateCFGRiskPDFReportExportJobRequest extends AbstractModel
      * @param integer $Offset <p>偏移量</p>
      * @param string $Order <p>排序类型</p>
      * @param string $By <p>排序字段</p>
+     * @param array $AssetTagIDs <p>资产标签ID</p>
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class CreateCFGRiskPDFReportExportJobRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("AssetTagIDs",$param) and $param["AssetTagIDs"] !== null) {
+            $this->AssetTagIDs = $param["AssetTagIDs"];
         }
     }
 }

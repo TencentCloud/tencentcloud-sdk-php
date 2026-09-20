@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCapability(string $Capability) 设置<p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
  * @method string getEndpointPath() 获取<p>端点路径</p>
  * @method void setEndpointPath(string $EndpointPath) 设置<p>端点路径</p>
+ * @method string getHealthCheckMethod() 获取<p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+ * @method void setHealthCheckMethod(string $HealthCheckMethod) 设置<p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+ * @method string getHealthCheckPath() 获取<p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+ * @method void setHealthCheckPath(string $HealthCheckPath) 设置<p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
  */
 class TestServiceProviderConnectionRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class TestServiceProviderConnectionRequest extends AbstractModel
     public $EndpointPath;
 
     /**
+     * @var string <p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+     */
+    public $HealthCheckMethod;
+
+    /**
+     * @var string <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     */
+    public $HealthCheckPath;
+
+    /**
      * @param array $Models <p>需要探测的模型列表</p><p>入参限制：上限为20个模型</p>
      * @param string $ProviderKey <p>需要探测的Key</p>
      * @param string $ProviderKeyId <p>需要探测的KeyId，和ProviderKey二者传一个即可</p>
@@ -136,6 +150,8 @@ class TestServiceProviderConnectionRequest extends AbstractModel
      * @param string $CMRPrivateNetworkTunnelId <p>    CMR 私网管道ID </p>
      * @param string $Capability <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
      * @param string $EndpointPath <p>端点路径</p>
+     * @param string $HealthCheckMethod <p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+     * @param string $HealthCheckPath <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ class TestServiceProviderConnectionRequest extends AbstractModel
 
         if (array_key_exists("EndpointPath",$param) and $param["EndpointPath"] !== null) {
             $this->EndpointPath = $param["EndpointPath"];
+        }
+
+        if (array_key_exists("HealthCheckMethod",$param) and $param["HealthCheckMethod"] !== null) {
+            $this->HealthCheckMethod = $param["HealthCheckMethod"];
+        }
+
+        if (array_key_exists("HealthCheckPath",$param) and $param["HealthCheckPath"] !== null) {
+            $this->HealthCheckPath = $param["HealthCheckPath"];
         }
     }
 }

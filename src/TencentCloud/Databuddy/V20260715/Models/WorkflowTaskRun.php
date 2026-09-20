@@ -176,6 +176,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInnerTask(InnerWorkflowTaskBrief $InnerTask) 设置<p>内嵌工作流任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScheduledTime() 获取<p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduledTime(string $ScheduledTime) 设置<p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTaskRun extends AbstractModel
 {
@@ -414,6 +418,12 @@ class WorkflowTaskRun extends AbstractModel
     public $InnerTask;
 
     /**
+     * @var string <p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduledTime;
+
+    /**
      * @param string $TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowTaskRunId <p>任务运行ID</p>
@@ -491,6 +501,8 @@ class WorkflowTaskRun extends AbstractModel
      * @param AdvancedDependencyConfig $AdvancedDependencyConfig <p>高级依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InnerWorkflowTaskBrief $InnerTask <p>内嵌工作流任务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduledTime <p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -667,6 +679,10 @@ class WorkflowTaskRun extends AbstractModel
         if (array_key_exists("InnerTask",$param) and $param["InnerTask"] !== null) {
             $this->InnerTask = new InnerWorkflowTaskBrief();
             $this->InnerTask->deserialize($param["InnerTask"]);
+        }
+
+        if (array_key_exists("ScheduledTime",$param) and $param["ScheduledTime"] !== null) {
+            $this->ScheduledTime = $param["ScheduledTime"];
         }
     }
 }

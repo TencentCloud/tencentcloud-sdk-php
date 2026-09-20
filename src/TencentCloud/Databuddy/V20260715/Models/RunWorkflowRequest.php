@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskIds(array $TaskIds) 设置<p>本次需要运行指定的任务ID集合，可通过 ListWorkflowTasks 获取，不传默认运行该工作流下所有任务</p>
  * @method string getIdempotencyToken() 获取<p>幂等令牌。非必填，相同令牌的重复请求只会触发一次运行</p>
  * @method void setIdempotencyToken(string $IdempotencyToken) 设置<p>幂等令牌。非必填，相同令牌的重复请求只会触发一次运行</p>
+ * @method ScheduledTimeConfig getScheduledTimeConfig() 获取<p>计划调度时间列表配置</p>
+ * @method void setScheduledTimeConfig(ScheduledTimeConfig $ScheduledTimeConfig) 设置<p>计划调度时间列表配置</p>
  */
 class RunWorkflowRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class RunWorkflowRequest extends AbstractModel
     public $IdempotencyToken;
 
     /**
+     * @var ScheduledTimeConfig <p>计划调度时间列表配置</p>
+     */
+    public $ScheduledTimeConfig;
+
+    /**
      * @param string $WorkspaceId <p>工作空间ID，可通过 ListWorkspaces 获取。必填</p>
      * @param string $WorkflowId <p>工作流ID，可通过 ListWorkflows 获取。必填</p>
      * @param integer $RunType <p>运行类型。必填。取值：1 普通运行，2 高级运行</p>
      * @param array $AdvancedParams <p>运行类型为高级运行时填写的自定义运行参数</p>
      * @param array $TaskIds <p>本次需要运行指定的任务ID集合，可通过 ListWorkflowTasks 获取，不传默认运行该工作流下所有任务</p>
      * @param string $IdempotencyToken <p>幂等令牌。非必填，相同令牌的重复请求只会触发一次运行</p>
+     * @param ScheduledTimeConfig $ScheduledTimeConfig <p>计划调度时间列表配置</p>
      */
     function __construct()
     {
@@ -113,6 +121,11 @@ class RunWorkflowRequest extends AbstractModel
 
         if (array_key_exists("IdempotencyToken",$param) and $param["IdempotencyToken"] !== null) {
             $this->IdempotencyToken = $param["IdempotencyToken"];
+        }
+
+        if (array_key_exists("ScheduledTimeConfig",$param) and $param["ScheduledTimeConfig"] !== null) {
+            $this->ScheduledTimeConfig = new ScheduledTimeConfig();
+            $this->ScheduledTimeConfig->deserialize($param["ScheduledTimeConfig"]);
         }
     }
 }

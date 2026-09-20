@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientCaCertificates(array $ClientCaCertificates) 设置<p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
  * @method string getGetRealIpType() 获取<p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
  * @method void setGetRealIpType(string $GetRealIpType) 设置<p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
- * @method string getHttpVersion() 获取<p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
- * @method void setHttpVersion(string $HttpVersion) 设置<p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+ * @method string getHttpVersion() 获取<p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul><p>当前还支持修改。</p>
+ * @method void setHttpVersion(string $HttpVersion) 设置<p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul><p>当前还支持修改。</p>
  */
 class ModifyListenerRequest extends AbstractModel
 {
@@ -124,7 +124,7 @@ class ModifyListenerRequest extends AbstractModel
     public $GetRealIpType;
 
     /**
-     * @var string <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     * @var string <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul><p>当前还支持修改。</p>
      */
     public $HttpVersion;
 
@@ -143,7 +143,7 @@ class ModifyListenerRequest extends AbstractModel
      * @param array $ServerCertificates <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>HTTPS监听器才支持此参数修改。</p>
      * @param array $ClientCaCertificates <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
      * @param string $GetRealIpType <p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
-     * @param string $HttpVersion <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     * @param string $HttpVersion <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul><p>当前还支持修改。</p>
      */
     function __construct()
     {

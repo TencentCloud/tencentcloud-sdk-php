@@ -18,26 +18,26 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClusterListV2返回参数结构体
+ * DescribeSkillScanTaskList返回参数结构体
  *
- * @method integer getTotalCount() 获取<p>总数</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>总数</p>
- * @method array getList() 获取<p>列表</p>
- * @method void setList(array $List) 设置<p>列表</p>
+ * @method integer getTotalCount() 获取总数量
+ * @method void setTotalCount(integer $TotalCount) 设置总数量
+ * @method array getTaskList() 获取扫描任务列表，按上传时间倒序排列
+ * @method void setTaskList(array $TaskList) 设置扫描任务列表，按上传时间倒序排列
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeClusterListV2Response extends AbstractModel
+class DescribeSkillScanTaskListResponse extends AbstractModel
 {
     /**
-     * @var integer <p>总数</p>
+     * @var integer 总数量
      */
     public $TotalCount;
 
     /**
-     * @var array <p>列表</p>
+     * @var array 扫描任务列表，按上传时间倒序排列
      */
-    public $List;
+    public $TaskList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeClusterListV2Response extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount <p>总数</p>
-     * @param array $List <p>列表</p>
+     * @param integer $TotalCount 总数量
+     * @param array $TaskList 扫描任务列表，按上传时间倒序排列
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +66,12 @@ class DescribeClusterListV2Response extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
-            $this->List = [];
-            foreach ($param["List"] as $key => $value){
-                $obj = new ClusterListItem();
+        if (array_key_exists("TaskList",$param) and $param["TaskList"] !== null) {
+            $this->TaskList = [];
+            foreach ($param["TaskList"] as $key => $value){
+                $obj = new SkillScanTaskItem();
                 $obj->deserialize($value);
-                array_push($this->List, $obj);
+                array_push($this->TaskList, $obj);
             }
         }
 

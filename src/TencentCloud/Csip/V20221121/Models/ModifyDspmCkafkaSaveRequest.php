@@ -20,71 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDspmCkafkaSave请求参数结构体
  *
- * @method integer getVipType() 获取接入类型，当前支持 1和7, 类型vip网络类型（1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
- * @method void setVipType(integer $VipType) 设置接入类型，当前支持 1和7, 类型vip网络类型（1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
- * @method string getRegionId() 获取实例的地域
- * @method void setRegionId(string $RegionId) 设置实例的地域
- * @method string getInstanceId() 获取实例的id
- * @method void setInstanceId(string $InstanceId) 设置实例的id
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method RouteInfo getRouteInfo() 获取实例的接入信息
- * @method void setRouteInfo(RouteInfo $RouteInfo) 设置实例的接入信息
- * @method string getUsername() 获取接入为域名的时候，有效
- * @method void setUsername(string $Username) 设置接入为域名的时候，有效
- * @method string getPassword() 获取接入为域名的时候，有效
- * @method void setPassword(string $Password) 设置接入为域名的时候，有效
- * @method array getLogDeliveryInfo() 获取日志投递的主题配置
- * @method void setLogDeliveryInfo(array $LogDeliveryInfo) 设置日志投递的主题配置
- * @method boolean getIsOverwrite() 获取已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）
- * @method void setIsOverwrite(boolean $IsOverwrite) 设置已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）
+ * @method integer getVipType() 获取<p>接入类型，当前支持 1和7</p><p>枚举值：</p><ul><li>1： 外网TGW</li><li>2： 基础网络</li><li>3： VPC网络</li><li>4： idc环境-支撑网络</li><li>5： SSL外网访问方式访问</li><li>6： 黑石环境vpc</li><li>7： cvm环境-支撑网络</li></ul>
+ * @method void setVipType(integer $VipType) 设置<p>接入类型，当前支持 1和7</p><p>枚举值：</p><ul><li>1： 外网TGW</li><li>2： 基础网络</li><li>3： VPC网络</li><li>4： idc环境-支撑网络</li><li>5： SSL外网访问方式访问</li><li>6： 黑石环境vpc</li><li>7： cvm环境-支撑网络</li></ul>
+ * @method string getRegionId() 获取<p>实例的地域</p>
+ * @method void setRegionId(string $RegionId) 设置<p>实例的地域</p>
+ * @method string getInstanceId() 获取<p>实例的id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例的id</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method RouteInfo getRouteInfo() 获取<p>实例的接入信息</p>
+ * @method void setRouteInfo(RouteInfo $RouteInfo) 设置<p>实例的接入信息</p>
+ * @method string getUsername() 获取<p>接入为域名的时候，有效</p>
+ * @method void setUsername(string $Username) 设置<p>接入为域名的时候，有效</p>
+ * @method string getPassword() 获取<p>接入为域名的时候，有效</p>
+ * @method void setPassword(string $Password) 设置<p>接入为域名的时候，有效</p>
+ * @method array getLogDeliveryInfo() 获取<p>日志投递的主题配置</p>
+ * @method void setLogDeliveryInfo(array $LogDeliveryInfo) 设置<p>日志投递的主题配置</p>
+ * @method boolean getIsOverwrite() 获取<p>已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）</p>
+ * @method void setIsOverwrite(boolean $IsOverwrite) 设置<p>已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）</p>
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  */
 class ModifyDspmCkafkaSaveRequest extends AbstractModel
 {
     /**
-     * @var integer 接入类型，当前支持 1和7, 类型vip网络类型（1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
+     * @var integer <p>接入类型，当前支持 1和7</p><p>枚举值：</p><ul><li>1： 外网TGW</li><li>2： 基础网络</li><li>3： VPC网络</li><li>4： idc环境-支撑网络</li><li>5： SSL外网访问方式访问</li><li>6： 黑石环境vpc</li><li>7： cvm环境-支撑网络</li></ul>
      */
     public $VipType;
 
     /**
-     * @var string 实例的地域
+     * @var string <p>实例的地域</p>
      */
     public $RegionId;
 
     /**
-     * @var string 实例的id
+     * @var string <p>实例的id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var RouteInfo 实例的接入信息
+     * @var RouteInfo <p>实例的接入信息</p>
      */
     public $RouteInfo;
 
     /**
-     * @var string 接入为域名的时候，有效
+     * @var string <p>接入为域名的时候，有效</p>
      */
     public $Username;
 
     /**
-     * @var string 接入为域名的时候，有效
+     * @var string <p>接入为域名的时候，有效</p>
      */
     public $Password;
 
     /**
-     * @var array 日志投递的主题配置
+     * @var array <p>日志投递的主题配置</p>
      */
     public $LogDeliveryInfo;
 
     /**
-     * @var boolean 已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）
+     * @var boolean <p>已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）</p>
      */
     public $IsOverwrite;
 
@@ -94,15 +94,15 @@ class ModifyDspmCkafkaSaveRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param integer $VipType 接入类型，当前支持 1和7, 类型vip网络类型（1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
-     * @param string $RegionId 实例的地域
-     * @param string $InstanceId 实例的id
-     * @param string $InstanceName 实例名称
-     * @param RouteInfo $RouteInfo 实例的接入信息
-     * @param string $Username 接入为域名的时候，有效
-     * @param string $Password 接入为域名的时候，有效
-     * @param array $LogDeliveryInfo 日志投递的主题配置
-     * @param boolean $IsOverwrite 已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）
+     * @param integer $VipType <p>接入类型，当前支持 1和7</p><p>枚举值：</p><ul><li>1： 外网TGW</li><li>2： 基础网络</li><li>3： VPC网络</li><li>4： idc环境-支撑网络</li><li>5： SSL外网访问方式访问</li><li>6： 黑石环境vpc</li><li>7： cvm环境-支撑网络</li></ul>
+     * @param string $RegionId <p>实例的地域</p>
+     * @param string $InstanceId <p>实例的id</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param RouteInfo $RouteInfo <p>实例的接入信息</p>
+     * @param string $Username <p>接入为域名的时候，有效</p>
+     * @param string $Password <p>接入为域名的时候，有效</p>
+     * @param array $LogDeliveryInfo <p>日志投递的主题配置</p>
+     * @param boolean $IsOverwrite <p>已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）</p>
      * @param array $MemberId <p>集团账号的成员id</p>
      */
     function __construct()

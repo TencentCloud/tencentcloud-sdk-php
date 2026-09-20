@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEnvResource请求参数结构体
  *
- * @method string getEnvId() 获取环境ID
- * @method void setEnvId(string $EnvId) 设置环境ID
- * @method array getResources() 获取资源类型。代表本次开通哪些资源。 可取值以及含义： - log : 表示日志资源，当前仅支持 log（日志资源类型），后续版本可能扩展，该数组不能为空，且每个元素必须为合法的资源类型值
- * @method void setResources(array $Resources) 设置资源类型。代表本次开通哪些资源。 可取值以及含义： - log : 表示日志资源，当前仅支持 log（日志资源类型），后续版本可能扩展，该数组不能为空，且每个元素必须为合法的资源类型值
+ * @method string getEnvId() 获取<p>环境ID</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境ID</p>
+ * @method array getResources() 获取<p>资源类型。代表本次开通哪些资源。<br>可取值以及含义：</p><ul><li>log : 表示日志资源。</li><li>function： 表示云函数资源。</li></ul><p>该数组不能为空，且每个元素必须为合法的资源类型值</p>
+ * @method void setResources(array $Resources) 设置<p>资源类型。代表本次开通哪些资源。<br>可取值以及含义：</p><ul><li>log : 表示日志资源。</li><li>function： 表示云函数资源。</li></ul><p>该数组不能为空，且每个元素必须为合法的资源类型值</p>
  */
 class CreateEnvResourceRequest extends AbstractModel
 {
     /**
-     * @var string 环境ID
+     * @var string <p>环境ID</p>
      */
     public $EnvId;
 
     /**
-     * @var array 资源类型。代表本次开通哪些资源。 可取值以及含义： - log : 表示日志资源，当前仅支持 log（日志资源类型），后续版本可能扩展，该数组不能为空，且每个元素必须为合法的资源类型值
+     * @var array <p>资源类型。代表本次开通哪些资源。<br>可取值以及含义：</p><ul><li>log : 表示日志资源。</li><li>function： 表示云函数资源。</li></ul><p>该数组不能为空，且每个元素必须为合法的资源类型值</p>
      */
     public $Resources;
 
     /**
-     * @param string $EnvId 环境ID
-     * @param array $Resources 资源类型。代表本次开通哪些资源。 可取值以及含义： - log : 表示日志资源，当前仅支持 log（日志资源类型），后续版本可能扩展，该数组不能为空，且每个元素必须为合法的资源类型值
+     * @param string $EnvId <p>环境ID</p>
+     * @param array $Resources <p>资源类型。代表本次开通哪些资源。<br>可取值以及含义：</p><ul><li>log : 表示日志资源。</li><li>function： 表示云函数资源。</li></ul><p>该数组不能为空，且每个元素必须为合法的资源类型值</p>
      */
     function __construct()
     {

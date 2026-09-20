@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateScanStatisticExportJob请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method Filter getFilter() 获取过滤内容
  * @method void setFilter(Filter $Filter) 设置过滤内容
  * @method integer getLimit() 获取分页大小
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateScanStatisticExportJobRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -73,7 +73,7 @@ class CreateScanStatisticExportJobRequest extends AbstractModel
     public $TaskLogId;
 
     /**
-     * @param array $MemberId 集团账号的成员id
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param Filter $Filter 过滤内容
      * @param integer $Limit 分页大小
      * @param integer $Offset 偏移量

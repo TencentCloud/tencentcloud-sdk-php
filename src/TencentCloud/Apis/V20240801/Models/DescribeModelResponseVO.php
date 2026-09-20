@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
  * @method string getID() 获取<p>模型ID</p>
  * @method void setID(string $ID) 设置<p>模型ID</p>
+ * @method string getProvider() 获取<p>模型提供商</p>
+ * @method void setProvider(string $Provider) 设置<p>模型提供商</p>
  * @method string getName() 获取<p>模型名称</p>
  * @method void setName(string $Name) 设置<p>模型名称</p>
  * @method string getCredentialID() 获取<p>凭据ID</p>
@@ -76,6 +78,11 @@ class DescribeModelResponseVO extends AbstractModel
      * @var string <p>模型ID</p>
      */
     public $ID;
+
+    /**
+     * @var string <p>模型提供商</p>
+     */
+    public $Provider;
 
     /**
      * @var string <p>模型名称</p>
@@ -147,6 +154,7 @@ class DescribeModelResponseVO extends AbstractModel
      * @param string $Uin <p>腾讯云Uin</p>
      * @param string $InstanceID <p>实例ID</p>
      * @param string $ID <p>模型ID</p>
+     * @param string $Provider <p>模型提供商</p>
      * @param string $Name <p>模型名称</p>
      * @param string $CredentialID <p>凭据ID</p>
      * @param string $CredentialName <p>凭据名称</p>
@@ -188,6 +196,10 @@ class DescribeModelResponseVO extends AbstractModel
 
         if (array_key_exists("ID",$param) and $param["ID"] !== null) {
             $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("Provider",$param) and $param["Provider"] !== null) {
+            $this->Provider = $param["Provider"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {

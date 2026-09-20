@@ -148,6 +148,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeCloudStorageAIServiceTasksResponse DescribeCloudStorageAIServiceTasks(Models\DescribeCloudStorageAIServiceTasksRequest $req) 查询指定设备的云存 AI 分析任务列表
  * @method Models\DescribeCloudStorageDateResponse DescribeCloudStorageDate(Models\DescribeCloudStorageDateRequest $req) 获取具有云存的日期
  * @method Models\DescribeCloudStorageEventsResponse DescribeCloudStorageEvents(Models\DescribeCloudStorageEventsRequest $req) 拉取云存事件列表
+ * @method Models\DescribeCloudStorageEventsByTWeSeePersonResponse DescribeCloudStorageEventsByTWeSeePerson(Models\DescribeCloudStorageEventsByTWeSeePersonRequest $req) 查询 TWeSee 人员关联的云存事件及 AI 任务
  * @method Models\DescribeCloudStorageEventsWithAITasksResponse DescribeCloudStorageEventsWithAITasks(Models\DescribeCloudStorageEventsWithAITasksRequest $req) 拉取云存事件列表
  * @method Models\DescribeCloudStorageMultiThumbnailResponse DescribeCloudStorageMultiThumbnail(Models\DescribeCloudStorageMultiThumbnailRequest $req) 拉取多个云存事件缩略图
  * @method Models\DescribeCloudStorageOrderResponse DescribeCloudStorageOrder(Models\DescribeCloudStorageOrderRequest $req) 查询云存服务详情
@@ -194,6 +195,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeSubscribedTopicPolicyResponse DescribeSubscribedTopicPolicy(Models\DescribeSubscribedTopicPolicyRequest $req) 本接口（DescribeSubscribedTopicPolicy）用于获取设备已订阅Topic列表
  * @method Models\DescribeTWeSeeCallbackResponse DescribeTWeSeeCallback(Models\DescribeTWeSeeCallbackRequest $req) 查询 TWeSee 回调目标详情
  * @method Models\DescribeTWeSeeConfigResponse DescribeTWeSeeConfig(Models\DescribeTWeSeeConfigRequest $req) 拉取 TWeSee 配置
+ * @method Models\DescribeTWeSeeDirectUploadInfoResponse DescribeTWeSeeDirectUploadInfo(Models\DescribeTWeSeeDirectUploadInfoRequest $req) 查询 TWeSee 直传信息
  * @method Models\DescribeTWeSeeFaceResponse DescribeTWeSeeFace(Models\DescribeTWeSeeFaceRequest $req) 查询指定 TWeSee 人脸详情。
  * @method Models\DescribeTWeSeePersonResponse DescribeTWeSeePerson(Models\DescribeTWeSeePersonRequest $req) 查询指定 TWeSee 人员详情及其代表人脸。
  * @method Models\DescribeTWeSeePostPaidServiceResponse DescribeTWeSeePostPaidService(Models\DescribeTWeSeePostPaidServiceRequest $req) 查询 TWeSee 后付费服务
@@ -213,6 +215,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeVideoLicenseResponse DescribeVideoLicense(Models\DescribeVideoLicenseRequest $req) DescribeLicenseOverView代替
 
 用于查询视频激活码统计概览
+ * @method Models\DescribeVodCloudStorageDateResponse DescribeVodCloudStorageDate(Models\DescribeVodCloudStorageDateRequest $req) 拉取云存日期
  * @method Models\DestroyTWeSeeSubscriptionResponse DestroyTWeSeeSubscription(Models\DestroyTWeSeeSubscriptionRequest $req) 销毁 TWeSee 预付费订阅
  * @method Models\DirectBindDeviceInFamilyResponse DirectBindDeviceInFamily(Models\DirectBindDeviceInFamilyRequest $req) 直接绑定设备和家庭
  * @method Models\DisableTopicRuleResponse DisableTopicRule(Models\DisableTopicRuleRequest $req) 禁用规则
@@ -240,6 +243,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetTWeTalkProductConfigListResponse GetTWeTalkProductConfigList(Models\GetTWeTalkProductConfigListRequest $req) 用于获取TWeTalk服务连接产品配置信息列表。
  * @method Models\GetTWeTalkProductConfigListV2Response GetTWeTalkProductConfigListV2(Models\GetTWeTalkProductConfigListV2Request $req) 用于查询TWeTalk服务连接产品配置信息。
  * @method Models\GetTopicRuleListResponse GetTopicRuleList(Models\GetTopicRuleListRequest $req) 获取规则列表
+ * @method Models\GetVodCloudStorageEventListResponse GetVodCloudStorageEventList(Models\GetVodCloudStorageEventListRequest $req) 获取云存事件列表
+ * @method Models\GetVodCloudStorageVideoListResponse GetVodCloudStorageVideoList(Models\GetVodCloudStorageVideoListRequest $req) 获取云存时间轴视频列表
  * @method Models\GetWechatDeviceTicketResponse GetWechatDeviceTicket(Models\GetWechatDeviceTicketRequest $req) 查询微信设备授权票据
  * @method Models\ImportTWeSeeFacesResponse ImportTWeSeeFaces(Models\ImportTWeSeeFacesRequest $req) 检测图片中的人脸，并返回可用于人员管理的人脸元数据。
  * @method Models\InheritCloudStorageUserResponse InheritCloudStorageUser(Models\InheritCloudStorageUserRequest $req) 继承云存用户

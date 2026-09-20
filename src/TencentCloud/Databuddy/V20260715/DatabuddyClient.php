@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Databuddy\V20260715\Models as Models;
 
 /**
+ * @method Models\AddConsoleUsersResponse AddConsoleUsers(Models\AddConsoleUsersRequest $req) 添加控制台用户
  * @method Models\CreateFileResponse CreateFile(Models\CreateFileRequest $req) 在Studio（统一开发 IDE）的工作空间文件树中新建一个文件（Notebook/SQL/Python等），创建成功后返回文件的完整元信息。
 
 **前置条件**
@@ -73,13 +74,16 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\GetWorkflowRunResponse GetWorkflowRun(Models\GetWorkflowRunRequest $req) 查询工作流运行详情
  * @method Models\GetWorkflowTaskRunResponse GetWorkflowTaskRun(Models\GetWorkflowTaskRunRequest $req) 查询任务运行详情
  * @method Models\KillWorkflowRunResponse KillWorkflowRun(Models\KillWorkflowRunRequest $req) 终止工作流的运行
+ * @method Models\ListConsoleUsersResponse ListConsoleUsers(Models\ListConsoleUsersRequest $req) 查询控制台用户列表
  * @method Models\ListWorkflowRunsResponse ListWorkflowRuns(Models\ListWorkflowRunsRequest $req) 工作流运行列表
  * @method Models\ListWorkflowTaskRunsResponse ListWorkflowTaskRuns(Models\ListWorkflowTaskRunsRequest $req) 查询工作流任务历史运行列表
  * @method Models\ListWorkflowsResponse ListWorkflows(Models\ListWorkflowsRequest $req) 查询工作流列表
+ * @method Models\RemoveConsoleUsersResponse RemoveConsoleUsers(Models\RemoveConsoleUsersRequest $req) <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准）</p>
  * @method Models\RerunWorkflowRunResponse RerunWorkflowRun(Models\RerunWorkflowRunRequest $req) 重跑工作流
  * @method Models\RunWorkflowResponse RunWorkflow(Models\RunWorkflowRequest $req) 运行工作流
  * @method Models\UnbindWorkflowBundleResponse UnbindWorkflowBundle(Models\UnbindWorkflowBundleRequest $req) 解绑工作流Bundle信息
 说明：本接口语义等同于规范动词清单中的 Detach，因兼容既有产品形态保留 Unbind 命名
+ * @method Models\UpdateConsoleUsersResponse UpdateConsoleUsers(Models\UpdateConsoleUsersRequest $req) 修改控制台用户角色
  * @method Models\UpdateFileResponse UpdateFile(Models\UpdateFileRequest $req) 更新文件内容与运行配置（计算资源、默认 catalog/schema、参数等），返回更新后的文件元信息。
 
 **前置条件**

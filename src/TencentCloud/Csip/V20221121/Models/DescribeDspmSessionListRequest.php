@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置<p>限制数目</p>
  * @method integer getOffset() 获取<p>偏移量</p>
  * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
- * @method integer getLoginType() 获取<p>登陆状态(0 全部 1 成功 2 失败)</p>
- * @method void setLoginType(integer $LoginType) 设置<p>登陆状态(0 全部 1 成功 2 失败)</p>
+ * @method integer getLoginType() 获取<p>登录状态</p><p>枚举值：</p><ul><li>0： 全部</li><li>1： 成功</li><li>2： 失败</li></ul>
+ * @method void setLoginType(integer $LoginType) 设置<p>登录状态</p><p>枚举值：</p><ul><li>0： 全部</li><li>1： 成功</li><li>2： 失败</li></ul>
  * @method string getDbName() 获取<p>数据库端口</p>
  * @method void setDbName(string $DbName) 设置<p>数据库端口</p>
  * @method integer getDbPort() 获取<p>数据库名称</p>
@@ -69,7 +69,7 @@ class DescribeDspmSessionListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer <p>登陆状态(0 全部 1 成功 2 失败)</p>
+     * @var integer <p>登录状态</p><p>枚举值：</p><ul><li>0： 全部</li><li>1： 成功</li><li>2： 失败</li></ul>
      */
     public $LoginType;
 
@@ -132,7 +132,7 @@ class DescribeDspmSessionListRequest extends AbstractModel
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param integer $Limit <p>限制数目</p>
      * @param integer $Offset <p>偏移量</p>
-     * @param integer $LoginType <p>登陆状态(0 全部 1 成功 2 失败)</p>
+     * @param integer $LoginType <p>登录状态</p><p>枚举值：</p><ul><li>0： 全部</li><li>1： 成功</li><li>2： 失败</li></ul>
      * @param string $DbName <p>数据库端口</p>
      * @param integer $DbPort <p>数据库名称</p>
      * @param string $DbIp <p>数据库 IP</p>

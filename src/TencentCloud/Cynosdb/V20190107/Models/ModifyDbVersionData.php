@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 修改数据库内核版本任务信息
  *
- * @method string getOldVersion() 获取修改前版本
- * @method void setOldVersion(string $OldVersion) 设置修改前版本
- * @method string getNewVersion() 获取修改后版本
- * @method void setNewVersion(string $NewVersion) 设置修改后版本
- * @method string getUpgradeType() 获取升级方式
- * @method void setUpgradeType(string $UpgradeType) 设置升级方式
+ * @method string getOldVersion() 获取<p>修改前版本</p>
+ * @method void setOldVersion(string $OldVersion) 设置<p>修改前版本</p>
+ * @method string getNewVersion() 获取<p>修改后版本</p>
+ * @method void setNewVersion(string $NewVersion) 设置<p>修改后版本</p>
+ * @method string getUpgradeType() 获取<p>升级方式</p>
+ * @method void setUpgradeType(string $UpgradeType) 设置<p>升级方式</p>
  */
 class ModifyDbVersionData extends AbstractModel
 {
     /**
-     * @var string 修改前版本
+     * @var string <p>修改前版本</p>
      */
     public $OldVersion;
 
     /**
-     * @var string 修改后版本
+     * @var string <p>修改后版本</p>
      */
     public $NewVersion;
 
     /**
-     * @var string 升级方式
+     * @var string <p>升级方式</p>
      */
     public $UpgradeType;
 
     /**
-     * @param string $OldVersion 修改前版本
-     * @param string $NewVersion 修改后版本
-     * @param string $UpgradeType 升级方式
+     * @param string $OldVersion <p>修改前版本</p>
+     * @param string $NewVersion <p>修改后版本</p>
+     * @param string $UpgradeType <p>升级方式</p>
      */
     function __construct()
     {

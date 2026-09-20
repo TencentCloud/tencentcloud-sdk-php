@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置<p>应用id</p>
  * @method string getApplicationName() 获取<p>应用名称</p>
  * @method void setApplicationName(string $ApplicationName) 设置<p>应用名称</p>
- * @method string getAccessType() 获取<p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse​ 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
- * @method void setAccessType(string $AccessType) 设置<p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse​ 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
+ * @method string getAccessType() 获取<p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
+ * @method void setAccessType(string $AccessType) 设置<p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
  * @method string getRegion() 获取<p>应用下资源所属地域</p><p>例如：ap-guangzhou</p>
  * @method void setRegion(string $Region) 设置<p>应用下资源所属地域</p><p>例如：ap-guangzhou</p>
  * @method array getLogTopics() 获取<p>日志主题列表</p>
@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p><p>单位：秒</p><p>秒级时间戳</p>
  * @method integer getUpdateTime() 获取<p>更新时间</p><p>单位：秒</p><p>秒级时间戳</p>
  * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p><p>单位：秒</p><p>秒级时间戳</p>
+ * @method string getLogsetId() 获取<p>日志集id</p>
+ * @method void setLogsetId(string $LogsetId) 设置<p>日志集id</p>
+ * @method string getAssumerName() 获取<p>服务方名称</p>
+ * @method void setAssumerName(string $AssumerName) 设置<p>服务方名称</p>
+ * @method string getSubAssumerName() 获取<p>服务方子名称</p>
+ * @method void setSubAssumerName(string $SubAssumerName) 设置<p>服务方子名称</p>
+ * @method integer getAssumerUin() 获取<p>服务方Uin</p>
+ * @method void setAssumerUin(integer $AssumerUin) 设置<p>服务方Uin</p>
+ * @method string getRoleName() 获取<p>服务方使用的角色</p>
+ * @method void setRoleName(string $RoleName) 设置<p>服务方使用的角色</p>
  */
 class AgentApplicationInfo extends AbstractModel
 {
@@ -50,7 +60,7 @@ class AgentApplicationInfo extends AbstractModel
     public $ApplicationName;
 
     /**
-     * @var string <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse​ 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
+     * @var string <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
      */
     public $AccessType;
 
@@ -80,14 +90,44 @@ class AgentApplicationInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string <p>日志集id</p>
+     */
+    public $LogsetId;
+
+    /**
+     * @var string <p>服务方名称</p>
+     */
+    public $AssumerName;
+
+    /**
+     * @var string <p>服务方子名称</p>
+     */
+    public $SubAssumerName;
+
+    /**
+     * @var integer <p>服务方Uin</p>
+     */
+    public $AssumerUin;
+
+    /**
+     * @var string <p>服务方使用的角色</p>
+     */
+    public $RoleName;
+
+    /**
      * @param string $ApplicationId <p>应用id</p>
      * @param string $ApplicationName <p>应用名称</p>
-     * @param string $AccessType <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse​ 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
+     * @param string $AccessType <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
      * @param string $Region <p>应用下资源所属地域</p><p>例如：ap-guangzhou</p>
      * @param array $LogTopics <p>日志主题列表</p>
      * @param array $MetricsTopics <p>指标主题列表</p>
      * @param integer $CreateTime <p>创建时间</p><p>单位：秒</p><p>秒级时间戳</p>
      * @param integer $UpdateTime <p>更新时间</p><p>单位：秒</p><p>秒级时间戳</p>
+     * @param string $LogsetId <p>日志集id</p>
+     * @param string $AssumerName <p>服务方名称</p>
+     * @param string $SubAssumerName <p>服务方子名称</p>
+     * @param integer $AssumerUin <p>服务方Uin</p>
+     * @param string $RoleName <p>服务方使用的角色</p>
      */
     function __construct()
     {
@@ -142,6 +182,26 @@ class AgentApplicationInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
+            $this->LogsetId = $param["LogsetId"];
+        }
+
+        if (array_key_exists("AssumerName",$param) and $param["AssumerName"] !== null) {
+            $this->AssumerName = $param["AssumerName"];
+        }
+
+        if (array_key_exists("SubAssumerName",$param) and $param["SubAssumerName"] !== null) {
+            $this->SubAssumerName = $param["SubAssumerName"];
+        }
+
+        if (array_key_exists("AssumerUin",$param) and $param["AssumerUin"] !== null) {
+            $this->AssumerUin = $param["AssumerUin"];
+        }
+
+        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
+            $this->RoleName = $param["RoleName"];
         }
     }
 }

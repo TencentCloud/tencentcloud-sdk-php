@@ -26,8 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置<p>每页条数，范围 [1, 100]，默认 10。</p>
  * @method integer getOffset() 获取<p>起始位置，从 0 开始。</p>
  * @method void setOffset(integer $Offset) 设置<p>起始位置，从 0 开始。</p>
+ * @method array getFilters() 获取<p>过滤条件。支持的 Name：Status / GenerateType / SecretType。</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。支持的 Name：Status / GenerateType / SecretType。</p>
+ * @method string getKeyword() 获取<p>模糊匹配密钥名称。</p>
+ * @method void setKeyword(string $Keyword) 设置<p>模糊匹配密钥名称。</p>
+ * @method string getResourceId() 获取<p>对应资源的 ID（消费者 ID 或模型服务 ID）。</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>对应资源的 ID（消费者 ID 或模型服务 ID）。</p>
  * @method string getResourceType() 获取<p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
  * @method void setResourceType(string $ResourceType) 设置<p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+ * @method boolean getUseToBind() 获取<p>是否用于绑定场景。true 时返回可被绑定到指定资源的密钥。</p>
+ * @method void setUseToBind(boolean $UseToBind) 设置<p>是否用于绑定场景。true 时返回可被绑定到指定资源的密钥。</p>
  */
 class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractModel
 {
@@ -47,15 +55,39 @@ class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array <p>过滤条件。支持的 Name：Status / GenerateType / SecretType。</p>
+     */
+    public $Filters;
+
+    /**
+     * @var string <p>模糊匹配密钥名称。</p>
+     */
+    public $Keyword;
+
+    /**
+     * @var string <p>对应资源的 ID（消费者 ID 或模型服务 ID）。</p>
+     */
+    public $ResourceId;
+
+    /**
      * @var string <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
      */
     public $ResourceType;
 
     /**
+     * @var boolean <p>是否用于绑定场景。true 时返回可被绑定到指定资源的密钥。</p>
+     */
+    public $UseToBind;
+
+    /**
      * @param string $GatewayId <p>实例 ID</p>
      * @param integer $Limit <p>每页条数，范围 [1, 100]，默认 10。</p>
      * @param integer $Offset <p>起始位置，从 0 开始。</p>
+     * @param array $Filters <p>过滤条件。支持的 Name：Status / GenerateType / SecretType。</p>
+     * @param string $Keyword <p>模糊匹配密钥名称。</p>
+     * @param string $ResourceId <p>对应资源的 ID（消费者 ID 或模型服务 ID）。</p>
      * @param string $ResourceType <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+     * @param boolean $UseToBind <p>是否用于绑定场景。true 时返回可被绑定到指定资源的密钥。</p>
      */
     function __construct()
     {
@@ -82,8 +114,29 @@ class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractModel
             $this->Offset = $param["Offset"];
         }
 
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
+        }
+
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("UseToBind",$param) and $param["UseToBind"] !== null) {
+            $this->UseToBind = $param["UseToBind"];
         }
     }
 }

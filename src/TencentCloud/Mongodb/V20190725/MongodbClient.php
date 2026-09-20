@@ -24,6 +24,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
 
 /**
  * @method Models\AssignProjectResponse AssignProject(Models\AssignProjectRequest $req) 本接口(AssignProject)用于指定云数据库实例的所属项目。
+ * @method Models\CheckDBInstanceElasticCpuScalableResponse CheckDBInstanceElasticCpuScalable(Models\CheckDBInstanceElasticCpuScalableRequest $req) 查询cpu弹性扩容信息
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 本接口（CloseAuditService）用于关闭审计服务
  * @method Models\CreateAccountUserResponse CreateAccountUser(Models\CreateAccountUserRequest $req) 本接口（CreateAccountUser）用于自定义实例访问账号。
  * @method Models\CreateAuditLogFileResponse CreateAuditLogFile(Models\CreateAuditLogFileRequest $req) 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。

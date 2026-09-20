@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLoadBalancer返回参数结构体
  *
- * @method string getInstanceId() 获取负载均衡实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置负载均衡实例 ID。
+ * @method string getInstanceId() 获取<p>负载均衡实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>负载均衡实例 ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateLoadBalancerResponse extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID。
+     * @var string <p>负载均衡实例 ID。</p>
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class CreateLoadBalancerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 负载均衡实例 ID。
+     * @param string $InstanceId <p>负载均衡实例 ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomHeaderCredentialConfig(AIGWCustomHeaderCredentialConfig $CustomHeaderCredentialConfig) 设置<p>自定义Header凭证配置</p>
  * @method AIGWQueryParamCredentialConfig getQueryParamCredentialConfig() 获取<p>自定义Query参数凭证配置</p>
  * @method void setQueryParamCredentialConfig(AIGWQueryParamCredentialConfig $QueryParamCredentialConfig) 设置<p>自定义Query参数凭证配置</p>
+ * @method array getBoundModelSecretKeys() 获取<p>该消费者密钥绑定的模型密钥列表</p>
+ * @method void setBoundModelSecretKeys(array $BoundModelSecretKeys) 设置<p>该消费者密钥绑定的模型密钥列表</p>
+ * @method array getBoundConsumerSecretKeys() 获取<p>绑定了该模型密钥的消费者密钥列表</p>
+ * @method void setBoundConsumerSecretKeys(array $BoundConsumerSecretKeys) 设置<p>绑定了该模型密钥的消费者密钥列表</p>
  */
 class CNAPIGwSecretKey extends AbstractModel
 {
@@ -225,6 +229,16 @@ class CNAPIGwSecretKey extends AbstractModel
     public $QueryParamCredentialConfig;
 
     /**
+     * @var array <p>该消费者密钥绑定的模型密钥列表</p>
+     */
+    public $BoundModelSecretKeys;
+
+    /**
+     * @var array <p>绑定了该模型密钥的消费者密钥列表</p>
+     */
+    public $BoundConsumerSecretKeys;
+
+    /**
      * @param integer $BindCount <p>绑定数</p>
      * @param boolean $CanBind <p>是否可以绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -256,6 +270,8 @@ class CNAPIGwSecretKey extends AbstractModel
      * @param AIGWBasicCredentialConfig $BasicCredentialConfig <p>Basic Auth凭证配置</p>
      * @param AIGWCustomHeaderCredentialConfig $CustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
      * @param AIGWQueryParamCredentialConfig $QueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     * @param array $BoundModelSecretKeys <p>该消费者密钥绑定的模型密钥列表</p>
+     * @param array $BoundConsumerSecretKeys <p>绑定了该模型密钥的消费者密钥列表</p>
      */
     function __construct()
     {
@@ -385,6 +401,24 @@ class CNAPIGwSecretKey extends AbstractModel
         if (array_key_exists("QueryParamCredentialConfig",$param) and $param["QueryParamCredentialConfig"] !== null) {
             $this->QueryParamCredentialConfig = new AIGWQueryParamCredentialConfig();
             $this->QueryParamCredentialConfig->deserialize($param["QueryParamCredentialConfig"]);
+        }
+
+        if (array_key_exists("BoundModelSecretKeys",$param) and $param["BoundModelSecretKeys"] !== null) {
+            $this->BoundModelSecretKeys = [];
+            foreach ($param["BoundModelSecretKeys"] as $key => $value){
+                $obj = new AIGWSimpleSecretKey();
+                $obj->deserialize($value);
+                array_push($this->BoundModelSecretKeys, $obj);
+            }
+        }
+
+        if (array_key_exists("BoundConsumerSecretKeys",$param) and $param["BoundConsumerSecretKeys"] !== null) {
+            $this->BoundConsumerSecretKeys = [];
+            foreach ($param["BoundConsumerSecretKeys"] as $key => $value){
+                $obj = new AIGWSimpleSecretKey();
+                $obj->deserialize($value);
+                array_push($this->BoundConsumerSecretKeys, $obj);
+            }
         }
     }
 }

@@ -38,6 +38,7 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CloseSourceStreamResponse CloseSourceStream(Models\CloseSourceStreamRequest $req) 用于关闭回源客户源站功能
  * @method Models\CopyCasterResponse CopyCaster(Models\CopyCasterRequest $req) 该接口用来复制导播台配置
  * @method Models\CopyLiveAvatarRoomResponse CopyLiveAvatarRoom(Models\CopyLiveAvatarRoomRequest $req) 调用该接口，用于复制数字人直播间。
+ * @method Models\CreateAuditImagesResponse CreateAuditImages(Models\CreateAuditImagesRequest $req) 直播审核图库添加图片，添加到预设库，图库不需要创建。
  * @method Models\CreateAuditKeywordLibResponse CreateAuditKeywordLib(Models\CreateAuditKeywordLibRequest $req) 创建关键词库，直播审核功能使用。
  * @method Models\CreateAuditKeywordsResponse CreateAuditKeywords(Models\CreateAuditKeywordsRequest $req) 创建关键词，并关联到关键词库。
  * @method Models\CreateCasterResponse CreateCaster(Models\CreateCasterRequest $req) 该接口用来创建新的导播台
@@ -129,6 +130,8 @@ use TencentCloud\Live\V20180801\Models as Models;
 4. 当前截图任务管理API（CreateScreenshotTask/StopScreenshotTask/DeleteScreenshotTask）与旧API（CreateLiveInstantSnapshot/StopLiveInstantSnapshot）不兼容，两套接口不能混用。
 5. 避免 创建截图任务 与 推流 操作同时进行，可能导致因截图任务未生效而引起任务延迟启动问题，两者操作间隔建议大于3秒。
  * @method Models\CreateVideoRedrawTaskResponse CreateVideoRedrawTask(Models\CreateVideoRedrawTaskRequest $req) 创建AI转绘任务
+ * @method Models\DeleteAuditImagesResponse DeleteAuditImages(Models\DeleteAuditImagesRequest $req) 直播审核图库删除图片。
+ * @method Models\DeleteAuditKeywordLibResponse DeleteAuditKeywordLib(Models\DeleteAuditKeywordLibRequest $req) 删除关键词库，直播审核功能使用。
  * @method Models\DeleteAuditKeywordsResponse DeleteAuditKeywords(Models\DeleteAuditKeywordsRequest $req) 删除关键词信息。
  * @method Models\DeleteCasterResponse DeleteCaster(Models\DeleteCasterRequest $req) 该接口用来删除一个导播台的所有信息。
 注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
@@ -170,6 +173,9 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(Models\DescribeAllStreamPlayInfoListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 输入某个时间点（1分钟维度），查询该时间点所有流的下行信息。
  * @method Models\DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxList(Models\DescribeAreaBillBandwidthAndFluxListRequest $req) 海外分区直播播放带宽和流量数据查询。
+ * @method Models\DescribeAuditGroupTagResponse DescribeAuditGroupTag(Models\DescribeAuditGroupTagRequest $req) 获取标签组分类数据，直播审核中。
+ * @method Models\DescribeAuditImagesResponse DescribeAuditImages(Models\DescribeAuditImagesRequest $req) 直播审核图库获取图片。
+ * @method Models\DescribeAuditKeywordLibsResponse DescribeAuditKeywordLibs(Models\DescribeAuditKeywordLibsRequest $req) 获取关键词库列表，直播审核功能使用。
  * @method Models\DescribeAuditKeywordsResponse DescribeAuditKeywords(Models\DescribeAuditKeywordsRequest $req) 获取关键词信息。
  * @method Models\DescribeBackupStreamListResponse DescribeBackupStreamList(Models\DescribeBackupStreamListRequest $req) 返回正在直播中的流列表。适用于推流成功后查询在线流信息。
 
@@ -339,6 +345,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 注意：
 1. 仅支持对有效且运行中的点播源任务进行插播操作。
 2. 拉转推插播文件时，事件及回调中的索引均保持为插播前的值。
+ * @method Models\ModifyAuditKeywordLibResponse ModifyAuditKeywordLib(Models\ModifyAuditKeywordLibRequest $req) 更新关键词库信息，直播审核功能使用。
  * @method Models\ModifyCasterResponse ModifyCaster(Models\ModifyCasterRequest $req) 该接口用来设置导播台的描述、名称、录制模板id等参数。
  * @method Models\ModifyCasterInputInfoResponse ModifyCasterInputInfo(Models\ModifyCasterInputInfoRequest $req) 该接口用来修改已经设置过的输入源信息，如源地址，源类型等。
 设置前，需保证待修改的输入源已经存在。若不存在，需使用AddCasterInputInfo接口。

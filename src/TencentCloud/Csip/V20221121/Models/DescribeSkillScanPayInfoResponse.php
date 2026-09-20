@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) 设置<p>租户 Uin</p>
  * @method string getNickName() 获取<p>租户昵称</p>
  * @method void setNickName(string $NickName) 设置<p>租户昵称</p>
+ * @method integer getPostPayStatus() 获取<p>后付费资源状态<br>枚举值：<br>0：未开通<br>1：正常<br>2：隔离</p>
+ * @method void setPostPayStatus(integer $PostPayStatus) 设置<p>后付费资源状态<br>枚举值：<br>0：未开通<br>1：正常<br>2：隔离</p>
+ * @method string getPostPayResourceId() 获取<p>后付费资源ID，未开通后付费时为空</p>
+ * @method void setPostPayResourceId(string $PostPayResourceId) 设置<p>后付费资源ID，未开通后付费时为空</p>
+ * @method string getPostPayBeginTime() 获取<p>后付费资源开通时间，未开通后付费时为空。格式 YYYY-MM-DD HH:mm:ss</p>
+ * @method void setPostPayBeginTime(string $PostPayBeginTime) 设置<p>后付费资源开通时间，未开通后付费时为空。格式 YYYY-MM-DD HH:mm:ss</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -131,6 +137,21 @@ class DescribeSkillScanPayInfoResponse extends AbstractModel
     public $NickName;
 
     /**
+     * @var integer <p>后付费资源状态<br>枚举值：<br>0：未开通<br>1：正常<br>2：隔离</p>
+     */
+    public $PostPayStatus;
+
+    /**
+     * @var string <p>后付费资源ID，未开通后付费时为空</p>
+     */
+    public $PostPayResourceId;
+
+    /**
+     * @var string <p>后付费资源开通时间，未开通后付费时为空。格式 YYYY-MM-DD HH:mm:ss</p>
+     */
+    public $PostPayBeginTime;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -151,6 +172,9 @@ class DescribeSkillScanPayInfoResponse extends AbstractModel
      * @param string $TimeNow <p>服务器当前时间</p>
      * @param string $Uin <p>租户 Uin</p>
      * @param string $NickName <p>租户昵称</p>
+     * @param integer $PostPayStatus <p>后付费资源状态<br>枚举值：<br>0：未开通<br>1：正常<br>2：隔离</p>
+     * @param string $PostPayResourceId <p>后付费资源ID，未开通后付费时为空</p>
+     * @param string $PostPayBeginTime <p>后付费资源开通时间，未开通后付费时为空。格式 YYYY-MM-DD HH:mm:ss</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -224,6 +248,18 @@ class DescribeSkillScanPayInfoResponse extends AbstractModel
 
         if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
             $this->NickName = $param["NickName"];
+        }
+
+        if (array_key_exists("PostPayStatus",$param) and $param["PostPayStatus"] !== null) {
+            $this->PostPayStatus = $param["PostPayStatus"];
+        }
+
+        if (array_key_exists("PostPayResourceId",$param) and $param["PostPayResourceId"] !== null) {
+            $this->PostPayResourceId = $param["PostPayResourceId"];
+        }
+
+        if (array_key_exists("PostPayBeginTime",$param) and $param["PostPayBeginTime"] !== null) {
+            $this->PostPayBeginTime = $param["PostPayBeginTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 虚拟试穿任务配置。
  *
- * @method string getModel() 获取<p>换装模型，取值：</p><ul><li>WAND-tryon-1.0-lite</li><li>WAND-tryon-1.0-flash</li><li>WAND-tryon-1.0-pro</li></ul>
- * @method void setModel(string $Model) 设置<p>换装模型，取值：</p><ul><li>WAND-tryon-1.0-lite</li><li>WAND-tryon-1.0-flash</li><li>WAND-tryon-1.0-pro</li></ul>
+ * @method string getModel() 获取<p>换装模型，取值：</p><ul><li>tryon-1.0-lite</li><li>tryon-1.0-flash</li><li>tryon-1.0-pro</li></ul>
+ * @method void setModel(string $Model) 设置<p>换装模型，取值：</p><ul><li>tryon-1.0-lite</li><li>tryon-1.0-flash</li><li>tryon-1.0-pro</li></ul>
  * @method string getPrompt() 获取<p>换装指令。</p><p>为空时使用内置指令。</p>
  * @method void setPrompt(string $Prompt) 设置<p>换装指令。</p><p>为空时使用内置指令。</p>
  * @method string getResolution() 获取<p>输出图片分辨率，取值：</p><ul><li>1K</li><li>2K</li><li>4K</li></ul><p>默认值：1K</p>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class AiTryOnConfig extends AbstractModel
 {
     /**
-     * @var string <p>换装模型，取值：</p><ul><li>WAND-tryon-1.0-lite</li><li>WAND-tryon-1.0-flash</li><li>WAND-tryon-1.0-pro</li></ul>
+     * @var string <p>换装模型，取值：</p><ul><li>tryon-1.0-lite</li><li>tryon-1.0-flash</li><li>tryon-1.0-pro</li></ul>
      */
     public $Model;
 
@@ -45,7 +45,7 @@ class AiTryOnConfig extends AbstractModel
     public $Resolution;
 
     /**
-     * @param string $Model <p>换装模型，取值：</p><ul><li>WAND-tryon-1.0-lite</li><li>WAND-tryon-1.0-flash</li><li>WAND-tryon-1.0-pro</li></ul>
+     * @param string $Model <p>换装模型，取值：</p><ul><li>tryon-1.0-lite</li><li>tryon-1.0-flash</li><li>tryon-1.0-pro</li></ul>
      * @param string $Prompt <p>换装指令。</p><p>为空时使用内置指令。</p>
      * @param string $Resolution <p>输出图片分辨率，取值：</p><ul><li>1K</li><li>2K</li><li>4K</li></ul><p>默认值：1K</p>
      */

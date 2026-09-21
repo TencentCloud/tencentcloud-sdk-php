@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAndAttachNetworkInterface返回参数结构体
  *
- * @method NetworkInterface getNetworkInterface() 获取弹性网卡实例。
- * @method void setNetworkInterface(NetworkInterface $NetworkInterface) 设置弹性网卡实例。
+ * @method NetworkInterface getNetworkInterface() 获取<p>弹性网卡实例。</p>
+ * @method void setNetworkInterface(NetworkInterface $NetworkInterface) 设置<p>弹性网卡实例。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAndAttachNetworkInterfaceResponse extends AbstractModel
 {
     /**
-     * @var NetworkInterface 弹性网卡实例。
+     * @var NetworkInterface <p>弹性网卡实例。</p>
      */
     public $NetworkInterface;
 
@@ -38,7 +38,7 @@ class CreateAndAttachNetworkInterfaceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param NetworkInterface $NetworkInterface 弹性网卡实例。
+     * @param NetworkInterface $NetworkInterface <p>弹性网卡实例。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

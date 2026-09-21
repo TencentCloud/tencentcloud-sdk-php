@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdcId(string $CdcId) 设置<p>CDC实例ID。</p>
  * @method integer getIsCdcSubnet() 获取<p>是否是CDC所属子网。0:否 1:是</p>
  * @method void setIsCdcSubnet(integer $IsCdcSubnet) 设置<p>是否是CDC所属子网。0:否 1:是</p>
+ * @method string getStackType() 获取<p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+ * @method void setStackType(string $StackType) 设置<p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
  */
 class Subnet extends AbstractModel
 {
@@ -143,6 +145,11 @@ class Subnet extends AbstractModel
     public $IsCdcSubnet;
 
     /**
+     * @var string <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+     */
+    public $StackType;
+
+    /**
      * @param string $VpcId <p><code>VPC</code>实例<code>ID</code>。</p>
      * @param string $SubnetId <p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p>
      * @param string $SubnetName <p>子网名称。</p>
@@ -160,6 +167,7 @@ class Subnet extends AbstractModel
      * @param array $TagSet <p>标签键值对。</p>
      * @param string $CdcId <p>CDC实例ID。</p>
      * @param integer $IsCdcSubnet <p>是否是CDC所属子网。0:否 1:是</p>
+     * @param string $StackType <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class Subnet extends AbstractModel
 
         if (array_key_exists("IsCdcSubnet",$param) and $param["IsCdcSubnet"] !== null) {
             $this->IsCdcSubnet = $param["IsCdcSubnet"];
+        }
+
+        if (array_key_exists("StackType",$param) and $param["StackType"] !== null) {
+            $this->StackType = $param["StackType"];
         }
     }
 }

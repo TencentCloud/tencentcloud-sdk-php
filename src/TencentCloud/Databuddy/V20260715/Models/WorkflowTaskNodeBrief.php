@@ -20,165 +20,165 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流列表项中的工作流任务节点简要信息
  *
- * @method string getWorkflowId() 获取工作流ID
+ * @method string getWorkflowId() 获取<p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取任务ID
+ * @method string getTaskId() 获取<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskName() 获取任务名称
+ * @method string getTaskName() 获取<p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskName(string $TaskName) 设置任务名称
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskTypeName() 获取任务类型名称
+ * @method string getTaskTypeName() 获取<p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeName(string $TaskTypeName) 设置任务类型名称
+ * @method void setTaskTypeName(string $TaskTypeName) 设置<p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDependOnList() 获取任务依赖列表
+ * @method array getDependOnList() 获取<p>任务依赖列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependOnList(array $DependOnList) 设置任务依赖列表
+ * @method void setDependOnList(array $DependOnList) 设置<p>任务依赖列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupId() 获取任务资源组ID
+ * @method string getResourceGroupId() 获取<p>任务资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置任务资源组ID
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>任务资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取任务资源组名称
+ * @method string getResourceGroupName() 获取<p>任务资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置任务资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置<p>任务资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getLeftCoordinate() 获取任务X坐标
+ * @method float getLeftCoordinate() 获取<p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLeftCoordinate(float $LeftCoordinate) 设置任务X坐标
+ * @method void setLeftCoordinate(float $LeftCoordinate) 设置<p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getTopCoordinate() 获取任务Y坐标
+ * @method float getTopCoordinate() 获取<p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopCoordinate(float $TopCoordinate) 设置任务Y坐标
+ * @method void setTopCoordinate(float $TopCoordinate) 设置<p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TaskRetryStrategy getTaskRetryStrategy() 获取任务重试策略
+ * @method TaskRetryStrategy getTaskRetryStrategy() 获取<p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskRetryStrategy(TaskRetryStrategy $TaskRetryStrategy) 设置任务重试策略
+ * @method void setTaskRetryStrategy(TaskRetryStrategy $TaskRetryStrategy) 设置<p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDependOnRunCondition() 获取依赖运行条件
+ * @method string getDependOnRunCondition() 获取<p>任依赖运行条件</p><ul><li>ALL_SUCCESS: 全部成功：所有上游依赖任务均已执行并成功</li><li>ONE_SUCCESS: 至少一个成功：至少有一个上游依赖任务成功</li><li>NONE_FAILED: 目前没有失败：没有依赖任务失败，并且至少有一个依赖任务在运行中</li><li>ALL_DONE: 全部完成：所有上游依赖任务均已执行并完成（无论成功或失败</li><li>ONE_FAILED: 至少一个失败：至少有一个上游依赖任务失败</li><li>ALL_FAILED: 全部失败：所有上游依赖任务都失败</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li><li>ADVANCED:运行条件为高级模式时配置</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependOnRunCondition(string $DependOnRunCondition) 设置依赖运行条件
+ * @method void setDependOnRunCondition(string $DependOnRunCondition) 设置<p>任依赖运行条件</p><ul><li>ALL_SUCCESS: 全部成功：所有上游依赖任务均已执行并成功</li><li>ONE_SUCCESS: 至少一个成功：至少有一个上游依赖任务成功</li><li>NONE_FAILED: 目前没有失败：没有依赖任务失败，并且至少有一个依赖任务在运行中</li><li>ALL_DONE: 全部完成：所有上游依赖任务均已执行并完成（无论成功或失败</li><li>ONE_FAILED: 至少一个失败：至少有一个上游依赖任务失败</li><li>ALL_FAILED: 全部失败：所有上游依赖任务都失败</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li><li>ADVANCED:运行条件为高级模式时配置</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AdvancedDependencyConfig getAdvancedDependencyConfig() 获取高级依赖配置
+ * @method AdvancedDependencyConfig getAdvancedDependencyConfig() 获取<p>高级依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdvancedDependencyConfig(AdvancedDependencyConfig $AdvancedDependencyConfig) 设置高级依赖配置
+ * @method void setAdvancedDependencyConfig(AdvancedDependencyConfig $AdvancedDependencyConfig) 设置<p>高级依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WorkflowTaskNodeBrief getInnerTask() 获取内嵌工作流任务节点
+ * @method WorkflowTaskNodeBrief getInnerTask() 获取<p>内嵌工作流任务节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInnerTask(WorkflowTaskNodeBrief $InnerTask) 设置内嵌工作流任务节点
+ * @method void setInnerTask(WorkflowTaskNodeBrief $InnerTask) 设置<p>内嵌工作流任务节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTaskNodeBrief extends AbstractModel
 {
     /**
-     * @var string 工作流ID
+     * @var string <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 任务ID
+     * @var string <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
-     * @var string 任务类型名称
+     * @var string <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeName;
 
     /**
-     * @var array 任务依赖列表
+     * @var array <p>任务依赖列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependOnList;
 
     /**
-     * @var string 任务资源组ID
+     * @var string <p>任务资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
 
     /**
-     * @var string 任务资源组名称
+     * @var string <p>任务资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
     /**
-     * @var float 任务X坐标
+     * @var float <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LeftCoordinate;
 
     /**
-     * @var float 任务Y坐标
+     * @var float <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopCoordinate;
 
     /**
-     * @var TaskRetryStrategy 任务重试策略
+     * @var TaskRetryStrategy <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskRetryStrategy;
 
     /**
-     * @var string 依赖运行条件
+     * @var string <p>任依赖运行条件</p><ul><li>ALL_SUCCESS: 全部成功：所有上游依赖任务均已执行并成功</li><li>ONE_SUCCESS: 至少一个成功：至少有一个上游依赖任务成功</li><li>NONE_FAILED: 目前没有失败：没有依赖任务失败，并且至少有一个依赖任务在运行中</li><li>ALL_DONE: 全部完成：所有上游依赖任务均已执行并完成（无论成功或失败</li><li>ONE_FAILED: 至少一个失败：至少有一个上游依赖任务失败</li><li>ALL_FAILED: 全部失败：所有上游依赖任务都失败</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li><li>ADVANCED:运行条件为高级模式时配置</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependOnRunCondition;
 
     /**
-     * @var AdvancedDependencyConfig 高级依赖配置
+     * @var AdvancedDependencyConfig <p>高级依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdvancedDependencyConfig;
 
     /**
-     * @var WorkflowTaskNodeBrief 内嵌工作流任务节点
+     * @var WorkflowTaskNodeBrief <p>内嵌工作流任务节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InnerTask;
 
     /**
-     * @param string $WorkflowId 工作流ID
+     * @param string $WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 任务ID
+     * @param string $TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskName 任务名称
+     * @param string $TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskTypeName 任务类型名称
+     * @param string $TaskTypeName <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DependOnList 任务依赖列表
+     * @param array $DependOnList <p>任务依赖列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupId 任务资源组ID
+     * @param string $ResourceGroupId <p>任务资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName 任务资源组名称
+     * @param string $ResourceGroupName <p>任务资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $LeftCoordinate 任务X坐标
+     * @param float $LeftCoordinate <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $TopCoordinate 任务Y坐标
+     * @param float $TopCoordinate <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskRetryStrategy $TaskRetryStrategy 任务重试策略
+     * @param TaskRetryStrategy $TaskRetryStrategy <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DependOnRunCondition 依赖运行条件
+     * @param string $DependOnRunCondition <p>任依赖运行条件</p><ul><li>ALL_SUCCESS: 全部成功：所有上游依赖任务均已执行并成功</li><li>ONE_SUCCESS: 至少一个成功：至少有一个上游依赖任务成功</li><li>NONE_FAILED: 目前没有失败：没有依赖任务失败，并且至少有一个依赖任务在运行中</li><li>ALL_DONE: 全部完成：所有上游依赖任务均已执行并完成（无论成功或失败</li><li>ONE_FAILED: 至少一个失败：至少有一个上游依赖任务失败</li><li>ALL_FAILED: 全部失败：所有上游依赖任务都失败</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li><li>ADVANCED:运行条件为高级模式时配置</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedDependencyConfig $AdvancedDependencyConfig 高级依赖配置
+     * @param AdvancedDependencyConfig $AdvancedDependencyConfig <p>高级依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowTaskNodeBrief $InnerTask 内嵌工作流任务节点
+     * @param WorkflowTaskNodeBrief $InnerTask <p>内嵌工作流任务节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

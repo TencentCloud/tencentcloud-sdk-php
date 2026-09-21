@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpv6CidrBlockSet(array $Ipv6CidrBlockSet) 设置<p>返回多运营商IPv6 Cidr Block</p>
  * @method boolean getEnableRouteVpcPublishIpv6() 获取<p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
  * @method void setEnableRouteVpcPublishIpv6(boolean $EnableRouteVpcPublishIpv6) 设置<p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
+ * @method string getStackType() 获取<p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+ * @method void setStackType(string $StackType) 设置<p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
  */
 class Vpc extends AbstractModel
 {
@@ -136,6 +138,11 @@ class Vpc extends AbstractModel
     public $EnableRouteVpcPublishIpv6;
 
     /**
+     * @var string <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+     */
+    public $StackType;
+
+    /**
      * @param string $VpcName <p><code>VPC</code>名称。</p>
      * @param string $VpcId <p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p>
      * @param string $CidrBlock <p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p>
@@ -152,6 +159,7 @@ class Vpc extends AbstractModel
      * @param boolean $EnableRouteVpcPublish <p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p>
      * @param array $Ipv6CidrBlockSet <p>返回多运营商IPv6 Cidr Block</p>
      * @param boolean $EnableRouteVpcPublishIpv6 <p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
+     * @param string $StackType <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
      */
     function __construct()
     {
@@ -243,6 +251,10 @@ class Vpc extends AbstractModel
 
         if (array_key_exists("EnableRouteVpcPublishIpv6",$param) and $param["EnableRouteVpcPublishIpv6"] !== null) {
             $this->EnableRouteVpcPublishIpv6 = $param["EnableRouteVpcPublishIpv6"];
+        }
+
+        if (array_key_exists("StackType",$param) and $param["StackType"] !== null) {
+            $this->StackType = $param["StackType"];
         }
     }
 }

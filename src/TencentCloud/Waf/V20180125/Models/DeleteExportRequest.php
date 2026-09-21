@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteExport请求参数结构体
  *
- * @method string getExportId() 获取日志导出ID
- * @method void setExportId(string $ExportId) 设置日志导出ID
+ * @method string getExportId() 获取<p>日志导出ID，可以通过DescribeExports接口获取</p>
+ * @method void setExportId(string $ExportId) 设置<p>日志导出ID，可以通过DescribeExports接口获取</p>
  */
 class DeleteExportRequest extends AbstractModel
 {
     /**
-     * @var string 日志导出ID
+     * @var string <p>日志导出ID，可以通过DescribeExports接口获取</p>
      */
     public $ExportId;
 
     /**
-     * @param string $ExportId 日志导出ID
+     * @param string $ExportId <p>日志导出ID，可以通过DescribeExports接口获取</p>
      */
     function __construct()
     {

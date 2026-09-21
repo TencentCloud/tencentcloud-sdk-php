@@ -27,6 +27,7 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\CreateConsumerGroupResponse CreateConsumerGroup(Models\CreateConsumerGroupRequest $req) 创建消费组。
 当前 API 适用集群：5.x 集群。4.x 集群的创建消费组接口文档见 [CreateRocketMQGroup](https://cloud.tencent.com/document/api/1179/63428)。
  * @method Models\CreateConsumerLabelResponse CreateConsumerLabel(Models\CreateConsumerLabelRequest $req) 创建消费组灰度标签
+ * @method Models\CreateConsumerLabelsResponse CreateConsumerLabels(Models\CreateConsumerLabelsRequest $req) 批量创建消费组灰度标签
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建 RocketMQ 5.x 集群。
 当前 API 适用集群：5.x 集群。创建 4.x 专享/通用集群的接口文档见 [CreateRocketMQVipInstance](https://cloud.tencent.com/document/product/1179/95721)。
  * @method Models\CreateMigrationTaskResponse CreateMigrationTask(Models\CreateMigrationTaskRequest $req) 创建元数据迁移上云任务
@@ -37,7 +38,9 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 删除消费组。消费者组删除后，消费者组的所有配置和相关数据都会被清空，且无法找回。删除后，在线的消费者客户端会出现报错，建议您提前下线客户端。
 当前 API 适用集群：5.x 集群。4.x 集群的删除消费组接口文档见 [DeleteRocketMQGroup](https://cloud.tencent.com/document/api/1179/63424)。
  * @method Models\DeleteConsumerLabelResponse DeleteConsumerLabel(Models\DeleteConsumerLabelRequest $req) 删除消费组灰度标签
+ * @method Models\DeleteConsumerLabelsResponse DeleteConsumerLabels(Models\DeleteConsumerLabelsRequest $req) 批量删除消费组灰度标签
  * @method Models\DeleteConsumerRouteConfigResponse DeleteConsumerRouteConfig(Models\DeleteConsumerRouteConfigRequest $req) 删除消费组灰度路由配置
+ * @method Models\DeleteConsumerRouteConfigsResponse DeleteConsumerRouteConfigs(Models\DeleteConsumerRouteConfigsRequest $req) 批量删除消费组灰度路由配置
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除 RocketMQ 5.x 集群，删除前请先删除正在使用的主题、消费组和角色信息。
 当前 API 适用集群：5.x 集群。删除 4.x 集群接口文档见 [DeleteRocketMQVipInstance](https://cloud.tencent.com/document/product/1179/95802)。
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) 删除角色。请确保该角色相关信息不在当前代码中被使用。删除角色后，原先使用该角色进行生产或消费消息的密钥（AccessKey 和 SecretKey）将立即失效。
@@ -66,9 +69,12 @@ Filters示例：
 当前 API 适用集群：5.x 集群。4.x 集群的获取消费组列表接口文档见 [DescribeRocketMQGroups](https://cloud.tencent.com/document/api/1179/63420)。
  * @method Models\DescribeConsumerLabelResponse DescribeConsumerLabel(Models\DescribeConsumerLabelRequest $req) 查询消费组某个灰度标签详情
  * @method Models\DescribeConsumerLabelListResponse DescribeConsumerLabelList(Models\DescribeConsumerLabelListRequest $req) 查询消费组下灰度标签列表
+ * @method Models\DescribeConsumerLabelListsResponse DescribeConsumerLabelLists(Models\DescribeConsumerLabelListsRequest $req) 批量查询多个消费组的灰度标签列表
+ * @method Models\DescribeConsumerLabelRoutesResponse DescribeConsumerLabelRoutes(Models\DescribeConsumerLabelRoutesRequest $req) 批量查询消费组灰度标签命中的 Topic 路由
  * @method Models\DescribeConsumerLagResponse DescribeConsumerLag(Models\DescribeConsumerLagRequest $req) 查询指定消费组堆积数。
 当前 API 适用集群：4.x 集群和 5.x 集群。
  * @method Models\DescribeConsumerRouteConfigResponse DescribeConsumerRouteConfig(Models\DescribeConsumerRouteConfigRequest $req) 查询消费组当前生效的灰度路由配置
+ * @method Models\DescribeConsumerRouteConfigsResponse DescribeConsumerRouteConfigs(Models\DescribeConsumerRouteConfigsRequest $req) 批量查询消费组灰度路由配置
  * @method Models\DescribeConsumerRouteVersionListResponse DescribeConsumerRouteVersionList(Models\DescribeConsumerRouteVersionListRequest $req) 查询消费组灰度路由配置版本列表
  * @method Models\DescribeFusionInstanceListResponse DescribeFusionInstanceList(Models\DescribeFusionInstanceListRequest $req) 查询集群列表，支持 4.x 和 5.x 集群，其中 Filters 参数使用说明如下：
 
@@ -205,6 +211,7 @@ Filters示例：
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题属性。
 当前 API 适用集群：5.x 集群。4.x 集群的修改主题属性接口文档见 [ModifyRocketMQTopic](https://cloud.tencent.com/document/api/1179/63414)。
  * @method Models\PutConsumerRouteConfigResponse PutConsumerRouteConfig(Models\PutConsumerRouteConfigRequest $req) 写入消费组灰度路由配置
+ * @method Models\PutConsumerRouteConfigsResponse PutConsumerRouteConfigs(Models\PutConsumerRouteConfigsRequest $req) 批量写入消费组灰度路由配置
  * @method Models\RemoveMigratingTopicResponse RemoveMigratingTopic(Models\RemoveMigratingTopicRequest $req) 从迁移列表中移除主题，仅当主题处于初始状态时有效
  * @method Models\ResendDeadLetterMessageResponse ResendDeadLetterMessage(Models\ResendDeadLetterMessageRequest $req) 重新发送死信消息。
 当前 API 适用集群：5.x集群。4.x 集群的重发死信消息接口文档见 [RetryRocketMQDlqMessage](https://cloud.tencent.com/document/api/1179/114595)。

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePostCLSFlows请求参数结构体
  *
- * @method integer getLogType() 获取1-访问日志，2-攻击日志，默认为访问日志。
- * @method void setLogType(integer $LogType) 设置1-访问日志，2-攻击日志，默认为访问日志。
+ * @method integer getLogType() 获取<p>1-访问日志，2-攻击日志，默认为访问日志。</p>
+ * @method void setLogType(integer $LogType) 设置<p>1-访问日志，2-攻击日志，默认为访问日志。</p>
  */
 class DescribePostCLSFlowsRequest extends AbstractModel
 {
     /**
-     * @var integer 1-访问日志，2-攻击日志，默认为访问日志。
+     * @var integer <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
      */
     public $LogType;
 
     /**
-     * @param integer $LogType 1-访问日志，2-攻击日志，默认为访问日志。
+     * @param integer $LogType <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
      */
     function __construct()
     {

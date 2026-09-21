@@ -20,130 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 合同对比差异结果详情。
  *
- * @method string getComparisonPointId() 获取合同对比差异点唯一ID。
- * @method void setComparisonPointId(string $ComparisonPointId) 设置合同对比差异点唯一ID。
- * @method string getComparisonType() 获取对比前后差异类型，具体如下：
-<ul><li> **add**：新增</li>
-<li> **change**：变更</li>
-<li> **delete**：删除</li>
-</ul>
- * @method void setComparisonType(string $ComparisonType) 设置对比前后差异类型，具体如下：
-<ul><li> **add**：新增</li>
-<li> **change**：变更</li>
-<li> **delete**：删除</li>
-</ul>
- * @method string getContentType() 获取对比内容类型，具体如下：
-<ul><li> **text**：文本</li>
-<li> **table**：表格</li>
-<li> **picture**：图片</li>
-</ul>
- * @method void setContentType(string $ContentType) 设置对比内容类型，具体如下：
-<ul><li> **text**：文本</li>
-<li> **table**：表格</li>
-<li> **picture**：图片</li>
-</ul>
- * @method string getOriginText() 获取原文文本。
- * @method void setOriginText(string $OriginText) 设置原文文本。
- * @method string getDiffText() 获取对比文本。
- * @method void setDiffText(string $DiffText) 设置对比文本。
- * @method integer getFormatType() 获取合同文本的格式类型。
-类型如下：
-<ul><li> **0**：段落（正文）</li>
-<li> **1**：标点符号</li>
-<li> **2**：页眉页脚</li>
-<li> **3**：目录</li>
-<li> **4**：印章</li>
-<li> **5**：序号</li>
-<li> **6**：水印</li>
-<li> **7**：下划线内容（填写区）</li>
-</ul>
- * @method void setFormatType(integer $FormatType) 设置合同文本的格式类型。
-类型如下：
-<ul><li> **0**：段落（正文）</li>
-<li> **1**：标点符号</li>
-<li> **2**：页眉页脚</li>
-<li> **3**：目录</li>
-<li> **4**：印章</li>
-<li> **5**：序号</li>
-<li> **6**：水印</li>
-<li> **7**：下划线内容（填写区）</li>
-</ul>
+ * @method string getComparisonPointId() 获取<p>合同对比差异点唯一ID。</p>
+ * @method void setComparisonPointId(string $ComparisonPointId) 设置<p>合同对比差异点唯一ID。</p>
+ * @method string getComparisonType() 获取<p>对比前后差异类型，具体如下：</p><ul><li> **add**：新增</li><li> **change**：变更</li><li> **delete**：删除</li></ul>
+ * @method void setComparisonType(string $ComparisonType) 设置<p>对比前后差异类型，具体如下：</p><ul><li> **add**：新增</li><li> **change**：变更</li><li> **delete**：删除</li></ul>
+ * @method string getContentType() 获取<p>对比内容类型，具体如下：</p><ul><li> **text**：文本</li><li> **table**：表格</li><li> **picture**：图片</li></ul>
+ * @method void setContentType(string $ContentType) 设置<p>对比内容类型，具体如下：</p><ul><li> **text**：文本</li><li> **table**：表格</li><li> **picture**：图片</li></ul>
+ * @method string getOriginText() 获取<p>原文文本。</p>
+ * @method void setOriginText(string $OriginText) 设置<p>原文文本。</p>
+ * @method string getDiffText() 获取<p>对比文本。</p>
+ * @method void setDiffText(string $DiffText) 设置<p>对比文本。</p>
+ * @method integer getFormatType() 获取<p>合同文本的格式类型。<br>类型如下：</p><ul><li> **0**：段落（正文）</li><li> **1**：标点符号</li><li> **2**：页眉页脚</li><li> **3**：目录</li><li> **4**：印章</li><li> **5**：序号</li><li> **6**：水印</li><li> **7**：下划线内容（填写区）</li></ul>
+ * @method void setFormatType(integer $FormatType) 设置<p>合同文本的格式类型。<br>类型如下：</p><ul><li> **0**：段落（正文）</li><li> **1**：标点符号</li><li> **2**：页眉页脚</li><li> **3**：目录</li><li> **4**：印章</li><li> **5**：序号</li><li> **6**：水印</li><li> **7**：下划线内容（填写区）</li></ul>
+ * @method integer getPageNumber() 获取<p>页码：对比点所在页码。</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码：对比点所在页码。</p>
  */
 class ComparisonDetail extends AbstractModel
 {
     /**
-     * @var string 合同对比差异点唯一ID。
+     * @var string <p>合同对比差异点唯一ID。</p>
      */
     public $ComparisonPointId;
 
     /**
-     * @var string 对比前后差异类型，具体如下：
-<ul><li> **add**：新增</li>
-<li> **change**：变更</li>
-<li> **delete**：删除</li>
-</ul>
+     * @var string <p>对比前后差异类型，具体如下：</p><ul><li> **add**：新增</li><li> **change**：变更</li><li> **delete**：删除</li></ul>
      */
     public $ComparisonType;
 
     /**
-     * @var string 对比内容类型，具体如下：
-<ul><li> **text**：文本</li>
-<li> **table**：表格</li>
-<li> **picture**：图片</li>
-</ul>
+     * @var string <p>对比内容类型，具体如下：</p><ul><li> **text**：文本</li><li> **table**：表格</li><li> **picture**：图片</li></ul>
      */
     public $ContentType;
 
     /**
-     * @var string 原文文本。
+     * @var string <p>原文文本。</p>
      */
     public $OriginText;
 
     /**
-     * @var string 对比文本。
+     * @var string <p>对比文本。</p>
      */
     public $DiffText;
 
     /**
-     * @var integer 合同文本的格式类型。
-类型如下：
-<ul><li> **0**：段落（正文）</li>
-<li> **1**：标点符号</li>
-<li> **2**：页眉页脚</li>
-<li> **3**：目录</li>
-<li> **4**：印章</li>
-<li> **5**：序号</li>
-<li> **6**：水印</li>
-<li> **7**：下划线内容（填写区）</li>
-</ul>
+     * @var integer <p>合同文本的格式类型。<br>类型如下：</p><ul><li> **0**：段落（正文）</li><li> **1**：标点符号</li><li> **2**：页眉页脚</li><li> **3**：目录</li><li> **4**：印章</li><li> **5**：序号</li><li> **6**：水印</li><li> **7**：下划线内容（填写区）</li></ul>
      */
     public $FormatType;
 
     /**
-     * @param string $ComparisonPointId 合同对比差异点唯一ID。
-     * @param string $ComparisonType 对比前后差异类型，具体如下：
-<ul><li> **add**：新增</li>
-<li> **change**：变更</li>
-<li> **delete**：删除</li>
-</ul>
-     * @param string $ContentType 对比内容类型，具体如下：
-<ul><li> **text**：文本</li>
-<li> **table**：表格</li>
-<li> **picture**：图片</li>
-</ul>
-     * @param string $OriginText 原文文本。
-     * @param string $DiffText 对比文本。
-     * @param integer $FormatType 合同文本的格式类型。
-类型如下：
-<ul><li> **0**：段落（正文）</li>
-<li> **1**：标点符号</li>
-<li> **2**：页眉页脚</li>
-<li> **3**：目录</li>
-<li> **4**：印章</li>
-<li> **5**：序号</li>
-<li> **6**：水印</li>
-<li> **7**：下划线内容（填写区）</li>
-</ul>
+     * @var integer <p>页码：对比点所在页码。</p>
+     */
+    public $PageNumber;
+
+    /**
+     * @param string $ComparisonPointId <p>合同对比差异点唯一ID。</p>
+     * @param string $ComparisonType <p>对比前后差异类型，具体如下：</p><ul><li> **add**：新增</li><li> **change**：变更</li><li> **delete**：删除</li></ul>
+     * @param string $ContentType <p>对比内容类型，具体如下：</p><ul><li> **text**：文本</li><li> **table**：表格</li><li> **picture**：图片</li></ul>
+     * @param string $OriginText <p>原文文本。</p>
+     * @param string $DiffText <p>对比文本。</p>
+     * @param integer $FormatType <p>合同文本的格式类型。<br>类型如下：</p><ul><li> **0**：段落（正文）</li><li> **1**：标点符号</li><li> **2**：页眉页脚</li><li> **3**：目录</li><li> **4**：印章</li><li> **5**：序号</li><li> **6**：水印</li><li> **7**：下划线内容（填写区）</li></ul>
+     * @param integer $PageNumber <p>页码：对比点所在页码。</p>
      */
     function __construct()
     {
@@ -180,6 +116,10 @@ class ComparisonDetail extends AbstractModel
 
         if (array_key_exists("FormatType",$param) and $param["FormatType"] !== null) {
             $this->FormatType = $param["FormatType"];
+        }
+
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
         }
     }
 }

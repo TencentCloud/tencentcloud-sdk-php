@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片理解任务。
  *
- * @method string getModel() 获取<p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
- * @method void setModel(string $Model) 设置<p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
+ * @method string getModel() 获取<p>图片理解模型</p><p>枚举值：</p><ul><li>understand-1.0-lite： 轻量理解模型</li><li>understand-1.0-flash： 质量-速度平衡理解模型</li><li>understand-1.0-pro： 高质量理解模型</li></ul>
+ * @method void setModel(string $Model) 设置<p>图片理解模型</p><p>枚举值：</p><ul><li>understand-1.0-lite： 轻量理解模型</li><li>understand-1.0-flash： 质量-速度平衡理解模型</li><li>understand-1.0-pro： 高质量理解模型</li></ul>
  * @method string getPrompt() 获取<p>图片理解指令</p>
  * @method void setPrompt(string $Prompt) 设置<p>图片理解指令</p>
  * @method string getParameters() 获取<p>图片理解模型参数，类型为 JSON 字符串。</p>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class UnderstandImageConfig extends AbstractModel
 {
     /**
-     * @var string <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
+     * @var string <p>图片理解模型</p><p>枚举值：</p><ul><li>understand-1.0-lite： 轻量理解模型</li><li>understand-1.0-flash： 质量-速度平衡理解模型</li><li>understand-1.0-pro： 高质量理解模型</li></ul>
      */
     public $Model;
 
@@ -45,7 +45,7 @@ class UnderstandImageConfig extends AbstractModel
     public $Parameters;
 
     /**
-     * @param string $Model <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
+     * @param string $Model <p>图片理解模型</p><p>枚举值：</p><ul><li>understand-1.0-lite： 轻量理解模型</li><li>understand-1.0-flash： 质量-速度平衡理解模型</li><li>understand-1.0-pro： 高质量理解模型</li></ul>
      * @param string $Prompt <p>图片理解指令</p>
      * @param string $Parameters <p>图片理解模型参数，类型为 JSON 字符串。</p>
      */

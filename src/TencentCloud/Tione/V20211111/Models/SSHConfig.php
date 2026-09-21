@@ -20,81 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * notebook ssh端口配置
  *
- * @method boolean getEnable() 获取是否开启ssh
+ * @method boolean getEnable() 获取<p>是否开启ssh</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnable(boolean $Enable) 设置是否开启ssh
+ * @method void setEnable(boolean $Enable) 设置<p>是否开启ssh</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPublicKey() 获取公钥信息
+ * @method string getPublicKey() 获取<p>公钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicKey(string $PublicKey) 设置公钥信息
+ * @method void setPublicKey(string $PublicKey) 设置<p>公钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPort() 获取端口号
+ * @method integer getPort() 获取<p>端口号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPort(integer $Port) 设置端口号
+ * @method void setPort(integer $Port) 设置<p>端口号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLoginCommand() 获取登录命令
+ * @method string getLoginCommand() 获取<p>登录命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLoginCommand(string $LoginCommand) 设置登录命令
+ * @method void setLoginCommand(string $LoginCommand) 设置<p>登录命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsAddressChanged() 获取登录地址是否改变
+ * @method boolean getIsAddressChanged() 获取<p>登录地址是否改变</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsAddressChanged(boolean $IsAddressChanged) 设置登录地址是否改变
+ * @method void setIsAddressChanged(boolean $IsAddressChanged) 设置<p>登录地址是否改变</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PodSSHInfo getPodSSHInfo() 获取POD访问信息
+ * @method PodSSHInfo getPodSSHInfo() 获取<p>POD访问信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPodSSHInfo(PodSSHInfo $PodSSHInfo) 设置POD访问信息
+ * @method void setPodSSHInfo(PodSSHInfo $PodSSHInfo) 设置<p>POD访问信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SSHConfig extends AbstractModel
 {
     /**
-     * @var boolean 是否开启ssh
+     * @var boolean <p>是否开启ssh</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enable;
 
     /**
-     * @var string 公钥信息
+     * @var string <p>公钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicKey;
 
     /**
-     * @var integer 端口号
+     * @var integer <p>端口号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
-     * @var string 登录命令
+     * @var string <p>登录命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoginCommand;
 
     /**
-     * @var boolean 登录地址是否改变
+     * @var boolean <p>登录地址是否改变</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAddressChanged;
 
     /**
-     * @var PodSSHInfo POD访问信息
+     * @var PodSSHInfo <p>POD访问信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodSSHInfo;
 
     /**
-     * @param boolean $Enable 是否开启ssh
+     * @param boolean $Enable <p>是否开启ssh</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PublicKey 公钥信息
+     * @param string $PublicKey <p>公钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Port 端口号
+     * @param integer $Port <p>端口号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LoginCommand 登录命令
+     * @param string $LoginCommand <p>登录命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsAddressChanged 登录地址是否改变
+     * @param boolean $IsAddressChanged <p>登录地址是否改变</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodSSHInfo $PodSSHInfo POD访问信息
+     * @param PodSSHInfo $PodSSHInfo <p>POD访问信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

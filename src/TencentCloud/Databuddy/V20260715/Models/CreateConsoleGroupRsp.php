@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Aiart\V20221229\Models;
+namespace TencentCloud\Databuddy\V20260715\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 图片
+ * 创建控制台用户组响应
  *
- * @method string getBase64() 获取图片Base64
- * @method void setBase64(string $Base64) 设置图片Base64
- * @method string getUrl() 获取图片Url
- * @method void setUrl(string $Url) 设置图片Url
+ * @method string getGroupId() 获取创建成功的用户组 ID
+ * @method void setGroupId(string $GroupId) 设置创建成功的用户组 ID
  */
-class Image extends AbstractModel
+class CreateConsoleGroupRsp extends AbstractModel
 {
     /**
-     * @var string 图片Base64
+     * @var string 创建成功的用户组 ID
      */
-    public $Base64;
+    public $GroupId;
 
     /**
-     * @var string 图片Url
-     */
-    public $Url;
-
-    /**
-     * @param string $Base64 图片Base64
-     * @param string $Url 图片Url
+     * @param string $GroupId 创建成功的用户组 ID
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Image extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Base64",$param) and $param["Base64"] !== null) {
-            $this->Base64 = $param["Base64"];
-        }
-
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

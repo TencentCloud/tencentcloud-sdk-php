@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssignIpv6CidrBlock返回参数结构体
  *
- * @method string getIpv6CidrBlock() 获取分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
- * @method string getAddressType() 获取申请IPv6 Cidr 的类型，`GUA`,  `ULA`
- * @method void setAddressType(string $AddressType) 设置申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+ * @method string getIpv6CidrBlock() 获取<p>分配的 <code>IPv6</code> 网段。形如：<code>3402:4e00:20:1000::/56</code>。</p>
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置<p>分配的 <code>IPv6</code> 网段。形如：<code>3402:4e00:20:1000::/56</code>。</p>
+ * @method string getAddressType() 获取<p>申请IPv6 Cidr 的类型，<code>GUA</code>,  <code>ULA</code></p>
+ * @method void setAddressType(string $AddressType) 设置<p>申请IPv6 Cidr 的类型，<code>GUA</code>,  <code>ULA</code></p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AssignIpv6CidrBlockResponse extends AbstractModel
 {
     /**
-     * @var string 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
+     * @var string <p>分配的 <code>IPv6</code> 网段。形如：<code>3402:4e00:20:1000::/56</code>。</p>
      */
     public $Ipv6CidrBlock;
 
     /**
-     * @var string 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+     * @var string <p>申请IPv6 Cidr 的类型，<code>GUA</code>,  <code>ULA</code></p>
      */
     public $AddressType;
 
@@ -45,8 +45,8 @@ class AssignIpv6CidrBlockResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Ipv6CidrBlock 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
-     * @param string $AddressType 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+     * @param string $Ipv6CidrBlock <p>分配的 <code>IPv6</code> 网段。形如：<code>3402:4e00:20:1000::/56</code>。</p>
+     * @param string $AddressType <p>申请IPv6 Cidr 的类型，<code>GUA</code>,  <code>ULA</code></p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

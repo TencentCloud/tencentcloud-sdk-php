@@ -251,6 +251,9 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeWebSecurityTemplateResponse DescribeWebSecurityTemplate(Models\DescribeWebSecurityTemplateRequest $req) 查询安全策略配置模板详情
  * @method Models\DescribeWebSecurityTemplatesResponse DescribeWebSecurityTemplates(Models\DescribeWebSecurityTemplatesRequest $req) 查询安全策略配置模板列表
  * @method Models\DescribeZoneConfigImportResultResponse DescribeZoneConfigImportResult(Models\DescribeZoneConfigImportResultRequest $req) 查询站点配置项导入结果接口，本接口用于站点配置导入接口（ImportZoneConfig）的结果查询。
+ * @method Models\DescribeZoneCustomVariablesResponse DescribeZoneCustomVariables(Models\DescribeZoneCustomVariablesRequest $req) 本接口用于查询站点级自定义变量配置，包括变量定义和变量运算。未配置时，变量定义和变量运算均返回空列表。
+
+如需查询规则级自定义变量，请调用 DescribeL7AccRules 接口。
  * @method Models\DescribeZoneSettingResponse DescribeZoneSetting(Models\DescribeZoneSettingRequest $req) 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DescribeL7AccSetting](https://cloud.tencent.com/document/product/1552/115819)。
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 该接口用于查询您有权限的站点信息。可根据不同查询条件筛选站点。
  * @method Models\DestroyPlanResponse DestroyPlan(Models\DestroyPlanRequest $req) 当您需要停止 Edgeone 套餐的计费，可以通过该接口销毁计费套餐。
@@ -340,6 +343,9 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\ModifySharedCNAMEResponse ModifySharedCNAME(Models\ModifySharedCNAMERequest $req) 用于修改共享 CNAME。当前仅支持修改共享 CNAME 的描述和设置 IP SSL类型的共享CNAME关联IP SSL 域名，共享 CNAME 本身创建后不支持修改。该功能白名单内测中。
  * @method Models\ModifyWebSecurityTemplateResponse ModifyWebSecurityTemplate(Models\ModifyWebSecurityTemplateRequest $req) 修改安全策略配置模板
  * @method Models\ModifyZoneResponse ModifyZone(Models\ModifyZoneRequest $req) 修改站点信息。
+ * @method Models\ModifyZoneCustomVariablesResponse ModifyZoneCustomVariables(Models\ModifyZoneCustomVariablesRequest $req) 本接口用于管理站点级自定义变量，支持创建、修改和删除变量定义及变量运算。提交的列表将覆盖对应的现有配置；如需清空配置，请传入空列表。未传入的配置项保持不变。变量定义和变量运算的默认值均为空。
+
+规则级自定义变量相关操作，请调用 CreateL7AccRules 或 ModifyL7AccRule 接口。
  * @method Models\ModifyZoneSettingResponse ModifyZoneSetting(Models\ModifyZoneSettingRequest $req) 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [ModifyL7AccSetting](https://cloud.tencent.com/document/product/1552/115817)。
  * @method Models\ModifyZoneStatusResponse ModifyZoneStatus(Models\ModifyZoneStatusRequest $req) 用于开启，关闭站点。
  * @method Models\ModifyZoneWorkModeResponse ModifyZoneWorkMode(Models\ModifyZoneWorkModeRequest $req) 本接口用于修改站点下各配置模块的工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。

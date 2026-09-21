@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSubnet返回参数结构体
  *
- * @method Subnet getSubnet() 获取子网对象。
- * @method void setSubnet(Subnet $Subnet) 设置子网对象。
+ * @method Subnet getSubnet() 获取<p>子网对象。</p>
+ * @method void setSubnet(Subnet $Subnet) 设置<p>子网对象。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateSubnetResponse extends AbstractModel
 {
     /**
-     * @var Subnet 子网对象。
+     * @var Subnet <p>子网对象。</p>
      */
     public $Subnet;
 
@@ -38,7 +38,7 @@ class CreateSubnetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Subnet $Subnet 子网对象。
+     * @param Subnet $Subnet <p>子网对象。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

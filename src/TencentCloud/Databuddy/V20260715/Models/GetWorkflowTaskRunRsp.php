@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskTypeName() 获取<p>任务类型名称</p>
+ * @method string getTaskTypeName() 获取任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeName(string $TaskTypeName) 设置<p>任务类型名称</p>
+ * @method void setTaskTypeName(string $TaskTypeName) 设置任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskVersionId() 获取<p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,9 +120,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeZone(string $TimeZone) 设置<p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDependOnList() 获取<p>依赖上游任务ID列表</p>
+ * @method array getDependOnList() 获取<p>依赖上游任务ID列表。保留字段，暂时返回为[]</p><p>保留字段，暂时返回为[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependOnList(array $DependOnList) 设置<p>依赖上游任务ID列表</p>
+ * @method void setDependOnList(array $DependOnList) 设置<p>依赖上游任务ID列表。保留字段，暂时返回为[]</p><p>保留字段，暂时返回为[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRunParams() 获取<p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -222,7 +222,7 @@ class GetWorkflowTaskRunRsp extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string <p>任务类型名称</p>
+     * @var string 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeName;
@@ -330,7 +330,7 @@ class GetWorkflowTaskRunRsp extends AbstractModel
     public $TimeZone;
 
     /**
-     * @var array <p>依赖上游任务ID列表</p>
+     * @var array <p>依赖上游任务ID列表。保留字段，暂时返回为[]</p><p>保留字段，暂时返回为[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependOnList;
@@ -428,7 +428,7 @@ class GetWorkflowTaskRunRsp extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskTypeName <p>任务类型名称</p>
+     * @param string $TaskTypeName 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskVersionId <p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -464,7 +464,7 @@ class GetWorkflowTaskRunRsp extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DependOnList <p>依赖上游任务ID列表</p>
+     * @param array $DependOnList <p>依赖上游任务ID列表。保留字段，暂时返回为[]</p><p>保留字段，暂时返回为[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RunParams <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。

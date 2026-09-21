@@ -14,30 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Aiart\V20221229\Models;
+namespace TencentCloud\Trocket\V20230308\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TextToImageRapid返回参数结构体
+ * DeleteConsumerRouteConfigs返回参数结构体
  *
- * @method string getResultImage() 获取<p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
- * @method void setResultImage(string $ResultImage) 设置<p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
- * @method integer getSeed() 获取<p>Seed</p>
- * @method void setSeed(integer $Seed) 设置<p>Seed</p>
+ * @method integer getTotalCount() 获取查询总数
+ * @method void setTotalCount(integer $TotalCount) 设置查询总数
+ * @method integer getFailedCount() 获取<p>失败数量</p>
+ * @method void setFailedCount(integer $FailedCount) 设置<p>失败数量</p>
+ * @method array getFailures() 获取<p>删除失败的消费者路由列表</p>
+ * @method void setFailures(array $Failures) 设置<p>删除失败的消费者路由列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class TextToImageRapidResponse extends AbstractModel
+class DeleteConsumerRouteConfigsResponse extends AbstractModel
 {
     /**
-     * @var string <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
+     * @var integer 查询总数
      */
-    public $ResultImage;
+    public $TotalCount;
 
     /**
-     * @var integer <p>Seed</p>
+     * @var integer <p>失败数量</p>
      */
-    public $Seed;
+    public $FailedCount;
+
+    /**
+     * @var array <p>删除失败的消费者路由列表</p>
+     */
+    public $Failures;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class TextToImageRapidResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResultImage <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
-     * @param integer $Seed <p>Seed</p>
+     * @param integer $TotalCount 查询总数
+     * @param integer $FailedCount <p>失败数量</p>
+     * @param array $Failures <p>删除失败的消费者路由列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +70,21 @@ class TextToImageRapidResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultImage",$param) and $param["ResultImage"] !== null) {
-            $this->ResultImage = $param["ResultImage"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
-            $this->Seed = $param["Seed"];
+        if (array_key_exists("FailedCount",$param) and $param["FailedCount"] !== null) {
+            $this->FailedCount = $param["FailedCount"];
+        }
+
+        if (array_key_exists("Failures",$param) and $param["Failures"] !== null) {
+            $this->Failures = [];
+            foreach ($param["Failures"] as $key => $value){
+                $obj = new DeleteConsumerRouteConfigFailure();
+                $obj->deserialize($value);
+                array_push($this->Failures, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

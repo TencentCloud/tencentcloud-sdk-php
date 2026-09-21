@@ -20,146 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 合同文件验签单个结果结构体
  *
- * @method integer getVerifyResult() 获取验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
- * @method void setVerifyResult(integer $VerifyResult) 设置验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
- * @method string getSignPlatform() 获取签署平台
-如果文件是在腾讯电子签平台签署，则为**腾讯电子签**，
-如果文件不在腾讯电子签平台签署，则为**其他平台**。
- * @method void setSignPlatform(string $SignPlatform) 设置签署平台
-如果文件是在腾讯电子签平台签署，则为**腾讯电子签**，
-如果文件不在腾讯电子签平台签署，则为**其他平台**。
- * @method string getSignerName() 获取申请证书的主体的名字
-
-如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下
-**企业**:  ESS@企业名称@编码
-**个人**: ESS@个人姓名@证件号@808854
-
-如果在其他平台签署的, 主体的名字参考其他平台的说明
- * @method void setSignerName(string $SignerName) 设置申请证书的主体的名字
-
-如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下
-**企业**:  ESS@企业名称@编码
-**个人**: ESS@个人姓名@证件号@808854
-
-如果在其他平台签署的, 主体的名字参考其他平台的说明
- * @method integer getSignTime() 获取签署时间的Unix时间戳，单位毫秒
- * @method void setSignTime(integer $SignTime) 设置签署时间的Unix时间戳，单位毫秒
- * @method string getSignAlgorithm() 获取证书签名算法,  如SHA1withRSA等算法
- * @method void setSignAlgorithm(string $SignAlgorithm) 设置证书签名算法,  如SHA1withRSA等算法
- * @method string getCertSn() 获取在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
- * @method void setCertSn(string $CertSn) 设置在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
- * @method integer getCertNotBefore() 获取证书起始时间的Unix时间戳，单位毫秒
- * @method void setCertNotBefore(integer $CertNotBefore) 设置证书起始时间的Unix时间戳，单位毫秒
- * @method integer getCertNotAfter() 获取证书过期时间的时间戳，单位毫秒
- * @method void setCertNotAfter(integer $CertNotAfter) 设置证书过期时间的时间戳，单位毫秒
- * @method float getComponentPosX() 获取签名域横坐标，单位px
- * @method void setComponentPosX(float $ComponentPosX) 设置签名域横坐标，单位px
- * @method float getComponentPosY() 获取签名域纵坐标，单位px
- * @method void setComponentPosY(float $ComponentPosY) 设置签名域纵坐标，单位px
- * @method float getComponentWidth() 获取签名域宽度，单位px
- * @method void setComponentWidth(float $ComponentWidth) 设置签名域宽度，单位px
- * @method float getComponentHeight() 获取签名域高度，单位px
- * @method void setComponentHeight(float $ComponentHeight) 设置签名域高度，单位px
- * @method integer getComponentPage() 获取签名域所在页码，1～N
- * @method void setComponentPage(integer $ComponentPage) 设置签名域所在页码，1～N
+ * @method integer getVerifyResult() 获取<p>验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。</p>
+ * @method void setVerifyResult(integer $VerifyResult) 设置<p>验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。</p>
+ * @method string getSignPlatform() 获取<p>签署平台<br>如果文件是在腾讯电子签平台签署，则为<strong>腾讯电子签</strong>，<br>如果文件不在腾讯电子签平台签署，则为<strong>其他平台</strong>。</p>
+ * @method void setSignPlatform(string $SignPlatform) 设置<p>签署平台<br>如果文件是在腾讯电子签平台签署，则为<strong>腾讯电子签</strong>，<br>如果文件不在腾讯电子签平台签署，则为<strong>其他平台</strong>。</p>
+ * @method string getSignerName() 获取<p>申请证书的主体的名字</p><p>如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下<br><strong>企业</strong>:  ESS@企业名称@编码<br><strong>个人</strong>: ESS@个人姓名@证件号@808854</p><p>如果在其他平台签署的, 主体的名字参考其他平台的说明</p>
+ * @method void setSignerName(string $SignerName) 设置<p>申请证书的主体的名字</p><p>如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下<br><strong>企业</strong>:  ESS@企业名称@编码<br><strong>个人</strong>: ESS@个人姓名@证件号@808854</p><p>如果在其他平台签署的, 主体的名字参考其他平台的说明</p>
+ * @method integer getSignTime() 获取<p>签署时间的Unix时间戳，单位毫秒</p>
+ * @method void setSignTime(integer $SignTime) 设置<p>签署时间的Unix时间戳，单位毫秒</p>
+ * @method string getSignAlgorithm() 获取<p>证书签名算法,  如SHA1withRSA等算法</p>
+ * @method void setSignAlgorithm(string $SignAlgorithm) 设置<p>证书签名算法,  如SHA1withRSA等算法</p>
+ * @method string getCertSn() 获取<p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。</p>
+ * @method void setCertSn(string $CertSn) 设置<p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。</p>
+ * @method integer getCertNotBefore() 获取<p>证书起始时间的Unix时间戳，单位毫秒</p>
+ * @method void setCertNotBefore(integer $CertNotBefore) 设置<p>证书起始时间的Unix时间戳，单位毫秒</p>
+ * @method integer getCertNotAfter() 获取<p>证书过期时间的时间戳，单位毫秒</p>
+ * @method void setCertNotAfter(integer $CertNotAfter) 设置<p>证书过期时间的时间戳，单位毫秒</p>
+ * @method float getComponentPosX() 获取<p>签名域横坐标，单位px</p>
+ * @method void setComponentPosX(float $ComponentPosX) 设置<p>签名域横坐标，单位px</p>
+ * @method float getComponentPosY() 获取<p>签名域纵坐标，单位px</p>
+ * @method void setComponentPosY(float $ComponentPosY) 设置<p>签名域纵坐标，单位px</p>
+ * @method float getComponentWidth() 获取<p>签名域宽度，单位px</p>
+ * @method void setComponentWidth(float $ComponentWidth) 设置<p>签名域宽度，单位px</p>
+ * @method float getComponentHeight() 获取<p>签名域高度，单位px</p>
+ * @method void setComponentHeight(float $ComponentHeight) 设置<p>签名域高度，单位px</p>
+ * @method integer getComponentPage() 获取<p>签名域所在页码，1～N</p>
+ * @method void setComponentPage(integer $ComponentPage) 设置<p>签名域所在页码，1～N</p>
+ * @method string getCertProvider() 获取<p>证书颁发机构</p>
+ * @method void setCertProvider(string $CertProvider) 设置<p>证书颁发机构</p>
+ * @method boolean getIsTimestampTrust() 获取<p>是否有可信时间戳</p>
+ * @method void setIsTimestampTrust(boolean $IsTimestampTrust) 设置<p>是否有可信时间戳</p>
  */
 class PdfVerifyResult extends AbstractModel
 {
     /**
-     * @var integer 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
+     * @var integer <p>验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。</p>
      */
     public $VerifyResult;
 
     /**
-     * @var string 签署平台
-如果文件是在腾讯电子签平台签署，则为**腾讯电子签**，
-如果文件不在腾讯电子签平台签署，则为**其他平台**。
+     * @var string <p>签署平台<br>如果文件是在腾讯电子签平台签署，则为<strong>腾讯电子签</strong>，<br>如果文件不在腾讯电子签平台签署，则为<strong>其他平台</strong>。</p>
      */
     public $SignPlatform;
 
     /**
-     * @var string 申请证书的主体的名字
-
-如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下
-**企业**:  ESS@企业名称@编码
-**个人**: ESS@个人姓名@证件号@808854
-
-如果在其他平台签署的, 主体的名字参考其他平台的说明
+     * @var string <p>申请证书的主体的名字</p><p>如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下<br><strong>企业</strong>:  ESS@企业名称@编码<br><strong>个人</strong>: ESS@个人姓名@证件号@808854</p><p>如果在其他平台签署的, 主体的名字参考其他平台的说明</p>
      */
     public $SignerName;
 
     /**
-     * @var integer 签署时间的Unix时间戳，单位毫秒
+     * @var integer <p>签署时间的Unix时间戳，单位毫秒</p>
      */
     public $SignTime;
 
     /**
-     * @var string 证书签名算法,  如SHA1withRSA等算法
+     * @var string <p>证书签名算法,  如SHA1withRSA等算法</p>
      */
     public $SignAlgorithm;
 
     /**
-     * @var string 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
+     * @var string <p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。</p>
      */
     public $CertSn;
 
     /**
-     * @var integer 证书起始时间的Unix时间戳，单位毫秒
+     * @var integer <p>证书起始时间的Unix时间戳，单位毫秒</p>
      */
     public $CertNotBefore;
 
     /**
-     * @var integer 证书过期时间的时间戳，单位毫秒
+     * @var integer <p>证书过期时间的时间戳，单位毫秒</p>
      */
     public $CertNotAfter;
 
     /**
-     * @var float 签名域横坐标，单位px
+     * @var float <p>签名域横坐标，单位px</p>
      */
     public $ComponentPosX;
 
     /**
-     * @var float 签名域纵坐标，单位px
+     * @var float <p>签名域纵坐标，单位px</p>
      */
     public $ComponentPosY;
 
     /**
-     * @var float 签名域宽度，单位px
+     * @var float <p>签名域宽度，单位px</p>
      */
     public $ComponentWidth;
 
     /**
-     * @var float 签名域高度，单位px
+     * @var float <p>签名域高度，单位px</p>
      */
     public $ComponentHeight;
 
     /**
-     * @var integer 签名域所在页码，1～N
+     * @var integer <p>签名域所在页码，1～N</p>
      */
     public $ComponentPage;
 
     /**
-     * @param integer $VerifyResult 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
-     * @param string $SignPlatform 签署平台
-如果文件是在腾讯电子签平台签署，则为**腾讯电子签**，
-如果文件不在腾讯电子签平台签署，则为**其他平台**。
-     * @param string $SignerName 申请证书的主体的名字
+     * @var string <p>证书颁发机构</p>
+     */
+    public $CertProvider;
 
-如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下
-**企业**:  ESS@企业名称@编码
-**个人**: ESS@个人姓名@证件号@808854
+    /**
+     * @var boolean <p>是否有可信时间戳</p>
+     */
+    public $IsTimestampTrust;
 
-如果在其他平台签署的, 主体的名字参考其他平台的说明
-     * @param integer $SignTime 签署时间的Unix时间戳，单位毫秒
-     * @param string $SignAlgorithm 证书签名算法,  如SHA1withRSA等算法
-     * @param string $CertSn 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
-     * @param integer $CertNotBefore 证书起始时间的Unix时间戳，单位毫秒
-     * @param integer $CertNotAfter 证书过期时间的时间戳，单位毫秒
-     * @param float $ComponentPosX 签名域横坐标，单位px
-     * @param float $ComponentPosY 签名域纵坐标，单位px
-     * @param float $ComponentWidth 签名域宽度，单位px
-     * @param float $ComponentHeight 签名域高度，单位px
-     * @param integer $ComponentPage 签名域所在页码，1～N
+    /**
+     * @param integer $VerifyResult <p>验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。</p>
+     * @param string $SignPlatform <p>签署平台<br>如果文件是在腾讯电子签平台签署，则为<strong>腾讯电子签</strong>，<br>如果文件不在腾讯电子签平台签署，则为<strong>其他平台</strong>。</p>
+     * @param string $SignerName <p>申请证书的主体的名字</p><p>如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下<br><strong>企业</strong>:  ESS@企业名称@编码<br><strong>个人</strong>: ESS@个人姓名@证件号@808854</p><p>如果在其他平台签署的, 主体的名字参考其他平台的说明</p>
+     * @param integer $SignTime <p>签署时间的Unix时间戳，单位毫秒</p>
+     * @param string $SignAlgorithm <p>证书签名算法,  如SHA1withRSA等算法</p>
+     * @param string $CertSn <p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。</p>
+     * @param integer $CertNotBefore <p>证书起始时间的Unix时间戳，单位毫秒</p>
+     * @param integer $CertNotAfter <p>证书过期时间的时间戳，单位毫秒</p>
+     * @param float $ComponentPosX <p>签名域横坐标，单位px</p>
+     * @param float $ComponentPosY <p>签名域纵坐标，单位px</p>
+     * @param float $ComponentWidth <p>签名域宽度，单位px</p>
+     * @param float $ComponentHeight <p>签名域高度，单位px</p>
+     * @param integer $ComponentPage <p>签名域所在页码，1～N</p>
+     * @param string $CertProvider <p>证书颁发机构</p>
+     * @param boolean $IsTimestampTrust <p>是否有可信时间戳</p>
      */
     function __construct()
     {
@@ -224,6 +208,14 @@ class PdfVerifyResult extends AbstractModel
 
         if (array_key_exists("ComponentPage",$param) and $param["ComponentPage"] !== null) {
             $this->ComponentPage = $param["ComponentPage"];
+        }
+
+        if (array_key_exists("CertProvider",$param) and $param["CertProvider"] !== null) {
+            $this->CertProvider = $param["CertProvider"];
+        }
+
+        if (array_key_exists("IsTimestampTrust",$param) and $param["IsTimestampTrust"] !== null) {
+            $this->IsTimestampTrust = $param["IsTimestampTrust"];
         }
     }
 }

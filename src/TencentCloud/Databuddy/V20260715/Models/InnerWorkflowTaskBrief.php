@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskName(string $TaskName) 设置任务名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskTypeName() 获取任务类型名称
+ * @method string getTaskTypeName() 获取任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeName(string $TaskTypeName) 设置任务类型名称
+ * @method void setTaskTypeName(string $TaskTypeName) 设置任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InnerWorkflowTaskBrief extends AbstractModel
@@ -48,7 +48,7 @@ class InnerWorkflowTaskBrief extends AbstractModel
     public $TaskName;
 
     /**
-     * @var string 任务类型名称
+     * @var string 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeName;
@@ -58,7 +58,7 @@ class InnerWorkflowTaskBrief extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskTypeName 任务类型名称
+     * @param string $TaskTypeName 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

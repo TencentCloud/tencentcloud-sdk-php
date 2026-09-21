@@ -20,169 +20,141 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流调度配置。
  *
- * @method string getTriggerId() 获取调度配置ID，创建时无需传入，由服务端生成
+ * @method string getTriggerId() 获取<p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerId(string $TriggerId) 设置调度配置ID，创建时无需传入，由服务端生成
+ * @method void setTriggerId(string $TriggerId) 设置<p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchedulerStatus() 获取调度状态 启动：START，暂停：PAUSE
+ * @method string getSchedulerStatus() 获取<p>调度状态 启动：START，暂停：PAUSE</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchedulerStatus(string $SchedulerStatus) 设置调度状态 启动：START，暂停：PAUSE
+ * @method void setSchedulerStatus(string $SchedulerStatus) 设置<p>调度状态 启动：START，暂停：PAUSE</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTriggerMode() 获取触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-
-注意：
-- TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- CONTINUE_RUN 模式下，AdvancedConfig必填；
+ * @method string getTriggerMode() 获取<p>触发方式，</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>CONTINUE_RUN 模式下，AdvancedConfig必填；</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerMode(string $TriggerMode) 设置触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-
-注意：
-- TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- CONTINUE_RUN 模式下，AdvancedConfig必填；
+ * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式，</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>CONTINUE_RUN 模式下，AdvancedConfig必填；</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchedulerTimeZone() 获取调度时区
+ * @method string getSchedulerTimeZone() 获取<p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchedulerTimeZone(string $SchedulerTimeZone) 设置调度时区
+ * @method void setSchedulerTimeZone(string $SchedulerTimeZone) 设置<p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取调度生效时间，单位：毫秒时间戳。必须小于 EndTime
+ * @method string getStartTime() 获取<p>调度生效时间，单位：毫秒时间戳。必须小于 EndTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置调度生效时间，单位：毫秒时间戳。必须小于 EndTime
+ * @method void setStartTime(string $StartTime) 设置<p>调度生效时间，单位：毫秒时间戳。必须小于 EndTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取调度结束时间，单位：毫秒时间戳。必须大于 StartTime
+ * @method string getEndTime() 获取<p>调度结束时间，单位：毫秒时间戳。必须大于 StartTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置调度结束时间，单位：毫秒时间戳。必须大于 StartTime
+ * @method void setEndTime(string $EndTime) 设置<p>调度结束时间，单位：毫秒时间戳。必须大于 StartTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getConfigMode() 获取配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+ * @method string getConfigMode() 获取<p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfigMode(string $ConfigMode) 设置配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+ * @method void setConfigMode(string $ConfigMode) 设置<p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCycleType() 获取周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天
-HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
+ * @method string getCycleType() 获取<p>周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天<br>HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleType(string $CycleType) 设置周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天
-HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
+ * @method void setCycleType(string $CycleType) 设置<p>周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天<br>HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCrontabExpression() 获取cron表达式
+ * @method string getCrontabExpression() 获取<p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCrontabExpression(string $CrontabExpression) 设置cron表达式
+ * @method void setCrontabExpression(string $CrontabExpression) 设置<p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtraInfo() 获取Json格式，对账使用
+ * @method string getExtraInfo() 获取<p>Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtraInfo(string $ExtraInfo) 设置Json格式，对账使用
+ * @method void setExtraInfo(string $ExtraInfo) 设置<p>Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WorkflowTriggerAdvancedConfiguration getAdvancedConfig() 获取高级配置
+ * @method WorkflowTriggerAdvancedConfiguration getAdvancedConfig() 获取<p>高级配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdvancedConfig(WorkflowTriggerAdvancedConfiguration $AdvancedConfig) 设置高级配置
+ * @method void setAdvancedConfig(WorkflowTriggerAdvancedConfiguration $AdvancedConfig) 设置<p>高级配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTriggerConfiguration extends AbstractModel
 {
     /**
-     * @var string 调度配置ID，创建时无需传入，由服务端生成
+     * @var string <p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerId;
 
     /**
-     * @var string 调度状态 启动：START，暂停：PAUSE
+     * @var string <p>调度状态 启动：START，暂停：PAUSE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchedulerStatus;
 
     /**
-     * @var string 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-
-注意：
-- TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- CONTINUE_RUN 模式下，AdvancedConfig必填；
+     * @var string <p>触发方式，</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>CONTINUE_RUN 模式下，AdvancedConfig必填；</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerMode;
 
     /**
-     * @var string 调度时区
+     * @var string <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchedulerTimeZone;
 
     /**
-     * @var string 调度生效时间，单位：毫秒时间戳。必须小于 EndTime
+     * @var string <p>调度生效时间，单位：毫秒时间戳。必须小于 EndTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 调度结束时间，单位：毫秒时间戳。必须大于 StartTime
+     * @var string <p>调度结束时间，单位：毫秒时间戳。必须大于 StartTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * @var string <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigMode;
 
     /**
-     * @var string 周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天
-HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
+     * @var string <p>周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天<br>HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleType;
 
     /**
-     * @var string cron表达式
+     * @var string <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrontabExpression;
 
     /**
-     * @var string Json格式，对账使用
+     * @var string <p>Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraInfo;
 
     /**
-     * @var WorkflowTriggerAdvancedConfiguration 高级配置
+     * @var WorkflowTriggerAdvancedConfiguration <p>高级配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdvancedConfig;
 
     /**
-     * @param string $TriggerId 调度配置ID，创建时无需传入，由服务端生成
+     * @param string $TriggerId <p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchedulerStatus 调度状态 启动：START，暂停：PAUSE
+     * @param string $SchedulerStatus <p>调度状态 启动：START，暂停：PAUSE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TriggerMode 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-
-注意：
-- TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- CONTINUE_RUN 模式下，AdvancedConfig必填；
+     * @param string $TriggerMode <p>触发方式，</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>CONTINUE_RUN 模式下，AdvancedConfig必填；</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchedulerTimeZone 调度时区
+     * @param string $SchedulerTimeZone <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime 调度生效时间，单位：毫秒时间戳。必须小于 EndTime
+     * @param string $StartTime <p>调度生效时间，单位：毫秒时间戳。必须小于 EndTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 调度结束时间，单位：毫秒时间戳。必须大于 StartTime
+     * @param string $EndTime <p>调度结束时间，单位：毫秒时间戳。必须大于 StartTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ConfigMode 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * @param string $ConfigMode <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CycleType 周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天
-HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
+     * @param string $CycleType <p>周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天<br>HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CrontabExpression cron表达式
+     * @param string $CrontabExpression <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExtraInfo Json格式，对账使用
+     * @param string $ExtraInfo <p>Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowTriggerAdvancedConfiguration $AdvancedConfig 高级配置
+     * @param WorkflowTriggerAdvancedConfiguration $AdvancedConfig <p>高级配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

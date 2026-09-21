@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchOperateDevice返回参数结构体
  *
- * @method BatchOperateDeviceData getData() 获取返回结果
- * @method void setData(BatchOperateDeviceData $Data) 设置返回结果
+ * @method BatchOperateDeviceData getData() 获取<p>返回结果</p>
+ * @method void setData(BatchOperateDeviceData $Data) 设置<p>返回结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class BatchOperateDeviceResponse extends AbstractModel
 {
     /**
-     * @var BatchOperateDeviceData 返回结果
+     * @var BatchOperateDeviceData <p>返回结果</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class BatchOperateDeviceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param BatchOperateDeviceData $Data 返回结果
+     * @param BatchOperateDeviceData $Data <p>返回结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

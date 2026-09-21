@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillingResourceGroup返回参数结构体
  *
- * @method integer getTotalCount() 获取资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+ * @method integer getTotalCount() 获取<p>资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+ * @method void setTotalCount(integer $TotalCount) 设置<p>资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInstanceSet() 获取资源组节点信息
+ * @method array getInstanceSet() 获取<p>资源组节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceSet(array $InstanceSet) 设置资源组节点信息
+ * @method void setInstanceSet(array $InstanceSet) 设置<p>资源组节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupSWType() 获取资源组纳管类型
- * @method void setResourceGroupSWType(string $ResourceGroupSWType) 设置资源组纳管类型
+ * @method string getResourceGroupSWType() 获取<p>资源组纳管类型</p>
+ * @method void setResourceGroupSWType(string $ResourceGroupSWType) 设置<p>资源组纳管类型</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBillingResourceGroupResponse extends AbstractModel
 {
     /**
-     * @var integer 资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+     * @var integer <p>资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
-     * @var array 资源组节点信息
+     * @var array <p>资源组节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceSet;
 
     /**
-     * @var string 资源组纳管类型
+     * @var string <p>资源组纳管类型</p>
      */
     public $ResourceGroupSWType;
 
@@ -58,11 +58,11 @@ class DescribeBillingResourceGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+     * @param integer $TotalCount <p>资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InstanceSet 资源组节点信息
+     * @param array $InstanceSet <p>资源组节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupSWType 资源组纳管类型
+     * @param string $ResourceGroupSWType <p>资源组纳管类型</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

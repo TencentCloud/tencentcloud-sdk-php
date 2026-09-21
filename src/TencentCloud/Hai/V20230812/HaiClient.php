@@ -39,6 +39,7 @@ use TencentCloud\Hai\V20230812\Models as Models;
  * @method Models\DescribeServiceLoginSettingsResponse DescribeServiceLoginSettings(Models\DescribeServiceLoginSettingsRequest $req) 本接口（DescribeServiceLoginSettings）用于查询服务登录配置
  * @method Models\DescribeServicesResponse DescribeServices(Models\DescribeServicesRequest $req) 本接口 (DescribeServices) 用于查询一个或多个服务
  * @method Models\DescribeServicesCallInfoResponse DescribeServicesCallInfo(Models\DescribeServicesCallInfoRequest $req) 本接口 (DescribeServciesCallInfo) 用于查询服务调用信息。
+ * @method Models\GetServicePodLogsResponse GetServicePodLogs(Models\GetServicePodLogsRequest $req) 本接口(GetServicePodLogs)用于查询推理服务Pod日志
  * @method Models\InquirePriceRunInstancesResponse InquirePriceRunInstances(Models\InquirePriceRunInstancesRequest $req) 本接口 (InquirePriceRunInstances) 用于实例询价。
  * @method Models\InquirePriceUpdateServiceConfigsResponse InquirePriceUpdateServiceConfigs(Models\InquirePriceUpdateServiceConfigsRequest $req) 本接口(InquirePriceUpdateServiceConfigs)用于更新服务配置询价
  * @method Models\ResetInstancesPasswordResponse ResetInstancesPassword(Models\ResetInstancesPasswordRequest $req) 本接口 (ResetInstancesPassword) 用于重置实例的用户密码。

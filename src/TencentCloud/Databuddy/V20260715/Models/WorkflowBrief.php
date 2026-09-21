@@ -84,9 +84,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroupInfoList(array $ResourceGroupInfoList) 设置<p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPermission() 获取<p>工作流权限信息</p>
+ * @method string getPermission() 获取<p>授权权限类型<br>PERMISSION_TYPE_UNSPECIFIED：未指定权限<br>MANAGE : 管理权限：包含所有操作权限<br>RUN : 运行权限：可执行实体<br>VIEW : 查看权限：可查看实体内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPermission(string $Permission) 设置<p>工作流权限信息</p>
+ * @method void setPermission(string $Permission) 设置<p>授权权限类型<br>PERMISSION_TYPE_UNSPECIFIED：未指定权限<br>MANAGE : 管理权限：包含所有操作权限<br>RUN : 运行权限：可执行实体<br>VIEW : 查看权限：可查看实体内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBundleId() 获取<p>工作流绑定的 Bundle 唯一标识，未绑定时为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -204,7 +204,7 @@ class WorkflowBrief extends AbstractModel
     public $ResourceGroupInfoList;
 
     /**
-     * @var string <p>工作流权限信息</p>
+     * @var string <p>授权权限类型<br>PERMISSION_TYPE_UNSPECIFIED：未指定权限<br>MANAGE : 管理权限：包含所有操作权限<br>RUN : 运行权限：可执行实体<br>VIEW : 查看权限：可查看实体内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Permission;
@@ -266,7 +266,7 @@ class WorkflowBrief extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceGroupInfoList <p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Permission <p>工作流权限信息</p>
+     * @param string $Permission <p>授权权限类型<br>PERMISSION_TYPE_UNSPECIFIED：未指定权限<br>MANAGE : 管理权限：包含所有操作权限<br>RUN : 运行权限：可执行实体<br>VIEW : 查看权限：可查看实体内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BundleId <p>工作流绑定的 Bundle 唯一标识，未绑定时为空</p>
 注意：此字段可能返回 null，表示取不到有效值。

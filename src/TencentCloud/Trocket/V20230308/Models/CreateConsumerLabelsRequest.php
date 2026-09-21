@@ -1,0 +1,70 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Trocket\V20230308\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * CreateConsumerLabels请求参数结构体
+ *
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+ * @method array getLabels() 获取<p>消费组标签列表</p><p>入参限制：批量上限为 32 条</p>
+ * @method void setLabels(array $Labels) 设置<p>消费组标签列表</p><p>入参限制：批量上限为 32 条</p>
+ */
+class CreateConsumerLabelsRequest extends AbstractModel
+{
+    /**
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+     */
+    public $InstanceId;
+
+    /**
+     * @var array <p>消费组标签列表</p><p>入参限制：批量上限为 32 条</p>
+     */
+    public $Labels;
+
+    /**
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+     * @param array $Labels <p>消费组标签列表</p><p>入参限制：批量上限为 32 条</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = [];
+            foreach ($param["Labels"] as $key => $value){
+                $obj = new ConsumerLabelKey();
+                $obj->deserialize($value);
+                array_push($this->Labels, $obj);
+            }
+        }
+    }
+}

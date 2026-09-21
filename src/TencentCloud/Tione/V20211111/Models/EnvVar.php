@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 环境变量
  *
- * @method string getName() 获取环境变量key
+ * @method string getName() 获取<p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置环境变量key
+ * @method void setName(string $Name) 设置<p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取环境变量value
+ * @method string getValue() 获取<p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置环境变量value
+ * @method void setValue(string $Value) 设置<p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvVar extends AbstractModel
 {
     /**
-     * @var string 环境变量key
+     * @var string <p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 环境变量value
+     * @var string <p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @param string $Name 环境变量key
+     * @param string $Name <p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 环境变量value
+     * @param string $Value <p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

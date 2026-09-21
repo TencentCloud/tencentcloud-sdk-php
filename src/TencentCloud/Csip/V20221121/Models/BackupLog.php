@@ -20,114 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 日志备份
  *
- * @method integer getId() 获取索引
- * @method void setId(integer $Id) 设置索引
- * @method integer getIndexStartTime() 获取索引开始时间
- * @method void setIndexStartTime(integer $IndexStartTime) 设置索引开始时间
- * @method integer getIndexEndTime() 获取索引结束时间
- * @method void setIndexEndTime(integer $IndexEndTime) 设置索引结束时间
- * @method integer getBackupSize() 获取备份后压缩的大小，单位M
- * @method void setBackupSize(integer $BackupSize) 设置备份后压缩的大小，单位M
- * @method integer getStatus() 获取日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除
- * @method void setStatus(integer $Status) 设置日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除
- * @method integer getRestoreProcessRemindTime() 获取恢复剩余的分钟数，分钟，需要前端转换
- * @method void setRestoreProcessRemindTime(integer $RestoreProcessRemindTime) 设置恢复剩余的分钟数，分钟，需要前端转换
- * @method integer getRestoreRemindTime() 获取恢复日志保留的时间
- * @method void setRestoreRemindTime(integer $RestoreRemindTime) 设置恢复日志保留的时间
- * @method integer getRestoreIndexSize() 获取恢复索引大小
- * @method void setRestoreIndexSize(integer $RestoreIndexSize) 设置恢复索引大小
- * @method integer getRestoreEndTime() 获取恢复日志执行结束时间
- * @method void setRestoreEndTime(integer $RestoreEndTime) 设置恢复日志执行结束时间
- * @method integer getAppId() 获取备份所属的appId
- * @method void setAppId(integer $AppId) 设置备份所属的appId
- * @method integer getAssetId() 获取备份所属的资产ID
- * @method void setAssetId(integer $AssetId) 设置备份所属的资产ID
- * @method string getNickName() 获取账号昵称
- * @method void setNickName(string $NickName) 设置账号昵称
- * @method string getUin() 获取资产所属账号uin
- * @method void setUin(string $Uin) 设置资产所属账号uin
+ * @method integer getId() 获取<p>索引</p>
+ * @method void setId(integer $Id) 设置<p>索引</p>
+ * @method integer getIndexStartTime() 获取<p>索引开始时间</p>
+ * @method void setIndexStartTime(integer $IndexStartTime) 设置<p>索引开始时间</p>
+ * @method integer getIndexEndTime() 获取<p>索引结束时间</p>
+ * @method void setIndexEndTime(integer $IndexEndTime) 设置<p>索引结束时间</p>
+ * @method integer getBackupSize() 获取<p>备份后压缩的大小，单位M</p>
+ * @method void setBackupSize(integer $BackupSize) 设置<p>备份后压缩的大小，单位M</p>
+ * @method integer getStatus() 获取<p>日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除</p>
+ * @method void setStatus(integer $Status) 设置<p>日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除</p>
+ * @method integer getRestoreProcessRemindTime() 获取<p>恢复剩余的分钟数，分钟，需要前端转换</p>
+ * @method void setRestoreProcessRemindTime(integer $RestoreProcessRemindTime) 设置<p>恢复剩余的分钟数，分钟，需要前端转换</p>
+ * @method integer getRestoreRemindTime() 获取<p>恢复日志保留的时间</p>
+ * @method void setRestoreRemindTime(integer $RestoreRemindTime) 设置<p>恢复日志保留的时间</p>
+ * @method integer getRestoreIndexSize() 获取<p>恢复索引大小</p>
+ * @method void setRestoreIndexSize(integer $RestoreIndexSize) 设置<p>恢复索引大小</p>
+ * @method integer getRestoreEndTime() 获取<p>恢复日志执行结束时间</p>
+ * @method void setRestoreEndTime(integer $RestoreEndTime) 设置<p>恢复日志执行结束时间</p>
+ * @method integer getAppId() 获取<p>备份所属的appId</p>
+ * @method void setAppId(integer $AppId) 设置<p>备份所属的appId</p>
+ * @method integer getAssetId() 获取<p>备份所属的资产ID</p>
+ * @method void setAssetId(integer $AssetId) 设置<p>备份所属的资产ID</p>
+ * @method string getNickName() 获取<p>账号昵称</p>
+ * @method void setNickName(string $NickName) 设置<p>账号昵称</p>
+ * @method string getUin() 获取<p>资产所属账号uin</p>
+ * @method void setUin(string $Uin) 设置<p>资产所属账号uin</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method string getAssetType() 获取<p>实例类型</p><p>枚举值：</p><ul><li>cdb：  cdb</li><li>mariadb： mariadb</li></ul>
+ * @method void setAssetType(string $AssetType) 设置<p>实例类型</p><p>枚举值：</p><ul><li>cdb：  cdb</li><li>mariadb： mariadb</li></ul>
  */
 class BackupLog extends AbstractModel
 {
     /**
-     * @var integer 索引
+     * @var integer <p>索引</p>
      */
     public $Id;
 
     /**
-     * @var integer 索引开始时间
+     * @var integer <p>索引开始时间</p>
      */
     public $IndexStartTime;
 
     /**
-     * @var integer 索引结束时间
+     * @var integer <p>索引结束时间</p>
      */
     public $IndexEndTime;
 
     /**
-     * @var integer 备份后压缩的大小，单位M
+     * @var integer <p>备份后压缩的大小，单位M</p>
      */
     public $BackupSize;
 
     /**
-     * @var integer 日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除
+     * @var integer <p>日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除</p>
      */
     public $Status;
 
     /**
-     * @var integer 恢复剩余的分钟数，分钟，需要前端转换
+     * @var integer <p>恢复剩余的分钟数，分钟，需要前端转换</p>
      */
     public $RestoreProcessRemindTime;
 
     /**
-     * @var integer 恢复日志保留的时间
+     * @var integer <p>恢复日志保留的时间</p>
      */
     public $RestoreRemindTime;
 
     /**
-     * @var integer 恢复索引大小
+     * @var integer <p>恢复索引大小</p>
      */
     public $RestoreIndexSize;
 
     /**
-     * @var integer 恢复日志执行结束时间
+     * @var integer <p>恢复日志执行结束时间</p>
      */
     public $RestoreEndTime;
 
     /**
-     * @var integer 备份所属的appId
+     * @var integer <p>备份所属的appId</p>
      */
     public $AppId;
 
     /**
-     * @var integer 备份所属的资产ID
+     * @var integer <p>备份所属的资产ID</p>
      */
     public $AssetId;
 
     /**
-     * @var string 账号昵称
+     * @var string <p>账号昵称</p>
      */
     public $NickName;
 
     /**
-     * @var string 资产所属账号uin
+     * @var string <p>资产所属账号uin</p>
      */
     public $Uin;
 
     /**
-     * @param integer $Id 索引
-     * @param integer $IndexStartTime 索引开始时间
-     * @param integer $IndexEndTime 索引结束时间
-     * @param integer $BackupSize 备份后压缩的大小，单位M
-     * @param integer $Status 日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除
-     * @param integer $RestoreProcessRemindTime 恢复剩余的分钟数，分钟，需要前端转换
-     * @param integer $RestoreRemindTime 恢复日志保留的时间
-     * @param integer $RestoreIndexSize 恢复索引大小
-     * @param integer $RestoreEndTime 恢复日志执行结束时间
-     * @param integer $AppId 备份所属的appId
-     * @param integer $AssetId 备份所属的资产ID
-     * @param string $NickName 账号昵称
-     * @param string $Uin 资产所属账号uin
+     * @var string <p>实例ID</p>
+     */
+    public $InstanceId;
+
+    /**
+     * @var string <p>实例名称</p>
+     */
+    public $InstanceName;
+
+    /**
+     * @var string <p>实例类型</p><p>枚举值：</p><ul><li>cdb：  cdb</li><li>mariadb： mariadb</li></ul>
+     */
+    public $AssetType;
+
+    /**
+     * @param integer $Id <p>索引</p>
+     * @param integer $IndexStartTime <p>索引开始时间</p>
+     * @param integer $IndexEndTime <p>索引结束时间</p>
+     * @param integer $BackupSize <p>备份后压缩的大小，单位M</p>
+     * @param integer $Status <p>日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除</p>
+     * @param integer $RestoreProcessRemindTime <p>恢复剩余的分钟数，分钟，需要前端转换</p>
+     * @param integer $RestoreRemindTime <p>恢复日志保留的时间</p>
+     * @param integer $RestoreIndexSize <p>恢复索引大小</p>
+     * @param integer $RestoreEndTime <p>恢复日志执行结束时间</p>
+     * @param integer $AppId <p>备份所属的appId</p>
+     * @param integer $AssetId <p>备份所属的资产ID</p>
+     * @param string $NickName <p>账号昵称</p>
+     * @param string $Uin <p>资产所属账号uin</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param string $AssetType <p>实例类型</p><p>枚举值：</p><ul><li>cdb：  cdb</li><li>mariadb： mariadb</li></ul>
      */
     function __construct()
     {
@@ -192,6 +216,18 @@ class BackupLog extends AbstractModel
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

@@ -20,218 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VPN通道对象。
  *
- * @method string getVpnConnectionId() 获取通道实例ID。
- * @method void setVpnConnectionId(string $VpnConnectionId) 设置通道实例ID。
- * @method string getVpnConnectionName() 获取通道名称。
- * @method void setVpnConnectionName(string $VpnConnectionName) 设置通道名称。
- * @method string getVpcId() 获取VPC实例ID。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。
- * @method string getVpnGatewayId() 获取VPN网关实例ID。
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
- * @method string getCustomerGatewayId() 获取对端网关实例ID。
- * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置对端网关实例ID。
- * @method string getPreShareKey() 获取预共享密钥。
- * @method void setPreShareKey(string $PreShareKey) 设置预共享密钥。
- * @method string getVpnProto() 获取通道传输协议。
- * @method void setVpnProto(string $VpnProto) 设置通道传输协议。
- * @method string getEncryptProto() 获取通道加密协议。
- * @method void setEncryptProto(string $EncryptProto) 设置通道加密协议。
- * @method string getRouteType() 获取路由类型。
- * @method void setRouteType(string $RouteType) 设置路由类型。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method string getState() 获取通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
- * @method void setState(string $State) 设置通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
- * @method string getNetStatus() 获取通道连接状态，AVAILABLE：已连接。
- * @method void setNetStatus(string $NetStatus) 设置通道连接状态，AVAILABLE：已连接。
- * @method array getSecurityPolicyDatabaseSet() 获取SPD。
- * @method void setSecurityPolicyDatabaseSet(array $SecurityPolicyDatabaseSet) 设置SPD。
- * @method IKEOptionsSpecification getIKEOptionsSpecification() 获取IKE选项。
- * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) 设置IKE选项。
- * @method IPSECOptionsSpecification getIPSECOptionsSpecification() 获取IPSEC选择。
- * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置IPSEC选择。
- * @method boolean getEnableHealthCheck() 获取是否支持健康状态探测
- * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否支持健康状态探测
- * @method string getHealthCheckLocalIp() 获取本端探测ip
- * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) 设置本端探测ip
- * @method string getHealthCheckRemoteIp() 获取对端探测ip
- * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) 设置对端探测ip
- * @method string getHealthCheckStatus() 获取通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
- * @method void setHealthCheckStatus(string $HealthCheckStatus) 设置通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
- * @method integer getDpdEnable() 获取DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
- * @method void setDpdEnable(integer $DpdEnable) 设置DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
- * @method string getDpdTimeout() 获取DPD超时时间。即探测确认对端不存在需要的时间。
- * @method void setDpdTimeout(string $DpdTimeout) 设置DPD超时时间。即探测确认对端不存在需要的时间。
- * @method string getDpdAction() 获取DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
- * @method void setDpdAction(string $DpdAction) 设置DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
- * @method array getTagSet() 获取标签键值对数组
- * @method void setTagSet(array $TagSet) 设置标签键值对数组
- * @method string getNegotiationType() 获取协商类型
- * @method void setNegotiationType(string $NegotiationType) 设置协商类型
- * @method BgpConfigAndAsn getBgpConfig() 获取Bgp配置信息
- * @method void setBgpConfig(BgpConfigAndAsn $BgpConfig) 设置Bgp配置信息
- * @method HealthCheckConfig getHealthCheckConfig() 获取Nqa配置信息
- * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置Nqa配置信息
+ * @method string getVpnConnectionId() 获取<p>通道实例ID。</p>
+ * @method void setVpnConnectionId(string $VpnConnectionId) 设置<p>通道实例ID。</p>
+ * @method string getVpnConnectionName() 获取<p>通道名称。</p>
+ * @method void setVpnConnectionName(string $VpnConnectionName) 设置<p>通道名称。</p>
+ * @method string getVpcId() 获取<p>VPC实例ID。</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC实例ID。</p>
+ * @method string getVpnGatewayId() 获取<p>VPN网关实例ID。</p>
+ * @method void setVpnGatewayId(string $VpnGatewayId) 设置<p>VPN网关实例ID。</p>
+ * @method string getCustomerGatewayId() 获取<p>对端网关实例ID。</p>
+ * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置<p>对端网关实例ID。</p>
+ * @method string getPreShareKey() 获取<p>预共享密钥。</p>
+ * @method void setPreShareKey(string $PreShareKey) 设置<p>预共享密钥。</p>
+ * @method string getVpnProto() 获取<p>通道传输协议。</p>
+ * @method void setVpnProto(string $VpnProto) 设置<p>通道传输协议。</p>
+ * @method string getEncryptProto() 获取<p>通道加密协议。</p>
+ * @method void setEncryptProto(string $EncryptProto) 设置<p>通道加密协议。</p>
+ * @method string getRouteType() 获取<p>路由类型。</p>
+ * @method void setRouteType(string $RouteType) 设置<p>路由类型。</p>
+ * @method string getCreatedTime() 获取<p>创建时间。</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间。</p>
+ * @method string getState() 获取<p>通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。</p>
+ * @method void setState(string $State) 设置<p>通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。</p>
+ * @method string getNetStatus() 获取<p>通道连接状态，AVAILABLE：已连接。</p>
+ * @method void setNetStatus(string $NetStatus) 设置<p>通道连接状态，AVAILABLE：已连接。</p>
+ * @method array getSecurityPolicyDatabaseSet() 获取<p>SPD。</p>
+ * @method void setSecurityPolicyDatabaseSet(array $SecurityPolicyDatabaseSet) 设置<p>SPD。</p>
+ * @method IKEOptionsSpecification getIKEOptionsSpecification() 获取<p>IKE选项。</p>
+ * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) 设置<p>IKE选项。</p>
+ * @method IPSECOptionsSpecification getIPSECOptionsSpecification() 获取<p>IPSEC选择。</p>
+ * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置<p>IPSEC选择。</p>
+ * @method boolean getEnableHealthCheck() 获取<p>是否支持健康状态探测</p>
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置<p>是否支持健康状态探测</p>
+ * @method string getHealthCheckLocalIp() 获取<p>本端探测ip</p>
+ * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) 设置<p>本端探测ip</p>
+ * @method string getHealthCheckRemoteIp() 获取<p>对端探测ip</p>
+ * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) 设置<p>对端探测ip</p>
+ * @method string getHealthCheckStatus() 获取<p>通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象</p>
+ * @method void setHealthCheckStatus(string $HealthCheckStatus) 设置<p>通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象</p>
+ * @method integer getDpdEnable() 获取<p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
+ * @method void setDpdEnable(integer $DpdEnable) 设置<p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
+ * @method string getDpdTimeout() 获取<p>DPD超时时间。即探测确认对端不存在需要的时间。</p>
+ * @method void setDpdTimeout(string $DpdTimeout) 设置<p>DPD超时时间。即探测确认对端不存在需要的时间。</p>
+ * @method string getDpdAction() 获取<p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p>
+ * @method void setDpdAction(string $DpdAction) 设置<p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p>
+ * @method array getTagSet() 获取<p>标签键值对数组</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签键值对数组</p>
+ * @method string getNegotiationType() 获取<p>协商类型</p><p>枚举值：</p><ul><li>active： 主动协商</li><li>passive： 被动协商</li><li>flowTrigger： 流量协商</li></ul>
+ * @method void setNegotiationType(string $NegotiationType) 设置<p>协商类型</p><p>枚举值：</p><ul><li>active： 主动协商</li><li>passive： 被动协商</li><li>flowTrigger： 流量协商</li></ul>
+ * @method BgpConfigAndAsn getBgpConfig() 获取<p>Bgp配置信息</p>
+ * @method void setBgpConfig(BgpConfigAndAsn $BgpConfig) 设置<p>Bgp配置信息</p>
+ * @method HealthCheckConfig getHealthCheckConfig() 获取<p>Nqa配置信息</p>
+ * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置<p>Nqa配置信息</p>
  */
 class VpnConnection extends AbstractModel
 {
     /**
-     * @var string 通道实例ID。
+     * @var string <p>通道实例ID。</p>
      */
     public $VpnConnectionId;
 
     /**
-     * @var string 通道名称。
+     * @var string <p>通道名称。</p>
      */
     public $VpnConnectionName;
 
     /**
-     * @var string VPC实例ID。
+     * @var string <p>VPC实例ID。</p>
      */
     public $VpcId;
 
     /**
-     * @var string VPN网关实例ID。
+     * @var string <p>VPN网关实例ID。</p>
      */
     public $VpnGatewayId;
 
     /**
-     * @var string 对端网关实例ID。
+     * @var string <p>对端网关实例ID。</p>
      */
     public $CustomerGatewayId;
 
     /**
-     * @var string 预共享密钥。
+     * @var string <p>预共享密钥。</p>
      */
     public $PreShareKey;
 
     /**
-     * @var string 通道传输协议。
+     * @var string <p>通道传输协议。</p>
      */
     public $VpnProto;
 
     /**
-     * @var string 通道加密协议。
+     * @var string <p>通道加密协议。</p>
      */
     public $EncryptProto;
 
     /**
-     * @var string 路由类型。
+     * @var string <p>路由类型。</p>
      */
     public $RouteType;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+     * @var string <p>通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。</p>
      */
     public $State;
 
     /**
-     * @var string 通道连接状态，AVAILABLE：已连接。
+     * @var string <p>通道连接状态，AVAILABLE：已连接。</p>
      */
     public $NetStatus;
 
     /**
-     * @var array SPD。
+     * @var array <p>SPD。</p>
      */
     public $SecurityPolicyDatabaseSet;
 
     /**
-     * @var IKEOptionsSpecification IKE选项。
+     * @var IKEOptionsSpecification <p>IKE选项。</p>
      */
     public $IKEOptionsSpecification;
 
     /**
-     * @var IPSECOptionsSpecification IPSEC选择。
+     * @var IPSECOptionsSpecification <p>IPSEC选择。</p>
      */
     public $IPSECOptionsSpecification;
 
     /**
-     * @var boolean 是否支持健康状态探测
+     * @var boolean <p>是否支持健康状态探测</p>
      */
     public $EnableHealthCheck;
 
     /**
-     * @var string 本端探测ip
+     * @var string <p>本端探测ip</p>
      */
     public $HealthCheckLocalIp;
 
     /**
-     * @var string 对端探测ip
+     * @var string <p>对端探测ip</p>
      */
     public $HealthCheckRemoteIp;
 
     /**
-     * @var string 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+     * @var string <p>通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象</p>
      */
     public $HealthCheckStatus;
 
     /**
-     * @var integer DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     * @var integer <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
      */
     public $DpdEnable;
 
     /**
-     * @var string DPD超时时间。即探测确认对端不存在需要的时间。
+     * @var string <p>DPD超时时间。即探测确认对端不存在需要的时间。</p>
      */
     public $DpdTimeout;
 
     /**
-     * @var string DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     * @var string <p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p>
      */
     public $DpdAction;
 
     /**
-     * @var array 标签键值对数组
+     * @var array <p>标签键值对数组</p>
      */
     public $TagSet;
 
     /**
-     * @var string 协商类型
+     * @var string <p>协商类型</p><p>枚举值：</p><ul><li>active： 主动协商</li><li>passive： 被动协商</li><li>flowTrigger： 流量协商</li></ul>
      */
     public $NegotiationType;
 
     /**
-     * @var BgpConfigAndAsn Bgp配置信息
+     * @var BgpConfigAndAsn <p>Bgp配置信息</p>
      */
     public $BgpConfig;
 
     /**
-     * @var HealthCheckConfig Nqa配置信息
+     * @var HealthCheckConfig <p>Nqa配置信息</p>
      */
     public $HealthCheckConfig;
 
     /**
-     * @param string $VpnConnectionId 通道实例ID。
-     * @param string $VpnConnectionName 通道名称。
-     * @param string $VpcId VPC实例ID。
-     * @param string $VpnGatewayId VPN网关实例ID。
-     * @param string $CustomerGatewayId 对端网关实例ID。
-     * @param string $PreShareKey 预共享密钥。
-     * @param string $VpnProto 通道传输协议。
-     * @param string $EncryptProto 通道加密协议。
-     * @param string $RouteType 路由类型。
-     * @param string $CreatedTime 创建时间。
-     * @param string $State 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
-     * @param string $NetStatus 通道连接状态，AVAILABLE：已连接。
-     * @param array $SecurityPolicyDatabaseSet SPD。
-     * @param IKEOptionsSpecification $IKEOptionsSpecification IKE选项。
-     * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSEC选择。
-     * @param boolean $EnableHealthCheck 是否支持健康状态探测
-     * @param string $HealthCheckLocalIp 本端探测ip
-     * @param string $HealthCheckRemoteIp 对端探测ip
-     * @param string $HealthCheckStatus 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
-     * @param integer $DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-     * @param string $DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。
-     * @param string $DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-     * @param array $TagSet 标签键值对数组
-     * @param string $NegotiationType 协商类型
-     * @param BgpConfigAndAsn $BgpConfig Bgp配置信息
-     * @param HealthCheckConfig $HealthCheckConfig Nqa配置信息
+     * @param string $VpnConnectionId <p>通道实例ID。</p>
+     * @param string $VpnConnectionName <p>通道名称。</p>
+     * @param string $VpcId <p>VPC实例ID。</p>
+     * @param string $VpnGatewayId <p>VPN网关实例ID。</p>
+     * @param string $CustomerGatewayId <p>对端网关实例ID。</p>
+     * @param string $PreShareKey <p>预共享密钥。</p>
+     * @param string $VpnProto <p>通道传输协议。</p>
+     * @param string $EncryptProto <p>通道加密协议。</p>
+     * @param string $RouteType <p>路由类型。</p>
+     * @param string $CreatedTime <p>创建时间。</p>
+     * @param string $State <p>通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。</p>
+     * @param string $NetStatus <p>通道连接状态，AVAILABLE：已连接。</p>
+     * @param array $SecurityPolicyDatabaseSet <p>SPD。</p>
+     * @param IKEOptionsSpecification $IKEOptionsSpecification <p>IKE选项。</p>
+     * @param IPSECOptionsSpecification $IPSECOptionsSpecification <p>IPSEC选择。</p>
+     * @param boolean $EnableHealthCheck <p>是否支持健康状态探测</p>
+     * @param string $HealthCheckLocalIp <p>本端探测ip</p>
+     * @param string $HealthCheckRemoteIp <p>对端探测ip</p>
+     * @param string $HealthCheckStatus <p>通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象</p>
+     * @param integer $DpdEnable <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
+     * @param string $DpdTimeout <p>DPD超时时间。即探测确认对端不存在需要的时间。</p>
+     * @param string $DpdAction <p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p>
+     * @param array $TagSet <p>标签键值对数组</p>
+     * @param string $NegotiationType <p>协商类型</p><p>枚举值：</p><ul><li>active： 主动协商</li><li>passive： 被动协商</li><li>flowTrigger： 流量协商</li></ul>
+     * @param BgpConfigAndAsn $BgpConfig <p>Bgp配置信息</p>
+     * @param HealthCheckConfig $HealthCheckConfig <p>Nqa配置信息</p>
      */
     function __construct()
     {

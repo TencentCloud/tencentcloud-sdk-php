@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModelAliases请求参数结构体
  *
- * @method array getFilters() 获取<p>过滤条件</p><p>支持的过滤键：</p><ul><li>ModelAliasName：按模型别名过滤。</li></ul>
- * @method void setFilters(array $Filters) 设置<p>过滤条件</p><p>支持的过滤键：</p><ul><li>ModelAliasName：按模型别名过滤。</li></ul>
+ * @method array getFilters() 获取<p>过滤条件</p><p></p>- ModelAliasName：模型别名<p></p><p></p>- Capability：输出模态<p></p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件</p><p></p>- ModelAliasName：模型别名<p></p><p></p>- Capability：输出模态<p></p>
  * @method integer getLimit() 获取<p>每页数量，取值范围：[1, 100]，默认值：20。</p>
  * @method void setLimit(integer $Limit) 设置<p>每页数量，取值范围：[1, 100]，默认值：20。</p>
  * @method integer getOffset() 获取<p>分页偏移量，默认值：0。</p>
  * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认值：0。</p>
- * @method array getSort() 获取<p>排序条件。支持按 InputCoefficient、InputCachedCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 3 个排序条件，排序字段不可重复。</p>
- * @method void setSort(array $Sort) 设置<p>排序条件。支持按 InputCoefficient、InputCachedCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 3 个排序条件，排序字段不可重复。</p>
+ * @method array getSort() 获取<p>排序条件。支持按 InputCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 2 个排序条件，排序字段不可重复。</p>
+ * @method void setSort(array $Sort) 设置<p>排序条件。支持按 InputCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 2 个排序条件，排序字段不可重复。</p>
  */
 class DescribeModelAliasesRequest extends AbstractModel
 {
     /**
-     * @var array <p>过滤条件</p><p>支持的过滤键：</p><ul><li>ModelAliasName：按模型别名过滤。</li></ul>
+     * @var array <p>过滤条件</p><p></p>- ModelAliasName：模型别名<p></p><p></p>- Capability：输出模态<p></p>
      */
     public $Filters;
 
@@ -47,15 +47,15 @@ class DescribeModelAliasesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array <p>排序条件。支持按 InputCoefficient、InputCachedCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 3 个排序条件，排序字段不可重复。</p>
+     * @var array <p>排序条件。支持按 InputCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 2 个排序条件，排序字段不可重复。</p>
      */
     public $Sort;
 
     /**
-     * @param array $Filters <p>过滤条件</p><p>支持的过滤键：</p><ul><li>ModelAliasName：按模型别名过滤。</li></ul>
+     * @param array $Filters <p>过滤条件</p><p></p>- ModelAliasName：模型别名<p></p><p></p>- Capability：输出模态<p></p>
      * @param integer $Limit <p>每页数量，取值范围：[1, 100]，默认值：20。</p>
      * @param integer $Offset <p>分页偏移量，默认值：0。</p>
-     * @param array $Sort <p>排序条件。支持按 InputCoefficient、InputCachedCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 3 个排序条件，排序字段不可重复。</p>
+     * @param array $Sort <p>排序条件。支持按 InputCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 2 个排序条件，排序字段不可重复。</p>
      */
     function __construct()
     {

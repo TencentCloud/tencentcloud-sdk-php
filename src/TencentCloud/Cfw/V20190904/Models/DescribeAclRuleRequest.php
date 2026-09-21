@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIndex(string $Index) 设置<p>需要查询的索引，特定场景使用，可不填</p>
  * @method array getFilters() 获取<p>过滤条件组合</p>
  * @method void setFilters(array $Filters) 设置<p>过滤条件组合</p>
- * @method string getStartTime() 获取<p>检索的起始时间，可不传</p>
- * @method void setStartTime(string $StartTime) 设置<p>检索的起始时间，可不传</p>
- * @method string getEndTime() 获取<p>检索的截止时间，可不传</p>
- * @method void setEndTime(string $EndTime) 设置<p>检索的截止时间，可不传</p>
+ * @method string getStartTime() 获取<p>检索的起始时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
+ * @method void setStartTime(string $StartTime) 设置<p>检索的起始时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
+ * @method string getEndTime() 获取<p>检索的截止时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
+ * @method void setEndTime(string $EndTime) 设置<p>检索的截止时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
  * @method string getOrder() 获取<p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc</p>
  * @method void setOrder(string $Order) 设置<p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc</p>
  * @method string getBy() 获取<p>排序所用到的字段，默认为sequence</p>
@@ -60,12 +60,12 @@ class DescribeAclRuleRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string <p>检索的起始时间，可不传</p>
+     * @var string <p>检索的起始时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
      */
     public $StartTime;
 
     /**
-     * @var string <p>检索的截止时间，可不传</p>
+     * @var string <p>检索的截止时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
      */
     public $EndTime;
 
@@ -84,8 +84,8 @@ class DescribeAclRuleRequest extends AbstractModel
      * @param integer $Offset <p>偏移值</p>
      * @param string $Index <p>需要查询的索引，特定场景使用，可不填</p>
      * @param array $Filters <p>过滤条件组合</p>
-     * @param string $StartTime <p>检索的起始时间，可不传</p>
-     * @param string $EndTime <p>检索的截止时间，可不传</p>
+     * @param string $StartTime <p>检索的起始时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
+     * @param string $EndTime <p>检索的截止时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
      * @param string $Order <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc</p>
      * @param string $By <p>排序所用到的字段，默认为sequence</p>
      */

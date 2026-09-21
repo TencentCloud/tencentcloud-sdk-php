@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowsExaminedAvg(float $RowsExaminedAvg) 设置平均扫描行数
  * @method string getMd5() 获取SQL模板的MD5值
  * @method void setMd5(string $Md5) 设置SQL模板的MD5值
+ * @method string getSqlType() 获取
+ * @method void setSqlType(string $SqlType) 设置
+ * @method string getInstanceId() 获取
+ * @method void setInstanceId(string $InstanceId) 设置
  */
 class SlowLogTopSqlItem extends AbstractModel
 {
@@ -199,6 +203,16 @@ class SlowLogTopSqlItem extends AbstractModel
     public $Md5;
 
     /**
+     * @var string 
+     */
+    public $SqlType;
+
+    /**
+     * @var string 
+     */
+    public $InstanceId;
+
+    /**
      * @param float $LockTime sql总锁等待时间，单位秒
      * @param float $LockTimeMax 最大锁等待时间，单位秒
      * @param float $LockTimeMin 最小锁等待时间，单位秒
@@ -224,6 +238,8 @@ class SlowLogTopSqlItem extends AbstractModel
      * @param float $LockTimeAvg 平均锁等待时间，单位秒
      * @param float $RowsExaminedAvg 平均扫描行数
      * @param string $Md5 SQL模板的MD5值
+     * @param string $SqlType 
+     * @param string $InstanceId 
      */
     function __construct()
     {
@@ -336,6 +352,14 @@ class SlowLogTopSqlItem extends AbstractModel
 
         if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
             $this->Md5 = $param["Md5"];
+        }
+
+        if (array_key_exists("SqlType",$param) and $param["SqlType"] !== null) {
+            $this->SqlType = $param["SqlType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

@@ -20,66 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 共享CNAME明细
  *
- * @method string getType() 获取共享CNAME类型：取值范围如下：
-<li>custom：由用户创建的自定义共享CNAME</li>
-<li>ip-ssl：IP SSL类型的共享CNAME</li>
- * @method void setType(string $Type) 设置共享CNAME类型：取值范围如下：
-<li>custom：由用户创建的自定义共享CNAME</li>
-<li>ip-ssl：IP SSL类型的共享CNAME</li>
- * @method string getSharedCNAME() 获取共享CNAME名称。
- * @method void setSharedCNAME(string $SharedCNAME) 设置共享CNAME名称。
- * @method string getDescription() 获取描述。
- * @method void setDescription(string $Description) 设置描述。
- * @method IPSSLConfig getIPSSLConfig() 获取当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。
- * @method void setIPSSLConfig(IPSSLConfig $IPSSLConfig) 设置当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。
- * @method integer getBindDomainCount() 获取共享CNAME绑定的加速域名数量。
- * @method void setBindDomainCount(integer $BindDomainCount) 设置共享CNAME绑定的加速域名数量。
- * @method array getAccelerationDomains() 获取加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。
- * @method void setAccelerationDomains(array $AccelerationDomains) 设置加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。
+ * @method string getType() 获取<p>共享CNAME类型：取值范围如下：</p><li>custom：由用户创建的自定义共享CNAME</li><li>ip-ssl：IP SSL类型的共享CNAME</li><li>zero-rating：免流类型的共享CNAME</li><li>preset：预置资源类型的共享CNAME</li>
+ * @method void setType(string $Type) 设置<p>共享CNAME类型：取值范围如下：</p><li>custom：由用户创建的自定义共享CNAME</li><li>ip-ssl：IP SSL类型的共享CNAME</li><li>zero-rating：免流类型的共享CNAME</li><li>preset：预置资源类型的共享CNAME</li>
+ * @method string getSharedCNAME() 获取<p>共享CNAME名称。</p>
+ * @method void setSharedCNAME(string $SharedCNAME) 设置<p>共享CNAME名称。</p>
+ * @method string getDescription() 获取<p>描述。</p>
+ * @method void setDescription(string $Description) 设置<p>描述。</p>
+ * @method IPSSLConfig getIPSSLConfig() 获取<p>当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。</p>
+ * @method void setIPSSLConfig(IPSSLConfig $IPSSLConfig) 设置<p>当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。</p>
+ * @method integer getBindDomainCount() 获取<p>共享CNAME绑定的加速域名数量。</p>
+ * @method void setBindDomainCount(integer $BindDomainCount) 设置<p>共享CNAME绑定的加速域名数量。</p>
+ * @method array getAccelerationDomains() 获取<p>加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。</p>
+ * @method void setAccelerationDomains(array $AccelerationDomains) 设置<p>加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。</p>
  */
 class SharedCNAMEInfo extends AbstractModel
 {
     /**
-     * @var string 共享CNAME类型：取值范围如下：
-<li>custom：由用户创建的自定义共享CNAME</li>
-<li>ip-ssl：IP SSL类型的共享CNAME</li>
+     * @var string <p>共享CNAME类型：取值范围如下：</p><li>custom：由用户创建的自定义共享CNAME</li><li>ip-ssl：IP SSL类型的共享CNAME</li><li>zero-rating：免流类型的共享CNAME</li><li>preset：预置资源类型的共享CNAME</li>
      */
     public $Type;
 
     /**
-     * @var string 共享CNAME名称。
+     * @var string <p>共享CNAME名称。</p>
      */
     public $SharedCNAME;
 
     /**
-     * @var string 描述。
+     * @var string <p>描述。</p>
      */
     public $Description;
 
     /**
-     * @var IPSSLConfig 当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。
+     * @var IPSSLConfig <p>当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。</p>
      */
     public $IPSSLConfig;
 
     /**
-     * @var integer 共享CNAME绑定的加速域名数量。
+     * @var integer <p>共享CNAME绑定的加速域名数量。</p>
      */
     public $BindDomainCount;
 
     /**
-     * @var array 加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。
+     * @var array <p>加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。</p>
      */
     public $AccelerationDomains;
 
     /**
-     * @param string $Type 共享CNAME类型：取值范围如下：
-<li>custom：由用户创建的自定义共享CNAME</li>
-<li>ip-ssl：IP SSL类型的共享CNAME</li>
-     * @param string $SharedCNAME 共享CNAME名称。
-     * @param string $Description 描述。
-     * @param IPSSLConfig $IPSSLConfig 当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。
-     * @param integer $BindDomainCount 共享CNAME绑定的加速域名数量。
-     * @param array $AccelerationDomains 加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。
+     * @param string $Type <p>共享CNAME类型：取值范围如下：</p><li>custom：由用户创建的自定义共享CNAME</li><li>ip-ssl：IP SSL类型的共享CNAME</li><li>zero-rating：免流类型的共享CNAME</li><li>preset：预置资源类型的共享CNAME</li>
+     * @param string $SharedCNAME <p>共享CNAME名称。</p>
+     * @param string $Description <p>描述。</p>
+     * @param IPSSLConfig $IPSSLConfig <p>当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。</p>
+     * @param integer $BindDomainCount <p>共享CNAME绑定的加速域名数量。</p>
+     * @param array $AccelerationDomains <p>加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。</p>
      */
     function __construct()
     {

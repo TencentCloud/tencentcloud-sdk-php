@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(string $Code) 设置<p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
  * @method string getName() 获取<p>设备名称</p>
  * @method void setName(string $Name) 设置<p>设备名称</p>
- * @method integer getAccessProtocol() 获取<p>设备接入协议，1:RTMP,2:GB,3:GW</p>
- * @method void setAccessProtocol(integer $AccessProtocol) 设置<p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+ * @method integer getAccessProtocol() 获取<p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li></ul>
+ * @method void setAccessProtocol(integer $AccessProtocol) 设置<p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li></ul>
  * @method integer getType() 获取<p>设备类型，1:IPC,2:NVR</p>
  * @method void setType(integer $Type) 设置<p>设备类型，1:IPC,2:NVR</p>
  * @method string getClusterId() 获取<p>设备接入服务节点id</p>
@@ -54,20 +54,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置<p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
  * @method string getOrganizationId() 获取<p>设备所属组织ID</p>
  * @method void setOrganizationId(string $OrganizationId) 设置<p>设备所属组织ID</p>
- * @method string getGatewayId() 获取<p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
- * @method void setGatewayId(string $GatewayId) 设置<p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
- * @method string getGatewayName() 获取<p>设备所属网关名称</p>
- * @method void setGatewayName(string $GatewayName) 设置<p>设备所属网关名称</p>
- * @method string getProtocolTypeName() 获取<p>设备网关协议名称</p>
- * @method void setProtocolTypeName(string $ProtocolTypeName) 设置<p>设备网关协议名称</p>
- * @method integer getProtocolType() 获取<p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
- * @method void setProtocolType(integer $ProtocolType) 设置<p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
- * @method string getIp() 获取<p>设备接入IP</p>
- * @method void setIp(string $Ip) 设置<p>设备接入IP</p>
- * @method integer getPort() 获取<p>设备Port</p>
- * @method void setPort(integer $Port) 设置<p>设备Port</p>
- * @method string getUsername() 获取<p>设备用户名</p>
- * @method void setUsername(string $Username) 设置<p>设备用户名</p>
+ * @method string getGatewayId() 获取<p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
+ * @method string getGatewayName() 获取<p>设备所属网关名称（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setGatewayName(string $GatewayName) 设置<p>设备所属网关名称（已不再使用，保留用于兼容，可忽略）</p>
+ * @method string getProtocolTypeName() 获取<p>设备网关协议名称（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setProtocolTypeName(string $ProtocolTypeName) 设置<p>设备网关协议名称（已不再使用，保留用于兼容，可忽略）</p>
+ * @method integer getProtocolType() 获取<p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setProtocolType(integer $ProtocolType) 设置<p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
+ * @method string getIp() 获取<p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setIp(string $Ip) 设置<p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
+ * @method integer getPort() 获取<p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setPort(integer $Port) 设置<p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
+ * @method string getUsername() 获取<p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setUsername(string $Username) 设置<p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
  * @method string getRegion() 获取<p>设备地域</p>
  * @method void setRegion(string $Region) 设置<p>设备地域</p>
  * @method string getManufacturer() 获取<p>设备厂商</p>
@@ -84,6 +84,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSilentFrameSwitch(integer $SilentFrameSwitch) 设置<p>是否开启静音帧（0：关闭；1 开启）</p>
  * @method string getPushStreamSecureUrl() 获取<p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
  * @method void setPushStreamSecureUrl(string $PushStreamSecureUrl) 设置<p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
+ * @method string getSipFQDN() 获取<p>国标SIP域名</p>
+ * @method void setSipFQDN(string $SipFQDN) 设置<p>国标SIP域名</p>
+ * @method SipCarrierEndpoints getSipCarrierEndpoints() 获取<p>国标SIP三网IP地址</p>
+ * @method void setSipCarrierEndpoints(SipCarrierEndpoints $SipCarrierEndpoints) 设置<p>国标SIP三网IP地址</p>
+ * @method integer getTimeSyncSwitch() 获取<p>国标校时开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+ * @method void setTimeSyncSwitch(integer $TimeSyncSwitch) 设置<p>国标校时开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
  */
 class DescribeDeviceData extends AbstractModel
 {
@@ -103,7 +109,7 @@ class DescribeDeviceData extends AbstractModel
     public $Name;
 
     /**
-     * @var integer <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+     * @var integer <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li></ul>
      */
     public $AccessProtocol;
 
@@ -173,37 +179,37 @@ class DescribeDeviceData extends AbstractModel
     public $OrganizationId;
 
     /**
-     * @var string <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
+     * @var string <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $GatewayId;
 
     /**
-     * @var string <p>设备所属网关名称</p>
+     * @var string <p>设备所属网关名称（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $GatewayName;
 
     /**
-     * @var string <p>设备网关协议名称</p>
+     * @var string <p>设备网关协议名称（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $ProtocolTypeName;
 
     /**
-     * @var integer <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
+     * @var integer <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $ProtocolType;
 
     /**
-     * @var string <p>设备接入IP</p>
+     * @var string <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $Ip;
 
     /**
-     * @var integer <p>设备Port</p>
+     * @var integer <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $Port;
 
     /**
-     * @var string <p>设备用户名</p>
+     * @var string <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $Username;
 
@@ -248,10 +254,25 @@ class DescribeDeviceData extends AbstractModel
     public $PushStreamSecureUrl;
 
     /**
+     * @var string <p>国标SIP域名</p>
+     */
+    public $SipFQDN;
+
+    /**
+     * @var SipCarrierEndpoints <p>国标SIP三网IP地址</p>
+     */
+    public $SipCarrierEndpoints;
+
+    /**
+     * @var integer <p>国标校时开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+     */
+    public $TimeSyncSwitch;
+
+    /**
      * @param string $DeviceId <p>设备ID</p>
      * @param string $Code <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
      * @param string $Name <p>设备名称</p>
-     * @param integer $AccessProtocol <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+     * @param integer $AccessProtocol <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li></ul>
      * @param integer $Type <p>设备类型，1:IPC,2:NVR</p>
      * @param string $ClusterId <p>设备接入服务节点id</p>
      * @param string $ClusterName <p>设备接入服务节点名称</p>
@@ -265,13 +286,13 @@ class DescribeDeviceData extends AbstractModel
      * @param string $PushStreamUrl <p>Rtmp设备推流地址(仅rtmp设备有效)</p>
      * @param integer $Status <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
      * @param string $OrganizationId <p>设备所属组织ID</p>
-     * @param string $GatewayId <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
-     * @param string $GatewayName <p>设备所属网关名称</p>
-     * @param string $ProtocolTypeName <p>设备网关协议名称</p>
-     * @param integer $ProtocolType <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
-     * @param string $Ip <p>设备接入IP</p>
-     * @param integer $Port <p>设备Port</p>
-     * @param string $Username <p>设备用户名</p>
+     * @param string $GatewayId <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
+     * @param string $GatewayName <p>设备所属网关名称（已不再使用，保留用于兼容，可忽略）</p>
+     * @param string $ProtocolTypeName <p>设备网关协议名称（已不再使用，保留用于兼容，可忽略）</p>
+     * @param integer $ProtocolType <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
+     * @param string $Ip <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
+     * @param integer $Port <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
+     * @param string $Username <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      * @param string $Region <p>设备地域</p>
      * @param string $Manufacturer <p>设备厂商</p>
      * @param integer $AudioSwitch <p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p>
@@ -280,6 +301,9 @@ class DescribeDeviceData extends AbstractModel
      * @param string $StreamName <p>RTMP推流地址自定义streamName</p>
      * @param integer $SilentFrameSwitch <p>是否开启静音帧（0：关闭；1 开启）</p>
      * @param string $PushStreamSecureUrl <p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
+     * @param string $SipFQDN <p>国标SIP域名</p>
+     * @param SipCarrierEndpoints $SipCarrierEndpoints <p>国标SIP三网IP地址</p>
+     * @param integer $TimeSyncSwitch <p>国标校时开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
      */
     function __construct()
     {
@@ -420,6 +444,19 @@ class DescribeDeviceData extends AbstractModel
 
         if (array_key_exists("PushStreamSecureUrl",$param) and $param["PushStreamSecureUrl"] !== null) {
             $this->PushStreamSecureUrl = $param["PushStreamSecureUrl"];
+        }
+
+        if (array_key_exists("SipFQDN",$param) and $param["SipFQDN"] !== null) {
+            $this->SipFQDN = $param["SipFQDN"];
+        }
+
+        if (array_key_exists("SipCarrierEndpoints",$param) and $param["SipCarrierEndpoints"] !== null) {
+            $this->SipCarrierEndpoints = new SipCarrierEndpoints();
+            $this->SipCarrierEndpoints->deserialize($param["SipCarrierEndpoints"]);
+        }
+
+        if (array_key_exists("TimeSyncSwitch",$param) and $param["TimeSyncSwitch"] !== null) {
+            $this->TimeSyncSwitch = $param["TimeSyncSwitch"];
         }
     }
 }

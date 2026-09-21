@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 美颜配置
  *
- * @method array getBeautyEffectItems() 获取美颜效果
- * @method void setBeautyEffectItems(array $BeautyEffectItems) 设置美颜效果
- * @method array getBeautyFilterItems() 获取美颜滤镜
- * @method void setBeautyFilterItems(array $BeautyFilterItems) 设置美颜滤镜
+ * @method array getBeautyEffectItems() 获取<p>美颜效果</p>
+ * @method void setBeautyEffectItems(array $BeautyEffectItems) 设置<p>美颜效果</p>
+ * @method array getBeautyFilterItems() 获取<p>美颜滤镜</p>
+ * @method void setBeautyFilterItems(array $BeautyFilterItems) 设置<p>美颜滤镜</p>
+ * @method string getType() 获取<p>美颜类型</p><p>枚举值：</p><ul><li>auto： 智能自动美颜</li></ul><p>传入美颜参数时，忽略该参数。</p>
+ * @method void setType(string $Type) 设置<p>美颜类型</p><p>枚举值：</p><ul><li>auto： 智能自动美颜</li></ul><p>传入美颜参数时，忽略该参数。</p>
  */
 class BeautyConfig extends AbstractModel
 {
     /**
-     * @var array 美颜效果
+     * @var array <p>美颜效果</p>
      */
     public $BeautyEffectItems;
 
     /**
-     * @var array 美颜滤镜
+     * @var array <p>美颜滤镜</p>
      */
     public $BeautyFilterItems;
 
     /**
-     * @param array $BeautyEffectItems 美颜效果
-     * @param array $BeautyFilterItems 美颜滤镜
+     * @var string <p>美颜类型</p><p>枚举值：</p><ul><li>auto： 智能自动美颜</li></ul><p>传入美颜参数时，忽略该参数。</p>
+     */
+    public $Type;
+
+    /**
+     * @param array $BeautyEffectItems <p>美颜效果</p>
+     * @param array $BeautyFilterItems <p>美颜滤镜</p>
+     * @param string $Type <p>美颜类型</p><p>枚举值：</p><ul><li>auto： 智能自动美颜</li></ul><p>传入美颜参数时，忽略该参数。</p>
      */
     function __construct()
     {
@@ -70,6 +78,10 @@ class BeautyConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->BeautyFilterItems, $obj);
             }
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

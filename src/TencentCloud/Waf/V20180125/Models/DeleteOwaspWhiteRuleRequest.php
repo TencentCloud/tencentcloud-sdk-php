@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOwaspWhiteRule请求参数结构体
  *
- * @method array getIds() 获取规则白名单ID列表
- * @method void setIds(array $Ids) 设置规则白名单ID列表
+ * @method array getIds() 获取规则白名单ID列表，可通过 [DescribeOwaspWhiteRule](https://cloud.tencent.com/document/product/627/122155) 接口获取
+ * @method void setIds(array $Ids) 设置规则白名单ID列表，可通过 [DescribeOwaspWhiteRule](https://cloud.tencent.com/document/product/627/122155) 接口获取
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  */
 class DeleteOwaspWhiteRuleRequest extends AbstractModel
 {
     /**
-     * @var array 规则白名单ID列表
+     * @var array 规则白名单ID列表，可通过 [DescribeOwaspWhiteRule](https://cloud.tencent.com/document/product/627/122155) 接口获取
      */
     public $Ids;
 
@@ -38,7 +38,7 @@ class DeleteOwaspWhiteRuleRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @param array $Ids 规则白名单ID列表
+     * @param array $Ids 规则白名单ID列表，可通过 [DescribeOwaspWhiteRule](https://cloud.tencent.com/document/product/627/122155) 接口获取
      * @param string $Domain 域名
      */
     function __construct()

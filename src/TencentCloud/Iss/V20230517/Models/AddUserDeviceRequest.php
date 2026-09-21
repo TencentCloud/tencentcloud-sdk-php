@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUserDevice请求参数结构体
  *
- * @method string getName() 获取设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
- * @method void setName(string $Name) 设置设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
- * @method integer getAccessProtocol() 获取设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
- * @method void setAccessProtocol(integer $AccessProtocol) 设置设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
- * @method integer getType() 获取设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
- * @method void setType(integer $Type) 设置设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
- * @method string getOrganizationId() 获取设备所属组织ID，从查询组织接口DescribeOrganization中获取
- * @method void setOrganizationId(string $OrganizationId) 设置设备所属组织ID，从查询组织接口DescribeOrganization中获取
- * @method string getClusterId() 获取设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
- * @method void setClusterId(string $ClusterId) 设置设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
- * @method integer getTransportProtocol() 获取设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)
- * @method void setTransportProtocol(integer $TransportProtocol) 设置设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)
- * @method string getPassword() 获取设备密码（国标，网关设备必填，长度为1-64个字符）
- * @method void setPassword(string $Password) 设置设备密码（国标，网关设备必填，长度为1-64个字符）
- * @method string getDescription() 获取设备描述，长度不超过128个字符
- * @method void setDescription(string $Description) 设置设备描述，长度不超过128个字符
- * @method string getGatewayId() 获取设备接入网关ID，从查询网关列表接口中ListGateways获取（仅网关接入需要）
- * @method void setGatewayId(string $GatewayId) 设置设备接入网关ID，从查询网关列表接口中ListGateways获取（仅网关接入需要）
- * @method integer getProtocolType() 获取网关接入协议类型（从查询网关接入协议接口DescribeGatewayProtocol中获取）1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
- * @method void setProtocolType(integer $ProtocolType) 设置网关接入协议类型（从查询网关接入协议接口DescribeGatewayProtocol中获取）1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
- * @method string getIp() 获取设备接入IP（仅网关接入需要）
- * @method void setIp(string $Ip) 设置设备接入IP（仅网关接入需要）
- * @method integer getPort() 获取设备端口（仅网关接入需要）
- * @method void setPort(integer $Port) 设置设备端口（仅网关接入需要）
- * @method string getUsername() 获取设备用户名（仅网关接入需要）
- * @method void setUsername(string $Username) 设置设备用户名（仅网关接入需要）
- * @method string getSNCode() 获取设备 SN，仅IVCP 协议设备需要
- * @method void setSNCode(string $SNCode) 设置设备 SN，仅IVCP 协议设备需要
- * @method string getAppName() 获取RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
- * @method void setAppName(string $AppName) 设置RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
- * @method string getStreamName() 获取RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
- * @method void setStreamName(string $StreamName) 设置RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+ * @method string getName() 获取<p>设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）</p>
+ * @method void setName(string $Name) 设置<p>设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）</p>
+ * @method integer getAccessProtocol() 获取<p>设备接入协议（1:RTMP,2:GB,6:ISUP）</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul><p>默认值：2</p>
+ * @method void setAccessProtocol(integer $AccessProtocol) 设置<p>设备接入协议（1:RTMP,2:GB,6:ISUP）</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul><p>默认值：2</p>
+ * @method integer getType() 获取<p>设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）</p><p>枚举值：</p><ul><li>1： IPC</li><li>2： NVR</li></ul>
+ * @method void setType(integer $Type) 设置<p>设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）</p><p>枚举值：</p><ul><li>1： IPC</li><li>2： NVR</li></ul>
+ * @method string getOrganizationId() 获取<p>设备所属组织ID，从查询组织接口DescribeOrganization中获取</p>
+ * @method void setOrganizationId(string $OrganizationId) 设置<p>设备所属组织ID，从查询组织接口DescribeOrganization中获取</p>
+ * @method string getClusterId() 获取<p>设备接入服务节点ID（从查询设备可用服务节点接口DescribeRegionDomain中获取的Value字段）</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>设备接入服务节点ID（从查询设备可用服务节点接口DescribeRegionDomain中获取的Value字段）</p>
+ * @method integer getTransportProtocol() 获取<p>设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)</p>
+ * @method void setTransportProtocol(integer $TransportProtocol) 设置<p>设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)</p>
+ * @method string getPassword() 获取<p>设备密码（国标设备必填，长度为1-64个字符）</p>
+ * @method void setPassword(string $Password) 设置<p>设备密码（国标设备必填，长度为1-64个字符）</p>
+ * @method string getDescription() 获取<p>设备描述，长度不超过128个字符</p>
+ * @method void setDescription(string $Description) 设置<p>设备描述，长度不超过128个字符</p>
+ * @method string getGatewayId() 获取<p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
+ * @method integer getProtocolType() 获取<p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setProtocolType(integer $ProtocolType) 设置<p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
+ * @method string getIp() 获取<p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setIp(string $Ip) 设置<p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
+ * @method integer getPort() 获取<p>设备端口（已不再使用，保留用于兼容，可忽略）</p><p>取值范围：[1, 65535]</p><p>单位： 端口</p>
+ * @method void setPort(integer $Port) 设置<p>设备端口（已不再使用，保留用于兼容，可忽略）</p><p>取值范围：[1, 65535]</p><p>单位： 端口</p>
+ * @method string getUsername() 获取<p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setUsername(string $Username) 设置<p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
+ * @method string getSNCode() 获取<p>设备 SN（已不再使用，保留用于兼容，可忽略）</p>
+ * @method void setSNCode(string $SNCode) 设置<p>设备 SN（已不再使用，保留用于兼容，可忽略）</p>
+ * @method string getAppName() 获取<p>RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
+ * @method void setAppName(string $AppName) 设置<p>RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
+ * @method string getStreamName() 获取<p>RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
+ * @method void setStreamName(string $StreamName) 设置<p>RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
  */
 class AddUserDeviceRequest extends AbstractModel
 {
     /**
-     * @var string 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
+     * @var string <p>设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）</p>
      */
     public $Name;
 
     /**
-     * @var integer 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
+     * @var integer <p>设备接入协议（1:RTMP,2:GB,6:ISUP）</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul><p>默认值：2</p>
      */
     public $AccessProtocol;
 
     /**
-     * @var integer 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
+     * @var integer <p>设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）</p><p>枚举值：</p><ul><li>1： IPC</li><li>2： NVR</li></ul>
      */
     public $Type;
 
     /**
-     * @var string 设备所属组织ID，从查询组织接口DescribeOrganization中获取
+     * @var string <p>设备所属组织ID，从查询组织接口DescribeOrganization中获取</p>
      */
     public $OrganizationId;
 
     /**
-     * @var string 设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
+     * @var string <p>设备接入服务节点ID（从查询设备可用服务节点接口DescribeRegionDomain中获取的Value字段）</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)
+     * @var integer <p>设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)</p>
      */
     public $TransportProtocol;
 
     /**
-     * @var string 设备密码（国标，网关设备必填，长度为1-64个字符）
+     * @var string <p>设备密码（国标设备必填，长度为1-64个字符）</p>
      */
     public $Password;
 
     /**
-     * @var string 设备描述，长度不超过128个字符
+     * @var string <p>设备描述，长度不超过128个字符</p>
      */
     public $Description;
 
     /**
-     * @var string 设备接入网关ID，从查询网关列表接口中ListGateways获取（仅网关接入需要）
+     * @var string <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $GatewayId;
 
     /**
-     * @var integer 网关接入协议类型（从查询网关接入协议接口DescribeGatewayProtocol中获取）1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+     * @var integer <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $ProtocolType;
 
     /**
-     * @var string 设备接入IP（仅网关接入需要）
+     * @var string <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $Ip;
 
     /**
-     * @var integer 设备端口（仅网关接入需要）
+     * @var integer <p>设备端口（已不再使用，保留用于兼容，可忽略）</p><p>取值范围：[1, 65535]</p><p>单位： 端口</p>
      */
     public $Port;
 
     /**
-     * @var string 设备用户名（仅网关接入需要）
+     * @var string <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $Username;
 
     /**
-     * @var string 设备 SN，仅IVCP 协议设备需要
+     * @var string <p>设备 SN（已不再使用，保留用于兼容，可忽略）</p>
      */
     public $SNCode;
 
     /**
-     * @var string RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+     * @var string <p>RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
      */
     public $AppName;
 
     /**
-     * @var string RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+     * @var string <p>RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
      */
     public $StreamName;
 
     /**
-     * @param string $Name 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
-     * @param integer $AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
-     * @param integer $Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
-     * @param string $OrganizationId 设备所属组织ID，从查询组织接口DescribeOrganization中获取
-     * @param string $ClusterId 设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
-     * @param integer $TransportProtocol 设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)
-     * @param string $Password 设备密码（国标，网关设备必填，长度为1-64个字符）
-     * @param string $Description 设备描述，长度不超过128个字符
-     * @param string $GatewayId 设备接入网关ID，从查询网关列表接口中ListGateways获取（仅网关接入需要）
-     * @param integer $ProtocolType 网关接入协议类型（从查询网关接入协议接口DescribeGatewayProtocol中获取）1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
-     * @param string $Ip 设备接入IP（仅网关接入需要）
-     * @param integer $Port 设备端口（仅网关接入需要）
-     * @param string $Username 设备用户名（仅网关接入需要）
-     * @param string $SNCode 设备 SN，仅IVCP 协议设备需要
-     * @param string $AppName RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
-     * @param string $StreamName RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+     * @param string $Name <p>设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）</p>
+     * @param integer $AccessProtocol <p>设备接入协议（1:RTMP,2:GB,6:ISUP）</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul><p>默认值：2</p>
+     * @param integer $Type <p>设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）</p><p>枚举值：</p><ul><li>1： IPC</li><li>2： NVR</li></ul>
+     * @param string $OrganizationId <p>设备所属组织ID，从查询组织接口DescribeOrganization中获取</p>
+     * @param string $ClusterId <p>设备接入服务节点ID（从查询设备可用服务节点接口DescribeRegionDomain中获取的Value字段）</p>
+     * @param integer $TransportProtocol <p>设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)</p>
+     * @param string $Password <p>设备密码（国标设备必填，长度为1-64个字符）</p>
+     * @param string $Description <p>设备描述，长度不超过128个字符</p>
+     * @param string $GatewayId <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
+     * @param integer $ProtocolType <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
+     * @param string $Ip <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
+     * @param integer $Port <p>设备端口（已不再使用，保留用于兼容，可忽略）</p><p>取值范围：[1, 65535]</p><p>单位： 端口</p>
+     * @param string $Username <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
+     * @param string $SNCode <p>设备 SN（已不再使用，保留用于兼容，可忽略）</p>
+     * @param string $AppName <p>RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
+     * @param string $StreamName <p>RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
      */
     function __construct()
     {

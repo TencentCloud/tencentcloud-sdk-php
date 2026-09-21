@@ -24,6 +24,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 
 /**
  * @method Models\AddConsoleUsersResponse AddConsoleUsers(Models\AddConsoleUsersRequest $req) 添加控制台用户
+ * @method Models\CreateConsoleGroupResponse CreateConsoleGroup(Models\CreateConsoleGroupRequest $req) 创建控制台用户组
  * @method Models\CreateFileResponse CreateFile(Models\CreateFileRequest $req) 在Studio（统一开发 IDE）的工作空间文件树中新建一个文件（Notebook/SQL/Python等），创建成功后返回文件的完整元信息。
 
 **前置条件**
@@ -33,6 +34,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 4. FileName 后缀必须与 FileType 匹配（`.ipynb`↔`NOTEBOOK_FILE`、`.sql`↔`SQL_FILE`）；
 5. 需带文件内容创建时通过 Storage 传入（大文件走 COS 中转，小文件放 Storage.Content）。
  * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) 创建工作流
+ * @method Models\DeleteConsoleGroupsResponse DeleteConsoleGroups(Models\DeleteConsoleGroupsRequest $req) 删除控制台用户组
  * @method Models\DeleteFileResponse DeleteFile(Models\DeleteFileRequest $req) 将文件移入回收站（软删除），同时清理该文件的版本记录与执行结果快照。
 
 **前置条件**
@@ -74,6 +76,9 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\GetWorkflowRunResponse GetWorkflowRun(Models\GetWorkflowRunRequest $req) 查询工作流运行详情
  * @method Models\GetWorkflowTaskRunResponse GetWorkflowTaskRun(Models\GetWorkflowTaskRunRequest $req) 查询任务运行详情
  * @method Models\KillWorkflowRunResponse KillWorkflowRun(Models\KillWorkflowRunRequest $req) 终止工作流的运行
+ * @method Models\ListConsoleGroupUsersResponse ListConsoleGroupUsers(Models\ListConsoleGroupUsersRequest $req) 查询控制台用户组成员列表
+ * @method Models\ListConsoleGroupsResponse ListConsoleGroups(Models\ListConsoleGroupsRequest $req) 查询控制台用户组列表
+ * @method Models\ListConsoleRolesResponse ListConsoleRoles(Models\ListConsoleRolesRequest $req) 查询控制台角色列表
  * @method Models\ListConsoleUsersResponse ListConsoleUsers(Models\ListConsoleUsersRequest $req) 查询控制台用户列表
  * @method Models\ListWorkflowRunsResponse ListWorkflowRuns(Models\ListWorkflowRunsRequest $req) 工作流运行列表
  * @method Models\ListWorkflowTaskRunsResponse ListWorkflowTaskRuns(Models\ListWorkflowTaskRunsRequest $req) 查询工作流任务历史运行列表
@@ -83,6 +88,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\RunWorkflowResponse RunWorkflow(Models\RunWorkflowRequest $req) 运行工作流
  * @method Models\UnbindWorkflowBundleResponse UnbindWorkflowBundle(Models\UnbindWorkflowBundleRequest $req) 解绑工作流Bundle信息
 说明：本接口语义等同于规范动词清单中的 Detach，因兼容既有产品形态保留 Unbind 命名
+ * @method Models\UpdateConsoleGroupResponse UpdateConsoleGroup(Models\UpdateConsoleGroupRequest $req) 修改控制台用户组
  * @method Models\UpdateConsoleUsersResponse UpdateConsoleUsers(Models\UpdateConsoleUsersRequest $req) 修改控制台用户角色
  * @method Models\UpdateFileResponse UpdateFile(Models\UpdateFileRequest $req) 更新文件内容与运行配置（计算资源、默认 catalog/schema、参数等），返回更新后的文件元信息。
 

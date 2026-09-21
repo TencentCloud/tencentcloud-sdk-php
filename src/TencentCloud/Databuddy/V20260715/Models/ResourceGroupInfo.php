@@ -20,89 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源组信息
  *
- * @method string getResourceGroupId() 获取资源组ID
+ * @method string getResourceGroupId() 获取<p>资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组ID
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取资源组名称
+ * @method string getResourceGroupName() 获取<p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置<p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupStatus() 获取资源组状态
-COMPUTE_RESOURCE_STATUS_UNSPECIFIED 未指定
-COMPUTE_RESOURCE_STATUS_PENDING_CREATE 待创建
-COMPUTE_RESOURCE_STATUS_CREATING 创建中
-COMPUTE_RESOURCE_STATUS_RUNNING 运行中
-COMPUTE_RESOURCE_STATUS_STOPPED 已停止
-COMPUTE_RESOURCE_STATUS_STOPPING 停止中
-COMPUTE_RESOURCE_STATUS_STARTING 启动中
-COMPUTE_RESOURCE_STATUS_UPDATING 更新中
-COMPUTE_RESOURCE_STATUS_DELETING 删除中
-COMPUTE_RESOURCE_STATUS_DELETED 已删除
-COMPUTE_RESOURCE_STATUS_FAILED  失败
+ * @method string getResourceGroupStatus() 获取<p>资源组状态</p><p>参数格式：0 // 未指定 1 // 待创建 2 // 创建中 3 // 运行中 4 // 已停止 5 // 停止中 6 // 启动中 7 // 更新中 8 // 删除中 9 // 已删除 10 // 用户主动启动 / 自动启动（有任务提交且自动启停开启） 11 // 可用: 仅存在于数据计算型 12 // 不可用: 仅存在于数据计算型 13 // 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupStatus(string $ResourceGroupStatus) 设置资源组状态
-COMPUTE_RESOURCE_STATUS_UNSPECIFIED 未指定
-COMPUTE_RESOURCE_STATUS_PENDING_CREATE 待创建
-COMPUTE_RESOURCE_STATUS_CREATING 创建中
-COMPUTE_RESOURCE_STATUS_RUNNING 运行中
-COMPUTE_RESOURCE_STATUS_STOPPED 已停止
-COMPUTE_RESOURCE_STATUS_STOPPING 停止中
-COMPUTE_RESOURCE_STATUS_STARTING 启动中
-COMPUTE_RESOURCE_STATUS_UPDATING 更新中
-COMPUTE_RESOURCE_STATUS_DELETING 删除中
-COMPUTE_RESOURCE_STATUS_DELETED 已删除
-COMPUTE_RESOURCE_STATUS_FAILED  失败
+ * @method void setResourceGroupStatus(string $ResourceGroupStatus) 设置<p>资源组状态</p><p>参数格式：0 // 未指定 1 // 待创建 2 // 创建中 3 // 运行中 4 // 已停止 5 // 停止中 6 // 启动中 7 // 更新中 8 // 删除中 9 // 已删除 10 // 用户主动启动 / 自动启动（有任务提交且自动启停开启） 11 // 可用: 仅存在于数据计算型 12 // 不可用: 仅存在于数据计算型 13 // 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceGroupInfo extends AbstractModel
 {
     /**
-     * @var string 资源组ID
+     * @var string <p>资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
 
     /**
-     * @var string 资源组名称
+     * @var string <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
     /**
-     * @var string 资源组状态
-COMPUTE_RESOURCE_STATUS_UNSPECIFIED 未指定
-COMPUTE_RESOURCE_STATUS_PENDING_CREATE 待创建
-COMPUTE_RESOURCE_STATUS_CREATING 创建中
-COMPUTE_RESOURCE_STATUS_RUNNING 运行中
-COMPUTE_RESOURCE_STATUS_STOPPED 已停止
-COMPUTE_RESOURCE_STATUS_STOPPING 停止中
-COMPUTE_RESOURCE_STATUS_STARTING 启动中
-COMPUTE_RESOURCE_STATUS_UPDATING 更新中
-COMPUTE_RESOURCE_STATUS_DELETING 删除中
-COMPUTE_RESOURCE_STATUS_DELETED 已删除
-COMPUTE_RESOURCE_STATUS_FAILED  失败
+     * @var string <p>资源组状态</p><p>参数格式：0 // 未指定 1 // 待创建 2 // 创建中 3 // 运行中 4 // 已停止 5 // 停止中 6 // 启动中 7 // 更新中 8 // 删除中 9 // 已删除 10 // 用户主动启动 / 自动启动（有任务提交且自动启停开启） 11 // 可用: 仅存在于数据计算型 12 // 不可用: 仅存在于数据计算型 13 // 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupStatus;
 
     /**
-     * @param string $ResourceGroupId 资源组ID
+     * @param string $ResourceGroupId <p>资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName 资源组名称
+     * @param string $ResourceGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupStatus 资源组状态
-COMPUTE_RESOURCE_STATUS_UNSPECIFIED 未指定
-COMPUTE_RESOURCE_STATUS_PENDING_CREATE 待创建
-COMPUTE_RESOURCE_STATUS_CREATING 创建中
-COMPUTE_RESOURCE_STATUS_RUNNING 运行中
-COMPUTE_RESOURCE_STATUS_STOPPED 已停止
-COMPUTE_RESOURCE_STATUS_STOPPING 停止中
-COMPUTE_RESOURCE_STATUS_STARTING 启动中
-COMPUTE_RESOURCE_STATUS_UPDATING 更新中
-COMPUTE_RESOURCE_STATUS_DELETING 删除中
-COMPUTE_RESOURCE_STATUS_DELETED 已删除
-COMPUTE_RESOURCE_STATUS_FAILED  失败
+     * @param string $ResourceGroupStatus <p>资源组状态</p><p>参数格式：0 // 未指定 1 // 待创建 2 // 创建中 3 // 运行中 4 // 已停止 5 // 停止中 6 // 启动中 7 // 更新中 8 // 删除中 9 // 已删除 10 // 用户主动启动 / 自动启动（有任务提交且自动启停开启） 11 // 可用: 仅存在于数据计算型 12 // 不可用: 仅存在于数据计算型 13 // 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowsExamined(integer $RowsExamined) 设置扫描行数
  * @method integer getRowsSent() 获取返回行数
  * @method void setRowsSent(integer $RowsSent) 设置返回行数
+ * @method string getInstanceId() 获取
+ * @method void setInstanceId(string $InstanceId) 设置
  */
 class SlowLogInfoItem extends AbstractModel
 {
@@ -87,6 +89,11 @@ class SlowLogInfoItem extends AbstractModel
     public $RowsSent;
 
     /**
+     * @var string 
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Timestamp 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
      * @param string $SqlText sql语句
      * @param string $Database 数据库
@@ -96,6 +103,7 @@ class SlowLogInfoItem extends AbstractModel
      * @param float $LockTime 锁时间,单位秒
      * @param integer $RowsExamined 扫描行数
      * @param integer $RowsSent 返回行数
+     * @param string $InstanceId 
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class SlowLogInfoItem extends AbstractModel
 
         if (array_key_exists("RowsSent",$param) and $param["RowsSent"] !== null) {
             $this->RowsSent = $param["RowsSent"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

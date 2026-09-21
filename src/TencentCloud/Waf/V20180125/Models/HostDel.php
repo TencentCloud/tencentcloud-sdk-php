@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CLB-WAF删除域名参数
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
- * @method string getDomainId() 获取域名ID
- * @method void setDomainId(string $DomainId) 设置域名ID
- * @method string getInstanceID() 获取实例类型
- * @method void setInstanceID(string $InstanceID) 设置实例类型
+ * @method string getDomain() 获取<p>域名</p>
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
+ * @method string getDomainId() 获取<p>域名ID，使用DescribeDomains接口可以查询获取</p>
+ * @method void setDomainId(string $DomainId) 设置<p>域名ID，使用DescribeDomains接口可以查询获取</p>
+ * @method string getInstanceID() 获取<p>实例类型</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例类型</p>
  */
 class HostDel extends AbstractModel
 {
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 域名ID
+     * @var string <p>域名ID，使用DescribeDomains接口可以查询获取</p>
      */
     public $DomainId;
 
     /**
-     * @var string 实例类型
+     * @var string <p>实例类型</p>
      */
     public $InstanceID;
 
     /**
-     * @param string $Domain 域名
-     * @param string $DomainId 域名ID
-     * @param string $InstanceID 实例类型
+     * @param string $Domain <p>域名</p>
+     * @param string $DomainId <p>域名ID，使用DescribeDomains接口可以查询获取</p>
+     * @param string $InstanceID <p>实例类型</p>
      */
     function __construct()
     {

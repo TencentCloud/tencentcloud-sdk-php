@@ -30,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassDateEnd(string $PassDateEnd) 设置<p>通行日期止</p>
  * @method string getTaxClassifyCode() 获取<p>税收分类编码</p>
  * @method void setTaxClassifyCode(string $TaxClassifyCode) 设置<p>税收分类编码</p>
- * @method string getCarType() 获取<p>通行费车牌号</p>
- * @method void setCarType(string $CarType) 设置<p>通行费车牌号</p>
- * @method string getPlateNumber() 获取<p>通行费车辆类型</p>
- * @method void setPlateNumber(string $PlateNumber) 设置<p>通行费车辆类型</p>
  */
 class PassInvoiceInfo extends AbstractModel
 {
@@ -63,23 +59,11 @@ class PassInvoiceInfo extends AbstractModel
     public $TaxClassifyCode;
 
     /**
-     * @var string <p>通行费车牌号</p>
-     */
-    public $CarType;
-
-    /**
-     * @var string <p>通行费车辆类型</p>
-     */
-    public $PlateNumber;
-
-    /**
      * @param string $NumberPlate <p>通行费车牌号；数电通行费源字段 cph 写入该字段。</p>
      * @param string $Type <p>通行费类型；数电通行费源字段 cllx 写入该字</p>
      * @param string $PassDateBegin <p>通行日期起</p>
      * @param string $PassDateEnd <p>通行日期止</p>
      * @param string $TaxClassifyCode <p>税收分类编码</p>
-     * @param string $CarType <p>通行费车牌号</p>
-     * @param string $PlateNumber <p>通行费车辆类型</p>
      */
     function __construct()
     {
@@ -112,14 +96,6 @@ class PassInvoiceInfo extends AbstractModel
 
         if (array_key_exists("TaxClassifyCode",$param) and $param["TaxClassifyCode"] !== null) {
             $this->TaxClassifyCode = $param["TaxClassifyCode"];
-        }
-
-        if (array_key_exists("CarType",$param) and $param["CarType"] !== null) {
-            $this->CarType = $param["CarType"];
-        }
-
-        if (array_key_exists("PlateNumber",$param) and $param["PlateNumber"] !== null) {
-            $this->PlateNumber = $param["PlateNumber"];
         }
     }
 }

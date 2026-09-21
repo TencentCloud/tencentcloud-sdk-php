@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Aiart\V20221229\Models;
+namespace TencentCloud\Databuddy\V20260715\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryTextToImageJob请求参数结构体
+ * 删除控制台用户组响应
  *
- * @method string getJobId() 获取任务 ID。
- * @method void setJobId(string $JobId) 设置任务 ID。
+ * @method boolean getStatus() 获取操作是否成功
+ * @method void setStatus(boolean $Status) 设置操作是否成功
  */
-class QueryTextToImageJobRequest extends AbstractModel
+class DeleteConsoleGroupsRsp extends AbstractModel
 {
     /**
-     * @var string 任务 ID。
+     * @var boolean 操作是否成功
      */
-    public $JobId;
+    public $Status;
 
     /**
-     * @param string $JobId 任务 ID。
+     * @param boolean $Status 操作是否成功
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class QueryTextToImageJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

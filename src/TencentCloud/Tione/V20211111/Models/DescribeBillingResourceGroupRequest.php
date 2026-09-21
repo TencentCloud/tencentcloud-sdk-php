@@ -20,41 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillingResourceGroup请求参数结构体
  *
- * @method string getResourceGroupId() 获取资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
- * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
+ * @method string getResourceGroupId() 获取<p>资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId</p>
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId</p>
  * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
- * @method array getFilters() 获取过滤条件
-注意: 
-1. Filter.Name 只支持以下枚举值:
-    InstanceId (资源组节点id)
-    InstanceStatus (资源组节点状态)
-2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. Filter.Negative: 是否取反，默认为false
-4. Filter.Fuzzy: 是否模糊查询，默认为false
-5. 每次请求的Filters的上限为10，Filter.Values的上限为100
- * @method void setFilters(array $Filters) 设置过滤条件
-注意: 
-1. Filter.Name 只支持以下枚举值:
-    InstanceId (资源组节点id)
-    InstanceStatus (资源组节点状态)
-2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. Filter.Negative: 是否取反，默认为false
-4. Filter.Fuzzy: 是否模糊查询，默认为false
-5. 每次请求的Filters的上限为10，Filter.Values的上限为100
- * @method integer getOffset() 获取分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0
- * @method void setOffset(integer $Offset) 设置分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0
- * @method integer getLimit() 获取分页查询每页大小，默认20
- * @method void setLimit(integer $Limit) 设置分页查询每页大小，默认20
- * @method string getOrder() 获取排序方向; 枚举值: ASC | DESC；默认DESC
- * @method void setOrder(string $Order) 设置排序方向; 枚举值: ASC | DESC；默认DESC
- * @method string getOrderField() 获取排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime
- * @method void setOrderField(string $OrderField) 设置排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime
+ * @method array getFilters() 获取<p>过滤条件<br>注意: </p><ol><li>Filter.Name 只支持以下枚举值:<br> InstanceId (资源组节点id)<br> InstanceStatus (资源组节点状态)</li><li>Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询</li><li>Filter.Negative: 是否取反，默认为false</li><li>Filter.Fuzzy: 是否模糊查询，默认为false</li><li>每次请求的Filters的上限为10，Filter.Values的上限为100</li></ol>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件<br>注意: </p><ol><li>Filter.Name 只支持以下枚举值:<br> InstanceId (资源组节点id)<br> InstanceStatus (资源组节点状态)</li><li>Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询</li><li>Filter.Negative: 是否取反，默认为false</li><li>Filter.Fuzzy: 是否模糊查询，默认为false</li><li>每次请求的Filters的上限为10，Filter.Values的上限为100</li></ol>
+ * @method integer getOffset() 获取<p>分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0</p>
+ * @method integer getLimit() 获取<p>分页查询每页大小，默认20</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页查询每页大小，默认20</p>
+ * @method string getOrder() 获取<p>排序方向; 枚举值: ASC | DESC；默认DESC</p>
+ * @method void setOrder(string $Order) 设置<p>排序方向; 枚举值: ASC | DESC；默认DESC</p>
+ * @method string getOrderField() 获取<p>排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime</p>
+ * @method void setOrderField(string $OrderField) 设置<p>排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime</p>
  */
 class DescribeBillingResourceGroupRequest extends AbstractModel
 {
     /**
-     * @var string 资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
+     * @var string <p>资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId</p>
      */
     public $ResourceGroupId;
 
@@ -64,54 +48,38 @@ class DescribeBillingResourceGroupRequest extends AbstractModel
     public $TiProjectId;
 
     /**
-     * @var array 过滤条件
-注意: 
-1. Filter.Name 只支持以下枚举值:
-    InstanceId (资源组节点id)
-    InstanceStatus (资源组节点状态)
-2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. Filter.Negative: 是否取反，默认为false
-4. Filter.Fuzzy: 是否模糊查询，默认为false
-5. 每次请求的Filters的上限为10，Filter.Values的上限为100
+     * @var array <p>过滤条件<br>注意: </p><ol><li>Filter.Name 只支持以下枚举值:<br> InstanceId (资源组节点id)<br> InstanceStatus (资源组节点状态)</li><li>Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询</li><li>Filter.Negative: 是否取反，默认为false</li><li>Filter.Fuzzy: 是否模糊查询，默认为false</li><li>每次请求的Filters的上限为10，Filter.Values的上限为100</li></ol>
      */
     public $Filters;
 
     /**
-     * @var integer 分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0
+     * @var integer <p>分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页查询每页大小，默认20
+     * @var integer <p>分页查询每页大小，默认20</p>
      */
     public $Limit;
 
     /**
-     * @var string 排序方向; 枚举值: ASC | DESC；默认DESC
+     * @var string <p>排序方向; 枚举值: ASC | DESC；默认DESC</p>
      */
     public $Order;
 
     /**
-     * @var string 排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime
+     * @var string <p>排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime</p>
      */
     public $OrderField;
 
     /**
-     * @param string $ResourceGroupId 资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
+     * @param string $ResourceGroupId <p>资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId</p>
      * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
-     * @param array $Filters 过滤条件
-注意: 
-1. Filter.Name 只支持以下枚举值:
-    InstanceId (资源组节点id)
-    InstanceStatus (资源组节点状态)
-2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. Filter.Negative: 是否取反，默认为false
-4. Filter.Fuzzy: 是否模糊查询，默认为false
-5. 每次请求的Filters的上限为10，Filter.Values的上限为100
-     * @param integer $Offset 分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0
-     * @param integer $Limit 分页查询每页大小，默认20
-     * @param string $Order 排序方向; 枚举值: ASC | DESC；默认DESC
-     * @param string $OrderField 排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime
+     * @param array $Filters <p>过滤条件<br>注意: </p><ol><li>Filter.Name 只支持以下枚举值:<br> InstanceId (资源组节点id)<br> InstanceStatus (资源组节点状态)</li><li>Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询</li><li>Filter.Negative: 是否取反，默认为false</li><li>Filter.Fuzzy: 是否模糊查询，默认为false</li><li>每次请求的Filters的上限为10，Filter.Values的上限为100</li></ol>
+     * @param integer $Offset <p>分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0</p>
+     * @param integer $Limit <p>分页查询每页大小，默认20</p>
+     * @param string $Order <p>排序方向; 枚举值: ASC | DESC；默认DESC</p>
+     * @param string $OrderField <p>排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime</p>
      */
     function __construct()
     {

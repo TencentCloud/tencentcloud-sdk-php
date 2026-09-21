@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchOperateDevice请求参数结构体
  *
- * @method array getDeviceIds() 获取设备 ID 数组（从获取设备列表接口ListDevices中获取）
- * @method void setDeviceIds(array $DeviceIds) 设置设备 ID 数组（从获取设备列表接口ListDevices中获取）
- * @method string getCmd() 获取操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
- * @method void setCmd(string $Cmd) 设置操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
+ * @method array getDeviceIds() 获取<p>设备 ID 数组（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
+ * @method void setDeviceIds(array $DeviceIds) 设置<p>设备 ID 数组（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
+ * @method string getCmd() 获取<p>操作命令</p><p>枚举值：</p><ul><li>enable： 启用</li><li>disable： 禁用</li><li>delete： 删除</li><li>sync： 同步设备通道</li></ul>
+ * @method void setCmd(string $Cmd) 设置<p>操作命令</p><p>枚举值：</p><ul><li>enable： 启用</li><li>disable： 禁用</li><li>delete： 删除</li><li>sync： 同步设备通道</li></ul>
  */
 class BatchOperateDeviceRequest extends AbstractModel
 {
     /**
-     * @var array 设备 ID 数组（从获取设备列表接口ListDevices中获取）
+     * @var array <p>设备 ID 数组（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
      */
     public $DeviceIds;
 
     /**
-     * @var string 操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
+     * @var string <p>操作命令</p><p>枚举值：</p><ul><li>enable： 启用</li><li>disable： 禁用</li><li>delete： 删除</li><li>sync： 同步设备通道</li></ul>
      */
     public $Cmd;
 
     /**
-     * @param array $DeviceIds 设备 ID 数组（从获取设备列表接口ListDevices中获取）
-     * @param string $Cmd 操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
+     * @param array $DeviceIds <p>设备 ID 数组（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
+     * @param string $Cmd <p>操作命令</p><p>枚举值：</p><ul><li>enable： 启用</li><li>disable： 禁用</li><li>delete： 删除</li><li>sync： 同步设备通道</li></ul>
      */
     function __construct()
     {

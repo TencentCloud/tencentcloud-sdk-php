@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DestroyPostCKafkaFlow请求参数结构体
  *
- * @method integer getFlowId() 获取投递流的流ID
- * @method void setFlowId(integer $FlowId) 设置投递流的流ID
- * @method integer getLogType() 获取1-访问日志，2-攻击日志，默认为访问日志。
- * @method void setLogType(integer $LogType) 设置1-访问日志，2-攻击日志，默认为访问日志。
+ * @method integer getFlowId() 获取<p>投递流的流ID，可以通过DescribePostCKafkaFlows接口获取</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>投递流的流ID，可以通过DescribePostCKafkaFlows接口获取</p>
+ * @method integer getLogType() 获取<p>1-访问日志，2-攻击日志，默认为访问日志。</p>
+ * @method void setLogType(integer $LogType) 设置<p>1-访问日志，2-攻击日志，默认为访问日志。</p>
  */
 class DestroyPostCKafkaFlowRequest extends AbstractModel
 {
     /**
-     * @var integer 投递流的流ID
+     * @var integer <p>投递流的流ID，可以通过DescribePostCKafkaFlows接口获取</p>
      */
     public $FlowId;
 
     /**
-     * @var integer 1-访问日志，2-攻击日志，默认为访问日志。
+     * @var integer <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
      */
     public $LogType;
 
     /**
-     * @param integer $FlowId 投递流的流ID
-     * @param integer $LogType 1-访问日志，2-攻击日志，默认为访问日志。
+     * @param integer $FlowId <p>投递流的流ID，可以通过DescribePostCKafkaFlows接口获取</p>
+     * @param integer $LogType <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
      */
     function __construct()
     {

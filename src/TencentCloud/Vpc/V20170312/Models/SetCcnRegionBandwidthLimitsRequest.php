@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcnRegionBandwidthLimits(array $CcnRegionBandwidthLimits) 设置云联网（CCN）各地域出带宽上限。
  * @method boolean getSetDefaultLimitFlag() 获取是否恢复云联网地域出口/地域间带宽限速为默认值（1Gbps）。false表示不恢复；true表示恢复。恢复默认值后，限速实例将不在控制台展示。该参数默认为 false，不恢复。
  * @method void setSetDefaultLimitFlag(boolean $SetDefaultLimitFlag) 设置是否恢复云联网地域出口/地域间带宽限速为默认值（1Gbps）。false表示不恢复；true表示恢复。恢复默认值后，限速实例将不在控制台展示。该参数默认为 false，不恢复。
+ * @method boolean getSetQosDefaultLimitFlag() 获取是否设置默认QOS带宽；
+ * @method void setSetQosDefaultLimitFlag(boolean $SetQosDefaultLimitFlag) 设置是否设置默认QOS带宽；
  */
 class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
     public $SetDefaultLimitFlag;
 
     /**
+     * @var boolean 是否设置默认QOS带宽；
+     */
+    public $SetQosDefaultLimitFlag;
+
+    /**
      * @param string $CcnId CCN实例ID，形如：ccn-f49l6u0z。
      * @param array $CcnRegionBandwidthLimits 云联网（CCN）各地域出带宽上限。
      * @param boolean $SetDefaultLimitFlag 是否恢复云联网地域出口/地域间带宽限速为默认值（1Gbps）。false表示不恢复；true表示恢复。恢复默认值后，限速实例将不在控制台展示。该参数默认为 false，不恢复。
+     * @param boolean $SetQosDefaultLimitFlag 是否设置默认QOS带宽；
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
 
         if (array_key_exists("SetDefaultLimitFlag",$param) and $param["SetDefaultLimitFlag"] !== null) {
             $this->SetDefaultLimitFlag = $param["SetDefaultLimitFlag"];
+        }
+
+        if (array_key_exists("SetQosDefaultLimitFlag",$param) and $param["SetQosDefaultLimitFlag"] !== null) {
+            $this->SetQosDefaultLimitFlag = $param["SetQosDefaultLimitFlag"];
         }
     }
 }

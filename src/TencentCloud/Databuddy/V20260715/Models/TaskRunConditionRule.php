@@ -20,49 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务运行条件规则
  *
- * @method string getUpstreamTaskId() 获取上游任务ID
+ * @method string getUpstreamTaskId() 获取<p>上游任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpstreamTaskId(string $UpstreamTaskId) 设置上游任务ID
+ * @method void setUpstreamTaskId(string $UpstreamTaskId) 设置<p>上游任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpstreamTaskName() 获取上游任务名称
+ * @method string getUpstreamTaskName() 获取<p>上游任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpstreamTaskName(string $UpstreamTaskName) 设置上游任务名称
+ * @method void setUpstreamTaskName(string $UpstreamTaskName) 设置<p>上游任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAllowedStates() 获取任务可运行条件
-支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行
+ * @method array getAllowedStates() 获取<p>任务可运行条件<br>支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAllowedStates(array $AllowedStates) 设置任务可运行条件
-支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行
+ * @method void setAllowedStates(array $AllowedStates) 设置<p>任务可运行条件<br>支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskRunConditionRule extends AbstractModel
 {
     /**
-     * @var string 上游任务ID
+     * @var string <p>上游任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamTaskId;
 
     /**
-     * @var string 上游任务名称
+     * @var string <p>上游任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamTaskName;
 
     /**
-     * @var array 任务可运行条件
-支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行
+     * @var array <p>任务可运行条件<br>支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowedStates;
 
     /**
-     * @param string $UpstreamTaskId 上游任务ID
+     * @param string $UpstreamTaskId <p>上游任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpstreamTaskName 上游任务名称
+     * @param string $UpstreamTaskName <p>上游任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AllowedStates 任务可运行条件
-支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行
+     * @param array $AllowedStates <p>任务可运行条件<br>支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Aiart\V20221229\Models;
+namespace TencentCloud\Trocket\V20230308\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SubmitTextToImageJob返回参数结构体
+ * DescribeConsumerLabelRoutes返回参数结构体
  *
- * @method string getJobId() 获取<p>任务 ID。</p>
- * @method void setJobId(string $JobId) 设置<p>任务 ID。</p>
+ * @method integer getTotalCount() 获取查询总数
+ * @method void setTotalCount(integer $TotalCount) 设置查询总数
+ * @method array getResults() 获取<p>消费者标签绑定的路由</p>
+ * @method void setResults(array $Results) 设置<p>消费者标签绑定的路由</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class SubmitTextToImageJobResponse extends AbstractModel
+class DescribeConsumerLabelRoutesResponse extends AbstractModel
 {
     /**
-     * @var string <p>任务 ID。</p>
+     * @var integer 查询总数
      */
-    public $JobId;
+    public $TotalCount;
+
+    /**
+     * @var array <p>消费者标签绑定的路由</p>
+     */
+    public $Results;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class SubmitTextToImageJobResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $JobId <p>任务 ID。</p>
+     * @param integer $TotalCount 查询总数
+     * @param array $Results <p>消费者标签绑定的路由</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class SubmitTextToImageJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
+            $this->Results = [];
+            foreach ($param["Results"] as $key => $value){
+                $obj = new ConsumerLabelRoute();
+                $obj->deserialize($value);
+                array_push($this->Results, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

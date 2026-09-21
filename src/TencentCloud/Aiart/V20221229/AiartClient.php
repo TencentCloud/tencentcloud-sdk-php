@@ -32,8 +32,6 @@ use TencentCloud\Aiart\V20221229\Models as Models;
 默认提供1个并发，代表最多能同时处理1个已提交的任务。
  * @method Models\ImageOutpaintingResponse ImageOutpainting(Models\ImageOutpaintingRequest $req) 扩图接口支持对输入图像按指定宽高比实现智能扩图。
 默认提供1个并发，代表最多能同时处理1个已提交的任务。
- * @method Models\ImageToImageResponse ImageToImage(Models\ImageToImageRequest $req) 图像风格化（图生图）接口提供生成式的图生图风格转化能力，将根据输入的图像及文本描述，智能生成风格转化后的图像。建议避免输入人像过小、姿势复杂、人数较多的人像图片。
-图像风格化（图生图）默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\QueryDrawPortraitJobResponse QueryDrawPortraitJob(Models\QueryDrawPortraitJobRequest $req) AI 写真分为上传训练图片、训练写真模型（可选跳过）、生成写真图片3个环节，需要依次调用对应接口。
 生成图片分为提交任务和查询任务2个接口：
 
@@ -51,8 +49,6 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
 - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
 
 表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
- * @method Models\QueryTextToImageJobResponse QueryTextToImageJob(Models\QueryTextToImageJobRequest $req) 混元生图接口，基于混元大模型，根据输入的文本描述快速生成图片。
-默认提供0个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\QueryTextToImageProJobResponse QueryTextToImageProJob(Models\QueryTextToImageProJobRequest $req) 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105970) 继续使用。
 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
@@ -92,8 +88,6 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
 - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
 
 表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
- * @method Models\SubmitTextToImageJobResponse SubmitTextToImageJob(Models\SubmitTextToImageJobRequest $req) 混元生图接口，基于混元大模型，根据输入的文本描述快速生成图片。
-默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\SubmitTextToImageProJobResponse SubmitTextToImageProJob(Models\SubmitTextToImageProJobRequest $req) 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105969) 继续使用。
 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
@@ -107,10 +101,6 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
 
 每个写真模型自训练完成起1年内有效，有效期内可使用写真模型 ID 生成图片，期满后需要重新训练。
 提交训练写真模型任务按并发计费，无默认并发额度。
- * @method Models\TextToImageLiteResponse TextToImageLite(Models\TextToImageLiteRequest $req) 混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
-默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
- * @method Models\TextToImageRapidResponse TextToImageRapid(Models\TextToImageRapidRequest $req) 混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
-默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\UploadTrainPortraitImagesResponse UploadTrainPortraitImages(Models\UploadTrainPortraitImagesRequest $req) AI 写真分为上传训练图片、训练写真模型（可选跳过）、生成写真图片3个环节，需要依次调用对应接口。
 本接口用于上传人像图片并指定对应的写真模型 ID。上传的图片要求是同一个人，建议上传单人、正脸、脸部区域占比较大、脸部清晰无遮挡、无大角度偏转、无夸张表情的图片。
 可选模式：
